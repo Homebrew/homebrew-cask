@@ -1,6 +1,6 @@
 cask 'itch' do
   version '25.0.0'
-  sha256 '06a579b135203dd5da5a6e7a0665e4495a2501cf0dbe11f52f8447f3ccd090ca'
+  sha256 'b88dc10ceb69ece6ecab17340e6c4abc6e89e8eb20c7b030207eca5d0c2d8f17'
 
   # nuts.itch.zone was verified as official when first introduced to the cask
   url 'http://nuts.itch.zone/download/osx'
