@@ -1,6 +1,6 @@
 cask 'tusk' do
-  version '0.14.0'
-  sha256 '62a053f26e7abbe3716d8a2a3f352698a848a31abd82a8af46d888585bb9968e'
+  version '0.15.0'
+  sha256 '3aa72f4bdab0fe635b329519349d4cf8ac348eaaab08dd0b5abd7afa21339938'
 
   # github.com/klaussinani/tusk was verified as official when first introduced to the cask
   url "https://github.com/klaussinani/tusk/releases/download/v#{version}/Tusk-#{version}.dmg"
