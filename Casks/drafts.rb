@@ -8,5 +8,7 @@ cask 'drafts' do
   name 'Drafts'
   homepage 'https://getdrafts.com/mac/beta/'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'Drafts.app'
 end
