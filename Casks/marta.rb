@@ -7,6 +7,8 @@ cask 'marta' do
   name 'Marta File Manager'
   homepage 'https://marta.yanex.org/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Marta.app'
 
   zap trash: [
