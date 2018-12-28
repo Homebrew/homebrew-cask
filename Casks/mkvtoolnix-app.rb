@@ -7,5 +7,11 @@ cask 'mkvtoolnix-app' do
   name 'MKVToolNix'
   homepage 'https://mkvtoolnix.download/'
 
+  conflicts_with formula: 'mkvtoolnix'
+
   app "MKVToolNix-#{version}.app"
+  binary "#{appdir}/MKVToolNix-#{version}.app/Contents/MacOS/mkvextract"
+  binary "#{appdir}/MKVToolNix-#{version}.app/Contents/MacOS/mkvinfo"
+  binary "#{appdir}/MKVToolNix-#{version}.app/Contents/MacOS/mkvmerge"
+  binary "#{appdir}/MKVToolNix-#{version}.app/Contents/MacOS/mkvpropedit"
 end
