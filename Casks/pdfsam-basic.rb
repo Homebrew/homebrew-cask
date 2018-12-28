@@ -8,5 +8,5 @@ cask 'pdfsam-basic' do
   name 'PDFsam Basic'
   homepage 'https://www.pdfsam.org/'
 
-  app 'PDFsam Basic.app'
+  pkg "PDFsam Basic-#{version}.pkg"
 end
