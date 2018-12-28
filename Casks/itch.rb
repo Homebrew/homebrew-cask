@@ -3,7 +3,7 @@ cask 'itch' do
   sha256 'b88dc10ceb69ece6ecab17340e6c4abc6e89e8eb20c7b030207eca5d0c2d8f17'
 
   # nuts.itch.zone was verified as official when first introduced to the cask
-  url 'http://nuts.itch.zone/download/osx'
+  url 'https://nuts.itch.zone/download/osx'
   appcast 'https://github.com/itchio/itch/releases.atom'
   name 'itch'
   homepage 'https://itch.io/app'
