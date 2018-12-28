@@ -8,6 +8,7 @@ cask 'hex-fiend' do
   name 'Hex Fiend'
   homepage 'https://ridiculousfish.com/hexfiend/'
 
+  auto_updates true
   conflicts_with cask: 'hex-fiend-beta'
 
   app 'Hex Fiend.app'
