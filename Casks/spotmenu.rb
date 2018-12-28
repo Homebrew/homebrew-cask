@@ -7,5 +7,7 @@ cask 'spotmenu' do
   name 'SpotMenu'
   homepage 'https://github.com/kmikiy/SpotMenu'
 
+  auto_updates true
+
   app 'SpotMenu.app'
 end
