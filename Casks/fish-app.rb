@@ -1,4 +1,4 @@
-cask 'fish' do
+cask 'fish-app' do
   version '3.0.0'
   sha256 'c583f51bea4a1b965458218d1bc60361d86695d41eb3b15298add2d0a0bb9c1b'
 
