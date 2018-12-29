@@ -1,6 +1,6 @@
 cask 'paraview' do
   version '5.6.0'
-  sha256 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+  sha256 '711ccfe071f32ee60b41b22c42e98193ccc336d89105c3786ac729e6951c4836'
 
   url "https://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v#{version.major_minor}&type=binary&os=macOS&downloadFile=ParaView-#{version}-MPI-OSX10.8-64bit.dmg",
       user_agent: :fake
