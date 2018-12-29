@@ -10,5 +10,5 @@ cask 'fish' do
 
   depends_on macos: '>= :snow_leopard'
 
-  app 'fish.app'
+  app "fish-#{version}.app"
 end
