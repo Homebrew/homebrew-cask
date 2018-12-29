@@ -7,6 +7,8 @@ cask 'wordcounter' do
   appcast "https://update.christiantietze.de/wordcounter/v#{version.major}/beta.xml"
   name 'WordCounter'
   homepage 'https://wordcounterapp.com/'
+  
+  depends_on macos: '>= :sierra'
 
   app 'WordCounter.app'
 end
