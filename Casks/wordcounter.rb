@@ -9,6 +9,6 @@ cask 'wordcounter' do
   homepage 'https://wordcounterapp.com/'
   
   depends_on macos: '>= :sierra'
-
+  
   app 'WordCounter.app'
 end
