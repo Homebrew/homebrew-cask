@@ -1,10 +1,10 @@
 cask 'squadanimator-gaa' do
-  version '1.0.2'
-  sha256 'd238578cd4cf26a7343a244ae29358ffdca372fc3e389c09248cf96b40577906'
+  version '1.0.4'
+  sha256 '7e7c2f3eb637de07517a5b695ed20c9093fbab1a7f8ffb4af5167e19e60b2afa'
 
   url "https://www.squadanimator.com/downloads/SquadAnimatorGAA-OSX-#{version}.zip"
   name 'SquadAnimator GAA'
   homepage 'https://www.squadanimator.com/'
 
-  app 'SquadAnimator-GAA.app'
+  app "SquadAnimatorGAA-#{version}.app"
 end

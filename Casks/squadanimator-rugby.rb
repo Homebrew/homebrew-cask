@@ -1,6 +1,6 @@
 cask 'squadanimator-rugby' do
-  version '1.0.1'
-  sha256 'e9db96ef2a1dee2af84329124c9de5ebe86f79667e7a628d4eb98da94d375fc9'
+  version '1.0.2'
+  sha256 'd001ddfc424ae3e47fd9fab318e4b85aa8af40a4a5755a99b717e79fa877c33b'
 
   url "https://www.squadanimator.com/downloads/SquadAnimatorRugbyOSX-#{version}.zip"
   name 'SquadAnimator-Rugby'
