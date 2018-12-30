@@ -8,6 +8,6 @@ cask 'chai' do
   homepage 'https://github.com/lvillani/chai'
 
   depends_on macos: '>= :sierra'
-  
+
   app 'Chai.app'
 end
