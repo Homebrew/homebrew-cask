@@ -4,6 +4,7 @@ cask 'odio' do
 
   url "https://github.com/odioapp/odio/releases/download/v#{version}/odio-#{version}.dmg"
   appcast 'https://github.com/odioapp/odio/releases.atom'
+
   name 'odio'
   homepage 'https://github.com/odioapp/odio'
 
