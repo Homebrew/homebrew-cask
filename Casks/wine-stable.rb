@@ -7,6 +7,11 @@ cask 'wine-stable' do
   name 'WineHQ-stable'
   homepage 'https://wiki.winehq.org/MacOS'
 
+  conflicts_with formula: 'wine',
+                 cask:    [
+                            'wine-devel',
+                            'wine-staging',
+                          ]
   depends_on x11: true
 
   pkg "winehq-stable-#{version}.pkg",
