@@ -17,7 +17,10 @@ cask 'dotnet-sdk' do
   pkg "dotnet-sdk-#{version}-osx-x64.pkg"
 
   uninstall pkgutil: 'com.microsoft.dotnet.*',
-            delete:  '/etc/paths.d/dotnet'
+            delete:  [
+                       '/etc/paths.d/dotnet',
+                       '/etc/paths.d/dotnet-cli-tools',
+                     ]
 
   zap trash: '~/.nuget'
 end
