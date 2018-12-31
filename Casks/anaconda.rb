@@ -1,6 +1,6 @@
 cask 'anaconda' do
-  version '5.3.1'
-  sha256 '23c373abce2463d4df495f5a1c7e8b0faec6eda09542d98f41ed65a0fa0dbde0'
+  version '2018.12'
+  sha256 '4ccd3944d994fd47e5701c341725a63e984f8c042bf4dc19c9dfc7c135e7d8e4'
 
   url "https://repo.anaconda.com/archive/Anaconda3-#{version}-MacOSX-x86_64.sh"
   name 'Continuum Analytics Anaconda'
@@ -33,7 +33,32 @@ cask 'anaconda' do
              ]
 
   caveats do
-    path_environment_variable "#{HOMEBREW_PREFIX}/anaconda3/bin"
     files_in_usr_local
+
+    <<~EOS
+      If your shell is Bash or a Bourne variant, enable conda for the current user with
+
+        $ echo ". #{HOMEBREW_PREFIX}/anaconda3/etc/profile.d/conda.sh" >> ~/.bash_profile
+
+      or, for all users, enable conda with
+
+        $ sudo ln -s #{HOMEBREW_PREFIX}/anaconda3/etc/profile.d/conda.sh /etc/profile.d/conda.sh
+
+      The options above will permanently enable the 'conda' command, but they do NOT
+      put conda's base (root) environment on PATH.  To do so, run
+
+        $ conda activate
+
+      in your terminal, or to put the base environment on PATH permanently, run
+
+        $ echo "conda activate" >> ~/.bash_profile
+
+      Previous to conda 4.4, the recommended way to activate conda was to modify PATH in
+      your ~/.bash_profile file.  You should manually remove the line that looks like
+
+        export PATH="#{HOMEBREW_PREFIX}/anaconda3/bin:$PATH"
+
+      ^^^ The above line should NO LONGER be in your ~/.bash_profile file! ^^^
+    EOS
   end
 end
