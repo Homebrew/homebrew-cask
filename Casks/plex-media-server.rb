@@ -7,6 +7,7 @@ cask 'plex-media-server' do
   name 'Plex Media Server'
   homepage 'https://www.plex.tv/'
 
+  auto_updates true
   depends_on macos: '>= :mavericks'
 
   app 'Plex Media Server.app'
