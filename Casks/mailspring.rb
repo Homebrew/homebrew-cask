@@ -1,6 +1,6 @@
 cask 'mailspring' do
-  version '1.5.3'
-  sha256 'c57d5be8cdb8a721bb24c5cd65bc7cbb6da96f356ea9f428bd8fffae94159089'
+  version '1.5.4'
+  sha256 'a66e55e8f2d99906edefc2a9d77f196701c71e0345d905921605a162bb8bc078'
 
   # github.com/Foundry376/Mailspring was verified as official when first introduced to the cask
   url "https://github.com/Foundry376/Mailspring/releases/download/#{version}/Mailspring.zip"
