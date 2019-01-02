@@ -4,6 +4,7 @@ cask 'hsang' do
 
   # opd.gdl.netease.com was verified as official when first introduced to the cask
   url "https://opd.gdl.netease.com/HSAng_#{version}.dmg"
+  appcast 'http://hs.gameyw.netease.com/mac.xml'
   name 'HSAng'
   homepage 'https://lushi.163.com/'
 

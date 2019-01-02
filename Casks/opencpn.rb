@@ -1,6 +1,6 @@
 cask 'opencpn' do
-  version '4.8.4'
-  sha256 'bf50048c0b304cbb109228821dba521c1994f183e07675bb922855224186efa7'
+  version '4.8.8'
+  sha256 'ef0134e0cbfdf6c4e6ad5e4c08ee3d720506676fb6228d6174db1a4b5505651f'
 
   # opencpn.navnux.org was verified as official when first introduced to the cask
   url "http://opencpn.navnux.org/#{version}/OpenCPN_#{version}.dmg"

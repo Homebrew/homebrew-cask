@@ -9,6 +9,7 @@ cask 'welly' do
     url "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/welly/Welly.v#{version}.fix.zip"
   end
 
+  appcast 'https://csie.io/welly/update.xml'
   name 'Welly'
   homepage 'https://code.google.com/archive/p/welly'
 

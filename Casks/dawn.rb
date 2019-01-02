@@ -1,6 +1,6 @@
 cask 'dawn' do
-  version '2.10.0,20180904-1516'
-  sha256 '1e04d9fbe30787a9c304b2137238e46f25fa900f5efac3b07efd3ac532375895'
+  version '2.11.0,20181121-0820'
+  sha256 'f717757e75b2a3e706ed292d749e29c2e4231812e6683d37379fd07975f568e9'
 
   # alfred.diamond.ac.uk/DawnDiamond was verified as official when first introduced to the cask
   url "https://alfred.diamond.ac.uk/DawnDiamond/#{version.major_minor}/downloads/builds-release/DawnDiamond-#{version.before_comma}.v#{version.after_comma}-mac64.dmg"

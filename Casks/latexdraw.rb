@@ -8,7 +8,7 @@ cask 'latexdraw' do
   name 'LaTexDraw'
   homepage 'https://latexdraw.sourceforge.io/'
 
-  app "LaTexDraw-#{version}.app"
+  app "LaTeXDraw-#{version}.app"
 
   caveats do
     depends_on_java '8'

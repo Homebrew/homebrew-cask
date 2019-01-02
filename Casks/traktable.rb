@@ -8,5 +8,5 @@ cask 'traktable' do
   name 'Traktable'
   homepage 'https://yo-han.github.io/Traktable/'
 
-  app 'Traktable.app'
+  app "Traktable-#{version.before_comma}#{version.after_comma}.app"
 end

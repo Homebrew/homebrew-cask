@@ -1,6 +1,6 @@
 cask 'passenger' do
   version '4.6.1'
-  sha256 '2e51501c65c339f7e9f1fa1c74b75fb7d60b4c3a2f0b02a99a28ec4d2b46d592'
+  sha256 '2b385566b8d525169591b0f750e82767266d19aae5cfe86a7fbd122b73770547'
 
   url 'https://macinmind.com/Passenger.dmg'
   appcast 'https://macinmind.com/pads/PassengerAppcast.xml'

@@ -1,6 +1,6 @@
 cask 'umsatz' do
-  version '7.2.2'
-  sha256 'bacbea1aa995cf225a838760de6092575a5ccc09d1da426bf81164d79e36f6ff'
+  version '8.0.9'
+  sha256 'bee0ab7201351281f7af21b3763fc7c4bd6b444cb60f1899f399f2bff76b8f73'
 
   # moapp.software was verified as official when first introduced to the cask
   url 'https://download.moapp.software/Umsatz.zip'

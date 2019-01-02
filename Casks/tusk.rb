@@ -1,12 +1,12 @@
 cask 'tusk' do
-  version '0.11.0'
-  sha256 '1970b34f42ec1ba59bb6e5cef6015e6184fc650f49fad242f30b3d5b973e2b39'
+  version '0.15.0'
+  sha256 '3aa72f4bdab0fe635b329519349d4cf8ac348eaaab08dd0b5abd7afa21339938'
 
-  # github.com/klauscfhq/tusk was verified as official when first introduced to the cask
-  url "https://github.com/klauscfhq/tusk/releases/download/v#{version}/tusk-macos-#{version}.dmg"
-  appcast 'https://github.com/klauscfhq/tusk/releases.atom'
+  # github.com/klaussinani/tusk was verified as official when first introduced to the cask
+  url "https://github.com/klaussinani/tusk/releases/download/v#{version}/Tusk-#{version}.dmg"
+  appcast 'https://github.com/klaussinani/tusk/releases.atom'
   name 'Tusk'
-  homepage 'https://klauscfhq.github.io/tusk/'
+  homepage 'https://klaussinani.github.io/tusk/'
 
   app 'Tusk.app'
 

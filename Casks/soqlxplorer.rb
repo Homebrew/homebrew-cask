@@ -1,8 +1,8 @@
 cask 'soqlxplorer' do
-  version '2.90'
-  sha256 '2017024c55b1a7383785300f05cf31594f39faf711bad2f1563a97e4da365f4b'
+  version '3.00'
+  sha256 '8f8cf4663a6a989b63375e2f4716f2859ee205342737ff6b87f1d9d8253a7b91'
 
-  url "http://www.pocketsoap.com/osx/soqlx/soqlXplorer_v#{version}.zip"
+  url "http://www.pocketsoap.com/osx/soqlx/SoqlXplorer_v#{version}.zip"
   appcast 'http://www.pocketsoap.com/osx/soqlx/appcast.xml'
   name 'SoqlXplorer'
   homepage 'http://www.pocketsoap.com/osx/soqlx/'

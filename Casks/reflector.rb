@@ -1,6 +1,6 @@
 cask 'reflector' do
-  version '3.1.1'
-  sha256 '0f1b79c091cd5964849c3e863b0ac911bed3cb4668496b4b552e0fa4f52ae9a5'
+  version '3.2.0'
+  sha256 'c2dcdeb8d5ba1db3a6e65d85820250b292cf2bd040009bd16f4b441c67b97724'
 
   url "https://download.airsquirrels.com/Reflector#{version.major}/Mac/Reflector-#{version}.dmg"
   appcast "https://updates.airsquirrels.com/Reflector#{version.major}/Mac/Reflector#{version.major}.xml"

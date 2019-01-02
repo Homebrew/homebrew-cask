@@ -1,6 +1,6 @@
 cask 'quodlibet' do
-  version '4.1.0'
-  sha256 'e4605153e17727ba413339616115c159d53dfca7920a295670f72e58bd9e762e'
+  version '4.2.0'
+  sha256 'd0ce491acdd0828c07746a6239b9bb63b3876e499e8b24bca73a024e19b34558'
 
   # github.com/quodlibet/quodlibet was verified as official when first introduced to the cask
   url "https://github.com/quodlibet/quodlibet/releases/download/release-#{version}/QuodLibet-#{version}.dmg"

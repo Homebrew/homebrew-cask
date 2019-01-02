@@ -9,8 +9,11 @@ cask 'sapmachine-jdk' do
 
   postflight do
     system_command '/bin/mv',
-                   args: ['-f', '--', "#{staged_path}/sapmachine-jdk-#{version.before_comma}.jdk",
-                          "/Library/Java/JavaVirtualMachines/sapmachine-jdk-#{version.before_comma}.jdk"],
+                   args: [
+                           '-f', '--',
+                           "#{staged_path}/sapmachine-jdk-#{version.before_comma}.jdk",
+                           "/Library/Java/JavaVirtualMachines/sapmachine-jdk-#{version.before_comma}.jdk"
+                         ],
                    sudo: true
 
     system_command '/bin/mkdir',
@@ -18,8 +21,11 @@ cask 'sapmachine-jdk' do
                    sudo: true
 
     system_command '/bin/ln',
-                   args: ['-nsf', '--', "/Library/Java/JavaVirtualMachines/sapmachine-jdk-#{version.before_comma}.jdk/Contents/Home/lib/server/libjvm.dylib",
-                          "/Library/Java/JavaVirtualMachines/sapmachine-jdk-#{version.before_comma}.jdk/Contents/Home/bundle/Libraries/libserver.dylib"],
+                   args: [
+                           '-nsf', '--',
+                           "/Library/Java/JavaVirtualMachines/sapmachine-jdk-#{version.before_comma}.jdk/Contents/Home/lib/server/libjvm.dylib",
+                           "/Library/Java/JavaVirtualMachines/sapmachine-jdk-#{version.before_comma}.jdk/Contents/Home/bundle/Libraries/libserver.dylib"
+                         ],
                    sudo: true
   end
 

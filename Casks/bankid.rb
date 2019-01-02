@@ -1,6 +1,6 @@
 cask 'bankid' do
-  version '7.4.0'
-  sha256 'c014b5580b848cd649671b2e0e00c3eacba1e3c78e5fb8ac2166ea0a02f5d0d8'
+  version '7.7.0'
+  sha256 '53e7f59049d32e541c6bdd584f88211f89ed3fb82430f4ce1bf7f5a6ab6bed65'
 
   url "https://install.bankid.com/Repository/BankID_installation_#{version.dots_to_underscores}.pkg"
   name 'BankID'

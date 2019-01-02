@@ -1,6 +1,6 @@
 cask 'prusa-slic3r' do
-  version '1.41.0,201809010756'
-  sha256 '93ea481dd849d0c2ece2cc1d1df0631354c52a6ed5491b267ea524db664e1344'
+  version '1.41.2,201811221501'
+  sha256 'f5bd25f8e675763e849b2b9a5b2a24e2a1f5750da0075402eafae52a67d0ef90'
 
   # github.com/prusa3d/Slic3r was verified as official when first introduced to the cask.
   url "https://github.com/prusa3d/Slic3r/releases/download/version_#{version.before_comma}/Slic3rPE-#{version.before_comma}+full-#{version.after_comma}.dmg"

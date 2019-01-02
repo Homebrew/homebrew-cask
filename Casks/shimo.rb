@@ -4,6 +4,7 @@ cask 'shimo' do
 
   # shimo.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://shimo.s3.amazonaws.com/Shimo_#{version}.zip"
+  appcast 'https://www.shimovpn.com/appcast.php'
   name 'Shimo'
   homepage 'https://www.shimovpn.com/'
 

@@ -1,6 +1,6 @@
 cask 'ubar' do
-  version '4.1.1'
-  sha256 '1a8565ac175aa22eb3ead10ac8e80d61fe8310e2cf575c6a931019f66b12dff7'
+  version '4.1.3'
+  sha256 'bd2cd66c364d7e076e10d01e05b978c947b5bb1c6a1ee17d0b5a15db0f5e2323'
 
   url "https://www.brawersoftware.com/downloads/ubar/ubar#{version.no_dots}.zip"
   appcast "https://brawersoftware.com/appcasts/feeds/ubar/ubar#{version.major}.xml"

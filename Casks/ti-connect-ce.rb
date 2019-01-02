@@ -7,4 +7,10 @@ cask 'ti-connect-ce' do
   homepage 'https://education.ti.com/en/products/computer-software/ti-connect-ce-sw'
 
   app 'TI Connect CE.app'
+
+  zap trash: [
+               '~/Library/Logs/Texas Instruments/TI Connect CE',
+               '~/Library/Preferences/com.ti.et.elg.tiConnect.TIConnectApplication.plist',
+               '~/Library/Saved Application State/com.ti.et.elg.tiConnect.TIConnectApplication.savedState',
+             ]
 end

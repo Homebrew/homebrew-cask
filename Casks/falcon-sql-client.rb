@@ -1,6 +1,6 @@
 cask 'falcon-sql-client' do
-  version '3.0.3'
-  sha256 'f801257679523ee8ae7391423d053bf8f9d8decfb8b6bbd7fe703383447cf657'
+  version '4.1.0'
+  sha256 '5a2487c9afcf2465b2302c9e1174765f02c583e81409d47bca8c155cccfcdf00'
 
   # github.com/plotly/falcon-sql-client was verified as official when first introduced to the cask
   url "https://github.com/plotly/falcon-sql-client/releases/download/v#{version}/mac-falcon-v#{version}.zip"

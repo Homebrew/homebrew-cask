@@ -8,5 +8,7 @@ cask 'vu' do
   name 'vu'
   homepage 'https://datastills.com/vu/'
 
+  depends_on macos: '>= :sierra'
+
   app 'vu.app'
 end

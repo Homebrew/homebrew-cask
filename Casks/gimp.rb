@@ -1,8 +1,8 @@
 cask 'gimp' do
-  version '2.10.6'
-  sha256 '52fe241b69d5353c546ffac008d89328fa3126d8f2557642c4661ba68e4ad6c8'
+  version '2.10.8,2'
+  sha256 '8ee527bfd5b4ac6a9b62dff3b0f0da6e4721b3dac208f29446cdeea6967d4f13'
 
-  url "https://download.gimp.org/pub/gimp/v#{version.major_minor}/osx/gimp-#{version}-x86_64.dmg"
+  url "https://download.gimp.org/pub/gimp/v#{version.major_minor}/osx/gimp-#{version.before_comma}-x86_64-#{version.after_comma}.dmg"
   name 'GIMP'
   homepage 'https://www.gimp.org/'
 

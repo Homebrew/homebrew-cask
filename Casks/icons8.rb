@@ -9,4 +9,12 @@ cask 'icons8' do
   homepage 'https://icons8.com/'
 
   app 'Icons8.app'
+
+  zap trash: [
+               '~/Library/Preferences/com.visualpharm.Icons8.plist',
+               '~/Library/Containers/com.visualpharm.StandaloneLoginHelper',
+               '~/Library/Caches/com.visualpharm.Icons8',
+               '~/Library/Application\ Support/com.visualpharm.Icons8',
+               '~/Library/Application\ Scripts/com.visualpharm.StandaloneLoginHelper',
+             ]
 end

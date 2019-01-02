@@ -7,4 +7,6 @@ cask 'itau' do
   homepage 'https://www.itau.com.br/computador/'
 
   app 'Itau.app'
+
+  zap trash: '~/.aplicativoitau'
 end

@@ -1,9 +1,9 @@
 cask 'hma-pro-vpn' do
-  version '3.2.11.2'
-  sha256 '77ef3863352702697052dbbec5eff6087a5e2b5f18bde70827e98be748628978'
+  version '4.4.2'
+  sha256 '78ab7a404377ae084d925698732d1cc031b81b2e13b2da2836b94eb833adb8f4'
 
-  # d1llq9kjmh5kle.cloudfront.net/HMA-Pro-VPN-macOS- was verified as official when first introduced to the cask
-  url "https://d1llq9kjmh5kle.cloudfront.net/HMA-Pro-VPN-macOS-#{version}.dmg"
+  # s-mac-sl.avcdn.net was verified as official when first introduced to the cask
+  url 'https://s-mac-sl.avcdn.net/macosx/privax/HMA-Pro-VPN.dmg'
   name 'HMA! Pro VPN'
   name 'HideMyAss! Pro VPN'
   homepage 'https://www.hidemyass.com/index'

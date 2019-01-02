@@ -1,6 +1,6 @@
 cask 'cave' do
   version '18.1.1-1'
-  sha256 'a269e7e0a83ee6f576bf647b7255a365817ef1d3a308b0a133f163c73c7c3cc1'
+  sha256 'b4b93878165809f83cb76f243cab429aa78aaeb687d69785c1939cf405064c20'
 
   url "https://www.unidata.ucar.edu/downloads/awips2/awips2-cave-#{version}.dmg"
   name 'AWIPS Cave'

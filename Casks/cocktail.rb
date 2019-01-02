@@ -30,14 +30,14 @@ cask 'cocktail' do
     url "https://www.maintain.se/downloads/sparkle/sierra/Cocktail_#{version}.zip"
     appcast 'https://www.maintain.se/downloads/sparkle/sierra/sierra.xml'
   elsif MacOS.version == :high_sierra
-    version '11.6.3'
-    sha256 '6a00bae70a5befa7fb9467c1320e8818939e5f074deadd70177021fbf4694b07'
+    version '11.6.4'
+    sha256 '1e606fd287fdb4adb7e64d345dfd007458b216ed06694abf54f1c799037986be'
 
     url "https://www.maintain.se/downloads/sparkle/highsierra/Cocktail_#{version}.zip"
     appcast 'https://www.maintain.se/downloads/sparkle/highsierra/highsierra.xml'
   else
-    version '12.0.1'
-    sha256 'a77cda30300b7ea943908dd57df365ce2cdf1d801230f0fc2fb9954fefb1c93f'
+    version '12.1'
+    sha256 '6d29ae99abcf43e2217827104de145dae6c4750f9754e15db6f491929ca92b07'
 
     url "https://www.maintain.se/downloads/sparkle/mojave/Cocktail_#{version}.zip"
     appcast 'https://www.maintain.se/downloads/sparkle/mojave/mojave.xml'
