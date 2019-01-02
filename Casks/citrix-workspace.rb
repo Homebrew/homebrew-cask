@@ -1,5 +1,5 @@
 cask 'citrix-workspace' do
-  version '18.12,15579:1545940629_adfa92c83b8b302175ff456856be0e30'
+  version '18.12,15579:1546471587_64a0cbb2d63b64b4bba1394d1d21caec'
   sha256 'b5d6e406402ae4f72ba431e60c3c0a390a6cf483be34fbea44c710a8a0c8e1bc'
 
   url "https://downloads.citrix.com/#{version.after_comma.before_colon}/CitrixWorkspaceApp.dmg?__gda__=#{version.after_colon}"
