@@ -6,7 +6,7 @@ cask 'iina' do
   url "https://dl-portal.iina.io/IINA.v#{version}.dmg"
   appcast 'https://www.iina.io/appcast.xml'
   name 'IINA'
-  homepage 'https://lhc70000.github.io/iina/'
+  homepage 'https://iina.io'
 
   auto_updates true
   conflicts_with cask: 'iina-beta'
