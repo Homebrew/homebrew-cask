@@ -34,11 +34,5 @@ cask 'anaconda' do
 
   caveats do
     files_in_usr_local
-
-    <<~EOS
-      To enable the 'conda' command for the current user, run
-
-        $ echo ". #{HOMEBREW_PREFIX}/anaconda3/etc/profile.d/conda.sh" >> ~/.bash_profile
-    EOS
   end
 end
