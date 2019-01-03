@@ -3,6 +3,7 @@ cask 'fcs-remover' do
   sha256 'c0d0526f3d7a9b48ae130cda6faed3f3393ea1c08a78850c9f71efa6e04b5e91'
 
   url "https://www.digitalrebellion.com/download/fcsremover?version=#{version.no_dots}"
+  appcast 'https://www.digitalrebellion.com/rss/appcasts/fcs_remover_appcast.xml'
   name 'FCS Remover'
   homepage 'https://www.digitalrebellion.com/fcsremover/'
 

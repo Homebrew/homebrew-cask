@@ -8,6 +8,7 @@ cask 'interarchy' do
   end
 
   url "https://download.interarchy.com/Interarchy_#{version}.zip"
+  appcast 'https://interarchy.com/'
   name 'Interarchy'
   homepage 'https://interarchy.com/'
 

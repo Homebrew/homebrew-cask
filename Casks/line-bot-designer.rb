@@ -1,6 +1,6 @@
 cask 'line-bot-designer' do
-  version '1.0.0'
-  sha256 'cb7d52cfc199089c585741d44338f47b1c995687eac4c3e0338c41d8b3fe31ed'
+  version '1.2.0'
+  sha256 'fbdfa28e2fae82c0395811eda20d3c3c2d4b737b9f646fd375a955ba0eb6de90'
 
   # d.line-scdn.net was verified as official when first introduced to the cask
   url "https://d.line-scdn.net/r/devcenter/bot-designer/LINE%20Bot%20Designer-#{version}.dmg"

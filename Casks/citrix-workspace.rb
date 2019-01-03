@@ -1,9 +1,9 @@
 cask 'citrix-workspace' do
-  version :latest
-  sha256 :no_check
+  version '18.12,15579:1545940629_adfa92c83b8b302175ff456856be0e30'
+  sha256 'b5d6e406402ae4f72ba431e60c3c0a390a6cf483be34fbea44c710a8a0c8e1bc'
 
-  # downloadplugins.citrix.com.edgesuite.net was verified as official when first introduced to the cask
-  url 'http://downloadplugins.citrix.com.edgesuite.net/Mac/CitrixWorkspaceApp.dmg'
+  url "https://downloads.citrix.com/#{version.after_comma.before_colon}/CitrixWorkspaceApp.dmg?__gda__=#{version.after_colon}"
+  appcast 'https://www.citrix.com/downloads/workspace-app/mac/workspace-app-for-mac-latest.html'
   name 'Citrix Workspace'
   homepage 'https://www.citrix.com/products/workspace-app/'
 

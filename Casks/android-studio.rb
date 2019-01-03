@@ -4,6 +4,7 @@ cask 'android-studio' do
 
   # google.com/dl/android/studio was verified as official when first introduced to the cask
   url "https://dl.google.com/dl/android/studio/install/#{version.before_comma}/android-studio-ide-#{version.after_comma}-mac.dmg"
+  appcast 'https://dl.google.com/android/studio/patches/updates.xml'
   name 'Android Studio'
   homepage 'https://developer.android.com/studio/index.html'
 

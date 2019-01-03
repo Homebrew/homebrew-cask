@@ -1,9 +1,10 @@
 cask 'vsee' do
-  version '3.12.0,34421'
-  sha256 'd93808c63ad159ec065b7eec079aee392532804c945def8edf2b3e6dd00cd576'
+  version '4.3.0,37243'
+  sha256 '02c286fff1da7af83d3cfcb61f15154bb0a532b3f032e4ebc4bed057fe155e53'
 
   # d2q5hugz2rti4w.cloudfront.net was verified as official when first introduced to the cask
   url "https://d2q5hugz2rti4w.cloudfront.net/mac/#{version.after_comma}/vseemac.dmg"
+  appcast 'https://client.vsee.com/mac/appcast.xml'
   name 'VSee'
   homepage 'https://vsee.com/'
 

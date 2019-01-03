@@ -1,6 +1,6 @@
 cask 'remembear' do
-  version '1.2.0'
-  sha256 '07faffe1633a04e2bfb9b6102eb9a3b9af7353865817fd04cacea2e9149686f4'
+  version '1.2.2'
+  sha256 '94c49a796d0f9aef6cf89a84cc9646fa5075614f9f01a8995095de74069be38c'
 
   # s3.amazonaws.com/remembear was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/remembear/app/release/downloads/macOS/RememBear-#{version}.zip"

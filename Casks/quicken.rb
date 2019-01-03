@@ -1,6 +1,6 @@
 cask 'quicken' do
-  version '5.8.0,58.24400.100'
-  sha256 'c4c183d015583ecbb3e93cc7e2c419f80c5e8adde2d6bc82f307a2791de4ef35'
+  version '5.9.1,59.25139.100'
+  sha256 '966515c007c5b67831f1e87a3ec562ea1c0cd268261b750b1424ba91d57250ac'
 
   url "https://download.quicken.com/mac/Quicken/001/Release/031A96D9-EFE6-4520-8B6A-7F465DDAA3E4/Quicken-#{version.after_comma}/Quicken-#{version.after_comma}.zip"
   appcast 'https://download.quicken.com/mac/Quicken/001/Release/031A96D9-EFE6-4520-8B6A-7F465DDAA3E4/appcast.xml'

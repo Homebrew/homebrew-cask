@@ -1,6 +1,6 @@
 cask 'monero-wallet' do
-  version '0.13.0.3'
-  sha256 'c4da9847d65f5d1051522833c7518b7137cdcbb69399ec0aac4036371f293d29'
+  version '0.13.0.4'
+  sha256 'c425f1b984cf00ffd1a9f1322e5da876aa07c106e975ca9fe08ee0a2d2956335'
 
   url "https://downloads.getmonero.org/gui/monero-gui-mac-x64-v#{version}.tar.bz2"
   appcast 'https://github.com/monero-project/monero-gui/releases.atom'

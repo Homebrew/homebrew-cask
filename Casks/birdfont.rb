@@ -1,12 +1,17 @@
 cask 'birdfont' do
-  version '3.12.14'
-  sha256 '82d6615125dd6953a51f4503c4bdd54e750da3f13850a5013b8225de18e5bb99'
+  if MacOS.version <= :el_capitan
+    version '2.19.4'
+    sha256 '013d9c42c2252b57079453bd27e4c18dbbc09eda55563ff1516fd079c0499f76'
+  else
+    version '3.18.0'
+    sha256 '14b9fe80a9fba8e56bbfe973879049b19488988263aed389edcb3328a410e299'
+  end
 
   url "https://birdfont.org/download/birdfont-#{version}-free.dmg"
   name 'BirdFont'
   homepage 'https://birdfont.org/'
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :el_capitan'
 
   app 'BirdFontNonCommercial.app'
 end

@@ -1,9 +1,9 @@
 cask 'navicat-for-mysql' do
-  version '12.1.10'
-  sha256 'becde08c1a9a9df59e61c905f0e0caaf3688b7b007cc99946d6779e8fb2e2adf'
+  version '12.1.13'
+  sha256 '2dbde626225934cf8591e50b27430e5aa651444ad206b735191595ca4f79f8c0'
 
   url "http://download.navicat.com/download/navicat#{version.major_minor.no_dots}_mysql_en.dmg"
-  appcast 'https://www.navicat.com/en/products/navicat-for-mysql-release-note'
+  appcast 'https://www.navicat.com/updater/v120/sysProfileInfo.php?appName=Navicat%20for%20MySQL&appLang=en'
   name 'Navicat for MySQL'
   homepage 'https://www.navicat.com/products/navicat-for-mysql'
 

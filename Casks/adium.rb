@@ -15,6 +15,8 @@ cask 'adium' do
                '~/Library/Application Support/Adium 2.0',
                '~/Library/Caches/Adium',
                '~/Library/Caches/com.adiumX.adiumX',
+               '~/Library/Caches/com.apple.helpd/Generated/Adium Help*',
                '~/Library/Preferences/com.adiumX.adiumX.plist',
+               '~/Library/Saved Application State/com.adiumX.adiumX.savedState',
              ]
 end

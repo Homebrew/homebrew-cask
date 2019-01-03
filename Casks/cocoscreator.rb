@@ -1,9 +1,8 @@
 cask 'cocoscreator' do
-  version '2.0.1,20180823'
-  sha256 '1738ace990ff863f0cc757e949b27c513625d71827c0c6ecda1a97b0e12b0e47'
+  version '2.0.5_2018110602'
+  sha256 'c8ae621e693d1efcb4a67458c64f15598be9864bded85d2c5a7308038bf300c9'
 
-  # download.cocos.com was verified as official when first introduced to the cask
-  url "http://download.cocos.com/CocosCreator/v#{version.before_comma}/CocosCreator_v#{version.before_comma}_#{version.after_comma}.dmg"
+  url "http://digitalocean.cocos2d-x.org/CocosCreator/v#{version.split('_')[0]}/CocosCreator_v#{version}_mac.dmg"
   name 'CocosCreator'
   homepage 'https://www.cocos2d-x.org/'
 

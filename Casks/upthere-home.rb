@@ -1,8 +1,9 @@
 cask 'upthere-home' do
-  version :latest
-  sha256 :no_check
+  version '1.1.31'
+  sha256 '778bc18879f6616c3a515374687be712bac1c816cb201116cd14ac3129f358fe'
 
   url 'https://upthere.com/apps/mac/UpthereHome.zip'
+  appcast 'https://upthere.com/apps/mac/UpthereHome-appcast.xml'
   name 'Upthere Home'
   homepage 'https://upthere.com/'
 

@@ -8,5 +8,7 @@ cask 'nosleep' do
   name 'NoSleep'
   homepage 'https://integralpro.github.io/nosleep/'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'NoSleep.app'
 end

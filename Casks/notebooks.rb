@@ -1,8 +1,9 @@
 cask 'notebooks' do
-  version :latest
-  sha256 :no_check
+  version '1.4.5'
+  sha256 '11571a75a89ba5aac2f846e95e3d3520d3c47b034b8df2166e93d98a7dde310a'
 
-  url 'https://www.notebooksapp.com/Download/Notebooks%20for%20Mac.dmg'
+  url 'https://notebooksapp.com/Download/Notebooks.zip'
+  appcast 'https://www.notebooksapp.com/NBMacAppcast.xml'
   name 'Notebooks'
   homepage 'https://www.notebooksapp.com/mac/'
 

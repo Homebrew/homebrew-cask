@@ -1,6 +1,6 @@
 cask 'moom' do
-  version '3.2.12'
-  sha256 '3ad4f410be9be95cb20c2e5e85d4563298c85e40c474ab2e73c9b9c9969d64f7'
+  version '3.2.13'
+  sha256 '040fbe28d232e7bb2f4ea970f1a3e3a1293902a2f7d30412f68758af30d0c7f1'
 
   url "https://manytricks.com/download/_do_not_hotlink_/moom#{version.no_dots}.dmg"
   appcast 'https://manytricks.com/moom/appcast'

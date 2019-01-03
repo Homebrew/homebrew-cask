@@ -10,4 +10,11 @@ cask 'xamarin-android' do
   pkg "xamarin.android-#{version}.pkg"
 
   uninstall pkgutil: 'com.xamarin.android.pkg'
+
+  zap trash: [
+               '/Developer/MonoAndroid',
+               '/Library/Frameworks/Xamarin.Android.framework',
+               '~/Library/Caches/Xamarin.Android',
+               '~/Library/Caches/XamarinBuildDownload',
+             ]
 end

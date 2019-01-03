@@ -34,14 +34,20 @@ function copy_templates {
   local repo_name
 
   repo_name="${1}"
-  rsync --archive --prune-empty-dirs --delete \
-    --include '.editorconfig'                 \
-    --include '.gitattributes'                \
-    --include '.github/***'                   \
-    --include '.gitignore'                    \
-    --include '.travis.yml'                   \
-    --include 'CODE_OF_CONDUCT.md'            \
-    --exclude '*' "${main_repo_dir}/" '.'
+
+  for file in          \
+    .editorconfig      \
+    .gitattributes     \
+    .github            \
+    .gitignore         \
+    .travis.yml        \
+    Casks/.rubocop.yml \
+    CODE_OF_CONDUCT.md \
+  ; do
+    rm -rf "${file}"
+    cp -r "${main_repo_dir}/${file}" "${file}"
+  done
+
   rm '.github/ISSUE_TEMPLATE/02_feature_request.md' # Feature requests only make sense in the main repo
   /usr/bin/sed -i '' -E "s:homebrew-cask/(pulls|issues|search):${repo_name}/\1:" '.github/PULL_REQUEST_TEMPLATE.md' # PULL_REQUEST_TEMPLATE has repo-specific links
 }

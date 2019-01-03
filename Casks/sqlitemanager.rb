@@ -1,6 +1,6 @@
 cask 'sqlitemanager' do
-  version '4.8.0'
-  sha256 '80842c378765043bbbc1dc94efbc7232174432503ef04120afe309c132fce5d3'
+  version '4.8.1'
+  sha256 '166ff007b15ee28ee3b41038d67b7b829b44481be263916f83307384cf6a48ba'
 
   url 'https://www.sqlabs.com/download/SQLiteManager.zip'
   appcast 'https://www.sqlabs.com/news/sqlitemanager/'

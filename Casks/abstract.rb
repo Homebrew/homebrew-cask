@@ -1,9 +1,8 @@
 cask 'abstract' do
-  version '75.0.2'
-  sha256 '70b7784ca5f771a0f52cd05963f007aef7abcb6840e7c46ee352d56d04e11e3d'
+  version '76.0.0'
+  sha256 '308800d1048ba647993664a2b62fa2484fbe4103ef6703cd938b8c54da238b34'
 
-  # s3.amazonaws.com/propeller-internal-releases was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/propeller-internal-releases/Abstract-#{version}.dmg"
+  url "https://downloads.goabstract.com/Abstract-#{version}.dmg"
   name 'Abstract'
   homepage 'https://www.goabstract.com/'
 

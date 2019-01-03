@@ -1,14 +1,14 @@
 cask 'dozer' do
-  version '2.0.0'
-  sha256 '2aa0cd777cb37e7aaddd35d2e613b7bcfdfb1317fa13089de0914029d2750b85'
+  version '3.0.2'
+  sha256 '14bf6e1eb610e163c74fa86aae17a123bac4cab49173fd4ed4a461dc6ec8a2bf'
 
-  url "https://github.com/Mortennn/Dozer/releases/download/v#{version}/Dozer.#{version}.dmg"
+  url "https://github.com/Mortennn/Dozer/releases/download/#{version}/Dozer.#{version}.dmg"
   appcast 'https://github.com/Mortennn/Dozer/releases.atom'
   name 'Dozer'
   homepage 'https://github.com/Mortennn/Dozer'
 
   auto_updates true
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :high_sierra'
 
   app 'Dozer.app'
 end

@@ -1,6 +1,6 @@
 cask 'bitshares' do
-  version '2.0.181010'
-  sha256 '2fb6b4d08f3f90ddb9dd7d193378107b561c23a95f38745233d93627d2fdf6f1'
+  version '2.0.181129'
+  sha256 '4c2d59227829d65e27d3b59bd4bd0f56c9a0f8bd90e01bc2cbae7f9a91db4da9'
 
   # github.com/bitshares/bitshares-ui was verified as official when first introduced to the cask
   url "https://github.com/bitshares/bitshares-ui/releases/download/#{version}/BitShares-#{version}.dmg"
