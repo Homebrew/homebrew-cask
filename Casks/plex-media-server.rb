@@ -7,9 +7,11 @@ cask 'plex-media-server' do
   name 'Plex Media Server'
   homepage 'https://www.plex.tv/'
 
+  auto_updates true
   depends_on macos: '>= :mavericks'
 
   app 'Plex Media Server.app'
+  binary "#{appdir}/Plex Media Server.app/Contents/MacOS/Plex Media Scanner", target: 'pms'
 
   uninstall quit:      'com.plexapp.plexmediaserver',
             launchctl: 'com.plexapp.mediaserver'

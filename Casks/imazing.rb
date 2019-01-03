@@ -8,6 +8,7 @@ cask 'imazing' do
   name 'iMazing'
   homepage 'https://imazing.com/'
 
+  auto_updates true
   conflicts_with cask: 'imazing-mini'
   depends_on macos: '>= :mountain_lion'
 
