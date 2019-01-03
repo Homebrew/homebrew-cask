@@ -22,7 +22,6 @@ cask 'miniconda' do
 
   uninstall delete: "#{HOMEBREW_PREFIX}/miniconda3"
 
-
   zap trash: [
                '~/.condarc',
                '~/.conda',
