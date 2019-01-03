@@ -22,7 +22,7 @@ cask 'lulu' do
   backup_settings_dir = '/tmp/Homebrew_tmp_LuLu_settings'
 
   postflight do
-    FileUtils.mv(backup_setting_dir, settings_dir) if Dir.exist?(backup_settings_dir)
+    FileUtils.mv(backup_settings_dir, settings_dir) if Dir.exist?(backup_settings_dir)
   end
 
   uninstall_preflight do
