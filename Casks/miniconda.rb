@@ -22,6 +22,13 @@ cask 'miniconda' do
 
   uninstall delete: "#{HOMEBREW_PREFIX}/miniconda3"
 
+
+  zap trash: [
+               '~/.condarc',
+               '~/.conda',
+               '~/.continuum',
+             ]
+
   caveats do
     files_in_usr_local
   end
