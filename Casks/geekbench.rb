@@ -8,7 +8,7 @@ cask 'geekbench' do
   end
 
   url "https://cdn.geekbench.com/Geekbench-#{version}-Mac.zip"
-  appcast "https://www.primatelabs.com/release/geekbench#{version.major}"
+  appcast "https://www.primatelabs.com/appcast/geekbench#{version.major}.xml"
   name 'Geekbench'
   homepage 'https://www.geekbench.com/'
 
