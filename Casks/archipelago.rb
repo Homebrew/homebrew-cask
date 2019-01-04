@@ -1,6 +1,6 @@
 cask 'archipelago' do
-  version '3.0.1'
-  sha256 'b3893331ff4769f7442beff11a2a6641bcb0ebc4c0f3082a9f673b1b34898483'
+  version '3.0.2'
+  sha256 'b80edf78e024cc780c07f00df8af3fd212acce4326bbf3f573f3939807fe8709'
 
   url "https://github.com/npezza93/archipelago/releases/download/v#{version}/Archipelago-#{version}.dmg"
   appcast 'https://github.com/npezza93/archipelago/releases.atom'
