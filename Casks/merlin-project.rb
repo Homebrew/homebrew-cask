@@ -3,7 +3,7 @@ cask 'merlin-project' do
   sha256 '1770bc7c13f2d9f97e7d31629c5979d8da2bb2c4835a74f4fa7145c805c72247'
 
   url 'https://www.projectwizards.net/downloads/MerlinProject.zip'
-  appcast 'https://projectwizards.net/en/support/release-notes/merlin-project/xml'
+  appcast 'https://www.projectwizards.net/en/support/release-notes/merlin-project-pwstore/xml'
   name 'Merlin Project'
   homepage 'https://www.projectwizards.net/en/products/merlin-project/what-is'
 
