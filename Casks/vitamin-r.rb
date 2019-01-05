@@ -21,8 +21,8 @@ cask 'vitamin-r' do
     appcast "http://www.publicspace.net/app/vitamin#{version.major}.xml"
     app "Vitamin-R #{version.major}.app"
   else
-    version '3.02'
-    sha256 'f65c022292124f6031fd16d43c03edc51b99c819c38196bcea6f139a4c6bf404'
+    version '3.03'
+    sha256 'bd164d61e7605fdfca151fbfdb2446efc1247f4b1d3c75bdfd823c33a4e97535'
     url "http://www.publicspace.net/download/signedVitamin#{version.major}.zip"
     appcast "http://www.publicspace.net/app/vitamin#{version.major}.xml"
     app "Vitamin-R #{version.major}.app"
