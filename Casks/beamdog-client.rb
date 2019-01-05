@@ -1,6 +1,6 @@
 cask 'beamdog-client' do
-  version '2.1.9'
-  sha256 'b3ee780be9c3e1d5eefb75c890531eca69d57a24b4b776a81e2cf3f2ecc4515a'
+  version '2.1.10'
+  sha256 '25ddbe6635057148e87b9e4d82d6751a635e0b34b72c87f3ab06001177e233fb'
 
   url "http://client.beamdog.com/download/#{version}/osx_64/Beamdog%20Client-#{version}.dmg"
   name 'Beamdog Client'
