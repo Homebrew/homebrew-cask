@@ -14,5 +14,6 @@ cask 'clashx' do
   zap trash: [
                '~/Library/Preferences/com.west2online.ClashX.plist',
                '~/Library/Logs/ClashX',
+               '~/.config/clash/',
              ]
 end

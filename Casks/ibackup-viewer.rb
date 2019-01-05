@@ -1,6 +1,6 @@
 cask 'ibackup-viewer' do
-  version '4.0820'
-  sha256 '12d133168e0695d64a41675b1ecac55620099b53acaca28c29199157bf5e08a4'
+  version '4.101'
+  sha256 '310ac33db548ec75062c5d909a1aadd8d83893448b0f919c47178536aca08d0c'
 
   url 'https://www.imactools.com/download/iBackupViewer.dmg'
   appcast 'https://www.imactools.com/update/ibackupviewer.xml'
