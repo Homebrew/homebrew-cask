@@ -4,7 +4,7 @@ cask 'traverse' do
 
   # github.com was verified as official when first introduced to the cask
   url "https://github.com/jasonraimondi/traverse/releases/download/v#{version}/Traverse-#{version}-mac.zip"
-  appcast 'https://github.com/jasonraimondi/traverse/releases'
+  appcast 'https://github.com/jasonraimondi/traverse/releases.atom'
   name 'Traverse'
   homepage 'https://traverse.site/'
 
