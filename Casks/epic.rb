@@ -1,6 +1,6 @@
 cask 'epic' do
-  version '63.0.3239.108'
-  sha256 'db70a27a4eaa3e9f504d1426bc2d3f6557ea6c4959e6a83114d015c8707a0753'
+  version '71.0.3578.98'
+  sha256 'db8992104d646b1d8379dc94f51abe365f55d2bd5b132e6cc0d9810e3c3116ee'
 
   # macepic-cbe.kxcdn.com was verified as official when first introduced to the cask
   url "https://cdn.epicbrowser.com/epic_#{version}.dmg"
