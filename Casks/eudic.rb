@@ -5,9 +5,9 @@ cask 'eudic' do
   # static.frdic.com was verified as official when first introduced to the cask
   url 'https://static.frdic.com/pkg/eudicmac.dmg'
   appcast 'https://www.eudic.net/update/eudic_mac.xml'
-  name 'EuDic'
+  name 'Eudic'
   name '欧路词典'
   homepage 'https://www.eudic.net/eudic/mac_dictionary.aspx'
 
-  app 'EuDic.app'
+  app 'Eudic.app'
 end

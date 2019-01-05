@@ -1,6 +1,6 @@
-cask 'fish' do
-  version '2.7.1'
-  sha256 'd37f093702ef7f05e11333ceb8a1a859452395720b75f5bbbe4851e20157f452'
+cask 'fish-app' do
+  version '3.0.0'
+  sha256 'c583f51bea4a1b965458218d1bc60361d86695d41eb3b15298add2d0a0bb9c1b'
 
   # github.com/fish-shell/fish-shell was verified as official when first introduced to the cask
   url "https://github.com/fish-shell/fish-shell/releases/download/#{version}/fish-#{version}.app.zip"
@@ -10,5 +10,5 @@ cask 'fish' do
 
   depends_on macos: '>= :snow_leopard'
 
-  app 'fish.app'
+  app "fish-#{version}.app"
 end

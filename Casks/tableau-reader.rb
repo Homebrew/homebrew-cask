@@ -1,6 +1,6 @@
 cask 'tableau-reader' do
-  version '2018.3.1'
-  sha256 '8d5feeb9a24a3751145d6cd621d364d520f16e9ee5632cfcea6a10c34c7abf5a'
+  version '2018.3.2'
+  sha256 'ad9aff45442af40f4c89b23822ffe74b1c08649efce8fa41dd0409524a0c540f'
 
   url "https://downloads.tableau.com/tssoftware/TableauReader-#{version.dots_to_hyphens}.dmg"
   name 'Tableau Reader'

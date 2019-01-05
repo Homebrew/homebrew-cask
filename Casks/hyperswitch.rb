@@ -7,6 +7,8 @@ cask 'hyperswitch' do
   name 'HyperSwitch'
   homepage 'https://bahoom.com/hyperswitch/'
 
+  auto_updates true
+
   app 'HyperSwitch.app'
 
   zap trash: [

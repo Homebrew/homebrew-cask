@@ -1,6 +1,6 @@
 cask 'ip-scanner' do
-  version '3.68'
-  sha256 'f725cd523deb2aaff808ac256e61552733318a3fb0302718f9dced2818a8d7ab'
+  version '3.70'
+  sha256 'face2f2520041fefafa31ac551fbc449276706983de710071fd50087e957d50b'
 
   url "https://10base-t.com/downloads/IPScanner_#{version}.zip"
   appcast 'https://updates.10base-t.com/appcasts/ipscanner_appcast_sandbox.xml'
