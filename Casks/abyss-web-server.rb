@@ -1,6 +1,6 @@
 cask 'abyss-web-server' do
-  version '2.11.8'
-  sha256 '1df93374340a939c9bdb34e39eef06a317c7c1240d119784f5f75773f3e9da4c'
+  version '2.12'
+  sha256 'f93ae42987bc01817fef41a051e7fcc65ac13560a971f4e6f9e7301c3fcd4c37'
 
   url 'https://aprelium.com/data/abwsx1.dmg'
   appcast 'https://aprelium.com/abyssws/download.php'
