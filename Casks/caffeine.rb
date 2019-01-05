@@ -1,11 +1,12 @@
 cask 'caffeine' do
-  version '1.1.1'
-  sha256 '9203c30951f9aab41ac294bbeb1dcef7bed401ff0b353dcb34d68af32ea51853'
+  version '1.1.2'
+  sha256 '365367f8b3314ffabc1d821f996943755ebc4f90f5ca1433f3123ddb62e1835e'
 
-  url "http://lightheadsw.com/files/releases/com.lightheadsw.Caffeine/Caffeine#{version}.zip"
-  appcast 'http://lightheadsw.com/caffeine/'
+  # cl.ly/2d0e01d909e4 was verified as official when first introduced to the cask
+  url 'https://cl.ly/2d0e01d909e4/download/Caffeine.dmg'
+  appcast 'https://intelliscapesolutions.com/apps/caffeine/releasenotes'
   name 'Caffeine'
-  homepage 'http://lightheadsw.com/caffeine/'
+  homepage 'https://intelliscapesolutions.com/apps/caffeine'
 
   app 'Caffeine.app'
 
