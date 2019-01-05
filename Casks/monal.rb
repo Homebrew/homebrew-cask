@@ -1,6 +1,6 @@
 cask 'monal' do
-  version '2.3b6'
-  sha256 'f4462805e256e5f7fd3d05679c9363b77e46cce070b1bbdb4a6e812b0db56188'
+  version '2.3b7'
+  sha256 '5ede3f9fa8d882adb834d59897374a269e7523bd361efd7cf553a3cd2b1211df'
 
   url 'https://monal.im/Monal-OSX/Monal-OSX.zip'
   appcast 'https://monal.im/Monal-OSX/appcast.xml'
