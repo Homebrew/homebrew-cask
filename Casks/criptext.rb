@@ -3,7 +3,6 @@ cask 'criptext' do
   sha256 'b133b8344c7dd78381958a6d85bf3142eeed3cf64d2ebfc564393174613fb80c'
 
   url "https://cdn.criptext.com/Criptext-Email-Desktop/mac/Criptext-#{version}.dmg"
-  appcast 'https://github.com/jkakavas/creepy/releases.atom'
   name 'Criptext'
   homepage 'https://criptext.com/'
 
