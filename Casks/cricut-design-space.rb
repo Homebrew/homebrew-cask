@@ -11,7 +11,7 @@ cask 'cricut-design-space' do
                       args:       ['--mode', 'unattended', '--unattendedmodeui', 'none'],
                     }
 
-  uninstall trash:      '/Applications/Cricut Design Space.app/',
+  uninstall trash:      '/Applications/Cricut Design Space.app',
             quit:       [
                           'com.ProvoCraft.CricutBridge4',
                           'com.ProvoCraft.CricutLauncher4',
