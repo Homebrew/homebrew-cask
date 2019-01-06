@@ -1,6 +1,6 @@
 cask 'gray' do
-  version '0.9.10'
-  sha256 'f53b93be6579d235ab75339efe325a8dc82960c57a8b9dc0314ff5d5b886867a'
+  version '0.9.11'
+  sha256 'f01d31eb9ed6b003dbb87455da4fd0330ca034affe8adddd4098a42ca2a1da6a'
 
   url "https://github.com/zenangst/Gray/releases/download/#{version}/Gray.zip"
   appcast 'https://github.com/zenangst/Gray/releases.atom'
