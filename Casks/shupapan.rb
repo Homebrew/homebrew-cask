@@ -2,7 +2,7 @@ cask 'shupapan' do
   version :latest
   sha256 :no_check
 
-  url 'http://sunsky3s.s41.xrea.com/files/shupapan_ub.zip'
+  url 'http://sunsky3s.s41.xrea.com/files/Shupapan_v5980.zip'
   name 'Shupapan'
   homepage 'http://sunsky3s.s41.xrea.com/shupapan/'
 
