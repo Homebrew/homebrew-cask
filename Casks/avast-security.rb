@@ -15,5 +15,8 @@ cask 'avast-security' do
                      },
             pkgutil: 'com.avast.AAFM'
 
-  zap trash: '~/Library/Preferences/com.avast.avast!.plist'
+  zap trash: [
+               '~/Library/Preferences/com.avast.avast!.plist',
+               '~/Library/Cookies/com.avast.AAFM.binarycookies',
+             ]
 end
