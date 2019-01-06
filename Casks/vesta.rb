@@ -9,7 +9,7 @@ cask 'vesta' do
   app 'VESTA/VESTA.app'
 
   zap trash: [
-    '~/Library/Application Support/VESTA',
-    '~/LibraryPreferences/VESTA.plist',
-  ]
+               '~/Library/Application Support/VESTA',
+               '~/LibraryPreferences/VESTA.plist',
+             ]
 end
