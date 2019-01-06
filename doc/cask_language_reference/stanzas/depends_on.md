@@ -33,10 +33,6 @@ The available values for macOS releases are:
 
 | symbol             | corresponding string
 | -------------------|----------------------
-| `:cheetah`         | `'10.0'`
-| `:puma`            | `'10.1'`
-| `:jaguar`          | `'10.2'`
-| `:panther`         | `'10.3'`
 | `:tiger`           | `'10.4'`
 | `:leopard`         | `'10.5'`
 | `:snow_leopard`    | `'10.6'`
