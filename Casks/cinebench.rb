@@ -6,8 +6,6 @@ cask 'cinebench' do
   name 'Cinebench'
   homepage 'https://www.maxon.net/products/cinebench/'
 
-  depends_on macos: '>= :snow_leopard'
-
   app "CINEBENCH #{version}"
 
   zap trash: [
