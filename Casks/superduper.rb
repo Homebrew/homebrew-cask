@@ -1,5 +1,5 @@
 cask 'superduper' do
-  if MacOS.version == :mavericks
+  if MacOS.version <= :mavericks
     version '3.1.1'
     sha256 '6639cf292fe391cfb1c2283fc3614c462a9859910a4c85e190119548d3c32c31'
 
