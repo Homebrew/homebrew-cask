@@ -1,5 +1,5 @@
 cask 'enpass' do
-  version '6.0.1,293'
+  version '6.0.2,293'
   sha256 'f436efa530c71b794c213492de821e9f2c831975abe84bb3a564bc505a08725c'
 
   url "https://dl.enpass.io/stable/mac/app/#{version.after_comma}/Enpass.zip"
