@@ -7,7 +7,7 @@ cask 'vpnsecure' do
   name 'VPNSecure OpenVPN Encrypted VPN Client'
   homepage 'https://www.vpnsecure.me/'
 
-  pkg 'vpnsecure.pkg'
+  pkg 'vpnsecure_#{version}.pkg'
 
   uninstall pkgutil: 'com.vpnsecure.vpnsecureOpenvpn.*'
 end
