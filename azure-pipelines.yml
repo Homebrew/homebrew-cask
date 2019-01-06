@@ -1,0 +1,18 @@
+jobs:
+- job: macOS
+  pool:
+    vmImage: xcode9-macos10.13
+  steps:
+    - bash: |
+        export HOMEBREW_COLOR=1
+        export HOMEBREW_DEVELOPER=1
+        export HOMEBREW_NO_AUTO_UPDATE=1
+        brew update
+        # Mirror the repo as a tap.
+        HOMEBREW_TAP_DIR="/usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask"
+        mkdir -p "$HOMEBREW_TAP_DIR"
+        rsync -az --delete "${HOMEBREW_TAP_DIR}/"
+        export TRAVIS_BUILD_DIR="${HOMEBREW_TAP_DIR}"
+        builtin cd "${TRAVIS_BUILD_DIR}"
+      displayName: Run brew cask-test-bot
+      
