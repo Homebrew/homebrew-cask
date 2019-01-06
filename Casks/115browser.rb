@@ -5,7 +5,7 @@ cask '115browser' do
   url "https://down.115.com/client/mac/115br_v#{version}.dmg"
   name '115Browser'
   name '115浏览器'
-  homepage 'https://pc.115.com/'
+  homepage 'http://pc.115.com/'
 
   depends_on macos: '>= :mountain_lion'
 
