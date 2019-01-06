@@ -7,5 +7,7 @@ cask 'isubtitle' do
   name 'iSubtitle'
   homepage 'https://www.bitfield.se/isubtitle/'
 
+  depends_on macos: '>= :sierra'
+
   app 'iSubtitle.app'
 end
