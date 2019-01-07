@@ -11,7 +11,7 @@ cask 'gtkwave' do
   depends_on x11: true
 
   app 'gtkwave.app'
-  binary "#{appdir}/Contents/Resources/bin/gtkwave_bin_launcher.sh", target: 'gtkwave'
+  binary "#{appdir}/gtkwave.app/Contents/Resources/bin/gtkwave_bin_launcher.sh", target: 'gtkwave'
 
   zap trash: [
                '~/Library/Application Support/CrashReporter/gtkwave-bin_*.plist',
