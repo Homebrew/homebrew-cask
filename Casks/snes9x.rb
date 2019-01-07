@@ -7,5 +7,5 @@ cask 'snes9x' do
   name 'Snes9x'
   homepage 'http://www.snes9x.com/'
 
-  app 'snes9x-#{version}-macosx-i386/Snes9x.app'
+  app "snes9x-#{version}-macosx-i386/Snes9x.app"
 end
