@@ -1,8 +1,8 @@
 cask 'criptext' do
-  version '0.14.7'
+  version 'latest'
   sha256 'b133b8344c7dd78381958a6d85bf3142eeed3cf64d2ebfc564393174613fb80c'
 
-  url "https://cdn.criptext.com/Criptext-Email-Desktop/mac/Criptext-#{version}.dmg"
+  url "https://cdn.criptext.com/Criptext-Email-Desktop/mac/Criptext-latest.dmg"
   name 'Criptext'
   homepage 'https://criptext.com/'
 
