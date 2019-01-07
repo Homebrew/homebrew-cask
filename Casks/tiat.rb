@@ -5,7 +5,7 @@ cask 'tiat' do
   # storage.googleapis.com was verified as official when first introduced to the cask
   url "https://storage.googleapis.com/alice-180810.appspot.com/Tiat-#{version}.dmg"
   name 'Tiat'
-  homepage 'http://www.chthollystudio.com/tiat'
+  homepage 'https://www.chthollystudio.com/tiat'
 
   app 'Tiat.app'
 end
