@@ -57,7 +57,7 @@ The available symbols for macOS versions are: `:tiger`, `:leopard`, `:snow_leopa
 Conditionals should be constructed so that the default is the newest OS version. When using an `if` statement, test for older versions, and then let the `else` statement hold the latest and greatest. This makes it more likely that the Cask will work without alteration when a new OS is released. Example (from [coconutbattery.rb](https://github.com/Homebrew/homebrew-cask/blob/2c801af44be29fff7f3cb2996455fce5dd95d1cc/Casks/coconutbattery.rb)):
 
 ```ruby
-if MacOS.version <= :tiger
+if MacOS.version <= :leopard
   # ...
 elsif MacOS.version <= :snow_leopard
   # ...

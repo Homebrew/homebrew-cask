@@ -12,7 +12,7 @@ cask 'scroll-reverser' do
   name 'Scroll Reverser'
   homepage 'https://pilotmoon.com/scrollreverser/'
 
-  depends_on macos: '>= :tiger'
+  depends_on macos: '>= :leopard'
 
   app 'Scroll Reverser.app'
 

@@ -7,7 +7,7 @@ cask 'deltawalker' do
   name 'DeltaWalker'
   homepage 'https://www.deltawalker.com/'
 
-  depends_on macos: '>= :tiger'
+  depends_on macos: '>= :leopard'
 
   app 'DeltaWalker.app'
 
