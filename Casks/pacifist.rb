@@ -13,7 +13,7 @@ cask 'pacifist' do
   homepage 'https://www.charlessoft.com/'
 
   auto_updates true
-  depends_on macos: '>= :tiger'
+  depends_on macos: '>= :leopard'
 
   app 'Pacifist.app'
 end
