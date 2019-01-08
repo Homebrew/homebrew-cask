@@ -1,6 +1,6 @@
 cask 'fsnotes' do
-  version '2.5.5'
-  sha256 '48d794a31de66e8d9f8e820071d9d4365b4a609402b60603aecc47f4e78b844c'
+  version '2.5.6'
+  sha256 '1cc6f8fa5adacb62537481f1915505cd39ad10480dde3c0e8f59be447ece173d'
 
   # github.com/glushchenko/fsnotes was verified as official when first introduced to the cask
   url "https://github.com/glushchenko/fsnotes/releases/download/#{version}/FSNotes_#{version}.zip"
