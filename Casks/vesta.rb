@@ -7,4 +7,9 @@ cask 'vesta' do
   homepage 'https://jp-minerals.org/vesta/en/'
 
   app 'VESTA/VESTA.app'
+
+  zap trash: [
+               '~/Library/Application Support/VESTA',
+               '~/LibraryPreferences/VESTA.plist',
+             ]
 end

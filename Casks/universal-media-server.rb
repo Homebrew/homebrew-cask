@@ -1,6 +1,6 @@
 cask 'universal-media-server' do
-  version '7.6.2'
-  sha256 '0bc55ae873ad9ff7a48a342b5f8afcb7b36dad8ffb435d2af3b8d4c806307e1c'
+  version '7.7.1'
+  sha256 '28c7e112f3d86fac1677cef62438550d8caaa1f725b3a6657b742b2d206167a7'
 
   # sourceforge.net/unimediaserver was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/unimediaserver/Official%20Releases/OS%20X/UMS-#{version}.dmg"

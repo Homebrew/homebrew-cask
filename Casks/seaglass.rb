@@ -1,6 +1,6 @@
 cask 'seaglass' do
-  version '0.0.493-2695641'
-  sha256 '9d4456df58a96ab57443b4bde76d9397ea8e1981bad2d41b1c9952e21473fcfd'
+  version '0.0.520-f697a8c'
+  sha256 '9f62b36e19981c0843d4296d2e0ae4ca614df489da60e76df04608c75f599b4c'
 
   # github.com/neilalexander/seaglass was verified as official when first introduced to the cask
   url "https://github.com/neilalexander/seaglass/releases/download/#{version}/Seaglass-#{version}.zip"

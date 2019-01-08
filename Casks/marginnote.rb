@@ -1,9 +1,9 @@
 cask 'marginnote' do
-  version '3.1.10'
-  sha256 'de63c95a23f8112ce34b1a4ca30bb422e4cce0d0c655f6c8d4d3de758030716c'
+  version '3.1.11006,1546530751'
+  sha256 '5b5ae14a7c4b66bc3019a2b99b243ccf49a16c2ae647ba36f4bc3400cfaa4fc5'
 
-  # s3.amazonaws.com/marginnote-product/macapp was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/marginnote-product/macapp/MarginNote#{version.major}.dmg"
+  # dl.devmate.com/QReader.MarginStudyMac was verified as official when first introduced to the cask
+  url "https://dl.devmate.com/QReader.MarginStudyMac/#{version.before_comma}/#{version.after_comma}/MarginNote#{version.major}-#{version.before_comma}.zip"
   appcast 'https://updates.devmate.com/QReader.MarginStudyMac.xml'
   name 'MarginNote'
   homepage 'https://www.marginnote.com/'

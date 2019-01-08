@@ -1,6 +1,6 @@
 cask 'meld' do
-  version '3.19.2-r3,osx-12'
-  sha256 'c92f6d306f0c77aeb87b3a113df15ac6098f81734b85fce04e9956898ebe9e55'
+  version '3.19.2-r6,osx-15'
+  sha256 '81f79f708346ffc489001fb54562d5ed7226f9d660fa225dc4f253fe3b01075b'
 
   # github.com/yousseb/meld was verified as official when first introduced to the cask
   url "https://github.com/yousseb/meld/releases/download/#{version.after_comma}/meldmerge.dmg"
