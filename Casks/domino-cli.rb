@@ -6,8 +6,6 @@ cask 'domino-cli' do
   name 'Domino Client'
   homepage 'https://www.dominodatalab.com/'
 
-  auto_updates true
-
   installer script: {
                       executable: 'Domino Installer.app/Contents/MacOS/JavaApplicationStub',
                       args:       ['-q', '-c', '-overwrite'],

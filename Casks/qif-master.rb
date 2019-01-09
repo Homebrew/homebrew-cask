@@ -3,6 +3,7 @@ cask 'qif-master' do
   sha256 'a0f85eca6a741b7fdda606845ca438129dfe9db8f2b2c6ff77c9e64aec2b554a'
 
   url "https://thewoodwards.us/sw/QIFMaster/QIFMaster#{version}.zip"
+  appcast 'https://dallas140.arvixeshared.com/~woodward/sw/QIFMaster/appcast.xml'
   name 'QIF Master'
   homepage 'https://thewoodwards.us/sw/QIFMaster/'
 

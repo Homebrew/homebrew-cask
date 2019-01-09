@@ -1,6 +1,6 @@
 cask 'thingsmacsandboxhelper' do
-  version '3.10'
-  sha256 '238763169c381b0a518f8bd771507bbb14fb36f0ca9845575ec407db041a623b'
+  version '3.14'
+  sha256 '43daa0e9f093770cbeeff35e2d34925b08a5df688c3f560bdd8ed81d05e6b886'
 
   # culturedcode.cachefly.net was verified as official when first introduced to the cask
   url "https://culturedcode.cachefly.net/things/thingssandboxhelper/#{version}/ThingsHelper.zip"

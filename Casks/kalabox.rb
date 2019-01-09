@@ -1,15 +1,19 @@
 cask 'kalabox' do
-  version '2.1.3'
-  sha256 'fd02aa0fb6459270f050d2f7708aca2edb4ebb49f88fa9083f3db2fb44963c54'
+  version '2.1.5'
+  sha256 '63d7a385ca09d6eea67b0211af0d4d925ca37814cc7a458505c2e7b3030baf1a'
 
   # github.com/kalabox/kalabox was verified as official when first introduced to the cask
   url "https://github.com/kalabox/kalabox/releases/download/v#{version}/kalabox-v#{version}.dmg"
-  appcast 'https://github.com/kalabox/kalabox/releases.atom',
-          checkpoint: '4bda20c55da5053fb855c44857f965496cd085e30f0dc937c405b0654799cefb'
+  appcast 'https://github.com/kalabox/kalabox/releases.atom'
   name 'Kalabox'
   homepage 'https://www.kalabox.io/'
 
   pkg 'KalaboxInstaller.pkg'
 
-  uninstall pkgutil: 'io.kalabox.pkg.kalabox'
+  uninstall pkgutil: [
+                       'io.kalabox.pkg.kalabox',
+                       'io.kalabox.pkg.docker',
+                     ]
+
+  zap launchctl: 'com.docker.vmnetd'
 end

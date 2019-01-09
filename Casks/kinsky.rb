@@ -1,10 +1,9 @@
 cask 'kinsky' do
-  version '4.4.19'
-  sha256 '86be0b0c7b50d65a44a1cac24dc47dce55b5a6dceed36e8d66b8842db31574bc'
+  version '4.4.5'
+  sha256 '2f4f04e76863eebe1da3d77e2fbd8eee71d57cdd3950f3bac64e0d569fa104de'
 
   url "https://oss.linn.co.uk/Releases/Kinsky/Davaar/Kinsky_#{version}_osx.pkg"
-  appcast 'http://oss.linn.co.uk/Releases/Kinsky/Davaar/',
-          checkpoint: 'e409c1d3589a72c61c03e3a2960e80b905d79b67a77b80b6da64abbc4ba69b2b'
+  appcast 'https://oss.linn.co.uk/Releases/Kinsky/Davaar/'
   name 'Kinsky'
   homepage 'https://oss.linn.co.uk/trac/wiki/DownloadKinsky'
 

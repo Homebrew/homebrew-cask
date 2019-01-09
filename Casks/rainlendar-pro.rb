@@ -1,10 +1,10 @@
 cask 'rainlendar-pro' do
-  version '2.13.1'
-  sha256 '22fc298423a0bc9c2e3ab8b0752ba353eed2cdd38695cda24d542b138ad511a9'
+  version '2.14.2'
+  sha256 'ad23714e3bdad978d5449239281be7e109528c8bec53c6a0adfd45054f2bcc84'
 
-  url "http://www.rainlendar.net/download/Rainlendar-Pro-#{version}.dmg"
+  url "https://www.rainlendar.net/download/Rainlendar-Pro-#{version}.dmg"
   name 'Rainlendar Pro'
-  homepage 'http://www.rainlendar.net/'
+  homepage 'https://www.rainlendar.net/'
 
   app "Rainlendar#{version.major}-Pro.app"
 end

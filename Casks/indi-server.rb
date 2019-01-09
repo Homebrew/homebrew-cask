@@ -1,6 +1,6 @@
 cask 'indi-server' do
-  version '2.6.0'
-  sha256 '6ccfba73c89ad4dbc46e20496015a5e481c4e0d03f2eae2f2ceb849734530b79'
+  version '2.7.0'
+  sha256 'b02a432f20ff00a176f65713b3bfd78f0718fbd57f8eead8ebcbec9db32a927c'
 
   url "http://download.cloudmakers.eu/INDI_Server_#{version}.dmg"
   name 'INDI Server'

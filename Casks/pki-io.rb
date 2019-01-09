@@ -4,8 +4,7 @@ cask 'pki-io' do
 
   # github.com/pki-io/admin was verified as official when first introduced to the cask
   url "https://github.com/pki-io/admin/releases/download/#{version}/pki.io_#{version}_darwin_amd64.tar.gz"
-  appcast 'https://github.com/pki-io/admin/releases.atom',
-          checkpoint: '33c4eccd60553f40424f09cd5cda749560273808a4600741cbe3a47e9780b818'
+  appcast 'https://github.com/pki-io/admin/releases.atom'
   name 'pki.io'
   homepage 'https://pki.io/'
 

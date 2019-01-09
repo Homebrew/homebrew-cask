@@ -1,10 +1,9 @@
 cask 'hyne' do
-  version '1.9.2c'
-  sha256 '74ddb3cee06e840849241da41e3fca32e4f20d4918e9786d9bb55b4643a59f95'
+  version '1.9.3a'
+  sha256 '5cfaedb6f569eae6bfcc8b4c52ba09b24ddc3474f7c1e2b7222c4370ecdfe934'
 
-  url "https://github.com/myst6re/hyne/releases/download/#{version}/Hyne-#{version}-osx64.tar.gz"
-  appcast 'https://github.com/myst6re/hyne/releases.atom',
-          checkpoint: 'ce3d4525e66fc4b0454233846491c36ec4141653a70c002e9e83c9f5bd1d49a7'
+  url "https://github.com/myst6re/hyne/releases/download/#{version}/hyne-#{version.sub(%r{[a-z]}, '')}-osx64.tar.gz"
+  appcast 'https://github.com/myst6re/hyne/releases.atom'
   name 'Hyne'
   homepage 'https://github.com/myst6re/hyne'
 

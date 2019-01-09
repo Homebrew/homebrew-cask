@@ -1,6 +1,6 @@
 cask 'opera' do
-  version '51.0.2830.26'
-  sha256 '3900aa62ecea9c692a407ffc63a15a974c564f6fbcb80bb4974960a1bbed62ea'
+  version '57.0.3098.106'
+  sha256 '7b97f7f34ec98617cb782a94a827f6b8c118f98572eee962936977b03abdaa83'
 
   url "https://get.geo.opera.com/pub/opera/desktop/#{version}/mac/Opera_#{version}_Setup.dmg"
   name 'Opera'
@@ -9,4 +9,9 @@ cask 'opera' do
   auto_updates true
 
   app 'Opera.app'
+
+  zap trash: [
+               '~/Library/Preferences/com.operasoftware.Opera.plist',
+               '~/Library/Application Support/com.operasoftware.Opera/',
+             ]
 end

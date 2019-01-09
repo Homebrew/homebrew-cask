@@ -1,10 +1,9 @@
 cask 'midi-monitor' do
-  version '1.3.2'
-  sha256 '1b2f0a2e1892247c3a5c0c9fc48c682dfcbd4e15881a26eeaaf6026c7f61f24c'
+  version '1.4'
+  sha256 '3f521120eacb7d7181bf2ac9ddc04f7eaecc99bdd6ba6b4c38a4802ed7551cd2'
 
   url "https://www.snoize.com/MIDIMonitor/MIDIMonitor_#{version.dots_to_underscores}.zip"
-  appcast 'https://www.snoize.com/MIDIMonitor/MIDIMonitor.xml',
-          checkpoint: 'de0c37ffdf1e4e8125532139efd591a57a69cb1f53401202848864aef5f2d19f'
+  appcast 'https://www.snoize.com/MIDIMonitor/MIDIMonitor.xml'
   name 'MIDI Monitor'
   homepage 'https://www.snoize.com/MIDIMonitor/'
 

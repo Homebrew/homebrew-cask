@@ -1,12 +1,13 @@
 cask 'monal' do
-  version '2b7'
-  sha256 '3a2ac928be431a27e73f0ff4237ed52e8375e4e995d8f6512d4c3cd3fa2c7673'
+  version '2.3b10'
+  sha256 'a098225234544e7565af73b93be4d8f29034041d0a56833c0acd673d77b6f8a4'
 
   url 'https://monal.im/Monal-OSX/Monal-OSX.zip'
-  appcast 'https://monal.im/Monal-OSX/appcast.xml',
-          checkpoint: 'c694282881493b66b7fda296ea1fdfc4ed142f5b8bf1bf94e686dba15d0e58c7'
+  appcast 'https://monal.im/Monal-OSX/appcast.xml'
   name 'Monal'
   homepage 'https://monal.im/'
+
+  depends_on macos: '>= :yosemite'
 
   app 'Monal.app'
 end

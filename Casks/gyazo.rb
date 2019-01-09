@@ -1,8 +1,9 @@
 cask 'gyazo' do
-  version '3.5.3'
-  sha256 'e828ba162c69ca2f9b4cde7346e08d669d610702d3a205701d9b4e4c8e3c99c8'
+  version '3.6.2'
+  sha256 '1397ccd966cbe3200f1b1827f8104dc5d0f7ca2cf6fb31a0fcaa9e15ee663d8a'
 
   url "https://files.gyazo.com/setup/Gyazo-#{version}.dmg"
+  appcast 'https://gyazo.com/api/gy_mac.xml'
   name 'Nota Gyazo GIF'
   homepage 'https://gyazo.com/'
 

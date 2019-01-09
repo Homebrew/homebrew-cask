@@ -1,32 +1,35 @@
 cask 'appgate-sdp-client' do
-  version '3.3.2'
-  sha256 '00ee27a8bc338b19ccec4541fdbd0603673d1851f51471daba4e5fe143f3eca0'
+  version '4.2.0'
+  sha256 '3152524e415274f1c025dda77f8cbf72aa3bf54c028e7dc6fb94b14c263e6b04'
 
-  url "https://download.cryptzone.com/files/download/AppGate-#{version}/clients/AppGate-#{version}-Installer.dmg"
+  # sdpdownloads.cyxtera.com was verified as official when first introduced to the cask
+  url "https://sdpdownloads.cyxtera.com/AppGate-SDP-#{version.major_minor}/clients/AppGate-SDP-#{version}-Installer.dmg"
   name 'AppGate SDP Client for macOS'
-  homepage 'https://www.cryptzone.com/downloadcenter/appgate'
+  homepage 'https://www.cryptzone.com/downloadcenter/appgate-sdp'
 
-  depends_on macos: '>= :yosemite'
+  depends_on macos: '>= :el_capitan'
 
   pkg 'AppGate SDP Installer.pkg'
 
   uninstall launchctl: [
-                         'com.cryptzone.appgate.tun',
-                         'com.cryptzone.appgate.xdp.client.agent',
+                         'com.cyxtera.appgate.sdp.client.agent',
+                         'com.cyxtera.appgate.sdp.helper',
+                         'com.cyxtera.appgate.sdp.tun',
+                         'com.cyxtera.appgate.sdp.updater',
                        ],
-            quit:      'com.electron.appgate.helper',
+            quit:      [
+                         'com.cyxtera.appgate.helper',
+                         'com.cyxtera.appgate.sdp',
+                       ],
             signal:    [
-                         ['QUIT', 'com.electron.appgate'],
+                         ['QUIT', 'com.cyxtera.appgate'],
                        ],
             pkgutil:   'com.appgate.pkg.appgatetun.component'
 
   zap trash: [
                '~/Library/Application Support/appgate-ui',
-               '~/Library/Application Support/appgatexdp-ui',
-               '~/Library/Caches/com.cryptzone.appgate.xdp.uninstall',
-               '~/Library/Preferences/com.cryptzone.appgate.xdp*',
-               '~/Library/Preferences/com.electron.appgate.helper.plist',
-               '~/Library/Preferences/com.electron.appgate.plist',
-               '~/Library/Saved Application State/com.electron.appgate.savedState',
+               '~/Library/Caches/com.cyxtera.appgate.sdp.uninstall',
+               '~/Library/Preferences/com.cyxtera.appgate.sdp*',
+               '~/Library/Saved Application State/com.cyxtera.appgate.sdp.savedState',
              ]
 end

@@ -1,0 +1,88 @@
+#!/bin/bash
+
+readonly user_agent=(--user-agent 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.152 Safari/537.36')
+
+function usage {
+  echo "usage: ${0} <path_to_app>"
+}
+
+function absolute_path {
+  echo "$(cd "$(dirname "${1}")" && pwd)/$(basename "${1}")"
+}
+
+function url_exists {
+  local url
+
+  url="${1}"
+
+  [[ "$(curl --silent "${url}")" == '[]' ]] && return 1 # Special case for empty devmate appcasts
+  curl --output /dev/null --silent --head --fail "${url}"
+}
+
+function verify_appcast {
+  local appcast_type url
+
+  appcast_type="${1}"
+  url="${2}"
+
+  echo -n "Looking for ${appcast_type} appcast… "
+
+  if url_exists "${url}"; then
+    echo 'Found!'
+    echo "  ${url}"
+  else
+    echo 'Not found.'
+  fi
+}
+
+function find_sparkle {
+  local app plist url
+
+  app="${1}"
+  plist="${app}/Contents/Info.plist"
+
+  url="$(defaults read "${plist}" 'SUFeedURL' 2>/dev/null)"
+
+  verify_appcast 'Sparkle' "${url}"
+}
+
+function find_hockeyapp {
+  local app binary identifier_hex url
+
+  app="${1}"
+  binary="$(find "${path_to_app}/Contents/MacOS" -type f -print -quit)"
+
+  identifier_hex="$(strings "${binary}" | grep --extended-regexp '^[a-f0-9]{32}$')"
+  url="https://rink.hockeyapp.net/api/2/apps/${identifier_hex}"
+
+  verify_appcast 'HockeyApp' "${url}"
+}
+
+function find_devmate {
+  local app bundle_id url
+
+  app="${1}"
+  bundle_id="$(mdls -raw -name kMDItemCFBundleIdentifier "${app}")"
+
+  url="https://updates.devmate.com/${bundle_id}.xml"
+
+  verify_appcast 'DevMate' "${url}"
+}
+
+# Exit if no argument (or more than one) was given
+if [[ -z "${1}" ]] || [[ -n "${2}" ]]; then
+  usage
+  exit 1
+fi
+
+readonly path_to_app="$(absolute_path "${1}")"
+
+if [[ ! -d "${path_to_app}" ]] || [[ "${path_to_app}" != *'.app' ]]; then
+  echo 'You need to use this on a .app. Please verify your target.'
+  usage
+  exit 1
+fi
+
+find_sparkle "${path_to_app}"
+find_hockeyapp "${path_to_app}"
+find_devmate "${path_to_app}"

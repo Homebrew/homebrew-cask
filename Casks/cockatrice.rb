@@ -1,13 +1,12 @@
 cask 'cockatrice' do
-  version '2.4.0,2017-11-19:Unwrapped'
-  sha256 'bd422d2ed42a1d15b7f83e1be9ace6b6b99b0e3130357dc087a9d554c54fecba'
+  version '2.6.1,2018-07-17:Father_of_Ruins_Revision_1'
+  sha256 'b35790a9391195d5bd9087f73a9eedac7e3cdd413b1dfeae65fe226bfa5354ac'
 
   # github.com/Cockatrice/Cockatrice was verified as official when first introduced to the cask
   url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.after_comma.before_colon}-Release-#{version.before_comma}/Cockatrice-#{version.after_colon}-#{version.before_comma}.dmg"
-  appcast 'https://github.com/Cockatrice/Cockatrice/releases.atom',
-          checkpoint: '590f24d47778ff6abff0335f427c540a574b8553219add1d85876d01235a5713'
+  appcast 'https://github.com/Cockatrice/Cockatrice/releases.atom'
   name 'Cockatrice'
-  homepage 'http://www.woogerworks.com/'
+  homepage 'https://cockatrice.github.io/'
 
   app 'cockatrice.app'
   app 'oracle.app'

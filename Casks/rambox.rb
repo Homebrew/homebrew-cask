@@ -1,13 +1,29 @@
 cask 'rambox' do
-  version '0.5.14'
-  sha256 'a29c552a8c9fad79c2587e2bdf21a8567e70aeaeabc7a30684210d2889bf5eff'
+  version '0.6.3'
+  sha256 '9d8785554f688d7cacf9c32167ce15e2184dc2f2827b3adbbe4b66e7a0c6844f'
 
-  # github.com/saenzramiro/rambox was verified as official when first introduced to the cask
-  url "https://github.com/saenzramiro/rambox/releases/download/#{version}/Rambox-#{version}-mac.zip"
-  appcast 'https://github.com/saenzramiro/rambox/releases.atom',
-          checkpoint: '7a7f39e2d7062b30f033929b2730b56020827f4e3fd9d3254967c0b98e3f25f0'
+  # github.com/ramboxapp/community-edition was verified as official when first introduced to the cask
+  url "https://github.com/ramboxapp/community-edition/releases/download/#{version}/Rambox-#{version}-mac.zip"
+  appcast 'https://github.com/ramboxapp/community-edition/releases.atom'
   name 'Rambox'
-  homepage 'http://rambox.pro/'
+  homepage 'https://rambox.pro/'
+
+  depends_on macos: '>= :mavericks'
 
   app 'Rambox.app'
+
+  uninstall login_item: 'Rambox'
+
+  zap trash: [
+               '~/Library/Caches/com.grupovrs.ramboxce',
+               '~/Library/Caches/com.grupovrs.ramboxce.ShipIt',
+               '~/Library/Caches/com.saenzramiro.rambox',
+               '~/Library/Logs/Rambox',
+               '~/Library/Preferences/com.grupovrs.ramboxce.helper.plist',
+               '~/Library/Preferences/com.grupovrs.ramboxce.plist',
+               '~/Library/Preferences/com.saenzramiro.rambox.helper.plist',
+               '~/Library/Preferences/com.saenzramiro.rambox.plist',
+               '~/Library/Saved Application State/com.grupovrs.ramboxce.savedState',
+               '~/Library/Saved Application State/com.saenzramiro.rambox.savedState',
+             ]
 end

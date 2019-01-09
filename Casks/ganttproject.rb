@@ -1,11 +1,10 @@
 cask 'ganttproject' do
-  version '2.8.5,r2179'
-  sha256 '0f8a752c03e29196d38b1874239c4e8e048b3b8360c82d8da3262ec9e1160ad9'
+  version '2.8.9,r2335'
+  sha256 '9991d419cf30d8c85ce828102f71e07885530b4a7fae3ad9e0c0ae764ea7f237'
 
-  # github.com/bardsoftware/ganttproject/releases/download was verified as official when first introduced to the cask
+  # github.com/bardsoftware/ganttproject was verified as official when first introduced to the cask
   url "https://github.com/bardsoftware/ganttproject/releases/download/ganttproject-#{version.before_comma}/ganttproject-#{version.before_comma}-#{version.after_comma}.dmg"
-  appcast 'https://github.com/bardsoftware/ganttproject/releases.atom',
-          checkpoint: '3bf25b7d2739eace46496219d2955bfcf420a00c9a315a9ff948267d40b7c9d9'
+  appcast 'https://github.com/bardsoftware/ganttproject/releases.atom'
   name 'GanttProject'
   homepage 'https://www.ganttproject.biz/'
 

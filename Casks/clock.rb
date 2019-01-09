@@ -4,10 +4,11 @@ cask 'clock' do
 
   # github.com/downloads/zachwaugh/Clock.app was verified as official when first introduced to the cask
   url "https://github.com/downloads/zachwaugh/Clock.app/Clock-#{version}.zip"
-  appcast 'https://zachwaugh.me/clock/',
-          checkpoint: 'fb7aadcf012f832ca33bda39017ec65fd1b0f98f2c8377ec5820c163c5723b8d'
+  appcast 'https://zachwaugh.me/clock/'
   name 'Clock'
   homepage 'https://zachwaugh.me/clock/'
+
+  depends_on macos: '>= :lion'
 
   app 'Clock.app'
 end

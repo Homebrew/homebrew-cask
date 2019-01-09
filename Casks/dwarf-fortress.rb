@@ -1,12 +1,12 @@
 cask 'dwarf-fortress' do
-  version '0.43.05'
-  sha256 'c9614c012c23dcef6197f83d02510d577e1257c5a0de948af5c8f76ae56c5fc8'
+  version '0.44.12'
+  sha256 '218d53199f7eb9f58c035e3a5d44d882f1b69e07ef63f98a6590d61a6fc8a6d5'
 
   url "http://www.bay12games.com/dwarves/df_#{version.minor}_#{version.patch}_osx.tar.bz2"
   name 'Dwarf Fortress'
   homepage 'http://www.bay12games.com/dwarves/'
 
-  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/df_osx/df.wrapper.sh"
   binary shimscript, target: 'dwarf-fortress'
 

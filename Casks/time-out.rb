@@ -6,13 +6,14 @@ cask 'time-out' do
     version '1.7.1'
     sha256 '3c9892344c8313b8ccf0a76cceb00834ddbe26e5114bcd674c4fd53aeb44e310'
   else
-    version '2.3'
-    sha256 '89efede76841e2d7bc0d8759a90411b3b619705cb34372778409d7988c9fbb6c'
+    version '2.5'
+    sha256 '2947b5af6489d4cc5328bd943ec5e0440484970539ee18810bb4f6e6bf1fbbf6'
   end
 
-  url "http://www.dejal.com/download/timeout-#{version}.zip"
+  url "https://www.dejal.com/download/timeout-#{version}.zip"
+  appcast 'https://dejal.net/appcast/?prod=timeout&aed=direct&from=2037&rel=gen'
   name 'Time Out'
-  homepage 'http://www.dejal.com/timeout/'
+  homepage 'https://www.dejal.com/timeout/'
 
   app 'Time Out.app'
 end

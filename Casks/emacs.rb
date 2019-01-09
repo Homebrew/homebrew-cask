@@ -1,18 +1,16 @@
 cask 'emacs' do
-  version '25.3'
-  sha256 'b2bfc1e90a2e3a9e138fdd42ec1796bf38eeaf06021905f9ffbaf8b397ca64ac'
+  version '26.1-2'
+  sha256 '2ea8d0b0055d5d0ba604771dbb2f9731dd5c815776eec6a9bca3c44d7ab40d99'
 
   url "https://emacsformacosx.com/emacs-builds/Emacs-#{version}-universal.dmg"
-  appcast 'https://emacsformacosx.com/atom/release',
-          checkpoint: 'dd284d2f08cac506fc34711eff27ac68268dbe0d2deab602d23c602222f88249'
+  appcast 'https://emacsformacosx.com/atom/release'
   name 'Emacs'
   homepage 'https://emacsformacosx.com/'
 
-  conflicts_with formula: ['emacs', 'ctags']
+  conflicts_with formula: 'emacs'
 
   app 'Emacs.app'
   binary "#{appdir}/Emacs.app/Contents/MacOS/Emacs", target: 'emacs'
-  binary "#{appdir}/Emacs.app/Contents/MacOS/bin/ctags"
   binary "#{appdir}/Emacs.app/Contents/MacOS/bin/ebrowse"
   binary "#{appdir}/Emacs.app/Contents/MacOS/bin/emacsclient"
   binary "#{appdir}/Emacs.app/Contents/MacOS/bin/etags"

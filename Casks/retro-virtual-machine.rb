@@ -1,12 +1,11 @@
 cask 'retro-virtual-machine' do
-  version '1.1.6'
-  sha256 '4025387610cdc8bca78b5ac3513001fe2ef7ab14d6019472b14653e89bb58afa'
+  version '1.1.8'
+  sha256 '49ea57688d0afbe63cc886606067f400c0e827e60db9c781e2f8c93cc993d139'
 
   url "http://static1.retrovirtualmachine.org/release/Retro%20Virtual%20Machine%20v#{version}.dmg"
-  appcast 'http://www.retrovirtualmachine.org/en/changelog',
-          checkpoint: 'cc438ecb3a8552a76ce38a305546aa6ce8a733924c96f3b9a14c1e28b49a2ab9'
+  appcast 'https://www.retrovirtualmachine.org/en/downloads'
   name 'Retro Virtual Machine'
-  homepage 'http://www.retrovirtualmachine.org/'
+  homepage 'https://www.retrovirtualmachine.org/en/'
 
   app 'Retro Virtual Machine.app'
 end

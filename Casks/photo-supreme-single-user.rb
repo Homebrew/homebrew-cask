@@ -1,12 +1,12 @@
 cask 'photo-supreme-single-user' do
-  version '3'
-  sha256 '773c691f3e9574b86ebd4c612c6eb3b15fa9445f3fe3e7a4a31ea4f6cdd490cf'
+  version '4.3.2'
+  sha256 '68f9180951e0e60f84bf425439bb581a670179888841158ce4fd07c4c74f48c1'
 
-  url "http://www.idimager.com/Trial/PhotoSupreme_V#{version}.pkg"
+  url "https://trial.idimager.com/PhotoSupreme_V#{version.major}.pkg"
   name 'Photo Supreme Single User'
-  homepage 'http://www.idimager.com/WP/?page_id=20'
+  homepage 'https://www.idimager.com/home'
 
-  pkg "PhotoSupreme_V#{version}.pkg"
+  pkg "PhotoSupreme_V#{version.major}.pkg"
 
   uninstall pkgutil: 'com.idimager.idimagersu'
 end

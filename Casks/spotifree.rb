@@ -4,8 +4,7 @@ cask 'spotifree' do
 
   # github.com/ArtemGordinsky/Spotifree was verified as official when first introduced to the cask
   url "https://github.com/ArtemGordinsky/Spotifree/releases/download/#{version}/Spotifree.dmg"
-  appcast 'http://spotifree.gordinskiy.com/appcast.xml',
-          checkpoint: 'd5289fcc387ca26f73e5113af634641573cab71435399d0943ef4f93030f5986'
+  appcast 'http://spotifree.gordinskiy.com/appcast.xml'
   name 'Spotifree'
   homepage 'http://spotifree.gordinskiy.com/'
 

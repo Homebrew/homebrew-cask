@@ -1,10 +1,9 @@
 cask 'ammonite' do
-  version '1.14'
-  sha256 '63f401c6f8db49bd667d4caced2b979d20c7b33fa39486c809802c9bf54b1d66'
+  version '1.16.2'
+  sha256 'fd61decd51cb36130ddbdd946d67bfa6a594cad5d298cbcf6d015e5604be60c0'
 
   url "http://www.soma-zone.com/download/files/Ammonite_#{version}.tbz"
-  appcast 'http://www.soma-zone.com/Ammonite/a/appcast.xml',
-          checkpoint: '1f3d151bd563d366ffec45bbe2821222829afade44eead82976544af2c36f467'
+  appcast 'http://www.soma-zone.com/Ammonite/a/appcast.xml'
   name 'Ammonite'
   homepage 'http://www.soma-zone.com/Ammonite/'
 

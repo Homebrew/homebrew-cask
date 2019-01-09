@@ -4,10 +4,11 @@ cask 'webponize' do
 
   # github.com/webponize/webponize was verified as official when first introduced to the cask
   url "https://github.com/webponize/webponize/releases/download/v#{version}/WebPonize.app.zip"
-  appcast 'https://github.com/webponize/webponize/releases.atom',
-          checkpoint: '139670e55ade776738ac9bfee428e6d8623ef83093311cfbcc86b0af61cc58f5'
+  appcast 'https://github.com/webponize/webponize/releases.atom'
   name 'WebPonize'
   homepage 'https://webponize.org/'
+
+  depends_on macos: '>= :high_sierra'
 
   app 'WebPonize.app'
 end

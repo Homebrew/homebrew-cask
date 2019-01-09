@@ -1,13 +1,13 @@
 cask 'istat-menus' do
-  version '6.0'
+  version '6.31'
   sha256 :no_check # required as upstream package is updated in-place
 
-  # amazonaws.com/bjango was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/bjango/files/istatmenus#{version.major}/istatmenus#{version}.zip"
+  url "https://file.bjango.com/istatmenus#{version.major}/istatmenus#{version}.zip"
   name 'iStats Menus'
   homepage 'https://bjango.com/mac/istatmenus/'
 
   auto_updates true
+  depends_on macos: '>= :el_capitan'
 
   app 'iStat Menus.app'
 

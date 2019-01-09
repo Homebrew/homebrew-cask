@@ -1,10 +1,9 @@
 cask 'james' do
-  version '2.0.0'
-  sha256 '623240fa2f919b631f338caff9678dc3abfd3f685a97241ca05343bec55a764a'
+  version '2.1.1'
+  sha256 'b53dcad18a619d77005c3c4772504d968376263af160578d24cfd8ad1be4be4c'
 
   url "https://github.com/james-proxy/james/releases/download/v#{version}/james-#{version}.dmg"
-  appcast 'https://github.com/james-proxy/james/releases.atom',
-          checkpoint: 'cf293843a8da7306e414a65a2eb72cb1e655e864f32d5cdac2dc61b65cb06644'
+  appcast 'https://github.com/james-proxy/james/releases.atom'
   name 'James'
   homepage 'https://github.com/james-proxy/james'
 

@@ -1,13 +1,14 @@
 cask 'vox' do
-  version '3.1'
-  sha256 '0d2388b9da421032ae9aa0f6b23c47d1d14deec8a8e21829ba7fdd36deeb34f7'
+  version '3370.1,1545328625'
+  sha256 '323df98176177124160de0fd8456b74c105e7e9d42b47eeabf0b4ca4913d7709'
 
   # devmate.com/com.coppertino.Vox was verified as official when first introduced to the cask
-  url 'https://dl.devmate.com/com.coppertino.Vox/Vox.dmg'
-  appcast 'https://updates.devmate.com/com.coppertino.Vox.xml',
-          checkpoint: '6a6fefd1083763d3776b280410b6b284513bd0de4bb4563f85d5055118c27b71'
+  url "https://dl.devmate.com/com.coppertino.Vox/#{version.before_comma}/#{version.after_comma}/Vox-#{version.before_comma}.zip"
+  appcast 'https://updates.devmate.com/com.coppertino.Vox.xml'
   name 'VOX'
   homepage 'https://vox.rocks/mac-music-player'
+
+  auto_updates true
 
   app 'VOX.app'
 

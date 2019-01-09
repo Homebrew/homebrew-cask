@@ -4,8 +4,7 @@ cask 'gifloopcoder' do
 
   # github.com/bit101/gifloopcoder was verified as official when first introduced to the cask
   url "https://github.com/bit101/gifloopcoder/releases/download/#{version}/glc-osx-#{version}.zip"
-  appcast 'https://github.com/bit101/gifloopcoder/releases.atom',
-          checkpoint: 'a43c12bb4c3ad853f1ccfbde630a5b953bf1407095c7f34b35a2c93b8b9d896e'
+  appcast 'https://github.com/bit101/gifloopcoder/releases.atom'
   name 'GIFLoopCoder'
   homepage 'http://www.gifloopcoder.com/'
 

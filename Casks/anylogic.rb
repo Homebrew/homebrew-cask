@@ -1,8 +1,8 @@
 cask 'anylogic' do
-  version '8.2.2'
-  sha256 '417c000d7ce36063c5aa5cf4e5dc14f84fe6b79322b708a544d29da3d8667d6e'
+  version '8.2.4'
+  sha256 '3e4f006154de15b5701a4b88a3607f689d35bf15628be120a25e2984d3eba9eb'
 
-  url "http://www.anylogic.com/files/anylogic-ple-#{version}.dmg"
+  url "https://www.anylogic.com/files/anylogic-ple-#{version}.dmg"
   name 'AnyLogic'
   homepage 'https://www.anylogic.com/'
 
@@ -18,7 +18,7 @@ cask 'anylogic' do
              ]
 
   caveats do
-    depends_on_java('8')
+    depends_on_java '8'
 
     <<~EOS
       For activation instructions, check up on

@@ -1,13 +1,12 @@
 cask 'vmpk' do
-  version '0.6.2'
-  sha256 'e916144e7ee350baeedbf36c59bf019f514af49ca0a927a29ec9f2338b8bd9d8'
+  version '0.7.1'
+  sha256 '1fbf3bdd7917f7f02444e8af3b0c21db350e27e8857bf9f3701b952f904ab8ec'
 
-  #  https://downloads.sourceforge.net/vmpk/vmpk-#{version}-mac-x64.dmg was verified as official when first introduced to the cask
+  # downloads.sourceforge.net/vmpk was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/vmpk/vmpk-#{version}-mac-x64.dmg"
-  appcast 'https://sourceforge.net/projects/vmpk/rss',
-          checkpoint: '15fe037132d06ffc71c22393c6f360e0828a1844165d4efbb37a31a26c6089f2'
+  appcast 'https://sourceforge.net/projects/vmpk/rss'
   name 'VMPK'
-  homepage 'http://vmpk.sourceforge.net/'
+  homepage 'https://vmpk.sourceforge.io/'
 
   app 'vmpk.app'
 end

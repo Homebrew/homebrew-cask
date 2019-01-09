@@ -1,9 +1,9 @@
 cask 'kollaborate-transfer' do
-  version '1.5.0.0'
-  sha256 '35a05feafa7d8499b1462a0a28970fcd1e8b265f037be0f23aaaa57c9a2ced4c'
+  version '1.5.2.0'
+  sha256 'b5dab39e60846ec5f7926806120ad4f84ec42cbef0d0b57ac4eef2279d91a3ab'
 
   # digitalrebellion.com was verified as official when first introduced to the cask
-  url "http://www.digitalrebellion.com/download/kollabtransfer?version=#{version.no_dots}"
+  url "https://www.digitalrebellion.com/download/kollabtransfer?version=#{version.no_dots}"
   name 'Kollaborate Transfer'
   homepage 'https://www.kollaborate.tv/resources'
 

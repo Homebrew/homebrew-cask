@@ -1,16 +1,16 @@
-# Homebrew-Cask
+# Homebrew Cask
 
 _“To install, drag this icon…” no more!_
 
-Homebrew-Cask extends [Homebrew](http://brew.sh) and brings its elegance, simplicity, and speed to the installation and management of GUI macOS applications such as Atom and Google Chrome.
+Homebrew Cask extends [Homebrew](https://brew.sh) and brings its elegance, simplicity, and speed to the installation and management of GUI macOS applications such as Atom and Google Chrome.
 
-We do this by providing a friendly Homebrew-style CLI workflow for the administration of macOS applications distributed as binaries.
+We do this by providing a friendly CLI workflow for the administration of macOS applications distributed as binaries.
 
-[![Join the chat at https://gitter.im/caskroom/homebrew-cask](https://img.shields.io/badge/gitter-join%20chat-blue.svg)](https://gitter.im/caskroom/homebrew-cask)
+[![Join us on https://discourse.brew.sh](https://img.shields.io/badge/Discourse-forum-blue.svg)](https://discourse.brew.sh)
 
 ## Let’s try it!
 
-To start using Homebrew-Cask, you just need [Homebrew](http://brew.sh/) installed.
+To start using Homebrew Cask, you just need [Homebrew](https://brew.sh/) installed.
 
 <img src="https://i.imgur.com/dPgmLax.gif" width="673" alt="Installing Atom (animated gif)">
 
@@ -33,7 +33,7 @@ And there we have it. Atom installed with one quick command: no clicking, no dra
 
 ## Learn More
 
-* Find basic documentation on using Homebrew-Cask in [USAGE.md](USAGE.md)
+* Find basic documentation on using Homebrew Cask in [USAGE.md](USAGE.md)
 * Want to contribute a Cask? Awesome! See [CONTRIBUTING.md](CONTRIBUTING.md)
 * Want to hack on our code? Also awesome! See [hacking.md](doc/development/hacking.md)
 * More project-related details and discussion are available in the [documentation](doc)
@@ -55,24 +55,22 @@ If your issue persists, search for it before opening a new one. If you find an o
   * [`source is not there` error](doc/reporting_bugs/a_cask_fails_to_install.md#source-is-not-there-error)
   * [`wrong number of arguments` error](doc/reporting_bugs/a_cask_fails_to_install.md#wrong-number-of-arguments-error)
   * [Unlisted reason](doc/reporting_bugs/a_cask_fails_to_install.md#unlisted-reason)
+* [The app can’t be opened because it is from an unidentified developer](doc/faq/the_app_cant_be_opened.md)
 * [`uninstall` wrongly reports cask as not installed](doc/reporting_bugs/uninstall_wrongly_reports_cask_as_not_installed.md)
 * [`Error: Unknown command: cask` error](doc/reporting_bugs/error_unknown_command_cask.md)
-* [My problem isn’t listed](https://github.com/caskroom/homebrew-cask/issues/new)
+* [My problem isn’t listed](https://github.com/Homebrew/homebrew-cask/issues/new?template=01_bug_report.md)
 
 ## Requests
 
-* Cask requests will be automatically closed. If you want a cask added, [submit a pull request](https://github.com/caskroom/homebrew-cask/blob/master/CONTRIBUTING.md#adding-a-cask).
-* For a feature request, [use this template][feature_request]
+* Cask requests will be automatically closed. If you want a cask added, [submit a pull request](https://github.com/Homebrew/homebrew-cask/blob/master/CONTRIBUTING.md#adding-a-cask).
+* For a feature request, [use this template](https://github.com/Homebrew/homebrew-cask/issues/new?template=02_feature_request.md).
 
 ## Questions? Wanna chat?
 
 We’re really rather friendly! Here are the best places to talk about the project:
 
-* If none of the templates above is appropriate, [open an issue](https://github.com/caskroom/homebrew-cask/issues/new).
-* Join us (and [caskbot](https://github.com/passcod/caskbot)) on IRC at `#homebrew-cask` on Freenode
-* Join us on [Gitter](https://gitter.im/caskroom/homebrew-cask)
+* If none of the templates above is appropriate, [open an issue](https://github.com/Homebrew/homebrew-cask/issues/new).
+* Join us on [discourse.brew.sh (forum)](https://discourse.brew.sh)
 
 ## License
 Code is under the [BSD 2 Clause (NetBSD) license](LICENSE)
-
-[feature_request]: https://github.com/caskroom/homebrew-cask/issues/new?title=Feature%20request%3A&body=%23%23%23%20Description%20of%20feature%2Fenhancement%0A%0A%0A%0A%23%23%23%20Justification%0A%0A%0A%0A%23%23%23%20Example%20use%20case%0A%0A%0A%0A

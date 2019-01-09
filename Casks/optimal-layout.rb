@@ -4,8 +4,7 @@ cask 'optimal-layout' do
 
   # windowflow.com was verified as official when first introduced to the cask
   url "http://files.windowflow.com/OptimalLayout#{version.major}.zip"
-  appcast 'http://most-advantageous.com/sparkle/OL-AppCast.cfm',
-          checkpoint: 'bbf6cb478fcf1a1afd2598dfe560373f8395dc5da8cc96ac7ef2843b0519bdb9'
+  appcast 'http://most-advantageous.com/sparkle/OL-AppCast.cfm'
   name 'Optimal Layout'
   homepage 'http://most-advantageous.com/optimal-layout/'
 

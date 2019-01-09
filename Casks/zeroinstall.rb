@@ -4,10 +4,9 @@ cask 'zeroinstall' do
 
   # sourceforge.net/zero-install was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/zero-install/0install/#{version}/ZeroInstall.pkg"
-  appcast 'https://sourceforge.net/projects/zero-install/rss',
-          checkpoint: 'aaa8811cf87665e543dafa79edbaa7e1d3ba6c3922e3ea3406db58d084a76ce4'
+  appcast 'https://sourceforge.net/projects/zero-install/rss'
   name 'Zero Install'
-  homepage 'http://0install.net/'
+  homepage 'https://0install.net/'
 
   pkg 'ZeroInstall.pkg'
 

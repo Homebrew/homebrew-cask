@@ -8,4 +8,9 @@ cask 'knox' do
   homepage 'https://agilebits.com/'
 
   app 'Knox.app'
+
+  zap trash: [
+               '~/Library/Caches/com.knoxformac.knox',
+               '~/Library/Preferences/com.knoxformac.knox.plist',
+             ]
 end

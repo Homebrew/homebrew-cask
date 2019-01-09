@@ -1,15 +1,13 @@
 cask 'mamp' do
-  if MacOS.version <= :mavericks
-    version '3.5.2'
-    sha256 'b935d118b6e14d43cf2570be2a05166a15b824c3edc0ede98cc30e6ab5af3697'
-  else
-    version '4.4'
-    sha256 '9a86de2f1321851693bbf24f96c0aaca29fe7fb4d9b3c887aa464d41c36eed9c'
-  end
+  version '5.2'
+  sha256 'f05ede012b8a5d0e7c9cf17fee0fa1eb5cd8131f3c703ed14ea347f25be11a28'
 
   url "https://downloads.mamp.info/MAMP-PRO/releases/#{version}/MAMP_MAMP_PRO_#{version}.pkg"
+  appcast 'https://www.mamp.info/en/downloads/'
   name 'MAMP'
   homepage 'https://www.mamp.info/'
+
+  depends_on macos: '>= :yosemite'
 
   pkg "MAMP_MAMP_PRO_#{version}.pkg"
 

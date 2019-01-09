@@ -1,13 +1,12 @@
 cask 'boom' do
-  version '1.6.2,1506518204'
-  sha256 '1f0faa50e0cb13ac80012d3411e486a72632a61000d90fbfd58df76a04cbb396'
+  version '1.6.5,1539009345'
+  sha256 'fbf88089b91371288ca78016b22185fe0c1fe64939886b776821b3ff9ba4e06f'
 
   # devmate.com/com.globaldelight.Boom2 was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.globaldelight.Boom2/#{version.before_comma}/#{version.after_comma}/Boom2-#{version.before_comma}.dmg"
-  appcast 'https://updates.devmate.com/com.globaldelight.Boom2.xml',
-          checkpoint: 'b50c86a5204fbb7bf87315dd28ff0562b6cb509f25803e52c645044f0b0aa267'
+  appcast 'https://updates.devmate.com/com.globaldelight.Boom2.xml'
   name 'Boom'
-  homepage 'http://www.globaldelight.com/boom'
+  homepage 'https://www.globaldelight.com/boom'
 
   depends_on macos: '>= :yosemite'
 

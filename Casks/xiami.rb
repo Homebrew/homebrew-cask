@@ -1,12 +1,13 @@
 cask 'xiami' do
-  version '3.1.2-0102'
-  sha256 '30ab65b97ecfa7f06ed5b9d5c20957c2dfee823d837331e7e7be6cec2b36ade2'
+  version '7.2.2,10161733'
+  sha256 'ef5a09acef0532da035eddc8f27327e50a9b507fe14143eaba5f3e22028acf44'
 
   # gxiami.alicdn.com/xiami-desktop was verified as official when first introduced to the cask
-  url "https://gxiami.alicdn.com/xiami-desktop/update/%E8%99%BE%E7%B1%B3%E9%9F%B3%E4%B9%90-#{version}.dmg"
+  url "https://gxiami.alicdn.com/xiami-desktop/update/XiamiMac-#{version.after_comma}.dmg"
+  appcast 'https://g.alicdn.com/music/desktop-app/XiamiMac.xml'
   name 'Xiami'
   name '虾米音乐'
-  homepage 'http://www.xiami.com/'
+  homepage 'https://www.xiami.com/'
 
   app '虾米音乐.app'
 
@@ -14,6 +15,7 @@ cask 'xiami' do
 
   zap trash: [
                '~/Library/Application Support/XIAMI-MUSIC',
+               '~/Library/Application Support/com.xiami.client',
                '~/Library/Preferences/com.xiami.client.helper.plist',
                '~/Library/Preferences/com.xiami.client.plist',
                '~/Library/Saved Application State/com.xiami.client.savedState',

@@ -7,7 +7,6 @@ cask 'avira-antivirus' do
   name 'Avira Antivirus'
   homepage 'https://www.avira.com/en/free-antivirus-mac/'
 
-  auto_updates true
   depends_on macos: '>= :el_capitan'
 
   pkg 'Avira_Antivirus.pkg'

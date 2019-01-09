@@ -1,14 +1,14 @@
 cask 'typora' do
-  version '0.9.9.12.5'
-  sha256 '0fb77e602b29d74b82b1b0c895c33cee176cc3947dfbc616f027932f616f5566'
+  version '0.9.9.19.4'
+  sha256 '9f2b8cb27747ae09fb67de2f8c8997fa6f1e53d8cceb00a0d2d1169c232e4cc9'
 
-  url 'https://typora.io/download/Typora.dmg'
-  appcast 'https://www.typora.io/download/dev_update.xml',
-          checkpoint: '3d8ab4698cc2608bdfa38eeed4cfc71d2dd5f2a88a1ac3bc9898cf1a3e3ad4c7'
+  url "https://www.typora.io/download/Typora-#{version}.dmg"
+  appcast 'https://www.typora.io/download/dev_update.xml'
   name 'Typora'
   homepage 'https://typora.io/'
 
   auto_updates true
+  depends_on macos: '>= :mavericks'
 
   app 'Typora.app'
 

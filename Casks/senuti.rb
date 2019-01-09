@@ -3,8 +3,7 @@ cask 'senuti' do
   sha256 'cc7fc7910456affb479c99aa89d3c89122142354200990a27aecdde4dc90bdb7'
 
   url "https://www.fadingred.com/files/senuti/senuti_#{version}.zip"
-  appcast 'https://www.fadingred.com/senuti/updates.xml',
-          checkpoint: '9887f179cf0aee7a872f1600991d4f76f189a3734e303e7cf1c6c2ae9f9beeff'
+  appcast 'https://www.fadingred.com/senuti/updates.xml'
   name 'Senuti'
   homepage 'https://www.fadingred.com/senuti/'
 

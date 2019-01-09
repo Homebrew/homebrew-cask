@@ -1,12 +1,12 @@
 cask 'tikzit' do
-  version '1.1'
-  sha256 '7e00a64fe5c96963ae5b09f1f59698b8b487239c53eed01a3bf012cf024f0686'
+  version '2.0'
+  sha256 'cf06ea31b7b8e1ca85f209a77991df8c0d99f52584cb25ad795ca2c16b6ee204'
 
-  url "https://downloads.sourceforge.net/tikzit/TikZiT-osx-#{version}.zip"
-  appcast 'http://tikzit.sourceforge.net/appcast/tikzit.xml',
-          checkpoint: '906cd45032179999523b58eb97a293bf63674ba2193b7932ea3930655e8e1516'
+  # github.com/tikzit/tikzit was verified as official when first introduced to the cask
+  url "https://github.com/tikzit/tikzit/releases/download/v#{version}/tikzit-osx.dmg"
+  appcast 'https://github.com/tikzit/tikzit/releases.atom'
   name 'TikZiT'
-  homepage 'http://tikzit.sourceforge.net/'
+  homepage 'https://tikzit.github.io/'
 
   app 'TikZiT.app'
 end

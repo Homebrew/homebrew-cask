@@ -1,11 +1,10 @@
 cask 'squirrelsql' do
-  version '3.8.0'
-  sha256 '418d7ae816b90cb34f5d7905ae444c06fbe7f3100ea1a7cc0857c7d8a9041d0a'
+  version '3.8.1'
+  sha256 'c3ff5203477536d347f9531a8070465267b1a81751e964b97e427cd13af224d9'
 
   # sourceforge.net/squirrel-sql was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/squirrel-sql/1-stable/#{version}/squirrel-sql-#{version}-MACOSX-install.jar"
-  appcast 'https://sourceforge.net/projects/squirrel-sql/rss?path=/1-stable',
-          checkpoint: '2a7ce7d9f5393e4e3d8672e47e0691cefdb7e213944780c74d02b35dca9bcaf5'
+  appcast 'https://sourceforge.net/projects/squirrel-sql/rss?path=/1-stable'
   name 'SQuirrel SQL'
   homepage 'http://www.squirrelsql.org/'
 
@@ -14,7 +13,7 @@ cask 'squirrelsql' do
   installoptions = "#{staged_path}/install-options.xml"
 
   preflight do
-    # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+    # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
     File.open(installoptions, 'w') do |f|
       f.print <<~EOS
         <?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -82,6 +81,6 @@ cask 'squirrelsql' do
   zap trash: '~/.squirrel-sql'
 
   caveats do
-    depends_on_java('6+')
+    depends_on_java '8+'
   end
 end

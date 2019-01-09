@@ -4,10 +4,9 @@ cask 'art-of-illusion' do
 
   # sourceforge.net/aoi was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/aoi/ArtOfIllusion#{version.no_dots}-Mac.dmg"
-  appcast 'https://sourceforge.net/projects/aoi/rss',
-          checkpoint: 'c3567644fffdb188afc15ceb664a9058867d65986c119a4429feeedcfd63d676'
+  appcast 'https://sourceforge.net/projects/aoi/rss'
   name 'Art of Illusion'
   homepage 'http://www.artofillusion.org/'
 
-  app 'Art of Illusion/Art of Illusion.app'
+  app "Art Of Illusion #{version}/Art Of Illusion #{version}.app"
 end

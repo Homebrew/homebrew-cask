@@ -2,9 +2,8 @@ cask 'jad' do
   version '1.5.8g'
   sha256 '8e9e4ea6c4177acce6d27325a036f10a72c170ed60e48c37c3483335319d07b9'
 
-  url "https://www.varaneckas.com/jad/jad#{version.no_dots}.mac.intel.zip"
-  appcast 'https://varaneckas.com/jad/',
-          checkpoint: 'bb55710550b36e3add01abe3d3746f0c12e6d9b1dbecc7c8898f997742b325d2'
+  url "https://varaneckas.com/jad/jad#{version.no_dots}.mac.intel.zip"
+  appcast 'https://varaneckas.com/jad/'
   name 'Jad - the fast Java Decompiler'
   homepage 'https://varaneckas.com/jad/'
 

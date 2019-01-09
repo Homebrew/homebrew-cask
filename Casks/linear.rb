@@ -4,10 +4,9 @@ cask 'linear' do
 
   # github.com/mikaa123/linear was verified as official when first introduced to the cask
   url "https://github.com/mikaa123/linear/releases/download/#{version}/linear.zip"
-  appcast 'https://github.com/mikaa123/linear/releases.atom',
-          checkpoint: '619cb997369fe4ab9ab93026dbd7d19470fee853398a57cbfa56d462aaf05a4c'
+  appcast 'https://github.com/mikaa123/linear/releases.atom'
   name 'Linear'
-  homepage 'http://linear.theuxshop.com/'
+  homepage 'https://linear.theuxshop.com/'
 
   app 'linear.app'
 

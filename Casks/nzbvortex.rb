@@ -1,10 +1,9 @@
 cask 'nzbvortex' do
-  version '3.4.1'
-  sha256 '237b09fc4a4826e8f74c21f4093282454172259a50906aa6bdb7aaa15193360d'
+  version '3.4.3'
+  sha256 'fe3831f4a610435e404ce5dc7631d6ed981b5533a9fcd73b3cae0a28af9e2f29'
 
   url "https://www.nzbvortex.com/downloads/NZBVortex-#{version}.zip"
-  appcast "https://www.nzbvortex.com/update/appcast_v#{version.major}.xml",
-          checkpoint: '740ee0732a41efe82b460ec93923a331bb882c7ce97f6548a1fe5790f6b9857d'
+  appcast "https://www.nzbvortex.com/update/appcast_v#{version.major}.xml"
   name 'NZBVortex'
   homepage 'https://www.nzbvortex.com/landing/'
 

@@ -1,11 +1,10 @@
 cask 'textsoap' do
-  version '8.4.5'
-  sha256 '65730afbd7af9021589a69ba42d07cbb9a96834fc3aaa2acb5549cd9a167f4dd'
+  version '8.4.9'
+  sha256 '5586c46263300ca26e3ffb5bdc492497a63bdc2ec0d04a67ad0d3774902c3c5d'
 
   # unmarked.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://unmarked.s3.amazonaws.com/textsoap#{version.major}.zip"
-  appcast "https://unmarked.s3.amazonaws.com/appcast/textsoap#{version.major}.xml",
-          checkpoint: 'edca4bf7f8652cfe4ca5fd05c184e53b063bf1808e2c58bae45794e96bbaa309'
+  appcast "https://unmarked.s3.amazonaws.com/appcast/textsoap#{version.major}.xml"
   name 'TextSoap'
   homepage 'https://www.unmarked.com/textsoap/'
 

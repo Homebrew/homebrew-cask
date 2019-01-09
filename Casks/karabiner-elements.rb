@@ -1,14 +1,19 @@
 cask 'karabiner-elements' do
-  version '11.5.0'
-  sha256 '73195dabd21fe516b99dee87d32f0dde44615cfb00e1055e9e310fa5ee3eea47'
+  if MacOS.version == :el_capitan
+    version '11.6.0'
+    sha256 'c1b06252ecc42cdd8051eb3d606050ee47b04532629293245ffdfa01bbc2430d'
+  else
+    version '12.1.0'
+    sha256 '0e1fd76efcc2b7b8766b77c4ad5a58faefbb6b706d7669b097942d64ae4be62e'
+  end
 
   url "https://pqrs.org/osx/karabiner/files/Karabiner-Elements-#{version}.dmg"
-  appcast 'https://pqrs.org/osx/karabiner/files/karabiner-elements-appcast.xml',
-          checkpoint: 'e532046785a9be31edcec6146694dbc60dc2290320f0e6592bb02ed6bc3d76e5'
+  appcast 'https://pqrs.org/osx/karabiner/files/karabiner-elements-appcast.xml'
   name 'Karabiner Elements'
   homepage 'https://pqrs.org/osx/karabiner/'
 
   auto_updates true
+  depends_on macos: '>= :el_capitan'
 
   pkg 'Karabiner-Elements.sparkle_guided.pkg'
 
@@ -22,6 +27,8 @@ cask 'karabiner-elements' do
                        executable: '/Library/Application Support/org.pqrs/Karabiner-Elements/uninstall_core.sh',
                        sudo:       true,
                      }
+
+  # kext: 'org.pqrs.driver.Karabiner.VirtualHIDDevice.v*': Should not be uninstalled by Cask
 
   zap trash: [
                '~/Library/Application Support/Karabiner-Elements',

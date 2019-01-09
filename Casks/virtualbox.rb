@@ -1,12 +1,13 @@
 cask 'virtualbox' do
-  version '5.2.6-120293'
-  sha256 '2fec46feb794df42ee7e4f6bf0c39a93c5cc81bac884f4765922481f7b1e50f0'
+  version '6.0.0,127566'
+  sha256 'ab116b29b19a6bf85163d3146c97c8b0bc9625cc78365ed4eb8c87c94042dd9a'
 
-  url "http://download.virtualbox.org/virtualbox/#{version.sub(%r{-.*}, '')}/VirtualBox-#{version}-OSX.dmg"
-  appcast 'http://download.virtualbox.org/virtualbox/LATEST.TXT',
-          checkpoint: 'd4dc0eb9ab198f5250e794afc13c8129b1a171a906c03f2c7b3f93b9ff3e2bcc'
+  url "https://download.virtualbox.org/virtualbox/#{version.before_comma}/VirtualBox-#{version.before_comma}-#{version.after_comma}-OSX.dmg"
+  appcast 'https://download.virtualbox.org/virtualbox/LATEST.TXT'
   name 'Oracle VirtualBox'
   homepage 'https://www.virtualbox.org/'
+
+  conflicts_with cask: 'virtualbox-beta'
 
   pkg 'VirtualBox.pkg'
 

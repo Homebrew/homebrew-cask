@@ -1,10 +1,9 @@
 cask 'geany' do
-  version '1.32'
-  sha256 '0fa8110d68016a0cb20ab5f2a502db46c803cada01f53fc91cb4f2e767f6dbaa'
+  version '1.34'
+  sha256 '15636ba493084d7b8ac3938ec0f5c9649e07759ffe08859761af762c2231f98e'
 
   url "https://download.geany.org/geany-#{version}_osx.dmg"
-  appcast 'https://github.com/geany/geany/releases.atom',
-          checkpoint: '454388cf49281e2183226230b8d9a094fd052928c4240299ab6cbb226464de99'
+  appcast 'https://github.com/geany/geany/releases.atom'
   name 'Geany'
   homepage 'https://www.geany.org/'
 

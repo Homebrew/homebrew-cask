@@ -1,11 +1,10 @@
 cask 'jasper' do
-  version '0.5.0'
-  sha256 '962a38ad3a928894289643fd47febfdeb585c2e712c73dba23487edb940b25cd'
+  version '0.6.0'
+  sha256 '85b775774f09907cdec6788d941379cce9bbd8d4c5e2c390b2c45eb5841f7c0f'
 
   # github.com/jasperapp/jasper was verified as official when first introduced to the cask
   url "https://github.com/jasperapp/jasper/releases/download/v#{version}/jasper_v#{version}_mac.zip"
-  appcast 'https://jasperapp.io/-/versions-mac.json',
-          checkpoint: '56d1635b6477649e9336bffc59dd307a3748ed9d4c2326792cc32a12c9d7d790'
+  appcast 'https://jasperapp.io/-/versions-mac.json'
   name 'Jasper'
   homepage 'https://jasperapp.io/'
 

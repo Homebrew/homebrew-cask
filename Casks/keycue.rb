@@ -1,11 +1,11 @@
 cask 'keycue' do
-  version '8.6'
-  sha256 '59ff165f8f9bac1bc5bbe2127792d13c88f06111d937d8c7b42348cfe95944fe'
+  version '9.1'
+  sha256 '9d5d91b554347af86c5bc11b3d36f9ed421f4d1cededb766ae8e29448f24ff52'
 
-  url "http://www.ergonis.com/downloads/products/keycue/KeyCue#{version.no_dots}-Install.dmg",
+  url "https://www.ergonis.com/downloads/products/keycue/KeyCue#{version.no_dots}-Install.dmg",
       user_agent: :fake
   name 'KeyCue'
-  homepage 'http://www.ergonis.com/products/keycue/'
+  homepage 'https://www.ergonis.com/products/keycue/'
 
   app 'KeyCue.app'
 

@@ -1,28 +1,14 @@
 cask 'nomachine' do
-  version '6.0.66_2'
-  sha256 'e0be017287821ee88470534cf13a6b3e4855e8664ddf45cfc5a9e54066655d8c'
+  version '6.4.6_1'
+  sha256 '1d8440ac3b93e7a04802d08e338fcd2ce29dd42834b37094a81ab19ef41882ba'
 
-  url "http://download.nomachine.com/download/#{version.major_minor}/MacOSX/nomachine_#{version}.dmg"
+  url "https://download.nomachine.com/download/#{version.major_minor}/MacOSX/nomachine_#{version}.dmg"
   name 'NoMachine'
   homepage 'https://www.nomachine.com/'
 
   pkg 'NoMachine.pkg'
 
-  # a launchctl job ordinarily manages uninstall once the app bundle is removed
-
+  # A launchctl job ordinarily manages uninstall once the app bundle is removed
+  # To ensure it ran, verify if /Library/Application Support/NoMachine/nxuninstall.sh no longer exists
   uninstall delete: '/Applications/NoMachine.app'
-
-  # however, we duplicate the uninstall process manually in the zap stanza just in case
-  zap early_script: {
-                      executable: '/bin/rm',
-                      args:       ['-f', '--', '/Library/Application Support/NoMachine/nxuninstall.sh'],
-                    },
-      quit:         'com.nomachine.nxdock',
-      kext:         [
-                      'com.nomachine.driver.nxau',
-                      'com.nomachine.driver.nxtun',
-                      'com.nomachine.kext.nxfs',
-                    ],
-      pkgutil:      'com.nomachine.nomachine.NoMachine.*',
-      launchctl:    'com.nomachine.uninstall'
 end

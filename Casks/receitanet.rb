@@ -24,6 +24,6 @@ cask 'receitanet' do
                     }
 
   caveats do
-    depends_on_java('7+')
+    depends_on_java '7+'
   end
 end

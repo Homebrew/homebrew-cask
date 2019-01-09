@@ -1,10 +1,9 @@
 cask 'inboard' do
-  version '1.1.2-341'
-  sha256 'eaf186666385222d2edc713b38007760fd02717d33b2fd187d2abcae5ff76d6f'
+  version '1.1.3-361'
+  sha256 'eb1fd8516ad4686dbf6b3d8c3d7da7db9e46f1a838ebf3a677d149c680104a57'
 
   url "https://inboardapp.com/trial/Inboard-#{version}.zip"
-  appcast 'https://inboardapp.com/appcast.xml',
-          checkpoint: 'ceeeb50e46a7a6902136a5659a614140c854827f1abc76c23938053056efb563'
+  appcast 'https://inboardapp.com/appcast.xml'
   name 'Inboard'
   homepage 'https://inboardapp.com/'
 

@@ -11,15 +11,17 @@ cask 'monolingual' do
   elsif MacOS.version <= :el_capitan
     version '1.7.3'
     sha256 '24fa5ff0a5903c0eb07cd58a15292e3adab97ea0823f304241dc4187f9252ffc'
-  else
+  elsif MacOS.version <= :sierra
     version '1.7.8'
     sha256 '42771c3c4d615a39ab502d7723f3c7d23e6b384b56bbcebcbdd5a04cf2495c41'
+  else
+    version '1.8.1'
+    sha256 '6eb36f887eb6dfb93157eb7b3cf9cadf078530c85a0b43f0fb516800957f2987'
   end
 
   # github.com/IngmarStein/Monolingual was verified as official when first introduced to the cask
   url "https://github.com/IngmarStein/Monolingual/releases/download/v#{version}/Monolingual-#{version}.dmg"
-  appcast 'https://github.com/IngmarStein/Monolingual/releases.atom',
-          checkpoint: '3171d9ab49522d2954b8d34fa184636de6ec70829ef92573a5c2675fedbcfea1'
+  appcast 'https://github.com/IngmarStein/Monolingual/releases.atom'
   name 'Monolingual'
   homepage 'https://ingmarstein.github.io/Monolingual/'
 

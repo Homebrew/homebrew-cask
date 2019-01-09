@@ -1,10 +1,9 @@
 cask 'airy' do
-  version '3.3.179'
-  sha256 '350be437a10841479407e3165415bedbce3aa3e130613aaa6bc4706d4b47b597'
+  version '3.6,200'
+  sha256 '0cc3c34b6e7b1fa567ca5d2d0968fbb56aada7b9a5d81d2e61bba8fcf169d1f6'
 
   url 'https://cdn.eltima.com/download/airy.dmg'
-  appcast 'https://cdn.eltima.com/download/airy-update/airy.xml',
-          checkpoint: '4954abf1071c93038849c42b0ab8dd026283d47355469f8de0ea561c1b8ce06e'
+  appcast 'https://cdn.eltima.com/download/airy-update/airy.xml'
   name 'Airy'
   homepage 'https://mac.eltima.com/youtube-downloader-mac.html'
 

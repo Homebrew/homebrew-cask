@@ -1,12 +1,13 @@
 cask 'netspot' do
-  version '2.8.830'
-  sha256 '1888b8c359eec6ea9e5f851b742f7d4a3a98b81a78bbe0a5601b24647065fabf'
+  version '2.10.952'
+  sha256 '55cd50eb98d1b2ebc8f431ac14b36c1dc1c3bd55fec17fd83532080a9c1bae92'
 
   url 'https://www.netspotapp.com/download/NetSpot.dmg'
-  appcast "https://www.netspotapp.com/updates/netspot#{version.major}-appcast.xml",
-          checkpoint: '656f52da7bfc627811b6a41eb6f91654e1500d927e87db9ebf3a2824709ef073'
+  appcast "https://www.netspotapp.com/updates/netspot#{version.major}-appcast.xml"
   name 'NetSpot'
   homepage 'https://www.netspotapp.com/'
+
+  auto_updates true
 
   app 'NetSpot.app'
 

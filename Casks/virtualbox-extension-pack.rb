@@ -1,13 +1,13 @@
 cask 'virtualbox-extension-pack' do
-  version '5.2.6-120293'
-  sha256 '70584a70b666e9332ae2c6be0e64da4b8e3a27124801156577f205750bdde4f5'
+  version '6.0.0'
+  sha256 'b99ef88b0ac1abebc7a6d7168dd5eec58c426f05acf69c4055defff175038f57'
 
-  url "http://download.virtualbox.org/virtualbox/#{version.sub(%r{-.*}, '')}/Oracle_VM_VirtualBox_Extension_Pack-#{version}.vbox-extpack"
-  appcast 'http://download.virtualbox.org/virtualbox/LATEST.TXT',
-          checkpoint: 'd4dc0eb9ab198f5250e794afc13c8129b1a171a906c03f2c7b3f93b9ff3e2bcc'
+  url "https://download.virtualbox.org/virtualbox/#{version}/Oracle_VM_VirtualBox_Extension_Pack-#{version}.vbox-extpack"
+  appcast 'https://download.virtualbox.org/virtualbox/LATEST.TXT'
   name 'Oracle VirtualBox Extension Pack'
   homepage 'https://www.virtualbox.org/'
 
+  conflicts_with cask: 'virtualbox-extension-pack-beta'
   depends_on cask: 'virtualbox'
   container type: :naked
 
@@ -25,6 +25,7 @@ cask 'virtualbox-extension-pack' do
 
   uninstall_postflight do
     next unless File.exist?('/usr/local/bin/VBoxManage')
+
     system_command '/usr/local/bin/VBoxManage',
                    args: [
                            'extpack', 'uninstall',
@@ -33,10 +34,7 @@ cask 'virtualbox-extension-pack' do
                    sudo: true
   end
 
-  caveats <<~EOS
-    Installing this Cask means you have AGREED to the
-    VirtualBox Personal Use and Evaluation License at
-
-    https://www.virtualbox.org/wiki/VirtualBox_PUEL
-  EOS
+  caveats do
+    license 'https://www.virtualbox.org/wiki/VirtualBox_PUEL'
+  end
 end

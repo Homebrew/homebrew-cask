@@ -1,11 +1,10 @@
 cask 'hab' do
-  version '0.52.0-20180119184453'
-  sha256 '60849d39be265c05814d7be93798f9355f49cb4401d499405fdde83f1161c4e4'
+  version '0.67.0-20181029215059'
+  sha256 '0e990d51a058709a5f64c7e4a111c475a13873c01cb9e9869664cef743634ed5'
 
   # habitat.bintray.com was verified as official when first introduced to the cask
   url "https://habitat.bintray.com/stable/darwin/x86_64/hab-#{version}-x86_64-darwin.zip"
-  appcast 'https://github.com/habitat-sh/habitat/releases.atom',
-          checkpoint: '415881ea7c8292f968172a486fab8b9e5036ecbda60a7e6435db37b5d25e03e2'
+  appcast 'https://github.com/habitat-sh/habitat/releases.atom'
   name 'Habitat'
   homepage 'https://www.habitat.sh/'
 

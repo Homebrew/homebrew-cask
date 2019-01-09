@@ -1,14 +1,13 @@
 cask 'next' do
-  version '0.07'
-  sha256 '88f92765fe9963b0800de73775cf9bf5fd8d793674f9da1755676e832d523d2a'
+  version '1.2.0 '
+  sha256 '286e9af278797db6c41bbc9efd5c97e6d249734b4bca5df687ebaa481b35dc7b'
 
-  url "https://github.com/nEXT-Browser/nEXT/releases/download/#{version}/nEXT.dmg"
-  appcast 'https://github.com/nEXT-Browser/nEXT/releases.atom',
-          checkpoint: 'f5dec83b8e73c75011c335ec2e57be3a9b4c60f52246650657f68a89247db1e4'
-  name 'nEXT-Browser'
-  homepage 'https://github.com/nEXT-Browser/nEXT'
+  url 'https://next.atlas.engineer/static/release/next-macos-webkit.dmg'
+  appcast 'https://github.com/atlas-engineer/next/releases.atom'
+  name 'Next Browser'
+  homepage 'https://next.atlas.engineer/'
 
-  app 'nEXT.app'
+  app 'Next.app'
 
   zap trash: '~/Library/Caches/next.browser'
 end

@@ -1,12 +1,11 @@
 cask 'simon' do
-  version '4.2.2'
-  sha256 '611a50df550d2a446616be1c794a886047c34d79b58c5701e9b7cc06f3e327ac'
+  version '4.3.1'
+  sha256 '7e102e1309630df4c57827575659df5ce3daab9950d821e0807909832dfb09e7'
 
-  url "http://www.dejal.com/download/simon-#{version}.zip"
-  appcast 'http://www.dejal.com/appcast/?prod=simon',
-          checkpoint: 'fbf3de413753b075311558115a9bbc72579dd8048316bd816c35d923581d01d0'
+  url "https://www.dejal.com/download/simon-#{version}.zip"
+  appcast 'https://www.dejal.com/appcast/?prod=simon'
   name 'Simon'
-  homepage 'http://www.dejal.com/simon/'
+  homepage 'https://www.dejal.com/simon/'
 
   app 'Simon.app'
 

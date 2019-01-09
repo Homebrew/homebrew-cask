@@ -1,6 +1,6 @@
 cask 'undercover' do
-  version '6.5'
-  sha256 '3eeacdf5dc74cd3f75c40ba975d728551da001571ba8eafc270646e29c22b9fb'
+  version '6.6'
+  sha256 '40e6e9a7ff56d0a95a73f876795ada099d57e5393b337172a60ee09211cdb218'
 
   # undercoverhq.com was verified as official when first introduced to the cask
   url "http://assets.undercoverhq.com/client/#{version}/undercover_mac.pkg"
@@ -9,5 +9,9 @@ cask 'undercover' do
 
   pkg 'undercover_mac.pkg'
 
-  uninstall pkgutil: 'com.orbicule.pkg.Undercover'
+  uninstall pkgutil:   'com.orbicule.pkg.Undercover',
+            launchctl: [
+                         'com.orbicule.UCAgent',
+                         'com.orbicule.uc',
+                       ]
 end

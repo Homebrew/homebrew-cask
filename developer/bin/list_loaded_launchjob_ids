@@ -66,9 +66,9 @@ in a Cask uninstall stanza, eg
     uninstall launchctl: 'job.id.goes.here'
 
 If this command is not run as the superuser, you will be prompted
-for a password to run a subcommand using 'sudo'.  The password is
-not required, but supplying it may reveal additional job ids.  To
-skip using the password, press <return> repeatedly.
+for a password to run a subcommand using 'sudo'. The password is
+not required, but supplying it may reveal additional job ids.
+To skip using the password, press <return> repeatedly.
 
 Launchctl jobs attributed to Apple are excluded from the output.
 

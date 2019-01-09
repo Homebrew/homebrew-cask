@@ -7,7 +7,7 @@ cask 'cave-story' do
   name 'Pixel Cave Story'
   name 'Doukutsu'
   name '洞窟物語'
-  homepage 'http://www.cavestory.org/'
+  homepage 'https://www.cavestory.org/'
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app 'Doukutsu.app', target: 'Cave Story.app'

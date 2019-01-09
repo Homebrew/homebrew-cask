@@ -1,12 +1,18 @@
 cask 'vimediamanager' do
-  version '0,7a15:c'
-  sha256 '020ad0384093cc7846234f38e6e4016743368e1f83a462b0771e9471c2cae7ab'
+  version '0.7.18'
+  sha256 '4ba3510f5996840664b9bc0793a92367ff61ec0f4bb69cd985df5e26fb1da7b3'
 
-  url "https://github.com/vidalvanbergen/ViMediaManager/releases/download/v#{version.after_comma.before_colon}/vimediamanager_v#{version.before_comma}.#{version.after_comma.before_colon}#{version.after_colon}.dmg"
-  appcast 'https://github.com/vidalvanbergen/ViMediaManager/releases.atom',
-          checkpoint: '238a92a1893bda5b37298493fc872f0055ffcfaf7815619b8d547ff838ab1510'
+  url "https://github.com/vidalvanbergen/ViMediaManager/releases/download/v#{version.major_minor}a#{version.patch}/ViMediaManager_v#{version}c.dmg"
+  appcast 'https://github.com/vidalvanbergen/ViMediaManager/releases.atom'
   name 'ViMediaManager'
   homepage 'https://github.com/vidalvanbergen/ViMediaManager'
 
   app 'ViMediaManager.app'
+
+  zap trash: [
+               '~/Library/Application Support/ViMediaManager',
+               '~/Library/Caches/com.vidalvanbergen.vimediamanager-alpha',
+               '~/Library/Preferences/com.vidalvanbergen.vimediamanager-alpha.plist',
+               '~/Library/Saved Application State/com.vidalvanbergen.vimediamanager-alpha.savedState',
+             ]
 end

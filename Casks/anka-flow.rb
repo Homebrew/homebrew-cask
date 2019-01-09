@@ -1,12 +1,11 @@
 cask 'anka-flow' do
-  version '1.1.3.81'
-  sha256 '4cc4f0118518e44d5ccdb301a5c140cb13bbeda246202462000943ba178c130b'
+  version '1.4.2.101'
+  sha256 'e21738200f16a1189ecee16b7e1ddd734e38d52ffd59aefa5bf87be960fbb381'
 
   # d1efqjhnhbvc57.cloudfront.net was verified as official when first introduced to the cask
   url "https://d1efqjhnhbvc57.cloudfront.net/AnkaFlow-#{version}.pkg",
       referer: 'https://veertu.com/download-anka-run/'
-  appcast 'https://ankadoc.bitbucket.io/release-notes/index.html',
-          checkpoint: '28374389f11edafe6d722ba4f8a79bc71fa571fce6e45c3f4e70ecd9a93ed09c'
+  appcast 'https://ankadoc.bitbucket.io/release-notes/index.html'
   name 'Veertu Anka Flow'
   homepage 'https://veertu.com/'
 
@@ -17,6 +16,7 @@ cask 'anka-flow' do
   uninstall launchctl: [
                          'com.veertu.nlimit',
                          'com.veertu.vlaunch',
+                         'com.veertu.anka.lupd',
                        ],
             script:    {
                          executable: '/Library/Application Support/Veertu/Anka/tools/uninstall.sh',
@@ -36,10 +36,7 @@ cask 'anka-flow' do
                '/Library/Application Support/Veertu',
              ]
 
-  caveats <<~EOS
-    Installing this Cask means you have AGREED to the
-    Veertu End User License Agreement at
-
-    https://veertu.com/terms-and-conditions/
-  EOS
+  caveats do
+    license 'https://veertu.com/terms-and-conditions/'
+  end
 end

@@ -14,12 +14,17 @@ cask 'vitamin-r' do
     sha256 'cfc107e016e364ba1ed2ca091b6b03daf00d748852d06a4de7c421b8f4ece175'
     url "http://www.publicspace.net/download/Vitamin_#{version.dots_to_underscores}.dmg"
     app "Vitamin-R #{version.major}.app"
-  else
-    version '2.51'
-    sha256 '4cd5f6aece00d1ac7834a3720217ced1be39c388ecbef4d1937863a0c0a9a370'
+  elsif MacOS.version <= :el_capitan
+    version '2.58'
+    sha256 'c6c631430b44359aa022d9ca5ca6e98dbdf7258f2ceae0353f344a035682661e'
     url "http://www.publicspace.net/download/signedVitamin#{version.major}.zip"
-    appcast "http://www.publicspace.net/app/vitamin#{version.major}.xml",
-            checkpoint: 'c943d2904236a6e4339dfeb2db37a4a5fb5e2f1642855b5d5ec2dfdc5f11de40'
+    appcast "http://www.publicspace.net/app/vitamin#{version.major}.xml"
+    app "Vitamin-R #{version.major}.app"
+  else
+    version '3.03'
+    sha256 'bd164d61e7605fdfca151fbfdb2446efc1247f4b1d3c75bdfd823c33a4e97535'
+    url "http://www.publicspace.net/download/signedVitamin#{version.major}.zip"
+    appcast "http://www.publicspace.net/app/vitamin#{version.major}.xml"
     app "Vitamin-R #{version.major}.app"
   end
 

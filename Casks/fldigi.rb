@@ -1,13 +1,12 @@
 cask 'fldigi' do
-  version '4.0.15'
-  sha256 '93158b435727876067e926f8706eb182fc672168dc530062d67fac65f0fb2c0f'
+  version '4.0.18,4.3.7'
+  sha256 '8c6b317d6825b664df192d87e726b7c7caba4dcf6722d8f362d4565b24622d0d'
 
-  url "https://downloads.sourceforge.net/fldigi/fldigi/fldigi-#{version}.dmg"
-  appcast 'https://sourceforge.net/projects/fldigi/rss?path=/fldigi',
-          checkpoint: 'a117fb088fd46537e3d9d02d69776a01fe182b71811a72212390fda0c2227c8b'
+  url "https://downloads.sourceforge.net/fldigi/fldigi/fldigi-#{version.before_comma}_macos.dmg"
+  appcast 'https://sourceforge.net/projects/fldigi/rss?path=/fldigi'
   name 'fldigi'
   homepage 'https://sourceforge.net/projects/fldigi/files/fldigi/'
 
-  app "fldigi-#{version}.app"
-  app 'flarq-4.3.6.app'
+  app "fldigi-#{version.before_comma}.app"
+  app "flarq-#{version.after_comma}.app"
 end

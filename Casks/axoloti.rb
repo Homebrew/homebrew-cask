@@ -1,11 +1,10 @@
 cask 'axoloti' do
-  version '1.0.12-1'
-  sha256 '21839f25fd323f092a9e7b4c103fc5c6e126d95bfcbdc54b2db2224639fee1b6'
+  version '1.0.12-2'
+  sha256 '7b0c1231d695dd0ff1d07f679713a1d5691a6fac3543b0aa0415356c5cc82a9c'
 
   # github.com/axoloti/axoloti was verified as official when first introduced to the cask
   url "https://github.com/axoloti/axoloti/releases/download/#{version}/axoloti-mac-#{version}.dmg"
-  appcast 'https://github.com/axoloti/axoloti/releases.atom',
-          checkpoint: 'b5ac28c3d438cb88140ef924d860a46cd73ca19f474ddcfb403c41c26030d538'
+  appcast 'https://github.com/axoloti/axoloti/releases.atom'
   name 'Axoloti Core'
   homepage 'http://www.axoloti.com/'
 
@@ -14,7 +13,7 @@ cask 'axoloti' do
   app 'Axoloti.app'
 
   caveats do
-    depends_on_java('8')
+    depends_on_java '8'
 
     <<~EOS
       If you ever decide to uninstall #{token}, it is likely its runtime will no longer be of use to you.

@@ -1,11 +1,11 @@
 cask 'snes9x' do
-  version '1.53'
-  sha256 '48b0cbec848e7c2a24de1b30819dc150b62e354600cbcc0a6a5e2cf8e1de48ff'
+  version '1.58'
+  sha256 '4723eac4aee3774436d422fbf74206386f56fcc308954414b2ba7c29ac7a1d4f'
 
   # s9x-w32.de was verified as official when first introduced to the cask
-  url "http://www.s9x-w32.de/dl/snes9x-#{version}-macosx-113.dmg.gz"
+  url "http://www.s9x-w32.de/dl/snes9x-#{version}-macosx-i386.zip"
   name 'Snes9x'
   homepage 'http://www.snes9x.com/'
 
-  app 'Snes9x.app'
+  app "snes9x-#{version}-macosx-i386/Snes9x.app"
 end

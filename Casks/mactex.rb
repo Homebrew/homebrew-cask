@@ -1,30 +1,48 @@
 cask 'mactex' do
-  version '20170524'
-  sha256 '0caf76027c9e0534a0b636f2b880ace4a0463105a7ad5774ccacede761be8c2d'
+  version '2018.0417'
+  sha256 'e6ee8f69ca6e5ca5d20a31afc3dff3b4e5aa7a0b1b89ace9864ac22b10c34b98'
 
   # mirror.ctan.org/systems/mac/mactex was verified as official when first introduced to the cask
-  url "http://mirror.ctan.org/systems/mac/mactex/mactex-#{version}.pkg"
-  appcast 'https://www.tug.org/mactex/downloading.html',
-          checkpoint: '2dd3e7c71fe586512a5241f2b26c24f93af3510d2bda2f56da1a404098b894ee'
+  url "http://mirror.ctan.org/systems/mac/mactex/mactex-#{version.no_dots}.pkg"
+  appcast 'https://www.tug.org/mactex/downloading.html'
   name 'MacTeX'
   homepage 'https://www.tug.org/mactex/'
 
   conflicts_with cask: [
-                         'mactex-no-ghostscript',
                          'basictex',
+                         'mactex-no-gui',
                        ]
+  depends_on formula: 'ghostscript'
   depends_on macos: '>= :yosemite'
 
-  pkg "mactex-#{version}.pkg"
+  pkg "mactex-#{version.no_dots}.pkg",
+      choices: [
+                 {
+                   # TeXLive
+                   'choiceIdentifier' => 'choice1',
+                   'choiceAttribute'  => 'selected',
+                   'attributeSetting' => 1,
+                 },
+                 {
+                   # GUI-Applications
+                   'choiceIdentifier' => 'choice2',
+                   'choiceAttribute'  => 'selected',
+                   'attributeSetting' => 1,
+                 },
+                 {
+                   # Ghostscript
+                   'choiceIdentifier' => 'choice3',
+                   'choiceAttribute'  => 'selected',
+                   'attributeSetting' => 0,
+                 },
+               ]
 
   uninstall pkgutil: [
-                       'org.tug.mactex.ghostscript9.21',
-                       'org.tug.mactex.gui2017',
-                       'org.tug.mactex.texlive2017',
+                       "org.tug.mactex.gui#{version.major}",
+                       "org.tug.mactex.texlive#{version.major}",
                      ],
             delete:  [
-                       '/usr/local/texlive/2017',
-                       '/usr/local/share/ghostscript/9.21',
+                       "/usr/local/texlive/#{version.major}",
                        '/Applications/TeX',
                        '/Library/PreferencePanes/TeXDistPrefPane.prefPane',
                        '/Library/TeX',
@@ -34,7 +52,7 @@ cask 'mactex' do
 
   zap trash: [
                '/usr/local/texlive/texmf-local',
-               '~/Library/texlive/2017',
+               "~/Library/texlive/#{version.major}",
                # TexShop:
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/texshop.sfl*',
                '~/Library/Application Support/TeXShop',
@@ -61,7 +79,6 @@ cask 'mactex' do
              ],
       rmdir: [
                '/usr/local/texlive',
-               '/usr/local/share/ghostscript',
                '~/Library/texlive',
              ]
 end

@@ -1,13 +1,12 @@
 cask 'find-any-file' do
-  version '1.9.2'
-  sha256 '2d56ee022617f1bf6f901f9437fae50d0e80aaaddd4493fc7eeda19461a3e242'
+  version '1.9.3'
+  sha256 '43a756641076388ff2080fcb0aa4e12d6619503b8daada99c0a20a6025cfba01'
 
   # files.tempel.org.s3.amazonaws.com was verified as official when first introduced to the cask
   url "http://files.tempel.org.s3.amazonaws.com/FindAnyFile_#{version}.zip"
-  appcast 'http://apps.tempel.org/FindAnyFile/appcast.xml',
-          checkpoint: 'fbc3c15a6e4a35a8fb73da18e696a0e1b7f8779f05c8c8e9b5981df170f95fc4'
+  appcast 'https://apps.tempel.org/FindAnyFile/appcast.xml'
   name 'Find Any File'
-  homepage 'http://apps.tempel.org/FindAnyFile/'
+  homepage 'https://apps.tempel.org/FindAnyFile/'
 
   app 'Find Any File.app'
 

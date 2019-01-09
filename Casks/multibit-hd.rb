@@ -5,9 +5,12 @@ cask 'multibit-hd' do
   url "https://multibit.org/releases/multibit-hd/multibit-hd-#{version}/multibit-macos-#{version}-drag-install.dmg"
   name 'MultiBit HD'
   homepage 'https://multibit.org/'
-  gpg "#{url}.asc", key_id: '299c423c672f47f4756a6ba4c1972aed79f7c572'
 
   app 'MultiBit HD.app'
 
   uninstall quit: 'com.install4j.6925-4794-5772-4956.24'
+
+  caveats do
+    discontinued
+  end
 end

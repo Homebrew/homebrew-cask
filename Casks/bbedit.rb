@@ -1,15 +1,18 @@
 cask 'bbedit' do
-  version '12.1'
-  sha256 '06fdabbd8d4f55771cbafc322542e12b29b51fabcd624af88bea19befc9078ff'
-
+  if MacOS.version <= :el_capitan
+    version '12.1.6'
+    sha256 '23b9fc6ef5c03cbcab041566503c556d5baf56b2ec18f551e6f0e9e6b48dc690'
+  else
+    version '12.5.2'
+    sha256 '10270936e6f4d687232ef8593535b56c1802ac4ed4ddb2357e4bd3f904a214e3'
+  end
   # s3.amazonaws.com/BBSW-download was verified as official when first introduced to the cask
-  url "http://s3.amazonaws.com/BBSW-download/BBEdit_#{version}.dmg"
-  appcast 'https://versioncheck.barebones.com/BBEdit.xml',
-          checkpoint: 'a0b4110f1b3812f7c93f12a8b414074d0c9fd641a9c1c1c51c2d2806a5ede827'
+  url "https://s3.amazonaws.com/BBSW-download/BBEdit_#{version}.dmg"
+  appcast 'https://versioncheck.barebones.com/BBEdit.xml'
   name 'BBEdit'
   homepage 'https://www.barebones.com/products/bbedit/'
 
-  depends_on macos: '>= :mavericks'
+  depends_on macos: '>= :el_capitan'
 
   app 'BBEdit.app'
 

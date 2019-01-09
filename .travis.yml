@@ -5,7 +5,7 @@ sudo: true
 matrix:
   include:
     - os: osx
-      osx_image: xcode9.2
+      osx_image: xcode10
       rvm: system
   fast_finish: true
 
@@ -16,27 +16,39 @@ branches:
 cache:
   directories:
     - /usr/local/Homebrew/Library/Homebrew/vendor/bundle
+    - /usr/local/Homebrew/Library/Homebrew/vendor/portable-ruby
 
-install: true # skip install step
+install:
+  - |
+    # Force strict error checking.
+    set -o errexit
+    set -o pipefail
+  - |
+    # Update Travis commit range.
+    # This is not normally required but does prevent problems with outdated forks and
+    # deleted casks (see https://github.com/Homebrew/homebrew-cask/pull/43164).
+    BRANCH_COMMIT="${TRAVIS_COMMIT_RANGE##*.}"
+    TARGET_COMMIT="${TRAVIS_COMMIT_RANGE%%.*}"
+    if ! MERGE_BASE="$(git merge-base "${BRANCH_COMMIT}" "${TARGET_COMMIT}" 2>/dev/null)"; then
+      git fetch --unshallow
+      MERGE_BASE="$(git merge-base "${BRANCH_COMMIT}" "${TARGET_COMMIT}")"
+    fi
+    export TRAVIS_COMMIT_RANGE="${MERGE_BASE}...${BRANCH_COMMIT}"
+  - |
+    # Switch to master branch.
+    export HOMEBREW_COLOR=1
+    export HOMEBREW_DEVELOPER=1
+    export HOMEBREW_NO_AUTO_UPDATE=1
+    brew update
+  - |
+    # Mirror the repo as a tap.
+    TAP_DIR="$(brew --repository)/Library/Taps/${TRAVIS_REPO_SLUG}"
+    mkdir -p "${TAP_DIR}"
+    rsync -az --delete "${TRAVIS_BUILD_DIR}/" "${TAP_DIR}/"
+    export TRAVIS_BUILD_DIR="${TAP_DIR}"
+    builtin cd "${TRAVIS_BUILD_DIR}"
 
-before_script:
-  - . ci/travis/before_script.sh
-
-script:
-  - . ci/travis/script.sh
+script: brew cask ci
 
 notifications:
   email: false
-  irc:
-    channels:
-      - "chat.freenode.net#homebrew-cask"
-    template:
-      - "(%{repository_name}) %{build_number}: %{branch}@%{commit} %{author} -> %{message} %{build_url}"
-    use_notice: true
-    skip_join: true
-  webhooks:
-    urls:
-      - "https://webhooks.gitter.im/e/712d699360b239db14a5"
-    on_success: change
-    on_failure: always
-    on_start: never

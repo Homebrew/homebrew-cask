@@ -1,15 +1,17 @@
 cask 'daedalus' do
-  version '1.0.3619'
-  sha256 'fd644fe565e92adc13bc004bf18d4ec9591d79aa7f69fa63ee008def47fa1770'
+  version '0.12.0,2.0.0:3788.1'
+  sha256 '0239107d70f0510c041f3b7a499d1d87d88fc8dbac04838bfce7e4475bf8b375'
 
-  # amazonaws.com/daedalus-travis was verified as official when first introduced to the cask
-  url "https://s3.eu-central-1.amazonaws.com/daedalus-travis/Daedalus-installer-#{version}.pkg"
+  # github.com/input-output-hk/daedalus was verified as official when first introduced to the cask
+  url "https://github.com/input-output-hk/daedalus/releases/download/#{version.before_comma}/daedalus-#{version.before_comma}-cardano-sl-#{version.after_comma.before_colon}-mainnet-macos-#{version.after_comma.after_colon}.pkg"
+  appcast 'https://github.com/input-output-hk/daedalus/releases.atom'
   name 'Daedalus'
   homepage 'https://daedaluswallet.io/'
 
-  pkg "Daedalus-installer-#{version}.pkg"
+  pkg "daedalus-#{version.before_comma}-cardano-sl-#{version.after_comma.before_colon}-mainnet-macos-#{version.after_comma.after_colon}.pkg"
 
-  uninstall pkgutil: 'org.daedalus.pkg'
+  uninstall pkgutil: 'org.Daedalus.pkg',
+            delete:  '/Applications/Daedalus.app'
 
   zap trash: [
                '~/Library/Application Support/Daedalus',

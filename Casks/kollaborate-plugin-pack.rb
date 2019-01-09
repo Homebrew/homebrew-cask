@@ -3,7 +3,7 @@ cask 'kollaborate-plugin-pack' do
   sha256 'a0c1e814397696c609e33e0f89ba1aff762d3632a82276ebcd49670e734bcefc'
 
   # digitalrebellion.com was verified as official when first introduced to the cask
-  url "http://www.digitalrebellion.com/download/kollabplugins?version=#{version.no_dots}"
+  url "https://www.digitalrebellion.com/download/kollabplugins?version=#{version.no_dots}"
   name 'Kollaborate Plugin Pack'
   homepage 'https://www.kollaborate.tv/resources'
 

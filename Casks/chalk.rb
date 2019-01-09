@@ -1,11 +1,10 @@
 cask 'chalk' do
-  version '1.2.0'
-  sha256 '03a9942e88a60fb01e35264a157157ef7042701518035a09abba8f2b2b825899'
+  version '1.3.2'
+  sha256 'f8eb490889e908bae4d8be614295e0a99891da147d0e0c21efaeceb91b91b32b'
 
   url "https://www.chachatelier.fr/chalk/downloads/Chalk-#{version.dots_to_underscores}.dmg",
       user_agent: :fake
-  appcast 'https://pierre.chachatelier.fr/chalk/downloads/chalk-sparkle-en.rss',
-          checkpoint: '8f81c39b3ded1e3fa8a05f249205062d88cb1620b1bba0db9436c485aea6242f'
+  appcast 'https://pierre.chachatelier.fr/chalk/downloads/chalk-sparkle-en.rss'
   name 'Chalk'
   homepage 'https://www.chachatelier.fr/chalk/'
 

@@ -1,15 +1,13 @@
 cask 'sizeup' do
-  version '1.7.3'
-  sha256 'ad0e38750b76759528fb38013521f9196a54682143ae30a968ac0e3e0a2827e8'
+  version '1.7.4'
+  sha256 '5f2e9514627c0dc867ece0665fef790f01f3874d7765cc459e3a7676b78a02cf'
 
   url "https://www.irradiatedsoftware.com/downloads/SizeUp_#{version}.zip"
-  appcast 'https://www.irradiatedsoftware.com/updates/profiles/sizeup.php',
-          checkpoint: 'a47cefddf4659cd3019836dee16d979915f373ce0069fcecdfddddcaf8e63dcb'
+  appcast 'https://www.irradiatedsoftware.com/updates/profiles/sizeup.php'
   name 'SizeUp'
   homepage 'https://www.irradiatedsoftware.com/sizeup/'
 
   auto_updates true
-  accessibility_access true
 
   app 'SizeUp.app'
 

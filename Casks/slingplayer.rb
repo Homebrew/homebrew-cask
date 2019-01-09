@@ -4,8 +4,7 @@ cask 'slingplayer' do
 
   # slingmedia.com was verified as official when first introduced to the cask
   url "http://download.slingmedia.com/SlingplayerDesktop/Mac/#{version}/SlingplayerDesktop-#{version}.dmg"
-  appcast 'https://qaautoupdate.sling.com/plugin_binary/downloads/SPD/Mac/DevAppcast/SlingPlayerDesktopAppcast.xml',
-          checkpoint: 'f3e8f02a4af4671202a64777b3cc4e14f05865513a84b485eb797d7c48603574'
+  appcast 'http://www.slingbox.com/Products/SlingplayerApps.aspx'
   name 'Slingplayer Desktop'
   homepage 'http://www.slingbox.com/'
 

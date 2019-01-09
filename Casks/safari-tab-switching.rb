@@ -3,8 +3,7 @@ cask 'safari-tab-switching' do
   sha256 'af604769a572939a41e9c7ab33efd6acc81cc8efda5a68782bec744fd3f51176'
 
   url "https://github.com/rs/SafariTabSwitching/releases/download/#{version}/Safari.Tab.Switching-#{version}.zip"
-  appcast 'https://github.com/rs/SafariTabSwitching/releases.atom',
-          checkpoint: '8f472627f4f0c83a4d91e0c3b54ba23abe7a8ad907c05c8c1c4902ae4bb979d6'
+  appcast 'https://github.com/rs/SafariTabSwitching/releases.atom'
   name 'Safari Tab Switching'
   homepage 'https://github.com/rs/SafariTabSwitching'
 

@@ -4,8 +4,7 @@ cask 'vpaint' do
 
   # github.com/dalboris/vpaint was verified as official when first introduced to the cask
   url "https://github.com/dalboris/vpaint/releases/download/v#{version}/VPaint.#{version}.dmg"
-  appcast 'https://github.com/dalboris/vpaint/releases.atom',
-          checkpoint: '4461c8f006a056c4f5e9211d54eb384cf317e7c7fd5c3d9ae835dc148d5fc802'
+  appcast 'https://github.com/dalboris/vpaint/releases.atom'
   name 'VPaint'
   homepage 'https://www.vpaint.org/'
 

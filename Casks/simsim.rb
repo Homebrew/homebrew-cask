@@ -1,10 +1,9 @@
 cask 'simsim' do
-  version '1.3.3'
-  sha256 '4c39334b1ed1791cd33a6366d2c6b349a7956f8c243d04a74d4fcf97c4cbea47'
+  version '1.4.1'
+  sha256 '8a7cd76ad7dec0feba4be2df8cdb00e9b4180aa56b8e1dec23312681aae8a462'
 
   url "https://github.com/dsmelov/simsim/releases/download/#{version}/SimSim_#{version}.dmg"
-  appcast 'https://github.com/dsmelov/simsim/releases.atom',
-          checkpoint: '0b8129ef11a6ef819d26b1485f4afd90444ba05189aa4bab86c199e605432571'
+  appcast 'https://github.com/dsmelov/simsim/releases.atom'
   name 'SimSim'
   homepage 'https://github.com/dsmelov/simsim/'
 

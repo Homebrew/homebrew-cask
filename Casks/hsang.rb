@@ -1,11 +1,12 @@
 cask 'hsang' do
-  version '1.8.2'
-  sha256 'a1e54fc34b5ca82ed1b3e24f4618b832ef2df8e9d1bdb918573ac6f3d339e449'
+  version '1.8.9'
+  sha256 '263507d2ec9842e256267b14ce9421d03f42051cc1bac05c8991e1ccd4ff3d67'
 
-  # nie.gdl.netease.com/lushi was verified as official when first introduced to the cask
-  url "http://nie.gdl.netease.com/lushi/HSAng_#{version}.dmg"
+  # opd.gdl.netease.com was verified as official when first introduced to the cask
+  url "https://opd.gdl.netease.com/HSAng_#{version}.dmg"
+  appcast 'http://hs.gameyw.netease.com/mac.xml'
   name 'HSAng'
-  homepage 'http://lushi.163.com/'
+  homepage 'https://lushi.163.com/'
 
   app 'HSAng.app'
 end

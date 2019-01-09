@@ -1,11 +1,10 @@
 cask 'jameica' do
-  version :latest
-  sha256 :no_check
+  version '2.8.2'
+  sha256 '055833018c04c7d1ca5617db4472c5bbde256b6a789769d2c8ef6648e3b88312'
 
-  url 'https://www.willuhn.de/products/jameica/releases/current/jameica/jameica-macos64.zip'
+  url "https://www.willuhn.de/products/jameica/releases/current/jameica/jameica-macos64-#{version}.zip"
   name 'Jameica'
   homepage 'https://www.willuhn.de/products/jameica/'
-  gpg "#{url}.asc", key_id: '5a8ed9cfc0db6c70'
 
   app 'Jameica.app'
 end

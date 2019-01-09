@@ -7,8 +7,6 @@ cask 'stride' do
   name 'Stride'
   homepage 'https://www.stride.com/'
 
-  auto_updates true
-
   app 'Stride.app'
 
   zap trash: [

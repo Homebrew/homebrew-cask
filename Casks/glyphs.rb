@@ -1,14 +1,14 @@
 cask 'glyphs' do
-  version '2.4.4-1075'
-  sha256 '56cddfbc4acd5c74ca71e29ec3d01850bf9a833a0ce4638d6cdbf7c7e461bfcb'
+  version '2.6.1,1197'
+  sha256 '8ddfadadcc6fa195202abd3030be0d585406861a0f1756732f07fd148a6331f6'
 
-  url "https://updates.glyphsapp.com/Glyphs#{version}.zip"
-  appcast "https://updates.glyphsapp.com/appcast#{version.major}.xml",
-          checkpoint: '5788ef93598cdb76dbb905646ca26a336b39968eb64e0de82b6677d63be1b5c9'
+  url "https://updates.glyphsapp.com/Glyphs#{version.major_minor_patch}-#{version.after_comma}.zip"
+  appcast "https://updates.glyphsapp.com/appcast#{version.major}.xml"
   name 'Glyphs'
   homepage 'https://glyphsapp.com/'
 
   auto_updates true
+  depends_on macos: '>= :mavericks'
 
   app 'Glyphs.app'
 

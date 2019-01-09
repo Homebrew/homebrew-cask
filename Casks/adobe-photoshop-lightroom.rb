@@ -7,11 +7,11 @@ cask 'adobe-photoshop-lightroom' do
   homepage 'https://www.adobe.com/products/photoshop-lightroom.html'
 
   auto_updates true
-  depends_on cask: 'caskroom/versions/adobe-photoshop-lightroom600'
+  depends_on cask: 'homebrew/cask-versions/adobe-photoshop-lightroom600'
 
   # staged_path not available in Installer/Uninstall Stanza, workaround by nesting with preflight/postflight
-  # see https://github.com/caskroom/homebrew-cask/pull/8887
-  # and https://github.com/caskroom/homebrew-versions/pull/296
+  # see https://github.com/Homebrew/homebrew-cask/pull/8887
+  # and https://github.com/Homebrew/homebrew-cask-versions/pull/296
 
   preflight do
     processes = system_command '/bin/launchctl', args: ['list']
@@ -28,7 +28,7 @@ cask 'adobe-photoshop-lightroom' do
   end
 
   uninstall_preflight do
-    system_command 'brew', args: ['cask', 'uninstall', 'adobe-photoshop-lightroom600']
+    system_command "#{HOMEBREW_PREFIX}/bin/brew", args: ['cask', 'uninstall', 'adobe-photoshop-lightroom600']
   end
 
   zap trash: [

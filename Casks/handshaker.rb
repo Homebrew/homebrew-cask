@@ -1,13 +1,12 @@
 cask 'handshaker' do
-  version '2.5.4'
-  sha256 '96843644bf01c83883226ed9108419a2b76dd33f1b00ce6efd7648370b60d0aa'
+  version '2.5.6'
+  sha256 'a263e0713a2d6d41b7fb9323fa0b145e35a8fc9086b6ff6253f9b9abda7ede16'
 
   # dl2.smartisan.cn was verified as official when first introduced to the cask
   url "http://dl2.smartisan.cn/app/HandShaker.v#{version}.dmg"
-  appcast 'https://sf.smartisan.com/update.plist',
-          checkpoint: '6cdb44644195de046cb5b1ec50c724178062991585da8ab9fa11d59d45b641e4'
+  appcast 'https://sf.smartisan.com/update.plist'
   name 'HandShaker'
-  homepage 'http://www.smartisan.com/apps/'
+  homepage 'https://www.smartisan.com/apps/'
 
   app 'HandShaker.app'
 end

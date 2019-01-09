@@ -4,8 +4,7 @@ cask 'orangered' do
 
   # github.com/voidref/orangered was verified as official when first introduced to the cask
   url "https://github.com/voidref/orangered/releases/download/#{version}/Orangered.app.zip"
-  appcast 'https://github.com/voidref/orangered/releases.atom',
-          checkpoint: '899235fb42e98a50eea2f147d3f88b7d19eae7eea4d0c54961561b21187a8c05'
+  appcast 'https://github.com/voidref/orangered/releases.atom'
   name 'Orangered'
   homepage 'http://voidref.com/orangered/Orangered!.html'
 

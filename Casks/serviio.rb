@@ -1,6 +1,6 @@
 cask 'serviio' do
-  version '1.9'
-  sha256 '18577b1e9bb23d46b232264a5fde13ae24650133a0f8e1d630ccf5ddc5834905'
+  version '1.10.1'
+  sha256 '2ffb1263780c7df628fe1e56986fe1a4f23e105d6c3c9ead73303cb9c3f9f704'
 
   url "http://download.serviio.org/releases/serviio-#{version}-osx.tar.gz"
   name 'Serviio'
@@ -8,12 +8,13 @@ cask 'serviio' do
 
   pkg "Serviio-#{version}.pkg"
 
-  uninstall pkgutil: [
-                       'org.serviio.pkg.autostart',
-                       'org.serviio.pkg.JRE',
-                       'org.serviio.pkg.ServiioConsole',
-                       'org.serviio.pkg.Serviio',
-                     ]
+  uninstall pkgutil:   [
+                         'org.serviio.pkg.autostart',
+                         'org.serviio.pkg.JRE',
+                         'org.serviio.pkg.ServiioConsole',
+                         'org.serviio.pkg.Serviio',
+                       ],
+            launchctl: 'org.serviio.server'
 
   zap trash: [
                '/Library/Application Support/Serviio',

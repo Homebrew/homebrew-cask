@@ -1,15 +1,14 @@
 cask 'voodoopad' do
-  version '5.1.8'
-  sha256 '42da5a41c1759f2d2b66a5395decf5fc3a8a6f441bbd34f8afdececeb32de337'
+  version '5.2.2'
+  sha256 '15ea060a90a71e7178403b3deba3cc3c3060053ed2a70f26775ca53326e4c312'
 
   # voodoopad.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://voodoopad.s3.amazonaws.com/VoodooPad-#{version}.zip"
-  appcast 'https://www.voodoopad.com/download/',
-          checkpoint: '41636efe3ee458a3f6fb06ad08d589bed545a6a1cab46832dfd0652f6c1916cf'
+  appcast "https://www.primatelabs.com/appcast/voodoopad#{version.major}.xml"
   name 'VoodooPad'
   homepage 'https://www.voodoopad.com/'
 
-  depends_on macos: '>= :lion'
+  depends_on macos: '>= :sierra'
 
   app 'VoodooPad.app'
 end

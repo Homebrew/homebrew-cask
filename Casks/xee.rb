@@ -4,8 +4,7 @@ cask 'xee' do
 
   # devmate.com/cx.c3.Xee3 was verified as official when first introduced to the cask
   url "https://dl.devmate.com/cx.c3.Xee3/#{version.after_comma.before_colon}/#{version.after_colon}/Xee-#{version.after_comma.before_colon}.zip"
-  appcast 'https://updates.devmate.com/cx.c3.Xee3.xml',
-          checkpoint: '5c45da31dde2de4fbeb6fc3db493df70d5bba3e51372b94a1dac5be9b507702e'
+  appcast 'https://updates.devmate.com/cx.c3.Xee3.xml'
   name 'Xee³'
   homepage 'https://theunarchiver.com/xee'
 

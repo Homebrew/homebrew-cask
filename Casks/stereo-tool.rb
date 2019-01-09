@@ -1,10 +1,9 @@
 cask 'stereo-tool' do
-  version '8.40'
-  sha256 'eb835c3b29461d52ea9bf4721178e3817bb63f7b2bb139fbecc7d9002548b079'
+  version '9.11'
+  sha256 '707e4466f97db8b3a39ac39d80c3bb6cb40782e0f7e241c19027fdbdb28e95da'
 
-  url 'http://www.stereotool.com/download/stereo_tool.zip'
-  appcast 'http://www.stereotool.com/version_history.shtml',
-          checkpoint: '65fc8b88b49fb5600e56c379be8b85ec483d8e615ac3222cb0b6819c102988b3'
+  url 'https://www.stereotool.com/download/stereo_tool.zip'
+  appcast 'https://www.stereotool.com/documentation/8.50/version_history/'
   name 'Stereo Tool'
   homepage 'https://www.stereotool.com/'
 

@@ -1,6 +1,6 @@
 cask 'google-earth-pro' do
-  version '7.3.1.4507'
-  sha256 '98327fec576eb56e6116b20f511434273bfe772e4a750736a9eb39a2f06a27db'
+  version '7.3.2.5495'
+  sha256 '89fce86496593405f2d1c4817246a59a45695a19dca878c91b6d259e84f4e49e'
 
   url 'https://dl.google.com/earth/client/advanced/current/GoogleEarthProMac-Intel.dmg'
   name 'Google Earth Pro'
@@ -8,7 +8,15 @@ cask 'google-earth-pro' do
 
   pkg "Install Google Earth Pro #{version}.pkg"
 
-  uninstall pkgutil: 'com.Google.GoogleEarthPro'
+  uninstall pkgutil:   [
+                         'com.Google.GoogleEarthPro',
+                         'com.google.pkg.Keystone',
+                       ],
+            launchctl: [
+                         'com.google.keystone.agent',
+                         'com.google.keystone.system.agent',
+                         'com.google.keystone.daemon',
+                       ]
 
   zap trash: [
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.google.googleearthpro.sfl*',

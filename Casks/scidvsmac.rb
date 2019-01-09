@@ -1,12 +1,12 @@
 cask 'scidvsmac' do
-  version '4.18'
-  sha256 '63747c14c5336ac7f799a77e7dd3691742014a2ab34093462ebb8e6ec3684d57'
+  version '4.19'
+  sha256 'c22437ce250cb912924bfea5c24c067dc5385e5d912fde50126c2260dcd9feec'
 
+  # downloads.sourceforge.net/scidvspc was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/scidvspc/ScidvsMac-#{version}.dmg"
-  appcast 'https://sourceforge.net/projects/scidvspc/rss',
-          checkpoint: 'c8f5b1aef3cae84cd0334bd008fd008cebdfde792f9cba74b3b01d10f0751d8f'
+  appcast 'https://sourceforge.net/projects/scidvspc/rss'
   name 'Scid vs. Mac'
-  homepage 'http://scidvspc.sourceforge.net/'
+  homepage 'https://scidvspc.sourceforge.io/'
 
   app 'ScidvsMac.app'
 end

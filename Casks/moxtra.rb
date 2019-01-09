@@ -4,9 +4,7 @@ cask 'moxtra' do
 
   url 'https://www.moxtra.com/client/mac/MoxtraDesktopInstaller.dmg'
   name 'Moxtra'
-  homepage 'http://moxtra.com/application/'
-
-  auto_updates true
+  homepage 'https://moxtra.com/app/'
 
   app 'Moxtra.app'
 

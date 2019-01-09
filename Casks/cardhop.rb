@@ -1,10 +1,9 @@
 cask 'cardhop' do
-  version '1.0.6'
-  sha256 'df09a3260f4d26ba6c02a0f83a147868276d7f98783fea641da2234ddbffa953'
+  version '1.1.6'
+  sha256 '81391e6f68da4fa3155fe591da2e6ac186593ded527425b8b2a4e2839a0cee20'
 
   url "http://cdn.flexibits.com/Cardhop_#{version}.zip"
-  appcast 'https://flexibits.com/cardhop/appcast.php',
-          checkpoint: '7261da488a22bf6ce317682c90d98a16bcc5a5cda104782c77604df9024ffebd'
+  appcast 'https://flexibits.com/cardhop/appcast.php'
   name 'Cardhop'
   homepage 'https://flexibits.com/cardhop'
 

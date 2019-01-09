@@ -1,10 +1,9 @@
 cask 'preference-manager' do
-  version '4.4.1.0'
-  sha256 'f41eeb3823da73ae69ce9f1cb7e0a3252bf39b6c0d59a9801a5b9b0967f012df'
+  version '4.4.2.0'
+  sha256 'b39ece3b79d5d72987abf0aa79b8d5fcb996dfd29dff6016f37c3529fd3ecefd'
 
-  url "http://www.digitalrebellion.com/download/prefman?version=#{version.no_dots}"
-  appcast 'https://www.digitalrebellion.com/rss/appcasts/pref_man.xml',
-          checkpoint: '36eda5f445d2b1adf5503ec0cbae5cccbc5ab607ac0117a5198044377e65a31e'
+  url "https://www.digitalrebellion.com/download/prefman?version=#{version.no_dots}"
+  appcast 'https://www.digitalrebellion.com/rss/appcasts/pref_man.xml'
   name 'Preference Manager'
   homepage 'https://www.digitalrebellion.com/prefman/'
 

@@ -4,8 +4,7 @@ cask 'kompozer' do
 
   # sourceforge.net/kompozer was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/kompozer/current/#{version}/macosx/kompozer-#{version}.en-US.mac-universal.dmg"
-  appcast 'https://sourceforge.net/projects/kompozer/rss?path=/current',
-          checkpoint: '97078045e6600da2e7d1cccfc4bb344a4064ce1386fdfae4dd4592adfa4e74f2'
+  appcast 'https://sourceforge.net/projects/kompozer/rss?path=/current'
   name 'KompoZer'
   homepage 'https://kompozer.net/'
 

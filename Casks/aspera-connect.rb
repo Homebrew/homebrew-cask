@@ -1,12 +1,12 @@
 cask 'aspera-connect' do
-  version '3.7.4.147728'
-  sha256 '7e8357b5c670c7c27a220fc709f6453765a5a6715f06601e9cda4ba89bf06770'
+  version '3.8.1.161274'
+  sha256 'a04fd1697ed797242d9201e2ad2be345431fffc89076d96bb637c4efa23eee02'
 
-  url "http://download.asperasoft.com/download/sw/connect/#{version.major_minor_patch}/AsperaConnectInstaller-#{version}.dmg"
+  url "https://download.asperasoft.com/download/sw/connect/#{version.major_minor_patch}/IBMAsperaConnectInstaller-#{version}.dmg"
   name 'Aspera Connect'
-  homepage 'http://asperasoft.com/software/transfer-clients/connect-web-browser-plug-in/'
+  homepage 'https://asperasoft.com/software/transfer-clients/connect-web-browser-plug-in/'
 
-  pkg 'AsperaConnectInstaller.pkg'
+  pkg 'IBMAsperaConnectInstaller.pkg'
 
   uninstall pkgutil: [
                        'com.aspera.AsperaWeb',

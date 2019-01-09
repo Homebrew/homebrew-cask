@@ -1,10 +1,9 @@
 cask 'jollysfastvnc' do
-  version '1.52'
-  sha256 '0b0f4eb3d8a4aed33d36acfbac9fb34763d7b8faca00f8efc88ea2a9d9a0352e'
+  version '1.54'
+  sha256 '2d205f98db9afaef25e591166a82aab84263df9def3214eea53af423f43e8017'
 
-  url 'https://www.jinx.de/JollysFastVNC_files/JollysFastVNC.current.10.7.dmg'
-  appcast 'https://www.jinx.de/JollysFastVNC.update.0E.i386.xml',
-          checkpoint: 'dc11d23f685a3714d006809472517aeb839702dd4690c65ca7261e64f78079e2'
+  url 'https://www.jinx.de/JollysFastVNC_files/JollysFastVNC.current.dmg'
+  appcast 'https://www.jinx.de/JollysFastVNC.update.11.i386.xml'
   name 'JollysFastVNC'
   homepage 'https://www.jinx.de/JollysFastVNC.html'
 

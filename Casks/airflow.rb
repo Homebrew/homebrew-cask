@@ -1,13 +1,14 @@
 cask 'airflow' do
-  version '2.3.1-u1'
-  sha256 'f6cecbc2865238c775f2a83656c3efcdc9443783bf613624b4ac908e9ef87811'
+  version '2.3.12'
+  sha256 'bfcd3f0e11afc35adc1910324adc28289769127c41ae32032d75449bcde0b844'
 
   # amazonaws.com/Airflow was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/Airflow/Download/Airflow%20#{version}.zip"
-  appcast 'https://s3.amazonaws.com/Airflow/Updates/appcast-osx.xml',
-          checkpoint: '426092153bedb33ba0c3c8cc81ede2e32c6cf4463f94dc51f052dbfbecf87ae8'
+  appcast 'https://s3.amazonaws.com/Airflow/Updates/appcast-osx.xml'
   name 'Airflow'
   homepage 'https://airflowapp.com/'
+
+  auto_updates true
 
   app 'Airflow.app'
 

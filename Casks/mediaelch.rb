@@ -1,12 +1,12 @@
 cask 'mediaelch' do
-  version '2.4.2'
-  sha256 'f82d4c157ef64e25529744fb962771ce678a9e2e3a94b18b3d398dfa5b8b9452'
+  version '2.6.0_2019-01-06_11-00_git-master-d62c091'
+  sha256 '7cfa5c456f2c02f15e712bba8fd4605a85e713e13ac923876b87c644e5e699e7'
 
-  url "http://www.kvibes.de/releases/mediaelch/#{version}/MediaElch-#{version}.dmg"
-  appcast 'https://github.com/Komet/MediaElch/releases.atom',
-          checkpoint: 'ed0fc59d36c76777a9245ef278968e979e7f6ee0b35250a770fcbca34ed851e1'
+  # bintray.com/artifact/download/komet/MediaElch was verified as official when first introduced to the cask
+  url "https://bintray.com/artifact/download/komet/MediaElch/MediaElch_macOS_#{version}.dmg"
+  appcast 'https://github.com/Komet/MediaElch/releases.atom'
   name 'MediaElch'
-  homepage 'http://www.kvibes.de/en/mediaelch/'
+  homepage 'https://www.kvibes.de/en/mediaelch/'
 
   app 'MediaElch.app'
 end

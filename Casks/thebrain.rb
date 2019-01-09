@@ -1,6 +1,6 @@
 cask 'thebrain' do
-  version '9.0.226.0'
-  sha256 'ef11361748d357a8c506e6e4eec1085032adef1eb815f6dade3eecbbf1fd7f40'
+  version '10.0.31.0'
+  sha256 '0d9ed8c2b173d6b63e3f7ada5cbedbce65ea1a184bed8e6723dd90e7d153a8ee'
 
   url "http://updater.thebrain.com/files/TheBrain#{version}.dmg"
   name 'TheBrain'

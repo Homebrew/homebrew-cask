@@ -8,28 +8,28 @@ Instead of
 
 ```ruby
 version '1.2.3'
-url 'http://example.com/file-version-123.dmg'
+url 'https://example.com/file-version-123.dmg'
 ```
 
 We can use
 
 ```ruby
 version '1.2.3'
-url "http://example.com/file-version-#{version.delete('.')}.dmg"
+url "https://example.com/file-version-#{version.delete('.')}.dmg"
 ```
 
 We can also leverage the power of regular expressions. So instead of
 
 ```ruby
 version '1.2.3build4'
-url 'http://example.com/1.2.3/file-version-1.2.3build4.dmg'
+url 'https://example.com/1.2.3/file-version-1.2.3build4.dmg'
 ```
 
 We can use
 
 ```ruby
 version '1.2.3build4'
-url "http://example.com/#{version.sub(%r{build\d+}, '')}/file-version-#{version}.dmg"
+url "https://example.com/#{version.sub(%r{build\d+}, '')}/file-version-#{version}.dmg"
 ```
 
 ## version methods
@@ -43,6 +43,7 @@ The examples above can become hard to read, however. Since many of these changes
 | `patch`                  | `1.2.3-a45,ccdd88` | `3`                |
 | `major_minor`            | `1.2.3-a45,ccdd88` | `1.2`              |
 | `major_minor_patch`      | `1.2.3-a45,ccdd88` | `1.2.3`            |
+| `minor_patch`            | `1.2.3-a45,ccdd88` | `2.3`              |
 | `before_comma`           | `1.2.3-a45,ccdd88` | `1.2.3-a45`        |
 | `after_comma`            | `1.2.3-a45,ccdd88` | `ccdd88`           |
 | `dots_to_hyphens`        | `1.2.3-a45,ccdd88` | `1-2-3-a45,ccdd88` |

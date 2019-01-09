@@ -1,10 +1,10 @@
 cask 'faw-circle' do
-  version '2.0.1'
-  sha256 'aa201dd641f7270cdf791065ec0f855b2d6949f60243cbf9675e63318b4aefed'
+  version '2.2.0-RC1'
+  sha256 '249fb0456845f21bc858df5ac50e4810df60ce1f3bef43ffd0d5acb20f496e8a'
 
-  url "http://futureaudioworkshop.com/downloads/Circle-#{version}-setup.dmg"
+  url "https://futureaudioworkshop.com/wp-content/uploads/2018/10/Circle-#{version}-setup-macOS.zip"
   name 'FAW Circle'
-  homepage 'http://futureaudioworkshop.com/circle/'
+  homepage 'https://futureaudioworkshop.com/circle/'
 
   pkg 'Circle².pkg'
 

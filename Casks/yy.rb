@@ -3,7 +3,7 @@ cask 'yy' do
   sha256 '06fff26693211c640867454de2ab4cc9e380194bf254ae339518bb22fbd90af2'
 
   # yydl.duowan.com/mac/YY was verified as official when first introduced to the cask
-  url "http://yydl.duowan.com/mac/YY/#{version}/YY-#{version}.dmg"
+  url "https://yydl.duowan.com/mac/YY/#{version}/YY-#{version}.dmg"
   name 'YY'
   homepage 'https://www.yy.com/'
 

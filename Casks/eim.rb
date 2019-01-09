@@ -1,8 +1,8 @@
 cask 'eim' do
-  version '2.0'
-  sha256 'b65bb5b42981cbee1a34a9e19a5f13dae0f3b8332c9cc617cccc7b6035be9bf5'
+  version '2.0.5,82405'
+  sha256 '87bd954efc8771f418c8242ca7b2e9b8c1c28b5bb0f08f4434269e371f84591e'
 
-  url 'https://dldir1.qq.com/qqfile/crm/hrtx/EIM_Mac2.0_72363.dmg'
+  url "https://dldir1.qq.com/qqfile/crm/hrtx/EIM_r#{version.before_comma}.#{version.after_comma}.dmg"
   name 'EIM'
   homepage 'http://b.qq.com/eim/main.html'
 

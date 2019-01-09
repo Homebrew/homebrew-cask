@@ -1,14 +1,15 @@
 cask 'sound-control' do
-  version '2.1.6,4297'
-  sha256 '33feccad185a1cc53ac5e8e89202484254ca2f737ebf3ea86a988296f93c44a9'
+  version '2.2.6'
+  sha256 '74516a0958e9c0efcc0367ae675ca60c793d331eab6c20fd58b45d5359f9ae0f'
 
-  url "https://staticz.com/download/#{version.after_comma}/"
+  # staticz.net was verified as official when first introduced to the cask
+  url "http://staticz.net/downloads/SoundControl_#{version}.dmg"
+  appcast 'http://staticz.net/updates/soundcontrol.rss'
   name 'Sound Control'
   homepage 'https://staticz.com/soundcontrol/'
 
-  pkg 'Sound Control Installer.pkg'
+  app 'Sound Control.app'
 
   uninstall launchctl: 'com.staticz.soundcontrol.*',
-            quit:      'com.staticz.SoundControl',
-            pkgutil:   'com.staticz.installer.soundcontrol.*'
+            quit:      'com.staticz.SoundControl'
 end

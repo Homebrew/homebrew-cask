@@ -1,16 +1,15 @@
 cask 'logisim-evolution' do
-  version '2.14.4'
-  sha256 '5b659436dc719862a3c9815ebf6f8deb2499e31d2e91574c8dea789578d83908'
+  version '2.14.6'
+  sha256 'b4e3605379c7353fd2ac9a2cd7426ca5d4baed9a619d0b46ef0cee90fc8ae467'
 
   url "https://github.com/reds-heig/logisim-evolution/releases/download/v#{version}/logisim-evolution.jar"
-  appcast 'https://github.com/reds-heig/logisim-evolution/releases.atom',
-          checkpoint: 'aeb0794bb6739ecb8d8189a34f87f4bb437d083085926cf051947d7032027776'
+  appcast 'https://github.com/reds-heig/logisim-evolution/releases.atom'
   name 'Logisim Evolution'
   homepage 'https://github.com/reds-heig/logisim-evolution'
 
   container type: :naked
 
-  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/logisim-evolution.wrapper.sh"
   binary shimscript, target: 'logisim-evolution'
 

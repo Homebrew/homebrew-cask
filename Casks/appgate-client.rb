@@ -1,8 +1,8 @@
 cask 'appgate-client' do
-  version '11.2.7'
-  sha256 '6188c0f0ba36bcc1f6876e75af28a2d645cf46c247c026e995061991c691dc9c'
+  version '11.3-LTS'
+  sha256 '67b7c8a4d05fad4597e40f91b31f80f0dd8decfa9a28d5d945363a2f1c4d7a8c'
 
-  url "http://download.cryptzone.com/files/download/AppGate-#{version}/Clients/MacOSX/AppGate_Client.dmg"
+  url "https://download.cryptzone.com/files/download/AppGate-#{version}/Clients/MacOSX/AppGate_Client.dmg"
   name 'AppGate (classic)'
   homepage 'https://www.cryptzone.com/downloadcenter/appgate-classic/'
 
@@ -15,6 +15,6 @@ cask 'appgate-client' do
                        ]
 
   caveats do
-    depends_on_java('6+')
+    depends_on_java '6+'
   end
 end

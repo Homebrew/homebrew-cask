@@ -1,10 +1,12 @@
 cask 'jbrowse' do
-  version '1.12.3'
-  sha256 '4b9c6ab17c7a00ffb8a60cac73774391a83b5a8833bcf2672172878ee81e08dc'
+  version '1.16.1'
+  sha256 '568bdd4b81360fa7b5d7d16ea1503c09f9e8c160e966930014db0de679f8eb74'
 
-  url "https://jbrowse.org/releases/JBrowse-#{version}/JBrowse-#{version}-desktop-osx.zip"
+  # github.com/GMOD/jbrowse was verified as official when first introduced to the cask
+  url "https://github.com/GMOD/jbrowse/releases/download/#{version}-release/JBrowse-#{version}-desktop-darwin-x64.zip"
+  appcast 'https://github.com/GMOD/jbrowse/releases.atom'
   name 'jbrowse'
   homepage 'https://jbrowse.org/'
 
-  app 'JBrowseDesktop-darwin-x64/JBrowseDesktop.app'
+  app "JBrowse-#{version}-desktop-darwin-x64/JBrowse-#{version}-desktop.app"
 end

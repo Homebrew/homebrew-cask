@@ -1,6 +1,6 @@
 cask 'mightytext' do
-  version '3.88.20'
-  sha256 '03c4dff76d6894f185cdde8fa9b601e0d9037eacdaf9589dd8ac78d28125389c'
+  version '4.2.0'
+  sha256 'fe47c32999ed1d98fa0f8824b345a2a0776f5342f8170ddb71a26e26049698d9'
 
   url "https://dl-desktop.mightytext.net/MightyText-#{version}.dmg"
   name 'MightyText'

@@ -1,12 +1,11 @@
 cask 'prefs-editor' do
-  version '1.2.3'
-  sha256 '7d1ba23c60ffa085e581a3d7c326df6f833b2778755f60b31fa3812cfc53a4ca'
+  version '1.2.4'
+  sha256 '50a9ae754f06390db1838553b2c276fa60fad84be800de195ca2c7a5fc3cd23b'
 
-  url "http://files.tempel.org/Various/OSX_Prefs_Editor/PrefsEditor-#{version}.zip"
-  appcast 'http://apps.tempel.org/PrefsEditor/appcast.xml',
-          checkpoint: '318a32c8958d155691c6a1bb81f2209cb33754a67252b2f6e18d6fabf9310dbb'
+  url "https://files.tempel.org/Various/OSX_Prefs_Editor/PrefsEditor-#{version}_64bit.zip"
+  appcast 'https://apps.tempel.org/PrefsEditor/appcast.xml'
   name 'Prefs Editor'
-  homepage 'http://apps.tempel.org/PrefsEditor/'
+  homepage 'https://apps.tempel.org/PrefsEditor/'
 
   app 'Prefs Editor.app'
 

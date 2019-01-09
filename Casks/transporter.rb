@@ -4,8 +4,7 @@ cask 'transporter' do
 
   # secure.connecteddata.com was verified as official when first introduced to the cask
   url "https://secure.connecteddata.com/mac/#{version.after_comma}/software/Transporter_Desktop_#{version.before_comma}.dmg"
-  appcast "http://appsoftware.connecteddata.com/mac/#{version.after_comma}/Appcast.xml",
-          checkpoint: '56e901111f6cbc8b298b3ad53e9355b2c78707406bee2765b7ea42d261620269'
+  appcast "http://appsoftware.connecteddata.com/mac/#{version.after_comma}/Appcast.xml"
   name 'Transporter Desktop'
   homepage 'https://helper.nexsansupport.com/tfc_support'
 

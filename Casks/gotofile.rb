@@ -1,10 +1,9 @@
 cask 'gotofile' do
-  version '1.0.3'
-  sha256 '2baf82a8ac3a01f5751f8049327c4f4f63a923155d828d633ba39c3b34dbbb7c'
+  version '1.3.3'
+  sha256 '3eb0f1887517b1dca97a1ffc4818c5a16c98c9323174db71fa07521fe105fedd'
 
   url "http://www.soma-zone.com/download/files/GoToFile_#{version}.tbz"
-  appcast 'https://somazonecom.ipage.com/soma-zone.com/GoToFile/a/appcast_update.xml',
-          checkpoint: '588d3935e336cd644f9a133634c8a357071691922091bda3f9028219d7828da9'
+  appcast 'https://somazonecom.ipage.com/soma-zone.com/GoToFile/a/appcast_update.xml'
   name 'GoToFile'
   homepage 'http://www.soma-zone.com/GoToFile/'
 

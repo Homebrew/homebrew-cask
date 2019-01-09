@@ -1,8 +1,9 @@
 cask 'smartsynchronize' do
-  version '3.4.11'
-  sha256 'eaac4a76fc9e34bf87a58ad6b47754cd7ae34f799cf62ede57547f5c4def45f7'
+  version '3.5.1'
+  sha256 '45d434435b3fc47898c74c9d89b2d9009710ecaffe2c14a601ce90b7437f21d5'
 
-  url "https://www.syntevo.com/static/smart/download/smartsynchronize/smartsynchronize-macosx-#{version.dots_to_underscores}.dmg"
+  url "https://www.syntevo.com/downloads/smartsynchronize/smartsynchronize-macosx-#{version.dots_to_underscores}.dmg"
+  appcast 'https://www.syntevo.com/smartsynchronize/changelog.txt'
   name 'SmartSynchronize'
   homepage 'https://www.syntevo.com/smartsynchronize/'
 

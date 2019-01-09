@@ -7,4 +7,10 @@ cask 'windscribe' do
   homepage 'https://windscribe.com/'
 
   app 'Windscribe.app'
+
+  zap trash: [
+               '~/Library/Application Support/Windscribe',
+               '~/Library/Saved Application State/com.aaa.windscribe.windscribe.savedState',
+               '~/Library/Preferences/com.windscribe.Windscribe.plist',
+             ]
 end

@@ -8,15 +8,16 @@ cask 'daisydisk' do
     sha256 'fe2aa86f2ea8a1f0c4791857a5b7991ecad295b5b969849bb7b15a890ab54b86'
     url "https://www.daisydiskapp.com/downloads/DaisyDisk_#{version.dots_to_underscores}.zip"
   else
-    version '4.4'
-    sha256 'c989793897d294c8732cb826c2e22cc478a2e7e3f445ca144ed20a7e1e281166'
+    version '4.6.5.1'
+    sha256 'c99e4a5eb7209770e4ffc21a43e6c8c047567f04af0841afe064002c8d04e770'
     url 'https://www.daisydiskapp.com/downloads/DaisyDisk.zip'
-    appcast 'https://daisydiskapp.com/downloads/appcastFeed.php?osVersion=10.12',
-            checkpoint: 'bac4b07cea1e62cdd84026d2259d52117f00b0984c58bc9a79d143e354ab57f4'
+    appcast 'https://daisydiskapp.com/downloads/appcastReleaseNotes.php?appEdition=Standard&osVersion=10.13'
   end
 
   name 'DaisyDisk'
   homepage 'https://daisydiskapp.com/'
+
+  auto_updates true
 
   app 'DaisyDisk.app'
 

@@ -1,11 +1,10 @@
 cask 'insomnia' do
-  version '5.14.6'
-  sha256 '2a1242560ec878a56ea347afa91b28cb67c74920112f17f2692bded8fa52968a'
+  version '6.3.2'
+  sha256 '6bc293c248dfe78d1882322137527582b750bf7efb6116023aa2beceb446f9c5'
 
   # github.com/getinsomnia/insomnia was verified as official when first introduced to the cask
   url "https://github.com/getinsomnia/insomnia/releases/download/v#{version}/Insomnia-#{version}.dmg"
-  appcast 'https://github.com/getinsomnia/insomnia/releases.atom',
-          checkpoint: '333d8596a710c5b08f909ec6420d8513efa41f360b34f08d4d011e256f09675e'
+  appcast 'https://insomnia.rest/changelog/index.xml'
   name 'Insomnia'
   homepage 'https://insomnia.rest/'
 

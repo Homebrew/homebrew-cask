@@ -2,7 +2,7 @@ cask 'regexhibit' do
   version :latest
   sha256 :no_check
 
-  url 'http://roger-jolly.nl/software/downloads/regexhibit/RegExhibit.zip'
+  url 'https://roger-jolly.nl/software/downloads/regexhibit/RegExhibit.zip'
   name 'RegExhibit'
   homepage 'https://roger-jolly.nl/software/#regexhibit'
 

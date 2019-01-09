@@ -4,10 +4,9 @@ cask 'db-browser-for-sqlite' do
 
   # github.com/sqlitebrowser/sqlitebrowser was verified as official when first introduced to the cask
   url "https://github.com/sqlitebrowser/sqlitebrowser/releases/download/v#{version.major_minor_patch}/DB.Browser.for.SQLite-#{version}.dmg"
-  appcast 'https://github.com/sqlitebrowser/sqlitebrowser/releases.atom',
-          checkpoint: 'd129cfaccad20b50de9517688af7a38a4bcbab156bb2e46db2b55efddc1fab81'
+  appcast 'https://github.com/sqlitebrowser/sqlitebrowser/releases.atom'
   name 'SQLite Database Browser'
-  homepage 'http://sqlitebrowser.org/'
+  homepage 'https://sqlitebrowser.org/'
 
   app 'DB Browser for SQLite.app'
 

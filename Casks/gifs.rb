@@ -2,7 +2,8 @@ cask 'gifs' do
   version :latest
   sha256 :no_check
 
-  url 'https://raw.github.com/orta/GIFs/master/web/GIFs.app.zip'
+  # raw.githubusercontent.com/orta/GIFs was verified as official when first introduced to the cask
+  url 'https://raw.githubusercontent.com/orta/GIFs/master/web/GIFs.app.zip'
   name 'GIFs'
   homepage 'https://github.com/orta/GIFs'
 

@@ -1,9 +1,9 @@
 cask 'triumph' do
-  version :latest
-  sha256 :no_check
+  version '2.6.9'
+  sha256 '60c2aabd73bcb1939c15292cb43b33786b810477bc04f3bfe16e882857789dbc'
 
-  # audiofile-engineering.com/triumph/download was verified as official when first introduced to the cask
-  url 'https://www.audiofile-engineering.com/triumph/download/Triumph.dmg'
+  url 'https://triumph.aurchitect.com/downloads/Triumph.zip'
+  appcast 'https://triumph.aurchitect.com/sufeed.rss'
   name 'Triumph'
   homepage 'https://triumph.aurchitect.com/'
 

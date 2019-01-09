@@ -3,7 +3,7 @@ cask 'air-video-server' do
   sha256 '479af913987a4cc8414969a8d4a4c164a4bd0a22d156829a983b4c58e9dd3f6e'
 
   # amazonaws.com/AirVideo was verified as official when first introduced to the cask
-  url "http://s3.amazonaws.com/AirVideo/Air+Video+Server+#{version}.dmg"
+  url "https://s3.amazonaws.com/AirVideo/Air+Video+Server+#{version}.dmg"
   name 'Air Video Server'
   homepage 'http://www.inmethod.com/air-video/'
 
