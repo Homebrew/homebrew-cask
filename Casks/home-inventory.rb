@@ -6,7 +6,5 @@ cask 'home-inventory' do
   name 'Home Inventory'
   homepage 'https://binaryformations.com/products/home-inventory/'
 
-  depends_on macos: '>= :lion'
-
   app 'Home Inventory.app'
 end

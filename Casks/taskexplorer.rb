@@ -8,8 +8,6 @@ cask 'taskexplorer' do
   name 'TaskExplorer'
   homepage 'https://objective-see.com/products/taskexplorer.html'
 
-  depends_on macos: '>= :mountain_lion'
-
   app 'TaskExplorer.app'
 
   uninstall_preflight do

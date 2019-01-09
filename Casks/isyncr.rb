@@ -11,8 +11,6 @@ cask 'isyncr' do
   name 'iSyncr Desktop'
   homepage 'https://www.jrtstudio.com/iSyncr-iTunes-for-Android'
 
-  depends_on macos: '>= :mountain_lion'
-
   pkg "iSyncr Desktop #{version}.pkg"
 
   uninstall pkgutil: 'com.jrtstudio.iSyncrDesktop',

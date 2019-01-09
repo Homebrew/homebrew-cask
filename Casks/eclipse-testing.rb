@@ -6,8 +6,6 @@ cask 'eclipse-testing' do
   name 'Eclipse for Testers'
   homepage 'https://eclipse.org/'
 
-  depends_on macos: '>= :leopard'
-
   # Renamed to avoid conflict with other Eclipse.
   app 'Eclipse.app', target: 'Eclipse Testing.app'
 end

@@ -6,8 +6,6 @@ cask 'eclipse-installer' do
   name 'Eclipse Installer'
   homepage 'https://eclipse.org/'
 
-  depends_on macos: '>= :leopard'
-
   app 'Eclipse Installer.app'
 
   caveats do

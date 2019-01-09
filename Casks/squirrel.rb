@@ -7,8 +7,6 @@ cask 'squirrel' do
   name 'Squirrel'
   homepage 'https://rime.im/download/'
 
-  depends_on macos: '>= :lion'
-
   pkg 'Squirrel.pkg'
 
   uninstall pkgutil: [

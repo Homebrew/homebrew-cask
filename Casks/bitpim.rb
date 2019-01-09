@@ -8,8 +8,6 @@ cask 'bitpim' do
   name 'BitPim'
   homepage 'http://www.bitpim.org/'
 
-  depends_on macos: '>= :leopard'
-
   app 'BitPim.app'
 
   uninstall quit: 'org.bitpim.bitpim'

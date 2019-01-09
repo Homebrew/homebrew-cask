@@ -7,8 +7,6 @@ cask '115browser' do
   name '115浏览器'
   homepage 'http://pc.115.com/'
 
-  depends_on macos: '>= :mountain_lion'
-
   app '115Browser.app'
 
   zap trash: [

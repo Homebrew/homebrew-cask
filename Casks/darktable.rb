@@ -8,7 +8,5 @@ cask 'darktable' do
   name 'darktable'
   homepage 'https://www.darktable.org/'
 
-  depends_on macos: '>= :lion'
-
   app 'darktable.app'
 end

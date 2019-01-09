@@ -6,8 +6,6 @@ cask 'fontexplorer-x-pro' do
   name 'FontExplorer X Pro'
   homepage 'https://www.fontexplorerx.com/'
 
-  depends_on macos: '>= :mountain_lion'
-
   app 'FontExplorer X Pro.app'
 
   uninstall delete:    '/Library/PrivilegedHelperTools/com.linotype.FontExplorerX.securityhelper',

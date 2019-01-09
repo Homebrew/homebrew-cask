@@ -8,8 +8,6 @@ cask 'pphelper' do
   name 'pp助手'
   homepage 'https://pro.25pp.com/pp_mac_ios'
 
-  depends_on macos: '>= :lion'
-
   app 'pp助手.app'
 
   zap trash: [

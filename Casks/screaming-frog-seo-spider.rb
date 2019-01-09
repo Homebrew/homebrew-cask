@@ -7,8 +7,6 @@ cask 'screaming-frog-seo-spider' do
   name 'Screaming Frog SEO Spider'
   homepage 'https://www.screamingfrog.co.uk/seo-spider/'
 
-  depends_on macos: '>= :mountain_lion'
-
   app 'Screaming Frog SEO Spider.app'
 
   caveats do

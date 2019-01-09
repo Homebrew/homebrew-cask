@@ -33,10 +33,6 @@ The available values for macOS releases are:
 
 | symbol             | corresponding string
 | -------------------|----------------------
-| `:leopard`         | `'10.5'`
-| `:snow_leopard`    | `'10.6'`
-| `:lion`            | `'10.7'`
-| `:mountain_lion`   | `'10.8'`
 | `:mavericks`       | `'10.9'`
 | `:yosemite`        | `'10.10'`
 | `:el_capitan`      | `'10.11'`
@@ -47,10 +43,10 @@ The available values for macOS releases are:
 Only major releases are covered (version numbers containing a single dot). The symbol form is preferred for readability. The following are all valid ways to enumerate the exact macOS release requirements for a Cask:
 
 ```ruby
-depends_on macos: :yosemite
-depends_on macos: [:mavericks, :yosemite]
-depends_on macos: '10.9'
-depends_on macos: ['10.9', '10.10']
+depends_on macos: :high_sierra
+depends_on macos: [:high_sierra, :mojave]
+depends_on macos: '10.13'
+depends_on macos: ['10.13', '10.14']
 ```
 
 ### Setting a Minimum macOS Release

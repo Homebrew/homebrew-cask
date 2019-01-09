@@ -8,7 +8,6 @@ cask 'optimage' do
   homepage 'https://getoptimage.com/'
 
   auto_updates true
-  depends_on macos: '>= :mountain_lion'
 
   app 'Optimage.app'
 end

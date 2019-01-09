@@ -7,7 +7,5 @@ cask 'printnode' do
   name 'PrintNode'
   homepage 'https://www.printnode.com/'
 
-  depends_on macos: '>= :mountain_lion'
-
   app 'PrintNode.app'
 end

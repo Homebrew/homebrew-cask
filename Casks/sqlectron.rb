@@ -8,8 +8,6 @@ cask 'sqlectron' do
   name 'Sqlectron'
   homepage 'https://sqlectron.github.io/'
 
-  depends_on macos: '>= :mountain_lion'
-
   app 'Sqlectron.app'
 
   zap trash: [

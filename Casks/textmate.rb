@@ -9,7 +9,6 @@ cask 'textmate' do
   homepage 'https://macromates.com/'
 
   auto_updates true
-  depends_on macos: '>= :mountain_lion'
 
   app 'TextMate.app'
   binary "#{appdir}/TextMate.app/Contents/Resources/mate"

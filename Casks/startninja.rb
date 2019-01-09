@@ -7,7 +7,5 @@ cask 'startninja' do
   name 'StartNinja'
   homepage 'https://www.allvu.com/start_ninja'
 
-  depends_on macos: '>= :lion'
-
   app 'StartNinja.app'
 end

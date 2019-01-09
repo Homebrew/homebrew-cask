@@ -6,8 +6,6 @@ cask 'eclipse-platform' do
   name 'Eclipse SDK'
   homepage 'https://eclipse.org/'
 
-  depends_on macos: '>= :leopard'
-
   # Renamed to avoid conflict with other Eclipse.
   app 'Eclipse.app', target: 'Eclipse Platform.app'
 end

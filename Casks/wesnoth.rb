@@ -8,7 +8,5 @@ cask 'wesnoth' do
   name 'The Battle for Wesnoth'
   homepage 'https://wesnoth.org/'
 
-  depends_on macos: '>= :mountain_lion'
-
   app 'Wesnoth.app'
 end

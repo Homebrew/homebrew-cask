@@ -8,7 +8,5 @@ cask 'privatevpn' do
   name 'PrivateVPN'
   homepage 'https://privatevpn.com/'
 
-  depends_on macos: '>= :lion'
-
   app 'PrivateVPN.app'
 end

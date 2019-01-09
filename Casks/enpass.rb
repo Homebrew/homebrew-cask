@@ -7,8 +7,6 @@ cask 'enpass' do
   name 'Enpass'
   homepage 'https://www.enpass.io/'
 
-  depends_on macos: '>= :mountain_lion'
-
   app 'Enpass.app'
 
   zap trash: [

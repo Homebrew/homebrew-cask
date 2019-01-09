@@ -6,8 +6,6 @@ cask 'julia' do
   name 'Julia'
   homepage 'https://julialang.org/'
 
-  depends_on macos: '>= :mountain_lion'
-
   app "Julia-#{version.major_minor}.app"
   binary "#{appdir}/Julia-#{version.major_minor}.app/Contents/Resources/julia/bin/julia"
 
