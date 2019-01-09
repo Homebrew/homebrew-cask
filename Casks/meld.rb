@@ -9,7 +9,6 @@ cask 'meld' do
   homepage 'https://yousseb.github.io/meld/'
 
   app 'Meld.app'
-  binary "#{appdir}/Meld.app/Contents/MacOS/Meld", target: 'meld'
 
   zap trash: '~/Library/Preferences/org.gnome.meld.plist'
 end
