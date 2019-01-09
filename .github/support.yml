@@ -1,7 +1,7 @@
 # Configuration for support-requests - https://github.com/dessant/support-requests
 
 # Label used to mark issues as support requests
-supportLabel: support request
+supportLabel: "support request"
 # Comment to post on issues marked as support requests. Add a link
 # to a support page, or set to `false` to disable
 supportComment: >

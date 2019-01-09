@@ -11,5 +11,3 @@ lockComment: false
 # only: issues
 # Add a label when locking. Set to `false` to disable
 lockLabel: outdated
-# Assign `resolved` as the reason for locking. Set to `false` to disable
-setLockReason: resolved
