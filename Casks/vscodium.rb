@@ -8,4 +8,5 @@ cask 'vscodium' do
   homepage 'https://github.com/VSCodium/vscodium'
 
   app 'VSCodium.app'
+  binary "#{appdir}/VSCodium.app/Contents/Resources/app/bin/code"
 end
