@@ -10,7 +10,6 @@ cask 'imazing' do
 
   auto_updates true
   conflicts_with cask: 'imazing-mini'
-  depends_on macos: '>= :mountain_lion'
 
   app 'iMazing.app'
 

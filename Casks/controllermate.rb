@@ -16,8 +16,6 @@ cask 'controllermate' do
   name 'ControllerMate'
   homepage 'https://www.orderedbytes.com/controllermate/'
 
-  depends_on macos: '>= :mountain_lion'
-
   pkg '#temp#/ControllerMate.sparkle_interactive.pkg'
 
   uninstall launchctl: [

@@ -1,8 +1,5 @@
 cask 'coteditor' do
-  if MacOS.version <= :lion
-    version '1.5.4'
-    sha256 '444133083698c7c94c2b029644f39a0e36982ae34c24745789fa890626188347'
-  elsif MacOS.version <= :mavericks
+  if MacOS.version <= :mavericks
     version '2.5.7'
     sha256 'f2c6eed9bfa31999f559396642e7bec0eb90ce0e3398f266fed8b3db5bdab37c'
   elsif MacOS.version <= :yosemite
@@ -18,8 +15,6 @@ cask 'coteditor' do
   appcast 'https://github.com/coteditor/CotEditor/releases.atom'
   name 'CotEditor'
   homepage 'https://coteditor.com/'
-
-  depends_on macos: '>= :lion'
 
   app 'CotEditor.app'
   binary "#{appdir}/CotEditor.app/Contents/SharedSupport/bin/cot"

@@ -6,8 +6,6 @@ cask 'eclipse-modeling' do
   name 'Eclipse Modeling Tools'
   homepage 'https://eclipse.org/'
 
-  depends_on macos: '>= :leopard'
-
   # Renamed to avoid conflict with other Eclipse.
   app 'Eclipse.app', target: 'Eclipse Modeling.app'
 end

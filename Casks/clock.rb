@@ -8,7 +8,5 @@ cask 'clock' do
   name 'Clock'
   homepage 'https://zachwaugh.me/clock/'
 
-  depends_on macos: '>= :lion'
-
   app 'Clock.app'
 end

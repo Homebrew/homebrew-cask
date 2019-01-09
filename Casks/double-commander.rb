@@ -8,7 +8,5 @@ cask 'double-commander' do
   name 'Double Commander'
   homepage 'https://doublecmd.sourceforge.io/'
 
-  depends_on macos: '>= :snow_leopard'
-
   app 'Double Commander.app'
 end

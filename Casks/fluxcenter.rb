@@ -7,7 +7,5 @@ cask 'fluxcenter' do
   name 'FluxCenter'
   homepage 'https://www.flux.audio/'
 
-  depends_on macos: '>= :lion'
-
   app 'FluxCenter.app'
 end

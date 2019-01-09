@@ -8,7 +8,5 @@ cask 'debt-quencher' do
   name 'Debt Quencher'
   homepage 'http://nothirst.com/debtquencher/'
 
-  depends_on macos: '>= :leopard'
-
   app 'Debt Quencher.app'
 end

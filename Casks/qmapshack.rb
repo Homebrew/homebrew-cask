@@ -6,7 +6,5 @@ cask 'qmapshack' do
   name 'QMapShack'
   homepage 'https://bitbucket.org/maproom/qmapshack/wiki/Home'
 
-  depends_on macos: '>= :mountain_lion'
-
   app 'QMapShack.app'
 end

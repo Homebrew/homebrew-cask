@@ -7,9 +7,5 @@ cask 'mojave-cache-cleaner' do
   name 'MCC'
   homepage 'https://www.northernsoftworks.com/mojavecachecleaner.html'
 
-  if MacOS.version <= :mountain_lion
-    app 'Mojave Cache Cleaner Legacy.app'
-  else
-    app 'Mojave Cache Cleaner.app'
-  end
+  app 'Mojave Cache Cleaner.app'
 end

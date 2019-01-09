@@ -16,7 +16,6 @@ cask 'appcleaner' do
   homepage 'https://freemacsoft.net/appcleaner/'
 
   auto_updates true
-  depends_on macos: '>= :leopard'
 
   app 'AppCleaner.app'
 

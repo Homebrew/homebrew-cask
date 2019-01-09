@@ -8,7 +8,5 @@ cask 'fish-app' do
   name 'Fish App'
   homepage 'https://fishshell.com/'
 
-  depends_on macos: '>= :snow_leopard'
-
   app "fish-#{version}.app"
 end

@@ -9,7 +9,6 @@ cask 'kite' do
   homepage 'https://kite.com/'
 
   auto_updates true
-  depends_on macos: '>= :lion'
 
   app 'Kite.app'
 end

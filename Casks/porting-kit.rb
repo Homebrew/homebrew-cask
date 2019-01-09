@@ -9,7 +9,6 @@ cask 'porting-kit' do
 
   auto_updates true
   conflicts_with cask: 'porting-kit-legacy'
-  depends_on macos: '>= :mountain_lion'
 
   app 'Porting Kit.app'
 

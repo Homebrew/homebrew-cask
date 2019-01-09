@@ -9,7 +9,6 @@ cask 'the-unarchiver' do
   homepage 'https://theunarchiver.com/'
 
   auto_updates true
-  depends_on macos: '>= :lion'
 
   app 'The Unarchiver.app'
 

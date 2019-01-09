@@ -7,8 +7,6 @@ cask 'smartsynchronize' do
   name 'SmartSynchronize'
   homepage 'https://www.syntevo.com/smartsynchronize/'
 
-  depends_on macos: '>= :lion'
-
   app 'SmartSynchronize.app'
   binary "#{appdir}/SmartSynchronize.app/Contents/MacOS/SmartSynchronize"
 end

@@ -7,7 +7,5 @@ cask 'ip-scanner' do
   name 'IP Scanner'
   homepage 'https://10base-t.com/macintosh-software/ip-scanner/'
 
-  depends_on macos: '>= :lion'
-
   app 'IP Scanner.app'
 end

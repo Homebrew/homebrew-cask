@@ -7,7 +7,5 @@ cask 'mdrp' do
   name 'Mac DVDRipper Pro'
   homepage 'https://www.macdvdripperpro.com/'
 
-  depends_on macos: '>= :mountain_lion'
-
   app 'MDRP.app'
 end

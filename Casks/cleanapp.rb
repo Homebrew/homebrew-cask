@@ -1,11 +1,6 @@
 cask 'cleanapp' do
-  if MacOS.version <= :lion
-    version '4.0.8'
-    sha256 'e77359586731e1ae863351846afc9fd34a7b9774625122001c0d92593a340ff1'
-  else
-    version '5.1.3'
-    sha256 'a3c806fb1246d326a6e96990a7760a7f15d030ee36857b74bd57417c173bd634'
-  end
+  version '5.1.3'
+  sha256 'a3c806fb1246d326a6e96990a7760a7f15d030ee36857b74bd57417c173bd634'
 
   url "https://download.syniumsoftware.com/CleanApp/CleanApp%20#{version}.dmg"
   name 'Synium Software CleanApp'

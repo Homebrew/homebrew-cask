@@ -7,7 +7,5 @@ cask 'geany' do
   name 'Geany'
   homepage 'https://www.geany.org/'
 
-  depends_on macos: '>= :lion'
-
   app 'Geany.app'
 end

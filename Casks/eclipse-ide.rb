@@ -6,7 +6,5 @@ cask 'eclipse-ide' do
   name 'Eclipse IDE for Eclipse Committers'
   homepage 'https://eclipse.org/'
 
-  depends_on macos: '>= :leopard'
-
   app 'Eclipse.app'
 end

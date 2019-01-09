@@ -7,7 +7,6 @@ cask 'gog-galaxy' do
   homepage 'https://www.gog.com/galaxy'
 
   auto_updates true
-  depends_on macos: '>= :mountain_lion'
 
   pkg "galaxy_client_#{version}.pkg"
 

@@ -6,8 +6,6 @@ cask 'deepanpot' do
   name 'DOTEC-AUDIO DeePanpot'
   homepage 'https://dotec-audio.com/deepanpot.html'
 
-  depends_on macos: '>= :lion'
-
   audio_unit_plugin 'AudioUnit/DeePanpot.component'
   vst_plugin 'VST/DeePanpot.vst'
 end
