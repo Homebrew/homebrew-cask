@@ -7,6 +7,7 @@ cask 'minecraft' do
   name 'Minecraft'
   homepage 'https://minecraft.net/'
 
+  depends_on cask: 'java'
   app 'Minecraft.app'
 
   zap trash: [
