@@ -1,6 +1,6 @@
 cask 'multimc' do
-  version '0.6.3'
-  sha256 '6795a131aad8a5227a5aee7d7d2152f91da68a61c84ad070cd40f11833991c87'
+  version '0.6.4'
+  sha256 '648e07e1346cd4f7819d941deebf2a0882f6be3f9a441e377291c10f4e50c55e'
 
   url 'https://files.multimc.org/downloads/mmc-stable-osx64.tar.gz'
   appcast 'https://github.com/MultiMC/MultiMC5/releases.atom'
