@@ -7,8 +7,6 @@ cask 'mi' do
   name 'mi'
   homepage 'https://www.mimikaki.net/'
 
-  depends_on macos: '>= :lion'
-
   app 'mi.app'
 
   zap trash: [

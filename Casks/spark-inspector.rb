@@ -7,7 +7,5 @@ cask 'spark-inspector' do
   name 'Spark Inspector'
   homepage 'http://sparkinspector.com/'
 
-  depends_on macos: '>= :mountain_lion'
-
   app 'Spark Inspector.app'
 end

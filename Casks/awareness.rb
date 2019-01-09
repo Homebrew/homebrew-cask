@@ -7,8 +7,6 @@ cask 'awareness' do
   name 'Awareness'
   homepage 'http://iamfutureproof.com/tools/awareness/'
 
-  depends_on macos: '>= :snow_leopard'
-
   app 'Awareness.app'
 
   zap trash: '~/Library/Preferences/com.futureproof.awareness.plist'

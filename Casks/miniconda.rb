@@ -7,7 +7,6 @@ cask 'miniconda' do
   name 'Continuum Analytics Miniconda'
   homepage 'https://conda.io/miniconda.html'
 
-  depends_on macos: '>= :lion'
   container type: :naked
 
   installer script: {

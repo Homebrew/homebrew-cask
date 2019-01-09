@@ -8,7 +8,5 @@ cask 'dashcam-viewer' do
   name 'Dashcam Viewer by Earthshine Software'
   homepage 'https://dashcamviewer.com/'
 
-  depends_on macos: '>= :mountain_lion'
-
   app 'Dashcam Viewer.app'
 end

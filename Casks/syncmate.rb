@@ -7,7 +7,5 @@ cask 'syncmate' do
   name 'SyncMate'
   homepage 'https://mac.eltima.com/sync-mac.html'
 
-  depends_on macos: '>= :mountain_lion'
-
   app 'SyncMate.app'
 end

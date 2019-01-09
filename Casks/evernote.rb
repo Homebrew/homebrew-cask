@@ -1,8 +1,5 @@
 cask 'evernote' do
-  if MacOS.version <= :lion
-    version '6.1.1_452253'
-    sha256 'ad2ad4d426362f8bc6fff205522365cfe9a5bd5f36369fc6c3c8bd7f9dd4e288'
-  elsif MacOS.version <= :mavericks
+  if MacOS.version <= :mavericks
     version '6.8_453748'
     sha256 '53fb93884fbd8f966ef43248dad3a7570ad18eb43fd289ad614ee8cff3a26d33'
   elsif MacOS.version <= :yosemite

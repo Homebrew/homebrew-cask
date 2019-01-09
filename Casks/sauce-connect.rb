@@ -6,7 +6,5 @@ cask 'sauce-connect' do
   name 'Sauce Connect'
   homepage 'https://wiki.saucelabs.com/display/DOCS/Sauce+Connect+Proxy'
 
-  depends_on macos: '>= :mountain_lion'
-
   binary "sc-#{version}-osx/bin/sc"
 end

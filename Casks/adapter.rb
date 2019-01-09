@@ -7,8 +7,6 @@ cask 'adapter' do
   name 'Adapter'
   homepage 'https://macroplant.com/adapter'
 
-  depends_on macos: '>= :lion'
-
   app 'Adapter.app'
 
   zap trash: [

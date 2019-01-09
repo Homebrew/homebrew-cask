@@ -6,8 +6,6 @@ cask 'eclipse-ptp' do
   name 'Eclipse for Parallel Application Developers'
   homepage 'https://eclipse.org/'
 
-  depends_on macos: '>= :leopard'
-
   # Renamed to avoid conflict with other Eclipse.
   app 'Eclipse.app', target: 'Eclipse PTP.app'
 end

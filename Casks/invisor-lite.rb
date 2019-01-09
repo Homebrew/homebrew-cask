@@ -7,7 +7,5 @@ cask 'invisor-lite' do
   name 'Invisor Lite'
   homepage 'https://www.invisorapp.com/'
 
-  depends_on macos: '>= :lion'
-
   app 'Invisor Lite.app'
 end

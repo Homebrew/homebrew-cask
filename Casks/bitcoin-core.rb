@@ -9,7 +9,6 @@ cask 'bitcoin-core' do
   homepage 'https://bitcoincore.org/'
 
   conflicts_with cask: 'bitcoin-xt'
-  depends_on macos: '>= :mountain_lion'
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app 'Bitcoin-Qt.app', target: 'Bitcoin Core.app'

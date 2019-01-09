@@ -12,8 +12,6 @@ cask 'geekbench' do
   name 'Geekbench'
   homepage 'https://www.geekbench.com/'
 
-  depends_on macos: '>= :snow_leopard'
-
   app "Geekbench #{version.major}.app"
 
   zap trash: [

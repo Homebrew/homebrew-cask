@@ -6,8 +6,6 @@ cask 'papyrus' do
   name 'Papyrus'
   homepage 'https://eclipse.org/papyrus/'
 
-  depends_on macos: '>= :leopard'
-
   app 'Papyrus.app'
 
   caveats do

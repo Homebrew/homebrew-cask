@@ -6,8 +6,6 @@ cask 'eclipse-javascript' do
   name 'Eclipse IDE for JavaScript and Web Developers'
   homepage 'https://eclipse.org/'
 
-  depends_on macos: '>= :leopard'
-
   # Renamed to avoid conflict with other Eclipse.
   app 'Eclipse.app', target: 'Eclipse JavaScript.app'
 end

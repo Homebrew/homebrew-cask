@@ -7,8 +7,6 @@ cask '1clipboard' do
   name '1Clipboard'
   homepage 'http://1clipboard.io/'
 
-  depends_on macos: '>= :mountain_lion'
-
   app '1Clipboard.app'
 
   uninstall login_item: '1Clipboard',

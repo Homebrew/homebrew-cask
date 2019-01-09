@@ -8,7 +8,6 @@ cask 'handbrake' do
   homepage 'https://handbrake.fr/'
 
   auto_updates true
-  depends_on macos: '>= :lion'
 
   app 'HandBrake.app'
 

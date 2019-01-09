@@ -6,8 +6,6 @@ cask 'eclipse-cpp' do
   name 'Eclipse IDE for C/C++ Developers'
   homepage 'https://eclipse.org/'
 
-  depends_on macos: '>= :leopard'
-
   # Renamed to avoid conflict with other Eclipse.
   app 'Eclipse.app', target: 'Eclipse CPP.app'
 end

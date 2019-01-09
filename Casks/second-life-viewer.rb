@@ -6,8 +6,6 @@ cask 'second-life-viewer' do
   name 'Linden Lab Second Life Viewer'
   homepage 'https://secondlife.com/'
 
-  depends_on macos: '>= :lion'
-
   app 'Second Life Viewer.app'
 
   zap trash: [

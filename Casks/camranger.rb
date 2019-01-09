@@ -7,7 +7,5 @@ cask 'camranger' do
   name 'CamRanger'
   homepage 'https://camranger.com/mac-downloads/'
 
-  depends_on macos: '>= :mountain_lion'
-
   app 'CamRanger.app'
 end

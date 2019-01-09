@@ -8,7 +8,5 @@ cask 'knime' do
   name 'KNIME Analytics Platform'
   homepage 'https://www.knime.com/'
 
-  depends_on macos: '>= :lion'
-
   app "KNIME #{version}.app"
 end

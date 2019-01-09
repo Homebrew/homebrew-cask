@@ -6,8 +6,6 @@ cask 'qiyimedia' do
   name '爱奇艺视频'
   homepage 'https://www.iqiyi.com/'
 
-  depends_on macos: '>= :mountain_lion'
-
   app '爱奇艺.app'
 
   zap trash: [

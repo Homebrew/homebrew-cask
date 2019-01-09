@@ -9,7 +9,6 @@ cask 'gitup' do
   homepage 'https://gitup.co/'
 
   auto_updates true
-  depends_on macos: '>= :mountain_lion'
 
   app 'GitUp.app'
   binary "#{appdir}/GitUp.app/Contents/SharedSupport/gitup"
