@@ -4,7 +4,7 @@ cask 'qlimagesize' do
 
   url 'https://github.com/L1cardo/qlImageSize/releases/download/1.6.0/qlImageSize.qlgenerator.zip'
   name 'qlImageSize'
-  homepage 'https://github.com/Nyx0uf/qlImageSize'
+  homepage 'https://github.com/L1cardo/qlImageSize'
 
   qlplugin 'qlImageSize.qlgenerator'
 end
