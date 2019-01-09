@@ -6,7 +6,6 @@ cask 'vitamin-r' do
   else
     version '3.03'
     sha256 'bd164d61e7605fdfca151fbfdb2446efc1247f4b1d3c75bdfd823c33a4e97535'
-    appcast "http://www.publicspace.net/app/vitamin#{version.major}.xml"
   end
 
   url "http://www.publicspace.net/download/signedVitamin#{version.major}.zip"
