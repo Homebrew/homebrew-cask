@@ -3,7 +3,6 @@ cask 'fiddler' do
   sha256 :no_check
 
   # telerik-fiddler.s3.amazonaws.com/fiddler was verified as official when first introduced to the cask
-  # re-verified Jan 2019, via: https://www.telerik.com/download/fiddler/fiddler-osx-beta
   url 'https://telerik-fiddler.s3.amazonaws.com/fiddler/fiddler-mac.zip'
   name 'Telerik Fiddler Proxy'
   homepage 'http://www.telerik.com/fiddler'
