@@ -3,7 +3,7 @@ cask 'macgesture' do
   sha256 '0fb8b9c6d502f7d70bc3a929b2f5fb73b4f0dac596f45695130af4fb7f85f1df'
 
   url "https://github.com/MacGesture/MacGesture/releases/download/#{version}/MacGesture-#{version}.zip"
-  appcast 'https://raw.githubusercontent.com/MacGesture/MacGesture/release/AppCast.xml'
+  appcast 'https://github.com/MacGesture/MacGesture/releases.atom'
   name 'MacGesture'
   homepage 'https://github.com/MacGesture/MacGesture'
 
