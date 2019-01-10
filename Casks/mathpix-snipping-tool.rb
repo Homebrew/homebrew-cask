@@ -6,8 +6,6 @@ cask 'mathpix-snipping-tool' do
   name 'Mathpix Snipping Tool'
   homepage 'https://mathpix.com/'
 
-  auto_updates false
-
   app 'Mathpix Snipping Tool.app'
 
   zap trash: [
