@@ -14,5 +14,6 @@ jobs:
         rsync -az --delete "${HOMEBREW_TAP_DIR}/"
         export TRAVIS_BUILD_DIR="${HOMEBREW_TAP_DIR}"
         builtin cd "${TRAVIS_BUILD_DIR}"
+        brew cask ci
       displayName: Run brew cask-test-bot
       
