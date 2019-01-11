@@ -7,7 +7,7 @@ cask 'auristor-client' do
   elsif MacOS.version <= :sierra
     sha256 'b0769ccf920f8af37b6789fe977f1798d1861b2a57ca93a8f10fe3ffbb37ff5d'
     url "https://www.auristor.com/downloads/auristor/osx/macos-10.12/AuriStor-client-#{version}-Sierra.dmg"
-  elsif MacOS.version <= :hish_sierra
+  elsif MacOS.version <= :high_sierra
     sha256 'f87baa459cc7d66f22aa2064da5a175ab4559ccd1536a0fb46c5eea137202cdc'
     url "https://www.auristor.com/downloads/auristor/osx/macos-10.13/AuriStor-client-#{version}-HighSierra.dmg"
   else
@@ -26,10 +26,10 @@ cask 'auristor-client' do
                       :mojave,
                     ]
 
-  if MacOS.version >= :mojave
-    pkg 'Auristor.pkg'
-  else
+  if MacOS.version <= :high_sierra
     pkg 'Auristor-Lite.pkg'
+  else
+    pkg 'Auristor.pkg'
   end
 
   uninstall pkgutil:   'com.auristor.yfs-*',
