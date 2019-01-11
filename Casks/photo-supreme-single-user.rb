@@ -1,6 +1,6 @@
 cask 'photo-supreme-single-user' do
-  version '4.3.1'
-  sha256 '38107e8e10d03274668d3056a717e7bfd502f5f71ac7894303757fff4012e47c'
+  version '4.3.2'
+  sha256 '9343e0872192e856efc97eba7203982e112853fcea69b4bc5b9b69bd3140cce5'
 
   url "https://trial.idimager.com/PhotoSupreme_V#{version.major}.pkg"
   name 'Photo Supreme Single User'

@@ -1,16 +1,7 @@
 cask 'onyx' do
   macos_release = MacOS.version.to_s.delete('.')
 
-  if MacOS.version == :snow_leopard
-    version '2.4.0'
-    sha256 '188c15090988b379dce9f0fafa7b686c6eff2ada147cde150b16e1ae01e4e9e4'
-  elsif MacOS.version == :lion
-    version '2.4.8'
-    sha256 'e637359020d3514cf1fe40d1f616692919c41aed926a395bbc7093b256e42e35'
-  elsif MacOS.version == :mountain_lion
-    version '2.7.4'
-    sha256 'e025125b06fc78322347f8549871c67e570131af83e8bb18b62ed43b65d7369d'
-  elsif MacOS.version == :mavericks
+  if MacOS.version == :mavericks
     version '2.8.9'
     sha256 '01fe01a4e2acdc55383fbe12eea9e2c32659cf1fc283f021987a356bdf820a58'
   elsif MacOS.version == :yosemite
@@ -26,8 +17,8 @@ cask 'onyx' do
     version '3.4.9'
     sha256 '60e4f56fb2e5457aca1aa1d2a9be95502a310b0de75112e91b7c89bf4a2be829'
   else
-    version '3.5.3'
-    sha256 '132c1fbc6c3a245904af9332ff0859e830fbae6cca96b27e8f36e1161c33095c'
+    version '3.5.5'
+    sha256 '2d6b87293272897adeb52fed531e609ee24137934fc50fe3c2d0c0ca27c76216'
   end
 
   url "https://www.titanium-software.fr/download/#{macos_release}/OnyX.dmg"
@@ -37,9 +28,6 @@ cask 'onyx' do
 
   # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.
   depends_on macos: [
-                      :snow_leopard,
-                      :lion,
-                      :mountain_lion,
                       :mavericks,
                       :yosemite,
                       :el_capitan,

@@ -1,6 +1,6 @@
 cask 'hyper' do
-  version '2.0.0'
-  sha256 'b6318c7b81b6555d48ba02008a29ff7d83044ff3a55f3b49b46b4892cabb4d92'
+  version '2.1.1'
+  sha256 'f95618aa8fd8b7d18c3549ee1b698778a7a9686f1ebc8344d268c6ef29d9ac21'
 
   # github.com/zeit/hyper was verified as official when first introduced to the cask
   url "https://github.com/zeit/hyper/releases/download/#{version}/hyper-#{version}-mac.zip"

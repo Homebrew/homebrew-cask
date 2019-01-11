@@ -7,8 +7,6 @@ cask 'deltawalker' do
   name 'DeltaWalker'
   homepage 'https://www.deltawalker.com/'
 
-  depends_on macos: '>= :tiger'
-
   app 'DeltaWalker.app'
 
   zap trash: [

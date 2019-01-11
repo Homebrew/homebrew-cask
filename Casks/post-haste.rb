@@ -6,8 +6,6 @@ cask 'post-haste' do
   name 'Post Haste'
   homepage 'https://www.digitalrebellion.com/posthaste/'
 
-  depends_on macos: '>= :mountain_lion'
-
   app 'Post Haste.app'
 
   zap trash: [

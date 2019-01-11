@@ -6,8 +6,6 @@ cask 'anylogic' do
   name 'AnyLogic'
   homepage 'https://www.anylogic.com/'
 
-  depends_on macos: '>= :lion'
-
   pkg 'Install AnyLogic.pkg'
 
   uninstall pkgutil: 'com.anylogic.AnyLogic'

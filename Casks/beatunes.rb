@@ -6,8 +6,6 @@ cask 'beatunes' do
   name 'beaTunes'
   homepage 'https://www.beatunes.com/'
 
-  depends_on macos: '>= :lion'
-
   app "beaTunes#{version.major}.app"
 
   zap trash: [

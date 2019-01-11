@@ -1,10 +1,10 @@
 cask 'traverse' do
-  version '0.9.1'
-  sha256 '2c5570ad3879d2784fa776edf8f2e2bf3a7bd0e2514478dbf8b67b488b2e8e4a'
+  version '0.10.3'
+  sha256 '3eb627d5ad5cd930d499b8e46149780e686130e75874c88c502723773d03c805'
 
-  # traverseapp.nyc3.digitaloceanspaces.com was verified as official when first introduced to the cask
-  url "https://traverseapp.nyc3.digitaloceanspaces.com/builds/Traverse-#{version}-mac.zip"
-  appcast 'https://traverse.site/release-notes'
+  # github.com/jasonraimondi/traverse was verified as official when first introduced to the cask
+  url "https://github.com/jasonraimondi/traverse/releases/download/v#{version}/Traverse-#{version}-mac.zip"
+  appcast 'https://github.com/jasonraimondi/traverse/releases.atom'
   name 'Traverse'
   homepage 'https://traverse.site/'
 

@@ -7,4 +7,9 @@ cask 'cinebench' do
   homepage 'https://www.maxon.net/products/cinebench/'
 
   app "CINEBENCH #{version}"
+
+  zap trash: [
+               '~/Library/Caches/net.maxon.cinema4d',
+               '~/Library/Preferences/MAXON',
+             ]
 end

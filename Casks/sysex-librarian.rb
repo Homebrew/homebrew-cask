@@ -7,8 +7,6 @@ cask 'sysex-librarian' do
   name 'SysEx Librarian'
   homepage 'https://www.snoize.com/SysExLibrarian/'
 
-  depends_on macos: '>= :lion'
-
   app 'SysEx Librarian.app'
 
   uninstall quit: [

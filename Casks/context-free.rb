@@ -7,7 +7,5 @@ cask 'context-free' do
   name 'Context Free'
   homepage 'https://www.contextfreeart.org/'
 
-  depends_on macos: '>= :lion'
-
   app 'Context Free.app'
 end

@@ -1,6 +1,6 @@
 cask 'triumph' do
-  version '2.6.8'
-  sha256 '840ff9ec554f4a758df267825a4129d3e4a1072ca0d08e155fb419e7836a528f'
+  version '2.6.9'
+  sha256 '60c2aabd73bcb1939c15292cb43b33786b810477bc04f3bfe16e882857789dbc'
 
   url 'https://triumph.aurchitect.com/downloads/Triumph.zip'
   appcast 'https://triumph.aurchitect.com/sufeed.rss'

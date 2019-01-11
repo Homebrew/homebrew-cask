@@ -6,8 +6,6 @@ cask 'codelite' do
   name 'CodeLite'
   homepage 'https://codelite.org/'
 
-  depends_on macos: '>= :mountain_lion'
-
   app 'codelite.app'
 
   zap trash: [

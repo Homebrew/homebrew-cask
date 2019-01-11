@@ -1,7 +1,7 @@
 cask 'v2rayx' do
   # note: "2" is not a version number, but an intrinsic part of the product name
-  version '1.3.0'
-  sha256 '02e3c20511cb3d1647bf7420931cbdebecfd2b489b6e43dbc4fb3f6880d692dd'
+  version '1.5.0'
+  sha256 'e299f69105659a5ccd6c23f5b94ebe785898bf9e1d8a7760ae6ae907df9e854c'
 
   url "https://github.com/Cenmrev/V2RayX/releases/download/v#{version}/V2RayX.app.zip"
   appcast 'https://github.com/Cenmrev/V2RayX/releases.atom'

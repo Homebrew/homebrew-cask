@@ -1,6 +1,6 @@
 cask 'porting-kit' do
-  version '2.9.544'
-  sha256 '40d58b491185b28568bd1ccc44f7c70ac54083a2015148d77d97b048ca747098'
+  version '2.9.583'
+  sha256 '1ee2489084ba0bacdfa35422b6c562841e10b806a13e307f79b48f11905ee52b'
 
   url "http://portingkit.com/kit/Porting%20Kit%20#{version}.zip"
   appcast 'http://portingkit.com/kit/updatecast.xml'
@@ -9,7 +9,6 @@ cask 'porting-kit' do
 
   auto_updates true
   conflicts_with cask: 'porting-kit-legacy'
-  depends_on macos: '>= :mountain_lion'
 
   app 'Porting Kit.app'
 

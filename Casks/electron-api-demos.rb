@@ -1,6 +1,6 @@
 cask 'electron-api-demos' do
-  version '1.5.1'
-  sha256 '1a9931992574c2bafb8078e3156ad708e364c58e8721973ed99abcca81bb2eee'
+  version '2.0.2'
+  sha256 '274e1f3c2a90ab884b117af84988c1aea9931d37fe8169fb6aeecab8e5b78464'
 
   url "https://github.com/electron/electron-api-demos/releases/download/v#{version}/electron-api-demos-mac.zip"
   appcast 'https://github.com/electron/electron-api-demos/releases.atom'

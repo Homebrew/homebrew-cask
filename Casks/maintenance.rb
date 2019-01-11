@@ -1,14 +1,5 @@
 cask 'maintenance' do
-  if MacOS.version == :snow_leopard
-    version '1.4.1'
-    sha256 '91404f8f60b1950ee2b84e66e9c22bdf23760dacfcfd1bc76110976f1377faae'
-  elsif MacOS.version == :lion
-    version '1.5.6'
-    sha256 '38cad496441bb801a978d90ff4403b3cda9c131e601fa1511b50b9c0aa1bb5e9'
-  elsif MacOS.version == :mountain_lion
-    version '1.7.1'
-    sha256 'b6105d3e51f9d67cc6636d33833c61fbadd8b3e2bea7592fc0b465c68a3e4cef'
-  elsif MacOS.version == :mavericks
+  if MacOS.version == :mavericks
     version '1.9.1'
     sha256 '80ae32babc867c83cd0b48519f03c80a1cd48808f570703e6f930a57af8797f5'
   elsif MacOS.version == :yosemite
@@ -24,8 +15,8 @@ cask 'maintenance' do
     version '2.4.2'
     sha256 '94c7a322d4d796afc5e52534f3564a562240d9c0ec0a60de210e68372fef2137'
   else
-    version '2.4.7'
-    sha256 '94b439175513c4bab5d61c0d567f5998c69ddbf068bed68ce6c2d005a598c14f'
+    version '2.4.9'
+    sha256 '1e81ed81379aea46a9530ede078009a56ac65db33deeeb808550bff14556f366'
   end
 
   url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete('.')}/Maintenance.dmg"
@@ -35,9 +26,6 @@ cask 'maintenance' do
 
   # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.
   depends_on macos: [
-                      :snow_leopard,
-                      :lion,
-                      :mountain_lion,
                       :mavericks,
                       :yosemite,
                       :el_capitan,

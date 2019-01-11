@@ -7,7 +7,5 @@ cask 'reflector' do
   name "Reflector #{version.major}"
   homepage 'http://www.airsquirrels.com/reflector/'
 
-  depends_on macos: '>= :mountain_lion'
-
   app "Reflector #{version.major}.app"
 end
