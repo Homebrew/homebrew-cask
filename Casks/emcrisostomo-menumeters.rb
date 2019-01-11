@@ -9,10 +9,9 @@ cask 'emcrisostomo-menumeters' do
   homepage 'https://emcrisostomo.github.io/MenuMeters/'
 
   conflicts_with cask: [
-                          'menumeters',
-                          'yujitach-menumeters'
-                        ]
-
+                         'menumeters',
+                         'yujitach-menumeters',
+                       ]
   depends_on macos: '>= :el_capitan'
 
   pkg 'MenuMeters.pkg'
