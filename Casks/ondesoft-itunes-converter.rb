@@ -1,6 +1,6 @@
 cask 'ondesoft-itunes-converter' do
-  version '4.8.0'
-  sha256 'd59ad5c2810078999e965da2436026c8229a4060b79d8a747d7ba15b2b9f2bb8'
+  version '5.0.0'
+  sha256 '1e143338330aaec6b5b90132c564f6eb43ffafedfa58c1e42911870ee238ba91'
 
   url 'https://www.ondesoft.com/download/oditunesconverter_mac.dmg'
   appcast 'https://www.ondesoft.com/itunes_converter/release-history.html'
