@@ -7,6 +7,8 @@ cask 'path-finder' do
   name 'Path Finder'
   homepage 'https://cocoatech.com/'
 
+  auto_updates true
+
   app 'Path Finder.app'
 
   zap trash: [
