@@ -11,7 +11,7 @@ cask 'puppetry' do
   app 'puppetry.app'
 
   uninstall signal: [
-                      ['TERM', 'com.dsheiko.puppetry'],
+                      ['TERM', 'coma.dsheiko.puppetry'],
                     ]
 
   zap trash: [
