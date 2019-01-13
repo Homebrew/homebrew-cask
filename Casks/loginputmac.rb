@@ -10,7 +10,5 @@ cask 'loginputmac' do
 
   auto_updates true
 
-  pkg "loginputmac#{version.major}_latest.pkg"
-
-  uninstall pkgutil: 'com.logcg.pkg.LoginputMac.*'
+  app 'LogInputMac2.app'
 end
