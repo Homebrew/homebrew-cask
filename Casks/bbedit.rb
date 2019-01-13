@@ -12,6 +12,7 @@ cask 'bbedit' do
   name 'BBEdit'
   homepage 'https://www.barebones.com/products/bbedit/'
 
+  auto_updates true
   depends_on macos: '>= :el_capitan'
 
   app 'BBEdit.app'
