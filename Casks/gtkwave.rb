@@ -8,5 +8,14 @@ cask 'gtkwave' do
   name 'GTKWave'
   homepage 'https://gtkwave.sourceforge.io/'
 
+  depends_on x11: true
+
   app 'gtkwave.app'
+  binary "#{appdir}/gtkwave.app/Contents/Resources/bin/gtkwave_bin_launcher.sh", target: 'gtkwave'
+
+  zap trash: [
+               '~/Library/Application Support/CrashReporter/gtkwave-bin_*.plist',
+               '~/Library/Preferences/com.geda.gtkwave.plist',
+               '~/Library/Saved Application State/com.geda.gtkwave.savedState',
+             ]
 end

@@ -7,5 +7,7 @@ cask 'yate' do
   name 'Yate'
   homepage 'https://2manyrobots.com/yate/'
 
+  auto_updates true
+
   app 'Yate.app'
 end

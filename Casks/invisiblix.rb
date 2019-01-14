@@ -4,7 +4,7 @@ cask 'invisiblix' do
 
   # sourceforge.net/invisiblix was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/invisiblix/invisibliX-#{version}.zip"
-  appcast 'https://www.read-write.fr/invisiblix/appcast.xml'
+  appcast 'https://invisiblix.read-write.fr/appcast.xml'
   name 'invisibliX'
   homepage 'https://invisiblix.read-write.fr/'
 

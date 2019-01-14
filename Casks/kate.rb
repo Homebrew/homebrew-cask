@@ -1,6 +1,6 @@
 cask 'kate' do
-  version '18.12.0-317'
-  sha256 '32e2fbf185382ae58d2c138fd5f1438c8f57ffe56da01ffaa45e84d35a3e0499'
+  version '18.12.0-333'
+  sha256 'ac4a09ad7f4f0fcfe82c7b041b4e1ae2a63f478047529580343c0b9808d6a9cd'
 
   # binary-factory.kde.org/view/MacOS/job/Kate_Release_macos was verified as official when first introduced to the cask
   url "https://binary-factory.kde.org/view/MacOS/job/Kate_Release_macos/lastSuccessfulBuild/artifact/kate-#{version}-macos-64-clang.dmg"

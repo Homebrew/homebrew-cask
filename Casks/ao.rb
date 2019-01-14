@@ -1,6 +1,6 @@
 cask 'ao' do
-  version '6.4.0'
-  sha256 '898046c5e25d9a2e3a0bc77dbbdebd1f05e2e2810b19a38db13e89db9bcec3ce'
+  version '6.6.0'
+  sha256 'ec46e9ee8eb164722af9815a0b2c3677259c41985b70c275b29e8d323c1b6108'
 
   url "https://github.com/klaussinani/ao/releases/download/v#{version}/Ao-#{version}.dmg"
   appcast 'https://github.com/klaussinani/ao/releases.atom'

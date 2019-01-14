@@ -1,9 +1,9 @@
 cask 'vlc' do
-  version '3.0.5'
-  sha256 'fbbe2b2384caaa68d578d83a7496e80b65397510e9cec037e8e3ec7ef2fbc2ef'
+  version '3.0.6'
+  sha256 '0c807a2e352fd6fe7e591fe01a7a53794b7d817e1e1eda3f673df06f26db27d5'
 
   url "https://get.videolan.org/vlc/#{version}/macosx/vlc-#{version}.dmg"
-  appcast 'https://update.videolan.org/vlc/sparkle/vlc-intel64.xml'
+  appcast 'https://download.videolan.org/pub/videolan/vlc/'
   name 'VLC media player'
   homepage 'https://www.videolan.org/vlc/'
 

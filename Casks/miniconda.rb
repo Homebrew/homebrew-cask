@@ -7,6 +7,7 @@ cask 'miniconda' do
   name 'Continuum Analytics Miniconda'
   homepage 'https://conda.io/miniconda.html'
 
+  auto_updates true
   container type: :naked
 
   installer script: {

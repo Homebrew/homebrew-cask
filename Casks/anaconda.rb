@@ -6,6 +6,7 @@ cask 'anaconda' do
   name 'Continuum Analytics Anaconda'
   homepage 'https://www.anaconda.com/'
 
+  auto_updates true
   container type: :naked
 
   installer script: {

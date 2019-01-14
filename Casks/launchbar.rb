@@ -17,7 +17,9 @@ cask 'launchbar' do
   app 'LaunchBar.app'
 
   zap trash: [
-               '~/Library/Preferences/at.obdev.LaunchBar.plist',
                '~/Library/Application Support/LaunchBar',
+               '~/Library/Caches/at.obdev.LaunchBar',
+               '~/Library/Preferences/at.obdev.LaunchBar.plist',
+               '~/Library/Saved Application State/at.obdev.LaunchBar.savedState',
              ]
 end
