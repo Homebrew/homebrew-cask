@@ -11,13 +11,13 @@ cask 'reikey' do
   depends_on macos: '>= :yosemite'
 
   installer script: {
-                      executable: "#{staged_path}/ReiKey\ Installer.app/Contents/MacOS/ReiKey\ Installer",
+                      executable: "#{staged_path}/ReiKey Installer.app/Contents/MacOS/ReiKey Installer",
                       args:       ['-install'],
                       sudo:       true,
                     }
 
   uninstall script: {
-                      executable: "#{staged_path}/ReiKey\ Installer.app/Contents/MacOS/ReiKey\ Installer",
+                      executable: "#{staged_path}/ReiKey Installer.app/Contents/MacOS/ReiKey Installer",
                       args:       ['-uninstall'],
                       sudo:       true,
                     }
