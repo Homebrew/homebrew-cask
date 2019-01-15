@@ -1,19 +1,21 @@
-cask 'amazon-drive' do
+cask 'amazon-photos' do
   version :latest
   sha256 :no_check
 
   # d29x207vrinatv.cloudfront.net was verified as official when first introduced to the cask
-  url 'https://d29x207vrinatv.cloudfront.net/mac/AmazonDriveInstaller.dmg'
+  url 'https://d29x207vrinatv.cloudfront.net/mac/AmazonPhotosInstaller.dmg'
   name 'Amazon Drive'
-  homepage 'https://www.amazon.com/clouddrive/home/'
+  name 'Amazon Photos'
+  homepage 'https://www.amazon.com/Amazon-Photos/b?node=13234696011'
 
   installer script: {
-                      executable: 'Amazon Drive Installer.app/Contents/MacOS/Amazon Drive Installer',
+                      executable: 'Amazon Photos Installer.app/Contents/MacOS/Amazon Photos Installer',
                       args:       ['--quiet'],
                     }
 
-  uninstall quit:   'com.amazon.clouddrive.mac',
-            delete: '/Applications/Amazon Drive.app'
+  uninstall quit:      'com.amazon.clouddrive.mac',
+            delete:    '/Applications/Amazon Photos.app',
+            launchctl: 'com.amazon.clouddrive'
 
   zap trash: [
                '~/Library/Logs/Amazon Cloud Drive/',
