@@ -4,9 +4,9 @@ cask 'bitpost' do
 
   # voluntary.net.s3.amazonaws.com was verified as official when first introduced to the cask
   url "http://voluntary.net.s3.amazonaws.com/Bitpost.#{version}.zip"
-  appcast 'https://voluntary.net/bitpost/'
+  appcast 'https://github.com/VoluntaryLabs/Bitpost/releases.atom'
   name 'Bitpost'
-  homepage 'https://voluntary.net/bitpost/'
+  homepage 'https://github.com/VoluntaryLabs/Bitpost'
 
   app 'Bitpost.app'
 end
