@@ -3,6 +3,7 @@ cask 'jamovi' do
   sha256 '9170638d4aa53ddff35605593750209f22570ea73b7571b477c67503d8890448'
 
   url "https://www.jamovi.org/downloads/jamovi-#{version}-macos.dmg"
+  appcast 'https://www.jamovi.org/download.html'
   name 'jamovi'
   homepage 'https://www.jamovi.org/'
 
