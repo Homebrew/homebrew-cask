@@ -1,6 +1,6 @@
 cask 'iina' do
-  version '1.0.0'
-  sha256 '1af6892fa41b95dd5c0d42be0cfb2dccd52522f716da0b8951a8e87f8e8d4f91'
+  version '1.0.1'
+  sha256 'd060069db88fe50e8184f6fba61e35dd6c06f8e043cf162f5fb88a4d036e1c23'
 
   url "https://dl-portal.iina.io/IINA.v#{version}.dmg"
   appcast 'https://www.iina.io/appcast.xml'
