@@ -1,4 +1,4 @@
-cask 'amazon-drive' do
+cask 'amazon-photos' do
   version :latest
   sha256 :no_check
 
