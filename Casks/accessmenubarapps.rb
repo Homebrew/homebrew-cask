@@ -7,7 +7,7 @@ cask 'accessmenubarapps' do
   name 'AccessMenuBarApps'
   homepage 'http://www.ortisoft.de/accessmenubarapps/'
 
-  app 'AccessMenuBarApps.app'
+  app "AccessMenuBarApps#{version}/AccessMenuBarApps.app"
 
   uninstall quit: 'de.ortisoft.AccessMenuBarApps'
 
