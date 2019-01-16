@@ -1,6 +1,6 @@
 cask 'musixmatch' do
-  version '0.21.20'
-  sha256 '87e706b648cac5ad10340178838e20dc6d5a539ad26c3319df8ce289667dd75d'
+  version '0.21.21'
+  sha256 '6c72699837737c25a5c32bf424764a0b005ddcbf10777c8556f757a13862f256'
 
   url "https://download-app.musixmatch.com/download/Musixmatch-#{version}.dmg"
   name 'Musixmatch'
