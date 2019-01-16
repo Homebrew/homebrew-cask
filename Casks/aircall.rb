@@ -1,6 +1,6 @@
 cask 'aircall' do
-  version '1.6.4'
-  sha256 'df0cdb10a8619673cbc33031baeeb9fd40f3acf0845ecbadffc15c0adf61bca8'
+  version '1.7.1'
+  sha256 'fdca1a399240300d14d5348c422990dc8f77579015384567f4620da2747355c9'
 
   url "https://electron.aircall.io/download/version/#{version}/osx_64?filetype=dmg&channel=stable"
   appcast 'https://electron.aircall.io/update/osx/1.1.0'
