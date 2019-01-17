@@ -8,7 +8,7 @@ cask 'reikey' do
   name 'ReiKey'
   homepage 'https://objective-see.com/products/reikey.html'
 
-  depends_on macos: '>= :yosemite'
+  depends_on macos: '>= :high_sierra'
 
   installer script: {
                       executable: "#{staged_path}/ReiKey Installer.app/Contents/MacOS/ReiKey Installer",
