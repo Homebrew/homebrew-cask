@@ -1,4 +1,4 @@
-cask 'electrum-sv' do
+cask 'electrumsv' do
   version '1.0.0'
   sha256 'eb709a03fb532ae70c1a70799f46ead22210faf7388c4792249abd0337f77b06'
 
