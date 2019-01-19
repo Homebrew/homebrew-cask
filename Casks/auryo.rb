@@ -6,7 +6,7 @@ cask 'auryo' do
   url "https://github.com/Superjo149/auryo/releases/download/v#{version}/Auryo-#{version}.dmg"
   appcast 'https://github.com/Superjo149/auryo/releases.atom'
   name 'Auryo'
-  homepage 'http://auryo.com/'
+  homepage 'https://auryo.com/'
 
   app 'Auryo.app'
 end
