@@ -1,6 +1,6 @@
 cask 'supercollider' do
-  version '3.10.0'
-  sha256 'ed915a3e387a88f19555de36cd3bd35274db6dfba444f2933dd3b38da74ea930'
+  version '3.10.1'
+  sha256 '366522a2b03712e920797f15c079585379234790f9a07579bf01f225d8efebbb'
 
   # github.com/supercollider/supercollider was verified as official when first introduced to the cask
   url "https://github.com/supercollider/supercollider/releases/download/Version-#{version}/SuperCollider-#{version}-macOS.zip"
