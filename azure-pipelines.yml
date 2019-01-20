@@ -9,9 +9,9 @@ jobs:
         export HOMEBREW_NO_AUTO_UPDATE=1
         brew update
         # Mirror the repo as a tap.
-        mkdir -p $AGENT_HOMEDIRECTORY
-        rsync --archive --compress --delete $AGENT_HOMEDIRECTORY
-        cd $AGENT_HOMEDIRECTORY
-        echo $AGENT_HOMEDIRECTORY
+        mkdir -p $(Build.SourcesDirectory)
+        rsync --archive --compress --delete $(Build.SourcesDirectory)
+        cd $(Build.SourcesDirectory)
+        echo $(Build.SourcesDirectory)
         brew cask ci
       displayName: Run brew cask-test-bot
