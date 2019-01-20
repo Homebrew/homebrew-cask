@@ -5,7 +5,7 @@ cask 'kerio-connect-client' do
   # kerio-dc-releases.kerio.com was verified as official when first introduced to the cask
   url "https://kerio-dc-releases.kerio.com/kerio-connect-client-darwin64-#{version}.dmg"
   name 'Kerio Connect'
-  homepage 'https://www.kerio.de/products/kerio-connect'
+  homepage 'http://www.kerio.de/products/kerio-connect'
 
   app 'Kerio Connect.app'
 end
