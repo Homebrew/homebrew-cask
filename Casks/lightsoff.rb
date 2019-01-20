@@ -7,5 +7,7 @@ cask 'lightsoff' do
   name 'LightsOff'
   homepage 'https://www.lightsoff-app.com/'
 
+  depends_on macos: '>= :mojave'
+
   app 'LightsOff.app'
 end
