@@ -6,9 +6,8 @@ cask 'protonvpn' do
   appcast 'https://protonvpn.com/download/macos-update.xml'
   name 'ProtonVPN'
   homepage 'https://protonvpn.com/'
-  
-  auto_updates true
 
+  auto_updates true
   depends_on macos: '>= :sierra'
 
   app 'ProtonVPN.app'
