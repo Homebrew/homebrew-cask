@@ -11,7 +11,11 @@ cask 'notion' do
 
   zap trash: [
                '~/Library/Application Support/Notion',
+               '~/Library/Caches/notion.id',
+               '~/Library/Logs/Notion',
                '~/Library/Preferences/notion.id.helper.plist',
                '~/Library/Preferences/notion.id.plist',
+               '~/Library/Saved Application State/notion.id.savedState',
+               '~/Library/WebKit/notion.id',
              ]
 end
