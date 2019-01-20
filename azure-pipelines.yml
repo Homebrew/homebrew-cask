@@ -9,7 +9,7 @@ jobs:
         export HOMEBREW_NO_AUTO_UPDATE=1
         brew update
         # Mirror the repo as a tap.
-        HOMEBREW_TAP_DIR=Agent.BuildDirectory
+        HOMEBREW_TAP_DIR=$AGENT_HOMEDIRECTORY
         mkdir -p "${HOMEBREW_TAP_DIR}"
         rsync --archive --compress --delete "${HOMEBREW_TAP_DIR}"
         cd "${HOMEBREW_TAP_DIR}"
