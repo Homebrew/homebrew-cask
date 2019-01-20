@@ -13,6 +13,6 @@ jobs:
         rsync --archive --compress --delete $(Build.SourcesDirectory)
         export AZURE_BUILD_DIR=$(Build.SourcesDirectory)
         cd $(Build.SourcesDirectory)
-        ls $(Build.SourcesDirectory)
+        ls
         brew cask ci
       displayName: Run brew cask-test-bot
