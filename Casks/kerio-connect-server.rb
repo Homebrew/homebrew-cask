@@ -5,7 +5,7 @@ cask 'kerio-connect-server' do
   # cdn.kerio.com was verified as official when first introduced to the cask
   url "https://cdn.kerio.com/dwn/connect/connect-#{version.before_comma}/kerio-connect-#{version.before_comma}-#{version.after_comma}-mac.dmg"
   name 'Kerio Connect'
-  homepage 'https://www.kerio.de/products/kerio-connect'
+  homepage 'http://www.kerio.de/products/kerio-connect'
 
   pkg 'Kerio Connect Installer.pkg'
 
