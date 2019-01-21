@@ -7,7 +7,7 @@ jobs:
         export HOMEBREW_COLOR=1
         export HOMEBREW_DEVELOPER=1
         export HOMEBREW_NO_AUTO_UPDATE=1
-        brew update-reset
+        brew update
         # Mirror the repo as a tap.
         mkdir -p $(Build.SourcesDirectory)
         ln -s "$PWD" $(Build.SourcesDirectory)
