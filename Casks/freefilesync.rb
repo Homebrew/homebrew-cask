@@ -4,7 +4,7 @@ cask 'freefilesync' do
 
   url "https://www.freefilesync.org/download/FreeFileSync_#{version}_macOS.zip",
       user_agent: :fake,
-      referer: 'https://freefilesync.org/download.php'
+      referer:    'https://freefilesync.org/download.php'
   name 'FreeFileSync'
   homepage 'https://www.freefilesync.org/'
 
