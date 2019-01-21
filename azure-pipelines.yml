@@ -9,9 +9,9 @@ jobs:
         export HOMEBREW_NO_AUTO_UPDATE=1
         brew update
         # Mirror the repo as a tap.
+        ln -s "$PWD" $(Build.SourcesDirectory)
         mkdir -p $(Build.SourcesDirectory)
         export AZURE_BUILD_DIR=$(Build.SourcesDirectory)
         cd $(Build.SourcesDirectory)
-        ln -s "$PWD" $(Build.SourcesDirectory)
         brew cask ci
       displayName: Run brew cask-test-bot
