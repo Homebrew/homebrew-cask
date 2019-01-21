@@ -15,9 +15,13 @@ cask 'keepingyouawake' do
   uninstall login_item: 'KeepingYouAwake'
 
   zap trash: [
+               '~/Library/Application Scripts/info.marcel-dierkes.KeepingYouAwake',
+               '~/Library/Application Scripts/info.marcel-dierkes.KeepingYouAwake.Launcher',
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/info.marcel-dierkes.keepingyouawake.sfl*',
                '~/Library/Application Support/info.marcel-dierkes.KeepingYouAwake',
                '~/Library/Caches/info.marcel-dierkes.KeepingYouAwake',
+               '~/Library/Containers/info.marcel-dierkes.KeepingYouAwake',
+               '~/Library/Containers/info.marcel-dierkes.KeepingYouAwake.Launcher',
                '~/Library/Preferences/info.marcel-dierkes.KeepingYouAwake.plist',
                '~/Library/Saved Application State/info.marcel-dierkes.KeepingYouAwake.savedState',
              ]
