@@ -1,4 +1,4 @@
-cask 'kaios-simulator' do
+cask 'kaiosrt' do
   version :latest
   sha256 :no_check
 
