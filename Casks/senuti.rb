@@ -4,7 +4,7 @@ cask 'senuti' do
 
   url "https://fadingred.com/senuti_#{version}.zip"
   name 'Senuti'
-  homepage 'https://www.fadingred.com/'
+  homepage 'https://fadingred.com/'
 
   app 'Senuti.app'
 
