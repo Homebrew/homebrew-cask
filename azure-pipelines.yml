@@ -10,7 +10,6 @@ jobs:
         brew update
         # Mirror the repo as a tap.
         mkdir -p $(Build.SourcesDirectory)
-        rsync --archive --compress --delete $(Build.SourcesDirectory)
         export AZURE_BUILD_DIR=$(Build.SourcesDirectory)
         cd $(Build.SourcesDirectory)
         ls
