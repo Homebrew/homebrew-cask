@@ -8,7 +8,6 @@ cask 'kicad' do
   homepage 'http://kicad-pcb.org/'
 
   suite 'KiCad'
-  artifact 'kicad', target: '/Library/Application Support/kicad'
 
   zap trash: '~/Library/Preferences/kicad'
 end
