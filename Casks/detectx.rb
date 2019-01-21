@@ -1,6 +1,6 @@
 cask 'detectx' do
-  version '2.88'
-  sha256 'efc1824032f2db6666a294635c198bff37ccef6c8c81eaf43155da5f0f3ef7e8'
+  version '2.89'
+  sha256 'ff6ae5239504d847cfcf743ec224097f2f76781e48e12f9b94b7846a5173d491'
 
   # amazonaws.com/sqwarq.com was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/sqwarq.com/PublicZips/DetectX.app.zip'

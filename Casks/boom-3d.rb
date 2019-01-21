@@ -1,6 +1,6 @@
 cask 'boom-3d' do
-  version '1.2.2,1547011343'
-  sha256 'cb960e82b5c5bbbb26eb113c3589feaeaa7e5d43e6b1773ea09518508801b0b0'
+  version '1.2.3,1547810966'
+  sha256 '62c0660e72908dbb7f0b59b89400bd80ca2051329bbce17436331b0e07e74c0a'
 
   # devmate.com/com.globaldelight.Boom3D was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.globaldelight.Boom3D/#{version.before_comma}/#{version.after_comma}/Boom3D-#{version.before_comma}.dmg"

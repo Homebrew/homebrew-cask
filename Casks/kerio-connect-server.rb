@@ -1,4 +1,4 @@
-cask 'kerio-connect' do
+cask 'kerio-connect-server' do
   version '9.2.7-4117,p2'
   sha256 'a771933ead0810f5b195c3a77a94b0e41c6beb81cc2cf3002e90e73186575da5'
 
