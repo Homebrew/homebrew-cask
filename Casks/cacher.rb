@@ -1,6 +1,6 @@
 cask 'cacher' do
-  version '2.4.3'
-  sha256 '7332aec70edeb99ddfa15588eac849f5cc547ad34b6e897bda9c0c6605b013b8'
+  version '2.4.4'
+  sha256 '6facdab92aa400abfe06888f1e306e7ea2165cea7d186ca9656a2babbfa340cc'
 
   # cacher-download.nyc3.digitaloceanspaces.com was verified as official when first introduced to the cask
   url "https://cacher-download.nyc3.digitaloceanspaces.com/Cacher-#{version}-mac.zip"
