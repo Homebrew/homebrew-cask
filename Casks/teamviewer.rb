@@ -1,5 +1,5 @@
 cask 'teamviewer' do
-  version '14'
+  version '14.1.9025'
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://download.teamviewer.com/download/version_#{version}x/TeamViewer.dmg"
