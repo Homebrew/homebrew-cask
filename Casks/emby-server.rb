@@ -1,6 +1,6 @@
 cask 'emby-server' do
-  version '4.0.0.2'
-  sha256 '5293592685fc17b048447fd8f4694495dd4a621cf4a005dd746dd02448a8a471'
+  version '4.0.1.0'
+  sha256 '162af71ada91c833f9f858f00c5cb334a1e13295163b7e002653653464a3ba85'
 
   # github.com/MediaBrowser/Emby.Releases was verified as official when first introduced to the cask
   url "https://github.com/MediaBrowser/Emby.Releases/releases/download/#{version}/embyserver-osx-x64-#{version}.zip"
