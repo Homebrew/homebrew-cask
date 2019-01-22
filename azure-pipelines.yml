@@ -11,7 +11,7 @@ jobs:
         # Mirror the repo as a tap.
         mkdir -p $(Build.SourcesDirectory)
         rsync --archive --compress --delete $(Build.SourcesDirectory)
+        # cd $(Build.SourcesDirectory)
         ln -s "$PWD" $(Build.SourcesDirectory)
-        cd $(Build.SourcesDirectory)
         brew cask ci
       displayName: Run brew cask-test-bot
