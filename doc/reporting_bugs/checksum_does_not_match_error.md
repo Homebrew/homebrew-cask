@@ -6,6 +6,5 @@ If the problem persists, the cask must be outdated. It’ll likely need a new ve
     * Alternatively, if it has an `appcast`, read that (`curl "$(brew cask _stanza appcast {{cask_name}})"`).
 2. Find out what the latest version is. It will likely be expressed in the URL used to download it.
 3. Take a look at the cask’s version (`brew cask _stanza version {{cask_name}}`) and verify it is indeed outdated.
-    * If the app’s version is `latest`, it means the `url` itself is outdated. It will need to be changed to the new one.
 
 If it is outdated, help us and [submit a fix](https://github.com/Homebrew/homebrew-cask/blob/master/CONTRIBUTING.md#updating-a-cask). If you’re having trouble, [open an issue](https://github.com/Homebrew/homebrew-cask/issues/new?template=01_bug_report.md) explaining your steps so far and where you’re having trouble submitting the update.
