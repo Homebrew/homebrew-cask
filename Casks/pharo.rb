@@ -6,5 +6,5 @@ cask 'pharo' do
   name 'Pharo'
   homepage 'https://pharo.org/'
 
-  app "Pharo.app"
+  app 'Pharo.app'
 end
