@@ -1,6 +1,6 @@
 cask 'routeconverter' do
-  version '2.25.53'
-  sha256 '3cc9f3add02ec61d122cdef57327668ec4cf2d90cbe4ab8d1fa7465c90758824'
+  version '2.25.55'
+  sha256 '4c970b3a05b2cee472dd19958935639ec1cde5b5c8f536781db7f07132f6b9b1'
 
   url 'https://static.routeconverter.com/download/RouteConverterMac.app.zip'
   appcast 'https://static.routeconverter.com/download/previous-releases/'
