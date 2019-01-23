@@ -1,8 +1,8 @@
 cask 'multipass' do
-  version 'v0.5'
+  version '0.5'
   sha256 'b9cdf4bdb65fcebd4cdff510f3a559d2c86d591749bd3d4ea1ec0dd495a42590'
 
-  url "https://github.com/CanonicalLtd/multipass/releases/download/#{version}/multipass-#{version}-full-Darwin.pkg"
+  url "https://github.com/CanonicalLtd/multipass/releases/download/v#{version}/multipass-v#{version}-full-Darwin.pkg"
   appcast 'https://github.com/CanonicalLtd/multipass/releases.atom'
   name 'Multipass'
   homepage 'https://github.com/CanonicalLtd/multipass/'
