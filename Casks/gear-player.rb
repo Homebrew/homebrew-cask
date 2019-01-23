@@ -1,8 +1,8 @@
 cask 'gear-player' do
-  version '2.2.34'
-  sha256 'a421c89b774812bc537599b90efd9671c5318857d701bf644ac200ef632558ba'
+  version '2.2.38'
+  sha256 'fba05445b105728a9647aaae5c7712ad85fbaf0dcd25e1f579220ae0c6f2668d'
 
-  url 'https://dl.gearmusicplayer.com/gearupdate.zip'
+  url 'https://dl.gearmusicplayer.com/gear.zip'
   appcast 'https://dl.gearmusicplayer.com/gearcast.xml'
   name 'Gear Player'
   homepage 'https://www.gearmusicplayer.com/'
