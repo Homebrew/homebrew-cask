@@ -7,6 +7,8 @@ cask 'brisync' do
   name 'Brisync'
   homepage 'https://github.com/czarny/Brisync/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Brisync.app'
 
   zap trash: '~/.brisync.json'
