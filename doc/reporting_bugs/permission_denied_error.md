@@ -1,4 +1,4 @@
-In this case, it’s likely you’re a standard user and don’t have permissions to write to `/Applications` (which is the default). You can use [`--appdir`](https://github.com/Homebrew/homebrew-cask/blob/master/USAGE.md#options) to choose where to install your applications.
+In this case, it’s likely your user account has no admin rights so you don’t have permissions to write to `/Applications` (which is the default). You can use [`--appdir`](https://github.com/Homebrew/homebrew-cask/blob/master/USAGE.md#options) to choose where to install your applications.
 
 If `--appdir` doesn’t fix the issue or you do have write permissions to `/Applications`, the problem may lie in the app bundle itself.
 
