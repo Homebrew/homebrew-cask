@@ -11,7 +11,7 @@ Fixing this error is typically easy, and requires only a bit of time on your par
 └─ README.md
 ```
 
-Now, let's look at the cask (`brew cask cat {{cask_name}}`:
+Now, let's look at the cask (`brew cask cat {{cask_name}}`):
 
 ```
 (…)
