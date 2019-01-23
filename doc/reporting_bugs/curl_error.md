@@ -1,4 +1,4 @@
-First, let's tackle a common problem: do you have a `.curlrc` file? Those are a frequent cause of issues of this nature. Before anything else, remove that file and try again. If it now works, do not open an issue. Incompatible `.curlrc` configurations must be fixed on your side.
+First, let's tackle a common problem: do you have a `.curlrc` file? Check with `ls -A ~ | grep .curlrc` (if you get a result, the file exists). Those are a frequent cause of issues of this nature. Before anything else, remove that file and try again. If it now works, do not open an issue. Incompatible `.curlrc` configurations must be fixed on your side.
 
 If, however, you do not have a `.curlrc` or removing it did not work, let’s see if the issue is upstream:
 
