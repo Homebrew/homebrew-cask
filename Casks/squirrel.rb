@@ -1,6 +1,6 @@
 cask 'squirrel' do
-  version '0.10.0'
-  sha256 '9eb07603a078cadd5475797432e578f366d0fa49f878b7f2f6b32336bfa5a258'
+  version '0.11.0'
+  sha256 '78f8294483d52f3f75831d6c5b669a7b39e743ce94b2c5b6d1c50406b80667b8'
 
   # dl.bintray.com/rime/squirrel was verified as official when first introduced to the cask
   url "https://dl.bintray.com/rime/squirrel/Squirrel-#{version}.zip"
