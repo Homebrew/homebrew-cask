@@ -1,4 +1,4 @@
-cask 'pharo-launcher' do
+cask 'pharolauncher' do
   version '1.5.1'
   sha256 'ecef3c2a475d5f79f7bbb5e3facabaf3aea68c935cb4479d9463d09e871e7d42'
 
