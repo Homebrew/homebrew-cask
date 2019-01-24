@@ -1,10 +1,10 @@
 cask 'pharo' do
-  version '7.0'
-  sha256 :no_check # required as upstream package is updated in-place
+  version '1.5.1'
+  sha256 'ecef3c2a475d5f79f7bbb5e3facabaf3aea68c935cb4479d9463d09e871e7d42'
 
-  url "https://files.pharo.org/get-files/#{version.no_dots}/pharo64-mac-stable.zip"
-  name 'Pharo'
-  homepage 'https://pharo.org/'
+  url "https://files.pharo.org/pharo-launcher/#{version}/PharoLauncher-#{version}-x64.dmg"
+  name 'Pharo Launcher'
+  homepage 'http://pharo.org/download'
 
-  app 'Pharo.app'
+  app 'PharoLauncher.app'
 end
