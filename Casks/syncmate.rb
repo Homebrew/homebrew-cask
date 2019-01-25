@@ -1,6 +1,6 @@
 cask 'syncmate' do
-  version '7.2.407'
-  sha256 'ff72287ce2199e2529d0a2f2cad7eb7c5ec2626553f0633d8cecc8a1f9c9dd46'
+  version '7.3.427'
+  sha256 '2057a4a851b2f693674754f72ae81053cfb7cda4a0525c799417ba918fa9ad9e'
 
   url "https://www.eltima.com/download/syncmate-update/SyncMate_#{version}.zip"
   appcast 'https://cdn.eltima.com/download/syncmate-update/syncmate6.xml'
