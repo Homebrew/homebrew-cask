@@ -5,7 +5,7 @@ cask 'ipswdownloader' do
   url "http://downloads.igrsoft.com/downloads/ipswDownloader/ipswDownloader_#{version.no_dots}.zip"
   appcast 'http://igrsoft.com/wp-content/iPhone/update.xml'
   name 'ipswDownloader'
-  homepage 'https://igrsoft.com/ipswdownloader/'
+  homepage 'http://igrsoft.com/ipswdownloader/'
 
   app 'ipswDownloader.app'
 end
