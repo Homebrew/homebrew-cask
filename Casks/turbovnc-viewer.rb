@@ -12,10 +12,10 @@ cask 'turbovnc-viewer' do
 
   uninstall pkgutil: 'com.virtualgl.turbovnc',
             script:  {
-                       executable: "/Applications/Uninstall TurboVNC.app/Contents/Resources/Scripts/main.scpt",
+                       executable: '/Applications/Uninstall TurboVNC.app/Contents/Resources/Scripts/main.scpt',
                        sudo:       true,
                      }
-  
+
   caveats do
     depends_on_java '8'
   end
