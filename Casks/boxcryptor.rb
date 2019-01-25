@@ -3,7 +3,7 @@ cask 'boxcryptor' do
   sha256 'd2f94dec6f14f3088de9bc146d4f220dae2aee604b325dfbdaa53e6be70e79ff'
 
   url "https://downloads.boxcryptor.com/boxcryptor/mac/Boxcryptor_v#{version}_Installer.dmg"
-  appcast 'https://rink.hockeyapp.net/api/2/apps/7fd6db3e51a977132e3b120c613eaea8'
+  appcast 'https://www.corecode.io/cgi-bin/check_urls/check_url_redirect.cgi?url=http://www.boxcryptor.com/l/download-macosx'
   name 'Boxcryptor'
   homepage 'https://www.boxcryptor.com/en/'
 
