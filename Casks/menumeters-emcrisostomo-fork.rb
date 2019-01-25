@@ -5,7 +5,7 @@ cask 'menumeters-emcrisostomo-fork' do
   # github.com/emcrisostomo/MenuMeters/releases/download/1.9.7%2Bemc/MenuMeters-1.9.7+emc.dmg was verified as official when first introduced to the cask
   url 'https://github.com/emcrisostomo/MenuMeters/releases/download/1.9.7%2Bemc/MenuMeters-1.9.7+emc.dmg'
   appcast 'https://github.com/emcrisostomo/MenuMeters/releases'
-  name 'Menumeters (emcrisostomo fork)'
+  name 'MenuMeters (emcrisostomo fork)'
   homepage 'https://emcrisostomo.github.io/MenuMeters/'
 
   pkg 'MenuMeters.pkg'
