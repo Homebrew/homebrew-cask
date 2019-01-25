@@ -4,7 +4,7 @@ cask 'airflow' do
 
   # amazonaws.com/Airflow was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/Airflow/Download/Airflow%20#{version}.zip"
-  appcast 'https://s3.amazonaws.com/Airflow/Updates/appcast-osx.xml'
+  appcast 'https://www.corecode.io/cgi-bin/check_urls/check_url_redirect.cgi?url=https://airflowapp.com/download/latest?mac'
   name 'Airflow'
   homepage 'https://airflowapp.com/'
 
