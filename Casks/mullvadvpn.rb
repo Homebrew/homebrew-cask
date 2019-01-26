@@ -8,7 +8,7 @@ cask 'mullvadvpn' do
   name 'Mullvad VPN'
   homepage 'https://mullvad.net/'
 
-  conflicts_with cask: 'mullvad-vpn-beta'
+  conflicts_with cask: 'mullvadvpn-beta'
 
   pkg "MullvadVPN-#{version}.pkg"
 
