@@ -1,5 +1,5 @@
 cask 'zulu' do
-  version '11.2.3,11.0.1'
+  version '11.29.3,11.0.2'
   sha256 '5e2364ae8e1f4d81b2253de3d52dee5701f8f7c31160fac2d23b4f1c371cff2b'
 
   url "https://cdn.azul.com/zulu/bin/zulu#{version.before_comma}-jdk#{version.after_comma}-macosx_x64.dmg",
