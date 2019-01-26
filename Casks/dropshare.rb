@@ -16,6 +16,6 @@ cask 'dropshare' do
                "~/Library/Caches/net.mkswap.Dropshare#{version.major}",
                "~/Library/Cookies/net.mkswap.Dropshare#{version.major}.binarycookies",
                "~/Library/Logs/Dropshare #{version.major}",
-               '~/Library/Preferences/net.mkswap.Dropshare5.plist',
+               "~/Library/Preferences/net.mkswap.Dropshare#{version.major}.plist",
              ]
 end
