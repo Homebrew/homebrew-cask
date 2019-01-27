@@ -4,7 +4,7 @@ cask 'figtree' do
 
   # github.com/rambaut/figtree/ was verified as official when first introduced to the cask
   url "https://github.com/rambaut/figtree/releases/download/v#{version}/FigTree.v#{version}.dmg"
-  appcast 'https://github.com/rambaut/figtree/releases'
+  appcast 'https://github.com/rambaut/figtree/releases.atom'
   name 'FigTree'
   homepage 'http://tree.bio.ed.ac.uk/software/figtree/'
 
