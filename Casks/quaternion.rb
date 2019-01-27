@@ -1,6 +1,6 @@
 cask 'quaternion' do
   version '0.0.9.3'
-  sha256 '5261f10b84900a914c697dd48a229accbff8207acb71f90fde882a8716341a3e'
+  sha256 '5e88aba4e1ea13a202412452e5b35dd64c917952f4bed23bd1f178702957d281'
 
   url "https://github.com/QMatrixClient/Quaternion/releases/download/v#{version}/quaternion_macos.zip"
   appcast 'https://github.com/QMatrixClient/Quaternion/releases.atom'
