@@ -6,7 +6,7 @@ cask 'heaven' do
   name 'Heaven Benchmark'
   homepage 'https://benchmark.unigine.com/heaven'
 
-  depends_on macos: '>= mountain_lion'
+  depends_on macos: '>= :mavericks'
 
   app 'Heaven.app'
 
