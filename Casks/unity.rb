@@ -7,7 +7,7 @@ cask 'unity' do
   name 'Unity Editor'
   homepage 'https://unity3d.com/unity/'
 
-  pkg 'Unity-#{version.before_comma}.pkg'
+  pkg "Unity-#{version.before_comma}.pkg"
 
   uninstall quit:    'com.unity3d.UnityEditor5.x',
             pkgutil: 'com.unity3d.UnityEditor5.x',
