@@ -22,7 +22,7 @@ cask 'minecraft-server' do
     IO.write shimscript, <<~EOS
       #!/bin/sh
       cd '#{config_dir}' && \
-        exec /usr/bin/java -Xmx1024M -Xms1024M -jar '#{staged_path}/server.jar' nogui
+        exec /usr/bin/java ${@:--Xms1024M -Xmx1024M} -jar '#{staged_path}/server.jar' nogui
     EOS
   end
 
