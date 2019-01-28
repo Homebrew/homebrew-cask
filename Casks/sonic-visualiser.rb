@@ -8,5 +8,7 @@ cask 'sonic-visualiser' do
   name 'Sonic Visualiser'
   homepage 'https://www.sonicvisualiser.org/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Sonic Visualiser.app'
 end
