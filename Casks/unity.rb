@@ -11,6 +11,5 @@ cask 'unity' do
 
   uninstall quit:    'com.unity3d.UnityEditor5.x',
             pkgutil: 'com.unity3d.UnityEditor5.x',
-            delete:  '/Applications/Unity/Unity.app',
-            rmdir:   '/Applications/Unity'
+            delete:  '/Applications/Unity'
 end
