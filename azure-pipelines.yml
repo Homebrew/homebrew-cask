@@ -13,6 +13,8 @@ jobs:
         export HOMEBREW_NO_AUTO_UPDATE=1
         # Using brew update-reset and restricting directories is quicker/more robust than brew update
         brew update-reset "$(brew --repository)"
+        # TEMPORARY: Overwrite brewcask-ci.rb with my version since the changes are not merged yet
+        cp -f "$(Build.SourcesDirectory)/cmd/brewcask-ci.rb" "$(brew --repository)/Library/Taps/homebrew/homebrew-cask/cmd/"
         # Mirror the repo as a tap.
         TAP_DIR="$(brew --repository)/Library/Taps/$(Build.Repository.Name)"
         mkdir -p "${TAP_DIR}"
