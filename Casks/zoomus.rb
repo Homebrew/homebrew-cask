@@ -11,6 +11,10 @@ cask 'zoomus' do
 
   pkg 'zoomusInstaller.pkg'
 
+  postflight do
+    set_ownership '~/Library/Application Support/zoom.us'
+  end
+
   uninstall delete: '/Applications/zoom.us.app',
             quit:   'us.zoom.ZoomOpener',
             signal: [
