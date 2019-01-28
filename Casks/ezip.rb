@@ -5,7 +5,7 @@ cask 'ezip' do
   url "https://cdn.awehunt.com/ezip/release/eZip_V#{version}.dmg"
   appcast 'https://ezip.awehunt.com/'
   name 'ezip'
-  homepage 'http://ezip.awehunt.com/'
+  homepage 'https://ezip.awehunt.com/'
 
   app 'eZip.app'
 
