@@ -8,7 +8,5 @@ cask 'ezip' do
 
   app 'eZip.app'
 
-  zap trash: [
-               '~/Library/Containers/com.jinghaoshe.ezip',
-             ]
+  zap trash: '~/Library/Containers/com.jinghaoshe.ezip'
 end
