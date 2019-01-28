@@ -9,9 +9,7 @@ cask 'enpass' do
 
   pkg "Enpass.pkg"
   
-  uninstall pkgutil:    [
-                          'in.sinew.Enpass-Desktop.App',
-                        ]
+  uninstall pkgutil: 'in.sinew.Enpass-Desktop.App'
 
   zap trash: [
                '~/Library/Caches/com.plausiblelabs.crashreporter.data/in.sinew.Enpass-Desktop',
