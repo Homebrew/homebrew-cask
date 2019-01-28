@@ -1,0 +1,22 @@
+jobs:
+- job: macOS
+  pool:
+    vmImage: macOS-10.13
+  steps:
+    - bash: |
+        # Force strict error checking.
+        set -o errexit
+        set -o pipefail
+        # set env
+        export HOMEBREW_COLOR=1
+        export HOMEBREW_DEVELOPER=1
+        export HOMEBREW_NO_AUTO_UPDATE=1
+        # Using brew update-reset and restricting directories is quicker/more robust than brew update
+        brew update-reset "$(brew --repository)"
+        # Mirror the repo as a tap.
+        TAP_DIR="$(brew --repository)/Library/Taps/$(Build.Repository.Name)"
+        mkdir -p "${TAP_DIR}"
+        rsync --archive --compress --delete "$(Build.SourcesDirectory)/" "${TAP_DIR}/"
+        cd "${TAP_DIR}"
+        brew cask ci
+      displayName: Run brew cask ci
