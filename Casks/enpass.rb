@@ -7,7 +7,7 @@ cask 'enpass' do
   name 'Enpass'
   homepage 'https://www.enpass.io/'
 
-  pkg "Enpass.pkg"
+  pkg 'Enpass.pkg'
   
   uninstall pkgutil: 'in.sinew.Enpass-Desktop.App'
 
