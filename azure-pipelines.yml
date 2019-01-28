@@ -17,6 +17,7 @@ jobs:
         cp -f "$(Build.SourcesDirectory)/cmd/brewcask-ci.rb" "$(brew --repository)/Library/Taps/homebrew/homebrew-cask/cmd/"
         # Mirror the repo as a tap.
         TAP_DIR="$(brew --repository)/Library/Taps/$(Build.Repository.Name)"
+        echo "DEBUG: TAP_DIR is ${TAP_DIR}"
         mkdir -p "${TAP_DIR}"
         rsync --archive --compress --delete "$(Build.SourcesDirectory)/" "${TAP_DIR}/"
         cd "${TAP_DIR}"

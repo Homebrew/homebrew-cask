@@ -37,6 +37,9 @@ module Cask
         else
           @commit_range = "#{current_commit_hash}...#{current_commit_hash}"
         end
+        puts "DEBUG: SYSTEM_PULLREQUEST_TARGETBRANCH is #{ENV["SYSTEM_PULLREQUEST_TARGETBRANCH"]}"
+        puts "DEBUG: BUILD_SOURCEVERSION is #{ENV["BUILD_SOURCEVERSION"]}"
+        puts "DEBUG: @commit_range is #{@commit_range}"
 
         ruby_files_in_wrong_directory = modified_ruby_files - (modified_cask_files + modified_command_files)
 
