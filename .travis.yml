@@ -48,13 +48,12 @@ install:
     export TRAVIS_BUILD_DIR="${TAP_DIR}"
     builtin cd "${TRAVIS_BUILD_DIR}"
 
-script: brew cask ci
+script: 
+  - brew cask ci
+  - cd formulae.brew.sh && rake
 
 before_script:
   - travis_retry git clone https://$GITHUB_TOKEN@github.com/Homebrew/formulae.brew.sh
-
-after_script:
-  - cd formulae.brew.sh && rake
 
 notifications:
   email: false
