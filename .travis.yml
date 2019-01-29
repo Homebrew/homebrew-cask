@@ -50,5 +50,11 @@ install:
 
 script: brew cask ci
 
+before_script:
+  - travis_retry git clone https://$GITHUB_TOKEN@github.com/Homebrew/formulae.brew.sh
+
+after_script:
+  - cd formulae.brew.sh && rake
+
 notifications:
   email: false
