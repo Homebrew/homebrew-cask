@@ -1,6 +1,6 @@
 cask 'greenfoot' do
-  version '3.5.2'
-  sha256 'a94184dfd2e344bfabcb3bd561ec0a5126205575cd34f247c8ca2f2fba63a29b'
+  version '3.5.3'
+  sha256 'c0ae05267c4493f067a103ac7eb4e6ad045279e0180d9b32907dfa9b61eab08e'
 
   url "https://www.greenfoot.org/download/files/Greenfoot-mac-#{version.no_dots}.zip"
   name 'Greenfoot'
