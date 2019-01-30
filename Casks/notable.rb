@@ -1,6 +1,6 @@
 cask 'notable' do
-  version '1.2.0'
-  sha256 '81d3f13e37d15730c78f100a5bae790a9ae62cdde1b0cb41bcdcacf4e942f7af'
+  version '1.3.0'
+  sha256 '366bd5b1066040dde0826defb1e857f810b8728b64a36b742bf49342b0528c8a'
 
   url "https://github.com/fabiospampinato/notable/releases/download/v#{version}/Notable-#{version}.dmg"
   appcast 'https://github.com/fabiospampinato/notable/releases.atom'
