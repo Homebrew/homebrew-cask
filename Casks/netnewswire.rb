@@ -8,7 +8,7 @@ cask 'netnewswire' do
   homepage 'https://ranchero.com/netnewswire/'
 
   auto_updates true
-  depends_on macos: '>= :high_sierra'
+  depends_on macos: '>= :mojave'
 
   app 'NetNewsWire.app'
 end
