@@ -1,6 +1,6 @@
 cask 'react-studio' do
-  version '1.5.7,344'
-  sha256 '455ebcb6f40f05c36eba24f04f719d36db5c56322f17be0ee33803de8036dc1d'
+  version '1.5.8,348'
+  sha256 'd1dcf276bd29e640dec3704fdf53dbd774db3c9c90e82a7b00f69417510bdbce'
 
   # s3.amazonaws.com/sc.neonto.com was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/sc.neonto.com/ReactStudio_v#{version.before_comma.no_dots}_build#{version.after_comma}.zip"
