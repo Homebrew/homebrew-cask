@@ -1,6 +1,6 @@
 cask 'emercoin' do
-  version '0.7.2'
-  sha256 'c7e21b3aad29d7999a978b40f5244b7fc6099a9aa9b91abe8037f5152b628b06'
+  version '0.7.4'
+  sha256 'f4a29487d8c56411ad1d24f1ac56506c7fb78897495e401c699bf40a94df6cab'
 
   # sourceforge.net/emercoin was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/emercoin/emercoin-#{version}-osx.dmg"
