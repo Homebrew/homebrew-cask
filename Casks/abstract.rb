@@ -1,6 +1,6 @@
 cask 'abstract' do
-  version '76.0.0'
-  sha256 '308800d1048ba647993664a2b62fa2484fbe4103ef6703cd938b8c54da238b34'
+  version '76.1.0'
+  sha256 '65a815c9e3a7cbabf85a971e760af5df4699ceb5275489439819c1b487421eef'
 
   url "https://downloads.goabstract.com/Abstract-#{version}.dmg"
   name 'Abstract'
