@@ -14,4 +14,8 @@ cask 'foobarplus' do
                '~/Library/Caches/com.weirdrocketeer.FoobarPlus',
                '~/Library/Preferences/com.weirdrocketeer.FoobarPlus.plist',
              ]
+
+  caveats do
+    discontinued
+  end
 end
