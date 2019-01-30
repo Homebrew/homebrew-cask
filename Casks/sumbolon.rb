@@ -10,4 +10,8 @@ cask 'sumbolon' do
   auto_updates true
 
   app 'Sumbolon.app'
+
+  caveats do
+    discontinued
+  end
 end
