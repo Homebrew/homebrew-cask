@@ -2,7 +2,7 @@ cask 'tankix' do
   version 'visual2-35233'
   sha256 'f2b4ee9c243c7a5a0017c50ed6da98a6eb98850f37c0bb610c36653011056c85'
 
-  url "https://static.tankix.com/app/StandaloneOSXIntel64/#{version}/TankiX.dmg"
+  url "http://static.tankix.com/app/StandaloneOSXIntel64/#{version}/TankiX.dmg"
   name 'Tanki X'
   homepage 'https://tankix.com/'
 
