@@ -26,16 +26,19 @@ module Cask
           "git", args: ["rev-parse", "--short", "HEAD"]
         ).stdout.strip
 
-        if ENV.key?("TRAVIS_COMMIT_RANGE")
-          @commit_range = ENV["TRAVIS_COMMIT_RANGE"]
-        elsif ENV.key?("SYSTEM_PULLREQUEST_TARGETBRANCH") && ENV.key?("BUILD_SOURCEVERSION")
-          start_commit_hash = system_command!(
-            "git", args: ["rev-parse", "--short", ENV["SYSTEM_PULLREQUEST_TARGETBRANCH"]]
-          ).stdout.strip
-          @commit_range = "#{start_commit_hash}...#{current_commit_hash}"
-        else
-          @commit_range = "#{current_commit_hash}...#{current_commit_hash}"
-        end
+        @commit_range =
+          if ENV.key?("TRAVIS_COMMIT_RANGE")
+            # Travis CI
+            ENV["TRAVIS_COMMIT_RANGE"]
+          elsif ENV.key?("SYSTEM_PULLREQUEST_TARGETBRANCH") && ENV.key?("BUILD_SOURCEVERSION")
+            # Azure Pipelines
+            start_commit_hash = system_command!(
+              "git", args: ["rev-parse", "--short", ENV["SYSTEM_PULLREQUEST_TARGETBRANCH"]]
+            ).stdout.strip
+            "#{start_commit_hash}...#{current_commit_hash}"
+          else
+            "#{current_commit_hash}...#{current_commit_hash}"
+          end
         puts "DEBUG: SYSTEM_PULLREQUEST_TARGETBRANCH is #{ENV["SYSTEM_PULLREQUEST_TARGETBRANCH"]}"
         puts "DEBUG: BUILD_SOURCEVERSION is #{ENV["BUILD_SOURCEVERSION"]}"
         puts "DEBUG: @commit_range is #{@commit_range}"
