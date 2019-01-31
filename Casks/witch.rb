@@ -1,6 +1,6 @@
 cask 'witch' do
-  version '4.3.1'
-  sha256 'c9c7bea5b15fd93a1766d4fd5be22c8c92e055325ce310cee2ede2b019250ad3'
+  version '4.3.2'
+  sha256 'cbd7305fff9ef2d2c0c274c5a727bbb801688e21b0969fc132c736655e48821f'
 
   url 'https://manytricks.com/download/witch'
   appcast 'https://manytricks.com/witch/appcast.xml'
