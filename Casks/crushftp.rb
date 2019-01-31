@@ -6,7 +6,7 @@ cask 'crushftp' do
   name 'CrushFTP9'
   homepage 'https://www.crushftp.com/'
 
-  app 'CrushFTP9_OSX/CrushFTP7.app'
+  app 'CrushFTP9_OSX/CrushFTP9.app'
 
   caveats do
     depends_on_java
