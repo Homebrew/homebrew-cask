@@ -7,6 +7,7 @@ jobs:
         # Force strict error checking.
         set -o errexit
         set -o pipefail
+        set -o nounset
         # set env
         export HOMEBREW_COLOR=1
         export HOMEBREW_DEVELOPER=1
