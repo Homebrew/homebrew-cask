@@ -9,6 +9,18 @@ matrix:
       rvm: system
   fast_finish: true
 
+deploy:
+  local-dir: formulae.brew.sh
+  repo: Homebrew/formulae.brew.sh
+  target-branch: master
+  verbose: true
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  on:
+    all_branches: true
+
 branches:
   only:
     - master
@@ -48,12 +60,12 @@ install:
     export TRAVIS_BUILD_DIR="${TAP_DIR}"
     builtin cd "${TRAVIS_BUILD_DIR}"
 
+before_script:
+  - travis_retry git clone https://$GITHUB_TOKEN@github.com/Homebrew/formulae.brew.sh
+
 script: 
   - brew cask ci
   - cd formulae.brew.sh && rake
-
-before_script:
-  - travis_retry git clone https://$GITHUB_TOKEN@github.com/Homebrew/formulae.brew.sh
 
 notifications:
   email: false
