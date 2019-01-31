@@ -25,10 +25,9 @@ module Cask
         current_commit_hash = system_command!(
           "git", args: ["rev-parse", "--short", "HEAD"]
         ).stdout.strip
-        # Use Travis CI Git variables
+
         if ENV.key?("TRAVIS_COMMIT_RANGE")
           @commit_range = ENV["TRAVIS_COMMIT_RANGE"]
-        # Use Azure Pipeline variables
         elsif ENV.key?("SYSTEM_PULLREQUEST_TARGETBRANCH") && ENV.key?("BUILD_SOURCEVERSION")
           start_commit_hash = system_command!(
             "git", args: ["rev-parse", "--short", ENV["SYSTEM_PULLREQUEST_TARGETBRANCH"]]
