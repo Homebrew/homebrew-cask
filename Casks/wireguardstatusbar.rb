@@ -7,5 +7,7 @@ cask 'wireguardstatusbar' do
   name 'WireGuard Status Bar'
   homepage 'https://github.com/aequitas/macos-menubar-wireguard'
 
+  depends_on formula: 'wireguard-tools'
+
   app 'WireGuardStatusbar.app'
 end
