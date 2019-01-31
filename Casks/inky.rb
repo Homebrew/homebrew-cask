@@ -1,4 +1,4 @@
-cask 'inkle-inky' do
+cask 'inky' do
   version '0.10.0b'
   sha256 '5c790eda5f2335372a4d92551ad9915bc1eb0b2daad4cb5259b3b289adb50398'
 
