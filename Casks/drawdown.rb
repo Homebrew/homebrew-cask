@@ -10,4 +10,8 @@ cask 'drawdown' do
   auto_updates true
 
   app 'DrawDown.app'
+
+  caveats do
+    discontinued
+  end
 end
