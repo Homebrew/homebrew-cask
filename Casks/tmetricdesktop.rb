@@ -6,7 +6,7 @@ cask 'tmetricdesktop' do
   name 'TMetric'
   homepage 'https://tmetric.com/'
 
-  pkg 'tmetric_desktop_#{version}.pkg'
+  pkg "tmetric_desktop_#{version}.pkg"
 
   uninstall delete: '/Applications/TMetricDesktop'
 end
