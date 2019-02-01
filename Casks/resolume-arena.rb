@@ -1,6 +1,6 @@
 cask 'resolume-arena' do
-  version '6.1.2,62447'
-  sha256 '8bc73f4fe19c0c338f0258e1f1168fb5173ce7feab56405de3764ac6071f72e6'
+  version '6.1.2,62522'
+  sha256 '17248656d9f04f57fed402da304dc0d942b6591a444f3a0149f2c5edbf83cc95'
 
   url "https://resolume.com/download/Resolume_Arena_#{version.major_minor_patch.dots_to_underscores}_rev_#{version.after_comma}_Installer.dmg"
   appcast 'https://resolume.com/update/arena_mac.xml'
