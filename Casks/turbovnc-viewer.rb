@@ -12,7 +12,8 @@ cask 'turbovnc-viewer' do
 
   uninstall pkgutil: 'com.virtualgl.turbovnc',
             script:  {
-                       executable: '/Applications/Uninstall TurboVNC.app/Contents/Resources/Scripts/main.scpt',
+                       executable: 'osascript',
+                       args:       ['/Applications/Uninstall TurboVNC.app/Contents/Resources/Scripts/main.scpt'],
                        sudo:       true,
                      }
 
