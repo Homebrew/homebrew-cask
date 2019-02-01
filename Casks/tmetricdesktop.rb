@@ -8,7 +8,7 @@ cask 'tmetricdesktop' do
 
   pkg "tmetric_desktop_#{version}.pkg"
 
-  uninstall signal: ['TERM', 'com.company.TMetricDesktop'],
-  			pkgutil: 'com.company.TMetricDesktop',
-  			delete: '/Applications/TMetricDesktop'
+  uninstall signal:  ['TERM', 'com.company.TMetricDesktop'],
+            pkgutil: 'com.company.TMetricDesktop',
+            delete:  '/Applications/TMetricDesktop'
 end
