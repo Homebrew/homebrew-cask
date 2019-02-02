@@ -8,5 +8,4 @@ cask 'pdfwordcounter' do
   homepage 'https://github.com/ezgranet/pdfwordcounter'
 
   app 'pdfwordcounter.app'
-
 end
