@@ -10,5 +10,5 @@ cask 'fractal-bot' do
 
   uninstall pkgutil: 'com.fractalaudio.fractalAudioSystemsFractalbot.Fractal-Bot.pkg'
 
-  zap trash: ['~/Library/Application Support/Fractal Audio/Fractal-Bot']
+  zap trash: '~/Library/Application Support/Fractal Audio/Fractal-Bot'
 end
