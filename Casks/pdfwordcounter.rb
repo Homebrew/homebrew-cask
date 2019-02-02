@@ -6,7 +6,7 @@ cask 'pdfwordcounter' do
   appcast 'https://github.com/ezgranet/pdfwordcounter/releases.atom'
   name 'pdfwordcounter'
   homepage 'https://github.com/ezgranet/pdfwordcounter'
-  
+
   app 'pdfwordcounter.app'
 
 end
