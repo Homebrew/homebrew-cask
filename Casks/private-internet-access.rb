@@ -10,5 +10,11 @@ cask 'private-internet-access' do
                       executable: "#{staged_path}/Private Internet Access Installer.app/Contents/MacOS/pia-installer",
                       sudo:       true,
                     }
+  postflight do
+    set_ownership '~/.pia_manager'
+  end
+
+  zap trash: '~/.pia_manager'
+
 
 end
