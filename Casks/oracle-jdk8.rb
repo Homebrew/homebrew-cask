@@ -12,7 +12,7 @@ cask 'oracle-jdk8' do
   # auto_updates true: JDK does not auto-update
   depends_on macos: '>= :yosemite'
 
-  pkg "JDK 8 Update 202.pkg"
+  pkg 'JDK 8 Update 202.pkg'
 
   postflight do
     system_command '/bin/ln',
