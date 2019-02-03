@@ -29,7 +29,7 @@ cask 'oracle-jdk8' do
                    sudo: true
   end
 
-  uninstall pkgutil: "com.oracle.jdk-#{version.before_comma}",
+  uninstall pkgutil: "com.oracle.jdk#{version.before_comma}",
             delete:  [
                        "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents",
                        '/Library/Java/Home',
