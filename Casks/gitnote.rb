@@ -1,6 +1,6 @@
 cask 'gitnote' do
-  version '3.0.0'
-  sha256 '377e66e856f0466e8348c72a49f7b28f4950fae10785b42b317b5a3eb911cb7d'
+  version '3.0.1'
+  sha256 '828a2ea51842633262a5a6d26cbf824d4a002b3ea17d295db231797de96574d0'
 
   # github.com/zhaopengme/gitnote was verified as official when first introduced to the cask
   url "https://github.com/zhaopengme/gitnote/releases/download/#{version}/GitNote_setup_#{version}.dmg"
