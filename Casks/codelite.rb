@@ -4,7 +4,6 @@ cask 'codelite' do
 
   url 'https://downloads.codelite.org/downloads.php?osx'
   appcast 'https://github.com/eranif/codelite/releases.atom'
-
   name 'CodeLite'
   homepage 'https://codelite.org/'
 
