@@ -1,6 +1,6 @@
 cask 'processing' do
-  version '3.5.2'
-  sha256 '652bbbfbb889328275bbcddc230f165e31845cb9464b27fc22b4f948f7f93c16'
+  version '3.5.3'
+  sha256 'c3156d91e341e1982daf5b95fa9872fbf9b40c50237f270ef714162f88c168b5'
 
   url "http://download.processing.org/processing-#{version}-macosx.zip"
   appcast 'https://github.com/processing/processing/releases.atom'
