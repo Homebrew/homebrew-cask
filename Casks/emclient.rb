@@ -10,7 +10,7 @@ cask 'emclient' do
 
   pkg 'setup.pkg'
 
-  uninstall pkgutil: 'com.emclient.mail.client'
+  uninstall pkgutil: 'com.emclient.mail.client.pkg'
 
   zap trash: [
                '~/Library/Caches/com.emclient.mail.client',
