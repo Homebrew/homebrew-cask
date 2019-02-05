@@ -9,6 +9,8 @@ cask 'seaglass' do
   homepage 'https://neilalexander.eu/seaglass/'
 
   auto_updates true
-
+  
+  depends_on macos: '>= :high_sierra'
+  
   app 'Seaglass.app'
 end
