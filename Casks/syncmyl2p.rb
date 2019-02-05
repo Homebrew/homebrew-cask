@@ -8,5 +8,5 @@ cask 'syncmyl2p' do
   name 'Sync-my-L2P'
   homepage 'https://www.syncmyl2p.de/'
 
-  app 'SyncMyL2P.app'
+  app 'Sync-my-L2P.app'
 end
