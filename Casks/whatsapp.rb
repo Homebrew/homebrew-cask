@@ -8,7 +8,6 @@ cask 'whatsapp' do
   homepage 'https://www.whatsapp.com/'
 
   auto_updates true
-  depends_on macos: '>= :mavericks'
 
   app 'WhatsApp.app'
 

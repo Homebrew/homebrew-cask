@@ -8,7 +8,5 @@ cask 'hachidori' do
   name 'Hachidori'
   homepage 'https://hachidori.ateliershiori.moe/'
 
-  depends_on macos: '>= :mavericks'
-
   app 'Hachidori.app'
 end

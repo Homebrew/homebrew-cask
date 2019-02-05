@@ -7,7 +7,5 @@ cask 'ctivo' do
   name 'cTiVo'
   homepage 'https://github.com/dscottbuch/cTiVo'
 
-  depends_on macos: '>= :mavericks'
-
   app 'cTiVo.app'
 end

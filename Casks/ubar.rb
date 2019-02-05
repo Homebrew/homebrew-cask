@@ -7,8 +7,6 @@ cask 'ubar' do
   name 'uBar'
   homepage 'https://brawersoftware.com/products/ubar'
 
-  depends_on macos: '>= :mavericks'
-
   app 'uBar.app'
 
   zap trash: [

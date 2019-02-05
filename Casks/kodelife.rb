@@ -8,7 +8,6 @@ cask 'kodelife' do
   homepage 'https://hexler.net/software/kodelife'
 
   auto_updates true
-  depends_on macos: '>= :mavericks'
 
   app 'KodeLife.app'
 end

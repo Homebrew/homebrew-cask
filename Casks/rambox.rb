@@ -8,8 +8,6 @@ cask 'rambox' do
   name 'Rambox'
   homepage 'https://rambox.pro/'
 
-  depends_on macos: '>= :mavericks'
-
   app 'Rambox.app'
 
   uninstall login_item: 'Rambox'

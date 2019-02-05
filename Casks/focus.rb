@@ -7,8 +7,6 @@ cask 'focus' do
   name 'Focus'
   homepage 'https://heyfocus.com/'
 
-  depends_on macos: '>= :mavericks'
-
   app 'Focus.app'
 
   uninstall quit: 'BradJasper.focus'

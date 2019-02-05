@@ -8,7 +8,6 @@ cask 'openzfs' do
 
   # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.
   depends_on macos: [
-                      :mavericks,
                       :yosemite,
                       :el_capitan,
                       :sierra,
@@ -16,9 +15,7 @@ cask 'openzfs' do
                       :mojave,
                     ]
 
-  if MacOS.version == :mavericks
-    pkg "OpenZFS on OS X #{version.before_comma} Mavericks.pkg"
-  elsif MacOS.version == :yosemite
+  if MacOS.version == :yosemite
     pkg "OpenZFS on OS X #{version.before_comma} Yosemite.pkg"
   elsif MacOS.version == :el_capitan
     pkg "OpenZFS on OS X #{version.before_comma} El Capitan.pkg"

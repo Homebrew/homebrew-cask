@@ -9,7 +9,6 @@ cask 'devonagent' do
   homepage 'https://www.devontechnologies.com/products/devonagent/devonagent-pro.html'
 
   auto_updates true
-  depends_on macos: '>= :mavericks'
 
   app 'DEVONagent.app'
 end

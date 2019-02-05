@@ -1,8 +1,5 @@
 cask 'monolingual' do
-  if MacOS.version <= :mavericks
-    version '1.5.10'
-    sha256 '2dd4d1164ced9c6ff431eb99db12e46faa10747c7753ed3889d6df493ee096a5'
-  elsif MacOS.version <= :yosemite
+  if MacOS.version <= :yosemite
     version '1.6.7'
     sha256 'c96175ef35aae6409f760e6c1f70e7cc47d45ab2b769c3238b4a4d979d13756b'
   elsif MacOS.version <= :el_capitan

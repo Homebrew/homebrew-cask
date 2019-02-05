@@ -1,8 +1,5 @@
 cask 'mailfollowup' do
-  if MacOS.version <= :mavericks
-    version '1.6.5'
-    sha256 '45d8a2f1791a517e40bd63ecbc67afc6dae70287f6e04f810b452b2e90097f42'
-  elsif MacOS.version <= :yosemite
+  if MacOS.version <= :yosemite
     version '1.7.3'
     sha256 '1fe25c718b71e7a8b164058c5638c7e0ffc4a24c35a97daf53221c2543593fd4'
   elsif MacOS.version <= :el_capitan
