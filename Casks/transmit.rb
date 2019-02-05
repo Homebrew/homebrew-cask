@@ -1,6 +1,6 @@
 cask 'transmit' do
-  version '5.2.2'
-  sha256 '95cbb246e160ed55fa1c5e33e1a764adec10e85116f925dec677604685a8d164'
+  version '5.2.3'
+  sha256 '38560b34de23a73ccf21c32f24dc92eba47928450e53b47739e74c1dd8a49809'
 
   url "https://www.panic.com/transmit/d/Transmit%20#{version}.zip"
   appcast "https://library.panic.com/releasenotes/transmit#{version.major}/"
