@@ -1,4 +1,4 @@
-cask 'syncmyl2p' do
+cask 'sync-my-l2p' do
   version '2.4.0'
   sha256 '175459183db212c63b168a64a399a275c7d5957abb463336f18364b3ab4744ee'
 
