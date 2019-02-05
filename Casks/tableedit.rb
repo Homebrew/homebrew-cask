@@ -1,6 +1,6 @@
 cask 'tableedit' do
-  version '1.4.1'
-  sha256 'dce8e60e941a8761dcce189270f7fdb4da9710efb628f96d59240d16249b8cfe'
+  version '1.4.2'
+  sha256 '99250dcced22ae67ef01773342b40095f58dc963c296dded85f6cc98058e812e'
 
   url "https://www.corecode.io/downloads/tableedit_#{version}.zip"
   appcast 'https://www.corecode.io/tableedit/tableedit.xml'
