@@ -15,6 +15,7 @@ Notice an application that's out-of-date in Homebrew Cask? In most cases, it's v
 
 ```bash
 # install and setup script - only needed once
+brew tap vitorgalvao/tiny-scripts
 brew install vitorgalvao/tiny-scripts/cask-repair
 cask-repair --help
 
