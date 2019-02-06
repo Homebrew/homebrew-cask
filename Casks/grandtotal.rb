@@ -7,7 +7,5 @@ cask 'grandtotal' do
   name 'GrandTotal'
   homepage "https://www.mediaatelier.com/GrandTotal#{version.major}/"
 
-  depends_on macos: '>= :mavericks'
-
   app 'GrandTotal.app'
 end

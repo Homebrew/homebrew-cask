@@ -8,8 +8,6 @@ cask 'blockblock' do
   name 'BlockBlock'
   homepage 'https://objective-see.com/products/blockblock.html'
 
-  depends_on macos: '>= :mavericks'
-
   installer script: {
                       executable: "#{staged_path}/BlockBlock Installer.app/Contents/MacOS/BlockBlock",
                       args:       ['-install'],

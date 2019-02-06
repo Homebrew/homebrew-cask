@@ -7,8 +7,6 @@ cask 'astropad' do
   name 'Astropad'
   homepage 'https://astropad.com/'
 
-  depends_on macos: '>= :mavericks'
-
   app 'Astropad.app'
 
   uninstall quit: 'com.astro-hq.AstropadMac'

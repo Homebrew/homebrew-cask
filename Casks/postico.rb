@@ -8,8 +8,6 @@ cask 'postico' do
   name 'Postico'
   homepage 'https://eggerapps.at/postico/'
 
-  depends_on macos: '>= :mavericks'
-
   app 'Postico.app'
 
   zap trash: [

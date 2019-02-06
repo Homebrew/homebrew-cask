@@ -8,7 +8,6 @@ cask 'cryptobridge' do
   homepage 'https://github.com/CryptoBridge/cryptobridge-ui'
 
   auto_updates true
-  depends_on macos: '>= :mavericks'
 
   app 'CryptoBridge.app'
 end

@@ -9,7 +9,6 @@ cask 'atom' do
   homepage 'https://atom.io/'
 
   auto_updates true
-  depends_on macos: '>= :mavericks'
 
   app 'Atom.app'
   binary "#{appdir}/Atom.app/Contents/Resources/app/apm/bin/apm"
