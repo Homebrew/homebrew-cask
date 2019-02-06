@@ -8,6 +8,6 @@ cask 'findergo' do
   homepage 'https://github.com/onmyway133/FinderGo'
 
   depends_on macos: '>= :sierra'
-  
+
   app 'FinderGo.app'
 end
