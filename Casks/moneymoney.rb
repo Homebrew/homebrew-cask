@@ -7,5 +7,7 @@ cask 'moneymoney' do
   name 'MoneyMoney'
   homepage 'https://moneymoney-app.com/'
 
+  auto_updates true
+
   app 'MoneyMoney.app'
 end
