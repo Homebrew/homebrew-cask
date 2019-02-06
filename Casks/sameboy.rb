@@ -7,6 +7,8 @@ cask 'sameboy' do
   appcast 'https://github.com/LIJI32/SameBoy/releases.atom'
   name 'SameBoy'
   homepage 'https://sameboy.github.io/'
+  
+  depends_on macos: '>= :sierra'
 
   app 'SameBoy.app'
 end
