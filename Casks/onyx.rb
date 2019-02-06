@@ -27,14 +27,7 @@ cask 'onyx' do
   homepage 'https://www.titanium-software.fr/en/onyx.html'
 
   # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.
-  depends_on macos: [
-                      :mavericks,
-                      :yosemite,
-                      :el_capitan,
-                      :sierra,
-                      :high_sierra,
-                      :mojave,
-                    ]
+  depends_on macos: '<= :mojave'
 
   app 'OnyX.app'
 
