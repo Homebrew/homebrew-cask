@@ -8,7 +8,6 @@ cask 'typora' do
   homepage 'https://typora.io/'
 
   auto_updates true
-  depends_on macos: '>= :mavericks'
 
   app 'Typora.app'
 

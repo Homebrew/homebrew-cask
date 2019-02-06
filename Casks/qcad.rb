@@ -12,7 +12,5 @@ cask 'qcad' do
   name 'QCAD'
   homepage 'https://www.qcad.org/'
 
-  depends_on macos: '>= :mavericks'
-
   app 'QCAD.app'
 end

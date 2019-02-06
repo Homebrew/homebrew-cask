@@ -9,7 +9,6 @@ cask 'graphicconverter' do
   homepage 'https://www.lemkesoft.de/en/products/graphicconverter/'
 
   auto_updates true
-  depends_on macos: '>= :mavericks'
 
   app "GraphicConverter #{version.major}.app"
 end

@@ -7,8 +7,6 @@ cask 'youku' do
   name '优酷'
   homepage 'https://pd.youku.com/pc'
 
-  depends_on macos: '>= :mavericks'
-
   app '优酷.app'
 
   zap trash: [

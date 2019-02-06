@@ -7,7 +7,6 @@ cask 'adobe-connect' do
   homepage 'https://www.adobe.com/products/adobeconnect.html'
 
   auto_updates true
-  depends_on macos: '>= :mavericks'
 
   installer manual: 'AdobeConnectInstaller.app'
 

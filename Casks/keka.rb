@@ -10,7 +10,6 @@ cask 'keka' do
 
   auto_updates true
   conflicts_with cask: 'keka-beta'
-  depends_on macos: '>= :mavericks'
 
   app 'Keka.app'
 

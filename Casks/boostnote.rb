@@ -9,7 +9,6 @@ cask 'boostnote' do
   homepage 'https://boostnote.io/'
 
   auto_updates true
-  depends_on macos: '>= :mavericks'
 
   app 'Boostnote.app'
 

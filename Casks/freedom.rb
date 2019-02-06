@@ -8,7 +8,6 @@ cask 'freedom' do
   homepage 'https://freedom.to/'
 
   auto_updates true
-  depends_on macos: '>= :mavericks'
 
   app 'Freedom.app'
 end

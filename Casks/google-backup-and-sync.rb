@@ -7,7 +7,6 @@ cask 'google-backup-and-sync' do
   homepage 'https://www.google.com/drive/download/'
 
   conflicts_with cask: 'google-photos-backup-and-sync'
-  depends_on macos: '>= :mavericks'
 
   app 'Backup and Sync.app'
 

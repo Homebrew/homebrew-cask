@@ -6,7 +6,5 @@ cask 'finereader' do
   name 'ABBYY FineReader Pro'
   homepage 'https://www.abbyy.com/finereader/pro-for-mac/'
 
-  depends_on macos: '>= :mavericks'
-
   app 'FineReader.app'
 end
