@@ -1,6 +1,6 @@
 cask 'devonthink' do
-  version '2.11.1'
-  sha256 'a4be32d6fc21b19806cd3f89e736f36c0f160d122d87f9261cf7e2b13b6c3436'
+  version '2.11.2'
+  sha256 'd1ba068f0830e85457eedcf53f8c6843182fc3446d5de27b6f3cff8c2204ebfd'
 
   # amazonaws.com/DTWebsiteSupport was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/devonthink/#{version}/DEVONthink_Personal.app.zip"

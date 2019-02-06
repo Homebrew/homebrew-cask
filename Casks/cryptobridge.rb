@@ -1,6 +1,6 @@
 cask 'cryptobridge' do
-  version '0.15.2'
-  sha256 'a7fe45d5c9bd1f97ccdf549aa4f0f02cb675234d1287f1aeb330fc3fc20240d4'
+  version '0.15.5'
+  sha256 'db222962c33471d60990cd229619d26612822e0eaf568943a48801b5ba6f9ade'
 
   url "https://github.com/CryptoBridge/cryptobridge-ui/releases/download/v#{version}/CryptoBridge-#{version}.dmg"
   appcast 'https://github.com/CryptoBridge/cryptobridge-ui/releases.atom'

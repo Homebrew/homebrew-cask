@@ -42,22 +42,19 @@ And there we have it. Atom installed with one quick command: no clicking, no dra
 
 [**If you ignore this guide, your issue may be closed without review**](doc/faq/closing_issues_without_review.md).
 
-Before reporting a bug, run `brew update-reset && brew update` and try your command again. This will ensure the problem isn’t an outdated setup on your side. Note this command is a fix-all that will reset the state of all your taps, so if you have changes on those that you want to keep, deal with them first.
+Before reporting a bug, run `brew update-reset && brew update` and try your command again. This is a fix-all that will reset the state of all your taps, ensuring the problem isn’t an outdated setup on your side.
 
-If your issue persists, search for it before opening a new one. If you find an open issue and have any new information not reported in the original, please add your insights. If you find a closed issue, try the solutions there.
+If your issue persists, [search for it](https://github.com/Homebrew/homebrew-cask/search?type=Issues) before opening a new one. If you find an open issue and have any new information, add it in a comment. If you find a closed issue, try the solutions there.
 
- If the issue is still not solved, see the guides for common problems:
+If the issue is still not solved, see the guides for common problems:
 
-* A cask fails to install:
-  * [`curl` error](doc/reporting_bugs/a_cask_fails_to_install.md#curl-error)
-  * [`Permission denied` error](doc/reporting_bugs/a_cask_fails_to_install.md#permission-denied-error)
-  * [`Checksum does not match` error](doc/reporting_bugs/a_cask_fails_to_install.md#checksum-does-not-match-error)
-  * [`source is not there` error](doc/reporting_bugs/a_cask_fails_to_install.md#source-is-not-there-error)
-  * [`wrong number of arguments` error](doc/reporting_bugs/a_cask_fails_to_install.md#wrong-number-of-arguments-error)
-  * [Unlisted reason](doc/reporting_bugs/a_cask_fails_to_install.md#unlisted-reason)
+* [Examples of common errors and their solutions](doc/reporting_bugs/error_examples.md)
+* [`curl` error](doc/reporting_bugs/curl_error.md)
+* [`Permission denied` error](doc/reporting_bugs/permission_denied_error.md)
+* [`Checksum does not match` error](doc/reporting_bugs/checksum_does_not_match_error.md)
+* [`source is not there` error](doc/reporting_bugs/source_is_not_there_error.md)
+* [`wrong number of arguments` error](doc/reporting_bugs/wrong_number_of_arguments_error.md)
 * [The app can’t be opened because it is from an unidentified developer](doc/faq/the_app_cant_be_opened.md)
-* [`uninstall` wrongly reports cask as not installed](doc/reporting_bugs/uninstall_wrongly_reports_cask_as_not_installed.md)
-* [`Error: Unknown command: cask` error](doc/reporting_bugs/error_unknown_command_cask.md)
 * [My problem isn’t listed](https://github.com/Homebrew/homebrew-cask/issues/new?template=01_bug_report.md)
 
 ## Requests

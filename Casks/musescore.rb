@@ -1,9 +1,9 @@
 cask 'musescore' do
-  version '3.0.1.20439'
-  sha256 '79baa85be701e3fa6e4ec662f3afa673d364203998ee78eefa67e12378f77015'
+  version '3.0.2.20666'
+  sha256 '4f31564d3795fe265d229bcebb33999dd41a198be2fca0c6275033019714576a'
 
-  # ftp.osuosl.org/pub/musescore was verified as official when first introduced to the cask
-  url "https://ftp.osuosl.org/pub/musescore/releases/MuseScore-#{version.major_minor_patch}/MuseScore-#{version.major_minor_patch}.dmg"
+  # musescore.com was verified as official when first introduced to the cask
+  url "https://download.musescore.com/releases/MuseScore-#{version.major_minor_patch}/MuseScore-#{version.major_minor_patch}.dmg"
   appcast "https://sparkle.musescore.org/stable/#{version.major}/macos/appcast.xml"
   name 'MuseScore'
   homepage 'https://musescore.org/'

@@ -1,6 +1,6 @@
 cask 'flipper' do
-  version '0.14.1'
-  sha256 '48096999eff07f5834d29e7f8837ddd630124f88cd85b8d25d3d5fcf9a94a0de'
+  version '0.15.0'
+  sha256 '59c889f8e6c61ec7755db553541fd0a7ce4dac23eb805ef0eed597b4706d8d0d'
 
   # github.com/facebook/flipper was verified as official when first introduced to the cask
   url "https://github.com/facebook/flipper/releases/download/v#{version}/Flipper.zip"

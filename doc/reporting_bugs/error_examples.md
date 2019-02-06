@@ -1,10 +1,4 @@
-<sup><sub>[Go back](../../README.md#reporting-bugs)</sup></sub>
-
-# A cask fails to install
-
-Pick the issue closest to your case, and follow the links.
-
----
+Examples of common errors and their solutions
 
 #### `curl` error:
 
@@ -16,11 +10,11 @@ curl: (22) The requested URL returned error: 403 Forbidden
 
 the problem was with the downloading itself (see how the error came from `curl`). Homebrew Cask itself is fine and the problem is generally one of:
 
-1. App vendor or file in their server is down.
+1. Software vendor or the file in their server is down.
 2. Cask is outdated.
 3. A problem in your setup or connection.
 
-[Continue to the fix](curl_error_fix_curlrc.md)
+[How to fix](curl_error.md)
 
 ---
 
@@ -34,7 +28,7 @@ Error: Permission denied - (/usr/local/Caskroom/someapp/0.1/Someapp.app, /Applic
 
 the problem isn’t with Homebrew Cask itself, but some permissions on your system.
 
-[Continue to the fix](permission_denied_error_fix_appdir.md)
+[How to fix](permission_denied_error.md)
 
 ---
 
@@ -51,7 +45,7 @@ Actual: 526d747d99a93b760f7965e25a57ed61de9b93d566a0ba0c5f1c7e83719b20fd
 
 either your download was incomplete/corrupt or the cask is outdated.
 
-[Continue to the fix](checksum_does_not_match_error_fix_icomplete.md)
+[How to fix](checksum_does_not_match_error.md)
 
 ---
 
@@ -60,12 +54,12 @@ either your download was incomplete/corrupt or the cask is outdated.
 If the error output includes something like
 
 ```
-Error: It seems the App source is not there: '/usr/local/Caskroom/…'
+It seems the App source '/usr/local/Caskroom/someapp/0.1/Someapp.app' is not there.
 ```
 
 the directory structure inside the app’s archive changed in some way. It must be fixed in Homebrew Cask.
 
-[Continue to the fix](source_is_not_there_fix.md)
+[How to fix](source_is_not_there_error.md)
 
 ---
 
@@ -79,10 +73,10 @@ Error: wrong number of arguments (1 for 4)
 
 it’s likely the software you’re trying to install is incompatible with your macOS version.
 
-[Continue to the fix](wrong_number_of_arguments_fix.md)
+[How to fix](wrong_number_of_arguments_error.md)
 
 ---
 
 #### Unlisted reason
 
-If your issue isn’t listed here, [go back](../../README.md#reporting-bugs) and pick `My problem isn’t listed`.
+If your issue isn’t listed here, [go back](https://github.com/Homebrew/homebrew-cask/blob/master/README.md#reporting-bugs) and pick `My problem isn’t listed`.

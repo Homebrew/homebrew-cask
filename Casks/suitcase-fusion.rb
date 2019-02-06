@@ -7,5 +7,7 @@ cask 'suitcase-fusion' do
   name 'Extensis Suitcase Fusion'
   homepage 'https://www.extensis.com/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Suitcase Fusion.app'
 end

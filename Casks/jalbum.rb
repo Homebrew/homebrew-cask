@@ -1,6 +1,6 @@
 cask 'jalbum' do
-  version '17'
-  sha256 'f8590170cbb0c08efd8319bd01e2256848fb79ce4094e320f2383118368f911d'
+  version '18'
+  sha256 'a723b974fd6d838a5dad1aae74490cf4af951c74472201f9dfe5961e403e26ed'
 
   url "https://download.jalbum.net/download/#{version}/MacOSX/jAlbum.dmg"
   appcast 'https://jalbum.net/en/software/download/previous'
