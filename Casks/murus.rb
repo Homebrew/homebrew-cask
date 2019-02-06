@@ -6,8 +6,6 @@ cask 'murus' do
   name 'Murus Firewall'
   homepage 'https://www.murusfirewall.com/'
 
-  depends_on macos: '>= :mavericks'
-
   app 'Murus.app'
 
   uninstall launchctl: 'it.murus.murusfirewallrules'

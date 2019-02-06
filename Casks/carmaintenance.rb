@@ -7,7 +7,5 @@ cask 'carmaintenance' do
   name 'CarMaintenance'
   homepage 'http://www.traxxsoftware.com/download.html'
 
-  depends_on macos: '>= :mavericks'
-
   app "CarMaintenance_#{version.dots_to_underscores}/CarMaintenance.app"
 end

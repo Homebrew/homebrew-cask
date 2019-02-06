@@ -7,8 +7,6 @@ cask 'calibre' do
   name 'calibre'
   homepage 'https://calibre-ebook.com/'
 
-  depends_on macos: '>= :mavericks'
-
   app 'calibre.app'
   binary "#{appdir}/calibre.app/Contents/MacOS/calibre"
   binary "#{appdir}/calibre.app/Contents/MacOS/calibre-complete"

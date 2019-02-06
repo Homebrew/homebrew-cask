@@ -6,36 +6,15 @@ cask 'oracle-jdk' do
       cookies: {
                  'oraclelicense' => 'accept-securebackup-cookie',
                }
-  name 'Java Standard Edition Development Kit'
+  name 'Oracle Java Standard Edition Development Kit'
   homepage 'https://www.oracle.com/technetwork/java/javase/overview/index.html'
 
-  # auto_updates true: JDK does not auto-update
   depends_on macos: '>= :yosemite'
 
   pkg "JDK #{version.before_comma}.pkg"
 
-  postflight do
-    system_command '/bin/ln',
-                   args: ['-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents/Home", '/Library/Java/Home'],
-                   sudo: true
-    system_command '/bin/ln',
-                   args: ['-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents/MacOS", '/Library/Java/MacOS'],
-                   sudo: true
-    system_command '/bin/mkdir',
-                   args: ['-p', '--', "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents/Home/bundle/Libraries"],
-                   sudo: true
-    system_command '/bin/ln',
-                   args: ['-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents/Home/lib/server/libjvm.dylib", "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents/Home/bundle/Libraries/libserver.dylib"],
-                   sudo: true
-  end
-
   uninstall pkgutil: "com.oracle.jdk-#{version.before_comma}",
-            delete:  [
-                       "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents",
-                       '/Library/Java/Home',
-                       '/Library/Java/MacOS',
-                     ],
-            rmdir:   "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk"
+            rmdir:   '/Library/Java/JavaVirtualMachines'
 
   caveats do
     license 'https://www.oracle.com/technetwork/java/javase/terms/license/javase-license.html'

@@ -8,5 +8,7 @@ cask 'mailbutler' do
   name 'MailButler'
   homepage 'https://www.mailbutler.io/'
 
+  depends_on macos: '>= :sierra'
+
   app 'MailButler.app'
 end

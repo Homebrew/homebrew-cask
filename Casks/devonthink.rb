@@ -9,7 +9,6 @@ cask 'devonthink' do
   homepage 'https://www.devontechnologies.com/products/devonthink/devonthink-personal.html'
 
   auto_updates true
-  depends_on macos: '>= :mavericks'
 
   app 'DEVONthink.app'
 end

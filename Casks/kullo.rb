@@ -6,7 +6,5 @@ cask 'kullo' do
   name 'Kullo'
   homepage 'https://www.kullo.net/'
 
-  depends_on macos: '>= :mavericks'
-
   app 'Kullo.app'
 end

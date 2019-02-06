@@ -7,8 +7,6 @@ cask 'timings' do
   name 'Timings'
   homepage 'https://www.mediaatelier.com/Timings3/'
 
-  depends_on macos: '>= :mavericks'
-
   app 'Timings.app'
 
   zap trash: [

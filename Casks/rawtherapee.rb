@@ -7,7 +7,6 @@ cask 'rawtherapee' do
   name 'RawTherapee'
   homepage 'https://rawtherapee.com/'
 
-  depends_on macos: '>= :mavericks'
   container nested: "RawTherapee_OSX_10.9_64_#{version}.dmg"
 
   app 'RawTherapee.app'

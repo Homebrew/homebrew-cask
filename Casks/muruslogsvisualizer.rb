@@ -6,8 +6,6 @@ cask 'muruslogsvisualizer' do
   name 'Murus Logs Visualizer'
   homepage 'https://www.murusfirewall.com/'
 
-  depends_on macos: '>= :mavericks'
-
   app 'MurusLogsVisualizer.app'
 
   uninstall login_item: 'MurusLogsVisualizer',

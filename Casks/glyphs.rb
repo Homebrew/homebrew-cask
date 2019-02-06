@@ -8,7 +8,6 @@ cask 'glyphs' do
   homepage 'https://glyphsapp.com/'
 
   auto_updates true
-  depends_on macos: '>= :mavericks'
 
   app 'Glyphs.app'
 

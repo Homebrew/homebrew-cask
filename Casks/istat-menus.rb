@@ -46,6 +46,7 @@ cask 'istat-menus' do
                "~/Library/Preferences/com.bjango.istatmenus#{version.major}.extras.plist",
                '~/Library/Preferences/com.bjango.istatmenus.status.plist',
                '/Library/Logs/iStat Menus',
+               '/Library⁩/LaunchDaemons⁩/com.bjango.istatmenus.fans.plist',
                '/Users/Shared/.iStatMenus',
              ]
 end

@@ -7,5 +7,7 @@ cask 'freshback' do
   name 'FreshBackMac'
   homepage 'https://arkanath.com/FreshBackMac/'
 
+  depends_on macos: '>= :mojave'
+
   app 'FreshBackMac.app'
 end
