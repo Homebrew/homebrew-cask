@@ -6,6 +6,7 @@ cask 'moneymoney' do
   appcast 'https://service.moneymoney-app.com/1/Appcast.xml'
   name 'MoneyMoney'
   homepage 'https://moneymoney-app.com/'
+  auto_updates true
 
   app 'MoneyMoney.app'
 end
