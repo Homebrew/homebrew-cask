@@ -4,7 +4,7 @@ cask 'fractal-bot' do
 
   url "https://www.fractalaudio.com/downloads/fractal-bot/Fractal-Bot-OSX-v#{version.tr('.', 'p')}.dmg"
   appcast 'https://www.fractalaudio.com/fractal-bot/'
-  name 'Fractal-Bot'
+  name 'Fractal Bot'
   homepage 'https://www.fractalaudio.com/fractal-bot/'
 
   pkg "Fractal-Bot-OSX-v#{version.tr('.', 'p')}.pkg"
