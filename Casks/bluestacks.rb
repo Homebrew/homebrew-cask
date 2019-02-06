@@ -6,6 +6,8 @@ cask 'bluestacks' do
   name 'BlueStacks'
   homepage 'https://www.bluestacks.com/'
 
+  depends_on macos: '>= :sierra'
+
   installer manual: 'BlueStacks Installer.app'
 
   uninstall_preflight do
