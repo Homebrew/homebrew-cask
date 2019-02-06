@@ -1,6 +1,6 @@
 cask 'devhub' do
-  version '0.45.0'
-  sha256 'f370f0caf0d3d8a9cfd00880adf4d5ae88cdebd63f0442b6ae4f2a33353c4766'
+  version '0.45.2'
+  sha256 '533ecef215b21bf9826d8256a60a273c585d580d6fe9a0ea57f195ab311461f0'
 
   url "https://github.com/devhubapp/devhub/releases/download/v#{version}/DevHub-#{version}.dmg"
   appcast 'https://github.com/devhubapp/devhub/releases.atom'

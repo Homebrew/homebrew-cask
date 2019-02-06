@@ -1,6 +1,6 @@
 cask 'sweet-home3d' do
-  version '6.1'
-  sha256 '4654f7fb34ace7911ebd6a49b261a989093e06b43365ea67f8094002ae5899fc'
+  version '6.1.2'
+  sha256 '32dd2d8c9d5358c09eca89f59b06e0238373127b0d4f86d54a079e41703fb9ad'
 
   # sourceforge.net/sweethome3d was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/sweethome3d/SweetHome3D/SweetHome3D-#{version}/SweetHome3D-#{version}-macosx.dmg"
