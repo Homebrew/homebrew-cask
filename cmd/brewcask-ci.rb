@@ -30,17 +30,17 @@ module Cask
           if ENV.key?("TRAVIS_COMMIT_RANGE")
             # Travis CI
             ENV["TRAVIS_COMMIT_RANGE"]
-          elsif ENV.key?("SYSTEM_PULLREQUEST_TARGETBRANCH") && ENV.key?("BUILD_SOURCEVERSION")
+          elsif ENV.key?("HOMEBREW_AZURE_TARGETBRANCH") && ENV.key?("HOMEBREW_AZURE_SOURCEVERSION")
             # Azure Pipelines
             start_commit_hash = system_command!(
-              "git", args: ["rev-parse", "--short", ENV["SYSTEM_PULLREQUEST_TARGETBRANCH"]]
+              "git", args: ["rev-parse", "--short", ENV["HOMEBREW_AZURE_TARGETBRANCH"]]
             ).stdout.strip
             "#{start_commit_hash}...#{current_commit_hash}"
           else
             "#{current_commit_hash}...#{current_commit_hash}"
           end
-        puts "DEBUG: SYSTEM_PULLREQUEST_TARGETBRANCH is #{ENV["SYSTEM_PULLREQUEST_TARGETBRANCH"]}"
-        puts "DEBUG: BUILD_SOURCEVERSION is #{ENV["BUILD_SOURCEVERSION"]}"
+        puts "DEBUG: HOMEBREW_AZURE_TARGETBRANCH is #{ENV["HOMEBREW_AZURE_TARGETBRANCH"]}"
+        puts "DEBUG: HOMEBREW_AZURE_SOURCEVERSION is #{ENV["HOMEBREW_AZURE_SOURCEVERSION"]}"
         puts "DEBUG: @commit_range is #{@commit_range}"
 
         ruby_files_in_wrong_directory = modified_ruby_files - (modified_cask_files + modified_command_files)
