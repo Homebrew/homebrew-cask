@@ -1,9 +1,9 @@
 cask 'freeplane' do
-  version '1.7.3'
-  sha256 'd993a3cc472dc4d1c50715fa4d63da93b1ef54712cfd4e13fadb793d666a0374'
+  version '1.7.5'
+  sha256 '3095b390a2ffd0d8a9466d18e983f90a8e603c44839da5394ac96d99f4a91102'
 
   # downloads.sourceforge.net/freeplane was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/freeplane/freeplane%20stable/freeplane_app_jre-#{version}.dmg"
+  url 'https://downloads.sourceforge.net/freeplane/freeplane%20stable/freeplane_app_jre-1.7.5-hotfix1.dmg'
   appcast 'https://sourceforge.net/projects/freeplane/rss?path=/freeplane%20stable'
   name 'Freeplane'
   homepage 'https://freeplane.sourceforge.io/'
