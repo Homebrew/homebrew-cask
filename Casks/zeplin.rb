@@ -8,7 +8,7 @@ cask 'zeplin' do
   homepage 'https://zeplin.io/'
 
   auto_updates true
-  
+
   app 'Zeplin.app'
 
   zap trash: [
