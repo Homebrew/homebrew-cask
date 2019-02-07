@@ -40,7 +40,7 @@ module Cask
             ENV["TRAVIS_COMMIT_RANGE"]
           elsif pr_url
             # Use PR URL
-            system_command!("brew", "pull", "--clean", pr_url)
+            system_command!("brew", args: ["pull", "--clean", pr_url])
             pr_commit_hash = system_command!(
               "git", args: ["rev-parse", "--short", "HEAD"]
             ).stdout.strip
