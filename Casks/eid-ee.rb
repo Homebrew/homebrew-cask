@@ -17,7 +17,7 @@ cask 'eid-ee' do
             quit:   'ee.ria.TokenSigningApp'
 
   caveats <<~EOS
-    DigiDoc3 Client and ID-card Utility are available in the App Store:
+    DigiDoc4 Client and ID-card Utility are available in the App Store:
       https://appstore.com/mac/ria
   EOS
 end
