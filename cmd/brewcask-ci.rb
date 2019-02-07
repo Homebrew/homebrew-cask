@@ -27,9 +27,9 @@ module Cask
         ).stdout.strip
 
         pr_url =
-          if ENV.key?("HOMEBREW_AZURE_REPOSITORY_URI") && ENV.key?("HOMEBREW_AZURE_PULLREQUESTNUMBER")
+          if ENV.key?("BUILD_REPOSITORY_URI") && ENV.key?("SYSTEM_PULLREQUEST_PULLREQUESTNUMBER")
             # Use Azure Pipeline variables for pull request jobs.
-            "#{ENV["HOMEBREW_AZURE_REPOSITORY_URI"]}/pull/#{ENV["HOMEBREW_AZURE_PULLREQUESTNUMBER"]}"
+            "#{ENV["BUILD_REPOSITORY_URI"]}/pull/#{ENV["SYSTEM_PULLREQUEST_PULLREQUESTNUMBER"]}"
           else
             nil
           end
@@ -45,18 +45,18 @@ module Cask
               "git", args: ["rev-parse", "--short", "HEAD"]
             ).stdout.strip
             "#{current_commit_hash}...#{pr_commit_hash}"
-          elsif ENV.key?("HOMEBREW_AZURE_TARGETBRANCH") && ENV.key?("HOMEBREW_AZURE_SOURCEVERSION")
+          elsif ENV.key?("SYSTEM_PULLREQUEST_TARGETBRANCH") && ENV.key?("BUILD_SOURCEVERSION")
             # Use Azure Pipeline variables for master or branch jobs.
             start_commit_hash = system_command!(
-              "git", args: ["rev-parse", "--short", ENV["HOMEBREW_AZURE_TARGETBRANCH"]]
+              "git", args: ["rev-parse", "--short", ENV["SYSTEM_PULLREQUEST_TARGETBRANCH"]]
             ).stdout.strip
             "#{start_commit_hash}...#{current_commit_hash}"
           else
             # Otherwise just use the current hash.
             "#{current_commit_hash}...#{current_commit_hash}"
           end
-        puts "DEBUG: HOMEBREW_AZURE_TARGETBRANCH is #{ENV["HOMEBREW_AZURE_TARGETBRANCH"]}"
-        puts "DEBUG: HOMEBREW_AZURE_SOURCEVERSION is #{ENV["HOMEBREW_AZURE_SOURCEVERSION"]}"
+        puts "DEBUG: SYSTEM_PULLREQUEST_TARGETBRANCH is #{ENV["SYSTEM_PULLREQUEST_TARGETBRANCH"]}"
+        puts "DEBUG: BUILD_SOURCEVERSION is #{ENV["BUILD_SOURCEVERSION"]}"
         puts "DEBUG: @commit_range is #{@commit_range}"
 
         ruby_files_in_wrong_directory = modified_ruby_files - (modified_cask_files + modified_command_files)
