@@ -12,6 +12,8 @@ jobs:
         export HOMEBREW_COLOR=1
         export HOMEBREW_DEVELOPER=1
         export HOMEBREW_NO_AUTO_UPDATE=1
+        export HOMEBREW_AZURE_REPOSITORY_URI="$(Build.Repository.Uri)"
+        export HOMEBREW_AZURE_PULLREQUESTNUMBER ="$(System.PullRequest.PullRequestNumber)"
         export HOMEBREW_AZURE_TARGETBRANCH="$(System.PullRequest.TargetBranch)"
         export HOMEBREW_AZURE_SOURCEVERSION="$(Build.SourceVersion)"
         # Using brew update-reset and restricting directories is quicker/more robust than brew update

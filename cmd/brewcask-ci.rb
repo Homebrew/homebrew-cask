@@ -26,17 +26,33 @@ module Cask
           "git", args: ["rev-parse", "--short", "HEAD"]
         ).stdout.strip
 
+        pr_url =
+          if ENV.key?("HOMEBREW_AZURE_REPOSITORY_URI") && ENV.key?("HOMEBREW_AZURE_PULLREQUESTNUMBER")
+            # Use Azure Pipeline variables for pull request jobs.
+            "#{ENV["HOMEBREW_AZURE_REPOSITORY_URI"]}/pull/#{ENV["HOMEBREW_AZURE_PULLREQUESTNUMBER"]}"
+          else
+            nil
+          end
+
         @commit_range =
           if ENV.key?("TRAVIS_COMMIT_RANGE")
-            # Travis CI
+            # Use Travis CI Git variables for master or branch jobs.
             ENV["TRAVIS_COMMIT_RANGE"]
+          elsif pr_url
+            # Use PR URL
+            system_command!("brew", "pull", "--clean", pr_url)
+            pr_commit_hash = system_command!(
+              "git", args: ["rev-parse", "--short", "HEAD"]
+            ).stdout.strip
+            "#{current_commit_hash}...#{pr_commit_hash}"
           elsif ENV.key?("HOMEBREW_AZURE_TARGETBRANCH") && ENV.key?("HOMEBREW_AZURE_SOURCEVERSION")
-            # Azure Pipelines
+            # Use Azure Pipeline variables for master or branch jobs.
             start_commit_hash = system_command!(
               "git", args: ["rev-parse", "--short", ENV["HOMEBREW_AZURE_TARGETBRANCH"]]
             ).stdout.strip
             "#{start_commit_hash}...#{current_commit_hash}"
           else
+            # Otherwise just use the current hash.
             "#{current_commit_hash}...#{current_commit_hash}"
           end
         puts "DEBUG: HOMEBREW_AZURE_TARGETBRANCH is #{ENV["HOMEBREW_AZURE_TARGETBRANCH"]}"
