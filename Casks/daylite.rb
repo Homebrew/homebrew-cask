@@ -22,8 +22,8 @@ cask 'daylite' do
                          'com.marketcircle.daylite.mailassistant.installer',
                        ],
             launchctl: [
-                         'com.marketcircle.persistence.autoupdate',
                          'com.marketcircle.Daylite-Helper',
+                         'com.marketcircle.persistence.autoupdate',
                        ],
             signal:    [
                          ['TERM', 'com.marketcircle.daylite'],
