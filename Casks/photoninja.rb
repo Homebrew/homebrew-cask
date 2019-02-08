@@ -1,6 +1,6 @@
 cask 'photoninja' do
-  version '1.3.6b'
-  sha256 '68b89b21ae63817dedeb3a0647ffa413684028d179018fed33b39f16bbd333bb'
+  version '1.3.7a'
+  sha256 'a3edcb3ec6f3b2449165b713102cb09dbb8a8f8108c2c317355e11e902bc8e2b'
 
   # picturecode.cachefly.net was verified as official when first introduced to the cask
   url "https://picturecode.cachefly.net/photoninja/downloads/Install_PhotoNinja_#{version}.dmg"
