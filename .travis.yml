@@ -65,7 +65,7 @@ before_script:
 
 script: 
   - brew cask ci
-  - cd formulae.brew.sh && rake
+  - cd formulae.brew.sh && rake cask --trace
 
 notifications:
   email: false
