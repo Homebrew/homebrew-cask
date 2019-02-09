@@ -6,13 +6,8 @@ cask 'jmetrik' do
   name 'jMetrik'
   homepage 'http://itemanalysis.com/'
 
-  depends_on cask: 'java'
-
-  # installer :manual => "jMetrik Installer.app"
-
   # Installer runs install4j from the distribution in quiet mode.
   #
-  # This Installer is copied and adapted from the formula for SoapUI.
   # The defaults below chose the options to:
   #   accept the license agreement
   #   install to /Applications
@@ -49,4 +44,8 @@ cask 'jmetrik' do
                                   ],
                       sudo:       true,
                     }
+
+  caveats do
+    depends_on_java '7+'
+  end
 end
