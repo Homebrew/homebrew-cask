@@ -9,6 +9,7 @@ cask 'vellum' do
   homepage 'https://vellum.pub/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'Vellum.app'
 
