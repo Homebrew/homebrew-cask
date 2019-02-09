@@ -7,7 +7,7 @@ cask 'marta' do
   name 'Marta File Manager'
   homepage 'https://marta.yanex.org/'
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :high_sierra'
 
   app 'Marta.app'
 
