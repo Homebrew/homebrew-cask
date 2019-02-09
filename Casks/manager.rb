@@ -1,6 +1,6 @@
 cask 'manager' do
-  version '19.1.37'
-  sha256 'f75d1ccd7204e9cfbdb99d21ca9a1ecdde58ff236e247715357f2e6f814de81e'
+  version '19.1.38'
+  sha256 '846a77c8c7f31802c84c19d86bbf7c6443389f8607da49f8bfc7903cc34d30a6'
 
   # d2ap5zrlkavzl7.cloudfront.net was verified as official when first introduced to the cask
   url "https://d2ap5zrlkavzl7.cloudfront.net/#{version}/Manager.dmg"
