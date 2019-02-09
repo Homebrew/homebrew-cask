@@ -1,6 +1,6 @@
 cask 'marta' do
-  version '0.6'
-  sha256 '4383da29b48590a5dd0eb4819b0f2b0579b33ccb8dd764eb9217ed658721dc69'
+  version '0.6.1'
+  sha256 '492d73004834941db82de0a518c6c9f1a3c77dbeb89ad22a32c5449b30359020'
 
   url "https://updates.marta.yanex.org/release/Marta-#{version}.dmg"
   appcast 'https://updates.marta.yanex.org/release/appcast.xml'

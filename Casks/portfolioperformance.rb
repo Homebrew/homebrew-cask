@@ -1,6 +1,6 @@
 cask 'portfolioperformance' do
-  version '0.37.1'
-  sha256 '4595b8ff91931f63a5a92c25847ef97d72e624e57b1c28cb026fc4c2dfa76dd8'
+  version '0.38.0'
+  sha256 '65dc49a1721f1d3d7a031f1020241c4d372b0dd6662062650b96b8bc3f08abc4'
 
   # bintray.com/buchen/downloads was verified as official when first introduced to the cask
   url "https://bintray.com/buchen/downloads/download_file?file_path=#{version}%2FPortfolioPerformance-distro-#{version}-macosx.cocoa.x86_64.tar.gz"
