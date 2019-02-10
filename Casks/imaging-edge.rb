@@ -1,6 +1,6 @@
 cask 'imaging-edge' do
-  version '1.3.1_1810a,1LBhVZzx05'
-  sha256 '5ec20d83a7eb83383c7ac26d6e8a46b7f6e0d0189140b1d67e0c30981aa28143'
+  version '1.4.0_1901a,7dLXQ7xm-t'
+  sha256 '7481711176061aa36900fd8f0dd4e04b83a6a2e6bee29084960adba588d23f47'
 
   # ids.update.sony.net/IDC was verified as official when first introduced to the cask
   url "http://ids.update.sony.net/IDC/#{version.after_comma}/IE#{version.before_comma.no_dots}.dmg"
