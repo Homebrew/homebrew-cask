@@ -15,12 +15,9 @@ cask 'jmetrik' do
                       #   /Applications/jmetrik/.install4j/response.varfile
                       args:       [
                                     '-q', # Silent mode
-                                    '-VcreateDesktopLinkAction$Boolean=false',
-                                    # Do not create a desktop icon
-                                    '-VexecutionLauncherAction$Boolean=false',
-                                    # Do not launch jMetrik after installing
-                                    "-Vsys.installationDir=#{appdir}/jMetrik",
-                                    # Install to subdirectory of /Applications
+                                    '-VcreateDesktopLinkAction$Boolean=false', # Do not create a desktop icon
+                                    '-VexecutionLauncherAction$Boolean=false', # Do not launch jMetrik after installing
+                                    "-Vsys.installationDir=#{appdir}/jMetrik", # Install to subdirectory of /Applications
                                   ],
                       sudo:       true,
                     }
