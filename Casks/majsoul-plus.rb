@@ -4,7 +4,7 @@ cask 'majsoul-plus' do
 
   url "https://github.com/MajsoulPlus/majsoul-plus-client/releases/download/v#{version}/Majsoul_Plus-darwin.zip"
   appcast 'https://github.com/MajsoulPlus/majsoul-plus-client/releases.atom'
-  name '雀魂 Plus'
+  name 'Majsoul Plus'
   homepage 'https://github.com/MajsoulPlus/majsoul-plus-client'
 
   app 'Majsoul Plus.app'
