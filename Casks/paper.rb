@@ -2,8 +2,7 @@ cask 'paper' do
   version '3.3'
   sha256 '43e001456d2c2044ebc8289c4c2498cdec7eb18f84294610f32c96fb12f47cb4'
 
-  # github.com was verified as official when first introduced to the cask
-  url "https://github.com/Homebrew/homebrew-cask/files/2849236/pap.er_v#{version}.zip"
+  url "http://paperimg.meiyuan.in/pap.er_v#{version}.dmg"
   name 'Paper'
   homepage 'http://paper.meiyuan.in/'
 
