@@ -22,6 +22,7 @@ cask 'displaycal' do
                        'net.displaycal.DisplayCAL-testchart-editor',
                        'net.displaycal.DisplayCAL-VRML-to-X3D-converter',
                        'net.displaycal.DisplayCAL',
+                       'net.displaycal.pkg.DisplayCAL',
                      ]
 
   zap trash: [
