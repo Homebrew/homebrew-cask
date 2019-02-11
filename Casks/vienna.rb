@@ -6,7 +6,7 @@ cask 'vienna' do
   url "https://dl.bintray.com/viennarss/vienna-rss/Vienna#{version}.tar.gz"
   appcast 'https://viennarss.github.io/sparkle-files/changelog.xml'
   name 'Vienna'
-  homepage 'http://www.vienna-rss.com/'
+  homepage 'https://www.vienna-rss.com/'
 
   app 'Vienna.app'
 
