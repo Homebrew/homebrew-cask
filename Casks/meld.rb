@@ -20,5 +20,9 @@ cask 'meld' do
     EOS
   end
 
-  zap trash: '~/Library/Preferences/org.gnome.meld.plist'
+  zap trash: [
+               '~/Library/Preferences/org.gnome.meld.plist',
+               '~/.local/share/meld',
+               '~/Library/Saved Application State/org.gnome.meld.savedState/',
+             ]
 end
