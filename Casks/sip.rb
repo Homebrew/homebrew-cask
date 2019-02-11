@@ -3,7 +3,7 @@ cask 'sip' do
   sha256 'bb170a54090aab5703388a3e7a22e9cf4e4d98e84f5658893e1e6f9677b9a51e'
 
   url 'https://sipapp.io/download/sip.dmg'
-  appcast 'https://sipapp.io/updates/v1/sip.xml'
+  appcast "https://sipapp.io/updates/v#{version.major}/sip.xml"
   name 'Sip'
   homepage 'https://sipapp.io/'
 
