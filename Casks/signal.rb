@@ -1,6 +1,6 @@
 cask 'signal' do
   version '1.21.1'
-  sha256 '1f16b86dd6f730a29d61ade41b1d1a520fb691185980df8de1d6effd28005467'
+  sha256 'fc8fa1dd00fa2aacc1a4dd8a1e3954f206e36f1a06d5755d0aeb1f712997ab1b'
 
   url "https://updates.signal.org/desktop/signal-desktop-mac-#{version}.zip"
   appcast 'https://github.com/signalapp/Signal-Desktop/releases.atom'
