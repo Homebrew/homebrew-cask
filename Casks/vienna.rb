@@ -1,12 +1,12 @@
 cask 'vienna' do
-  version '3.5.3'
-  sha256 'f7cfb8dbbab03976d8c9e36ed866296d94029803cb357bd4ee23730bb9222853'
+  version '3.5.4'
+  sha256 '63e909646bfd0ebd5b2eac0112e44db95028c00b122891db4a1ffe797035aeb2'
 
   # bintray.com/viennarss was verified as official when first introduced to the cask
   url "https://dl.bintray.com/viennarss/vienna-rss/Vienna#{version}.tar.gz"
   appcast 'https://viennarss.github.io/sparkle-files/changelog.xml'
   name 'Vienna'
-  homepage 'http://www.vienna-rss.com/'
+  homepage 'https://www.vienna-rss.com/'
 
   app 'Vienna.app'
 
