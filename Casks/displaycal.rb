@@ -13,17 +13,7 @@ cask 'displaycal' do
 
   pkg "DisplayCAL-#{version}.pkg"
 
-  uninstall pkgutil: [
-                       'net.displaycal.DisplayCAL-3DLUT-maker',
-                       'net.displaycal.DisplayCAL-curve-viewer',
-                       'net.displaycal.DisplayCAL-profile-info',
-                       'net.displaycal.DisplayCAL-scripting-client',
-                       'net.displaycal.DisplayCAL-synthprofile',
-                       'net.displaycal.DisplayCAL-testchart-editor',
-                       'net.displaycal.DisplayCAL-VRML-to-X3D-converter',
-                       'net.displaycal.DisplayCAL',
-                       'net.displaycal.pkg.DisplayCAL',
-                     ]
+  uninstall pkgutil: 'net.displaycal.*.DisplayCAL.*'
 
   zap trash: [
                '~/Library/Application Support/dispcalGUI',
