@@ -11,7 +11,6 @@ cask 'displaycal' do
   auto_updates true
   depends_on formula: 'argyll-cms'
 
-  suite 'DisplayCAL'
   pkg "DisplayCAL-#{version}.pkg"
 
   uninstall pkgutil: [
