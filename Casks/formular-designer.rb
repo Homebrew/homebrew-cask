@@ -1,6 +1,6 @@
 cask 'formular-designer' do
-  version '2019.2.1'
-  sha256 '744d07ca5381e4645ad6f033c5beaf5fa9804147be0498e00b99e08ba6b24c58'
+  version '2019.2.2'
+  sha256 '626b798346e59762c46853a739b2f2f6f8d1eb27f2d4c8d7c787d892a29d44dd'
 
   url 'https://www.lehreroffice.ch/lo/dateien/designer/lo_designer_macos.dmg'
   appcast 'https://www.lehreroffice.ch/services/update/getcurrentversion.php?app=Designer'
