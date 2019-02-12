@@ -7,4 +7,8 @@ cask 'josm' do
   homepage 'https://josm.openstreetmap.de/'
 
   app 'JOSM.app'
+
+  caveats do
+    depends_on_java '8'
+  end
 end
