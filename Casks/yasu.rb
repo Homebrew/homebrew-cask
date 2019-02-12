@@ -12,8 +12,8 @@ cask 'yasu' do
         user_agent: :fake
     appcast 'https://yasuformac.com/appcasts/10.12/yasu.xml'
   else
-    version '5.0.1,701'
-    sha256 '1fee2a849d9473b3d4776cf275ba48403a9b2c641077d4f4b61cd331d7f6459f'
+    version '5.0.2,702'
+    sha256 '7c0b72e59a137467259ba140024f4d93eae599d09ffe7acb71c2c8f7790530b5'
     url "https://yasuformac.com/appcasts/10.13/yasuformac_#{version.after_comma}.zip",
         user_agent: :fake
     appcast 'https://yasuformac.com/appcasts/10.13/yasu.xml'
