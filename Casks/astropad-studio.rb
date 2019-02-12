@@ -1,6 +1,6 @@
 cask 'astropad-studio' do
-  version '2.2.0'
-  sha256 '5867212a921f4bfbbc2657b616ff1282450fc4cc0769c4055e526fdd8e5cc46c'
+  version '3.0.1'
+  sha256 'ff49790ab2cd57e32e9e3ae3f0db64ff636c11a1ce41cb7407c41390634fea97'
 
   url "https://astropad.com/downloads/AstropadStudio-#{version}.zip"
   appcast 'https://astropad.com/downloads/studio-sparkle.xml'
