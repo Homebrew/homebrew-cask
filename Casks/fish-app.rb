@@ -8,5 +8,5 @@ cask 'fish-app' do
   name 'Fish App'
   homepage 'https://fishshell.com/'
 
-  app "fish.app"
+  app 'fish.app'
 end
