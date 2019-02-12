@@ -8,6 +8,12 @@ cask 'josm' do
 
   app 'JOSM.app'
 
+  zap trash: [
+               '~/Library/Preferences/JOSM',
+               '~/Library/Caches/JOSM',
+               '~/Library/JOSM',
+             ]
+
   caveats do
     depends_on_java '8'
   end
