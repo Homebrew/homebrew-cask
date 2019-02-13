@@ -5,6 +5,7 @@ cask 'volt' do
   # github.com/voltapp/volt was verified as official when first introduced to the cask
   url "https://github.com/voltapp/volt/releases/download/#{version}/volt_mac.zip"
   appcast 'https://github.com/voltapp/volt/releases.atom'
+  name 'Volt'
   homepage 'https://volt.ws/'
 
   app 'Volt.app'
