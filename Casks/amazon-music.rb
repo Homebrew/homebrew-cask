@@ -4,6 +4,7 @@ cask 'amazon-music' do
 
   # ssl-images-amazon.com/images was verified as official when first introduced to the cask
   url "https://images-na.ssl-images-amazon.com/images/G/01/digital/music/morpho/installers/#{version.after_comma.before_colon}/#{version.after_colon}/AmazonMusicInstaller.dmg"
+  appcast 'https://www.amazon.com/gp/dmusic/desktop/downloadPlayer'
   name 'Amazon Music'
   homepage 'https://www.amazon.com/musicapps'
 
