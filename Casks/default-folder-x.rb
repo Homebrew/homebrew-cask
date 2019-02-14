@@ -7,6 +7,8 @@ cask 'default-folder-x' do
   name 'Default Folder X'
   homepage 'https://www.stclairsoft.com/DefaultFolderX/'
 
+  auto_updates true
+
   app 'Default Folder X.app'
 
   zap trash: [

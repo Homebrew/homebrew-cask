@@ -9,7 +9,6 @@ cask 'devonthink-pro-office' do
   homepage 'https://www.devontechnologies.com/products/devonthink/devonthink-pro-office.html'
 
   auto_updates true
-  depends_on macos: '>= :mavericks'
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   # Original discussion: https://github.com/Homebrew/homebrew-cask/pull/3838

@@ -6,8 +6,6 @@ cask 'voikkospellservice' do
   name 'VoikkoSpellService'
   homepage 'http://verteksi.net/lab/osxspell/'
 
-  depends_on macos: '>= :mavericks'
-
   service 'VoikkoSpellService.app'
 
   uninstall signal: ['TERM', 'org.puimula.VoikkoSpellService']

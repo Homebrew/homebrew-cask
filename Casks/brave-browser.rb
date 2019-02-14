@@ -1,6 +1,6 @@
 cask 'brave-browser' do
-  version '0.58.21'
-  sha256 'bf8e2edb0b0101a0bf9f5a92dd1a6ed398edede7722c9a37ee37bbbb3a1bc145'
+  version '0.59.35'
+  sha256 'a12cca41e3378e0386bee2db102c465b833d617cb885f7fca1cfb4b293dae9c4'
 
   # github.com/brave/brave-browser was verified as official when first introduced to the cask
   url "https://github.com/brave/brave-browser/releases/download/v#{version}/Brave-Browser.dmg"
@@ -9,7 +9,6 @@ cask 'brave-browser' do
   homepage 'https://brave.com/'
 
   auto_updates true
-  depends_on macos: '>= :mavericks'
 
   app 'Brave Browser.app'
 

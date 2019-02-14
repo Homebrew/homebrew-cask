@@ -1,6 +1,6 @@
 cask 'seashore' do
-  version '2.3.2'
-  sha256 '412cfbf7c74133d1d5bcf9d118caaf84350fedb5a8cf5ff4a89c98daa3f1ae37'
+  version '2.3.4'
+  sha256 '7b9d0bf312e146b8067a6a5c99beabeb23d332bf13f247fd4caa6521401918fb'
 
   url "https://github.com/robaho/seashore/releases/download/v#{version}/seashore-bin-#{version}.dmg"
   appcast 'https://github.com/robaho/seashore/releases.atom'

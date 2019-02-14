@@ -6,6 +6,8 @@ cask 'krisp' do
   name 'Krisp'
   homepage 'https://krisp.ai/index.html'
 
+  auto_updates true
+
   pkg "krisp_#{version}.pkg"
 
   uninstall quit:    'ai.2Hz.krisp',

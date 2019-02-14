@@ -1,6 +1,6 @@
 cask 'tableau-prep' do
-  version '2018.3.2'
-  sha256 'e193dd1733fd6cf06e2284fa6b9b8b0d23d9f3922b46c7670863a24c5fe874e5'
+  version '2019.1.1'
+  sha256 '392db25721e22d93e8489ab07b6a6107b8c66db5eee0cf97e844601717c50d47'
 
   url "https://downloads.tableau.com/esdalt/tableau_prep/#{version}/TableauPrep-#{version.dots_to_hyphens}.dmg"
   name 'Tableau Prep'

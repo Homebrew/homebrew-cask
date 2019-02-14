@@ -1,6 +1,6 @@
 cask 'macvim' do
-  version '8.1.153'
-  sha256 'e45f0b57c8333d5938d3e67ac58887598d8e387eb953ea4321e216b08e91dfc4'
+  version '8.1.154'
+  sha256 '1dfbd4f3e16d12413df21fb926b1adf02927d6266fad84877049e1a46a56ea97'
 
   url "https://github.com/macvim-dev/macvim/releases/download/snapshot-#{version.patch}/MacVim.dmg"
   appcast 'https://github.com/macvim-dev/macvim/releases.atom'

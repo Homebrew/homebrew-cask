@@ -7,7 +7,5 @@ cask 'managenameext' do
   name 'ManageNameExt'
   homepage 'http://throb.pagesperso-orange.fr/site/ind_JS.html?Prg_S.html&Prg_ApplisRB.html#ManageNameExt'
 
-  depends_on macos: '>= :mavericks'
-
   app 'ManageNameExt.app'
 end
