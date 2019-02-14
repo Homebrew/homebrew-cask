@@ -64,8 +64,8 @@ before_script:
   - travis_retry git clone https://$GITHUB_TOKEN@github.com/Homebrew/formulae.brew.sh
 
 script: 
-  - brew cask ci
   - cd formulae.brew.sh && rake cask --verbose --trace
+  - brew cask ci
 
 notifications:
   email: false
