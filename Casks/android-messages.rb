@@ -9,7 +9,5 @@ cask 'android-messages' do
 
   app 'Android Messages.app'
 
-  zap trash: [
-               '~/Library/Application Support/Android Messages',
-             ]
+  zap trash: '~/Library/Application Support/Android Messages'
 end
