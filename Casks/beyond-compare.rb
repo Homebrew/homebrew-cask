@@ -7,6 +7,8 @@ cask 'beyond-compare' do
   name 'Beyond Compare'
   homepage 'https://www.scootersoftware.com/'
 
+  auto_updates true
+
   app 'Beyond Compare.app'
   binary "#{appdir}/Beyond Compare.app/Contents/MacOS/bcomp"
 
