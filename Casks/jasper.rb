@@ -4,7 +4,7 @@ cask 'jasper' do
 
   # github.com/jasperapp/jasper was verified as official when first introduced to the cask
   url "https://github.com/jasperapp/jasper/releases/download/v#{version}/jasper_v#{version}_mac.zip"
-  appcast 'https://jasperapp.io/-/versions-mac.json'
+  appcast 'https://github.com/jasperapp/jasper/releases.atom'
   name 'Jasper'
   homepage 'https://jasperapp.io/'
 
