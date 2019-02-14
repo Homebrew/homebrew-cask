@@ -1,8 +1,9 @@
 cask 'tableau' do
-  version '2018.3.3'
-  sha256 '583467dfd6328088d18ea4be380d614f46b7bb6b89af03ffa6aed9bc397dea8c'
+  version '2019.1.0'
+  sha256 '03c928c5495bb935be4e01c3bfa62609051ca77b3db5000edc8811b3b46c569f'
 
   url "https://downloads.tableau.com/tssoftware/TableauDesktop-#{version.dots_to_hyphens}.dmg"
+  appcast 'https://www.corecode.io/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.tableau.com/downloads/desktop/mac'
   name 'Tableau Desktop'
   homepage 'https://www.tableau.com/products/desktop/download'
 
