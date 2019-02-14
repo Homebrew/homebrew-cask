@@ -10,7 +10,5 @@ cask 'qtpass' do
 
   app 'QtPass.app'
 
-  zap trash: [
-               '~/Library/Saved Application State/$(PRODUCT_BUNDLE_IDENTIFIER).savedState',
-             ]
+  zap trash: '~/Library/Saved Application State/$(PRODUCT_BUNDLE_IDENTIFIER).savedState'
 end
