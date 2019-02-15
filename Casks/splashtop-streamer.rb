@@ -9,7 +9,7 @@ cask 'splashtop-streamer' do
   homepage 'https://www.splashtop.com/downloads'
 
   auto_updates true
-  
+
   pkg 'Splashtop Streamer.pkg'
 
   uninstall quit:      'com.splashtop.Splashtop-Streamer',
