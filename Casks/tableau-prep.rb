@@ -9,7 +9,7 @@ cask 'tableau-prep' do
 
   depends_on macos: '>= :el_capitan'
 
-  pkg 'Tableau Prep Builder.pkg
+  pkg 'Tableau Prep Builder.pkg'
 
   uninstall pkgutil: [
                        'com.amazon.redshiftodbc',
