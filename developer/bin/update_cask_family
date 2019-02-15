@@ -10,6 +10,8 @@ function usage {
     Submit updates to a family of casks all at once.
 
     Usage: ${program} <family> <new_version>
+    Example: ${program} flash '32.0.0.142'
+
     Available families: ${families[*]}
   " | sed -E 's/^ {4}//'
 }
