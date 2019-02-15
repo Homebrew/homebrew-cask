@@ -1,6 +1,6 @@
 cask 'blitz' do
-  version '0.9.19'
-  sha256 '5eb59aae3429b16f7921848ea51eda5461f553a98892d8b9401c44900e38a9ae'
+  version '0.9.20'
+  sha256 '0f36b95bec82ea44ec1956731f8bcc9c0a66eafa92b13f97989069548b95786e'
 
   url 'https://dl.blitz.gg/download/mac'
   appcast 'https://www.corecode.io/cgi-bin/check_urls/check_url_filename.cgi?url=https://dl.blitz.gg/download/mac'
