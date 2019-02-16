@@ -7,6 +7,8 @@ cask 'twig' do
   name 'Twig'
   homepage 'https://github.com/lukakerr/twig'
 
+  depends_on macos: '>= :sierra'
+
   app 'Twig.app'
 
   zap trash: '~/Library/Caches/io.github.lukakerr.twig'
