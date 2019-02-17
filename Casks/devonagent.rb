@@ -1,6 +1,6 @@
 cask 'devonagent' do
-  version '3.10'
-  sha256 '950aa227f93b14cebd7856b0fd11926f29202086ea25422382109d0e7bfd47a3'
+  version '3.11.1'
+  sha256 '2b17fae352ca6271d0f0eb0d5ab643d0b9312d757112efd77c39f9e9e05151e6'
 
   # amazonaws.com/DTWebsiteSupport was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/devonagent/#{version}/DEVONagent_Pro.app.zip"
