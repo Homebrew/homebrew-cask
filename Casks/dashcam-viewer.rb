@@ -1,6 +1,6 @@
 cask 'dashcam-viewer' do
-  version '3.1.8'
-  sha256 '136a1d69895fc4e7494db00384f8eb7ad7ba175d8006b1e23b415b8a04fecbbe'
+  version '3.1.9'
+  sha256 'bf87ea3e2a82a00bc5031e5ebb6c18b2c7027425e8ddc94d7062a64fc25d776d'
 
   # s3.amazonaws.com/aws-website-dcv-downloads-c8kwd/dcv was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/aws-website-dcv-downloads-c8kwd/dcv/Dashcam_Viewer_v#{version}.dmg"
