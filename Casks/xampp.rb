@@ -14,5 +14,10 @@ cask 'xampp' do
                     }
 
   uninstall quit:   'com.bitnami.manager',
+            script: {
+                      executable: '/Applications/XAMPP/uninstall.app/Contents/MacOS/osx-intel',
+                      args:       ['--mode', 'unattended'],
+                      sudo:       true,
+                    },
             delete: '/Applications/XAMPP/'
 end
