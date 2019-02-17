@@ -1,4 +1,4 @@
-cask 'cyberghost' do
+cask 'cyberghost-vpn' do
   version '7.0.1.74'
   sha256 'a30ad341b29dde169e15f1af00cc68df1b8393fdd7d6cfc70b11c145e3241324'
 
