@@ -1,6 +1,6 @@
 cask 'quassel' do
   version '0.13.1'
-  sha256 'bda19cfd004a0b377f1c6a3974fd63f5665d5dc570eac2a24bf7c48d387f24fb'
+  sha256 '5a2437dd0fc51a8fa12f2c83472e8294635edea41e55c523535df080c012379e'
 
   # github.com/quassel/quassel/ was verified as official when first introduced to the cask
   url "https://github.com/quassel/quassel/releases/download/#{version}/QuasselMono_MacOSX-x86_64_#{version}.dmg"
