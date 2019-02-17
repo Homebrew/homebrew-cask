@@ -1,6 +1,6 @@
 cask 'soulver' do
-  version '2.6.8-5949'
-  sha256 '216110f8118783194fb80f30e7a63584308f6569e3ff3214d13026231130ab7a'
+  version '2.6.9-6055'
+  sha256 'e8f96895e43d28177f458404bfc082ebc940c66ce6f425cdceeedab9389272bf'
 
   url "https://www.acqualia.com/files/sparkle/soulver_#{version}.zip"
   appcast "https://www.acqualia.com/soulver/appcast/soulver#{version.major}.xml"
