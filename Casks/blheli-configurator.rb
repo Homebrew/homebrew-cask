@@ -4,7 +4,7 @@ cask 'blheli-configurator' do
 
   url "https://github.com/blheli-configurator/blheli-configurator/releases/download/#{version}/BLHeli-Configurator_macOS_#{version}.dmg"
   appcast 'https://github.com/blheli-configurator/blheli-configurator/releases.atom'
-  name 'BLHeli-Configurator'
+  name 'BLHeli Configurator'
   homepage 'https://github.com/blheli-configurator/blheli-configurator'
 
   app 'BLHeli Configurator.app'
