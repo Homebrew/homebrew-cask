@@ -11,6 +11,8 @@ cask 'gpg-suite-pinentry' do
   conflicts_with cask: [
                          'gpg-suite',
                          'gpg-suite-nightly',
+                         'gpg-suite-no-mail',
+                         'gpg-suite-no-gpg',
                        ]
   depends_on macos: '>= :sierra'
 

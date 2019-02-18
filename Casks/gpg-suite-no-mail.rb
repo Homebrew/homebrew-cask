@@ -12,6 +12,7 @@ cask 'gpg-suite-no-mail' do
                          'gpg-suite',
                          'gpg-suite-nightly',
                          'gpg-suite-pinentry',
+                         'gpg-suite-no-gpg',
                        ]
   depends_on macos: '>= :sierra'
 
