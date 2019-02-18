@@ -105,8 +105,4 @@ cask 'gpg-suite-pinentry' do
             delete:  '/usr/local/MacGPG2'
 
   zap trash: '~/Library/Preferences/org.gpgtools.common.plist'
-
-  caveats do
-    files_in_usr_local
-  end
 end
