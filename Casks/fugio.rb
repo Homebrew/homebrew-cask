@@ -1,8 +1,8 @@
 cask 'fugio' do
-  version '2.11.0'
-  sha256 '8fece03314f93618887268b9b257c7c811ef6c952d2cb7cedfb0bca6e76fde0d'
+  version '3.0.1'
+  sha256 'b8006adb52853c56074d9bc2dde7c20fde05a910f57b23e19490265ea55f2cd3'
 
-  url "https://www.bigfug.com/releases/Fugio-#{version}-Cask.zip"
+  url "https://www.bigfug.com/releases/Fugio-#{version}-macOS.dmg"
   name 'Fugio'
   homepage 'https://www.bigfug.com/software/fugio/'
 
