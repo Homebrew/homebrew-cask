@@ -1,10 +1,8 @@
 cask 'sketchup' do
-  version '2017,3-116-90851'
-  sha256 'a534d77d1ea9622b19463258abf21768cb8bb8126734bd40329dd4088b04d79f'
+  version '2019,19.0.684'
+  sha256 '2b6256d90db763cb4ba9b2cfa0823373bc48401004249a6580094b2bf8f57294'
 
-  # downloads can be found at https://www.sketchup.com/download/all
-  # dl.trimble.com/sketchup was verified as official when first introduced to the cask
-  url "https://www.sketchup.com/sketchup/#{version.before_comma}/en/sketchupmake-#{version.before_comma}-#{version.after_comma}-en-dmg"
+  url 'https://www.sketchup.com/sketchup/SketchUpPro-en-dmg'
   name 'SketchUp'
   homepage 'https://www.sketchup.com/'
 
