@@ -9,5 +9,6 @@ cask 'yahoo-keykey' do
 
   pkg 'KeyKey.pkg'
 
+  uninstall signal: [['TERM', 'com.yahoo.inputmethod.KeyKey.InstallerHelp']]
   uninstall pkgutil: 'com.yahoo.inputmethod.keykey'
 end
