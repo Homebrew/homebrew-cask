@@ -1,6 +1,6 @@
 cask 'dreampages-plus' do
-  version '160'
-  sha256 '81426655fc6aaaccae80be1872dc45e6fd32d1f9cc0e8077ce4fb8dd35337aab'
+  version '173'
+  sha256 '9c0bfc183be44b87a17f812c8090bc3f95e5b0ab81e3e7c87383ab560bad336d'
 
   url "https://dnp-photobook.jp/plus/download/app/mac/DPPlus_setup_V#{version}.dmg"
   name 'DreamPages Plus'
