@@ -11,6 +11,8 @@ cask 'gpg-suite-pinentry' do
   conflicts_with cask: [
                          'gpg-suite',
                          'gpg-suite-nightly',
+                         'gpg-suite-no-mail',
+                         'gpg-suite-no-gpg',
                        ]
   depends_on macos: '>= :sierra'
 
@@ -103,8 +105,4 @@ cask 'gpg-suite-pinentry' do
             delete:  '/usr/local/MacGPG2'
 
   zap trash: '~/Library/Preferences/org.gpgtools.common.plist'
-
-  caveats do
-    files_in_usr_local
-  end
 end
