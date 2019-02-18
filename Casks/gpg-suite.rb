@@ -8,7 +8,12 @@ cask 'gpg-suite' do
   homepage 'https://gpgtools.org/'
 
   auto_updates true
-  conflicts_with cask: 'gpg-suite-nightly'
+  conflicts_with cask: [
+                         'gpg-suite-nightly',
+                         'gpg-suite-pinentry',
+                         'gpg-suite-no-mail',
+                         'gpg-suite-no-gpg',
+                       ]
   depends_on macos: '>= :sierra'
 
   pkg 'Install.pkg'
