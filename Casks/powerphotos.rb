@@ -7,9 +7,13 @@ cask 'powerphotos' do
     version '1.2.3'
     sha256 'b07eb9f8801fb397d55e3dd7e0569dbef5d3265debaf3ee68247062901d93fcb'
     url "https://www.fatcatsoftware.com/powerphotos/PowerPhotos_#{version.no_dots}.zip"
+  elsif MacOS.version <= :sierra
+    version '1.4.2'
+    sha256 'ed9be64f4cb5a3d3848ad5177947bd8cd33e36846ea36266ef9d4d7b46813538'
+    url "https://www.fatcatsoftware.com/powerphotos/PowerPhotos_#{version.no_dots}.zip"
   else
-    version '1.5.5'
-    sha256 '75ef5e965c4b025a8f3dabf8a97e1bf53e5b2dc00e126d2fa6067dc3b538ef27'
+    version '1.5.7'
+    sha256 '003dd46ec3b5d1d6926ca20604d29d6a165d1b526e558f2d6ab3f20f9cc4c12d'
     url 'https://www.fatcatsoftware.com/powerphotos/PowerPhotos.zip'
   end
 

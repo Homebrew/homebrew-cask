@@ -1,6 +1,6 @@
 cask 'fastonosql' do
-  version '1.26.0'
-  sha256 '771893c53c1a523daf9cc70f378075b49b854a5ced1cbc7d926a1cf9247dda17'
+  version '1.27.1'
+  sha256 '514f966f9da9619909d226eb55f7dc2843afeccff71d4d85812b994817a51190'
 
   url "https://fastonosql.com/downloads_pro/macosx/fastonosql_pro-#{version}-x86_64.dmg"
   appcast 'https://github.com/fastogt/fastonosql/releases.atom'

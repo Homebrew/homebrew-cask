@@ -1,6 +1,6 @@
 cask 'hma-pro-vpn' do
-  version '4.4.2'
-  sha256 '78ab7a404377ae084d925698732d1cc031b81b2e13b2da2836b94eb833adb8f4'
+  version :latest
+  sha256 :no_check
 
   # s-mac-sl.avcdn.net was verified as official when first introduced to the cask
   url 'https://s-mac-sl.avcdn.net/macosx/privax/HMA-Pro-VPN.dmg'

@@ -4,6 +4,7 @@ cask 'flowsync' do
 
   # dngo5v6w7xama.cloudfront.net was verified as official when first introduced to the cask
   url "https://dngo5v6w7xama.cloudfront.net/connect/download/FlowSync_#{version}.pkg"
+  appcast 'https://flow.polar.com/start'
   name 'Polar FlowSync Software'
   homepage 'https://support.polar.com/uk-en/support/flowsync'
 

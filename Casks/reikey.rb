@@ -1,6 +1,6 @@
 cask 'reikey' do
-  version '1.3.0'
-  sha256 'd65a64fda45dc5e02db7f8bbdd2fdf07ce814bd9bdcc7f48aee090030942d7c0'
+  version '1.4.0'
+  sha256 '9a7c70eeae3fdfdd67cfc95229c3d64201ba350dad1ae95ae586c486b1076475'
 
   # bitbucket.org/objective-see was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/ReiKey_#{version}.zip"

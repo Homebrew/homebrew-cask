@@ -4,7 +4,7 @@ cask 'spectrum' do
 
   # github.com/withspectrum/spectrum was verified as official when first introduced to the cask
   url "https://github.com/withspectrum/spectrum/releases/download/v#{version}/Spectrum-#{version}-mac.zip"
-  appcast 'https://github.com/withspectrum/spectrum/releases.atom'
+  appcast 'https://spectrum.chat/apps'
   name 'Spectrum'
   homepage 'http://spectrum.chat/'
 

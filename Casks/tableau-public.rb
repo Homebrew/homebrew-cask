@@ -1,8 +1,9 @@
 cask 'tableau-public' do
-  version '2018.3.3'
-  sha256 '1fcc462b091683c0b61574564cf45f6fc44d742a5d4c39fdaacd96c8b2226482'
+  version '2019.1.0'
+  sha256 '702a2548a3da20197a6a0ab98a07e53ef7652846f81e475f8347b6cda20bf095'
 
   url "https://downloads.tableau.com/public/TableauPublic-#{version.dots_to_hyphens}.dmg"
+  appcast 'https://www.corecode.io/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.tableau.com/downloads/public/mac'
   name 'Tableau Public'
   homepage 'https://public.tableau.com/s/'
 
