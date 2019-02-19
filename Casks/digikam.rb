@@ -11,4 +11,5 @@ cask 'digikam' do
   pkg "digikam-#{version}-MacOS-x86-64.pkg"
 
   uninstall pkgutil: 'org.freedesktop.digikam'
+  uninstall rmdir: '/Applications/digiKam'
 end
