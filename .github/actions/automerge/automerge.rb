@@ -98,4 +98,4 @@ diff = diff_for_pull_request(pr)
 skip "Not a “simple” version bump PR." unless check_diff(diff)
 
 puts "Merging pull request #{pr.fetch("number")}…"
-merge_pull_request(pr)
+# merge_pull_request(pr)
