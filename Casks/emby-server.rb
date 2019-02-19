@@ -9,7 +9,7 @@ cask 'emby-server' do
   homepage 'https://emby.media/'
 
   depends_on macos: '>= :sierra'
-  
+
   app 'EmbyServer.app'
 
   zap trash: '~/.config/emby-server'
