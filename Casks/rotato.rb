@@ -7,7 +7,7 @@ cask 'rotato' do
   appcast 'https://updates.devmate.com/com.mortenjust.Rendermock.xml'
   name 'Rotato'
   homepage 'https://rotato.xyz/'
-  
+
   depends_on macos: '>= :high_sierra'
 
   app 'Rotato.app'
