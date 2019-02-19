@@ -8,5 +8,7 @@ cask 'rotato' do
   name 'Rotato'
   homepage 'https://rotato.xyz/'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'Rotato.app'
 end
