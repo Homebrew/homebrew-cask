@@ -10,4 +10,10 @@ cask 'namechanger' do
   auto_updates true
 
   app 'NameChanger.app'
+
+  zap trash: [
+               '~/Library/Application Support/NameChanger',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mrrsoftware.namechanger.sfl*',
+               '~/Library/Preferences/com.mrrsoftware.NameChanger.plist',
+             ]
 end

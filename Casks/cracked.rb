@@ -1,6 +1,6 @@
 cask 'cracked' do
-  version '0.2.11'
-  sha256 'ccda0dae962e3eca20e544b2b2fe1e1963635230882610178f7f8256649c9247'
+  version '0.2.12'
+  sha256 '7c57781085c901df9e67368a72c8fe93883fe4657ed92b8ef22d7338df981dae'
 
   url "https://github.com/billorcutt/Cracked/releases/download/#{version}/Cracked.dmg"
   appcast 'https://github.com/billorcutt/Cracked/releases.atom'

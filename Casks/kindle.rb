@@ -1,6 +1,6 @@
 cask 'kindle' do
-  version '52065'
-  sha256 '043c9ec235141455ba0b92d3c7529e3112b90e1431358cf3d801e3d893a435f9'
+  version '52077'
+  sha256 'a069cd4cb4eee382ca7122b1652577b727851d244ffe75e60db08255b75f482b'
 
   # s3.amazonaws.com/kindleformac was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/kindleformac/#{version}/KindleForMac-#{version}.dmg"

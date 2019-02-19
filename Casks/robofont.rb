@@ -8,7 +8,5 @@ cask 'robofont' do
   name 'RoboFont'
   homepage 'https://robofont.com/'
 
-  depends_on macos: '>= :mavericks'
-
   app 'RoboFont.app'
 end

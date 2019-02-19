@@ -7,7 +7,5 @@ cask 'barmaid' do
   name 'Barmaid'
   homepage 'https://github.com/zenonas/barmaid'
 
-  depends_on macos: '>= :mavericks'
-
   app 'Barmaid.app'
 end

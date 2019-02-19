@@ -9,4 +9,8 @@ cask 'porthole' do
   homepage 'https://www.dangercove.com/porthole/'
 
   app 'Porthole.app'
+
+  caveats do
+    discontinued
+  end
 end

@@ -1,6 +1,6 @@
 cask 'p4v' do
-  version '18.3-1719707'
-  sha256 'ea6dd0739d068c9a140c8802ad366aae9c27687d44f225e0cae180373eddca28'
+  version '18.4-1753667'
+  sha256 'b62bbca489f787fc0d55cce5c17f95876b0159a57b801bcfc9c11474d376a03e'
 
   url "https://cdist2.perforce.com/perforce/r#{version.major_minor}/bin.macosx1013x86_64/P4V.dmg"
   appcast "https://cdist2.perforce.com/perforce/r#{version.major_minor}/bin.macosx1013x86_64/SHA256SUMS"

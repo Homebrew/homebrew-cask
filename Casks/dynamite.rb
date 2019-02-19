@@ -7,7 +7,5 @@ cask 'dynamite' do
   name 'DynaMite'
   homepage 'https://www.mediaatelier.com/DynaMite3/'
 
-  depends_on macos: '>= :mavericks'
-
   app 'DynaMite.app'
 end

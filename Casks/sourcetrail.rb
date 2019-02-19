@@ -1,6 +1,6 @@
 cask 'sourcetrail' do
-  version '2018.3.55'
-  sha256 '4e4fc500c8cd1a6a408f7314b3a47ddf3c1651acb44e6791b7a3d55048c2b45f'
+  version '2019.1.11'
+  sha256 '918568593e21d6c2197ed61138357fcdadcde1a958da6a9fa76b2cee7d688d74'
 
   url "https://www.sourcetrail.com/downloads/#{version}/osx/64bit"
   appcast 'https://raw.githubusercontent.com/CoatiSoftware/SourcetrailBugTracker/master/README.md'

@@ -1,9 +1,8 @@
 cask 'xiami' do
-  version '7.2.2,10161733'
-  sha256 'ef5a09acef0532da035eddc8f27327e50a9b507fe14143eaba5f3e22028acf44'
+  version '7.5.0,e6f5fc55f5489bc4da7c18ffd0a86b40'
+  sha256 'f344fd5dbb54cbda4de3f832b03d33c7447c3efd8971ace06d14e5f092c07b7f'
 
-  # gxiami.alicdn.com/xiami-desktop was verified as official when first introduced to the cask
-  url "https://gxiami.alicdn.com/xiami-desktop/update/XiamiMac-#{version.after_comma}.dmg"
+  url "https://files.xiami.com/webh5/files/xiamiMac/#{version.after_comma}.xiamimac#{version.before_comma.dots_to_hyphens}.zip"
   appcast 'https://g.alicdn.com/music/desktop-app/XiamiMac.xml'
   name 'Xiami'
   name '虾米音乐'

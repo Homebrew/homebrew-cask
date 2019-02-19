@@ -17,4 +17,8 @@ cask 'electronic-wechat' do
                '~/Library/Preferences/com.electron.electronic-wechat.plist',
                '~/Library/Preferences/com.electron.electronic-wechat.helper.plist',
              ]
+
+  caveats do
+    discontinued
+  end
 end

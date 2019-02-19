@@ -1,6 +1,6 @@
 cask 'scapple' do
-  version '1.3.1'
-  sha256 'aacbabb14b4cb69ea8d6d93293ac2a20233be8174bd481ccb5dae479c8f39059'
+  version '1.3.2'
+  sha256 'c4799d55939e635e42cb67b588f41a8a5fb58efeb768ca36d455072828dc7172'
 
   # scrivener.s3.amazonaws.com was verified as official when first introduced to the cask
   url 'https://scrivener.s3.amazonaws.com/Scapple.dmg'

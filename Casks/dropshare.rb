@@ -1,21 +1,21 @@
 cask 'dropshare' do
-  version '5,5036'
-  sha256 'c28dd83d2da7107d85953dec8e03a5ddaff837ba34fdc547427144e26358e665'
+  version '5.1.2,5079'
+  sha256 'ca734d90e4a72cd95e777f65e82805c5ccafc9d7b78e4fa3d09d65d9f07d9342'
 
   # d2wvuuix8c9e48.cloudfront.net was verified as official when first introduced to the cask
   url "https://d2wvuuix8c9e48.cloudfront.net/Dropshare#{version.major}-#{version.after_comma}.app.zip"
-  appcast "https://getdropsha.re/sparkle/Dropshare#{version.major}.xml"
+  appcast "https://dropshare.app/sparkle/Dropshare#{version.major}.xml"
   name 'Dropshare'
-  homepage 'https://getdropsha.re/'
+  homepage 'https://dropshare.app/'
 
   app "Dropshare #{version.major}.app"
   binary "#{appdir}/Dropshare #{version.major}.app/Contents/Resources/ds.sh", target: 'ds'
 
   zap trash: [
-               '~/Library/Application Support/Dropshare 4',
-               '~/Library/Caches/net.mkswap.Dropshare4',
-               '~/Library/Cookies/net.mkswap.Dropshare4.binarycookies',
-               '~/Library/Logs/Dropshare 4',
-               '~/Library/Preferences/net.mkswap.Dropshare4.plist',
+               "~/Library/Application Support/Dropshare #{version.major}",
+               "~/Library/Caches/net.mkswap.Dropshare#{version.major}",
+               "~/Library/Cookies/net.mkswap.Dropshare#{version.major}.binarycookies",
+               "~/Library/Logs/Dropshare #{version.major}",
+               "~/Library/Preferences/net.mkswap.Dropshare#{version.major}.plist",
              ]
 end

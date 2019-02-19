@@ -7,7 +7,5 @@ cask 'soqlxplorer' do
   name 'SoqlXplorer'
   homepage 'http://www.pocketsoap.com/osx/soqlx/'
 
-  depends_on macos: '>= :mavericks'
-
   app 'SoqlXplorer.app'
 end

@@ -1,6 +1,6 @@
 cask 'diskcatalogmaker' do
-  version '7.4.4'
-  sha256 'ae826bc83363c3955be7186b62f41fee3a57a0a641e1bb721e7c5abd08405cb2'
+  version '7.4.8'
+  sha256 'd09070dc0b80e956c3c712065253be04b2451aaa4541a8262a0a1483bcd3d558'
 
   url 'https://download.diskcatalogmaker.com/zip/DiskCatalogMaker.zip'
   appcast 'https://fujiwara.sakura.ne.jp/info/appcast/DiskCatalogMaker.xml'

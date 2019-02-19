@@ -1,6 +1,6 @@
 cask 'mediaelch' do
-  version '2.6.0_2019-01-06_11-00_git-master-d62c091'
-  sha256 '7cfa5c456f2c02f15e712bba8fd4605a85e713e13ac923876b87c644e5e699e7'
+  version '2.6.1-dev_2019-02-09_14-04_git-master-c1f194a'
+  sha256 '8412e258e303b4be13ec6890c5e330316054c28b505e3922f0ffcb0e9cc2e208'
 
   # bintray.com/artifact/download/komet/MediaElch was verified as official when first introduced to the cask
   url "https://bintray.com/artifact/download/komet/MediaElch/MediaElch_macOS_#{version}.dmg"

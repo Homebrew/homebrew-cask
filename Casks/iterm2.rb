@@ -1,7 +1,7 @@
 cask 'iterm2' do
   # note: "2" is not a version number, but an intrinsic part of the product name
-  version '3.2.6'
-  sha256 'dbc44180c2de9c741fdd8f96750f3502d79aa1c53ed884538648bdb558abd884'
+  version '3.2.7'
+  sha256 'ac71ddf4b9378fb87a30c64aa9bde543300728ed5e5ab996f1687f40fd7e2ae1'
 
   url "https://iterm2.com/downloads/stable/iTerm2-#{version.dots_to_underscores}.zip"
   appcast 'https://iterm2.com/appcasts/final.xml'
