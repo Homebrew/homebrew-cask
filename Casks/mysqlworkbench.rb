@@ -5,7 +5,9 @@ cask 'mysqlworkbench' do
   url "https://cdn.mysql.com/Downloads/MySQLGUITools/mysql-workbench-community-#{version}-macos-x86_64.dmg"
   name 'MySQL Workbench'
   homepage 'https://www.mysql.com/products/workbench/'
-
+  
+  depends_on macos: '>= :high_sierra'
+  
   app 'MySQLWorkbench.app'
 
   zap trash: [
