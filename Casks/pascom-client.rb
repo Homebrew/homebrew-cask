@@ -5,6 +5,8 @@ cask 'pascom-client' do
   url "https://download.pascom.net/release-archive/client/stable/pascom%20Client-#{version}.dmg"
   name 'pascom Client'
   homepage 'https://www.pascom.net/'
+  
+  depends_on macos: '>= :sierra'
 
   app 'pascom Client.app'
 end
