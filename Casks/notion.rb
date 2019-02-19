@@ -1,6 +1,6 @@
 cask 'notion' do
-  version '1.0.4'
-  sha256 '3f9de9640b0ae38f53c506ba715f02970b2930b9942d1b989f48fefc2053b197'
+  version '1.0.5'
+  sha256 'eecaa08c7429d77f0d8ce9b953e36cfddf11aabc21fc6e1001057a8de3eb6497'
 
   # desktop-release.notion-static.com was verified as official when first introduced to the cask
   url "https://desktop-release.notion-static.com/Notion-#{version}.dmg"
