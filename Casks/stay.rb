@@ -6,6 +6,8 @@ cask 'stay' do
   appcast 'https://cordlessdog.com/stay/appcast.xml'
   name 'Stay'
   homepage 'https://cordlessdog.com/stay/'
+  
+  depends_on macos: '>= :high_sierra'
 
   app 'Stay.app'
 
