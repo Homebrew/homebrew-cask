@@ -7,6 +7,8 @@ cask 'mediaelch' do
   appcast 'https://github.com/Komet/MediaElch/releases.atom'
   name 'MediaElch'
   homepage 'https://www.kvibes.de/en/mediaelch/'
+  
+  depends_on macos: '>= :sierra'
 
   app 'MediaElch.app'
 end
