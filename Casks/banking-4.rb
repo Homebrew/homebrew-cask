@@ -10,5 +10,5 @@ cask 'banking-4' do
 
   pkg 'MacBanking4.pkg'
 
-  uninstall pkgutil: 'com.Subsembly.Banking4'
+  uninstall pkgutil: 'com.subsembly.Banking4'
 end
