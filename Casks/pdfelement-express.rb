@@ -5,6 +5,8 @@ cask 'pdfelement-express' do
   url "http://download.wondershare.com/cbs_down/mac-pdfelement-express_full#{version.after_comma}.dmg"
   name 'Wondershare PDFelement Express for Mac'
   homepage 'https://pdf.wondershare.com/pdfelement-express-mac.html'
+  
+  depends_on macos: '>= :sierra'
 
   app 'PDFelement Express.app'
 end
