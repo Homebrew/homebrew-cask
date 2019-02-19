@@ -6,6 +6,8 @@ cask 'fluid' do
   appcast "https://fluidapp.com/appcast/fluid#{version.major}.rss"
   name 'Fluid'
   homepage 'https://fluidapp.com/'
+  
+  depends_on macos: '>= :sierra'
 
   app 'Fluid.app'
 
