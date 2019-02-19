@@ -8,6 +8,6 @@ cask 'cyberghost-vpn' do
   homepage 'https://www.cyberghostvpn.com/'
 
   depends_on macos: '>= :sierra'
-  
+
   app 'CyberGhost VPN.app'
 end
