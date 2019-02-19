@@ -7,6 +7,8 @@ cask 'avibrazil-rdm' do
   appcast 'https://avi.alkalay.net/software/RDM/'
   name 'RDM'
   homepage 'https://github.com/avibrazil/RDM'
+  
+  depends_on macos: '>= :sierra'
 
   pkg "RDM-#{version}.pkg"
 
