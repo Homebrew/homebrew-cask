@@ -8,8 +8,7 @@ cask 'abricotine' do
   name 'abricotine'
   homepage 'https://abricotine.brrd.fr/'
 
-  # Renamed as the folder is extraneous
-  app 'Abricotine-darwin-x64/Abricotine.app', target: 'Abricotine.app'
+  app 'Abricotine-darwin-x64/Abricotine.app'
 
   zap trash: '~/Library/Application Support/Abricotine'
 end
