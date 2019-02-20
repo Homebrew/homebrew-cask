@@ -37,15 +37,17 @@ def find_pull_request_for_status(event)
 
   branch = event.fetch("branches").find { |branch| branch.fetch("commit").fetch("sha") == event.fetch("commit").fetch("sha") }
 
+  skip "Status does not match commit." unless branch
+
   /https:\/\/api.github.com\/repos\/(?<pr_author>[^\/]+)\// =~ branch.fetch("commit").fetch("url")
 
   GitHub.pull_requests(
     repo,
     base: "#{event.fetch("repository").fetch("default_branch")}",
     head: "#{pr_author}:#{branch.fetch("name")}",
-    state: "open",
-    sort: "updated",
-    direction: "desc",
+    state: :open,
+    sort: :updated,
+    direction: :desc,
   ).find { |pr| pr.fetch("head").fetch("sha") == event.fetch("commit").fetch("sha") }
 end
 
@@ -102,6 +104,7 @@ begin
     status = event
 
     pr = find_pull_request_for_status(status)
+    skip "No matching pull request found." unless pr
     merge_pull_request(pr, [status])
   when "pull_request", "pull_request_review", "pull_request_review_comment"
     pr = event.fetch("pull_request")
