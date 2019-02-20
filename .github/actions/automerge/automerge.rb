@@ -16,11 +16,18 @@ ENV["GITHUB_SHA"]        = ENV.delete("HOMEBREW_GITHUB_SHA")
 ENV["GITHUB_WORKFLOW"]   = ENV.delete("HOMEBREW_GITHUB_WORKFLOW")
 ENV["GITHUB_WORKSPACE"]  = ENV.delete("HOMEBREW_GITHUB_WORKSPACE")
 
-class Skip < StandardError; end
+class NeutralSystemExit < SystemExit
+  def initialize(message)
+    super(78, message)
+  end
+end
 
 def skip(message)
-  raise Skip, message
+  raise NeutralSystemExit, message
 end
+
+$stdout.sync = true
+$stderr.sync = true
 
 event = JSON.parse(File.read(ENV.fetch("GITHUB_EVENT_PATH")))
 
@@ -37,15 +44,17 @@ def find_pull_request_for_status(event)
 
   branch = event.fetch("branches").find { |branch| branch.fetch("commit").fetch("sha") == event.fetch("commit").fetch("sha") }
 
+  skip "Status does not match commit." unless branch
+
   /https:\/\/api.github.com\/repos\/(?<pr_author>[^\/]+)\// =~ branch.fetch("commit").fetch("url")
 
   GitHub.pull_requests(
     repo,
     base: "#{event.fetch("repository").fetch("default_branch")}",
     head: "#{pr_author}:#{branch.fetch("name")}",
-    state: "open",
-    sort: "updated",
-    direction: "desc",
+    state: :open,
+    sort: :updated,
+    direction: :desc,
   ).find { |pr| pr.fetch("head").fetch("sha") == event.fetch("commit").fetch("sha") }
 end
 
@@ -102,6 +111,7 @@ begin
     status = event
 
     pr = find_pull_request_for_status(status)
+    skip "No matching pull request found." unless pr
     merge_pull_request(pr, [status])
   when "pull_request", "pull_request_review", "pull_request_review_comment"
     pr = event.fetch("pull_request")
@@ -116,20 +126,32 @@ begin
   when "push"
     prs = GitHub.pull_requests(ENV["GITHUB_REPOSITORY"], state: :open, base: "master")
 
-    merged_prs = prs.select do |pr|
+    skip "No open pull requests found." if prs.empty?
+
+    merged_prs = []
+    failed_prs = []
+    skipped_prs = []
+
+    prs.each do |pr|
       begin
         merge_pull_request(pr)
-        true
+        merged_prs << pr
+      rescue NeutralSystemExit
+        skipped_prs << pr
       rescue
-        false
+        failed_prs << pr
       end
     end
 
-    skip "No “simple” version bump pull requests found." if merged_prs.empty?
+    if (merged_prs + failed_prs).empty? && skipped_prs.any?
+      skip "No “simple” version bump pull requests found."
+    elsif failed_prs.any?
+      exit 1
+    end
   else
     skip "Unsupported GitHub Actions event."
   end
-rescue Skip => reason
+rescue NeutralSystemExit => reason
   $stderr.puts reason
-  exit 78
+  raise
 end
