@@ -13,7 +13,6 @@ ENV["GITHUB_EVENT_NAME"] = ENV.delete("HOMEBREW_GITHUB_EVENT_NAME")
 ENV["GITHUB_EVENT_PATH"] = ENV.delete("HOMEBREW_GITHUB_EVENT_PATH")
 ENV["GITHUB_REPOSITORY"] = ENV.delete("HOMEBREW_GITHUB_REPOSITORY")
 ENV["GITHUB_SHA"]        = ENV.delete("HOMEBREW_GITHUB_SHA")
-ENV["GITHUB_TOKEN"]      = ENV.delete("HOMEBREW_GITHUB_TOKEN")
 ENV["GITHUB_WORKFLOW"]   = ENV.delete("HOMEBREW_GITHUB_WORKFLOW")
 ENV["GITHUB_WORKSPACE"]  = ENV.delete("HOMEBREW_GITHUB_WORKSPACE")
 
@@ -24,6 +23,14 @@ def skip(message)
 end
 
 event = JSON.parse(File.read(ENV.fetch("GITHUB_EVENT_PATH")))
+
+puts "ENV:"
+puts ENV.to_h.sort_by { |k, | k }.select { |k,| k.start_with?("GITHUB_") }.map { |k, v| "#{k}=#{v}" }
+puts
+
+puts "EVENT:"
+puts JSON.pretty_generate(event)
+puts
 
 def find_pull_request_for_status(event)
   repo = event.fetch("repository").fetch("full_name")
