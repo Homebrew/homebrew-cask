@@ -7,5 +7,7 @@ cask 'reborn' do
   name 'Reborn'
   homepage 'https://github.com/langyanduan/Reborn'
 
+  depends_on macos: '>= :sierra'
+
   app 'Reborn.app'
 end
