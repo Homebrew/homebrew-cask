@@ -1,6 +1,6 @@
 cask 'twig' do
-  version '0.0.4'
-  sha256 '1fa2335dae41afe430febaa01f3b796c89b84a0d2316d3d54736060a4435a99e'
+  version '0.0.5'
+  sha256 '74da83477d9d7f0217623a90d7247026b983f485cf9e97d5db807d90e34f35d4'
 
   url "https://github.com/lukakerr/twig/releases/download/#{version}/Twig-#{version}.zip"
   appcast 'https://github.com/lukakerr/twig/releases.atom'
