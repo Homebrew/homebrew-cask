@@ -1,6 +1,6 @@
 cask 'reikey' do
-  version '1.1.0'
-  sha256 '4a612a18047c8d83fb68420626c7287ba4f6cdd191f38618bcfcbf04466c7611'
+  version '1.4.0'
+  sha256 '9a7c70eeae3fdfdd67cfc95229c3d64201ba350dad1ae95ae586c486b1076475'
 
   # bitbucket.org/objective-see was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/ReiKey_#{version}.zip"
@@ -8,7 +8,7 @@ cask 'reikey' do
   name 'ReiKey'
   homepage 'https://objective-see.com/products/reikey.html'
 
-  depends_on macos: '>= :yosemite'
+  depends_on macos: '>= :high_sierra'
 
   installer script: {
                       executable: "#{staged_path}/ReiKey Installer.app/Contents/MacOS/ReiKey Installer",

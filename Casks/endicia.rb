@@ -1,6 +1,6 @@
 cask 'endicia' do
-  version '2.18.4,753'
-  sha256 '55095e6388c80ab65651ff875d952a55b3fab2f26a7901a2d3e316eaf70282b5'
+  version '2.19,757'
+  sha256 '12513f18b1aabce6ba9c5014b05b1aed5a2ea5be8d4f8e012cb34c3d65077f17'
 
   url "https://download.endiciaformac.com/EndiciaForMac#{version.before_comma.no_dots}v#{version.after_comma}.dmg"
   appcast 'https://s3.amazonaws.com/endiciaformac/EndiciaForMacSparkle.xml'

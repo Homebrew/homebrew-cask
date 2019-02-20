@@ -7,8 +7,6 @@ cask 'audio-hijack' do
   name 'Audio Hijack'
   homepage 'https://www.rogueamoeba.com/audiohijack/'
 
-  depends_on macos: '>= :mavericks'
-
   app 'Audio Hijack.app'
 
   zap trash: [

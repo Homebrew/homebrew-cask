@@ -1,6 +1,6 @@
 cask 'hashbackup' do
-  version '2125'
-  sha256 '462a6f5c1d0194712ea2c6ebba0480fdbe17aafaf3735f009595e0bdf98daf6c'
+  version '2143'
+  sha256 'e18145cafaed6ffd0d75ab7c4ecb03c4ddf1800a75a7aeb44b6f89bab6fb6769'
 
   url "http://www.hashbackup.com/download/hb-#{version}-mac-64bit.tar.gz"
   name 'hashbackup'

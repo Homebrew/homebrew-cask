@@ -1,6 +1,6 @@
 cask 'ipe' do
-  version '7.2.9'
-  sha256 'b3574f1f8fd687e5e449e5f4aaa0fa879536e04cf26f8673259ba5577e4a1c86'
+  version '7.2.10'
+  sha256 '250ed3ec9a20f630c1cdb53a1ea5650ef80b7eeac903691eb1b8db5b34be9148'
 
   # bintray.com/otfried was verified as official when first introduced to the cask
   url "https://dl.bintray.com/otfried/generic/ipe/#{version.major_minor}/ipe-#{version}-mac.dmg"

@@ -7,8 +7,6 @@ cask 'iridium' do
   name 'Iridium Browser'
   homepage 'https://iridiumbrowser.de/'
 
-  depends_on macos: '>= :mavericks'
-
   app 'Iridium.app'
 
   zap trash: [

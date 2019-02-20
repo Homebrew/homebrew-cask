@@ -8,5 +8,7 @@ cask 'quip' do
   name 'Quip'
   homepage 'https://quip.com/'
 
+  auto_updates true
+
   app 'Quip.app'
 end

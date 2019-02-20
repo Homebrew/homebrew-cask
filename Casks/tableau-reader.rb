@@ -1,8 +1,9 @@
 cask 'tableau-reader' do
-  version '2018.3.2'
-  sha256 'ad9aff45442af40f4c89b23822ffe74b1c08649efce8fa41dd0409524a0c540f'
+  version '2019.1.0'
+  sha256 '9e178c097452f7f14da640cee66fef240711997fd24a744e7dca959e1d630bd3'
 
   url "https://downloads.tableau.com/tssoftware/TableauReader-#{version.dots_to_hyphens}.dmg"
+  appcast 'https://www.corecode.io/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.tableau.com/downloads/reader/mac'
   name 'Tableau Reader'
   homepage 'https://www.tableau.com/products/reader'
 

@@ -1,6 +1,6 @@
 cask 'smcfancontrol' do
-  version '2.6'
-  sha256 '7662058e618537eb466307e3b12e540b857e61392646a5b09df51bec9ad6da38'
+  version '2.6.1'
+  sha256 'ed6dcee1cff9cff3def1b9d98c7bb868b12b9e26205f81915a95187e0d4ed826'
 
   url "https://www.eidac.de/smcfancontrol/smcfancontrol_#{version.dots_to_underscores}.zip"
   appcast 'https://www.eidac.de/smcfancontrol/smcfancontrol.xml'

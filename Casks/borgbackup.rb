@@ -1,6 +1,6 @@
 cask 'borgbackup' do
-  version '1.1.8'
-  sha256 '3f5681185de27a6cea6eed5ca8dfb312dd178df56d61040b42973a88a8dbf02d'
+  version '1.1.9'
+  sha256 '29908ee70db3bc64395633bf804872bb242c342f31432e4ffdf3344b9ba838ca'
 
   # github.com/borgbackup/borg was verified as official when first introduced to the cask
   url "https://github.com/borgbackup/borg/releases/download/#{version}/borg-macosx64"

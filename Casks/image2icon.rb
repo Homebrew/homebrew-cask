@@ -8,8 +8,6 @@ cask 'image2icon' do
   name 'Image2Icon'
   homepage 'http://www.img2icnsapp.com/'
 
-  depends_on macos: '>= :mavericks'
-
   app 'Image2Icon.app'
 
   zap trash: [

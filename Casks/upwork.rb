@@ -7,4 +7,11 @@ cask 'upwork' do
   homepage 'https://www.upwork.com/'
 
   app 'Upwork.app'
+
+  zap trash: [
+               '~/Library/Application Support/Upwork',
+               '~/Library/Caches/Upwork',
+               '~/Library/Logs/Upwork',
+               '~/Library/Saved Application State/com.upwork.upwork.savedState',
+             ]
 end

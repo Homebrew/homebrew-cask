@@ -1,13 +1,11 @@
 cask 'astropad' do
-  version '2.6.0'
-  sha256 'ded088104963b6d4f7119c9b90e9e8aa30932804e3f3381dfc48ae887958978a'
+  version '3.0.1'
+  sha256 'cfec6493fa6e6b0bc7297f0116f0d5b234872a4144cc2dec04a0c554a9029485'
 
   url "https://astropad.com/downloads/Astropad-#{version}.zip"
   appcast 'https://astropad.com/downloads/sparkle.xml'
   name 'Astropad'
   homepage 'https://astropad.com/'
-
-  depends_on macos: '>= :mavericks'
 
   app 'Astropad.app'
 

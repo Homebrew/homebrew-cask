@@ -1,12 +1,12 @@
 cask 'fish-app' do
-  version '3.0.0'
-  sha256 'c583f51bea4a1b965458218d1bc60361d86695d41eb3b15298add2d0a0bb9c1b'
+  version '3.0.1'
+  sha256 '104e023ed25f2ca5d4bb565c868bebaf64ef4394b8a518804da83b63bad327ea'
 
   # github.com/fish-shell/fish-shell was verified as official when first introduced to the cask
-  url "https://github.com/fish-shell/fish-shell/releases/download/#{version}/fish-#{version}.app.zip"
+  url "https://github.com/fish-shell/fish-shell/releases/download/#{version}/fish.app.zip"
   appcast 'https://fishshell.com/release_notes.html'
   name 'Fish App'
   homepage 'https://fishshell.com/'
 
-  app "fish-#{version}.app"
+  app 'fish.app'
 end

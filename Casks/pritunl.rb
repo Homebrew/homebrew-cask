@@ -1,6 +1,6 @@
 cask 'pritunl' do
-  version '1.0.1952.30'
-  sha256 '0b95cb924c32483b8bc9b13c7259c7b41586c87d389c5faf6c87b85b9df80497'
+  version '1.0.1953.32'
+  sha256 '179ddc935fa0962989c4c82757e94379f83a5c611216b5060141ddcd87c7b1e6'
 
   # github.com/pritunl/pritunl-client-electron was verified as official when first introduced to the cask
   url "https://github.com/pritunl/pritunl-client-electron/releases/download/#{version}/Pritunl.pkg.zip"

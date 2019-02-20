@@ -9,6 +9,7 @@ cask 'epic-games' do
   homepage 'https://www.epicgames.com/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'Epic Games Launcher.app'
 

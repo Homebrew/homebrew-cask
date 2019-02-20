@@ -8,8 +8,6 @@ cask 'bitwarden' do
   name 'Bitwarden'
   homepage 'https://bitwarden.com/'
 
-  depends_on macos: '>= :mavericks'
-
   app 'Bitwarden.app'
 
   uninstall quit: [

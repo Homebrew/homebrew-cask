@@ -7,7 +7,5 @@ cask 'iexplorer' do
   name 'iExplorer'
   homepage 'https://macroplant.com/iexplorer'
 
-  depends_on macos: '>= :mavericks'
-
   app 'iExplorer.app'
 end
