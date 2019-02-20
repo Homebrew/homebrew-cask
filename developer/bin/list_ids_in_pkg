@@ -61,37 +61,38 @@ process_args () {
     fi
     for arg in "$@"; do
         if [[ $arg =~ ^-+h(elp)?$ ]]; then
-            printf "list_ids_in_pkg [ -lax ] <file.pkg>
+            printf "
+                list_ids_in_pkg [ -lax ] <file.pkg>
 
-  Given a package file, extract a list of candidate Package IDs
-  which may be useful in a Cask uninstall stanza, eg
+                Given a package file, extract a list of candidate Package IDs
+                which may be useful in a Cask uninstall stanza, eg
 
-      uninstall pkgutil: 'package.id.goes.here'
+                    uninstall pkgutil: 'package.id.goes.here'
 
-  The given package file need not be installed.
+                The given package file need not be installed.
 
-  The output of this script should be overly inclusive -- not
-  every candidate package id in the output will be needed at
-  uninstall time.
+                The output of this script should be overly inclusive -- not
+                every candidate package id in the output will be needed at
+                uninstall time.
 
-  Package IDs designated by Apple or common development frameworks
-  will be excluded from the output. This can be turned off with
-  the -lax argument.
+                Package IDs designated by Apple or common development frameworks
+                will be excluded from the output. This can be turned off with
+                the -lax argument.
 
-  If a package id is already installed, it will be followed by
-  a plus symbol '(+)' in the output. This can be verified via
-  the command
+                If a package id is already installed, it will be followed by
+                a plus symbol '(+)' in the output. This can be verified via
+                the command
 
-      /usr/sbin/pkgutil --pkg-info 'package.id.goes.here'
+                    /usr/sbin/pkgutil --pkg-info 'package.id.goes.here'
 
-  Arguments
+                Arguments
 
-     -lax   Turn off filtering of Apple or common development
-            framework package IDs from the output.
+                   -lax   Turn off filtering of Apple or common development
+                          framework package IDs from the output.
 
-  See CONTRIBUTING.md and 'man pkgutil' for more information.
+                See CONTRIBUTING.md and 'man pkgutil' for more information.
 
-"
+            " | sed -E 's/^ {16}//'
             exit
         elif [[ $arg =~ ^-+lax$ ]]; then
             opt_lax='true'
