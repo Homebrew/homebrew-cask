@@ -1,6 +1,6 @@
 cask 'noteplan' do
-  version '1.6.30,54'
-  sha256 '7d2ca323227af06742e2ec232c76d861230c342ede228bea4d52c6837843140d'
+  version '1.6.29,53'
+  sha256 'a7007adc7947ab30532e0292b1e17486f18dda5803c993f75d9a5e03f9353b92'
 
   # rink.hockeyapp.net/api/2/apps/304b4477155e428780c345bcab69b380 was verified as official when first introduced to the cask
   url "https://rink.hockeyapp.net/api/2/apps/304b4477155e428780c345bcab69b380/app_versions/#{version.after_comma}?format=zip"
