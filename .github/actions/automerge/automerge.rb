@@ -105,6 +105,13 @@ def passed_ci?(statuses = [])
   statuses.dig("continuous-integration/travis-ci/pr", "state") == "success"
 end
 
+CASK_REPOS = [
+  "Homebrew/homebrew-cask",
+  "Homebrew/homebrew-cask-drivers",
+  "Homebrew/homebrew-cask-fonts",
+  "Homebrew/homebrew-cask-versions",
+].freeze
+
 begin
   case ENV["GITHUB_EVENT_NAME"]
   when "status"
@@ -113,18 +120,8 @@ begin
     pr = find_pull_request_for_status(status)
     skip "No matching pull request found." unless pr
     merge_pull_request(pr, [status])
-  when "pull_request", "pull_request_review", "pull_request_review_comment"
-    pr = event.fetch("pull_request")
-    merge_pull_request(pr)
-  when "issue_comment"
-    issue = event.fetch("issue")
-
-    skip "Not a pull request." unless pr_url = issue.dig("pull_request", "url")
-
-    pr = GitHub.open_api(pr_url)
-    merge_pull_request(pr)
-  when "push"
-    prs = GitHub.pull_requests(ENV["GITHUB_REPOSITORY"], state: :open, base: "master")
+  when "issue_comment", "pull_request", "pull_request_review", "pull_request_review_comment", "push"
+    prs = CASK_REPOS.flat_map { |repo| GitHub.pull_requests(repo, state: :open, base: "master") }
 
     skip "No open pull requests found." if prs.empty?
 
