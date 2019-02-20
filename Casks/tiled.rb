@@ -1,6 +1,6 @@
 cask 'tiled' do
-  version '1.2.0'
-  sha256 'de8923e354d8479138d7da2321336466e09a0de38a6947cd513030aecdc70ccc'
+  version '1.2.2'
+  sha256 '1b9f5e33b4b3e95bca7df6761c9c92944d03bab684056de7be5032d5b50251e3'
 
   # github.com/bjorn/tiled was verified as official when first introduced to the cask
   url "https://github.com/bjorn/tiled/releases/download/v#{version}/Tiled-#{version}-macos.zip"
