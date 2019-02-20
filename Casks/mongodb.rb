@@ -10,6 +10,8 @@ cask 'mongodb' do
 
   app 'MongoDB.app'
 
+  conflicts_with cask: 'mongodb-shell'
+
   zap trash: [
                '~/Library/Caches/io.blimp.MongoDB',
                '~/Library/Preferences/io.blimp.MongoDB.plist',
