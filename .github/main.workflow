@@ -30,5 +30,5 @@ workflow "Trigger `automerge` on push." {
 
 action "automerge" {
   uses = "./.github/actions/automerge"
-  secrets = ["GITHUB_TOKEN"]
+  secrets = ["HOMEBREW_GITHUB_API_TOKEN"]
 }
