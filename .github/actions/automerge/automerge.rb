@@ -22,6 +22,9 @@ def skip(message)
   raise Skip, message
 end
 
+$stdout.sync = true
+$stderr.sync = true
+
 event = JSON.parse(File.read(ENV.fetch("GITHUB_EVENT_PATH")))
 
 puts "ENV:"
