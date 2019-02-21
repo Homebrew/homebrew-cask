@@ -1,5 +1,5 @@
 cask 'numi' do
-  version '3.0b3,477:1550324415'
+  version '3.20,477:1550324415'
   sha256 '48aa2475110874274ec43d6b17e1b05c5a2fdaaeee0db306ccfe00dab54e1ccb'
 
   # dl.devmate.com/com.dmitrynikolaev.numi was verified as official when first introduced to the cask
