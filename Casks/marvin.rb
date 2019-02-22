@@ -4,7 +4,7 @@ cask 'marvin' do
 
   # amazingmarvin.s3-website-us-east-1.amazonaws.com was verified as official when first introduced to the cask
   url 'http://amazingmarvin.s3-website-us-east-1.amazonaws.com/Marvin.dmg'
-  appcast "https://www.corecode.io/cgi-bin/check_urls/check_url_redirect.cgi?url=#{url}"
+  appcast 'https://www.corecode.io/cgi-bin/check_urls/check_url_redirect.cgi?url=http://amazingmarvin.s3-website-us-east-1.amazonaws.com/Marvin.dmg'
   name 'Amazing Marvin'
   homepage 'https://www.amazingmarvin.com/'
 
