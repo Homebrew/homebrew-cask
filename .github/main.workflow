@@ -32,3 +32,19 @@ action "automerge" {
   uses = "./.github/actions/automerge"
   secrets = ["HOMEBREW_GITHUB_API_TOKEN"]
 }
+
+workflow "Sync templates and CI config." {
+  on = "push"
+  resolves = ["sync"]
+}
+
+action "master" {
+  uses = "actions/bin/filter@master"
+  args = "branch master"
+}
+
+action "sync" {
+  needs = ["master"]
+  uses = "./.github/actions/sync"
+  secrets = ["HOMEBREW_GITHUB_API_TOKEN"]
+}
