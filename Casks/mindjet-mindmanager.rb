@@ -6,5 +6,7 @@ cask 'mindjet-mindmanager' do
   name 'Mindjet Mindmanager'
   homepage 'https://www.mindjet.com/mindmanager/'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'Mindjet MindManager.app'
 end
