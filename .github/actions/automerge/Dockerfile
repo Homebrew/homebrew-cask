@@ -1,7 +1,7 @@
 FROM linuxbrew/alpine
 
 LABEL "com.github.actions.name"="Homebrew Cask Automerge"
-LABEL "com.github.actions.description"="Merge cask version bump pull request."
+LABEL "com.github.actions.description"="Merge cask version bump pull requests."
 LABEL "com.github.actions.icon"="git-pull-request"
 LABEL "com.github.actions.color"="yellow"
 
