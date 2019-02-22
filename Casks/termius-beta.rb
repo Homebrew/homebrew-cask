@@ -14,8 +14,8 @@ cask 'termius-beta' do
   zap trash: [
                '~/.termius',
                '~/Library/Application Support/Termius Beta',
-               '~/Library/Saved Application State/com.termius+beta-dmg.mac.savedState',
-               '/Library/Preferences/com.termius+beta-dmg.mac.plist',
+               '~/Library/Saved Application State/com.termius-beta-dmg.mac.savedState',
+               '/Library/Preferences/com.termius-beta-dmg.mac.plist',
                '~/Library/Logs/Termius Beta',
              ]
 end
