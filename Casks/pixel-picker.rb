@@ -7,5 +7,7 @@ cask 'pixel-picker' do
   name 'Pixel Picker'
   homepage 'https://github.com/acheronfail/pixel-picker'
 
+  depends_on macos: '>= :sierra'
+
   app 'Pixel Picker.app'
 end
