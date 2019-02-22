@@ -4,7 +4,7 @@ cask 'flock' do
 
   url "https://updates.flock.co/fl_mac_electron/Flock-macOS-#{version}.dmg"
   name 'Flock'
-  homepage 'https://flock.co/'
+  homepage 'https://flock.com/'
 
   app 'Flock.app'
 end
