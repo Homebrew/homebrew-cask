@@ -1,5 +1,5 @@
 cask 'youdaodict' do
-  version '2.4.0'
+  version '151'
   sha256 'e5ab7081c48420353f34234b30ebe5600a002e9d01a24ef1682afffbcdfaa167'
 
   url 'http://codown.youdao.com/cidian/download/MacDict.dmg'
@@ -15,5 +15,5 @@ cask 'youdaodict' do
                 '~/Library/Cookies/com.youdao.YoudaoDict.binarycookies',
                 '~/Library/Preferences/com.youdao.YoudaoDict.plist',
                 '~/Library/com.youdao.YoudaoDict',
-            ]
+             ]
 end
