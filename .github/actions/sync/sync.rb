@@ -34,7 +34,7 @@ CASK_REPOS.each do |repo|
   repo_dir = "#{tmpdir}/#{repo}"
 
   puts "Cloning #{repo}…"
-  git 'clone', "https://github.com/#{repo}.git", '--depth=1', repo_dir
+  git 'clone', "https://github.com/#{repo}.git", '--quiet', '--depth=1', repo_dir
   puts
 
   puts 'Detecting changes…'
@@ -82,8 +82,10 @@ CASK_REPOS.each do |repo|
     puts "Detected changes to #{modified_path}."
     git '-C', repo_dir, 'commit', modified_path, '--message', "#{File.basename(modified_path)}: update to match main repo", '--quiet'
   end
+  puts
 
-  # git '-C', repo_dir, 'push', 'origin', 'master'
+  puts 'Pushing changes…'
+  git '-C', repo_dir, 'push', 'origin', 'master'
 
   puts
 end
