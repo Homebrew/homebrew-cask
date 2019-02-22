@@ -4,7 +4,6 @@ cask 'termius-beta' do
 
   # s3.amazonaws.com/termius.desktop.autoupdate/mac was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/termius.desktop.autoupdate/mac-beta/Termius+Beta.dmg'
-  
   appcast 'https://www.termius.com/mac-os'
   name 'Termius-Beta'
   homepage 'https://www.termius.com/beta-program'
