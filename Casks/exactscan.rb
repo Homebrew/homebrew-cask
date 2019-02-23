@@ -4,6 +4,7 @@ cask 'exactscan' do
 
   # dl.exactcode.com was verified as official when first introduced to the cask
   url "https://dl.exactcode.com/exactscan/ExactScan-#{version}.dmg"
+  appcast 'https://exactscan.com/download.html'
   name 'ExactScan'
   homepage 'https://exactscan.com/index.html'
 
