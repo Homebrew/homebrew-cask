@@ -3,6 +3,7 @@ cask 'autopano-pro' do
   sha256 'f4fae478d58b2a1a0f6422855b921723abcfaafffefaeccdc847ec0efc215424'
 
   url 'https://download.kolor.com/app/stable/mac'
+  appcast "https://www.corecode.io/cgi-bin/check_urls/check_url_filename.cgi?url=#{url}"
   name 'Autopano Pro'
   homepage 'https://www.kolor.com/autopano/'
 
