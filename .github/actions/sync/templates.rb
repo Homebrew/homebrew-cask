@@ -5,10 +5,10 @@ require 'open3'
 require 'tmpdir'
 
 CASK_REPOS = [
-  'Homebrew/homebrew-cask-versions',
-  'Homebrew/homebrew-cask-fonts',
-  'Homebrew/homebrew-cask-eid',
   'Homebrew/homebrew-cask-drivers',
+  'Homebrew/homebrew-cask-eid',
+  'Homebrew/homebrew-cask-fonts',
+  'Homebrew/homebrew-cask-versions',
 ].freeze
 
 tmpdir = Dir.mktmpdir
@@ -53,7 +53,7 @@ CASK_REPOS.each do |repo|
 
   FileUtils.rm_r File.join(repo_dir, '.github/actions/sync')
   workflow = File.read(File.join(repo_dir, '.github/main.workflow'))
-  File.write File.join(repo_dir, '.github/main.workflow'), workflow.gsub('["sync"]', '[]')
+  File.write File.join(repo_dir, '.github/main.workflow'), workflow.gsub(/\["sync_[^"]+"\]/, '[]')
 
   FileUtils.rm File.join(repo_dir, '.github/ISSUE_TEMPLATE/02_feature_request.md')
 
