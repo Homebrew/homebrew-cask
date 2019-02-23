@@ -8,6 +8,7 @@ cask 'camtasia' do
   name 'Camtasia'
   homepage 'https://www.techsmith.com/camtasia.html'
 
+  depends_on macos: '>= :sierra'
   auto_updates true
 
   app "Camtasia #{version.major}.app"
