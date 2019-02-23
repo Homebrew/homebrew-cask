@@ -1,8 +1,9 @@
 cask 'anylogic' do
-  version '8.2.4'
-  sha256 '3e4f006154de15b5701a4b88a3607f689d35bf15628be120a25e2984d3eba9eb'
+  version '8.3.3'
+  sha256 'b4c6e54912cef5882bb7a194fe166c61bb1259fa2bf5cb4d827300a0a7df0296'
 
   url "https://www.anylogic.com/files/anylogic-ple-#{version}.dmg"
+  appcast 'https://www.anylogic.com/files/changes-history.txt'
   name 'AnyLogic'
   homepage 'https://www.anylogic.com/'
 
