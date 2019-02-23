@@ -3,6 +3,7 @@ cask 'across-lite' do
   sha256 '71e1b174415ea2582642f4861c0ae748b8afa1232c53adac5acddf5d5ea3a39b'
 
   url "http://www.litsoft.com/across/alite/download/download.php/al#{version.after_comma}osx.dmg?os=macosx"
+  appcast 'https://www.litsoft.com/across/alite/download/'
   name 'Across Lite'
   homepage 'http://www.litsoft.com/across/alite/download/'
 
