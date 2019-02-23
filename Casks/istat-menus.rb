@@ -3,6 +3,7 @@ cask 'istat-menus' do
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://files.bjango.com/istatmenus#{version.major}/istatmenus#{version}.zip"
+  appcast 'https://bjango.com/mac/istatmenus/versionhistory/'
   name 'iStats Menus'
   homepage 'https://bjango.com/mac/istatmenus/'
 
