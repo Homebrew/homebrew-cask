@@ -24,12 +24,12 @@ CASK_REPOS.each do |repo|
 
   added_labels.each do |added_label|
     puts "Adding label “#{added_label.name}”…"
-    github.add_label(repo, added_label.name, color: added_label.color)
+    github.add_label(repo, added_label.name, added_label.color, description: added_label.description)
   end
 
-  modified_labels.each do |modified_labels|
-    puts "Updating label “#{modified_labels.name}”…"
-    github.update_label(repo, modified_labels.name, color: modified_labels.color)
+  modified_labels.each do |modified_label|
+    puts "Updating label “#{modified_label.name}”…"
+    github.update_label(repo, modified_label.name, color: modified_label.color, description: modified_label.description)
   end
 
   deleted_labels.each do |deleted_label|
