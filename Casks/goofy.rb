@@ -1,6 +1,6 @@
 cask 'goofy' do
-  version '3.4.2'
-  sha256 'f08edf87ac0be771f40dc7c44080b246be515edcd5d66bd38ef96e74971699e8'
+  version '3.4.3'
+  sha256 '990b4e1ba14e10ed53d049a629f6099e04a758d0532e156ffe71335598ddac63'
 
   # github.com/danielbuechele/goofy was verified as official when first introduced to the cask
   url "https://github.com/danielbuechele/goofy/releases/download/v#{version}/Goofy-#{version}-mac.zip"
