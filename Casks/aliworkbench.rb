@@ -4,6 +4,7 @@ cask 'aliworkbench' do
 
   # alimarket.taobao.com was verified as official when first introduced to the cask
   url 'https://alimarket.taobao.com/markets/qnww/qianniu-download?wh_from=macos'
+  appcast 'https://www.corecode.io/cgi-bin/check_urls/check_url_filename.cgi?url=https://alimarket.taobao.com/markets/qnww/qianniu-download%3Fwh_from=macos'
   name 'AliWorkBench'
   name 'Qian Niu'
   name '千牛'
