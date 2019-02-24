@@ -4,7 +4,7 @@ cask 'iringg' do
 
   # dl.devmate.com/com.softorino.iringg was verified as official when first introduced to the cask
   url 'https://dl.devmate.com/com.softorino.iringg/iRinggforMac.dmg'
-  appcast "https://updates.devmate.com/com.softorino.iringg.xml"
+  appcast 'https://updates.devmate.com/com.softorino.iringg.xml'
   name 'iRingg'
   homepage 'https://softorino.com/iringg/'
 
