@@ -1,6 +1,6 @@
 cask 'handbrake' do
-  version '1.2.1'
-  sha256 '38ac310eaa7dda470d170093da3d68d111f042647d1a822b9818e83708c261fc'
+  version '1.2.2'
+  sha256 '690e5bb3cc668b6e4c74bdbe43095c3693e55a06c1e5f1b330420f7c2a406c8e'
 
   url "https://download.handbrake.fr/handbrake/releases/#{version}/HandBrake-#{version}.dmg"
   appcast 'https://github.com/HandBrake/HandBrake/releases.atom'
