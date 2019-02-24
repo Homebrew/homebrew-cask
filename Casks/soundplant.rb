@@ -3,6 +3,7 @@ cask 'soundplant' do
   sha256 '802c8fdc66d7c8891a65ea244cc77bb00584e59b0a875d58c780cd99789cfa75'
 
   url "https://soundplant.org/downloads/Soundplant#{version.major}.dmg"
+  appcast 'https://soundplant.org/download.htm'
   name 'Soundplant'
   homepage 'https://soundplant.org/'
 
