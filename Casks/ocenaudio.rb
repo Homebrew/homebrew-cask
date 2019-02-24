@@ -1,6 +1,6 @@
 cask 'ocenaudio' do
   version '3.6.0.1'
-  sha256 'b44f2f962b9ae204e6e12249d92784c639fc3949000bf834c7a6b80a21752eb8'
+  sha256 'cd173c3fff41e65b162a594d0f99d6f4d287f0ca5cd61d0a11318cb3591ae85b'
 
   url 'https://www.ocenaudio.com/downloads/index.php/ocenaudio_mojave.dmg'
   appcast 'https://www.corecode.io/cgi-bin/check_urls/check_url_filename.cgi?url=https://www.ocenaudio.com/downloads/index.php/ocenaudio_mojave.dmg'
