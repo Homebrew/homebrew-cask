@@ -4,6 +4,7 @@ cask 'hexels' do
 
   # s3.amazonaws.com/mset/download/release was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/mset/download/release/hexels_install_#{version.no_dots}.dmg"
+  appcast 'https://marmoset.co/hexels/history/'
   name 'Hexels'
   homepage 'https://marmoset.co/hexels/'
 
