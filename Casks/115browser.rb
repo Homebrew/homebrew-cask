@@ -3,9 +3,10 @@ cask '115browser' do
   sha256 'd3fa571827326a0cf08ae32fc0782142502f3dc9a9b85419624137a1a9488ff6'
 
   url "https://down.115.com/client/mac/115br_v#{version}.dmg"
+  appcast 'https://pc.115.com/#mac'
   name '115Browser'
   name '115浏览器'
-  homepage 'http://pc.115.com/'
+  homepage 'https://pc.115.com/'
 
   app '115Browser.app'
 

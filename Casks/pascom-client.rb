@@ -6,5 +6,7 @@ cask 'pascom-client' do
   name 'pascom Client'
   homepage 'https://www.pascom.net/'
 
+  depends_on macos: '>= :sierra'
+
   app 'pascom Client.app'
 end

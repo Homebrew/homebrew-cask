@@ -8,5 +8,7 @@ cask 'coqide' do
   name 'Coq'
   homepage 'https://coq.inria.fr/'
 
+  depends_on macos: '>= :sierra'
+
   app "CoqIDE_#{version.major_minor_patch}.app"
 end

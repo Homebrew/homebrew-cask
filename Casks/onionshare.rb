@@ -1,14 +1,14 @@
 cask 'onionshare' do
-  version '1.3.1'
-  sha256 '6d748022b28ae0ae105ad595fa5d6428d7ce9e9882bc8808951f9870499519a2'
+  version '2.0'
+  sha256 '117f7373b3e23b6ad8a1f0105cbe81d467fedb9dcce89baf59ffd2c851903710'
 
   # github.com/micahflee/onionshare was verified as official when first introduced to the cask
-  url "https://github.com/micahflee/onionshare/releases/download/v#{version}/OnionShare-#{version}.pkg"
+  url "https://github.com/micahflee/onionshare/releases/download/v#{version}/OnionShare-#{version.major}.pkg"
   appcast 'https://github.com/micahflee/onionshare/releases.atom'
   name 'OnionShare'
   homepage 'https://onionshare.org/'
 
-  pkg "OnionShare-#{version}.pkg"
+  pkg "OnionShare-#{version.major}.pkg"
 
   uninstall pkgutil: 'com.micahflee.onionshare'
 end

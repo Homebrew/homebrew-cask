@@ -6,6 +6,8 @@ cask 'mysqlworkbench' do
   name 'MySQL Workbench'
   homepage 'https://www.mysql.com/products/workbench/'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'MySQLWorkbench.app'
 
   zap trash: [

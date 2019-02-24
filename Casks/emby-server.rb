@@ -8,6 +8,8 @@ cask 'emby-server' do
   name 'Emby Server'
   homepage 'https://emby.media/'
 
+  depends_on macos: '>= :sierra'
+
   app 'EmbyServer.app'
 
   zap trash: '~/.config/emby-server'

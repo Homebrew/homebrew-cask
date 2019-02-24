@@ -3,6 +3,7 @@ cask 'acquia-dev' do
   sha256 'e578709869d32d60d21e9fba7e2c20ffdd574ebc2b3503a6675e2b047298bf8a'
 
   url "https://www.acquia.com/sites/default/files/downloads/dev-desktop/AcquiaDevDesktop-#{version}.dmg"
+  appcast 'https://dev.acquia.com/downloads'
   name 'Acquia Dev Desktop'
   homepage 'https://www.acquia.com/products-services/dev-desktop'
 

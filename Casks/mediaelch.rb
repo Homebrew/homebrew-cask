@@ -8,5 +8,7 @@ cask 'mediaelch' do
   name 'MediaElch'
   homepage 'https://www.kvibes.de/en/mediaelch/'
 
+  depends_on macos: '>= :sierra'
+
   app 'MediaElch.app'
 end

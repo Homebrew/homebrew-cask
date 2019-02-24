@@ -6,7 +6,7 @@ cask 'tuneinstructor' do
   name 'Tune•Instructor'
   homepage 'https://www.tune-instructor.de/com/start.html'
 
-  depends_on macos: '>= :yosemite'
+  depends_on macos: '>= :sierra'
 
   app 'Tune•Instructor.app'
 end
