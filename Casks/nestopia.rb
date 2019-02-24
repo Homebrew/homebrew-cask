@@ -3,6 +3,7 @@ cask 'nestopia' do
   sha256 '59792eaac94350c497c472805c07ed1e1f422a94b4cf2746801b8af71c9ef18f'
 
   url 'https://www.bannister.org/cgi-bin/download.cgi?nestopia'
+  appcast 'https://www.corecode.io/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.bannister.org/cgi-bin/download.cgi%3Fnestopia'
   name 'Nestopia'
   homepage 'https://www.bannister.org/software/nestopia.htm'
 
