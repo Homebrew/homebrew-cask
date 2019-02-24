@@ -8,6 +8,7 @@ cask 'birdfont' do
   end
 
   url "https://birdfont.org/download/birdfont-#{version}-free.dmg"
+  appcast 'https://birdfont.org/purchase.php'
   name 'BirdFont'
   homepage 'https://birdfont.org/'
 
