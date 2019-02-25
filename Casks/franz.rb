@@ -8,6 +8,8 @@ cask 'franz' do
   name 'Franz'
   homepage 'https://meetfranz.com/'
 
+  auto_updates true
+
   app 'Franz.app'
 
   zap trash: [
