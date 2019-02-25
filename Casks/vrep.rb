@@ -1,6 +1,6 @@
 cask 'vrep' do
   version '3.6.0'
-  sha256 '0819d45f8f841f44b5826815e3ea3e2f547d57d1f02711008c6d2f64b8d017ee'
+  sha256 '5eb511deb3c0f0b305b64f6731fe53dc69e4e48fb9f516d8c980b3e31951bb5b'
 
   url "http://coppeliarobotics.com/files/V-REP_PRO_EDU_V#{version.dots_to_underscores}_Mac.zip"
   appcast 'http://www.coppeliarobotics.com/helpFiles/en/versionInfo.htm'
