@@ -1,9 +1,10 @@
 cask 'klayout' do
   version '0.25.7'
-  sha256 'd05d090956700e9f5349c1f7ac1773a6a1df893263ddd81097135610e49dd49e'
+  sha256 'f3b0d2899496cf8166a296a6ad917e63475ab60a14915947153bac15ee1e5f0a'
 
   # klayout.org was verified as official when first introduced to the cask
   url "https://www.klayout.org/downloads/MacOS/klayout-#{version}-macOS-Mojave-1-Qt5120mp.dmg"
+  appcast 'https://www.klayout.de/development.html'
   name 'KLayout'
   homepage 'https://www.klayout.de/'
 
