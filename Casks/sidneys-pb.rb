@@ -1,6 +1,6 @@
 cask 'sidneys-pb' do
-  version '8.8.8'
-  sha256 '0101d14d354eb2d46c9d746084a8b6417a3d7b33563c216f26ad582876cc3652'
+  version '8.9.5'
+  sha256 '4f896f90a3e6ab5ab893ce1c952b9a5ac252d40b0608dbf801227e6bef5a7652'
 
   url "https://github.com/sidneys/pb-for-desktop/releases/download/v#{version}/pb-for-desktop-#{version}.dmg"
   appcast 'https://github.com/sidneys/pb-for-desktop/releases.atom'
