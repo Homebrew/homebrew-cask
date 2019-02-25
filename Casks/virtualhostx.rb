@@ -8,5 +8,7 @@ cask 'virtualhostx' do
   name 'VirtualHostX'
   homepage 'https://clickontyler.com/virtualhostx/'
 
+  depends_on macos: '>= :sierra'
+
   app 'VirtualHostX.app'
 end
