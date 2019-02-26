@@ -24,6 +24,6 @@ cask 'x2goclient' do
                '~/.x2go',
                '~/.x2goclient',
                '~/Library/Application Support/CrashReporter/x2goclient_*.plist',
-               '~/Library/Preferences/x2goclient.plist'
+               '~/Library/Preferences/x2goclient.plist',
              ]
 end
