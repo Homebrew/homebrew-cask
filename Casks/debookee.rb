@@ -1,6 +1,6 @@
 cask 'debookee' do
-  version '7.0.1'
-  sha256 '2c7ee293fb90724f2bdf524adb2f4949943802cc4a4d21a4a32f2faa6ca02661'
+  version '7.0.2'
+  sha256 '0523717f261af4e971afff53f5fc46e81dc4a899e0053a2eba44d2ddf79ecf0a'
 
   # iwaxx.com/debookee was verified as official when first introduced to the cask
   url 'https://www.iwaxx.com/debookee/debookee.zip'
