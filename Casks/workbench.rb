@@ -7,5 +7,7 @@ cask 'workbench' do
   name 'Workbench'
   homepage 'https://github.com/mxcl/Workbench'
 
+  depends_on macos: '>= :sierra'
+
   app 'Workbench.app'
 end
