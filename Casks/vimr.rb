@@ -8,6 +8,8 @@ cask 'vimr' do
   name 'VimR'
   homepage 'http://vimr.org/'
 
+  auto_updates true
+
   app 'VimR.app'
   binary "#{appdir}/VimR.app/Contents/Resources/vimr"
 
