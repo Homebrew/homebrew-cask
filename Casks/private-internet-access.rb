@@ -7,6 +7,7 @@ cask 'private-internet-access' do
   name 'Private Internet Access'
   homepage 'https://www.privateinternetaccess.com/'
 
+  auto_updates true
   depends_on macos: '>= :yosemite'
 
   installer manual: 'Private Internet Access Installer.app'
