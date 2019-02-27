@@ -196,7 +196,7 @@ Most `brew cask` commands can accept a Cask token as an argument. As described a
 
 `brew cask` also accepts three other forms as arguments:
 
-* A path to a Cask file, _eg_: `/usr/local/Library/Taps/Homebrew/homebrew-cask/Casks/google-chrome.rb`.
+* A path to a Cask file, _eg_: `/usr/local/Library/Taps/homebrew/homebrew-cask/Casks/google-chrome.rb`.
 * A `curl`-retrievable URI to a Cask file, _eg_: `https://raw.githubusercontent.com/Homebrew/homebrew-cask/f25b6babcd398abf48e33af3d887b2d00de1d661/Casks/google-chrome.rb`.
 * A file in the current working directory, _eg_: `my-modfied-google-chrome.rb`. Note that matching Tapped Cask tokens will be preferred over this form when there is a conflict. To force the use of a Cask file in the current directory, specify a pathname with slashes, _eg_: `./google-chrome.rb`.
 
