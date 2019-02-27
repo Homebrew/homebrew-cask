@@ -1,6 +1,6 @@
 cask 'navicat-for-postgresql' do
-  version '12.1.15'
-  sha256 '0f6fd8f300df3dfe7896ceb2b8858bcf9af6ee7ec2ddbd46376b9e3def9a5030'
+  version '12.1.16'
+  sha256 'c8b168bf3701e20b6c175ceaa1854313249ed8dace62fb5cc38ea448bb96b949'
 
   url "http://download.navicat.com/download/navicat#{version.major_minor.no_dots}_pgsql_en.dmg"
   appcast 'https://www.navicat.com/updater/v120/sysProfileInfo.php?appName=Navicat%20for%20PostgreSQL&appLang=en'
