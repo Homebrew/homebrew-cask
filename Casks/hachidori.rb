@@ -1,6 +1,6 @@
 cask 'hachidori' do
-  version '3.1'
-  sha256 '3f1f1dafdfd8098b7733970083ec876a25b7219f39de56b607278c4fa56de85a'
+  version '3.1.1'
+  sha256 '2161e7f2b1fc0edf9019d27da54adb57961cfc8d605672d433b6ce26c34a3b48'
 
   # github.com/Atelier-Shiori/hachidori was verified as official when first introduced to the cask
   url "https://github.com/Atelier-Shiori/hachidori/releases/download/#{version}/hachidori-#{version}.dmg"
