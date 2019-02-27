@@ -1,6 +1,6 @@
 cask 'kodelife' do
-  version '0.7.6.61'
-  sha256 '198ddb2c3010d3f61c9b96d27c028b1b880bd63ebdc6f1cb14e8ba05be6ed895'
+  version '0.7.8.76'
+  sha256 '04fa1433d42c882750eaa885b897ace1daf8881b2d92610827f69a8a64d6637e'
 
   url "https://hexler.net/pub/kodelife/kodelife-#{version}-macos.zip"
   appcast 'https://hexler.net/pub/kodelife/appcast.hex'
