@@ -1,6 +1,6 @@
 cask 'telegram' do
-  version '4.9.9-160300'
-  sha256 '40ca003c29731f336c0e7023667fe1dd0750268e9d76432db5d3f1d9fca7715b'
+  version '4.9.9-160305'
+  sha256 '65975b3afde6c3319dbcf9e50fa8dfb861907861e1ded64c414bada1ad24b01c'
 
   url "https://osx.telegram.org/updates/Telegram-#{version}.app.zip"
   appcast 'https://osx.telegram.org/updates/versions.xml'
