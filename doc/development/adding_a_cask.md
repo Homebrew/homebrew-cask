@@ -65,13 +65,13 @@ The Cask **token** is the mnemonic string people will use to interact with the C
 The easiest way to generate a token for a Cask is to run this command:
 
 ```bash
-$ "$(brew --repository)/Library/Taps/Homebrew/homebrew-cask/developer/bin/generate_cask_token" '/full/path/to/new/software.app'
+$ "$(brew --repository)/Library/Taps/homebrew/homebrew-cask/developer/bin/generate_cask_token" '/full/path/to/new/software.app'
 ```
 
 If the software you wish to Cask is not installed, or does not have an associated App bundle, just give the full proper name of the software instead of a pathname:
 
 ```bash
-$ "$(brew --repository)/Library/Taps/Homebrew/homebrew-cask/developer/bin/generate_cask_token" 'Google Chrome'
+$ "$(brew --repository)/Library/Taps/homebrew/homebrew-cask/developer/bin/generate_cask_token" 'Google Chrome'
 ```
 
 If the `generate_cask_token` script does not work for you, see [Cask Token Details](#cask-token-details).
@@ -167,7 +167,7 @@ brew cask audit my-new-cask --download
 You should also check stylistic details with `brew cask style`:
 
 ```bash
-$ cd "$(brew --repository)"/Library/Taps/Homebrew/homebrew-cask
+$ cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask
 $ brew cask style Casks/my-new-cask.rb [--fix]
 ```
 
@@ -242,7 +242,7 @@ for details.
 Hop into your Tap and check to make sure your new Cask is there:
 
 ```bash
-$ cd "$(brew --repository)"/Library/Taps/Homebrew/homebrew-cask
+$ cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask
 $ git status
 # On branch master
 # Untracked files:
@@ -309,6 +309,6 @@ Congratulations! You are done now, and your Cask should be pulled in or otherwis
 After your Pull Request is submitted, you should get yourself back onto `master`, so that `brew update` will pull down new Casks properly:
 
 ```bash
-cd "$(brew --repository)"/Library/Taps/Homebrew/homebrew-cask
+cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask
 git checkout master
 ```

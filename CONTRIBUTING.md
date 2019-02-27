@@ -35,7 +35,7 @@ For manual updates, you'll need to fork the repository and add your copy as a re
 
 ```bash
 $ github_user='<my-github-username>'
-$ cd "$(brew --repository)"/Library/Taps/Homebrew/homebrew-cask
+$ cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask
 $ git remote add "${github_user}" "https://github.com/${github_user}/homebrew-cask"
 ```
 
