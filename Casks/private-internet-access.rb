@@ -6,6 +6,8 @@ cask 'private-internet-access' do
   appcast 'https://www.privateinternetaccess.com/pages/download'
   name 'Private Internet Access'
   homepage 'https://www.privateinternetaccess.com/'
+  
+  auto_updates true
 
   depends_on macos: '>= :yosemite'
 
