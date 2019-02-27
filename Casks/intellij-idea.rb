@@ -1,6 +1,6 @@
 cask 'intellij-idea' do
-  version '2018.3.4,183.5429.30'
-  sha256 '41745434249d2aa288281cbbaca101477f5d4d05bc67f59e7bcfbd324ac533b4'
+  version '2018.3.5,183.5912.21'
+  sha256 'c9053534d536bd3b59eb51d7acb7b23ae06b447736754d3c287736899c67bf8f'
 
   url "https://download.jetbrains.com/idea/ideaIU-#{version.before_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=IIU&latest=true&type=release'
