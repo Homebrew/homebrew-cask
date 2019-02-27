@@ -1,5 +1,4 @@
 #!/bin/bash
-#!/bin/bash
 
 set -e
 
@@ -11,14 +10,6 @@ echo 'BUNDLE_SILENCE_ROOT_WARNING: "1"' > ~/.bundle/config
 git config --global user.name "BrewTestBot"
 git config --global user.email "homebrew-test-bot@lists.sfconservancy.org"
 
-# create stubs so build dependencies aren't incorrectly flagged as missing
-for i in python svn unzip xz
-do
-  touch /usr/bin/$i
-  chmod +x /usr/bin/$i
-done
-
-# setup Homebrew/homebrew-cask instead of Linuxbrew's
 CASK_DIR="$(brew --repo homebrew/cask)"
 mkdir -p "$CASK_DIR"
 rm -rf "$CASK_DIR"
