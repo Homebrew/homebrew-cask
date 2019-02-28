@@ -8,6 +8,8 @@ cask 'overflow' do
   name 'overflow'
   homepage 'https://stuntsoftware.com/overflow/'
 
+  depends_on macos: '>= :high_sierra'
+
   app "Overflow #{version.major}.app"
 
   zap trash: [
