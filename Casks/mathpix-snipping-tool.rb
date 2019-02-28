@@ -1,6 +1,6 @@
 cask 'mathpix-snipping-tool' do
-  version '1.4.0.72'
-  sha256 '846d25283e5a0c2f0b6761cd99f07af4372cbaaaf9ea95a80766bad2e80cf789'
+  version '1.4.1.75'
+  sha256 '2d7b5a6b5b36ab6fa3a8f241b63d5933aa7dbe5fbc70806efb983bb792159212'
 
   url "https://mathpix.com/dmg/SnippingTool-v#{version}.dmg"
   appcast 'https://mathpix.com/appcast.xml'
