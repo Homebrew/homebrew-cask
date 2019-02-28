@@ -8,6 +8,7 @@ cask 'wireshark' do
   homepage 'https://www.wireshark.org/'
 
   conflicts_with cask: 'wireshark-chmodbpf'
+  depends_on macos: '>= :sierra'
 
   pkg "Wireshark #{version} Intel 64.pkg"
 
