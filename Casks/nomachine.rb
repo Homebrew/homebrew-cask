@@ -1,6 +1,6 @@
 cask 'nomachine' do
-  version '6.4.6_1'
-  sha256 '1d8440ac3b93e7a04802d08e338fcd2ce29dd42834b37094a81ab19ef41882ba'
+  version '6.5.6_8'
+  sha256 'aa7378cb40eda6282f1f14314ade4780f9987c2dccff9ce61c537f278582d2dc'
 
   url "https://download.nomachine.com/download/#{version.major_minor}/MacOSX/nomachine_#{version}.dmg"
   name 'NoMachine'
@@ -10,5 +10,6 @@ cask 'nomachine' do
 
   # A launchctl job ordinarily manages uninstall once the app bundle is removed
   # To ensure it ran, verify if /Library/Application Support/NoMachine/nxuninstall.sh no longer exists
-  uninstall delete: '/Applications/NoMachine.app'
+  uninstall delete:    '/Applications/NoMachine.app',
+            launchctl: 'com.nomachine.localnxserver'
 end
