@@ -72,6 +72,10 @@ def merge_pull_request(pr, statuses = GitHub.open_api(pr.fetch("statuses_url")))
   diff = diff_for_pull_request(pr)
   skip "Not a “simple” version bump pull request." unless diff.simple?
 
+  if diff.version_decreased?
+    skip "Version decreased from #{diff.old_version.inspect} to #{diff.new_version.inspect}."
+  end
+
   puts "Merging pull request #{pr.fetch("number")}…"
 
   repo   = pr.fetch("base").fetch("repo").fetch("full_name")
