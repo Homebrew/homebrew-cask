@@ -13,11 +13,11 @@ cask 'reveal' do
   app 'Reveal.app'
 
   zap trash: [
-                '~/Library/Application Support/Reveal',
-                '~/Library/Caches/com.ittybittyapps.Reveal2',
-                '~/Library/Logs/com.ittybittyapps.Reveal2',
-                '~/Library/Preferences/com.ittybittyapps.Reveal2.plist',
-                '~/Library/Saved Application State/com.ittybittyapps.Reveal2.savedState',
-                '/Users/Shared/Reveal',
+               '~/Library/Application Support/Reveal',
+               '~/Library/Caches/com.ittybittyapps.Reveal2',
+               '~/Library/Logs/com.ittybittyapps.Reveal2',
+               '~/Library/Preferences/com.ittybittyapps.Reveal2.plist',
+               '~/Library/Saved Application State/com.ittybittyapps.Reveal2.savedState',
+               '/Users/Shared/Reveal',
              ]
 end
