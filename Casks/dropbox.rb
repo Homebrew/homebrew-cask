@@ -28,7 +28,7 @@ cask 'dropbox' do
                '~/Library/Containers/com.getdropbox.dropbox.garcon',
                '~/Library/Dropbox',
                '~/Library/Group Containers/com.getdropbox.dropbox.garcon',
-               '~/Library/LaunchAgents/com.dropbox.DropboxMacUpdate.agent.plist'
+               '~/Library/LaunchAgents/com.dropbox.DropboxMacUpdate.agent.plist',
                '~/Library/Logs/Dropbox_debug.log',
                '~/Library/Preferences/com.dropbox.DropboxMacUpdate.plist',
                '~/Library/Preferences/com.dropbox.DropboxMonitor.plist',
