@@ -133,15 +133,15 @@ begin
       begin
         merge_pull_request(pr)
         merged_prs << pr
-      rescue NeutralSystemExit
-        skipped_prs << pr
+      rescue NeutralSystemExit => e
+        skipped_prs << e
       rescue
         failed_prs << pr
       end
     end
 
     if (merged_prs + failed_prs).empty? && skipped_prs.any?
-      skip "No “simple” version bump pull requests found."
+      skip skipped_prs.map(&:message).join("\n")
     elsif failed_prs.any?
       exit 1
     end
