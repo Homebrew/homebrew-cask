@@ -85,11 +85,11 @@ def merge_pull_request(pr, statuses = GitHub.open_api(pr.fetch("statuses_url")))
   begin
     tries ||= 0
 
-    GitHub.merge_pull_request(
-      repo,
-      number: number, sha: sha,
-      merge_method: :squash,
-    )
+    # GitHub.merge_pull_request(
+    #   repo,
+    #   number: number, sha: sha,
+    #   merge_method: :squash,
+    # )
     puts "Pull request #{pr.fetch("number")} merged successfully."
   rescue => e
     $stderr.puts "Failed to merge pull request #{pr.fetch("number")}."
