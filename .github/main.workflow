@@ -1,7 +1,8 @@
-workflow "Trigger `automerge` on status update." {
-  on = "status"
-  resolves = ["automerge"]
-}
+# This is currently always stuck on “Waiting to run”, try enabling it again in the future.
+# workflow "Trigger `automerge` on status update." {
+#   on = "status"
+#   resolves = ["automerge"]
+# }
 
 workflow "Trigger `automerge` on pull request update." {
   on = "pull_request"
