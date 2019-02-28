@@ -1,6 +1,6 @@
 cask 'private-internet-access' do
-  version '1.1-02537'
-  sha256 '8f7b55e18ff94bcddaab4124c81cd1600b6c99fd85c19574ed09eaf938af8aea'
+  version '1.1.1-02545'
+  sha256 '1abc1ebfd20961ebacbba5b5ff71fd0fe5e1e8ca486b945ba0b928e20973aa5b'
 
   url "https://installers.privateinternetaccess.com/download/pia-macos-#{version}.zip"
   appcast 'https://www.privateinternetaccess.com/pages/download'
