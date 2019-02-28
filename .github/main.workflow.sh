@@ -10,7 +10,7 @@ echo 'BUNDLE_SILENCE_ROOT_WARNING: "1"' > ~/.bundle/config
 git config --global user.name "BrewTestBot"
 git config --global user.email "homebrew-test-bot@lists.sfconservancy.org"
 
-CASK_DIR="$(brew --repo homebrew/cask)"
+CASK_DIR="$(brew --repo "$GITHUB_REPOSITORY")"
 mkdir -p "$CASK_DIR"
 rm -rf "$CASK_DIR"
 ln -s "$PWD" "$CASK_DIR"
