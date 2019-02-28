@@ -26,10 +26,6 @@ module GitDiffExtension
 
     def version_decreased?
       return false unless version_changed?
-
-      return false if old_version == :latest
-      return true if new_version == :latest
-
       Version.new(new_version) < Version.new(old_version)
     end
 
@@ -60,7 +56,6 @@ module GitDiffExtension
     end
 
     def version
-      return :latest if to_s.match?(/\A[+-]\s*version :latest\Z/)
       to_s[/\A[+-]\s*version '([^']+)'\Z/, 1]
     end
 
