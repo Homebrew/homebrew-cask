@@ -5,7 +5,7 @@ cask 'marked' do
   url "https://updates.marked2app.com/Marked#{version}.zip"
   appcast 'https://updates.marked2app.com/marked.xml'
   name 'Marked'
-  homepage 'http://marked2app.com/'
+  homepage 'https://marked2app.com/'
 
   auto_updates true
   depends_on macos: '>= :yosemite'
