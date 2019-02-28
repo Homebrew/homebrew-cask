@@ -23,6 +23,7 @@ cask 'atom' do
                '~/Library/Application Support/com.github.atom.ShipIt',
                '~/Library/Caches/com.github.atom',
                '~/Library/Caches/com.github.atom.ShipIt',
+               '~/Library/Logs/Atom',
                '~/Library/Preferences/ByHost/com.github.atom.ShipIt.*.plist',
                '~/Library/Preferences/com.github.atom.helper.plist',
                '~/Library/Preferences/com.github.atom.plist',
