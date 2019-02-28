@@ -1,4 +1,4 @@
-cask 'hangouts-chat' do
+cask 'chat' do
   version '19.1.281'
   sha256 '30ac3007e565c8ac1f57c92291c9c58dec6a1d303eb19dd7c8c8cc080bb7949b'
 
