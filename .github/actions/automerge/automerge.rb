@@ -72,7 +72,30 @@ def merge_pull_request(pr, statuses = GitHub.open_api(pr.fetch("statuses_url")))
   diff = diff_for_pull_request(pr)
   skip "Not a “simple” version bump pull request." unless diff.simple?
 
-  puts "Merging pull request #{pr.fetch("number")}…"
+  if diff.version_changed?
+    if diff.version_decreased?
+      skip "Version decreased from #{diff.old_version.inspect} to #{diff.new_version.inspect}."
+    end
+
+    tap = Tap.fetch(pr.fetch("base").fetch("repo").fetch("full_name"))
+    tap.install(full_clone: true) unless tap.installed?
+
+    cask_path = diff.files.first.a_path
+
+    out, _ = system_command! 'git', args: ['-C', tap.path, 'log', '--pretty=format:', '-G', '\s+version\s+\'', '--follow', '-p', '--', cask_path]
+
+    version_diff = GitDiff.from_string(out)
+    previous_versions = version_diff.additions.select(&:version?).map(&:version).uniq
+
+    puts "Previous versions for #{cask_path}:"
+    puts previous_versions
+
+    if previous_versions.include?(diff.new_version)
+      skip "Version changed to a previous version."
+    end
+  end
+
+  puts "Merging pull request #{pr.fetch("base").fetch("repo").fetch("full_name")}##{pr.fetch("number")}…"
 
   repo   = pr.fetch("base").fetch("repo").fetch("full_name")
   number = pr.fetch("number")
@@ -81,14 +104,14 @@ def merge_pull_request(pr, statuses = GitHub.open_api(pr.fetch("statuses_url")))
   begin
     tries ||= 0
 
-    GitHub.merge_pull_request(
-      repo,
-      number: number, sha: sha,
-      merge_method: :squash,
-    )
-    puts "Pull request #{pr.fetch("number")} merged successfully."
+    # GitHub.merge_pull_request(
+    #   repo,
+    #   number: number, sha: sha,
+    #   merge_method: :squash,
+    # )
+    puts "Pull request #{pr.fetch("base").fetch("repo").fetch("full_name")}##{pr.fetch("number")} merged successfully."
   rescue => e
-    $stderr.puts "Failed to merge pull request #{pr.fetch("number")}."
+    $stderr.puts "Failed to merge pull request #{pr.fetch("base").fetch("repo").fetch("full_name")}##{pr.fetch("number")}."
     $stderr.puts e
     raise if (tries += 1) > 3
     sleep 5
@@ -133,16 +156,17 @@ begin
       begin
         merge_pull_request(pr)
         merged_prs << pr
-      rescue NeutralSystemExit
-        skipped_prs << pr
-      rescue
-        failed_prs << pr
+      rescue NeutralSystemExit => e
+        skipped_prs << e
+      rescue => e
+        failed_prs << e
       end
     end
 
     if (merged_prs + failed_prs).empty? && skipped_prs.any?
-      skip "No “simple” version bump pull requests found."
+      skip skipped_prs.map(&:message).join("\n")
     elsif failed_prs.any?
+      $stderr.puts failed_prs.map(&:message).join("\n")
       exit 1
     end
   else

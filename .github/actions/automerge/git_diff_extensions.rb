@@ -14,22 +14,49 @@ module GitDiffExtension
     end
 
     def only_version_or_checksum?
-      lines = files.flat_map(&:hunks).flat_map(&:lines)
-
-      additions = lines.select(&:addition?)
-      deletions = lines.select(&:deletion?)
-      changed_lines = deletions + additions
-
       return false if additions.count != deletions.count
       return false if additions.count > 2
 
-      changed_lines.all? { |line| line.version? || line.sha256? }
+      (additions + deletions).all? { |line| line.version? || line.sha256? }
+    end
+
+    def version_changed?
+      old_version != new_version
+    end
+
+    def version_decreased?
+      return false unless version_changed?
+      Version.new(new_version) < Version.new(old_version)
+    end
+
+    def old_version
+      @old_version ||= deletions.find(&:version?)&.version
+    end
+
+    def new_version
+      @new_version ||= additions.find(&:version?)&.version
+    end
+
+    def lines
+      @lines ||= files.flat_map(&:hunks).flat_map(&:lines)
+    end
+
+    def additions
+      @additions ||= lines.select(&:addition?)
+    end
+
+    def deletions
+      @deletions ||= lines.select(&:deletion?)
     end
   end
 
   refine GitDiff::Line::Context do
     def version?
-      to_s.match?(/\A[+-]\s*version '[^']+'\Z/)
+      !version.nil?
+    end
+
+    def version
+      to_s[/\A[+-]\s*version '([^']+)'\Z/, 1]
     end
 
     def sha256?
