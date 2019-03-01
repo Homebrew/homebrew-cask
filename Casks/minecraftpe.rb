@@ -5,7 +5,7 @@ cask 'minecraftpe' do
   # meedownloads.azureedge.net was verified as official when first introduced to the cask
   url "https://meedownloads.azureedge.net/#{version}/Minecraft_Education_Edition.dmg",
       referer: 'https://aka.ms/meeclientmacos'
-  appcast 'https://www.corecode.io/cgi-bin/check_urls/check_url_redirect.cgi?url=https://aka.ms/meeclientmacos'
+      appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://aka.ms/meeclientmacos'
   name 'Minecraft Education Edition'
   homepage 'https://education.minecraft.net/'
 
