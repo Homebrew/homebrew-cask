@@ -1,6 +1,6 @@
 cask 'volt' do
-  version '0.67'
-  sha256 '476ede8f27f66f1378318415db4ab3193f6bfc6aa97ece19416cf3f74410463c'
+  version '0.70'
+  sha256 '43bfff76cc0898c8cf416ec26cccfdc64e4b9a2f71660d5e96b4073aaf874e97'
 
   # github.com/voltapp/volt was verified as official when first introduced to the cask
   url "https://github.com/voltapp/volt/releases/download/#{version}/Volt.dmg"
