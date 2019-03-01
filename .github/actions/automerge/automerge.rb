@@ -22,8 +22,9 @@ class NeutralSystemExit < SystemExit
   end
 end
 
-def skip(message)
-  raise NeutralSystemExit, message
+def skip(message = nil)
+  $stderr.puts message unless message.nil?
+  raise NeutralSystemExit.new(message)
 end
 
 $stdout.sync = true
@@ -67,17 +68,23 @@ def diff_for_pull_request(pr)
 end
 
 def merge_pull_request(pr, statuses = GitHub.open_api(pr.fetch("statuses_url")))
-  skip "CI status is not successful." unless passed_ci?(statuses)
+  repo   = pr.fetch("base").fetch("repo").fetch("full_name")
+  number = pr.fetch("number")
+  sha    = pr.fetch("head").fetch("sha")
+
+  tap = Tap.fetch(repo)
+  pr_name = "#{tap.name}##{number}"
+
+  skip "CI status for pull request #{pr_name} is not successful." unless passed_ci?(statuses)
 
   diff = diff_for_pull_request(pr)
-  skip "Not a “simple” version bump pull request." unless diff.simple?
+  skip "Pull request #{pr_name} is not a “simple” version bump." unless diff.simple?
 
   if diff.version_changed?
     if diff.version_decreased?
-      skip "Version decreased from #{diff.old_version.inspect} to #{diff.new_version.inspect}."
+      skip "Version in pull request #{pr_name} decreased from #{diff.old_version.inspect} to #{diff.new_version.inspect}."
     end
 
-    tap = Tap.fetch(pr.fetch("base").fetch("repo").fetch("full_name"))
     tap.install(full_clone: true) unless tap.installed?
 
     cask_path = diff.files.first.a_path
@@ -87,19 +94,12 @@ def merge_pull_request(pr, statuses = GitHub.open_api(pr.fetch("statuses_url")))
     version_diff = GitDiff.from_string(out)
     previous_versions = version_diff.additions.select(&:version?).map(&:version).uniq
 
-    puts "Previous versions for #{cask_path}:"
-    puts previous_versions
-
     if previous_versions.include?(diff.new_version)
-      skip "Version changed to a previous version."
+      skip "Version in pull request #{pr_name} changed to a previous version. Previous versions were:\n#{previous_versions.join("\n")}"
     end
   end
 
-  puts "Merging pull request #{pr.fetch("base").fetch("repo").fetch("full_name")}##{pr.fetch("number")}…"
-
-  repo   = pr.fetch("base").fetch("repo").fetch("full_name")
-  number = pr.fetch("number")
-  sha    = pr.fetch("head").fetch("sha")
+  puts "Merging pull request #{pr_name}…"
 
   begin
     tries ||= 0
@@ -109,11 +109,9 @@ def merge_pull_request(pr, statuses = GitHub.open_api(pr.fetch("statuses_url")))
     #   number: number, sha: sha,
     #   merge_method: :squash,
     # )
-    puts "Pull request #{pr.fetch("base").fetch("repo").fetch("full_name")}##{pr.fetch("number")} merged successfully."
+    puts "Pull request #{pr_name} merged successfully."
   rescue => e
-    $stderr.puts "Failed to merge pull request #{pr.fetch("base").fetch("repo").fetch("full_name")}##{pr.fetch("number")}."
-    $stderr.puts e
-    raise if (tries += 1) > 3
+    raise "Failed to merge pull request #{pr_name}:\n#{e}" if (tries += 1) > 3
     sleep 5
     retry
   end
@@ -135,6 +133,7 @@ CASK_REPOS = [
   "Homebrew/homebrew-cask-versions",
 ].freeze
 
+ ENV["GITHUB_EVENT_NAME"] = "push"
 begin
   case ENV["GITHUB_EVENT_NAME"]
   when "status"
@@ -157,22 +156,19 @@ begin
         merge_pull_request(pr)
         merged_prs << pr
       rescue NeutralSystemExit => e
-        skipped_prs << e
+        skipped_prs << pr
       rescue => e
-        failed_prs << e
+        $stderr.puts e
+        failed_prs << pr
       end
     end
 
     if (merged_prs + failed_prs).empty? && skipped_prs.any?
-      skip skipped_prs.map(&:message).join("\n")
+      skip
     elsif failed_prs.any?
-      $stderr.puts failed_prs.map(&:message).join("\n")
       exit 1
     end
   else
     skip "Unsupported GitHub Actions event."
   end
-rescue NeutralSystemExit => reason
-  $stderr.puts reason
-  raise
 end
