@@ -7,6 +7,8 @@ cask 'torrent-file-editor' do
   name 'Torrent File Editor'
   homepage 'https://sourceforge.net/projects/torrent-file-editor/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Torrent File Editor.app'
 
   zap trash: [
