@@ -104,11 +104,12 @@ def merge_pull_request(pr, statuses = GitHub.open_api(pr.fetch("statuses_url")))
   begin
     tries ||= 0
 
-    # GitHub.merge_pull_request(
-    #   repo,
-    #   number: number, sha: sha,
-    #   merge_method: :squash,
-    # )
+    GitHub.merge_pull_request(
+      repo,
+      number: number, sha: sha,
+      merge_method: :squash,
+    )
+
     puts "Pull request #{pr_name} merged successfully."
   rescue => e
     raise "Failed to merge pull request #{pr_name}:\n#{e}" if (tries += 1) > 3
