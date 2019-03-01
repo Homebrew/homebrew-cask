@@ -1,5 +1,7 @@
 #!/bin/sh
 
+export HOME=/home/linuxbrew
+
 echo "USER: $USER"
 echo "HOME: $HOME"
 
