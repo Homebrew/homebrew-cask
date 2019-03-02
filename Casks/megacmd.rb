@@ -1,4 +1,4 @@
-cask 'megacmd-app' do
+cask 'megacmd' do
   version :latest
   sha256 :no_check
 
