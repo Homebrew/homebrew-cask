@@ -1,4 +1,4 @@
-cask 'metabase-app' do
+cask 'metabase' do
   version '0.30.4.0'
   sha256 '8f4b43780d685487953102deae909d7b0c72baa68723710666da94ebb4e7bee7'
 
