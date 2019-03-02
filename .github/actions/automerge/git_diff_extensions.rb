@@ -30,11 +30,11 @@ module GitDiffExtension
     end
 
     def old_version
-      @old_version ||= deletions.find(&:version?)&.version
+      @old_version ||= deletions.find { |line| line.version? }&.version
     end
 
     def new_version
-      @new_version ||= additions.find(&:version?)&.version
+      @new_version ||= additions.find { |line| line.version? }&.version
     end
 
     def lines
