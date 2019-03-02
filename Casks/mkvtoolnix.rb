@@ -1,4 +1,4 @@
-cask 'mkvtoolnix-app' do
+cask 'mkvtoolnix' do
   version '31.0.0'
   sha256 '0dbb2f02de6c7366f909f0e8790143309dedb83b9a560edf563a1accc333cd80'
 
