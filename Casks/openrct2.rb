@@ -1,4 +1,4 @@
-cask 'openrct2-app' do
+cask 'openrct2' do
   version '0.0.7'
   sha256 'e99bbb2c02b501ec0f322947b35e025897bb54d380f855dacdc6bb472f1e4520'
 
