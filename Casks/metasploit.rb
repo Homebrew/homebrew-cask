@@ -1,6 +1,6 @@
 cask 'metasploit' do
-  version '5.0.9+20190227143632'
-  sha256 '485542cd68001e3c587f79625e08f6144869dec01c779f552cf3f07b76d51479'
+  version '5.0.10+20190301143738'
+  sha256 'fdac2c86745a6cc42ab144e1eb23650189d08e2e7e4b0b3d2289e54b1e805671'
 
   url "https://osx.metasploit.com/metasploit-framework-#{version}-1rapid7-1.pkg"
   appcast 'https://osx.metasploit.com/LATEST'
@@ -20,7 +20,6 @@ cask 'metasploit' do
   binary '/opt/metasploit-framework/bin/msfrop'
   binary '/opt/metasploit-framework/bin/msfrpc'
   binary '/opt/metasploit-framework/bin/msfrpcd'
-  binary '/opt/metasploit-framework/bin/msfupdate'
   binary '/opt/metasploit-framework/bin/msfvenom'
 
   uninstall script: {
