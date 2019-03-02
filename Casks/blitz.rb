@@ -17,6 +17,7 @@ cask 'blitz' do
                '~/Library/Application Support/Blitz',
                '~/Library/Caches/com.blitz.app.ShipIt',
                '~/Library/Cookies/com.blitz.app.binarycookies',
+               '~/Library/Logs/Blitz',
                '~/Library/Preferences/com.blitz.app.plist',
                '~/Library/Saved Application State/com.blitz.app.savedState',
              ]
