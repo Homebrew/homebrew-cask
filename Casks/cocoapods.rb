@@ -1,4 +1,4 @@
-cask 'cocoapods-app' do
+cask 'cocoapods' do
   version '1.5.2'
   sha256 '03aa37afb129d6ae515d3b9ee7a81c30ba91050131e2dfbb3683bdd2f05ac67a'
 
