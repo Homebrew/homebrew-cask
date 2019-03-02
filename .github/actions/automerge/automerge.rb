@@ -160,6 +160,7 @@ begin
         skipped_prs << pr
       rescue => e
         $stderr.puts e
+        $stderr.puts e.backtrace
         failed_prs << pr
       end
     end
