@@ -6,7 +6,6 @@ require 'tmpdir'
 
 CASK_REPOS = [
   'Homebrew/homebrew-cask-drivers',
-  'Homebrew/homebrew-cask-eid',
   'Homebrew/homebrew-cask-fonts',
   'Homebrew/homebrew-cask-versions',
 ].freeze
