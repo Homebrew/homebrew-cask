@@ -1,4 +1,4 @@
-cask 'corectl-app' do
+cask 'corectl' do
   version '0.2.9'
   sha256 'f7d7c23e2f46f7e3b9d3c9b64eed44010a81458e54b4849f33784011dfc2d342'
 
