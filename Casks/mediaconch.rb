@@ -1,4 +1,4 @@
-cask 'mediaconch-app' do
+cask 'mediaconch' do
   version '18.03.2'
   sha256 '2dc51e39b74d516e094063860015c7ff37d6a038009e69dd121b7ff905911bbc'
 
