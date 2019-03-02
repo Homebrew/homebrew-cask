@@ -1,6 +1,6 @@
 cask 'workbench' do
-  version '1.0.4'
-  sha256 'e892a06910b8bbc7163900e30c5832e21762dc1328140f4175a491d8366c6b76'
+  version '1.0.5'
+  sha256 '4011b4e7b50460775d1f846ca581b1321c77ed1fd12c15706a7179913358d926'
 
   url "https://github.com/mxcl/Workbench/releases/download/#{version}/Workbench-#{version}.zip"
   appcast 'https://github.com/mxcl/Workbench/releases.atom'
