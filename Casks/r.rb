@@ -1,4 +1,4 @@
-cask 'r-app' do
+cask 'r' do
   version '3.5.2'
   sha256 '47a829eff7a7a9e6f28e0bc4086ad9654fbe8a65e5273205edf72c2e5bcd5805'
 
