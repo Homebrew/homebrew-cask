@@ -134,7 +134,6 @@ CASK_REPOS = [
   "Homebrew/homebrew-cask-versions",
 ].freeze
 
- ENV["GITHUB_EVENT_NAME"] = "push"
 begin
   case ENV["GITHUB_EVENT_NAME"]
   when "status"
