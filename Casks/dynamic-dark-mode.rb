@@ -9,5 +9,5 @@ cask 'dynamic-dark-mode' do
 
   depends_on macos: '>= :mojave'
 
-  pkg 'Dynamic_Dark_Mode-#{version}.pkg'
+  pkg "Dynamic_Dark_Mode-#{version}.pkg"
 end
