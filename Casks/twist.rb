@@ -1,6 +1,6 @@
 cask 'twist' do
-  version '1.6.7,5988'
-  sha256 'b319fc1c708ed1721f8a19683776f420165a5b434df0e4c8be15e0eeee9966ff'
+  version '1.6.8,6023'
+  sha256 '403956c6f1134e312c5e799bda1cf9f718ff16df513c38a387f899f64bef78e3'
 
   url "https://downloads.twistapp.com/mac/Twist-#{version.after_comma}.zip"
   appcast 'https://downloads.twistapp.com/mac/AppCast.xml'
