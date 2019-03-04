@@ -8,6 +8,7 @@ cask 'grids' do
   homepage 'https://gridsapp.net/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'  
 
   app 'Grids.app'
 
