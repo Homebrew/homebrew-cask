@@ -10,4 +10,6 @@ cask 'dynamic-dark-mode' do
   depends_on macos: '>= :mojave'
 
   pkg "Dynamic_Dark_Mode-#{version}.pkg"
+
+  uninstall pkgutil: 'io.github.apollozhu.Dynamic.pkg'
 end
