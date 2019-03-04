@@ -1,6 +1,6 @@
 cask 'santa' do
-  version '0.9.30'
-  sha256 'd13c852a0297c392cefd2bc504287c6e63771a17663c173ed71cadf0704137e1'
+  version '0.9.31'
+  sha256 '6843afe8a924c0a9498d07d40acac4d5daafa0177dbf70181bc6be97e0067645'
 
   url "https://github.com/google/santa/releases/download/#{version}/santa-#{version}.dmg"
   appcast 'https://github.com/google/santa/releases.atom'
