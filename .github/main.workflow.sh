@@ -41,5 +41,5 @@ set -x
 git status
 
 # commit and push generated files
-git commit -m '{_data,api}/cask: update from Homebrew/cask push' _data/cask api/cask
+git commit -m 'cask: update from Homebrew/cask push' _data/cask api/cask cask
 git push
