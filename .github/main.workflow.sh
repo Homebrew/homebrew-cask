@@ -16,9 +16,6 @@ rm -rf "$CASK_DIR"
 ln -s "$PWD" "$CASK_DIR"
 
 # setup Homebrew environment
-export HOMEBREW_NO_AUTO_UPDATE=1
-export HOMEBREW_NO_ANALYTICS=1
-export HOMEBREW_FORCE_HOMEBREW_ON_LINUX=1
 export PATH="$(brew --repo)/Library/Homebrew/vendor/portable-ruby/current/bin:$PATH"
 
 # setup SSH
@@ -34,7 +31,6 @@ cd formulae.brew.sh
 
 # setup analytics
 echo "$ANALYTICS_JSON_KEY" > ~/.homebrew_analytics.json
-unset HOMEBREW_NO_ANALYTICS
 
 # run rake (without a rake binary)
 ruby -e "load Gem.bin_path('rake', 'rake')" cask
