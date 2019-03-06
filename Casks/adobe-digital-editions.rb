@@ -9,7 +9,9 @@ cask 'adobe-digital-editions' do
 
   pkg "Digital Editions #{version.major_minor} Installer.pkg"
 
-  uninstall pkgutil: 'com.adobe.adobedigitaleditions.app'
+  uninstall quit:    'com.adobe.adobedigitaleditions.app',
+            pkgutil: 'com.adobe.adobedigitaleditions.app',
+            delete:  'Applications/Adobe Digital Editions.app'
 
   zap trash: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.adobe.adobedigitaleditions.app.sfl*'
 end
