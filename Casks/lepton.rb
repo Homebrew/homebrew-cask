@@ -9,4 +9,11 @@ cask 'lepton' do
   homepage 'https://hackjutsu.com/Lepton/'
 
   app 'Lepton.app'
+
+  zap trash: [
+               '~/Library/Application Support/Lepton',
+               '~/Library/Preferences/com.cosmox.lepton.helper.plist',
+               '~/Library/Preferences/com.cosmox.lepton.plist',
+               '~/Library/Saved Application State/com.cosmox.lepton.savedState',
+             ]
 end
