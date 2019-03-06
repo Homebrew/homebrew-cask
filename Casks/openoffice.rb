@@ -25,10 +25,16 @@ cask 'openoffice' do
     sha256 'dbfddf325cad9034b3e6630fa244303a0ba1ae9273165b3b9c9c71c3f8e858bb'
     'pt'
   end
+  
+  language 'ko' do
+    sha256 '2c9798bde42c6d758b2a189aa5dd1170bdfed9c6346fdf8de43a276ee1de2c80'
+    'ko'
+  end
 
   # sourceforge.net/openofficeorg.mirror was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/openofficeorg.mirror/Apache_OpenOffice_#{version}_MacOS_x86-64_install_#{language}.dmg"
   appcast 'https://sourceforge.net/projects/openofficeorg.mirror/rss'
+  # appcast 'https://sourceforge.net/mirror/openofficeorg/activity/feed'
   name 'Apache OpenOffice'
   homepage 'https://www.openoffice.org/'
 
