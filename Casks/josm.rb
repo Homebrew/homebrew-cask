@@ -16,11 +16,5 @@ cask 'josm' do
 
   caveats do
     depends_on_java '8+'
-
-    <<~EOS
-      You will need to add #{token} as an exception to your security settings with
-
-        spctl --add /Applications/JOSM.app
-    EOS
   end
 end
