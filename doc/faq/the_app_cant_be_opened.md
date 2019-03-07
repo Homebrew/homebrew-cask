@@ -1,14 +1,20 @@
-# The app can’t be opened because it is from an unidentified developer
+# _The app_ can’t be opened because it is from an unidentified developer
+# or
+# _The app_ is an app downloaded from the Internet. Are you sure you want to open it?
 
 Chances are that certain apps will give you a popup message like this:
 
 <img src="https://i.imgur.com/CnEEATG.png" width="532" alt="Gatekeeper message">
 
+or this:
+
+<img src="https://i.imgur.com/ouAUElQ.png" width="593" alt="Mojave Gatekeeper message">
+
 This is a [security feature from Apple](https://support.apple.com/en-us/HT202491). The single most important thing to know is that **you can allow individual apps to be exempt from that feature.** This allows the app to run while the rest of the system remains under protection.
 
 **Always leave system-wide protection enabled,** and disable it only for specific apps as needed.
 
-If you are sure you want to trust the app, you can disable protection for that app by right-clicking its icon and choosing `Open`:
+If you are sure you want to trust the app, you can disable protection for that app by right-clicking or control-clicking its icon and choosing `Open`:
 
 <img src="https://i.imgur.com/69xc2WK.png" width="312" alt="Right-click the app and choose Open">
 
