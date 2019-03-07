@@ -7,6 +7,8 @@ cask 'reactotron' do
   name 'Reactotron'
   homepage 'https://github.com/infinitered/reactotron'
 
+  auto_updates true
+
   app 'Reactotron.app'
 
   zap trash: [
