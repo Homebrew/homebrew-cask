@@ -1,5 +1,5 @@
 cask 'undercover' do
-  version '6.6'
+  version '6.7'
   sha256 '40e6e9a7ff56d0a95a73f876795ada099d57e5393b337172a60ee09211cdb218'
 
   # undercoverhq.com was verified as official when first introduced to the cask
