@@ -1,5 +1,5 @@
 cask 'fontlab' do
-  version '6.1.2.6927'
+  version '6.1.3.7002'
   sha256 'ab5079a206cb1ddda0f39889ea10ccf6bf53b5ffd5bacceabb6ace99074db2b8'
 
   url 'https://download.fontlab.com/fontlab-vi/upd-mac.php'
