@@ -1,6 +1,6 @@
 cask 'hostbuddy' do
-  version '2.0.2,20_3'
-  sha256 'ae9a55245b8995a2cbdf3db4db434fd82795cc60dded4a952369c141aa00d012'
+  version '2.0.3,20_4'
+  sha256 '151c2fa7370bdc777d3367b93521fd8ce3ab779c749ee688bffacaf1f96e26b9'
 
   # downloads-clickonideas.netdna-ssl.com/hostbuddy was verified as official when first introduced to the cask
   url "https://downloads-clickonideas.netdna-ssl.com/hostbuddy/hostbuddy#{version.after_comma}.zip"
