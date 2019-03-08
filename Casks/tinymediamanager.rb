@@ -2,7 +2,7 @@ cask 'tinymediamanager' do
   version '2.9.16_42413ce'
   sha256 'd248355ff375bcdc5f830535b567630b78f2d214d1bc5c4d0945d2e1b356ac42'
 
-  url "https://release.tinymediamanager.org/v2/dist/tmm_#{version}_mac.zip"
+  url "https://release.tinymediamanager.org/v#{version.major}/dist/tmm_#{version}_mac.zip"
   appcast 'http://release.tinymediamanager.org/'
   name 'tinyMediaManager'
   homepage 'https://www.tinymediamanager.org/'
