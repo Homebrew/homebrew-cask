@@ -7,6 +7,8 @@ cask 'pastebot' do
   name 'Pastebot'
   homepage 'https://tapbots.com/pastebot/'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'Pastebot.app'
 
   zap delete: [
