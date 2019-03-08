@@ -1,6 +1,6 @@
 cask 'hobo' do
-  version '1.1.7'
-  sha256 '82aa973997f1e3655d6d9f8545e99824e64f2f1fad0ec45600bcdac42c0e648d'
+  version '1.5.0'
+  sha256 '0ae35adac210912f656914fca24b90a006b6ca86c188dc66453cd45c2bc8574b'
 
   # downloads-clickonideas.netdna-ssl.com/hobo was verified as official when first introduced to the cask
   url "https://downloads-clickonideas.netdna-ssl.com/hobo/hobo_#{version}.zip"
