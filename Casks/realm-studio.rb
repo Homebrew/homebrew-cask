@@ -8,6 +8,7 @@ cask 'realm-studio' do
   homepage 'https://realm.io/products/realm-studio/'
 
   auto_updates true
+
   app 'Realm Studio.app'
 
   zap delete: [
