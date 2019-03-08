@@ -3,6 +3,7 @@ cask 'yubico-authenticator' do
   sha256 'e9e668456e196ce8c04942111fc0b8cfad53ffc2f5165b3eff0e872d825b8d0f'
 
   url "https://developers.yubico.com/yubioath-desktop/Releases/yubioath-desktop-#{version}-mac.pkg"
+  appcast 'https://developers.yubico.com/yubioath-desktop/Release_Notes.html'
   name 'Yubico Authenticator'
   homepage 'https://developers.yubico.com/yubioath-desktop/'
 
