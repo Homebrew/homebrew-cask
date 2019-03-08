@@ -1,6 +1,6 @@
 cask 'kite' do
-  version '0.20190228.0'
-  sha256 '3ca5cd563245ff7762457d065e7bb4539ee3e0556ce08499dfe1bf2b02686548'
+  version '0.20190306.0'
+  sha256 'dcc29eeb92f10d4daebd1cad9feaead9e3f7322f0901202d5e7c1a92b5f6a753'
 
   # s3-us-west-1.amazonaws.com/kite-downloads was verified as official when first introduced to the cask
   url "https://s3-us-west-1.amazonaws.com/kite-downloads/Kite-#{version}.dmg"
