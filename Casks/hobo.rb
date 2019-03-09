@@ -8,5 +8,7 @@ cask 'hobo' do
   name 'Hobo'
   homepage 'https://clickontyler.com/hobo/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Hobo.app'
 end
