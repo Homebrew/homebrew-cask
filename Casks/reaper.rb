@@ -1,5 +1,5 @@
 cask 'reaper' do
-  version '5.972'
+  version '5.97.200'
   sha256 'c494717db1912c9918324efcf5955e8b00aa0846e47d93de2a1ad758f57ed247'
 
   url "https://www.reaper.fm/files/#{version.major}.x/reaper#{version.no_dots.sub(%r{0*$}, '')}_x86_64.dmg"
