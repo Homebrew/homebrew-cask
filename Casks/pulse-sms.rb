@@ -1,6 +1,6 @@
 cask 'pulse-sms' do
-  version '3.2.1'
-  sha256 '0c531b4d1b12c1b8b4593df822077beba52d407f228652bbb37ae84360961e72'
+  version '3.3.0'
+  sha256 'b673d89c20d4d0af737d828c139e3a51dfef453f46badcbc4d9e2ed626327e8f'
 
   # github.com/klinker-apps/messenger-desktop was verified as official when first introduced to the cask
   url "https://github.com/klinker-apps/messenger-desktop/releases/download/v#{version}/pulse-sms-#{version}.dmg"

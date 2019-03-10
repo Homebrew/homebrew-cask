@@ -1,12 +1,12 @@
 cask 'volt' do
-  version '0.70'
-  sha256 '43bfff76cc0898c8cf416ec26cccfdc64e4b9a2f71660d5e96b4073aaf874e97'
+  version '0.80'
+  sha256 '0496831e619afeea7336bfd234bcf415ef615c25e817cd3390faf1a300e655f6'
 
   # github.com/voltapp/volt was verified as official when first introduced to the cask
   url "https://github.com/voltapp/volt/releases/download/#{version}/Volt.dmg"
   appcast 'https://github.com/voltapp/volt/releases.atom'
   name 'Volt'
-  homepage 'https://volt.ws/'
+  homepage 'https://volt-app.com/'
 
   app 'Volt.app'
 end

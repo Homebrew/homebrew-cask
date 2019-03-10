@@ -1,5 +1,5 @@
 cask 'forticlient' do
-  version '6.0.1'
+  version '6.0'
   sha256 'ef54a8fcc3588c6a7a87b6a94c976d58bf6fabbf4a48626be8d52ab72b0d01f1'
 
   # filestore.fortinet.com/forticlient was verified as official when first introduced to the cask

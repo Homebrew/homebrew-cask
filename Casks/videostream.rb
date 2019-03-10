@@ -1,6 +1,6 @@
 cask 'videostream' do
-  version '0.3.5'
-  sha256 '7391c05f0214bf248f0a296aa84f94b943a45ad7dc685a214ea4129ebe5026b0'
+  version '0.3.6'
+  sha256 'd1f65c33c075709c1890aca871602baffdef22ae810a07c5a4f59d88a0383071'
 
   url 'https://cdn.getvideostream.com/videostream-native-updates/macOS/Videostream.pkg'
   appcast 'https://s3.amazonaws.com/videostream-cdn/videostream-native-updates/macOS/manifest.json'

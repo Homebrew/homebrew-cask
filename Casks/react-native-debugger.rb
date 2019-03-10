@@ -7,5 +7,7 @@ cask 'react-native-debugger' do
   name 'React Native Debugger'
   homepage 'https://github.com/jhen0409/react-native-debugger'
 
+  auto_updates true
+
   app 'React Native Debugger.app'
 end
