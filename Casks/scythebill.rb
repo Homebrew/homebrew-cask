@@ -1,6 +1,6 @@
 cask 'scythebill' do
-  version '14.4.0'
-  sha256 '2c5ff7e3a001865752996c95349b5cb490c1dffb0c5f379fd6dbbe0b57a34a24'
+  version '14.4.5'
+  sha256 '33b0faab05544054e90f506690f162e9becf56124309731061f1b722d8cd13b3'
 
   # storage.googleapis.com/scythebill-releases was verified as official when first introduced to the cask
   url "https://storage.googleapis.com/scythebill-releases/Scythebill-#{version}.dmg"
