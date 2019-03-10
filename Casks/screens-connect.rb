@@ -6,7 +6,7 @@ cask 'screens-connect' do
   url "https://dl.devmate.com/com.edovia.Screens-Connect/#{version.patch}/#{version.after_comma}/ScreensConnect-#{version.patch}.zip"
   appcast 'https://updates.devmate.com/com.edovia.Screens-Connect.xml'
   name 'Screens Connect'
-  homepage 'https://screensconnect.com/'
+  homepage 'https://screensconnect.com/en/'
 
   depends_on macos: '>= :el_capitan'
 
