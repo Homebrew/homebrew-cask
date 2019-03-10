@@ -8,5 +8,7 @@ cask 'loopback' do
   name 'Loopback'
   homepage 'https://rogueamoeba.com/loopback/'
 
+  auto_updates true
+
   app 'Loopback.app'
 end
