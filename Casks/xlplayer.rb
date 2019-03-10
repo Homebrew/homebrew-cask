@@ -1,6 +1,6 @@
 cask 'xlplayer' do
-  version '2.0.0.1234'
-  sha256 '37171139b51c47019b20f61d8350a98a09a048a622b8ea1b9899ec3fe52b85a3'
+  version '2.0.1.1249'
+  sha256 '7d39760d50ac8d2d3c7f0827ca6ebb31c319ed3447a2605d3c152ce3980508fa'
 
   # down.sandai.net was verified as official when first introduced to the cask
   url "http://down.sandai.net/mac/xlplayer_#{version}.dmg"
