@@ -1,6 +1,6 @@
 cask 'majsoul-plus' do
-  version '1.10.6'
-  sha256 'e95fad51b4e6ed2d4012dd4109e6a5ef4e6e8e20e7b9695d8dba1e51e6a91925'
+  version '1.11.1'
+  sha256 '41b6261801a6c29c7c7685a5e782f1f4767642bf5e066fc7b07e3a8784527a38'
 
   url "https://github.com/MajsoulPlus/majsoul-plus-client/releases/download/v#{version}/Majsoul_Plus-darwin.zip"
   appcast 'https://github.com/MajsoulPlus/majsoul-plus-client/releases.atom'
