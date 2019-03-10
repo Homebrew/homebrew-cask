@@ -1,9 +1,9 @@
 cask 'coyim' do
-  version '0.3.8'
-  sha256 '1238d6d67087c38a003eafa54286b492342e2f62ddcb0d4a0fcacde07591fdf1'
+  version '0.3.10'
+  sha256 '6623eb9f86ae44006a312de23537910558fe5c283e0b603daef24a38d577c325'
 
-  # bintray.com/twstrike/coyim was verified as official when first introduced to the cask
-  url "https://dl.bintray.com/twstrike/coyim/v#{version}/mac-bundle/coyim.dmg"
+  # bintray.com/coyim/coyim-bin is the new official url as stated on the coyim website
+  url "https://dl.bintray.com/coyim/coyim-bin/v#{version}/mac-bundle/coyim.dmg"
   name 'CoyIM'
   homepage 'https://coy.im/'
 
