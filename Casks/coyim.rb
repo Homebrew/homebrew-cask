@@ -4,6 +4,7 @@ cask 'coyim' do
 
   # dl.bintray.com/coyim/coyim-bin was verified as official when first introduced to the cask
   url "https://dl.bintray.com/coyim/coyim-bin/v#{version}/mac-bundle/coyim.dmg"
+  appcast 'https://github.com/coyim/coyim/releases.atom'
   name 'CoyIM'
   homepage 'https://coy.im/'
 
