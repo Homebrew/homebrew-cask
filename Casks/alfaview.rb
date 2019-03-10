@@ -1,6 +1,6 @@
 cask 'alfaview' do
-  version '7.33338'
-  sha256 '19f3fc549fffec13626c24194fe498a1743b269d2a8834eb928aaffa34ec5733'
+  version '7.35069'
+  sha256 '07fef504f827a1cf2e4b287e7a05508e5fd840ade2c6c58920a83edafd1f65bd'
 
   url "https://assets.alfaview.com/stable/mac/alfaview-mac-production-#{version}.dmg"
   appcast 'https://alfaview.com/downloads'
