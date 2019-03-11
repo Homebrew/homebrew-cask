@@ -1,6 +1,6 @@
 cask 'reactotron' do
-  version '2.7.0'
-  sha256 '8f57be0e15eb3d407efe693b7f6cd306270480606b67c96dd37dfbf5af2d70f0'
+  version '2.8.0'
+  sha256 '5351ed702f5365d24d328d570885aab85f7f0596ecf44667927fa9ec99b2885b'
 
   url "https://github.com/infinitered/reactotron/releases/download/v#{version}/Reactotron-#{version}-mac.zip"
   appcast 'https://github.com/infinitered/reactotron/releases.atom'
