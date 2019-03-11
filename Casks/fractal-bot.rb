@@ -7,7 +7,7 @@ cask 'fractal-bot' do
   name 'Fractal Bot'
   homepage 'https://www.fractalaudio.com/fractal-bot/'
 
-  pkg "Fractal-Bot-OSX-v#{version}.pkg"
+  pkg "Fractal-Bot-OSX-v#{version.major}p#{version.minor}p#{version.patch}.pkg"
 
   uninstall pkgutil: 'com.fractalaudio.fractalAudioSystemsFractalbot.Fractal-Bot.pkg'
 
