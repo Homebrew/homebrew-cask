@@ -1,6 +1,6 @@
 cask 'wacom-inkspace' do
-  version '2.6.0'
-  sha256 'bc673839739055754c4319030a36821ab081a16669c5bed884cd925995435fa6'
+  version '2.7.0'
+  sha256 'efbf407f39c58394b8037280da4f05ccb354494c00ff3e65aee78a442dc19735'
 
   url "https://cdn.wacom.com/i/m/mac/WacomInkspaceApp_#{version}.zip"
   name 'Wacom Inkspace'
