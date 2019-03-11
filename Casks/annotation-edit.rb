@@ -1,6 +1,6 @@
 cask 'annotation-edit' do
-  version '1.9.99.14'
-  sha256 'dbd267c3b3d87b7ee8731b4870f9f09978771373e7e048cd02f94b556f2a1c85'
+  version '1.9.99.15'
+  sha256 'bbcf4149620391fa023b450a08d9d28485c322bc58db2f040674975728ddd5b6'
 
   url 'http://www.zeitanker.com/common/Annotation_Edit.zip'
   appcast 'http://zeitanker.com/updates.rss'
