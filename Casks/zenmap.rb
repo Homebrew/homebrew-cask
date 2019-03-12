@@ -3,6 +3,7 @@ cask 'zenmap' do
   sha256 'f64d24fecd286af015a2247ca77ac6cb090f1be1ab4e92cdf62bdc5bcd60d267'
 
   url "https://nmap.org/dist/nmap-#{version}.dmg"
+  appcast 'https://nmap.org/dist/?C=M&O=D'
   name 'Zenmap'
   homepage 'https://nmap.org/zenmap/'
 
