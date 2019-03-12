@@ -1,6 +1,6 @@
 cask 'doomsday-engine' do
-  version '2.0.3'
-  sha256 '0a6258ed1c061b3a80f1573c7845bce39cd8c8d66ade8d3f29531b7cc658e9d5'
+  version '2.1.0'
+  sha256 '4f2e840bb51c989b470c8729f7c5fe21b549825099b15cc2f6448e16fced4146'
 
   url "https://files.dengine.net/archive/doomsday_#{version}_x86_64.dmg"
   appcast 'http://api.dengine.net/1/builds/feed'

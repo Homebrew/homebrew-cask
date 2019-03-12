@@ -1,6 +1,6 @@
 cask 'sage' do
-  version '8.4,10.13.6'
-  sha256 '80c9ee79321afc75dea6342af4dadfad6add2b11f762d56727af153c9880c08c'
+  version '8.6,10.14.2'
+  sha256 '7a775f9bfdf7f7d106582d6b3c8da438519eeafdee2f9ea92d4df658f9d29594'
 
   # mirrors.mit.edu/sage/osx/intel was verified as official when first introduced to the cask
   url "http://mirrors.mit.edu/sage/osx/intel/sage-#{version.before_comma}-OSX_#{version.after_comma}-x86_64.app.dmg"

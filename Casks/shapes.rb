@@ -7,7 +7,5 @@ cask 'shapes' do
   name 'Shapes'
   homepage 'http://shapesapp.com/'
 
-  depends_on macos: '>= :mountain_lion'
-
   app 'Shapes.app'
 end

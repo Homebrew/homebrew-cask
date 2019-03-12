@@ -8,7 +8,6 @@ cask 'coda' do
   homepage 'https://panic.com/coda/'
 
   auto_updates true
-  depends_on macos: '>= :lion'
 
   app "Coda #{version.major}.app"
 

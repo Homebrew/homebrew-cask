@@ -1,15 +1,9 @@
 cask 'tiptyper' do
-  if MacOS.version <= :snow_leopard
-    version '2.1.2'
-    sha256 '5f862ea7d68548569c9b038f8cc8e542e07ae21b26462e75442f28ba2d4088ad'
-    url "https://www.brunophilipe.com/software/tiptyper/releases/releasen-#{version}.zip"
-  else
-    version '2.7.2'
-    sha256 'cab91b85d5a1a731a36fe6612d8ec397783c33ed469c2a2a087364226d9b4b70'
-    url "https://www.brunophilipe.com/software/tiptyper/releases/releasen-#{version}.zip"
-    appcast 'https://www.brunophilipe.com/software/tiptyper/versioninfo/appcast.php'
-  end
+  version '2.7.2'
+  sha256 'cab91b85d5a1a731a36fe6612d8ec397783c33ed469c2a2a087364226d9b4b70'
 
+  url "https://www.brunophilipe.com/software/tiptyper/releases/releasen-#{version}.zip"
+  appcast 'https://www.brunophilipe.com/software/tiptyper/versioninfo/appcast.php'
   name 'TipTyper'
   homepage 'https://www.brunophilipe.com/software/tiptyper/'
 

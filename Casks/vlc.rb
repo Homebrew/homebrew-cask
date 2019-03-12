@@ -1,15 +1,14 @@
 cask 'vlc' do
-  version '3.0.4'
-  sha256 '5cd095114e92b53f3da4af227229c702f73b47f75a58c46d69ddb6f135a02a3b'
+  version '3.0.6'
+  sha256 '0c807a2e352fd6fe7e591fe01a7a53794b7d817e1e1eda3f673df06f26db27d5'
 
   url "https://get.videolan.org/vlc/#{version}/macosx/vlc-#{version}.dmg"
-  appcast 'https://update.videolan.org/vlc/sparkle/vlc-intel64.xml'
+  appcast 'https://download.videolan.org/pub/videolan/vlc/'
   name 'VLC media player'
   homepage 'https://www.videolan.org/vlc/'
 
   auto_updates true
   conflicts_with cask: 'vlc-nightly'
-  depends_on macos: '>= :lion'
 
   app 'VLC.app'
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)

@@ -3,8 +3,8 @@ cask 'dendroscope' do
   sha256 '6fcf8a60e481f6880bf05966013cea02ebb512c0dbc0505d4c7759c129e7ce2c'
 
   # ab.inf.uni-tuebingen.de/data/software/dendroscope3 was verified as official when first introduced to the cask
-  url "http://ab.inf.uni-tuebingen.de/data/software/dendroscope3/download/Dendroscope_macos_#{version.dots_to_underscores}.dmg"
-  appcast 'http://dendroscope.org/'
+  url "https://ab.inf.uni-tuebingen.de/data/software/dendroscope3/download/Dendroscope_macos_#{version.dots_to_underscores}.dmg"
+  appcast 'https://ab.inf.uni-tuebingen.de/data/software/dendroscope3/download/release_notes.txt'
   name 'Dendroscope'
   homepage 'http://dendroscope.org/'
 

@@ -3,7 +3,7 @@ cask 'duplicati' do
   sha256 '388d0fc6bfefd86d058e277c4152df4fb63c0f61fb7a116160f51f1ed479b0f0'
 
   url "https://updates.duplicati.com/beta/duplicati-#{version.before_comma}_beta_#{version.after_comma}.dmg"
-  appcast 'https://www.duplicati.com/download'
+  appcast 'https://updates.duplicati.com/beta/latest-installers.js'
   name 'Duplicati'
   homepage 'https://www.duplicati.com/'
 

@@ -6,8 +6,6 @@ cask 'ui-browser' do
   name 'UI Browser'
   homepage 'https://pfiddlesoft.com/uibrowser/'
 
-  depends_on macos: '>= :lion'
-
   app 'UI Browser.app'
 
   zap trash: [

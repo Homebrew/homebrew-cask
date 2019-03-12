@@ -1,6 +1,6 @@
 cask 'projectlibre' do
-  version '1.8.0'
-  sha256 '0132bcf33b7e792ed0693888982b1163e5397c7820329188f0f916b2e0246ec7'
+  version '1.9.0'
+  sha256 '4a55fc42c62630c903b805c1e2a69976b1b580c551a0a175e357febccb88bfdd'
 
   # sourceforge.net/projectlibre was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/projectlibre/ProjectLibre/#{version.major_minor}/ProjectLibre-#{version}.dmg"

@@ -1,6 +1,6 @@
 cask 'monogame' do
-  version '3.7'
-  sha256 'fa8fa17f49222faaa8e4e3b61fc53a684a5f1f5736775596c8c0deca02117667'
+  version '3.7.1'
+  sha256 'b869b6c71181295db0b245221151dde43b012f23ef3be52b525650f5923cfa87'
 
   # github.com/MonoGame/MonoGame was verified as official when first introduced to the cask
   url "https://github.com/MonoGame/MonoGame/releases/download/v#{version}/MonoGame.pkg"

@@ -7,8 +7,6 @@ cask 'midi-monitor' do
   name 'MIDI Monitor'
   homepage 'https://www.snoize.com/MIDIMonitor/'
 
-  depends_on macos: '>= :lion'
-
   app 'MIDI Monitor.app'
 
   uninstall quit: [

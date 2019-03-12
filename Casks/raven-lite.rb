@@ -6,8 +6,6 @@ cask 'raven-lite' do
   name 'Raven Lite'
   homepage 'http://www.birds.cornell.edu/brp/raven/RavenOverview.html'
 
-  depends_on macos: '>= :mountain_lion'
-
   installer manual: 'RavenLite-Installer.app'
 
   uninstall delete: "/Applications/Raven Lite #{version.major_minor}"

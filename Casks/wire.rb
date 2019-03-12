@@ -1,14 +1,14 @@
 cask 'wire' do
-  version '3.3.2862'
-  sha256 '3fc9fc33990bd5be55364a1328c71c9f817ad9cb59814171fa9475523796a672'
+  version '3.6.2923'
+  sha256 'd485c5cea48d44c2584c452dea2e471a3a0742c357cdae8d89f45c65163ca081'
 
   # github.com/wireapp/wire-desktop was verified as official when first introduced to the cask
-  url "https://github.com/wireapp/wire-desktop/releases/download/release%2F#{version}/wire-#{version}.pkg"
+  url "https://github.com/wireapp/wire-desktop/releases/download/macos%2F#{version}/Wire.pkg"
   appcast 'https://github.com/wireapp/wire-desktop/releases.atom'
   name 'Wire'
   homepage 'https://wire.com/'
 
-  pkg "wire-#{version}.pkg"
+  pkg 'Wire.pkg'
 
   uninstall pkgutil: 'com.wearezeta.zclient.mac',
             signal:  [

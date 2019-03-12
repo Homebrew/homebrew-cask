@@ -7,6 +7,8 @@ cask 'coinpricebar' do
   name 'CoinPriceBar'
   homepage 'https://github.com/T-Pham/CoinPriceBar'
 
+  depends_on macos: '>= :sierra'
+
   app 'CoinPriceBar.app'
 
   uninstall quit: 'TPM.CoinPriceBar'

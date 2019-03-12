@@ -7,8 +7,6 @@ cask 'my-image-garden' do
   name 'Canon My Image Garden'
   homepage 'https://support-asia.canon-asia.com/?personal'
 
-  depends_on macos: '>= :mountain_lion'
-
   pkg "My Image Garden V#{version.no_dots}.pkg"
 
   uninstall pkgutil: 'jp.co.canon.MyImageGarden',

@@ -1,6 +1,6 @@
 cask 'meld' do
-  version '3.19.2-r3,osx-12'
-  sha256 'c92f6d306f0c77aeb87b3a113df15ac6098f81734b85fce04e9956898ebe9e55'
+  version '3.19.2-r6,osx-15'
+  sha256 '81f79f708346ffc489001fb54562d5ed7226f9d660fa225dc4f253fe3b01075b'
 
   # github.com/yousseb/meld was verified as official when first introduced to the cask
   url "https://github.com/yousseb/meld/releases/download/#{version.after_comma}/meldmerge.dmg"
@@ -9,7 +9,20 @@ cask 'meld' do
   homepage 'https://yousseb.github.io/meld/'
 
   app 'Meld.app'
-  binary "#{appdir}/Meld.app/Contents/MacOS/Meld", target: 'meld'
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/meld.wrapper.sh"
+  binary shimscript, target: 'meld'
 
-  zap trash: '~/Library/Preferences/org.gnome.meld.plist'
+  preflight do
+    IO.write shimscript, <<~EOS
+      #!/bin/sh
+      exec '#{appdir}/Meld.app/Contents/MacOS/Meld' "$@"
+    EOS
+  end
+
+  zap trash: [
+               '~/Library/Preferences/org.gnome.meld.plist',
+               '~/.local/share/meld',
+               '~/Library/Saved Application State/org.gnome.meld.savedState/',
+             ]
 end

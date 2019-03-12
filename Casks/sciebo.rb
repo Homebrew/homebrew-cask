@@ -7,8 +7,6 @@ cask 'sciebo' do
   name 'sciebo'
   homepage 'https://sciebo.de/'
 
-  depends_on macos: '>= :lion'
-
   pkg "sciebo-#{version}.pkg"
 
   uninstall pkgutil: 'de.sciebo.sciebo'

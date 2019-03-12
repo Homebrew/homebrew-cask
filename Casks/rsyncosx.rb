@@ -1,6 +1,6 @@
 cask 'rsyncosx' do
-  version '5.6.1'
-  sha256 '2627c64dae6dd75f47aff6d7f9b7040324cb5260b73eecb01b33cd39242b0569'
+  version '5.7.3'
+  sha256 'c3263e79f51ee03a80dd3c98ce1097efeb3dbd6de1728fbe5f849605431820f8'
 
   url "https://github.com/rsyncOSX/RsyncOSX/releases/download/v#{version}/RsyncOSX-#{version}.dmg"
   appcast 'https://github.com/rsyncOSX/RsyncOSX/releases.atom'

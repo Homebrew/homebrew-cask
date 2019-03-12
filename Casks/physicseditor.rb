@@ -7,7 +7,5 @@ cask 'physicseditor' do
   name 'PhysicsEditor'
   homepage 'https://www.codeandweb.com/physicseditor'
 
-  depends_on macos: '>= :lion'
-
   app 'PhysicsEditor.app'
 end

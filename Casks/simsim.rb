@@ -10,8 +10,7 @@ cask 'simsim' do
   app 'SimSim.app'
 
   uninstall quit:       'com.dsmelov.SimSim',
-            login_item: 'SimSim',
-            kext:       'com.dsmelov.SimSim'
+            login_item: 'SimSim'
 
   zap trash: '~/Library/Preferences/com.dsmelov.SimSim.plist'
 end

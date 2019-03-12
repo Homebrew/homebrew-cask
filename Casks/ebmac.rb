@@ -6,7 +6,5 @@ cask 'ebmac' do
   name 'EBMac'
   homepage 'http://ebstudio.info/manual/EBMac/'
 
-  depends_on macos: '>= :snow_leopard'
-
   app 'EBMac.app'
 end

@@ -8,7 +8,5 @@ cask 'nodebox' do
   name 'NodeBox'
   homepage 'https://www.nodebox.net/node/'
 
-  depends_on macos: '>= :mountain_lion'
-
   app 'NodeBox.app'
 end

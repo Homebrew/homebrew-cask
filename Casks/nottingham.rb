@@ -4,7 +4,7 @@ cask 'nottingham' do
 
   # downloads-clickonideas.netdna-ssl.com/nottingham was verified as official when first introduced to the cask
   url "https://downloads-clickonideas.netdna-ssl.com/nottingham/nottingham#{version.major}_#{version.after_comma}.zip"
-  appcast 'https://shine.clickontyler.com/appcast.php?id=35'
+  appcast 'https://shine.clickontyler.com/appcast.php?id=39'
   name 'Nottingham'
   homepage 'https://clickontyler.com/nottingham/'
 

@@ -1,10 +1,11 @@
 cask 'acquia-dev' do
-  version '2-2017-02-01'
-  sha256 'b6f3af47241028b28d32ab494887095a51bacd7b766f4e3181993ecc2948febc'
+  version '2-2019-02-08'
+  sha256 '12437e6f6270d695ef3efbf391ae9a45eeb0cb9e2381bcf946f6717ec03864a9'
 
-  url "https://www.acquia.com/sites/default/files/downloads/dev-desktop/AcquiaDevDesktop-#{version}.dmg"
+  url "https://dev.acquia.com/sites/default/files/downloads/dev-desktop/acquiadevdesktop-#{version}.dmg"
+  appcast 'https://dev.acquia.com/downloads'
   name 'Acquia Dev Desktop'
-  homepage 'https://www.acquia.com/products-services/dev-desktop'
+  homepage 'https://www.acquia.com/drupal/acquia-dev-desktop'
 
   installer script: {
                       executable: 'Acquia Dev Desktop Installer.app/Contents/MacOS/installbuilder.sh',

@@ -6,7 +6,5 @@ cask 'geneious-prime' do
   name 'Geneious Prime'
   homepage 'https://www.geneious.com/'
 
-  depends_on macos: '>= :mountain_lion'
-
   app 'Geneious Prime.app'
 end

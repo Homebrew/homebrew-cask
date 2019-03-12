@@ -9,7 +9,6 @@ cask 'rhinoceros' do
   homepage 'https://www.rhino3d.com/'
 
   auto_updates true
-  depends_on macos: '>= :mountain_lion'
 
   app 'Rhinoceros.app'
 

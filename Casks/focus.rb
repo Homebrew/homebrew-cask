@@ -1,13 +1,11 @@
 cask 'focus' do
-  version '1.8.14'
-  sha256 'd9e03e5e4f57f51c03fe54bb60de4ded36aaffb05067930230127c286ef8fa64'
+  version '1.10.2'
+  sha256 '839f2adafb9c02f71a7565718b08ead9c82e41a9406ea51778e3c0c2bac49192'
 
-  url "https://heyfocus.com/releases/Focus-#{version}.zip"
-  appcast 'https://heyfocus.com/appcast.xml'
+  url "https://heyfocus.com/uploads/Focus-#{version}.zip"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://heyfocus.com/focus.zip'
   name 'Focus'
   homepage 'https://heyfocus.com/'
-
-  depends_on macos: '>= :mavericks'
 
   app 'Focus.app'
 

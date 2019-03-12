@@ -7,7 +7,5 @@ cask 'bmglyph' do
   name 'bmGlyph'
   homepage 'https://www.bmglyph.com/'
 
-  depends_on macos: '>= :mountain_lion'
-
   app 'bmGlyph.app'
 end

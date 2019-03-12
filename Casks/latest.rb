@@ -10,4 +10,10 @@ cask 'latest' do
   depends_on macos: '>= :sierra'
 
   app 'Latest.app'
+
+  zap trash: [
+               '~/Library/Caches/com.max-langer.Latest',
+               '~/Library/Preferences/com.max-langer.Latest.plist',
+               '~/Library/Saved Application State/com.max-langer.Latest.savedState',
+             ]
 end

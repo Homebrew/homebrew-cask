@@ -7,7 +7,5 @@ cask 'big-mean-folder-machine' do
   name 'Big Mean Folder Machine'
   homepage 'http://www.publicspace.net/BigMeanFolderMachine/'
 
-  depends_on macos: '>= :lion'
-
   app "Big Mean Folder Machine #{version.major}.app"
 end

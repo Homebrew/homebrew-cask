@@ -6,8 +6,6 @@ cask 'gislook' do
   name 'GISLook'
   homepage 'http://www.cartography.oregonstate.edu/GISLook.html'
 
-  depends_on macos: '>= :leopard'
-
   pkg 'GISLook_GISMeta.pkg'
 
   uninstall pkgutil: [

@@ -1,6 +1,6 @@
 cask 'freeplane' do
-  version '1.7.3'
-  sha256 'd993a3cc472dc4d1c50715fa4d63da93b1ef54712cfd4e13fadb793d666a0374'
+  version '1.7.7'
+  sha256 'd06f47e99796bd0106309d060b8bcbea8c8eb0098f10ebf704765b7b900b99e6'
 
   # downloads.sourceforge.net/freeplane was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/freeplane/freeplane%20stable/freeplane_app_jre-#{version}.dmg"

@@ -8,7 +8,5 @@ cask 'ginbox' do
   name 'Inbox by Google'
   homepage 'https://github.com/chenasraf/gInbox'
 
-  depends_on macos: '>= :mavericks'
-
   app 'Inbox by Google.app'
 end

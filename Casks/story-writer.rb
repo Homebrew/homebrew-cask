@@ -1,6 +1,6 @@
 cask 'story-writer' do
-  version '6.2.1'
-  sha256 '1cf5c9ad77ecbcd36829965a7929638ef010773d28f021b0368781473f510f73'
+  version '7.1.0'
+  sha256 '3ad99954539e98197b0bad4a84ca58c2d5801c5020533494f57545a676c1a683'
 
   # github.com/suziwen/markdownxiaoshujiang was verified as official when first introduced to the cask
   url "https://github.com/suziwen/markdownxiaoshujiang/releases/download/v#{version}/Story-writer-osx64.zip"

@@ -1,15 +1,15 @@
 cask 'night-owl' do
-  version '2.88'
-  sha256 'a1e606d0f90f4c0c768b516abf811c5aa314e0ba8dc9802f65d26b96c3c7e367'
+  version '2.91'
+  sha256 '08b8d1201e5b013110bcd669c7dc0d40597684a5e70c31c10cf2b96012e7109c'
 
   # aki-null.net was verified as official when first introduced to the cask
   url 'https://aki-null.net/yf/NightOwl.zip'
-  appcast 'http://sites.google.com/site/yorufukurou/distribution/appcast.xml'
+  appcast 'https://sites.google.com/site/yorufukurou/distribution/appcast.xml'
   name 'NightOwl'
   name 'YoruFukurou'
   homepage 'https://sites.google.com/site/yorufukurou/home-en'
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :mojave'
 
   app 'Night Owl.app'
 end

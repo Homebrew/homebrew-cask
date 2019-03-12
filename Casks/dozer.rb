@@ -1,8 +1,8 @@
 cask 'dozer' do
-  version '3.0.2'
-  sha256 '14bf6e1eb610e163c74fa86aae17a123bac4cab49173fd4ed4a461dc6ec8a2bf'
+  version '3.0.4'
+  sha256 '1dede8c4e4e509b5fc8275fa9bca2a968ed05db596468f0f8038d970056e1f36'
 
-  url "https://github.com/Mortennn/Dozer/releases/download/#{version}/Dozer.#{version}.dmg"
+  url "https://github.com/Mortennn/Dozer/releases/download/v#{version}/Dozer.#{version}.dmg"
   appcast 'https://github.com/Mortennn/Dozer/releases.atom'
   name 'Dozer'
   homepage 'https://github.com/Mortennn/Dozer'

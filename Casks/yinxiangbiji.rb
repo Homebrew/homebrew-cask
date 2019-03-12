@@ -1,6 +1,6 @@
 cask 'yinxiangbiji' do
-  version '8.3.2_457479'
-  sha256 '77bc58787d6095e5735fdacae6fac120c81377d036954535bc82aa897ce90d8e'
+  version '9.0.1_457749'
+  sha256 'd614ba6d8d5e6589dd647d8b8a4e53d9191b334573e86478114ddf5bc906688e'
 
   url "https://cdn.yinxiang.com/mac-smd/public/YinxiangBiji_RELEASE_#{version}.dmg"
   appcast 'https://update.yinxiang.com/public/ENMacSMD/EvernoteMacUpdate.xml'

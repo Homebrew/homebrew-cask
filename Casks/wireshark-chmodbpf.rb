@@ -1,6 +1,6 @@
 cask 'wireshark-chmodbpf' do
-  version '2.6.5'
-  sha256 'b4e2cb6c9ddb0f700ef8eaba9f19248f92069a27622620646f46640e294c678f'
+  version '3.0.0'
+  sha256 '4f7667b4ed52997726e1c25277b11582440ef46498f0680928780b9fe0535881'
 
   url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20Intel%2064.dmg"
   appcast 'https://www.wireshark.org/download/osx/'
@@ -8,7 +8,7 @@ cask 'wireshark-chmodbpf' do
   homepage 'https://www.wireshark.org/'
 
   conflicts_with cask: 'wireshark'
-  depends_on macos: '>= :mountain_lion'
+  depends_on macos: '>= :sierra'
 
   pkg "Wireshark #{version} Intel 64.pkg",
       choices: [

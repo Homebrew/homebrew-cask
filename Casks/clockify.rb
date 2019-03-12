@@ -1,6 +1,6 @@
 cask 'clockify' do
-  version '2.2.1_49'
-  sha256 'f22a3816fb1b91a3702239186abd57ba7da20376dfde4e573ea0fa5feab93cd0'
+  version '2.2.4_59'
+  sha256 'e2e4804a259dc49f15be62017ce519725ee633dd3d6be5511515b1c342addad0'
 
   url "https://clockify.me/downloads/ClockifyDesktop_#{version.no_dots}.zip"
   name 'Clockify'

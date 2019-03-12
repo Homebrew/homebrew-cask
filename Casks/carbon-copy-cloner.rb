@@ -1,6 +1,6 @@
 cask 'carbon-copy-cloner' do
-  version '5.1.7.5627'
-  sha256 '23129904162e1674271a0feaf5f92b1ba72911607de45c37dba0a858b50570f1'
+  version '5.1.8.5704'
+  sha256 'e77c056c5e0ab7481cff52b79f07d4ef9737a1e2a711e608cc6469470d3e1dfc'
 
   # bombich.scdn1.secure.raxcdn.com/software/files was verified as official when first introduced to the cask
   url "https://bombich.scdn1.secure.raxcdn.com/software/files/ccc-#{version}.zip"
@@ -22,6 +22,8 @@ cask 'carbon-copy-cloner' do
                '~/Library/Application Support/com.bombich.ccc',
                '~/Library/Caches/com.bombich.ccc',
                '~/Library/Preferences/com.bombich.ccc.plist',
+               '~/Library/Preferences/com.bombich.cccuseragent.plist',
                '~/Library/Saved Application State/com.bombich.ccc.savedState',
+               '/Library/LaunchDaemons/com.bombich.ccchelper.plist',
              ]
 end

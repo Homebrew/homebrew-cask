@@ -7,8 +7,6 @@ cask 'mobile-mouse-server' do
   name 'Mobile Mouse Server'
   homepage 'https://mobilemouse.com/'
 
-  depends_on macos: '>= :mountain_lion'
-
   app 'Mobile Mouse Server.app'
 
   uninstall quit: 'com.rpatechnology.mobilemouse'

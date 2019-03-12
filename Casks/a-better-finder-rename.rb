@@ -8,7 +8,6 @@ cask 'a-better-finder-rename' do
   homepage 'http://www.publicspace.net/ABetterFinderRename/'
 
   auto_updates true
-  depends_on macos: '>= :lion'
 
   app "A Better Finder Rename #{version.major}.app"
 

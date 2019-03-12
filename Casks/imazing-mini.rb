@@ -9,7 +9,6 @@ cask 'imazing-mini' do
   homepage 'https://imazing.com/backup-iphone-ipad'
 
   conflicts_with cask: 'imazing'
-  depends_on macos: '>= :mountain_lion'
 
   app 'iMazing Mini.app'
 

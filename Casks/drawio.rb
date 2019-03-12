@@ -11,8 +11,12 @@ cask 'drawio' do
   app 'draw.io.app'
 
   zap trash: [
+               '~/Library/Application Support/draw.io',
+               '~/Library/Caches/com.jgraph.drawio.desktop',
+               '~/Library/Logs/draw.io',
                '~/Library/Preferences/com.jgraph.drawio.desktop.helper.plist',
                '~/Library/Preferences/com.jgraph.drawio.desktop.plist',
                '~/Library/Saved Application State/com.jgraph.drawio.desktop.savedState',
+               '~/Library/WebKit/com.jgraph.drawio.desktop',
              ]
 end

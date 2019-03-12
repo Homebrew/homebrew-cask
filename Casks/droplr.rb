@@ -1,8 +1,8 @@
 cask 'droplr' do
-  version '5.5.2,224'
-  sha256 '82ac292b2dda6cf3b31490db57b51250680aeeb2c55eb4aa47d9926a6f6eab98'
+  version '5.6.1,233'
+  sha256 '6a1fc57a572a5422f51ba79cc04b39c4315bd1428ee007e3ae7862f2a5484953'
 
-  url "https://files.droplr.com/apps/mac/Droplr-#{version.after_comma}.zip"
+  url "https://files.droplr.com/apps/mac/Droplr+#{version.after_comma}.zip"
   appcast 'https://droplr.com/appcast/appcast-sandbox.xml'
   name 'Droplr'
   homepage 'https://droplr.com/'

@@ -1,6 +1,6 @@
 cask 'toptracker' do
-  version '1.5.7.6079'
-  sha256 '1f7c116da6b3f6ad1c7584b84daf28329e9fe158dd0251063d9401db7d8bd5d4'
+  version '1.5.10.6403'
+  sha256 '31f88972749061e54563e60794ebe10a98185b08890784381e432806ee15500f'
 
   # d101nvfmxunqnl.cloudfront.net was verified as official when first introduced to the cask
   url "https://d101nvfmxunqnl.cloudfront.net/desktop/builds/mac/toptracker_#{version}.dmg"

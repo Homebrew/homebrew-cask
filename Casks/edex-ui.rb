@@ -1,6 +1,6 @@
 cask 'edex-ui' do
-  version '1.1.2'
-  sha256 '3ee567515d87c238f588f5bc204fd64da27f1c2b8100e11b5abfbe280f20a404'
+  version '2.1.0'
+  sha256 '41b737b90cf8fb45f083f506151cdc1ae2bfa224dc37f8ea17e1b11c8780e77a'
 
   url "https://github.com/GitSquared/edex-ui/releases/download/v#{version}/eDEX-UI.MacOS.Image.dmg"
   appcast 'https://github.com/GitSquared/edex-ui/releases.atom'

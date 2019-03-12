@@ -1,6 +1,6 @@
 cask 'keka' do
-  version '1.1.8'
-  sha256 'efbbee9c344b3e407dbb2e1f40a356a3387ad985045bb08d44023fe67e87e87e'
+  version '1.1.12'
+  sha256 '8198a42eb5a24146e72babdda2d9022abfd267816b158f6a497255b7c5cf5159'
 
   # github.com/aonez/Keka was verified as official when first introduced to the cask
   url "https://github.com/aonez/Keka/releases/download/v#{version}/Keka-#{version}.dmg"
@@ -10,7 +10,6 @@ cask 'keka' do
 
   auto_updates true
   conflicts_with cask: 'keka-beta'
-  depends_on macos: '>= :mavericks'
 
   app 'Keka.app'
 

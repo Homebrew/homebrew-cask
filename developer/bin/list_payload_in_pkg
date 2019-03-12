@@ -114,6 +114,13 @@ no guarantee that the output is exact.
 If a given file is already installed, it will be followed by
 a plus symbol '(+)' in the output.
 
+Note that Apple's xargs utility has a limitation of processing
+up to 255 bytes. Therefore long payload paths might be printed
+as '{}' instead. To overcome this limitation, please consider
+installing the GNU xargs utility instead using:
+
+brew install findutils
+
 See CONTRIBUTING.md and 'man pkgutil' for more information.
 
 "

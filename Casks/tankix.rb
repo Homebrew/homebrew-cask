@@ -1,10 +1,10 @@
 cask 'tankix' do
-  version 'visual1-31241'
-  sha256 '99fb8d79a0549e94f3cf6d78938fd7e82d76754cb703ff36f4ee51af3278e443'
+  version 'visual1-37541'
+  sha256 '0c9a3c1b5c18f7593eb9c733323599b61c218535b380d251737504472ead430f'
 
-  url "http://static.tankix.com/app/StandaloneOSXIntel64/#{version}/TankiX.dmg"
+  url "https://static.tankix.com/app/StandaloneOSXIntel64/#{version}/TankiX.dmg"
   name 'Tanki X'
-  homepage 'https://www.tankix.com/'
+  homepage 'https://tankix.com/'
 
   auto_updates true
 

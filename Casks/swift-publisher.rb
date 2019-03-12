@@ -1,6 +1,6 @@
 cask 'swift-publisher' do
-  version '5.0.7'
-  sha256 '4301c0e6712eb71105e399ebdae337515956ae57ad633c90b156dddb735154df'
+  version '5.0.8'
+  sha256 '39cdc5d8581a00bf7d960dd2484cc6a5c788ddf0523b06afabafb11794e26c4e'
 
   # s3.amazonaws.com/belightsoft was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/belightsoft/SwiftPublisher.dmg'

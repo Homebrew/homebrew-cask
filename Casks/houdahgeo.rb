@@ -7,7 +7,5 @@ cask 'houdahgeo' do
   name 'HoudahGeo'
   homepage 'https://www.houdah.com/houdahGeo/'
 
-  depends_on macos: '>= :mountain_lion'
-
   app 'HoudahGeo.app'
 end

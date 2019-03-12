@@ -6,8 +6,6 @@ cask 'eve-launcher' do
   name 'Eve Online'
   homepage 'https://www.eveonline.com/'
 
-  depends_on macos: '>= :mavericks'
-
   app 'EVE Launcher.app'
 
   zap trash: [

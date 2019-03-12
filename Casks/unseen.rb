@@ -3,6 +3,7 @@ cask 'unseen' do
   sha256 '3a6a6dc53bb85722cca2993966a47bb18ee93c431e4248866a8136e3b32bba2f'
 
   url "https://download.unseen.is/unseenapp-is-v#{version}/unseenapp-beta-v#{version}-osx.zip"
+  appcast 'https://download.unseen.is/'
   name 'Unseen'
   homepage 'https://download.unseen.is/'
 

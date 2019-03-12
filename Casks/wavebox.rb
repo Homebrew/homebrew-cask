@@ -1,6 +1,6 @@
 cask 'wavebox' do
-  version '4.5.8'
-  sha256 'a9bbb9a87f09b7f27fde9c4ced8f6a37286a872626ac92a268af973aa6687c48'
+  version '4.8.1'
+  sha256 '6cbee78f084530159c054690362b18eb3b3947fd51dbc789f19825dbf51004e3'
 
   # github.com/wavebox/waveboxapp was verified as official when first introduced to the cask
   url "https://github.com/wavebox/waveboxapp/releases/download/v#{version}/Wavebox_#{version.dots_to_underscores}_osx.dmg"
