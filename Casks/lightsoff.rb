@@ -5,7 +5,7 @@ cask 'lightsoff' do
   url "https://www.lightsoff-app.com/s/LightsOff_#{version.dots_to_underscores}.zip"
   appcast 'https://gumroad.com/l/lightsoff/'
   name 'LightsOff'
-  homepage 'https://www.lightsoff-app.com/'
+  homepage 'https://gumroad.com/l/lightsoff/'
 
   depends_on macos: '>= :mojave'
 
