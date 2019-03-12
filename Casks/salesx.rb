@@ -1,6 +1,6 @@
 cask 'salesx' do
-  version '1.4.9'
-  sha256 '1962638d98bcffff3d557a6377c6a3453ff407cd595001c5bbf35bdf61935d47'
+  version '1.5'
+  sha256 'c8e458a038a62f81fb78b912f3a557d6af5d125bd9117a603e4f17eafad09656'
 
   # dl.devmate.com/io.seedlab.salesx was verified as official when first introduced to the cask
   url 'https://dl.devmate.com/io.seedlab.salesx/SalesX.zip'
