@@ -1,6 +1,6 @@
 cask 'drafts' do
-  version '5.8.2'
-  sha256 '2ba8246740e40db867eb283e8d8fa09c6663b8ed132f7cec657334dbe17716c1'
+  version '5.8.6'
+  sha256 '20a6bcf06ffe89dec89625a40f83de904697f6e3e25710e872ee182c0480422a'
 
   # s3-us-west-2.amazonaws.com/downloads.agiletortoise.com was verified as official when first introduced to the cask
   url 'https://s3-us-west-2.amazonaws.com/downloads.agiletortoise.com/Drafts.app.zip'
