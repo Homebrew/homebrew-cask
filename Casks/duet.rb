@@ -4,7 +4,7 @@ cask 'duet' do
 
   # duet.nyc3.cdn.digitaloceanspaces.com/Mac was verified as official when first introduced to the cask
   url "https://duet.nyc3.cdn.digitaloceanspaces.com/Mac/#{version.major_minor.dots_to_underscores}/duet-#{version.dots_to_hyphens}.zip"
-  appcast 'https://www.duetdisplay.com/mac/'
+  appcast 'https://help.duetdisplay.com/updates/mac-release-notes'
   name 'Duet'
   homepage 'https://www.duetdisplay.com/'
 
