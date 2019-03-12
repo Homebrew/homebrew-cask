@@ -1,18 +1,10 @@
 cask 'youdaonote' do
-  if MacOS.version <= :high_sierra
-    version '3.4.1,6311'
-    sha256 'bf389b8bc528aae5e16dc1ffcac49b5ce3f41326272d6ee45c08b92d927ff822'
+  version '3.4.3'
+  sha256 '696ea4771b993516050dbae05e6d0902efadec0c4245b6f126baa0d05d6431bd'
 
-    # download.ydstatic.com/notewebsite/downloads was verified as official when first introduced to the cask
-    url 'https://download.ydstatic.com/notewebsite/downloads/YoudaoNote.dmg'
-  else
-    version '3.4.2,6319'
-    sha256 '45a508e24d5fdaa28b8268e74756423ef430ea2d271f7e12468e795f293dd088'
-
-    # download.ydstatic.com/notewebsite/downloads was verified as official when first introduced to the cask
-    url 'https://download.ydstatic.com/notewebsite/downloads/YoudaoNote_mojave.dmg'
-  end
-
+  # download.ydstatic.com/notewebsite/downloads was verified as official when first introduced to the cask
+  url 'https://download.ydstatic.com/notewebsite/downloads/YoudaoNote.dmg'
+  appcast 'https://note.youdao.com/update/updateConfig.json'
   name 'YoudaoNote'
   name '有道云笔记'
   homepage 'https://note.youdao.com/'
