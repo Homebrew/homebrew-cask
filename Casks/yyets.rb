@@ -4,6 +4,7 @@ cask 'yyets' do
 
   # appdown.rrys.tv was verified as official when first introduced to the cask
   url "http://appdown.rrys.tv/YYetsShare.#{version}.dmg"
+  appcast 'http://app.zimuzu.io/'
   name 'YYeTs'
   name '人人影视'
   homepage 'http://app.zimuzu.io/'
