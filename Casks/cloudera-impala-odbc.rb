@@ -1,12 +1,12 @@
 cask 'cloudera-impala-odbc' do
-  version '2.6.0.1000'
-  sha256 'f9e40b88d10d2441e7b037b040f3d390f2cb3f3b38c599308f79468576f9a7d2'
+  version '2.6.2.1002'
+  sha256 '71a6cd56682ece60453a2111e6e03de469df313b45e6b22148b07a6d4e7251b4'
 
-  url "https://downloads.cloudera.com/connectors/impala_odbc_#{version}/OSX/ClouderaImpalaODBC.dmg"
+  url "https://downloads.cloudera.com/connectors/ClouderaImpala_ODBC_#{version}/MacOSX/ClouderaImpalaODBC.dmg"
   name 'Cloudera ODBC Driver for Impala'
   homepage 'https://www.cloudera.com/'
 
   pkg 'ClouderaImpalaODBC.pkg'
 
-  uninstall pkgutil: 'com.cloudera.impalaodbc'
+  uninstall pkgutil: 'cloudera.impalaodbc'
 end
