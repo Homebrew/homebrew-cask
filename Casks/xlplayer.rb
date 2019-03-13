@@ -4,6 +4,7 @@ cask 'xlplayer' do
 
   # down.sandai.net was verified as official when first introduced to the cask
   url "http://down.sandai.net/mac/xlplayer_#{version}.dmg"
+  appcast 'http://video.xunlei.com/mac.html'
   name 'XLPlayer for Mac'
   name '迅雷影音 for Mac'
   homepage 'http://video.xunlei.com/mac.html'
