@@ -141,7 +141,7 @@ Cask taps have naming conventions specific to each tap.
 
 A few situations require a prefix or suffix to be added to the token.
 
-## Token Overlap With Another Cask
+## Token Overlap
 
 When the token for a new Cask would otherwise conflict with the token of an already existing Cask, the nature of that overlap dictates the token (for possibly both Casks). See [Forks and Apps with Conflicting Names](../development/adding_a_cask.md#forks-and-apps-with-conflicting-names) for information on how to proceed.
 
