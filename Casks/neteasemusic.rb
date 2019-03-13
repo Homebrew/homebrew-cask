@@ -9,6 +9,8 @@ cask 'neteasemusic' do
   name '网易云音乐'
   homepage 'https://music.163.com/'
 
+  depends_on macos: '>= :sierra'
+
   app 'NeteaseMusic.app'
 
   uninstall quit: 'com.netease.163music'
