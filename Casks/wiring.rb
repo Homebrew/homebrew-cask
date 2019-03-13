@@ -3,6 +3,7 @@ cask 'wiring' do
   sha256 'ff593ccfc8a1ef988b86f7610141c9bd0e5d3763b64e04f28257a374042830a8'
 
   url "http://wiring.org.co/download/wiring-#{version.after_comma}-macosx.zip"
+  appcast 'http://wiring.org.co/download/index.html'
   name 'Wiring'
   homepage 'http://wiring.org.co/'
 
