@@ -1,6 +1,6 @@
 cask 'aviatrix-vpn-client' do
   version :latest
-  sha256 :no_check # required as upstream package is updated in-place
+  sha256 :no_check
 
   # s3-us-west-2.amazonaws.com was verified as official when first introduced to the cask
   url 'https://s3-us-west-2.amazonaws.com/aviatrix-download/AviatrixVPNClient/AVPNC_mac.pkg'
