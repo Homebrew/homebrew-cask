@@ -8,4 +8,8 @@ cask 'yahoo-messenger' do
   homepage 'https://messenger.yahoo.com/'
 
   app 'Yahoo Messenger.app'
+
+  caveats do
+    discontinued
+  end
 end
