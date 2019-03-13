@@ -44,6 +44,7 @@ $ git remote add "${github_user}" "https://github.com/${github_user}/homebrew-ca
 4: Switch to a new branch (ie. `new-feature`), and work from there: `git checkout -b new-feature`.
 
 5: You will probably also want to set `export HOMEBREW_DEVELOPER=1`.  This variable prevents Homebrew from switching to the `master` branch every time, among other things.
+See also [Testing your new Cask](https://github.com/Homebrew/homebrew-cask/blob/master/doc/development/adding_a_cask.md#testing-your-new-cask).
 
 
 ## Adding a Cask
