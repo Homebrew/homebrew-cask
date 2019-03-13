@@ -6,7 +6,7 @@ cask 'drawbot' do
   url 'https://static.typemytype.com/drawBot/DrawBot.dmg'
   appcast 'https://raw.githubusercontent.com/typemytype/drawbot/master/drawBot/drawBotSettings.py'
   name 'DrawBot'
-  homepage 'http://www.drawbot.com/'
+  homepage 'https://www.drawbot.com/'
 
   app 'DrawBot.app'
 end
