@@ -6,5 +6,5 @@ cask 'jameica' do
   name 'Jameica'
   homepage 'https://www.willuhn.de/products/jameica/'
 
-  app 'Jameica.app'
+  app 'jameica.app', target: 'Jameica.app'
 end
