@@ -1,5 +1,5 @@
 cask 'cockatrice' do
-  version '2.7.0,2019-03-04:Marchesas-Revenge'
+  version '2.7.0,2019-03-04:Marchesas_Revenge'
   sha256 '0ba1f248be69101803aecd6a7c3ab4eadadc9fee7a84e5f57d3403f47030e813'
 
   # github.com/Cockatrice/Cockatrice was verified as official when first introduced to the cask
