@@ -1,6 +1,6 @@
 cask 'r' do
-  version '3.5.2'
-  sha256 '47a829eff7a7a9e6f28e0bc4086ad9654fbe8a65e5273205edf72c2e5bcd5805'
+  version '3.5.3'
+  sha256 '95dc283bd128a755a38e18752e2f69e5e517602d715cb417e19b0397445cfede'
 
   url "https://cloud.r-project.org/bin/macosx/R-#{version}.pkg"
   appcast 'https://www.r-project.org/'
