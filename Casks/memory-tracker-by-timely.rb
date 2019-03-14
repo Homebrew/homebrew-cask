@@ -1,5 +1,5 @@
 cask 'memory-tracker-by-timely' do
-  version '1.2.2'
+  version '1.2.3'
   sha256 '8795e6d411b47a06c40807789d95a5994f697e9d334db389dcf9c118ab1bff4e'
 
   # timelytimetracking.s3.amazonaws.com was verified as official when first introduced to the cask
