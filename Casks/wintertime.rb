@@ -5,6 +5,7 @@ cask 'wintertime' do
   url 'https://github.com/actuallymentor/wintertime-mac-background-freezer/releases/download/0.0.2/Wintertime-0.0.2.dmg'
   name 'Wintertime'
   homepage 'https://github.com/actuallymentor/wintertime-mac-background-freezer'
+  appcast 'https://github.com/actuallymentor/wintertime-mac-background-freezer/releases.atom'
 
   app 'Wintertime.app'
 end
