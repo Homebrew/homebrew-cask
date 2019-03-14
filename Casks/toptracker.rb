@@ -8,7 +8,7 @@ cask 'toptracker' do
   name 'TopTracker'
   homepage 'https://tracker.toptal.com/tracker/'
 
-  depends_on macos: '>= :lion'
+  depends_on macos: '>= :sierra'
 
   app 'TopTracker.app'
 end
