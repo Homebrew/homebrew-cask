@@ -6,5 +6,7 @@ cask 'luminetmonitor' do
   name 'LumiNet Monitor'
   homepage 'http://www.mrte.jp/'
 
+  container nested: "LumiNetMonitor#{version.no_dots}_mac/LumiNetMonitor#{version.no_dots}.dmg"
+
   app 'LumiNetMonitor.app'
 end
