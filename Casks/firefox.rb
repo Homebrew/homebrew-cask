@@ -17,7 +17,7 @@ cask 'firefox' do
   end
 
   language 'en', default: true do
-    sha256 'ff75302b2d938162f986b31e6fac419ebfafda7835eaf7ca4ca1e4e7290ef5c8'
+    sha256 '8eeb1fdc8bea3465dc4a9914957185fdf15fd092ddf57694b7f3476d72d42826'
     'en-US'
   end
 
@@ -57,7 +57,7 @@ cask 'firefox' do
   end
 
   language 'in' do
-    sha256 'ff75302b2d938162f986b31e6fac419ebfafda7835eaf7ca4ca1e4e7290ef5c8'
+    sha256 '6fd6ffdafcbab4c8f066724bcd7258e7d11fdfe433b253213307513bd29aafce'
     'hi-IN'
   end
 
@@ -67,7 +67,7 @@ cask 'firefox' do
   end
 
   language 'ja' do
-    sha256 'ff75302b2d938162f986b31e6fac419ebfafda7835eaf7ca4ca1e4e7290ef5c8'
+    sha256 'ea59bce5cbfbbfa4e870aa5d4e0bc408401134659353ea14b7c1580200e6e351'
     'ja-JP-mac'
   end
 
@@ -92,7 +92,7 @@ cask 'firefox' do
   end
 
   language 'pt' do
-    sha256 'ff75302b2d938162f986b31e6fac419ebfafda7835eaf7ca4ca1e4e7290ef5c8'
+    sha256 'e9b39a7fbea99ee1209db0045e6d3e981d75f35f473063238940bf5f999a5090'
     'pt-PT'
   end
 
@@ -117,7 +117,7 @@ cask 'firefox' do
   end
 
   language 'zh' do
-    sha256 'ff75302b2d938162f986b31e6fac419ebfafda7835eaf7ca4ca1e4e7290ef5c8'
+    sha256 'b1989d5d696ad5f4df88a6c2f92486d536d210495f3ec81a590f90a600cf7305'
     'zh-CN'
   end
 
