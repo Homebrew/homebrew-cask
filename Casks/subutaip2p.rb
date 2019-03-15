@@ -1,6 +1,6 @@
 cask 'subutaip2p' do
   version '8.3.1'
-  sha256 'e6ed9dcc513275c36984e50cc9a4e853da6ed51d37b2a475139db6b20e224920'
+  sha256 '909767b9504ae2220b415133bbc68ccd415f25e86a3d82811486b9cb34db1a30'
 
   # cdn.subutai.io:8338/kurjun/rest/raw was verified as official when first introduced to the cask
   url 'https://bazaar.subutai.io/rest/v1/cdn/raw?name=subutai-p2p.pkg&latest&download'

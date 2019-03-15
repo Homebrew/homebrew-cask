@@ -1,6 +1,6 @@
 cask 'stargazer' do
-  version '1.6.0'
-  sha256 '6c70c8ce2c855fa001109204dda5dae04e12d6cc30bde86375febcc50ac1f3a4'
+  version '1.7.0'
+  sha256 'b6f735a4409f012dc2fe8a4a35ae97e3e0d361e7fdf8481a7bda3731bd8a814a'
 
   # github.com/johansten/stargazer was verified as official when first introduced to the cask
   url "https://github.com/johansten/stargazer/releases/download/v#{version}/Stargazer-#{version}.dmg"
