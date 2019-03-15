@@ -4,6 +4,7 @@ cask 'waterfox' do
 
   # storage-waterfox.netdna-ssl.com was verified as official when first introduced to the cask
   url "https://storage-waterfox.netdna-ssl.com/releases/osx64/installer/Waterfox%20#{version}%20Setup.dmg"
+  appcast 'https://www.waterfoxproject.org/en-US/waterfox/new/'
   name 'Waterfox'
   homepage 'https://www.waterfoxproject.org/en-US/'
 
