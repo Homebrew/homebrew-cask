@@ -8,6 +8,8 @@ cask 'cockatrice' do
   name 'Cockatrice'
   homepage 'https://cockatrice.github.io/'
 
+  depends_on macos: '>= :sierra'
+
   app 'cockatrice.app'
   app 'oracle.app'
   app 'servatrice.app'
