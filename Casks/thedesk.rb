@@ -6,5 +6,5 @@ cask 'thedesk' do
   name 'TheDesk'
   homepage 'https://thedesk.top/'
 
-  app 'TheDesk.app'
+  app 'TheDesk-darwin-x64/TheDesk.app'
 end
