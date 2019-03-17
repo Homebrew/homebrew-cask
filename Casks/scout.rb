@@ -6,7 +6,7 @@ cask 'scout' do
   url "https://github.com/scout-app/scout-app/releases/download/v#{version}/OSX_Scout-App_#{version}.zip"
   appcast 'https://github.com/scout-app/scout-app/releases.atom'
   name 'Scout-App'
-  homepage 'http://scout-app.io/'
+  homepage 'https://scout-app.io/'
 
   app 'Scout-App.app'
 end
