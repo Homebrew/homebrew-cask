@@ -1,4 +1,4 @@
-cask 'ipfs-desktop' do
+cask 'ipfs' do
   version '0.7.0'
   sha256 '4cce1d57191abbbdee7f499e1a056d335eaa1861f0f1c16b227975c4f31772b7'
 
