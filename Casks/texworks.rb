@@ -1,6 +1,6 @@
 cask 'texworks' do
-  version '0.6.2,201704300713:7ecce17'
-  sha256 '6ca09e0cd1007139d5ef0bb711812745ce20a3206ba97e812297bd301bac9820'
+  version '0.6.3,201903161730:a2470ca'
+  sha256 '618d16f4bf915e3d73d354263fa4b557dbb165d6868b414ecc47973ddc92a986'
 
   # github.com/TeXworks/texworks was verified as official when first introduced to the cask
   url "https://github.com/TeXworks/texworks/releases/download/release-#{version.before_comma}/TeXworks-osx-#{version.before_comma}-#{version.after_comma.before_colon}-git_#{version.after_colon}.dmg"
