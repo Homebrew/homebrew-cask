@@ -1,6 +1,6 @@
 cask 'todo-cloud' do
-  version '10.4.2'
-  sha256 'ea794b10ec5b7fa5cd99019cffc365661d96b6637cd1afbbba48e0405dcde742'
+  version '10.4.3'
+  sha256 'ddf969227a908558c2ecda4d6696108e4ca50e32c608ffa95aa04df7cefef63e'
 
   url "http://builds.appigo.com/todo-cloud/macos/Todo+Cloud-PROD-#{version}-mac.dmg"
   name 'Todo Cloud'
