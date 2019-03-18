@@ -8,5 +8,7 @@ cask 'texworks' do
   name 'TeXworks'
   homepage 'https://www.tug.org/texworks/'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'TeXworks.app'
 end
