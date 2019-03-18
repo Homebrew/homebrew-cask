@@ -8,6 +8,8 @@ cask 'syncplay' do
   name 'Syncplay'
   homepage 'https://syncplay.pl/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Syncplay.app'
 
   zap trash: [
