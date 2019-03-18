@@ -1,6 +1,6 @@
 cask 'betterzip' do
-  version '4.2.2'
-  sha256 'f79bb0c7fc79bbb6753f28f7c34a2e301e313ee9567edcea13d217c02b0a6d83'
+  version '4.2.3'
+  sha256 '643ea6cbec156ace28ccb6af4a6ef583b34ca16fa714b2e53b29828b3705e4ba'
 
   url "https://macitbetter.com/dl/BetterZip-#{version}.zip"
   appcast 'https://macitbetter.com/BetterZip.rss'
