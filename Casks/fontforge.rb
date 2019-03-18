@@ -1,9 +1,9 @@
 cask 'fontforge' do
-  version '20190317,2019-03-17-1d421d1'
+  version '2019.03.17.1d421d1'
   sha256 '1b9a04a478e81501f1dda46e0c4ecccf7c586b5cc617e6c7dffdd06e9e63b102'
 
   # github.com/fontforge/fontforge was verified as official when first introduced to the cask
-  url "https://github.com/fontforge/fontforge/releases/download/#{version.before_comma}/FontForge-#{version.after_comma}.app.dmg"
+  url "https://github.com/fontforge/fontforge/releases/download/#{version.major_minor_patch.no_dots}/FontForge-#{version.dots_to_dashes}.app.dmg"
   appcast 'https://github.com/fontforge/fontforge/releases.atom'
   name 'FontForge'
   homepage 'https://fontforge.github.io/en-US/'
