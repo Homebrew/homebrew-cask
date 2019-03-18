@@ -17,7 +17,5 @@ cask 'logitech-presentation' do
                           ['KILL', 'LogiPresentation'],
                         ]
 
-  zap trash: [
-               '/Library/Application Support/Logitech.localized/Logitech\ Presentation.localiz',
-             ]
+  zap trash: '/Library/Application Support/Logitech.localized/Logitech Presentation.localiz'
 end
