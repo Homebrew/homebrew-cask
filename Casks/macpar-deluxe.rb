@@ -1,8 +1,9 @@
 cask 'macpar-deluxe' do
-  version :latest
-  sha256 :no_check
+  version '5.1.1'
+  sha256 '14799ac70f508d4a9fe65b8bdee6e4a9c3f227672d3804454c15e03bd0912249'
 
-  url 'https://www.xs4all.nl/~gp/MacPAR_deLuxe/MacPARdeLuxe.dmg'
+  url 'https://gp.home.xs4all.nl/MacPAR_deLuxe/MacPARdeLuxe.dmg'
+  appcast 'https://gp.home.xs4all.nl/Site/MacPAR_deLuxe.html'
   name 'MacPAR deLuxe'
   homepage 'https://gp.home.xs4all.nl/Site/MacPAR_deLuxe.html'
 
