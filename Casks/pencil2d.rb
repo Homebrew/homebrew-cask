@@ -8,5 +8,7 @@ cask 'pencil2d' do
   name 'Pencil2D Animation'
   homepage 'https://www.pencil2d.org/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Pencil2D/Pencil2D.app'
 end
