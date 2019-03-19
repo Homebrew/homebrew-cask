@@ -1,14 +1,16 @@
 cask 'scilab' do
   version '6.0.2'
-  sha256 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+  sha256 '109d3ee1ed76deec88b8e16d6d0530e823aca2081b6074d9d0d732ef252dc115'
 
-  url "https://www.scilab.org/download/#{version}/scilab-#{version}-x86_64.dmg"
+  url "http://www.utc.fr/~mottelet/scilab/download/#{version}/scilab-#{version}-x86_64.dmg"
   name 'Scilab'
   homepage 'https://www.scilab.org/'
+
+  depends_on macos: '>= :sierra'
 
   app "scilab-#{version}.app"
 
   caveats do
-    depends_on_java '6'
+    depends_on_java '8'
   end
 end
