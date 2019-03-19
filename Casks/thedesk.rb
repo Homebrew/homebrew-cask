@@ -4,7 +4,7 @@ cask 'thedesk' do
 
   # github.com/cutls/TheDesk was verified as official when first introduced to the cask
   url "https://github.com/cutls/TheDesk/releases/download/m#{version}/TheDesk-darwin-x64.zip"
-  appcast 'https://thedesk.top/'
+  appcast 'https://github.com/cutls/TheDesk/releases.atom'
   name 'TheDesk'
   homepage 'https://thedesk.top/'
 
