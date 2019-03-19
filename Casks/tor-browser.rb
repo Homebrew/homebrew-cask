@@ -1,7 +1,6 @@
 cask 'tor-browser' do
   version '8.0.7'
 
-  
   language 'ar' do
     sha256 'ca6c610747be2620aa1dfba4f2e87c16f26af2d39446d7d1582ac0e072dfb511'
     'ar'
