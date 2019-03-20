@@ -8,6 +8,7 @@ cask 'logitech-presentation' do
   homepage 'https://support.logitech.com/en_au/product/spotlight-presentation-remote'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   installer manual: 'LogiPresentation Installer.app'
 
