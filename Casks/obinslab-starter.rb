@@ -1,6 +1,6 @@
 cask 'obinslab-starter' do
-  version '1.0.5'
-  sha256 'edf944898b64595cccc9dfaec98055b7cdac7857be98df01e5ba1672311aeeeb'
+  version '1.0.7'
+  sha256 '322bbd28bb9dec1c5b60f6fe5c5bbe4a3238b5127ea1e8628bce1364929062a9'
 
   url "http://releases.obins.net/occ/darwin/x64/ObinslabStarter_#{version}.dmg"
   name 'Obinslab Starter'
