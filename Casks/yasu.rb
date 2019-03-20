@@ -22,7 +22,7 @@ cask 'yasu' do
     sha256 '18c1efbf6db86c7791017aae2ea72d0d1b4f153ec1e867b48b687b3252927582'
     url "https://yasuformac.com/appcasts/10.14/yasuformac_#{version.after_comma}.zip",
         user_agent: :fake
-    appcast 'https://yasuformac.com/appcasts/10.14/yasu.xml'    
+    appcast 'https://yasuformac.com/appcasts/10.14/yasu.xml'
   end
 
   name 'Yasu'
