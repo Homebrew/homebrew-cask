@@ -20,7 +20,7 @@ cask 'rstudio' do
 
     To install the R Project package run:
 
-      brew cask install r-app
+      brew cask install r
 
     Alternative ways to satisfy the dependency are:
 
