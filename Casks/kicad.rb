@@ -1,9 +1,10 @@
 cask 'kicad' do
-  version '5.0.1'
-  sha256 '3066e7c8da09afea2e27b4dc5d0742c83c5a2e93408d9d76e342e14e594bc7b3'
+  version '5.1.0'
+  sha256 'f657a5090ed7d2b356aa0cd56f2b5d5cb3b07651f84300e908cf3dd4e08673ab'
 
-  url "http://downloads.kicad-pcb.org/osx/stable/kicad-unified-#{version}.dmg"
-  appcast 'http://downloads.kicad-pcb.org/osx/stable/'
+  # URL_SECTION is verified as official mirror when introduced to the cask
+  url "https://kicad-downloads.s3.cern.ch/osx/stable/kicad-unified-#{version}-10_14.dmg"
+  appcast 'http://kicad-pcb.org/download/osx/'
   name 'KiCad'
   homepage 'http://kicad-pcb.org/'
 
