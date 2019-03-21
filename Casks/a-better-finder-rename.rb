@@ -1,6 +1,6 @@
 cask 'a-better-finder-rename' do
-  version '10.35'
-  sha256 :no_check # required as upstream randomly uses two different downloads for a/b testing
+  version '10.40'
+  sha256 'a86d4c933206700412e11dc7da303f5edf34624ae90d99e191a55116d54991d1'
 
   url "http://www.publicspace.net/download/ABFRX#{version.major}.dmg"
   appcast "http://www.publicspace.net/app/signed_abfr#{version.major}.xml"
