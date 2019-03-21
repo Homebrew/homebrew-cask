@@ -10,5 +10,14 @@ cask 'macpass' do
 
   depends_on macos: '>= :yosemite'
 
+  auto_updates true
   app 'MacPass.app'
+
+  zap delete: [
+                '~/Library/Application Support/MacPass',
+                '~/Library/Caches/com.hicknhacksoftware.MacPass',
+                '~/Library/Cookies/com.hicknhacksoftware.MacPass.binarycookies',
+                '~/Library/Preferences/com.hicknhacksoftware.MacPass.plist',
+                '~/Library/Saved Application State/com.hicknhacksoftware.MacPass.savedState',
+              ]
 end
