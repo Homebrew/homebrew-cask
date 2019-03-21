@@ -8,7 +8,16 @@ cask 'macpass' do
   name 'MacPass'
   homepage 'https://macpass.github.io/'
 
+  auto_updates true
   depends_on macos: '>= :yosemite'
 
   app 'MacPass.app'
+
+  zap delete: [
+                '~/Library/Application Support/MacPass',
+                '~/Library/Caches/com.hicknhacksoftware.MacPass',
+                '~/Library/Cookies/com.hicknhacksoftware.MacPass.binarycookies',
+                '~/Library/Preferences/com.hicknhacksoftware.MacPass.plist',
+                '~/Library/Saved Application State/com.hicknhacksoftware.MacPass.savedState',
+              ]
 end
