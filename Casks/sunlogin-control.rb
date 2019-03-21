@@ -1,6 +1,6 @@
 cask 'sunlogin-control' do
   version '3.0'
-  sha256 '87FF12A9192ED809C2C8668E63CF44B1101544E52F43E8CC912ED2B20ACF077F'
+  sha256 '87ff12a9192ed809c2c8668e63cf44b1101544e52f43e8cc912ed2b20acf077f'
 
   url "http://download.oray.com/sunlogin/mac/SunloginControl#{version}.dmg"
   name 'SunloginControl'
