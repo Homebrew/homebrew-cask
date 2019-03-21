@@ -1,6 +1,6 @@
 cask 'munki' do
-  version '3.5.2.3637'
-  sha256 '8f0b7d8878dd9b26f5d1e90f09147f7c5b8797a323256802226915811d99f1cf'
+  version '3.6.0.3733'
+  sha256 'ebf580092d3d70c8fb1a1749dac2e2c3f0eebb288d7e79e8164032669852dbda'
 
   # github.com/munki/munki was verified as official when first introduced to the cask
   url "https://github.com/munki/munki/releases/download/v#{version.major_minor_patch}/munkitools-#{version}.pkg"
