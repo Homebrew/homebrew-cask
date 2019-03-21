@@ -7,5 +7,7 @@ cask 'v2rayu' do
   name 'V2rayU'
   homepage 'https://github.com/yanue/V2rayU'
 
+  depends_on macos: '>= :sierra'
+
   app 'V2rayU.app'
 end
