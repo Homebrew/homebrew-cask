@@ -8,9 +8,9 @@ cask 'macpass' do
   name 'MacPass'
   homepage 'https://macpass.github.io/'
 
+  auto_updates true
   depends_on macos: '>= :yosemite'
 
-  auto_updates true
   app 'MacPass.app'
 
   zap delete: [
