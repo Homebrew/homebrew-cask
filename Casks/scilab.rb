@@ -13,6 +13,6 @@ cask 'scilab' do
   app "scilab-#{version}.app"
 
   caveats do
-    depends_on_java '8'
+    depends_on_java '6'
   end
 end
