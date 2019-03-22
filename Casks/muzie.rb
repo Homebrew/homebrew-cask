@@ -1,6 +1,6 @@
 cask 'muzie' do
-  version '1.3.0'
-  sha256 'd203ccc7251110ade0bf4314b1f1e5a750da57e80abcb71c4cf6bd6f61fc86df'
+  version '1.4.0'
+  sha256 '727aa99af123e9459646515455f85bf25ede0641098850fe32a72b23adb6a708'
 
   # s3.amazonaws.com/muzie-release was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/muzie-release/Muzie-#{version}.dmg"
