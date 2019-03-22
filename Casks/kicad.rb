@@ -5,7 +5,7 @@ cask 'kicad' do
     sha256 'be024d121a42c9d1e1ea08fdf9dd2ad24cf77879d7f32214b2de13322cd18bae'
     url "https://kicad-downloads.s3.cern.ch/osx/stable/kicad-unified-#{version}.dmg"
   else
-    sha256 '23955e59e0ac1fe7db86156e0470bd2bc8f1c1666ef1c5def5fa3a82932c9907'
+    sha256 'f657a5090ed7d2b356aa0cd56f2b5d5cb3b07651f84300e908cf3dd4e08673ab'
     url "https://kicad-downloads.s3.cern.ch/osx/stable/kicad-unified-#{version}-10_14.dmg"
   end
 
