@@ -1,7 +1,7 @@
 #!/bin/bash
 
 readonly program="$(basename "${0}")"
-readonly families=(eclipse flash navicat) # Needs to be in sync with the 'get_' functions
+readonly families=(eclipse flash navicat unity) # Needs to be in sync with the 'get_' functions
 readonly cask_family="${1}"
 readonly new_version="${2}"
 
@@ -36,6 +36,10 @@ function get_flash {
 
 function get_navicat {
   brew search 'navicat' | grep 'navicat-[fp]'
+}
+
+function get_unity {
+  brew search 'unity' | grep '^unity' | grep --invert-match --extended-regexp '(hub|player|assets)'
 }
 
 if ! command -v 'cask-repair' &>/dev/null; then
