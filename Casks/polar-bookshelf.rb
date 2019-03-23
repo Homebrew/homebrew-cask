@@ -1,6 +1,6 @@
 cask 'polar-bookshelf' do
-  version '1.13.13'
-  sha256 '677dc2335c8a09f6ba840e287c4d8bf6dc04e99827aa351e462b50b29070a770'
+  version '1.15.0'
+  sha256 '4144b3c4f59df98eb11de9f97b73f3c358dc9de228450b65f01ab7a306602659'
 
   # github.com/burtonator/polar-bookshelf was verified as official when first introduced to the cask
   url "https://github.com/burtonator/polar-bookshelf/releases/download/v#{version}/polar-bookshelf-#{version}.dmg"
