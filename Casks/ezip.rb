@@ -10,9 +10,9 @@ cask 'ezip' do
   app 'eZip.app'
 
   zap trash: [
-                '~/Library/Application Scripts/com.jinghaoshe.ezip',
-                '~/Library/Containers/com.jinghaoshe.ezip',
-                '~/Library/Preferences/com.jinghaoshe.eZipAssistant.plist', # eZip Assistant
-                '~/Library/WebKit/com.jinghaoshe.ezip',
+               '~/Library/Application Scripts/com.jinghaoshe.ezip',
+               '~/Library/Containers/com.jinghaoshe.ezip',
+               '~/Library/Preferences/com.jinghaoshe.eZipAssistant.plist', # eZip Assistant
+               '~/Library/WebKit/com.jinghaoshe.ezip',
              ]
 end
