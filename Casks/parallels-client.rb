@@ -7,7 +7,7 @@ cask 'parallels-client' do
   name 'Parallels Client'
   homepage 'https://www.parallels.com/products/ras/features/rdp-client/'
 
-  pkg "RasClient-Mac-#{version}.pkg"
+  pkg "RasClient-Mac-#{version}.pkg", allow_untrusted: true
 
   uninstall pkgutil: 'com.2X.Client.Mac',
             quit:    'com.2X.Client.Mac'
