@@ -1,6 +1,6 @@
 cask 'fontlab' do
-  version '6.1.3.7013'
-  sha256 'ef5a7a354b80c4bdf6ca0499658ecf1cb247093849607150ac61d7715217f4b6'
+  version '6.1.3.7016'
+  sha256 'c0a950ed702c60d35d9d9d4e5e8f803eadf258e66503c0edf473968f6e997605'
 
   url 'https://download.fontlab.com/fontlab-vi/upd-mac.php'
   appcast 'https://download.fontlab.com/fontlab-vi/appcast-mac.xml'
