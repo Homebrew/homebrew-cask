@@ -3,6 +3,7 @@ cask 'eagle' do
   sha256 'e4cea2142be61252516205780d45384534a8168f07aa6862519336ba59786d4e'
 
   url "https://eagle-updates.circuits.io/downloads/#{version.dots_to_underscores}/Autodesk_EAGLE_#{version}_English_Mac_64bit.pkg"
+  appcast 'http://eagle.autodesk.com/eagle/release-notes'
   name 'Autodesk EAGLE'
   homepage 'https://circuits.io/'
 
