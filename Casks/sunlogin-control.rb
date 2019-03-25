@@ -9,5 +9,5 @@ cask 'sunlogin-control' do
 
   pkg 'SunloginControl.pkg'
 
-  uninstall pkgutil: "com.oray.sunlogin.control"
+  uninstall pkgutil: 'com.oray.sunlogin.control'
 end
