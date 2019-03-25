@@ -6,5 +6,5 @@ cask 'scenebuilder' do
   name 'Scene Builder'
   homepage 'https://gluonhq.com/products/scene-builder/'
 
-  app 'SceneBuilder.app'
+  app "SceneBuilder-#{version}.pkg"
 end
