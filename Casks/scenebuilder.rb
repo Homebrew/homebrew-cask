@@ -1,10 +1,12 @@
 cask 'scenebuilder' do
-  version '10.0.0'
-  sha256 '23fc560edb6c09c7c4c71fa8f1a39f5bba42ede1e9312a22baf21d43f1e9496a'
+  version '11.0.0'
+  sha256 '0602d1cd7156fa0ff49cc4055e6aec020227df813449b2bc3782a3fddffb43bb'
 
-  url "http://download.gluonhq.com/scenebuilder/#{version}/install/mac/SceneBuilder-#{version}.dmg"
+  url "https://download2.gluonhq.com/scenebuilder/#{version}/install/mac/SceneBuilder-#{version}.pkg"
   name 'Scene Builder'
   homepage 'https://gluonhq.com/products/scene-builder/'
 
-  app 'SceneBuilder.app'
+  pkg "SceneBuilder-#{version}.pkg"
+
+  uninstall pkgutil: 'com.gluonhq.scenebuilder'
 end
