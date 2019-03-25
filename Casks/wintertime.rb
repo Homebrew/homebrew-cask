@@ -1,6 +1,6 @@
 cask 'wintertime' do
-  version '0.0.3'
-  sha256 '928df473d1d42ae9b236ae9b14dc1b60c1e88ad609cba03374309d69bac6017a'
+  version '0.0.4'
+  sha256 '56634e373caacf97fdc7d406d4665c78f08435d4838be4a0ce70eb8b16ff29ae'
 
   url "https://github.com/actuallymentor/wintertime-mac-background-freezer/releases/download/#{version}/Wintertime-#{version}.dmg"
   appcast 'https://github.com/actuallymentor/wintertime-mac-background-freezer/releases.atom'
