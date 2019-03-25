@@ -1,6 +1,6 @@
 cask 'jump' do
-  version '8.2.14'
-  sha256 'f1f57d691b8ecd88c4a69541dd769f85d6621682e33e6db77adb9fa7d11232bc'
+  version '8.2.16'
+  sha256 '1d9e5e14a98bac66091ccc11d857d6980442b7beb9ff73d700d7de6811249ec7'
 
   url 'https://jumpdesktop.com/downloads/jdmac'
   appcast 'https://jumpdesktop.com/downloads/viewer/jdmac-web-appcast.xml'

@@ -1,6 +1,6 @@
 cask 'pascom-client' do
-  version '48.R196_05d7518'
-  sha256 'e91836f6ee55c9160ed1043c0d3dc64e1158184b2f366f5ed97e3c3ea39f3899'
+  version '49.R265_fd7caf5'
+  sha256 '50fa2a50e1ec854dd465aad652103911724aa797eba2048fdfa2118b81e30687'
 
   url "https://download.pascom.net/release-archive/client/stable/pascom%20Client-#{version}.dmg"
   name 'pascom Client'

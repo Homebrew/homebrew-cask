@@ -4,6 +4,7 @@ cask 'turbo-boost-switcher' do
 
   # s3.amazonaws.com/turbo-boost-switcher was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/turbo-boost-switcher/Turbo+Boost+Switcher_#{version}.zip"
+  appcast 'https://www.rugarciap.com/turbo-boost-switcher-for-os-x/'
   name 'Turbo Boost Switcher'
   homepage 'https://www.rugarciap.com/turbo-boost-switcher-for-os-x/'
 

@@ -1,6 +1,6 @@
 cask 'privatevpn' do
-  version '2.3.5'
-  sha256 '98d55627a704767a24502112491415be70c1e8800b245ea5cd022cb29f7b099d'
+  version '2.8.1'
+  sha256 'd98f423036101218cab99973de3cf3efed315e56d2041c77da0fa29942967702'
 
   # xu515.pvdatanet.com was verified as official when first introduced to the cask
   url 'https://xu515.pvdatanet.com/v3/mac/PrivateVPN.dmg'

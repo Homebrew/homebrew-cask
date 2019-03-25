@@ -8,7 +8,7 @@ cask 'fluor' do
   name 'Fluor'
   homepage 'https://fluorapp.net/'
 
-  depends_on macos: '>= :sierra'  
+  depends_on macos: '>= :sierra'
 
   app 'Fluor.app'
 end

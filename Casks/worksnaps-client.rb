@@ -4,6 +4,7 @@ cask 'worksnaps-client' do
 
   # worksnaps-download.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://worksnaps-download.s3.amazonaws.com/WSClient-mac-10.9-#{version}.dmg"
+  appcast 'https://www.worksnaps.net/www/download.shtml'
   name 'Worksnaps Client'
   homepage 'https://www.worksnaps.net/www/'
 
