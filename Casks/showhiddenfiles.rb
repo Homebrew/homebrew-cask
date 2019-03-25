@@ -1,4 +1,4 @@
-cask 'show-hidden-files' do
+cask 'showhiddenfiles' do
   version :latest
   sha256 :no_check
 
