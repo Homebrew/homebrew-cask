@@ -6,5 +6,7 @@ cask 'scenebuilder' do
   name 'Scene Builder'
   homepage 'https://gluonhq.com/products/scene-builder/'
 
-  app "SceneBuilder-#{version}.pkg"
+  pkg "SceneBuilder-#{version}.pkg"
+
+  uninstall pkgutil: 'com.gluonhq.scenebuilder'
 end
