@@ -7,5 +7,7 @@ cask 'sunlogin-control' do
   name '向日葵控制端'
   homepage 'https://sunlogin.oray.com/'
 
-  installer manual: 'SunloginControl.pkg'
+  pkg 'SunloginControl.pkg'
+
+  uninstall pkgutil: "com.oray.sunlogin.control"
 end
