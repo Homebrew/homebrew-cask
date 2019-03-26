@@ -5,11 +5,8 @@ cask 'itch' do
   # broth.itch.ovh was verified as official when first introduced to the cask
   url "https://broth.itch.ovh/itch-setup/darwin-amd64/#{version}/archive/default"
   appcast 'https://github.com/itchio/itch/releases.atom'
-  name 'itch-setup'
-  name 'the itch.io app installer'
+  name 'itch.io'
   homepage 'https://itch.io/app'
-
-  container type: :zip
 
   installer script: 'itch-setup'
 
