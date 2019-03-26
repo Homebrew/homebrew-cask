@@ -9,6 +9,7 @@ cask 'keepassxc' do
   homepage 'https://keepassxc.org/'
 
   app 'KeePassXC.app'
+  binary "#{appdir}/KeePassXC.app/Contents/MacOS/keepassxc-cli"
 
   zap trash: '~/.keepassxc'
 end

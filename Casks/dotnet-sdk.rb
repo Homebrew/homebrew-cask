@@ -22,5 +22,8 @@ cask 'dotnet-sdk' do
                        '/etc/paths.d/dotnet-cli-tools',
                      ]
 
-  zap trash: '~/.nuget'
+  zap trash: [
+               '~/.dotnet',
+               '~/.nuget',
+             ]
 end

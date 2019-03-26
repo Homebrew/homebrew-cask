@@ -1,6 +1,6 @@
 cask 'vorta' do
-  version '0.6.14'
-  sha256 'd3e220bc2ad7f7df517357ff1ce7617d821dd6a90fd92ca2e1d66f98dcd3313f'
+  version '0.6.15'
+  sha256 'ce634557428caffb16e35a06a0bc763079caa4226a8f6ad2cb38aa8d36878df7'
 
   url "https://github.com/borgbase/vorta/releases/download/v#{version}/vorta-#{version}.dmg"
   appcast 'https://github.com/borgbase/vorta/releases.atom'
