@@ -8,5 +8,7 @@ cask 'scenebuilder' do
 
   pkg "SceneBuilder-#{version}.pkg"
 
+  depends_on macos: '>= :high_sierra'
+
   uninstall pkgutil: 'com.gluonhq.scenebuilder'
 end
