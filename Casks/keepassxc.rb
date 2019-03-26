@@ -10,5 +10,13 @@ cask 'keepassxc' do
 
   app 'KeePassXC.app'
 
+  postflight do
+    FileUtils.ln_sf('/Applications/KeePassXC.app/Contents/MacOS/keepassxc-cli', "#{HOMEBREW_PREFIX}/bin/keepassxc-cli")
+  end
+
+  uninstall_postflight do
+    FileUtils.rm("#{HOMEBREW_PREFIX}/bin/keepassxc-cli")
+  end
+
   zap trash: '~/.keepassxc'
 end
