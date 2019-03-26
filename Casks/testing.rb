@@ -4,8 +4,8 @@ cask 'testing' do
 
   # github.com/claytonjwong/cask was verified as official when first introduced to the cask
   url 'https://github.com/claytonjwong/cask/raw/master/testing.tgz'
-  name 'testing'
-  homepage 'https://www.testing.com/'
+  name 'Speedtest'
+  homepage 'https://www.speedtest.net/'
 
-  binary 'testing'
+  binary 'speedtest'
 end
