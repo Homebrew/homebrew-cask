@@ -6,6 +6,8 @@ cask 'cinebench' do
   name 'Cinebench'
   homepage 'https://www.maxon.net/products/cinebench/'
 
+  depends_on macos: '>= :el_capitan'
+
   app 'Cinebench.app'
 
   uninstall quit: 'net.maxon.cinebench'
