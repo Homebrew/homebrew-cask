@@ -1,6 +1,6 @@
 cask 'coda' do
-  version '2.7'
-  sha256 'c0fc9c49f4f3629c797aa3cca99475fbd95be6c538c141fc45c759f4e4dc8454'
+  version '2.7.1'
+  sha256 'd4b15632dd7813ecc6e60fa98709705a8156193d77ac3496032683156092f0b3'
 
   url "https://download.panic.com/coda/Coda%20#{version}.zip"
   appcast 'https://www.panic.com/updates/update.php?appName=Coda%202&appVersion=1'
