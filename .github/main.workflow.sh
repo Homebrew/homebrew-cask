@@ -36,5 +36,6 @@ echo "$ANALYTICS_JSON_KEY" > ~/.homebrew_analytics.json
 ruby -e "load Gem.bin_path('rake', 'rake')" cask
 
 # commit and push generated files
+git add _data/cask api/cask cask
 git commit -m 'cask: update from Homebrew/cask push' _data/cask api/cask cask
 git push
