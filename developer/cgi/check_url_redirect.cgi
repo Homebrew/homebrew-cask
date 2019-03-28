@@ -5,8 +5,11 @@ import urllib2
 
 form = cgi.FieldStorage()
 url = form.getvalue("url", "")
+ua = form.getvalue("user_agent", "Mozilla")
 try:
-	response = urllib2.urlopen(url)
+	headers = { 'User-Agent' : ua }
+	req = urllib2.Request(url, None, headers)
+	response = urllib2.urlopen(req)
 	redir = response.geturl()
 except Exception:
 	import traceback
