@@ -12,6 +12,9 @@ cask 'franz' do
 
   app 'Franz.app'
 
+  uninstall quit:       'com.meetfranz.franz.*',
+            login_item: 'Franz'
+
   zap trash: [
                '~/Library/Application Support/Franz',
                '~/Library/Preferences/com.electron.franz.helper.plist',
