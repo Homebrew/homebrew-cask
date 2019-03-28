@@ -10,10 +10,16 @@ echo 'BUNDLE_SILENCE_ROOT_WARNING: "1"' > ~/.bundle/config
 git config --global user.name "BrewTestBot"
 git config --global user.email "homebrew-test-bot@lists.sfconservancy.org"
 
+# setup Homebrew/homebrew-cask repository
 CASK_DIR="$(brew --repo "$GITHUB_REPOSITORY")"
 mkdir -p "$CASK_DIR"
 rm -rf "$CASK_DIR"
 ln -s "$PWD" "$CASK_DIR"
+
+# get latest Homebrew/homebrew-cask
+git -C "$CASK_DIR" fetch
+git -C "$CASK_DIR" checkout -f master
+git -C "$CASK_DIR" reset --hard origin/master
 
 # setup Homebrew environment
 export PATH="$(brew --repo)/Library/Homebrew/vendor/portable-ruby/current/bin:$PATH"
