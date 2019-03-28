@@ -37,5 +37,6 @@ ruby -e "load Gem.bin_path('rake', 'rake')" cask
 
 # commit and push generated files
 git add _data/cask api/cask cask
-git commit -m 'cask: update from Homebrew/cask push' _data/cask api/cask cask
+git diff --exit-code HEAD -- _data/cask api/cask cask && exit 0
+git commit -m 'cask: update from Homebrew/homebrew-cask push' _data/cask api/cask cask
 git push
