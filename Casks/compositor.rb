@@ -7,6 +7,8 @@ cask 'compositor' do
   name 'Compositor'
   homepage 'https://compositorapp.com/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Compositor.app'
 
   zap trash: [
