@@ -1,7 +1,7 @@
 cask 'trickster' do
   if MacOS.version <= :high_sierra
     version '2.8'
-    sha256 '8b0f4146523caa1abbd02dd5efeeca4a60b82f066aece9b975bdfd0109a59c04'
+    sha256 '4d2e4196e5baf7ace6e7258c867eae7e5310acb1de263c4bc631ae6a95e075b6'
   else
     version '3.0'
     sha256 '187c9cfb4519363f342636744a0149ab8fbfd229bfbf3228e8bed34248d79ac4'
