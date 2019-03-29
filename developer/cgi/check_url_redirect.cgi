@@ -5,12 +5,15 @@ import urllib2
 
 form = cgi.FieldStorage()
 url = form.getvalue("url", "")
+ua = form.getvalue("user_agent", "Mozilla")
 try:
-	response = urllib2.urlopen(url)
-	redir = response.geturl()
+    headers = {'User-Agent': ua}
+    req = urllib2.Request(url, None, headers)
+    response = urllib2.urlopen(req)
+    redir = response.geturl()
 except Exception:
-	import traceback
-	redir = 'generic exception: ' + traceback.format_exc()
+    import traceback
+    redir = 'generic exception: ' + traceback.format_exc()
 
 print "Content-type: text/html"
 print

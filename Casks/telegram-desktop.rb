@@ -1,6 +1,6 @@
 cask 'telegram-desktop' do
-  version '1.5.15'
-  sha256 '0da754640613edc9abcf65ca6f3105b24ee099c423d93ea8b44fe151632ca07b'
+  version '1.6.3'
+  sha256 '3a877e6c3abd4119a9fa402ca93bb1951cc97effbdf0fa2ad3d40746d1802355'
 
   # github.com/telegramdesktop/tdesktop was verified as official when first introduced to the cask
   url "https://github.com/telegramdesktop/tdesktop/releases/download/v#{version}/tsetup.#{version}.dmg"

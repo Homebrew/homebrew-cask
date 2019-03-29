@@ -8,7 +8,8 @@ cask 'visual-studio' do
   name 'Visual Studio for Mac'
   homepage 'https://www.visualstudio.com/vs/visual-studio-mac/'
 
-  depends_on cask: 'mono-mdk'
+  auto_updates true
+  depends_on cask: 'homebrew/cask-versions/mono-mdk516'
 
   app 'Visual Studio.app'
 

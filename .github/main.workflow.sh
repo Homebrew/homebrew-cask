@@ -10,10 +10,16 @@ echo 'BUNDLE_SILENCE_ROOT_WARNING: "1"' > ~/.bundle/config
 git config --global user.name "BrewTestBot"
 git config --global user.email "homebrew-test-bot@lists.sfconservancy.org"
 
+# setup Homebrew/homebrew-cask repository
 CASK_DIR="$(brew --repo "$GITHUB_REPOSITORY")"
 mkdir -p "$CASK_DIR"
 rm -rf "$CASK_DIR"
 ln -s "$PWD" "$CASK_DIR"
+
+# get latest Homebrew/homebrew-cask
+git -C "$CASK_DIR" fetch
+git -C "$CASK_DIR" checkout -f master
+git -C "$CASK_DIR" reset --hard origin/master
 
 # setup Homebrew environment
 export PATH="$(brew --repo)/Library/Homebrew/vendor/portable-ruby/current/bin:$PATH"
@@ -36,6 +42,7 @@ echo "$ANALYTICS_JSON_KEY" > ~/.homebrew_analytics.json
 ruby -e "load Gem.bin_path('rake', 'rake')" cask
 
 # commit and push generated files
-# TODO: add cask directory when files are present.
-git commit -m 'cask: update from Homebrew/cask push' _data/cask api/cask
+git add _data/cask api/cask cask
+git diff --exit-code HEAD -- _data/cask api/cask cask && exit 0
+git commit -m 'cask: update from Homebrew/homebrew-cask push' _data/cask api/cask cask
 git push

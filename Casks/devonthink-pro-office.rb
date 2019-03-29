@@ -4,9 +4,9 @@ cask 'devonthink-pro-office' do
 
   # amazonaws.com/DTWebsiteSupport was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/devonthink/#{version}/DEVONthink_Pro_Office.app.zip"
-  appcast 'https://www.devontechnologies.com/fileadmin/templates/filemaker/sparkle.php?product=300125739&format=xml'
+  appcast 'https://api.devontechnologies.com/1/apps/sparkle/sparkle.php?id=300125739'
   name 'DEVONthink Pro Office'
-  homepage 'https://www.devontechnologies.com/products/devonthink/devonthink-pro-office.html'
+  homepage 'https://www.devontechnologies.com/apps/devonthink'
 
   auto_updates true
 

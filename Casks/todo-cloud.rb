@@ -3,6 +3,7 @@ cask 'todo-cloud' do
   sha256 'ddf969227a908558c2ecda4d6696108e4ca50e32c608ffa95aa04df7cefef63e'
 
   url "http://builds.appigo.com/todo-cloud/macos/Todo+Cloud-PROD-#{version}-mac.dmg"
+  appcast 'http://www.appigo.com/downloads/'
   name 'Todo Cloud'
   homepage 'http://www.appigo.com/'
 

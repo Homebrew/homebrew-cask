@@ -3,6 +3,7 @@ cask 'taskade' do
   sha256 'd0e616edf8b958d1856efe5b710eb8872afc370eed90121da3c2d039a405b86c'
 
   url "https://apps.taskade.com/updates/Taskade-#{version}-mac.zip"
+  appcast 'https://www.taskade.com/downloads'
   name 'Taskade'
   homepage 'https://www.taskade.com/'
 

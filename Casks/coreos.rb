@@ -7,7 +7,7 @@ cask 'coreos' do
   name 'CoreOS VM'
   homepage 'https://github.com/TheNewNormal/coreos-osx'
 
-  depends_on cask: 'corectl-app'
+  depends_on cask: 'corectl'
 
   app 'CoreOS.app'
 

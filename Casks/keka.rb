@@ -1,6 +1,6 @@
 cask 'keka' do
-  version '1.1.12'
-  sha256 '8198a42eb5a24146e72babdda2d9022abfd267816b158f6a497255b7c5cf5159'
+  version '1.1.13'
+  sha256 '7ad3e5e8c0b9a91ccf8ce7cdfa650005a48fa538803212b117857c517ebaa41f'
 
   # github.com/aonez/Keka was verified as official when first introduced to the cask
   url "https://github.com/aonez/Keka/releases/download/v#{version}/Keka-#{version}.dmg"

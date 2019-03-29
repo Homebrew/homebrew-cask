@@ -12,20 +12,21 @@ We do this by providing a friendly CLI workflow for the administration of macOS 
 
 To start using Homebrew Cask, you just need [Homebrew](https://brew.sh/) installed.
 
-<img src="https://i.imgur.com/dPgmLax.gif" width="673" alt="Installing Atom (animated gif)">
+<img src="https://i.imgur.com/bjr8UxZ.gif" width="547" alt="Installing and uninstalling Atom (animated gif)">
 
 Slower, now:
 
 ```
 $ brew cask install atom
 ==> Satisfying dependencies
-complete
-==> Downloading https://github.com/atom/atom/releases/download/v1.8.0/atom-mac.zip
+==> Downloading https://github.com/atom/atom/releases/download/v1.35.1/atom-mac.zip
+==> Downloading from https://github-production-release-asset-2e65be.s3.amazonaws.co
 ######################################################################## 100.0%
-==> Verifying checksum for Cask atom
-==> Moving App 'Atom.app' to '/Applications/Atom.app'
-==> Symlinking Binary 'apm' to '/usr/local/bin/apm'
-==> Symlinking Binary 'atom.sh' to '/usr/local/bin/atom'
+==> Verifying SHA-256 checksum for Cask 'atom'.
+==> Installing Cask atom
+==> Moving App 'Atom.app' to '/Applications/Atom.app'.
+==> Linking Binary 'apm' to '/usr/local/bin/apm'.
+==> Linking Binary 'atom.sh' to '/usr/local/bin/atom'.
 🍺  atom was successfully installed!
 ```
 
