@@ -4,9 +4,9 @@ cask 'devonthink' do
 
   # amazonaws.com/DTWebsiteSupport was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/devonthink/#{version}/DEVONthink_Personal.app.zip"
-  appcast 'https://www.devontechnologies.com/fileadmin/templates/filemaker/sparkle.php?product=217255&format=xml'
+  appcast 'https://api.devontechnologies.com/1/apps/sparkle/sparkle.php?id=217255'
   name 'DEVONthink Personal'
-  homepage 'https://www.devontechnologies.com/products/devonthink/devonthink-personal.html'
+  homepage 'https://www.devontechnologies.com/apps/devonthink/'
 
   auto_updates true
 
