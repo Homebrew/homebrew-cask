@@ -6,5 +6,5 @@ cask 'google-adwords-editor' do
   name 'Google AdWords Editor'
   homepage 'https://adwords.google.com/home/tools/adwords-editor/?zd=1'
 
-  app 'Google AdWords Editor.app'
+  app 'Google Ads Editor.app'
 end
