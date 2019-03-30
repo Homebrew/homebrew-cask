@@ -1,6 +1,6 @@
 cask 'iconizer' do
-  version '2.6.1'
-  sha256 '46e6a7a0cd08b2ead59133a13da11ef5f99b0e5f6710f78d9cce8f12d9d43059'
+  version '2.6.2'
+  sha256 '65dc0c404f4cee91c3937212f5e29ee29c96162699d15dd601abb5faf595e713'
 
   # github.com/raphaelhanneken/iconizer was verified as official when first introduced to the cask
   url "https://github.com/raphaelhanneken/iconizer/releases/download/#{version}/Iconizer.dmg"

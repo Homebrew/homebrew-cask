@@ -1,6 +1,6 @@
 cask 'pym-player' do
-  version '6.0.10,563'
-  sha256 '4cb727e16412cb992a1286921c813b9db034404cc355896768245e65e5e054f1'
+  version '6.0.11,578'
+  sha256 '97dd4ec2805c069e893ace54d655fee4887147a37aab5a2c1aa789020522c661'
 
   url "http://pym.uce.pl/download/pliki/PYMPlayer#{version.before_comma.no_dots}_#{version.after_comma}.dmg"
   appcast 'http://pym.uce.pl/pym-player/'

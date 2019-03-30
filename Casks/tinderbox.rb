@@ -10,6 +10,7 @@ cask 'tinderbox' do
   end
 
   url "https://www.eastgate.com/download/tbx#{version.no_dots}.dmg"
+  appcast 'https://eastgate.com/Tinderbox/download.html'
   name 'Tinderbox'
   homepage 'https://eastgate.com/Tinderbox/'
 end

@@ -1,6 +1,6 @@
 cask 'rider' do
-  version '2018.3.3,183.5619.41'
-  sha256 '7a6b30eccd54960790fb3dddb7e748610ebbd44a2273afd28ff70cc7c71c7760'
+  version '2018.3.4,183.6092.12'
+  sha256 'e56bfe30bcb81281edc403054a62aa219a2515477a997156b84eb03254b8f589'
 
   url "https://download.jetbrains.com/rider/JetBrains.Rider-#{version.before_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=RD&latest=true&type=release'

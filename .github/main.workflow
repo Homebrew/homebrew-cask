@@ -61,3 +61,14 @@ action "sync_labels" {
   args = "/labels.rb"
   secrets = ["HOMEBREW_GITHUB_API_TOKEN"]
 }
+
+workflow "Trigger generate formulae.brew.sh on push" {
+  on = "push"
+  resolves = ["Generate formulae.brew.sh"]
+}
+
+action "Generate formulae.brew.sh" {
+  uses = "docker://linuxbrew/brew"
+  runs = ".github/main.workflow.sh"
+  secrets = ["ANALYTICS_JSON_KEY", "FORMULAE_DEPLOY_KEY"]
+}

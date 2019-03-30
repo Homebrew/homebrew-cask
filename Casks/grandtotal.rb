@@ -1,6 +1,6 @@
 cask 'grandtotal' do
-  version '5.2.5'
-  sha256 '1b918854430f0f9482a1b082e7830bd763e4f3b8564a537ae330cbe6e93b4ca9'
+  version '5.2.6.1'
+  sha256 '411f5266b83ab3b649e6cd909fc481cc3b793a4364dbf6d2a6349a8c393801f9'
 
   url "https://mediaatelier.com/GrandTotal#{version.major}/GrandTotal_#{version}.zip"
   appcast "https://mediaatelier.com/GrandTotal#{version.major}/feed.php"

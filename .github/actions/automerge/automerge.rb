@@ -92,7 +92,7 @@ def merge_pull_request(pr, statuses = GitHub.open_api(pr.fetch("statuses_url")))
     out, _ = system_command! 'git', args: ['-C', tap.path, 'log', '--pretty=format:', '-G', '\s+version\s+\'', '--follow', '-p', '--', cask_path]
 
     version_diff = GitDiff.from_string(out)
-    previous_versions = version_diff.additions.select(&:version?).map(&:version).uniq
+    previous_versions = version_diff.additions.select { |l| l.version? }.map { |l| l.version }.uniq
 
     if previous_versions.include?(diff.new_version)
       skip "Version in pull request #{pr_name} changed to a previous version. Previous versions were:\n#{previous_versions.join("\n")}"
@@ -134,7 +134,6 @@ CASK_REPOS = [
   "Homebrew/homebrew-cask-versions",
 ].freeze
 
- ENV["GITHUB_EVENT_NAME"] = "push"
 begin
   case ENV["GITHUB_EVENT_NAME"]
   when "status"
@@ -160,6 +159,7 @@ begin
         skipped_prs << pr
       rescue => e
         $stderr.puts e
+        $stderr.puts e.backtrace
         failed_prs << pr
       end
     end

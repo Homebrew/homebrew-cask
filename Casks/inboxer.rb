@@ -1,6 +1,6 @@
 cask 'inboxer' do
-  version '1.2.1'
-  sha256 '1a57278556e8d65b6b0f0330f0d64c8308c8bc7028fce592c51f969726ea29b3'
+  version '1.2.3'
+  sha256 '751f4987476668778b060177cd185f8ed2f2a449303938194b67f0c6cad90f9a'
 
   # github.com/denysdovhan/inboxer was verified as official when first introduced to the cask
   url "https://github.com/denysdovhan/inboxer/releases/download/v#{version}/Inboxer-#{version}.dmg"

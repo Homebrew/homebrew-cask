@@ -1,6 +1,6 @@
 cask 'nextiva' do
-  version '22.5.0.623'
-  sha256 '1b36c08b0a2b127cbb1ad501fb253d176bb1a479f28e01e974338d955f0a672e'
+  version '22.6.3.41'
+  sha256 'b78c45fd3cbd45912eda1dd87e311a3c086e385828471d300d92b2a14fd8c5a9'
 
   url "https://dm.nextiva.com/dms/bc/pc/Nextiva_App.bc-uc.osx-#{version}.dmg"
   appcast 'https://www.nextiva.com/support/articles/nextiva-app-mac-setup.html'

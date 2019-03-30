@@ -1,6 +1,6 @@
 cask 'grids' do
-  version '5.3'
-  sha256 '5471da7b6b6b4d11c48ac68d8e6a5de46f5f6e4f2e42debc17c750411e60d850'
+  version '5.4'
+  sha256 'c233085e9e351b03b69378d88b50406f10616db197f9394c39a497aa8b30f863'
 
   url "https://gridsapp.net/bin/Grids_#{version}.zip"
   appcast 'https://gridsapp.net/appcast.json'
@@ -8,6 +8,7 @@ cask 'grids' do
   homepage 'https://gridsapp.net/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'Grids.app'
 

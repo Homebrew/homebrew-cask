@@ -1,9 +1,10 @@
 cask 'tencent-lemon' do
-  version '1.0.9'
-  sha256 '6f828d37c5af4d7327f2d3ee441525c47c39e142d3c3ad8fb83b8c77fb007910'
+  version '1.1.2'
+  sha256 '539c934d863fa348dded620e82794d61aa6d7bdd14a44a37a782c89ca06fc104'
 
   # pm.myapp.com/invc/xfspeed/qqpcmgr was verified as official when first introduced to the cask
   url "https://pm.myapp.com/invc/xfspeed/qqpcmgr/module_update/Lemon_#{version}.dmg"
+  appcast 'https://lemon.guanjia.qq.com/latest/package'
   name 'Tencent Lemon Cleaner'
   homepage 'https://mac.gj.qq.com/'
 

@@ -1,6 +1,6 @@
 cask 'overflow' do
-  version '3.0.4'
-  sha256 '77434b1beef3b77c950dcd8f1f8118c1f9bc4f479f8d12f085172fd0ac385eb7'
+  version '3.1'
+  sha256 '853928dbe2482194bfbe441184ef13fe2c8dd20219398daad43ba968abea41fe'
 
   # stunt.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://stunt.s3.amazonaws.com/overflow#{version}.zip"

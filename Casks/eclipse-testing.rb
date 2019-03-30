@@ -1,6 +1,6 @@
 cask 'eclipse-testing' do
-  version '4.10.0,2018-12:R'
-  sha256 '715fbfc86469fb206838f92d5d17d0dddeae2838fc905c767aa9822f8729ef85'
+  version '4.11.0,2019-03:R'
+  sha256 '6dfdcfeddbe1feada08bc6521382c3e9e97de3d55581769828baa880f6fd9f42'
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.after_comma.before_colon}/#{version.after_colon}/eclipse-testing-#{version.after_comma.before_colon}-#{version.after_colon}-macosx-cocoa-x86_64.dmg&r=1"
   name 'Eclipse for Testers'

@@ -13,19 +13,12 @@ cask 'rstudio' do
   zap trash: '~/.rstudio-desktop'
 
   caveats <<~EOS
-    #{token} depends on R.
-    There are different ways to satisfy that dependency. RStudio recommends installing R from The R Project, which is required to install binary R packages, without needing to compile packages from source.
+    #{token} depends on R. The R Project provides official binaries:
 
-    https://support.rstudio.com/hc/en-us/articles/217799238
+      brew cask install r
 
-    To install the R Project package run:
-
-      brew cask install r-app
-
-    Alternative ways to satisfy the dependency are:
+    Alternatively, the Homebrew-compiled version of R omits the GUI app:
 
       brew install r
-
-    This requires compiling R packages from source.
   EOS
 end

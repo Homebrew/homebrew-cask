@@ -1,6 +1,6 @@
 cask 'journey' do
-  version '2.9.1'
-  sha256 'b3dc4c9811790f50d1f417a8c5072b23357f97bd5c20595e3e6de1eca44b3c5d'
+  version '2.10.2'
+  sha256 'dd4355c2787d366ba690b9a6c247e163ee9058b9fa5bd3a7faf4ce7c6ef62653'
 
   # github.com/2-App-Studio/journey-releases was verified as official when first introduced to the cask
   url "https://github.com/2-App-Studio/journey-releases/releases/download/v#{version}/Journey-darwin-#{version}.dmg"

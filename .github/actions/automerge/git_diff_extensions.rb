@@ -26,15 +26,16 @@ module GitDiffExtension
 
     def version_decreased?
       return false unless version_changed?
-      Version.new(new_version) < Version.new(old_version)
+      new_version.split(',').zip(old_version.split(','))
+        .any? { |v_new, v_old| Version.new(v_new.to_s) < Version.new(v_old.to_s) }
     end
 
     def old_version
-      @old_version ||= deletions.find(&:version?)&.version
+      @old_version ||= deletions.find { |line| line.version? }&.version
     end
 
     def new_version
-      @new_version ||= additions.find(&:version?)&.version
+      @new_version ||= additions.find { |line| line.version? }&.version
     end
 
     def lines

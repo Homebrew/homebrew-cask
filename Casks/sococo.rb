@@ -1,6 +1,6 @@
 cask 'sococo' do
-  version '6.4.0-20586'
-  sha256 '588a32a3bdd16edca4f8d00b9a5327cae0ebd467d0dd499497d41976c4edf872'
+  version '6.5.0-20770'
+  sha256 'f1e128fecd89b84f751234bea3f5c5b52e94eb0e333a9fda149efc397c1e39b8'
 
   url "https://s.sococo.com/rs/client/mac/Sococo-#{version}.dmg"
   appcast 'https://s.sococo.com/rs/client/latest.json'

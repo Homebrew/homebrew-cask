@@ -1,6 +1,6 @@
 cask 'eclipse-dsl' do
-  version '4.10.0,2018-12:R'
-  sha256 '82958ebf1672c53e939885d1d4bd2135e342cb97e7b1e17f52fba1a03eb8afdc'
+  version '4.11.0,2019-03:R'
+  sha256 'e89c05977cbcc53b2127663953366765b64efce9b1c6c3d6f7baf4eb75d52043'
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.after_comma.before_colon}/#{version.after_colon}/eclipse-dsl-#{version.after_comma.before_colon}-#{version.after_colon}-macosx-cocoa-x86_64.dmg&r=1"
   name 'Eclipse IDE for Java and DSL Developers'
