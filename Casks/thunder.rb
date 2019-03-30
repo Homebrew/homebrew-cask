@@ -4,6 +4,7 @@ cask 'thunder' do
 
   # down.sandai.net was verified as official when first introduced to the cask
   url "http://down.sandai.net/mac/thunder_#{version}.dmg"
+  appcast 'http://static-xl9-ssl.xunlei.com/json/mac_download_url.json'
   name 'Thunder'
   name '迅雷'
   homepage 'http://mac.xunlei.com/'
