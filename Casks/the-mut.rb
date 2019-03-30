@@ -4,6 +4,7 @@ cask 'the-mut' do
 
   # m-lev.com/uploads was verified as official when first introduced to the cask
   url "https://m-lev.com/uploads/TheMUT_#{version.dots_to_underscores}.dmg"
+  appcast 'https://jssmut.weebly.com'
   name 'The MUT'
   homepage 'https://jssmut.weebly.com/'
 
