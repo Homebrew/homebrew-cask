@@ -1,15 +1,21 @@
 cask 'signal' do
-  version '1.22.0'
-  sha256 '777496e4b23f1d088383dfc9694deb646313a2020bd5cd17ab93f68be31d5317'
+  version '1.23.1'
+  sha256 'baf2a609e78c0314c3bbc509c8d7ea8878425ca34e3f43856cda3fe3d911dc1e'
 
-  url "https://updates.signal.org/desktop/signal-desktop-mac-#{version}.zip"
+  url "https://updates.signal.org/desktop/signal-desktop-mac-#{version}.zip",
+      using: :nounzip
   appcast 'https://github.com/signalapp/Signal-Desktop/releases.atom'
   name 'Signal'
   homepage 'https://signal.org/'
 
   auto_updates true
+  container type: :naked
 
   app 'Signal.app'
+
+  preflight do
+    system_command '/usr/bin/ditto', args: ['-xk', staged_path.join("signal-desktop-mac-#{version}.zip"), staged_path]
+  end
 
   zap trash: [
                '~/Library/Application Support/Signal',
