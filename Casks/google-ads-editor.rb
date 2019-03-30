@@ -1,4 +1,4 @@
-cask 'google-adwords-editor' do
+cask 'google-ads-editor' do
   version :latest
   sha256 :no_check
 
