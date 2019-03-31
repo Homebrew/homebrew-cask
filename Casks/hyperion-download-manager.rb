@@ -4,7 +4,7 @@ cask 'hyperion-download-manager' do
 
   url "https://www.hyperion-records.co.uk/Hyperion%20Download%20Manager-#{version}.dmg"
   name 'Hyperion Records Download Manager'
-  homepage 'https://www.hyperion-records.co.uk/pages/install-HDM2-Mac-EN.asp'
+  homepage 'https://www.hyperion-records.co.uk/pages/downloadmanagerinfo.asp'
 
   app 'Hyperion Download Manager.app'
 end
