@@ -13,7 +13,7 @@ cask 'surge' do
   app "Surge #{version.major}.app"
 
   uninstall launchctl: 'com.nssurge.surge-mac.helper',
-            delete: '/Library/PrivilegedHelperTools/com.nssurge.surge-mac.helper'
+            delete:    '/Library/PrivilegedHelperTools/com.nssurge.surge-mac.helper'
 
   zap delete: [
                 '~/Library/Application Support/com.nssurge.surge-mac',
