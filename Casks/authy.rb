@@ -4,6 +4,7 @@ cask 'authy' do
 
   # s3.amazonaws.com/authy-electron-repository-production was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/authy-electron-repository-production/authy/stable/#{version}/darwin/x64/Authy%20Desktop-#{version}.dmg"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://electron.authy.com/download%3Fchannel=stable%26arch=x64%26platform=darwin%26version=latest%26product=authy'
   name 'Authy Desktop'
   homepage 'https://authy.com/'
 
