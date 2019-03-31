@@ -1,6 +1,6 @@
 cask 'macpass' do
-  version '0.7.7'
-  sha256 '453a877bd9e9c4d440f06195763c79cfa37980b650929af9fed661e6a801e4d5'
+  version '0.7.9'
+  sha256 'cb4445fad7f2e64726cbaa320b228dadb3b48afe15f138ae90600e912093f12c'
 
   # github.com/MacPass/MacPass was verified as official when first introduced to the cask
   url "https://github.com/MacPass/MacPass/releases/download/#{version}/MacPass-#{version}.zip"
