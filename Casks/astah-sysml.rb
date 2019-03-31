@@ -4,7 +4,7 @@ cask 'astah-sysml' do
 
   # cdn.change-vision.com was verified as official when first introduced to the cask
   url "http://cdn.change-vision.com/files/astah-sysml-#{version.before_comma.dots_to_underscores}-#{version.after_comma}-MacOs.dmg"
-  appcast 'https://astah.net/download'
+  appcast 'http://astah.net/download'
   name 'Change Vision Astah SysML'
   homepage 'http://astah.net/editions/sysml'
 
