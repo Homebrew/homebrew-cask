@@ -17,8 +17,8 @@ cask 'protonvpn' do
 
   zap trash: [
                '~/Library/Application Scripts/ch.protonvpn.ProtonVPNStarter',
-               '~/Library/Containers/ch.protonvpn.ProtonVPNStarter',
                '~/Library/Application Scripts/ch.protonvpn.mac',
+               '~/Library/Containers/ch.protonvpn.ProtonVPNStarter',
                '~/Library/Containers/ch.protonvpn.mac',
              ]
 end
