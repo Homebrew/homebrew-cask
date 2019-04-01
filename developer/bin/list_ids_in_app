@@ -55,7 +55,7 @@ clean_sources () {
     /usr/bin/egrep -vi '^com\.cruzapp\.TDWebThumbnail' |                                                     \
     /usr/bin/egrep -vi '^com\.cycling74\.QTExportTool' |                                                     \
     /usr/bin/egrep -vi '^com\.fluidapp\.(BrowserBrowserPlugIn|FluidInstance|ThumbnailPlugIn)' |              \
-    /usr/bin/egrep -vi '^com\.github\.ObjectiveGit' |                                                        \
+    /usr/bin/egrep -vi '^com\.github\.(Electron\.framework|ObjectiveGit|Squirrel)' |                         \
     /usr/bin/egrep -vi '^com\.heroku\.RedisAdapter' |                                                        \
     /usr/bin/egrep -vi '^com\.instinctivecode\.MGScopeBar' |                                                 \
     /usr/bin/egrep -vi '^com\.intel\.nw\.helper' |                                                           \
@@ -94,8 +94,10 @@ clean_sources () {
     /usr/bin/egrep -vi '^org\.boredzo\.(LMX|ISO8601DateFormatter)' |                                         \
     /usr/bin/egrep -vi '^org\.dribin\.dave\.DDHidLib' |                                                      \
     /usr/bin/egrep -vi '^org\.linkbackproject\.LinkBack' |                                                   \
+    /usr/bin/egrep -vi '^org\.mantle\.Mantle' |                                                              \
     /usr/bin/egrep -vi '^org\.mozilla\.(crashreporter|plugincontainer|universalchardet|updater)' |           \
     /usr/bin/egrep -vi '^org\.python\.(python|PythonLauncher|buildapplet)' |                                 \
+    /usr/bin/egrep -vi '^org\.reactivecocoa\.ReactiveCocoa' |                                                \
     /usr/bin/egrep -vi '^org\.remotesensing\.libtiff' |                                                      \
     /usr/bin/egrep -vi '^org\.vafer\.FeedbackReporter'   |                                                   \
     /usr/bin/egrep -vi '^org\.xiph\.(ogg|vorbis)' |                                                          \
