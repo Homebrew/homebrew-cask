@@ -7,6 +7,8 @@ cask 'ridibooks' do
   name 'Ridibooks'
   homepage 'https://ridibooks.com/support/app/download'
 
+  depends_on macos: '>= :sierra'
+
   app 'Ridibooks.app'
 
   zap trash: [
