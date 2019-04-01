@@ -11,4 +11,15 @@ cask 'surge' do
   depends_on macos: '>= :el_capitan'
 
   app "Surge #{version.major}.app"
+
+  uninstall launchctl: 'com.nssurge.surge-mac.helper',
+            delete:    '/Library/PrivilegedHelperTools/com.nssurge.surge-mac.helper'
+
+  zap delete: [
+                '~/Library/Application Support/com.nssurge.surge-mac',
+                '~/Library/Caches/com.nssurge.surge-mac',
+                '~/Library/Caches/com.nssurge.surge-mac.plist',
+                '~/Library/Logs/Surge',
+                '~/Library/Preferences/com.nssurge.surge-mac.plist',
+              ]
 end
