@@ -43,7 +43,6 @@ clean_sources () {
     /usr/bin/egrep -vi '^com\.microsoft\.(Automator|certificate\.framework|chart|converterlib|converters|excel\.pde|grammar|igx|mcp|merp|msls3|netlib|officeart|ole|oleo|powerplant|powerplantcore|powerpoint\.pde|speller|thesaurus|urlmon|wizard|wordforms|MSCommon|mbuinstrument_framework|mbukernel_framework|rdpkit)' | \
     /usr/bin/egrep -vi '^com\.google\.(Chrome\.framework|Chrome\.helper|Keystone|BreakpadFramework|GDataFramework|Reporter)' | \
     /usr/bin/egrep -vi '^atmo\.mac\.macho' |                                                                 \
-    /usr/bin/egrep -vi '^com\.3dconnexion\.driver\.client' |                                                 \
     /usr/bin/egrep -vi '^com\.Breakpad\.crash_report_sender' |                                               \
     /usr/bin/egrep -vi '^com\.Cycling74\.driver\.Soundflower' |                                              \
     /usr/bin/egrep -vi '^com\.HumbleDaisy\.HDCrashReporter' |                                                \
