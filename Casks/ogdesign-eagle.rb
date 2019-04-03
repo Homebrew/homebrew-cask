@@ -1,6 +1,6 @@
 cask 'ogdesign-eagle' do
-  version '1.9.0,11'
-  sha256 'c20191b095764e470df9ac755c9da996b69ecb333fa19d4cf62bb68c560e8bf8'
+  version '1.9.1,build2'
+  sha256 'ebb3f93ef826d4a800984617f92f621877cf68772d8e03b7b229cc7a788c6345'
 
   # eagleapp.s3-accelerate.amazonaws.com was verified as official when first introduced to the cask
   url "https://eagleapp.s3-accelerate.amazonaws.com/releases/Eagle-#{version.before_comma}-#{version.after_comma}.dmg?download"
