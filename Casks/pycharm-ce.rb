@@ -1,6 +1,6 @@
 cask 'pycharm-ce' do
-  version '2019.1,191.6183.50'
-  sha256 '3becf1f5ba50c40532d3e32df6f24d26438648e182ea49d1f8ff140afef5bb77'
+  version '2019.1.1,191.6605.12'
+  sha256 'd6049a7fe3e97a029d2b1b07b208145b2de5a46bdf928c4644699f0dfae5b2a6'
 
   url "https://download.jetbrains.com/python/pycharm-community-#{version.before_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=PCC&latest=true&type=release'
