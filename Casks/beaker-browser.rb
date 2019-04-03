@@ -1,6 +1,6 @@
 cask 'beaker-browser' do
-  version '0.8.7'
-  sha256 'd2a96e7d9c072b8762a0763185ae2d9c03f76f795c9ac914afe4dc98c2f9356d'
+  version '0.8.8'
+  sha256 '5753865f2641a7910e682996754408dc8f06123f34e11a126a94f4373253dab6'
 
   # github.com/beakerbrowser/beaker was verified as official when first introduced to the cask
   url "https://github.com/beakerbrowser/beaker/releases/download/#{version}/beaker-browser-#{version}.dmg"
