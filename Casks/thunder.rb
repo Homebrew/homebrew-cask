@@ -1,13 +1,13 @@
 cask 'thunder' do
-  version '3.3.2.3940'
-  sha256 '6787a3e6ff04efe7d201c34ad511f571783ea08e9c173649658d739f2692f777'
+  version '3.3.2.3944'
+  sha256 '359ca0b366f504978f8a38e54a94826ba369141275144b69b6fc13c2977c319c'
 
   # down.sandai.net was verified as official when first introduced to the cask
   url "http://down.sandai.net/mac/thunder_#{version}.dmg"
   appcast 'http://static-xl9-ssl.xunlei.com/json/mac_download_url.json'
   name 'Thunder'
   name '迅雷'
-  homepage 'http://mac.xunlei.com/'
+  homepage 'https://mac.xunlei.com/'
 
   depends_on macos: '>= :yosemite'
 
