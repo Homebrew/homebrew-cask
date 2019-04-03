@@ -6,13 +6,9 @@ cask 'ghidra' do
   name 'Ghidra'
   homepage 'https://www.ghidra-sre.org/'
 
-  depends_on cask: 'java'
-
   binary "ghidra_#{version.major_minor}/ghidraRun"
 
-  zap trash: [
-               '~/.ghidra',
-             ]
+  zap trash: '~/.ghidra'
 
   caveats do
     depends_on_java '11+'
