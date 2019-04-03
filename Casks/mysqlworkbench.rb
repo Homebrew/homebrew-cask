@@ -3,6 +3,7 @@ cask 'mysqlworkbench' do
   sha256 'bc888ed496cd5a654b63dee655117511349b03f1fc10679f4ec158ab1a0475b7'
 
   url "https://cdn.mysql.com/Downloads/MySQLGUITools/mysql-workbench-community-#{version}-macos-x86_64.dmg"
+  appcast 'https://dev.mysql.com/downloads/workbench/'
   name 'MySQL Workbench'
   homepage 'https://www.mysql.com/products/workbench/'
 

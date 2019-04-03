@@ -3,6 +3,7 @@ cask 'orange' do
   sha256 '0002bdc738eaf9d9b0d7f3a5aaafc37c7e6f7f531de1711d2028f43ca76a0d1e'
 
   url "https://orange.biolab.si/download/files/Orange#{version.major}-#{version}.dmg"
+  appcast 'https://orange.biolab.si/download/'
   name 'Orange'
   homepage 'https://orange.biolab.si/'
 
