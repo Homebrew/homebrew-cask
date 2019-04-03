@@ -14,7 +14,6 @@ cask 'onedrive' do
 
   uninstall delete:    '/Applications/OneDrive.app',
             launchctl: [
-
                          'com.microsoft.OneDriveUpdaterDaemon',
                          'com.microsoft.OneDriveStandaloneUpdater',
                          'com.microsoft.OneDriveStandaloneUpdaterDaemon',
