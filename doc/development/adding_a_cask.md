@@ -345,8 +345,15 @@ cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask
 git checkout master
 ```
 
-if you set the variable `HOMEBREW_NO_AUTO_UPDATE` then it clean up with:
+if you set the variable `HOMEBREW_NO_AUTO_UPDATE` then clean it up with:
 
 ```bash
 unset HOMEBREW_NO_AUTO_UPDATE
 ```
+
+or 
+
+```bash
+env -u HOMEBREW_NO_AUTO_UPDATE
+```
+
