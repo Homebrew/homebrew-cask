@@ -6,7 +6,7 @@ cask 'ghidra' do
   name 'Ghidra'
   homepage 'https://www.ghidra-sre.org/'
 
-  binary "ghidra_#{version.major_minor}/ghidraRun"
+  binary "ghidra_#{version.major_minor_patch}/ghidraRun"
 
   zap trash: '~/.ghidra'
 
