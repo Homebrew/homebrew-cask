@@ -265,6 +265,7 @@ $ git add Casks/my-new-cask.rb
 ``` 
 
 You can view the changes that are to be committed with: 
+
 ```bash
 $ git diff --cached
 ```
@@ -306,7 +307,7 @@ Examples of difficult, unclear commit summaries:
 Push your changes from the branch `my-new-cask-branch` to your GitHub account:
 
 ```bash
-$ git push <my-github-username> my-new-cask-branch
+$ git push {{my-github-username}} my-new-cask-branch
 ```
 
 If you are using [GitHub two-factor authentication](https://help.github.com/articles/about-two-factor-authentication/) and set your remote repository as HTTPS you will need to set up a personal access token and use that instead of your password. Further information [here](https://help.github.com/articles/https-cloning-errors/#provide-access-token-if-2fa-enabled).
@@ -318,8 +319,8 @@ If you are using [GitHub two-factor authentication](https://help.github.com/arti
 The `git push` command prints a suggestion to create a pull request:
 
 ```
-remote: Create a pull request for 'new-cask-guppy' on GitHub by visiting:                                          
-remote:      https://github.com/<my-github-username>/homebrew-cask/pull/new/my-new-cask-branch
+remote: Create a pull request for 'new-cask-cask' on GitHub by visiting:                                          
+remote:      https://github.com/{{my-github-username}}/homebrew-cask/pull/new/my-new-cask-branch
 ```
 
 #### b) use suggestion at Github website
@@ -349,11 +350,5 @@ if you set the variable `HOMEBREW_NO_AUTO_UPDATE` then clean it up with:
 
 ```bash
 unset HOMEBREW_NO_AUTO_UPDATE
-```
-
-or 
-
-```bash
-env -u HOMEBREW_NO_AUTO_UPDATE
 ```
 
