@@ -3,8 +3,8 @@ cask 'trickster' do
     version '2.8'
     sha256 '4d2e4196e5baf7ace6e7258c867eae7e5310acb1de263c4bc631ae6a95e075b6'
   else
-    version '3.0'
-    sha256 '187c9cfb4519363f342636744a0149ab8fbfd229bfbf3228e8bed34248d79ac4'
+    version '3.1'
+    sha256 '08007d18098209cd79f83b4a93400c6b0229ec3bfe6668b41de83fb079bd40a2'
   end
 
   url "https://dl.apparentsoft.com/Trickster_#{version}.zip"
