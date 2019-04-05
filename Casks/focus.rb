@@ -1,6 +1,6 @@
 cask 'focus' do
-  version '1.10.3'
-  sha256 'e51e1bd47e655aa51e6766d12f2916db45228d9d731ca61ebcd75698d5e772d6'
+  version '1.10.4'
+  sha256 '1155078036e9df1d4018eddadcc95d04228354c22ff14b74891249df791dac1a'
 
   url "https://heyfocus.com/uploads/Focus-#{version}.zip"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://heyfocus.com/focus.zip'
