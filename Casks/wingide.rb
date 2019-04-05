@@ -1,8 +1,9 @@
 cask 'wingide' do
-  version '6.1.1-1'
-  sha256 '932f14f0cc5dbbc81a26aa1b6ce08a152c05bae0a034f2f39bbe3384223ca00d'
+  version '6.1.5-1'
+  sha256 '755d9a50e4ac2f70c7cc8ba763adfa510805a9cd51876781a0e72587129df3fb'
 
   url "https://wingware.com/pub/wingide/#{version.sub(%r{-\d+}, '')}/wingide-#{version}.dmg"
+  appcast 'https://www.wingware.com/downloads/wing-pro'
   name 'WingIDE'
   homepage 'https://www.wingware.com/'
 

@@ -1,17 +1,14 @@
 cask 'saoimageds9' do
-  version '7.6'
+  version '8.0.1'
 
-  if MacOS.version == :yosemite
-    sha256 'f1207cdd65a2f1820f4aa149fa0dd5c8c2032cafc36d805e9dce76ba402acac0'
-    url "http://ds9.si.edu/download/macosxyosemite/SAOImageDS9%20#{version}.dmg"
-  elsif MacOS.version == :el_capitan
-    sha256 'eb1b01fcb75ec67a66f39294cf8ac18169f96d1ef1114a1ded66702b2fbe487e'
+  if MacOS.version == :el_capitan
+    sha256 '7b13be040388cbc40c3934254d5a5b9b693c46e06dd155692066be8075456270'
     url "http://ds9.si.edu/download/macosxelcapitan/SAOImageDS9%20#{version}.dmg"
   elsif MacOS.version == :sierra
-    sha256 '6ddd52ad39e573599c4cb4b21202d84dc6f46cb8800e3d698f00d3c41af6d30f'
+    sha256 '1617f3c171fb0d66972834e3703cb80bcaa019541a46d9659ffbf64b8b1503ce'
     url "http://ds9.si.edu/download/macossierra/SAOImageDS9%20#{version}.dmg"
   else
-    sha256 'b45d1cb4f621388837836179c114f34e3ebd24e23b53feeed9774fc0db182f69'
+    sha256 '96ab807d7c85955ee2fb4b3cdf3987f0dc49b8c20b250a2b8274b13b6862763c'
     url "http://ds9.si.edu/download/macoshighsierra/SAOImageDS9%20#{version}.dmg"
   end
 

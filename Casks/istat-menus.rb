@@ -1,8 +1,9 @@
 cask 'istat-menus' do
-  version '6.20'
+  version '6.31'
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://files.bjango.com/istatmenus#{version.major}/istatmenus#{version}.zip"
+  appcast 'https://bjango.com/mac/istatmenus/versionhistory/'
   name 'iStats Menus'
   homepage 'https://bjango.com/mac/istatmenus/'
 
@@ -46,6 +47,7 @@ cask 'istat-menus' do
                "~/Library/Preferences/com.bjango.istatmenus#{version.major}.extras.plist",
                '~/Library/Preferences/com.bjango.istatmenus.status.plist',
                '/Library/Logs/iStat Menus',
+               '/Library⁩/LaunchDaemons⁩/com.bjango.istatmenus.fans.plist',
                '/Users/Shared/.iStatMenus',
              ]
 end

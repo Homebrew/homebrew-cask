@@ -1,20 +1,14 @@
 cask 'itch' do
-  version '25.0.0'
-  sha256 '06a579b135203dd5da5a6e7a0665e4495a2501cf0dbe11f52f8447f3ccd090ca'
+  version '1.17.0'
+  sha256 '9053778cbae81ce09129364e0b3ec7f2b9abdd9705334011398d2d66d553c31c'
 
-  # nuts.itch.zone was verified as official when first introduced to the cask
-  url 'http://nuts.itch.zone/download/osx'
+  # broth.itch.ovh was verified as official when first introduced to the cask
+  url "https://broth.itch.ovh/itch-setup/darwin-amd64/#{version}/archive/default"
   appcast 'https://github.com/itchio/itch/releases.atom'
-  name 'itch'
+  name 'itch.io'
   homepage 'https://itch.io/app'
 
-  container nested: 'Install itch.dmg'
-
-  installer script: 'Install itch.app/Contents/MacOS/itch-setup'
-
-  preflight do
-    set_permissions "#{staged_path}/Install itch.app", '0777'
-  end
+  installer script: 'itch-setup'
 
   uninstall delete: [
                       '~/Applications/itch.app',

@@ -3,6 +3,7 @@ cask 'trash-it' do
   sha256 'aaffb0ab43a163178b9b6d230eef9ed5ee096461163ee001cd2c98e6ede43bc5'
 
   url 'https://nonamescriptware.com/wp-content/uploads/Trashit.zip'
+  appcast 'https://nonamescriptware.com/downloads/'
   name 'Trash It!'
   homepage 'https://nonamescriptware.com/'
 

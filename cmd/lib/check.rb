@@ -35,6 +35,7 @@ class Check
         .select(&:directory?)
         .flat_map(&:children)
         .select { |child| child.extname == ".plist" }
+        .select(&:exist?)
         .map(&format_launchjob)
     },
     loaded_launchjobs: -> {

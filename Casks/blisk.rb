@@ -1,6 +1,6 @@
 cask 'blisk' do
-  version '10.0.261.275'
-  sha256 'c12757f66a5fccf29b01b3fcb01a39302118ce88e7992426ade47b8dacfa5a28'
+  version '11.0.157.186'
+  sha256 '1dbf8c77a55089fa023bc26be4fa33a3926bbb405b0164f91168afb317ac2e48'
 
   # bliskcloudstorage.blob.core.windows.net was verified as official when first introduced to the cask
   url "https://bliskcloudstorage.blob.core.windows.net/mac-installers/BliskInstaller_#{version}.dmg"

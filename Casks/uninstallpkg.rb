@@ -3,7 +3,7 @@ cask 'uninstallpkg' do
   sha256 '8a92278d73334007d1df581584f7364adede9b74d4d46580055a435484c459cd'
 
   url "https://www.corecode.io/downloads/uninstallpkg_#{version}.zip"
-  appcast 'https://www.corecode.io/uninstallpkg/uninstallpkg.xml'
+  appcast 'https://macupdater.net/uninstallpkg/uninstallpkg.xml'
   name 'UninstallPKG'
   homepage 'https://www.corecode.io/uninstallpkg/'
 

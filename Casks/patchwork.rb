@@ -1,6 +1,6 @@
 cask 'patchwork' do
-  version '3.11.0'
-  sha256 '800d8270a8da55422a87aba5bf38fc6dae1cd03ef65c19fab4e9d1b48c94601d'
+  version '3.11.6'
+  sha256 '6c085e4ba2146e7e379b3bedfb92c6ce81192ab9866ec0235d2efdfe9a724aeb'
 
   url "https://github.com/ssbc/patchwork/releases/download/v#{version}/Patchwork-#{version}-mac.dmg"
   appcast 'https://github.com/ssbc/patchwork/releases.atom'

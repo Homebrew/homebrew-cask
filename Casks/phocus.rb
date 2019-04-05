@@ -1,10 +1,12 @@
 cask 'phocus' do
-  version '3.3.6,2018.05'
-  sha256 '1bed922bae1e0bf9da2d24b17af026566f5c58b5d3c8d596929176d87c46c610'
+  version '3.4.2'
+  sha256 '79ad542b8888b67c51a23222ba04cff75934a7bc109bc947775a2c3b567f94de'
 
-  url "http://static.hasselblad.com/#{version.after_comma.dots_to_slashes}/Phocus-#{version.before_comma}.dmg"
+  url "https://cdn.hasselblad.com/phocus/Phocus.#{version}.dmg"
   name 'Hasselblad Phocus'
   homepage 'https://www.hasselblad.com/software/phocus'
+
+  depends_on macos: '>= :sierra'
 
   app 'Phocus.app'
 end

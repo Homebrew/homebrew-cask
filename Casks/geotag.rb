@@ -1,6 +1,6 @@
 cask 'geotag' do
-  version '4.4.1'
-  sha256 'e87ac3a09ed5294117d22627067722bb6c774d32bba950cc279b4818c9226818'
+  version '4.5'
+  sha256 'f89337437ffaa0dd17f821154342010fb9cd0677f9cf1aab906625975086d7ba'
 
   url "https://www.snafu.org/GeoTag/GeoTag-#{version}.dmg"
   appcast 'https://www.snafu.org/GeoTag/'

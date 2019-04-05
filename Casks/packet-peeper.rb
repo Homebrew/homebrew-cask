@@ -8,4 +8,10 @@ cask 'packet-peeper' do
   homepage 'https://packetpeeper.org/'
 
   app 'Packet Peeper.app'
+
+  zap trash: [
+               '~/Library/Preferences/org.PacketPeeper.plist',
+               '~/Library/Saved Application State/org.PacketPeeper.savedState',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.packetpeeper.sfl*',
+             ]
 end

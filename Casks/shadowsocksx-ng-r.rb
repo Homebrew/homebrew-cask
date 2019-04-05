@@ -1,6 +1,6 @@
 cask 'shadowsocksx-ng-r' do
-  version '1.4.3-R8-build3'
-  sha256 'f0f85355b7447d21105cf22f0d5f80a08c4d81841d7d45bfdc6090cd01a9f013'
+  version '1.4.4-r8'
+  sha256 '9353980f35f78a9d16951f28d036f5647a2f5a5c1a79f6480cc4b2852bc77e57'
 
   url "https://github.com/qinyuhang/ShadowsocksX-NG-R/releases/download/#{version}/ShadowsocksX-NG-R8.dmg"
   appcast 'https://github.com/qinyuhang/ShadowsocksX-NG-R/releases.atom'

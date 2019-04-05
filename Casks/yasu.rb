@@ -11,12 +11,18 @@ cask 'yasu' do
     url "https://yasuformac.com/appcasts/10.12/yasuformac_#{version.after_comma}.zip",
         user_agent: :fake
     appcast 'https://yasuformac.com/appcasts/10.12/yasu.xml'
-  else
-    version '5.0.1,701'
-    sha256 '1fee2a849d9473b3d4776cf275ba48403a9b2c641077d4f4b61cd331d7f6459f'
+  elsif MacOS.version <= :high_sierra
+    version '5.0.2,702'
+    sha256 '7c0b72e59a137467259ba140024f4d93eae599d09ffe7acb71c2c8f7790530b5'
     url "https://yasuformac.com/appcasts/10.13/yasuformac_#{version.after_comma}.zip",
         user_agent: :fake
     appcast 'https://yasuformac.com/appcasts/10.13/yasu.xml'
+  else
+    version '6.0.1,801'
+    sha256 '18c1efbf6db86c7791017aae2ea72d0d1b4f153ec1e867b48b687b3252927582'
+    url "https://yasuformac.com/appcasts/10.14/yasuformac_#{version.after_comma}.zip",
+        user_agent: :fake
+    appcast 'https://yasuformac.com/appcasts/10.14/yasu.xml'
   end
 
   name 'Yasu'

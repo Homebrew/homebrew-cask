@@ -1,6 +1,6 @@
 cask 'xca' do
-  version '2.1.1'
-  sha256 'd376bba09657477a20b89b324154c7a76bd3360df37488153727f5d0861a857f'
+  version '2.1.2'
+  sha256 '1cb7d23045ef64b2c30ce927a40d4bcae20b776aa0c94e067029b3b6be63bc49'
 
   # github.com/chris2511/xca was verified as official when first introduced to the cask
   url "https://github.com/chris2511/xca/releases/download/RELEASE.#{version}/xca-#{version}.dmg"

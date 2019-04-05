@@ -1,6 +1,6 @@
 cask 'sabaki' do
-  version '0.35.1'
-  sha256 'c70229f75ced3b45d5b1b79224fdda3eceadcda352f50c2c4815c7043b192951'
+  version '0.43.1'
+  sha256 '84b1c02ae8facc7cfb884233df39e82e5b37e33daf9dee119281428f24e271fa'
 
   # github.com/SabakiHQ/Sabaki was verified as official when first introduced to the cask
   url "https://github.com/SabakiHQ/Sabaki/releases/download/v#{version}/sabaki-v#{version}-mac-x64.7z"

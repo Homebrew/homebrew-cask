@@ -3,6 +3,7 @@ cask 'wraparound' do
   sha256 '6b7626af484bc6070cb822197dbe22014b3a1433ac072caf57d5272ada2437f2'
 
   url "https://www.digicowsoftware.com/downloads/Wraparound#{version}.zip"
+  appcast 'https://www.digicowsoftware.com/detail?_app=Wraparound'
   name 'Wraparound'
   homepage 'https://www.digicowsoftware.com/detail?_app=Wraparound'
 

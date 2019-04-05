@@ -8,4 +8,8 @@ cask 'ionic-lab' do
   homepage 'https://lab.ionic.io/'
 
   app 'Ionic Lab.app'
+
+  caveats do
+    discontinued
+  end
 end

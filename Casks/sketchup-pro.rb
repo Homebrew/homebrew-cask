@@ -1,63 +1,63 @@
 cask 'sketchup-pro' do
-  version '2018'
+  version '19.0.684,2019'
 
   language 'de' do
-    sha256 '8c8d6d7d76530acdcf5e7adc142d6bef95e44599caf9d90e32ae33baa8a279f4'
+    sha256 'd8f72144e0a69bffbf651d30b6ee0f430904151cd3f9baebe599b41b827dca5b'
     'de'
   end
 
   language 'en', default: true do
-    sha256 '8550613522db048fd2542f96ce84ab2439dfd4b46b663dca0c490e53742dbb7a'
+    sha256 '2b6256d90db763cb4ba9b2cfa0823373bc48401004249a6580094b2bf8f57294'
     'en'
   end
 
   language 'es' do
-    sha256 '3ad389c2df4c86bb96bdb002770847fcb346b13820b96fd8c8af00813cb12916'
+    sha256 'c1e937a4ce7f0bfd47ea716c945ba01aaa0b0fb944691e459fadb96aaec77b5e'
     'es'
   end
 
   language 'fr' do
-    sha256 '4cab13f768f239d2b44eeeead8d81957c1d5fd6b6cac891fe46d17d3e69f870d'
+    sha256 '6159a8f4cb9e9cfc16d482fdc012831adfd36fce7cca1fc6cca4be83e8646f7e'
     'fr'
   end
 
   language 'it' do
-    sha256 '9403f031d6e94060bd7268cd466b2db32f69289857157ef673903fa0fa49c29f'
+    sha256 '2a55ddf1bac89a8679a028e5bbba5b2c97782e7957d1b0eae9161bf654fe08ff'
     'it'
   end
 
   language 'ja' do
-    sha256 '083d35f1f08e8680dc46525a901b69dfc52f3462361d6aea05c7cd78e731c2b2'
+    sha256 '7807b581222e691ed62e52f07a6b73a646e6a6d49226d1c5a9c1cfcb7c5938e3'
     'ja'
   end
 
   language 'ko' do
-    sha256 'ed4619b3f53d9a48792b37cc23201edbb23e9dad06bc80692e1c1a0ef31e8cf9'
+    sha256 'b50821624137bbb8684e3bf417a4c51b864a118a44da660aff3c9a7b18f530a1'
     'ko'
   end
 
   language 'pt-BR' do
-    sha256 'b0775fda5c4b89b2bc1704525660cd70e096ed3e13e06d67873d5931174513e5'
+    sha256 '1d3420c01dbc0412b71641c6fb3eea24bba479ccac15188ef00ee11cedc3e8ee'
     'pt-BR'
   end
 
   language 'ru' do
-    sha256 'd2d63dc53a5a63193516d911b4b9410f8e28aceea28d74815ff86aac9f65841d'
+    sha256 '404e6a54f5c19f5de219c2d5a6d66e03fbf38bfc675842d138e369135a84ffad'
     'ru'
   end
 
   language 'sv' do
-    sha256 'c444454b7e88c0dfe56aa669141b5b243bbc864cf0dec164685a5fb9892bed23'
+    sha256 'b38802b24ef913ede21fb3bb5db8f36ab45e73627444cd327884c7adfa9cccdc'
     'sv'
   end
 
   language 'zh-CN' do
-    sha256 '922ece75366b2f12406b82f8bf9c4777f2ed811b434b66da7a265e2d18f7ecaf'
+    sha256 'cedd3c71f1a770ba5ea05473ae796564487358c5bd6bf1146ae4a8f581369161'
     'zh-CN'
   end
 
   language 'zh-TW' do
-    sha256 '13643fd1836820095ae01cb425096cd5df156b488a65c9813c4484573f246176'
+    sha256 '9d86ab385c16dc7cc529317f9604d8808f9f1ca5db1e8a6c60855c112c594749'
     'zh-TW'
   end
 
@@ -66,10 +66,10 @@ cask 'sketchup-pro' do
   name 'SketchUp'
   homepage 'https://www.sketchup.com/'
 
-  suite "SketchUp #{version}"
+  suite "SketchUp #{version.after_comma}"
 
   zap trash: [
-               "~/Library/Application Support/SketchUp #{version}",
-               "~/Library/Caches/com.sketchup.SketchUp.#{version}",
+               "~/Library/Application Support/SketchUp #{version.after_comma}",
+               "~/Library/Caches/com.sketchup.SketchUp.#{version.after_comma}",
              ]
 end

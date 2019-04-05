@@ -1,6 +1,6 @@
 cask 'simpholders' do
-  version '3.0.2,2193'
-  sha256 'dad98153c02153591d67b45af06021fe9481fbf6eba0f42e8cfb7b0ea9288583'
+  version '3.0.4,2220'
+  sha256 '341a6f795e3ae10359361bc758c0d36672acee08ef8bbb0b3d34d18d2d2c2030'
 
   url "https://simpholders.com/site/assets/files/#{version.after_comma}/simpholders_#{version.before_comma.dots_to_underscores}.dmg"
   appcast 'https://simpholders.com/releases/'

@@ -4,6 +4,7 @@ cask 'itunes-volume-control' do
 
   # uni-bonn.de/alberti/iTunesVolumeControl was verified as official when first introduced to the cask
   url "http://quantum-technologies.iap.uni-bonn.de/alberti/iTunesVolumeControl/iTunesVolumeControl-v#{version}.zip"
+  appcast 'http://quantum-technologies.iap.uni-bonn.de/alberti/iTunesVolumeControl/iTunesVolumeControlCast.xml.php'
   name 'iTunes Volume Control'
   homepage 'https://github.com/alberti42/iTunes-Volume-Control'
 

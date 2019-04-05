@@ -1,6 +1,6 @@
 cask 'franz' do
-  version '5.0.0-beta.18'
-  sha256 'b964a1976948b7af71147659a4651f7576859fb6fdc8020288f44f0351841099'
+  version '5.0.1'
+  sha256 '653a7fbe75f8ab32fa0a1345e7bb19c88cd49b5444b1e17a37fb4d6bab28d4a4'
 
   # github.com/meetfranz/franz was verified as official when first introduced to the cask
   url "https://github.com/meetfranz/franz/releases/download/v#{version}/franz-#{version}.dmg"
@@ -8,7 +8,12 @@ cask 'franz' do
   name 'Franz'
   homepage 'https://meetfranz.com/'
 
+  auto_updates true
+
   app 'Franz.app'
+
+  uninstall quit:       'com.meetfranz.franz.*',
+            login_item: 'Franz'
 
   zap trash: [
                '~/Library/Application Support/Franz',

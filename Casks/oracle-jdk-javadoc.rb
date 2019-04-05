@@ -1,31 +1,22 @@
 cask 'oracle-jdk-javadoc' do
-  version '11.0.1,13:90cf5d8f270a4347a95050320eef3fb7'
-  sha256 '6255d96128898b8dd3c65d84d9732e47d633879aff4345a5dd8d41bfffdd2199'
+  version '11.0.2,9:f51449fcd52f4d52b93a989c5c56ed3c'
+  sha256 '8723e26bf097b4b9375851338270870d3b5ef1a3843f0631597adb9039308083'
 
   url "https://download.oracle.com/otn-pub/java/jdk/#{version.before_comma}+#{version.after_comma.before_colon}/#{version.after_colon}/jdk-#{version.before_comma}_doc-all.zip",
       cookies: {
                  'oraclelicense' => 'accept-securebackup-cookie',
                }
-  name 'Java Standard Edition Development Kit Documentation'
+  name 'Oracle Java Standard Edition Development Kit Documentation'
   homepage "https://www.oracle.com/technetwork/java/javase/documentation/jdk#{version.major}-doc-downloads-4417029.html"
 
-  postflight do
-    `/usr/libexec/java_home -v #{version.before_comma} -X | grep -B0 -A1 JVMHomePath | sed -n -e 's/[[:space:]]*<string>\\(.*\\)<\\/string>/\\1/p'`.split("\n").each do |path|
-      system_command '/bin/cp',
-                     args: ['-rp', "#{staged_path}/docs", "#{path}/"],
-                     sudo: true
-    end
-  end
+  artifact 'docs', target: "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents/Home/docs"
 
-  uninstall_postflight do
-    `/usr/libexec/java_home -v #{version.before_comma} -X | grep -B0 -A1 JVMHomePath | sed -n -e 's/[[:space:]]*<string>\\(.*\\)<\\/string>/\\1/p'`.split("\n").each do |path|
-      next unless File.exist?("#{path}/docs")
-
-      system_command '/bin/rm',
-                     args: ['-rf', "#{path}/docs"],
-                     sudo: true
-    end
-  end
+  uninstall rmdir: [
+                     "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents/Home",
+                     "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents",
+                     "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk",
+                     '/Library/Java/JavaVirtualMachines',
+                   ]
 
   caveats do
     license 'https://www.oracle.com/technetwork/java/javase/terms/license/index.html'

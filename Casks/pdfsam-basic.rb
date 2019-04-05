@@ -1,6 +1,6 @@
 cask 'pdfsam-basic' do
-  version '3.3.7'
-  sha256 '74cdfb48751f30a60cd241ed19bf1af7714a2e3dc257125b3db589d899c1b9d3'
+  version '4.0.1'
+  sha256 '36abf2a92602b12a30ac278283876703b9519e90f70e159ee507693193df6560'
 
   # github.com/torakiki/pdfsam was verified as official when first introduced to the cask
   url "https://github.com/torakiki/pdfsam/releases/download/v#{version}/PDFsam-#{version}.dmg"
@@ -8,5 +8,7 @@ cask 'pdfsam-basic' do
   name 'PDFsam Basic'
   homepage 'https://www.pdfsam.org/'
 
-  app 'PDFsam Basic.app'
+  pkg "PDFsam Basic-#{version}.pkg"
+
+  uninstall pkgutil: 'org.pdfsam.basic'
 end

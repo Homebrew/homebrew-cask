@@ -3,6 +3,7 @@ cask 'mailpluginfix' do
   sha256 '811cf27322a08d4ddbc4780c78cf34ea07595a269902b62ccdcdb6ac00142cf3'
 
   url "https://code2k.net/app/MailPluginFix-#{version}.zip"
+  appcast 'https://code2k.net/app/MailPluginFix.xml'
   name 'MailPluginFix'
   homepage 'https://code2k.net/products/mailpluginfix/'
 

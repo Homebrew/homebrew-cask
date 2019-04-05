@@ -1,15 +1,14 @@
 cask 'devonthink-pro' do
-  version '2.10.1'
-  sha256 'b27c7cf75f470d26ca64d9d09c74961ff7b48c06f6bb32dcc6756075678267fb'
+  version '2.11.3'
+  sha256 '5e754263357b50d0148674b5ad13b66522f86424f90c9cd9c8af9d3f7f1ffcca'
 
   # amazonaws.com/DTWebsiteSupport was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/devonthink/#{version}/DEVONthink_Pro.app.zip"
-  appcast 'http://www.devon-technologies.com/fileadmin/templates/filemaker/sparkle.php?product=300030707&format=xml'
+  appcast 'https://api.devontechnologies.com/1/apps/sparkle/sparkle.php?id=300030707'
   name 'DEVONthink Pro'
-  homepage 'https://www.devontechnologies.com/products/devonthink/devonthink-pro.html'
+  homepage 'https://www.devontechnologies.com/apps/devonthink'
 
   auto_updates true
-  depends_on macos: '>= :mavericks'
 
   app 'DEVONthink Pro.app'
 end

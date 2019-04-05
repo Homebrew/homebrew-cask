@@ -1,6 +1,6 @@
 cask 'losslesscut' do
-  version '1.14.0'
-  sha256 'ae2d672271b48900f8f75c46e4c8663c810bb3be5ddb4b69259ef0b69ea546c0'
+  version '2.1.0'
+  sha256 '3d8bb0f24b84053066c7e2c36e76926808e163933a0453746f7345bc3f96b653'
 
   url "https://github.com/mifi/lossless-cut/releases/download/v#{version}/LosslessCut-darwin-x64.zip"
   appcast 'https://github.com/mifi/lossless-cut/releases.atom'

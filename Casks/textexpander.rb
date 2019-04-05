@@ -1,6 +1,6 @@
 cask 'textexpander' do
-  version '6.2.7'
-  sha256 'a0489a644f0499c0d98051bb7213647d09a602d0f1d0e11173cfbee3fea834b6'
+  version '6.5'
+  sha256 '3eff50977d81e85d805883b7dd75d52450d705c66d572e96f192204931820086'
 
   # cdn.textexpander.com/mac was verified as official when first introduced to the cask
   url "https://cdn.textexpander.com/mac/TextExpander_#{version}.zip"
@@ -9,6 +9,7 @@ cask 'textexpander' do
   homepage 'https://smilesoftware.com/TextExpander'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'TextExpander.app'
 

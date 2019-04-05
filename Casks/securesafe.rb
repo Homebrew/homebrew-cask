@@ -1,10 +1,12 @@
 cask 'securesafe' do
-  version '2.4.4'
-  sha256 '9d326dc606b334f4380eb755399d82c836cd8754a4f41239e946b2be909dda05'
+  version '2.4.7'
+  sha256 '7d72c69dd6c3708996de379a74a599f82509c2733d6189d5ba6e72e01ada2cc5'
 
   url "https://www.securesafe.com/downloads/SecureSafe_#{version}.pkg"
   name 'SecureSafe'
   homepage 'https://www.securesafe.com/'
+
+  depends_on macos: '>= :sierra'
 
   pkg "SecureSafe_#{version}.pkg"
 

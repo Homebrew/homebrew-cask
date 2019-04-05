@@ -1,6 +1,6 @@
 cask 'flinto' do
-  version '26.1'
-  sha256 '1b0cdcc381ad6e2ba11cfd566dd3119d9476c46b9f6a3a8832d2e14efd36c969'
+  version '26.2.3'
+  sha256 '8fbadb660a4185c29166caa82371dd9bee4c6779820a7d13c08c60ea6ae7b348'
 
   url "https://www.flinto.com/assets/Flinto-#{version}.dmg"
   appcast 'https://www.flinto.com/appcast.rss'

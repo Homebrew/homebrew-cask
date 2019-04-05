@@ -1,10 +1,9 @@
 cask 'aether' do
-  version '1.2.3'
-  sha256 '04ca7fbd693bda438436b46315616660ff123ec9d817d802c8c14dcb13711338'
+  version '2.0.0-dev.11,1902221558.a6b3c4a8'
+  sha256 '6cf1807ef39f7b8da1034fb1140acc467aee9eadaaf36c567dbcbda70aa9e77f'
 
-  # github.com/nehbit/aether was verified as official when first introduced to the cask
-  url "https://github.com/nehbit/aether/releases/download/v#{version}-OSX/Aether.#{version}.dmg"
-  appcast 'https://github.com/nehbit/aether/releases.atom'
+  url "https://static.getaether.net/Releases/Aether-#{version.before_comma}/#{version.after_comma}/mac/Aether-#{version.before_comma}%2B#{version.after_comma}.dmg"
+  appcast 'https://static.getaether.net/WebsiteReleaseLinks/Latest/LatestReleaseLinks.json'
   name 'Aether'
   homepage 'https://getaether.net/'
 

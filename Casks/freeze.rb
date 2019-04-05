@@ -1,6 +1,6 @@
 cask 'freeze' do
-  version '3.7'
-  sha256 '10bfd0e1a47ef13f10311a962d5aed7cee34ea1637884fa80bc9dc80dfb03b2a'
+  version '3.9'
+  sha256 '16a2d2e9dfb3d339162fbffef26a8fd2457a8eb8a9140b14abbb2b89bd992450'
 
   url 'https://www.freezeapp.net/download/Freeze.zip'
   appcast 'https://www.freezeapp.net/appcast.xml'

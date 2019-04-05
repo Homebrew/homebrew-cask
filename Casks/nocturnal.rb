@@ -1,6 +1,6 @@
 cask 'nocturnal' do
-  version '0.2.1'
-  sha256 '97c0672b815bdf678e80a4585e3cf73844c0927fcfcd2beea4a00adcb197bb85'
+  version '0.3'
+  sha256 'a66c59daa1d1c59e5403aee4eb868a3967f1bdb4d90033fa3ee692bffd7db0b9'
 
   url "https://github.com/HarshilShah/Nocturnal/releases/download/#{version}/Nocturnal.zip"
   appcast 'https://github.com/HarshilShah/Nocturnal/releases.atom'

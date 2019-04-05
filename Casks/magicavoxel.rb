@@ -1,11 +1,11 @@
 cask 'magicavoxel' do
-  version '0.99.1-alpha'
-  sha256 'a1dac17cc9a8062e29cc7e584d5be1213d4a73df8b94d8ec4b2d737232d3a78f'
+  version '0.99.3'
+  sha256 'd7c09a0178d4fd8b6484eae479b2b8f2daf60b8a0b39ba418981846906924e49'
 
-  # 192.241.207.218/uploads was verified as official when first introduced to the cask
-  url "http://192.241.207.218/uploads/MagicaVoxel-#{version}-mac.zip"
+  # dropbox.com/s/abh4jkiopcbuzep was verified as official when first introduced to the cask
+  url "https://www.dropbox.com/s/abh4jkiopcbuzep/MagicaVoxel-#{version}-alpha-macos.zip?dl=1"
   name 'MagicaVoxel'
   homepage 'https://ephtracy.github.io/'
 
-  suite "MagicaVoxel-#{version}-mac"
+  suite staged_path, target: 'MagicaVoxel'
 end

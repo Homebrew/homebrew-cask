@@ -1,6 +1,6 @@
 cask 'panoply' do
-  version '4.9.5'
-  sha256 '8307539d50855df97b83262d8270fdca9c1883a1e0cb614ceba5399f104fe1b4'
+  version '4.10.4'
+  sha256 '6d77cd8e214f941105039e07e27ed72237899116497503a5a00718406b56abe9'
 
   url "https://www.giss.nasa.gov/tools/panoply/download/PanoplyMacOS-#{version}.dmg"
   name 'Panoply netCDF, HDF and GRIB Data Viewer'

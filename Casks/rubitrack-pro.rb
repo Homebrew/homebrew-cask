@@ -1,13 +1,13 @@
 cask 'rubitrack-pro' do
-  version '5.1'
-  sha256 '1b2096f3b6144430d34d7a93180a95cb849852fe51d3301d184f8934e78fd129'
+  version '5.2'
+  sha256 '2cd46f437af3271a3e3ab1285a8a5ea310782a75fadb1d8e4f1536b0c0252e9d'
 
   url "https://www.rubitrack.com/files/rubiTrack-#{version}.dmg"
   appcast "https://www.rubitrack.com/autoupdate/sparkle#{version.major}.xml"
   name 'rubiTrack'
   homepage 'https://www.rubitrack.com/'
 
-  depends_on macos: '>= :yosemite'
+  depends_on macos: '>= :sierra'
 
   app "rubiTrack #{version.major} Pro.app"
 end

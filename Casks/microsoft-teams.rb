@@ -1,13 +1,15 @@
 cask 'microsoft-teams' do
-  version '1.1.00.26352'
-  sha256 '9ab0e656ebcbab18712152f0932ad8462dc9c270ea83cde5c4eba5ada658768c'
+  version '1.2.00.3961'
+  sha256 'ca1f0040e2815fc51a04be0caf7c085df10c7d4009ace9808bb680dcf613fd71'
 
-  url "https://statics.teams.microsoft.com/production-osx/#{version}/Teams_osx.dmg"
+  url "https://statics.teams.microsoft.com/production-osx/#{version}/Teams_osx.pkg"
   appcast 'https://teams.microsoft.com/downloads/DesktopUrl?env=production&plat=osx'
   name 'Microsoft Teams'
   homepage 'https://teams.microsoft.com/downloads'
 
   auto_updates true
 
-  app 'Microsoft Teams.app'
+  pkg 'Teams_osx.pkg'
+
+  uninstall pkgutil: 'com.microsoft.teams'
 end

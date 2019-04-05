@@ -3,6 +3,7 @@ cask 'printer-pro' do
   sha256 '15f863b950c60e78032d3abc3a5a69d840d35e84c7f4a113e3c9e986959c313b'
 
   url "https://support.readdle.com/ppd/PrinterProDesktop-#{version.dots_to_underscores}.dmg"
+  appcast 'https://api.readdle.com/up/print/mac_appcast.xml'
   name 'Printer Pro Desktop'
   homepage 'https://support.readdle.com/ppd/'
 

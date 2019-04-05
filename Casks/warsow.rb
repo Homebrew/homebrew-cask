@@ -4,6 +4,7 @@ cask 'warsow' do
 
   # sebastian.network/warsow was verified as official when first introduced to the cask
   url "http://sebastian.network/warsow/warsow-#{version}.dmg"
+  appcast 'https://www.warsow.net/bundles/client.bundle.js'
   name 'Warsow'
   homepage 'https://www.warsow.net/'
 

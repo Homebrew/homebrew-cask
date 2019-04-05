@@ -7,8 +7,6 @@ cask 'management-tools' do
   name 'Management Tools'
   homepage 'https://github.com/univ-of-utah-marriott-library-apple/management_tools'
 
-  depends_on macos: '>= :mountain_lion'
-
   pkg "Management Tools [#{version}].pkg"
 
   uninstall pkgutil: 'edu.utah.scl.management-tools'

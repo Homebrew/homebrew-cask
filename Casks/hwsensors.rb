@@ -7,8 +7,6 @@ cask 'hwsensors' do
   name 'HWSensors'
   homepage 'https://github.com/kozlek/HWSensors/'
 
-  auto_updates true
-
   pkg "HWSensors.#{version}.pkg"
 
   uninstall login_item: 'HWMonitor',

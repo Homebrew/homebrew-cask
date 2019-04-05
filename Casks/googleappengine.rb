@@ -1,12 +1,12 @@
 cask 'googleappengine' do
-  version '1.9.77'
-  sha256 '6922db04d9c6a222af61bcc0884dc26b8ad751c879463a8e4f8a2191be7e1a65'
+  version '1.9.84'
+  sha256 '222226649685d31703a4771faf48f5bbb546bc267bd36750c5ec5917fc2dd7ff'
 
   # storage.googleapis.com/appengine-sdks was verified as official when first introduced to the cask
   url "https://storage.googleapis.com/appengine-sdks/featured/GoogleAppEngineLauncher-#{version}.dmg"
   appcast 'https://storage.googleapis.com/appengine-sdks'
   name 'Google App Engine'
-  homepage 'https://cloud.google.com/appengine/'
+  homepage 'https://cloud.google.com/appengine/docs/standard/python/download#appengine_sdk/'
 
   app 'GoogleAppEngineLauncher.app'
 end

@@ -3,6 +3,7 @@ cask 'xmrouter' do
   sha256 '3d1fafcc09b501aa25d698988b6667ad820dd75eee22635661bd76d597f77e10'
 
   url "https://bigota.miwifi.com/xiaoqiang/client/XMRouter-#{version}.dmg"
+  appcast 'http://miwifi.com/miwifi_download.html'
   name 'xmrouter'
   name 'miwifi'
   name '小米路由器'

@@ -6,7 +6,5 @@ cask 'lightning' do
   name 'FileWave Lightning'
   homepage 'https://www.filewave.com/products/imaging/lightning-thunderbolt'
 
-  depends_on macos: '>= :lion'
-
   app 'Lightning.app'
 end

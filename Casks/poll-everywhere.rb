@@ -1,6 +1,6 @@
 cask 'poll-everywhere' do
-  version '2.17.0'
-  sha256 'fddfe9efe8c9df77529234095ec815e4ea3db8b784460ecd6fc439724bf1b39d'
+  version '2.20.0'
+  sha256 '55a514352ebf18ca48b0a197841a369500b36f8eddcb16bdd196eccf0f8f8b95'
 
   # amazonaws.com/polleverywhere-app was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/polleverywhere-app/mac-stable/#{version}/pollev.dmg"

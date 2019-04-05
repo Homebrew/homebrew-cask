@@ -8,4 +8,8 @@ cask 'apptrap' do
   homepage 'http://onnati.net/apptrap/'
 
   prefpane 'AppTrap.prefPane'
+
+  uninstall login_item: 'AppTrap'
+
+  zap trash: '~/Library/Preferences/com.KumaranVijayan.AppTrap.prefpanel.plist'
 end

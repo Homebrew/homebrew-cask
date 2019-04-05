@@ -1,8 +1,9 @@
 cask 'mousepose' do
-  version '3.2.7'
-  sha256 '05a3c5175206e971b386a75cd28e51873fdff6c47e24c5673a8116af127d336c'
+  version '4.0,10187'
+  sha256 '3030c80001f73f8b1cdd466783dd6f99238f6c2fcbf935fd88448d1ea391ffa6'
 
-  url "https://cdn.boinx.com/software/mousepose/Boinx_Mousepose_#{version}-10878.app.zip"
+  url "https://cdn.boinx.com/software/mousepose/Boinx_Mousepose_#{version.before_comma}-#{version.after_comma}.app.zip"
+  appcast 'https://sparkle.boinx.com/appcast.lasso?appName=mousepose'
   name 'Mouseposé'
   homepage 'https://boinx.com/mousepose/overview/'
 

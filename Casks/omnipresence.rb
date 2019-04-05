@@ -11,10 +11,9 @@ cask 'omnipresence' do
   end
 
   url "https://downloads.omnigroup.com/software/MacOSX/#{version.after_comma}/OmniPresence-#{version.before_comma}.dmg"
+  appcast 'https://update.omnigroup.com/appcast/com.omnigroup.OmniPresence'
   name 'OmniPresence'
   homepage 'https://www.omnigroup.com/omnipresence'
-
-  depends_on macos: '>= :mavericks'
 
   app 'OmniPresence.app'
 end

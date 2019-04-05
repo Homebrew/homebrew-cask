@@ -1,6 +1,6 @@
 cask 'vmware-fusion' do
-  version '11.0.0-10120384'
-  sha256 '883ac0e2999454b916dcdd78d7bcc4431e2739a98574af01410e70146332966d'
+  version '11.0.3-12992109'
+  sha256 'a0b5dc276d10572731fc0cb6e964219b4d243d837178b82a503a4383a7852ca5'
 
   url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version}.dmg"
   appcast 'https://softwareupdate.vmware.com/cds/vmw-desktop/fusion.xml'
@@ -8,6 +8,7 @@ cask 'vmware-fusion' do
   homepage 'https://www.vmware.com/products/fusion.html'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'VMware Fusion.app'
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmnet-bridge"
@@ -18,6 +19,7 @@ cask 'vmware-fusion' do
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmnet-netifup"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmnet-sniffer"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmrun"
+  binary "#{appdir}/VMware Fusion.app/Contents/Library/vmrest"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmss2core"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-aewp"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-authd"

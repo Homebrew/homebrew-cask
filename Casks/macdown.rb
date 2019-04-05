@@ -9,7 +9,6 @@ cask 'macdown' do
   homepage 'https://macdown.uranusjr.com/'
 
   auto_updates true
-  depends_on macos: '>= :mountain_lion'
 
   app 'MacDown.app'
   binary "#{appdir}/MacDown.app/Contents/SharedSupport/bin/macdown"

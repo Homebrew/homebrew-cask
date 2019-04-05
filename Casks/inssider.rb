@@ -4,6 +4,7 @@ cask 'inssider' do
 
   # metageek.net was verified as official when first introduced to the cask
   url "http://files.metageek.net/downloads/inSSIDer#{version.major}-installer.dmg"
+  appcast 'https://metageek.com/misc/versions/MacSSIDer/MacSSIDer_appcast.xml'
   name 'inSSIDer'
   homepage 'https://www.metageek.com/products/inssider/'
 

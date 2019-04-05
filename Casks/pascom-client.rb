@@ -1,10 +1,12 @@
 cask 'pascom-client' do
-  version '7.18.00.R'
-  sha256 'd7ba387aeae826c5e7c229cdf272ec623a8e16ab9dfb22dbf4256888558b98cb'
+  version '49.R265_fd7caf5'
+  sha256 '50fa2a50e1ec854dd465aad652103911724aa797eba2048fdfa2118b81e30687'
 
   url "https://download.pascom.net/release-archive/client/stable/pascom%20Client-#{version}.dmg"
   name 'pascom Client'
   homepage 'https://www.pascom.net/'
+
+  depends_on macos: '>= :sierra'
 
   app 'pascom Client.app'
 end

@@ -6,8 +6,6 @@ cask 'deespeaker' do
   name 'DOTEC-AUDIO DeeSpeaker'
   homepage 'https://dotec-audio.com/deespeaker.html'
 
-  depends_on macos: '>= :lion'
-
   audio_unit_plugin 'AudioUnit/DeeSpeaker.component'
   vst_plugin 'VST/DeeSpeaker.vst'
 end

@@ -7,5 +7,7 @@ cask 'banktivity' do
   name 'Banktivity'
   homepage 'https://www.iggsoftware.com/banktivity/'
 
+  depends_on macos: '>= :high_sierra'
+
   app "Banktivity #{version}.app"
 end

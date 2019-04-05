@@ -1,9 +1,9 @@
 cask 'master-key' do
-  version '6.0.0.3.48'
-  sha256 '4c939a5c25f1d0ac90a1c98d919906d502871b1001726093400af5896989ec68'
+  version '6.1.1.3.60'
+  sha256 '1c6e6366af24c631fadbb9ece2045313c28ae8ffb9798fc1052c3e00b28288ff'
 
   url "https://macinmind.com/MasterKey#{version.major}.dmg"
-  appcast 'https://macinmind.com/pads/MasterKeyappcast.xml'
+  appcast 'https://macinmind.com/pads/MasterKeyappcast2.xml'
   name 'Master Key'
   homepage 'https://macinmind.com/?area=app&app=masterkey&pg=info'
 

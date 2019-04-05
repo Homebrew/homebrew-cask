@@ -1,6 +1,6 @@
 cask 'dockstation' do
-  version '1.4.1'
-  sha256 'e95606d7d780acb0b663c168348ddd1eeaf2810ea3d4a6639f81bc63bfe68606'
+  version '1.5.0'
+  sha256 '3afc653f45e29495db7f9c60a2f533b3a1f715a538c4176d659df6e17486fe20'
 
   # github.com/DockStation/dockstation was verified as official when first introduced to the cask
   url "https://github.com/DockStation/dockstation/releases/download/v#{version}/dockstation-#{version}.dmg"

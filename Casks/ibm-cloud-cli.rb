@@ -1,6 +1,6 @@
 cask 'ibm-cloud-cli' do
-  version '0.10.1'
-  sha256 'f452bf56d606c7dbc75445307aa7ddee7709505cf557ef29fc072bbadd9fa31c'
+  version '0.14.0'
+  sha256 'e69ab58d8204e59c7514c61ceb77f043b3fec600ad385ae8f1c5da5fccda97d3'
 
   # public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli was verified as official when first introduced to the cask
   url "https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/#{version}/IBM_Cloud_CLI_#{version}.pkg"
@@ -8,6 +8,10 @@ cask 'ibm-cloud-cli' do
   name 'Bluemix-CLI'
   name 'IBM Cloud CLI'
   homepage 'https://clis.ng.bluemix.net/ui/home.html'
+
+  depends_on cask: 'docker'
+  depends_on formula: 'kubectl'
+  depends_on formula: 'kubernetes-helm'
 
   pkg "IBM_Cloud_CLI_#{version}.pkg"
 
@@ -49,10 +53,14 @@ cask 'ibm-cloud-cli' do
 
   uninstall pkgutil: 'com.ibm.cloud.cli',
             delete:  [
-                       '/usr/local/Bluemix',
                        '/usr/local/bin/bluemix',
+                       '/usr/local/bin/bx',
                        '/usr/local/bin/bluemix-analytics',
+                       '/usr/local/Bluemix',
+                       '/usr/local/ibmcloud',
                      ]
+
+  zap trash: '~/.bluemix'
 
   caveats do
     files_in_usr_local

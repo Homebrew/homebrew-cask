@@ -23,7 +23,9 @@ cask 'itsycal' do
   name 'Itsycal'
   homepage 'https://www.mowglii.com/itsycal/'
 
-  depends_on macos: '>= :mountain_lion'
-
   app 'Itsycal.app'
+
+  uninstall login_item: 'Itsycal'
+
+  zap trash: '~/Library/Preferences/com.mowglii.ItsycalApp.plist'
 end
