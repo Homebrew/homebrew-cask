@@ -8,4 +8,8 @@ cask 'guppy' do
   homepage 'https://github.com/joshwcomeau/guppy'
 
   app 'Guppy.app'
+
+  zap trash: [
+               '~/Library/Application Support/Guppy',
+             ]
 end
