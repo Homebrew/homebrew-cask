@@ -7,5 +7,7 @@ cask 'houdahspot' do
   name 'HoudahSpot'
   homepage 'https://www.houdah.com/houdahSpot/'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'HoudahSpot.app'
 end
