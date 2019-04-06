@@ -9,7 +9,5 @@ cask 'guppy' do
 
   app 'Guppy.app'
 
-  zap trash: [
-               '~/Library/Application Support/Guppy',
-             ]
+  zap trash: '~/Library/Application Support/Guppy'
 end
