@@ -251,16 +251,30 @@ $ git status
 #       Casks/my-new-cask.rb
 ```
 
-So far, so good. Now make a feature branch that you’ll use in your pull request:
+So far, so good. Now make a feature branch `my-new-cask-branch` that you’ll use in your pull request:
 
 ```bash
-$ git checkout -b my-new-cask
-Switched to a new branch 'my-new-cask'
+$ git checkout -b my-new-cask-branch
+Switched to a new branch 'my-new-cask-branch'
 ```
 
-Stage your Cask with `git add Casks/my-new-cask.rb`. You can view the changes that are to be committed with `git diff --cached`.
+Stage your Cask with: 
 
-Commit your changes with `git commit -v`.
+```bash
+$ git add Casks/my-new-cask.rb
+``` 
+
+You can view the changes that are to be committed with: 
+
+```bash
+$ git diff --cached
+```
+
+Commit your changes with: 
+
+```bash
+$ git commit -v
+```
 
 ### Commit Messages
 
@@ -290,19 +304,38 @@ Examples of difficult, unclear commit summaries:
 
 ### Pushing
 
-Push your changes to your GitHub account:
+Push your changes from the branch `my-new-cask-branch` to your GitHub account:
 
 ```bash
-$ git push <my-github-username> my-new-cask
+$ git push {{my-github-username}} my-new-cask-branch
 ```
 
 If you are using [GitHub two-factor authentication](https://help.github.com/articles/about-two-factor-authentication/) and set your remote repository as HTTPS you will need to set up a personal access token and use that instead of your password. Further information [here](https://help.github.com/articles/https-cloning-errors/#provide-access-token-if-2fa-enabled).
 
 ### Filing a Pull Request on GitHub
 
-Now go to the [`homebrew-cask` GitHub repository](https://github.com/Homebrew/homebrew-cask). GitHub will often show your `my-new-cask` branch with a handy button to `Compare & pull request`. Otherwise, click the `New pull request` button and choose to `compare across forks`. The base fork should be `Homebrew/homebrew-cask @ master`, and the head fork should be `my-github-username/homebrew-cask @ my-new-cask`. You can also add any further comments to your pull request at this stage.
+#### a) suggestion from git push
 
-Congratulations! You are done now, and your Cask should be pulled in or otherwise noticed in a while. If a maintainer suggests some changes, just make them on the `my-new-cask` branch locally and [push](#pushing).
+The `git push` command prints a suggestion to create a pull request:
+
+```
+remote: Create a pull request for 'new-cask-cask' on GitHub by visiting:                                          
+remote:      https://github.com/{{my-github-username}}/homebrew-cask/pull/new/my-new-cask-branch
+```
+
+#### b) use suggestion at Github website
+
+Now go to the [`homebrew-cask` GitHub repository](https://github.com/Homebrew/homebrew-cask). GitHub will often show your `my-new-cask-branch` branch with a handy button to `Compare & pull request`. 
+
+
+#### c) manually create a pull request at Github website
+
+Otherwise, click the `New pull request` button and choose to `compare across forks`. The base fork should be `Homebrew/homebrew-cask @ master`, and the head fork should be `my-github-username/homebrew-cask @ my-new-cask-branch`. You can also add any further comments to your pull request at this stage.
+
+
+#### Congratulations! 
+
+You are done now, and your Cask should be pulled in or otherwise noticed in a while. If a maintainer suggests some changes, just make them on the `my-new-cask-branch` branch locally and [push](#pushing).
 
 ## Cleaning up
 
@@ -312,3 +345,10 @@ After your Pull Request is submitted, you should get yourself back onto `master`
 cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask
 git checkout master
 ```
+
+if you set the variable `HOMEBREW_NO_AUTO_UPDATE` then clean it up with:
+
+```bash
+unset HOMEBREW_NO_AUTO_UPDATE
+```
+
