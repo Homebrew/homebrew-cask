@@ -5,7 +5,7 @@ cask 'kvirc' do
   url "ftp://ftp.kvirc.net/pub/kvirc/#{version}/binary/macosx/KVIrc-#{version}.dmg"
   appcast 'https://github.com/kvirc/KVIrc/releases.atom'
   name 'KVIrc'
-  homepage 'http://www.kvirc.de/'
+  homepage 'https://www.kvirc.de/'
 
   app 'KVIrc.app'
 
