@@ -1,11 +1,11 @@
 cask 'webplotdigitizer' do
-  version '4.1'
-  sha256 '76718f04d95aadcc5e41e4d1e7e7a602aa82ed165a49c28c48f50695ee376ee3'
+  version '4.2'
+  sha256 'bbaf390df2732260313c898a9f12c812b9174089277d6a6fd625d44c1ca7d6f9'
 
   url "https://automeris.io/downloads/WebPlotDigitizer-#{version}-darwin-x64.zip"
   appcast 'https://github.com/ankitrohatgi/WebPlotDigitizer/releases.atom'
   name 'WebPlotDigitizer'
   homepage 'https://automeris.io/WebPlotDigitizer/'
 
-  app 'WebPlotDigitizer-darwin-x64/WebPlotDigitizer.app'
+  app "WebPlotDigitizer-#{version}-darwin-x64/WebPlotDigitizer-#{version}.app"
 end
