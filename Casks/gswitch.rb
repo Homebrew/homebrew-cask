@@ -4,7 +4,7 @@ cask 'gswitch' do
 
   # github.com/CodySchrank/gSwitch was verified as official when first introduced to the cask
   url "https://github.com/CodySchrank/gSwitch/releases/download/#{version}/gSwitch.zip"
-  appcast 'https://raw.githubusercontent.com/CodySchrank/gSwitch/master/appcast.xml'
+  appcast 'https://github.com/CodySchrank/gSwitch/releases.atom'
   name 'gSwitch'
   homepage 'https://codyschrank.github.io/gSwitch/'
 
