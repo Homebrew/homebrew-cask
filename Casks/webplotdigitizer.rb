@@ -7,5 +7,5 @@ cask 'webplotdigitizer' do
   name 'WebPlotDigitizer'
   homepage 'https://automeris.io/WebPlotDigitizer/'
 
-  app 'WebPlotDigitizer-darwin-x64/WebPlotDigitizer-#{version}.app'
+  app "WebPlotDigitizer-darwin-x64/WebPlotDigitizer-#{version}.app"
 end
