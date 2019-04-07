@@ -1,6 +1,6 @@
 cask 'texshop' do
   version '4.27'
-  sha256 'ca5ee8a95c28c0e38d0c4c4ef9ca29afadb9bab8cc8825bcb28cbd162b295f5f'
+  sha256 '7561f91accaa9127ce60c35dcb7093014aa786b59dd0771494cf71fe2e488890'
 
   url "https://pages.uoregon.edu/koch/texshop/texshop-64/texshop#{version.no_dots}.zip"
   appcast 'https://pages.uoregon.edu/koch/texshop/texshop-64/texshopappcast.xml'
