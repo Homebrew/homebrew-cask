@@ -3,6 +3,7 @@ cask 'jmetrik' do
   sha256 'a6b7fa7870232f9bf615704c810c8046b3b5ebc02ec3a920fb96e0f255b61321'
 
   url "https://itemanalysis.com/jmetrik/v#{version.dots_to_underscores}/jmetrik_macos_#{version.dots_to_underscores}_java7.dmg"
+  appcast 'https://itemanalysis.com/jmetrik-download/'
   name 'jMetrik'
   homepage 'http://itemanalysis.com/'
 
