@@ -8,7 +8,7 @@ cask 'pydiosync' do
 
   pkg 'PydioSync-Setup.pkg'
 
-  uninstall launchctl: 'io.pyd.sync*',
+  uninstall launchctl: 'PydioSync*',
             pkgutil:   'io.pyd.sync.installer.PydioSync'
 
   zap trash: [
