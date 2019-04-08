@@ -7,4 +7,8 @@ cask 'igv' do
   homepage 'https://software.broadinstitute.org/software/igv/'
 
   app "IGV_#{version}.app"
+
+  caveats do
+    depends_on_java '8+'
+  end
 end
