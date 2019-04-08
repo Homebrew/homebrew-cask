@@ -8,11 +8,10 @@ cask 'pydiosync' do
 
   pkg 'PydioSync-Setup.pkg'
 
-  uninstall pkgutil: 'io.pyd.sync.installer.PydioSync'
+  uninstall launchctl: 'io.pyd.sync*',
+            pkgutil:   'io.pyd.sync.installer.PydioSync'
 
   zap trash: [
-               'Library/LaunchAgents/io.pyd.sync.launcher.plist',
-               'Library/LaunchAgents/io.pyd.sync.ui.plist',
                '~/Library/Preferences/io.pyd.sync.PydioTray',
                '~/Library/Caches/com.pydio.pydioswiftsync',
                '~/Library/Group Containers/PydioSync.pydio',
