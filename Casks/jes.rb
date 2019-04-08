@@ -5,7 +5,7 @@ cask 'jes' do
   url "https://github.com/gatech-csl/jes/releases/download/#{version}/jes-#{version}-macosx.zip"
   appcast 'https://github.com/gatech-csl/jes/releases.atom'
   name 'JES'
-  homepage 'https://github.com/gatech-csl/jes'
+  homepage 'https://github.com/gatech-csl/jes/'
 
   app 'JES.app'
 end
