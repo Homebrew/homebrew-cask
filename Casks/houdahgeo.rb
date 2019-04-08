@@ -1,6 +1,6 @@
 cask 'houdahgeo' do
   version '5.2.3'
-  sha256 '954725c475367c8d6f65c258b8da5d1d50ce9680eadfe96a3f445329153ff166'
+  sha256 '4198474d6b0f7c7ea76f9da44a6b2e5757d76bfba102ff6acc9e1153c8528d63'
 
   url "https://www.houdah.com/houdahGeo/download_assets/HoudahGeo#{version}.zip"
   appcast 'https://www.houdah.com/houdahGeo/updates/cast5.xml'
