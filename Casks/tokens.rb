@@ -1,6 +1,6 @@
 cask 'tokens' do
-  version '1.6.4-69'
-  sha256 'c677ebe19256191ee6bbb54ed59499fbef25faa9530eaa6b2ec4c8b51b262a9a'
+  version '1.6.5-71'
+  sha256 '318a2d95ee8c7751c213ef9aab5f8574940e653ce9cb3ea897580350a23fe5d9'
 
   # peerassembly.net/apps/tokens was verified as official when first introduced to the cask
   url "https://peerassembly.net/apps/tokens/#{version}/Tokens.zip"
