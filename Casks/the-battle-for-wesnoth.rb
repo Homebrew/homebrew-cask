@@ -1,4 +1,4 @@
-cask 'wesnoth' do
+cask 'the-battle-for-wesnoth' do
   version '1.14.6'
   sha256 'da59233f1e3648fc2aa8931dd8d472a6097a09c3bf2fe45895c2cad62f107fc0'
 
