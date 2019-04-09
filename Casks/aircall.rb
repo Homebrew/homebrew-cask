@@ -1,6 +1,6 @@
 cask 'aircall' do
-  version '1.7.2'
-  sha256 '25af5980165ab52d9765f5b65b7e76f5b4a2f0c42627ea0aa5538c0933a8b499'
+  version '2.0.3'
+  sha256 'a2d54e29815b78df501877c68bf3f233d0df58407f22929bfbb7f0ad47a9cdac'
 
   # s3-us-west-1.amazonaws.com/aircall-electron-releases was verified as official when first introduced to the cask
   url "https://s3-us-west-1.amazonaws.com/aircall-electron-releases/production/Aircall-#{version}-mac.zip"
@@ -10,5 +10,5 @@ cask 'aircall' do
 
   auto_updates true
 
-  app 'Aircall.app'
+  app 'mac/Aircall.app'
 end
