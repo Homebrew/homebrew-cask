@@ -1,6 +1,6 @@
 cask 'vaudtax' do
   version '2018'
-  sha256 '6592a8cacd1c89feec0c2e72d9138623f6ebba572a8b9b2bfee76c077bda1d1d'
+  sha256 '5daffb28efadf1bd9413f7280075d39c023b0750616908642bcbcb60d65061e6'
 
   url "https://vaudtax-dl.vd.ch/vaudtax#{version}/telechargement/mac/VaudTax_#{version}.dmg"
   name 'VaudTax'
