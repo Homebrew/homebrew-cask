@@ -1,11 +1,11 @@
 cask 'speechify' do
-  version '2.1.5'
-  sha256 '4975f2f7eb61f722694f56ecd2301b937162cdabff487184a674d5fcefb18bfd'
+  version '2.2.2'
+  sha256 '2cdf671843f27c39b04021150847d9cb954998ef789b884976dffaf230f015a9'
 
   url 'https://getspeechify.com/Speechify.zip'
   appcast 'https://getspeechify.com/appcast.xml'
   name 'Speechify'
-  homepage 'https://getspeechify.com/'
+  homepage 'https://www.getspeechify.com/'
 
   app 'Speechify.app'
 
