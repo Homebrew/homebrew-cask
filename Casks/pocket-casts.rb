@@ -7,5 +7,7 @@ cask 'pocket-casts' do
   name 'Pocket Casts'
   homepage 'https://play.pocketcasts.com/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Pocket Casts.app'
 end
