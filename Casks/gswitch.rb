@@ -8,5 +8,7 @@ cask 'gswitch' do
   name 'gSwitch'
   homepage 'https://codyschrank.github.io/gSwitch/'
 
+  depends_on macos: '>= :sierra'
+
   app 'gSwitch.app'
 end
