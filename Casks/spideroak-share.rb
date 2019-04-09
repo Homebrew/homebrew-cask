@@ -1,4 +1,4 @@
-cask 'share' do
+cask 'spideroak-share' do
   version :latest
   sha256 :no_check
 
