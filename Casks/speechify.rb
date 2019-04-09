@@ -5,7 +5,7 @@ cask 'speechify' do
   url 'https://getspeechify.com/Speechify.zip'
   appcast 'https://getspeechify.com/appcast.xml'
   name 'Speechify'
-  homepage 'https://getspeechify.com/'
+  homepage 'https://www.getspeechify.com/'
 
   app 'Speechify.app'
 
