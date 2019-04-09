@@ -1,6 +1,6 @@
 cask 'wireshark-chmodbpf' do
-  version '3.0.0'
-  sha256 '4f7667b4ed52997726e1c25277b11582440ef46498f0680928780b9fe0535881'
+  version '3.0.1'
+  sha256 '78bd0568251d95f42f3ea60cfc4d2e8e14bb76745c10cafec418f5fa0943cf64'
 
   url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20Intel%2064.dmg"
   appcast 'https://www.wireshark.org/download/osx/'
