@@ -1,6 +1,6 @@
 cask 'wordcounter' do
-  version '1.4.1'
-  sha256 'f4b6a7b0134af96bbbaa7a7a4f0c21d9736b3a3b75f664984d55b2d576d3428b'
+  version '1.4.3'
+  sha256 '4ee401160b28f5b7b39cb9e59bcf2b3fcf3b56b68ab7cced4093c5825864d406'
 
   # update.christiantietze.de/wordcounter was verified as official when first introduced to the cask
   url "https://update.christiantietze.de/wordcounter/v#{version.major}/WordCounter-v#{version}.zip"
