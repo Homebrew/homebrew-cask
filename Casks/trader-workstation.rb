@@ -7,13 +7,13 @@ cask 'trader-workstation' do
   homepage 'https://www.interactivebrokers.com/'
 
   installer script: {
-                      executable: "#{staged_path}/Trader Workstation 974 Installer.app/Contents/MacOS/JavaApplicationStub",
+                      executable: "#{staged_path}/Trader Workstation 975 Installer.app/Contents/MacOS/JavaApplicationStub",
                       args:       ['-q'],
                     }
 
   uninstall quit:   'com.install4j.5889-6375-8446-2021.22',
             script: {
-                      executable: "#{ENV['HOME']}/Applications/Trader Workstation 974/Trader Workstation 974 Uninstaller.app/Contents/MacOS/JavaApplicationStub",
+                      executable: "#{ENV['HOME']}/Applications/Trader Workstation 975/Trader Workstation 975 Uninstaller.app/Contents/MacOS/JavaApplicationStub",
                       args:       ['-q'],
                     }
 end
