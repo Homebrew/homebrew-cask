@@ -1,6 +1,6 @@
 cask 'mandrake' do
-  version '3.2'
-  sha256 'f828625c31d2f031bc00836e0e9e6a69d59e7f2aa9d480d4c459bc85e20ab191'
+  version '3.3'
+  sha256 '55d137f32c5f34200b05e26b601963f2bcefc0332a4c80e62af6131bdd3cb4c7'
 
   url "https://sveinbjorn.org/files/software/mandrake/ManDrake-#{version}.zip"
   appcast 'https://sveinbjorn.org/files/appcasts/ManDrakeAppcast.xml'
