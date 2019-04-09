@@ -8,5 +8,5 @@ cask 'wesnoth' do
   name 'The Battle for Wesnoth'
   homepage 'https://wesnoth.org/'
 
-  app 'Wesnoth.app'
+  app 'The Battle for Wesnoth.app'
 end
