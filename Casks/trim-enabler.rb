@@ -1,9 +1,9 @@
 cask 'trim-enabler' do
-  version '4.1.2,15:1541950648'
+  version '4.1.2,15.41950648'
   sha256 '70fd71f38d8e3a11ab7238224808e125bebf390f0dea040a629003a075152b37'
 
   # dl.devmate.com/org.cindori.TrimEnabler4 was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/org.cindori.TrimEnabler4/#{version.after_comma.before_colon}/#{version.after_colon}/TrimEnabler-#{version.after_comma.before_colon}.zip"
+  url "https://dl.devmate.com/org.cindori.TrimEnabler4/#{version.after_comma.major}/#{version.after_comma.no_dots}/TrimEnabler-#{version.after_comma.major}.zip"
   appcast "https://updates.devmate.com/org.cindori.TrimEnabler#{version.major}.xml"
   name 'Trim Enabler'
   homepage 'https://cindori.org/trimenabler/'
