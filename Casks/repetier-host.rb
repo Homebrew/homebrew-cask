@@ -7,5 +7,5 @@ cask 'repetier-host' do
   name 'Repetier-Host'
   homepage 'https://www.repetier.com/'
 
-  app 'Repetier-Host Mac.app'
+  app 'Repetier-Host-Mac.app'
 end
