@@ -1,6 +1,6 @@
 cask 'butler' do
-  version '4.3.1'
-  sha256 'e1e6231a6e3c812e84e2eaed6250a38f332efef32c7a034cd1f2303c4794c913'
+  version '4.3.2'
+  sha256 'c2da20da2befe4ed4262bf77b6e6da5d1ca7449b0f7fd4af64d16cea6f4f1637'
 
   url 'https://manytricks.com/download/butler'
   appcast 'https://manytricks.com/butler/appcast'
