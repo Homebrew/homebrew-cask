@@ -9,6 +9,7 @@ cask 'jedit-omega' do
 
   # artman21.co.jp was verified as official when first introduced to the cask
   url "http://download.artman21.co.jp/product/JeditOmega/JeditOmega#{version.no_dots}.dmg"
+  appcast 'http://www.artman21.com/en/jeditOmega/history.html'
   name 'Jedit Ω'
   homepage 'http://www.artman21.com/en/jeditOmega/'
 

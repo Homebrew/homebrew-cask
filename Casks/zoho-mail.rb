@@ -1,6 +1,6 @@
 cask 'zoho-mail' do
-  version '1.0.12'
-  sha256 '47e98f1ec76cf9ed8cd397464068824bf6b9ac0c88adf83bc7ef1c4ccd149d4f'
+  version '1.0.13'
+  sha256 'cc88a4187405492d5687681b46255cad4b72e02fc6d1116a14a3e74ebf727671'
 
   url "https://www.zoho.com/mail/desktop/mac/zoho-mail-desktop-installer-v#{version}.dmg"
   appcast 'https://www.zoho.com/mail/desktop/artifacts.json'

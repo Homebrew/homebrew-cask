@@ -1,4 +1,4 @@
-cask 'share' do
+cask 'spideroak-share' do
   version :latest
   sha256 :no_check
 
@@ -8,7 +8,7 @@ cask 'share' do
 
   depends_on macos: '>= :sierra'
 
-  app 'Share.app'
+  app 'SpiderOak Share.app'
 
   zap trash: [
                '~/Library/Logs/Share',

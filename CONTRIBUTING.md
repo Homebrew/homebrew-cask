@@ -48,7 +48,7 @@ $ git remote add "${github_user}" "https://github.com/${github_user}/homebrew-ca
 
 Notice an application that's not in Homebrew Cask yet? Make sure it's not yet in [Homebrew/cask-versions](https://github.com/Homebrew/homebrew-cask-versions) or [Homebrew/core](https://github.com/Homebrew/homebrew-core) (can be searched with `brew search`). Mac App Store apps can't be installed via Homebrew Cask, but check out [mas](https://github.com/mas-cli/mas) for an alternative.
 
-With a bit of work, you can create a Cask for it. [This document](doc/development/adding_a_cask.md) will walk you through creating a new Cask, testing it, and submitting it to us.
+With a bit of work, you can create a Cask for it. The document [Adding A Cask](doc/development/adding_a_cask.md) will help you create, test, and submit a new Cask to us.
 
 
 ## Style guide
