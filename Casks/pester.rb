@@ -7,5 +7,7 @@ cask 'pester' do
   name 'Pester'
   homepage 'https://sabi.net/nriley/software/index.html#pester'
 
+  depends_on macos: '>= :sierra'
+
   app 'Pester.app'
 end
