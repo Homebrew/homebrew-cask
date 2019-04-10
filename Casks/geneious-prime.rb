@@ -1,6 +1,6 @@
 cask 'geneious-prime' do
-  version '2019.0.4'
-  sha256 '1fe25d0171fa2b3b6bc57ca4680c63bb26d8e78f4f6b21eaaade0f9cfdb78c7f'
+  version '2019.1.1'
+  sha256 '7700c954c56a473e3c1d5b7f3af4347118bb24220bdc88d881e9e7e0a4f08972'
 
   url "https://assets.geneious.com/installers/geneious/release/Geneious_Prime_mac64_#{version.dots_to_underscores}_with_jre.dmg"
   name 'Geneious Prime'
