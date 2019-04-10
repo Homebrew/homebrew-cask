@@ -7,5 +7,7 @@ cask 'pock' do
   name 'Pock'
   homepage 'https://pock.pigigaldi.com/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Pock.app'
 end
