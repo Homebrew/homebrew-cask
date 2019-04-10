@@ -8,6 +8,8 @@ cask 'rstudio' do
   name 'RStudio'
   homepage 'https://www.rstudio.com/'
 
+  depends_on macos: '>= :sierra'
+
   app 'RStudio.app'
 
   zap trash: '~/.rstudio-desktop'
