@@ -1,6 +1,6 @@
 cask 'crypho' do
-  version '4.1.3'
-  sha256 '9cec4de034eeba00f867f05e9d4a678193e6cee6a669685435d6918cb9e6272e'
+  version '4.1.4'
+  sha256 'e6b254dbe36e2456f0cb0947fa7400e7f706bbeb054862ff64d15424c732b73a'
 
   url "https://www.crypho.com/downloads/desktop/Crypho-#{version}.dmg"
   appcast 'https://www.crypho.com/download/'
