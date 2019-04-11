@@ -6,5 +6,5 @@ cask 'bink-player' do
   name 'Bink Video Player'
   homepage 'http://www.radgametools.com/bnkdown.htm'
 
-  app 'Bink Player.app'
+  app 'BinkMacIntelPlayer.app'
 end
