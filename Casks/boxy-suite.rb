@@ -2,7 +2,6 @@ cask 'boxy-suite' do
   version :latest
   sha256 :no_check
 
-  # Check curl -Lv https://accounts.boxysuite.com/redirect/download_suite output to verify:
   # boxyteam-static.s3.amazonaws.com was verified as official when first introduced to the cask
   url 'https://boxyteam-static.s3.amazonaws.com/release/Boxy%20Suite.dmg'
   name 'Boxy Suite'
