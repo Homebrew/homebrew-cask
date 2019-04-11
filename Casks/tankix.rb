@@ -1,6 +1,6 @@
 cask 'tankix' do
-  version 'visual1-39890'
-  sha256 'c540ac2b6d044cecc3b622d0cc13e03bd7e560cea8ee72a967f3006eafcef8ec'
+  version 'visual3-40493'
+  sha256 'bccdfa37464c64087e132380427db4b7aced4c79544bf622d09b686185603110'
 
   url "http://static.tankix.com/app/StandaloneOSXIntel64/#{version}/TankiX.dmg"
   appcast 'https://tankix.com/en/download/'
