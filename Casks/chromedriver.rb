@@ -8,5 +8,7 @@ cask 'chromedriver' do
   name 'ChromeDriver'
   homepage 'https://sites.google.com/a/chromium.org/chromedriver/home'
 
+  conflicts_with cask: 'chromedriver-beta'
+
   binary 'chromedriver'
 end
