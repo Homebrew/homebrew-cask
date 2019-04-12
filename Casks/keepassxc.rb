@@ -7,6 +7,8 @@ cask 'keepassxc' do
   appcast 'https://github.com/keepassxreboot/keepassxc/releases.atom'
   name 'KeePassXC'
   homepage 'https://keepassxc.org/'
+  
+  auto_updates true
 
   app 'KeePassXC.app'
   binary "#{appdir}/KeePassXC.app/Contents/MacOS/keepassxc-cli"
