@@ -1,6 +1,6 @@
 cask 'torrent-file-editor' do
-  version '0.3.13'
-  sha256 'b8136b13a3a3106164f443a4a8dcc69870f460d17af011f5e321b78f6f7c261f'
+  version '0.3.14'
+  sha256 '241ede91bbd4ee233d5c11ef5f63825a0fd6f13eeaa4e53028ae159b80f1a8a5'
 
   url "https://downloads.sourceforge.net/torrent-file-editor/v#{version}/torrent-file-editor-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/torrent-file-editor/rss'
