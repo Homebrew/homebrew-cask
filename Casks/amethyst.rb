@@ -17,6 +17,8 @@ cask 'amethyst' do
   appcast 'https://ianyh.com/amethyst/appcast.xml'
   name 'Amethyst'
   homepage 'https://ianyh.com/amethyst/'
+  
+  auto_updates true
 
   app 'Amethyst.app'
 
