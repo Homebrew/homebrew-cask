@@ -1,4 +1,4 @@
-cask 'advanced-rest-client' do
+cask 'advancedrestclient' do
   version '13.0.4'
   sha256 '061499c9eac8deb9c27b27f68bbaba131ded696487833353b890291e65543f5a'
 
