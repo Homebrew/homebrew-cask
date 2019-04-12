@@ -1,13 +1,13 @@
-cask 'audirvana-plus' do
-  version '3.2.16'
-  sha256 '2ecb8cfdfabc274a9285839982e78f26ba3028f8a5a0d5d5588af1919ccaa11b'
+cask 'audirvana' do
+  version '3.5'
+  sha256 'df54107959fc6a7f8eb64ed1866add7cf78f2a2527fff8de9ec89767b3a7b9b9'
 
-  url "https://audirvana.com/delivery/AudirvanaPlus_#{version}.dmg"
-  appcast "https://audirvana.com/delivery/audirvanaplus#{version.major}_appcast.xml"
-  name "Audirvana Plus #{version.major}"
+  url "https://audirvana.com/delivery/Audirvana_#{version}.dmg"
+  appcast "https://audirvana.com/delivery/audirvanaplus#{version.major}_#{version.minor}_appcast.xml"
+  name 'Audirvana'
   homepage 'https://audirvana.com/'
 
-  app 'Audirvana Plus.app'
+  app 'Audirvana.app'
 
   zap trash: [
                '/Library/LaunchDaemons/com.audirvana.Audirvana-Plus.plist',
