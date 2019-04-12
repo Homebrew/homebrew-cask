@@ -1,4 +1,4 @@
-cask 'audirvana-plus' do
+cask 'audirvana' do
   version '3.5'
   sha256 'df54107959fc6a7f8eb64ed1866add7cf78f2a2527fff8de9ec89767b3a7b9b9'
 
