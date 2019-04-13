@@ -4,7 +4,7 @@ cask 'ibabel' do
 
   url 'https://macinchem.org/ibabel/iBabel.zip'
   name 'iBabel'
-  homepage 'https://www.macinchem.org/ibabel/ibabel3_6.php'
+  homepage 'https://www.macinchem.org/ibabel/'
 
   app 'iBabel.app'
 end
