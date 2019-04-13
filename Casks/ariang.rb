@@ -7,5 +7,5 @@ cask 'ariang' do
   name 'AriaNg Native'
   homepage 'https://github.com/mayswind/AriaNg-Native'
 
-  app 'AriaNg.app'
+  app 'AriaNg Native.app'
 end
