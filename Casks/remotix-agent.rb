@@ -14,5 +14,7 @@ cask 'remotix-agent' do
             pkgutil:    [
                           'com.nuana.rxagentmac.daemon',
                           'com.nulana.rxagentmac',
-                        ]
+                        ],
+            launchctl:  'com.nulana.rxagentmac.daemon',
+            delete:     '/Library/LaunchAgents/com.nulana.rxagentmac.user.plist'
 end
