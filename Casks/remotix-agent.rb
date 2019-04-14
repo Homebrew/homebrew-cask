@@ -23,5 +23,8 @@ cask 'remotix-agent' do
                           'com.nuana.rxagentmac.daemon',
                           'com.nulana.rxagentmac',
                         ],
-            delete:     '/Library/LaunchAgents/com.nulana.rxagentmac.user.plist'
+            delete:     [
+                          '/Library/LaunchAgents/com.nulana.rxagentmac.user.plist',
+                          '/Library/LaunchDaemons/com.nulana.rxagentmac.daemon.plist',
+                        ]
 end
