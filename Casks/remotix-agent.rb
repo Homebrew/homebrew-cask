@@ -10,11 +10,18 @@ cask 'remotix-agent' do
 
   pkg 'RemotixAgent.pkg'
 
-  uninstall login_item: 'Remotix Agent',
+  uninstall launchctl:  [
+                          'com.nulana.rxagentmac.daemon',
+                          'com.nulana.rxagentmac.user',
+                        ],
+            quit:       [
+                          'com.nulana.rxagentmac.*',
+                          'com.nulana.rxagentmac.user',
+                        ],
+            login_item: 'Remotix Agent',
             pkgutil:    [
                           'com.nuana.rxagentmac.daemon',
                           'com.nulana.rxagentmac',
                         ],
-            launchctl:  'com.nulana.rxagentmac.daemon',
             delete:     '/Library/LaunchAgents/com.nulana.rxagentmac.user.plist'
 end
