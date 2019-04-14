@@ -1,6 +1,6 @@
 cask 'pro-motion-ng' do
-  version '7.1.8'
-  sha256 '270dda804ebb11258ee0694ece791848f76686c68d796786f2a04e8530c89fb0'
+  version '7.2.0'
+  sha256 'f7c9a7977153ffc8a3eb837bea86f96bdb8a0264ea4f16472a6a04564b5f9542'
 
   url 'https://www.cosmigo.com/wp-content/uploads/pro-motion-ng-mac-os.zip'
   appcast 'https://www.cosmigo.com/pixel_animation_software/downloads/mac_linux_downloads'
