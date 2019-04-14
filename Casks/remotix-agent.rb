@@ -11,8 +11,8 @@ cask 'remotix-agent' do
   pkg 'RemotixAgent.pkg'
 
   uninstall pkgutil:    [
+                          'com.nulana.rxagentmac.daemon',
                           'com.nulana.rxagentmac',
-                          'com.nuana.rxagentmac.daemon',
                         ],
             signal:     [
                           ['TERM', 'com.nulana.rxagentmac.user'],
