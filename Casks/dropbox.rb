@@ -1,6 +1,6 @@
 cask 'dropbox' do
-  version :latest
-  sha256 :no_check
+  version '71.3.102'
+  sha256 '78e7cd8319d0997fe4adcfa1960b02f5eafaa4f75114602ce6d0c52b03bb8f72'
 
   url 'https://www.dropbox.com/download?plat=mac&full=1'
   name 'Dropbox'
