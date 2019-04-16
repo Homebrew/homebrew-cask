@@ -1,10 +1,14 @@
 cask 'brauhelfer' do
-  version '1.4.3.2'
-  sha256 '51bfb781be422c42cf80d9bc8716a3ef8612c6df658848eb67cbebc80f80f616'
+  version '1.4.4.5'
+  sha256 '802c915c4b5e74356ab22df5d34748dfa79c3c5490d5abfac6700fb3ef86676f'
 
-  url "http://www.joerum.de/kleiner-brauhelfer/lib/exe/fetch.php?media=download:01_04_03_02:kb_osx_#{version}.dmg"
+  # github.com/realholgi/kleiner-brauhelfer was verified as official when first introduced to the cask
+  url "https://github.com/realholgi/kleiner-brauhelfer/releases/download/v#{version}/kb_macos_v#{version.dots_to_underscores}.zip"
+  appcast 'https://github.com/realholgi/kleiner-brauhelfer/releases.atom'
   name 'Kleiner Brauhelfer'
   homepage 'http://www.joerum.de/kleiner-brauhelfer/doku.php'
 
-  app 'brauhelfer.app'
+  app 'kleiner-brauhelfer.app'
+
+  zap trash: 'brauhelfer.app'
 end
