@@ -1,6 +1,6 @@
 cask 'spotify' do
-  version :latest
-  sha256 :no_check
+  version '1.1.4.197.g92d52c4f'
+  sha256 '1a24517567bcda501493a7f6db2708c2b1de9e34599d838d03b8ec0bf2145c27'
 
   # scdn.co was verified as official when first introduced to the cask
   url 'https://download.scdn.co/Spotify.dmg'
