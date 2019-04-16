@@ -1,4 +1,4 @@
-cask 'brauhelfer' do
+cask 'kleiner-brauhelfer' do
   version '1.4.4.5'
   sha256 '802c915c4b5e74356ab22df5d34748dfa79c3c5490d5abfac6700fb3ef86676f'
 
