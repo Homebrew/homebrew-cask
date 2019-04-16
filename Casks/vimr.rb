@@ -9,7 +9,7 @@ cask 'vimr' do
   homepage 'http://vimr.org/'
 
   auto_updates true
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :high_sierra'
 
   app 'VimR.app'
   binary "#{appdir}/VimR.app/Contents/Resources/vimr"
