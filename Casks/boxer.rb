@@ -8,5 +8,7 @@ cask 'boxer' do
   name 'Boxer'
   homepage 'http://boxerapp.com/'
 
+  auto_updates true
+
   app 'Boxer.app'
 end

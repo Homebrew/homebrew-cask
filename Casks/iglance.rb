@@ -7,6 +7,8 @@ cask 'iglance' do
   name 'iGlance'
   homepage 'https://github.com/iglance/iGlance'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'iGlance.app'
 
   zap trash: [

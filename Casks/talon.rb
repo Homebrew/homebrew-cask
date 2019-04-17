@@ -1,6 +1,6 @@
 cask 'talon' do
-  version '100-0.0.8.40'
-  sha256 'e883fba2348bae796b73ff0a94a65f9af937ea936aa89cdae71153a1595664c9'
+  version '101-0.0.8.41'
+  sha256 '222bb22a94ae32521c0fd5df1150ce26ac2edc50c301a5ff493134795a52f347'
 
   url "https://talonvoice.com/update/nmi5s3faoq6NzROd2dbCRg/Talon-#{version}.dmg"
   appcast 'https://talonvoice.com/update/nmi5s3faoq6NzROd2dbCRg/appcast.xml'

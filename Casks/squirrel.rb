@@ -4,7 +4,7 @@ cask 'squirrel' do
 
   # dl.bintray.com/rime/squirrel was verified as official when first introduced to the cask
   url "https://dl.bintray.com/rime/squirrel/Squirrel-#{version}.zip"
-  appcast 'https://rime.github.io/release/squirrel/appcast.xml'
+  appcast 'https://rime.im/release/squirrel/appcast.xml'
   name 'Squirrel'
   homepage 'https://rime.im/'
 

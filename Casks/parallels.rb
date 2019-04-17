@@ -7,6 +7,8 @@ cask 'parallels' do
   name 'Parallels Desktop'
   homepage 'https://www.parallels.com/products/desktop/'
 
+  auto_updates true
+
   app 'Parallels Desktop.app'
 
   postflight do

@@ -1,6 +1,6 @@
 cask 'freefilesync' do
-  version '10.10'
-  sha256 'abee4b820ebe76bb1ad3fbbcb431047c31e2f98bc256ed5a74b1f78ea2d6f01a'
+  version '10.11'
+  sha256 :no_check # required as upstream package is updated in-place
 
   url "https://www.freefilesync.org/download/FreeFileSync_#{version}_macOS.zip",
       user_agent: :fake,
