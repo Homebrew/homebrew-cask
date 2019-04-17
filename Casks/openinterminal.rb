@@ -8,6 +8,4 @@ cask 'openinterminal' do
   homepage 'https://github.com/Ji4n1ng/OpenInTerminal'
 
   app 'OpenInTerminal.app'
-
-  zsp trash: 'icons'
 end
