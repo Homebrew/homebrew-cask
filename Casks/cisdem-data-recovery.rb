@@ -7,5 +7,7 @@ cask 'cisdem-data-recovery' do
   name 'Cisdem Data Recovery'
   homepage 'https://www.cisdem.com/data-recovery-mac.html'
 
+  depends_on macos: '>= :sierra'
+
   app 'Cisdem Data Recovery.app'
 end
