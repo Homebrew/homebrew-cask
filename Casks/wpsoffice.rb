@@ -4,6 +4,7 @@ cask 'wpsoffice' do
 
   # package.mac.wpscdn.cn was verified as official when first introduced to the cask
   url "http://package.mac.wpscdn.cn/mac_wps_pkg/#{version.major_minor_patch}/WPS_Office_#{version}.dmg"
+  appcast 'https://www.wps.cn/product/wpsmac/'
   name 'WPS Office'
   homepage 'https://www.wps.cn/product/wpsmac/'
 
