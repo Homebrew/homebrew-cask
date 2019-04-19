@@ -1,6 +1,6 @@
 cask 'deezer' do
-  version '4.3.4'
-  sha256 '61e099bb5c10ce7a13284f94ef93488fea5f5d8728bb08408c9c9c49f4a252df'
+  version '4.5.3'
+  sha256 'd269a0896d6c587fe18bf49fc8f2f3ad5d3ba95745066af092737af3eaac3246'
 
   url "https://www.deezer.com/desktop/download/artifact/darwin/x64/#{version}"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.deezer.com/desktop/download%3Fplatform%3Ddarwin%26architecture=x64'

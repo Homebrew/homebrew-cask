@@ -1,6 +1,6 @@
 cask 'cartographica' do
-  version '1.4.8'
-  sha256 '82fed47a4da82dcb149d8337db219037e23389f359b8f0c5e24568126c1dea5d'
+  version '1.4.9'
+  sha256 '1a24dc0cf71c7f31ae4e663de6101c4e1b9083508a3fa3d2a9c575ec97988a47'
 
   # cluetrust.com was verified as official when first introduced to the cask
   url 'https://www.cluetrust.com/Downloads/Cartographica.dmg'

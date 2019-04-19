@@ -3,8 +3,8 @@ cask 'bbedit' do
     version '12.1.6'
     sha256 '23b9fc6ef5c03cbcab041566503c556d5baf56b2ec18f551e6f0e9e6b48dc690'
   else
-    version '12.6.2'
-    sha256 'c34191fc50459c9f0023ceeb3db57429e3d20c7dbffdbcfa22345a3f3c5bf6d8'
+    version '12.6.3'
+    sha256 'bef74d582905ede2d90bebb410603fca7d8403e620087bc3d2da3df518492996'
   end
   # s3.amazonaws.com/BBSW-download was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/BBSW-download/BBEdit_#{version}.dmg"

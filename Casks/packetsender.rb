@@ -8,5 +8,7 @@ cask 'packetsender' do
   name 'Packet Sender'
   homepage 'https://packetsender.com/'
 
+  depends_on macos: '>= :sierra'
+
   app 'PacketSender.app'
 end

@@ -7,6 +7,8 @@ cask 'busycontacts' do
   name 'BusyContacts'
   homepage 'https://www.busymac.com/busycontacts/index.html'
 
+  auto_updates true
+
   pkg 'BusyContacts Installer.pkg'
 
   uninstall pkgutil: 'com.busymac.busycontacts.pkg',

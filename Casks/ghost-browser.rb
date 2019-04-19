@@ -1,6 +1,6 @@
 cask 'ghost-browser' do
-  version '2.1.0.4'
-  sha256 '992ef683b55d2d2e0f0eef52469b840e8ad6f318a5074137cd425263e669fc11'
+  version '2.1.0.6'
+  sha256 '17c24adf295b3d1fb2270af874eccd0ea0f9e093ffaf35f7b851aff2bed759b0'
 
   # ghostbrowser.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://ghostbrowser.s3.amazonaws.com/downloads/GhostBrowser-#{version}.dmg"

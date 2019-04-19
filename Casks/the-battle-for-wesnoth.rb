@@ -1,6 +1,6 @@
-cask 'wesnoth' do
-  version '1.14.5'
-  sha256 'df4b728c896e0927f5e1caa0fb07da701830205f1c01682b90ac14927019a965'
+cask 'the-battle-for-wesnoth' do
+  version '1.14.6'
+  sha256 'da59233f1e3648fc2aa8931dd8d472a6097a09c3bf2fe45895c2cad62f107fc0'
 
   # sourceforge.net/wesnoth was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/wesnoth/Wesnoth_#{version}.dmg"
@@ -8,5 +8,5 @@ cask 'wesnoth' do
   name 'The Battle for Wesnoth'
   homepage 'https://wesnoth.org/'
 
-  app 'Wesnoth.app'
+  app 'The Battle for Wesnoth.app'
 end

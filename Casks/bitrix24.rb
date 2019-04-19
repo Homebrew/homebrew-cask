@@ -1,7 +1,7 @@
 cask 'bitrix24' do
   # note: "24" is not a version number, but an intrinsic part of the product name
-  version '6.0.80'
-  sha256 '17211ff29676e74ba2ad3745cb1aa73dbfb1a77f472dc82312545c1258525ff9'
+  version '7.0.95'
+  sha256 '7149942929882b1a00c7b65e652249807e0dc03c4078416778c0fe665584a3e7'
 
   url 'http://dl.bitrix24.com/b24/bitrix24_desktop.dmg'
   appcast 'https://www.bitrix24.com/osx_version.php'

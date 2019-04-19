@@ -1,6 +1,6 @@
 cask 'db-browser-for-sqlite' do
-  version '3.11.1v2'
-  sha256 'b0ee5b73b9c6305de79640f651ba59edd32c6a94c2245a2bda01ae8091a69b48'
+  version '3.11.2'
+  sha256 '022536d420dca87285864a4a948b699d01430721b511722bcf9c8713ab946776'
 
   # github.com/sqlitebrowser/sqlitebrowser was verified as official when first introduced to the cask
   url "https://github.com/sqlitebrowser/sqlitebrowser/releases/download/v#{version.major_minor_patch}/DB.Browser.for.SQLite-#{version}.dmg"

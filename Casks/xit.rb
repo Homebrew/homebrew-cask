@@ -7,6 +7,8 @@ cask 'xit' do
   name 'Xit'
   homepage 'https://github.com/Uncommon/Xit'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'Xit.app'
 
   zap trash: [

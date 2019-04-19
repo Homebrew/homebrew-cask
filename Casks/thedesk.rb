@@ -1,12 +1,12 @@
 cask 'thedesk' do
-  version '18.1.1'
-  sha256 '0d4ffd3d086194480e9e6038a969eee651d873bdc7dd5b541da6ba0610618fb3'
+  version '18.2.3'
+  sha256 'b9fe3bfb84776378600a246e806cb189e1abb6cc46696fb0dc429ce675130deb'
 
   # github.com/cutls/TheDesk was verified as official when first introduced to the cask
-  url "https://github.com/cutls/TheDesk/releases/download/m#{version}/TheDesk-darwin-x64.zip"
+  url "https://github.com/cutls/TheDesk/releases/download/#{version}/TheDesk-#{version}.dmg"
   appcast 'https://github.com/cutls/TheDesk/releases.atom'
   name 'TheDesk'
   homepage 'https://thedesk.top/'
 
-  app 'TheDesk-darwin-x64/TheDesk.app'
+  app 'TheDesk.app'
 end

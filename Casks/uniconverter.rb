@@ -1,12 +1,12 @@
-cask 'wondershare-video-converter-ultimate' do
-  version '10.3.2.6,735'
-  sha256 '827eafa4a095f5f2728d199f4c53fd184f3c7d3219ec0c803e97190239bc5570'
+cask 'uniconverter' do
+  version '10.5.0.8,735'
+  sha256 'a1aee6704cdfda186a18c62a2de7d22e0003079260bfb05b1d96de5bd864357e'
 
   url "http://download.wondershare.com/cbs_down/video-converter-ultimate-mac_full#{version.after_comma}.dmg"
-  name 'Wondershare Video Converter Ultimate'
+  name 'UniConverter'
   homepage 'https://videoconverter.wondershare.com/'
 
-  app 'Wondershare Video Converter Ultimate.app'
+  app 'UniConverter.app'
 
   zap trash: [
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.wondershare.video-converter-ultimate.sfl*',

@@ -1,6 +1,6 @@
 cask 'sloth' do
-  version '2.7'
-  sha256 'fdcbfd025bd50910e62c63f6464ddf40d90b75caed1a4a95654a49cc1b0f2ef1'
+  version '2.8.1'
+  sha256 '3596507018a6321226863862bd4377ac388dffdf54ebce1ace50d87869114c0e'
 
   url "https://sveinbjorn.org/files/software/sloth/sloth-#{version}.zip"
   appcast 'https://sveinbjorn.org/files/appcasts/SlothAppcast.xml'

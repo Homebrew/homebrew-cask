@@ -8,6 +8,7 @@ cask 'adobe-dng-converter' do
   end
 
   url "https://download.adobe.com/pub/adobe/dng/mac/DNGConverter_#{version.dots_to_underscores}.dmg"
+  appcast 'https://supportdownloads.adobe.com/product.jsp?product=106&platform=Macintosh'
   name 'Adobe Camera Raw and DNG Converter'
   homepage 'https://supportdownloads.adobe.com/product.jsp?product=106&platform=Macintosh'
 

@@ -1,6 +1,6 @@
 cask 'porting-kit' do
-  version '2.9.606'
-  sha256 'c7f3a0a672817ceed5062e9a1cec5df5adeb637d324ccb1d45aeeaac0aec8d8d'
+  version '2.9.613'
+  sha256 '34b08b5dcfbd39ba57310b15eab15e64445447fe39da63a6ef4d49d1bd3e921a'
 
   url "http://portingkit.com/kit/Porting%20Kit%20#{version}.zip"
   appcast 'http://portingkit.com/kit/updatecast.xml'
