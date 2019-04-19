@@ -1,6 +1,6 @@
 cask 'typora' do
-  version '0.9.9.23.4'
-  sha256 '073bc43c5b5287cd2d36e8b52fddd8cd7b74f5654639d5447ba9a2b54cafb2a5'
+  version '0.9.9.24'
+  sha256 'e07f90963453a04e17bcfbe4f5d8cce9cc2f22076cb0df15ea3b53c4af48a28b'
 
   url "https://www.typora.io/download/Typora-#{version}.dmg"
   appcast 'https://www.typora.io/download/dev_update.xml'
