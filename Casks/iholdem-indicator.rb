@@ -5,7 +5,7 @@ cask 'iholdem-indicator' do
   url 'http://www.iholdemindicator.com/download/iHoldemIndicatorInstaller.pkg'
   appcast 'http://www.iholdemindicator.com/download/sparklerv2.xml'
   name 'iHoldem Indicator'
-  homepage 'https://www.iholdemindicator.com/'
+  homepage 'http://www.iholdemindicator.com/'
 
   pkg 'iHoldemIndicatorInstaller.pkg'
 
