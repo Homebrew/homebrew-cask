@@ -1,16 +1,18 @@
 cask 'adoptopenjdk' do
-  version '11.0.2,9'
-  sha256 'fffd4ed283e5cd443760a8ec8af215c8ca4d33ec5050c24c1277ba64b5b5e81a'
+  version '12,33'
+  sha256 '3b974189c4eb74aa43a365676905f6534faf599075e3910fa6ec3b8ffb101cbf'
 
   # github.com/AdoptOpenJDK was verified as official when first introduced to the cask
-  url "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-#{version.before_comma}%2B#{version.after_comma}/OpenJDK11U-jdk_x64_mac_hotspot_#{version.before_comma}_#{version.after_comma}.tar.gz"
-  appcast 'https://github.com/adoptopenjdk/openjdk11-binaries/releases.atom'
+  url "https://github.com/AdoptOpenJDK/openjdk#{version.before_comma}-binaries/releases/download/jdk-#{version.before_comma}+#{version.after_comma.before_colon}/OpenJDK#{version.before_comma}U-jdk_x64_mac_hotspot_#{version.before_comma}_#{version.after_comma.before_colon}#{version.after_colon}.pkg"
+  appcast "https://github.com/adoptopenjdk/openjdk#{version.before_comma}-binaries/releases.atom"
   name 'AdoptOpenJDK Java Development Kit'
   homepage 'https://adoptopenjdk.net/'
 
-  artifact "jdk-#{version.before_comma}+#{version.after_comma}", target: "/Library/Java/JavaVirtualMachines/adoptopenjdk-#{version.before_comma}.jdk"
+  pkg "OpenJDK#{version.before_comma}U-jdk_x64_mac_hotspot_#{version.before_comma}_#{version.after_comma.before_colon}#{version.after_colon}.pkg"
 
-  uninstall rmdir: '/Library/Java/JavaVirtualMachines'
+  uninstall pkgutil: [
+                       "net.adoptopenjdk.#{version.before_comma}.jdk",
+                     ]
 
   caveats <<~EOS
     More versions are available in the AdoptOpenJDK tap:
