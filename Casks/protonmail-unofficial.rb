@@ -1,6 +1,6 @@
 cask 'protonmail-unofficial' do
-  version '0.5.9'
-  sha256 '789d1e75195cfec1141727aed5b23aec9fb0c67dfa2346058c32982f07b3d745'
+  version '1.0.0'
+  sha256 '33d6e5006c3b16b3c10386b5a41e7c773d710854b9eaae46a75a13d17d1ec7ec'
 
   url "https://github.com/protonmail-desktop/application/releases/download/v#{version}/protonmail-desktop-#{version}.dmg"
   appcast 'https://github.com/protonmail-desktop/application/releases.atom'
