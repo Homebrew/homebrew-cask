@@ -1,6 +1,6 @@
 cask 'lunar' do
-  version '2.3.3'
-  sha256 '4cd97246a8c53ba0f200388f8d2b82c2a465fba95d1fc0e30059203ec33474c2'
+  version '2.4.0'
+  sha256 '95ef701e992a880f3fa3ececd198e62edbcf3e43d94f556fce0ea0c6c86638c0'
 
   # github.com/alin23/Lunar was verified as official when first introduced to the cask
   url "https://github.com/alin23/Lunar/releases/download/v#{version}/Lunar.dmg"
