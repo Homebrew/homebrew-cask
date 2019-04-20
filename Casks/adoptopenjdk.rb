@@ -10,9 +10,7 @@ cask 'adoptopenjdk' do
 
   pkg "OpenJDK#{version.before_comma}U-jdk_x64_mac_hotspot_#{version.before_comma}_#{version.after_comma.before_colon}#{version.after_colon}.pkg"
 
-  uninstall pkgutil: [
-                       "net.adoptopenjdk.#{version.before_comma}.jdk",
-                     ]
+  uninstall pkgutil: "net.adoptopenjdk.#{version.before_comma}.jdk"
 
   caveats <<~EOS
     More versions are available in the AdoptOpenJDK tap:
