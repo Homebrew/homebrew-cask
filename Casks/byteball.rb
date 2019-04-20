@@ -4,7 +4,7 @@ cask 'obyte' do
 
   # github.com/byteball/obyte-gui-wallet was verified as official when first introduced to the cask
   url "https://github.com/byteball/obyte-gui-wallet/releases/download/v#{version}/Obyte-osx64.dmg"
-  appcast 'https://github.com/byteball/obyte-gui-wallet/releases'
+  appcast 'https://github.com/byteball/obyte-gui-wallet/releases.atom'
   name 'Obyte'
   homepage 'https://obyte.org/'
 
