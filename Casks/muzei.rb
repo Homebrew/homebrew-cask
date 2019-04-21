@@ -7,6 +7,8 @@ cask 'muzei' do
   name 'Muzei'
   homepage 'https://github.com/naman14/Muzei-macOS'
 
+  depends_on macos: '>= :sierra'
+
   app 'Muzei.app'
 
   uninstall login_item: 'Muzei',
