@@ -9,7 +9,7 @@ cask 'adoptopenjdk' do
   homepage 'https://adoptopenjdk.net/'
 
   artifact "jdk-#{version.major}+#{version.minor}", target: "/Library/Java/JavaVirtualMachines/adoptopenjdk-#{version.major}.jdk"
-  
+
   uninstall rmdir: '/Library/Java/JavaVirtualMachines'
 
   caveats <<~EOS
