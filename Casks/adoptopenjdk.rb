@@ -8,8 +8,8 @@ cask 'adoptopenjdk' do
   name 'AdoptOpenJDK Java Development Kit'
   homepage 'https://adoptopenjdk.net/'
 
-  pkg "OpenJDK#{version.before_comma}U-jdk_x64_mac_hotspot_#{version.before_comma}_#{version.after_comma.before_colon}#{version.after_colon}.pkg"
-
+  artifact "jdk-#{version.before_comma}+#{version.after_comma}", target: "/Library/Java/JavaVirtualMachines/adoptopenjdk-#{version.before_comma}.jdk"
+  
   uninstall pkgutil: "net.adoptopenjdk.#{version.before_comma}.jdk"
 
   caveats <<~EOS
