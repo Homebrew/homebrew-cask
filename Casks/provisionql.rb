@@ -10,6 +10,6 @@ cask 'provisionql' do
   qlplugin 'ProvisionQL.qlgenerator'
 
   caveats do
-    'To prevent mobileprovision QuickLook override by Xcode - check https://github.com/ealeksandrov/ProvisionQL/issues/20'
+    'To prevent mobileprovision QuickLook override by Xcode: https://github.com/ealeksandrov/ProvisionQL/issues/20'
   end
 end
