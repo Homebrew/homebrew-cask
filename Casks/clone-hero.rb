@@ -1,8 +1,8 @@
 cask 'clone-hero' do
-  version '.22.4'
+  version '0.22.4'
   sha256 'e7aae8ad2b62f47d02ef92fb94d8064980e88e77b9061f58a29acb23b2899438'
 
-  url "http://dl.clonehero.net/clonehero-v#{version}/clonehero-mac.dmg"
+  url "http://dl.clonehero.net/clonehero-v#{version.sub(%r{^[0]*}, '')}/clonehero-mac.dmg"
   name 'Clone Hero'
   homepage 'https://clonehero.net/'
 
