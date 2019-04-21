@@ -7,6 +7,8 @@ cask 'simsim' do
   name 'SimSim'
   homepage 'https://github.com/dsmelov/simsim/'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'SimSim.app'
 
   uninstall quit:       'com.dsmelov.SimSim',
