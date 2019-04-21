@@ -4,7 +4,7 @@ cask 'torrent-file-editor' do
 
   # github.com/torrent-file-editor/torrent-file-editor was verified as official when first introduced to the cask
   url "https://github.com/torrent-file-editor/torrent-file-editor/releases/download/v#{version}/torrent-file-editor-#{version}.dmg"
-  appcast 'https://github.com/torrent-file-editor/torrent-file-editor/releases.atp,'
+  appcast 'https://github.com/torrent-file-editor/torrent-file-editor/releases.atom,'
   name 'Torrent File Editor'
   homepage 'https://torrent-file-editor.github.io/'
 
