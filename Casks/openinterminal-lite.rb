@@ -4,7 +4,7 @@ cask 'openinterminal-lite' do
 
   url "https://github.com/Ji4n1ng/OpenInTerminal/releases/download/#{version}/OpenInTerminal-Lite.zip"
   appcast 'https://github.com/Ji4n1ng/OpenInTerminal/releases.atom'
-  name 'OpenInTerminal'
+  name 'OpenInTerminal-Lite'
   homepage 'https://github.com/Ji4n1ng/OpenInTerminal'
 
   app 'OpenInTerminal-Lite.app'
