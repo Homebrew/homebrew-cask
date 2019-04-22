@@ -1,6 +1,6 @@
 cask 'phd2' do
-  version '2.6.5'
-  sha256 '3679245f127b136523d6d28f921971974e304f95397e19ebc4718e1e5554f87d'
+  version '2.6.6'
+  sha256 '0f94d3c113f1c07405b1be356906bb415b987fddf97229723ae6226cacf9de85'
 
   url "https://openphdguiding.org/PHD2-#{version}-OSX.zip"
   name 'PHD2'
