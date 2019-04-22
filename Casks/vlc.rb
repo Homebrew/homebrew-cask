@@ -2,7 +2,7 @@ cask 'vlc' do
   version '3.0.6'
   sha256 '0c807a2e352fd6fe7e591fe01a7a53794b7d817e1e1eda3f673df06f26db27d5'
 
-  url "https://get.videolan.org/vlc/#{version}/macosx/vlc-#{version}.dmg"
+  url "https://ftp.free.org/mirrors/videolan/vlc/#{version}/macosx/vlc-#{version}.dmg"
   appcast 'https://download.videolan.org/pub/videolan/vlc/'
   name 'VLC media player'
   homepage 'https://www.videolan.org/vlc/'
