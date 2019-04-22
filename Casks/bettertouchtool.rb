@@ -6,8 +6,8 @@ cask 'bettertouchtool' do
     # bettertouchtool.net/releases was verified as official when first introduced to the cask
     url "https://bettertouchtool.net/releases/btt#{version}_final_10_9.zip"
   else
-    version '2.761'
-    sha256 '0dd88ef8ec2e6fcb8f5a45b6118db4a5a2ef224b474de2289952524f16c6cbdc'
+    version '2.762'
+    sha256 '0323496d83d8a58ed926e0c59d4d77b2f8eccb0d33800ca6cfc61bb2055c89f5'
 
     # bettertouchtool.net/releases was verified as official when first introduced to the cask
     url "https://bettertouchtool.net/releases/btt#{version}.zip"
