@@ -1,6 +1,6 @@
 cask 'dhs' do
-  version '1.3.1'
-  sha256 '3fc293da9f4730790e8c07833e0225fa6b57d2455bec53dd8e5b1e50de41c8d4'
+  version '1.4.0'
+  sha256 '37211f5051413fa866781e6943ad2adb3c68546fcfd3033c0d69a0bbeadc5462'
 
   # bitbucket.org/objective-see was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/DHS_#{version}.zip"
