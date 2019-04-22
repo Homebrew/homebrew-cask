@@ -8,6 +8,8 @@ cask 'wpsoffice' do
   name 'WPS Office'
   homepage 'https://www.wps.cn/product/wpsmac/'
 
+  depends_on macos: '>= :sierra'
+
   app 'wpsoffice.app'
 
   uninstall quit: 'com.kingsoft.wpsoffice.mac'
