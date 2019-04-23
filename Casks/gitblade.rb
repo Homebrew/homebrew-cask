@@ -4,7 +4,7 @@ cask 'gitblade' do
 
   url 'https://gitblade.com/dl/gitblade-1.0.6-darwin-x64.dmg'
   name 'GitBlade'
-  homepage 'https://gitblade.com'
+  homepage 'https://gitblade.com/'
 
   app 'GitBlade.app'
 end
