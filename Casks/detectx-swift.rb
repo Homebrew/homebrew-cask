@@ -1,6 +1,6 @@
 cask 'detectx-swift' do
-  version '1.086'
-  sha256 '2919fee26fb117cd5a6b952dd07a4136a5f067f1a1e36403fa8fe41d8ff7b4d6'
+  version '1.087'
+  sha256 '7756ebd141f15a51b01a9a524f67c3983b563c14c4014315119701963fc323a1'
 
   # s3.amazonaws.com/sqwarq.com was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/sqwarq.com/PublicZips/DetectX_Swift.dmg'
