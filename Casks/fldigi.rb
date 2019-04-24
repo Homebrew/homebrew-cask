@@ -1,6 +1,6 @@
 cask 'fldigi' do
-  version '4.1.04.01,4.3.7'
-  sha256 '4016adb4fefdf15aee555f5b4a6e7a948b6a646b3a8f8a798f697d833d378fe5'
+  version '4.1.03,4.3.4'
+  sha256 '059b72c165b7bd7c385938a14315664cb3309160a4c43589ba0d8ae53cdde14e'
 
   url "https://downloads.sourceforge.net/fldigi/fldigi/fldigi-#{version.before_comma}_x86_64.dmg"
   appcast 'https://sourceforge.net/projects/fldigi/rss?path=/fldigi'
