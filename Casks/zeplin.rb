@@ -1,6 +1,6 @@
 cask 'zeplin' do
-  version '2.3.3,666'
-  sha256 '2ebeec45a303da2a126037ae0d056770896b8116412c96b4d41a907221409217'
+  version '2.4,672'
+  sha256 'b1b1572dfd31025f9ec57b71f8b674afc9cb7c43f3d461dfdc1d4e039ff0819c'
 
   url 'https://api.zeplin.io/urls/download-mac'
   appcast 'https://rink.hockeyapp.net/api/2/apps/8926efffe734b6d303d09f41d90c34fc'
