@@ -1,6 +1,6 @@
 cask 'psi-plus' do
-  version '1.4.663-macOS10.12'
-  sha256 'dd33e24a0d3206fc1598ed1c9d295b5f761d11206738ace5a55d11c72b86ee00'
+  version '1.4.670-macOS10.12'
+  sha256 'b5d279e99689ea4eac8f37c82bef6e15598482e37a5381d458435d856fe7c1b1'
 
   # downloads.sourceforge.net/psiplus was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/psiplus/Psi+-#{version}-x86_64.dmg"
