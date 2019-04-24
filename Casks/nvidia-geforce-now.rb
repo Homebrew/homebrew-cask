@@ -1,5 +1,5 @@
 cask 'nvidia-geforce-now' do
-  version '2.0.5.49'
+  version '2.0.6.86'
   sha256 'd3e122fbf966f0926d609936e262c134f252c420d49cf00df3265b6ca68fa40a'
 
   url 'https://download.nvidia.com/gfnpc/GeForceNOW-release.dmg'
