@@ -1,6 +1,6 @@
 cask 'rightfont' do
-  version '5.5.0'
-  sha256 'd4b4f86f11afce774668797882eac415aba61eea8aa9716e36e22e6f6efc8ed5'
+  version '5.5.1'
+  sha256 'c19ac377c09c477d96ec37a583e44b7ba826cc5eff59e44be40ad9c8c4e55a1f'
 
   url 'https://rightfontapp.com/update/rightfont.zip'
   appcast "https://rightfontapp.com/update/appcast#{version.major}.xml"
