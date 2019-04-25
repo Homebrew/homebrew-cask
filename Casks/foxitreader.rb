@@ -1,8 +1,8 @@
 cask 'foxitreader' do
-  version '3.1.0'
-  sha256 'a1e43bf30ae35a76c296a3121d286cc2cbb61826f2c6ed038e7d34739d86f90c'
+  version '3.2.0'
+  sha256 '76b3e7a6d9a0dfce3db93469c4c8ef3e0053d8a5e5170f50676cc5981143cb2e'
 
-  url "https://cdn09.foxitsoftware.com/pub/foxit/reader/desktop/mac/#{version.major}.x/#{version.major_minor}/en_us/FoxitReader#{version.no_dots}.enu.setup.pkg"
+  url "https://cdn09.foxitsoftware.com/pub/foxit/reader/desktop/mac/#{version.major}.x/#{version.major_minor}/ML/FoxitReader#{version.no_dots}.setup.pkg"
   name 'Foxit Reader'
   homepage 'https://www.foxitsoftware.com/pdf-reader/'
 
