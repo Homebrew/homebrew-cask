@@ -1,6 +1,6 @@
 cask 'fsmonitor' do
-  version '87'
-  sha256 '0e5f482a74889a57bbed00553f50405ee86626635e77b32e69a4e373693604e3'
+  version '90'
+  sha256 '9699fd67fe07069763dd53b19cebb00855569a949c14efb418d134d5c47d662a'
 
   # tristan-software.ch/FSMonitor was verified as official when first introduced to the cask
   url "https://tristan-software.ch/FSMonitor/Archives/FSMonitor_#{version}.zip"
