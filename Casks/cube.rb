@@ -6,7 +6,7 @@ cask 'cube' do
   url "https://apps.fz-juelich.de/scalasca/releases/cube/#{version.major}/dist/Cube-Compressed.dmg"
   appcast "https://scalasca.org/software/cube-#{version.major}.x/download.html"
   name 'Scalasca Cube GUI'
-  homepage "https://scalasca.org/software/cube-#{vesion.major}.x/download.html"
+  homepage "https://scalasca.org/software/cube-#{version.major}.x/download.html"
 
   app 'Cube.app'
 end
