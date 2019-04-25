@@ -7,6 +7,8 @@ cask 'mediainfo' do
   name 'MediaInfo'
   homepage 'https://mediaarea.net/en/MediaInfo'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'MediaInfo.app'
 
   zap trash: [
