@@ -1,6 +1,6 @@
 cask 'unicodechecker' do
-  version '1.20'
-  sha256 '5f4c9e952b8e40e6d7dc01e1ab523f69ebadb3d5da645c71eaa2fd52d6c2671b'
+  version '1.21'
+  sha256 'b478c39d96f58aa355a073ce39b80320c7f717e738a1629ee2653bdf288889f9'
 
   url 'https://earthlingsoft.net/UnicodeChecker/UnicodeChecker.zip'
   appcast 'https://earthlingsoft.net/UnicodeChecker/appcast.xml'
