@@ -6,7 +6,7 @@ cask 'foxitreader' do
   name 'Foxit Reader'
   homepage 'https://www.foxitsoftware.com/pdf-reader/'
 
-  pkg "FoxitReader#{version.no_dots}.enu.setup.pkg"
+  pkg "FoxitReader#{version.no_dots}.setup.pkg"
 
   uninstall pkgutil: 'com.foxitsoftware.reader.pkg'
 end
