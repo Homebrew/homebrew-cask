@@ -7,5 +7,5 @@ cask 'trash-it' do
   name 'Trash It!'
   homepage 'https://nonamescriptware.com/'
 
-  app "Trash It! #{version}/Drag app to Desktop/Trash It! #{version}.app"
+  app "Trash It! #{version}/Trash It!.app"
 end
