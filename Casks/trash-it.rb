@@ -1,11 +1,11 @@
 cask 'trash-it' do
-  version '7.0.1'
-  sha256 'aaffb0ab43a163178b9b6d230eef9ed5ee096461163ee001cd2c98e6ede43bc5'
+  version '7.5'
+  sha256 'b401adff30cd1110bfef7b14110aa097c8c1053c0ed92ab95506e2829cacd52c'
 
   url 'https://nonamescriptware.com/wp-content/uploads/Trashit.zip'
   appcast 'https://nonamescriptware.com/downloads/'
   name 'Trash It!'
   homepage 'https://nonamescriptware.com/'
 
-  app "Trash It! #{version}/Drag app to Desktop/Trash It! #{version}.app"
+  app "Trash It! #{version}/Trash It!.app"
 end
