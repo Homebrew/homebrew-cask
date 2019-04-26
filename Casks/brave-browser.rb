@@ -13,8 +13,8 @@ cask 'brave-browser' do
   app 'Brave Browser.app'
 
   zap trash: [
-               '~/Library/Application Support/brave',
-               '~/Library/Preferences/com.electron.brave.plist',
-               '~/Library/Saved Application State/com.electron.brave.savedState',
+               '~/Library/Application Support/BraveSoftware/Brave-Browser',
+               '~/Library/Preferences/com.brave.Browser.plist',
+               '~/Library/Saved Application State/com.brave.Browser.savedState',
              ]
 end
