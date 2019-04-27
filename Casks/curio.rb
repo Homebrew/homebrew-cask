@@ -3,7 +3,7 @@ cask 'curio' do
   sha256 '9601606dfc33d001381694a29b4f3a54709e8099c93345c99b9b05726f7b95d5'
 
   url "https://www.zengobi.com/downloads/Curio#{version.no_dots}.zip"
-  appcast 'https://www.zengobi.com/appcasts/Curio12MarkdownAppcast.xml'
+  appcast 'https://www.zengobi.com/appcasts/Curio13HLwLK2C84LaKptcz.xml'
   name 'Curio'
   homepage 'https://zengobi.com/curio/'
 
