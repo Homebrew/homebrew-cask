@@ -14,6 +14,8 @@ cask 'launchbar' do
   name 'LaunchBar'
   homepage 'https://www.obdev.at/products/launchbar/index.html'
 
+  auto_updates true
+
   app 'LaunchBar.app'
 
   zap trash: [
