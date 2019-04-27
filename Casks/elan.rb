@@ -9,5 +9,5 @@ cask 'elan' do
 
   depends_on macos: '>= :high_sierra'
 
-  app "ELAN_#{version}.app"
+  app "ELAN_#{version}-AVFX.app"
 end
