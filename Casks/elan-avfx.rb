@@ -1,4 +1,4 @@
-cask 'elan' do
+cask 'elan-avfx' do
   version '5.5'
   sha256 '0e884443161cd07c846972571d65cf670f73d52522edd481a3ce03d1882de852'
 
