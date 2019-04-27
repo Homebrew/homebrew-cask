@@ -8,6 +8,7 @@ cask 'mutify' do
   homepage 'https://mutify.app/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'Mutify.app'
 
