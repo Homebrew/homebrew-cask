@@ -1,6 +1,6 @@
 cask 'vimr' do
-  version '0.26.10-319'
-  sha256 'b2a8285a6ca52c7358dda7afc7426e31dea92ffc9c4e6c1cb928b004b196ed45'
+  version '0.27.0-321'
+  sha256 'a9bfe8d67e4888bdb1637ca234760fece5283e0c1ca1c22f28fe545b02555e66'
 
   # github.com/qvacua/vimr was verified as official when first introduced to the cask
   url "https://github.com/qvacua/vimr/releases/download/v#{version}/VimR-v#{version}.tar.bz2"
