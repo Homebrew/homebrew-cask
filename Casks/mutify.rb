@@ -7,6 +7,8 @@ cask 'mutify' do
   name 'Mutify'
   homepage 'https://mutify.app/'
 
+  auto_updates true
+
   app 'Mutify.app'
 
   zap trash: [
