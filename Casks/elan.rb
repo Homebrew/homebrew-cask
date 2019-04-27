@@ -7,5 +7,7 @@ cask 'elan' do
   name 'ELAN'
   homepage 'https://tla.mpi.nl/tools/tla-tools/elan/'
 
+  depends_on macos: '>= :high_sierra'
+
   app "ELAN_#{version}.app"
 end
