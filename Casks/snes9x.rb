@@ -1,6 +1,6 @@
 cask 'snes9x' do
-  version '1.59.2'
-  sha256 'a987c3d7e87b3aabe4d252db356f98ca9dbf7d5a252312bb97ef3b5322833476'
+  version '1.60'
+  sha256 '99f843f84533a0a8e2aefe0b4f248f47649e06ff58ea2d0c041ff931ee503884'
 
   # s9x-w32.de was verified as official when first introduced to the cask
   url "http://www.s9x-w32.de/dl/snes9x-#{version}-macosx-i386.zip"
