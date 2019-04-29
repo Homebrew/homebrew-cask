@@ -7,6 +7,7 @@ cask 'keep-it' do
   name 'Keep It'
   homepage 'https://reinventedsoftware.com/keepit/'
 
+  auto_updates true
   depends_on macos: '>= :high_sierra'
 
   app 'Keep It.app'
