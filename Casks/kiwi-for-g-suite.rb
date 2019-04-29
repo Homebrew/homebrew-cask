@@ -11,5 +11,5 @@ cask 'kiwi-for-g-suite' do
   pkg 'Kiwi for G Suite.pkg'
 
   uninstall pkgutil: 'com.zive.kiwi.qb-pkg.gsuite',
-           delete:  '/Applications/Kiwi for G Suite.app'
+            delete:  '/Applications/Kiwi for G Suite.app'
 end
