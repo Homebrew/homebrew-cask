@@ -6,7 +6,7 @@ cask 'kiwi-for-g-suite' do
   url 'https://s3.amazonaws.com/kiwiforgsuite/mac/release/Kiwi+for+G+Suite.pkg'
   appcast 'https://rink.hockeyapp.net/api/2/apps/0e823ae8232540248fd3980052c56495/'
   name 'Kiwi For G Suite'
-  homepage 'https://www.kiwiforgmail.com'
+  homepage 'https://www.kiwiforgmail.com/'
 
   pkg 'Kiwi for G Suite.pkg'
 
