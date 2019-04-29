@@ -7,7 +7,7 @@ cask 'curio' do
   name 'Curio'
   homepage 'https://zengobi.com/curio/'
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :high_sierra'
 
   app 'Curio.app'
 end
