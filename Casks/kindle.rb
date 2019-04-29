@@ -4,6 +4,7 @@ cask 'kindle' do
 
   # s3.amazonaws.com/kindleformac was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/kindleformac/#{version}/KindleForMac-#{version}.dmg"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.amazon.com/kindlemacdownload/ref=klp_hz_mac'
   name 'Kindle for Mac'
   homepage 'https://www.amazon.com/gp/digital/fiona/kcp-landing-page'
 
