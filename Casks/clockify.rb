@@ -6,5 +6,7 @@ cask 'clockify' do
   name 'Clockify'
   homepage 'https://clockify.me/mac-time-tracking'
 
+  depends_on macos: '>= :sierra'
+
   app 'Clockify Desktop.app'
 end
