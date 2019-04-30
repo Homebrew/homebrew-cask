@@ -11,6 +11,7 @@ cask 'scilab' do
   depends_on macos: '>= :sierra'
 
   app "scilab-#{version}.app"
+  binary "#{appdir}/Scilab-#{version}.app/Contents/MacOS/bin"
 
   caveats do
     depends_on_java '6'
