@@ -8,5 +8,7 @@ cask 'wasabi-wallet' do
   name 'Wasabi Wallet'
   homepage 'https://www.wasabiwallet.io/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Wasabi Wallet.app'
 end
