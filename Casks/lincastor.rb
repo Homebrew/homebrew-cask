@@ -1,5 +1,5 @@
 cask 'lincastor' do
-  version '1.4'
+  version '2.0'
   sha256 'fbe3af69e932cebdd0ddb76460018a4cc9194d60bb9476c2a42c2ccf59bdbba2'
 
   # dropbox.com/s/43fuhic0mhvhb6f was verified as official when first introduced to the cask
