@@ -3,7 +3,7 @@ cask 'r' do
   sha256 '51e58a2766e091a85776ab8e44598e4fdd99b066b25b439777f3d4089803a5f1'
 
   url "https://cloud.r-project.org/bin/macosx/R-#{version}.pkg"
-  appcast 'https://cloud.r-project.org/'
+  appcast 'https://cloud.r-project.org/bin/macosx/'
   name 'R'
   homepage 'https://www.r-project.org/'
 
