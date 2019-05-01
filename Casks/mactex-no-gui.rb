@@ -1,6 +1,6 @@
 cask 'mactex-no-gui' do
-  version '2018.0417'
-  sha256 'e6ee8f69ca6e5ca5d20a31afc3dff3b4e5aa7a0b1b89ace9864ac22b10c34b98'
+  version '2019.0410'
+  sha256 'a59e159f1ed92593a30ad41e2ebeacea842726ab289a4a56322f1139cb09f7b7'
 
   # mirror.ctan.org/systems/mac/mactex was verified as official when first introduced to the cask
   url "http://mirror.ctan.org/systems/mac/mactex/mactex-#{version.no_dots}.pkg"
@@ -13,7 +13,7 @@ cask 'mactex-no-gui' do
                          'mactex',
                        ]
   depends_on formula: 'ghostscript'
-  depends_on macos: '>= :yosemite'
+  depends_on macos: '>= :sierra'
 
   pkg "mactex-#{version.no_dots}.pkg",
       choices: [
@@ -40,7 +40,6 @@ cask 'mactex-no-gui' do
   uninstall pkgutil: "org.tug.mactex.texlive#{version.major}",
             delete:  [
                        "/usr/local/texlive/#{version.major}",
-                       '/Library/PreferencePanes/TeXDistPrefPane.prefPane',
                        '/Library/TeX',
                        '/etc/paths.d/TeX',
                        '/etc/manpaths.d/TeX',
