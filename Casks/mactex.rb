@@ -1,6 +1,6 @@
 cask 'mactex' do
-  version '2018.0417'
-  sha256 'e6ee8f69ca6e5ca5d20a31afc3dff3b4e5aa7a0b1b89ace9864ac22b10c34b98'
+  version '2019.0410'
+  sha256 'a59e159f1ed92593a30ad41e2ebeacea842726ab289a4a56322f1139cb09f7b7'
 
   # mirror.ctan.org/systems/mac/mactex was verified as official when first introduced to the cask
   url "http://mirror.ctan.org/systems/mac/mactex/mactex-#{version.no_dots}.pkg"
@@ -13,7 +13,7 @@ cask 'mactex' do
                          'mactex-no-gui',
                        ]
   depends_on formula: 'ghostscript'
-  depends_on macos: '>= :yosemite'
+  depends_on macos: '>= :sierra'
 
   pkg "mactex-#{version.no_dots}.pkg",
       choices: [
@@ -44,7 +44,6 @@ cask 'mactex' do
             delete:  [
                        "/usr/local/texlive/#{version.major}",
                        '/Applications/TeX',
-                       '/Library/PreferencePanes/TeXDistPrefPane.prefPane',
                        '/Library/TeX',
                        '/etc/paths.d/TeX',
                        '/etc/manpaths.d/TeX',
@@ -56,13 +55,13 @@ cask 'mactex' do
                # TexShop:
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/texshop.sfl*',
                '~/Library/Application Support/TeXShop',
-               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/TeXShop Help*',
+               '~/Library/Caches/com.apple.helpd/Generated/TeXShop Help*',
                '~/Library/Caches/TeXShop',
                '~/Library/Preferences/TeXShop.plist',
                '~/Library/TeXShop',
                # BibDesk:
                '~/Library/Application Support/BibDesk',
-               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/edu.ucsd.cs.mmccrack.bibdesk.help*',
+               '~/Library/Caches/com.apple.helpd/Generated/edu.ucsd.cs.mmccrack.bibdesk.help*',
                '~/Library/Caches/edu.ucsd.cs.mmccrack.bibdesk',
                '~/Library/Cookies/edu.ucsd.cs.mmccrack.bibdesk.binarycookies',
                '~/Library/Preferences/edu.ucsd.cs.mmccrack.bibdesk.plist',
@@ -72,10 +71,7 @@ cask 'mactex' do
                '~/Library/Preferences/fr.chachatelier.pierre.LaTeXiT.plist',
                # TeX Live Utility:
                '~/Library/Application Support/TeX Live Utility',
-               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/TeX Live Utility Help*',
-               # Excalibur:
-               '~/Library/Preferences/Excalibur Preferences',
-               '~/Library/Saved Application State/edu.bucknell.Excalibur.savedState',
+               '~/Library/Caches/com.apple.helpd/Generated/TeX Live Utility Help*',
              ],
       rmdir: [
                '/usr/local/texlive',
