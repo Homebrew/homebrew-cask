@@ -1,6 +1,6 @@
 cask 'rambox' do
-  version '0.6.6'
-  sha256 'a33cd56b77ec5aa025b76aea230f407d4ddd3626c6ef284fa2b592b3daf7552d'
+  version '0.6.7'
+  sha256 'd35d9aa65e59bc3a67f0e8c6a559a15ac962c27613e9e54357b8549ab685cb7c'
 
   # github.com/ramboxapp/community-edition was verified as official when first introduced to the cask
   url "https://github.com/ramboxapp/community-edition/releases/download/#{version}/Rambox-#{version}-mac.zip"
