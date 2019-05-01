@@ -11,7 +11,6 @@ about: Create a report to help us improve
 - [ ] I ran `brew doctor`, fixed as many issues as possible and retried my command.
 - [ ] I have checked the instructions for [reporting bugs](https://github.com/Homebrew/homebrew-cask#reporting-bugs).
 - [ ] I made doubly sure this is not a [checksum does not match](https://github.com/Homebrew/homebrew-cask/blob/master/doc/reporting_bugs/checksum_does_not_match_error.md) error.
-- [ ] I checked there are no [open issues](https://github.com/Homebrew/homebrew-cask/issues) for the same problem.
 - [ ] I understand that [if I ignore these instructions, my issue may be closed without review](https://github.com/Homebrew/homebrew-cask/blob/master/doc/faq/closing_issues_without_review.md).
 
 #### Description of issue
