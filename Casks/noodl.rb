@@ -1,9 +1,9 @@
 cask 'noodl' do
-  version '1.2.3'
-  sha256 '675af92807a2b99e39667174641a326dd926d535196e9cd83f0333ff51d574d0'
+  version '1.3.1'
+  sha256 '3bada2b659b51937b0b8b1fcc3cc21544f0e27e2a96ad0df9cda4d35e93a133e'
 
-  # s3.amazonaws.com/noodl-update was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/noodl-update/Noodl-#{version}.dmg"
+  # s3.amazonaws.com/updates.noodlcloud.com was verified as official when first introduced to the cask
+  url "https://s3.amazonaws.com/updates.noodlcloud.com/Noodl-#{version}.dmg"
   name 'Noodl'
   homepage 'https://www.getnoodl.com/'
 
