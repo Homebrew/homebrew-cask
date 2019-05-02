@@ -1,6 +1,6 @@
 cask 'insomnia' do
-  version '6.4.1'
-  sha256 '8b880ad29f9c3b52def7a3ab46751803c8fc4025a5e10736cb6ee10c5e0550db'
+  version '6.4.2'
+  sha256 '88201b5f6e4fa3718ac436bd45c59dbf8336ac12e60b59f9a4d76cb1020e448a'
 
   # github.com/getinsomnia/insomnia was verified as official when first introduced to the cask
   url "https://github.com/getinsomnia/insomnia/releases/download/v#{version}/Insomnia-#{version}.dmg"
