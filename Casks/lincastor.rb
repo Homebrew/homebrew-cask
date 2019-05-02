@@ -8,5 +8,7 @@ cask 'lincastor' do
   name 'LinCastor'
   homepage 'https://onflapp.wordpress.com/lincastor/'
 
+  depends_on macos: '>= :sierra'
+
   app 'LinCastor.app'
 end
