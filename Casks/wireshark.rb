@@ -13,7 +13,8 @@ cask 'wireshark' do
   pkg "Wireshark #{version} Intel 64.pkg"
 
   uninstall_preflight do
-    set_ownership '/Library/Application Support/Wireshark'
+    set_ownership '/Library/Application Support/Wireshark'    
+    system_command '/usr/sbin/dseditgroup', args: ['-o', 'delete', 'access_bpf'], sudo: true
   end
 
   uninstall pkgutil:   'org.wireshark.*',
@@ -31,13 +32,7 @@ cask 'wireshark' do
                          '/usr/local/bin/text2pcap',
                          '/usr/local/bin/tshark',
                          '/usr/local/bin/wireshark',
-                       ],
-            script:    {
-                         executable:   '/usr/sbin/dseditgroup',
-                         args:         ['-o', 'delete', 'access_bpf'],
-                         must_succeed: false,
-                         sudo:         true,
-                       }
+                       ]
 
   zap trash: '~/Library/Saved Application State/org.wireshark.Wireshark.savedState'
 end
