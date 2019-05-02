@@ -13,7 +13,7 @@ cask 'wireshark' do
   pkg "Wireshark #{version} Intel 64.pkg"
 
   uninstall_preflight do
-    set_ownership '/Library/Application Support/Wireshark'    
+    set_ownership '/Library/Application Support/Wireshark'
     system_command '/usr/sbin/dseditgroup', args: ['-o', 'delete', 'access_bpf'], sudo: true
   end
 
