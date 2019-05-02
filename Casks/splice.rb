@@ -1,6 +1,6 @@
 cask 'splice' do
-  version '3.4.9'
-  sha256 'e5b02ef0c680fd2831c7f112536a5929e9d7da852555d90882f07f7b1bc602fa'
+  version '3.4.10'
+  sha256 '97d99f076e84a032a43f83f4365629289a8e6400ff8b2642451611430c925a81'
 
   # splicedesktop.s3-us-west-1.amazonaws.com was verified as official when first introduced to the cask
   url 'https://splicedesktop.s3-us-west-1.amazonaws.com/darwin/stable/Splice.app.zip'
