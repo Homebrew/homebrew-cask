@@ -3,6 +3,7 @@ cask 'twitter-mini' do
   sha256 'cc7d3a2f63477fafbb9d85b565ae4c373504c6ad6ac36298b727fbf7dc1586fc'
 
   url "https://github.com/dongri/twitter-mini/releases/download/v#{version}/Twitter.Mini-#{version}.dmg"
+  appcast 'https://github.com/dongri/twitter-mini/releases.atom'
   name 'Twitter Mini'
   homepage 'https://github.com/dongri/twitter-mini'
 
