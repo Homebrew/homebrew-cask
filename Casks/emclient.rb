@@ -3,6 +3,7 @@ cask 'emclient' do
   sha256 'faf1a2d4ccd693ffe0cf1fab22ab65cc24fe66d0420dcecf6b501546deb455dc'
 
   url "https://cdn-dist.emclient.com/dist/v#{version}_Mac/setup.pkg"
+  appcast 'https://www.emclient.com/release-history?os=mac'
   name 'eM Client'
   homepage 'https://www.emclient.com/'
 
