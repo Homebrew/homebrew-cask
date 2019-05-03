@@ -1,5 +1,5 @@
 cask 'nvidia-geforce-now' do
-  version '2.0.6.86'
+  version '2.0.6.87'
   sha256 '2aa9c198646f2c32c8d12eb4bc12970613349120895e3673d3d62a7982140474'
 
   url 'https://ota-downloads.nvidia.com/ota/GeForceNOW-release_E943AA.dmg'
