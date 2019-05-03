@@ -1,8 +1,9 @@
 cask 'eve-launcher' do
-  version '1225328'
-  sha256 '69de8866d986b3d24615648f9296f042b3b000d30eb6413b1fcd0650de68318e'
+  version '1476049'
+  sha256 'f5a1283077098dc6886183fbb1716cbd776c4309fc4e9d50ab54ce4b3659b27c'
 
   url "https://binaries.eveonline.com/EveLauncher-#{version}.dmg"
+  appcast 'https://launcher.eveonline.com/launcherVersions.json'
   name 'Eve Online'
   homepage 'https://www.eveonline.com/'
 
