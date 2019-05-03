@@ -3,6 +3,7 @@ cask 'nscope' do
   sha256 'fdc6bf8ad67e20eb20f5fb4757a80014675388421e5d8e7afa200fe5aa7cc415'
 
   url "http://www.nscope.org/v#{version.no_dots}/mac/nScope.dmg"
+  appcast 'https://www.nscope.org/download'
   name 'nScope'
   homepage 'http://www.nscope.org/'
 
