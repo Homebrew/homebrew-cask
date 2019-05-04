@@ -4,7 +4,7 @@ cask 'clix' do
 
   url 'ftp://rixstep.com/CLIX.zip'
   name 'CLIX'
-  homepage 'http://rixstep.com/4/0/clix/'
+  homepage 'https://rixstep.com/4/0/clix/'
 
   app "CLIX/#{version.no_dots}/CLIX.app"
 
