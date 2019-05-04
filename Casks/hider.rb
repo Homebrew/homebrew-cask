@@ -8,5 +8,7 @@ cask 'hider' do
   name 'MacPaw Hider'
   homepage 'https://macpaw.com/hider'
 
+  auto_updates true
+
   app "MacPaw Hider #{version.major}.app"
 end

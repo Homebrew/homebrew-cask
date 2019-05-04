@@ -1,6 +1,6 @@
 cask 'android-messages' do
-  version '1.0.0'
-  sha256 '692cd19859a3fbcd0018634698ffcb2f10c8e89d83e0208185954f76e13331b3'
+  version '1.0.1'
+  sha256 'b35ba875dbc9807bb2d350949959ae99f4a0b085149a20826d77b1fffe4df1f4'
 
   url "https://github.com/chrisknepper/android-messages-desktop/releases/download/v#{version}/android-messages-desktop-#{version}.dmg"
   appcast 'https://github.com/chrisknepper/android-messages-desktop/releases.atom'

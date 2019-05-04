@@ -1,6 +1,6 @@
 cask 'anka-flow' do
-  version '1.4.3.103'
-  sha256 '41a2d40b04085b216a97b20b3103771ad01f66629ca3b744bfec21335203190a'
+  version '1.4.4.105'
+  sha256 '7bad676c0286db3309edc0c66a65709cab0be0344ef208aec491ccd6081f0bea'
 
   # d1efqjhnhbvc57.cloudfront.net was verified as official when first introduced to the cask
   url "https://d1efqjhnhbvc57.cloudfront.net/AnkaFlow-#{version}.pkg",

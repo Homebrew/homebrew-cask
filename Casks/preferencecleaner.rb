@@ -1,6 +1,6 @@
 cask 'preferencecleaner' do
-  version '1.7.2'
-  sha256 '1407b17fd46e784fba7aa45cf5469047ae30e49dc99c749b3315c8bab0bd398d'
+  version '1.8'
+  sha256 '7bf3413b3ba005f18bd73ed16320cbf01404202a48b728895fb3ed59eb90b54f'
 
   url "https://www.echomist.co.uk/software/downloads/PreferenceCleaner_#{version}.dmg"
   appcast 'https://www.echomist.co.uk/software/PreferenceCleaner.php'

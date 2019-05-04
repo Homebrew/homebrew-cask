@@ -7,5 +7,7 @@ cask 'gitahead' do
   name 'GitAhead'
   homepage 'https://github.com/gitahead/gitahead'
 
+  depends_on macos: '>= :sierra'
+
   app 'GitAhead.app'
 end

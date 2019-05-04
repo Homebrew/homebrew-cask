@@ -66,7 +66,7 @@ Note that `uninstall --force` is currently imperfect. See the man page for more 
 * `list` — with no args, lists installed Casks; given installed Casks, lists staged files (with `--full-name`, include tap name)
 * `fetch` — downloads remote application files for the given Cask to the local cache (with `--force`, re-download even if already cached)
 * `doctor` — checks for configuration issues
-* `cleanup` — cleans up cached downloads (with `--outdated`, only cleans old downloads)
+* `style` — checks Cask style using RuboCop
 * `home` — opens the homepage of the given Cask; or with no arguments, the Homebrew Cask project page
 * `zap` — try to remove *all* files associated with a Cask (may include resources shared with other applications)
 * `outdated` - lists all outdated Casks

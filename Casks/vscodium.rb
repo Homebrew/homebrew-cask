@@ -7,7 +7,10 @@ cask 'vscodium' do
   name 'VSCodium'
   homepage 'https://github.com/VSCodium/vscodium'
 
+  conflicts_with cask: 'visual-studio-code'
+
   app 'VSCodium.app'
+  binary "#{appdir}/VSCodium.app/Contents/Resources/app/bin/code"
 
   zap trash: [
                '~/Library/Application Support/VSCodium',

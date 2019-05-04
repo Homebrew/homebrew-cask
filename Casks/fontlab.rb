@@ -1,6 +1,6 @@
 cask 'fontlab' do
-  version '6.1.3,7016'
-  sha256 'c0a950ed702c60d35d9d9d4e5e8f803eadf258e66503c0edf473968f6e997605'
+  version '6.1.4,7044'
+  sha256 'cc04ff57dbd51915f41e69811254b1fba0bf6900ac04a015b5dd4c7efc3ca588'
 
   url "https://download.fontlab.com/fontlab-vi/downloads/FontLab-VI-Mac-Install-#{version.after_comma}.dmg"
   appcast 'https://download.fontlab.com/fontlab-vi/appcast-mac.xml'
