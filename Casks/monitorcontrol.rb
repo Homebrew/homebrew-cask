@@ -4,7 +4,6 @@ cask 'monitorcontrol' do
 
   url "https://github.com/the0neyouseek/MonitorControl/releases/download/v#{version}/MonitorControl.dmg"
   appcast 'https://github.com/the0neyouseek/MonitorControl/releases.atom'
-
   name 'MonitorControl'
   homepage 'https://github.com/the0neyouseek/MonitorControl'
 
