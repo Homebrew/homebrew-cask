@@ -4,6 +4,7 @@ cask 'kubernetic' do
 
   # s3-eu-west-1.amazonaws.com/kubernetic was verified as official when first introduced to the cask
   url "https://s3-eu-west-1.amazonaws.com/kubernetic/Kubernetic-#{version}.dmg"
+  appcast 'https://kubernetic.com/'
   name 'Kubernetic'
   homepage 'https://kubernetic.com/'
 

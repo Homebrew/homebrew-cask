@@ -1,12 +1,12 @@
 cask 'bisq' do
-  version '1.0.1'
-  sha256 '75fcf20dc1ccca51d0c7588ee704df5eb7d66fbc07c8ab3a9a203b110e881c9b'
+  version '1.1.0'
+  sha256 '03a3d2b7bdf9270cb8dda5eae2d45697c4d399246e3881703652102e56e2db91'
 
   # github.com/bisq-network/bisq-desktop was verified as official when first introduced to the cask
   url "https://github.com/bisq-network/bisq-desktop/releases/download/v#{version}/Bisq-#{version}.dmg"
   appcast 'https://github.com/bisq-network/bisq-desktop/releases.atom'
   name 'Bisq'
-  homepage 'https://bisq.io/'
+  homepage 'https://bisq.network/'
 
   app 'Bisq.app'
 end
