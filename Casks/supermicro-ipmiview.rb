@@ -32,6 +32,3 @@ cask 'supermicro-ipmiview' do
 
   uninstall delete: "#{appdir}/Supermicro IPMIView.app"
 end
-
-html = Nokogiri::HTML(open("#{url}"))
-html = Nokogiri::HTML(open(url.to_s))
