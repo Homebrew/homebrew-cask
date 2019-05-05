@@ -17,18 +17,21 @@ cask 'supermicro-ipmiview' do
 
   preflight do
     # Setup app directory
-    system_command '/bin/mkdir', args: ['-p', "#{app_macos}", "#{app_resources}"]
-    system_command '/bin/cp', args: ['-r', "#{staged_path}/#{filename}/", "#{app_resources}"]
+    system_command '/bin/mkdir', args: ['-p', app_macos.to_s, app_resources.to_s]
+    system_command '/bin/cp', args: ['-r', "#{staged_path}/#{filename}/", app_resources.to_s]
     # Generate shimscript
-    system_command '/usr/bin/touch', args: ["#{shimscript}"]
+    system_command '/usr/bin/touch', args: [shimscript.to_s]
     IO.write shimscript, <<~EOS
       #!/bin/sh
       DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
       cd "${DIR}/../Resources"
-      java -jar IPMIView20.jar
+      /usr/bin/java -jar IPMIView20.jar
     EOS
-    system_command '/bin/chmod', args: ['a+x', "#{shimscript}"]
+    system_command '/bin/chmod', args: ['a+x', shimscript.to_s]
   end
 
   uninstall delete: "#{appdir}/Supermicro IPMIView.app"
 end
+
+html = Nokogiri::HTML(open("#{url}"))
+html = Nokogiri::HTML(open(url.to_s))
