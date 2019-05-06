@@ -11,6 +11,7 @@ cask 'thunder' do
 
   depends_on macos: '>= :yosemite'
 
+  auto_updates true
   app 'Thunder.app'
 
   zap trash: [
