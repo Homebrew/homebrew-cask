@@ -9,9 +9,9 @@ cask 'thunder' do
   name '迅雷'
   homepage 'https://mac.xunlei.com/'
 
+  auto_updates true
   depends_on macos: '>= :yosemite'
 
-  auto_updates true
   app 'Thunder.app'
 
   zap trash: [
