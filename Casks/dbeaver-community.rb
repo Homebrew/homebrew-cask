@@ -6,7 +6,7 @@ cask 'dbeaver-community' do
   url "https://github.com/dbeaver/dbeaver/releases/download/#{version}/dbeaver-ce-#{version}-macos.dmg"
   appcast 'https://github.com/dbeaver/dbeaver/releases.atom'
   name 'DBeaver Community Edition'
-  homepage 'https://dbeaver.io'
+  homepage 'https://dbeaver.io/'
 
   app 'DBeaver.app'
 
