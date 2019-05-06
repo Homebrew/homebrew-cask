@@ -1,6 +1,6 @@
 cask 'chessx' do
-  version '1.4.11'
-  sha256 '1d9af7a75179bec0ab75db5a8e6ce20aa4625fd816e74626fabc3c4f988791f2'
+  version '1.5.0'
+  sha256 'c75ef2f58f6eb99816b2ceecbb80073b9e3b3b79fa4376d65118928db02469b0'
 
   # downloads.sourceforge.net/chessx was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/chessx/chessx/#{version}/chessx-#{version}.dmg"
