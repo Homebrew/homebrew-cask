@@ -1,6 +1,6 @@
 cask 'fontexplorer-x-pro' do
-  version '6.0.6'
-  sha256 '47e860c5974b33694a14b7f681d620ed58ad57729098029532f68b1fca7f07fe'
+  version '6.0.7'
+  sha256 '40231d4a0da8c799e7c00dc9788cf97008e52a3bf06119b6be2a668984c174af'
 
   url "https://fast.fontexplorerx.com/FontExplorerXPro#{version.no_dots}.dmg"
   name 'FontExplorer X Pro'
