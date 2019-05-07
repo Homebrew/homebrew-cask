@@ -4,6 +4,7 @@ cask 'deltawalker' do
 
   # amazonaws.com/deltawalker was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/deltawalker/DeltaWalker-#{version}.dmg"
+  appcast 'https://www.deltawalker.com/new-and-noteworthy'
   name 'DeltaWalker'
   homepage 'https://www.deltawalker.com/'
 
