@@ -1,6 +1,6 @@
 cask 'simple-hub' do
-  version '5.6.1-1777'
-  sha256 '35b2da18591ab9e474e68c05f806b8d87eb903bcaca8165b8e7301c9fce6553b'
+  version '5.7.7-1882'
+  sha256 '53ea514465ef8bf93de00cc05dcf58e6fedf0a1dfc39845aa956917c8de8487f'
 
   url "https://www.simplecontrol.com/b/SimpleHub-macOS-#{version.no_dots}.zip"
   appcast "https://www.simplecontrol.com/b/Simple-HubAppcast#{version.major}.xml"
