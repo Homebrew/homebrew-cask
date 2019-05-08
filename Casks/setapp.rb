@@ -9,6 +9,7 @@ cask 'setapp' do
   homepage 'https://setapp.com/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   installer manual: 'Install Setapp.app'
 
