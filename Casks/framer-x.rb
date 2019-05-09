@@ -8,7 +8,7 @@ cask 'framer-x' do
   name 'Framer X'
   homepage 'https://framer.com/'
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :high_sierra'
 
   app 'Framer X.app'
 end
