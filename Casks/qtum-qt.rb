@@ -1,6 +1,6 @@
 cask 'qtum-qt' do
-  version '0.17.4'
-  sha256 '692ff5e3bc211cbdf3a5579199ea798837bd2cf3152e0ea65b3a5ed7ff1f6482'
+  version '0.17.5'
+  sha256 '6cc84f6060c755fbd1113ff1b50d33607b28b033a7ac01a33be0a6f0726b20db'
 
   # github.com/qtumproject/qtum was verified as official when first introduced to the cask
   url "https://github.com/qtumproject/qtum/releases/download/mainnet-ignition-v#{version}/qtum-#{version}-osx-unsigned.dmg"
