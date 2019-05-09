@@ -7,5 +7,7 @@ cask 'clean-me' do
   name 'Clean-me'
   homepage 'https://github.com/Kevin-De-Koninck/Clean-Me'
 
+  depends_on macos: '>= :sierra'
+
   app 'Clean Me.app'
 end
