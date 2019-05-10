@@ -7,5 +7,7 @@ cask 'nteract' do
   name 'nteract'
   homepage 'https://github.com/nteract/nteract'
 
+  auto_updates true
+
   app 'nteract.app'
 end
