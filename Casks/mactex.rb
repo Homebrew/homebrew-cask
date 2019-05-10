@@ -1,5 +1,5 @@
 cask 'mactex' do
-  version '2019.0410'
+  version '2019.0508'
   sha256 'a59e159f1ed92593a30ad41e2ebeacea842726ab289a4a56322f1139cb09f7b7'
 
   # mirror.ctan.org/systems/mac/mactex was verified as official when first introduced to the cask
