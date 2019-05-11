@@ -1,10 +1,11 @@
 cask 'reunion' do
-  version '12'
-  sha256 :no_check
+  version '12.0.0.181218'
+  sha256 '6c4946169eb2f57d3726615265b29a6483ddfbccf19e610f832c5fadba8fd1e6'
 
-  url 'http://www.leisterpro.com/download/Reunion-12.dmg'
+  url "https://store.leisterpro.com/updates/reunion#{version.major}/Reunion-#{version.dots_to_hyphens}.zip"
+  appcast 'https://store.leisterpro.com/updates/reunion#{version.major}/appcast.xml'
   name 'Reunion'
   homepage 'http://www.leisterpro.com/'
 
-  app 'Reunion 12.app'
+  app "Reunion #{version.major}.app"
 end
