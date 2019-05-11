@@ -7,7 +7,5 @@ cask 'fly' do
   name 'fly'
   homepage 'https://github.com/concourse/concourse'
 
-  container type: :tar
-
-  binary 'fly', target: 'fly'
+  binary 'fly'
 end
