@@ -1,6 +1,6 @@
 cask 'autofirma' do
-  version '1.6.2'
-  sha256 'dc97bebc453a9f79589ae8f1e8eae46596c659fc8f5d4d11c0f85c0b307246d4'
+  version '1.6.5'
+  sha256 '77b23710aee6120ad3a5d2363ae23199f086de56b9f624690e23c8bbebeadc15'
 
   # estaticos.redsara.es/comunes/autofirma was verified as official when first introduced to the cask
   url 'https://estaticos.redsara.es/comunes/autofirma/currentversion/AutoFirma_Mac.zip'
