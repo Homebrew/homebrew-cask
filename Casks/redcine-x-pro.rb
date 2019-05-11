@@ -4,6 +4,7 @@ cask 'redcine-x-pro' do
 
   # s3.amazonaws.com/red_3/ was verified as official when first introduced to the cask
   url "http://s3.amazonaws.com/red_3/downloads/software/rcx/RELEASE%20CANDIDATE/REDCINE-X_PRO_Build_#{version.major_minor}.pkg"
+  appcast 'https://www.red.com/downloads/options?itemInternalId=16144'
   name 'REDCINE-X PRO'
   homepage 'https://www.red.com/'
 
