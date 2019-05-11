@@ -1,6 +1,6 @@
 cask 'next' do
-  version '1.2.0'
-  sha256 '286e9af278797db6c41bbc9efd5c97e6d249734b4bca5df687ebaa481b35dc7b'
+  version '1.2.1'
+  sha256 '27d8e5a03678b6f4d1804d47856656546bb170f73b560fdf6c9b51853007f3a4'
 
   url 'https://next.atlas.engineer/static/release/next-macos-webkit.dmg'
   appcast 'https://github.com/atlas-engineer/next/releases.atom'
