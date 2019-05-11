@@ -7,7 +7,7 @@ cask 'daylite' do
   else
     version '6.6.4.4'
     sha256 'e317a5293c565fc095ceba27cfaac941b7e992000273c4595313f8c3cadde9a6'
-    url 'https://www.marketcircle.com/appcasts/releases/latest-daylite.zip'
+    url "https://download.marketcircle.com/daylite/daylitedma#{version.no_dots}.pkg"
     pkg "daylitedma#{version.no_dots}.pkg"
   end
 
