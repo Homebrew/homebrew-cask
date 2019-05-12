@@ -1,8 +1,8 @@
 cask 'ctivo' do
-  version '3.3.0'
-  sha256 '67a75ea8449d593c6cb240a0acbc20e3bdef743651eda419eb38558a6a74f2ab'
+  version '3.3.1'
+  sha256 'a1b9f4da0e3489b7ebb2a561ea124df8701d70db86daca4905cfdf431a4df407'
 
-  url "https://github.com/mackworth/cTiVo/releases/download/#{version}/cTiVo.app.zip"
+  url "https://github.com/mackworth/cTiVo/releases/download/#{version}/cTiVo.#{version}.zip"
   appcast 'https://github.com/mackworth/cTiVo/releases.atom'
   name 'cTiVo'
   homepage 'https://github.com/mackworth/cTiVo'
