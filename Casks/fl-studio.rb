@@ -1,5 +1,5 @@
 cask 'fl-studio' do
-  version '20.1.2.210'
+  version '20.2.0.396'
   sha256 'ea2a2bc1e2ba9722e0beb90c69caa53f29b925221b6c13536806d6554c533118'
 
   url "https://support.image-line.com/action/redirect/flstudio#{version.major}_mac_installer"
