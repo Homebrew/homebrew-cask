@@ -9,4 +9,10 @@ cask 'sigil' do
   homepage 'https://sigil-ebook.com/'
 
   app 'Sigil.app'
+
+  zap trash: [
+               '~/Library/Application Support/sigil-ebook',
+               '~/Library/Preferences/com.sigil-ebook.Sigil.app.plist',
+               '~/Library/Saved Application State/com.sigil-ebook.Sigil.app.savedState',
+             ]
 end
