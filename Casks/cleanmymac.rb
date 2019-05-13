@@ -1,6 +1,6 @@
 cask 'cleanmymac' do
-  version '4.4.0,1554975571'
-  sha256 'ca9d9636554733b3c09db324d8e2f61db9a7f5bd258b08e8cd004601837e0283'
+  version '4.4.1,1557738974'
+  sha256 'cbdf6a45a10f0ebc8e4f23cf5888d2b121c8ebaf5b06093ba78672487d55f34f'
 
   # devmate.com/com.macpaw.CleanMyMac was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.macpaw.CleanMyMac#{version.major}/#{version.major_minor_patch}/#{version.after_comma}/CleanMyMacX-#{version.major_minor_patch}.zip"
