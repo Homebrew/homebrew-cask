@@ -9,8 +9,5 @@ cask 'mob' do
 
   app 'Mob.app'
 
-  zap trash: [
-               '~/Library/Application Support/mob',
-
-             ]
+  zap trash: '~/Library/Application Support/mob'
 end
