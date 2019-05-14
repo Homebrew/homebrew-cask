@@ -11,4 +11,13 @@ cask 'zulip' do
   auto_updates true
 
   app 'Zulip.app'
+
+  zap trash: [
+               '~/Library/Application Support/Zulip',
+               '~/Library/Caches/org.zulip.zulip-electron.helper',
+               '~/Library/Logs/Zulip',
+               '~/Library/Preferences/org.zulip.zulip-electron.helper.plist',
+               '~/Library/Preferences/org.zulip.zulip-electron.plist',
+               '~/Library/Saved Application State/org.zulip.zulip-electron.savedState',
+             ]
 end
