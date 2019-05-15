@@ -8,7 +8,5 @@ cask 'prusaslicer' do
   name 'PrusaSlicer'
   homepage 'https://www.prusa3d.com/slic3r-prusa-edition/'
 
-  conflicts_with cask: ['slic3r', 'prusa-slic3r']
-
   app 'PrusaSlicer.app'
 end
