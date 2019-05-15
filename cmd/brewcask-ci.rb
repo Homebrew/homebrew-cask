@@ -40,6 +40,7 @@ module Cask
 
           overall_success &= step "brew cask audit #{cask.token}", "audit" do
             Auditor.audit(cask, audit_download: true,
+                                audit_appcast: true,
                                 check_token_conflicts: added_cask_files.include?(path),
                                 commit_range: ENV["TRAVIS_COMMIT_RANGE"])
           end
