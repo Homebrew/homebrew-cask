@@ -4,7 +4,7 @@ cask 'indigo' do
 
   # goprism.com was verified as official when first introduced to the cask
   url "http://cloud.goprism.com/download/Indigo_#{version.dots_to_underscores}.dmg"
-  appcast 'http://www.indigodomo.com/downloads.html'
+  appcast 'https://www.indigodomo.com/downloads.html'
   name 'Indigo'
   name 'Indigo Domotics'
   homepage 'https://www.indigodomo.com/'
