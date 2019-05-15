@@ -7,6 +7,8 @@ cask 'mono-mdk' do
   name 'Mono'
   homepage 'https://www.mono-project.com/'
 
+  conflicts_with cask: 'mono-mdk516'
+
   pkg "MonoFramework-MDK-#{version}.macos10.xamarin.universal.pkg"
 
   uninstall delete:  [

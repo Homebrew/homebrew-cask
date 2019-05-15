@@ -1,6 +1,6 @@
 cask 'second-life-viewer' do
-  version '6.2.0.526190'
-  sha256 '38c7e22c85ebdde900ea0bf849464a317910d950f5a76960922f49571854c9f6'
+  version '6.2.1.526845'
+  sha256 '364b06ad29e8a6f5a4679da9e626f99b0baf72ba735bd8b90ed680b96b3eabcc'
 
   url "http://download.cloud.secondlife.com/Viewer_#{version.major}/Second_Life_#{version.dots_to_underscores}_x86_64.dmg"
   appcast 'https://secondlife.com/support/downloads/'

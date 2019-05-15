@@ -1,6 +1,6 @@
 cask 'nvivo' do
-  version '12.3.0.3508'
-  sha256 '46156e0065cd6c5a7cdf141b3b2ab27be41e3ef0a02361867a80090af1befc3d'
+  version '12.4.0.3621'
+  sha256 'ffb0a91c2f90df1bd26a9dfe36802b63c5257306944ca478c287a3cc9c5e6700'
 
   url "https://download.qsrinternational.com/Software/NVivo#{version.major}forMac/#{version}/NVivo%20#{version.major}.dmg"
   appcast "https://download.qsrinternational.com/Software/NVivo#{version.major}forMac/appcast.xml"
