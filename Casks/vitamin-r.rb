@@ -10,7 +10,7 @@ cask 'vitamin-r' do
   url "http://www.publicspace.net/download/signedVitamin#{version.major}.zip"
   appcast "http://www.publicspace.net/app/vitamin#{version.major}.xml"
   name 'Vitamin-R'
-  homepage 'http://www.publicspace.net/Vitamin-R/'  
+  homepage 'http://www.publicspace.net/Vitamin-R/'
 
   auto_updates true
 
