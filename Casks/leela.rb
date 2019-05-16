@@ -6,6 +6,8 @@ cask 'leela' do
   name 'Leela'
   homepage 'https://sjeng.org/leela.html'
 
+  depends_on macos: '>= :sierra'
+
   app 'Leela.app'
   app 'Leela OpenCL.app'
 end
