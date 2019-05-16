@@ -5,7 +5,7 @@ cask 'touch-bar-simulator' do
     url "https://github.com/sindresorhus/touch-bar-simulator/releases/download/v#{version}/Touch-Bar-Simulator-#{version}.dmg"
   else
     version '3.1.0'
-    sha256 '4abe55de716ae56a41031cdb1d3b27bf6b1efae18b33b80bb0419669a9a76aa1'
+    sha256 '4f586e53f14ca0b8f0ad042a350e4101b8d79d0d74c59376c207065e25d35a92'
     url "https://github.com/sindresorhus/touch-bar-simulator/releases/download/v#{version}/Touch.Bar.Simulator.#{version}.dmg"
   end
 
