@@ -10,6 +10,7 @@ cask 'makerbot-print' do
   pkg 'MakerBotPrintInstaller.pkg'
 
   uninstall pkgutil: [
+                       'com.makerbot.electron',
                        'com.makerbot.MakerBot Print',
                        'com.makerbot.MakerBotPrintInstallScripts',
                        'com.makerbot.usb_daemon',
