@@ -7,5 +7,7 @@ cask 'quaternion' do
   name 'Quaternion'
   homepage 'https://github.com/QMatrixClient/Quaternion'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'quaternion.app'
 end
