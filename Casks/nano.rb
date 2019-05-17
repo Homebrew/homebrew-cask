@@ -8,6 +8,8 @@ cask 'nano' do
   name 'Nano'
   homepage 'https://nano.org/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Nano.app'
 
   zap trash: [
