@@ -15,6 +15,7 @@ cask 'makerbot-print' do
                          'com.makerbot.MakerBotPrintInstallScripts',
                          'com.makerbot.usb_daemon',
                        ],
+            delete:    '/Applications/MakerBot Print.app',
             quit:      'com.makerbot.electron',
             launchctl: [
                          'com.makerbot.fire_e',
