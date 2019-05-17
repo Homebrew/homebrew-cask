@@ -4,7 +4,7 @@ cask 'photoscanpro' do
 
   url "http://download.agisoft.com/photoscan-pro_#{version.dots_to_underscores}.dmg"
   name 'Agisoft PhotoScan Professional'
-  homepage 'http://www.agisoft.com/'
+  homepage 'https://www.agisoft.com/'
 
   app 'PhotoScanPro.app'
 end

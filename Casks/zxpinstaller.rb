@@ -6,7 +6,7 @@ cask 'zxpinstaller' do
   url "https://github.com/CreativeDo/ZXPInstaller/releases/download/#{version}/ZXPInstaller.dmg"
   appcast 'https://github.com/CreativeDo/ZXPInstaller/releases.atom'
   name 'ZXPInstaller'
-  homepage 'http://zxpinstaller.com/'
+  homepage 'https://zxpinstaller.com/'
 
   app 'ZXPInstaller.app'
 

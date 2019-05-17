@@ -4,7 +4,7 @@ cask 'eim' do
 
   url "https://dldir1.qq.com/qqfile/crm/hrtx/EIM_r#{version.before_comma}.#{version.after_comma}.dmg"
   name 'EIM'
-  homepage 'http://b.qq.com/eim/main.html'
+  homepage 'https://b.qq.com/eim/main.html'
 
   app 'EIM.app'
 end
