@@ -9,10 +9,19 @@ cask 'makerbot-print' do
 
   pkg 'MakerBotPrintInstaller.pkg'
 
-  uninstall pkgutil: [
-                       'com.makerbot.electron',
-                       'com.makerbot.MakerBot Print',
-                       'com.makerbot.MakerBotPrintInstallScripts',
-                       'com.makerbot.usb_daemon',
-                     ]
+  uninstall pkgutil:   [
+                         'com.makerbot.electron',
+                         'com.makerbot.MakerBot Print',
+                         'com.makerbot.MakerBotPrintInstallScripts',
+                         'com.makerbot.usb_daemon',
+                       ],
+            quit:      'com.makerbot.electron',
+            launchctl: [
+                         'com.makerbot.fire_e',
+                         'com.makerbot.mini_4',
+                         'com.makerbot.mini_8',
+                         'com.makerbot.replicator_5',
+                         'com.makerbot.replicator_b',
+                         'com.makerbot.z18_6',
+                       ]
 end
