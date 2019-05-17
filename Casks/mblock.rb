@@ -4,9 +4,9 @@ cask 'mblock' do
 
   # mblock.makeblock.com was verified as official when first introduced to the cask
   url "https://mblock.makeblock.com/mBlock_mac_V#{version}.zip"
-  appcast 'http://www.mblock.cc/release-logs/'
+  appcast 'https://www.mblock.cc/release-logs/'
   name 'mBlock'
-  homepage 'http://www.mblock.cc/'
+  homepage 'https://www.mblock.cc/'
 
   app "mBlock_v#{version}.app"
 end

@@ -4,7 +4,7 @@ cask 'polycom-realpresence' do
 
   url "https://downloads.polycom.com/video/realpresence_desktop/RPDesktop_#{version.dots_to_underscores}.dmg"
   name 'Polycom RealPresence Desktop'
-  homepage 'http://www.polycom.com/products-services/hd-telepresence-video-conferencing/realpresence-desktop/realpresence-desktop.html'
+  homepage 'https://www.polycom.com/products-services/hd-telepresence-video-conferencing/realpresence-desktop/realpresence-desktop.html'
 
   pkg 'RealPresenceDesktop.pkg'
 

@@ -6,7 +6,7 @@ cask 'flightgear' do
   url "https://downloads.sourceforge.net/flightgear/FlightGear-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/flightgear/rss'
   name 'FlightGear'
-  homepage 'http://www.flightgear.org/'
+  homepage 'https://www.flightgear.org/'
 
   app 'FlightGear.app'
 

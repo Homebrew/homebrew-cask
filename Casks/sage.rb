@@ -3,7 +3,7 @@ cask 'sage' do
   sha256 'e632dec0e0f2a71d35ad240b8c03c83af8b8bfe0acfa1c897d75a2de82481929'
 
   # mirrors.mit.edu/sage/osx/intel was verified as official when first introduced to the cask
-  url "http://mirrors.mit.edu/sage/osx/intel/sage-#{version.before_comma}-OSX_#{version.after_comma}-x86_64.app.dmg"
+  url "https://mirrors.mit.edu/sage/osx/intel/sage-#{version.before_comma}-OSX_#{version.after_comma}-x86_64.app.dmg"
   name 'Sage'
   homepage 'https://www.sagemath.org/'
 

@@ -4,7 +4,7 @@ cask 'beersmith' do
 
   # amazonaws.com/beersmith- was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/beersmith-#{version.major}/BeerSmith#{version.dots_to_underscores}.dmg"
-  appcast 'http://beersmith.com/download-beersmith/'
+  appcast 'https://beersmith.com/download-beersmith/'
   name 'BeerSmith'
   homepage 'https://beersmith.com/'
 
