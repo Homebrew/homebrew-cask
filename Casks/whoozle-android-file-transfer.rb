@@ -1,6 +1,6 @@
 cask 'whoozle-android-file-transfer' do
-  version '3.7'
-  sha256 '463c7ddd0828010b9b3f6b2705efc4b4986502c6b6e8e1abc2c148cc59528ee9'
+  version '3.8'
+  sha256 '723a25c75c6e97cc9f5468231eea802326687911ae6723bcfcee9a8ce32f84ff'
 
   # github.com/whoozle/android-file-transfer-linux was verified as official when first introduced to the cask
   url "https://github.com/whoozle/android-file-transfer-linux/releases/download/v#{version}/AndroidFileTransferForLinux.dmg"
