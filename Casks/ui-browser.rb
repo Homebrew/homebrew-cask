@@ -1,6 +1,6 @@
 cask 'ui-browser' do
-  version '2.8.0'
-  sha256 '4ce26e6b10223b3216148af7a81e79ee6eb4fb8e04621484b8b78c56b61c5c00'
+  version '2.8.1'
+  sha256 '44ba5a768871f6b3bc3a7836ac1fb121e2bed0f59df55885b6e133e1c5c99b51'
 
   url "https://pfiddlesoft.com/uibrowser/downloads/UIBrowser#{version.no_dots}.dmg"
   appcast 'https://pfiddlesoft.com/uibrowser/index-downloads.html'
