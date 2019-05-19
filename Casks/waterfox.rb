@@ -6,7 +6,7 @@ cask 'waterfox' do
   url "https://storage-waterfox.netdna-ssl.com/releases/osx64/installer/Waterfox%20#{version}%20Setup.dmg"
   appcast 'https://www.waterfox.net/releases/'
   name 'Waterfox'
-  homepage 'https://www.waterfox.net'
+  homepage 'https://www.waterfox.net/'
 
   app 'Waterfox.app'
 
