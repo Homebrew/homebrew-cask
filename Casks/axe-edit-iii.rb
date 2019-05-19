@@ -7,12 +7,7 @@ cask 'axe-edit-iii' do
   name 'Axe-Edit III'
   homepage 'https://www.fractalaudio.com/axe-fx-iii-edit/'
 
-  pkg "Axe-Edit-III-OSX-v#{version.tr('.', 'p')}.pkg"
-
-  uninstall pkgutil: [
-                       'com.FractalAudio.AIIIEdit.pkg',
-                       'com.FractalAudio.AIIIEdit.ReleaseNotes.pkg',
-                     ]
+  app 'Axe-Edit III.app'
 
   zap trash: '~/Library/Application Support/Fractal Audio/Axe-Edit III'
 end
