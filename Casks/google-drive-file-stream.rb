@@ -15,6 +15,9 @@ cask 'google-drive-file-stream' do
             pkgutil:    'com.google.drivefs'
 
   zap trash: [
+               '/Applications/Google Docs.app',
+               '/Applications/Google Sheets.app',
+               '/Applications/Google Slides.app',
                '~/Library/Application Support/Google/DriveFS',
                '~/Library/Caches/com.google.drivefs',
                '~/Library/Preferences/Google Drive File Stream Helper.plist',
