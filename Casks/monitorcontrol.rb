@@ -7,5 +7,7 @@ cask 'monitorcontrol' do
   name 'MonitorControl'
   homepage 'https://github.com/the0neyouseek/MonitorControl'
 
+  depends_on macos: '>= :sierra'
+
   app 'MonitorControl.app'
 end
