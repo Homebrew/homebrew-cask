@@ -1,6 +1,6 @@
 cask 'prusaslicer' do
-  version '2.0.0-rc,201905141706'
-  sha256 '9ef6ab16bff3c60bfe0d27b34b13d14b9710e4e4148c917d32d679b6fb5f0542'
+  version '2.0.0-rc2,201905190649'
+  sha256 '9b6d8d42c6ea63a19682b0aa4cfd214d1fce9be2a5b093d0c94707e3a5f52987'
 
   # github.com/prusa3d/PrusaSlicer was verified as official when first introduced to the cask.
   url "https://github.com/prusa3d/PrusaSlicer/releases/download/version_#{version.before_comma}/PrusaSlicer-#{version.before_comma}+-#{version.after_comma}.dmg"
