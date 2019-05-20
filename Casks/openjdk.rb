@@ -11,7 +11,7 @@ cask 'openjdk' do
   pkg 'OpenJDK12U-jdk_x64_mac_hotspot_12.0.1_12.pkg'
 
   uninstall pkgutil: 'net.adoptopenjdk.12.jdk'
-  
+
   caveats <<~EOS
     More versions are available in the homebrew-cask-versions tap:
       #{Formatter.url('https://github.com/Homebrew/homebrew-cask-versions')}
@@ -19,4 +19,3 @@ cask 'openjdk' do
       brew tap homebrew/cask-versions
   EOS
 end
-
