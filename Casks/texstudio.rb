@@ -10,6 +10,8 @@ cask 'texstudio' do
 
   conflicts_with cask: 'texstudio-beta'
 
+  depends_on macos: '>= :sierra'
+  
   app 'texstudio.app'
 
   zap trash: [
