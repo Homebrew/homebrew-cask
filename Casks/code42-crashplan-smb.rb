@@ -1,4 +1,4 @@
-cask 'code42-smb' do
+cask 'code42-crashplan-smb' do
   version '6.9.4'
   sha256 '2f1d3131bdec06f879eb74456afcaaebc09d3a7a4901a8f7458189ff3efec5bb'
 
