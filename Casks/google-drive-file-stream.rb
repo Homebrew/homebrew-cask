@@ -12,12 +12,10 @@ cask 'google-drive-file-stream' do
 
   uninstall login_item: 'Google Drive File Stream',
             quit:       'com.google.drivefs',
-            pkgutil:    'com.google.drivefs'
+            pkgutil:    ['com.google.drivefs', 'com.google.drivefs.shortcuts', 'com.google.pkg.Keystone'],
+            launchctl:  ['com.google.keystone.agent', 'com.google.keystone.system.agent', 'com.google.keystone.daemon', 'com.google.keystone.xpcservice', 'com.google.keystone.system.xpcservice', 'com.google.keystone.daemon', 'com.google.keystone.system.agent', 'com.google.keystone.system.xpcservice']
 
   zap trash: [
-               '/Applications/Google Docs.app',
-               '/Applications/Google Sheets.app',
-               '/Applications/Google Slides.app',
                '~/Library/Application Support/Google/DriveFS',
                '~/Library/Caches/com.google.drivefs',
                '~/Library/Preferences/Google Drive File Stream Helper.plist',
