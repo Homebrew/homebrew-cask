@@ -9,9 +9,8 @@ cask 'texstudio' do
   homepage 'https://texstudio.org/'
 
   conflicts_with cask: 'texstudio-beta'
-
   depends_on macos: '>= :sierra'
-  
+
   app 'texstudio.app'
 
   zap trash: [
