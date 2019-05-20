@@ -1,0 +1,21 @@
+cask 'code42-smb' do
+  version '6.9.4'
+  sha256 '2f1d3131bdec06f879eb74456afcaaebc09d3a7a4901a8f7458189ff3efec5bb'
+
+  # download.code42.com was verified as official when first introduced to the cask
+  url "https://www.crashplanpro.com/client/installers/CrashPlanSmb_6.9.4_1525200006694_502_Mac.dmg"
+  appcast 'https://support.code42.com/Release_Notes/CrashPlan_for_Small_Business_release_notes'
+  name 'CrashPlan'
+  homepage 'https://www.crashplan.com/'
+
+  auto_updates true
+
+  pkg 'Install Code42 CrashPlan.pkg'
+
+  uninstall launchctl: 'com.backup42.desktop',
+            pkgutil:   'com.crashplan.app.pkg',
+            script:    {
+                         executable: 'Uninstall.app/Contents/Resources/uninstall.sh',
+                         sudo:       true,
+                       }
+end
