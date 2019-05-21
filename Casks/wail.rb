@@ -1,6 +1,6 @@
 cask 'wail' do
-  version '0.2019.04.04'
-  sha256 'd78d856c6445ff9f40297e15c1e0c2336997b52bc5a6a98460c056f18accd1c7'
+  version '0.2019.05.21'
+  sha256 '45a50a28bfe4c385e93b4053259fdc35265ef0603a3e65e5caf37f1432788b79'
 
   url "https://github.com/machawk1/wail/releases/download/v#{version}/WAIL_v#{version}_macOS.dmg"
   appcast 'https://github.com/machawk1/wail/releases.atom'
