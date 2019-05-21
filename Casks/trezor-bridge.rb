@@ -1,6 +1,6 @@
 cask 'trezor-bridge' do
-  version '2.0.25'
-  sha256 '696cd6b3e7e34a8b72c57b4317a3ef12bb3bb1c6bbce72212a17192e29e2fc2d'
+  version '2.0.27'
+  sha256 'a8a5352f888467cb1bc3b4273ee26c7f0da2a58f60e31aeffea46153aa03be07'
 
   url "https://wallet.trezor.io/data/bridge/#{version}/trezor-bridge-#{version}.pkg"
   appcast 'https://wallet.trezor.io/data/bridge/latest.txt'
