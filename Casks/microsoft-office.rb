@@ -8,6 +8,7 @@ cask 'microsoft-office' do
   homepage 'https://products.office.com/mac/microsoft-office-for-mac/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   pkg "Microsoft_Office_#{version}_Installer.pkg"
 
