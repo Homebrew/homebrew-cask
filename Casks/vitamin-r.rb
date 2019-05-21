@@ -12,5 +12,7 @@ cask 'vitamin-r' do
   name 'Vitamin-R'
   homepage 'http://www.publicspace.net/Vitamin-R/'
 
+  auto_updates true
+
   app "Vitamin-R #{version.major}.app"
 end
