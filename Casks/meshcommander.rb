@@ -1,9 +1,9 @@
 cask 'meshcommander' do
-  version '0.6.0'
-  sha256 '4dde5b78a4a50af7e60772ef9e0358af9467063453b1f772142ec8e5db4c5c81'
+  version '0.7.4'
+  sha256 '01258821e3103eea0e499a411c2d86b3d6e00d5ce358953ef55be7b08e51b63d'
 
   # bintray.com/gomesjj/APPS was verified as official when first introduced to the cask
-  url "https://dl.bintray.com/gomesjj/APPS/MeshCommander_#{version.no_dots}.dmg.zip"
+  url 'https://bintray.com/gomesjj/APPS/download_file?file_path=MeshCommander.dmg'
   name 'MeshCommander'
   homepage 'https://www.devtty.uk/apple/Intel_Mesh_Commander_on_Mac_OS_X/'
 
