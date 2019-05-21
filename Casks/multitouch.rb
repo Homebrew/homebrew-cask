@@ -8,6 +8,7 @@ cask 'multitouch' do
   homepage 'https://multitouch.app/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'Multitouch.app'
 
