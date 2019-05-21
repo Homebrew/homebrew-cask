@@ -9,7 +9,5 @@ cask 'bunch' do
 
   app 'Bunch.app'
 
-  zap trash: [
-               '~/Library/Preferences/com.brettterpstra.Bunch.plist',
-             ]
+  zap trash: '~/Library/Preferences/com.brettterpstra.Bunch.plist'
 end
