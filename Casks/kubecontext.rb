@@ -1,6 +1,6 @@
 cask 'kubecontext' do
-  version '1.22'
-  sha256 '63396f87f4fda10cd357c76d49cde1001e0644ad91f93ad3fdec1899b519990c'
+  version '1.23'
+  sha256 '262d0e2c2843c0e0220b557e02091d06c64e403b5ff09f09351f6e81841c8ac5'
 
   url "https://github.com/turkenh/KubeContext/releases/download/v#{version}/KubeContext.zip"
   appcast 'https://github.com/turkenh/KubeContext/releases.atom'
