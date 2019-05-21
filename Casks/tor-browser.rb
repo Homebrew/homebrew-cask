@@ -38,7 +38,7 @@ cask 'tor-browser' do
 
   language 'es-ar' do
     sha256 'e25bbae42beadb3849155040c6c4430e9a62e0b8b2409af776ebb413861468c6'
-    'es-ar'
+    'es-AR'
   end
 
   language 'es-es' do
