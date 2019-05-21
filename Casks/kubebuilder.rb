@@ -7,5 +7,5 @@ cask 'kubebuilder' do
   name 'Kubebuilder'
   homepage 'https://github.com/kubernetes-sigs/kubebuilder'
 
-  binary "kubebuilder_#{version}_darwin_amd64/bin/kubebuilder", target: "kubebuilder"
+  binary "kubebuilder_#{version}_darwin_amd64/bin/kubebuilder", target: 'kubebuilder'
 end
