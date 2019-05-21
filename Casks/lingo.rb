@@ -1,6 +1,6 @@
 cask 'lingo' do
-  version '4.6'
-  sha256 '1ac5bbfc5da00e7170a71174cf3a8d95127aabca2b8c3ce339d18bd13bfe39f8'
+  version '6.0'
+  sha256 '2fee491fb61697a3a2d0c0096f4d9ef0f3dae962c1a2f7b7c4973b6160976709'
 
   # nounproject.s3.amazonaws.com/lingo was verified as official when first introduced to the cask
   url 'https://nounproject.s3.amazonaws.com/lingo/Lingo.dmg'
