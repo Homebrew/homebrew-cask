@@ -8,5 +8,7 @@ cask 'amadine' do
   name 'Amadine'
   homepage 'https://amadine.com/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Amadine.app'
 end
