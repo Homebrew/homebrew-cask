@@ -1,10 +1,13 @@
 cask 'gitkraken' do
-  version :latest
-  sha256 :no_check
+  version '5.0.4'
+  sha256 '0d6df7e7c686af55a2e2033729ad5bfa22cb1e36090cc999eebd10bf9fc2dcdd'
 
-  url 'https://release.gitkraken.com/darwin/installGitKraken.dmg'
+  url "https://release.gitkraken.com/darwin/installGitKraken.dmg"
+  appcast 'https://support.gitkraken.com/release-notes/current'
   name 'GitKraken'
   homepage 'https://www.gitkraken.com/'
+
+  auto_updates true
 
   app 'GitKraken.app'
 
