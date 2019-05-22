@@ -1,5 +1,5 @@
 cask 'amadeus-pro' do
-  version '2.5.3'
+  version '2.6'
   sha256 'a994e2db0a2f42a28afc289cdf55696fbb31132b9d23aab4e2abc667d3f493b2'
 
   # amazonaws.com/AmadeusPro2 was verified as official when first introduced to the cask
