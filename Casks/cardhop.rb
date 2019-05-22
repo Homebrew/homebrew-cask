@@ -1,6 +1,6 @@
 cask 'cardhop' do
-  version '1.2.4'
-  sha256 '5d6865cb77503d134fc2266c888b93cb925089cc2ba5d80b3d2003c10a916f4d'
+  version '1.2.5'
+  sha256 'eca1b753351cc73a303c0c9a3f077e2fdcc22205eaed268e4b167a8ca211aa9f'
 
   url "http://cdn.flexibits.com/Cardhop_#{version}.zip"
   appcast 'https://flexibits.com/cardhop/appcast.php'
