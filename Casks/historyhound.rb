@@ -17,3 +17,4 @@ cask 'historyhound' do
                '~/Library/Preferences/com.stclairsoft.HistoryHound.plist',
              ]
 end
+
