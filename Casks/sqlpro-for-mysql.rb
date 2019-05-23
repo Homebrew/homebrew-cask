@@ -1,6 +1,6 @@
 cask 'sqlpro-for-mysql' do
-  version '1.0.465'
-  sha256 'e8a681639f45bbcf80473ae38b953791425f27a8f42a0f7dbf3d72e6c4a7718e'
+  version '2019.05.16'
+  sha256 'b4dd47ceb254f4f55d5331eece555a0f15fe2d8a5ec9ed99fb1850298833059f'
 
   # d3fwkemdw8spx3.cloudfront.net/mysql was verified as official when first introduced to the cask
   url "https://d3fwkemdw8spx3.cloudfront.net/mysql/SQLProMySQL.#{version}.app.zip"
