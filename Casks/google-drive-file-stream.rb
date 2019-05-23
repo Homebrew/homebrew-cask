@@ -15,7 +15,7 @@ cask 'google-drive-file-stream' do
             pkgutil:    [
                           'com.google.drivefs',
                           'com.google.drivefs.shortcuts',
-                          'com.google.pkg.Keystone'
+                          'com.google.pkg.Keystone',
                         ],
             launchctl:  [
                           'com.google.keystone.agent',
@@ -23,7 +23,7 @@ cask 'google-drive-file-stream' do
                           'com.google.keystone.daemon',
                           'com.google.keystone.xpcservice',
                           'com.google.keystone.system.xpcservice',
-                        ],
+                        ]
 
   zap trash: [
                '~/Library/Application Support/Google/DriveFS',
