@@ -3,7 +3,8 @@ cask 'tableau-prep' do
   sha256 '54ea5395bca454fff9d48500633aa866e6fa80828896a477baa4148051c5ba74'
 
   url "https://downloads.tableau.com/esdalt/tableau_prep/#{version}/TableauPrep-#{version.dots_to_hyphens}.dmg"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.tableau.com/downloads/prep/mac'
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.tableau.com/downloads/prep/mac',
+          configuration: version.dots_to_hyphens.to_s
   name 'Tableau Prep'
   homepage 'https://www.tableau.com/support/releases/prep'
 
