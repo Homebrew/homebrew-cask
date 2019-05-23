@@ -4,7 +4,7 @@ cask 'there' do
 
   # github.com/therehq/there-desktop was verified as official when first introduced to the cask
   url "https://github.com/therehq/there-desktop/releases/download/v#{version}/There-#{version}-mac.zip"
-  appcast 'https://github.com/therepm/there-desktop/releases.atom'
+  appcast 'https://github.com/therehq/there-desktop/releases.atom'
   name 'There'
   homepage 'https://there.pm/'
 
