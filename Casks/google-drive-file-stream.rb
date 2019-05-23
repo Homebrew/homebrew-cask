@@ -15,7 +15,7 @@ cask 'google-drive-file-stream' do
             pkgutil:    [
                           'com.google.drivefs',
                           'com.google.drivefs.shortcuts',
-                          'com.google.pkg.Keystone'
+                          'com.google.pkg.Keystone',
                         ],
             launchctl:  [
                           'com.google.keystone.agent',
