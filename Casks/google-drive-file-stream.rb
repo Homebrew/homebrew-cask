@@ -23,7 +23,7 @@ cask 'google-drive-file-stream' do
                           'com.google.keystone.daemon',
                           'com.google.keystone.xpcservice',
                           'com.google.keystone.system.xpcservice',
-                        ]
+                        ],
 
   zap trash: [
                '~/Library/Application Support/Google/DriveFS',
