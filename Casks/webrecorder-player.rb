@@ -3,9 +3,9 @@ cask 'webrecorder-player' do
   sha256 '11ccbe2040d53c673c38a08f6b13acec3a36c9ad0a18c3a51b86987219533dcc'
 
   url "https://github.com/webrecorder/webrecorder-player/releases/download/v#{version}/webrecorder-player-#{version}.dmg"
-  appcast 'https://github.com/webrecorder/webrecorderplayer-electron/releases.atom'
+  appcast 'https://github.com/webrecorder/webrecorder-player/releases.atom'
   name 'Webrecorder Player'
-  homepage 'https://github.com/webrecorder/webrecorderplayer-electron'
+  homepage 'https://github.com/webrecorder/webrecorder-player/'
 
   app 'Webrecorder Player.app'
 
