@@ -13,6 +13,7 @@ cask 'aspera-connect' do
                        'com.aspera.AsperaWeb',
                        'com.aspera.connect',
                        'com.aspera.crypt',
+                       'com.aspera.launcher',
                      ],
             script:  {
                        executable: '/Library/Application Support/Aspera/Aspera Connect/uninstall_connect.sh',
