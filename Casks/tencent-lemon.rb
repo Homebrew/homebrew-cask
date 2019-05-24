@@ -1,6 +1,6 @@
 cask 'tencent-lemon' do
-  version '1.2.0'
-  sha256 '3a67fed15bb801527de4a77d8d4a21c9d8e29624e699c0a612296600a86410f0'
+  version '1.2.2.1'
+  sha256 '4edd5263fb9dd18adae9e78dd98a486ab3a041d14cdcf1f43ee8cfaee2ef6d37'
 
   # pm.myapp.com/invc/xfspeed/qqpcmgr was verified as official when first introduced to the cask
   url "https://pm.myapp.com/invc/xfspeed/qqpcmgr/module_update/Lemon_#{version}.dmg"
