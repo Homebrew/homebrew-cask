@@ -4,7 +4,7 @@ readonly program="$(basename "${0}")"
 
 function usage {
   echo "
-    List IDs for currently loaded launchctl jobs. Job IDs attributed to Apple are excluded from the output.
+    List IDs for currently loaded launchd jobs. Job IDs attributed to Apple are excluded from the output.
 
     Usage:
       ${program} [options]
