@@ -4,7 +4,8 @@ cask 'sonic-visualiser' do
 
   # code.soundsoftware.ac.uk was verified as official when first introduced to the cask
   url "https://code.soundsoftware.ac.uk/attachments/download/#{version.after_comma}/Sonic%20Visualiser-#{version.before_comma.major_minor}.dmg"
-  appcast 'https://code.soundsoftware.ac.uk/projects/sonic-visualiser/repository/raw/CHANGELOG'
+  appcast 'https://code.soundsoftware.ac.uk/projects/sonic-visualiser/repository/raw/CHANGELOG',
+          configuration: version.major_minor
   name 'Sonic Visualiser'
   homepage 'https://www.sonicvisualiser.org/'
 
