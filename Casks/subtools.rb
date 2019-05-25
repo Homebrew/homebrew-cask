@@ -6,5 +6,5 @@ cask 'subtools' do
   name 'SUBtools'
   homepage 'http://www.emmgunn.com/subtools-home/'
 
-  app 'subtools#{version}/SUBtools.app'
+  app "subtools#{version}/SUBtools.app"
 end
