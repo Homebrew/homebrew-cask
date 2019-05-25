@@ -4,7 +4,7 @@ cask 'ejectionseat' do
 
   url "https://github.com/pilotchute/EjectionSeat/releases/download/#{version}/EjectionSeat.app.zip"
   appcast 'https://github.com/pilotchute/EjectionSeat/releases.atom'
-  name 'ejectionseat'
+  name 'EjectionSeat'
   homepage 'https://github.com/pilotchute/EjectionSeat'
 
   app 'EjectionSeat.app'
