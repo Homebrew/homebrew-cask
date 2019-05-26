@@ -3,6 +3,7 @@ cask 'geneious-prime' do
   sha256 'cc2ee59ce2bcba7d7eb08f0e10efc8ce28a10a24ad417b5e0fb7a676c20fa2a3'
 
   url "https://assets.geneious.com/installers/geneious/release/Geneious_Prime_mac64_#{version.dots_to_underscores}_with_jre.dmg"
+  appcast 'https://www.geneious.com/download/'
   name 'Geneious Prime'
   homepage 'https://www.geneious.com/'
 
