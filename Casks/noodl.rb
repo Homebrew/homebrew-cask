@@ -4,6 +4,7 @@ cask 'noodl' do
 
   # s3.amazonaws.com/updates.noodlcloud.com was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/updates.noodlcloud.com/Noodl-#{version}.dmg"
+  appcast 'https://www.getnoodl.com/download'
   name 'Noodl'
   homepage 'https://www.getnoodl.com/'
 
