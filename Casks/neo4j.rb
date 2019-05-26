@@ -4,6 +4,7 @@ cask 'neo4j' do
   sha256 '62a9d79b9d146f2a4445a9625d4ece817ea7403341384cf295cd7424a24443bf'
 
   url "https://neo4j.com/artifact.php?name=neo4j-desktop-offline-#{version}.dmg"
+  appcast 'https://neo4j.com/download/'
   name 'Neo4j Desktop'
   homepage 'https://neo4j.com/download/'
 
