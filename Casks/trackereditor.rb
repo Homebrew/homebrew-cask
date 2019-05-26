@@ -1,6 +1,6 @@
 cask 'trackereditor' do
-  version '1.33.0.beta5'
-  sha256 '9cf231c90553486bbb8f49d15cf075168c56f9c836c1c4874bffcbfcae1650ef'
+  version '1.33.0.beta.5'
+  sha256 'd46d621b3aaf61c99aea90965229273628879c931f884362803fb719109d2d6c'
 
   url "https://github.com/mrjayviper/homebrew-apps/releases/download/initial/trackereditor#{version}.zip"
   appcast 'https://github.com/GerryFerdinandus/bittorrent-tracker-editor/releases'
