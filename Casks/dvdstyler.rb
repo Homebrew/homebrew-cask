@@ -1,6 +1,6 @@
 cask 'dvdstyler' do
-  version '3.0.4'
-  sha256 '12d485facb37c8541585899237391a6b959cf8c9661d3600ca144cd9efc2bae2'
+  version '3.1'
+  sha256 '451e43650db37b8c23c9eabf9c2451023c9ffb1a3e3349af9ee6412eaee99713'
 
   # sourceforge.net/dvdstyler was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/dvdstyler/DVDStyler-#{version}-MacOSX.dmg"
