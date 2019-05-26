@@ -4,6 +4,7 @@ cask 'laplock' do
 
   # s3-eu-west-1.amazonaws.com/laplock was verified as official when first introduced to the cask
   url "https://s3-eu-west-1.amazonaws.com/laplock/Laplock-#{version}.dmg"
+  appcast 'https://www.laplock.co/'
   name 'Laplock'
   homepage 'https://www.laplock.co/'
 
