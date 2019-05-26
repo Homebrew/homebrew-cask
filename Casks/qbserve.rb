@@ -1,6 +1,6 @@
 cask 'qbserve' do
-  version '1.82'
-  sha256 '008d36a9af1fdad68d1a4c8e4a7fcc5d71a936d5cee08c81e88c5284a3af89f5'
+  version '1.83'
+  sha256 '101b73078a1244f73b999563806fad994f5cef9907bc3f1f7ec3cf583f6e436d'
 
   url "https://qotoqot.com/qbserve/app/Qbserve-#{version}.zip"
   appcast 'https://qotoqot.com/qbserve/app/appcast.xml'
