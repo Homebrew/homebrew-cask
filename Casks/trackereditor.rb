@@ -9,4 +9,3 @@ cask 'trackereditor' do
 
   app "trackereditor#{version}/trackereditor.app"
 end
-
