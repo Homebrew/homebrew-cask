@@ -4,6 +4,7 @@ cask 'ghost-browser' do
 
   # ghostbrowser.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://ghostbrowser.s3.amazonaws.com/downloads/GhostBrowser-#{version}.dmg"
+  appcast 'https://ghostbrowser.s3.amazonaws.com/updates/changelog.html'
   name 'Ghost Browser'
   homepage 'https://ghostbrowser.com/download/'
 
