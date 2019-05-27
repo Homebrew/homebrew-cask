@@ -11,7 +11,7 @@ cask 'j' do
     app "j64-#{version}/#{a}.app"
   end
 
-  installer script: {executable: "j64-#{version}/bin/jconsole", args: ['-js', "exit install'qtide'"]}
+  installer script: { executable: "j64-#{version}/bin/jconsole", args: ['-js', "exit install'qtide'"] }
 
   # target names according to readme.txt
   ['jcon', 'jconsole'].each do |b|
