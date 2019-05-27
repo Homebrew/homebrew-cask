@@ -15,6 +15,12 @@ cask 'lego-mindstorms-ev3' do
                        "com.ni.pkg.lego.ev3.Eng.#{version}",
                        "com.ni.pkg.lego.x3.#{version}.core",
                        "com.ni.pkg.lego.x3.#{version}.update",
+                       "com.microsoft.silverlight.plugin",
+                       "com.ni.pkg.lego.ev3.Eng",
+                       "com.ni.pkg.lego.x3.core",
+                       "com.ni.pkg.lego.x3.update",
+                       "com.ni.pkg.legodriver",
+                       "com.xamarin.mono-MDK.pkg",
                      ]
 
   zap pkgutil: [
