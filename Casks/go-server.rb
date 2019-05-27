@@ -1,6 +1,6 @@
 cask 'go-server' do
-  version '19.1.0-8469'
-  sha256 '6f7d6ce6875d51ab7194834ec836bc502a405b82c90b9359df520850850a27ee'
+  version '19.4.0-9155'
+  sha256 '325649a44b167ce22b0b22761f321aaa6cc2cfe5db09e2e3c3dafd93a58095e9'
 
   # download.gocd.io/binaries was verified as official when first introduced to the cask
   url "https://download.gocd.io/binaries/#{version}/osx/go-server-#{version}-osx.zip"
