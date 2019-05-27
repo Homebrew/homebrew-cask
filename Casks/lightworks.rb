@@ -4,6 +4,7 @@ cask 'lightworks' do
 
   url "https://downloads.lwks.com/v#{version.major_minor.dots_to_hyphens}-new/lightworks_v#{version}.dmg"
   appcast 'https://www.lwks.com/index.php?option=com_lwks&view=download&Itemid=206&tab=2'
+          configuration: version.major_minor
   name 'Lightworks'
   homepage 'https://www.lwks.com/'
 
