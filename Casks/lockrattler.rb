@@ -4,6 +4,7 @@ cask 'lockrattler' do
 
   # eclecticlightdotcom.files.wordpress.com was verified as official when first introduced to the cask
   url "https://eclecticlightdotcom.files.wordpress.com/#{version.after_comma.major}/#{version.after_comma.minor}/lockrattler#{version.before_comma.no_dots}.zip"
+  appcast 'https://eclecticlight.co/lockrattler-systhist/'
   name 'Lock Rattler'
   homepage 'https://eclecticlight.co/'
 
