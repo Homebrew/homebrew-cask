@@ -13,7 +13,7 @@ cask 'j' do
 
   installer script: {
                       executable: "j64-#{version}/bin/jconsole",
-                      args: ['-js', "exit install'qtide'"]
+                      args:       ['-js', "exit install'qtide'"],
                     }
 
   # target names according to readme.txt
