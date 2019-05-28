@@ -1,6 +1,6 @@
 cask 'electron-cash' do
-  version '4.0.4'
-  sha256 '240e3e55c6f25177143fea37bff96a0a4f5a057d7807e197727916f571ed77e3'
+  version '4.0.5'
+  sha256 'e27070c1920e07ec99f5c8aeb0ef74c0480db062304cc4ffa6716b2dc13bd9ee'
 
   url "https://electroncash.org/downloads/#{version}/mac/Electron-Cash-#{version}-macosx.dmg"
   appcast 'https://github.com/Electron-Cash/Electron-Cash/releases.atom'
