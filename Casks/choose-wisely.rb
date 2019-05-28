@@ -4,7 +4,7 @@ cask 'choose-wisely' do
 
   url "http://tigion.de/projekte/software/choose-wisely_#{version.dots_to_hyphens}.zip"
   name 'Choose Wisely'
-  homepage 'http://blog.tigion.de/2010/02/16/software-choose-wisely/'
+  homepage 'https://blog.tigion.de/2010/02/16/software-choose-wisely/'
 
   app 'Choose Wisely.app'
 end
