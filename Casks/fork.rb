@@ -19,4 +19,10 @@ cask 'fork' do
                '~/Library/Preferences/com.DanPristupov.Fork.plist',
                '~/Library/Saved Application State/com.DanPristupov.Fork.savedState',
              ]
+
+  caveats <<~EOS
+    Using the `#{token}` CLI command in MacOS versions 10.14.3 or earlier requires installing the "Swift 5 Runtime Support for Command Line Tools" update package. It can be downloaded at:
+
+    https://support.apple.com/kb/DL1998
+  EOS
 end
