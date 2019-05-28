@@ -3,7 +3,7 @@ cask 'macupdater' do
   sha256 '1f179cb1d49e21f0a3b24d9272752024bb78dc2a00b7514163ff2401f002ee0d'
 
   url "https://www.corecode.io/downloads/macupdater_#{version}.zip"
-  appcast 'https://www.corecode.io/macupdater/macupdater.xml'
+  appcast 'https://www.corecode.io/macupdater/macupdater.xml2'
   name 'MacUpdater'
   homepage 'https://www.corecode.io/macupdater/index.html'
 
