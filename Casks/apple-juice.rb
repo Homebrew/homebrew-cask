@@ -7,6 +7,8 @@ cask 'apple-juice' do
   name 'Apple Juice'
   homepage 'https://github.com/raphaelhanneken/apple-juice'
 
+  depends_on macos: '>= :sierra'
+
   app 'Apple Juice.app'
 
   uninstall quit: 'io.raphaelhanneken.applejuice'
