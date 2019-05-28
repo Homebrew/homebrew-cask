@@ -2,8 +2,7 @@ cask 'punto-switcher' do
   version :latest
   sha256 :no_check
 
-  # cache-default04h.cdn.yandex.net/download.cdn.yandex.net/punto/mac was verified as official when first introduced to the cask
-  url 'https://cache-default04h.cdn.yandex.net/download.cdn.yandex.net/punto/mac/PuntoSwitcher.zip'
+  url 'https://yandex.ru/soft/punto/download/?os=mac'
   name 'Punto Switcher'
   homepage 'https://yandex.ru/soft/punto/'
 
