@@ -1,9 +1,9 @@
 cask 'frhelper' do
-  version '3.8.9,2019-01-15'
-  sha256 '951b5be64806fb6bd726d9a5048fe31f977db44c789cdbeaaf7df9b6f330a54f'
+  version '3.9.0'
+  sha256 'd7f86e4876b82fd4dac2fda677e5b7e7fdcadd8c1908b242e95c5c907bba7e5e'
 
   # static.frdic.com was verified as official when first introduced to the cask
-  url "https://static.frdic.com/pkg/fhmac.dmg?v=#{version.after_comma}"
+  url 'https://static.frdic.com/pkg/fhmac.dmg'
   appcast 'https://www.francochinois.com/update/frhelper_mac.xml'
   name 'Frhelper'
   name '法语助手'
