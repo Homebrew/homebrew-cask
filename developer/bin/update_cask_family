@@ -27,7 +27,7 @@ function is_in_array {
 }
 
 function get_ableton {
-  brew search ableton | grep 'ableton-' | grep --invert-match '\d'
+  brew search 'ableton' | grep 'ableton-' | grep --invert-match '\d'
 }
 
 function get_dcpomatic {
