@@ -8,7 +8,7 @@ cask 'krita' do
   name 'Krita'
   homepage 'https://krita.org/'
 
-  depends_on macos: '>= :el_capitan'
+  depends_on macos: '>= :sierra'
 
   app 'krita.app'
 
