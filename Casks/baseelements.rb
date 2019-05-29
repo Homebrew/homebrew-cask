@@ -1,5 +1,5 @@
 cask 'baseelements' do
-  version '16'
+  version '17'
   sha256 :no_check # required as upstream package is updated in-place
 
   # goya.com.au/files/becurrent was verified as official when first introduced to the cask

@@ -1,8 +1,10 @@
 cask 'toneprint' do
-  version '3.1.03.1526,7765018'
-  sha256 '0f965fb12666280ee345021b5951f9d5855cfe336ce7e786acba0b1d17dfe2b7'
+  version '4.1.09-0'
+  sha256 '013b181a44d16f9d2e477b7f325b31f6f20598e96a91fd8597c50fa9b6a6f692'
 
-  url "http://cdn-downloads.tcelectronic.com/media/#{version.after_comma}/toneprint-#{version.before_comma.no_dots}.dmg"
+  # downloads.music-group.com was verified as official when first introduced to the cask
+  url "https://downloads.music-group.com/software/tcelectronic/TonePrintEditor/TonePrint-#{version}_Mac.zip"
+  appcast 'https://www.tcelectronic.com/p/P0CLC/Downloads'
   name 'TonePrint Editor'
   homepage 'https://www.tcelectronic.com/toneprint-editor/support/'
 

@@ -1,12 +1,13 @@
 cask 'geogebra' do
-  version '6.0.392.0'
-  sha256 'cd8fc070d530dd515eb7ee793ba74a8027adbb60299ef51c23d8107efd914238'
+  version '6.0.536.0'
+  sha256 '75581d260fb7f07725d533eabf7ae9e420eeae748e2ef55915c994a432a98863'
 
-  url "https://download.geogebra.org/installers/#{version.major_minor}/GeoGebra-MacOS-Portable-#{version.dots_to_hyphens}.pkg"
+  url "https://download.geogebra.org/installers/#{version.major_minor}/GeoGebra-Classic-6-MacOS-Portable-#{version.dots_to_hyphens}.zip"
+  appcast "https://download.geogebra.org/installers/#{version.major_minor}/version.txt"
   name 'GeoGebra'
   homepage 'https://www.geogebra.org/'
 
-  pkg "GeoGebra-MacOS-Portable-#{version.dots_to_hyphens}.pkg"
+  app "GeoGebra Classic #{version.major}.app"
 
   uninstall quit:       'org.geogebra.mathapps',
             login_item: 'GeoGebra',

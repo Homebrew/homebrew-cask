@@ -1,6 +1,6 @@
 cask 'imaging-edge' do
-  version '1.2.0_1805a,9FloiwulRZ'
-  sha256 '79f063cd1b51f9f54541075f296945e7eb894878e7a59276247bb91691cb76cc'
+  version '1.4.0_1901a,7dLXQ7xm-t'
+  sha256 '7481711176061aa36900fd8f0dd4e04b83a6a2e6bee29084960adba588d23f47'
 
   # ids.update.sony.net/IDC was verified as official when first introduced to the cask
   url "http://ids.update.sony.net/IDC/#{version.after_comma}/IE#{version.before_comma.no_dots}.dmg"
@@ -9,7 +9,9 @@ cask 'imaging-edge' do
 
   pkg 'IE_INST.pkg'
 
-  uninstall pkgutil: "com.sony.ImagingEdgeVer.#{version.major}.pkg"
+  uninstall pkgutil: "com.sony.ImagingEdgeVer.#{version.major}.pkg",
+            delete:  '/Applications/Imaging Edge/Viewer.app',
+            rmdir:   '/Applications/Imaging Edge'
 
   zap trash: [
                '~/Library/Caches/com.sony.Viewer',

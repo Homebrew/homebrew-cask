@@ -3,6 +3,7 @@ cask 'utopia' do
   sha256 '8b36526c0993d284186776d875597efbda2a584670d4ab3f4d7f8ddcd7547231'
 
   url "http://utopiadocs.com/files/Utopia-#{version}-Mac.dmg"
+  appcast 'http://utopiadocs.com/'
   name 'Utopia Documents'
   homepage 'http://utopiadocs.com/'
 

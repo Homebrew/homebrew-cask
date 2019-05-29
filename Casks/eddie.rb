@@ -1,12 +1,13 @@
 cask 'eddie' do
-  version '2.15.2'
-  sha256 'bd5588d665d60a503c9e29b7831d7e16f8d9ca79f83c4ba100eedd381942fd19'
+  version '2.16.3'
+  sha256 'f4a073d0689bd1218886883bd0a8f1a93412aba2e844e652698cdd56ff2f4fb8'
 
   # eddie.website was verified as official when first introduced to the cask
   url "https://eddie.website/download/?platform=macos&arch=x64&ui=ui&format=disk.dmg&version=#{version}"
+  appcast 'https://github.com/AirVPN/Eddie/releases.atom'
   name 'Air VPN'
   name 'Eddie'
-  homepage 'https://airvpn.org/macosx/'
+  homepage 'https://airvpn.org/macos/'
 
   app 'Eddie.app'
 

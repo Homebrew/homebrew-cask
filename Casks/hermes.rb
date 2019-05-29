@@ -6,7 +6,7 @@ cask 'hermes' do
   url "https://github.com/HermesApp/Hermes/releases/download/v#{version}/Hermes-#{version}.zip"
   appcast 'https://raw.githubusercontent.com/HermesApp/HermesApp.github.io/master/versions.xml'
   name 'Hermes'
-  homepage 'http://hermesapp.org/'
+  homepage 'https://hermesapp.org/'
 
   auto_updates true
 

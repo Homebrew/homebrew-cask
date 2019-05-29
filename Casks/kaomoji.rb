@@ -6,7 +6,7 @@ cask 'kaomoji' do
   url 'https://kaomojiformac.github.io/download/Kaomoji.zip'
   appcast 'https://kaomojiformac.github.io/download/kaomojiupdate.xml'
   name 'Kaomoji'
-  homepage 'http://www.kaomojiapp.com/'
+  homepage 'https://www.kaomojiapp.com/'
 
   auto_updates true
 

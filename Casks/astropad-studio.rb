@@ -1,13 +1,11 @@
 cask 'astropad-studio' do
-  version '2.0'
-  sha256 '60fa3e3922d91767881eb3137b50060ba4f7e314073281ad939b8af75130eff2'
+  version '3.1'
+  sha256 'c8bb192e60f54f8fee090aa94a206f51813bed969c123538f429a2215f65e143'
 
   url "https://astropad.com/downloads/AstropadStudio-#{version}.zip"
   appcast 'https://astropad.com/downloads/studio-sparkle.xml'
   name 'Astropad Studio'
   homepage 'https://astropad.com/'
-
-  depends_on macos: '>= :mavericks'
 
   app 'Astropad Studio.app'
 

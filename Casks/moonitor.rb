@@ -1,6 +1,6 @@
 cask 'moonitor' do
-  version '0.5.0'
-  sha256 '4aef3db8c024ed7b6f978c4b42abde306fde2ff20202cf813ff5f582d9a3c355'
+  version '0.6.6'
+  sha256 '2a0d59ea68f791ef27a5b0209d1abd43dc4a61c6bed70248a171497b9210d66e'
 
   url "https://moonitor.io/wp-content/uploads/app/Moonitor-#{version}.dmg"
   name 'Moonitor'

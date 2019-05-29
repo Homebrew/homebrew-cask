@@ -1,6 +1,6 @@
 cask 'fromscratch' do
-  version '1.4.1'
-  sha256 'af8bf3220c6b89527b27d84ac5b15cdadef3b02f4bd1c55f35a84c05b661329f'
+  version '1.4.3'
+  sha256 'fd3d8bc1cf8bc7e03dfb584a89e02b3c4da98f44d96eda0979d149dd668d709f'
 
   # github.com/Kilian/fromscratch was verified as official when first introduced to the cask
   url "https://github.com/Kilian/fromscratch/releases/download/v#{version}/FromScratch-#{version}.dmg"

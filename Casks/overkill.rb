@@ -7,6 +7,8 @@ cask 'overkill' do
   name 'Overkill'
   homepage 'https://github.com/KrauseFx/overkill-for-mac'
 
+  depends_on macos: '>= :sierra'
+
   app 'Overkill.app'
 
   zap trash: '~/Library/Preferences/com.krausefx.Overkill.plist'

@@ -8,5 +8,7 @@ cask 'webponize' do
   name 'WebPonize'
   homepage 'https://webponize.org/'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'WebPonize.app'
 end

@@ -3,7 +3,7 @@ cask 'youview' do
   sha256 '95538a324d9344ccd1eb46f4b4dbdf9cb2dc6d1259794b14e02683c35660d5dd'
 
   url 'https://download.mrgeckosmedia.com/YouView.zip'
-  appcast 'https://mrgeckosmedia.com/applications/releasenotes/YouView'
+  appcast 'https://mrgeckosmedia.com/applications/appcast/YouView'
   name 'YouView'
   homepage 'https://mrgeckosmedia.com/applications/info/YouView'
 

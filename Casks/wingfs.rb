@@ -5,7 +5,7 @@ cask 'wingfs' do
   # s3.amazonaws.com/wingfs_downloads was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/wingfs_downloads/WingFS_#{version.major_minor}.dmg"
   name 'WingFS'
-  homepage 'http://p5.archiware.com/products/wingfs'
+  homepage 'https://p5.archiware.com/products/wingfs'
 
   conflicts_with cask: 'osxfuse'
 

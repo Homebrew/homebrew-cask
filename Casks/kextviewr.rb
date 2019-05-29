@@ -8,8 +8,6 @@ cask 'kextviewr' do
   name 'KextViewr'
   homepage 'https://objective-see.com/products/kextviewr.html'
 
-  depends_on macos: '>= :mountain_lion'
-
   app 'KextViewr.app'
 
   zap trash: '~/Library/Caches/com.objective-see.KextViewr'

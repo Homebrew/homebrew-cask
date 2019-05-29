@@ -5,7 +5,7 @@ cask 'box-sync' do
   # boxcdn.net was verified as official when first introduced to the cask
   url 'https://e3.boxcdn.net/box-installers/sync/Sync+4+External/Box%20Sync%20Installer.dmg'
   name 'Box Sync'
-  homepage 'https://sites.box.com/sync4/'
+  homepage 'https://www.box.com/'
 
   app 'Box Sync.app'
 

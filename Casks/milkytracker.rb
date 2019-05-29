@@ -6,7 +6,7 @@ cask 'milkytracker' do
   url "https://github.com/milkytracker/MilkyTracker/releases/download/v#{version}/milkytracker-#{version}.dmg"
   appcast 'https://github.com/milkytracker/MilkyTracker/releases.atom'
   name 'MilkyTracker'
-  homepage 'http://milkytracker.titandemo.org/'
+  homepage 'https://milkytracker.titandemo.org/'
 
   app 'MilkyTracker.app'
 end

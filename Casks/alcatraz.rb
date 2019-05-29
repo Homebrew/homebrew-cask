@@ -6,7 +6,7 @@ cask 'alcatraz' do
   url "https://github.com/alcatraz/Alcatraz/releases/download/#{version}/Alcatraz.tar.gz"
   appcast 'https://github.com/alcatraz/Alcatraz/releases.atom'
   name 'alcatraz'
-  homepage 'http://alcatraz.io/'
+  homepage 'https://alcatraz.io/'
 
   artifact 'Alcatraz.xcplugin', target: "#{ENV['HOME']}/Library/Application Support/Developer/Shared/Xcode/Plug-ins/Alcatraz.xcplugin"
 

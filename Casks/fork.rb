@@ -1,8 +1,9 @@
 cask 'fork' do
-  version '1.0.69.4'
-  sha256 '4fcc327390c1d474a01fa47a525139e4450a7892eec5773ae937b00ae9a03785'
+  version '1.0.78.2'
+  sha256 '2318f8c71b446467d29e253d84d6fc8e0e9b3cfecbb0542a55d71e2ef3b04c4d'
 
-  url 'https://git-fork.com/update/files/Fork.dmg'
+  # forkapp.ams3.cdn.digitaloceanspaces.com/mac was verified as official when first introduced to the cask
+  url "https://forkapp.ams3.cdn.digitaloceanspaces.com/mac/Fork-#{version}.dmg"
   appcast 'https://git-fork.com/update/feed.xml'
   name 'Fork'
   homepage 'https://git-fork.com/'

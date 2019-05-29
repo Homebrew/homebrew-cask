@@ -8,7 +8,13 @@ cask 'ghost' do
   name 'Ghost Desktop'
   homepage 'https://ghost.org/downloads/'
 
-  depends_on macos: '>= :mavericks'
-
   app 'Ghost.app'
+
+  zap trash: [
+               '~/Library/Application Support/ghost-desktop',
+               '~/Library/Preferences/com.electron.ghost.helper.plist',
+               '~/Library/Preferences/com.electron.ghost.plist',
+               '~/Library/Saved Application State/com.electron.ghost.savedState',
+               '~/Library/Logs/Ghost',
+             ]
 end

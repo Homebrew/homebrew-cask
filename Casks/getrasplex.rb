@@ -6,7 +6,7 @@ cask 'getrasplex' do
   url "https://github.com/RasPlex/rasplex-installer/releases/download/#{version}/GetRasplex-#{version}.dmg"
   appcast 'https://github.com/RasPlex/rasplex-installer/releases.atom'
   name 'Rasplex Installer'
-  homepage 'http://www.rasplex.com/'
+  homepage 'https://www.rasplex.com/'
 
   app 'GetRasplex.app'
 end

@@ -7,7 +7,5 @@ cask 'proxpn' do
   name 'proXPN'
   homepage 'https://www.proxpn.com/'
 
-  depends_on macos: '>= :leopard'
-
   app 'ProXPN.app'
 end

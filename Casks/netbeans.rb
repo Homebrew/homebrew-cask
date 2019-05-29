@@ -2,7 +2,7 @@ cask 'netbeans' do
   version '8.2'
   sha256 'ddcf37e91d960cca6b6a37c95eabf2c6f15330ed708bfd79be796de00da20e5e'
 
-  url "http://download.netbeans.org/netbeans/#{version}/final/bundles/netbeans-#{version}-macosx.dmg"
+  url "https://download.netbeans.org/netbeans/#{version}/final/bundles/netbeans-#{version}-macosx.dmg"
   name 'NetBeans IDE'
   homepage 'https://netbeans.org/'
 

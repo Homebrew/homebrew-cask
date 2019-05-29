@@ -1,15 +1,16 @@
 cask 'plex-media-server' do
-  version '1.13.5.5291-6fa5e50a8'
-  sha256 '163b84d43bd4593c942c851587e3d14232e9508daaad00e611341ae467517351'
+  version '1.15.6.1079-78232c603'
+  sha256 '5814aa6577437e465890888b2b661e082351ef4a824700a2347678ba6e07f94b'
 
-  url "https://downloads.plex.tv/plex-media-server/#{version}/PlexMediaServer-#{version}-OSX.zip"
+  url "https://downloads.plex.tv/plex-media-server-new/#{version}/macos/PlexMediaServer-#{version}-x86_64.dmg"
   appcast 'https://plex.tv/api/downloads/1.json'
   name 'Plex Media Server'
   homepage 'https://www.plex.tv/'
 
-  depends_on macos: '>= :mavericks'
+  auto_updates true
 
   app 'Plex Media Server.app'
+  binary "#{appdir}/Plex Media Server.app/Contents/MacOS/Plex Media Scanner", target: 'pms'
 
   uninstall quit:      'com.plexapp.plexmediaserver',
             launchctl: 'com.plexapp.mediaserver'

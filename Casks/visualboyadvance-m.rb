@@ -6,7 +6,7 @@ cask 'visualboyadvance-m' do
   url "https://github.com/visualboyadvance-m/visualboyadvance-m/releases/download/v#{version}/visualboyadvance-m-Mac.zip"
   appcast 'https://github.com/visualboyadvance-m/visualboyadvance-m/releases.atom'
   name 'Visual Boy Advance - M'
-  homepage 'http://vba-m.com/'
+  homepage 'https://vba-m.com/'
 
   app 'visualboyadvance-m.app'
 

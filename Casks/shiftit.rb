@@ -8,7 +8,6 @@ cask 'shiftit' do
   homepage 'https://github.com/fikovnik/ShiftIt/'
 
   auto_updates true
-  accessibility_access true
 
   app 'ShiftIt.app'
 

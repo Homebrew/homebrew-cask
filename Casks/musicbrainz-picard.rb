@@ -1,8 +1,9 @@
 cask 'musicbrainz-picard' do
-  version '2.0.3'
-  sha256 '6bd1b37b48caa7a427bfbd1f875887c62a818e613711372b87fb3a0536deadaa'
+  version '2.1.3'
+  sha256 '91d0f06b9efdf2d23830068e329115ad5133038ea2586c1091c581d09d7bfec8'
 
-  url "http://ftp.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-#{version}.dmg"
+  # musicbrainz.osuosl.org/pub/ was verified as official when first introduced to the cask
+  url "https://musicbrainz.osuosl.org/pub/musicbrainz/picard/MusicBrainz.Picard.#{version}.dmg"
   appcast 'https://picard.musicbrainz.org/changelog/'
   name 'MusicBrainz Picard'
   homepage 'https://picard.musicbrainz.org/'

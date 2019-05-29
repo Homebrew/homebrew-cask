@@ -1,6 +1,6 @@
 cask 'pydiosync' do
-  version '1.2.8'
-  sha256 'da7ef2a6729b27bb9837d7637da6b7c2288a595b6bec52288b0f123f85e8021e'
+  version '2.2.0'
+  sha256 '02cceaa7de07596543b60b10bfe07c250b0b823c4455989362446699924db6f3'
 
   url "https://download.pydio.com/pub/pydio-sync/release/#{version}/PydioSync-MacOSX-Installer-v#{version}.dmg"
   name 'PydioSync'
@@ -8,7 +8,15 @@ cask 'pydiosync' do
 
   pkg 'PydioSync-Setup.pkg'
 
-  uninstall pkgutil: 'io.pyd.sync.installer.PydioSync'
+  uninstall pkgutil:   'io.pyd.sync.installer.PydioSync',
+            launchctl: [
+                         'PydioSync',
+                         'PydioSyncUI',
+                       ]
 
-  zap trash: '~/Pydio'
+  zap trash: [
+               '~/Library/Preferences/io.pyd.sync.PydioTray',
+               '~/Library/Caches/com.pydio.pydioswiftsync',
+               '~/Library/Group Containers/PydioSync.pydio',
+             ]
 end

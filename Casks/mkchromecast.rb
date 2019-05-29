@@ -6,7 +6,7 @@ cask 'mkchromecast' do
   url "https://github.com/muammar/mkchromecast/releases/download/#{version}/mkchromecast_v#{version}.dmg"
   appcast 'https://github.com/muammar/mkchromecast/releases.atom'
   name 'mkchromecast'
-  homepage 'http://mkchromecast.com/'
+  homepage 'https://mkchromecast.com/'
 
   depends_on cask: 'soundflower'
 

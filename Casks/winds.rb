@@ -1,10 +1,10 @@
 cask 'winds' do
-  version '2.1.90'
-  sha256 'ff4877c575bdd82e4003c58f6c01f924c54b0d74b735c7439619be8538a6cd43'
+  version '3.1.11'
+  sha256 'f99d4c0f1d85697078ab20cc88b11a556d0ecaba51966bf9c213ad194ef474b3'
 
   # s3.amazonaws.com was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/winds-#{version.major}.0-releases/releases/Winds-#{version}.dmg"
-  appcast "https://s3.amazonaws.com/winds-#{version.major}.0-releases/latest.html"
+  url "https://s3.amazonaws.com/winds-2.0-releases/releases/Winds-#{version}.dmg"
+  appcast 'https://github.com/GetStream/Winds/releases.atom'
   name 'Winds'
   homepage 'https://getstream.io/winds/'
 

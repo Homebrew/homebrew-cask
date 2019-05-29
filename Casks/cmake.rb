@@ -1,6 +1,6 @@
 cask 'cmake' do
-  version '3.12.1'
-  sha256 'ca5aee7eba51ca2e41731233aaf0d2361b14b9c8071c99804da371fabfa1c445'
+  version '3.14.4'
+  sha256 'ca56fb4d590c7518f3cb20297be92dae15ab55be4cc907b020c2d8cfe07da678'
 
   url "https://www.cmake.org/files/v#{version.major_minor}/cmake-#{version}-Darwin-x86_64.dmg"
   name 'CMake'

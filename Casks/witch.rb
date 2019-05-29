@@ -1,16 +1,9 @@
 cask 'witch' do
-  if MacOS.version == :snow_leopard
-    version '3.9.1'
-    sha256 '5e46508e150ff16be14b9955abdcd15098376230ef71e3de6f15a056eec75e45'
-    url "https://manytricks.com/download/witch/#{version}"
-  else
-    version '4.2'
-    sha256 '49b636bced9a0c0add8a8404bcd4d3d1886ae7b94b7eaf05688f30cf49358bd4'
+  version '4.3.3'
+  sha256 '44150acc2b9ecd820e262549f41554acad4763fe6f3bbd367a5fb5824deb47eb'
 
-    url 'https://manytricks.com/download/witch'
-    appcast 'https://manytricks.com/witch/appcast.xml'
-  end
-
+  url 'https://manytricks.com/download/witch'
+  appcast 'https://manytricks.com/witch/appcast.xml'
   name 'Witch'
   homepage 'https://manytricks.com/witch/'
 

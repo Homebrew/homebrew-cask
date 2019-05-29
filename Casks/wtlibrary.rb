@@ -6,7 +6,7 @@ cask 'wtlibrary' do
   url "https://downloads.sourceforge.net/wtlibrary/WtLibrary_#{version.dots_to_underscores}.dmg"
   appcast 'https://sourceforge.net/projects/wtlibrary/rss'
   name 'Watchtower Library for Mac'
-  homepage 'http://www.wtlibrary.net/'
+  homepage 'https://www.wtlibrary.net/'
 
   app 'WtLibrary.app'
 end

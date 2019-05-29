@@ -1,8 +1,9 @@
 cask 'softraid' do
-  version '5.6.7'
-  sha256 '92aae577e163487fc801304b46e0f99581ad63ba33af6897bc4181e631614022'
+  version '5.7.5'
+  sha256 '2d3914eadf524fc7e272ad50ffd3b742ded45b6c3757a452e8278a87d9ffdf1a'
 
-  url "https://softraid.com/updates/SoftRAID%20#{version}.dmg"
+  # s3.amazonaws.com/download.owcdigital.com/softraid was verified as official when first introduced to the cask
+  url "https://s3.amazonaws.com/download.owcdigital.com/softraid/mac/#{version.major}/softraid/SoftRAID_#{version}.dmg"
   appcast 'https://www.softraid.com/pages/support/download_latest_version.html'
   name 'SoftRAID'
   homepage 'https://www.softraid.com/'

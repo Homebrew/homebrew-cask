@@ -7,5 +7,7 @@ cask 'versions' do
   name 'Versions'
   homepage 'https://versionsapp.com/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Versions.app'
 end

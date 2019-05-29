@@ -4,6 +4,7 @@ cask 'elasticwolf' do
 
   # s3-us-gov-west-1.amazonaws.com/elasticwolf was verified as official when first introduced to the cask
   url "https://s3-us-gov-west-1.amazonaws.com/elasticwolf/ElasticWolf-osx-#{version}.zip"
+  appcast 'https://aws.amazon.com/tools/aws-elasticwolf-client-console/'
   name 'AWS ElasticWolf Client Console'
   homepage 'https://aws.amazon.com/tools/aws-elasticwolf-client-console/'
 

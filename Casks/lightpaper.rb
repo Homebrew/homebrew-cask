@@ -4,9 +4,9 @@ cask 'lightpaper' do
 
   # hockeyapp.net/api/2/apps/789cfa8846464727ae0fdb176ec8d3c8 was verified as official when first introduced to the cask
   url 'https://rink.hockeyapp.net/api/2/apps/789cfa8846464727ae0fdb176ec8d3c8?format=zip'
-  appcast 'http://links.ashokgelal.com/lp-mac-update-feed'
+  appcast 'https://rink.hockeyapp.net/api/2/apps/789cfa8846464727ae0fdb176ec8d3c8'
   name 'LightPaper'
-  homepage 'http://lightpaper.42squares.in/'
+  homepage 'https://getlightpaper.com/'
 
   app 'LightPaper.app'
 end

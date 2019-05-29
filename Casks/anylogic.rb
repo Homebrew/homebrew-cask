@@ -1,12 +1,11 @@
 cask 'anylogic' do
-  version '8.2.2'
-  sha256 '417c000d7ce36063c5aa5cf4e5dc14f84fe6b79322b708a544d29da3d8667d6e'
+  version '8.4.0'
+  sha256 '50616027c4db93264fc360e1b9a65174a4a6d005dbc70ef7ac660e816784372d'
 
-  url "http://www.anylogic.com/files/anylogic-ple-#{version}.dmg"
+  url "https://www.anylogic.com/files/anylogic-ple-#{version}.dmg"
+  appcast 'https://www.anylogic.com/files/changes-history.txt'
   name 'AnyLogic'
   homepage 'https://www.anylogic.com/'
-
-  depends_on macos: '>= :lion'
 
   pkg 'Install AnyLogic.pkg'
 

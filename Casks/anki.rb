@@ -1,13 +1,13 @@
 cask 'anki' do
-  version '2.1.2'
-  sha256 'be728bdcf0e2cfcead6dfc3e487736ed725b455475865177654b654dc76a03d7'
+  version '2.1.13'
+  sha256 '4af6677fd49036a52888488a9b4dd1ecd84551c56628cda2c2226fe4e9d3ec31'
 
   url "https://apps.ankiweb.net/downloads/current/anki-#{version}-mac.dmg"
   appcast 'https://apps.ankiweb.net/docs/changes.html'
   name 'Anki'
   homepage 'https://apps.ankiweb.net/'
 
-  depends_on macos: '>= :yosemite'
+  depends_on macos: '>= :sierra'
 
   app 'Anki.app'
 end

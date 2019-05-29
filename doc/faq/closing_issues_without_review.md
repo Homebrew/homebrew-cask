@@ -6,6 +6,6 @@ You might have been redirected to this document if it was apparent to a maintain
 
 If the maintainer was wrong in closing your issue, please do reply stating why! Closing an issue does not mean the conversation is over. If the guides themselves were unclear, help us improve them! Open *first* an issue or pull request stating what you found confusing *and only then* your other issue.
 
-We understand sometimes users are tired and don’t want to sift through a guide to make what they feel is a simple bug report. But when each user ignores the guides to save a few minutes, maintainers lose hours and get fatigued. Dealing with the same solved and documented problems leads to maintainer burnout and wasted hours. Those would be better spent improving Homebrew-Cask itself and fixing real bugs. We ask you take that into consideration.
+We understand sometimes users are tired and don’t want to sift through a guide to make what they feel is a simple bug report. But when each user ignores the guides to save a few minutes, maintainers lose hours and get fatigued. Dealing with the same solved and documented problems leads to maintainer burnout and wasted hours. Those would be better spent improving Homebrew Cask itself and fixing real bugs. We ask you take that into consideration.
 
 Thank you for understanding and taking the time to make a correct report. The whole team appreciates it.

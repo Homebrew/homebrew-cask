@@ -21,4 +21,8 @@ cask 'hipchat' do
                '~/Library/Saved Application State/com.hipchat.HipChat.savedState',
                '~/Library/chat.hipchat.com',
              ]
+
+  caveats do
+    discontinued
+  end
 end

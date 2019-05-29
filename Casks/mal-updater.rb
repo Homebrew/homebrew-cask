@@ -8,8 +8,6 @@ cask 'mal-updater' do
   name 'MAL Updater OS X'
   homepage 'https://malupdaterosx.ateliershiori.moe/'
 
-  depends_on macos: '>= :mavericks'
-
   app 'MAL Updater OS X.app'
 
   zap trash: [

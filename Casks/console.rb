@@ -1,6 +1,6 @@
 cask 'console' do
-  version '0.2.0'
-  sha256 'b49df2c4df4e99a9f4b50d8b426b1084f0d64a3d037a7e9960c5e87968f03b87'
+  version '0.3.0'
+  sha256 '8cf565a7ec7bdb0a8f4e4fa9bf94b2893253e1012040b5ec57212c87b0d09eb8'
 
   url "https://github.com/macmade/Console/releases/download/#{version}/Console.app.zip"
   appcast 'https://github.com/macmade/Console/releases.atom'

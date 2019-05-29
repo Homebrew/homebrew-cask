@@ -1,6 +1,6 @@
 cask 'dawnlabs-alchemy' do
-  version '0.5.0'
-  sha256 '77d7e1664d29b381af892502f076d435fccbe47ba6e32536b3986a839c46dc44'
+  version '0.5.1'
+  sha256 '12209d471d220a14e57ff0407278a4d9e8274ab0a116cfd2b4479297c26f666b'
 
   url "https://github.com/dawnlabs/alchemy/releases/download/#{version}/Alchemy-mac.zip"
   appcast 'https://github.com/dawnlabs/alchemy/releases.atom'

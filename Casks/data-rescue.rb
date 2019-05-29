@@ -1,11 +1,11 @@
 cask 'data-rescue' do
-  version '4.3.1'
-  sha256 '108c64d72d8aad35a979110d1851d34bace82ceff372cc81f0e3917159e1915e'
+  version '5.0.9'
+  sha256 'eb99d6e6a2b050b1bfe8c40b9c5e14ccc6d72293db742974124d5d51f07ccf01'
 
-  url "https://downloads.prosofteng.com/drmac/Data_Rescue_#{version}.dmg"
-  appcast "https://www.prosofteng.com/resources/dr#{version.major}/dr#{version.major}_appcast.xml"
+  url "https://downloads.prosofteng.com/dr/Data_Rescue_#{version}.dmg"
+  appcast "https://www.prosofteng.com/resources/dr#{version.major}/dr#{version.major}_updates_mac.xml"
   name "Data Rescue #{version.major}"
   homepage 'https://www.prosofteng.com/data-rescue-recovery-software/'
 
-  app "Data Rescue #{version.major}.app"
+  app 'Data Rescue.app'
 end

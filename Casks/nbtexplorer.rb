@@ -5,7 +5,7 @@ cask 'nbtexplorer' do
   # hocuspocus.taloncrossing.com was verified as official when first introduced to the cask
   url "http://hocuspocus.taloncrossing.com/rii/NBTExplorer-Mac-#{version}.zip"
   name 'NBTExplorer'
-  homepage 'http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-tools/1262665-nbtexplorer-nbt-editor-for-windows-and-mac'
+  homepage 'https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-tools/1262665-nbtexplorer-nbt-editor-for-windows-and-mac'
 
   app 'NBTExplorer.app'
 end

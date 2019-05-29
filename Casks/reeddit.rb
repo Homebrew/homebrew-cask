@@ -6,7 +6,7 @@ cask 'reeddit' do
   url "https://github.com/berbaquero/Reeddit-app/releases/download/v#{version}/Reeddit.app.zip"
   appcast 'https://github.com/berbaquero/Reeddit-app/releases.atom'
   name 'Reeddit'
-  homepage 'http://mac.reedditapp.com/'
+  homepage 'https://mac.reedditapp.com/'
 
   app 'Reeddit.app'
 end

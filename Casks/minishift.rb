@@ -1,6 +1,6 @@
 cask 'minishift' do
-  version '1.22.0'
-  sha256 '8c2938db8cacfc3042aebfe429587f7f99247828d7cf83805c07fb3ba1d427f7'
+  version '1.33.0'
+  sha256 'c5b41cb995d2b22fc2ebc045e835f71e4d206035083c16c0fc82bdb08ca4d797'
 
   url "https://github.com/minishift/minishift/releases/download/v#{version}/minishift-#{version}-darwin-amd64.tgz"
   appcast 'https://github.com/minishift/minishift/releases.atom'

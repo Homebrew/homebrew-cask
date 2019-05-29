@@ -1,11 +1,13 @@
 cask 'mysqlworkbench' do
-  version '6.3.10'
-  sha256 '29857bf84bebb7c4442ce147e44602d00f8c001e3c09b3a6e3af356767e08d2c'
+  version '8.0.16'
+  sha256 '3478800290e2797d294e3721fdaea4c41ddc1917f2b59ec94a935e16c18dc5d2'
 
   url "https://cdn.mysql.com/Downloads/MySQLGUITools/mysql-workbench-community-#{version}-macos-x86_64.dmg"
+  appcast 'https://dev.mysql.com/downloads/workbench/'
   name 'MySQL Workbench'
   homepage 'https://www.mysql.com/products/workbench/'
-  gpg "#{url}.asc", key_id: '8c718d3b5072e1f5'
+
+  depends_on macos: '>= :high_sierra'
 
   app 'MySQLWorkbench.app'
 

@@ -1,6 +1,6 @@
 cask 'desktop-curtain' do
-  version '3.0.7'
-  sha256 '3eb05d9b6d17f978d23a518ecfc1663e077f5844010493aa682638c5a2b82114'
+  version '3.0.9'
+  sha256 '7423d3f2b1b58f385192d70491097fe9176f11c44e8bf9c0241b2178adfc97a9'
 
   url "https://manytricks.com/download/_do_not_hotlink_/desktopcurtain#{version.no_dots}.dmg"
   appcast 'https://manytricks.com/desktopcurtain/appcast/'

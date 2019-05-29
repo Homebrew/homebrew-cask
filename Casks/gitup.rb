@@ -6,10 +6,9 @@ cask 'gitup' do
   url 'https://s3-us-west-2.amazonaws.com/gitup-builds/stable/GitUp.zip'
   appcast 'https://github.com/git-up/GitUp/releases.atom'
   name 'GitUp'
-  homepage 'http://gitup.co/'
+  homepage 'https://gitup.co/'
 
   auto_updates true
-  depends_on macos: '>= :mountain_lion'
 
   app 'GitUp.app'
   binary "#{appdir}/GitUp.app/Contents/SharedSupport/gitup"

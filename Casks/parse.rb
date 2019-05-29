@@ -6,7 +6,7 @@ cask 'parse' do
   url "https://github.com/parse-community/parse-cli/releases/download/release_#{version}/parse"
   appcast 'https://github.com/parse-community/parse-cli/releases.atom'
   name 'Parse'
-  homepage 'http://parseplatform.org/'
+  homepage 'https://parseplatform.org/'
 
   container type: :naked
 

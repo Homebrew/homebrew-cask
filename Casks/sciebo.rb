@@ -1,12 +1,11 @@
 cask 'sciebo' do
-  version 'qt5.6.2-2.4.2.2144'
-  sha256 'b0928d80192b87a069df13db04a4b6ae83d460cbbf2574a926d868098a212eb6'
+  version '2.5.4.2575'
+  sha256 '47df66856eb4a269154c322a0ae7d488a70c2943c76cdccedf724a01fc88589e'
 
   url "https://www.sciebo.de/install/sciebo-#{version}.pkg"
+  appcast 'https://www.sciebo.de/updateserver/?version=2.3.3.1812&platform=macos&oem=sciebo&sparkle=true'
   name 'sciebo'
   homepage 'https://sciebo.de/'
-
-  depends_on macos: '>= :lion'
 
   pkg "sciebo-#{version}.pkg"
 

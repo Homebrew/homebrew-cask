@@ -1,10 +1,11 @@
 cask 'helio' do
-  version '1.7.6'
-  sha256 '7f0499eb9266e65f3535795c20b18b82bf926a9966f757ea1a5854d861e8cfa6'
+  version '2.0'
+  sha256 'd84f3f2b7aae4d93b78392bf452b36c821c4237e13c5430effb26d23495928d2'
 
-  url "http://helioworkstation.com/app/Helio-#{version}.dmg"
+  url "https://ci.helio.fm/helio-#{version}.dmg"
+  appcast 'https://github.com/helio-fm/helio-workstation/releases.atom'
   name 'Helio'
-  homepage 'https://helioworkstation.com/'
+  homepage 'https://helio.fm/'
 
   app 'Helio.app'
 end

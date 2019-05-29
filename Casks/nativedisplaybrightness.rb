@@ -7,8 +7,6 @@ cask 'nativedisplaybrightness' do
   name 'NativeDisplayBrightness'
   homepage 'https://github.com/Bensge/NativeDisplayBrightness/'
 
-  accessibility_access true
-
   app 'NativeDisplayBrightness.app'
 
   uninstall login_item: 'NativeDisplayBrightness',

@@ -1,20 +1,29 @@
 cask 'daylite' do
-  version '6.5.5'
-  sha256 '529477859f49bcca08c0704522338201bc0b64de5d58f650c3011d5e711aa223'
+  if MacOS.version <= :high_sierra
+    version '6.5.11'
+    sha256 'fc49b73a961dc4814fcc6dec7179a41d0eccfaa849dcbabb3ea400fe6588f5eb'
+    url "https://download.marketcircle.com/daylite/daylitedma#{version.no_dots}.dmg"
+    pkg 'Install Daylite & Mail Assistant.pkg'
+  else
+    version '6.6.4.4'
+    sha256 'e317a5293c565fc095ceba27cfaac941b7e992000273c4595313f8c3cadde9a6'
+    url "https://download.marketcircle.com/daylite/daylitedma#{version.no_dots}.pkg"
+    pkg "daylitedma#{version.no_dots}.pkg"
+  end
 
-  url "https://download.marketcircle.com/daylite/daylitedma#{version.no_dots}.dmg"
+  appcast 'https://www.marketcircle.com/appcasts/daylite.xml'
   name 'Daylite'
   homepage 'https://www.marketcircle.com/'
-
-  pkg 'Install Daylite & Mail Assistant.pkg'
 
   uninstall pkgutil:   [
                          'com.marketcircle.pkg.DLBase',
                          'com.marketcircle.pkg.DMABase',
+                         'com.marketcircle.daylite.installer',
+                         'com.marketcircle.daylite.mailassistant.installer',
                        ],
             launchctl: [
-                         'com.marketcircle.persistence.autoupdate',
                          'com.marketcircle.Daylite-Helper',
+                         'com.marketcircle.persistence.autoupdate',
                        ],
             signal:    [
                          ['TERM', 'com.marketcircle.daylite'],

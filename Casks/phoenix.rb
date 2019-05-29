@@ -7,7 +7,6 @@ cask 'phoenix' do
   name 'Phoenix'
   homepage 'https://github.com/kasper/phoenix/'
 
-  accessibility_access true
   depends_on macos: '>= :yosemite'
 
   app 'Phoenix.app'

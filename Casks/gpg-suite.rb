@@ -1,15 +1,15 @@
 cask 'gpg-suite' do
-  version '2018.3'
-  sha256 '00a6d0c69dd050acd2df4a34bf8502d4e0de3af9b4f7523a0003af14b60006be'
+  version '2018.5'
+  sha256 'c66ecf48ccf709f704f02097cf9d68ba97b0efba24f7a0b7b46adfd1133cb86a'
 
   url "https://releases.gpgtools.org/GPG_Suite-#{version}.dmg"
   appcast 'https://gpgtools.org/releases/gka/appcast.xml'
   name 'GPG Suite'
   homepage 'https://gpgtools.org/'
-  gpg "#{url}.sig", key_url: 'https://gpgtools.org/GPGTools-00D026C4.asc'
 
   auto_updates true
   conflicts_with cask: 'gpg-suite-nightly'
+  depends_on macos: '>= :sierra'
 
   pkg 'Install.pkg'
 

@@ -1,6 +1,6 @@
 cask 'amazon-chime' do
-  version '4.16.6291'
-  sha256 'f034bf4ea2eff2b278907a91247413faa16b74b677895a439eb2023de1437b86'
+  version '4.21.6635'
+  sha256 '16a5eda04fe39cd7900001abf6207e50c9c87369eda28563675adf61523688ab'
 
   url "https://clients.chime.aws/mac/releases/AmazonChime-OSX-#{version}.dmg"
   appcast 'https://clients.chime.aws/mac/appcast'

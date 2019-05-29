@@ -8,5 +8,7 @@ cask 'mirrordisplays' do
   name 'Mirror Displays'
   homepage 'https://fabiancanas.com/open-source/mirror-displays'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'MirrorDisplays.app'
 end

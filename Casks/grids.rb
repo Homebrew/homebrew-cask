@@ -1,13 +1,14 @@
 cask 'grids' do
-  version '4.10.1'
-  sha256 'ac8298a8b91ae11c85ff6d131a4e11c1a595eb3c37f1027ed39b8585ac5e6470'
+  version '5.4'
+  sha256 'c4359aa61073c9e0f412b522ce030d631741365e8b96e195760067fdc43489bd'
 
-  url "http://thegridsapp.com/bin/Grids_#{version}.zip"
-  appcast 'http://thegridsapp.com/appcast.json'
+  url "https://gridsapp.net/bin/Grids_#{version}.zip"
+  appcast 'https://gridsapp.net/appcast.json'
   name 'Grids'
-  homepage 'http://thegridsapp.com/'
+  homepage 'https://gridsapp.net/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'Grids.app'
 

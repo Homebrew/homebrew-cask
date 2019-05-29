@@ -7,11 +7,11 @@ require_relative "lib/capture"
 require_relative "lib/check"
 require_relative "lib/travis"
 
-module Hbc
-  class CLI
+module Cask
+  class Cmd
     class Ci < AbstractCommand
       def run
-        unless ENV.key?("TRAVIS")
+        unless ENV.key?("CI")
           raise CaskError, "This command isn’t meant to be run locally."
         end
 
@@ -22,7 +22,7 @@ module Hbc
           raise CaskError, "This command must be run from inside a tap directory."
         end
 
-        ruby_files_in_wrong_directory = modified_ruby_files - (modified_cask_files + modified_command_files)
+        ruby_files_in_wrong_directory = modified_ruby_files - (modified_cask_files + modified_command_files + modified_github_files)
 
         unless ruby_files_in_wrong_directory.empty?
           raise CaskError, "Casks are in the wrong directory:\n" +
@@ -40,6 +40,7 @@ module Hbc
 
           overall_success &= step "brew cask audit #{cask.token}", "audit" do
             Auditor.audit(cask, audit_download: true,
+                                audit_appcast: true,
                                 check_token_conflicts: added_cask_files.include?(path),
                                 commit_range: ENV["TRAVIS_COMMIT_RANGE"])
           end
@@ -98,7 +99,7 @@ module Hbc
         output = nil
 
         Travis.fold travis_id do
-          print "#{Tty.bold}#{Tty.yellow}#{name}#{Tty.reset} "
+          print Formatter.headline("#{name} ", color: :yellow)
 
           real_stdout = $stdout.dup
 
@@ -160,6 +161,10 @@ module Hbc
 
       def modified_command_files
         @modified_command_files ||= modified_files.select { |path| tap.command_file?(path) || path.ascend.to_a.last.to_s == "cmd" }
+      end
+
+      def modified_github_files
+        @modified_github_files ||= modified_files.select { |path| path.to_s.start_with?(".github/") }
       end
 
       def modified_cask_files

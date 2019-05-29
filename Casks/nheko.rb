@@ -1,9 +1,8 @@
 cask 'nheko' do
-  version '0.5.3'
-  sha256 '814423164cbe9d765c84e2c9ec80cb4929960f0e8880c05b4ab54ff502cf1a5d'
+  version '0.6.2'
+  sha256 'b78a8322f9463a7bbb7b1c04aee2b5318c16cef9b5dafddac828e8fd59f2813e'
 
-  # bintray.com/mujx/matrix was verified as official when first introduced to the cask
-  url "https://bintray.com/mujx/matrix/download_file?file_path=nheko%2Fv#{version}%2Fnheko-v#{version}.dmg"
+  url "https://github.com/mujx/nheko/releases/download/v#{version}/nheko-v#{version}.dmg"
   appcast 'https://github.com/mujx/nheko/releases.atom'
   name 'Nheko'
   homepage 'https://github.com/mujx/nheko'

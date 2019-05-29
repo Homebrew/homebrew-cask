@@ -1,12 +1,14 @@
 cask 'tikzit' do
-  version '1.1'
-  sha256 '4f334af8a33a57e8c451e9b03a8a4fafdfd59b60383ade3b7a9967a91cc2184b'
+  version '2.1.4'
+  sha256 'aa3024cb27f89127661c701efad7737edd9739b52c1d7008d8d32ddb5793ee2b'
 
-  # bintray.com/tikzit/tikzit was verified as official when first introduced to the cask
-  url "https://bintray.com/tikzit/tikzit/download_file?file_path=releases%2F#{version}%2FTikZiT-osx.zip"
+  # github.com/tikzit/tikzit was verified as official when first introduced to the cask
+  url "https://github.com/tikzit/tikzit/releases/download/v#{version}/tikzit-osx.dmg"
   appcast 'https://github.com/tikzit/tikzit/releases.atom'
   name 'TikZiT'
-  homepage 'http://tikzit.github.io/'
+  homepage 'https://tikzit.github.io/'
+
+  depends_on macos: '>= :sierra'
 
   app 'TikZiT.app'
 end

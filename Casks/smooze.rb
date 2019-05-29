@@ -1,6 +1,6 @@
 cask 'smooze' do
-  version '1.6.5'
-  sha256 '63ab3797e391bd3c3888c8fb38056c1f3e50853b02ef0000ae0c2f350a6caf1d'
+  version '1.7.0'
+  sha256 '2d4edd6b0595a47a9cef83bb462c5105cde675fe6bb0dd2526bb1553732a4e15'
 
   url 'https://smooze.co/updates/Smooze.dmg'
   appcast 'https://smooze.co/updates/update.xml'
@@ -8,6 +8,7 @@ cask 'smooze' do
   homepage 'https://smooze.co/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'Smooze.app'
 

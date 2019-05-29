@@ -1,12 +1,14 @@
 cask 'packetsender' do
-  version '5.7.52'
-  sha256 'abd6a9994c35207918749b642ea743356083454c059c3774c23ce4e37f36d5cd'
+  version '6.1.25'
+  sha256 '9d4d608d3f98f4f66afe6148d1a1e4becd41c08b11432211b33b98a8c65ad6a3'
 
   # github.com/dannagle/PacketSender was verified as official when first introduced to the cask
   url "https://github.com/dannagle/PacketSender/releases/download/v#{version}/PacketSender_v#{version}.dmg"
   appcast 'https://github.com/dannagle/PacketSender/releases.atom'
   name 'Packet Sender'
   homepage 'https://packetsender.com/'
+
+  depends_on macos: '>= :sierra'
 
   app 'PacketSender.app'
 end

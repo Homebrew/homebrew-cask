@@ -6,8 +6,6 @@ cask 'murus-menulet' do
   name 'Murus Firewall'
   homepage 'https://www.murusfirewall.com/'
 
-  depends_on macos: '>= :mavericks'
-
   app 'Murus Menulet.app'
 
   uninstall delete:     '/usr/local/bin/murusd',

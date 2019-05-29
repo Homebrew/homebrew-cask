@@ -6,7 +6,7 @@ cask 'changes' do
   url "https://bitbq_changes.s3.amazonaws.com/changes-#{version}.zip"
   appcast 'https://bitbq_changes.s3.amazonaws.com/changes-production.xml'
   name 'Changes'
-  homepage 'http://martiancraft.com/products/changes.html'
+  homepage 'https://martiancraft.com/products/changes.html'
 
   app 'Changes.app'
   binary "#{appdir}/Changes.app/Contents/Resources/chdiff"

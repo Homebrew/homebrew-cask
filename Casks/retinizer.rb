@@ -8,4 +8,6 @@ cask 'retinizer' do
   homepage 'http://retinizer.mikelpr.com/'
 
   app 'Retinizer.app'
+
+  zap trash: '~/Library/Preferences/com.mikelpr.Retinizer.plist'
 end

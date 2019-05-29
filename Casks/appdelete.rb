@@ -8,7 +8,6 @@ cask 'appdelete' do
   homepage 'http://www.reggieashworth.com/appdelete'
 
   auto_updates true
-  depends_on macos: '>= :lion'
 
   app 'AppDelete.app'
 

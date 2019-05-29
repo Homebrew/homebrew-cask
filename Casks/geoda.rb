@@ -4,7 +4,7 @@ cask 'geoda' do
 
   # s3-us-west-2.amazonaws.com/geodasoftware was verified as official when first introduced to the cask
   url "https://s3-us-west-2.amazonaws.com/geodasoftware/GeoDa#{version}-Installer.dmg"
-  appcast 'https://github.com/GeoDaCenter/geoda/releases.atom'
+  appcast 'https://geodacenter.github.io/download.html'
   name 'GeoDa'
   homepage 'https://geodacenter.github.io/'
 

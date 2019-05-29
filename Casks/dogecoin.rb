@@ -6,7 +6,7 @@ cask 'dogecoin' do
   url "https://github.com/dogecoin/dogecoin/releases/download/v#{version}/dogecoin-#{version}-osx-signed.dmg"
   appcast 'https://github.com/dogecoin/dogecoin/releases.atom'
   name 'Dogecoin'
-  homepage 'http://dogecoin.com/'
+  homepage 'https://dogecoin.com/'
 
   app 'Dogecoin-Qt.app'
 

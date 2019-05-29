@@ -1,13 +1,11 @@
 cask 'screaming-frog-seo-spider' do
-  version '9.4'
-  sha256 'e9304e032ca241b11dcb5f3e8337838fa6cea2140cdd3ea5ff0ede9d320ed989'
+  version '11.2'
+  sha256 '83e920807c3e69286e8594c93caec9514657352d86f5f51e7062a361336effb9'
 
   url "https://download.screamingfrog.co.uk/products/seo-spider/ScreamingFrogSEOSpider-#{version}.dmg"
   appcast 'https://www.screamingfrog.co.uk/wp-content/themes/screamingfrog/inc/download-modal.php'
   name 'Screaming Frog SEO Spider'
   homepage 'https://www.screamingfrog.co.uk/seo-spider/'
-
-  depends_on macos: '>= :mountain_lion'
 
   app 'Screaming Frog SEO Spider.app'
 

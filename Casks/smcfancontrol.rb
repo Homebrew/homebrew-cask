@@ -7,8 +7,6 @@ cask 'smcfancontrol' do
   name 'smcFanControl'
   homepage 'https://www.eidac.de/?cat=40'
 
-  depends_on macos: '>= :lion'
-
   app 'smcFanControl.app'
 
   zap trash: [

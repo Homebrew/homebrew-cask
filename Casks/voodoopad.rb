@@ -1,6 +1,6 @@
 cask 'voodoopad' do
-  version '5.2.2'
-  sha256 '15ea060a90a71e7178403b3deba3cc3c3060053ed2a70f26775ca53326e4c312'
+  version '5.3.0'
+  sha256 'a2eb6a042df78170a88a9909fb40ee92bc407b4c95f414cac5b1fb8ddef390ce'
 
   # voodoopad.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://voodoopad.s3.amazonaws.com/VoodooPad-#{version}.zip"
@@ -8,7 +8,7 @@ cask 'voodoopad' do
   name 'VoodooPad'
   homepage 'https://www.voodoopad.com/'
 
-  depends_on macos: '>= :lion'
+  depends_on macos: '>= :sierra'
 
   app 'VoodooPad.app'
 end

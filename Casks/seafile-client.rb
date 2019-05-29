@@ -1,6 +1,6 @@
 cask 'seafile-client' do
-  version '6.2.4'
-  sha256 '5412715344d257b7268111a642c6d22f8de0ca88ec5e07de2e8954856651566c'
+  version '6.2.11'
+  sha256 'f71a003603c8f49410ac753153f39bd2c92210ccbb10d2878e07e98cfaedc5fd'
 
   # seadrive.org was verified as official when first introduced to the cask
   url "https://download.seadrive.org/seafile-client-#{version}.dmg"

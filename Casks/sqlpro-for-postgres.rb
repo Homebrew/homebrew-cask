@@ -1,6 +1,6 @@
 cask 'sqlpro-for-postgres' do
-  version '1.0.127'
-  sha256 'dfee118e7003485cfb863ae7603173ad8c95064d585c8d9435af66745b25e8f6'
+  version '1.0.465'
+  sha256 '74649beadbceb1f76096c45b1057f918936da0330d80b1691db8a5fc36ccdfe2'
 
   # d3fwkemdw8spx3.cloudfront.net/postgres was verified as official when first introduced to the cask
   url "https://d3fwkemdw8spx3.cloudfront.net/postgres/SQLProPostgres.#{version}.app.zip"

@@ -1,10 +1,20 @@
 cask 'scilab' do
-  version '6.0.1'
-  sha256 '22590059d9264d4520f727bcb76a9a313fff7c4979a803fd9ee99e9d87ce23cc'
+  version '6.0.2'
+  sha256 '4f0e5e9cbdac3fe2baa57b2b2535bc23fe5862e0e99502aa84ac41259b9e1e74'
 
-  url "https://www.scilab.org/download/#{version}/scilab-#{version}-x86_64.dmg"
+  # utc.fr/~mottelet/scilab was verified as official when first introduced to the cask
+  url "https://www.utc.fr/~mottelet/scilab/download/#{version}/scilab-#{version}-x86_64.dmg"
+  appcast 'https://www.scilab.org/'
   name 'Scilab'
   homepage 'https://www.scilab.org/'
 
+  depends_on macos: '>= :sierra'
+
   app "scilab-#{version}.app"
+  binary "#{appdir}/Scilab-#{version}.app/Contents/MacOS/bin/scilab"
+  binary "#{appdir}/Scilab-#{version}.app/Contents/MacOS/bin/scilab-cli"
+
+  caveats do
+    depends_on_java '6'
+  end
 end

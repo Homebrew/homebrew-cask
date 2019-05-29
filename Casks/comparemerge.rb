@@ -1,6 +1,6 @@
 cask 'comparemerge' do
-  version '2.08y'
-  sha256 '9bf4d138790b6b10d8f0739e92d1a491a506c1e4f5d7e13c1c110352bde76d06'
+  version '2.10y'
+  sha256 'fa25244eba6609956fb2bbaff363f5829c453b99db08d89b3601e026f6a3c406'
 
   url "https://downloads.sourceforge.net/comparemergenosandbox/CompareMerge%20#{version}.zip"
   appcast 'https://sourceforge.net/projects/comparemergenosandbox/rss'

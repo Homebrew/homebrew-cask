@@ -5,7 +5,7 @@ cask 'cenon' do
   # cenon.download was verified as official when first introduced to the cask
   url "http://www.cenon.download/binaries/Apple/Cenon-#{version}.pkg"
   name 'Cenon'
-  homepage 'http://www.cenon.info/'
+  homepage 'https://www.cenon.info/'
 
   pkg "Cenon-#{version}.pkg"
 

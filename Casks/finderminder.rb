@@ -7,8 +7,6 @@ cask 'finderminder' do
   name 'FinderMinder'
   homepage 'https://www.irradiatedsoftware.com/labs/'
 
-  accessibility_access true
-
   app 'FinderMinder.app'
 
   zap trash: '~/Library/Preferences/com.irradiatedsoftware.FinderMinder.plist'

@@ -1,9 +1,8 @@
 cask 'obs' do
-  version '21.1.1'
-  sha256 '52a422a6cc42c62911c2a8d2d3b569c8ac725d5fcd13ab1f7bcaa23863ef9926'
+  version '23.1'
+  sha256 'b1271c094c840324127945d4d921b2657fca1ca6899129d0bf92e02cc9b6f3eb'
 
-  # github.com/obsproject/obs-studio was verified as official when first introduced to the cask
-  url "https://github.com/obsproject/obs-studio/releases/download/#{version}/obs-mac-#{version}-installer.pkg"
+  url "https://cdn-fastly.obsproject.com/downloads/obs-mac-#{version}-installer.pkg"
   appcast 'https://github.com/obsproject/obs-studio/releases.atom'
   name 'OBS'
   homepage 'https://obsproject.com/'

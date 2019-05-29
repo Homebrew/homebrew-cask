@@ -1,6 +1,6 @@
 cask 'adobe-air' do
-  version '30.0.0.107'
-  sha256 '17be984bf8fc2d24f5db70b044a07da682f4bbd4394684c56f33b5101c2d0c72'
+  version '32.0.0.125'
+  sha256 'd6abb9c4538f9dc9ca3d7f86629437fa52f5d7ee36ae2a3903adfb42d59fd4ad'
 
   url "https://airdownload.adobe.com/air/mac/download/#{version.major_minor}/AdobeAIR.dmg"
   appcast 'https://helpx.adobe.com/au/air/kb/archived-air-sdk-version.html'

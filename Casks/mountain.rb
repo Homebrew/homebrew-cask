@@ -1,6 +1,6 @@
 cask 'mountain' do
-  version '1.6.5'
-  sha256 '86140c5469683ed64e9f275240e4e5e157b4b84b39aed65157e412e287c2c9dc'
+  version '1.6.6'
+  sha256 '22496566734b7b610a24e3c7700b123a17c5502fdc1562d35d65c04ecf5e7070'
 
   url 'https://appgineers.de/mountain/files/Mountain.zip'
   appcast 'https://appgineers.de/mountain/files/mountaincast.xml'

@@ -1,10 +1,13 @@
 cask 'ridibooks' do
-  version '2.5.2'
-  sha256 'c02c59e6c655c101401c5981d8a02d028853b4d0ee2785d2c3986b27b595c199'
+  version '2.6.3'
+  sha256 '8b46f1746c48519c4d05495793347e8ffeabdd7da3f7adbebbce2f469d946a70'
 
   url "https://viewer-ota.ridibooks.com/mac/ridibooks-#{version}.dmg"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://getapp.ridibooks.com/mac'
   name 'Ridibooks'
   homepage 'https://ridibooks.com/support/app/download'
+
+  depends_on macos: '>= :sierra'
 
   app 'Ridibooks.app'
 

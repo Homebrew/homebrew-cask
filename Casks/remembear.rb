@@ -1,9 +1,9 @@
 cask 'remembear' do
-  version '1.1.1'
-  sha256 '9e47bc446f53dab17bece5e2baaf605ab4c9c36a818477f551dbda366d32f414'
+  version '1.4.0'
+  sha256 '1d0ea7018567b85b98ef332ea47d9c8cffc5fbbb8772986f3a058474813f6456'
 
   # s3.amazonaws.com/remembear was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/remembear/app/release/downloads/macOS/RememBear-#{version}.zip"
+  url "https://s3.amazonaws.com/remembear/app/release/downloads/macOS/RememBear-#{version}.dmg"
   appcast 'https://s3.amazonaws.com/remembear/app/release/downloads/macOS/appcast.xml'
   name 'RememBear'
   homepage 'https://www.remembear.com/'

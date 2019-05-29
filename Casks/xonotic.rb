@@ -4,7 +4,7 @@ cask 'xonotic' do
 
   url "https://dl.xonotic.org/xonotic-#{version}.zip"
   name 'Xonotic'
-  homepage 'http://www.xonotic.org/'
+  homepage 'https://www.xonotic.org/'
 
-  app 'Xonotic/Xonotic.app'
+  suite 'Xonotic'
 end

@@ -6,7 +6,5 @@ cask 'hetimazipql' do
   name 'HetimaZip.qlgenerator'
   homepage 'http://hetima.com/hetimazipql/'
 
-  depends_on macos: '>= :mountain_lion'
-
   qlplugin "HetimaZip.qlgenerator#{version}/HetimaZip.qlgenerator"
 end

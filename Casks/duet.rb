@@ -1,10 +1,10 @@
 cask 'duet' do
-  version '1.7.1.4'
-  sha256 '77279033e3776af86eb7d54d1177a75edefed72d4c829eea53dc87bf92dd0004'
+  version '2.0.7.2'
+  sha256 '518e32bdfe69fee656c1a3fabf14a03f47ce7409ae2875468e9f6e45c28a8fb0'
 
-  # duet.nyc3.digitaloceanspaces.com/Mac was verified as official when first introduced to the cask
-  url "https://duet.nyc3.digitaloceanspaces.com/Mac/#{version.major_minor.dots_to_underscores}/duet-#{version.dots_to_hyphens}.zip"
-  appcast 'https://updates.duetdisplay.com/checkMacUpdates'
+  # duet.nyc3.cdn.digitaloceanspaces.com/Mac was verified as official when first introduced to the cask
+  url "https://duet.nyc3.cdn.digitaloceanspaces.com/Mac/#{version.major_minor.dots_to_underscores}/duet-#{version.dots_to_hyphens}.zip"
+  appcast 'https://help.duetdisplay.com/updates/mac-release-notes'
   name 'Duet'
   homepage 'https://www.duetdisplay.com/'
 

@@ -1,10 +1,10 @@
 cask 'hostbuddy' do
-  version '1.0.3'
-  sha256 '0f4c52c536978e0ea9e113edd68932dbd8fa65d4e83ef519ee24aa9dfc751d6c'
+  version '2.2.3,20_12'
+  sha256 '13371a8b03df1035043421fb695aae945ca2e751266cfc35f422c51b0c5d8873'
 
   # downloads-clickonideas.netdna-ssl.com/hostbuddy was verified as official when first introduced to the cask
-  url "https://downloads-clickonideas.netdna-ssl.com/hostbuddy/hostbuddy_#{version}.zip"
-  appcast 'https://shine.clickontyler.com/appcast.php?id=22'
+  url "https://downloads-clickonideas.netdna-ssl.com/hostbuddy/hostbuddy#{version.after_comma}.zip"
+  appcast 'https://shine.clickontyler.com/appcast.php?id=41'
   name 'Hostbuddy'
   homepage 'https://clickontyler.com/hostbuddy/'
 

@@ -6,7 +6,7 @@ cask 'aware' do
   url "https://github.com/josh/Aware/releases/download/v#{version}/Aware.zip"
   appcast 'https://github.com/josh/Aware/releases.atom'
   name 'Aware'
-  homepage 'http://awaremac.com/'
+  homepage 'https://awaremac.com/'
 
   app 'Aware.app'
 end

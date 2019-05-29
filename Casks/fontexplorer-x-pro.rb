@@ -1,12 +1,10 @@
 cask 'fontexplorer-x-pro' do
-  version '6.0.5'
-  sha256 '69e8e419166a01fa84b550268b3f8c3769374c771735aeb6bef78db91891b0bb'
+  version '6.0.7'
+  sha256 '40231d4a0da8c799e7c00dc9788cf97008e52a3bf06119b6be2a668984c174af'
 
-  url "http://fast.fontexplorerx.com/FontExplorerXPro#{version.no_dots}.dmg"
+  url "https://fast.fontexplorerx.com/FontExplorerXPro#{version.no_dots}.dmg"
   name 'FontExplorer X Pro'
   homepage 'https://www.fontexplorerx.com/'
-
-  depends_on macos: '>= :mountain_lion'
 
   app 'FontExplorer X Pro.app'
 

@@ -1,6 +1,6 @@
 cask 'whoozle-android-file-transfer' do
-  version '3.4'
-  sha256 'b32fd4958760f5f184721e61a589ea9d49d22778e8370bbf53f4a66dcb35cbef'
+  version '3.8'
+  sha256 '723a25c75c6e97cc9f5468231eea802326687911ae6723bcfcee9a8ce32f84ff'
 
   # github.com/whoozle/android-file-transfer-linux was verified as official when first introduced to the cask
   url "https://github.com/whoozle/android-file-transfer-linux/releases/download/v#{version}/AndroidFileTransferForLinux.dmg"
@@ -14,4 +14,6 @@ cask 'whoozle-android-file-transfer' do
                        ]
 
   app 'Android File Transfer for Linux.app'
+  binary "#{appdir}/Android File Transfer for Linux.app/Contents/SharedSupport/bin/aft-mtp-cli"
+  binary "#{appdir}/Android File Transfer for Linux.app/Contents/SharedSupport/bin/aft-mtp-mount"
 end

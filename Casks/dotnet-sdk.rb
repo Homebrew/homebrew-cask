@@ -1,18 +1,29 @@
 cask 'dotnet-sdk' do
-  version '2.1.400'
-  sha256 '2b8860307c04eab3db26d6a529813854391e727ba55b49b1bf0bcf25f5cf64ac'
+  version '2.2.107,d3392a3f-8437-4357-8ed1-58061a421ab7:4e354d4a659d1ac4b20ebacb2dedf656'
+  sha256 'a163baac1a6e447367b67726669a3cf42b1a65c2f374e92c28c38d6753c210d2'
 
-  url "https://download.microsoft.com/download/9/D/2/9D2354BE-778B-42D6-BA4F-3CEF489A4FDE/dotnet-sdk-#{version}-osx-x64.pkg"
+  url "https://download.visualstudio.microsoft.com/download/pr/#{version.after_comma.before_colon}/#{version.after_colon}/dotnet-sdk-#{version.before_comma}-osx-x64.pkg"
   appcast 'https://www.microsoft.com/net/download/macos'
   name '.NET Core SDK'
   homepage 'https://www.microsoft.com/net/core#macos'
 
+  conflicts_with cask: [
+                         'dotnet',
+                         'dotnet-preview',
+                         'dotnet-sdk-preview',
+                       ]
   depends_on macos: '>= :sierra'
 
-  pkg "dotnet-sdk-#{version}-osx-x64.pkg"
+  pkg "dotnet-sdk-#{version.before_comma}-osx-x64.pkg"
 
   uninstall pkgutil: 'com.microsoft.dotnet.*',
-            delete:  '/etc/paths.d/dotnet'
+            delete:  [
+                       '/etc/paths.d/dotnet',
+                       '/etc/paths.d/dotnet-cli-tools',
+                     ]
 
-  zap trash: '~/.nuget'
+  zap trash: [
+               '~/.dotnet',
+               '~/.nuget',
+             ]
 end

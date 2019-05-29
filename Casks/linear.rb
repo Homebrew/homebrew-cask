@@ -6,7 +6,7 @@ cask 'linear' do
   url "https://github.com/mikaa123/linear/releases/download/#{version}/linear.zip"
   appcast 'https://github.com/mikaa123/linear/releases.atom'
   name 'Linear'
-  homepage 'http://linear.theuxshop.com/'
+  homepage 'https://linear.theuxshop.com/'
 
   app 'linear.app'
 

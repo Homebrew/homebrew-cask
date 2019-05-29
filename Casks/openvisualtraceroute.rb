@@ -6,7 +6,7 @@ cask 'openvisualtraceroute' do
   url "https://downloads.sourceforge.net/openvisualtrace/#{version}/OpenVisualTraceRoute#{version}.dmg"
   appcast 'https://sourceforge.net/projects/openvisualtrace/rss'
   name 'OpenVisualTraceroute'
-  homepage 'http://visualtraceroute.net/'
+  homepage 'https://visualtraceroute.net/'
 
   app 'OpenVisualTraceroute.app'
 

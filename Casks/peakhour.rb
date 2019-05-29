@@ -1,11 +1,13 @@
 cask 'peakhour' do
-  version '4.0.12,33108'
-  sha256 '541d284334dcb896cdf84f316b5e1c20091c30068129ae086867b8291219f0d8'
+  version '4.1.3,34766'
+  sha256 '8d85cc111acf15d94e33c0e29a365025ac8a792b41d63c67a413a334aba3e902'
 
   url "https://updates.peakhourapp.com/releases/PeakHour%20#{version.before_comma}.zip"
   appcast "https://updates.peakhourapp.com/PeakHour#{version.major}Appcast.xml"
   name 'PeakHour'
   homepage 'https://www.peakhourapp.com/'
+
+  auto_updates true
 
   app "PeakHour #{version.major}.app"
 

@@ -1,6 +1,6 @@
 cask 'visual-studio-code' do
-  version '1.26.1,493869ee8e8a846b0855873886fc79d480d342de'
-  sha256 'f47e241f76ca1d5b82ca3106ac6d0dca302c516a8ef2c3f1bf475620e074da5e'
+  version '1.34.0,a622c65b2c713c890fcf4fbf07cf34049d5fe758'
+  sha256 'b08896339c43a7687398b86b79c0d3e87bc31d55b6423d4afa772e314b28f25d'
 
   # az764295.vo.msecnd.net/stable was verified as official when first introduced to the cask
   url "https://az764295.vo.msecnd.net/stable/#{version.after_comma}/VSCode-darwin-stable.zip"
@@ -10,7 +10,6 @@ cask 'visual-studio-code' do
   homepage 'https://code.visualstudio.com/'
 
   auto_updates true
-  depends_on macos: '>= :mavericks'
 
   app 'Visual Studio Code.app'
   binary "#{appdir}/Visual Studio Code.app/Contents/Resources/app/bin/code"

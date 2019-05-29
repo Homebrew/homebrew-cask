@@ -7,10 +7,5 @@ cask 'functionflip' do
   name 'FunctionFlip'
   homepage 'http://kevingessner.com/software/functionflip/'
 
-  # FIXME: `accessibility_access true` only works on the first
-  #        `app` stanza, but should ideally take a bundle id
-  #
-  # accessibility_access 'com.kevingessner.FFHelperApp'
-
   prefpane 'FunctionFlip.prefPane'
 end

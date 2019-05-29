@@ -1,19 +1,14 @@
 cask 'filebot' do
-  version '4.8.2'
-  sha256 '83cdfc79e1680413a05109e69952dbd702bab523d5939a95bb18e66a26dc20b4'
+  version '4.8.5'
+  sha256 '8e9c409ce8d9bc8b87702249897c81a32b7485a78bb15b073477413d34f94f82'
 
   url "https://get.filebot.net/filebot/FileBot_#{version}/FileBot_#{version}.app.tar.xz"
   appcast 'https://app.filebot.net/update.xml'
   name 'FileBot'
   homepage 'https://www.filebot.net/'
-  gpg "#{url}.asc", key_url: 'https://raw.githubusercontent.com/filebot/plugins/master/gpg/maintainer.pub'
 
   app 'FileBot.app'
   binary "#{appdir}/FileBot.app/Contents/MacOS/filebot.sh", target: 'filebot'
 
   zap trash: '~/Library/Preferences/net.filebot.ui.plist'
-
-  caveats do
-    depends_on_java '10+'
-  end
 end

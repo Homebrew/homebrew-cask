@@ -4,6 +4,7 @@ cask 'microsoft-r-open' do
 
   # mran.blob.core.windows.net was verified as official when first introduced to the cask
   url "https://mran.blob.core.windows.net/install/mro/#{version}/microsoft-r-open-#{version}.pkg"
+  appcast 'https://github.com/Microsoft/microsoft-r-open/releases.atom'
   name 'Microsoft R Open'
   name 'MRO'
   homepage 'https://mran.microsoft.com/'
