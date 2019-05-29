@@ -1,6 +1,6 @@
 cask 'lrtimelapse' do
-  version '5.2.1'
-  sha256 '4394f1be32fac0b4c58424de06fab585d8ceed15af88084e705e097d7caf35ab'
+  version '5.2.2'
+  sha256 '14f40d3487dfdbb99e943f381bd0b6b49016d7ee0803dcc830a3592650ffe145'
 
   url "https://lrtimelapse.com/files/lrtimelapse-#{version.major}-mac/"
   appcast 'https://lrtimelapse.com/download/'
