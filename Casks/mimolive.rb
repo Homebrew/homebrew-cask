@@ -1,6 +1,6 @@
 cask 'mimolive' do
-  version '4.7.3-27002'
-  sha256 '0025bf0c17159874580158fbd3be9c5f8630417e5e9386c03f52d2e3f47d8fcb'
+  version '5.0-27482'
+  sha256 '284a5cc354b0b580d0a4e32ef6f55ce36a44c3b0bb4c4db97b55c3e75e501806'
 
   url "https://cdn.boinx.com/software/mimolive/Boinx_mimoLive_#{version}.app.zip"
   appcast 'https://sparkle.boinx.com/appcast.lasso?appName=mimoLive'
