@@ -1,4 +1,4 @@
-cask 'boxy' do
+cask 'boxy-suite' do
   version :latest
   sha256 :no_check
 
