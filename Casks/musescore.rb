@@ -2,7 +2,7 @@ cask 'musescore' do
   version '3.1.0.22425'
   sha256 '5c5722a429223f320507008aa119f48551e712f1f26cfdf700772b8f3acb58b1'
 
-  # https://github.com/musescore/MuseScore was verified as official when first introduced to the cask
+  # github.com/musescore/MuseScore was verified as official when first introduced to the cask
   url "https://github.com/musescore/MuseScore/releases/download/v#{version.major_minor}/MuseScore-#{version.major_minor_patch}.dmg"
   appcast "https://sparkle.musescore.org/stable/#{version.major}/macos/appcast.xml"
   name 'MuseScore'
