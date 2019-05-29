@@ -7,6 +7,5 @@ cask 'podman' do
   name 'podman'
   homepage 'https://github.com/containers/libpod/'
 
-  app 'podman'
-  binary "#{appdir}/podman"
+  binary 'podman'
 end
