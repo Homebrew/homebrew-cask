@@ -4,7 +4,7 @@ cask 'logos' do
 
   # downloads.logoscdn.com was verified as official when first introduced to the cask
   url "https://downloads.logoscdn.com/LBS8/Installer/#{version}/LogosMac.dmg"
-  appcast 'https://clientservices.logos.com/update/v1/feed/logos8-mac/stable.xml'
+  appcast "https://clientservices.logos.com/update/v1/feed/logos#{version.major}-mac/stable.xml"
   name 'Logos Bible Software'
   homepage 'https://www.logos.com/'
 
