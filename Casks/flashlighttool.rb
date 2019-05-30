@@ -4,6 +4,7 @@ cask 'flashlighttool' do
 
   # amazonaws.com/easyaf was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/easyaf/uploads/984cd555-3c75-45d7-9625-e331d3b95592/FlashlightTool-#{version}.zip"
+  appcast 'http://flashlighttool.42pag.es'
   name 'FlashlightTool'
   homepage 'http://flashlighttool.42pag.es/'
 
