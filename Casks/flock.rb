@@ -1,6 +1,6 @@
 cask 'flock' do
-  version '2.2.248'
-  sha256 '1b0ff6b9b127af44a705bbaa9700debf1366ebe4dc45952b94b4395a1a29b636'
+  version '2.2.257'
+  sha256 '2e52bd5c5a2d136e9ceaed6e3faddda9aa870c1d73d3395570b720e56edbb94e'
 
   # flock.co was verified as official when first introduced to the cask
   url "https://updates.flock.co/fl_mac_electron/Flock-macOS-#{version}.dmg"
