@@ -10,4 +10,13 @@ cask 'logos' do
   depends_on macos: '>= :el_capitan'
 
   app 'Logos.app'
+  
+  uninstall launchctl: 'com.logos.LogosIndexer',
+            quit:       "com.logos.Logos"
+            
+  zap trash: [
+            "~/Library/Preferences/com.logos.LogosIndexer.plist",
+            '~/Library/Preferences/com.logos.LogosCEF.plist',
+            "~/Library/Preferences/com.logos.Logos.plist",
+           ]
 end
