@@ -3,7 +3,7 @@ cask 'alfred' do
   sha256 'c77fe23d9cd2987b5f49d84cc2e5e50972c8c37f0df9c88f01ff29ac2881a5a3'
 
   url "https://cachefly.alfredapp.com/Alfred_#{version}.dmg"
-  appcast 'https://www.alfredapp.com/app/update/general.xml'
+  appcast "https://www.alfredapp.com/app/update#{version}/general.xml"
   name 'Alfred'
   homepage 'https://www.alfredapp.com/'
 
