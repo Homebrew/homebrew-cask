@@ -6,6 +6,8 @@ cask 'logos' do
   appcast "https://clientservices.logos.com/update/v1/feed/logos8-mac/stable.xml"
   name 'Logos Bible Software'
   homepage 'https://www.logos.com/'
+  
+  depends_on macos: '>= :el_capitan'
 
   app 'Logos.app'
 end
