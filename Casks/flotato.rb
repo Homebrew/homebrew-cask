@@ -6,7 +6,5 @@ cask 'flotato' do
   name 'Flotato'
   homepage 'https://flotato.com/'
 
-  auto_updates true
-
   app 'Flotato.app'
 end
