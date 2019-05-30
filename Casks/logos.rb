@@ -1,8 +1,8 @@
 cask 'logos' do
-  version :latest
+  version '8.5.0.0026'
   sha256 :no_check
 
-  url 'http://downloads.logos.com/LBS7/Installer/LogosMac.dmg'
+  url 'https://downloads.logoscdn.com/LBS8/Installer/#{version}/LogosMac.dmg'
   name 'Logos Bible Software'
   homepage 'https://www.logos.com/'
 
