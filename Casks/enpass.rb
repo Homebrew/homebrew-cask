@@ -7,6 +7,8 @@ cask 'enpass' do
   name 'Enpass'
   homepage 'https://www.enpass.io/'
 
+  depends_on macos: '>= :sierra'
+
   pkg 'Enpass.pkg'
 
   uninstall pkgutil: 'in.sinew.Enpass-Desktop.App'
