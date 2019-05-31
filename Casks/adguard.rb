@@ -9,9 +9,7 @@ cask 'adguard' do
 
   pkg 'AdGuard.pkg'
 
-  uninstall pkgutil: [
-                       'com.adguard.mac.adguard-pkg',
-                     ]
+  uninstall pkgutil: 'com.adguard.mac.adguard-pkg'
 
   zap trash: [
                '/Library/Application Support/com.adguard.Adguard',
