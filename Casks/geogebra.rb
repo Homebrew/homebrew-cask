@@ -4,6 +4,7 @@ cask 'geogebra' do
 
   url "https://download.geogebra.org/installers/#{version.major_minor}/GeoGebra-Classic-6-MacOS-Portable-#{version.dots_to_hyphens}.zip"
   appcast "https://download.geogebra.org/installers/#{version.major_minor}/version.txt"
+          configuration: version.dots_to_hyphens
   name 'GeoGebra'
   homepage 'https://www.geogebra.org/'
 
