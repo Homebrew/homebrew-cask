@@ -1,5 +1,5 @@
 cask 'wechat' do
-  version '2.3.25.20'
+  version '2.3.25.19'
   sha256 '2fbb044cfd2130fe530fa48aa8a58097e1485c3238983958504347b10e5064c9'
 
   url 'https://dldir1.qq.com/weixin/mac/WeChatMac.dmg'
