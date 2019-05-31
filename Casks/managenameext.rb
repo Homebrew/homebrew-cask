@@ -1,6 +1,6 @@
 cask 'managenameext' do
-  version '1.6.7'
-  sha256 'd0cc8c66548cf6b3746c246428ea7c023c381cb9092c7df4604bd9d83274e1b1'
+  version '1.6.8'
+  sha256 '8e9234e1a940c2ed2a933f1d0ba07bfc8d14fc3b61f5c963f07ecf6fe351c8b3'
 
   url 'http://throb.pagesperso-orange.fr/prg/Xojo/ManageNameExt_c.zip'
   appcast 'http://throb.pagesperso-orange.fr/prg/Xojo/ManageNameExt_V.txt'
