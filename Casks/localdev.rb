@@ -1,4 +1,4 @@
-cask 'pantheon-localdev' do
+cask 'localdev' do
   version '0.4.0'
   sha256 '5ce8b74ab6af8214abb2cd8a4d56d3ed431f76cfa9083ba1606aa25e947af96a'
 
@@ -10,7 +10,7 @@ cask 'pantheon-localdev' do
   app 'Localdev.app'
 
   uninstall delete: [
-                      '~/Library/Application\ Support/localdev',
+                      '~/Library/Application Support/localdev',
                       '~/Library/Preferences/io.pantheon.local.helper.plist',
                       '~/Library/Preferences/io.pantheon.local.plist',
                     ]
