@@ -1,6 +1,6 @@
 cask 'mycrypto' do
-  version '1.6.6'
-  sha256 '54ec8e7ed4849ad95768567aa89cd3935f3eb3873879fecb03424cbedb1b4905'
+  version '1.6.7'
+  sha256 '2f7f0b8f81b52540448908165df9f48ce9f55c4faeb94eae1c4132a332d2b83a'
 
   # github.com/MyCryptoHQ/MyCrypto was verified as official when first introduced to the cask
   url "https://github.com/MyCryptoHQ/MyCrypto/releases/download/#{version}/mac_#{version}_MyCrypto.dmg"
