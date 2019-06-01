@@ -1,15 +1,16 @@
 cask 'baiducloud' do
-  version '2.4.5'
-  sha256 '7694edba46c8e53ffd2d2485dad4d68b06e27cc038d18cdd40699d1c0e559ba2'
+  version '2.2.2'
+  sha256 '89e3bdc7da7860e55f3fa6edf756a74bd7d7f55607db0358922f7e96c4cc8590'
 
   # issuecdn.baidupcs.com was verified as official when first introduced to the cask
-  url "https://issuecdn.baidupcs.com/issue/netdisk/macapk/BaiduNetdisk_mac_#{version}.dmg"
+  url "https://issuecdn.baidupcs.com/issue/netdisk/MACguanjia/BaiduNetdisk_mac_#{version}.dmg"
+  appcast 'https://pan.baidu.com/disk/cmsdata?do=client'
   name 'Baidu Cloud'
   name 'Baidu Yun Tong Bu Pan'
   name '百度云同步盘'
   homepage 'https://pan.baidu.com/'
 
-  app '百度云同步盘.app'
+  app 'BaiduNetdisk_mac.app'
 
   uninstall quit: 'com.baidu.netdiskmac'
 
