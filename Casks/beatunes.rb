@@ -3,6 +3,8 @@ cask 'beatunes' do
   sha256 'd85e271139dde7895261b60d4f77b4bc036ac5132f1e1f80737bf223eae866c3'
 
   url "http://coxy.beatunes.com/download/beaTunes-#{version.dots_to_hyphens}.dmg"
+  appcast 'https://www.beatunes.com/en/beatunes-download.html',
+          configuration: version.dots_to_hyphens
   name 'beaTunes'
   homepage 'https://www.beatunes.com/'
 
