@@ -1,13 +1,13 @@
 cask 'geburtstagschecker' do
-  version '1.8.177'
-  sha256 '9f86d7a04fc8de127a9f2ec5c3ca7eb4742429f007f8041464540b9c92c726af'
+  version '1.8.1,187'
+  sha256 '53162bf046cddcec2d899a6eb3adcda951bae74de3612c2e7a67478116f0df0c'
 
-  url "https://earthlingsoft.net/GeburtstagsChecker/GeburtstagsChecker%20#{version.major_minor}%20(#{version.patch}).zip"
+  url 'https://earthlingsoft.net/GeburtstagsChecker/GeburtstagsChecker.zip'
   appcast 'https://earthlingsoft.net/GeburtstagsChecker/appcast.xml'
   name 'GeburtstagsChecker'
   homepage 'https://earthlingsoft.net/GeburtstagsChecker/'
 
-  app "GeburtstagsChecker #{version.major_minor} (#{version.patch})/GeburtstagsChecker.app"
+  app "GeburtstagsChecker #{version.before_comma} (#{version.after_comma})/GeburtstagsChecker.app"
 
   zap trash: [
                '~/Library/Caches/earthlingsoft.GeburtstagsChecker',
