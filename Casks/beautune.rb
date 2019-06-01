@@ -4,6 +4,7 @@ cask 'beautune' do
 
   # download.fotor.com.s3.amazonaws.com was verified as official when first introduced to the cask
   url "http://download.fotor.com.s3.amazonaws.com/BeautuneMacInstaller_v#{version}_en.dmg"
+  appcast 'http://www.everimaging.com/software/beautune/'
   name 'Beautune'
   homepage 'http://www.everimaging.com/software/beautune/'
 
