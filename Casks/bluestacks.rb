@@ -3,6 +3,7 @@ cask 'bluestacks' do
   sha256 '423a56ea65d05f26d07606349ffae9f1719453fd71a8b066c35c1652b9c7edc9'
 
   url "https://cdn3.bluestacks.com/downloads/mac/bgp_mac/#{version}/BlueStacksInstaller_#{version}.dmg"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://cloud.bluestacks.com/api/getdownloadnow?platform=mac'
   name 'BlueStacks'
   homepage 'https://www.bluestacks.com/'
 
