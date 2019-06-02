@@ -7,6 +7,8 @@ cask 'monodraw' do
   name 'Monodraw'
   homepage 'https://monodraw.helftone.com/'
 
+  depends_on macos: '>= :mojave'
+
   app 'Monodraw.app'
 
   zap trash: [
