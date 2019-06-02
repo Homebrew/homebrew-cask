@@ -8,7 +8,7 @@ cask 'mimecast' do
   name 'Mimecast for Mac'
   homepage 'https://community.mimecast.com/community/knowledge-base/mimecast-for-mac'
 
-  depends_on macos: '>= :yosemite'
+  depends_on macos: '>= :sierra'
 
   app 'Mimecast.app'
 
