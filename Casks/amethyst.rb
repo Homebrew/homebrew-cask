@@ -14,7 +14,7 @@ cask 'amethyst' do
     url "https://github.com/ianyh/Amethyst/releases/download/v#{version}/Amethyst.zip"
   end
 
-  appcast 'https://ianyh.com/amethyst/appcast.xml'
+  appcast 'https://github.com/ianyh/Amethyst/releases.atom'
   name 'Amethyst'
   homepage 'https://ianyh.com/amethyst/'
 
