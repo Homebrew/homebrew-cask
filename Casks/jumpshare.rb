@@ -1,6 +1,6 @@
 cask 'jumpshare' do
-  version '2.4.4'
-  sha256 '39ed08287ec4a7d0999aa0f096e8fc6687189365e3fa4d99a80ca3538d289174'
+  version '2.5.0'
+  sha256 '90145cf8e7499c31ba3ad350a697745127fc2b338297c2d50a03a8176a4ea6b1'
 
   # d21hi1or3tbtjm.cloudfront.net was verified as official when first introduced to the cask
   url 'https://d21hi1or3tbtjm.cloudfront.net/desktop/mac/Jumpshare.zip'
