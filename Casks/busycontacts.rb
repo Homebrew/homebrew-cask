@@ -1,6 +1,6 @@
 cask 'busycontacts' do
-  version '1.3.4,130401'
-  sha256 '2a8b105f2bddc324bee85ddb9ebb36c1538e8fc2a406f62debeef0fef2fdd712'
+  version '1.3.5,130500'
+  sha256 'c63b8e099b7f8094b464efd49c5acc76448a901461f38cb141e84b16d3a5c8fd'
 
   url 'https://www.busymac.com/download/BusyContacts.zip'
   appcast 'https://www.busymac.com/busycontacts/news.plist'
