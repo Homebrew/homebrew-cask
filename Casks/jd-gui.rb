@@ -1,6 +1,6 @@
 cask 'jd-gui' do
-  version '1.5.1'
-  sha256 '6f1c8148167dc8bfb51271191b2dc2d4ae3b701302e0b105e600b67d06a8add1'
+  version '1.5.2'
+  sha256 'd32f94733bf956ef5348600221a211ca45caebb6856a1fa4bb01bd6686528e93'
 
   # github.com/java-decompiler/jd-gui was verified as official when first introduced to the cask
   url "https://github.com/java-decompiler/jd-gui/releases/download/v#{version}/jd-gui-osx-#{version}.tar"
