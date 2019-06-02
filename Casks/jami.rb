@@ -1,9 +1,10 @@
 cask 'jami' do
-  version '20190215.1947'
-  sha256 '6c262710086f552fb53b4981b7c628eb4a9d441a390b7fa526da786c12a7162d'
+  version '20190602.0216'
+  sha256 'fc813559c65295796fd5b9b69da31cec4a5e98fea5213e792f7fcfa9c2dbcf9c'
 
   url "https://dl.ring.cx/mac_osx/ring-#{version.no_dots}.dmg"
-  appcast 'https://dl.ring.cx/mac_osx/sparkle-ring.xml'
+  appcast 'https://dl.ring.cx/mac_osx/sparkle-ring.xml',
+          configuration: version.major
   name 'Jami'
   name 'Savoir-faire Linux Ring'
   homepage 'https://ring.cx/'
