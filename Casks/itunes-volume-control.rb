@@ -1,6 +1,6 @@
 cask 'itunes-volume-control' do
-  version '1.5.1'
-  sha256 '4af853571590f30457b015c2998881d0436643579eb2a67f6e6b3aa30731c200'
+  version '1.5.2'
+  sha256 '741cd1503c9ac4f3ac4a6a50c24b53a5d4ab9a327b9b750caedb2a99a908284f'
 
   # uni-bonn.de/alberti/iTunesVolumeControl was verified as official when first introduced to the cask
   url "http://quantum-technologies.iap.uni-bonn.de/alberti/iTunesVolumeControl/iTunesVolumeControl-v#{version}.zip"
