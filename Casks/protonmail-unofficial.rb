@@ -7,5 +7,5 @@ cask 'protonmail-unofficial' do
   name 'Protonmail Desktop'
   homepage 'https://github.com/protonmail-desktop/application'
 
-  app 'Protonmail Desktop.app'
+  app 'Protonmail Desktop (unofficial).app'
 end
