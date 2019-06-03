@@ -1,6 +1,6 @@
 cask 'fork' do
-  version '1.0.79.2'
-  sha256 '611ce08c66651375de65d190cf65ad53468f419eaf78bd583fa19091e8db07b5'
+  version '1.0.79.3'
+  sha256 '0f1b8c32760c51e612616a70f38651bfe0e24463263b71d1145bc8787734c971'
 
   # forkapp.ams3.cdn.digitaloceanspaces.com/mac was verified as official when first introduced to the cask
   url "https://forkapp.ams3.cdn.digitaloceanspaces.com/mac/Fork-#{version}.dmg"
