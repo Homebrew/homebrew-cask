@@ -9,6 +9,7 @@ cask 'itunes-volume-control' do
   homepage 'https://github.com/alberti42/iTunes-Volume-Control'
 
   auto_updates true
+  depends_on macos: '>= :mojave'
 
   app 'iTunes Volume Control.app'
 end
