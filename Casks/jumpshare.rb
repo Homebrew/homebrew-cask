@@ -1,10 +1,9 @@
 cask 'jumpshare' do
-  version '2.4.4'
-  sha256 '39ed08287ec4a7d0999aa0f096e8fc6687189365e3fa4d99a80ca3538d289174'
+  version '2.5.0'
+  sha256 'c321f977cd1fd1802b7b4247dbf5d4108432320098b8f40491db837893feda36'
 
-  # d21hi1or3tbtjm.cloudfront.net was verified as official when first introduced to the cask
-  url 'https://d21hi1or3tbtjm.cloudfront.net/desktop/mac/Jumpshare.zip'
-  appcast 'https://rink.hockeyapp.net/api/2/apps/2e15b9ed1bad4078ac88b8fae1771bfb'
+  url "https://apps.jumpshare.com/desktop/mac/updates/Jumpshare-#{version}.tar.bz2"
+  appcast 'https://apps.jumpshare.com/desktop/mac/updates/appcast.xml'
   name 'Jumpshare'
   homepage 'https://jumpshare.com/'
 
