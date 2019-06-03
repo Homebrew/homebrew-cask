@@ -16,7 +16,7 @@ cask 'maintenance' do
     sha256 '94c7a322d4d796afc5e52534f3564a562240d9c0ec0a60de210e68372fef2137'
   else
     version '2.5.3'
-    sha256 '94c7a322d4d796afc5e52534f3564a562240d9c0ec0a60de210e68372fef2137'
+    sha256 '8c9eed255fa829a5fcc8c698c509a57ea48a3d3ba20331f0037392da2e49b24d'
   end
 
   url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete('.')}/Maintenance.dmg"
