@@ -1,6 +1,6 @@
 cask 'ithoughtsx' do
-  version '5.15'
-  sha256 'a5024635e7ea84976c84b3f6cccf0a4c1724c85cc444f0040b7af60c8ec75e8e'
+  version '5.16'
+  sha256 'b9b300ef7930a82be422b86aa09582518ff4e3ff7cbac1626549028b6a4db0ad'
 
   # s3-eu-west-1.amazonaws.com/ithoughtsx was verified as official when first introduced to the cask
   url "https://s3-eu-west-1.amazonaws.com/ithoughtsx/iThoughtsX_#{version.dots_to_underscores}.zip"
