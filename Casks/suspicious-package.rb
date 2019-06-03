@@ -7,6 +7,8 @@ cask 'suspicious-package' do
   name 'Suspicious Package'
   homepage 'https://www.mothersruin.com/software/SuspiciousPackage/'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'Suspicious Package.app'
   binary "#{appdir}/Suspicious Package.app/Contents/SharedSupport/spkg"
 
