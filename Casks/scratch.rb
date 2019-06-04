@@ -6,10 +6,7 @@ cask 'scratch' do
   name 'Scratch'
   homepage 'https://scratch.mit.edu/download'
 
-  depends_on macos: [
-                      :high_sierra,
-                      :mojave,
-                    ]
+  depends_on macos: '>= :high_sierra'
 
   app 'Scratch Desktop.app'
 end
