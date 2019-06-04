@@ -8,9 +8,10 @@ cask 'celldesigner' do
   name 'CellDesigner'
   homepage 'http://www.celldesigner.org/'
 
-  depends_on cask: 'java'
-  container type: :dmg
-
+  caveats do
+      depends_on_java
+  end
+ 
   installer script: {
                       executable: "#{staged_path}/CellDesigner-#{version}-osx-installer.app/Contents/MacOS/installbuilder.sh",
                       args:       ['--mode', 'unattended'],
