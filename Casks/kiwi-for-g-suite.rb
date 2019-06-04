@@ -1,6 +1,6 @@
 cask 'kiwi-for-g-suite' do
-  version '2.0.18v'
-  sha256 'e7f87a89902b009504b311d07ede20b7613d16acb4d39d4772e229e0d3a41cf0'
+  version '2.0.19v'
+  sha256 '249143f062861705060d2358ea4bf1007d6e93d390336b9237b1d033e36868a4'
 
   # s3.amazonaws.com/kiwiforgsuite was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/kiwiforgsuite/mac/release/Kiwi+for+G+Suite.pkg'
