@@ -27,6 +27,6 @@ cask 'celldesigner' do
              ]
 
   caveats do
-    depends_on_java
+    depends_on_java '6+'
   end
 end
