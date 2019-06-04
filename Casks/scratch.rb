@@ -10,5 +10,6 @@ cask 'scratch' do
                       :high_sierra,
                       :mojave,
                     ]
+
   app 'Scratch Desktop.app'
 end
