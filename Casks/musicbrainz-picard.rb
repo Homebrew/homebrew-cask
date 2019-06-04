@@ -12,6 +12,17 @@ cask 'musicbrainz-picard' do
 
   app 'MusicBrainz Picard.app'
 
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/picard.wrapper.sh"
+  binary shimscript, target: 'picard'
+
+  preflight do
+    IO.write shimscript, <<~EOS
+      #!/bin/sh
+      exec '#{appdir}/MusicBrainz Picard.app/Contents/MacOS/picard' "$@"
+    EOS
+  end
+
   zap trash: [
                '~/.config/MusicBrainz',
                '~/Library/Caches/MusicBrainz',
