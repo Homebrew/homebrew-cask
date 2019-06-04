@@ -8,10 +8,6 @@ cask 'celldesigner' do
   name 'CellDesigner'
   homepage 'http://www.celldesigner.org/'
 
-  caveats do
-      depends_on_java
-  end
- 
   installer script: {
                       executable: "#{staged_path}/CellDesigner-#{version}-osx-installer.app/Contents/MacOS/installbuilder.sh",
                       args:       ['--mode', 'unattended'],
@@ -29,4 +25,8 @@ cask 'celldesigner' do
                '~/.sbw',
                '~/.oracle_jre_usage',
              ]
+
+  caveats do
+    depends_on_java
+  end
 end
