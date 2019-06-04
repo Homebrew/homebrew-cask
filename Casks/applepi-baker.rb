@@ -4,7 +4,7 @@ cask 'applepi-baker' do
 
   url "https://www.tweaking4all.com/downloads/raspberrypi/ApplePi-Baker-v#{version}.dmg"
   name 'ApplePi-Baker'
-  homepage 'https://www.tweaking4all.com/hardware/raspberry-pi/macosx-apple-pi-baker/'
+  homepage 'https://www.tweaking4all.com/hardware/raspberry-pi/applepi-baker-v2/'
 
   app 'ApplePi-Baker.app'
 
