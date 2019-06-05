@@ -1,6 +1,6 @@
 cask 'unity-ios-support-for-editor' do
-  version '2019.1.4f1,ffa3a7a2dd7d'
-  sha256 '24cc2ab50d638ee3431866a17cddbc0ef92bee7489acc36509f1da92985e6071'
+  version '2019.1.5f1,0ca0f5646614'
+  sha256 '0e7265e46a76c4317aa0e2ed19d3c08d805955a85e715c5425d5d5c6d72aa9b0'
 
   url "https://netstorage.unity3d.com/unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-#{version.before_comma}.pkg"
   appcast 'https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json'
