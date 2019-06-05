@@ -4,6 +4,7 @@ cask 'camranger' do
 
   url "https://www.camranger.com/downloadFiles/CamRanger_Mac_#{version.dots_to_underscores}.dmg",
       user_agent: :fake
+  appcast 'https://camranger.com/mac-downloads/'
   name 'CamRanger'
   homepage 'https://camranger.com/mac-downloads/'
 
