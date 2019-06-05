@@ -5,7 +5,7 @@ cask 'expressvpn' do
   url "https://download.expressvpn.xyz/clients/mac/expressvpn-install_v#{version}.pkg"
   appcast 'https://www.expressvpn.xyz/vpn-software/vpn-mac'
   name 'ExpressVPN'
-  homepage 'https://www.expressvpn.xyz/'
+  homepage 'https://www.expressvpn.xyz/vpn-software/vpn-mac/'
 
   auto_updates true
 
