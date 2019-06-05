@@ -7,6 +7,8 @@ cask 'bunch' do
   name 'Bunch'
   homepage 'https://brettterpstra.com/projects/bunch/'
 
+  auto_updates true
+
   app 'Bunch.app'
 
   zap trash: '~/Library/Preferences/com.brettterpstra.Bunch.plist'
