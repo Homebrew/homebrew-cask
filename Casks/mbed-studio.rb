@@ -3,7 +3,6 @@ cask 'mbed-studio' do
   sha256 'fa000124b45283fca78ae871639db23ccef336e92757dc5d5f23e38bdb0d4d0c'
 
   url 'https://studio.mbed.com/installers/latest/mac/MbedStudio.pkg'
-  appcast 'https://os.mbed.com/docs/mbed-studio/'
   name 'Mbed Studio'
   homepage 'https://os.mbed.com/studio/'
 
