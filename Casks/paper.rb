@@ -4,7 +4,7 @@ cask 'paper' do
 
   url "http://paperimg.meiyuan.in/pap.er_v#{version}.dmg"
   name 'Paper'
-  homepage 'http://paper.meiyuan.in/'
+  homepage 'https://paper.meiyuan.in/'
 
   app 'pap.er.app'
 
