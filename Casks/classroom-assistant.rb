@@ -1,6 +1,6 @@
 cask 'classroom-assistant' do
-  version '1.0.4'
-  sha256 '48fecda2ce6d882c1ecf7714844bc613b8fced4b24c75d0e5c8525a9265556e8'
+  version '1.0.5'
+  sha256 '78ec7624e3fc92f7e9d90d768cd8e6fbbc981ac187af7a36fb195d59e6feb62a'
 
   url "https://github.com/education/classroom-assistant/releases/download/v#{version}/Classroom.Assistant-darwin-x64-#{version}.zip"
   appcast 'https://github.com/education/classroom-assistant/releases.atom'
