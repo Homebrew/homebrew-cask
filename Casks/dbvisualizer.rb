@@ -15,8 +15,4 @@ cask 'dbvisualizer' do
   uninstall signal: [['TERM', 'com.dbvis.DbVisualizer']]
 
   zap trash: '~/.dbvis'
-
-  caveats do
-    depends_on_java '8'
-  end
 end
