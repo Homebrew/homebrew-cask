@@ -6,7 +6,7 @@ cask 'air-video-server-hd' do
   url "https://s3.amazonaws.com/AirVideoHD/Download/Air+Video+Server+HD+#{version}.dmg"
   appcast 'https://s3.amazonaws.com/AirVideoHD/Download/appcast.xml'
   name 'Air Video Server HD'
-  homepage 'http://www.inmethod.com/airvideohd'
+  homepage 'https://airvideo.app/'
 
   app 'Air Video Server HD.app'
 
