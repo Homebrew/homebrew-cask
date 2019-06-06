@@ -7,5 +7,7 @@ cask 'swish' do
   name 'Swish'
   homepage 'https://highlyopinionated.co/swish/'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'Swish.app'
 end
