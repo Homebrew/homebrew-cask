@@ -6,6 +6,8 @@ cask 'qt-design-studio' do
   name 'Qt Design Studio'
   homepage 'https://www.qt.io/ui-framework'
 
+  depends_on macos: '>= :sierra'
+
   installer manual: "qt-designstudio-mac-x86_64-#{version}-community.app"
 
   uninstall delete: "~/Applications/QtDesignStudio-#{version}-community"
