@@ -1,6 +1,6 @@
 cask 'mob' do
-  version '0.2.1'
-  sha256 '18ab080133100b87982b5d54af5dcb3d5bff18b99d0635603395600621a0c68d'
+  version '0.2.2'
+  sha256 'a70d66d92310737d9599215d558670a45265795be0be980934a91e9880eb4a73'
 
   url "https://github.com/zenghongtu/Mob/releases/download/v#{version}/Mob-#{version}-mac.dmg"
   appcast 'https://github.com/zenghongtu/Mob/releases.atom'
