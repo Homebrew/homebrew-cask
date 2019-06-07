@@ -1,9 +1,9 @@
 cask 'amadine' do
-  version '1.0.1'
-  sha256 '869510a25a3a710de4904f0a5035767d56b8725aa430152a7f785a3756d7aff2'
+  version '1.0.2'
+  sha256 '3668a7e82fabf7be8f6464d14f4ed37ad23349dfbe8469cce1a2df7eaf04f1b8'
 
-  # s3.amazonaws.com/belightsoft was verified as official when first introduced to the cask
-  url 'https://s3.amazonaws.com/belightsoft/Amadine.dmg'
+  # belightsoft.s3.amazonaws.com was verified as official when first introduced to the cask
+  url 'https://belightsoft.s3.amazonaws.com/Amadine.dmg'
   appcast 'https://www.belightsoft.com/download/updates/appcast_Amadine.xml'
   name 'Amadine'
   homepage 'https://amadine.com/'
