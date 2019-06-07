@@ -6,5 +6,5 @@ cask 'hashbackup' do
   name 'hashbackup'
   homepage 'http://www.hashbackup.com/'
 
-  binary "hb.r#{version}.Darwin.i386", target: 'hb'
+  binary "hb.r#{version}.Darwin.x86_64", target: 'hb'
 end
