@@ -10,7 +10,5 @@ cask 'nulloy' do
 
   app 'Nulloy.app'
 
-  zap trash: [
-               '~/Library/Saved Application State/com.nulloy.savedState',
-             ]
+  zap trash: '~/Library/Saved Application State/com.nulloy.savedState'
 end
