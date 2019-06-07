@@ -1,6 +1,6 @@
 cask 'qiyimedia' do
-  version '5.9.8'
-  sha256 '4ab72bb91ed0246bed7a227e4dce68fee760590f4549633ad47d18d46bd69df6'
+  version '5.9.11'
+  sha256 'ae2cc7337ee6132c84c53cca871f743e337ea94fa3ca2a56a7d7ae065468621e'
 
   url 'https://mbdapp.iqiyi.com/j/ot/iQIYIMedia_000.dmg'
   appcast 'https://app.iqiyi.com/mac/player/index.html'
