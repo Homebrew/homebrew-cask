@@ -7,5 +7,12 @@ cask 'tastyworks' do
   name 'tastyworks'
   homepage 'https://tastyworks.com/'
 
+  auto_updates true
+
   app 'tastyworks.app'
+
+  zap trash: [
+               '~/Library/Application Support/tastyworks',
+               '~/Library/Saved Application State/com.tastyworks.desktop.savedState',
+             ]
 end
