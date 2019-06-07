@@ -1,6 +1,6 @@
 cask 'overture' do
-  version '2.6.2'
-  sha256 'a1fba04c86c284eea65a7a92313ffa659c042339b1bab5fbb50027bcab61047a'
+  version '2.7.0'
+  sha256 '12db778c82597fe70d0048b261a9121e5a419d654d266d29b02879928486f6e8'
 
   # github.com/overturetool/overture was verified as official when first introduced to the cask
   url "https://github.com/overturetool/overture/releases/download/Release%2F#{version}/Overture-#{version}-macosx.cocoa.x86_64.zip"
