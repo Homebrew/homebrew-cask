@@ -12,8 +12,8 @@ cask 'itsycal' do
     # itsycal.s3.amazonaws.com was verified as official when first introduced to the cask
     url "https://itsycal.s3.amazonaws.com/Itsycal-#{version}.zip"
   else
-    version '0.11.14'
-    sha256 'a10e372196bbcf433e982a54fdc874bc6bbebb8f6a3f9c1bd1c91efef35923b6'
+    version '0.11.15'
+    sha256 'be9d2887b74af5b82bd5a4d98c8edcd8f77b580eb4cbe62e3534609ec1fc6ac7'
 
     # itsycal.s3.amazonaws.com was verified as official when first introduced to the cask
     url "https://itsycal.s3.amazonaws.com/Itsycal-#{version}.zip"
