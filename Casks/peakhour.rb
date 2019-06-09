@@ -1,6 +1,6 @@
 cask 'peakhour' do
-  version '4.1.3,34766'
-  sha256 '8d85cc111acf15d94e33c0e29a365025ac8a792b41d63c67a413a334aba3e902'
+  version '4.1.4,34890'
+  sha256 'd24d2018cf8f4d407dc9bd40880a3841047e703a8d14a095766333e02cd1797a'
 
   url "https://updates.peakhourapp.com/releases/PeakHour%20#{version.before_comma}.zip"
   appcast "https://updates.peakhourapp.com/PeakHour#{version.major}Appcast.xml"
