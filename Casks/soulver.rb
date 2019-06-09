@@ -1,5 +1,5 @@
 cask 'soulver' do
-  if MacOS.version <= :mojave
+  if MacOS.version <= :high_sierra
     version '2.6.9-6055'
     sha256 'e8f96895e43d28177f458404bfc082ebc940c66ce6f425cdceeedab9389272bf'
 
