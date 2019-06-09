@@ -8,7 +8,7 @@ cask 'soulver' do
   homepage 'https://soulver.app/'
 
   auto_updates true
-  depends_on macos: '>= :mojave'
+  depends_on macos: '>= :high_sierra'
 
   app "Soulver #{version.major}.app"
 
