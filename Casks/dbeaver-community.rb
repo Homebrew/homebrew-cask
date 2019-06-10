@@ -1,6 +1,6 @@
 cask 'dbeaver-community' do
-  version '6.0.5'
-  sha256 '9e01524647246f450ba3ada517bd60b55f1163b352b3f252d040ecb4d2c59bb9'
+  version '6.1.0'
+  sha256 'f02454822e37f47defc36fa280d927593e82097e6adee4c73401e19a1a11caf3'
 
   # github.com/dbeaver/dbeaver was verified as official when first introduced to the cask
   url "https://github.com/dbeaver/dbeaver/releases/download/#{version}/dbeaver-ce-#{version}-macos.dmg"
