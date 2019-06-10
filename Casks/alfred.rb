@@ -1,6 +1,6 @@
 cask 'alfred' do
-  version '4.0.1_1078'
-  sha256 'c77fe23d9cd2987b5f49d84cc2e5e50972c8c37f0df9c88f01ff29ac2881a5a3'
+  version '4.0.2_1085'
+  sha256 'b43a086c7f374bc0c41f7b74938a80771b7c4aa04289423418b0c2e6027bae03'
 
   url "https://cachefly.alfredapp.com/Alfred_#{version}.dmg"
   appcast "https://www.alfredapp.com/app/update#{version.major}/general.xml"
