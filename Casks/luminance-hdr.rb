@@ -2,11 +2,8 @@ cask 'luminance-hdr' do
   version '2.6.0'
   sha256 '14b201123036f826a3d4f2f2d5c00a7ef60938adf8f8cf35ca58f38ee8ef6642'
 
-  # master.dl.sourceforge.net/project/qtpfsgui was verified as official when first introduced to the cask
-  url "https://master.dl.sourceforge.net/project/qtpfsgui/luminance/#{version}/LuminanceHDR_#{version}-Qt5.13.dmg"
-  
-
-  
+  # sourceforge.net/projects/qtpfsgui was verified as official when first introduced to the cask
+  url "https://sourceforge.net/projects/qtpfsgui/files/luminance/#{version}/LuminanceHDR_#{version}-Qt5.13.dmg/download"
   appcast 'https://sourceforge.net/projects/qtpfsgui/rss'
   name 'Luminance HDR'
   homepage 'https://qtpfsgui.sourceforge.io/'
