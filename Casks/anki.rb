@@ -10,4 +10,9 @@ cask 'anki' do
   depends_on macos: '>= :sierra'
 
   app 'Anki.app'
+
+  zap trash: [
+               '~/Library/Application Support/Anki',
+               '~/Library/Application Support/Anki2',
+             ]
 end
