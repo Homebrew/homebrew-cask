@@ -1,5 +1,5 @@
 cask 'megasync' do
-  version '4.1.0'
+  version '4.1.1'
   sha256 'e02dd282b63e140dc7ead0a11a5057f8ec59f2a5c18bf4b766a80ef9005293c1'
 
   url 'https://mega.nz/MEGAsyncSetup.dmg'
