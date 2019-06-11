@@ -13,8 +13,8 @@ cask 'soulver' do
   app "Soulver #{version.major}.app"
 
   zap trash: [
-               '~/Library/Application Support/Soulver',
-               '~/Library/Preferences/com.acqualia.soulver.plist',
-               '~/Library/Autosave Information/Unsaved Soulver Document*',
+               '~/Library/Application Support/Soulver 3',
+               '~/Library/Application Support/app.soulver.mac',
+               '~/Library/Preferences/app.soulver.mac.plist',
              ]
 end
