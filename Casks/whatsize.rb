@@ -8,6 +8,7 @@ cask 'whatsize' do
   homepage 'https://whatsizemac.com/'
 
   pkg 'WhatSize.pkg'
-  
-  uninstall pkgutil: 'WhatSize'  
+
+  uninstall pkgutil:   "com.id-design.whatsize#{version.major}.pkg",
+            launchctl: "com.id-design.v#{version.major}.whatsizehelper"
 end
