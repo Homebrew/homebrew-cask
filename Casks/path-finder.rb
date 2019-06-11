@@ -1,6 +1,6 @@
 cask 'path-finder' do
-  version '8.5.3'
-  sha256 'e19cc088a904a7970654bd1194941957aee63a78a31eac9625f66eaf7e4ca193'
+  version '8.5.4'
+  sha256 '6e8e59cf430cfb06482cb7a71eda548682cad685af45539b8647dc4490b781ce'
 
   url 'https://get.cocoatech.com/PF8.dmg'
   appcast 'https://get.cocoatech.com/releasecast.xml'

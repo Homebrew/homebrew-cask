@@ -7,6 +7,7 @@ cask 'mamp' do
   name 'MAMP'
   homepage 'https://www.mamp.info/'
 
+  auto_updates true
   depends_on macos: '>= :yosemite'
 
   pkg "MAMP_MAMP_PRO_#{version}.pkg"
