@@ -8,5 +8,7 @@ cask 'lmms' do
   name 'LMMS'
   homepage 'https://lmms.io/'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'LMMS.app'
 end
