@@ -5,7 +5,7 @@ cask 'whatsize' do
   url "https://www.whatsizemac.com/software/whatsize#{version.major}/whatsize_#{version}.tgz"
   appcast "https://www.whatsizemac.com/software/whatsize#{version.major}/release/notes.xml"
   name 'WhatSize'
-  homepage 'https://whatsizemac.com/'
+  homepage 'https://www.whatsizemac.com/'
 
   pkg 'WhatSize.pkg'
 
