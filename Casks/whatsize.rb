@@ -7,5 +7,7 @@ cask 'whatsize' do
   name 'WhatSize'
   homepage 'https://whatsizemac.com/'
 
-  app 'WhatSize.app'
+  pkg 'WhatSize.pkg'
+  
+  uninstall pkgutil: 'WhatSize'  
 end
