@@ -1,5 +1,5 @@
 cask 'vitalsource-bookshelf' do
-  version '8.2.1.313'
+  version '8.2.2.318'
   sha256 'f1f430cd242c20f6b7e5899ab3a09b63f5631b9e843f5b33bd0c3c3c675394dc'
 
   # rink.hockeyapp.net/api/2/apps/ was verified as official when first introduced to the cask
