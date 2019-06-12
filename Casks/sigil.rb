@@ -8,6 +8,8 @@ cask 'sigil' do
   name 'Sigil'
   homepage 'https://sigil-ebook.com/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Sigil.app'
 
   zap trash: [
