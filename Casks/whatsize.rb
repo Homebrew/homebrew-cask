@@ -7,6 +7,8 @@ cask 'whatsize' do
   name 'WhatSize'
   homepage 'https://www.whatsizemac.com/'
 
+  depends_on macos: '>= :sierra'
+
   pkg 'WhatSize.pkg'
 
   uninstall pkgutil:   "com.id-design.whatsize#{version.major}.pkg",
