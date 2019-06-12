@@ -4,7 +4,7 @@ cask 'postbox' do
 
   # d3nx85trn0lqsg.cloudfront.net/mac was verified as official when first introduced to the cask
   url "https://d3nx85trn0lqsg.cloudfront.net/mac/postbox-#{version}-mac64.dmg"
-  appcast 'https://www.postbox-inc.com/product/releasenotes'
+  appcast 'https://www.postbox-inc.com/download/success-mac'
   name 'Postbox'
   homepage 'https://www.postbox-inc.com/'
 
