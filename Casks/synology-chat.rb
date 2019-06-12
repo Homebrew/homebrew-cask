@@ -1,6 +1,6 @@
 cask 'synology-chat' do
-  version '1.0.1-40'
-  sha256 '8318abf563972c4c986fc7bb42f1c739e31e8f6d97fa896641ea293e2bd1f8fe'
+  version '1.1.0-56'
+  sha256 '2335cb1aa1918bd9efb19a28bc58e95282bdbd1bf63b6d017f188175347d82b4'
 
   url "https://global.download.synology.com/download/Tools/ChatClient/#{version}/Mac/Installer/Chat-#{version}.dmg"
   name 'Synology Chat'
