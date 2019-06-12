@@ -1,6 +1,6 @@
 cask 'navicat-for-mariadb' do
-  version '12.1.22'
-  sha256 'ed9ac7cf721a1dce5a393e5b38f75f2eb35424b1fcef4795f5b61a226d282390'
+  version '12.1.23'
+  sha256 '2ff0e29adbd8717dab70397da4c19c9aa994407cd439f8e778443f8a565ec6ce'
 
   url "http://download.navicat.com/download/navicat#{version.major_minor.no_dots}_mariadb_en.dmg"
   appcast 'https://www.navicat.com/updater/v120/sysProfileInfo.php?appName=Navicat%20for%20MariaDB&appLang=en'
