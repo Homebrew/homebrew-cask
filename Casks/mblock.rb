@@ -9,6 +9,6 @@ cask 'mblock' do
   homepage 'https://www.mblock.cc/'
 
   pkg "V#{version}.pkg"
-  
-  uninstall pkgutil:   'mblock.pkg'
+
+  uninstall pkgutil: 'mblock.pkg'
 end
