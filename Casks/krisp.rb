@@ -1,8 +1,8 @@
 cask 'krisp' do
-  version '0.7.6'
-  sha256 'ee24ebc63110528e7a7e2681fe595936174c7b33b4c7a7070bd64e19cd7c33d1'
+  version '1.0.1'
+  sha256 '61ae1e9231a0e479786edf65c63c691a29146b76761227cfb2176263bbac429e'
 
-  url "https://cdn.krisp.ai/installer/release/krisp_#{version}.pkg"
+  url "https://cdn.krisp.ai/mac/release/v#{version.major}.#{version.minor}/krisp_#{version}.pkg"
   appcast 'https://krisp.ai/index.html'
   name 'Krisp'
   homepage 'https://krisp.ai/index.html'
