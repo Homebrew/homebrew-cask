@@ -9,4 +9,11 @@ cask 'mymonero' do
   homepage 'https://mymonero.com/'
 
   app 'MyMonero.app'
+
+  zap trash: [
+               '~/Library/Application Support/MyMonero',
+               '~/Library/Saved Application State/com.mymonero.mymonero-desktop.savedState',
+               '~/Library/Preferences/com.mymonero.mymonero-desktop.plist',
+               '~/Library/Logs/MyMonero',
+             ]
 end
