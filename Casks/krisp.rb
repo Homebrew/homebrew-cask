@@ -8,6 +8,7 @@ cask 'krisp' do
   homepage 'https://krisp.ai/index.html'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   pkg "krisp_#{version}.pkg"
 
