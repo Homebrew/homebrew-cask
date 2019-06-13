@@ -1,6 +1,6 @@
 cask 'p4v' do
   version '19.1-1797168'
-  sha256 'e1fcdfd0fed279826f881ee1e951131cef91f2839a3d23ef9a11312c3b085e50'
+  sha256 '50dd06481871afe6718f49b0ed6de8446af4a4f69ae9716775840e0b9251546a'
 
   url "https://cdist2.perforce.com/perforce/r#{version.major_minor}/bin.macosx1013x86_64/P4V.dmg"
   appcast 'https://cdist2.perforce.com/perforce/'
