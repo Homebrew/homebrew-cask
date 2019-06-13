@@ -7,5 +7,7 @@ cask 'jasp' do
   name 'JASP'
   homepage 'https://jasp-stats.org/'
 
+  depends_on macos: '>= :sierra'
+
   app 'JASP.app'
 end
