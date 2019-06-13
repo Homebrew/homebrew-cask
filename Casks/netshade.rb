@@ -1,6 +1,6 @@
 cask 'netshade' do
-  version '7.2.1'
-  sha256 '9a447695be84e1f2929bb2526ffc2e1fe05e23c2c74a739617e134ece52042ce'
+  version '8.0'
+  sha256 '4aeec4f181349bfae4cce8b8ffcc262ede266efb2402612af6fab9e0886f0d4a'
 
   url "https://secure.raynersw.com/downloads/NetShade-#{version.dots_to_hyphens}.app.zip"
   appcast 'https://secure.raynersw.com/changelog.php?prod=ns&format=std&warnpay=0'
