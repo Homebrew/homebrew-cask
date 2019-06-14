@@ -6,7 +6,7 @@ cask 'gureumkim' do
   url "https://github.com/gureum/gureum/releases/download/#{version}/Gureum-#{version}.pkg"
   appcast 'https://github.com/gureum/gureum/releases.atom'
   name '구름 입력기'
-  homepage 'http://gureum.io/'
+  homepage 'https://gureum.io/'
 
   pkg "Gureum-#{version}.pkg"
 
