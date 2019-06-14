@@ -9,6 +9,7 @@ cask 'memory-tracker-by-timely' do
   homepage 'https://timelyapp.com/'
 
   auto_updates true
+  depends_on macos: '>= :high_sierra'
 
   app 'Memory Tracker by Timely.app'
 end
