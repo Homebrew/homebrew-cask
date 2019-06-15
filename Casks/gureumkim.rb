@@ -1,12 +1,12 @@
 cask 'gureumkim' do
-  version '1.10.0'
-  sha256 '144f6625d95101a91fd176afd1ff4cf159d22b52cf522bdedba0b51097de2bbe'
+  version '1.10.1'
+  sha256 '792b605001e70ade496fdaf3d0ea07e811c586a64e27ced70436cc9d916d9512'
 
   # github.com/gureum/gureum was verified as official when first introduced to the cask
   url "https://github.com/gureum/gureum/releases/download/#{version}/Gureum-#{version}.pkg"
   appcast 'https://github.com/gureum/gureum/releases.atom'
   name '구름 입력기'
-  homepage 'http://gureum.io/'
+  homepage 'https://gureum.io/'
 
   pkg "Gureum-#{version}.pkg"
 
