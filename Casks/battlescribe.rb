@@ -7,6 +7,6 @@ cask 'battlescribe' do
   name 'BattleScribe'
   homepage 'https://battlescribe.net/'
 
-  app 'BattleScribe.app'
   suite 'BattleScribe Tools'
+  app 'BattleScribe.app'
 end
