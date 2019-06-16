@@ -6,5 +6,7 @@ cask 'inviska-rename' do
   name 'Inviska Rename'
   homepage 'https://www.inviska.com/rename/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Inviska Rename.app'
 end
