@@ -7,5 +7,7 @@ cask 'minitube' do
   name 'Minitube'
   homepage 'https://flavio.tordini.org/minitube'
 
+  depends_on macos: '>= :sierra'
+
   app 'Minitube.app'
 end
