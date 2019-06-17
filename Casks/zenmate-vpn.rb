@@ -8,5 +8,7 @@ cask 'zenmate-vpn' do
   name 'ZenMate VPN'
   homepage 'https://zenmate.com/products/vpn-for-osx/'
 
+  depends_on macos: '>= :sierra'
+
   app 'ZenMate VPN.app'
 end
