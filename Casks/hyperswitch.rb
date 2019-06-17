@@ -1,6 +1,6 @@
 cask 'hyperswitch' do
-  version '0.2.588-dev'
-  sha256 '0c07f4813f75bd73d1e4718fd53f30f46fb3179583f8ec81163146008695377a'
+  version '0.2.589-dev'
+  sha256 '785375312d164988d0956f72c9343f821f451a5ad232c7f937dcf10352a7dbf7'
 
   url "https://bahoom.com/hyperswitch/#{version}/HyperSwitch.zip"
   appcast 'https://bahoom.com/hyperswitch/appcast.xml'
