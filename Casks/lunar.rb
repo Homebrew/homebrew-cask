@@ -1,9 +1,9 @@
 cask 'lunar' do
-  version '2.8.2'
-  sha256 '2c883b1127d32c6f7ae5232257573e3b298e611f0774733cb60486e836bb6abe'
+  version '2.8.3'
+  sha256 '9113fcb009ce93f959fcb30f337cd442fc0b2a2065905703e1d5766a2492158b'
 
   # github.com/alin23/Lunar was verified as official when first introduced to the cask
-  url "https://github.com/alin23/Lunar/releases/download/v#{version}/Lunar.dmg"
+  url "https://github.com/alin23/Lunar/releases/download/v#{version}/Lunar-#{version}.dmg"
   appcast 'https://github.com/alin23/Lunar/releases.atom'
   name 'Lunar'
   homepage 'https://lunarapp.site/'
