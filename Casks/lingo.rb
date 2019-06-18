@@ -1,5 +1,5 @@
 cask 'lingo' do
-  version '6.1'
+  version '7.0'
   sha256 '3fc7936e72b4e92376dd75031cc52f02a03378f6469bca1e6390bb1c9e52bd45'
 
   # nounproject.s3.amazonaws.com/lingo was verified as official when first introduced to the cask
