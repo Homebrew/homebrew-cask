@@ -9,5 +9,10 @@ cask 'fresh' do
 
   pkg 'GARMIN_Fresh_setup.pkg'
 
-  uninstall pkgutil: 'com.garmin.fresh'
+  uninstall delete:   '/Applications/Fresh.app'
+            pkgutil:
+                      [
+                        'com.garmin.fresh',
+                        'com.navigon.fresh',
+                      ]
 end
