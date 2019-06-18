@@ -9,7 +9,7 @@ cask 'fresh' do
 
   pkg 'GARMIN_Fresh_setup.pkg'
 
-  uninstall delete:   '/Applications/Fresh.app'
+  uninstall delete:   '/Applications/Fresh.app',
             pkgutil:
                       [
                         'com.garmin.fresh',
