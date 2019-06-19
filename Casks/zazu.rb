@@ -1,6 +1,6 @@
 cask 'zazu' do
   version '0.6.0'
-  sha256 'af955530f445fafb6d1472936cae5742a40a57ef6f838434073188caa5a5ed1c'
+  sha256 'a726bd20d64d6f03b3251d7841f94fae0f50103533706e9291233aa3adbecf92'
 
   # github.com was verified as official when first introduced to the cask
   url "https://github.com/tinytacoteam/zazu/releases/download/v#{version}/Zazu-#{version}.dmg"
