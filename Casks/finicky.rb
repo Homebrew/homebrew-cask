@@ -7,5 +7,7 @@ cask 'finicky' do
   name 'Finicky'
   homepage 'https://github.com/johnste/finicky'
 
+  depends_on macos: '>= :sierra'
+
   app 'Finicky.app'
 end
