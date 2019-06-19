@@ -1,7 +1,7 @@
 cask 'mars24' do
   # note: "24" is not a version number, but an intrinsic part of the product name
-  version '8.0.2'
-  sha256 'daa55c64959dfe4e63284291391d042ba4c3cb9585f503a51c526fbbd118075a'
+  version '8.0.3'
+  sha256 '9f34d8988b30b49bfd1cdaf592276337a4a4b88b0f487cdfcc04e4658b2533dd'
 
   url "https://www.giss.nasa.gov/tools/mars24/download/Mars24MacOS-#{version}.dmg"
   name 'Mars24'
