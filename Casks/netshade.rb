@@ -3,7 +3,7 @@ cask 'netshade' do
   sha256 '0c0c680e1084219110f16e2782f0641ffe7c84a7d42bc797aee8ecb03873bad2'
 
   url "https://secure.raynersw.com/downloads/NetShade-#{version.dots_to_hyphens}.app.zip"
-  appcast 'https://secure.raynersw.com/changelog.php?prod=ns&format=std&warnpay=0'
+  appcast 'https://www.raynersw.com/appcast.php'
   name 'NetShade'
   homepage 'https://secure.raynersw.com/netshade.php'
 
