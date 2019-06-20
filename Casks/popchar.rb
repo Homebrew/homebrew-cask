@@ -4,7 +4,7 @@ cask 'popchar' do
 
   url "https://www.ergonis.com/downloads/products/popcharx/PopCharX#{version.no_dots}-Install.dmg",
       user_agent: :fake
-  appcast 'https://www.ergonis.com/products/popcharx/history.html'
+  appcast 'https://update.ergonis.com/vck/popcharx.xml'
   name 'PopChar X'
   homepage 'https://www.ergonis.com/products/popcharx/'
 
