@@ -8,6 +8,7 @@ cask 'zeplin' do
   homepage 'https://zeplin.io/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'Zeplin.app'
 
