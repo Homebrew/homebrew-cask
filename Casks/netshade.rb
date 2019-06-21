@@ -7,5 +7,7 @@ cask 'netshade' do
   name 'NetShade'
   homepage 'https://secure.raynersw.com/netshade.php'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'NetShade.app'
 end
