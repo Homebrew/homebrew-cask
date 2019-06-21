@@ -1,6 +1,6 @@
 cask 'vsee' do
-  version '4.5.2,38825'
-  sha256 'cdebec4b7abd0ffbb7427faf4bc90ab680fc1445ec41a1781cf602d00a75fd74'
+  version '4.5.4,38910'
+  sha256 '6f1881c8a82322c07055be4b6b38393c1f3023746cdaa9adee6d764cd4d1b149'
 
   # d2q5hugz2rti4w.cloudfront.net was verified as official when first introduced to the cask
   url "https://d2q5hugz2rti4w.cloudfront.net/mac/#{version.after_comma}/vseemac.dmg"
