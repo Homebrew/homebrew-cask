@@ -3,8 +3,8 @@ cask 'openemu' do
     version '1.0.4'
     sha256 'c9c3abc2acea4ed4c1e2b62fd6868feae1719251428a79803d9aa8a0de4474ef'
   else
-    version '2.0.8'
-    sha256 '49cbbfbd06e2231c0a02f60b438b78c92707e20344cd90c5efabf0ff8cc99f8e'
+    version '2.0.9'
+    sha256 'eec9666457fe8af97079e325dc13dda924c16f801cd99831d7a56de98ac5d756'
   end
 
   # github.com/OpenEmu/OpenEmu was verified as official when first introduced to the cask
