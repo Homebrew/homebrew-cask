@@ -1,5 +1,5 @@
 cask 'tableplus' do
-  version '2.5,233'
+  version '2.4,233'
   sha256 '45c4f67a4471e7ec482b9b85669eb1694f3cb30caf81d738ccaf9fbe47709236'
 
   # tableplus-osx-builds.s3.amazonaws.com was verified as official when first introduced to the cask
