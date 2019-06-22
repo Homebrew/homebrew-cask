@@ -1,6 +1,6 @@
 cask 'finicky' do
-  version '2.0'
-  sha256 'fb6726ac69d3010489f5708b1e5f73c258ef0ba9f5a6acafdc886bdd8c32b2aa'
+  version '2.1.0'
+  sha256 '7ae5b94b95170f5e425d2b1da0f6f3c0349ce7e67a4dbd2e15ba8885c471cef2'
 
   url "https://github.com/johnste/finicky/releases/download/v#{version}/Finicky.zip"
   appcast 'https://github.com/johnste/finicky/releases.atom'
