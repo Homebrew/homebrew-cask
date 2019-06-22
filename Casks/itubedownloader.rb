@@ -1,6 +1,6 @@
 cask 'itubedownloader' do
-  version '6.4.11'
-  sha256 '33145f8ac7f206c239092548896879963e822c9a95496522944bdeed59039e2c'
+  version '6.4.12'
+  sha256 '3b5b1dad1efdf8b51cf88176b58365a796f04309e4c94f0847b0011e2135601e'
 
   # dl.devmate.com/com.AlphaSoft.iTubeDownloader was verified as official when first introduced to the cask
   url 'https://dl.devmate.com/com.AlphaSoft.iTubeDownloader/iTubeDownloader.dmg'
