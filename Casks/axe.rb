@@ -7,6 +7,7 @@ cask 'axe' do
   name 'Axe'
   homepage 'https://github.com/axerunners/axe'
 
+  # Renamed for consistency: app name is different in the Finder and in a shell.
   app 'Axe-Qt.app'
 
   preflight do
