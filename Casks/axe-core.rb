@@ -1,4 +1,4 @@
-cask 'axe' do
+cask 'axe-core' do
   version '1.4.0.2'
   sha256 '70fb7ac30214ad6d66ae661c2dc5d8b520413d0aafd916d9065789e974c9f72b'
 
