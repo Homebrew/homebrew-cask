@@ -11,12 +11,7 @@ cask 'osxfuse' do
   auto_updates true
   conflicts_with cask: 'osxfuse-dev'
 
-  pkg "Extras/FUSE for macOS #{version}.pkg",
-      choices: [
-                 'choiceIdentifier' => 'com.github.osxfuse.pkg.MacFUSE',
-                 'choiceAttribute'  => 'selected',
-                 'attributeSetting' => 1,
-               ]
+  pkg "Extras/FUSE for macOS #{version}.pkg"
 
   postflight do
     set_ownership ['/usr/local/include', '/usr/local/lib']
