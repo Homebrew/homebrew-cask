@@ -8,5 +8,7 @@ cask 'teamspeak-client' do
   name 'TeamSpeak Client'
   homepage 'https://www.teamspeak.com/'
 
+  depends_on macos: '>= :sierra'
+
   app "TeamSpeak #{version.major} Client.app"
 end
