@@ -4,7 +4,7 @@ cask 'lockrattler' do
 
   # eclecticlightdotcom.files.wordpress.com was verified as official when first introduced to the cask
   url "https://eclecticlightdotcom.files.wordpress.com/#{version.after_comma.major}/#{version.after_comma.minor}/lockrattler#{version.before_comma.no_dots}.zip"
-  appcast 'https://eclecticlight.co/lockrattler-systhist/'
+  appcast 'https://www.macupdater.net/cgi-bin/extract_text/extract_text_split.cgi?splitters=[{"s":"LockRattler","i":1},{"s":"Version","i":1},{"s":"dict","i":0}]&url=https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist'
   name 'Lock Rattler'
   homepage 'https://eclecticlight.co/'
 
