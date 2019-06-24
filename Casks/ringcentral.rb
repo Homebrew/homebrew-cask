@@ -1,6 +1,6 @@
 cask 'ringcentral' do
-  version '11.0.2'
-  sha256 '23612cd8bb036d99bd127161e82f82367053e811549203aad8b1e75183ac1c65'
+  version '19.2.2'
+  sha256 'd1a8c7a42b567b8b566ad2378826faacef2aaeaf49ccd39a3b931b63765d55c4'
 
   url "https://downloads.ringcentral.com/sp/RingCentralPhone-#{version}.dmg"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://downloads.ringcentral.com/sp/RingCentralForMac'
