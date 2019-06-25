@@ -11,6 +11,6 @@ cask 'tla-plus-toolbox' do
   app 'TLA+ Toolbox.app'
 
   caveats do
-    depends_on_java
+    depends_on_java '8'
   end
 end
