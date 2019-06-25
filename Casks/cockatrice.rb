@@ -1,9 +1,9 @@
 cask 'cockatrice' do
-  version '2.7.0,2019-03-04:Marchesas_Revenge'
-  sha256 '0ba1f248be69101803aecd6a7c3ab4eadadc9fee7a84e5f57d3403f47030e813'
+  version '2.7.1,2019-06-08:Beyond_the_Horizons'
+  sha256 'f56f1024c989494dda1828603e1e88ec5c71ba90d6be4938b98e0f00be316b26'
 
   # github.com/Cockatrice/Cockatrice was verified as official when first introduced to the cask
-  url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.after_comma.before_colon}-Release-#{version.before_comma}/Cockatrice-#{version.after_colon}-#{version.before_comma}_1-osx.dmg"
+  url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.after_comma.before_colon}-Release-#{version.before_comma}/Cockatrice-#{version.after_colon}-#{version.before_comma}_1-osx-sierra.dmg"
   appcast 'https://github.com/Cockatrice/Cockatrice/releases.atom'
   name 'Cockatrice'
   homepage 'https://cockatrice.github.io/'
