@@ -1,5 +1,5 @@
 cask 'a-better-finder-rename' do
-  version '10.42'
+  version '10.43'
   sha256 '2c16c54d734bb015fdf5c9b5dd62c0e36d1054336c03f25c3f7528868cf0c90c'
 
   url "http://www.publicspace.net/download/ABFRX#{version.major}.dmg"
