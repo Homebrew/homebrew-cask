@@ -13,7 +13,8 @@ cask 'superduper' do
     url 'https://shirtpocket.s3.amazonaws.com/SuperDuper/SuperDuper!.dmg'
   end
 
-  appcast 'https://versioncheck.blacey.com/superduper/version.xml?VSN=100'
+  appcast 'https://versioncheck.blacey.com/superduper/version.xml?VSN=100',
+          configuration: version.after_comma
   name 'SuperDuper!'
   homepage 'https://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html'
 
