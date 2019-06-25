@@ -1,6 +1,6 @@
 cask 'transmission-remote-gui' do
-  version '5.16.0'
-  sha256 'e90fcb970186890d5a92d99cf37a7f24952a488bd9fa779098731c424bcdbb5c'
+  version '5.17.0'
+  sha256 'c3c8addabc1fe3f4c395b7843abd5d05c64c484cc45541c13cef4050546f6b6a'
 
   url "https://github.com/transmission-remote-gui/transgui/releases/download/v#{version}/transgui-#{version}.dmg"
   appcast 'https://github.com/transmission-remote-gui/transgui/releases.atom'
