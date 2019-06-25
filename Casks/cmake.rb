@@ -3,6 +3,7 @@ cask 'cmake' do
   sha256 'a1dd64edb6036fdaa365ed0cd850e437ce6ab2e67da817f080376a2aa05eefc8'
 
   url "https://www.cmake.org/files/v#{version.major_minor}/cmake-#{version}-Darwin-x86_64.dmg"
+  appcast 'https://cmake.org/files/LatestRelease/'
   name 'CMake'
   homepage 'https://cmake.org/'
 
