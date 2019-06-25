@@ -1,6 +1,6 @@
 cask 'unity-linux-support-for-editor' do
-  version '2019.1.7f1,f3c4928e5742'
-  sha256 'dfbea544d5e3f5e4ac45b4e565778f5483cb871a431118e84dfc3700e13e9e87'
+  version '2019.1.8f1,7938dd008a75'
+  sha256 'befbf198909090b2da1ef2c37ccd5e563e5ae984e235294fb65dbbc951437ca7'
 
   url "https://netstorage.unity3d.com/unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Linux-Support-for-Editor-#{version.before_comma}.pkg"
   appcast 'https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json'
