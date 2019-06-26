@@ -1,8 +1,8 @@
 cask 'isabelle' do
-  version '2018'
-  sha256 '25278984f186eed5b2a47d5b536a2589c565d33aba2b1849c074425e9cde964b'
+  version '2019'
+  sha256 'a422bc02a985182440eff0943735db8c9ae4b67190ed47d08c8d968385179a80'
 
-  url "https://www.cl.cam.ac.uk/research/hvg/Isabelle/dist/Isabelle#{version}.dmg"
+  url "https://www.cl.cam.ac.uk/research/hvg/Isabelle/dist/Isabelle#{version}_macos.tar.gz"
   appcast 'https://mirror.cse.unsw.edu.au/pub/isabelle/dist/'
   name 'Isabelle'
   homepage 'https://www.cl.cam.ac.uk/research/hvg/Isabelle/'
