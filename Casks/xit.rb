@@ -7,7 +7,7 @@ cask 'xit' do
   name 'Xit'
   homepage 'https://github.com/Uncommon/Xit'
 
-  depends_on macos: '>= :high_sierra'
+  depends_on macos: '>= :mojave'
 
   app 'Xit.app'
 
