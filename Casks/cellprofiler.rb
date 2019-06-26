@@ -8,5 +8,5 @@ cask 'cellprofiler' do
   name 'CellProfiler'
   homepage 'https://cellprofiler.org/'
 
-  app 'CellProfiler.app'
+  app "CellProfiler-#{version}.app"
 end
