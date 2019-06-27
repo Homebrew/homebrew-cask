@@ -1,6 +1,6 @@
 cask 'podman' do
-  version '1.3.1'
-  sha256 '438f7788fe28e88ae800e99896eb42a07775682e4bc69a2f618fc2c36c8a4a21'
+  version '1.4.2'
+  sha256 '73850911bb49f2e0a970ff44f785634e2aa9a7a1f20845ff508bdccbead17444'
 
   url "https://github.com/containers/libpod/releases/download/v#{version}/podman-v#{version}.dmg"
   appcast 'https://github.com/containers/libpod/releases.atom'
