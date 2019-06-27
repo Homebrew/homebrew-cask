@@ -1,6 +1,6 @@
 cask 'visual-studio' do
-  version '8.1.1.27'
-  sha256 '5e09a6489b0b6f7d761d93faa8a54c2e1f53f9021ea1e5245d9e945b35194246'
+  version '8.1.2.2'
+  sha256 '7d70835d309852bdaa31abe023ccea011bb4dd761be338f2baeefdd3cdf0d184'
 
   # dl.xamarin.com/VsMac was verified as official when first introduced to the cask
   url "https://dl.xamarin.com/VsMac/VisualStudioForMac-#{version}.dmg"
