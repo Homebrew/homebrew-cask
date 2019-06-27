@@ -3,7 +3,7 @@ cask 'krita' do
   sha256 'fa2d1e2fa28c4d4cc3d018cabab1c89ef393ad11b6adf3940447a50be047c61e'
 
   # kde.org/stable/krita was verified as official when first introduced to the cask
-  url "https://download.kde.org/stable/krita/#{version.major_minor_patch}/krita-#{version}.dmg",
+  url "https://download.kde.org/stable/krita/#{version.major_minor_patch}/krita-#{version}.dmg"
   appcast 'https://download.kde.org/stable/krita/',
           configuration: version.major_minor_patch
   name 'Krita'
