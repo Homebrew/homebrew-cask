@@ -1,6 +1,6 @@
 cask 'spectacle-editor' do
-  version '0.1.5'
-  sha256 'c09b6b19f1dd47e83d55df0096a47dc45c4a0838d83836e62b643738412ad780'
+  version '0.1.6'
+  sha256 '5dc93387bc6026dd44dbf2f88c9bf7730d931663d5b72f382c0a51bc6c57517b'
 
   # github.com/FormidableLabs/spectacle-editor was verified as official when first introduced to the cask
   url "https://github.com/FormidableLabs/spectacle-editor/releases/download/v#{version}/Spectacle.Editor-#{version}.dmg"
