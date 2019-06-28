@@ -4,7 +4,7 @@ cask 'capture-one' do
 
   url "https://downloads.phaseone.com/d972230a-e941-47ca-a751-35f57a3f2d94/International/CaptureOne.Mac.#{version}.dmg"
   appcast 'https://www.captureone.com/en/features/release-notes',
-          configuration: version.sub(%r{\.0$}, '')
+          configuration: version.major_minor
   name 'Capture One'
   homepage 'https://www.phaseone.com/en/Capture-One.aspx'
 
