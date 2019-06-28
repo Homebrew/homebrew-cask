@@ -7,6 +7,8 @@ cask 'upic' do
   name 'uPic'
   homepage 'https://github.com/gee1k/uPic'
 
+  depends_on macos: '>= :sierra'
+
   app 'UPic.app'
 
   zap trash: [
