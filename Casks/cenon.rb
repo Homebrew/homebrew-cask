@@ -4,7 +4,7 @@ cask 'cenon' do
 
   # cenon.download was verified as official when first introduced to the cask
   url "http://www.cenon.download/binaries/Apple/Cenon-#{version}.pkg"
-  appcst 'http://www.cenon.zone/download/binaries/Apple/'
+  appcast 'http://www.cenon.zone/download/binaries/Apple/'
   name 'Cenon'
   homepage 'https://www.cenon.info/'
 
