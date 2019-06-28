@@ -1,6 +1,6 @@
 cask 'pock' do
-  version '0.5.1'
-  sha256 '9694fc0952c7c04f40f6408d5d155abff6f584b4b0735979587f2d7ece3e2b83'
+  version '0.5.2'
+  sha256 'cf62bb611a7aaa3f298322f9f5dd8646b1d5333ef4bfbdb8edd2c14bdc87ec8f'
 
   url "https://pock.dev/download.php?file=pock_#{version.dots_to_underscores}_lack.zip"
   appcast 'https://github.com/pigigaldi/Pock/releases.atom'
