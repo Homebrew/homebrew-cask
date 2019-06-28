@@ -1,6 +1,6 @@
 cask 'tableflip' do
-  version '1.2.0'
-  sha256 '4da5f365d1e7023c13e391f668b0ccf16837a486e7b1df4c9f828656d1b1f832'
+  version '1.2.1'
+  sha256 '1bda6ec5aa2db25b856527c6770c13e110df06866c0de40f91ed07023bf31625'
 
   # update.christiantietze.de/tableflip was verified as official when first introduced to the cask
   url "https://update.christiantietze.de/tableflip/v#{version.major}/TableFlip-v#{version}.zip"
