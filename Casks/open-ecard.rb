@@ -10,7 +10,7 @@ cask 'open-ecard' do
 
   pkg 'Open eCard App.pkg'
 
-  uninstall delete: "#{appdir}/Open-eCard-App.app"
+  uninstall pkgutil: 'com.openecard.pkg.OpeneCardApp'
 
   zap trash: '~/.openecard'
 end
