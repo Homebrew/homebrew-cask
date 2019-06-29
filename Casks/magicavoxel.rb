@@ -9,4 +9,9 @@ cask 'magicavoxel' do
   homepage 'https://ephtracy.github.io/'
 
   suite staged_path, target: 'MagicaVoxel'
+
+  zap trash: [
+               '~/Library/Preferences/EPH.MagicaVoxel.plist',
+               '~/Library/Saved Application State/EPH.MagicaVoxel.savedState',
+             ]
 end
