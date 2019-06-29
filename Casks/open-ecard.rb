@@ -12,5 +12,5 @@ cask 'open-ecard' do
 
   uninstall delete: "#{appdir}/Open-eCard-App.app"
 
-  zap trash: '~/.openecard/logs/richclient_info.log'
+  zap trash: '~/.openecard'
 end
