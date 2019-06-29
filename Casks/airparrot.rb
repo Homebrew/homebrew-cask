@@ -5,7 +5,7 @@ cask 'airparrot' do
   url "https://download.airsquirrels.com/AirParrot#{version.major}/Mac/AirParrot-#{version}.dmg"
   appcast "https://updates.airsquirrels.com/AirParrot#{version.major}/Mac/AirParrot#{version.major}.xml"
   name 'AirParrot'
-  homepage 'http://www.airsquirrels.com/airparrot/'
+  homepage 'https://www.airsquirrels.com/airparrot/'
 
   app "AirParrot #{version.major}.app"
 
