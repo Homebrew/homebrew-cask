@@ -1,4 +1,4 @@
-cask 'openecard' do
+cask 'open-ecard' do
   version '1.3.0'
   sha256 'b23d918029403591eb45ac8d52e58df50c1bcb3429b8394173b9063334fc52b1'
 
