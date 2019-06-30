@@ -5,7 +5,7 @@ cask 'ringcentral' do
   url "https://downloads.ringcentral.com/sp/RingCentralPhone-#{version}.dmg"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://downloads.ringcentral.com/sp/RingCentralForMac'
   name 'RingCentral for Mac'
-  homepage 'https://www.ringcentral.com/office/features/desktop-apps/overview.html'
+  homepage 'https://www.ringcentral.com/apps/rc-phone'
 
   app 'RingCentral for Mac.app'
 end
