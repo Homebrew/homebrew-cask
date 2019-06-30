@@ -8,6 +8,8 @@ cask 'journey' do
   name 'Journey'
   homepage 'https://2appstudio.com/journey/'
 
+  auto_updates true
+
   app 'Journey.app'
 
   zap trash: [
