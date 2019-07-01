@@ -7,5 +7,7 @@ cask 'pdfelement' do
   name 'Wondershare PDFelement for Mac'
   homepage 'https://pdf.wondershare.com/'
 
+  depends_on macos: '>= :sierra'
+
   app 'PDFelement.app'
 end
