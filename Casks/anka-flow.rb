@@ -11,7 +11,7 @@ cask 'anka-flow' do
 
   depends_on macos: '>= :yosemite'
 
-  pkg "AnkaFlow-#{version}.pkg"
+  pkg "Anka-#{version}.pkg"
 
   uninstall launchctl: [
                          'com.veertu.nlimit',
