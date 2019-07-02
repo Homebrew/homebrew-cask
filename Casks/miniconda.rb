@@ -12,23 +12,15 @@ cask 'miniconda' do
 
   installer script: {
                       executable: "Miniconda3-#{version}-MacOSX-x86_64.sh",
-                      args:       ['-b', '-p', "#{HOMEBREW_PREFIX}/miniconda3"],
-                      sudo:       true,
+                      args:       ['-b', '-p', "#{staged_path}/miniconda3"],
                     }
+  binary 'miniconda3/condabin/conda'
 
-  postflight do
-    set_ownership "#{HOMEBREW_PREFIX}/miniconda3"
-  end
-
-  uninstall delete: "#{HOMEBREW_PREFIX}/miniconda3"
+  uninstall delete: "#{staged_path}/miniconda3"
 
   zap trash: [
                '~/.condarc',
                '~/.conda',
                '~/.continuum',
              ]
-
-  caveats do
-    files_in_usr_local
-  end
 end
