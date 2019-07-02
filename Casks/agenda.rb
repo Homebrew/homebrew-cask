@@ -1,6 +1,6 @@
 cask 'agenda' do
-  version '5.5'
-  sha256 '85f73513cb46bd0f3cf526112a3bb707a06ef8e5d87b5259a28dc9b318a38a58'
+  version '6.0'
+  sha256 'd99a1b9ae1401f16e20aa84ff4a1f23329e0efdb2c161801139f4cd427e5bcd3'
 
   url "https://downloads.agenda.com/Agenda_#{version}.zip"
   appcast 'https://downloads.agenda.com/AgendaSparkleAppcast.xml'
