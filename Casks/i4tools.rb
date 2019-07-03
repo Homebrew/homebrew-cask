@@ -13,7 +13,5 @@ cask 'i4tools' do
 
   uninstall quit: 'cn.i4Tools'
 
-  zap trash: [
-               '~/Library/Application Support/i4Tools',
-             ]
+  zap trash: '~/Library/Application Support/i4Tools'
 end
