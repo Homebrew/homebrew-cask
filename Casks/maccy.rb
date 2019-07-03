@@ -1,6 +1,6 @@
 cask 'maccy' do
-  version '0.3.5'
-  sha256 '4e9a8f52e7cc322aa8dd76636542d92ec663d54d9fc9ffee4cca29c4233aefda'
+  version '0.3.6'
+  sha256 '314d56cddd34a89443af3995b1a3ddbc63a8d18db12b043309b76ded260c5d83'
 
   url "https://github.com/p0deje/Maccy/releases/download/#{version}/Maccy.app.zip"
   appcast 'https://github.com/p0deje/Maccy/releases.atom'
