@@ -7,5 +7,7 @@ cask 'querious' do
   name "Querious #{version.major}"
   homepage 'https://www.araelium.com/querious/'
 
+  auto_updates true
+
   app 'Querious.app'
 end
