@@ -3,8 +3,7 @@ cask 'capture-one' do
   sha256 '57bd9a4bd598869f282ccb79a93e401912adbfd69a33560a5a6cc3ed4910e812'
 
   url "https://downloads.phaseone.com/d972230a-e941-47ca-a751-35f57a3f2d94/International/CaptureOne.Mac.#{version}.dmg"
-  appcast 'https://www.captureone.com/en/features/release-notes',
-          configuration: version.major_minor
+  appcast "https://cormws.phaseone.com/corm.asmx/GetNewSoftwareVersion?Platform=Mac&Version=#{version}"
   name 'Capture One'
   homepage 'https://www.phaseone.com/en/Capture-One.aspx'
 
