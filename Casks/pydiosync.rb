@@ -3,6 +3,7 @@ cask 'pydiosync' do
   sha256 '02cceaa7de07596543b60b10bfe07c250b0b823c4455989362446699924db6f3'
 
   url "https://download.pydio.com/pub/pydio-sync/release/#{version}/PydioSync-MacOSX-Installer-v#{version}.dmg"
+  appcast 'https://pydio.com/en/get-pydio/downloads/pydiosync-desktop-app'
   name 'PydioSync'
   homepage 'https://pydio.com/'
 
