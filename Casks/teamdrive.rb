@@ -1,6 +1,6 @@
 cask 'teamdrive' do
-  version '4.6.7.2230'
-  sha256 '87e00a27fbcb88dc5fb44f72ed8d81a4a7914a1bbb1bace71f50a843816e9adc'
+  version '4.6.7.2328'
+  sha256 'f34d3615d60efc7c037972684397858065b6bc6e7bdddcbea722d3b31e6d61bc'
 
   # s3-eu-west-1.amazonaws.com/s3download.teamdrive.net was verified as official when first introduced to the cask
   url "https://s3-eu-west-1.amazonaws.com/s3download.teamdrive.net/#{version.major_minor}.#{version.split('.').last}/TMDR/mac-10.14.2/Install-TeamDrive-#{version}_TMDR.dmg"
