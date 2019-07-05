@@ -3,7 +3,7 @@ cask 'imgotv' do
   sha256 'b69a5fedc1af407f48191d0f1e666bc3edf5f05597efc1e6ef97a7ddadb44cd3'
 
   # download.imgo.tv was verified as official when first introduced to the cask
-  url "http://download.imgo.tv/app/pc/mac/mgtv-client-#{version}.dmg"
+  url "https://download.imgo.tv/app/pc/mac/mgtv-client-#{version}.dmg"
   appcast 'https://www.mgtv.com/app/'
   name 'hunantv'
   name '芒果视频'
