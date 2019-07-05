@@ -2,7 +2,7 @@ cask 'mipony' do
   version :latest
   sha256 :no_check
 
-  url 'https://download.mipony.net/downloads/mac/Mipony-Installer.dmg'
+  url 'http://download.mipony.net/downloads/mac/Mipony-Installer.pkg'
   name 'Mipony'
   homepage 'https://www.mipony.net/en/'
 
