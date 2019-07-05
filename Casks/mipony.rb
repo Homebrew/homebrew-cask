@@ -8,5 +8,6 @@ cask 'mipony' do
 
   pkg 'Mipony-Installer.pkg'
 
-  uninstall pkgutil: 'net.installer.mipony.*'
+  uninstall pkgutil: 'net.installer.mipony.*',
+            quit:    'com.downloader.Mipony'
 end
