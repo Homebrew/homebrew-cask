@@ -1,9 +1,9 @@
 cask 'transtype' do
-  version '4'
+  version '5099'
   sha256 :no_check # required as upstream package is updated in-place
 
-  # fontlab.us was verified as official when first introduced to the cask
-  url "http://www.fontlab.us/downloads/installers/TR#{version}MacFull.dmg"
+  # fontlab.s3.amazonaws.com was verified as official when first introduced to the cask
+  url "https://fontlab.s3.amazonaws.com/transtype-4/5099/TR4MacFull-#{version}.dmg"
   name 'TransType'
   homepage 'https://www.fontlab.com/font-converter/transtype/'
 
