@@ -7,5 +7,7 @@ cask 'securityspy' do
   name 'SecuritySpy'
   homepage 'https://www.bensoftware.com/securityspy/'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'SecuritySpy.app'
 end
