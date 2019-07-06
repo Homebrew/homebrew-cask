@@ -1,6 +1,6 @@
 cask 'eclipse-php' do
-  version '4.11.0,2019-03:R'
-  sha256 '275f5ef2fab3795bafb12682949705a83877a36e4ae4ca34a8adc6d4de3cf34d'
+  version '4.12.0,2019-06:R'
+  sha256 '5562d1e525c930d2bda84f062c94f9699645b6009b45457a10ac1599ab94bd74'
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.after_comma.before_colon}/#{version.after_colon}/eclipse-php-#{version.after_comma.before_colon}-#{version.after_colon}-macosx-cocoa-x86_64.dmg&r=1"
   name 'Eclipse IDE for PHP Developers'
