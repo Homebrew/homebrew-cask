@@ -48,5 +48,6 @@
   "terraform": "homebrew/core",
   "vault": "homebrew/core",
   "vfuse": "homebrew/core",
-  "volatility": "homebrew/core"
+  "volatility": "homebrew/core",
+  "wine-stable": "homebrew/core"
 }
