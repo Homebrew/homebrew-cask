@@ -2,10 +2,10 @@ cask 'a-better-finder-rename' do
   version '10.43'
   sha256 '5e3e4cf46cd5612e5c39f65466fa0987c865f12e92c629c9d33aab183b358e1f'
 
-  url "http://www.publicspace.net/download/ABFRX#{version.major}.dmg"
-  appcast "http://www.publicspace.net/app/signed_abfr#{version.major}.xml"
+  url "https://www.publicspace.net/download/ABFRX#{version.major}.dmg"
+  appcast "https://www.publicspace.net/app/signed_abfr#{version.major}.xml"
   name 'A Better Finder Rename'
-  homepage 'http://www.publicspace.net/ABetterFinderRename/'
+  homepage 'https://www.publicspace.net/ABetterFinderRename/'
 
   auto_updates true
 
