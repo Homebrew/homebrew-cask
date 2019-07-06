@@ -15,7 +15,5 @@ cask 'spaceid' do
 
   uninstall login_item: 'SpaceId'
 
-  zap trash: [
-               '~/Library/Preferences/com.dshnkao.SpaceId.plist',
-             ]
+  zap trash: '~/Library/Preferences/com.dshnkao.SpaceId.plist'
 end
