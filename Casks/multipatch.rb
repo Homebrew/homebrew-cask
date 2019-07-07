@@ -3,6 +3,7 @@ cask 'multipatch' do
   sha256 '4d92147ac60aa4224959e53d91ef3c457ad2fb47dad739ce7f87bc456ec94e06'
 
   url "http://projects.sappharad.com/tools/multipatch#{version.no_dots}.zip"
+  appcast 'https://github.com/Sappharad/MultiPatch/releases.atom'
   name 'MultiPatch'
   homepage 'http://projects.sappharad.com/tools/multipatch.html'
 
