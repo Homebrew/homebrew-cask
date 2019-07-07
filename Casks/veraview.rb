@@ -10,5 +10,5 @@ cask 'veraview' do
 
   pkg 'veraview.pkg'
 
-  uninstall pkgutil: 'veraview'
+  uninstall pkgutil: 'gov.casl.VERAView'
 end
