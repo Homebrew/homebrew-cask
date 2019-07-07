@@ -1,5 +1,5 @@
 cask 'sbrowserq' do
-  version '3.6.2'
+  version '3.6.3'
   sha256 'b848b5a2e8523359cc719decd2289b882fd687a13ab7c4711e783bbf45537085'
 
   url "https://www.sbrowser-q.com/SbrowserQ_V#{version.major_minor}_mac.dmg"
