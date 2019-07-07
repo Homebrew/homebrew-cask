@@ -4,7 +4,7 @@ cask 'mqttfx' do
 
   # jensd.de/apps/mqttfx was verified as official when first introduced to the cask
   url "https://www.jensd.de/apps/mqttfx/#{version}/mqttfx-#{version}-macos.dmg"
-  appcast 'http://www.jensd.de/apps/mqttfx/appcast.xml'
+  appcast 'https://www.jensd.de/apps/mqttfx/appcast.xml'
   name 'MQTT.fx'
   homepage 'http://www.mqttfx.org/'
 
