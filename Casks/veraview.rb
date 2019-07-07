@@ -8,5 +8,7 @@ cask 'veraview' do
   name 'veraview'
   homepage 'https://github.com/CASL/VERAview'
 
-  app 'VERAView.app'
+  pkg 'veraview.app'
+  
+  uninstall pkgutil: 'veraview'  
 end
