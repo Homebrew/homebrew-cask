@@ -6,5 +6,7 @@ cask 'nozbe' do
   name 'Nozbe'
   homepage 'https://nozbe.com/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Nozbe.app'
 end
