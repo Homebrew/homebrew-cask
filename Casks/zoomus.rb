@@ -15,13 +15,22 @@ cask 'zoomus' do
     set_ownership '~/Library/Application Support/zoom.us'
   end
 
-  uninstall delete: '/Applications/zoom.us.app',
-            quit:   'us.zoom.ZoomOpener',
-            signal: [
-                      ['KILL', 'us.zoom.xos'],
-                    ]
+  uninstall quit:       [
+                          'us.zoom.xos',
+                          'us.zoom.ZoomOpener',
+                        ],
+            signal:     [
+                          ['KILL', 'us.zoom.xos'],
+                          ['KILL', 'us.zoom.ZoomOpener'],
+                        ],
+            login_item: 'ZoomOpener',
+            delete:     [
+                          '/Applications/zoom.us.app',
+                          '~/.zoomus/ZoomOpener.app',
+                        ]
 
   zap trash: [
+               '~/.zoomus',
                '~/Desktop/Zoom',
                '~/Library/Application Support/zoom.us',
                '~/Library/Caches/us.zoom.xos',
