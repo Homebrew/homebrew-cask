@@ -7,6 +7,7 @@ cask 'vscodium' do
   name 'VSCodium'
   homepage 'https://github.com/VSCodium/vscodium'
 
+  auto_updates true
   conflicts_with cask: 'visual-studio-code'
 
   app 'VSCodium.app'
