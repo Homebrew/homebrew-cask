@@ -9,11 +9,11 @@ cask 'app-cleaner-uninstaller' do
   app 'App Cleaner & Uninstaller.app'
 
   zap trash: [
-                '~/Library/Application\ Scripts/com.nektony.App-Cleaner-Pro'
-                '~/Library/Application\ Support/com.nektony.App-Cleaner-Pro',
-                '~/Library/Caches/com.nektony.App-Cleaner-Pro ',
-                '~/Library/Containers/com.nektony.StartupDiskFull'
-                '~/Library/Preferences/com.nektony.App-Cleaner-Pro.plist'
-                '~/Library/Saved\ Application\ State/com.nektony.App-Cleaner-Pro.savedState'
-              ]
+               '~/Library/Application\ Scripts/com.nektony.App-Cleaner-Pro'
+               '~/Library/Application\ Support/com.nektony.App-Cleaner-Pro',
+               '~/Library/Caches/com.nektony.App-Cleaner-Pro ',
+               '~/Library/Containers/com.nektony.StartupDiskFull'
+               '~/Library/Preferences/com.nektony.App-Cleaner-Pro.plist'
+               '~/Library/Saved\ Application\ State/com.nektony.App-Cleaner-Pro.savedState'
+             ]
 end
