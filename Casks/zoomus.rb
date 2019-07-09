@@ -21,7 +21,10 @@ cask 'zoomus' do
                       ['KILL', 'us.zoom.xos'],
                     ],
             login_item: 'ZoomOpener',
-            delete:     '~/.zoomus/ZoomOpener.app'
+            delete:     [
+                          '/Applications/zoom.us.app'
+                          '~/.zoomus/ZoomOpener.app',
+                        ]
 
   zap trash: [
                '~/.zoomus',
