@@ -18,6 +18,5 @@ cask 'igdm' do
                '~/Library/Preferences/com.ifedapoolarewaju.desktop.igdm.helper.plist',
                '~/Library/Preferences/com.ifedapoolarewaju.desktop.igdm.plist',
                '~/Library/Saved Application State/com.ifedapoolarewaju.desktop.igdm.savedState',
-               '/private/var/folders/*/*/*/com.ifedapoolarewaju.desktop.igdm',
              ]
 end
