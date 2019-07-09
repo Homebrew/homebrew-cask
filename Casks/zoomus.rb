@@ -19,7 +19,7 @@ cask 'zoomus' do
             quit:   'us.zoom.ZoomOpener',
             signal: [
                       ['KILL', 'us.zoom.xos'],
-                    ]
+                    ],
             login_item: 'ZoomOpener',
             delete:     '~/.zoomus/ZoomOpener.app'
 
