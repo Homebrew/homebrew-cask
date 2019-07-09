@@ -22,7 +22,7 @@ cask 'zoomus' do
                     ],
             login_item: 'ZoomOpener',
             delete:     [
-                          '/Applications/zoom.us.app'
+                          '/Applications/zoom.us.app',
                           '~/.zoomus/ZoomOpener.app',
                           '~/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin'
                         ]
