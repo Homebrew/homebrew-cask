@@ -23,7 +23,7 @@ cask 'zoomus' do
             delete:     [
                           '/Applications/zoom.us.app',
                           '~/.zoomus/ZoomOpener.app',
-                          '~/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin'
+                          '~/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin',
                         ]
 
   zap trash: [
