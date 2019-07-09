@@ -15,11 +15,10 @@ cask 'zoomus' do
     set_ownership '~/Library/Application Support/zoom.us'
   end
 
-  uninstall delete: '/Applications/zoom.us.app',
-            quit:   'us.zoom.ZoomOpener',
-            signal: [
-                      ['KILL', 'us.zoom.xos'],
-                    ],
+  uninstall quit:       'us.zoom.ZoomOpener',
+            signal:     [
+                          ['KILL', 'us.zoom.xos'],
+                        ],
             login_item: 'ZoomOpener',
             delete:     [
                           '/Applications/zoom.us.app',
