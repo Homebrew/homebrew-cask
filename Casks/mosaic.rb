@@ -9,7 +9,10 @@ cask 'mosaic' do
 
   pkg "Mosaic_#{version.dots_to_underscores}.pkg"
 
-  uninstall pkgutil: 'com.btinternet.pkg.Mosaic'
+  uninstall pkgutil: [
+                       'com.btinternet.pkg.Mosaic',
+                       'com.lightpillar.Mosaic.pkg',
+                     ]
 
   zap trash: [
                '~/Library/Application Support/com.lightpillar.Mosaic',
