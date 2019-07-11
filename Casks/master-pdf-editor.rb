@@ -1,6 +1,6 @@
 cask 'master-pdf-editor' do
-  version '5.4.30'
-  sha256 '8d633c176e3354001ef381ef493d69bf41d15cf2806a0fb91376f53cc5734791'
+  version '5.4.38'
+  sha256 'fb716d23900168b7378c2dd732d519ac5c42e14f2d2b57ca16069369f4e87f6c'
 
   url 'https://code-industry.net/public/MasterPDFEditor.dmg'
   appcast 'https://code-industry.net/get-masterpdfeditor/'

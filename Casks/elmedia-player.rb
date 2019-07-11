@@ -1,6 +1,6 @@
 cask 'elmedia-player' do
-  version '7.4,1812'
-  sha256 '5540f72425d3a4b32b89a00bd077365e4e6eb6be9238e8a26d09d22241407022'
+  version '7.4,1816'
+  sha256 '28cd4cf08961ca81e7ccac22baf11cfeedb9a3840e3caad38854e17e8fc8830c'
 
   url 'https://cdn.eltima.com/download/elmediaplayer.dmg'
   appcast 'https://cdn.eltima.com/download/elmediaplayer-update/elmediaplayer.xml'

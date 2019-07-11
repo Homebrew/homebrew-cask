@@ -4,6 +4,7 @@ cask 'datovka' do
 
   # secure.nic.cz/files/datove_schranky was verified as official when first introduced to the cask
   url "https://secure.nic.cz/files/datove_schranky/#{version}/datovka-#{version}-64bit-osx10.7.dmg"
+  appcast 'https://www.datovka.cz/cs/pages/instalace.html'
   name 'Datovka'
   homepage 'https://www.datovka.cz/'
 

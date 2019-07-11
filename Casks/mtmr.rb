@@ -1,6 +1,6 @@
 cask 'mtmr' do
-  version '0.21'
-  sha256 'd353814e4d52f882a78ebd452ee78277a29b6cdb733707ec0b7ccb1237970153'
+  version '0.21.1'
+  sha256 '8b298974b3bfcc9bb48816550c97ef42da20ea7c75660765e05823b4abfd8db2'
 
   url "https://mtmr.app/MTMR%20#{version}.dmg"
   appcast 'https://mtmr.app/appcast.xml'

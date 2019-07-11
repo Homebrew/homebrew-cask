@@ -1,6 +1,6 @@
 cask 'camtwist' do
-  version '3.4.2'
-  sha256 '236cecad3047c727672c07fbe5191cd2a430d3d46f6f407ada2f1a7a7af3d977'
+  version '3.4.3'
+  sha256 'e1187d52a264d24e24c719e61daabf4453112af98a5b90bce9734282e2b05131'
 
   url "http://camtwiststudio.com/beta/CamTwist_#{version}.dmg"
   appcast 'http://camtwiststudio.com/download/'
