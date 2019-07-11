@@ -8,5 +8,7 @@ cask 'bubo' do
   name 'Spotify Bluetooth Headset Listener'
   homepage 'https://github.com/jguice/mac-bt-headset-fix'
 
+  depends_on macos: '>= :sierra'
+
   app 'bubo.app'
 end
