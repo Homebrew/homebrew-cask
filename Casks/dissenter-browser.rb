@@ -1,6 +1,6 @@
 cask 'dissenter-browser' do
-  version '0.65.121'
-  sha256 'b396651768be214015c190a197f40b928ec012d7302f95fcde3a598c6d5bd6d0'
+  version '0.66.99'
+  sha256 '1192c8a0fae4621dd26fd7fbf65ed32ea07617c112f9ec65395b7ec3e67ff940'
 
   url "https://dissenter.com/dist/browser/#{version}/dissenter-browser-v#{version}.dmg"
   appcast 'https://dissenter.com/'
