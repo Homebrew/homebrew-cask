@@ -1,8 +1,8 @@
 cask 'yyets' do
-  version '3.1.1'
-  sha256 'a8a150d0648001bbf107dd9e1fcf9d904bd447802bdbde4fcf49c2452afa6d76'
+  version '3.1.2'
+  sha256 '3fa5cd76b9794878ff1ce60efc74ddda57cecfe3cb271b4075f63450c4d31ffd'
 
-  url "http://appdown.rrys.tv/YYetsShare.#{version}.dmg"
+  url "http://appdown.rrys.tv/RRShare_#{version}.dmg"
   appcast 'http://app.rrys.tv/'
   name 'YYeTs'
   name '人人影视'
