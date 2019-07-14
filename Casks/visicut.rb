@@ -1,9 +1,9 @@
 cask 'visicut' do
-  version '1.8-77'
-  sha256 'ae49765fd5978e8706db546fa05f0ec69c00cf189cbf287d0e4d41f7f44548cb'
+  version '1.8-79-g6f87ba78'
+  sha256 '0184734ade419792addbb46f7be591e6dcaf1f8b91f639b9ea7be5c7a9ad8ec0'
 
-  url "https://download.visicut.org/files/master/MacOSX/VisiCutMac-#{version}-g840df7cc.zip"
-  appcast 'https://github.com/t-oster/VisiCut/releases.atom'
+  url "https://download.visicut.org/files/master/MacOSX/VisiCutMac-#{version}.zip"
+  appcast 'https://download.visicut.org'
   name 'VisiCut'
   homepage 'https://visicut.org/'
 
