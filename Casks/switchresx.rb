@@ -1,5 +1,5 @@
 cask 'switchresx' do
-  version '4.8.2'
+  version '4.9.0'
   sha256 'e31bafdff28dce2767cbc3099d0b1e506789828c3e4489b7903c62a90aaf82c3'
 
   url "https://www.madrau.com/data/switchresx/SwitchResX#{version.major}.zip"
