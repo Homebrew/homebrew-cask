@@ -16,6 +16,6 @@ cask 'http-toolkit' do
                '~/Library/Logs/HTTP Toolkit',
                '~/Library/Preferences/httptoolkit',
                '~/Library/Preferences/tech.httptoolkit.desktop.plist',
-               '~/Library/Saved Application State/tech.httptoolkit.desktop.savedStat',
+               '~/Library/Saved Application State/tech.httptoolkit.desktop.savedState',
              ]
 end
