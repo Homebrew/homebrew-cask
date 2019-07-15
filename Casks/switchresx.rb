@@ -1,6 +1,6 @@
 cask 'switchresx' do
   version '4.9.0'
-  sha256 'e31bafdff28dce2767cbc3099d0b1e506789828c3e4489b7903c62a90aaf82c3'
+  sha256 '6a30f259b117db7322f34aeee66379b9ab80cfea7515a9eda77e96fa30b53e2a'
 
   url "https://www.madrau.com/data/switchresx/SwitchResX#{version.major}.zip"
   appcast "https://www.madrau.com/SRXCurrentVersion#{version.major}"
