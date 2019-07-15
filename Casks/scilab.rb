@@ -4,7 +4,7 @@ cask 'scilab' do
 
   # utc.fr/~mottelet/scilab was verified as official when first introduced to the cask
   url "https://www.utc.fr/~mottelet/scilab/download/#{version}/scilab-#{version}-x86_64.dmg"
-  appcast 'https://www.scilab.org/'
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.scilab.org/download/'
   name 'Scilab'
   homepage 'https://www.scilab.org/'
 
