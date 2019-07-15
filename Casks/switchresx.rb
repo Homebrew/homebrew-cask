@@ -1,9 +1,9 @@
 cask 'switchresx' do
   version '4.9.0'
-  sha256 :no_check # required as upstream package is updated in-place
+  sha256 'e31bafdff28dce2767cbc3099d0b1e506789828c3e4489b7903c62a90aaf82c3'
 
   url "https://www.madrau.com/data/switchresx/SwitchResX#{version.major}.zip"
-  appcast 'https://www.madrau.com/srx_download/srx_download/history.php'
+  appcast "https://www.madrau.com/SRXCurrentVersion#{version.major}"
   name 'SwitchResX'
   homepage 'https://www.madrau.com/'
 
