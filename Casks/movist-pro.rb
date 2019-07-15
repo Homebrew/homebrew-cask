@@ -6,7 +6,6 @@ cask 'movist-pro' do
   url 'https://d2uukrxj8lf22z.cloudfront.net/MovistPro.app.zip'
   name 'Movist Pro'
   homepage 'https://movistprime.com/kr/'
-  license :commercial
 
   app 'Movist Pro.app'
 end
