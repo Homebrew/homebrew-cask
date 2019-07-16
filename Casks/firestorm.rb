@@ -1,4 +1,4 @@
-cask 'firestormos' do
+cask 'firestorm' do
   version '6.2.4.57588'
   sha256 '3fad8ab8e2980d1d3fa13af8cec7d765177e082d1575d07c50cd9f038bec8521'
 
@@ -7,7 +7,7 @@ cask 'firestormos' do
   name 'Phoenix Firestorm viewer for Second Life'
   homepage 'https://www.firestormviewer.org/'
 
-  app 'FirestormOS-Releasex64.app'
+  app 'Firestorm-Releasex64.app'
 
   caveats <<~EOS
     This version does not contain Havok engine (does not matter if you're not a content creator).
