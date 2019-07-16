@@ -1,6 +1,6 @@
 cask 'xscreensaver' do
-  version '5.40'
-  sha256 '2a4073b30ed8ba49d317c8048984aa1e4eb938b08d7598b358d20422bb373c84'
+  version '5.43'
+  sha256 '5ae820e4addc150371a168e8ab2af69632b6e337cb1ad78afdfd8e1abecea245'
 
   url "https://www.jwz.org/xscreensaver/xscreensaver-#{version}.dmg"
   appcast 'https://www.jwz.org/xscreensaver/changelog.html'
@@ -110,6 +110,7 @@ cask 'xscreensaver' do
   screen_saver 'Screen Savers/Greynetic.saver'
   screen_saver 'Screen Savers/Halftone.saver'
   screen_saver 'Screen Savers/Halo.saver'
+  screen_saver 'Screen Savers/Handsy.saver'
   screen_saver 'Screen Savers/Helix.saver'
   screen_saver 'Screen Savers/Hexadrop.saver'
   screen_saver 'Screen Savers/Hexstrut.saver'

@@ -1,9 +1,9 @@
 cask 'p4v' do
-  version '18.3-1719707'
-  sha256 'ea6dd0739d068c9a140c8802ad366aae9c27687d44f225e0cae180373eddca28'
+  version '19.1-1815056'
+  sha256 '50dd06481871afe6718f49b0ed6de8446af4a4f69ae9716775840e0b9251546a'
 
   url "https://cdist2.perforce.com/perforce/r#{version.major_minor}/bin.macosx1013x86_64/P4V.dmg"
-  appcast "https://cdist2.perforce.com/perforce/r#{version.major_minor}/bin.macosx1013x86_64/SHA256SUMS"
+  appcast 'https://cdist2.perforce.com/perforce/'
   name 'Perforce Visual Client'
   name 'P4Merge'
   name 'P4V'
@@ -24,7 +24,7 @@ cask 'p4v' do
       #!/bin/bash
       set -euo pipefail
       COMMAND=$(basename "$0")
-      exec "#{appdir}/${COMMAND}.app/Contents/MacOS/${COMMAND}" $@ 2> /dev/null
+      exec "#{appdir}/${COMMAND}.app/Contents/MacOS/${COMMAND}" "$@" 2> /dev/null
     EOS
   end
 

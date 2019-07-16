@@ -1,13 +1,15 @@
 cask 'krita' do
-  version '4.1.5'
-  sha256 '51bab0590cc87352e1a0f83dcadba77d4d9595998c74c13f0fb411563fb1246a'
+  version '4.2.3'
+  sha256 'a588d33e0c86895cadda6a78c82f3dc41c0398c4e0a13241cc7ccdb9bbf26410'
 
   # kde.org/stable/krita was verified as official when first introduced to the cask
-  url "https://download.kde.org/stable/krita/#{version}/krita-#{version}.dmg"
+  url "https://download.kde.org/stable/krita/#{version.major_minor_patch}/krita-#{version}.dmg"
+  appcast 'https://download.kde.org/stable/krita/',
+          configuration: version.major_minor_patch
   name 'Krita'
   homepage 'https://krita.org/'
 
-  depends_on macos: '>= :el_capitan'
+  depends_on macos: '>= :sierra'
 
   app 'krita.app'
 

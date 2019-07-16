@@ -1,6 +1,6 @@
 cask 'opentoonz' do
-  version '1.2.1'
-  sha256 'af738c53f4d31d0f524348ac93d82ef8f80508a4908ad2fac98b7d3e473032b5'
+  version '1.3.0'
+  sha256 'cb82a0ee73504ee7d324bfb844ccdcc2cd4d0dc064c4c4023d41ca2af4d5c39d'
 
   # github.com/opentoonz/opentoonz was verified as official when first introduced to the cask
   url "https://github.com/opentoonz/opentoonz/releases/download/v#{version}/OpenToonz.pkg"

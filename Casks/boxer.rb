@@ -8,7 +8,7 @@ cask 'boxer' do
   name 'Boxer'
   homepage 'http://boxerapp.com/'
 
-  depends_on macos: '>= :leopard'
+  auto_updates true
 
   app 'Boxer.app'
 end

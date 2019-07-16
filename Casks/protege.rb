@@ -1,6 +1,6 @@
 cask 'protege' do
-  version '5.5.0-beta-4'
-  sha256 '7ca43f07b6a6bc086e428bfe1e23d0a725177636a32ee41ca6f1b5bb2f36d9a0'
+  version '5.5.0'
+  sha256 '9975fd2e361e70e5ed76f0278ec03d8ec23455b0aa70027276b169823a3b08b8'
 
   # github.com/protegeproject/protege-distribution was verified as official when first introduced to the cask
   url "https://github.com/protegeproject/protege-distribution/releases/download/v#{version}/Protege-#{version}-os-x.zip"

@@ -1,6 +1,6 @@
 cask 'clashx' do
-  version '1.7.1'
-  sha256 'e053e8918dcdb5bea2c24b5ce808083f604c90b9224540ceee357291ff7a3ed3'
+  version '1.10.0'
+  sha256 'b91fbb633f18456f3258efcb10f59c5d1c7cb8aaf547a7641bd47fe8fbc00866'
 
   url "https://github.com/yichengchen/clashX/releases/download/#{version}/ClashX.dmg"
   appcast 'https://github.com/yichengchen/clashX/releases.atom'
@@ -14,5 +14,6 @@ cask 'clashx' do
   zap trash: [
                '~/Library/Preferences/com.west2online.ClashX.plist',
                '~/Library/Logs/ClashX',
+               '~/.config/clash/',
              ]
 end

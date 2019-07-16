@@ -4,6 +4,7 @@ cask 'focus-booster' do
 
   # dcwy7j973b6zk.cloudfront.net/downloads/stable was verified as official when first introduced to the cask
   url "https://dcwy7j973b6zk.cloudfront.net/downloads/stable/focusbooster#{version}.dmg"
+  appcast 'https://www.focusboosterapp.com/download'
   name 'Focus Booster'
   homepage 'https://www.focusboosterapp.com/'
 

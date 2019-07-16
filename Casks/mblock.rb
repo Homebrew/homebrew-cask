@@ -1,12 +1,14 @@
 cask 'mblock' do
-  version '3.4.11'
-  sha256 'fcf814848d47f0c383354870358bf44a375da32f71d35046c5542650769ec4ca'
+  version '5.1.0'
+  sha256 '3543c2691422edb9213773fd92da5898a8f8cdc7c9b490d0c997c60209f97032'
 
-  # mblock.makeblock.com was verified as official when first introduced to the cask
-  url "https://mblock.makeblock.com/mBlock_mac_V#{version}.zip"
-  appcast 'http://www.mblock.cc/release-logs/'
+  # dl.makeblock.com was verified as official when first introduced to the cask
+  url "https://dl.makeblock.com/mblock#{version.major}/darwin/V#{version}.pkg"
+  appcast 'https://www.mblock.cc/mblock-software/'
   name 'mBlock'
-  homepage 'http://www.mblock.cc/'
+  homepage 'https://www.mblock.cc/'
 
-  app "mBlock_v#{version}.app"
+  pkg "V#{version}.pkg"
+
+  uninstall pkgutil: 'com.makeblock.pkg.mblock'
 end

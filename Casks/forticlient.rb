@@ -1,6 +1,6 @@
 cask 'forticlient' do
-  version '6.0.1'
-  sha256 'ef54a8fcc3588c6a7a87b6a94c976d58bf6fabbf4a48626be8d52ab72b0d01f1'
+  version '6.0'
+  sha256 'f35c65f06d6b577359507036fea92a8c299c05de678e2ecdbad66b62ee96ddb1'
 
   # filestore.fortinet.com/forticlient was verified as official when first introduced to the cask
   url "https://filestore.fortinet.com/forticlient/downloads/FortiClientOnlineInstaller_#{version}.dmg"

@@ -1,9 +1,10 @@
 cask 'datadog-agent' do
-  version '6.1.2-1'
-  sha256 'e2399cc9ddbf9f2ffecd32b48698857d1fd23cd504bd3527f0bb73c94d83542f'
+  version '6.12.0-1'
+  sha256 'ea7b93241fa31ed05b2a73670541d5104e84e387079779c6bb35d9c9dc9ea208'
 
   # s3.amazonaws.com/dd-agent was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/dd-agent/datadog-agent-#{version}.dmg"
+  url "https://s3.amazonaws.com/dd-agent/datadogagent-#{version}.dmg"
+  appcast 'https://github.com/DataDog/datadog-agent/releases.atom'
   name 'Datadog Agent'
   homepage 'https://www.datadoghq.com/'
 
@@ -11,10 +12,16 @@ cask 'datadog-agent' do
 
   preflight do
     require 'etc'
-    File.open('/tmp/datadog-install-user', 'w') { |f| f.write(Etc.getlogin) }
+    File.write('/tmp/datadog-install-user', Etc.getlogin)
   end
 
-  uninstall pkgutil: 'com.datadoghq.agent'
+  uninstall launchctl: 'com.datadoghq.agent',
+            # pkgutil: 'com.datadoghq.agent' # this is commented out because PKG uninstallation seems to fail due to missing files caused by case insensitivity and files that differ only in case. See https://github.com/Homebrew/homebrew-cask/pull/54739.
+            delete:    [
+                         '/Applications/Datadog Agent.app',
+                         '/opt/datadog-agent/',
+                         '/private/var/db/receipts/com.datadoghq.agent.*',
+                       ]
 
   zap trash: '/opt/datadog-agent'
 

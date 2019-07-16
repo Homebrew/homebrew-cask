@@ -1,6 +1,6 @@
 cask 'cncjs' do
-  version '1.9.15'
-  sha256 '2eebe42010c8b1ececa2591eaeacdd343d7b8d07509841d3ad05e0e36f0ba091'
+  version '1.9.20'
+  sha256 'f66d17573d4f99587dca48c12d24f35b79047c0e9a5fa0b3762f55ffe1dc9160'
 
   # github.com/cncjs/cncjs was verified as official when first introduced to the cask
   url "https://github.com/cncjs/cncjs/releases/download/v#{version}/cncjs-app-#{version}-mac-x64.dmg"

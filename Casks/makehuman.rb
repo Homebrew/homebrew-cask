@@ -8,5 +8,7 @@ cask 'makehuman' do
   name 'MakeHuman'
   homepage 'http://www.makehuman.org/'
 
+  depends_on macos: '>= :sierra'
+
   app 'MakeHuman.app'
 end

@@ -5,10 +5,10 @@ cask 'themeengine' do
 
     url "https://github.com/alexzielenski/ThemeEngine/releases/download/#{version}/ThemeEngine.zip"
   else
-    version '1.0.0(111)'
+    version '1.0.0,111'
     sha256 '2f7039bf8a30a20da20b292252759a501d15962f909d3b2274db9c2ec7a3bf39'
 
-    url "https://github.com/alexzielenski/ThemeEngine/releases/download/#{version}/ThemeEngine_111.zip"
+    url "https://github.com/alexzielenski/ThemeEngine/releases/download/#{version.before_comma}(#{version.after_comma})/ThemeEngine_111.zip"
     appcast 'https://github.com/alexzielenski/ThemeEngine/releases.atom'
   end
 

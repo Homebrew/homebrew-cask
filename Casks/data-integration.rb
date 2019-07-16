@@ -1,6 +1,6 @@
 cask 'data-integration' do
-  version '8.1.0.0-365'
-  sha256 '8bb578bafbef66141b59938ca880a08151c6b84a285abc23d6dce73e04bbc814'
+  version '8.2.0.0-342'
+  sha256 '9189d6303088c17b803dda6585c4ce9862c04494797182815c79734f3fa640ca'
 
   # sourceforge.net/pentaho was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/pentaho/pdi-ce-#{version}.zip"

@@ -1,11 +1,13 @@
 cask 'stay' do
-  version '1.2.7'
-  sha256 '332d7046630e0ed9367e635081f1eaadbecfb52e655448edc7f173d3c72c1ce5'
+  version '1.2.8'
+  sha256 '754b02b07af6da1383f59751448cab76d18b1ffc9c7dca8047f7fccc37650076'
 
   url "https://cordlessdog.com/stay/versions/Stay%20#{version}.dmg"
   appcast 'https://cordlessdog.com/stay/appcast.xml'
   name 'Stay'
   homepage 'https://cordlessdog.com/stay/'
+
+  depends_on macos: '>= :high_sierra'
 
   app 'Stay.app'
 

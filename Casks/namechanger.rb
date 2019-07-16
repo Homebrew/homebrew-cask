@@ -8,7 +8,12 @@ cask 'namechanger' do
   homepage 'https://mrrsoftware.com/namechanger/'
 
   auto_updates true
-  depends_on macos: '>= :lion'
 
   app 'NameChanger.app'
+
+  zap trash: [
+               '~/Library/Application Support/NameChanger',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mrrsoftware.namechanger.sfl*',
+               '~/Library/Preferences/com.mrrsoftware.NameChanger.plist',
+             ]
 end

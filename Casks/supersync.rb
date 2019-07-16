@@ -1,8 +1,9 @@
 cask 'supersync' do
   version '6.2'
-  sha256 'c3a271d17e34c0542d30ca3558e17f40063d406ecb8248e5168e554113e59e89'
+  sha256 '007efaad1d8de0703859a3677197f504cfd9faa2183ca01602c7dbb26e02766d'
 
   url "https://supersync.com/downloads/SuperSync_#{version}.dmg"
+  appcast 'https://supersync.com/downloads.php'
   name 'SuperSync'
   homepage 'https://supersync.com/'
 

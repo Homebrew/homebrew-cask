@@ -3,6 +3,7 @@ cask 'zettelkasten' do
   sha256 '7e975f1cfaf3e06c0f394bf57686456915411355ded2b5736cdb99e9928544be'
 
   url "http://zettelkasten.danielluedecke.de/download/Zettelkasten#{version.major}_mac.zip"
+  appcast 'http://zettelkasten.danielluedecke.de/'
   name 'zettelkasten'
   homepage 'http://zettelkasten.danielluedecke.de/'
 

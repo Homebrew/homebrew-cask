@@ -7,5 +7,7 @@ cask 'muse' do
   name 'Muse'
   homepage 'https://github.com/xzzz9097/Muse'
 
+  depends_on macos: '>= :sierra'
+
   app 'Muse.app'
 end

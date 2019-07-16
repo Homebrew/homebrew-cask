@@ -7,5 +7,7 @@ cask 'cantata' do
   name 'Cantata'
   homepage 'https://github.com/cdrummond/cantata'
 
+  depends_on macos: '>= :sierra'
+
   app 'Cantata.app'
 end

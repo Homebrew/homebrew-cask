@@ -8,5 +8,7 @@ cask 'xamarin-studio' do
   name 'Xamarin Studio'
   homepage 'https://www.visualstudio.com/vs/visual-studio-mac/'
 
+  conflicts_with cask: 'xamarin'
+
   app 'Xamarin Studio.app'
 end

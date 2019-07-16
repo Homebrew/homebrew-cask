@@ -1,12 +1,14 @@
 cask 'lincastor' do
-  version '1.4'
-  sha256 'fbe3af69e932cebdd0ddb76460018a4cc9194d60bb9476c2a42c2ccf59bdbba2'
+  version '2.2'
+  sha256 'f4cbbe5f684025fea27839372b7b143b89f9bebd0024a4df03ba33aab48aea88'
 
-  # dropbox.com/s/43fuhic0mhvhb6f was verified as official when first introduced to the cask
-  url 'https://www.dropbox.com/s/43fuhic0mhvhb6f/LinCastor.zip?dl=1'
-  appcast 'https://onflapp.appspot.com/lincastor'
+  # onflapp.github.io/blog/releases was verified as official when first introduced to the cask
+  url 'https://onflapp.github.io/blog/releases/lincastor/LinCastor.zip'
+  appcast 'https://onflapp.github.io/blog/releases/lincastor/appcast.xml'
   name 'LinCastor'
   homepage 'https://onflapp.wordpress.com/lincastor/'
+
+  depends_on macos: '>= :sierra'
 
   app 'LinCastor.app'
 end

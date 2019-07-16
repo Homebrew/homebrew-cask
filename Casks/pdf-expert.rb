@@ -1,14 +1,15 @@
 cask 'pdf-expert' do
-  version '2.4.14,595'
-  sha256 '5c4323199909128504e9b9d69f86e3f84063fd3429b33adfc0cf36e1b94116cc'
+  version '2.4.28,636'
+  sha256 '3279ebad5021a55469c999ace4be44fd488dc6d3181478b5892b344e2b803ba0'
 
-  # readdle-test-binaries.s3.amazonaws.com was verified as official when first introduced to the cask
-  url "https://readdle-test-binaries.s3.amazonaws.com/versions/#{version.after_comma}/PDFExpert.dmg"
-  appcast 'https://readdle-test-binaries.s3.amazonaws.com/release/appcast.xml'
+  # d1ke680phyeohy.cloudfront.net was verified as official when first introduced to the cask
+  url "https://d1ke680phyeohy.cloudfront.net/versions/#{version.after_comma}/PDFExpert.dmg"
+  appcast 'https://d1ke680phyeohy.cloudfront.net/release/appcast.xml'
   name 'PDF Expert'
   homepage 'https://pdfexpert.com/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'PDF Expert.app'
 end

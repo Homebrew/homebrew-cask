@@ -1,9 +1,9 @@
 cask 'blu-ray-player' do
-  version '2.17.2.2614'
-  sha256 'bcd807d339bd5fa51464ec52a42d88258237613859da4ad543d5eff00f96e8e2'
+  version '3.3.16,190627'
+  sha256 'ef5f0f4d8236301d8314c798b1f520c25d24579d0fe2024739316b33c2959b3e'
 
   url 'https://www.macblurayplayer.com/user/download/Mac_Bluray_Player.dmg'
-  appcast 'https://www.macblurayplayer.com/products/mac-bluray-player/update_mac'
+  appcast "https://cdn.macblurayplayer.com/mac-bluray-player-#{version.major}/appcast/Appcast.xml"
   name 'Macgo Mac Blu-ray Player'
   homepage 'https://www.macblurayplayer.com/'
 

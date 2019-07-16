@@ -1,63 +1,63 @@
 cask 'sketchup-pro' do
-  version '18.1.1180,2018'
+  version '19.1.173,2019'
 
   language 'de' do
-    sha256 'd8fb63eec83cf1e64ba68ff06755f373da12e63bc9bef927c9d5b3e544e1626f'
+    sha256 'a420125b8257a0a72ff4575ebef6e37702fcc16867bba2b7232d767a13d4ad6a'
     'de'
   end
 
   language 'en', default: true do
-    sha256 'aaeaa823ee1db74585b600bfc363d717188e361f1e95e5fb5d1000ba4bc47b4f'
+    sha256 'd1758f633db3b74b644ee73eb0eded8128975ac23732740dfc6388a817660146'
     'en'
   end
 
   language 'es' do
-    sha256 '2a13b998ae83d3354e6be07ae208537cd38e9cda5baac19c6bb088a2e86f79ad'
+    sha256 '89a00fefb041ebef346d16f9ab4ac3842857e6cb12c2ef65c47ce1bd02a7023b'
     'es'
   end
 
   language 'fr' do
-    sha256 '192cb3f26cee9a9556067eded1b77c4482bb4c4b3efdf3df5ef243b0b8d0414a'
+    sha256 '7c3674855fcfc1d6ca4760cdbf1861c6af40c4ab40ed8dce0909d72c29ec8e7b'
     'fr'
   end
 
   language 'it' do
-    sha256 '28e443dc87ad6daafa4c33e3babf456aa47f2db9e8ba0ab738b653132688e09a'
+    sha256 '103fcd9b85e627226fe9cef39ccfa45b55cec7d4dfccf3e26dc17da7412f4d13'
     'it'
   end
 
   language 'ja' do
-    sha256 '2b0f3d0ff0144cf6367960bf7f4f2457fafba74f03e0a81129c7ac0c9f703903'
+    sha256 'b18b3eef80cf46a24bd43eb69758788a3d2c2ea73a1ca7a55ce84021480a06aa'
     'ja'
   end
 
   language 'ko' do
-    sha256 'bb7864ced0ba83541067b7cc075940409fb07b6596090d8947d4f70d640a2d63'
+    sha256 '2a6d9df6f694b4d2c275e99847d604b9a32d90cde7f98d0427f845679e5c1b78'
     'ko'
   end
 
   language 'pt-BR' do
-    sha256 'a81dbb9d18885aae32d51adba55509a8975051257c9bffd40aa4adbd1e61801a'
+    sha256 '8a14e4f163d220f037d2032acbf602e6843fd9bbf98b392c18f1d44b30e5fe53'
     'pt-BR'
   end
 
   language 'ru' do
-    sha256 '418aed304178c9f99f01e0fcbab953da8c15c9fab7fb6217a0cedd0f3d6edb26'
+    sha256 'da14fb9344909a70dc51f9caaa96e6cbbb3268108546fc29c84a877e20d5d3ce'
     'ru'
   end
 
   language 'sv' do
-    sha256 'e70e76bae643ee1b063140363cc27b9272227d5084e7294058a06a4a74baf88b'
+    sha256 'd447b5ce0ac27529882ec2a90417fb632e26d5ee582bfb819d3af165d0fe82cb'
     'sv'
   end
 
   language 'zh-CN' do
-    sha256 'd82664ec70e952422fab0ed75fb150f8543f4cb7884a2e94b334895f4997bdaf'
+    sha256 '1e7413399a284612a43c206fa671281ee9c5e2c09835f8082ed5c601f48f56ce'
     'zh-CN'
   end
 
   language 'zh-TW' do
-    sha256 '106aa2b6995cce2075b60e61e1b355d421c02ac058842915e9ef5a5d03ceb7bd'
+    sha256 'a3700e4d4474d637a29aff19a5dd3b70126591ad043e5a75e59fa9d1f928a4a9'
     'zh-TW'
   end
 

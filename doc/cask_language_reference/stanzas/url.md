@@ -39,7 +39,7 @@ The comment doesn’t mean you should trust the source blindly, but we only appr
 Web browsers may obscure the direct `url` download location for a variety of reasons. Homebrew Cask supplies a script which can read extended file attributes to extract the actual source URL for most files downloaded by a browser on macOS. The script usually emits multiple candidate URLs; you may have to test each of them:
 
 ```bash
-$ $(brew --repository)/Library/Taps/Homebrew/homebrew-cask/developer/bin/list_url_attributes_on_file <file>
+$ $(brew --repository)/Library/Taps/homebrew/homebrew-cask/developer/bin/list_url_attributes_on_file <file>
 ```
 
 ## Subversion URLs

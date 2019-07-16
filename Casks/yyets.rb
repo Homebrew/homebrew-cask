@@ -1,12 +1,12 @@
 cask 'yyets' do
-  version '2.55'
-  sha256 '3ac6d420585003160ce3e4053c749502c8e034c2c63f34dcecb30b180e768e2d'
+  version '3.1.2'
+  sha256 '3fa5cd76b9794878ff1ce60efc74ddda57cecfe3cb271b4075f63450c4d31ffd'
 
-  # appdown.rrys.tv was verified as official when first introduced to the cask
-  url "http://appdown.rrys.tv/YYetsShare.#{version}.dmg"
+  url "http://appdown.rrys.tv/RRShare_#{version}.dmg"
+  appcast 'http://app.rrys.tv/'
   name 'YYeTs'
   name '人人影视'
-  homepage 'http://app.zimuzu.io/'
+  homepage 'http://app.rrys.tv/'
 
   app '人人影视.app'
 

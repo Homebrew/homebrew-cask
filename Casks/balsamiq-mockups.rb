@@ -1,6 +1,6 @@
 cask 'balsamiq-mockups' do
-  version '3.5.16'
-  sha256 '5a80ea9169ffcc10b5dfa601b53fa7cc18795451ada4e1c11755fca06428ec05'
+  version '3.5.17'
+  sha256 'a89f2a7959bc7f987710b7f3d6ae665e5765180dd02763d1b5f953415c130df2'
 
   url "https://builds.balsamiq.com/mockups-desktop/Balsamiq_Mockups_#{version}.dmg"
   appcast 'https://builds.balsamiq.com/mockups-desktop/version.jsonp'

@@ -1,6 +1,6 @@
 cask 'brackets' do
-  version '1.13'
-  sha256 '34d8960d78e7301febcc6b68b85970d119b7a904cdb9a0ecfc445348de1e4bd4'
+  version '1.14'
+  sha256 'd1545549863a79a3c4824f9a35866e78f2822664ddeeaeb3cf85a14b491a86cb'
 
   # github.com/adobe/brackets was verified as official when first introduced to the cask
   url "https://github.com/adobe/brackets/releases/download/release-#{version}/Brackets.Release.#{version}.dmg"

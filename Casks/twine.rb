@@ -1,9 +1,9 @@
 cask 'twine' do
-  version '2.2.1'
-  sha256 '0282c9e21167c51fb57d1b276447d6560fa22f5489e87aac215a3616edc5887f'
+  version '2.3.2'
+  sha256 '919711c53b9563dad7dbfe704a24beaeecf8d2e6d7bd766c0ea9eb8f9b743771'
 
   # github.com/klembot/twinejs was verified as official when first introduced to the cask
-  url "https://github.com/klembot/twinejs/releases/download/#{version}/twine_#{version}_osx.zip"
+  url "https://github.com/klembot/twinejs/releases/download/#{version}/twine_#{version}_macos.dmg"
   appcast 'https://github.com/klembot/twinejs/releases.atom'
   name 'Twine'
   homepage 'https://twinery.org/'

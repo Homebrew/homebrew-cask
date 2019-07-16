@@ -7,5 +7,7 @@ cask 'amitv87-pip' do
   name 'PiP'
   homepage 'https://github.com/amitv87/PiP'
 
+  depends_on macos: '>= :sierra'
+
   app 'PiP.app'
 end

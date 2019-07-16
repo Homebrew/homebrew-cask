@@ -9,9 +9,4 @@ cask 'password-gorilla' do
   homepage 'https://github.com/zdia/gorilla'
 
   app 'Password Gorilla.app'
-
-  caveats <<~EOS
-    Gatekeeper may need to be temporarily disabled for the first launch.
-    See https://gorilla.dp100.com/downloads/MacOS-Gatekeeper.html
-  EOS
 end

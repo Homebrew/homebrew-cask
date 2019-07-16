@@ -1,11 +1,11 @@
 cask 'chronicle' do
-  version '8.7.0'
-  sha256 '62b4124c8d7898a379698ebaa7820364790ef1590da896cd0515cd08af9acf0b'
+  version '9.1.1'
+  sha256 '883b3ca116959481448b84f1179043edee98f662be7699a74dc83e1557f81ca9'
 
-  url "http://www.chronicleapp.com/static/downloads/chronicle#{version.major}.zip"
-  appcast "http://www.littlefin.com/downloads/chronicle#{version.major}.xml"
+  url 'http://www.chronicleapp.com/static/downloads/chroniclepro.zip'
+  appcast 'http://www.littlefin.com/downloads/chronicle8.xml'
   name 'Chronicle'
   homepage 'http://chronicleapp.com/'
 
-  app "Chronicle #{version.major}.app"
+  app 'Chronicle Pro.app'
 end

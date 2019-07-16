@@ -42,7 +42,6 @@ The following methods may be called to generate standard warning messages:
 | `files_in_usr_local`               | the Cask installs files to `/usr/local`, which may confuse Homebrew.
 | `discontinued`                     | all software development has been officially discontinued upstream.
 | `free_license 'web_page'`          | users may get an official license to use the software at `web_page`.
-| `malware 'radar_number'`           | app has been reported to bundle malware. See [the FAQ](https://github.com/Homebrew/homebrew-cask/blob/master/doc/faq/apps_with_malware.md) for the necessary steps.
 | `kext`                             | users may need to enable their kexts in System Preferences → Security & Privacy → General.
 | `license 'web_page'`               | software has a usage license at `web_page`.
 

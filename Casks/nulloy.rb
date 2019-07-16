@@ -9,4 +9,6 @@ cask 'nulloy' do
   homepage 'http://nulloy.com/'
 
   app 'Nulloy.app'
+
+  zap trash: '~/Library/Saved Application State/com.nulloy.savedState'
 end

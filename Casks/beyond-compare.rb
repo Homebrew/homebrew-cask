@@ -1,11 +1,13 @@
 cask 'beyond-compare' do
-  version '4.2.8.23479'
-  sha256 'd1c62a100ec1543d03e284e50b5e4b23e1c64cec27c855b17fb061f3b2e0b984'
+  version '4.2.10.23938'
+  sha256 '8e7267b451de58dea04dacda3d15aad2537afd5386cf05fa9663cb76958e2127'
 
   url "https://www.scootersoftware.com/BCompareOSX-#{version}.zip"
-  appcast "https://www.scootersoftware.com/checkupdates.php?product=bc#{version.major}&platform=osx"
+  appcast 'https://www.scootersoftware.com/download.php?zz=v4changelog'
   name 'Beyond Compare'
   homepage 'https://www.scootersoftware.com/'
+
+  auto_updates true
 
   app 'Beyond Compare.app'
   binary "#{appdir}/Beyond Compare.app/Contents/MacOS/bcomp"

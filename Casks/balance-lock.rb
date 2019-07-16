@@ -1,8 +1,8 @@
 cask 'balance-lock' do
-  version '1.0.5'
-  sha256 '36fe26015b4d9e60c9eb11757bf2d28e40e6ac8c013912894f70e32a79c5d5bc'
+  version '1.0.6'
+  sha256 '5419f62265740a2b185d0c4452b9fad4f682ebbb4b7108d2d638d77f35a28490'
 
-  url "https://www.tunabellysoftware.com/resources/Balance_Lock_#{version.dots_to_underscores}.zip"
+  url "https://www.tunabellysoftware.com/resources/Balance_Lock_#{version}.dmg"
   appcast 'https://www.tunabellysoftware.com/resources/sparkle/balancelock.xml'
   name 'Balance Lock'
   homepage 'https://www.tunabellysoftware.com/balance_lock'
