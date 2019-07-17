@@ -1,6 +1,6 @@
 cask 'meta' do
-  version '1.9.3'
-  sha256 '227a0f41fa57c994b07289e4382134794f9b54ba3c223d5b3e42dfc8fd971d8b'
+  version '1.9.4'
+  sha256 '6579b209beb859e065df2d2dcbc8a686e699bec6db221926bf72da0454b946ad'
 
   url "https://www.nightbirdsevolve.com/meta/updates/bin/Meta%20#{version}.zip"
   appcast 'https://www.nightbirdsevolve.com/meta/updates/'
