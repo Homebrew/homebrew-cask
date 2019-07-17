@@ -12,6 +12,6 @@ cask 'foxitreader' do
   uninstall pkgutil: [
                        'com.foxitsoftware.reader.pkg',
                        'com.foxit.pkg.reader',
-                     ]
+                     ],
             delete:  '/Applications/Foxit Reader.app'
 end
