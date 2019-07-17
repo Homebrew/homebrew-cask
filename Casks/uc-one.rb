@@ -10,4 +10,6 @@ cask 'uc-one' do
   homepage 'https://uc-one.com/'
 
   app 'UC-One.app'
+
+  zap trash: '~/Library/Application Support/BroadSoft'
 end
