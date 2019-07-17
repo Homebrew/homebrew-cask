@@ -12,7 +12,6 @@ cask 'cmake' do
   app 'CMake.app'
   binary "#{appdir}/CMake.app/Contents/bin/cmake"
   binary "#{appdir}/CMake.app/Contents/bin/ccmake"
-  binary "#{appdir}/CMake.app/Contents/bin/cmakexbuild"
   binary "#{appdir}/CMake.app/Contents/bin/cpack"
   binary "#{appdir}/CMake.app/Contents/bin/ctest"
   binary "#{appdir}/CMake.app/Contents/bin/cmake-gui"
