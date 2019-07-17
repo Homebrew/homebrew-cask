@@ -8,7 +8,7 @@ cask 'tcl' do
   name 'ActiveTcl'
   homepage 'https://tcl.tk/'
 
-  pkg "ActiveTcl-#{version}-macosx10.9-x86_64.pkg"
+  pkg "ActiveTcl-#{version.after_comma}-macosx10.9-x86_64.pkg"
 
   uninstall pkgutil: "com.activestate.pkg.ActiveTcl#{version.major_minor}"
 end
