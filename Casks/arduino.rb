@@ -3,7 +3,7 @@ cask 'arduino' do
   sha256 '7868dd8f6d350956b4d0c7e3d443f717209244a2dc3f374da115d5252a45bf56'
 
   url "https://downloads.arduino.cc/arduino-#{version}-macosx.zip"
-  appcast 'https://www.arduino.cc/en/Main/ReleaseNotes'
+  appcast 'https://github.com/arduino/Arduino/releases.atom'
   name 'Arduino'
   homepage 'https://www.arduino.cc/'
 
