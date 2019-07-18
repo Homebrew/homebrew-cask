@@ -11,9 +11,9 @@ module Cask
   class Cmd
     class Ci < AbstractCommand
       def run
-        # unless ENV.key?("CI")
-        #   raise CaskError, "This command isn’t meant to be run locally."
-        # end
+        unless ENV.key?("CI")
+          raise CaskError, "This command isn’t meant to be run locally."
+        end
 
         $stdout.sync = true
         $stderr.sync = true
