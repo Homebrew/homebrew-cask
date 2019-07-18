@@ -11,9 +11,9 @@ module Cask
   class Cmd
     class Ci < AbstractCommand
       def run
-        unless ENV.key?("CI")
-          raise CaskError, "This command isn’t meant to be run locally."
-        end
+        # unless ENV.key?("CI")
+        #   raise CaskError, "This command isn’t meant to be run locally."
+        # end
 
         $stdout.sync = true
         $stderr.sync = true
@@ -64,7 +64,7 @@ module Cask
 
           overall_success &= step "brew cask uninstall #{cask.token}", "uninstall" do
             success = begin
-              Installer.new(cask, verbose: true).uninstall
+              Installer.new(cask, verbose: true).uninstall unless check_manual
               true
             rescue => e
               $stderr.puts e.message
@@ -173,6 +173,10 @@ module Cask
 
       def added_cask_files
         @added_cask_files ||= added_files.select { |path| tap.cask_file?(path) }
+      end
+
+      def check_manual
+        cask.ancestors.include?(ManualInstaller)
       end
     end
   end
