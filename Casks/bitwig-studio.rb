@@ -1,6 +1,6 @@
 cask 'bitwig-studio' do
   version '3.0'
-  sha256 '4a90ac09c03f14a80e7973af1be01dd09a7f165c52fbe22d83b4a2ff50d83eb6'
+  sha256 'fe0a33079a01fdc0aaac5108382926b86d849b0d87299581f22287109499b043'
 
   url "https://downloads.bitwig.com/stable/#{version}/Bitwig%20Studio%20#{version}.dmg"
   appcast 'https://www.bitwig.com/en/download.html'
