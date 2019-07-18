@@ -1,6 +1,6 @@
 cask 'plex-media-server' do
-  version '1.16.2.1297-4b7ace214'
-  sha256 '7fa831afe31abe54ecedf207f670c61596a9fae069b38af1e1bbe06dd9a5eec2'
+  version '1.16.2.1321-ad17d5f9e'
+  sha256 '8fb9355937e03d3e0661a10465023f6011c08e6fc40a2799a49b062d9b512e53'
 
   url "https://downloads.plex.tv/plex-media-server-new/#{version}/macos/PlexMediaServer-#{version}-x86_64.dmg"
   appcast 'https://plex.tv/api/downloads/5.json'
