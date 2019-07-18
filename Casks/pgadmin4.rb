@@ -4,6 +4,7 @@ cask 'pgadmin4' do
 
   # ftp.postgresql.org was verified as official when first introduced to the cask
   url "https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v#{version}/macos/pgadmin4-#{version}.dmg"
+  appcast 'https://ftp.postgresql.org/pub/pgadmin/pgadmin4/'
   name 'pgAdmin4'
   homepage 'https://www.pgadmin.org/'
 
