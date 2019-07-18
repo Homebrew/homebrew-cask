@@ -1,5 +1,5 @@
 cask 'roblox' do
-  version '5.0.71,abb55c6609004bfa'
+  version '0.393.0.319623,abb55c6609004bfa'
   sha256 '14a1fbe7808e2b965e8e639aa7598af72da75237b6e23aa80ccc0667f33d41fa'
 
   # setup.rbxcdn.com was verified as official when first introduced to the cask
