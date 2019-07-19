@@ -7,7 +7,7 @@ cask '4k-video-downloader' do
   name '4K Video Downloader'
   homepage 'https://www.4kdownload.com/products/product-videodownloader'
 
-  depends_on macos: '>= 10.12'
+  depends_on macos: '>= :sierra'
 
   app '4K Video Downloader.app'
 end
