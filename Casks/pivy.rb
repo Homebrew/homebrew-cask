@@ -12,4 +12,6 @@ cask 'pivy' do
   uninstall pkgutil:   'net.cooperi.pivy',
             launchctl: 'net.cooperi.pivy-agent',
             quit:      'net.cooperi.pivy-agent'
+
+  caveats 'The installer will prompt you to insert a YubiKey or other PIV token via a dialog box.'
 end
