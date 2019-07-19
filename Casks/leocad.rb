@@ -7,5 +7,7 @@ cask 'leocad' do
   name 'LeoCAD'
   homepage 'https://github.com/leozide/leocad'
 
+  depends_on macos: '>= :sierra'
+
   app 'LeoCAD.app'
 end
