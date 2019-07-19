@@ -7,11 +7,7 @@ cask 'mutespotifyads' do
   name 'MuteSpotifyAds'
   homepage 'https://github.com/simonmeusel/MuteSpotifyAds'
 
-  auto_updates false
-
   app 'MuteSpotifyAds.app'
 
   zap trash: '~/Library/SyncedPreferences/de.simonmeusel.MuteSpotifyAds.plist'
-
-  caveats 'You have to manually grant this application accessibility access in the System Prefrences. A dialogue will automatically redirect you to the correct settings page.'
 end
