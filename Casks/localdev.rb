@@ -4,9 +4,8 @@ cask 'localdev' do
 
   # pantheon-localdev.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://pantheon-localdev.s3.amazonaws.com/Localdev-v#{version}.dmg"
-  appcast 'https://pantheon.io/pantheon-localdev-power-users-pre-release'
   name 'Localdev'
-  homepage 'https://pantheon.io/pantheon-localdev-power-users-pre-release'
+  homepage 'https://pantheon.io/localdev'
 
   app 'Localdev.app'
 
