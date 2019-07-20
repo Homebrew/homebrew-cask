@@ -1,6 +1,6 @@
 cask 'mutespotifyads' do
-  version '1.8.3'
-  sha256 'e38399aafeb2ff161d03f876daa0b5391f71162cd3f9f9d22b362c67a70f8703'
+  version '1.9.0'
+  sha256 '0c4ad1494d57278780adf56fb07e7229edc18e768bb6704662210a26ab95ecaa'
 
   url "https://github.com/simonmeusel/MuteSpotifyAds/releases/download/v#{version}/MuteSpotifyAds.app.zip"
   appcast 'https://github.com/simonmeusel/MuteSpotifyAds/releases.atom'
