@@ -64,7 +64,7 @@ module Cask
 
           overall_success &= step "brew cask uninstall #{cask.token}", "uninstall" do
             success = begin
-              Installer.new(cask, verbose: true).uninstall unless manual_installer?
+              Installer.new(cask, verbose: true).uninstall unless manual_installer?(cask)
               true
             rescue => e
               $stderr.puts e.message
@@ -175,7 +175,7 @@ module Cask
         @added_cask_files ||= added_files.select { |path| tap.cask_file?(path) }
       end
 
-      def manual_installer?
+      def manual_installer?(cask)
         cask.artifacts.any? { |artifact| artifact.is_a?(Artifact::Installer::ManualInstaller) }
       end
     end
