@@ -1,8 +1,8 @@
 cask 'aliwangwang' do
-  version :latest
-  sha256 :no_check
+  version '8.01.02(11845)'
+  sha256 'dcdb6438de3bf780a684e2b90390117c2adcf94ee44df4a9ca4ca046b233737f'
 
-  url 'https://alimarket.taobao.com/markets/qnww/aliww-download?wh_from=macos'
+  url 'http://p.tb.cn/rmsportal_7535_Aliwangwang-20180703-1509-8.01.02.dmg'
   name 'Ali Wangwang'
   homepage 'https://alimarket.taobao.com/markets/qnww/portal-group/ww/index'
 
