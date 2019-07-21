@@ -1,8 +1,8 @@
 cask 'sogouinput' do
-  version '50,1541747408'
-  sha256 'd58c08f56d1a6f1baa73c91286dda203e0c7975a1d283b9f369c9fe7a11e73c5'
+  version '54c,1562159764'
+  sha256 'a636ccf5e31167a94376fa6bc73c0c32a9b7d0d59c2daa366a4a042379486992'
 
-  url "http://cdn2.ime.sogou.com/dl/index/#{version.after_comma}/sogou_mac_#{version.before_comma}.zip"
+  url "http://cdn2.ime.sogou.com/dl/index/#{version.after_comma}/sougou_mac_#{version.before_comma}.zip"
   name 'Sogou Input Method'
   name '搜狗输入法'
   homepage 'https://pinyin.sogou.com/mac/'

@@ -1,6 +1,6 @@
 cask 'emacs' do
-  version '26.1-2'
-  sha256 '2ea8d0b0055d5d0ba604771dbb2f9731dd5c815776eec6a9bca3c44d7ab40d99'
+  version '26.2'
+  sha256 '1c314b55d565330ed0a78ce183ebabf9936b56932ad58887c28f929241534822'
 
   url "https://emacsformacosx.com/emacs-builds/Emacs-#{version}-universal.dmg"
   appcast 'https://emacsformacosx.com/atom/release'

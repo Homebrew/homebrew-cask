@@ -4,6 +4,7 @@ cask 'eddie' do
 
   # eddie.website was verified as official when first introduced to the cask
   url "https://eddie.website/download/?platform=macos&arch=x64&ui=ui&format=disk.dmg&version=#{version}"
+  appcast 'https://github.com/AirVPN/Eddie/releases.atom'
   name 'Air VPN'
   name 'Eddie'
   homepage 'https://airvpn.org/macos/'

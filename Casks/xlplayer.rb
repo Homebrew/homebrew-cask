@@ -1,12 +1,13 @@
 cask 'xlplayer' do
-  version '2.0.0.1234'
-  sha256 '37171139b51c47019b20f61d8350a98a09a048a622b8ea1b9899ec3fe52b85a3'
+  version '2.0.3.1265'
+  sha256 'fbdf478d9dcaa7aba0f1cf7c212993edd0af7ba9a520e4ae4dd84ccf843690c0'
 
   # down.sandai.net was verified as official when first introduced to the cask
   url "http://down.sandai.net/mac/xlplayer_#{version}.dmg"
+  appcast 'https://video.xunlei.com/mac.html'
   name 'XLPlayer for Mac'
   name '迅雷影音 for Mac'
-  homepage 'http://video.xunlei.com/mac.html'
+  homepage 'https://video.xunlei.com/mac.html'
 
   depends_on macos: '>= :yosemite'
 

@@ -1,11 +1,11 @@
 cask 'principle' do
-  version '5.2'
-  sha256 '1ecd9c186864c96ed3b3f5e8facc1e86489e49d3d6a8b19900527d26af5eb8b4'
+  version '5.9'
+  sha256 '16a8262a890874e60593dd22fb3d7aca993eb61ed3379215a3d57e68cf025b9c'
 
-  url "http://principleformac.com/download/Principle_#{version.dots_to_underscores}.zip"
-  appcast 'http://principleformac.com/update2.xml'
+  url "https://principleformac.com/download/Principle_#{version.dots_to_underscores}.zip"
+  appcast 'https://principleformac.com/update2.xml'
   name 'Principle'
-  homepage 'http://principleformac.com/'
+  homepage 'https://principleformac.com/'
 
   depends_on macos: '>= :high_sierra'
 

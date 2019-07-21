@@ -12,8 +12,6 @@ cask 'spideroakone' do
   name 'SpiderOakOne'
   homepage 'https://spideroak.com/'
 
-  depends_on macos: '>= :mavericks'
-
   pkg 'SpiderOakONE.pkg'
 
   uninstall signal:  [

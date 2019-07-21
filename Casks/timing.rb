@@ -1,6 +1,6 @@
 cask 'timing' do
-  version '2018.4'
-  sha256 '2bbd41ec5985fc766a85c49edeabccd5206f77662d7bbc94765b75c4ca21f8cf'
+  version '2019.1'
+  sha256 '46a0bf91321b9e9e0e36123535ed3ca26a0ba0a1a572331d22e0d130d5bd3a62'
 
   url 'https://timingapp.com/download/Timing.app.zip'
   appcast 'https://timingapp.com/updates/timing2.xml'

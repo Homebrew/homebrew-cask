@@ -1,6 +1,6 @@
 cask 'plex-media-player' do
-  version '2.24.0.924-63fcaa8e'
-  sha256 '516fe7a9f97f8539a9f31893213f9570b1b89a587beac538310c2242e321549f'
+  version '2.37.2.996-bea4f9ca'
+  sha256 'a2b876905788e0abebc406f1727c31d4c56d74cbc46337d1ade1b5b9587209f6'
 
   url "https://downloads.plex.tv/plexmediaplayer/#{version}/PlexMediaPlayer-#{version}-macosx-x86_64.zip"
   appcast 'https://plex.tv/api/downloads/3.json'

@@ -1,6 +1,6 @@
 cask 'netnewswire' do
-  version '5.0d7'
-  sha256 'db2dd7363c910f1e6a6c4fc9734cfb9d13cffd3d1b30f9501d3a9a2be63b0b9f'
+  version '5.0a4'
+  sha256 'a85ec1a3f7dddf35934443926dc7138b6429b0673908e0cbcbeec2c53134859b'
 
   url "https://ranchero.com/downloads/NetNewsWire#{version}.zip"
   appcast 'https://ranchero.com/downloads/netnewswire-beta.xml'
@@ -8,7 +8,7 @@ cask 'netnewswire' do
   homepage 'https://ranchero.com/netnewswire/'
 
   auto_updates true
-  depends_on macos: '>= :high_sierra'
+  depends_on macos: '>= :mojave'
 
   app 'NetNewsWire.app'
 end

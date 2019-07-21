@@ -4,6 +4,7 @@ cask 'dmmbookviewer' do
 
   # dmm.co.jp was verified as official when first introduced to the cask
   url "http://dl.aka.dmm.co.jp/dmmviewer/mac/DMMViewerSetup_Mac_#{version}.pkg"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.dmm.com/transfer/-/dmmviewer/=/device=mac/'
   name 'DMMbookviewer'
   homepage 'https://book.dmm.com/info_bookviewer.html'
 

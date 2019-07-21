@@ -1,10 +1,13 @@
 cask 'pascom-client' do
-  version '45.R93_9b6cae3'
-  sha256 'ecdb66e7779ac5394c5b35ac9d5f2303610393756ca0fa8b2c6bb57fee4f50bc'
+  version '53.R453_4de72d3'
+  sha256 '7c970ca9fa2104801aa7b6a89a85c563f646d9d0652c1fb020015376000f4fad'
 
   url "https://download.pascom.net/release-archive/client/stable/pascom%20Client-#{version}.dmg"
+  appcast 'https://my.pascom.net/update/client/stable?_=1559037394513'
   name 'pascom Client'
   homepage 'https://www.pascom.net/'
+
+  depends_on macos: '>= :sierra'
 
   app 'pascom Client.app'
 end

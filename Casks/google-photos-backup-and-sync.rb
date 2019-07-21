@@ -7,7 +7,6 @@ cask 'google-photos-backup-and-sync' do
   homepage 'https://photos.google.com/apps'
 
   conflicts_with cask: 'google-backup-and-sync'
-  depends_on macos: '>= :mavericks'
 
   app 'Backup and Sync.app'
 

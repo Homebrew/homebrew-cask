@@ -1,6 +1,6 @@
 cask 'fonttong' do
-  version '2.0'
-  sha256 '70974dcdc39bb6f49a3440a265c3f6f87df0d5cf2b843e22fbd3120b9ce428a1'
+  version '2.1'
+  sha256 'fabeb41d2a24788a6b25bdc802240c7157235f9130bf03e16668e19677edd3e6'
 
   url 'http://www.asiafont.com/FontTong.dmg'
   name '폰트통'

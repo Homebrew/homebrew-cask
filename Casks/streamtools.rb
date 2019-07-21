@@ -6,7 +6,7 @@ cask 'streamtools' do
   url "https://github.com/nytlabs/streamtools/releases/download/#{version}/st_darwin_amd64-#{version}.tar.gz"
   appcast 'https://github.com/nytlabs/streamtools/releases.atom'
   name 'streamtools'
-  homepage 'http://nytlabs.com/streamtools/'
+  homepage 'https://nytlabs.com/streamtools/'
 
   binary "st_darwin_amd64-#{version}/st"
 end

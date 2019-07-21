@@ -1,10 +1,11 @@
 cask 'cocoscreator' do
-  version '2.0.5_2018110602'
-  sha256 'c8ae621e693d1efcb4a67458c64f15598be9864bded85d2c5a7308038bf300c9'
+  version '2.1.1_20190429'
+  sha256 'efc20fb6bbad8a21a4c5f97f62a817c85155213419cc26f5ec43740452882967'
 
-  url "http://digitalocean.cocos2d-x.org/CocosCreator/v#{version.split('_')[0]}/CocosCreator_v#{version}_mac.dmg"
+  url "https://digitalocean.cocos2d-x.org/CocosCreator/v#{version.split('_')[0]}/CocosCreator_v#{version}_mac.dmg"
+  appcast 'https://cocos2d-x.org/download'
   name 'CocosCreator'
-  homepage 'https://www.cocos2d-x.org/'
+  homepage 'https://cocos2d-x.org/'
 
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/cocos.wrapper.sh"

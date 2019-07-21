@@ -1,6 +1,6 @@
 cask 'spotspot' do
-  version '3.1.1'
-  sha256 'a50858471d5cfc866ccf83107865f2291b2ea2ad9022e570062d002d1fe3749d'
+  version '3.3.0'
+  sha256 '789f98df894c4896f24bac349f3ece7a24a50af2d31bf5fd9ab35de89a384090'
 
   # github.com/will-stone/SpotSpot was verified as official when first introduced to the cask
   url "https://github.com/will-stone/SpotSpot/releases/download/v#{version}/SpotSpot-#{version}.dmg"

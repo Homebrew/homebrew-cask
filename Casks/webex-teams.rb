@@ -6,8 +6,6 @@ cask 'webex-teams' do
   name 'Webex Teams'
   homepage 'https://www.webex.com/'
 
-  depends_on macos: '>= :mavericks'
-
   app 'Webex Teams.app'
 
   uninstall signal: [

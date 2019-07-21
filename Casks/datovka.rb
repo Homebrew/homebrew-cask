@@ -1,9 +1,10 @@
 cask 'datovka' do
-  version '4.11.1'
-  sha256 '568337b3555a079b4cd62f19b48a771da42777789fcaada5ba0878f0a0cc69ba'
+  version '4.13.1'
+  sha256 '987b6be02b0565be2bc7b133be1cc96af33fec6a6e7a082a3688d2272f9fab95'
 
   # secure.nic.cz/files/datove_schranky was verified as official when first introduced to the cask
   url "https://secure.nic.cz/files/datove_schranky/#{version}/datovka-#{version}-64bit-osx10.7.dmg"
+  appcast 'https://www.datovka.cz/cs/pages/instalace.html'
   name 'Datovka'
   homepage 'https://www.datovka.cz/'
 

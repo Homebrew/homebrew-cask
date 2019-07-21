@@ -1,11 +1,13 @@
 cask 'compositor' do
-  version '1.5.12'
-  sha256 '47c677af12aacaac1f6ae8c4a5c3f5b9d96a93f121bc76519582fb6e77a15f49'
+  version '1.10.1'
+  sha256 '8ae7d699c18f51a704b79e0a763144eba61c64dbbb4094e443b764256314286a'
 
   url "https://compositorapp.com/updates/Compositor_#{version}.zip"
   appcast 'https://compositorapp.com/updates/appcast.xml'
   name 'Compositor'
   homepage 'https://compositorapp.com/'
+
+  depends_on macos: '>= :sierra'
 
   app 'Compositor.app'
 

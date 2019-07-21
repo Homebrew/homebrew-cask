@@ -1,6 +1,6 @@
 cask 'gemini' do
-  version '2.5.4,317:1545152224'
-  sha256 '8af15c907b64b3ac6e35b7443d19c2bf5d83f41c49677ea698b29d8fc0a524d5'
+  version '2.5.6,330:1563371706'
+  sha256 '7bac1118c4caa76e13e0d0686b4ab3424adcd491ef9154acd6105e0aabb19c01'
 
   # dl.devmate.com/com.macpaw.site.Gemini was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.macpaw.site.Gemini#{version.major}/#{version.after_comma.before_colon}/#{version.after_colon}/Gemini#{version.major}-#{version.after_comma.before_colon}.zip"

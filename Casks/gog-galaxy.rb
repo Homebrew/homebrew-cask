@@ -1,13 +1,13 @@
 cask 'gog-galaxy' do
-  version '1.2.51.27'
-  sha256 '89064981482b8c2cc763337b4959db53d549530e69b1f5fdf5f47f11b6383ed2'
+  version '1.2.57.66'
+  sha256 '1ec3217a74d9aafe2f93e6d293a7bee1a937248cc0d4baded965cddb977e0ada'
 
   url "https://cdn.gog.com/open/galaxy/client/galaxy_client_#{version}.pkg"
+  appcast 'https://www.gog.com/galaxy'
   name 'GOG Galaxy Client'
   homepage 'https://www.gog.com/galaxy'
 
   auto_updates true
-  depends_on macos: '>= :mountain_lion'
 
   pkg "galaxy_client_#{version}.pkg"
 

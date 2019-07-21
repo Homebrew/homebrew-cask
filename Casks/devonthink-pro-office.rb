@@ -1,15 +1,14 @@
 cask 'devonthink-pro-office' do
-  version '2.11.1'
-  sha256 '4b92086532bf3996d36073b2f989ca2cc7e95f05db35a7e15fc034413224c6e1'
+  version '2.11.3'
+  sha256 '707494d3c709e0afa4b28ddd7c138f3abe5b1d2d20715b7a862b6982a307f60b'
 
-  # amazonaws.com/DTWebsiteSupport was verified as official when first introduced to the cask
+  # s3.amazonaws.com/DTWebsiteSupport was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/devonthink/#{version}/DEVONthink_Pro_Office.app.zip"
-  appcast 'https://www.devontechnologies.com/fileadmin/templates/filemaker/sparkle.php?product=300125739&format=xml'
+  appcast 'https://api.devontechnologies.com/1/apps/sparkle/sparkle.php?id=300125739'
   name 'DEVONthink Pro Office'
-  homepage 'https://www.devontechnologies.com/products/devonthink/devonthink-pro-office.html'
+  homepage 'https://www.devontechnologies.com/apps/devonthink'
 
   auto_updates true
-  depends_on macos: '>= :mavericks'
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   # Original discussion: https://github.com/Homebrew/homebrew-cask/pull/3838

@@ -3,6 +3,7 @@ cask 'ovito' do
   sha256 'c35a52c5cb9e2f081b234cd42b8854e71fa381a79e203547310379303ac4b477'
 
   url "https://ovito.org/download/#{version}/ovito-#{version}-macos.dmg"
+  appcast 'https://ovito.org/download/'
   name 'OVITO'
   homepage 'https://ovito.org/'
 

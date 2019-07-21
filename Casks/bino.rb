@@ -8,7 +8,5 @@ cask 'bino' do
   name 'Bino'
   homepage 'https://bino3d.org/'
 
-  depends_on macos: '>= :mavericks'
-
   app 'Bino.app'
 end

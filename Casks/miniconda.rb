@@ -1,34 +1,26 @@
 cask 'miniconda' do
-  version '4.5.12'
-  sha256 '8ebb463ddf46dd003616b2f6b678403a708e2c54dcc58e212bd35e257761912c'
+  version '4.6.14'
+  sha256 '2ec958508139289df3b5e2c10257311af4f0ebf39242f61d39f11e7fa14ebb40'
 
   # repo.anaconda.com/miniconda was verified as official when first introduced to the cask
   url "https://repo.anaconda.com/miniconda/Miniconda3-#{version}-MacOSX-x86_64.sh"
   name 'Continuum Analytics Miniconda'
   homepage 'https://conda.io/miniconda.html'
 
-  depends_on macos: '>= :lion'
+  auto_updates true
   container type: :naked
 
   installer script: {
                       executable: "Miniconda3-#{version}-MacOSX-x86_64.sh",
-                      args:       ['-b', '-p', "#{HOMEBREW_PREFIX}/miniconda3"],
-                      sudo:       true,
+                      args:       ['-b', '-p', "#{staged_path}/miniconda3"],
                     }
+  binary 'miniconda3/condabin/conda'
 
-  postflight do
-    set_ownership "#{HOMEBREW_PREFIX}/miniconda3"
-  end
-
-  uninstall delete: "#{HOMEBREW_PREFIX}/miniconda3"
+  uninstall delete: "#{staged_path}/miniconda3"
 
   zap trash: [
                '~/.condarc',
                '~/.conda',
                '~/.continuum',
              ]
-
-  caveats do
-    files_in_usr_local
-  end
 end

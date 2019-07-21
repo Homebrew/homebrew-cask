@@ -1,11 +1,11 @@
 cask 'notable' do
-  version '1.1.0'
-  sha256 '175afd8da6d52a16571bf9e557d009554c8305d8f320d3472a8dbd3973f03068'
+  version '1.6.2'
+  sha256 '3549c247834300deefe81b280d602bec5de82e64cae93ea77d8c73a1f8af00ec'
 
-  url "https://github.com/fabiospampinato/notable/releases/download/v#{version}/Notable-#{version}-mac.zip"
-  appcast 'https://github.com/fabiospampinato/notable/releases.atom'
+  url "https://github.com/notable/notable/releases/download/v#{version}/Notable-#{version}.dmg"
+  appcast 'https://github.com/notable/notable/releases.atom'
   name 'Notable'
-  homepage 'https://github.com/fabiospampinato/notable'
+  homepage 'https://github.com/notable/notable'
 
   app 'Notable.app'
 end

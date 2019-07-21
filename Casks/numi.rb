@@ -1,6 +1,6 @@
 cask 'numi' do
-  version '3.19,253:1537544968'
-  sha256 '65868727510873dc86a773e91d0471a67c96d0c32a80de8e34878d3262816a46'
+  version '3.20.2,486:1557156218'
+  sha256 '78fea3e3aaea3f3373aacfae95298eb4d1fb559310aa32f8d5c99672cbc0cd66'
 
   # dl.devmate.com/com.dmitrynikolaev.numi was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.dmitrynikolaev.numi/#{version.after_comma.before_colon}/#{version.after_colon}/Numi-#{version.after_comma.before_colon}.zip"
@@ -9,7 +9,7 @@ cask 'numi' do
   homepage 'https://numi.io/'
 
   auto_updates true
-  depends_on macos: '>= :el_capitan'
+  depends_on macos: '>= :sierra'
 
   app 'Numi.app'
 

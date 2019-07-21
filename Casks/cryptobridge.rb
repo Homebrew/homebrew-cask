@@ -1,6 +1,6 @@
 cask 'cryptobridge' do
-  version '0.15.2'
-  sha256 'a7fe45d5c9bd1f97ccdf549aa4f0f02cb675234d1287f1aeb330fc3fc20240d4'
+  version '0.2.11'
+  sha256 '2a0a315889f67eb76cc0583107ee0acd7dda4aea5ae307898f97c8a088507fa4'
 
   url "https://github.com/CryptoBridge/cryptobridge-ui/releases/download/v#{version}/CryptoBridge-#{version}.dmg"
   appcast 'https://github.com/CryptoBridge/cryptobridge-ui/releases.atom'
@@ -8,7 +8,6 @@ cask 'cryptobridge' do
   homepage 'https://github.com/CryptoBridge/cryptobridge-ui'
 
   auto_updates true
-  depends_on macos: '>= :mavericks'
 
   app 'CryptoBridge.app'
 end

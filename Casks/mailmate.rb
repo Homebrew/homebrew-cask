@@ -1,10 +1,10 @@
 cask 'mailmate' do
-  version '5579'
-  sha256 'addb5af36cf272ad55bb6b27469d1cb3508cc72b251b5c6adf022b30f9bab7ac'
+  version '5635'
+  sha256 '2f46cf0de07fe06500fec8745890c71849afd347d8859c4eca03595d1e802554'
 
   # mailmate-app.com was verified as official when first introduced to the cask
   url "https://updates.mailmate-app.com/archives/MailMate_r#{version}.tbz"
-  appcast 'https://updates.mailmate-app.com/beta_release_notes'
+  appcast 'https://updates.mailmate-app.com/10.14/release'
   name 'MailMate'
   homepage 'https://freron.com/'
 

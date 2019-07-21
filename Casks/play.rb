@@ -1,6 +1,6 @@
 cask 'play' do
-  version '2.0.17'
-  sha256 '7023dd54055cd306494dd6d3531d9e07ccdfcb434e22bd6ac60e8f7fbf1a39bd'
+  version '2.0.19'
+  sha256 '7d7cbfc2330f53f9d751045c7eae3dc7a2900ff6868a60f3b87b885db6ceaf1e'
 
   # github.com/pmsaue0/play was verified as official when first introduced to the cask
   url "https://github.com/pmsaue0/play/releases/download/v#{version}/play_#{version}.dmg.zip"

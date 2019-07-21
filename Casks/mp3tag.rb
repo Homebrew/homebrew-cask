@@ -1,8 +1,9 @@
 cask 'mp3tag' do
-  version '2.91'
-  sha256 '5f7e3f6e72695b5dd0b9486a9f2423d821cfcf88ed7aa4dab257d2bd2d7b543a'
+  version '2.97'
+  sha256 'd1fd2e60bcdf18f70edf339bb2b7c3e76c31e69cd7c71d46fa570fc0cdc9a819'
 
   url "https://download.mp3tag.de/mp3tagv#{version.no_dots}-macOS-Wine.zip"
+  appcast 'https://www.mp3tag.de/en/mac-osx.html'
   name 'MP3TAG'
   homepage 'https://www.mp3tag.de/en/'
 
@@ -11,6 +12,7 @@ cask 'mp3tag' do
   zap trash: [
                '~/Library/Application Support/de.mp3tag.Mp3tag_*',
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/de.mp3tag.mp3tag_*.sfl*',
+               '~/Library/Caches/org.kronenberg.Winetricks',
                '~/Library/Preferences/org.kronenberg.Winetricks.plist',
              ]
 end

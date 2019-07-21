@@ -1,11 +1,13 @@
 cask 'suspicious-package' do
-  version '3.4.1'
-  sha256 'e4673a0c590e7dcb711789d98fcadd2283c2152d262b7809dfd8c8a1b3e9094b'
+  version '3.5'
+  sha256 '7a60a9e2a3d51ad1fe0784742d77ca91d0c1a00ec09605f0df94a91c6a74fb97'
 
   url 'https://www.mothersruin.com/software/downloads/SuspiciousPackage.dmg'
   appcast 'https://www.mothersruin.com/software/SuspiciousPackage/data/SuspiciousPackageVersionInfo.plist'
   name 'Suspicious Package'
   homepage 'https://www.mothersruin.com/software/SuspiciousPackage/'
+
+  depends_on macos: '>= :high_sierra'
 
   app 'Suspicious Package.app'
   binary "#{appdir}/Suspicious Package.app/Contents/SharedSupport/spkg"

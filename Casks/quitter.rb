@@ -1,5 +1,5 @@
 cask 'quitter' do
-  version '1.0 (107)'
+  version '1.0,107'
   sha256 'ad4071a48aeed019fbb9ebf80ce717c1c15ade24298a33e823dc0d1c218baed4'
 
   url 'https://marco.org/appcasts/Quitter.zip'

@@ -3,6 +3,7 @@ cask 'factor' do
   sha256 '045847b1cf01e1dda270b834c34effd796ce52da40ada8e2fe52b55e3358db17'
 
   url "http://downloads.factorcode.org/releases/#{version}/factor-macosx-x86-64-#{version}.dmg"
+  appcast 'http://downloads.factorcode.org/releases/'
   name 'Factor'
   homepage 'https://factorcode.org/'
 

@@ -12,11 +12,10 @@ cask 'appcleaner' do
   end
 
   url "https://www.freemacsoft.net/downloads/AppCleaner_#{version}.zip"
-  name 'AppCleaner'
+  name 'FreeMacSoft AppCleaner'
   homepage 'https://freemacsoft.net/appcleaner/'
 
   auto_updates true
-  depends_on macos: '>= :tiger'
 
   app 'AppCleaner.app'
 

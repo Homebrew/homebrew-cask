@@ -8,7 +8,5 @@ cask 'itools' do
   name 'iTools'
   homepage 'https://pro.itools.cn/mac/english'
 
-  depends_on macos: '>= :mountain_lion'
-
   app 'iTools.app'
 end

@@ -8,7 +8,6 @@ cask 'ipa-manager' do
   homepage 'https://www.blugs.com/IPA/'
 
   auto_updates true
-  depends_on macos: '>= :leopard'
 
   app 'IPA Manager.app'
 

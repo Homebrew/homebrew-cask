@@ -1,11 +1,17 @@
 cask 'magicavoxel' do
-  version '0.99.2-alpha'
-  sha256 'b4e2587781512ca102dada015802d4f9269ff47eff5614c901ce795d83afb777'
+  version '0.99.4'
+  sha256 'f42b1ffe2dff0d8aadb806c8359e3cbd53f723a23adcefc5042ce8f8702b4935'
 
-  # 192.241.207.218/uploads was verified as official when first introduced to the cask
-  url "http://192.241.207.218/uploads/MagicaVoxel-#{version}-mac.zip"
+  # github.com/ephtracy/ephtracy.github.io was verified as official when first introduced to the cask
+  url "https://github.com/ephtracy/ephtracy.github.io/releases/download/#{version}/MagicaVoxel-#{version}-alpha-macos.zip"
+  appcast 'https://github.com/ephtracy/ephtracy.github.io/releases.atom'
   name 'MagicaVoxel'
   homepage 'https://ephtracy.github.io/'
 
   suite staged_path, target: 'MagicaVoxel'
+
+  zap trash: [
+               '~/Library/Preferences/EPH.MagicaVoxel.plist',
+               '~/Library/Saved Application State/EPH.MagicaVoxel.savedState',
+             ]
 end

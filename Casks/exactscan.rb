@@ -1,9 +1,10 @@
 cask 'exactscan' do
-  version '18.11.19'
-  sha256 'bed6d6adc41275b83085a054ca280dd5c8bdd3e636a9a586b6987cc0ced37fad'
+  version '19.4.24'
+  sha256 '2249b3cfa5e19267efb2c91faa4e431d68e4d04852611a9edcf60d081a046fcf'
 
   # dl.exactcode.com was verified as official when first introduced to the cask
   url "https://dl.exactcode.com/exactscan/ExactScan-#{version}.dmg"
+  appcast 'https://exactscan.com/download.html'
   name 'ExactScan'
   homepage 'https://exactscan.com/index.html'
 

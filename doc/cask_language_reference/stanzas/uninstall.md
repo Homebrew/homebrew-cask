@@ -50,13 +50,13 @@ This is the most useful uninstall key. `pkgutil:` is often sufficient to complet
 IDs for the most recently-installed packages can be listed using the command:
 
 ```bash
-$ "$(brew --repository)/Library/Taps/Homebrew/homebrew-cask/developer/bin/list_recent_pkg_ids"
+$ "$(brew --repository)/Library/Taps/homebrew/homebrew-cask/developer/bin/list_recent_pkg_ids"
 ```
 
 `pkgutil:` also accepts a regular expression match against multiple package IDs. The regular expressions are somewhat nonstandard. To test a `pkgutil:` regular expression against currently-installed packages, use the command:
 
 ```bash
-$ "$(brew --repository)/Library/Taps/Homebrew/homebrew-cask/developer/bin/list_pkg_ids_by_regexp" <regular-expression>
+$ "$(brew --repository)/Library/Taps/homebrew/homebrew-cask/developer/bin/list_pkg_ids_by_regexp" <regular-expression>
 ```
 
 ## List Files Associated With a pkg Id
@@ -74,13 +74,13 @@ Listing the associated files can help you assess whether the package included an
 IDs for currently loaded `launchctl` jobs can be listed using the command:
 
 ```bash
-$ "$(brew --repository)/Library/Taps/Homebrew/homebrew-cask/developer/bin/list_loaded_launchjob_ids"
+$ "$(brew --repository)/Library/Taps/homebrew/homebrew-cask/developer/bin/list_loaded_launchjob_ids"
 ```
 
 IDs for all installed `launchctl` jobs can be listed using the command:
 
 ```bash
-$ "$(brew --repository)/Library/Taps/Homebrew/homebrew-cask/developer/bin/list_installed_launchjob_ids"
+$ "$(brew --repository)/Library/Taps/homebrew/homebrew-cask/developer/bin/list_installed_launchjob_ids"
 ```
 
 ## uninstall Key quit:
@@ -88,13 +88,13 @@ $ "$(brew --repository)/Library/Taps/Homebrew/homebrew-cask/developer/bin/list_i
 Bundle IDs for currently running Applications can be listed using the command:
 
 ```bash
-$ "$(brew --repository)/Library/Taps/Homebrew/homebrew-cask/developer/bin/list_running_app_ids"
+$ "$(brew --repository)/Library/Taps/homebrew/homebrew-cask/developer/bin/list_running_app_ids"
 ```
 
 Bundle IDs inside an Application bundle on disk can be listed using the command:
 
 ```bash
-$ "$(brew --repository)/Library/Taps/Homebrew/homebrew-cask/developer/bin/list_ids_in_app" '/path/to/application.app'
+$ "$(brew --repository)/Library/Taps/homebrew/homebrew-cask/developer/bin/list_ids_in_app" '/path/to/application.app'
 ```
 
 ## uninstall Key signal:
@@ -130,7 +130,7 @@ Unlike `quit:` directives, Unix signals originate from the current user, not fro
 Login items associated with an Application bundle on disk can be listed using the command:
 
 ```bash
-$ "$(brew --repository)/Library/Taps/Homebrew/homebrew-cask/developer/bin/list_login_items_for_app" '/path/to/application.app'
+$ "$(brew --repository)/Library/Taps/homebrew/homebrew-cask/developer/bin/list_login_items_for_app" '/path/to/application.app'
 ```
 
 Note that you will likely need to have opened the app at least once for any login items to be present.
@@ -140,13 +140,13 @@ Note that you will likely need to have opened the app at least once for any logi
 IDs for currently loaded kernel extensions can be listed using the command:
 
 ```bash
-$ "$(brew --repository)/Library/Taps/Homebrew/homebrew-cask/developer/bin/list_loaded_kext_ids"
+$ "$(brew --repository)/Library/Taps/homebrew/homebrew-cask/developer/bin/list_loaded_kext_ids"
 ```
 
 IDs inside a kext bundle you have located on disk can be listed using the command:
 
 ```bash
-$ "$(brew --repository)/Library/Taps/Homebrew/homebrew-cask/developer/bin/list_id_in_kext" '/path/to/name.kext'
+$ "$(brew --repository)/Library/Taps/homebrew/homebrew-cask/developer/bin/list_id_in_kext" '/path/to/name.kext'
 ```
 
 ## uninstall Key script:
@@ -186,19 +186,19 @@ Advanced users may wish to work with a `pkg` file manually, without having the p
 A list of files which may be installed from a `pkg` can be extracted using the command:
 
 ```bash
-$ "$(brew --repository)/Library/Taps/Homebrew/homebrew-cask/developer/bin/list_payload_in_pkg" '/path/to/my.pkg'
+$ "$(brew --repository)/Library/Taps/homebrew/homebrew-cask/developer/bin/list_payload_in_pkg" '/path/to/my.pkg'
 ```
 
 Candidate application names helpful for determining the name of a Cask may be extracted from a `pkg` file using the command:
 
 ```bash
-$ "$(brew --repository)/Library/Taps/Homebrew/homebrew-cask/developer/bin/list_apps_in_pkg" '/path/to/my.pkg'
+$ "$(brew --repository)/Library/Taps/homebrew/homebrew-cask/developer/bin/list_apps_in_pkg" '/path/to/my.pkg'
 ```
 
 Candidate package IDs which may be useful in a `pkgutil:` key may be extracted from a `pkg` file using the command:
 
 ```bash
-$ "$(brew --repository)/Library/Taps/Homebrew/homebrew-cask/developer/bin/list_ids_in_pkg" '/path/to/my.pkg'
+$ "$(brew --repository)/Library/Taps/homebrew/homebrew-cask/developer/bin/list_ids_in_pkg" '/path/to/my.pkg'
 ```
 
 A fully manual method for finding bundle ids in a package file follows:

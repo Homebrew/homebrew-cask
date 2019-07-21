@@ -8,8 +8,6 @@ cask 'mmex' do
   name 'Money Manager Ex'
   homepage 'https://www.moneymanagerex.org/'
 
-  depends_on macos: '>= :mavericks'
-
   app 'MMEX.app'
 
   zap trash: [

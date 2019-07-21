@@ -4,6 +4,7 @@ cask 'knotes' do
 
   # s3.ap-northeast-2.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://s3.ap-northeast-2.amazonaws.com/knotes-release-cn/mac/Knotes-#{version}-mac.zip"
+  appcast 'http://knotesapp.com/'
   name 'Knotes'
   homepage 'http://knotesapp.com/'
 

@@ -4,6 +4,7 @@ cask 'ocelot' do
 
   # bintray.com/okapi was verified as official when first introduced to the cask
   url "https://bintray.com/okapi/Distribution/download_file?file_path=Ocelot-#{version}.dmg"
+  appcast 'https://open.vistatec.com/ocelot/index.php?title=Main_Page'
   name 'Ocelot'
   homepage 'https://open.vistatec.com/ocelot/'
 

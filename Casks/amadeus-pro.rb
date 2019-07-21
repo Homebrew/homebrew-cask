@@ -1,8 +1,8 @@
 cask 'amadeus-pro' do
-  version '2.5.3'
-  sha256 'a994e2db0a2f42a28afc289cdf55696fbb31132b9d23aab4e2abc667d3f493b2'
+  version '2.6'
+  sha256 'a9866858d14561e5bc596a7fd6064747726447385a40585ea2b3c171be25542a'
 
-  # amazonaws.com/AmadeusPro2 was verified as official when first introduced to the cask
+  # s3.amazonaws.com/AmadeusPro2 was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/AmadeusPro2/AmadeusPro.zip'
   appcast 'https://s3.amazonaws.com/AmadeusPro2/versions.rtf'
   name 'Amadeus Pro'

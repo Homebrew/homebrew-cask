@@ -1,10 +1,10 @@
 cask 'musescore' do
-  version '3.0.0'
-  sha256 '02d327851ec4e0cfaf7ba90b89269a07c5de1383f918d52a78df6220d6c58a05'
+  version '3.2.3'
+  sha256 '22222dcbaf784f04f3dff5c8fd84597d56d54f4f846f77ea4b74be3b5924ce5a'
 
-  # ftp.osuosl.org/pub/musescore was verified as official when first introduced to the cask
-  url "https://ftp.osuosl.org/pub/musescore/releases/MuseScore-#{version.major_minor_patch}/MuseScore-#{version}.dmg"
-  appcast 'https://ftp.osuosl.org/pub/musescore/releases/'
+  # github.com/musescore/MuseScore was verified as official when first introduced to the cask
+  url "https://github.com/musescore/MuseScore/releases/download/v#{version}/MuseScore-#{version}.dmg"
+  appcast 'https://github.com/musescore/MuseScore/releases.atom'
   name 'MuseScore'
   homepage 'https://musescore.org/'
 

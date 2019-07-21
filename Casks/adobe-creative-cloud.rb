@@ -6,8 +6,6 @@ cask 'adobe-creative-cloud' do
   name 'Adobe Creative Cloud'
   homepage 'https://creative.adobe.com/products/creative-cloud'
 
-  depends_on macos: '>= :mavericks'
-
   installer manual: 'Creative Cloud Installer.app'
 
   uninstall delete: "#{staged_path}/#{token}" # Needs to be uninstalled manually

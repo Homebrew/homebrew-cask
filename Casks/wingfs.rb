@@ -2,10 +2,10 @@ cask 'wingfs' do
   version '2.0.84'
   sha256 '94e5a5eee89695caa487d183b8c40ade98dbeaedad6891da3c95684084d303a2'
 
-  # s3.amazonaws.com/wingfs_downloads was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/wingfs_downloads/WingFS_#{version.major_minor}.dmg"
+  # wingfs_downloads.s3.amazonaws.com was verified as official when first introduced to the cask
+  url "https://wingfs_downloads.s3.amazonaws.com/WingFS_#{version.major_minor}.dmg"
   name 'WingFS'
-  homepage 'http://p5.archiware.com/products/wingfs'
+  homepage 'https://p5.archiware.com/products/wingfs'
 
   conflicts_with cask: 'osxfuse'
 

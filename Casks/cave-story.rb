@@ -3,7 +3,8 @@ cask 'cave-story' do
   sha256 '305e9ec85442e79e92c0e4fd2d8e6566c5e0ad8db46b50aad172f3e0c384a479'
 
   # nakiwo.com was verified as official when first introduced to the cask
-  url "http://www.nakiwo.com/attachments/doukutsu#{version.dots_to_underscores}.dmg"
+  url "https://www.nakiwo.com/downloads/doukutsu#{version.dots_to_underscores}.dmg"
+  appcast 'https://www.nakiwo.com/software.html'
   name 'Pixel Cave Story'
   name 'Doukutsu'
   name '洞窟物語'

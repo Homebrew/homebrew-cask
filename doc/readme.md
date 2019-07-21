@@ -9,4 +9,3 @@
 
 + [Contributing to the core](development/hacking.md)
 + [Adding a new Cask](development/adding_a_cask.md)
-+ [Meta information on the project’s structure](development/maintaining.md)

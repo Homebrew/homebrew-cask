@@ -3,7 +3,7 @@ cask 'scopebox' do
   sha256 'bbc41a5761eaf4202f4d53cc48ff0dc4ef136fb783f270f739971b16b6e228cc'
 
   url "https://www.divergentmedia.com/fileRepository/ScopeBox%20#{version}.dmg"
-  appcast 'https://www.divergentmedia.com/autoupdater/scopebox/3_1_x'
+  appcast 'https://www.divergentmedia.com/scopebox/trial'
   name 'ScopeBox'
   homepage 'https://www.divergentmedia.com/scopebox'
 

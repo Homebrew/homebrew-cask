@@ -1,14 +1,14 @@
 cask 'blocs' do
-  version '2.6.5'
-  sha256 'cd653f2072724a496430501532bf23d1ac146632741169e4cad8796b541613e8'
+  version '3.3.0'
+  sha256 '8eb10695a8702968dbe6190a59ff338a6e1aba75dbe33e694ade42514d08a38d'
 
-  # uistore.io was verified as official when first introduced to the cask
-  url "http://downloads.uistore.io/blocs/version-#{version.major}/Blocs.zip"
-  appcast "https://uistore.io/blocs/#{version.major}.0/info.xml"
+  url "https://blocsapp.com/download/Blocs#{version.major}.zip"
+  appcast 'https://blocsapp.com/release-notes.html'
   name 'Blocs'
   homepage 'https://blocsapp.com/'
 
   auto_updates true
+  container nested: "Blocs#{version.major}/Blocs-#{version.major}.dmg"
 
   app 'Blocs.app'
 end

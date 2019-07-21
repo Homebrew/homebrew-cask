@@ -8,8 +8,6 @@ cask 'ransomwhere' do
   name 'RansomWhere'
   homepage 'https://objective-see.com/products/ransomwhere.html'
 
-  depends_on macos: '>= :mountain_lion'
-
   installer script: {
                       executable: "#{staged_path}/RansomWhere_Installer.app/Contents/MacOS/RansomWhere_Installer",
                       args:       ['-install'],

@@ -1,13 +1,12 @@
 cask '115browser' do
-  version '8.6.5.31'
-  sha256 '8af0ce66b49eda99ff5bec26477cb8d44628caa186ea5c54c1146d1e2b1849ed'
+  version '8.7.1.7'
+  sha256 '84bb02f2e7219f675effaac0886ff662ecc5564467274f78d321a0e8de7b8def'
 
   url "https://down.115.com/client/mac/115br_v#{version}.dmg"
+  appcast 'https://pc.115.com/#mac'
   name '115Browser'
   name '115浏览器'
-  homepage 'http://pc.115.com/'
-
-  depends_on macos: '>= :mountain_lion'
+  homepage 'https://pc.115.com/'
 
   app '115Browser.app'
 

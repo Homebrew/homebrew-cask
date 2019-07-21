@@ -7,8 +7,6 @@ cask 'kindle-comic-creator' do
   name 'Kindle Comic Creator'
   homepage 'https://www.amazon.com/gp/feature.html?ie=UTF8&docId=1001103761'
 
-  depends_on macos: '>= :mavericks'
-
   pkg 'Kindle Comic Creator.pkg'
 
   uninstall pkgutil:   [
