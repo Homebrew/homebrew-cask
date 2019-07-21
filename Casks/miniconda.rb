@@ -12,11 +12,11 @@ cask 'miniconda' do
 
   installer script: {
                       executable: "Miniconda3-#{version}-MacOSX-x86_64.sh",
-                      args:       ['-b', '-p', "#{staged_path}/miniconda3"],
+                      args:       ['-b', '-p', "#{caskroom_path}/base"],
                     }
-  binary 'miniconda3/condabin/conda'
+  binary "#{caskroom_path}/base/condabin/conda"
 
-  uninstall delete: "#{staged_path}/miniconda3"
+  uninstall delete: "#{caskroom_path}/base"
 
   zap trash: [
                '~/.condarc',
