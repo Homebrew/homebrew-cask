@@ -44,7 +44,6 @@ CASK_REPOS.each do |repo|
     '.gitignore',
     '.travis.yml',
     'Casks/.rubocop.yml',
-    'CODE_OF_CONDUCT.md',
   ].each do |path|
     FileUtils.rm_rf File.join(repo_dir, path)
     FileUtils.cp_r path, File.join(repo_dir, path)
