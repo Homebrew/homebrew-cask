@@ -1,4 +1,4 @@
-cask 'kii' do
+cask 'kiibohd-configurator' do
   version '1.0.1'
   sha256 '3a791deb24cd9bdb4c12292d040effa3b9532083dd795aa2f8f968a1de1a7700'
 
