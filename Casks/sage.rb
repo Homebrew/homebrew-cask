@@ -4,6 +4,7 @@ cask 'sage' do
 
   # mirrors.mit.edu/sage/osx/intel was verified as official when first introduced to the cask
   url "https://mirrors.mit.edu/sage/osx/intel/sage-#{version.before_comma}-OSX_#{version.after_comma}-x86_64.app.dmg"
+  appcast 'https://mirrors.mit.edu/sage/osx/intel/index.html'
   name 'Sage'
   homepage 'https://www.sagemath.org/'
 

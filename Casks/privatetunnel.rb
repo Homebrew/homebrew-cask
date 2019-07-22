@@ -4,6 +4,7 @@ cask 'privatetunnel' do
 
   # swupdate.openvpn.org/privatetunnel was verified as official when first introduced to the cask
   url "https://swupdate.openvpn.org/privatetunnel/client/privatetunnel-mac-#{version}.dmg"
+  appcast 'https://www.privatetunnel.com/apps/'
   name 'Private Tunnel'
   homepage 'https://www.privatetunnel.com/home/'
 
