@@ -23,4 +23,6 @@ cask 'miniconda' do
                '~/.conda',
                '~/.continuum',
              ]
+
+  caveats "Please run the following to setup your shell:\nconda init $(basename $SHELL)"
 end
