@@ -1,6 +1,6 @@
 cask 'folx' do
-  version '5.9.13837'
-  sha256 '0cb6ca263333a1c07796ded897804ea8737696a1b646c399d05e47524cf4d10b'
+  version '5.9.13838'
+  sha256 '9fa9d500ea807244b427ee0c36c5aad924322989f82c58104353054f70492f61'
 
   url 'https://cdn.eltima.com/download/downloader_mac.dmg'
   appcast 'https://cdn.eltima.com/download/folx-updater/folx.xml',
