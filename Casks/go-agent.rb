@@ -1,6 +1,6 @@
 cask 'go-agent' do
-  version '19.1.0-8469'
-  sha256 '113b21b10590c7a066bdd0597825b672bfed8b33b9cda756b9d6fea42a7c7c3e'
+  version '19.6.0-9515'
+  sha256 '1237b6c300e4f8f02967c5ec3abb37efefd6e539469385565f308a5ec4bd566e'
 
   # download.gocd.io/binaries was verified as official when first introduced to the cask
   url "https://download.gocd.io/binaries/#{version}/osx/go-agent-#{version}-osx.zip"
