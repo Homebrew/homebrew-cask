@@ -176,7 +176,11 @@ module Cask
       end
 
       def manual_installer?(cask)
-        cask.artifacts.any? { |artifact| artifact.is_a?(Artifact::Installer::ManualInstaller) }
+        if cask.artifacts.any? { |artifact| artifact.is_a?(Artifact::Installer::ManualInstaller) }
+          puts 'Cask has a manual installer, skipping …'
+          return true
+        end
+        false
       end
     end
   end
