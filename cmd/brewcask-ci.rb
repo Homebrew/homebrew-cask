@@ -68,6 +68,7 @@ module Cask
                 puts 'Cask has a manual installer, skipping …'
               else
                 Installer.new(cask, verbose: true).uninstall
+              end
               true
             rescue => e
               $stderr.puts e.message
