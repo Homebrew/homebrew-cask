@@ -24,5 +24,9 @@ cask 'miniconda' do
                '~/.continuum',
              ]
 
-  caveats "Please run the following to setup your shell:\nconda init $(basename $SHELL)"
+  caveats <<~EOS
+    Please run the following to setup your shell:
+
+      conda init "$(basename "${SHELL}")"
+  EOS
 end
