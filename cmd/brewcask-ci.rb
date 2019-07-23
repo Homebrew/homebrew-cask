@@ -65,7 +65,7 @@ module Cask
           overall_success &= step "brew cask uninstall #{cask.token}", "uninstall" do
             success = begin
               if manual_installer?(cask)
-                puts 'Cask has a manual installer, skipping …'
+                puts 'Cask has a manual installer, skipping...'
               else
                 Installer.new(cask, verbose: true).uninstall
               end
