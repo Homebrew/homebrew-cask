@@ -7,6 +7,8 @@ cask 'mutespotifyads' do
   name 'MuteSpotifyAds'
   homepage 'https://github.com/simonmeusel/MuteSpotifyAds'
 
+  depends_on macos: '>= :sierra'
+
   app 'MuteSpotifyAds.app'
 
   zap trash: '~/Library/SyncedPreferences/de.simonmeusel.MuteSpotifyAds.plist'
