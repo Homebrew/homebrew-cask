@@ -64,7 +64,10 @@ module Cask
 
           overall_success &= step "brew cask uninstall #{cask.token}", "uninstall" do
             success = begin
-              Installer.new(cask, verbose: true).uninstall unless manual_installer?(cask)
+              if manual_installer?(cask)
+                puts 'Cask has a manual installer, skipping …'
+              else
+                Installer.new(cask, verbose: true).uninstall
               true
             rescue => e
               $stderr.puts e.message
@@ -176,11 +179,7 @@ module Cask
       end
 
       def manual_installer?(cask)
-        if cask.artifacts.any? { |artifact| artifact.is_a?(Artifact::Installer::ManualInstaller) }
-          puts 'Cask has a manual installer, skipping …'
-          return true
-        end
-        false
+        cask.artifacts.any? { |artifact| artifact.is_a?(Artifact::Installer::ManualInstaller) }
       end
     end
   end
