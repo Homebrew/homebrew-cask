@@ -1,6 +1,6 @@
 cask 'soundsource' do
-  version '4.1.1'
-  sha256 '36f7b5547d378edbbd5de575dc1fdef32d7f2dfd9fbebe2ef8f6419f3545450a'
+  version '4.1.2'
+  sha256 '24a5e99328ae00f2e565dab706f9eca96c902111d696629783911dfce64cb11f'
 
   url 'https://rogueamoeba.com/soundsource/download/SoundSource.zip'
   appcast 'https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&bundleid=com.rogueamoeba.soundsource&version=4008000'
