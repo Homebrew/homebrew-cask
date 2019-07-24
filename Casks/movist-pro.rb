@@ -6,7 +6,7 @@ cask 'movist-pro' do
   url 'https://d2uukrxj8lf22z.cloudfront.net/MovistPro.app.zip'
   appcas 'https://s3.ap-northeast-2.amazonaws.com/update.cocoable.com/appcast.xml'
   name 'Movist Pro'
-  homepage 'https://movistprime.com/kr/'
+  homepage 'https://movistprime.com/'
 
   app 'Movist Pro.app'
 end
