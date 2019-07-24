@@ -1,6 +1,6 @@
 cask 'wechatwork' do
-  version '2.8.8.2002'
-  sha256 '06bf1c8205ef491ee9f8991b6ab4662723316f8eedd76cba7d35f9e42bd0c6b7'
+  version '2.8.9.2000'
+  sha256 '8abb796b1fcdf903b59013fb46fd1f2525a166d4acc5693f97708a6d4d67a7d6'
 
   url "https://dldir1.qq.com/foxmail/work_weixin/WXWork_#{version}.dmg"
   appcast 'https://www.macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://work.weixin.qq.com/wework_admin/commdownload?platform=mac'
