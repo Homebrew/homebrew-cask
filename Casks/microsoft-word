@@ -12,7 +12,9 @@ cask 'microsoft-word' do
 
   pkg "Microsoft_Word_#{version}_Installer.pkg"
 
-  uninstall pkgutil:   [],
+  uninstall pkgutil:   [
+                        'com.microsoft.package.Microsoft_Word.app'
+                       ],
             launchctl: []
 
   zap trash:     [],
