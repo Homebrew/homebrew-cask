@@ -158,8 +158,8 @@ begin
       rescue NeutralSystemExit => e
         skipped_prs << pr
       rescue => e
-        $stderr.puts e
-        $stderr.puts e.backtrace
+        puts e
+        puts e.backtrace
         failed_prs << pr
       end
     end
