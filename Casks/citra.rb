@@ -9,9 +9,7 @@ cask 'citra' do
 
   installer manual: 'citra-setup-mac.app'
 
-  uninstall delete: [
-                      '/Applications/Citra',
-                    ]
+  uninstall delete: '/Applications/Citra'
 
   zap trash: [
                '~/Library/Preferences/com.citra-emu.citra.plist',
