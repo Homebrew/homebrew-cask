@@ -1,6 +1,6 @@
 cask 'scrutiny' do
-  version '9.0.7'
-  sha256 'c0a652dbca25ab14b77a4a37c8dea9e847f88e7c48af531fa39779c06012c8c5'
+  version '9.0.8'
+  sha256 'b36ebeb7be24d00e90e36654d72e00f41c63b18bf8f9f6a1aa503ca6d0246dc4'
 
   url 'https://peacockmedia.software/mac/scrutiny/scrutiny.dmg'
   appcast 'https://peacockmedia.software/mac/scrutiny/version_history.html'
