@@ -1,5 +1,5 @@
 cask 'graphicconverter' do
-  version '11.0,4003'
+  version '11.0.1,4040'
   sha256 '1c73db344b870252313962131c23e75a52e373ddf7f072fe959b596eea001675'
 
   # lemkesoft.info was verified as official when first introduced to the cask
