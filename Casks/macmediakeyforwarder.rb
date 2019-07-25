@@ -1,6 +1,6 @@
 cask 'macmediakeyforwarder' do
-  version '2.5'
-  sha256 '4fabc1cde4cb460f68c4801f310fb1f83f7db4b06055e9bac9c597d073c0ffd3'
+  version '2.6'
+  sha256 '9095ccf4f003d721fb227004f8f10832f4f524836eb2aaed119d1e067490bf00'
 
   url "http://milgra.com/downloads/mmkf/MacMediaKeyForwarder#{version}.zip"
   appcast 'http://milgra.com/downloads/mmkf/'
