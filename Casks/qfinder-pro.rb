@@ -9,5 +9,8 @@ cask 'qfinder-pro' do
 
   pkg 'Qfinder Pro.pkg'
 
-  uninstall pkgutil: 'qnap.com.qfinder.*'
+  uninstall pkgutil: [
+                       'qnap.com.qfinder.*',
+                       'qnap.com.Qfinder',
+                     ]
 end
