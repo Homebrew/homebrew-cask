@@ -14,8 +14,13 @@ cask 'microsoft-word' do
 
   uninstall pkgutil:   [
                         'com.microsoft.package.Microsoft_Word.app'
+                        'com.microsoft.package.Microsoft_AutoUpdate.app',
+                        'com.microsoft.pkg.licensing'
                        ],
-            launchctl: []
+            launchctl: [
+                        'com.microsoft.office.licensing.helper',
+                        'com.microsoft.office.licensingV2.helper'
+                       ]
 
   zap trash:     [],
       rmdir:     [],
