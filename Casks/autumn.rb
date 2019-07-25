@@ -8,5 +8,7 @@ cask 'autumn' do
   name 'Autumn'
   homepage 'https://apandhi.github.io/Autumn/'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'Autumn.app'
 end
