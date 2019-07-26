@@ -17,7 +17,10 @@ cask 'wechat' do
 
   zap trash: [
                '~/Library/Application Scripts/com.tencent.xinWeChat',
+               '~/Library/Caches/com.tencent.xinWeChat',
                '~/Library/Containers/com.tencent.xinWeChat',
+               '~/Library/Cookies/com.tencent.xinWeChat.binarycookies',
                '~/Library/Group Containers/$(TeamIdentifierPrefix)com.tencent.xinWeChat',
+               '~/Library/Preferences/com.tencent.xinWeChat.plist',
              ]
 end
