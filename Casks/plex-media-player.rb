@@ -7,6 +7,7 @@ cask 'plex-media-player' do
   name 'Plex Media Player'
   homepage 'https://www.plex.tv/'
 
+  auto_updates true
   depends_on macos: '>= :yosemite'
 
   app 'Plex Media Player.app'
