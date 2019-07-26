@@ -5,7 +5,6 @@ cask 'powerpanel' do
   # dl4jz3rbrsfum.cloudfront.net was verified as official when first introduced to the cask
   url "https://dl4jz3rbrsfum.cloudfront.net/software/ppm#{version.no_dots}.dmg"
   name 'CyberPower PowerPanel Personal'
-  name 'PowerPanel'
   homepage 'https://www.cyberpowersystems.com/products/software/power-panel-personal/'
 
   depends_on macos: '>= :el_capitan'
