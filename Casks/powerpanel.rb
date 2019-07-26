@@ -7,7 +7,7 @@ cask 'powerpanel' do
   name 'CyberPower PowerPanel Personal'
   homepage 'https://www.cyberpowersystems.com/products/software/power-panel-personal/'
 
-  depends_on macos: '>= :el_capitan'
+  depends_on macos: '>= :sierra'
 
   app 'PowerPanel.app'
 
