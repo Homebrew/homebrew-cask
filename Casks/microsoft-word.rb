@@ -4,6 +4,7 @@ cask 'microsoft-word' do
 
   # officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate was verified as official when first introduced to the cask
   url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Word_#{version}_Installer.pkg"
+  appcast "https://docs.microsoft.com/en-us/officeupdates/update-history-office-for-mac"
   name 'Microsoft Word'
   homepage 'https://products.office.com/mac/microsoft-office-for-mac/'
 
