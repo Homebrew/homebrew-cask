@@ -1,6 +1,6 @@
 cask 'youdaodict' do
-  version '161'
-  sha256 'e5ab7081c48420353f34234b30ebe5600a002e9d01a24ef1682afffbcdfaa167'
+  version '163'
+  sha256 '18d17a59c0e1a981c772ef53fd6056f4f6f45908bdecfbe7232f62581c5c94cf'
 
   url 'http://codown.youdao.com/cidian/download/MacDict.dmg'
   appcast 'https://cidian.youdao.com/mac-update/macdict_update.xml'

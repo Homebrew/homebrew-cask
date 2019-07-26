@@ -1,6 +1,6 @@
 cask 'ballast' do
-  version '1.2.0'
-  sha256 '6976fb45da9648d4571e2cfefa6991acf53b85c4b3767887208130226c38d82c'
+  version '1.2.1'
+  sha256 '947c0c417ddf0fa0abcdb4d8e9b49f9e26bf17bd3590261f0d8ca1acabe8cf97'
 
   # github.com/jamsinclair/ballast was verified as official when first introduced to the cask
   url "https://github.com/jamsinclair/ballast/releases/download/v#{version}/ballast-v#{version}.zip"

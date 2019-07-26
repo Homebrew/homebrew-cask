@@ -1,6 +1,6 @@
 cask 'eudic' do
-  version '3.8.9'
-  sha256 '918085753c4999a3218522d747ee12e975d995f7a36e1be960e3991a92e3da60'
+  version '3.9.1'
+  sha256 '3390296afeec426aa324bfd7c4bcc989cb864e43c5fe98ffebec5a91f8c52a18'
 
   # static.frdic.com was verified as official when first introduced to the cask
   url 'https://static.frdic.com/pkg/eudicmac.dmg'

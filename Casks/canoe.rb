@@ -3,6 +3,7 @@ cask 'canoe' do
   sha256 '350c5df52e04cdf8ecb1a4470633609a128f8ffd67d8394b851d69c576750f9d'
 
   url "https://getcanoe.io/files/#{version}/canoe-osx64-#{version}.zip"
+  appcast 'https://getcanoe.io/download/'
   name 'Canoe'
   homepage 'https://getcanoe.io/'
 

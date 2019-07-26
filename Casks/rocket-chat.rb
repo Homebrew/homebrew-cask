@@ -8,6 +8,8 @@ cask 'rocket-chat' do
   name 'Rocket.Chat'
   homepage 'https://rocket.chat/'
 
+  auto_updates true
+
   app 'Rocket.Chat.app'
 
   zap trash: [

@@ -8,6 +8,7 @@ cask 'ipsecuritas' do
   end
 
   url "http://www.lobotomo.com/products/downloads/IPSecuritas%20#{version}.dmg"
+  appcast 'http://www.lobotomo.com/products/IPSecuritas/'
   name 'IPSecuritas'
   homepage 'http://www.lobotomo.com/products/IPSecuritas/'
 

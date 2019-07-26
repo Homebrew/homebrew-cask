@@ -1,10 +1,10 @@
 cask 'hashbackup' do
-  version '2282'
-  sha256 '7a699886fdc4338ac05522feb194f5010caefbfbff559fd51478bca819fc2647'
+  version '2376'
+  sha256 'a173e966ce4482d112b97e4fbe1a477b14675e8c1c11aecbc2760560bd35acfc'
 
-  url "http://www.hashbackup.com/download/hb-#{version}-mac-64bit.tar.gz"
+  url "http://upgrade.hashbackup.com/#{version}/hb.r#{version}.Darwin.x86_64.bz2"
   name 'hashbackup'
   homepage 'http://www.hashbackup.com/'
 
-  binary "hb-#{version}/hb"
+  binary "hb.r#{version}.Darwin.x86_64", target: 'hb'
 end

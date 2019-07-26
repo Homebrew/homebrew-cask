@@ -1,6 +1,6 @@
 cask 'ezip' do
-  version '1.7.2'
-  sha256 '555110185f54dcd1dda9186f6baa85d0ea23b99e12f565e7a7a12597e8f407b3'
+  version '1.7.5'
+  sha256 '21b137cb41f561b0438d792680c8be3ae0dcb1a4fae949a5c7f4d09050dd9e1a'
 
   url "https://cdn.awehunt.com/ezip/release/eZip_V#{version}.dmg"
   appcast 'https://ezip.awehunt.com/'

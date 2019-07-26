@@ -1,8 +1,10 @@
 cask 'cineplay' do
-  version '1.5.5.1'
-  sha256 '34d8ecd90276253fc7ca0e8332f4d6322b294a6f44a6c495ca7292411a02841a'
+  version '1.6.0.0'
+  sha256 'd460eaa7a46b95775a78da465f882858c05ed4296863ea12505c784830f67ae0'
 
   url "https://www.digitalrebellion.com/download/cineplay?version=#{version.no_dots}"
+  appcast 'https://www.digitalrebellion.com/cineplay/download',
+          configuration: version.no_dots
   name 'CinePlay'
   homepage 'https://www.digitalrebellion.com/cineplay/'
 

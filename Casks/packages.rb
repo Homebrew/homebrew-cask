@@ -7,6 +7,8 @@ cask 'packages' do
   name 'Packages'
   homepage 'http://s.sudre.free.fr/Software/Packages/about.html'
 
+  auto_updates true
+
   pkg 'packages/Packages.pkg'
 
   uninstall script: 'Extras/uninstall.sh'

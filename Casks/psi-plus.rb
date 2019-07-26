@@ -8,6 +8,8 @@ cask 'psi-plus' do
   name 'Psi+'
   homepage 'https://psi-plus.com/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Psi+.app'
 
   uninstall quit: 'com.psi-plus'

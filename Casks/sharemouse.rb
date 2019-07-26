@@ -2,9 +2,9 @@ cask 'sharemouse' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.keyboard-and-mouse-sharing.com/ShareMouseSetup.dmg'
+  url 'https://www.sharemouse.com/ShareMouseSetup.dmg'
   name 'ShareMouse'
-  homepage 'http://www.keyboard-and-mouse-sharing.com/'
+  homepage 'https://www.sharemouse.com/'
 
   app 'ShareMouse.app'
 end

@@ -1,6 +1,6 @@
 cask 'nzbget' do
   version '21.0'
-  sha256 '8ef46d8ae00e43ef7d169ee406e72d1289985e1f4f169d2759c4811364fba32b'
+  sha256 'b21c7066330e8914f67dbfff197b9ec7c42daf61334851158460c4b71dfdeded'
 
   # github.com/nzbget/nzbget was verified as official when first introduced to the cask
   url "https://github.com/nzbget/nzbget/releases/download/v#{version}/nzbget-#{version}-bin-macos.zip"

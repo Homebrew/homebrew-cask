@@ -1,6 +1,6 @@
 cask 'qq' do
-  version '6.5.3'
-  sha256 'f8c2db99ace8e5ead93ced6b01ee29460937cd92b9b9df783f2c620306e52a48'
+  version '6.5.5'
+  sha256 '56724bd347d7797f91b90b49aac46bb13d954fff4028e64734781fe810b0a1e2'
 
   url "https://dldir1.qq.com/qqfile/QQforMac/QQ_V#{version}.dmg"
   appcast 'https://im.qq.com/macqq/'

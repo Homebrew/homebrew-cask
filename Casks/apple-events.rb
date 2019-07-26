@@ -1,6 +1,6 @@
 cask 'apple-events' do
-  version '1.4'
-  sha256 'a29d998f1b8c297c93934f45294e1798cfcf5a47123fd189f7d10bc5ff479208'
+  version '1.5'
+  sha256 'c67f1d88868b85ec33d2d1b13339affed60bfafb8fc7c72f010c192b236e558f'
 
   url "https://github.com/insidegui/AppleEvents/releases/download/#{version}/AppleEvents_v#{version}.zip"
   appcast 'https://github.com/insidegui/AppleEvents/releases.atom'

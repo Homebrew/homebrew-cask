@@ -1,22 +1,23 @@
 cask 'anka-flow' do
-  version '1.4.4.105'
-  sha256 '7bad676c0286db3309edc0c66a65709cab0be0344ef208aec491ccd6081f0bea'
+  version '2.0.1.109'
+  sha256 '4a3a6d949f32461657375265f76578261d9e59359cd47843e6115b1d129651ba'
 
   # d1efqjhnhbvc57.cloudfront.net was verified as official when first introduced to the cask
-  url "https://d1efqjhnhbvc57.cloudfront.net/AnkaFlow-#{version}.pkg",
+  url "https://d1efqjhnhbvc57.cloudfront.net/Anka-#{version}.pkg",
       referer: 'https://veertu.com/download-anka-run/'
-  appcast 'https://ankadoc.bitbucket.io/release-notes/index.html'
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://veertu.com/downloads/ankaflow-latest'
   name 'Veertu Anka Flow'
   homepage 'https://veertu.com/'
 
   depends_on macos: '>= :yosemite'
 
-  pkg "AnkaFlow-#{version}.pkg"
+  pkg "Anka-#{version}.pkg"
 
   uninstall launchctl: [
                          'com.veertu.nlimit',
                          'com.veertu.vlaunch',
                          'com.veertu.anka.lupd',
+                         'com.veertu.anka.ankakbd',
                        ],
             script:    {
                          executable: '/Library/Application Support/Veertu/Anka/tools/uninstall.sh',

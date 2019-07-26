@@ -1,6 +1,6 @@
 cask 'vlc' do
-  version '3.0.6'
-  sha256 '0c807a2e352fd6fe7e591fe01a7a53794b7d817e1e1eda3f673df06f26db27d5'
+  version '3.0.7.1'
+  sha256 '127607d050a32a4daedc048c833d8fc1adb9141f166b7b257401057705a842be'
 
   url "https://get.videolan.org/vlc/#{version}/macosx/vlc-#{version}.dmg"
   appcast 'https://download.videolan.org/pub/videolan/vlc/'

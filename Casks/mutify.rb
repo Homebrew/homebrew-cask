@@ -1,6 +1,6 @@
 cask 'mutify' do
-  version '1.1.1'
-  sha256 '1ac19cef9d59cd1162ddfbd97c7bbe882159c763458b0fc5ce19690f433b673c'
+  version '1.1.2'
+  sha256 '120b414482d53ee30949e72e5b2e508a30882cb915ece095ed16fa3e00d42087'
 
   url 'https://storage.mutify.app/data/Mutify.dmg'
   appcast 'https://storage.mutify.app/data/appcast.xml'

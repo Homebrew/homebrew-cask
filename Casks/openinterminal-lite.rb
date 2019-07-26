@@ -1,8 +1,8 @@
 cask 'openinterminal-lite' do
-  version '0.4.1'
-  sha256 '1c78a501c4fe70bef3194a893b0b5683a470a2c79ab083f5c66f2240860b4bc8'
+  version '1.0.0'
+  sha256 '66ab736ca0b98c97049ba549595197aeac36f2a7a796800ce68b370860ba1c0d'
 
-  url "https://github.com/Ji4n1ng/OpenInTerminal/releases/download/#{version}/OpenInTerminal-Lite.zip"
+  url "https://github.com/Ji4n1ng/OpenInTerminal/releases/download/#{version}/OpenInTerminal-Lite.app.zip"
   appcast 'https://github.com/Ji4n1ng/OpenInTerminal/releases.atom'
   name 'OpenInTerminal-Lite'
   homepage 'https://github.com/Ji4n1ng/OpenInTerminal'

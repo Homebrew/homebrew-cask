@@ -1,6 +1,6 @@
 cask 'taskpaper' do
-  version '3.8.4'
-  sha256 'aa4812c21d41a32ccdb729de409dbf079dbcaa8230f4182b6433a004dd09b676'
+  version '3.8.6'
+  sha256 'b2c439c45c842e692e25a9d186204c5df62c6d2878cd3b98e2c452e5a17fac7f'
 
   url "https://www.taskpaper.com/assets/app/TaskPaper-#{version}.dmg"
   appcast 'https://www.taskpaper.com/assets/app/TaskPaper.rss'

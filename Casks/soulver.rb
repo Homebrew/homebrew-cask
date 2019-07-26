@@ -1,20 +1,20 @@
 cask 'soulver' do
-  version '2.6.9-6055'
-  sha256 'e8f96895e43d28177f458404bfc082ebc940c66ce6f425cdceeedab9389272bf'
+  version '3.1.0-39'
+  sha256 '3bceea37feb7f041e41762b320139a558cf2ee75c812239496a4cd392b7e4063'
 
-  url "https://www.acqualia.com/files/sparkle/soulver_#{version}.zip"
-  appcast "https://www.acqualia.com/soulver/appcast/soulver#{version.major}.xml"
+  url "https://soulver.app/mac/sparkle/soulver-#{version}.zip"
+  appcast 'https://soulver.app/mac/sparkle/appcast.xml'
   name 'Soulver'
-  homepage 'https://www.acqualia.com/soulver/'
+  homepage 'https://soulver.app/'
 
   auto_updates true
-  depends_on macos: '>= :yosemite'
+  depends_on macos: '>= :mojave'
 
-  app 'Soulver.app'
+  app "Soulver #{version.major}.app"
 
   zap trash: [
-               '~/Library/Application Support/Soulver',
-               '~/Library/Preferences/com.acqualia.soulver.plist',
-               '~/Library/Autosave Information/Unsaved Soulver Document*',
+               '~/Library/Application Support/Soulver 3',
+               '~/Library/Application Support/app.soulver.mac',
+               '~/Library/Preferences/app.soulver.mac.plist',
              ]
 end

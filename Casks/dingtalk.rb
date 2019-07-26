@@ -1,9 +1,8 @@
 cask 'dingtalk' do
-  version '4.6.25.0'
-  sha256 '2a026d3a8fb141825dc59694f24086fbce4dc86583abec2ea69291fc30f485ba'
+  version '4.6.39.3'
+  sha256 'fd2191c2a3233253a6cd2e05050fa1dc6f27945ce5ae0492fce6c52b695c3116'
 
-  # download.alicdn.com/dingtalk-desktop was verified as official when first introduced to the cask
-  url "https://download.alicdn.com/dingtalk-desktop/mac_dmg/Release/DingTalk_v#{version}.dmg"
+  url "https://dtapp-pub.dingtalk.com/dingtalk-desktop/mac_dmg/Release/DingTalk_v#{version}.dmg"
   appcast 'https://im.dingtalk.com/manifest/appcast_en.xml'
   name 'DingTalk'
   name '钉钉'

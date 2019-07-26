@@ -1,6 +1,6 @@
 cask 'gb-studio' do
-  version '1.0.0'
-  sha256 '2906c0f4e9a176820f66932e311de4661660679f224f2ebaf9f86b3faf5004b8'
+  version '1.1.0'
+  sha256 '86ff5ae6a9f8955da7c06e839b480c5e37f06f422375997e0a27063c849e6e65'
 
   # github.com/chrismaltby/gb-studio was verified as official when first introduced to the cask
   url "https://github.com/chrismaltby/gb-studio/releases/download/v#{version}/GB.Studio-darwin-x64-#{version}.zip"

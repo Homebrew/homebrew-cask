@@ -89,7 +89,7 @@ def merge_pull_request(pr, statuses = GitHub.open_api(pr.fetch("statuses_url")))
 
     cask_path = diff.files.first.a_path
 
-    out, _ = system_command! 'git', args: ['-C', tap.path, 'log', '--pretty=format:', '-G', '\s+version\s+\'', '--follow', '-p', '--', cask_path]
+    out, _ = system_command! 'git', args: ['-C', tap.path, 'log', '--pretty=format:', '-G', '\s+version\s+\'', '--follow', '--find-renames=60%', '--patch', '--', cask_path]
 
     version_diff = GitDiff.from_string(out)
     previous_versions = version_diff.additions.select { |l| l.version? }.map { |l| l.version }.uniq
@@ -158,8 +158,8 @@ begin
       rescue NeutralSystemExit => e
         skipped_prs << pr
       rescue => e
-        $stderr.puts e
-        $stderr.puts e.backtrace
+        puts e
+        puts e.backtrace
         failed_prs << pr
       end
     end

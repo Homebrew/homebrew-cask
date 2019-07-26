@@ -5,7 +5,7 @@ cask 'gitfox' do
   # storage.googleapis.com/gitfox was verified as official when first introduced to the cask
   url 'https://storage.googleapis.com/gitfox/Gitfox.latest.stable.zip'
   name 'Gitfox'
-  homepage 'https://beta.gitfox.app/'
+  homepage 'https://www.gitfox.app/'
 
   app 'Gitfox.app'
 

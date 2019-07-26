@@ -1,12 +1,13 @@
 cask 'vscodium' do
-  version '1.33.1'
-  sha256 '16728204799226611c1c62e089f10a4247333c3512857209efb23f6aeaae8a44'
+  version '1.36.1'
+  sha256 'bccae4e63a076b1a9bdc21d155ed9aa67a4f7fe213a203faf222351c569e299f'
 
   url "https://github.com/VSCodium/vscodium/releases/download/#{version}/VSCodium-darwin-#{version}.zip"
   appcast 'https://github.com/VSCodium/vscodium/releases.atom'
   name 'VSCodium'
   homepage 'https://github.com/VSCodium/vscodium'
 
+  auto_updates true
   conflicts_with cask: 'visual-studio-code'
 
   app 'VSCodium.app'

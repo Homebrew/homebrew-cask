@@ -5,7 +5,7 @@ cask 'jmetrik' do
   url "https://itemanalysis.com/jmetrik/v#{version.dots_to_underscores}/jmetrik_macos_#{version.dots_to_underscores}_java7.dmg"
   appcast 'https://itemanalysis.com/jmetrik-download/'
   name 'jMetrik'
-  homepage 'http://itemanalysis.com/'
+  homepage 'https://itemanalysis.com/'
 
   installer script: {
                       executable: 'jMetrik Installer.app/Contents/MacOS/JavaApplicationStub',
