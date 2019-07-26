@@ -1,6 +1,6 @@
 cask 'upic' do
-  version '0.7.5'
-  sha256 'e4d1072d09f7793ec3e4f42818a2629ac0186ab471f840fbfcb3d7454b1a564f'
+  version '0.8.0'
+  sha256 '8a9a81f7e05398126e99b6607fc2ae30630bd7c58f4b9112c636bbebdfa102a3'
 
   url "https://github.com/gee1k/uPic/releases/download/v#{version}/uPic.dmg"
   appcast 'https://github.com/gee1k/uPic/releases.atom'
@@ -12,7 +12,6 @@ cask 'upic' do
   app 'UPic.app'
 
   zap trash: [
-               '~/Library/Preferences/com.svend.uPic.plist',
                '~/Library/Caches/com.svend.uPic',
              ]
 end
