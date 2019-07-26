@@ -10,7 +10,5 @@ cask 'backlog' do
 
   app 'Backlog-darwin-x64/Backlog.app'
 
-  zap trash: [
-               '~/Library/Application Support/Backlog',
-             ]
+  zap trash: '~/Library/Application Support/Backlog'
 end
