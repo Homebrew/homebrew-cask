@@ -7,7 +7,7 @@ cask 'triple-cheese' do
   name 'Triple Cheese'
   homepage 'https://u-he.com/products/triplecheese/'
 
-  pkg "TripleCheese#{version.after_comma}Mac/TripleCheese #{version} Installer.pkg"
+  pkg "TripleCheese#{version.after_comma}Mac/TripleCheese #{version.before_comma}.#{version.after_comma} Installer.pkg"
 
   uninstall pkgutil: [
                        'com.u-he.TripleCheese.aax.pkg',
