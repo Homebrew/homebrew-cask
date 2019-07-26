@@ -19,3 +19,15 @@ There are a few different ways the `appcast` can be determined:
 * An appcast can be any URL hosted by the app’s developer that changes every time a new release is out (e.g. a changelog HTML page). (Example: [`razorsql.rb`](https://github.com/Homebrew/homebrew-cask/blob/645dbb8228ec2f1f217ed1431e188687aac13ca5/Casks/razorsql.rb#L6))
 
 The [`find_appcast`](https://github.com/Homebrew/homebrew-cask/blob/master/developer/bin/find_appcast) script can automatically identify some of these. You can run it with `"$(brew --repository)/Library/Taps/homebrew/homebrew-cask/developer/bin/find_appcast" '{{/path/to/software.app}}'` to find the `appcast` automatically.
+
+## Parameters
+
+| key              | value       |
+| ---------------- | ----------- |
+| `configuration:` | a custom string for `brew cask audit --appcast {{cask_file}}` to check against.
+
+Example of using `configuration`: [`hwsensors.rb`](https://github.com/Homebrew/homebrew-cask/blob/546f1c8276ebd0c4e3c8aac7a344931ee53726cb/Casks/hwsensors.rb#L6L7)
+
+The main casks repo only accepts submissions for stable versions of software (and [documented exceptions](https://github.com/Homebrew/homebrew-cask/blob/master/doc/development/adding_a_cask.md#but-there-is-no-stable-version)), but it still gets pull requests for unstable versions. By checking the submitted `version` against the contents of an appcast, we can better detect these invalid cases.
+
+But if a `version` is `6.26.1440` and the appcast’s contents only show `6.24`, the check for “is `version` in the appcast feed” will fail. With `configuration`, the check is told to “look for this string instead of `version`”. In the example, `configuration: version.major_minor` is saying “look for `6.24`”, making the check succeed.
