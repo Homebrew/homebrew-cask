@@ -13,12 +13,12 @@ cask 'microsoft-word' do
   pkg "Microsoft_Word_#{version}_Installer.pkg"
 
   uninstall pkgutil:   [
-                        'com.microsoft.package.Microsoft_Word.app',
-                        'com.microsoft.package.Microsoft_AutoUpdate.app',
-                        'com.microsoft.pkg.licensing',
+                         'com.microsoft.package.Microsoft_Word.app',
+                         'com.microsoft.package.Microsoft_AutoUpdate.app',
+                         'com.microsoft.pkg.licensing',
                        ],
             launchctl: [
-                        'com.microsoft.office.licensing.helper',
-                        'com.microsoft.office.licensingV2.helper',
+                         'com.microsoft.office.licensing.helper',
+                         'com.microsoft.office.licensingV2.helper',
                        ]
 end
