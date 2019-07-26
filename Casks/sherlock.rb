@@ -7,5 +7,7 @@ cask 'sherlock' do
   name 'Sherlock'
   homepage 'https://sherlock.inspiredcode.io/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Sherlock.app'
 end
