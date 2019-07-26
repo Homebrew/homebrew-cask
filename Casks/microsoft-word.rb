@@ -21,6 +21,7 @@ cask 'microsoft-word' do
             launchctl: [
                          'com.microsoft.office.licensingV2.helper',
                        ]
+
   zap trash:     [
                    '~/Library/Application Scripts/com.microsoft.Word',
                    '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.word.sfl*',
