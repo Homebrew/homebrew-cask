@@ -1,4 +1,4 @@
-cask 'triple-cheese' do
+cask 'triplecheese' do
   version '1.2.1,3898'
   sha256 'd9a3e5f3e801513a74ec725bfcb722c0df3e96557a6be8813479f9ee73b59f8f'
 
