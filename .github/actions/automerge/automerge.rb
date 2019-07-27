@@ -89,7 +89,10 @@ def merge_pull_request(pr, statuses = GitHub.open_api(pr.fetch("statuses_url")))
 
     cask_path = diff.files.first.a_path
 
-    out, _ = system_command! 'git', args: ['-C', tap.path, 'log', '--pretty=format:', '-G', '\s+version\s+\'', '--follow', '--find-renames=60%', '--patch', '--', cask_path]
+    out, _ = system_command! 'git', args: ['-C', tap.path, 'log', '--pretty=format:', '-G', '\s+version\s+\'', '--follow', '--patch', '--', cask_path]
+
+    # Workaround until https://github.com/anolson/git_diff/pull/16 is merged and released.
+    out.gsub!(/^copy (from|to)/, 'rename \1')
 
     version_diff = GitDiff.from_string(out)
     previous_versions = version_diff.additions.select { |l| l.version? }.map { |l| l.version }.uniq
