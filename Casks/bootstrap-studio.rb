@@ -5,7 +5,6 @@ cask 'bootstrap-studio' do
   url "https://bootstrapstudio.io/releases/desktop/#{version}/Bootstrap%20Studio%20#{version}.zip"
   name 'Bootstrap Studio'
   homepage 'https://bootstrapstudio.io/'
-  container nested: 'Bootstrap Studio ${version}.zip'
   
   app 'Bootstrap Studio.app'
 end
