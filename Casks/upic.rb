@@ -12,6 +12,7 @@ cask 'upic' do
   app 'UPic.app'
 
   zap trash: [
+               '~/Library/Preferences/com.svend.uPic.plist',
                '~/Library/Caches/com.svend.uPic',
              ]
 end
