@@ -158,6 +158,13 @@ begin
       rescue NeutralSystemExit => e
         skipped_prs << pr
       rescue => e
+        repo   = pr.fetch("base").fetch("repo").fetch("full_name")
+        number = pr.fetch("number")
+
+        tap = Tap.fetch(repo)
+        pr_name = "#{tap.name}##{number}"
+
+        puts "Error while processing #{pr_name}:"
         puts e
         puts e.backtrace
         failed_prs << pr
