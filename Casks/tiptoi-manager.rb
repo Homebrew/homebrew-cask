@@ -10,7 +10,7 @@ cask 'tiptoi-manager' do
   pkg 'tiptoi_Manager_Installer.pkg'
 
   uninstall pkgutil: 'com.ravensburger.tiptoi.TipToiBindings',
-            delete: '/Applications/tiptoi®\ Manager.app'
+            delete: '/Applications/tiptoi®\ Manager.app',
             quit: 'com.ravensburger.tiptoimanager'
 
   zap trash: [
