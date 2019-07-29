@@ -14,4 +14,9 @@ cask 'localdev' do
                       '~/Library/Preferences/io.pantheon.local.helper.plist',
                       '~/Library/Preferences/io.pantheon.local.plist',
                     ]
+
+  zap trash: [
+               '~/Localdev',
+               '~/.pantheonlocaldev',
+             ]
 end
