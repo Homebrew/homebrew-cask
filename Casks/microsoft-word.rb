@@ -6,7 +6,7 @@ cask 'microsoft-word' do
   url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Word_#{version}_Installer.pkg"
   appcast 'https://docs.microsoft.com/en-us/officeupdates/update-history-office-for-mac'
   name 'Microsoft Word'
-  homepage 'https://products.office.com/mac/microsoft-office-for-mac/'
+  homepage 'https://products.office.com/en-US/word'
 
   auto_updates true
   depends_on macos: '>= :sierra'
@@ -18,9 +18,7 @@ cask 'microsoft-word' do
                          'com.microsoft.package.Microsoft_AutoUpdate.app',
                          'com.microsoft.pkg.licensing',
                        ],
-            launchctl: [
-                         'com.microsoft.office.licensingV2.helper',
-                       ]
+            launchctl: 'com.microsoft.office.licensingV2.helper'
 
   zap trash:     [
                    '~/Library/Application Scripts/com.microsoft.Word',
@@ -46,7 +44,5 @@ cask 'microsoft-word' do
                    'com.microsoft.autoupdate.helper',
                    'com.microsoft.update.agent',
                  ],
-      pkgutil:   [
-                   'com.microsoft.package.Microsoft_AutoUpdate.app',
-                 ]
+      pkgutil:   'com.microsoft.package.Microsoft_AutoUpdate.app'
 end
