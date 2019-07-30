@@ -1,4 +1,4 @@
-cask 'graalvm' do
+cask 'graalvm-ce' do
   version '19.1.1'
   sha256 '85711322866ddacda88d3a592c76520188b3d7c40b6c39cd9943856e72eb6c72'
 
