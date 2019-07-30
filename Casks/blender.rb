@@ -9,7 +9,7 @@ cask 'blender' do
   homepage 'https://www.blender.org/'
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
-  app "blender-#{version}-macOS/blender.app", target: 'Blender.app'
+  app "blender-#{version}-macOS/Blender.app", target: 'Blender.app'
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/blender.wrapper.sh"
   binary shimscript, target: 'blender'
@@ -20,7 +20,7 @@ cask 'blender' do
 
     IO.write shimscript, <<~EOS
       #!/bin/bash
-      '#{appdir}/Blender.app/Contents/MacOS/blender' "$@"
+      '#{appdir}/Blender.app/Contents/MacOS/Blender' "$@"
     EOS
   end
 end
