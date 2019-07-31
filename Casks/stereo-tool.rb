@@ -7,5 +7,5 @@ cask 'stereo-tool' do
   name 'Stereo Tool'
   homepage 'https://www.stereotool.com/'
 
-  app 'stereo_tool.app'
+  app 'ThimeoStereoTool.app'
 end
