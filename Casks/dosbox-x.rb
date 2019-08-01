@@ -6,7 +6,7 @@ cask 'dosbox-x' do
   url "https://github.com/joncampbell123/dosbox-x/releases/download/dosbox-x-v#{version.before_comma}/dosbox-x-macosx-x64-#{version.after_comma}.zip"
   appcast 'https://github.com/joncampbell123/dosbox-x/releases.atom'
   name 'DOSBox-X'
-  homepage 'http://dosbox-x.com/'
+  homepage 'https://dosbox-x.com/'
 
   app 'dosbox-x/dosbox-x.app'
 end
