@@ -1,8 +1,8 @@
 cask 'dotnet' do
-  version '2.2.3'
-  sha256 '85fa291a86baaed7ae7b2806ae610d40e96155c15eb64ebbc8c9572d9f7534b9'
+  version '2.2.6'
+  sha256 'a11b08ccc66436443f7ba6d533c6f85c1711bd912274a07d2320fe9d2e669485'
 
-  url "https://download.visualstudio.microsoft.com/download/pr/872243f8-de92-480f-accd-9a22304cd3f9/aad669c10799a3e6e1deac73e8559c49/dotnet-runtime-#{version}-osx-x64.pkg"
+  url "https://dotnet.microsoft.com/download/thank-you/dotnet-runtime-#{version}-macos-x64-installer"
   appcast 'https://www.microsoft.com/net/download/macos'
   name '.Net Core Runtime'
   homepage 'https://www.microsoft.com/net/core#macos'
