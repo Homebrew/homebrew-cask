@@ -3,7 +3,7 @@ cask 'wireshark' do
   sha256 '71d0196e7368715958598c8286f5219eb24fad08acf1cfe9186ef19d29e04ae9'
 
   url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20Intel%2064.dmg"
-  appcast 'https://www.wireshark.org/download/osx/'
+  appcast 'https://www.macupdater.net/cgi-bin/extract_text/extract_text_split_easy.cgi?url=https://www.wireshark.org/download.html&splitter_1=stable&index_1=1&splitter_2=development&index_2=0'
   name 'Wireshark'
   homepage 'https://www.wireshark.org/'
 

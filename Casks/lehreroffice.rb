@@ -1,6 +1,6 @@
 cask 'lehreroffice' do
-  version '2019.10.1'
-  sha256 '32fa0adbcc8d013992e52dc1c0a10b56e811a3d845cecf0aa5996fa3852dd246'
+  version '2019.11.0'
+  sha256 '43405d814d9a2394b9bb98ad186ff292b674dfd4489f8c1e138ea132ff95a995'
 
   url 'https://www.lehreroffice.ch/lo/dateien/easy/lo_desktop_macos.dmg'
   appcast 'https://www.lehreroffice.ch/services/update/getcurrentversion.php?app=Desktop'

@@ -4,7 +4,7 @@ cask 'movist-pro' do
 
   # d2uukrxj8lf22z.cloudfront.net was verified as official when first introduced to the cask
   url 'https://d2uukrxj8lf22z.cloudfront.net/MovistPro.app.zip'
-  appcas 'https://s3.ap-northeast-2.amazonaws.com/update.cocoable.com/appcast.xml'
+  appcast 'https://s3.ap-northeast-2.amazonaws.com/update.cocoable.com/appcast.xml'
   name 'Movist Pro'
   homepage 'https://movistprime.com/'
 
