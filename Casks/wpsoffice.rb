@@ -1,5 +1,5 @@
 cask 'wpsoffice' do
-  version '1.3.1(1688)'
+  version '1.4.0(1935)'
   sha256 '7220f1f13079cdbe8ab439e9e4eff0124c6831cfc35a1a8ecdbb23459db0c68e'
 
   # package.mac.wpscdn.cn was verified as official when first introduced to the cask
