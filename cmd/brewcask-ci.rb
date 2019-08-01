@@ -11,7 +11,7 @@ module Cask
   class Cmd
     class Ci < AbstractCommand
       def run
-        unless ENV.key?("TRAVIS")
+        unless ENV.key?("CI")
           raise CaskError, "This command isn’t meant to be run locally."
         end
 
@@ -22,7 +22,7 @@ module Cask
           raise CaskError, "This command must be run from inside a tap directory."
         end
 
-        ruby_files_in_wrong_directory = modified_ruby_files - (modified_cask_files + modified_command_files)
+        ruby_files_in_wrong_directory = modified_ruby_files - (modified_cask_files + modified_command_files + modified_github_files)
 
         unless ruby_files_in_wrong_directory.empty?
           raise CaskError, "Casks are in the wrong directory:\n" +
@@ -40,6 +40,7 @@ module Cask
 
           overall_success &= step "brew cask audit #{cask.token}", "audit" do
             Auditor.audit(cask, audit_download: true,
+                                audit_appcast: true,
                                 check_token_conflicts: added_cask_files.include?(path),
                                 commit_range: ENV["TRAVIS_COMMIT_RANGE"])
           end
@@ -63,7 +64,11 @@ module Cask
 
           overall_success &= step "brew cask uninstall #{cask.token}", "uninstall" do
             success = begin
-              Installer.new(cask, verbose: true).uninstall
+              if manual_installer?(cask)
+                puts 'Cask has a manual installer, skipping...'
+              else
+                Installer.new(cask, verbose: true).uninstall
+              end
               true
             rescue => e
               $stderr.puts e.message
@@ -162,12 +167,20 @@ module Cask
         @modified_command_files ||= modified_files.select { |path| tap.command_file?(path) || path.ascend.to_a.last.to_s == "cmd" }
       end
 
+      def modified_github_files
+        @modified_github_files ||= modified_files.select { |path| path.to_s.start_with?(".github/") }
+      end
+
       def modified_cask_files
         @modified_cask_files ||= modified_files.select { |path| tap.cask_file?(path) }
       end
 
       def added_cask_files
         @added_cask_files ||= added_files.select { |path| tap.cask_file?(path) }
+      end
+
+      def manual_installer?(cask)
+        cask.artifacts.any? { |artifact| artifact.is_a?(Artifact::Installer::ManualInstaller) }
       end
     end
   end

@@ -1,10 +1,11 @@
 cask 'android-studio' do
-  version '3.2.1.0,181.5056338'
-  sha256 'b8d2b7add6a7c776d16a8e48bd35c3e2bba18b4717131d7b9a00fa416ebe4480'
+  version '3.4.2.0,183.5692245'
+  sha256 '8e3592438bf7c489eeb00f802b2727241ddafa77451d32a9b82ee76ec3437356'
 
   # google.com/dl/android/studio was verified as official when first introduced to the cask
   url "https://dl.google.com/dl/android/studio/install/#{version.before_comma}/android-studio-ide-#{version.after_comma}-mac.dmg"
-  appcast 'https://dl.google.com/android/studio/patches/updates.xml'
+  appcast 'https://dl.google.com/android/studio/patches/updates.xml',
+          configuration: version.major_minor_patch
   name 'Android Studio'
   homepage 'https://developer.android.com/studio/index.html'
 

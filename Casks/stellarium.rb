@@ -1,9 +1,9 @@
 cask 'stellarium' do
-  version '0.18.2'
-  sha256 '70ebd4c0259d246c0b45c5f350ae9582a893a292fa432f1db15d040390c39e4e'
+  version '0.19.1'
+  sha256 'e2d0fc688dd8e47c6f420610e4491003d519926c9ba1e5fffb0d5e17835b586d'
 
   # github.com/Stellarium/stellarium was verified as official when first introduced to the cask
-  url "https://github.com/Stellarium/stellarium/releases/download/v#{version.major_minor_patch}/Stellarium-#{version}.dmg"
+  url "https://github.com/Stellarium/stellarium/releases/download/v#{version}/Stellarium-#{version}.dmg"
   appcast 'https://github.com/Stellarium/stellarium/releases.atom'
   name 'Stellarium'
   homepage 'https://stellarium.org/'

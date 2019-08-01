@@ -4,6 +4,7 @@ cask 'keyboard-maestro' do
 
   # stairways.com was verified as official when first introduced to the cask
   url "https://files.stairways.com/keyboardmaestro-#{version.no_dots}.zip"
+  appcast 'https://www.keyboardmaestro.com/action/sivc?M&U&08248000&6ABF5EF7&xxxxxxxx&00000000&000010E0&KM&EN'
   name 'Keyboard Maestro'
   homepage 'https://www.keyboardmaestro.com/main/'
 

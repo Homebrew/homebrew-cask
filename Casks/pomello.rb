@@ -1,6 +1,6 @@
 cask 'pomello' do
-  version '0.10.3'
-  sha256 'fd8c11fec405f79c777386ce9f612c3bcc771f63f78266207cbfc5a0192f424d'
+  version '0.10.7'
+  sha256 '9535536d27a12947572343909d71510bdfd678a32e47720ffb1ff455b07adc7f'
 
   url 'https://pomelloapp.com/download/mac/latest'
   appcast 'https://pomelloapp.com/download/mac'

@@ -1,12 +1,13 @@
 cask 'mailbutler' do
-  version '2.2.1-10230'
-  sha256 'fcd6381ade07643f2a62222fbfc434b9395d15a09b1e3c538c78fc9d8ce7f5aa'
+  version '2,1523-11286'
+  sha256 'f44467d9e133a7a494a8363ff9f5da52fe9234f2b8516369189d1551b7595bc3'
 
-  # mailbutler-data.s3.amazonaws.com was verified as official when first introduced to the cask
-  url "https://mailbutler-data.s3.amazonaws.com/downloads/Mailbutler_#{version}.zip"
+  url "https://downloads.mailbutler.io/sparkle/public/Mailbutler_#{version.after_comma}.zip"
   appcast "https://www.mailbutler.io/appcast#{version.major}.php"
-  name 'MailButler'
+  name 'Mailbutler'
   homepage 'https://www.mailbutler.io/'
 
-  app 'MailButler.app'
+  depends_on macos: '>= :sierra'
+
+  app 'Mailbutler.app'
 end

@@ -7,7 +7,5 @@ cask 'textbar' do
   name 'TextBar'
   homepage 'http://richsomerfield.com/apps/'
 
-  depends_on macos: '>= :mountain_lion'
-
   app 'TextBar.app'
 end

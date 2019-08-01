@@ -1,6 +1,6 @@
 cask 'pliim' do
-  version '1.5.0'
-  sha256 '7e90a2f6300840b42dec5a29e5dbef5c46af493c386632e75ba3bb3ec25892f2'
+  version '1.7.0'
+  sha256 'cd44a3e8d0d58b431df288c3ce13a8032f76b270077ac488cb9db5d74e7d17a5'
 
   # github.com/zehfernandes/pliim was verified as official when first introduced to the cask
   url "https://github.com/zehfernandes/pliim/releases/download/v#{version}/Pliim.app.zip"

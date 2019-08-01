@@ -1,11 +1,13 @@
 cask 'busycontacts' do
-  version '1.3.1'
-  sha256 '7be2a61e524b29f9d3383c90cf1f33f24cd983dd301d8cd6a05a4de401c3b574'
+  version '1.3.5,130500'
+  sha256 '5300615705f44335d2eb80433a056518adee2fe224a97fedd409a1314c77dd7b'
 
   url 'https://www.busymac.com/download/BusyContacts.zip'
-  appcast 'https://www.busymac.com/busycontacts/releasenotes.html'
+  appcast 'https://www.busymac.com/busycontacts/news.plist'
   name 'BusyContacts'
   homepage 'https://www.busymac.com/busycontacts/index.html'
+
+  auto_updates true
 
   pkg 'BusyContacts Installer.pkg'
 

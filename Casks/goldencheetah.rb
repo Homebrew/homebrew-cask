@@ -8,7 +8,5 @@ cask 'goldencheetah' do
   name 'GoldenCheetah'
   homepage 'https://www.goldencheetah.org/'
 
-  depends_on macos: '>= :lion'
-
   app 'GoldenCheetah.app'
 end

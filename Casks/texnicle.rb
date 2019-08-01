@@ -8,7 +8,6 @@ cask 'texnicle' do
   homepage 'http://www.bobsoft-mac.de/texnicle/texnicle.html'
 
   auto_updates true
-  depends_on macos: '>= :mavericks'
 
   app 'TeXnicle.app'
 

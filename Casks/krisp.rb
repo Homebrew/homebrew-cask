@@ -1,10 +1,14 @@
 cask 'krisp' do
-  version '0.6.8'
-  sha256 '3bb1e8f497dd8e1d3e021352765c8f49efd8dfe9b592eee7ed52c122288b497b'
+  version '1.2.5'
+  sha256 '57b724f4df81d214ff2b02866fce9ecd1a1f1e1c7401930ba0ffd19c3296d205'
 
-  url "https://cdn.krisp.ai/installer/release/krisp_#{version}.pkg"
+  url "https://cdn.krisp.ai/mac/release/v#{version.major}.#{version.minor}/krisp_#{version}.pkg"
+  appcast 'https://krisp.ai/index.html'
   name 'Krisp'
   homepage 'https://krisp.ai/index.html'
+
+  auto_updates true
+  depends_on macos: '>= :sierra'
 
   pkg "krisp_#{version}.pkg"
 

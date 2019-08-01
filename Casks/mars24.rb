@@ -1,9 +1,10 @@
 cask 'mars24' do
   # note: "24" is not a version number, but an intrinsic part of the product name
-  version '7.1.3'
-  sha256 '78c40b1823f02ceb8de6ff6eb00461f272f0ce9305dda6c6f52361ed5cfb7489'
+  version '8.0.3'
+  sha256 '9f34d8988b30b49bfd1cdaf592276337a4a4b88b0f487cdfcc04e4658b2533dd'
 
   url "https://www.giss.nasa.gov/tools/mars24/download/Mars24MacOS-#{version}.dmg"
+  appcast 'https://www.giss.nasa.gov/tools/mars24/download/'
   name 'Mars24'
   homepage 'https://www.giss.nasa.gov/tools/mars24/'
 

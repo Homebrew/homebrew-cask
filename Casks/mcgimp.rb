@@ -1,6 +1,6 @@
 cask 'mcgimp' do
-  version '2.10.6'
-  sha256 '0776c1fd3a3c9ab137926465119275cd84f99ad0407ff1ff63bd21e479fdaa84'
+  version '2.10.8'
+  sha256 '995efc5a837bf2111915bd79d01bae1ba91973266e66e27dbe0a1e0ad58f1a3a'
 
   url "https://www.partha.com/downloads/McGimp-#{version}.app.zip"
   name 'McGimp'

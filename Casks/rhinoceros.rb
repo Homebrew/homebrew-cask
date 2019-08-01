@@ -1,6 +1,6 @@
 cask 'rhinoceros' do
-  version '5.5.2'
-  sha256 '68f06d10f2d21377674658270717b9da1b62e764e65be768071766a11da40a92'
+  version '5.5.4'
+  sha256 '385af9460b669a8e34296f1194c04f274e11b8e2aea3dd234498a0c729f00e73'
 
   # mcneel.com was verified as official when first introduced to the cask
   url "https://files.mcneel.com/Releases/Rhino/#{version.major}.0/Mac/Rhinoceros_#{version}.dmg"
@@ -9,7 +9,6 @@ cask 'rhinoceros' do
   homepage 'https://www.rhino3d.com/'
 
   auto_updates true
-  depends_on macos: '>= :mountain_lion'
 
   app 'Rhinoceros.app'
 

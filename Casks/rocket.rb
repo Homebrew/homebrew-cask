@@ -1,6 +1,6 @@
 cask 'rocket' do
-  version '1.4.1,48:1538003507'
-  sha256 '3121ef948d5fecb399634ea0687a6fc526429d631b4fc1e828028e62a2124a91'
+  version '1.5,53:1553802737'
+  sha256 '3241060ebedcb2e1ef6c2be623aa56cc0f3f56eb7b5e86c6e6b4b00632f994ed'
 
   # dl.devmate.com/net.matthewpalmer.Rocket was verified as official when first introduced to the cask
   url "https://dl.devmate.com/net.matthewpalmer.Rocket/#{version.after_comma.before_colon}/#{version.after_colon}/Rocket-#{version.after_comma.before_colon}.zip"

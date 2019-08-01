@@ -15,7 +15,5 @@ cask 'omnipresence' do
   name 'OmniPresence'
   homepage 'https://www.omnigroup.com/omnipresence'
 
-  depends_on macos: '>= :mavericks'
-
   app 'OmniPresence.app'
 end

@@ -1,9 +1,10 @@
 cask 'postman' do
-  version '6.5.3'
-  sha256 '28ca960206ca4d7e12c6bd45ba30baf035e3d536320e02f24a218cf32db6f8ad'
+  version '7.3.4'
+  sha256 'a72eee46c424ec75c13dc9c04d1c893106e6829b6dc42b9e2d60f6a34ec7b7e2'
 
   # dl.pstmn.io/download/version was verified as official when first introduced to the cask
   url "https://dl.pstmn.io/download/version/#{version}/osx64"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=https://dl.pstmn.io/download/latest/osx'
   name 'Postman'
   homepage 'https://www.getpostman.com/'
 

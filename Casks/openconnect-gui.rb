@@ -9,4 +9,9 @@ cask 'openconnect-gui' do
   homepage 'https://openconnect.github.io/openconnect-gui/'
 
   app "openconnect-gui/#{version}/OpenConnect-GUI.app"
+
+  zap delete: [
+                '~/Library/Application Support/OpenConnect-GUI Team',
+                '~/Library/Preferences/io.github.openconnect.openconnect-gui.plist',
+              ]
 end

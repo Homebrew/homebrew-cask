@@ -1,6 +1,6 @@
 cask 'dynamic-dark-mode' do
-  version '1.1.0'
-  sha256 'd1395739c0ce2423952012df02454f315be32e14b8b116df6beb9712cd3ff45e'
+  version '1.3.0'
+  sha256 'abbbbd294610d30d2991eba89249af561a33e677e455eb733a1a0df85a76e7a5'
 
   url "https://github.com/ApolloZhu/Dynamic-Dark-Mode/releases/download/#{version}/Dynamic_Dark_Mode-#{version}.zip"
   appcast 'https://github.com/ApolloZhu/Dynamic-Dark-Mode/releases.atom'

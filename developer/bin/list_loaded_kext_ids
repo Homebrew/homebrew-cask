@@ -1,45 +1,24 @@
 #!/bin/bash
-#
-# list_loaded_kext_ids
-#
 
-###
-### settings
-###
+readonly program="$(basename "${0}")"
 
-set -e               # exit on any uncaught error
-set +o histexpand    # don't expand history expressions
-shopt -s nocasematch # case-insensitive regular expressions
+function usage {
+  echo "
+    List Bundle IDs for currently loaded kernel extensions (kexts). Useful to identify kexts installed by packages. Kexts attributed to Apple are excluded from the output.
 
-###
-### main
-###
+    Usage:
+      ${program} [options]
 
-_list_loaded_kext_ids () {
-    /usr/sbin/kextstat -kl |             \
-    /usr/bin/cut -c53- |                 \
-    /usr/bin/cut -f1 -d' ' |             \
-    /usr/bin/egrep -v '^com\.apple\.'
+    Options:
+      -h, --help   Show this message.
+  " | sed -E 's/ {4}//'
 }
 
-# process args
-if [[ $1 =~ ^-+h(elp)?$ ]]; then
-    printf "list_loaded_kext_ids
-
-Print Bundle IDs for currently loaded Kernel Extensions (kexts)
-which may be useful in a Cask uninstall stanza, eg
-
-    uninstall kext: 'kext.bundle.id.goes.here'
-
-Kexts attributed to Apple are excluded from the output.
-
-See CONTRIBUTING.md for more information.
-
-"
-    exit
+if [[ "${1}" =~ ^(-h|--help)$ ]]; then
+  usage
+  exit 0
 fi
 
-# dispatch main
-_list_loaded_kext_ids "${@}"
-
-#
+/usr/sbin/kextstat -no-kernel -list-only | \
+  /usr/bin/awk '{print $6}' | \
+  /usr/bin/grep --invert-match '^com\.apple\.'

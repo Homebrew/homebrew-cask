@@ -1,7 +1,7 @@
 cask 'windows95' do
   # note: "95" is not a version number, but an intrinsic part of the product name
-  version '1.3.0'
-  sha256 '35b1a87a8e890e1f3355080432344f403a231d070f61c482c675a51f785154a6'
+  version '2.1.1'
+  sha256 '99c030b3bdce8a69629429e44da88855cce938e58c216f649e532d497bda4ca9'
 
   url "https://github.com/felixrieseberg/windows95/releases/download/v#{version}/windows95-macos-#{version}.zip"
   appcast 'https://github.com/felixrieseberg/windows95/releases.atom'

@@ -1,6 +1,6 @@
 cask 'kitty' do
-  version '0.13.1'
-  sha256 '63389f5f6bd72e21b558313076d88f0e7a39991805daaac166ff062898f54599'
+  version '0.14.3'
+  sha256 '0ae51c340e515134c0275705e46b61879a8b536ab2be3f8d98f801fe76368d65'
 
   url "https://github.com/kovidgoyal/kitty/releases/download/v#{version}/kitty-#{version}.dmg"
   appcast 'https://github.com/kovidgoyal/kitty/releases.atom'
@@ -10,6 +10,7 @@ cask 'kitty' do
   depends_on macos: '>= :sierra'
 
   app 'kitty.app'
+  binary "#{appdir}/kitty.app/Contents/MacOS/kitty"
 
   zap trash: [
                '~/.config/kitty',

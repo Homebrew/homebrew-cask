@@ -1,9 +1,9 @@
 cask 'dbngin' do
-  version '14'
-  sha256 '5c03167ef76f3a3df27dd8d026407da6a49da3e7badfc2c0a50cc23a61393cc3'
+  version '20'
+  sha256 'cc91a7b96a26efb76f9da6eff8d5b0b699102fabb78e8d4af72387a1f4b841f3'
 
-  # s3.amazonaws.com/dbngin-osx-builds was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/dbngin-osx-builds/#{version}/DBngin.dmg"
+  # dbngin-osx-builds.s3.amazonaws.com was verified as official when first introduced to the cask
+  url "https://dbngin-osx-builds.s3.amazonaws.com/#{version}/DBngin.dmg"
   appcast 'https://dbngin.com/osx/version.xml'
   name 'DBngin'
   homepage 'https://dbngin.com/'

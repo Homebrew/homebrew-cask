@@ -1,6 +1,6 @@
 cask 'bluesense' do
-  version '1.2'
-  sha256 '248ea7eb6784c396231a27da34fbb02a4ab153e2f764388e6d640b8b9f097f51'
+  version '1.3.1'
+  sha256 '303f00fc55208ab9340c6142b018e6b6daeef54a7ef4db41fbcb79377866e9a3'
 
   url 'https://apps.inspira.io/updates/bluesense.zip'
   appcast 'https://apps.inspira.io/updates/bluesense-appcast.xml'

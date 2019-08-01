@@ -4,6 +4,7 @@ cask 'nally' do
 
   # yllan.github.io/nally was verified as official when first introduced to the cask
   url "https://yllan.github.io/nally/download/Nally-#{version}.app.zip"
+  appcast 'https://yllan.org/app/Nally/'
   name 'Nally'
   homepage 'https://yllan.org/app/Nally/'
 

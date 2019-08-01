@@ -7,7 +7,5 @@ cask 'bzflag' do
   name 'BZFlag'
   homepage 'https://www.bzflag.org/'
 
-  depends_on macos: '>= :lion'
-
   app "BZFlag-#{version}.app"
 end

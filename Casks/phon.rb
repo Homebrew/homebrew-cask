@@ -1,6 +1,6 @@
 cask 'phon' do
-  version '3.0.1'
-  sha256 '32ddc2bbb895add89c61501cd0efe3922414d020358145f48eba20f12b2532d3'
+  version '3.0.5'
+  sha256 '8c1464be96df1423d8fd2f50da2249776c9cdb0ef5937755d8774b3480e8533d'
 
   # github.com/phon-ca/phon was verified as official when first introduced to the cask
   url "https://github.com/phon-ca/phon/releases/download/#{version}/Phon_macos_#{version.dots_to_underscores}.dmg"

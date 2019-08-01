@@ -1,8 +1,8 @@
 cask 'vmware-remote-console' do
-  version '10.0.3-9300449'
-  sha256 'de55eb32d7dcd8207ecca864902f77f7000e6a89a751ce24046873a15e14b1a7'
+  version '10.0.5,14161502'
+  sha256 '6a9294034785c466374f3408bf781e45acb878750a5c17d12671cac1def14f13'
 
-  url "https://softwareupdate.vmware.com/cds/vmw-desktop/vmrc/#{version.hyphens_to_slashes}/macos/com.vmware.vmrc.zip.tar"
+  url "https://softwareupdate.vmware.com/cds/vmw-desktop/vmrc/#{version.before_comma}/#{version.after_comma}/macos/com.vmware.vmrc.zip.tar"
   appcast 'https://softwareupdate.vmware.com/cds/vmw-desktop/vmrc-macos.xml'
   name 'VMware Remote Console for Mac'
   homepage 'https://www.vmware.com/support/pubs/vmrc_pubs.html'

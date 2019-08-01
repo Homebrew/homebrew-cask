@@ -1,6 +1,6 @@
 cask 'squidman' do
-  version '3.8'
-  sha256 'dcc1b304b9b4782c20ab323adab8f21be0b82b433f96afa82e3349b82bbb761b'
+  version '4.0'
+  sha256 '65cb14bda5b8d73575567377703021af5bdba5be4c3512e13f6d21e59819ba44'
 
   url "https://squidman.net/resources/downloads/SquidMan#{version}.dmg"
   name 'SquidMan'

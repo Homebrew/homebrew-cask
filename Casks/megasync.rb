@@ -1,15 +1,16 @@
 cask 'megasync' do
-  version :latest
-  sha256 :no_check
+  version '4.1.1'
+  sha256 'e02dd282b63e140dc7ead0a11a5057f8ec59f2a5c18bf4b766a80ef9005293c1'
 
   url 'https://mega.nz/MEGAsyncSetup.dmg'
+  appcast 'https://github.com/meganz/MEGAsync/releases.atom'
   name 'MEGAsync'
   homepage 'https://mega.nz/'
 
   app 'MEGAsync.app'
 
-  caveats <<~EOS
-    #{token} only works if called from /Applications, so you may need to install it with
-      brew cask install --appdir=/Applications #{token}
-  EOS
+  zap trash: [
+               '~/Library/Caches/mega.mac',
+               '~/Library/Preferences/mega.mac.plist',
+             ]
 end

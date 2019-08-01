@@ -1,12 +1,14 @@
 cask 'cockatrice' do
-  version '2.6.1,2018-07-17:Father_of_Ruins_Revision_1'
-  sha256 'b35790a9391195d5bd9087f73a9eedac7e3cdd413b1dfeae65fe226bfa5354ac'
+  version '2.7.1,2019-06-08:Beyond_the_Horizons'
+  sha256 'f56f1024c989494dda1828603e1e88ec5c71ba90d6be4938b98e0f00be316b26'
 
   # github.com/Cockatrice/Cockatrice was verified as official when first introduced to the cask
-  url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.after_comma.before_colon}-Release-#{version.before_comma}/Cockatrice-#{version.after_colon}-#{version.before_comma}.dmg"
+  url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.after_comma.before_colon}-Release-#{version.before_comma}/Cockatrice-#{version.after_colon}-#{version.before_comma}_1-osx-sierra.dmg"
   appcast 'https://github.com/Cockatrice/Cockatrice/releases.atom'
   name 'Cockatrice'
   homepage 'https://cockatrice.github.io/'
+
+  depends_on macos: '>= :sierra'
 
   app 'cockatrice.app'
   app 'oracle.app'

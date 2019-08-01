@@ -8,8 +8,6 @@ cask 'ghost' do
   name 'Ghost Desktop'
   homepage 'https://ghost.org/downloads/'
 
-  depends_on macos: '>= :mavericks'
-
   app 'Ghost.app'
 
   zap trash: [

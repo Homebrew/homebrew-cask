@@ -8,8 +8,6 @@ cask 'sequel-pro' do
   name 'Sequel Pro'
   homepage 'https://www.sequelpro.com/'
 
-  depends_on macos: '>= :leopard'
-
   app 'Sequel Pro.app'
 
   zap trash: [

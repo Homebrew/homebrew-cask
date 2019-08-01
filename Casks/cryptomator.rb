@@ -1,9 +1,9 @@
 cask 'cryptomator' do
-  version '1.4.0'
-  sha256 '88e14c5e513e379bc512b4e770d80ccc1267f6e73ae8bf28aca26487e2d985fe'
+  version '1.4.12'
+  sha256 'f6a25e46358d764105bc11178d13c22afc2838d273f18b97a093c97567c5fe8d'
 
-  # bintray.com/artifact/download/cryptomator was verified as official when first introduced to the cask
-  url "https://bintray.com/artifact/download/cryptomator/cryptomator/Cryptomator-#{version}.dmg"
+  # dl.bintray.com/cryptomator/cryptomator was verified as official when first introduced to the cask
+  url "https://dl.bintray.com/cryptomator/cryptomator/#{version}/Cryptomator-#{version}.dmg"
   appcast 'https://github.com/cryptomator/cryptomator/releases.atom'
   name 'Cryptomator'
   homepage 'https://cryptomator.org/'

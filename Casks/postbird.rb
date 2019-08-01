@@ -1,6 +1,6 @@
 cask 'postbird' do
-  version '0.8.0'
-  sha256 'fa01d2508fa2ec87228eb9f29defe1bfe394093e7cae8255d4d81b0589019eaa'
+  version '0.8.2'
+  sha256 'ef8d979c256e9d5308c6beee0805adb63ef1d7862da05b2f96c7489c6bec8848'
 
   url "https://github.com/Paxa/postbird/releases/download/#{version}/Postbird-#{version}.dmg"
   appcast 'https://github.com/Paxa/postbird/releases.atom'

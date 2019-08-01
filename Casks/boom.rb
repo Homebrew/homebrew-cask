@@ -1,6 +1,6 @@
 cask 'boom' do
-  version '1.6.5,1539009345'
-  sha256 'fbf88089b91371288ca78016b22185fe0c1fe64939886b776821b3ff9ba4e06f'
+  version '1.6.8,1553238536'
+  sha256 'cc683afd2518210181d4994c9be0ada0e4d1dded0c4865dcfb3fdafea8849d82'
 
   # devmate.com/com.globaldelight.Boom2 was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.globaldelight.Boom2/#{version.before_comma}/#{version.after_comma}/Boom2-#{version.before_comma}.dmg"

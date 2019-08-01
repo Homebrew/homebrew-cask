@@ -6,7 +6,5 @@ cask 'soulseek' do
   name 'Soulseek'
   homepage 'https://www.slsknet.org/'
 
-  depends_on macos: '>= :mavericks'
-
   app 'SoulseekQt.app'
 end

@@ -7,6 +7,8 @@ cask 'fluid' do
   name 'Fluid'
   homepage 'https://fluidapp.com/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Fluid.app'
 
   zap trash: [

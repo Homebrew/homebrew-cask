@@ -3,6 +3,7 @@ cask 'zandronum' do
   sha256 '9e50fee5eea4c3eda08ea6433f1a5bc8edb60ea44be634511f06109357686616'
 
   url "https://zandronum.com/downloads/zandronum#{version}-macosx.dmg"
+  appcast 'https://zandronum.com/downloads/'
   name 'Zandronum'
   homepage 'https://zandronum.com/'
 

@@ -1,6 +1,6 @@
 cask 'chronycontrol' do
-  version '1.3.0'
-  sha256 'f605626dcb6581e1915342c22b7c425909738cdd548ba822f70d742d441da7d5'
+  version '1.3.3'
+  sha256 '99639880ba781ab81914b493aa895b629018bbae21c0346c98669c3354882e61'
 
   url "https://www.whatroute.net/software/chronycontrol-#{version}.zip"
   appcast 'https://www.whatroute.net/chronycontrolappcast.xml'

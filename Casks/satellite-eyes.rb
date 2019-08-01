@@ -6,7 +6,7 @@ cask 'satellite-eyes' do
   url "https://satellite-eyes.s3.amazonaws.com/satellite-eyes-#{version}.zip"
   appcast 'https://satellite-eyes.s3.amazonaws.com/appcast.xml'
   name 'Satellite Eyes'
-  homepage 'http://satelliteeyes.tomtaylor.co.uk/'
+  homepage 'https://satelliteeyes.tomtaylor.co.uk/'
 
   app 'Satellite Eyes.app'
 end

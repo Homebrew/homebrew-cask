@@ -3,6 +3,7 @@ cask 'touchosc-bridge' do
   sha256 '7911ad9284aafb1ddd337af333d445de7ae57df5ca9b134bdf6881139a8795f4'
 
   url "https://hexler.net/pub/touchosc/touchosc-bridge-#{version}-osx.zip"
+  appcast 'https://hexler.net/software/touchosc'
   name 'TouchOSC Bridge'
   homepage 'https://hexler.net/software/touchosc'
 

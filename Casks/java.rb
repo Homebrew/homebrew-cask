@@ -1,32 +1,12 @@
 cask 'java' do
-  version '11.0.1,13'
-  sha256 'fa07eee08fa0f3de541ee1770de0cdca2ae3876f3bd78c329f27e85c287cd070'
+  version '12.0.1,69cfe15208a647278a19ef0990eea691'
+  sha256 'cba6f42f82496f62c51fb544e243d440984d442bdc906550a30428d8be6189e5'
 
-  url "https://download.java.net/java/GA/jdk#{version.major}/#{version.after_comma}/GPL/openjdk-#{version.before_comma}_osx-x64_bin.tar.gz"
-  name 'OpenJDK'
-  homepage 'https://jdk.java.net/'
+  url "https://download.oracle.com/java/GA/jdk#{version.before_comma}/#{version.after_comma}/#{version.major}/GPL/openjdk-#{version.before_comma}_osx-x64_bin.tar.gz"
+  name 'OpenJDK Java Development Kit'
+  homepage 'https://www.oracle.com/technetwork/java/javase/'
 
-  postflight do
-    system_command '/bin/mv',
-                   args: [
-                           '-f', '--',
-                           "#{staged_path}/jdk-#{version.before_comma}.jdk",
-                           "/Library/Java/JavaVirtualMachines/openjdk-#{version.before_comma}.jdk"
-                         ],
-                   sudo: true
+  artifact "jdk-#{version.before_comma}.jdk", target: "/Library/Java/JavaVirtualMachines/openjdk-#{version.before_comma}.jdk"
 
-    system_command '/bin/mkdir',
-                   args: ['-p', '--', "/Library/Java/JavaVirtualMachines/openjdk-#{version.before_comma}.jdk/Contents/Home/bundle/Libraries"],
-                   sudo: true
-
-    system_command '/bin/ln',
-                   args: [
-                           '-nsf', '--',
-                           "/Library/Java/JavaVirtualMachines/openjdk-#{version.before_comma}.jdk/Contents/Home/lib/server/libjvm.dylib",
-                           "/Library/Java/JavaVirtualMachines/openjdk-#{version.before_comma}.jdk/Contents/Home/bundle/Libraries/libserver.dylib"
-                         ],
-                   sudo: true
-  end
-
-  uninstall delete: "/Library/Java/JavaVirtualMachines/openjdk-#{version.before_comma}.jdk"
+  uninstall rmdir: '/Library/Java/JavaVirtualMachines'
 end

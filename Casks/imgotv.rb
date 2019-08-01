@@ -1,16 +1,18 @@
 cask 'imgotv' do
-  version '3.3.3_20180514'
-  sha256 'f457b02aa7bca895677a21e55fd3c7fa05d02cfaefdc46c8558fc99b577e3c5a'
+  version '6.1.1-mango2'
+  sha256 '010df642af300d03fcf075ffa5cfb7a38ba345e448106d262152396f189a0430'
 
-  url "http://downloadimgo.hunantv.com/app/mac/mgtv_#{version}_release.dmg"
+  # download.imgo.tv was verified as official when first introduced to the cask
+  url "https://download.imgo.tv/app/pc/mac/mgtv-client-#{version}.dmg"
+  appcast 'https://www.mgtv.com/app/'
   name 'hunantv'
   name '芒果视频'
-  homepage 'http://www.hunantv.com/app'
+  homepage 'https://www.mgtv.com/app/'
 
   auto_updates true
   depends_on macos: '>= :yosemite'
 
-  app 'Imgotv-Mac.app'
+  app '芒果TV极速版.app'
 
   zap trash: [
                '~/Library/Preferences/com.hunantv.osx.imgotv.plist',

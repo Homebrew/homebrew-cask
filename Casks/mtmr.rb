@@ -1,11 +1,11 @@
 cask 'mtmr' do
-  version '0.19'
-  sha256 '1a43c3c127526f615834fc0b1b1f75a3352e3a55597da504a1b20c6dd80f57f8'
+  version '0.22.1'
+  sha256 'a01ea28460bf9e2af847d4b8f8d9837f4119e91ae70ee4647af5f47ed1bc01c7'
 
   url "https://mtmr.app/MTMR%20#{version}.dmg"
   appcast 'https://mtmr.app/appcast.xml'
   name 'My TouchBar. My rules'
-  homepage 'https://forum.mtmr.app/'
+  homepage 'https://mtmr.app/'
 
   auto_updates true
   depends_on macos: '>= :sierra'

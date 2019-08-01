@@ -1,9 +1,9 @@
 cask 'zoomus' do
-  version '4.1.34801.1116'
-  sha256 '9938a9f0d26cdd2b1e8e251b70dc0488050bbb2b087bc0af3ca18a7800e48f45'
+  version '4.4.55387.0716'
+  sha256 '23f4333d37d1ac7bf875bff41ca9fa7a8c772063eaa0a26d4c1a1500caabad82'
 
   url "https://www.zoom.us/client/#{version}/zoomusInstaller.pkg"
-  appcast 'https://support.zoom.us/hc/en-us/articles/201361963-New-Updates-for-Mac-OS'
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://zoom.us/client/latest/Zoom.pkg'
   name 'Zoom.us'
   homepage 'https://www.zoom.us/'
 
@@ -11,13 +11,23 @@ cask 'zoomus' do
 
   pkg 'zoomusInstaller.pkg'
 
-  uninstall delete: '/Applications/zoom.us.app',
-            quit:   'us.zoom.ZoomOpener',
-            signal: [
-                      ['KILL', 'us.zoom.xos'],
-                    ]
+  postflight do
+    set_ownership '~/Library/Application Support/zoom.us'
+  end
+
+  uninstall quit:       'us.zoom.ZoomOpener',
+            signal:     [
+                          ['KILL', 'us.zoom.xos'],
+                        ],
+            login_item: 'ZoomOpener',
+            delete:     [
+                          '/Applications/zoom.us.app',
+                          '~/.zoomus/ZoomOpener.app',
+                          '~/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin',
+                        ]
 
   zap trash: [
+               '~/.zoomus',
                '~/Desktop/Zoom',
                '~/Library/Application Support/zoom.us',
                '~/Library/Caches/us.zoom.xos',

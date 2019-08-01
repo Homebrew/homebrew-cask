@@ -1,13 +1,13 @@
 cask 'multipass' do
-  version '2018.10.1'
-  sha256 'a5b66f265e4d94e6ce8ed2daa85a093611ef0a01b4f90611ac8d2af1b1454c86'
+  version '0.8.0'
+  sha256 '386a015745eabfdd548fa44326ccfcfafbc93747e36af99cfc2936a4432aa613'
 
-  url "https://github.com/CanonicalLtd/multipass/releases/download/#{version}/multipass-#{version}-full-Darwin.pkg"
+  url "https://github.com/CanonicalLtd/multipass/releases/download/v#{version}/multipass-#{version}+mac-Darwin.pkg"
   appcast 'https://github.com/CanonicalLtd/multipass/releases.atom'
   name 'Multipass'
   homepage 'https://github.com/CanonicalLtd/multipass/'
 
-  pkg "multipass-#{version}-full-Darwin.pkg"
+  pkg "multipass-#{version} mac-Darwin.pkg"
 
   uninstall launchctl: 'com.canonical.multipassd',
             pkgutil:   'com.canonical.multipass.*',

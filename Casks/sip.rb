@@ -1,13 +1,18 @@
 cask 'sip' do
-  version '1.1.3'
-  sha256 '3ea60d87c43669557733daa9abcaa34c08ef9ec205c1f4978312d2fa2720725c'
+  if MacOS.version <= :sierra
+    version '1.1.6'
+    sha256 'bb170a54090aab5703388a3e7a22e9cf4e4d98e84f5658893e1e6f9677b9a51e'
+  else
+    version '2.0.9'
+    sha256 'cd853d27968c6696dfbcd4e0a708d349a15b6646b510d4eb25969ab21936e41a'
+  end
 
-  url 'https://sipapp.io/download/sip.dmg'
-  appcast 'https://sipapp.io/sparkle/sip.xml'
+  url "https://sipapp.io/updates/v#{version.major}/sip-#{version}.zip"
+  appcast "https://sipapp.io/updates/v#{version.major}/sip.xml"
   name 'Sip'
   homepage 'https://sipapp.io/'
 
-  depends_on macos: '>= :el_capitan'
+  depends_on macos: '>= :sierra'
 
   app 'Sip.app'
 

@@ -1,14 +1,14 @@
 cask 'corretto' do
-  version '8,8u192'
-  sha256 '5836ca06194bee33a476bd9412ef810a8e8a98eb0202553567933b70f3aa17e4'
+  version '11.0.4.11.1'
+  sha256 'cba291ec0177a4a047e06c6c3a44ce7c5e9505c233d629c3c82fb3e6376e734b'
 
-  # d3pxv6yz143wms.cloudfront.net/corretto was verified as official when first introduced to the cask
-  url "https://d3pxv6yz143wms.cloudfront.net/corretto-jdk-#{version.after_comma}-macosx-x64.pkg"
-  appcast 'https://docs.aws.amazon.com/en_us/corretto/latest/corretto-8-ug/corretto-8-ug.rss'
+  # d3pxv6yz143wms.cloudfront.net was verified as official when first introduced to the cask
+  url "https://d3pxv6yz143wms.cloudfront.net/#{version}/amazon-corretto-#{version}-macosx-x64.pkg"
+  appcast "https://docs.aws.amazon.com/en_us/corretto/latest/corretto-#{version.major}-ug/corretto-#{version.major}-ug.rss"
   name 'Amazon Corretto'
   homepage 'https://aws.amazon.com/corretto/'
 
-  pkg "corretto-jdk-#{version.after_comma}-macosx-x64.pkg"
+  pkg "amazon-corretto-#{version}-macosx-x64.pkg"
 
-  uninstall pkgutil: "com.amazon.corretto.#{version.before_comma}"
+  uninstall pkgutil: "com.amazon.corretto.#{version.major}"
 end

@@ -1,12 +1,10 @@
 cask 'eclipse-jee' do
-  version '4.9.0,2018-09:R'
-  sha256 '5ca049d86362534815a169224604f44c8c32a162920697f04f2e4f0230450bcf'
+  version '4.12.0,2019-06:R'
+  sha256 '3284e4790162a1e435a4c1204bbd5f8b6fe9fb8eaad6a77a19e660c70976be48'
 
-  url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.after_comma.before_colon}/#{version.after_colon}/eclipse-jee-#{version.after_comma.before_colon}-macosx-cocoa-x86_64.dmg&r=1"
+  url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.after_comma.before_colon}/#{version.after_colon}/eclipse-jee-#{version.after_comma.before_colon}-#{version.after_colon}-macosx-cocoa-x86_64.dmg&r=1"
   name 'Eclipse IDE for Java EE Developers'
   homepage 'https://eclipse.org/'
-
-  depends_on macos: '>= :leopard'
 
   # Renamed to avoid conflict with other Eclipse.
   app 'Eclipse.app', target: 'Eclipse JEE.app'

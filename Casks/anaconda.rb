@@ -1,12 +1,12 @@
 cask 'anaconda' do
-  version '5.3.1'
-  sha256 '23c373abce2463d4df495f5a1c7e8b0faec6eda09542d98f41ed65a0fa0dbde0'
+  version '2019.03'
+  sha256 'b232f0b16181f48667d2ca89c04a4ee4b3932475282b41c52acb87b4cdafcaaf'
 
   url "https://repo.anaconda.com/archive/Anaconda3-#{version}-MacOSX-x86_64.sh"
   name 'Continuum Analytics Anaconda'
   homepage 'https://www.anaconda.com/'
 
-  depends_on macos: '>= :lion'
+  auto_updates true
   container type: :naked
 
   installer script: {
@@ -33,7 +33,6 @@ cask 'anaconda' do
              ]
 
   caveats do
-    path_environment_variable "#{HOMEBREW_PREFIX}/anaconda3/bin"
     files_in_usr_local
   end
 end
