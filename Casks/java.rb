@@ -1,8 +1,8 @@
 cask 'java' do
-  version '12.0.1,69cfe15208a647278a19ef0990eea691'
-  sha256 'cba6f42f82496f62c51fb544e243d440984d442bdc906550a30428d8be6189e5'
+  version '12.0.2,build10:e482c34c86bd4bf8b56c0b35558996b9'
+  sha256 '675a739ab89b28a8db89510f87cb2ec3206ec6662fb4b4996264c16c72cdd2a1'
 
-  url "https://download.oracle.com/java/GA/jdk#{version.before_comma}/#{version.after_comma}/#{version.major}/GPL/openjdk-#{version.before_comma}_osx-x64_bin.tar.gz"
+  url "https://download.oracle.com/java/GA/jdk#{version.before_comma}/#{version.after_colon}/#{version.after_comma.sub(%r{build(\d+):.*}, '\1')}/GPL/openjdk-#{version.before_comma}_osx-x64_bin.tar.gz"
   name 'OpenJDK Java Development Kit'
   homepage 'https://www.oracle.com/technetwork/java/javase/'
 
