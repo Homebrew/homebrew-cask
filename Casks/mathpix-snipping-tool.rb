@@ -8,6 +8,7 @@ cask 'mathpix-snipping-tool' do
   homepage 'https://mathpix.com/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'Mathpix Snipping Tool.app'
 
