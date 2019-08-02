@@ -7,7 +7,7 @@ cask 'whatpulse' do
   name 'WhatPulse'
   homepage 'https://whatpulse.org/'
 
-  pkg "WhatPulse #{version}.mpkg"
+  pkg "WhatPulse #{version}.mpkg", allow_untrusted: true
 
   uninstall pkgutil: 'com.lostdomain.whatpulse',
             quit:    'com.whatpulse.mac'
