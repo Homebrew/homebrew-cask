@@ -1,6 +1,6 @@
 cask 'rubitrack-pro' do
-  version '5.2.5'
-  sha256 'dcc8804fc43807a21b56085648e8b3253d0ee51d7ff0139b8f614dcd70b3203f'
+  version '5.2.6'
+  sha256 '0deeef21415b2b549d9acc724ddeacc3fc89976f9950cab57dfdc3b23176a900'
 
   url "https://www.rubitrack.com/files/rubiTrack-#{version}.dmg"
   appcast "https://www.rubitrack.com/autoupdate/sparkle#{version.major}.xml"
