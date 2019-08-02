@@ -7,6 +7,6 @@ cask 'softorino-youtube-converter' do
   appcast "https://updates.devmate.com/com.softorino.syc#{version.major}.xml"
   name 'Softorino YouTube Converter'
   homepage 'https://softorino.com/youtube-converter/'
-  
+
   app "Softorino YouTube Converter #{version.major}.app"
 end
