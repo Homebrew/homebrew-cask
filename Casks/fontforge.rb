@@ -4,7 +4,8 @@ cask 'fontforge' do
 
   # github.com/fontforge/fontforge was verified as official when first introduced to the cask
   url "https://github.com/fontforge/fontforge/releases/download/#{version.major_minor_patch.no_dots}/FontForge-#{version.dots_to_hyphens}.app.dmg"
-  appcast 'https://github.com/fontforge/fontforge/releases.atom'
+  appcast 'https://github.com/fontforge/fontforge/releases.atom',
+          configuration: version.dots_to_hyphens
   name 'FontForge'
   homepage 'https://fontforge.github.io/en-US/'
 
