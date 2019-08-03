@@ -1,6 +1,6 @@
 cask 'packages' do
   version '1.2.6'
-  sha256 'fcaa90e25ef2325c81f5e01be40916864fadc5d70e651bec3e341ec54d0a50d6'
+  sha256 'a24225be6981228f16f17140af2af91c0d27cac82c879de98e6ca788a4591f18'
 
   url 'http://s.sudre.free.fr/Software/files/Packages.dmg'
   appcast 'http://s.sudre.free.fr/Software/documentation/RemoteVersion.plist'
