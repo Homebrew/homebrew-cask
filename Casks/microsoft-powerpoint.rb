@@ -15,7 +15,6 @@ cask 'microsoft-powerpoint' do
 
   uninstall pkgutil:   [
                          'com.microsoft.package.Microsoft_PowerPoint.app',
-                         'com.microsoft.package.Microsoft_AutoUpdate.app',
                          'com.microsoft.pkg.licensing',
                        ],
             launchctl: 'com.microsoft.office.licensingV2.helper'
