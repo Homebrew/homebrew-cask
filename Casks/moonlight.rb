@@ -8,5 +8,7 @@ cask 'moonlight' do
   name 'Moonlight'
   homepage 'https://moonlight-stream.org/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Moonlight.app'
 end
