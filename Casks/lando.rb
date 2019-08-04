@@ -1,6 +1,6 @@
 cask 'lando' do
-  version '3.0.0-rc.18'
-  sha256 '1e9e3201be49bab3009e707ace8de3c78759a6082a35ca32f0cbef396e850126'
+  version '3.0.0-rc.19'
+  sha256 '7dc2ec587d779466dcbb4c4a7b1e84e7e7cb41facee22caa7fb7e9a282e4ea08'
 
   # github.com/lando/lando was verified as official when first introduced to the cask
   url "https://github.com/lando/lando/releases/download/v#{version}/lando-v#{version}.dmg"

@@ -7,6 +7,8 @@ cask 'manico' do
   name 'Manico'
   homepage 'https://manico.im/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Manico.app'
 
   zap trash: [
