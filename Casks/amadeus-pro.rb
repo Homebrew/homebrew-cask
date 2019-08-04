@@ -4,7 +4,8 @@ cask 'amadeus-pro' do
 
   # s3.amazonaws.com/AmadeusPro2 was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/AmadeusPro2/AmadeusPro.zip'
-  appcast 'https://s3.amazonaws.com/AmadeusPro2/versions.rtf'
+  appcast 'https://s3.amazonaws.com/AmadeusPro2/versions.rtf',
+          configuration: version.major_minor
   name 'Amadeus Pro'
   homepage 'https://www.hairersoft.com/pro.html'
 
