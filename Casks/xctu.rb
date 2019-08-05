@@ -14,9 +14,8 @@ cask 'xctu' do
   uninstall trash: '/Applications/XCTU.app'
 
   zap trash: [
-               '/Applications/XCTU.app',
                '~/Library/Caches/XCTU',
                '~/Library/Preferences/XCTU.plist',
-               '~/Library/Saved\ Application\ State/XCTU.savedState',
+               '~/Library/Saved Application State/XCTU.savedState',
              ]
 end
