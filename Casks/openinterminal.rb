@@ -7,5 +7,7 @@ cask 'openinterminal' do
   name 'OpenInTerminal'
   homepage 'https://github.com/Ji4n1ng/OpenInTerminal'
 
+  depends_on macos: '>= :sierra'
+
   app 'OpenInTerminal.app'
 end
