@@ -9,7 +9,16 @@ cask 'parallels' do
 
   auto_updates true
 
-  app 'Parallels Desktop.app'
+  container type: :naked
+
+  preflight do
+    system_command '/usr/bin/hdiutil',
+                   args: ['attach', '-nobrowse', "#{staged_path}/ParallelsDesktop-#{version}.dmg"]
+    system_command "/Volumes/Parallels Desktop #{version.major}/Install.app/Contents/MacOS/Install",
+                   sudo: true
+    system_command '/usr/bin/hdiutil',
+                   args: ['detach', "/Volumes/Parallels Desktop #{version.major}"]
+  end
 
   postflight do
     # Unhide the application
