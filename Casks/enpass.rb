@@ -3,7 +3,7 @@ cask 'enpass' do
   sha256 'c02d10b4ba5a2fa38402c1a2af306837e5f55d181b76a894f8763856c0c473d8'
 
   url "https://dl.enpass.io/stable/mac/package/#{version.after_comma}/Enpass.pkg"
-  appcast 'https://dl.sinew.in/mac/package/appcast.xml'
+  appcast 'https://www.enpass.io/release-notes/macos-website-ver/'
   name 'Enpass'
   homepage 'https://www.enpass.io/'
 
