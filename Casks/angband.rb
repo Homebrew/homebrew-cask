@@ -7,5 +7,7 @@ cask 'angband' do
   name 'Angband'
   homepage 'https://rephial.org/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Angband.app'
 end
