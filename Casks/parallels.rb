@@ -8,7 +8,6 @@ cask 'parallels' do
   homepage 'https://www.parallels.com/products/desktop/'
 
   auto_updates true
-
   container type: :naked
 
   preflight do
