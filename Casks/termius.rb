@@ -1,5 +1,5 @@
 cask 'termius' do
-  version '	4.9.7'
+  version '4.9.7'
   sha256 '8c8ab4e0b5dae496cef7337c04c800940e1ccd4d49d49d74c9497d66b39109b9'
 
   # s3.amazonaws.com/termius.desktop.autoupdate/mac was verified as official when first introduced to the cask
