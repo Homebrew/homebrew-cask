@@ -1,6 +1,6 @@
 cask 'commander-one' do
   version '2.1'
-  sha256 '0427df2b69a08ba6e96c6a8f8b9646ad660d058e2a7491aa091a8dc39c4f828b'
+  sha256 'e8ee5cbea733c5aa3951a04d9c214c4aac5bde2f19b8d2a8ec97145e5991b5a5'
 
   url 'https://cdn.eltima.com/download/commander.dmg'
   appcast 'https://cdn.eltima.com/download/commander-update/settings.xml'
