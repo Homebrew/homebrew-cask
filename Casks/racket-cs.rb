@@ -3,7 +3,7 @@ cask 'racket-cs' do
 
   url "https://www.cs.utah.edu/plt/snapshots/20190805-044c15ec8f/installers/racket-#{version}-x86_64-macosx-cs.dmg"
   appcast 'https://download.racket-lang.org/'
-  name 'Racket on Chez Scheme'
+  name 'Racket CS'
   homepage 'https://racket-lang.org/'
 
   suite "Racket on Chez Scheme v#{version}"
