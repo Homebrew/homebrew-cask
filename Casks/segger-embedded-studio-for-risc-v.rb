@@ -8,5 +8,8 @@ cask 'segger-embedded-studio-for-risc-v' do
 
   pkg "Install SEGGER Embedded Studio for RISC-V #{version}.pkg"
 
-  uninstall pkgutil: "com.rowley.crossworks.riscv_segger_studio.#{version}"
+  uninstall pkgutil: [
+                       'riscv_segger_studio',
+                       'com.rowley.crossworks.riscv_segger_studio.#{version}',
+                     ]
 end
