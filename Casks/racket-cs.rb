@@ -1,5 +1,6 @@
 cask 'racket-cs' do
   version '7.4.0.4'
+  sha256 'aa07477625d7cd8167a2418b28cc2bda17249ffaac518505c07130a87be8be6a'
 
   url "https://www.cs.utah.edu/plt/snapshots/20190805-044c15ec8f/installers/racket-#{version}-x86_64-macosx-cs.dmg"
   appcast 'https://download.racket-lang.org/'
