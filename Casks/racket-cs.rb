@@ -5,10 +5,10 @@ cask 'racket-cs' do
   # cs.utah.edu was verified as official when first introduced to the cask
   url "https://www.cs.utah.edu/plt/snapshots/20190805-044c15ec8f/installers/racket-#{version}-x86_64-macosx-cs.dmg"
   appcast 'https://download.racket-lang.org/'
-  name 'Racket CS'
+  name 'Racket on Chez Scheme'
   homepage 'https://racket-lang.org/'
 
-  suite "Racket on Chez Scheme v#{version}"
+  suite "Racket v#{version}"
   binary "#{appdir}/Racket v#{version}/bin/drracket"
   binary "#{appdir}/Racket v#{version}/bin/gracket"
   binary "#{appdir}/Racket v#{version}/bin/gracket-text"
