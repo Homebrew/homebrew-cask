@@ -1,12 +1,14 @@
 cask 'teamspeak-client' do
-  version '3.2.5'
-  sha256 '6b2bd20a0cb16e1b634a32e19768f1c9045726c2db9a02e98ec4f6808f6c7e3f'
+  version '3.3.0'
+  sha256 '86e4dd0f05662517ab5f0cc4dcd3c6310b3293b67a4f26447255e9b64145cbcc'
 
-  # dl.4players.de/ts was verified as official when first introduced to the cask
-  url "http://dl.4players.de/ts/releases/#{version}/TeamSpeak#{version.major}-Client-macosx-#{version}.dmg"
+  # files.teamspeak-services.com/releases/client was verified as official when first introduced to the cask
+  url "https://files.teamspeak-services.com/releases/client/#{version}/TeamSpeak#{version.major}-Client-macosx-#{version}.dmg"
   appcast 'https://versions.teamspeak.com/ts3-client-2'
   name 'TeamSpeak Client'
   homepage 'https://www.teamspeak.com/'
+
+  depends_on macos: '>= :sierra'
 
   app "TeamSpeak #{version.major} Client.app"
 end

@@ -1,6 +1,6 @@
 cask 'gitahead' do
-  version '2.5.5'
-  sha256 'a77d4a44ca0c2700a712180b6e9edcf6f8a62280e5ffe3fdd42dc0c7156b2035'
+  version '2.5.8'
+  sha256 'ce8fff4f9e2329f9ea9ae67c4c0928ece49a31650f38f05711c9a8d0a8f140c2'
 
   url "https://github.com/gitahead/gitahead/releases/download/v#{version}/GitAhead-#{version}.dmg"
   appcast 'https://github.com/gitahead/gitahead/releases.atom'

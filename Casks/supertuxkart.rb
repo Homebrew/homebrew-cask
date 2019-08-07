@@ -4,7 +4,7 @@ cask 'supertuxkart' do
 
   # sourceforge.net/supertuxkart was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/supertuxkart/SuperTuxKart-#{version}-mac.zip"
-  appcast 'https://sourceforge.net/projects/supertuxkart/rss?path=/SuperTuxKart'
+  appcast 'https://supertuxkart.net/Download'
   name 'SuperTuxKart'
   homepage 'https://supertuxkart.net/Main_Page'
 

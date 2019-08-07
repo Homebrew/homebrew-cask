@@ -40,6 +40,7 @@ module Cask
 
           overall_success &= step "brew cask audit #{cask.token}", "audit" do
             Auditor.audit(cask, audit_download: true,
+                                audit_appcast: true,
                                 check_token_conflicts: added_cask_files.include?(path),
                                 commit_range: ENV["TRAVIS_COMMIT_RANGE"])
           end
@@ -63,7 +64,11 @@ module Cask
 
           overall_success &= step "brew cask uninstall #{cask.token}", "uninstall" do
             success = begin
-              Installer.new(cask, verbose: true).uninstall
+              if manual_installer?(cask)
+                puts 'Cask has a manual installer, skipping...'
+              else
+                Installer.new(cask, verbose: true).uninstall
+              end
               true
             rescue => e
               $stderr.puts e.message
@@ -172,6 +177,10 @@ module Cask
 
       def added_cask_files
         @added_cask_files ||= added_files.select { |path| tap.cask_file?(path) }
+      end
+
+      def manual_installer?(cask)
+        cask.artifacts.any? { |artifact| artifact.is_a?(Artifact::Installer::ManualInstaller) }
       end
     end
   end

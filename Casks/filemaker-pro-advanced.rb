@@ -1,8 +1,8 @@
 cask 'filemaker-pro-advanced' do
-  version '17.0.5.502'
-  sha256 '671d6c6b77d403a8c5e6f835ad6a001fda83158aabc686ad6740c935099a6e2b'
+  version '18.0.1.122'
+  sha256 'a0393932aafa2b02afc71ef53fa4a34496bdef6d50d6fc8ea0d8e68ca25e3e60'
 
-  url "https://fmdl.filemaker.com/TBUB/#{version.major}/fmpa_#{version}.dmg"
+  url "https://fmdl.filemaker.com/esd/fmpa_#{version}.dmg"
   name 'FileMaker Pro Advanced'
   homepage 'https://www.filemaker.com/'
 

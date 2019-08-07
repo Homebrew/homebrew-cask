@@ -1,6 +1,6 @@
 cask 'icq' do
-  version '3.0.20772'
-  sha256 '7413ba42a00f481229d16d3d8d5f26402bfd2ecd0910dc35540a81dd52ae10cc'
+  version '3.0.21579'
+  sha256 '4b4a86cb5f69bc1a0294738d944573590467b3d52d9373467e15417e443e4a57'
 
   # mra.mail.ru/icq_mac3_update was verified as official when first introduced to the cask
   url 'https://mra.mail.ru/icq_mac3_update/icq.dmg'

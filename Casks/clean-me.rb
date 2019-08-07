@@ -1,6 +1,6 @@
 cask 'clean-me' do
   version '1.3.0'
-  sha256 '63871b967eb434f7e74d1fc5e1e8ee40093b31d494ca873a493bb61725c1ddc6'
+  sha256 '82e5e1230688b749f2b96d5d2146db5f0471eeb89a784c11bbe039aa7917798d'
 
   url "https://github.com/Kevin-De-Koninck/Clean-Me/releases/download/v#{version}/Clean.Me.app.zip"
   appcast 'https://github.com/Kevin-De-Koninck/Clean-Me/releases.atom'

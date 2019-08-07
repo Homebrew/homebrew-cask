@@ -4,7 +4,7 @@ cask 'musicbrainz-picard' do
 
   # musicbrainz.osuosl.org/pub/ was verified as official when first introduced to the cask
   url "https://musicbrainz.osuosl.org/pub/musicbrainz/picard/MusicBrainz.Picard.#{version}.dmg"
-  appcast 'https://picard.musicbrainz.org/changelog/'
+  appcast 'https://picard.musicbrainz.org/downloads/'
   name 'MusicBrainz Picard'
   homepage 'https://picard.musicbrainz.org/'
 

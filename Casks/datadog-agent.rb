@@ -1,9 +1,9 @@
 cask 'datadog-agent' do
-  version '6.11.0-1'
-  sha256 'b38c9769eaaafa535fe0f5f07910316454c34a0ce85bdd4e43f79cb08051e2d8'
+  version '6.13.0-1'
+  sha256 '7ca156b10b2b992ba0f7aafc5b28c89ffcfcd35677e5d33942350968fcc1e78e'
 
-  # s3.amazonaws.com/dd-agent was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/dd-agent/datadog-agent-#{version}.dmg"
+  # dd-agent.s3.amazonaws.com was verified as official when first introduced to the cask
+  url "https://dd-agent.s3.amazonaws.com/datadog-agent-#{version}.dmg"
   appcast 'https://github.com/DataDog/datadog-agent/releases.atom'
   name 'Datadog Agent'
   homepage 'https://www.datadoghq.com/'

@@ -1,6 +1,6 @@
 cask 'miniconda' do
-  version '4.5.12'
-  sha256 '8ebb463ddf46dd003616b2f6b678403a708e2c54dcc58e212bd35e257761912c'
+  version '4.6.14'
+  sha256 '2ec958508139289df3b5e2c10257311af4f0ebf39242f61d39f11e7fa14ebb40'
 
   # repo.anaconda.com/miniconda was verified as official when first introduced to the cask
   url "https://repo.anaconda.com/miniconda/Miniconda3-#{version}-MacOSX-x86_64.sh"
@@ -12,15 +12,11 @@ cask 'miniconda' do
 
   installer script: {
                       executable: "Miniconda3-#{version}-MacOSX-x86_64.sh",
-                      args:       ['-b', '-p', "#{HOMEBREW_PREFIX}/miniconda3"],
-                      sudo:       true,
+                      args:       ['-b', '-p', "#{caskroom_path}/base"],
                     }
+  binary "#{caskroom_path}/base/condabin/conda"
 
-  postflight do
-    set_ownership "#{HOMEBREW_PREFIX}/miniconda3"
-  end
-
-  uninstall delete: "#{HOMEBREW_PREFIX}/miniconda3"
+  uninstall delete: "#{caskroom_path}/base"
 
   zap trash: [
                '~/.condarc',
@@ -28,7 +24,9 @@ cask 'miniconda' do
                '~/.continuum',
              ]
 
-  caveats do
-    files_in_usr_local
-  end
+  caveats <<~EOS
+    Please run the following to setup your shell:
+
+      conda init "$(basename "${SHELL}")"
+  EOS
 end

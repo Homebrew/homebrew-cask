@@ -1,8 +1,8 @@
 cask 'tg-pro' do
-  version '2.39'
-  sha256 'f8ff20046976a6223ce72a8ca96bbd5f08718e97c03c04647f66c9053882a752'
+  version '2.42'
+  sha256 '35bcdcb2447a35dd973f87ed71526e4bb17bf397fa675250e2b28925c0424186'
 
-  url "https://www.tunabellysoftware.com/resources/TGPro_#{version}.zip"
+  url "https://www.tunabellysoftware.com/resources/TG%20Pro%20#{version}.dmg"
   appcast 'https://www.tunabellysoftware.com/resources/sparkle/tgpro.xml'
   name 'TG Pro'
   homepage 'https://www.tunabellysoftware.com/tgpro/'

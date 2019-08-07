@@ -1,6 +1,6 @@
 cask 'mailmate' do
-  version '5594'
-  sha256 '830222a54398ab7a198abda849663aee4fa0219044e644b949d2ac56842358eb'
+  version '5635'
+  sha256 '2f46cf0de07fe06500fec8745890c71849afd347d8859c4eca03595d1e802554'
 
   # mailmate-app.com was verified as official when first introduced to the cask
   url "https://updates.mailmate-app.com/archives/MailMate_r#{version}.tbz"

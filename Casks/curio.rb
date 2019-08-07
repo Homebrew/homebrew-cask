@@ -1,6 +1,6 @@
 cask 'curio' do
-  version '13002.3'
-  sha256 '275e25cd3acf85183eeae1773e55794fcb2b4a803c80d2859bfb508d6ea808b8'
+  version '13011.4'
+  sha256 '86215b58e47644e80ec95aeb71fc066a27d7dd517ff40827c771740d9f31791f'
 
   url "https://www.zengobi.com/downloads/Curio#{version.no_dots}.zip"
   appcast 'https://www.zengobi.com/appcasts/Curio13HLwLK2C84LaKptcz.xml'

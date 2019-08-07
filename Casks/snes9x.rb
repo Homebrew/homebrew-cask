@@ -4,6 +4,7 @@ cask 'snes9x' do
 
   # s9x-w32.de was verified as official when first introduced to the cask
   url "http://www.s9x-w32.de/dl/snes9x-#{version}-macosx-i386.zip"
+  appcast 'http://www.s9x-w32.de/dl/'
   name 'Snes9x'
   homepage 'http://www.snes9x.com/'
 

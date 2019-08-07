@@ -8,5 +8,7 @@ cask 'fips' do
   name 'Fips'
   homepage 'https://fips.space/'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'Fips.app'
 end

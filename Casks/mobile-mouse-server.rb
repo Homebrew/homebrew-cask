@@ -4,6 +4,7 @@ cask 'mobile-mouse-server' do
 
   url "https://mobilemouse.com/downloads/OS_X_Server_#{version.dots_to_underscores}.dmg",
       user_agent: :fake
+  appcast 'https://mobilemouse.com/downloads/'
   name 'Mobile Mouse Server'
   homepage 'https://mobilemouse.com/'
 

@@ -1,6 +1,6 @@
 cask 'unshaky' do
-  version '0.5.3'
-  sha256 '6217c1574fa60d3eb7cd839cc9cb88529d3f7bb4688c362a7776929321f850c0'
+  version '0.5.6'
+  sha256 '8d0ed13d2b02e93b067dfa43121abcaaeb16ae6638e54f14e38cc99ff62a295b'
 
   url "https://github.com/aahung/Unshaky/releases/download/v#{version}/Unshaky_v#{version}.zip"
   appcast 'https://github.com/aahung/Unshaky/releases.atom'

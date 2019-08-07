@@ -1,12 +1,14 @@
 cask 'nano' do
-  version '18.0'
-  sha256 '1b6c512449dcf87fe93f6ea4651ff80d9253567f7139c4e41f07f28e5a98d2e6'
+  version '19.0'
+  sha256 'e1babd95b90f2e6aac344bf0f5dd69a073f0edf931e66ac7844547170f045b99'
 
   # github.com/nanocurrency/nano-node was verified as official when first introduced to the cask
   url "https://github.com/nanocurrency/nano-node/releases/download/V#{version}/nano-node-#{version}-Darwin.dmg"
   appcast 'https://github.com/nanocurrency/nano-node/releases.atom'
   name 'Nano'
   homepage 'https://nano.org/'
+
+  depends_on macos: '>= :sierra'
 
   app 'Nano.app'
 

@@ -1,6 +1,6 @@
 cask 'avocode' do
-  version '3.7.3'
-  sha256 '75688ac966e14328028b1447c0d7cff2a1b3d1f2dd3ba1e412b988ec0c4f1cc1'
+  version '3.9.2'
+  sha256 '21b2005bced35d100851f3b2421e500688f83f31ba0006cd0532d3c718c7044d'
 
   url "https://media.avocode.com/download/avocode-app/#{version}/Avocode-#{version}-mac.zip"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://manager.avocode.com/download/avocode-app/mac-dmg/'

@@ -4,7 +4,7 @@ cask 'natron' do
 
   # downloads.sourceforge.net/natron was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/natron/Natron-#{version}.dmg"
-  appcast 'https://sourceforge.net/projects/natron/files/OSX/Universal/releases/'
+  appcast 'https://sourceforge.net/projects/natron/rss?path=/OSX/Universal/releases'
   name 'Natron'
   homepage 'https://natron.fr/'
 

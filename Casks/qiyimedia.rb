@@ -1,9 +1,9 @@
 cask 'qiyimedia' do
-  version '5.8.18'
-  sha256 '952d3bc738837b57a636c33a54711ee81e84ebc7acbe8ac3e26e7ba03f22394f'
+  version '20190731,5.11.12'
+  sha256 'ec8385ccb0c3b32c8b5932cf0834a64e69c61dc439e1fdbc2b4300ae73ca4490'
 
   url 'https://mbdapp.iqiyi.com/j/ot/iQIYIMedia_000.dmg'
-  appcast 'https://app.iqiyi.com/mac/player/index.html'
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://mbdapp.iqiyi.com/j/ot/iQIYIMedia_000.dmg'
   name '爱奇艺视频'
   homepage 'https://app.iqiyi.com/mac/player/index.html'
 

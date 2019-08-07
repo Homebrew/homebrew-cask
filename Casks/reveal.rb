@@ -1,6 +1,6 @@
 cask 'reveal' do
-  version '22'
-  sha256 'eef0d41435847fdec002ff005e9cde0fede89b7a0cd0ab0e3ac14f3a292e81f6'
+  version '24'
+  sha256 '4a3e90450c0b71b26aef010eabc98a06ca39f73e6e7195bb70f4a869a1e7d327'
 
   url "https://download.revealapp.com/Reveal.app-#{version}.zip"
   appcast 'https://updates.devmate.com/com.ittybittyapps.Reveal2.xml'

@@ -1,11 +1,11 @@
 cask 'pock' do
-  version '0.4.6'
-  sha256 '1f300493668c6b8948d68e92a44d25658721cc8a9a581ccbc75b5f78228f35a3'
+  version '0.5.3'
+  sha256 'bd658a234cb87ac7cb273884b694e6459ec1f8e4a1cd527407f34ed23fa59e2d'
 
-  url "https://pock.pigigaldi.com/download.php?file=pock_#{version.dots_to_underscores}_eket.zip"
+  url "https://pock.dev/download.php?file=pock_#{version.dots_to_underscores}_lack.zip"
   appcast 'https://github.com/pigigaldi/Pock/releases.atom'
   name 'Pock'
-  homepage 'https://pock.pigigaldi.com/'
+  homepage 'https://pock.dev/'
 
   depends_on macos: '>= :sierra'
 

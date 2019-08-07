@@ -1,6 +1,6 @@
 cask 'macgamestore' do
-  version '3.4.0,5093'
-  sha256 'bcea63ea0c34aa823340a2d03d8eb30b650a613c987202fa1fab40bfbfb1f32f'
+  version '3.4.2,5095'
+  sha256 '8a2fc899fd87f8700d5d4fe6679e3af884163a0538e318cb5932e757bf006db9'
 
   url "https://www.macgamestore.com/api_clientapp/clientupdates/public/core5/MacGameStore_#{version.before_comma}_#{version.after_comma}.tgz"
   appcast 'https://www.macgamestore.com/api_clientapp/clientupdates/public/update.xml'

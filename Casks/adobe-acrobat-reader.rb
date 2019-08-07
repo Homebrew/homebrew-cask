@@ -1,6 +1,6 @@
 cask 'adobe-acrobat-reader' do
-  version '19.010.20099'
-  sha256 '00eb772c1a3c714f5298cf4fffe117d39fd27722d8dc9e8c35cc9bf2232d91a5'
+  version '19.012.20034'
+  sha256 'f2d1e22cf33d48f7f823d07e6b1752e2e304d80b48238242fc4fa0743a786c5b'
 
   url "http://ardownload.adobe.com/pub/adobe/reader/mac/AcrobatDC/#{version.no_dots}/AcroRdrDC_#{version.no_dots}_MUI.dmg"
   appcast 'https://get.adobe.com/reader/'

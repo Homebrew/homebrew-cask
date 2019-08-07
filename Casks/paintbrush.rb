@@ -1,6 +1,6 @@
 cask 'paintbrush' do
-  version '2.3.0'
-  sha256 'ace47b0ae40c8a1c85d5b4019559c63484eccde83cbfa4a99190428b607c8ad7'
+  version '2.4.2'
+  sha256 'ee1e3175870f9c4271706e646d9a5312d6e098c22dbdc40d32525f9915706eec'
 
   # downloads.sourceforge.net/paintbrush was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/paintbrush/Paintbrush%202.x/Paintbrush%20#{version}/Paintbrush-#{version}.zip"
