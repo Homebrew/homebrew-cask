@@ -7,7 +7,7 @@ cask 'intel-haxm' do
   appcast 'https://github.com/intel/haxm/releases.atom'
   name 'Intel HAXM'
   homepage 'https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager'
-  
+
   depends_on macos: '>= :yosemite'
   depends_on cask: 'android-sdk'
 
