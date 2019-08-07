@@ -1,6 +1,6 @@
 cask 'snowflake-snowsql' do
-  version '1.1.62'
-  sha256 'c6135f011524527361230f5fc9c911fcb673c56ee6c9bc5bf01e35a68380f4cf'
+  version '1.1.67'
+  sha256 '0dfceecc8cf2f86319bae3222983ac54984bdd127c2bd8eb6ae9fe67b994b41e'
 
   # sfc-snowsql-updates.s3.us-west-2.amazonaws.com was verified as official when first introduced to the cask
   url "https://sfc-snowsql-updates.s3.us-west-2.amazonaws.com/bootstrap/#{version.major_minor}/darwin_x86_64/snowsql-#{version}-darwin_x86_64.pkg"
