@@ -10,6 +10,6 @@ cask 'segger-embedded-studio-for-risc-v' do
 
   uninstall pkgutil: [
                        'riscv_segger_studio',
-                       'com.rowley.crossworks.riscv_segger_studio.#{version}',
+                       "com.rowley.crossworks.riscv_segger_studio.#{version}",
                      ]
 end
