@@ -1,6 +1,6 @@
 cask 'runjs' do
-  version '1.5.4'
-  sha256 'd5164aba5159196d42b4208cabe0f0689b379f721f82d3b3df2f10ccdfc0c152'
+  version '1.6.0'
+  sha256 'fd825b6bccdc164da3f4a1e71612f425c648baa68c59c6cc861d282b6560b2eb'
 
   # github.com/lukehaas/runjs was verified as official when first introduced to the cask
   url "https://github.com/lukehaas/runjs/releases/download/v#{version}/RunJS-#{version}.dmg"
