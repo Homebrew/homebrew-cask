@@ -46,6 +46,12 @@ cask 'parallels' do
                       '/usr/local/bin/prlctl',
                       '/usr/local/bin/prlexec',
                       '/usr/local/bin/prlsrvctl',
+                      '/Applications/Parallels Desktop.app',
+                      '/Applications/Parallels Desktop.app/Contents/Applications/Parallels Link.app',
+                      '/Applications/Parallels Desktop.app/Contents/Applications/Parallels Mounter.app',
+                      '/Applications/Parallels Desktop.app/Contents/Applications/Parallels Technical Data Reporter.app',
+                      '/Applications/Parallels Desktop.app/Contents/MacOS/Parallels Service.app',
+                      '/Applications/Parallels Desktop.app/Contents/MacOS/Parallels VM.app'
                     ]
 
   zap trash: [
