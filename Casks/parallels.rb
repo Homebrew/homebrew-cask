@@ -9,7 +9,7 @@ cask 'parallels' do
 
   auto_updates true
   # This .dmg cannot be extracted normally
-  # Original discussion: https://github.com/Homebrew/homebrew-cask/issues/26872
+  # Original discussion: https://github.com/Homebrew/homebrew-cask/pull/67202
   container type: :naked
 
   preflight do
