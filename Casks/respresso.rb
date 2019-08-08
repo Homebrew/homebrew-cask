@@ -4,7 +4,7 @@ cask 'respresso' do
 
   # github.com/pontehu/respresso-client-ios was verified as official when first introduced to the cask
   url "https://github.com/pontehu/respresso-client-ios/releases/download/v#{version}/respresso-client-ios-v#{version}.zip"
-  appcast "https://github.com/pontehu/respresso-client-ios/releases.atom"
+  appcast 'https://github.com/pontehu/respresso-client-ios/releases.atom'
   name 'Respresso'
   homepage 'https://respresso.io/'
 
