@@ -51,7 +51,7 @@ cask 'parallels' do
                       '/Applications/Parallels Desktop.app/Contents/Applications/Parallels Mounter.app',
                       '/Applications/Parallels Desktop.app/Contents/Applications/Parallels Technical Data Reporter.app',
                       '/Applications/Parallels Desktop.app/Contents/MacOS/Parallels Service.app',
-                      '/Applications/Parallels Desktop.app/Contents/MacOS/Parallels VM.app'
+                      '/Applications/Parallels Desktop.app/Contents/MacOS/Parallels VM.app',
                     ]
 
   zap trash: [
