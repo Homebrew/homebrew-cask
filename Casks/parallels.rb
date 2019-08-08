@@ -8,6 +8,8 @@ cask 'parallels' do
   homepage 'https://www.parallels.com/products/desktop/'
 
   auto_updates true
+  # This .dmg cannot be extracted normally
+  # Original discussion: https://github.com/Homebrew/homebrew-cask/issues/26872
   container type: :naked
 
   preflight do
