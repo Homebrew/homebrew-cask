@@ -9,7 +9,6 @@ cask 'intel-haxm' do
   homepage 'https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager'
 
   depends_on macos: '>= :yosemite'
-  depends_on cask: 'android-sdk'
 
   installer script: {
                       executable: 'silent_install.sh',
