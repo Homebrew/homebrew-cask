@@ -15,7 +15,8 @@ cask 'parallels' do
   preflight do
     system_command '/usr/bin/hdiutil',
                    args: ['attach', '-nobrowse', "#{staged_path}/ParallelsDesktop-#{version}.dmg"]
-    system_command "/Volumes/Parallels Desktop #{version.major}/Install.app/Contents/MacOS/Install",
+    system_command "/Volumes/Parallels Desktop #{version.major}/Parallels Desktop.app/Contents/MacOS/inittool",
+                   args: ['install', '-t', "#{appdir}/Parallels Desktop.app", '-s'],
                    sudo: true
     system_command '/usr/bin/hdiutil',
                    args: ['detach', "/Volumes/Parallels Desktop #{version.major}"]
