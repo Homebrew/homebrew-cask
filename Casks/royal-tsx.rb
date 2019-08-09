@@ -8,5 +8,7 @@ cask 'royal-tsx' do
   name 'Royal TSX'
   homepage 'https://www.royalapplications.com/ts/mac/features'
 
+  auto_updates :yes
+
   app 'Royal TSX.app'
 end

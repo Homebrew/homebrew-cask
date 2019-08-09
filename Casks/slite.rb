@@ -1,6 +1,6 @@
 cask 'slite' do
-  version '1.1.1'
-  sha256 '903dce9c987e127b2f0d55f4f489eedf6972e14e6e525a68743df0f6ff31aadd'
+  version '1.1.3'
+  sha256 '39271eedd06c2cc0779e51eb6927825501ee0e6856ec296144f1c3d4eeb3fe7b'
 
   # storage.googleapis.com/slite-desktop was verified as official when first introduced to the cask
   url "https://storage.googleapis.com/slite-desktop/mac/Slite-#{version}.dmg"

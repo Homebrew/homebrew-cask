@@ -1,6 +1,6 @@
 cask 'inviska-rename' do
-  version '9.0'
-  sha256 'd7a6b85ebdd4abb014a2a2f7ddce2e9a3c024220b1dc31b96a6a244e4d3df305'
+  version '10.0'
+  sha256 'bbacedee781af6aaefb5dea2e3f48d6dbde5b2e67c6d29475a1b4a91e8bdeff0'
 
   url "https://www.inviska.com/files/rename/mac/Inviska_Rename-#{version}.tar.gz"
   appcast 'https://www.inviska.com/rename/'

@@ -1,6 +1,6 @@
 cask 'sidequest' do
-  version '0.6.0'
-  sha256 '0be0966349052ab7a31260d61ff1ad11c9260b835f328d20c38184e617537ef4'
+  version '0.6.4'
+  sha256 '35e4aac6322e0c7cf13657f903ce9197482fe42ec8d75ab3a23528118ee3972f'
 
   # github.com/the-expanse/SideQuest was verified as official when first introduced to the cask
   url "https://github.com/the-expanse/SideQuest/releases/download/v#{version}/SideQuest-#{version}.dmg"

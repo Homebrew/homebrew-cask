@@ -1,6 +1,6 @@
 cask 'cura-lulzbot' do
-  version '3.6.15'
-  sha256 'feec76ab640878814863f4d800bfa2db246776dab0b41ffaa0daed4f0a84634a'
+  version '3.6.18'
+  sha256 '5570ddc6383cef85b077893d314fb0d221efdf33b98d8ab5d96d0a0673f2b859'
 
   url "https://download.lulzbot.com/Software/cura-lulzbot/mac/cura-lulzbot_#{version}.dmg"
   appcast 'https://download.lulzbot.com/Software/cura-lulzbot/mac/'

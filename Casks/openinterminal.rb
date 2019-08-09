@@ -1,11 +1,13 @@
 cask 'openinterminal' do
-  version '2.0.1'
-  sha256 '7027aa6a6670c22efa777b5eb50083ab6406aae9dce23ef13f483282c774c55a'
+  version '2.0.3'
+  sha256 '6397d356259546b60236fc882c78b6bb09917eb975832e67176de4b669f45717'
 
   url "https://github.com/Ji4n1ng/OpenInTerminal/releases/download/#{version}/OpenInTerminal.app.zip"
   appcast 'https://github.com/Ji4n1ng/OpenInTerminal/releases.atom'
   name 'OpenInTerminal'
   homepage 'https://github.com/Ji4n1ng/OpenInTerminal'
+
+  depends_on macos: '>= :sierra'
 
   app 'OpenInTerminal.app'
 end
