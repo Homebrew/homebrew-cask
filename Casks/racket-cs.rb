@@ -7,6 +7,7 @@ cask 'racket-cs' do
   appcast 'https://www.cs.utah.edu/plt/snapshots/'
   name 'Racket on Chez Scheme'
   homepage 'https://racket-lang.org/'
+
   conflicts_with cask: 'racket'
 
   suite "Racket v#{version}"
