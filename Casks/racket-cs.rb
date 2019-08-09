@@ -2,6 +2,7 @@ cask 'racket-cs' do
   version '7.4.0.4'
   sha256 'd27c9befee4b16137a0cd8caa8547cdc76df5f628739f532aa57fbcfb1b34b96'
 
+  # cs.utah.edu was verified as official when first introduced to the cask
   url "https://www.cs.utah.edu/plt/snapshots/20190807-19fad3f8d9/installers/racket-#{version}-x86_64-macosx-cs.dmg"
   appcast 'https://www.cs.utah.edu/plt/snapshots/'
   name 'Racket on Chez Scheme'
