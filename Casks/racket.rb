@@ -6,6 +6,7 @@ cask 'racket' do
   appcast 'https://download.racket-lang.org/all-versions.html'
   name 'Racket'
   homepage 'https://racket-lang.org/'
+  conflicts_with cask: 'racket-cs'
 
   suite "Racket v#{version}"
   binary "#{appdir}/Racket v#{version}/bin/drracket"
