@@ -8,5 +8,7 @@ cask 'paraview' do
   name 'ParaView'
   homepage 'https://www.paraview.org/'
 
+  depends_on macos: '>= :sierra'
+
   app "ParaView-#{version}.app"
 end
