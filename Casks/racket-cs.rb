@@ -1,11 +1,12 @@
 cask 'racket-cs' do
   version '7.4.0.4'
-  sha256 'aa07477625d7cd8167a2418b28cc2bda17249ffaac518505c07130a87be8be6a'
+  sha256 'd27c9befee4b16137a0cd8caa8547cdc76df5f628739f532aa57fbcfb1b34b96'
 
-  url "https://www.cs.utah.edu/plt/snapshots/20190805-044c15ec8f/installers/racket-#{version}-x86_64-macosx-cs.dmg"
+  url "https://www.cs.utah.edu/plt/snapshots/20190807-19fad3f8d9/installers/racket-#{version}-x86_64-macosx-cs.dmg"
   appcast 'https://www.cs.utah.edu/plt/snapshots/'
   name 'Racket on Chez Scheme'
-  homepage 'https://www.cs.utah.edu/plt/snapshots/'
+  homepage 'https://racket-lang.org/'
+  conflicts_with cask: 'racket'
 
   suite "Racket v#{version}"
   binary "#{appdir}/Racket v#{version}/bin/drracket"
