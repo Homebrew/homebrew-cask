@@ -7,5 +7,7 @@ cask 'feeder' do
   name 'Feeder'
   homepage 'https://reinventedsoftware.com/feeder/'
 
+  depends_on macos: '>= :high_sierra'
+
   app "Feeder #{version.major}.app"
 end
