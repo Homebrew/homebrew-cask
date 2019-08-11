@@ -18,6 +18,7 @@ Common reasons to reject a Cask entirely:
 + The author has [specifically asked us not to include it](https://github.com/Homebrew/homebrew-cask/pull/5342).
 + The Cask requires [SIP to be disabled](https://github.com/Homebrew/homebrew-cask/pull/41890) to be installed and/or used.
 + The Cask is a `pkg` that requires [`allow_untrusted: true`](https://github.com/Homebrew/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/pkg.md#pkg-allow_untrusted).
++ The Cask is for an eID, which were [frequently outdated and had too few downloads](https://github.com/Homebrew/homebrew-cask/issues/59021)
 
 Common reasons to reject a Cask from the main repo:
 

@@ -135,8 +135,6 @@ Cask taps have naming conventions specific to each tap.
 
 [Homebrew/cask-drivers](https://github.com/Homebrew/homebrew-cask-drivers/blob/master/CONTRIBUTING.md#naming-driver-casks)
 
-[Homebrew/cask-eid](https://github.com/Homebrew/homebrew-cask-eid/blob/master/CONTRIBUTING.md#naming-eid-casks)
-
 # Special Affixes
 
 A few situations require a prefix or suffix to be added to the token.
