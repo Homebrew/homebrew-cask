@@ -6,7 +6,7 @@ cask 'zazu' do
   url "https://github.com/tinytacoteam/zazu/releases/download/v#{version}/Zazu-#{version}.dmg"
   appcast 'https://github.com/tinytacoteam/zazu/releases.atom'
   name 'Zazu'
-  homepage 'http://zazuapp.org/'
+  homepage 'https://zazuapp.org/'
 
   app 'Zazu.app'
 

@@ -4,7 +4,7 @@ cask 'xctu' do
 
   url 'http://ftp1.digi.com/support/utilities/40003027_W.zip'
   name 'XCTU'
-  homepage 'https://www.digi.com/products/iot-platform/xctu'
+  homepage 'https://www.digi.com/products/embedded-systems/digi-xbee-tools/xctu'
 
   installer script: {
                       executable: "#{staged_path}/xctu_installer.app/Contents/MacOS/osx-intel",
