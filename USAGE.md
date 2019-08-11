@@ -139,7 +139,6 @@ The primary Homebrew Cask Tap includes most of the Casks that a typical user wil
 | -------- | ----------- |
 | [Homebrew/cask-versions](https://github.com/Homebrew/homebrew-cask-versions) | contains alternate versions of Casks (e.g. betas, nightly releases, old versions)
 | [Homebrew/cask-fonts](https://github.com/Homebrew/homebrew-cask-fonts)       | contains Casks that install fonts
-| [Homebrew/cask-eid](https://github.com/Homebrew/homebrew-cask-eid)           | contains Casks that install electronic identity card software of various countries
 | [Homebrew/cask-drivers](https://github.com/Homebrew/homebrew-cask-drivers)   | contains Casks that install drivers for various devices
 
 You can tap any of the above with a `brew tap` command:
