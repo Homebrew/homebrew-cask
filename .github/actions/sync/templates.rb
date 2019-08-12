@@ -50,8 +50,8 @@ CASK_REPOS.each do |repo|
   end
 
   FileUtils.rm_r File.join(repo_dir, '.github/actions/sync')
-  workflow = File.read(File.join(repo_dir, '.github/main.workflow'))
-  File.write File.join(repo_dir, '.github/main.workflow'), workflow.gsub(/\["sync_[^"]+"\]/, '[]')
+  FileUtils.rm File.join(repo_dir, '.github/workflows/sync_labels.yml')
+  FileUtils.rm File.join(repo_dir, '.github/workflows/sync_templates_and_ci_config.yml')
 
   FileUtils.rm File.join(repo_dir, '.github/ISSUE_TEMPLATE/02_feature_request.md')
 
