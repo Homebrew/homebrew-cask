@@ -9,3 +9,5 @@ jobs:
     runs-on: macOS-latest
     steps:
       - uses: ./.github/actions/automerge
+        env:
+          HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
