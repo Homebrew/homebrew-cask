@@ -1,0 +1,11 @@
+name: automerge
+
+on:
+  schedule:
+    - cron: 0 * * * *
+
+jobs:
+  automerge:
+    runs-on: macOS-latest
+    steps:
+      - uses: ./.github/actions/automerge
