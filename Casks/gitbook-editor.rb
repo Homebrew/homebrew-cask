@@ -4,7 +4,7 @@ cask 'gitbook-editor' do
 
   url 'https://downloads.editor.gitbook.com/download/osx'
   name 'GitBook Editor'
-  homepage 'https://www.gitbook.com/editor'
+  homepage 'https://legacy.gitbook.com/editor'
 
   app 'GitBook Editor.app'
 
@@ -16,4 +16,8 @@ cask 'gitbook-editor' do
                '~/Library/Saved Application State/gitbook-editor.savedState',
                '~/GitBook',
              ]
+
+  caveats do
+    discontinued
+  end
 end
