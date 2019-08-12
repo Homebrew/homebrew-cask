@@ -1,0 +1,18 @@
+name: Generate formulae.brew.sh data.
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: docker://linuxbrew/brew
+        with:
+          entrypoint: .github/main.workflow.sh
+        env:
+          ANALYTICS_JSON_KEY: ${{ secrets.ANALYTICS_JSON_KEY }}
+          FORMULAE_DEPLOY_KEY: ${{ secrets.FORMULAE_DEPLOY_KEY }}
