@@ -1,6 +1,6 @@
 cask 'parallels' do
-  version '14.1.3-45485'
-  sha256 '34c9c345642fa30f9d240a76062c5672e399349d5e5984db9c208d22e099f8b9'
+  version '15.0.0-46967'
+  sha256 'ed8b991bbbb70142ced8ba450273118e613fcd9b692d00ef75ef8db0b046aa6c'
 
   url "https://download.parallels.com/desktop/v#{version.major}/#{version}/ParallelsDesktop-#{version}.dmg"
   appcast 'https://kb.parallels.com/eu/124521'
