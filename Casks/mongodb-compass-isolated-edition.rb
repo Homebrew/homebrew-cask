@@ -1,6 +1,6 @@
 cask 'mongodb-compass-isolated-edition' do
-  version '1.19.0'
-  sha256 'c8e8c654e257b14236d3515b93be5e1c48a4f2e036b219d9ed0a1ebfb3de600e'
+  version '1.19.1'
+  sha256 'db74d305c79b1bbfe237cd969ac1d4037eb576345cb2c09405e8618e81389aa5'
 
   url "https://downloads.mongodb.com/compass/mongodb-compass-isolated-#{version}-darwin-x64.dmg"
   appcast 'https://www.mongodb.com/download-center/compass'
