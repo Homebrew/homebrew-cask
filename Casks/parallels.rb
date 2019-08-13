@@ -22,13 +22,6 @@ cask 'parallels' do
                    args: ['detach', "/Volumes/Parallels Desktop #{version.major}"]
   end
 
-  postflight do
-    # Start Parallels Service
-    system_command "#{appdir}/Parallels Desktop.app/Contents/MacOS/Parallels Service",
-                   args: ['service_start'],
-                   sudo: true
-  end
-
   uninstall_preflight do
     set_ownership "#{appdir}/Parallels Desktop.app"
   end
