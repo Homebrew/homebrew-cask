@@ -25,7 +25,8 @@ cask 'parallels' do
   postflight do
     # Start Parallels Service
     system_command "#{appdir}/Parallels Desktop.app/Contents/MacOS/Parallels Service",
-                   args: ['service_start']
+                   args: ['service_start'],
+                   sudo: true
   end
 
   uninstall_preflight do
