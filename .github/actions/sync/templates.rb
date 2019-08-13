@@ -49,7 +49,9 @@ CASK_REPOS.each do |repo|
     FileUtils.cp_r path, File.join(repo_dir, path)
   end
 
+  # Remove actions which should only be run from the main repo.
   FileUtils.rm_r File.join(repo_dir, '.github/actions/sync')
+  FileUtils.rm File.join(repo_dir, '.github/workflows/generate_formulae.brew.sh_data.yml')
   FileUtils.rm File.join(repo_dir, '.github/workflows/sync_labels.yml')
   FileUtils.rm File.join(repo_dir, '.github/workflows/sync_templates_and_ci_config.yml')
 
