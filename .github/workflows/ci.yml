@@ -1,0 +1,15 @@
+name: CI
+
+on: pull_request
+
+jobs:
+  ci:
+    strategy:
+      matrix:
+        os:
+          - macOS-10.14
+    steps:
+      - uses: actions/checkout@master
+      - run: env | sort
+      - run: pwd
+      - run: ls -all
