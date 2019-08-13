@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@master
       - uses: docker://linuxbrew/brew
         with:
-          entrypoint: .github/main.workflow.sh
+          entrypoint: .github/actions/generate_formulae.brew.sh_data.sh
         env:
           ANALYTICS_JSON_KEY: ${{ secrets.ANALYTICS_JSON_KEY }}
           FORMULAE_DEPLOY_KEY: ${{ secrets.FORMULAE_DEPLOY_KEY }}

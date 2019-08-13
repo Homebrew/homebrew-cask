@@ -5,5 +5,5 @@ branding:
   icon: git-pull-request
   color: yellow
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: docker
+  image: Dockerfile
