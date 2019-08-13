@@ -1,6 +1,6 @@
 cask 'aimersoft-video-converter-ultimate' do
-  version '11.1.0.2,747'
-  sha256 'c46d519054c1b51996ccfe398f3acd2e79682264b25ca1ec2b82e4a9827a05ab'
+  version '11.1.1.1,747'
+  sha256 'dc41ed77052816f83a0689807781a5b2085483bf93f87b9450a0aae39d45b1f1'
 
   url "http://download.aimersoft.com/cbs_down/aimer-mac-video-converter-ultimate_full#{version.after_comma}.dmg"
   name 'Aimersoft Video Converter Ultimate'
