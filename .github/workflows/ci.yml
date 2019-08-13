@@ -4,10 +4,7 @@ on: push
 
 jobs:
   ci:
-    strategy:
-      matrix:
-        os:
-          - macOS-10.14
+    runs-on: macOS-10.14
     steps:
       - uses: actions/checkout@master
       - run: env | sort
