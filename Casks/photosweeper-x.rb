@@ -7,6 +7,8 @@ cask 'photosweeper-x' do
   name 'PhotoSweeper X'
   homepage 'https://overmacs.com/'
 
+  depends_on macos: '>= :sierra'
+
   app 'PhotoSweeper X.app'
 
   zap trash: '~/Library/Preferences/com.overmacs.photosweeperpaddle.plist'
