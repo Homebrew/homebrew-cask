@@ -1,6 +1,6 @@
 cask 'kube-forwarder' do
-  version '1.4.2'
-  sha256 '2dd2d5bbb9da8656dc125a148f98a1dd2065cf8522baa341e86b64e7d234c5e0'
+  version '1.5.0'
+  sha256 'c6aeb2bd94dce460f08e517b8236332c563d67b8e186cbf4dc1b8acfda2b744a'
 
   # github.com/pixel-point/kube-forwarder was verified as official when first introduced to the cask
   url "https://github.com/pixel-point/kube-forwarder/releases/download/v#{version}/kube-forwarder.dmg"
