@@ -1,6 +1,6 @@
 name: CI
 
-on: pull_request
+on: push
 
 jobs:
   ci:
