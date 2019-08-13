@@ -23,15 +23,9 @@ cask 'parallels' do
   end
 
   postflight do
-    # Unhide the application
-    system_command '/usr/bin/chflags',
-                   args: ['nohidden', "#{appdir}/Parallels Desktop.app"],
-                   sudo: true
-
     # Start Parallels Service
     system_command "#{appdir}/Parallels Desktop.app/Contents/MacOS/Parallels Service",
-                   args: ['service_start'],
-                   sudo: true
+                   args: ['service_start']
   end
 
   uninstall_preflight do
