@@ -22,6 +22,12 @@ module Cask
           raise CaskError, "This command must be run from inside a tap directory."
         end
 
+        @commit_range = begin
+          commit_range_start = system_command!("git", args: ["rev-parse", "origin/master"]).stdout.chomp
+          commit_range_end = system_command!("git", args: ["rev-parse", "HEAD"]).stdout.chomp
+          "#{commit_range_start}...#{commit_range_end}"
+        end
+
         ruby_files_in_wrong_directory = modified_ruby_files - (modified_cask_files + modified_command_files + modified_github_files)
 
         unless ruby_files_in_wrong_directory.empty?
@@ -42,7 +48,7 @@ module Cask
             Auditor.audit(cask, audit_download: true,
                                 audit_appcast: true,
                                 check_token_conflicts: added_cask_files.include?(path),
-                                commit_range: ENV["TRAVIS_COMMIT_RANGE"])
+                                commit_range: @commit_range)
           end
 
           overall_success &= step "brew cask style #{cask.token}", "style" do
@@ -99,6 +105,11 @@ module Cask
       private
 
       def step(name, travis_id)
+        unless ENV.key?("TRAVIS_COMMIT_RANGE")
+          puts Formatter.headline(name, color: :yellow)
+          return yield != false
+        end
+
         success = false
         output = nil
 
@@ -149,13 +160,13 @@ module Cask
 
       def modified_files
         @modified_files ||= system_command!(
-          "git", args: ["diff", "--name-only", "--diff-filter=AMR", ENV["TRAVIS_COMMIT_RANGE"]]
+          "git", args: ["diff", "--name-only", "--diff-filter=AMR", @commit_range]
         ).stdout.split("\n").map { |path| Pathname(path) }
       end
 
       def added_files
         @added_files ||= system_command!(
-          "git", args: ["diff", "--name-only", "--diff-filter=A", ENV["TRAVIS_COMMIT_RANGE"]]
+          "git", args: ["diff", "--name-only", "--diff-filter=A", @commit_range]
         ).stdout.split("\n").map { |path| Pathname(path) }
       end
 

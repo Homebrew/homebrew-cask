@@ -4,7 +4,7 @@ class Check
   CHECKS = {
     installed_apps: -> {
       ["/Applications", File.expand_path("~/Applications")]
-        .flat_map { |dir| Dir["#{dir}/**/*.app"] }
+        .flat_map { |dir| (0..5).map { |i| "/*" * i }.map { |glob| Dir["#{dir}#{glob}"] } }
     },
     installed_kexts: -> {
       system_command!("/usr/sbin/kextstat", args: ["-kl"], print_stderr: false)

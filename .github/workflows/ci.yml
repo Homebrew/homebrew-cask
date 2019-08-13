@@ -1,14 +1,34 @@
 name: CI
 
 on:
-  - push
   - pull_request
 
 jobs:
   ci:
     runs-on: macOS-10.14
     steps:
-      - uses: actions/checkout@master
-      - run: env | sort
-      - run: pwd
-      - run: ls -all
+      - name: brew pull
+        run: |
+          brew update-reset "$(brew --repository)"
+
+          HOMEBREW_INSTALL_BUNDLER_GEMS_FIRST=1 brew config &
+          dependencies=$!
+
+          brew tap "${GITHUB_REPOSITORY}"
+          brew update-reset "$(brew --repository "${GITHUB_REPOSITORY}")"
+
+          brew pull "${PR_URL}"
+
+          wait $dependencies
+        env:
+          PR_URL: ${{ github.event.pull_request._links.html.href }}
+          HOMEBREW_COLOR: 1
+          HOMEBREW_DEVELOPER: 1
+      - name: brew cask ci
+        run: |
+          cd "$(brew --repository "${GITHUB_REPOSITORY}")"
+          brew cask ci
+        env:
+          CI: true
+          HOMEBREW_COLOR: 1
+          HOMEBREW_DEVELOPER: 1
