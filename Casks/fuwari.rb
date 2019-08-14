@@ -10,8 +10,7 @@ cask 'fuwari' do
 
   app 'Fuwari/Fuwari.app'
 
-  uninstall login_item: 'Fuwari',
-            quit:       'com.appknop.Fuwari'
+  uninstall quit:       'com.appknop.Fuwari'
 
   zap trash: [
                '~/Library/Application Support/com.appknop.Fuwari',

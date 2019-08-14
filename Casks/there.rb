@@ -10,6 +10,5 @@ cask 'there' do
 
   app 'There.app'
 
-  uninstall login_item: 'There',
-            signal:     ['TERM', 'pm.there.desktop']
+  uninstall signal: ['TERM', 'pm.there.desktop']
 end

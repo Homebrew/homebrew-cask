@@ -10,8 +10,7 @@ cask 'vsee' do
 
   app 'VSee.app'
 
-  uninstall login_item: 'VSee.app',
-            delete:     '~/Library/Internet Plug-Ins/VSeeHelper.plugin'
+  uninstall delete: '~/Library/Internet Plug-Ins/VSeeHelper.plugin'
 
   zap trash: [
                '~/Library/Preferences/com.vsee.VSee.plist',

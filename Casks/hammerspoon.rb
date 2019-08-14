@@ -17,8 +17,7 @@ cask 'hammerspoon' do
 
   app 'Hammerspoon.app'
 
-  uninstall quit:       'org.hammerspoon.Hammerspoon',
-            login_item: 'Hammerspoon'
+  uninstall quit: 'org.hammerspoon.Hammerspoon'
 
   zap trash: [
                '~/.hammerspoon',

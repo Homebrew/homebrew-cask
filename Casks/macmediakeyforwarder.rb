@@ -11,7 +11,5 @@ cask 'macmediakeyforwarder' do
 
   app 'MacMediaKeyForwarder.app'
 
-  uninstall login_item: 'MacMediaKeyForwarder'
-
   zap trash: '~/Library/Preferences/com.milgra.hsmke.plist'
 end

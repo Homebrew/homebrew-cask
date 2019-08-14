@@ -11,8 +11,7 @@ cask 'flux' do
 
   app 'Flux.app'
 
-  uninstall login_item: 'Flux',
-            quit:       'org.herf.Flux'
+  uninstall quit: 'org.herf.Flux'
 
   zap trash: [
                '~/Library/Application Support/Flux',
