@@ -15,6 +15,12 @@ jobs:
           dependencies=$!
 
           brew tap "${GITHUB_REPOSITORY}"
+
+          # Get latest version of `brew cask ci` command.
+          if [ "${GITHUB_REPOSITORY}" != Homebrew/homebrew-cask ]; then
+            brew update-reset "$(brew --repository homebrew/cask)"
+          fi
+
           brew update-reset "$(brew --repository "${GITHUB_REPOSITORY}")"
 
           brew pull "${PR_URL}"
