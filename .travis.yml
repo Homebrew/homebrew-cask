@@ -42,11 +42,11 @@ install:
     brew update-reset
   - |
     # Mirror the repo as a tap.
-    TAP_DIR="$(brew --repository)/Library/Taps/${TRAVIS_REPO_SLUG}"
+    TAP_DIR="$(brew --repository "${TRAVIS_REPO_SLUG}")"
     mkdir -p "${TAP_DIR}"
     rsync -az --delete "${TRAVIS_BUILD_DIR}/" "${TAP_DIR}/"
     export TRAVIS_BUILD_DIR="${TAP_DIR}"
-    builtin cd "${TRAVIS_BUILD_DIR}"
+    builtin cd "${TAP_DIR}"
 
 script: brew cask ci
 

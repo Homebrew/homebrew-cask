@@ -1,12 +1,14 @@
 cask 'intel-haxm' do
-  version '7.5.1'
-  sha256 'd3257c33677d808db66b1c17165704f56ce68a89777946067838afcdd54a54c4'
+  version '7.5.2'
+  sha256 '20914a1dfac8f4ca7a6a9bf77998f7aa4075384fa88c883e3eb6666661821b81'
 
   # github.com/intel/haxm was verified as official when first introduced to the cask
   url "https://github.com/intel/haxm/releases/download/v#{version}/haxm-macosx_v#{version.dots_to_underscores}.zip"
   appcast 'https://github.com/intel/haxm/releases.atom'
   name 'Intel HAXM'
   homepage 'https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager'
+
+  depends_on macos: '>= :yosemite'
 
   installer script: {
                       executable: 'silent_install.sh',

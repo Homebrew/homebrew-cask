@@ -1,6 +1,6 @@
 cask 'dash' do
-  version '4.6.4'
-  sha256 '7fbda1b22cbe19c86e60eeb45ebea5d41c973ac83787141e3bd39b003168ba75'
+  version '4.6.5'
+  sha256 'c1a3a89d2d86a3fa3ee0287ffd65270cb9c6f0d35338a2643fca836153086c7f'
 
   url "https://kapeli.com/downloads/v#{version.major}/Dash.zip"
   appcast "https://kapeli.com/Dash#{version.major}.xml"

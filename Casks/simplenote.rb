@@ -1,6 +1,6 @@
 cask 'simplenote' do
-  version '1.6.0'
-  sha256 '98ebf79cd64cdd12205bad63cccac7b1a0e789a914298d19600d51485bedd072'
+  version '1.7.0'
+  sha256 '0e060e4aa4a0fe9fe2bba473c53f4bceed64be820e5f4599f7dc2412691b9309'
 
   url "https://github.com/Automattic/simplenote-electron/releases/download/v#{version}/Simplenote-macOS-#{version}.dmg"
   appcast 'https://github.com/Automattic/simplenote-electron/releases.atom'

@@ -1,6 +1,6 @@
 cask 'hook' do
-  version '2581,1563727455'
-  sha256 '927c17a3941e4ae28f2ae076a6cf3962a1b9869070fb24995faff3729b51fa90'
+  version '2595,1565469253'
+  sha256 'eda2ded7a1d69962a76102fd06dd1093a8d813c122fcba76b24094af07921fe6'
 
   # dl.devmate.com/com.cogsciapps.hook was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.cogsciapps.hook/#{version.before_comma}/#{version.after_comma}/Hook-#{version.before_comma}.dmg"

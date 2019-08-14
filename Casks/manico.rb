@@ -1,11 +1,13 @@
 cask 'manico' do
-  version '2.4.7'
-  sha256 '7944f270423a9300ca3e80cc0b173caa9d826018f4540d6afb1270a0a51d465e'
+  version '2.5.1'
+  sha256 '5a5047f081897b20a92ec7b6279612b2d23c1569c87b4070943ec5e9c614ed16'
 
   url "https://manico.im/static/Manico_#{version}.dmg"
   appcast 'https://manico.im/static/manico-official-appcast.xml'
   name 'Manico'
   homepage 'https://manico.im/'
+
+  depends_on macos: '>= :sierra'
 
   app 'Manico.app'
 

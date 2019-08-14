@@ -1,6 +1,6 @@
 cask 'scihubeva' do
-  version 'v2.1.2'
-  sha256 '84e4dc32437d6474aa90808cf8d97c3e1797770eb2911e4a0f55176ddb042197'
+  version 'v3.1.1'
+  sha256 'd89db82c6112cf5ea68a44457d5e243fbd7831fd2c29bae6e3d77754c3cff54a'
 
   url "https://github.com/leovan/SciHubEVA/releases/download/#{version}/SciHubEVA-#{version}.dmg"
   appcast 'https://github.com/leovan/SciHubEVA/releases.atom'

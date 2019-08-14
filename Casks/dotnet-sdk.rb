@@ -1,6 +1,6 @@
 cask 'dotnet-sdk' do
-  version '2.2.301,1440e4a9-4e5f-4148-b8d2-8a2b3da4e622:d0c5cb2712e51c188200ea420d771c2f'
-  sha256 '5c39f1ed440d913206d471288100c0f1bc8429a3e53e51892df0a160aba2ff07'
+  version '2.2.401,5e137e65-24c7-4f96-ac52-481e14eedcce:8a12628a2a3fd3fd96661f984bba658f'
+  sha256 'fe597fa739bbad9b1a1165f18a5c99b2e7157d6095be187445d3cfc829012965'
 
   url "https://download.visualstudio.microsoft.com/download/pr/#{version.after_comma.before_colon}/#{version.after_colon}/dotnet-sdk-#{version.before_comma}-osx-x64.pkg"
   appcast 'https://www.microsoft.com/net/download/macos'

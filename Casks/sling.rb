@@ -6,7 +6,7 @@ cask 'sling' do
   url 'https://webapp.movetv.com/player/osx/slingtv.dmg'
   appcast 'https://webapp.movetv.com/config/desktopupdate/sling/osx/production/Sling-snowleopard-sparkle.xml'
   name 'Sling TV'
-  homepage 'http://www.sling.com/'
+  homepage 'https://www.sling.com/'
 
   app 'Sling.app'
 

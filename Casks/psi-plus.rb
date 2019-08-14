@@ -4,7 +4,7 @@ cask 'psi-plus' do
 
   # downloads.sourceforge.net/psiplus was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/psiplus/Psi+-#{version}-x86_64.dmg"
-  appcast 'https://sourceforge.net/projects/psiplus/rss'
+  appcast 'https://sourceforge.net/projects/psiplus/rss?path=/macOS/tehnick'
   name 'Psi+'
   homepage 'https://psi-plus.com/'
 

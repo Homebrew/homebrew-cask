@@ -1,6 +1,6 @@
 cask 'favro' do
-  version '1.0.30'
-  sha256 '4d8e46d0baea887901721b2c40405a75ced1c11957539e3584aeca179cf28dc6'
+  version '1.0.32'
+  sha256 '424e22dd5d7659e328288e0fb7c3091f1262d3ab2947fff9817394fd08669416'
 
   url "https://download.favro.com/FavroDesktop/macOS/x64/Favro-#{version}.dmg"
   appcast 'https://download.favro.com/FavroDesktop/macOS/x64/Latest.json'

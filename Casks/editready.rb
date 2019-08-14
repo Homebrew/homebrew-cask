@@ -1,6 +1,6 @@
 cask 'editready' do
-  version '2.5.4'
-  sha256 '8c71b33500856fd15bd6ef0cf175f63467dab692332f1ec8578f702bcb8ec8d6'
+  version '2.6.1'
+  sha256 'f5ee9bbae589fd708f72094f67995becd7e2419a7fe7765ee56efd0a11c949f0'
 
   url "https://www.divergentmedia.com/fileRepository/EditReady%20#{version}.dmg"
   appcast 'https://www.divergentmedia.com/autoupdater/editready/2_x'

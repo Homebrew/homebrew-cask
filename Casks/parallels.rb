@@ -1,6 +1,6 @@
 cask 'parallels' do
-  version '14.0.1-45154'
-  sha256 '2d3157fa684c9e255927ae4a04f303107427a3ea166eea6ea86f0963cb24e4bb'
+  version '14.1.3-45485'
+  sha256 '34c9c345642fa30f9d240a76062c5672e399349d5e5984db9c208d22e099f8b9'
 
   url "https://download.parallels.com/desktop/v#{version.major}/#{version}/ParallelsDesktop-#{version}.dmg"
   appcast 'https://kb.parallels.com/eu/124521'
@@ -8,8 +8,19 @@ cask 'parallels' do
   homepage 'https://www.parallels.com/products/desktop/'
 
   auto_updates true
+  # This .dmg cannot be extracted normally
+  # Original discussion: https://github.com/Homebrew/homebrew-cask/pull/67202
+  container type: :naked
 
-  app 'Parallels Desktop.app'
+  preflight do
+    system_command '/usr/bin/hdiutil',
+                   args: ['attach', '-nobrowse', "#{staged_path}/ParallelsDesktop-#{version}.dmg"]
+    system_command "/Volumes/Parallels Desktop #{version.major}/Parallels Desktop.app/Contents/MacOS/inittool",
+                   args: ['install', '-t', "#{appdir}/Parallels Desktop.app", '-s'],
+                   sudo: true
+    system_command '/usr/bin/hdiutil',
+                   args: ['detach', "/Volumes/Parallels Desktop #{version.major}"]
+  end
 
   postflight do
     # Unhide the application
@@ -35,6 +46,12 @@ cask 'parallels' do
                       '/usr/local/bin/prlctl',
                       '/usr/local/bin/prlexec',
                       '/usr/local/bin/prlsrvctl',
+                      '/Applications/Parallels Desktop.app',
+                      '/Applications/Parallels Desktop.app/Contents/Applications/Parallels Link.app',
+                      '/Applications/Parallels Desktop.app/Contents/Applications/Parallels Mounter.app',
+                      '/Applications/Parallels Desktop.app/Contents/Applications/Parallels Technical Data Reporter.app',
+                      '/Applications/Parallels Desktop.app/Contents/MacOS/Parallels Service.app',
+                      '/Applications/Parallels Desktop.app/Contents/MacOS/Parallels VM.app',
                     ]
 
   zap trash: [

@@ -4,7 +4,7 @@ class Check
   CHECKS = {
     installed_apps: -> {
       ["/Applications", File.expand_path("~/Applications")]
-        .flat_map { |dir| Dir["#{dir}/**/*.app"] }
+        .flat_map { |dir| (0..5).map { |i| "/*" * i }.map { |glob| Dir["#{dir}#{glob}"] } }
     },
     installed_kexts: -> {
       system_command!("/usr/sbin/kextstat", args: ["-kl"], print_stderr: false)
@@ -22,7 +22,10 @@ class Check
     installed_launchjobs: -> {
       format_launchjob = lambda { |file|
         name = file.basename(".plist").to_s
-        label = Plist.parse_xml(File.read(file))["Label"]
+
+        xml, = system_command! "plutil", args: ["-convert", "xml1", "-o", "-", "--", file]
+
+        label = Plist.parse_xml(xml)["Label"]
         (name == label) ? name : "#{name} (#{label})"
       }
 

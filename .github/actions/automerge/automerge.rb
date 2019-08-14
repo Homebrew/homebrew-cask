@@ -89,7 +89,10 @@ def merge_pull_request(pr, statuses = GitHub.open_api(pr.fetch("statuses_url")))
 
     cask_path = diff.files.first.a_path
 
-    out, _ = system_command! 'git', args: ['-C', tap.path, 'log', '--pretty=format:', '-G', '\s+version\s+\'', '--follow', '--find-renames=60%', '--patch', '--', cask_path]
+    out, _ = system_command! 'git', args: ['-C', tap.path, 'log', '--pretty=format:', '-G', '\s+version\s+\'', '--follow', '--patch', '--', cask_path]
+
+    # Workaround until https://github.com/anolson/git_diff/pull/16 is merged and released.
+    out.gsub!(/^copy (from|to)/, 'rename \1')
 
     version_diff = GitDiff.from_string(out)
     previous_versions = version_diff.additions.select { |l| l.version? }.map { |l| l.version }.uniq
@@ -127,13 +130,6 @@ def passed_ci?(statuses = [])
   statuses.dig("continuous-integration/travis-ci/pr", "state") == "success"
 end
 
-CASK_REPOS = [
-  "Homebrew/homebrew-cask",
-  "Homebrew/homebrew-cask-drivers",
-  "Homebrew/homebrew-cask-fonts",
-  "Homebrew/homebrew-cask-versions",
-].freeze
-
 begin
   case ENV["GITHUB_EVENT_NAME"]
   when "status"
@@ -142,8 +138,8 @@ begin
     pr = find_pull_request_for_status(status)
     skip "No matching pull request found." unless pr
     merge_pull_request(pr, [status])
-  when "issue_comment", "pull_request", "pull_request_review", "pull_request_review_comment", "push"
-    prs = CASK_REPOS.flat_map { |repo| GitHub.pull_requests(repo, state: :open, base: "master") }
+  when "schedule"
+    prs = GitHub.pull_requests(ENV["GITHUB_REPOSITORY"], state: :open, base: "master")
 
     skip "No open pull requests found." if prs.empty?
 
@@ -158,6 +154,13 @@ begin
       rescue NeutralSystemExit => e
         skipped_prs << pr
       rescue => e
+        repo   = pr.fetch("base").fetch("repo").fetch("full_name")
+        number = pr.fetch("number")
+
+        tap = Tap.fetch(repo)
+        pr_name = "#{tap.name}##{number}"
+
+        puts "Error while processing #{pr_name}:"
         puts e
         puts e.backtrace
         failed_prs << pr
@@ -172,4 +175,6 @@ begin
   else
     skip "Unsupported GitHub Actions event."
   end
+rescue NeutralSystemExit => e
+  puts e.message
 end

@@ -3,7 +3,6 @@ cask 'nox-app-player' do
   sha256 '7499ea4e4adaf62b0c14594d8fbe2773a2ec44ed1d2139a07c119dab49ce9130'
 
   url "https://res06.bignox.com/full/20190109/2e91ffc9401f40efa3a19e3b75667ee2.dmg?filename=Nox_installer_for_mac_v#{version}_intl.dmg"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.bignox.com/en/download/fullPackage/mac_fullzip'
   name 'Nox App Player'
   homepage 'https://www.bignox.com/'
 
