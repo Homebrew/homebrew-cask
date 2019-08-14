@@ -151,11 +151,7 @@ module Cask
       end
 
       def tap
-        @tap ||= if ENV.key?("TRAVIS_REPO_SLUG")
-          Tap.fetch(ENV["TRAVIS_REPO_SLUG"])
-        else
-          Tap.from_path(Dir.pwd)
-        end
+        @tap ||= Tap.from_path(Dir.pwd)
       end
 
       def modified_files
