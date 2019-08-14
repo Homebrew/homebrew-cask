@@ -22,7 +22,10 @@ class Check
     installed_launchjobs: -> {
       format_launchjob = lambda { |file|
         name = file.basename(".plist").to_s
-        label = Plist.parse_xml(File.read(file))["Label"]
+
+        xml, = system_command! "plutil", args: ["-convert", "xml1", "-o", "-", "--", file]
+
+        label = Plist.parse_xml(xml)["Label"]
         (name == label) ? name : "#{name} (#{label})"
       }
 
