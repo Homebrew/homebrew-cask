@@ -6,10 +6,14 @@ cask 'gloomhaven-helper' do
   name 'Gloomhaven Helper'
   homepage 'https://esotericsoftware.com/gloomhaven-helper#Gloomhaven-Helper'
 
-  def install
-    libexec.install 'ghh.jar'
-    bin.install_symlink libexec / 'run.sh'
-  end
+  shimscript = "#{staged_path}/GloomhavenHelper/gloomhaven-helper.wrapper.sh"
+  binary shimscript, target: 'gloomhaven-helper'
 
-  stage_only true
+  preflight do
+    IO.write shimscript, <<~EOS
+      #!/bin/bash
+      cd "$(dirname "$(readlink -n "${0}")")" && \
+        java "${@}" -XstartOnFirstThread -jar 'ghh.jar'
+    EOS
+  end
 end
