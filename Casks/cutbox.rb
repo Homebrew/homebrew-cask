@@ -1,6 +1,6 @@
 cask 'cutbox' do
-  version '1.4.4'
-  sha256 'd02690579212d8f974c70be1d89c25f6b20cb1a8bd8ef9afaca88ff98fffe815'
+  version '1.4.5'
+  sha256 '1288203c2fbcbff806ca4aa1d237ef24edd5771a24aecf497f09cd023d6dd461'
 
   url "https://github.com/cutbox/CutBox/releases/download/#{version}/CutBox.dmg"
   appcast 'https://github.com/cutbox/CutBox/releases.atom'
