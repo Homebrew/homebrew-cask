@@ -1,6 +1,6 @@
 cask 'microsoft-word' do
-  version '16.27.19071500'
-  sha256 '6e6e87f28b5ff4b53d6fe3c021a5516f4b709bfb05e67ffab99751cc41ba5777'
+  version '16.28.19081202'
+  sha256 '0EB8D554C22047A543E3ED0433AEF41B6E5B9C32EECD5ACBDD12D30564CB3410'
 
   # officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate was verified as official when first introduced to the cask
   url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Word_#{version}_Installer.pkg"
