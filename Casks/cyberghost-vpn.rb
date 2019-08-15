@@ -1,6 +1,6 @@
 cask 'cyberghost-vpn' do
-  version '7.0.1.74'
-  sha256 'a30ad341b29dde169e15f1af00cc68df1b8393fdd7d6cfc70b11c145e3241324'
+  version '7.0.2.82'
+  sha256 '310d18486eeeced68c93a23d4e9b054cfb6bd8338318ea73ce39e8ffc8f38605'
 
   url "https://download.cyberghostvpn.com/mac/updates/v#{version.major}/cg#{version.major}mac_#{version}.dmg"
   appcast "https://download.cyberghostvpn.com/mac/updates/v#{version.major}/cyberghost_mac_update.inf"
