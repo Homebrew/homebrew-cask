@@ -10,6 +10,7 @@ cask 'microsoft-word' do
 
   auto_updates true
   depends_on macos: '>= :sierra'
+  conflicts_with cask: 'microsoft-office'
 
   pkg "Microsoft_Word_#{version}_Installer.pkg"
 
