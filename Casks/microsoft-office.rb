@@ -8,6 +8,11 @@ cask 'microsoft-office' do
   homepage 'https://products.office.com/mac/microsoft-office-for-mac/'
 
   auto_updates true
+  conflicts_with cask: [
+                         'microsot-word',
+                         'microsot-excel',
+                         'microsot-powerpoint',
+                       ]
   depends_on macos: '>= :sierra'
 
   pkg "Microsoft_Office_#{version}_Installer.pkg"
