@@ -6,6 +6,7 @@ cask 'gloomhaven-helper' do
   name 'Gloomhaven Helper'
   homepage 'https://esotericsoftware.com/gloomhaven-helper#Gloomhaven-Helper'
 
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/GloomhavenHelper/gloomhaven-helper.wrapper.sh"
   binary shimscript, target: 'gloomhaven-helper'
 
