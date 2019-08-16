@@ -26,7 +26,7 @@ module GitDiffExtension
 
     def version_decreased?
       return false unless version_changed?
-      new_version.split(/[,\-:]/).zip(old_version.split(/[,\-:]/))
+      new_version.split(/[,\-:_]/).zip(old_version.split(/[,\-:_]/))
         .any? { |v_new, v_old|
           # Don't treat hex IDs as versions.
           r = /([a-f]+\d+){2,}/
