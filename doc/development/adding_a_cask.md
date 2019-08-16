@@ -1,6 +1,6 @@
-**Note**: Before taking the time to craft a new cask, make sure:
-- it can be accepted by checking the [Rejected Casks FAQ document](https://github.com/Homebrew/homebrew-cask/blob/master/doc/faq/rejected_casks.md).
-- check if there are no [open pull requests] for the same cask.
+**Note**: Before taking the time to craft a new cask, make sure
+- it can be accepted by checking the [Rejected Casks FAQ document](https://github.com/Homebrew/homebrew-cask/blob/master/doc/faq/rejected_casks.md),
+- check if there are no [open pull requests] for the same cask and
 - check if the cask was not [already refused].
 
 [open pull requests]: https://github.com/Homebrew/homebrew-cask/pulls
@@ -163,7 +163,7 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 brew cask install my-new-cask
 ```
 
-Did it install? If something went wrong, `brew cask uninstall my-new-cask` and edit your Cask with `brew cask edit my-new-cask` to fix it.
+Did it install? If something went wrong, edit your Cask with `brew cask edit my-new-cask` to fix it.
 
 Test also if the uninstall works successfully:
 
