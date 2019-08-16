@@ -40,7 +40,7 @@ cask 'advancedcolors' do
 end
 ```
 
-Here is a last example for `airdisplay`, which uses a `pkg` installer to install the application instead of a stand-alone application bundle (`.app`). Note the [`uninstall pkgutil` stanza](../cask_language_reference/stanzas/uninstall.md#uninstall-key-pkgutil), which is needed to uninstall all files which were installed using the installer. 
+Here is a last example for `airdisplay`, which uses a `pkg` installer to install the application instead of a stand-alone application bundle (`.app`). Note the [`uninstall pkgutil` stanza](../cask_language_reference/stanzas/uninstall.md#uninstall-key-pkgutil), which is needed to uninstall all files which were installed using the installer.
 
 You also see how to change the `version` to fit the download `url`. You can change the `version` with [Ruby String methods](https://ruby-doc.org/core/String.html) or use predefined helper modifiers. All avaliable default `version` modifiers as described in the [Version Stanza Details](../cask_language_reference/stanzas/version.md).
 
