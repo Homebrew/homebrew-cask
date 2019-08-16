@@ -7,5 +7,5 @@ cask 'zulu-mission-control' do
   name 'Zulu Mission Control'
   homepage 'https://www.azul.com/products/zulu-mission-control/'
 
-  app "zmc#{version}-macos_x64/Zulu Mission Control.app", target: 'Zulu Mission Control.app'
+  app "zmc#{version}-macos_x64/Zulu Mission Control.app"
 end
