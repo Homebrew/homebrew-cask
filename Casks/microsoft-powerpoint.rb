@@ -10,6 +10,7 @@ cask 'microsoft-powerpoint' do
 
   auto_updates true
   depends_on macos: '>= :sierra'
+  conflicts_with cask: 'microsoft-office'
 
   pkg "Microsoft_PowerPoint_#{version}_Installer.pkg"
 
