@@ -9,8 +9,8 @@ cask 'microsoft-powerpoint' do
   homepage 'https://products.office.com/en-US/powerpoint'
 
   auto_updates true
-  depends_on macos: '>= :sierra'
   conflicts_with cask: 'microsoft-office'
+  depends_on macos: '>= :sierra'
 
   pkg "Microsoft_PowerPoint_#{version}_Installer.pkg"
 
