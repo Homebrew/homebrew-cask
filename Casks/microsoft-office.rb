@@ -9,7 +9,12 @@ cask 'microsoft-office' do
 
   auto_updates true
   depends_on macos: '>= :sierra'
-
+  conflicts_with cask: [
+                         'microsot-word',
+                         'microsot-excel',
+                         'microsot-powerpoint',
+                       ]
+  
   pkg "Microsoft_Office_#{version}_Installer.pkg"
 
   uninstall pkgutil:   [
