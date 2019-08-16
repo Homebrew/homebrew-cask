@@ -9,8 +9,8 @@ cask 'microsoft-excel' do
   homepage 'https://products.office.com/en-US/excel'
 
   auto_updates true
-  depends_on macos: '>= :sierra'
   conflicts_with cask: 'microsoft-office'
+  depends_on macos: '>= :sierra'
 
   pkg "Microsoft_Excel_#{version}_Installer.pkg"
 
