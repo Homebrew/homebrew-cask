@@ -13,6 +13,7 @@ cask 'microsoft-office' do
   pkg "Microsoft_Office_#{version}_Installer.pkg"
 
   uninstall pkgutil:   [
+                         'com.microsoft.OneDrive',
                          'com.microsoft.package.DFonts',
                          'com.microsoft.package.Frameworks',
                          'com.microsoft.package.Microsoft_AutoUpdate.app',
@@ -24,7 +25,7 @@ cask 'microsoft-office' do
                          'com.microsoft.package.Proofing_Tools',
                          'com.microsoft.pkg.licensing',
                        ],
-# Frameworks, DFonts and ProofingTools remain in each applicaiton after pkg uninstall, delete them
+            # Frameworks, DFonts and ProofingTools remain in each applicaiton after pkg uninstall, delete them
             delete:    [
                          '/Applications/Microsoft Excel.app',
                          '/Applications/Microsoft OneNote.app',
@@ -88,6 +89,5 @@ cask 'microsoft-office' do
                  ],
       pkgutil:   [
                    'com.microsoft.package.Microsoft_AutoUpdate.app',
-                   'com.microsoft.OneDrive',
                  ]
 end
