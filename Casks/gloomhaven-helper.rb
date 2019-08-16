@@ -17,4 +17,8 @@ cask 'gloomhaven-helper' do
         java "${@}" -XstartOnFirstThread -jar 'ghh.jar'
     EOS
   end
+
+  caveats do
+    depends_on_java
+  end
 end
