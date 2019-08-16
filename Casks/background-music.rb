@@ -16,6 +16,6 @@ cask 'background-music' do
             quit:      'com.bearisdriving.BGM.App',
             script:    {
                          executable: '/Applications/Background Music.app/Contents/Resources/_uninstall-non-interactive.sh',
-                         sudo: true,
+                         sudo:       true,
                        }
 end
