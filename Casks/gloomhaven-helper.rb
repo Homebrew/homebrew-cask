@@ -4,7 +4,7 @@ cask 'gloomhaven-helper' do
 
   url 'https://esotericsoftware.com/files/ghh/GloomhavenHelper.zip'
   name 'Gloomhaven Helper'
-  homepage 'https://esotericsoftware.com/gloomhaven-helper#Gloomhaven-Helper'
+  homepage 'https://esotericsoftware.com/gloomhaven-helper'
 
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/GloomhavenHelper/gloomhaven-helper.wrapper.sh"
