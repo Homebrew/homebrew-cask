@@ -9,8 +9,8 @@ cask 'microsoft-word' do
   homepage 'https://products.office.com/en-US/word'
 
   auto_updates true
-  depends_on macos: '>= :sierra'
   conflicts_with cask: 'microsoft-office'
+  depends_on macos: '>= :sierra'
 
   pkg "Microsoft_Word_#{version}_Installer.pkg"
 
