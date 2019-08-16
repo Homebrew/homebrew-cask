@@ -13,7 +13,6 @@ cask 'microsoft-office' do
   pkg "Microsoft_Office_#{version}_Installer.pkg"
 
   uninstall pkgutil:   [
-                         'com.microsoft.OneDrive',
                          'com.microsoft.package.DFonts',
                          'com.microsoft.package.Frameworks',
                          'com.microsoft.package.Microsoft_AutoUpdate.app',
@@ -85,9 +84,12 @@ cask 'microsoft-office' do
                    'com.microsoft.autoupdate.helpertool',
                    'com.microsoft.autoupdate.helper',
                    'com.microsoft.update.agent',
+                   'com.microsoft.OneDriveStandaloneUpdater',
+                   'com.microsoft.OneDriveStandaloneUpdaterDaemon',
                    'com.microsoft.OneDriveUpdaterDaemon',
                  ],
       pkgutil:   [
                    'com.microsoft.package.Microsoft_AutoUpdate.app',
+                   'com.microsoft.OneDrive',
                  ]
 end
