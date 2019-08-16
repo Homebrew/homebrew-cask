@@ -42,7 +42,7 @@ end
 
 Here is a last example for `airdisplay`, which uses a `pkg` installer to install the application instead of a stand-alone application bundle (`.app`). Note the [`uninstall pkgutil` stanza](../cask_language_reference/stanzas/uninstall.md#uninstall-key-pkgutil), which is needed to uninstall all files which were installed using the installer.
 
-You will also see how to adapt `version` to the download `url`. [Our custom `version` methods](../cask_language_reference/stanzas/version.md#version-methods) will suffice most times; when they don’t, you may resort to the standard [Ruby String methods](https://ruby-doc.org/core/String.html).
+You will also see how to adapt `version` to the download `url`. Use [our custom `version` methods](../cask_language_reference/stanzas/version.md#version-methods) to do so, resorting to the standard [Ruby String methods](https://ruby-doc.org/core/String.html) when they don’t suffice.
 
 ```ruby
 cask 'airdisplay' do
