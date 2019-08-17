@@ -7,7 +7,7 @@ cask 'flinto' do
   name 'Flinto'
   homepage 'https://www.flinto.com/mac'
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :high_sierra'
 
   app 'Flinto.app'
 
