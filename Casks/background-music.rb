@@ -1,6 +1,6 @@
 cask 'background-music' do
-  version '0.3.0'
-  sha256 '7d2f1016f5f57414f3e1c07433bbafc669fe38d7e42f04e2ae08a38cff55818d'
+  version '0.3.1'
+  sha256 '070bef360bff9e52639a4fbf23ee7052b9645004a431af6ad62997cfed99e2d7'
 
   url "https://github.com/kyleneideck/BackgroundMusic/releases/download/v#{version}/BackgroundMusic-#{version}.pkg"
   appcast 'https://github.com/kyleneideck/BackgroundMusic/releases.atom'
@@ -14,5 +14,8 @@ cask 'background-music' do
   uninstall launchctl: 'com.bearisdriving.BGM.XPCHelper',
             pkgutil:   'com.bearisdriving.BGM',
             quit:      'com.bearisdriving.BGM.App',
-            script:    '/Applications/Background Music.app/Contents/Resources/_uninstall-non-interactive.sh'
+            script:    {
+                         executable: '/Applications/Background Music.app/Contents/Resources/_uninstall-non-interactive.sh',
+                         sudo:       true,
+                       }
 end
