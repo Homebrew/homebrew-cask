@@ -6,7 +6,7 @@ cask 'pluralsight' do
   appcast 'https://macapp.pluralsight.com/appcast'
   name 'Pluralsight'
   homepage 'https://www.pluralsight.com/'
-  
+
   depends_on macos: '>= :high_sierra'
 
   app 'Pluralsight.app'
