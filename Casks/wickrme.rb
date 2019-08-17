@@ -1,6 +1,6 @@
 cask 'wickrme' do
-  version '5.28.6'
-  sha256 'd58ea4423469ef2530dcfd1caeb97ad3e507fd801baabf6e9bde0f9a4808348b'
+  version '5.28.9'
+  sha256 'c118ed0959fedba55b946760775de6f4927b6a952d0e88e3f99537e214b3bf3a'
 
   # s3.amazonaws.com/static.wickr.com was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/static.wickr.com/downloads/mac/me/WickrMe-#{version}.dmg"
