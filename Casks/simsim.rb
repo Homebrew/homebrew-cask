@@ -1,6 +1,6 @@
 cask 'simsim' do
-  version '1.4.2'
-  sha256 'b022db8fc5d2fea84c0bb1523183a4d6da2f22c2115c8a8aebc3036a5419fcb4'
+  version '1.4.3'
+  sha256 'cb6d9652085766ebe991b07df7ce726a30f8255f5acf4ab0f4f2f7d94f1c1dad'
 
   url "https://github.com/dsmelov/simsim/releases/download/#{version}/SimSim_#{version}.zip"
   appcast 'https://github.com/dsmelov/simsim/releases.atom'
