@@ -6,7 +6,12 @@ cask 'adobe-creative-cloud' do
   name 'Adobe Creative Cloud'
   homepage 'https://creative.adobe.com/products/creative-cloud'
 
-  installer manual: 'Creative Cloud Installer.app'
+  installer script: {
+                      executable: "#{staged_path}/Creative Cloud Installer.app/Contents/MacOS/Install",
+                      args:       ['--mode=silent'],
+                      sudo:       true,
+                    }
 
-  uninstall delete: "#{staged_path}/#{token}" # Needs to be uninstalled manually
+  uninstall delete: "#{staged_path}/#{token}", # Needs to be uninstalled manually
+            rmdir:  '/Applications/Utilities/Adobe Installers'
 end
