@@ -8,6 +8,7 @@ cask 'parallels' do
   homepage 'https://www.parallels.com/products/desktop/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
   # This .dmg cannot be extracted normally
   # Original discussion: https://github.com/Homebrew/homebrew-cask/pull/67202
   container type: :naked
