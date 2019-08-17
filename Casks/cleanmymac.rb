@@ -31,7 +31,7 @@ cask 'cleanmymac' do
                "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macpaw.cleanmymac#{version.major}.scheduler.sfl*",
                "~/Library/Application Support/CleanMyMac #{version.major}",
                "~/Library/Application Support/CleanMyMac #{version.major} Menu",
-               "~/Library/Application Support/CleanMyMac X",
+               '~/Library/Application Support/CleanMyMac X',
                "~/Library/Caches/CleanMyMac #{version.major}",
                "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.macpaw.CleanMyMac#{version.major}.help*",
                "~/Library/Caches/com.macpaw.CleanMyMac#{version.major}",
