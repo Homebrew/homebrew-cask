@@ -1,6 +1,6 @@
 cask 'sampler' do
-  version '1.0.2'
-  sha256 '04202bba199f34974f20fa291a87ca04b84ff022c3733820432913fd3db68b87'
+  version '1.0.3'
+  sha256 'b76c1e1154d458ba43af06b380b38a85051a74cde2691bbc05c3405148f5c7ac'
 
   # github.com/sqshq/sampler was verified as official when first introduced to the cask
   url "https://github.com/sqshq/sampler/releases/download/v#{version}/sampler-#{version}-darwin-amd64"
