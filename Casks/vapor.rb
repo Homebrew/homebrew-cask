@@ -7,7 +7,5 @@ cask 'vapor' do
   name 'VAPOR'
   homepage 'https://github.com/NCAR/VAPOR'
 
-  pkg 'vapor.pkg'
-
-  uninstall pkgutil: 'edu.ucar.ncar.vapor.pkg'
+  app 'vapor.app'
 end
