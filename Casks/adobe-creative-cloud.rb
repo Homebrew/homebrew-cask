@@ -12,6 +12,17 @@ cask 'adobe-creative-cloud' do
                       sudo:       true,
                     }
 
-  uninstall delete: "#{staged_path}/#{token}", # Needs to be uninstalled manually
-            rmdir:  '/Applications/Utilities/Adobe Installers'
+  uninstall launchctl: [
+                         'com.adobe.AdobeCreativeCloud',
+                         'com.adobe.acc.installer',
+                         'com.adobe.agsservice',
+                         'Adobe_Genuine_Software_Integrity_Service',
+                       ],
+            delete:    [
+                         "#{staged_path}/#{token}", # Needs to be uninstalled manually
+                         '/Applications/Adobe Creative Cloud/Adobe Creative Cloud',
+                         '/Applications/Utilities/Adobe Creative Cloud',
+                         '/Applications/Utilities/Adobe Application Manager',
+                       ],
+            rmdir:     '/Applications/Utilities/Adobe Installers'
 end
