@@ -6,5 +6,12 @@ cask 'psequel' do
   name 'PSequel'
   homepage 'http://www.psequel.com/'
 
+  depends_on macos: '>= :yosemite'
+
   app 'PSequel.app'
+
+  zap trash: [
+               '~/Library/Application Support/com.psequel.PSequel',
+               '~/Library/Preferences/com.psequel.PSequel',
+             ]
 end
