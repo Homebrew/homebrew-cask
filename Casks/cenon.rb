@@ -1,6 +1,6 @@
 cask 'cenon' do
   version '4.0.6'
-  sha256 '8087d45c40c98bc32ff983c8fcff6ba48467bd9c46e376dcbe4449a90182a4cd'
+  sha256 '90f5b1a09519d656742be290f070471f218f3dbc0f391a5e81d45c3d72179a71'
 
   # cenon.download was verified as official when first introduced to the cask
   url "http://www.cenon.download/binaries/Apple/Cenon-#{version}.pkg"
