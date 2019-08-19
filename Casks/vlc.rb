@@ -5,7 +5,7 @@ cask 'vlc' do
   url "https://get.videolan.org/vlc/#{version}/macosx/vlc-#{version}.dmg"
   appcast 'https://download.videolan.org/pub/videolan/vlc/'
   name 'VLC media player'
-  homepage 'https://www.videolan.org/vlc/'
+  homepage 'https://www.videolan.org/'
 
   auto_updates true
   conflicts_with cask: 'vlc-nightly'
