@@ -9,4 +9,11 @@ cask 'winds' do
   homepage 'https://getstream.io/winds/'
 
   app 'Winds.app'
+
+  zap trash: [
+               '~/Library/Application Support/Winds',
+               '~/Library/Logs/Winds',
+               '~/Library/Preferences/io.getstream.winds.plist',
+               '~/Library/Saved Application State/io.getstream.winds.savedState',
+             ]
 end
