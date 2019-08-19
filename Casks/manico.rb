@@ -1,6 +1,6 @@
 cask 'manico' do
-  version '2.5.1'
-  sha256 '5a5047f081897b20a92ec7b6279612b2d23c1569c87b4070943ec5e9c614ed16'
+  version '2.5.2'
+  sha256 '1f1cef69f58218156ff26899d31b162c38d8a3af54f3bb7e7881d57f6eb114a6'
 
   url "https://manico.im/static/Manico_#{version}.dmg"
   appcast 'https://manico.im/static/manico-official-appcast.xml'
