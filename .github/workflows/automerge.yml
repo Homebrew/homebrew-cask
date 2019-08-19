@@ -1,7 +1,8 @@
 name: Scheduled automerge.
 
 on:
-  status: []
+  # Keeps failing, try enabling again in future.
+  # status:
   schedule:
     - cron: '*/15 * * * *'
 
