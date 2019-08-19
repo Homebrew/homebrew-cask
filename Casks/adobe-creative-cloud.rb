@@ -19,7 +19,6 @@ cask 'adobe-creative-cloud' do
                          'Adobe_Genuine_Software_Integrity_Service',
                        ],
             delete:    [
-                         "#{staged_path}/#{token}", # Needs to be uninstalled manually
                          '/Applications/Adobe Creative Cloud/Adobe Creative Cloud',
                          '/Applications/Utilities/Adobe Creative Cloud',
                          '/Applications/Utilities/Adobe Application Manager',
