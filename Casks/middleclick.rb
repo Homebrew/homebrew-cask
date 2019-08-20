@@ -9,4 +9,8 @@ cask 'middleclick' do
   homepage 'https://rouge41.com/labs/'
 
   app 'MiddleClick.app'
+
+  caveats do
+    discontinued
+  end
 end
