@@ -10,17 +10,19 @@ cask 'podman' do
   binary 'brew/podman'
 
   postflight do
-    man1 = Dir["#{HOMEBREW_PREFIX}/Caskroom/podmand/#{version}/brew/docs/*.1"]
+    man1 = Dir["#{staged_path}/brew/docs/*.1"]
     FileUtils.mv(man1, "#{HOMEBREW_PREFIX}/share/man/man1/")
-    man5 = Dir["#{HOMEBREW_PREFIX}/Caskroom/podmand/#{version}/brew/docs/*.5"]
+
+    man5 = Dir["#{staged_path}/brew/docs/*.5"]
     FileUtils.mkdir("#{HOMEBREW_PREFIX}/share/man/man5/") unless File.exist?("#{HOMEBREW_PREFIX}/share/man/man5/")
     FileUtils.mv(man5, "#{HOMEBREW_PREFIX}/share/man/man5/")
   end
 
   uninstall_postflight do
     man1 = Dir["#{HOMEBREW_PREFIX}/share/man/man1/podman*.1"]
-    man5 = Dir["#{HOMEBREW_PREFIX}/share/man/man5/podman*.5"]
     FileUtils.rm(man1)
+
+    man5 = Dir["#{HOMEBREW_PREFIX}/share/man/man5/podman*.5"]
     FileUtils.rm(man5)
   end
 
