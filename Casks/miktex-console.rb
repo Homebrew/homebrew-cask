@@ -4,7 +4,7 @@ cask 'miktex-console' do
 
   url "https://miktex.org/download/ctan/systems/win32/miktex/setup/darwin-x86_64/miktex-#{version}-1-darwin-x86_64.dmg"
   name 'MiKTeX'
-  homepage 'https://miktex.org'
+  homepage 'https://miktex.org/'
 
   app 'MiKTeX Console.app'
 end
