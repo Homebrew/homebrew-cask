@@ -9,8 +9,7 @@ cask 'c0re100-qbittorrent' do
 
   depends_on macos: '>= :sierra'
 
-  # Renamed for consistency: app name is different in the Finder and in a shell.
-  app 'qbittorrent.app', target: 'qBittorrent.app'
+  app 'qbittorrent.app'
 
   zap trash: [
                '~/.config/qBittorrent',
