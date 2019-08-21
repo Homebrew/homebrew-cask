@@ -1,6 +1,6 @@
 cask 'yack' do
-  version '50.0.154'
-  sha256 '50b5a507b03ab6c40894695580f936e0d0563811b8dfb1aea2484689e311e05d'
+  version :latest
+  sha256 :no_check
 
   # yack-prod-public.s3-us-west-2.amazonaws.com was verified as official when first introduced to the cask
   url 'https://yack-prod-public.s3-us-west-2.amazonaws.com/yack-releases/beta/yack-beta.dmg'
