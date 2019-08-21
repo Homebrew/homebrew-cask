@@ -1,6 +1,6 @@
 cask 'gitfinder' do
-  version '1.3'
-  sha256 'c49cc1c083e6cf8dbd1147d82c1b1e5baf2c601aa990b8c057ae86ca4ed06030'
+  version '1.3.1'
+  sha256 '801999749b72ed778ecf0688e48b42e6ddbe4c23739de2e00f10a83d6f34d344'
 
   # zigz.ag/GitFinder was verified as official when first introduced to the cask
   url 'https://zigz.ag/GitFinder/updates/GitFinder.dmg'
