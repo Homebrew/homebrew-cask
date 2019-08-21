@@ -1,6 +1,6 @@
 cask 'jaxx-liberty' do
-  version '2.2.4'
-  sha256 '8ef07030794a318d7cd70877c63a783049f552d263d062cb202cabeab9f07f5f'
+  version '2.2.5'
+  sha256 'cd51a6db3c7b3ba4d1d2bf74b5a4778b2a7dcc5da8228e4097fd53f8e125d5e7'
 
   url "https://download-liberty.jaxx.io/Jaxx.Liberty-#{version}.dmg"
   appcast 'https://jaxx.io/downloads.html'
