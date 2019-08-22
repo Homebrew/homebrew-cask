@@ -1,6 +1,6 @@
 cask 'sf-symbols' do
-  version '1.0'
-  sha256 'f822046b1880377e4c8d1df8fd807d9335404a21245bb8abcb3481c6dd47c5a0'
+  version :latest
+  sha256 :no_check
 
   url 'https://developer.apple.com/design/downloads/SF-Symbols.dmg'
   name 'SF Symbols'
@@ -8,7 +8,7 @@ cask 'sf-symbols' do
 
   depends_on macos: '>= :mojave'
 
-  pkg 'SFSymbols.pkg'
+  pkg 'SF Symbols.pkg'
 
   uninstall pkgutil: 'com.apple.SFSymbols.plist',
             delete:  '/Applications/SF Symbols.app'
