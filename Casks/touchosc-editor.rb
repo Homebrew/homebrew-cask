@@ -7,7 +7,7 @@ cask 'touchosc-editor' do
   name 'TouchOSC Editor'
   homepage 'https://hexler.net/software/touchosc'
 
-  app "touchosc-editor-#{version}-osx/TouchOSC Editor.app"
+  app "touchosc-editor-#{version}-macos/TouchOSC Editor.app"
   artifact "touchosc-editor-#{version}-osx/layouts", target: Pathname.new(File.expand_path('~')).join('Library/Application Support/TouchOSCEditor/layouts')
 
   zap trash: '~/Library/*/*TouchOSCEditor*'
