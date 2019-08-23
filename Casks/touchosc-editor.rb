@@ -1,8 +1,8 @@
 cask 'touchosc-editor' do
   version '1.8.6'
-  sha256 '5f5b618f026ef38c82577b3c324d8b035f5fdd1212f55d253012382d72efef9c'
+  sha256 '409d530276b2b7903c75855feb14e9dcaea24b75c98129645fed1ec3645a2415'
 
-  url "https://hexler.net/pub/touchosc/touchosc-editor-#{version}-osx.zip"
+  url "https://hexler.net/pub/touchosc/touchosc-editor-#{version}-macos.zip"
   appcast 'https://hexler.net/software/touchosc'
   name 'TouchOSC Editor'
   homepage 'https://hexler.net/software/touchosc'
