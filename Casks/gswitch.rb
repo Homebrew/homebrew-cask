@@ -1,6 +1,6 @@
 cask 'gswitch' do
-  version '1.9.3'
-  sha256 '35225c8b570a202048f5bee43436baf1743c9299977826e4d5f6c91babf2f9ea'
+  version '1.9.4'
+  sha256 'b5fe9bb912adc4624309f6922ae9efb28aa161b30f874da0abbe09d336212694'
 
   # github.com/CodySchrank/gSwitch was verified as official when first introduced to the cask
   url "https://github.com/CodySchrank/gSwitch/releases/download/#{version}/gSwitch.zip"

@@ -1,6 +1,6 @@
 cask 'aspera-connect' do
-  version '3.9.5.172984'
-  sha256 '55310adb9712585515a5e4dc857f1eb5eb4d9b72ee13029b6935912d490c999d'
+  version '3.9.6.173386'
+  sha256 '1eb1480957cb2c4958aa12c26802b7dfc2d7a255325d9a83c058c6fd0fa7d0d6'
 
   url "https://download.asperasoft.com/download/sw/connect/#{version.major_minor_patch}/IBMAsperaConnectInstaller-#{version}.dmg"
   appcast 'https://downloads.asperasoft.com/en/documentation/8'

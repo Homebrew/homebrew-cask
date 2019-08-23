@@ -4,7 +4,7 @@ cask 'muzie' do
 
   # muzie-release.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://muzie-release.s3.amazonaws.com/Muzie-#{version}.dmg"
-  appcast 'https://muzie.netlify.com/'
+  appcast 'https://release.muzie.app/latest-mac.yml'
   name 'Muzie'
   homepage 'https://muzie.netlify.com/'
 

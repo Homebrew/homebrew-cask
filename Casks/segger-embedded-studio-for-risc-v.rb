@@ -1,6 +1,6 @@
 cask 'segger-embedded-studio-for-risc-v' do
-  version '4.12'
-  sha256 '2064b0a4f8b64525f69a6a86da5686375166d28249b880518446d0cbccda6f25'
+  version '4.18'
+  sha256 '0cf07e1e8884f975ba2957071d10a6f4f5fb3b68d89636838150334f34335126'
 
   url "https://www.segger.com/downloads/embedded-studio/Setup_EmbeddedStudio_RISCV_v#{version.no_dots}_macos_x64.dmg"
   name 'Embedded Studio for RISC-V'
@@ -8,5 +8,8 @@ cask 'segger-embedded-studio-for-risc-v' do
 
   pkg "Install SEGGER Embedded Studio for RISC-V #{version}.pkg"
 
-  uninstall pkgutil: "com.rowley.crossworks.riscv_segger_studio.#{version}"
+  uninstall pkgutil: [
+                       'riscv_segger_studio',
+                       "com.rowley.crossworks.riscv_segger_studio.#{version}",
+                     ]
 end

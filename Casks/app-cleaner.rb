@@ -4,7 +4,7 @@ cask 'app-cleaner' do
 
   url 'https://nektony.com/download/app-cleaner-uninstaller/app-cleaner-uninstaller.dmg'
   appcast 'https://nektony.com/promo/mac-app-cleaner-pro/update/update.xml'
-  name 'App Cleaner & Uninstaller'
+  name 'Nektony App Cleaner & Uninstaller'
   homepage 'https://nektony.com/mac-app-cleaner'
 
   app 'App Cleaner.app'

@@ -1,6 +1,6 @@
 cask 'wechatwebdevtools' do
-  version '1.02.1904090'
-  sha256 'c5562009effa60f077e2cfc45baa6452f3a78f7a9220e4bd38e1f871c49b0216'
+  version '1.02.1907300'
+  sha256 '37b73bd3782ca6174a2382039ce883b4a0fcd58dc7d070d938138cf63878eccd'
 
   url "https://dldir1.qq.com/WechatWebDev/#{version.major}.2.0/20#{version.patch}/wechat_devtools_#{version}.dmg"
   appcast 'https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html'

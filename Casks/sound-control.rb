@@ -8,6 +8,8 @@ cask 'sound-control' do
   name 'Sound Control'
   homepage 'https://staticz.com/soundcontrol/'
 
+  auto_updates true
+
   app 'Sound Control.app'
 
   uninstall launchctl: 'com.staticz.soundcontrol.*',

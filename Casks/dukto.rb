@@ -6,7 +6,7 @@ cask 'dukto' do
   url "https://downloads.sourceforge.net/dukto/Dukto#{version}-OSX.dmg"
   appcast 'https://sourceforge.net/projects/dukto/rss'
   name 'Dukto'
-  homepage 'http://www.msec.it/blog/?page_id=11'
+  homepage 'https://www.msec.it/blog/?page_id=11'
 
   app 'Dukto.app'
 end

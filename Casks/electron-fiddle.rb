@@ -1,9 +1,9 @@
 cask 'electron-fiddle' do
-  version '0.8.1'
-  sha256 '6d7751a8fb24bdc90ef4762df2ba2f432073719b9c238328fa11a91e22ed8a72'
+  version '0.9.0'
+  sha256 '99d02565aaa435233d0df1d5b9c6faaa65ec444572ba092b04ff8ad6c556e13e'
 
   # github.com/electron/fiddle was verified as official when first introduced to the cask
-  url "https://github.com/electron/fiddle/releases/download/v#{version}/electron-fiddle-#{version}-mac.zip"
+  url "https://github.com/electron/fiddle/releases/download/v#{version}/Electron.Fiddle-darwin-x64-#{version}.zip"
   appcast 'https://github.com/electron/fiddle/releases.atom'
   name 'Electron Fiddle'
   homepage 'https://electron.atom.io/'

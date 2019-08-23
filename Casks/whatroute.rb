@@ -1,6 +1,6 @@
 cask 'whatroute' do
-  version '2.2.4'
-  sha256 '8b9cd33d2f21afae8bda3738ba6f5e87e0d96f1b804f88c330ac4cc510605028'
+  version '2.2.6'
+  sha256 '494cfbe12e8f74b6509f903f8afbbddc11bdb9931c3b7e1b1d97a8d6cff21964'
 
   url "https://downloads.whatroute.net/software/whatroute-#{version}.zip"
   appcast "https://www.whatroute.net/whatroute#{version.major}appcast.xml"

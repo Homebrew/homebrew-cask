@@ -8,7 +8,7 @@ cask 'vitalsource-bookshelf' do
   name 'VitalSource Bookshelf'
   homepage 'https://www.vitalsource.com/bookshelf-features'
 
-  depends_on macos: '>= :yosemite'
+  depends_on macos: '>= :sierra'
 
   app 'VitalSource Bookshelf.app'
 end

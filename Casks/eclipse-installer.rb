@@ -1,6 +1,6 @@
 cask 'eclipse-installer' do
-  version '4.11.0,2019-03:R'
-  sha256 '7f19c21c6e324a1c3d9b5babc01b353a0b41b9ba4e159436a860342eeaaedce4'
+  version '4.12.0,2019-06:R'
+  sha256 '63bc49218695f61a4f9c4b5f465f32d08873412984b45856436b9ef95e67bdac'
 
   url "https://eclipse.org/downloads/download.php?file=/oomph/epp/#{version.after_comma.before_colon}/#{version.after_colon}/eclipse-inst-mac64.tar.gz&r=1"
   name 'Eclipse Installer'

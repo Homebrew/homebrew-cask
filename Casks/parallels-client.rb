@@ -1,6 +1,6 @@
 cask 'parallels-client' do
-  version '17.0.0-21282'
-  sha256 '8cb12254b5b40ed5207f9d63807c47d0654c49c60c23382963249059b8e9949f'
+  version '17.0.0-21290'
+  sha256 'a7903b869b517f1769c8b3706ce99dc685797789289c48715db43154d03d7c51'
 
   url "https://download.parallels.com/ras/v#{version.major}/#{version.hyphens_to_dots}/RasClient-Mac-#{version}.pkg"
   appcast "https://download.parallels.com/ras/v#{version.major}/RAS%20Client%20for%20Mac%20Changelog.txt"

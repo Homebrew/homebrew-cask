@@ -8,6 +8,7 @@ cask 'isyncr' do
   end
 
   url "https://www.jrtstudio.com/files/iSyncr%20Desktop%20#{version}.pkg"
+  appcast 'https://www.jrtstudio.com/files/SlashiSyncr36.js'
   name 'iSyncr Desktop'
   homepage 'https://www.jrtstudio.com/iSyncr-iTunes-for-Android'
 

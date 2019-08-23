@@ -1,6 +1,6 @@
 cask 'whalebird' do
-  version '2.7.5'
-  sha256 '1b4202f29d9b3fa4814f6f070a86ec6c5232fa8e99173568498c747494e94f18'
+  version '2.8.4'
+  sha256 'f0f3b94d96fc19c21f828cab5f02170908775555f8c5f1b634417fb981c9edd3'
 
   # github.com/h3poteto/whalebird-desktop was verified as official when first introduced to the cask
   url "https://github.com/h3poteto/whalebird-desktop/releases/download/#{version}/Whalebird-#{version}-darwin-x64.dmg"

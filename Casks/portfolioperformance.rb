@@ -1,6 +1,6 @@
 cask 'portfolioperformance' do
-  version '0.39.2'
-  sha256 '3b5fed059a308283b7d25b1020ece267461b964aa034c2a07677419e2884a044'
+  version '0.41.0'
+  sha256 'af24eb94666c671cc75d48afbf607fc710b5f0a84d6f46600a7e4ac713cd2e3f'
 
   # github.com/buchen/portfolio was verified as official when first introduced to the cask
   url "https://github.com/buchen/portfolio/releases/download/#{version}/PortfolioPerformance-distro-#{version}-macosx.cocoa.x86_64.tar.gz"

@@ -4,6 +4,7 @@ cask 'mars24' do
   sha256 '9f34d8988b30b49bfd1cdaf592276337a4a4b88b0f487cdfcc04e4658b2533dd'
 
   url "https://www.giss.nasa.gov/tools/mars24/download/Mars24MacOS-#{version}.dmg"
+  appcast 'https://www.giss.nasa.gov/tools/mars24/download/'
   name 'Mars24'
   homepage 'https://www.giss.nasa.gov/tools/mars24/'
 

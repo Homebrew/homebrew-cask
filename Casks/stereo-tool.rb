@@ -1,11 +1,11 @@
 cask 'stereo-tool' do
-  version '9.11'
-  sha256 '707e4466f97db8b3a39ac39d80c3bb6cb40782e0f7e241c19027fdbdb28e95da'
+  version '9.34'
+  sha256 '8b0c9044b39c29e26ce5c5f1d7d344290908cab107731992daaddd0a8f7c9b24'
 
-  url 'https://www.stereotool.com/download/stereo_tool.zip'
-  appcast 'https://www.stereotool.com/documentation/8.50/version_history/'
+  url 'https://www.stereotool.com/download/ThimeoStereoTool-Installer.dmg'
+  appcast 'https://www.stereotool.com/download/'
   name 'Stereo Tool'
   homepage 'https://www.stereotool.com/'
 
-  app 'stereo_tool.app'
+  app 'ThimeoStereoTool.app'
 end

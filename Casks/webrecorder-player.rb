@@ -1,6 +1,6 @@
 cask 'webrecorder-player' do
-  version '1.6.4'
-  sha256 '11ccbe2040d53c673c38a08f6b13acec3a36c9ad0a18c3a51b86987219533dcc'
+  version '1.7.0'
+  sha256 'f8b89442479a9ecda4b5cd02926bc8f852113946f41822eef3703180bb0d89e3'
 
   url "https://github.com/webrecorder/webrecorder-player/releases/download/v#{version}/webrecorder-player-#{version}.dmg"
   appcast 'https://github.com/webrecorder/webrecorder-player/releases.atom'

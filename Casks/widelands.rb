@@ -5,7 +5,9 @@ cask 'widelands' do
   # launchpad.net/widelands was verified as official when first introduced to the cask
   url "https://launchpad.net/widelands/build#{version}/build#{version}/+download/widelands-build#{version}-macosx-10.9.dmg"
   name 'Widelands'
-  homepage 'https://wl.widelands.org/'
+  homepage 'https://www.widelands.org/'
 
   app 'Widelands.app'
+
+  zap trash: '~/.widelands'
 end

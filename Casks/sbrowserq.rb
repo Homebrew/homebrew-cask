@@ -1,9 +1,10 @@
 cask 'sbrowserq' do
-  version '3.6'
-  sha256 'cd68f1df6c08ec16746b73504f789c606ebfdbe0bfd1eab04f869881f4d64b46'
+  version '3.6.3'
+  sha256 '1e59a6017a31d6da4b6eb2616dff4e86f9c0f4b932e154c09b1595a0585d167b'
 
-  url "https://www.sbrowser-q.com/SbrowserQ_V#{version}_mac.dmg"
-  appcast 'https://www.sbrowser-q.com/'
+  url "https://www.sbrowser-q.com/SbrowserQ_V#{version.major_minor}_mac.dmg"
+  appcast 'https://www.sbrowser-q.com/',
+          configuration: version.major_minor
   name 'SbrowserQ'
   homepage 'https://www.sbrowser-q.com/'
 

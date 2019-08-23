@@ -1,9 +1,9 @@
 cask 'enpass' do
-  version '6.1.0,437'
-  sha256 '87d314dd3c47d9757915b3589a55e6355c116b9d09a56dce44d9a4b77f92cbcf'
+  version '6.1.2,495'
+  sha256 'c02d10b4ba5a2fa38402c1a2af306837e5f55d181b76a894f8763856c0c473d8'
 
   url "https://dl.enpass.io/stable/mac/package/#{version.after_comma}/Enpass.pkg"
-  appcast 'https://dl.sinew.in/mac/package/appcast.xml'
+  appcast 'https://www.enpass.io/release-notes/macos-website-ver/'
   name 'Enpass'
   homepage 'https://www.enpass.io/'
 

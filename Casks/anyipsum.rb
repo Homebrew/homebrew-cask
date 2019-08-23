@@ -1,8 +1,8 @@
 cask 'anyipsum' do
-  version '0.4.0'
-  sha256 'e6341a3e2596898d3ebf6e3e201d9fedb485af314e2bcbe110a44b96f706c49c'
+  version '0.5.0'
+  sha256 '0d4af6420cdb7c2cf2b945e1d5978bfb7149d9c885da718b76f5ad6e81d4c3c6'
 
-  url "https://github.com/jlowgren/AnyIpsum/releases/download/v#{version}/AnyIpsum.dmg"
+  url "https://github.com/jlowgren/AnyIpsum/releases/download/v#{version}/AnyIpsum.zip"
   appcast 'https://github.com/jlowgren/AnyIpsum/releases.atom'
   name 'AnyIpsum'
   homepage 'https://github.com/jlowgren/AnyIpsum'

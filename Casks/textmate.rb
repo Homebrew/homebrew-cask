@@ -1,14 +1,16 @@
 cask 'textmate' do
-  version '2.0-rc.24'
-  sha256 'e359be94be7359c67c91c9fe018c678a3f6668619190d7805d36d5dfbe99c9bf'
+  version '2.0-rc.10'
+  sha256 'b8058fd562701b3bb7aab6bb7b1f3a5ac752f153fe258121aa54033cb154d20b'
 
   # github.com/textmate/textmate was verified as official when first introduced to the cask
   url "https://github.com/textmate/textmate/releases/download/v#{version}/TextMate_#{version}.tbz"
-  appcast 'https://github.com/textmate/textmate/releases.atom'
+  appcast 'https://api.textmate.org/releases/release?os=10.14.6',
+          configuration: version
   name 'TextMate'
   homepage 'https://macromates.com/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'TextMate.app'
   binary "#{appdir}/TextMate.app/Contents/Resources/mate"

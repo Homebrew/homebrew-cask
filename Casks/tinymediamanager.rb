@@ -7,6 +7,8 @@ cask 'tinymediamanager' do
   name 'tinyMediaManager'
   homepage 'https://www.tinymediamanager.org/'
 
+  auto_updates true
+
   app 'tinyMediaManager.app'
 
   caveats do
