@@ -8,6 +8,8 @@ cask 'drama' do
   name 'Drama'
   homepage 'https://www.drama.app/'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'Drama.app'
 
   zap trash: [
