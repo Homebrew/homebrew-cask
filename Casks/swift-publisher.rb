@@ -8,5 +8,7 @@ cask 'swift-publisher' do
   name 'Swift Publisher'
   homepage 'https://www.belightsoft.com/swift-publisher/'
 
+  depends_on macos: '>= :sierra'
+
   app "Swift Publisher #{version.major}.app"
 end
