@@ -4,7 +4,7 @@ cask 'netnewswire' do
 
   # github.com/brentsimmons/NetNewsWire was verified as official when first introduced to the cask
   url "https://github.com/brentsimmons/NetNewsWire/releases/download/mac-#{version}/NetNewsWire#{version}.zip"
-  appcast 'https://ranchero.com/downloads/netnewswire-beta.xml'
+  appcast 'https://github.com/brentsimmons/NetNewsWire/releases.atom'
   name 'NetNetsWire'
   homepage 'https://ranchero.com/netnewswire/'
 
