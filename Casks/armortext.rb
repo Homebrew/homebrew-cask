@@ -1,6 +1,6 @@
 cask 'armortext' do
-  version '0.22.15'
-  sha256 '7771e3ca991fddaab4d9e63cbc007acaf77229a019cce4999ee9c7ee19b8f3af'
+  version '0.22.24'
+  sha256 '8ab6b973e66cc45f4e2f638285c24137c111a6fbcd40c472a13db0b86b2c33f8'
 
   # armortext.co was verified as official when first introduced to the cask
   url "https://downloads.armortext.co/desktop/release/#{version}/ArmorText-#{version}-mac64.dmg"
