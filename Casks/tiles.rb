@@ -13,7 +13,7 @@ cask 'tiles' do
                          'com.sempliva.TilesHelper',
                        ],
             quit:      [
-                        'com.sempliva.Tiles',
+                         'com.sempliva.Tiles',
                        ]
 
   zap trash: [
