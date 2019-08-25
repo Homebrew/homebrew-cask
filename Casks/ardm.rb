@@ -8,5 +8,4 @@ cask 'ardm' do
   homepage 'https://github.com/qishibo/AnotherRedisDesktopManager/'
 
   app 'Another.Redis.Desktop.Manager.app'
-
 end
