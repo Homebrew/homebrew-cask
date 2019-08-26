@@ -10,10 +10,6 @@ cask 'netiquette' do
 
   app 'Netiquette.app'
 
-  uninstall_preflight do
-    set_ownership "#{appdir}/Netiquette.app"
-  end
-
   zap trash: [
                '~/Library/Caches/com.objective-see.Netiquette',
                '~/Library/Preferences/com.objective-see.Netiquette.plist',
