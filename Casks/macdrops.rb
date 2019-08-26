@@ -3,6 +3,7 @@ cask 'macdrops' do
   sha256 'c91f10418d8dd88f395603f9b824fc1ef319ec91affe2326cff5bce7f2bd63bb'
 
   url "https://interfacelift.com/apps/macdrops/v1/Macdrops_v#{version}.dmg"
+  appcast 'https://interfacelift.com/apps/macdrops/v1/'
   name 'Macdrops'
   homepage 'https://interfacelift.com/apps/macdrops/v1/'
 
