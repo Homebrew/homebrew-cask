@@ -5,7 +5,7 @@ cask 'meshmixer' do
   url "http://www.meshmixer.com/downloads/Autodesk_Meshmixer_v#{version}_MacOS.pkg"
   appcast 'http://www.meshmixer.com/download.html'
   name 'MeshMixer'
-  homepage 'https://meshmixer.com/'
+  homepage 'https://www.meshmixer.com/'
 
   pkg "Autodesk_Meshmixer_v#{version}_macOS.pkg"
 
