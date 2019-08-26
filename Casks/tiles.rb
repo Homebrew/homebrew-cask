@@ -1,5 +1,5 @@
 cask 'tiles' do
-  version '1.0.1'
+  version '1.0.1,20190430233520'
   sha256 '65e630a26c74f49a879a13317aa7b874788dd14216feb677d9e578e4e45ef77a'
 
   # updates.sempliva.com/tiles was verified as official when first introduced to the cask
