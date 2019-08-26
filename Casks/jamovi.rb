@@ -1,6 +1,6 @@
 cask 'jamovi' do
-  version '1.0.7.0'
-  sha256 '44424b29d5080320a41ceb24946aff0f83cb21a943ca01d1c8425597c664a54e'
+  version '1.1.0.0'
+  sha256 'd3c21e9acfe4341300ef54c421db2fbc5eca7d8c5ba0f2d3dd159f09ed50ae80'
 
   url "https://www.jamovi.org/downloads/jamovi-#{version}-macos.dmg"
   appcast 'https://www.jamovi.org/download.html'
