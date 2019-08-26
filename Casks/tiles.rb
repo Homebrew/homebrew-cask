@@ -4,8 +4,8 @@ cask 'tiles' do
 
   # updates.sempliva.com/tiles was verified as official when first introduced to the cask
   url "https://updates.sempliva.com/tiles/Tiles-#{version.after_comma}.dmg"
-  appcat 'https://updates.sempliva.com/tiles/updates.xml',
-         configuration: version.after_comma
+  appcast 'https://updates.sempliva.com/tiles/updates.xml',
+          configuration: version.after_comma
   name 'FreeMacSoft Tiles'
   homepage 'https://freemacsoft.net/tiles/'
 
