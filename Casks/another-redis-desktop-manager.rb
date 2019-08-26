@@ -1,4 +1,4 @@
-cask 'ardm' do
+cask 'another-redis-desktop-manager' do
   version '1.2.5'
   sha256 'fe1c2c08c1c0972dee58fd4f0876b1bce80ce6ac9d56842e4c34979249f85050'
 
