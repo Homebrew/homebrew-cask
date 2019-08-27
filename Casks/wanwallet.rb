@@ -1,6 +1,6 @@
 cask 'wanwallet' do
-  version '3.0.27'
-  sha256 'e43eb7880f7221b879915de8639c142fdc9fa08f38ca7d81a70247f6d73a47b7'
+  version '3.0.28'
+  sha256 'fff3b5f241f137f4600fd80980083ebe45685d44b35d4aeba7a1d7560d900ea6'
 
   url "https://www.wanchain.org/wanwallet/desktop/WanWalletGui-mac-#{version}.zip"
   appcast 'https://www.wanchain.org/getstarted/'
