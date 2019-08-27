@@ -7,7 +7,7 @@ cask 'menubar-stats' do
   name 'MenuBar Stats'
   homepage 'https://seense.com/menubarstats/'
 
-  depends_on macos: '>= :yosemite'
+  depends_on macos: '>= :sierra'
 
   app 'MenuBar Stats.app'
 end
