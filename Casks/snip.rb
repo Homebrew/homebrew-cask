@@ -9,5 +9,6 @@ cask 'snip' do
 
   pkg "Snip_V#{version.sub(%r{^(\d+\.\d+).*}, '\1')}.pkg"
 
-  uninstall pkgutil: 'com.tencent.snip.Snip.pkg'
+  uninstall quit:    'com.tencent.snip',
+            pkgutil: 'com.tencent.snip.Snip.pkg'
 end
