@@ -63,6 +63,7 @@ cask 'sketchup-pro' do
 
   # downloads can be found at https://sketchup.com/download/all
   url "https://www.sketchup.com/sketchup/SketchUpPro-#{language}-dmg"
+  appcast 'https://help.sketchup.com/en/release-notes-0'
   name 'SketchUp'
   homepage 'https://www.sketchup.com/'
 
