@@ -4,6 +4,7 @@ cask 'snipaste' do
 
   # bitbucket.org/liule/snipaste was verified as official when first introduced to the cask
   url "https://bitbucket.org/liule/snipaste/downloads/Snipaste-#{version}.dmg"
+  appcast 'https://www.snipaste.com/download.html'
   name 'Snipaste'
   homepage 'https://www.snipaste.com/'
 
