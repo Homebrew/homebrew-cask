@@ -22,8 +22,6 @@ cask 'amethyst' do
 
   app 'Amethyst.app'
 
-  uninstall login_item: 'Amethyst'
-
   zap trash: [
                '~/Library/Caches/com.amethyst.Amethyst',
                '~/Library/Preferences/com.amethyst.Amethyst.plist',

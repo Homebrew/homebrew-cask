@@ -10,8 +10,6 @@ cask 'rambox' do
 
   app 'Rambox.app'
 
-  uninstall login_item: 'Rambox'
-
   zap trash: [
                '~/Library/Application Support/CrashReporter/Rambox Helper_*.plist',
                '~/Library/Application Support/CrashReporter/Rambox_*.plist',

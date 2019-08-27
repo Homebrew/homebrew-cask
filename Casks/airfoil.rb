@@ -12,12 +12,11 @@ cask 'airfoil' do
   app 'Airfoil/Airfoil Satellite.app'
   app 'Airfoil/Airfoil.app'
 
-  uninstall delete:     '/Library/Audio/Plug-Ins/HAL/InstantOn.driver',
-            login_item: 'Airfoil Satellite',
-            quit:       [
-                          'com.rogueamoeba.Airfoil',
-                          'com.rogueamoeba.AirfoilSpeakers',
-                        ]
+  uninstall delete: '/Library/Audio/Plug-Ins/HAL/InstantOn.driver',
+            quit:   [
+                      'com.rogueamoeba.Airfoil',
+                      'com.rogueamoeba.AirfoilSpeakers',
+                    ]
 
   zap trash: [
                '~/Library/Application Support/Airfoil',

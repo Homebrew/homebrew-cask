@@ -25,7 +25,5 @@ cask 'itsycal' do
 
   app 'Itsycal.app'
 
-  uninstall login_item: 'Itsycal'
-
   zap trash: '~/Library/Preferences/com.mowglii.ItsycalApp.plist'
 end

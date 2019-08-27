@@ -10,9 +10,8 @@ cask 'now' do
 
   app 'Now.app'
 
-  uninstall delete:     '/usr/local/bin/now',
-            login_item: 'Now',
-            signal:     ['TERM', 'co.zeit.now']
+  uninstall delete: '/usr/local/bin/now',
+            signal: ['TERM', 'co.zeit.now']
 
   zap trash: [
                '~/.now.json',

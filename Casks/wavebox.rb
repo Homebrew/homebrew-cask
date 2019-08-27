@@ -12,8 +12,7 @@ cask 'wavebox' do
 
   app 'Wavebox.app'
 
-  uninstall quit:       'io.wavebox.wavebox',
-            login_item: 'Wavebox'
+  uninstall quit: 'io.wavebox.wavebox'
 
   zap trash: [
                '~/Library/Application Support/wavebox',

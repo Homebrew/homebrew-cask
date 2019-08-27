@@ -11,9 +11,8 @@ cask 'cashnotify' do
 
   app 'CashNotify.app'
 
-  uninstall launchctl:  'com.baguetteengineering.cashnotify.ShipIt',
-            quit:       'com.baguetteengineering.cashnotify',
-            login_item: 'CashNotify'
+  uninstall launchctl: 'com.baguetteengineering.cashnotify.ShipIt',
+            quit:      'com.baguetteengineering.cashnotify'
 
   zap trash: [
                '~/Library/Application Support/CashNotify',

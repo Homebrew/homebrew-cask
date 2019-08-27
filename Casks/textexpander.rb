@@ -13,7 +13,5 @@ cask 'textexpander' do
 
   app 'TextExpander.app'
 
-  uninstall login_item: 'TextExpander'
-
   zap trash: '~/Library/Application Support/TextExpander/'
 end

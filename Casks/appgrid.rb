@@ -9,8 +9,7 @@ cask 'appgrid' do
 
   app 'AppGrid.app'
 
-  uninstall login_item: 'AppGrid',
-            quit:       'com.sdegutis.AppGrid'
+  uninstall quit: 'com.sdegutis.AppGrid'
 
   zap trash: '~/Library/Preferences/com.sdegutis.AppGrid.plist'
 end
