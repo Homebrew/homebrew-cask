@@ -1,12 +1,12 @@
 cask 'wpsoffice' do
-  version '1.4.0(1935)'
-  sha256 'c44192907d1e973672624f00128c8b5d35701f22a3a2d8d207e7e71c1b259d8d'
+  version '1.4.1.2106'
+  sha256 'a9efbfe0e4d9837a550b3558f366946130271d67ba20cecc7660400c35df8cc0'
 
-  # package.mac.wpscdn.cn was verified as official when first introduced to the cask
-  url "http://package.mac.wpscdn.cn/mac_wps_pkg/#{version.major_minor_patch}/WPS_Office_#{version}.dmg"
+  # wdl1.pcfg.cache.wpscdn.com was verified as official when first introduced to the cask
+  url "http://wdl1.pcfg.cache.wpscdn.com/wpsdl/macwpsoffice/download/#{version}/WPSOffice_#{version}.dmg"
   appcast 'https://www.wps.cn/product/wpsmac/'
   name 'WPS Office'
-  homepage 'https://www.wps.cn/product/wpsmac/'
+  homepage 'https://www.wps.com/en-US/mac/'
 
   depends_on macos: '>= :sierra'
 
