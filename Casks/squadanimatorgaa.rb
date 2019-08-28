@@ -1,4 +1,4 @@
-cask 'squadanimator-gaa' do
+cask 'squadanimatorgaa' do
   version '1.0.4'
   sha256 '7e7c2f3eb637de07517a5b695ed20c9093fbab1a7f8ffb4af5167e19e60b2afa'
 
