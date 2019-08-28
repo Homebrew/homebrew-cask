@@ -1,4 +1,4 @@
-cask 'squadanimator-soccer' do
+cask 'squadanimatorsoccer' do
   version '1.0.2'
   sha256 'a525ffe4036d9c565dede5613123b0a348063ed34c3beb019d74a29a5e0c2101'
 
