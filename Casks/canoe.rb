@@ -1,6 +1,6 @@
 cask 'canoe' do
-  version '1.0.1'
-  sha256 '350c5df52e04cdf8ecb1a4470633609a128f8ffd67d8394b851d69c576750f9d'
+  version '1.0.2'
+  sha256 'bd6bada55dd7667b8f03a8fe656e19076dc8c74ecb72516759c026d4631feea5'
 
   url "https://getcanoe.io/files/#{version}/canoe-osx64-#{version}.zip"
   appcast 'https://getcanoe.io/download/'
