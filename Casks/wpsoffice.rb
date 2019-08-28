@@ -3,7 +3,7 @@ cask 'wpsoffice' do
   sha256 'a9efbfe0e4d9837a550b3558f366946130271d67ba20cecc7660400c35df8cc0'
 
   # wdl1.pcfg.cache.wpscdn.com was verified as official when first introduced to the cask
-  url "http://wdl1.pcfg.cache.wpscdn.com/wpsdl/macwpsoffice/download/#{version}/WPSOffice_#{version}.dmg"
+  url "https://wdl1.pcfg.cache.wpscdn.com/wpsdl/macwpsoffice/download/#{version}/WPSOffice_#{version}.dmg"
   appcast 'https://www.wps.cn/product/wpsmac/'
   name 'WPS Office'
   homepage 'https://www.wps.com/en-US/mac/'
