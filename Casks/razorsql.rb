@@ -7,6 +7,8 @@ cask 'razorsql' do
   name 'RazorSQL'
   homepage 'https://razorsql.com/download_mac.html'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'RazorSQL.app'
 
   zap trash: '~/.razorsql'
