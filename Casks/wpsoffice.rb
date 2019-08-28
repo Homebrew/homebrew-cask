@@ -4,7 +4,6 @@ cask 'wpsoffice' do
 
   # wdl1.pcfg.cache.wpscdn.com was verified as official when first introduced to the cask
   url "https://wdl1.pcfg.cache.wpscdn.com/wpsdl/macwpsoffice/download/#{version}/WPSOffice_#{version}.dmg"
-  appcast 'https://www.wps.com/mac/'
   name 'WPS Office'
   homepage 'https://www.wps.com/en-US/mac/'
 
