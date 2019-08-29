@@ -8,5 +8,5 @@ cask 'liteide' do
   name 'LiteIDE'
   homepage 'http://liteide.org/'
 
-  app "liteidex#{version}.macos-qt5.9.5/LiteIDE.app"
+  app 'LiteIDE.app'
 end
