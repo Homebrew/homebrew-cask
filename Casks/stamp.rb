@@ -1,9 +1,11 @@
 cask 'stamp' do
-  version '4.14.0'
-  sha256 '3e3bb8a399be51e29eba6ddd3e1e9eca0af425e3174a83d52c9c93789d75bd33'
+  version '4.14.1'
+  sha256 '6823f38eaf60d7c5594e0bd431ace9d206dac53605b19d62dd8a589f8e20af46'
 
   # dzqeytqqx888.cloudfront.net was verified as official when first introduced to the cask
   url "https://dzqeytqqx888.cloudfront.net/STAMP#{version.no_dots}.dmg"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://freeyourmusic.com/download/',
+          configuration: version.no_dots
   name 'Stamp'
   homepage 'https://freeyourmusic.com/'
 
