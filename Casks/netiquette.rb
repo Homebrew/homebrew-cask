@@ -8,6 +8,8 @@ cask 'netiquette' do
   name 'Netiquette'
   homepage 'https://objective-see.com/products/netiquette.html'
 
+  depends_on macos: '>= :mojave'
+
   app 'Netiquette.app'
 
   zap trash: [
