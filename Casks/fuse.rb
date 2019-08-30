@@ -13,5 +13,5 @@ cask 'fuse' do
   uninstall script: {
                       executable: "#{staged_path}/Extras/Uninstaller.app/Contents/Resources/Scripts/uninstall_osxfuse.sh",
                       sudo:       true,
-                  }
+                    }
 end
