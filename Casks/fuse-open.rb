@@ -1,4 +1,4 @@
-cask 'fuse' do
+cask 'fuse-open' do
   version '1.9.0'
   sha256 '31e737086d546176f436a2792baca604487f529008a21c424610baec25146a20'
 
