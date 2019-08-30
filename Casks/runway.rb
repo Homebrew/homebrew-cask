@@ -1,6 +1,6 @@
 cask 'runway' do
-  version '0.9.2'
-  sha256 'f8ce4950a6bc2a975880545e9a1a37d0e5000b12d7cbdefee6701682448a560f'
+  version '0.9.3'
+  sha256 '113e86d4cf8c686c8ee136916facdd092ef52eebc2816a5e10ae586cf11b4ca2'
 
   # runway-releases.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://runway-releases.s3.amazonaws.com/Runway-#{version}.dmg"
