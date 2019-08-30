@@ -14,7 +14,6 @@ cask 'playmemories-home' do
   uninstall pkgutil:   'com.sony.pkg.PMHInstaller',
             launchctl: [
                          'com.sony.SonyAutoLauncher.agent',
-                         'com.sony.PMHMac.21480.9270F351-EFA7-4854-B519-41DA71611588',
                          'com.sony.WirelessAutoImportLauncher.agent',
                        ]
 
