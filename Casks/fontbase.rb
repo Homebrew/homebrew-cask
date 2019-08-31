@@ -3,7 +3,7 @@ cask 'fontbase' do
   sha256 '1644c52d860524ea50bc5d15a256f30ea3e99f13ff5c5b17b6d11b3b748fc7d1'
 
   url "https://releases.fontba.se/mac/FontBase-#{version}.dmg"
-  appcast 'https://fontba.se/_next/static/hSC8UGFOdx9C9D5-glqs5/pages/downloads/thankyou.js'
+  appcast 'https://fontba.se/downloads/thankyou'
   name 'FontBase'
   homepage 'https://fontba.se/'
 
