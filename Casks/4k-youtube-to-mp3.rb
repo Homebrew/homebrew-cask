@@ -8,5 +8,7 @@ cask '4k-youtube-to-mp3' do
   name '4K YouTube to MP3'
   homepage 'https://www.4kdownload.com/products/product-youtubetomp3'
 
+  depends_on macos: '>= :sierra'
+
   app '4K YouTube to MP3.app'
 end
