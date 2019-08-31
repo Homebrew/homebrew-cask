@@ -16,7 +16,7 @@ There are a few different ways the `appcast` can be determined:
 
 * Sourceforge projects follow the form `https://sourceforge.net/projects/{{project_name}}/rss`. A more specific page can be used as needed, pointing to a specific directory structure: `https://sourceforge.net/projects/{{project_name}}/rss?path=/{{path_here}}`. (Example: [`seashore.rb`](https://github.com/Homebrew/homebrew-cask/blob/645dbb8228ec2f1f217ed1431e188687aac13ca5/Casks/seashore.rb#L6))
 
-* An appcast can be any URL hosted by the app’s developer that changes every time a new release is out (e.g. a changelog HTML page). (Example: [`razorsql.rb`](https://github.com/Homebrew/homebrew-cask/blob/645dbb8228ec2f1f217ed1431e188687aac13ca5/Casks/razorsql.rb#L6))
+* An appcast can be any URL hosted by the app’s developer that changes every time a new release is out or that contains the version number of the current release (e.g. a download HTML page). Webpages that only change on new version releases are preferred, as are sites that do not contain previous version strings (i.e. avoid changelog pages if the download page contains the current version number but not older ones). (Example: [`razorsql.rb`](https://github.com/Homebrew/homebrew-cask/blob/645dbb8228ec2f1f217ed1431e188687aac13ca5/Casks/razorsql.rb#L6))
 
 The [`find_appcast`](https://github.com/Homebrew/homebrew-cask/blob/master/developer/bin/find_appcast) script can automatically identify some of these. You can run it with `"$(brew --repository)/Library/Taps/homebrew/homebrew-cask/developer/bin/find_appcast" '{{/path/to/software.app}}'` to find the `appcast` automatically.
 
