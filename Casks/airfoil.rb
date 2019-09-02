@@ -8,6 +8,7 @@ cask 'airfoil' do
   homepage 'https://www.rogueamoeba.com/airfoil/mac/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'Airfoil/Airfoil Satellite.app'
   app 'Airfoil/Airfoil.app'
