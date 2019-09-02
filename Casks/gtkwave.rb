@@ -18,4 +18,10 @@ cask 'gtkwave' do
                '~/Library/Preferences/com.geda.gtkwave.plist',
                '~/Library/Saved Application State/com.geda.gtkwave.savedState',
              ]
+
+  caveats <<~EOS
+    You may need to install Perl’s Switch module to run #{token}’s command line tool.
+
+      https://ughe.github.io/2018/11/06/gtkwave-osx
+  EOS
 end
