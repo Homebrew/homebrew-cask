@@ -4,7 +4,7 @@ cask 'jumpcut' do
 
   # github.com/snark/jumpcut was verified as official when first introduced to the cask
   url "https://github.com/snark/jumpcut/releases/download/v#{version}/Jumpcut-#{version}.tar.bz2"
-  appcast 'https://snark.github.io/jumpcut/jumpcut.appcast.xml'
+  appcast 'https://github.com/snark/jumpcut/releases.atom'
   name 'Jumpcut'
   homepage 'https://snark.github.io/jumpcut/'
 
