@@ -1,8 +1,9 @@
 cask 'moonitor' do
-  version '0.5.0'
-  sha256 '4aef3db8c024ed7b6f978c4b42abde306fde2ff20202cf813ff5f582d9a3c355'
+  version '0.7.1'
+  sha256 'b491f3d61c4c65defbb0b743814841e08c949600cc7eb4f225b5aecb9de47888'
 
   url "https://moonitor.io/wp-content/uploads/app/Moonitor-#{version}.dmg"
+  appcast 'https://moonitor.io/'
   name 'Moonitor'
   homepage 'https://moonitor.io/'
 

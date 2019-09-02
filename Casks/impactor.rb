@@ -1,6 +1,6 @@
 cask 'impactor' do
-  version '0.9.47'
-  sha256 'a0176201bf44360aaee1407c1b7ca51d667bf98bd7442af7d4084e048f8d2006'
+  version '0.9.52'
+  sha256 '9db548074424473c5804d1118d27cd4f052db8b53b3e7c3261c1a903f521cbf1'
 
   # cache.saurik.com/impactor was verified as official when first introduced to the cask
   url "https://cache.saurik.com/impactor/mac/Impactor_#{version}.dmg"

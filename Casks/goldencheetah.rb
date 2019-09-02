@@ -6,9 +6,7 @@ cask 'goldencheetah' do
   url "https://github.com/GoldenCheetah/GoldenCheetah/releases/download/V3.4/GoldenCheetah_V#{version.major_minor}_build_#{version.after_comma.before_colon}_Qt#{version.after_colon}_64bit.dmg"
   appcast 'https://github.com/GoldenCheetah/GoldenCheetah/releases.atom'
   name 'GoldenCheetah'
-  homepage 'http://www.goldencheetah.org/'
-
-  depends_on macos: '>= :lion'
+  homepage 'https://www.goldencheetah.org/'
 
   app 'GoldenCheetah.app'
 end

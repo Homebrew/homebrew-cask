@@ -6,7 +6,7 @@ cask 'yacreader' do
   url "https://bitbucket.org/luisangelsm/yacreader/downloads/YACReader-#{version}-MacOSX-Intel.dmg"
   appcast 'https://github.com/YACReader/yacreader/releases.atom'
   name 'YACReader'
-  homepage 'http://www.yacreader.com/'
+  homepage 'https://www.yacreader.com/'
 
   app 'YACReader.app'
   app 'YACReaderLibrary.app'

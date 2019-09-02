@@ -1,10 +1,13 @@
 cask 'mysqlworkbench' do
-  version '8.0.12'
-  sha256 '15942a56a18b3b8a9774e9276a72548d9bd388cccd4e96c72ff0cd55e03a6f4f'
+  version '8.0.17'
+  sha256 '1f5c82dce05e0de1bf03b4d7041a0d2e921914068d82b5b1432bbca3074ffb53'
 
   url "https://cdn.mysql.com/Downloads/MySQLGUITools/mysql-workbench-community-#{version}-macos-x86_64.dmg"
+  appcast 'https://dev.mysql.com/downloads/workbench/'
   name 'MySQL Workbench'
   homepage 'https://www.mysql.com/products/workbench/'
+
+  depends_on macos: '>= :high_sierra'
 
   app 'MySQLWorkbench.app'
 

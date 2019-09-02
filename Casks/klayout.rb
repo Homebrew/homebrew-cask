@@ -1,11 +1,14 @@
 cask 'klayout' do
-  version '0.24.10'
-  sha256 'a2097dd73f8bbdeb4297f1fdaba01635894941ae1b3c376e625948171061d6d6'
+  version '0.25.9,5124'
+  sha256 '3fbf0e31ecf1fea539eb6af05b120787d67e3f832af77d6e16dd1c00e4cdfbbb'
 
   # klayout.org was verified as official when first introduced to the cask
-  url "http://www.klayout.org/downloads/MacOS/klayout-#{version}-MacOSX-Yosemite-1-Qt487mp.dmg.bz2"
+  url "https://www.klayout.org/downloads/MacOS/klayout-#{version.before_comma}-macOS-Mojave-1-Qt#{version.after_comma}mp.dmg"
+  appcast 'https://www.klayout.de/development.html'
   name 'KLayout'
   homepage 'https://www.klayout.de/'
+
+  depends_on macos: '>= :mojave'
 
   suite 'KLayout'
 

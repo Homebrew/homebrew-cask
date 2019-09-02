@@ -1,8 +1,5 @@
 cask 'evernote' do
-  if MacOS.version <= :lion
-    version '6.1.1_452253'
-    sha256 'ad2ad4d426362f8bc6fff205522365cfe9a5bd5f36369fc6c3c8bd7f9dd4e288'
-  elsif MacOS.version <= :mavericks
+  if MacOS.version <= :mavericks
     version '6.8_453748'
     sha256 '53fb93884fbd8f966ef43248dad3a7570ad18eb43fd289ad614ee8cff3a26d33'
   elsif MacOS.version <= :yosemite
@@ -12,8 +9,8 @@ cask 'evernote' do
     version '7.2.3_456885'
     sha256 'eb9a92d57ceb54570c009e37fa7657a0fa3ab927a445eef382487a3fdde6bb97'
   else
-    version '7.5.2_457164'
-    sha256 '5d040d9dfa68cb9c07539e0069be41d411d2c4ac874f8839e37f34436564a3e4'
+    version '7.12_457935'
+    sha256 '3224ea9b4af42c3b95c4fe29cb0c769814f0a93bbeeba05827c03292c6742931'
   end
 
   url "https://cdn1.evernote.com/mac-smd/public/Evernote_RELEASE_#{version}.dmg"

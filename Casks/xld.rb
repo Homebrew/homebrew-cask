@@ -1,17 +1,18 @@
 cask 'xld' do
-  version '2018.10.01'
-  sha256 '4928203ba1d8d0e091f85033a9adf496ce09b1d3231e585f579036063ceb125d'
+  version '2018.10.19'
+  sha256 '3f49f4c1669b6c9f1ae7f6e1919526bc539971ce8b1a880ac581da3bb3f84b2c'
 
   # sourceforge.net/xld was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/xld/xld-#{version.no_dots}.dmg"
   appcast 'https://svn.code.sf.net/p/xld/code/appcast/xld-appcast_e.xml'
   name 'X Lossless Decoder'
   name 'XLD'
-  homepage 'http://tmkk.undo.jp/xld/index_e.html'
+  homepage 'https://tmkk.undo.jp/xld/index_e.html'
 
   auto_updates true
 
   app 'XLD.app'
+  binary 'CLI/xld'
 
   zap trash: [
                '~/Library/Application Support/XLD',

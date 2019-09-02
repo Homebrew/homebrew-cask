@@ -1,13 +1,11 @@
 cask 'calibre' do
-  version '3.32.0'
-  sha256 'dabc44e04c8a5a659518331528d66b959b6f072412879a5a4e1d8af7f986dd54'
+  version '3.47.0'
+  sha256 'e5b53397ec779f41bc2a650c304d6f6f915465c885cf8c6bfffca54f109ea0f8'
 
   url "https://download.calibre-ebook.com/#{version}/calibre-#{version}.dmg"
   appcast 'https://github.com/kovidgoyal/calibre/releases.atom'
   name 'calibre'
   homepage 'https://calibre-ebook.com/'
-
-  depends_on macos: '>= :mavericks'
 
   app 'calibre.app'
   binary "#{appdir}/calibre.app/Contents/MacOS/calibre"

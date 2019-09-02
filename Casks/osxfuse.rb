@@ -1,6 +1,6 @@
 cask 'osxfuse' do
-  version '3.8.2'
-  sha256 '03a3e561803cdf9fa797c146dc33f0ec0d665cc2bf41cf2b68b3c5b34b03b758'
+  version '3.10.2'
+  sha256 'fb07b8027d0cf7509b92c6a99110b98d5b7584512128ab6331ed30308363614f'
 
   # github.com/osxfuse was verified as official when first introduced to the cask
   url "https://github.com/osxfuse/osxfuse/releases/download/osxfuse-#{version}/osxfuse-#{version}.dmg"
@@ -11,12 +11,7 @@ cask 'osxfuse' do
   auto_updates true
   conflicts_with cask: 'osxfuse-dev'
 
-  pkg "Extras/FUSE for macOS #{version}.pkg",
-      choices: [
-                 'choiceIdentifier' => 'com.github.osxfuse.pkg.MacFUSE',
-                 'choiceAttribute'  => 'selected',
-                 'attributeSetting' => 1,
-               ]
+  pkg "Extras/FUSE for macOS #{version}.pkg"
 
   postflight do
     set_ownership ['/usr/local/include', '/usr/local/lib']

@@ -1,9 +1,10 @@
 cask 'kubernetic' do
-  version '2.0.16'
-  sha256 'c0c682e6ebd338d2db8d1cb09dd6cb4308c5b1356febff691afb04dec944dad6'
+  version '2.3.0'
+  sha256 '937df21a4c9b5e11b841590d6a3196121a13207e8993b782158dd35f297eeaa4'
 
-  # s3-eu-west-1.amazonaws.com/kubernetic was verified as official when first introduced to the cask
-  url "https://s3-eu-west-1.amazonaws.com/kubernetic/Kubernetic-#{version}.dmg"
+  # kubernetic.s3.amazonaws.com was verified as official when first introduced to the cask
+  url "https://kubernetic.s3.amazonaws.com/Kubernetic-#{version}.dmg"
+  appcast 'https://kubernetic.com/'
   name 'Kubernetic'
   homepage 'https://kubernetic.com/'
 

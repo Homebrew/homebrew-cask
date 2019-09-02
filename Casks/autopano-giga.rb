@@ -2,7 +2,8 @@ cask 'autopano-giga' do
   version '4.4.2.400,2018-09-10'
   sha256 '0d5808f3904dae5937411ba7efdb275eaef2dea957c89b869c6c637aa29b824a'
 
-  url "http://cdn-download.kolor.com/apg/#{version.before_comma}_#{version.after_comma}/AutopanoGiga_Mac_#{version.major_minor_patch.no_dots}_#{version.after_comma}.dmg"
+  url "https://cdn-download.kolor.com/apg/#{version.before_comma}_#{version.after_comma}/AutopanoGiga_Mac_#{version.major_minor_patch.no_dots}_#{version.after_comma}.dmg"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=http://download.kolor.com/apg/stable/mac'
   name 'Autopano Giga'
   homepage 'https://www.kolor.com/autopano/'
 

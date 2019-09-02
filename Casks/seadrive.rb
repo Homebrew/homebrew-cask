@@ -1,9 +1,10 @@
 cask 'seadrive' do
-  version '0.9.5'
-  sha256 '53363818b7b52fb825f3fba434955ecf76475ca7a207172e6820b73e753380d5'
+  version '1.0.7'
+  sha256 '822deefa9821cd6d35474cbd942a0218a29c45814c47d600aafa1d0955d971dd'
 
   # download.seadrive.org was verified as official when first introduced to the cask
   url "https://download.seadrive.org/seadrive-#{version}.dmg"
+  appcast 'https://raw.githubusercontent.com/haiwen/seafile-docs/master/changelog/drive-client-changelog.md'
   name 'Seadrive'
   homepage 'https://www.seafile.com/en/home/'
 

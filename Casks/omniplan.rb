@@ -1,12 +1,13 @@
 cask 'omniplan' do
-  version '3.10.2'
-  sha256 'e045659e786edba3fa449dbbb33e294f3d94f29cc17845421f3c12ad77431ef3'
+  version '3.13'
+  sha256 '82e0d7db2626d751f93f97d80dc032e4bc01bba1e05ea52c553e4771c8cfeec5'
 
-  url "https://downloads.omnigroup.com/software/MacOSX/10.12/OmniPlan-#{version}.dmg"
+  url "https://downloads.omnigroup.com/software/MacOSX/10.13/OmniPlan-#{version}.dmg"
+  appcast "https://update.omnigroup.com/appcast/com.omnigroup.OmniPlan#{version.major}"
   name 'OmniPlan'
   homepage 'https://www.omnigroup.com/omniplan/'
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :high_sierra'
 
   app 'OmniPlan.app'
 

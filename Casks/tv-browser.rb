@@ -6,7 +6,7 @@ cask 'tv-browser' do
   url "https://downloads.sourceforge.net/tvbrowser/tvbrowser_#{version}_macjava.dmg"
   appcast 'https://sourceforge.net/projects/tvbrowser/rss'
   name 'TV-Browser'
-  homepage 'http://www.tvbrowser.org/'
+  homepage 'https://www.tvbrowser.org/'
 
   app 'TV-Browser.app'
 end

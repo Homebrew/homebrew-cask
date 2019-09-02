@@ -1,6 +1,6 @@
 cask 'sysdig-inspect' do
-  version '0.3.1'
-  sha256 '2273baefbc20f9b96d703d7613b7782efb00b3a533cbec3b045182371f4ea812'
+  version '0.4.2'
+  sha256 '15cd21f309258f5017129e0983e475423d95eb54cbe6e4e25b2e509282122a8e'
 
   # download.sysdig.com/stable/sysdig-inspect was verified as official when first introduced to the cask
   url "https://download.sysdig.com/stable/sysdig-inspect/sysdig-inspect-#{version}-mac.dmg"

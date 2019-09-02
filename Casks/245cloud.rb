@@ -6,7 +6,7 @@ cask '245cloud' do
   url "https://github.com/fukajun/245cloud-app/releases/download/v#{version}/245cloud-#{version}-darwin-x64.zip"
   appcast 'https://github.com/fukajun/245cloud-app/releases.atom'
   name '245cloud'
-  homepage 'http://245cloud.com/'
+  homepage 'https://245cloud.com/'
 
   app '245cloud-darwin-x64/245cloud.app'
 end

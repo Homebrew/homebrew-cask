@@ -1,10 +1,10 @@
 cask 'remote-desktop-manager-free' do
-  version '5.5.1.0'
-  sha256 '85276530b543cf82695bd2512f79108116a3ebc48892b239f194cbd48ae57fb4'
+  version '2019.1.7.0'
+  sha256 '0eda9a48ba72a43406947b17278b5161ef0932acdd79ddd8a1b36010972fabe0'
 
   # devolutions.net was verified as official when first introduced to the cask
-  url "http://cdn.devolutions.net/download/Mac/Devolutions.RemoteDesktopManager.Free.Mac.#{version}.dmg"
-  appcast 'http://cdn.devolutions.net/download/Mac/RemoteDesktopManagerFree.xml'
+  url "https://cdn.devolutions.net/download/Mac/Devolutions.RemoteDesktopManager.Free.Mac.#{version}.dmg"
+  appcast 'https://cdn.devolutions.net/download/Mac/RemoteDesktopManagerFree.xml'
   name 'Remote Desktop Manager Free'
   homepage 'https://mac.remotedesktopmanager.com/'
 

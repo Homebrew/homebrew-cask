@@ -1,8 +1,9 @@
 cask 'google-chat' do
-  version '18.8.311'
-  sha256 'e4df1f4d44e9ee041ac1c483dd81f98b0efc012f4679600ca2e95b385de90b79'
+  version '19.3.141'
+  sha256 'ea09e8e1e42b526f2deee7fa78ca4886ebd36ec90a4b79a22b31c1a550491a04'
 
   url "https://dl.google.com/chat/#{version}/InstallHangoutsChat.dmg"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://dl.google.com/chat/latest/InstallHangoutsChat.dmg'
   name 'Chat'
   homepage 'https://gsuite.google.com/products/chat/'
 

@@ -1,12 +1,12 @@
 cask 'xscope' do
-  version '4.3.2'
-  sha256 '106959567a58a49e84b09b21708d38569df93b0286e713777527cb5ddba5d01f'
+  version '4.3.3'
+  sha256 'dbbc939eca01ac8dc9994f5bd81130fbf980bdd6c9e66f23cf51fa585c8c0729'
 
   # iconfactory.com was verified as official when first introduced to the cask
   url "https://iconfactory.com/assets/software/xscope/xScope-#{version}.zip"
   appcast 'https://iconfactory.com/appcasts/xScope/appcast.xml'
   name 'xScope'
-  homepage 'http://xscopeapp.com/'
+  homepage 'https://xscopeapp.com/'
 
   app 'xScope.app'
 

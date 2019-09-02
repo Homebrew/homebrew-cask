@@ -1,11 +1,11 @@
 cask 'protonmail-unofficial' do
-  version '0.5.8'
-  sha256 'e9a9583e629ca5762281f422ad7bebc2f7569de25e31eec69fe896af8e502023'
+  version '1.0.2'
+  sha256 '818ecd4db48954332300a3295467add6f0d62efc72d4fb32a88877edad3abae0'
 
-  url "https://github.com/protonmail-desktop/application/releases/download/v#{version}/protonmail-desktop-#{version}.dmg"
+  url "https://github.com/protonmail-desktop/application/releases/download/v#{version}/protonmail-desktop-unofficial-#{version}.dmg"
   appcast 'https://github.com/protonmail-desktop/application/releases.atom'
   name 'Protonmail Desktop'
   homepage 'https://github.com/protonmail-desktop/application'
 
-  app 'Protonmail Desktop.app'
+  app 'Protonmail Desktop (unofficial).app'
 end

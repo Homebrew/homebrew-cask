@@ -1,12 +1,12 @@
 cask 'rocketcake' do
-  version '2.0'
-  sha256 'aa1de42a3771a429247b23500586cb64a39f4ca8ca605308e6b09c920280e62d'
+  version '3.0'
+  sha256 'c35cdd611331b3b88e773ea53e8a06d92948ea03d9067bb4730e0009b1dce3ec'
 
   # ambiera.at was verified as official when first introduced to the cask
-  url "http://www.ambiera.at/downloads/RocketCake-#{version.major_minor}.dmg"
+  url "https://www.ambiera.at/downloads/RocketCake-#{version.major_minor}.dmg"
   appcast 'https://www.ambiera.com/rocketcake/download.html'
   name 'RocketCake'
-  homepage 'http://www.ambiera.com/rocketcake/index.html'
+  homepage 'https://www.ambiera.com/rocketcake/index.html'
 
   app 'RocketCake.app'
 

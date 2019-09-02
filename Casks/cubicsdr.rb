@@ -6,7 +6,7 @@ cask 'cubicsdr' do
   url "https://github.com/cjcliffe/CubicSDR/releases/download/#{version}/CubicSDR-#{version}-Darwin.dmg"
   appcast 'https://github.com/cjcliffe/CubicSDR/releases.atom'
   name 'CubicSDR'
-  homepage 'http://cubicsdr.com/'
+  homepage 'https://cubicsdr.com/'
 
   app 'CubicSDR.app'
 end

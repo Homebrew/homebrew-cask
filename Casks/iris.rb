@@ -1,9 +1,10 @@
 cask 'iris' do
-  version '1.0.0'
-  sha256 '29af1310b8650b808ef7a327c4832bcf5bd2b5ea672fd51ef3d87bf4ba092ed8'
+  version '1.1.6'
+  sha256 'f241b98649690ca88bb81bd474480f159ae423bb4116fc0281a27c870b24275e'
 
-  # raw.github.com/danielng01/Iris-Builds/master/OSX was verified as official when first introduced to the cask
-  url "https://raw.github.com/danielng01/Iris-Builds/master/OSX/Iris-#{version}-OSX.zip"
+  # raw.githubusercontent.com/danielng01/Iris-Builds was verified as official when first introduced to the cask
+  url "https://raw.githubusercontent.com/danielng01/Iris-Builds/master/OSX/Iris-#{version}-OSX.zip"
+  appcast 'https://iristech.co/iris/'
   name 'Iris'
   homepage 'https://iristech.co/iris/'
 

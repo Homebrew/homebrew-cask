@@ -8,5 +8,7 @@ cask 'scap-workbench' do
   name 'scap-workbench'
   homepage 'https://www.open-scap.org/tools/scap-workbench/'
 
+  depends_on macos: '>= :sierra'
+
   app 'scap-workbench.app'
 end

@@ -7,8 +7,6 @@ cask 'vk-messenger' do
   name 'VK Messenger'
   homepage 'https://vk.com/messenger'
 
-  depends_on macos: '>= :mavericks'
-
   app 'VK Messenger.app'
 
   zap trash: [

@@ -8,8 +8,6 @@ cask 'plover' do
   name 'Plover'
   homepage 'https://stenoknight.com/wiki/Main_Page'
 
-  accessibility_access true
-
   app 'Plover.app'
 
   zap trash: '~/Library/Application Support/plover/'

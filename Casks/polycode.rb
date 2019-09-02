@@ -7,7 +7,5 @@ cask 'polycode' do
   name 'Polycode'
   homepage 'http://polycode.org/'
 
-  depends_on macos: '>= :lion'
-
   app 'Darwin/Polycode.app'
 end

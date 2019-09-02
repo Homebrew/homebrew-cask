@@ -12,4 +12,8 @@ cask 'gameshow' do
                '~/Library/Preferences/GameShow',
                '~/Library/Application Support/Gameshow',
              ]
+
+  caveats do
+    discontinued
+  end
 end

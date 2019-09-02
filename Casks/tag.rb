@@ -1,12 +1,12 @@
 cask 'tag' do
-  version '0.4.1'
-  sha256 '165631a76db33cbe5200ff64a64f5e1dad6606ae815c7609d59b7367f9344360'
+  version '1.0.5,017'
+  sha256 '3b3b21909dc00d4ff87a501c6451fb14e99ef1c10bea64d69ace5cfaa5bfe1a4'
 
-  # sourceforge.net/tagosx was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/tagosx/Tag-#{version}.zip"
-  appcast 'https://sourceforge.net/projects/tagosx/rss'
+  # feisty-dog.s3.amazonaws.com/ was verified as official when first introduced to the cask
+  url "https://feisty-dog.s3.amazonaws.com/versions/binaries/000/000/#{version.after_comma}/Tag-#{version.before_comma}.zip"
+  appcast 'https://www.feisty-dog.com/tag/'
   name 'Tag'
-  homepage 'https://sbooth.org/Tag/'
+  homepage 'https://www.feisty-dog.com/tag/'
 
-  app "Tag-#{version}/Tag.app"
+  app 'Tag.app'
 end

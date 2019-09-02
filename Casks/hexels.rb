@@ -1,11 +1,13 @@
 cask 'hexels' do
-  version '3.1.3'
-  sha256 'c66a202cb5953dc653fa396966f641da757ce66f010c3f2f6a0c67871331ee38'
+  version '3.1.5'
+  sha256 '65ae3d445036588100ef82fb077a72ca7b2afd4752ca7d1e1b43a28ea1da8023'
 
-  # s3.amazonaws.com/mset/download/release was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/mset/download/release/hexels_install_#{version.no_dots}.dmg"
+  # mset.s3.amazonaws.com/download/release was verified as official when first introduced to the cask
+  url "https://mset.s3.amazonaws.com/download/release/hexels_install_#{version.no_dots}.dmg"
+  appcast 'https://marmoset.co/hexels/',
+          configuration: version.no_dots
   name 'Hexels'
-  homepage 'http://marmoset.co/hexels/'
+  homepage 'https://marmoset.co/hexels/'
 
   app "Hexels #{version.major}.app"
 end

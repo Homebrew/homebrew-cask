@@ -1,6 +1,11 @@
 cask 'docker' do
-  version '18.06.1-ce-mac73,26764'
-  sha256 '3429eac38cf0d198039ad6e1adce0016f642cdb914a34c67ce40f069cdb047a5'
+  if MacOS.version <= :el_capitan
+    version '18.06.1-ce-mac73,26764'
+    sha256 '3429eac38cf0d198039ad6e1adce0016f642cdb914a34c67ce40f069cdb047a5'
+  else
+    version '2.1.0.1,37199'
+    sha256 'b638696702d88308a49c5ff985055b6bb329afcfcd0c3ffda1c3fed6e078d01a'
+  end
 
   url "https://download.docker.com/mac/stable/#{version.after_comma}/Docker.dmg"
   appcast 'https://download.docker.com/mac/stable/appcast.xml'
@@ -9,7 +14,6 @@ cask 'docker' do
   homepage 'https://www.docker.com/community-edition'
 
   auto_updates true
-  depends_on macos: '>= :yosemite'
 
   app 'Docker.app'
 

@@ -1,9 +1,10 @@
 cask 'gitkraken' do
-  version '4.0.5'
-  sha256 '210a3be1c38f6075dc5c46200c26b5aa8488fc98c938cd0b5b9457c241e926e6'
+  version '6.1.4'
+  sha256 '81a42619b201ece5819dd1aeaf02b9887600184572abda273ef1cdabec16b364'
 
-  url "https://release.gitkraken.com/darwin/GitKraken-v#{version}.zip"
-  appcast 'https://release.gitkraken.com/darwin/RELEASES'
+  # release.axocdn.com/darwin was verified as official when first introduced to the cask
+  url 'https://release.axocdn.com/darwin/installGitKraken.dmg'
+  appcast 'https://www.gitkraken.com/download'
   name 'GitKraken'
   homepage 'https://www.gitkraken.com/'
 

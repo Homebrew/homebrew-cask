@@ -1,6 +1,6 @@
 cask 'dropzone' do
-  version '3.6.8'
-  sha256 '15188b5adf399ef84b4952fc11f7a43f7e01987aa0dd2a9c0781af4e99888324'
+  version '3.7.0'
+  sha256 '31f7c31621a95fa2a024c3b476d0d38fce9f24287180c18609b902985b07b980'
 
   url "https://aptonic.com/dropzone3/sparkle/Dropzone-#{version}.zip"
   appcast 'https://aptonic.com/sparkle/updates.xml'

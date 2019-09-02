@@ -1,9 +1,10 @@
 cask 'mockplus' do
-  version '3.3.2.4'
-  sha256 'ffdd94be31e66bcb0580921cb62b0b52da795cbd151db204c186d03fad62b86c'
+  version '3.5.1.0'
+  sha256 'f14c2e12ca130d25b62a4f7da7db7af09cfecc5cb2170cae924bcc4872d6beb9'
 
-  # s3-us-west-1.amazonaws.com/mockplus-static was verified as official when first introduced to the cask
-  url "https://s3-us-west-1.amazonaws.com/mockplus-static/software/macos/Mockplus_v#{version}.dmg"
+  # mockplus-static.s3.amazonaws.com was verified as official when first introduced to the cask
+  url "https://mockplus-static.s3.amazonaws.com/software/macos/Mockplus_v#{version}.dmg"
+  appcast 'https://www.mockplus.com/download'
   name 'Mockplus'
   name '摩客'
   homepage 'https://www.mockplus.com/'

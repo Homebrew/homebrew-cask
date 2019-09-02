@@ -1,14 +1,13 @@
 cask 'youdaonote' do
-  version :latest
-  sha256 :no_check
+  version '3.5.3'
+  sha256 'cbc129f9164edc945f72bee970b30eb1fd1a485cd6bc00be4c5437b72ff62977'
 
   # download.ydstatic.com/notewebsite/downloads was verified as official when first introduced to the cask
-  url 'http://download.ydstatic.com/notewebsite/downloads/YoudaoNote.dmg'
+  url 'https://download.ydstatic.com/notewebsite/downloads/YoudaoNote.dmg'
+  appcast 'https://note.youdao.com/update/updateConfig.json'
   name 'YoudaoNote'
   name '有道云笔记'
   homepage 'https://note.youdao.com/'
-
-  depends_on macos: '>= :yosemite'
 
   app 'YoudaoNote.app'
 

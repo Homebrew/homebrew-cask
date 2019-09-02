@@ -1,11 +1,13 @@
 cask 'netshade' do
-  version '7.2.1'
-  sha256 '9a447695be84e1f2929bb2526ffc2e1fe05e23c2c74a739617e134ece52042ce'
+  version '8.2'
+  sha256 'f75a83ec33582da7bef5f3affd0d893dc6e343436ede39451ff036fe5cfd44d8'
 
   url "https://secure.raynersw.com/downloads/NetShade-#{version.dots_to_hyphens}.app.zip"
-  appcast 'https://secure.raynersw.com/changelog.php?prod=ns&format=std&warnpay=0'
+  appcast 'https://www.raynersw.com/appcast.php'
   name 'NetShade'
   homepage 'https://secure.raynersw.com/netshade.php'
+
+  depends_on macos: '>= :high_sierra'
 
   app 'NetShade.app'
 end

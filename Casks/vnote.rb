@@ -1,6 +1,6 @@
 cask 'vnote' do
-  version '1.22'
-  sha256 '09fc5de5cfe14e7bbf66e8918a60fcc4e0a5ff0452e16c1d1d18abf7f1931d8a'
+  version '2.7.2'
+  sha256 '08f9794591b30e61a1a55569ce324306d10cc8ba9ebf68080edc33f511ab487c'
 
   # github.com/tamlok/vnote was verified as official when first introduced to the cask
   url "https://github.com/tamlok/vnote/releases/download/v#{version}/VNote-#{version}-x64.dmg"

@@ -1,13 +1,19 @@
 cask 'wine-stable' do
-  version '3.0.3'
-  sha256 'f0dc85a61de75defcc5e7d0091b55ca3178abd71a5d45152228fe77575377490'
+  version '4.0.2'
+  sha256 'e621f19f59d88340790aa7b77bf7718f000bf774a2b80eb1cfd66abe86ef79af'
 
   url "https://dl.winehq.org/wine-builds/macosx/pool/winehq-stable-#{version}.pkg"
   appcast 'https://dl.winehq.org/wine-builds/macosx/download.html'
   name 'WineHQ-stable'
   homepage 'https://wiki.winehq.org/MacOS'
 
+  conflicts_with formula: 'wine',
+                 cask:    [
+                            'wine-devel',
+                            'wine-staging',
+                          ]
   depends_on x11: true
+  depends_on macos: '<= :mojave'
 
   pkg "winehq-stable-#{version}.pkg",
       choices: [
@@ -17,6 +23,22 @@ cask 'wine-stable' do
                    'attributeSetting' => 1,
                  },
                ]
+  binary "#{appdir}/Wine Stable.app/Contents/Resources/start/bin/appdb"
+  binary "#{appdir}/Wine Stable.app/Contents/Resources/start/bin/winehelp"
+  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/msiexec"
+  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/notepad"
+  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/regedit"
+  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/regsvr32"
+  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/wine"
+  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/wine64"
+  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/wineboot"
+  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/winecfg"
+  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/wineconsole"
+  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/winedbg"
+  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/winefile"
+  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/winemine"
+  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/winepath"
+  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/wineserver"
 
   uninstall pkgutil: [
                        'org.winehq.wine-stable',

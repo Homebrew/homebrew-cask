@@ -1,11 +1,11 @@
 cask 'joshaven-winbox' do
-  version '3.11_FixHS'
-  sha256 'cfed9f359ca2b565879d83d922768ed64e4549391757186317b15729c447142c'
+  version '3.18'
+  sha256 'ba9d20ab9dc5703c5e3b118f0d080a85110dd9b3ae3daa6c0ec76bb366d74bbc'
 
-  url "http://joshaven.com/Winbox4Mac_#{version}.dmg"
-  appcast 'http://joshaven.com/resources/tools/winbox-for-mac/'
+  url "https://joshaven.com/Winbox4Mac_#{version}.zip"
+  appcast 'https://joshaven.com/resources/tools/winbox-for-mac/'
   name 'Winbox4Mac'
-  homepage 'http://joshaven.com/resources/tools/winbox-for-mac/'
+  homepage 'https://joshaven.com/resources/tools/winbox-for-mac/'
 
   app 'Winbox4Mac.app'
 

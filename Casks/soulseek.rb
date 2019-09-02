@@ -3,10 +3,9 @@ cask 'soulseek' do
   sha256 '9bc76b360fb326807c3c655fdb9af98ea4b5db30ee56a1baed9c65c0897fd5d4'
 
   url "https://www.slsknet.org/SoulseekQt/Mac/SoulseekQt-#{version}.dmg"
+  appcast 'http://www.slsknet.org/news/node/1'
   name 'Soulseek'
   homepage 'https://www.slsknet.org/'
-
-  depends_on macos: '>= :mavericks'
 
   app 'SoulseekQt.app'
 end

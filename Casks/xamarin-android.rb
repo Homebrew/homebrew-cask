@@ -1,6 +1,6 @@
 cask 'xamarin-android' do
-  version '9.0.0-20'
-  sha256 'dfc87f1c40e884ee9474eda8a8792880251d10a0e4c72eb81d9f3fcdde50a8d9'
+  version '9.3.0-22'
+  sha256 '790dd55032581532a70d0d419e44b7dea02c0f3c543b8cadacd1ae64b8d2ef25'
 
   url "https://dl.xamarin.com/MonoforAndroid/Mac/xamarin.android-#{version}.pkg"
   appcast 'https://xampubdl.blob.core.windows.net/static/installer_assets/v4/Mac/Universal/InstallationManifest.xml'
@@ -10,4 +10,11 @@ cask 'xamarin-android' do
   pkg "xamarin.android-#{version}.pkg"
 
   uninstall pkgutil: 'com.xamarin.android.pkg'
+
+  zap trash: [
+               '/Developer/MonoAndroid',
+               '/Library/Frameworks/Xamarin.Android.framework',
+               '~/Library/Caches/Xamarin.Android',
+               '~/Library/Caches/XamarinBuildDownload',
+             ]
 end

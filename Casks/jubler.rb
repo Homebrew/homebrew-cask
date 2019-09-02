@@ -6,7 +6,7 @@ cask 'jubler' do
   url "https://downloads.sourceforge.net/jubler/Jubler-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/jubler/rss'
   name 'Jubler'
-  homepage 'http://www.jubler.org/'
+  homepage 'https://www.jubler.org/'
 
   app 'Jubler.app'
 

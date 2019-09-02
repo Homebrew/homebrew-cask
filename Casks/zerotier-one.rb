@@ -1,6 +1,6 @@
 cask 'zerotier-one' do
-  version '1.2.12'
-  sha256 'c58747a5ecaca0c0720928db6d4a0d8f1eaa712b92bd1e272fbeb643c5dacbd2'
+  version '1.4.4'
+  sha256 '6df4bc0f24fbabed67b8c0cd39a4d164550f859e551453175ca28954c7cb00e8'
 
   url 'https://download.zerotier.com/dist/ZeroTier%20One.pkg'
   appcast 'https://github.com/zerotier/ZeroTierOne/releases.atom'

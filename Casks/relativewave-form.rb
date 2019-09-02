@@ -5,7 +5,7 @@ cask 'relativewave-form' do
   # relativewave.storage.googleapis.com was verified as official when first introduced to the cask
   url "https://relativewave.storage.googleapis.com/files/Form-#{version}.dmg"
   name 'RelativeWave Form'
-  homepage 'http://www.relativewave.com/form/'
+  homepage 'https://www.relativewave.com/form/'
 
   app 'Form.app'
 end

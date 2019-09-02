@@ -5,7 +5,7 @@ cask 'proximity' do
   # kvraudio.com was verified as official when first introduced to the cask
   url "https://static.kvraudio.com/files/1451/proximity_v#{version.dots_to_underscores}-mac.zip"
   name 'Proximity'
-  homepage 'http://www.tokyodawn.net/proximity/'
+  homepage 'https://www.tokyodawn.net/proximity/'
 
   container nested: 'macOS/Proximity-VST-AU.dmg'
 

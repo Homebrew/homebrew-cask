@@ -4,12 +4,13 @@ cask 'textmate' do
 
   # github.com/textmate/textmate was verified as official when first introduced to the cask
   url "https://github.com/textmate/textmate/releases/download/v#{version}/TextMate_#{version}.tbz"
-  appcast 'https://github.com/textmate/textmate/releases.atom'
+  appcast 'https://api.textmate.org/releases/release?os=10.14.6',
+          configuration: version
   name 'TextMate'
   homepage 'https://macromates.com/'
 
   auto_updates true
-  depends_on macos: '>= :mountain_lion'
+  depends_on macos: '>= :sierra'
 
   app 'TextMate.app'
   binary "#{appdir}/TextMate.app/Contents/Resources/mate"

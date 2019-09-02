@@ -1,6 +1,6 @@
 cask 'tap' do
-  version '1.5.17,73:1538120209'
-  sha256 '47ca67811e0b3ad13c221e9b465c79578cbfac12950ec4b8c9b97adcb2ec18de'
+  version '1.5.18,74:1539630248'
+  sha256 '3df94b8cf6a154ec216ebd9823e37b9f6b64b5fb6332ce14733eac4bfadacb80'
 
   # dl.devmate.com/com.pabix.tap was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.pabix.tap/#{version.after_comma.before_colon}/#{version.after_colon}/Tap-#{version.after_comma.before_colon}.zip"

@@ -1,6 +1,6 @@
 cask 'pyzo' do
-  version '4.6.0'
-  sha256 'c7af2b6297b22dbe50879ea4b9a9fa4ceaa3103721cceccd5ef9dc0bc182dd99'
+  version '4.6.1'
+  sha256 '1341efa8fba71cffdbae17baeec4539a5c336101e12c8e37ee7f925d1eaf9d28'
 
   # github.com/pyzo/pyzo was verified as official when first introduced to the cask
   url "https://github.com/pyzo/pyzo/releases/download/v#{version}/pyzo-#{version}-osx64.dmg"

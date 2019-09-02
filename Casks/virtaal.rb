@@ -6,7 +6,7 @@ cask 'virtaal' do
   url "https://downloads.sourceforge.net/translate/Virtaal/#{version.sub(%r{^(\d+\.\d+\.\d+).*}, '\1')}/Virtaal-#{version.sub(%r{^(\d+\.\d+\.\d+).*}, '\1')}-Mac-Beta-2.dmg"
   appcast 'https://sourceforge.net/projects/translate/rss?path=/Virtaal'
   name 'Virtaal'
-  homepage 'http://virtaal.translatehouse.org/'
+  homepage 'https://virtaal.translatehouse.org/'
 
   app 'Virtaal.app'
 end

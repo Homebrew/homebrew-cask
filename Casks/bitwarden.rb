@@ -1,14 +1,12 @@
 cask 'bitwarden' do
-  version '1.8.0'
-  sha256 '21a27080084b80d339fdf773b125504b6214f10776912ecd1febef60f8016e31'
+  version '1.15.2'
+  sha256 '9e14f3d6f5e5f72d963aa8edd7120066d2b51da3d84802bf5fb0191d6139fa51'
 
   # github.com/bitwarden/desktop was verified as official when first introduced to the cask
-  url "https://github.com/bitwarden/desktop/releases/download/v#{version}/bitwarden-#{version}-mac.zip"
+  url "https://github.com/bitwarden/desktop/releases/download/v#{version}/Bitwarden-#{version}-mac.zip"
   appcast 'https://github.com/bitwarden/desktop/releases.atom'
   name 'Bitwarden'
   homepage 'https://bitwarden.com/'
-
-  depends_on macos: '>= :mavericks'
 
   app 'Bitwarden.app'
 

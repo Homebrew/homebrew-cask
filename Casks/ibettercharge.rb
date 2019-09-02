@@ -4,7 +4,7 @@ cask 'ibettercharge' do
 
   # devmate.com/com.softorino.iBetterCharge was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.softorino.iBetterCharge/#{version.before_comma}/#{version.after_comma}/iBetterCharge-#{version.before_comma}.zip"
-  appcast 'http://updates.devmate.com/com.softorino.iBetterCharge.xml'
+  appcast 'https://updates.devmate.com/com.softorino.iBetterCharge.xml'
   name 'iBetterCharge'
   homepage 'https://softorino.com/ibettercharge/'
 

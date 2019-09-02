@@ -1,6 +1,6 @@
 cask 'undercover' do
-  version '6.6'
-  sha256 '40e6e9a7ff56d0a95a73f876795ada099d57e5393b337172a60ee09211cdb218'
+  version '6.7'
+  sha256 '54ed130d0caebf4278949561609a4fa095647a089074846d2ebd72747023c2bf'
 
   # undercoverhq.com was verified as official when first introduced to the cask
   url "http://assets.undercoverhq.com/client/#{version}/undercover_mac.pkg"

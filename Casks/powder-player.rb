@@ -6,7 +6,7 @@ cask 'powder-player' do
   url "https://github.com/jaruba/PowderPlayer/releases/download/v#{version}/PowderPlayer_v#{version}.dmg"
   appcast 'https://github.com/jaruba/PowderPlayer/releases.atom'
   name 'Powder Player'
-  homepage 'http://powder.media/'
+  homepage 'https://powder.media/'
 
   app 'Powder Player.app'
 end

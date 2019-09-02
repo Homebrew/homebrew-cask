@@ -3,6 +3,7 @@ cask 'delta' do
   sha256 'bd99115957d9235d2353a48aee1bef0cc9679796a26cf557873dec58c37d3385'
 
   url "https://static-assets.getdelta.io/desktop_app/Delta-#{version}.dmg"
+  appcast 'https://delta.app/en/download'
   name 'Delta'
   homepage 'https://getdelta.io/'
 

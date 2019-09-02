@@ -66,7 +66,7 @@ Note that `uninstall --force` is currently imperfect. See the man page for more 
 * `list` — with no args, lists installed Casks; given installed Casks, lists staged files (with `--full-name`, include tap name)
 * `fetch` — downloads remote application files for the given Cask to the local cache (with `--force`, re-download even if already cached)
 * `doctor` — checks for configuration issues
-* `cleanup` — cleans up cached downloads (with `--outdated`, only cleans old downloads)
+* `style` — checks Cask style using RuboCop
 * `home` — opens the homepage of the given Cask; or with no arguments, the Homebrew Cask project page
 * `zap` — try to remove *all* files associated with a Cask (may include resources shared with other applications)
 * `outdated` - lists all outdated Casks
@@ -139,7 +139,6 @@ The primary Homebrew Cask Tap includes most of the Casks that a typical user wil
 | -------- | ----------- |
 | [Homebrew/cask-versions](https://github.com/Homebrew/homebrew-cask-versions) | contains alternate versions of Casks (e.g. betas, nightly releases, old versions)
 | [Homebrew/cask-fonts](https://github.com/Homebrew/homebrew-cask-fonts)       | contains Casks that install fonts
-| [Homebrew/cask-eid](https://github.com/Homebrew/homebrew-cask-eid)           | contains Casks that install electronic identity card software of various countries
 | [Homebrew/cask-drivers](https://github.com/Homebrew/homebrew-cask-drivers)   | contains Casks that install drivers for various devices
 
 You can tap any of the above with a `brew tap` command:
@@ -196,7 +195,7 @@ Most `brew cask` commands can accept a Cask token as an argument. As described a
 
 `brew cask` also accepts three other forms as arguments:
 
-* A path to a Cask file, _eg_: `/usr/local/Library/Taps/Homebrew/homebrew-cask/Casks/google-chrome.rb`.
+* A path to a Cask file, _eg_: `/usr/local/Library/Taps/homebrew/homebrew-cask/Casks/google-chrome.rb`.
 * A `curl`-retrievable URI to a Cask file, _eg_: `https://raw.githubusercontent.com/Homebrew/homebrew-cask/f25b6babcd398abf48e33af3d887b2d00de1d661/Casks/google-chrome.rb`.
 * A file in the current working directory, _eg_: `my-modfied-google-chrome.rb`. Note that matching Tapped Cask tokens will be preferred over this form when there is a conflict. To force the use of a Cask file in the current directory, specify a pathname with slashes, _eg_: `./google-chrome.rb`.
 

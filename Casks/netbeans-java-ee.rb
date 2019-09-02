@@ -2,7 +2,7 @@ cask 'netbeans-java-ee' do
   version '8.2'
   sha256 '5b897c3f1fa657749d5dcddbc3a95a1a15ec35e7cab08aad34befadd7ec3f1e7'
 
-  url "http://download.netbeans.org/netbeans/#{version}/final/bundles/netbeans-#{version}-javaee-macosx.dmg"
+  url "https://download.netbeans.org/netbeans/#{version}/final/bundles/netbeans-#{version}-javaee-macosx.dmg"
   name 'NetBeans IDE for Java EE'
   homepage 'https://netbeans.org/'
 

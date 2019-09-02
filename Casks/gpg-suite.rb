@@ -1,6 +1,6 @@
 cask 'gpg-suite' do
-  version '2018.4_2'
-  sha256 'e0166931d58427bbd9cc0988765b4f723c554fa19e14d7697e152468c7e04f0d'
+  version '2019.1'
+  sha256 'f85e15cfb01543ad6e09dd46e921c248dba10d2dbafa1449c234979ef5a3728f'
 
   url "https://releases.gpgtools.org/GPG_Suite-#{version}.dmg"
   appcast 'https://gpgtools.org/releases/gka/appcast.xml'

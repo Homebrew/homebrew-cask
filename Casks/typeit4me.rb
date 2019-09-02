@@ -1,6 +1,6 @@
 cask 'typeit4me' do
-  version '6.0.5b156'
-  sha256 'b1912aba43111bc9193e9dcbf3ff669a7543aba952bf3df5a40755d59dd151ac'
+  version '6.2.2b206'
+  sha256 '0467ed7927246414fbc19db1fa970feb905ad35d71597a51c8b102f673ae16b6'
 
   url "https://ettoresoftware.com/download/TypeIt4Me#{version}.zip"
   appcast 'https://ettoresoftware.com/download/TypeIt4MeAppcast.xml'

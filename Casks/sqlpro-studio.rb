@@ -1,9 +1,10 @@
 cask 'sqlpro-studio' do
-  version '1.0.302'
-  sha256 '6e042b5b7db65752b2663711de8e2e2ee348871e66ac414a2b5eab77db90b74e'
+  version '2019.08.29'
+  sha256 '7bedb8598d388799b9be44bb6fb0be3fb53ca111eb7cda644df7e745d2ed3669'
 
   # d3fwkemdw8spx3.cloudfront.net/studio was verified as official when first introduced to the cask
   url "https://d3fwkemdw8spx3.cloudfront.net/studio/SQLProStudio.#{version}.app.zip"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.sqlprostudio.com/download.php'
   name 'SQLPro Studio'
   homepage 'https://www.sqlprostudio.com/'
 

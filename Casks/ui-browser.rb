@@ -1,12 +1,11 @@
 cask 'ui-browser' do
-  version '2.7.0'
-  sha256 '0974aaf84862600383a64ec7ddf95ee8f0d0c623f5d07479f624fee864034425'
+  version '2.8.2'
+  sha256 'b789af0a857ff18b1550ca833e75d970ef5c43fff77a378c549c489dcbf6a738'
 
-  url "http://pfiddlesoft.com/uibrowser/downloads/UIBrowser#{version.no_dots}.dmg"
+  url "https://pfiddlesoft.com/uibrowser/downloads/UIBrowser#{version.no_dots}.dmg"
+  appcast 'https://pfiddlesoft.com/uibrowser/index-downloads.html'
   name 'UI Browser'
-  homepage 'http://pfiddlesoft.com/uibrowser/'
-
-  depends_on macos: '>= :lion'
+  homepage 'https://pfiddlesoft.com/uibrowser/'
 
   app 'UI Browser.app'
 

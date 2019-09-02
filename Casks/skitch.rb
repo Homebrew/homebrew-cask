@@ -3,6 +3,7 @@ cask 'skitch' do
   sha256 'd1ae1479960de2b3069a2ae1904d2fb304250e74d6ad7f5d4275b4004ae8f5c5'
 
   url "https://cdn1.evernote.com/skitch/mac/release/Skitch-#{version}.zip"
+  appcast 'https://evernote.s3.amazonaws.com/skitch/mac/release/skitch-appcast.xml'
   name 'Skitch'
   homepage 'https://evernote.com/products/skitch'
 

@@ -8,7 +8,6 @@ cask 'mattr-slate' do
   homepage 'https://github.com/mattr-/slate'
 
   auto_updates true
-  accessibility_access true
   conflicts_with cask: 'slate'
 
   app 'Slate.app'

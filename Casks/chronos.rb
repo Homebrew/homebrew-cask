@@ -1,6 +1,6 @@
 cask 'chronos' do
-  version '2.7.3'
-  sha256 'ea58c022e457dcc9f57c58f913560db54a1d5845c4d0646e3d82bad8ee901a9f'
+  version '4.0.0'
+  sha256 '61cf0226df08976da430bcf997f54d9ce3fc280a213c832231a5476189391d3c'
 
   url "https://github.com/web-pal/chronos-timetracker/releases/download/v#{version}/Chronos-#{version}-mac.zip"
   appcast 'https://github.com/web-pal/chronos-timetracker/releases.atom'

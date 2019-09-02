@@ -1,11 +1,11 @@
 cask 'forklift' do
-  version '3.2.7'
-  sha256 '0e96fb834cb12628e3d9715361411fe9bf1a5e7fc28971920e55668ee2008cc7'
+  version '3.3.4'
+  sha256 'e69fc7f6436e6f86e1cf0a56c415a6e80bbff792c7bf94786c0d3dd3d13651fc'
 
   url "https://download.binarynights.com/ForkLift#{version}.zip"
   appcast "https://updates.binarynights.com/ForkLift#{version.major}/update.xml"
   name 'ForkLift'
-  homepage 'https://binarynights.com/forklift/'
+  homepage 'https://binarynights.com/'
 
   auto_updates true
   depends_on macos: '>= :el_capitan'
