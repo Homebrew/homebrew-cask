@@ -1,6 +1,6 @@
 cask 'double-commander' do
-  version '0.9.5-8947'
-  sha256 '6caa7dfdb28be70f26a4588d16b70df460220257a9a7f3260532e148eda6d65f'
+  version '0.9.6-9018'
+  sha256 '91344302bb70eb477bb06e36e154e4dc6092990c9638773f22c653b3b9d9a2df'
 
   # downloads.sourceforge.net/doublecmd was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/doublecmd/doublecmd-#{version}.cocoa.x86_64.zip"
