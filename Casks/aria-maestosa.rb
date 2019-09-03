@@ -8,7 +8,7 @@ cask 'aria-maestosa' do
   name 'Aria Maestosa'
   homepage 'https://ariamaestosa.sourceforge.io/'
 
-  app "AriaMaestosa-#{version}/Aria Maestosa.app"
+  app 'Aria Maestosa.app'
 
   zap trash: [
                '~/Library/Preferences/AriaMaestosa',
