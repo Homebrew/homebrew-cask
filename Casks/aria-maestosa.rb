@@ -1,6 +1,6 @@
 cask 'aria-maestosa' do
-  version '1.4.13c'
-  sha256 '59d77eb575ed6dcd4d3caeddac78dfe26f44c272e25e480e55733f15428d0946'
+  version '1.4.13'
+  sha256 'a3a04954ff7258141d4762659f49a204e42f24a06fab6ba318f47a749e6398c0'
 
   # downloads.sourceforge.net/ariamaestosa was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/ariamaestosa/AriaMaestosa-osx-#{version}.zip"
