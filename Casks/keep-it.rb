@@ -1,6 +1,6 @@
 cask 'keep-it' do
-  version '1.6.18'
-  sha256 '3cc8950ff2f411ded9fe317a5e5fa3c670a20714bc45d4328e6932904b6877da'
+  version '1.6.19'
+  sha256 'd3ba68bc14282d9b192a7fa484ce849da30d0d3bc84354bfc4dff187eb90e80d'
 
   url "https://reinventedsoftware.com/keepit/downloads/KeepIt_#{version}.dmg"
   appcast 'https://reinventedsoftware.com/keepit/downloads/keepit.xml'
