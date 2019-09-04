@@ -4,7 +4,7 @@ cask 'synology-note-station-client' do
 
   url "https://global.download.synology.com/download/Tools/NoteStationClient/#{version}/Mac/x86_64/synology-note-station-client-#{version}-mac-x64.dmg"
   appcast 'https://archive.synology.com/download/Tools/NoteStationClient/'
-  name 'Synology Chat'
+  name 'Synology Note Station Client'
   homepage 'https://www.synology.com/en-us/dsm/packages/NoteStation'
 
   app 'Synology Note Station Client.app'
