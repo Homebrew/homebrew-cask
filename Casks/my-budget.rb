@@ -6,7 +6,6 @@ cask 'my-budget' do
   url "https://github.com/reZach/my-budget/releases/download/v#{version}/my-budget-#{version}.dmg"
   appcast 'https://github.com/reZach/my-budget/releases.atom'
   name 'My Budget'
-  name 'MyBudget'
   homepage 'https://rezach.github.io/my-budget/'
 
   app 'My Budget.app'
