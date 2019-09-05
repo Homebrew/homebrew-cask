@@ -1,6 +1,6 @@
 cask 'lelivrescolairefr' do
   version :latest
-  sha256 :no:check
+  sha256 :no_check
 
   # ci.lls.fr/build/latest/mac was verified as official when first introduced to the cask
   url 'https://ci.lls.fr/build/latest/mac/Lelivrescolaire.fr.dmg'
