@@ -15,9 +15,11 @@ Additionally, if **adding a new cask**:
 - [ ] Checked there are no [open pull requests] for the same cask.
 - [ ] Checked the cask was not [already refused].
 - [ ] Checked the cask is submitted to [the correct repo].
+- [ ] Attempted to find an [appcast].
 
 [token reference]: https://github.com/Homebrew/homebrew-cask/blob/master/doc/cask_language_reference/token_reference.md
 [open pull requests]: https://github.com/Homebrew/homebrew-cask/pulls
 [already refused]: https://github.com/Homebrew/homebrew-cask/search?q=is%3Aclosed&type=Issues
 [the correct repo]: https://github.com/Homebrew/homebrew-cask/blob/master/doc/development/adding_a_cask.md#finding-a-home-for-your-cask
 [version-checksum]: https://github.com/Homebrew/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/sha256.md#updating-the-sha256
+[appcast]: https://github.com/Homebrew/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/appcast.md

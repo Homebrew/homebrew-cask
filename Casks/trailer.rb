@@ -10,8 +10,7 @@ cask 'trailer' do
 
   app 'Trailer.app'
 
-  uninstall login_item: 'Trailer',
-            quit:       'com.housetrip.Trailer'
+  uninstall quit: 'com.housetrip.Trailer'
 
   zap trash: [
                '~/Library/Application Support/com.housetrip.Trailer',

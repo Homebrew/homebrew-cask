@@ -12,8 +12,7 @@ cask 'smooze' do
 
   app 'Smooze.app'
 
-  uninstall login_item: 'Smooze',
-            quit:       'co.smooze.macos'
+  uninstall quit: 'co.smooze.macos'
 
   zap trash: [
                '~/Library/Application Support/co.smooze.macos',

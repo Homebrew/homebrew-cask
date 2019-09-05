@@ -12,11 +12,10 @@ cask 'franz' do
 
   app 'Franz.app'
 
-  uninstall signal:     [
-                          ['QUIT', 'com.meetfranz.franz'],
-                        ],
-            login_item: 'Franz',
-            delete:     '/Library/Logs/DiagnosticReports/Franz Helper_.*wakeups_resource.diag'
+  uninstall signal: [
+                      ['QUIT', 'com.meetfranz.franz'],
+                    ],
+            delete: '/Library/Logs/DiagnosticReports/Franz Helper_.*wakeups_resource.diag'
 
   zap trash: [
                '~/Library/Application Support/Caches/franz-updater',

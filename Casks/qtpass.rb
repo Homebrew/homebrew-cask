@@ -8,5 +8,7 @@ cask 'qtpass' do
   name 'QtPass'
   homepage 'https://qtpass.org/'
 
+  depends_on macos: '>= :sierra'
+
   app 'QtPass.app'
 end

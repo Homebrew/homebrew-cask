@@ -1,8 +1,8 @@
 cask 'pixel-picker' do
-  version '1.3.6,3230770'
-  sha256 '526de5b1480c8b421c1ecf943a219c5273a3b7fe8322991cd291d98b164e8fc8'
+  version '1.4.0'
+  sha256 'd0ea25460ae8d14eca8b76bc9c69ec2d3f652007b960b8596d6bb4b97629e110'
 
-  url "https://github.com/acheronfail/pixel-picker/files/#{version.after_comma}/Pixel.Picker.#{version.before_comma}.dmg.zip"
+  url "https://github.com/acheronfail/pixel-picker/releases/download/#{version}/Pixel.Picker.#{version}.dmg"
   appcast 'https://github.com/acheronfail/pixel-picker/releases.atom'
   name 'Pixel Picker'
   homepage 'https://github.com/acheronfail/pixel-picker'

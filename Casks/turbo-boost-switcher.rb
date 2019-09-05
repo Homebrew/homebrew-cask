@@ -11,9 +11,8 @@ cask 'turbo-boost-switcher' do
   # App renamed to remove "(English)" suffix
   app 'Turbo Boost Switcher.app'
 
-  uninstall quit:       'rugarciap.com.Turbo-Boost-Switcher',
-            kext:       'com.rugarciap.DisableTurboBoost',
-            login_item: 'Turbo Boost Switcher'
+  uninstall quit: 'rugarciap.com.Turbo-Boost-Switcher',
+            kext: 'com.rugarciap.DisableTurboBoost'
 
   zap trash: '~/Library/Preferences/rugarciap.com.Turbo-Boost-Switcher.plist'
 end
