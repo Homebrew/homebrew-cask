@@ -7,7 +7,7 @@ cask 'viber' do
   homepage 'https://www.viber.com/'
 
   depends_on macos: '>= :sierra'
-  
+
   app 'Viber.app'
 
   zap trash: [
