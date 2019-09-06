@@ -55,6 +55,11 @@ module Cask
             Style.run(path)
           end
 
+          if (macos_requirement = cask.depends_on.macos) && !macos_requirement.satisfied?
+            opoo "Skipping installation: #{macos_requirement.message}"
+            next
+          end
+
           was_installed = cask.installed?
           cask_dependencies = CaskDependencies.new(cask).reject(&:installed?)
 
