@@ -1,6 +1,6 @@
 cask 'yourkit-java-profiler' do
-  version '2019.8-b109'
-  sha256 '15543270e915fbf37f897a171665ec7465b165318517eab269327a08ec78259e'
+  version '2019.8-b110'
+  sha256 '29c91edef7a6fc6a004a80cedd2fb7f3d2d06199108d10630fd73c89aabb534b'
 
   url "https://www.yourkit.com/download/YourKit-JavaProfiler-#{version}.dmg"
   appcast 'https://www.yourkit.com/download/'
