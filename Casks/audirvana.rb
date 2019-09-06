@@ -1,6 +1,6 @@
 cask 'audirvana' do
-  version '3.5.19'
-  sha256 '7ed6674e74224acfb5926266d0b4e33ad17f4a24ceaf647af05afd5233b469e2'
+  version '3.5.20'
+  sha256 '73682a60c0a3a7ed64bb7cabb2fe55c14373d8653d3866675cdbb9e2e83c9a16'
 
   url "https://audirvana.com/delivery/Audirvana_#{version}.dmg"
   appcast "https://audirvana.com/delivery/audirvana#{version.major}_#{version.minor}_appcast.xml"
