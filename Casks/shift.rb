@@ -5,7 +5,7 @@ cask 'shift' do
   # https://update.trysift.com was verified as official when first introduced to the cask
   url "https://update.tryshift.com/download/version/#{version}/osx_64"
   name 'shift'
-  homepage 'https://tryshift.com'
+  homepage 'https://tryshift.com/'
 
   app 'Shift.app'
 end
