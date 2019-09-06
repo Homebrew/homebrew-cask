@@ -12,7 +12,10 @@ cask 'mactex' do
                          'basictex',
                          'mactex-no-gui',
                        ]
-  depends_on formula: 'ghostscript'
+  depends_on formula:  [
+                         'ghostscript',
+                         'perl',
+                       ]
   depends_on macos: '>= :sierra'
 
   pkg "mactex-#{version.no_dots}.pkg",
@@ -77,4 +80,8 @@ cask 'mactex' do
                '/usr/local/texlive',
                '~/Library/texlive',
              ]
+
+  echo "Updating Perl dependencies for latexindent..."
+  cpan -i -f Log::Log4perl Log::LogDispatch Log::Dispatch::File YAML::Tiny File::HomeDir Unicode::GCString
+
 end
