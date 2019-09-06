@@ -1,6 +1,6 @@
 cask 'openkey' do
-  version '1.4'
-  sha256 'ef63e5a9bf533e20e27e20e805fc9eb3e87149786f81aabbc68c6f1237daa329'
+  version '1.4.1'
+  sha256 'ca1a7169f4446e24d5d201e75dccef9c5acd2d6186aa6e98d980cacabcad274f'
 
   url "https://github.com/tuyenvm/OpenKey/releases/download/#{version}/OpenKey#{version}.dmg"
   appcast 'https://github.com/tuyenvm/OpenKey/releases.atom'
