@@ -10,4 +10,3 @@ cask 'magiccap' do
 
   app 'MagicCap.app'
 end
-
