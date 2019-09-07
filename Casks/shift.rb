@@ -3,6 +3,7 @@ cask 'shift' do
   sha256 '7c8483ee7fe020189472ba98d59ea0e2dc43ca07b703b4d8b7b51f1d80e953ed'
 
   url "https://update.tryshift.com/download/version/#{version}/osx_64"
+  appcast 'https://tryshift.com/download/?platform=mac'
   name 'shift'
   homepage 'https://tryshift.com/'
 
