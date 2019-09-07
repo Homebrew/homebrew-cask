@@ -7,5 +7,7 @@ cask 'red-eye' do
   name 'Red Eye'
   homepage 'https://www.hexedbits.com/redeye/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Red Eye.app'
 end
