@@ -4,7 +4,7 @@ cask 'shift' do
 
   url "https://update.tryshift.com/download/version/#{version}/osx_64"
   appcast 'https://tryshift.com/download/?platform=mac'
-  name 'shift'
+  name 'Shift'
   homepage 'https://tryshift.com/'
 
   app 'Shift.app'
