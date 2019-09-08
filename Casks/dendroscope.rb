@@ -6,8 +6,7 @@ cask 'dendroscope' do
   name 'Dendroscope'
   homepage 'https://ab.inf.uni-tuebingen.de/software/dendroscope/welcome.html'
 
-  installer script: "Dendroscope Installer.app/Contents/MacOS/JavaApplicationStub"
+  installer script: 'Dendroscope Installer.app/Contents/MacOS/JavaApplicationStub'
 
-  uninstall script: "/Applications/Dendroscope/Dendroscope Uninstaller.app/Contents/MacOS/JavaApplicationStub"
-
+  uninstall script: '/Applications/Dendroscope/Dendroscope Uninstaller.app/Contents/MacOS/JavaApplicationStub'
 end
