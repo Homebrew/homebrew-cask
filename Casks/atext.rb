@@ -1,6 +1,6 @@
 cask 'atext' do
-  version '2.32.2'
-  sha256 '236892e6d0841ead2a2fbaee4b7c5fcd3a29eeda20e3b35c0221584f9f9589f3'
+  version '2.33'
+  sha256 '1f4f05b3cddd7f2b1f898fe91e0f58ab345bf9bc4b81d9ee2eb8d156dba5c73f'
 
   url 'https://www.trankynam.com/atext/downloads/aText.dmg'
   appcast 'https://www.trankynam.com/atext/aText-Appcast.xml'
