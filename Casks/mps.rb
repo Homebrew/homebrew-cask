@@ -1,6 +1,6 @@
 cask 'mps' do
-  version '2019.2,192.2072'
-  sha256 'dde50b6a558a0a25c2b157f555cf29f71401b0962218a437b827c259055c4ba8'
+  version '2019.2.1,192.2176'
+  sha256 'd42158b6b2524ba745e8f16616be6aaf3dbc5e55915cea5390a75cc2ee3d52ba'
 
   url "https://download.jetbrains.com/mps/#{version.before_comma.major_minor}/MPS-#{version.before_comma}-macos.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=MPS&latest=true&type=release'
