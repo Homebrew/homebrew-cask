@@ -22,6 +22,8 @@ cask 'itsycal' do
 
   name 'Itsycal'
   homepage 'https://www.mowglii.com/itsycal/'
+  
+  auto_updates true
 
   app 'Itsycal.app'
 
