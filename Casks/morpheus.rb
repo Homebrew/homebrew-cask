@@ -4,6 +4,7 @@ cask 'morpheus' do
 
   # imc.zih.tu-dresden.de was verified as official when first introduced to the cask
   url "https://imc.zih.tu-dresden.de/morpheus/packages/mac/Morpheus_#{version}.dmg"
+  appcast 'https://morpheus.gitlab.io/#download'
   name 'Morpheus'
   homepage 'https://morpheus.gitlab.io/'
 
