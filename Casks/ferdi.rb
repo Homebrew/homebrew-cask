@@ -1,4 +1,4 @@
-cask 'franz-ferdi' do
+cask 'ferdi' do
   version '5.3.0'
   sha256 '2300da1d7835932ab831c900bb1f80af8ad014b6e14ae73eef5c7febcd18c10d'
 
