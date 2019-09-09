@@ -11,7 +11,7 @@ cask 'ferdi' do
 
   app 'Ferdi.app'
 
-  uninstall quit: 'com.kytwb.ferdi',
+  uninstall quit:   'com.kytwb.ferdi',
             delete: '/Library/Logs/DiagnosticReports/Ferdi Helper_.*wakeups_resource.diag'
 
   zap trash: [
