@@ -9,7 +9,7 @@ cask 'dendroscope' do
   homepage 'https://ab.inf.uni-tuebingen.de/software/dendroscope/'
 
   installer script: {
-                      executable: "Dendroscope Installer.app/Contents/MacOS/JavaApplicationStub",
+                      executable: 'Dendroscope Installer.app/Contents/MacOS/JavaApplicationStub',
                       args:       ['-q'],
                     }
 
