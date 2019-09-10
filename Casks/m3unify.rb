@@ -7,5 +7,7 @@ cask 'm3unify' do
   name 'M3Unify'
   homepage 'https://dougscripts.com/apps/m3unifyapp.php'
 
+  depends_on macos: '>= :mojave'
+
   app 'M3Unify.app'
 end
