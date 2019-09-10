@@ -9,8 +9,6 @@ cask 'gnucash' do
   homepage 'https://www.gnucash.org/'
 
   app 'Gnucash.app'
-  app 'FinanceQuote Update.app'
-
   zap trash: [
                '~/Library/Application Support/Gnucash',
                '~/Library/Preferences/org.gnucash.Gnucash.plist',
