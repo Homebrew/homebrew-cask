@@ -9,5 +9,6 @@ cask 'feishu' do
 
   depends_on macos: '>= :mavericks'
 
-  app 'Lark.app'
+  # Renamed for consistency: app name is different in the Finder and in a shell.
+  app 'Lark.app', target: 'Feishu.app'
 end
