@@ -13,4 +13,8 @@ cask 'dendroscope' do
   uninstall_preflight do
     system_command "#{appdir}/Dendroscope/Dendroscope Uninstaller.app/Contents/MacOS/JavaApplicationStub", args: ['-q']
   end
+
+  caveats do
+    depends_on_java
+  end
 end
