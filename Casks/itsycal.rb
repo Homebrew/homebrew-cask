@@ -23,6 +23,8 @@ cask 'itsycal' do
   name 'Itsycal'
   homepage 'https://www.mowglii.com/itsycal/'
 
+  auto_updates true
+
   app 'Itsycal.app'
 
   zap trash: '~/Library/Preferences/com.mowglii.ItsycalApp.plist'
