@@ -1,12 +1,13 @@
 cask 'dynamic-dark-mode' do
-  version '1.4.0'
-  sha256 '55debb60b0dde1b7156ebb87d462ac3940e16dd26d7c954e7cd3dafdab94769d'
+  version '1.4.2'
+  sha256 '76fb98e23627ecefc5d426320ff1a433fb06cf4d1e18fa7016e78766a2bd4321'
 
   url "https://github.com/ApolloZhu/Dynamic-Dark-Mode/releases/download/#{version}/Dynamic_Dark_Mode-#{version}.zip"
   appcast 'https://github.com/ApolloZhu/Dynamic-Dark-Mode/releases.atom'
   name 'Dynamic Dark Mode'
   homepage 'https://github.com/ApolloZhu/Dynamic-Dark-Mode'
 
+  auto_updates true
   depends_on macos: '>= :mojave'
 
   app 'Dynamic Dark Mode.app'
