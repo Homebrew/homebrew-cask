@@ -28,6 +28,8 @@ cask 'microsoft-office' do
                          'com.microsoft.package.Microsoft_Word.app',
                          'com.microsoft.package.Proofing_Tools',
                          'com.microsoft.pkg.licensing',
+                         'com.microsoft.package.Microsoft_AutoUpdate.app',
+                         'com.microsoft.OneDrive',
                        ],
             # Frameworks, DFonts and ProofingTools remain in each applicaiton after pkg uninstall, delete them
             delete:    [
@@ -40,6 +42,12 @@ cask 'microsoft-office' do
             launchctl: [
                          'com.microsoft.office.licensing.helper',
                          'com.microsoft.office.licensingV2.helper',
+                         'com.microsoft.autoupdate.helpertool',
+                         'com.microsoft.autoupdate.helper',
+                         'com.microsoft.update.agent',
+                         'com.microsoft.OneDriveStandaloneUpdater',
+                         'com.microsoft.OneDriveStandaloneUpdaterDaemon',
+                         'com.microsoft.OneDriveUpdaterDaemon',
                        ]
 
   zap trash:     [
@@ -84,17 +92,5 @@ cask 'microsoft-office' do
       rmdir:     [
                    '~/Library/Caches/Microsoft/uls',
                    '~/Library/Caches/Microsoft',
-                 ],
-      launchctl: [
-                   'com.microsoft.autoupdate.helpertool',
-                   'com.microsoft.autoupdate.helper',
-                   'com.microsoft.update.agent',
-                   'com.microsoft.OneDriveStandaloneUpdater',
-                   'com.microsoft.OneDriveStandaloneUpdaterDaemon',
-                   'com.microsoft.OneDriveUpdaterDaemon',
-                 ],
-      pkgutil:   [
-                   'com.microsoft.package.Microsoft_AutoUpdate.app',
-                   'com.microsoft.OneDrive',
                  ]
 end
