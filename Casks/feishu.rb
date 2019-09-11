@@ -4,6 +4,7 @@ cask 'feishu' do
 
   # sf3-ttcdn-tos.pstatp.com was verified as official when first introduced to the cask
   url "https://sf3-ttcdn-tos.pstatp.com/obj/ee-appcenter/Feishu_#{version}.dmg"
+  appcast 'https://www.feishu.cn/api/downloads'
   name 'feishu'
   homepage 'https://www.feishu.cn/'
 
