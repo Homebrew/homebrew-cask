@@ -577,4 +577,3 @@ cask 'libreoffice-language-pack' do
     language pack to avoid app verification error.
   EOS
 end
-
