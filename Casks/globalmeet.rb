@@ -8,8 +8,6 @@ cask 'globalmeet' do
 
   app 'GlobalMeet.app'
 
-  uninstall login_item: 'GlobalMeet'
-
   zap trash: [
                '~/Library/Application Support/globalmeet',
                '~/Library/Logs/GlobalMeet',

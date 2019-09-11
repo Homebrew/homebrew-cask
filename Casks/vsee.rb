@@ -1,6 +1,6 @@
 cask 'vsee' do
-  version '4.4.0,38059'
-  sha256 'ca70a95ce5e50968a1554bde6541584967426925cfa8424d1b580bd2ad599608'
+  version '4.6.0,39485'
+  sha256 '357600d9db2a1f88bbe9bbcdce4c912c31521f464a276fc447e36e4c1810f4ee'
 
   # d2q5hugz2rti4w.cloudfront.net was verified as official when first introduced to the cask
   url "https://d2q5hugz2rti4w.cloudfront.net/mac/#{version.after_comma}/vseemac.dmg"
@@ -10,8 +10,7 @@ cask 'vsee' do
 
   app 'VSee.app'
 
-  uninstall login_item: 'VSee.app',
-            delete:     '~/Library/Internet Plug-Ins/VSeeHelper.plugin'
+  uninstall delete: '~/Library/Internet Plug-Ins/VSeeHelper.plugin'
 
   zap trash: [
                '~/Library/Preferences/com.vsee.VSee.plist',

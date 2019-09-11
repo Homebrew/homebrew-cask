@@ -1,6 +1,6 @@
 cask 'script-debugger' do
-  version '7.0.6-7A69'
-  sha256 'ed15b440a03e883ab30949e7271faf767223b3ddc765e7ee1cb52fb59a48a608'
+  version '7.0.8-7A80'
+  sha256 'fbb80e8690c0fbd3873649579022ce885896c8b9806763ed5283b4541e52236f'
 
   # s3.amazonaws.com/latenightsw.com was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/latenightsw.com/ScriptDebugger#{version}.dmg"

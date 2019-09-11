@@ -1,6 +1,6 @@
 cask 'vlcstreamer' do
-  version '5.12'
-  sha256 'a3d809692a3ba6b9c7b4c6acc8a3e305edbb22985c9fd39ca094aaa195a190a8'
+  version '5.25'
+  sha256 '7f5d68a69af857804150c7d24209b38fd50a136d0cda42b0abb8626a4abe2797'
 
   url "https://hobbyistsoftware.com/Downloads/VLCStreamer/Versions/VLCStreamer_#{version}.dmg"
   appcast 'https://hobbyistsoftware.com/vlcstreamer-versions'

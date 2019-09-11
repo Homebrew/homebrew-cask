@@ -12,6 +12,7 @@ cask 'xld' do
   auto_updates true
 
   app 'XLD.app'
+  binary 'CLI/xld'
 
   zap trash: [
                '~/Library/Application Support/XLD',

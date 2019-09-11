@@ -4,6 +4,7 @@ cask 'line-bot-designer' do
 
   # d.line-scdn.net was verified as official when first introduced to the cask
   url "https://d.line-scdn.net/r/devcenter/bot-designer/LINE%20Bot%20Designer-#{version}.dmg"
+  appcast 'https://developers.line.biz/en/bot-designer/download/'
   name 'LINE Bot Designer'
   homepage 'https://developers.line.me/en/bot-designer/overview/'
 

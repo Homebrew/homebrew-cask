@@ -1,8 +1,8 @@
 cask 'zulu' do
-  version '11.29.3,11.0.2'
-  sha256 '9bbac08125f6950e892c24df9869711640fd48c8c6382e821ea83210b29b9147'
+  version '12.0.2,12.3.11-ca'
+  sha256 '5533220985805801ac1e3d44aeecef2f3ef36291b768415a298c0428d2ab4b89'
 
-  url "https://cdn.azul.com/zulu/bin/zulu#{version.before_comma}-ca-jdk#{version.after_comma}-macosx_x64.dmg",
+  url "https://cdn.azul.com/zulu/bin/zulu#{version.after_comma}-jdk#{version.before_comma}-macosx_x64.dmg",
       referer: 'https://www.azul.com/downloads/zulu/zulu-mac/'
   name 'Azul Zulu Java Standard Edition Development Kit'
   homepage 'https://www.azul.com/downloads/zulu/zulu-mac/'

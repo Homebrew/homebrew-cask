@@ -4,6 +4,7 @@ cask 'routebuddy' do
 
   # objects-us-east-1.dream.io/routebuddy was verified as official when first introduced to the cask
   url "https://objects-us-east-1.dream.io/routebuddy/download/apps2/RouteBuddy_#{version}.dmg"
+  appcast 'https://routebuddy.com/routebuddy-topo-map-software-for-windows-and-mac-os-x/'
   name 'RouteBuddy'
   homepage 'https://routebuddy.com/'
 

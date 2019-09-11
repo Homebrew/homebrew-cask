@@ -6,8 +6,8 @@ cask 'sourcetree' do
     # atlassian.com/software/sourcetree was verified as official when first introduced to the cask
     url "https://downloads.atlassian.com/software/sourcetree/Sourcetree_#{version}.zip"
   else
-    version '3.1.1_213'
-    sha256 '8baa4df680640114cecc0eb25b6edcc2aa28604d3b04e1284bb87049249adfc7'
+    version '3.2.1_225'
+    sha256 '4bd82affa3402814c3d07ff613fbc8f45da8b0cda294d498ffbb0667bf729c9f'
 
     # atlassian.com/software/sourcetree was verified as official when first introduced to the cask
     url "https://product-downloads.atlassian.com/software/sourcetree/ga/Sourcetree_#{version}.zip"

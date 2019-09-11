@@ -1,6 +1,6 @@
 cask 'eclipse-javascript' do
-  version '4.10.0,2018-12:R'
-  sha256 '7494bb89966a6a508fbeae52624cb16152851a36b2243dd5e0f43adcdaf849c9'
+  version '4.12.0,2019-06:R'
+  sha256 'f33dd60bdb656b77c8e1bc521d85a70c9d61f01a6a1a655d36497e4398a60d2d'
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.after_comma.before_colon}/#{version.after_colon}/eclipse-javascript-#{version.after_comma.before_colon}-#{version.after_colon}-macosx-cocoa-x86_64.dmg&r=1"
   name 'Eclipse IDE for JavaScript and Web Developers'

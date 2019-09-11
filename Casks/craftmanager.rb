@@ -1,6 +1,6 @@
 cask 'craftmanager' do
-  version '1.0.78'
-  sha256 '2f4b44031accf968ee923b86a6aa91af71b2f921c5eb653f77ce2eff4f008d15'
+  version '1.0.87'
+  sha256 '14faf273dcb13c610a32d10aacace2b8989df4cedab7dc01d53b5c712116d96d'
 
   url 'https://craft-assets.invisionapp.com/CraftManager/production/CraftManager.zip'
   appcast 'https://craft-assets.invisionapp.com/CraftManager/production/appcast.xml'

@@ -1,12 +1,13 @@
 cask 'mamp' do
-  version '5.3'
-  sha256 'abc592aa5202d8312cb1def1e536d2640bfe15abe4aac18ac01168b3eae40acc'
+  version '5.5'
+  sha256 'eebddf558ba956357fb6e628f13ab7bc296de3202b2382d4cbf5868aadb45ded'
 
   url "https://downloads.mamp.info/MAMP-PRO/releases/#{version}/MAMP_MAMP_PRO_#{version}.pkg"
   appcast 'https://www.mamp.info/en/downloads/'
   name 'MAMP'
   homepage 'https://www.mamp.info/'
 
+  auto_updates true
   depends_on macos: '>= :yosemite'
 
   pkg "MAMP_MAMP_PRO_#{version}.pkg"

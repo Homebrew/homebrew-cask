@@ -1,6 +1,6 @@
 cask 'sound-siphon' do
-  version '3.1.2'
-  sha256 '44fec84f7dbd6e5c1cf449e7d057ad84008b9346c943aec68c062384d7cecc74'
+  version '3.1.3'
+  sha256 'ca0630f918cf98b5cf8e648d88ca73a8e042bba1f8140cf3a0593f577879f38a'
 
   # staticz.net was verified as official when first introduced to the cask
   url "http://staticz.net/downloads/SoundSiphon_#{version}.dmg"

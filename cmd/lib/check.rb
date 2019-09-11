@@ -4,7 +4,7 @@ class Check
   CHECKS = {
     installed_apps: -> {
       ["/Applications", File.expand_path("~/Applications")]
-        .flat_map { |dir| Dir["#{dir}/**/*.app"] }
+        .flat_map { |dir| (0..5).map { |i| "/*" * i }.map { |glob| Dir["#{dir}#{glob}.app"] } }
     },
     installed_kexts: -> {
       system_command!("/usr/sbin/kextstat", args: ["-kl"], print_stderr: false)
@@ -22,7 +22,10 @@ class Check
     installed_launchjobs: -> {
       format_launchjob = lambda { |file|
         name = file.basename(".plist").to_s
-        label = Plist.parse_xml(File.read(file))["Label"]
+
+        xml, = system_command! "plutil", args: ["-convert", "xml1", "-o", "-", "--", file]
+
+        label = Plist.parse_xml(xml)["Label"]
         (name == label) ? name : "#{name} (#{label})"
       }
 
@@ -116,19 +119,19 @@ class Check
       lines << installed_apps.join("\n")
     end
 
-    if diff[:installed_kexts].added.any?
+    if (installed_kexts = diff[:installed_kexts].added).any?
       lines << Formatter.error("Some kernel extensions are still installed, add them to #{Formatter.identifier("uninstall kext:")}", label: "Error")
-      lines << diff[:installed_kexts].added.join("\n")
+      lines << installed_kexts.join("\n")
     end
 
-    if diff[:installed_pkgs].added.any?
+    if (installed_packages = diff[:installed_pkgs].added).any?
       lines << Formatter.error("Some packages are still installed, add them to #{Formatter.identifier("uninstall pkgutil:")}", label: "Error")
-      lines << diff[:installed_pkgs].added.join("\n")
+      lines << installed_packages.join("\n")
     end
 
-    if diff[:installed_launchjobs].added.any?
+    if (installed_launchjobs = diff[:installed_launchjobs].added).any?
       lines << Formatter.error("Some launch jobs are still installed, add them to #{Formatter.identifier("uninstall launchctl:")}", label: "Error")
-      lines << diff[:installed_launchjobs].added.join("\n")
+      lines << installed_launchjobs.join("\n")
     end
 
     running_apps = diff[:loaded_launchjobs]

@@ -8,9 +8,9 @@ cask 'omnidisksweeper' do
     sha256 '0d8f5b7ff075fca4503a41e1ea898a145001f3f602f6b53ffb310e0a465af080'
     url "https://downloads.omnigroup.com/software/MacOSX/10.12/OmniDiskSweeper-#{version}.dmg"
   else
-    version '1.11(n)'
+    version '1.11,n'
     sha256 'f06b150239e5c5ee27615b1e8bd6ec2c87c61c4cda575547f124ff84986b6f37'
-    url "https://downloads.omnigroup.com/software/MacOSX/10.13/OmniDiskSweeper-#{version}.dmg"
+    url "https://downloads.omnigroup.com/software/MacOSX/10.13/OmniDiskSweeper-#{version.before_comma}(#{version.after_comma}).dmg"
   end
 
   appcast 'https://update.omnigroup.com/appcast/com.omnigroup.OmniDiskSweeper'

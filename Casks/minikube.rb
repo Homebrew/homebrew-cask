@@ -1,6 +1,6 @@
 cask 'minikube' do
-  version '0.35.0'
-  sha256 '9fb0ce4decb0f40b1b2ee11cad0aa89e13e2d5c46ff0d35875a0a65788dee6b4'
+  version '1.3.1'
+  sha256 '5947abe57fa390fcfd96849ac87fc9319f026d4b13f944b6beecc3615e3668be'
 
   # storage.googleapis.com/minikube was verified as official when first introduced to the cask
   url "https://storage.googleapis.com/minikube/releases/v#{version}/minikube-darwin-amd64"

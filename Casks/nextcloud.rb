@@ -1,9 +1,9 @@
 cask 'nextcloud' do
-  version '2.5.1.20181204'
-  sha256 '503bbb2ff5a0aae78f272e694b03b2e9829c3c615baacd3bf024d5987bcda8f9'
+  version '2.5.3.20190724'
+  sha256 '39dbe0c667c0fa54124202e13b12d0541e46047cb7c1cc7ffc5aaf5b954c7cfb'
 
   url "https://download.nextcloud.com/desktop/releases/Mac/Installer/Nextcloud-#{version}.pkg"
-  appcast 'https://github.com/nextcloud/desktop/releases.atom'
+  appcast 'https://download.nextcloud.com/desktop/releases/Mac/Installer/'
   name 'Nextcloud'
   homepage 'https://nextcloud.com/'
 

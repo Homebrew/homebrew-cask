@@ -1,8 +1,8 @@
 cask 'fdr' do
-  version '4.2.4'
-  sha256 '127b0b4b4e7e571f4e910452cf393fdcca642575710d4ad9b30577ba8cb1be81'
+  version '4.2.3,3789'
+  sha256 'c9a30591cd0f28cab68de59691c2ebe717134daa38eaac5803b19d0c086f123c'
 
-  url 'https://www.cs.ox.ac.uk/projects/fdr/downloads/fdr-3800-mac-x86_64.zip'
+  url "https://www.cs.ox.ac.uk/projects/fdr/downloads/fdr-#{version.after_comma}-mac-x86_64.zip"
   appcast 'https://www.cs.ox.ac.uk/projects/fdr/manual/changes.html'
   name 'FDR'
   homepage 'https://www.cs.ox.ac.uk/projects/fdr/'

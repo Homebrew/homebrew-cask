@@ -1,11 +1,12 @@
 cask 'torrent-file-editor' do
-  version '0.3.13'
-  sha256 'b8136b13a3a3106164f443a4a8dcc69870f460d17af011f5e321b78f6f7c261f'
+  version '0.3.15'
+  sha256 'c9bc197b7541505ac6223def15cff87d00ec5983d1d6b00311646d4b15af0b5d'
 
-  url "https://downloads.sourceforge.net/torrent-file-editor/v#{version}/torrent-file-editor-#{version}.dmg"
-  appcast 'https://sourceforge.net/projects/torrent-file-editor/rss'
+  # github.com/torrent-file-editor/torrent-file-editor was verified as official when first introduced to the cask
+  url "https://github.com/torrent-file-editor/torrent-file-editor/releases/download/v#{version}/torrent-file-editor-#{version}.dmg"
+  appcast 'https://github.com/torrent-file-editor/torrent-file-editor/releases.atom'
   name 'Torrent File Editor'
-  homepage 'https://sourceforge.net/projects/torrent-file-editor/'
+  homepage 'https://torrent-file-editor.github.io/'
 
   depends_on macos: '>= :sierra'
 

@@ -12,8 +12,6 @@ cask 'keepingyouawake' do
 
   app 'KeepingYouAwake.app'
 
-  uninstall login_item: 'KeepingYouAwake'
-
   zap trash: [
                '~/Library/Application Scripts/info.marcel-dierkes.KeepingYouAwake',
                '~/Library/Application Scripts/info.marcel-dierkes.KeepingYouAwake.Launcher',

@@ -1,12 +1,14 @@
 cask 'psi-plus' do
-  version '1.4.592-macOS10.12'
-  sha256 '4c21592fa26a55bfbdc2b1da146ba1d347d56b8801ad44eeac2b412848093643'
+  version '1.4.873-macOS10.12'
+  sha256 'f29ce6f952ca9c41034d4c76e01fe16c17a355ba29b75034962195742710e9d8'
 
   # downloads.sourceforge.net/psiplus was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/psiplus/Psi+-#{version}-x86_64.dmg"
-  appcast 'https://sourceforge.net/projects/psiplus/rss'
+  appcast 'https://sourceforge.net/projects/psiplus/rss?path=/macOS/tehnick'
   name 'Psi+'
   homepage 'https://psi-plus.com/'
+
+  depends_on macos: '>= :sierra'
 
   app 'Psi+.app'
 

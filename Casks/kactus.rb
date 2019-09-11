@@ -1,6 +1,6 @@
 cask 'kactus' do
-  version '0.3.20'
-  sha256 '726b0a75a9231e37bab76d189ab496edf907d7395d84f1158ff6175309a4bdba'
+  version '0.3.22'
+  sha256 'f4bc4c4678fbb2bc0016848f4fa04b5bb3030ac94c3b834b506dfac3e4f12c48'
 
   # github.com/kactus-io/kactus was verified as official when first introduced to the cask
   url "https://github.com/kactus-io/kactus/releases/download/v#{version}/Kactus-macos.zip"

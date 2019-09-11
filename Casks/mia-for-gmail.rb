@@ -1,6 +1,6 @@
 cask 'mia-for-gmail' do
-  version '2.2.8'
-  sha256 '6c45200054506814033715af1a73d8302a364111b60e06d12554c0c7e8fb749e'
+  version '2.3.0'
+  sha256 '2e7f2d159e8aed156bac507a3637053a047efe7877df26b59449f7fdb394fcc4'
 
   url 'https://www.miaforgmail.com/application/notifier-pro-for-gmail/MiaForGmail.dmg'
   appcast 'https://www.sovapps.com/application/notifier-pro-for-gmail/notifier.xml'
@@ -11,8 +11,7 @@ cask 'mia-for-gmail' do
 
   app 'Mia for Gmail.app'
 
-  uninstall quit:       'com.sovapps.gmailnotifier',
-            login_item: 'Mia for Gmail'
+  uninstall quit:       'com.sovapps.gmailnotifier'
 
   zap trash: [
                '~/Library/Preferences/com.sovapps.gmailnotifier.plist',

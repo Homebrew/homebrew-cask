@@ -1,6 +1,6 @@
 cask 'el34-eddie' do
-  version '3.3.4'
-  sha256 '434ca7140e4fcdaf19b03725ec4b6b375b269451a7f48b283e7e257b6ee54dd3'
+  version '3.4'
+  sha256 'b4f7d00ca86c20abab9861052c0d182fc08a9a917d03ab64e4afd348db6aba6b'
 
   # el34software.com was verified as official when first introduced to the cask
   url "https://el34software.com/latest/Eddie%20OSX%20#{version}.zip"

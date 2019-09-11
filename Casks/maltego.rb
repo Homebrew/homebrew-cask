@@ -1,8 +1,8 @@
 cask 'maltego' do
-  version '4.1.13.11516'
-  sha256 '84e4a60a488e676928ffabef25f7de94a57ad7252f8a88e29321cf3b65e26910'
+  version '4.2.7.12570'
+  sha256 '66b18e7bac3f039d8e13080f1dce63f1ca2d530e9a89a7f23fe5ec91aa918036'
 
-  url "https://www.paterva.com/malv#{version.major_minor.no_dots}/Maltego.v#{version}.dmg"
+  url "https://www.paterva.com/malv#{version.major_minor_patch.no_dots}/Maltego.v#{version}.dmg"
   name 'Maltego'
   homepage 'https://www.paterva.com/web7/buy/maltego-clients.php'
 

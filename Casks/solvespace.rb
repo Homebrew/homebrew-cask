@@ -6,7 +6,7 @@ cask 'solvespace' do
   url "https://github.com/solvespace/solvespace/releases/download/v#{version}/solvespace.dmg"
   appcast 'https://github.com/solvespace/solvespace/releases.atom'
   name 'SolveSpace'
-  homepage 'http://solvespace.com/index.pl/'
+  homepage 'https://solvespace.com/index.pl/'
 
   app 'solvespace.app'
 end

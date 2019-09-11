@@ -1,6 +1,6 @@
 cask 'ezip' do
-  version '1.7'
-  sha256 '04dab63c503dcadd5efb44b6f8f3023f13153d94cb1b7b136ef48f5219116de1'
+  version '1.7.5'
+  sha256 '21b137cb41f561b0438d792680c8be3ae0dcb1a4fae949a5c7f4d09050dd9e1a'
 
   url "https://cdn.awehunt.com/ezip/release/eZip_V#{version}.dmg"
   appcast 'https://ezip.awehunt.com/'
@@ -9,5 +9,10 @@ cask 'ezip' do
 
   app 'eZip.app'
 
-  zap trash: '~/Library/Containers/com.jinghaoshe.ezip'
+  zap trash: [
+               '~/Library/Application Scripts/com.jinghaoshe.ezip',
+               '~/Library/Containers/com.jinghaoshe.ezip',
+               '~/Library/Preferences/com.jinghaoshe.eZipAssistant.plist', # eZip Assistant
+               '~/Library/WebKit/com.jinghaoshe.ezip',
+             ]
 end

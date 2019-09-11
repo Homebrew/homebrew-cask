@@ -1,6 +1,6 @@
 cask 'activedock' do
-  version '210,1552575942'
-  sha256 'da4b3692b9f85e8abb59cc657741be1fbf6e5023bf10db7443d1e617138f6a30'
+  version '237,1568037944'
+  sha256 'afaf9a0ce57b27b9795a2a99d6a2a0068e6174f984742182c7f76ed846dc2d33'
 
   # dl.devmate.com/com.sergey-gerasimenko.ActiveDock was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.sergey-gerasimenko.ActiveDock/#{version.before_comma}/#{version.after_comma}/ActiveDock-#{version.before_comma}.zip"

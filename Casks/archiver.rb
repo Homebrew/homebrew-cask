@@ -1,6 +1,6 @@
 cask 'archiver' do
-  version '3.0.4'
-  sha256 'f1e9ab990b8efe070cda5a823fe82f1f4e62f404d78c3265f80b851bd33008e0'
+  version '3.0.7'
+  sha256 '86cbb5fb2c3680b87b911bc642d0bdb6ea495dd11e00323ffcc271d5f863c6c0'
 
   # storage.googleapis.com/incrediblebee was verified as official when first introduced to the cask
   url "https://storage.googleapis.com/incrediblebee/apps/Archiver-#{version.major}/Archiver-#{version}.zip"

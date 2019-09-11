@@ -2,9 +2,9 @@ cask 'dat' do
   version '2.0.0'
   sha256 '8b913ede12c047f658ba62c9753fb4afd4342fb3471fa255382a75058f9a263f'
 
-  # github.com/datproject/dat-desktop was verified as official when first introduced to the cask
-  url "https://github.com/datproject/dat-desktop/releases/download/v#{version}/dat-desktop-#{version}-mac.zip"
-  appcast 'https://github.com/datproject/dat-desktop/releases.atom'
+  # github.com/dat-land/dat-desktop was verified as official when first introduced to the cask
+  url "https://github.com/dat-land/dat-desktop/releases/download/v#{version}/dat-desktop-#{version}-mac.zip"
+  appcast 'https://github.com/dat-land/dat-desktop/releases.atom'
   name 'Dat Desktop'
   homepage 'https://datproject.org/'
 

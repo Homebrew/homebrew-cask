@@ -1,6 +1,6 @@
 cask 'anaconda' do
-  version '2018.12'
-  sha256 '4ccd3944d994fd47e5701c341725a63e984f8c042bf4dc19c9dfc7c135e7d8e4'
+  version '2019.07'
+  sha256 'dcbddbab37c5b5f3873fe24d2617a4325bc7da28c0cd1d23a2edc7f0ebe08b7d'
 
   url "https://repo.anaconda.com/archive/Anaconda3-#{version}-MacOSX-x86_64.sh"
   name 'Continuum Analytics Anaconda'

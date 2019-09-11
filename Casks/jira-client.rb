@@ -3,6 +3,7 @@ cask 'jira-client' do
   sha256 '674cb80876659ec82999c14ba74596f878f18f544aa1bc8ce41f4d0ade8aab40'
 
   url "https://d1.almworks.com/.files/jiraclient-#{version.dots_to_underscores}.dmg"
+  appcast 'https://almworks.com/jiraclient/download.html'
   name 'JIRA Client'
   homepage 'https://almworks.com/jiraclient/overview.html'
 

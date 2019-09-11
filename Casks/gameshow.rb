@@ -2,9 +2,9 @@ cask 'gameshow' do
   version :latest
   sha256 :no_check
 
-  url 'https://gameshow.net/downloads/Gameshow.dmg'
+  url 'http://gameshow.net/downloads/Gameshow.dmg'
   name 'Gameshow'
-  homepage 'https://gameshow.net/'
+  homepage 'http://gameshow.net/'
 
   app 'Gameshow.app'
 
@@ -12,4 +12,8 @@ cask 'gameshow' do
                '~/Library/Preferences/GameShow',
                '~/Library/Application Support/Gameshow',
              ]
+
+  caveats do
+    discontinued
+  end
 end

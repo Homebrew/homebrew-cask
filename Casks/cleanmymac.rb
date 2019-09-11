@@ -1,6 +1,6 @@
 cask 'cleanmymac' do
-  version '4.3.0,1552330096'
-  sha256 '20f3069e7aa315ae4cdac55bf107891b63dff9f8a4a9ea55d0e45febb30dda03'
+  version '4.4.7,1567448626'
+  sha256 '2877e2daa1d463008870de9015a96b11546d6a9e62e1e1a4b4b90878000394a1'
 
   # devmate.com/com.macpaw.CleanMyMac was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.macpaw.CleanMyMac#{version.major}/#{version.major_minor_patch}/#{version.after_comma}/CleanMyMacX-#{version.major_minor_patch}.zip"
@@ -31,6 +31,7 @@ cask 'cleanmymac' do
                "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macpaw.cleanmymac#{version.major}.scheduler.sfl*",
                "~/Library/Application Support/CleanMyMac #{version.major}",
                "~/Library/Application Support/CleanMyMac #{version.major} Menu",
+               '~/Library/Application Support/CleanMyMac X',
                "~/Library/Caches/CleanMyMac #{version.major}",
                "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.macpaw.CleanMyMac#{version.major}.help*",
                "~/Library/Caches/com.macpaw.CleanMyMac#{version.major}",

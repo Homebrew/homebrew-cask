@@ -1,6 +1,6 @@
 cask 'mark-text' do
-  version '0.13.65'
-  sha256 '674e1a2fe3290166786233f1df43b4c695a66dac0246f249f71ac04e0d123099'
+  version '0.15.0'
+  sha256 '59865dbcd317bb8330321f51e4d4d4c95429633d4cc189fa28085720faa9d09f'
 
   # github.com/marktext/marktext was verified as official when first introduced to the cask
   url "https://github.com/marktext/marktext/releases/download/v#{version}/marktext-#{version}.dmg"

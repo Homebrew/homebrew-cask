@@ -1,12 +1,10 @@
 cask 'luminetmonitor' do
-  version '2.2.0'
-  sha256 'e53bfaa2eb7649da9fe6e4a37d8c707f776e2e84b61d77d2e4e4a99849257756'
+  version '2.2.1'
+  sha256 '21ade79c58c310fa84e32c1d613bbb76cc3a92670c20fb8b6501f4290a8381ed'
 
-  url 'http://www.mrte.jp/files/topics/122_ext_03_0.zip'
+  url "http://software.luminex.be/download.php?file=mac/LumiNetMonitor/#{version}LumiNetMonitor.app.7z"
   name 'LumiNet Monitor'
-  homepage 'http://www.mrte.jp/'
-
-  container nested: "LumiNetMonitor#{version.no_dots}_mac/LumiNetMonitor#{version.no_dots}.dmg"
+  homepage 'https://www.luminex.be/'
 
   app 'LumiNetMonitor.app'
 end

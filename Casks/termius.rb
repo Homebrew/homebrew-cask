@@ -1,10 +1,10 @@
 cask 'termius' do
-  version '4.2.7'
-  sha256 'c643452a817cc3e8407b16ad2ec181ff549ae23ba08dcc3a5560545ae45ecefb'
+  version '4.9.7'
+  sha256 '8c8ab4e0b5dae496cef7337c04c800940e1ccd4d49d49d74c9497d66b39109b9'
 
   # s3.amazonaws.com/termius.desktop.autoupdate/mac was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/termius.desktop.autoupdate/mac/Termius.dmg'
-  appcast 'https://docs.termius.com/changelog/desktop'
+  appcast 'https://www.termius.com/mac-os'
   name 'Termius'
   homepage 'https://www.termius.com/'
 

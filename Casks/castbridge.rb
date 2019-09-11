@@ -10,8 +10,7 @@ cask 'castbridge' do
 
   app 'Castbridge.app'
 
-  uninstall login_item: 'Castbridge',
-            signal:     ['TERM', 'com.ariporad.Castbridge']
+  uninstall signal: ['TERM', 'com.ariporad.Castbridge']
 
   zap trash: [
                '~/Library/Application Support/Castbridge',

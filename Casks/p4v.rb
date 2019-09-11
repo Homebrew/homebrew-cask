@@ -1,9 +1,9 @@
 cask 'p4v' do
-  version '18.4-1753667'
-  sha256 'b62bbca489f787fc0d55cce5c17f95876b0159a57b801bcfc9c11474d376a03e'
+  version '19.1-1830398'
+  sha256 '316053c60461120ab7e859a737c0a996e1f4c1c99ee42484fcfb67a75ea57a1c'
 
   url "https://cdist2.perforce.com/perforce/r#{version.major_minor}/bin.macosx1013x86_64/P4V.dmg"
-  appcast "https://cdist2.perforce.com/perforce/r#{version.major_minor}/bin.macosx1013x86_64/SHA256SUMS"
+  appcast 'https://cdist2.perforce.com/perforce/'
   name 'Perforce Visual Client'
   name 'P4Merge'
   name 'P4V'

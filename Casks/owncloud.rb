@@ -1,6 +1,6 @@
 cask 'owncloud' do
-  version '2.5.3.11290'
-  sha256 '1d2439a47f13315a38fde0ef6df9de46503ef8c2225ef3f8e7d0671b1b695746'
+  version '2.5.4.11456'
+  sha256 '29c39b71517de9ddce98557be998720dd63b9bcac7c685376ca46ccd2b603e80'
 
   url "https://download.owncloud.com/desktop/stable/ownCloud-#{version}.pkg"
   appcast 'https://github.com/owncloud/client/releases.atom'

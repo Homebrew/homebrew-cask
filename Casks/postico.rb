@@ -1,9 +1,9 @@
 cask 'postico' do
-  version '1.5.6'
-  sha256 'ea5a88d9b669a490f42ff08f1d2fc6eacbd0e58f5beee4355540bdab99139e31'
+  version '1.5.8'
+  sha256 '638c4312d32f27aa6d92fd737fb55e23916b2b4326a24dc4ca6f9204ab501f1d'
 
-  # amazonaws.com/eggerapps-downloads was verified as official when first introduced to the cask
-  url "https://s3-eu-west-1.amazonaws.com/eggerapps-downloads/postico-#{version}.zip"
+  # eggerapps-downloads.s3.amazonaws.com was verified as official when first introduced to the cask
+  url "https://eggerapps-downloads.s3.amazonaws.com/postico-#{version}.zip"
   appcast 'https://eggerapps.at/postico/docs/?file=changelist.html'
   name 'Postico'
   homepage 'https://eggerapps.at/postico/'

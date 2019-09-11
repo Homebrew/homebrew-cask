@@ -22,6 +22,12 @@ module Cask
           raise CaskError, "This command must be run from inside a tap directory."
         end
 
+        @commit_range = begin
+          commit_range_start = system_command!("git", args: ["rev-parse", "origin/master"]).stdout.chomp
+          commit_range_end = system_command!("git", args: ["rev-parse", "HEAD"]).stdout.chomp
+          "#{commit_range_start}...#{commit_range_end}"
+        end
+
         ruby_files_in_wrong_directory = modified_ruby_files - (modified_cask_files + modified_command_files + modified_github_files)
 
         unless ruby_files_in_wrong_directory.empty?
@@ -40,12 +46,18 @@ module Cask
 
           overall_success &= step "brew cask audit #{cask.token}", "audit" do
             Auditor.audit(cask, audit_download: true,
+                                audit_appcast: true,
                                 check_token_conflicts: added_cask_files.include?(path),
-                                commit_range: ENV["TRAVIS_COMMIT_RANGE"])
+                                commit_range: @commit_range)
           end
 
           overall_success &= step "brew cask style #{cask.token}", "style" do
             Style.run(path)
+          end
+
+          if (macos_requirement = cask.depends_on.macos) && !macos_requirement.satisfied?
+            opoo "Skipping installation: #{macos_requirement.message}"
+            next
           end
 
           was_installed = cask.installed?
@@ -63,7 +75,11 @@ module Cask
 
           overall_success &= step "brew cask uninstall #{cask.token}", "uninstall" do
             success = begin
-              Installer.new(cask, verbose: true).uninstall
+              if manual_installer?(cask)
+                puts 'Cask has a manual installer, skipping...'
+              else
+                Installer.new(cask, verbose: true).uninstall
+              end
               true
             rescue => e
               $stderr.puts e.message
@@ -94,6 +110,11 @@ module Cask
       private
 
       def step(name, travis_id)
+        unless ENV.key?("TRAVIS_COMMIT_RANGE")
+          puts Formatter.headline(name, color: :yellow)
+          return yield != false
+        end
+
         success = false
         output = nil
 
@@ -135,22 +156,18 @@ module Cask
       end
 
       def tap
-        @tap ||= if ENV.key?("TRAVIS_REPO_SLUG")
-          Tap.fetch(ENV["TRAVIS_REPO_SLUG"])
-        else
-          Tap.from_path(Dir.pwd)
-        end
+        @tap ||= Tap.from_path(Dir.pwd)
       end
 
       def modified_files
         @modified_files ||= system_command!(
-          "git", args: ["diff", "--name-only", "--diff-filter=AMR", ENV["TRAVIS_COMMIT_RANGE"]]
+          "git", args: ["diff", "--name-only", "--diff-filter=AMR", @commit_range]
         ).stdout.split("\n").map { |path| Pathname(path) }
       end
 
       def added_files
         @added_files ||= system_command!(
-          "git", args: ["diff", "--name-only", "--diff-filter=A", ENV["TRAVIS_COMMIT_RANGE"]]
+          "git", args: ["diff", "--name-only", "--diff-filter=A", @commit_range]
         ).stdout.split("\n").map { |path| Pathname(path) }
       end
 
@@ -172,6 +189,10 @@ module Cask
 
       def added_cask_files
         @added_cask_files ||= added_files.select { |path| tap.cask_file?(path) }
+      end
+
+      def manual_installer?(cask)
+        cask.artifacts.any? { |artifact| artifact.is_a?(Artifact::Installer::ManualInstaller) }
       end
     end
   end

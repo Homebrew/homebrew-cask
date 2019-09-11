@@ -1,11 +1,13 @@
 cask 'razorsql' do
-  version '8.2.5'
-  sha256 '3b880263f7bf1e430a6a3d976421bf41fa4f3af99386ac0e1dca1c3d4b03827b'
+  version '8.4.4'
+  sha256 '4760411ae4bfb91f6e5014a5be0a704c886db98b9824daf6173011e9b8d47066'
 
   url "http://downloads.razorsql.com/downloads/#{version.dots_to_underscores}/razorsql#{version.dots_to_underscores}_x64.dmg"
   appcast 'https://razorsql.com/updates.html'
   name 'RazorSQL'
   homepage 'https://razorsql.com/download_mac.html'
+
+  depends_on macos: '>= :high_sierra'
 
   app 'RazorSQL.app'
 

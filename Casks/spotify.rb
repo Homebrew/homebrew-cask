@@ -9,8 +9,7 @@ cask 'spotify' do
 
   app 'Spotify.app'
 
-  uninstall launchctl:  'com.spotify.webhelper',
-            login_item: 'Spotify'
+  uninstall launchctl: 'com.spotify.webhelper'
 
   zap trash: [
                '~/Library/Application Support/Spotify',

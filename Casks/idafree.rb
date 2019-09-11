@@ -1,6 +1,6 @@
 cask 'idafree' do
   version '7.0'
-  sha256 'e1101908ccb13eab5b33d7b4cb8c991993a7054a23232f1c94e214e228569ba8'
+  sha256 'e1145fe950a6045e7aa96e58c14519e96274da9147ee47583b73696fc4e527f2'
 
   url "https://out7.hex-rays.com/files/idafree#{version.no_dots}_mac.tgz"
   name 'IDA Free'

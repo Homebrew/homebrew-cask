@@ -1,9 +1,10 @@
 cask 'glip' do
-  version '19.01.2'
-  sha256 'e647a14dc41d7c0908a16d78c5db8f4aec8f359645b5399db124470be0dc8222'
+  version '19.8.1'
+  sha256 '3e4650adde9075b420ce9c28b262cf828f26041c76b1f27e89da064b793208bf'
 
   # downloads.ringcentral.com/glip/rc was verified as official when first introduced to the cask
   url "https://downloads.ringcentral.com/glip/rc/#{version}/mac/RingCentral-#{version}.dmg"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://downloads.ringcentral.com/glip/rc/GlipForMac'
   name 'Glip'
   homepage 'https://glip.com/'
 

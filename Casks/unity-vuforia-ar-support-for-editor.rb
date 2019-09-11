@@ -1,6 +1,6 @@
 cask 'unity-vuforia-ar-support-for-editor' do
-  version '2018.3.7f1,9e14d22a41bb'
-  sha256 'f0c8aea2cd8490c88d45e56de1433363ee57cab8e0082c08b3899b4acff23f00'
+  version '2019.1.12f1,f04f5427219e'
+  sha256 'd2585a51021015f73d22877bfae1bac1b86052226fd4e20661b06ee42b5f039e'
 
   url "https://download.unity3d.com/download_unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Vuforia-AR-Support-for-Editor-#{version.before_comma}.pkg"
   appcast 'https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json'

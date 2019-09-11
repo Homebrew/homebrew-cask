@@ -1,6 +1,6 @@
 cask 'aether' do
-  version '2.0.0-dev.11,1902221558.a6b3c4a8'
-  sha256 '6cf1807ef39f7b8da1034fb1140acc467aee9eadaaf36c567dbcbda70aa9e77f'
+  version '2.0.0-dev.13,1906191901.7eaf250'
+  sha256 '2a6f02a5e4255d15e57225a76d26ae8d0063dcbf96a6a74848eea26e6d392f95'
 
   url "https://static.getaether.net/Releases/Aether-#{version.before_comma}/#{version.after_comma}/mac/Aether-#{version.before_comma}%2B#{version.after_comma}.dmg"
   appcast 'https://static.getaether.net/WebsiteReleaseLinks/Latest/LatestReleaseLinks.json'

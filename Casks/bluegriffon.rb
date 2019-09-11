@@ -3,6 +3,7 @@ cask 'bluegriffon' do
   sha256 'b1fd87e24890d9d7f227da4051e384e327e418c80112f94fe376985697f7f1d9'
 
   url "http://bluegriffon.org/freshmeat/#{version}/bluegriffon-#{version}.mac-x86_64.dmg"
+  appcast 'http://bluegriffon.org/freshmeat/?C=M;O=D'
   name 'BlueGriffon'
   homepage 'http://bluegriffon.org/'
 

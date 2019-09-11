@@ -1,11 +1,11 @@
 cask 'powerword' do
-  version '1.1.1,1.0.1'
-  sha256 '87c5347065f37342939b9d9c1874a582f9a144d0a5d494152035cffcc4ca8a5b'
+  version '1.1.2,1.0.1'
+  sha256 '708007eeab118925f2d7828c95a0043e260069547b7e98ae7a3f780f5a296711'
 
   url "https://download.iciba.com/mac/mac#{version.after_comma}/PowerWord.dmg"
   name 'PowerWord'
   name '金山词霸'
-  homepage 'http://cp.iciba.com/mac/'
+  homepage 'https://cp.iciba.com/mac/'
 
   app '金山词霸.app'
 end
