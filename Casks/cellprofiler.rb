@@ -1,6 +1,6 @@
 cask 'cellprofiler' do
-  version '3.1.8'
-  sha256 '094ed77bdb0cfd40d7b060d8d88c1fc44aab7caf77a65d6f7f4cb80c074f9af8'
+  version '3.1.9'
+  sha256 '5500621a9c4322ece0bb80c40c6ffa44bf6dc086466ce3ed970c82639a39a955'
 
   # dpvpof9ygr7ad.cloudfront.net was verified as official when first introduced to the cask
   url "https://dpvpof9ygr7ad.cloudfront.net/CellProfiler-#{version}.app.zip"
