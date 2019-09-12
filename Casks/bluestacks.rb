@@ -1,8 +1,8 @@
 cask 'bluestacks' do
-  version '4.110.0.2823'
+  version '4.130.0.2803,5105214161947805f07119ba9727006e'
   sha256 '13b7b5fa312eb015ff99dc7488a9609a8679d98e6925902c8e8e43b57338735b'
 
-  url "https://cdn3.bluestacks.com/downloads/mac/bgp64_mac/#{version}/685451269560c4c06e62ecf5020f2f3f/x64/BlueStacksInstaller_#{version}.dmg"
+  url "https://cdn3.bluestacks.com/downloads/mac/bgp64_mac/#{version.before_comma}/#{version.after_comma}/x64/BlueStacksInstaller_#{version.before_comma}.dmg"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://cloud.bluestacks.com/api/getdownloadnow?platform=mac'
   name 'BlueStacks'
   homepage 'https://www.bluestacks.com/'
