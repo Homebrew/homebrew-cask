@@ -12,6 +12,7 @@ cask 'microsoft-office' do
                          'microsot-word',
                          'microsot-excel',
                          'microsot-powerpoint',
+                         'onedrive',
                        ]
   depends_on macos: '>= :sierra'
 
