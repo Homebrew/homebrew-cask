@@ -42,9 +42,6 @@ cask 'microsoft-office' do
             launchctl: [
                          'com.microsoft.office.licensing.helper',
                          'com.microsoft.office.licensingV2.helper',
-                         'com.microsoft.autoupdate.helpertool',
-                         'com.microsoft.autoupdate.helper',
-                         'com.microsoft.update.agent',
                          'com.microsoft.OneDriveStandaloneUpdater',
                          'com.microsoft.OneDriveStandaloneUpdaterDaemon',
                          'com.microsoft.OneDriveUpdaterDaemon',
