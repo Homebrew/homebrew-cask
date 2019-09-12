@@ -90,12 +90,12 @@ cask 'microsoft-office' do
                    '~/Library/Caches/Microsoft/uls',
                    '~/Library/Caches/Microsoft',
                  ],
-      pkgutil:   [
-                   'com.microsoft.package.Microsoft_AutoUpdate.app',
-                 ],
       launchctl: [
                    'com.microsoft.autoupdate.helpertool',
                    'com.microsoft.autoupdate.helper',
                    'com.microsoft.update.agent',
+                 ],
+      pkgutil:   [
+                   'com.microsoft.package.Microsoft_AutoUpdate.app',
                  ]
 end
