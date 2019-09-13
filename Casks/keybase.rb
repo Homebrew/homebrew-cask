@@ -1,6 +1,6 @@
 cask 'keybase' do
-  version '4.4.1-20190909184517,b5f8897c2a'
-  sha256 '9ff5e8521338183dee9ad7104c556aad47b4f0bee6abaf8aac69a73f3e258cf7'
+  version '4.4.2-20190912194049,4931602c61'
+  sha256 '180cfc0afed1193fa4dff5e7b1b907ad2dccce4477a7560270f30ed6d369ac52'
 
   url "https://prerelease.keybase.io/darwin-updates/Keybase-#{version.before_comma}%2B#{version.after_comma}.zip"
   appcast 'https://prerelease.keybase.io/update-darwin-prod-v2.json'
