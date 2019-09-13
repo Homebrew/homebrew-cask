@@ -7,8 +7,8 @@ cask 'transmit' do
   name 'Transmit'
   homepage 'https://panic.com/transmit/'
 
-  depends_on macos: '>= :high_sierra'
   auto_updates true
+  depends_on macos: '>= :high_sierra'
 
   app 'Transmit.app'
 
