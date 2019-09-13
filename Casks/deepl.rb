@@ -11,7 +11,7 @@ cask 'deepl' do
   uninstall quit: [
                     'com.linguee.DeepLCopyTranslator',
                     'com.linguee.DeepLLauncher',
-                    'com.linguee.DeepLStatusBar'
+                    'com.linguee.DeepLStatusBar',
                   ]
 
   zap trash: [
