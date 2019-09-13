@@ -11,7 +11,7 @@ cask 'local-by-flywheel' do
 
   depends_on cask: 'virtualbox'
 
-  app 'Local by Flywheel.app'
+  app 'Local.app'
 
   zap trash: [
                '~/Library/Application Support/Local by Flywheel',
