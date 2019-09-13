@@ -1,6 +1,6 @@
 cask 'qt-design-studio' do
-  version '1.2.0'
-  sha256 '37d17e4b514c72328698f13df7d8ffcb98d0e47de98f8d8f260d7ef23a3b231a'
+  version '1.3.0'
+  sha256 '3eaa65806214f364cda3ffa103fd65bf49e3d351a4dd2a5027e7e11d58e16fae'
 
   url "https://download.qt.io/official_releases/qtdesignstudio/#{version}/qt-designstudio-mac-x86_64-#{version}-community.dmg"
   name 'Qt Design Studio'
