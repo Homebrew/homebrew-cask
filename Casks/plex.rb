@@ -8,7 +8,7 @@ cask 'plex' do
   homepage 'https://www.plex.tv/'
 
   auto_updates true
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :high_sierra'
 
   app 'Plex.app'
 
