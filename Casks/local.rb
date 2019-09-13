@@ -1,4 +1,4 @@
-cask 'local-by-flywheel' do
+cask 'local' do
   version '5.0.4'
   sha256 'd5f16e54074f309b491e804b2f835dd93206f0b5acc5664a48393449d1d640df'
 
