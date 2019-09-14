@@ -4,7 +4,7 @@ cask 'cytoscape' do
 
   # github.com/cytoscape/cytoscape was verified as official when first introduced to the cask
   url "https://github.com/cytoscape/cytoscape/releases/download/#{version}/Cytoscape_#{version.dots_to_underscores}_macos.dmg"
-  appcast 'https://github.com/cytoscape/cytoscape/releases'
+  appcast 'https://github.com/cytoscape/cytoscape/releases.atom'
   name 'Cytoscape'
   homepage 'https://cytoscape.org/'
 
