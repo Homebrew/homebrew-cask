@@ -11,5 +11,8 @@ cask 'microsoft-teams' do
 
   pkg 'Teams_osx.pkg'
 
-  uninstall pkgutil: 'com.microsoft.teams'
+  uninstall pkgutil: [
+                       'com.microsoft.teams',
+                       'com.microsoft.teams.TeamsUpdaterDaemon',
+                     ]
 end
