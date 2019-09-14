@@ -9,7 +9,7 @@ cask 'sfdx' do
 
   pkg "sfdx-cli-v#{version}.pkg"
 
-  uninstall pkgutil: 'com.sfdx.cli',
+  uninstall pkgutil: 'com.salesforce.developer.cli',
             delete:  '/usr/local/bin/sfdx'
 
   zap trash: [
