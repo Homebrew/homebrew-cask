@@ -1,6 +1,6 @@
 cask 'ferdi' do
-  version '5.3.0'
-  sha256 '2300da1d7835932ab831c900bb1f80af8ad014b6e14ae73eef5c7febcd18c10d'
+  version '5.3.2'
+  sha256 '38293a06e400b71b200c51afb17c6837838c0987d1d8f3e3dda116388a3c08f7'
 
   url "https://github.com/kytwb/ferdi/releases/download/v#{version}/Ferdi-#{version}.dmg"
   appcast 'https://github.com/kytwb/ferdi/releases.atom'
