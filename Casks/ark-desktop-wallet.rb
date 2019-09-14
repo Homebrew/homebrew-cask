@@ -1,6 +1,6 @@
 cask 'ark-desktop-wallet' do
-  version '2.6.1'
-  sha256 '6a7e04edc068ace9fb9febc3d63f706b200b24d0234e733b19816f5fce4386e0'
+  version '2.6.2'
+  sha256 'e1cc0f3bfa09105b484299794c9e3f1e8bc4bf256f9331234fe26f40ea7dc36e'
 
   # github.com/ArkEcosystem/desktop-wallet was verified as official when first introduced to the cask
   url "https://github.com/ArkEcosystem/desktop-wallet/releases/download/#{version}/ark-desktop-wallet-mac-#{version}.dmg"
