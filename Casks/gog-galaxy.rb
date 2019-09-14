@@ -15,6 +15,7 @@ cask 'gog-galaxy' do
             launchctl: [
                          'com.gog.galaxy.ClientService',
                          'com.gog.galaxy.commservice',
+                         'com.gog.galaxy.autoLauncher',
                        ]
 
   zap trash: [
