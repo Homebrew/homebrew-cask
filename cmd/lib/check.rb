@@ -113,6 +113,7 @@ class Check
     [
       "com.microsoft.autoupdate.helper",
       "com.microsoft.package.Microsoft_AU_Bootstrapper.app",
+      "com.microsoft.package.Microsoft_AutoUpdate.app",
       "com.microsoft.update.agent",
     ].freeze
   end
