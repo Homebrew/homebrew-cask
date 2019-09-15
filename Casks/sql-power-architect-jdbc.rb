@@ -3,6 +3,7 @@ cask 'sql-power-architect-jdbc' do
   sha256 'a564e294aba5e7f4701717f8d36a898b06e6354000df332e5b6aa41377b06665'
 
   url "https://download.sqlpower.ca/architect/#{version}/community/SQL-Power-Architect-OSX-#{version}.tar.gz"
+  appcast 'http://download.sqlpower.ca/architect/'
   name 'SQL Power Architect Community edition'
   homepage 'https://www.sqlpower.ca/'
 

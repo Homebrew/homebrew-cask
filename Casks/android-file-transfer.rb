@@ -9,8 +9,6 @@ cask 'android-file-transfer' do
 
   app 'Android File Transfer.app'
 
-  uninstall login_item: 'Android File'
-
   zap trash: [
                '~/Library/Application Support/Google/Android File Transfer',
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.google.android.mtpviewer.sfl*',

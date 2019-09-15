@@ -13,6 +13,11 @@ cask 'burp-suite' do
                       sudo:       true,
                     }
 
+  postflight do
+    set_ownership '/Applications/Burp Suite Community Edition.app'
+    set_permissions '/Applications/Burp Suite Community Edition.app', 'a+rX'
+  end
+
   uninstall delete: '/Applications/Burp Suite Community Edition.app'
 
   zap trash: '~/.BurpSuite'

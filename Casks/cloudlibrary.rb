@@ -3,6 +3,7 @@ cask 'cloudlibrary' do
   sha256 'f8424b1bcf209d01c80da1b1452dd140c8d7306572c76726fcc6c0244a5f5bc1'
 
   url "http://download.yourcloudlibrary.com/apps/mac/cloudLibrary-#{version}.pkg"
+  appcast 'https://www.yourcloudlibrary.com/mac/'
   name '3M Cloud Library'
   homepage 'https://www.yourcloudlibrary.com/mac/'
 

@@ -1,12 +1,14 @@
 cask 'jumpcut' do
-  version '0.63'
-  sha256 '19c84eefbc7f173af45affe3a9ca6fd9ec58d9bdf6bacef165085e63e82d54e1'
+  version '0.70'
+  sha256 '976448c206dfe844b7e444482df6ea977b5456d6f92dc3cb9b30133dc4337432'
 
-  # downloads.sourceforge.net/jumpcut was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/jumpcut/jumpcut/#{version}/Jumpcut_#{version}.tgz"
-  appcast 'https://jumpcut.sourceforge.io/jumpcut.appcast.xml'
+  # github.com/snark/jumpcut was verified as official when first introduced to the cask
+  url "https://github.com/snark/jumpcut/releases/download/v#{version}/Jumpcut-#{version}.tar.bz2"
+  appcast 'https://github.com/snark/jumpcut/releases.atom'
   name 'Jumpcut'
-  homepage 'https://jumpcut.sourceforge.io/'
+  homepage 'https://snark.github.io/jumpcut/'
+
+  depends_on macos: '>= :high_sierra'
 
   app 'Jumpcut.app'
 end

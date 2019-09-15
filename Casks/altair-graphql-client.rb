@@ -1,9 +1,9 @@
 cask 'altair-graphql-client' do
-  version '2.2.2'
-  sha256 '5da1c3a08a68c22f937bfde2032a6e4c6fded36d2868ec755b30a3bc0234cb8d'
+  version '2.3.1'
+  sha256 '900459dcaed6cd2c61a7886ff603689eab871ec565be7344d2450f716cbe0de8'
 
   # github.com/imolorhe/altair was verified as official when first introduced to the cask
-  url "https://github.com/imolorhe/altair/releases/download/v#{version}/altair-#{version}-mac.zip"
+  url "https://github.com/imolorhe/altair/releases/download/v#{version}/altair_#{version}_mac.zip"
   appcast 'https://github.com/imolorhe/altair/releases.atom'
   name 'Altair GraphQL Client'
   homepage 'https://altair.sirmuel.design/'

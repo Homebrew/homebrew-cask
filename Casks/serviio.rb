@@ -3,6 +3,7 @@ cask 'serviio' do
   sha256 '69ca6080fc92d147ee9c6d2bc7d71d9548e5770762e0e73066d4ac82557fbc6e'
 
   url "http://download.serviio.org/releases/serviio-#{version}-osx.tar.gz"
+  appcast 'https://www.serviio.org/download'
   name 'Serviio'
   homepage 'https://serviio.org/'
 

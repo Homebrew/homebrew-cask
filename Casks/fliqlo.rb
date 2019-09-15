@@ -1,8 +1,8 @@
 cask 'fliqlo' do
-  version '1.7.1'
-  sha256 'afd741da6dd0dc971a67176509035edfffd0c6bd0295e6796f1b57f03f928d10'
+  version '1.7.2'
+  sha256 '20f81b5a06966cf729bcb065d151a6f89958b34d6339e6ea1bd7221b12bdd6ae'
 
-  url "https://fliqlo.com/download/fliqlo_#{version.no_dots}.dmg",
+  url "https://fliqlo.com/download/Fliqlo%20#{version}.dmg",
       referer: 'https://fliqlo.com/#about'
   appcast 'https://fliqlo.com/changelog.txt'
   name 'Fliqlo'

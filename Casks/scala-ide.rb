@@ -4,6 +4,7 @@ cask 'scala-ide' do
 
   # downloads.typesafe.com/scalaide-pack was verified as official when first introduced to the cask
   url "https://downloads.typesafe.com/scalaide-pack/#{version.before_comma}-vfinal-oxygen-#{version.before_colon.after_comma.no_dots}-#{version.after_colon}/scala-SDK-#{version.before_comma}-vfinal-#{version.before_colon.after_comma}-macosx.cocoa.x86_64.zip"
+  appcast 'http://scala-ide.org/download/sdk.html'
   name 'Scala IDE'
   homepage 'http://scala-ide.org/'
 

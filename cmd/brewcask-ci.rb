@@ -55,13 +55,18 @@ module Cask
             Style.run(path)
           end
 
+          if (macos_requirement = cask.depends_on.macos) && !macos_requirement.satisfied?
+            opoo "Skipping installation: #{macos_requirement.message}"
+            next
+          end
+
           was_installed = cask.installed?
           cask_dependencies = CaskDependencies.new(cask).reject(&:installed?)
 
           check = Check.new
 
           overall_success &= step "brew cask install #{cask.token}", "install" do
-            Installer.new(cask, force: true).uninstall if was_installed
+            Installer.new(cask, verbose: true).zap if was_installed
 
             check.before
 
@@ -88,9 +93,30 @@ module Cask
 
             check.after
 
-            $stderr.puts check.message unless check.success?
+            next success if check.success?
 
-            success && check.success?
+            $stderr.puts check.message
+            false
+          end
+
+          if check.success? && !check.success?(ignore_exceptions: false)
+            overall_success &= step "brew cask zap #{cask.token}", "zap" do
+              success = begin
+                Installer.new(cask, verbose: true).zap
+                true
+              rescue => e
+                $stderr.puts e.message
+                $stderr.puts e.backtrace
+                false
+              end
+
+              check.after
+
+              next success if check.success?(ignore_exceptions: false)
+
+              $stderr.puts check.message(stanza: "zap")
+              false
+            end
           end
         end
 

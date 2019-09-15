@@ -8,6 +8,5 @@ cask 'vidyo' do
 
   app 'VidyoDesktopInstaller.app/Contents/Resources/VidyoDesktop.app'
 
-  uninstall login_item: 'VidyoDesktop',
-            quit:       'com.vidyo.VidyoDesktop'
+  uninstall quit: 'com.vidyo.VidyoDesktop'
 end

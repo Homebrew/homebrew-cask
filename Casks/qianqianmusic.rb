@@ -3,7 +3,7 @@ cask 'qianqianmusic' do
   sha256 :no_check
 
   # download.qianqian.com was verified as official when first introduced to the cask
-  url 'https://download.qianqian.com/channel/2/web_daohang'
+  url 'https://download.qianqian.com/channel/2/guanwang'
   name 'Qianqian Music'
   name '千千音乐'
   homepage 'https://music.taihe.com/'

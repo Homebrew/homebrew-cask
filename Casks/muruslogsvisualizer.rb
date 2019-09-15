@@ -8,8 +8,7 @@ cask 'muruslogsvisualizer' do
 
   app 'MurusLogsVisualizer.app'
 
-  uninstall login_item: 'MurusLogsVisualizer',
-            quit:       'it.murus.MurusLogsVisualizer'
+  uninstall quit: 'it.murus.MurusLogsVisualizer'
 
   zap trash: '~/Library/Preferences/it.murus.MurusLogsVisualizer.plist'
 end

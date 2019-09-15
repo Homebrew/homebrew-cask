@@ -4,6 +4,7 @@ cask 'sejda-pdf' do
 
   # sejda-cdn.com was verified as official when first introduced to the cask
   url "https://sejda-cdn.com/downloads/sejda-desktop_#{version}.dmg"
+  appcast 'https://www.sejda.com/desktop'
   name 'Sejda PDF Desktop'
   homepage 'https://www.sejda.com/desktop'
 

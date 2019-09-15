@@ -1,6 +1,6 @@
 cask 'burn' do
-  version '2.7.1'
-  sha256 'c9496dc32624665c547efdb66ba0ff7b8ab8a12aa76a4265f390487bbd3c4f59'
+  version '2.7.6'
+  sha256 '8b3e15d90fb4e1f10782440a1eaf8b3691024b550c33a62e19c846bc8817f43c'
 
   # downloads.sourceforge.net/burn-osx was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/burn-osx/Burn/#{version}/burn-#{version}.zip"

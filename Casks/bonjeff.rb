@@ -1,6 +1,6 @@
 cask 'bonjeff' do
-  version '1.0.7'
-  sha256 '74ce75d3d4119ded7e78850f168cd2921126de5164aa1fd5c9bc6964c959155c'
+  version '1.0.8'
+  sha256 'b352025d99a4eb0624ec15714aa30b434a98f6ec7bebcd040d3301ee7bb120cd'
 
   url "https://github.com/lapcat/Bonjeff/releases/download/v#{version}/Bonjeff.#{version}.zip"
   appcast 'https://github.com/lapcat/Bonjeff/releases.atom'

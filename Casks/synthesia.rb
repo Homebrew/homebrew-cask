@@ -4,6 +4,7 @@ cask 'synthesia' do
 
   # synthesia.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://synthesia.s3.amazonaws.com/files/Synthesia-#{version}.dmg"
+  appcast 'https://feeds.feedburner.com/SynthesiaNews'
   name 'Synthesia'
   homepage 'https://www.synthesiagame.com/'
 

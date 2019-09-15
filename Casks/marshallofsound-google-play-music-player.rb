@@ -10,11 +10,10 @@ cask 'marshallofsound-google-play-music-player' do
 
   app 'Google Play Music Desktop Player.app'
 
-  uninstall login_item: 'Google Play Music Desktop Player',
-            signal:     [
-                          ['TERM', 'google-play-music-desktop-player'],
-                          ['TERM', 'google-play-music-desktop-player.helper'],
-                        ]
+  uninstall signal: [
+                      ['TERM', 'google-play-music-desktop-player'],
+                      ['TERM', 'google-play-music-desktop-player.helper'],
+                    ]
 
   zap trash: [
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/google-play-music-desktop-player.sfl*',

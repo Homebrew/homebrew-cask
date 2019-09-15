@@ -1,6 +1,6 @@
 cask 'scidavis' do
-  version '1.25'
-  sha256 '8a554f90c390426dc04d104814fc2a109b68a55cf272ee25f82e419cfebafbf5'
+  version '1.25.1'
+  sha256 '5bce640bf16b6df9a0733684db5366c9982aa39a79bb6dc9f6a3e289653b79ff'
 
   # downloads.sourceforge.net/scidavis was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/scidavis/scidavis-#{version}-mac-dist.dmg"

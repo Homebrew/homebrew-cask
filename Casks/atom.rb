@@ -1,6 +1,6 @@
 cask 'atom' do
-  version '1.40.0'
-  sha256 'b93f5ebddb4a543e9433a59c2a10df2a2f5527c6cafe651097fcdc4b61b5dc53'
+  version '1.40.1'
+  sha256 '1697c2e47b7bde34bdadd093329dfc87436c6e2c14e439c8106cb090de499029'
 
   # github.com/atom/atom was verified as official when first introduced to the cask
   url "https://github.com/atom/atom/releases/download/v#{version}/atom-mac.zip"

@@ -8,8 +8,7 @@ cask 'murus-menulet' do
 
   app 'Murus Menulet.app'
 
-  uninstall delete:     '/usr/local/bin/murusd',
-            launchctl:  'it.murus.murusd',
-            login_item: 'Murus Menulet',
-            quit:       'it.murus.Murus-Menulet'
+  uninstall delete:    '/usr/local/bin/murusd',
+            launchctl: 'it.murus.murusd',
+            quit:      'it.murus.Murus-Menulet'
 end

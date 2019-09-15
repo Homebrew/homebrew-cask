@@ -1,13 +1,14 @@
 cask 'parallels' do
-  version '14.1.3-45485'
-  sha256 '34c9c345642fa30f9d240a76062c5672e399349d5e5984db9c208d22e099f8b9'
+  version '15.0.0-46967'
+  sha256 'ed8b991bbbb70142ced8ba450273118e613fcd9b692d00ef75ef8db0b046aa6c'
 
   url "https://download.parallels.com/desktop/v#{version.major}/#{version}/ParallelsDesktop-#{version}.dmg"
-  appcast 'https://kb.parallels.com/eu/124521'
+  appcast 'https://kb.parallels.com/eu/124724'
   name 'Parallels Desktop'
   homepage 'https://www.parallels.com/products/desktop/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
   # This .dmg cannot be extracted normally
   # Original discussion: https://github.com/Homebrew/homebrew-cask/pull/67202
   container type: :naked
@@ -16,22 +17,10 @@ cask 'parallels' do
     system_command '/usr/bin/hdiutil',
                    args: ['attach', '-nobrowse', "#{staged_path}/ParallelsDesktop-#{version}.dmg"]
     system_command "/Volumes/Parallels Desktop #{version.major}/Parallels Desktop.app/Contents/MacOS/inittool",
-                   args: ['install', '-t', "#{appdir}/Parallels Desktop.app", '-s'],
+                   args: ['install', '-t', "#{appdir}/Parallels Desktop.app"],
                    sudo: true
     system_command '/usr/bin/hdiutil',
                    args: ['detach', "/Volumes/Parallels Desktop #{version.major}"]
-  end
-
-  postflight do
-    # Unhide the application
-    system_command '/usr/bin/chflags',
-                   args: ['nohidden', "#{appdir}/Parallels Desktop.app"],
-                   sudo: true
-
-    # Run the initialization script
-    system_command "#{appdir}/Parallels Desktop.app/Contents/MacOS/inittool",
-                   args: ['init', '-b', "#{appdir}/Parallels Desktop.app"],
-                   sudo: true
   end
 
   uninstall_preflight do

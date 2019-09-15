@@ -1,9 +1,9 @@
 cask 'cockatrice' do
-  version '2.7.1,2019-06-08:Beyond_the_Horizons'
-  sha256 'f56f1024c989494dda1828603e1e88ec5c71ba90d6be4938b98e0f00be316b26'
+  version '2.7.2,2019-08-31:Faerie_Tales'
+  sha256 '862ba7bdcdfef0ecd17c9b380a0f1fb9f4fcaada203a7fb7af7a837d63eaa5da'
 
   # github.com/Cockatrice/Cockatrice was verified as official when first introduced to the cask
-  url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.after_comma.before_colon}-Release-#{version.before_comma}/Cockatrice-#{version.after_colon}-#{version.before_comma}_1-osx-sierra.dmg"
+  url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.after_comma.before_colon}-Release-#{version.before_comma}/Cockatrice-#{version.after_colon}-#{version.before_comma}-osx-sierra.dmg"
   appcast 'https://github.com/Cockatrice/Cockatrice/releases.atom'
   name 'Cockatrice'
   homepage 'https://cockatrice.github.io/'

@@ -1,6 +1,6 @@
 cask 'pingplotter' do
-  version '5.11.3'
-  sha256 '0b00c13301faaea9ae71d1fe3ac3c63090e29924eaa0333852337e1c8e0ec59a'
+  version '5.11.5'
+  sha256 '2458949db124965761b929302d2752f9e3605cf89241fd06a99c7c447ab61b01'
 
   url 'https://www.pingplotter.com/downloads/pingplotter_osx.zip'
   appcast 'https://www.pingplotter.com/download'

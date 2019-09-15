@@ -1,4 +1,11 @@
-**Note**: Before taking the time to craft a new cask, make sure it can be accepted by checking the [Rejected Casks FAQ document](https://github.com/Homebrew/homebrew-cask/blob/master/doc/faq/rejected_casks.md).
+**Note**: Before taking the time to craft a new cask, make sure
+- it can be accepted by checking the [Rejected Casks FAQ document](https://github.com/Homebrew/homebrew-cask/blob/master/doc/faq/rejected_casks.md),
+- check if there are no [open pull requests] for the same cask and
+- check if the cask was not [already refused].
+
+[open pull requests]: https://github.com/Homebrew/homebrew-cask/pulls
+[already refused]: https://github.com/Homebrew/homebrew-cask/search?q=is%3Aclosed&type=Issues
+
 
 ## Adding a Cask
 
@@ -41,6 +48,8 @@ end
 ```
 
 Here is a last example for `airdisplay`, which uses a `pkg` installer to install the application instead of a stand-alone application bundle (`.app`). Note the [`uninstall pkgutil` stanza](../cask_language_reference/stanzas/uninstall.md#uninstall-key-pkgutil), which is needed to uninstall all files which were installed using the installer.
+
+You will also see how to adapt `version` to the download `url`. Use [our custom `version` methods](../cask_language_reference/stanzas/version.md#version-methods) to do so, resorting to the standard [Ruby String methods](https://ruby-doc.org/core/String.html) when they don’t suffice.
 
 ```ruby
 cask 'airdisplay' do
@@ -107,7 +116,7 @@ Fill in the following stanzas for your Cask:
 | ------------------ | ----------- |
 | `version`          | application version; give the value `:latest` if only an unversioned download is available
 | `sha256`           | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`. Can be suppressed by using the special value `:no_check`. (see [sha256](../cask_language_reference/stanzas/sha256.md))
-| `url`              | URL to the `.dmg`/`.zip`/`.tgz`/`.tbz2` file that contains the application.<br />A [comment](../cask_language_reference/stanzas/url.md#when-url-and-homepage-hostnames-differ-add-a-comment) should be added if the hostnames in the `url` and `homepage` stanzas differ. Block syntax should be used for URLs that change on every visit.<br />See [URL Stanza Details](../cask_language_reference/stanzas/url.md) for more information.
+| `url`              | URL to the `.dmg`/`.zip`/`.tgz`/`.tbz2` file that contains the application.<br />A [comment](../cask_language_reference/stanzas/url.md#when-url-and-homepage-hostnames-differ-add-a-comment) must be added if the hostnames in the `url` and `homepage` stanzas differ. [Block syntax](../cask_language_reference/stanzas/url.md#using-a-block-to-defer-code-execution) is available for URLs that change on every visit.
 | `name`             | the full and proper name defined by the vendor, and any useful alternate names (see [Name Stanza Details](../cask_language_reference/stanzas/name.md))
 | `homepage`         | application homepage; used for the `brew cask home` command
 | `app`              | relative path to an `.app` bundle that should be moved into the `/Applications` folder on installation (see [App Stanza Details](../cask_language_reference/stanzas/app.md))
@@ -156,7 +165,13 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 brew cask install my-new-cask
 ```
 
-Did it install? If something went wrong, `brew cask uninstall my-new-cask` and edit your Cask with `brew cask edit my-new-cask` to fix it.
+Did it install? If something went wrong, edit your Cask with `brew cask edit my-new-cask` to fix it.
+
+Test also if the uninstall works successfully:
+
+```bash
+brew cask uninstall my-new-cask
+```
 
 If everything looks good, you’ll also want to make sure your Cask passes audit with:
 

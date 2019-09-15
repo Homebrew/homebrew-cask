@@ -12,8 +12,7 @@ cask 'macs-fan-control' do
 
   app 'Macs Fan Control.app'
 
-  uninstall login_item: 'Macs Fan Control',
-            signal:     ['TERM', 'com.crystalidea.MacsFanControl']
+  uninstall signal: ['TERM', 'com.crystalidea.MacsFanControl']
 
   zap trash: '~/Library/Preferences/com.crystalidea.macsfancontrol.plist'
 end

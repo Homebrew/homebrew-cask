@@ -1,6 +1,6 @@
 cask 'rocket-typist' do
-  version '2.2.1'
-  sha256 '12dc652a5fa5e5710e5fabad448cc511ef7b145117b8a0bb0c0920d9dc49184d'
+  version '2.2.2'
+  sha256 '2560dc511a56b90c7e84b1aa279960b1c467d75dfa65bc7318350bd7289855ae'
 
   url 'https://witt-software.com/downloads/rockettypist/Rocket%20Typist.dmg'
   appcast 'https://witt-software.com/downloads/rockettypist/appcast.xml'

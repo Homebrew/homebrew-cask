@@ -10,8 +10,7 @@ cask 'wallpaper-wizard' do
 
   app 'Wallpaper Wizard.app'
 
-  uninstall login_item: 'Wallpaper Wizard',
-            quit:       'com.macpaw.WallWiz-site'
+  uninstall quit: 'com.macpaw.WallWiz-site'
 
   zap trash: [
                '~/Library/Preferences/com.macpaw.WallWiz-site.plist',

@@ -4,7 +4,7 @@ class Check
   CHECKS = {
     installed_apps: -> {
       ["/Applications", File.expand_path("~/Applications")]
-        .flat_map { |dir| (0..5).map { |i| "/*" * i }.map { |glob| Dir["#{dir}#{glob}"] } }
+        .flat_map { |dir| (0..5).map { |i| "/*" * i }.flat_map { |glob| Dir["#{dir}#{glob}.app"] } }
     },
     installed_kexts: -> {
       system_command!("/usr/sbin/kextstat", args: ["-kl"], print_stderr: false)
@@ -23,7 +23,7 @@ class Check
       format_launchjob = lambda { |file|
         name = file.basename(".plist").to_s
 
-        xml, = system_command! "plutil", args: ["-convert", "xml1", "-o", "-", "--", file]
+        xml, = system_command! "plutil", args: ["-convert", "xml1", "-o", "-", "--", file], sudo: true
 
         label = Plist.parse_xml(xml)["Label"]
         (name == label) ? name : "#{name} (#{label})"
@@ -71,6 +71,8 @@ class Check
   end
 
   def before
+    @diff = nil
+
     @before = {}
 
     CHECKS.each do |name, block|
@@ -79,6 +81,8 @@ class Check
   end
 
   def after
+    @diff = nil
+
     @after = {}
 
     CHECKS.each do |name, block|
@@ -87,7 +91,7 @@ class Check
   end
 
   def diff
-    return @diff if defined?(@diff)
+    return @diff if @diff
 
     @diff = {}
 
@@ -99,13 +103,22 @@ class Check
   end
   private :diff
 
-  def success?
-    diff.values.map(&:added).all?(&:none?)
+  def success?(ignore_exceptions: true)
+    diff.values
+      .map { |v| v.added.reject { |s| ignore_exceptions ? zap_exceptions.include?(s) : false  } }
+      .all?(&:none?)
   end
 
-  def message
-    return if success?
+  def zap_exceptions
+    [
+      "com.microsoft.autoupdate.helper",
+      "com.microsoft.package.Microsoft_AU_Bootstrapper.app",
+      "com.microsoft.package.Microsoft_AutoUpdate.app",
+      "com.microsoft.update.agent",
+    ].freeze
+  end
 
+  def message(stanza: "uninstall")
     lines = []
 
     pkg_files = diff[:installed_pkgs]
@@ -115,23 +128,23 @@ class Check
     installed_apps = diff[:installed_apps].added - pkg_files
 
     if installed_apps.any?
-      lines << Formatter.error("Some applications are still installed, add them to #{Formatter.identifier("uninstall delete:")}", label: "Error")
+      lines << Formatter.error("Some applications are still installed, add them to #{Formatter.identifier("#{stanza} delete:")}", label: "Error")
       lines << installed_apps.join("\n")
     end
 
-    if diff[:installed_kexts].added.any?
-      lines << Formatter.error("Some kernel extensions are still installed, add them to #{Formatter.identifier("uninstall kext:")}", label: "Error")
-      lines << diff[:installed_kexts].added.join("\n")
+    if (installed_kexts = diff[:installed_kexts].added).any?
+      lines << Formatter.error("Some kernel extensions are still installed, add them to #{Formatter.identifier("#{stanza} kext:")}", label: "Error")
+      lines << installed_kexts.join("\n")
     end
 
-    if diff[:installed_pkgs].added.any?
-      lines << Formatter.error("Some packages are still installed, add them to #{Formatter.identifier("uninstall pkgutil:")}", label: "Error")
-      lines << diff[:installed_pkgs].added.join("\n")
+    if (installed_packages = diff[:installed_pkgs].added).any?
+      lines << Formatter.error("Some packages are still installed, add them to #{Formatter.identifier("#{stanza} pkgutil:")}", label: "Error")
+      lines << installed_packages.join("\n")
     end
 
-    if diff[:installed_launchjobs].added.any?
-      lines << Formatter.error("Some launch jobs are still installed, add them to #{Formatter.identifier("uninstall launchctl:")}", label: "Error")
-      lines << diff[:installed_launchjobs].added.join("\n")
+    if (installed_launchjobs = diff[:installed_launchjobs].added).any?
+      lines << Formatter.error("Some launch jobs are still installed, add them to #{Formatter.identifier("#{stanza} launchctl:")}", label: "Error")
+      lines << installed_launchjobs.join("\n")
     end
 
     running_apps = diff[:loaded_launchjobs]
@@ -144,12 +157,12 @@ class Check
                          .reject { |id| id.match?(/\.\d+\Z/) }
 
     if running_apps.any?
-      lines << Formatter.error("Some applications are still running, add them to #{Formatter.identifier("uninstall quit:")}", label: "Error")
+      lines << Formatter.error("Some applications are still running, add them to #{Formatter.identifier("#{stanza} quit:")}", label: "Error")
       lines << running_apps.join("\n")
     end
 
     if loaded_launchjobs.any?
-      lines << Formatter.error("Some launch jobs were not unloaded, add them to #{Formatter.identifier("uninstall launchctl:")}", label: "Error")
+      lines << Formatter.error("Some launch jobs were not unloaded, add them to #{Formatter.identifier("#{stanza} launchctl:")}", label: "Error")
       lines << loaded_launchjobs.join("\n")
     end
 

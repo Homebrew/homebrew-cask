@@ -10,8 +10,7 @@ cask 'captin' do
 
   app 'Captin.app'
 
-  uninstall login_item: 'Captin',
-            quit:       'com.100hps.captin'
+  uninstall quit: 'com.100hps.captin'
 
   zap trash: [
                '~/Library/Caches/com.100hps.captin',

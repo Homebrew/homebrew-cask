@@ -12,8 +12,8 @@ cask 'itsycal' do
     # itsycal.s3.amazonaws.com was verified as official when first introduced to the cask
     url "https://itsycal.s3.amazonaws.com/Itsycal-#{version}.zip"
   else
-    version '0.11.16'
-    sha256 '457a737b44c573e9cef22ee93bb4cb4f209e4e8868570336b0bf074bdf734ec3'
+    version '0.11.17'
+    sha256 'fda1ba5611deaf4d5b834118b3af37ea9c5d08d1f8c813d04e7dd0552a270e11'
 
     # itsycal.s3.amazonaws.com was verified as official when first introduced to the cask
     url "https://itsycal.s3.amazonaws.com/Itsycal-#{version}.zip"
@@ -23,9 +23,9 @@ cask 'itsycal' do
   name 'Itsycal'
   homepage 'https://www.mowglii.com/itsycal/'
 
-  app 'Itsycal.app'
+  auto_updates true
 
-  uninstall login_item: 'Itsycal'
+  app 'Itsycal.app'
 
   zap trash: '~/Library/Preferences/com.mowglii.ItsycalApp.plist'
 end

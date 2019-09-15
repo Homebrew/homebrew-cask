@@ -1,6 +1,6 @@
 cask 'cashnotify' do
-  version '3.1.1'
-  sha256 'dbd6514630f6746681cc8d51b7f3ded62076d3b4cdccf1531b02f2e65f425b5b'
+  version '3.2.1'
+  sha256 '64aaf9cfa4c0b2fad42098a1335f5aaa8afffaa2cc6a3acb185049e4c6a1a0ed'
 
   url 'https://download.cashnotify.com/download/mac/'
   appcast 'https://github.com/BaguetteEngineering/download.cashnotify.com/releases.atom'
@@ -11,9 +11,8 @@ cask 'cashnotify' do
 
   app 'CashNotify.app'
 
-  uninstall launchctl:  'com.baguetteengineering.cashnotify.ShipIt',
-            quit:       'com.baguetteengineering.cashnotify',
-            login_item: 'CashNotify'
+  uninstall launchctl: 'com.baguetteengineering.cashnotify.ShipIt',
+            quit:      'com.baguetteengineering.cashnotify'
 
   zap trash: [
                '~/Library/Application Support/CashNotify',

@@ -2,8 +2,8 @@ cask 'vip-access' do
   version :latest
   sha256 :no_check
 
-  # com-symantec-vip-us-east-2-prd-idcenter-downloads.s3.amazonaws.com was verified as official when first introduced to the cask
-  url 'https://com-symantec-vip-us-east-2-prd-idcenter-downloads.s3.amazonaws.com/VIPAccessSecurityCode.dmg'
+  # s3-us-east-2.amazonaws.com was verified as official when first introduced to the cask
+  url 'https://s3-us-east-2.amazonaws.com/com-symantec-vip-us-east-2-prd-idcenter-downloads-v2/VIPAccessSecurityCode.dmg'
   name 'Symantec VIP Access'
   homepage 'https://vip.symantec.com/'
 

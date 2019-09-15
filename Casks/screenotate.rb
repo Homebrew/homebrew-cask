@@ -9,8 +9,7 @@ cask 'screenotate' do
 
   app 'Screenotate.app'
 
-  uninstall login_item: 'Screenotate',
-            quit:       'com.rsnous.Screenotate'
+  uninstall quit: 'com.rsnous.Screenotate'
 
   zap trash: [
                '~/Library/Application Support/Screenotate',

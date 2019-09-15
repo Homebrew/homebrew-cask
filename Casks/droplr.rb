@@ -11,6 +11,4 @@ cask 'droplr' do
   depends_on macos: '>= :sierra'
 
   app 'Droplr.app'
-
-  uninstall login_item: 'Droplr'
 end

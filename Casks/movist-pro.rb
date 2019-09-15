@@ -1,6 +1,6 @@
 cask 'movist-pro' do
-  version '2.2.5'
-  sha256 '1a2da91128f62cc6d951f325d718a09476eeb8a17eecde669ee38274776ba227'
+  version '2.2.8'
+  sha256 '848f074a8b0157f7ef9a890f57660278693345eef488b2b827d9e61eb5bf2390'
 
   # d2uukrxj8lf22z.cloudfront.net was verified as official when first introduced to the cask
   url 'https://d2uukrxj8lf22z.cloudfront.net/MovistPro.app.zip'

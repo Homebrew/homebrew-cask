@@ -1,10 +1,10 @@
 cask 'lingon-x' do
   if MacOS.version <= :high_sierra
-    version '6.6.4'
-    sha256 'fc788402fa16df39a3d48cdc501dae31368ec6fd69ffe0026ba99932b28cae19'
+    version '6.6.5'
+    sha256 'b0231b1a98dcc8f5c4234b419c9f5331407b8cce29b33f0ea2e32b12595adfa8'
   else
-    version '7.3.1'
-    sha256 '13f39ef6859ada42398389376906e12b07b48a4938907f26f7658df0ccfe99a2'
+    version '7.4'
+    sha256 'd4b8857fca09727e6f183109b19b265f098d20bcdf0fabed84dc191c8042ab1a'
   end
 
   url "https://www.peterborgapps.com/downloads/LingonX#{version.major}.zip"

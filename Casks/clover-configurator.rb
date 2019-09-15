@@ -1,6 +1,6 @@
 cask 'clover-configurator' do
-  version '5.4.5.0'
-  sha256 'd882be677980e38dcec3b96ebbad5411b3fbf9e27bd70da7d83a34a7edfa9693'
+  version '5.5.0.0'
+  sha256 '4c2059895ef65067269e18b7108781d5a3f20b05aa81d8b87db1d1dd9c84b82b'
 
   url 'https://mackie100projects.altervista.org/apps/cloverconf/CCG/builds-data-ccg/CCG.zip'
   appcast 'https://mackie100projects.altervista.org/apps/cloverconf/CCG/update-data-builds.xml'

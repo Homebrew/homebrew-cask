@@ -1,6 +1,6 @@
 cask 'cisdem-pdf-converter-ocr' do
-  version '7.0.0'
-  sha256 'a92240fb9b280909b83f98718e68ece6998d3c9f0188560b69f91f92dad5859a'
+  version '7.2.0'
+  sha256 '2b9472e25273477d6a9041ce1400684f36d23b92756e1d2c3c0c9dd417afd4ef'
 
   url 'http://download.cisdem.com/cisdem-pdfconverterocr.dmg'
   appcast 'https://www.cisdem.com/pdf-converter-ocr-mac/release-notes.html'

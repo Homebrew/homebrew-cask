@@ -1,13 +1,9 @@
-language: ruby
+language: c
 
-sudo: true
-
-matrix:
-  include:
-    - os: osx
-      osx_image: xcode10
-      rvm: system
-  fast_finish: true
+os: osx
+osx_image:
+  - xcode10.1
+  - xcode10.3
 
 branches:
   only:
