@@ -1,14 +1,14 @@
 cask 'devonthink' do
-  version '2.11.3'
-  sha256 '88c0cf9394ce6e80ef1bc719070b391739779b303c6a624ac4646dedd25740f6'
+  version '3.0'
+  sha256 'b525e33a3352dae6e9a4e8b1b32588752906c6a915fe528f240cb0b1d1e2d3fa'
 
   # s3.amazonaws.com/DTWebsiteSupport was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/DTWebsiteSupport/download/devonthink/#{version}/DEVONthink_Personal.app.zip"
+  url "https://s3.amazonaws.com/DTWebsiteSupport/download/devonthink/#{version}/DEVONthink_3.dmg.zip"
   appcast 'https://api.devontechnologies.com/1/apps/sparkle/sparkle.php?id=217255'
-  name 'DEVONthink Personal'
+  name 'DEVONthink 3'
   homepage 'https://www.devontechnologies.com/apps/devonthink/'
 
   auto_updates true
 
-  app 'DEVONthink.app'
+  app 'DEVONthink 3.app'
 end
