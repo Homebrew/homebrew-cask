@@ -1,6 +1,6 @@
 cask 'jollysfastvnc' do
-  version '1.54'
-  sha256 '2d205f98db9afaef25e591166a82aab84263df9def3214eea53af423f43e8017'
+  version '1.56'
+  sha256 '4ff7a8d187316ee36188de89c7198d942fafe6a1d8f88b6452b331d494c6a190'
 
   url 'https://www.jinx.de/JollysFastVNC_files/JollysFastVNC.current.dmg'
   appcast 'https://www.jinx.de/JollysFastVNC.update.11.i386.xml'
