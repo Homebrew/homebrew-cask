@@ -8,13 +8,11 @@ cask 'deepl' do
 
   app 'DeepL.app'
 
-  # Not Working because can't find the correct PID to kill see https://github.com/Homebrew/homebrew-cask/issues/69000#
-  uninstall launchctl: 'com.linguee.DeepLLauncher',
-            signal:    [
-                         ['TERM', 'com.linguee.DeepLStatusBar'],
-                         ['TERM', 'com.linguee.DeepLLauncher'],
-                         ['TERM', 'com.linguee.DeepLCopyTranslator'],
-                       ]
+  uninstall quit: [
+                    'com.linguee.DeepLCopyTranslator',
+                    'com.linguee.DeepLLauncher',
+                    'com.linguee.DeepLStatusBar',
+                  ]
 
   zap trash: [
                '~/Library/Caches/com.linguee.DeepLCopyTranslator',
