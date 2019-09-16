@@ -4,7 +4,8 @@ cask 'magicavoxel' do
 
   # github.com/ephtracy/ephtracy.github.io was verified as official when first introduced to the cask
   url "https://github.com/ephtracy/ephtracy.github.io/releases/download/#{version.major_minor_patch}/MagicaVoxel-#{version}-alpha-macos.zip"
-  appcast 'https://github.com/ephtracy/ephtracy.github.io/releases.atom'
+  appcast 'https://github.com/ephtracy/ephtracy.github.io/releases.atom',
+          configuration: version.major_minor_patch
   name 'MagicaVoxel'
   homepage 'https://ephtracy.github.io/'
 
