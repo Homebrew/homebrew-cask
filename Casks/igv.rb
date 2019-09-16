@@ -1,6 +1,6 @@
 cask 'igv' do
-  version '2.6.2'
-  sha256 'e36a08129c62f015c4cd588b604fcc9e66dd468d1b3161166c677050066f4a93'
+  version '2.6.3'
+  sha256 '9dff406ecebc9312278eb22b3e14250ee4e0d3f8a70c401f73877a00ba2f0fa7'
 
   url "https://data.broadinstitute.org/igv/projects/downloads/#{version.major_minor}/IGV_#{version}.app.zip"
   appcast 'https://data.broadinstitute.org/igv/projects/downloads/',
