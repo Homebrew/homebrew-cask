@@ -7,6 +7,8 @@ cask 'manictime' do
   name 'ManicTime'
   homepage 'https://www.manictime.com/Mac'
 
+  depends_on macos: '>= :sierra'
+
   pkg "ManicTime-v#{version}.pkg"
 
   uninstall pkgutil: 'com.finkit.manictime.tracker'
