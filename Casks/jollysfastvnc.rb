@@ -7,6 +7,8 @@ cask 'jollysfastvnc' do
   name 'JollysFastVNC'
   homepage 'https://www.jinx.de/JollysFastVNC.html'
 
+  depends_on macos: '>= :sierra'
+
   app 'JollysFastVNC.app'
 
   uninstall quit: 'de.jinx.JollysFastVNC'
