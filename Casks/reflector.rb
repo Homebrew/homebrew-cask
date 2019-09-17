@@ -5,7 +5,7 @@ cask 'reflector' do
   url "https://download.airsquirrels.com/Reflector#{version.major}/Mac/Reflector-#{version}.dmg"
   appcast "https://updates.airsquirrels.com/Reflector#{version.major}/Mac/Reflector#{version.major}.xml"
   name "Reflector #{version.major}"
-  homepage 'http://www.airsquirrels.com/reflector/'
+  homepage 'https://www.airsquirrels.com/reflector/'
 
   app "Reflector #{version.major}.app"
 end
