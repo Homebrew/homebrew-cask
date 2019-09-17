@@ -7,5 +7,5 @@ cask 'hubstaff' do
   name 'Hubstaff'
   homepage 'https://hubstaff.com/'
 
-  app 'Hubstaff.app'
+  app 'Hubstaff/Hubstaff.app'
 end
