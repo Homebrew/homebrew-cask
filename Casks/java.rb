@@ -1,6 +1,6 @@
 cask 'java' do
-  version '12.0.2,10:e482c34c86bd4bf8b56c0b35558996b9'
-  sha256 '675a739ab89b28a8db89510f87cb2ec3206ec6662fb4b4996264c16c72cdd2a1'
+  version '13,33:5b8a42f3905b406298b72d750b6919f6'
+  sha256 '1a9c096630a0e4f27ce61ac9e477378b8581c537568186d4afd0b416a7e9dd68'
 
   url "https://download.java.net/java/GA/jdk#{version.before_comma}/#{version.after_colon}/#{version.after_comma.before_colon}/GPL/openjdk-#{version.before_comma}_osx-x64_bin.tar.gz"
   name 'OpenJDK Java Development Kit'
