@@ -9,6 +9,7 @@ cask 'loopback' do
   homepage 'https://rogueamoeba.com/loopback/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'Loopback.app'
 end
