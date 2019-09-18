@@ -30,5 +30,5 @@ cask 'oversight' do
                '~/Library/Preferences/com.objective-see.OverSightHelper.plist',
              ]
 
-  caveats 'Due to an upstream bug, the installer hangs. To solve this, manually close OverSight from the menu bar (Click on the umbrella icon and then click quit. As soon as brew cask moves on, you can reopen OverSight or restart your computer and it\'ll reopen.'
+  caveats 'Due to an upstream bug, the installer hangs. To solve, manually close OverSight from the menu bar by clicking on the umbrella icon and then choosing “quit”. As soon as brew cask moves on, you may reopen OverSight.'
 end
