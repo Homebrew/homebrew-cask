@@ -6,6 +6,8 @@ cask 'deepl' do
   name 'DeepL'
   homepage 'https://www.deepl.com/'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'DeepL.app'
 
   uninstall quit: [
