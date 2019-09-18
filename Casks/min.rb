@@ -1,6 +1,6 @@
 cask 'min' do
-  version '1.11.0'
-  sha256 '28f3fc77d3e16147480e96c473b9b1eee96905ed30371c1de20973e333289517'
+  version '1.11.1'
+  sha256 'ea43af1ee384ececbb3ae302d107260cc1abff059750534b505c8f1c36f76fc2'
 
   # github.com/minbrowser/min was verified as official when first introduced to the cask
   url "https://github.com/minbrowser/min/releases/download/v#{version}/Min-v#{version}-darwin-x64.zip"
