@@ -1,8 +1,8 @@
 cask 'photosync' do
-  version '3.3.1'
-  sha256 '7c3238c45bb4ef46c5055f60b64394f8cbe78759b0bf1e18dd968dcf8c317392'
+  version '4.0'
+  sha256 '1a912729cb38991b645c6cd2fd04d4e48e5cbe2fbe8da3ad817a68f4c7ad1974'
 
-  url "https://www.photosync-app.com/tl_files/photosync/publish/mac/photosync_#{version.dots_to_underscores}.dmg"
+  url "https://download.photosync-app.com/mac/photosync_#{version.dots_to_underscores}.zip"
   appcast 'https://download.photosync-app.com/xml/photosyncmac-updates-standalone.xml'
   name 'PhotoSync Companion'
   homepage 'https://www.photosync-app.com/photosync/en/home.html'
