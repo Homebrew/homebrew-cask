@@ -1,6 +1,6 @@
 cask 'navicat-premium-essentials' do
-  version '12.1.24'
-  sha256 '532daca7b7dcaf9449501e858986d1da55263b9178b19aa317fbb4640270d1ce'
+  version '12.1.25'
+  sha256 '35bfe7013426b350a2a3b98e959fc728d3c879cc6915799676119dd0ebbd5709'
 
   url "http://download.navicat.com/download/navicatess#{version.major_minor.no_dots}_premium_en.dmg"
   appcast 'https://www.navicat.com/updater/v120/sysProfileInfo.php?appName=Navicat%20Premium%20Essentials&appLang=en'
