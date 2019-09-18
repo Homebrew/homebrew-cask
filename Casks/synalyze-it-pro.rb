@@ -1,6 +1,6 @@
 cask 'synalyze-it-pro' do
-  version '1.23'
-  sha256 '91082b632a619be6f7d8a0360354eafe9cf18c7e488c88d65f3bd1280ad77fa5'
+  version '1.23.2'
+  sha256 '18802f068eb7312a54109f0c1c98a1156683d77097aef0b04a0767e42e08f92d'
 
   # synalyze-it.com/Downloads was verified as official when first introduced to the cask
   url "https://www.synalyze-it.com/Downloads/SynalyzeItProTA_#{version}.zip"
