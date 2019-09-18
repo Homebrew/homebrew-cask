@@ -12,5 +12,6 @@ cask 'loginputmac' do
 
   pkg "loginputmac#{version.major}_latest.pkg"
 
-  uninstall pkgutil: "com.logcg.pkg.LoginputMac#{version.major}"
+  uninstall pkgutil: "com.logcg.pkg.LoginputMac#{version.major}",
+            quit:    "com.logcg.inputmethod.LogInputMac#{version.major}"
 end
