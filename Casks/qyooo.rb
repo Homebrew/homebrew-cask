@@ -1,6 +1,6 @@
 cask 'qyooo' do
-  version '1.1.2'
-  sha256 'afc0db2d9d471d19595718e140dc70e46082c267cddcbc884da5f2d67256f50a'
+  version '1.1.3'
+  sha256 '75a85ca2f53b859d2cb09c02db18162481a71ce07ae80a25b043ed836e30e0bb'
 
   url "https://www.fullbucket.de/music/dl/qyooo_#{version.dots_to_underscores}_mac.pkg"
   appcast 'https://www.fullbucket.de/music/qyooo.html'
