@@ -7,7 +7,7 @@ cask 'oracle-jdk-javadoc' do
                  'oraclelicense' => 'accept-securebackup-cookie',
                }
   name 'Oracle Java Standard Edition Development Kit Documentation'
-  homepage "https://www.oracle.com/technetwork/java/javase/documentation/jdk#{version.major}-doc-downloads-4417029.html"
+  homepage "https://www.oracle.com/technetwork/java/javase/documentation/jdk13-doc-downloads-5672541.html"
 
   artifact 'docs', target: "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents/Home/docs"
 
