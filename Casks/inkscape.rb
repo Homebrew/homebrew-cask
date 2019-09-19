@@ -8,7 +8,7 @@ cask 'inkscape' do
 
   app 'Inkscape.app'
 
-   zap trash: [
+  zap trash: [
                '~/Library/Application Support/Inkscape',
              ],
       rmdir: [
