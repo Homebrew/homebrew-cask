@@ -7,7 +7,11 @@ cask 'inkscape' do
   homepage 'https://inkscape.org/'
 
   app 'Inkscape.app'
-  binary "#{appdir}/Inkscape.app/Contents/Resources/bin/inkscape"
 
-  zap trash: '~/.inkscape-etc'
+   zap trash: [
+               '~/Library/Application Support/Inkscape',
+             ],
+      rmdir: [
+               '~/Library/Application Support/Inkscape',
+             ]
 end
