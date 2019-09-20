@@ -7,5 +7,7 @@ cask 'fission' do
   name 'Fission'
   homepage 'https://rogueamoeba.com/fission/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Fission.app'
 end
