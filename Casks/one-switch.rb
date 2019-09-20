@@ -8,5 +8,7 @@ cask 'one-switch' do
   name 'One Switch'
   homepage 'https://fireball.studio/oneswitch'
 
+  depends_on macos: '>= :mojave'
+
   app 'One Switch.app'
 end
