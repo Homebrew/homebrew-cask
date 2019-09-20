@@ -8,7 +8,7 @@ cask 'jumpcut' do
   name 'Jumpcut'
   homepage 'https://snark.github.io/jumpcut/'
 
-  depends_on macos: '>= :high_sierra'
+  depends_on macos: '>= :el_capitan'
 
   app 'Jumpcut.app'
 end
