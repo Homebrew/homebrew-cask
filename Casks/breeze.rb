@@ -1,8 +1,8 @@
 cask 'breeze' do
-  version '1.5.11'
-  sha256 'eaa54f9ccc6539fb548ffa274a7317913840ee3144ed781acd4da8b0b2d0d5ba'
+  version '1.6'
+  sha256 'dd99bca96ff8b5d244f2eb0cf13537b112478efe5a96b9c05b6f92e43810d8df'
 
-  url "https://autumnapps.com/downloads/Breeze#{version}.dmg"
+  url "https://autumnapps.com/downloads/Breeze#{version}.zip"
   appcast 'https://www.autumnapps.com/updates/profiles/breeze.php'
   name 'Breeze'
   homepage 'https://autumnapps.com/breeze/'

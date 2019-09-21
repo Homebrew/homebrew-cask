@@ -3,7 +3,7 @@ cask 'jamovi' do
   sha256 '7691b0dbac127b62652eeecd53d7fa2fc5229da0943c8c9c7230900fd9284c1b'
 
   url "https://www.jamovi.org/downloads/jamovi-#{version}-macos.dmg"
-  appcast 'https://www.jamovi.org/download.html'
+  appcast 'https://www.macupdater.net/cgi-bin/extract_text/extract_text_split_easy.cgi?url=https://www.jamovi.org/download.html&splitter_1=macos.dmg&index_1=0&splitter_2=download-button&index_2=-1'
   name 'jamovi'
   homepage 'https://www.jamovi.org/'
 

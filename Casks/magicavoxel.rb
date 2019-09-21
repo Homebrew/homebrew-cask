@@ -1,10 +1,11 @@
 cask 'magicavoxel' do
-  version '0.99.4'
-  sha256 'f42b1ffe2dff0d8aadb806c8359e3cbd53f723a23adcefc5042ce8f8702b4935'
+  version '0.99.4.2'
+  sha256 '2ee6e63c45b4e3d7a99b185d48bb9c2b8e8140e88d106c1d86303243379c2729'
 
   # github.com/ephtracy/ephtracy.github.io was verified as official when first introduced to the cask
-  url "https://github.com/ephtracy/ephtracy.github.io/releases/download/#{version}/MagicaVoxel-#{version}-alpha-macos.zip"
-  appcast 'https://github.com/ephtracy/ephtracy.github.io/releases.atom'
+  url "https://github.com/ephtracy/ephtracy.github.io/releases/download/#{version.major_minor_patch}/MagicaVoxel-#{version}-alpha-macos.zip"
+  appcast 'https://github.com/ephtracy/ephtracy.github.io/releases.atom',
+          configuration: version.major_minor_patch
   name 'MagicaVoxel'
   homepage 'https://ephtracy.github.io/'
 

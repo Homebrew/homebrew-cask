@@ -1,6 +1,6 @@
 cask 'mapillary-uploader' do
-  version '1.2.0'
-  sha256 '47f33a7b6acde506edcd7a64252dd18db54949b3da157183c00203263f810819'
+  version '1.2.1'
+  sha256 '2ceba51833f157f11461a2b2d121a0240adbf792a5d1c0f3b87ba0bc82c4516e'
 
   url "https://tools.mapillary.com/uploader/Mapillary%20Uploader-#{version}.dmg"
   appcast 'https://www.mapillary.com/desktop-uploader'

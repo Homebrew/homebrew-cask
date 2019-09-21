@@ -1,6 +1,6 @@
 cask 'headset' do
-  version '3.0.2'
-  sha256 '6b1ca851e160c1f5af986f0e3aeb0b785b2330c150d074c2f0adda90badb0b57'
+  version '3.1.0'
+  sha256 '95ac91d8cc7fecf363286b1962e99916e8e1cd0f9bcc6a2df163029b0503afa9'
 
   # github.com/headsetapp/headset-electron was verified as official when first introduced to the cask
   url "https://github.com/headsetapp/headset-electron/releases/download/v#{version}/Headset-#{version}.dmg"

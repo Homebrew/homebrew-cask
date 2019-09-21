@@ -1,6 +1,6 @@
 cask 'deezer' do
-  version '4.13.4'
-  sha256 '03460e653a32879ab14c37879a5fdca419e6ccfa745fb3f8aaeb4712765a7565'
+  version '4.16.3'
+  sha256 '28ef9bd6baaba664c07fb91b91ea033af25b54dc964d827333425491ae47f882'
 
   url "https://www.deezer.com/desktop/download/artifact/darwin/x64/#{version}"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.deezer.com/desktop/download%3Fplatform%3Ddarwin%26architecture=x64'
@@ -12,7 +12,11 @@ cask 'deezer' do
   app 'Deezer.app'
 
   zap trash: [
-               '~/Library/Application Support/Deezer',
-               '~/Library/Preferences/com.deezer.Deezer.plist',
+               '~/Library/Application Support/Caches/deezer-desktop-updater',
+               '~/Library/Application Support/deezer-desktop',
+               '~/Library/Logs/Deezer',
+               '~/Library/Preferences/ByHost/com.deezer.*',
+               '~/Library/Preferences/com.deezer.deezer-desktop.plist',
+               '~/Library/Saved Application State/com.deezer.deezer-desktop.savedState',
              ]
 end

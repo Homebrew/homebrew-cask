@@ -1,6 +1,6 @@
 cask 'segger-embedded-studio-for-risc-v' do
-  version '4.20a'
-  sha256 '708fed7bcb5581a09a9351997061ef286e4f42efc440ec6928ecbdee434ef004'
+  version '4.22'
+  sha256 '69c67d1969d861de63a519818fed88592863587eee1fa72da134bb2445f01b45'
 
   url "https://www.segger.com/downloads/embedded-studio/Setup_EmbeddedStudio_RISCV_v#{version.no_dots}_macos_x64.dmg"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=https://www.segger.com/downloads/embedded-studio/EmbeddedStudio_RISCV_Mac',

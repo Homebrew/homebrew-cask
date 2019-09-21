@@ -67,7 +67,7 @@ def diff_for_pull_request(pr)
   GitDiff.from_string(output) if status.success?
 end
 
-def merge_pull_request(pr, statuses = GitHub.open_api(pr.fetch("statuses_url")))
+def merge_pull_request(pr, check_runs = GitHub.check_runs(pr: pr).fetch("check_runs"))
   repo   = pr.fetch("base").fetch("repo").fetch("full_name")
   number = pr.fetch("number")
   sha    = pr.fetch("head").fetch("sha")
@@ -75,7 +75,7 @@ def merge_pull_request(pr, statuses = GitHub.open_api(pr.fetch("statuses_url")))
   tap = Tap.fetch(repo)
   pr_name = "#{tap.name}##{number}"
 
-  skip "CI status for pull request #{pr_name} is not successful." unless passed_ci?(statuses)
+  skip "CI status for pull request #{pr_name} is not successful." unless passed_ci?(check_runs)
 
   diff = diff_for_pull_request(pr)
   skip "Pull request #{pr_name} is not a “simple” version bump." unless diff.simple?
@@ -121,23 +121,18 @@ def merge_pull_request(pr, statuses = GitHub.open_api(pr.fetch("statuses_url")))
   end
 end
 
-def passed_ci?(statuses = [])
-  statuses = Hash[
-    statuses.group_by { |status| status.fetch("context") }
-            .map { |(k, v)| [k, v.max_by { |status| Time.parse(status.fetch("updated_at")) }] }
+def passed_ci?(check_runs = [])
+  check_runs = Hash[
+    check_runs.select { |check_run| check_run.fetch("status") == "completed" }
+              .group_by { |check_run| check_run.fetch("name") }
+              .map { |(k, v)| [k, v.max_by { |status| Time.parse(status.fetch("completed_at")) }] }
   ]
 
-  statuses.dig("continuous-integration/travis-ci/pr", "state") == "success"
+  check_runs.dig("Travis CI - Pull Request", "conclusion") == "success"
 end
 
 begin
   case ENV["GITHUB_EVENT_NAME"]
-  when "status"
-    status = event
-
-    pr = find_pull_request_for_status(status)
-    skip "No matching pull request found." unless pr
-    merge_pull_request(pr, [status])
   when "schedule"
     prs = GitHub.pull_requests(ENV["GITHUB_REPOSITORY"], state: :open, base: "master")
 

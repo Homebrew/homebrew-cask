@@ -23,7 +23,7 @@ jobs:
 
           brew update-reset "$(brew --repository "${GITHUB_REPOSITORY}")"
 
-          brew pull "${PR_URL}"
+          brew pull --clean "${PR_URL}"
 
           wait $dependencies
         env:

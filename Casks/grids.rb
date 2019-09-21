@@ -1,6 +1,6 @@
 cask 'grids' do
-  version '5.5'
-  sha256 'f9804d72a84d925e105c369936b3273d3380ca17096f4c69df12d5b2a0838fc1'
+  version '5.6.1'
+  sha256 '3f31b01f7b154d8e66130a1ce3da2d0c8a963922f30e410d6bb6cc503ced43e7'
 
   url "https://gridsapp.net/bin/Grids_#{version}.zip"
   appcast 'https://gridsapp.net/appcast.json'

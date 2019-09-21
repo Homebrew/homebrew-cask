@@ -1,6 +1,6 @@
 cask 'whatsize' do
-  version '7.1.1'
-  sha256 '09ee57148354e0dc7f8d59b8a8d1fb5a6c60d199ddf777db713903de7499ff26'
+  version '7.2.1'
+  sha256 '945b6ae5543d568347875c144af7f6e7972e141eb003f5cd0ec54714e3b1521d'
 
   url "https://www.whatsizemac.com/software/whatsize#{version.major}/whatsize_#{version}.tgz"
   appcast "https://www.whatsizemac.com/software/whatsize#{version.major}/release/notes.xml"
