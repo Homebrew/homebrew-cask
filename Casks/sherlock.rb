@@ -1,6 +1,6 @@
 cask 'sherlock' do
-  version '1.6.0'
-  sha256 '54df9ffad9d298c5b1e6a6097373bb4e047bdcd3727676317071eeabbac91195'
+  version '1.7.0'
+  sha256 'c0eeab8eb7371911ff59d5b1ef9fc3f96643ca39807fa2eb32d8292b2fee41b3'
 
   url 'https://sherlock.inspiredcode.io/download-dmg'
   appcast 'https://updates.devmate.com/io.inspiredcode.Sherlock.xml'
