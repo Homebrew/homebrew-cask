@@ -7,5 +7,7 @@ cask 'subethaedit' do
   name 'SubEthaEdit'
   homepage 'https://subethaedit.net/'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'SubEthaEdit.app'
 end
