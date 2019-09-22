@@ -1,34 +1,39 @@
 cask 'openoffice' do
-  version '4.1.6'
+  version '4.1.7'
 
   language 'en', default: true do
-    sha256 '9953baaf77fb31195c0873bbe6583de79bab3197381dc8769a8fec784c422664'
+    sha256 '615d6fa38ef78e99e30f515ce3f61fd9e228408a425c91afc5e587d662e18f99'
     'en-US'
   end
 
   language 'fr' do
-    sha256 '88496142984d3d2395a5e9931ed1f955573681d74ad5251e5890cf8a118c3b09'
+    sha256 '1f583ce02d3521a522a10d057c3f02df4e2db97159c5b3660864b707ff246da9'
     'fr'
   end
 
   language 'gl' do
-    sha256 '3fb64043c903c8c7c9f25831a46d6592e343de52be90b37911723ba55aaed29a'
+    sha256 '9677427e94177bd63581e6d6e05f4577218be99b8f77ca9400084611e7301c81'
     'gl'
   end
 
+  language 'ko' do
+    sha256 'fbac79978daa873c6d60592221d7f8f1b3d9bf50f6cabfd1e8396495ee035fb4'
+    'ko'
+  end
+
   language 'pt-BR' do
-    sha256 '8689887708e18c302809cac84b8f871153a6f76909c11fc2e3ea725872e82a5d'
+    sha256 '492414f99543ee3678e5616d60af324923090228896c88020b05bf87c5c9b8bc'
     'pt-BR'
   end
 
   language 'pt' do
-    sha256 'dbfddf325cad9034b3e6630fa244303a0ba1ae9273165b3b9c9c71c3f8e858bb'
+    sha256 '8f2f2370e704a20a2e14f36bcc01d88f40067e3e6e8132efa93add8bfb6ff400'
     'pt'
   end
 
-  language 'ko' do
-    sha256 '2c9798bde42c6d758b2a189aa5dd1170bdfed9c6346fdf8de43a276ee1de2c80'
-    'ko'
+  language 'ru' do
+    sha256 'fda1e39361fa34ff4c015d10866ab79c1e665bddf297af6c163022b302332e22'
+    'ru'
   end
 
   # sourceforge.net/openofficeorg.mirror was verified as official when first introduced to the cask
