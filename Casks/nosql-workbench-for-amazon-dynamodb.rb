@@ -8,5 +8,5 @@ cask 'nosql-workbench-for-amazon-dynamodb' do
   name 'NoSQL Workbench for Amazon DynamoDB'
   homepage 'https://docs.aws.amazon.com/en_pv/amazondynamodb/latest/developerguide/workbench.html'
 
-  app 'NoSQL Workbench for Amazon DynamoDB (preview).app'
+  app 'NoSQL Workbench for Amazon DynamoDB (Preview).app'
 end
