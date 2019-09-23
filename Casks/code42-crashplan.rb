@@ -1,5 +1,5 @@
 cask 'code42-crashplan' do
-  version '7.0.2'
+  version '7.2.0'
   sha256 '365440a5a17c5cab80c291922133bbd961dc04bfe1659f612c5dc951562ed9af'
 
   # download.code42.com was verified as official when first introduced to the cask
