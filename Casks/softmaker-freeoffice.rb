@@ -1,6 +1,6 @@
 cask 'softmaker-freeoffice' do
-  version '2018,970'
-  sha256 '0dd6d248e282b366693e4124c3fb701d19c7270b202c47fb56dc4a1daa06ce7a'
+  version '2018,971'
+  sha256 'f3cd377dadb5143da35cd35201d3f376250177d2dde475c2f4abbeb9e3135f9d'
 
   # softmaker.net was verified as official when first introduced to the cask
   url "https://www.softmaker.net/down/softmaker-freeoffice-#{version.before_comma}.pkg"

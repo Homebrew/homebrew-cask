@@ -1,6 +1,6 @@
 cask 'protonmail-bridge' do
   version '1.2.2'
-  sha256 '51e1114974236d55f555dbf8c2d78414942fe475a0c380089381752f23951c2b'
+  sha256 '99de8fa3edb4a82347bb5220d6a912b09b298122b5395753cdf47f9061e8bd17'
 
   url 'https://protonmail.com/download/Bridge-Installer.dmg'
   appcast 'https://protonmail.com/download/current_version_darwin.json'

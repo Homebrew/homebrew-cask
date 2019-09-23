@@ -1,6 +1,6 @@
 cask 'mweb' do
-  version '3.2.8'
-  sha256 'f0c114542a8a807e2fa971d498ac7a02986b7293dcb101021cdd1d519c6b44cd'
+  version '3.3.1'
+  sha256 '896ea61a7d8c3086e62cc0d02c573ee44e5696943c1f3e179d4940481d380e08'
 
   # dl.devmate.com/com.coderforart.MWeb3 was verified as official when first introduced to the cask
   url 'https://dl.devmate.com/com.coderforart.MWeb3/MWeb3-ProMarkdownwriting,notetakingandstaticbloggeneratorApp.dmg'

@@ -8,6 +8,7 @@ cask 'power-manager' do
   homepage 'https://dssw.co.uk/powermanager/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'Power Manager.app'
 end
