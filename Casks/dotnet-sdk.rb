@@ -20,7 +20,7 @@ cask 'dotnet-sdk' do
   uninstall pkgutil: [
                        'com.microsoft.dotnet.*',
                        'com.microsoft.netstandard.pack.targeting.*',
-                     ]
+                     ],
             delete:  [
                        '/etc/paths.d/dotnet',
                        '/etc/paths.d/dotnet-cli-tools',
