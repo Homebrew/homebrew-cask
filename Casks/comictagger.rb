@@ -7,5 +7,5 @@ cask 'comictagger' do
   name 'ComicTagger'
   homepage 'https://github.com/davide-romanini/comictagger'
 
-  app 'ComicTagger-#{version}.app'
+  app "ComicTagger-#{version}.app"
 end
