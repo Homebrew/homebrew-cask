@@ -1,5 +1,5 @@
 cask 'mathtype' do
-  version '7.4.3'
+  version '7.4.4'
   sha256 '5c035a10ac85dd86981c3c3523a75388cbf5938ad7f52be4ec401eaabdc5fb31'
 
   url 'https://store.wiris.com/en/products/downloads/mathtype/installer/mac/en'
