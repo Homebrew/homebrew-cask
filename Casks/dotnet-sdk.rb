@@ -17,7 +17,10 @@ cask 'dotnet-sdk' do
   pkg "dotnet-sdk-#{version.before_comma}-osx-x64.pkg"
   binary '/usr/local/share/dotnet/dotnet'
 
-  uninstall pkgutil: 'com.microsoft.dotnet.*',
+  uninstall pkgutil: [
+                       'com.microsoft.dotnet.*',
+                       'com.microsoft.netstandard.pack.targeting.*',
+                     ]
             delete:  [
                        '/etc/paths.d/dotnet',
                        '/etc/paths.d/dotnet-cli-tools',
