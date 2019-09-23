@@ -13,6 +13,10 @@ cask 'adobe-creative-cloud' do
                       print_stderr: false,
                     }
 
+  uninstall_preflight do
+    set_ownership '/Library/Application Support/Adobe'
+  end
+
   uninstall_postflight do
     stdout, * = system_command '/bin/launchctl', args: ['print', "gui/#{Process.uid}"]
     ccx_processes = stdout.lines.grep(%r{com\.adobe\.CCXProcess\.\d{5}}) { $& }.uniq
@@ -65,14 +69,17 @@ cask 'adobe-creative-cloud' do
                             '~/Library/Application Support/Adobe/ExtensibilityLibrary',
                             '~/Library/Application Support/Adobe/FloodGate',
                             '~/Library/Application Support/Adobe/.adobelicnotification',
+                            '~/Library/Application Support/CrashReporter/AdobeCRDaemon_*.plist',
                             '~/Library/Application Scripts/com.adobe.accmac.ACCFinderSync',
                             '~/Library/*/Adobe/CoreSync',
-                            '/Library/*/com.adobe.*.plist',
-                            '~/Library/*/com.adobe.*.plist',
+                            '/Library/*/com.adobe.acc*',
+                            '~/Library/*/com.adobe.acc*',
+                            '/Library/Preferences/com.adobe.headlights*.plist',
+                            '~/Library/Preferences/com.adobe.crashreporter.plist',
                             '~/Library/Preferences/Adobe/.[A-Z0-9]???????????',
-                            '/Library/PrivilegedHelperTools/com.adobe.acc.installer*',
+                            '/Library/LaunchDaemons/com.adobe.agsservice.plist',
+                            '~/Library/LaunchAgents/com.adobe.ccxprocess.plist',
                             '~/Library/Group Containers/Adobe-Hub-App',
-                            '~/Library/*Containers/com.adobe.accmac.*',
                             '/Library/Internet Plug-Ins/AdobeAAMDetect.plugin',
                             '~/Creative Cloud Files/Icon?',
                             '/Users/Shared/Adobe/Installer',
