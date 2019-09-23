@@ -1,6 +1,6 @@
 cask 'lectionary' do
-  version '1.18.0'
-  sha256 'a277f81dc20a2dbd62abf36c81501ceb1939974cf8ed1a0e0defeb53c5aac8b9'
+  version '1.18.1'
+  sha256 '35b22975fbcfa83abdb89be80abf39315e5f60d26fb4200cb2bcd87a2bafa0df'
 
   url "https://myaccount.hymnsam.co.uk/PublicationRelatedFiles/21/Lectionary%20for%20Mac.#{version}.dmg"
   appcast 'https://www.chpublishing.co.uk/app/lectionary'
