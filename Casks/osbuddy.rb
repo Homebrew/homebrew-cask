@@ -4,7 +4,7 @@ cask 'osbuddy' do
 
   url 'http://cdn.rsbuddy.com/OSBuddy.dmg?x=11'
   name 'OSBuddy'
-  homepage 'https://rsbuddy.com/osbuddy'
+  homepage 'http://rsbuddy.com/osbuddy'
 
   app 'OSBuddy.app'
 end
