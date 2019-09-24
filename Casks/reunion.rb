@@ -5,7 +5,7 @@ cask 'reunion' do
   url "https://store.leisterpro.com/updates/reunion#{version.major}/Reunion-#{version.dots_to_hyphens}.zip"
   appcast "https://store.leisterpro.com/updates/reunion#{version.major}/appcast.xml"
   name 'Reunion'
-  homepage 'http://www.leisterpro.com/'
+  homepage 'https://www.leisterpro.com/'
 
   app "Reunion #{version.major}.app"
 end
