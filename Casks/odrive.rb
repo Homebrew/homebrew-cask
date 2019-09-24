@@ -11,5 +11,6 @@ cask 'odrive' do
 
   pkg "odrive.#{version}.pkg"
 
-  uninstall pkgutil: 'com.oxygen.odrive.*'
+  uninstall quit:    'com.oxygencloud.odrive',
+            pkgutil: 'com.oxygen.odrive.*'
 end
