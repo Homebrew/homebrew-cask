@@ -1,6 +1,6 @@
 cask 'macs-fan-control' do
-  version '1.4.12'
-  sha256 'a76239e1ad8a116dccf6d4387242792f8d8771dc60846d246455a3128ba6ff15'
+  version '1.5'
+  sha256 'd86c46e6211cb5739517a9e2333ad37b2e680673a688e332579398e00cbe6999'
 
   # github.com/crystalidea/macs-fan-control was verified as official when first introduced to the cask
   url "https://github.com/crystalidea/macs-fan-control/releases/download/v#{version}/macsfancontrol.zip"

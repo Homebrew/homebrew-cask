@@ -6,6 +6,9 @@ cask 'use-engine' do
   name 'USE Engine'
   homepage 'https://www.use-together.com/'
 
+  auto_updates true
+  depends_on macos: '>= :mavericks'
+
   app 'USE Engine.app'
 
   zap trash: '~/Library/Application Support/OPEXMedia/USE Engine'

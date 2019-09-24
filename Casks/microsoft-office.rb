@@ -1,6 +1,6 @@
 cask 'microsoft-office' do
-  version '16.28.19081202'
-  sha256 '1c5f385d0a7d0b613d77fe6da77f428a5911d2d4075002b34415d567e71b5aea'
+  version '16.29.19090802'
+  sha256 '613b9f0dadafe6d65aca12c86208848d865230f73c840a0627987f3e10722906'
 
   # officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate was verified as official when first introduced to the cask
   url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Office_#{version}_Installer.pkg"
@@ -12,6 +12,7 @@ cask 'microsoft-office' do
                          'microsot-word',
                          'microsot-excel',
                          'microsot-powerpoint',
+                         'onedrive',
                        ]
   depends_on macos: '>= :sierra'
 
@@ -28,6 +29,7 @@ cask 'microsoft-office' do
                          'com.microsoft.package.Microsoft_Word.app',
                          'com.microsoft.package.Proofing_Tools',
                          'com.microsoft.pkg.licensing',
+                         'com.microsoft.OneDrive',
                        ],
             # Frameworks, DFonts and ProofingTools remain in each applicaiton after pkg uninstall, delete them
             delete:    [
@@ -40,6 +42,9 @@ cask 'microsoft-office' do
             launchctl: [
                          'com.microsoft.office.licensing.helper',
                          'com.microsoft.office.licensingV2.helper',
+                         'com.microsoft.OneDriveStandaloneUpdater',
+                         'com.microsoft.OneDriveStandaloneUpdaterDaemon',
+                         'com.microsoft.OneDriveUpdaterDaemon',
                        ]
 
   zap trash:     [
@@ -89,12 +94,8 @@ cask 'microsoft-office' do
                    'com.microsoft.autoupdate.helpertool',
                    'com.microsoft.autoupdate.helper',
                    'com.microsoft.update.agent',
-                   'com.microsoft.OneDriveStandaloneUpdater',
-                   'com.microsoft.OneDriveStandaloneUpdaterDaemon',
-                   'com.microsoft.OneDriveUpdaterDaemon',
                  ],
       pkgutil:   [
                    'com.microsoft.package.Microsoft_AutoUpdate.app',
-                   'com.microsoft.OneDrive',
                  ]
 end

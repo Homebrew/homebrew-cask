@@ -1,6 +1,6 @@
 cask 'invisor-lite' do
   version '3.13'
-  sha256 'c6ce3bd8bc12fed3c5b6805939387bf2633ddfd141d70c2e7ca0b8a98e7918c2'
+  sha256 '06615b2b0c43f32fc3cc602a88f0d896de21190393de0b97b291f88507f7aaf1'
 
   url "https://www.invisorapp.com/download/InvisorLite-#{version}.dmg"
   appcast 'https://www.invisorapp.com/appcast_lite.xml'

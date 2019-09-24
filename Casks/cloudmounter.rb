@@ -1,9 +1,10 @@
 cask 'cloudmounter' do
-  version '3.4.546'
-  sha256 'f3dcfb05c47133d0ebc9ae553b7309e147e4e50568f83f703bdf13444d33e09a'
+  version '3.5.584'
+  sha256 'bfbfad2623d36dd32c863ca52c299a39e3ee33b3ea4915d12d7ae97ec5a2e006'
 
   url 'https://cdn.eltima.com/download/cloudmounter.dmg'
-  appcast 'https://cdn.eltima.com/download/cloudmounter-update/settings.xml'
+  appcast 'https://cdn.eltima.com/download/cloudmounter-update/settings.xml',
+          configuration: version.major_minor
   name 'Eltima CloudMounter'
   homepage 'https://mac.eltima.com/mount-cloud-drive.html'
 

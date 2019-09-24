@@ -1,6 +1,6 @@
 cask 'pocket-casts' do
-  version '1.2.1'
-  sha256 '8b541e6eeefab3cf3240b6e35aa1dbae7395263bb5c3a20ce6fcff3e7ac41b19'
+  version '1.3'
+  sha256 'fef5f2054d025ada804eca9bb3af0447c3f90787c1ddd6d80fd9f83f72b1bcf5'
 
   url 'https://static.pocketcasts.com/mac/PocketCasts.zip'
   appcast 'https://static2.pocketcasts.com/mac/appcast.xml'
