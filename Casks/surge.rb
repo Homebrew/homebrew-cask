@@ -10,7 +10,7 @@ cask 'surge' do
   auto_updates true
   depends_on macos: '>= :el_capitan'
 
-  app "Surge #{version.major}.app"
+  app "Surge.app"
 
   uninstall launchctl: 'com.nssurge.surge-mac.helper',
             delete:    '/Library/PrivilegedHelperTools/com.nssurge.surge-mac.helper'
