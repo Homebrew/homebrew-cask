@@ -1,11 +1,11 @@
 cask 'mendeley' do
-  version '1.19.4'
-  sha256 'bd9584152eb0bd375ce98b874981a44d87435d0e7b5a411734d9db63f48f7260'
+  version '2.13.0'
+  sha256 '455686e020303042f87785aee4c4e6cb98b99ca7b1d921c172b9c1313c1d0688'
 
-  url "https://desktop-download.mendeley.com/download/Mendeley-Desktop-#{version}-OSX-Universal.dmg"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.mendeley.com/autoupdates/installer/Mac-x64/stable-incoming'
-  name 'Mendeley'
-  homepage 'https://www.mendeley.com/'
+  url "https://static.mendeley.com/bin/desktop/mendeley-reference-manager-#{version}.dmg"
+  appcast 'https://static.mendeley.com/bin/desktop/latest-mac.yml'
+  name 'Mendeley Reference Manager'
+  homepage 'https://www.mendeley.com/download-reference-manager/macOS/'
 
-  app 'Mendeley Desktop.app'
+  app 'Mendeley Reference Manager.app'
 end
