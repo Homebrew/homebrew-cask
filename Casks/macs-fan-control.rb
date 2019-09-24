@@ -9,6 +9,7 @@ cask 'macs-fan-control' do
   homepage 'https://www.crystalidea.com/macs-fan-control'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'Macs Fan Control.app'
 
