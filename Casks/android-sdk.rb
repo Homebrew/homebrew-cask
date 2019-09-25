@@ -16,7 +16,7 @@ cask 'android-sdk' do
   binary "#{staged_path}/tools/bin/screenshot2"
   binary "#{staged_path}/tools/bin/sdkmanager"
   binary "#{staged_path}/tools/bin/uiautomatorviewer"
-  binary "#{staged_path}/tools/emulator"
+  binary "#{staged_path}/emulator/emulator"
   binary "#{staged_path}/tools/emulator-check"
   binary "#{staged_path}/tools/mksdcard"
   binary "#{staged_path}/tools/monitor"
