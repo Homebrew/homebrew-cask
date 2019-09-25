@@ -4,7 +4,7 @@ cask 'cacher' do
 
   # cacher-download.nyc3.digitaloceanspaces.com was verified as official when first introduced to the cask
   url "https://cacher-download.nyc3.digitaloceanspaces.com/Cacher-#{version}-mac.zip"
-  appcast 'https://cacher-download.nyc3.digitaloceanspaces.com/latest.yml'
+  appcast 'https://cacher-download.nyc3.digitaloceanspaces.com/latest-mac.yml'
   name 'Cacher'
   homepage 'https://www.cacher.io/'
 
