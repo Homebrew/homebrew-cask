@@ -1,6 +1,6 @@
 cask 'permute' do
-  version '3.3.5,2201'
-  sha256 '6ed4a2d265e16226f35b9d0404861eb16fc978b89fae16d5362c9df96d3ac574'
+  version '3.3.5,2202'
+  sha256 '18e1b5349ac31cf489aaa7eca13ebf55e5d9c0953ef2435f3d5bd2027d167c91'
 
   url "https://trial.charliemonroe.net/permute/v#{version.major}/Permute_#{version.major}_#{version.after_comma}.dmg"
   appcast "https://trial.charliemonroe.net/permute/updates_#{version.major}.xml"
