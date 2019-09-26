@@ -11,6 +11,12 @@ cask 'itsycal' do
 
     # itsycal.s3.amazonaws.com was verified as official when first introduced to the cask
     url "https://itsycal.s3.amazonaws.com/Itsycal-#{version}.zip"
+  elsif MacOS.version <= :high_sierra
+    version '0.11.17'
+    sha256 'fda1ba5611deaf4d5b834118b3af37ea9c5d08d1f8c813d04e7dd0552a270e11'
+
+    # itsycal.s3.amazonaws.com was verified as official when first introduced to the cask
+    url "https://itsycal.s3.amazonaws.com/Itsycal-#{version}.zip"
   else
     version '0.12.0'
     sha256 '1e3138394c30553a17af5a5b331052eb0af78f94d80d24175571437ebf59510c'
