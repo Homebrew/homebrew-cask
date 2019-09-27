@@ -1,6 +1,6 @@
 cask 'loopback' do
-  version '2.1.0'
-  sha256 'fab2afad94d99e4a0471a38dad0106e339e1f7d7a84f99aa4424a5942870c41f'
+  version '2.1.1'
+  sha256 'e4f67dfbe2e80d4375a1512b3c58c36d8602838e7e4abc34fbb335f0e61b8ba1'
 
   # d2oxtzozd38ts8.cloudfront.net/loopback was verified as official when first introduced to the cask
   url 'https://d2oxtzozd38ts8.cloudfront.net/loopback/download/Loopback.zip'
