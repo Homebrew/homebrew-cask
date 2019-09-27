@@ -8,10 +8,10 @@ cask 'itsycal' do
   elsif MacOS.version <= :high_sierra
     version '0.11.17'
     sha256 'fda1ba5611deaf4d5b834118b3af37ea9c5d08d1f8c813d04e7dd0552a270e11'
+    appcast 'https://itsycal.s3.amazonaws.com/itsycal.xml'
   else
-    version '0.12.0'
-    sha256 '1e3138394c30553a17af5a5b331052eb0af78f94d80d24175571437ebf59510c'
-
+    version '0.12.1'
+    sha256 'deba5db668d5c488da48e6cfdd3740b61e1b22d2ee808f5f84bc9cdb6ba55a9a'
     appcast 'https://itsycal.s3.amazonaws.com/itsycal.xml'
   end
 
