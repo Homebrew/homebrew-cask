@@ -7,7 +7,6 @@ cask 'dotnet-sdk' do
     sha256 '6a5a475d9aa1955470cd2370c9f501bc6a5a05ad5fb74109ddb9da278b55101a'
   end
 
-
   url "https://download.visualstudio.microsoft.com/download/pr/#{version.after_comma.before_colon}/#{version.after_colon}/dotnet-sdk-#{version.before_comma}-osx-x64.pkg"
   appcast 'https://www.microsoft.com/net/download/macos'
   name '.NET Core SDK'
