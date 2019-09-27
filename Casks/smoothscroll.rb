@@ -7,5 +7,7 @@ cask 'smoothscroll' do
   name 'SmoothScroll'
   homepage 'https://www.smoothscroll.net/'
 
+  depends_on macos: '>= :sierra'
+
   app 'SmoothScroll.app'
 end
