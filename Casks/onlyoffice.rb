@@ -1,6 +1,6 @@
 cask 'onlyoffice' do
-  version '5.3.5'
-  sha256 'b7c74e054eb2b429a4c6a9bdf225ce5d49960f8180ae19c0f8901e9e84c7929e'
+  version '5.4.1'
+  sha256 '3e5a961dfe9f1828d6b159e4b0fc1dbd52739c562bd3715a2ff5218ded57faf6'
 
   url "https://download.onlyoffice.com/install/desktop/editors/mac/updates/onlyoffice/ONLYOFFICE-#{version}.zip"
   appcast 'https://download.onlyoffice.com/install/desktop/editors/mac/onlyoffice.xml'
