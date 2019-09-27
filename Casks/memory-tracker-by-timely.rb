@@ -11,5 +11,5 @@ cask 'memory-tracker-by-timely' do
   auto_updates true
   depends_on macos: '>= :high_sierra'
 
-  app 'Memory Tracker by Timely.app'
+  app 'Memory.app'
 end
