@@ -1,6 +1,6 @@
 cask 'tableau-prep' do
   version '2019.3.1'
-  sha256 'beede349e13496876a84f6620be5a2626ad222a826fb7e91b6d2de874ca9647d'
+  sha256 '2f7cfd02fa64927be50a7ecaea60d4a0c1327bedb8c102e268e7be2914e568e4'
 
   url "https://downloads.tableau.com/esdalt/tableau_prep/#{version}/TableauPrep-#{version.dots_to_hyphens}.dmg"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.tableau.com/downloads/prep/mac',
