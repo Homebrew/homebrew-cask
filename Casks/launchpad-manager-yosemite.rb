@@ -12,7 +12,7 @@ cask 'launchpad-manager-yosemite' do
 
     url 'http://launchpadmanager.com/download_yosemite.php/LaunchpadManagerYosemite.dmg'
 
-    app 'Launchpad Manager Yosemite.app'
+    app 'Launchpad Manager.app'
   end
 
   name 'Launchpad Manager'
