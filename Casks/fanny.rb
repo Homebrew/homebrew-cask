@@ -9,5 +9,5 @@ cask 'fanny' do
 
   depends_on macos: '>= :sierra'
 
-  app "Fanny #{version}/Fanny.app"
+  app "FannyWidget/Fanny.app"
 end
