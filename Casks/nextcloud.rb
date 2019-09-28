@@ -1,6 +1,6 @@
 cask 'nextcloud' do
-  version '2.5.3.20190724'
-  sha256 '39dbe0c667c0fa54124202e13b12d0541e46047cb7c1cc7ffc5aaf5b954c7cfb'
+  version '2.6.0.20190927'
+  sha256 'd68f0bbf8b982bc568ebbb5d16603ca8aeecb7605d12f9066e0e6eb89f693090'
 
   url "https://download.nextcloud.com/desktop/releases/Mac/Installer/Nextcloud-#{version}.pkg"
   appcast 'https://download.nextcloud.com/desktop/releases/Mac/Installer/'
