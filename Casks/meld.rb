@@ -16,6 +16,7 @@ cask 'meld' do
   preflight do
     IO.write shimscript, <<~EOS
       #!/bin/sh
+      rm -rf ~/Library/Saved\ Application\ State/org.gnome.meld.savedState
       exec '#{appdir}/Meld.app/Contents/MacOS/Meld' "$@"
     EOS
   end
