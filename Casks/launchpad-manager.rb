@@ -1,4 +1,4 @@
-cask 'launchpad-manager-yosemite' do
+cask 'launchpad-manager' do
   if MacOS.version <= :mavericks
     version '1.3.11'
     sha256 'f686a9a332663a003e9fabd32a1d44fc98debda15225368f1e8aef181955bc72'
