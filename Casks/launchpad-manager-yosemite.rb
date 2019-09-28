@@ -7,11 +7,10 @@ cask 'launchpad-manager-yosemite' do
 
     app 'Launchpad Manager.app'
   else
-    version '1.0.8'
-    sha256 '571c4c5b760e608984d47aa8398e5c1666533158fa65d1afae18ce7f3844a877'
+    version '1.0.10'
+    sha256 '88b37120c0ae022309573c4d2587a6ec85df7895773bca0fd3b5ba6cd86461a6'
 
     url 'http://launchpadmanager.com/download_yosemite.php/LaunchpadManagerYosemite.dmg'
-    appcast 'http://launchpadmanager.com/appyos/sparkle.rss'
 
     app 'Launchpad Manager Yosemite.app'
   end
