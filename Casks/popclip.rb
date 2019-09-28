@@ -1,6 +1,6 @@
 cask 'popclip' do
-  version '1.5.8'
-  sha256 '323707f9933c798a909ddb5536839d755f4bbf29d698d4eaec229c29596c888f'
+  version '2019.9.1'
+  sha256 '4dccb918097bc8c61a23054257a54b581446eae7987162ea99581afbebf73a8c'
 
   url "https://pilotmoon.com/downloads/PopClip-#{version}.zip"
   appcast 'https://softwareupdate.pilotmoon.com/update/popclip/appcast.xml'
