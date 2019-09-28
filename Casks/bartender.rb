@@ -9,7 +9,8 @@ cask 'bartender' do
 
   url "https://macbartender.com/B2/updates/#{version.dots_to_hyphens}/Bartender%20#{version.major}.zip",
       referer: 'https://www.macbartender.com'
-  appcast 'https://www.macbartender.com/B2/updates/Appcast.xml'
+  appcast 'https://www.macbartender.com/B2/updates/Appcast.xml',
+           configuration: version.dots_to_hyphens
   name 'Bartender'
   homepage 'https://www.macbartender.com/'
 
