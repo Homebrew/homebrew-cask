@@ -1,4 +1,4 @@
-cask 'memory-tracker-by-timely' do
+cask 'memory' do
   version '2019.21'
   sha256 '5dedf2c011d5e895dcf520643cbf6567105d001e3e17a3a99978b4761f60bc53'
 
