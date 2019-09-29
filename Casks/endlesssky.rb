@@ -8,5 +8,5 @@ cask 'endlesssky' do
   name 'Endless Sky'
   homepage 'https://endless-sky.github.io/'
 
-  app 'EndlessSky.app'
+  app 'Endless Sky.app'
 end
