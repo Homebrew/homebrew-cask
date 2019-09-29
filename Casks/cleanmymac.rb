@@ -42,7 +42,7 @@ cask 'cleanmymac' do
                "~/Library/Caches/com.macpaw.CleanMyMac#{version.major}.Scheduler",
                "~/Library/LaunchAgents/com.macpaw.CleanMyMac#{version.major}.HealthMonitor.plist",
                "~/Library/Logs/CleanMyMac #{version.major}.log",
-               "~/Library/Logs/CleanMyMac X Menu/HealthMonitor",
+               '~/Library/Logs/CleanMyMac X Menu/HealthMonitor',
                "~/Library/Logs/com.macpaw.CleanMyMac#{version.major}",
                "~/Library/Preferences/com.macpaw.CleanMyMac-#{version.major}-Helper.plist",
                "~/Library/Preferences/com.macpaw.CleanMyMac#{version.major}.HealthMonitor.plist",
