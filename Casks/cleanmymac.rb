@@ -32,15 +32,20 @@ cask 'cleanmymac' do
                "~/Library/Application Support/CleanMyMac #{version.major}",
                "~/Library/Application Support/CleanMyMac #{version.major} Menu",
                '~/Library/Application Support/CleanMyMac X',
+               '~/Library/Application Support/CleanMyMac X Menu',
                "~/Library/Caches/CleanMyMac #{version.major}",
                "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.macpaw.CleanMyMac#{version.major}.help*",
                "~/Library/Caches/com.macpaw.CleanMyMac#{version.major}",
+               "~/Library/Caches/com.macpaw.CleanMyMac#{version.major}.HealthMonitor"
                "~/Library/Caches/com.macpaw.CleanMyMac#{version.major}.KnowledgeBase",
                "~/Library/Caches/com.macpaw.CleanMyMac#{version.major}.Menu",
                "~/Library/Caches/com.macpaw.CleanMyMac#{version.major}.Scheduler",
+               "~/Library/LaunchAgents/com.macpaw.CleanMyMac#{version.major}.HealthMonitor.plist"
                "~/Library/Logs/CleanMyMac #{version.major}.log",
+               "~/Library/Logs/CleanMyMac X Menu/HealthMonitor"
                "~/Library/Logs/com.macpaw.CleanMyMac#{version.major}",
                "~/Library/Preferences/com.macpaw.CleanMyMac-#{version.major}-Helper.plist",
+               "~/Library/Preferences/com.macpaw.CleanMyMac#{version.major}.HealthMonitor.plist"
                "~/Library/Preferences/com.macpaw.CleanMyMac#{version.major}.KnowledgeBase.plist",
                "~/Library/Preferences/com.macpaw.cleanmymac#{version.major}.menu.plist",
                "~/Library/Preferences/com.macpaw.CleanMyMac#{version.major}.Scheduler.plist",
