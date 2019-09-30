@@ -1,6 +1,6 @@
 cask 'media-converter' do
-  version '2.0.6'
-  sha256 '5fc837440b9c10ee532917b55078f8b83733540a3293596fe71813f18d78acb8'
+  version '2.0.7'
+  sha256 '72b0771c292b3dd55939048e5bdfd37e76c5e6d4b436f69304002a6a1f45bde3'
 
   # downloads.sourceforge.net/media-converter was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/media-converter/media-converter/#{version}/media-converter-#{version}.zip"
