@@ -1,4 +1,4 @@
-cask 'endlesssky' do
+cask 'endless-sky' do
   version '0.9.10'
   sha256 'f2e7aa2bcd29c6070cac386111362bd353239cbaf6061c22dfa3b440426fd06b'
 
