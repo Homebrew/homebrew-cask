@@ -8,5 +8,7 @@ cask 'mission-control-plus' do
   name 'Mission Control Plus'
   homepage 'https://fadel.io/MissionControlPlus'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'Mission Control Plus.app'
 end
