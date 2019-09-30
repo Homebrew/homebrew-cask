@@ -7,6 +7,7 @@ cask 'lastpass' do
   name 'LastPass'
   homepage 'https://www.lastpass.com/'
 
+  auto_updates true
   depends_on macos: '>= :sierra'
 
   app 'LastPass.app'
