@@ -7,7 +7,7 @@ cask 'mysqlworkbench' do
   name 'MySQL Workbench'
   homepage 'https://www.mysql.com/products/workbench/'
 
-  depends_on macos: '>= :high_sierra'
+  depends_on macos: '>= :mojave'
 
   app 'MySQLWorkbench.app'
 
