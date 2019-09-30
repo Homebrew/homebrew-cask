@@ -7,5 +7,7 @@ cask 'popclip' do
   name 'PopClip'
   homepage 'https://pilotmoon.com/popclip/'
 
+  depends_on macos: '>= :sierra'
+
   app 'PopClip.app'
 end
