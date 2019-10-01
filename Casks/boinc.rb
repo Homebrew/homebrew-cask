@@ -1,6 +1,6 @@
 cask 'boinc' do
-  version '7.14.2'
-  sha256 '0160f9e7f89a94a7b201f9cea2626ff0c6ae96e8e84e46927d1e605b0e25a7ff'
+  version '7.16.3'
+  sha256 '72cad84c0daa854d0c4ca8ddfa5b772cfaf0d15ef3e38a2e982ba6e53e1a3b28'
 
   url "https://boinc.berkeley.edu/dl/boinc_#{version}_macOSX_x86_64.zip"
   appcast 'https://boinc.berkeley.edu/dl/?C=M;O=D'
