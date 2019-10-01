@@ -26,7 +26,7 @@ cask 'android-sdk' do
   end
 
   uninstall_postflight do
-    FileUtils.rm("#{HOMEBREW_PREFIX}/share/android-sdk")
+    FileUtils.rm("#{HOMEBREW_PREFIX}/share/android-sdk") if Pathname.new("#{HOMEBREW_PREFIX}/share/android-sdk").exist?
   end
 
   caveats do

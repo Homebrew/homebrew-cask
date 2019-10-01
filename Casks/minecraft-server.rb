@@ -34,7 +34,7 @@ cask 'minecraft-server' do
   end
 
   uninstall_preflight do
-    FileUtils.rm_f eula_file
+    FileUtils.rm_f eula_file if Pathname.new(eula_file).exist?
   end
 
   zap trash: config_dir

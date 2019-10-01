@@ -50,7 +50,7 @@ cask 'adobe-air-sdk' do
   end
 
   uninstall_postflight do
-    FileUtils.rm("#{HOMEBREW_PREFIX}/share/adobe-air-sdk")
+    FileUtils.rm("#{HOMEBREW_PREFIX}/share/adobe-air-sdk") if Pathname.new("#{HOMEBREW_PREFIX}/share/adobe-air-sdk").exist?
   end
 
   caveats <<~EOS
