@@ -30,7 +30,7 @@ cask 'android-ndk' do
   ].each { |link_name| binary shimscript, target: link_name }
 
   uninstall_postflight do
-    File.delete("#{HOMEBREW_PREFIX}/share/android-ndk") if File.exist?("#{HOMEBREW_PREFIX}/share/android-ndk")
+    File.rm_f("#{HOMEBREW_PREFIX}/share/android-ndk")
   end
 
   caveats <<~EOS
