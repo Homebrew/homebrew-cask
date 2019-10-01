@@ -23,8 +23,5 @@ cask 'textmate' do
                '~/Library/Preferences/com.macromates.TextMate.plist',
                '~/Library/Saved Application State/com.macromates.TextMate.savedState',
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macromates.textmate.sfl2',
-             ],
-      quit:  [
-               'com.macromates.TextMate',
              ]
 end
