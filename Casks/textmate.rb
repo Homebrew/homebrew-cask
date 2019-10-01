@@ -15,9 +15,7 @@ cask 'textmate' do
   app 'TextMate.app'
   binary "#{appdir}/TextMate.app/Contents/Resources/mate"
 
-  uninstall quit: [
-                    'com.macromates.TextMate',
-                  ]
+  uninstall quit: 'com.macromates.TextMate'
 
   zap trash: [
                '~/Library/Application Support/TextMate',
