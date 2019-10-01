@@ -7,5 +7,5 @@ cask 'mediathekview' do
   name 'MediathekView'
   homepage 'https://mediathekview.de/'
 
-  app 'MediathekView.app'
+  suite 'MediathekView'
 end
