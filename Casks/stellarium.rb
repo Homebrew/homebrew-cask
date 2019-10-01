@@ -8,7 +8,7 @@ cask 'stellarium' do
   name 'Stellarium'
   homepage 'https://stellarium.org/'
 
-  depends_on macos: '>= :yosemite'
+  depends_on macos: '>= :sierra'
 
   app 'Stellarium.app'
 
