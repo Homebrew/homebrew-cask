@@ -69,6 +69,18 @@ function find_devmate {
   verify_appcast 'DevMate' "${url}"
 }
 
+function find_electron_builder {
+  local app url
+
+  app="${1}"
+
+  script_path="$(dirname $0)/parse_electron_builder_appcast"
+
+  url=$(${script_path} "${update_file}")
+
+  verify_appcast "electron-builder" "${url}"
+}
+
 # Exit if no argument (or more than one) was given
 if [[ -z "${1}" ]] || [[ -n "${2}" ]]; then
   usage
@@ -86,3 +98,4 @@ fi
 find_sparkle "${path_to_app}"
 find_hockeyapp "${path_to_app}"
 find_devmate "${path_to_app}"
+find_electron_builder "${path_to_app}"
