@@ -3,6 +3,7 @@ cask '0xed' do
   sha256 'b5e5845641964c2c1d481b15962e842c1b8176a2292c37b6f3790155e1fafcee'
 
   url "https://www.suavetech.com/download/0xED-#{version}.tar.bz2"
+  appcast 'https://www.suavetech.com/0xed/history.html'
   name '0xED'
   homepage 'https://www.suavetech.com/0xed/'
 
