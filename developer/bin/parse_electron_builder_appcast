@@ -3,8 +3,8 @@
 require "pathname"
 require "yaml"
 
-def parse
-  appcast_url = Pathname.new "#{ARGV[0]}/Contents/Resources/app-update.yml"
+def parse(app_path)
+  appcast_url = Pathname.new "#{app_path}/Contents/Resources/app-update.yml"
 
   exit 2 unless appcast_url.exist?
 
@@ -16,8 +16,8 @@ def parse
     repo = data["repo"]
     puts "https://github.com/#{owner}/#{repo}/releases.atom"
   when "s3"
-    bucket=data["bucket"]
-    channel=data["channel"]
+    bucket = data["bucket"]
+    channel = data["channel"]
     puts "https://#{bucket}.s3.amazon-aws.yml/#{channel}/latest-mac.yml"
   end
 end
@@ -39,4 +39,4 @@ unless ARGV.length == 1
   exit 1
 end
 
-parse
+parse(ARGV[0])

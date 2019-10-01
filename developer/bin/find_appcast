@@ -74,11 +74,11 @@ function find_electron_builder {
 
   app="${1}"
 
-  script_path="$(dirname $0)/parse_electron_builder_appcast"
+  electron_parser_script="$(brew --repo homebrew/cask)/developer/bin/parse_electron_builder_appcast"
 
-  url=$(${script_path} "${update_file}")
+  url="$("${electron_parser_script}" "${app}")"
 
-  verify_appcast "electron-builder" "${url}"
+  verify_appcast 'electron-builder' "${url}"
 }
 
 # Exit if no argument (or more than one) was given
