@@ -4,7 +4,7 @@ cask 'jalbum' do
 
   url "https://download.jalbum.net/download/#{version.major}/MacOSX/jAlbum.dmg"
   appcast 'https://jalbum.net/en/software/download/previous',
-          configuration: version.major_minor
+          configuration: version.major_minor.chomp('.0')
   name 'jAlbum'
   homepage 'https://jalbum.net/'
 
