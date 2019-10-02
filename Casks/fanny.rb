@@ -1,6 +1,6 @@
 cask 'fanny' do
-  version '2.0.0'
-  sha256 'e8dbd45c85528ca3e2ad8bde63a396c74d0c075956310b0ba4d3ae3e8ad5629d'
+  version '2.0.1'
+  sha256 '2d5375ce7b7f0ee921ec171c894b49d753a17cc030d071aafd94b4ee114dc07a'
 
   url 'https://fannywidget.com/FannyWidget.zip'
   appcast 'https://github.com/DanielStormApps/Fanny/releases.atom'
