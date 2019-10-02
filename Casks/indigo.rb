@@ -1,6 +1,6 @@
 cask 'indigo' do
-  version '7.3.1'
-  sha256 '8d1d1274c35c2cc9a15e5f804b2bb9b98afdb06ca14f1a46931065d57e7d3089'
+  version '7.4.0'
+  sha256 '0ca247789a7e6c2bdacdde086829e93b1c117c3fa94e2202fb548d37a059e8c6'
 
   # goprism.com was verified as official when first introduced to the cask
   url "http://cloud.goprism.com/download/Indigo_#{version.dots_to_underscores}.dmg"
