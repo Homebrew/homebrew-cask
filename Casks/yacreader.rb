@@ -1,9 +1,8 @@
 cask 'yacreader' do
-  version '9.5.0'
-  sha256 'c7b3a9e8f385bdc9bdfb29e754503c64ae1f3703f4bbfcb381feb46659b28491'
+  version '9.6.2'
+  sha256 '92152f17b4ff072c3463ae045da5d232c2f59cb77267a0eeebb8af5de7d29214'
 
-  # bitbucket.org/luisangelsm/yacreader was verified as official when first introduced to the cask
-  url "https://bitbucket.org/luisangelsm/yacreader/downloads/YACReader-#{version}-MacOSX-Intel.dmg"
+  url "https://github.com/YACReader/yacreader/releases/download/#{version}/YACReader-#{version}.1909283.MacOSX-Intel.dmg"
   appcast 'https://github.com/YACReader/yacreader/releases.atom'
   name 'YACReader'
   homepage 'https://www.yacreader.com/'
