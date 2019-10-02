@@ -1,6 +1,6 @@
 cask 'polycom-content' do
-  version '1.3.1.71333'
-  sha256 'deca6466fc2568c8817e24305db9cb87d3059315ada41e2a44e5efb01c045a5e'
+  version '1.3.2.71755'
+  sha256 '362804050245b949b435b6efd4bd99fb6bca01479756046f79ddca82cddd41bf'
 
   url "https://downloads.polycom.com/video/content-app/PolycomContentApp_#{version.dots_to_underscores}.dmg"
   appcast 'https://support.polycom.com/content/support/north-america/usa/en/support/video/polycom-content-app.html',
