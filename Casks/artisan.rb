@@ -8,5 +8,7 @@ cask 'artisan' do
   name 'Artisan'
   homepage 'https://artisan-scope.org/'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'Artisan.app'
 end
