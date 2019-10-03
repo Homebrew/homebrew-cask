@@ -1,4 +1,4 @@
-cask 'schismtracker' do
+cask 'schism-tracker' do
   version '20190805'
   sha256 'e33fa9be548245e300c1e1b2da3e42eb10834462bc58abae1a3edc16333fe92c'
 
