@@ -1,10 +1,10 @@
 cask 'scribus' do
-  version '1.5.5'
-  sha256 'dba7842bf3313c0a2c758a9d8613a7f881774008c10ea1e0445b34b020f6bbbe'
+  version '1.4.8'
+  sha256 '9626c35ca5de5da59ac983efac3572318d327b3a921522c9f80a525b039a0af5'
 
   # sourceforge.net/scribus was verified as official when first introduced to the cask
-  url "https://sourceforge.net/projects/scribus/files/scribus-devel/#{version}/scribus-#{version}_1013.dmg/download"
-  appcast 'https://wiki.scribus.net/canvas/1.5.5_Release'
+  url "https://downloads.sourceforge.net/scribus/scribus/#{version}/scribus-#{version}.dmg"
+  appcast 'https://www.scribus.net/downloads/stable-branch/'
   name 'Scribus'
   homepage 'https://www.scribus.net/'
 
