@@ -8,4 +8,6 @@ cask 'adobe-creative-cloud-cleaner-tool' do
   homepage 'https://helpx.adobe.com/creative-cloud/kb/cc-cleaner-tool-installation-problems.html'
 
   app 'Adobe Creative Cloud Cleaner Tool.app'
+
+  uninstall delete: '~/Library/Caches/com.Adobe.Installers.AdobeCreativeCloudCleanerTool'
 end
