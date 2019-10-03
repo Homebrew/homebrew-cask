@@ -1,6 +1,6 @@
 cask 'knime' do
-  version '4.0.1'
-  sha256 'f90d91af4ef46837eb1ddca7a0db56c06b28aed37e10a70310404d72bdc5800d'
+  version '4.0.2'
+  sha256 '8c6a3cd3923e4e7dbb1f920d091741aa1368ea75f27bd5ba2de37f827a8d4408'
 
   # download.knime.org/analytics-platform/macosx was verified as official when first introduced to the cask
   url "https://download.knime.org/analytics-platform/macosx/knime_#{version}.app.macosx.cocoa.x86_64.dmg"
