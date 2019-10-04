@@ -11,6 +11,9 @@ def parse(app_path)
   data = YAML.load_file appcast_url
 
   case data["provider"]
+  when "generic"
+    url = data["url"]
+    puts "#{url}/latest-mac.yml"
   when "github"
     owner = data["owner"]
     repo = data["repo"]
