@@ -2,8 +2,8 @@ cask 'ipass' do
   version :latest
   sha256 :no_check
 
-  # d18uyicgt51j26.cloudfront.net/packages was verified as official when first introduced to the cask
-  url 'https://d18uyicgt51j26.cloudfront.net/packages/iPass_Mac.dmg'
+  # cdn-static-prod.qakr0.net was verified as official when first introduced to the cask
+  url 'https://cdn-static-prod.qakr0.net/packages/iPass_Mac.dmg'
   name 'iPass'
   homepage 'https://www.ipass.com/'
 
