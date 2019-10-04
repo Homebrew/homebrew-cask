@@ -1,5 +1,5 @@
 cask 'movist-pro' do
-  version '2.2.8'
+  version '2.2.9'
   sha256 '848f074a8b0157f7ef9a890f57660278693345eef488b2b827d9e61eb5bf2390'
 
   # d2uukrxj8lf22z.cloudfront.net was verified as official when first introduced to the cask
