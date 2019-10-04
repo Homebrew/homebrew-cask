@@ -9,5 +9,6 @@ cask 'ipass' do
 
   pkg 'iPass.pkg'
 
-  uninstall pkgutil: 'com.ipass.ipass.pkg'
+  uninstall pkgutil: 'com.ipass.ipass.pkg',
+            quit:    'com.iPass.iPass'
 end
