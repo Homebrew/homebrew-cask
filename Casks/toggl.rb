@@ -6,7 +6,7 @@ cask 'toggl' do
   url "https://github.com/toggl/toggldesktop/releases/download/v#{version}/TogglDesktop-#{version.dots_to_underscores}.dmg"
   appcast 'https://assets.toggl.com/installers/darwin_stable_appcast.xml'
   name 'TogglDesktop'
-  homepage 'https://www.toggl.com/'
+  homepage 'https://www.toggl.com/toggl-desktop/'
 
   conflicts_with cask: [
                          'toggl-beta',
