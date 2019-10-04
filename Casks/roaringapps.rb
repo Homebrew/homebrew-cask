@@ -2,8 +2,9 @@ cask 'roaringapps' do
   version '1.4.0'
   sha256 'c6ac49054952c43311f9b786d3d0deaa2d757823ac74abf5e6753b61313d914a'
 
-  # s3.amazonaws.com was verified as official when first introduced to the cask
+  # s3.amazonaws.com/s3.roaringapps.com was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/s3.roaringapps.com/downloads/RoaringApps-#{version}.zip"
+  appcast 'https://roaringapps.com/mac-app'
   name 'RoaringApps'
   homepage 'https://roaringapps.com/mac-app'
 
