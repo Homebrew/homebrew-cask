@@ -1,6 +1,6 @@
 cask 'roaringapps' do
-  version '1.4.0'
-  sha256 'c6ac49054952c43311f9b786d3d0deaa2d757823ac74abf5e6753b61313d914a'
+  version '1.4.1'
+  sha256 'c2df3f4d06fe491272453d33cb41aa3297c19b80505764abf261203ba8d8cc80'
 
   # s3.amazonaws.com/s3.roaringapps.com was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/s3.roaringapps.com/downloads/RoaringApps-#{version}.zip"
