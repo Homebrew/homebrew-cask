@@ -7,7 +7,7 @@ cask 'whatpulse' do
   name 'WhatPulse'
   homepage 'https://whatpulse.org/'
 
-  pkg "WhatPulse #{version}.mpkg"
+  installer manual: "WhatPulse #{version}.mpkg"
 
   uninstall pkgutil: 'com.lostdomain.whatpulse',
             quit:    'com.whatpulse.mac'
