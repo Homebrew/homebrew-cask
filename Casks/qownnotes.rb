@@ -1,6 +1,6 @@
 cask 'qownnotes' do
-  version '19.10.0,b4585-163731'
-  sha256 'ed23cbb5f24b790607993b51d95a5a4b0d1aa8c82cad98774e91caa2b64b8c43'
+  version '19.10.1,b4589-102239'
+  sha256 '617940c70645f05f0a72f4798a72a87e5ff1ac96f7d50c2fe17e07b8dddbe8cb'
 
   # github.com/pbek/QOwnNotes was verified as official when first introduced to the cask
   url "https://github.com/pbek/QOwnNotes/releases/download/macosx-#{version.after_comma}/QOwnNotes-#{version.before_comma}.dmg"
