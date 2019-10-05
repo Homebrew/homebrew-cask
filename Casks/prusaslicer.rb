@@ -9,4 +9,10 @@ cask 'prusaslicer' do
   homepage 'https://www.prusa3d.com/slic3r-prusa-edition/'
 
   app 'PrusaSlicer.app'
+
+  zap trash: [
+               '~/Library/Application Support/PrusaSlicer',
+               '~/Library/Preferences/com.prusa3d.slic3r',
+               '~/Library/Saved Application State/com.prusa3d.slic3r.savedState',
+             ]
 end
