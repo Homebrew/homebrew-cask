@@ -7,5 +7,7 @@ cask 'anydo' do
   name 'Any.do'
   homepage 'https://www.any.do/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Any.do.app'
 end
