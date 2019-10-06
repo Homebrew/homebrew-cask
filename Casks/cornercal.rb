@@ -7,5 +7,7 @@ cask 'cornercal' do
   name 'CornerCal'
   homepage 'https://github.com/ekreutz/CornerCal'
 
+  depends_on macos: '>= :sierra'
+
   app 'CornerCal.app'
 end
