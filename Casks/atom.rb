@@ -6,7 +6,7 @@ cask 'atom' do
   url "https://github.com/atom/atom/releases/download/v#{version}/atom-mac.zip"
   appcast 'https://github.com/atom/atom/releases.atom'
   name 'Github Atom'
-  homepage 'https://atom.io/'
+  homepage 'https://atom.io'
 
   auto_updates true
 

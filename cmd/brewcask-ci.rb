@@ -7,6 +7,14 @@ require_relative "lib/capture"
 require_relative "lib/check"
 require_relative "lib/travis"
 
+module GitHub
+  module_function
+
+  def update_check_run(check_run, data:)
+    open_api(check_run.fetch("url"), data: data)
+  end
+end
+
 module Cask
   class Cmd
     class Ci < AbstractCommand
@@ -52,7 +60,53 @@ module Cask
           end
 
           overall_success &= step "brew cask style #{cask.token}", "style" do
-            Style.run(path)
+            begin
+              Style.run(path)
+            rescue => e
+              json = Style.rubocop(path, json: true)
+
+              event = JSON.parse(File.read(ENV.fetch("HOMEBREW_GITHUB_EVENT_PATH")))
+
+              puts "-" * 100
+              puts JSON.pretty_generate(event)
+              puts "-" * 100
+
+              check_runs = GitHub.check_runs(pr: event.fetch("pull_request")).fetch("check_runs")
+
+              puts JSON.pretty_generate(check_runs)
+
+              puts "-" * 100
+
+              check_run = check_runs.detect { |check_run| check_run.fetch("name") == "ci" }
+              puts JSON.pretty_generate(check_run)
+
+              offenses = json.fetch("files")
+                       .flat_map do |file|
+                         file.fetch("offenses").map do |o|
+                           {
+                             path:       file.fetch("path"),
+                             start_line: o.fetch("location").fetch("start_line"),
+                             end_line:   o.fetch("location").fetch("last_line"),
+                             annotation_level: 'failure',
+                             message:    o.fetch("message"),
+                           }
+                         end
+                       end
+
+              GitHub.update_check_run(check_run, data: {
+                output: {
+                  title: 'RuboCop',
+                  summary: 'Style violations were found.',
+                  annotations: offenses,
+                }
+              })
+
+              puts "-" * 100
+              puts JSON.pretty_generate(offenses)
+              puts "-" * 100
+
+              raise e
+            end
           end
 
           if (macos_requirement = cask.depends_on.macos) && !macos_requirement.satisfied?

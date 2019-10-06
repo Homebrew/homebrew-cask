@@ -30,6 +30,8 @@ jobs:
       - name: brew cask ci
         run: |
           cd "$(brew --repository "${GITHUB_REPOSITORY}")"
+          export HOMEBREW_GITHUB_EVENT_PATH="${GITHUB_EVENT_PATH}"
+          export HOMEBREW_GITHUB_API_TOKEN="${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}"
           brew cask ci
         env:
           CI: true
