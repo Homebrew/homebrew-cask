@@ -1,13 +1,13 @@
 cask 'airtool' do
-  version '1.7.5'
-  sha256 '2b06192e1afc4fe92f3b5c73f5416bd8cdcb64b8d9e357d2dbef463236edc010'
+  version '1.8'
+  sha256 '00a0c5b378ada363c3ecb69b4d5078edc84755c1fc446d61bb562c99a5ccb123'
 
   url "https://www.adriangranados.com/downloads/Airtool_#{version}.pkg"
   appcast 'https://updates.devmate.com/com.adriangranados.Airtool.xml'
   name 'Airtool'
   homepage 'https://www.adriangranados.com/apps/airtool'
 
-  pkg "airtool_#{version}.pkg"
+  pkg "Airtool_#{version}.pkg"
 
   uninstall_preflight do
     set_ownership '/Library/Application Support/Airtool'
