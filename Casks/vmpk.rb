@@ -8,5 +8,7 @@ cask 'vmpk' do
   name 'VMPK'
   homepage 'https://vmpk.sourceforge.io/'
 
+  depends_on macos: '>= :sierra'
+
   app 'vmpk.app'
 end
