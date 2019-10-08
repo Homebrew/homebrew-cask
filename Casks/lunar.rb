@@ -6,7 +6,7 @@ cask 'lunar' do
   url "https://github.com/alin23/Lunar/releases/download/v#{version}/Lunar-#{version}.dmg"
   appcast 'https://github.com/alin23/Lunar/releases.atom'
   name 'Lunar'
-  homepage 'https://lunarapp.site/'
+  homepage 'https://lunar.fyi/'
 
   auto_updates true
   depends_on macos: '>= :yosemite'

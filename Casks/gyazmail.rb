@@ -1,6 +1,6 @@
 cask 'gyazmail' do
-  version '1.6'
-  sha256 '004fcdc5c2fe3efa5f8c3d2dcf5425517f659733285db56ec8e78ed042cc857c'
+  version '1.6.1'
+  sha256 'af351cd431bfa7628074a0baad3fa4ab63bbbf4dff4e4d45df46f9e5055ae71e'
 
   url "http://gyazsquare.com/gyazmail/GyazMail-#{version.no_dots}.dmg"
   appcast 'http://gyazsquare.com/gyazmail/'
