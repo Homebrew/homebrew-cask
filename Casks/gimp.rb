@@ -8,14 +8,15 @@ cask 'gimp' do
   homepage 'https://www.gimp.org/'
 
   app "GIMP-#{version.major_minor}.app"
+  binary "#{appdir}/GIMP-#{version.major_minor}.app/Contents/MacOS/gimp"
 
   postflight do
     set_permissions "#{appdir}/GIMP-#{version.major_minor}.app/Contents/MacOS/gimp", 'a+rx'
   end
 
   zap trash: [
-               '~/Library/Preferences/org.gnome.gimp.plist',
+               "~/Library/Preferences/org.gimp.gimp-#{version.major_minor}:.plist",
                '~/Library/Application Support/Gimp',
-               '~/Library/Saved Application State/org.gnome.gimp.savedState',
+               "~/Library/Saved Application State/org.gimp.gimp-#{version.major_minor}:.savedState",
              ]
 end

@@ -7,7 +7,7 @@ cask 'itunes-producer' do
   else
     version '3.1.1'
 
-    url "https://itunesconnect.apple.com/downloads/Software/iTunesProducer/iTunesProducer_#{version}.dmg"
+    url "https://itunespartner.apple.com/assets/downloads/iTunesProducer_#{version}.dmg"
     appcast 'https://itunespartner.apple.com/en/music/tools'
     sha256 '0d98071c7354aab510d95bd8ad961814b773285c1a4faab9fbf33df7230f66f6'
   end

@@ -11,6 +11,12 @@ cask 'virtualbox' do
 
   pkg 'VirtualBox.pkg'
 
+  postflight do
+    # If VirtualBox is installed before `/usr/local/lib/pkgconfig` is created by Homebrew, it creates it itself with incorrect permissions that break other packages
+    # See https://github.com/Homebrew/homebrew-cask/issues/68730#issuecomment-534363026
+    set_ownership '/usr/local/lib/pkgconfig'
+  end
+
   uninstall script:  {
                        executable: 'VirtualBox_Uninstall.tool',
                        args:       ['--unattended'],

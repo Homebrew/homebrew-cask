@@ -1,6 +1,6 @@
 cask 'vmware-fusion' do
-  version '11.1.1-14328561'
-  sha256 'b94201933d8928cf0b66e64a69543d84341e3fc63897b415b431c0d73ead1730'
+  version '11.5.0-14634996'
+  sha256 'fe7897a0581564dd491bdb3956db31900289f31a069d2cae8e611bf154557d3a'
 
   url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version}.dmg"
   appcast 'https://softwareupdate.vmware.com/cds/vmw-desktop/fusion.xml'

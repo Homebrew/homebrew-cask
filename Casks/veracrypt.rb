@@ -1,6 +1,6 @@
 cask 'veracrypt' do
-  version '1.23'
-  sha256 '8c5ba5e8a19de5a33461f3cd84617140736d7cb38e306d0ac4b1c058940227f3'
+  version '1.24'
+  sha256 '39feff25b34b75f13a9200d45aa598dc3463129eb6d1684b6403d3fb30a81ac0'
 
   # launchpad.net/veracrypt/trunk was verified as official when first introduced to the cask
   url "https://launchpad.net/veracrypt/trunk/#{version}/+download/VeraCrypt_#{version}.dmg"

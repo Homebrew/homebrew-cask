@@ -1,6 +1,6 @@
 cask 'veraview' do
-  version '3.0.2'
-  sha256 '06a5d7b998422404238e654afd399c12d3fbf77402ec346a85d72ef3234317fc'
+  version '3.0.4'
+  sha256 'd48d0239f7f504a813c512ea0199e6c5e1983336eee6692be2b567237ba0f61e'
 
   # newton.ornl.gov/casl was verified as official when first introduced to the cask
   url "https://newton.ornl.gov/casl/VERAView-#{version}-MacOSX.dmg"

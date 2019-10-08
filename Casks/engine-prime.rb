@@ -1,6 +1,6 @@
 cask 'engine-prime' do
-  version '1.3.1'
-  sha256 '626a9c4c3bc3f2e21f2e121d11739cd414442a1acb8d5c20c73621cf63e11f03'
+  version '1.3.2'
+  sha256 '4c810ba6aa94778c97ab26913322665081ba59f8ab771cf96eaee9069cc04377'
 
   # inmusicbrands.com was verified as official when first introduced to the cask
   url "https://cdn.inmusicbrands.com/denondj/EnginePrime/Engine_Prime_#{version}_Setup.dmg"

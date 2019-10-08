@@ -1,6 +1,6 @@
 cask 'eaglefiler' do
-  version '1.8.9'
-  sha256 '7a41fc264fcd1a498c4426f1fc4445da2731ac3a593ad8230e466dbbab7527fb'
+  version '1.8.10'
+  sha256 '67990c22dbfca831630ecf2c227280d9ef0219cad0cc6544f6a42960664b03b6'
 
   url "https://c-command.com/downloads/EagleFiler-#{version}.dmg"
   appcast 'https://c-command.com/eaglefiler/help/version-history'

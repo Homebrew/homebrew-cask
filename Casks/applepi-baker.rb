@@ -1,12 +1,12 @@
 cask 'applepi-baker' do
-  version '2.1.6'
-  sha256 '401aacfa15b45702782e9815d55a7c39cfc38f0d9fb6e517ea463295c7611d9c'
+  version '2.1.7'
+  sha256 '2fa7398b4791b74d914d3cf44c7dd21feecf3e60a4e35af08459c127543900ab'
 
   url "https://www.tweaking4all.com/downloads/raspberrypi/ApplePi-Baker-v#{version}.dmg"
   name 'ApplePi-Baker'
   homepage 'https://www.tweaking4all.com/hardware/raspberry-pi/applepi-baker-v2/'
 
-  app 'ApplePi-Baker.app'
+  app 'ApplePiBaker.app'
 
   zap trash: [
                '~/Library/Caches/com.Tweaking4All.PiBaker',

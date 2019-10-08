@@ -7,6 +7,7 @@ on:
 
 jobs:
   generate:
+    if: github.repository == 'Homebrew/homebrew-cask'
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@master
@@ -22,7 +23,7 @@ jobs:
 
           export PATH="$(brew --repo)/Library/Homebrew/vendor/portable-ruby/current/bin:$PATH"
 
-          git clone git@github.com:Homebrew/formulae.brew.sh
+          git clone --depth=1 git@github.com:Homebrew/formulae.brew.sh
           cd formulae.brew.sh
 
           # setup analytics

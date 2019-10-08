@@ -1,6 +1,6 @@
 cask 'little-snitch' do
-  version '4.4.2'
-  sha256 '6899b3aedc377c7d8a39eedce31341b2324d46fe78d0bd7eda23bd2ee9d61131'
+  version '4.4.3'
+  sha256 'c937336f15c4c4c746918657b0687cc90d43dfac0e71450eaae0b9636651c6db'
 
   url "https://www.obdev.at/downloads/littlesnitch/LittleSnitch-#{version}.dmg"
   appcast 'https://www.obdev.at/products/littlesnitch/releasenotes.html'
@@ -12,7 +12,7 @@ cask 'little-snitch' do
   depends_on macos: '>= :el_capitan'
   container type: :naked
 
-  installer manual: "LittleSnitch-#{version}.dmg/Little Snitch Installer.app"
+  installer manual: "LittleSnitch-#{version}.dmg"
 
   uninstall launchctl: [
                          'at.obdev.LittleSnitchUIAgent',

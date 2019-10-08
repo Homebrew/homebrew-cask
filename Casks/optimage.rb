@@ -1,6 +1,6 @@
 cask 'optimage' do
-  version '3.1.2'
-  sha256 '53fa793665d0429bdf7a1d35188e7c94b57f46dfcb2aed47683cda5f97c4083f'
+  version '3.2.1'
+  sha256 '98501fff3f3ca4f3b137ca3043adfdbc68d5ed7ea9e2faca01459e4284c6cca0'
 
   url 'https://optimage.app/download/optimage-mac.zip'
   appcast 'https://optimage.app/appcast.xml'

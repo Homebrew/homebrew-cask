@@ -1,6 +1,6 @@
 cask 'zettlr' do
-  version '1.4.1'
-  sha256 'cdb5b8e0f5d4ad856539eaa33a6ee9099a0eff4bfdd3dc42a37ff0f7ac449ff2'
+  version '1.4.2'
+  sha256 '5704913386072778fd5c4fe9410dea089daa5add1404add0a1bd35f6add9e411'
 
   # github.com/Zettlr/Zettlr was verified as official when first introduced to the cask
   url "https://github.com/Zettlr/Zettlr/releases/download/v#{version}/Zettlr-macos-x64-#{version}.dmg"

@@ -1,6 +1,6 @@
 cask 'coda' do
-  version '2.7.3'
-  sha256 'b0a8cf33f725f16268b92b1c68d78879b039f4c4d8a09eb74325b8767d250181'
+  version '2.7.4'
+  sha256 'b652fb1172d17fcd403af94a8efdc12aa30196fc411300fae2ec98a33563cd33'
 
   url "https://download.panic.com/coda/Coda%20#{version}.zip"
   appcast 'https://www.panic.com/updates/update.php?appName=Coda%202&appVersion=1'
@@ -8,6 +8,7 @@ cask 'coda' do
   homepage 'https://panic.com/coda/'
 
   auto_updates true
+  depends_on macos: '>= :high_sierra'
 
   app "Coda #{version.major}.app"
 

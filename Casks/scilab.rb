@@ -15,6 +15,6 @@ cask 'scilab' do
   binary "#{appdir}/Scilab-#{version}.app/Contents/MacOS/bin/scilab-cli"
 
   caveats do
-    depends_on_java '6'
+    depends_on_java '8'
   end
 end

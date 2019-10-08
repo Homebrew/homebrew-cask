@@ -4,7 +4,7 @@ cask 'adguard' do
 
   url "https://static.adguard.com/mac/release/AdGuard-#{version}.dmg"
   appcast 'https://static.adguard.com/mac/adguard-release-appcast.xml'
-  name 'Adguard for Mac'
+  name 'Adguard'
   homepage 'https://adguard.com/'
 
   pkg 'AdGuard.pkg'

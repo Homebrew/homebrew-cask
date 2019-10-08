@@ -1,6 +1,6 @@
 cask 'metabase' do
-  version '0.33.2.0'
-  sha256 'fa7bc7cab9e68335ef3bfa92b5f9323e86e4f5f17d55e50e4b2f004f6852508e'
+  version '0.33.3.1'
+  sha256 '1b736d543ce2a2eaca1cf0926f71e81934d35d3330ab5e25f15b51d77f3ce82a'
 
   # s3.amazonaws.com/downloads.metabase.com was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/downloads.metabase.com/v#{version.major_minor_patch}/Metabase.zip"
