@@ -11,6 +11,7 @@ cask 'ipe' do
   depends_on macos: '>= :yosemite'
 
   app 'Ipe.app'
+  app 'IpePresenter.app'
 
   zap trash: [
                '~/.ipe',
