@@ -7,6 +7,8 @@ cask 'eve-launcher' do
   name 'Eve Online'
   homepage 'https://www.eveonline.com/'
 
+  auto_updates true
+
   app 'EVE Launcher.app'
 
   zap trash: [
