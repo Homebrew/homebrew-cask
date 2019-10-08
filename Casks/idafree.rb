@@ -12,7 +12,7 @@ cask 'idafree' do
                     }
 
   uninstall script: {
-                      executable: '/Applications/IDA Freeware 7.0/uninstall.app/Contents/MacOS/installbuilder.sh',
+                      executable: "/Applications/IDA Freeware #{version}/uninstall.app/Contents/MacOS/installbuilder.sh",
                       args:       ['--mode', 'unattended'],
                       sudo:       true,
                     }
