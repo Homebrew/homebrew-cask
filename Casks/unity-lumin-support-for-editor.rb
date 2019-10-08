@@ -11,5 +11,5 @@ cask 'unity-lumin-support-for-editor' do
 
   pkg "UnitySetup-Lumin-Support-for-Editor-#{version.before_comma}.pkg"
 
-  uninstall pkgutil: 'com.unity3d.LuminStandaloneSupport'
+  uninstall pkgutil: 'com.unity3d.LuminSupport'
 end
