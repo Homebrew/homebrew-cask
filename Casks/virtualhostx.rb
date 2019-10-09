@@ -1,6 +1,6 @@
 cask 'virtualhostx' do
-  version '8.7.13,80_62'
-  sha256 'd5dbb0dbbb7e4c5c6d13da6fd538358a717944dbd962273ac47796ae6c963c77'
+  version '8.7.14,80_63'
+  sha256 'c49b083d6b55d0e22b46b0800b79ef6afabc9741572e7d391e353f130339b4b2'
 
   # downloads-clickonideas.netdna-ssl.com/virtualhostx was verified as official when first introduced to the cask
   url "https://downloads-clickonideas.netdna-ssl.com/virtualhostx/virtualhostx#{version.after_comma}.zip"
