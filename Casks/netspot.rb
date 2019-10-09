@@ -1,5 +1,5 @@
 cask 'netspot' do
-  version '2.11.967'
+  version '2.11.970'
   sha256 '23c6ea7169be991ac8d0b1975682a2dc21b2b852d34aea4580dc91b307860b89'
 
   url 'https://www.netspotapp.com/download/NetSpot.dmg'
