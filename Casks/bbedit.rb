@@ -1,8 +1,5 @@
 cask 'bbedit' do
-  if MacOS.version <= :el_capitan
-    version '12.1.6'
-    sha256 '23b9fc6ef5c03cbcab041566503c556d5baf56b2ec18f551e6f0e9e6b48dc690'
-  elsif MacOS.version <= :high_sierra
+  if MacOS.version <= :high_sierra
     version '12.6.7'
     sha256 'd0647c864268b187343bd95bfcf490d6a2388579b1f8fce64a289c65341b1144'
   else
@@ -16,7 +13,7 @@ cask 'bbedit' do
   homepage 'https://www.barebones.com/products/bbedit/'
 
   auto_updates true
-  depends_on macos: '>= :el_capitan'
+  depends_on macos: '>= :high_sierra'
 
   app 'BBEdit.app'
 
