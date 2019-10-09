@@ -1,6 +1,6 @@
 cask 'command-tab-plus' do
-  version '1.95,335:1565001457'
-  sha256 '1d8e77e7dd4ecc9d51ae7a6cce3eb28a6a73472df0c114056ec593325940d97f'
+  version '1.97,337:1570546404'
+  sha256 '06369b01aa170aff3b85ab350c8bfe0060403bea0d6cf23290ca8ff3c7812e8c'
 
   # dl.devmate.com/com.sergey-gerasimenko.Command-Tab was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.sergey-gerasimenko.Command-Tab/#{version.after_comma.before_colon}/#{version.after_colon}/Command-Tab-#{version.after_comma.before_colon}.zip"
