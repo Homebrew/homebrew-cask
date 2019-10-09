@@ -1,4 +1,4 @@
-cask 'cd-to-terminal' do
+cask 'cd-to' do
   version '3.0'
   sha256 'ced82da81b9b3448280b5c465c6649c93a876895de0142a396efca489c7b59b6'
 
