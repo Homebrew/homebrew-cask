@@ -7,7 +7,7 @@ cask 'liteicon' do
     sha256 'd185503d1c6cbbc6f770517853bd9ef08dc620f4e7ce3de913251a57e4d450d9'
   else
     version '4.0'
-    sha256 '9953f02a9a09c57214ca3a0afc3099032b6e152aa1206e9ffce636571d3d88b8'
+    sha256 'd185503d1c6cbbc6f770517853bd9ef08dc620f4e7ce3de913251a57e4d450d9'
   end
 
   url "https://www.freemacsoft.net/downloads/LiteIcon_#{version}.zip"
