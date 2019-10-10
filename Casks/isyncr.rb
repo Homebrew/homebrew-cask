@@ -3,8 +3,8 @@ cask 'isyncr' do
     version '5.6.5'
     sha256 '8cd6b1c96a902d8810e52aab6a980424370237617bfd3ff574367ff1ce8d4f4e'
   else
-    version '5.14.10'
-    sha256 '3952db5c64873cf63a5bfb6b308fd992f2eeb67cf838955fc200cd59640803aa'
+    version '6.0.2'
+    sha256 'e71ba53483e6028996d76defdae2413761931e1e1c2872d42d2dcb410547c3a6'
   end
 
   url "https://www.jrtstudio.com/files/iSyncr%20Desktop%20#{version}.pkg"
