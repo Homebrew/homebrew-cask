@@ -7,6 +7,8 @@ cask 'ckb-next' do
   name 'ckb-next'
   homepage 'https://github.com/ckb-next/ckb-next'
 
+  depends_on macos: '>= :sierra'
+
   pkg 'ckb-next.mpkg'
 
   uninstall pkgutil:   [
