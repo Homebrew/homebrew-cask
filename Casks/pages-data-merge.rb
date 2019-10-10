@@ -7,5 +7,5 @@ cask 'pages-data-merge' do
   name 'Pages Data Merge'
   homepage 'https://iworkautomation.com/pages/script-tags-data-merge.html'
 
-  app 'PagesDataMergeApp/Pages Data Merge.app'
+  app 'Pages Data Merge.app'
 end
