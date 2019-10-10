@@ -4,11 +4,11 @@ cask 'cd-to-terminal' do
 
   url "https://github.com/jbtule/cdto/releases/download/v#{version}/cdto_#{version.major_minor.dots_to_underscores}.zip"
   appcast 'https://github.com/jbtule/cdto/releases.atom'
-  name 'cd to'
+  name 'cd to ...'
   homepage 'https://github.com/jbtule/cdto'
 
   # Renamed to avoid conflict with cd-to-iterm.
-  app "cdto_#{version.major_minor.dots_to_underscores}/terminal/cd to.app", target: 'cd to terminal.app'
+  app "cdto_#{version.major_minor.dots_to_underscores}/terminal/cd to ....app", target: 'cd to terminal.app'
 
   caveats <<~EOS
     To complete installation:
