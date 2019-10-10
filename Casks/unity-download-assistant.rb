@@ -5,7 +5,7 @@ cask 'unity-download-assistant' do
   url "https://netstorage.unity3d.com/unity/#{version.after_comma}/UnityDownloadAssistant-#{version.before_comma}.dmg"
   appcast 'https://unity3d.com/get-unity/download/archive'
   name 'Unity'
-  homepage 'https://unity3d.com/unity/'
+  homepage 'https://unity3d.com/unity/whats-new/'
 
   installer manual: 'Unity Download Assistant.app'
 

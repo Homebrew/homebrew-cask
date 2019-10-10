@@ -4,7 +4,7 @@ cask 'unity-hub' do
 
   url 'https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.dmg'
   name 'Unity Hub'
-  homepage 'https://unity3d.com/unity/beta-download'
+  homepage 'https://unity3d.com/unity/whats-new/beta-download'
 
   app 'Unity Hub.app'
 

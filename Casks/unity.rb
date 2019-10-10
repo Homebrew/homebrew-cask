@@ -5,7 +5,7 @@ cask 'unity' do
   url "https://netstorage.unity3d.com/unity/#{version.after_comma}/MacEditorInstaller/Unity-#{version.before_comma}.pkg"
   appcast 'https://unity3d.com/get-unity/download/archive'
   name 'Unity Editor'
-  homepage 'https://unity3d.com/unity/'
+  homepage 'https://unity3d.com/unity/whats-new/'
 
   pkg "Unity-#{version.before_comma}.pkg"
 

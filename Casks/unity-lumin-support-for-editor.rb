@@ -5,7 +5,7 @@ cask 'unity-lumin-support-for-editor' do
   url "https://download.unity3d.com/download_unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Lumin-Support-for-Editor-#{version.before_comma}.pkg"
   appcast 'https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json'
   name 'Unity Lumin Build Support'
-  homepage 'https://unity3d.com/unity/'
+  homepage 'https://unity3d.com/unity/whats-new/'
 
   depends_on cask: 'unity'
 

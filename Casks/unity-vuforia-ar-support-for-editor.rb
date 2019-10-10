@@ -5,7 +5,7 @@ cask 'unity-vuforia-ar-support-for-editor' do
   url "https://download.unity3d.com/download_unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Vuforia-AR-Support-for-Editor-#{version.before_comma}.pkg"
   appcast 'https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json'
   name 'Unity Vuforia AR Build Support'
-  homepage 'https://unity3d.com/unity/'
+  homepage 'https://unity3d.com/unity/whats-new/'
 
   depends_on cask: 'unity'
 
