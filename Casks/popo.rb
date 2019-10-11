@@ -1,6 +1,6 @@
 cask 'popo' do
-  version '3.0.3,6180'
-  sha256 '607346950c2a2eac154d46adb1ae6c9d68da3085baa15b40c9bd9c9f1c8c2cec'
+  version '3.0.4'
+  sha256 '039df27d52e9b9910991aa218859a09255f56a0098fa648a8e97a0a9ea607adb'
 
   url "http://popo.netease.com/file/popomac/POPO_Mac_V#{version.dots_to_underscores.before_comma}.dmg"
   appcast 'http://popo.netease.com/'
