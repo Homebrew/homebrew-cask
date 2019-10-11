@@ -20,12 +20,4 @@ cask 'paste-helper' do
                '~/Library/Application Support/com.wiheads.paste-helper/',
                '~/Library/Preferences/com.wiheads.paste-helper.plist',
              ]
-
-  caveats <<~EOS
-    #{token} is a helper for Paste.app from the App Store.
-
-    A standalone version may be installed instead using:
-
-      brew cask install paste
-  EOS
 end
