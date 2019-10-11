@@ -12,7 +12,7 @@ cask 'paste-helper' do
   installer script: "#{staged_path}/Paste Helper.app/Contents/MacOS/Paste Helper"
 
   uninstall quit:       'com.wiheads.paste-helper',
-            delete:     '~/Library/Application Support/Paste Helper/',
+            delete:     '~/Library/Application Support/Paste Helper/Paste Helper.app',
             login_item: 'Paste Helper'
 
   zap trash: [
