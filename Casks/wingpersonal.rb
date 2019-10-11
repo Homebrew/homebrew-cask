@@ -7,5 +7,7 @@ cask 'wingpersonal' do
   name 'WingPersonal'
   homepage 'https://www.wingware.com/'
 
+  depends_on macos: '>= :sierra'
+
   app 'WingPersonal.app'
 end
