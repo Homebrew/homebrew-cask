@@ -1,8 +1,8 @@
 cask 'elan-avfx' do
-  version '5.7'
-  sha256 '258d7390e8985ad603b9239ae39fe32285a1d7a78a70f242e3fa1ff4ed79c930'
+  version '5.8'
+  sha256 '35e89961de320dc0db5812c4ea1cd65be77a4667cb03bb7bc60603770edf70aa'
 
-  url "https://www.mpi.nl/tools/elan/ELAN_#{version.dots_to_hyphens}-AVFX_mac.zip"
+  url "https://www.mpi.nl/tools/elan/ELAN_#{version.dots_to_hyphens}_mac.zip"
   appcast 'https://tla.mpi.nl/tools/tla-tools/elan/release-notes/'
   name 'ELAN'
   homepage 'https://tla.mpi.nl/tools/tla-tools/elan/'
