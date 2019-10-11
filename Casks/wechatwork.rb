@@ -1,5 +1,5 @@
 cask 'wechatwork' do
-  version '2.8.15.2065'
+  version '2.8.15.2071'
   sha256 '7f055943251d636689d81518a5523f4dd2cf94373a38dd74a7136af7c36016b1'
 
   url "https://dldir1.qq.com/wework/work_weixin/WXWork_#{version}.dmg"
