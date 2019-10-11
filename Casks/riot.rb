@@ -7,6 +7,8 @@ cask 'riot' do
   name 'Riot'
   homepage 'https://about.riot.im/'
 
+  auto_updates true
+
   app 'Riot.app'
 
   zap trash: [
