@@ -7,5 +7,7 @@ cask 'catalina-cache-cleaner' do
   name 'CCC'
   homepage 'https://www.northernsoftworks.com/catalinacachecleaner.html'
 
+  depends_on macos: '>= :catalina'
+
   app 'Catalina Cache Cleaner.app'
 end
