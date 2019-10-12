@@ -2,10 +2,10 @@ cask 'mojave-cache-cleaner' do
   version :latest
   sha256 :no_check
 
-  url 'https://www.northernsoftworks.com/downloads/mcc.dmg'
-  name 'Mojave Cache Cleaner'
+  url 'https://www.northernsoftworks.com/downloads/ccc.dmg'
+  name 'Catalina Cache Cleaner'
   name 'MCC'
-  homepage 'https://www.northernsoftworks.com/mojavecachecleaner.html'
+  homepage 'https://www.northernsoftworks.com/catalinacachecleaner.html'
 
-  app 'Mojave Cache Cleaner.app'
+  app 'Catalina Cache Cleaner.app'
 end
