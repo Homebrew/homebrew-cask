@@ -8,5 +8,7 @@ cask 'mweb' do
   name 'MWeb'
   homepage 'https://www.mweb.im/'
 
+  depends_on macos: '>= :sierra'
+
   app 'MWeb.app'
 end
