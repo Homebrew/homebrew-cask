@@ -1,4 +1,4 @@
-cask 'mojave-cache-cleaner' do
+cask 'catalina-cache-cleaner' do
   version :latest
   sha256 :no_check
 
