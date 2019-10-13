@@ -8,5 +8,5 @@ cask 'free-ruler' do
   name 'Free Ruler'
   homepage 'http://www.pascal.com/software/freeruler/'
 
-  app "Free Ruler #{version}.app"
+  app 'Free Ruler.app'
 end
