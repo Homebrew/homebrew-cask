@@ -2,7 +2,7 @@ cask 'teamviewer-quicksupport' do
   version :latest
   sha256 :no_check
 
-  url 'https://download.teamviewer.com/download/TeamViewerQS.dmg'
+  url 'https://dl.teamviewer.com/download/version_14x/TeamViewerQS.dmg'
   name 'TeamViewer QuickSupport'
   name 'TeamViewer QS'
   homepage 'https://www.teamviewer.com/'
