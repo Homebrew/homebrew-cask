@@ -7,10 +7,5 @@ cask 'crunch' do
   name 'Crunch'
   homepage 'https://github.com/chrissimpkins/Crunch'
 
-  depends_on formula: [
-                        'libpng',
-                        'little-cms2',
-                      ]
-
   app 'Crunch.app'
 end
