@@ -7,5 +7,7 @@ cask 'onepile' do
   name 'OnePile'
   homepage 'https://onepile.app/'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'OnePile.app'
 end
