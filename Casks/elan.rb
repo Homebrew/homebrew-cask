@@ -1,4 +1,4 @@
-cask 'elan-avfx' do
+cask 'elan' do
   version '5.8'
   sha256 '91153961b6ba6ad148bd5021967568e7dcbc2416b709e0c8681163e89f270d7d'
 
@@ -9,5 +9,5 @@ cask 'elan-avfx' do
 
   depends_on macos: '>= :high_sierra'
 
-  app "ELAN_#{version}-AVFX.app"
+  app "ELAN_#{version}.app"
 end
