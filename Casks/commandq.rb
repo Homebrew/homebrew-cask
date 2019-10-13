@@ -4,6 +4,7 @@ cask 'commandq' do
 
   # download.clickontyler.com was verified as official when first introduced to the cask
   url "https://download.clickontyler.com/commandq/commandq20_#{version.no_dots}.zip"
+  appcast 'https://shine.clickontyler.com/appcast.php?id=43'
   name 'CommandQ'
   homepage 'https://commandqapp.com/'
 
