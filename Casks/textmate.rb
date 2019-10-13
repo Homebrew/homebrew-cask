@@ -14,6 +14,7 @@ cask 'textmate' do
 
   app 'TextMate.app'
   binary "#{appdir}/TextMate.app/Contents/Resources/mate"
+  binary "#{appdir}/TextMate.app/Contents/Frameworks/Preferences.framework/Versions/A/Resources/rmate"
 
   uninstall quit: 'com.macromates.TextMate'
 
