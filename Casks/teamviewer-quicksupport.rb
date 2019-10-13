@@ -1,8 +1,8 @@
 cask 'teamviewer-quicksupport' do
-  version :latest
-  sha256 :no_check
+  version '14'
+  sha256 :no_check # required as upstream package is updated in-place
 
-  url 'https://dl.teamviewer.com/download/version_14x/TeamViewerQS.dmg'
+  url "https://dl.teamviewer.com/download/version_#{version}x/TeamViewerQS.dmg"
   name 'TeamViewer QuickSupport'
   name 'TeamViewer QS'
   homepage 'https://www.teamviewer.com/'
