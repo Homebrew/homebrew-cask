@@ -9,5 +9,4 @@ cask 'softraid' do
   homepage 'https://www.softraid.com/'
 
   app "SoftRAID #{version}/SoftRAID #{version}.app"
-  app "SoftRAID #{version}/SoftRAID Easy Setup.app"
 end
