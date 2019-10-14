@@ -4,7 +4,8 @@ cask 'simply-fortran' do
 
   # download.approximatrix.com/simplyfortran was verified as official when first introduced to the cask
   url "http://download.approximatrix.com/simplyfortran/#{version.major_minor}/SimplyFortran-#{version.major_minor}.dmg"
-  appcast 'https://simplyfortran.com/download/?platform=macos'
+  appcast 'https://simplyfortran.com/download/?platform=macos',
+          configuration: version.major_minor
   name 'Simply Fortran'
   homepage 'https://simplyfortran.com/'
 
