@@ -29,7 +29,7 @@ cask 'cocktail' do
 
     url "https://www.maintain.se/downloads/sparkle/highsierra/Cocktail_#{version}.zip"
     appcast 'https://www.maintain.se/downloads/sparkle/highsierra/highsierra.xml'
-  elsif MacOS.version <= :high_sierra
+  elsif MacOS.version <= :mojave
     version '12.4.2'
     sha256 'cae4d5f4eee8a37064290fddda584d4ce90add02dc7c66ec56c5842e5dc82c2b'
 
