@@ -1,8 +1,10 @@
 cask 'nvidia-geforce-now' do
-  version :latest
-  sha256 :no_check
+  version '2.0.13.54,78AD6B'
+  sha256 '107ee64c3292f0c82f08f790b8ac4c9645191b15649a59e3895d3fe279735bd5'
 
-  url 'https://download.nvidia.com/gfnpc/GeForceNOW-release.dmg'
+  url "https://ota-downloads.nvidia.com/ota/GeForceNOW-release_#{version.after_comma}.dmg"
+  appcast "https://ota.nvidia.com/release/available?product=GFN-mac&version=#{version.before_comma}&channel=OFFICIAL",
+          configuration: '[]' # Only happens when there are no newer versions
   name 'NVIDIA GeForce NOW'
   homepage 'https://www.nvidia.com/en-us/geforce/products/geforce-now/'
 

@@ -1,16 +1,19 @@
 cask 'torrent-file-editor' do
-  version '0.3.7'
-  sha256 '8edccb9a7d83c403ae386340f33d14310257c094968dc38f4f158c452da5f7d5'
+  version '0.3.16'
+  sha256 '69e97ea059de7711170016bcd9728331177e2dbfdda4472482beee064ea30745'
 
-  url "https://downloads.sourceforge.net/torrent-file-editor/v#{version}/torrent-file-editor-#{version}.dmg"
-  appcast 'https://sourceforge.net/projects/torrent-file-editor/rss',
-          checkpoint: '9ff98c2312780ab239d69c42dcfb27eab21cc58e79a6885ee47cec9d71404b5b'
+  # github.com/torrent-file-editor/torrent-file-editor was verified as official when first introduced to the cask
+  url "https://github.com/torrent-file-editor/torrent-file-editor/releases/download/v#{version}/torrent-file-editor-#{version}.dmg"
+  appcast 'https://github.com/torrent-file-editor/torrent-file-editor/releases.atom'
   name 'Torrent File Editor'
-  homepage 'https://sourceforge.net/projects/torrent-file-editor/'
+  homepage 'https://torrent-file-editor.github.io/'
+
+  depends_on macos: '>= :sierra'
 
   app 'Torrent File Editor.app'
 
   zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.sourceforge.torrent-file-editor.sfl*',
                '~/Library/Caches/net.sourceforge.torrent-file-editor',
                '~/Library/Cookies/net.sourceforge.torrent-file-editor.binarycookies',
                '~/Library/Preferences/net.sourceforge.torrent-file-editor.plist',

@@ -4,8 +4,7 @@ cask 'nosqlclient' do
 
   # github.com/nosqlclient/nosqlclient was verified as official when first introduced to the cask
   url "https://github.com/nosqlclient/nosqlclient/releases/download/#{version}/osx-portable.zip"
-  appcast 'https://github.com/nosqlclient/nosqlclient/releases.atom',
-          checkpoint: '9b24141c2a6521f9f56c3f18735aa7311d5854c1956789f1b7e59a38e9941c8b'
+  appcast 'https://github.com/nosqlclient/nosqlclient/releases.atom'
   name 'Nosqlclient'
   homepage 'https://www.nosqlclient.com/'
 

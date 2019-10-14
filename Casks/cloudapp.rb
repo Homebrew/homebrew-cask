@@ -1,11 +1,9 @@
 cask 'cloudapp' do
-  version '4.3.3'
-  sha256 '3938c226d1e14455f758039a93d5205d3b79544b20e5c5c82b74229afbefbf94'
+  version '5.4.0.1867'
+  sha256 '7a7a18bd5dc8bee0c57b0fc7f7b3bb89093f51b3981634551850bb102363ec63'
 
-  # amazonaws.com/downloads.getcloudapp.com was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/downloads.getcloudapp.com/mac/CloudApp-#{version}.zip"
-  appcast 'https://updates.getcloudapp.com/appcast.xml',
-          checkpoint: 'c38fc4b75def18c8270b651da1bc87fe1917b5a6e90544231158730550bfc435'
+  url "http://downloads.getcloudapp.com/mac/CloudApp-#{version}.zip"
+  appcast 'https://d2plwz9jdz9z5d.cloudfront.net/mac/latest/appcast.xml'
   name 'CloudApp'
   homepage 'https://www.getcloudapp.com/'
 

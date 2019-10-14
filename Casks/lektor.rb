@@ -4,8 +4,7 @@ cask 'lektor' do
 
   # github.com/lektor/lektor was verified as official when first introduced to the cask
   url "https://github.com/lektor/lektor/releases/download/#{version}/Lektor-#{version}.dmg"
-  appcast 'https://github.com/lektor/lektor/releases.atom',
-          checkpoint: 'd96a45877cbbf6b254a0204ad7da6a9b52a4b568a76fabb52db1ad3a726c87ea'
+  appcast 'https://github.com/lektor/lektor/releases.atom'
   name 'Lektor'
   homepage 'https://www.getlektor.com/'
 

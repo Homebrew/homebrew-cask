@@ -2,7 +2,7 @@ cask 'rapidminer-studio' do
   version :latest
   sha256 :no_check
 
-  url 'http://go.rapidminer.com/rm-studio-download-mac'
+  url 'https://releases.rapidminer.com/latest/rapidminer-studio/rapidminer-studio-osx.dmg'
   name 'RapidMiner Studio'
   homepage 'https://rapidminer.com/products/studio/'
 

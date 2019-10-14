@@ -7,4 +7,11 @@ cask 'sleepyhead' do
   homepage 'https://sleepyhead.jedimark.net/'
 
   app 'SleepyHead.app'
+
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/jedimark.sleepyhead.sfl*',
+               '~/Library/Preferences/com.jedimark.SleepyHead-Testing.plist',
+               '~/Library/Preferences/com.jedimark.SleepyHead.plist',
+               '~/Library/Saved Application State/Jedimark.SleepyHead.savedState',
+             ]
 end

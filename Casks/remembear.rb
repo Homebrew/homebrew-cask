@@ -1,11 +1,10 @@
 cask 'remembear' do
-  version '0.4.4'
-  sha256 '8f7d1e57765a485d4904cd1f57691e4087e80c7a25d17b84fa9247c147ec53d2'
+  version '1.4.11'
+  sha256 'cb15f482c5de79fdc2e326fad0c36eddb73419f94d5d4366f7cb6dc710c98566'
 
-  # amazonaws.com/tunnelbear/downloads/mac/remembear was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/tunnelbear/downloads/mac/remembear/RememBear-#{version}.zip"
-  appcast 'https://tunnelbear.s3.amazonaws.com/downloads/mac/remembear/appcast-beta.xml',
-          checkpoint: '9933b126550d30717d20878ff3c0be745b36cae2d5e9eca88d98661ec9a2aaa8'
+  # remembear.s3.amazonaws.com was verified as official when first introduced to the cask
+  url "https://remembear.s3.amazonaws.com/app/release/downloads/macOS/RememBear-#{version}.dmg"
+  appcast 'https://remembear.s3.amazonaws.com/app/release/downloads/macOS/appcast.xml'
   name 'RememBear'
   homepage 'https://www.remembear.com/'
 

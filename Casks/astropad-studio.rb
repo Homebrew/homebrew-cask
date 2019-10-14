@@ -1,14 +1,11 @@
 cask 'astropad-studio' do
-  version '1.9.1'
-  sha256 '8e1227283cae6ddef8c862a37f7a7d23d6fea917fed96695acdbe5476f6142f8'
+  version '3.1'
+  sha256 'c8bb192e60f54f8fee090aa94a206f51813bed969c123538f429a2215f65e143'
 
   url "https://astropad.com/downloads/AstropadStudio-#{version}.zip"
-  appcast 'https://astropad.com/downloads/studio-sparkle.xml',
-          checkpoint: 'fc8300d50026dce0f41e925e8c9f56c50cd385972dfcdf03abacd41671f62ef3'
+  appcast 'https://astropad.com/downloads/studio-sparkle.xml'
   name 'Astropad Studio'
   homepage 'https://astropad.com/'
-
-  depends_on macos: '>= :mavericks'
 
   app 'Astropad Studio.app'
 

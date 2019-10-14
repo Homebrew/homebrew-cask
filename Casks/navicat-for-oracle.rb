@@ -1,10 +1,9 @@
 cask 'navicat-for-oracle' do
-  version '12.0.23'
-  sha256 'f547b1afffcbc7922eca98592b726798419409daf2ab5ae80041e124cc5c0ad6'
+  version '12.1.25'
+  sha256 'b0a51aa78ba2294ffcce1b5e741b5676efe2b50a4b9570a8abc56ebb5f08c15d'
 
   url "http://download.navicat.com/download/navicat#{version.major_minor.no_dots}_ora_en.dmg"
-  appcast 'https://www.navicat.com/en/products/navicat-for-oracle-release-note',
-          checkpoint: '3e8e4e189f6cf8a5350f11d083de952572a7cd540c26a8d73f8ee73b8e970118'
+  appcast 'https://www.navicat.com/updater/v120/sysProfileInfo.php?appName=Navicat%20for%20Oracle&appLang=en'
   name 'Navicat for Oracle'
   homepage 'https://www.navicat.com/products/navicat-for-oracle'
 

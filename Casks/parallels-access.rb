@@ -1,13 +1,13 @@
 cask 'parallels-access' do
-  version '3.2.0-31423'
-  sha256 'e5fd360aa76f3ba5a681b065fbdeaa5b43a4fc8a6bae0b182a27bcdde55d183a'
+  version '5.0.0-35155'
+  sha256 'd8c3e2edd1ce33b31e64681cb6465188ca87b033a51337c4830b4ee06e0b4a81'
 
   url "https://download.parallels.com/pmobile/v#{version.major}/#{version}/ParallelsAccess-#{version}-mac.dmg"
   name 'Parallels Access'
   homepage 'https://www.parallels.com/products/access/'
 
   # This .dmg cannot be extracted normally
-  # Original discussion: https://github.com/caskroom/homebrew-cask/issues/26872
+  # Original discussion: https://github.com/Homebrew/homebrew-cask/issues/26872
   container type: :naked
 
   preflight do

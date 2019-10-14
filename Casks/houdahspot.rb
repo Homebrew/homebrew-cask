@@ -1,12 +1,13 @@
 cask 'houdahspot' do
-  version '4.3.5'
-  sha256 '6f2890627fa698e60571da6006d1abecd6fc8d3b4590fceeb3765e25fea90e61'
+  version '5.0.10'
+  sha256 '236727aa4d5d947009e447704218a19469fe04b13d3085e6c27a0133b8b212bf'
 
-  url "https://www.houdah.com/houdahSpot/updates/cast#{version.major}_assets/HoudahSpot#{version}.zip"
-  appcast "https://www.houdah.com/houdahSpot/updates/cast#{version.major}.xml",
-          checkpoint: '0e00d503d88a1950841eab38dd186b8c6947486edfb81080175edd2092c0425b'
+  url "https://www.houdah.com/houdahSpot/updates/cast5_assets/HoudahSpot#{version}.zip"
+  appcast "https://www.houdah.com/houdahSpot/updates/cast#{version.major}.xml"
   name 'HoudahSpot'
   homepage 'https://www.houdah.com/houdahSpot/'
+
+  depends_on macos: '>= :high_sierra'
 
   app 'HoudahSpot.app'
 end

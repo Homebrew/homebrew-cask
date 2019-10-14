@@ -4,8 +4,7 @@ cask 'opennx' do
 
   # sourceforge.net/opennx was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/opennx/OpenNX-#{version}.dmg"
-  appcast 'https://sourceforge.net/projects/opennx/rss',
-          checkpoint: 'f89d753742e1ad83154f87957b08af56aecb5926cdecf4bd74414094a4e126b8'
+  appcast 'https://sourceforge.net/projects/opennx/rss'
   name 'OpenNX'
   homepage 'http://opennx.net/'
 

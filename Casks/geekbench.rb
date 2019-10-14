@@ -1,21 +1,24 @@
 cask 'geekbench' do
   if MacOS.version <= :mavericks
-    version '3.4.1'
-    sha256 '9f2730472bba9fd39554290f465d37c32792debc5b20c9840efd1f79d40ca94c'
-
-    # cdn.primatelabs.com was verified as official when first introduced to the cask
-    url "https://cdn.primatelabs.com/Geekbench-#{version}-Mac.zip"
+    version '3.4.2'
+    sha256 '05e1b977a46648d38cf6c641be7ef34722200d0168a10d4372fca771ffa24e28'
+  elsif MacOS.version <= :mavericks
+    version '4.4.2'
+    sha256 '3c46e630a28a0752afd702fc1cd379edd2420001be22302c932e61751284c0cc'
   else
-    version '4.2.2'
-    sha256 'e8c2d1daf75e2222a38d5b69192f271edad11d3a906f7b075309a3b581e39045'
-
-    url "https://cdn.geekbench.com/Geekbench-#{version}-Mac.dmg"
-    appcast "https://www.primatelabs.com/appcast/geekbench#{version.major}.xml",
-            checkpoint: '2824d7858982b53cb201bd3dcba7046998675da05839856209aaad0785ff8db8'
+    version '5.0.2'
+    sha256 'a2ce68f3dfbffabb2f75b2c4e98437762eab069d8ab5af7b818be15207364505'
   end
 
+  url "https://cdn.geekbench.com/Geekbench-#{version}-Mac.zip"
+  appcast "https://www.primatelabs.com/appcast/geekbench#{version.major}.xml"
   name 'Geekbench'
   homepage 'https://www.geekbench.com/'
 
   app "Geekbench #{version.major}.app"
+
+  zap trash: [
+               "~/Library/Caches/com.primatelabs.Geekbench#{version.major}",
+               "~/Library/Preferences/com.primatelabs.Geekbench#{version.major}.plist",
+             ]
 end

@@ -3,8 +3,7 @@ cask 'gitx' do
   sha256 'd28a2cc1a1d0b83908e7b7fa47706c4e4fab3570277b2a7eae0324b1d86a4b87'
 
   url 'http://frim.frim.nl/GitXStable.app.zip'
-  appcast 'http://gitx.frim.nl/Downloads/appcast.xml',
-          checkpoint: '55accf881c6e6bc22e4c30d394e7d1b51c7f7b2de4b1a746f5fdeae742311ac9'
+  appcast 'http://gitx.frim.nl/Downloads/appcast.xml'
   name 'GitX'
   homepage 'http://gitx.frim.nl/'
 

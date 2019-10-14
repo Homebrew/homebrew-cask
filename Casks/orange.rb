@@ -1,8 +1,9 @@
 cask 'orange' do
-  version '3.8.0'
-  sha256 '89f6a38ba8f29f37381207a91b8803a02bf43b77330939f454ddb98fca4760fc'
+  version '3.23.1'
+  sha256 'c9225f9bd53a7c475fe134602dd270599f3d01cd9c0fbe19ee6f7203dad3464b'
 
-  url "http://orange.biolab.si/download/files/Orange#{version.major}-#{version}.dmg"
+  url "https://download.biolab.si/download/files/Orange#{version.major}-#{version}.dmg"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://service.biolab.si/download/orange?platform=mac'
   name 'Orange'
   homepage 'https://orange.biolab.si/'
 

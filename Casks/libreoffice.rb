@@ -1,21 +1,17 @@
 cask 'libreoffice' do
-  version '6.0.2'
-  sha256 '6211d49a962f9573e27b657b51fe9a8105c61e4dd99510c3f23adfcc98f1c9e4'
+  version '6.3.2'
+  sha256 '0ba07eb190d39d9d0573d9eadee66a285f6442ab287b74cd80200bf088259b5c'
 
   # documentfoundation.org was verified as official when first introduced to the cask
   url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/LibreOffice_#{version}_MacOS_x86-64.dmg"
-  appcast 'https://download.documentfoundation.org/libreoffice/stable/',
-          checkpoint: '94f0edd918fe7f81314a8c7ed858d39a7859a9af398ce8b49566c5fe9bd7ba83'
+  appcast "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/"
   name 'LibreOffice'
   homepage 'https://www.libreoffice.org/'
-  gpg "#{url}.asc", key_id: 'c2839ecad9408fbe9531c3e9f434a1efafeeaea3'
 
-  auto_updates true
   conflicts_with cask: [
                          'libreoffice-rc',
                          'libreoffice-still',
                        ]
-  depends_on macos: '>= :mavericks'
 
   app 'LibreOffice.app'
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/gengal"
@@ -28,7 +24,7 @@ cask 'libreoffice' do
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/unopkg"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/uri-encode"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/xpdfimport"
-  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/soffice.wrapper.sh"
   binary shimscript, target: 'soffice'
 

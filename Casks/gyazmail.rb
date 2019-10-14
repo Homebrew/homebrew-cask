@@ -1,10 +1,9 @@
 cask 'gyazmail' do
-  version '1.5.19'
-  sha256 '666b40963967133c4d44e1348a902c57bb4528d723538b93fbc4e545e41200b5'
+  version '1.6.1'
+  sha256 'af351cd431bfa7628074a0baad3fa4ab63bbbf4dff4e4d45df46f9e5055ae71e'
 
   url "http://gyazsquare.com/gyazmail/GyazMail-#{version.no_dots}.dmg"
-  appcast 'http://gyazsquare.com/gyazmail/',
-          checkpoint: '1bdf585040c3098f84efbc7ce23a1e7ca09bcebf88b8fec3094f65a8e671ae14'
+  appcast 'http://gyazsquare.com/gyazmail/'
   name 'GyazMail'
   homepage 'http://gyazsquare.com/gyazmail/'
 

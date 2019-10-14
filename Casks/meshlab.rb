@@ -4,8 +4,7 @@ cask 'meshlab' do
 
   # github.com/cnr-isti-vclab/meshlab was verified as official when first introduced to the cask
   url "https://github.com/cnr-isti-vclab/meshlab/releases/download/v#{version}/MeshLab#{version}.dmg"
-  appcast 'https://github.com/cnr-isti-vclab/meshlab/releases.atom',
-          checkpoint: '88f54b6cd8c0d74a89cb6274b67a6af5e7b853d9eeefee183974c5ecfe28d4cb'
+  appcast 'https://github.com/cnr-isti-vclab/meshlab/releases.atom'
   name 'MeshLab'
   homepage 'http://www.meshlab.net/'
 

@@ -1,15 +1,15 @@
 cask 'vellum' do
-  version '2.0.7'
-  sha256 '0180bf11eb19a5f7ee41a2844d3b39ba16b14f04e5a44f58661894c7cf582b84'
+  version '2.6.3'
+  sha256 '2f99843f49487e907800a0e90d9ae1ac8d678f4573dc00b49f8cb558013eb994'
 
   # 180g.s3.amazonaws.com/downloads was verified as official when first introduced to the cask
   url "https://180g.s3.amazonaws.com/downloads/Vellum-#{version.no_dots}00.zip"
-  appcast 'https://get.180g.co/updates/vellum/',
-          checkpoint: '1d5b7219f00c5f6e8be05102dbb43a85ca90001ab6fe6a1ababb77fead142723'
+  appcast 'https://get.180g.co/updates/vellum/'
   name 'Vellum'
   homepage 'https://vellum.pub/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'Vellum.app'
 

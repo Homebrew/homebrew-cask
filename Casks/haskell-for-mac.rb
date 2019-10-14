@@ -1,15 +1,15 @@
 cask 'haskell-for-mac' do
-  version '1.5.1,1358.1503125985'
-  sha256 '1b95fe3037a518ed560272863b0354f93ffc6b1224ebf1e20b62e0b615e114d0'
+  version '1.6.1,1482.1545510880'
+  sha256 'be546ebae7df2492b7c8a203916ff74c92367b24d4ec00f75d89134b8f71e14f'
 
   # dl.devmate.com/com.haskellformac.Haskell.basic was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.haskellformac.Haskell.basic/#{version.after_comma.dots_to_slashes}/Haskell%E2%80%94FunctionalProgrammingLab-#{version.after_comma.major}.zip"
-  appcast 'https://updates.devmate.com/com.haskellformac.Haskell.basic.xml',
-          checkpoint: '76bb48d60bd694259114d616bd0b20312804209891cec3efedebf24e03b7293a'
+  url "https://dl.devmate.com/com.haskellformac.Haskell.basic/#{version.after_comma.major}/#{version.after_comma.minor}/Haskell%E2%80%94FunctionalProgrammingLab-#{version.after_comma.major}.zip"
+  appcast 'https://updates.devmate.com/com.haskellformac.Haskell.basic.xml'
   name 'Haskell for Mac'
   homepage 'http://haskellformac.com/'
 
   auto_updates true
+  depends_on macos: '>= :high_sierra'
 
   app 'Haskell.app'
 

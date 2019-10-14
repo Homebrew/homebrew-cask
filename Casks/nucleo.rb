@@ -1,11 +1,10 @@
 cask 'nucleo' do
-  version '2.3.1'
-  sha256 '33077671920dc6cd57fe1c4fb23e11dc96ba32ef7c6d42381e21ba2a5a466aa9'
+  version '2.5.5'
+  sha256 '2cbe0e752f87a5fef86b59a180e78ec249a710fba56eea7144f5e1dd6eab9e59'
 
-  # s3-us-west-2.amazonaws.com/nucleo-app-releases was verified as official when first introduced to the cask
-  url "https://s3-us-west-2.amazonaws.com/nucleo-app-releases/mac/Nucleo_#{version}.zip"
-  appcast 'https://nucleoapp.com/updates',
-          checkpoint: 'c0fda658f91aee8c9b85f440ca9dcf1d4139a8bd30804cc80cea4ca17d38a23b'
+  # nucleo-app-releases.s3.amazonaws.com was verified as official when first introduced to the cask
+  url "https://nucleo-app-releases.s3.amazonaws.com/mac/Nucleo_#{version}.zip"
+  appcast 'https://nucleoapp.com/updates'
   name 'Nucleo'
   homepage 'https://nucleoapp.com/'
 

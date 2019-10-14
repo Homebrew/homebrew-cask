@@ -1,10 +1,9 @@
 cask 'touchdesigner' do
-  version '099.2017.7180'
-  sha256 'a2d0d1b50f431ba7587eeb99ebc0aa8c55b5d5d2c9b66f3c905551c62df53028'
+  version '099.2019.19160'
+  sha256 'be438e2edc184b0b9a2e62e946c861340cb892030bacfbb5ba48f801b402ce88'
 
-  url "https://www.derivative.ca/Builds/TouchDesigner#{version}.dmg"
-  appcast "https://www.derivative.ca/#{version.major}/Downloads/Default.asp",
-          checkpoint: '90aacc97f46bf0ab6d0bf0cd9c28a423e3adaf7fdf27d6464648f2bd040c5c71'
+  url "https://download.derivative.ca/TouchDesigner#{version}.dmg"
+  appcast "https://www.derivative.ca/#{version.major}/Downloads/Default.asp"
   name 'Derivative TouchDesigner'
   homepage 'https://www.derivative.ca/'
 

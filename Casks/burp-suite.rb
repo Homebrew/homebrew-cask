@@ -1,10 +1,9 @@
 cask 'burp-suite' do
-  version '1.7.32'
-  sha256 'a9a52bdf51bb7585f92b9b437512de5de7b00dd981cc58f4a9173c32bace7195'
+  version '2.1.04'
+  sha256 'd8925c52edb25a37a62afd87b4d947d3c169a7901b5dc8edf62c3654c0e558b8'
 
   url "https://portswigger.net/burp/releases/download?product=community&version=#{version}&type=macosx"
-  appcast 'https://portswigger.net/burp/releasesarchive/community',
-          checkpoint: '1587f7a55e88b9a40dfa61d3dfdf0022835545f1fcfd34021f2731445c4fb041'
+  appcast 'https://portswigger.net/burp/communitydownload'
   name 'Burp Suite'
   homepage 'https://portswigger.net/burp/'
 
@@ -13,6 +12,11 @@ cask 'burp-suite' do
                       args:       ['-q'],
                       sudo:       true,
                     }
+
+  postflight do
+    set_ownership '/Applications/Burp Suite Community Edition.app'
+    set_permissions '/Applications/Burp Suite Community Edition.app', 'a+rX'
+  end
 
   uninstall delete: '/Applications/Burp Suite Community Edition.app'
 

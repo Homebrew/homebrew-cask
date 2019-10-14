@@ -1,13 +1,12 @@
 cask 'sync-my-l2p' do
-  version '2.2.0'
-  sha256 '76344b27cda005a3e60135d880f482eef08bc0f1db84480e39677dd230823886'
+  version '2.4.1'
+  sha256 '481af4bd5be7bb8940fe3c9bd435f5b509acefa45cba347892893664a702265b'
 
-  # github.com/Sync-my-L2P/Sync-my-L2P was verified as official when first introduced to the cask
-  url "https://github.com/Sync-my-L2P/Sync-my-L2P/releases/download/v#{version}/SyncMyL2P-#{version}-osx.dmg"
-  appcast 'https://github.com/Sync-my-L2P/Sync-my-L2P/releases.atom',
-          checkpoint: '6429f99b9639a3ccf917d955d79df0b0263e3a4643b2d994bf30419a0e25c290'
+  # github.com/RobertKrajewski/Sync-my-L2P was verified as official when first introduced to the cask
+  url "https://github.com/RobertKrajewski/Sync-my-L2P/releases/download/v#{version}/SyncMyL2P-#{version}-osx.dmg"
+  appcast 'https://github.com/RobertKrajewski/Sync-my-L2P/releases.atom'
   name 'Sync-my-L2P'
-  homepage 'http://www.sync-my-l2p.de/'
+  homepage 'https://www.syncmyl2p.de/'
 
   app 'Sync-my-L2P.app'
 end

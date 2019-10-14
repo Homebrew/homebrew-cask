@@ -1,10 +1,9 @@
 cask 'icloud-control' do
-  version '1.1.0'
-  sha256 '761e4f22d391eaa868ebf4b8851f0f56bf0b8aa3a6323496c0fb61b3d2602453'
+  version '1.2.0'
+  sha256 '75d7c2d14a5af9b25371cee252c60f8a3ebaaaaf89514130f91c6b322bfdfa2d'
 
-  url "https://github.com/Obbut/iCloud-Control/releases/download/#{version}/iCloud.Control.app.zip"
-  appcast 'https://github.com/Obbut/iCloud-Control/releases.atom',
-          checkpoint: 'f505726cc994e11064876e91f1b2eae69e08a6f72e7dd7e8456a29cc1b0fd0e6'
+  url "https://github.com/Obbut/iCloud-Control/releases/download/#{version}/iCloud.Control.zip"
+  appcast 'https://github.com/Obbut/iCloud-Control/releases.atom'
   name 'iCloud Control'
   homepage 'https://github.com/Obbut/iCloud-Control'
 

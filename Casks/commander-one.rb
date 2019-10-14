@@ -1,10 +1,9 @@
 cask 'commander-one' do
-  version '1.7.4'
-  sha256 '817b8268fb115b15eda107d304f05dc42185e7dc6b3a803cfdbf99a57b9626e1'
+  version '2.3'
+  sha256 '1e48e509a62f24fa058158d86b0e563f9ec5c3b09dda1c04eac8030cf11f619f'
 
   url 'https://cdn.eltima.com/download/commander.dmg'
-  appcast 'https://cdn.eltima.com/download/commander-update/settings.xml',
-          checkpoint: '8c0cbc3b1d6fc207f6a40739e75307d3a451420f2de0c8e3811481fb7b0e4d30'
+  appcast 'https://cdn.eltima.com/download/commander-update/settings.xml'
   name 'Commander One'
   homepage 'https://mac.eltima.com/file-manager.html'
 

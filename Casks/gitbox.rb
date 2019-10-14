@@ -4,8 +4,7 @@ cask 'gitbox' do
 
   # d1oa71y4zxyi0a.cloudfront.net was verified as official when first introduced to the cask
   url "https://d1oa71y4zxyi0a.cloudfront.net/gitbox-#{version}-ml.zip"
-  appcast 'http://gitboxapp.com/updates.xml',
-          checkpoint: 'd22fec338fe94f98556990084e8f11ab1c4378e8d4b6b2430544a857adc6215e'
+  appcast 'http://gitboxapp.com/updates.xml'
   name 'Gitbox'
   homepage 'http://gitboxapp.com/'
 

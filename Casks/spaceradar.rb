@@ -3,8 +3,7 @@ cask 'spaceradar' do
   sha256 'af9fdbaf96658cb990f45a76183ca1ce91184d5a91e78676aa57095c9906a06d'
 
   url "https://github.com/zz85/space-radar/releases/download/v#{version}/SpaceRadar-darwin-x64.zip"
-  appcast 'https://github.com/zz85/space-radar/releases.atom',
-          checkpoint: '76c533d88289efd1a9bb889e06ef733c092bb8c50483322ee2b60040c9f20b8d'
+  appcast 'https://github.com/zz85/space-radar/releases.atom'
   name 'SpaceRadar'
   homepage 'https://github.com/zz85/space-radar'
 

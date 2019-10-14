@@ -18,19 +18,18 @@ cask 'pokerstars' do
     ['.it', '.net', '.net']
   end
 
-  language 'UK' do
-    ['.uk', '.net', '.net']
+  language 'GB' do
+    ['.uk', 'UK', '.uk']
   end
 
   language 'PT' do
     ['.pt', 'PT', '.pt']
   end
 
-  url "http://www.pokerstars#{language[2]}/PokerStars#{language[1]}.app.zip"
+  url "https://www.pokerstars#{language[2]}/PokerStars#{language[1]}.app.zip"
   name 'PokerStars'
-  homepage "http://www.pokerstars#{language[0]}"
+  homepage "https://www.pokerstars#{language[0]}"
 
-  auto_updates true
   container nested: "PokerStars#{language[1]}/PokerStars#{language[1]}.dmg"
 
   app "PokerStars#{language[1]}.app"

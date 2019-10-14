@@ -1,18 +1,18 @@
 cask 'turbo-boost-switcher' do
-  version '2.6.1'
-  sha256 '2eb8136587a9beeb769cb47f28e433429bd1efc97730b1927cf7c796335a3e19'
+  version '2.9.0'
+  sha256 '8847db3889f5a9fd6ec9fa756721fb05fccb0b78d69b984438a1c0b582d4a758'
 
-  # s3.amazonaws.com/turbo-boost-switcher was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/turbo-boost-switcher/Turbo+Boost+Switcher_#{version}.zip"
+  # turbo-boost-switcher.s3.amazonaws.com was verified as official when first introduced to the cask
+  url "https://turbo-boost-switcher.s3.amazonaws.com/Turbo+Boost+Switcher_#{version}.zip"
+  appcast 'https://www.rugarciap.com/turbo-boost-switcher-for-os-x/'
   name 'Turbo Boost Switcher'
-  homepage 'http://www.rugarciap.com/turbo-boost-switcher-for-os-x/'
+  homepage 'https://www.rugarciap.com/turbo-boost-switcher-for-os-x/'
 
   # App renamed to remove "(English)" suffix
   app 'Turbo Boost Switcher.app'
 
-  uninstall quit:       'rugarciap.com.Turbo-Boost-Switcher',
-            kext:       'com.rugarciap.DisableTurboBoost',
-            login_item: 'Turbo Boost Switcher'
+  uninstall quit: 'rugarciap.com.Turbo-Boost-Switcher',
+            kext: 'com.rugarciap.DisableTurboBoost'
 
   zap trash: '~/Library/Preferences/rugarciap.com.Turbo-Boost-Switcher.plist'
 end

@@ -1,12 +1,13 @@
 cask 'mudlet' do
-  version '3.7.1'
-  sha256 'b79a362d99e5b015ed239201cdb60a0803c4610c839456ff63aad481f64b397d'
+  version '4.2.0'
+  sha256 '615fab9473cc0752bac0dfae33e29f80ce8ba9d74fc28275aa0c24906a1b67ff'
 
-  url "https://www.mudlet.org/download/Mudlet-#{version}.dmg"
-  appcast 'https://github.com/Mudlet/Mudlet/releases.atom',
-          checkpoint: '9bf3128d71ee33fc2eece4c1bf445c45ae2c5b3579d718983a6cbbdca1d9e138'
+  url "https://www.mudlet.org/wp-content/files/Mudlet-#{version}.dmg"
+  appcast 'https://github.com/Mudlet/Mudlet/releases.atom'
   name 'Mudlet'
   homepage 'https://www.mudlet.org/'
+
+  depends_on macos: '>= :sierra'
 
   app 'Mudlet.app'
 end

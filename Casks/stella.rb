@@ -1,11 +1,10 @@
 cask 'stella' do
-  version '5.0.2'
-  sha256 'f09be7c5419276da275488a734fc5b27c3d37ac1bc0fe77445ec568f42f7fa26'
+  version '6.0.2'
+  sha256 'a161d7ac4fa1b70d9029a401a35f900887217f686a51b1663b60d924f0f24439'
 
-  # github.com/stella-emu/stella/releases/download was verified as official when first introduced to the cask
-  url "https://github.com/stella-emu/stella/releases/download/#{version}/Stella-#{version}-macosx.dmg"
-  appcast 'https://github.com/stella-emu/stella/releases.atom',
-          checkpoint: '6bedf88b8daec318a44ecd520a27095db806df6d9b1b92494778883eb4be7713'
+  # github.com/stella-emu/stella was verified as official when first introduced to the cask
+  url "https://github.com/stella-emu/stella/releases/download/#{version}/Stella-#{version}-macos.dmg"
+  appcast 'https://github.com/stella-emu/stella/releases.atom'
   name 'Stella'
   homepage 'https://stella-emu.github.io/'
 

@@ -6,8 +6,6 @@ cask 'coccoc' do
   name 'Cốc Cốc'
   homepage 'https://coccoc.com/'
 
-  auto_updates true
-
   app 'CocCoc.app'
 
   uninstall launchctl: 'com.coccoc.CocCoc'

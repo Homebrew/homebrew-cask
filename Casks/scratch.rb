@@ -1,24 +1,12 @@
 cask 'scratch' do
-  version '2.0,458.0.1'
-  sha256 '52c115cc8ab1df6e55b2e2b2e0662484c26b5e5713acd4cf63d03e8d24895e0f'
+  version '3.6.0'
+  sha256 '41181d5877be753d1d4df14f90fb3fafe3ea704b54741ccea6229c0811aa6891'
 
-  url "https://scratch.mit.edu/scratchr2/static/sa/Scratch-#{version.after_comma}.dmg"
-  appcast 'https://scratch.mit.edu/scratchr2/static/sa/version.xml',
-          checkpoint: '36a3f46c516aeb0230bfc4dac736d1c13ef9586967db08b821c1ad7f1db3c8ca'
+  url "https://downloads.scratch.mit.edu/desktop/Scratch%20Desktop-#{version}.dmg"
   name 'Scratch'
   homepage 'https://scratch.mit.edu/download'
 
-  depends_on cask: 'adobe-air'
+  depends_on macos: '>= :high_sierra'
 
-  installer script: {
-                      executable: "Install Scratch #{version.major}.app/Contents/MacOS/Install Scratch #{version.major}",
-                      args:       ['-silent'],
-                      sudo:       true,
-                    }
-
-  uninstall script: {
-                      executable: Hbc::Container::Air::INSTALLER_PATHNAME,
-                      args:       ['-uninstall', '-silent', "/Applications/Scratch #{version.major}.app"],
-                      sudo:       true,
-                    }
+  app 'Scratch Desktop.app'
 end

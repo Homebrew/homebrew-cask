@@ -1,21 +1,14 @@
 cask 'sage' do
-  if MacOS.version <= :mavericks
-    version '7.2,10.9.5'
-    sha256 'a4cd5c6f3207cd9c429642bb58a6310ba05e6da9fddbf36dc1aa5e47c5904c96'
-  elsif MacOS.version <= :el_capitan
-    version '7.6,10.11.6'
-    sha256 'ba9ffba5dea394dc808c31a7b71af4d0db9759d9440b4dc2e35c921bd03e916f'
-  else
-    version '8.1,10.12.6'
-    sha256 'bd795369398873ccd26bae7e4ccc67370799d3038bebab911a626f496eba6d33'
-  end
+  version '8.9,10.14.6'
+  sha256 '48dfbd697eaadb77913f8a57e01444e45826bdfeabf5e27ba1bc215c4cbd1764'
 
   # mirrors.mit.edu/sage/osx/intel was verified as official when first introduced to the cask
-  url "http://mirrors.mit.edu/sage/osx/intel/sage-#{version.before_comma}-OSX_#{version.after_comma}-x86_64.app.dmg"
+  url "https://mirrors.mit.edu/sage/osx/intel/sage-#{version.before_comma}-OSX_#{version.after_comma}-x86_64.app.dmg"
+  appcast 'https://mirrors.mit.edu/sage/osx/intel/index.html'
   name 'Sage'
   homepage 'https://www.sagemath.org/'
 
-  depends_on macos: '>= :lion'
+  depends_on macos: '>= :high_sierra'
 
   app "SageMath-#{version.before_comma}.app"
   binary "#{appdir}/SageMath-#{version.before_comma}.app/Contents/Resources/sage/sage"

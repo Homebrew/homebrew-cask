@@ -1,22 +1,23 @@
 cask 'anka-flow' do
-  version '1.2.1.87'
-  sha256 '6944c13c794a09cb8dc6229d1d1fffd618b5e7e7cf241a4ed4398f8ff09180a4'
+  version '2.1.2.112'
+  sha256 '3f6b5654dc625ca700dab3cb7b79cb755353fa56b4cc254c1cb44dab52c92849'
 
   # d1efqjhnhbvc57.cloudfront.net was verified as official when first introduced to the cask
-  url "https://d1efqjhnhbvc57.cloudfront.net/AnkaFlow-#{version}.pkg",
+  url "https://d1efqjhnhbvc57.cloudfront.net/Anka-#{version}.pkg",
       referer: 'https://veertu.com/download-anka-run/'
-  appcast 'https://ankadoc.bitbucket.io/release-notes/index.html',
-          checkpoint: '5d5691037787d28f8cf2d67543fabcc5053f8491cc827c3e9801c485f9fd3343'
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://veertu.com/downloads/ankaflow-latest'
   name 'Veertu Anka Flow'
   homepage 'https://veertu.com/'
 
   depends_on macos: '>= :yosemite'
 
-  pkg "AnkaFlow-#{version}.pkg"
+  pkg "Anka-#{version}.pkg"
 
   uninstall launchctl: [
                          'com.veertu.nlimit',
                          'com.veertu.vlaunch',
+                         'com.veertu.anka.lupd',
+                         'com.veertu.anka.ankakbd',
                        ],
             script:    {
                          executable: '/Library/Application Support/Veertu/Anka/tools/uninstall.sh',
@@ -36,10 +37,7 @@ cask 'anka-flow' do
                '/Library/Application Support/Veertu',
              ]
 
-  caveats <<~EOS
-    Installing this Cask means you have AGREED to the
-    Veertu End User License Agreement at
-
-    https://veertu.com/terms-and-conditions/
-  EOS
+  caveats do
+    license 'https://veertu.com/terms-and-conditions/'
+  end
 end

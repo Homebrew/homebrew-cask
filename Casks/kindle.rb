@@ -1,9 +1,10 @@
 cask 'kindle' do
-  version '48016'
-  sha256 '96acc8fed585c2759f6e001dac4ce91b276147f7866032d2890fac9614cf54e1'
+  version '55093'
+  sha256 '580957ca56b1e77b7952f41970836481f37ada3071eaee3552265069b89ef757'
 
-  # s3.amazonaws.com/kindleformac was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/kindleformac/#{version}/KindleForMac-#{version}.dmg"
+  # kindleformac.s3.amazonaws.com was verified as official when first introduced to the cask
+  url "https://kindleformac.s3.amazonaws.com/#{version}/KindleForMac-#{version}.dmg"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.amazon.com/kindlemacdownload/ref=klp_hz_mac'
   name 'Kindle for Mac'
   homepage 'https://www.amazon.com/gp/digital/fiona/kcp-landing-page'
 

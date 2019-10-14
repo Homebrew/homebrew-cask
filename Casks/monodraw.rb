@@ -1,12 +1,13 @@
 cask 'monodraw' do
-  version '1.3.0,b102'
-  sha256 '9ec85aea974b0b3c773e7ace96405151bc7c8769d2d899410d30119a17a901da'
+  version '1.4,b103'
+  sha256 'a3a61a256908741c7da879726940e27f0b246400c7abe8e862e477db790d3a12'
 
   url "https://updates.helftone.com/monodraw/downloads/Monodraw-#{version.after_comma}.zip"
-  appcast 'https://updates.helftone.com/monodraw/appcast-beta.xml',
-          checkpoint: 'b857ba55dbc0892672aeaf79b9cab7b4fdd42df4a10f421675cd9c3048f784bb'
+  appcast 'https://updates.helftone.com/monodraw/appcast-beta.xml'
   name 'Monodraw'
   homepage 'https://monodraw.helftone.com/'
+
+  depends_on macos: '>= :mojave'
 
   app 'Monodraw.app'
 

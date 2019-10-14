@@ -5,12 +5,11 @@ cask 'themeengine' do
 
     url "https://github.com/alexzielenski/ThemeEngine/releases/download/#{version}/ThemeEngine.zip"
   else
-    version '1.0.0(111)'
+    version '1.0.0,111'
     sha256 '2f7039bf8a30a20da20b292252759a501d15962f909d3b2274db9c2ec7a3bf39'
 
-    url "https://github.com/alexzielenski/ThemeEngine/releases/download/#{version}/ThemeEngine_111.zip"
-    appcast 'https://github.com/alexzielenski/ThemeEngine/releases.atom',
-            checkpoint: '2a7e7a1de19bee26223d2c6d486064866309203aef57d77a77b247f9c9904a39'
+    url "https://github.com/alexzielenski/ThemeEngine/releases/download/#{version.before_comma}(#{version.after_comma})/ThemeEngine_111.zip"
+    appcast 'https://github.com/alexzielenski/ThemeEngine/releases.atom'
   end
 
   name 'ThemeEngine'

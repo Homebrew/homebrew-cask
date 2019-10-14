@@ -1,14 +1,14 @@
 cask 'bitcoin-core' do
-  version '0.16.0'
-  sha256 'df0036bae9f40536095908c9944ed66c0946f178ae8ef07639caf25a390b2ee7'
+  version '0.18.1'
+  sha256 '063b757820fead6e94eac5a52859bcb6421e23db71e562ddd2ebacdeecc621b7'
 
   # bitcoin.org was verified as official when first introduced to the cask
   url "https://bitcoin.org/bin/bitcoin-core-#{version}/bitcoin-#{version}-osx.dmg"
+  appcast 'https://github.com/bitcoin/bitcoin/releases.atom'
   name 'Bitcoin Core'
   homepage 'https://bitcoincore.org/'
 
   conflicts_with cask: 'bitcoin-xt'
-  depends_on macos: '>= :mountain_lion'
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app 'Bitcoin-Qt.app', target: 'Bitcoin Core.app'

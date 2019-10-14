@@ -6,5 +6,5 @@ cask 'geotagger' do
   name 'Geotagger'
   homepage 'http://craig.stanton.net.nz/code/geotagger/'
 
-  app "Geotagger #{version.major}/Geotagger.app"
+  app 'Geotagger.app'
 end

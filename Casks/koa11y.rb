@@ -4,8 +4,7 @@ cask 'koa11y' do
 
   # github.com/open-indy/Koa11y was verified as official when first introduced to the cask
   url "https://github.com/open-indy/Koa11y/releases/download/v#{version}/OSX_Koa11y_#{version}.zip"
-  appcast 'https://github.com/open-indy/Koa11y/releases.atom',
-          checkpoint: '7aef34815af55a47089cadf45a459dd8635772789afdb91e3ed6470d55df67f8'
+  appcast 'https://github.com/open-indy/Koa11y/releases.atom'
   name 'Koa11y'
   homepage 'https://open-indy.github.io/Koa11y/'
 

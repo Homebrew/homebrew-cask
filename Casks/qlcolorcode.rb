@@ -1,10 +1,9 @@
 cask 'qlcolorcode' do
-  version '2.0.9'
-  sha256 '2b373ea51148f43a0b7e7feafcf2a5422692d7a03e787afdd3692ec4341bf33f'
+  version '2.1.0'
+  sha256 '104e048948ecd2c9da6e6cd24c49e0adc62b7d9623fa1fa091a8cbe8ec2fced4'
 
   url "https://github.com/anthonygelibert/QLColorCode/releases/download/release-#{version}/QLColorCode.qlgenerator.zip"
-  appcast 'https://github.com/anthonygelibert/QLColorCode/releases.atom',
-          checkpoint: '59313b59f78db19be800a35d199cc98729d9bf2650f14606a21ec517451ce745'
+  appcast 'https://github.com/anthonygelibert/QLColorCode/releases.atom'
   name 'QLColorCode'
   homepage 'https://github.com/anthonygelibert/QLColorCode'
 

@@ -1,14 +1,13 @@
 cask 'monero-wallet' do
-  version '0.11.1.0'
-  sha256 '4f63ac3e9c5f87f8d8318ff89cdbfa954716e8addbdc8fcd0352fe678b84f8e2'
+  version '0.14.1.0'
+  sha256 'b0d3f906265a27b2b60090466e693d7f15a00bb8d058d8fad89f0b10c50fe6ea'
 
   url "https://downloads.getmonero.org/gui/monero-gui-mac-x64-v#{version}.tar.bz2"
-  appcast 'https://github.com/monero-project/monero-gui/releases.atom',
-          checkpoint: '8103e0f7aff022cf6d8ae8aff8c82dc2174f1a766a2b02de5c382e56a8564588'
+  appcast 'https://github.com/monero-project/monero-gui/releases.atom'
   name 'Monero Wallet'
   homepage 'https://getmonero.org/'
 
-  app 'monero-wallet-gui.app'
+  app "monero-gui-v#{version}/monero-wallet-gui.app"
 
   zap trash: [
                '~/.bitmonero',

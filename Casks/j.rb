@@ -1,17 +1,20 @@
 cask 'j' do
-  version '806'
-  sha256 '29df4c491b50f5cfef73a2f4a6e89d18bc514a45851a2766d617746f615b934c'
+  version '807'
+  sha256 '3c78500eded82cd70dfff522ae61c54c0b7b8e746e43535e47f8e4c9df0987bd'
 
-  url "http://www.jsoftware.com/download/j#{version}/install/j#{version}_mac64.zip"
+  url "https://www.jsoftware.com/download/j#{version}/install/j#{version}_mac64.zip"
   name 'J'
-  homepage 'http://www.jsoftware.com/'
+  homepage 'https://www.jsoftware.com/'
 
   apps = ['jbrk', 'jcon', 'jhs', 'jqt']
   apps.each do |a|
     app "j64-#{version}/#{a}.app"
   end
 
-  installer script: "j64-#{version}/updatejqt.sh"
+  installer script: {
+                      executable: "j64-#{version}/bin/jconsole",
+                      args:       ['-js', "exit install'qtide'"],
+                    }
 
   # target names according to readme.txt
   ['jcon', 'jconsole'].each do |b|
@@ -35,4 +38,6 @@ cask 'j' do
       IO.write apprun, IO.read(apprun).gsub(%r{`dirname "\$0"`.*?/bin}, "#{staged_path}/j64-#{version}/bin")
     end
   end
+
+  uninstall delete: "#{staged_path}/#{token}" # Not actually necessary, since it would be deleted anyway. It is present to make clear an uninstall was not forgotten and that for this cask it is indeed this simple.
 end

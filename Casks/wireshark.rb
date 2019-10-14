@@ -1,31 +1,20 @@
 cask 'wireshark' do
-  version '2.4.5'
-  sha256 '028592817849f180f4014288a9566910e4ab508cb3b53a9721c9c667379acd15'
+  version '3.0.5'
+  sha256 '21bffc033dfbee74d30c6209dfa7ed57107cb7dd9d394fee579a333cddb746e6'
 
   url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20Intel%2064.dmg"
-  appcast 'https://www.wireshark.org/download/osx/',
-          checkpoint: 'd7e3d149e596bc245ecda422f1ad7114a58d09da9167ab622f9d593f92fef11c'
+  appcast 'https://www.macupdater.net/cgi-bin/extract_text/extract_text_split_easy.cgi?url=https://www.wireshark.org/download.html&splitter_1=stable&index_1=1&splitter_2=development&index_2=0'
   name 'Wireshark'
   homepage 'https://www.wireshark.org/'
 
   conflicts_with cask: 'wireshark-chmodbpf'
-  depends_on macos: '>= :mountain_lion'
+  depends_on macos: '>= :sierra'
 
   pkg "Wireshark #{version} Intel 64.pkg"
 
-  postflight do
-    system_command '/usr/sbin/dseditgroup',
-                   args: [
-                           '-o', 'edit',
-                           '-a', Etc.getpwuid(Process.euid).name,
-                           '-t', 'user',
-                           '--', 'access_bpf'
-                         ],
-                   sudo: true
-  end
-
   uninstall_preflight do
     set_ownership '/Library/Application Support/Wireshark'
+    system_command '/usr/sbin/dseditgroup', args: ['-o', 'delete', 'access_bpf'], sudo: true
   end
 
   uninstall pkgutil:   'org.wireshark.*',
@@ -43,13 +32,7 @@ cask 'wireshark' do
                          '/usr/local/bin/text2pcap',
                          '/usr/local/bin/tshark',
                          '/usr/local/bin/wireshark',
-                       ],
-            script:    {
-                         executable:   '/usr/sbin/dseditgroup',
-                         args:         ['-o', 'delete', 'access_bpf'],
-                         must_succeed: false,
-                         sudo:         true,
-                       }
+                       ]
 
   zap trash: '~/Library/Saved Application State/org.wireshark.Wireshark.savedState'
 end

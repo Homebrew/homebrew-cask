@@ -1,20 +1,22 @@
 cask 'gimp' do
-  version '2.8.22'
-  sha256 '3414960c54b262b5793947f55a6d1ab53045a507978a21ff758a54bf6be4bd16'
+  version '2.10.12'
+  sha256 '8b964ad3dbbe31d0fa48fb834aa4c17fc0eb81becbc4595a57b04e3d4fc6efeb'
 
   url "https://download.gimp.org/pub/gimp/v#{version.major_minor}/osx/gimp-#{version}-x86_64.dmg"
+  appcast 'https://download.gimp.org/pub/gimp/stable/osx/'
   name 'GIMP'
   homepage 'https://www.gimp.org/'
 
-  app 'GIMP.app'
+  app "GIMP-#{version.major_minor}.app"
+  binary "#{appdir}/GIMP-#{version.major_minor}.app/Contents/MacOS/gimp"
 
   postflight do
-    set_permissions "#{appdir}/GIMP.app/Contents/MacOS/GIMP", 'a+rx'
+    set_permissions "#{appdir}/GIMP-#{version.major_minor}.app/Contents/MacOS/gimp", 'a+rx'
   end
 
   zap trash: [
-               '~/Library/Preferences/org.gnome.gimp.plist',
-               '~/Library/Application Support/GIMP',
-               '~/Library/Saved Application State/org.gnome.gimp.savedState',
+               "~/Library/Preferences/org.gimp.gimp-#{version.major_minor}:.plist",
+               '~/Library/Application Support/Gimp',
+               "~/Library/Saved Application State/org.gimp.gimp-#{version.major_minor}:.savedState",
              ]
 end

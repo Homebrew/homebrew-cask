@@ -4,12 +4,11 @@ cask 'duckietv' do
 
   # github.com/SchizoDuckie/DuckieTV was verified as official when first introduced to the cask
   url "https://github.com/SchizoDuckie/DuckieTV/releases/download/#{version}/DuckieTV-#{version}-OSX-x64.pkg"
-  appcast 'https://github.com/SchizoDuckie/DuckieTV/releases.atom',
-          checkpoint: 'e7660106640d75125840fa6d96d219a30ea65e70bcc20450f7b22bc0cdabbff1'
+  appcast 'https://github.com/SchizoDuckie/DuckieTV/releases.atom'
   name 'duckieTV'
   homepage 'https://schizoduckie.github.io/DuckieTV/'
 
-  pkg "DuckieTV-#{version}-OSX-x64.pkg", allow_untrusted: true
+  pkg "DuckieTV-#{version}-OSX-x64.pkg"
 
   uninstall pkgutil: 'tv.duckie.base.pkg',
             delete:  [

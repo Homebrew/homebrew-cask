@@ -4,8 +4,7 @@ cask 'entropy' do
 
   # eigenlogik.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://eigenlogik.s3.amazonaws.com/releases/entropy/Entropy-#{version}.zip"
-  appcast 'http://hyperion.eigenlogik.com/appcast/feed/entropy/',
-          checkpoint: 'a24f2a03ce0d554d1daf8e7934579702f2af3faaae8373d2d7c9cdb7e269a267'
+  appcast 'http://hyperion.eigenlogik.com/appcast/feed/entropy/'
   name 'Entropy'
   homepage 'http://www.eigenlogik.com/entropy/'
 

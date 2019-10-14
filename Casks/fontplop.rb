@@ -4,10 +4,9 @@ cask 'fontplop' do
 
   # github.com/matthewgonzalez/fontplop was verified as official when first introduced to the cask
   url "https://github.com/matthewgonzalez/fontplop/releases/download/v#{version}/fontplop-#{version}.dmg"
-  appcast 'https://github.com/matthewgonzalez/fontplop/releases.atom',
-          checkpoint: '7b9ac9820050a5079b096960e60203fe63c3e2a46cd610a0847c4e42fe224794'
+  appcast 'https://github.com/matthewgonzalez/fontplop/releases.atom'
   name 'Fontplop'
-  homepage 'http://www.fontplop.com/'
+  homepage 'https://www.fontplop.com/'
 
   app 'fontplop.app'
 end

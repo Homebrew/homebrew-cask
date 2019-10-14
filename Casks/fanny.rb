@@ -1,10 +1,13 @@
 cask 'fanny' do
-  version '1.0.3'
-  sha256 '3c7bcc29006650cbcb33a28fa0a97480227ab36f3bb5453243fef1563bb92bc0'
+  version '2.0.1'
+  sha256 '2d5375ce7b7f0ee921ec171c894b49d753a17cc030d071aafd94b4ee114dc07a'
 
-  url 'http://fannywidget.com/FannyWidget.zip'
+  url 'https://fannywidget.com/FannyWidget.zip'
+  appcast 'https://github.com/DanielStormApps/Fanny/releases.atom'
   name 'FannyWidget'
-  homepage 'http://fannywidget.com/'
+  homepage 'https://fannywidget.com/'
 
-  app "Fanny #{version}/fanny.app"
+  depends_on macos: '>= :high_sierra'
+
+  app 'FannyWidget/Fanny.app'
 end

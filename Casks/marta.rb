@@ -1,12 +1,13 @@
 cask 'marta' do
-  version '0.4.7'
-  sha256 '263f8c36a4b91490f54e0c2b2c15bfb1b9b3c6456acb3ada811376dfafabe492'
+  version '0.7'
+  sha256 '0692fabab3f423f740e563a6d5109091d6e2b5c5936b89885b3b6cc101766d5d'
 
-  url "https://marta.yanex.org/updates/Marta-#{version}.dmg"
-  appcast 'https://marta.yanex.org/updates/appcast.xml',
-          checkpoint: 'c6a78d1e244f3ff506b19cd8c46e2155bb96392030da65483b7077baffe6cd76'
+  url "https://updates.marta.yanex.org/release/Marta-#{version}.dmg"
+  appcast 'https://updates.marta.yanex.org/release/appcast.xml'
   name 'Marta File Manager'
   homepage 'https://marta.yanex.org/'
+
+  depends_on macos: '>= :high_sierra'
 
   app 'Marta.app'
 

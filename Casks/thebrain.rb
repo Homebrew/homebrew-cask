@@ -1,8 +1,9 @@
 cask 'thebrain' do
-  version '9.0.226.0'
-  sha256 'ef11361748d357a8c506e6e4eec1085032adef1eb815f6dade3eecbbf1fd7f40'
+  version '10.0.58.0'
+  sha256 '89e1b53c25df1e9f816b7c8fac3ac43eb0abf40e6b05c625331581f541cc3780'
 
   url "http://updater.thebrain.com/files/TheBrain#{version}.dmg"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://salesapi.thebrain.com/?a=doDirectDownload%26id=10000'
   name 'TheBrain'
   homepage 'https://www.thebrain.com/'
 

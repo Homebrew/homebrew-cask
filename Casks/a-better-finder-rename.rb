@@ -1,15 +1,13 @@
 cask 'a-better-finder-rename' do
-  version '10.27'
-  sha256 'f2ca1e4a2cd78c904e270236db2dd66c343b57fbfd415e6a44af0e9a32d2d496'
+  version '10.45'
+  sha256 :no_check # required as upstream package is updated in-place
 
-  url "http://www.publicspace.net/download/ABFRX#{version.major}.dmg"
-  appcast "http://www.publicspace.net/app/signed_abfr#{version.major}.xml",
-          checkpoint: '62560ec4ed95592d028beea3798918d9b2e6fe0d8ae6ede72359572b9b13e85d'
+  url "https://www.publicspace.net/download/ABFRX#{version.major}.dmg"
+  appcast "https://www.publicspace.net/app/signed_abfr#{version.major}.xml"
   name 'A Better Finder Rename'
-  homepage 'http://www.publicspace.net/ABetterFinderRename/'
+  homepage 'https://www.publicspace.net/ABetterFinderRename/'
 
   auto_updates true
-  depends_on macos: '>= :lion'
 
   app "A Better Finder Rename #{version.major}.app"
 

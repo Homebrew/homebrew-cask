@@ -1,16 +1,14 @@
 cask 'gitup' do
-  version '1.0.11'
-  sha256 '3cd4b67bd76cdcec924895d69f6e867233bcc026fee5507fce43333e8b47fb4d'
+  version '1.1'
+  sha256 '0f59d3c0514e98e4f8fad710c42a12995866305c509b91da0ade7270b95efb4d'
 
-  # s3-us-west-2.amazonaws.com/gitup-builds was verified as official when first introduced to the cask
-  url 'https://s3-us-west-2.amazonaws.com/gitup-builds/stable/GitUp.zip'
-  appcast 'https://github.com/git-up/GitUp/releases.atom',
-          checkpoint: '8af6cd118a5e855af3afa7468596b32319ed9a4b810c6ffe0145b57bdff6eaaa'
+  # gitup-builds.s3.amazonaws.com was verified as official when first introduced to the cask
+  url 'https://gitup-builds.s3.amazonaws.com/stable/GitUp.zip'
+  appcast 'https://github.com/git-up/GitUp/releases.atom'
   name 'GitUp'
-  homepage 'http://gitup.co/'
+  homepage 'https://gitup.co/'
 
   auto_updates true
-  depends_on macos: '>= :mountain_lion'
 
   app 'GitUp.app'
   binary "#{appdir}/GitUp.app/Contents/SharedSupport/gitup"

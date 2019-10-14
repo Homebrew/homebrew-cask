@@ -1,10 +1,9 @@
 cask 'jettison' do
-  version '1.5.3'
-  sha256 'fdd4a4357b94732c3129cd01af23ce18169b274351c2b5dedba63aa3cb732390'
+  version '1.7.4'
+  sha256 '8a0e1790442b6b762fd44c07f7c23a9262488bae7f3abb5d158b45987e8db808'
 
   url "https://stclairsoft.com/download/Jettison-#{version}.dmg"
-  appcast 'https://stclairsoft.com/cgi-bin/sparkle.cgi?JT',
-          checkpoint: '6319301b4f7de64553226a1f22044eecd9bfcad0f401f091696b115ceaa950d4'
+  appcast 'https://stclairsoft.com/cgi-bin/sparkle.cgi?JT'
   name 'Jettison'
   name 'St. Clair Software Jettison'
   homepage 'https://stclairsoft.com/Jettison/'
@@ -12,8 +11,6 @@ cask 'jettison' do
   auto_updates true
 
   app 'Jettison.app'
-
-  uninstall login_item: 'Jettison'
 
   zap trash: [
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.stclairsoft.jettison.sfl*',

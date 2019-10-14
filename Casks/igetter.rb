@@ -1,8 +1,9 @@
 cask 'igetter' do
-  version '2.9.5'
-  sha256 '6e07dd6ba828b99a009bae254fe632897b492e489ae02da788728ec4b443ba2e'
+  version '2.9.6'
+  sha256 '31acb5393debc5fbb26a8d7a8ff1acf64144422ec127393dbc1a7329d9669a14'
 
   url "https://www.igetter.net/search/downloads/iGetter#{version}.dmg"
+  appcast 'https://www.igetter.net/downloads.html'
   name 'iGetter'
   homepage 'https://www.igetter.net/index.html'
 

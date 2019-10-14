@@ -1,6 +1,6 @@
 cask 'vlc-webplugin' do
-  version '2.2.8'
-  sha256 '5ea1476adf4029c963132ba03d8a50e88f6ca677629cbbcfaf746a81a8f82312'
+  version '3.0.4'
+  sha256 '016aa490a7d924d83f07f46f8f09b74848baa3ca344ef2b02f0e30cb30436fdd'
 
   url "https://get.videolan.org/vlc/#{version}/macosx/VLC-webplugin-#{version}.dmg"
   name 'VLC for OS X web plugin'

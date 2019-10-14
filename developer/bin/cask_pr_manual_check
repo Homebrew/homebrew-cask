@@ -6,8 +6,8 @@ require 'tmpdir'
 
 pr_url = ARGV[0]
 
-abort 'You need to give the script exactly one argument, the URL to a pull request on the Caskroom organisation' if ARGV[0].empty?
-abort 'URL is not from the Caskroom organization' if pr_url !~ %r{^https://github.com/caskroom/}
+abort 'You need to give the script exactly one argument, the URL to a pull request from an official Homebrew Cask tap' if pr_url.nil?
+abort 'URL is not from an official Homebrew Cask tap' if pr_url !~ %r{^https://github.com/Homebrew/homebrew-cask.*}
 
 pr_api = pr_url.sub(%r{^https://github.com/([^/]+)/([^/]+)/pull/([^/]+).*}, 'https://api.github.com/repos/\1/\2/pulls/\3/files')
 pr_json = JSON.parse(open(pr_api).read)

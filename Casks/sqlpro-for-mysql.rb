@@ -1,9 +1,10 @@
 cask 'sqlpro-for-mysql' do
-  version '1.0.54'
-  sha256 '48a606318fca5d3a3e8e3da2a6648c1e409bd1505ed47b30ad852ac0a87b04f4'
+  version '2019.09.12'
+  sha256 '8d25777bd146561b37657b7f54890ed1b73595485f7d4753d13c11a34e14242a'
 
   # d3fwkemdw8spx3.cloudfront.net/mysql was verified as official when first introduced to the cask
   url "https://d3fwkemdw8spx3.cloudfront.net/mysql/SQLProMySQL.#{version}.app.zip"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.mysqlui.com/download.php'
   name 'SQLPro for MySQL'
   homepage 'https://www.mysqlui.com/'
 

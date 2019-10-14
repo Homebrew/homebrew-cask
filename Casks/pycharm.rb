@@ -1,10 +1,9 @@
 cask 'pycharm' do
-  version '2017.3.4,173.4674.37'
-  sha256 '5b83e60f7aa98b366fdad9616af02b87d190d6e5b030a1c0a5618b83622868d8'
+  version '2019.2.3,192.6817.19'
+  sha256 'f8f2738eded9eae5e85b283bc252cf48c2dac87f1b2473aad43e04a337550a06'
 
   url "https://download.jetbrains.com/python/pycharm-professional-#{version.before_comma}.dmg"
-  appcast 'https://data.services.jetbrains.com/products/releases?code=PCP&latest=true&type=release',
-          checkpoint: 'c5d15c115cac0c1b71c6cffebafd28abf09fcb772a518904b6b85269ecf45fe1'
+  appcast 'https://data.services.jetbrains.com/products/releases?code=PCP&latest=true&type=release'
   name 'PyCharm'
   homepage 'https://www.jetbrains.com/pycharm/'
 

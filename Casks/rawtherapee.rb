@@ -1,12 +1,12 @@
 cask 'rawtherapee' do
-  version '5.3'
-  sha256 '5428d5a1f222ce948894df2cddc6359790fe48e7fc1bd39c23d08a557b8d40a7'
+  version '5.7'
+  sha256 '70f7b7fec75f2799d80b2f960cf98815d5a5b199342d993a6019eeb153332c3d'
 
-  url "http://www.rawtherapee.com/shared/builds/mac/RawTherapee_OSX_10.9_64_#{version}.zip"
+  url "https://rawtherapee.com/releases_head/mac/RawTherapee_OSX_10.9_64_#{version}.zip"
+  appcast 'https://github.com/Beep6581/RawTherapee/releases.atom'
   name 'RawTherapee'
-  homepage 'http://rawtherapee.com/'
+  homepage 'https://rawtherapee.com/'
 
-  depends_on macos: '>= :mavericks'
   container nested: "RawTherapee_OSX_10.9_64_#{version}.dmg"
 
   app 'RawTherapee.app'

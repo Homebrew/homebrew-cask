@@ -1,9 +1,10 @@
 cask 'awa' do
-  version '1.5.1'
-  sha256 'c9b7fc96c04e2ac40be41ee8db494581c2b0dcc7af764571e977fe18a2494eb0'
+  version '1.5.3'
+  sha256 'ce2a7f12c0fc331b90cea1ce6c6e962265c21cab46833a0b6e63aef230f92542'
 
   # download-d.awa.io/mac/stable was verified as official when first introduced to the cask
   url "https://download-d.awa.io/mac/stable/AWASetup-v#{version}.dmg"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://pd.awa.io/mac/stable/latest'
   name 'AWA'
   homepage 'https://awa.fm/'
 

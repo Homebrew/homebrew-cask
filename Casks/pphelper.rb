@@ -1,15 +1,12 @@
 cask 'pphelper' do
-  version '2.3.7'
-  sha256 '214366e0679c2df2bd5db78cf289eba9a099a4582b3f7c9882b29ac34eee24cd'
+  version '2.4.0'
+  sha256 '2bcade81898c8c1d41c2877d906b94bd889178204c53cd85655d7219d30e55c6'
 
   url 'https://ghost.25pp.com/soft/pp_mac.dmg'
-  appcast 'https://liveupdate.25pp.com/macpc/Appcast.xml',
-          checkpoint: '4dbd535d15e55337260838cc0a2313af0934e3d6bdf76aa1a9303e3ee0dc0a6b'
+  appcast 'https://liveupdate.25pp.com/macpc/Appcast.xml'
   name 'pphelper'
   name 'pp助手'
   homepage 'https://pro.25pp.com/pp_mac_ios'
-
-  depends_on macos: '>= :lion'
 
   app 'pp助手.app'
 

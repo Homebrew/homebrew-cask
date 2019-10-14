@@ -4,10 +4,9 @@ cask 'parse' do
 
   # github.com/parse-community was verified as official when first introduced to the cask
   url "https://github.com/parse-community/parse-cli/releases/download/release_#{version}/parse"
-  appcast 'https://github.com/parse-community/parse-cli/releases.atom',
-          checkpoint: '028a2ba1e6a24b6cc7735aec49a3f60c076613a2160d9272c1fe3230cc952be2'
+  appcast 'https://github.com/parse-community/parse-cli/releases.atom'
   name 'Parse'
-  homepage 'http://parseplatform.org/'
+  homepage 'https://parseplatform.org/'
 
   container type: :naked
 

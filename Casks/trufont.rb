@@ -4,8 +4,7 @@ cask 'trufont' do
 
   # github.com/trufont/trufont was verified as official when first introduced to the cask
   url "https://github.com/trufont/trufont/releases/download/#{version}/TruFont.app.zip"
-  appcast 'https://github.com/trufont/trufont/releases.atom',
-          checkpoint: '94f15046baf1df5da48358493e4ab5895ed918e80abf67623dad4f1490c163a9'
+  appcast 'https://github.com/trufont/trufont/releases.atom'
   name 'TruFont'
   homepage 'https://trufont.github.io/'
 

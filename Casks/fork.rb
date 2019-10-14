@@ -1,16 +1,17 @@
 cask 'fork' do
-  version '1.0.65.1'
-  sha256 '9582a2a7cf2a43e6a167199a0520d145c130dcf7555df7901b0f02e2611d75f6'
+  version '1.0.84'
+  sha256 '2fafa381b5672851a2395af1499e1b9cff86fca1e5dec3ea355193f28f706051'
 
-  url 'https://git-fork.com/update/files/Fork.dmg'
-  appcast 'https://git-fork.com/update/feed.xml',
-          checkpoint: 'fa2ef7f0fc096180267bb2332af0f0074d77088e7bfe1f00e8f4b39beb5e60eb'
+  # forkapp.ams3.cdn.digitaloceanspaces.com/mac was verified as official when first introduced to the cask
+  url "https://forkapp.ams3.cdn.digitaloceanspaces.com/mac/Fork-#{version}.dmg"
+  appcast 'https://git-fork.com/update/feed.xml'
   name 'Fork'
   homepage 'https://git-fork.com/'
 
   auto_updates true
 
   app 'Fork.app'
+  binary "#{appdir}/Fork.app/Contents/Resources/fork_cli", target: 'fork'
 
   zap trash: [
                '~/Library/Application Support/com.DanPristupov.Fork',

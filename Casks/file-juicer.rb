@@ -1,8 +1,9 @@
 cask 'file-juicer' do
-  version '4.66'
-  sha256 'f8b13fc813b95af16c7d0a26ec254cca22cdfc46c499534fdfff3c29657d4345'
+  version '4.79'
+  sha256 :no_check # required as upstream package is updated in-place
 
   url "https://echoone.com/filejuicer/FileJuicer-#{version}.zip"
+  appcast 'https://echoone.com/filejuicer/download'
   name 'File Juicer'
   homepage 'https://echoone.com/filejuicer/'
 

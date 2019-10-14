@@ -1,30 +1,32 @@
 cask 'miniconda' do
-  version :latest
-  sha256 :no_check
+  version '4.6.14'
+  sha256 '2ec958508139289df3b5e2c10257311af4f0ebf39242f61d39f11e7fa14ebb40'
 
-  # repo.continuum.io/miniconda was verified as official when first introduced to the cask
-  url 'https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh'
+  # repo.anaconda.com/miniconda was verified as official when first introduced to the cask
+  url "https://repo.anaconda.com/miniconda/Miniconda3-#{version}-MacOSX-x86_64.sh"
   name 'Continuum Analytics Miniconda'
-  homepage 'https://www.anaconda.com/what-is-anaconda/'
+  homepage 'https://conda.io/miniconda.html'
 
   auto_updates true
-  depends_on macos: '>= :lion'
   container type: :naked
 
   installer script: {
-                      executable: 'Miniconda3-latest-MacOSX-x86_64.sh',
-                      args:       ['-b', '-p', "#{HOMEBREW_PREFIX}/miniconda3"],
-                      sudo:       true,
+                      executable: "Miniconda3-#{version}-MacOSX-x86_64.sh",
+                      args:       ['-b', '-p', "#{caskroom_path}/base"],
                     }
+  binary "#{caskroom_path}/base/condabin/conda"
 
-  postflight do
-    set_ownership "#{HOMEBREW_PREFIX}/miniconda3"
-  end
+  uninstall delete: "#{caskroom_path}/base"
 
-  uninstall delete: "#{HOMEBREW_PREFIX}/miniconda3"
+  zap trash: [
+               '~/.condarc',
+               '~/.conda',
+               '~/.continuum',
+             ]
 
-  caveats do
-    path_environment_variable "#{HOMEBREW_PREFIX}/miniconda3/bin"
-    files_in_usr_local
-  end
+  caveats <<~EOS
+    Please run the following to setup your shell:
+
+      conda init "$(basename "${SHELL}")"
+  EOS
 end

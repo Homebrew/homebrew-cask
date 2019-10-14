@@ -6,7 +6,5 @@ cask 'instasizer' do
   name 'Instasizer'
   homepage 'http://www.tapgods.com/instasizer/'
 
-  depends_on macos: '>= :lion'
-
   app 'Instasizer.app'
 end

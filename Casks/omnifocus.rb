@@ -11,16 +11,21 @@ cask 'omnifocus' do
     version '2.10'
     sha256 'e808a72e60cdff9ff5aa1046d856bf62d6418e4915248816c4640e32e52fd8e8'
     url "https://downloads.omnigroup.com/software/MacOSX/10.11/OmniFocus-#{version}.dmg"
-  else
-    version '2.12.1'
-    sha256 '9cf156c8a96cfb47f931701efa2a395fca7ccf4baecd26f216e70b011c3c7f0f'
+  elsif MacOS.version <= :sierra
+    version '2.12.4'
+    sha256 '8a2dc53331dba804f6781773fef546a03c181fc4ff0eb7ee4f871c10342621f0'
     url "https://downloads.omnigroup.com/software/MacOSX/10.12/OmniFocus-#{version}.dmg"
+  else
+    version '3.4.2'
+    sha256 '3492aad2f19e8e0963f29a7ece9fd72b548086bd4c6dea50d8c764ba76894158'
+    url "https://downloads.omnigroup.com/software/MacOSX/10.13/OmniFocus-#{version}.dmg"
   end
 
-  appcast "https://update.omnigroup.com/appcast/com.omnigroup.OmniFocus#{version.major}",
-          checkpoint: '2870a5fc1ba17bae60451999bc0dba8157200de9d39cb762b99c0728588261a1'
+  appcast "https://update.omnigroup.com/appcast/com.omnigroup.OmniFocus#{version.major}"
   name 'OmniFocus'
   homepage 'https://www.omnigroup.com/omnifocus/'
+
+  auto_updates true
 
   app 'OmniFocus.app'
 

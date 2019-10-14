@@ -1,10 +1,9 @@
 cask 'livereload' do
-  version '2.3.74'
-  sha256 '7a192cda9c15efdeea00ca53153be0c649e3d413719f8291e4f1684c0132506b'
+  version '2.3.84'
+  sha256 '1c915d4956177cfa5981896cb060fd00743f3d74157ad4e189901d0123fd8c7f'
 
   url "http://download.livereload.com/LiveReload-#{version}.zip"
-  appcast 'https://s3.amazonaws.com/download.livereload.com/LiveReload-Mac-appcast.xml',
-          checkpoint: '755f681d6ccf6d2e69dc86ac31f69c131632cc9f4a11554c46277d6824256213'
+  appcast 'https://s3.amazonaws.com/download.livereload.com/LiveReload-Mac-appcast.xml'
   name 'LiveReload'
   homepage 'http://livereload.com/'
 

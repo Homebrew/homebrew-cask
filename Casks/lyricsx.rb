@@ -1,10 +1,9 @@
 cask 'lyricsx' do
-  version '1.2.3'
-  sha256 '70066b02b54a7c8ce84a1c7a63e7ab7f680f27e109d9361756085f6efce21fd2'
+  version '1.5.1,2158'
+  sha256 '922c87cb80559a9c3d1f1ba39c35555603ffeafaefaa61ec380a76c0f7a056cc'
 
-  url "https://github.com/ddddxxx/LyricsX/releases/download/v#{version}/LyricsX.app.zip"
-  appcast 'https://github.com/ddddxxx/LyricsX/releases.atom',
-          checkpoint: '8ad7d3ff76ffc5d54f4f908c146929d2fa66b20402490db177446c9f40771571'
+  url "https://github.com/ddddxxx/LyricsX/releases/download/v#{version.before_comma}/LyricsX_#{version.before_comma}+#{version.after_comma}.zip"
+  appcast 'https://github.com/ddddxxx/LyricsX/releases.atom'
   name 'LyricsX'
   homepage 'https://github.com/ddddxxx/LyricsX'
 

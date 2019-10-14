@@ -6,7 +6,7 @@ cask 'overdrive-media-console' do
   name 'OverDrive Media Console'
   homepage 'https://www.overdrive.com/'
 
-  pkg "OverDrive-Mac-Installer-Version-#{version}.pkg", allow_untrusted: true
+  pkg "OverDrive-Mac-Installer-Version-#{version}.pkg"
 
   uninstall pkgutil: 'com.overdrive.overdriveMediaConsole.*'
 

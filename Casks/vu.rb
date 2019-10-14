@@ -1,13 +1,14 @@
 cask 'vu' do
-  version '1.1'
-  sha256 '7c6424e0c4c3e0eb92edb1904617231afbb7f4de3aa120f803cc5403ae11406c'
+  version '6,1523016199'
+  sha256 'a51884117a8e33339429a93a84c70eb82db46dc50ebe827ab7b7c9a0c6ced313'
 
   # dl.devmate.com/com.boriskarulin.vu was verified as official when first introduced to the cask
-  url 'https://dl.devmate.com/com.boriskarulin.vu/vu.dmg'
-  appcast 'http://updates.devmate.com/com.boriskarulin.vu.xml',
-          checkpoint: '5caad13605150adf41ee58b113ba3669f4376b84e9a57feaed836b65f2d69f5d'
+  url "https://dl.devmate.com/com.boriskarulin.vu/#{version.before_comma}/#{version.after_comma}/vu-#{version.before_comma}.dmg"
+  appcast 'https://updates.devmate.com/com.boriskarulin.vu.xml'
   name 'vu'
   homepage 'https://datastills.com/vu/'
+
+  depends_on macos: '>= :sierra'
 
   app 'vu.app'
 end

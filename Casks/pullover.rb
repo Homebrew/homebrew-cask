@@ -1,10 +1,9 @@
 cask 'pullover' do
-  version '1.2.0'
-  sha256 '134b185b095871594f53008fbd91a5c963c67034c8e8462e0919279f0d93e741'
+  version '1.3.0'
+  sha256 '2e0805d6d358c76ffc776f0641b2e95c1cdd4696b5bc13361b8af990e3708787'
 
   url "https://github.com/cgrossde/Pullover/releases/download/#{version}/Pullover_#{version}.dmg"
-  appcast 'https://github.com/cgrossde/Pullover/releases.atom',
-          checkpoint: '7610adf404cef72b9a637341c92fcbfdffbc4b5f7dbdd0594862f006b694372d'
+  appcast 'https://github.com/cgrossde/Pullover/releases.atom'
   name 'Pullover'
   homepage 'https://github.com/cgrossde/Pullover'
 

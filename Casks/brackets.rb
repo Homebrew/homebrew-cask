@@ -1,11 +1,10 @@
 cask 'brackets' do
-  version '1.12'
-  sha256 '11805e056d01964c0a4226203db5e7bf55819294020c1a9194ed8e6e2fb60f7b'
+  version '1.14'
+  sha256 'd1545549863a79a3c4824f9a35866e78f2822664ddeeaeb3cf85a14b491a86cb'
 
   # github.com/adobe/brackets was verified as official when first introduced to the cask
   url "https://github.com/adobe/brackets/releases/download/release-#{version}/Brackets.Release.#{version}.dmg"
-  appcast 'https://github.com/adobe/brackets/releases.atom',
-          checkpoint: 'b231daac3fbba80810f29cf89634545e7313e0a439b71157abc8f268246d5253'
+  appcast 'https://github.com/adobe/brackets/releases.atom'
   name 'Brackets'
   homepage 'http://brackets.io/'
 

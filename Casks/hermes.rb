@@ -4,10 +4,9 @@ cask 'hermes' do
 
   # github.com/HermesApp/Hermes was verified as official when first introduced to the cask
   url "https://github.com/HermesApp/Hermes/releases/download/v#{version}/Hermes-#{version}.zip"
-  appcast 'https://raw.githubusercontent.com/HermesApp/HermesApp.github.io/master/versions.xml',
-          checkpoint: '11e95c0584ac859fff5dd0782a85c46b38afa1c50076d3d8fd5c6f351cf1959f'
+  appcast 'https://raw.githubusercontent.com/HermesApp/HermesApp.github.io/master/versions.xml'
   name 'Hermes'
-  homepage 'http://hermesapp.org/'
+  homepage 'https://hermesapp.org/'
 
   auto_updates true
 

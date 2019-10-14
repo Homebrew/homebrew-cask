@@ -3,8 +3,9 @@ cask 'tongbu' do
   sha256 '5f655b0bf7097dd53a56129dceb5205a1ac4af717fd8e7b8d78328d366baca8a'
 
   url "http://qd.tongbu.com/qd/tbzsqd/zsmac_#{version.split('_')[0]}/Tongbu_mac_v#{version}.dmg"
+  appcast 'https://zs.tongbu.com/mac/'
   name 'Tongbu'
-  homepage 'http://www.tongbu.com/mac'
+  homepage 'https://www.tongbu.com/mac'
 
   app 'Tongbu.app'
 end

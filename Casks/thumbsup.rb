@@ -4,10 +4,9 @@ cask 'thumbsup' do
 
   # s3.amazonaws.com/DTWebsiteSupport was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/freeware/thumbsup/#{version}/ThumbsUp.app.zip"
-  appcast 'http://www.devontechnologies.com/download/thank-you-for-downloading.html?productid=900000015',
-          checkpoint: 'cd24b12aeded11293ddd5039f5072be0b991c92541fd9b629d4d8e7d33d2cfcc'
+  appcast 'https://www.macupdater.net/cgi-bin/extract_text/extract_text_split_easy.cgi?url=https://www.devontechnologies.com/support/download&splitter_1=ThumbsUp&index_1=1&splitter_2=Mac&index_2=0'
   name 'ThumbsUp'
-  homepage 'https://www.devontechnologies.com/products/freeware.html#c966'
+  homepage 'https://www.devontechnologies.com/apps/freeware'
 
   app 'ThumbsUp.app'
 end

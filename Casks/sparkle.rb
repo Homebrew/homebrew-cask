@@ -1,11 +1,10 @@
 cask 'sparkle' do
-  version '1.18.1'
-  sha256 '7a7a486d2c5adb75bdd78775946da2b37b82b93cb3eea96049f7b1d8569f11cc'
+  version '1.20.0'
+  sha256 '6608a56ff95d714b2a18bda8022f7d846d57601150b8c6e077b0936f74b1c6a8'
 
   # github.com/sparkle-project/Sparkle was verified as official when first introduced to the cask
   url "https://github.com/sparkle-project/Sparkle/releases/download/#{version}/Sparkle-#{version}.tar.bz2"
-  appcast 'https://github.com/sparkle-project/Sparkle/releases.atom',
-          checkpoint: '64a09869d80b7e7355696e243a05692ea77414a97e12f71ff4e6535acd224a47'
+  appcast 'https://github.com/sparkle-project/Sparkle/releases.atom'
   name 'Sparkle'
   homepage 'https://sparkle-project.org/'
 

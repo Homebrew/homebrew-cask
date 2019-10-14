@@ -1,11 +1,10 @@
 cask 'soundcleod' do
-  version '1.3.3'
-  sha256 'eac858e725336dfe79af7df20fec04991ec8503a95e872a3f9c12545ce17cb0d'
+  version '1.4.0'
+  sha256 '6242f0de6b0970006b5cfc08e9a40c4bf034eac7439d609c89956489558edc73'
 
   # github.com/salomvary/soundcleod was verified as official when first introduced to the cask
   url "https://github.com/salomvary/soundcleod/releases/download/v#{version}/SoundCleod-#{version}.dmg"
-  appcast 'https://github.com/salomvary/soundcleod/releases.atom',
-          checkpoint: '50f8012639e8d52e3bb189d511f2a29fa5b039dffe1e17fa330fab2840c8a6f5'
+  appcast 'https://github.com/salomvary/soundcleod/releases.atom'
   name 'SoundCleod'
   homepage 'https://soundcleod.com/'
 

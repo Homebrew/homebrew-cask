@@ -1,12 +1,20 @@
 cask 'kitty' do
-  version '0.8.2'
-  sha256 'b0fa3e4967822781891fa7cd1d9f2edaecd8b7c296fef35a8c60c38448ecbcc5'
+  version '0.14.6'
+  sha256 '24c79ee09050d7fbdfb886fee9de5262a186b7c31a90c6448dd92f9ea1adeea1'
 
   url "https://github.com/kovidgoyal/kitty/releases/download/v#{version}/kitty-#{version}.dmg"
-  appcast 'https://github.com/kovidgoyal/kitty/releases.atom',
-          checkpoint: '5367d74595e105c890d91d3afb76258a4d63dd5a1f587fd5bf861533a7abf01e'
+  appcast 'https://github.com/kovidgoyal/kitty/releases.atom'
   name 'kitty'
   homepage 'https://github.com/kovidgoyal/kitty'
 
+  depends_on macos: '>= :sierra'
+
   app 'kitty.app'
+  binary "#{appdir}/kitty.app/Contents/MacOS/kitty"
+
+  zap trash: [
+               '~/.config/kitty',
+               '~/Library/Preferences/kitty',
+               '~/Library/Saved Application State/net.kovidgoyal.kitty.savedState',
+             ]
 end
