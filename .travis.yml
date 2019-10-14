@@ -36,6 +36,7 @@ install:
     export HOMEBREW_DEVELOPER=1
     export HOMEBREW_NO_AUTO_UPDATE=1
     brew update-reset
+    HOMEBREW_INSTALL_BUNDLER_GEMS_FIRST=1 brew config
   - |
     # Mirror the repo as a tap.
     TAP_DIR="$(brew --repository "${TRAVIS_REPO_SLUG}")"
