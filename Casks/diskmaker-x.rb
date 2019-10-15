@@ -1,5 +1,4 @@
 cask 'diskmaker-x' do
-
   if MacOS.version == :catalina
     sha256 '9946b75cafed3f9e71cbe09c45cac7db66a4a17a2bb61c76f6e006822d077d52'
     version '9.0.b1'
