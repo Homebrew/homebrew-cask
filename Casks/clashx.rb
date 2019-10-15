@@ -9,7 +9,7 @@ cask 'clashx' do
 
   auto_updates true
   depends_on macos: '>= :sierra'
-  
+
   app 'ClashX.app'
 
   zap trash: [
