@@ -1,6 +1,6 @@
 cask 'miniconda' do
-  version '4.6.14'
-  sha256 '2ec958508139289df3b5e2c10257311af4f0ebf39242f61d39f11e7fa14ebb40'
+  version '4.7.10'
+  sha256 'c8b31ea37b0b6a3e2fb19990ef895ab5cf1c095f8e9138defac95ee88e70920d'
 
   # repo.anaconda.com/miniconda was verified as official when first introduced to the cask
   url "https://repo.anaconda.com/miniconda/Miniconda3-#{version}-MacOSX-x86_64.sh"
