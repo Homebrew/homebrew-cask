@@ -7,7 +7,5 @@ cask 'alt-tab' do
   name 'alt-tab'
   homepage 'https://github.com/lwouis/alt-tab-macos'
 
-  auto_updates false
-
   app 'alt-tab-macos.app'
 end
