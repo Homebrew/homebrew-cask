@@ -1,11 +1,13 @@
 cask 'bluegriffon' do
-  version '3.0.1'
-  sha256 'c62f0af91ee7544c3f83f7a598638dad5e344ef6ce743e18b7d337a37e359580'
+  version '3.1'
+  sha256 'cf457ac89447c8a54e0fbc1c13b995286e9b9143cee104fe3f3777a80f540a35'
 
   url "http://bluegriffon.org/freshmeat/#{version}/bluegriffon-#{version}.mac-x86_64.dmg"
   appcast 'http://bluegriffon.org/freshmeat/?C=M;O=D'
   name 'BlueGriffon'
   homepage 'http://bluegriffon.org/'
+
+  depends_on macos: '>= :high_sierra'
 
   app 'BlueGriffon.app'
 end
