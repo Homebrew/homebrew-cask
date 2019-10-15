@@ -7,7 +7,7 @@ cask 'diffmerge' do
   homepage 'https://www.sourcegear.com/diffmerge/'
 
   app 'DiffMerge.app'
-  artifact 'Extras/diffmerge.sh', target: "#{HOMEBREW_PREFIX}/bin/diffmerge"
+  artifact 'Extras/diffmerge.sh', target: 'diffmerge'
   artifact 'Extras/diffmerge.1', target: "#{HOMEBREW_PREFIX}/share/man/man1/diffmerge.1"
 
   zap trash: [
