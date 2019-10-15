@@ -5,7 +5,7 @@ cask 'unity-standard-assets' do
   url "https://netstorage.unity3d.com/unity/#{version.after_comma}/MacStandardAssetsInstaller/StandardAssets-#{version.before_comma}.pkg"
   appcast 'https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json'
   name 'Unity Standard Assets'
-  homepage 'https://unity3d.com/unity/'
+  homepage 'https://unity3d.com/unity'
 
   pkg "StandardAssets-#{version.before_comma}.pkg"
 
