@@ -8,5 +8,7 @@ cask 'commandq' do
   name 'CommandQ'
   homepage 'https://commandqapp.com/'
 
+  depends_on macos: '>= :sierra'
+
   app 'CommandQ.app'
 end
