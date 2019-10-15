@@ -13,5 +13,4 @@ cask 'diskmaker-x' do
   appcast 'https://diskmakerx.com/feed/'
   name 'DiskMaker X'
   homepage 'https://diskmakerx.com/'
-
 end
