@@ -1,6 +1,6 @@
 cask 'memory' do
-  version '2019.25'
-  sha256 '63c32b6ca8e2b4e7d2ef4c67343663113f65afb25316364a623a90f64f0f3217'
+  version '2019.26'
+  sha256 '392ebde6bd925ce31eb1391f5e95dd330129a13fbbaa1b8dc3ada5ba884c1ef1'
 
   # timelytimetracking.s3.amazonaws.com was verified as official when first introduced to the cask
   url 'https://timelytimetracking.s3.amazonaws.com/mac_tracker/Memory%20Tracker%20by%20Timely.zip'
