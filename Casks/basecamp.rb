@@ -5,7 +5,7 @@ cask 'basecamp' do
   # bc3-desktop.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://bc3-desktop.s3.amazonaws.com/mac/basecamp#{version}.dmg"
   name 'Basecamp'
-  homepage "https://basecamp.com/help/#{version}/guides/apps/mac"
+  homepage 'https://basecamp.com/'
 
   auto_updates true
 
