@@ -9,6 +9,7 @@ cask 'iconjar' do
   homepage 'https://geticonjar.com/'
 
   auto_updates true
+  depends_on macos: '>= :high_sierra'
 
   app 'IconJar.app'
 

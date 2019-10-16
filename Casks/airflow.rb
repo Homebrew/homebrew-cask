@@ -9,6 +9,7 @@ cask 'airflow' do
   homepage 'https://airflowapp.com/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'Airflow.app'
 
