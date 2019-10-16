@@ -38,6 +38,7 @@ cask 'microsoft-office' do
                          '/Applications/Microsoft Outlook.app',
                          '/Applications/Microsoft PowerPoint.app',
                          '/Applications/Microsoft Word.app',
+                         '/Applications/OneDrive.app',
                        ],
             launchctl: [
                          'com.microsoft.office.licensing.helper',
@@ -45,6 +46,8 @@ cask 'microsoft-office' do
                          'com.microsoft.OneDriveStandaloneUpdater',
                          'com.microsoft.OneDriveStandaloneUpdaterDaemon',
                          'com.microsoft.OneDriveUpdaterDaemon',
+                         'com.microsoft.autoupdate.helper',
+                         'com.microsoft.update.agent',
                        ]
 
   zap trash:     [
