@@ -1,6 +1,6 @@
 cask 'thedesk' do
-  version '18.11.0'
-  sha256 '048ba05c0401b49ec8eaf37ad29562e556a8bb3ffc9bb8318fa55b2ea37395ef'
+  version '18.11.2'
+  sha256 'dbff74ea12958a28f0ad4f1fdf2dddea73d4e903d16462ac20ea8c39df4ee3f6'
 
   # github.com/cutls/TheDesk was verified as official when first introduced to the cask
   url "https://github.com/cutls/TheDesk/releases/download/v#{version}/TheDesk-#{version}.dmg"

@@ -6,6 +6,8 @@ cask 'vidyo' do
   name 'Vidyo'
   homepage 'https://vidyocloud.com/'
 
+  depends_on macos: '>= :sierra'
+
   app 'VidyoDesktopInstaller.app/Contents/Resources/VidyoDesktop.app'
 
   uninstall quit: 'com.vidyo.VidyoDesktop'

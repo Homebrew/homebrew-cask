@@ -7,6 +7,8 @@ cask 'cd-to' do
   name 'cd to'
   homepage 'https://github.com/jbtule/cdto'
 
+  depends_on macos: '>= :mojave'
+
   app 'cd to ....app'
 
   caveats <<~EOS

@@ -1,6 +1,6 @@
 cask 'tuxera-ntfs' do
-  version '2018'
-  sha256 '73b8c1e7a19ae2f98aeb4f72d8d5f7ea2a81f07b2f2a49a5106ea0581756d9ac'
+  version '2019'
+  sha256 '03befc93c2a164e3faeede2b3de903fec6982540e7cbfae646ce4e4ec8d5c879'
 
   url "https://download.tuxera.com/mac/tuxerantfs_#{version}.dmg"
   appcast 'https://www.tuxera.com/products/tuxera-ntfs-for-mac/download/'
@@ -9,7 +9,8 @@ cask 'tuxera-ntfs' do
 
   pkg '.packages/Flat/Install Tuxera NTFS.mpkg'
 
-  uninstall pkgutil: [
+  uninstall quit:    'com.tuxera.Tuxera-NTFS',
+            pkgutil: [
                        'com.tuxera.pkg.Tuxera_NTFS',
                        'com.tuxera.pkg.Tuxera_NTFS_compat',
                      ]

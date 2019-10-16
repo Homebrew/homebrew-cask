@@ -1,6 +1,6 @@
 cask 'quickhash' do
-  version '3.0.4,1816'
-  sha256 'a04252a9803abad388218c27c6387d9783891863d2bd3899ac4804c04cb0914f'
+  version '3.1.0,1935'
+  sha256 'daee7887ad4b5856822ea139446a45c8e7c49bf4265cdec563f73fd07554f412'
 
   url "https://quickhash-gui.org/download/quickhash-v#{version.before_comma.dots_to_hyphens}-for-apple-osx/?wpdmdl=#{version.after_comma}"
   appcast 'https://quickhash-gui.org/downloads/'
