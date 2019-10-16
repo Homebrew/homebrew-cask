@@ -7,7 +7,7 @@ cask 'maccy' do
   name 'Maccy'
   homepage 'https://github.com/p0deje/Maccy'
 
-  depends_on macos: '>= :mojave'
+  depends_on macos: '>= :high_sierra'
 
   app 'Maccy.app'
 end
