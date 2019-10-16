@@ -10,4 +10,6 @@ cask 'maccy' do
   depends_on macos: '>= :mojave'
 
   app 'Maccy.app'
+
+  uninstall quit: 'org.p0deje.Maccy'
 end
