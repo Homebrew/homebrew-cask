@@ -1,5 +1,5 @@
 cask 'sketchup-pro' do
-  version '19.3.252'
+  version '19.3.252,2019'
 
   language 'de' do
     sha256 '534e5fa125a8652a7abcbb9ee2bbc8162bf66de9dbe8cfe33ac7f354dc7a9b71'
