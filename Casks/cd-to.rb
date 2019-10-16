@@ -9,12 +9,12 @@ cask 'cd-to' do
 
   depends_on macos: '>= :mojave'
 
-  app 'cd to ....app'
+  app 'cd to.app'
 
   caveats <<~EOS
     To complete installation:
     1. Open the the Applications folder in finder.
-    2. Drag "cd to ....app" onto the Finder toolbar while holding down the command(⌘) and option(⌥) keys.
+    2. Drag "cd to.app" onto the Finder toolbar while holding down the command(⌘) and option(⌥) keys.
 
     To use, just click on the new button and instantly opens a new Terminal.app window.
   EOS
