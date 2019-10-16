@@ -1,6 +1,6 @@
 cask 'mockoon' do
-  version '1.5.0'
-  sha256 '68e59cdea4bc95691692122dd7eb9f89634f58d6f5e7d3090d910c151a81acc4'
+  version '1.5.1'
+  sha256 'c61f1312581b729ba3e710a84a8c9101461e39da709b2e81488a25432fde5d2a'
 
   # github.com/mockoon/mockoon was verified as official when first introduced to the cask
   url "https://github.com/mockoon/mockoon/releases/download/v#{version}/mockoon.setup.#{version}.dmg"
