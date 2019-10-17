@@ -17,5 +17,16 @@ cask 'liteicon' do
 
   app 'LiteIcon.app'
 
-  zap trash: '~/Library/Preferences/net.freemacsoft.LiteIcon.plist'
+  uninstall quit:      'net.freemacsoft.LiteIcon',
+            delete:    [
+                         '/Library/PrivilegedHelperTools/net.freemacsoft.LiteIcon.LIHelperTool',
+                         '~/Library/Application Support/LiteIcon',
+                       ],
+            launchctl: 'net.freemacsoft.LiteIcon.LIHelperTool'
+
+  zap trash: [
+               '~/Library/Preferences/net.freemacsoft.LiteIcon.plist',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.freemacsoft.liteicon.sfl*',
+               '~/Library/Application Support/CrashReporter/LiteIcon_*.plist',
+             ]
 end
