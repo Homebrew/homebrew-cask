@@ -10,4 +10,7 @@ cask 'maccy' do
   depends_on macos: '>= :mojave'
 
   app 'Maccy.app'
+
+  zap login_item: 'Maccy',
+      trash:      '~/Library/Preferences/org.p0deje.Maccy.plist'
 end
