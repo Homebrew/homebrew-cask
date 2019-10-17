@@ -8,7 +8,7 @@ cask 'scaleft' do
 
   pkg "ScaleFT-#{version}.pkg"
 
-  uninstall pkgutil: 'com.scaleft.pkg.ScaleFT'
+  uninstall pkgutil: 'com.scaleft.ScaleFT'
 
   zap trash: ['~/Library/Caches/com.scaleft.ScaleFT']
 end
