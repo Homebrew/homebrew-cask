@@ -1,6 +1,6 @@
 cask 'opensong' do
-  version '3.0.0'
-  sha256 'a9ef4384eea2dcf99e7e7f296be86b93a11228c3d75a9c21ede2846eb961dffd'
+  version '3.0.1'
+  sha256 '7c8efb5b721a9eafccbe6832c9be93ddd1db6272c5ab94523a40464951045c85'
 
   # sourceforge.net/opensong was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/opensong/OpenSong/V#{version}/OpenSongOSX-V#{version}.dmg"
