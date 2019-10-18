@@ -1,6 +1,6 @@
 cask 'microsoft-office' do
-  version '16.29.19090802'
-  sha256 '613b9f0dadafe6d65aca12c86208848d865230f73c840a0627987f3e10722906'
+  version '16.30.19101301'
+  sha256 '9eee9de31663bc46552dd39183ba13347baaee6871e8dbad218e0817eebcd031'
 
   # officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate was verified as official when first introduced to the cask
   url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Office_#{version}_Installer.pkg"
@@ -38,6 +38,7 @@ cask 'microsoft-office' do
                          '/Applications/Microsoft Outlook.app',
                          '/Applications/Microsoft PowerPoint.app',
                          '/Applications/Microsoft Word.app',
+                         '/Applications/OneDrive.app',
                        ],
             launchctl: [
                          'com.microsoft.office.licensing.helper',
@@ -45,6 +46,8 @@ cask 'microsoft-office' do
                          'com.microsoft.OneDriveStandaloneUpdater',
                          'com.microsoft.OneDriveStandaloneUpdaterDaemon',
                          'com.microsoft.OneDriveUpdaterDaemon',
+                         'com.microsoft.autoupdate.helper',
+                         'com.microsoft.update.agent',
                        ]
 
   zap trash:     [
