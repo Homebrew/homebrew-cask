@@ -12,6 +12,8 @@ cask 'maccy' do
 
   app 'Maccy.app'
 
+  uninstall quit: 'org.p0deje.Maccy'
+
   zap login_item: 'Maccy',
       trash:      '~/Library/Preferences/org.p0deje.Maccy.plist'
 end
