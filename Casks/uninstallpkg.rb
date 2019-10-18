@@ -1,6 +1,6 @@
 cask 'uninstallpkg' do
-  version '1.1.6'
-  sha256 '6c565f556383b3ab7ea878a43f3fb25656fdbbe4a4b466f936a43470482594da'
+  version '1.1.7'
+  sha256 '8a11dc93f9a4467445d9c6683241fde51b731333c2a0cc9e7eebe3157ad3957d'
 
   url "https://www.corecode.io/downloads/uninstallpkg_#{version}.zip"
   appcast 'https://www.corecode.io/uninstallpkg/uninstallpkg.xml'
