@@ -6,10 +6,9 @@ cask 'diffmerge' do
   name 'DiffMerge'
   homepage 'https://www.sourcegear.com/diffmerge/'
 
-  dmg_folder = 'Extras'
   app 'DiffMerge.app'
-  binary "#{dmg_folder}/diffmerge.sh", target: 'diffmerge'
-  artifact "#{dmg_folder}/diffmerge.1", target: "#{HOMEBREW_PREFIX}/share/man/man1/diffmerge.1"
+  binary 'Extras/diffmerge.sh', target: 'diffmerge'
+  artifact 'Extras/diffmerge.1', target: "#{HOMEBREW_PREFIX}/share/man/man1/diffmerge.1"
 
   zap trash: [
                '~/Library/Preferences/com.sourcegear.DiffMerge.plist',
