@@ -6,8 +6,8 @@ cask 'liteicon' do
     version '3.9'
     sha256 'd185503d1c6cbbc6f770517853bd9ef08dc620f4e7ce3de913251a57e4d450d9'
   else
-    version '4.0'
-    sha256 '9953f02a9a09c57214ca3a0afc3099032b6e152aa1206e9ffce636571d3d88b8'
+    version '4.1'
+    sha256 '545cff53df31b63fe28e794fb7f45e4c891885f5de57422b1483724f6d7ed4e0'
   end
 
   url "https://www.freemacsoft.net/downloads/LiteIcon_#{version}.zip"
@@ -17,5 +17,16 @@ cask 'liteicon' do
 
   app 'LiteIcon.app'
 
-  zap trash: '~/Library/Preferences/net.freemacsoft.LiteIcon.plist'
+  uninstall quit:      'net.freemacsoft.LiteIcon',
+            delete:    [
+                         '/Library/PrivilegedHelperTools/net.freemacsoft.LiteIcon.LIHelperTool',
+                         '~/Library/Application Support/LiteIcon',
+                       ],
+            launchctl: 'net.freemacsoft.LiteIcon.LIHelperTool'
+
+  zap trash: [
+               '~/Library/Preferences/net.freemacsoft.LiteIcon.plist',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.freemacsoft.liteicon.sfl*',
+               '~/Library/Application Support/CrashReporter/LiteIcon_*.plist',
+             ]
 end
