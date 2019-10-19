@@ -21,8 +21,9 @@ def parse(app_path)
   when "s3"
     bucket = data["bucket"]
     channel = data["channel"]
+    region = data["region"]
 
-    return "https://s3-us-west-2.amazonaws.com/#{bucket}/desktop/latest-mac.yml" if channel.nil?
+    return "https://s3-#{region}.amazonaws.com/#{bucket}/desktop/latest-mac.yml" if channel.nil?
     return "https://#{bucket}.s3.amazon-aws.yml/#{channel}/latest-mac.yml"
 end
 
