@@ -13,16 +13,17 @@ def parse(app_path)
   case data["provider"]
   when "generic"
     url = data["url"]
-    puts "#{url}/latest-mac.yml"
+    return "#{url}/latest-mac.yml"
   when "github"
     owner = data["owner"]
     repo = data["repo"]
-    puts "https://github.com/#{owner}/#{repo}/releases.atom"
+    return "https://github.com/#{owner}/#{repo}/releases.atom"
   when "s3"
     bucket = data["bucket"]
     channel = data["channel"]
-    puts "https://#{bucket}.s3.amazon-aws.yml/#{channel}/latest-mac.yml"
-  end
+
+    return "https://s3-us-west-2.amazonaws.com/#{bucket}/desktop/latest-mac.yml" if channel.nil?
+    return "https://#{bucket}.s3.amazon-aws.yml/#{channel}/latest-mac.yml"
 end
 
 ###
@@ -42,4 +43,4 @@ unless ARGV.length == 1
   exit 1
 end
 
-parse(ARGV[0])
+puts parse(ARGV[0])
