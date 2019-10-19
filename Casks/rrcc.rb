@@ -9,8 +9,5 @@ cask 'rrcc' do
 
   app 'rrcc.app'
 
-  zap trash: [
-               '~/Library/Saved Application State/com.yourcompany.rrcc.savedState',
-               # Probably more?
-             ]
+  zap trash: '~/Library/Saved Application State/com.yourcompany.rrcc.savedState'
 end
