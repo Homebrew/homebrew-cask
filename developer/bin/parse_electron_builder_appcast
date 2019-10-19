@@ -29,6 +29,7 @@ def parse(app_path)
     end
 
     return "https://#{bucket}.s3.amazon-aws.yml/#{channel}/latest-mac.yml"
+  end
 end
 
 ###
