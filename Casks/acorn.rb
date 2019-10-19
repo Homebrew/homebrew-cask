@@ -1,6 +1,6 @@
 cask 'acorn' do
-  version '6.5.1'
-  sha256 '27fb9ada94110ce4e14f0bd7f3ec5f63e2b70af41d259e52ccc2f0be48d481ea'
+  version '6.5.2'
+  sha256 '44f4254fc7dd852e5f6c421e84cbb34696161e7d896b9813b5bbf2d459a00084'
 
   url 'https://flyingmeat.com/download/Acorn.zip'
   appcast "https://www.flyingmeat.com/download/acorn#{version.major}update.xml"
