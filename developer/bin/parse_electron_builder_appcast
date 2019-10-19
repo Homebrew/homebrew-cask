@@ -13,11 +13,11 @@ def parse(app_path)
   case data["provider"]
   when "generic"
     url = data["url"]
-    return "#{url}/latest-mac.yml"
+    "#{url}/latest-mac.yml"
   when "github"
     owner = data["owner"]
     repo = data["repo"]
-    return "https://github.com/#{owner}/#{repo}/releases.atom"
+    "https://github.com/#{owner}/#{repo}/releases.atom"
   when "s3"
     bucket = data["bucket"]
     channel = data["channel"]
@@ -28,7 +28,7 @@ def parse(app_path)
       return "https://s3-#{region}.amazonaws.com/#{bucket}/#{path}/latest-mac.yml"
     end
 
-    return "https://#{bucket}.s3.amazon-aws.yml/#{channel}/latest-mac.yml"
+    "https://#{bucket}.s3.amazon-aws.yml/#{channel}/latest-mac.yml"
   end
 end
 
