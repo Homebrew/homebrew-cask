@@ -10,6 +10,8 @@ require_relative "lib/travis"
 module Cask
   class Cmd
     class Ci < AbstractCommand
+      option "--only-style", :only_style, false
+
       def run
         unless ENV.key?("CI")
           raise CaskError, "This command isn’t meant to be run locally."
@@ -44,15 +46,17 @@ module Cask
         modified_cask_files.each do |path|
           cask = CaskLoader.load(path)
 
+          overall_success &= step "brew cask style #{cask.token}", "style" do
+            Style.run(path)
+          end
+
+          next if only_style?
+
           overall_success &= step "brew cask audit #{cask.token}", "audit" do
             Auditor.audit(cask, audit_download: true,
                                 audit_appcast: true,
                                 check_token_conflicts: added_cask_files.include?(path),
                                 commit_range: @commit_range)
-          end
-
-          overall_success &= step "brew cask style #{cask.token}", "style" do
-            Style.run(path)
           end
 
           if (macos_requirement = cask.depends_on.macos) && !macos_requirement.satisfied?
