@@ -8,7 +8,7 @@ cask 'telegram' do
   homepage 'https://macos.telegram.org/'
 
   auto_updates true
-  depends_on macos: '>= :el_capitan'
+  depends_on macos: '>= :sierra'
 
   app 'Telegram.app'
 
