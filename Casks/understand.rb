@@ -1,6 +1,6 @@
 cask 'understand' do
-  version '5.1.1000'
-  sha256 '514e260526912bb05a968c496415f19b723a792df28fc9569222ec999b812b5c'
+  version '5.1.1001'
+  sha256 'edbc1d09808dce4674a845826e7e5f0bf0d645b094306ce9e30b7070b9aa76cd'
 
   url "http://builds.scitools.com/all_builds/b#{version.patch}/Understand/Understand-#{version}-MacOSX-x86.dmg"
   appcast 'https://scitools.com/build-notes/',
