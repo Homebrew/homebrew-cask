@@ -1,6 +1,6 @@
 cask 'proxyman' do
-  version '1.7.0'
-  sha256 '956942fe460231ad0aee59c61b0690cb41b4a0d9f3a411030544c1e94fd15534'
+  version '1.7.1'
+  sha256 'ac35af253c880fea52d75b555b8e71f4dd674e037a6386fc6477a2a418e3be31'
 
   # github.com/ProxymanApp/Proxyman was verified as official when first introduced to the cask
   url "https://github.com/ProxymanApp/Proxyman/releases/download/#{version}/Proxyman_#{version}.dmg"
