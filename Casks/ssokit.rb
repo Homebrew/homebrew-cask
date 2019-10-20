@@ -7,5 +7,5 @@ cask 'ssokit' do
   homepage 'https://github.com/rangaofei/SSokit-qmake'
 
   app 'SSokit.app'
-  zap trash '~/Library/Preferences/cn.rangaofei.SSokit.plist'
+  zap trash: '~/Library/Preferences/cn.rangaofei.SSokit.plist'
 end
