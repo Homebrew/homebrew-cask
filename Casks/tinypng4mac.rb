@@ -1,4 +1,4 @@
-cask 'abstract' do
+cask 'tinypng4mac' do
   version '1.0.3'
   sha256 '723a9e0b63b69a5b3c0d20cbe2199ff5dea7ac06ae511ec827b6bb82cf5af112'
 
