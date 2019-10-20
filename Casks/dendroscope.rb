@@ -2,11 +2,11 @@ cask 'dendroscope' do
   version '3.6.3'
   sha256 '2b9557232149da9d6d2fa0d07bd98b21836141e2759ca92986e5d7a3e21d0bde'
 
-  url "https://ab.inf.uni-tuebingen.de/data/software/dendroscope3/download/Dendroscope_macos_#{version.dots_to_underscores}.dmg"
-  appcast 'https://ab.inf.uni-tuebingen.de/data/software/dendroscope3/download/welcome.html',
+  url "https://software-ab.informatik.uni-tuebingen.de/download/dendroscope/Dendroscope_macos_#{version.dots_to_underscores}.dmg"
+  appcast 'https://software-ab.informatik.uni-tuebingen.de/download/dendroscope3/welcome.html',
           configuration: version.dots_to_underscores
   name 'Dendroscope'
-  homepage 'https://ab.inf.uni-tuebingen.de/software/dendroscope/'
+  homepage 'https://www.wsi.uni-tuebingen.de/lehrstuehle/algorithms-in-bioinformatics/software/dendroscope/'
 
   installer script: {
                       executable: 'Dendroscope Installer.app/Contents/MacOS/JavaApplicationStub',
