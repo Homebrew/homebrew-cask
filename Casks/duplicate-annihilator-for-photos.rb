@@ -1,4 +1,4 @@
-cask 'duplicate-annihilator' do
+cask 'duplicate-annihilator-for-photos' do
   version :latest
   sha256 :no_check
 
@@ -6,5 +6,5 @@ cask 'duplicate-annihilator' do
   name 'Duplicate Annihilator'
   homepage 'https://brattoo.com/propaganda/'
 
-  app 'Duplicate Annihilator.app'
+  app 'Duplicate Annihilator for Photos.app'
 end
