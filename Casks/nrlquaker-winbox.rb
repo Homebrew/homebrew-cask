@@ -8,7 +8,7 @@ cask 'nrlquaker-winbox' do
   homepage 'https://github.com/nrlquaker/winbox-mac/'
 
   depends_on formula: 'freetype',
-             cask: 'xquartz'
+             cask:    'xquartz'
 
   app 'Winbox-mac.app'
 
