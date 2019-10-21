@@ -7,5 +7,7 @@ cask 'profind' do
   name 'ProFind'
   homepage 'https://www.zeroonetwenty.com/profind/'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'ProFind.app'
 end
