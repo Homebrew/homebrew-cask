@@ -7,7 +7,7 @@ cask 'mudlet' do
   name 'Mudlet'
   homepage 'https://www.mudlet.org/'
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :high_sierra'
 
   app 'Mudlet.app'
 end
