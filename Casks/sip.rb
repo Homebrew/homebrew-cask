@@ -3,8 +3,8 @@ cask 'sip' do
     version '1.1.6'
     sha256 'bb170a54090aab5703388a3e7a22e9cf4e4d98e84f5658893e1e6f9677b9a51e'
   else
-    version '2.2'
-    sha256 'e4d1ec882b5bca6d6f2852dfa061694dceed29c99e00abdf657affe0fb69c161'
+    version '2.2.1'
+    sha256 '97e5364658ed05631d964aec6bee3a43359066484f26bee1cd78ae35a19570c5'
   end
 
   url "https://sipapp.io/updates/v#{version.major}/sip-#{version}.zip"
