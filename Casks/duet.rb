@@ -1,6 +1,6 @@
 cask 'duet' do
-  version '2.1.0.8'
-  sha256 '7193d0753f03993f8c7250e4c868aea9c7f54265514aae864a5798b1f07588ae'
+  version '2.1.1.2'
+  sha256 'f7556ded7dc111acd243f1d0051c72f32c46e189faf94de12329428ed8ff085d'
 
   # duet.nyc3.cdn.digitaloceanspaces.com/Mac was verified as official when first introduced to the cask
   url "https://duet.nyc3.cdn.digitaloceanspaces.com/Mac/#{version.major_minor.dots_to_underscores}/duet-#{version.dots_to_hyphens}.zip"
