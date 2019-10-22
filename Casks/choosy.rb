@@ -13,7 +13,7 @@ cask 'choosy' do
     version '2.0'
     sha256 'dcba0b48d742da6c6860858c81480ff8b08b7cdbaae10a348c3062afddc1cc73'
 
-    installer 'Choosy.pkg'
+    pkg 'Choosy.pkg'
   end
 
   url "https://downloads.choosyosx.com/choosy_#{version}.zip"
