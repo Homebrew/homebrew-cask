@@ -10,7 +10,7 @@ cask 'yam-display' do
   app 'Yam Display.app'
 
   zap trash: [
-    '~/Library/Caches/com.yamstu.yamdisplaymac',
-    '~/Library/Preferences/com.yamstu.yamdisplaymac.plist',
-  ]
+               '~/Library/Caches/com.yamstu.yamdisplaymac',
+               '~/Library/Preferences/com.yamstu.yamdisplaymac.plist',
+             ]
 end
