@@ -4,7 +4,7 @@ cask 'lingo' do
 
   # nounproject.s3.amazonaws.com/lingo was verified as official when first introduced to the cask
   url 'https://nounproject.s3.amazonaws.com/lingo/Lingo.dmg'
-  appcast 'https://rink.hockeyapp.net/api/2/apps/7d71478daf6447bda4094e216e97b0cf'
+  appcast 'https://www.lingoapp.com/mac/appcast'
   name 'Lingo'
   homepage 'https://www.lingoapp.com/'
 
