@@ -1,6 +1,6 @@
 cask 'rectangle' do
-  version '0.8'
-  sha256 '8df973116e5616b325eb54add9fd54f7173ab69567d9db3a4aa272f5aabc79c9'
+  version '0.9'
+  sha256 '52d7fb0f4d2ba15cc8cb2cc1f7cc4915f03a024db19712ab41dd9f4467941850'
 
   url "https://rectangleapp.com/downloads/Rectangle#{version}.dmg"
   appcast 'https://www.rectangleapp.com/downloads/updates.xml'
