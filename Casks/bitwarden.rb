@@ -8,7 +8,7 @@ cask 'bitwarden' do
   name 'Bitwarden'
   homepage 'https://bitwarden.com/'
   
-  auto_update true
+  auto_updates true
 
   app 'Bitwarden.app'
 
