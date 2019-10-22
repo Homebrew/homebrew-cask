@@ -7,6 +7,21 @@ require_relative "lib/capture"
 require_relative "lib/check"
 require_relative "lib/travis"
 
+class User
+  def self.automation_access?
+    return true
+    return @automation_access if defined?(@automation_access)
+
+    *_, status = system_command "osascript", args: [
+      "-e", "with timeout of 5 seconds",
+      "-e", 'tell application "System Events" to get volume settings',
+      "-e", "end timeout"
+    ], print_stderr: false
+
+    @automation_access = status.success?
+  end
+end
+
 module Cask
   class Cmd
     class Ci < AbstractCommand

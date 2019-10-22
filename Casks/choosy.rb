@@ -19,7 +19,7 @@ cask 'choosy' do
   url "https://downloads.choosyosx.com/choosy_#{version}.zip"
   appcast 'https://www.choosyosx.com/sparkle/feed'
   name 'Choosy'
-  homepage 'https://www.choosyosx.com/'
+  homepage 'https://www.choosyosx.com/#'
 
   depends_on macos: '>= :yosemite'
 
