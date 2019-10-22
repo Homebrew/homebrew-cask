@@ -36,7 +36,7 @@ jobs:
               PR_URL="$(cat "${GITHUB_EVENT_PATH}" | jq -r .pull_request._links.html.href)"
               ;;
             check_run)
-              PR_URL="$(brew ruby -e 'puts GitHub.pull_requests("${GITHUB_REPOSITORY}", state: :open).detect { |pr| pr.dig("head", "sha") == "$(cat "${GITHUB_EVENT_PATH}" | jq -r .check_run.head_sha)" }.dig("_links", "html", "href")')"
+              PR_URL="$(brew ruby -e "puts GitHub.pull_requests('${GITHUB_REPOSITORY}', state: :open).detect { |pr| pr.dig('head', 'sha') == '$(cat "${GITHUB_EVENT_PATH}" | jq -r .check_run.head_sha)' }.dig('_links', 'html', 'href')")"
               ;;
           esac
 
