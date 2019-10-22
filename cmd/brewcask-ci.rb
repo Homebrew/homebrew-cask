@@ -169,9 +169,8 @@ module Cask
             repo = pr.fetch("base").fetch("repo").fetch("full_name")
             head_sha = pr.fetch("head").fetch("sha")
           when "check_run"
-            check_run = event.fetch("check_run")
-            repo = check_run.fetch("repository").fetch("full_name")
-            head_sha = check_run.fetch("head_sha")
+            repo = event.fetch("repository").fetch("full_name")
+            head_sha = event.fetch("check_run").fetch("head_sha")
           else
             raise
           end
