@@ -23,6 +23,8 @@ cask 'choosy' do
 
   depends_on macos: '>= :yosemite'
 
+  uninstall pkgutil: 'com.choosyosx.Choosy'
+
   zap trash: [
                '~/Library/Application Support/Choosy',
                '~/Library/Preferences/com.choosyosx.ChoosyPrefPane.plist',
