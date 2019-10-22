@@ -10,6 +10,12 @@ jobs:
   style:
     runs-on: macOS-10.14
     steps:
+      - name: debug
+        run: |
+          echo "GITHUB_EVENT_NAME=${GITHUB_EVENT_NAME}"
+          echo "GITHUB_EVENT_PATH=${GITHUB_EVENT_PATH}"
+
+          cat "${GITHUB_EVENT_PATH}" | jq .
       - name: brew pull
         run: |
           brew update-reset "$(brew --repository)"
