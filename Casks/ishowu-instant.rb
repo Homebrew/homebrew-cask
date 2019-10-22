@@ -7,5 +7,7 @@ cask 'ishowu-instant' do
   name 'iShowU Instant'
   homepage 'https://www.shinywhitebox.com/ishowu-instant'
 
+  depends_on macos: '>= :mojave'
+
   app 'iShowU Instant.app'
 end
