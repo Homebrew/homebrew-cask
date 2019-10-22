@@ -23,7 +23,8 @@ cask 'choosy' do
 
   depends_on macos: '>= :yosemite'
 
-  uninstall pkgutil: 'com.choosyosx.Choosy'
+  uninstall pkgutil: 'com.choosyosx.Choosy',
+            quit:    'com.choosyosx.Choosy'
 
   zap trash: [
                '~/Library/Application Support/Choosy',
