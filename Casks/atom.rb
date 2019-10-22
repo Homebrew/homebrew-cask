@@ -2,11 +2,10 @@ cask 'atom' do
   version '1.40.1'
   sha256 '1697c2e47b7bde34bdadd093329dfc87436c6e2c14e439c8106cb090de499029'
 
-  # github.com/atom/atom was verified as official when first introduced to the cask
   url "https://github.com/atom/atom/releases/download/v#{version}/atom-mac.zip"
   appcast 'https://github.com/atom/atom/releases.atom'
   name 'Github Atom'
-  homepage 'https://atom.io/'
+  homepage 'https://atom.io'
 
   auto_updates true
 
@@ -15,7 +14,7 @@ cask 'atom' do
   binary "#{appdir}/Atom.app/Contents/Resources/app/atom.sh", target: 'atom'
 
   zap trash: [
-               '~/.atom',
+               "~/.atom",
                '~/Library/Application Support/Atom',
                '~/Library/Application Support/ShipIt_stderr.log',
                '~/Library/Application Support/ShipIt_stdout.log',
