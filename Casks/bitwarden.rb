@@ -7,6 +7,7 @@ cask 'bitwarden' do
   appcast 'https://github.com/bitwarden/desktop/releases.atom'
   name 'Bitwarden'
   homepage 'https://bitwarden.com/'
+  
   auto_update true
 
   app 'Bitwarden.app'
