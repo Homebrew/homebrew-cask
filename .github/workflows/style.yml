@@ -1,10 +1,13 @@
 name: CI
 
 on:
-  - pull_request
+  check_run:
+    types:
+      - created
+      - rerequested
 
 jobs:
-  ci:
+  style:
     runs-on: macOS-10.14
     steps:
       - name: brew pull
@@ -24,14 +27,17 @@ jobs:
 
           brew pull --clean "${PR_URL}"
         env:
-          PR_URL: ${{ github.event.pull_request._links.html.href }}
+          PR_URL: ${{ github.event.pull_request._links.html.href || github.event.check_run.check_suite.pull_requests[0].url }}
           HOMEBREW_COLOR: 1
           HOMEBREW_DEVELOPER: 1
-      - name: brew cask ci
+      - name: brew cask style
         run: |
           cd "$(brew --repository "${GITHUB_REPOSITORY}")"
-          brew cask ci
+          export HOMEBREW_GITHUB_EVENT_NAME="${GITHUB_EVENT_NAME}"
+          export HOMEBREW_GITHUB_EVENT_PATH="${GITHUB_EVENT_PATH}"
+          brew cask ci --only-style --annotate-style-violations
         env:
           CI: true
           HOMEBREW_COLOR: 1
           HOMEBREW_DEVELOPER: 1
+          HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
