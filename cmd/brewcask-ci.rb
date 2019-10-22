@@ -169,10 +169,11 @@ module Cask
             repo = pr.fetch("base").fetch("repo").fetch("full_name")
             head_sha = pr.fetch("head").fetch("sha")
           when "check_run"
-            check_suite = event.fetch("check_run").fetch("check_suite")
+            check_run = event.fetch("check_run")
+            check_suite = check_run.fetch("check_suite")
             repo_url = check_suite.fetch("pull_requests").first.fetch("base").fetch("repo").fetch("url")
             repo = GitHub.open_api(repo_url).fetch("full_name")
-            head_sha = check_suite.fetch("head_sha")
+            head_sha = check_run.fetch("head_sha")
           else
             raise
           end

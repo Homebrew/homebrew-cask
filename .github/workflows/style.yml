@@ -31,9 +31,19 @@ jobs:
 
           brew update-reset "$(brew --repository "${GITHUB_REPOSITORY}")"
 
+          case "${GITHUB_EVENT_NAME}" in
+            pull_request)
+              PR_URL="$(cat "${GITHUB_EVENT_PATH}" | jq .pull_request._links.html.href)"
+              ;;
+            check_run)
+              PR_URL="$(cat "${GITHUB_EVENT_PATH}" | jq .repository.html_url)/commit/$(cat "${GITHUB_EVENT_PATH}" | jq .check_run.head_sha)"
+              ;;
+          esac
+
+          echo "PR_URL='${PR_URL}'"
+
           brew pull --clean "${PR_URL}"
         env:
-          PR_URL: ${{ github.event.pull_request._links.html.href || github.event.check_run.check_suite.pull_requests[0].url }}
           HOMEBREW_COLOR: 1
           HOMEBREW_DEVELOPER: 1
       - name: brew cask style
