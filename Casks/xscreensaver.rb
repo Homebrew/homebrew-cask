@@ -1,6 +1,6 @@
 cask 'xscreensaver' do
-  version '5.39'
-  sha256 '099a354288a6b2923b994b8a253981814e93db2b34c618f6d08ed9ec2b21db87'
+  version '5.43'
+  sha256 '5ae820e4addc150371a168e8ab2af69632b6e337cb1ad78afdfd8e1abecea245'
 
   url "https://www.jwz.org/xscreensaver/xscreensaver-#{version}.dmg"
   appcast 'https://www.jwz.org/xscreensaver/changelog.html'
@@ -77,6 +77,7 @@ cask 'xscreensaver' do
   screen_saver 'Screen Savers/Extrusion.saver'
   screen_saver 'Screen Savers/FadePlot.saver'
   screen_saver 'Screen Savers/Fiberlamp.saver'
+  screen_saver 'Screen Savers/FilmLeader.saver'
   screen_saver 'Screen Savers/Fireworkx.saver'
   screen_saver 'Screen Savers/Flame.saver'
   screen_saver 'Screen Savers/FlipFlop.saver'
@@ -96,6 +97,7 @@ cask 'xscreensaver' do
   screen_saver 'Screen Savers/GLCells.saver'
   screen_saver 'Screen Savers/Gleidescope.saver'
   screen_saver 'Screen Savers/GLHanoi.saver'
+  screen_saver 'Screen Savers/GlitchPEG.saver'
   screen_saver 'Screen Savers/GLKnots.saver'
   screen_saver 'Screen Savers/GLMatrix.saver'
   screen_saver 'Screen Savers/GLPlanet.saver'
@@ -108,6 +110,7 @@ cask 'xscreensaver' do
   screen_saver 'Screen Savers/Greynetic.saver'
   screen_saver 'Screen Savers/Halftone.saver'
   screen_saver 'Screen Savers/Halo.saver'
+  screen_saver 'Screen Savers/Handsy.saver'
   screen_saver 'Screen Savers/Helix.saver'
   screen_saver 'Screen Savers/Hexadrop.saver'
   screen_saver 'Screen Savers/Hexstrut.saver'
@@ -222,6 +225,7 @@ cask 'xscreensaver' do
   screen_saver 'Screen Savers/Unicrud.saver'
   screen_saver 'Screen Savers/UnknownPleasures.saver'
   screen_saver 'Screen Savers/Vermiculate.saver'
+  screen_saver 'Screen Savers/VFeedback.saver'
   screen_saver 'Screen Savers/Vigilance.saver'
   screen_saver 'Screen Savers/Voronoi.saver'
   screen_saver 'Screen Savers/Wander.saver'

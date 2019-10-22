@@ -1,13 +1,12 @@
 cask 'image2icon' do
-  version '2.8'
-  sha256 'ba8e0f29bab556bc8d8a3630351d4321cdb990d89ec11a2cca90c7fd69a2328a'
+  version '2.9.2'
+  sha256 '11c03bcf770c454a3b9dfbaefdb73c5d8ad452e5a0ad72798df392febbfabedb'
 
-  # sf-applications.s3.amazonaws.com was verified as official when first introduced to the cask
+  # sf-applications.s3.amazonaws.com/Image2Icon was verified as official when first introduced to the cask
   url "https://sf-applications.s3.amazonaws.com/Image2Icon/app-releases/Image2icon#{version}.zip"
+  appcast 'http://apps.shinynode.com/apps/image2icon_appcast.xml'
   name 'Image2Icon'
   homepage 'http://www.img2icnsapp.com/'
-
-  depends_on macos: '>= :mavericks'
 
   app 'Image2Icon.app'
 

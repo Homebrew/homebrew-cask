@@ -3,13 +3,14 @@ cask 'ipsecuritas' do
     version '4.7'
     sha256 '42e85f68aa6a321fdaea7a352f5d85d7a987bb7e2a8067360d23633a9df3baba'
   else
-    version '4.8'
-    sha256 '4dea27a69d4dd6a03ddd7dfd2ea9b088643621f21b5ebf2524ea68b5af3b31ee'
+    version '4.9.1'
+    sha256 '4e23830ab3a8b15f25bfe602c6f1b29c9766ae680afcaf0831047216b05836df'
   end
 
-  url "http://www.lobotomo.com/products/downloads/IPSecuritas%20#{version}.dmg"
+  url "https://www.lobotomo.com/products/downloads/IPSecuritas%20#{version}.dmg"
+  appcast 'https://www.lobotomo.com/products/IPSecuritas/'
   name 'IPSecuritas'
-  homepage 'http://www.lobotomo.com/products/IPSecuritas/'
+  homepage 'https://www.lobotomo.com/products/IPSecuritas/'
 
   depends_on macos: '>= :yosemite'
 

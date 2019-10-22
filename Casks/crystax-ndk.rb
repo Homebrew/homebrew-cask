@@ -29,7 +29,7 @@ cask 'crystax-ndk' do
   ].each { |link_name| binary shimscript, target: link_name }
 
   uninstall_postflight do
-    FileUtils.rm("#{HOMEBREW_PREFIX}/share/crystax-ndk")
+    FileUtils.rm_f("#{HOMEBREW_PREFIX}/share/crystax-ndk")
   end
 
   caveats <<~EOS

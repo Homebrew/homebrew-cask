@@ -7,7 +7,5 @@ cask 'modmove' do
   name 'ModMove'
   homepage 'https://github.com/keith/modmove'
 
-  accessibility_access true
-
   app 'ModMove.app'
 end

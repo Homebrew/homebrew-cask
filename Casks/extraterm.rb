@@ -1,12 +1,12 @@
 cask 'extraterm' do
-  version '0.35.1'
-  sha256 '01723ea7592af345fe722a8e9fddb96a057c6480889bedfc6bfaa609a3865735'
+  version '0.46.0'
+  sha256 '1bea52c12c183f8e34eefe3f986938e3fe1504db8f51700b789a51fd967ebd52'
 
   # github.com/sedwards2009/extraterm was verified as official when first introduced to the cask
   url "https://github.com/sedwards2009/extraterm/releases/download/v#{version}/extraterm-#{version}-darwin-x64.zip"
   appcast 'https://github.com/sedwards2009/extraterm/releases.atom'
   name 'extraterm'
-  homepage 'http://extraterm.org/'
+  homepage 'https://extraterm.org/'
 
   app "extraterm-#{version}-darwin-x64/extraterm.app"
 

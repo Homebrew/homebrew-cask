@@ -6,7 +6,7 @@ cask 'nimble' do
   url "https://github.com/Maybulb/Nimble/releases/download/#{version}/Nimble-#{version}.dmg"
   appcast 'https://github.com/Maybulb/Nimble/releases.atom'
   name 'Nimble'
-  homepage 'http://maybulb.com/'
+  homepage 'https://maybulb.com/'
 
   app 'Nimble.app'
 

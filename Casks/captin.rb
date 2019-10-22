@@ -1,6 +1,6 @@
 cask 'captin' do
-  version '1.0.12,84:1520071833'
-  sha256 '6a84831ddd97e5a98215d9cd8b866a7093c4a55a97ee9b31d84e01f9ed231218'
+  version '1.0.19,95:1551453024'
+  sha256 'c950c028e2cdf60e2afe3aaaa204109326d4dcddc834f4ee77342d242b5d81a6'
 
   # dl.devmate.com/com.100hps.captin was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.100hps.captin/#{version.after_comma.before_colon}/#{version.after_colon}/Captin-#{version.after_comma.before_colon}.dmg"
@@ -10,8 +10,7 @@ cask 'captin' do
 
   app 'Captin.app'
 
-  uninstall login_item: 'Captin',
-            quit:       'com.100hps.captin'
+  uninstall quit: 'com.100hps.captin'
 
   zap trash: [
                '~/Library/Caches/com.100hps.captin',

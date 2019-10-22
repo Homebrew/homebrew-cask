@@ -1,10 +1,14 @@
 cask 'intel-power-gadget' do
-  version '3.5.2,641033'
-  sha256 '5fd602aa9321329c6b5c851c5158849905a18ef45d7a4ee9d452fdadfb708e30'
+  version '3.6.1,833853'
+  sha256 'f88af78566e406a06bf96349a7314a811cedfa698b38252ffc36f4f19ab52b65'
 
-  url "https://software.intel.com/file/#{version.after_comma}/download?#.dmg"
+  url "https://software.intel.com/file/#{version.after_comma}/download"
+  appcast 'https://software.intel.com/en-us/articles/intel-power-gadget',
+          configuration: version.after_comma
   name 'Intel Power Gadget'
-  homepage 'https://software.intel.com/en-us/articles/intel-power-gadget-20'
+  homepage 'https://software.intel.com/en-us/articles/intel-power-gadget'
+
+  depends_on macos: '>= :high_sierra'
 
   pkg 'Install Intel Power Gadget.pkg'
 

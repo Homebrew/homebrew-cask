@@ -1,8 +1,9 @@
 cask 'autopano-pro' do
-  version '4.4.1'
-  sha256 '6cd18f7be14e12e3bec9c9b409c5e3d0e2d095d291dfd1e75923589f0ac052b1'
+  version '4.4.2.400,2018-09-10'
+  sha256 'f4fae478d58b2a1a0f6422855b921723abcfaafffefaeccdc847ec0efc215424'
 
-  url 'http://download.kolor.com/app/stable/mac'
+  url "https://cdn-download.kolor.com/app/#{version.before_comma}_#{version.after_comma}/AutopanoPro_Mac_#{version.major_minor_patch.no_dots}_#{version.after_comma}.dmg"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=http://download.kolor.com/app/stable/mac'
   name 'Autopano Pro'
   homepage 'https://www.kolor.com/autopano/'
 

@@ -1,8 +1,9 @@
 cask 'brogue' do
-  version '1.7.4'
-  sha256 '37d21caecb8ced7e984638227937d0285df3742b6a34a7ca6c7a60355d0e9026'
+  version '1.7.5'
+  sha256 '34987d3b2d3b763e02cc4ef32166fc212c07f403f9e15af2ce6e490b88cdcf2b'
 
-  url "https://sites.google.com/site/broguegame/Brogue%20v#{version}%20OS%20X.zip?attredirects=0&d=1"
+  url "https://sites.google.com/site/broguegame/Brogue-mac-v#{version}.zip?attredirects=0&d=1"
+  appcast 'https://sites.google.com/site/broguegame/'
   name 'Brogue'
   homepage 'https://sites.google.com/site/broguegame/'
 

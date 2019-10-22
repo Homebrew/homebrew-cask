@@ -6,9 +6,7 @@ cask 'mmex' do
   url "https://github.com/moneymanagerex/moneymanagerex/releases/download/v#{version}/mmex_#{version}_macos10.9-wx3.0.2build.dmg"
   appcast 'https://github.com/moneymanagerex/moneymanagerex/releases.atom'
   name 'Money Manager Ex'
-  homepage 'http://www.moneymanagerex.org/'
-
-  depends_on macos: '>= :mavericks'
+  homepage 'https://www.moneymanagerex.org/'
 
   app 'MMEX.app'
 

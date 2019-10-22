@@ -2,9 +2,9 @@ cask 'virtual-ii' do
   version :latest
   sha256 :no_check
 
-  url 'http://virtualii.com/VirtualII.dmg'
+  url 'https://virtualii.com/VirtualII.dmg'
   name 'Virtual ]['
-  homepage 'http://virtualii.com/'
+  homepage 'https://virtualii.com/'
 
   suite 'Virtual ]['
 

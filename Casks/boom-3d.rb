@@ -1,12 +1,12 @@
 cask 'boom-3d' do
-  version '1.1.4,1527055860'
-  sha256 'd4800054fe1e8db5cfa70989320e9f289d98e780f8c11a2d522fcc4bc8e9cbe8'
+  version '1.3.3,1571300754'
+  sha256 'd65bd4bd1c146b8c9bd061f35c4e64b8e1d29c6796f6db0bc42a8b9e2f16741a'
 
   # devmate.com/com.globaldelight.Boom3D was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.globaldelight.Boom3D/#{version.before_comma}/#{version.after_comma}/Boom3D-#{version.before_comma}.dmg"
   appcast 'https://updates.devmate.com/com.globaldelight.Boom3D.xml'
   name 'Boom 3D'
-  homepage 'http://www.globaldelight.com/boom3d'
+  homepage 'https://www.globaldelight.com/boom3d'
 
   depends_on macos: '>= :yosemite'
 

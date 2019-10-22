@@ -4,7 +4,7 @@ cask 'pixelstick' do
 
   url 'https://plumamazing.com/bin/pixelstick/pixelstick.zip'
   name 'PixelStick'
-  homepage 'https://plumamazing.com/product-category/mac/pixelstick'
+  homepage 'https://plumamazing.com/product/pixelstick'
 
   app 'PixelStick.app'
 end

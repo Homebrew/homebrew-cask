@@ -8,6 +8,8 @@ cask 'avibrazil-rdm' do
   name 'RDM'
   homepage 'https://github.com/avibrazil/RDM'
 
+  depends_on macos: '>= :sierra'
+
   pkg "RDM-#{version}.pkg"
 
   uninstall pkgutil: 'net.alkalay.RDM'

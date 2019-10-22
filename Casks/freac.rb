@@ -1,12 +1,18 @@
 cask 'freac' do
-  version '1.1-alpha-20180710'
-  sha256 '79e2780490722ea6359eaee329852c79a796a6047a5ca4b3a804bb1e28afb183'
+  version '1.1-alpha-20190423'
+  sha256 'ce10882ca82198ec84397ab3a2d1fb3292dd9272ab59db2e22226cf09cab2739'
 
-  # sourceforge.net/bonkenc was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/bonkenc/freac-#{version}-macosx.dmg"
-  appcast 'https://sourceforge.net/projects/bonkenc/rss'
+  # github.com/enzo1982/freac was verified as official when first introduced to the cask
+  url "https://github.com/enzo1982/freac/releases/download/v#{version}/freac-#{version}-macosx.dmg"
+  appcast 'https://github.com/enzo1982/freac/releases.atom'
   name 'fre:ac'
   homepage 'https://www.freac.org/'
 
   app 'freac.app'
+
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.freac.freac.sfl*',
+               '~/Library/Preferences/org.freac.freac.plist',
+               '~/Library/Saved Application State/org.freac.freac.savedState',
+             ]
 end

@@ -8,8 +8,6 @@ cask 'slate' do
   name 'Slate'
   homepage 'https://github.com/jigish/slate'
 
-  accessibility_access true
-
   app 'Slate.app'
 
   zap trash: [

@@ -3,6 +3,7 @@ cask 'armitage' do
   sha256 'f44af478248fd01e71ea7e7bcfa558e4c9b291a78b0d1df1ad245c34cabd896b'
 
   url "http://www.fastandeasyhacking.com/download/armitage#{version.no_dots}.dmg"
+  appcast 'http://www.fastandeasyhacking.com/changelog'
   name 'Armitage'
   homepage 'http://www.fastandeasyhacking.com/'
 

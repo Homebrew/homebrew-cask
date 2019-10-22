@@ -3,6 +3,7 @@ cask 'keepassx' do
   sha256 '44271fef18fd07a29241e5324be407fa8edce77fb0b55c5646cd238092cdf823'
 
   url "https://www.keepassx.org/releases/#{version}/KeePassX-#{version}.dmg"
+  appcast 'https://github.com/keepassx/keepassx/releases.atom'
   name 'KeePassX'
   homepage 'https://www.keepassx.org/'
 

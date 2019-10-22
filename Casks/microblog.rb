@@ -1,12 +1,12 @@
 cask 'microblog' do
-  version '1.3.1'
-  sha256 '75fbf1a8aa9856c4f6e927460fbc6cd7832aa839ba055c0dbefde149a79ad76a'
+  version '1.9.1'
+  sha256 'f4365eeff523f21f7111e49c18d818cd909fb080a7e48ff48bd247c5dab73156'
 
   # s3.amazonaws.com/micro.blog was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/micro.blog/mac/Micro.blog_#{version}.zip"
   appcast 'https://s3.amazonaws.com/micro.blog/mac/appcast.xml'
   name 'Micro.blog'
-  homepage 'http://help.micro.blog/2017/mac-version/'
+  homepage 'https://help.micro.blog/2017/mac-version/'
 
   auto_updates true
   depends_on macos: '>= :sierra'

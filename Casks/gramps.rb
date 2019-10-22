@@ -1,6 +1,6 @@
 cask 'gramps' do
-  version '4.2.8-1'
-  sha256 '0dcb09ec5d40c9e42b26223a30d74d57450572ececad8cb25a3d4ee8e1a3f80a'
+  version '5.1.1-1'
+  sha256 '66398f859ef6e4be9fbe7c9970d69f778ba021f0a93ebbd483e26cdd1cb54418'
 
   # github.com/gramps-project/gramps was verified as official when first introduced to the cask
   url "https://github.com/gramps-project/gramps/releases/download/v#{version.major_minor_patch}/Gramps-Intel-#{version}.dmg"

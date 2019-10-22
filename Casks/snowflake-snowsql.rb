@@ -1,9 +1,10 @@
 cask 'snowflake-snowsql' do
-  version '1.1.22'
-  sha256 '212c0bdb9648fdc106756db41185da451c4d07b6b93b739cb0134f50862eac63'
+  version '1.1.85'
+  sha256 '865d280cc92d52dc04c7a938d05806832e9bf1a9786cdf3413e3a92aed031487'
 
-  # s3-us-west-2.amazonaws.com/sfc-snowsql-updates/bootstrap was verified as official when first introduced to the cask
-  url "https://s3-us-west-2.amazonaws.com/sfc-snowsql-updates/bootstrap/#{version.major_minor}/darwin_x86_64/snowsql-#{version}-darwin_x86_64.pkg"
+  # sfc-snowsql-updates.s3.us-west-2.amazonaws.com was verified as official when first introduced to the cask
+  url "https://sfc-snowsql-updates.s3.us-west-2.amazonaws.com/bootstrap/#{version.major_minor}/darwin_x86_64/snowsql-#{version}-darwin_x86_64.pkg"
+  appcast 'https://sfc-snowsql-updates.s3.us-west-2.amazonaws.com'
   name 'SnowSQL'
   homepage 'https://www.snowflake.net/'
 

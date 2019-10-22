@@ -1,6 +1,6 @@
 cask 'kitematic' do
-  version '0.17.3'
-  sha256 'f7822079a1c1747dabeebd95a57f46d50847f77d3f567862e7b624bff309bd2c'
+  version '0.17.9'
+  sha256 '1c22a87b82c57f8c5d7b264c7ebb79bb243a9f34668b936c5237cbe4c0247e40'
 
   # github.com/docker/kitematic was verified as official when first introduced to the cask
   url "https://github.com/docker/kitematic/releases/download/v#{version}/Kitematic-#{version}-Mac.zip"
@@ -8,13 +8,15 @@ cask 'kitematic' do
   name 'Kitematic'
   homepage 'https://kitematic.com/'
 
-  app 'Kitematic (Beta).app'
+  app 'Kitematic.app'
 
   zap trash: [
                '~/Kitematic',
                '~/Library/Application Support/Kitematic',
                '~/Library/Caches/Kitematic',
-               '~/Library/Preferences/com.electron.kitematic_(beta).plist',
-               '~/Library/Saved Application State/com.electron.kitematic_(beta).savedState',
+               '~/Library/Logs/Kitematic',
+               '~/Library/Preferences/com.electron.kitematic.plist',
+               '~/Library/Preferences/com.electron.kitematic.helper.plist',
+               '~/Library/Saved Application State/com.electron.kitematic.savedState',
              ]
 end

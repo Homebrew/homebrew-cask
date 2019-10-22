@@ -1,6 +1,6 @@
 cask 'apache-couchdb' do
-  version '2.1.2'
-  sha256 '5e9d95720fc61531405b0f04b3cd2e134af3eb73289e95729b2206d1bb557612'
+  version '2.3.1'
+  sha256 '768b9b290c5ad50b5055b4453315d739d6b4434fbbc26db7e3a5ba6ed1a9ddfe'
 
   # bintray.com/apache/couchdb was verified as official when first introduced to the cask
   url "https://dl.bintray.com/apache/couchdb/mac/#{version}/Apache-CouchDB-#{version}.zip"

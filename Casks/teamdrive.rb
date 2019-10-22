@@ -1,19 +1,20 @@
 cask 'teamdrive' do
-  version '4.5.5.1833'
-  sha256 '908ac820af13010111057b8e3a8d6811307296ecc09b9c90becb50e8a71feecf'
+  version '4.6.7.2415'
+  sha256 'e5cf9dc14066e895a59ff70672c84cb34fe1f3a1f7836bffad3675124c9450f9'
 
-  # s3download.teamdrive.net.s3.amazonaws.com was verified as official when first introduced to the cask
-  url "http://s3download.teamdrive.net.s3.amazonaws.com/#{version.major_minor}.#{version.split('.').last}/TMDR/mac-10.10.5/Install-TeamDrive-#{version}_TMDR.dmg"
+  # s3-eu-west-1.amazonaws.com/s3download.teamdrive.net was verified as official when first introduced to the cask
+  url "https://s3-eu-west-1.amazonaws.com/s3download.teamdrive.net/#{version.major_minor}.#{version.split('.').last}/TMDR/mac-10.14.2/Install-TeamDrive-#{version}_TMDR.dmg"
+  appcast 'https://teamdrive.com/en/downloads/'
   name 'TeamDrive'
   homepage 'https://www.teamdrive.com/'
 
   installer script: {
-                      executable: "Install-TeamDrive-#{version}_TMDR.app/Contents/MacOS/osx-intel",
+                      executable: "Install-TeamDrive-#{version}_TMDR.app/Contents/MacOS/osx-x86_64",
                       args:       ['--unattendedmodeui', 'none', '--mode', 'unattended'],
                     }
 
   uninstall script: {
-                      executable: '/Applications/TeamDrive/uninstall.app/Contents/MacOS/osx-intel',
+                      executable: '/Applications/TeamDrive/uninstall.app/Contents/MacOS/osx-x86_64',
                       args:       ['--mode', 'unattended'],
                     },
             signal: [

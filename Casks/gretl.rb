@@ -1,11 +1,12 @@
 cask 'gretl' do
-  version '2018a'
-  sha256 '43336535c6d9f940b146a1197ffdc72f894755183ab2364d7950e562818c3e08'
+  version '2019b'
+  sha256 'a8e434da68412b2edd91e852d7ecc6a08ac22d995a1911a5553bd6d1a4530363'
 
+  # downloads.sourceforge.net/gretl was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/gretl/gretl-#{version}-quartz.pkg"
   appcast 'https://sourceforge.net/projects/gretl/rss?path=/gretl'
   name 'gretl'
-  homepage 'http://gretl.sourceforge.net/'
+  homepage 'https://gretl.sourceforge.io/'
 
   pkg "gretl-#{version}-quartz.pkg"
 

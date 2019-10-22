@@ -1,8 +1,9 @@
 cask 'squidman' do
-  version '3.8'
-  sha256 'dcc1b304b9b4782c20ab323adab8f21be0b82b433f96afa82e3349b82bbb761b'
+  version '4.1'
+  sha256 '26ec3c2cd84ae7180b90205d55443f9c52966bb0f7770b05c9c80a1bdec92187'
 
-  url "http://squidman.net/resources/downloads/SquidMan#{version}.dmg"
+  url "https://squidman.net/resources/downloads/SquidMan#{version}.dmg"
+  appcast 'https://squidman.net/squidman/releasenotes/index.html'
   name 'SquidMan'
   homepage 'https://squidman.net/squidman/'
 

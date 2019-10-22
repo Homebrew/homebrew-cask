@@ -1,8 +1,14 @@
 cask 'touch-bar-simulator' do
-  version '1.2.0'
-  sha256 '4abe55de716ae56a41031cdb1d3b27bf6b1efae18b33b80bb0419669a9a76aa1'
+  if MacOS.version <= :high_sierra
+    version '1.2.0'
+    sha256 '4abe55de716ae56a41031cdb1d3b27bf6b1efae18b33b80bb0419669a9a76aa1'
+    url "https://github.com/sindresorhus/touch-bar-simulator/releases/download/v#{version}/Touch-Bar-Simulator-#{version}.dmg"
+  else
+    version '3.2.0'
+    sha256 'bdfaf740392bddb3e9b281a30efab27e03638d3428ba555650dca517153c13c6'
+    url "https://github.com/sindresorhus/touch-bar-simulator/releases/download/v#{version}/Touch.Bar.Simulator.#{version}.dmg"
+  end
 
-  url "https://github.com/sindresorhus/touch-bar-simulator/releases/download/v#{version}/Touch-Bar-Simulator-#{version}.dmg"
   appcast 'https://github.com/sindresorhus/touch-bar-simulator/releases.atom'
   name 'Touch Bar Simulator'
   homepage 'https://github.com/sindresorhus/touch-bar-simulator'

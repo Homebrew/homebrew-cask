@@ -1,8 +1,9 @@
 cask 'zoomus' do
-  version '4.1.27695.0702'
-  sha256 '839ba26e98b9be3f4f63ab76e4ef6fe1bcb0b5010c95062015b2cb342eceb8bb'
+  version '4.5.5666.1020'
+  sha256 'e395d6a8d431c48272581e8baa9b63b97569a276dc4b104ee28b95545023f76e'
 
   url "https://www.zoom.us/client/#{version}/zoomusInstaller.pkg"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://zoom.us/client/latest/Zoom.pkg'
   name 'Zoom.us'
   homepage 'https://www.zoom.us/'
 
@@ -10,9 +11,23 @@ cask 'zoomus' do
 
   pkg 'zoomusInstaller.pkg'
 
-  uninstall delete: '/Applications/zoom.us.app'
+  postflight do
+    set_ownership '~/Library/Application Support/zoom.us'
+  end
+
+  uninstall quit:       'us.zoom.ZoomOpener',
+            signal:     [
+                          ['KILL', 'us.zoom.xos'],
+                        ],
+            login_item: 'ZoomOpener',
+            delete:     [
+                          '/Applications/zoom.us.app',
+                          '~/.zoomus/ZoomOpener.app',
+                          '~/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin',
+                        ]
 
   zap trash: [
+               '~/.zoomus',
                '~/Desktop/Zoom',
                '~/Library/Application Support/zoom.us',
                '~/Library/Caches/us.zoom.xos',

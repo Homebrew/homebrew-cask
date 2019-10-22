@@ -1,10 +1,11 @@
 cask 'multipatch' do
-  version '1.6.2'
-  sha256 '58e0fcf1da4aee262dbc93b3df3e36f572866d5246472671f11115284dd85622'
+  version '1.7'
+  sha256 '4d92147ac60aa4224959e53d91ef3c457ad2fb47dad739ce7f87bc456ec94e06'
 
-  url "http://projects.sappharad.com/tools/multipatch#{version.no_dots}.zip"
+  url "https://projects.sappharad.com/tools/multipatch#{version.no_dots}.zip"
+  appcast 'https://github.com/Sappharad/MultiPatch/releases.atom'
   name 'MultiPatch'
-  homepage 'http://projects.sappharad.com/tools/multipatch.html'
+  homepage 'https://projects.sappharad.com/tools/multipatch.html'
 
   app 'MultiPatch/MultiPatch.app'
 

@@ -53,8 +53,6 @@ Each Cask must declare one or more *artifacts* (i.e. something to install).
 | `uninstall_preflight`  | yes                           | a Ruby block containing preflight uninstall operations (needed only in very rare cases)
 | `uninstall_postflight` | yes                           | a Ruby block containing postflight uninstall operations
 | `language`             | required                      | a Ruby block, called with language code parameters, containing other stanzas and/or a return value
-| `accessibility_access` | no                            | `true` if the application should be granted accessibility access
 | `container nested:`    | no                            | relative path to an inner container that must be extracted before moving on with the installation; this allows us to support dmg inside tar, zip inside dmg, etc.
 | `container type:`      | no                            | a symbol to override container-type autodetect. May be one of: `:air`, `:bz2`, `:cab`, `:dmg`, `:generic_unar`, `:gzip`, `:otf`, `:pkg`, `:rar`, `:seven_zip`, `:sit`, `:tar`, `:ttf`, `:xar`, `:zip`, `:naked`. (example [parse.rb](https://github.com/Homebrew/homebrew-cask/blob/312ae841f1f1b2ec07f4d88b7dfdd7fbdf8d4f94/Casks/parse.rb#L11))
-| `gpg`                  | no                            | *stub: not yet functional.*  (see also [GPG Stanza Details](stanzas/gpg.md))
-| `auto_updates`         | no                            | `true`. Assert the Cask artifacts auto-update. (Use if `Check for Updates…` or similar is present in app menu)
+| `auto_updates`         | no                            | `true`. Assert the Cask artifacts auto-update. Use if `Check for Updates…` or similar is present in app menu, but not if it only opens a webpage and does not do the download and installation for you.

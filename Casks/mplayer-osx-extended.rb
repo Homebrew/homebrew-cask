@@ -8,8 +8,6 @@ cask 'mplayer-osx-extended' do
   name 'MPlayer OSX Extended'
   homepage 'https://mplayerosx.ch/'
 
-  depends_on macos: '>= :lion'
-
   app 'MPlayer OSX Extended.app'
 
   zap trash: '~/.mplayer'

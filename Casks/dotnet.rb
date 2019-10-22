@@ -1,15 +1,21 @@
 cask 'dotnet' do
-  version '2.1.2'
-  sha256 '2b47125c50b32f8ce30fd15eaf6d8e87b5b30ded0ce3735398ebd33b20a79913'
+  version '3.0.0,1b09851c-1c1a-4aeb-a94a-7065db8741c0:b22a0b5501191fe1a263913d8ed11b2e'
+  sha256 'ae40801509711b254ca281d23ff20fc2dcd2ac8ab474f55c936e91e43495a573'
 
-  url "https://download.microsoft.com/download/1/f/7/1f7755c5-934d-4638-b89f-1f4ffa5afe89/dotnet-runtime-#{version}-osx-x64.pkg"
+  url "https://download.visualstudio.microsoft.com/download/pr/#{version.after_comma.before_colon}/#{version.after_colon}/dotnet-runtime-#{version.before_comma}-osx-x64.pkg"
   appcast 'https://www.microsoft.com/net/download/macos'
   name '.Net Core Runtime'
   homepage 'https://www.microsoft.com/net/core#macos'
 
+  conflicts_with cask: [
+                         'dotnet-sdk',
+                         'dotnet-preview',
+                         'dotnet-sdk-preview',
+                       ]
   depends_on macos: '>= :sierra'
 
-  pkg "dotnet-runtime-#{version}-osx-x64.pkg"
+  pkg "dotnet-runtime-#{version.before_comma}-osx-x64.pkg"
+  binary '/usr/local/share/dotnet/dotnet'
 
   uninstall pkgutil: 'com.microsoft.dotnet.*',
             delete:  '/etc/paths.d/dotnet'

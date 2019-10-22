@@ -1,6 +1,6 @@
 cask 'luyten' do
-  version '0.5.3'
-  sha256 '7caa0bf2debcdb61bf53c528c48dd97b533152fe6f86b0f57bf1f416dc5b7bc0'
+  version '0.5.4'
+  sha256 'c7191d822d6a9ab08e383c7038acf0aaf3885e332fdaf204c14b3c550a28120a'
 
   # github.com/deathmarine/Luyten was verified as official when first introduced to the cask
   url "https://github.com/deathmarine/Luyten/releases/download/v#{version}/luyten-OSX-#{version}.zip"

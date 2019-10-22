@@ -1,14 +1,12 @@
 cask 'bitwarden' do
-  version '1.3.0'
-  sha256 'a8e24abd6c28b3deef00b30b9be632ab799e31c1557d26f3c732725b2439acb3'
+  version '1.16.6'
+  sha256 '4461421f6e5fb14f8d12e10c6cd3a6d5114404a00ebed321a03dc5a8eecbda7b'
 
   # github.com/bitwarden/desktop was verified as official when first introduced to the cask
-  url "https://github.com/bitwarden/desktop/releases/download/v#{version}/bitwarden-#{version}-mac.zip"
+  url "https://github.com/bitwarden/desktop/releases/download/v#{version}/Bitwarden-#{version}-mac.zip"
   appcast 'https://github.com/bitwarden/desktop/releases.atom'
   name 'Bitwarden'
   homepage 'https://bitwarden.com/'
-
-  depends_on macos: '>= :mavericks'
 
   app 'Bitwarden.app'
 
@@ -19,7 +17,12 @@ cask 'bitwarden' do
 
   zap trash: [
                '~/Library/Logs/Bitwarden',
+               '~/Library/Application Support/Bitwarden',
+               '~/Library/Caches/com.bitwarden.desktop',
+               '~/Library/Caches/com.bitwarden.desktop.ShipIt',
+               '~/Library/Preferences/ByHost/com.bitwarden.desktop.ShipIt.*.plist',
                '~/Library/Preferences/com.bitwarden.desktop.plist',
                '~/Library/Preferences/com.bitwarden.desktop.helper.plist',
+               '~/Library/Saved Application State/com.bitwarden.desktop.savedState',
              ]
 end

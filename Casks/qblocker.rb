@@ -8,8 +8,6 @@ cask 'qblocker' do
   name 'QBlocker'
   homepage 'https://qblocker.com/'
 
-  accessibility_access true
-
   app 'QBlocker.app'
 
   zap trash: [

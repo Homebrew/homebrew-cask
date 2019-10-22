@@ -1,6 +1,6 @@
 cask 'macserve-ivpn' do
-  version '7.4.3'
-  sha256 '4c8ed0b22e13ae23c0afd1307c690d9bb60011b5336c6b1eb5a2a42371f3b7e0'
+  version '7.5'
+  sha256 'e6ae77eeaf0dc6b1468b7c0e584fa4c2616312a876eabce52b908f7e191684fa'
 
   url "https://macserve.org.uk/ivpn/downloads/iVPN_#{version}.zip"
   appcast 'http://macserve.org.uk:8090/profileInfo.php'

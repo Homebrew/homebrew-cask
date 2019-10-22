@@ -1,9 +1,10 @@
 cask 'cozy-drive' do
-  version '3.8.1'
-  sha256 'a3243c970d48bbceed55f2c3b207129ee21bc4c47d89b93061b7afdf616c863a'
+  version '3.15.2'
+  sha256 '974ddefbab8eb0ebe942761243707e92acd59e6d494b3787bcae99ac2b5acc17'
 
   # nuts.cozycloud.cc was verified as official when first introduced to the cask
   url "https://nuts.cozycloud.cc/download/channel/stable/CozyDrive-#{version}.dmg"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=https://nuts.cozycloud.cc/download/channel/stable/osx'
   name 'Cozy Drive'
   homepage 'https://cozy.io/'
 

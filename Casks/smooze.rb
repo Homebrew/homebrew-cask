@@ -1,6 +1,6 @@
 cask 'smooze' do
-  version '1.6.5'
-  sha256 '63ab3797e391bd3c3888c8fb38056c1f3e50853b02ef0000ae0c2f350a6caf1d'
+  version '1.8.0'
+  sha256 '438499531c5c0c7c66dddb35018abef4226ec55ca2d059e08f7882ec590fb307'
 
   url 'https://smooze.co/updates/Smooze.dmg'
   appcast 'https://smooze.co/updates/update.xml'
@@ -8,11 +8,11 @@ cask 'smooze' do
   homepage 'https://smooze.co/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'Smooze.app'
 
-  uninstall login_item: 'Smooze',
-            quit:       'co.smooze.macos'
+  uninstall quit: 'co.smooze.macos'
 
   zap trash: [
                '~/Library/Application Support/co.smooze.macos',

@@ -6,12 +6,12 @@ about: Create a report to help us improve
 
 #### General troubleshooting steps
 
-- [ ] I have retried my command with `--force` and the issue is still present.
-- [ ] I have checked the instructions for [reporting bugs](https://github.com/Homebrew/homebrew-cask#reporting-bugs).
-  - [ ] None of the templates was appropriate for my issue, or I’m not sure.
+- [ ] I understand that [if I ignore these instructions, my issue may be closed without review](https://github.com/Homebrew/homebrew-cask/blob/master/doc/faq/closing_issues_without_review.md).
+- [ ] I have retried my command with `--force`.
 - [ ] I ran `brew update-reset && brew update` and retried my command.
 - [ ] I ran `brew doctor`, fixed as many issues as possible and retried my command.
-- [ ] I understand that [if I ignore these instructions, my issue may be closed without review](https://github.com/Homebrew/homebrew-cask/blob/master/doc/faq/closing_issues_without_review.md).
+- [ ] I have checked the instructions for [reporting bugs](https://github.com/Homebrew/homebrew-cask#reporting-bugs).
+- [ ] I made doubly sure this is not a [checksum does not match](https://github.com/Homebrew/homebrew-cask/blob/master/doc/reporting_bugs/checksum_does_not_match_error.md) error.
 
 #### Description of issue
 

@@ -1,6 +1,6 @@
 cask 'android-ndk' do
-  version '17'
-  sha256 '0ccd8fbbd987932f846c76a1a0c8402925461feb161ead353339c508ab3bf1f5'
+  version '19'
+  sha256 '04159ade2fc5c7d055248cf65664039b8596f4b9ee3fbc44a9bf2ce2ee28d95d'
 
   # dl.google.com/android/repository/android-ndk was verified as official when first introduced to the cask
   url "https://dl.google.com/android/repository/android-ndk-r#{version}-darwin-x86_64.zip"
@@ -30,7 +30,7 @@ cask 'android-ndk' do
   ].each { |link_name| binary shimscript, target: link_name }
 
   uninstall_postflight do
-    FileUtils.rm("#{HOMEBREW_PREFIX}/share/android-ndk")
+    FileUtils.rm_f("#{HOMEBREW_PREFIX}/share/android-ndk")
   end
 
   caveats <<~EOS

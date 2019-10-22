@@ -1,6 +1,6 @@
 cask 'lazarus' do
-  version '1.8.4'
-  sha256 '7764e9ece462072658528d2c1d7996e4eb6d419fd26412f0e25c69671115d36a'
+  version '2.0.4'
+  sha256 '31fbb59c7191aa66b67f5248dfd79f88ce05b490909662eb3dc0492d52362b7b'
 
   # sourceforge.net/lazarus was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/lazarus/lazarus-#{version}-i686-macosx.dmg"

@@ -2,11 +2,9 @@ cask 'myworkspace' do
   version :latest
   sha256 :no_check
 
-  url 'https://myworkspace.ms/Assets/MyWorkspace.dmg'
+  url 'http://myworkspace.ms/Assets/MyWorkspace.dmg'
   name 'My Workspace'
-  homepage 'https://myworkspace.ms/'
-
-  auto_updates true
+  homepage 'http://myworkspace.ms/'
 
   app 'MyWorkspace.app'
 

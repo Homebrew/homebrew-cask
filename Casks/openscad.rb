@@ -1,11 +1,11 @@
 cask 'openscad' do
-  version '2015.03-3'
-  sha256 '1f2e8e52e04bbb6d3b2c8699d314d1ca28d2fcf68164eca7d0a20e248cee01a7'
+  version '2019.05'
+  sha256 'df6f6f3d34ac0d07f533ec4ccf59082189fb37c0276c1b8df651291e2509420e'
 
-  url "http://files.openscad.org/OpenSCAD-#{version}.dmg"
-  appcast 'http://files.openscad.org/appcast.xml'
+  url "https://files.openscad.org/OpenSCAD-#{version}.dmg"
+  appcast 'https://github.com/openscad/openscad/releases.atom'
   name 'OpenSCAD'
-  homepage 'http://www.openscad.org/'
+  homepage 'https://www.openscad.org/'
 
   app 'OpenSCAD.app'
   binary "#{appdir}/OpenSCAD.app/Contents/MacOS/OpenSCAD", target: 'openscad'

@@ -1,8 +1,8 @@
 cask 'powershell' do
-  version '6.0.2'
-  sha256 'c757808305076570cc0945feab8433a3488500a3558dea4dd4bb8e5a770dea99'
+  version '6.2.3'
+  sha256 '84a704ff4a0ee97193f4980d5f699c12fd14fb63d0fa4414f521cfcbc126981f'
 
-  url "https://github.com/PowerShell/PowerShell/releases/download/v#{version}/powershell-#{version}-osx.10.12-x64.pkg"
+  url "https://github.com/PowerShell/PowerShell/releases/download/v#{version}/powershell-#{version}-osx-x64.pkg"
   appcast 'https://github.com/PowerShell/PowerShell/releases.atom'
   name 'PowerShell'
   homepage 'https://github.com/PowerShell/PowerShell'
@@ -10,7 +10,7 @@ cask 'powershell' do
   depends_on formula: 'openssl'
   depends_on macos: '>= :sierra'
 
-  pkg "powershell-#{version}-osx.10.12-x64.pkg"
+  pkg "powershell-#{version}-osx-x64.pkg"
 
   uninstall pkgutil: 'com.microsoft.powershell'
 
@@ -25,12 +25,4 @@ cask 'powershell' do
                '~/.local/share',
                '~/.local',
              ]
-
-  caveats <<~EOS
-    A OpenSSL-backed libcurl with GSSAPI is required for custom handling
-    of certificates and default credentials for web requests.
-    This is rarely needed, but you can install it with
-      brew install curl --with-openssl --with-gssapi
-    See https://github.com/PowerShell/PowerShell/issues/5638
-  EOS
 end

@@ -1,6 +1,6 @@
 cask 'miditrail' do
-  version '1.2.3,68138'
-  sha256 '6be8c1928ae71d3713d884dbaa9e18e243f1c03ae4840bb3936321baf287e6f5'
+  version '1.2.6,71183'
+  sha256 '37ab9b7689ba2cb0be9991a2b2cfd21972176b00c06ac667a3de6e7459c186f6'
 
   # dl.osdn.jp/miditrail was verified as official when first introduced to the cask
   url "http://dl.osdn.jp/miditrail/#{version.after_comma}/MIDITrail-Ver.#{version.before_comma}-macOS.zip"

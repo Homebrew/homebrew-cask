@@ -1,10 +1,10 @@
 cask 'winzip' do
-  version '6.2'
-  sha256 'd275b46c935b3a45b9d3b961e1f49259da051d3549b0e775c9afb3bbcf08ad1b'
+  version '7.0.4564'
+  sha256 'b1d132bf27070ae810409f6b683fe103e63c40530a263ef7f11a513d2f57decd'
 
-  url "http://download.winzip.com/winzipmacedition#{version.no_dots}.dmg"
+  url "https://download.winzip.com/winzipmacedition#{version.major}.dmg"
   name 'WinZip'
-  homepage 'http://www.winzip.com/mac/en/winzip.html'
+  homepage 'https://www.winzip.com/mac/en/winzip.html'
 
   app 'WinZip.app'
 end

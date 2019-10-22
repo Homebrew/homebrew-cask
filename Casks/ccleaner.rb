@@ -1,8 +1,9 @@
 cask 'ccleaner' do
-  version '1.15.507'
-  sha256 '3795e8cff1404237838936fe1d17a29b645126bb32bff8873f8ece81a6c7b227'
+  version '1.17.603'
+  sha256 '6d23feade57576502460ccd7e032713b9692ef6fd60ce4908562079dd4b1db4d'
 
   url "https://download.ccleaner.com/mac/CCMacSetup#{version.major_minor.no_dots}.dmg"
+  appcast 'https://www.ccleaner.com/ccleaner/download?mac'
   name 'Piriform CCleaner'
   homepage 'https://www.ccleaner.com/ccleaner-mac'
 

@@ -1,11 +1,13 @@
 cask 'elan' do
-  version '5.2'
-  sha256 'b92d82620ba4cc0aa089a0cf49e3bea47427c6189e01664349fd6f91f2cd6369'
+  version '5.8'
+  sha256 '91153961b6ba6ad148bd5021967568e7dcbc2416b709e0c8681163e89f270d7d'
 
-  url "http://www.mpi.nl/tools/elan/ELAN_#{version.dots_to_hyphens}_mac.zip"
+  url "https://www.mpi.nl/tools/elan/ELAN_#{version.dots_to_hyphens}_mac.zip"
   appcast 'https://tla.mpi.nl/tools/tla-tools/elan/release-notes/'
   name 'ELAN'
   homepage 'https://tla.mpi.nl/tools/tla-tools/elan/'
+
+  depends_on macos: '>= :high_sierra'
 
   app "ELAN_#{version}.app"
 end

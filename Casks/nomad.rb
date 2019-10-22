@@ -2,7 +2,7 @@ cask 'nomad' do
   version :latest
   sha256 :no_check
 
-  url 'https://www.nomad.menu/download/NoMAD.pkg'
+  url 'https://files.nomad.menu/NoMAD.pkg'
   name 'NoMAD'
   homepage 'https://nomad.menu/'
 

@@ -1,6 +1,6 @@
 cask 'gnucash' do
-  version '3.2-2'
-  sha256 'c443629a73d0ec95ca8bcdb57fae755ec7915d91d0838e297404395587c6237d'
+  version '3.7-1'
+  sha256 'b687fb0a17b15e735a29be83354409fb8059aebf0bd97079b74eac3dfc4cbeac'
 
   # github.com/Gnucash/gnucash was verified as official when first introduced to the cask
   url "https://github.com/Gnucash/gnucash/releases/download/#{version.major_minor_patch}/Gnucash-Intel-#{version}.dmg"
@@ -9,7 +9,6 @@ cask 'gnucash' do
   homepage 'https://www.gnucash.org/'
 
   app 'Gnucash.app'
-  app 'FinanceQuote Update.app'
 
   zap trash: [
                '~/Library/Application Support/Gnucash',

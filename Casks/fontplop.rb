@@ -6,7 +6,7 @@ cask 'fontplop' do
   url "https://github.com/matthewgonzalez/fontplop/releases/download/v#{version}/fontplop-#{version}.dmg"
   appcast 'https://github.com/matthewgonzalez/fontplop/releases.atom'
   name 'Fontplop'
-  homepage 'http://www.fontplop.com/'
+  homepage 'https://www.fontplop.com/'
 
   app 'fontplop.app'
 end

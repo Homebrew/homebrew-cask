@@ -1,9 +1,9 @@
 cask 'xca' do
-  version '2.0.1'
-  sha256 '6432f049855aadabf4c358f03f448ebc5722528c98cb50e0fa087908fcfe2763'
+  version '2.1.2'
+  sha256 '1cb7d23045ef64b2c30ce927a40d4bcae20b776aa0c94e067029b3b6be63bc49'
 
   # github.com/chris2511/xca was verified as official when first introduced to the cask
-  url "https://github.com/chris2511/xca/releases/download/RELEASE.#{version}/xca-#{version}-High-Sierra.dmg"
+  url "https://github.com/chris2511/xca/releases/download/RELEASE.#{version}/xca-#{version}.dmg"
   appcast 'https://github.com/chris2511/xca/releases.atom'
   name 'XCA'
   homepage 'https://hohnstaedt.de/xca/'

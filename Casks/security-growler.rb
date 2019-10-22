@@ -7,7 +7,5 @@ cask 'security-growler' do
   name 'Security Growler'
   homepage 'https://github.com/pirate/security-growler'
 
-  depends_on macos: '>= :mountain_lion'
-
   app 'Security Growler.app'
 end

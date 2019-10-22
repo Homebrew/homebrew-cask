@@ -1,14 +1,14 @@
 cask 'lulu' do
-  version '0.9.6'
-  sha256 'aa446a1a834242db595451657e565d3bc23e49050a36c6451cb1fe716e8e63a7'
+  version '1.2.0'
+  sha256 '8afe6d73e910f34f4817223bdf6aa466e9189e08bf0f50f34e18e6b3b4823224'
 
-  # github.com/objective-see/LuLu was verified as official when first introduced to the cask
-  url "https://github.com/objective-see/LuLu/releases/download/#{version}/LuLu_#{version.dots_to_underscores}.zip"
-  appcast 'https://github.com/objective-see/LuLu/releases.atom'
+  # bitbucket.org/objective-see was verified as official when first introduced to the cask
+  url "https://bitbucket.org/objective-see/deploy/downloads/LuLu_#{version}.zip"
+  appcast 'https://objective-see.com/products/changelogs/LuLu.txt'
   name 'LuLu'
   homepage 'https://objective-see.com/products/lulu.html'
 
-  depends_on macos: '>= :yosemite'
+  depends_on macos: '>= :sierra'
 
   installer script: {
                       executable: "#{staged_path}/Lulu Installer.app/Contents/MacOS/LuLu Installer",

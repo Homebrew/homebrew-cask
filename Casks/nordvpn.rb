@@ -1,16 +1,16 @@
 cask 'nordvpn' do
-  version '4.6.5'
-  sha256 'd79ba0ef0db205c5235777a8fb817ff12c90dced79f6ed9a2c846f332f7b639f'
+  version '4.15.5'
+  sha256 'e39b313d966505e89028401ba68fa3f76d20f5e2087c033b86ea2d272bd0e488'
 
   # downloads.nordcdn.com/apps was verified as official when first introduced to the cask
-  url 'https://downloads.nordcdn.com/apps/macos/generic/NordVPN-OpenVPN/latest/NordVPN.zip'
+  url "https://downloads.nordcdn.com/apps/macos/generic/NordVPN-OpenVPN/#{version}/NordVPN.pkg"
   appcast 'https://downloads.nordcdn.com/apps/macos/generic/NordVPN-OpenVPN/latest/update_pkg.xml'
   name 'NordVPN'
   homepage 'https://nordvpn.com/'
 
   auto_updates true
 
-  pkg 'exports/NordVPN_OVPN.pkg'
+  pkg 'NordVPN.pkg'
 
   uninstall quit:       'com.nordvpn.NordVPN',
             launchctl:  'com.nordvpn.NordVPN.Helper',

@@ -6,7 +6,9 @@ cask 'nulloy' do
   url "https://github.com/nulloy/nulloy/releases/download/#{version}/Nulloy-#{version}-x86_64.dmg"
   appcast 'https://github.com/nulloy/nulloy/releases.atom'
   name 'Nulloy'
-  homepage 'http://nulloy.com/'
+  homepage 'https://nulloy.com/'
 
   app 'Nulloy.app'
+
+  zap trash: '~/Library/Saved Application State/com.nulloy.savedState'
 end

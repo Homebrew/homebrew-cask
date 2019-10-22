@@ -7,5 +7,7 @@ cask 'soduto' do
   name 'Soduto'
   homepage 'https://soduto.com/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Soduto.app'
 end

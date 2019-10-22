@@ -1,6 +1,6 @@
 cask 'wireshark-chmodbpf' do
-  version '2.6.1'
-  sha256 'bf5f9a0e810a7cfb360ea69b1b587126432adffe5fa65db902fa761842b55a6a'
+  version '3.0.5'
+  sha256 '21bffc033dfbee74d30c6209dfa7ed57107cb7dd9d394fee579a333cddb746e6'
 
   url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20Intel%2064.dmg"
   appcast 'https://www.wireshark.org/download/osx/'
@@ -8,7 +8,7 @@ cask 'wireshark-chmodbpf' do
   homepage 'https://www.wireshark.org/'
 
   conflicts_with cask: 'wireshark'
-  depends_on macos: '>= :mountain_lion'
+  depends_on macos: '>= :sierra'
 
   pkg "Wireshark #{version} Intel 64.pkg",
       choices: [
@@ -31,16 +31,11 @@ cask 'wireshark-chmodbpf' do
 
   uninstall_preflight do
     set_ownership '/Library/Application Support/Wireshark'
+    system_command '/usr/sbin/dseditgroup', args: ['-o', 'delete', 'access_bpf'], sudo: true
   end
 
   uninstall pkgutil:   'org.wireshark.ChmodBPF.pkg',
-            launchctl: 'org.wireshark.ChmodBPF',
-            script:    {
-                         executable:   '/usr/sbin/dseditgroup',
-                         args:         ['-o', 'delete', 'access_bpf'],
-                         must_succeed: false,
-                         sudo:         true,
-                       }
+            launchctl: 'org.wireshark.ChmodBPF'
 
   caveats do
     reboot

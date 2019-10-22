@@ -1,11 +1,13 @@
 cask 'fluid' do
-  version '1.8.6'
-  sha256 'bbfa09a48563d89d5a1113527cd0a353f590b0f6811f270f12909ecfad8a2655'
+  version '2.1.2'
+  sha256 'cf58c480f631d2adc050b423e65776e253f52989ade9c1aaf8d77b8ced63a653'
 
-  url "http://fluidapp.com/dist/Fluid_#{version}.zip"
-  appcast "http://fluidapp.com/appcast/fluid#{version.major}.rss"
+  url "https://fluidapp.com/dist/Fluid_#{version}.zip"
+  appcast "https://fluidapp.com/appcast/fluid#{version.major}.rss"
   name 'Fluid'
-  homepage 'http://fluidapp.com/'
+  homepage 'https://fluidapp.com/'
+
+  depends_on macos: '>= :sierra'
 
   app 'Fluid.app'
 

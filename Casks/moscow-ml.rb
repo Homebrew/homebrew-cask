@@ -6,7 +6,7 @@ cask 'moscow-ml' do
   url "https://github.com/kfl/mosml/releases/download/ver-#{version}/mosml-#{version}.pkg"
   appcast 'https://github.com/kfl/mosml/releases.atom'
   name 'Moscow ML'
-  homepage 'http://mosml.org/'
+  homepage 'https://mosml.org/'
 
   pkg "mosml-#{version}.pkg"
 

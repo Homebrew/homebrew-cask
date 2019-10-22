@@ -1,6 +1,6 @@
 cask 'textexpander' do
-  version '6.2.6'
-  sha256 '9516038d25490a5c6e2529e0c81cc686d0bd1475504bbe21e46921bc0d51739e'
+  version '6.5.2'
+  sha256 '219504e5b01d8c13e14d5a8b0faf20cf257d8d33900ef58659d08eedab3f7521'
 
   # cdn.textexpander.com/mac was verified as official when first introduced to the cask
   url "https://cdn.textexpander.com/mac/TextExpander_#{version}.zip"
@@ -9,11 +9,9 @@ cask 'textexpander' do
   homepage 'https://smilesoftware.com/TextExpander'
 
   auto_updates true
-  accessibility_access true
+  depends_on macos: '>= :sierra'
 
   app 'TextExpander.app'
-
-  uninstall login_item: 'TextExpander'
 
   zap trash: '~/Library/Application Support/TextExpander/'
 end

@@ -7,4 +7,9 @@ cask 'baretorrent' do
   homepage 'https://launchpad.net/baretorrent'
 
   app 'baretorrent.app'
+
+  zap trash: [
+               '~/Library/Application Support/baretorrent',
+               '~/Library/Saved Application State/baretorrent.savedState',
+             ]
 end

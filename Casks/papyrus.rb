@@ -1,12 +1,12 @@
 cask 'papyrus' do
-  version '3.0.0,oxygen'
-  sha256 '1dfde1cc4a098a71af086b0903f4679d1d735cdbc26992428c9baba775da0439'
+  version '4.5.0,2019-09'
+  sha256 '8fb94209c2bed5a0978cd77cdd8e0870dc343c38575f600fa5762b39a0fea2ab'
 
   url "https://www.eclipse.org/downloads/download.php?file=/modeling/mdt/papyrus/rcp/#{version.after_comma}/#{version.before_comma}/papyrus-#{version.after_comma}-#{version.before_comma}-macosx64.tar.gz&r=1"
+  appcast 'https://mirrors.dotsrc.org/eclipse//modeling/mdt/papyrus/rcp/',
+          configuration: version.after_comma
   name 'Papyrus'
   homepage 'https://eclipse.org/papyrus/'
-
-  depends_on macos: '>= :leopard'
 
   app 'Papyrus.app'
 

@@ -1,6 +1,6 @@
 cask 'macsvg' do
-  version '1.1.4'
-  sha256 '48c4efc381b2c1b90639757b8b5c6bb6a9dbf43cbf40e51d5b083973b5174992'
+  version '1.1.5'
+  sha256 'aeaf81f5f93da24038c555375e0ff0e13be10c4b2e79592ba9a489a5506d1de3'
 
   # github.com/dsward2/macSVG was verified as official when first introduced to the cask
   url "https://github.com/dsward2/macSVG/releases/download/v#{version}/macSVG-v#{version}.zip"
@@ -8,7 +8,7 @@ cask 'macsvg' do
   name 'macSVG'
   homepage 'https://macsvg.org/'
 
-  app "macSVG-v#{version}/macSVG.app"
+  app 'macSVG.app'
 
   zap trash: [
                '~/Library/Application Scripts/com.arkphone.macsvg',

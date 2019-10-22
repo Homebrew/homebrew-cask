@@ -1,8 +1,9 @@
 cask 'cmake' do
-  version '3.11.4'
-  sha256 '3649b7dd9c57a914bb89e6e054b37de324c85ab9ae055d4948cfa2d5df253416'
+  version '3.15.4'
+  sha256 '2e6487178b474722209d97746466b87ebd90a4702dd2d4b2924cce4ed2863024'
 
   url "https://www.cmake.org/files/v#{version.major_minor}/cmake-#{version}-Darwin-x86_64.dmg"
+  appcast 'https://cmake.org/files/LatestRelease/'
   name 'CMake'
   homepage 'https://cmake.org/'
 
@@ -11,7 +12,6 @@ cask 'cmake' do
   app 'CMake.app'
   binary "#{appdir}/CMake.app/Contents/bin/cmake"
   binary "#{appdir}/CMake.app/Contents/bin/ccmake"
-  binary "#{appdir}/CMake.app/Contents/bin/cmakexbuild"
   binary "#{appdir}/CMake.app/Contents/bin/cpack"
   binary "#{appdir}/CMake.app/Contents/bin/ctest"
   binary "#{appdir}/CMake.app/Contents/bin/cmake-gui"

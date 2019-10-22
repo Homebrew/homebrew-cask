@@ -1,11 +1,11 @@
 cask 'mediathekview' do
-  version '13.0.6'
-  sha256 'a53a62a40e94064a9d66adce7b0139f908b8d4d5bc5a8e9d590a07040694a32e'
+  version '13.5.0'
+  sha256 'ac634ab0383270e61ed1fe91905c0f5c8dfa8a15408d1471ed1b2669974d07bd'
 
-  url "https://download.mediathekview.de/stabil/MediathekView-#{version}.dmg"
+  url "https://download.mediathekview.de/stabil/MediathekView-#{version}-mac.dmg"
   appcast 'https://mediathekview.de/changelog/index.xml'
   name 'MediathekView'
   homepage 'https://mediathekview.de/'
 
-  app 'MediathekView.app'
+  suite 'MediathekView'
 end

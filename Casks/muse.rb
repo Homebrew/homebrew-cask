@@ -1,11 +1,13 @@
 cask 'muse' do
-  version '4.0-alpha.1'
-  sha256 '356dbcba6c4f56bb00b1cabfbd8f6556aacf4fa70937cc717ec55039e528742d'
+  version '4.1.1'
+  sha256 '809ba172f9929b4b0d49bfbe5f9210946013761f3cdd27862fc887b31ae5d96c'
 
   url "https://github.com/xzzz9097/Muse/releases/download/v#{version}/Muse.app.zip"
   appcast 'https://github.com/xzzz9097/Muse/releases.atom'
   name 'Muse'
   homepage 'https://github.com/xzzz9097/Muse'
+
+  depends_on macos: '>= :sierra'
 
   app 'Muse.app'
 end

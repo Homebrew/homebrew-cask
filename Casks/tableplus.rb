@@ -1,10 +1,11 @@
 cask 'tableplus' do
-  version '1.0,114'
-  sha256 '383a605159c2e4de577c933d47cfe2fa9ed91faabedab496ff9df695671c9cd0'
+  version '2.9.1,264'
+  sha256 '5d50e2627855d4f99e3ca7427aa53489e5b98e60aa31c826902b92d478dadc91'
 
-  # s3.amazonaws.com/tableplus-osx-builds was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/tableplus-osx-builds/#{version.after_comma}/TablePlus.zip"
-  appcast 'https://tableplus.io/osx/version.xml'
+  # tableplus-osx-builds.s3.amazonaws.com was verified as official when first introduced to the cask
+  url "https://tableplus-osx-builds.s3.amazonaws.com/#{version.after_comma}/TablePlus.dmg"
+  appcast 'https://tableplus.io/osx/version.xml',
+          configuration: version.after_comma
   name 'TablePlus'
   homepage 'https://tableplus.io/'
 
@@ -17,5 +18,6 @@ cask 'tableplus' do
                '~/Library/Caches/com.tinyapp.TablePlus',
                '~/Library/Cookies/com.tinyapp.TablePlus.binarycookies',
                '~/Library/Preferences/com.tinyapp.TablePlus.plist',
+               '~/Library/Saved Application State/com.tinyapp.TablePlus.savedState',
              ]
 end

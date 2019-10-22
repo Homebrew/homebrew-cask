@@ -1,6 +1,6 @@
 cask 'radarr' do
-  version '0.2.0.1067'
-  sha256 'bb0885cb03ad8b15811f1ff60439fafe45b699e51d47b6bc4c072242b18d2c78'
+  version '0.2.0.1358'
+  sha256 '0cf9d05c8e971e834a591fef60f1a6f3e685a2999751cb118a537c118d5f5466'
 
   # github.com/Radarr/Radarr was verified as official when first introduced to the cask
   url "https://github.com/Radarr/Radarr/releases/download/v#{version}/Radarr.develop.#{version}.osx-app.zip"

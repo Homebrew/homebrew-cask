@@ -6,7 +6,7 @@ cask 'pibakery' do
   url "https://github.com/davidferguson/pibakery/releases/download/v#{version}/PiBakery.pkg"
   appcast 'https://github.com/davidferguson/pibakery/releases.atom'
   name 'PiBakery'
-  homepage 'http://www.pibakery.org/'
+  homepage 'https://www.pibakery.org/'
 
   pkg 'PiBakery.pkg'
 

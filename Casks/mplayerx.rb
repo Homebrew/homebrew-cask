@@ -8,6 +8,8 @@ cask 'mplayerx' do
   name 'MPlayerX'
   homepage 'http://mplayerx.org/'
 
+  auto_updates true
+
   app 'MPlayerX.app'
 
   zap trash: [

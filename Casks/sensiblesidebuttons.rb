@@ -1,10 +1,12 @@
 cask 'sensiblesidebuttons' do
-  version '1.0.5'
-  sha256 '5a0f48dff542f9f8b2b20e09ffff31414139bd124a2cdb1c4ad23c7c77db920a'
+  version '1.0.6'
+  sha256 '1f2b3aefc47ac1ff8ce1e83af3ddab814dd7c6e6b974b73dce3694ec7435881b'
 
-  url "http://sensible-side-buttons.archagon.net/SensibleSideButtons-#{version}.dmg"
+  # github.com/archagon/sensible-side-buttons was verified as official when first introduced to the cask
+  url "https://github.com/archagon/sensible-side-buttons/releases/download/#{version}/SensibleSideButtons-#{version}.dmg"
+  appcast 'https://github.com/archagon/sensible-side-buttons/releases.atom'
   name 'Sensible Side Buttons'
-  homepage 'http://sensible-side-buttons.archagon.net/'
+  homepage 'https://sensible-side-buttons.archagon.net/'
 
   app 'SensibleSideButtons.app'
 end

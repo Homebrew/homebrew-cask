@@ -1,6 +1,6 @@
 cask 'qlvideo' do
-  version '1.91'
-  sha256 'e7d0ab6c79ac1952fafb86ef5012d911c669fd628ca2a3a800aa0aea2a2a0b2e'
+  version '1.92'
+  sha256 '41d5263bcc52a612b8194cdd6880e4f0613adb6337f9d2e0015487388c8a3def'
 
   url "https://github.com/Marginal/QLVideo/releases/download/rel-#{version.no_dots}/QLVideo_#{version.no_dots}.pkg"
   appcast 'https://github.com/Marginal/QLVideo/releases.atom'

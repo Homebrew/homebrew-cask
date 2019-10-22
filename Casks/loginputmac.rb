@@ -1,14 +1,17 @@
 cask 'loginputmac' do
-  version '1.14,2741'
-  sha256 'f8f8b7fbda7bcfca80fdc80a3cb7e840c2fe151c3869c51ecfd197267d7c3c7f'
+  version '2.2.6'
+  sha256 '00ac53e50b7a3b61da02ca8b8f741d8a7fecc3f86490ef426eb5a06fed3f4b7f'
 
-  # nzhm461a0.qnssl.com was verified as official when first introduced to the cask
-  url "https://nzhm461a0.qnssl.com/LogInputMac#{version.after_comma}.app.zip"
-  appcast 'https://im.logcg.com/appcast.xml'
+  # loginput-mac2.content-delivery.top was verified as official when first introduced to the cask
+  url "https://loginput-mac2.content-delivery.top/loginputmac#{version.major}_latest.pkg"
+  appcast "https://im.logcg.com/appcast#{version.major}.xml"
   name 'LoginputMac'
-  homepage 'https://im.logcg.com/loginputmac'
+  homepage "https://im.logcg.com/loginputmac#{version.major}"
 
   auto_updates true
 
-  app 'LogInputMac.app'
+  pkg "loginputmac#{version.major}_latest.pkg"
+
+  uninstall pkgutil: "com.logcg.pkg.LoginputMac#{version.major}",
+            quit:    "com.logcg.inputmethod.LogInputMac#{version.major}"
 end

@@ -1,11 +1,12 @@
 cask 'burn' do
-  version '2.5.1'
-  sha256 'e82d2b7ef6a99e5a139706ff4e360659830d618ab8743e4b55ec80cdcdc97596'
+  version '2.7.7'
+  sha256 '475d679eaf081726365fdf140d41d04f1c57ff35f7fd5bc80b00912e4eeaef89'
 
-  url "https://downloads.sourceforge.net/burn-osx/Burn/#{version}/burn#{version.no_dots}.zip"
+  # downloads.sourceforge.net/burn-osx was verified as official when first introduced to the cask
+  url "https://downloads.sourceforge.net/burn-osx/Burn/#{version}/burn-#{version}.zip"
   appcast 'https://sourceforge.net/projects/burn-osx/rss?path=/Burn'
   name 'Burn'
-  homepage 'http://burn-osx.sourceforge.net/'
+  homepage 'https://burn-osx.sourceforge.io/'
 
   app 'Burn.localized/Burn.app'
 end

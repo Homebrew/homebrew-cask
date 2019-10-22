@@ -6,7 +6,7 @@ cask 'handshaker' do
   url "http://dl2.smartisan.cn/app/HandShaker.v#{version}.dmg"
   appcast 'https://sf.smartisan.com/update.plist'
   name 'HandShaker'
-  homepage 'http://www.smartisan.com/apps/'
+  homepage 'https://www.smartisan.com/apps/'
 
   app 'HandShaker.app'
 end

@@ -17,4 +17,8 @@ cask 'appearin' do
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vitorgalvao.appear.in.sfl*',
                '~/Library/Saved Application State/com.vitorgalvao.appear.in.savedState',
              ]
+
+  caveats do
+    discontinued
+  end
 end

@@ -1,14 +1,15 @@
 cask 'touche' do
-  version '1.1.2'
-  sha256 '3836f2016efb846f8cdb8e15afa579ed3352c39e4107cb5045c46bf045a546ed'
+  version '1.1.4'
+  sha256 '275a2885214befd088fe20707f306d3ad1743cf8181334ed4ef976391fff6c7f'
 
-  # redsweater.s3.amazonaws.com was verified as official when first introduced to the cask
-  url "https://redsweater.s3.amazonaws.com/Touche#{version}.zip"
+  url "https://red-sweater.com/touche/Touche#{version}.zip"
   appcast 'https://red-sweater.com/touche/appcast.php'
-  name 'Touché'
+  name 'Touché'
   homepage 'https://red-sweater.com/touche/'
 
-  app 'Touché.app'
+  depends_on macos: '>= :sierra'
+
+  app 'Touché.app'
 
   zap trash: [
                '~/Library/Containers/com.red-sweater.touche',

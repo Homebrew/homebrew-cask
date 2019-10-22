@@ -7,8 +7,6 @@ cask 'shortcat' do
   name 'Sproutcube Shortcat'
   homepage 'https://shortcatapp.com/'
 
-  accessibility_access true
-
   app 'Shortcat.app'
 
   zap trash: [

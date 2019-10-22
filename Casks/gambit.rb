@@ -1,6 +1,6 @@
 cask 'gambit' do
-  version '4.8.9'
-  sha256 'dd9945149dbf57930f01cc1b49848b9e37d38fd09ba9b9b2d74985f31f3e6c6c'
+  version '4.9.0'
+  sha256 '5460974327f2ca573f8bcd533f568f85a28c7c6c0205463947871de8f10af143'
 
   # iro.umontreal.ca/~gambit/download/gambit was verified as official when first introduced to the cask
   url "https://www.iro.umontreal.ca/~gambit/download/gambit/v#{version.major_minor}/prebuilt/gambit-v#{version.dots_to_underscores}-macosx-intel64.dmg"

@@ -1,6 +1,6 @@
 cask 'android-platform-tools' do
-  version '28.0.0'
-  sha256 '1d5ecc7370b3423ce428ae14e295dc2480f548f4a861b6770ee7835ad98c3d92'
+  version '29.0.4'
+  sha256 '0138d738eeb96a48a0b04894e502d4b4ef802cb8cf446a61838fb7c2a386a532'
 
   # google.com/android/repository/platform-tools was verified as official when first introduced to the cask
   url "https://dl.google.com/android/repository/platform-tools_r#{version}-darwin.zip"
@@ -13,5 +13,4 @@ cask 'android-platform-tools' do
   binary "#{staged_path}/platform-tools/fastboot"
   binary "#{staged_path}/platform-tools/hprof-conv"
   binary "#{staged_path}/platform-tools/mke2fs"
-  binary "#{staged_path}/platform-tools/sqlite3"
 end

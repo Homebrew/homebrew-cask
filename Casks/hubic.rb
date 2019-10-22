@@ -4,6 +4,7 @@ cask 'hubic' do
 
   # mir7.ovh.net/ovh-applications/hubic was verified as official when first introduced to the cask
   url "http://mir7.ovh.net/ovh-applications/hubic/hubiC-OSX/#{version.major_minor_patch}/hubiC-OSX-#{version}-osx.pkg"
+  appcast 'https://hubic.com/en/downloads'
   name 'hubiC'
   homepage 'https://hubic.com/'
 

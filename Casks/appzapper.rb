@@ -8,6 +8,7 @@ cask 'appzapper' do
   homepage 'https://www.appzapper.com/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'AppZapper.app'
 end
