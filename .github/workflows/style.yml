@@ -33,10 +33,10 @@ jobs:
 
           case "${GITHUB_EVENT_NAME}" in
             pull_request)
-              PR_URL="$(cat "${GITHUB_EVENT_PATH}" | jq .pull_request._links.html.href)"
+              PR_URL="$(cat "${GITHUB_EVENT_PATH}" | jq -r .pull_request._links.html.href)"
               ;;
             check_run)
-              PR_URL="$(cat "${GITHUB_EVENT_PATH}" | jq .repository.html_url)/commit/$(cat "${GITHUB_EVENT_PATH}" | jq .check_run.head_sha)"
+              PR_URL="$(cat "${GITHUB_EVENT_PATH}" | jq -r .repository.html_url)/commit/$(cat "${GITHUB_EVENT_PATH}" | jq -r .check_run.head_sha)"
               ;;
           esac
 
