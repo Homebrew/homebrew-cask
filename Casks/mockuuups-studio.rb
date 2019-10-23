@@ -1,5 +1,5 @@
 cask 'mockuuups-studio' do
-  version '2.2.0'
+  version '2.2.1'
   sha256 '2d542ca9f9e162f20a6df2a39b26d62a8e9570968279a2960da61b68c7c26447'
 
   # mockuuups.com was verified as official when first introduced to the cask
