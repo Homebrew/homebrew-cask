@@ -26,7 +26,7 @@ Each Cask must declare one or more *artifacts* (i.e. something to install).
 | `font`             | yes                           | relative path to a Font that should be moved into the `~/Library/Fonts` folder on installation
 | `input_method`     | yes                           | relative path to a Input Method that should be moved into the `~/Library/Input Methods` folder on installation
 | `internet_plugin`  | yes                           | relative path to a Service that should be moved into the `~/Library/Internet Plug-Ins` folder on installation
-| `manpage`          | yes                           | relative path to a Manpage that should be linked into the respective man page folder folder on installation, e.g. `/usr/local/share/man/man3/my_app.3` for `subfolder/my_app.3`
+| `manpage`          | yes                           | relative path to a Man Page that should be linked into the respective man page folder on installation, e.g. `/usr/local/share/man/man3` for `my_app.3`
 | `prefpane`         | yes                           | relative path to a Preference Pane that should be moved into the `~/Library/PreferencePanes` folder on installation
 | `qlplugin`         | yes                           | relative path to a QuickLook Plugin that should be moved into the `~/Library/QuickLook` folder on installation
 | `screen_saver`     | yes                           | relative path to a Screen Saver that should be moved into the `~/Library/Screen Savers` folder on installation
