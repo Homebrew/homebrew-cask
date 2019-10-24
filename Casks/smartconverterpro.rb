@@ -3,7 +3,7 @@ cask 'smartconverterpro' do
   sha256 '5dbde9f84974e301d0ee3fbbc61f117a8b75d22b1373c8de265fa626199d2822'
 
   url "https://download.shedworx.com/smartconverter/SmartConverter-#{version}.dmg"
-  name 'SmartConverter'
+  name 'Smart Converter Pro'
   homepage 'https://shedworx.com/smart-converter-pro'
 
   app "Smart Converter Pro #{version.major}.app"
