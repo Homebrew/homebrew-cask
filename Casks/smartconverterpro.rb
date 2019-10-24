@@ -6,7 +6,7 @@ cask 'smartconverterpro' do
   name 'SmartConverter'
   homepage 'https://shedworx.com/smart-converter-pro'
 
-  app 'Smart Converter Pro #{version.major}.app'
+  app "Smart Converter Pro #{version.major}.app"
 
   zap trash: [
                '~/Library/Containers/com.shedworx.smartconverter',
