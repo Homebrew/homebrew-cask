@@ -1,4 +1,4 @@
-cask 'smartconverterpro' do
+cask 'smart-converter-pro' do
   version '2.4.2'
   sha256 '5dbde9f84974e301d0ee3fbbc61f117a8b75d22b1373c8de265fa626199d2822'
 
