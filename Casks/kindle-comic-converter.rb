@@ -7,7 +7,7 @@ cask 'kindle-comic-converter' do
   name 'Kindle Comic Converter'
   homepage 'https://kcc.iosphe.re/'
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :mojave'
 
   app 'Kindle Comic Converter.app'
 end
