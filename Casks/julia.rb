@@ -8,7 +8,7 @@ cask 'julia' do
   homepage 'https://julialang.org/'
 
   app "Julia-#{version.major_minor}.app"
-  binary "#{appdir}/Julia-#{version.major_minor}.app/Contents/Resources/julia/bin/julia"
+  binary "Julia-#{version.major_minor}.app/Contents/Resources/julia/bin/julia"
 
   zap trash: '~/.julia'
 end

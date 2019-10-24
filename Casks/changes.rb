@@ -9,7 +9,7 @@ cask 'changes' do
   homepage 'https://martiancraft.com/products/changes.html'
 
   app 'Changes.app'
-  binary "#{appdir}/Changes.app/Contents/Resources/chdiff"
+  binary 'Changes.app/Contents/Resources/chdiff'
 
   zap trash: [
                '~/Library/Preferences/com.bitbq.Changes.plist',

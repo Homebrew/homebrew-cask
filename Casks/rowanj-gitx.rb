@@ -11,5 +11,5 @@ cask 'rowanj-gitx' do
   conflicts_with cask: 'gitx'
 
   app 'GitX.app'
-  binary "#{appdir}/GitX.app/Contents/Resources/gitx"
+  binary 'GitX.app/Contents/Resources/gitx'
 end

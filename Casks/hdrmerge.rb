@@ -9,5 +9,5 @@ cask 'hdrmerge' do
   homepage 'https://jcelaya.github.io/hdrmerge/'
 
   app 'HDRMerge.app'
-  binary "#{appdir}/HDRMerge.app/Contents/MacOS/hdrmerge"
+  binary 'HDRMerge.app/Contents/MacOS/hdrmerge'
 end

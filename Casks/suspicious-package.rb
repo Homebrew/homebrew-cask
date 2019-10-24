@@ -10,7 +10,7 @@ cask 'suspicious-package' do
   depends_on macos: '>= :high_sierra'
 
   app 'Suspicious Package.app'
-  binary "#{appdir}/Suspicious Package.app/Contents/SharedSupport/spkg"
+  binary 'Suspicious Package.app/Contents/SharedSupport/spkg'
 
   zap trash: [
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mothersruin.suspiciouspackageapp.sfl*',

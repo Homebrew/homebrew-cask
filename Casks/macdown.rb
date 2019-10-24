@@ -11,7 +11,7 @@ cask 'macdown' do
   auto_updates true
 
   app 'MacDown.app'
-  binary "#{appdir}/MacDown.app/Contents/SharedSupport/bin/macdown"
+  binary 'MacDown.app/Contents/SharedSupport/bin/macdown'
 
   zap trash: [
                '~/Library/Application Support/MacDown',

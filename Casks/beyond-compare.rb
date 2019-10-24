@@ -10,7 +10,7 @@ cask 'beyond-compare' do
   auto_updates true
 
   app 'Beyond Compare.app'
-  binary "#{appdir}/Beyond Compare.app/Contents/MacOS/bcomp"
+  binary 'Beyond Compare.app/Contents/MacOS/bcomp'
 
   zap trash: [
                '~/Library/Application Support/Beyond Compare',

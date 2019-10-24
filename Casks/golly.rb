@@ -9,5 +9,5 @@ cask 'golly' do
   homepage 'https://golly.sourceforge.io/'
 
   suite "golly-#{version}-mac"
-  binary "#{appdir}/golly-#{version}-mac/bgolly"
+  binary "golly-#{version}-mac/bgolly"
 end

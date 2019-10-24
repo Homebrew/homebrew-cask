@@ -11,7 +11,7 @@ cask 'kaleidoscope' do
   depends_on macos: '>= :sierra'
 
   app 'Kaleidoscope.app'
-  binary "#{appdir}/Kaleidoscope.app/Contents/Resources/bin/ksdiff"
+  binary 'Kaleidoscope.app/Contents/Resources/bin/ksdiff'
 
   zap trash: [
                '~/Library/Application Support/Kaleidoscope',

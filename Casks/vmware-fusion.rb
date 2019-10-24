@@ -11,31 +11,31 @@ cask 'vmware-fusion' do
   depends_on macos: '>= :sierra'
 
   app 'VMware Fusion.app'
-  binary "#{appdir}/VMware Fusion.app/Contents/Library/vmnet-bridge"
-  binary "#{appdir}/VMware Fusion.app/Contents/Library/vmnet-cfgcli"
-  binary "#{appdir}/VMware Fusion.app/Contents/Library/vmnet-cli"
-  binary "#{appdir}/VMware Fusion.app/Contents/Library/vmnet-dhcpd"
-  binary "#{appdir}/VMware Fusion.app/Contents/Library/vmnet-natd"
-  binary "#{appdir}/VMware Fusion.app/Contents/Library/vmnet-netifup"
-  binary "#{appdir}/VMware Fusion.app/Contents/Library/vmnet-sniffer"
-  binary "#{appdir}/VMware Fusion.app/Contents/Library/vmrun"
-  binary "#{appdir}/VMware Fusion.app/Contents/Library/vmrest"
-  binary "#{appdir}/VMware Fusion.app/Contents/Library/vmss2core"
-  binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-aewp"
-  binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-authd"
-  binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-cloneBootCamp"
-  binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-id"
-  binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-ntfs"
-  binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-rawdiskAuthTool"
-  binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-rawdiskCreator"
-  binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-remotemks"
-  binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-usbarbitrator"
-  binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-vdiskmanager"
-  binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-vmdkserver"
-  binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-vmx"
-  binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-vmx-debug"
-  binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-vmx-stats"
-  binary "#{appdir}/VMware Fusion.app/Contents/Library/VMware OVF Tool/ovftool"
+  binary 'VMware Fusion.app/Contents/Library/vmnet-bridge'
+  binary 'VMware Fusion.app/Contents/Library/vmnet-cfgcli'
+  binary 'VMware Fusion.app/Contents/Library/vmnet-cli'
+  binary 'VMware Fusion.app/Contents/Library/vmnet-dhcpd'
+  binary 'VMware Fusion.app/Contents/Library/vmnet-natd'
+  binary 'VMware Fusion.app/Contents/Library/vmnet-netifup'
+  binary 'VMware Fusion.app/Contents/Library/vmnet-sniffer'
+  binary 'VMware Fusion.app/Contents/Library/vmrun'
+  binary 'VMware Fusion.app/Contents/Library/vmrest'
+  binary 'VMware Fusion.app/Contents/Library/vmss2core'
+  binary 'VMware Fusion.app/Contents/Library/vmware-aewp'
+  binary 'VMware Fusion.app/Contents/Library/vmware-authd'
+  binary 'VMware Fusion.app/Contents/Library/vmware-cloneBootCamp'
+  binary 'VMware Fusion.app/Contents/Library/vmware-id'
+  binary 'VMware Fusion.app/Contents/Library/vmware-ntfs'
+  binary 'VMware Fusion.app/Contents/Library/vmware-rawdiskAuthTool'
+  binary 'VMware Fusion.app/Contents/Library/vmware-rawdiskCreator'
+  binary 'VMware Fusion.app/Contents/Library/vmware-remotemks'
+  binary 'VMware Fusion.app/Contents/Library/vmware-usbarbitrator'
+  binary 'VMware Fusion.app/Contents/Library/vmware-vdiskmanager'
+  binary 'VMware Fusion.app/Contents/Library/vmware-vmdkserver'
+  binary 'VMware Fusion.app/Contents/Library/vmware-vmx'
+  binary 'VMware Fusion.app/Contents/Library/vmware-vmx-debug'
+  binary 'VMware Fusion.app/Contents/Library/vmware-vmx-stats'
+  binary 'VMware Fusion.app/Contents/Library/VMware OVF Tool/ovftool'
 
   postflight do
     system_command "#{appdir}/VMware Fusion.app/Contents/Library/Initialize VMware Fusion.tool",

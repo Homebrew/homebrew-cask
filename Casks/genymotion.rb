@@ -11,5 +11,5 @@ cask 'genymotion' do
 
   app 'Genymotion.app'
   app 'Genymotion Shell.app'
-  binary "#{appdir}/Genymotion Shell.app/Contents/MacOS/genyshell"
+  binary 'Genymotion Shell.app/Contents/MacOS/genyshell'
 end

@@ -18,17 +18,17 @@ cask 'araxis-merge' do
   homepage 'https://www.araxis.com/merge/'
 
   app 'Araxis Merge.app'
-  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxisgitdiff"
-  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxisopendiff"
-  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxissvndiff"
-  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/compare", target: 'araxiscompare'
-  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxisgitmerge"
-  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxisp4diff"
-  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxissvndiff3"
-  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/compare2", target: 'araxiscompare2'
-  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxishgmerge"
-  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxisp4winmrg"
-  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxissvnmerge"
+  binary 'Araxis Merge.app/Contents/Utilities/araxisgitdiff'
+  binary 'Araxis Merge.app/Contents/Utilities/araxisopendiff'
+  binary 'Araxis Merge.app/Contents/Utilities/araxissvndiff'
+  binary 'Araxis Merge.app/Contents/Utilities/compare', target: 'araxiscompare'
+  binary 'Araxis Merge.app/Contents/Utilities/araxisgitmerge'
+  binary 'Araxis Merge.app/Contents/Utilities/araxisp4diff'
+  binary 'Araxis Merge.app/Contents/Utilities/araxissvndiff3'
+  binary 'Araxis Merge.app/Contents/Utilities/compare2', target: 'araxiscompare2'
+  binary 'Araxis Merge.app/Contents/Utilities/araxishgmerge'
+  binary 'Araxis Merge.app/Contents/Utilities/araxisp4winmrg'
+  binary 'Araxis Merge.app/Contents/Utilities/araxissvnmerge'
 
   zap trash: [
                '~/Library/Preferences/com.araxis.merge.LSSharedFileList.plist',

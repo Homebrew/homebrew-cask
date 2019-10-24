@@ -14,16 +14,16 @@ cask 'libreoffice' do
                        ]
 
   app 'LibreOffice.app'
-  binary "#{appdir}/LibreOffice.app/Contents/MacOS/gengal"
-  binary "#{appdir}/LibreOffice.app/Contents/MacOS/regmerge"
-  binary "#{appdir}/LibreOffice.app/Contents/MacOS/regview"
-  binary "#{appdir}/LibreOffice.app/Contents/MacOS/senddoc"
-  binary "#{appdir}/LibreOffice.app/Contents/MacOS/ui-previewer"
-  binary "#{appdir}/LibreOffice.app/Contents/MacOS/uno"
-  binary "#{appdir}/LibreOffice.app/Contents/MacOS/unoinfo"
-  binary "#{appdir}/LibreOffice.app/Contents/MacOS/unopkg"
-  binary "#{appdir}/LibreOffice.app/Contents/MacOS/uri-encode"
-  binary "#{appdir}/LibreOffice.app/Contents/MacOS/xpdfimport"
+  binary 'LibreOffice.app/Contents/MacOS/gengal'
+  binary 'LibreOffice.app/Contents/MacOS/regmerge'
+  binary 'LibreOffice.app/Contents/MacOS/regview'
+  binary 'LibreOffice.app/Contents/MacOS/senddoc'
+  binary 'LibreOffice.app/Contents/MacOS/ui-previewer'
+  binary 'LibreOffice.app/Contents/MacOS/uno'
+  binary 'LibreOffice.app/Contents/MacOS/unoinfo'
+  binary 'LibreOffice.app/Contents/MacOS/unopkg'
+  binary 'LibreOffice.app/Contents/MacOS/uri-encode'
+  binary 'LibreOffice.app/Contents/MacOS/xpdfimport'
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/soffice.wrapper.sh"
   binary shimscript, target: 'soffice'

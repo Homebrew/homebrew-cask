@@ -9,7 +9,7 @@ cask 'cocoapods' do
   homepage 'https://cocoapods.org/'
 
   app 'CocoaPods.app'
-  binary "#{appdir}/CocoaPods.app/Contents/Helpers/pod"
+  binary 'CocoaPods.app/Contents/Helpers/pod'
 
   postflight do
     # Because Homebrew Cask symlinks the binstub directly, stop the app from asking the user to install the binstub.

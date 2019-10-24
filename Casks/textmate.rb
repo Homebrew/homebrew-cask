@@ -13,7 +13,7 @@ cask 'textmate' do
   depends_on macos: '>= :sierra'
 
   app 'TextMate.app'
-  binary "#{appdir}/TextMate.app/Contents/Resources/mate"
+  binary 'TextMate.app/Contents/Resources/mate'
 
   uninstall quit: 'com.macromates.TextMate'
 

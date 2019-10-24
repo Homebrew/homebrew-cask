@@ -8,7 +8,7 @@ cask 'openscad' do
   homepage 'https://www.openscad.org/'
 
   app 'OpenSCAD.app'
-  binary "#{appdir}/OpenSCAD.app/Contents/MacOS/OpenSCAD", target: 'openscad'
+  binary 'OpenSCAD.app/Contents/MacOS/OpenSCAD', target: 'openscad'
 
   zap trash: [
                '~/Library/Caches/org.openscad.OpenSCAD',

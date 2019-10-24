@@ -30,6 +30,7 @@ jobs:
       - name: brew cask ci
         run: |
           cd "$(brew --repository "${GITHUB_REPOSITORY}")"
+          export HOMEBREW_PR_AUTHOR_ASSOCIATION="${{ github.event.pull_request.author_association }}"
           brew cask ci
         env:
           CI: true

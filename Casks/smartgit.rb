@@ -9,5 +9,5 @@ cask 'smartgit' do
   homepage 'https://www.syntevo.com/smartgit/'
 
   app 'SmartGit.app'
-  binary "#{appdir}/SmartGit.app/Contents/MacOS/SmartGit"
+  binary 'SmartGit.app/Contents/MacOS/SmartGit'
 end

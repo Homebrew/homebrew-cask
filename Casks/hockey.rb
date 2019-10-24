@@ -8,5 +8,5 @@ cask 'hockey' do
   homepage 'https://hockeyapp.net/releases/mac/'
 
   app 'HockeyApp.app'
-  binary "#{appdir}/HockeyApp.app/Contents/Resources/puck"
+  binary 'HockeyApp.app/Contents/Resources/puck'
 end

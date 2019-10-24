@@ -21,7 +21,7 @@ cask 'sourcetree' do
   depends_on macos: '>= :el_capitan'
 
   app 'Sourcetree.app'
-  binary "#{appdir}/Sourcetree.app/Contents/Resources/stree"
+  binary 'Sourcetree.app/Contents/Resources/stree'
 
   uninstall launchctl: 'com.atlassian.SourceTreePrivilegedHelper2',
             quit:      'com.torusknot.SourceTreeNotMAS'

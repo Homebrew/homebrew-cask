@@ -12,7 +12,7 @@ cask 'iina' do
   depends_on macos: '>= :el_capitan'
 
   app 'IINA.app'
-  binary "#{appdir}/IINA.app/Contents/MacOS/iina-cli", target: 'iina'
+  binary 'IINA.app/Contents/MacOS/iina-cli', target: 'iina'
 
   zap trash: [
                '~/Library/Application Scripts/com.colliderli.iina.OpenInIINA',

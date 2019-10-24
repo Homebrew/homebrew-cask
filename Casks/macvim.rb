@@ -22,7 +22,7 @@ cask 'macvim' do
     'view',
     'vim',
     'vimdiff',
-  ].each { |link_name| binary "#{appdir}/MacVim.app/Contents/bin/mvim", target: link_name }
+  ].each { |link_name| binary 'MacVim.app/Contents/bin/mvim', target: link_name }
 
   zap trash: [
                '~/Library/Caches/org.vim.MacVim',

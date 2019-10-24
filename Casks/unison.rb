@@ -20,7 +20,7 @@ cask 'unison' do
   conflicts_with formula: 'unison'
 
   app 'Unison.app'
-  binary "#{appdir}/Unison.app/Contents/MacOS/cltool", target: 'unison'
+  binary 'Unison.app/Contents/MacOS/cltool', target: 'unison'
 
   postflight do
     system_command '/usr/bin/defaults', args: ['write', 'edu.upenn.cis.Unison', 'CheckCltool', '-bool', 'false']
