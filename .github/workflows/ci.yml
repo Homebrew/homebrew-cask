@@ -35,3 +35,4 @@ jobs:
           CI: true
           HOMEBREW_COLOR: 1
           HOMEBREW_DEVELOPER: 1
+          HOMEBREW_PULL_REQUEST_REPOSITORY: ${{ github.event.pull_request.head.repo.full_name }}

@@ -11,7 +11,7 @@ cask 'mpv' do
   depends_on macos: '>= :yosemite'
 
   app 'mpv.app'
-  binary "#{appdir}/mpv.app/Contents/MacOS/mpv"
+  binary 'mpv.app/Contents/MacOS/mpv'
 
   zap trash: [
                '~/.config/mpv',

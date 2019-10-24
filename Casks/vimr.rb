@@ -12,7 +12,7 @@ cask 'vimr' do
   depends_on macos: '>= :high_sierra'
 
   app 'VimR.app'
-  binary "#{appdir}/VimR.app/Contents/Resources/vimr"
+  binary 'VimR.app/Contents/Resources/vimr'
 
   zap trash: [
                '~/Library/Caches/com.qvacua.VimR',

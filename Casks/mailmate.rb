@@ -11,5 +11,5 @@ cask 'mailmate' do
   auto_updates true
 
   app 'MailMate.app'
-  binary "#{appdir}/MailMate.app/Contents/Resources/emate"
+  binary 'MailMate.app/Contents/Resources/emate'
 end

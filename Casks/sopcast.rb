@@ -8,5 +8,5 @@ cask 'sopcast' do
   homepage 'http://www.sopcast.com/'
 
   app 'SopCast.app'
-  binary "#{appdir}/SopCast.app/Contents/Resources/binaries/m32/sp-sc-auth"
+  binary 'SopCast.app/Contents/Resources/binaries/m32/sp-sc-auth'
 end

@@ -38,7 +38,9 @@ module Cask
                            ruby_files_in_wrong_directory.join("\n")
         end
 
-        if modified_cask_files.count > 1 && tap.name != "homebrew/cask-fonts"
+        maintainer_pr = ENV["HOMEBREW_PULL_REQUEST_REPOSITORY"]&.start_with?("Homebrew/")
+
+        if !maintainer_pr && modified_cask_files.count > 1 && tap.name != "homebrew/cask-fonts"
           raise CaskError, "More than one cask modified; please submit a pull request for each cask separately."
         end
 

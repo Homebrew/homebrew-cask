@@ -8,5 +8,5 @@ cask 'pdf-images' do
   homepage 'https://sourceforge.net/projects/pdf-images/'
 
   app 'PDF-Images.app'
-  binary "#{appdir}/PDF-Images.app/Contents/MacOS/pdfimages"
+  binary 'PDF-Images.app/Contents/MacOS/pdfimages'
 end

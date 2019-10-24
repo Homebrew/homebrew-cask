@@ -9,5 +9,5 @@ cask 'love' do
   homepage 'https://love2d.org/'
 
   app 'love.app'
-  binary "#{appdir}/love.app/Contents/MacOS/love"
+  binary 'love.app/Contents/MacOS/love'
 end

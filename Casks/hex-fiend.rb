@@ -12,7 +12,7 @@ cask 'hex-fiend' do
   conflicts_with cask: 'hex-fiend-beta'
 
   app 'Hex Fiend.app'
-  binary "#{appdir}/Hex Fiend.app/Contents/Resources/hexf"
+  binary 'Hex Fiend.app/Contents/Resources/hexf'
 
   zap trash: [
                '~/Library/Caches/com.ridiculousfish.HexFiend',

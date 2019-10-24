@@ -9,7 +9,7 @@ cask 'inkscape' do
   depends_on x11: true
 
   app 'Inkscape.app'
-  binary "#{appdir}/Inkscape.app/Contents/Resources/bin/inkscape"
+  binary 'Inkscape.app/Contents/Resources/bin/inkscape'
 
   zap trash: '~/.inkscape-etc'
 end

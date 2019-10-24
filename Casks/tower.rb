@@ -11,7 +11,7 @@ cask 'tower' do
   auto_updates true
 
   app 'Tower.app'
-  binary "#{appdir}/Tower.app/Contents/MacOS/gittower"
+  binary 'Tower.app/Contents/MacOS/gittower'
 
   zap trash: [
                "~/Library/Application Support/com.fournova.Tower#{version.major}",

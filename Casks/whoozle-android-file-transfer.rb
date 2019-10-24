@@ -11,6 +11,6 @@ cask 'whoozle-android-file-transfer' do
   conflicts_with cask: 'whoozle-android-file-transfer-nightly'
 
   app 'Android File Transfer for Linux.app'
-  binary "#{appdir}/Android File Transfer for Linux.app/Contents/SharedSupport/bin/aft-mtp-cli"
-  binary "#{appdir}/Android File Transfer for Linux.app/Contents/SharedSupport/bin/aft-mtp-mount"
+  binary 'Android File Transfer for Linux.app/Contents/SharedSupport/bin/aft-mtp-cli'
+  binary 'Android File Transfer for Linux.app/Contents/SharedSupport/bin/aft-mtp-mount'
 end

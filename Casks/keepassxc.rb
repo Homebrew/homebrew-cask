@@ -11,7 +11,7 @@ cask 'keepassxc' do
   depends_on macos: '>= :sierra'
 
   app 'KeePassXC.app'
-  binary "#{appdir}/KeePassXC.app/Contents/MacOS/keepassxc-cli"
+  binary 'KeePassXC.app/Contents/MacOS/keepassxc-cli'
 
   zap trash: '~/.keepassxc'
 end

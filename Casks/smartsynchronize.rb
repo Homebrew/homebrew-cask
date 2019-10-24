@@ -9,5 +9,5 @@ cask 'smartsynchronize' do
   homepage 'https://www.syntevo.com/smartsynchronize/'
 
   app 'SmartSynchronize.app'
-  binary "#{appdir}/SmartSynchronize.app/Contents/MacOS/SmartSynchronize"
+  binary 'SmartSynchronize.app/Contents/MacOS/SmartSynchronize'
 end

@@ -10,7 +10,7 @@ cask 'gitx' do
   conflicts_with cask: ['laullon-gitx', 'rowanj-gitx']
 
   app 'GitX.app'
-  binary "#{appdir}/GitX.app/Contents/Resources/gitx"
+  binary 'GitX.app/Contents/Resources/gitx'
 
   zap trash: [
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/nl.frim.gitx.sfl*',

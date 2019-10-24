@@ -8,5 +8,5 @@ cask 'duplicacy' do
   homepage 'https://duplicacy.com/'
 
   app 'Duplicacy.app'
-  binary "#{appdir}/Duplicacy.app/Contents/Resources/duplicacy_osx_x64_#{version}", target: 'duplicacy'
+  binary "Duplicacy.app/Contents/Resources/duplicacy_osx_x64_#{version}", target: 'duplicacy'
 end

@@ -23,22 +23,22 @@ cask 'wine-stable' do
                    'attributeSetting' => 1,
                  },
                ]
-  binary "#{appdir}/Wine Stable.app/Contents/Resources/start/bin/appdb"
-  binary "#{appdir}/Wine Stable.app/Contents/Resources/start/bin/winehelp"
-  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/msiexec"
-  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/notepad"
-  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/regedit"
-  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/regsvr32"
-  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/wine"
-  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/wine64"
-  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/wineboot"
-  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/winecfg"
-  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/wineconsole"
-  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/winedbg"
-  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/winefile"
-  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/winemine"
-  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/winepath"
-  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/wineserver"
+  binary 'Wine Stable.app/Contents/Resources/start/bin/appdb'
+  binary 'Wine Stable.app/Contents/Resources/start/bin/winehelp'
+  binary 'Wine Stable.app/Contents/Resources/wine/bin/msiexec'
+  binary 'Wine Stable.app/Contents/Resources/wine/bin/notepad'
+  binary 'Wine Stable.app/Contents/Resources/wine/bin/regedit'
+  binary 'Wine Stable.app/Contents/Resources/wine/bin/regsvr32'
+  binary 'Wine Stable.app/Contents/Resources/wine/bin/wine'
+  binary 'Wine Stable.app/Contents/Resources/wine/bin/wine64'
+  binary 'Wine Stable.app/Contents/Resources/wine/bin/wineboot'
+  binary 'Wine Stable.app/Contents/Resources/wine/bin/winecfg'
+  binary 'Wine Stable.app/Contents/Resources/wine/bin/wineconsole'
+  binary 'Wine Stable.app/Contents/Resources/wine/bin/winedbg'
+  binary 'Wine Stable.app/Contents/Resources/wine/bin/winefile'
+  binary 'Wine Stable.app/Contents/Resources/wine/bin/winemine'
+  binary 'Wine Stable.app/Contents/Resources/wine/bin/winepath'
+  binary 'Wine Stable.app/Contents/Resources/wine/bin/wineserver'
 
   uninstall pkgutil: [
                        'org.winehq.wine-stable',

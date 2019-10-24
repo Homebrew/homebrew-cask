@@ -9,7 +9,7 @@ cask 'dropshare' do
   homepage 'https://dropshare.app/'
 
   app "Dropshare #{version.major}.app"
-  binary "#{appdir}/Dropshare #{version.major}.app/Contents/Resources/ds.sh", target: 'ds'
+  binary "Dropshare #{version.major}.app/Contents/Resources/ds.sh", target: 'ds'
 
   zap trash: [
                "~/Library/Application Support/Dropshare #{version.major}",

@@ -8,6 +8,6 @@ cask 'topcat' do
   homepage 'http://www.star.bris.ac.uk/~mbt/topcat/'
 
   app 'TOPCAT.app'
-  binary "#{appdir}/TOPCAT.app/Contents/Resources/bin/topcat"
-  binary "#{appdir}/TOPCAT.app/Contents/Resources/bin/stilts"
+  binary 'TOPCAT.app/Contents/Resources/bin/topcat'
+  binary 'TOPCAT.app/Contents/Resources/bin/stilts'
 end

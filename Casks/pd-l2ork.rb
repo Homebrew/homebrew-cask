@@ -10,7 +10,7 @@ cask 'pd-l2ork' do
   homepage 'https://agraef.github.io/purr-data/'
 
   app 'Pd-l2ork.app'
-  binary "#{appdir}/Pd-l2ork.app/Contents/Resources/app.nw/pd-l2ork"
+  binary 'Pd-l2ork.app/Contents/Resources/app.nw/pd-l2ork'
 
   uninstall_preflight do
     set_permissions "#{appdir}/Pd-l2ork.app", '0777'

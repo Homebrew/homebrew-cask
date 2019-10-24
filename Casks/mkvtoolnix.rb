@@ -11,8 +11,8 @@ cask 'mkvtoolnix' do
   depends_on macos: '>= :sierra'
 
   app "MKVToolNix-#{version}.app"
-  binary "#{appdir}/MKVToolNix-#{version}.app/Contents/MacOS/mkvextract"
-  binary "#{appdir}/MKVToolNix-#{version}.app/Contents/MacOS/mkvinfo"
-  binary "#{appdir}/MKVToolNix-#{version}.app/Contents/MacOS/mkvmerge"
-  binary "#{appdir}/MKVToolNix-#{version}.app/Contents/MacOS/mkvpropedit"
+  binary "MKVToolNix-#{version}.app/Contents/MacOS/mkvextract"
+  binary "MKVToolNix-#{version}.app/Contents/MacOS/mkvinfo"
+  binary "MKVToolNix-#{version}.app/Contents/MacOS/mkvmerge"
+  binary "MKVToolNix-#{version}.app/Contents/MacOS/mkvpropedit"
 end
