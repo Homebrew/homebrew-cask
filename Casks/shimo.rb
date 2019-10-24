@@ -1,6 +1,6 @@
 cask 'shimo' do
-  version '5.0_8874'
-  sha256 'de91af81d5ad9982f1dbfaf4b6cdebf98ccf423745e8b54ab216a1448179888f'
+  version '5.0.1_8877'
+  sha256 '1a61b37bcb862bbe52bd368234f0c41d2ca1268933befdcd4728e61fbd30d9b8'
 
   # shimo.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://shimo.s3.amazonaws.com/Shimo_#{version}.zip"
