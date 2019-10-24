@@ -1,12 +1,12 @@
-cask 'smartconverter' do
-  version '3.0.0'
-  sha256 '6a70ef6d1a5749add4f913aee09698815eed1b15a7f8b058ed2ec3708c40f5cd'
+cask 'smartconverterpro' do
+  version '2.4.2'
+  sha256 '5dbde9f84974e301d0ee3fbbc61f117a8b75d22b1373c8de265fa626199d2822'
 
   url "https://download.shedworx.com/smartconverter/SmartConverter-#{version}.dmg"
   name 'SmartConverter'
   homepage 'https://shedworx.com/smart-converter-pro'
 
-  app 'SmartConverter.app'
+  app 'Smart Converter Pro #{version.major}.app'
 
   zap trash: [
                '~/Library/Containers/com.shedworx.smartconverter',
