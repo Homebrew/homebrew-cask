@@ -8,9 +8,9 @@ cask 'duefocus' do
 
   app 'DueFocus.app'
 
-  uninstall delete: [
-                      '~/Library/Application Support/DueFocus',
-                      '~/Library/Preferences/com.qarea.duefocus.plist',
-                      '~/Library/Logs/DueFocus',
-                    ]
+  zap trash: [
+               '~/Library/Application Support/DueFocus',
+               '~/Library/Preferences/com.qarea.duefocus.plist',
+               '~/Library/Logs/DueFocus',
+             ]
 end
