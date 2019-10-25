@@ -9,6 +9,8 @@ jobs:
     steps:
       - name: brew pull
         run: |
+          cat "$GITHUB_EVENT_PATH" | jq .
+
           brew update-reset "$(brew --repository)"
 
           HOMEBREW_INSTALL_BUNDLER_GEMS_FIRST=1 brew config
@@ -30,9 +32,9 @@ jobs:
       - name: brew cask ci
         run: |
           cd "$(brew --repository "${GITHUB_REPOSITORY}")"
-          export HOMEBREW_PR_AUTHOR_ASSOCIATION="${{ github.event.pull_request.author_association }}"
           brew cask ci
         env:
           CI: true
           HOMEBREW_COLOR: 1
           HOMEBREW_DEVELOPER: 1
+          HOMEBREW_PULL_REQUEST_REPOSITORY: ${{ github.event.pull_request.head.repo.full_name }}

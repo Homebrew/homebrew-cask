@@ -19,6 +19,7 @@ install:
     # Force strict error checking.
     set -o errexit
     set -o pipefail
+    env | sort
   - |
     # Update Travis commit range.
     # This is not normally required but does prevent problems with outdated forks and
@@ -44,6 +45,7 @@ install:
     rsync -az --delete "${TRAVIS_BUILD_DIR}/" "${TAP_DIR}/"
     export TRAVIS_BUILD_DIR="${TAP_DIR}"
     builtin cd "${TAP_DIR}"
+    export HOMEBREW_PULL_REQUEST_REPOSITORY="${TRAVIS_PULL_REQUEST_SLUG}"
 
 script: brew cask ci
 
