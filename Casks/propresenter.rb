@@ -7,7 +7,7 @@ cask 'propresenter' do
   name 'ProPresenter'
   homepage 'https://www.renewedvision.com/propresenter.php'
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :high_sierra'
 
   app "ProPresenter #{version.major}.app"
 
