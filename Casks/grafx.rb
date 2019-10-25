@@ -3,7 +3,7 @@ cask 'grafx' do
   sha256 '31658ed8983ac3ed7778e2fd0b6dfc5e1abc4c1302c5bc77a4dc584cd7c7efb5'
 
   url "https://pulkomandy.tk/projects/GrafX#{version.major}/downloads/#{version.after_comma}"
-  appcast "https://pulkomandy.tk/projects/GrafX#{version.major}/downloads"
+  appcast "https://gitlab.com/GrafX2/grafX2/-/tags?format=atom"
   name 'GrafX2'
   homepage "https://pulkomandy.tk/projects/GrafX#{version.major}"
 
