@@ -3,6 +3,7 @@ cask 'filemaker-pro-advanced' do
   sha256 '4eba410556271b6a60eaed58450e2539b10281698ba854c96ab10c564040eda0'
 
   url "https://fmdl.filemaker.com/esd/fmpa_#{version}.dmg"
+  appcast 'https://www.filemaker.com/redirects/ss.txt'
   name 'FileMaker Pro Advanced'
   homepage 'https://www.filemaker.com/'
 
