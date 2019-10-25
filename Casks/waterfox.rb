@@ -8,7 +8,7 @@ cask 'waterfox' do
   name 'Waterfox'
   homepage 'https://www.waterfox.net/'
 
-  app 'Waterfox.app'
+  app 'Waterfox Classic.app'
 
   zap trash: [
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.waterfox.sfl*',
