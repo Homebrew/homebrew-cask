@@ -4,7 +4,7 @@ cask 'devonthink' do
 
   # s3.amazonaws.com/DTWebsiteSupport was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/devonthink/#{version}/DEVONthink_#{version.major}.dmg.zip"
-  appcast 'https://api.devontechnologies.com/1/apps/sparkle/sparkle.php?id=217255'
+  appcast "https://www.devontechnologies.com/Sparkle/DEVONthink#{version.major}.xml"
   name 'DEVONthink'
   homepage 'https://www.devontechnologies.com/apps/devonthink/'
 
