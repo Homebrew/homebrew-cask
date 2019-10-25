@@ -2,9 +2,9 @@ cask 'sdrdx' do
   version :latest
   sha256 :no_check
 
-  url 'http://fyngyrz.com/SdrDx-AA7AS-Light.zip'
+  url 'https://fyngyrz.com/SdrDx-AA7AS-Light.zip'
   name 'SdrDx'
-  homepage 'http://fyngyrz.com/?p=915'
+  homepage 'https://fyngyrz.com/?p=915'
 
   app 'SdrDx.app'
 end
