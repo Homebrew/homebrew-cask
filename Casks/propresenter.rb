@@ -1,8 +1,8 @@
 cask 'propresenter' do
-  version '6.4_b16245'
-  sha256 '0cc28e38f8c6f70ce15e56742e08bd51831f79e3e57669f5a477a0d33180faca'
+  version '6.5_100990994'
+  sha256 '4d11a26ef9dde9462e123cdc8a2df6979d4791597bd885087e6c04e08600f1f1'
 
-  url "https://www.renewedvision.com/downloads/ProPresenter#{version.major}_#{version}.dmg"
+  url "https://renewedvision.com/downloads/ProPresenter%20#{version.major}_#{version}.dmg"
   appcast "https://www.renewedvision.com/update/ProPresenter#{version.major}.php"
   name 'ProPresenter'
   homepage 'https://www.renewedvision.com/propresenter.php'
