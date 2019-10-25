@@ -13,8 +13,5 @@ cask 'qfinder-pro' do
                        'qnap.com.qfinder.*',
                        'qnap.com.Qfinder',
                      ],
-            delete:  [
-                       '/Applications/Qfinder Pro.app',
-                       '/Applications/Qfinder Pro.app/Contents/Resources/Qfinder Pro.app',
-                     ]
+            delete:  '/Applications/Qfinder Pro.app'
 end
