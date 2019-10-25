@@ -1,5 +1,5 @@
 cask 'airmedia' do
-  version '3.1.12'
+  version '3.1.29'
   sha256 '809d193a9f71494734be57b3bebc2912f284acd88f4bc408486ef6fb6951522d'
 
   url "https://www.crestron.com/getmedia/751a3c59-a9a8-49b8-ac28-4989da4dc2e1/airmedia_osx_#{version}_guest"
