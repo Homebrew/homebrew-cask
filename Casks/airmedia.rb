@@ -1,6 +1,6 @@
 cask 'airmedia' do
   version '3.1.29'
-  sha256 '809d193a9f71494734be57b3bebc2912f284acd88f4bc408486ef6fb6951522d'
+  sha256 '95585254f8d82e16229af9f89da0806f0c5ff8f927d2b21efcdeefd88b912b52'
 
   url "https://www.crestron.com/Crestron/media/Crestron/WidenResources/Web%20Miscellaneous/airmedia_osx_#{version.dots_to_underscores}_guest.zip"
   appcast 'https://www.crestron.com/en-US/Products/Featured-Solutions/Airmedia'
