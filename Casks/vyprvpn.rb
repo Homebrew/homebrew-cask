@@ -8,6 +8,7 @@ cask 'vyprvpn' do
   homepage 'https://www.goldenfrog.com/vyprvpn'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'VyprVPN.app'
 
