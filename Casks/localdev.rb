@@ -1,6 +1,6 @@
 cask 'localdev' do
-  version '0.5.3'
-  sha256 '10d90bc32dff51b192f93257b5241a52c752b2afe6d772f62cadce6ba0c61b71'
+  version '0.5.4'
+  sha256 '963048baf4b119d4940cf0e939e505d6792111451b9df3cd9dabad4c20776d15'
 
   # pantheon-localdev.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://pantheon-localdev.s3.amazonaws.com/Localdev-v#{version}.dmg"

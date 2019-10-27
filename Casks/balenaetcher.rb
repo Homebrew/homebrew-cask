@@ -1,6 +1,6 @@
 cask 'balenaetcher' do
-  version '1.5.57'
-  sha256 'd82c724a7b3844536a93551d1cfa3e139a864a6b14bd0eeedd7b0ebc90f403ba'
+  version '1.5.60'
+  sha256 '2bd42b3247890f833377bed5f2401b120c0cdbedfbe98dca7df452b442a8b35e'
 
   # github.com/balena-io/etcher was verified as official when first introduced to the cask
   url "https://github.com/balena-io/etcher/releases/download/v#{version}/balenaEtcher-#{version}.dmg"

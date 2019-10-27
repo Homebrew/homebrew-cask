@@ -11,8 +11,7 @@ jobs:
         run: |
           brew update-reset "$(brew --repository)"
 
-          HOMEBREW_INSTALL_BUNDLER_GEMS_FIRST=1 brew config &
-          dependencies=$!
+          HOMEBREW_INSTALL_BUNDLER_GEMS_FIRST=1 brew config
 
           brew tap "${GITHUB_REPOSITORY}"
 
@@ -24,8 +23,6 @@ jobs:
           brew update-reset "$(brew --repository "${GITHUB_REPOSITORY}")"
 
           brew pull --clean "${PR_URL}"
-
-          wait $dependencies
         env:
           PR_URL: ${{ github.event.pull_request._links.html.href }}
           HOMEBREW_COLOR: 1

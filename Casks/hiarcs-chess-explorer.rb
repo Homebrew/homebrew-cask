@@ -1,6 +1,6 @@
 cask 'hiarcs-chess-explorer' do
-  version '1.9.3.0'
-  sha256 '1ce7544fbdf3afa53a760d263f57bfc82b1f5b8cf77480b25c3dbedb74080aed'
+  version '1.9.4a'
+  sha256 '5dbeb42d597d93f24c89690f7d1a7a32bff9e8dfe38ec4ba396b4e3140c68db0'
 
   url "http://www.hiarcs.com/hce/HIARCS-Chess-Explorer-Installer-v#{version}.pkg"
   appcast 'http://www.hiarcs.com/hce/mac-v120.htm'

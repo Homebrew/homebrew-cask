@@ -1,6 +1,6 @@
 cask 'power-manager' do
-  version '5.2.0'
-  sha256 '85946833c57e4e38509649b2cbfb345ae08f8b5ae9315b791f52a1c4689b323e'
+  version '5.3.0'
+  sha256 'b673091bda530114aba582d883e2f19ab0a8139bcbd47bb38b209b36f66033f7'
 
   url "https://www.dssw.co.uk/powermanager/dsswpowermanager-#{version.no_dots}.dmg"
   appcast 'https://version.dssw.co.uk/powermanager/'

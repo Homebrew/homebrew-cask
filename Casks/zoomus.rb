@@ -1,6 +1,6 @@
 cask 'zoomus' do
-  version '4.5.5416.0929'
-  sha256 'd794a90f5300ac34c4e21f3d2157b84beabfb89691aff13b6913bf320280d15f'
+  version '4.5.5666.1020'
+  sha256 'e395d6a8d431c48272581e8baa9b63b97569a276dc4b104ee28b95545023f76e'
 
   url "https://www.zoom.us/client/#{version}/zoomusInstaller.pkg"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://zoom.us/client/latest/Zoom.pkg'

@@ -1,6 +1,6 @@
 cask 'blocs' do
-  version '3.4.0'
-  sha256 '483c0055676c7483883314edecb397a9a5ef29f40f893b7cbf19facc64a453b0'
+  version '3.4.1'
+  sha256 'dc90e7fa8cc84d5c5e19d3ec35b202b69ef8f5d09622bd0245f8b2b1416c22de'
 
   url "https://blocsapp.com/download/Blocs#{version.major}.zip"
   appcast 'https://blocsapp.com/release-notes.html'

@@ -1,14 +1,15 @@
 cask 'shimo' do
-  version '4.1.5.1_8837'
-  sha256 'bd97b294936a84b28daa29df680e0e4e047b19c93f10c69c9d71a295737bf73e'
+  version '5.0.1_8877'
+  sha256 '1a61b37bcb862bbe52bd368234f0c41d2ca1268933befdcd4728e61fbd30d9b8'
 
   # shimo.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://shimo.s3.amazonaws.com/Shimo_#{version}.zip"
-  appcast 'https://www.shimovpn.com/appcast.php'
+  appcast "https://www.shimovpn.com/appcast#{version.major}.php"
   name 'Shimo'
   homepage 'https://www.shimovpn.com/'
 
   auto_updates true
+  depends_on macos: '>= :high_sierra'
 
   app 'Shimo.app'
 end

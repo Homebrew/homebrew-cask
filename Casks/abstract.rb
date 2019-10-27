@@ -1,6 +1,6 @@
 cask 'abstract' do
-  version '85.0.0'
-  sha256 '87d1547f60b51e43db5e9dfeac2f8d2ae86e760cd6606373734b7086259fe612'
+  version '85.1.1'
+  sha256 '491cfe75f87f28ca324ebff2405b3d74195b332aa2d4ee3c05bee923978a6351'
 
   url "https://downloads.goabstract.com/Abstract-#{version}.dmg"
   appcast 'https://www.goabstract.com/release-notes/'

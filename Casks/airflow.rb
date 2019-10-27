@@ -1,6 +1,6 @@
 cask 'airflow' do
-  version '2.4.0'
-  sha256 '6cdcbd0cb05beec9a6e27d42a239582bc3705458ffc473a4df644e8601f80fac'
+  version '2.4.5'
+  sha256 'fd54a6721aed0e98d8822893fd5e22ad2f481605ef14bc3a05a73703cb6c7639'
 
   # cdn.downloads.iocave.net/Airflow was verified as official when first introduced to the cask
   url "https://cdn.downloads.iocave.net/Airflow/Airflow%20#{version}.zip"
@@ -9,6 +9,7 @@ cask 'airflow' do
   homepage 'https://airflowapp.com/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'Airflow.app'
 

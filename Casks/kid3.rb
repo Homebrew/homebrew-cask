@@ -5,7 +5,7 @@ cask 'kid3' do
 
   # downloads.sourceforge.net/kid3 was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/kid3/kid3-#{version}-Darwin.dmg"
-  appcast 'https://sourceforge.net/projects/kid3/files/latest/download'
+  appcast 'https://sourceforge.net/p/kid3/news/feed.rss'
   name 'Kid3'
   homepage 'https://kid3.sourceforge.io/'
 

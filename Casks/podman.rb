@@ -1,19 +1,19 @@
 cask 'podman' do
-  version '1.5.1'
-  sha256 'f314e9ef5c77d08dfbd0d9a022e45293570bdec91c56f1200e202c8b9379258e'
+  version '1.6.0-28-gdac7889d'
+  sha256 '10aa54e65084a6db98aa46b90fdcdec7b4ae0eb5d241e65dd360859e43bb1236'
 
-  url "https://github.com/containers/libpod/releases/download/v#{version}/podman-v#{version}.tar.gz"
+  url "https://github.com/containers/libpod/releases/download/v#{version.major_minor_patch}/podman-remote-v#{version}-master-darwin-amd64.tgz"
   appcast 'https://github.com/containers/libpod/releases.atom'
   name 'podman'
   homepage 'https://github.com/containers/libpod/'
 
-  binary 'brew/podman'
+  binary "podman-v#{version}/podman"
 
   postflight do
-    man1 = Dir["#{staged_path}/brew/docs/*.1"]
+    man1 = Dir["#{staged_path}/podman-*/docs/*.1"]
     FileUtils.mv(man1, "#{HOMEBREW_PREFIX}/share/man/man1/")
 
-    man5 = Dir["#{staged_path}/brew/docs/*.5"]
+    man5 = Dir["#{staged_path}/podman-*/docs/*.5"]
     FileUtils.mkdir("#{HOMEBREW_PREFIX}/share/man/man5/") unless File.exist?("#{HOMEBREW_PREFIX}/share/man/man5/")
     FileUtils.mv(man5, "#{HOMEBREW_PREFIX}/share/man/man5/")
   end

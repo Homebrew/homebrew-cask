@@ -1,6 +1,6 @@
 cask '1password-cli' do
-  version '0.6.2'
-  sha256 'f439ce1eff1417b50e8ef91b9a84bd37997c30901746a7825fbe291c9eac3708'
+  version '0.7.0'
+  sha256 '39d5a52b6da02dd889c57214e8a3fae9d0ec885c52dffe79de1c08b2338bd103'
 
   # cache.agilebits.com/dist/1P/op/pkg was verified as official when first introduced to the cask
   url "https://cache.agilebits.com/dist/1P/op/pkg/v#{version}/op_darwin_amd64_v#{version}.zip"
