@@ -138,7 +138,6 @@ cask 'firefox' do
   zap trash: [
                '/Library/Logs/DiagnosticReports/firefox_*',
                '~/Library/Application Support/Firefox',
-               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.firefox.sfl*',
                '~/Library/Caches/Firefox',
                '~/Library/Caches/Mozilla/updates/Applications/Firefox',
                '~/Library/Preferences/org.mozilla.firefox.plist',
