@@ -45,7 +45,7 @@ install:
     export TRAVIS_BUILD_DIR="${TAP_DIR}"
     builtin cd "${TAP_DIR}"
 
-script: brew cask ci
+script: brew cask ci -vd
 
 notifications:
   email: false
