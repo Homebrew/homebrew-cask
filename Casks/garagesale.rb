@@ -7,5 +7,7 @@ cask 'garagesale' do
   name 'GarageSale'
   homepage 'https://www.iwascoding.com/GarageSale/'
 
+  depends_on macos: '>= :sierra'
+
   app 'GarageSale.app'
 end
