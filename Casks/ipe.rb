@@ -1,17 +1,16 @@
 cask 'ipe' do
   version '7.2.13'
-  sha256 'a50d891f17654eeead65ea13646040631160b3437c66417f1d07253cd9d5966a'
+  sha256 '2939e4311ab0cc1e496d1147fb31b43a5f8c862402bf5b78b0b5e6190a5a9f05'
 
   # bintray.com/otfried was verified as official when first introduced to the cask
   url "https://dl.bintray.com/otfried/generic/ipe/#{version.major_minor}/ipe-#{version}-mac.dmg"
-  appcast 'https://ipe.otfried.org/'
+  appcast 'http://ipe.otfried.org/'
   name 'Ipe'
-  homepage 'https://ipe.otfried.org/'
+  homepage 'http://ipe.otfried.org/'
 
   depends_on macos: '>= :yosemite'
 
   app 'Ipe.app'
-  app 'IpePresenter.app'
 
   zap trash: [
                '~/.ipe',
