@@ -244,6 +244,7 @@ module Cask
               yield != false
             rescue => e
               $stderr.puts e.message
+              $stderr.puts e.backtrace
               false
             end
           end
