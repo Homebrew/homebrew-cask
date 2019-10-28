@@ -4,7 +4,7 @@ cask 'unpkg' do
 
   # github.com/downloads/timdoug/unpkg was verified as official when first introduced to the cask
   url "https://www.timdoug.com/unpkg/unpkg-#{version}.zip"
-  appcast 'https://github.com/timdoug/unpkg/releases.atom'
+  appcast 'https://www.timdoug.com/unpkg/'
   name 'unpkg'
   homepage 'https://www.timdoug.com/unpkg/'
 
