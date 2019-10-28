@@ -104,7 +104,10 @@ module Cask
           check = Check.new
 
           overall_success &= step "brew cask install #{cask.token}", "install" do
-            Installer.new(cask, verbose: true).zap if was_installed
+            if was_installed
+              old_cask = CaskLoader.load(cask.installed_caskfile)
+              Installer.new(old_cask, verbose: true).zap
+            end
 
             check.before
 
@@ -244,6 +247,7 @@ module Cask
               yield != false
             rescue => e
               $stderr.puts e.message
+              $stderr.puts e.backtrace
               false
             end
           end
