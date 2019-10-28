@@ -7,5 +7,12 @@ cask 'yandex-cloud-cli' do
   name 'Yandex Cloud CLI'
   homepage 'https://cloud.yandex.com/docs/cli/'
 
+  installer script: {
+                      executable: "#{staged_path}/yc",
+                      args:       ['components', 'post-update'],
+                    }
+  binary 'docker-credential-yc'
   binary 'yc'
+
+  uninstall delete: "#{staged_path}/docker-credential-yc"
 end
