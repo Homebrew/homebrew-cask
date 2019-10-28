@@ -1,4 +1,4 @@
-cask 'waterfox' do
+cask 'waterfox-classic' do
   version '2019.10'
   sha256 'ed30fba5843f041aec9cc5393f5049df05b5c8773423daf7c3806819cb505171'
 
