@@ -13,6 +13,4 @@ cask 'yandex-cloud-cli' do
                     }
   binary 'docker-credential-yc'
   binary 'yc'
-
-  uninstall delete: "#{staged_path}/docker-credential-yc"
 end
