@@ -7,5 +7,7 @@ cask 'localizationeditor' do
   name 'LocalizationEditor'
   homepage 'https://github.com/igorkulman/iOSLocalizationEditor/'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'LocalizationEditor.app'
 end
