@@ -8,4 +8,11 @@ cask 'yandex-cloud-cli' do
   homepage 'https://cloud.yandex.com/docs/cli/'
 
   binary 'yc'
+
+  caveats <<~EOS
+    To install Docker Credential helper run:
+
+      yc components post-update
+      mv '#{staged_path}/docker-credential-yc' '/usr/local/bin'
+  EOS
 end
