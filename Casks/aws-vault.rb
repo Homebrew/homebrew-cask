@@ -7,5 +7,5 @@ cask 'aws-vault' do
   name 'aws-vault'
   homepage 'https://github.com/99designs/aws-vault'
 
-  binary 'aws-vault', target: 'aws-vault'
+  binary 'aws-vault'
 end
