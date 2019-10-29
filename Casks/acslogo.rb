@@ -7,5 +7,5 @@ cask 'acslogo' do
   name 'ACSLogo'
   homepage 'https://www.alancsmith.co.uk/logo/'
 
-  app 'ACSLogo/ACSLogo.app'
+  app 'ACSLogo.app'
 end
