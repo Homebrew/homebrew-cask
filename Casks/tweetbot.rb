@@ -4,7 +4,7 @@ cask 'tweetbot' do
 
   url 'https://tapbots.net/tweetbot4/Tweetbot.dmg'
   name 'Tweetbot'
-  homepage 'https://tapbots.net/tweetbot4'
+  homepage 'https://tapbots.com/tweetbot/mac/'
 
   app 'Tweetbot.app'
 end
