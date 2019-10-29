@@ -9,9 +9,9 @@ cask 'microsoft-office' do
 
   auto_updates true
   conflicts_with cask: [
-                         'microsot-word',
-                         'microsot-excel',
-                         'microsot-powerpoint',
+                         'microsoft-word',
+                         'microsoft-excel',
+                         'microsoft-powerpoint',
                          'onedrive',
                        ]
   depends_on macos: '>= :sierra'
