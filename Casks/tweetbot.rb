@@ -8,5 +8,7 @@ cask 'tweetbot' do
   name 'Tweetbot'
   homepage 'https://tapbots.com/tweetbot/mac/'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'Tweetbot.app'
 end
