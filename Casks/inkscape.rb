@@ -6,9 +6,9 @@ cask 'inkscape' do
     url "https://media.inkscape.org/dl/resources/file/Inkscape-#{version}-x11-10.7-x86_64.dmg"
 
     depends_on x11: true
-    
+
     binary "#{appdir}/Inkscape.app/Contents/Resources/bin/inkscape"
-    
+
     zap trash: '~/.inkscape-etc'
   else
     version '1.0beta1'
