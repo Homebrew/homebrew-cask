@@ -4,7 +4,7 @@ cask 'code42-crashplan' do
 
   # download.code42.com was verified as official when first introduced to the cask
   url "https://download.code42.com/installs/mac/install/Code42CrashPlan/Code42CrashPlan_#{version}_Mac.dmg"
-  appcast 'https://support.code42.com/Release_Notes/CrashPlan_for_Small_Business_release_notes'
+  appcast 'https://support.code42.com/Release_Notes'
   name 'CrashPlan'
   homepage 'https://www.crashplan.com/'
 
