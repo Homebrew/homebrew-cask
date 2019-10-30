@@ -1,5 +1,5 @@
 cask 'inkscape' do
-  if MacOS.version <= :mavericks
+  if MacOS.version <= :mojave
     version '0.92.2-1'
     sha256 'faece7a9a5fa9db7724b0c761f7f2014676d00ef8b90a0ef506fa39d09209fea'
 
