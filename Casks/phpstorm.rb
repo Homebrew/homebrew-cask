@@ -1,6 +1,6 @@
 cask 'phpstorm' do
-  version '2019.2.3,192.6817.20'
-  sha256 '317abedd21c5eddeed1e615e2d697ea4789436eefc864e46f2c021f03bbc5e2d'
+  version '2019.2.4,192.7142.41'
+  sha256 'e8dfce49743a6402f1da4a12d5166eb6df5393d15062d69b00b497e3f48e7409'
 
   url "https://download.jetbrains.com/webide/PhpStorm-#{version.before_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=PS&latest=true&type=release'
