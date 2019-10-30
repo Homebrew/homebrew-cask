@@ -7,10 +7,8 @@ cask 'hamsket' do
   name 'Hamsket'
   homepage 'https://github.com/TheGoddessInari/hamsket'
 
-  # The renaming is only required for versions 0.5.20 and below. The app has been renamed in the meantime:
+  # The app has already been renamed upstream:
   # https://github.com/TheGoddessInari/hamsket/commit/cb24232b471ac7899a17064816d7c1913458d2e5
-  # Once released the following line can be changed accordingly:
-  # app 'Hamsket.app'
   app 'Rambox-OS.app', target: 'Hamsket.app'
 
   zap trash: [
