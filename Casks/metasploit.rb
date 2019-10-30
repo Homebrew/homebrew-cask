@@ -1,5 +1,5 @@
 cask 'metasploit' do
-  version '5.0.55,20191024103613'
+  version '5.0.57,20191029103536'
   sha256 '8ffba5dbd6a20bebc16d8fbf797fe0f349204f3be07c91fac55d659f80bf608d'
 
   url "https://osx.metasploit.com/metasploit-framework-#{version.before_comma}+#{version.after_comma}-1rapid7-1.pkg"
