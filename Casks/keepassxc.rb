@@ -13,5 +13,11 @@ cask 'keepassxc' do
   app 'KeePassXC.app'
   binary "#{appdir}/KeePassXC.app/Contents/MacOS/keepassxc-cli"
 
-  zap trash: '~/.keepassxc'
+  zap trash: [
+               '~/.keepassxc',
+               '~/Library/Application Support/keepassxc',
+               '~/Library/Caches/org.keepassx.keepassxc',
+               '~/Library/Preferences/org.keepassx.keepassxc.plist',
+               '~/Library/Saved Application State/org.keepassx.keepassxc.savedState',
+             ]
 end
