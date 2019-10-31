@@ -9,6 +9,7 @@ cask 'drawio' do
   homepage 'https://www.draw.io/'
 
   app 'draw.io.app'
+  binary "#{appdir}/draw.io.app/Contents/MacOS/draw.io"
 
   zap trash: [
                '~/Library/Application Support/draw.io',
