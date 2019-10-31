@@ -1,9 +1,9 @@
 cask 'weiyun' do
-  version '3.0.2.386_52f040'
-  sha256 'bba284e3025879637e92e76f397cbd090524056912008cd22c8fea6f71f1b177'
+  version '3.0.3.396_465df4'
+  sha256 '65f3996fea7da1c80a0abd433a3f109b3985d5143e67ed9aa79b0ac54e9e0055'
 
   # dldir1.qq.com/weiyun was verified as official when first introduced to the cask
-  url "https://dldir1.qq.com/weiyun/mac/Weiyun_Mac_#{version}.dmg"
+  url "http://dldir1.qq.com/weiyun/Weiyun_Mac_#{version}.dmg"
   appcast 'https://qzonestyle.gtimg.cn/qzone/qzactStatics/configSystem/data/65/config1.js'
   name 'weiyun'
   homepage 'https://www.weiyun.com/'
