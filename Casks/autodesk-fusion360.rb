@@ -1,4 +1,5 @@
-cask 'autodesk-fusion-360' do
+cask 'autodesk-fusion360' do
+  # note: "360" is not a version number, but an intrinsic part of the product name
   version :latest
   sha256 :no_check
 
