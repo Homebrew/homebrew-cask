@@ -8,7 +8,7 @@ cask 'hma-pro-vpn' do
   name 'HideMyAss! Pro VPN'
   homepage 'https://www.hidemyass.com/index'
 
-  installer manual: 'Install HMA! Pro VPN.app'
+  installer manual: 'Install HMA! Pro VPN.pkg'
 
   uninstall launchctl: 'com.privax.hmaprovpn.helper',
             quit:      'com.privax.hmaprovpn.helper',
