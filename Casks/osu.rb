@@ -1,15 +1,10 @@
 cask 'osu' do
-  version '20151017'
-  sha256 '5677ee299ea9e271546e6ab56b9d3abe002d4295c9529a5b917f5af167dcd477'
+  version '2020190709-2'
+  sha256 '3a9505667ad8fbd2cbabf7f92372bd8d85765410bdf12b78ef0eda764abeca88'
 
-  url "https://m1.ppy.sh/osu%21-#{version}.dmg"
+  url "https://m1.ppy.sh/osu%21%20#{version}.app.zip"
   name 'osu!'
   homepage 'https://osu.ppy.sh/'
 
   app 'osu!.app'
-
-  zap trash: [
-               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/osu!.wineskin.prefs.sfl*',
-               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/osu!20275532226wine.wineskin.prefs.sfl*',
-             ]
 end
