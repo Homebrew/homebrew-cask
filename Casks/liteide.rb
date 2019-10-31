@@ -8,5 +8,5 @@ cask 'liteide' do
   name 'LiteIDE'
   homepage 'http://liteide.org/'
 
-  app 'LiteIDE.app'
+  app 'liteide/LiteIDE.app'
 end
