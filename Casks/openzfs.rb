@@ -1,6 +1,6 @@
 cask 'openzfs' do
-  version '1.9.0,18'
-  sha256 'a6b05d29e9ae1f313e642109d18da6d930b1991bcd24c5f91ecc6a64bdc130fc'
+  version '1.9.3,88'
+  sha256 '926e7c17d9b798dc176d4927083c921a8b7ef32952f90a40d26391c1ecdcb6bd'
 
   url "https://openzfsonosx.org/w/images/#{version.after_comma[0]}/#{version.after_comma}/OpenZFS_on_OS_X_#{version.before_comma}.dmg"
   name 'OpenZFS on OS X'
@@ -14,6 +14,7 @@ cask 'openzfs' do
                       :sierra,
                       :high_sierra,
                       :mojave,
+                      :catalina,
                     ]
 
   if MacOS.version == :mavericks
@@ -28,6 +29,8 @@ cask 'openzfs' do
     pkg "OpenZFS on OS X #{version.before_comma} High Sierra.pkg"
   elsif MacOS.version == :mojave
     pkg "OpenZFS on OS X #{version.before_comma} Mojave.pkg"
+  elsif MacOS.version == :catalina
+    pkg "OpenZFS on OS X #{version.before_comma} Catalina.pkg"
   end
 
   if MacOS.version >= :el_capitan
