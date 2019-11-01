@@ -7,7 +7,7 @@ cask 'couleurs' do
   name 'Couleurs'
   homepage 'https://couleursapp.com/'
 
-  depends_on macos: '>= :yosemite'
+  depends_on macos: '>= :sierra'
 
   app 'Couleurs.app'
 end
