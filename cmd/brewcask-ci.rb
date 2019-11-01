@@ -99,7 +99,7 @@ module Cask
           end
 
           was_installed = cask.installed?
-          cask_dependencies = CaskDependencies.new(cask).reject(&:installed?)
+          cask_dependencies = []
 
           check = Check.new
 
