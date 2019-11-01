@@ -1,6 +1,6 @@
 cask 'typeface' do
-  version '2.6.1'
-  sha256 'fa78fa3dfe5bf1594702f04f6bc566088fa403646101f16378930dc3a952347f'
+  version '2.6.2'
+  sha256 'dda392602da87def27549e54663e52bffa9d678bee64318fcb025fabebfc2e91'
 
   url 'https://dcdn.typefaceapp.com/latest'
   appcast 'https://dcdn.typefaceapp.com/appcast.xml'
