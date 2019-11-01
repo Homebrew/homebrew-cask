@@ -102,7 +102,7 @@ module Cask
 
           installer = Installer.new(cask, verbose: true)
 
-          formula_and_cask_dependencies = installer.missing_formula_and_cask_dependencies
+          cask_and_formula_dependencies = installer.missing_cask_and_formula_dependencies
 
           check = Check.new
 
@@ -130,7 +130,7 @@ module Cask
               $stderr.puts e.backtrace
               false
             ensure
-              formula_and_cask_dependencies.reverse.each do |cask_or_formula|
+              cask_and_formula_dependencies.reverse.each do |cask_or_formula|
                 next unless cask_or_formula.is_a?(Cask)
                 Installer.new(cask_or_formula, verbose: true).uninstall if cask_or_formula.installed?
               end
