@@ -6,6 +6,8 @@ cask 'ghidra' do
   name 'Ghidra'
   homepage 'https://www.ghidra-sre.org/'
 
+  conflicts_with cask: 'ghidra-beta'
+
   binary "ghidra_#{version.major_minor_patch}_PUBLIC/ghidraRun"
 
   zap trash: '~/.ghidra'
