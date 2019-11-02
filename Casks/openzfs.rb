@@ -1,6 +1,6 @@
 cask 'openzfs' do
-  version '1.9.0,18'
-  sha256 'a6b05d29e9ae1f313e642109d18da6d930b1991bcd24c5f91ecc6a64bdc130fc'
+  version '1.9.2,4e'
+  sha256 '125cfe675b6c65518184534f4822e44b3e59874e18828a35367d2467ce801d08'
 
   url "https://openzfsonosx.org/w/images/#{version.after_comma[0]}/#{version.after_comma}/OpenZFS_on_OS_X_#{version.before_comma}.dmg"
   name 'OpenZFS on OS X'
