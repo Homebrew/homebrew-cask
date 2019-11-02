@@ -1,9 +1,9 @@
 cask 'menumeters' do
-  version '1.9.9'
-  sha256 'ee34d38ead45a13d77b81b7c949d6a157d671e4a385b46d207c4a4cac25dfba2'
+  version '2.0.0'
+  sha256 '6bbc68c215e70e686378d031aed7f3c35c98f68daf50a5ada53b0d7edf9158eb'
 
   # github.com/yujitach/MenuMeters was verified as official when first introduced to the cask
-  url "https://github.com/yujitach/MenuMeters/releases/download/#{version}/MenuMeters_#{version.major_minor_patch}.zip"
+  url "https://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/zips/MenuMeters_#{version.major_minor_patch}.zip"
   appcast 'https://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/MenuMeters-Update.xml'
   name 'MenuMeters for El Capitan (and later)'
   homepage 'https://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/'
