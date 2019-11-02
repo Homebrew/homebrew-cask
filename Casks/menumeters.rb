@@ -13,8 +13,7 @@ cask 'menumeters' do
 
   app 'MenuMeters.app'
 
-  uninstall login_item: 'MenuMeters',
-            quit:       'com.yujitach.MenuMeters'
+  uninstall quit: 'com.yujitach.MenuMeters'
 
   zap trash: [
                '~/Library/Caches/com.yujitach.MenuMeters',
