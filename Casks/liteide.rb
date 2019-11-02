@@ -8,5 +8,7 @@ cask 'liteide' do
   name 'LiteIDE'
   homepage 'http://liteide.org/'
 
+  depends_on macos: '>= :sierra'
+
   app 'liteide/LiteIDE.app'
 end
