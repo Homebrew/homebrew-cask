@@ -5,7 +5,7 @@ cask 'biscuit' do
   # github.com/agata/dl.biscuit was verified as official when first introduced to the cask
   url "https://github.com/agata/dl.biscuit/releases/download/v#{version}/Biscuit-#{version}.dmg"
   appcast 'https://github.com/agata/dl.biscuit/releases.atom'
-  name 'biscuit'
+  name 'Biscuit'
   homepage 'https://eatbiscuit.com/'
 
   app 'Biscuit.app'
