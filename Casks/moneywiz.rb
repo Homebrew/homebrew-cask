@@ -7,5 +7,7 @@ cask 'moneywiz' do
   name 'MoneyWiz'
   homepage 'https://wiz.money/'
 
+  depends_on macos: '>= :sierra'
+
   app "MoneyWiz #{version.major}.app"
 end
