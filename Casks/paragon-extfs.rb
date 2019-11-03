@@ -6,7 +6,7 @@ cask 'paragon-extfs' do
   name 'Paragon ExtFS'
   homepage 'https://www.paragon-software.com/ufsdhome/extfs-mac/'
 
-  installer manual: 'Install Paragon ExtFS for Mac.app'
+  installer manual: 'FSInstaller.app'
 
   uninstall kext:      'com.paragon-software.filesystems.extfs',
             launchctl: 'com.paragon-software.extfs*',
