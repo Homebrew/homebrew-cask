@@ -15,7 +15,6 @@ cask 'oracle-jdk-javadoc' do
                      "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents/Home",
                      "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents",
                      "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk",
-                     '/Library/Java/JavaVirtualMachines',
                    ]
 
   caveats do

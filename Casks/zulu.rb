@@ -11,6 +11,5 @@ cask 'zulu' do
 
   pkg "Double-Click to Install Zulu #{version.major}.pkg"
 
-  uninstall pkgutil: "com.azulsystems.zulu.#{version.major}",
-            rmdir:   '/Library/Java/JavaVirtualMachines'
+  uninstall pkgutil: "com.azulsystems.zulu.#{version.major}"
 end

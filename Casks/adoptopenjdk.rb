@@ -10,8 +10,6 @@ cask 'adoptopenjdk' do
 
   artifact "jdk-#{version.before_comma}+#{version.after_comma}", target: "/Library/Java/JavaVirtualMachines/adoptopenjdk-#{version.before_comma}.jdk"
 
-  uninstall rmdir: '/Library/Java/JavaVirtualMachines'
-
   caveats <<~EOS
     More versions are available in the AdoptOpenJDK tap:
       #{Formatter.url('https://github.com/AdoptOpenJDK/homebrew-openjdk')}
