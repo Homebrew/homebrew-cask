@@ -15,7 +15,7 @@ cask 'openzfs' do
                       :catalina,
                     ]
 
-  elsif MacOS.version == :el_capitan
+  if MacOS.version == :el_capitan
     pkg "OpenZFS on OS X #{version.before_comma} El Capitan.pkg"
   elsif MacOS.version == :sierra
     pkg "OpenZFS on OS X #{version.before_comma} Sierra.pkg"
