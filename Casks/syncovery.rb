@@ -1,6 +1,6 @@
 cask 'syncovery' do
-  version '8.57a'
-  sha256 '89394d64da46594f953f25fab807b1ee6917fa7f17a1dd51f5edcc5a3627930f'
+  version '8.57e'
+  sha256 '3031e4d58c4a66ce665a0bbcb03119cc18ab9bd604e4468a8d7985dc9960402e'
 
   url "https://www.syncovery.com/release/SyncoveryMac#{version}.dmg"
   appcast 'https://www.syncovery.com/download/mac/'
