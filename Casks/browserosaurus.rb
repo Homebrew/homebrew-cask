@@ -7,6 +7,7 @@ cask 'browserosaurus' do
   appcast 'https://github.com/will-stone/browserosaurus/releases.atom'
   name 'Browserosaurus'
   homepage 'https://will-stone.github.io/browserosaurus/'
+  auto_updates true
 
   app 'Browserosaurus.app'
 end
