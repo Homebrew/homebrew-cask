@@ -4,9 +4,9 @@ cask 'malus' do
 
   # malusfile.com was verified as official when first introduced to the cask
   url "https://malusfile.com/uploads/Malus-mac-#{version.before_comma}-#{version.after_comma}.dmg"
-  appcast "https://api.getmalus.com/api/checkDesktopUpdate?type=mac"
+  appcast 'https://api.getmalus.com/api/checkDesktopUpdate?type=mac'
   name 'Malus'
-  homepage 'https://getmalus.com'
+  homepage 'https://getmalus.com/'
 
   auto_updates true
 
