@@ -1,6 +1,6 @@
 cask 'material-colors' do
-  version '2.0.0'
-  sha256 'a764f8af33499a96d46e3e79fe2e4594eb0ccff6217cff0920d9b44982a0f8be'
+  version '2.0.1'
+  sha256 'fbe1791d7193ad9f7d235b8daf4304fa391b7543bb6591b393519211499aebfa'
 
   url "https://github.com/romannurik/MaterialColorsApp/releases/download/v#{version}/MaterialColors-#{version}.zip"
   appcast 'https://github.com/romannurik/MaterialColorsApp/releases.atom'

@@ -9,9 +9,9 @@ cask 'microsoft-office' do
 
   auto_updates true
   conflicts_with cask: [
-                         'microsot-word',
-                         'microsot-excel',
-                         'microsot-powerpoint',
+                         'microsoft-word',
+                         'microsoft-excel',
+                         'microsoft-powerpoint',
                          'onedrive',
                        ]
   depends_on macos: '>= :sierra'
@@ -39,6 +39,7 @@ cask 'microsoft-office' do
                          '/Applications/Microsoft PowerPoint.app',
                          '/Applications/Microsoft Word.app',
                          '/Applications/OneDrive.app',
+                         '/Library/PrivilegedHelperTools/com.microsoft.autoupdate.helper',
                        ],
             launchctl: [
                          'com.microsoft.office.licensing.helper',
@@ -61,10 +62,14 @@ cask 'microsoft-office' do
                    '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.excel.sfl*',
                    '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.powerpoint.sfl*',
                    '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.word.sfl*',
+                   '~/Library/Application Support/Microsoft AutoUpdate',
+                   '~/Library/Application Support/Microsoft Update Assistant',
                    '~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate.fba',
                    '~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate2',
                    '~/Library/Caches/com.microsoft.autoupdate.fba',
                    '~/Library/Caches/com.microsoft.autoupdate2',
+                   '~/Library/Caches/com.microsoft.OneDriveStandaloneUpdater',
+                   '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDriveStandaloneUpdater',
                    '~/Library/Containers/com.microsoft.Excel',
                    '~/Library/Containers/com.microsoft.Office365ServiceV2',
                    '~/Library/Containers/com.microsoft.Outlook',

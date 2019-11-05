@@ -1,6 +1,6 @@
 cask 'daedalus' do
-  version '0.14.0,3.0.3:7144'
-  sha256 '1849ced47172add9e5a34dc670921ebae0fc496bb771afe61006e961019cdd24'
+  version '0.15.0,3.1.0:8276'
+  sha256 '21d0f47e45e9b6f6f4f35cb8375ccb74bae28d74c189f923fd65e9432dcd9198'
 
   # github.com/input-output-hk/daedalus was verified as official when first introduced to the cask
   url "https://github.com/input-output-hk/daedalus/releases/download/#{version.before_comma}/daedalus-#{version.before_comma}-cardano-sl-#{version.after_comma.before_colon}-mainnet-macos-#{version.after_comma.after_colon}.pkg"

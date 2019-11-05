@@ -99,16 +99,22 @@ module Cask
           end
 
           was_installed = cask.installed?
-          cask_dependencies = CaskDependencies.new(cask).reject(&:installed?)
+
+          installer = Installer.new(cask, verbose: true)
+
+          cask_and_formula_dependencies = installer.missing_cask_and_formula_dependencies
 
           check = Check.new
 
           overall_success &= step "brew cask install #{cask.token}", "install" do
-            Installer.new(cask, verbose: true).zap if was_installed
+            if was_installed
+              old_cask = CaskLoader.load(cask.installed_caskfile)
+              Installer.new(old_cask, verbose: true).zap
+            end
 
             check.before
 
-            Installer.new(cask, verbose: true).install
+            installer.install
           end
 
           overall_success &= step "brew cask uninstall #{cask.token}", "uninstall" do
@@ -116,7 +122,7 @@ module Cask
               if manual_installer?(cask)
                 puts 'Cask has a manual installer, skipping...'
               else
-                Installer.new(cask, verbose: true).uninstall
+                installer.uninstall
               end
               true
             rescue => e
@@ -124,8 +130,9 @@ module Cask
               $stderr.puts e.backtrace
               false
             ensure
-              cask_dependencies.each do |c|
-                Installer.new(c, verbose: true).uninstall if c.installed?
+              cask_and_formula_dependencies.reverse.each do |cask_or_formula|
+                next unless cask_or_formula.is_a?(Cask)
+                Installer.new(cask_or_formula, verbose: true).uninstall if cask_or_formula.installed?
               end
             end
 
@@ -244,6 +251,7 @@ module Cask
               yield != false
             rescue => e
               $stderr.puts e.message
+              $stderr.puts e.backtrace
               false
             end
           end

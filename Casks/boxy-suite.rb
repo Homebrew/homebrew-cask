@@ -9,4 +9,6 @@ cask 'boxy-suite' do
   app 'Boxy Dashboard.app'
   app 'Boxy for Gmail.app'
   app 'Boxy for Calendar.app'
+  app 'Boxy for Keep.app'
+  app 'Boxy for Contacts.app'
 end

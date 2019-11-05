@@ -1,6 +1,6 @@
 cask 'visicut' do
-  version '1.8-99-g0a2ae54b'
-  sha256 'e1b38e1c0c9039155300899f21aa53fbb11c6dc39fc430005393e07db8cd64fe'
+  version '1.8-105-g369693d4'
+  sha256 'eea73ba174a18def77db323a760f8f92d72004261ba18b104fa3944861c29d53'
 
   url "https://download.visicut.org/files/master/MacOSX/VisiCutMac-#{version}.zip"
   appcast 'https://download.visicut.org'

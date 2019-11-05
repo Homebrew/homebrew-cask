@@ -1,6 +1,6 @@
 cask 'suspicious-package' do
-  version '3.5.1'
-  sha256 'b5ed2c304745af76ea70f17718dde00bb85b1cc076dfce37da46f1c3b0e3e7f7'
+  version '3.5.2'
+  sha256 'e84b090d3956edaec646a588c48a250608f4f8fbb5a24b07008cbf62eea04c16'
 
   url 'https://www.mothersruin.com/software/downloads/SuspiciousPackage.dmg'
   appcast 'https://www.mothersruin.com/software/SuspiciousPackage/data/SuspiciousPackageVersionInfo.plist'

@@ -9,6 +9,4 @@ cask 'sapmachine-jdk' do
   homepage 'https://sapmachine.io/'
 
   artifact "sapmachine-jdk-#{version}.jdk", target: "/Library/Java/JavaVirtualMachines/sapmachine-jdk-#{version}.jdk"
-
-  uninstall rmdir: '/Library/Java/JavaVirtualMachines'
 end
