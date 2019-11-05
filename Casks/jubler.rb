@@ -4,7 +4,7 @@ cask 'jubler' do
 
   # sourceforge.net/jubler was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/jubler/Jubler-#{version}.dmg"
-  appcast 'https://sourceforge.net/projects/jubler/rss'
+  appcast 'https://www.jubler.org/changelog.html'
   name 'Jubler'
   homepage 'https://www.jubler.org/'
 
