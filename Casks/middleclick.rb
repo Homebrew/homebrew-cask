@@ -1,16 +1,17 @@
 cask 'middleclick' do
-  version '1.0'
-  sha256 'a83a329493b9140cb73b418ddfa2e921555fc7706a11d8ec2ba13c4016392aca'
+  version '2.4.5'
+  sha256 '0cf66ff60029b449155ccc008cf64fe3ba3abadfa37035c416bdb58e31ea1d0c'
 
   # github.com was verified as official when first introduced to the cask
-  url 'https://github.com/cl3m/MiddleClick/releases/download/mojave/MiddleClick_Mojave.zip'
-  appcast 'https://github.com/cl3m/MiddleClick/releases.atom'
+  url "https://github.com/DaFuqtor/MiddleClick/releases/download/#{version}/MiddleClick.zip"
+  appcast 'https://github.com/DaFuqtor/MiddleClick/releases.atom'
   name 'MiddleClick'
-  homepage 'https://rouge41.com/labs/'
+  homepage 'https://github.com/DaFuqtor/MiddleClick'
 
   app 'MiddleClick.app'
 
-  caveats do
-    discontinued
-  end
+  uninstall login_item: 'MiddleClick',
+            quit:       'com.rouge41.middleClick'
+
+  zap trash: '~/Library/Preferences/com.rouge41.middleClick.plist'
 end
