@@ -1,9 +1,9 @@
 cask 'opendns-updater' do
-  version '3.0'
-  sha256 '64ad7b55cc8a62739815a806c077df0751ecbbc6c4a71c01792c2f71dc7fd8cc'
+  version '3.1'
+  sha256 '3e5def08fd366a0d4d651a8bd7cf0a1274f8dd67f8c7a55842b3c4126492a15b'
 
   url 'https://www.opendns.com/download/mac/'
-  appcast 'https://opendnsupdate.appspot.com/macupdatecheck/ipupdater/AppCast.xml'
+  appcast 'http://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.opendns.com/download/mac/'
   name 'OpenDNS Updater'
   homepage 'https://support.opendns.com/hc/en-us/articles/227987867'
 
