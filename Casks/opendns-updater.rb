@@ -7,5 +7,5 @@ cask 'opendns-updater' do
   name 'OpenDNS Updater'
   homepage 'https://support.opendns.com/hc/en-us/articles/227987867'
 
-  app 'OpenDNS Updater.app'
+  app 'OpenDNSUpdater.app'
 end
