@@ -1,6 +1,6 @@
 cask 'segger-embedded-studio-for-arm' do
-  version '4.30'
-  sha256 '233903c44d09fa022c74fca1c5b48f4bea42787bb17514410827108116ece8bd'
+  version '4.30a'
+  sha256 'fb087f373129bef121ef752e29476bf979d1e714979d4f1daee8eff39ed878d0'
 
   url "https://www.segger.com/downloads/embedded-studio/Setup_EmbeddedStudio_ARM_v#{version.no_dots}_macos_x64.dmg"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=https://www.segger.com/downloads/embedded-studio/EmbeddedStudio_ARM_Mac',
