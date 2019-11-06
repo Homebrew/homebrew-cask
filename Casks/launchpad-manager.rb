@@ -1,14 +1,13 @@
 cask 'launchpad-manager' do
-  if MacOS.version <= :yosemite
-    sha256 :no_check
-    url 'http://launchpadmanager.com/download_yosemite.php/LaunchpadManagerYosemite.dmg'
+  version :latest
+  sha256 :no_check
 
+  if MacOS.version <= :yosemite
+    url 'http://launchpadmanager.com/download_yosemite.php/LaunchpadManagerYosemite.dmg'
   else
-    sha256 :no_check
     url 'http://launchpadmanager.com/download.php/LaunchpadManager.dmg'
   end
 
-  version :latest
   name 'Launchpad Manager'
   homepage 'http://launchpadmanager.com/'
 
