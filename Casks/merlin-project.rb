@@ -7,5 +7,7 @@ cask 'merlin-project' do
   name 'Merlin Project'
   homepage 'https://www.projectwizards.net/en/products/merlin-project/what-is'
 
+  depends_on macos: '>= :sierra'
+
   app "Merlin Project #{version.major}.app"
 end
