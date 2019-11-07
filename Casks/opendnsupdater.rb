@@ -1,4 +1,4 @@
-cask 'opendns-updater' do
+cask 'opendnsupdater' do
   version '3.1'
   sha256 '3e5def08fd366a0d4d651a8bd7cf0a1274f8dd67f8c7a55842b3c4126492a15b'
 
