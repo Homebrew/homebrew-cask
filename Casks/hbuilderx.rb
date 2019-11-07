@@ -4,6 +4,7 @@ cask 'hbuilderx' do
 
   # download.dcloud.net.cn was verified as official when first introduced to the cask
   url "https://download.dcloud.net.cn/HBuilderX.#{version}.dmg"
+  appcas 'https://dcloud.io/docs/HBuilder.json'
   name 'HBuilderX'
   homepage 'https://www.dcloud.io/hbuilderx.html'
 
