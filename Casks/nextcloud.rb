@@ -7,6 +7,8 @@ cask 'nextcloud' do
   name 'Nextcloud'
   homepage 'https://nextcloud.com/'
 
+  depends_on macos: '>= :sierra'
+
   pkg "Nextcloud-#{version}.pkg"
 
   uninstall pkgutil: 'com.nextcloud.desktopclient'
