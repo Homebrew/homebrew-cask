@@ -3,7 +3,7 @@ cask 'adobe-acrobat-reader' do
   sha256 'db2b177dda378fc3efea8b2539782f55f097e13a706a42fff86ab1da24cf2135'
 
   url "https://ardownload2.adobe.com/pub/adobe/reader/mac/AcrobatDC/#{version.no_dots}/AcroRdrDC_#{version.no_dots}_MUI.dmg"
-  appcast 'https://get.adobe.com/reader/'
+  appcast 'https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/index.html'
   name 'Adobe Acrobat Reader DC'
   homepage 'https://acrobat.adobe.com/us/en/acrobat/pdf-reader.html'
 
