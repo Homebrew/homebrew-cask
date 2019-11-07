@@ -15,13 +15,13 @@ cask 'intel-haxm' do
                       sudo:       true,
                     }
 
-  uninstall pkg:    'com.intel.kext.haxm.*',
-            script: {
-                      sudo:         true,
-                      must_succeed: true,
-                      executable:   'silent_install.sh',
-                      args:         ['-u'],
-                    }
+  uninstall pkgutil: 'com.intel.kext.haxm.*',
+            script:  {
+                       sudo:         true,
+                       must_succeed: true,
+                       executable:   'silent_install.sh',
+                       args:         ['-u'],
+                     }
 
   caveats do
     license 'https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager-end-user-license-agreement-macosx'
