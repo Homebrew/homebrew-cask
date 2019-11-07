@@ -45,11 +45,12 @@ cask 'openzfs' do
     end
   end
 
-  uninstall delete: '~/zfsuninstaller.*',
-            script: {
-                      executable: "#{staged_path}/Docs & Scripts/uninstall-openzfsonosx.sh",
-                      sudo:       true,
-                    }
+  uninstall delete:    '~/zfsuninstaller.*',
+            launchctl: 'org.openzfsonosx.zed',
+            script:    {
+                         executable: "#{staged_path}/Docs & Scripts/uninstall-openzfsonosx.sh",
+                         sudo:       true,
+                       }
 
   caveats do
     kext
