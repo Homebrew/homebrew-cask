@@ -15,7 +15,8 @@ cask 'intel-haxm' do
                       sudo:       true,
                     }
 
-  uninstall script: {
+  uninstall pkg:    'com.intel.kext.haxm.*',
+            script: {
                       sudo:         true,
                       must_succeed: true,
                       executable:   'silent_install.sh',
