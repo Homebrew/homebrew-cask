@@ -7,7 +7,7 @@ cask 'inboard' do
   name 'Inboard'
   homepage 'https://inboardapp.com/'
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :high_sierra'
 
   app 'Inboard.app'
 end
