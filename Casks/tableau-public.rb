@@ -1,5 +1,5 @@
 cask 'tableau-public' do
-  version '2019-4-0'
+  version '2019.4.0'
   sha256 'a9720cad769e8c5d2d592b7d4cf37f8b8290ebaa180e856cdfa86e93ef6d137b'
 
   url "https://downloads.tableau.com/public/TableauPublic-#{version.dots_to_hyphens}.dmg"
