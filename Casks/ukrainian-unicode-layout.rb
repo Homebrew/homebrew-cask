@@ -5,7 +5,7 @@ cask 'ukrainian-unicode-layout' do
   url "https://github.com/korzhyk/macOS-Ukrainian-Unicode-Layout/archive/#{version}.tar.gz"
   appcast 'https://github.com/korzhyk/macOS-Ukrainian-Unicode-Layout/releases.atom'
   name 'Ukrainian Unicode Layout'
-  homepage 'https://github.com/korzhyk/macOS-Ukrainian-Unicode-Layout'
+  homepage 'https://github.com/korzhyk/OSX-Ukrainian-Unicode-Layout'
 
   artifact "macOS-Ukrainian-Unicode-Layout-#{version}", target: "#{ENV['HOME']}/Library/Keyboard Layouts/Ukrainian-Unicode-Layout.bundle"
 end
