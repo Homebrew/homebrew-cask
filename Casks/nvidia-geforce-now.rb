@@ -1,6 +1,6 @@
 cask 'nvidia-geforce-now' do
-  version '2.0.14.86,F918EE'
-  sha256 'ffc7b0804bc9cdd7c6887d6ff99243db511fc9f1cf59dbeba85a82bbb13e9b4e'
+  version '2.0.14.93,ADDE2E'
+  sha256 'c70fecd98ab176c83b0e9c36b2aa5e494b8cd82d6864108dccb9906034abb883'
 
   url "https://ota-downloads.nvidia.com/ota/GeForceNOW-release_#{version.after_comma}.dmg"
   appcast "https://ota.nvidia.com/release/available?product=GFN-mac&version=#{version.before_comma}&channel=OFFICIAL",
