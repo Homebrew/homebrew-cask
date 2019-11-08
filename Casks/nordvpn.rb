@@ -1,6 +1,6 @@
 cask 'nordvpn' do
-  version '5.1.1'
-  sha256 'e1b97aaf58bca19440c30012b28ee40bb53620d0c91764df73b02a6758594257'
+  version '5.1.2'
+  sha256 '98eb3ca69fbc66c1a4b047c0ff34a8b6f9f3a74800d70fd7ef06cec289103438'
 
   # downloads.nordcdn.com/apps was verified as official when first introduced to the cask
   url "https://downloads.nordcdn.com/apps/macos/generic/NordVPN-OpenVPN/#{version}/NordVPN.pkg"
