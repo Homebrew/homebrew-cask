@@ -1,6 +1,6 @@
 cask 'hazel' do
-  version '4.4.1'
-  sha256 '0a6ba80403e0696013412bd80f308a8db5a31ec56416a834200a99c3d93f35d1'
+  version '4.4.2'
+  sha256 'e8c1bae5fcfc1adc48904b09035f95a648a6daee0b0f2d76612b3a4453391b91'
 
   # s3.amazonaws.com/Noodlesoft was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/Noodlesoft/Hazel-#{version}.dmg"
