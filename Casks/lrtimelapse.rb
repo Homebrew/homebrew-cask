@@ -7,7 +7,7 @@ cask 'lrtimelapse' do
   name 'LRTimelapse'
   homepage 'https://lrtimelapse.com/'
 
-  pkg 'LRTimelapse Installer.pkg'
+  pkg 'LRTimelapse  Installer.pkg'
 
   uninstall script:  'Uninstall LRTimelapse.command',
             pkgutil: [
