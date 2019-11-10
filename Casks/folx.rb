@@ -1,5 +1,5 @@
 cask 'folx' do
-  version '5.12(13890).13890'
+  version '5.12.13890'
   sha256 '8c009235ef820534bafef865b218bbb07e51306b1cc20d319a209c7020de8d74'
 
   url 'https://cdn.eltima.com/download/downloader_mac.dmg'
