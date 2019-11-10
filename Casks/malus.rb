@@ -9,6 +9,7 @@ cask 'malus' do
   homepage 'https://getmalus.com/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'Malus.app'
 
