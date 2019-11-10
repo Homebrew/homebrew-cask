@@ -1,6 +1,6 @@
 cask 'subler' do
-  version '1.5.21'
-  sha256 'f8de939acaadc79196dff29bc1be4ddcbdf98136e1ca8a826e317a466aa8818c'
+  version '1.5.22'
+  sha256 'e1c76affc061c785666fa37ca25fd8baf1ee4950df6afe4c73c1b6c9bb743f70'
 
   # bitbucket.org/galad87/subler was verified as official when first introduced to the cask
   url "https://bitbucket.org/galad87/subler/downloads/Subler-#{version}.zip"
