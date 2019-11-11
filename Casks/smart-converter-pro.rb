@@ -6,6 +6,8 @@ cask 'smart-converter-pro' do
   name 'Smart Converter Pro'
   homepage 'https://shedworx.com/smart-converter-pro'
 
+  depends_on macos: '>= :high_sierra'
+
   app "Smart Converter Pro #{version.major}.app"
 
   zap trash: [
