@@ -11,6 +11,5 @@ cask 'moter' do
   depends_on cask: 'spectacle'
   depends_on cask: 'iterm2'
 
-
   binary 'moter'
 end
