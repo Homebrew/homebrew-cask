@@ -4,7 +4,7 @@ cask 'zoho-mail' do
 
   # downloads.zohocdn.com/zmail-desktop/mac was verified as official when first introduced to the cask
   url "https://downloads.zohocdn.com/zmail-desktop/mac/zoho-mail-desktop-installer-v#{version}.dmg"
-  appcast 'https://www.zoho.com/mail/desktop/artifacts.json'
+  appcast 'http://downloads.zohocdn.com/zmail-desktop/artifacts.json'
   name 'Zoho Mail'
   homepage 'https://www.zoho.com/mail/desktop/'
 
