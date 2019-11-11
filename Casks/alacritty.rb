@@ -8,6 +8,7 @@ cask 'alacritty' do
   homepage 'https://github.com/jwilm/alacritty/'
 
   app 'Alacritty.app'
+  binary "#{appdir}/Alacritty.app/Contents/MacOS/alacritty"
 
   zap delete: [
                 '~/Library/Saved Application State/io.alacritty.savedState',
