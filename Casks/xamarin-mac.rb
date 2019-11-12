@@ -12,8 +12,5 @@ cask 'xamarin-mac' do
 
   pkg "xamarin.mac-#{version}.pkg"
 
-  uninstall pkgutil: [
-                       "xamarin.mac-#{version}.pkg",
-                       "xamarin.mac-uninstall-#{version}.pkg",
-                     ]
+  uninstall pkgutil: 'com.xamarin.mac-.*'
 end
