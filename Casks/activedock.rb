@@ -8,7 +8,7 @@ cask 'activedock' do
   name 'ActiveDock'
   homepage 'https://www.noteifyapp.com/activedock/'
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :high_sierra'
 
   app 'ActiveDock.app'
 end
