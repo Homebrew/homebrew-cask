@@ -16,6 +16,18 @@ cask 'inkscape' do
 
     url "https://media.inkscape.org/dl/resources/file/Inkscape-#{version}_OEMhoXK.dmg"
 
+    # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+    shimscript = "#{staged_path}/inkscape.wrapper.sh"
+
+    binary shimscript, target: 'inkscape'
+
+    preflight do
+      IO.write shimscript, <<~EOS
+        #!/bin/sh
+        exec '#{staged_path}/Inkscape.app/Contents/MacOS/Inkscape' "$@"
+      EOS
+    end
+
     zap trash: '~/Library/Application Support/Inkscape'
   end
 
