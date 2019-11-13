@@ -17,8 +17,8 @@ cask 'powerphotos' do
     url "https://www.fatcatsoftware.com/powerphotos/PowerPhotos_#{version.no_dots}.zip"
   else
     version '1.7.5'
-    sha256 ''
-    url '8d02de327d137fd22a7ed9162ae756545132d10332567e87434c1648d024538f'
+    sha256 '8d02de327d137fd22a7ed9162ae756545132d10332567e87434c1648d024538f'
+    url 'https://www.fatcatsoftware.com/powerphotos/PowerPhotos.zip'
   end
 
   appcast 'https://www.fatcatsoftware.com/powerphotos/powerphotos_appcast.xml'
