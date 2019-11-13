@@ -7,6 +7,8 @@ cask 'owncloud' do
   name 'ownCloud'
   homepage 'https://owncloud.com/'
 
+  depends_on macos: '>= :sierra'
+
   pkg "ownCloud-#{version}.pkg"
 
   uninstall pkgutil: [
