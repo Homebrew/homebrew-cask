@@ -8,5 +8,7 @@ cask 'screentray' do
   name 'ScreenTray'
   homepage 'https://screentray.com/'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'ScreenTray.app'
 end
