@@ -7,7 +7,7 @@ cask 'omnioutliner' do
   name 'OmniOutliner'
   homepage 'https://www.omnigroup.com/omnioutliner/'
 
-  depends_on macos: '>= :high_sierra'
+  depends_on macos: '>= :mojave'
 
   app 'OmniOutliner.app'
 end
