@@ -7,7 +7,7 @@ cask 'daisydisk' do
     version '4.8.2'
     sha256 '2949d6d3cb4e653e8650c8b1dc825e4fa39c8a8ae8c906a3392aff360c5d6c1a'
     url 'https://www.daisydiskapp.com/downloads/DaisyDisk.zip'
-    appcast 'https://daisydiskapp.com/downloads/appcastReleaseNotes.php?appEdition=Standard&osVersion=10.13'
+    appcast 'https://daisydiskapp.com/downloads/appcastReleaseNotes.php?appEdition=Standard&osVersion=10.15'
   end
 
   name 'DaisyDisk'
