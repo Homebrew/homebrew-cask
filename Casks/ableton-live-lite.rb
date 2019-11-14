@@ -7,5 +7,18 @@ cask 'ableton-live-lite' do
   name 'Ableton Live Lite'
   homepage 'https://www.ableton.com/en/products/live-lite/'
 
+  depends_on macos: '>= :el_capitan'
+
   app "Ableton Live #{version.major} Lite.app"
+
+  uninstall quit: 'com.ableton.live'
+
+  zap trash: [
+               '~/Library/Application Support/CrashReporter/Ableton *_*.plist',
+               '~/Library/Application Support/Ableton',
+               '~/Library/Caches/Ableton',
+               '~/Library/Preferences/Ableton',
+               '~/Library/Preferences/com.ableton.live.plist*',
+               '~/Music/Ableton',
+             ]
 end
