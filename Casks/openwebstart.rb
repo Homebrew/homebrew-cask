@@ -2,10 +2,10 @@ cask 'openwebstart' do
   version '0.5.1'
   sha256 '96285f6592cae0093af2acb9a4f5865338edad292dcdd4e565e34bc5485e3f40'
 
-  # github.com/karakun was verified as official when first introduced to the cask
+  # github.com/karakun/OpenWebStart was verified as official when first introduced to the cask
   url "https://github.com/karakun/OpenWebStart/releases/download/v#{version}/OpenWebStart_macos_#{version.dots_to_underscores}.dmg"
   appcast 'https://github.com/karakun/OpenWebStart/releases.atom'
-  name 'openwebstart'
+  name 'OpenWebStart'
   homepage 'https://openwebstart.com/'
 
   installer script: {
