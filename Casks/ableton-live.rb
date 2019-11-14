@@ -7,8 +7,18 @@ cask 'ableton-live' do
   name 'Ableton Live'
   homepage 'https://www.ableton.com/en/live/'
 
+  depends_on macos: '>= :el_capitan'
+
   app "Ableton Live #{version.major} Trial.app"
 
-  zap trash: '~/Library/*/*[Aa]bleton*',
-      rmdir: '~/Music/Ableton/Factory Packs'
+  uninstall quit: 'com.ableton.live'
+
+  zap trash: [
+               '~/Library/Application Support/CrashReporter/Ableton *_*.plist',
+               '~/Library/Application Support/Ableton',
+               '~/Library/Caches/Ableton',
+               '~/Library/Preferences/Ableton',
+               '~/Library/Preferences/com.ableton.live.plist*',
+               '~/Music/Ableton',
+             ]
 end
