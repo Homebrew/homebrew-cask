@@ -1,6 +1,6 @@
 cask 'sketchbook' do
-  version '8.7.0'
-  sha256 'b9cba9d81571abe76f2f5b976cc95646c879f45c6fdfc4d7053a626ee0b94b49'
+  version '8.7.1'
+  sha256 'a96042dc95483cd6fac849a9f60a22980204ee4ee0a26b0804b0aa6ab23b842a'
 
   url "https://update.sketchbook.com/mac/SketchBook_v#{version}_mac.dmg"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://update.sketchbook.com/mac/latest'
