@@ -1,4 +1,4 @@
-cask 'ivideon-server' do
+cask 'ivideonserver' do
   version '3.8.0'
   sha256 '6e8372627144cef24b8b7425ea123436cd8d1de9277aefb19470cdc822d29109'
 
