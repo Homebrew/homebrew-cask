@@ -1,6 +1,6 @@
 cask 'feeder' do
-  version '3.7.1'
-  sha256 'f9f4773ffb187987be74f3ba9f0092770b1a315ee798a77b3cb49b290022762e'
+  version '3.7.2'
+  sha256 'd64a11b17cdeb675f075c68442bfd72f37e779431fb1776ed1aed27d7e528c87'
 
   url "https://reinventedsoftware.com/feeder/downloads/Feeder_#{version}.dmg"
   appcast "https://reinventedsoftware.com/feeder/downloads/Feeder#{version.major}.xml"
