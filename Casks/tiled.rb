@@ -8,5 +8,7 @@ cask 'tiled' do
   name 'Tiled'
   homepage 'https://www.mapeditor.org/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Tiled.app'
 end
