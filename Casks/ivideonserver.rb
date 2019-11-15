@@ -4,6 +4,7 @@ cask 'ivideonserver' do
 
   # updates.iv-cdn.com was verified as official when first introduced to the cask
   url "https://updates.iv-cdn.com/bundles/ivideon_server/#{version}/IvideonServer_#{version}_macosx-x86-64.dmg"
+  appcast 'https://www.ivideon.com/downloads/'
   name 'Ivideon Client'
   homepage 'https://www.ivideon.com/'
 
