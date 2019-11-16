@@ -15,9 +15,9 @@ module GitDiffExtension
 
     def only_version_or_checksum?
       return false if additions.count != deletions.count
-      return false if additions.count > 2
+      return false unless (additions + deletions).all? { |line| line.version? || line.sha256? }
 
-      (additions + deletions).all? { |line| line.version? || line.sha256? }
+      additions.count { |line| line.version? } <= 1
     end
 
     def version_changed?

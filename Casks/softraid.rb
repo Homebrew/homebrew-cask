@@ -1,6 +1,6 @@
 cask 'softraid' do
-  version '5.8'
-  sha256 'ec5e4771e20a0a2d218c1c1d46b225148dc6465e6ceb556815404a08ce63348e'
+  version '5.8.1'
+  sha256 '8e94281740c1845bd06ae6f0f8c5470c64918ce8bf9dc6613a80a45e4250a300'
 
   # download.owcdigital.com/softraid was verified as official when first introduced to the cask
   url "https://download.owcdigital.com/softraid/mac/#{version.major}/softraid/SoftRAID%20#{version}.dmg"

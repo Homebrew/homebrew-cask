@@ -1,6 +1,6 @@
 cask 'one-switch' do
-  version '1.7.1'
-  sha256 'c2127c94c26d606dfdee632fe1cc833be9586d58a4be78ab61f36892abfcd205'
+  version '1.8'
+  sha256 '03f045aa669f117a97a3f4ddd2d5aa2b0ecaf966d79de08cc13e65a6ae0913fc'
 
   # dl.devmate.com/studio.fireball.OneSwitch was verified as official when first introduced to the cask
   url 'https://dl.devmate.com/studio.fireball.OneSwitch/OneSwitch.zip'

@@ -1,6 +1,6 @@
 cask 'chiaki' do
-  version '1.0.4'
-  sha256 '7c269fbf3be637ba7a8eb799f316b36d7c341dc882c8ce08425d89ecad19ff1c'
+  version '1.1.1'
+  sha256 '40436df719ffa22841185ed7caedf881a42956c1ec84bea5f582314131b0df9f'
 
   url "https://github.com/thestr4ng3r/chiaki/releases/download/v#{version}/Chiaki-v#{version}-macOS-x86_64.dmg"
   appcast 'https://github.com/thestr4ng3r/chiaki/releases.atom'

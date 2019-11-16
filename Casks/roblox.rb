@@ -1,6 +1,6 @@
 cask 'roblox' do
-  version '0.407.0.353595,510ae7995e4847a5'
-  sha256 'acdf1f2d772c6783c95cb34bcacd088a6a3a60d403f64e9bf9cea53ed9d5d92b'
+  version '0.409.0.358284,09f82d10a713415f'
+  sha256 'ac76935a98cb231aa19e1e77b3faff617197356ca9a3aec432c4a4123d55e763'
 
   # setup.rbxcdn.com was verified as official when first introduced to the cask
   url "https://setup.rbxcdn.com/mac/version-#{version.after_comma}-Roblox.dmg"

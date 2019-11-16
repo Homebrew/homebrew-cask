@@ -1,6 +1,6 @@
 cask 'smart-converter-pro' do
-  version '2.4.2'
-  sha256 '5dbde9f84974e301d0ee3fbbc61f117a8b75d22b1373c8de265fa626199d2822'
+  version '3.0.1'
+  sha256 '8fc2e53fea9d9869059b17ff968ed92a81c7bed199f51710f778fc4471214877'
 
   url "https://download.shedworx.com/scp#{version.major}/SmartConverterPro-#{version}.dmg"
   name 'Smart Converter Pro'

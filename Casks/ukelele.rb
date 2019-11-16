@@ -5,7 +5,7 @@ cask 'ukelele' do
   url "https://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Ukelele_#{version}&filename=Ukelele_#{version}.dmg"
   appcast 'https://www.dropbox.com/s/vi51g5jig3etaum/Ukelele_appcast.xml?dl=1'
   name 'Ukelele'
-  homepage 'https://scripts.sil.org/ukelele'
+  homepage 'https://software.sil.org/ukelele/'
 
   app 'Ukelele.app'
 

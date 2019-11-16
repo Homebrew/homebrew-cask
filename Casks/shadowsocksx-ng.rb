@@ -1,14 +1,14 @@
 cask 'shadowsocksx-ng' do
-  version '1.9.2'
-  sha256 'e0cbd1a6f4b70c45d716cc218d8e4125773b32ab31244a940d9144bd40b82b7e'
+  version '1.9.3'
+  sha256 '6c9d99daa154b66ee06091bcbe88173c09e4babae21627f6557a22f51e2b11ee'
 
-  url "https://github.com/shadowsocks/ShadowsocksX-NG/releases/download/v#{version}/ShadowsocksX-NG.app.#{version}.zip"
+  url "https://github.com/shadowsocks/ShadowsocksX-NG/releases/download/v#{version}/ShadowsocksX-NG.#{version}.zip"
   appcast 'https://github.com/shadowsocks/ShadowsocksX-NG/releases.atom'
   name 'ShadowsocksX-NG'
   homepage 'https://github.com/shadowsocks/ShadowsocksX-NG/'
 
   conflicts_with cask: 'shadowsocksx'
-  depends_on macos: '>= :el_capitan'
+  depends_on macos: '>= :sierra'
 
   app 'ShadowsocksX-NG.app'
 
