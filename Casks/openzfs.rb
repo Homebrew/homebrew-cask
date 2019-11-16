@@ -1,6 +1,6 @@
 cask 'openzfs' do
-  version '1.9.3,88'
-  sha256 '926e7c17d9b798dc176d4927083c921a8b7ef32952f90a40d26391c1ecdcb6bd'
+  version '1.9.3.1,64'
+  sha256 '8ba738c90445194dc8c8cdb69af8dce8e54b62a1068c7d3c08ccc37ab6722d5e'
 
   url "https://openzfsonosx.org/w/images/#{version.after_comma[0]}/#{version.after_comma}/OpenZFS_on_OS_X_#{version.before_comma}.dmg"
   name 'OpenZFS on OS X'
@@ -8,13 +8,16 @@ cask 'openzfs' do
 
   # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.
   depends_on macos: [
+                      :el_capitan,
                       :sierra,
                       :high_sierra,
                       :mojave,
                       :catalina,
                     ]
 
-  if MacOS.version == :sierra
+  if MacOS.version == :el_capitan
+    pkg "OpenZFS on OS X #{version.before_comma} El Capitan.pkg"
+  elsif MacOS.version == :sierra
     pkg "OpenZFS on OS X #{version.before_comma} Sierra.pkg"
   elsif MacOS.version == :high_sierra
     pkg "OpenZFS on OS X #{version.before_comma} High Sierra.pkg"
