@@ -7,6 +7,8 @@ cask '4k-slideshow-maker' do
   name '4K Slideshow Maker'
   homepage 'https://www.4kdownload.com/products/product-slideshowmaker'
 
+  depends_on macos: '>= :sierra'
+
   app '4K Slideshow Maker.app'
 
   zap trash: [
