@@ -8,5 +8,7 @@ cask 'darktable' do
   name 'darktable'
   homepage 'https://www.darktable.org/'
 
+  conflicts_with cask: 'darktable-dev'
+
   app 'darktable.app'
 end
