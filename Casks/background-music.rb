@@ -1,6 +1,6 @@
 cask 'background-music' do
-  version '0.3.1'
-  sha256 '070bef360bff9e52639a4fbf23ee7052b9645004a431af6ad62997cfed99e2d7'
+  version '0.3.2'
+  sha256 '0cd7b488b5ab97a1ecb496e484a6c209c29f35ab503e6f73b45e56719a7aba18'
 
   url "https://github.com/kyleneideck/BackgroundMusic/releases/download/v#{version}/BackgroundMusic-#{version}.pkg"
   appcast 'https://github.com/kyleneideck/BackgroundMusic/releases.atom'
