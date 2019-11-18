@@ -7,6 +7,8 @@ cask 'clipgrab' do
   name 'ClipGrab'
   homepage 'https://clipgrab.org/'
 
+  depends_on macos: '>= :sierra'
+
   app 'ClipGrab.app'
 
   zap trash: '~/Library/Preferences/de.clipgrab.ClipGrab.plist'
