@@ -1,6 +1,6 @@
 cask 'touchswitcher' do
-  version '1.3.1,100'
-  sha256 'f7bc7cdf143e0b803c97846bac154fbd20305bc9be3289e43f9604968df839fc'
+  version '1.3.3,122'
+  sha256 '0145227a9e26d7129d200e0fed2aea3855cd6c36248a300adc14741ff504afa7'
 
   url 'https://hazeover.com/touchswitcher/TouchSwitcher.zip'
   appcast 'https://hazeover.com/touchswitcher/updates.xml'
