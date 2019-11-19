@@ -8,5 +8,6 @@ cask 'keyshot' do
 
   pkg "keyshot_mac64_#{version}.pkg"
 
-  uninstall pkgutil: "com.luxion.pkg.keyshot#{version.major}.*"
+  uninstall pkgutil: "com.luxion.pkg.keyshot#{version.major}.*",
+            delete:  "/Applications/KeyShot#{version}.app"
 end
