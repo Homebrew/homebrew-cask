@@ -47,6 +47,8 @@ cask 'vmware-fusion' do
     set_ownership "#{appdir}/VMware Fusion.app"
   end
 
+  uninstall delete: '/etc/paths.d/com.vmware.fusion.public'
+
   zap trash: [
                '/Library/Application Support/VMware',
                '/Library/Logs/VMware Fusion Services.log',
