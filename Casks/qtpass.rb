@@ -1,6 +1,6 @@
 cask 'qtpass' do
-  version '1.3.1'
-  sha256 '7408e237191bf9291d4252f9f8e26b29d7607aaccb0a94b149ae3d70a27782f4'
+  version '1.3.2'
+  sha256 '04a091602bfd8da1b19e95fcf9cd48df6a544a44a4a1e97cccfb950df90512ef'
 
   # github.com/IJHack/qtpass was verified as official when first introduced to the cask
   url "https://github.com/IJHack/qtpass/releases/download/v#{version}/qtpass-#{version}.dmg"

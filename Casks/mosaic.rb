@@ -1,6 +1,6 @@
 cask 'mosaic' do
-  version '1.2.4'
-  sha256 '105b2628a85cf67632c445a1280181d7ff7793c6df3c4e89b7c8b7ffc06f43ad'
+  version '1.2.6'
+  sha256 '3b03b8329f1ff75499662a708e43536cafddd7ef51bff417f865b0f0f71e2326'
 
   url "https://lightpillar.com/appdata/mosaic/archive/Mosaic_#{version.dots_to_underscores}.pkg"
   appcast 'https://lightpillar.com/appdata/mosaic/features/version-history.html'

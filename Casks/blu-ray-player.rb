@@ -1,6 +1,6 @@
 cask 'blu-ray-player' do
-  version '3.3.18,190918'
-  sha256 'd1ab2f2b57fa3b3ce4bde9cc3b241a3c5c48af593f1a97959a509eb9d4ef284f'
+  version '3.3.19,191021'
+  sha256 '728a1fec8d6a5ed1159e6bba8f81cc5c24f66a0c16ccccce8440fb3e886d5b9c'
 
   url 'https://www.macblurayplayer.com/user/download/Mac_Bluray_Player.dmg'
   appcast "https://cdn.macblurayplayer.com/mac-bluray-player-#{version.major}/appcast/Appcast.xml"

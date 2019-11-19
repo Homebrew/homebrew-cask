@@ -1,6 +1,6 @@
 cask 'gimp' do
-  version '2.10.12'
-  sha256 '8b964ad3dbbe31d0fa48fb834aa4c17fc0eb81becbc4595a57b04e3d4fc6efeb'
+  version '2.10.14'
+  sha256 '60631e39a1042c38cc281bc3213a76be109fb909b9671fb03c55cf5cf31ea632'
 
   url "https://download.gimp.org/pub/gimp/v#{version.major_minor}/osx/gimp-#{version}-x86_64.dmg"
   appcast 'https://download.gimp.org/pub/gimp/stable/osx/'

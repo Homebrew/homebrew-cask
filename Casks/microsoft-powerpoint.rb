@@ -1,6 +1,6 @@
 cask 'microsoft-powerpoint' do
-  version '16.28.19081202'
-  sha256 '7c8de3782f0814dcb08d0eac381e6fe70660b416027d9f76c53be0e4dddc8418'
+  version '16.31.19111002'
+  sha256 '2537157f3b6d12ec64bbefbf583807189e7464e7744177a43309f8051a84ccac'
 
   # officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate was verified as official when first introduced to the cask
   url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_PowerPoint_#{version}_Installer.pkg"

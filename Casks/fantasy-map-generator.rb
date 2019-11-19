@@ -1,6 +1,6 @@
 cask 'fantasy-map-generator' do
-  version '1.0'
-  sha256 'e15c3d3418c48081c3fe42fe86304c6ad29f9a80980d3fcf7797a7a8b13edbca'
+  version '1.1'
+  sha256 '5332121f1e7ea47d72ca4f452401f5218708cb8d022f4c4613abbad573260815'
 
   # github.com/Azgaar/Fantasy-Map-Generator was verified as official when first introduced to the cask
   url "https://github.com/Azgaar/Fantasy-Map-Generator/releases/download/v#{version}/FMG-darwin-x64.zip"

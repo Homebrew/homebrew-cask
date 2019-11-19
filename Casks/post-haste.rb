@@ -1,6 +1,6 @@
 cask 'post-haste' do
-  version '2.6.4,2640'
-  sha256 '94e4edd41e0ead7f06150bbd3ad257b562289146e89d33bfda1341b0c67768bf'
+  version '2.6.5,2650'
+  sha256 'd2c361add1422b6dda029a329b43fabe68ef3a2786d173644abfdce5ad7d1ccf'
 
   url "https://www.digitalrebellion.com/download/posthaste?version=#{version.after_comma}"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.digitalrebellion.com/download/posthaste',

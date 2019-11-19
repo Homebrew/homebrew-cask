@@ -3,8 +3,8 @@ cask 'couchbase-server-enterprise' do
     version '4.5.1'
     sha256 'de014c7c134eb97ff00be6b2e6f5d0da84295ce05bbb7bb3a4d3c747a365cd22'
   else
-    version '6.0.1'
-    sha256 '80f47b4fa43ef7b9a5866e5d8a36d895cd8bc4dc942dfe0c0a4f33819966180a'
+    version '6.0.2'
+    sha256 'e1d9e39a36aa7f0fb5743b24f7e67e45211a2d739108024f6442029f9a2632de'
   end
 
   url "https://packages.couchbase.com/releases/#{version}/couchbase-server-enterprise_#{version}-macos_x86_64.zip"

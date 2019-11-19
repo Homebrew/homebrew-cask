@@ -1,6 +1,6 @@
 cask 'barrier' do
-  version '2.3.1'
-  sha256 'e8238c109293c8a33fed8604725bd5c0275c24adbc223d1f4c01663cd2d9b45f'
+  version '2.3.2'
+  sha256 'b5ebc59c4152f827a0551f265c026d3d78d7bc0d2d8ad1bd9ad0961d1815a2d0'
 
   url "https://github.com/debauchee/barrier/releases/download/v#{version}/Barrier-#{version}-Release.dmg"
   appcast 'https://github.com/debauchee/barrier/releases.atom'

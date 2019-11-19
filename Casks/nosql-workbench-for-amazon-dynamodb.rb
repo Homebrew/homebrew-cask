@@ -1,6 +1,6 @@
 cask 'nosql-workbench-for-amazon-dynamodb' do
-  version '0.2.0'
-  sha256 'a3300b4ac00f4f82ff0ea0114f3280c50eaa2e22aee602162c87989d605251b8'
+  version '0.3.0'
+  sha256 '8cf0d7eac9d73a1f5c761dcfe22e617cc384c5d27a49c80d0258070d548201fe'
 
   # nosql-workbench-for-amazon-dynamodb.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://nosql-workbench-for-amazon-dynamodb.s3.amazonaws.com/NoSQL+Workbench+for+Amazon+DynamoDB+(Preview)-mac-#{version}.dmg"

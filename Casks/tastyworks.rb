@@ -1,8 +1,8 @@
 cask 'tastyworks' do
-  version '0.41.0'
-  sha256 '953862888ee31ed993d6e8cad8b12a817de30c94b82c0324c8cae58d1b938920'
+  version '1.0.16'
+  sha256 'd2c16129f6031da04c2402dee449ddeaa64ae3766df22fd50e7917314c8d61f7'
 
-  url "https://download.tastyworks.com/desktop/#{version}/tastyworks-#{version}.dmg"
+  url "https://download.tastyworks.com/desktop-#{version.major}.x.x/#{version}/tastyworks-#{version}.dmg"
   appcast 'https://tastyworks.com/technology.html'
   name 'tastyworks'
   homepage 'https://tastyworks.com/'

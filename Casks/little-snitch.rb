@@ -1,6 +1,6 @@
 cask 'little-snitch' do
-  version '4.4.2'
-  sha256 '6899b3aedc377c7d8a39eedce31341b2324d46fe78d0bd7eda23bd2ee9d61131'
+  version '4.4.3'
+  sha256 'f211af79ce09c7becbed19d3dbff35283e7b3e326225598724af2c67c6a9bf59'
 
   url "https://www.obdev.at/downloads/littlesnitch/LittleSnitch-#{version}.dmg"
   appcast 'https://www.obdev.at/products/littlesnitch/releasenotes.html'

@@ -1,6 +1,6 @@
 cask 'macx-dvd-ripper-pro' do
-  version '6.2.4,20190924'
-  sha256 '40a681f4aac4eb271ba2875ab07b16b66bf8b30d05890755560eef21dcf92744'
+  version '6.5.0,20191023'
+  sha256 '77b68a26e2a8ff6eb9c1792f12c4748a294bbec36a5d6721089358ced39f82f7'
 
   url 'https://www.macxdvd.com/download/macx-dvd-ripper-pro.dmg'
   appcast 'https://www.macxdvd.com/mac-dvd-ripper-pro/upgrade/macx-dvd-ripper-pro'

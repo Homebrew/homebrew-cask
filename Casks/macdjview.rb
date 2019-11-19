@@ -8,5 +8,7 @@ cask 'macdjview' do
   name 'MacDjView'
   homepage 'https://windjview.sourceforge.io/'
 
+  depends_on macos: '<= :mojave'
+
   app 'MacDjView.app'
 end

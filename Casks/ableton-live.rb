@@ -1,14 +1,24 @@
 cask 'ableton-live' do
-  version '10.1.1'
-  sha256 'bd3330b0872de294bf92bd852a02f2f66340b5419a7ef2e343bdeed2cf517534'
+  version '10.1.4'
+  sha256 'bedd8171a8d71a1d84c7ebcda797d06dbdf49447b46c49f7873c4b38fd035b3d'
 
   url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_trial_#{version}_64.dmg"
   appcast "https://www.ableton.com/en/release-notes/live-#{version.major}/"
   name 'Ableton Live'
   homepage 'https://www.ableton.com/en/live/'
 
+  depends_on macos: '>= :el_capitan'
+
   app "Ableton Live #{version.major} Trial.app"
 
-  zap trash: '~/Library/*/*[Aa]bleton*',
-      rmdir: '~/Music/Ableton/Factory Packs'
+  uninstall quit: 'com.ableton.live'
+
+  zap trash: [
+               '~/Library/Application Support/CrashReporter/Ableton *_*.plist',
+               '~/Library/Application Support/Ableton',
+               '~/Library/Caches/Ableton',
+               '~/Library/Preferences/Ableton',
+               '~/Library/Preferences/com.ableton.live.plist*',
+               '~/Music/Ableton',
+             ]
 end

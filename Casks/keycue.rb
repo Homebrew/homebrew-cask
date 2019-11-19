@@ -1,10 +1,11 @@
 cask 'keycue' do
-  version '9.4'
-  sha256 '5a1c867a668fd736142d78c8d127d7107c3f1f7a7e604d91ba0a09c679e0f873'
+  version '9.5'
+  sha256 '0d3f38a2ce0327b8adbdcc9e6877dda536fab7b5e8d620a52b4c672758aea8d9'
 
   url "https://www.ergonis.com/downloads/products/keycue/KeyCue#{version.no_dots}-Install.dmg",
       user_agent: :fake
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.ergonis.com/downloads/keycue-install.dmg'
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.ergonis.com/downloads/keycue-install.dmg',
+          configuration: version.no_dots
   name 'KeyCue'
   homepage 'https://www.ergonis.com/products/keycue/'
 

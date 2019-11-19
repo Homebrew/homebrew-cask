@@ -1,6 +1,6 @@
 cask 'papyrus' do
-  version '4.4.0,2019-06'
-  sha256 '1aee92356a57ecf738a3e801ea306a945a111d4e76bca3234d0bc0f7ae63b93f'
+  version '4.5.0,2019-09'
+  sha256 '8fb94209c2bed5a0978cd77cdd8e0870dc343c38575f600fa5762b39a0fea2ab'
 
   url "https://www.eclipse.org/downloads/download.php?file=/modeling/mdt/papyrus/rcp/#{version.after_comma}/#{version.before_comma}/papyrus-#{version.after_comma}-#{version.before_comma}-macosx64.tar.gz&r=1"
   appcast 'https://mirrors.dotsrc.org/eclipse//modeling/mdt/papyrus/rcp/',

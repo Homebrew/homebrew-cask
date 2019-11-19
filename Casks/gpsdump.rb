@@ -1,6 +1,6 @@
 cask 'gpsdump' do
-  version '0.53'
-  sha256 '16b63a1c3fe8c0150c55eb8503056362d28c39cbc5c968a5acce9ca39ce77dad'
+  version '0.54'
+  sha256 '4959fddc3b4b0fa775a90050d795f898e2e9ae3335759c4307c9dcef3c57c065'
 
   url "http://www.gpsdump.no/GpsDumpMac#{version.no_dots}.zip"
   appcast 'http://www.gpsdump.no/body_mac.htm'

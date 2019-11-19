@@ -1,6 +1,6 @@
 cask 'qr-journal' do
-  version '1.7.1'
-  sha256 'a6b83e99dceddaf5f8183abbcaa56fe93755f74f21457eea878cd3e68ac9144e'
+  version '2.0'
+  sha256 'af8bcebf795de65955b3cbee1bd4f9568343e982461cd16ae827808b8f7e50ac'
 
   url "https://www.joshjacob.com/mac-development/QRJournal#{version}.dmg"
   appcast 'https://www.joshjacob.com/mac-development/qrjournal.php'

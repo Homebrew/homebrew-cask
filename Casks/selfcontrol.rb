@@ -1,6 +1,6 @@
 cask 'selfcontrol' do
-  version '2.2.2'
-  sha256 '2cf92f8f142d630ed8cf77308599fa00fd610ec9fbafafcea27773974afdd4e1'
+  version '2.3'
+  sha256 '10f55e3bbe21444760227699f1467ea4653f61791dfba7f4b3e92bf76bf87e18'
 
   url "https://downloads.selfcontrolapp.com/SelfControl-#{version}.zip"
   appcast 'https://selfcontrolapp.com/SelfControlAppcast.xml'

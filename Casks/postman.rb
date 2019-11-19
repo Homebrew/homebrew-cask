@@ -1,6 +1,6 @@
 cask 'postman' do
-  version '7.8.0'
-  sha256 '1bd4eee94fdbd0f95e2fa523b7359675799bc65583151f4c68ce9edb004f69a8'
+  version '7.11.0'
+  sha256 '5ed56e27195eaa268ee3cad958611dc9471dafd69562bede0e47d26945a4981a'
 
   # dl.pstmn.io/download/version was verified as official when first introduced to the cask
   url "https://dl.pstmn.io/download/version/#{version}/osx64"
