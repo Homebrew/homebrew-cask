@@ -7,6 +7,8 @@ cask 'publish-or-perish' do
   name 'Harzing Publish or Perish'
   homepage 'https://harzing.com/resources/publish-or-perish'
 
+  depends_on macos: '>= :high_sierra'
+
   pkg 'PoP7Mac.pkg'
 
   uninstall pkgutil: 'com.tarma.popmac.pkg'
