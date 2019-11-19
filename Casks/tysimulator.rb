@@ -8,6 +8,8 @@ cask 'tysimulator' do
   name 'TySimulator'
   homepage 'https://tysimulator.com/'
 
+  depends_on macos: '>= :sierra'
+
   app 'TySimulator.app'
 
   uninstall quit: 'com.tianyiyan.TySimulator'
