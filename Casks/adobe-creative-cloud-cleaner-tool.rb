@@ -8,5 +8,11 @@ cask 'adobe-creative-cloud-cleaner-tool' do
 
   app 'Adobe Creative Cloud Cleaner Tool.app'
 
-  uninstall delete: '~/Library/Caches/com.Adobe.Installers.AdobeCreativeCloudCleanerTool'
+  uninstall quit: 'com.Adobe.Installers.AdobeCreativeCloudCleanerTool'
+
+  zap trash: [
+               '~/Library/Caches/com.Adobe.Installers.AdobeCreativeCloudCleanerTool',
+               '~/Library/Saved Application State/com.Adobe.Installers.AdobeCreativeCloudCleanerTool.savedState',
+               '~/Library/Logs/Adobe Creative Cloud Cleaner Tool.log',
+             ]
 end
