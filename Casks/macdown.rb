@@ -1,6 +1,6 @@
 cask 'macdown' do
   version '0.7.2'
-  sha256 '96c35679925735b2baa39dd0a0dfac277a07d736d55a0a9b79c814ba3a7b9e14'
+  sha256 'bd6ccc7c4e87fcdfa0cf4e3580f46bb47d32f61c6e9ab51025677604dcd75635'
 
   # github.com/MacDownApp/macdown was verified as official when first introduced to the cask
   url "https://github.com/MacDownApp/macdown/releases/download/v#{version}/MacDown.app.zip"
