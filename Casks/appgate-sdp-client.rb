@@ -1,6 +1,6 @@
 cask 'appgate-sdp-client' do
-  version '5.0.0'
-  sha256 '43fd366d70024e1455d221ee9eb822cd79cd74dcfa6154557862a163781fd94a'
+  version '5.0.1'
+  sha256 'c00c7d19f8d70bf340b0e74c1a03ffda625f2bbd9d8994003c4fd67ffc2161f8'
 
   # sdpdownloads.cyxtera.com was verified as official when first introduced to the cask
   url "https://sdpdownloads.cyxtera.com/AppGate-SDP-#{version.major_minor}/clients/AppGate-SDP-#{version}-Installer.dmg"
