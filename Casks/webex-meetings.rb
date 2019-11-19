@@ -21,15 +21,9 @@ cask 'webex-meetings' do
                          '~/Library/Application Support/WebEx Folder/T33_64UMC*/Meeting Center.app',
                          '~/Library/Application Support/WebEx Folder/T33_64UMC*/WebexAppLauncher.app',
                        ],
-            launchctl: [
-                         'com.webex.pluginagent',
-                       ],
-            pkgutil:   [
-                         'mc.mac.webex.com',
-                       ],
-            rmdir:     [
-                         '~/Library/Application Support/WebEx Folder/T33_64UMC*',
-                       ]
+            launchctl: 'com.webex.pluginagent',
+            pkgutil:   'mc.mac.webex.com',
+            rmdir:     '~/Library/Application Support/WebEx Folder/T33_64UMC*'
 
   zap trash: [
                '~/Library/Application Support/WebEx Folder',
