@@ -1,6 +1,6 @@
 cask 'racket-cs' do
-  version '7.4'
-  sha256 'f1f247d4698dcd8ee2f4562325602fadc575851638081b754b1c54e06a4931e9'
+  version '7.5'
+  sha256 'a39ea2144e515386e8639538839e156bb0207b748af704706a4e11447d4906e4'
 
   url "https://mirror.racket-lang.org/installers/#{version}/racket-#{version}-x86_64-macosx-cs.dmg"
   appcast 'https://download.racket-lang.org/all-versions.html'
