@@ -1,6 +1,6 @@
 cask 'timely' do
-  version '1.0.4'
-  sha256 'e1226186c422de52c45e312479761480fed3c0e26323462785f4ec71caba4147'
+  version '1.0.5'
+  sha256 'b8148d6a7efc466c5b505e7e58db38387eb06af70f84a1939ae6edc4e72b6055'
 
   # github.com/Timely was verified as official when first introduced to the cask
   url "https://github.com/Timely/desktop-releases/releases/download/darwin-x64-prod-v#{version}/Timely-#{version}.dmg"
