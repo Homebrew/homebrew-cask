@@ -6,6 +6,8 @@ cask 'keyshot' do
   name 'KeyShot'
   homepage 'https://www.keyshot.com/'
 
+  depends_on macos: '>= :sierra'
+
   pkg "keyshot_mac64_#{version}.pkg"
 
   uninstall pkgutil: "com.luxion.pkg.keyshot#{version.major}.*",
