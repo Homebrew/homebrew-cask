@@ -7,7 +7,7 @@ cask 'touchswitcher' do
   name 'TouchSwitcher'
   homepage 'https://hazeover.com/touchswitcher.html'
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :high_sierra'
 
   app 'TouchSwitcher.app'
 end
