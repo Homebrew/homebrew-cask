@@ -7,5 +7,5 @@ cask 'hotswitch' do
   name 'HotSwitch'
   homepage 'https://oniatsu.github.io/HotSwitch/'
 
-  app "HotSwitch #{version.after_comma.before_comma} #{version.after_comma.after_comma}/HotSwitch.app"
+  app "HotSwitch.app"
 end
