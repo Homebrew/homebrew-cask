@@ -1,6 +1,6 @@
 cask 'thumbsup' do
-  version '4.5.2'
-  sha256 '1472e9e0f1b0e2ab6d4569f6ff4f90441de05f26cc8d0f7863df1238f5515e17'
+  version '4.5.3'
+  sha256 '05e1bbefd09e098eeb7faec29ea7556f76cf17b49be719af93e443d993beeb8c'
 
   # s3.amazonaws.com/DTWebsiteSupport was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/freeware/thumbsup/#{version}/ThumbsUp.app.zip"
