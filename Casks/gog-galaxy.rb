@@ -1,6 +1,6 @@
 cask 'gog-galaxy' do
-  version '1.2.59.19'
-  sha256 'd5e896644b31fa10ce6085a23499b97b8871a33ee9d69feeef50b24f9310f337'
+  version '2.0.9.137'
+  sha256 'f18c8a7483d7164bea3cd6de17f0ffa94408451eaa1bc2b8d1a67e3803d34402'
 
   url "https://cdn.gog.com/open/galaxy/client/galaxy_client_#{version}.pkg"
   appcast 'https://www.gog.com/galaxy'
