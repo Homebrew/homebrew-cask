@@ -15,6 +15,7 @@ cask 'ableton-live-lite' do
 
   zap trash: [
                '~/Library/Application Support/CrashReporter/Ableton *_*.plist',
+               '~/Library/Application Support/CrashReporter/Live_*.plist',
                '~/Library/Application Support/Ableton',
                '~/Library/Caches/Ableton',
                '~/Library/Preferences/Ableton',
