@@ -1,6 +1,6 @@
 cask 'swiftstack-client' do
-  version '1.21.13'
-  sha256 '5532ffb0b0e0c13e9d9864a1e3ee6cd0d5a63debc3065f0e0c401d8712ade695'
+  version '1.23.7'
+  sha256 '0eb8d3f0e9bf27c7b3f77bc0a0cf085a399d413e0032f3abbd668338d7e7bbec'
 
   # storage.googleapis.com/swiftstack was verified as official when first introduced to the cask
   url "https://storage.googleapis.com/swiftstack/swiftstackclient-#{version}.dmg"
