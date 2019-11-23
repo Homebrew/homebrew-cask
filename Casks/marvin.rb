@@ -1,6 +1,6 @@
 cask 'marvin' do
-  version '1.48.1'
-  sha256 '4321c51bae3244144196dbc2486a9b7e0c59cc1cdbef36af95d0d7e0eb537089'
+  version '1.49.0'
+  sha256 '90e75c8b396fccd9f1de7aa056a0c3c2db7c33424f87055be7a00c58f5c4d659'
 
   # amazingmarvin.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://amazingmarvin.s3.amazonaws.com/Marvin-#{version}.dmg"
