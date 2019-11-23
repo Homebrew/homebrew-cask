@@ -13,5 +13,18 @@ cask 'duet' do
 
   app 'duet.app'
 
-  uninstall kext: 'com.karios.driver.DuetDisplay'
+  uninstall quit: 'com.kairos.duetMac',
+            kext: 'com.karios.driver.DuetDisplay'
+
+  zap trash: [
+               '~/Library/Preferences/com.kairos.duet*.plist',
+               '~/Library/Application Support/com.kairos.duet*',
+               '~/Library/Caches/com.crashlytics.data/com.kairos.duet*',
+               '~/Library/Caches/io.fabric.sdk.mac.data/com.kairos.duet*',
+               '~/Library/Caches/com.kairos.duet*',
+             ],
+      rmdir: [
+               '~/Library/Caches/com.crashlytics.data',
+               '~/Library/Caches/io.fabric.sdk.mac.data',
+             ]
 end
