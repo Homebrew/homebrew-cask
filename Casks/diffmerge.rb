@@ -8,7 +8,7 @@ cask 'diffmerge' do
 
   app 'DiffMerge.app'
   binary 'Extras/diffmerge.sh', target: 'diffmerge'
-  artifact 'Extras/diffmerge.1', target: "#{HOMEBREW_PREFIX}/share/man/man1/diffmerge.1"
+  manpage 'Extras/diffmerge.1'
 
   zap trash: [
                '~/Library/Preferences/com.sourcegear.DiffMerge.plist',
