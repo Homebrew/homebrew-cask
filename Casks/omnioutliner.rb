@@ -5,8 +5,8 @@ cask 'omnioutliner' do
 
     url "https://downloads.omnigroup.com/software/MacOSX/10.13/OmniOutliner-#{version}.dmg"
   else
-    version '5.5'
-    sha256 '19a552e1a8f92cbb598044c27dd358bd51e77aebf8fdbd3b9a7ece3690a2d89f'
+    version '5.5.1'
+    sha256 '93f569e0885bf5fb96fadfd8752d3eb184524d8c031caacfd2b8a8c9da1e38bc'
 
     url "https://downloads.omnigroup.com/software/MacOSX/10.14/OmniOutliner-#{version}.dmg"
   end
