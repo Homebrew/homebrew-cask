@@ -1,6 +1,6 @@
 cask 'swish' do
-  version '1.2'
-  sha256 '655957cea144b81dd72a069596effab0ed840c469c1dd4359b7cf6d5fc282cd6'
+  version '1.2.1'
+  sha256 '1d55c031ca3356b2486d703b15991a9a3bbc5c37877cc9124afda35050279c55'
 
   url "https://highlyopinionated.co/swish/Swish-#{version}.zip"
   appcast 'https://highlyopinionated.co/swish/appcast.xml'
