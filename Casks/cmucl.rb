@@ -9,9 +9,9 @@ cask 'cmucl' do
   homepage 'https://www.cons.org/cmucl/'
 
   binary 'bin/lisp'
+  manpage 'man/man1/cmucl.1'
+  manpage 'man/man1/lisp.1'
   artifact 'lib/cmucl', target: "#{HOMEBREW_PREFIX}/lib/cmucl"
-  artifact 'man/man1/cmucl.1', target: "#{HOMEBREW_PREFIX}/share/man/man1/cmucl.1"
-  artifact 'man/man1/lisp.1', target: "#{HOMEBREW_PREFIX}/share/man/man1/lisp.1"
 
   caveats <<~EOS
     Instructions on using cmucl are available in
