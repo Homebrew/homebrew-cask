@@ -11,7 +11,7 @@ cask 'diskmaker-x' do
     app "DiskMaker X #{version.major} for macOS Catalina.app"
   end
 
-  url "https://diskmakerx.com/downloads/DiskMaker_X_#{version.no_dots}.dmg"
+  url "https://diskmakerx.com/downloads/DiskMaker_X_#{version.major}.dmg"
   appcast 'https://diskmakerx.com/feed/'
   name 'DiskMaker X'
   homepage 'https://diskmakerx.com/'
