@@ -8,7 +8,7 @@ cask 'emby-server' do
   name 'Emby Server'
   homepage 'https://emby.media/'
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :high_sierra'
 
   app 'EmbyServer.app'
 
