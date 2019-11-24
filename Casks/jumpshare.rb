@@ -7,6 +7,8 @@ cask 'jumpshare' do
   name 'Jumpshare'
   homepage 'https://jumpshare.com/'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'Jumpshare.app'
 
   zap trash: [
