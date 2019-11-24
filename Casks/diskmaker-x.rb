@@ -5,7 +5,7 @@ cask 'diskmaker-x' do
 
     app "DiskMaker X #{version.major} for macOS Mojave.app"
   else
-    version '9'
+    version '9.0'
     sha256 '96845cd375543401b822fb4e17d2ecc300fcb621f56afcdad613ae11c9afddce'
 
     app "DiskMaker X #{version.major} for macOS Catalina.app"
