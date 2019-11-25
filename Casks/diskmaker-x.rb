@@ -12,7 +12,8 @@ cask 'diskmaker-x' do
   end
 
   url "https://diskmakerx.com/downloads/DiskMaker_X_#{version.major}.dmg"
-  appcast 'https://diskmakerx.com/feed/'
+  appcast 'https://diskmakerx.com/feed/',
+          configuration: version.major
   name 'DiskMaker X'
   homepage 'https://diskmakerx.com/'
 end
