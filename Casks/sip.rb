@@ -12,6 +12,7 @@ cask 'sip' do
   name 'Sip'
   homepage 'https://sipapp.io/'
 
+  auto_updates true
   depends_on macos: '>= :sierra'
 
   app 'Sip.app'
