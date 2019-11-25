@@ -1,5 +1,5 @@
 cask 'smooze' do
-  version '1.8.5'
+  version '1.8.6'
   sha256 'cdeb8b4559b74bb7a51fd13e46eeecfdef99d386e1b32581f5053ab7a49eb179'
 
   url 'https://smooze.co/updates/Smooze.dmg'
