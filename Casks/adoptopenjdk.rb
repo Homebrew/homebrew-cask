@@ -11,7 +11,7 @@ cask 'adoptopenjdk' do
   pkg 'OpenJDK13U-jdk_x64_mac_hotspot_13.0.1_9.pkg'
 
   uninstall pkgutil: "net.adoptopenjdk.#{version.major}.jdk"
-  
+
   caveats <<~EOS
     More versions are available in the AdoptOpenJDK tap:
       #{Formatter.url('https://github.com/AdoptOpenJDK/homebrew-openjdk')}
