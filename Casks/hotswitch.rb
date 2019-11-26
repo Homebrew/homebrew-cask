@@ -7,5 +7,5 @@ cask 'hotswitch' do
   name 'HotSwitch'
   homepage 'https://oniatsu.github.io/HotSwitch/'
 
-  app 'HotSwitch.app'
+  app 'Users/ao/Downloads/HotSwitch 2019-11-22 08-52-20/HotSwitch.app'
 end
