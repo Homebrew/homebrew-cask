@@ -1,6 +1,6 @@
 cask 'musescore' do
-  version '3.3.2'
-  sha256 '08aaff04f5a0c9d99ece9ae378e4e848f22c07980d1dc1e79ea368dc33de607d'
+  version '3.3.3'
+  sha256 '03afb662b931c85d87af82e1931cac19d2878328707484693c9abd3392f8509f'
 
   # github.com/musescore/MuseScore was verified as official when first introduced to the cask
   url "https://github.com/musescore/MuseScore/releases/download/v#{version}/MuseScore-#{version}.dmg"
