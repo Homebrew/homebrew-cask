@@ -4,8 +4,8 @@ cask 'tinderbox' do
     sha256 '765a6245d25f9c2185802f36caa1f620f276637b884260fffa74bf639670e211'
     app 'TinderboxSix.app'
   else
-    version '8.1.1'
-    sha256 '8048b496a55a4b54a6b42cd132d8998a98f6fbee7cb86906b0c903513eb40b8f'
+    version '8.2.1'
+    sha256 '0ff00493d0e8058e7a0cb78ab446c63dcfef13bddc7d92162c70341560158edd'
     app "Tinderbox #{version.major}.app"
   end
 
