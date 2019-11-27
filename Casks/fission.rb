@@ -1,6 +1,6 @@
 cask 'fission' do
-  version '2.4.6'
-  sha256 'b14384e4c322849d2078e18aac32dca05ac1b9844806ae6e90c3fb3fcff1868f'
+  version '2.5.0'
+  sha256 '5ca54aac7248592dbcf63f743bfe271bdb6b83cf5ea3e786e94bc17aa6a2991a'
 
   url 'https://rogueamoeba.com/fission/download/Fission.zip'
   appcast 'https://rogueamoeba.com/fission/releasenotes.php'

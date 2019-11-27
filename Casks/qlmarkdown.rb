@@ -1,6 +1,6 @@
 cask 'qlmarkdown' do
-  version '1.3.5'
-  sha256 'a290edf5b6124cbd4e526217e0979a9011c8ef3b964a33458f5063d51a9b15f2'
+  version '1.3.6'
+  sha256 '810853c000dd5c3e18978070abb7f595ad52ddfa568fccb428d28b513d1810ab'
 
   url "https://github.com/toland/qlmarkdown/releases/download/v#{version}/QLMarkdown.qlgenerator.zip"
   appcast 'https://github.com/toland/qlmarkdown/releases.atom'

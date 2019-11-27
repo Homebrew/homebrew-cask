@@ -1,8 +1,8 @@
 cask 'kext-updater' do
-  version '3.1.8'
-  sha256 'b79bc7847b30e06326be6f3f3658b1ebf85d5f0e75513504bc6827faae370a1d'
+  version '3.2.4'
+  sha256 '371f09aca6c0283a40e569cce794e51f70e7beda6b71be6ee99f4bf4de177cb1'
 
-  url 'https://update.kextupdater.de/kextupdater/Kext%20Updater.zip'
+  url 'https://update.kextupdater.de/kextupdater/kextupdaterng.zip'
   appcast 'https://update.kextupdater.de/kextupdater/appcastng.xml'
   name 'Kext Updater'
   homepage 'https://kextupdater.de/'

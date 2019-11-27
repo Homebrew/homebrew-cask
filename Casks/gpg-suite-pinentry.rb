@@ -1,6 +1,6 @@
 cask 'gpg-suite-pinentry' do
-  version '2019.1'
-  sha256 'f85e15cfb01543ad6e09dd46e921c248dba10d2dbafa1449c234979ef5a3728f'
+  version '2019.2'
+  sha256 '98e26e3dc2fadc3563ef1add6bc2cdaefa986462aeae256a20e894e16118a179'
 
   url "https://releases.gpgtools.org/GPG_Suite-#{version}.dmg"
   appcast 'https://gpgtools.org/releases/gka/appcast.xml'

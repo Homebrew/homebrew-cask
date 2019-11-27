@@ -1,6 +1,6 @@
 cask 'googleappengine' do
-  version '1.9.86'
-  sha256 '2e673098fb2a7b3f810ff904dd13905e8a4720e956c7558c10af2c96e334aeea'
+  version '1.9.87'
+  sha256 '68b3e5524bf5f20adccb066f30a45496407883cd82b7196cb720822c65a82e65'
 
   # storage.googleapis.com/appengine-sdks was verified as official when first introduced to the cask
   url "https://storage.googleapis.com/appengine-sdks/featured/GoogleAppEngineLauncher-#{version}.dmg"

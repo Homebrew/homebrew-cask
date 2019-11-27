@@ -1,6 +1,6 @@
 cask 'loginputmac' do
-  version '2.2.6'
-  sha256 '00ac53e50b7a3b61da02ca8b8f741d8a7fecc3f86490ef426eb5a06fed3f4b7f'
+  version '2.2.7'
+  sha256 '47e8b37bc01bba06db5695301f21e001d07fcd0297e0f452abc0492f73d6e5f3'
 
   # loginput-mac2.content-delivery.top was verified as official when first introduced to the cask
   url "https://loginput-mac2.content-delivery.top/loginputmac#{version.major}_latest.pkg"

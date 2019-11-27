@@ -1,6 +1,6 @@
 cask 'fs-uae' do
-  version '3.0.0'
-  sha256 '606ff910ffc6b50a4675ab4cace5a8a152aed1fd334c98bbac3a725bbace9f52'
+  version '3.0.2'
+  sha256 '2879d9bafe2698749877fff4ef1f44de143ee59464df25b2ac63d33d2a300af6'
 
   url "https://fs-uae.net/stable/#{version}/FS-UAE-Suite_#{version}_macOS_x86-64.dmg"
   appcast 'https://fs-uae.net/stable/latest-macosx'

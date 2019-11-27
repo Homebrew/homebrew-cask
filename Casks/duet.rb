@@ -1,6 +1,6 @@
 cask 'duet' do
-  version '2.1.0.8'
-  sha256 '7193d0753f03993f8c7250e4c868aea9c7f54265514aae864a5798b1f07588ae'
+  version '2.3.0.3'
+  sha256 'ca2aab668a40ec77deb2a0f6704cb42bac3f23ea0ce785460e9f529f78b4515b'
 
   # duet.nyc3.cdn.digitaloceanspaces.com/Mac was verified as official when first introduced to the cask
   url "https://duet.nyc3.cdn.digitaloceanspaces.com/Mac/#{version.major_minor.dots_to_underscores}/duet-#{version.dots_to_hyphens}.zip"
@@ -13,5 +13,18 @@ cask 'duet' do
 
   app 'duet.app'
 
-  uninstall kext: 'com.karios.driver.DuetDisplay'
+  uninstall quit: 'com.kairos.duetMac',
+            kext: 'com.karios.driver.DuetDisplay'
+
+  zap trash: [
+               '~/Library/Preferences/com.kairos.duet*.plist',
+               '~/Library/Application Support/com.kairos.duet*',
+               '~/Library/Caches/com.crashlytics.data/com.kairos.duet*',
+               '~/Library/Caches/io.fabric.sdk.mac.data/com.kairos.duet*',
+               '~/Library/Caches/com.kairos.duet*',
+             ],
+      rmdir: [
+               '~/Library/Caches/com.crashlytics.data',
+               '~/Library/Caches/io.fabric.sdk.mac.data',
+             ]
 end

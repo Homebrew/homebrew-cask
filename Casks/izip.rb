@@ -1,8 +1,8 @@
 cask 'izip' do
-  version '3.5'
-  sha256 '2501c6b9d237864aa5942afd5a67c5f89fbc13dee48b2ccb8cfb164715943327'
+  version '3.6'
+  sha256 '951b631107a532077c99f1bbd1579f6435d3c5715f657068950388af351bd164'
 
-  url "https://www.izip.com/izip_update_#{version.no_dots}.zip"
+  url 'https://www.izip.com/izip.dmg'
   appcast 'https://www.izip.com/updates'
   name 'iZip'
   homepage 'https://www.izip.com/'

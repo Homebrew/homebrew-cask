@@ -13,8 +13,7 @@ cask 'oracle-jdk' do
 
   pkg "JDK #{version.before_comma}.pkg"
 
-  uninstall pkgutil: "com.oracle.jdk-#{version.before_comma}",
-            rmdir:   '/Library/Java/JavaVirtualMachines'
+  uninstall pkgutil: "com.oracle.jdk-#{version.before_comma}"
 
   caveats do
     license 'https://www.oracle.com/technetwork/java/javase/terms/license/javase-license.html'

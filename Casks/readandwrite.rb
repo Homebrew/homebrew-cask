@@ -1,6 +1,6 @@
 cask 'readandwrite' do
-  version '7.1.2'
-  sha256 '87ee079e8464ec443302d1ad900b5249080b2674dbc9fabc72ce97f40b89cb79'
+  version '7.1.3'
+  sha256 '780ef1ad7999893a84b3ce7022ee9094acd773ab93a6490dbc39423477c2666e'
 
   url "https://fastdownloads2.texthelp.com/readwritemac#{version.major}/updates/live/readwrite_#{version}.zip"
   appcast "https://readwrite.texthelp.com/rw#{version.major}mac/updatesp/appcast.xml"

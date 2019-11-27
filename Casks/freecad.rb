@@ -1,6 +1,6 @@
 cask 'freecad' do
-  version '0.19_pre,18524'
-  sha256 'ec1bf8d95bed26809f9aaf491322134067902e2eb56461058060e94120a8d31d'
+  version '0.18.4,16146'
+  sha256 'faaa40a23d7f313f92b148e09208cf7656d09da76b90775010625daabb4d1a77'
 
   # github.com/FreeCAD/FreeCAD was verified as official when first introduced to the cask
   url "https://github.com/FreeCAD/FreeCAD/releases/download/#{version.before_comma}/FreeCAD_#{version.major_minor}-#{version.after_comma}-OSX-x86_64-conda-Qt5-Py3.dmg"

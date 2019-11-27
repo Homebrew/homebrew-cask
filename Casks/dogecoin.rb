@@ -1,6 +1,6 @@
 cask 'dogecoin' do
-  version '1.14.0'
-  sha256 '7804e9aad19b23df74820c9cc718208332c35f2467449802b99c71e1dc3c0e43'
+  version '1.14.2'
+  sha256 'd8cbb26ceeb5e395417ed5e8984fc3b1d8990f8d5866deb837a4d82a17dba62e'
 
   # github.com/dogecoin/dogecoin was verified as official when first introduced to the cask
   url "https://github.com/dogecoin/dogecoin/releases/download/v#{version}/dogecoin-#{version}-osx.dmg"

@@ -1,11 +1,13 @@
 cask 'merlin-project' do
-  version '5.1.13'
-  sha256 '039253c84621115c0e5077c7ce40438f5e79aaacaa614f458bdce432393a5e58'
+  version '6.0.2'
+  sha256 'a76276f374ab6d0d878fde97bc574ad115d0bd75355a02301d2d42643bce6f7d'
 
   url 'https://www.projectwizards.net/downloads/MerlinProject.zip'
   appcast 'https://www.projectwizards.net/en/support/release-notes/merlin-project-pwstore/xml'
   name 'Merlin Project'
   homepage 'https://www.projectwizards.net/en/products/merlin-project/what-is'
+
+  depends_on macos: '>= :sierra'
 
   app "Merlin Project #{version.major}.app"
 end

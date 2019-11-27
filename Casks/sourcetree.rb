@@ -5,9 +5,15 @@ cask 'sourcetree' do
 
     # atlassian.com/software/sourcetree was verified as official when first introduced to the cask
     url "https://downloads.atlassian.com/software/sourcetree/Sourcetree_#{version}.zip"
-  else
+  elsif MacOS.version <= :high_sierra
     version '3.2.1_225'
     sha256 '4bd82affa3402814c3d07ff613fbc8f45da8b0cda294d498ffbb0667bf729c9f'
+
+    # atlassian.com/software/sourcetree was verified as official when first introduced to the cask
+    url "https://product-downloads.atlassian.com/software/sourcetree/ga/Sourcetree_#{version}.zip"
+  else
+    version '4.0_232'
+    sha256 '626e3e88bb4656d26c6faafec442250e9fc221dd0037b0078b8e2776899285f1'
 
     # atlassian.com/software/sourcetree was verified as official when first introduced to the cask
     url "https://product-downloads.atlassian.com/software/sourcetree/ga/Sourcetree_#{version}.zip"

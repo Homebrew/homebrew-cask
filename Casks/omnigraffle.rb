@@ -3,10 +3,14 @@ cask 'omnigraffle' do
     version '7.8.2'
     sha256 'ab463ea6c12d49c4104d3814ac3280d0359072702d4751f5074f644fc79de0c6'
     url "https://downloads.omnigroup.com/software/Archive/MacOSX/10.12/OmniGraffle-#{version}.dmg"
-  else
-    version '7.11.4'
-    sha256 '9896de28b72cd56de89c75294453095ea144262761b9f372acf2e64a1145f56d'
+  elsif MacOS.version <= :high_sierra
+    version '7.11.5'
+    sha256 '83ef24af2dbd7977b9922e992f17f23e102562f0589d28bc37d5579b4a4d4938'
     url "https://downloads.omnigroup.com/software/MacOSX/10.13/OmniGraffle-#{version}.dmg"
+  else
+    version '7.12.1'
+    sha256 '0d56e07244f5bbc7a28e1fa0dec104ddf8d1b05ee45d8ceb1fd31f470a3aa242'
+    url "https://downloads.omnigroup.com/software/MacOSX/10.14/OmniGraffle-#{version}.dmg"
   end
 
   appcast "https://update.omnigroup.com/appcast/com.omnigroup.OmniGraffle#{version.major}"

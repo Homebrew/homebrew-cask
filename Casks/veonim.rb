@@ -1,6 +1,6 @@
 cask 'veonim' do
-  version '0.14.0'
-  sha256 'fc1f8f0e977a11da4e1a735cd381a99067db38bc8675185ed0a2955eb91102c0'
+  version '0.22.0'
+  sha256 'eea52733b7b94ccb2f60f247f51459574173870db49808b9802981734f1e7921'
 
   url "https://github.com/veonim/veonim/releases/download/#{version}/veonim-#{version}-mac.zip"
   appcast 'https://github.com/veonim/veonim/releases.atom'

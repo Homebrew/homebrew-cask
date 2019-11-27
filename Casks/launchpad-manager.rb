@@ -1,16 +1,8 @@
 cask 'launchpad-manager' do
-  if MacOS.version <= :mavericks
-    version '1.3.11'
-    sha256 'f686a9a332663a003e9fabd32a1d44fc98debda15225368f1e8aef181955bc72'
+  version :latest
+  sha256 :no_check
 
-    url 'http://launchpadmanager.com/download.php/LaunchpadManager.dmg'
-  else
-    version '1.0.10'
-    sha256 '88b37120c0ae022309573c4d2587a6ec85df7895773bca0fd3b5ba6cd86461a6'
-
-    url 'http://launchpadmanager.com/download_yosemite.php/LaunchpadManagerYosemite.dmg'
-  end
-
+  url 'http://launchpadmanager.com/download_yosemite.php/LaunchpadManagerYosemite.dmg'
   name 'Launchpad Manager'
   homepage 'http://launchpadmanager.com/'
 

@@ -1,6 +1,6 @@
 cask 'surge-synthesizer' do
-  version '1.6.2.1'
-  sha256 '6f719dcd35e332b90c34e83c619c8dbfab3c62fd7b2e7d89b37c1a02e3873178'
+  version '1.6.4'
+  sha256 '43344a664a309836e62d87e36706c7645dd613bfaacd9563a1f238d2531e2c34'
 
   # github.com/surge-synthesizer/releases was verified as official when first introduced to the cask
   url "https://github.com/surge-synthesizer/releases/releases/download/#{version}/Surge-#{version}-Setup.dmg"

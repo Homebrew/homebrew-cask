@@ -1,6 +1,6 @@
 cask 'crystalmaker' do
-  version '10.4.6'
-  sha256 '303641e20557b1237d94e9246a483bca19a626bd2df7a2e7567407f90f803f7c'
+  version '10.4.7'
+  sha256 '0ab005b3117ce4a2da305b8e136def8aaed934b2c5c09c32291c70f208cf26e1'
 
   url 'http://crystalmaker.com/downloads/crystalmaker_mac.zip'
   appcast "http://crystalmaker.com/crystalmaker/release-notes/mac/#{version.major}/index.html"

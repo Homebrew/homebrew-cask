@@ -1,6 +1,6 @@
 cask 'applepi-baker' do
-  version '2.1.7'
-  sha256 '2fa7398b4791b74d914d3cf44c7dd21feecf3e60a4e35af08459c127543900ab'
+  version '2.2.3'
+  sha256 '5b6c89392a2bae26ad235d647bba7f857e82a34f2e9a4d8d6e33cf4396d94775'
 
   url "https://www.tweaking4all.com/downloads/raspberrypi/ApplePi-Baker-v#{version}.dmg"
   name 'ApplePi-Baker'

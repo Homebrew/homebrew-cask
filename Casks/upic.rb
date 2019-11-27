@@ -1,6 +1,6 @@
 cask 'upic' do
-  version '0.12.3'
-  sha256 '1fdf09ecf5726db1e76b4a6ee4b9be539a94012ef6a67585a38dfcb136a181e9'
+  version '0.14.1'
+  sha256 'f879f5df89dc06e32421106ba68ba207d405c13898538ab55cc5a0b812357803'
 
   url "https://github.com/gee1k/uPic/releases/download/v#{version}/uPic.dmg"
   appcast 'https://github.com/gee1k/uPic/releases.atom'

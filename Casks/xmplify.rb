@@ -1,6 +1,6 @@
 cask 'xmplify' do
-  version '1.9.1'
-  sha256 'd362c997c5baedae5ea3569aae6013300b435b00900cfb825b2ff41bace58a58'
+  version '1.9.2'
+  sha256 '5fad23731bed26d7f8952cf6a4304715d74a181baa05d0ceeb7d56deeb0dbe6e'
 
   url "http://xmplifyapp.com/releases/Xmplify-#{version}.dmg"
   appcast 'http://xmplifyapp.com/appcast.xml'

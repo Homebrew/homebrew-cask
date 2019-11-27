@@ -9,7 +9,6 @@ cask 'osxfuse' do
   homepage 'https://osxfuse.github.io/'
 
   auto_updates true
-  conflicts_with cask: 'osxfuse-dev'
 
   pkg "Extras/FUSE for macOS #{version}.pkg"
 
