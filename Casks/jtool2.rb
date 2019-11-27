@@ -1,4 +1,5 @@
 cask 'jtool2' do
+  # note: "2" is not a version number, but an intrinsic part of the product name
   version '1.0.0.0'
   sha256 :no_check
 
