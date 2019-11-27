@@ -1,14 +1,19 @@
 cask 'readcube' do
-  version '2.1.0'
-  sha256 'cb3e54f08f57051252c70b9b45cb8cc2f001769a3ae25a5f5789abe55269eea4'
+  version '4.0.0'
+  sha256 '8c63a193ced25c92db168e415b3a537efb828c86bd62b7615bc95508d3532801'
 
-  url "https://download.readcube.com/desktop/#{version}/ReadCubeSetup.zip"
-  name 'ReadCube'
-  homepage 'https://www.readcube.com/'
+  url "https://download.readcube.com/app/Install%20Papers.pkg"
+  name 'ReadCube Papers'
+  homepage 'https://www.papersapp.com/'
 
-  installer manual: 'Install ReadCube.app'
+  pkg 'Install Papers.pkg'
 
-  uninstall delete: '/Applications/ReadCube.app'
+  uninstall pkgutil: 'com.papersapp.PapersInstaller'
 
-  zap trash: '~/Library/Preferences/com.readcube.Desktop/'
+  zap trash: [
+               "~/Library/Preferences/com.ReadCube.Papers.plist",
+               "~/Library/Caches/com.ReadCube.Papers.ShipIt",
+               "~/Library/Saved Application State/com.ReadCube.Papers.savedState",
+               "~/Library/Caches/com.ReadCube.Papers",
+             ]
 end
