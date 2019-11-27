@@ -1,6 +1,6 @@
 cask 'flux' do
-  version '39.987'
-  sha256 'eea57d27d059a50bfc74525f78469e11495c6b8e93c5adfefdce1897015359ec'
+  version '40.1'
+  sha256 '1844305519b450cfe3c5475e99f6c06fb2eea51e65c1b0ee25f6671a49fff75d'
 
   url "https://justgetflux.com/mac/Flux#{version}.zip"
   appcast 'https://justgetflux.com/mac/macflux.xml'

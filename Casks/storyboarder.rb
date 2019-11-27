@@ -1,6 +1,6 @@
 cask 'storyboarder' do
-  version '1.15.0'
-  sha256 '34cc6f076a8045c49aac4deec39ddd4b26492f1fcc0cffee992530f2dff4196c'
+  version '1.16.0'
+  sha256 '53e19570c497087485402783a6a5c797f5808a958e805a09652e6c33ae141f7a'
 
   # github.com/wonderunit/storyboarder was verified as official when first introduced to the cask
   url "https://github.com/wonderunit/storyboarder/releases/download/v#{version}/Storyboarder-#{version}.dmg"

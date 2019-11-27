@@ -1,6 +1,6 @@
 cask 'data-science-studio' do
-  version '5.1.5'
-  sha256 '3d5f13c62b2d4d4d6ad1e814a7a7d763427ca4a32644563d1553443cdc2da07d'
+  version '5.1.7'
+  sha256 'c78e0fc92cd5620f5edef41588e5d688d73feb8cf74a4530d6c9a2847187b292'
 
   url "https://downloads.dataiku.com/public/studio/#{version}/Data%20Science%20Studio%20#{version}.dmg"
   appcast 'https://www.dataiku.com/dss/trynow/mac/'

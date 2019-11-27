@@ -1,6 +1,6 @@
 cask 'qiyimedia' do
-  version '20191019,5.14.11-145'
-  sha256 'a8679de37ecd863393bedf363b76cdbf4af727438a8e4ed765bcc50733dfce8b'
+  version '20191121,5.16.11-188'
+  sha256 '4da0e67f7bc1391ee1d0b120da1bce96de1f80c52eaea65947300af69f045bc7'
 
   url 'https://mbdapp.iqiyi.com/j/ot/iQIYIMedia_000.dmg'
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://mbdapp.iqiyi.com/j/ot/iQIYIMedia_000.dmg',

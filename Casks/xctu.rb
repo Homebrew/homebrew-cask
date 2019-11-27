@@ -2,7 +2,7 @@ cask 'xctu' do
   version :latest
   sha256 :no_check
 
-  url 'http://ftp1.digi.com/support/utilities/40003027_W.zip'
+  url 'https://ftp1.digi.com/support/utilities/40003027_W.zip'
   name 'XCTU'
   homepage 'https://www.digi.com/products/embedded-systems/digi-xbee-tools/xctu'
 

@@ -1,6 +1,6 @@
 cask 'rotato' do
-  version '75.1570635202'
-  sha256 '77e29e4176cdadad7d3cf113435529861e56644483091d68330456c7efab11d7'
+  version '76.1573470783'
+  sha256 '05398176f582d513c2f43b6bcda3d0036ae6c7f67c4676bede5afc40e09c6e84'
 
   # dl.devmate.com/com.mortenjust.Rendermock was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.mortenjust.Rendermock/#{version.major}/#{version.minor}/DesignCamera-#{version.major}.zip"

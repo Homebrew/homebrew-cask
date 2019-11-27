@@ -1,6 +1,6 @@
 cask 'gtkwave' do
-  version '3.3.100'
-  sha256 '81458c55f57a27ab39fb7b1b80d576408d3ce8b16a14b5f3618dc4dff3253844'
+  version '3.3.103'
+  sha256 '53156f87b6cb644b9b658c1c8b50a92ec88c27dee0c21a4d427f619bdbe1b835'
 
   # downloads.sourceforge.net/gtkwave was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/gtkwave/gtkwave-#{version}-osx-app/gtkwave.zip"

@@ -1,6 +1,6 @@
 cask 'deltawalker' do
-  version '2.5.1'
-  sha256 'fa25263ad38e2a61334fee88603e0b67ba098147376d7812dff1aeb6cc2f9e64'
+  version '2.5.5'
+  sha256 'c812738e1c6b8e1fd128f17aee0d5650aa8a3ad254465034ef5a6bcb87d27cf8'
 
   # deltawalker.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://deltawalker.s3.amazonaws.com/DeltaWalker-#{version}.dmg"

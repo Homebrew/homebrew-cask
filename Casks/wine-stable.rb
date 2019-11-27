@@ -1,6 +1,6 @@
 cask 'wine-stable' do
-  version '4.0.2'
-  sha256 'e621f19f59d88340790aa7b77bf7718f000bf774a2b80eb1cfd66abe86ef79af'
+  version '4.0.3'
+  sha256 '6d5ed6db6f10ff8c3460e6cc7aa33cfaf80229013bb792577b5ddb32e8141f23'
 
   url "https://dl.winehq.org/wine-builds/macosx/pool/winehq-stable-#{version}.pkg"
   appcast 'https://dl.winehq.org/wine-builds/macosx/download.html'
@@ -13,7 +13,6 @@ cask 'wine-stable' do
                             'wine-staging',
                           ]
   depends_on x11: true
-  depends_on macos: '<= :mojave'
 
   pkg "winehq-stable-#{version}.pkg",
       choices: [

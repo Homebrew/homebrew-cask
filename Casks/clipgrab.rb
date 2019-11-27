@@ -1,11 +1,13 @@
 cask 'clipgrab' do
-  version '3.8.5'
-  sha256 '53227ad63233d6e5e6b371e0606b1ca3d6b9f840a3d61f296bf91d92ee85e831'
+  version '3.8.7'
+  sha256 '0242adfba5ec0d708dcc55675c1172a783133172b54e80f42aaa0aae9038d6fd'
 
   url "https://download.clipgrab.org/ClipGrab-#{version}.dmg"
   appcast 'https://clipgrab.org/'
   name 'ClipGrab'
   homepage 'https://clipgrab.org/'
+
+  depends_on macos: '>= :sierra'
 
   app 'ClipGrab.app'
 

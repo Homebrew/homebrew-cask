@@ -1,6 +1,6 @@
 cask 'magiccap' do
-  version '2.0.2'
-  sha256 '1c0f53f57fd1a950db284f639b407a9f479a1d44f90fe67e48360369f6c39d39'
+  version '2.1.0'
+  sha256 '8b4d81751515f458d2d2044da45bbc9858d09777e194ec76f5ea987f26cbc45b'
 
   # github.com/magiccap/MagicCap was verified as official when first introduced to the cask
   url "https://github.com/magiccap/MagicCap/releases/download/v#{version}/magiccap-mac.dmg"

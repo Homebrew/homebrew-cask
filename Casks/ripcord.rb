@@ -1,6 +1,6 @@
 cask 'ripcord' do
-  version '0.4.19'
-  sha256 'beccbe857f5641e85ddcdeba3db690b2134f4bc5aaa3596b879f7345a2e429db'
+  version '0.4.21'
+  sha256 '8a915cb6a99b710b72d9c816d42fbef816b66f4a19855b1b93a2f3d62c2f7faf'
 
   url "https://cancel.fm/dl/Ripcord_Mac_#{version}.zip"
   appcast 'https://cancel.fm/ripcord/updates/v1'

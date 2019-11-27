@@ -1,6 +1,6 @@
 cask 'ebmac' do
-  version '1.44.0'
-  sha256 'a6bcef83fe2b188633933833c11b56c6140bb9b856def70c39a2fbd454774e07'
+  version '1.44.1'
+  sha256 '5aec486f353eaaf6650818b4fbf9114944fbda0feb28d3162b06704ad0511b6a'
 
   url "http://ebstudio.info/download/ebpocket/EBMac#{version}.dmg"
   appcast 'http://ebstudio.info/manual/EBMac/'

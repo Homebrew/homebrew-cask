@@ -1,6 +1,6 @@
 cask 'lincastor' do
-  version '2.2'
-  sha256 'f4cbbe5f684025fea27839372b7b143b89f9bebd0024a4df03ba33aab48aea88'
+  version '2.3'
+  sha256 '6e645f9872be96c010983e45ba81dff742632bbfbc0782c971963c9593a54628'
 
   # onflapp.github.io/blog/releases was verified as official when first introduced to the cask
   url 'https://onflapp.github.io/blog/releases/lincastor/LinCastor.zip'

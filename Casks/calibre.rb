@@ -1,13 +1,17 @@
 cask 'calibre' do
-  version '4.2.0'
-  sha256 '1e30ff2b4f0f24e63b86686eeb5e5661b3c01bc403e451209dfdf1c605a2ec9e'
+  if MacOS.version <= :high_sierra
+    version '3.48.0'
+    sha256 '68829cd902b8e0b2b7d5cf7be132df37bcc274a1e5720b4605d2dd95f3a29168'
+    url "https://download.calibre-ebook.com/#{version}/calibre-#{version}.dmg"
+  else
+    version '4.4.0'
+    sha256 '7813f6a502a3c33e98d732adb08131c2e39795f7c229d218f006fb5fe2b5b65f'
+    url "https://download.calibre-ebook.com/#{version}/calibre-#{version}.dmg"
+    appcast 'https://github.com/kovidgoyal/calibre/releases.atom'
+  end
 
-  url "https://download.calibre-ebook.com/#{version}/calibre-#{version}.dmg"
-  appcast 'https://github.com/kovidgoyal/calibre/releases.atom'
   name 'calibre'
   homepage 'https://calibre-ebook.com/'
-
-  depends_on macos: '>= :mojave'
 
   app 'calibre.app'
   binary "#{appdir}/calibre.app/Contents/MacOS/calibre"
