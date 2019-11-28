@@ -11,7 +11,7 @@ cask 'kicad' do
 
   appcast 'https://kicad-downloads.s3.cern.ch/?delimiter=/&prefix=osx/stable/'
   name 'KiCad'
-  homepage 'http://kicad-pcb.org/'
+  homepage 'https://kicad-pcb.org/'
 
   app 'KiCad/kicad.app',            target: 'KiCad/KiCad.app'
   app 'KiCad/bitmap2component.app', target: 'KiCad/bitmap2component.app'
