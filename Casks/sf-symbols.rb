@@ -6,6 +6,7 @@ cask 'sf-symbols' do
   name 'SF Symbols'
   homepage 'https://developer.apple.com/design/human-interface-guidelines/sf-symbols/overview/'
 
+  auto_updates true
   depends_on macos: '>= :mojave'
 
   pkg 'SF Symbols.pkg'
