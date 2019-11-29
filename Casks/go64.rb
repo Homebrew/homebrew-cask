@@ -8,6 +8,8 @@ cask 'go64' do
   name 'Go64'
   homepage 'https://www.stclairsoft.com/Go64/'
 
+  auto_updates true
+
   app 'Go64.app'
 
   zap trash: [

@@ -7,6 +7,7 @@ cask 'latest' do
   name 'Latest'
   homepage 'https://max.codes/latest'
 
+  auto_updates true
   depends_on macos: '>= :sierra'
 
   app 'Latest.app'

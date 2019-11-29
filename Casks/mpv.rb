@@ -12,6 +12,7 @@ cask 'mpv' do
 
   app 'mpv.app'
   binary "#{appdir}/mpv.app/Contents/MacOS/mpv"
+  manpage 'documentation/man/mpv.1'
 
   zap trash: [
                '~/.config/mpv',

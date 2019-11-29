@@ -1,6 +1,6 @@
 cask 'exactscan' do
-  version '19.4.24'
-  sha256 '2249b3cfa5e19267efb2c91faa4e431d68e4d04852611a9edcf60d081a046fcf'
+  version '19.11.22'
+  sha256 'c85633b571c1cfcdde1ac45d93385b436977d08819e87b33645ea06c2730607d'
 
   # dl.exactcode.com was verified as official when first introduced to the cask
   url "https://dl.exactcode.com/exactscan/ExactScan-#{version}.dmg"

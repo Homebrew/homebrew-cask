@@ -20,22 +20,22 @@ Since `pkg` installers can do arbitrary things, different techniques are needed 
 
 ## Summary of Keys
 
-* `early_script:` (string or hash) - like `script:`, but runs early (for special cases, best avoided)
-* `launchctl:` (string or array) - ids of `launchctl` jobs to remove
-* `quit:` (string or array) - bundle ids of running applications to quit
-* `signal:` (array of arrays) - signal numbers and bundle ids of running applications to send a Unix signal to (used when `quit:` does not work)
-* `login_item:` (string or array) - names of login items to remove
-* `kext:` (string or array) - bundle ids of kexts to unload from the system
-* `script:` (string or hash) - relative path to an uninstall script to be run via sudo; use hash if args are needed
+* `early_script:` (string or hash) - like [`script:`](#uninstall-key-script), but runs early (for special cases, best avoided)
+* [`launchctl:`](#uninstall-key-launchctl) (string or array) - ids of `launchctl` jobs to remove
+* [`quit:`](#uninstall-key-quit) (string or array) - bundle ids of running applications to quit
+* [`signal:`](#uninstall-key-signal) (array of arrays) - signal numbers and bundle ids of running applications to send a Unix signal to (used when `quit:` does not work)
+* [`login_item:`](#uninstall-key-login_item) (string or array) - names of login items to remove
+* [`kext:`](#uninstall-key-kext) (string or array) - bundle ids of kexts to unload from the system
+* [`script:`](#uninstall-key-script) (string or hash) - relative path to an uninstall script to be run via sudo; use hash if args are needed
   - `executable:` - relative path to an uninstall script to be run via sudo (required for hash form)
   - `args:` - array of arguments to the uninstall script
   - `input:` - array of lines of input to be sent to `stdin` of the script
   - `must_succeed:` - set to `false` if the script is allowed to fail
   - `sudo:` - set to `true` if the script needs `sudo`
-* `pkgutil:` (string, regexp or array of strings and regexps) - strings or regexps matching bundle ids of packages to uninstall using `pkgutil`
-* `delete:` (string or array) - single-quoted, absolute paths of files or directory trees to remove. `delete:` should only be used as a last resort. `pkgutil:` is strongly preferred.
+* [`pkgutil:`](#uninstall-key-pkgutil) (string, regexp or array of strings and regexps) - strings or regexps matching bundle ids of packages to uninstall using `pkgutil`
+* [`delete:`](#uninstall-key-delete) (string or array) - single-quoted, absolute paths of files or directory trees to remove. `delete:` should only be used as a last resort. `pkgutil:` is strongly preferred.
 * `rmdir:` (string or array) - single-quoted, absolute paths of directories to remove if empty
-* `trash:` (string or array) - single-quoted, absolute paths of files or directory trees to move to Trash.
+* [`trash:`](#uninstall-key-trash) (string or array) - single-quoted, absolute paths of files or directory trees to move to Trash.
 
 Each `uninstall` technique is applied according to the order above. The order in which `uninstall` keys appear in the Cask file is ignored.
 

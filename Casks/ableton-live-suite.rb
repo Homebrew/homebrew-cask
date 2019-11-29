@@ -14,7 +14,10 @@ cask 'ableton-live-suite' do
   uninstall quit: 'com.ableton.live'
 
   zap trash: [
+               '/Library/Logs/DiagnosticReports/Max_*.*_resource.diag',
                '~/Library/Application Support/CrashReporter/Ableton *_*.plist',
+               '~/Library/Application Support/CrashReporter/Live_*.plist',
+               '~/Library/Application Support/CrashReporter/Max_*.plist',
                '~/Library/Application Support/Ableton',
                "~/Library/Application Support/Cycling '74",
                '~/Library/Caches/Ableton',

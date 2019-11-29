@@ -1,6 +1,6 @@
 cask 'advancedrestclient' do
-  version '14.0.2'
-  sha256 'a3a007b52320cbd125a4ee35cda5ab5c9eea91757a78f2359f17d1393c9ea4b6'
+  version '14.0.4'
+  sha256 '9a3ab7deeabe7271698a481dd85abfae501f2c530c99191df1ce9a8313c9b81f'
 
   url "https://github.com/advanced-rest-client/arc-electron/releases/download/v#{version}/arc-#{version}.dmg"
   appcast 'https://github.com/advanced-rest-client/arc-electron/releases.atom'
