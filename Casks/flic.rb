@@ -7,5 +7,5 @@ cask 'flic' do
   appcast 'FlicMac Developer Distribution '
   homepage 'https://flic.io/mac-app'
 
-  app "FlicMac Developer Distribution #{version.after_comma}/"
+  app "FlicMac Developer Distribution #{version.after_comma}/Flic.app"
 end
