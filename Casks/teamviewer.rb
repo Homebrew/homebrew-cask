@@ -1,5 +1,5 @@
 cask 'teamviewer' do
-  version '15.0.8397'
+  version '15.0.24'
   sha256 '575a77233a76f848bde16d36183f3301cfe148c05c70a3cd946d29d71c9476c1'
 
   url 'https://download.teamviewer.com/download/TeamViewer.dmg'

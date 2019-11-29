@@ -4,7 +4,7 @@ cask 'gifox' do
 
   # d3si16icyi9iar.cloudfront.net/gifox was verified as official when first introduced to the cask
   url "https://d3si16icyi9iar.cloudfront.net/gifox/#{version.after_comma}.dmg"
-  appcast 'https://d3si16icyi9iar.cloudfront.net/gifox/appcast.xml'
+  appcast 'https://www.macupdater.net/cgi-bin/extract_text/download_with_useragent.cgi?url=https://api.gifox.io/appcast?prereleases=false'
   name 'gifox'
   homepage 'https://gifox.io/'
 
