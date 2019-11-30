@@ -1,6 +1,6 @@
 cask 'termius' do
-  version '4.9.18'
-  sha256 '7c126f2a029455147e9397dc4e189be324ab8dd4f4e6834a0b6570fc8b5e7ce8'
+  version '5.0.6'
+  sha256 '07721b007c136ccc0b64d861e6a4464d2ed4b6ffa3c933415c4850fd7feb19f4'
 
   # s3.amazonaws.com/termius.desktop.autoupdate/mac was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/termius.desktop.autoupdate/mac/Termius.dmg'
