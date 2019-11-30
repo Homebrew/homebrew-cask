@@ -1,6 +1,6 @@
 cask 'godot' do
-  version '3.1.1'
-  sha256 'bd6beb619c759988d6142a179b0cebe53ce26975e3e798cb124d9ed6d9b1c6e1'
+  version '3.1.2'
+  sha256 '23d26e8e6cd6172a75501916fb6142ec50bb7a21ad7c7e26665de99102852ea6'
 
   # downloads.tuxfamily.org/godotengine was verified as official when first introduced to the cask
   url "https://downloads.tuxfamily.org/godotengine/#{version}/Godot_v#{version}-stable_osx.64.zip"
