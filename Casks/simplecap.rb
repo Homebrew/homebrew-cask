@@ -1,6 +1,6 @@
 cask 'simplecap' do
-  version '1.2.1'
-  sha256 'e15f7ac1c9c07821aee2c6e091185f57e49d99f42f992cf3c27bfd059daa3d7f'
+  version '1.2.2'
+  sha256 '0544a12bd7d73cf3c5a5aefed8d18c4001d11ca3c05cbcb39eb125627959015e'
 
   url "http://lakesoft.jp/simplecap/download/SimpleCap-#{version}.zip"
   name 'SimpleCap'
