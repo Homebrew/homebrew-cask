@@ -1,6 +1,6 @@
 cask 'jami' do
-  version '20191125.1700'
-  sha256 '4fe3bd6443d02a53e61c57b739fbec6ab5ce169484def3159d28d709e6c0b5a0'
+  version '20191128.2156'
+  sha256 '1cf53ff37173f0bee8a9ccdb615bd01e1e0862c9dd6c26b2b739e147e43fa577'
 
   url "https://dl.ring.cx/mac_osx/jami-#{version.no_dots}.dmg"
   appcast 'https://dl.ring.cx/mac_osx/sparkle-ring.xml',
