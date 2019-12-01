@@ -1,6 +1,6 @@
 cask 'base' do
-  version '2.4.12'
-  sha256 '6b9ab469a04c647156d972109ff80dbb9c60d484654284e1c8f0319b7bbcced3'
+  version '2.4.15'
+  sha256 'a420e9ed0e5309c2466374ae61c7a865e4c4f7d086d81753641bb32bd3601507'
 
   url "https://files.menial.co.uk/base/base_#{version}.zip"
   appcast 'https://update.menial.co.uk/software/base/'
