@@ -1,6 +1,6 @@
 cask 'hubic' do
-  version '2.1.0.256'
-  sha256 'd6987dcb1ff767a96cf0790724b945e9ede22029e56b2d58179dcbfefb660a99'
+  version '2.2.1.265'
+  sha256 'b7128705a8c43a966b81e9541b1a3bd63a2e917d66f3fd46da61d3edb39d3d33'
 
   # mir7.ovh.net/ovh-applications/hubic was verified as official when first introduced to the cask
   url "http://mir7.ovh.net/ovh-applications/hubic/hubiC-OSX/#{version.major_minor_patch}/hubiC-OSX-#{version}-osx.pkg"
