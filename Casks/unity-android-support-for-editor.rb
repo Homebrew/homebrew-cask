@@ -1,6 +1,6 @@
 cask 'unity-android-support-for-editor' do
-  version '2019.2.13f1,e20f6c7e5017'
-  sha256 'f053c86b18c5998b036082f948db9a7966d9e72ab0ac4a56af0f4bb7bac6a5f6'
+  version '2019.2.14f1,49dd4e9fa428'
+  sha256 '884e2749df1d3d1f2032c2d8f8f082ba98c182edcab8290cf76342849c3dc8fc'
 
   url "https://netstorage.unity3d.com/unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-#{version.before_comma}.pkg"
   appcast 'https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json'
