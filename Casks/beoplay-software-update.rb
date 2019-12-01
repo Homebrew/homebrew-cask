@@ -3,7 +3,8 @@ cask 'beoplay-software-update' do
   sha256 '7e0500f935557f34d46625e4abe7081cdaa343558a973d3284000ab4c37b21a6'
 
   url "https://www.bang-olufsen.com/~/mediaV3/files/software-downloads/beoplay-software-updater/beoplay-software-updater-#{version.dots_to_hyphens}.dmg"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=#{url}"
+  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=#{url}",
+          configuration: version.dots_to_hyphens
   name 'BeoPlay Software Update'
   homepage 'https://www.bang-olufsen.com/en/product-support/accessories/beoplay-software-updater'
 
