@@ -1,6 +1,6 @@
 cask 'v2rayu' do
-  version '1.4.1'
-  sha256 'ed505f5445292cd38b4b7c55fa3194dafccb06dbb027335c9a5cae5ad114001f'
+  version '1.5.0'
+  sha256 'db06ff1fb266c2b5c19c041d4b698bd9d31a68b864d463eb1d65ff0887cb6a65'
 
   url "https://github.com/yanue/V2rayU/releases/download/#{version}/V2rayU.dmg"
   appcast 'https://github.com/yanue/V2rayU/releases.atom'
