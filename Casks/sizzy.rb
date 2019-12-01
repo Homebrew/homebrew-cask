@@ -5,7 +5,7 @@ cask 'sizzy' do
   url 'https://sizzy.co/get-app'
   appcast 'https://headway-widget.net/widgets/JAXRr7'
   name 'Sizzy'
-  homepage 'https://sizzy.co'
+  homepage 'https://sizzy.co/'
 
   auto_updates true
 
