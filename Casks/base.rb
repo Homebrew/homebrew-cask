@@ -7,6 +7,8 @@ cask 'base' do
   name 'Menial Base'
   homepage 'https://menial.co.uk/base/'
 
+  depends_on macos: '>= :mojave'
+
   app 'Base.app'
 
   zap trash: [
