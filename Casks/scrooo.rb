@@ -1,6 +1,6 @@
 cask 'scrooo' do
-  version '1.2.4'
-  sha256 'b3be7c96af97552c95074f47a5cf53713e179675a798b23377a562a4b278acfd'
+  version '1.3.0'
+  sha256 'dbd99b4a8f6f7d9701d01f18d4e29bc5597a1686de6a82070b5f68162d25e3ec'
 
   url "https://www.fullbucket.de/music/dl/scrooo_#{version.dots_to_underscores}_mac.pkg"
   appcast 'https://www.fullbucket.de/music/scrooo.html'
