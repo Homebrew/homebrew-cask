@@ -11,4 +11,10 @@ cask 'archiver' do
   depends_on macos: '>= :sierra'
 
   app 'Archiver.app'
+
+  
+  zap trash: [
+               '~/Library/Application Support/com.incrediblebee.Archiver3',
+               '~/Library/Preferences/com.incrediblebee.Archiver3.plist',
+             ]
 end
