@@ -1,6 +1,6 @@
 cask 'marginnote' do
-  version '3.5.5003,1573860313'
-  sha256 '3fd67c8fc77e8782c51df87d193b5585bbf797b9a9c9ac62fe8b4c2946cb11f3'
+  version '3.5.8003,1575364991'
+  sha256 'aeea4a419b34ef40ac0930ff25bf5279e3d42de88331197f74cae0f3ce75ae0f'
 
   # dl.devmate.com/QReader.MarginStudyMac was verified as official when first introduced to the cask
   url "https://dl.devmate.com/QReader.MarginStudyMac/#{version.before_comma}/#{version.after_comma}/MarginNote#{version.major}-#{version.before_comma}.zip"
