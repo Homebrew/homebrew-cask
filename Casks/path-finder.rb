@@ -1,6 +1,6 @@
 cask 'path-finder' do
-  version '9.0.4'
-  sha256 '5e0a69fbb0d342efe32d837696a53a14b42f54522923f3510f12158557ef017e'
+  version '9.0.5'
+  sha256 'ce66c0c469a9af7003db87767192d114a02175e7553a6e7dc4ad55eb500dbfeb'
 
   url "https://get.cocoatech.com/PF#{version.major}.dmg"
   appcast 'https://get.cocoatech.com/releasecast.xml'
