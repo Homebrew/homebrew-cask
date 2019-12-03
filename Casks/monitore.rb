@@ -4,7 +4,9 @@ cask 'monitore' do
 
   # lc-devqyyen.cn-n1.lcfile.com was verified as official when first introduced to the cask
   url 'https://lc-devqyyen.cn-n1.lcfile.com/306d2a604ff2ebb77276.dmg'
-  name 'monitore'
+  appcast 'https://eoikoe.com/monitore'
+  name 'Monitore'
+  name '即刻地球'
   homepage 'https://eoikoe.com/monitore'
 
   app '即刻地球.app'
