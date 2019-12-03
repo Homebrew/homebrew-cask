@@ -10,4 +10,12 @@ cask 'deckset' do
   depends_on macos: '>= :sierra'
 
   app 'Deckset.app'
+
+  zap trash: [
+               '~/Library/Application Support/Deckset',
+               '~/Library/Application Support/com.unsignedinteger.Deckset-Paddle',
+               '~/Library/Preferences/com.unsignedinteger.Deckset-Paddle.plist',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.unsignedinteger.deckset-paddle.sfl*',
+               '~/Library/Caches/com.unsignedinteger.Deckset-Paddle',
+             ]
 end
