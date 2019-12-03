@@ -9,4 +9,9 @@ cask 'fsnotes' do
   homepage 'https://fsnot.es/'
 
   app 'FSNotes.app'
+
+  zap trash: [
+               '~/Library/Application Scripts/co.fluder.FSNotes',
+               '~/Library/Containers/co.fluder.FSNotes',
+             ]
 end
