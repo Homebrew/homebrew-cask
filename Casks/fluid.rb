@@ -13,6 +13,6 @@ cask 'fluid' do
 
   zap trash: [
                '~/Library/Application Support/Fluid',
-               '~/Library/Preferences/com.fluidapp.Fluid.plist',
+               '~/Library/Preferences/com.fluidapp.Fluid*.plist',
              ]
 end
