@@ -4,7 +4,7 @@ cask 'capture-one' do
 
   url "https://downloads.phaseone.com/374dd05f-e8c7-499d-a703-9a7dca20d5b7/International/CaptureOne#{version.after_comma}.Mac.#{version.after_comma}.0.0.dmg"
   appcast "https://cormws.phaseone.com/corm.asmx/GetNewSoftwareVersion?Platform=Mac&Version=#{version.major}"
-  name "Capture One #{version.after_comma}.app"
+  name 'Capture One'
   homepage 'https://www.captureone.com/en/'
 
   depends_on macos: '>= :high_sierra'
