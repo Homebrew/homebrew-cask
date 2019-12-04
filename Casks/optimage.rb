@@ -10,4 +10,5 @@ cask 'optimage' do
   auto_updates true
 
   app 'Optimage.app'
+  binary "#{appdir}/Optimage.app/Contents/MacOS/cli/optimage"
 end
