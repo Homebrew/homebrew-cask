@@ -8,7 +8,7 @@ cask 'aurora-hdr' do
   name 'Aurora HDR'
   homepage 'https://skylum.com/jp/aurorahdr'
 
-  installer manual: 'Aurora HDR 2019 Installer.app'
+  app 'Aurora HDR 2019.app'
 
   uninstall delete: [
                       '~/Library/Preferences/com.macphun.auroraHDR2019.plist',
