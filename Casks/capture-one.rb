@@ -1,13 +1,13 @@
 cask 'capture-one' do
-  version '12.1.4'
-  sha256 '8bcd5e25336e2766fa11a12dc499393e223f8f17ae3c7f6db413cc89c047265d'
+  version '13.0.0.186,20'
+  sha256 '776676d221676d0a79e0f7fa5a7a8c7b772e2b84efce8719177a0ae24261e67c'
 
-  url "https://downloads.phaseone.com/d972230a-e941-47ca-a751-35f57a3f2d94/International/CaptureOne12.Mac.#{version}.dmg"
-  appcast "https://cormws.phaseone.com/corm.asmx/GetNewSoftwareVersion?Platform=Mac&Version=#{version}"
-  name 'Capture One'
+  url "https://downloads.phaseone.com/374dd05f-e8c7-499d-a703-9a7dca20d5b7/International/CaptureOne#{version.after_comma}.Mac.#{version.after_comma}.0.0.dmg"
+  appcast "https://cormws.phaseone.com/corm.asmx/GetNewSoftwareVersion?Platform=Mac&Version=#{version.major}"
+  name "Capture One #{version.after_comma}.app"
   homepage 'https://www.phaseone.com/en/Capture-One.aspx'
 
   depends_on macos: '>= :sierra'
 
-  app "Capture One #{version.major}.app"
+  app "Capture One #{version.after_comma}.app"
 end
