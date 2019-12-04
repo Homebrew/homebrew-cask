@@ -4,7 +4,8 @@ cask 'monitorearth' do
 
   # lc-devqyyen.cn-n1.lcfile.com was verified as official when first introduced to the cask
   url 'https://lc-devqyyen.cn-n1.lcfile.com/306d2a604ff2ebb77276.dmg'
-  appcast 'https://eoikoe.com/monitore'
+  appcast 'https://eoikoe.com/monitore',
+          configuration: version.major_minor
   name 'MonitorEarth'
   name '即刻地球'
   homepage 'https://eoikoe.com/monitore'
