@@ -1,12 +1,11 @@
 cask 'x-lite' do
-  version '5.8.1_102009'
-  sha256 '046573027c8823844fa4b9392ef245026950dba5aa084fdb44095241c0ef674c'
+  version '6.0.1_102001'
+  sha256 'd327f8518f8c4aa16e67f3c557fe4985c158d448f889f87f0bf1858a6ae95ea0'
 
-  # counterpath.s3.amazonaws.com was verified as official when first introduced to the cask
-  url "https://counterpath.s3.amazonaws.com/downloads/X-Lite_#{version}.dmg"
-  appcast 'https://www.macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.counterpath.com/XLiteForMac'
-  name 'X-Lite'
-  homepage 'https://www.counterpath.com/x-lite/'
+  url "https://secure.counterpath.com/Downloads/Bria_#{version}.dmg"
+  appcast 'https://www.macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://solo.softphone.com/downloads/bria-for-mac'
+  name 'Bria'
+  homepage 'https://www.counterpath.com/bria-solo/'
 
-  app 'X-Lite.app'
+  app 'Bria.app'
 end
