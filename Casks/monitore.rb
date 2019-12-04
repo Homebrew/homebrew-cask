@@ -9,5 +9,7 @@ cask 'monitore' do
   name '即刻地球'
   homepage 'https://eoikoe.com/monitore'
 
+  auto_updates true
+
   app '即刻地球.app'
 end
