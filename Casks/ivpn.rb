@@ -7,6 +7,8 @@ cask 'ivpn' do
   name 'IVPN'
   homepage 'https://www.ivpn.net/apps-macos'
 
+  auto_updates true
+
   app 'IVPN.app'
 
   uninstall_preflight do
