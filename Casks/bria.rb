@@ -1,4 +1,4 @@
-cask 'bria-solo' do
+cask 'bria' do
   version '6.0.1_102001'
   sha256 'd327f8518f8c4aa16e67f3c557fe4985c158d448f889f87f0bf1858a6ae95ea0'
 
