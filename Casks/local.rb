@@ -7,9 +7,7 @@ cask 'local' do
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://local-by-flywheel-flywheel.netdna-ssl.com/latest/mac',
           configuration: version.dots_to_hyphens
   name 'Local by Flywheel'
-  homepage 'https://local.getflywheel.com/'
-
-  depends_on cask: 'virtualbox'
+  homepage 'https://localbyflywheel.com/'
 
   app 'Local.app'
 
