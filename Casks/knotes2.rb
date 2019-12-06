@@ -4,7 +4,7 @@ cask 'knotes2' do
 
   url "http://cdn.knotesapp.cn/download/%e7%b3%af%e8%af%8d%e7%ac%94%e8%ae%b0-#{version}.dmg"
   appcast "http://knotes#{version.major}-release-cn.s3.amazonaws.com/mac/latest-mac.yml"
-  name '糯词笔记'
+  name 'Knotes2'
   homepage 'http://knotesapp.cn/'
 
   app '糯词笔记.app'
