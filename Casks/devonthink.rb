@@ -11,4 +11,16 @@ cask 'devonthink' do
   auto_updates true
 
   app "DEVONthink #{version.major}.app"
+
+  zap trash: [
+               '~/Library/Application Support/DEVONthink #{version.major}',
+               '~/Library/Preferences/com.devon-technologies.think3.feeds.stylesheet.css',
+               '~/Library/Preferences/com.devon-technologies.think#{version.major}.plist',
+               '~/Library/Containers/com.devon-technologies.get',
+               '~/Library/Containers/com.devon-technologies.think-helper',
+               '~/Library/Containers/com.devon-technologies.think#{version.major}.clipper',
+               '~/Library/Caches/com.apple.helpd/Generated/com.devontechnologies.devonthink.help*#{version}',
+               '~/Library/Caches/com.devon-technologies.think#{version.major}',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.devon-technologies.think#{version.major}.sfl2',
+             ]
 end
