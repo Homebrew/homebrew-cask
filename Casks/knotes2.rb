@@ -1,4 +1,4 @@
-cask 'mhz-knotes' do
+cask 'megahertz-knotes' do
   version '2.1.0'
   sha256 'd2070cfc96cf168db45e3390866950d1eabb5fdf719bfc85ca558cd68dc151fb'
 
