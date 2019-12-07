@@ -5,7 +5,7 @@ cask 'puppetry' do
   # github.com/dsheiko/puppetry was verified as official when first introduced to the cask
   url "https://github.com/dsheiko/puppetry/releases/download/v#{version}/puppetry-mac-v#{version}.zip"
   appcast 'https://github.com/dsheiko/puppetry/releases.atom'
-  name 'puppetry'
+  name 'Puppetry'
   homepage 'https://puppetry.app/'
 
   app 'puppetry.app'
