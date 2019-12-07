@@ -1,13 +1,13 @@
 cask 'podman' do
-  version '1.6.0-28-gdac7889d'
+  version '1.6.0,28-gdac7889d'
   sha256 '10aa54e65084a6db98aa46b90fdcdec7b4ae0eb5d241e65dd360859e43bb1236'
 
-  url "https://github.com/containers/libpod/releases/download/v#{version.major_minor_patch}/podman-remote-v#{version}-master-darwin-amd64.tgz"
+  url "https://github.com/containers/libpod/releases/download/v#{version.before_comma}/podman-remote-v#{version.before_comma}-#{version.after_comma}-master-darwin-amd64.tgz"
   appcast 'https://github.com/containers/libpod/releases.atom'
   name 'podman'
   homepage 'https://github.com/containers/libpod/'
 
-  binary "podman-v#{version}/podman"
+  binary "podman-v#{version.before_comma}-#{version.after_comma}/podman"
 
   postflight do
     man1 = Dir["#{staged_path}/podman-*/docs/*.1"]
