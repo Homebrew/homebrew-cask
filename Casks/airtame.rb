@@ -1,8 +1,8 @@
 cask 'airtame' do
-  version '3.4.0'
-  sha256 'e1834a01823708ff34c78eeb683fd86141b7c9f8e18f3d37179fe33b8b212d1a'
+  version '3.6.1'
+  sha256 '1ed7013a174da6964bdc180f4a851c330701f7a93ecc1bfb7e4ec7d00d70be3f'
 
-  url "https://downloads-cdn.airtame.com/application/ga/osx_x64/releases/airtame-application-#{version}.dmg"
+  url "https://downloads-cdn.airtame.com/app/latest/mac/Airtame-#{version}.dmg"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://downloads-cdn.airtame.com/get.php?platform=osx_x64'
   name 'Airtame'
   homepage 'https://airtame.com/'

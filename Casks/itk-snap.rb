@@ -1,6 +1,6 @@
 cask 'itk-snap' do
-  version '3.6.0-20170401'
-  sha256 '865e54fc3c872bf1815dd0535dd232a195844eac7016186e3327587555dceda6'
+  version '3.8.0-20190612'
+  sha256 '135405baf7abc900d17d9120798b104654a9bc271aa9476c9c1150d165ee5fd8'
 
   # downloads.sourceforge.net/itk-snap was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/itk-snap/itksnap-#{version}-MacOS-x86_64.dmg"

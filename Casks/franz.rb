@@ -1,6 +1,6 @@
 cask 'franz' do
-  version '5.1.0'
-  sha256 '36e0817b4e1f6a04aec735aff6b38e251fd16d10bf9aab66fd4cb2697fbda9e3'
+  version '5.4.1'
+  sha256 'bfa3202715746148115537d011642c40aae12060fccf2a5599d97d4521cc99fc'
 
   # github.com/meetfranz/franz was verified as official when first introduced to the cask
   url "https://github.com/meetfranz/franz/releases/download/v#{version}/franz-#{version}.dmg"
@@ -12,11 +12,10 @@ cask 'franz' do
 
   app 'Franz.app'
 
-  uninstall signal:     [
-                          ['QUIT', 'com.meetfranz.franz'],
-                        ],
-            login_item: 'Franz',
-            delete:     '/Library/Logs/DiagnosticReports/Franz Helper_.*wakeups_resource.diag'
+  uninstall signal: [
+                      ['QUIT', 'com.meetfranz.franz'],
+                    ],
+            delete: '/Library/Logs/DiagnosticReports/Franz Helper_.*wakeups_resource.diag'
 
   zap trash: [
                '~/Library/Application Support/Caches/franz-updater',

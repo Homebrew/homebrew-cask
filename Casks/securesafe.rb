@@ -3,6 +3,7 @@ cask 'securesafe' do
   sha256 'c641d2934a372dd89a0103bbc993f8a18f47fbe4dd080c088cc52911cbc8ecfc'
 
   url "https://www.securesafe.com/downloads/SecureSafe_#{version}.pkg"
+  appcast 'https://www.securesafe.com/en/downloads/'
   name 'SecureSafe'
   homepage 'https://www.securesafe.com/'
 

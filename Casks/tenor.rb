@@ -12,6 +12,5 @@ cask 'tenor' do
 
   app 'Tenor.app'
 
-  uninstall login_item: 'Tenor',
-            quit:       'com.riffsy.GIF-for-Mac'
+  uninstall quit: 'com.riffsy.GIF-for-Mac'
 end

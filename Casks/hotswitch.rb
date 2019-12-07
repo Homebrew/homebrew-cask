@@ -1,11 +1,11 @@
 cask 'hotswitch' do
-  version '1.17,2018-03-12,21-19-19'
-  sha256 'ad137876ac51d165e65464adcf08f1e5eced76af880aef3aeb7a7987a12b9d40'
+  version '1.19'
+  sha256 '4e341d025a1951270fcd0ee363f821c5a026b9eb5a1d592e25a955afe497b256'
 
   url 'https://oniatsu.github.io/HotSwitch/release/zip/HotSwitch.zip'
   appcast 'https://github.com/oniatsu/HotSwitch/releases.atom'
   name 'HotSwitch'
   homepage 'https://oniatsu.github.io/HotSwitch/'
 
-  app "HotSwitch #{version.after_comma.before_comma} #{version.after_comma.after_comma}/HotSwitch.app"
+  app 'Users/ao/Downloads/HotSwitch 2019-11-22 08-52-20/HotSwitch.app'
 end

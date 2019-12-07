@@ -6,7 +6,7 @@ cask 'manuskript' do
   url "https://github.com/olivierkes/manuskript/releases/download/#{version.major_minor_patch}/manuskript-#{version}-osx.zip"
   appcast 'https://github.com/olivierkes/manuskript/releases.atom'
   name 'Manuskript'
-  homepage 'http://www.theologeek.ch/manuskript/'
+  homepage 'https://www.theologeek.ch/manuskript/'
 
   binary 'manuskript/manuskript'
 end

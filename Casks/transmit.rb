@@ -1,6 +1,6 @@
 cask 'transmit' do
-  version '5.2.4'
-  sha256 'b2374738db58a9872e385427ec2aaf139f80fad689d2b81c6de3ffb9a0acc598'
+  version '5.6.1'
+  sha256 '6b9e915b8592d4acd0ec78d118c2bf0619cf953b2f98d35e988397eadf86d637'
 
   url "https://www.panic.com/transmit/d/Transmit%20#{version}.zip"
   appcast "https://library.panic.com/releasenotes/transmit#{version.major}/"
@@ -8,6 +8,7 @@ cask 'transmit' do
   homepage 'https://panic.com/transmit/'
 
   auto_updates true
+  depends_on macos: '>= :high_sierra'
 
   app 'Transmit.app'
 

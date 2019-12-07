@@ -3,8 +3,8 @@ cask 'sip' do
     version '1.1.6'
     sha256 'bb170a54090aab5703388a3e7a22e9cf4e4d98e84f5658893e1e6f9677b9a51e'
   else
-    version '2.0.5'
-    sha256 'a83cd4974052e0ce808f43c88d0a18c68864b06a78f1ed73fb926802979b3da3'
+    version '2.2.2'
+    sha256 '960c30ebc3a1c8ddc7e1ac5f6b73e41fe4fd3c22906ba5b489bf64b601890d77'
   end
 
   url "https://sipapp.io/updates/v#{version.major}/sip-#{version}.zip"
@@ -12,6 +12,7 @@ cask 'sip' do
   name 'Sip'
   homepage 'https://sipapp.io/'
 
+  auto_updates true
   depends_on macos: '>= :sierra'
 
   app 'Sip.app'

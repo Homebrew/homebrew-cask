@@ -1,17 +1,16 @@
 cask 'losslesscut' do
-  version '2.1.0'
-  sha256 '3d8bb0f24b84053066c7e2c36e76926808e163933a0453746f7345bc3f96b653'
+  version '2.6.2'
+  sha256 'd06248b1071fc5e44ac1d95beacd5a82454c1f1732f946acf097ef8155e808d9'
 
-  url "https://github.com/mifi/lossless-cut/releases/download/v#{version}/LosslessCut-darwin-x64.zip"
+  url "https://github.com/mifi/lossless-cut/releases/download/v#{version}/LosslessCut-#{version}.dmg"
   appcast 'https://github.com/mifi/lossless-cut/releases.atom'
-  name 'Loslesscut'
+  name 'LosslessCut'
   homepage 'https://github.com/mifi/lossless-cut'
 
-  app 'LosslessCut-darwin-x64/LosslessCut.app'
+  app 'LosslessCut.app'
 
   zap trash: [
-               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.losslesscut.sfl*',
-               '~/Library/Preferences/com.electron.losslesscut.helper.plist',
-               '~/Library/Preferences/com.electron.losslesscut.plist',
+               '~/Library/Application Support/LosslessCut',
+               '~/Library/Logs/LosslessCut',
              ]
 end

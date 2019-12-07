@@ -1,68 +1,69 @@
 cask 'sketchup-pro' do
-  version '19.1.173,2019'
+  version '19.3.252,2019'
 
   language 'de' do
-    sha256 'a420125b8257a0a72ff4575ebef6e37702fcc16867bba2b7232d767a13d4ad6a'
+    sha256 '534e5fa125a8652a7abcbb9ee2bbc8162bf66de9dbe8cfe33ac7f354dc7a9b71'
     'de'
   end
 
   language 'en', default: true do
-    sha256 'd1758f633db3b74b644ee73eb0eded8128975ac23732740dfc6388a817660146'
+    sha256 'f91cfa881e5b0397d412e144a5375483b9f98032c4c14f3dbc876908c366c2a9'
     'en'
   end
 
   language 'es' do
-    sha256 '89a00fefb041ebef346d16f9ab4ac3842857e6cb12c2ef65c47ce1bd02a7023b'
+    sha256 '435c2991eb12afce94d44a680efeaf3fb26f05800fc5123386f7463d195bf185'
     'es'
   end
 
   language 'fr' do
-    sha256 '7c3674855fcfc1d6ca4760cdbf1861c6af40c4ab40ed8dce0909d72c29ec8e7b'
+    sha256 'c2edae1d7e456adecc4aa83cdaa41d7af3ea81ea74a9e34fb1b53339774c8283'
     'fr'
   end
 
   language 'it' do
-    sha256 '103fcd9b85e627226fe9cef39ccfa45b55cec7d4dfccf3e26dc17da7412f4d13'
+    sha256 'e32951c906fe444ab5aac1a29170414d7650b431ddee519506df23495d89c75f'
     'it'
   end
 
   language 'ja' do
-    sha256 'b18b3eef80cf46a24bd43eb69758788a3d2c2ea73a1ca7a55ce84021480a06aa'
+    sha256 'bf2c797bf998a5283197c5d18d25792c9b1b592e50e1cef5336d98609d6ebc0b'
     'ja'
   end
 
   language 'ko' do
-    sha256 '2a6d9df6f694b4d2c275e99847d604b9a32d90cde7f98d0427f845679e5c1b78'
+    sha256 '7d5e085ae342faa42314388fb39ad7ba03f60aa2ef31fa7e30eedcb028a0ba91'
     'ko'
   end
 
   language 'pt-BR' do
-    sha256 '8a14e4f163d220f037d2032acbf602e6843fd9bbf98b392c18f1d44b30e5fe53'
+    sha256 '066cec095fae7bd4dfa5f9f92416bb6fac2ffd5be6040a7265ba784436f92f0a'
     'pt-BR'
   end
 
   language 'ru' do
-    sha256 'da14fb9344909a70dc51f9caaa96e6cbbb3268108546fc29c84a877e20d5d3ce'
+    sha256 '1377b3bcb9af36529c764204109647169398b4bf78919186dbf44df492122e09'
     'ru'
   end
 
   language 'sv' do
-    sha256 'd447b5ce0ac27529882ec2a90417fb632e26d5ee582bfb819d3af165d0fe82cb'
+    sha256 '93e64d5ddcf825374dec93272e998a132e78c1e4ae542e2abb976a9c8c7f161d'
     'sv'
   end
 
   language 'zh-CN' do
-    sha256 '1e7413399a284612a43c206fa671281ee9c5e2c09835f8082ed5c601f48f56ce'
+    sha256 '8efb0a4cdae73453e4a8bc7dde459dce5b27a800bb6a26210aae17d84d97dc88'
     'zh-CN'
   end
 
   language 'zh-TW' do
-    sha256 'a3700e4d4474d637a29aff19a5dd3b70126591ad043e5a75e59fa9d1f928a4a9'
+    sha256 '86436eae63f50a127f73a22a8c0d104f403980c1ec239675565eca8df1441c51'
     'zh-TW'
   end
 
   # downloads can be found at https://sketchup.com/download/all
   url "https://www.sketchup.com/sketchup/SketchUpPro-#{language}-dmg"
+  appcast 'https://help.sketchup.com/en/release-notes-0'
   name 'SketchUp'
   homepage 'https://www.sketchup.com/'
 

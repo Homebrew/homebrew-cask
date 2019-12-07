@@ -8,8 +8,8 @@ cask 'araxis-merge' do
     sha256 'abba11a92e1f50d913356d31123bed5bb08838ce39c4659206fd24c32432c4b3'
     url "https://www.araxis.com/download/Merge#{version}-OSX10.10.dmg"
   else
-    version '2019.5137'
-    sha256 'e3be039c7e6c8a42c172b8d18cfdad0d98fe05b1a74d1e6801d323752c0438b2'
+    version '2019.5249'
+    sha256 '05ef60edf5be195d8893f4abd4592c59a2ad7f930459bcc1d4da9688e88aef26'
     url "https://www.araxis.com/download/Merge#{version}-macOS.dmg"
   end
 

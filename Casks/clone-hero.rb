@@ -1,6 +1,6 @@
 cask 'clone-hero' do
-  version '0.22.4'
-  sha256 'e7aae8ad2b62f47d02ef92fb94d8064980e88e77b9061f58a29acb23b2899438'
+  version '0.23.2'
+  sha256 '89ec8ccded856e8a59c638dd5fe0b357667325b187f12dac4fd0b529995d78a0'
 
   url "http://dl.clonehero.net/clonehero-v.#{version.minor_patch}/clonehero-mac.dmg"
   name 'Clone Hero'

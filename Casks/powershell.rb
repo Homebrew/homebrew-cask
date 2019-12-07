@@ -1,6 +1,6 @@
 cask 'powershell' do
-  version '6.2.0'
-  sha256 '96fcbebecdabd2c05c5da5f785968111af22fa805c93b83073feed95000a84e1'
+  version '6.2.3'
+  sha256 '84a704ff4a0ee97193f4980d5f699c12fd14fb63d0fa4414f521cfcbc126981f'
 
   url "https://github.com/PowerShell/PowerShell/releases/download/v#{version}/powershell-#{version}-osx-x64.pkg"
   appcast 'https://github.com/PowerShell/PowerShell/releases.atom'

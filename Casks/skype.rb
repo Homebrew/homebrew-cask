@@ -1,6 +1,6 @@
 cask 'skype' do
-  version '8.44.0.40'
-  sha256 '2bef8ab174db65f44b8d840feb71878c72ebce64ddfec446f5a2187379a4045b'
+  version '8.54.0.91'
+  sha256 '820d6769e5988253f358632d1c292db57167715af08ca5fd0a6c005a6de848a2'
 
   # endpoint920510.azureedge.net/s4l/s4l/download/mac was verified as official when first introduced to the cask
   url "https://endpoint920510.azureedge.net/s4l/s4l/download/mac/Skype-#{version}.dmg"
@@ -19,6 +19,7 @@ cask 'skype' do
                '~/Library/Address Book Plug-Ins/SkypeABChatter.bundle',
                '~/Library/Application Scripts/com.skype.skype.shareagent',
                '~/Library/Application Support/Skype',
+               '~/Library/Application Support/Skype Helper',
                '~/Library/Application Support/T/SkypeRT',
                '~/Library/Application Support/CrashReporter/Skype_*.plist',
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.skype.skype.sfl*',

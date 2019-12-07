@@ -1,6 +1,6 @@
 cask 'compositor' do
-  version '1.9.0'
-  sha256 'a8880f10895aabce89fe20d2f010f9a26d76419bbe060ff9cbf9be9097174e67'
+  version '1.14.0'
+  sha256 '9ede6513b3ff29d229a697f4cd3da445017c99e0221d744d506904be08c5a7b9'
 
   url "https://compositorapp.com/updates/Compositor_#{version}.zip"
   appcast 'https://compositorapp.com/updates/appcast.xml'

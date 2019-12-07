@@ -1,8 +1,9 @@
 cask 'greenfoot' do
-  version '3.5.3'
-  sha256 'c0ae05267c4493f067a103ac7eb4e6ad045279e0180d9b32907dfa9b61eab08e'
+  version '3.6.1'
+  sha256 '9afbc077f6454d83749224cc62b5192eae96edf4d7d6beaee880712bb17e8646'
 
   url "https://www.greenfoot.org/download/files/Greenfoot-mac-#{version.no_dots}.zip"
+  appcast 'https://www.greenfoot.org/download'
   name 'Greenfoot'
   homepage 'https://www.greenfoot.org/home'
 

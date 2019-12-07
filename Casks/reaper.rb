@@ -1,8 +1,16 @@
 cask 'reaper' do
-  version '5.97.600'
-  sha256 '1d49a21112ec336307afcdca6b8195d769ab440c845c76b93daf1d595d13eda5'
+  version '6.0'
 
-  url "https://www.reaper.fm/files/#{version.major}.x/reaper#{version.no_dots.sub(%r{0*$}, '')}_x86_64.dmg"
+  if MacOS.version <= :mojave
+    sha256 '589977a587aa510d7430308b09383551ab32506e7a1150e38ecff533ee4fc71b'
+
+    url "https://www.reaper.fm/files/#{version.major}.x/reaper#{version.no_dots}_x86_64.dmg"
+  else
+    sha256 '49a17c631faa079cda2664e9fb0fd353cbd9e56c83f407202ddacd19e2363f32'
+
+    url "https://www.reaper.fm/files/#{version.major}.x/reaper#{version.no_dots}_x86_64_catalina.dmg"
+  end
+
   appcast 'https://www.cockos.com/reaper/latestversion/?p=osx_64'
   name 'REAPER'
   homepage 'https://www.reaper.fm/'

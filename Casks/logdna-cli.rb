@@ -1,6 +1,6 @@
 cask 'logdna-cli' do
-  version '1.2.2'
-  sha256 'd7d62422f20df8210b168404ba377c9c632e682e54005ce5ab608c720a181ccc'
+  version '1.4.1'
+  sha256 '3d919e131f0724b6becd4ef9c6a1de7cc18a20123fefecf589fae627fb95db76'
 
   # github.com/logdna/logdna-cli was verified as official when first introduced to the cask
   url "https://github.com/logdna/logdna-cli/releases/download/#{version}/logdna-cli.pkg"

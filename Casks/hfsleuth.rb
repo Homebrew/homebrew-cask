@@ -7,5 +7,5 @@ cask 'hfsleuth' do
   homepage 'http://newosxbook.com/tools/hfsleuth.html'
 
   binary 'hfsleuth.universal', target: 'hfsleuth'
-  artifact 'hfsleuth.1', target: "#{HOMEBREW_PREFIX}/share/man/man1/hfsleuth.1"
+  manpage 'hfsleuth.1'
 end

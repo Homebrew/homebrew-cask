@@ -1,6 +1,6 @@
 cask 'hazeover' do
-  version '1.8.4-862'
-  sha256 '2ff1bdd5795dad76446ad9665b0d5977ef6060cd122d75e8685265fd889a2e46'
+  version '1.8.5-900'
+  sha256 '759f08636ef5668612c34049e482a1bd1cfbab83d38a38ae597d7f10e8085e11'
 
   url 'https://hazeover.com/HazeOver.dmg'
   appcast 'https://hazeover.com/updates.xml'

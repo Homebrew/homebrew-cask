@@ -1,6 +1,6 @@
 cask 'xscreensaver' do
-  version '5.42'
-  sha256 '7cf41973445e831007c8d3ed48b9d4aaaee0b51fc4125f7b49583ce6b5dd3e57'
+  version '5.43'
+  sha256 '5ae820e4addc150371a168e8ab2af69632b6e337cb1ad78afdfd8e1abecea245'
 
   url "https://www.jwz.org/xscreensaver/xscreensaver-#{version}.dmg"
   appcast 'https://www.jwz.org/xscreensaver/changelog.html'

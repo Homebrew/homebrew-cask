@@ -1,6 +1,6 @@
 cask 'stretchly' do
-  version '0.19.1'
-  sha256 '9030b02d539bfa3697b4c50d820ebcfb6a28e7c9ed6e966538ca4d3151e2bca6'
+  version '0.21.0'
+  sha256 '3bddd917ccc53d18ab35f7faf5b80e28c934c062831f92f4a71fcdc223bcd02b'
 
   # github.com/hovancik/stretchly was verified as official when first introduced to the cask
   url "https://github.com/hovancik/stretchly/releases/download/v#{version}/stretchly-#{version}-mac.zip"

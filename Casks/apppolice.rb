@@ -9,8 +9,7 @@ cask 'apppolice' do
 
   app 'AppPolice.app'
 
-  uninstall login_item: 'AppPolice',
-            quit:       'com.definemac.AppPolice'
+  uninstall quit: 'com.definemac.AppPolice'
 
   zap trash: '~/Library/Preferences/com.definemac.AppPolice.plist'
 end

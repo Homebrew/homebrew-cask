@@ -10,4 +10,16 @@ cask 'airtable' do
   auto_updates true
 
   app 'Airtable.app'
+
+  uninstall quit: 'com.FormaGrid.Airtable'
+
+  zap trash: [
+               '/Library/Logs/DiagnosticReports/Airtable*.*_resource.diag',
+               '~/Library/Logs/Airtable',
+               '~/Library/Caches/com.FormaGrid.Airtable*',
+               '~/Library/Cookies/com.FormaGrid.Airtable.binarycookies',
+               '~/Library/Application Support/Airtable',
+               '~/Library/Preferences/com.FormaGrid.Airtable*.plist',
+               '~/Library/Preferences/ByHost/com.FormaGrid.Airtable.ShipIt.*.plist',
+             ]
 end

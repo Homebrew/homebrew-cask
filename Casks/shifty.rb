@@ -1,6 +1,6 @@
 cask 'shifty' do
-  version '1.0.2'
-  sha256 'f278579084129ca034c7f723a35bb336dfe08fd6ea124a03ec136ed4d60f5dc8'
+  version '1.1.2'
+  sha256 '71daedf1504907ac1ba59f478978da1c50bd78ddce846f4c1cf967462a40753a'
 
   # github.com/thompsonate/Shifty was verified as official when first introduced to the cask
   url "https://github.com/thompsonate/Shifty/releases/download/v#{version}/Shifty-#{version}.zip"

@@ -1,6 +1,6 @@
 cask 'keymanager' do
-  version '1.2.16'
-  sha256 'f2e200b1da061bf7a53898c4cb41f4f79fe1e89cb49fdbb923f9bffcd08ff2e9'
+  version '3.7.10'
+  sha256 '74820161ce1828a669f7ad56f3787ce51fed5167d8c8a3d746e9d518bb7a1838'
 
   # keymanager.trustasia.com was verified as official when first introduced to the cask
   url "https://keymanager.trustasia.com/release/KeyManager-#{version}.dmg"

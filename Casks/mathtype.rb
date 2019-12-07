@@ -1,6 +1,6 @@
 cask 'mathtype' do
-  version '7.4.2'
-  sha256 'd2b2bfcd37f212edd1d7241d11ecc345cafe6adffcc2fc7a0e1565afb2759e89'
+  version '7.4.4'
+  sha256 '5c035a10ac85dd86981c3c3523a75388cbf5938ad7f52be4ec401eaabdc5fb31'
 
   url 'https://store.wiris.com/en/products/downloads/mathtype/installer/mac/en'
   appcast 'https://docs.wiris.com/en/mathtype/release_notes/start'

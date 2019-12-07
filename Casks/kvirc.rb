@@ -7,6 +7,8 @@ cask 'kvirc' do
   name 'KVIrc'
   homepage 'https://www.kvirc.net/'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'KVIrc.app'
 
   zap trash: [

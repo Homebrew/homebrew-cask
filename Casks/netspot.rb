@@ -1,8 +1,8 @@
 cask 'netspot' do
-  version '2.10.952'
-  sha256 '55cd50eb98d1b2ebc8f431ac14b36c1dc1c3bd55fec17fd83532080a9c1bae92'
+  version '2.11.972'
+  sha256 'c0a6b63839001720a4d77b7123f9c9df065adb53bd3c6895933770bec8efa2b2'
 
-  url 'https://www.netspotapp.com/download/NetSpot.dmg'
+  url 'https://cdn.netspotapp.com/download/NetSpot.dmg'
   appcast "https://www.netspotapp.com/updates/netspot#{version.major}-appcast.xml"
   name 'NetSpot'
   homepage 'https://www.netspotapp.com/'

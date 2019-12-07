@@ -1,6 +1,6 @@
 cask 'torrent-file-editor' do
-  version '0.3.15'
-  sha256 'c9bc197b7541505ac6223def15cff87d00ec5983d1d6b00311646d4b15af0b5d'
+  version '0.3.16'
+  sha256 '69e97ea059de7711170016bcd9728331177e2dbfdda4472482beee064ea30745'
 
   # github.com/torrent-file-editor/torrent-file-editor was verified as official when first introduced to the cask
   url "https://github.com/torrent-file-editor/torrent-file-editor/releases/download/v#{version}/torrent-file-editor-#{version}.dmg"

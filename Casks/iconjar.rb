@@ -1,14 +1,14 @@
 cask 'iconjar' do
-  version '1.13.1,30275:1548623927'
-  sha256 '41544937969f8cb70640b4226b1a67b4c5ae2c4cc7100fbbc734596f09dcab95'
+  version '2.1.2,37199'
+  sha256 'd3d3249de1caba1283e8ecf042d2abd40c5fd1f713a94ce0e43ee45987cbb9b2'
 
-  # dl.devmate.com/com.iconjar.iconjar was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.iconjar.iconjar/#{version.after_comma.before_colon}/#{version.after_colon}/Iconjar-#{version.after_comma.before_colon}.zip"
-  appcast 'https://updates.devmate.com/com.iconjar.iconjar.xml'
+  url "https://geticonjar.com/releases/IconJar.app.#{version.after_comma}.zip"
+  appcast 'https://geticonjar.com/releases/stable.xml'
   name 'IconJar'
   homepage 'https://geticonjar.com/'
 
   auto_updates true
+  depends_on macos: '>= :mojave'
 
   app 'IconJar.app'
 

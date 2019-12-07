@@ -1,6 +1,6 @@
 cask 'powerword' do
-  version '1.1.1,1.0.1'
-  sha256 '87c5347065f37342939b9d9c1874a582f9a144d0a5d494152035cffcc4ca8a5b'
+  version '1.1.3,1.0.1'
+  sha256 '2a5b45a6e7d02a80917e2594ee818ff3022c6df7f429af97429c6f98d2befd39'
 
   url "https://download.iciba.com/mac/mac#{version.after_comma}/PowerWord.dmg"
   name 'PowerWord'

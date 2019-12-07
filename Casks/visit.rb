@@ -1,9 +1,9 @@
 cask 'visit' do
-  version '2.13.3'
-  sha256 '984d85a597ecd391ff4fcf05fede6d320ef7eb138ce296aa88b7136b0ea1ea50'
+  version '3.0.2'
+  sha256 'e2c8dbcc4d7b73992077bdbac21c53591444d70f9d04cb11f6bbde89a35a8ea2'
 
   # portal.nersc.gov/project/visit was verified as official when first introduced to the cask
-  url "https://portal.nersc.gov/project/visit/releases/#{version}/VisIt-#{version}.dmg"
+  url "https://portal.nersc.gov/project/visit/releases/#{version}/visit#{version}.darwin-x86_64-10_13.dmg"
   appcast 'https://wci.llnl.gov/simulation/computer-codes/visit/executables'
   name 'VisIt'
   homepage 'https://wci.llnl.gov/simulation/computer-codes/visit'

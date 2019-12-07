@@ -1,6 +1,6 @@
 cask 'latexit' do
-  version '2.13.2'
-  sha256 '46f5c9c45ce74e65627ef54cba3031bc2991ad7c78e046947c5812f23ead85db'
+  version '2.13.5'
+  sha256 'fa6fb0a6717ede77fc14c7f63260768ab6a9f280d04178c0336f7144acff3b20'
 
   url "https://www.chachatelier.fr/latexit/downloads/LaTeXiT-#{version.dots_to_underscores}.dmg",
       user_agent: :fake

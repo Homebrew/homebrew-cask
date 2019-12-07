@@ -1,6 +1,6 @@
 cask 'electrum-ltc' do
-  version '3.3.4.1'
-  sha256 'bfc082b692905fe279b5666adf2fe62ba83652d4b6162e539f7a81f651d70bfe'
+  version '3.3.8.1'
+  sha256 '167c6d7eb21b1f064254e215adf826c6c77f22bcad8e1851645d33d1a4af65d4'
 
   url "https://electrum-ltc.org/download/electrum-ltc-#{version}.dmg"
   appcast 'https://electrum-ltc.org/'

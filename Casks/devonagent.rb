@@ -1,12 +1,12 @@
 cask 'devonagent' do
-  version '3.11.1'
-  sha256 '2b17fae352ca6271d0f0eb0d5ab643d0b9312d757112efd77c39f9e9e05151e6'
+  version '3.11.3'
+  sha256 'f5b50eb92ffda9791b159e38b8d3725ef7a3e9307a441da0b1f5931921703808'
 
-  # amazonaws.com/DTWebsiteSupport was verified as official when first introduced to the cask
+  # s3.amazonaws.com/DTWebsiteSupport was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/devonagent/#{version}/DEVONagent_Pro.app.zip"
-  appcast 'https://www.devontechnologies.com/fileadmin/templates/filemaker/sparkle.php?product=300005193&format=xml'
+  appcast 'https://api.devontechnologies.com/1/apps/sparkle/sparkle.php?id=300005193'
   name 'DEVONagent Pro'
-  homepage 'https://www.devontechnologies.com/products/devonagent/devonagent-pro.html'
+  homepage 'https://www.devontechnologies.com/apps/devonagent'
 
   auto_updates true
 

@@ -1,6 +1,6 @@
 cask 'eventstore' do
-  version '5.0.0'
-  sha256 '5bcea119d3971c3bf9de5e0ce2a6963818a508a7071909a3d8d2b44a6d9063ed'
+  version '5.0.5'
+  sha256 '4e0a88817f6243c3f0ef319520a628c7433af5338331f9ad45ca6192e9f8a219'
 
   url "https://eventstore.org/downloads/macos/EventStore-OSS-MacOS-macOS-v#{version}.tar.gz"
   name 'Event Store'

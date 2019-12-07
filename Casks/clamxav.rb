@@ -1,6 +1,6 @@
 cask 'clamxav' do
-  version '3.0.10_7854'
-  sha256 'dbac25f51c23b7ccd672eb10bf7fe75c61c51c5aa6109c60e8c30d19273827df'
+  version '3.0.14_8208'
+  sha256 'd829a9af263f264efe490f2ab8ed06bf937fbee553165a5f164bd9640bdedb47'
 
   url "https://cdn.clamxav.com/ClamXAVdownloads/ClamXAV_#{version}.zip"
   appcast "https://www.clamxav.com/sparkle/appcast#{version.major}.xml"

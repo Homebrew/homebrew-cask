@@ -4,7 +4,7 @@ cask 'fluor' do
 
   # pyrolyse.it was verified as official when first introduced to the cask
   url "https://resources.pyrolyse.it/distrib/Fluor/Fluor%20#{version}.dmg"
-  appcast 'https://updates.pyrolyse.it/Fluor/2.0/appcast.xml'
+  appcast 'https://fluorapp.net/'
   name 'Fluor'
   homepage 'https://fluorapp.net/'
 

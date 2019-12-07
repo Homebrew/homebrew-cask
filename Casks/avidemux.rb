@@ -1,9 +1,9 @@
 cask 'avidemux' do
-  version '2.7.2'
-  sha256 '0418e55697da2a362fab3f62c8efd3ebf16ba627b40152fd5cf19126f83ff54d'
+  version '2.7.4'
+  sha256 'a5c5028ecc954b6658b4c0e6b04c1c186c42a12530e66a5379f51fe7a3ebfcd8'
 
   # sourceforge.net/avidemux was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/avidemux/avidemux/#{version}/Avidemux_#{version}_Mojave_64Bits_Qt5.dmg"
+  url "https://downloads.sourceforge.net/avidemux/avidemux/#{version}/Avidemux_#{version}_Mojava_64Bits_Qt5.dmg"
   appcast 'https://sourceforge.net/projects/avidemux/rss?path=/avidemux'
   name 'Avidemux'
   homepage 'https://www.avidemux.org/'

@@ -1,6 +1,6 @@
 cask 'musaicfm' do
-  version '1.1'
-  sha256 '947c7eb45c680936eb86dc5f2c6f1f188e16d9c7c75bf68bb5216e343c0f6df9'
+  version '1.1.5'
+  sha256 'b90d8415d2da79f65dda072c0e6bb1dd8c2ccb1f92555283f55368d9d065222f'
 
   url "https://github.com/docterd/MusaicFM/releases/download/#{version}/MusaicFM.saver.zip"
   appcast 'https://github.com/docterd/MusaicFM/releases.atom'

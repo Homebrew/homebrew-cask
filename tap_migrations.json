@@ -22,6 +22,7 @@
   "hyper": "homebrew/core",
   "idris": "homebrew/core",
   "jenkins": "homebrew/core",
+  "minikube": "homebrew/core",
   "mitmproxy": "homebrew/core",
   "mosh": "homebrew/core",
   "nmap": "homebrew/core",

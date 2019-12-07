@@ -44,15 +44,16 @@ CASK_REPOS.each do |repo|
     '.gitignore',
     '.travis.yml',
     'Casks/.rubocop.yml',
-    'CODE_OF_CONDUCT.md',
   ].each do |path|
     FileUtils.rm_rf File.join(repo_dir, path)
     FileUtils.cp_r path, File.join(repo_dir, path)
   end
 
+  # Remove actions which should only be run from the main repo.
   FileUtils.rm_r File.join(repo_dir, '.github/actions/sync')
-  workflow = File.read(File.join(repo_dir, '.github/main.workflow'))
-  File.write File.join(repo_dir, '.github/main.workflow'), workflow.gsub(/\["sync_[^"]+"\]/, '[]')
+  FileUtils.rm   File.join(repo_dir, '.github/workflows/generate_formulae.brew.sh_data.yml')
+  FileUtils.rm   File.join(repo_dir, '.github/workflows/sync_labels.yml')
+  FileUtils.rm   File.join(repo_dir, '.github/workflows/sync_templates_and_ci_config.yml')
 
   FileUtils.rm File.join(repo_dir, '.github/ISSUE_TEMPLATE/02_feature_request.md')
 

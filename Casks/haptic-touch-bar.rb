@@ -12,14 +12,13 @@ cask 'haptic-touch-bar' do
 
   app 'Haptic Touch Bar.app'
 
-  uninstall quit:       [
-                          'com.bopsoft.HapticTouchBar',
-                          'com.devmate.*',
-                          'com.gilt.cleanroom.CleanroomLogger',
-                          'com.paddle.Paddle',
-                          'org.sparkle-project.Sparkle.Autoupdate',
-                        ],
-            login_item: 'Haptic Touch Bar'
+  uninstall quit: [
+                    'com.bopsoft.HapticTouchBar',
+                    'com.devmate.*',
+                    'com.gilt.cleanroom.CleanroomLogger',
+                    'com.paddle.Paddle',
+                    'org.sparkle-project.Sparkle.Autoupdate',
+                  ]
 
   zap trash: [
                '~/Library/Application Support/Haptic Touch Bar',

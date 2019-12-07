@@ -1,12 +1,10 @@
 cask 'java' do
-  version '12.0.1,69cfe15208a647278a19ef0990eea691'
-  sha256 'cba6f42f82496f62c51fb544e243d440984d442bdc906550a30428d8be6189e5'
+  version '13.0.1,9:cec27d702aa74d5a8630c65ae61e4305'
+  sha256 '593c5c9dc0978db21b06d6219dc8584b76a59c79d57e6ec1b28ad0d848a7713f'
 
-  url "https://download.oracle.com/java/GA/jdk#{version.before_comma}/#{version.after_comma}/#{version.major}/GPL/openjdk-#{version.before_comma}_osx-x64_bin.tar.gz"
+  url "https://download.java.net/java/GA/jdk#{version.before_comma}/#{version.after_colon}/#{version.after_comma.before_colon}/GPL/openjdk-#{version.before_comma}_osx-x64_bin.tar.gz"
   name 'OpenJDK Java Development Kit'
-  homepage 'https://www.oracle.com/technetwork/java/javase/'
+  homepage 'https://openjdk.java.net/'
 
   artifact "jdk-#{version.before_comma}.jdk", target: "/Library/Java/JavaVirtualMachines/openjdk-#{version.before_comma}.jdk"
-
-  uninstall rmdir: '/Library/Java/JavaVirtualMachines'
 end

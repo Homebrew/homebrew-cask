@@ -1,12 +1,11 @@
 cask 'advancedrestclient' do
-  version '13.0.6'
-  sha256 'f5c851323730f0b9301e4e9087ea85074ae308dfebbfcbe70b7c1aba8ebd8364'
+  version '14.0.4'
+  sha256 '9a3ab7deeabe7271698a481dd85abfae501f2c530c99191df1ce9a8313c9b81f'
 
-  # github.com/advanced-rest-client/arc-electron was verified as official when first introduced to the cask
   url "https://github.com/advanced-rest-client/arc-electron/releases/download/v#{version}/arc-#{version}.dmg"
   appcast 'https://github.com/advanced-rest-client/arc-electron/releases.atom'
   name 'Advanced Rest Client'
-  homepage 'https://advancedrestclient.com/'
+  homepage 'https://github.com/advanced-rest-client/arc-electron'
 
   app 'AdvancedRestClient.app'
 

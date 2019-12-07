@@ -4,6 +4,7 @@ cask 'swift-explorer' do
 
   # bintray.com/artifact/download/roikku was verified as official when first introduced to the cask
   url "https://bintray.com/artifact/download/roikku/generic/SwiftExplorer-#{version}.dmg"
+  appcast 'http://www.619.io/swift-explorer'
   name 'Swift Explorer'
   homepage 'http://www.619.io/swift-explorer'
 

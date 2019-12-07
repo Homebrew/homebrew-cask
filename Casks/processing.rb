@@ -9,6 +9,8 @@ cask 'processing' do
 
   app 'Processing.app'
 
+  uninstall quit: 'org.processing.app'
+
   zap trash: [
                '~/Library/Processing',
                '~/Preferences/org.processing.app.plist',

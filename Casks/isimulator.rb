@@ -1,6 +1,6 @@
 cask 'isimulator' do
-  version '3.2.1'
-  sha256 'abc66371488a1dce6fb96054cf6ff40d03c1ff4363cb650b6dd49e8cf1ce8818'
+  version '3.2.2'
+  sha256 'd5e4404ac404aa39a4c44486bbbfe60ff6d90c371f5e4944fb8ff7cc09e1b30a'
 
   url "https://github.com/wigl/iSimulator/releases/download/#{version}/iSimulator.zip"
   appcast 'https://github.com/wigl/iSimulator/releases.atom'
