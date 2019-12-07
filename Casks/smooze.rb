@@ -1,6 +1,6 @@
 cask 'smooze' do
-  version '1.8.5'
-  sha256 'cdeb8b4559b74bb7a51fd13e46eeecfdef99d386e1b32581f5053ab7a49eb179'
+  version '1.8.7'
+  sha256 'a4f611dafd56dc2de8acf38da34ee57bde28cea4d0e7df70590dcb4e72583d09'
 
   url 'https://smooze.co/updates/Smooze.dmg'
   appcast 'https://smooze.co/updates/update.xml'
