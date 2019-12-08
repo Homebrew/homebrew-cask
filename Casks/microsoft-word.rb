@@ -23,6 +23,7 @@ cask 'microsoft-word' do
   zap trash:     [
                    '~/Library/Application Scripts/com.microsoft.Word',
                    '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.word.sfl*',
+                   '~/Library/Application Support/CrashReporter/Microsoft Word_*.plist',
                    '~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate.fba',
                    '~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate2',
                    '~/Library/Caches/com.microsoft.autoupdate.fba',
