@@ -62,6 +62,7 @@ cask 'microsoft-office' do
                    '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.excel.sfl*',
                    '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.powerpoint.sfl*',
                    '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.word.sfl*',
+                   '~/Library/Application Support/CrashReporter/Microsoft Error Reporting_*.plist',
                    '~/Library/Application Support/Microsoft AutoUpdate',
                    '~/Library/Application Support/Microsoft Update Assistant',
                    '~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate.fba',
