@@ -7,6 +7,7 @@ cask 'rightfont' do
   name 'RightFont'
   homepage 'https://rightfontapp.com/'
 
+  auto_updates true
   depends_on macos: '>= :yosemite'
 
   app "RightFont #{version.major}.app"
