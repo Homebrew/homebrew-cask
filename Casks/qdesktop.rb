@@ -6,7 +6,7 @@ cask 'qdesktop' do
   url "https://github.com/qvacua/qdesktop/releases/download/v#{version.before_comma}-#{version.after_comma}/Qdesktop-#{version.before_comma}.zip"
   appcast 'https://github.com/qvacua/qdesktop/releases.atom'
   name 'Qdesktop'
-  homepage 'http://qvacua.com/'
+  homepage 'https://github.com/qvacua/qdesktop'
 
   app 'Qdesktop.app'
 end
