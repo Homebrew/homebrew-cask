@@ -17,6 +17,6 @@ cask 'tower' do
                '~/Library/Application Support/com.fournova.Tower*',
                '~/Library/Caches/com.fournova.Tower*',
                '~/Library/Preferences/com.fournova.Tower*.plist',
-               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.fournova.tower3.sfl2',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.fournova.tower*.sfl2',
              ]
 end
