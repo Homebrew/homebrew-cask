@@ -1,5 +1,5 @@
 cask 'reaper' do
-  version '6.0.1'
+  version '6.01'
 
   if MacOS.version <= :mojave
     sha256 '05f5eedf73ece7f928c32aa7bdc0bfd799503f3f9fba5a2ed990b6ee4237e91e'
