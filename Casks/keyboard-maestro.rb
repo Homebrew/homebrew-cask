@@ -10,6 +10,8 @@ cask 'keyboard-maestro' do
 
   depends_on macos: '>= :yosemite'
 
+  auto_updates true
+
   app 'Keyboard Maestro.app'
 
   zap trash: [
