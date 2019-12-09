@@ -5,7 +5,7 @@ cask 'stand' do
   # get-stand-app.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://get-stand-app.s3.amazonaws.com/#{version.patch}/Stand.zip"
   appcast 'https://standapp-sparkle-updater.herokuapp.com/',
-          configure: version.major_minor
+          configuration: version.major_minor
   name 'Stand'
   homepage 'https://getstandapp.com/'
 
