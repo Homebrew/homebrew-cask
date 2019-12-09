@@ -8,6 +8,7 @@ cask 'keyboard-maestro' do
   name 'Keyboard Maestro'
   homepage 'https://www.keyboardmaestro.com/main/'
 
+  auto_updates true
   depends_on macos: '>= :yosemite'
 
   app 'Keyboard Maestro.app'
