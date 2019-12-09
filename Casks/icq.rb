@@ -4,7 +4,8 @@ cask 'icq' do
 
   # hb.bizmrg.com/icq-www was verified as official when first introduced to the cask
   url 'https://hb.bizmrg.com/icq-www/mac/x64/icq.dmg'
-  name 'ICQ for macOS'
+  appcast "https://icq-www.hb.bizmrg.com/mac/x64/#{version}/version.xml"
+  name 'ICQ'
   homepage 'https://icq.com/mac/en'
 
   app 'ICQ.app'
