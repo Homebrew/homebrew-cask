@@ -4,7 +4,7 @@ cask 'kapitainsky-rclone-browser' do
 
   url "https://github.com/kapitainsky/RcloneBrowser/releases/download/#{version.before_comma}/rclone-browser-#{version.before_comma}-#{version.after_comma}.dmg"
   appcast 'https://github.com/kapitainsky/RcloneBrowser/releases.atom'
-  name 'Rclone Browser (kapitainsky fork)'
+  name 'Rclone Browser'
   homepage 'https://github.com/kapitainsky/RcloneBrowser'
 
   depends_on formula: 'rclone'
