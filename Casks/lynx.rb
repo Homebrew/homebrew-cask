@@ -1,6 +1,6 @@
 cask 'lynx' do
-  version '6.1.11.0'
-  sha256 '5ee0fb7612e127e13d04b06b32c163f663efc16ed7573219f819912286e9876c'
+  version '6.6.1.0'
+  sha256 '87645760e658b6fd124c8ae9fd29e0796d53710528ebab49bb854e432c4e208b'
 
   url 'https://download.saharasupport.com/lynx/production/macx/Lynx-install.dmg'
   appcast 'https://downloads.saharasupport.com/lynx/production/macx/version.txt'

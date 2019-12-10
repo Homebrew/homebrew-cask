@@ -3,11 +3,12 @@ cask 'birdfont' do
     version '2.19.4'
     sha256 '013d9c42c2252b57079453bd27e4c18dbbc09eda55563ff1516fd079c0499f76'
   else
-    version '3.19.0'
-    sha256 '4d92bbd04580073965455ac7afe2c24e3b27118e1fb70198a6c71e37e284e094'
+    version '3.32.2'
+    sha256 '858ed49d0a517861c2f5512c80640fe134c9ad9137fb88d1d3962fab5a768b19'
   end
 
   url "https://birdfont.org/download/birdfont-#{version}-free.dmg"
+  appcast 'https://birdfont.org/purchase.php'
   name 'BirdFont'
   homepage 'https://birdfont.org/'
 

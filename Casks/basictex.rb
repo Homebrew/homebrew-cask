@@ -1,6 +1,6 @@
 cask 'basictex' do
-  version '2018.0417'
-  sha256 'f815d68391f74c5bc639ae421804bfb1342eb346e1eca23d11eb9ee3d4d9db46'
+  version '2019.1011'
+  sha256 'b40998a06132364b4e58ca1be77c4b86d3e9514a4a59d8712a912b78593620cd'
 
   # mirror.ctan.org/systems/mac/mactex was verified as official when first introduced to the cask
   url "http://mirror.ctan.org/systems/mac/mactex/mactex-basictex-#{version.no_dots}.pkg"
@@ -11,7 +11,7 @@ cask 'basictex' do
                          'mactex-no-gui',
                          'mactex',
                        ]
-  depends_on macos: '>= :yosemite'
+  depends_on macos: '>= :sierra'
 
   pkg "mactex-basictex-#{version.no_dots}.pkg"
 

@@ -1,9 +1,10 @@
 cask 'sage' do
-  version '8.5,10.14.2'
-  sha256 'b5930f3c07ab15e3308f132c1d3976ee49ab6e15339d18dda78f3648e2b7b624'
+  version '8.9,10.14.6'
+  sha256 '48dfbd697eaadb77913f8a57e01444e45826bdfeabf5e27ba1bc215c4cbd1764'
 
   # mirrors.mit.edu/sage/osx/intel was verified as official when first introduced to the cask
-  url "http://mirrors.mit.edu/sage/osx/intel/sage-#{version.before_comma}-OSX_#{version.after_comma}-x86_64.app.dmg"
+  url "https://mirrors.mit.edu/sage/osx/intel/sage-#{version.before_comma}-OSX_#{version.after_comma}-x86_64.app.dmg"
+  appcast 'https://mirrors.mit.edu/sage/osx/intel/index.html'
   name 'Sage'
   homepage 'https://www.sagemath.org/'
 

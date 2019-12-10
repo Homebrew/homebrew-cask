@@ -3,11 +3,11 @@ cask 'free-download-manager' do
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://dn3.freedownloadmanager.org/#{version.major}/#{version}-latest/fdm.dmg"
+  appcast 'https://www.freedownloadmanager.org/download.htm'
   name 'Free Download Manager'
   homepage 'https://www.freedownloadmanager.org/'
 
   auto_updates true
-  depends_on macos: '>= :mavericks'
 
   app 'Free Download Manager.app'
 

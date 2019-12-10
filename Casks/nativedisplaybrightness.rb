@@ -9,6 +9,5 @@ cask 'nativedisplaybrightness' do
 
   app 'NativeDisplayBrightness.app'
 
-  uninstall login_item: 'NativeDisplayBrightness',
-            quit:       'com.bensge.NativeDisplayBrightness'
+  uninstall quit: 'com.bensge.NativeDisplayBrightness'
 end

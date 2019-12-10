@@ -1,10 +1,10 @@
 cask 'lingo' do
-  version '4.4'
-  sha256 'd8704fd5ac6231d1378e0122e3ccc4d7698321f768be8665d3430deb0b1dd36a'
+  version '10.0'
+  sha256 'bc16c02a73b23ac3c9889d1dd524eb125b0826b621ff6298fcf3023d94e1f903'
 
   # nounproject.s3.amazonaws.com/lingo was verified as official when first introduced to the cask
   url 'https://nounproject.s3.amazonaws.com/lingo/Lingo.dmg'
-  appcast 'https://rink.hockeyapp.net/api/2/apps/7d71478daf6447bda4094e216e97b0cf'
+  appcast 'https://www.lingoapp.com/mac/appcast'
   name 'Lingo'
   homepage 'https://www.lingoapp.com/'
 

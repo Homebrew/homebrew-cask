@@ -1,9 +1,10 @@
 cask 'sejda-pdf' do
-  version '5.2.0'
-  sha256 '3e8ca537c05d16b105aa3828a229deebc2ba370cde86cec40ceca85c9f46ff92'
+  version '5.3.7'
+  sha256 '699335cd3119a80afb9fb3e10246b28a43d9cc7ed35ec20158064dbd22406409'
 
   # sejda-cdn.com was verified as official when first introduced to the cask
   url "https://sejda-cdn.com/downloads/sejda-desktop_#{version}.dmg"
+  appcast 'https://www.sejda.com/desktop'
   name 'Sejda PDF Desktop'
   homepage 'https://www.sejda.com/desktop'
 

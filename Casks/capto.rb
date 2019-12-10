@@ -1,6 +1,6 @@
 cask 'capto' do
-  version '1.2.10,1541678419'
-  sha256 '41a5c554791dd4432e9ede6923e2c40e7d0e2839fc2f970e69648a9c21a1f604'
+  version '1.2.15,1575375754'
+  sha256 'af7fdda852eb242ee3358d2f06b758d1241de524887067658129be1eec735040'
 
   # dl.devmate.com/com.globaldelight.Capto was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.globaldelight.Capto/#{version.before_comma}/#{version.after_comma}/Capto-#{version.before_comma}.dmg"

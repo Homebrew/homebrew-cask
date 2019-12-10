@@ -1,11 +1,13 @@
 cask 'moneywiz' do
-  version '3.2.0'
-  sha256 '3046e64d66b6e7a211c1e2e1548cef0c56c001a9ca69e9fcff9ae2516cbff324'
+  version '3.6.3'
+  sha256 'c852c610d73f4690273ada87c611ac517fb685fab3497f7065e1de6344a16b87'
 
   url 'https://mac.wiz.money/MoneyWiz_Mac_Free.dmg'
   appcast 'https://macdistribution.wiz.money/version_info_free.xml'
   name 'MoneyWiz'
   homepage 'https://wiz.money/'
+
+  depends_on macos: '>= :sierra'
 
   app "MoneyWiz #{version.major}.app"
 end

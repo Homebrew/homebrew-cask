@@ -18,23 +18,29 @@ cask 'cocktail' do
     url "https://www.maintain.se/downloads/sparkle/elcapitan/Cocktail_#{version}.zip"
     appcast 'https://www.maintain.se/downloads/sparkle/elcapitan/elcapitan.xml'
   elsif MacOS.version <= :sierra
-    version '10.8'
-    sha256 '54fb6665cd43f4fb1a536e475fe71d6f1ca12ff547948a35e6625f2fb7997578'
+    version '10.9.1'
+    sha256 'c41bdcff4e0a1bdf3b0b1dfa11e12de71acf64010c7dccfd337ec2f42ca7bd4f'
 
     url "https://www.maintain.se/downloads/sparkle/sierra/Cocktail_#{version}.zip"
     appcast 'https://www.maintain.se/downloads/sparkle/sierra/sierra.xml'
   elsif MacOS.version <= :high_sierra
-    version '11.6.4'
-    sha256 '1e606fd287fdb4adb7e64d345dfd007458b216ed06694abf54f1c799037986be'
+    version '11.7'
+    sha256 'e1d8b4529963e94b8a5d710ee3dd75f15423701aead815da271d624b2c653278'
 
     url "https://www.maintain.se/downloads/sparkle/highsierra/Cocktail_#{version}.zip"
     appcast 'https://www.maintain.se/downloads/sparkle/highsierra/highsierra.xml'
-  else
-    version '12.1'
-    sha256 '6d29ae99abcf43e2217827104de145dae6c4750f9754e15db6f491929ca92b07'
+  elsif MacOS.version <= :mojave
+    version '12.4.2'
+    sha256 'cae4d5f4eee8a37064290fddda584d4ce90add02dc7c66ec56c5842e5dc82c2b'
 
     url "https://www.maintain.se/downloads/sparkle/mojave/Cocktail_#{version}.zip"
     appcast 'https://www.maintain.se/downloads/sparkle/mojave/mojave.xml'
+  else
+    version '13.0.0.1'
+    sha256 'f65b641fc5ff9e83feffac8d15be37da89c7a631673fa7ab86dc21e06aa4d58e'
+
+    url "https://www.maintain.se/downloads/sparkle/catalina/Cocktail_#{version}.zip"
+    appcast 'https://www.maintain.se/downloads/sparkle/catalina/catalina.xml'
   end
 
   name 'Cocktail'

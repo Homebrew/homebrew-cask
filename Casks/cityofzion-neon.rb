@@ -1,6 +1,6 @@
 cask 'cityofzion-neon' do
-  version '2.0.0'
-  sha256 'e4d3f7143bc7ee1e503fdfc64b4b46a1fe383891a0ad51dbad9a6e614c6e2590'
+  version '2.3.0'
+  sha256 'a6e9eb6365f05b4952918cf1734fd62e172d622c2c68f728811d7624c3c1a9f1'
 
   url "https://github.com/CityOfZion/neon-wallet/releases/download/#{version}/Neon-#{version}.Mac.dmg"
   appcast 'https://github.com/CityOfZion/neon-wallet/releases.atom'

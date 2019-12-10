@@ -86,6 +86,11 @@ def excluded_app_name(app_name)
   %r{^osascript$}.match(app_name) # this script itself
 end
 
+def expand(table)
+  @COLUMNS = `/usr/bin/tput cols`.to_i
+  puts `echo '#{table}'| /usr/bin/expand -t#{@COLUMNS / 2}`
+end
+
 def report_apps
   running = Set.new
   @app_names.zip(@bundle_ids, @unix_ids).each do |app_name, bundle_id, _unix_id|
@@ -95,9 +100,9 @@ def report_apps
     running.add "#{bundle_id}\t#{app_name}"
   end
 
-  puts "bundle_id\tapp_name\n"
-  puts "--------------------------------------\n"
-  puts running.to_a.sort
+  expand "bundle_id\tapp_name"
+  puts "-" * @COLUMNS + "\n"
+  expand running.to_a.sort.join "\n"
 end
 
 ###

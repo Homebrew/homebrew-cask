@@ -14,6 +14,7 @@ cask 'sketchup' do
                "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sketchup.sketchup.#{version.before_comma}.sfl*",
                "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sketchup.stylebuilder.#{version.before_comma}.sfl*",
                "~/Library/Application Support/SketchUp #{version.before_comma}",
+               '~/Library/Application Support/Trimble Connect for SketchUp',
                "~/Library/Caches/com.sketchup.SketchUp.#{version.before_comma}",
                "~/Library/Cookies/com.sketchup.SketchUp.#{version.before_comma}.binarycookies",
                "~/Library/Preferences/com.sketchup.SketchUp.#{version.before_comma}.plist",

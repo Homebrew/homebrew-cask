@@ -8,5 +8,14 @@ cask 'textricator' do
   name 'Textricator'
   homepage 'https://textricator.mfj.io/'
 
-  binary "textricator-#{version}/textricator"
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/62500)
+  shimscript = "#{staged_path}/textricator.wrapper.sh"
+  binary shimscript, target: 'textricator'
+
+  preflight do
+    IO.write shimscript, <<~EOS
+      #!/bin/sh
+      java -cp "#{staged_path}/textricator-#{version}/lib/*" ${JAVA_OPTS} io.mfj.textricator.cli.TextricatorCli "$@"
+    EOS
+  end
 end

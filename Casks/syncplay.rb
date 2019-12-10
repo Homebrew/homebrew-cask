@@ -1,12 +1,14 @@
 cask 'syncplay' do
-  version '1.6.1'
-  sha256 '88dd53b6396d0b32aa82f4c8570bb42489541dff1a5f95e056a988966e4d9c89'
+  version '1.6.4a'
+  sha256 'bab6c7afcfd0d30167bba3bb1cd76e12becaae9f249f04e79c6610badef10023'
 
   # github.com/Syncplay/syncplay was verified as official when first introduced to the cask
   url "https://github.com/Syncplay/syncplay/releases/download/v#{version}/Syncplay_#{version}.dmg"
   appcast 'https://github.com/Syncplay/syncplay/releases.atom'
   name 'Syncplay'
   homepage 'https://syncplay.pl/'
+
+  depends_on macos: '>= :sierra'
 
   app 'Syncplay.app'
 

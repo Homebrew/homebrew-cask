@@ -1,13 +1,15 @@
 cask 'adguard' do
-  version '1.5.14'
-  sha256 'a30b9654bd889e9d5b3e20ee0cf2573b901f784df49336121edfabb9c73bda59'
+  version '2.2.3.661'
+  sha256 '9668a1f8cebe71867524de3f68d68b1f21b97dfc1e50433ec4d16fd73f18fca4'
 
-  url "https://static.adguard.com/mac/Adguard-#{version}.release.dmg"
+  url "https://static.adguard.com/mac/release/AdGuard-#{version}.dmg"
   appcast 'https://static.adguard.com/mac/adguard-release-appcast.xml'
-  name 'Adguard for Mac'
+  name 'Adguard'
   homepage 'https://adguard.com/'
 
-  app 'Adguard.app'
+  pkg 'AdGuard.pkg'
+
+  uninstall pkgutil: 'com.adguard.mac.adguard-pkg'
 
   zap trash: [
                '/Library/Application Support/com.adguard.Adguard',

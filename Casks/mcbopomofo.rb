@@ -1,6 +1,6 @@
 cask 'mcbopomofo' do
-  version '0.9.9'
-  sha256 'd49304cbd5511f29658b5be57a60d9915a55e57f3d7f2d1fa7a8ed1ead4849a4'
+  version '0.9.10'
+  sha256 '98b34a121cd6a13acdc2ebcc83af7e9c069e01bd680a76c1f1fa1add2e051556'
 
   # github.com was verified as official when first introduced to the cask
   url "https://github.com/openvanilla/McBopomofo/releases/download/#{version}/McBopomofo-Installer-#{version}.zip"

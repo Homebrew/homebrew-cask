@@ -11,4 +11,19 @@ cask 'haptic-touch-bar' do
   depends_on macos: '>= :sierra'
 
   app 'Haptic Touch Bar.app'
+
+  uninstall quit: [
+                    'com.bopsoft.HapticTouchBar',
+                    'com.devmate.*',
+                    'com.gilt.cleanroom.CleanroomLogger',
+                    'com.paddle.Paddle',
+                    'org.sparkle-project.Sparkle.Autoupdate',
+                  ]
+
+  zap trash: [
+               '~/Library/Application Support/Haptic Touch Bar',
+               '~/Library/Caches/com.bopsoft.HapticTouchBar',
+               '~/Library/Cookies/com.bopsoft.HapticTouchBar.binarycookies',
+               '~/Library/Preferences/com.bopsoft.HapticTouchBar.plist',
+             ]
 end

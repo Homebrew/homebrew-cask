@@ -1,14 +1,16 @@
 cask 'tableau-prep' do
-  version '2018.3.2'
-  sha256 'e193dd1733fd6cf06e2284fa6b9b8b0d23d9f3922b46c7670863a24c5fe874e5'
+  version '2019.4.1'
+  sha256 'c2f02bfc3f99850a10a2f3988f4a13872ba95874350740e4644b1e7c032e4779'
 
   url "https://downloads.tableau.com/esdalt/tableau_prep/#{version}/TableauPrep-#{version.dots_to_hyphens}.dmg"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.tableau.com/downloads/prep/mac',
+          configuration: version.dots_to_hyphens
   name 'Tableau Prep'
   homepage 'https://www.tableau.com/support/releases/prep'
 
   depends_on macos: '>= :el_capitan'
 
-  pkg 'Tableau Prep.pkg'
+  pkg 'Tableau Prep Builder.pkg'
 
   uninstall pkgutil: [
                        'com.amazon.redshiftodbc',

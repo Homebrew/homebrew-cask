@@ -8,8 +8,6 @@ cask 'adobe-acrobat-pro' do
   name 'Adobe Acrobat Pro DC'
   homepage 'https://acrobat.adobe.com/us/en/acrobat/pdf-reader.html'
 
-  depends_on macos: '>= :mavericks'
-
   pkg 'Acrobat DC/Acrobat DC Installer.pkg'
 
   uninstall pkgutil:   [

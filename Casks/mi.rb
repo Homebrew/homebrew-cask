@@ -1,6 +1,6 @@
 cask 'mi' do
-  version '3.0.1'
-  sha256 'c8ff11f8b8836920d2db33a74e2c7a5aa53153772024dcd4fe9aae386725f44a'
+  version '3.0.4'
+  sha256 'f6e5d1a6845277a9bb5b994df713f9523a0ce7e9071ed85a3a88917adee281e7'
 
   url "https://www.mimikaki.net/download/mi#{version}.dmg"
   appcast 'https://www.mimikaki.net/download/appcast.xml'

@@ -1,6 +1,6 @@
 cask 'radio-silence' do
   version '2.3'
-  sha256 '0127f722cb15768392437b917d2beed2cbcab35eeccee2d77c61ac2a5997ebd1'
+  sha256 '4c9b6db366d542ad9bc839dc496521ff7133e13d0c71435cacf30f449718f0d6'
 
   url "https://radiosilenceapp.com/downloads/Radio_Silence_#{version}.pkg"
   appcast 'https://radiosilenceapp.com/update'

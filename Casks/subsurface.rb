@@ -1,8 +1,9 @@
 cask 'subsurface' do
-  version '4.8.4'
-  sha256 'cfeca3d917c99285c42fa6fb9bfd6f2725ce057450b8b26dbfe800278af50d2b'
+  version '4.9.3'
+  sha256 '00f6b59d75c6435f64045d0b452be9e61223592761a0d88c4f93c45330308fab'
 
   url "https://subsurface-divelog.org/downloads/Subsurface-#{version}.dmg"
+  appcast 'https://subsurface-divelog.org/download/'
   name 'Subsurface'
   homepage 'https://subsurface-divelog.org/'
 

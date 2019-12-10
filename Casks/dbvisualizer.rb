@@ -1,8 +1,9 @@
 cask 'dbvisualizer' do
-  version '10.0.16'
-  sha256 '196d9ade076da077848e54d48db57131c441f88d6e4846c56da786759bafd82e'
+  version '10.0.25'
+  sha256 '10045ef2e7f633cfa09cdcb7adf95259f2ba75000fb52085be131bfdaba59112'
 
   url "https://www.dbvis.com/product_download/dbvis-#{version}/media/dbvis_macos_#{version.dots_to_underscores}_jre.dmg"
+  appcast "https://www.dbvis.com/download/#{version.major}.0"
   name 'DbVisualizer'
   homepage 'https://www.dbvis.com/'
 
@@ -15,8 +16,4 @@ cask 'dbvisualizer' do
   uninstall signal: [['TERM', 'com.dbvis.DbVisualizer']]
 
   zap trash: '~/.dbvis'
-
-  caveats do
-    depends_on_java '8'
-  end
 end

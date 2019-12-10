@@ -8,8 +8,6 @@ cask 'fuse' do
   name 'Fuse Fusetools'
   homepage 'https://fuse-open.github.io/'
 
-  depends_on macos: '>= :mavericks'
-
   pkg "fuse_osx_#{version.dots_to_underscores}.pkg"
 
   uninstall pkgutil: 'com.fusetools.fuse'

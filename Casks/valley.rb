@@ -6,8 +6,6 @@ cask 'valley' do
   name 'Valley Benchmark'
   homepage 'https://benchmark.unigine.com/valley'
 
-  depends_on macos: '>= mountain_lion'
-
   app 'Valley.app'
 
   zap trash: [

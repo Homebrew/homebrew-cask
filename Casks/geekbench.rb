@@ -2,9 +2,12 @@ cask 'geekbench' do
   if MacOS.version <= :mavericks
     version '3.4.2'
     sha256 '05e1b977a46648d38cf6c641be7ef34722200d0168a10d4372fca771ffa24e28'
+  elsif MacOS.version <= :sierra
+    version '4.4.2'
+    sha256 '3c46e630a28a0752afd702fc1cd379edd2420001be22302c932e61751284c0cc'
   else
-    version '4.3.2'
-    sha256 '4f995a7e9f6059195ec4e585bc6e1c450e35ace0b72ca6978c446ced75dae534'
+    version '5.0.4'
+    sha256 'e996413fc2c6a1d4cd437b6b7427d5ae9a62912547dc9c981d43341ef659deae'
   end
 
   url "https://cdn.geekbench.com/Geekbench-#{version}-Mac.zip"

@@ -1,6 +1,6 @@
 cask 'jsui' do
-  version '0.0.18'
-  sha256 'c9da288c5572b270f2ada5f9f5aca4d7df7d400821c0a79c9229f6d3f597b1b0'
+  version '0.0.24'
+  sha256 '28972f9f941360b23a29a5646233c75eb564c831600b3182ea1e6e9f54d8932c'
 
   url "https://github.com/kitze/JSUI/releases/download/v#{version}/JSUI-#{version}-mac.zip"
   appcast 'https://github.com/kitze/JSUI/releases.atom'

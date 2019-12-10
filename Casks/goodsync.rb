@@ -1,9 +1,10 @@
 cask 'goodsync' do
-  version '10.9.20.0'
-  sha256 '71971679fdb9caaf5f17dffa1b477b52ab165828c7fba549cb27834869ed7537'
+  version '10.10.13.3'
+  sha256 'b14510c8318fe358846cb23ad246a5f37e7ae2a8ac1d178240a3ae6b6262167c'
 
   url "https://www.goodsync.com/download/goodsync-v#{version.major}-mac.dmg"
-  appcast 'https://rink.hockeyapp.net/api/2/apps/8b491acdaa8942108b5d8b019be7fcef'
+  appcast 'https://www.goodsync.com/download?os=macos',
+          configuration: version.major_minor_patch
   name 'GoodSync'
   homepage 'https://www.goodsync.com/'
 

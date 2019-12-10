@@ -1,6 +1,6 @@
 cask 'chalk' do
-  version '1.3.2'
-  sha256 'f8eb490889e908bae4d8be614295e0a99891da147d0e0c21efaeceb91b91b32b'
+  version '1.4.0'
+  sha256 'bf3f9a558239fb82efd62c13b021bda9b516dc22eed2056646de30d0e1489ee4'
 
   url "https://www.chachatelier.fr/chalk/downloads/Chalk-#{version.dots_to_underscores}.dmg",
       user_agent: :fake
@@ -9,7 +9,6 @@ cask 'chalk' do
   homepage 'https://www.chachatelier.fr/chalk/'
 
   auto_updates true
-  depends_on macos: '>= :mavericks'
 
   app 'Chalk.app'
 

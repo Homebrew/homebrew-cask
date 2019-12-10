@@ -1,11 +1,11 @@
 cask 'repetier-host' do
-  version '1.1.0'
-  sha256 'cf65d6d89654b68bb3202d78ea2b0e61e33496e9e1b00fea5844253d795232c8'
+  version '1.2.0'
+  sha256 '2bb03be18ccb9698dc8bfebf0202a0dec2fa86f29e68872103aa5bd310383d47'
 
   url "https://download1.repetier.com/files/host-mac/Repetier-Host-Mac_#{version.dots_to_underscores}.dmg"
   appcast 'https://www.repetier.com/updates/rhm/rhm-appcast.xml'
   name 'Repetier-Host'
   homepage 'https://www.repetier.com/'
 
-  app 'Repetier-Host Mac.app'
+  app 'Repetier-Host-Mac.app'
 end

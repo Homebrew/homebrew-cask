@@ -1,9 +1,10 @@
 cask 'smartgit' do
-  version '18.2.3'
-  sha256 '475b49868da987a2ba5ac49e3bebb284f108d0d20615d8d3b34ff1f005c57a93'
+  version '19.1.5'
+  sha256 '56d0e2c5e50be769cc4f0d3aa5cfb956e7a04af4ccfdaed29b799bb959dfa402'
 
   url "https://www.syntevo.com/downloads/smartgit/smartgit-macosx-#{version.dots_to_underscores}.dmg"
-  appcast 'https://www.syntevo.com/smartgit/changelog.txt'
+  appcast 'https://www.syntevo.com/smartgit/changelog.txt',
+          configuration: version.chomp('.0')
   name 'SmartGit'
   homepage 'https://www.syntevo.com/smartgit/'
 

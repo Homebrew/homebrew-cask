@@ -1,6 +1,6 @@
 cask 'papers' do
-  version '3.4.19,573'
-  sha256 '2462f23d4db30f8fcd82273687eea79de030ccd622e695b33b38a9d8f3fb0be7'
+  version '3.4.23,587'
+  sha256 '6960a5ad8d886d67cf9ab39730baa04f9fb5fb64a2c28cd0c25073f9b515f565'
 
   # appcaster.papersapp.com/apps/mac/production/download was verified as official when first introduced to the cask
   url "https://appcaster.papersapp.com/apps/mac/production/download/#{version.after_comma}/papers_#{version.before_comma.no_dots}_#{version.after_comma}.dmg"

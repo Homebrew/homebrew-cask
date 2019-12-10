@@ -43,7 +43,6 @@ clean_sources () {
     /usr/bin/egrep -vi '^com\.microsoft\.(Automator|certificate\.framework|chart|converterlib|converters|excel\.pde|grammar|igx|mcp|merp|msls3|netlib|officeart|ole|oleo|powerplant|powerplantcore|powerpoint\.pde|speller|thesaurus|urlmon|wizard|wordforms|MSCommon|mbuinstrument_framework|mbukernel_framework|rdpkit)' | \
     /usr/bin/egrep -vi '^com\.google\.(Chrome\.framework|Chrome\.helper|Keystone|BreakpadFramework|GDataFramework|Reporter)' | \
     /usr/bin/egrep -vi '^atmo\.mac\.macho' |                                                                 \
-    /usr/bin/egrep -vi '^com\.3dconnexion\.driver\.client' |                                                 \
     /usr/bin/egrep -vi '^com\.Breakpad\.crash_report_sender' |                                               \
     /usr/bin/egrep -vi '^com\.Cycling74\.driver\.Soundflower' |                                              \
     /usr/bin/egrep -vi '^com\.HumbleDaisy\.HDCrashReporter' |                                                \
@@ -55,7 +54,7 @@ clean_sources () {
     /usr/bin/egrep -vi '^com\.cruzapp\.TDWebThumbnail' |                                                     \
     /usr/bin/egrep -vi '^com\.cycling74\.QTExportTool' |                                                     \
     /usr/bin/egrep -vi '^com\.fluidapp\.(BrowserBrowserPlugIn|FluidInstance|ThumbnailPlugIn)' |              \
-    /usr/bin/egrep -vi '^com\.github\.ObjectiveGit' |                                                        \
+    /usr/bin/egrep -vi '^com\.github\.(Electron\.framework|ObjectiveGit|Squirrel)' |                         \
     /usr/bin/egrep -vi '^com\.heroku\.RedisAdapter' |                                                        \
     /usr/bin/egrep -vi '^com\.instinctivecode\.MGScopeBar' |                                                 \
     /usr/bin/egrep -vi '^com\.intel\.nw\.helper' |                                                           \
@@ -94,8 +93,10 @@ clean_sources () {
     /usr/bin/egrep -vi '^org\.boredzo\.(LMX|ISO8601DateFormatter)' |                                         \
     /usr/bin/egrep -vi '^org\.dribin\.dave\.DDHidLib' |                                                      \
     /usr/bin/egrep -vi '^org\.linkbackproject\.LinkBack' |                                                   \
+    /usr/bin/egrep -vi '^org\.mantle\.Mantle' |                                                              \
     /usr/bin/egrep -vi '^org\.mozilla\.(crashreporter|plugincontainer|universalchardet|updater)' |           \
     /usr/bin/egrep -vi '^org\.python\.(python|PythonLauncher|buildapplet)' |                                 \
+    /usr/bin/egrep -vi '^org\.reactivecocoa\.ReactiveCocoa' |                                                \
     /usr/bin/egrep -vi '^org\.remotesensing\.libtiff' |                                                      \
     /usr/bin/egrep -vi '^org\.vafer\.FeedbackReporter'   |                                                   \
     /usr/bin/egrep -vi '^org\.xiph\.(ogg|vorbis)' |                                                          \

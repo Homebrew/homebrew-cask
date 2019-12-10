@@ -1,42 +1,26 @@
 cask 'wireshark' do
-  version '2.6.6'
-  sha256 '71920bf98e2867703759b0c98395480f88dee1c332efd3f2bc6a91eaec75b0a3'
+  version '3.0.7'
+  sha256 'cb69a2899b5a020fbe7b844388922aa893be1580a27c6747341e6008cb1b4441'
 
-  url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20Intel%2064.dmg"
-  appcast 'https://www.wireshark.org/download/osx/'
+  url "https://1.na.dl.wireshark.org/osx/all-versions/Wireshark%20#{version}%20Intel%2064.dmg"
+  appcast 'https://www.macupdater.net/cgi-bin/extract_text/extract_text_split_easy.cgi?url=https://www.wireshark.org/download.html&splitter_1=stable&index_1=1&splitter_2=development&index_2=0'
   name 'Wireshark'
   homepage 'https://www.wireshark.org/'
 
   conflicts_with cask: 'wireshark-chmodbpf'
+  depends_on macos: '>= :sierra'
 
-  pkg "Wireshark #{version} Intel 64.pkg"
+  app 'Wireshark.app'
+  pkg 'Install ChmodBPF.pkg'
+  pkg 'Add Wireshark to the system path.pkg'
 
   uninstall_preflight do
     set_ownership '/Library/Application Support/Wireshark'
+    system_command '/usr/sbin/dseditgroup', args: ['-o', 'delete', 'access_bpf'], sudo: true
   end
 
   uninstall pkgutil:   'org.wireshark.*',
-            launchctl: 'org.wireshark.ChmodBPF',
-            delete:    [
-                         '/private/etc/manpaths.d/Wireshark',
-                         '/private/etc/paths.d/Wireshark',
-                         '/usr/local/bin/capinfos',
-                         '/usr/local/bin/dftest',
-                         '/usr/local/bin/dumpcap',
-                         '/usr/local/bin/editcap',
-                         '/usr/local/bin/mergecap',
-                         '/usr/local/bin/randpkt',
-                         '/usr/local/bin/rawshark',
-                         '/usr/local/bin/text2pcap',
-                         '/usr/local/bin/tshark',
-                         '/usr/local/bin/wireshark',
-                       ],
-            script:    {
-                         executable:   '/usr/sbin/dseditgroup',
-                         args:         ['-o', 'delete', 'access_bpf'],
-                         must_succeed: false,
-                         sudo:         true,
-                       }
+            launchctl: 'org.wireshark.ChmodBPF'
 
   zap trash: '~/Library/Saved Application State/org.wireshark.Wireshark.savedState'
 end

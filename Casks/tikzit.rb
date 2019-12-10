@@ -1,6 +1,6 @@
 cask 'tikzit' do
-  version '2.1.1'
-  sha256 '49a00c97e3c4fa48b62e04012b5b91daf998d2677daab1e5c51caaf164791a9f'
+  version '2.1.4'
+  sha256 'aa3024cb27f89127661c701efad7737edd9739b52c1d7008d8d32ddb5793ee2b'
 
   # github.com/tikzit/tikzit was verified as official when first introduced to the cask
   url "https://github.com/tikzit/tikzit/releases/download/v#{version}/tikzit-osx.dmg"

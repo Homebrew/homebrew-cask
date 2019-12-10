@@ -1,9 +1,9 @@
 cask 'ganache' do
-  version '1.2.3'
-  sha256 '9346adf4f87fd2d4d92ab4f64d98011dfb7e71f84692ed35b1d73f040e86f0bf'
+  version '2.1.2'
+  sha256 '6ad434dc1fab941ac40e86acb2c755348974c84a2a543ee9ec0be16f192bb230'
 
   # github.com/trufflesuite/ganache was verified as official when first introduced to the cask
-  url "https://github.com/trufflesuite/ganache/releases/download/v#{version}/Ganache-#{version}.dmg"
+  url "https://github.com/trufflesuite/ganache/releases/download/v#{version}/Ganache-#{version}-mac.dmg"
   appcast 'https://github.com/trufflesuite/ganache/releases.atom'
   name 'Ganache'
   homepage 'https://truffleframework.com/ganache/'

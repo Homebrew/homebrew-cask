@@ -1,6 +1,6 @@
 cask 'dusty' do
-  version '0.7.3'
-  sha256 '6cf61f0dcdc541de123ffd1d8e035eb3fc36e51b626a072355df76c3efd15af9'
+  version '0.7.5'
+  sha256 '9e6cb17530053ffa7ba75bd4fd2b5840dc6508bd1d70166f3e6179ed30f5f721'
 
   url "https://github.com/gamechanger/dusty/releases/download/#{version}/dusty.tar.gz"
   appcast 'https://github.com/gamechanger/dusty/releases.atom'

@@ -1,9 +1,10 @@
 cask 'synthesia' do
-  version '10.4'
-  sha256 'a17b3a39c7351ad93cc3c099f7cc57520532a35a23fdd8fb73d1d7a86a8e6649'
+  version '10.6'
+  sha256 '15f15bbee05aea799fc2872f9253ab051444118c12fa1ae740a49bb7d24acde6'
 
   # synthesia.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://synthesia.s3.amazonaws.com/files/Synthesia-#{version}.dmg"
+  appcast 'https://feeds.feedburner.com/SynthesiaNews'
   name 'Synthesia'
   homepage 'https://www.synthesiagame.com/'
 

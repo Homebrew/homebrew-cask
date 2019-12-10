@@ -1,6 +1,6 @@
 cask 'ring' do
-  version '1.88'
-  sha256 'f584b2383f9d6f23476084c641188a5c8fe9c2b56ee9ab4a9a22c2bfa4daa15b'
+  version '2.4.0'
+  sha256 'f378d0f31a353fab104dade54313cf91c4e7a5063392b350476356c42277c1fb'
 
   # ring-mac-app-assets.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://ring-mac-app-assets.s3.amazonaws.com/production/Ring_#{version}.zip"

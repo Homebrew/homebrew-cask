@@ -3,6 +3,7 @@ cask 'maelstrom' do
   sha256 '78e714a422800b5a5026e7e719f74adf30e164a4c72a5c5db51cabb72a284402'
 
   url "https://www.libsdl.org/projects/Maelstrom/bin/Maelstrom-#{version}-MacOSX.dmg"
+  appcast 'https://www.libsdl.org/projects/Maelstrom/bin/'
   name 'Maelstrom'
   homepage 'https://www.libsdl.org/projects/Maelstrom/index.html'
 

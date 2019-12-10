@@ -1,6 +1,6 @@
 cask 'setapp' do
-  version '1.18.1,1539860348'
-  sha256 'bc240c0c64ff352fe17011408db00c85c5571cba0fb266d59655623e14eea9e0'
+  version '2.0,1557219613'
+  sha256 '3457b13921a3c4176e1e7228cec38fda75e8f0715752a1c63550d81eee889ae3'
 
   # devmate.com/com.setapp.InstallSetapp was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.setapp.InstallSetapp/#{version.before_comma}/#{version.after_comma}/InstallSetapp-#{version.before_comma}.zip"
@@ -9,6 +9,7 @@ cask 'setapp' do
   homepage 'https://setapp.com/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   installer manual: 'Install Setapp.app'
 

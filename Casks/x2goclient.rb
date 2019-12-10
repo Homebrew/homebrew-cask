@@ -20,5 +20,10 @@ cask 'x2goclient' do
 
   app 'x2goclient.app'
 
-  zap trash: '~/Library/Preferences/x2goclient.plist'
+  zap trash: [
+               '~/.x2go',
+               '~/.x2goclient',
+               '~/Library/Application Support/CrashReporter/x2goclient_*.plist',
+               '~/Library/Preferences/x2goclient.plist',
+             ]
 end

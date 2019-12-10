@@ -49,6 +49,6 @@ The examples above can become hard to read, however. Since many of these changes
 | `dots_to_hyphens`        | `1.2.3-a45,ccdd88` | `1-2-3-a45,ccdd88` |
 | `no_dots`                | `1.2.3-a45,ccdd88` | `123-a45,ccdd88`   |
 
-Similar to `dots_to_hyphens`, we provide all logical permutations of `{dots,hyphens,underscores,slashes}_to_{dots,hyphens,underscores,slashes}`. The same applies to `no_dots` in the form of `no_{dots,hyphens,underscores,slashes}`, with an extra `no_dividers` that applies all of those at once.
+Similar to `dots_to_hyphens`, we provide all logical permutations of `{dots,hyphens,underscores}_to_{dots,hyphens,underscores}`. The same applies to `no_dots` in the form of `no_{dots,hyphens,underscores}`, with an extra `no_dividers` that applies all of those at once.
 
 Finally, there are `before_colon` and `after_colon` that act like their `comma` counterparts. These four are extra special to allow for otherwise complex cases, and should be used sparingly. There should be no more than one of `,` and `:` per `version`. Use `,` first, and `:` only if absolutely necessary.

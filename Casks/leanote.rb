@@ -1,6 +1,6 @@
 cask 'leanote' do
-  version '2.6.1'
-  sha256 '12595377e6560689c5ca7370fb83be9670cbd335669da35ed3131123936050c2'
+  version '2.6.2'
+  sha256 '2d24602efe3a31b63b6fc82b91f28be0bb6f1939f7c2bb23a7a8455b3ed24a54'
 
   # sourceforge.net/leanote-desktop-app was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/leanote-desktop-app/#{version}/leanote-desktop-mac-v#{version}.zip"

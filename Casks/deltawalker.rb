@@ -1,9 +1,10 @@
 cask 'deltawalker' do
-  version '2.3.3'
-  sha256 'a3c3b0af528c67467fe0df4445526f9bb5eee722e335b8ac117286fe83d0a705'
+  version '2.5.5'
+  sha256 'c812738e1c6b8e1fd128f17aee0d5650aa8a3ad254465034ef5a6bcb87d27cf8'
 
-  # amazonaws.com/deltawalker was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/deltawalker/DeltaWalker-#{version}.dmg"
+  # deltawalker.s3.amazonaws.com was verified as official when first introduced to the cask
+  url "https://deltawalker.s3.amazonaws.com/DeltaWalker-#{version}.dmg"
+  appcast 'https://www.deltawalker.com/assets/js/main.js'
   name 'DeltaWalker'
   homepage 'https://www.deltawalker.com/'
 

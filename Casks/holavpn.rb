@@ -1,6 +1,6 @@
 cask 'holavpn' do
-  version '1.0.21'
-  sha256 '0994b474954add4cb822c4a7cee3b859a0b780f3e4729ec4352e237819d56a22'
+  version '1.0.25'
+  sha256 'a8f2468919174684210773ae01cc375feec8b83ccebfbd547c6bd230f2fd9b5f'
 
   url "https://cdn4.hola.org/static/HolaVPN-#{version}.dmg"
   appcast 'https://hola.org/macos_vpn_update.xml'

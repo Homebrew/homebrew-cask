@@ -8,7 +8,5 @@ cask '0-ad' do
   name '0 A.D.'
   homepage 'https://play0ad.com/'
 
-  depends_on macos: '>= :mavericks'
-
   app '0 A.D.app'
 end

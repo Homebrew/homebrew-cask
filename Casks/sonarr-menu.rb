@@ -8,7 +8,6 @@ cask 'sonarr-menu' do
   homepage 'https://github.com/jefbarn/Sonarr-Menu/'
 
   depends_on cask: 'sonarr'
-  depends_on macos: '>= :mavericks'
 
   app 'Sonarr-Menu.app'
 

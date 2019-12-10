@@ -1,6 +1,6 @@
 cask 'loginputmac' do
-  version '2.1.3'
-  sha256 '9e28b16cac9a071474c138ae597ba73e109b81bb2d072ce6cea46b760285aa57'
+  version '2.2.8'
+  sha256 '9f5b65efdee6b404c32e0a01633f0635e112f95b337f4d057d39071f8ad746b7'
 
   # loginput-mac2.content-delivery.top was verified as official when first introduced to the cask
   url "https://loginput-mac2.content-delivery.top/loginputmac#{version.major}_latest.pkg"
@@ -12,5 +12,6 @@ cask 'loginputmac' do
 
   pkg "loginputmac#{version.major}_latest.pkg"
 
-  uninstall pkgutil: "com.logcg.pkg.LoginputMac#{version.major}"
+  uninstall pkgutil: "com.logcg.pkg.LoginputMac#{version.major}",
+            quit:    "com.logcg.inputmethod.LogInputMac#{version.major}"
 end

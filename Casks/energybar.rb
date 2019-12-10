@@ -1,6 +1,6 @@
 cask 'energybar' do
-  version '1.5.18274'
-  sha256 'b415f109879926f588d24c2072f4751e971f5a4d18d878bdbe963e267eb5e43c'
+  version '1.7.19321'
+  sha256 '96c06a93d5916001306af401046295926bf38996d767365c199131e068d85627'
 
   url "https://github.com/billziss-gh/EnergyBar/releases/download/v#{version.major_minor}/EnergyBar-#{version}.zip"
   appcast 'https://github.com/billziss-gh/EnergyBar/releases.atom'

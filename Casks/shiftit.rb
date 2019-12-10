@@ -11,8 +11,6 @@ cask 'shiftit' do
 
   app 'ShiftIt.app'
 
-  uninstall login_item: 'Shiftit'
-
   zap trash: [
                '~/Library/Application Support/ShiftIt',
                '~/Library/Caches/org.shiftitapp.ShiftIt',

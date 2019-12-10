@@ -1,10 +1,11 @@
 cask 'indigo' do
-  version '7.2.0'
-  sha256 'bdba29f7903702613f46607683f614d8c9b9f5fccef23f5fd3b981e20358ab81'
+  version '7.4.0'
+  sha256 '0ca247789a7e6c2bdacdde086829e93b1c117c3fa94e2202fb548d37a059e8c6'
 
   # goprism.com was verified as official when first introduced to the cask
   url "http://cloud.goprism.com/download/Indigo_#{version.dots_to_underscores}.dmg"
-  name 'Indigo'
+  appcast 'https://www.indigodomo.com/downloads.html',
+          configuration: version.major_minor
   name 'Indigo Domotics'
   homepage 'https://www.indigodomo.com/'
 

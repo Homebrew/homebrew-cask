@@ -7,5 +7,8 @@ cask 'playonmac' do
   name 'PlayOnMac'
   homepage 'https://www.playonmac.com/en'
 
+  # PlayOnMac doesn't work on Catalina, see https://www.playonmac.com/en/topic-16558-macOS_Catalina_When_will_PlayOnMac_be_ready.html#m65029
+  depends_on macos: '<= :mojave'
+
   app 'PlayOnMac.app'
 end

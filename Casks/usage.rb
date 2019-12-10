@@ -7,8 +7,6 @@ cask 'usage' do
   name 'Usage'
   homepage 'https://www.mediaatelier.com/Usage/'
 
-  depends_on macos: '>= :mavericks'
-
   app 'Usage.app'
 
   zap trash: [

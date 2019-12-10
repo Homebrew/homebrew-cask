@@ -1,10 +1,11 @@
 cask 'eagle' do
-  version '9.2.2'
-  sha256 '23877a7ed1b71cba096f32e2e645edda44b1a1f7cc1ea20aebd0c4c6da200250'
+  version '9.5.2'
+  sha256 '499848f67b0930dfe21eccfd0f984ba3ffc74a793c625e7d45457e7d505fd2dc'
 
-  url "https://eagle-updates.circuits.io/downloads/#{version.dots_to_underscores}/Autodesk_EAGLE_#{version}_English_Mac_64bit.pkg"
+  url "https://trial2.autodesk.com/NET17SWDLD/2017/EGLPRM/ESD/Autodesk_EAGLE_#{version}_English_Mac_64bit.pkg"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.autodesk.com/eagle-download-mac'
   name 'Autodesk EAGLE'
-  homepage 'https://circuits.io/'
+  homepage 'https://www.autodesk.com/products/eagle/overview'
 
   pkg "Autodesk_EAGLE_#{version}_English_Mac_64bit.pkg"
 

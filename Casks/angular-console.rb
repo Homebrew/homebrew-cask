@@ -1,6 +1,6 @@
 cask 'angular-console' do
-  version '7.1.1'
-  sha256 '04e8cf5e5f2357fd534499c7d8b0c47e9042253439ef2fe3610a4bf0d2832d16'
+  version '8.1.0'
+  sha256 '7654069ef4366423386e276597d75c471b2a4725a1527fc6545b9b72af6737d1'
 
   # github.com/nrwl/angular-console was verified as official when first introduced to the cask
   url "https://github.com/nrwl/angular-console/releases/download/v#{version}/AngularConsole-#{version}.dmg"

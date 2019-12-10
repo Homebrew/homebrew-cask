@@ -1,8 +1,8 @@
 cask 'zesarux' do
-  version '7.1'
-  sha256 '4f1ff58d5d03a2e32c2f218ecbd5e6009e9123ca0e5141f4ba62863d0138a37e'
+  version '8.0'
+  sha256 '8b52f1c990d9abe3c702d2771d6ff761c9295687019b78d567b0f5b793a6650b'
 
-  url "https://github.com/chernandezba/zesarux/releases/download/#{version}-final/ZEsarUX_macos_opengl-#{version}.dmg.gz"
+  url "https://github.com/chernandezba/zesarux/releases/download/#{version}/ZEsarUX_macos-#{version}.dmg.gz"
   appcast 'https://github.com/chernandezba/zesarux/releases.atom'
   name 'ZEsarUX'
   homepage 'https://github.com/chernandezba/zesarux'

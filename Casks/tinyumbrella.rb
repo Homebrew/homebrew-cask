@@ -4,6 +4,7 @@ cask 'tinyumbrella' do
 
   # tinydev.space was verified as official when first introduced to the cask
   url "https://tinydev.space/downloads/#{version.dots_to_underscores}/tinyumbrella_macos_#{version.dots_to_underscores}_AppOnly_InstalledJRE.dmg"
+  appcast 'https://www.firmwareumbrella.com/'
   name 'TinyUmbrella'
   homepage 'https://www.firmwareumbrella.com/'
 

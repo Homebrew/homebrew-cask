@@ -1,14 +1,14 @@
 cask 'diffmerge' do
   version '4.2.1.1013'
-  sha256 '1f19897513fb7af8fc7d3b40643bd6dee80e401c7245a0ed774e8211fd48e388'
+  sha256 '59efeede7beb69a5b3bf3126787f73930984b3b423094500fe73623656f66d43'
 
-  url "http://download.sourcegear.com/DiffMerge/#{version.sub(%r{\.\d+$}, '')}/DiffMerge.#{version}.intel.stable.pkg"
+  url "http://download.sourcegear.com/DiffMerge/#{version.sub(%r{\.\d+$}, '')}/DiffMerge.#{version}.intel.stable.dmg"
   name 'DiffMerge'
   homepage 'https://www.sourcegear.com/diffmerge/'
 
-  pkg "DiffMerge.#{version}.intel.stable.pkg"
-
-  uninstall pkgutil: 'com.sourcegear.DiffMerge'
+  app 'DiffMerge.app'
+  binary 'Extras/diffmerge.sh', target: 'diffmerge'
+  manpage 'Extras/diffmerge.1'
 
   zap trash: [
                '~/Library/Preferences/com.sourcegear.DiffMerge.plist',

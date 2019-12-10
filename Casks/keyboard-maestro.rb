@@ -1,6 +1,6 @@
 cask 'keyboard-maestro' do
-  version '8.2.4'
-  sha256 '4547c28e7628b5c95112d18ed388d3f581fe231888bc062c152c279df7da6373'
+  version '9.0.4'
+  sha256 '8bef6d5bc2f62fe0c0a322a3ac0f1b1d87c8b3f0d1ea9d268d2d45adde075d7a'
 
   # stairways.com was verified as official when first introduced to the cask
   url "https://files.stairways.com/keyboardmaestro-#{version.no_dots}.zip"
@@ -8,6 +8,7 @@ cask 'keyboard-maestro' do
   name 'Keyboard Maestro'
   homepage 'https://www.keyboardmaestro.com/main/'
 
+  auto_updates true
   depends_on macos: '>= :yosemite'
 
   app 'Keyboard Maestro.app'

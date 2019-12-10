@@ -1,11 +1,12 @@
 cask 'lazpaint' do
-  version '6.2'
-  sha256 '76fc3688444c5ba1b9b3ee1be52d1197b83eef644aedd08a4a046206231292fd'
+  version '7.0.7'
+  sha256 '243325c99caabae9d99f817f171d369e73add46adeffe90209edcc737e5bb1ce'
 
-  url "https://downloads.sourceforge.net/lazpaint/lazpaint#{version}_osx32.zip"
-  appcast 'https://sourceforge.net/projects/lazpaint/rss'
+  # github.com/bgrabitmap/lazpaint was verified as official when first introduced to the cask
+  url "https://github.com/bgrabitmap/lazpaint/releases/download/v#{version}/lazpaint#{version}_macos64.dmg"
+  appcast 'https://github.com/bgrabitmap/lazpaint/releases.atom'
   name 'LazPaint'
-  homepage 'https://sourceforge.net/projects/lazpaint/'
+  homepage 'https://bgrabitmap.github.io/lazpaint/'
 
   app 'LazPaint.app'
 end

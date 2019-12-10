@@ -1,6 +1,6 @@
 cask 'boostnote' do
-  version '0.11.12'
-  sha256 'e849fdd13f5966ab4473a4476850167239f59b735bb255bfe568b04641771960'
+  version '0.13.0'
+  sha256 '10925f85c00d9a87aefb24c174de3644ea3755e4e7871afcb0a3ae07de6558f2'
 
   # github.com/BoostIO/boost-releases was verified as official when first introduced to the cask
   url "https://github.com/BoostIO/boost-releases/releases/download/v#{version}/Boostnote-mac.zip"
@@ -9,7 +9,6 @@ cask 'boostnote' do
   homepage 'https://boostnote.io/'
 
   auto_updates true
-  depends_on macos: '>= :mavericks'
 
   app 'Boostnote.app'
 

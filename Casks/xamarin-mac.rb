@@ -1,9 +1,10 @@
 cask 'xamarin-mac' do
-  version '5.2.0.0'
-  sha256 'e20254f476fcda2a55a6d5e099a483c2e889fd77f14e5d402da1d35ad0753db2'
+  version '6.8.1.17'
+  sha256 '06b714e24237dd29e9bc61a557fa236f9f6a3885808794aaed211a2bbb97f10e'
 
   url "https://dl.xamarin.com/XamarinforMac/Mac/xamarin.mac-#{version}.pkg"
-  appcast 'https://xampubdl.blob.core.windows.net/static/installer_assets/v4/Mac/Universal/InstallationManifest.xml'
+  appcast 'https://docs.microsoft.com/en-us/xamarin/mac/release-notes/',
+          configuration: version.major_minor
   name 'Xamarin Mac'
   homepage 'https://www.xamarin.com/platform'
 
@@ -11,8 +12,5 @@ cask 'xamarin-mac' do
 
   pkg "xamarin.mac-#{version}.pkg"
 
-  uninstall pkgutil: [
-                       "xamarin.mac-#{version}.pkg",
-                       "xamarin.mac-uninstall-#{version}.pkg",
-                     ]
+  uninstall pkgutil: 'com.xamarin.mac-.*'
 end

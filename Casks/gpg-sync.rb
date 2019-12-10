@@ -1,6 +1,6 @@
 cask 'gpg-sync' do
-  version '0.2.0'
-  sha256 '2f58f74a802b95fb18fb350f99513756a7e7eb20c78e6da6f44608a6d0fd7809'
+  version '0.3.5'
+  sha256 'de7fd5fc338d9a993134e79aa13a35d29430fbdf20e9197affadae0b09a7ff53'
 
   url "https://github.com/firstlookmedia/gpgsync/releases/download/v#{version}/GPGSync-#{version}.pkg"
   appcast 'https://github.com/firstlookmedia/gpgsync/releases.atom'

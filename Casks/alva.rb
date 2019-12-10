@@ -1,6 +1,6 @@
 cask 'alva' do
-  version '0.9.0'
-  sha256 '654436b8f86a6a9af0f94e4997d393ce16d04e4963b86b047d0d39d8c492b7f8'
+  version '0.9.1'
+  sha256 'bc2f3158691eaccb354a683887d710308bf4375104bb5f115b817b16d85a6677'
 
   # github.com/meetalva/alva was verified as official when first introduced to the cask
   url "https://github.com/meetalva/alva/releases/download/v#{version}/Alva-#{version}-mac.zip"

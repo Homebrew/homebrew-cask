@@ -9,11 +9,10 @@ cask '1clipboard' do
 
   app '1Clipboard.app'
 
-  uninstall login_item: '1Clipboard',
-            quit:       [
-                          'com.ngwin.1clipboard',
-                          'com.ngwin.1clipboardhelper',
-                        ]
+  uninstall quit: [
+                    'com.ngwin.1clipboard',
+                    'com.ngwin.1clipboardhelper',
+                  ]
 
   zap trash: [
                '~/Library/Application Support/1Clipboard',

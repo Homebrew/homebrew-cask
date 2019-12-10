@@ -28,7 +28,7 @@ cask 'pokerstars' do
 
   url "https://www.pokerstars#{language[2]}/PokerStars#{language[1]}.app.zip"
   name 'PokerStars'
-  homepage "https://www.pokerstars#{language[0]}"
+  homepage "https://www.pokerstars#{language[0]}/"
 
   container nested: "PokerStars#{language[1]}/PokerStars#{language[1]}.dmg"
 
