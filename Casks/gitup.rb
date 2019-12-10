@@ -1,6 +1,6 @@
 cask 'gitup' do
-  version '1.1'
-  sha256 '0f59d3c0514e98e4f8fad710c42a12995866305c509b91da0ade7270b95efb4d'
+  version '1.1.1'
+  sha256 '3a4cee7ede28188a014d4fb9704c6a37255152002e96aa2f0ab41542d6753c98'
 
   # gitup-builds.s3.amazonaws.com was verified as official when first introduced to the cask
   url 'https://gitup-builds.s3.amazonaws.com/stable/GitUp.zip'
