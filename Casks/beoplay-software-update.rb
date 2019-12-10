@@ -5,8 +5,8 @@ cask 'beoplay-software-update' do
   url "https://www.bang-olufsen.com/~/mediaV3/files/software-downloads/beoplay-software-updater/beoplay-software-updater-#{version.dots_to_hyphens}-mac.dmg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=#{url}",
           configuration: version.dots_to_hyphens
-  name 'BeoPlay Software Update'
+  name 'Beoplay Software Update'
   homepage 'https://www.bang-olufsen.com/en/product-support/accessories/beoplay-software-updater'
 
-  app 'BeoPlay Software Update.app'
+  app 'Beoplay Software Update.app'
 end
