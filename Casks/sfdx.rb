@@ -1,6 +1,6 @@
 cask 'sfdx' do
   version '7.36.0-b1c4e9c7c8'
-  sha256 '5d856da3566464318d641753ad62e13a3be08b693c00c23056a25220ac0d5b58'
+  sha256 '0b8db60c986378380cb3e44bff2fd23c4826cddff385344e3976b908f01e0cde'
 
   url "https://developer.salesforce.com/media/salesforce-cli/sfdx-cli/channels/stable/sfdx-cli-v#{version}.pkg"
   appcast 'https://developer.salesforce.com/media/salesforce-cli/manifest.json'
