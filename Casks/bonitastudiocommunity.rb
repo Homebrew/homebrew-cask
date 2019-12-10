@@ -1,10 +1,11 @@
 cask 'bonitastudiocommunity' do
-  version '7.9.4'
-  sha256 'bce61f6e3293b721171a61a0fe200f321143b09bc22a629bc0135f0b9dd35ba2'
+  version '7.10.0'
+  sha256 '4d4d5ca09aa9568a5c268828fa9565e68aeacd256babc8cb6b4e4f8c7c2a2e9b'
 
   # release.ow2.org was verified as official when first introduced to the cask
   url "https://release.ow2.org/bonita/BonitaStudioCommunity-#{version}-x86_64.dmg"
-  appcast 'https://www.bonitasoft.com/downloads'
+  appcast 'https://www.bonitasoft.com/downloads',
+          configuration: version.major_minor
   name 'Bonita Studio Community Edition'
   homepage 'https://www.bonitasoft.com/downloads'
 
