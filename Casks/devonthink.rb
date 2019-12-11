@@ -13,14 +13,18 @@ cask 'devonthink' do
   app "DEVONthink #{version.major}.app"
 
   zap trash: [
+               '~/Library/Application Scripts/com.devon-technologies.*',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.devon-technologies.think*.sfl2',
                '~/Library/Application Support/DEVONthink*',
-               '~/Library/Preferences/com.devon-technologies.think3.feeds.stylesheet.css',
-               '~/Library/Preferences/com.devon-technologies.think*.plist',
-               '~/Library/Containers/com.devon-technologies.get',
-               '~/Library/Containers/com.devon-technologies.think-helper',
-               '~/Library/Containers/com.devon-technologies.think*.clipper',
                '~/Library/Caches/com.apple.helpd/Generated/com.devontechnologies.devonthink.help*',
                '~/Library/Caches/com.devon-technologies.think*',
-               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.devon-technologies.think*.sfl2',
+               '~/Library/Containers/com.devon-technologies.*',
+               '~/Library/Cookies/com.devon-technologies.think*.binarycookies',
+               '~/Library/Metadata/com.devon-technologies.think*',
+               '~/Library/Preferences/com.devon-technologies.think*',
+               '~/Library/Saved Application State/com.devon-technologies.think*.savedState',
+               '~/Library/Scripts/Applications/DEVONagent',
+               '~/Library/Scripts/Folder Action Scripts/DEVONthink*',
+               '~/Library/WebKit/com.devon-technologies.think*',
              ]
 end
