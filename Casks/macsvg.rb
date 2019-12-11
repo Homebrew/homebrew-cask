@@ -8,7 +8,7 @@ cask 'macsvg' do
   name 'macSVG'
   homepage 'https://macsvg.org/'
 
-  app 'macSVG.app'
+  app "macSVG-v#{version}/macSVG.app"
 
   zap trash: [
                '~/Library/Application Scripts/com.arkphone.macsvg',
