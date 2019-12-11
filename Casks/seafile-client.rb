@@ -4,7 +4,7 @@ cask 'seafile-client' do
 
   # seadrive.org was verified as official when first introduced to the cask
   url "https://download.seadrive.org/seafile-client-#{version}.dmg"
-  appcast 'https://www.seafile.com/en/download/'
+  appcast 'https://www.seafile.com/api/client-updates/seafile-client-mac/appcast.xml'
   name 'Seafile Client'
   homepage 'https://www.seafile.com/'
 
