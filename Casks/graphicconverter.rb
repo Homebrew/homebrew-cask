@@ -11,4 +11,11 @@ cask 'graphicconverter' do
   auto_updates true
 
   app "GraphicConverter #{version.major}.app"
+
+  zap trash: [
+               '/Users/Shared/Library/Application Support/GraphicConverter',
+               '~/Library/Application Support/GraphicConverter',
+               '~/Library/Group Containers/*.com.lemkesoft.graphicconverter*.group',
+               '~/Library/Caches/com.lemkesoft.graphicconverter*.group',
+             ]
 end
