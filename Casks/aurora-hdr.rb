@@ -3,7 +3,7 @@ cask 'aurora-hdr' do
   sha256 'ebf975075b5ac3dd58277f3ba52b2a0fc70989429ddbacc18a3bbb81cdd014ba'
 
   url "https://downloads.skylum.com/aurorahdr2019/mac/AuroraHDR2019_Distribution_v#{version.dots_to_underscores}.zip"
-  appcast 'http://aurorahdr2019mac.update.skylum.com/',
+  appcast 'https://downloads.skylum.com/aurorahdr2019/mac/appcast_5825.xml',
           configuration: version.dots_to_underscores
   name 'Aurora HDR'
   homepage 'https://skylum.com/aurorahdr'
