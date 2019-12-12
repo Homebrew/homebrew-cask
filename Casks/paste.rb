@@ -16,10 +16,17 @@ cask 'paste' do
             quit:      'com.wiheads.paste'
 
   zap trash: [
-               '~/Library/Application Support/com.wiheads.paste',
+               '~/Library/Application Scripts/com.wiheads.paste',
+               '~/Library/Application Scripts/com.wiheads.paste.loginitem',
+               '~/Library/Application Support/com.wiheads.paste*',
                '~/Library/Application Support/Paste',
-               '~/Library/Caches/com.wikiheads.paste',
+               '~/Library/Application Support/Paste Helper',
+               '~/Library/Caches/com.wiheads.paste',
+               '~/Library/Containers/com.wiheads.paste',
+               '~/Library/Containers/com.wiheads.paste.loginitem',
+               '~/Library/Group Containers/*.com.wiheads.paste*',
                '~/Library/Logs/Paste',
-               '~/Library/Preferences/com.wikiheads.paste.plist',
+               '~/Library/Preferences/com.wiheads.paste.plist',
+               '~/Library/Preferences/com.wiheads.paste-helper.plist',
              ]
 end
