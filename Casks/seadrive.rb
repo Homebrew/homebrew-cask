@@ -4,7 +4,7 @@ cask 'seadrive' do
 
   # download.seadrive.org was verified as official when first introduced to the cask
   url "https://download.seadrive.org/seadrive-#{version}.dmg"
-  appcast 'https://raw.githubusercontent.com/haiwen/seafile-docs/master/changelog/drive-client-changelog.md'
+  appcast 'https://www.seafile.com/en/download/'
   name 'Seadrive'
   homepage 'https://www.seafile.com/en/home/'
 
