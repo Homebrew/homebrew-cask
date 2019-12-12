@@ -1,12 +1,19 @@
 cask 'papers' do
-  version '3.4.23,587'
-  sha256 '6960a5ad8d886d67cf9ab39730baa04f9fb5fb64a2c28cd0c25073f9b515f565'
+  version '4.0.0'
+  sha256 '8c63a193ced25c92db168e415b3a537efb828c86bd62b7615bc95508d3532801'
 
-  # appcaster.papersapp.com/apps/mac/production/download was verified as official when first introduced to the cask
-  url "https://appcaster.papersapp.com/apps/mac/production/download/#{version.after_comma}/papers_#{version.before_comma.no_dots}_#{version.after_comma}.dmg"
-  appcast 'https://appcaster.papersapp.com/apps/mac/production/appcast.xml'
-  name 'Papers'
-  homepage 'https://www.readcube.com/papers/'
+  url 'https://download.readcube.com/app/Install%20Papers.pkg'
+  name 'ReadCube Papers'
+  homepage 'https://www.readcube.com/home'
 
-  app 'Papers.app'
+  pkg 'Install Papers.pkg'
+
+  uninstall pkgutil: 'com.papersapp.PapersInstaller'
+
+  zap trash: [
+               '~/Library/Preferences/com.ReadCube.Papers.plist',
+               '~/Library/Caches/com.ReadCube.Papers.ShipIt',
+               '~/Library/Saved Application State/com.ReadCube.Papers.savedState',
+               '~/Library/Caches/com.ReadCube.Papers',
+             ]
 end
