@@ -8,6 +8,8 @@ cask 'macsvg' do
   name 'macSVG'
   homepage 'https://macsvg.org/'
 
+  depends_on macos: '>= :mojave'
+
   app "macSVG-v#{version}/macSVG.app"
 
   zap trash: [
