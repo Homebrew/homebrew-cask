@@ -8,7 +8,8 @@ cask 'openvanilla' do
   name 'OpenVanilla'
   homepage 'https://openvanilla.org/'
 
-  input_method 'OpenVanillaInstaller.app/Contents/Resources/OpenVanilla.app'
+  installer manual:'InstallOpenVanilla.app'
+  uninstall 'OpenVanilla.app'
 
   caveats do
     logout
