@@ -4,7 +4,7 @@ cask 'wrike' do
 
   url "https://dl.wrike.com/download/WrikeDesktopApp.v#{version}.dmg"
   name 'Wrike'
-  homepage 'https://www.wrike.com/'
+  homepage 'https://www.wrike.com/apps/mobile-and-desktop/desktop-app/'
 
   app 'Wrike for Mac.app'
 end
