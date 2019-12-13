@@ -10,7 +10,7 @@ cask 'openvanilla' do
 
   container nested: "OpenVanillaInstaller.app/Contents/Resources/NotarizedArchives/OpenVanilla-r#{version.after_comma}.zip"
 
-  input_method 'OpenVanillaInstaller.app/Contents/Resources/OpenVanilla.app'
+  input_method 'OpenVanilla.app'
 
   caveats do
     logout
