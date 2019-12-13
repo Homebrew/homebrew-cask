@@ -9,7 +9,7 @@ cask 'openvanilla' do
   homepage 'https://openvanilla.org/'
 
   installer manual:'InstallOpenVanilla.app'
-  uninstall 'OpenVanilla.app'
+  uninstall
 
   caveats do
     logout
