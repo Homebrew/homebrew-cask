@@ -7,5 +7,7 @@ cask 'sidenotes' do
   name 'SideNotes'
   homepage 'https://www.apptorium.com/sidenotes'
 
+  depends_on macos: '>= :mojave'
+
   app 'SideNotes.app'
 end
