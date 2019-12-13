@@ -1,6 +1,6 @@
 cask 'multipass' do
   version '0.9.0'
-  sha256 '8fcdf19e2e4dc351c5318b636352d97ec8a3a61ff85eb2b8a33baa101c36c51d'
+  sha256 'a6727f31a215181046d05be653b61592af048290e5dfdb67c88910728badcd22'
 
   url "https://github.com/CanonicalLtd/multipass/releases/download/v#{version}/multipass-#{version}+mac-Darwin.pkg"
   appcast 'https://github.com/CanonicalLtd/multipass/releases.atom'
