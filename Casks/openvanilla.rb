@@ -8,8 +8,9 @@ cask 'openvanilla' do
   name 'OpenVanilla'
   homepage 'https://openvanilla.org/'
 
-  installer manual:'InstallOpenVanilla.app'
-  uninstall
+  installer manual: 'InstallOpenVanilla.app'
+  
+  uninstall delete: 'OpenVanilla.app'
 
   caveats do
     logout
