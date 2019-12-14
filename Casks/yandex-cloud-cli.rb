@@ -1,6 +1,6 @@
 cask 'yandex-cloud-cli' do
-  version '0.45.0'
-  sha256 'de5783a3bb860cd0bb32877eb909c5735d056fe92a2a09dfaf9a125aeea4787f'
+  version '0.46.0'
+  sha256 '38bbd67e5e2ec199acbb9c97668b1c052f9c4fee39a6b3e8b7dd55cdb3a0be7a'
 
   # yandexcloud.net/yandexcloud-yc was verified as official when first introduced to the cask
   url "https://storage.yandexcloud.net/yandexcloud-yc/release/#{version}/darwin/amd64/yc"
