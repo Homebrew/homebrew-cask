@@ -1,6 +1,6 @@
 cask 'multipass' do
-  version '0.9.0'
-  sha256 '930fd314e0de48cc9ef61cd822013531554ea363843f89138e5b77db305db19f'
+  version '0.10.0'
+  sha256 '1359cffaaefe44044659f0101fcf4f0f96f1d1ba30d2756c4c56cf4e6c6f3275'
 
   url "https://github.com/CanonicalLtd/multipass/releases/download/v#{version}/multipass-#{version}+mac-Darwin.pkg"
   appcast 'https://github.com/CanonicalLtd/multipass/releases.atom'
@@ -12,6 +12,7 @@ cask 'multipass' do
   uninstall launchctl: 'com.canonical.multipassd',
             pkgutil:   'com.canonical.multipass.*',
             delete:    [
+                         '/Applications/Multipass.app',
                          '/usr/local/bin/multipass',
                          '/usr/local/etc/bash_completion.d/multipass',
                          '/var/root/Library/Caches/multipassd',
