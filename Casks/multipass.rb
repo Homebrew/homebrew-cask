@@ -15,10 +15,12 @@ cask 'multipass' do
                          '/usr/local/bin/multipass',
                          '/usr/local/etc/bash_completion.d/multipass',
                          '/var/root/Library/Caches/multipassd',
+                         '/Library/Application Support/com.canonical.multipass',
                        ]
 
   zap trash: [
                '/var/root/Library/Application Support/multipassd',
+               '/var/root/Library/Preferences/multipassd',
                '/Library/Logs/Multipass',
              ]
 end
