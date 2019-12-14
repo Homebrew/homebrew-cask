@@ -1,9 +1,9 @@
 cask 'packet-peeper' do
-  version '2019-04-06'
-  sha256 'd5268d36fdf6c97276eceadd3be3ef3b72618fce3996bab26cdacdfd9938dc63'
+  version '2019-11-21'
+  sha256 '72a824aa411336c99a1a4c542aef0bbe265f11215132d97cfdcc3051cc11c126'
 
-  # bitbucket.org/choll/packetpeeper was verified as official when first introduced to the cask
-  url "https://bitbucket.org/choll/packetpeeper/downloads/PacketPeeper_#{version}.dmg"
+  # github.com/choll/packetpeeper was verified as official when first introduced to the cask
+  url "https://github.com/choll/packetpeeper/releases/download/#{version}/PacketPeeper_#{version}.dmg"
   appcast 'https://packetpeeper.org/release-notes/'
   name 'Packet Peeper'
   homepage 'https://packetpeeper.org/'
