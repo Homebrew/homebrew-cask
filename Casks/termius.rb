@@ -4,7 +4,7 @@ cask 'termius' do
 
   # s3.amazonaws.com/termius.desktop.autoupdate/mac was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/termius.desktop.autoupdate/mac/Termius.dmg'
-  appcast 'https://www.termius.com/mac-os'
+  appcast 'https://docs.termius.com/changelog/desktop'
   name 'Termius'
   homepage 'https://www.termius.com/'
 
