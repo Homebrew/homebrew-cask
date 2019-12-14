@@ -1,6 +1,6 @@
 cask 'cave-story' do
-  version '0.0.9'
-  sha256 'cf0f73cbf797f3d24bf2aada970438e82c2e851ae262355286421d3464a18a3a'
+  version '0.1.0'
+  sha256 '1d1920e8108ef64616c08524c4a4fad9808329d075428999e48b87eaccc32ce2'
 
   # nakiwo.com was verified as official when first introduced to the cask
   url "https://www.nakiwo.com/downloads/doukutsu#{version.dots_to_underscores}.dmg"
