@@ -1,6 +1,6 @@
 cask 'scrivener' do
-  version '3.1.4,12105'
-  sha256 '445a8980ee7b21d8d2e0b1d672577688360c47c10be7d305777fde9bb6c8965e'
+  version '3.1.5,12258'
+  sha256 'cc8ead0d3f409fcd4bd1467a7ce443d4c10b58cfbbbc08386bb44150b4803806'
 
   # scrivener.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://scrivener.s3.amazonaws.com/mac_updates/Scrivener_1012_#{version.after_comma}.zip"
