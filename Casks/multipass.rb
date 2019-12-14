@@ -1,6 +1,6 @@
 cask 'multipass' do
-  version '0.8.0'
-  sha256 '386a015745eabfdd548fa44326ccfcfafbc93747e36af99cfc2936a4432aa613'
+  version '0.9.0'
+  sha256 '930fd314e0de48cc9ef61cd822013531554ea363843f89138e5b77db305db19f'
 
   url "https://github.com/CanonicalLtd/multipass/releases/download/v#{version}/multipass-#{version}+mac-Darwin.pkg"
   appcast 'https://github.com/CanonicalLtd/multipass/releases.atom'
@@ -15,10 +15,12 @@ cask 'multipass' do
                          '/usr/local/bin/multipass',
                          '/usr/local/etc/bash_completion.d/multipass',
                          '/var/root/Library/Caches/multipassd',
+                         '/Library/Application Support/com.canonical.multipass',
                        ]
 
   zap trash: [
                '/var/root/Library/Application Support/multipassd',
+               '/var/root/Library/Preferences/multipassd',
                '/Library/Logs/Multipass',
              ]
 end
