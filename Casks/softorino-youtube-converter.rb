@@ -1,6 +1,6 @@
 cask 'softorino-youtube-converter' do
-  version '2.1.10,1572365999'
-  sha256 '7718498d7a1bd9a9f55430b5eca965d3f4065f6d4d6805437acb770eb27bb27a'
+  version '2.1.12,1576240240'
+  sha256 '70d153881299c4bc73c91b3862e65b330f0b0adf4624816b78c08e7c8680edc3'
 
   # devmate.com/com.softorino.syc2 was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.softorino.syc2/#{version.before_comma}/#{version.after_comma}/SYC2-#{version.before_comma}.zip"
