@@ -20,6 +20,8 @@ cask 'devonthink' do
                '~/Library/Caches/com.devon-technologies.think*',
                '~/Library/Containers/com.devon-technologies.*',
                '~/Library/Cookies/com.devon-technologies.think*.binarycookies',
+               '~/Library/Group Containers/*.devon-technologies.*',
+               '~/Library/Group Containers/*.think*',
                '~/Library/Metadata/com.devon-technologies.think*',
                '~/Library/Preferences/com.devon-technologies.think*',
                '~/Library/Saved Application State/com.devon-technologies.think*.savedState',
