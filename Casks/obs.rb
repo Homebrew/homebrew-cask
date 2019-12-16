@@ -7,5 +7,5 @@ cask 'obs' do
   name 'OBS'
   homepage 'https://obsproject.com/'
 
-  app "OBS.app"
+  app 'OBS.app'
 end
