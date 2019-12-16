@@ -1,6 +1,6 @@
 cask 'unity-lumin-support-for-editor' do
-  version '2019.2.15f1,dcb72c2e9334'
-  sha256 '480c360bc63246b69da137ed6ec63e3f2d6d36ed8311de6f093221b976c8c8d5'
+  version '2019.2.16f1,b9898e2d04a4'
+  sha256 '3a2e97facce1709e8883bb75406c421f8d015b476fc93d7c1a797e44b0e9f372'
 
   url "https://download.unity3d.com/download_unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Lumin-Support-for-Editor-#{version.before_comma}.pkg"
   appcast 'https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json'
