@@ -1,6 +1,6 @@
 cask 'cyberduck' do
-  version '7.2.1.31913'
-  sha256 '6cb825baa7aa398e582482ea8bba693b8d17fd55609e4b0c053114891986acf7'
+  version '7.2.2.32045'
+  sha256 '0ba1ec2f8e5a6a1f95bd397b8647db5e045c92687c9b00380f7e9654d19c3a9a'
 
   url "https://update.cyberduck.io/Cyberduck-#{version}.zip"
   appcast 'https://version.cyberduck.io/changelog.rss'
