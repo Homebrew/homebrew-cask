@@ -1,6 +1,6 @@
 cask 'minecraft-server' do
-  version '1.14.4,3dc3d84a581f14691199cf6831b71ed1296a9fdf'
-  sha256 '5ecdedab3a6e129321a444490d0a467c25ea702a24a99cebe3b6aed41f8f5729'
+  version '1.15,e9f105b3c5c7e85c7b445249a93362a22f62442d'
+  sha256 'e0fe1749263b5ec211b358b598b46e787645bffa8411414f0c812a92bdc70c84'
 
   # launcher.mojang.com was verified as official when first introduced to the cask
   url "https://launcher.mojang.com/v#{version.major}/objects/#{version.after_comma}/server.jar"
