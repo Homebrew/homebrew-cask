@@ -8,5 +8,7 @@ cask 'kode54-cog' do
   name 'Cog'
   homepage 'https://kode54.net/cog/'
 
+  auto_updates true
+
   app 'Cog.app'
 end
