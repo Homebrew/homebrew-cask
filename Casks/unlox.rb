@@ -1,6 +1,6 @@
 cask 'unlox' do
-  version '3.0.3.0'
-  sha256 'fe902c69b517c24714dabdb3fcbe68bfb8b86ee0e84e8ff9fb3eabd6f2c781a7'
+  version '3.0.4.2'
+  sha256 '3e7b817066e47a694ef405734c63cfafb720c6b16274b3127704b4a8206011e4'
 
   url 'https://unlox.it/download/'
   appcast 'https://unlox.it/download/update.php'
