@@ -1,5 +1,5 @@
 cask 'marshallofsound-google-play-music-player' do
-  version '4.6.1-ci-_build_3744'
+  version '4.6.1-ci-build-3744'
   sha256 '597a704d7058ad5f3c4f274246d7a1bf1714ce5a78daf88696746778f88f8a93'
 
   # github.com/MarshallOfSound/Google-Play-Music-Desktop-Player-UNOFFICIAL- was verified as official when first introduced to the cask
