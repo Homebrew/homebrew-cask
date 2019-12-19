@@ -1,6 +1,6 @@
 cask 'perforce' do
   version '19.2'
-  sha256 :no_check # required as upstream package is updated in-place'
+  sha256 '6a67de554be77ba7d12c0ca807181bbeae6ea954d65c44c1bebc728170fe0ddc'
 
   url "https://cdist2.perforce.com/perforce/r#{version}/bin.macosx1010x86_64/helix-core-server.tgz"
   name 'Perforce Helix Versioning Engine'
