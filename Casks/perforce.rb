@@ -2,7 +2,7 @@ cask 'perforce' do
   version '19.2'
   sha256 :no_check # required as upstream package is updated in-place'
 
-  url "https://cdist2.perforce.com/perforce/r#{version.major_minor}/bin.macosx1010x86_64/helix-core-server.tgz"
+  url "https://cdist2.perforce.com/perforce/r#{version}/bin.macosx1010x86_64/helix-core-server.tgz"
   name 'Perforce Helix Versioning Engine'
   homepage 'https://www.perforce.com/'
 
