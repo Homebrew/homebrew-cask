@@ -16,7 +16,7 @@ cask 'saoimageds9' do
   name 'SAOImage DS9'
   homepage 'http://ds9.si.edu/site/Home.html'
 
-  depends_on macos: '>= :el_capitan'
+  depends_on macos: '>= :high_sierra'
 
   app 'SAOImageDS9.app'
 end
