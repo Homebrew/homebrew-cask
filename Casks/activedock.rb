@@ -1,6 +1,6 @@
 cask 'activedock' do
-  version '1.51'
-  sha256 'd5d867915d7ef3274d7ce2dc797a79a5642b4b95583bd90af8f24c7e11307f28'
+  version '1.53'
+  sha256 'd37db887147f9027278ee030406d5a00e72f5cb3acae390ee51f4d695911e265'
 
   # s3.amazonaws.com/downloads.macplussoftware was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/downloads.macplussoftware/ActiveDock.zip'
