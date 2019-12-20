@@ -1,6 +1,6 @@
 cask 'amadine' do
-  version '1.0.6'
-  sha256 '7a01d163f7db0933425caa15b8d554b55871f705bf78126fd8afe163e64a218b'
+  version '1.0.7'
+  sha256 '230f450f12ea5d44d8acf91af9109e41b298da471e377966a06f04e66e7766a5'
 
   # belightsoft.s3.amazonaws.com was verified as official when first introduced to the cask
   url 'https://belightsoft.s3.amazonaws.com/Amadine.dmg'
