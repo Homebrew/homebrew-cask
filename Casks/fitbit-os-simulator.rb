@@ -1,6 +1,6 @@
 cask 'fitbit-os-simulator' do
-  version '0.8.0'
-  sha256 'ea378d6bfc1088bea0a33250ba4d0d018200393de67bf80d4474167e6670628b'
+  version '0.8.1'
+  sha256 'ed0dc28be133db1984446df686dc78903c77ec058563b4b2e9b8609af1818f1a'
 
   url "https://simulator-updates.fitbit.com/Fitbit%20OS%20Simulator-latest-#{version}.dmg"
   appcast 'https://simulator-updates.fitbit.com/latest-mac.yml'
