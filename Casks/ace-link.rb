@@ -7,6 +7,7 @@ cask 'ace-link' do
   name 'Ace Link'
   homepage 'https://github.com/blaise-io/acelink'
 
+  depends_on macos: '>= :high_sierra'
   depends_on cask: [
                      'vlc',
                      'docker',
