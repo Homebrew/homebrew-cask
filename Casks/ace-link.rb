@@ -7,8 +7,10 @@ cask 'ace-link' do
   name 'Ace Link'
   homepage 'https://github.com/blaise-io/acelink'
 
-  depends_on cask: 'vlc'
-  depends_on cask: 'docker'
+  depends_on cask: [
+                     'vlc',
+                     'docker',
+                   ]
 
   app 'Ace Link.app'
 end
