@@ -10,7 +10,7 @@ cask 'cave-story' do
   name '洞窟物語'
   homepage 'https://www.cavestory.org/'
 
-  depends_on macos: '>= :mojave'
+  depends_on macos: '>= :catalina'
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app 'Doukutsu.app', target: 'Cave Story.app'
