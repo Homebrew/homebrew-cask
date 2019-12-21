@@ -1,6 +1,6 @@
 cask 'nrlquaker-winbox' do
-  version '3.20.3'
-  sha256 '0f3a0afd3eecac435642543770388bdf9cd9fc3d12d982892221e7f92ffc9f1a'
+  version '3.20.4'
+  sha256 '1aa393ba9bb4db65866305f2e99116956e1b19acf0ea597357978c7c3b9f6d6a'
 
   url "https://github.com/nrlquaker/winbox-mac/releases/download/v#{version}/Winbox-mac-#{version}.zip"
   appcast 'https://github.com/nrlquaker/winbox-mac/releases.atom'
