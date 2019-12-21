@@ -4,7 +4,8 @@ cask 'command-tab-plus' do
 
   # dl.devmate.com/com.sergey-gerasimenko.Command-Tab was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.sergey-gerasimenko.Command-Tab/#{version.after_comma.before_colon}/#{version.after_colon}/Command-Tab-#{version.after_comma.before_colon}.zip"
-  appcast 'https://updates.devmate.com/com.sergey-gerasimenko.Command-Tab.xml'
+  appcast 'https://updates.devmate.com/com.sergey-gerasimenko.Command-Tab.xml',
+          configuration: version.after_comma.before_colon
   name 'Command-Tab Plus'
   homepage 'http://commandtab.noteifyapp.com/'
 
