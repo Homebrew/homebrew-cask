@@ -1,6 +1,6 @@
 cask 'musictube' do
-  version '1.10'
-  sha256 '519e22b910cb87eac1b1e7a60f71fe7b916c5ff99568b1bb39097acfa15bfb36'
+  version '1.11'
+  sha256 'ff4a2db171b480f3feec212c5aef5eef831af62ae182bf091f465378a685872a'
 
   url 'https://flavio.tordini.org/files/musictube/musictube.dmg'
   appcast 'https://flavio.tordini.org/musictube-ws/appcast.xml'
