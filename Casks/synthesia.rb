@@ -1,6 +1,6 @@
 cask 'synthesia' do
   version '10.6'
-  sha256 '15f15bbee05aea799fc2872f9253ab051444118c12fa1ae740a49bb7d24acde6'
+  sha256 '54629edea60c84825764fab21d2f6570aced4a3c9af3322604b7b47164173018'
 
   # synthesia.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://synthesia.s3.amazonaws.com/files/Synthesia-#{version}.dmg"
