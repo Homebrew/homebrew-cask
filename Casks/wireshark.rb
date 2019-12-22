@@ -15,6 +15,7 @@ cask 'wireshark' do
   pkg 'Add Wireshark to the system path.pkg'
 
   uninstall_preflight do
+    set_permissions '/etc/manpaths.d/Wireshark', '0644'
     set_permissions '/etc/paths.d/Wireshark', '0644'
     set_ownership '/Library/Application Support/Wireshark'
     system_command '/usr/sbin/dseditgroup', args: ['-o', 'delete', 'access_bpf'], sudo: true
