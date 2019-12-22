@@ -1,5 +1,5 @@
 cask 'dictionaries' do
-  version '1.4,322:1576167636'
+  version '1.4,322:1577018334'
   sha256 'fefdddd3165a0cd53f201058b28ba365ced4f7be54bfcb7e6f0b41aa48e10143'
 
   # dl.devmate.com/io.dictionaries.Dictionaries was verified as official when first introduced to the cask
