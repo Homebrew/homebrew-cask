@@ -1,6 +1,6 @@
 cask 'kext-updater' do
-  version '3.3.0'
-  sha256 '0778273be769c4d7798497e5337c4de0ea8d68674b044d22e45e9765503778ea'
+  version '3.3.1'
+  sha256 'e115ff0e8ce4a34cbb56fedaf2ffe32d724973f3d8ed8a05e9f02b07520922f5'
 
   url 'https://update.kextupdater.de/kextupdater/kextupdaterng.zip'
   appcast 'https://update.kextupdater.de/kextupdater/appcastng.xml'
