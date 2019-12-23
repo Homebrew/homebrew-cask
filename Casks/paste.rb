@@ -1,6 +1,6 @@
 cask 'paste' do
-  version '2.5.4,11'
-  sha256 '38d73380b8c279b1e194df2285feebfab54ff0a14b8b2c70160930e09ffaae50'
+  version '2.5.5,12'
+  sha256 '813b24a83ce934aace06f21e3e747b285fddd4f8b5ec13819bfe3a5367b0fbdf'
 
   # rink.hockeyapp.net/api/2/apps/d6efdf44318a43ebb2130e89477625c8 was verified as official when first introduced to the cask
   url "https://rink.hockeyapp.net/api/2/apps/d6efdf44318a43ebb2130e89477625c8/app_versions/#{version.after_comma}?format=zip"
