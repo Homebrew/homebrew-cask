@@ -1,6 +1,6 @@
 cask 'jamf-migrator' do
-  version '5.0.0'
-  sha256 '637265a6b22195c4b70f9720459e9fb92aceef83960486be830a1be19aa9a3ec'
+  version '5.0.1'
+  sha256 '6168d3515fb5496b657ffa90251de9113442545981ef072b11b528ad0a840c77'
 
   url 'https://github.com/jamf/JamfMigrator/releases/download/current/jamf-migrator.zip'
   appcast 'https://github.com/jamf/JamfMigrator/releases.atom'
