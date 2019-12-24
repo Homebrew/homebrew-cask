@@ -16,6 +16,6 @@ cask 'graphicconverter' do
                '/Users/Shared/Library/Application Support/GraphicConverter',
                '~/Library/Application Support/GraphicConverter',
                '~/Library/Group Containers/*.com.lemkesoft.graphicconverter*.group',
-               '~/Library/Caches/com.lemkesoft.graphicconverter*.group',
+               '~/Library/Caches/com.lemkesoft.graphicconverter*',
              ]
 end
