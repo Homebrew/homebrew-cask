@@ -13,16 +13,10 @@ cask '1password' do
   app "1Password #{version.major}.app"
 
   zap trash: [
-               "~/Library/Application Scripts/2BUA8C4S2C.com.agilebits.onepassword#{version.major}-helper",
-               "~/Library/Application Scripts/com.agilebits.onepassword#{version.major}",
-               "~/Library/Application Scripts/com.agilebits.onepassword#{version.major}-launcher",
-               '~/Library/Application Scripts/com.agilebits.onepasswordnativemessaginghost',
-               "~/Library/Containers/2BUA8C4S2C.com.agilebits.onepassword#{version.major}-helper",
-               "~/Library/Containers/com.agilebits.onepassword#{version.major}",
-               "~/Library/Containers/com.agilebits.onepassword#{version.major}-launcher",
-               '~/Library/Containers/com.agilebits.onepasswordnativemessaginghost',
+               '~/Library/Application Scripts/*.agilebits.onepassword*',
+               '~/Library/Containers/*.agilebits.onepassword*',
                '~/Library/Group Containers/2BUA8C4S2C.com.agilebits',
                '~/Library/Logs/1Password',
-               "~/Library/Preferences/com.agilebits.onepassword#{version.major}.plist",
+               '~/Library/Preferences/com.agilebits.onepassword*',
              ]
 end
