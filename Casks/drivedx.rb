@@ -1,6 +1,6 @@
 cask 'drivedx' do
-  version '1.9.0'
-  sha256 '4c984cac298539018e799b2804c298b53588ff559e8f029efc60a1814e95bf3e'
+  version '1.9.1'
+  sha256 'cdea2b9609b2c31f0e7df0f558c5bd1198ded0dbd5eaf643b118c0fedc8621e2'
 
   url "https://binaryfruit.com/download/drivedx/mac/#{version.major}/bin/DriveDx.#{version}.zip"
   appcast "https://binaryfruit.com/download/drivedx/mac/#{version.major}/updates/?appcast&appName=DriveDxMac"
