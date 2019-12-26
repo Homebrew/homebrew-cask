@@ -1,6 +1,6 @@
 cask 'thonny' do
-  version '3.2.4'
-  sha256 '60b271e3a5f29f2e72500e4280b67fe8684f6bfc18ee09f73de56070d975b999'
+  version '3.2.5'
+  sha256 '0806047ddde460002ce3f0b521c90f0df4abc21c3727bb900d78ceee9e579c02'
 
   # github.com/thonny/thonny/releases/download was verified as official when first introduced to the cask
   url "https://github.com/thonny/thonny/releases/download/v#{version}/thonny-#{version}.dmg"
