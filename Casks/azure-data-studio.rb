@@ -1,6 +1,6 @@
 cask 'azure-data-studio' do
-  version '1.14.0'
-  sha256 '77fbcd62f86c2921ffb22f66820cd961c7e37bd7e52b517dd525f48b0dc4ec16'
+  version '1.14.1'
+  sha256 'e5336a74f889aa452789d6ccd16f400aba7250888ca1114a63c100d6b6c1e664'
 
   # github.com/Microsoft/azuredatastudio was verified as official when first introduced to the cask
   url "https://github.com/Microsoft/azuredatastudio/releases/download/#{version}/azuredatastudio-macos-#{version}.zip"
