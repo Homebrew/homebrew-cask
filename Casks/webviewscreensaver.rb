@@ -1,11 +1,11 @@
 cask 'webviewscreensaver' do
-  version '2.0'
-  sha256 'ce06b90cff589c56974b6a9555aa4466f24914d33425f4d4c0b81dbb9effa724'
+  version '2.1.1'
+  sha256 'ff3931320cb6d0d17b79c2d96ff8c263b64aa3d1794782b6ca39c182c18da163'
 
-  url "https://github.com/liquidx/webviewscreensaver/releases/download/v#{version}/WebViewScreenSaver-#{version}.zip"
-  appcast 'https://github.com/liquidx/webviewscreensaver/releases.atom'
+  url "https://github.com/agologan/webviewscreensaver/releases/download/v#{version}/WebViewScreenSaver.saver.zip"
+  appcast 'https://github.com/agologan/webviewscreensaver/releases.atom'
   name 'WebViewScreenSaver'
-  homepage 'https://github.com/liquidx/webviewscreensaver'
+  homepage 'https://github.com/agologan/webviewscreensaver'
 
   screen_saver 'WebViewScreenSaver.saver'
 end
