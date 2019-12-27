@@ -1,6 +1,6 @@
 cask 'zalo' do
-  version '19.11.3'
-  sha256 'b62c4e5d8a335d973ff20d3b49344fe3f44cb1d7d1933dd53dcb0994beca3357'
+  version '19.12.1'
+  sha256 '4354946050ae4cf6690da3228190a58eaf5c5f306533ce9880a09ed541eb4aea'
 
   # res-download-pc-te-vnno-zn-3.zadn.vn/mac was verified as official when first introduced to the cask
   url "https://res-download-pc-te-vnno-zn-3.zadn.vn/mac/ZaloSetup-#{version}.dmg"

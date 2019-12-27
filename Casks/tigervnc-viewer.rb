@@ -1,6 +1,6 @@
 cask 'tigervnc-viewer' do
-  version '1.10.0'
-  sha256 '619c634cb325c85c8379d37d5c4c6e185e05b4c1be37a3a0d7c399715304b4aa'
+  version '1.10.1'
+  sha256 'f5a93899ef81194ca279f722c03eb56478b5d80070810174268e9733acb3e320'
 
   # bintray.com/tigervnc was verified as official when first introduced to the cask
   url "https://bintray.com/tigervnc/stable/download_file?file_path=TigerVNC-#{version}.dmg"

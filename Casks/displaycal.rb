@@ -1,6 +1,6 @@
 cask 'displaycal' do
-  version '3.8.8.0'
-  sha256 '738ec1bbd56fd254b397de30014ac23ae64713b00b9f4a1a5446d7e19c9cc52e'
+  version '3.8.9.3'
+  sha256 '3e3f4a506c3ffc1e2004d57c6cd521d6cacb1bb6a71f9e3fa4cd81ab6ad4f31a'
 
   # sourceforge.net/dispcalgui was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/dispcalgui/release/#{version}/DisplayCAL-#{version}.pkg"

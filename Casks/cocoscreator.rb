@@ -1,8 +1,8 @@
 cask 'cocoscreator' do
-  version '2.2.0_20191017'
-  sha256 '6e0b7832290d66e9e808e716aec0172816f010cbf641fd6adc0583188bb7ba6c'
+  version '2.2.1,20191205'
+  sha256 '60e5839864200669868cc0970607cc23d9c1a6de54e5b4cd109a69c88dfe2e52'
 
-  url "https://digitalocean.cocos2d-x.org/CocosCreator/v#{version.split('_')[0]}/CocosCreator_v#{version}_mac.dmg"
+  url "https://digitalocean.cocos2d-x.org/CocosCreator/v#{version.before_comma}/CocosCreator_v#{version.before_comma}_#{version.after_comma}_mac.dmg"
   appcast 'https://cocos2d-x.org/download'
   name 'CocosCreator'
   homepage 'https://cocos2d-x.org/'

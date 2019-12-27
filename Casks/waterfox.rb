@@ -1,6 +1,6 @@
-cask 'waterfox-classic' do
-  version '2019.10'
-  sha256 'ed30fba5843f041aec9cc5393f5049df05b5c8773423daf7c3806819cb505171'
+cask 'waterfox' do
+  version '2019.12'
+  sha256 'd23718a9919ffa8c39241e592086ccda4dac30f8304914d83706f0b8182585bf'
 
   # storage-waterfox.netdna-ssl.com was verified as official when first introduced to the cask
   url "https://storage-waterfox.netdna-ssl.com/releases/osx64/installer/Waterfox%20Classic%20#{version}%20Setup.dmg"
@@ -8,7 +8,7 @@ cask 'waterfox-classic' do
   name 'Waterfox'
   homepage 'https://www.waterfox.net/'
 
-  app 'Waterfox Classic.app'
+  app 'Waterfox.app'
 
   zap trash: [
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.waterfox.sfl*',

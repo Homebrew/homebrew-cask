@@ -1,6 +1,6 @@
 cask 'navicat-premium' do
-  version '15.0.3'
-  sha256 'f450097c790f8c7a12c21cef9c00813d3ce286b9e35da2fbd269f94bc3acdf44'
+  version '15.0.6'
+  sha256 '7973d89c14f0ff48ffdc1afdcfd21deb5fe132a76a993181d6a7b4bbebb3f302'
 
   url "http://download.navicat.com/download/navicat#{version.major_minor.no_dots}_premium_en.dmg"
   appcast 'https://updater.navicat.com/mac/navicat_updates.php?appName=Navicat%20Premium&appLang=en'

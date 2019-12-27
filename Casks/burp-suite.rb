@@ -1,6 +1,6 @@
 cask 'burp-suite' do
-  version '2.1.04'
-  sha256 'd8925c52edb25a37a62afd87b4d947d3c169a7901b5dc8edf62c3654c0e558b8'
+  version '2.1.07'
+  sha256 '6212892e0a775d04514401449dec0eb18c96c92d5ae1ea5a2e00160be0af1299'
 
   url "https://portswigger.net/burp/releases/download?product=community&version=#{version}&type=macosx"
   appcast 'https://portswigger.net/burp/communitydownload'

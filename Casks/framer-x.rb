@@ -1,6 +1,6 @@
 cask 'framer-x' do
-  version '35856,1571669175'
-  sha256 '8cdd0ab2c10b3bd9e9d2d218b2265b756df21864852697bb3ec3901318a48774'
+  version '36830,1576846115'
+  sha256 'c6282262f56672a7d42fe99b02510fddede54a25cb1095e6a36d8e6fba2fcd82'
 
   # dl.devmate.com/com.framer.x was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.framer.x/#{version.before_comma}/#{version.after_comma}/FramerX-#{version.before_comma}.zip"

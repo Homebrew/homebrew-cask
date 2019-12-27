@@ -1,6 +1,6 @@
 cask 'showyedge' do
-  version '3.6.0'
-  sha256 'a2f075ec176e33e36f6bc6507d46db647165a9d6e6dfa0766fb2af4e8c73d96d'
+  version '3.7.0'
+  sha256 'f94c5eb699f03daa44db74829ab76935971b031c52bb116fcc8e2c44c2dc3cf3'
 
   url "https://pqrs.org/osx/ShowyEdge/files/ShowyEdge-#{version}.dmg"
   appcast 'https://pqrs.org/osx/ShowyEdge/files/appcast.xml'

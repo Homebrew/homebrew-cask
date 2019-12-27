@@ -7,5 +7,7 @@ cask 'notable' do
   name 'Notable'
   homepage 'https://github.com/notable/notable'
 
+  auto_updates true
+
   app 'Notable.app'
 end
