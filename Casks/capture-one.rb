@@ -4,7 +4,7 @@ cask 'capture-one' do
 
   # phaseone.com/a9562498-f874-404e-842d-9f5cc8a05efd/International was verified as official when first introduced to the cask
   url "https://downloads.phaseone.com/a9562498-f874-404e-842d-9f5cc8a05efd/International/CaptureOne#{version.after_comma.major}.Mac.#{version.after_comma}.dmg"
-  appcast "https://cormws.phaseone.com/corm.asmx/GetNewSoftwareVersion?Platform=Mac&Version=#{version.major}"
+  appcast "https://cormws.phaseone.com/corm.asmx/GetNewSoftwareVersion?Platform=Mac&Version=#{version.after_comma.major}"
   name 'Capture One'
   homepage 'https://www.captureone.com/en/'
 
