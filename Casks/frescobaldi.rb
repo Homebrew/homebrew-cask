@@ -1,6 +1,6 @@
 cask 'frescobaldi' do
-  version '2.20.0'
-  sha256 '575910ceaeb6016355dcfac77ab5dcfceca42a7ff84db5f3316030231cb86bfc'
+  version '3.1'
+  sha256 'c4fe19067a7718ac613654f2d69ac23ec81955993e12d3e4cb3a63865799ef92'
 
   # github.com/frescobaldi/frescobaldi was verified as official when first introduced to the cask
   url "https://github.com/frescobaldi/frescobaldi/releases/download/v#{version}/Frescobaldi-#{version}-x86_64.dmg"
