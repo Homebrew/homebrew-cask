@@ -6,7 +6,7 @@ cask 'deepstream' do
   url "https://github.com/deepstreamIO/deepstream.io/releases/download/v#{version}/deepstream.io-mac-#{version}.pkg"
   appcast 'https://github.com/deepstreamIO/deepstream.io/releases.atom'
   name 'deepstream'
-  homepage 'https://deepstreamhub.com/open-source/'
+  homepage 'https://deepstream.io/'
 
   pkg "deepstream.io-mac-#{version}.pkg"
 
