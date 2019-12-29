@@ -1,6 +1,6 @@
 cask 'mpv' do
-  version '0.30.0'
-  sha256 '4de953b80554ebbe56a81d01c8f6c605a5c55b40b699ec55df95529d60d51a6b'
+  version '0.31.0'
+  sha256 'eacdd24d48fecc6ee133495d3ee62f351b656ef18cf5c6728b6c7cd52e713641'
 
   # laboratory.stolendata.net/~djinn/mpv_osx was verified as official when first introduced to the cask
   url "https://laboratory.stolendata.net/~djinn/mpv_osx/mpv-#{version}.tar.gz"
