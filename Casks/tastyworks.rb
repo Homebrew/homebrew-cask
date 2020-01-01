@@ -1,6 +1,6 @@
 cask 'tastyworks' do
-  version '1.3.0'
-  sha256 '73ce5e43a8455c7e93abcc6bddcea3cfd13ad90ab5893eefd7d0e1fd31512e54'
+  version '1.4.0'
+  sha256 'cbcae173a4c89e829b62d1369a258bf5fbe004a43c9842aa74e945f6596d8b99'
 
   url "https://download.tastyworks.com/desktop-#{version.major}.x.x/#{version}/tastyworks-#{version}.dmg"
   appcast 'https://tastyworks.freshdesk.com/support/solutions/articles/43000435186-recent-release-notes',

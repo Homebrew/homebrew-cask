@@ -1,6 +1,6 @@
 cask 'clashx' do
-  version '1.16.9'
-  sha256 '37b0e81db1effda1d702593ed0431379c7065cee9bff0ba324589e39bb5ab600'
+  version '1.17.1'
+  sha256 'b18a5b73b3955ef04aa9cb6650d4adca4ba15c25d9a031db1ed686a4b91c620c'
 
   url "https://github.com/yichengchen/clashX/releases/download/#{version}/ClashX.dmg"
   appcast 'https://github.com/yichengchen/clashX/releases.atom'

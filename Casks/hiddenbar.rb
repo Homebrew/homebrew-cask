@@ -7,7 +7,7 @@ cask 'hiddenbar' do
   name 'Hidden Bar'
   homepage 'https://github.com/dwarvesf/hidden/'
 
-  depends_on macos: '>= :catalina'
+  depends_on macos: '>= :high_sierra'
 
   app 'Hidden Bar.app'
 end
