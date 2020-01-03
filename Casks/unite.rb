@@ -1,0 +1,21 @@
+cask 'unite' do
+  version '3.0'
+  sha256 'baccda6edae65a8322ef31d9e40c5806a87a6fc6d462e6d2158c24e8c99a83b3'
+
+  # amazonaws.com/fulfillment_downloads was verified as official when first introduced to the cask
+  url 'https://paddle.s3.amazonaws.com/fulfillment_downloads/20398/576531/i0KpuCjrQtuPoyGcIcZO_Unite.zip'
+  appcast 'https://bzgapps.com/unitedownloads'
+  name 'Unite'
+  homepage 'https://bzgapps.com/unite'
+
+  depends_on macos: '>= :high_sierra'
+
+  app 'Unite.app'
+
+  zap trash: [
+               '~/Library/Application Support/Unite',
+               "~/Library/Application Support/com.BZG.unite.#{version.major}",
+               "~/Library/Preferences/com.BZG.unite.#{version.major}.plist",
+             ],
+      rmdir: '/Users/Shared/Unite'
+end
