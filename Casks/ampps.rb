@@ -1,6 +1,6 @@
 cask 'ampps' do
   version '3.9'
-  sha256 'a9ec7d30c0ded5cebb54b0c185c9e0a5171a57dafb70781caf24c871c166f6f8'
+  sha256 '7395bdcb3958cef4c3274cc1c6c68444104e6e464f692a76b61ead878236ec7d'
 
   url "https://files.ampps.com/AMPPS-#{version}.dmg"
   appcast 'https://www.ampps.com/downloads'
