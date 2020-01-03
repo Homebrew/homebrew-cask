@@ -9,7 +9,7 @@ cask 'onedrive' do
   homepage 'https://onedrive.live.com/'
 
   auto_updates true
-  conflicts_with cask: 'microsot-office'
+  conflicts_with cask: 'microsoft-office'
   depends_on macos: '>= :sierra'
 
   pkg 'OneDrive.pkg'

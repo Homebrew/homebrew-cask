@@ -8,5 +8,11 @@ cask 'radarr' do
   name 'Radarr'
   homepage 'https://radarr.video/'
 
+  depends_on formula: 'mono'
+
   app 'Radarr.app'
+
+  preflight do
+    set_permissions "#{staged_path}/Radarr.app", '0755'
+  end
 end

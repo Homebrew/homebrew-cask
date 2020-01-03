@@ -1,6 +1,6 @@
 cask 'vuescan' do
-  version '9.7.17'
-  sha256 '1cb9736b65c41ddd11c59a5347a137ae790020cb7dd8141a41cc412cfba8322f'
+  version '9.7.18'
+  sha256 '6b527aef8eb378d52355ba4395a0288ad2cbb11140fdd150879856ed7dbbebbb'
 
   url "https://www.hamrick.com/files/vuex64#{version.major_minor.no_dots}.dmg"
   appcast 'https://www.hamrick.com/alternate-versions.html'
