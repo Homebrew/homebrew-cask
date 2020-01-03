@@ -8,5 +8,5 @@ cask 'snagit' do
 
   depends_on macos: '>= :sierra'
 
-  app "Snagit #(version.major}.app"
+  app "Snagit #{version.major}.app"
 end
