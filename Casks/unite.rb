@@ -14,8 +14,8 @@ cask 'unite' do
 
   zap trash: [
                '~/Library/Application Support/Unite',
-               "~/Library/Application Support/com.BZG.unite.#{version.major}",
-               "~/Library/Preferences/com.BZG.unite.#{version.major}.plist",
+               '~/Library/Application Support/com.BZG.unite.*',
+               '~/Library/Preferences/com.BZG.unite.*',
              ],
       rmdir: '/Users/Shared/Unite'
 end
