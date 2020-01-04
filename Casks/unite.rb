@@ -4,7 +4,7 @@ cask 'unite' do
 
   # amazonaws.com/fulfillment_downloads was verified as official when first introduced to the cask
   url 'https://paddle.s3.amazonaws.com/fulfillment_downloads/20398/576531/i0KpuCjrQtuPoyGcIcZO_Unite.zip'
-  appcast 'https://bzgapps.com/unitedownloads'
+  appcast 'https://drive.google.com/uc?export=download&id=1pPlm8G1yluV7ipcRh-2pmXP-nATWsjTK'
   name 'Unite'
   homepage 'https://bzgapps.com/unite'
 
