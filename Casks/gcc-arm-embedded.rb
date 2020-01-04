@@ -1,4 +1,6 @@
 cask 'gcc-arm-embedded' do
+  # Exists as a cask because it is impractical as a formula:
+  # https://github.com/Homebrew/homebrew-core/pull/45780#issuecomment-569246452
   version '8-2018-q4-major'
   sha256 '0b528ed24db9f0fa39e5efdae9bcfc56bf9e07555cb267c70ff3fee84ec98460'
 
