@@ -4,7 +4,7 @@ cask 'sqlitestudio' do
 
   # github.com/pawelsalawa/sqlitestudio/releases/download/ was verified as official when first introduced to the cask
   url "https://github.com/pawelsalawa/sqlitestudio/releases/download/#{version}/SQLiteStudio-#{version}.dmg"
-  appcast 'https://sqlitestudio.pl/rss.rvt'
+  appcast 'https://github.com/pawelsalawa/sqlitestudio/releases.atom'
   name 'SQLiteStudio'
   homepage 'https://sqlitestudio.pl/'
 
