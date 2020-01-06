@@ -1,6 +1,6 @@
 cask 'mini-program-studio' do
-  version '1.1.3,e4e51806-8999-42a7-933c-5aa51c28b164'
-  sha256 '77937a08ea42dc577a09fc973f65c81b35120400d23f4b226fd521cd051ab60d'
+  version '1.1.8,cbd250a0-cf85-4ca7-aa8a-a0094db2ab6a'
+  sha256 'ea4333adf09a8b953c311f75813799e34bc34dc12b3dda7cbeaf059c09985357'
 
   # gw.alipayobjects.com was verified as official when first introduced to the cask
   url "https://gw.alipayobjects.com/os/volans-demo/#{version.after_comma}/#{version.before_comma}/MiniProgramStudio-#{version.before_comma}.dmg"
