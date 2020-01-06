@@ -13,7 +13,7 @@ cask 'imgotv' do
   depends_on macos: '>= :yosemite'
 
   app '芒果TV极速版.app'
-
+https://twitter.com/MGWVc
   zap trash: [
                '~/Library/Preferences/com.hunantv.osx.imgotv.plist',
                '~/Library/Caches/com.hunantv.LaunchAtLoginHelper',
