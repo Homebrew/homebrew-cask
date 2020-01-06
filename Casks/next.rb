@@ -1,5 +1,5 @@
 cask 'next' do
-  version '1.3.0'
+  version '1.4.0'
   sha256 '27d8e5a03678b6f4d1804d47856656546bb170f73b560fdf6c9b51853007f3a4'
 
   url 'https://next.atlas.engineer/static/release/next-macos-webkit.dmg'
