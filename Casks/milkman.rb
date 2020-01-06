@@ -9,7 +9,5 @@ cask 'milkman' do
 
   app 'Milkman.app'
 
-  zap trash: [
-               '~/Library/Application Support/Milkman',
-             ]
+  zap trash: '~/Library/Application Support/Milkman'
 end
