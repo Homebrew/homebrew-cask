@@ -8,6 +8,7 @@ cask 'native-access' do
   name 'Native Access'
   homepage 'https://native-instruments.com/specials/native-access'
 
+  auto_updates true
   depends_on macos: '>= :sierra'
 
   app 'Native Access.app'
