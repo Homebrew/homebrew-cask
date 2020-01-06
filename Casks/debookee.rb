@@ -8,6 +8,7 @@ cask 'debookee' do
   name 'Debookee'
   homepage 'https://debookee.com/'
 
+  auto_updates true
   depends_on macos: '>= :sierra'
 
   app 'Debookee.app'
