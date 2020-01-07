@@ -1,9 +1,8 @@
 cask 'command-tab-plus' do
   version '1.109'
-  sha256 '608458aa55d699f6c1d21a6bc834365d0787174b4f34b266dad8f267acfdc328'
+  sha256 'c133c07450b65bd8bd48b188eb99606027b3c0186aca5c4806cbb1dbeb9dfc1c'
 
-  # macplus-software.com/downloads was verified as official when first introduced to the cask
-  url 'https://macplus-software.com/downloads/Command-Tab%20Plus.zip'
+  url 'https://noteifyapp.com/download/Command-Tab%20Plus.dmg'
   appcast 'https://macplus-software.com/downloads/Command-Tab.xml'
   name 'Command-Tab Plus'
   homepage 'http://commandtab.noteifyapp.com/'
