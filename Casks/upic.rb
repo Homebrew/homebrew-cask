@@ -10,7 +10,7 @@ cask 'upic' do
   depends_on macos: '>= :sierra'
 
   app 'uPic.app'
-  
+
   zap trash: [
                '~/Library/Preferences/com.svend.uPic.plist',
                '~/Library/Caches/com.svend.uPic',
