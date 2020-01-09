@@ -1,5 +1,5 @@
 cask 'backblaze' do
-  version '7.0.0.392'
+  version '7.0.0.402'
   sha256 'c5bb26fab34b890c643c8c6ebb23fccc1a7014530e1d6cdcc9010ab722ebe516'
 
   url 'https://secure.backblaze.com/mac/install_backblaze.dmg'
