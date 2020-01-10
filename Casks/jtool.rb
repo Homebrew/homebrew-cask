@@ -10,6 +10,6 @@ cask 'jtool' do
   manpage 'jtool.1'
 
   caveats do
-    deprecated
+    discontinued
   end
 end
