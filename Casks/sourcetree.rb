@@ -19,7 +19,7 @@ cask 'sourcetree' do
     url "https://product-downloads.atlassian.com/software/sourcetree/ga/Sourcetree_#{version}.zip"
   end
 
-  appcast 'https://product-downloads.atlassian.com/software/sourcetree/Appcast/SparkleAppcastGroup1.xml'
+  appcast 'https://product-downloads.atlassian.com/software/sourcetree/Appcast/SparkleAppcastGroup0.xml'
   name 'Atlassian SourceTree'
   homepage 'https://www.sourcetreeapp.com/'
 
