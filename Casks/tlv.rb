@@ -1,4 +1,4 @@
-cask 'tableau-log-viewer' do
+cask 'tlv' do
   version '1.2'
   sha256 'd203b4d7d3d4d02d2e4051d3f08e2a506462e543d233a1d952207b830e5a3a4f'
 
