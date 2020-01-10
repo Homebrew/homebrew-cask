@@ -12,7 +12,7 @@ cask 'threads' do
                '~/Library/Application Support/Threads',
                '~/Library/Caches/com.threads.mac.Threads',
                '~/Library/Caches/com.threads.mac.Threads.ShipIt',
-               '~/Library/Saved Application State/com.threads.mac.Threads.savedState',
                '~/Library/Preferences/com.threads.mac.Threads.plist',
+               '~/Library/Saved Application State/com.threads.mac.Threads.savedState',
              ]
 end
