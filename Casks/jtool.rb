@@ -8,4 +8,8 @@ cask 'jtool' do
 
   binary 'jtool'
   manpage 'jtool.1'
+
+  caveats do
+    deprecated
+  end
 end
