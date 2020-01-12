@@ -5,7 +5,7 @@ cask 'calcservice' do
   # s3.amazonaws.com/DTWebsiteSupport was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/freeware/calcservice/#{version}/CalcService.zip"
   name 'CalcService'
-  homepage 'https://www.devontechnologies.com/products/freeware.html#c1111'
+  homepage 'https://www.devontechnologies.com/apps/freeware'
 
   app 'CalcService.app'
 end
