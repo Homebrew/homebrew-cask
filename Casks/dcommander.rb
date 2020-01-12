@@ -1,6 +1,6 @@
 cask 'dcommander' do
-  version '3700'
-  sha256 '41c497e7d80b6667c4303a5e3e55ce3fb15c26d15817abaacbf867930e7ee178'
+  version '3800'
+  sha256 'be273afe4e10f30ec0a7bc94c4f0a2b3b2f0f33d50b4987a98edafae4538246b'
 
   url 'https://devstorm-apps.com/dc/download.php'
   appcast 'https://www.macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=https://devstorm-apps.com/dc/download.php'
