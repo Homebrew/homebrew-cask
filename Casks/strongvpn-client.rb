@@ -6,7 +6,7 @@ cask 'strongvpn-client' do
   url "https://mirror2.reliablehosting.com/mac/StrongVPN_Mac_#{version.before_comma}.zip"
   appcast 'https://colomovers.com/mac.xml'
   name 'StrongVPN'
-  homepage 'https://strongvpn.com/setup.html/'
+  homepage 'https://strongvpn.com/vpn-apps/macos/'
 
   app "StrongVPN Client_#{version.before_comma}_#{version.after_comma}/StrongVPN Client.app"
 end
