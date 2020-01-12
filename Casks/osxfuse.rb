@@ -8,7 +8,7 @@ cask 'osxfuse' do
   name 'OSXFUSE'
   homepage 'https://osxfuse.github.io/'
 
-  auto_updates true
+  auto_updates false
 
   pkg "Extras/FUSE for macOS #{version}.pkg"
 
