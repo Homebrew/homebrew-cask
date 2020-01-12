@@ -18,6 +18,7 @@ cask 'anka-flow' do
                          'com.veertu.vlaunch',
                          'com.veertu.anka.lupd',
                          'com.veertu.anka.ankakbd',
+                         'com.veertu.anka.ankanetd',
                        ],
             script:    {
                          executable: '/Library/Application Support/Veertu/Anka/tools/uninstall.sh',
