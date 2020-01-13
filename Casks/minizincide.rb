@@ -1,6 +1,6 @@
 cask 'minizincide' do
   version '2.4.2'
-  sha256 'cf4ccec92a66bd4464080ef02c88af8e3d24645f88af66d4fd546e8ecb2fb4e0'
+  sha256 '0775ddd221fc8ed5e0b9a1393fb86dd6dc95eab23f3d55b3b071476ee00b275b'
 
   # github.com/MiniZinc/MiniZincIDE was verified as official when first introduced to the cask
   url "https://github.com/MiniZinc/MiniZincIDE/releases/download/#{version}/MiniZincIDE-#{version}-bundled.dmg"
