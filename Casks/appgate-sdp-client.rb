@@ -4,9 +4,9 @@ cask 'appgate-sdp-client' do
 
   # sdpdownloads.cyxtera.com was verified as official when first introduced to the cask
   url "https://sdpdownloads.cyxtera.com/AppGate-SDP-#{version.major_minor}/clients/AppGate-SDP-#{version}-Installer.dmg"
-  appcast "https://www.cyxtera.com/essential-defense/appgate-sdp/support/appgate-sdp-v#{version.major}-#{version.minor}"
+  appcast "https://www.appgate.com/software-defined-perimeter/support/appgate-sdp-v#{version.major}-#{version.minor}"
   name 'AppGate SDP Client for macOS'
-  homepage 'https://www.cryptzone.com/downloadcenter/appgate-sdp'
+  homepage "https://www.appgate.com/software-defined-perimeter/support/appgate-sdp-v#{version.major}-#{version.minor}"
 
   depends_on macos: '>= :el_capitan'
 
