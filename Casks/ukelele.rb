@@ -3,7 +3,7 @@ cask 'ukelele' do
   sha256 'c5611dde072ef9472b117ec1c006cb4e85e521d8ebbc63dcdb631cfe0b960a31'
 
   url "https://software.sil.org/downloads/r/ukelele/Ukelele_#{version}.dmg"
-  appcast 'https://www.dropbox.com/s/vi51g5jig3etaum/Ukelele_appcast.xml?dl=1'
+  appcast 'https://software.sil.org/downloads/r/ukelele/Ukelele_appcast.xml'
   name 'Ukelele'
   homepage 'https://software.sil.org/ukelele/'
 
