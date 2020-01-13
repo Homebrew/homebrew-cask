@@ -1,6 +1,6 @@
 cask 'texstudio' do
-  version '2.12.18'
-  sha256 'ec3b4fc3c1a3c2ed21c50c0d05aebc1b15db775448a05da453abc5e59b92e0d3'
+  version '2.12.20'
+  sha256 '6b99c5a875c2c82c3347103916051bf676336006d89d320084370d431847d70e'
 
   # github.com/texstudio-org/texstudio was verified as official when first introduced to the cask
   url "https://github.com/texstudio-org/texstudio/releases/download/#{version}/texstudio-#{version}-osx.dmg"
