@@ -1,6 +1,6 @@
 cask 'night-owl' do
-  version '2.91'
-  sha256 '08b8d1201e5b013110bcd669c7dc0d40597684a5e70c31c10cf2b96012e7109c'
+  version '2.92'
+  sha256 'f35185d46b11153b26f3dc452cd9432abb45b4c18192718fd20805960252b351'
 
   # aki-null.net was verified as official when first introduced to the cask
   url 'https://aki-null.net/yf/NightOwl.zip'
