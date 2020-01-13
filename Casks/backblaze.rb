@@ -4,7 +4,7 @@ cask 'backblaze' do
 
   url 'https://secure.backblaze.com/mac/install_backblaze.dmg'
   appcast 'https://secure.backblaze.com/api/clientversion.xml',
-          configuration: "#{version}.zip"
+          configuration: "mac_version=\"#{version}\""
   name 'Backblaze'
   homepage 'https://backblaze.com/'
 
