@@ -7,5 +7,7 @@ cask 'swiftpm-catalog' do
   name 'SwiftPM Catalog'
   homepage 'https://zeezide.com/en/products/swiftpmcatalog/'
 
+  depends_on macos: '>= :mojave'
+
   app 'SwiftPM Catalog.app'
 end
