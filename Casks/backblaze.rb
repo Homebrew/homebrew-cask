@@ -3,8 +3,8 @@ cask 'backblaze' do
   sha256 'a0967d345e4245b13f4c1a6223e322f9f4a8f03f26dc5e2ad331a311494070ca'
 
   url 'https://secure.backblaze.com/mac/install_backblaze.dmg'
-  appcast 'https://backblaze.com/blog/category/backblaze-bits/release',
-          configuration: version.major_minor
+  appcast 'https://secure.backblaze.com/api/clientversion.xml',
+          configuration: "#{version}.zip"
   name 'Backblaze'
   homepage 'https://backblaze.com/'
 
