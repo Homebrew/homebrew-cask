@@ -79,21 +79,11 @@ If these formats are not available, and the application is macOS-exclusive (othe
 https://sourceforge.net/projects/{{project_name}}/files/latest/download
 ```
 
-## Personal Hosting Such as Dropbox
-
-URLs from dropbox.com or cl.ly/cloudapp.com are not readily distinguishable as being controlled by the original software vendor. These URLs should be used only when given as such on the official project website.
-
-Also make sure to give the URL for the binary download itself, rather than a preview page. (See <https://www.dropbox.com/help/201/en>.)
-
 ## Some Providers Block Command-line Downloads
 
 Some hosting providers actively block command-line HTTP clients. Such URLs cannot be used in Casks.
 
 Some providers do not actively block command-line HTTP clients but use URLs that change periodically, or even on each visit (example: FossHub). For those, see section [URLs that Change on Every Visit](#urls-that-change-on-every-visit).
-
-## Vendor URLs Are Preferred
-
-When possible, it is best to use a download URL from the original developer or vendor, rather than an aggregator such as `macupdate.com`.
 
 ## URLs that Change on Every Visit
 
