@@ -1,6 +1,6 @@
 cask 'retroarch-metal' do
-  version '1.8.2'
-  sha256 '93bef837d97263d97a35251048755a545655b0674d0c9246b6ccedf248d69bad'
+  version '1.8.3'
+  sha256 'f5eabb0c41df7aa9925d0b4b837b6abf8fbb88c3b94b2c053dba37323a472675'
 
   url "https://buildbot.libretro.com/stable/#{version}/apple/osx/x86_64/RetroArch_Metal.dmg"
   appcast 'https://buildbot.libretro.com/stable/'
