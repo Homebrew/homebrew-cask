@@ -6,7 +6,7 @@ cask 'lando' do
   url "https://github.com/lando/lando/releases/download/v#{version}/lando-v#{version}.dmg"
   appcast 'https://github.com/lando/lando/releases.atom'
   name 'Lando'
-  homepage 'https://docs.devwithlando.io/'
+  homepage 'https://docs.lando.dev/'
 
   depends_on cask: 'docker'
 
