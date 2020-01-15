@@ -14,5 +14,4 @@ cask 'microsoft-edge' do
   pkg "MicrosoftEdge-#{version}.pkg"
 
   uninstall pkgutil: 'com.microsoft.edgemac'
-
 end
