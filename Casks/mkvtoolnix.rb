@@ -1,6 +1,6 @@
 cask 'mkvtoolnix' do
-  version '40.0.0'
-  sha256 'b6a3b24b9522b8f4e9ae20206649df9b8fb240b17217a9312cf465a1d2afa802'
+  version '42.0.0'
+  sha256 '0dbc4178f7c49309974bb60180c02e4e0bf394298fde9d51734ab5865fd313f1'
 
   url "https://mkvtoolnix.download/macos/MKVToolNix-#{version}.dmg"
   appcast 'https://www.bunkus.org/blog/feed/'
@@ -8,7 +8,7 @@ cask 'mkvtoolnix' do
   homepage 'https://mkvtoolnix.download/'
 
   conflicts_with formula: 'mkvtoolnix'
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :mojave'
 
   app "MKVToolNix-#{version}.app"
   binary "#{appdir}/MKVToolNix-#{version}.app/Contents/MacOS/mkvextract"

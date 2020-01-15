@@ -1,6 +1,6 @@
 cask 'idagio' do
-  version '0.0.104'
-  sha256 '052b29d664ccd0ddc000da838721cb8afbaf78b9e30a862174488fa4a516f6bc'
+  version '0.0.109'
+  sha256 'f6415dd1fccb449a3d75b86875c80366c781b420d24c96cdeb15a0d1a5c3ea28'
 
   url "https://dl.idagio.com/IDAGIO-#{version}.dmg"
   name 'IDAGIO'

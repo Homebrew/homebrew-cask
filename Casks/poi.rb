@@ -1,6 +1,6 @@
 cask 'poi' do
-  version '10.3.0'
-  sha256 'efcf82f302de005fda3dc6f4673925d6a2bcdd0599b1e729e558a2d353a21d95'
+  version '10.5.1'
+  sha256 '5baf030cf5799ec7ea12da500d9a292bf7d7d52055250a9ffbbbe3385853f8b1'
 
   # github.com/poooi/poi was verified as official when first introduced to the cask
   url "https://github.com/poooi/poi/releases/download/v#{version}/poi-#{version}.dmg"

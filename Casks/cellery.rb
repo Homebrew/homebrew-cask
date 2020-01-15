@@ -1,6 +1,6 @@
 cask 'cellery' do
   version '0.5.0'
-  sha256 '4cfe7329aca40edad0776304eba1245da53f337fb10f8ed013f33967ec742fef'
+  sha256 'abf91f0f9cb3e74a9a548fea8111996247ccb65765375f973a45d8f0bbf8bd20'
 
   # github.com/wso2-cellery/sdk was verified as official when first introduced to the cask
   url "https://github.com/wso2-cellery/sdk/releases/download/v#{version}/cellery-macos-installer-x64-#{version}.pkg"

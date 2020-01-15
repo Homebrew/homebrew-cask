@@ -1,6 +1,6 @@
 cask '115browser' do
-  version '9.0.0.48'
-  sha256 'c88359c311ce46cfb4c60d081489f8f55c3117308f1646f2581811b6b2e7d344'
+  version '11.1.0.1'
+  sha256 '5f79509375c35bf63ea500b5d8a36145551a723f4a58db94a50a1471356d8544'
 
   url "https://down.115.com/client/mac/115br_v#{version}.dmg"
   appcast 'https://appversion.115.com/1/web/1.0/api/chrome?callback=get_version'

@@ -1,6 +1,6 @@
 cask 'wko' do
-  version '544'
-  sha256 'd39f7c4e85e371ab1858b27f5c658f73194d4e85dd7db520eab1aba2b5c7a4a0'
+  version '553'
+  sha256 '8e462b88c8ed3bb9fee567b9ec42cc8171690265d6e17b51f67df97f34717842'
 
   # wko4.com was verified as official when first introduced to the cask
   url "https://updates.wko4.com/TeQ2y43sOpz2/WKO5_OSX_#{version}.dmg"

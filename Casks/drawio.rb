@@ -1,6 +1,6 @@
 cask 'drawio' do
-  version '12.2.2'
-  sha256 '438cbb6e86e032a069f6ec10988e1a9283a7e88d52f84218aec6c8007751408e'
+  version '12.4.2'
+  sha256 '33b1c51228038e96c19ae41d0e6e8d783cf9f1cf2edd5616a60b5dedbe48e80d'
 
   # github.com/jgraph/drawio-desktop was verified as official when first introduced to the cask
   url "https://github.com/jgraph/drawio-desktop/releases/download/v#{version}/draw.io-#{version}.dmg"

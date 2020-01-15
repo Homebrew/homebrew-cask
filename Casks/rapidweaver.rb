@@ -1,10 +1,10 @@
 cask 'rapidweaver' do
-  version '8.3,20799.1567290120'
-  sha256 '88cf12c98d198f5328e12a76cccef8fc8d5a0dd0df63a51d945fb8ce14c5ae72'
+  version '8.5,20821'
+  sha256 'f8d6f6973a5ec070f7bbe12d15ecc2ba8df4979c5f7390babb9be12861420a47'
 
-  # devmate.com/com.realmacsoftware.rapidweaver was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.realmacsoftware.rapidweaver#{version.major}/#{version.after_comma.major}/#{version.after_comma.minor}/RapidWeaver#{version.major}-#{version.after_comma.major}.zip"
-  appcast "https://updates.devmate.com/com.realmacsoftware.rapidweaver#{version.major}.xml"
+  # github.com/realmacsoftware was verified as official when first introduced to the cask
+  url "https://github.com/realmacsoftware/RapidWeaver#{version.major}-releases/releases/download/#{version.before_comma}-%28#{version.after_comma}%29/RapidWeaver#{version.major}.zip"
+  appcast "https://github.com/realmacsoftware/RapidWeaver#{version.major}-releases/releases.atom"
   name 'RapidWeaver'
   homepage 'https://www.realmacsoftware.com/rapidweaver/'
 

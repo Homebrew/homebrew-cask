@@ -1,6 +1,6 @@
 cask 'beatunes' do
-  version '5.2.1'
-  sha256 'dbb9971c9cdb88557f271ce1748603e941c612f7184eda9e70064ea317829ec2'
+  version '5.2.4'
+  sha256 '2049db469cfead2fa7f580afa3ef67989dd48b730d9e3ea4b30d4999dafd4576'
 
   url "http://coxy.beatunes.com/download/beaTunes-#{version.dots_to_hyphens}.dmg"
   appcast 'https://www.beatunes.com/en/beatunes-download.html',

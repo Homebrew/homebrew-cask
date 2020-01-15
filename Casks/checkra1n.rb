@@ -1,6 +1,6 @@
 cask 'checkra1n' do
-  version '0.9.5'
-  sha256 '6c1a1b9d8cbb3f2879a952d5748f3fec47e00e9d5f9bb7d07178212a5c2181df'
+  version '0.9.7'
+  sha256 'a43bdd2a64967b70cda422b26e8e5585d7c37c28cbe42a67474143b5de586000'
 
   url "https://checkra.in/assets/downloads/macos/#{sha256}/checkra1n%20beta%20#{version}.dmg"
   appcast 'https://checkra.in/'

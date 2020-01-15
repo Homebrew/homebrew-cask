@@ -1,6 +1,6 @@
 cask 'qqplayer' do
-  version '1.0.4.278'
-  sha256 'a60a9115dcbe197ce62a3e9344408b0d1b4a4494b2c9f65e2c44eef5ae9ef7d2'
+  version '1.1.1.1208'
+  sha256 'c3194077db0f6ccbf38eda19575198750793005f127054ff5e86dc95b2922336'
 
   url "https://dldir1.qq.com/qqyy/mac/QQPlayer#{version}.dmg"
   appcast 'https://player.qq.com/'

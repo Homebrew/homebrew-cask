@@ -1,9 +1,9 @@
 cask 'neteasemusic' do
-  version '2.3.0_814,b2a5:20191015153044'
-  sha256 '3e90d78f5798a759862f7412b194d2624626a25afc9e046cfff27cc6fb75989e'
+  version '2.3.2_832,680685466.242a.20191112165731'
+  sha256 '52977697538bd24df242e3120e4644aaeab951a07ecb081da62a07b9f6846a62'
 
   # d1.music.126.net was verified as official when first introduced to the cask
-  url "https://d1.music.126.net/dmusic/#{version.after_comma.before_colon}/#{version.after_colon}/NeteaseMusic_#{version.before_comma}_web.dmg",
+  url "https://d1.music.126.net/dmusic/obj/w5zCg8OCw6fCn2vDicOl/#{version.after_comma.major}/#{version.after_comma.minor}/#{version.after_comma.patch}/NeteaseMusic_#{version.before_comma}_web.dmg",
       user_agent: :fake
   appcast 'https://music.163.com/api/mac/appcast.xml'
   name 'NetEase cloud music'

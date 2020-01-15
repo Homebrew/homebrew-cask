@@ -1,10 +1,10 @@
 cask 'vitalsource-bookshelf' do
-  version '8.3.1.343'
-  sha256 '2c9960601c34e439213b96a3e79838fbf3c251475ba6114c6585e6132d8b44c6'
+  version '9.0.2.1206'
+  sha256 'c3f6e6dbfc63e82078a2198633bb9072e648942c4162c49187efe1e2822395e8'
 
   # downloads.vitalbook.com was verified as official when first introduced to the cask
-  url "https://downloads.vitalbook.com/vsti/bookshelf/#{version.major_minor_patch}/mac/bookshelf/Bookshelf_#{version}.dmg"
-  appcast 'https://rink.hockeyapp.net/api/2/apps/eed59906dc1a41199db911c5220234fb'
+  url "https://downloads.vitalbook.com/vsti/bookshelf/#{version.major_minor_patch}/bookshelf/VitalSource-Bookshelf_#{version}.dmg"
+  appcast 'https://support.vitalsource.com/hc/en-us/articles/360014107913-Mac'
   name 'VitalSource Bookshelf'
   homepage 'https://www.vitalsource.com/bookshelf-features'
 

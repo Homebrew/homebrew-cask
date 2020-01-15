@@ -7,7 +7,7 @@ cask 'quiterss' do
   name 'QuiteRSS'
   homepage 'https://quiterss.org/'
 
-  app 'Quiterss.app'
+  app 'quiterss.app'
 
   zap delete: [
                 '~/.config/QuiteRss',

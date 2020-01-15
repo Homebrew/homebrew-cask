@@ -7,7 +7,7 @@ cask 'bluegriffon' do
   name 'BlueGriffon'
   homepage 'http://bluegriffon.org/'
 
-  depends_on macos: '>= :high_sierra'
+  depends_on macos: '>= :yosemite'
 
   app 'BlueGriffon.app'
 end

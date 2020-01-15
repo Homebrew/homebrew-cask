@@ -1,6 +1,6 @@
 cask 'rekordbox' do
-  version '5.8.0'
-  sha256 '1f50ef9f6b6eb828bfa24ca21332c57cc9db3285a8b4975130017a2c8e6a0c5d'
+  version '5.8.2'
+  sha256 '197ad1a5cc243155a9af1771c4dcd389e97fd3d42ff579e689eaaa42b84f531b'
 
   url "https://rekordbox.com/_app/files/Install_rekordbox_#{version.dots_to_underscores}.pkg.zip"
   appcast 'https://rekordbox.com/en/support/releasenote.php'

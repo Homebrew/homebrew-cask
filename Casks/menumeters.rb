@@ -1,6 +1,6 @@
 cask 'menumeters' do
-  version '2.0.0'
-  sha256 '6bbc68c215e70e686378d031aed7f3c35c98f68daf50a5ada53b0d7edf9158eb'
+  version '2.0.4'
+  sha256 '32f382f471a7ed2998c32d379cf27c6c6e3d620b63ed3cc68e0f2929a8cb44d5'
 
   url "https://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/zips/MenuMeters_#{version.major_minor_patch}.zip"
   appcast 'https://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/MenuMeters-Update.xml'

@@ -1,6 +1,6 @@
 cask 'memory-map' do
   version '1.5'
-  sha256 'dcb3b29c2f38b124dbf85278ded21e429b95e19cde0c856853d6842eaaac2c5f'
+  sha256 '957fbbaa6fa83507b92d41a7da21dde3edaeaf17b28fe479ef87bceb6ad53576'
 
   url "https://memory-map.com/download/mac/Memory-Map.#{version}.pkg"
   appcast 'https://memory-map.com/Mapping_Software_Downloads.html'

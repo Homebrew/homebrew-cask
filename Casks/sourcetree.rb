@@ -12,14 +12,14 @@ cask 'sourcetree' do
     # atlassian.com/software/sourcetree was verified as official when first introduced to the cask
     url "https://product-downloads.atlassian.com/software/sourcetree/ga/Sourcetree_#{version}.zip"
   else
-    version '4.0_232'
-    sha256 '626e3e88bb4656d26c6faafec442250e9fc221dd0037b0078b8e2776899285f1'
+    version '4.0.1_234'
+    sha256 'b6b059b6d1c91729bf6c44dac09d79c8ae6e22fefd1bee705c7814a2099c3131'
 
     # atlassian.com/software/sourcetree was verified as official when first introduced to the cask
     url "https://product-downloads.atlassian.com/software/sourcetree/ga/Sourcetree_#{version}.zip"
   end
 
-  appcast 'https://product-downloads.atlassian.com/software/sourcetree/Appcast/SparkleAppcastGroup1.xml'
+  appcast 'https://product-downloads.atlassian.com/software/sourcetree/Appcast/SparkleAppcastGroup0.xml'
   name 'Atlassian SourceTree'
   homepage 'https://www.sourcetreeapp.com/'
 

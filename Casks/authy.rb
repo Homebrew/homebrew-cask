@@ -1,6 +1,6 @@
 cask 'authy' do
-  version '1.7.0'
-  sha256 '299dbd31fe5ae65891b4fc04c3e87e41fc5fbdfb0b63b1c5fb33d60ace815fef'
+  version '1.7.2'
+  sha256 'a4a5f33067786917d45a2bdba3bb095b28e3c4df1b944041551f7b0ba1e1a23f'
 
   # authy-electron-repository-production.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://authy-electron-repository-production.s3.amazonaws.com/authy/stable/#{version}/darwin/x64/Authy%20Desktop-#{version}.dmg"

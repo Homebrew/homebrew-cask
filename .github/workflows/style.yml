@@ -8,7 +8,7 @@ on:
 
 jobs:
   style:
-    runs-on: macOS-10.14
+    runs-on: macos-latest
     steps:
       - name: debug
         run: |

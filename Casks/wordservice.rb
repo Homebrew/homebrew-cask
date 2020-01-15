@@ -5,7 +5,7 @@ cask 'wordservice' do
   # s3.amazonaws.com/DTWebsiteSupport was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/freeware/wordservice/#{version}/WordService.zip"
   name 'WordService'
-  homepage 'https://www.devontechnologies.com/products/freeware.html#c1115'
+  homepage 'https://www.devontechnologies.com/apps/freeware'
 
   app 'WordService.app'
 end
