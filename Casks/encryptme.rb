@@ -8,5 +8,7 @@ cask 'encryptme' do
   name 'Cloak'
   homepage 'https://encrypt.me/'
 
+  auto_updates true
+
   app 'EncryptMe.app'
 end
