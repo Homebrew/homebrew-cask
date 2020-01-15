@@ -7,6 +7,8 @@ cask 'macupdater' do
   name 'MacUpdater'
   homepage 'https://www.corecode.io/macupdater/index.html'
 
+  auto_updates true
+
   app 'MacUpdater.app'
 
   zap trash: [
