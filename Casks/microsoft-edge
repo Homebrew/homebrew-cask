@@ -15,7 +15,7 @@ cask 'microsoft-edge' do
 
   uninstall pkgutil: 'com.microsoft.edgemac'
 
-      trash:     [
+  zap  trash:    [
                    '~/Library/Preferences/com.microsoft.edgemac.plist',
                    '~/Library/Application Support/Microsoft Edge',
                  ]
