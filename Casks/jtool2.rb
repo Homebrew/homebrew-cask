@@ -1,7 +1,5 @@
 cask 'jtool2' do
   # note: "2" is not a version number, but an intrinsic part of the product name
-  # Author builds nightly without updating the filename, so there's no way to
-  # track a hash
   version :latest
   sha256 :no_check
 
