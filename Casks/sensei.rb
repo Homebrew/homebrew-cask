@@ -1,4 +1,4 @@
-cask 'disk-sensei' do
+cask 'sensei' do
   version '1.0.0,9'
   sha256 '2ffd1b2c9788a55d1e0b4e4628c7235b542e75d1b58e973b310860e6668022bd'
 
