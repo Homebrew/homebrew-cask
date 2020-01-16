@@ -87,7 +87,7 @@ Other providers may use URLs that change periodically, or even on each visit (ex
 
 ## Using a Block to Defer Code Execution
 
-Some casks—notably nightlies—have versioned download URLs but are updated so often that they become impractical to keep current with the usual process. For those, we want to dinamically determine `url`.
+Some casks—notably nightlies—have versioned download URLs but are updated so often that they become impractical to keep current with the usual process. For those, we want to dynamically determine `url`.
 
 ### The Problem
 
