@@ -10,5 +10,10 @@ cask 'grandperspective' do
 
   app 'GrandPerspective.app'
 
-  zap trash: '~/Library/Preferences/net.sourceforge.grandperspectiv.plist'
+  zap trash: [
+               '~/Library/Application Scripts/net.courceforge.grandperspectiv',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.sourceforge.grandperspectiv.sfl2',
+               '~/Library/Containers/net.sourceforge.grandperspectiv',
+               '~/Library/Preferences/net.sourceforge.grandperspectiv.plist',
+             ]
 end
