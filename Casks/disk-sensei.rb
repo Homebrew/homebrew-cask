@@ -1,26 +1,27 @@
 cask 'disk-sensei' do
-  version '1.6.3'
-  sha256 '7c534cf3cae64f70a2bbc6343bbd34283cbace6b3d5e21e45c25f115b30c40c8'
+  version '1.0.0,9'
+  sha256 '2ffd1b2c9788a55d1e0b4e4628c7235b542e75d1b58e973b310860e6668022bd'
 
-  # cindori.s3.amazonaws.com was verified as official when first introduced to the cask
-  url 'https://cindori.s3.amazonaws.com/DiskSensei.zip'
-  appcast 'https://www.cindori.org/updates/disksensei/DiskSensei.xml'
-  name 'Disk Sensei'
-  homepage 'https://cindori.org/'
+  # s3.amazonaws.com/cindori/ was verified as official when first introduced to the cask
+  url 'https://s3.amazonaws.com/cindori/Sensei.dmg'
+  appcast 'https://api.appcenter.ms/v0.1/public/sparkle/apps/51fc066a-f4b4-49ec-b966-b2f476d2eede'
+  name 'Sensei'
+  homepage 'https://sensei.app/'
 
   auto_updates true
+  depends_on macos: '>= :catalina'
 
-  app 'Disk Sensei.app'
+  app 'Sensei.app'
 
   uninstall delete:    '/Library/PrivilegedHelperTools/org.cindori.SenseiTool',
             launchctl: 'org.cindori.SenseiTool'
 
   zap trash: [
-               '~/Library/Application Support/Disk Sensei',
-               '~/Library/Application Support/org.cindori.Disk-Sensei',
-               '~/Library/Caches/org.cindori.Disk-Sensei',
-               '~/Library/Cookies/org.cindori.Disk-Sensei.binarycookies',
-               '~/Library/Preferences/org.cindori.Disk-Sensei.plist',
-               '~/Library/Saved Application State/org.cindori.Disk-Sensei.savedState',
+               '~/Library/Application Support/Sensei',
+               '~/Library/Application Support/org.cindori.Sensei',
+               '~/Library/Caches/org.cindori.Sensei',
+               '~/Library/Cookies/org.cindori.Sensei.binarycookies',
+               '~/Library/Preferences/org.cindori.Sensei.plist',
+               '~/Library/Saved Application State/org.cindori.Sensei.savedState',
              ]
 end
