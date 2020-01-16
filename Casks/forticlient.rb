@@ -10,7 +10,7 @@ cask 'forticlient' do
   installer manual: 'FortiClientUpdate.app'
 
   uninstall script: {
-                      executable: '/Applications/FortiClientUninstaller.app',
+                      executable: '/Applications/FortiClientUninstaller.app/Contents/MacOS/Uninstall',
                       sudo:       true,
                     }
 
