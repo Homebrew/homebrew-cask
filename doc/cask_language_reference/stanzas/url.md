@@ -83,19 +83,19 @@ https://sourceforge.net/projects/{{project_name}}/files/latest/download
 
 Some hosting providers actively block command-line HTTP clients. Such URLs cannot be used in Casks.
 
-Some providers do not actively block command-line HTTP clients but use URLs that change periodically, or even on each visit (example: FossHub). For those, see section [URLs that Change on Every Visit](#urls-that-change-on-every-visit).
+Other providers may use URLs that change periodically, or even on each visit (example: FossHub). While some cases [could be circumvented](#using-a-block-to-defer-code-execution), they tend to occur when the vendor is actively trying to prevent automated downloads, so we prefer to not add those casks to the main repository.
 
-## URLs that Change on Every Visit
+## Using a Block to Defer Code Execution
 
-Some providers use disposable URLs, which a Cask author cannot know in advance. Such URLs may change daily, or on every visit, and sometimes need to be dynamically obtained from a landing site.
+Some casks—notably nightlies—have versioned download URLs but are updated so often that they become impractical to keep current with the usual process. For those, we want to dynamically determine `url`.
 
 ### The Problem
 
 In theory, one can write arbitrary Ruby code right in the Cask definition to fetch and construct a disposable URL.
 
-However, this typically involves an HTTP/S round trip to a landing site, which may take a long time. Because of the way Homebrew Cask loads and parses Casks, it is not acceptable that such expensive operations be performed directly in the body of a Cask definition.
+However, this typically involves an HTTP round trip to a landing site, which may take a long time. Because of the way Homebrew Cask loads and parses Casks, it is not acceptable that such expensive operations be performed directly in the body of a Cask definition.
 
-### Using a Block to Defer Code Execution
+### Writing the Block
 
 Similar to the `preflight`, `postflight`, `uninstall_preflight`, and `uninstall_postflight` blocks, the `url` stanza offers an optional _block syntax_:
 
@@ -110,8 +110,7 @@ url do
 end
 ```
 
-The block is only evaluated when needed, for example on download time or when auditing a Cask.
-Inside a block, you may safely do things such as HTTP/S requests that may take a long time to execute. You may also refer to the `@cask` instance variable, and invoke any method available on `@cask`.
+The block is only evaluated when needed, for example on download time or when auditing a Cask. Inside a block, you may safely do things such as HTTP/S requests that may take a long time to execute. You may also refer to the `@cask` instance variable, and invoke any method available on `@cask`.
 
 The block will be called immediately before downloading; its result value will be assumed to be a `String` and subsequently used as a download URL.
 
