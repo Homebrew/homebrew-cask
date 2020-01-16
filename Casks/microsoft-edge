@@ -1,4 +1,4 @@
-cask 'microsoft-edge' do
+cask 'microsoft-edge.rb' do
   version '79.0.309.65'
   sha256 '67b1e8e036c575782b1c9188dd48fa94d9eabcb81947c8632fd4acac7b01644b'
 
@@ -13,10 +13,18 @@ cask 'microsoft-edge' do
 
   pkg "MicrosoftEdge-#{version}.pkg"
 
-  uninstall pkgutil: 'com.microsoft.edgemac'
+  uninstall pkgutil: 'com.microsoft.edgemac',
+            rmdir:   '/Library/Application Support/Microsoft'
 
-  zap  trash:    [
+  zap launchctl: [
+                   'com.microsoft.autoupdate.helper',
+                   'com.microsoft.update.agent',
+                 ],
+      pkgutil:   'com.microsoft.package.Microsoft_AutoUpdate.app',
+      delete:    '/Library/PrivilegedHelperTools/com.microsoft.autoupdate.helper',
+      trash:     [
                    '~/Library/Preferences/com.microsoft.edgemac.plist',
+                   '/Library/Application Support/Microsoft',
                    '~/Library/Application Support/Microsoft Edge',
                  ]
 end
