@@ -67,7 +67,7 @@ If the issue is still not solved, see the guides for common problems:
 
 We’re really rather friendly! Here are the best places to talk about the project:
 
-* If none of the templates above is appropriate, [open an issue](https://github.com/Homebrew/homebrew-cask/issues/new).
+* [Open an issue](https://github.com/Homebrew/homebrew-cask/issues/new/choose).
 * Join us on [discourse.brew.sh (forum)](https://discourse.brew.sh)
 
 ## License
