@@ -1,4 +1,4 @@
-cask 'microsoft-edge.rb' do
+cask 'microsoft-edge' do
   version '79.0.309.65'
   sha256 '67b1e8e036c575782b1c9188dd48fa94d9eabcb81947c8632fd4acac7b01644b'
 
