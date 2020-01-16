@@ -4,6 +4,7 @@ cask 'murus' do
 
   # github.com/TheMurusTeam was verified as official when first introduced to the cask
   url "https://github.com/TheMurusTeam/Murus/releases/download/v2.0/murus-#{version}.zip"
+  appcast 'https://github.com/TheMurusTeam/Murus/releases.atom'
   name 'Murus Firewall'
   homepage 'https://www.murusfirewall.com/'
 
