@@ -1,6 +1,6 @@
 cask 'vnc-server' do
-  version '6.6.0'
-  sha256 '9a2d0c2eb3d2ea168cd7d4ae953af15c6cee9e672438977bd50238ba81589877'
+  version '6.7.0'
+  sha256 '53edca20fd3117240c8f386aee591ec70ba0fc41458e33a22221c257c02438df'
 
   url "https://www.realvnc.com/download/file/vnc.files/VNC-Server-#{version}-MacOSX-x86_64.pkg"
   appcast 'https://www.realvnc.com/en/connect/download/vnc/macos/'
