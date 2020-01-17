@@ -1,6 +1,6 @@
 cask 'frhelper' do
-  version '3.9.4,2019-12-13'
-  sha256 '30d03c22f3e3fd0533ef8f223f6db546f922722b4dde9eb91d53c1ce7d2f7660'
+  version '3.9.5,2019-12-17'
+  sha256 '4d6ae7da29343f18fea57b419c1c8a838bfa8e813af87b1eaac15acb503c9378'
 
   # static.frdic.com was verified as official when first introduced to the cask
   url "https://static.frdic.com/pkg/fhmac.dmg?v=#{version.after_comma}"
