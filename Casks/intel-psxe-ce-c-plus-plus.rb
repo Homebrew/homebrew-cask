@@ -10,8 +10,8 @@ cask 'intel-psxe-ce-c-plus-plus' do
 
   uninstall script: {
                       executable: "m_ccompxe_#{version}.app/Contents/MacOS/uninstall.sh",
-                      args: ['--silent'],
-                      sudo: true
+                      args:       ['--silent'],
+                      sudo:       true,
                     }
 
   caveats do
