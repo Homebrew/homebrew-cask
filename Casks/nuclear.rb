@@ -1,9 +1,9 @@
 cask 'nuclear' do
-  version '0.5.1'
-  sha256 'c2bad0a3d3f29250f1b40102acda588c798c3a198c3c454f9593afbce4271477'
+  version '0.6.0,8595ed'
+  sha256 '2ee17401b2c9b70402718d45e3469b5ca27eff65b51f5fe224c50372fc473f23'
 
   # github.com/nukeop/nuclear was verified as official when first introduced to the cask
-  url "https://github.com/nukeop/nuclear/releases/download/v#{version}/nuclear-7e3bac.dmg"
+  url "https://github.com/nukeop/nuclear/releases/download/v#{version.before_comma}/nuclear-#{version.after_comma}.dmg"
   appcast 'https://github.com/nukeop/nuclear/releases.atom'
   name 'Nuclear'
   homepage 'https://nuclear.js.org/'
