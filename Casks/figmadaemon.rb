@@ -1,6 +1,6 @@
 cask 'figmadaemon' do
   version '17'
-  sha256 '61064122439bcf1e1ae05ff2b040107aa33f7c25898526bca4d9e8902a56fea0'
+  sha256 '97501a70cbba84e329e284ee223d6236d409102f58deb0282e705f2a14b171ea'
 
   url "https://font-daemon.figma.com/mac/FigmaDaemon.#{version}.zip"
   appcast 'http://font-daemon.figma.com/mac/versions.xml'
