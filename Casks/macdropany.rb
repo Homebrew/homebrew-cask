@@ -1,6 +1,6 @@
 cask 'macdropany' do
-  version '4.0.0-beta.1'
-  sha256 '28b5c73e8fe49dcf9b073fe99b2a6472b5b945187f6436bea4bf4cdeebb040b4'
+  version '3.0.2'
+  sha256 '47c842c1d525cbe012af94c3bf82d03b74a2e1f655f2a222696897c56228e974'
 
   url "https://github.com/sebthedev/MacDropAny/releases/download/v#{version}/MacDropAny.#{version}.zip"
   appcast 'https://github.com/sebthedev/MacDropAny/releases.atom'
