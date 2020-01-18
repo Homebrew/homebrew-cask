@@ -7,11 +7,7 @@ cask 'figmadaemon' do
   name 'Figma Font Installers'
   homepage 'https://www.figma.com/'
 
-  pkg 'FigmaInstaller.pkg'
-
-  uninstall pkgutil:   'com.figma.daemon',
-            launchctl: 'com.figma.daemon',
-            delete:    '~/Library/Application Support/Figma/FigmaDaemon.app'
+  app 'FigmaDaemon.app'
 
   zap trash: [
                '~/Library/Preferences/com.figma.FigmaDaemon.plist',
