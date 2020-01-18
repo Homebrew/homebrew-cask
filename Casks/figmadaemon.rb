@@ -1,8 +1,9 @@
 cask 'figmadaemon' do
-  version :latest
-  sha256 :no_check
+  version '17'
+  sha256 '61064122439bcf1e1ae05ff2b040107aa33f7c25898526bca4d9e8902a56fea0'
 
-  url 'https://font-daemon.figma.com/FigmaInstaller.pkg'
+  url "https://font-daemon.figma.com/mac/FigmaDaemon.#{version}.zip"
+  appcast 'http://font-daemon.figma.com/mac/versions.xml'
   name 'Figma Font Installers'
   homepage 'https://www.figma.com/'
 
