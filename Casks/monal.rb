@@ -1,5 +1,5 @@
 cask 'monal' do
-  version '2.5 beta 5,159'
+  version '2.5 beta 5,160'
   sha256 'e3ffeb9dd8d86359f9eafb877a9cb46938e546c2386af35ba24ebd4fdd375f57'
 
   url 'https://monal.im/Monal-OSX/Monal-OSX.zip'
