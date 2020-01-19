@@ -24,7 +24,7 @@ cask 'inkscape' do
     preflight do
       IO.write shimscript, <<~EOS
         #!/bin/sh
-        exec '#{staged_path}/Inkscape.app/Contents/MacOS/Inkscape' "$@"
+        open -a inkscape "$@"
       EOS
     end
 
