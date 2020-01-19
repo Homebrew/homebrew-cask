@@ -14,11 +14,11 @@ cask 'klayout' do
   else
     sha256 '8b0f4146523caa1abbd02dd5efeeca4a60b82f066aece9b975bdfd0109a59c04'
 
+    # klayout.org was verified as official when first introduced to the cask
+    url "https://www.klayout.org/downloads/MacOS/ST-klayout-#{version}-macOS-Catalina-1-qt5MP-RsysPsys.dmg"
+    appcast 'https://www.klayout.de/development.html'
   end
 
-  # klayout.org was verified as official when first introduced to the cask
-  url "https://www.klayout.org/downloads/MacOS/ST-klayout-#{version}-macOS-Catalina-1-qt5MP-RsysPsys.dmg"
-  appcast 'https://www.klayout.de/development.html'
   name 'KLayout'
   homepage 'https://www.klayout.de/'
 
