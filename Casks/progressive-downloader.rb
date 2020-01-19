@@ -4,7 +4,7 @@ cask 'progressive-downloader' do
 
   url "https://www.macpsd.net/update/#{version.major_minor}/PSD.dmg"
   appcast 'https://www.macpsd.net/',
-          configuration: 'version.major_minor'
+          configuration: version.major_minor
   name 'Progressive Downloader'
   homepage 'https://www.macpsd.net/'
 
