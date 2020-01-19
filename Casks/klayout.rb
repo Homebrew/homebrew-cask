@@ -16,9 +16,9 @@ cask 'klayout' do
 
     # klayout.org was verified as official when first introduced to the cask
     url "https://www.klayout.org/downloads/MacOS/ST-klayout-#{version}-macOS-Catalina-1-qt5MP-RsysPsys.dmg"
-    appcast 'https://www.klayout.de/development.html'
   end
 
+  appcast 'https://www.klayout.de/development.html'
   name 'KLayout'
   homepage 'https://www.klayout.de/'
 
