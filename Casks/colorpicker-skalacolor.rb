@@ -5,7 +5,7 @@ cask 'colorpicker-skalacolor' do
   # bjango.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://bjango.s3.amazonaws.com/files/skalacolor/skalacolor#{version}.zip"
   name 'Skala Color'
-  homepage 'https://bjango.com/mac/skalacolor/'
+  homepage 'https://bjango.com/help/skalacolor/gettingstarted/'
 
   colorpicker 'Skala Color Installer.app/Contents/Resources/SkalaColor.colorPicker'
 end

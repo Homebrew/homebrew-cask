@@ -10,6 +10,7 @@ cask 'monodraw' do
   depends_on macos: '>= :mojave'
 
   app 'Monodraw.app'
+  binary "#{appdir}/Monodraw.app/Contents/Resources/monodraw"
 
   zap trash: [
                '~/Library/Application Support/com.helftone.monodraw',

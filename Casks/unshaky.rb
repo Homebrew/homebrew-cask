@@ -10,4 +10,9 @@ cask 'unshaky' do
   depends_on macos: '>= :sierra'
 
   app 'Unshaky.app'
+
+  zap trash: [
+               'Library/Caches/com.nestederror.Unshaky',
+               'Library/Preferences/com.nestederror.Unshaky.plist',
+             ]
 end

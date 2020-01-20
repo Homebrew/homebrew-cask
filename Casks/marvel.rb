@@ -1,6 +1,6 @@
 cask 'marvel' do
-  version '8.5.7'
-  sha256 '1061b27ac2520e41485516b2c730105aab06c641104966e1b1f10cd36e020f5d'
+  version '9.0.0'
+  sha256 '99af93b2b70351c26d886490b563b5400b6c8aef2f847d4c0dd1d7e9f04d548e'
 
   # storage.googleapis.com/sketch-plugin was verified as official when first introduced to the cask
   url "https://storage.googleapis.com/sketch-plugin/#{version}/Marvel.zip"

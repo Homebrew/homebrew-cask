@@ -7,7 +7,14 @@ cask 'pocket-casts' do
   name 'Pocket Casts'
   homepage 'https://play.pocketcasts.com/'
 
+  auto_updates true
   depends_on macos: '>= :sierra'
 
   app 'Pocket Casts.app'
+
+  zap trash: [
+               '~/Library/Application Support/au.com.shiftyjelly.PocketCasts',
+               '~/Library/Caches/au.com.shiftyjelly.PocketCasts',
+               '~/Library/Preferences/au.com.shiftyjelly.PocketCasts.plist',
+             ]
 end
