@@ -1,6 +1,6 @@
 cask 'dcp-o-matic-batch-converter' do
-  version '2.14.21'
-  sha256 '1328ed80af35f8189d3fbcac16e647dcaa50e8092bad66fadd6c42f5152a8efb'
+  version '2.14.23'
+  sha256 '9db6b3e20abd89ac28d6df060b0988b11f875dbfcdad37f4cd29934da9f877e2'
 
   url "https://dcpomatic.com/dl.php?id=osx-batch&version=#{version}"
   appcast 'https://dcpomatic.com/download'
