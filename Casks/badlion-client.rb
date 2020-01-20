@@ -1,8 +1,8 @@
 cask 'badlion-client' do
-  version :latest
-  sha256 :no_check
+  version '2.11.1'
+  sha256 'bcac8e10b2adde731ccfc2a32ec4703c80ba2ac99282b72331b02ddcda49ae81'
 
-  url 'https://www.badlion.net/download/client/latest/mac'
+  url "https://client-updates.badlion.net/Badlion%20Client-#{version}.dmg"
   name 'Badlion Client'
   homepage 'https://www.badlion.net/'
 
