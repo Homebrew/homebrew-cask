@@ -7,5 +7,5 @@ cask 'abscissa' do
   name 'Abscissa'
   homepage 'http://rbruehl.macbay.de/Abscissa/'
 
-  app "Abscissa-#{version}/Abscissa.app"
+  app 'Abscissa.app'
 end
