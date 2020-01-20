@@ -7,7 +7,7 @@ cask 'alt-tab' do
   name 'alt-tab'
   homepage 'https://github.com/lwouis/alt-tab-macos'
 
-  depends_on macos: '>= :mojave'
+  depends_on macos: '>= :sierra'
 
   app 'AltTab.app'
 end
