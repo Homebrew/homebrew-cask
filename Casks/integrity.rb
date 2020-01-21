@@ -1,5 +1,5 @@
 cask 'integrity' do
-  version '9.4.1'
+  version '9.4.3'
   sha256 'dff4a23b7c414399721fd704e00544e71c5ef37b2e65617a2b52a85b4d40c428'
 
   url 'https://peacockmedia.software/mac/integrity/integrity.dmg'
