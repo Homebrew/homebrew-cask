@@ -1,6 +1,6 @@
 cask 'marginnote' do
   version '3.6.1002,1451f4f692144d46b91cd5898c7e42cb:6'
-  sha256 '4132d81bd9b88ea1cbf05385e64431210ea03c8bba152a1a799651264eae4245'
+  sha256 'b2016bee5b2c114571ad7da0f0cbecaf3ded4135a4f3c0840e9aa31e83305b8c'
 
   # rink.hockeyapp.net/api/2/apps was verified as official when first introduced to the cask
   url "https://rink.hockeyapp.net/api/2/apps/#{version.after_comma.before_colon}/app_versions/#{version.after_colon}?format=zip"
