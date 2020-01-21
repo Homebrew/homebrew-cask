@@ -1,6 +1,6 @@
 cask 'geotag-photos-pro' do
-  version '1.5.3'
-  sha256 '36093c034a77cf54d9af0b0e886f058b53447b6766d572ae858a3519d73001fd'
+  version '1.5.4'
+  sha256 '0c84ee5c1027f9793fd372b517d440f20a534b09ebfdff3452bbb65542f340c0'
 
   # Check https://github.com/tappytaps/geotag-desktop-app/releases for version num
   url 'https://www.geotagphotos.net/download?type=mac'
