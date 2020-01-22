@@ -1,6 +1,6 @@
 cask 'duefocus' do
-  version '2.1.0'
-  sha256 '3ec1eef0607b32514522bbdf1885fdde0a585560b9de381aab77c5e984cd6df8'
+  version '2.1.1'
+  sha256 '6835adc3e0fa6f69901c7e7b4fc39ce39e079d4f6c2608d3e7d0bc66e7f8697d'
 
   url "https://web.duefocus.com/distribution/darwin/v3/DueFocus-#{version}-mac.zip"
   appcast 'https://web.duefocus.com/distribution/darwin/v3/appcast.html'
