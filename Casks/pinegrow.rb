@@ -1,6 +1,6 @@
 cask 'pinegrow' do
-  version '5.91'
-  sha256 '0dab3c49ac1f98a035a760eacdcff855d2c8c4ca59a04697bc10c5be44de9a64'
+  version '5.92'
+  sha256 '2ea546cafa691c0836c6ed7f9ea822d080d291ede96b59fe0440132b632bee86'
 
   url "http://download.pinegrow.com/PinegrowMac.#{version}.dmg"
   appcast 'https://pinegrow.com/'
