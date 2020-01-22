@@ -4,7 +4,7 @@ cask 'sococo' do
 
   url "https://s.sococo.com/rs/client/mac/#{version.after_comma}-SococoProd.dmg"
   appcast 'https://app.sococo.com/a/download',
-          configuraton: version.after_comma
+          configuration: version.after_comma
   name 'Sococo'
   homepage 'https://www.sococo.com/'
 
