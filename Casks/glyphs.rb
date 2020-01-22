@@ -1,6 +1,6 @@
 cask 'glyphs' do
-  version '2.6.4,1285'
-  sha256 '7f7e1db5ac73e800757cd4b28cad226d7047da790786c011359ea4fe8feb127c'
+  version '2.6.4,1286'
+  sha256 'ebf6e5fd72f2907039d6643e09620f8b51a476423240091abb8c606c481430ba'
 
   url "https://updates.glyphsapp.com/Glyphs#{version.major_minor_patch}-#{version.after_comma}.zip"
   appcast "https://updates.glyphsapp.com/appcast#{version.major}.xml"
