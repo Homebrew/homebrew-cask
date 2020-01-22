@@ -1,6 +1,6 @@
 cask 'bloomrpc' do
-  version '1.3.1'
-  sha256 '229212189e90f742c9318d6fc8ca61e45f939f03d63a32eb0e70f3b39e7dd9d0'
+  version '1.4.0'
+  sha256 '3daaf8c7035aed03d0171d34a791f5e61bc1b1ac1ac1d99d69068043f6cbd93c'
 
   url "https://github.com/uw-labs/bloomrpc/releases/download/#{version}/BloomRPC-#{version}.dmg"
   appcast 'https://github.com/uw-labs/bloomrpc/releases.atom'
