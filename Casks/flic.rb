@@ -8,5 +8,5 @@ cask 'flic' do
   name 'Flic'
   homepage 'https://flic.io/mac-app'
 
-  app "Flic.app"
+  app 'Flic.app'
 end
