@@ -1,10 +1,9 @@
 cask 'framer-x' do
-  version '36830,1576846115'
-  sha256 'c6282262f56672a7d42fe99b02510fddede54a25cb1095e6a36d8e6fba2fcd82'
+  version '36837'
+  sha256 '2a21e169b0eb30f802027d6c54a8754aee06d3295c0a11a5294917faa3731851'
 
-  # dl.devmate.com/com.framer.x was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.framer.x/#{version.before_comma}/#{version.after_comma}/FramerX-#{version.before_comma}.zip"
-  appcast 'https://updates.devmate.com/com.framer.x.xml'
+  url "https://dl.framer.com/com.framer.x/#{version}/FramerX-#{version}.zip"
+  appcast 'https://updates.framer.com/sparkle/com.framer.x'
   name 'Framer X'
   homepage 'https://framer.com/'
 
