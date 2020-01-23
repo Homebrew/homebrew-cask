@@ -1,6 +1,6 @@
 cask 'appcode' do
-  version '2019.3.3,193.5662.73'
-  sha256 'f03708f7a5084e10a4709f380c0ce6518d842a2a4ffa32e5876914d455dce4c7'
+  version '2019.3.4,193.6015.49'
+  sha256 '8c5ab30b7435b144207e8b1482fd14819d9a48433a355f3bd622e46ed9cabc7e'
 
   url "https://download.jetbrains.com/objc/AppCode-#{version.before_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=AC&latest=true&type=release'

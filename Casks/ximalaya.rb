@@ -1,6 +1,6 @@
 cask 'ximalaya' do
-  version '1.2.10'
-  sha256 '60ff28e89127e62898c1798eae00c0089741e5498a4079d24ab6e16d14457983'
+  version '1.2.12'
+  sha256 '63754b5dc5f02f50062ddbbc4cec2fb603338688956ef18a3b4f0bb672312dc8'
 
   # s1.xmcdn.com was verified as official when first introduced to the cask
   url "https://s1.xmcdn.com/yx/ximalaya-pc-client/last/download/Ximalaya-#{version}.dmg"
