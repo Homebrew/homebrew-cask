@@ -1,6 +1,6 @@
 cask 'principle' do
-  version '5.9'
-  sha256 '16a8262a890874e60593dd22fb3d7aca993eb61ed3379215a3d57e68cf025b9c'
+  version '5.10'
+  sha256 'a05195f26d04611931dc16e20c29db27f67b197c1df116a2cecff4445cfb48c5'
 
   url "https://principleformac.com/download/Principle_#{version.dots_to_underscores}.zip"
   appcast 'https://principleformac.com/update2.xml'
