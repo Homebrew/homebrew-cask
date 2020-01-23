@@ -3,6 +3,7 @@ cask 'transocks' do
   sha256 'f53cee427d8b48ff124007476a240d78a3a7a4381da10157452d2a5b0d1f0bb1'
 
   url "https://www.transocks.com/download/mac/Transocks_Mac_#{version}.pkg"
+  appcast 'https://www.transocks.com/js/data.js'
   name 'Transocks'
   homepage 'https://www.transocks.com/'
 
