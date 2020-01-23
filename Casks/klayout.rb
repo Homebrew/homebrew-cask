@@ -12,7 +12,7 @@ cask 'klayout' do
     # klayout.org was verified as official when first introduced to the cask
     url "https://www.klayout.org/downloads/MacOS/ST-klayout-#{version}-macOS-Mojave-1-qt5MP-RsysPsys.dmg"
   else
-    sha256 '8b0f4146523caa1abbd02dd5efeeca4a60b82f066aece9b975bdfd0109a59c04'
+    sha256 '177197268dc2b78601392e99f8b41148660f24ea9a8781afe4d7a0249f4bf7e4'
 
     # klayout.org was verified as official when first introduced to the cask
     url "https://www.klayout.org/downloads/MacOS/ST-klayout-#{version}-macOS-Catalina-1-qt5MP-RsysPsys.dmg"
