@@ -7,5 +7,7 @@ cask 'noisebuddy' do
   name 'NoiseBuddy'
   homepage 'https://github.com/insidegui/NoiseBuddy'
 
+  depends_on macos: '>= :catalina'
+
   app 'NoiseBuddy.app'
 end
