@@ -37,5 +37,6 @@ cask 'teamviewer' do
                '~/Library/Preferences/com.teamviewer.teamviewer.preferences.Machine.plist',
                '~/Library/Preferences/com.teamviewer.teamviewer.preferences.plist',
                '~/Library/Saved Application State/com.teamviewer.TeamViewer.savedState',
+               '/Library/LaunchAgents/com.teamviewer.teamviewer*',
              ]
 end
