@@ -1,6 +1,6 @@
 cask 'phoenix' do
-  version '2.6.2'
-  sha256 '4ca6159a4075ac9fb0fa4fe071427fa424687b13a28f4db241ef904b7b2f7862'
+  version '2.6.3'
+  sha256 'e2e6a1577d376d4a313f6133a6c026e2b136b7d1168615f12de58750b3a631db'
 
   url "https://github.com/kasper/phoenix/releases/download/#{version}/phoenix-#{version}.tar.gz"
   appcast 'https://github.com/kasper/phoenix/releases.atom'
