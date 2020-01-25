@@ -1,5 +1,5 @@
 cask 'mutify' do
-  version '1.1.1'
+  version '1.1.2'
   sha256 '761c6cba9f6db885cbc01f82ae2b539be5137adbb75384151ff6d091f3fdae8b'
 
   url 'https://storage.mutify.app/data/Mutify.dmg'
