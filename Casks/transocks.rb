@@ -9,16 +9,16 @@ cask 'transocks' do
 
   pkg "Transocks_Mac_#{version}.pkg"
 
-  uninstall pkgutil: 'com.穿梭Transocks'
+  uninstall pkgutil: 'com.穿梭Transocks',
+            trash:   '~/.transocks_vendor'
 
   zap trash: [
                '/Library/Logs/DiagnosticReports/穿梭Transocks*',
                '~/Library/Application Support/CrashReporter/穿梭Transocks*',
-               '/Users/*/.transocks_vendor',
-               '/Users/*/.transocks_store.tmp',
-               '/Users/*/.transocks.log',
                '~/Library/Logs/穿梭Transocks',
                '~/Library/Preferences/com.github.Electron.plist',
                '~/Library/Saved Application State/com.github.Electron.savedState',
+               '~/.transocks_store.tmp',
+               '~/.transocks.log',
              ]
 end
