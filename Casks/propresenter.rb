@@ -1,15 +1,15 @@
 cask 'propresenter' do
-  version '6.5.3_100991749'
-  sha256 '8a822ae5dbf1f4a17008cee66dcf98487b424a3ef01a381de9310eb9bd6ce530'
+  version '7.0,117440539'
+  sha256 '047292587f7e7b558f02e8012d5e7189886e7262336ba1886fed90aa29d93236'
 
-  url "https://renewedvision.com/downloads/ProPresenter%20#{version.major}_#{version}.dmg"
-  appcast "https://www.renewedvision.com/update/ProPresenter#{version.major}.php"
+  url "https://renewedvision.com/downloads/propresenter/mac/ProPresenter_#{version.before_comma}_#{version.after_comma}.zip"
+  appcast 'https://api.renewedvision.com/v1/pro/upgrade?platform=macos&osVersion=0&appVersion=0&buildNumber=0&includeNotes=0'
   name 'ProPresenter'
   homepage 'https://www.renewedvision.com/propresenter.php'
 
   depends_on macos: '>= :high_sierra'
 
-  app "ProPresenter #{version.major}.app"
+  app 'ProPresenter.app'
 
   zap trash: [
                '~/Library/Application Support/RenewedVision/ProPresenter6',
