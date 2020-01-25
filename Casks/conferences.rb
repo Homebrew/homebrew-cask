@@ -1,4 +1,4 @@
-cask 'conferencesdigital' do
+cask 'conferences' do
   version '0.0.1-alpha21'
   sha256 '53348fd30d4c0367014d46cad1e581318ba4915259ac9845c668ebdf6184590c'
 
