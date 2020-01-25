@@ -1,9 +1,9 @@
 cask 'musescore' do
-  version '3.4.0'
-  sha256 'fc5623dd5618db63693488e7ad568ef8732f4871eb985e4af97b5d2aad2fac97'
+  version '3.4.1'
+  sha256 '84c9bd0a14bbcd1f5d86123acb7e23a609f7f684a843d68cef9e13fe1c79e127'
 
   # github.com/musescore/MuseScore was verified as official when first introduced to the cask
-  url "https://github.com/musescore/MuseScore/releases/download/v#{version.major_minor}/MuseScore-#{version}.dmg"
+  url "https://github.com/musescore/MuseScore/releases/download/v#{version}/MuseScore-#{version}.dmg"
   appcast 'https://github.com/musescore/MuseScore/releases.atom'
   name 'MuseScore'
   homepage 'https://musescore.org/'
