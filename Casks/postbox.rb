@@ -8,8 +8,8 @@ cask 'postbox' do
   name 'Postbox'
   homepage 'https://www.postbox-inc.com/'
 
-  depends_on macos: '>= :high_sierra'
   auto_updates true
+  depends_on macos: '>= :high_sierra'
 
   app 'Postbox.app'
 
