@@ -3,9 +3,8 @@ cask 'sonic-visualiser' do
   sha256 'bafa55e09b46d384e944efc4df3316439fc0e5a6925dc76829f183a1e9cc6ceb'
 
   # code.soundsoftware.ac.uk was verified as official when first introduced to the cask
-  url "https://code.soundsoftware.ac.uk/attachments/download/#{version.after_comma}/Sonic%20Visualiser-#{version.before_comma.major_minor_patch}.dmg"
-  appcast 'https://code.soundsoftware.ac.uk/projects/sonic-visualiser/repository/raw/CHANGELOG',
-          configuration: version.major_minor_patch
+  url "https://code.soundsoftware.ac.uk/attachments/download/#{version.after_comma}/Sonic%20Visualiser-#{version.before_comma.}.dmg"
+  appcast 'https://code.soundsoftware.ac.uk/projects/sonic-visualiser/repository/raw/CHANGELOG'
   name 'Sonic Visualiser'
   homepage 'https://www.sonicvisualiser.org/'
 
