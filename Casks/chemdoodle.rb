@@ -1,6 +1,6 @@
 cask 'chemdoodle' do
-  version '10.1.0'
-  sha256 'f6109a48a5af60cd0a6ae9dd3c9e4fdc907bce1d3b1a9c9eb8504ba5bca4400a'
+  version '10.2.0'
+  sha256 'b188eede7ce3e98c4c1e49aa9a72bd008c62e298ac00f91220b6d9821758df79'
 
   url "https://www.ichemlabs.com/downloads/ChemDoodle-osx-#{version}.dmg"
   appcast 'https://www.ichemlabs.com/download#chemdoodle/osx-installation-instructions/'
