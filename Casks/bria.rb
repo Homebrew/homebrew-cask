@@ -1,8 +1,9 @@
 cask 'bria' do
-  version '6.0.1_102001'
-  sha256 'd327f8518f8c4aa16e67f3c557fe4985c158d448f889f87f0bf1858a6ae95ea0'
+  version '6.0.3_102645'
+  sha256 '9730d408fabecc1cfb6e525d64973ea1cb6b7819e7f7f22863740557a50663a6'
 
-  url "https://secure.counterpath.com/Downloads/Bria_#{version}.dmg"
+  # s3.amazonaws.com was verified as official when first introduced to the cask
+  url "https://counterpath.s3.amazonaws.com/downloads/Bria_#{version}.dmg"
   appcast 'https://www.macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://solo.softphone.com/downloads/bria-for-mac'
   name 'Bria'
   homepage 'https://www.counterpath.com/bria-solo/'
