@@ -1,6 +1,6 @@
 cask 'nagstamon' do
-  version '3.4'
-  sha256 '4d128be81430388d5c52975dd44833cd7a5d05d8fd1ac6d258c94acdcc407241'
+  version '3.4.1'
+  sha256 '3493578ca06b61a146d3f1af1f7858e2aee662c4fa3ef5dedfc45c0203896ac5'
 
   url "https://nagstamon.ifw-dresden.de/files/stable/Nagstamon%20#{version}.dmg"
   appcast 'https://nagstamon.ifw-dresden.de/files/stable/sha256sums.txt'
