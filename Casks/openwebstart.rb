@@ -1,6 +1,6 @@
 cask 'openwebstart' do
-  version '1.1.2'
-  sha256 '7c4eaddb74a3681e6f4939d3e0c8d82efb3285dd1d6b48453d9a75a3d18a31dc'
+  version '1.1.3'
+  sha256 'd3e24da81bef0c5f62b1adbb9675e29adc164c0d7e541e4fb93813295e06b656'
 
   # github.com/karakun/OpenWebStart was verified as official when first introduced to the cask
   url "https://github.com/karakun/OpenWebStart/releases/download/v#{version}/OpenWebStart_macos_#{version.dots_to_underscores}.dmg"
