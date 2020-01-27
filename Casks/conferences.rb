@@ -8,5 +8,7 @@ cask 'conferences' do
   name 'Conferences.digital'
   homepage 'https://conferences.digital/'
 
+  depends_on macos: '>= :mojave'
+
   app 'Conferences.app'
 end
