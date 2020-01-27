@@ -6,7 +6,7 @@ cask 'airunlock' do
   url "https://github.com/pinetum/AirUnlock-for-Mac/releases/download/#{version}/AirUnlock_mac_#{version}.zip"
   appcast 'https://github.com/pinetum/AirUnlock-for-Mac/releases.atom'
   name 'AirUnlock'
-  homepage 'http://airunlock.0068.ml/'
+  homepage 'https://github.com/pinetum/AirUnlock-for-Mac'
 
   app 'AirUnlock.app'
 end
