@@ -7,5 +7,7 @@ cask 'loom' do
   name 'Loom'
   homepage 'https://www.loom.com/'
 
+  auto_updates true
+
   app 'Loom.app'
 end
