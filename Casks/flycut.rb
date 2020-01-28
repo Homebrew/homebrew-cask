@@ -1,8 +1,8 @@
 cask 'flycut' do
-  version '1.8.2'
-  sha256 '70e40de3fed82035bd16979bc4d99fda3588888720694fe6cd4e7f367a9004ba'
+  version '1.9.3'
+  sha256 'b74e0918869d1356d0e950ea0951d0ec8fa10b44e1a6a6b953f52c071b4310e1'
 
-  url "https://github.com/TermiT/Flycut/releases/download/#{version}/Flycut.app.#{version}.zip"
+  url "https://github.com/TermiT/Flycut/releases/download/#{version}/Flycut.#{version}.zip"
   appcast 'https://github.com/TermiT/Flycut/releases.atom'
   name 'Flycut'
   homepage 'https://github.com/TermiT/Flycut'
