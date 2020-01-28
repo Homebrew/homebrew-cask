@@ -1,4 +1,4 @@
-cask 'nox-app-player' do
+cask 'noxappplayer' do
   version '2.0.0.0,0117'
   sha256 '489a57f1399bf8a026abd5c7a802ffeb5024753534dfa9afbe48ba300bbe0d7b'
 
