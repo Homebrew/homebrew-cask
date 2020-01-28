@@ -1,6 +1,6 @@
 cask 'securityspy' do
-  version '5.2.0'
-  sha256 '038ef1d321b4a361ada48bef51c663408c89ce4290ba6f1fdaf1b13a4739b39a'
+  version '5.2.1'
+  sha256 'c70f1d3d8b187866d96e087257a84063c0837a61c7d0809931edf0268c1b83c7'
 
   url 'https://www.bensoftware.com/securityspy/SecuritySpy.dmg'
   appcast 'https://www.bensoftware.com/securityspy/versionhistory.html',
