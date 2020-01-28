@@ -1,8 +1,9 @@
 cask 'nox-app-player' do
-  version '1.2.6.0'
-  sha256 '7499ea4e4adaf62b0c14594d8fbe2773a2ec44ed1d2139a07c119dab49ce9130'
+  version '2.0.0.0,0117'
+  sha256 '489a57f1399bf8a026abd5c7a802ffeb5024753534dfa9afbe48ba300bbe0d7b'
 
-  url "https://res06.bignox.com/full/20190109/2e91ffc9401f40efa3a19e3b75667ee2.dmg?filename=Nox_installer_for_mac_v#{version}_intl.dmg"
+  url "https://res06.bignox.com/full/2020#{version.after_comma}/7fc81e345aff4ac394d6c188c67e4cf1.dmg?filename=Nox_installer_for_mac_v#{version.before_comma}_en_#{version.after_comma}.dmg"
+  appcast 'https://www.bignox.com/blog/category/releasenote/'
   name 'Nox App Player'
   homepage 'https://www.bignox.com/'
 
