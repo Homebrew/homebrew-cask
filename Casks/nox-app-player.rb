@@ -4,8 +4,8 @@ cask 'nox-app-player' do
 
   url "https://res06.bignox.com/full/2020#{version.after_comma}/7fc81e345aff4ac394d6c188c67e4cf1.dmg?filename=Nox_installer_for_mac_v#{version.before_comma}_en_#{version.after_comma}.dmg"
   appcast 'https://www.bignox.com/blog/category/releasenote/'
-  name 'Nox App Player'
+  name 'NoxAppPlayer'
   homepage 'https://www.bignox.com/'
 
-  app 'Nox App Player.app'
+  app 'NoxAppPlayer.app'
 end
