@@ -5,7 +5,7 @@ cask 'cajviewer' do
   url 'http://viewer.d.cnki.net/CAJ%E4%BA%91%E9%98%85%E8%AF%BB.dmg'
   name 'CAJViewer'
   name 'CAJ云阅读'
-  homepage 'http://cajviewer.cnki.net/cajcloud/cajdownload.html'
+  homepage 'https://cajviewer.cnki.net/cajcloud/cajdownload.html'
 
   app 'CAJ云阅读.app'
 end

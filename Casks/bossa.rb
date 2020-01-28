@@ -6,7 +6,7 @@ cask 'bossa' do
   url "https://github.com/shumatech/BOSSA/releases/download/#{version}/bossa-#{version}.dmg"
   appcast 'https://github.com/shumatech/BOSSA/releases.atom'
   name 'bossa'
-  homepage 'http://www.shumatech.com/web/products/bossa'
+  homepage 'https://www.shumatech.com/web/products/bossa'
 
   app 'BOSSA.app'
   binary 'bossac'
