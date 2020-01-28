@@ -8,6 +8,7 @@ cask 'drama' do
   name 'Drama'
   homepage 'https://www.drama.app/'
 
+  auto_updates true
   depends_on macos: '>= :high_sierra'
 
   app 'Drama.app'
