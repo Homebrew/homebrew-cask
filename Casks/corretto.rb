@@ -1,6 +1,6 @@
 cask 'corretto' do
-  version '11.0.6.10.1-1'
-  sha256 '4c685635b690cf905e5c2e533503c96ddbc6fdc205a1867a7e8a0bea9fea77ea'
+  version '11.0.6.10.1-2'
+  sha256 '401d569df7771aacaf8ea3a1ceadf38c1044ab9737ddb21685b375f395adbf50'
 
   url "https://corretto.aws/downloads/resources/#{version.sub(%r{-\d+}, '')}/amazon-corretto-#{version}-macosx-x64.pkg"
   appcast "https://docs.aws.amazon.com/en_us/corretto/latest/corretto-#{version.major}-ug/corretto-#{version.major}-ug.rss"
