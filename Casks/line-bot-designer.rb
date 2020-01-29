@@ -6,7 +6,7 @@ cask 'line-bot-designer' do
   url "https://d.line-scdn.net/r/devcenter/bot-designer/LINE%20Bot%20Designer-#{version}.dmg"
   appcast 'https://developers.line.biz/en/bot-designer/download/'
   name 'LINE Bot Designer'
-  homepage 'https://developers.line.me/en/bot-designer/overview/'
+  homepage 'https://developers.line.biz/en/'
 
   app 'LINE Bot Designer.app'
 end
