@@ -12,7 +12,7 @@ cask 'xctu' do
   homepage 'https://www.digi.com/products/embedded-systems/digi-xbee-tools/xctu'
 
   installer script: {
-                      executable: "#{staged_path}/xctu_installer.app/Contents/MacOS/osx-intel",
+                      executable: "#{staged_path}/xctu_installer.app/Contents/MacOS/installbuilder.sh",
                       args:       ['--mode', 'unattended'],
                     }
 
