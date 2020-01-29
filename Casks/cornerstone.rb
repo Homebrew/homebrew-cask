@@ -7,5 +7,7 @@ cask 'cornerstone' do
   name 'Cornerstone'
   homepage 'https://www.zennaware.com/cornerstone/'
 
+  depends_on macos: '>= :mojave'
+
   app 'Cornerstone.app'
 end
