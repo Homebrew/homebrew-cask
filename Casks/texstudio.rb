@@ -11,7 +11,7 @@ cask 'texstudio' do
   conflicts_with cask: 'texstudio-beta'
   depends_on macos: '>= :sierra'
 
-  app 'texstudio.app'
+  app 'TeXstudio.app'
 
   zap trash: [
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/texstudio.sfl*',
