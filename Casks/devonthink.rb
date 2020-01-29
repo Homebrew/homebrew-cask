@@ -2,7 +2,6 @@ cask 'devonthink' do
   version '3.0.4'
   sha256 '58f2dc9877505782dc3529a4c805f4faa29728ea8c4d276670935dd779b21e31'
 
-  # s3.amazonaws.com/DTWebsiteSupport was verified as official when first introduced to the cask
   url "https://download.devontechnologies.com/download/devonthink/#{version}/DEVONthink_#{version.major}.app.zip"
   appcast 'https://api.devontechnologies.com/1/apps/sparkle/sparkle.php?id=300900000'
   name 'DEVONthink'
