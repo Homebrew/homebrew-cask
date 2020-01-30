@@ -1,6 +1,6 @@
 cask 'sentinel' do
-  version '0.14.2'
-  sha256 'aea6a6e915d0f8b29579c48dade284e446e83f49705cb2441bd7b40b411d818f'
+  version '0.14.3'
+  sha256 '86feb4cd422546e6d50d3eb55b01e995eff36d7451153a0d9840cb8de05ad801'
 
   url "https://releases.hashicorp.com/sentinel/#{version}/sentinel_#{version}_darwin_amd64.zip"
   appcast 'https://docs.hashicorp.com/sentinel/downloads/'
