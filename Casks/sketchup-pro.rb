@@ -67,10 +67,7 @@ cask 'sketchup-pro' do
   name 'SketchUp'
   homepage 'https://www.sketchup.com/'
 
-  suite "SketchUp #{version.after_comma}"
+  installer manual: 'Double-Click to Install Sketchup.app'
 
-  zap trash: [
-               "~/Library/Application Support/SketchUp #{version.after_comma}",
-               "~/Library/Caches/com.sketchup.SketchUp.#{version.after_comma}",
-             ]
+  uninstall delete: "/Applications/SketchUp 2020"
 end
