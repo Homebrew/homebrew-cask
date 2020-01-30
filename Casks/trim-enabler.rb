@@ -1,6 +1,6 @@
 cask 'trim-enabler' do
-  version '4.3,20.1577971876'
-  sha256 'aeebddf1fb296ab815a4565cd9970eaac2d1029490349ee85f2223eeb1ade1b8'
+  version '4.3.4,24.1580333799'
+  sha256 '0968bff09ade1682ae91bacf5ace1bacb3d9927c14be41118e2c5b76b741d742'
 
   # dl.devmate.com/org.cindori.TrimEnabler4 was verified as official when first introduced to the cask
   url "https://dl.devmate.com/org.cindori.TrimEnabler4/#{version.after_comma.major}/#{version.after_comma.minor}/TrimEnabler-#{version.after_comma.major}.zip"
