@@ -39,18 +39,13 @@ Tests on the following values are known to be acceptable:
 
 ### Version Comparisons
 
-Tests against `MacOS.version` may use either symbolic names or version
-strings with numeric comparison operators:
+Tests against `MacOS.version` may use the symbolic names with numeric comparison operators:
 
 ```ruby
 if MacOS.version <= :mavericks     # symbolic name
 ```
 
-```ruby
-if MacOS.version <= '10.9'         # version string
-```
-
-The available symbols for macOS versions are: `:mavericks`, `:yosemite`, `:el_capitan`, `:sierra`, `:high_sierra`, and `:mojave`. The corresponding numeric version strings should be given as major releases containing a single dot.
+The available symbols for macOS versions are: `:mavericks`, `:yosemite`, `:el_capitan`, `:sierra`, `:high_sierra`, and `:mojave`.
 
 ### Always Fall Through to the Newest Case
 
