@@ -9,7 +9,7 @@ cask 'fantastical' do
 
   auto_updates true
 
-  app "Fantastical #{version.major}.app"
+  app 'Fantastical.app'
 
   uninstall launchctl: "com.flexibits.fantastical#{version.major}.mac.launcher",
             quit:      "com.flexibits.fantastical#{version.major}.mac"
