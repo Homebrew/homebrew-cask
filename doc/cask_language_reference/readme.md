@@ -40,8 +40,8 @@ Tests on the following values are known to be acceptable:
 ### Version Comparisons
 
 Tests against `MacOS.version` may use either symbolic names or version
- strings with numeric comparison operators:
- 
+strings with numeric comparison operators:
+
 ```ruby
 if MacOS.version <= :mavericks     # symbolic name
 ```
