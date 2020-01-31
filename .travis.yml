@@ -7,7 +7,6 @@ osx_image:
   - xcode9.2   # macOS 10.12 Sierra
   - xcode10.1  # macOS 10.13 High Sierra
   - xcode11.3  # macOS 10.14 Mojave
-  - xcode10.3
 
 branches:
   only:
