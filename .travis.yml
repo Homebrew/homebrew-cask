@@ -3,7 +3,6 @@ language: c
 os: osx
 osx_image:
   - xcode6.4   # OS X 10.10 Yosemite
-  - xcode7.3   # OS X 10.11 El Capitan
   - xcode8     # OS X 10.11 El Capitan
   - xcode9.2   # macOS 10.12 Sierra
   - xcode10.1  # macOS 10.13 High Sierra
@@ -39,6 +38,7 @@ install:
     export HOMEBREW_COLOR=1
     export HOMEBREW_DEVELOPER=1
     export HOMEBREW_NO_AUTO_UPDATE=1
+    brew update
     brew update-reset
     HOMEBREW_INSTALL_BUNDLER_GEMS_FIRST=1 brew config
   - |
