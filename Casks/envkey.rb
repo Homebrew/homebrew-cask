@@ -1,6 +1,6 @@
 cask 'envkey' do
-  version '1.4.14'
-  sha256 '717d359960756824807fdbe47336f3d1346a78ef77b74bb11c34314b660d8fd3'
+  version '1.4.15'
+  sha256 'e42ce2d5537e3cec7f6ad8655ed6ab5444071b8e4ddec8f151e49d3cd58f1ce4'
 
   # github.com/envkey/envkey-app was verified as official when first introduced to the cask
   url "https://github.com/envkey/envkey-app/releases/download/darwin-x64-prod-v#{version}/EnvKey-#{version}-mac.zip"
