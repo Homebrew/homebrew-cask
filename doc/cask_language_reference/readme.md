@@ -52,7 +52,7 @@ if MacOS.version <= '10.9'         # version string
 
 The available symbols for macOS versions are: `:mavericks`, `:yosemite`, `:el_capitan`, `:sierra`, `:high_sierra`, `:mojave`, and `:catalina`. The corresponding numeric version strings should be given as major releases containing a single dot.
 
-Note that in the official Homebrew Cask repository only the symbolic names are allowed. The numeric comparison may only be used for third-party taps.
+Note that in the official Homebrew Cask repositories only the symbolic names are allowed. The numeric comparison may only be used for third-party taps.
 
 
 ### Always Fall Through to the Newest Case
