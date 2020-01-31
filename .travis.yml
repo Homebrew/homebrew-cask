@@ -2,7 +2,11 @@ language: c
 
 os: osx
 osx_image:
-  - xcode10.1
+  - xcode6.4   # OS X 10.10 Yosemite
+  - xcode8     # OS X 10.11 El Capitan
+  - xcode9.2   # macOS 10.12 Sierra
+  - xcode10.1  # macOS 10.13 High Sierra
+  - xcode11.3  # macOS 10.14 Mojave
   - xcode10.3
 
 branches:
