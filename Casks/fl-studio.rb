@@ -1,6 +1,6 @@
 cask 'fl-studio' do
-  version '20.6.1.853'
-  sha256 'a82f536002dea33dd8a84322f59b6fe041a255e065db9d29ebacc71055baea2c'
+  version '20.6.2.877'
+  sha256 'd3211d79e535930cbf6f899ed66df4b210e5697692f27963a00fa6a4742a89dc'
 
   url "http://demodownload.image-line.com/flstudio/flstudio_mac_#{version}.dmg"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://support.image-line.com/redirect/flstudio20_mac_installer'
