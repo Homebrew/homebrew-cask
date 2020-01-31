@@ -69,5 +69,5 @@ cask 'sketchup-pro' do
 
   installer manual: 'Double-Click to Install Sketchup.app'
 
-  uninstall delete: "/Applications/SketchUp 2020"
+  uninstall delete: "/Applications/SketchUp #{version.after_comma}"
 end
