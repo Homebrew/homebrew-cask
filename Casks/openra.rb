@@ -1,6 +1,6 @@
 cask 'openra' do
-  version '20191117'
-  sha256 'ff5fafd5a3233c562d6a7515b15938d461815d36373bc1e23d46642d465ab1b6'
+  version '20200202'
+  sha256 '4fe30d596133b96b1b66f1edcc6925ebcb3170e6cff076c7c1c74005460db8f5'
 
   # github.com/OpenRA/OpenRA was verified as official when first introduced to the cask
   url "https://github.com/OpenRA/OpenRA/releases/download/release-#{version}/OpenRA-release-#{version}.dmg"
