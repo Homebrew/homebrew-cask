@@ -1,6 +1,6 @@
 cask 'blitz' do
-  version '1.6.12'
-  sha256 'b82784324b1a6ab39b8716b94f8792a127f100820a6d8ead0a9f933a99784298'
+  version '1.6.14'
+  sha256 '580a06ed7f5933e1459dd7344abe3249d6c0439aa09321e2010a0161f85a5aea'
 
   url "https://dl.blitz.gg/download/Blitz-#{version}.dmg"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=https://dl.blitz.gg/download/mac'
