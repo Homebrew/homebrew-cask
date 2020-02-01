@@ -1,6 +1,6 @@
 cask 'yandexradio' do
-  version '2.0.0,143'
-  sha256 'd27d49c26e3082c4562f7aea758e795ed48ceab595f50c8e5da8d375c71d6989'
+  version '2.0.1,144'
+  sha256 'd0a26c75dbc226f837941f309101a0231eea2db945fb0449c45cf771ea960b1c'
 
   url "http://tutra.ru/app/Yandex.Radio.#{version.before_comma}-#{version.after_comma}.dmg"
   appcast 'http://tutra.ru/app/yandex.radio/appcast.xml'
