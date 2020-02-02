@@ -1,6 +1,6 @@
 cask 'hook' do
-  version '1.3.3,10'
-  sha256 '725241d6bb79ef0f2588b9bb9bf4e929e449cb0e346d60597727b08854a3b338'
+  version '1.4,13'
+  sha256 '60b25c4c5c160ce1360c55700d5aaf6357fc76a931aeae86a8e2e2c0cfdd9564'
 
   # rink.hockeyapp.net/api/2/apps/a77a1a877d69435d90ea7365b2f7bddb was verified as official when first introduced to the cask
   url "https://rink.hockeyapp.net/api/2/apps/a77a1a877d69435d90ea7365b2f7bddb/app_versions/#{version.after_comma}?format=zip"
