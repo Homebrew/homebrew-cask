@@ -3,7 +3,7 @@ cask 'rescuetime' do
   sha256 '68a6335156f2c17376a82c1b8204df00fa5b1ccd92d77c301bc422d41835bc5d'
 
   url 'https://www.rescuetime.com/installers/RescueTimeInstaller.pkg'
-  appcast 'http://www.rescuetime.com/installers/appcast'
+  appcast 'https://www.rescuetime.com/installers/appcast'
   name 'RescueTime'
   homepage 'https://www.rescuetime.com/'
 

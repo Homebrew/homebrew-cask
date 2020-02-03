@@ -5,7 +5,7 @@ cask 'command-tab-plus' do
   url 'https://noteifyapp.com/download/Command-Tab%20Plus.dmg'
   appcast 'https://macplus-software.com/downloads/Command-Tab.xml'
   name 'Command-Tab Plus'
-  homepage 'http://commandtab.noteifyapp.com/'
+  homepage 'https://noteifyapp.com/command-tab-plus/'
 
   app 'Command-Tab Plus.app'
 

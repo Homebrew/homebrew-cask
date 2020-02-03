@@ -1,6 +1,6 @@
 cask 'screenflow' do
-  version '9.0.1'
-  sha256 '1d7f5681406b437bc340985c5c0d10f82a1cd4a49b874c490d8e8f6ec30a0370'
+  version '9.0.2'
+  sha256 '39940d4a7d4ac9ca5f20046c8bd731ae9344f86321a70e2fb97b8d125a255fb6'
 
   url "https://www.telestream.net/download-files/screenflow/#{version.major_minor.dots_to_hyphens}/ScreenFlow-#{version}.dmg"
   appcast 'https://www.telestream.net/updater/screenflow/appcast.xml'
