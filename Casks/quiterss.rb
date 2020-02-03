@@ -1,6 +1,6 @@
 cask 'quiterss' do
-  version '0.18.12'
-  sha256 'f01b838923544b3a43d798ec78e1168e6442ec2d9364f107837b51ce66189ac3'
+  version '0.19.3'
+  sha256 '841dbf3105681eb789d63f98dde850bc9b8582aa7df96f595fbdb5fecc6a52b6'
 
   url "https://quiterss.org/files/#{version}/QuiteRSS-#{version}.dmg"
   appcast 'https://github.com/QuiteRSS/quiterss/releases.atom'
