@@ -7,5 +7,7 @@ cask 'clover-configurator' do
   name 'Clover Configurator'
   homepage 'https://mackie100projects.altervista.org/'
 
+  auto_updates true
+
   app 'Clover Configurator.app'
 end
