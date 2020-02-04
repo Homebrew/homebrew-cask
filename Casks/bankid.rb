@@ -1,6 +1,6 @@
 cask 'bankid' do
-  version '7.8.1'
-  sha256 '8f6aa62611918baa46e1675ecb9a956b5f62689aa4698ba1d2d79f2272f1ccc6'
+  version '7.9.0'
+  sha256 'f1475b4998889374a96dae1e713babc16a898c3c0263041d27cd3af68f8daa00'
 
   url "https://install.bankid.com/Repository/BankID_installation_#{version.dots_to_underscores}.pkg"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://install.bankid.com/FileDownloader?fileId=Mac',
