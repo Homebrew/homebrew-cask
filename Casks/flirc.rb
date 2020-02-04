@@ -1,6 +1,6 @@
 cask 'flirc' do
-  version '3.25.2'
-  sha256 '0d5a49472614fbecb3be267a50984d649a693e3f4deeb3b6c27cdc9ecf50cbc5'
+  version '3.25.3'
+  sha256 'ca01961197f99e232e13d27dd5fe198ef84f476268504e2860507b6530a7f101'
 
   url "https://flirc.tv/software/flirc-usb/GUI/release/mac/Flirc-#{version}.dmg"
   appcast 'https://flirc.tv/software/release/gui/mac/appcast.xml'
