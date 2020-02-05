@@ -6,7 +6,7 @@ cask 'wavebox' do
   url "https://download.wavebox.app/core/mac/Install%20Wavebox%20#{version}.dmg"
   appcast 'https://download.wavebox.app/core/mac/appcast.xml'
   name 'Wavebox'
-  homepage 'https://wavebox.io/download/'
+  homepage 'https://wavebox.io/'
 
   auto_updates true
 
