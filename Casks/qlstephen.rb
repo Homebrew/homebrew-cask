@@ -1,6 +1,6 @@
 cask 'qlstephen' do
-  version '1.4.4'
-  sha256 'ef7323064fd5bff5c3e4b7fabe9ac832711535862cdf585f806e6962cd4a9119'
+  version '1.5.1'
+  sha256 '1f4a6104687d8c6479316dea37a88eb1a94875b0814744b9dc307492eb259c04'
 
   # github.com/whomwah/qlstephen was verified as official when first introduced to the cask
   url "https://github.com/whomwah/qlstephen/releases/download/#{version}/QLStephen.qlgenerator.#{version}.zip"
