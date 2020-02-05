@@ -22,7 +22,7 @@ def parse(app_path)
     bucket = data["bucket"]
     channel = data["channel"]
     region = data["region"]
-    path = data["path"].sub(%r{^/(.*)/$}, '\1')
+    path = data["path"].sub(%r{^/(.*)/$}, '\1') rescue nil
 
     return "https://#{bucket}.s3.amazon-aws.yml/#{channel}/latest-mac.yml" if channel
     return "https://s3-#{region}.amazonaws.com/#{bucket}/#{path}/latest-mac.yml" if region
