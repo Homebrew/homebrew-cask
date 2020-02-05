@@ -4,7 +4,7 @@ cask 'kubernetic' do
 
   # kubernetic.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://kubernetic.s3.amazonaws.com/Kubernetic-#{version}.dmg"
-  appcast 'https://kubernetic.com/'
+  appcast 'https://kubernetic.s3.amazonaws.com/latest-mac.yml'
   name 'Kubernetic'
   homepage 'https://kubernetic.com/'
 
