@@ -8,6 +8,7 @@ cask 'intel-power-gadget' do
   name 'Intel Power Gadget'
   homepage 'https://software.intel.com/en-us/articles/intel-power-gadget'
 
+  auto_updates true
   depends_on macos: '>= :high_sierra'
 
   pkg 'Install Intel Power Gadget.pkg'
