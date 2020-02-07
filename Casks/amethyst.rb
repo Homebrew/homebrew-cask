@@ -8,8 +8,8 @@ cask 'amethyst' do
     sha256 '9fd1ac2cfb8159b2945a4482046ee6d365353df617f4edbabc4e8cadc448c1e7'
     url "https://ianyh.com/amethyst/versions/Amethyst-#{version}.zip"
   else
-    version '0.14.3'
-    sha256 '88da14e15722525fa4695688fc153ed93e3595366a52a0ce92fa66abb1826151'
+    version '0.14.4'
+    sha256 '06c8c1a9f489eed43be765d800b8415f44c3fd19965b4998d1d1406fa1e0b1bb'
     # github.com/ianyh/Amethyst was verified as official when first introduced to the cask
     url "https://github.com/ianyh/Amethyst/releases/download/v#{version}/Amethyst.zip"
   end
