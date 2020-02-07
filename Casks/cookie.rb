@@ -1,6 +1,6 @@
 cask 'cookie' do
-  version '6.0.10'
-  sha256 '2bdf4896a6c0c53713abb9cbdcb4de5fb4495854275da6fcb9f30e19580a15cc'
+  version '6.0.11'
+  sha256 '37d5a95014696ea2d859b726c81bd969798a5256e84fe0f283a4fe2bc21bc500'
 
   url 'https://sweetpproductions.com/products/cookieapp/Cookie.dmg'
   appcast 'https://sweetpproductions.com/products/cookieapp/appcast.xml'
