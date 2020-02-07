@@ -1,6 +1,6 @@
 cask 'noisebuddy' do
-  version '1.0'
-  sha256 '6d654e208e717193bfe88e2ff7c278fecde96414cbad3d87a3206c1e78452a17'
+  version '1.2'
+  sha256 'e5497362319e111fb4a0c9ff9d479e21b75fda768a96ef3497c1fad7db2c7c38'
 
   url "https://github.com/insidegui/NoiseBuddy/releases/download/#{version}/NoiseBuddy_v#{version}.zip"
   appcast 'https://github.com/insidegui/NoiseBuddy/releases.atom'
