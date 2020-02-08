@@ -8,7 +8,7 @@ cask 'lando' do
   name 'Lando'
   homepage 'https://docs.lando.dev/'
 
-  depends_on cask: 'docker'
+  depends_on cask: 'docker' => '2.1.0.5'
 
   pkg 'LandoInstaller.pkg',
       choices: [
