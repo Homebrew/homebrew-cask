@@ -1,6 +1,6 @@
 cask 'qt3dstudio' do
-  version '2.5.0'
-  sha256 '904c6c092ad3ed588bbe47e55f949facf5250abacc6167dc48ac47fc4ee80b22'
+  version '2.6.0'
+  sha256 '840333076975954923dbc1bfc5833521f228a4e1408d846f42acd57d7e32f65b'
 
   url "https://download.qt.io/official_releases/qt3dstudio/#{version.major_minor}/qt-3dstudio-opensource-mac-x64-#{version}.dmg"
   appcast 'https://download.qt.io/official_releases/qt3dstudio/',
