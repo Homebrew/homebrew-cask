@@ -1,5 +1,5 @@
 cask 'protonmail-bridge' do
-  version '1.2.3'
+  version '1.2.5'
   sha256 '03a07e1b830c51e64897a07b437effe4266be08808a2253fda485ba9b96dbbc9'
 
   url 'https://protonmail.com/download/Bridge-Installer.dmg'
