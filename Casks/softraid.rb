@@ -4,7 +4,7 @@ cask 'softraid' do
 
   # download.owcdigital.com/softraid was verified as official when first introduced to the cask
   url "https://download.owcdigital.com/softraid/mac/#{version.major}/softraid/SoftRAID%20#{version}.dmg"
-  appcast 'https://www.softraid.com/pages/support/download_latest_version.html'
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://download.owcdigital.com/softraid5/mac'
   name 'SoftRAID'
   homepage 'https://www.softraid.com/'
 
