@@ -6,7 +6,7 @@ cask 'qtspim' do
   url "https://downloads.sourceforge.net/spimsimulator/QtSpim_#{version}_mac.pkg"
   appcast 'https://sourceforge.net/projects/spimsimulator/rss'
   name 'QtSpim'
-  homepage 'http://spimsimulator.sourceforge.net/'
+  homepage 'https://spimsimulator.sourceforge.io/'
 
   pkg "QtSpim_#{version}_mac.pkg"
 
