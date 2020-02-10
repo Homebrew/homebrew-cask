@@ -8,7 +8,7 @@ cask 'paragon-ntfs' do
 
   auto_updates true
 
-  installer manual: "Install Paragon NTFS for Mac #{version}.app"
+  installer manual: 'FSInstaller.app'
 
   uninstall kext:      'com.paragon-software.filesystems.ntfs',
             launchctl: 'com.paragon-software.ntfs*',
