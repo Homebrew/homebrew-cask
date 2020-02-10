@@ -1,6 +1,6 @@
 cask 'ultimaker-cura' do
-  version '4.4.0'
-  sha256 'b9296ee9c87cb47bc64f02fa1da5b976fff360fa0c3bb8c62cd4e61475ee64e8'
+  version '4.4.1'
+  sha256 'c0426737828028dc61976f3c827fbe3f565482f48835eafa95ed76b9e10d37d7'
 
   url "https://download.ultimaker.com/cura/Ultimaker_Cura-#{version}-Darwin.dmg"
   appcast 'https://github.com/Ultimaker/Cura/releases.atom'

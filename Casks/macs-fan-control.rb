@@ -1,6 +1,6 @@
 cask 'macs-fan-control' do
-  version '1.5.1.7'
-  sha256 '29c9d84611c7b67bbf134db8e3899f27f515ddd1521424f6a5cddbb34714d4db'
+  version '1.5.4'
+  sha256 'a38780181ee0592c1f351a3d405fab6466bcc9f491c4916a24b379a515e4c47b'
 
   # github.com/crystalidea/macs-fan-control was verified as official when first introduced to the cask
   url "https://github.com/crystalidea/macs-fan-control/releases/download/v#{version.major_minor_patch}/macsfancontrol.zip"
@@ -10,7 +10,7 @@ cask 'macs-fan-control' do
   homepage 'https://www.crystalidea.com/macs-fan-control'
 
   auto_updates true
-  depends_on macos: '>= :mojave'
+  depends_on macos: '>= :sierra'
 
   app 'Macs Fan Control.app'
 

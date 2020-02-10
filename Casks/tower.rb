@@ -14,8 +14,9 @@ cask 'tower' do
   binary "#{appdir}/Tower.app/Contents/MacOS/gittower"
 
   zap trash: [
-               "~/Library/Application Support/com.fournova.Tower#{version.major}",
-               "~/Library/Caches/com.fournova.Tower#{version.major}",
-               "~/Library/Preferences/com.fournova.Tower#{version.major}.plist",
+               '~/Library/Application Support/com.fournova.Tower*',
+               '~/Library/Caches/com.fournova.Tower*',
+               '~/Library/Preferences/com.fournova.Tower*.plist',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.fournova.tower*.sfl2',
              ]
 end

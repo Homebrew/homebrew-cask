@@ -1,6 +1,6 @@
 cask 'drama' do
-  version '1.0.27'
-  sha256 '16ca9929a6e97ac1a1500d1ad2cd6d5d79f7e53bb51916e9d3ac13f2ad446637'
+  version '2.0.4'
+  sha256 '73d5cffdaa50f23eb12311c9b819daf9657ac59ab9ea33833e1e2421aaa5fba7'
 
   # pixelcut.com/drama was verified as official when first introduced to the cask
   url 'https://www.pixelcut.com/drama/drama.zip'
@@ -8,6 +8,7 @@ cask 'drama' do
   name 'Drama'
   homepage 'https://www.drama.app/'
 
+  auto_updates true
   depends_on macos: '>= :high_sierra'
 
   app 'Drama.app'

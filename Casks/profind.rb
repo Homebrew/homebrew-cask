@@ -1,6 +1,6 @@
 cask 'profind' do
-  version '1.7.0'
-  sha256 '21391307ebfa022a90ff9fcd8706d88ef56999e5b5f3e68868e46e514da8fbab'
+  version '1.7.1'
+  sha256 '781da4cd220d5ded231df0e291fd86e0430941d8906ed6f7cba9a10a03ededd6'
 
   url "https://www.zeroonetwenty.com/profind/downloads/ProFind#{version.no_dots}.dmg"
   appcast 'https://www.zeroonetwenty.com/profind/downloads/ProFindVersionInfo.xml'

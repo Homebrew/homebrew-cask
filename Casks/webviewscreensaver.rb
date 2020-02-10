@@ -7,5 +7,7 @@ cask 'webviewscreensaver' do
   name 'WebViewScreenSaver'
   homepage 'https://github.com/liquidx/webviewscreensaver'
 
+  depends_on macos: '<= :mojave'
+
   screen_saver 'WebViewScreenSaver.saver'
 end

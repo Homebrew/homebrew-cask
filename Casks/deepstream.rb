@@ -1,12 +1,12 @@
 cask 'deepstream' do
-  version '3.1.5'
-  sha256 'a22cc87c6639b626d8dd390e9af6bb05d88fb6c61b0d67d607fb9ee7f3a3b0b2'
+  version '5.0.5'
+  sha256 '5f7203a14a8d353d4be708e0f6d664f8b00434da33bed4c3762e4ee7609693da'
 
   # github.com/deepstreamIO/deepstream.io was verified as official when first introduced to the cask
   url "https://github.com/deepstreamIO/deepstream.io/releases/download/v#{version}/deepstream.io-mac-#{version}.pkg"
   appcast 'https://github.com/deepstreamIO/deepstream.io/releases.atom'
   name 'deepstream'
-  homepage 'https://deepstreamhub.com/open-source/'
+  homepage 'https://deepstream.io/'
 
   pkg "deepstream.io-mac-#{version}.pkg"
 

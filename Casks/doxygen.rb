@@ -1,6 +1,6 @@
 cask 'doxygen' do
-  version '1.8.16'
-  sha256 'b95c91f85346ccd5ad1847697867acc8663e33460976319f544d824ec9d35278'
+  version '1.8.17'
+  sha256 'bf051b2c26ad5569efe9ca09396199340d03c6c96d61b730d50d5cd8f547425b'
 
   url "http://doxygen.nl/files/Doxygen-#{version}.dmg"
   appcast 'http://www.doxygen.nl/download.html'

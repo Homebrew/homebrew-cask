@@ -1,6 +1,6 @@
 cask 'switchhosts' do
-  version '3.5.2.5504'
-  sha256 'aea84a5a0c70bfa575b0cbd7db8e89c53dea42bb9fa5bf0d446ff7f7ae0298a1'
+  version '3.5.4.5517'
+  sha256 '2f1db5872fda39aeecdc36fee351f29547e51b1627a8b4941b7bae72d12044b9'
 
   # github.com/oldj/SwitchHosts was verified as official when first introduced to the cask
   url "https://github.com/oldj/SwitchHosts/releases/download/v#{version.major_minor_patch}/SwitchHosts._macOS_#{version}.dmg"

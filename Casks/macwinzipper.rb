@@ -1,6 +1,6 @@
 cask 'macwinzipper' do
-  version '2.6'
-  sha256 '29d35de75977f02643f07ee58e9874eb0dfb7dc6631a5b709cacf8049260e493'
+  version '2.7'
+  sha256 '37ff612125d80acf39a873e087a301c524708bb0c4af64be55a335555af23d62'
 
   url "https://tida.me/files/MacWinZipper-#{version}.dmg?download"
   appcast 'https://tida.me/macwinzipper'

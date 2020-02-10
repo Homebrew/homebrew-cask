@@ -1,6 +1,6 @@
 cask 'axe-electrum' do
-  version '3.3.8.3'
-  sha256 '64370b1a3bd6fd7416110f4fe918a33d431f61981f00fc90a7ddbec36b6f2029'
+  version '3.3.8.5'
+  sha256 '8e71de1959c8306c8f3ae24d3eb74a2d8430ffa322939aac14328712a6d13124'
 
   url "https://github.com/axerunners/electrum-axe/releases/download/#{version}/axe-electrum-#{version}-macosx.dmg"
   appcast 'https://github.com/axerunners/electrum-axe/releases.atom'

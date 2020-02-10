@@ -1,6 +1,6 @@
 cask 'jettison' do
-  version '1.7.4'
-  sha256 '8a0e1790442b6b762fd44c07f7c23a9262488bae7f3abb5d158b45987e8db808'
+  version '1.7.5'
+  sha256 '2008e23aaa87ef38b85fac5b16a703a0cbb212a0ef522ed311bd575768e4834e'
 
   url "https://stclairsoft.com/download/Jettison-#{version}.dmg"
   appcast 'https://stclairsoft.com/cgi-bin/sparkle.cgi?JT'

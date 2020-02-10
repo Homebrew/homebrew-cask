@@ -1,6 +1,6 @@
 cask 'screaming-frog-seo-spider' do
-  version '12.2'
-  sha256 'dcfd0bcedaed5a2fbfb3e5c1f96888bc9b55f19999f6fbb3cf33e498bdbb8bbc'
+  version '12.6'
+  sha256 '4265b4bf1a06918d8b522fa6a817f0c023347ed979afaad14a2b7e7404da5a43'
 
   url "https://download.screamingfrog.co.uk/products/seo-spider/ScreamingFrogSEOSpider-#{version}.dmg"
   appcast 'https://www.screamingfrog.co.uk/wp-content/themes/screamingfrog/inc/download-modal.php'

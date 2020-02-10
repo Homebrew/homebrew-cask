@@ -1,6 +1,6 @@
 cask 'gpxsee' do
-  version '7.18'
-  sha256 'ec94fa21b2adc88bc074c3b205185bf7caac5551d497f102d0cff7c85d121ac3'
+  version '7.20'
+  sha256 'd12ffb21eefb6f43c63fb0cd473d3f1ad7af8a38d068b534b6cbfd202de610a0'
 
   # sourceforge.net/gpxsee/Mac%20OS%20X was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/gpxsee/Mac%20OS%20X/GPXSee-#{version}.dmg"

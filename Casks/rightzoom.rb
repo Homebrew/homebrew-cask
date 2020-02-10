@@ -1,6 +1,6 @@
 cask 'rightzoom' do
   version '2.3'
-  sha256 '85ea2e5940fb4d1fe2b0dd20a2489f925a0d4a96bb2663b9b22325bb1b7cc1a8'
+  sha256 '026b18288814a6c548fe18730b4959b8e968ffb2eef31517796e72f7b988242c'
 
   url "https://www.blazingtools.com/mac/RightZoom#{version.no_dots}.zip"
   appcast 'https://www.blazingtools.com/right_zoom_mac.html'

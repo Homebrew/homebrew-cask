@@ -1,6 +1,6 @@
 cask 'microsoft-office' do
-  version '16.31.19111002'
-  sha256 'd2dc6ab56d33ae603c85006a36f1b87bccdc5d0af5cc0a2ec656a7e0c2157899'
+  version '16.33.20011301'
+  sha256 'c920df8d0acc36ba6e32bc740862f169a93f747abb9f223552c97f2f076c65ab'
 
   # officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate was verified as official when first introduced to the cask
   url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Office_#{version}_Installer.pkg"
@@ -62,6 +62,7 @@ cask 'microsoft-office' do
                    '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.excel.sfl*',
                    '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.powerpoint.sfl*',
                    '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.word.sfl*',
+                   '~/Library/Application Support/CrashReporter/Microsoft Error Reporting_*.plist',
                    '~/Library/Application Support/Microsoft AutoUpdate',
                    '~/Library/Application Support/Microsoft Update Assistant',
                    '~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate.fba',

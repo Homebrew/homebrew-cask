@@ -1,6 +1,6 @@
 cask 'mat' do
-  version '1.9.1.20190826'
-  sha256 '19a1c69cd008a0ac7da5f86bf8f89cb4c77a80187b8d70f5938992a08e2e4eb2'
+  version '1.9.2.20200115'
+  sha256 'ab379da580e07659e713996ed0169375246c88b36245a35c9f375a63c3114655'
 
   url "https://www.eclipse.org/downloads/download.php?r=1&file=/mat/#{version.major_minor_patch}/rcp/MemoryAnalyzer-#{version}-macosx.cocoa.x86_64.zip"
   appcast 'https://www.eclipse.org/mat/downloads.php'

@@ -1,10 +1,10 @@
 cask 'kubernetic' do
-  version '2.4.1'
-  sha256 'eba181bb7dfa2812f92c8d8780894c6bf35998cfe614ea949e0eb8b181909ef2'
+  version '2.4.3'
+  sha256 '55c5c5ca04bd970ebce7dd78058d42244d6e54d750a6ded490b6f5fac428b833'
 
   # kubernetic.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://kubernetic.s3.amazonaws.com/Kubernetic-#{version}.dmg"
-  appcast 'https://kubernetic.com/'
+  appcast 'https://kubernetic.s3.amazonaws.com/latest-mac.yml'
   name 'Kubernetic'
   homepage 'https://kubernetic.com/'
 

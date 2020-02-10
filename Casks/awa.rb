@@ -1,6 +1,6 @@
 cask 'awa' do
-  version '1.5.3'
-  sha256 'ce2a7f12c0fc331b90cea1ce6c6e962265c21cab46833a0b6e63aef230f92542'
+  version '1.5.4'
+  sha256 'faafe3c8944948254701a38f7446e2745dedffa3aa50178c37eb9ff2acc5658e'
 
   # download-d.awa.io/mac/stable was verified as official when first introduced to the cask
   url "https://download-d.awa.io/mac/stable/AWASetup-v#{version}.dmg"

@@ -1,6 +1,6 @@
 cask 'haskell-for-mac' do
-  version '1.7.0,1525.1572470003'
-  sha256 'a8298a709d9fd9da700a4228377a2533cdbd8a4e7406ca84772b5e064649d72d'
+  version '1.7.0,1525.1572701098'
+  sha256 'f8e64a7a0706b5918b454c35ff8c128578aefacb3c6da3a7a1e3dd8258342246'
 
   # dl.devmate.com/com.haskellformac.Haskell.basic was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.haskellformac.Haskell.basic/#{version.after_comma.major}/#{version.after_comma.minor}/Haskell%E2%80%94FunctionalProgrammingLab-#{version.after_comma.major}.zip"

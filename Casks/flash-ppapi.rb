@@ -1,6 +1,6 @@
 cask 'flash-ppapi' do
-  version '32.0.0.293'
-  sha256 '6186ecc42922877aae437fd0a80c510b51ed7b8a26bf00e2eb9119f75d89d53a'
+  version '32.0.0.321'
+  sha256 '2577ddf62bad45eb0060961fa515787d16b7c68420c62593cc876ebb567bca0f'
 
   url "https://fpdownload.adobe.com/pub/flashplayer/pdc/#{version}/install_flash_player_osx_ppapi.dmg"
   appcast 'https://fpdownload.adobe.com/pub/flashplayer/update/current/xml/version_en_mac_pep.xml',
@@ -14,10 +14,16 @@ cask 'flash-ppapi' do
 
   uninstall pkgutil:   'com.adobe.pkg.PepperFlashPlayer',
             launchctl: 'com.adobe.fpsaud',
-            delete:    '/Library/Internet Plug-Ins/PepperFlashPlayer'
+            delete:    [
+                         '/Library/Application Support/Adobe/Flash Player Install Manager',
+                         '/Library/Internet Plug-Ins/PepperFlashPlayer',
+                       ]
 
   zap trash: [
+               '/Library/Internet Plug-Ins/flashplayer.xpt',
                '~/Library/Caches/Adobe/Flash Player',
                '~/Library/Logs/FlashPlayerInstallManager.log',
+               '~/Library/Preferences/Macromedia/Flash Player',
+               '~/Library/Saved Application State/com.adobe.flashplayer.installmanager.savedState',
              ]
 end

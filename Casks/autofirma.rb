@@ -5,7 +5,7 @@ cask 'autofirma' do
   # estaticos.redsara.es/comunes/autofirma was verified as official when first introduced to the cask
   url 'https://estaticos.redsara.es/comunes/autofirma/currentversion/AutoFirma_Mac.zip'
   name 'AutoFirma'
-  homepage 'https://administracionelectronica.gob.es/ctt/clienteafirma'
+  homepage 'https://firmaelectronica.gob.es/Home/Descargas.htm'
 
   pkg "AutoFirma_#{version.dots_to_underscores}.pkg"
 
