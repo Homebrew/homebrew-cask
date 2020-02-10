@@ -7,5 +7,5 @@ cask 'multimc' do
   name 'Multi MC'
   homepage 'https://multimc.org/'
 
-  app 'MultiMC/MultiMC.app'
+  app 'MultiMC.app'
 end
