@@ -4,6 +4,7 @@ cask 'lightproxy' do
 
   # gw.alipayobjects.com/os/LightProxy was verified as official when first introduced to the cask
   url 'https://gw.alipayobjects.com/os/LightProxy/7372dabd-cb4e-43e5-98a2-e7f22785dc76/LightProxy.dmg'
+  appcast 'https://github.com/alibaba/lightproxy/tree/develop/CHANGELOG'
   name 'LightProxy'
   homepage 'https://github.com/alibaba/lightproxy/'
 
