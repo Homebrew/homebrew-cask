@@ -6,9 +6,9 @@ cask 'qtspim' do
   url "https://downloads.sourceforge.net/spimsimulator/QtSpim_#{version}_mac.pkg"
   appcast 'https://sourceforge.net/projects/spimsimulator/rss'
   name 'QtSpim'
-  homepage 'https://spimsimulator.sourceforge.io/'
+  homepage 'http://spimsimulator.sourceforge.net/'
 
-  pkg 'QtSpim.mpkg'
+  pkg "QtSpim_#{version}_mac.pkg"
 
   uninstall pkgutil: 'org.larusstone.pkg.QtSpim'
 end
