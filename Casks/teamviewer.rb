@@ -38,4 +38,11 @@ cask 'teamviewer' do
                '~/Library/Preferences/com.teamviewer.teamviewer.preferences.plist',
                '~/Library/Saved Application State/com.teamviewer.TeamViewer.savedState',
              ]
+
+  caveats <<~EOS
+    WARNING: #{token} has a bug in Catalina where it doesn't deal well with being uninstalled by other utilities.
+    The recommended way to remove it is by running their uninstaller under:
+
+       Preferences → Advanced
+  EOS
 end
