@@ -1,6 +1,6 @@
 cask 'pyfa' do
-  version '2.16.3'
-  sha256 '92f446f49ac70befe3514792df3fa7971402c8a095e7fb7e92728607af33cce7'
+  version '2.17.0'
+  sha256 'b96efff3ff648d1bca17dc6e8600b5225402a9733af0ebe89f02d576ee60a2a9'
 
   url "https://github.com/pyfa-org/Pyfa/releases/download/v#{version}/pyfa-v#{version}-mac.zip"
   appcast 'https://github.com/pyfa-org/Pyfa/releases.atom'
