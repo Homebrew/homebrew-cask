@@ -1,6 +1,6 @@
 cask 'daily-english-listening' do
-  version '9.1.3'
-  sha256 '500a6ab6b9139778b39583dc1a6a056a2c5c7e8ccf52fa887e6c42c1abeb8fca'
+  version '9.1.5'
+  sha256 '88e83f9c7539927079f41d6ccb574a1295e43b136892b8af92add6de6cdca6f6'
 
   # static.frdic.com/pkg/ting_en was verified as official when first introduced to the cask
   url 'https://static.frdic.com/pkg/ting_en/ting_en.dmg'
