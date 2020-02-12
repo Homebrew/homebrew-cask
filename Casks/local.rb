@@ -1,6 +1,6 @@
 cask 'local' do
-  version '5.2.3'
-  sha256 '0b7af0b61bb3e7c44142d01a2c059394d27ddebc9b116363803bd9856dd6a52b'
+  version '5.2.4'
+  sha256 'befa440218086eaa206c4633b31392d96217ecc05bb8b89b3706dd4be1c7c761'
 
   # local-by-flywheel-flywheel.netdna-ssl.com/releases was verified as official when first introduced to the cask
   url "https://local-by-flywheel-flywheel.netdna-ssl.com/releases/#{version.dots_to_hyphens}/local-#{version.dots_to_hyphens}-mac.dmg"
