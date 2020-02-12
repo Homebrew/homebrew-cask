@@ -6,7 +6,7 @@ cask 'nodeclipse' do
   url 'https://downloads.sourceforge.net/nodeclipse/Enide-2015/7/Enide-2015-7-macosx-x64-20150706.zip'
   appcast 'https://sourceforge.net/projects/nodeclipse/rss'
   name 'Nodeclipse'
-  homepage 'https://www.nodeclipse.org/'
+  homepage 'https://nodeclipse.github.io/'
 
   # Renamed for clarity: app name is inconsistent with its branding.
   # Also renamed to avoid conflict with other eclipse Casks.
