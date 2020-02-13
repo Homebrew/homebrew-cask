@@ -1,6 +1,6 @@
 cask 'raw-photo-processor' do
-  version '1876Beta'
-  sha256 '458d9912db08ba1d874bed49242a51e2d01f32220ecc07cc7449fd5352e8bf3d'
+  version '1896Beta'
+  sha256 '94158a5b31bd22b98e7130ebe98704e39dabee61862db04ac1fc6cfb2785f4f1'
 
   url "https://www.raw-photo-processor.com/RPP/RPP64_#{version}.zip"
   appcast 'https://www.raw-photo-processor.com/rpp_updates_64.xml'
