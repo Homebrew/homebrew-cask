@@ -6,7 +6,7 @@ cask 'conferences' do
   url "https://github.com/zagahr/Conferences.digital/releases/download/#{version}/Conferences_v#{version}.zip"
   appcast 'https://zagahr.github.io/Conferences.digital/appcast.xml'
   name 'Conferences.digital'
-  homepage 'https://conferences.digital/'
+  homepage 'https://github.com/zagahr/Conferences.digital'
 
   depends_on macos: '>= :mojave'
 
