@@ -5,7 +5,7 @@ cask 'cydownload' do
   url "https://github.com/borishonman/cydownload/releases/download/v#{version}/cydownload-macos.zip"
   appcast 'https://github.com/borishonman/cydownload/releases.atom'
   name 'cydownload'
-  homepage 'cydownload'
+  homepage 'https://github.com/borishonman/cydownload'
 
   app 'cydownload.app'
 end
