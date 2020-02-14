@@ -1,6 +1,6 @@
 cask 'augur' do
-  version '1.16.7'
-  sha256 '2d0c732664b0da0f15e907661516efc5314de1cb8fefd53b315c6535d288f901'
+  version '1.16.8'
+  sha256 '0ca481d039c4e198f3c98164110b612aa3ca078ed3051793574df24841d353f6'
 
   url "https://github.com/AugurProject/augur-app/releases/download/v#{version}/mac-Augur-#{version}.dmg"
   appcast 'https://github.com/AugurProject/augur-app/releases.atom'
