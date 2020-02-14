@@ -1,5 +1,5 @@
 cask 'freecad' do
-  version '0.18.4,16146'
+  version '0.19.pre.19566'
   sha256 :no_check # required as upstream package is updated in-place
 
   # github.com/FreeCAD/FreeCAD was verified as official when first introduced to the cask
