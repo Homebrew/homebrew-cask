@@ -14,7 +14,7 @@ cask 'rectangle' do
   app 'Rectangle.app'
 
   zap trash: [
-               '~/Library/Preferences/com.knollsoft.Rectangle',
+               '~/Library/Preferences/com.knollsoft.Rectangle.plist',
                '~/Library/Application Support/Rectangle',
                '~/Library/Caches/com.knollsoft.Rectangle',
              ]
