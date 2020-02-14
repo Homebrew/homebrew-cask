@@ -1,6 +1,6 @@
 cask 'ace-link' do
-  version '1.4.0'
-  sha256 '06ef8d14b451209a4f7122c511d4c45005f371a75d81d1b9e5f9b80ae1174a10'
+  version '1.5.0'
+  sha256 '1fc3da543dd1749b1aa18b324f5bbfaf2d5205129caf731ae91420742e369895'
 
   url "https://github.com/blaise-io/acelink/releases/download/#{version}/Ace.Link.#{version}.dmg"
   appcast 'https://github.com/blaise-io/acelink/releases.atom'
@@ -14,4 +14,8 @@ cask 'ace-link' do
                    ]
 
   app 'Ace Link.app'
+
+  uninstall quit: 'blaise.io.acelink'
+
+  zap trash: '~/Library/Application Support/Ace Link'
 end
