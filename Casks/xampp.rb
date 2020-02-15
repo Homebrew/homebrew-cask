@@ -1,5 +1,5 @@
 cask 'xampp' do
-  version '7.4.1,0'
+  version '7.4.2,0'
   sha256 '4b0b6829f2b1152193b02e379e6fac8eeb208afb1de6b80b0387f01b61c98cef'
 
   # downloadsapachefriends.global.ssl.fastly.net/xampp-files was verified as official when first introduced to the cask
