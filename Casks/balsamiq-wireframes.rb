@@ -4,7 +4,7 @@ cask 'balsamiq-wireframes' do
 
   # build_archives.s3.amazonaws.com/wireframes-desktop was verified as official when first introduced to the cask
   url "https://build_archives.s3.amazonaws.com/wireframes-desktop/mac/Balsamiq%20Wireframes%20#{version}.dmg"
-  appcast 'https://balsamiq.com/wireframes/desktop/'
+  appcast 'https://builds.balsamiq.com/bwd/mac.jsonp'
   name 'Balsamiq Wireframes'
   homepage 'https://balsamiq.com/'
 
