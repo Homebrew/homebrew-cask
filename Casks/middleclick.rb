@@ -1,6 +1,6 @@
 cask 'middleclick' do
-  version '2.4.7'
-  sha256 '0e04b3a8b76549befd468a16f225f905c339df2ce8b59aee7ecbab249e5b3dbe'
+  version '2.4.8'
+  sha256 '764b74654129267b40fb7ff1c733b6acf3b61613b90bbf4bb63e0cfef60e0700'
 
   url "https://github.com/DaFuqtor/MiddleClick/releases/download/#{version}/MiddleClick.zip"
   appcast 'https://github.com/DaFuqtor/MiddleClick/releases.atom'
