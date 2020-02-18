@@ -162,7 +162,7 @@ cask 'tor-browser' do
   end
 
   url "https://dist.torproject.org/torbrowser/#{version}/TorBrowser-#{version}-osx64_#{language}.dmg"
-  appcast 'https://dist.torproject.org/torbrowser/'
+  appcast 'https://www.torproject.org/download/'
   name 'Tor Browser'
   homepage 'https://www.torproject.org/projects/torbrowser.html'
 
