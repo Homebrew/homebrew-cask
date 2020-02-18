@@ -1,6 +1,6 @@
 cask 'drama' do
-  version '2.0.4'
-  sha256 '73d5cffdaa50f23eb12311c9b819daf9657ac59ab9ea33833e1e2421aaa5fba7'
+  version '2.0.6'
+  sha256 '3f71a5e30350406d8c06339712bde700a79df25a091b191bec92d4f39b02f7c8'
 
   # pixelcut.com/drama was verified as official when first introduced to the cask
   url 'https://www.pixelcut.com/drama/drama.zip'
