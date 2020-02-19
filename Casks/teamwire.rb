@@ -8,5 +8,5 @@ cask 'teamwire' do
 
   app 'Teamwire.app'
 
-  zap trash: '~/Library/Application\ Support/Teamwire/'
+  zap trash: '~/Library/Application Support/Teamwire/'
 end
