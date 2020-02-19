@@ -1,5 +1,5 @@
 cask 'frhelper' do
-  version '3.9.5,2020-01-09'
+  version '3.9.5,2020-01-19'
   sha256 '4d6ae7da29343f18fea57b419c1c8a838bfa8e813af87b1eaac15acb503c9378'
 
   # static.frdic.com was verified as official when first introduced to the cask
