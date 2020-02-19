@@ -8,7 +8,7 @@ cask 'dat' do
   name 'Dat Desktop'
   homepage 'https://datproject.org/'
 
-  app 'Dat.app'
+  app 'Dat Desktop.app'
 
   zap trash: [
                '~/Library/Application Support/Dat',
