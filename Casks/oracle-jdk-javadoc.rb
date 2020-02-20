@@ -1,13 +1,13 @@
 cask 'oracle-jdk-javadoc' do
-  version '12.0.1,12:69cfe15208a647278a19ef0990eea691'
-  sha256 'd77c9d9b38da262dbef88424d6d7e138a27efa26522313ec762126fde560d63f'
+  version '13.0.2,8:d4173c853231432d94f001e99d882ca7'
+  sha256 'dca17ad71ed4f6887cb6e02ab066d6bc5cd4b030a812fa7859a0c3e5145209d4'
 
   url "https://download.oracle.com/otn-pub/java/jdk/#{version.before_comma}+#{version.after_comma.before_colon}/#{version.after_colon}/jdk-#{version.before_comma}_doc-all.zip",
       cookies: {
                  'oraclelicense' => 'accept-securebackup-cookie',
                }
   name 'Oracle Java Standard Edition Development Kit Documentation'
-  homepage "https://www.oracle.com/technetwork/java/javase/documentation/jdk#{version.major}-doc-downloads-4417029.html"
+  homepage 'https://www.oracle.com/technetwork/java/javase/documentation/index.html'
 
   artifact 'docs', target: "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents/Home/docs"
 
@@ -15,7 +15,6 @@ cask 'oracle-jdk-javadoc' do
                      "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents/Home",
                      "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents",
                      "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk",
-                     '/Library/Java/JavaVirtualMachines',
                    ]
 
   caveats do

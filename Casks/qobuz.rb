@@ -1,14 +1,14 @@
 cask 'qobuz' do
-  version :latest
-  sha256 :no_check
+  version '5.4.0-b009'
+  sha256 'd58c8203acd9ffa86cbe794105b715d4b8321809d7c35f043f86f86fa495e7b4'
 
-  url 'https://static.qobuz.com/apps/qobuz-desktop/osx/QobuzDesktopInstaller.pkg'
-  name 'Qobuz Desktop'
+  url "https://desktop.qobuz.com/releases/darwin/x64/elCapitan_sierra/#{version}/Qobuz.dmg"
+  name 'Qobuz'
   homepage 'https://www.qobuz.com/applications'
 
-  pkg 'QobuzDesktopInstaller.pkg'
+  auto_updates true
 
-  uninstall pkgutil: 'com.qobuz.QobuzDesktop.*'
+  app 'Qobuz.app'
 
   zap trash: [
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.qobuz.qobuzdesktop.sfl*',

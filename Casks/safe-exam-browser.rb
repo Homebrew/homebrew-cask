@@ -1,6 +1,6 @@
 cask 'safe-exam-browser' do
-  version '2.1.3'
-  sha256 '57cdaf387378b0944050f652ab6451c1319cb5b3ab3b2f83cbd3755b085c2401'
+  version '2.1.4'
+  sha256 '02a9f947ec7567f11f698d5c91d3d8d68ec9e05b5090996007cc709820c1889d'
 
   # downloads.sourceforge.net was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/seb/SafeExamBrowser-#{version}.dmg"

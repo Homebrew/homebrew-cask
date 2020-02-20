@@ -1,13 +1,13 @@
 cask 'couleurs' do
-  version '1.2'
-  sha256 '59d725b0bbe7f7f2744b8b372006f0ec26c9b2300ea76139bed49ce8bb5824b2'
+  version '1.2.1'
+  sha256 '32d1b1898e9791c8137edc746c9f7ef508a12194669aae567719f58be2c8a876'
 
   url "https://couleursapp.com/couleurs-#{version}.zip"
   appcast 'https://couleursapp.com/updates/releases.xml'
   name 'Couleurs'
   homepage 'https://couleursapp.com/'
 
-  depends_on macos: '>= :yosemite'
+  depends_on macos: '>= :sierra'
 
   app 'Couleurs.app'
 end

@@ -16,4 +16,8 @@ cask 'rclone-browser' do
                '~/Library/Preferences/Rclone Browser.plist',
                '~/Library/Preferences/com.rclone-browser.rclone-browser.plist',
              ]
+
+  caveats do
+    discontinued
+  end
 end

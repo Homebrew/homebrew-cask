@@ -1,9 +1,10 @@
 cask 'dashlane' do
-  version '6.1914.0.19481'
-  sha256 '0d3852cb0b76e4fe20a541722f2ce56c1d79042b809dd76f824ffa1e15121658'
+  version '6.2004.0.32116'
+  sha256 '12636fe721c50c1e48d7f7179a573eb2a20127e897a90fcc3ce43b4d8c2f2dd3'
 
-  url "https://cdn5.dashlane.com/proxy/d3mfqat9ni8wb5/releases/#{version.major_minor_patch}/#{version}/release/Dashlane.dmg"
-  appcast 'https://ws1.dashlane.com/5/binaries/query?target=archive&format=xml&currentSoftwareVersion=6.0.0&platform=server_osx&os=OS_X_10_14_1'
+  # d3mfqat9ni8wb5.cloudfront.net/releases was verified as official when first introduced to the cask
+  url "https://d3mfqat9ni8wb5.cloudfront.net/releases/#{version.major_minor_patch}/#{version}/release/Dashlane.dmg"
+  appcast 'https://ws1.dashlane.com/5/binaries/query?format=json&os=OS_X_10_14_5&target=archive&platform=launcher_macosx'
   name 'Dashlane'
   homepage 'https://www.dashlane.com/'
 

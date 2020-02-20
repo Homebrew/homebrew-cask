@@ -1,9 +1,10 @@
 cask 'sqlpro-for-mssql' do
-  version '1.0.465'
-  sha256 '476e454040170fff58b192ecafdddefc83cbb59c4fa1a7320a77d8bc777a2a5f'
+  version '2019.70'
+  sha256 '8366de954fec7506e1fb59233b96d08df0c718ff15caa87466600751d1a13cb0'
 
   # d3fwkemdw8spx3.cloudfront.net/mssql was verified as official when first introduced to the cask
   url "https://d3fwkemdw8spx3.cloudfront.net/mssql/SQLProMSSQL.#{version}.app.zip"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.macsqlclient.com/download.php'
   name 'SQLPro for MSSQL'
   homepage 'https://www.macsqlclient.com/'
 

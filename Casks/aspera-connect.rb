@@ -1,9 +1,9 @@
 cask 'aspera-connect' do
-  version '3.8.1.161274'
-  sha256 'a04fd1697ed797242d9201e2ad2be345431fffc89076d96bb637c4efa23eee02'
+  version '3.9.8.176271'
+  sha256 'ba76abdc43f5ef1039ca08f50e268ae9a0341da1bef31b03917d25a419a104fb'
 
   url "https://download.asperasoft.com/download/sw/connect/#{version.major_minor_patch}/IBMAsperaConnectInstaller-#{version}.dmg"
-  appcast 'https://asperasoft.com/software/transfer-clients/connect-web-browser-plug-in/#whatsnew-399'
+  appcast 'https://downloads.asperasoft.com/en/documentation/8'
   name 'Aspera Connect'
   homepage 'https://asperasoft.com/software/transfer-clients/connect-web-browser-plug-in/'
 
@@ -13,6 +13,7 @@ cask 'aspera-connect' do
                        'com.aspera.AsperaWeb',
                        'com.aspera.connect',
                        'com.aspera.crypt',
+                       'com.aspera.launcher',
                      ],
             script:  {
                        executable: '/Library/Application Support/Aspera/Aspera Connect/uninstall_connect.sh',

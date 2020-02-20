@@ -5,7 +5,7 @@ cask 'phantomjs' do
   # bitbucket.org/ariya/phantomjs was verified as official when first introduced to the cask
   url "https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-#{version}-macosx.zip"
   name 'PhantomJS'
-  homepage 'http://phantomjs.org/'
+  homepage 'https://phantomjs.org/'
 
   binary "phantomjs-#{version}-macosx/bin/phantomjs"
 

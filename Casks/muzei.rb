@@ -11,8 +11,7 @@ cask 'muzei' do
 
   app 'Muzei.app'
 
-  uninstall login_item: 'Muzei',
-            quit:       'com.naman14.muzeimacos'
+  uninstall quit: 'com.naman14.muzeimacos'
 
   zap trash: [
                '~/Library/Application Scripts/com.naman14.muzeimacos',

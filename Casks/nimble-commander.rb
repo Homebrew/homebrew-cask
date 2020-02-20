@@ -1,6 +1,6 @@
 cask 'nimble-commander' do
-  version '1.2.5,2846'
-  sha256 'b18240ff5642342ab8eb4f258b3d665e2f5b90e6fd09b0f1c283fae95a9cd490'
+  version '1.2.7,3120'
+  sha256 'f4975decc6251a5310d05b9e906a9bbcde9828f44b75b1f9666d9afd5d4c95bd'
 
   url "https://magnumbytes.com/downloads/releases/nimble-commander-#{version.before_comma}(#{version.after_comma}).dmg"
   appcast 'https://magnumbytes.com/downloads/releases/sparkle-nimble-commander.xml'

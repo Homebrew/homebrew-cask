@@ -1,6 +1,6 @@
 cask 'tnefs-enough' do
-  version '3.7'
-  sha256 'fd8f0fa03b03fa0307a74694abed29e797b13e844d4d435c21f588fef5bb5d79'
+  version '3.8'
+  sha256 '9b067dc9f8397f3128b6b35b56bca93ce79f0daf677d7c786ae85f9050a12909'
 
   url "https://www.joshjacob.com/mac-development/TNEF#{version}.dmg"
   appcast 'https://www.joshjacob.com/mac-development/tnef.php'

@@ -1,9 +1,10 @@
 cask 'sqlpro-for-sqlite' do
-  version '1.0.460'
-  sha256 '911f04b0f24699d55945fa506b14be90c6b2ab61651cef192c880ff197e9910f'
+  version '2020.01'
+  sha256 'feea1828f7032664e529dc4b3756e1afdee8b2cac371e8590ed2af11eecbce97'
 
   # d3fwkemdw8spx3.cloudfront.net/sqlite was verified as official when first introduced to the cask
   url "https://d3fwkemdw8spx3.cloudfront.net/sqlite/SQLProSQLite.#{version}.app.zip"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.sqlitepro.com/download.php'
   name 'SQLPro for SQLite'
   homepage 'https://www.sqlitepro.com/'
 

@@ -1,6 +1,6 @@
 cask 'wordpresscom' do
-  version '4.1.0'
-  sha256 '75ad26ede927a5f3d796b7d9525ec59ffa76f2a64cfc0088a6ad0a1a9b31d2e7'
+  version '4.7.0'
+  sha256 '417449d249a7448dbbf002a13c74c5fce2894a8e995bb9b90e01a9fcd934c80e'
 
   url "https://public-api.wordpress.com/rest/v1.1/desktop/osx/download?type=app&ref=update&version=#{version}"
   appcast 'https://public-api.wordpress.com/rest/v1.1/desktop/osx/version?compare=0.1.0&channel=stable'
@@ -8,4 +8,11 @@ cask 'wordpresscom' do
   homepage 'https://apps.wordpress.com/desktop/'
 
   app 'WordPress.com.app'
+
+  zap trash: [
+               '~/Library/Application Support/Wordpress.com',
+               '~/Library/Preferences/com.automattic.wordpress.helper.plist',
+               '~/Library/Preferences/com.automattic.wordpress.plist',
+               '~/Library/Saved Application State/com.automattic.wordpress.savedState',
+             ]
 end

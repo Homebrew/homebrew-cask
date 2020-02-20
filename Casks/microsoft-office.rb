@@ -1,6 +1,6 @@
 cask 'microsoft-office' do
-  version '16.25.19051201'
-  sha256 'cd4facfedcafe3c8f34b5519d27f99120843dc1023ca56314a93a5d18643a06c'
+  version '16.34.20020900'
+  sha256 'bd6d81e731f4393022f3c1ebd0f9b8be0b6278781f707d367970f573e0002eb1'
 
   # officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate was verified as official when first introduced to the cask
   url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Office_#{version}_Installer.pkg"
@@ -8,13 +8,18 @@ cask 'microsoft-office' do
   homepage 'https://products.office.com/mac/microsoft-office-for-mac/'
 
   auto_updates true
+  conflicts_with cask: [
+                         'microsoft-word',
+                         'microsoft-excel',
+                         'microsoft-powerpoint',
+                         'onedrive',
+                       ]
   depends_on macos: '>= :sierra'
 
   pkg "Microsoft_Office_#{version}_Installer.pkg"
 
   uninstall pkgutil:   [
-                         'com.microsoft.package.OneDrive',
-                         'com.microsoft.package.Fonts',
+                         'com.microsoft.package.DFonts',
                          'com.microsoft.package.Frameworks',
                          'com.microsoft.package.Microsoft_AutoUpdate.app',
                          'com.microsoft.package.Microsoft_Excel.app',
@@ -24,10 +29,26 @@ cask 'microsoft-office' do
                          'com.microsoft.package.Microsoft_Word.app',
                          'com.microsoft.package.Proofing_Tools',
                          'com.microsoft.pkg.licensing',
+                         'com.microsoft.OneDrive',
+                       ],
+            # Frameworks, DFonts and ProofingTools remain in each applicaiton after pkg uninstall, delete them
+            delete:    [
+                         '/Applications/Microsoft Excel.app',
+                         '/Applications/Microsoft OneNote.app',
+                         '/Applications/Microsoft Outlook.app',
+                         '/Applications/Microsoft PowerPoint.app',
+                         '/Applications/Microsoft Word.app',
+                         '/Applications/OneDrive.app',
+                         '/Library/PrivilegedHelperTools/com.microsoft.autoupdate.helper',
                        ],
             launchctl: [
                          'com.microsoft.office.licensing.helper',
                          'com.microsoft.office.licensingV2.helper',
+                         'com.microsoft.OneDriveStandaloneUpdater',
+                         'com.microsoft.OneDriveStandaloneUpdaterDaemon',
+                         'com.microsoft.OneDriveUpdaterDaemon',
+                         'com.microsoft.autoupdate.helper',
+                         'com.microsoft.update.agent',
                        ]
 
   zap trash:     [
@@ -41,10 +62,15 @@ cask 'microsoft-office' do
                    '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.excel.sfl*',
                    '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.powerpoint.sfl*',
                    '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.word.sfl*',
+                   '~/Library/Application Support/CrashReporter/Microsoft Error Reporting_*.plist',
+                   '~/Library/Application Support/Microsoft AutoUpdate',
+                   '~/Library/Application Support/Microsoft Update Assistant',
                    '~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate.fba',
                    '~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate2',
                    '~/Library/Caches/com.microsoft.autoupdate.fba',
                    '~/Library/Caches/com.microsoft.autoupdate2',
+                   '~/Library/Caches/com.microsoft.OneDriveStandaloneUpdater',
+                   '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDriveStandaloneUpdater',
                    '~/Library/Containers/com.microsoft.Excel',
                    '~/Library/Containers/com.microsoft.Office365ServiceV2',
                    '~/Library/Containers/com.microsoft.Outlook',
@@ -77,10 +103,8 @@ cask 'microsoft-office' do
                    'com.microsoft.autoupdate.helpertool',
                    'com.microsoft.autoupdate.helper',
                    'com.microsoft.update.agent',
-                   'com.microsoft.OneDriveUpdaterDaemon',
                  ],
       pkgutil:   [
                    'com.microsoft.package.Microsoft_AutoUpdate.app',
-                   'com.microsoft.OneDrive',
                  ]
 end

@@ -10,6 +10,9 @@ require_relative "lib/travis"
 module Cask
   class Cmd
     class Ci < AbstractCommand
+      option "--only-style", :only_style, false
+      option "--annotate-style-violations", :annotate_style_violations, false
+
       def run
         unless ENV.key?("CI")
           raise CaskError, "This command isn’t meant to be run locally."
@@ -20,6 +23,12 @@ module Cask
 
         unless tap
           raise CaskError, "This command must be run from inside a tap directory."
+        end
+
+        @commit_range = begin
+          commit_range_start = system_command!("git", args: ["rev-parse", "origin/master"]).stdout.chomp
+          commit_range_end = system_command!("git", args: ["rev-parse", "HEAD"]).stdout.chomp
+          "#{commit_range_start}...#{commit_range_end}"
         end
 
         ruby_files_in_wrong_directory = modified_ruby_files - (modified_cask_files + modified_command_files + modified_github_files)
@@ -35,53 +44,175 @@ module Cask
 
         overall_success = true
 
+        style_status = nil
+        style_failed_casks = []
+        style_offenses = []
+
         modified_cask_files.each do |path|
           cask = CaskLoader.load(path)
+
+          overall_success &= step "brew cask style #{cask.token}", "style" do
+            begin
+              Style.run(path)
+              style_status ||= 'success'
+              true
+            rescue => e
+              style_status = 'action_required'
+
+              json = Style.rubocop(path, json: true)
+
+              style_offenses +=
+                json.fetch("files")
+                    .flat_map do |file|
+                      file.fetch("offenses").map do |o|
+                        {
+                          title:            o.fetch("cop_name"),
+                          message:          o.fetch("message"),
+                          path:             Pathname(file.fetch("path")).relative_path_from(tap.path).to_s,
+                          start_line:       o.fetch("location").fetch("start_line"),
+                          start_column:     o.fetch("location").fetch("start_column"),
+                          end_line:         o.fetch("location").fetch("last_line"),
+                          end_column:       o.fetch("location").fetch("last_column"),
+                          annotation_level: 'failure',
+                        }
+                      end
+                    end
+
+              style_failed_casks << cask.token
+
+              false
+            end
+          end
+
+          next if only_style?
 
           overall_success &= step "brew cask audit #{cask.token}", "audit" do
             Auditor.audit(cask, audit_download: true,
                                 audit_appcast: true,
                                 check_token_conflicts: added_cask_files.include?(path),
-                                commit_range: ENV["TRAVIS_COMMIT_RANGE"])
+                                commit_range: @commit_range)
           end
 
-          overall_success &= step "brew cask style #{cask.token}", "style" do
-            Style.run(path)
+          if (macos_requirement = cask.depends_on.macos) && !macos_requirement.satisfied?
+            opoo "Skipping installation: #{macos_requirement.message}"
+            next
           end
 
           was_installed = cask.installed?
-          cask_dependencies = CaskDependencies.new(cask).reject(&:installed?)
+
+          installer = Installer.new(cask, verbose: true)
+
+          cask_and_formula_dependencies = installer.missing_cask_and_formula_dependencies
 
           check = Check.new
 
           overall_success &= step "brew cask install #{cask.token}", "install" do
-            Installer.new(cask, force: true).uninstall if was_installed
+            if was_installed
+              old_cask = CaskLoader.load(cask.installed_caskfile)
+              Installer.new(old_cask, verbose: true).zap
+            end
 
             check.before
 
-            Installer.new(cask, verbose: true).install
+            installer.install
           end
 
           overall_success &= step "brew cask uninstall #{cask.token}", "uninstall" do
             success = begin
-              Installer.new(cask, verbose: true).uninstall
+              if manual_installer?(cask)
+                puts 'Cask has a manual installer, skipping...'
+              else
+                installer.uninstall
+              end
               true
             rescue => e
               $stderr.puts e.message
               $stderr.puts e.backtrace
               false
             ensure
-              cask_dependencies.each do |c|
-                Installer.new(c, verbose: true).uninstall if c.installed?
+              cask_and_formula_dependencies.reverse.each do |cask_or_formula|
+                next unless cask_or_formula.is_a?(Cask)
+                Installer.new(cask_or_formula, verbose: true).uninstall if cask_or_formula.installed?
               end
             end
 
             check.after
 
-            $stderr.puts check.message unless check.success?
+            next success if check.success?
 
-            success && check.success?
+            $stderr.puts check.message
+            false
           end
+
+          if check.success? && !check.success?(ignore_exceptions: false)
+            overall_success &= step "brew cask zap #{cask.token}", "zap" do
+              success = begin
+                Installer.new(cask, verbose: true).zap
+                true
+              rescue => e
+                $stderr.puts e.message
+                $stderr.puts e.backtrace
+                false
+              end
+
+              check.after
+
+              next success if check.success?(ignore_exceptions: false)
+
+              $stderr.puts check.message(stanza: "zap")
+              false
+            end
+          end
+        end
+
+        style_status ||= 'neutral'
+
+        if annotate_style_violations?
+          event = JSON.parse(File.read(ENV.fetch("HOMEBREW_GITHUB_EVENT_PATH")))
+
+          case ENV["HOMEBREW_GITHUB_EVENT_NAME"]
+          when "pull_request"
+            pr = event.fetch("pull_request")
+            repo = pr.fetch("base").fetch("repo").fetch("full_name")
+            head_sha = pr.fetch("head").fetch("sha")
+          when "check_run"
+            repo = event.fetch("repository").fetch("full_name")
+            head_sha = event.fetch("check_run").fetch("head_sha")
+          else
+            raise
+          end
+
+          output = case style_status
+          when 'neutral'
+            { title: 'Style check skipped.', summary: 'No matching files changed.' }
+          when 'success'
+            { title: 'Style check succeeded.', summary: 'No style violations found.' }
+          when 'action_required', 'failure'
+            {
+              title: 'Style check failed, run `brew cask style --fix`.',
+              summary: <<~MARKDOWN,
+                #{style_offenses.count} style violations were found. Run
+
+                ```
+                brew cask style --fix #{style_failed_casks.join(' ')}
+                ```
+
+                and fix the remaining violations manually, if any.
+              MARKDOWN
+              annotations: style_offenses
+            }
+          else
+            raise
+          end
+
+          GitHub.create_check_run(repo: repo, data: {
+            name: 'style',
+            head_sha: head_sha,
+            conclusion: style_status,
+            completed_at: Time.now.iso8601,
+            details_url: "https://github.com/Homebrew/homebrew-cask/blob/master/CONTRIBUTING.md#style-guide",
+            output: output,
+          })
         end
 
         if overall_success
@@ -95,6 +226,11 @@ module Cask
       private
 
       def step(name, travis_id)
+        unless ENV.key?("TRAVIS_COMMIT_RANGE")
+          puts Formatter.headline(name, color: :yellow)
+          return yield != false
+        end
+
         success = false
         output = nil
 
@@ -115,6 +251,7 @@ module Cask
               yield != false
             rescue => e
               $stderr.puts e.message
+              $stderr.puts e.backtrace
               false
             end
           end
@@ -136,22 +273,18 @@ module Cask
       end
 
       def tap
-        @tap ||= if ENV.key?("TRAVIS_REPO_SLUG")
-          Tap.fetch(ENV["TRAVIS_REPO_SLUG"])
-        else
-          Tap.from_path(Dir.pwd)
-        end
+        @tap ||= Tap.from_path(Dir.pwd)
       end
 
       def modified_files
         @modified_files ||= system_command!(
-          "git", args: ["diff", "--name-only", "--diff-filter=AMR", ENV["TRAVIS_COMMIT_RANGE"]]
+          "git", args: ["diff", "--name-only", "--diff-filter=AMR", @commit_range]
         ).stdout.split("\n").map { |path| Pathname(path) }
       end
 
       def added_files
         @added_files ||= system_command!(
-          "git", args: ["diff", "--name-only", "--diff-filter=A", ENV["TRAVIS_COMMIT_RANGE"]]
+          "git", args: ["diff", "--name-only", "--diff-filter=A", @commit_range]
         ).stdout.split("\n").map { |path| Pathname(path) }
       end
 
@@ -173,6 +306,10 @@ module Cask
 
       def added_cask_files
         @added_cask_files ||= added_files.select { |path| tap.cask_file?(path) }
+      end
+
+      def manual_installer?(cask)
+        cask.artifacts.any? { |artifact| artifact.is_a?(Artifact::Installer::ManualInstaller) }
       end
     end
   end

@@ -1,6 +1,6 @@
 cask 'emclient' do
-  version '7.2.35128'
-  sha256 'faf1a2d4ccd693ffe0cf1fab22ab65cc24fe66d0420dcecf6b501546deb455dc'
+  version '7.2.37943'
+  sha256 '3d19538e92a62931582d9cd5c9bca554fa08258ab91134bde1122e46903ea098'
 
   url "https://cdn-dist.emclient.com/dist/v#{version}_Mac/setup.pkg"
   appcast 'https://www.emclient.com/release-history?os=mac'

@@ -1,6 +1,6 @@
 cask 'filepane' do
-  version '1.10.4,1532767525'
-  sha256 'ba910ad4340027725a1a94aec40bf6fea0ba3cbbd03a3a1e1e2de052b790d4fe'
+  version '1.10.7,1576186002'
+  sha256 '8a3ca4424b4a79485b6a4f9daf879b43430326628d18f38b6eccc1eae56ea5bd'
 
   # dl.devmate.com/com.mymixapps.FilePane was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.mymixapps.FilePane/#{version.before_comma}/#{version.after_comma}/FilePane-#{version.before_comma}.dmg"

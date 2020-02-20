@@ -1,9 +1,8 @@
 cask 'mbed-studio' do
-  version '0.5.0'
-  sha256 'b204ba1d545efd2631207f351adc99b422aaed574cc88b96e4f25960512406d7'
+  version :latest
+  sha256 :no_check
 
   url 'https://studio.mbed.com/installers/latest/mac/MbedStudio.pkg'
-  appcast 'https://os.mbed.com/docs/mbed-studio/'
   name 'Mbed Studio'
   homepage 'https://os.mbed.com/studio/'
 

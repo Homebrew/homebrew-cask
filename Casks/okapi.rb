@@ -1,6 +1,6 @@
 cask 'okapi' do
-  version '0.36'
-  sha256 '268d64f445998ba9f8e53493fc1a7f5cfdcf40fb331777a80e6f2f20d65f2723'
+  version '0.37'
+  sha256 '219ddbe1b28dd15ddb58be7860baf98fa5cb92fd74fa920ab4048ba3e3e07724'
 
   # bintray.com/okapi was verified as official when first introduced to the cask
   url "https://dl.bintray.com/okapi/Distribution/okapi-apps_cocoa-macosx-x86_64_#{version}.dmg"

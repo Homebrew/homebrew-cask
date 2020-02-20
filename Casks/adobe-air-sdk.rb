@@ -50,7 +50,7 @@ cask 'adobe-air-sdk' do
   end
 
   uninstall_postflight do
-    FileUtils.rm("#{HOMEBREW_PREFIX}/share/adobe-air-sdk")
+    FileUtils.rm_f("#{HOMEBREW_PREFIX}/share/adobe-air-sdk")
   end
 
   caveats <<~EOS

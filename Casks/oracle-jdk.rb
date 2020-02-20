@@ -1,6 +1,6 @@
 cask 'oracle-jdk' do
-  version '12.0.1,12:69cfe15208a647278a19ef0990eea691'
-  sha256 'cf96dc630cd8efa60b2aa8b12d0092a09a2cd4d99567b330cbe0250206bf29ea'
+  version '13.0.2,8:d4173c853231432d94f001e99d882ca7'
+  sha256 'dede5d020449ae004e81e39831583f5f02ca416c79fa8252f267fb4e535adc6c'
 
   url "https://download.oracle.com/otn-pub/java/jdk/#{version.before_comma}+#{version.after_comma.before_colon}/#{version.after_colon}/jdk-#{version.before_comma}_osx-x64_bin.dmg",
       cookies: {
@@ -13,8 +13,7 @@ cask 'oracle-jdk' do
 
   pkg "JDK #{version.before_comma}.pkg"
 
-  uninstall pkgutil: "com.oracle.jdk-#{version.before_comma}",
-            rmdir:   '/Library/Java/JavaVirtualMachines'
+  uninstall pkgutil: "com.oracle.jdk-#{version.before_comma}"
 
   caveats do
     license 'https://www.oracle.com/technetwork/java/javase/terms/license/javase-license.html'

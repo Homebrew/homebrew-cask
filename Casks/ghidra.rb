@@ -1,12 +1,14 @@
 cask 'ghidra' do
-  version '9.0.2_PUBLIC_20190403'
-  sha256 '10ffd65c266e9f5b631c8ed96786c41ef30e2de939c3c42770573bb3548f8e9f'
+  version '9.1.2_PUBLIC,20200212'
+  sha256 'ebe3fa4e1afd7d97650990b27777bb78bd0427e8e70c1d0ee042aeb52decac61'
 
-  url "https://www.ghidra-sre.org/ghidra_#{version}.zip"
+  url "https://www.ghidra-sre.org/ghidra_#{version.before_comma}_#{version.after_comma}.zip"
   name 'Ghidra'
   homepage 'https://www.ghidra-sre.org/'
 
-  binary "ghidra_#{version.major_minor_patch}/ghidraRun"
+  conflicts_with cask: 'ghidra-beta'
+
+  binary "ghidra_#{version.before_comma}/ghidraRun"
 
   zap trash: '~/.ghidra'
 

@@ -1,6 +1,6 @@
 cask 'soqlxplorer' do
-  version '3.1'
-  sha256 '483b940c0ac4dd3e79aa6418379788a6598d8a0d6ab1070f582de4e9aff641a5'
+  version '3.3'
+  sha256 'df52a4749a712c7f527af3f87dcd88c8e08ff25714c666070c09f78f68ca36a3'
 
   url "https://www.pocketsoap.com/osx/soqlx/SoqlXplorer_v#{version}.zip"
   appcast 'https://www.pocketsoap.com/osx/soqlx/appcast.xml'

@@ -1,6 +1,6 @@
 cask 'rambox' do
-  version '0.6.7'
-  sha256 'd35d9aa65e59bc3a67f0e8c6a559a15ac962c27613e9e54357b8549ab685cb7c'
+  version '0.7.3'
+  sha256 'ddaff19e5a2fdd8cd29083a0d84a6d639db7fc690ff5af90363dc93c7b88e461'
 
   # github.com/ramboxapp/community-edition was verified as official when first introduced to the cask
   url "https://github.com/ramboxapp/community-edition/releases/download/#{version}/Rambox-#{version}-mac.zip"
@@ -9,8 +9,6 @@ cask 'rambox' do
   homepage 'https://rambox.pro/'
 
   app 'Rambox.app'
-
-  uninstall login_item: 'Rambox'
 
   zap trash: [
                '~/Library/Application Support/CrashReporter/Rambox Helper_*.plist',

@@ -1,6 +1,6 @@
 cask 'profilecreator' do
-  version '0.3.0,201905171401-beta'
-  sha256 'ebdf603bca3b6c72f436c93944d1b2b7342e410ff8509ad970cea4606d39112b'
+  version '0.3.2,201907171032-beta'
+  sha256 'a4a1b45bfaa6bc83aac7ef532981aaa0c807cd17fbfb1f157980144e5d309aea'
 
   url "https://github.com/erikberglund/ProfileCreator/releases/download/v#{version.before_comma}/ProfileCreator_v#{version.before_comma}-#{version.after_comma}.dmg"
   appcast 'https://github.com/erikberglund/ProfileCreator/releases.atom'

@@ -8,4 +8,12 @@ cask 'near-lock' do
   homepage 'https://nearlock.me/'
 
   app 'Near Lock.app'
+
+  zap trash: [
+               '~/Library/Application Support/NearLock',
+               '~/Library/Application Support/me.nearlock.Near-Lock',
+               '~/Library/Caches/me.nearlock.Near-Lock',
+               '~/Library/NearLock',
+               '~/Library/Preferences/me.nearlock.Near-Lock.plist',
+             ]
 end

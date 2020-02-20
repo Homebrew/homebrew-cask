@@ -1,9 +1,15 @@
 cask 'calibre' do
-  version '3.42.0'
-  sha256 '077694a595af42f397545d0506eac56d6d59176877e1946fe6105825f37fddc3'
+  if MacOS.version <= :high_sierra
+    version '3.48.0'
+    sha256 '68829cd902b8e0b2b7d5cf7be132df37bcc274a1e5720b4605d2dd95f3a29168'
+    url "https://download.calibre-ebook.com/#{version}/calibre-#{version}.dmg"
+  else
+    version '4.10.1'
+    sha256 '24f4b0db48506fef2c118ed83691a77f8e1c9247ea0c7b20d736a6872ca7bf94'
+    url "https://download.calibre-ebook.com/#{version}/calibre-#{version}.dmg"
+    appcast 'https://github.com/kovidgoyal/calibre/releases.atom'
+  end
 
-  url "https://download.calibre-ebook.com/#{version}/calibre-#{version}.dmg"
-  appcast 'https://github.com/kovidgoyal/calibre/releases.atom'
   name 'calibre'
   homepage 'https://calibre-ebook.com/'
 

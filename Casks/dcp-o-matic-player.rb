@@ -1,6 +1,6 @@
 cask 'dcp-o-matic-player' do
-  version '2.14.2'
-  sha256 'eb808fd625e1022b0fa5782decce24863d2413d159412675c240736b5edbb5a3'
+  version '2.14.26'
+  sha256 '2d3da7a740198957ec1152c79609709b3fb6f30a92f596007c62478ea0f7b9e8'
 
   url "https://dcpomatic.com/dl.php?id=osx-player&version=#{version}"
   appcast 'https://dcpomatic.com/download'

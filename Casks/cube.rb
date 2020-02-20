@@ -1,6 +1,6 @@
 cask 'cube' do
   version '4.4'
-  sha256 '20698456ed2c19bf0bfb5a9e4ea74a761248e86a741c15d6f525ec8c5e20897c'
+  sha256 'abd7253855ce045a8354f4b829f3f22707cc336c29b8feebc1542a986d3ce020'
 
   # apps.fz-juelich.de/scalasca/releases/cube was verified as official when first introduced to the cask
   url "https://apps.fz-juelich.de/scalasca/releases/cube/#{version}/dist/Cube-Compressed.dmg"

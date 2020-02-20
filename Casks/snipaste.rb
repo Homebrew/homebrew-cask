@@ -1,9 +1,10 @@
 cask 'snipaste' do
-  version '1.16.2-Beta'
-  sha256 '58ace40bbdd0a1193b729b4af2b445da02fb29ce0767494de615ba0da60a47f5'
+  version '2.2.5-Beta'
+  sha256 'b4a3823204158d6246d965820e8bf6f597a386b2b5e595726589eb5ef415586b'
 
   # bitbucket.org/liule/snipaste was verified as official when first introduced to the cask
-  url "https://bitbucket.org/liule/snipaste/downloads/Snipaste-Mac-#{version}.tar.gz"
+  url "https://bitbucket.org/liule/snipaste/downloads/Snipaste-#{version}.dmg"
+  appcast 'https://www.snipaste.com/download.html'
   name 'Snipaste'
   homepage 'https://www.snipaste.com/'
 

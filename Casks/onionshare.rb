@@ -1,6 +1,6 @@
 cask 'onionshare' do
-  version '2.1'
-  sha256 '5f1d861eeb1422f592b388b200286704c9d94288a20c146164ebed57fef6b077'
+  version '2.2'
+  sha256 'c9fc5a3634ac4a8d8d27e20f6d7c899962cd25c3d40522a544c9a1835ee66651'
 
   url "https://onionshare.org/dist/#{version}/OnionShare-#{version}.pkg"
   appcast 'https://github.com/micahflee/onionshare/releases.atom'

@@ -3,8 +3,8 @@ cask 'karabiner-elements' do
     version '11.6.0'
     sha256 'c1b06252ecc42cdd8051eb3d606050ee47b04532629293245ffdfa01bbc2430d'
   else
-    version '12.4.0'
-    sha256 '17e8a2ebaf4581f0fcb915ef417b848c317fcfc72f2f758a43a1c87a81824c41'
+    version '12.9.0'
+    sha256 '4fbb27421b90f1c4a8091986b47de16813227304a8325c6fa1860f7c7d013dc4'
   end
 
   url "https://pqrs.org/osx/karabiner/files/Karabiner-Elements-#{version}.dmg"

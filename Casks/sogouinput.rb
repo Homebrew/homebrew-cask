@@ -1,6 +1,6 @@
 cask 'sogouinput' do
-  version '51a,1546049877'
-  sha256 'b7a5fa3bb3aff46ddd6fc337bfbda862f7bb2e3552f993ddb4021e92532affee'
+  version '56b,1574950329'
+  sha256 'd7016d8ead153cd04a0d88c6fb18b5d6ad4ddd5f9c86708891c133593798d81b'
 
   url "http://cdn2.ime.sogou.com/dl/index/#{version.after_comma}/sogou_mac_#{version.before_comma}.zip"
   name 'Sogou Input Method'

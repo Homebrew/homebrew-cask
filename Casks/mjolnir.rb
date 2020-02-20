@@ -8,5 +8,7 @@ cask 'mjolnir' do
   name 'Mjolnir'
   homepage 'https://mjolnir.rocks/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Mjolnir.app'
 end

@@ -4,6 +4,8 @@ cask 'retinizer' do
 
   # sites.google.com/a/mikelpr.com was verified as official when first introduced to the cask
   url "https://sites.google.com/a/mikelpr.com/files/home/Retinizer#{version.no_dots}.zip"
+  appcast 'http://retinizer.mikelpr.com/',
+          configuration: version.no_dots
   name 'Retinizer'
   homepage 'http://retinizer.mikelpr.com/'
 

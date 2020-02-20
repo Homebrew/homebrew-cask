@@ -1,6 +1,6 @@
 cask 'swiftdefaultappsprefpane' do
-  version '1.1.3'
-  sha256 '240c97148580cca3ce256dd185346d1d31b36f4116c97273b3ab6a0d0f7d974b'
+  version '2.0.1'
+  sha256 'e8ca50cc23a5edacaecde66755083bbf232f0a056e1e874011edbd2c603cbdc9'
 
   url "https://github.com/Lord-Kamina/SwiftDefaultApps/releases/download/v#{version}/SwiftDefaultApps-v#{version}.zip"
   appcast 'https://github.com/Lord-Kamina/SwiftDefaultApps/releases.atom'

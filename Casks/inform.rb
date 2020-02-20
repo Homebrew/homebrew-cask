@@ -1,9 +1,9 @@
 cask 'inform' do
   version '6M62'
-  sha256 '812f260e80fd5cf2ce2918d089b574b67f1dfe9082532c614d47ff98526ae389'
+  sha256 '202420d1b0ad16ea56327446b0920978be05befafa3ed6b71ac7b2dd1f42c36a'
 
-  url "http://inform7.com/download/content/#{version}/I7-#{version}-OSX.dmg"
-  appcast 'http://inform7.com/download/'
+  url "http://inform7.com/apps/#{version}/I7-#{version}-OSX-Interim.dmg"
+  appcast 'http://inform7.com/downloads/'
   name 'Inform'
   homepage 'http://inform7.com/'
 

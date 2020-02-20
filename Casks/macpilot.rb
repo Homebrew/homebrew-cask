@@ -1,13 +1,13 @@
 cask 'macpilot' do
-  version '10.15'
-  sha256 'e2a9034fecb284032a57a1020c7d6402a25fa4c5f3338b08d44c0d53d04ba36a'
+  version '11.0.7'
+  sha256 '8613bce8071f7dd4569b27f0dde44fa06a0e202eb803ab1c872b3518d5b8ae6c'
 
   url 'http://mirror.koingosw.com/products/macpilot/download/macpilot.dmg'
   appcast 'https://www.koingosw.com/postback/versioncheck.php?appname=macpilot&type=sparkle'
   name 'MacPilot'
   homepage 'https://www.koingosw.com/products/macpilot/'
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :high_sierra'
 
   app 'MacPilot.app'
 end

@@ -1,11 +1,13 @@
 cask 'pluralsight' do
-  version '1.10.253'
-  sha256 '9ad60630dff81a2a5f9eb054f5e418023d70818a733e989d8d3daa8a232072fd'
+  version '1.12.261'
+  sha256 '1eb9d66b43d987575c0b8ce8b8b5505c19553d4ade46b89a88e06cbffc4db53f'
 
   url "https://macapp.pluralsight.com/installpluralsight#{version}.dmg"
   appcast 'https://macapp.pluralsight.com/appcast'
   name 'Pluralsight'
   homepage 'https://www.pluralsight.com/'
+
+  depends_on macos: '>= :high_sierra'
 
   app 'Pluralsight.app'
 end

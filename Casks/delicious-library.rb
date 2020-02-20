@@ -8,4 +8,10 @@ cask 'delicious-library' do
   homepage 'https://delicious-monster.com/'
 
   app "Delicious Library #{version.major}.app"
+
+  zap trash: [
+               '~/Library/Application Scripts/com.delicious-monster.library*',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.delicious-monster.library*.sfl2',
+               '~/Library/Containers/com.delicious-monster.library*',
+             ]
 end

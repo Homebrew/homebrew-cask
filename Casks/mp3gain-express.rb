@@ -1,6 +1,6 @@
 cask 'mp3gain-express' do
-  version '2.3'
-  sha256 '6694a128e418cfa59e77fb3a302349b233bf308bcc92410b14da4d9d82b0fe34'
+  version '2.3.3'
+  sha256 'c96da91165873e4adce960aac50bd78f787c0d8c482fe08829a13f3362e21fd3'
 
   url "https://projects.sappharad.com/mp3gain/mp3gain_mac#{version.no_dots}.zip"
   appcast 'https://projects.sappharad.com/mp3gain/updates.xml'

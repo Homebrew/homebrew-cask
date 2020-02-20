@@ -1,6 +1,6 @@
 cask 'veraview' do
-  version '2.4.3'
-  sha256 '57c7a10cb232ff69294f2aad731d84d3b6ced53ce6650bd4c48f1bb30bbbec80'
+  version '3.0.4'
+  sha256 'd48d0239f7f504a813c512ea0199e6c5e1983336eee6692be2b567237ba0f61e'
 
   # newton.ornl.gov/casl was verified as official when first introduced to the cask
   url "https://newton.ornl.gov/casl/VERAView-#{version}-MacOSX.dmg"
@@ -8,5 +8,8 @@ cask 'veraview' do
   name 'veraview'
   homepage 'https://github.com/CASL/VERAview'
 
-  app 'VERAView.app'
+  pkg 'veraview.pkg'
+
+  uninstall pkgutil: 'gov.casl.VERAView',
+            delete:  '/Applications/VERAView.app'
 end

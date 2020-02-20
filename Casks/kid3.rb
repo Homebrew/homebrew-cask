@@ -1,11 +1,11 @@
 cask 'kid3' do
   # note: "3" is not a version number, but an intrinsic part of the product name (ID3 tags)
-  version '3.7.1'
-  sha256 'b169a044d7cf5e8aa2fd8303ccb94e4d5e525835fc29f60dc2445f1499facd44'
+  version '3.8.2'
+  sha256 '0265456af936c96f36c3fb29d60077d5123d670a6bb2cb26e40251daf7e8964d'
 
   # downloads.sourceforge.net/kid3 was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/kid3/kid3-#{version}-Darwin.dmg"
-  appcast 'https://sourceforge.net/projects/kid3/rss'
+  appcast 'https://sourceforge.net/p/kid3/news/feed.rss'
   name 'Kid3'
   homepage 'https://kid3.sourceforge.io/'
 

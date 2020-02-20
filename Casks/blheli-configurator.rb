@@ -1,6 +1,6 @@
 cask 'blheli-configurator' do
-  version '1.1.0'
-  sha256 'e9bfa5d3848e6a04c553534bb59276a0a71a5c190025d2e0a1e692ee02865ac9'
+  version '1.2.0'
+  sha256 '6a2631409483b3c706c23f9da8e00f9420f86b874d6697d4b32f9d4619a0768e'
 
   url "https://github.com/blheli-configurator/blheli-configurator/releases/download/#{version}/BLHeli-Configurator_macOS_#{version}.dmg"
   appcast 'https://github.com/blheli-configurator/blheli-configurator/releases.atom'

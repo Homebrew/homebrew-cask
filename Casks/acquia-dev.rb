@@ -1,9 +1,10 @@
 cask 'acquia-dev' do
-  version '2-2019-02-08'
-  sha256 '12437e6f6270d695ef3efbf391ae9a45eeb0cb9e2381bcf946f6717ec03864a9'
+  version '2.2019.10.18'
+  sha256 'ddd7c6c12f582e5909eb44ce7a59566fba844fcc8359dd50260172b49ad74c4a'
 
-  url "https://dev.acquia.com/sites/default/files/downloads/dev-desktop/acquiadevdesktop-#{version}.dmg"
-  appcast 'https://dev.acquia.com/downloads'
+  url "https://dev.acquia.com/sites/default/files/file/#{version.minor_patch.dots_to_hyphens}/AcquiaDevDesktop-#{version.dots_to_hyphens}.dmg"
+  appcast 'https://dev.acquia.com/downloads',
+          configuration: version.dots_to_hyphens
   name 'Acquia Dev Desktop'
   homepage 'https://www.acquia.com/drupal/acquia-dev-desktop'
 

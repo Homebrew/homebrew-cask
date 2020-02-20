@@ -1,6 +1,6 @@
 cask 'tuneskit-m4v-converter' do
-  version '5.0.0.20'
-  sha256 '21056fc651993620a3a67e605fba8fd3bf695cd76a6b63d3ae43124300e8c3d9'
+  version '5.1.0'
+  sha256 'c5034c0b28fe117ca80468ec417b5f25147a6024a676851990b11d7042b9bd38'
 
   url 'https://www.tuneskit.com/TunesKitforMac.dmg'
   appcast 'https://www.tuneskit.com/api/product/version?pid=201'

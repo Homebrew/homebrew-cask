@@ -1,6 +1,6 @@
 cask 'fsnotes' do
-  version '3.0.4'
-  sha256 '8d7e561ded5a3a772c0c938aa042cc5df7173cb5f2f363396aaf8c6d5ce635b2'
+  version '4.0.23'
+  sha256 '7d70ca4b4d56809b8fbdcf020ae8ada54ae8a3fe72697ecce6fa213cc09befb3'
 
   # github.com/glushchenko/fsnotes was verified as official when first introduced to the cask
   url "https://github.com/glushchenko/fsnotes/releases/download/#{version}/FSNotes_#{version}.zip"
@@ -9,4 +9,9 @@ cask 'fsnotes' do
   homepage 'https://fsnot.es/'
 
   app 'FSNotes.app'
+
+  zap trash: [
+               '~/Library/Application Scripts/co.fluder.FSNotes',
+               '~/Library/Containers/co.fluder.FSNotes',
+             ]
 end

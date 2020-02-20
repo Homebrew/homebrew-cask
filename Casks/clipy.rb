@@ -12,8 +12,7 @@ cask 'clipy' do
 
   app 'Clipy.app'
 
-  uninstall login_item: 'Clipy',
-            quit:       'com.clipy-app.Clipy'
+  uninstall quit: 'com.clipy-app.Clipy'
 
   zap trash: [
                '~/Library/Application Support/Clipy',

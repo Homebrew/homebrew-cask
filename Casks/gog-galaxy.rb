@@ -1,8 +1,9 @@
 cask 'gog-galaxy' do
-  version '1.2.56.20'
-  sha256 'b8e8c3949acdaf01b62302beda8e8f6528a832d4b696cd3069803baf54bc02ac'
+  version '2.0.12.48'
+  sha256 '00e3ee9a8a6e95123fcc951df528fd86761fbad545314ff5cc6b32f254ac3421'
 
   url "https://cdn.gog.com/open/galaxy/client/galaxy_client_#{version}.pkg"
+  appcast 'https://www.gog.com/galaxy'
   name 'GOG Galaxy Client'
   homepage 'https://www.gog.com/galaxy'
 
@@ -14,6 +15,7 @@ cask 'gog-galaxy' do
             launchctl: [
                          'com.gog.galaxy.ClientService',
                          'com.gog.galaxy.commservice',
+                         'com.gog.galaxy.autoLauncher',
                        ]
 
   zap trash: [

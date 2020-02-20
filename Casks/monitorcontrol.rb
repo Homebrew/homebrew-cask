@@ -1,8 +1,8 @@
 cask 'monitorcontrol' do
-  version '1.5.2'
-  sha256 'e7f94ef75394da02475539838c881c5a5087acadb1aefefebc9a816b2f794fc9'
+  version '1.7.1'
+  sha256 'c2102be6604e9f7e9e3261d9c77c0ade251d028e776f8c58fb567a81cce20768'
 
-  url "https://github.com/the0neyouseek/MonitorControl/releases/download/v#{version}/MonitorControl.dmg"
+  url "https://github.com/the0neyouseek/MonitorControl/releases/download/v#{version}/MonitorControl.#{version}.dmg"
   appcast 'https://github.com/the0neyouseek/MonitorControl/releases.atom'
   name 'MonitorControl'
   homepage 'https://github.com/the0neyouseek/MonitorControl'

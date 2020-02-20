@@ -1,6 +1,6 @@
 cask 'goland' do
-  version '2019.1.2,191.7141.62'
-  sha256 '0c28b5d8163729933ca745426b9565937bcc40a6f6d78d5c56cd76735d24813d'
+  version '2019.3.2,193.6015.58'
+  sha256 '593338d02408bc137e8729eaeb0a4415dc817f42bc71fdae9f533dfe0e1d44e9'
 
   url "https://download.jetbrains.com/go/goland-#{version.before_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=GO&latest=true&type=release'
@@ -16,9 +16,12 @@ cask 'goland' do
   end
 
   zap trash: [
+               '~/Library/Application Support/GoLand',
                "~/Library/Application Support/GoLand#{version.major_minor}",
                "~/Library/Caches/GoLand#{version.major_minor}",
                "~/Library/Logs/GoLand#{version.major_minor}",
                "~/Library/Preferences/GoLand#{version.major_minor}",
+               '~/Library/Preferences/com.jetbrains.goland.plist',
+               '~/Library/Saved Application State/com.jetbrains.goland.SavedState',
              ]
 end

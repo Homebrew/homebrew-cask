@@ -1,9 +1,9 @@
 cask 'ultimaker-cura' do
-  version '4.0.0'
-  sha256 '2265d8190eba30fa2125553d8f4cc78447a316c4e0ff714c444688660fd35303'
+  version '4.4.1'
+  sha256 'c0426737828028dc61976f3c827fbe3f565482f48835eafa95ed76b9e10d37d7'
 
   url "https://download.ultimaker.com/cura/Ultimaker_Cura-#{version}-Darwin.dmg"
-  appcast 'https://ultimaker.com/en/products/cura-software'
+  appcast 'https://github.com/Ultimaker/Cura/releases.atom'
   name 'Ultimaker Cura'
   name 'Cura'
   homepage 'https://ultimaker.com/en/products/cura-software'

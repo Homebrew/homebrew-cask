@@ -5,7 +5,7 @@ cask 'openarena' do
   # download.tuxfamily.org/openarena was verified as official when first introduced to the cask
   url "https://download.tuxfamily.org/openarena/rel/#{version.before_comma.no_dots}/openarena-#{version.before_comma}.zip"
   name 'OpenArena'
-  homepage 'http://openarena.ws/smfnews.php'
+  homepage 'https://openarena.ws/smfnews.php'
 
   app "openarena-#{version.before_comma}/OpenArena #{version.before_comma} #{version.after_comma}.app"
 

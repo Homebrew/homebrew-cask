@@ -1,12 +1,12 @@
 cask 'whalebird' do
-  version '2.7.2'
-  sha256 '9f772815c900a63a030ef7c54153fac5e7be0267edfa467ca8bacbcbe8595486'
+  version '3.1.0'
+  sha256 '1d7077efd6359d67ce6f3b421f11e80ffc15b8221f1e362e31b41ef81656960c'
 
   # github.com/h3poteto/whalebird-desktop was verified as official when first introduced to the cask
   url "https://github.com/h3poteto/whalebird-desktop/releases/download/#{version}/Whalebird-#{version}-darwin-x64.dmg"
   appcast 'https://github.com/h3poteto/whalebird-desktop/releases.atom'
   name 'Whalebird'
-  homepage 'https://whalebird.org/'
+  homepage 'https://whalebird.social/'
 
   app 'Whalebird.app'
 end

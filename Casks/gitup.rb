@@ -1,9 +1,9 @@
 cask 'gitup' do
-  version '1.0.11'
-  sha256 '3cd4b67bd76cdcec924895d69f6e867233bcc026fee5507fce43333e8b47fb4d'
+  version '1.1.2'
+  sha256 '78b10d8e489d7ff0ddd5f7c3bbbdcbecf4c9896619eaf6a3a268e9debef28203'
 
-  # s3-us-west-2.amazonaws.com/gitup-builds was verified as official when first introduced to the cask
-  url 'https://s3-us-west-2.amazonaws.com/gitup-builds/stable/GitUp.zip'
+  # gitup-builds.s3.amazonaws.com was verified as official when first introduced to the cask
+  url 'https://gitup-builds.s3.amazonaws.com/stable/GitUp.zip'
   appcast 'https://github.com/git-up/GitUp/releases.atom'
   name 'GitUp'
   homepage 'https://gitup.co/'

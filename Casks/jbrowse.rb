@@ -1,6 +1,6 @@
 cask 'jbrowse' do
-  version '1.16.4'
-  sha256 'fd82ff39ffa167e0c17d66a5b2061cf14a3691ad5b5d58d613020fd83250dd30'
+  version '1.16.8'
+  sha256 '73b7c99b8afd6d28713397937b09e64b4451461f0ae91b4b6d6981fa00fb3341'
 
   # github.com/GMOD/jbrowse was verified as official when first introduced to the cask
   url "https://github.com/GMOD/jbrowse/releases/download/#{version}-release/JBrowse-#{version}-desktop-darwin-x64.zip"

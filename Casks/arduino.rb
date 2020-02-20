@@ -1,9 +1,9 @@
 cask 'arduino' do
-  version '1.8.9'
-  sha256 '7868dd8f6d350956b4d0c7e3d443f717209244a2dc3f374da115d5252a45bf56'
+  version '1.8.12'
+  sha256 '00832eb03db6e90c16637a8c3f2210adbce017d80f71a44f01035d147c693e7a'
 
   url "https://downloads.arduino.cc/arduino-#{version}-macosx.zip"
-  appcast 'https://www.arduino.cc/en/Main/ReleaseNotes'
+  appcast 'https://github.com/arduino/Arduino/releases.atom'
   name 'Arduino'
   homepage 'https://www.arduino.cc/'
 

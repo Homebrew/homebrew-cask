@@ -1,9 +1,9 @@
 cask 'sourcetrail' do
-  version '2019.1.11'
-  sha256 '918568593e21d6c2197ed61138357fcdadcde1a958da6a9fa76b2cee7d688d74'
+  version '2019.4.102'
+  sha256 '4d98f578b8452ddf39f37eb7ca588802ba65c27aff5f4fd06709403c7f845766'
 
   url "https://www.sourcetrail.com/downloads/#{version}/osx/64bit"
-  appcast 'https://raw.githubusercontent.com/CoatiSoftware/SourcetrailBugTracker/master/README.md'
+  appcast 'https://github.com/CoatiSoftware/Sourcetrail/releases.atom'
   name 'Sourcetrail'
   homepage 'https://www.sourcetrail.com/'
 

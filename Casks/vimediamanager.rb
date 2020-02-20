@@ -1,8 +1,8 @@
 cask 'vimediamanager' do
-  version '0.7a19'
-  sha256 '066d1adfdeea8e3bcb20ce8197f9521bd09a3a080e6b5d490d4b2765de8c1130'
+  version '0.7a22'
+  sha256 'dbb251822ba45a7a81847e863b092fcd06a811b184b39f17ad0754662d327b4b'
 
-  url "https://github.com/vidalvanbergen/ViMediaManager/releases/download/v#{version}/ViMediaManager.v#{version}.dmg"
+  url "https://github.com/vidalvanbergen/ViMediaManager/releases/download/v#{version}/ViMediaManager.dmg"
   appcast 'https://github.com/vidalvanbergen/ViMediaManager/releases.atom'
   name 'ViMediaManager'
   homepage 'https://github.com/vidalvanbergen/ViMediaManager'

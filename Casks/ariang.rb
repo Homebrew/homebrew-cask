@@ -1,6 +1,6 @@
 cask 'ariang' do
-  version '1.1.0'
-  sha256 'e6d0e8ec1b40fcc18aa327c706f77e82a4628496b922df420bd33a59f6ed92f7'
+  version '1.1.4'
+  sha256 '7b43201e92160a334864b47970a3dc69f4b8c5b6c04b20633296e26617e40e20'
 
   url "https://github.com/mayswind/AriaNg-Native/releases/download/#{version}/AriaNg_Native-#{version}-macOS.dmg"
   appcast 'https://github.com/mayswind/AriaNg-Native/releases.atom'

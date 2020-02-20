@@ -1,14 +1,14 @@
 cask 'omegat' do
-  version '3.6.0_11'
-  sha256 'c685471966ad22c8564a923e2e8c9cd99cc6d6b87d723cfd00f3486f49990db9'
+  version '4.3.2'
+  sha256 'e6fef5e4fca21ce7922b0c5fcb5a31039f87bee50b0357e12365ffb272c75210'
 
   # downloads.sourceforge.net/omegat was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/omegat/OmegaT%20-%20Standard/OmegaT%20#{version.major_minor_patch}%20update%204/OmegaT_#{version}_Mac_Signed.zip"
+  url "https://downloads.sourceforge.net/omegat/OmegaT%20-%20Standard/OmegaT%20#{version.major_minor_patch}/OmegaT_#{version}_Mac_Notarized.zip"
   appcast 'https://sourceforge.net/projects/omegat/rss?path=/OmegaT%20-%20Standard'
   name 'OmegaT'
   homepage 'https://omegat.org/'
 
-  app 'OmegaT.app'
+  app "OmegaT_#{version}_Mac_Notarized/OmegaT.app"
 
   caveats do
     depends_on_java '8+'

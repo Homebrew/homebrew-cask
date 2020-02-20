@@ -1,6 +1,6 @@
 cask 'livetail' do
-  version '2.0'
-  sha256 '960977b45cb758e629e3d9e352a57caef655ce1a312890dcceaa2754c24056a0'
+  version '2.1'
+  sha256 'fd8b3d8521c4be647c8cbb85d02f659d547f2c8825bd3d270e44d0401c4197fa'
 
   url "https://github.com/SumoLogic/livetail-cli/releases/download/#{version}/livetail_mac_os.zip"
   appcast 'https://github.com/SumoLogic/livetail-cli/releases.atom'

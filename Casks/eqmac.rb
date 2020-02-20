@@ -14,12 +14,11 @@ cask 'eqmac' do
                       sudo:       true,
                     }
 
-  uninstall login_item: "eqMac#{version.major}",
-            quit:       "com.bitgapp.eqMac#{version.major}",
-            script:     {
-                          executable: "#{appdir}/eqMac#{version.major}.app/Contents/Resources/uninstall_driver.sh",
-                          sudo:       true,
-                        }
+  uninstall quit:   "com.bitgapp.eqMac#{version.major}",
+            script: {
+                      executable: "#{appdir}/eqMac#{version.major}.app/Contents/Resources/uninstall_driver.sh",
+                      sudo:       true,
+                    }
 
   zap trash: [
                "~/Library/Caches/com.bitgapp.eqMac#{version.major}",

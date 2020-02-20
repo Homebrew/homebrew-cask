@@ -10,8 +10,7 @@ cask 'dropbox' do
 
   app 'Dropbox.app'
 
-  uninstall login_item: 'Dropbox',
-            launchctl:  'com.dropbox.DropboxMacUpdate.agent'
+  uninstall launchctl: 'com.dropbox.DropboxMacUpdate.agent'
 
   zap trash: [
                '/Library/DropboxHelperTools',
@@ -24,9 +23,11 @@ cask 'dropbox' do
                '~/Library/Caches/com.getdropbox.DropboxMetaInstaller',
                '~/Library/Caches/com.getdropbox.dropbox',
                '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.dropbox.DropboxMacUpdate',
+               '~/Library/Containers/com.dropbox.activityprovider',
                '~/Library/Containers/com.dropbox.foldertagger',
                '~/Library/Containers/com.getdropbox.dropbox.garcon',
                '~/Library/Dropbox',
+               '~/Library/Group Containers/com.dropbox.client.crashpad',
                '~/Library/Group Containers/com.getdropbox.dropbox.garcon',
                '~/Library/LaunchAgents/com.dropbox.DropboxMacUpdate.agent.plist',
                '~/Library/Logs/Dropbox_debug.log',

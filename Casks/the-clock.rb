@@ -1,6 +1,6 @@
 cask 'the-clock' do
-  version '4.0.5'
-  sha256 'e7035728af11ad71b5532d0965b636304de07e2a0c2fd03a5a9f677801006268'
+  version '4.2'
+  sha256 'bddee41571375e040d19342e77b3d373e9bf5998fd52bb221861b1e7ebce3d6b'
 
   url 'https://seense.com/the_clock/updateapp/the_clock.zip'
   appcast 'https://www.seense.com/the_clock/updateapp/appcast.xml'

@@ -1,6 +1,6 @@
 cask 'intel-haxm' do
-  version '7.4.1'
-  sha256 '613c2ee9725af7febdb1b0adef0f8f487aa610f0fa4b75d89dad267145cd2293'
+  version '7.5.6'
+  sha256 '60d3cf486c005bea6099650ffcf9dfa6dd193914a986bf0b7aa017b94923a880'
 
   # github.com/intel/haxm was verified as official when first introduced to the cask
   url "https://github.com/intel/haxm/releases/download/v#{version}/haxm-macosx_v#{version.dots_to_underscores}.zip"
@@ -8,17 +8,20 @@ cask 'intel-haxm' do
   name 'Intel HAXM'
   homepage 'https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager'
 
+  depends_on macos: '>= :yosemite'
+
   installer script: {
                       executable: 'silent_install.sh',
                       sudo:       true,
                     }
 
-  uninstall script: {
-                      sudo:         true,
-                      must_succeed: true,
-                      executable:   'silent_install.sh',
-                      args:         ['-u'],
-                    }
+  uninstall pkgutil: 'com.intel.kext.haxm.*',
+            script:  {
+                       sudo:         true,
+                       must_succeed: true,
+                       executable:   'silent_install.sh',
+                       args:         ['-u'],
+                     }
 
   caveats do
     license 'https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager-end-user-license-agreement-macosx'

@@ -1,6 +1,6 @@
 cask 'todour' do
-  version '2.16'
-  sha256 'c2c00c3210483dd77ef00038787a64de87fe45c68446c269fda1bddaf23ce8f5'
+  version '2.17'
+  sha256 'da613d60809a254c41a34493275fb07c46128238a7a685d7e197e231729f47a0'
 
   url "https://nerdur.com/Todour-v#{version}.dmg"
   appcast 'https://github.com/SverrirValgeirsson/Todour/releases.atom'

@@ -1,6 +1,6 @@
 cask 'digikam' do
-  version '6.1.0'
-  sha256 '097cb08e6843c4c44d14dad4740cb157dbf2cbe15f4a828a34f7c278ba59d7bd'
+  version '6.4.0'
+  sha256 '714ea60db0125bdb38b434aa9d98a3c8b7c3a23869b6f5d397058552a8af6e11'
 
   # kde.org/stable/digikam was verified as official when first introduced to the cask
   url "https://download.kde.org/stable/digikam/#{version}/digiKam-#{version}-MacOS-x86-64.pkg"

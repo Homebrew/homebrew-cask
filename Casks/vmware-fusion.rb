@@ -1,6 +1,6 @@
 cask 'vmware-fusion' do
-  version '11.1.0-13668589'
-  sha256 '769a37cb8aa16326e5c6f7ed8c8af8026427d653976754d4da02c1e6e1e070c3'
+  version '11.5.1-15018442'
+  sha256 'ca80376b6e13b99944bc322604643d7d4d643dff55f099ba72f6e8a131030b1d'
 
   url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version}.dmg"
   appcast 'https://softwareupdate.vmware.com/cds/vmw-desktop/fusion.xml'
@@ -46,6 +46,8 @@ cask 'vmware-fusion' do
   uninstall_preflight do
     set_ownership "#{appdir}/VMware Fusion.app"
   end
+
+  uninstall delete: '/etc/paths.d/com.vmware.fusion.public'
 
   zap trash: [
                '/Library/Application Support/VMware',

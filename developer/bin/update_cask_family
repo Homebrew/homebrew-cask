@@ -1,7 +1,7 @@
 #!/bin/bash
 
 readonly program="$(basename "${0}")"
-readonly families=(eclipse flash navicat netbeans unity) # Needs to be in sync with the 'get_' functions
+readonly families=(ableton dcpomatic eclipse flash navicat netbeans unity) # Needs to be in sync with the 'get_' functions
 readonly cask_family="${1}"
 readonly new_version="${2}"
 
@@ -24,6 +24,14 @@ function is_in_array {
   done
 
   return 1
+}
+
+function get_ableton {
+  brew search 'ableton' | grep 'ableton-' | grep --invert-match '\d'
+}
+
+function get_dcpomatic {
+  brew search 'dcp-o-matic' | grep 'dcp-o-matic'
 }
 
 function get_eclipse {

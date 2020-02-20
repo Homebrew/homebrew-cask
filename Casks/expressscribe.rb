@@ -8,8 +8,7 @@ cask 'expressscribe' do
 
   app 'ExpressScribe.app'
 
-  uninstall quit:       'com.nchsoftware.expressscribe-free',
-            login_item: 'ExpressScribe'
+  uninstall quit:       'com.nchsoftware.expressscribe-free'
 
   zap trash: [
                '~/Library/Preferences/com.nchsoftware.expressscribe-free.plist',

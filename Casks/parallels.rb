@@ -1,26 +1,26 @@
 cask 'parallels' do
-  version '14.0.1-45154'
-  sha256 '2d3157fa684c9e255927ae4a04f303107427a3ea166eea6ea86f0963cb24e4bb'
+  version '15.1.2-47123'
+  sha256 '8caee4be1e8896343005d8b2bd270c8ea64a29321e1c1e276e09ffb2257e176d'
 
   url "https://download.parallels.com/desktop/v#{version.major}/#{version}/ParallelsDesktop-#{version}.dmg"
-  appcast 'https://kb.parallels.com/eu/124521'
+  appcast 'https://kb.parallels.com/eu/124724'
   name 'Parallels Desktop'
   homepage 'https://www.parallels.com/products/desktop/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
+  # This .dmg cannot be extracted normally
+  # Original discussion: https://github.com/Homebrew/homebrew-cask/pull/67202
+  container type: :naked
 
-  app 'Parallels Desktop.app'
-
-  postflight do
-    # Unhide the application
-    system_command '/usr/bin/chflags',
-                   args: ['nohidden', "#{appdir}/Parallels Desktop.app"],
+  preflight do
+    system_command '/usr/bin/hdiutil',
+                   args: ['attach', '-nobrowse', "#{staged_path}/ParallelsDesktop-#{version}.dmg"]
+    system_command "/Volumes/Parallels Desktop #{version.major}/Parallels Desktop.app/Contents/MacOS/inittool",
+                   args: ['install', '-t', "#{appdir}/Parallels Desktop.app"],
                    sudo: true
-
-    # Run the initialization script
-    system_command "#{appdir}/Parallels Desktop.app/Contents/MacOS/inittool",
-                   args: ['init', '-b', "#{appdir}/Parallels Desktop.app"],
-                   sudo: true
+    system_command '/usr/bin/hdiutil',
+                   args: ['detach', "/Volumes/Parallels Desktop #{version.major}"]
   end
 
   uninstall_preflight do
@@ -35,6 +35,12 @@ cask 'parallels' do
                       '/usr/local/bin/prlctl',
                       '/usr/local/bin/prlexec',
                       '/usr/local/bin/prlsrvctl',
+                      '/Applications/Parallels Desktop.app',
+                      '/Applications/Parallels Desktop.app/Contents/Applications/Parallels Link.app',
+                      '/Applications/Parallels Desktop.app/Contents/Applications/Parallels Mounter.app',
+                      '/Applications/Parallels Desktop.app/Contents/Applications/Parallels Technical Data Reporter.app',
+                      '/Applications/Parallels Desktop.app/Contents/MacOS/Parallels Service.app',
+                      '/Applications/Parallels Desktop.app/Contents/MacOS/Parallels VM.app',
                     ]
 
   zap trash: [

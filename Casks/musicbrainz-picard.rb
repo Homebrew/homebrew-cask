@@ -1,14 +1,14 @@
 cask 'musicbrainz-picard' do
-  version '2.1.3'
-  sha256 '91d0f06b9efdf2d23830068e329115ad5133038ea2586c1091c581d09d7bfec8'
+  version '2.3'
+  sha256 'd8c6067caa0bf688d724bc8cccd440e7bc150373eac775ae7c4b20d430111069'
 
   # musicbrainz.osuosl.org/pub/ was verified as official when first introduced to the cask
-  url "https://musicbrainz.osuosl.org/pub/musicbrainz/picard/MusicBrainz.Picard.#{version}.dmg"
-  appcast 'https://picard.musicbrainz.org/changelog/'
+  url "https://musicbrainz.osuosl.org/pub/musicbrainz/picard/MusicBrainz-Picard-#{version}.dmg"
+  appcast 'https://picard.musicbrainz.org/downloads/'
   name 'MusicBrainz Picard'
   homepage 'https://picard.musicbrainz.org/'
 
-  depends_on macos: '>= :yosemite'
+  depends_on macos: '>= :sierra'
 
   app 'MusicBrainz Picard.app'
 

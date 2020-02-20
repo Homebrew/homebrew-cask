@@ -1,9 +1,9 @@
 cask 'livechat' do
-  version '3.6.5'
-  sha256 'a807030bf49acaec1e35c4e74a3e1912c73f03cd6502cac280798a6bee0a446e'
+  version '9.0.8'
+  sha256 'ad9f350f4313bc2054a1bbc3bf2fe2f18f73c7d4c0e6e74c5c168a620548c75a'
 
   url 'https://www.livechatinc.com/download/Mac/LiveChat.dmg'
-  appcast 'https://rink.hockeyapp.net/api/2/apps/e64c8a48eb174b2fab6afdbd4ff76d31'
+  appcast 'https://dal-livechat-main-web.s3.amazonaws.com/download/Mac/latest-mac.yml'
   name 'LiveChat'
   homepage 'https://www.livechatinc.com/'
 

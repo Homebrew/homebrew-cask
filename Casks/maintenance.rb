@@ -14,9 +14,12 @@ cask 'maintenance' do
   elsif MacOS.version == :high_sierra
     version '2.4.2'
     sha256 '94c7a322d4d796afc5e52534f3564a562240d9c0ec0a60de210e68372fef2137'
+  elsif MacOS.version == :mojave
+    version '2.5.6'
+    sha256 'd3b0152ce543b84ed597daba3360f74c3f20b4fb2b41d71005f3a7b311d4d681'
   else
-    version '2.5.2'
-    sha256 '6138a26f82b530b0f893597f6f433609d294545dd2395ead1faccd1b530c92f1'
+    version '2.6.3'
+    sha256 '6a358be5c5b1faf949c5b5e040dc1826ad63fe2298cbfa4af55138ec89191fac'
   end
 
   url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete('.')}/Maintenance.dmg"
@@ -32,6 +35,7 @@ cask 'maintenance' do
                       :sierra,
                       :high_sierra,
                       :mojave,
+                      :catalina,
                     ]
 
   app 'Maintenance.app'

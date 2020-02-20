@@ -1,11 +1,12 @@
 cask 'openrct2' do
-  version '0.0.7'
-  sha256 'e99bbb2c02b501ec0f322947b35e025897bb54d380f855dacdc6bb472f1e4520'
+  version '0.2.4'
+  sha256 '81b43d1c787df643092332e64b3ce5a1b18ffde75af637c5fc802a710ebade2e'
 
-  url "https://github.com/LRFLEW/OpenRCT2Launcher/releases/download/v#{version}/OpenRCT2Launcher-macos.zip"
-  appcast 'https://github.com/LRFLEW/OpenRCT2Launcher/releases.atom'
-  name 'OpenRCT2 Launcher'
-  homepage 'https://github.com/LRFLEW/OpenRCT2Launcher'
+  # github.com/OpenRCT2/OpenRCT2 was verified as official when first introduced to the cask
+  url "https://github.com/OpenRCT2/OpenRCT2/releases/download/v#{version}/OpenRCT2-#{version}-macos-x86_64.zip"
+  appcast 'https://github.com/OpenRCT2/OpenRCT2/releases.atom'
+  name 'OpenRCT2'
+  homepage 'https://openrct2.io/'
 
   app 'OpenRCT2.app'
 end

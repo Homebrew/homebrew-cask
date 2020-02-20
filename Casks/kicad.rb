@@ -1,17 +1,17 @@
 cask 'kicad' do
-  version '5.1.2-1'
+  version '5.1.5-0'
 
   if MacOS.version <= :high_sierra
-    sha256 '1990929ed40b6a62abc38f0eb8b9f7c8f20b6a11f664f379e7b9c8c861df3498'
+    sha256 '321567935eaeb9184d3595294da3c895175d3e53cf19aa227ecb6adcb792f3a6'
     url "https://kicad-downloads.s3.cern.ch/osx/stable/kicad-unified-#{version}.dmg"
   else
-    sha256 'd5c918fae018d2542085b74b06c605808c92dcb81e5d95ac5efab9f38540b3fc'
+    sha256 'c51aa2b997124c92faaead694e7ea633808d3a1d838f5331632ea5864ac32ecf'
     url "https://kicad-downloads.s3.cern.ch/osx/stable/kicad-unified-#{version}-10_14.dmg"
   end
 
   appcast 'https://kicad-downloads.s3.cern.ch/?delimiter=/&prefix=osx/stable/'
   name 'KiCad'
-  homepage 'http://kicad-pcb.org/'
+  homepage 'https://kicad-pcb.org/'
 
   app 'KiCad/kicad.app',            target: 'KiCad/KiCad.app'
   app 'KiCad/bitmap2component.app', target: 'KiCad/bitmap2component.app'

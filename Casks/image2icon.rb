@@ -1,6 +1,6 @@
 cask 'image2icon' do
-  version '2.9.2'
-  sha256 '11c03bcf770c454a3b9dfbaefdb73c5d8ad452e5a0ad72798df392febbfabedb'
+  version '2.11'
+  sha256 'a76038dd4d2cb3741235f00f2cc5dcd2f92c42a7e60c4981e17332a7fce3d721'
 
   # sf-applications.s3.amazonaws.com/Image2Icon was verified as official when first introduced to the cask
   url "https://sf-applications.s3.amazonaws.com/Image2Icon/app-releases/Image2icon#{version}.zip"

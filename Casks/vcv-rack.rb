@@ -1,9 +1,9 @@
 cask 'vcv-rack' do
-  version '0.6.2c'
-  sha256 '7c8afd9d22fd2773e9435cfa03eaf23812fabfdb80eebdc673228427b483df88'
+  version '1.1.6'
+  sha256 '79078ca77dff41beab2247cadf22d1a9d4112b3981f8a4084923b75519664a50'
 
-  url "https://vcvrack.com/downloads/Rack-#{version}-mac.dmg"
-  appcast 'https://github.com/VCVRack/Rack/releases.atom'
+  url "https://vcvrack.com/downloads/Rack-#{version}-mac.zip"
+  appcast 'https://vcvrack.com/Rack.html'
   name 'VCV Rack'
   homepage 'https://vcvrack.com/'
 

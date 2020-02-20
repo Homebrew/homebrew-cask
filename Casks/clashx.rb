@@ -1,6 +1,6 @@
 cask 'clashx' do
-  version '1.9.11'
-  sha256 '56f798f97ca08dcbf1c62fb56cf1a076b3a21f225e50c3d3c3da8fcd527d712b'
+  version '1.17.3'
+  sha256 '9fea4c18ea8c8b0799901dbaa6d31076c84ec1407d70570a6c2181d515246615'
 
   url "https://github.com/yichengchen/clashX/releases/download/#{version}/ClashX.dmg"
   appcast 'https://github.com/yichengchen/clashX/releases.atom'
@@ -8,6 +8,7 @@ cask 'clashx' do
   homepage 'https://github.com/yichengchen/clashX'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'ClashX.app'
 

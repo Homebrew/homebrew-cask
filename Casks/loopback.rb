@@ -1,6 +1,6 @@
 cask 'loopback' do
-  version '2.0.1'
-  sha256 '6b53635c7cd6e06ae280b8b7164196f0147b5d10dc7a622f7d007b7902974d15'
+  version '2.1.2'
+  sha256 '7b7c299993251d901be71013487955d315085d65f1e0b48ce8a4957dba977a3b'
 
   # d2oxtzozd38ts8.cloudfront.net/loopback was verified as official when first introduced to the cask
   url 'https://d2oxtzozd38ts8.cloudfront.net/loopback/download/Loopback.zip'
@@ -9,6 +9,7 @@ cask 'loopback' do
   homepage 'https://rogueamoeba.com/loopback/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'Loopback.app'
 end

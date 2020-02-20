@@ -1,9 +1,9 @@
 cask 'hipchat' do
   version '4.30.2-760'
-  sha256 '4c94f7d22c6808e08a987d5f69124f3f4f3029f8e914b1c930140cd83fe734f2'
+  sha256 'c88d91687535a445b92f58ded7993feda3bdf3f68ffd51420eb0cfda5fb5200f'
 
-  # amazonaws.com/downloads.hipchat.com/osx was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/downloads.hipchat.com/osx/HipChat-#{version}.zip"
+  # hipchat-server-stable.s3.amazonaws.com was verified as official when first introduced to the cask
+  url 'https://hipchat-server-stable.s3.amazonaws.com/clients/macos/HipChat-latest.dmg'
   appcast 'https://www.hipchat.com/release_notes/appcast/mac'
   name 'HipChat'
   homepage 'https://www.hipchat.com/'

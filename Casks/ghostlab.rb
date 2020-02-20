@@ -1,6 +1,6 @@
 cask 'ghostlab' do
-  version '3.3.0'
-  sha256 '61e8085ac52520a9a7502eac760564cb239692fbd3c46fba787834fd501137bc'
+  version '3.3.1'
+  sha256 '6b54815927869f45d4e488c76f1cdda3aa653370e368657b8762bacd44845666'
 
   url "https://awesome.vanamco.com/Ghostlab#{version.major}/downloads/Ghostlab#{version.major}.dmg"
   appcast 'https://awesome.vanamco.com/Ghostlab3/update/ghostlab3-cast.xml?vco=trkd'

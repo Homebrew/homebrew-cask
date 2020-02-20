@@ -7,6 +7,8 @@ cask 'lilypond' do
   name 'LilyPond'
   homepage 'http://lilypond.org/'
 
+  depends_on macos: '<= :mojave'
+
   app 'LilyPond.app'
 
   binaries = [

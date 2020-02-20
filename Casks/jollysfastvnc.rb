@@ -1,11 +1,13 @@
 cask 'jollysfastvnc' do
-  version '1.54'
-  sha256 '2d205f98db9afaef25e591166a82aab84263df9def3214eea53af423f43e8017'
+  version '1.58'
+  sha256 '6271124c7b127069a5892075fda914c86e6d82030ce6b5db766d9b5c83b70d9d'
 
   url 'https://www.jinx.de/JollysFastVNC_files/JollysFastVNC.current.dmg'
-  appcast 'https://www.jinx.de/JollysFastVNC.update.11.i386.xml'
+  appcast 'https://www.jinx.de/JollysFastVNC.update.12.x86_64.xml'
   name 'JollysFastVNC'
   homepage 'https://www.jinx.de/JollysFastVNC.html'
+
+  depends_on macos: '>= :sierra'
 
   app 'JollysFastVNC.app'
 

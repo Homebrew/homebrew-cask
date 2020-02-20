@@ -3,14 +3,14 @@ cask 'vitamin-r' do
     version '2.58'
     sha256 'c6c631430b44359aa022d9ca5ca6e98dbdf7258f2ceae0353f344a035682661e'
   else
-    version '3.08'
-    sha256 '0be990ba917fbbb09becc2eda05fe47ec7869ffe48b713a6bf57d11d18344d13'
+    version '3.14'
+    sha256 '31b81f78dbc471fade040a55d79a00425279165372b76b99c2ad89d43381f265'
   end
 
-  url "http://www.publicspace.net/download/signedVitamin#{version.major}.zip"
-  appcast "http://www.publicspace.net/app/vitamin#{version.major}.xml"
+  url "https://www.publicspace.net/download/signedVitamin#{version.major}.zip"
+  appcast "https://www.publicspace.net/app/vitamin#{version.major}.xml"
   name 'Vitamin-R'
-  homepage 'http://www.publicspace.net/Vitamin-R/'
+  homepage 'https://www.publicspace.net/Vitamin-R/'
 
   auto_updates true
 

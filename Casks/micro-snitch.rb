@@ -3,6 +3,7 @@ cask 'micro-snitch' do
   sha256 '9a909b7a73de527a0d3b446dead7d40b12f71e81cb324484db3a8b1579b5d28a'
 
   url "https://www.obdev.at/downloads/MicroSnitch/MicroSnitch-#{version}.zip"
+  appcast 'https://www.obdev.at/products/microsnitch/download.html'
   name 'Micro Snitch'
   homepage 'https://www.obdev.at/products/microsnitch/index.html'
 

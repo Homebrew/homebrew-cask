@@ -4,6 +4,7 @@ cask 'ryver' do
 
   # d3vkb1nw20iqfq.cloudfront.net was verified as official when first introduced to the cask
   url "https://d3vkb1nw20iqfq.cloudfront.net/mac/Ryver-#{version}.dmg"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://ryver.com/download/mac/stable'
   name 'Ryver'
   homepage 'https://ryver.com/'
 

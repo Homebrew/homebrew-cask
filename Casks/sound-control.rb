@@ -1,12 +1,14 @@
 cask 'sound-control' do
-  version '2.3.3'
-  sha256 '6d62167ac9246f739358e52bbf28e85ed09f9b38b0be7b4a26d482d0b34f723e'
+  version '2.4.1,5156'
+  sha256 '8cd697bc1879eb36fb2e6dde5e64e06b927adea52f2c664d839864c129a0bffa'
 
   # staticz.net was verified as official when first introduced to the cask
-  url "http://staticz.net/downloads/SoundControl_#{version}.dmg"
+  url "https://staticz.com/download/#{version.after_comma}/"
   appcast 'http://staticz.net/updates/soundcontrol.rss'
   name 'Sound Control'
   homepage 'https://staticz.com/soundcontrol/'
+
+  auto_updates true
 
   app 'Sound Control.app'
 

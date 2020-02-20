@@ -1,6 +1,6 @@
 cask 'paparazzi' do
-  version '1.0b10'
-  sha256 'c142d516009318c861ee6a2bdcba6a559bbc022c327e8d7b24c1ecb83e070071'
+  version '1.0b11'
+  sha256 '368c7f897af2d9e96124533873681c42c44488b66c98680ef597ebc2c7075fd7'
 
   url "https://derailer.org/paparazzi/Paparazzi!%20#{version}.dmg"
   appcast 'https://derailer.org/paparazzi/appcast/'

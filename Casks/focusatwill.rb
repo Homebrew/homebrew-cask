@@ -4,6 +4,7 @@ cask 'focusatwill' do
 
   # faw-desktop.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://faw-desktop.s3.amazonaws.com/focusatwill-#{version}.dmg"
+  appcast 'https://faw-desktop.s3.amazonaws.com/latest-mac.yml'
   name 'Focus@Will'
   homepage 'https://www.focusatwill.com/'
 

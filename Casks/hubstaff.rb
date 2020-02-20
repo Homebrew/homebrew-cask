@@ -1,6 +1,6 @@
 cask 'hubstaff' do
-  version '1.4.5,839'
-  sha256 '739748284062ca9b095eb2ce150834b99b477f726e5d3aa0a76e70b499bd1520'
+  version '1.5.9,2025'
+  sha256 '51da121d85af776bca859e2b27ccba4a44675b0d7bd7acbe11febebbe89c5d5d'
 
   url "https://app.hubstaff.com/download/#{version.after_comma}-mac-os-x-#{version.before_comma.dots_to_hyphens}-release"
   appcast 'https://app.hubstaff.com/appcast.xml'
