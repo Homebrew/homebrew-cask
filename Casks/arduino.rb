@@ -14,8 +14,4 @@ cask 'arduino' do
                '~/Library/Arduino15',
                '~/Library/Preferences/cc.arduino.Arduino.plist',
              ]
-
-  caveats do
-    depends_on_java
-  end
 end
