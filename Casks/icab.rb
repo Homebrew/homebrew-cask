@@ -8,5 +8,5 @@ cask 'icab' do
   name 'iCab'
   homepage 'http://www.icab.de/'
 
-  app "iCab #{version} (64+32 Bit Intel Version for macOS 10.7-10.14)/iCab.app"
+  app "iCab #{version} (64 Bit Intel for macOS 10.9-10.15)/iCab.app"
 end
