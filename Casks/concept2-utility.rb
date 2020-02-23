@@ -13,5 +13,9 @@ cask 'concept2-utility' do
 
   depends_on macos: '>= :yosemite'
 
-  app 'Concept2 Utility.app'
+  pkg "Concept2 Utility #{version}.pkg"
+
+  uninstall pkgutil: [
+                       'com.concept2.pkg.Concept2Utility',
+                     ]
 end
