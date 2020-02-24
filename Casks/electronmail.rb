@@ -1,6 +1,6 @@
 cask 'electronmail' do
-  version '4.2.2'
-  sha256 '5f3d9d3deb327c8812e0283ba5489e24b1e4ce9c6a1c10a94aee111c0c5cfe04'
+  version '4.4.0'
+  sha256 'b700078c86f8d57cdd15d09edf5dd1ac55e7eeea7ff43d45d990dfdb903da04d'
 
   url "https://github.com/vladimiry/ElectronMail/releases/download/v#{version}/electron-mail-#{version}-mac-mojave.dmg"
   appcast 'https://github.com/vladimiry/ElectronMail/releases.atom'

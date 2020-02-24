@@ -1,6 +1,6 @@
 cask 'mudlet' do
-  version '4.4.0'
-  sha256 '89cfcc8ea605fbd6c0220c514cb5a1dad04ac2052a070bc0f7b39fb17023aceb'
+  version '4.5.1'
+  sha256 '1bf708548a88f63c29994071c5d24000420038a41d41650fb57055da862068e7'
 
   url "https://www.mudlet.org/wp-content/files/Mudlet-#{version}.dmg"
   appcast 'https://github.com/Mudlet/Mudlet/releases.atom'

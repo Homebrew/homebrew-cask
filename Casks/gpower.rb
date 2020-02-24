@@ -1,6 +1,6 @@
 cask 'gpower' do
-  version '3.1.9.5'
-  sha256 '0bfd4fe455258551d4d255f962d4a32eb374286bf3e72213fb7021bc881223f8'
+  version '3.1.9.6'
+  sha256 '841390e00110ccdd5201f334af985b54837b9f9b4ffb3151d49e28efb9bb3964'
 
   url "http://www.gpower.hhu.de/fileadmin/redaktion/Fakultaeten/Mathematisch-Naturwissenschaftliche_Fakultaet/Psychologie/AAP/gpower/GPowerMac_#{version}.zip"
   appcast 'http://www.gpower.hhu.de/'

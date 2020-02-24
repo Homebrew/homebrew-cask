@@ -1,6 +1,6 @@
 cask 'elpass' do
-  version '1.1.1,215'
-  sha256 '838a7a5a5e4757a63f2fc863632fe87556eb00dfc2f8977f8165b91968141483'
+  version '1.1.2,224'
+  sha256 'ae5232cc13549e3f7f914bfd927cf1678c35031d0811e197302c665f22635562'
 
   url "https://elpass.app/macos/Elpass-#{version.before_comma}-#{version.after_comma}.zip"
   appcast 'https://elpass.app/macos/appcast.xml'

@@ -8,4 +8,11 @@ cask 'wordpresscom' do
   homepage 'https://apps.wordpress.com/desktop/'
 
   app 'WordPress.com.app'
+
+  zap trash: [
+               '~/Library/Application Support/Wordpress.com',
+               '~/Library/Preferences/com.automattic.wordpress.helper.plist',
+               '~/Library/Preferences/com.automattic.wordpress.plist',
+               '~/Library/Saved Application State/com.automattic.wordpress.savedState',
+             ]
 end

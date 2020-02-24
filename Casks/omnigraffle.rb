@@ -8,8 +8,8 @@ cask 'omnigraffle' do
     sha256 '83ef24af2dbd7977b9922e992f17f23e102562f0589d28bc37d5579b4a4d4938'
     url "https://downloads.omnigroup.com/software/MacOSX/10.13/OmniGraffle-#{version}.dmg"
   else
-    version '7.12.1'
-    sha256 '0d56e07244f5bbc7a28e1fa0dec104ddf8d1b05ee45d8ceb1fd31f470a3aa242'
+    version '7.13'
+    sha256 'db60eacc5bfb7ac64f12391948639ad1784354ebf95a4198b9c84fecf54158ac'
     url "https://downloads.omnigroup.com/software/MacOSX/10.14/OmniGraffle-#{version}.dmg"
   end
 
