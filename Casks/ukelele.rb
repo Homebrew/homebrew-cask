@@ -1,6 +1,6 @@
 cask 'ukelele' do
-  version '3.4.1'
-  sha256 '581e9b9fe572448bfd9ef588d77f1d23a03ddc8f29baef25b924f823328be38e'
+  version '3.4.2'
+  sha256 '764ee84e645b789524cc7b2c5e4c4440b1e810fccca54c64e9dceb2e40264f6a'
 
   url "https://software.sil.org/downloads/r/ukelele/Ukelele_#{version}.dmg"
   appcast 'https://software.sil.org/downloads/r/ukelele/Ukelele_appcast.xml'
