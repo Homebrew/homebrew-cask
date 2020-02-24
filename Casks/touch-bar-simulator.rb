@@ -7,7 +7,7 @@ cask 'touch-bar-simulator' do
     sha256 'bdfaf740392bddb3e9b281a30efab27e03638d3428ba555650dca517153c13c6'
   else
     version '4.1.0'
-    sha256 'bdfaf740392bddb3e9b281a30efab27e03638d3428ba555650dca517153c13c6'
+    sha256 '95e098b5b78f5f3c2ab0e49d4c0341f9f71fdf87d2924c8c2af0e18073f311dd'
   end
 
   url "https://github.com/sindresorhus/touch-bar-simulator/releases/download/v#{version}/Touch.Bar.Simulator.#{version}.dmg"
