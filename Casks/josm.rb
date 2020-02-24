@@ -1,6 +1,6 @@
 cask 'josm' do
-  version '15806'
-  sha256 '7bcdf6aeb5d5eecac9722fe104aeffeec49f6e1580fb2446ee4218f6d356c942'
+  version '15915'
+  sha256 'be78ffc5b257929c9ac8b3da32496c5e688d9ecfa9c7cde54a7a8e2a52b20738'
 
   url "https://josm.openstreetmap.de/download/macosx/josm-macosx-#{version}.zip"
   appcast 'https://josm.openstreetmap.de/'
