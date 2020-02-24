@@ -1,9 +1,10 @@
 cask 'raw-photo-processor' do
-  version '4.8.0,1879'
-  sha256 '767f0fce4dfb30bddfbe1eba487d91d27706480dff90cbc431d07c1964a7b485'
+  # Betas of this software are release quality: https://groups.google.com/d/msg/raw-photo-processor/PJyyP2JwIwI/dn3CFknuCwAJ
+  version '1896Beta'
+  sha256 '94158a5b31bd22b98e7130ebe98704e39dabee61862db04ac1fc6cfb2785f4f1'
 
-  url 'https://www.raw-photo-processor.com/RPP/RPP_64.zip'
-  appcast 'https://www.raw-photo-processor.com/rpp_updates_64.xml'
+  url "https://www.raw-photo-processor.com/RPP/RPP64_#{version}.zip"
+  appcast 'https://groups.google.com/forum/feed/raw-photo-processor/msgs/rss.xml?num=50'
   name 'Raw Photo Processor'
   homepage 'https://www.raw-photo-processor.com/RPP/Overview.html'
 
