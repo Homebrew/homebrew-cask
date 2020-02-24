@@ -7,7 +7,7 @@ cask 'teamspeak-client' do
   appcast 'https://versions.teamspeak.com/ts3-client-2'
   name 'TeamSpeak Client'
   homepage 'https://www.teamspeak.com/'
-  
+
   auto_updates true
 
   depends_on macos: '>= :sierra'
