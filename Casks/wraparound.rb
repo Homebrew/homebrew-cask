@@ -1,10 +1,11 @@
 cask 'wraparound' do
-  version '2.0b3-2020'
-  sha256 '6b7626af484bc6070cb822197dbe22014b3a1433ac072caf57d5272ada2437f2'
+  version '2.0-2021'
+  sha256 '4efd0a5051b2ab0487e7d3d4f33093f0d6f23ff0d203d0fc3d66facd6e893474'
 
-  url "http://www.digicowsoftware.com/downloads/Wraparound#{version}.zip"
+  url "https://www.digicowsoftware.com/downloads/Wraparound#{version}.zip"
+  appcast 'https://www.digicowsoftware.com/detail?_app=Wraparound'
   name 'Wraparound'
-  homepage 'http://www.digicowsoftware.com/detail?_app=Wraparound'
+  homepage 'https://www.digicowsoftware.com/detail?_app=Wraparound'
 
   app 'Wraparound.app'
 end

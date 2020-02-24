@@ -16,8 +16,7 @@ cask 'lisanet-gimp' do
     url "https://downloads.sourceforge.net/gimponosx/Gimp-#{version}-Sierra.dmg"
   end
 
-  appcast 'https://sourceforge.net/projects/gimponosx/rss',
-          checkpoint: '04478be6232c8ae7294f21e06fbbaa9e5a1d26ff0e0fe9b3396ce7b626f5a6f3'
+  appcast 'https://sourceforge.net/projects/gimponosx/rss'
   name 'GIMP'
   homepage 'http://gimp.lisanet.de/'
 

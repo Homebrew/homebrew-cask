@@ -2,10 +2,10 @@ cask 'capto' do
   version :latest
   sha256 :no_check
 
-  # dl.devmate.com/com.globaldelight.Capto/Capto.dmg was verified as official when first introduced to the cask
-  url 'https://dl.devmate.com/com.globaldelight.Capto/Capto.dmg'
+  # d3l6g06uqih57x.cloudfront.net/Captomac was verified as official when first introduced to the cask
+  url 'https://d3l6g06uqih57x.cloudfront.net/Captomac/webstore/Capto.dmg'
   name 'Capto'
-  homepage 'http://www.globaldelight.com/capto/'
+  homepage 'https://www.globaldelight.com/capto/'
 
   app 'Capto.app'
 end

@@ -4,8 +4,7 @@ cask 'dictater' do
 
   # github.com/Nosrac/Dictater was verified as official when first introduced to the cask
   url "https://github.com/Nosrac/Dictater/releases/download/#{version}/Dictater.zip"
-  appcast 'https://github.com/Nosrac/Dictater/releases.atom',
-          checkpoint: 'ac5eb7ff2a23496ab05e4183e14d9ff99b4656151e423f9f7677fab356277e10'
+  appcast 'https://github.com/Nosrac/Dictater/releases.atom'
   name 'Dictater'
   homepage 'https://nosrac.github.io/Dictater/'
 

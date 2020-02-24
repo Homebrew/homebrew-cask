@@ -1,10 +1,9 @@
 cask 'combine-pdfs' do
-  version '5.2'
-  sha256 'da0defe99295660f26078ac1a9ac5894748451a3854a0a8f0c0c4fdbb3a8ab54'
+  version '5.5.2'
+  sha256 '2fee2e174fd02525dc599e52d13d14f6c8b5f0a56c76e04c5821ad33d3801651'
 
-  url 'https://www.monkeybreadsoftware.de/Freeware/CombinePDFs.dmg'
-  appcast 'https://www.monkeybreadsoftware.de/Freeware/CombinePDFs/appcast.xml',
-          checkpoint: '658d11704361dfadb0713024ed208d796d09922e33cb09383ab7b6ace5a392b0'
+  url "https://www.monkeybreadsoftware.de/Software/CombinePDFs/CombinePDFs#{version.no_dots}.zip"
+  appcast 'https://www.monkeybreadsoftware.de/Software/CombinePDFs/appcast.xml'
   name 'Combine PDFs'
   homepage 'https://www.monkeybreadsoftware.de/Software/CombinePDFs.shtml'
 

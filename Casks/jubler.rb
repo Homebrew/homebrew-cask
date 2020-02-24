@@ -1,17 +1,12 @@
 cask 'jubler' do
-  version '5.1'
-  sha256 'db061825d731abc2eb96bfbed49df78f712d4b4c58c007d91f608ae670f19438'
+  version '7.0.0-alpha1'
+  sha256 '27247aca18009d1f42531b6059d2a7418795b1fdda515a560562cfa08a670379'
 
-  # sourceforge.net/jubler was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/jubler/Jubler-#{version}.dmg"
-  appcast 'https://sourceforge.net/projects/jubler/rss',
-          checkpoint: 'f9945f5e48daf05111b8249b781c944388fecfa7ebce5bd228ac508097b9f195'
+  # github.com/teras/Jubler was verified as official when first introduced to the cask
+  url "https://github.com/teras/Jubler/releases/download/v#{version}/Jubler-#{version}.1.dmg"
+  appcast 'https://github.com/teras/Jubler/releases.atom'
   name 'Jubler'
-  homepage 'http://www.jubler.org/'
+  homepage 'https://www.jubler.org/'
 
   app 'Jubler.app'
-
-  caveats do
-    depends_on_java
-  end
 end

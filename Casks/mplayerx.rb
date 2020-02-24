@@ -4,10 +4,11 @@ cask 'mplayerx' do
 
   # github.com/niltsh/MPlayerX-Deploy was verified as official when first introduced to the cask
   url "https://github.com/niltsh/MPlayerX-Deploy/releases/download/#{version.before_comma}/MPlayerX-#{version.before_comma}-#{version.after_comma}.zip"
-  appcast 'https://raw.githubusercontent.com/niltsh/MPlayerX-Deploy/master/appcast.xml',
-          checkpoint: '34bfae10cc1d8458ee908899a4a93d0f6ff2500b905f3d4458bfa0807cd1374a'
+  appcast 'https://raw.githubusercontent.com/niltsh/MPlayerX-Deploy/master/appcast.xml'
   name 'MPlayerX'
   homepage 'http://mplayerx.org/'
+
+  auto_updates true
 
   app 'MPlayerX.app'
 

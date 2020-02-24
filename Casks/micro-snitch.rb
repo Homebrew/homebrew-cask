@@ -1,10 +1,26 @@
 cask 'micro-snitch' do
-  version '1.2'
-  sha256 '7749a1bbc88a7a4bcb246d9f6d8b4d46b4faabfb95f7a8706be28570dcc09115'
+  version '1.3.1'
+  sha256 '9a909b7a73de527a0d3b446dead7d40b12f71e81cb324484db3a8b1579b5d28a'
 
   url "https://www.obdev.at/downloads/MicroSnitch/MicroSnitch-#{version}.zip"
+  appcast 'https://www.obdev.at/products/microsnitch/download.html'
   name 'Micro Snitch'
   homepage 'https://www.obdev.at/products/microsnitch/index.html'
 
+  auto_updates true
+  depends_on macos: '>= :el_capitan'
+
   app 'Micro Snitch.app'
+
+  uninstall quit:      'at.obdev.MicroSnitch',
+            launchctl: 'at.obdev.MicroSnitchOpenAtLoginHelper'
+
+  zap trash: [
+               '~/Library/Application Support/at.obdev.MicroSnitchOpenAtLoginHelper',
+               '~/Library/Application Support/Micro Snitch',
+               '~/Library/Caches/at.obdev.MicroSnitch',
+               '~/Library/Containers/at.obdev.MicroSnitchOpenAtLoginHelper',
+               '~/Library/Logs/Micro Snitch.log',
+               '~/Library/Preferences/at.obdev.MicroSnitch.plist',
+             ]
 end

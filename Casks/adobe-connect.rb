@@ -1,13 +1,12 @@
 cask 'adobe-connect' do
-  version '9.7,982.437'
-  sha256 'd310bda05cac63fca5c90e7b3dae9b09accd7460e88e76482efed2bc763e6cfc'
+  version '10.1,2019.1.1'
+  sha256 'eb8dab912146236d20bf904c1bcc036b95ecd76916322fe7efbefca1b13ff545'
 
-  url "http://download.adobe.com/pub/connect/updaters/meeting/#{version.before_comma.dots_to_underscores}/AdobeConnect_#{version.after_comma}.dmg"
+  url "https://download.adobe.com/pub/connect/updaters/meeting/#{version.before_comma.dots_to_underscores}/AdobeConnect_#{version.after_comma}.dmg"
   name 'Adobe Connect'
-  homepage 'http://www.adobe.com/products/adobeconnect.html'
+  homepage 'https://www.adobe.com/products/adobeconnect.html'
 
   auto_updates true
-  depends_on macos: '>= :mavericks'
 
   installer manual: 'AdobeConnectInstaller.app'
 

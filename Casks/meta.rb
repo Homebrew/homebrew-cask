@@ -1,10 +1,9 @@
 cask 'meta' do
-  version '1.8.2'
-  sha256 '49814e64396a08775e69ac15d26c6abaa68622967dab312e3f80097eb4120498'
+  version '1.9.5'
+  sha256 '0d7a5e08a20a5f6911f1d195719a20d287ce129ba824b2216fc9d18d9f626e21'
 
-  url 'https://www.nightbirdsevolve.com/meta/updates/latest/'
-  appcast 'https://www.nightbirdsevolve.com/meta/updates/',
-          checkpoint: '7a229c6bac7da7e17f96015c6dcf56ab677387639d18e56b869c2fa10f556678'
+  url "https://www.nightbirdsevolve.com/meta/updates/bin/Meta%20#{version}.zip"
+  appcast 'https://www.nightbirdsevolve.com/meta/updates/'
   name 'Meta'
   homepage 'https://www.nightbirdsevolve.com/meta/'
 

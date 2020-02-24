@@ -3,20 +3,16 @@ cask '1clipboard' do
   sha256 'd1dee1594fa8b16a54bbcaf2d88b07e3bade0bb809416e535621ddb63b9e2b3d'
 
   url "http://1clipboard.io/download/darwin/#{version}/1Clipboard.zip"
-  appcast 'http://1clipboard.io/download/darwin/',
-          checkpoint: '391698b82a53cc527c9616be048d56b6547b7df947b1588e24692e934280fdf7'
+  appcast 'http://1clipboard.io/download/darwin/'
   name '1Clipboard'
   homepage 'http://1clipboard.io/'
 
-  depends_on macos: '>= :mountain_lion'
-
   app '1Clipboard.app'
 
-  uninstall login_item: '1Clipboard',
-            quit:       [
-                          'com.ngwin.1clipboard',
-                          'com.ngwin.1clipboardhelper',
-                        ]
+  uninstall quit: [
+                    'com.ngwin.1clipboard',
+                    'com.ngwin.1clipboardhelper',
+                  ]
 
   zap trash: [
                '~/Library/Application Support/1Clipboard',

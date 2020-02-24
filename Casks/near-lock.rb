@@ -1,12 +1,19 @@
 cask 'near-lock' do
-  version '4.0.0'
-  sha256 'cb2c849b9b941b609a6f2c8101d8fa6990bfce0714b790567b16af824cf10c12'
+  version '5.1.0'
+  sha256 'e34078ec99d41e2aa01dc7b0a69274ed77baa4716d8570200cb7e1240c2756d6'
 
   url 'https://nearlock.me/downloads/nearlock.dmg'
-  appcast 'https://nearlock.me/downloads/nearlock.xml',
-          checkpoint: '67628510f2a72f817fd0a66481324568ac961caef5de77f86f315d81ef0f764f'
+  appcast 'https://nearlock.me/downloads/nearlock.xml'
   name 'Near Lock'
   homepage 'https://nearlock.me/'
 
   app 'Near Lock.app'
+
+  zap trash: [
+               '~/Library/Application Support/NearLock',
+               '~/Library/Application Support/me.nearlock.Near-Lock',
+               '~/Library/Caches/me.nearlock.Near-Lock',
+               '~/Library/NearLock',
+               '~/Library/Preferences/me.nearlock.Near-Lock.plist',
+             ]
 end

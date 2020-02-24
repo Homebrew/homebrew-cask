@@ -4,8 +4,7 @@ cask 'dbglass' do
 
   # github.com/web-pal/DBGlass was verified as official when first introduced to the cask
   url "https://github.com/web-pal/DBGlass/releases/download/v#{version}/MAC_OS-X.zip"
-  appcast 'https://github.com/web-pal/dbglass/releases.atom',
-          checkpoint: 'a28d989443a0b8b0e8f59fbb0a6f906ca567fb9cafaf651cda99f12f316839ba'
+  appcast 'https://github.com/web-pal/dbglass/releases.atom'
   name 'DBGlass'
   homepage 'http://dbglass.web-pal.com/'
 

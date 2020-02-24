@@ -8,6 +8,6 @@ cask 'toontown-rewritten' do
   homepage 'https://www.toontownrewritten.com/'
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
-  # Original discussion: https://github.com/caskroom/homebrew-cask/pull/8037
+  # Original discussion: https://github.com/Homebrew/homebrew-cask/pull/8037
   app 'Toontown Launcher.app', target: 'Toontown Rewritten.app'
 end

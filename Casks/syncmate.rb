@@ -1,10 +1,10 @@
 cask 'syncmate' do
-  version '7.0.365'
-  sha256 '617143bd9b5405d44a543cfca859a4fe7c03558c9001c09d419029f8ef1bbdca'
+  version '8.0.469'
+  sha256 '97eb95fdf49fb8d493a3b9691a9ec40b7df1d88b4c272aa238ad5e95cef5c3a1'
 
-  url "https://mac.eltima.com/download/syncmate#{version.major}.dmg"
-  appcast 'http://www.eltima.com/download/syncmate-update/syncmate6.xml',
-          checkpoint: 'f387499c262793dc24a6a1afc0d8db3f2467a166101867ac0a7d91af13ccb848'
+  # cdn.electronic.us/products/syncmate/ was verified as official when first introduced to the cask
+  url "https://cdn.electronic.us/products/syncmate/mac/update/SyncMate_#{version}.zip"
+  appcast 'https://cdn.eltima.com/download/syncmate-update/syncmate6.xml'
   name 'SyncMate'
   homepage 'https://mac.eltima.com/sync-mac.html'
 

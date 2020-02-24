@@ -1,0 +1,83 @@
+#!/bin/bash
+
+readonly program="$(basename "${0}")"
+readonly families=(ableton dcpomatic eclipse flash navicat netbeans unity) # Needs to be in sync with the 'get_' functions
+readonly cask_family="${1}"
+readonly new_version="${2}"
+
+function usage {
+  echo "
+    Submit updates to a family of casks all at once.
+
+    Usage: ${program} <family> <new_version>
+    Example: ${program} flash '32.0.0.142'
+
+    Available families: ${families[*]}
+  " | sed -E 's/^ {4}//'
+}
+
+function is_in_array {
+  local string="${1}"
+
+  for value in "${@:2}"; do
+    [[ "${string}" == "${value}" ]] && return 0
+  done
+
+  return 1
+}
+
+function get_ableton {
+  brew search 'ableton' | grep 'ableton-' | grep --invert-match '\d'
+}
+
+function get_dcpomatic {
+  brew search 'dcp-o-matic' | grep 'dcp-o-matic'
+}
+
+function get_eclipse {
+  brew search 'eclipse' | grep 'eclipse-'
+}
+
+function get_flash {
+  brew search 'flash' | grep 'flash-[np]'
+}
+
+function get_navicat {
+  brew search 'navicat' | grep 'navicat-[fp]'
+}
+
+function get_netbeans {
+  brew search 'netbeans' | grep 'netbeans'
+}
+
+function get_unity {
+  brew search 'unity' | grep '^unity' | grep --invert-match --extended-regexp '(hub|player|assets)'
+}
+
+if ! command -v 'cask-repair' &>/dev/null; then
+  echo 'You need cask-repair to run this script'
+  exit 1
+fi
+
+if [[ -z "${new_version}" ]] || ! is_in_array "${cask_family}" "${families[@]}"; then
+  usage
+  exit 1
+fi
+
+if [[ "${1}" =~ ^(-h|--help)$ ]]; then
+  usage
+  exit 0
+fi
+
+brew update
+
+for cask in $(get_${cask_family}); do
+  cask_version="$(brew cask _stanza version "${cask}")"
+
+  if [[ "${cask_version}" == "${new_version}" ]]; then
+    echo "${cask} was already updated"
+    continue
+  fi
+
+  cask-repair --cask-version "${new_version}" --blind-submit "${cask}"
+done

@@ -4,10 +4,9 @@ cask 'pibakery' do
 
   # github.com/davidferguson was verified as official when first introduced to the cask
   url "https://github.com/davidferguson/pibakery/releases/download/v#{version}/PiBakery.pkg"
-  appcast 'https://github.com/davidferguson/pibakery/releases.atom',
-          checkpoint: '0a7c35ba997b1e1f7ffa6366fe3731f1100d7a28fefaeac8d713d3691bbc6bf3'
+  appcast 'https://github.com/davidferguson/pibakery/releases.atom'
   name 'PiBakery'
-  homepage 'http://www.pibakery.org/'
+  homepage 'https://www.pibakery.org/'
 
   pkg 'PiBakery.pkg'
 

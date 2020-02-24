@@ -1,11 +1,10 @@
 cask 'nagbar' do
-  version '1.3.4'
-  sha256 '04db2dfd7d1df586788bd24cd77c8b74c1484506f184694d2b8f4a28633029e1'
+  version '1.3.6'
+  sha256 '31efe0ff0428dc1d45e04c8e4954dc25fd7f4f7839bb1adc763b626f44efc17d'
 
   # github.com/volendavidov/NagBar was verified as official when first introduced to the cask
   url "https://github.com/volendavidov/NagBar/releases/download/#{version}/NagBar.zip"
-  appcast 'https://github.com/volendavidov/NagBar/releases.atom',
-          checkpoint: 'dbf539729766eb917880f571b01be5d859d3d056708f0d7e9350e926471425dd'
+  appcast 'https://github.com/volendavidov/NagBar/releases.atom'
   name 'NagBar'
   homepage 'https://sites.google.com/site/nagbarapp/home'
 

@@ -1,12 +1,16 @@
 cask 'bluestacks' do
-  version '0.9.30.423902'
-  sha256 '261bf6978770a16d588abba51d6e550c6b44de6d12de9bf54a0c0a751290e547'
+  version '4.140.13.2803,7b51e6488db874e4f7fb6a253786c8f1'
+  sha256 'af415dc8f1a5e901583aae8e01192281b1e6a62f4dbe7edde647f777574064fc'
 
-  url "https://cdn3.bluestacks.com/downloads/#{version}/BlueStacks-Installer.dmg"
+  url "https://cdn3.bluestacks.com/downloads/mac/bgp64_mac/#{version.before_comma}/#{version.after_comma}/x64/BlueStacksInstaller_#{version.before_comma}.dmg"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://cloud.bluestacks.com/api/getdownloadnow?platform=mac',
+          configuration: version.before_comma
   name 'BlueStacks'
-  homepage 'http://www.bluestacks.com/'
+  homepage 'https://www.bluestacks.com/'
 
-  app 'BlueStacks.app'
+  depends_on macos: '>= :sierra'
+
+  installer manual: 'BlueStacks Installer.app'
 
   uninstall_preflight do
     set_ownership "#{appdir}/BlueStacks.app"

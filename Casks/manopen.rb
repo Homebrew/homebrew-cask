@@ -8,5 +8,5 @@ cask 'manopen' do
 
   app 'ManOpen.app'
   binary 'openman'
-  artifact 'openman.1', target: "#{HOMEBREW_PREFIX}/share/man/man1/openman.1"
+  manpage 'openman.1'
 end

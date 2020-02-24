@@ -1,15 +1,18 @@
 cask 'applepi-baker' do
-  version :latest
-  sha256 :no_check
+  version '2.2.3'
+  sha256 '5b6c89392a2bae26ad235d647bba7f857e82a34f2e9a4d8d6e33cf4396d94775'
 
-  url 'http://www.tweaking4all.com/downloads/raspberrypi/ApplePi-Baker.zip',
-      cookies: {
-                 'gdbbx_session_activity' => '0',
-               }
+  url "https://www.tweaking4all.com/downloads/raspberrypi/ApplePi-Baker-v#{version}.dmg"
   name 'ApplePi-Baker'
-  homepage 'https://www.tweaking4all.com/hardware/raspberry-pi/macosx-apple-pi-baker/'
+  homepage 'https://www.tweaking4all.com/hardware/raspberry-pi/applepi-baker-v2/'
 
-  app 'ApplePi-Baker.app'
+  app 'ApplePiBaker.app'
 
-  zap trash: '~/Library/Saved Application State/com.tweaking4all.PiBaker.savedState'
+  zap trash: [
+               '~/Library/Caches/com.Tweaking4All.PiBaker',
+               '~/Library/Preferences/ApplePi-Baker',
+               '~/Library/Preferences/com.Tweaking4All.PiBaker.plist',
+               '~/Library/Saved Application State/com.tweaking4all.ApplePiBaker.savedState',
+               '~/Library/WebKit/com.Tweaking4All.PiBaker',
+             ]
 end

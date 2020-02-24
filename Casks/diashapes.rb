@@ -4,8 +4,7 @@ cask 'diashapes' do
 
   # sourceforge.net/dia-installer/diashapes was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/dia-installer/diashapes/#{version}/diashapes-#{version}.dmg"
-  appcast 'https://sourceforge.net/projects/dia-installer/rss?path=/diashapes',
-          checkpoint: '28468761777c337b1e2d69d0e88797b87c602efea0d847510a223ada86bf70ce'
+  appcast 'https://sourceforge.net/projects/dia-installer/rss?path=/diashapes'
   name 'Dia'
   homepage 'http://dia-installer.de/'
 

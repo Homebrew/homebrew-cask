@@ -1,10 +1,9 @@
 cask 'machoexplorer' do
-  version '0.4.0'
-  sha256 '01982f4a246adeea957a3f916ab9cdd4b77acb8cdf926a2feda6f20cdd7e34a6'
+  version '1.0'
+  sha256 '3f9b9e400e008174cb9c4eb8f186b18060c5a12a93622c9d5f60254500735232'
 
   url "https://github.com/everettjf/MachOExplorer/releases/download/v#{version}/MachOExplorer.dmg"
-  appcast 'https://github.com/everettjf/MachOExplorer/releases.atom',
-          checkpoint: '6a32efda4687143a6c6b08a96f2b47fa4121cb253557e768899dc2a3040ca2dc'
+  appcast 'https://github.com/everettjf/MachOExplorer/releases.atom'
   name 'MachOExplorer'
   homepage 'https://github.com/everettjf/MachOExplorer'
 

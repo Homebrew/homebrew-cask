@@ -1,10 +1,9 @@
 cask 'quail' do
-  version '0.9.0'
-  sha256 '702a3fe4b2c2c7024357b2ef144b0ef837d8047c5a4ba32963e6fe293e273f34'
+  version '0.12.0'
+  sha256 'b37b1b0481559abf8bb176a5e5b9708b309e32fabac234a6d5ef8fb026d3ac1a'
 
-  url "https://github.com/1000ch/quail/releases/download/v#{version}/Quail-macos-v#{version}.zip"
-  appcast 'https://github.com/1000ch/quail/releases.atom',
-          checkpoint: '3558d2f1ecdd4cd9f9d33e948743f993c7d3e8b3579ced3f648d29e3bf83964a'
+  url "https://github.com/1000ch/quail/releases/download/v#{version}/Quail-#{version}.dmg"
+  appcast 'https://github.com/1000ch/quail/releases.atom'
   name 'Quail'
   homepage 'https://github.com/1000ch/quail'
 

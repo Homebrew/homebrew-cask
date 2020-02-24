@@ -1,12 +1,11 @@
 cask 'epoch-flip-clock' do
-  version '0.0.3'
-  sha256 '837edfe5d498a014b0a580c52a36c7efc71812e9d6c2e582f6dd1f2c8a8262bb'
+  version '0.0.5'
+  sha256 '90fa0ace6b13b47a12dc89a56c33d9add1140fecbd6bdd0c905d396fa093b02d'
 
-  url "https://github.com/chrstphrknwtn/epoch-flip-clock/releases/download/#{version}/Epoch.Flip.Clock.saver.zip"
-  appcast 'https://github.com/chrstphrknwtn/epoch-flip-clock/releases.atom',
-          checkpoint: '41a86464323f5fbaed984ba4bb930aaca4d458c10d4dc8b281c93183f2521942'
+  url "https://github.com/chrstphrknwtn/epoch-flip-clock-screensaver/releases/download/#{version}/Epoch.Flip.Clock.#{version}.saver.zip"
+  appcast 'https://github.com/chrstphrknwtn/epoch-flip-clock-screensaver/releases.atom'
   name 'Epoch Flip Clock Screensaver'
-  homepage 'https://github.com/chrstphrknwtn/epoch-flip-clock/'
+  homepage 'https://github.com/chrstphrknwtn/epoch-flip-clock-screensaver/'
 
   screen_saver 'Epoch Flip Clock.saver'
 end

@@ -97,11 +97,11 @@ The given package file need not be installed.
 
 If an App of the listed name is already installed in /Applications
 or ~/Applications, it will be followed by a plus symbol '(+)' in
-the output.  This can be verified via 'ls' or the Finder.
+the output. This can be verified via 'ls' or the Finder.
 
 Arguments
 
-   -lax   Be less selective in looking for App names.  Generate
+   -lax   Be less selective in looking for App names. Generate
           more, but less accurate, guesses.
 
 Bugs: This script is imperfect.

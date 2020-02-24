@@ -1,14 +1,14 @@
 cask 'marked' do
-  version '2.5.10230'
-  sha256 '8bcd26bfbe1ccf7771ae7a94f7b97475f85fdc18c34b383b92250779365590c9'
+  version '2.5.36980'
+  sha256 'fdf7039b8588e19e9ed9d0d9de809efa03100cbccffe40067fc274ce0b370caa'
 
   url "https://updates.marked2app.com/Marked#{version}.zip"
-  appcast 'https://updates.marked2app.com/marked.xml',
-          checkpoint: '54aa4b6bbd4f49b7e23a8be54f3c59f14ede4877f46dfad817176da5fe7aeaee'
+  appcast 'https://updates.marked2app.com/marked.xml'
   name 'Marked'
-  homepage 'http://marked2app.com/'
+  homepage 'https://marked2app.com/'
 
   auto_updates true
+  depends_on macos: '>= :yosemite'
 
   app "Marked #{version.major}.app"
 

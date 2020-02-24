@@ -1,10 +1,9 @@
 cask 'operadriver' do
-  version '2.33'
-  sha256 '6fac87ee87101d911d911db0c2747fe6e9d53957026ac5941b011feb19c4121b'
+  version '78.0.3904.87'
+  sha256 '04ce1c879266e8b1acfdded0de02b3b810da1d13514ccc8891628dbc349605a6'
 
   url "https://github.com/operasoftware/operachromiumdriver/releases/download/v.#{version}/operadriver_mac64.zip"
-  appcast 'https://github.com/operasoftware/operachromiumdriver/releases.atom',
-          checkpoint: '6bf9f319d12dbea77aa42ce1944165f2eed2a863662d42d31c3a2735b48525a7'
+  appcast 'https://github.com/operasoftware/operachromiumdriver/releases.atom'
   name 'operachromiumdriver'
   homepage 'https://github.com/operasoftware/operachromiumdriver'
 

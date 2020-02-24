@@ -4,24 +4,13 @@ cask 'xquartz' do
 
   # bintray.com/xquartz was verified as official when first introduced to the cask
   url "https://dl.bintray.com/xquartz/downloads/XQuartz-#{version}.dmg"
-  appcast 'https://www.xquartz.org/releases/sparkle/release.xml',
-          checkpoint: 'da07c258696e2593cbf3f6a451e7125db17a1d70f4f3135e617ba247cdb27a54'
+  appcast 'https://www.xquartz.org/releases/sparkle/release.xml'
   name 'XQuartz'
   homepage 'https://www.xquartz.org/'
 
   auto_updates true
 
   pkg 'XQuartz.pkg'
-
-  postflight do
-    Pathname.new(File.expand_path('~')).join('Library', 'Logs').mkpath
-
-    # Set default path to X11 to avoid the need of manual setup
-    system_command '/usr/bin/defaults', args: ['write', 'com.apple.applescript', 'ApplicationMap', '-dict-add', 'X11', 'file://localhost/Applications/Utilities/XQuartz.app/']
-
-    # Load & start XServer to avoid the need of relogin
-    system_command '/bin/launchctl', args: ['load', '/Library/LaunchAgents/org.macosforge.xquartz.startx.plist']
-  end
 
   uninstall quit:      'org.macosforge.xquartz.X11',
             launchctl: [

@@ -4,6 +4,7 @@ cask 'mpeg-streamclip' do
 
   # alfanet.it/squared5 was verified as official when first introduced to the cask
   url "http://www.alfanet.it/squared5/MPEG_Streamclip_#{version}.dmg"
+  appcast 'http://www.squared5.com/svideo/mpeg-streamclip-mac.html'
   name 'MPEG Streamclip'
   homepage 'http://www.squared5.com/'
 

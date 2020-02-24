@@ -4,6 +4,7 @@ cask 'colormunki-display' do
 
   # my.xrite.com/Downloads/Software/ColorMunki/Display was verified as official when first introduced to the cask
   url "https://my.xrite.com/Downloads/Software/ColorMunki/Display/#{version}/Mac/ColorMunki_Display.zip"
+  appcast 'https://www.xrite.com/Downloads/AutoUpdate/ColorMunkiDisplay_mac_appcast.xml'
   name 'ColorMunki Display'
   homepage 'https://xritephoto.com/colormunki-display'
 

@@ -1,12 +1,12 @@
 cask 'dmm-player' do
-  version '1.6.0.2'
-  sha256 '3acbcf81b439c60013685c3243820e4906a3f2eff176d63b55b31ad0fd06abdf'
+  version '2.0.6'
+  sha256 '73ae817fb519a343ba29104157d20567914705a2b8ad3349f797d39373226e35'
 
-  url "http://portalapp.dmm.com/silverlightplayer/dmm/m/#{version.dots_to_underscores}/DMMPlayerInstaller_#{version.dots_to_underscores}.pkg"
+  url "http://portalapp.dmm.com/dmmplayerv#{version.major}/dmm/#{version.dots_to_underscores}/DMMPlayerV#{version.major}Installer_#{version.dots_to_underscores}.pkg"
   name 'DMM Player'
-  homepage 'http://www.dmm.com/digital/howto_dmmplayer_html/'
+  homepage 'https://www.dmm.com/digital/howto_dmmplayer_html/'
 
-  pkg "DMMPlayerInstaller_#{version.dots_to_underscores}.pkg"
+  pkg "DMMPlayerV#{version.major}Installer_#{version.dots_to_underscores}.pkg"
 
-  uninstall pkgutil: 'com.apple.ScriptEditor.id.DMMPlayer*'
+  uninstall pkgutil: 'com.dmm.dmmplayerv*'
 end

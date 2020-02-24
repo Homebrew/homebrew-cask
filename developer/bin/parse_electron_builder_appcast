@@ -1,0 +1,50 @@
+#!/usr/bin/env ruby
+
+require "pathname"
+require "yaml"
+
+def parse(app_path)
+  appcast_url = Pathname.new "#{app_path}/Contents/Resources/app-update.yml"
+
+  exit 2 unless appcast_url.exist?
+
+  data = YAML.load_file appcast_url
+
+  case data["provider"]
+  when "generic"
+    url = data["url"]
+    "#{url}/latest-mac.yml"
+  when "github"
+    owner = data["owner"]
+    repo = data["repo"]
+    "https://github.com/#{owner}/#{repo}/releases.atom"
+  when "s3"
+    bucket = data["bucket"]
+    channel = data["channel"]
+    region = data["region"]
+    path = data["path"].sub(%r{^/(.*)/$}, '\1') rescue nil
+
+    return "https://#{bucket}.s3.amazon-aws.yml/#{channel}/latest-mac.yml" if channel
+    return "https://s3-#{region}.amazonaws.com/#{bucket}/#{path}/latest-mac.yml" if region
+    return "https://s3.amazonaws.com/#{bucket}/#{path}/latest-mac.yml"
+  end
+end
+
+###
+### main
+###
+
+usage = <<~EOS
+  Usage: parse_electron_builder_appcast <application.app>
+
+  Given an Application name or a path to an Application, attempt to parse the
+  included 'app-update.yml' manifest and output the appcast URL.
+
+EOS
+
+unless ARGV.length == 1
+  puts usage
+  exit 1
+end
+
+puts parse(ARGV[0])

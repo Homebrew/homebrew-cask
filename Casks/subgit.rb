@@ -1,6 +1,6 @@
 cask 'subgit' do
-  version '3.3.0'
-  sha256 'e69e4f6b41474533099cd2462ed64134e33a8640c8d5d02b26e362e8a191a355'
+  version '3.3.9'
+  sha256 '65039f787790e9eff7ee5802c2d6fb884dfabb32d9ab60d6882cdf5afd148d37'
 
   url "https://subgit.com/download/subgit-#{version}.zip"
   name 'SubGit'
@@ -9,6 +9,6 @@ cask 'subgit' do
   binary "subgit-#{version}/bin/subgit"
 
   caveats do
-    depends_on_java('7+')
+    depends_on_java '7+'
   end
 end

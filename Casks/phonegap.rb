@@ -4,8 +4,7 @@ cask 'phonegap' do
 
   # github.com/phonegap/phonegap-app-desktop was verified as official when first introduced to the cask
   url "https://github.com/phonegap/phonegap-app-desktop/releases/download/#{version}/PhoneGapDesktop.dmg"
-  appcast 'https://github.com/phonegap/phonegap-app-desktop/releases.atom',
-          checkpoint: '5c95397080f6dc606a5710ddad2b773873e1cbea85f548429413eb07ee403b78'
+  appcast 'https://github.com/phonegap/phonegap-app-desktop/releases.atom'
   name 'PhoneGap Desktop App'
   homepage 'https://phonegap.com/'
 

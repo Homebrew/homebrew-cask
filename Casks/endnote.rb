@@ -1,14 +1,14 @@
 cask 'endnote' do
-  version '8'
+  version '9'
   sha256 :no_check # required as upstream package is updated in-place
 
-  url "http://download.endnote.com/downloads/X#{version}/EndNoteX#{version}Installer.dmg"
+  url "https://download.endnote.com/downloads/X#{version}/EndNoteX#{version}Installer.dmg"
   name 'EndNote'
-  homepage 'http://endnote.com/'
+  homepage 'https://endnote.com/'
 
   container nested: "Install EndNote X#{version}.app/Contents/Resources/EndNote.zip"
 
-  suite "EndNote X#{version}"
+  suite 'EndNote'
 
   zap trash: [
                '/Library/Application Support/ResearchSoft/EndNote',

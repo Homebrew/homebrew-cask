@@ -4,10 +4,11 @@ cask 'nulloy' do
 
   # github.com/nulloy/nulloy was verified as official when first introduced to the cask
   url "https://github.com/nulloy/nulloy/releases/download/#{version}/Nulloy-#{version}-x86_64.dmg"
-  appcast 'https://github.com/nulloy/nulloy/releases.atom',
-          checkpoint: '6b12d536ceefb813d7e269dc5943e5fa1efca77de4f1e9b9b5eb700ee9d0a3ff'
+  appcast 'https://github.com/nulloy/nulloy/releases.atom'
   name 'Nulloy'
-  homepage 'http://nulloy.com/'
+  homepage 'https://nulloy.com/'
 
   app 'Nulloy.app'
+
+  zap trash: '~/Library/Saved Application State/com.nulloy.savedState'
 end

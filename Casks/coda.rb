@@ -1,14 +1,14 @@
 cask 'coda' do
-  version '2.6.9'
-  sha256 '9de300786284e8f9afd25d51aa5c1858d6c6e9d3248ee35ca0ec8f61155c8aeb'
+  version '2.7.5'
+  sha256 '05e368a269ee17952ab9ab6539a9f6bf1c1ff0916669f698cf2b28c7f433a9f5'
 
   url "https://download.panic.com/coda/Coda%20#{version}.zip"
-  appcast 'https://library.panic.com/releasenotes/coda2/',
-          checkpoint: '5e82cf03b9aa2e24778693e146dafed53c219eed87a0aae4763f91eca1580ed9'
+  appcast 'https://www.panic.com/updates/update.php?appName=Coda%202&appVersion=1'
   name 'Panic Coda'
   homepage 'https://panic.com/coda/'
 
-  depends_on macos: '>= :lion'
+  auto_updates true
+  depends_on macos: '>= :high_sierra'
 
   app "Coda #{version.major}.app"
 

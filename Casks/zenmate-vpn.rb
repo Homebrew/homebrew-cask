@@ -1,11 +1,13 @@
 cask 'zenmate-vpn' do
-  version :latest
-  sha256 :no_check
+  version '5.0.1.14'
+  sha256 'a2eca4e6eeb7d0a3057bbd16bfdcfc3bed5d1125b02673e43589ab3e5a734db2'
 
-  # macos-update.s3.amazonaws.com was verified as official when first introduced to the cask
-  url 'https://macos-update.s3.amazonaws.com/ZenMate_OSX_VPN.dmg'
+  url "https://download.zenmate.com/mac/#{version.major}/zm_#{version}.dmg"
+  appcast 'https://download.zenmate.com/mac/zenmate.xml'
   name 'ZenMate VPN'
   homepage 'https://zenmate.com/products/vpn-for-osx/'
 
-  app 'ZenMate.app'
+  depends_on macos: '>= :sierra'
+
+  app 'ZenMate VPN.app'
 end

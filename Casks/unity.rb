@@ -1,15 +1,15 @@
 cask 'unity' do
-  version '2017.3.1f1,fc1d3344e6ea'
-  sha256 '9b02ee8eb751feefd2ff4cb06115d97f13366e7f58ee31931ff07e1e4c433b92'
+  version '2019.3.2f1,c46a3a38511e'
+  sha256 'f01ac71a91bf04604a909e87f758be520d5f5f43602618db423a603e4efe2eb4'
 
-  url "https://netstorage.unity3d.com/unity/#{version.after_comma}/MacEditorInstaller/Unity.pkg"
+  url "https://netstorage.unity3d.com/unity/#{version.after_comma}/MacEditorInstaller/Unity-#{version.before_comma}.pkg"
+  appcast 'https://unity3d.com/get-unity/download/archive'
   name 'Unity Editor'
   homepage 'https://unity3d.com/unity/'
 
-  pkg 'Unity.pkg'
+  pkg "Unity-#{version.before_comma}.pkg"
 
   uninstall quit:    'com.unity3d.UnityEditor5.x',
             pkgutil: 'com.unity3d.UnityEditor5.x',
-            delete:  '/Applications/Unity/Unity.app',
-            rmdir:   '/Applications/Unity'
+            delete:  '/Applications/Unity'
 end

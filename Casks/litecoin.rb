@@ -1,11 +1,11 @@
 cask 'litecoin' do
-  version '0.14.2'
-  sha256 'd99443785f3e5f7a8648ed17644869954f7e169ee0c2f0314b55fefbcbaa3a0d'
+  version '0.17.1'
+  sha256 '7f8ec34706701482970baae4d4bc0fdb19016a6ab5260f983bf478428f0da518'
 
   url "https://download.litecoin.org/litecoin-#{version}/osx/litecoin-#{version}-osx.dmg"
+  appcast 'https://github.com/litecoin-project/litecoin/releases.atom'
   name 'Litecoin'
   homepage 'https://litecoin.org/'
-  gpg "#{url}.asc", key_id: 'dc380da43082f16378c97414c37e4723969276f5'
 
   app 'Litecoin-Qt.app'
 

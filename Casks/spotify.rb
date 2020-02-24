@@ -7,13 +7,9 @@ cask 'spotify' do
   name 'Spotify'
   homepage 'https://www.spotify.com/'
 
-  auto_updates true
-  depends_on macos: '>= :lion'
-
   app 'Spotify.app'
 
-  uninstall launchctl:  'com.spotify.webhelper',
-            login_item: 'Spotify'
+  uninstall launchctl: 'com.spotify.webhelper'
 
   zap trash: [
                '~/Library/Application Support/Spotify',

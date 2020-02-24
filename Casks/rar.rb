@@ -1,10 +1,10 @@
 cask 'rar' do
-  version '5.5.0'
-  sha256 'aac47555add3aeb65693bc35738c28a8ba215097a3371f2f162c06588b36265c'
+  version '5.8.0'
+  sha256 '3a377b5ca58d13fcca2a2c6a8a4ed1caad9b90d50db65bacf49f4565ec92eed0'
 
-  url "http://www.rarlab.com/rar/rarosx-#{version}.tar.gz"
+  url "https://www.rarlab.com/rar/rarosx-#{version}.tar.gz"
   name 'RAR Archiver'
-  homepage 'http://www.rarlab.com/'
+  homepage 'https://www.rarlab.com/'
 
   binary 'rar/rar'
   binary 'rar/unrar'

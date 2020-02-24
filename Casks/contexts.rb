@@ -1,10 +1,9 @@
 cask 'contexts' do
-  version '3.5.3'
-  sha256 '464e0b36e36261b5ad280283a6894337495b791b5bb9ea29f8462cb3a116678b'
+  version '3.7.1'
+  sha256 'de5e4a660cc30276155606b539d1ae58684115a3983d69598f1505fcad499a87'
 
   url "https://contexts.co/releases/Contexts-#{version}.dmg"
-  appcast 'https://contexts.co/appcasts/stable.xml',
-          checkpoint: '82f8ed707bed6e2df58251bc8c9ecf91c8645d4401dd7cae92d88b19994a2b89'
+  appcast 'https://contexts.co/appcasts/stable.xml'
   name 'Contexts'
   homepage 'https://contexts.co/'
 

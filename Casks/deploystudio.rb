@@ -3,6 +3,7 @@ cask 'deploystudio' do
   sha256 'a7d71ed8e72498c8f7b37349458afd0cd74ba7a95313f26ea1ba05f4d1362071'
 
   url "http://www.deploystudio.com/Downloads/DeployStudioServer_v#{version}.dmg"
+  appcast 'http://www.deploystudio.com/category/downloads/'
   name 'DeployStudio Server'
   homepage 'http://www.deploystudio.com/'
 

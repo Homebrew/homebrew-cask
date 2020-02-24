@@ -2,16 +2,13 @@ cask 'expressscribe' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.nch.com.au/scribe/scribemaci.zip'
+  url 'https://www.nch.com.au/scribe/scribemaci.zip'
   name 'Express Scribe Transcription Software'
-  homepage 'http://www.nch.com.au/scribe/index.html'
-
-  auto_updates true
+  homepage 'https://www.nch.com.au/scribe/index.html'
 
   app 'ExpressScribe.app'
 
-  uninstall quit:       'com.nchsoftware.expressscribe-free',
-            login_item: 'ExpressScribe'
+  uninstall quit:       'com.nchsoftware.expressscribe-free'
 
   zap trash: [
                '~/Library/Preferences/com.nchsoftware.expressscribe-free.plist',

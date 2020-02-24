@@ -1,16 +1,17 @@
 cask 'tinymediamanager' do
-  version '2.9.8_6644bb9'
-  sha256 '02687a49ae252c30a96e467b4286d1783c23377662e9504fef7f6bee1dbb64cc'
+  version '3.1.3'
+  sha256 'c146c5a2ab7877abf19996b59a788a0546a901dfcb4789368356903c99e8df4a'
 
-  url "https://release.tinymediamanager.org/dist/tmm_#{version}_mac.zip"
-  appcast 'https://release.tinymediamanager.org/',
-          checkpoint: 'daaa35bd818ca2d7412abca29079af4ffde5bdb833ae87f843c6136ada4c4239'
+  url "https://release.tinymediamanager.org/v#{version.major}/dist/tmm_#{version}_mac.zip"
+  appcast 'https://release.tinymediamanager.org/'
   name 'tinyMediaManager'
   homepage 'https://www.tinymediamanager.org/'
+
+  auto_updates true
 
   app 'tinyMediaManager.app'
 
   caveats do
-    depends_on_java('7+')
+    depends_on_java '8+'
   end
 end

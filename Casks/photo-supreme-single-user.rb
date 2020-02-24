@@ -1,10 +1,10 @@
 cask 'photo-supreme-single-user' do
   version '4'
-  sha256 'a127ccaf4803eaea13258b8a65ef0977c166fc1db2586aff76817719d9360f30'
+  sha256 :no_check # required as upstream package is updated in-place
 
-  url "http://trial.idimager.com/PhotoSupreme_V#{version}.pkg"
+  url "https://trial.idimager.com/PhotoSupreme_V#{version}.pkg"
   name 'Photo Supreme Single User'
-  homepage 'http://www.idimager.com/WP/?page_id=20'
+  homepage 'https://www.idimager.com/home'
 
   pkg "PhotoSupreme_V#{version}.pkg"
 

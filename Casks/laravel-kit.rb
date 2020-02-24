@@ -1,12 +1,12 @@
 cask 'laravel-kit' do
-  version '1.2.2'
-  sha256 'afcf520e55cc6667b6247ecea762f11ac215d3bc467c3668d370d0cd1f14b2c2'
+  version '1.2.3'
+  sha256 '8f90882f73a14a153e9503e9c3de952252995f8cca0042931d61389202704d73'
 
-  url "https://github.com/tarequemdhanif/laravel-kit/releases/download/v#{version}/laravel-kit-#{version}-mac.zip"
-  appcast 'https://github.com/tarequemdhanif/laravel-kit/releases.atom',
-          checkpoint: '767aea2c668d1d06f5712c2a062fab054d1c984d93e41c2154d1fa4b8396cd00'
+  # github.com/tmdh/laravel-kit was verified as official when first introduced to the cask
+  url "https://github.com/tmdh/laravel-kit/releases/download/v#{version}/laravel-kit-#{version}-mac.zip"
+  appcast 'https://github.com/tmdh/laravel-kit/releases.atom'
   name 'Laravel Kit'
-  homepage 'https://github.com/tarequemdhanif/laravel-kit'
+  homepage 'https://tmdh.github.io/laravel-kit'
 
   auto_updates true
 

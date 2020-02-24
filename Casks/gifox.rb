@@ -1,23 +1,22 @@
 cask 'gifox' do
-  version '010501.01'
-  sha256 'ed25c3a2678ebe409535356f9ebf2e1583dfc75a928fc9787ef96f09f86720b6'
+  version '2.1.1,020101.00'
+  sha256 '0b414ab558e4a1e1a96744f67a9722f1828234bfbb20fd5b769b5594f35311da'
 
-  # s3.eu-central-1.amazonaws.com/dstlalgzor/gifox was verified as official when first introduced to the cask
-  url "https://s3.eu-central-1.amazonaws.com/dstlalgzor/gifox/#{version}.dmg"
-  appcast 'https://s3.eu-central-1.amazonaws.com/dstlalgzor/gifox/appcast.xml',
-          checkpoint: 'b91b7581bb57a40a1cde0ca06b323fe9f4d951d4144c05eb6dcaad9bdbadee00'
+  # d3si16icyi9iar.cloudfront.net/gifox was verified as official when first introduced to the cask
+  url "https://d3si16icyi9iar.cloudfront.net/gifox/#{version.after_comma}.dmg"
+  appcast 'https://www.macupdater.net/cgi-bin/extract_text/download_with_useragent.cgi?url=https://api.gifox.io/appcast?prereleases=false'
   name 'gifox'
   homepage 'https://gifox.io/'
 
   app 'Gifox.app'
 
-  uninstall launchctl: 'com.gifox.gifox.agent',
-            quit:      'com.gifox.gifox'
+  uninstall launchctl: "com.gifox.gifox#{version.major}.agent",
+            quit:      "com.gifox.gifox#{version.major}"
 
   zap trash: [
-               '~/Library/Application Support/Gifox',
-               '~/Library/Caches/com.gifox.gifox',
-               '~/Library/Cookies/com.gifox.gifox.binarycookies',
-               '~/Library/Preferences/com.gifox.gifox.plist',
+               "~/Library/Application Support/Gifox #{version.major}",
+               "~/Library/Caches/com.gifox.gifox#{version.major}",
+               "~/Library/Cookies/com.gifox.gifox#{version.major}.binarycookies",
+               "~/Library/Preferences/com.gifox.gifox#{version.major}.plist",
              ]
 end

@@ -1,8 +1,9 @@
 cask 'plexamp' do
-  version '1.0.4'
-  sha256 'b26794536606b6fc00c4193056e7a57da2fdeb758f58be1778338537a54fbfc3'
+  version '1.1.0'
+  sha256 'f48bf6ee4a7353ed457501ce0d3cdfb4e736c1ea9b223011b6ba8d32f5f6daab'
 
   url "https://plexamp.plex.tv/plexamp.plex.tv/Plexamp-#{version}.dmg"
+  appcast 'https://www.plex.tv/plex-labs/#modal-plexamp-downloads'
   name 'Plexamp'
   homepage 'https://www.plex.tv/plex-labs/#plexamp'
 

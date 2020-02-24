@@ -1,12 +1,17 @@
 cask 'steermouse' do
-  version '5.2.1'
-  sha256 '1ef81a06e3dec2639b2576ff556df43bb7a8a931ced74fbc507bd6bfced775df'
+  version '5.4.3'
+  sha256 '8eab10757566dbd2276628575d6a7e7a1ee3e56a65ee7e5752a9023914202c27'
 
-  url "http://plentycom.jp/ctrl/files_sm/SteerMouse#{version}.dmg"
-  appcast 'http://plentycom.jp/en/steermouse/download.php',
-          checkpoint: 'e3e8b724373a7009cf967f8eea9bb811209d1cedb4aec50e211066c3247c38e1'
+  url "https://plentycom.jp/ctrl/files_sm/SteerMouse#{version}.dmg"
+  appcast 'https://plentycom.jp/en/steermouse/download.php'
   name 'SteerMouse'
-  homepage 'http://plentycom.jp/en/steermouse/'
+  homepage 'https://plentycom.jp/en/steermouse/'
 
   prefpane 'SteerMouse.prefPane'
+
+  zap trash: '~/Library/Application Support/SteerMouse & CursorSense/Device.smsetting',
+      rmdir: [
+               '~/Library/Application Support/SteerMouse & CursorSense/Device Definitions/',
+               '~/Library/Application Support/SteerMouse & CursorSense/',
+             ]
 end

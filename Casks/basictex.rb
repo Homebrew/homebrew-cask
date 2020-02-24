@@ -1,6 +1,6 @@
 cask 'basictex' do
-  version '2017.0607'
-  sha256 'da83f12d6bbd9ee427a2142dff9ff3c8f4c4c187285a516c17aa539f09baf563'
+  version '2019.1011'
+  sha256 'b40998a06132364b4e58ca1be77c4b86d3e9514a4a59d8712a912b78593620cd'
 
   # mirror.ctan.org/systems/mac/mactex was verified as official when first introduced to the cask
   url "http://mirror.ctan.org/systems/mac/mactex/mactex-basictex-#{version.no_dots}.pkg"
@@ -8,10 +8,10 @@ cask 'basictex' do
   homepage 'https://www.tug.org/mactex/morepackages.html'
 
   conflicts_with cask: [
-                         'mactex-no-ghostscript',
+                         'mactex-no-gui',
                          'mactex',
                        ]
-  depends_on macos: '>= :yosemite'
+  depends_on macos: '>= :sierra'
 
   pkg "mactex-basictex-#{version.no_dots}.pkg"
 

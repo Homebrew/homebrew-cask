@@ -1,11 +1,11 @@
 cask 'rocket' do
-  version :latest
-  sha256 :no_check
+  version '1.6.1,62'
+  sha256 '151d25f53762f955451bfb921ba67492dd1a03e44e925e95884e994ce636ebae'
 
-  # dl.devmate.com/net.matthewpalmer.Rocket was verified as official when first introduced to the cask
-  url 'https://dl.devmate.com/net.matthewpalmer.Rocket/Rocket.dmg'
+  url "https://macrelease.matthewpalmer.net/distribution/appcasts/Rocket-#{version.after_comma}.dmg"
+  appcast 'https://updates.devmate.com/net.matthewpalmer.Rocket.xml'
   name 'Rocket'
-  homepage 'http://matthewpalmer.net/rocket/'
+  homepage 'https://matthewpalmer.net/rocket/'
 
   app 'Rocket.app'
 

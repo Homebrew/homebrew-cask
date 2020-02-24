@@ -1,9 +1,5 @@
 cask 'araxis-merge' do
-  if MacOS.version <= :mountain_lion
-    version '2014.4459'
-    sha256 '7945e0fd583880bf4bbb65899c7184692d683f247764e73f435e0685954028f0'
-    url "https://www.araxis.com/download/Merge#{version}-OSX10.8.dmg"
-  elsif MacOS.version <= :mavericks
+  if MacOS.version <= :mavericks
     version '2016.4774'
     sha256 '341b47242f30aca3ce3c0af9112c95f3bdac5f5ae262aa1894a9632b46fef6ab'
     url "https://www.araxis.com/download/Merge#{version}-OSX10.9.dmg"
@@ -12,17 +8,14 @@ cask 'araxis-merge' do
     sha256 'abba11a92e1f50d913356d31123bed5bb08838ce39c4659206fd24c32432c4b3'
     url "https://www.araxis.com/download/Merge#{version}-OSX10.10.dmg"
   else
-    version '2018.4971'
-    sha256 'f16f7aa874dab7fa3f48e7284f9613e0c8c872034ffa4ddce20f37b38c8200f4'
+    version '2019.5249'
+    sha256 '05ef60edf5be195d8893f4abd4592c59a2ad7f930459bcc1d4da9688e88aef26'
     url "https://www.araxis.com/download/Merge#{version}-macOS.dmg"
   end
 
-  appcast 'https://www.araxis.com/news-feed.atom',
-          checkpoint: '7c405cb5dcce28e0ee8da41c76bb2cd4a908f77bb81896c58257e526909c5341'
+  appcast 'https://www.araxis.com/news-feed.atom'
   name 'Araxis Merge'
   homepage 'https://www.araxis.com/merge/'
-
-  depends_on macos: '>= :mountain_lion'
 
   app 'Araxis Merge.app'
   binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxisgitdiff"

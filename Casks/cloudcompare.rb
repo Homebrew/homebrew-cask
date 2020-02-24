@@ -5,7 +5,7 @@ cask 'cloudcompare' do
   # asmaloney.com/download/cloudcompare-mac-os-x was verified as official when first introduced to the cask
   url 'https://asmaloney.com/download/cloudcompare-mac-os-x/'
   name 'CloudCompare'
-  homepage 'http://www.danielgm.net/cc/'
+  homepage 'https://www.danielgm.net/cc/'
 
   app 'CloudCompare.app'
   app 'ccViewer.app'

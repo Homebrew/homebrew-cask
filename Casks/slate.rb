@@ -4,12 +4,9 @@ cask 'slate' do
 
   # slate.ninjamonkeysoftware.com was verified as official when first introduced to the cask
   url 'http://slate.ninjamonkeysoftware.com/Slate.dmg'
-  appcast 'https://www.ninjamonkeysoftware.com/slate/appcast.xml',
-          checkpoint: 'ffad4d36b8b87ba512d18fd7d5346269c3feb32a91243859719df7fdf85f82fc'
+  appcast 'https://www.ninjamonkeysoftware.com/slate/appcast.xml'
   name 'Slate'
   homepage 'https://github.com/jigish/slate'
-
-  accessibility_access true
 
   app 'Slate.app'
 

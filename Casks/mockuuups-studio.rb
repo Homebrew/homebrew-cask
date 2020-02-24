@@ -1,9 +1,10 @@
 cask 'mockuuups-studio' do
-  version '2.1.0'
-  sha256 'bfc3449815f36fafa62a12bbc2c077ee6c8bb6937ff629ce8a15eab567bf3d08'
+  version '2.4.0'
+  sha256 'b6279131e29fdf93da25587423e808528fdf7333e21c9f243a3f2c4ecebd92d0'
 
   # mockuuups.com was verified as official when first introduced to the cask
   url "https://binaries.mockuuups.com/Mockuuups%20Studio-#{version}-mac.zip"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://mockuuups.studio/download/mac/'
   name 'Mockuuups Studio'
   homepage 'https://mockuuups.studio/'
 

@@ -4,8 +4,7 @@ cask 'pomotodo' do
 
   # cdn.hackplan.com/theair was verified as official when first introduced to the cask
   url "https://cdn.hackplan.com/theair/#{version.after_comma}/Pomotodo.#{version.before_comma}.dmg"
-  appcast "https://air.pomotodo.com/v1/p/com.pomotodo.PomotodoMac#{version.major}/latest.xml",
-          checkpoint: '91adc2d35a01e0b2cd65e87da42573474bc023a6e852dcc06bdd0e8816fa147d'
+  appcast "https://air.pomotodo.com/v1/p/com.pomotodo.PomotodoMac#{version.major}/latest.xml"
   name 'Pomodoro'
   homepage 'https://pomotodo.com/'
 

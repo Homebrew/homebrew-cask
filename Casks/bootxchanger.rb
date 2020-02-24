@@ -4,8 +4,7 @@ cask 'bootxchanger' do
 
   # github.com/zydeco/bootxchanger was verified as official when first introduced to the cask
   url "https://github.com/zydeco/bootxchanger/releases/download/v#{version}/bootxchanger_#{version}.dmg"
-  appcast 'https://github.com/zydeco/bootxchanger/releases.atom',
-          checkpoint: '0b9450d1da78c34dc9808527a70a4aa36f7a2e6faa412dd6981b5f30b506b773'
+  appcast 'https://github.com/zydeco/bootxchanger/releases.atom'
   name 'BootXChanger'
   homepage 'https://namedfork.net/bootxchanger/'
 

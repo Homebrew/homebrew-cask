@@ -1,15 +1,14 @@
 cask 'ipe' do
-  version '7.2.7'
-  sha256 '13bd32ecfb77d7c3e073436f4b7e8b8532706a80aeec9575172670dc91908b25'
+  version '7.2.13'
+  sha256 '3003343719f3b17f32a321fff64f10e60e92b4d9550e136c65838c761c23fe55'
 
   # bintray.com/otfried was verified as official when first introduced to the cask
   url "https://dl.bintray.com/otfried/generic/ipe/#{version.major_minor}/ipe-#{version}-mac.dmg"
-  appcast 'http://ipe.otfried.org/',
-          checkpoint: 'bd56cea213718b2f59da8fb146cd3f120e70d3b908c7364d230db6235c7b25ae'
+  appcast 'http://ipe.otfried.org/'
   name 'Ipe'
   homepage 'http://ipe.otfried.org/'
 
-  depends_on macos: '>= :mavericks'
+  depends_on macos: '>= :yosemite'
 
   app 'Ipe.app'
 

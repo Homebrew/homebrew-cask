@@ -1,10 +1,9 @@
 cask 'santa' do
-  version '0.9.24'
-  sha256 '53988973e13a48d6bdf2f6f5700c4685c4b0c9c398a0dfc6effe0cf3973ae46b'
+  version '0.9.33'
+  sha256 '9a2bd94f751b26576a8bfea5f7fc616af2b7c9a6e642db6e93d84d21f29f0930'
 
   url "https://github.com/google/santa/releases/download/#{version}/santa-#{version}.dmg"
-  appcast 'https://github.com/google/santa/releases.atom',
-          checkpoint: 'ea22fd5727b36b34553a438ed46070f501b8f8df88c4fae45ead8db4aeba3e77'
+  appcast 'https://github.com/google/santa/releases.atom'
   name 'Santa'
   homepage 'https://github.com/google/santa'
 
@@ -12,6 +11,9 @@ cask 'santa' do
 
   uninstall delete:    '/usr/local/bin/santactl',
             kext:      'com.google.santa-driver',
-            launchctl: ['com.google.santad', 'com.google.santagui'],
+            launchctl: [
+                         'com.google.santad',
+                         'com.google.santagui',
+                       ],
             pkgutil:   'com.google.santa'
 end

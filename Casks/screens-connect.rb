@@ -1,20 +1,19 @@
 cask 'screens-connect' do
-  version '4.4.5450,1509106836'
-  sha256 'a4c530e8af65dd6b29ca96894356f9b815d86f8cdbe0ffe91c84446cd4907960'
+  version '4.9.2,20577:1572284765'
+  sha256 '008d543ff93fbe393cae9f55529fcd5e9ffeb241ac0f67eb7f4e1fc70a6d69e5'
 
   # dl.devmate.com/com.edovia.Screens-Connect was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.edovia.Screens-Connect/#{version.patch}/#{version.after_comma}/ScreensConnect-#{version.patch}.zip"
-  appcast 'https://updates.devmate.com/com.edovia.Screens-Connect.xml',
-          checkpoint: '746a8d75118580c1519f4d8bfabeef8b09f9e4fac7d7e7c0ba1cd0288dd8261c'
+  url "https://dl.devmate.com/com.edovia.Screens-Connect/#{version.after_comma.before_colon}/#{version.after_colon}/ScreensConnect-#{version.after_comma.before_colon}.zip"
+  appcast 'https://updates.devmate.com/com.edovia.Screens-Connect.xml'
   name 'Screens Connect'
-  homepage 'https://screensconnect.com/'
+  homepage 'https://screensconnect.com/en/'
 
   depends_on macos: '>= :el_capitan'
 
   app 'Screens Connect.app'
 
   # Uninstall script can fail when trying to remove legacy PKGIDS
-  # Original discussion: https://github.com/caskroom/homebrew-cask/pull/8833
+  # Original discussion: https://github.com/Homebrew/homebrew-cask/pull/8833
   uninstall quit:      'com.edovia.Screens-Connect',
             launchctl: [
                          'com.edovia.Screens-Connect.launcher',

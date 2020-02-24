@@ -1,8 +1,9 @@
 cask 'kapow' do
-  version '1.5.5'
-  sha256 '5a2cf0db4123b77d172f1ac1d486adab98abb3ac982ed1d39c3b2fcbacd33e24'
+  version '1.5.9'
+  sha256 '17a7ea3d390f3a69e8e58800290fda27dc7e905aeac74b543f95bb0b244f7e73'
 
   url "https://gottcode.org/kapow/Kapow_#{version}.dmg"
+  appcast 'https://gottcode.org/kapow/'
   name 'Kapow'
   homepage 'https://gottcode.org/kapow'
 

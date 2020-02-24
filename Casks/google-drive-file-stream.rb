@@ -12,7 +12,18 @@ cask 'google-drive-file-stream' do
 
   uninstall login_item: 'Google Drive File Stream',
             quit:       'com.google.drivefs',
-            pkgutil:    'com.google.drivefs'
+            pkgutil:    [
+                          'com.google.drivefs',
+                          'com.google.drivefs.shortcuts',
+                          'com.google.pkg.Keystone',
+                        ],
+            launchctl:  [
+                          'com.google.keystone.agent',
+                          'com.google.keystone.system.agent',
+                          'com.google.keystone.daemon',
+                          'com.google.keystone.xpcservice',
+                          'com.google.keystone.system.xpcservice',
+                        ]
 
   zap trash: [
                '~/Library/Application Support/Google/DriveFS',

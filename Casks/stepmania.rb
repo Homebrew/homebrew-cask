@@ -4,8 +4,7 @@ cask 'stepmania' do
 
   # github.com/stepmania/stepmania was verified as official when first introduced to the cask
   url "https://github.com/stepmania/stepmania/releases/download/v#{version}/StepMania-#{version}-mac.dmg"
-  appcast 'https://github.com/stepmania/stepmania/releases.atom',
-          checkpoint: '4817e41d8c2bebd06e894736cff92919d6dc4fdb8d9818eabbb5efb54cca1419'
+  appcast 'https://github.com/stepmania/stepmania/releases.atom'
   name 'StepMania'
   homepage 'https://www.stepmania.com/'
 

@@ -1,12 +1,13 @@
 cask 'i1profiler' do
-  version '1.7.2'
-  sha256 '276aeda81784d074e50fc6b0a6f4b9a7ffca4e15496b58733ae50acb68091b15'
+  version '3.2.0'
+  sha256 'b30d7ebd8a251f36f2fa84589aa793974cfc2fc9eddf7644c747f61a671d8a27'
 
   url "https://downloads.xrite.com/downloads/software/i1Profiler/#{version}/Mac/i1Profiler.zip"
+  appcast 'https://www.xrite.com/Downloads/Autoupdate/i1profiler_mac_appcast.xml'
   name 'i1Profiler'
   name 'Eye-One Profiler'
   name 'i1Publish'
-  homepage "http://www.xrite.com/service-support/downloads/I/i1Profiler-i1Publish_V#{version.dots_to_underscores}"
+  homepage "https://www.xrite.com/service-support/downloads/I/i1Profiler-i1Publish_V#{version.dots_to_underscores}"
 
   pkg 'i1Profiler.pkg'
 
@@ -16,8 +17,8 @@ cask 'i1profiler' do
                          'com.xrite.hasp.installer.*',
                        ],
             launchctl: [
-                         'com.xrite.device.softwareupdate.plist',
-                         'com.xrite.device.xrdd.plist',
+                         'com.aladdin.aksusbd',
+                         'com.aladdin.hasplmd',
                        ],
             delete:    '/Applications/i1Profiler/i1Profiler.app',
             rmdir:     '/Applications/i1Profiler'

@@ -4,8 +4,7 @@ cask 'reggy' do
 
   # github.com/downloads/samsouder/reggy was verified as official when first introduced to the cask
   url "https://github.com/downloads/samsouder/reggy/Reggy_v#{version}.tbz"
-  appcast 'http://reggyapp.com/appcast.xml',
-          checkpoint: 'c48561159dd488deef8309ff269d6995be2fde69ff2d44d852b9f8c367874dc5'
+  appcast 'http://reggyapp.com/appcast.xml'
   name 'Reggy'
   homepage 'http://reggyapp.com/'
 

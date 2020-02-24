@@ -1,8 +1,9 @@
 cask 'komodo-edit' do
-  version '11.0.2-18122'
-  sha256 '4d7ca24d18df2a1e876b69369a94fde31fbcfb1e21f7318f16fa47737bdefcb5'
+  version '12.0.1,18441'
+  sha256 '68811e8c5d28a3a2ec9a390a36b8b07c81c0ff1f129c02f1349e106490fae6e3'
 
-  url "https://downloads.activestate.com/Komodo/releases/#{version.sub(%r{-.*}, '')}/Komodo-Edit-#{version}-macosx-x86_64.dmg"
+  url "https://downloads.activestate.com/Komodo/releases/#{version.before_comma}/Komodo-Edit-#{version.before_comma}-#{version.after_comma}-macosx-x86_64.dmg"
+  appcast 'https://www.activestate.com/komodo-ide/downloads/edit'
   name 'Komodo Edit'
   homepage 'https://www.activestate.com/komodo-edit/'
 

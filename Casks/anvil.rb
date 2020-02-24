@@ -4,8 +4,7 @@ cask 'anvil' do
 
   # sparkler.herokuapp.com/apps/3/versions was verified as official when first introduced to the cask
   url "https://sparkler.herokuapp.com/apps/3/versions/#{version.after_comma}/download"
-  appcast 'https://sparkler.herokuapp.com/apps/3/updates.xml',
-          checkpoint: 'e1c2efbeaf5f2ca79f6881360e0122d858774a5754a9e5876e215f5a917b2a51'
+  appcast 'https://sparkler.herokuapp.com/apps/3/updates.xml'
   name 'Anvil'
   homepage 'https://anvilformac.com/'
 

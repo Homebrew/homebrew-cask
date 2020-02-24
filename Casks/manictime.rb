@@ -1,12 +1,15 @@
 cask 'manictime' do
-  version '1.4.2'
-  sha256 'a42cfb6aaf969d203e5938c2eb4ecbab750cb475cdf67e024e662924794673e2'
+  version '2.0.27'
+  sha256 '534ef3cd29d1838502357a6285dc7706e4a289d0e9379420b02edce1d71b19eb'
 
-  url "http://cdn.manictime.com/setup/mac/ManicTime-v#{version}.dmg"
+  url "https://cdn.manictime.com/setup/mac/ManicTime-v#{version}.dmg"
+  appcast 'https://www.manictime.com/mac/download'
   name 'ManicTime'
   homepage 'https://www.manictime.com/Mac'
 
-  pkg "ManicTime-#{version}.pkg"
+  depends_on macos: '>= :sierra'
+
+  pkg "ManicTime-v#{version}.pkg"
 
   uninstall pkgutil: 'com.finkit.manictime.tracker'
 

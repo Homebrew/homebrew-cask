@@ -1,13 +1,12 @@
 cask 'tv-browser' do
-  version '4'
-  sha256 '814899388669d5d0501dc35e4cf6d47a3c5393c5a1a02bcaecce49ab02692ddb'
+  version '4.2.1'
+  sha256 'bc7ce87e1d27d1d40964bdcb5b9b5779a518567d1cd36a71d62deb8da73d4f7c'
 
   # sourceforge.net/tvbrowser was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/tvbrowser/tvbrowser_#{version}_macjava.dmg"
-  appcast 'https://sourceforge.net/projects/tvbrowser/rss',
-          checkpoint: 'a802a00e4357b4e6f392434073843a9b12308f299420d2ddefd72c07d702f1d3'
+  appcast 'https://sourceforge.net/projects/tvbrowser/rss'
   name 'TV-Browser'
-  homepage 'http://www.tvbrowser.org/'
+  homepage 'https://www.tvbrowser.org/'
 
   app 'TV-Browser.app'
 end

@@ -1,10 +1,9 @@
 cask 'whatroute' do
-  version '2.1.3'
-  sha256 '4291283e78771c3b978b7d8e0e02fc7ab3b93468862faceb102de45b86d5972d'
+  version '2.3.0'
+  sha256 'd8111698095716243e3c260022e1992dff29fac7d9f424734b53986c3c4f19a6'
 
   url "https://downloads.whatroute.net/software/whatroute-#{version}.zip"
-  appcast "https://www.whatroute.net/whatroute#{version.major}appcast.xml",
-          checkpoint: '69742846898e676a8b3bac823e1c0719b2182f4592b10201316877c5468fb1d1'
+  appcast "https://www.whatroute.net/whatroute#{version.major}appcast.xml"
   name 'WhatRoute'
   homepage 'https://www.whatroute.net/'
 

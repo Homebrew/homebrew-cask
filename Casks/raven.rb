@@ -4,10 +4,9 @@ cask 'raven' do
 
   # github.com/robotlolita/raven was verified as official when first introduced to the cask
   url "https://github.com/robotlolita/raven/releases/download/v#{version}/Raven-osx.zip"
-  appcast 'https://github.com/robotlolita/raven/releases.atom',
-          checkpoint: 'f2d62a1e35ed7c5afd3e350318ce0c64602f456185aaef165091336b6958c4e0'
+  appcast 'https://github.com/robotlolita/raven/releases.atom'
   name 'Raven'
-  homepage 'http://robotlolita.me/raven/'
+  homepage 'https://robotlolita.me/raven/'
 
   app 'Raven.app'
 end

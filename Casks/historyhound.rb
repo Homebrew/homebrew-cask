@@ -1,12 +1,19 @@
 cask 'historyhound' do
-  version '1.9.12'
-  sha256 'f2bf9a68026868a0b2ed41516c42cc52323bdf7bfdbbe4c1d311b442a88b740c'
+  version '2.1.1'
+  sha256 '98060c93f5cb7b70f973d5c11460cd31554af90257799a789981a09d2a90c95a'
 
   url "https://www.stclairsoft.com/download/HistoryHound-#{version}.dmg"
-  appcast 'https://www.stclairsoft.com/cgi-bin/sparkle.cgi?HH',
-          checkpoint: '5ba20222c0ce71b65a16b25afbbdc5147f8d05105df8e25c269fc4d353620d15'
+  appcast 'https://www.stclairsoft.com/cgi-bin/sparkle.cgi?HH'
   name 'HistoryHound'
   homepage 'https://www.stclairsoft.com/HistoryHound/'
 
+  auto_updates true
+
   app 'HistoryHound.app'
+
+  zap trash: [
+               '~/Library/Application Support/HistoryHound',
+               '~/Library/Caches/com.stclairsoft.HistoryHound',
+               '~/Library/Preferences/com.stclairsoft.HistoryHound.plist',
+             ]
 end

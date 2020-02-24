@@ -1,11 +1,10 @@
 cask 'squirrelsql' do
-  version '3.8.1'
-  sha256 'c3ff5203477536d347f9531a8070465267b1a81751e964b97e427cd13af224d9'
+  version '4.0.0'
+  sha256 'c15829260abb45f47e6927492e45c6b696f8edec41d10e96b36f214146bd0f38'
 
   # sourceforge.net/squirrel-sql was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/squirrel-sql/1-stable/#{version}/squirrel-sql-#{version}-MACOSX-install.jar"
-  appcast 'https://sourceforge.net/projects/squirrel-sql/rss?path=/1-stable',
-          checkpoint: '9c801e242da8fcd8e2aa9acf97f228e89db9546848027ff039f37454ea5943b6'
+  appcast 'https://sourceforge.net/projects/squirrel-sql/rss?path=/1-stable'
   name 'SQuirrel SQL'
   homepage 'http://www.squirrelsql.org/'
 
@@ -14,7 +13,7 @@ cask 'squirrelsql' do
   installoptions = "#{staged_path}/install-options.xml"
 
   preflight do
-    # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+    # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
     File.open(installoptions, 'w') do |f|
       f.print <<~EOS
         <?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -32,37 +31,36 @@ cask 'squirrelsql' do
         <pack index="4" name="Optional Plugin - Swing Violation Dedector" selected="true"/>
         <pack index="5" name="Optional Plugin - Multi Source" selected="true"/>
         <pack index="6" name="Optional Plugin - Vertica" selected="true"/>
-        <pack index="7" name="Optional Plugin - Data import" selected="true"/>
-        <pack index="8" name="Optional Plugin - DB2" selected="true"/>
-        <pack index="9" name="Optional Plugin - Derby" selected="true"/>
-        <pack index="10" name="Optional Plugin - Firebird " selected="true"/>
-        <pack index="11" name="Optional Plugin - Hibernate" selected="true"/>
-        <pack index="12" name="Optional Plugin - H2 " selected="true"/>
-        <pack index="13" name="Optional Plugin - Informix " selected="true"/>
-        <pack index="14" name="Optional Plugin - Microsoft SQL Server " selected="true"/>
-        <pack index="15" name="Optional Plugin - MySQL " selected="true"/>
-        <pack index="16" name="Optional Plugin - Netezza " selected="true"/>
-        <pack index="17" name="Optional Plugin - Oracle" selected="true"/>
-        <pack index="18" name="Optional Plugin - PostgreSQL " selected="true"/>
-        <pack index="19" name="Optional Plugin - Session Scripts" selected="true"/>
-        <pack index="20" name="Optional Plugin - Smart Tools " selected="true"/>
-        <pack index="21" name="Optional Plugin - SQL Parametrisation " selected="true"/>
-        <pack index="22" name="Optional Plugin - SQL Replace " selected="true"/>
-        <pack index="23" name="Optional Plugin - SQL Validator " selected="true"/>
-        <pack index="24" name="Optional Plugin - Sybase " selected="true"/>
-        <pack index="25" name="Optional Plugin - Internationalization " selected="true"/>
-        <pack index="26" name="Optional Translation - Brazilian Portuguese" selected="true"/>
-        <pack index="27" name="Optional Translation - Bulgarian" selected="true"/>
-        <pack index="28" name="Optional Translation - Czech" selected="true"/>
-        <pack index="29" name="Optional Translation - Simplified Chinese" selected="true"/>
-        <pack index="30" name="Optional Translation - French" selected="true"/>
-        <pack index="31" name="Optional Translation - German" selected="true"/>
-        <pack index="32" name="Optional Translation - Italian" selected="true"/>
-        <pack index="33" name="Optional Translation - Japanese" selected="true"/>
-        <pack index="34" name="Optional Translation - Korean" selected="true"/>
-        <pack index="35" name="Optional Translation - Polish" selected="true"/>
-        <pack index="36" name="Optional Translation - Russian" selected="true"/>
-        <pack index="37" name="Optional Translation - Spanish" selected="true"/>
+        <pack index="7" name="Optional Plugin - DB2" selected="true"/>
+        <pack index="8" name="Optional Plugin - Derby" selected="true"/>
+        <pack index="9" name="Optional Plugin - Firebird " selected="true"/>
+        <pack index="10" name="Optional Plugin - Hibernate" selected="true"/>
+        <pack index="11" name="Optional Plugin - H2 " selected="true"/>
+        <pack index="12" name="Optional Plugin - Informix " selected="true"/>
+        <pack index="13" name="Optional Plugin - Microsoft SQL Server " selected="true"/>
+        <pack index="14" name="Optional Plugin - MySQL " selected="true"/>
+        <pack index="15" name="Optional Plugin - Netezza " selected="true"/>
+        <pack index="16" name="Optional Plugin - Oracle" selected="true"/>
+        <pack index="17" name="Optional Plugin - PostgreSQL " selected="true"/>
+        <pack index="18" name="Optional Plugin - Session Scripts" selected="true"/>
+        <pack index="19" name="Optional Plugin - Smart Tools " selected="true"/>
+        <pack index="20" name="Optional Plugin - SQL Parametrisation " selected="true"/>
+        <pack index="21" name="Optional Plugin - SQL Replace " selected="true"/>
+        <pack index="22" name="Optional Plugin - SQL Validator " selected="true"/>
+        <pack index="23" name="Optional Plugin - Sybase " selected="true"/>
+        <pack index="24" name="Optional Plugin - Internationalization " selected="true"/>
+        <pack index="25" name="Optional Translation - Brazilian Portuguese" selected="true"/>
+        <pack index="26" name="Optional Translation - Bulgarian" selected="true"/>
+        <pack index="27" name="Optional Translation - Czech" selected="true"/>
+        <pack index="28" name="Optional Translation - Simplified Chinese" selected="true"/>
+        <pack index="29" name="Optional Translation - French" selected="true"/>
+        <pack index="30" name="Optional Translation - German" selected="true"/>
+        <pack index="31" name="Optional Translation - Italian" selected="true"/>
+        <pack index="32" name="Optional Translation - Japanese" selected="true"/>
+        <pack index="33" name="Optional Translation - Korean" selected="true"/>
+        <pack index="34" name="Optional Translation - Polish" selected="true"/>
+        <pack index="35" name="Optional Translation - Russian" selected="true"/>
+        <pack index="36" name="Optional Translation - Spanish" selected="true"/>
         </com.izforge.izpack.panels.PacksPanel>
         <com.izforge.izpack.panels.InstallPanel id="UNKNOWN (com.izforge.izpack.panels.InstallPanel)"/>
         <com.izforge.izpack.panels.FinishPanel id="UNKNOWN (com.izforge.izpack.panels.FinishPanel)"/>
@@ -82,6 +80,6 @@ cask 'squirrelsql' do
   zap trash: '~/.squirrel-sql'
 
   caveats do
-    depends_on_java('8+')
+    depends_on_java '8+'
   end
 end

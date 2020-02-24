@@ -1,14 +1,18 @@
 cask 'lingon-x' do
-  version '5.2.8'
-  sha256 '1d8326b5a87817c94f8dd1be2c496d56abe34aa9336af06de8fc28e747c5591f'
+  if MacOS.version <= :high_sierra
+    version '6.6.5'
+    sha256 'b0231b1a98dcc8f5c4234b419c9f5331407b8cce29b33f0ea2e32b12595adfa8'
+  else
+    version '7.5.1'
+    sha256 '1ded4cf1ab7aa2005606c6c08b425188e777ba92fd0bacdd833052182b99b62f'
+  end
 
   url "https://www.peterborgapps.com/downloads/LingonX#{version.major}.zip"
-  appcast "https://www.peterborgapps.com/updates/lingonx#{version.major}-appcast.xml",
-          checkpoint: '2fa4943c7d6d9301804c97fecf6da189adf07ab1522dbe4c01820a919c3a9f08'
+  appcast "https://www.peterborgapps.com/updates/lingonx#{version.major}.plist"
   name 'Lingon X'
   homepage 'https://www.peterborgapps.com/lingon/'
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :high_sierra'
 
   app 'Lingon X.app'
 

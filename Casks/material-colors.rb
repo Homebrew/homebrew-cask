@@ -1,10 +1,9 @@
 cask 'material-colors' do
-  version '1.1.0'
-  sha256 '61a23327f723f61b714b1718a7e30cc6f3c5bcee2b2103074354244a76e029d8'
+  version '2.0.1'
+  sha256 'fbe1791d7193ad9f7d235b8daf4304fa391b7543bb6591b393519211499aebfa'
 
   url "https://github.com/romannurik/MaterialColorsApp/releases/download/v#{version}/MaterialColors-#{version}.zip"
-  appcast 'https://github.com/romannurik/MaterialColorsApp/releases.atom',
-          checkpoint: '26edfa88306c1daf1a273fb6765623de114eee1a83d4978dc039af3f6059817c'
+  appcast 'https://github.com/romannurik/MaterialColorsApp/releases.atom'
   name 'Material Colors for Mac'
   homepage 'https://github.com/romannurik/MaterialColorsApp'
 

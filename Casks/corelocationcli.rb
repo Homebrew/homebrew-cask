@@ -1,10 +1,9 @@
 cask 'corelocationcli' do
-  version '3.0.1'
-  sha256 '1a8efdcd6d451f0d751805bf295e1a13c7de817adf7ff71e3ba3c053b109b809'
+  version '3.1.0'
+  sha256 '2849ad3d45ba836e49ce2d46ebe21a6d587c16bdd2c48d978bf8dc8494c9f26e'
 
   url "https://github.com/fulldecent/corelocationcli/releases/download/#{version}/CoreLocationCLI.zip"
-  appcast 'https://github.com/fulldecent/corelocationcli/releases.atom',
-          checkpoint: '50fc2119711333b356b2d30e3d3683b1f64a3d52a780a1f5f51a0366145d4328'
+  appcast 'https://github.com/fulldecent/corelocationcli/releases.atom'
   name 'Core Location CLI'
   homepage 'https://github.com/fulldecent/corelocationcli'
 

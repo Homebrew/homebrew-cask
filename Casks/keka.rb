@@ -1,17 +1,15 @@
 cask 'keka' do
-  version '1.0.15'
-  sha256 '39a0041497bc95ec0a1b9031c16fce792d38894b15d8fdddbfa304f138b7bc9d'
+  version '1.1.25'
+  sha256 'ae4f17aa044bc06810be92fcf521fa92b0c81daecc63a2df19c0ca4d836d15d7'
 
   # github.com/aonez/Keka was verified as official when first introduced to the cask
   url "https://github.com/aonez/Keka/releases/download/v#{version}/Keka-#{version}.dmg"
-  appcast 'https://github.com/aonez/Keka/releases.atom',
-          checkpoint: '2b4d4376b7350bd85eb747b563466619c756f17e3adaba0bef1be8475377a0ed'
+  appcast 'https://github.com/aonez/Keka/releases.atom'
   name 'Keka'
-  homepage 'http://www.kekaosx.com/'
+  homepage 'https://www.keka.io/'
 
   auto_updates true
   conflicts_with cask: 'keka-beta'
-  depends_on macos: '>= :lion'
 
   app 'Keka.app'
 

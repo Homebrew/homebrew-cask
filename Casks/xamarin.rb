@@ -6,6 +6,8 @@ cask 'xamarin' do
   name 'Xamarin Platform'
   homepage 'https://www.xamarin.com/platform'
 
+  conflicts_with cask: 'xamarin-studio'
+
   installer manual: 'Install Xamarin.app'
 
   uninstall delete: '/Applications/Xamarin Studio.app'

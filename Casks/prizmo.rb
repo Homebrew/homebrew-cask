@@ -1,13 +1,13 @@
 cask 'prizmo' do
-  version '3.1.18'
-  sha256 '9d4ee123c7ec34f6947d02d1c26ae3e02a67cf80ffa8aeb16b0281c7eb364f02'
+  version '4.0.2'
+  sha256 '3299e3e11e395aec59642b15c42eee9a35276906ae7e1cbe3925421e705b18cb'
 
   url "https://www.creaceed.com/downloads/prizmo#{version.major}_#{version}.zip"
-  appcast "https://www.creaceed.com/appcasts/prizmo#{version.major}.xml",
-          checkpoint: '0b45cf3d034171375d5cfbf60e1f451c7c888f35cbad2cbf63303a466e9f6b58'
+  appcast "https://www.creaceed.com/appcasts/prizmo#{version.major}.xml"
   name 'Prizmo'
   homepage 'https://creaceed.com/prizmo'
 
+  auto_updates true
   depends_on macos: '>= :yosemite'
 
   app 'Prizmo.app'

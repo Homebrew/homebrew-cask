@@ -1,12 +1,11 @@
 cask 'second-life-viewer' do
-  version '5.0.8.329115'
-  sha256 'a09688f9e682749fe35518f7813b8f5bb6a7d2ee6d21fed5b13366ba25886bce'
+  version '6.3.7.535996'
+  sha256 '848e89a6c8e3edfe0d2bfb2c23ce28067601cc3b12dca69be2fb6e3aefde81bb'
 
-  url "http://download.cloud.secondlife.com/Viewer_#{version.major}/Second_Life_#{version.dots_to_underscores}_i386.dmg"
+  url "http://download.cloud.secondlife.com/Viewer_#{version.major}/Second_Life_#{version.dots_to_underscores}_x86_64.dmg"
+  appcast 'https://secondlife.com/support/downloads/'
   name 'Linden Lab Second Life Viewer'
   homepage 'https://secondlife.com/'
-
-  depends_on macos: '>= :lion'
 
   app 'Second Life Viewer.app'
 

@@ -1,15 +1,18 @@
 cask 'quodlibet' do
-  version '4.0.2'
-  sha256 '6f9a98926e7e62cb26a34b41689616d60f709877fe20984af018843e76274060'
+  version '4.3.0'
+  sha256 '858afc8630d0df974466c7d4123ca7c46d0fa81c24ef3c25a5dc780f3334ef08'
 
   # github.com/quodlibet/quodlibet was verified as official when first introduced to the cask
   url "https://github.com/quodlibet/quodlibet/releases/download/release-#{version}/QuodLibet-#{version}.dmg"
-  appcast 'https://github.com/quodlibet/quodlibet/releases.atom',
-          checkpoint: 'dc693ef4c5916de3d359d5503dbb41daecd2c1c586931b5cfde48c80da3dd7bd'
+  appcast 'https://github.com/quodlibet/quodlibet/releases.atom'
   name 'Quod Libet'
   homepage 'https://quodlibet.readthedocs.io/'
 
   app 'QuodLibet.app'
 
-  zap trash: '~/.quodlibet'
+  zap trash: [
+               '~/Library/Preferences/io.github.quodlibet.quodlibet.plist',
+               '~/Library/Saved Application State/io.github.quodlibet.quodlibet.savedState',
+               '~/.quodlibet',
+             ]
 end

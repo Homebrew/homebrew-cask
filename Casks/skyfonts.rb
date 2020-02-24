@@ -1,10 +1,9 @@
 cask 'skyfonts' do
-  version '5.9.2.1'
-  sha256 '58eab505b64d025207d1b418ac3bbe23b68a413b81af74ad9d279964046a280d'
+  version '5.9.5.5'
+  sha256 'facb1bf918780eecf7111a9957f277a77de114e92f599c8101a68518345b63fb'
 
   url "http://cdn1.skyfonts.com/client/Monotype_SkyFonts_Mac64_#{version}.dmg"
-  appcast 'https://www.fonts.com/other/skyfonts/getskyfontsclientdownloadinfo',
-          checkpoint: '7b40834d20dbe6b093e403e15b0ebfc31f7596ca6183bdbb302400ebd0eb35cd'
+  appcast 'https://api.skyfonts.com/api/SkyFontsAppCast?osid=3'
   name 'SkyFonts'
   homepage 'https://skyfonts.com/'
 

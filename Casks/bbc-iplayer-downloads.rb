@@ -1,9 +1,10 @@
 cask 'bbc-iplayer-downloads' do
-  version '1.14.2'
-  sha256 'feb02a935380805598b211a94c28466f0e064bfc938767ddc084a37a8c4719ee'
+  version '2.11.2'
+  sha256 'ad54da310ac2937293f600f69cad9615ea7f3de19785a36e2ac04d4cb5407527'
 
-  # bbci.co.uk was verified as official when first introduced to the cask
-  url "https://a.files.bbci.co.uk/iplayer/downloads/BBC-iPlayer-Downloads-#{version}.dmg"
+  # live-downloads-app-bucket-staticassetsbucket-ydn3z4ggyaof.s3.amazonaws.com was verified as official when first introduced to the cask
+  url "https://live-downloads-app-bucket-staticassetsbucket-ydn3z4ggyaof.s3.amazonaws.com/releases/darwin-x64/BBCiPlayerDownloads-#{version}.dmg"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://downloads-app.iplayer.api.bbc.co.uk/stable/darwin-x64'
   name 'BBC iPlayer Downloads'
   homepage 'https://www.bbc.co.uk/iplayer/install'
 

@@ -4,10 +4,9 @@ cask 'race-into-space' do
 
   # downloads.sourceforge.net/raceintospace was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/raceintospace/Race_Into_Space_#{version}.dmg"
-  appcast 'https://sourceforge.net/projects/raceintospace/rss',
-          checkpoint: '8f63391eac075c539902d03a772cea425ef059eca1c759d661f235551d1d62bc'
+  appcast 'https://sourceforge.net/projects/raceintospace/rss'
   name 'Race Into Space'
-  homepage 'http://www.raceintospace.org/'
+  homepage 'https://www.raceintospace.org/'
 
   app 'Race Into Space.app'
 end

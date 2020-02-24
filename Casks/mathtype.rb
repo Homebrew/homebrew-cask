@@ -1,12 +1,13 @@
 cask 'mathtype' do
-  version '6.7'
-  sha256 'f512b322c9b1e16c0f9c523ade1dc7f5e743768a2ac4d7fa37780abfbe05a861'
+  version '7.4.4'
+  sha256 '5c035a10ac85dd86981c3c3523a75388cbf5938ad7f52be4ec401eaabdc5fb31'
 
-  url "https://www.dessci.com/en/dl/MTM#{version.no_dots}h_EN.pkg"
+  url 'https://store.wiris.com/en/products/downloads/mathtype/installer/mac/en'
+  appcast 'https://docs.wiris.com/en/mathtype/release_notes/start'
   name 'MathType'
-  homepage 'https://www.dessci.com/'
+  homepage 'http://www.wiris.com/en/mathtype'
 
-  installer manual: "MTM#{version.no_dots}h_EN.pkg"
+  installer manual: 'MathType-mac-en.pkg'
 
   uninstall pkgutil: "com.dessci.mathtype#{version.no_dots}Hf.MathType.pkg",
             delete:  "/Applications/MathType #{version.major}"

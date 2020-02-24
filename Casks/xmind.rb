@@ -1,8 +1,10 @@
 cask 'xmind' do
-  version '8-update7'
-  sha256 '0ae1b9d4f4c7c8206ddc8864e8fff019ac58bc944a857197ffd74e917c5272a4'
+  version '3.7.9.201912052356,8-update9'
+  sha256 '120745d98a6122af56f944f666c59a6c3e06099be3838c365e6554e82db19211'
 
-  url "https://www.xmind.net/xmind/downloads/xmind-#{version}-macosx.dmg"
+  url "https://dl3.xmind.net/xmind-#{version.after_comma}-macosx.dmg"
+  appcast 'https://www.xmind.net/download/xmind8/',
+          configuration: version.after_comma
   name 'XMind'
   homepage 'https://www.xmind.net/'
 

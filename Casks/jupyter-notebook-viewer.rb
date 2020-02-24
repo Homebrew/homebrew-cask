@@ -1,12 +1,13 @@
 cask 'jupyter-notebook-viewer' do
-  version '0.1.1'
-  sha256 '4157b2d79185027d9c67c3c4d6e1b0cd4da8d3c0587bda296125d945f278a863'
+  version '0.1.3'
+  sha256 '4748a12553ff8b3ad9fb6d27560d7045cbfadb7d35b212b432c00e64b002b966'
 
   url "https://github.com/tuxu/nbviewer-app/releases/download/#{version}/nbviewer-app.zip"
-  appcast 'https://github.com/tuxu/nbviewer-app/releases.atom',
-          checkpoint: '91dd5229cdb8130c9c101554af84b040555fc8600d774b2729b363ed76e5a7c3'
+  appcast 'https://github.com/tuxu/nbviewer-app/releases.atom'
   name 'Jupyter Notebook Viewer'
   homepage 'https://github.com/tuxu/nbviewer-app'
+
+  depends_on macos: '>= :sierra'
 
   app 'Jupyter Notebook Viewer.app'
 end

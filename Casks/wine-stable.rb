@@ -1,13 +1,17 @@
 cask 'wine-stable' do
-  version '3.0'
-  sha256 'ede25ec1c3d79546bc9a7c43c680df9b03922d70690b9432e44e129ea31f7eaa'
+  version '5.0'
+  sha256 'de2b23342edfa29a1518d8940992e855d30b3416084964311f184c9fdfb146a5'
 
   url "https://dl.winehq.org/wine-builds/macosx/pool/winehq-stable-#{version}.pkg"
-  appcast 'https://dl.winehq.org/wine-builds/macosx/download.html',
-          checkpoint: '1bbcf6a2c1866b5ef50d6be69c1a18a48a49f1d6820cee0104ebc69f59384da6'
+  appcast 'https://dl.winehq.org/wine-builds/macosx/download.html'
   name 'WineHQ-stable'
   homepage 'https://wiki.winehq.org/MacOS'
 
+  conflicts_with formula: 'wine',
+                 cask:    [
+                            'wine-devel',
+                            'wine-staging',
+                          ]
   depends_on x11: true
 
   pkg "winehq-stable-#{version}.pkg",
@@ -18,6 +22,22 @@ cask 'wine-stable' do
                    'attributeSetting' => 1,
                  },
                ]
+  binary "#{appdir}/Wine Stable.app/Contents/Resources/start/bin/appdb"
+  binary "#{appdir}/Wine Stable.app/Contents/Resources/start/bin/winehelp"
+  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/msiexec"
+  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/notepad"
+  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/regedit"
+  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/regsvr32"
+  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/wine"
+  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/wine64"
+  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/wineboot"
+  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/winecfg"
+  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/wineconsole"
+  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/winedbg"
+  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/winefile"
+  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/winemine"
+  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/winepath"
+  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/wineserver"
 
   uninstall pkgutil: [
                        'org.winehq.wine-stable',

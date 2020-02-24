@@ -1,15 +1,23 @@
 cask 'zulip' do
-  version '1.7.0'
-  sha256 'a4aac2e02893d4cb9b635bfc3fcb561abdfd4c1d5f014aa3d18d633446321937'
+  version '4.0.0'
+  sha256 '3028a7d4820fa42b94eb43717715e2d8c677dac1111bf604bd868bf062081117'
 
-  # github.com/zulip/zulip-electron was verified as official when first introduced to the cask
-  url "https://github.com/zulip/zulip-electron/releases/download/v#{version}/Zulip-#{version}-mac.zip"
-  appcast 'https://github.com/zulip/zulip-electron/releases.atom',
-          checkpoint: 'dfa95171dc99ff77b5e7adebc77e3b64c4831ee3986bd1f901a25b54f052b491'
+  # github.com/zulip/zulip-desktop was verified as official when first introduced to the cask
+  url "https://github.com/zulip/zulip-desktop/releases/download/v#{version}/Zulip-#{version}.dmg"
+  appcast 'https://github.com/zulip/zulip-desktop/releases.atom'
   name 'Zulip'
-  homepage 'https://zulipchat.com/'
+  homepage 'https://zulipchat.com/apps/'
 
   auto_updates true
 
   app 'Zulip.app'
+
+  zap trash: [
+               '~/Library/Application Support/Zulip',
+               '~/Library/Caches/org.zulip.zulip-electron.helper',
+               '~/Library/Logs/Zulip',
+               '~/Library/Preferences/org.zulip.zulip-electron.helper.plist',
+               '~/Library/Preferences/org.zulip.zulip-electron.plist',
+               '~/Library/Saved Application State/org.zulip.zulip-electron.savedState',
+             ]
 end
