@@ -9,4 +9,11 @@ cask 'session' do
   homepage 'https://getsession.org/'
 
   app 'Session.app'
+
+  zap trash: [
+               '~/Library/Application Support/Session',
+               '~/Library/Caches/Session',
+               '~/Library/Preferences/com.loki-project.messenger-desktop.plist',
+               '~/Library/Saved Application State/com.loki-project.messenger-desktop.savedState',
+             ]
 end
