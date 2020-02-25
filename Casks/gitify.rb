@@ -1,8 +1,8 @@
 cask 'gitify' do
-  version 'v3.0.0'
-  sha256 '119525631abd5468f8b0494d6bba0288b7d543af1f0f042a9eabf001ef8736f0'
+  version '3.0.1'
+  sha256 '7c4aec3e4812692922c05a3b2aa5a98eff4d25f4953b7a5f7813fceca81af597'
 
-  url "https://github.com/manosim/gitify/releases/download/#{version}/gitify-osx.zip"
+  url "https://github.com/manosim/gitify/releases/download/v#{version}/Gitify-#{version}-mac.zip"
   appcast 'https://github.com/manosim/gitify/releases.atom'
   name 'Gitify'
   homepage 'https://github.com/manosim/gitify'
