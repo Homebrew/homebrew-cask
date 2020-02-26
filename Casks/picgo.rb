@@ -8,4 +8,9 @@ cask 'picgo' do
   homepage 'https://github.com/Molunerfinn/PicGo'
 
   app 'PicGo.app'
+  
+  zap trash: [
+               '~/Library/Application Support/picgo',
+               '~/Library/Preferences/com.molunerfinn.picgo.plist',
+             ]
 end
