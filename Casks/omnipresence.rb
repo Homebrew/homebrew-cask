@@ -5,8 +5,11 @@ cask 'omnipresence' do
   elsif MacOS.version == :yosemite
     version '1.4.1,10.10'
     sha256 '409bf272e7c4dc488f68abadb3e2ef15d4accde10f8ee9babd8b23f522bfe323'
-  else
+  elsif MacOS.version == :high_sierra
     version '1.6,10.13'
+    sha256 '48bcc9f4a3b49f120651cb6d8fd3f1744bf91c4c63e7d30c5d1762eaacc3cd0b'
+  else
+    version '1.7,10.14'
     sha256 '48bcc9f4a3b49f120651cb6d8fd3f1744bf91c4c63e7d30c5d1762eaacc3cd0b'
   end
 
