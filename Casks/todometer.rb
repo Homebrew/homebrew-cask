@@ -8,5 +8,5 @@ cask 'todometer' do
   name 'todometer'
   homepage 'https://cassidoo.github.io/todometer/'
 
-  app 'todometer.app'
+  app 'mac/todometer.app'
 end
