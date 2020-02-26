@@ -10,7 +10,7 @@ cask 'omnipresence' do
     sha256 '48bcc9f4a3b49f120651cb6d8fd3f1744bf91c4c63e7d30c5d1762eaacc3cd0b'
   else
     version '1.7,10.14'
-    sha256 '48bcc9f4a3b49f120651cb6d8fd3f1744bf91c4c63e7d30c5d1762eaacc3cd0b'
+    sha256 '814c7178c3a674f6f65ddcf5815df1269c6519909fcac86ace2dba80b5cfc4f1'
   end
 
   url "https://downloads.omnigroup.com/software/MacOSX/#{version.after_comma}/OmniPresence-#{version.before_comma}.dmg"
