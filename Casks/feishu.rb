@@ -8,6 +8,7 @@ cask 'feishu' do
   name 'feishu'
   homepage 'https://www.feishu.cn/'
 
+  auto_updates true
   depends_on macos: '>= :mavericks'
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
