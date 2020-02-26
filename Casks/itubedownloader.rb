@@ -4,7 +4,7 @@ cask 'itubedownloader' do
 
   # itubedownloader.s3.us-east-2.amazonaws.com was verified as official when first introduced to the cask
   url 'https://itubedownloader.s3.us-east-2.amazonaws.com/iTubeDownloader.dmg'
-  appcast 'https://updates.devmate.com/com.AlphaSoft.iTubeDownloader.xml'
+  appcast 'https://itubedownloader.s3.us-east-2.amazonaws.com/appcast.xml'
   name 'iTubeDownloader'
   homepage 'https://alphasoftware.co/'
 
