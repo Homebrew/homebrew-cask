@@ -7,5 +7,8 @@ cask 'prosys-opc-ua-browser' do
   name 'Prosys OPC UA Browser'
   homepage 'https://www.prosysopc.com/products/opc-ua-client/'
 
-  installer manual: 'Prosys OPC UA Browser Installer.app'
+  installer script: {
+                      executable: 'Prosys OPC UA Browser Installer.app/Contents/MacOS/JavaApplicationStub',
+                      args:       ['-q'],
+                    }
 end
