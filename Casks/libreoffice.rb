@@ -1,10 +1,10 @@
 cask 'libreoffice' do
-  version '6.4.0'
-  sha256 '32e7af23282b6241f580d41f22114daa82a4adf96b817c87f68605743ea423cd'
+  version '6.4.1'
+  sha256 'f1c9ed7df518430bfc803e26854c7e788c2f46996e7fdc345cf1a19dca191ac8'
 
   # documentfoundation.org was verified as official when first introduced to the cask
   url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/LibreOffice_#{version}_MacOS_x86-64.dmg"
-  appcast "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/"
+  appcast 'https://download.documentfoundation.org/libreoffice/stable/'
   name 'LibreOffice'
   homepage 'https://www.libreoffice.org/'
 
