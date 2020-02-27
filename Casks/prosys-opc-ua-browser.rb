@@ -11,4 +11,6 @@ cask 'prosys-opc-ua-browser' do
                       executable: 'Prosys OPC UA Browser Installer.app/Contents/MacOS/JavaApplicationStub',
                       args:       ['-q'],
                     }
+
+  uninstall delete: '/Applications/Prosys OPC UA Browser.app'
 end
