@@ -2,7 +2,7 @@ cask 'touch-bar-simulator' do
   if MacOS.version <= :high_sierra
     version '1.2.0'
     sha256 '4abe55de716ae56a41031cdb1d3b27bf6b1efae18b33b80bb0419669a9a76aa1'
- 
+
     url "https://github.com/sindresorhus/touch-bar-simulator/releases/download/v#{version}/Touch-Bar-Simulator-#{version}.dmg"
   elsif MacOS.version <= :mojave
     version '3.2.0'
