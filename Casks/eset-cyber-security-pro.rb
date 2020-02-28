@@ -33,4 +33,4 @@ cask 'eset-cyber-security-pro' do
                '/Library/Application Support/ESET',
                '~/.esets',
              ]
-  end
+end
