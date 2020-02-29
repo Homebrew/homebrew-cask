@@ -1,6 +1,6 @@
 cask 'delicious-library' do
-  version '3.8.3'
-  sha256 '67e895f25b1c29515a860c08070cbb073c76cd3beb32cb3cd115b8e52d88f61e'
+  version '3.9'
+  sha256 '6b13093e40164d376f5b29f196406014b06761b4d4d2b5cc2dffc5bc2e48fc27'
 
   url "https://delicious-monster.com/downloads/DeliciousLibrary#{version.major}/v#{version}/DeliciousLibrary#{version.major}.zip"
   appcast "https://www.delicious-monster.com/downloads/DeliciousLibrary#{version.major}.xml"
