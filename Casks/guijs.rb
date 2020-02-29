@@ -10,7 +10,5 @@ cask 'guijs' do
 
   app 'guijs.app'
 
-  zap trash: [
-               '~/Library/Caches/guijs',
-             ]
+  zap trash: '~/Library/Caches/guijs'
 end
