@@ -28,8 +28,8 @@ cask 'eset-cyber-security-pro' do
             delete:    '/Applications/ESET Cyber Security Pro.app'
 
   zap trash: [
-               '~/Library/Caches/com.eset.ecsp.6',
-               '~/Library/Preferences/com.eset.ecsp.6.plist',
+               '~/Library/Caches/com.eset.ecsp.*',
+               '~/Library/Preferences/com.eset.ecsp.*.plist',
                '/Library/Application Support/ESET',
                '~/.esets',
              ]
