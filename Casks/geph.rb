@@ -1,6 +1,6 @@
 cask 'geph' do
-  version '3.2.5'
-  sha256 '2e082b40b721649fb9c52bb51e3a2f9547333cf74c0e246cb6f6f2528f3ec865'
+  version '3.4.5'
+  sha256 '0a7ccbd8253d980c4e976164104c0bb20e6ea9fb45742cce735351ac3edd1123'
 
   url "https://dl.geph.io/desktop-builds/geph-macos-#{version}.dmg"
   appcast 'https://geph.io/'

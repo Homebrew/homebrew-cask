@@ -1,6 +1,6 @@
 cask 'blackhole' do
-  version '0.2.5'
-  sha256 '911142980edebab6b05310c86ca4f7b4119a9dc09e1d0bdcee462ee03a82e9e8'
+  version '0.2.6'
+  sha256 '790762df8caf3e1cf017d04358ef74650428b2befb886e180263659ddc553596'
 
   url "https://github.com/ExistentialAudio/BlackHole/releases/download/v#{version}/BlackHole.v#{version}.pkg"
   appcast 'https://github.com/ExistentialAudio/BlackHole/releases.atom'

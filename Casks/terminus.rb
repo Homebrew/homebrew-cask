@@ -1,6 +1,6 @@
 cask 'terminus' do
-  version '1.0.101'
-  sha256 '2d2890a64a52415cf1f1988aad30ae8d2d4db3cf94335beb02799a96e1c84c90'
+  version '1.0.103'
+  sha256 '36a2618bec0ac901f639a6cbd506c28461be0f65644aa3794aaf49f5438bd67f'
 
   # github.com/Eugeny/terminus was verified as official when first introduced to the cask
   url "https://github.com/Eugeny/terminus/releases/download/v#{version}/terminus-#{version}-macos.zip"

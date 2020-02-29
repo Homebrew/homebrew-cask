@@ -1,6 +1,6 @@
 cask 'dingtalk' do
-  version '4.7.27.6'
-  sha256 'e203bc4a0dfc2b5dd69c1a706a719b8c49cdf20aa9d986951956708cede9b81f'
+  version '5.0.0.11'
+  sha256 'e4e1a98c5e2d58a6ffaa378f14e55dd07b42d9d0e8f9197e6967eaf1e606ab27'
 
   url "https://dtapp-pub.dingtalk.com/dingtalk-desktop/mac_dmg/Release/DingTalk_v#{version}.dmg"
   appcast 'https://im.dingtalk.com/manifest/appcast_en.xml'

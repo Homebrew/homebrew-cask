@@ -1,6 +1,6 @@
 cask 'icab' do
-  version '5.8.6'
-  sha256 '8ef3f51a54a129b9edf193f8f5d251888981b41bd829d3d457ef6b7930c4a125'
+  version '5.9.1'
+  sha256 '4281500b5f38848c3e376f1acf7dca48e4d13cf61f446dcef289acfa97809e36'
 
   # icab.clauss-net.de was verified as official when first introduced to the cask
   url "https://icab.clauss-net.de/icab/iCab_#{version}_Intel.zip"
@@ -8,5 +8,5 @@ cask 'icab' do
   name 'iCab'
   homepage 'http://www.icab.de/'
 
-  app "iCab #{version} (64+32 Bit Intel Version for macOS 10.7-10.14)/iCab.app"
+  app "iCab #{version} (64 Bit Intel for macOS 10.9-10.15)/iCab.app"
 end
