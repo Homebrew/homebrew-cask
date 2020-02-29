@@ -1,6 +1,6 @@
 cask 'clickup' do
-  version '2.0.3'
-  sha256 '78a2c4c1666c038c9a9db91c85f287bdc5fc806a20ce3d7c1c39c585cc93409c'
+  version '2.0.8'
+  sha256 '79bda23295db0e9c66fc7a72dc3a1226a8620384feaeacba6539bb4ed7eb092e'
 
   url "https://attachments.clickup.com/desktop/clickup-desktop-#{version}-mac.dmg"
   name 'ClickUp'

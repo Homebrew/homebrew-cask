@@ -1,10 +1,10 @@
 cask 'mate-translate' do
-  version '6.1.1,1570627713'
-  sha256 '05c2446f4bdd2d9363a4846ac019168dfa7ce476ca93edd08fc54a7d44d5d203'
+  version '6.2.0'
+  sha256 'af3e6543d3206e91e5ed16eac9d6cad49d02f4a1517f5eb56cbd3ab8a9992e94'
 
-  # dl.devmate.com/com.twopeoplesoftware.InstantTranslate-nomas was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.twopeoplesoftware.InstantTranslate-nomas/#{version.before_comma}/#{version.after_comma}/InstantTranslate-#{version.before_comma}.zip"
-  appcast 'https://updates.devmate.com/com.twopeoplesoftware.InstantTranslate-nomas.xml'
+  # gikken.co/mate was verified as official when first introduced to the cask
+  url 'https://gikken.co/mate/MateTranslate.zip'
+  appcast 'https://gikken.co/mate/appcast.xml'
   name 'Mate Translate'
   homepage 'https://twopeoplesoftware.com/mate'
 

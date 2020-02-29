@@ -1,6 +1,6 @@
 cask 'waltr' do
-  version '2.6.23,1573473986'
-  sha256 'c7ce795649acb1faff75ed833b3b96b1519b0a82a1e1f8cab23a0e6fc7913495'
+  version '2.6.25,1576244501'
+  sha256 'dbed00a038e72dba3a0612498cc1650b031d61039d81ba04c4474307ae791150'
 
   # dl.devmate.com/com.softorino.waltr2 was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.softorino.waltr2/#{version.before_comma}/#{version.after_comma}/Waltr#{version.major}-#{version.before_comma}.zip"

@@ -22,7 +22,7 @@ cask-repair --help
 cask-repair <outdated_cask>
 ```
 
-If there is a more complicated change, or there is a case where `cask-repair` fails (for example, where a Cask uses a [`url do` block](https://github.com/Homebrew/homebrew-cask/blob/60531a2812005dd5f17dc92f3ce7419af3c5d019/Casks/audacity.rb#L5#L15) or the [`language` stanza](https://github.com/Homebrew/homebrew-cask/blob/306b8fbd9502036f1ca742f70c569d8677b62403/Casks/firefox.rb#L4L74)), you can also follow the steps in [Adding a Cask](doc/development/adding_a_cask.md) to do the same thing manually. Remember to update the `version` and `shasum` values.
+If there is a more complicated change, or there is a case where `cask-repair` fails (for example, where a Cask uses a [`url do` block](https://github.com/Homebrew/homebrew-cask-versions/blob/2bf0f13dd49d263ebec0ca56e58ad8458633f789/Casks/vlc-nightly.rb#L5L10) or the [`language` stanza](https://github.com/Homebrew/homebrew-cask/blob/306b8fbd9502036f1ca742f70c569d8677b62403/Casks/firefox.rb#L4L74)), you can also follow the steps in [Adding a Cask](doc/development/adding_a_cask.md) to do the same thing manually. Remember to update the `version` and `sha256` values.
 
 
 ## Getting Set Up To Contribute

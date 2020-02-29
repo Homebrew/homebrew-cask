@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+require 'open-uri'
+require 'json'
+require 'tmpdir'
+
+pr_url = ARGV[0]
+
+abort 'You need to give the script exactly one argument, the URL to a pull request from an official Homebrew Cask tap' if pr_url.nil?
+abort 'URL is not from an official Homebrew Cask tap' if pr_url !~ %r{^https://github.com/Homebrew/homebrew-cask.*}
+
+pr_api = pr_url.sub(%r{^https://github.com/([^/]+)/([^/]+)/pull/([^/]+).*}, 'https://api.github.com/repos/\1/\2/pulls/\3/files')
+pr_json = JSON.parse(URI(pr_api).read)
+
+abort 'PR needs to have a single file' if pr_json.count != 1
+
+file_raw_url = pr_json[0]['raw_url']
+file_name = File.basename(file_raw_url)
+local_file = File.join(Dir.mktmpdir, file_name)
+
+File.write(local_file, URI(file_raw_url).read)
+system('brew', 'cask', 'audit', '--download', local_file)
+system('brew', 'cask', 'style', local_file)

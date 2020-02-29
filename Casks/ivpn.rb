@@ -1,11 +1,13 @@
 cask 'ivpn' do
-  version '2.10.3'
-  sha256 '75a977be9ac90fe3691c2d4c5da2a5fafcbd1355f8a2ce3662d5217a64c7c5e7'
+  version '2.11.3'
+  sha256 '3added978a896a82851abeacbbe47198e95f048c3ea8a206e9c9c6fe9573974e'
 
   url "https://cdn.ivpn.net/releases/osx/IVPN-#{version}.dmg"
-  appcast 'https://www.ivpn.net/updates/mac/sparkle/ivpn_mac_appcast.xml'
+  appcast 'https://www.ivpn.net/setup/mac-changelog.html'
   name 'IVPN'
   homepage 'https://www.ivpn.net/apps-macos'
+
+  auto_updates true
 
   app 'IVPN.app'
 

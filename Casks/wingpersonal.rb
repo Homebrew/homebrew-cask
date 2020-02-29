@@ -1,6 +1,6 @@
 cask 'wingpersonal' do
-  version '7.1.3.0'
-  sha256 '85fc13b3317f4da76a93937410c4cb65a514af679a530ee451dd5640d3321fd3'
+  version '7.2.1.0'
+  sha256 'b2274f4bab7d414d5b1158515ba27c9e9a80f853d6bd275c6c8587d0fb07d73d'
 
   url "https://wingware.com/pub/wing-personal/#{version}/wing-personal-#{version}.dmg"
   appcast 'https://www.wingware.com/downloads/wing-personal'

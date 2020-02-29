@@ -1,6 +1,6 @@
 cask 'trinity' do
-  version '1.1.0'
-  sha256 '281067c1f162c8b1665332367acd401d8825d54f0c7029b4f13ab4a733b45dcf'
+  version '1.4.3'
+  sha256 '7a9aeac6051fe9b81fec8768e8ffcefc59a0beb6bb9439b14467b94f8152c8d7'
 
   # github.com/iotaledger/trinity-wallet was verified as official when first introduced to the cask
   url "https://github.com/iotaledger/trinity-wallet/releases/download/desktop-#{version}/trinity-desktop-#{version}.dmg"

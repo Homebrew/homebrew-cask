@@ -1,8 +1,9 @@
 cask 'rescuetime' do
-  version :latest
-  sha256 :no_check
+  version '2.14.5.1'
+  sha256 '68a6335156f2c17376a82c1b8204df00fa5b1ccd92d77c301bc422d41835bc5d'
 
   url 'https://www.rescuetime.com/installers/RescueTimeInstaller.pkg'
+  appcast 'https://www.rescuetime.com/installers/appcast'
   name 'RescueTime'
   homepage 'https://www.rescuetime.com/'
 

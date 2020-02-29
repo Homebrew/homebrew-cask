@@ -1,6 +1,6 @@
 cask 'anki' do
-  version '2.1.15'
-  sha256 '0e4a38930984aee1ff8f6bdf7c81b2a08c78d159592fd304a1e173270de19a50'
+  version '2.1.20'
+  sha256 '37d37199d942fd7cf5ae681097ac33835e991f5a1557908e4cba26482aab8852'
 
   url "https://apps.ankiweb.net/downloads/current/anki-#{version}-mac.dmg"
   appcast 'https://apps.ankiweb.net/docs/changes.html'

@@ -1,6 +1,6 @@
 cask 'unetbootin' do
-  version '675'
-  sha256 '31fd1789a2f351ea66aa4be68f440904e7ae3ceee531256537b20ed9c5606947'
+  version '677'
+  sha256 '2f232c59e0a1d627206df3618e0b71ff0227b7ec985c679f1cc5e6bd4ea1cd5b'
 
   # github.com/unetbootin/unetbootin was verified as official when first introduced to the cask
   url "https://github.com/unetbootin/unetbootin/releases/download/#{version}/unetbootin-mac-#{version}.dmg"

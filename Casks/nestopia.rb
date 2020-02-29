@@ -1,9 +1,10 @@
 cask 'nestopia' do
-  version '1.4.2'
-  sha256 '59792eaac94350c497c472805c07ed1e1f422a94b4cf2746801b8af71c9ef18f'
+  version '1.4.3'
+  sha256 '3d0e0faa6cbb115f4a5e50aca196d240aae730be1daffec090a52dfac4290965'
 
   url 'https://www.bannister.org/cgi-bin/download.cgi?nestopia'
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.bannister.org/cgi-bin/download.cgi%3Fnestopia'
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.bannister.org/cgi-bin/download.cgi%3Fnestopia',
+          configuration: version.no_dots
   name 'Nestopia'
   homepage 'https://www.bannister.org/software/nestopia.htm'
 

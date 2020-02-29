@@ -1,6 +1,6 @@
 cask 'uniconverter' do
-  version '11.5.1.14'
-  sha256 '2aad0ff4d60f377cd3d6065afd684ca1148f16c2b81fbb9e5f6ce82c769d259a'
+  version '11.6.4.6'
+  sha256 '509276b3186a6cc5cc669933c67086fdc27803ea10cd8f5f8fdfedd57f6e38ad'
 
   url 'http://download.wondershare.com/cbs_down/video-converter-ultimate-mac_full735.dmg'
   name 'UniConverter'

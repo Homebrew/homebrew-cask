@@ -1,10 +1,10 @@
 cask 'hook' do
-  version '2892,1573247948'
-  sha256 '38ae0af0c08e26f8925060a97b442a7e84b44d050282745587c59162c74f8ff3'
+  version '1.4,13'
+  sha256 '60b25c4c5c160ce1360c55700d5aaf6357fc76a931aeae86a8e2e2c0cfdd9564'
 
-  # dl.devmate.com/com.cogsciapps.hook was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.cogsciapps.hook/#{version.before_comma}/#{version.after_comma}/Hook-#{version.before_comma}.dmg"
-  appcast 'https://updates.devmate.com/com.cogsciapps.hook.xml'
+  # rink.hockeyapp.net/api/2/apps/a77a1a877d69435d90ea7365b2f7bddb was verified as official when first introduced to the cask
+  url "https://rink.hockeyapp.net/api/2/apps/a77a1a877d69435d90ea7365b2f7bddb/app_versions/#{version.after_comma}?format=zip"
+  appcast 'https://api.appcenter.ms/v0.1/public/sparkle/apps/a77a1a87-7d69-435d-90ea-7365b2f7bddb'
   name 'Hook'
   homepage 'https://hookproductivity.com/'
 

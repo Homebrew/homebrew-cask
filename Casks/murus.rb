@@ -1,8 +1,10 @@
 cask 'murus' do
-  version '1.4.22'
-  sha256 '39d38d136c2badf07fdca6aadcadda291c97d471d63fa0d96f8e1a379bce61f8'
+  version '2.0.1'
+  sha256 'f9f8174fc928009f0990e38ce650e95582004f729b5c018c098382cde92b3408'
 
-  url "https://www.murusfirewall.com/downloads/murus-#{version}.zip"
+  # github.com/TheMurusTeam/Murus was verified as official when first introduced to the cask
+  url "https://github.com/TheMurusTeam/Murus/releases/download/v#{version}/murus-#{version}.zip"
+  appcast 'https://github.com/TheMurusTeam/Murus/releases.atom'
   name 'Murus Firewall'
   homepage 'https://www.murusfirewall.com/'
 

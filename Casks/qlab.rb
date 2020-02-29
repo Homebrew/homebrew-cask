@@ -1,6 +1,6 @@
 cask 'qlab' do
-  version '4.5.4'
-  sha256 'c4f6cfd1b4b5c787e8cb8b992ffe5a4c68e0fd8006bc1e31aac48f50ec2f66be'
+  version '4.6.2'
+  sha256 '21feecc79f6f19d3c8ecc8f700d89f8c6b260848c1daa8219eba58fbcec34c62'
 
   url "https://figure53.com/qlab/downloads/QLab-#{version}.zip"
   appcast "https://figure53.com/qlab/downloads/appcast-v#{version.major}/"

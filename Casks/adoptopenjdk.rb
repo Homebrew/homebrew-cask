@@ -1,6 +1,6 @@
 cask 'adoptopenjdk' do
-  version '13.0.1,9'
-  sha256 '9c82de98ce9bc2353bcf314d85366c9a2c572db034e10a71aa47e804e13748c1'
+  version '13.0.2,8'
+  sha256 '0ddb24efdf5aab541898d19b7667b149a1a64a8bd039b708fc58ee0284fa7e07'
 
   # github.com/AdoptOpenJDK was verified as official when first introduced to the cask
   url "https://github.com/AdoptOpenJDK/openjdk#{version.major}-binaries/releases/download/jdk-#{version.before_comma}%2B#{version.after_comma}/OpenJDK#{version.major}U-jdk_x64_mac_hotspot_#{version.before_comma}_#{version.after_comma}.tar.gz"

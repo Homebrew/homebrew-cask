@@ -1,6 +1,6 @@
 cask 'kotlin-native' do
-  version '1.3.50'
-  sha256 '100920f1a3352846bc5a2990c87cb71f221abf8261251632ad10c6459d962393'
+  version '1.3.61'
+  sha256 'e026f5286e2f8853c49ebac1c57b2e76f5fab67a431013442ada84347bf24415'
 
   # github.com/JetBrains/kotlin was verified as official when first introduced to the cask
   url "https://github.com/JetBrains/kotlin/releases/download/v#{version}/kotlin-native-macos-#{version}.tar.gz"

@@ -1,8 +1,8 @@
 cask 'deepl' do
-  version '1.3.0'
-  sha256 'b96de40392fa89c4e5445c7bb891eb54f10ebafd7a7a0d746f896bc03034f906'
+  version '1.6.0'
+  sha256 '2982015c3bde03e909a79b14fdd910e0b4281f626bd851e1ab6182e7a9e90e13'
 
-  url "https://www.deepl.com/macos/download/LpsA0EG5frbfX8p5/DeepL#{version.no_dots}.zip"
+  url "https://www.deepl.com/macos/download/LpsA0EG5frbfX8p5/DeepL#{version}.zip"
   name 'DeepL'
   homepage 'https://www.deepl.com/'
 

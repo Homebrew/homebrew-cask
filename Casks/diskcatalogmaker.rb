@@ -1,6 +1,6 @@
 cask 'diskcatalogmaker' do
-  version '7.5.9'
-  sha256 '9fc1f46e47e37cffbe3ec292a8db90c353cf8e4a6592c978caa21acd1decdfd5'
+  version '8.0.1'
+  sha256 '6e99919f3a43b51251c899219e11e2a760ffd60c48fc72ebfdb20045154c9191'
 
   url 'https://download.diskcatalogmaker.com/zip/DiskCatalogMaker.zip'
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://download.diskcatalogmaker.com/zip/DiskCatalogMaker.zip',

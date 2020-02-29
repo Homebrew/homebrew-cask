@@ -1,8 +1,9 @@
 cask 'espresso' do
-  version '5.2.2'
-  sha256 '6df0b4fa71269ed2ac8ba5d0698e1f516a9cc40fa002f98a4ae48731235755c3'
+  version '5.3'
+  sha256 '608520ea3aa87aea287f2b3c25f792704f2663ded5474ac7e4a168a26ed168b0'
 
-  url "https://espressoapp.com/updates/archives/Espresso-#{version}.zip"
+  # downloads.kangacode.com was verified as official when first introduced to the cask
+  url "https://downloads.kangacode.com/Espresso/Espresso_#{version}.zip"
   appcast 'https://espressoapp.com/updates/'
   name 'Espresso'
   homepage 'https://espressoapp.com/'

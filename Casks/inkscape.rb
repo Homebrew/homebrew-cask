@@ -11,10 +11,10 @@ cask 'inkscape' do
 
     zap trash: '~/.inkscape-etc'
   else
-    version '1.0beta1'
-    sha256 '68831989b3919e3137d5acfb130a844933706748addc8b4cd7f957348c1c60a3'
+    version '1.0beta2'
+    sha256 '0ca755bad5b21e4cfdc6f0c442a09a5f374cfd806648e043d5965017bf427e01'
 
-    url "https://media.inkscape.org/dl/resources/file/Inkscape-#{version}_OEMhoXK.dmg"
+    url "https://media.inkscape.org/dl/resources/file/Inkscape-#{version}.dmg"
 
     # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
     shimscript = "#{staged_path}/inkscape.wrapper.sh"

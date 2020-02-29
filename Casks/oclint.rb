@@ -13,5 +13,5 @@ cask 'oclint' do
   binary "oclint-#{version.before_comma}/bin/oclint-xcodebuild"
   binary "oclint-#{version.before_comma}/lib/oclint", target: "#{HOMEBREW_PREFIX}/lib/oclint"
   binary "oclint-#{version.before_comma}/lib/clang", target: "#{HOMEBREW_PREFIX}/lib/clang"
-  binary "oclint-#{version.before_comma}/include/c++", target: "#{HOMEBREW_PREFIX}/include/c++"
+  binary "oclint-#{version.before_comma}/include/c++/v1", target: "#{HOMEBREW_PREFIX}/include/c++/v1"
 end

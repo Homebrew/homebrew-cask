@@ -1,13 +1,14 @@
 cask 'xctu' do
-  version :latest
-  sha256 :no_check
+  version '40003027_Y'
+  sha256 '62e54d4f2760018b1b6b210e34cab26f0986ab117fa25738fedc9f98efffe6a0'
 
-  url 'https://ftp1.digi.com/support/utilities/40003027_W.zip'
+  url "https://ftp1.digi.com/support/utilities/#{version}.zip"
+  appcast 'https://www.digi.com/support/includes/utilities.aspx?pid=3352'
   name 'XCTU'
   homepage 'https://www.digi.com/products/embedded-systems/digi-xbee-tools/xctu'
 
   installer script: {
-                      executable: "#{staged_path}/xctu_installer.app/Contents/MacOS/osx-intel",
+                      executable: "#{staged_path}/xctu_installer.app/Contents/MacOS/installbuilder.sh",
                       args:       ['--mode', 'unattended'],
                     }
 

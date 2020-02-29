@@ -1,8 +1,9 @@
 cask 'kaleidoscope' do
-  version '2.2.2-1376'
-  sha256 '318ce7f2a32cb3330ada05f8099492e1ca5fe41d7b73ecbfd977845ebb5bc016'
+  version '2.3,1438-feb-21-2020'
+  sha256 '347d7fb5e36e0c50ffac56d99b3853b61cf2cf7ed82eb3f55768a2554f90d9a2'
 
-  url "https://cdn.kaleidoscopeapp.com/releases/Kaleidoscope-#{version}.zip"
+  # appcasts.hypergiant.com/ks/prod was verified as official when first introduced to the cask
+  url "https://appcasts.hypergiant.com/ks/prod/Kaleidoscope-#{version.before_comma}-build-#{version.after_comma}.zip"
   appcast 'https://updates.blackpixel.com/updates?app=ks'
   name 'Kaleidoscope'
   homepage 'https://www.kaleidoscopeapp.com/'
@@ -14,10 +15,9 @@ cask 'kaleidoscope' do
   binary "#{appdir}/Kaleidoscope.app/Contents/Resources/bin/ksdiff"
 
   zap trash: [
-               '~/Library/Application Support/Kaleidoscope',
+               '~/Library/Application Support/com.blackpixel.kaleidoscope',
                '~/Library/Caches/com.blackpixel.kaleidoscope',
                '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.blackpixel.kaleidoscope',
-               '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.blackpixel.kaleidoscope/queued_reports',
                '~/Library/Preferences/com.blackpixel.kaleidoscope.plist',
                '~/Library/Saved Application State/com.blackpixel.kaleidoscope.savedState',
              ]

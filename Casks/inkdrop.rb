@@ -1,6 +1,6 @@
 cask 'inkdrop' do
-  version '4.4.0'
-  sha256 'd6184f2dafc8710ff4cde660b73b1dfd4a9086da7ef9ebb330688342765e9acc'
+  version '4.5.2'
+  sha256 'bec5d942b07cb841e848d44689f661dc9888de763320d8f483c1468775423157'
 
   # d3ip0rje8grhnl.cloudfront.net was verified as official when first introduced to the cask
   url "https://d3ip0rje8grhnl.cloudfront.net/v#{version}/Inkdrop-#{version}-Mac.zip"

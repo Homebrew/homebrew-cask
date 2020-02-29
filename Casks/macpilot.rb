@@ -1,6 +1,6 @@
 cask 'macpilot' do
-  version '11.0.4'
-  sha256 '2db7806f18c7634d192e939b6520af09c75f9cd295bd4d03533f44bffcb9a239'
+  version '11.0.9'
+  sha256 '448ba08b0a06debd1e252c6ce3434b224379e5dd1ebd6d9c18bd68818a3bf259'
 
   url 'http://mirror.koingosw.com/products/macpilot/download/macpilot.dmg'
   appcast 'https://www.koingosw.com/postback/versioncheck.php?appname=macpilot&type=sparkle'

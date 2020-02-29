@@ -15,10 +15,14 @@ cask 'omnifocus' do
     version '2.12.4'
     sha256 '8a2dc53331dba804f6781773fef546a03c181fc4ff0eb7ee4f871c10342621f0'
     url "https://downloads.omnigroup.com/software/MacOSX/10.12/OmniFocus-#{version}.dmg"
-  else
-    version '3.4.4'
-    sha256 '4729b8d745761e718174d4e7c85bf896faa2232d16f69cdb8833d62fd88e00d7'
+  elsif MacOS.version <= :high_sierra
+    version '3.4.6'
+    sha256 'b770b046c2c59f6e55f54d0ad822d5aa755a18aa201d333341de14ebbbcc6a85'
     url "https://downloads.omnigroup.com/software/MacOSX/10.13/OmniFocus-#{version}.dmg"
+  else
+    version '3.5.1'
+    sha256 'c13bed0a58f0818a884ccbd934ba5cc397c4e794084caa2810a3589ad3879039'
+    url "https://downloads.omnigroup.com/software/MacOSX/10.14/OmniFocus-#{version}.dmg"
   end
 
   appcast "https://update.omnigroup.com/appcast/com.omnigroup.OmniFocus#{version.major}"

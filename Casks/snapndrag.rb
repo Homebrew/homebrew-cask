@@ -7,7 +7,5 @@ cask 'snapndrag' do
   name 'SnapNDrag'
   homepage 'https://www.yellowmug.com/snapndrag/'
 
-  depends_on macos: '>= :high_sierra'
-
   app 'SnapNDrag.app'
 end

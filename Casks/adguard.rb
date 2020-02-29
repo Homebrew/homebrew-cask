@@ -1,6 +1,6 @@
 cask 'adguard' do
-  version '2.2.3.661'
-  sha256 '9668a1f8cebe71867524de3f68d68b1f21b97dfc1e50433ec4d16fd73f18fca4'
+  version '2.3.2.710'
+  sha256 'ce4d082e36b92917ccd4c1e22675cab9fbe3bf32d6ea64b6e5ec5eb82dbc30dd'
 
   url "https://static.adguard.com/mac/release/AdGuard-#{version}.dmg"
   appcast 'https://static.adguard.com/mac/adguard-release-appcast.xml'

@@ -1,6 +1,6 @@
 cask 'lulu' do
-  version '1.2.1'
-  sha256 'a51b73c1fc3e4e11bbccffed0d1d70b4fc06a6f4774af06b254f8a82c0e4c1d5'
+  version '1.2.3'
+  sha256 '9c7bf4333af8dc7330614f2c9a389feac27334bc07f4b6039107b97eb476a3df'
 
   # bitbucket.org/objective-see was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/LuLu_#{version}.zip"
@@ -28,6 +28,7 @@ cask 'lulu' do
                '~/Library/Preferences/com.objective-see.lulu.plist',
                '~/Library/Preferences/com.objective-see.lulu.helper.plist',
                '/Library/LaunchDaemons/com.objective-see.lulu.plist',
+               '/Library/LaunchDaemons/com.objective-see.lulu.configHelper.plist',
                '/Library/Logs/LuLu.log',
              ]
 

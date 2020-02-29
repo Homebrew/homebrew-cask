@@ -1,6 +1,6 @@
 cask 'geburtstagschecker' do
-  version '1.8.1,187'
-  sha256 '53162bf046cddcec2d899a6eb3adcda951bae74de3612c2e7a67478116f0df0c'
+  version '1.8.2,195'
+  sha256 'd811506bcf76ab922103bca6985396264c40a87c2c03945f951e49e3d14d4186'
 
   url 'https://earthlingsoft.net/GeburtstagsChecker/GeburtstagsChecker.zip'
   appcast 'https://earthlingsoft.net/GeburtstagsChecker/appcast.xml'

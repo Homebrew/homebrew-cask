@@ -1,6 +1,6 @@
 cask 'expressions' do
-  version '1.3.1'
-  sha256 '1d8daf05089da36d9d95e107e2b20c69e65e3160b73ba1da848220aa1114de08'
+  version '1.3.3'
+  sha256 'aea490ec0aef97247dfe3b032519bcda1f5df02486318fde509b63ec789bb0d0'
 
   url "https://www.apptorium.com/public/products/expressions/releases/Expressions-#{version}.zip"
   appcast 'https://updates.devmate.com/com.apptorium.Expressions-dm.xml'

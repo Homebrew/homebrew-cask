@@ -1,6 +1,6 @@
 cask 'eclipse-ptp' do
-  version '4.13.0,2019-09:R'
-  sha256 '5ae481d48490a2180a825a0ab689ebb7bbddc9d51c9e9ad0fbb95498ac4a6d14'
+  version '4.14.0,2019-12:R'
+  sha256 '32c1977b80c9084917e43a1483adc4314ab6798dfd7c69f41359c4be1aee6735'
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.after_comma.before_colon}/#{version.after_colon}/eclipse-parallel-#{version.after_comma.before_colon}-#{version.after_colon}-macosx-cocoa-x86_64.dmg&r=1"
   name 'Eclipse for Parallel Application Developers'

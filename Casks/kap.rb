@@ -1,6 +1,6 @@
 cask 'kap' do
-  version '3.0.0'
-  sha256 '4564f5af42a9d6eb3b8a8865e30d64a0f208742501a02a7139253029ab24742f'
+  version '3.1.0'
+  sha256 '4276d0b6db25f7119bdd7f0dc0eecd9547cff5df964c6e46a2adde4d286bdb64'
 
   # github.com/wulkano/kap was verified as official when first introduced to the cask
   url "https://github.com/wulkano/kap/releases/download/v#{version.major_minor_patch}/Kap-#{version}.dmg"

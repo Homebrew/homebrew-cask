@@ -1,6 +1,6 @@
 cask 'microsoft-word' do
-  version '16.31.19111002'
-  sha256 '1e6053bd0d29148134bc8de1258110ff1895ae1a23ee8741fa2bd136d3bb3773'
+  version '16.34.20020900'
+  sha256 '35feec393e1995b6696ce99fdbaa64f3c5855d3a2a1dde7fec2113cbfbb34356'
 
   # officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate was verified as official when first introduced to the cask
   url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Word_#{version}_Installer.pkg"
@@ -23,6 +23,7 @@ cask 'microsoft-word' do
   zap trash:     [
                    '~/Library/Application Scripts/com.microsoft.Word',
                    '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.word.sfl*',
+                   '~/Library/Application Support/CrashReporter/Microsoft Word_*.plist',
                    '~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate.fba',
                    '~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate2',
                    '~/Library/Caches/com.microsoft.autoupdate.fba',

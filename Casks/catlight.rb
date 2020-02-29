@@ -1,6 +1,6 @@
 cask 'catlight' do
-  version '2.29.0'
-  sha256 '65dfb967d3d76c92975d90967deedb4405fdce7f131ec289154d4fcf293ff94e'
+  version '2.29.2'
+  sha256 'e1447f0cd18f6df61c099c981f13010969577bb1522a611a2ae86317a034dde0'
 
   # de2nac35bcll0.cloudfront.net was verified as official when first introduced to the cask
   url "https://de2nac35bcll0.cloudfront.net/dl/mac/beta/CatLightSetup-#{version}.zip"

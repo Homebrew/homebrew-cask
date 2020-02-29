@@ -1,12 +1,13 @@
 cask 'wireshark' do
-  version '3.0.6'
-  sha256 '186970a1e0b610f23cb59314feaa3ce3eeb89b7c39bb5c34b4549910f1782f04'
+  version '3.2.2'
+  sha256 'c6bda7aba34c441dc8b3998ffbe938ea37a98cf9e4cbf0136a8b65229ce0887f'
 
   url "https://1.na.dl.wireshark.org/osx/all-versions/Wireshark%20#{version}%20Intel%2064.dmg"
-  appcast 'https://www.macupdater.net/cgi-bin/extract_text/extract_text_split_easy.cgi?url=https://www.wireshark.org/download.html&splitter_1=stable&index_1=1&splitter_2=development&index_2=0'
+  appcast 'https://www.wireshark.org/update/0/Wireshark/0.0.0/macOS/x86-64/en-US/stable.xml'
   name 'Wireshark'
   homepage 'https://www.wireshark.org/'
 
+  auto_updates true
   conflicts_with cask: 'wireshark-chmodbpf'
   depends_on macos: '>= :sierra'
 

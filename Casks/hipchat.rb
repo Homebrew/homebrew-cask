@@ -1,6 +1,6 @@
 cask 'hipchat' do
   version '4.30.2-760'
-  sha256 '0f7680eac626fafff0b7e5d7211901cb0d30494a73326eadad4bc9ae05fbf4af'
+  sha256 'c88d91687535a445b92f58ded7993feda3bdf3f68ffd51420eb0cfda5fb5200f'
 
   # hipchat-server-stable.s3.amazonaws.com was verified as official when first introduced to the cask
   url 'https://hipchat-server-stable.s3.amazonaws.com/clients/macos/HipChat-latest.dmg'

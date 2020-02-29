@@ -1,5 +1,5 @@
 cask 'snagit' do
-  version '2020'
+  version '2020.1.1'
   sha256 :no_check # required as upstream package is updated in-place
 
   url 'https://download.techsmith.com/snagitmac/releases/Snagit.dmg'
@@ -8,5 +8,5 @@ cask 'snagit' do
 
   depends_on macos: '>= :sierra'
 
-  app "Snagit #{version}.app"
+  app "Snagit #{version.major}.app"
 end

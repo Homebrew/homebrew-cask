@@ -1,6 +1,6 @@
 cask 'anka-flow' do
-  version '2.1.2.112'
-  sha256 '3f6b5654dc625ca700dab3cb7b79cb755353fa56b4cc254c1cb44dab52c92849'
+  version '2.2.1.114'
+  sha256 '5a9cbee1a0c8a93e41905b5b5263c023bf3bcea79b0905144403852d0085ed5f'
 
   # d1efqjhnhbvc57.cloudfront.net was verified as official when first introduced to the cask
   url "https://d1efqjhnhbvc57.cloudfront.net/Anka-#{version}.pkg",
@@ -18,6 +18,7 @@ cask 'anka-flow' do
                          'com.veertu.vlaunch',
                          'com.veertu.anka.lupd',
                          'com.veertu.anka.ankakbd',
+                         'com.veertu.anka.ankanetd',
                        ],
             script:    {
                          executable: '/Library/Application Support/Veertu/Anka/tools/uninstall.sh',

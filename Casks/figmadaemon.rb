@@ -1,16 +1,13 @@
 cask 'figmadaemon' do
-  version :latest
-  sha256 :no_check
+  version '17'
+  sha256 '97501a70cbba84e329e284ee223d6236d409102f58deb0282e705f2a14b171ea'
 
-  url 'https://font-daemon.figma.com/FigmaInstaller.pkg'
+  url "https://font-daemon.figma.com/mac/FigmaDaemon.#{version}.zip"
+  appcast 'https://font-daemon.figma.com/mac/versions.xml'
   name 'Figma Font Installers'
   homepage 'https://www.figma.com/'
 
-  pkg 'FigmaInstaller.pkg'
-
-  uninstall pkgutil:   'com.figma.daemon',
-            launchctl: 'com.figma.daemon',
-            delete:    '~/Library/Application Support/Figma/FigmaDaemon.app'
+  app 'FigmaDaemon.app'
 
   zap trash: [
                '~/Library/Preferences/com.figma.FigmaDaemon.plist',

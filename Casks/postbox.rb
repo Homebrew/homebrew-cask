@@ -1,6 +1,6 @@
 cask 'postbox' do
-  version '7.0.8'
-  sha256 'c77702fec755b6dddb0168155ade9274f7080dbb0e221cd9cdab8b405e4a0aae'
+  version '7.0.12'
+  sha256 '6815f16ffce788638dd3f73f38f16951e89f0e3eaa991834f9e4f01135be67b9'
 
   # d3nx85trn0lqsg.cloudfront.net/mac was verified as official when first introduced to the cask
   url "https://d3nx85trn0lqsg.cloudfront.net/mac/postbox-#{version}-mac64.dmg"
@@ -8,6 +8,7 @@ cask 'postbox' do
   name 'Postbox'
   homepage 'https://www.postbox-inc.com/'
 
+  auto_updates true
   depends_on macos: '>= :high_sierra'
 
   app 'Postbox.app'

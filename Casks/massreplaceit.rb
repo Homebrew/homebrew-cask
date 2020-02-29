@@ -1,6 +1,6 @@
 cask 'massreplaceit' do
-  version '3.0'
-  sha256 'b1a5eb1e8a3196a15e10ee82185a7f15c44e27a39742b4506e274a17391a2033'
+  version '3.1.1'
+  sha256 'e44e97787a45b0ae52346f833c0ba3bf1383b407e0fc327d536347eb3eef5509'
 
   url 'http://www.hexmonkeysoftware.com/files/MassReplaceIt.dmg'
   appcast 'http://www.hexmonkeysoftware.com/'

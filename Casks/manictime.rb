@@ -1,6 +1,6 @@
 cask 'manictime' do
-  version '2.0.26'
-  sha256 '484295bf0f59eeffb4ad415a3fcab21bf1be65354e2be83dfdbdfa89a739d06f'
+  version '2.0.27'
+  sha256 '534ef3cd29d1838502357a6285dc7706e4a289d0e9379420b02edce1d71b19eb'
 
   url "https://cdn.manictime.com/setup/mac/ManicTime-v#{version}.dmg"
   appcast 'https://www.manictime.com/mac/download'

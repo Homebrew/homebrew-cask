@@ -2,9 +2,9 @@ cask 'finereader' do
   version :latest
   sha256 :no_check
 
-  url 'https://fr7.abbyy.com/mac/fr/ABBYY_FineReader_Pro_ESD.dmg'
+  url 'https://downloads.abbyy.com/fr/fr_mac/current/ABBYYFineReaderPro.dmg?secure=EOkGXxyiKvTXMK8VEYyT1g=='
   name 'ABBYY FineReader Pro'
-  homepage 'https://www.abbyy.com/finereader/pro-for-mac/'
+  homepage 'https://www.abbyy.com/finereader-pro-mac-downloads/'
 
   app 'FineReader.app'
 end

@@ -1,10 +1,10 @@
 cask 'gifox' do
-  version '2.0.0,020000.07'
-  sha256 '0b4a8984a6f46ae5583675d44144b9741a9f50d8ecd23a76371683c0b9cf5226'
+  version '2.1.1,020101.00'
+  sha256 '0b414ab558e4a1e1a96744f67a9722f1828234bfbb20fd5b769b5594f35311da'
 
   # d3si16icyi9iar.cloudfront.net/gifox was verified as official when first introduced to the cask
   url "https://d3si16icyi9iar.cloudfront.net/gifox/#{version.after_comma}.dmg"
-  appcast 'https://d3si16icyi9iar.cloudfront.net/gifox/appcast.xml'
+  appcast 'https://www.macupdater.net/cgi-bin/extract_text/download_with_useragent.cgi?url=https://api.gifox.io/appcast?prereleases=false'
   name 'gifox'
   homepage 'https://gifox.io/'
 

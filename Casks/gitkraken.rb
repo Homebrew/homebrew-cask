@@ -1,9 +1,9 @@
 cask 'gitkraken' do
-  version '6.3.1'
-  sha256 '21e02719f48e6288f6fd53e41a2688c8ebd0072a68913d62b63bc59e22d64d0f'
+  version '6.5.3'
+  sha256 '01f9391185fd076bd351fb88199b2766e5081511780ef2720f782e918d83ef97'
 
   # release.axocdn.com/darwin was verified as official when first introduced to the cask
-  url 'https://release.axocdn.com/darwin/installGitKraken.dmg'
+  url 'https://release.gitkraken.com/darwin/installGitKraken.dmg'
   appcast 'https://www.gitkraken.com/download'
   name 'GitKraken'
   homepage 'https://www.gitkraken.com/'

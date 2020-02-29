@@ -1,9 +1,9 @@
 cask 'metabase' do
-  version '0.33.6.0'
-  sha256 'cbb66145f7b6d8705983601a519346525305a99275dcc2ea6399bd362752a5e7'
+  version '0.34.3'
+  sha256 'd191cf4dc21fbe7e34a74dde9b6781b677d9d7a03ea40eb32a85d6c1317deb3b'
 
   # s3.amazonaws.com/downloads.metabase.com was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/downloads.metabase.com/v#{version.major_minor_patch}/Metabase.zip"
+  url "https://s3.amazonaws.com/downloads.metabase.com/v#{version}/Metabase.zip"
   appcast 'https://s3.amazonaws.com/downloads.metabase.com/appcast.xml'
   name 'Metabase'
   homepage 'https://www.metabase.com/'
