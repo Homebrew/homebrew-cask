@@ -16,21 +16,14 @@ cask 'softube-central' do
                        'com.softube.Console1OSD_Release',
                      ],
             pkgutil: [
-                       # There's definitely more than these - if you read this, and own other of
-                       # their VSTs, after installing, try running
-                       # `"$(brew --repository)/Library/Taps/homebrew/homebrew-cask/developer/bin/list_recent_pkg_ids"`
-                       # and add any Softube pkg-IDs to this list
-                       'com.softube.pkg.PlugIns_Console_1',
-                       'com.softube.pkg.PlugIns_Console_1_Fader',
-                       'com.softube.pkg.PlugIns_Console_1_British_Class_A',
-
+                       'com.softube.pkg.*',
                        'com.softube.installerdaemon.helper',
                        'org.softube.com.softubecentral',
                      ]
 
   zap trash: [
-               '~/Library/Application Support/Softube',
                '/Library/Application Support/Softube',
+               '~/Library/Application Support/Softube',
                '~/Library/Application Support/softubecentral',
              ]
 end
