@@ -1,6 +1,6 @@
 cask 'electerm' do
-  version '1.0.31'
-  sha256 '779df13757d5665f68f9fab78d43b2c6c33952efd948a4a54bc55447848d1402'
+  version '1.0.33'
+  sha256 '20bfea8e1377fe8b2bdcc86d0212917bd9c6cb88d2490d8eb4380c6c1141d5f9'
 
   url "https://github.com/electerm/electerm/releases/download/v#{version}/electerm-#{version}-mac.dmg"
   appcast 'https://github.com/electerm/electerm/releases.atom'
