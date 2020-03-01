@@ -5,8 +5,8 @@ cask 'omniplan' do
 
     url "https://downloads.omnigroup.com/software/MacOSX/10.13/OmniPlan-#{version}.dmg"
   else
-    version '3.14'
-    sha256 '77167cbb0edae0df4e95ab275e778ad4aff4904bc5525fc810a33352d04fe203'
+    version '3.14.1'
+    sha256 'f1b5d9665499ab042102ccf29ba875dd2bd7e2f8ea1a217655e7a2928e25364a'
 
     url "https://downloads.omnigroup.com/software/MacOSX/10.14/OmniPlan-#{version}.dmg"
   end
