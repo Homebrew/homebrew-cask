@@ -1,6 +1,6 @@
 cask 'connectmenow' do
-  version '3.0.2'
-  sha256 'c14b84edd99e94d679308593e75dc818170313e650e98ecbc8c918655564a99c'
+  version '3.0.3'
+  sha256 '36ffe832805173f4039b1e8f0e90360e08ab181472551d5ee44bf77b6f7eac9a'
 
   url "https://www.tweaking4all.com/downloads/network/ConnectMeNow-v#{version}-macOS.dmg"
   appcast 'https://www.tweaking4all.com/os-tips-and-tricks/macosx-tips-and-tricks/connectmenow-v3'
