@@ -1,6 +1,6 @@
 cask 'midikeys' do
-  version '1.8'
-  sha256 '673a11c0317ec8930940cc18bf8eef3de0d3040845c635722e99907f866a9b80'
+  version '1.9.0'
+  sha256 '440e10e29a4ce9c12d003d972de9fbc5f4e6ebba79a7f7fbe24abe3872bde142'
 
   url "http://www.manyetas.com/creed/MidiKeys_#{version}.zip"
   appcast 'https://immosw.com/versions/midikeys/appcast.xml'
