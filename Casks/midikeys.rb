@@ -8,5 +8,7 @@ cask 'midikeys' do
   name 'MidiKeys'
   homepage 'http://www.manyetas.com/creed/midikeys.html'
 
-  app 'MidiKeys/MidiKeys.app'
+  app 'MidiKeys.app'
 end
+
+It seems the App source '/usr/local/Caskroom/midikeys/1.9.0/MidiKeys/MidiKeys.app' is not there.
