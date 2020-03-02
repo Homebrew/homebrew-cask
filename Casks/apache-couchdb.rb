@@ -4,7 +4,7 @@ cask 'apache-couchdb' do
 
   # couchdbneighbourhoodie.fra1.digitaloceanspaces.com was verified as official when first introduced to the cask
   url "https://couchdbneighbourhoodie.fra1.digitaloceanspaces.com/downloads/#{version}/mac/Apache-CouchDB.zip"
-  appcast "https://docs.couchdb.org/en/#{version}/whatsnew/#{version.major_minor}.html"
+  appcast 'https://docs.couchdb.org/en/stable/whatsnew/index.html'
   name 'Apache CouchDB'
   homepage 'https://couchdb.apache.org/'
 
