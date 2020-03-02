@@ -1,5 +1,5 @@
 cask 'kode54-cog' do
-  version '0.08,9dd4f6804'
+  version '1109,9dd4f6804'
   sha256 '9cc4c8553be6384fb1c6d3497e6f3f336ef5fdc9ebca42d0f878ee36f6500dd3'
 
   # losno.co/cog was verified as official when first introduced to the cask
