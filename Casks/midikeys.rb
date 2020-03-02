@@ -10,5 +10,3 @@ cask 'midikeys' do
 
   app 'MidiKeys.app'
 end
-
-It seems the App source '/usr/local/Caskroom/midikeys/1.9.0/MidiKeys/MidiKeys.app' is not there.
