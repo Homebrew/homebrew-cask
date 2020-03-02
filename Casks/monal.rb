@@ -6,7 +6,7 @@ cask 'monal' do
   name 'Monal'
   homepage 'https://monal.im/'
 
-  depends_on macos: '>= :yosemite'
+  depends_on macos: '>= :catalina'
 
   app 'Monal.app'
 end
