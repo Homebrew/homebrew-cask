@@ -2,7 +2,8 @@ cask 'sdcc' do
   version '4.0.0'
   sha256 '84056a0d0a144e5e41ccc30dd1ca172e8a48ff0c964724d5a4fe32283bebecb1'
 
-  url "https://downloads.sourceforge.net/project/sdcc/sdcc-macos-amd64/#{version}/sdcc-#{version}-x86_64-apple-macosx.tar.bz2"
+  url "https://downloads.sourceforge.net/sdcc/sdcc-#{version}-x86_64-apple-macosx.tar.bz2"
+  appcast 'https://sourceforge.net/projects/sdcc/rss'
   name 'Small Device C Compiler'
   homepage 'http://sdcc.sourceforge.net/'
 
