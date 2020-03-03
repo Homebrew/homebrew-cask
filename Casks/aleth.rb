@@ -7,9 +7,9 @@ cask 'aleth' do
   name 'Aleth'
   homepage 'https://github.com/ethereum/aleth'
 
-  binary "aleth-#{version}-darwin-x86_64/bin/aleth"
-  binary "aleth-#{version}-darwin-x86_64/bin/aleth-bootnode"
-  binary "aleth-#{version}-darwin-x86_64/bin/aleth-key"
-  binary "aleth-#{version}-darwin-x86_64/bin/aleth-vm"
-  binary "aleth-#{version}-darwin-x86_64/bin/testeth"
+  binary "bin/aleth"
+  binary "bin/aleth-bootnode"
+  binary "bin/aleth-key"
+  binary "bin/aleth-vm"
+  binary "bin/testeth"
 end
