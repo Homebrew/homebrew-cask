@@ -1,9 +1,10 @@
-cask 'eaccess-desktop' do
+cask 'eaccess' do
   version '1.13.1'
   sha256 'c05daad636bef0c5ccc58ee75138bfc2d9da76c25af7a16664fbc9f756209546'
 
-  # https://glutz.com/service/downloads was verified as official when first introduced to the cask
   url 'https://glutz.com/service/downloads/?dwnldid=97482'
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=https://glutz.com/service/downloads/?dwnldid=97482',
+          configuration: version.dots_to_underscores
   name 'eAccess Desktop'
   homepage 'https://glutz.com/service/download/software-and-firmware/'
 
