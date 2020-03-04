@@ -8,7 +8,7 @@ cask 'vorta' do
   homepage 'https://github.com/borgbase/vorta'
 
   auto_updates true
-  depends_on macos: '>= :high_sierra'
+  depends_on macos: '>= :mojave'
 
   app 'Vorta.app'
 
