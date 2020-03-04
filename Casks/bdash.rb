@@ -1,6 +1,6 @@
 cask 'bdash' do
-  version '1.6.0'
-  sha256 'a5908552375a06011f0f288d78dc0af5ed1a0c94af9d21fd112e1c71c3ec79bf'
+  version '1.7.2'
+  sha256 'd5c719d80f162b700594df215909624fe967e3f187b3d9c72fcb94cdd76957c6'
 
   url "https://github.com/bdash-app/bdash/releases/download/v#{version}/Bdash-#{version}-mac.zip"
   appcast 'https://github.com/bdash-app/bdash/releases.atom'

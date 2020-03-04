@@ -1,6 +1,6 @@
 cask 'zotero' do
-  version '5.0.82'
-  sha256 '85de73413509767ef94b2cc16e4af26ac7dcb3168073e7b77942785bd82f513e'
+  version '5.0.84'
+  sha256 'e8aacde725b36e2d831620fc3d647fbe18abcb3a64c9bd4084e6144df95acf59'
 
   url "https://download.zotero.org/client/release/#{version}/Zotero-#{version}.dmg"
   appcast 'https://github.com/zotero/zotero/releases.atom'

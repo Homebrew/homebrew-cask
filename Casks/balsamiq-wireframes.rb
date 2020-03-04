@@ -1,13 +1,13 @@
-cask 'balsamiq-mockups' do
-  version '3.5.17'
-  sha256 'a89f2a7959bc7f987710b7f3d6ae665e5765180dd02763d1b5f953415c130df2'
+cask 'balsamiq-wireframes' do
+  version '4.0.20'
+  sha256 'c364584ae8cbbcf84df39129c4f2fabdd9c060658ba794e8901677b7e4bfe51b'
 
-  url "https://builds.balsamiq.com/mockups-desktop/Balsamiq_Mockups_#{version}.dmg"
-  appcast 'https://builds.balsamiq.com/mockups-desktop/version.jsonp'
-  name 'Balsamiq Mockups'
+  url "https://builds.balsamiq.com/bwd/Balsamiq%20Wireframes%20#{version}.dmg"
+  appcast 'https://builds.balsamiq.com/bwd/mac.jsonp'
+  name 'Balsamiq Wireframes'
   homepage 'https://balsamiq.com/'
 
-  app "Balsamiq Mockups #{version.major}.app"
+  app 'Balsamiq Wireframes.app'
 
   zap trash: [
                "~/Library/Caches/BalsamiqMockups#{version.major}.*",

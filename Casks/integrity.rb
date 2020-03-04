@@ -1,6 +1,6 @@
 cask 'integrity' do
-  version '9.4.1'
-  sha256 'dff4a23b7c414399721fd704e00544e71c5ef37b2e65617a2b52a85b4d40c428'
+  version '9.5.4'
+  sha256 '57519136777481709d258c15d1a0115c7826368d9f0e74e972f43f8ff474be50'
 
   url 'https://peacockmedia.software/mac/integrity/integrity.dmg'
   appcast 'https://peacockmedia.software/mac/integrity/version_history.html'

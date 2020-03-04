@@ -6,9 +6,11 @@ Example: [`atom.rb`](https://github.com/Homebrew/homebrew-cask/blob/645dbb8228ec
 
 There are a few different ways the `appcast` can be determined:
 
- * If the app is distributed via GitHub releases, the `appcast` will be of the form `https://github.com/{{user}}/{{project_name}}/releases.atom`. (Example: [`electron.rb`](https://github.com/Homebrew/homebrew-cask/blob/645dbb8228ec2f1f217ed1431e188687aac13ca5/Casks/electron.rb#L7))
+* If the app is distributed via GitHub releases, the `appcast` will be of the form `https://github.com/{{user}}/{{project_name}}/releases.atom`. (Example: [`electron.rb`](https://github.com/Homebrew/homebrew-cask/blob/645dbb8228ec2f1f217ed1431e188687aac13ca5/Casks/electron.rb#L7))
 
- * The popular update framework [Sparkle](https://sparkle-project.org/) generally uses the `SUFeedURL` property in `Contents/Info.plist` inside `.app` bundles. (Example: [`glyphs.rb`](https://github.com/Homebrew/homebrew-cask/blob/645dbb8228ec2f1f217ed1431e188687aac13ca5/Casks/glyphs.rb#L6))
+* If the app is distributed via GitLab releases, the `appcast` will be of the form `https://gitlab.com/{{user}}/{{project_name}}/-/tags?format=atom`. (Example: [`grafx.rb`](https://github.com/Homebrew/homebrew-cask/blob/b22381902f9da870bb07d21b496558f283dad612/Casks/grafx.rb#L6))
+
+* The popular update framework [Sparkle](https://sparkle-project.org/) generally uses the `SUFeedURL` property in `Contents/Info.plist` inside `.app` bundles. (Example: [`glyphs.rb`](https://github.com/Homebrew/homebrew-cask/blob/645dbb8228ec2f1f217ed1431e188687aac13ca5/Casks/glyphs.rb#L6))
 
 * HockeyApp URLs are of the form `https://rink.hockeyapp.net/api/2/apps/{{hexadecimal_string}}{{something_else}}`. For the `appcast`, remove `{{something_else}}` (ending up with `https://rink.hockeyapp.net/api/2/apps/{{hexadecimal_string}}`. (Example: [`canary.rb`](https://github.com/Homebrew/homebrew-cask/blob/645dbb8228ec2f1f217ed1431e188687aac13ca5/Casks/canary.rb#L7))
 

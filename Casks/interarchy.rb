@@ -7,10 +7,10 @@ cask 'interarchy' do
     sha256 'c1f8fbb9add4d134123d72b80d1d04540d38157f7c51478cb9efb0e88138c090'
   end
 
-  url "https://download.interarchy.com/Interarchy_#{version}.zip"
-  appcast 'https://interarchy.com/'
+  url "https://downloads.kangacode.com/Interarchy/Interarchy_#{version}.zip"
+  appcast 'https://www.kangacode.com/interarchy/'
   name 'Interarchy'
-  homepage 'https://interarchy.com/'
+  homepage 'https://www.kangacode.com/interarchy/'
 
   app 'Interarchy.app'
 end

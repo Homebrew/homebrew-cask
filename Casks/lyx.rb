@@ -1,6 +1,6 @@
 cask 'lyx' do
-  version '2.3.3'
-  sha256 '503fe3153deaa8f88e07dee46a0814a377df4fd6f4577f0575866e09f4053541'
+  version '2.3.4.2'
+  sha256 '37c390de4405f3ee9ce4e2feba6ba8f66bc937f4fe4c67573b747215e1843551'
 
   # ftp.lip6.fr/pub/lyx/ was verified as official when first introduced to the cask
   url "https://ftp.lip6.fr/pub/lyx/bin/#{version.major_minor_patch}/LyX-#{version}+qt5-x86_64-cocoa.dmg"

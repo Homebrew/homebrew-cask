@@ -1,9 +1,9 @@
 cask 'marginnote' do
-  version '3.6.2004'
-  sha256 'ca5a2060f10e742ba7005b23833e7dc594498b837355c1fa2de72be8178adc3b'
+  version '3.6.4004'
+  sha256 '39a8d11bb63dee2aacdf30199242f64a76e9888add2159a479f91321d7b8ea42'
 
-  # appcenter-filemanagement-distrib4ede6f06e.azureedge.net/895929dc-b9be-4b30-8ccd-15383dd786bd was verified as official when first introduced to the cask
-  url "https://appcenter-filemanagement-distrib4ede6f06e.azureedge.net/895929dc-b9be-4b30-8ccd-15383dd786bd/MarginNote%20#{version.major}.app.zip?sv=2018-03-28&sr=c&sig=OjCIng7U4P7qM906WE9Ny4xxXdY%2FLbiDNBEDEJ3q4g4%3D&se=2020-01-30T17%3A52%3A08Z&sp=r"
+  # appcenter-filemanagement-distrib5ede6f06e.azureedge.net/ was verified as official when first introduced to the cask
+  url "https://appcenter-filemanagement-distrib5ede6f06e.azureedge.net/6182955f-2d2c-4394-b8db-5f3ca321be72/MarginNote#{version.major}.dmg?sv=2018-03-28&sr=c&sig=cT2ZrVN7YAv3ulvnULUGiBCk8FQxxcmuVHPL3Vh32LA%3D&se=2020-03-03T12%3A53%3A28Z&sp=r"
   appcast 'https://api.appcenter.ms/v0.1/public/sparkle/apps/1451f4f6-9214-4d46-b91c-d5898c7e42cb'
   name 'MarginNote'
   homepage 'https://www.marginnote.com/'

@@ -1,13 +1,13 @@
 cask 'local' do
-  version '5.2.3'
-  sha256 '0b7af0b61bb3e7c44142d01a2c059394d27ddebc9b116363803bd9856dd6a52b'
+  version '5.2.5'
+  sha256 '56e01b0362a10ca1e11b814496780d99f146860fdb61463cf757ea18b94a6e9c'
 
   # local-by-flywheel-flywheel.netdna-ssl.com/releases was verified as official when first introduced to the cask
   url "https://local-by-flywheel-flywheel.netdna-ssl.com/releases/#{version.dots_to_hyphens}/local-#{version.dots_to_hyphens}-mac.dmg"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://local-by-flywheel-flywheel.netdna-ssl.com/latest/mac',
           configuration: version.dots_to_hyphens
   name 'Local by Flywheel'
-  homepage 'https://localbyflywheel.com/'
+  homepage 'https://localwp.com/'
 
   app 'Local.app'
 

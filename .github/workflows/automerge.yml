@@ -8,6 +8,7 @@ on:
 
 jobs:
   automerge:
+    if: startsWith( github.repository, 'Homebrew/' )
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master

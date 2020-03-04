@@ -1,6 +1,6 @@
 cask 'visual-studio-code' do
-  version '1.41.1'
-  sha256 'efb558da07adcdf7b5e69cabda2a8b9359855e9e6f7ae62b4e1db7eb975c98e4'
+  version '1.42.1'
+  sha256 'bb9dff256b0091fa01544b36b739ce352fec2ac3bc02d32d18778f8ba625296e'
 
   url "https://update.code.visualstudio.com/#{version}/darwin/stable"
   appcast 'https://vscode-update.azurewebsites.net/api/update/darwin/stable/VERSION'

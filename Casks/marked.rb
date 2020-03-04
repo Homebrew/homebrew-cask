@@ -1,6 +1,6 @@
 cask 'marked' do
-  version '2.5.36980'
-  sha256 'fdf7039b8588e19e9ed9d0d9de809efa03100cbccffe40067fc274ce0b370caa'
+  version '2.5.38983'
+  sha256 '937794aff7fdea598cbb473f169dff77f947f8063560a26ad3f1cbd71303afc3'
 
   url "https://updates.marked2app.com/Marked#{version}.zip"
   appcast 'https://updates.marked2app.com/marked.xml'

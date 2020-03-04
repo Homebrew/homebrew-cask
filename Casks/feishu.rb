@@ -1,6 +1,6 @@
 cask 'feishu' do
-  version '3.16.6'
-  sha256 '09765cb9c26c927cdd3d96cd3425830ef0ab8190a5589162f48a690b4b1fe7b0'
+  version '3.18.4'
+  sha256 '36df0340ec3ffae2e60e4a00157533320ec317ba7eed712da1465760104d092a'
 
   # sf3-ttcdn-tos.pstatp.com was verified as official when first introduced to the cask
   url "https://sf3-ttcdn-tos.pstatp.com/obj/ee-appcenter/Feishu-#{version}.dmg"
@@ -8,6 +8,7 @@ cask 'feishu' do
   name 'feishu'
   homepage 'https://www.feishu.cn/'
 
+  auto_updates true
   depends_on macos: '>= :mavericks'
 
   # Renamed for consistency: app name is different in the Finder and in a shell.

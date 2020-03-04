@@ -1,6 +1,6 @@
 cask 'puppetry' do
-  version '3.1.1'
-  sha256 'd840a629b1cb68ad5704e8c1e39372d110d9a82a8cd9f53d70db6ad9ad55735a'
+  version '3.2.0'
+  sha256 'fd1989c37906136085ef6d737d1b69515ee2d1c84da5577d3446e0ab4070fc06'
 
   # github.com/dsheiko/puppetry was verified as official when first introduced to the cask
   url "https://github.com/dsheiko/puppetry/releases/download/v#{version}/puppetry-mac-v#{version}.zip"

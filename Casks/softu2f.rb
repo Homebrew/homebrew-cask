@@ -13,5 +13,6 @@ cask 'softu2f' do
 
   uninstall launchctl: 'com.github.SoftU2F',
             kext:      'com.github.SoftU2FDriver',
+            delete:    '/Applications/SoftU2F.app',
             pkgutil:   'com.GitHub.SoftU2F'
 end
