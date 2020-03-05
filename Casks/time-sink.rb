@@ -2,7 +2,8 @@ cask 'time-sink' do
   version '2.1.0'
   sha256 '6a2cec3828d7d3bf244825419dc82e3d5e0a6b640736c401c3b56305ddfef0ba'
 
-  url "https://manytricks.com/download/_do_not_hotlink_/timesink#{version.no_dots}.dmg"
+  url "https://manytricks.com/download/_do_not_hotlink_/timesink#{version.no_dots}.dmg",
+      configuration: version.no_dots
   appcast 'https://manytricks.com/timesink/appcast'
   name 'Time Sink'
   homepage 'https://manytricks.com/timesink/'
