@@ -7,7 +7,7 @@ cask 'powershell' do
   name 'PowerShell'
   homepage 'https://github.com/PowerShell/PowerShell'
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :high_sierra'
 
   pkg "powershell-#{version}-osx-x64.pkg"
 
