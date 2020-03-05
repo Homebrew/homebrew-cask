@@ -1,9 +1,9 @@
 cask 'drawbot' do
-  version '3.122'
-  sha256 '9cdb142da6f4585384bf624ff06d29a184d84aa80987b060587f14eda7273582'
+  version '3.123'
+  sha256 'ad395d11706ac4a621fb2f1e88131ad0e0d9bb8595f19d65253b2175fdd43707'
 
-  # typemytype.com/drawBot was verified as official when first introduced to the cask
-  url 'https://static.typemytype.com/drawBot/DrawBot.dmg'
+  # github.com/typemytype was verified as official when first introduced to the cask
+  url "https://github.com/typemytype/drawbot/releases/download/#{version}/DrawBot.dmg"
   appcast 'https://raw.githubusercontent.com/typemytype/drawbot/master/drawBot/drawBotSettings.py'
   name 'DrawBot'
   homepage 'https://www.drawbot.com/'
