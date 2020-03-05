@@ -1,5 +1,5 @@
 cask 'youdaonote' do
-  version '3.5.7'
+  version '3.5.8'
   sha256 'd3c10b5a53788ae04f5f6d8620c1d96fdb9b075c5473eac9d58d86f02b75878e'
 
   # download.ydstatic.com/notewebsite/downloads was verified as official when first introduced to the cask
