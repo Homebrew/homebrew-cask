@@ -1,9 +1,9 @@
 cask 'malus' do
-  version '0.9.0-1'
-  sha256 '393ed66263391028981e89ab67a0ee31d1ee624f3c1b00bb2e876501116751ce'
+  version '1.0.0'
+  sha256 'ef7427daef993be6a066ecaf8e5c7c680277b8b5a9ea04ac54afe0e2656d0e66'
 
   # malusfile.com was verified as official when first introduced to the cask
-  url "https://malusfile.com/uploads/Malus.#{version}.dmg"
+  url "https://malusfile.com/uploads/Malus-mac-#{version.major_minor}.dmg"
   appcast 'https://api.getmalus.com/api/checkDesktopUpdate?type=mac'
   name 'Malus'
   homepage 'https://getmalus.com/'
