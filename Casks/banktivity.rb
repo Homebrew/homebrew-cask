@@ -10,5 +10,5 @@ cask 'banktivity' do
 
   depends_on macos: '>= :high_sierra'
 
-  app "Banktivity #{version}.app"
+  app "Banktivity #{version.major}.app"
 end
