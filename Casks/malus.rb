@@ -1,5 +1,5 @@
 cask 'malus' do
-  version '1.0.0'
+  version '1.0.1'
   sha256 'ef7427daef993be6a066ecaf8e5c7c680277b8b5a9ea04ac54afe0e2656d0e66'
 
   # malusfile.com was verified as official when first introduced to the cask
