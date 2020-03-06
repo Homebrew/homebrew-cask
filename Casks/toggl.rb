@@ -7,7 +7,6 @@ cask 'toggl' do
   appcast 'https://assets.toggl.com/installers/darwin_stable_appcast.xml'
   name 'TogglDesktop'
   homepage 'https://www.toggl.com/toggl-desktop/'
-  
   auto_updates true
 
   conflicts_with cask: [
