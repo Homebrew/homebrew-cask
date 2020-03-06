@@ -1,6 +1,6 @@
 cask 'chrysalis' do
-  version '0.7.0'
-  sha256 '72fbd496e6dc73663a552b2374b252b197dfbaca0faa054e3d8f0e09cb676bb0'
+  version '0.7.1'
+  sha256 '1fbbaabbdd49302e23dc94022afd038bfcb1612ac85ec020eaf15941764a8bb4'
 
   url "https://github.com/keyboardio/Chrysalis/releases/download/chrysalis-#{version}/Chrysalis-#{version}.dmg"
   appcast 'https://github.com/keyboardio/Chrysalis/releases.atom'
