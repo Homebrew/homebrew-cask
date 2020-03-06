@@ -1,6 +1,6 @@
 cask 'obinslab-starter' do
-  version '1.1.3'
-  sha256 'd59f87eeb0abce38653f38a7cc99415d0e64aaf528314a30d7f2b451d488d907'
+  version '1.1.4'
+  sha256 '7d5cb712e2fb259520de220833f8250d32fd90418f7aa193ec3ac7028e4c31bd'
 
   url "http://releases.obins.net/occ/darwin/x64/ObinsKit_#{version}_x64.dmg"
   appcast 'http://en.obins.net/obinskit'
