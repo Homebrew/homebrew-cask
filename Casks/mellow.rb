@@ -7,8 +7,6 @@ cask 'mellow' do
   name 'Mellow'
   homepage 'https://github.com/mellow-io/mellow'
 
-  auto_updates true
-
   app 'Mellow.app'
 
   zap trash: [
