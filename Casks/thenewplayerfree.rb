@@ -1,0 +1,12 @@
+cask 'thenewplayerfree' do
+  version '1.5.13'
+  sha256 :no_check
+
+  url 'https://github.com/sudormroot/TheNewPlayer_builds/raw/master/releases/macos/thenewplayerfree.macos.v1.5.13/thenewplayerfree.tgz'
+  name 'TheNewPlayerFree'
+  homepage 'https://github.com/sudormroot/TheNewPlayer_builds'
+  
+  app 'TheNewPlayerFree.app'
+
+  zap trash: '~/.config/thenewplayer'
+end
