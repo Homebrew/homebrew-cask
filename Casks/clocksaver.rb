@@ -1,8 +1,8 @@
 cask 'clocksaver' do
-  version '0.5.1'
-  sha256 'f64734fe8598b6c44c4ac1d99b07d0b65e884563c7f616c25a63c1b8e022c387'
+  version '0.7.0'
+  sha256 '9497e774695cadfb25fb6ad1b5689a110f806041b34d3b536b862d653de8bca4'
 
-  url "https://github.com/soffes/Clock.saver/releases/download/v#{version}/Clock.saver.zip"
+  url "https://github.com/soffes/Clock.saver/releases/download/v#{version}/Clock.saver-#{version}.zip"
   appcast 'https://github.com/soffes/Clock.saver/releases.atom'
   name 'Clock.saver screensaver'
   homepage 'https://github.com/soffes/Clock.saver'
