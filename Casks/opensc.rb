@@ -9,8 +9,16 @@ cask 'opensc' do
 
   pkg "OpenSC #{version}.pkg"
 
-  uninstall script: {
-                      executable: '/usr/local/bin/opensc-uninstall',
-                      sudo:       true,
-                    }
+  uninstall script:    {
+                         executable: '/usr/local/bin/opensc-uninstall',
+                         sudo:       true,
+                       },
+            pkgutil:   [
+                         'org.opensc-project.mac.opensctoken',
+                         'org.opensc-project.startup',
+                       ],
+            launchctl: [
+                         'opensc-notify',
+                         'pkcs11-register',
+                       ]
 end
