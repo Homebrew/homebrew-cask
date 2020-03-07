@@ -1,5 +1,5 @@
 cask 'sensei' do
-  version '1.1.1,17'
+  version '1.1.2,18'
   sha256 '30cf7a4acfb0eca6bfaadfc657fb4a3ca743d938dd2c9d8e380758c83f37ae56'
 
   # cindori.s3.amazonaws.com was verified as official when first introduced to the cask
