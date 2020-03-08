@@ -7,6 +7,8 @@ cask 'refined-github-safari' do
   name 'Refined GitHub for Safari'
   homepage 'https://github.com/lautis/refined-github-safari'
 
+  depends_on macos: '>= :mojave'
+
   app 'Refined GitHub for Safari.app'
 
   zap delete: [
