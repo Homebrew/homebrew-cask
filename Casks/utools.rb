@@ -9,7 +9,7 @@ cask 'utools' do
   homepage 'https://u.tools/index.html'
 
   auto_updates true
-  depends_on macos: '>= :el_capitan'
+  depends_on macos: '>= :yosemite'
 
   app 'uTools.app'
 
