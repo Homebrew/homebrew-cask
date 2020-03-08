@@ -9,3 +9,4 @@ cask 'checkra1n' do
 
   app 'checkra1n.app'
 end
+
