@@ -7,4 +7,6 @@ cask 'day-o' do
   homepage 'https://shauninman.com/archive/2016/10/20/day_o_2_mac_menu_bar_clock'
 
   app "Day-#{version}/Day-O.app"
+
+  zap trash: '~/Library/Preferences/com.shauninman.Day-O.plist'
 end
