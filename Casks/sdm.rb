@@ -1,4 +1,4 @@
-cask 'strongdm' do
+cask 'sdm' do
   version '1.4.11'
   sha256 '6bc413ae69db4d1ed54ae7393ec8cf2af66c5812b2cc387f7884fe34825bf6ce'
 
