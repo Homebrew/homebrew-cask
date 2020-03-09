@@ -12,7 +12,7 @@ cask 'sublime-merge' do
   conflicts_with cask: 'sublime-merge-dev'
 
   app 'Sublime Merge.app'
-  binary "#{appdir}/Sublime Merge.app/Contents/SharedSupport/bin/smerge"
+  binary 'Sublime Merge.app/Contents/SharedSupport/bin/smerge'
 
   uninstall quit: 'com.sublimemerge'
 

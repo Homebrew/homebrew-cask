@@ -11,7 +11,7 @@ cask 'visual-studio-code' do
   auto_updates true
 
   app 'Visual Studio Code.app'
-  binary "#{appdir}/Visual Studio Code.app/Contents/Resources/app/bin/code"
+  binary 'Visual Studio Code.app/Contents/Resources/app/bin/code'
 
   zap trash: [
                '~/Library/Application Support/Code',

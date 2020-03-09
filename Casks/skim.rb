@@ -11,9 +11,9 @@ cask 'skim' do
   auto_updates true
 
   app 'Skim.app'
-  binary "#{appdir}/Skim.app/Contents/SharedSupport/displayline"
-  binary "#{appdir}/Skim.app/Contents/SharedSupport/skimnotes"
-  binary "#{appdir}/Skim.app/Contents/SharedSupport/skimpdf"
+  binary 'Skim.app/Contents/SharedSupport/displayline'
+  binary 'Skim.app/Contents/SharedSupport/skimnotes'
+  binary 'Skim.app/Contents/SharedSupport/skimpdf'
 
   zap trash: [
                '~/Library/Preferences/net.sourceforge.skim-app.skim.plist',

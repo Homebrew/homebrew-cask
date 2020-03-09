@@ -9,7 +9,7 @@ cask 'tad' do
   homepage 'https://www.tadviewer.com/'
 
   app 'Tad.app'
-  binary "#{appdir}/Tad.app/Contents/Resources/tad.sh", target: 'tad'
+  binary 'Tad.app/Contents/Resources/tad.sh', target: 'tad'
 
   zap trash: [
                '~/Library/Application Support/Tad',

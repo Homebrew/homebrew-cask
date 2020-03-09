@@ -9,7 +9,7 @@ cask 'oni' do
   homepage 'https://www.onivim.io/'
 
   app 'Oni.app'
-  binary "#{appdir}/Oni.app/Contents/Resources/app/cli/mac/oni.sh", target: 'oni'
+  binary 'Oni.app/Contents/Resources/app/cli/mac/oni.sh', target: 'oni'
 
   zap trash: [
                '~/.oni',

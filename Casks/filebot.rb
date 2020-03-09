@@ -8,7 +8,7 @@ cask 'filebot' do
   homepage 'https://www.filebot.net/'
 
   app 'FileBot.app'
-  binary "#{appdir}/FileBot.app/Contents/MacOS/filebot.sh", target: 'filebot'
+  binary 'FileBot.app/Contents/MacOS/filebot.sh', target: 'filebot'
 
   zap trash: '~/Library/Preferences/net.filebot.ui.plist'
 end

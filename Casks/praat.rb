@@ -9,5 +9,5 @@ cask 'praat' do
   homepage 'http://www.fon.hum.uva.nl/praat/'
 
   app 'Praat.app'
-  binary "#{appdir}/Praat.app/Contents/MacOS/Praat", target: 'praat'
+  binary 'Praat.app/Contents/MacOS/Praat', target: 'praat'
 end

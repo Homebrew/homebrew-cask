@@ -8,7 +8,7 @@ cask 'sekey' do
   homepage 'https://github.com/sekey/sekey/'
 
   pkg "SeKey-#{version}.pkg"
-  binary "#{appdir}/SeKey.app/Contents/MacOS/sekey"
+  binary 'SeKey.app/Contents/MacOS/sekey'
 
   uninstall launchctl: 'com.ntrippar.sekey',
             pkgutil:   'com.ntrippar.sekey'

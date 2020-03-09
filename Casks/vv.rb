@@ -10,7 +10,7 @@ cask 'vv' do
   depends_on formula: 'neovim'
 
   app 'VV.app'
-  binary "#{appdir}/VV.app/Contents/Resources/bin/vv"
+  binary 'VV.app/Contents/Resources/bin/vv'
 
   zap trash: '~/Library/Application Support/VV'
 end

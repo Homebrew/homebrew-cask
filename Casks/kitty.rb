@@ -10,7 +10,7 @@ cask 'kitty' do
   depends_on macos: '>= :sierra'
 
   app 'kitty.app'
-  binary "#{appdir}/kitty.app/Contents/MacOS/kitty"
+  binary 'kitty.app/Contents/MacOS/kitty'
 
   zap trash: [
                '~/.config/kitty',

@@ -11,8 +11,8 @@ cask 'atom' do
   auto_updates true
 
   app 'Atom.app'
-  binary "#{appdir}/Atom.app/Contents/Resources/app/apm/bin/apm"
-  binary "#{appdir}/Atom.app/Contents/Resources/app/atom.sh", target: 'atom'
+  binary 'Atom.app/Contents/Resources/app/apm/bin/apm'
+  binary 'Atom.app/Contents/Resources/app/atom.sh', target: 'atom'
 
   zap trash: [
                '~/.atom',

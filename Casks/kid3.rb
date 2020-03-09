@@ -10,5 +10,5 @@ cask 'kid3' do
   homepage 'https://kid3.sourceforge.io/'
 
   app 'kid3.app'
-  binary "#{appdir}/kid3.app/Contents/MacOS/kid3-cli"
+  binary 'kid3.app/Contents/MacOS/kid3-cli'
 end
