@@ -8,7 +8,7 @@ cask 'arduino' do
   homepage 'https://www.arduino.cc/'
 
   app 'Arduino.app'
-  binary "#{appdir}/Arduino.app/Contents/Java/arduino-builder"
+  binary 'Arduino.app/Contents/Java/arduino-builder'
 
   zap trash: [
                '~/Library/Arduino15',

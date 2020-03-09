@@ -11,7 +11,7 @@ cask 'gitup' do
   auto_updates true
 
   app 'GitUp.app'
-  binary "#{appdir}/GitUp.app/Contents/SharedSupport/gitup"
+  binary 'GitUp.app/Contents/SharedSupport/gitup'
 
   zap trash: '~/Library/Preferences/co.gitup.mac.plist'
 end

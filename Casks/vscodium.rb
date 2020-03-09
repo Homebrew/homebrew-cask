@@ -11,7 +11,7 @@ cask 'vscodium' do
   conflicts_with cask: 'visual-studio-code'
 
   app 'VSCodium.app'
-  binary "#{appdir}/VSCodium.app/Contents/Resources/app/bin/code"
+  binary 'VSCodium.app/Contents/Resources/app/bin/code'
 
   zap trash: [
                '~/Library/Application Support/VSCodium',

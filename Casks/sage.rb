@@ -11,7 +11,7 @@ cask 'sage' do
   depends_on macos: '>= :high_sierra'
 
   app "SageMath-#{version.before_comma}.app"
-  binary "#{appdir}/SageMath-#{version.before_comma}.app/Contents/Resources/sage/sage"
+  binary "SageMath-#{version.before_comma}.app/Contents/Resources/sage/sage"
 
   uninstall quit: 'org.sagemath.Sage'
 

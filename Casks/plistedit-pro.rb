@@ -10,7 +10,7 @@ cask 'plistedit-pro' do
   depends_on macos: '>= :high_sierra'
 
   app 'PlistEdit Pro.app'
-  binary "#{appdir}/PlistEdit Pro.app/Contents/MacOS/pledit"
+  binary 'PlistEdit Pro.app/Contents/MacOS/pledit'
 
   zap trash: [
                '~/Library/Preferences/com.fatcatsoftware.pledpro.plist',
