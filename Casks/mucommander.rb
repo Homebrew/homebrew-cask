@@ -1,6 +1,6 @@
 cask 'mucommander' do
-  version '0.9.4'
-  sha256 '8f7aaf9734386506b0c4b10ac36c06c31b2b90d45747d250218b256aac35e352'
+  version '0.9.4-2'
+  sha256 '1f0dee9c1a4713b462d5ccae5799ca3bb48178c1877715dd34213183d0fc960a'
 
   # github.com/mucommander/mucommander was verified as official when first introduced to the cask
   url "https://github.com/mucommander/mucommander/releases/download/#{version}/mucommander-#{version}.dmg"
