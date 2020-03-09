@@ -36,9 +36,12 @@ cask 'inkscape' do
 
   app 'Inkscape.app'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   binary 'Inkscape.app/Contents/Resources/bin/inkscape'
 
   zap trash: '~/.inkscape-etc'
 >>>>>>> hg/appdir
+=======
+>>>>>>> testing
 end

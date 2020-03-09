@@ -12,11 +12,16 @@ cask 'mpv' do
 
   app 'mpv.app'
 <<<<<<< HEAD
+<<<<<<< HEAD
   binary "#{appdir}/mpv.app/Contents/MacOS/mpv"
   manpage 'documentation/man/mpv.1'
 =======
   binary 'mpv.app/Contents/MacOS/mpv'
 >>>>>>> hg/appdir
+=======
+  binary "#{appdir}/mpv.app/Contents/MacOS/mpv"
+  manpage 'documentation/man/mpv.1'
+>>>>>>> testing
 
   zap trash: [
                '~/.config/mpv',
