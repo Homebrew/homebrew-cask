@@ -1,6 +1,6 @@
 cask 'opencore-configurator' do
-  version '1.16.0.0'
-  sha256 'c2094360280b71ff43f891a833f2cb49ed2fee01a81bad37f7af489926c14608'
+  version '1.17.0.0'
+  sha256 'a3bc177cae4984f1e9721470e820b18730b072df2d81e91634c77e74d6c44c38'
 
   url 'https://mackie100projects.altervista.org/apps/opencoreconf/download-new-build.php?version=last'
   appcast 'https://mackie100projects.altervista.org/category/opencore-configurator-changelog/'
