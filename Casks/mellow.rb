@@ -1,6 +1,6 @@
 cask 'mellow' do
-  version '0.1.14'
-  sha256 '343a269981a37a8696300f47ffd6086f6ab00afbb63eeeedd68909338b14e21a'
+  version '0.1.15'
+  sha256 '309662ba2f276c209b0416be51781c6076079e03e974a5feb33c94bc9bc58c16'
 
   url "https://github.com/mellow-io/mellow/releases/download/v#{version}/Mellow-#{version}.dmg"
   appcast 'https://github.com/mellow-io/mellow/releases.atom'
