@@ -11,5 +11,11 @@ cask 'witch' do
 
   prefpane 'Witch.prefPane'
 
-  zap trash: '~/Library/Preferences/com.manytricks.Witch.plist'
+  uninstall quit:       'com.manytricks.witchdaemon',
+            login_item: 'witchdaemon'
+
+  zap trash: [
+               '~/Library/Preferences/com.manytricks.Witch.plist',
+               '~/Library/Application Support/Witch',
+             ]
 end
