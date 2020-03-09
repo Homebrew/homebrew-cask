@@ -35,13 +35,4 @@ cask 'inkscape' do
   homepage 'https://inkscape.org/'
 
   app 'Inkscape.app'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  binary 'Inkscape.app/Contents/Resources/bin/inkscape'
-
-  zap trash: '~/.inkscape-etc'
->>>>>>> hg/appdir
-=======
->>>>>>> testing
 end
