@@ -4,6 +4,7 @@ cask 'mega' do
 
   url "https://www.megasoftware.net/releases/MEGA#{version}_mac32_setup.dmg"
   name 'MEGA'
+  name 'Molecular Evolutionary Genetics Analysis'
   homepage 'https://megasoftware.net/'
 
   app "MEGA#{version.major}.app"
