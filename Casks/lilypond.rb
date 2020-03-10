@@ -2,10 +2,10 @@ cask 'lilypond' do
   version '2.20.0-1'
   sha256 '1680ca85ff7bdb942a39bff323956357fbb0e6ab17edf9c0e145d52b6c0dc231'
 
-  url "http://lilypond.org/downloads/binaries/darwin-x86/lilypond-#{version}.darwin-x86.tar.bz2"
-  appcast 'http://lilypond.org/macos-x.html'
+  url "https://lilypond.org/downloads/binaries/darwin-x86/lilypond-#{version}.darwin-x86.tar.bz2"
+  appcast 'https://lilypond.org/macos-x.html'
   name 'LilyPond'
-  homepage 'http://lilypond.org/'
+  homepage 'https://lilypond.org/'
 
   depends_on macos: '<= :mojave'
 

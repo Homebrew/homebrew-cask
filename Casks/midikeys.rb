@@ -6,7 +6,7 @@ cask 'midikeys' do
   url "https://github.com/flit/MidiKeys/releases/download/v#{version}/MidiKeys_#{version.major_minor}.zip"
   appcast 'https://immosw.com/versions/midikeys/appcast.xml'
   name 'MidiKeys'
-  homepage 'http://www.manyetas.com/creed/midikeys.html'
+  homepage 'https://www.manyetas.com/creed/midikeys.html'
 
   app 'MidiKeys.app'
 end
