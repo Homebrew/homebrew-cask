@@ -5,8 +5,8 @@ cask 'cocoscreator' do
   # https://www.cocos.com/creator
   url "https://download.cocos.com/CocosCreator/v#{version.before_comma}/CocosCreator_v#{version.before_comma}_#{version.after_comma}_mac.dmg"
   appcast 'https://www.cocos.com/creator'
-  homepage 'https://www.cocos.com/'
   name 'CocosCreator'
+  homepage 'https://www.cocos.com/'
 
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/cocos.wrapper.sh"
