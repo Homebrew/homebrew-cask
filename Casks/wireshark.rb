@@ -18,7 +18,7 @@ cask 'wireshark' do
   uninstall_preflight do
     set_ownership '/Library/Application Support/Wireshark'
 
-    if File.read('/etc/group').match?(/^access_bpf/)
+    if File.read('/etc/group').match?(%r{^access_bpf})
       system_command '/usr/sbin/dseditgroup', args: ['-o', 'delete', 'access_bpf'], sudo: true
     end
   end
