@@ -17,7 +17,10 @@ cask 'wireshark' do
 
   uninstall_preflight do
     set_ownership '/Library/Application Support/Wireshark'
-    system_command '/usr/sbin/dseditgroup', args: ['-o', 'delete', 'access_bpf'], sudo: true
+
+    if system_command 'getent', args: ['group', 'access_bpf']
+      system_command '/usr/sbin/dseditgroup', args: ['-o', 'delete', 'access_bpf'], sudo: true
+    end
   end
 
   uninstall pkgutil:   'org.wireshark.*',
