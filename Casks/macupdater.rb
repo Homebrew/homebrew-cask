@@ -10,6 +10,7 @@ cask 'macupdater' do
   auto_updates true
 
   app 'MacUpdater.app'
+  binary "#{appdir}/MacUpdater.app/Contents/Resources/macupdater_client"
 
   zap trash: [
                '~/Library/Application Support/MacUpdater/',
