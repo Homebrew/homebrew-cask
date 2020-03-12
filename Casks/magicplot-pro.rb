@@ -1,4 +1,4 @@
-cask 'magicplot-pro' do
+cask 'magicplotpro' do
   version '2.9.3'
   sha256 '897adc75fdb5ecf40696808a2b2ca39154238376ddbb05b4e791c53957c7a8df'
 
