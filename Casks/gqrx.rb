@@ -6,7 +6,7 @@ cask 'gqrx' do
   url "https://github.com/csete/gqrx/releases/download/v#{version.major_minor_patch}/Gqrx-#{version}.dmg"
   appcast 'https://github.com/csete/gqrx/releases.atom'
   name 'Gqrx'
-  homepage 'http://gqrx.dk/'
+  homepage 'https://gqrx.dk/'
 
   app 'Gqrx.app'
   binary 'Gqrx.app/Contents/MacOS/airspy_info'
