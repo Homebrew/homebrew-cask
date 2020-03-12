@@ -7,6 +7,7 @@ cask 'soundsource' do
   name 'SoundSource'
   homepage 'https://rogueamoeba.com/soundsource/'
 
+  auto_updates true
   depends_on macos: '>= :sierra'
 
   app 'SoundSource.app'
