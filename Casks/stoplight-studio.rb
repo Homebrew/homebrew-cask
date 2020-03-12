@@ -1,6 +1,6 @@
 cask 'stoplight-studio' do
-  version '1.10.0'
-  sha256 '7910d54d2dca7cc466930ef21fb6a5e4d8dda6a39ad970ee5ac896a4de59fa30'
+  version '1.10.2'
+  sha256 '8ef04ef92c26a95d23395ca3807cd1e00f2f9e10d2083be42a0ce7868aa43711'
 
   # github.com/stoplightio/studio was verified as official when first introduced to the cask
   url "https://github.com/stoplightio/studio/releases/download/v#{version}/stoplight-studio-mac.dmg"

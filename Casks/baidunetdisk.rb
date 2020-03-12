@@ -1,6 +1,6 @@
 cask 'baidunetdisk' do
-  version '3.0.4.2'
-  sha256 '63800bcc2244829f488cf3e0d27739852831ef9a7ff638de3e459063ab503ef0'
+  version '3.0.5.4'
+  sha256 'e343c51d2d41dccf013d92a2ff025dfd5a4ff2e382976d44c7afd26d5123efbf'
 
   # baidupcs.com/issue/netdisk/MACguanjia was verified as official when first introduced to the cask
   url "https://issuecdn.baidupcs.com/issue/netdisk/MACguanjia/BaiduNetdisk_mac_#{version}.dmg"

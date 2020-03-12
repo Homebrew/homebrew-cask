@@ -1,8 +1,8 @@
 cask 'abstract' do
-  version '89.0.0'
-  sha256 'ebbf8886d320e75b7229d6d62b9da58536e8a9f6868eb9ae6aa5966aa1fa2608'
+  version '90.0.1'
+  sha256 '3ab4b16c45b101d536eb99720b4505a245dd481a9a832a67af7e22a4111eb04c'
 
-  url "https://downloads.goabstract.com/Abstract-#{version}.dmg"
+  url "https://downloads.goabstract.com/mac/Abstract-#{version}.dmg"
   appcast 'https://www.goabstract.com/release-notes/'
   name 'Abstract'
   homepage 'https://www.goabstract.com/'

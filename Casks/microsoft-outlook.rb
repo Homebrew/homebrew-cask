@@ -1,39 +1,33 @@
-cask 'microsoft-powerpoint' do
+cask 'microsoft-outlook' do
   version '16.35.20030802'
-  sha256 '65292f7cda8c53fb796332b84398f3a4528831cced9e7e5614a778055f7683af'
+  sha256 '92094986ae997694549e9fa54347663f4720b7842d6e5ff7525bbb4897eb5c94'
 
   # officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate was verified as official when first introduced to the cask
-  url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_PowerPoint_#{version}_Installer.pkg"
+  url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Outlook_#{version}_Installer.pkg"
   appcast 'https://docs.microsoft.com/en-us/officeupdates/update-history-office-for-mac'
-  name 'Microsoft PowerPoint'
-  homepage 'https://products.office.com/en-US/powerpoint'
+  name 'Microsoft Outlook'
+  homepage 'https://products.office.com/en-us/outlook/email-and-calendar-software-microsoft-outlook'
 
   auto_updates true
   conflicts_with cask: 'microsoft-office'
   depends_on macos: '>= :sierra'
 
-  pkg "Microsoft_PowerPoint_#{version}_Installer.pkg"
+  pkg "Microsoft_Outlook_#{version}_Installer.pkg"
 
   uninstall pkgutil:   [
-                         'com.microsoft.package.Microsoft_PowerPoint.app',
+                         'com.microsoft.package.Microsoft_Outlook.app',
                          'com.microsoft.pkg.licensing',
                        ],
             launchctl: 'com.microsoft.office.licensingV2.helper'
 
   zap trash:     [
-                   '~/Library/Application Scripts/com.microsoft.Powerpoint',
-                   '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.powerpoint.sfl*',
+                   '~/Library/Application Scripts/com.microsoft.Outlook',
                    '~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate.fba',
-                   '~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate2',
                    '~/Library/Caches/com.microsoft.autoupdate.fba',
                    '~/Library/Caches/com.microsoft.autoupdate2',
-                   '~/Library/Containers/com.microsoft.Powerpoint',
-                   '~/Library/Cookies/com.microsoft.autoupdate.fba.binarycookies',
-                   '~/Library/Cookies/com.microsoft.autoupdate2.binarycookies',
-                   '~/Library/Preferences/com.microsoft.Powerpoint.plist',
+                   '~/Library/Containers/com.microsoft.Outlook',
                    '~/Library/Preferences/com.microsoft.autoupdate.fba.plist',
                    '~/Library/Preferences/com.microsoft.autoupdate2.plist',
-                   '~/Library/Saved Application State/com.microsoft.autoupdate2.savedState',
                  ],
       rmdir:     [
                    '~/Library/Caches/Microsoft/uls',

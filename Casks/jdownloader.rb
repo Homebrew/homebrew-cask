@@ -5,7 +5,7 @@ cask 'jdownloader' do
   url 'http://installer.jdownloader.org/clean/JD2Setup.dmg',
       user_agent: :fake
   name 'JDownloader'
-  homepage 'http://jdownloader.org/'
+  homepage 'https://jdownloader.org/'
 
   preflight do
     system_command "#{staged_path}/JDownloader Installer.app/Contents/MacOS/JavaApplicationStub",

@@ -1,6 +1,6 @@
 cask 'sia-ui' do
-  version '1.4.2'
-  sha256 'f57ff219aff302445211c6513ae9e8dcf6fa0d4c11ee716347a69a06f84583c6'
+  version '1.4.3'
+  sha256 '00e96c6e23ea67eca0d302382cd56bb8b23e08077133dc5ec856bc98a7a294b2'
 
   url "https://sia.tech/releases/Sia-UI-v#{version}.dmg"
   appcast 'https://gitlab.com/api/v4/projects/7508674/releases'
