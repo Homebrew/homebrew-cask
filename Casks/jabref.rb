@@ -9,6 +9,4 @@ cask 'jabref' do
   homepage 'https://www.jabref.org/'
 
   app 'JabRef.app'
-
-  uninstall delete: '/Applications/JabRef.app'
 end
