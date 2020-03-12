@@ -1,14 +1,23 @@
 cask 'thonny' do
-  version '3.2.6'
-  sha256 'bf2666d4877129fc507127be162d4864eb080a005d0484ae6bf20647034b9226'
+  version '3.2.7'
+  sha256 'f70a3dc2321e2ab0abf433900a5a36c231d1cccdd1e4aba48c400926f34d3c2b'
 
   # github.com/thonny/thonny/releases/download was verified as official when first introduced to the cask
-  url "https://github.com/thonny/thonny/releases/download/v#{version}/thonny-#{version}.dmg"
+  url "https://github.com/thonny/thonny/releases/download/v#{version}/thonny-#{version}.pkg"
   appcast 'https://github.com/thonny/thonny/releases.atom'
   name 'Thonny'
   homepage 'https://thonny.org/'
 
-  app 'Thonny.app'
+  pkg "thonny-#{version}.pkg"
 
-  zap trash: '~/.thonny'
+  uninstall quit:    'Thonny',
+            pkgutil: 'org.thonny.Thonny.component',
+            delete:  '/Applications/Thonny.app'
+
+  zap trash: [
+               '~/Library/Saved Application State/org.thonny.Thonny.savedState',
+               '~/Library/Thonny',
+               '~/.thonny',
+               '~/.config/Thonny',
+             ]
 end
