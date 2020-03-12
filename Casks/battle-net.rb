@@ -13,6 +13,8 @@ cask 'battle-net' do
   name 'Blizzard Battle.net'
   homepage 'https://www.battle.net/'
 
+  auto_updates true
+
   installer manual: 'Battle.net-Setup.app'
 
   preflight do
