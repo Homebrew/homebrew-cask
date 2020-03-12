@@ -17,7 +17,5 @@ cask 'thonny' do
   zap trash: [
                '~/Library/Saved Application State/org.thonny.Thonny.savedState',
                '~/Library/Thonny',
-               '~/.thonny',
-               '~/.config/Thonny',
              ]
 end
