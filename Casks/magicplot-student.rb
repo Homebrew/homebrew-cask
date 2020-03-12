@@ -1,4 +1,4 @@
-cask 'magicplot-student' do
+cask 'magicplotstudent' do
   version '2.9.3'
   sha256 'ddfbad34da2134f86d46c3ff0834a3138f62eadcc497f17d5aa116571c05d23e'
 
