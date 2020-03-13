@@ -1,6 +1,6 @@
 cask 'malus' do
-  version '1.0.1'
-  sha256 '13fee5e9eb756fa3a6ca75d1eacd1ac24298432d4f7ac9fad1317ca81bb419cd'
+  version '1.0.2'
+  sha256 '918b4009d876f852a97905f9e1094385a835a96e9f53b69ef3d7df263dd508b7'
 
   # malusfile.com was verified as official when first introduced to the cask
   url "https://malusfile.com/uploads/Malus-mac-#{version}.dmg"
