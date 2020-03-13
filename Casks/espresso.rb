@@ -1,6 +1,6 @@
 cask 'espresso' do
-  version '5.3.2'
-  sha256 'ce23df1e9c4874805f91c838d0f8d0d368c6acbc09e3b20af0f3f8d62c4a4083'
+  version '5.4'
+  sha256 '8aa2fb27503d230f7cd05c5d0d3b1be19468d78a260910272fa538d099515c5d'
 
   # downloads.kangacode.com was verified as official when first introduced to the cask
   url "https://downloads.kangacode.com/Espresso/Espresso_#{version}.zip"
