@@ -1,8 +1,9 @@
 cask 'swish' do
-  version '1.3'
-  sha256 '8e7a39a421c69b355fb6d3f2b31135a82901648547ee159232e6783b5cde6f83'
+  version '1.4'
+  sha256 '619bf894d805916dfd749c268b14d82a7bb39dd8b5cff9b6bc291e6a234e4591'
 
-  url "https://highlyopinionated.co/swish/Swish-#{version}.zip"
+  # github.com/chrenn/swish-dl was verified as official when first introduced to the cask
+  url "https://github.com/chrenn/swish-dl/releases/download/#{version}/Swish.zip"
   appcast 'https://highlyopinionated.co/swish/appcast.xml'
   name 'Swish'
   homepage 'https://highlyopinionated.co/swish/'
