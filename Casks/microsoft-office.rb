@@ -12,6 +12,7 @@ cask 'microsoft-office' do
                          'microsoft-word',
                          'microsoft-excel',
                          'microsoft-powerpoint',
+                         'microsoft-outlook',
                          'onedrive',
                        ]
   depends_on macos: '>= :sierra'
