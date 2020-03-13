@@ -8,8 +8,6 @@ cask 'thonny' do
   name 'Thonny'
   homepage 'https://thonny.org/'
 
-  conflicts_with cask: 'thonny-xxl'
-
   pkg "thonny-#{version}.pkg"
 
   uninstall quit:    'Thonny',
