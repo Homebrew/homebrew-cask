@@ -1,6 +1,6 @@
 cask 'icq' do
-  version '3.0.26400'
-  sha256 '71427996fffbbc8a6f6b9d21296c4b242c4088706209d0deff2eccd9bc2273be'
+  version '3.0.26426'
+  sha256 '1a1fcf7287145d891aa481f946b38f007d93240a71b21f55704c44f755b10b8b'
 
   # hb.bizmrg.com/icq-www was verified as official when first introduced to the cask
   url 'https://hb.bizmrg.com/icq-www/mac/x64/icq.dmg'
