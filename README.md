@@ -60,7 +60,7 @@ If the issue is still not solved, see the guides for common problems:
 
 ## Requests
 
-* Cask requests will be automatically closed. If you want a cask added, [submit a pull request](https://github.com/Homebrew/homebrew-cask/blob/master/CONTRIBUTING.md#adding-a-cask).
+* Bug reports to request a new cask will be automatically closed. If you want a cask to be added, [submit a pull request](https://github.com/Homebrew/homebrew-cask/blob/master/CONTRIBUTING.md#adding-a-cask).
 * For a feature request, [use this template](https://github.com/Homebrew/homebrew-cask/issues/new?template=02_feature_request.md).
 
 ## Questions? Wanna chat?
