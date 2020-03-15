@@ -14,6 +14,8 @@ cask 'lazarus' do
   pkg "LazarusIDE-#{version}-macos-x86_64.pkg"
 
   uninstall pkgutil: 'org.lazarus-ide.pkg.LazarusIDE',
-            delete:  '/Applications/Lazarus.app',
-            delete:  '/Applications/Lazarus.app/Contents/Resources/startlazarus.app'
+            delete:  [ 
+                       '/Applications/Lazarus.app',
+                       '/Applications/Lazarus.app/Contents/Resources/startlazarus.app' 
+                     ]
 end
