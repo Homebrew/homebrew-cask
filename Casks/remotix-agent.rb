@@ -16,15 +16,7 @@ cask 'remotix-agent' do
                           'com.nulana.rxagentmac',
                         ],
             signal:     [
-                          ['TERM', 'com.nulana.rxagentmac.user'],
-                          ['QUIT', 'com.nulana.rxagentmac.user'],
-                          ['INT', 'com.nulana.rxagentmac.user'],
-                          ['HUP', 'com.nulana.rxagentmac.user'],
                           ['KILL', 'com.nulana.rxagentmac.user'],
-                          ['TERM', 'com.nulana.rxagentmac'],
-                          ['QUIT', 'com.nulana.rxagentmac'],
-                          ['INT', 'com.nulana.rxagentmac'],
-                          ['HUP', 'com.nulana.rxagentmac'],
                           ['KILL', 'com.nulana.rxagentmac'],
                         ],
             launchctl:  [
@@ -34,7 +26,6 @@ cask 'remotix-agent' do
                           'com.nulana.rxagentmac.rc',
                         ],
             login_item: 'Remotix Agent',
-            quit:       'com.nulana.rxagentmac',
             delete:     [
                           '/Library/LaunchAgents/com.nulana.rxagentmac.user.plist',
                           '/Library/LaunchDaemons/com.nulana.rxagentmac.daemon.plist',
