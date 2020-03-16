@@ -9,6 +9,7 @@ cask 'corona-tracker' do
   homepage 'https://coronatracker.samabox.com/'
 
   auto_updates true
+  depends_on macos: '>= :catalina'
 
   app 'Corona Tracker.app'
 end
