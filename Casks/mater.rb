@@ -7,5 +7,5 @@ cask 'mater' do
   name 'Mater'
   homepage 'https://github.com/jasonlong/mater'
 
-  app 'Mater.app'
+  app 'Mater-darwin-x64/Mater.app'
 end
