@@ -6,7 +6,7 @@ cask 'postman' do
   url "https://dl.pstmn.io/download/version/#{version}/osx64"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=https://dl.pstmn.io/download/latest/osx'
   name 'Postman'
-  homepage 'https://www.getpostman.com/'
+  homepage 'https://www.postman.com/'
 
   auto_updates true
 
