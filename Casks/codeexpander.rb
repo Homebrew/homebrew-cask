@@ -1,6 +1,6 @@
 cask 'codeexpander' do
-  version '3.3.3'
-  sha256 'b9175f79547f212580712853e9320c159a4eef9fa61fda42a2208de0a3c11a5c'
+  version '3.3.5'
+  sha256 'b72a019e8953942513d89b2586e10d4c5741980bd761b46fcb4b9cf4ddca3c26'
 
   url "https://github.com/oncework/codeexpander/releases/download/#{version.major_minor}.x/CodeExpander-#{version}.dmg"
   appcast 'https://github.com/oncework/codeexpander/releases.atom',
