@@ -1,9 +1,9 @@
 cask 'ogdesign-eagle' do
-  version '1.10,4'
-  sha256 '8d9eb7c63b533acbeb8d4a0a84d6026bfc0d1d005ed583b0e8f291d5bf9d8bdd'
+  version '1.11.0'
+  sha256 'c504887564465c996e2a1ed5dfa5220dcae70bc601aa2c1606c8306cfa7751aa'
 
-  # eagleapp.s3-accelerate.amazonaws.com was verified as official when first introduced to the cask
-  url "https://eagleapp.s3-accelerate.amazonaws.com/releases/Eagle-#{version.before_comma}-build#{version.after_comma}.dmg"
+  url "https://file.eagle.cool/releases/Eagle-#{version.before_comma}-build3.dmg"
+  https://file.eagle.cool/releases/Eagle-#{version.before_comma}-build3.dmg
   appcast 'https://eagle.cool/changelog'
   name 'Eagle'
   homepage 'https://eagle.cool/macOS'
