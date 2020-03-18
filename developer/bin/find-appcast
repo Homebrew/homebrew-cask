@@ -1,0 +1,76 @@
+#!/usr/bin/env ruby
+
+require 'open3'
+require 'pathname'
+require 'yaml'
+
+require 'net/http'
+require 'uri'
+
+def verify_appcast(appcast_type, *urls)
+  print "Looking for #{appcast_type} appcast… "
+
+  urls.each do |url|
+    next unless url_exist?(url)
+
+    puts 'Found!'
+    puts "  #{url}"
+    return true
+  end
+
+  puts 'Not found.'
+  false
+end
+
+def url_exist?(url)
+  uri = URI.parse(url)
+  response = Net::HTTP.get_response(uri)
+  response.is_a? Net::HTTPSuccess
+rescue URI::InvalidURIError, Errno::ECONNREFUSED, SocketError
+  false
+end
+
+def find_sparkle(app)
+  plist = app.join('Contents/Info.plist')
+  url = Open3.capture3('defaults', 'read', plist.to_path, 'SUFeedURL').first.strip
+
+  verify_appcast('Sparkle', url)
+end
+
+def find_electron_builder(app)
+  appcast_file = app.join('Contents/Resources/app-update.yml')
+
+  unless appcast_file.exist?
+    verify_appcast('electron-builder', false)
+    return false
+  end
+
+  data = YAML.load_file(appcast_file)
+  url = data['url']
+  owner = data['owner']
+  repo = data['repo']
+  bucket = data['bucket']
+  channel = data['channel']
+  region = data['region']
+  path = data['path'].sub(%r{^/(.*)/$}, '\1') rescue nil
+
+  possible_appcasts = [
+    "#{url}/latest-mac.yml",
+    "https://github.com/#{owner}/#{repo}/releases.atom",
+    "https://#{bucket}.s3.amazon-aws.yml/#{channel}/latest-mac.yml",
+    "https://#{bucket}.s3.amazonaws.com/latest-mac.yml",
+    "https://#{bucket}.s3.amazonaws.com/#{path}/latest-mac.yml",
+    "https://s3-#{region}.amazonaws.com/#{bucket}/#{path}/latest-mac.yml",
+    "https://s3.amazonaws.com/#{bucket}/#{path}/latest-mac.yml",
+  ]
+
+  unless verify_appcast('electron-builder', *possible_appcasts)
+    puts '  An "app-update.yml" file was found, but we could not parse it.'
+    puts '  Please report this on https://github.com/Homebrew/homebrew-cask/'
+  end
+end
+
+App = Pathname(ARGV[0])
+
+find_sparkle(App)
+find_electron_builder(App)
