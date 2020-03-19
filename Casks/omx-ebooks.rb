@@ -21,7 +21,6 @@ cask 'omx-ebooks' do
                '~/Library/Preferences/org.cef.cefsimple.plist',
                '~/Library/Preferences/org.cef.cefclient.helper.plist',
                '~/Library/Logs/OMX eBooks_debug.log',
-               '~/Library/Application Support/CrashReporter/OMX eBooks Helper_565BD068-8FA5-581E-B995-A28C4228CDC4.plist',
-               '~/Library/Application Support/CrashReporter/OMX eBooks_565BD068-8FA5-581E-B995-A28C4228CDC4.plist',
+               '~/Library/Application Support/CrashReporter/OMX eBooks*',
              ]
 end
