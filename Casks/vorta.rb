@@ -1,6 +1,6 @@
 cask 'vorta' do
-  version '0.6.23'
-  sha256 '3fffcbc06c7a7171ef72808c4bd3c63c9e278ac799158f574e5e5d30180ddcea'
+  version '0.6.24'
+  sha256 'a3bab0ca8c109d2f749dbd3a62f32c93180295a0f05343725d97eade335f0613'
 
   url "https://github.com/borgbase/vorta/releases/download/v#{version}/vorta-#{version}.dmg"
   appcast 'https://github.com/borgbase/vorta/releases.atom'
@@ -8,7 +8,7 @@ cask 'vorta' do
   homepage 'https://github.com/borgbase/vorta'
 
   auto_updates true
-  depends_on macos: '>= :high_sierra'
+  depends_on macos: '>= :mojave'
 
   app 'Vorta.app'
 

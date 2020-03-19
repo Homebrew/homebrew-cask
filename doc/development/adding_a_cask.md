@@ -230,7 +230,9 @@ Before submitting a trial, make sure it can be made into a full working version 
 
 ### Forks and Apps with Conflicting Names
 
-Forks should have the vendor’s name as a prefix on the Cask’s file name and token. For unrelated Apps that share a name, the most popular one (usually the one already present) stays unprefixed. Since this can be subjective, if you disagree with a decision, open an issue and make your case to the maintainers.
+Forks must have the vendor’s name as a prefix on the Cask’s file name and token. If the original software is discontinued, forks still need to follow this rule so as to not be surprising to the user. An exception is made when the original discontinued software recommends a specific fork, at which point said fork may replace the original cask.
+
+For unrelated Apps that share a name, the most popular one (usually the one already present) stays unprefixed. Since this can be subjective, if you disagree with a decision, open an issue and make your case to the maintainers.
 
 ### Unofficial, Vendorless, and Walled Builds
 

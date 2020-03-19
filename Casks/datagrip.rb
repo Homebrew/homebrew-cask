@@ -1,6 +1,6 @@
 cask 'datagrip' do
-  version '2019.3.3,193.6494.42'
-  sha256 '8cac9f932f19f8bd5a3d1446bd193f985224157a19acd551917525913beed24f'
+  version '2019.3.4,193.6911.16'
+  sha256 'c2c71ad497a47c5e13ac4290e20a8b5eaad486511fc6c70d1f91478453f31f3a'
 
   url "https://download.jetbrains.com/datagrip/datagrip-#{version.before_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=DG&latest=true&type=release'

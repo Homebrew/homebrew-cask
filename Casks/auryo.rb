@@ -1,6 +1,6 @@
 cask 'auryo' do
-  version '2.5.2'
-  sha256 '20c70d2c5445714529b3eb78cf18397c703aeaa84136e5d9f495ce447bd4a3ef'
+  version '2.5.3'
+  sha256 '7a35ca5cdbc2ceffb6993ccb37ef1026dce99a81a526a1e63162c6ebb455af04'
 
   # github.com/Superjo149/auryo was verified as official when first introduced to the cask
   url "https://github.com/Superjo149/auryo/releases/download/v#{version}/Auryo-#{version}.dmg"

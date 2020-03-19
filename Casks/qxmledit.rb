@@ -1,6 +1,6 @@
 cask 'qxmledit' do
-  version '0.9.14'
-  sha256 '7c55a9d4edd679ef7c3e6640c06f1aece05e1118e0d48dc65a96e836fafdafe0'
+  version '0.9.15'
+  sha256 '68761bcfdac5e270e075130b795633e8ee20428c9ccefb1ce6f257798ce71fd3'
 
   # downloads.sourceforge.net/qxmledit was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/qxmledit/QXmlEdit-#{version}.dmg"

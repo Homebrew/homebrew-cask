@@ -1,6 +1,6 @@
 cask 'paper' do
-  version '3.4'
-  sha256 '73fa49267e2e31747ea0eea374ca6aa226ff694d7a8b78618192139293d6370e'
+  version '3.5'
+  sha256 '4586ce3e5a726d61428486953dbd5800a4c26b10ada70f98f19354a15863ef95'
 
   url "http://paperimg.meiyuan.in/pap.er_v#{version}.dmg"
   name 'Paper'

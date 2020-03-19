@@ -1,6 +1,6 @@
 cask 'remotix-agent' do
-  version '1.3'
-  sha256 '18de94f6be4a3da33b2d6a30383b5e07de438d6b0502cbf7a161de9c4f8afeb9'
+  version '1.3.2'
+  sha256 '1c499be234ddcd11604e500645e32d3cfbe32b6d65f6e8a65ebd5b0692d4cd1e'
 
   url 'https://downloads.remotixcloud.com/agent-mac/RemotixAgent.pkg'
   appcast 'https://remotixcloud.com/downloads/'
@@ -16,20 +16,14 @@ cask 'remotix-agent' do
                           'com.nulana.rxagentmac',
                         ],
             signal:     [
-                          ['TERM', 'com.nulana.rxagentmac.user'],
-                          ['QUIT', 'com.nulana.rxagentmac.user'],
-                          ['INT', 'com.nulana.rxagentmac.user'],
-                          ['HUP', 'com.nulana.rxagentmac.user'],
                           ['KILL', 'com.nulana.rxagentmac.user'],
-                          ['TERM', 'com.nulana.rxagentmac'],
-                          ['QUIT', 'com.nulana.rxagentmac'],
-                          ['INT', 'com.nulana.rxagentmac'],
-                          ['HUP', 'com.nulana.rxagentmac'],
                           ['KILL', 'com.nulana.rxagentmac'],
                         ],
             launchctl:  [
                           'com.nulana.rxagentmac.user',
                           'com.nulana.rxagentmac.daemon',
+                          'com.nulana.rxagentmac.gui',
+                          'com.nulana.rxagentmac.rc',
                         ],
             login_item: 'Remotix Agent',
             delete:     [

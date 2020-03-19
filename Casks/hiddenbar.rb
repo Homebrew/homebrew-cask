@@ -1,6 +1,6 @@
 cask 'hiddenbar' do
-  version '1.3'
-  sha256 '18cc733332a7d00c8f6c918f6081a89ac5b38e230baafe7104d356d4c7853155'
+  version '1.5'
+  sha256 '66f32bf47788a971ccc409249f0d183265bf979f6a896f08ab173bc47eef15ac'
 
   url "https://github.com/dwarvesf/hidden/releases/download/v#{version}/Hidden.Bar.#{version}.dmg"
   appcast 'https://github.com/dwarvesf/hidden/releases.atom'

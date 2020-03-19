@@ -1,6 +1,6 @@
 cask 'icab' do
-  version '5.9.1'
-  sha256 '4281500b5f38848c3e376f1acf7dca48e4d13cf61f446dcef289acfa97809e36'
+  version '5.9.2'
+  sha256 '3700c7a4078b7a867ac2037db7a0f3252056170b99f5bfd8257150c956a4f7ac'
 
   # icab.clauss-net.de was verified as official when first introduced to the cask
   url "https://icab.clauss-net.de/icab/iCab_#{version}_Intel.zip"

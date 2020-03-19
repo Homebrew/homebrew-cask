@@ -1,6 +1,6 @@
 cask 'fly' do
-  version '5.7.0'
-  sha256 'efa0d9760ac0c6b02088b2c94a0389e62cacb6fddd55775b41661dcfd92ff856'
+  version '5.8.0'
+  sha256 '8e1b4e3a6fdc29878010ba9ee59f8df182e0a33c0551f0ad77f65e242a4fe769'
 
   url "https://github.com/concourse/concourse/releases/download/v#{version}/fly-#{version}-darwin-amd64.tgz"
   appcast 'https://github.com/concourse/concourse/releases.atom'

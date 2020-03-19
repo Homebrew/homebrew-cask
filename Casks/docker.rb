@@ -3,8 +3,8 @@ cask 'docker' do
     version '18.06.1-ce-mac73,26764'
     sha256 '3429eac38cf0d198039ad6e1adce0016f642cdb914a34c67ce40f069cdb047a5'
   else
-    version '2.2.0.3,42716'
-    sha256 '5892e709d97811290f3de79ddc5d21d0ac799435a444a38f4eebbdc019d6561b'
+    version '2.2.0.4,43472'
+    sha256 'defb095871ef260ccdb77d9960ed8510bdb288124025404f6543b94ec683e160'
   end
 
   url "https://download.docker.com/mac/stable/#{version.after_comma}/Docker.dmg"
@@ -25,7 +25,6 @@ cask 'docker' do
                          '/usr/local/bin/docker-compose',
                          '/usr/local/bin/docker-credential-desktop',
                          '/usr/local/bin/docker-credential-osxkeychain',
-                         '/usr/local/bin/docker-machine',
                          '/usr/local/bin/hyperkit',
                          '/usr/local/bin/kubectl',
                          '/usr/local/bin/kubectl.docker',
@@ -40,7 +39,6 @@ cask 'docker' do
 
   zap trash: [
                '/usr/local/bin/docker-compose.backup',
-               '/usr/local/bin/docker-machine.backup',
                '/usr/local/bin/docker.backup',
                '~/Library/Application Scripts/com.docker.helper',
                '~/Library/Caches/KSCrashReports/Docker',
