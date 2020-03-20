@@ -1,6 +1,6 @@
 cask 'sitebulb' do
-  version '3.4'
-  sha256 'c3d2bfcaac54eb6bfba856a20ba857bfc3174b801f5f70b0283f442ef4dab156'
+  version '3.5'
+  sha256 'f5812c1df4bf6b5186421a4bdf9ca9e4b2ee2618de70ba6a502c786282d9b842'
 
   url "https://downloads.sitebulb.com/#{version}/macOS/Sitebulb.dmg"
   appcast 'https://sitebulb.com/download/'
