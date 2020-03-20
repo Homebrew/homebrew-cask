@@ -5,7 +5,7 @@ cask 'affinity-designer' do
   # s3-eu-west-1.amazonaws.com was verified as official when first introduced to the cask
   url "https://s3-eu-west-1.amazonaws.com/affinity-update/mac/retail/Affinity%20Designer-#{version}.app.zip"
   appcast 'https://s3-eu-west-1.amazonaws.com/affinity-update/mac/retail/designer.xml'
-  name 'affinity-designer'
+  name 'Affinity Designer'
   homepage 'https://affinity.serif.com/en-us/designer/'
 
   auto_updates true
