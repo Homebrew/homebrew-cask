@@ -1,6 +1,6 @@
 cask 'masscode' do
-  version '1.0.2'
-  sha256 '6b663913e66f92d167e87451ccddc912eb3f3a034cc96a382b2f07edd60dcda7'
+  version '1.1.0'
+  sha256 'c57809663fdfd919de72d03793ab0af7078bb795ae05b11730cbcccb0abf3f76'
 
   # github.com/antonreshetov/massCode was verified as official when first introduced to the cask
   url "https://github.com/antonreshetov/massCode/releases/download/v#{version}/massCode-#{version}-mac.zip"
