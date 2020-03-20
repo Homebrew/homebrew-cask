@@ -1,9 +1,18 @@
 cask 'cockatrice' do
-  version '2.7.2,2019-08-31:Faerie_Tales'
-  sha256 '862ba7bdcdfef0ecd17c9b380a0f1fb9f4fcaada203a7fb7af7a837d63eaa5da'
+  if MacOS.version <= :mojave
+    version '2.7.2,2019-08-31:Faerie_Tales'
+    sha256 '862ba7bdcdfef0ecd17c9b380a0f1fb9f4fcaada203a7fb7af7a837d63eaa5da'
 
-  # github.com/Cockatrice/Cockatrice was verified as official when first introduced to the cask
-  url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.after_comma.before_colon}-Release-#{version.before_comma}/Cockatrice-#{version.after_colon}-#{version.before_comma}-osx-sierra.dmg"
+    # github.com/Cockatrice/Cockatrice was verified as official when first introduced to the cask
+    url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.after_comma.before_colon}-Release-#{version.before_comma}/Cockatrice-#{version.after_colon}-#{version.before_comma}-osx-sierra.dmg"
+  else
+    version '2.7.3,2020-03-19:Dawn_of_Hope'
+    sha256 '8b0f4146523caa1abbd02dd5efeeca4a60b82f066aece9b975bdfd0109a59c04'
+
+    # github.com/Cockatrice/Cockatrice was verified as official when first introduced to the cask
+    url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.after_comma.before_colon}-Release-#{version.before_comma}/Cockatrice-#{version.after_colon}-#{version.before_comma}-macos-catalina.dmg"
+  end
+
   appcast 'https://github.com/Cockatrice/Cockatrice/releases.atom'
   name 'Cockatrice'
   homepage 'https://cockatrice.github.io/'
