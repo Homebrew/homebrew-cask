@@ -1,6 +1,6 @@
 cask 'historyhound' do
-  version '2.1.1'
-  sha256 '98060c93f5cb7b70f973d5c11460cd31554af90257799a789981a09d2a90c95a'
+  version '2.2'
+  sha256 '47d26ee039aefa4652ac2d0131bee47ccc6a7163cc2fe5fdb32d7c6d23aeb8cb'
 
   url "https://www.stclairsoft.com/download/HistoryHound-#{version}.dmg"
   appcast 'https://www.stclairsoft.com/cgi-bin/sparkle.cgi?HH'
