@@ -7,7 +7,5 @@ cask 'circuit' do
   name 'Unify Circuit'
   homepage 'https://unify.com/en/solutions/team-collaboration/circuit'
 
-  auto_updates true
-
   app 'Circuit.app'
 end
