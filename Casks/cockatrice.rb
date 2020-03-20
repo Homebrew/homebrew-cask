@@ -7,7 +7,7 @@ cask 'cockatrice' do
     url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.after_comma.before_colon}-Release-#{version.before_comma}/Cockatrice-#{version.after_colon}-#{version.before_comma}-osx-sierra.dmg"
   else
     version '2.7.3,2020-03-19:Dawn_of_Hope'
-    sha256 '8b0f4146523caa1abbd02dd5efeeca4a60b82f066aece9b975bdfd0109a59c04'
+    sha256 'bd55e0184c780e8e3bd114dbcc073bb7eaa54ba4f1b47b7c83740037d3e022fa'
 
     # github.com/Cockatrice/Cockatrice was verified as official when first introduced to the cask
     url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.after_comma.before_colon}-Release-#{version.before_comma}/Cockatrice-#{version.after_colon}-#{version.before_comma}-macos-catalina.dmg"
