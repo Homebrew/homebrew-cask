@@ -8,5 +8,7 @@ cask 'family-tree-builder' do
   name 'Family Tree Builder'
   homepage 'https://www.myheritage.com/'
 
+  depends_on macos: '<= :catalina'
+
   app 'Family Tree Builder.app'
 end
