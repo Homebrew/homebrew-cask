@@ -1,6 +1,6 @@
 cask 'sejda-pdf' do
-  version '6.0.3'
-  sha256 '8eae569e0ce3dac88c8253ea328e8b94a51dcacbe2e9c9d4104c78b07348dac6'
+  version '6.0.6'
+  sha256 '1554405d322e23dd8d18550306139c49af24d50c2c67e47a6f0f81e0e1996ad8'
 
   # sejda-cdn.com was verified as official when first introduced to the cask
   url "https://sejda-cdn.com/downloads/sejda-desktop_#{version}.dmg"
