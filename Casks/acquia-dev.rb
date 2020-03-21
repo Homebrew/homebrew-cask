@@ -1,6 +1,6 @@
 cask 'acquia-dev' do
-  version '2.2020.03.17'
-  sha256 '4ce2320cf3fb0918ec6bdb9f00ab6c053900c465fb57a241565d6d8f65803f71'
+  version '2.2020.03.20'
+  sha256 '71b7b2601725ef232b4a64e31a4c26788844456d3fe6c398e2d385f331da0d9e'
 
   url "https://dev.acquia.com/sites/default/files/file/#{version.minor_patch.dots_to_hyphens}/AcquiaDevDesktop-#{version.dots_to_hyphens}.dmg"
   appcast 'https://dev.acquia.com/downloads',
