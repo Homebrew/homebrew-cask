@@ -6,7 +6,7 @@ cask 'bonjour-browser' do
   name 'Bonjour Browser'
   homepage 'http://www.tildesoft.com/'
 
-  depends_on macos: '<= :catalina'
+  depends_on macos: '<= :mojave'
 
   app 'Bonjour Browser.app'
 
