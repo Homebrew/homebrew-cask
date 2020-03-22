@@ -26,7 +26,10 @@ def url_exist?(url)
   uri = URI.parse(url)
   response = Net::HTTP.get_response(uri)
   response.is_a? Net::HTTPSuccess
-rescue URI::InvalidURIError, Errno::ECONNREFUSED, SocketError
+rescue URI::InvalidURIError,
+       Errno::ECONNREFUSED,
+       SocketError,
+       OpenSSL::SSL::SSLError
   false
 end
 
