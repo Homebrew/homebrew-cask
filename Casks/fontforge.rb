@@ -1,5 +1,4 @@
 cask 'fontforge' do
-
   # https://github.com/fontforge/fontforge/releases/download/20200314/FontForge-2020-03-14-67687b0.app.dmg
   if MacOS.version >= :sierra
     depends_on macos: '>= :sierra'
@@ -27,9 +26,10 @@ cask 'fontforge' do
           configuration: version.major_minor_patch.dots_to_hyphens
   name 'FontForge'
   homepage 'https://fontforge.github.io/en-US/'
+
   app 'FontForge.app'
 
   zap trash: [
-               '~/.cache/fontforge'
+               '~/.cache/fontforge',
              ]
 end
