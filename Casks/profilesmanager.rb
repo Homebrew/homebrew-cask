@@ -1,6 +1,6 @@
 cask "profilesmanager" do
-  version "2.5"
-  sha256 "ddeeb39a9994dfe9c22835ffe7e55446f0027bf7c5d44436267b1196e2557b27"
+  version "2.6"
+  sha256 "ea107dd855e7ec4a08a5aa07d7c035a7ac36b5671ed2fef582aaadd54ac72c4b"
 
   url "https://github.com/shaojiankui/ProfilesManager/releases/download/#{version}/ProfilesManager#{version}.zip"
   homepage "https://github.com/shaojiankui/ProfilesManager"
