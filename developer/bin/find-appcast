@@ -65,8 +65,15 @@ def find_electron_builder(app)
   ]
 
   unless verify_appcast('electron-builder', *possible_appcasts)
-    puts '  An "app-update.yml" file was found, but we could not parse it.'
-    puts '  Please report this on https://github.com/Homebrew/homebrew-cask/'
+    warn <<~MESSAGE
+
+      An "app-update.yml" file was found, but we could not parse it.
+      Please report this on https://github.com/Homebrew/homebrew-cask/
+      Provide this info:
+
+    MESSAGE
+
+    puts appcast_file.read
   end
 end
 
