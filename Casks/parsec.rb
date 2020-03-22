@@ -11,6 +11,8 @@ cask 'parsec' do
 
   postflight do
     set_ownership '~/.parsec'
+    system 'diskutil info / | grep -i \'case\\-sensitive\' &> /dev/null && ' \
+           'sudo ln -s /Applications/Parsec.app/Contents/Macos /Applications/Parsec.app/Contents/MacOS'
   end
 
   uninstall pkgutil: 'tv.parsec.www'
