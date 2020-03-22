@@ -3,6 +3,7 @@ cask 'papers' do
   sha256 '8c63a193ced25c92db168e415b3a537efb828c86bd62b7615bc95508d3532801'
 
   url 'https://download.readcube.com/app/Install%20Papers.pkg'
+  appcast 'https://s3.amazonaws.com/update.readcube.com/desktop/updates/latest-mac.yml'
   name 'ReadCube Papers'
   homepage 'https://www.readcube.com/home'
 
