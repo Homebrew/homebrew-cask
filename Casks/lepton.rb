@@ -1,6 +1,6 @@
 cask 'lepton' do
-  version '1.8.2'
-  sha256 'cd5e74beb0818092abe7460b0a71dbe39a9fc285c050e3baede6bfe7ab853351'
+  version '1.9.0'
+  sha256 '6accf64049c225f2b8102c83c71302f21b778decb39c0614fdad00109a6cbf42'
 
   # github.com/hackjutsu/Lepton was verified as official when first introduced to the cask
   url "https://github.com/hackjutsu/Lepton/releases/download/v#{version}/Lepton-#{version}.dmg"
