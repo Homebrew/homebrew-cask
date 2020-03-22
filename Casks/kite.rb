@@ -1,9 +1,9 @@
 cask 'kite' do
-  version '0.20200310.0'
-  sha256 'b7ad7b2c1456475bd09a84e68c24b8b3f242031b6abf898f0d0013cf2653d7a3'
+  version '0.20200320.0'
+  sha256 '4211dca35c9b2cd995e333fa14a957a8d621fbd4318041cc232878fee3b0bc23'
 
-  # kite-downloads.s3.amazonaws.com was verified as official when first introduced to the cask
-  url "https://kite-downloads.s3.amazonaws.com/Kite-#{version}.dmg"
+  # azure-cdn-kite-downloads.azureedge.net was verified as official when first introduced to the cask
+  url "https://azure-cdn-kite-downloads.azureedge.net/mac/#{version}/Kite.dmg"
   appcast 'https://release.kite.com/appcast.xml'
   name 'Kite'
   homepage 'https://kite.com/'
