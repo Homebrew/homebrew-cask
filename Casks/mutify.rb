@@ -3,7 +3,6 @@ cask 'mutify' do
   sha256 '761c6cba9f6db885cbc01f82ae2b539be5137adbb75384151ff6d091f3fdae8b'
 
   url 'https://storage.mutify.app/data/Mutify.dmg'
-  appcast 'https://storage.mutify.app/data/appcast.xml'
   name 'Mutify'
   homepage 'https://mutify.app/'
 
