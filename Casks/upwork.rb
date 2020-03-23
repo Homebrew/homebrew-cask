@@ -10,9 +10,11 @@ cask 'upwork' do
   app 'Upwork.app'
 
   zap trash: [
+               '~/Library/Application Support/CrashReporter/Upwork_*',
                '~/Library/Application Support/Upwork',
                '~/Library/Caches/Upwork',
                '~/Library/Logs/Upwork',
+               '~/Library/Preferences/com.upwork.Upwork.plist',
                '~/Library/Saved Application State/com.upwork.upwork.savedState',
              ]
 end
