@@ -4,7 +4,7 @@ cask 'masterway-note' do
 
   # prota.oss-cn-beijing.aliyuncs.com was verified as official when first introduced to the cask
   url "https://prota.oss-cn-beijing.aliyuncs.com/downloads/#{version.major_minor_patch}/%E5%A4%A7%E5%B8%88%E7%AC%94%E8%AE%B0-#{version}.dmg"
-  name 'Masterway Notes'
+  name 'Masterway Note'
   name '大师笔记'
   homepage 'https://masterwaynote.com/'
 
