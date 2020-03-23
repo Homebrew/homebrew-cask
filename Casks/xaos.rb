@@ -6,7 +6,7 @@ cask 'xaos' do
   url "https://github.com/xaos-project/XaoS/releases/download/release-#{version}/xaos-#{version}-macosx.dmg"
   appcast 'https://github.com/xaos-project/XaoS/releases.atom'
   name 'GNU XaoS'
-  homepage 'http://matek.hu/xaos/doku.php'
+  homepage 'https://xaos-project.github.io/'
 
   app 'XaoS.app'
 end
