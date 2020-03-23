@@ -1,6 +1,6 @@
 cask 'navicat-for-oracle' do
-  version '15.0.11'
-  sha256 '72d886e5c9c3f6b5edbfec9d4dfaf11cec27d68127eb46714261b9b5e1370be5'
+  version '15.0.12'
+  sha256 'e56e5301efed457a90c0b1a6f3a961eb20f49e735c5cb84c10e67ab9a8725620'
 
   url "http://download.navicat.com/download/navicat#{version.major_minor.no_dots}_ora_en.dmg"
   appcast 'https://updater.navicat.com/mac/navicat_updates.php?appName=Navicat%20for%20Oracle&appLang=en'
