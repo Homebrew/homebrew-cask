@@ -4,9 +4,9 @@ cask 'astah-professional' do
 
   # cdn.change-vision.com/files was verified as official when first introduced to the cask
   url "http://cdn.change-vision.com/files/astah-professional-#{version.before_comma.dots_to_underscores}-#{version.after_comma}-MacOs.dmg"
-  appcast 'http://astah.net/download'
+  appcast 'https://astah.net/download'
   name 'Change Vision Astah Professional'
-  homepage 'http://astah.net/editions/professional'
+  homepage 'https://astah.net/editions/professional'
 
   pkg "astah professional ver #{version.before_comma.dots_to_underscores}.pkg"
 
