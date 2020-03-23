@@ -1,4 +1,4 @@
-cask 'tandem-chat' do
+cask 'tandem' do
   version '1.5.0'
   sha256 '02917cbdf5dec79c9bfb84696e606dc2b64667971ce5ff9758a4361fb1eb6055'
 
