@@ -9,5 +9,5 @@ cask 'fanny' do
 
   depends_on macos: '>= :high_sierra'
 
-  app 'FannyWidget/Fanny.app'
+  app 'FannyWidget-v2.1.0/Fanny.app'
 end
