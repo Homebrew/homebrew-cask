@@ -30,6 +30,7 @@ cask 'zoomus' do
   zap trash: [
                '~/.zoomus',
                '~/Desktop/Zoom',
+               '~/Documents/Zoom',
                '~/Library/Application Support/zoom.us',
                '~/Library/Caches/us.zoom.xos',
                '~/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin',
@@ -37,6 +38,7 @@ cask 'zoomus' do
                '~/Library/Logs/zoominstall.log',
                '~/Library/Preferences/ZoomChat.plist',
                '~/Library/Preferences/us.zoom.xos.plist',
+               '~/Library/Safari/PerSiteZoomPreferences.plist',
                '~/Library/Saved Application State/us.zoom.xos.savedState',
              ]
 end

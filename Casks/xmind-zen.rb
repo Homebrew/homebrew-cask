@@ -1,13 +1,13 @@
 cask 'xmind-zen' do
-  version '10.0.2-202002120210'
-  sha256 '80b3eb8b32aade6dacfa0e5ed47ec8b1b424c1811d96a75be56730346bbc166d'
+  version '10.1.0-202003232119'
+  sha256 'ada229e4acf8a4b853ce47af8cd1d14fecbbc1a7600b074fbc4eb880d6dee6ee'
 
-  url "http://dl2.xmind.net/xmind-downloads/XMind-ZEN-for-macOS-#{version}.dmg"
+  url "https://www.xmind.net/xmind/downloads/XMind-2020-for-macOS-#{version}.dmg"
   appcast 'https://www.xmind.net/download/'
-  name 'XMind ZEN'
+  name 'XMind'
   homepage 'https://www.xmind.net/zen/'
 
-  app 'XMind ZEN.app'
+  app 'XMind.app'
 
   zap trash: '~/Library/Application Support/XMind ZEN'
 end

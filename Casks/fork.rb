@@ -14,8 +14,12 @@ cask 'fork' do
   binary "#{appdir}/Fork.app/Contents/Resources/fork_cli", target: 'fork'
 
   zap trash: [
+               '~/Library/Application Support/Fork',
                '~/Library/Application Support/com.DanPristupov.Fork',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.danpristupov.fork.sfl2',
                '~/Library/Caches/com.DanPristupov.Fork',
+               '~/Library/Cookies/com.DanPristupov.Fork.binarycookies',
+               '~/Library/Logs/Fork.log',
                '~/Library/Preferences/com.DanPristupov.Fork.plist',
                '~/Library/Saved Application State/com.DanPristupov.Fork.savedState',
              ]
