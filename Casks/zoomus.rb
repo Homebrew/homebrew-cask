@@ -23,6 +23,7 @@ cask 'zoomus' do
             login_item: 'ZoomOpener',
             delete:     [
                           '/Applications/zoom.us.app',
+                          '~/Documents/Zoom',
                           '~/.zoomus/ZoomOpener.app',
                           '~/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin',
                         ]
@@ -37,6 +38,7 @@ cask 'zoomus' do
                '~/Library/Logs/zoominstall.log',
                '~/Library/Preferences/ZoomChat.plist',
                '~/Library/Preferences/us.zoom.xos.plist',
+               '~/Library/Safari/PerSiteZoomPreferences.plist',
                '~/Library/Saved Application State/us.zoom.xos.savedState',
              ]
 end
