@@ -1,6 +1,6 @@
 cask 'textual' do
-  version '7.1.2,6c6753847'
-  sha256 '50257306c91de79030aa5dc5f09a1963d8d75c21cd9b3e76a6aabef14b48ac94'
+  version '7.1.4,063e6b9ba'
+  sha256 'ef3398428a2a43b8e832adc85bb8cfe675a3619e05a38a59d5a2996f6d20e0a1'
 
   url "https://cached.codeux.com/textual/downloads/resources/builds/standard-release/Textual-#{version.after_comma}.zip"
   appcast 'https://textual-updates-backend.codeux.com/sparkle/feeds/v7/feed-one.xml'

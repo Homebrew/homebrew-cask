@@ -1,6 +1,6 @@
 cask 'rhinoceros' do
-  version '6.22.20028.13212'
-  sha256 '6020615ea151ff413058ac2c11e3023cb170508bd71ae81c5d22ad519c8cc749'
+  version '6.23.20055.11282'
+  sha256 '31adb8a0d5f85ef122cb14c764f0fd602490e571d34b3ec1784e3655eefed54b'
 
   # mcneel.com was verified as official when first introduced to the cask
   url "https://files.mcneel.com/rhino/#{version.major}/mac/releases/rhino_#{version}.dmg"

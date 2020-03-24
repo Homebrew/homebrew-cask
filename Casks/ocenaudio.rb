@@ -1,12 +1,12 @@
 cask 'ocenaudio' do
-  version '3.7.9'
+  version '3.7.12'
 
   if MacOS.version <= :high_sierra
-    sha256 '286df233ed4d9a6f5f60d3d33bf80732683f6c3990596a1100491f6cdeb2bac5'
+    sha256 '96f9a8edf279f0d48b49f9dda5bc3bda26e9d011fc5a284db1e845fa8b612904'
 
     url 'https://www.ocenaudio.com/downloads/index.php/ocenaudio_sierra.dmg'
   else
-    sha256 '28f8c2d249f41d8b1e4281fd5880cad7dce9246cd86e7cf6b4e21f2c89160457'
+    sha256 '038d6b36ead62f02d3bb2352e7252eaeb107a3a0ea86d30f897bbe34aeda6f07'
 
     url 'https://www.ocenaudio.com/downloads/index.php/ocenaudio_mojave.dmg'
   end

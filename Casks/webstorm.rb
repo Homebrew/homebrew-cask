@@ -1,6 +1,6 @@
 cask 'webstorm' do
-  version '2019.3.2,193.6015.40'
-  sha256 '84c0ffb2957e01de8c2d360254df6205695de55e51f1a3c4ccafeac5da5602aa'
+  version '2019.3.4,193.6911.28'
+  sha256 '9bec2e5c6c0a1394acbca077120beb1d2ffab3d7eb647795d6fc35719ba8aa5b'
 
   url "https://download.jetbrains.com/webstorm/WebStorm-#{version.before_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=WS&latest=true&type=release'

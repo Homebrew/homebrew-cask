@@ -1,6 +1,6 @@
 cask 'adobe-digital-editions' do
-  version '4.5.10'
-  sha256 '33f784ab50188cc9e5a6c575a739af726cb1deda5970b075851e03b0e9b26d62'
+  version '4.5.11'
+  sha256 '4bfdb9fdefb7a65bc5227518531ffba2cd2d547a1293265709a526a153800e7e'
 
   url "https://adedownload.adobe.com/pub/adobe/digitaleditions/ADE_#{version.major_minor}_Installer.dmg"
   appcast 'https://www.adobe.com/solutions/ebook/digital-editions/download.html'

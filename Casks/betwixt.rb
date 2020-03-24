@@ -12,5 +12,7 @@ cask 'betwixt' do
   zap trash: [
                '~/Library/Application Support/betwixt',
                '~/Library/Caches/betwixt',
+               '~/Library/Preferences/com.electron.betwixt.plist',
+               '~/Library/Saved Application State/com.electron.betwixt.savedState',
              ]
 end

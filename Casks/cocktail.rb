@@ -36,8 +36,8 @@ cask 'cocktail' do
     url "https://www.maintain.se/downloads/sparkle/mojave/Cocktail_#{version}.zip"
     appcast 'https://www.maintain.se/downloads/sparkle/mojave/mojave.xml'
   else
-    version '13.0.0.1'
-    sha256 'f65b641fc5ff9e83feffac8d15be37da89c7a631673fa7ab86dc21e06aa4d58e'
+    version '13.2'
+    sha256 '7b5360e9bf378983a0eadd9e8ac83723a05264934d3f5c535ef43aac8d11ac71'
 
     url "https://www.maintain.se/downloads/sparkle/catalina/Cocktail_#{version}.zip"
     appcast 'https://www.maintain.se/downloads/sparkle/catalina/catalina.xml'

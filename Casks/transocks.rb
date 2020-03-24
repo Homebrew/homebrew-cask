@@ -1,6 +1,6 @@
 cask 'transocks' do
-  version '2.4.2'
-  sha256 'f53cee427d8b48ff124007476a240d78a3a7a4381da10157452d2a5b0d1f0bb1'
+  version '2.4.3'
+  sha256 'ae29de42a72e4dd41d57ade632c1e05e843ff59d8b8dedd66602882001d627a8'
 
   url "https://www.transocks.com/download/mac/Transocks_Mac_#{version}.pkg"
   appcast 'https://www.transocks.com/js/data.js'

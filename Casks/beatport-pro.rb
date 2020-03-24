@@ -1,6 +1,6 @@
 cask 'beatport-pro' do
-  version '2.4.4_183'
-  sha256 'a4172ea91ce849ce4281e44db3d06ba6a3143d4fea6ff1ddbb29021764ded8e4'
+  version '2.4.5_188'
+  sha256 '8582347568c236695c24855d2fc32311961f58fe8b2b240819cf9eaa327bbd66'
 
   url "https://pro.beatport.com/mac/#{version}/beatportpro_#{version}.zip"
   appcast 'https://pro.beatport.com/mac/appcast.xml'

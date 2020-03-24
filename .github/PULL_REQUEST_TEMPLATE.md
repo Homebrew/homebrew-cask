@@ -20,4 +20,3 @@ Additionally, if **adding a new cask**:
 [open pull requests]: https://github.com/Homebrew/homebrew-cask/pulls
 [already refused]: https://github.com/Homebrew/homebrew-cask/search?q=is%3Aclosed&type=Issues
 [the correct repo]: https://github.com/Homebrew/homebrew-cask/blob/master/doc/development/adding_a_cask.md#finding-a-home-for-your-cask
-[version-checksum]: https://github.com/Homebrew/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/sha256.md#updating-the-sha256

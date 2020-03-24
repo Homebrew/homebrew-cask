@@ -293,7 +293,7 @@ module Cask
       end
 
       def modified_command_files
-        @modified_command_files ||= modified_files.select { |path| tap.command_file?(path) || path.ascend.to_a.last.to_s == "cmd" }
+        @modified_command_files ||= modified_files.select { |path| path.ascend.to_a.last.to_s == "cmd" }
       end
 
       def modified_github_files

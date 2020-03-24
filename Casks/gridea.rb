@@ -1,6 +1,6 @@
 cask 'gridea' do
-  version '0.9.1'
-  sha256 '17c6bcf8010391224ea7e037785d424064f0416185c0a39fca60cd920331ad62'
+  version '0.9.2'
+  sha256 '401033bd7db5a39be7cea1ece6c51bfcae835f0abb8003431f045d7e636602db'
 
   # github.com/getgridea/gridea was verified as official when first introduced to the cask
   url "https://github.com/getgridea/gridea/releases/download/v#{version}/Gridea-#{version}.dmg"

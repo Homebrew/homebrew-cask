@@ -1,6 +1,6 @@
 cask 'exfalso' do
-  version '4.2.1'
-  sha256 'f14267df96269f1b9979f47a82711c61370b0050f006f9bb4b4af07b044cbab6'
+  version '4.3.0'
+  sha256 '988afe6d13691e2ea05c6672aa937d66f4a13f3372d44b6344b50a32da12cf0f'
 
   # github.com/quodlibet/quodlibet was verified as official when first introduced to the cask
   url "https://github.com/quodlibet/quodlibet/releases/download/release-#{version}/ExFalso-#{version}.dmg"

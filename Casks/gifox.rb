@@ -1,6 +1,6 @@
 cask 'gifox' do
-  version '2.1.1,020101.00'
-  sha256 '0b414ab558e4a1e1a96744f67a9722f1828234bfbb20fd5b769b5594f35311da'
+  version '2.1.2,020102.00'
+  sha256 'd102240dc97d64ffd3d1991cf5c7dd53201e1eff711b086f08316129df0ac0a2'
 
   # d3si16icyi9iar.cloudfront.net/gifox was verified as official when first introduced to the cask
   url "https://d3si16icyi9iar.cloudfront.net/gifox/#{version.after_comma}.dmg"

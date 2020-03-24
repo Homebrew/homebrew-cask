@@ -1,9 +1,9 @@
 cask 'imgotv' do
-  version '6.1.7-mango2'
-  sha256 '90b1a6506740b3260aefeafa369bd20232a22eae2dc43b9f5e117e0d839f9d27'
+  version '6.2.1'
+  sha256 '836845a9a3aa566d327ee94d648ae995ea76e3559240f216c2e8c43f64bba816'
 
   # download.imgo.tv was verified as official when first introduced to the cask
-  url "https://download.imgo.tv/app/pc/mac/mgtv-client-#{version}.dmg"
+  url "https://download.imgo.tv/app/pc/newmac/mgtv-mango2-#{version}.dmg"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?user_agent=Mac%20OS%20X&url=http://pcconf.api.mgtv.com/getPcDownloadUrl?source=mango2'
   name 'hunantv'
   name '芒果视频'

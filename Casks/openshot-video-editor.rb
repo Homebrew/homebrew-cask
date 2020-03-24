@@ -1,6 +1,6 @@
 cask 'openshot-video-editor' do
-  version '2.5.0'
-  sha256 '8b0efe95f92cae2580b91487211e56a91c95ac1e05676865bff027c590036130'
+  version '2.5.1'
+  sha256 'cc17586bb7241545659220994c765ae89eb584f6be007069cba519cd4c1793a4'
 
   # github.com/OpenShot/openshot-qt was verified as official when first introduced to the cask
   url "https://github.com/OpenShot/openshot-qt/releases/download/v#{version}/OpenShot-v#{version}-x86_64.dmg"

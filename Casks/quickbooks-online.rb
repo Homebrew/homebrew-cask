@@ -1,6 +1,6 @@
 cask 'quickbooks-online' do
-  version '4.1.0-64'
-  sha256 '6c74ce750e577727db4a102df51aaef2976e0bf2d082fe63868c82d8b010686d'
+  version '4.1.2-69'
+  sha256 'c7a3d27634247fb98ddedf096815f9a3929b66841da893b066f91af86559c769'
 
   url "https://http-download.intuit.com/http.intuit/CMO/qbo_client_web/static/release/mac/QuickBooks-#{version}-mac.zip"
   appcast 'https://http-download.intuit.com/http.intuit/CMO/qbo_client_web/static/release/mac/latest-mac.yml'

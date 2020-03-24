@@ -1,6 +1,6 @@
 cask 'xamarin-mac' do
-  version '6.8.1.17'
-  sha256 '06b714e24237dd29e9bc61a557fa236f9f6a3885808794aaed211a2bbb97f10e'
+  version '6.10.0.21'
+  sha256 '77c48943618528a41891305bca2b873cb9f9e1205ae300d4d6c616b11b1e2f9c'
 
   url "https://dl.xamarin.com/XamarinforMac/Mac/xamarin.mac-#{version}.pkg"
   appcast 'https://docs.microsoft.com/en-us/xamarin/mac/release-notes/',
@@ -8,7 +8,7 @@ cask 'xamarin-mac' do
   name 'Xamarin Mac'
   homepage 'https://www.xamarin.com/platform'
 
-  depends_on cask: 'mono-mdk'
+  depends_on cask: 'homebrew/cask-versions/mono-mdk-for-visual-studio'
 
   pkg "xamarin.mac-#{version}.pkg"
 

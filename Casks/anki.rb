@@ -1,9 +1,10 @@
 cask 'anki' do
-  version '2.1.19'
-  sha256 '9be3e3bdf884f865e15f308e72b1ed0213c061d27102f80d01897d5355eef8e7'
+  version '2.1.23'
+  sha256 '7dbe282f81ef20645479b750c0f2cde4c8f81d7752ca89262c10710533978389'
 
-  url "https://apps.ankiweb.net/downloads/current/anki-#{version}-mac.dmg"
-  appcast 'https://apps.ankiweb.net/docs/changes.html'
+  # github.com/ankitects/anki was verified as official when first introduced to the cask
+  url "https://github.com/ankitects/anki/releases/download/#{version}/anki-#{version}-mac.dmg"
+  appcast 'https://changes.ankiweb.net/README.md'
   name 'Anki'
   homepage 'https://apps.ankiweb.net/'
 

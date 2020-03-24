@@ -1,9 +1,9 @@
 cask 'lazarus' do
   version '2.0.6'
-  sha256 'e78388aad925b5343b551401fa85e22ca63b152c3694e345ef6ddd7c37ba0e7d'
+  sha256 '9bb74062462775cf325288f2e42361d7287ad8dd9c0150ef79710442a05389f0'
 
   # sourceforge.net/lazarus was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/lazarus/lazarus-#{version}-i686-macosx.dmg"
+  url "https://downloads.sourceforge.net/lazarus/LazarusIDE-#{version}-macos-x86_64.pkg"
   appcast 'https://sourceforge.net/projects/lazarus/rss'
   name 'Lazarus'
   homepage 'https://www.lazarus-ide.org/'
@@ -11,7 +11,8 @@ cask 'lazarus' do
   depends_on formula: 'fpc'
   depends_on cask: 'fpcsrc'
 
-  pkg 'lazarus.pkg'
+  pkg "LazarusIDE-#{version}-macos-x86_64.pkg"
 
-  uninstall pkgutil: 'org.freepascal.lazarus.www'
+  uninstall pkgutil: 'org.lazarus-ide.pkg.LazarusIDE',
+            delete:  '/Applications/Lazarus.app'
 end

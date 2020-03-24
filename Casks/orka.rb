@@ -1,9 +1,9 @@
 cask 'orka' do
-  version '1.0.8'
-  sha256 '4c69477ca4731066f6b4cc31d38b6864d465d548f60e2e516d39a80d73fe0562'
+  version '1.1.0'
+  sha256 '1899e2ece05ee7e83b6e360e5d42cef063e57a70c7e48030cfb35935f73954da'
 
-  # dropbox.com/sh/lzq0qi2g7ep32eu was verified as official when first introduced to the cask
-  url 'https://www.dropbox.com/sh/lzq0qi2g7ep32eu/AACox5Z982jnGfzL8yyU-bm_a/orka-cli-macos?dl=1'
+  # dropbox.com/sh/6k0yno0s2527zgv was verified as official when first introduced to the cask
+  url 'https://www.dropbox.com/sh/6k0yno0s2527zgv/AAB9oiWv9IsIZNArPHd6dHRia/orka-cli-macos?dl=1'
   appcast 'https://orkadocs.macstadium.com/docs/downloads'
   name 'Orka CLI'
   homepage 'https://orkadocs.macstadium.com/docs'

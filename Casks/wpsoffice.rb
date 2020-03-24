@@ -1,18 +1,20 @@
 cask 'wpsoffice' do
-  version '1.9.1,2994'
-  sha256 '0e24e91fba32b03e17c520b1037ca9c1df84042c9b6dc54812fb9da7496156b6'
+  version '2.0.2,3356'
+  sha256 'c1eebdeda53a786af2f175b0f1a82b098fe31543b359c96379887f11b2b630e6'
 
-  # package.mac.wpscdn.cn was verified as official when first introduced to the cask
-  url "http://package.mac.wpscdn.cn/mac_wps_pkg/#{version.before_comma}/WPS_Office_#{version.before_comma}(#{version.after_comma}).dmg"
-  appcast 'https://www.wps.cn/product/wpsmac/'
+  # wdl1.pcfg.cache.wpscdn.com was verified as official when first introduced to the cask
+  url "https://wdl1.pcfg.cache.wpscdn.com/wpsdl/macwpsoffice/download/#{version.before_comma}.#{version.after_comma}/WPSOffice_#{version.before_comma}(#{version.after_comma}).dmg"
   name 'WPS Office'
-  homepage 'https://www.wps.cn/product/wpsmac/'
+  homepage 'https://www.wps.com/mac/'
 
   depends_on macos: '>= :sierra'
 
   app 'wpsoffice.app'
 
-  uninstall quit: 'com.kingsoft.wpsoffice.mac'
+  uninstall quit: 'com.kingsoft.wpsoffice.mac.global'
 
-  zap trash: '~/Library/Containers/com.kingsoft.wpsoffice.mac'
+  zap trash: [
+               '~/Library/Application Scripts/com.kingsoft.wpsoffice.mac.global',
+               '~/Library/Containers/com.kingsoft.wpsoffice.mac.global',
+             ]
 end

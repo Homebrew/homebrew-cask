@@ -3,7 +3,7 @@ cask 'flume' do
   sha256 '25b80175858387a19a3eedde2df3b25a5b28b420fdd9bad1a8b552a0a86320ea'
 
   url "https://flumeapp.com/files/Flume-#{version}.zip"
-  appcast 'https://rink.hockeyapp.net/api/2/apps/c88c56b02dcd4dd3acceb6d7a24f7122'
+  appcast 'https://help.flumeapp.com/general/whatsnew'
   name 'Flume'
   homepage 'https://flumeapp.com/'
 

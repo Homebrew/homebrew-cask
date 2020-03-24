@@ -6,7 +6,7 @@ cask 'pdfsam-basic' do
   url "https://github.com/torakiki/pdfsam/releases/download/v#{version}/PDFsam-#{version}.dmg"
   appcast 'https://github.com/torakiki/pdfsam/releases.atom'
   name 'PDFsam Basic'
-  homepage 'https://www.pdfsam.org/'
+  homepage 'https://pdfsam.org/'
 
   pkg "PDFsam Basic-#{version}.pkg"
 

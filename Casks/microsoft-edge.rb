@@ -1,11 +1,10 @@
 cask 'microsoft-edge' do
-  version '80.0.361.48'
-  sha256 'd699f06593bbbe3f94f8833b6d962d81e6185e8c0d24a7f81e1adff9d16899fa'
+  version '80.0.361.69'
+  sha256 'a9d909f52f48a9f8b1cdfde3824f3dda4c824757abd1c3f57c07873d580a1ffb'
 
   # officecdn-microsoft-com.akamaized.net was verified as official when first introduced to the cask
   url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/MicrosoftEdge-#{version}.pkg"
-  appcast 'https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/0409EDGE01-chk.xml',
-          configuration: "#{version.major}.#{version.patch}"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://go.microsoft.com/fwlink/?linkid=2069148'
   name 'Microsoft Edge'
   homepage 'https://www.microsoft.com/edge'
 

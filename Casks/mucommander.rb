@@ -1,9 +1,9 @@
 cask 'mucommander' do
-  version '0.9.3,3'
-  sha256 '17d3fdf19b14299e8edbe3bb1b4ec5629c100d9ffc5f702e736094a1a500354b'
+  version '0.9.4-2'
+  sha256 '1f0dee9c1a4713b462d5ccae5799ca3bb48178c1877715dd34213183d0fc960a'
 
   # github.com/mucommander/mucommander was verified as official when first introduced to the cask
-  url "https://github.com/mucommander/mucommander/releases/download/#{version.before_comma}-#{version.after_comma}/mucommander-#{version.before_comma}.dmg"
+  url "https://github.com/mucommander/mucommander/releases/download/#{version}/mucommander-#{version}.dmg"
   appcast 'https://github.com/mucommander/mucommander/releases.atom'
   name 'muCommander'
   homepage 'https://www.mucommander.com/'

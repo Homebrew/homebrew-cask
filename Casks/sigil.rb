@@ -1,9 +1,9 @@
 cask 'sigil' do
-  version '1.0.0'
-  sha256 '69cfc36ffec87e3c701b5ce46a9c45280a81c5378ec89596a96edf74e9a07037'
+  version '1.1.0'
+  sha256 '72e17a13f4adc003ddb92541e04005636bc0a4d461619af7e3a8bb19710d0a4d'
 
   # github.com/Sigil-Ebook/Sigil was verified as official when first introduced to the cask
-  url "https://github.com/Sigil-Ebook/Sigil/releases/download/#{version}/Sigil.app-#{version}a-Mac.txz"
+  url "https://github.com/Sigil-Ebook/Sigil/releases/download/#{version}/Sigil.app-#{version}-Mac.txz"
   appcast 'https://github.com/Sigil-Ebook/Sigil/releases.atom'
   name 'Sigil'
   homepage 'https://sigil-ebook.com/'

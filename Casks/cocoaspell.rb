@@ -2,11 +2,11 @@ cask 'cocoaspell' do
   version '2.5'
   sha256 'd8dd01e6471df86f55d5f272a33fdb421f49a2fb923a9858a8772ec4367d333c'
 
-  url "http://people.ict.usc.edu/~leuski/cocoaspell/cocoAspell.#{version}.dmg",
+  url "https://people.ict.usc.edu/~leuski/cocoaspell/cocoAspell.#{version}.dmg",
       user_agent: :fake
-  appcast 'http://people.ict.usc.edu/~leuski/cocoaspell/'
+  appcast 'https://people.ict.usc.edu/~leuski/cocoaspell/'
   name 'cocoAspell'
-  homepage 'http://people.ict.usc.edu/~leuski/cocoaspell/'
+  homepage 'https://people.ict.usc.edu/~leuski/cocoaspell/'
 
   depends_on macos: '>= :el_capitan'
 
@@ -29,6 +29,6 @@ cask 'cocoaspell' do
   caveats <<~EOS
     Non-English dictionaries must be installed separately. For more information, see
 
-      http://people.ict.usc.edu/~leuski/cocoaspell/install_dict.php
+      https://people.ict.usc.edu/~leuski/cocoaspell/install_dict.php
   EOS
 end

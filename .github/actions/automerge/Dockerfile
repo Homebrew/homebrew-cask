@@ -1,4 +1,4 @@
-FROM linuxbrew/brew
+FROM homebrew/brew
 
 ENV HOMEBREW_DEVELOPER=1
 ENV HOMEBREW_NO_AUTO_UPDATE=1

@@ -8,4 +8,5 @@ cask 'maciasl' do
   homepage 'https://github.com/acidanthera/MaciASL'
 
   app 'MaciASL.app'
+  binary "#{appdir}/MaciASL.app/Contents/MacOS/iasl-stable", target: 'iasl'
 end

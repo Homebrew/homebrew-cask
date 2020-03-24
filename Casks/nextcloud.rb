@@ -1,10 +1,10 @@
 cask 'nextcloud' do
   if MacOS.version <= :el_capitan
-    version '2.6.2.20191224-legacy'
-    sha256 '65a507096658b9128c122f117f6326fc96bb0397cfc9940daf4eb2d4b8b5997c'
+    version '2.6.4.20200303-legacy'
+    sha256 '63118b878e36e9213297015798a3822d92fe36010690a0951ed1b2f255259368'
   else
-    version '2.6.2.20191224'
-    sha256 'dc92a94370963d8ee74693a02b761fac8dd040e4c35c308c3df63eedcaf7ca1b'
+    version '2.6.4.20200303'
+    sha256 '989be2911e096b1f20132c0649f8a4a42f2c9d6111c6d46dfec7278f783721b6'
   end
 
   url "https://download.nextcloud.com/desktop/releases/Mac/Installer/Nextcloud-#{version}.pkg"

@@ -1,6 +1,6 @@
 cask 'menubar-stats' do
-  version '3.0'
-  sha256 '2e4987f5479a20c1279612f32a3d2a77f531e83106105ca91bfd83215417f621'
+  version '3.2.1'
+  sha256 '8fc7a2487973f4912fbc3750e1f012132445fbbc9df30f7faa09d1ac01270428'
 
   url 'https://seense.com/menubarstats/updateapp/mbs.zip'
   appcast 'https://www.seense.com/menubarstats/updateapp/appcast.xml'

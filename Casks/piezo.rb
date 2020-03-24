@@ -1,6 +1,6 @@
 cask 'piezo' do
-  version '1.6.3'
-  sha256 '925c6e8b14b3c499015441d09b102e0442d4a08654458633f907a50d5b51df99'
+  version '1.6.4'
+  sha256 'ec74e0b5de4ccf45b19f50932bfe873756980f798674be0ddec99718778a8d5e'
 
   url 'https://rogueamoeba.com/piezo/download/Piezo.zip'
   appcast 'https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&bundleid=com.rogueamoeba.Piezo&system=10146'

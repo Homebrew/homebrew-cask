@@ -1,6 +1,6 @@
 cask 'rectangle' do
-  version '0.20'
-  sha256 'dbd63a7564841aadabe340c13a3e61ed6bac10ec0933d441adec7063e7d62d54'
+  version '0.23'
+  sha256 'c3721b55986e64cfd652d469f16477dcb48a74ccf64425eea3a93b1babb91636'
 
   # github.com/rxhanson/Rectangle/releases/download/v was verified as official when first introduced to the cask
   url "https://github.com/rxhanson/Rectangle/releases/download/v#{version}/Rectangle#{version}.dmg"
@@ -14,7 +14,7 @@ cask 'rectangle' do
   app 'Rectangle.app'
 
   zap trash: [
-               '~/Library/Preferences/com.knollsoft.Rectangle',
+               '~/Library/Preferences/com.knollsoft.Rectangle.plist',
                '~/Library/Application Support/Rectangle',
                '~/Library/Caches/com.knollsoft.Rectangle',
              ]

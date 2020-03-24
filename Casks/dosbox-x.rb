@@ -1,6 +1,6 @@
 cask 'dosbox-x' do
-  version '0.82.26,20200131111201'
-  sha256 'a4d7f9dce5d7c3d8ce2631d41a1e99c734f2b7bb0fa4cf296cc8e1c2667e63db'
+  version '0.83.0,20200229182835'
+  sha256 '7a208a72f9bd10279d562714ba3b6b176aa9a95a4acd016058fb2179df841b76'
 
   # github.com/joncampbell123/dosbox-x was verified as official when first introduced to the cask
   url "https://github.com/joncampbell123/dosbox-x/releases/download/dosbox-x-v#{version.before_comma}/dosbox-x-macosx-x64-#{version.after_comma}.zip"
