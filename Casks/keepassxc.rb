@@ -19,5 +19,7 @@ cask 'keepassxc' do
                '~/Library/Caches/org.keepassx.keepassxc',
                '~/Library/Preferences/org.keepassx.keepassxc.plist',
                '~/Library/Saved Application State/org.keepassx.keepassxc.savedState',
+               '~/Library/Logs/DiagnosticReports/KeePassXC_*.crash',
+               '~/Library/Application Support/CrashReporter/KeePassXC_*.plist',
              ]
 end
