@@ -7,6 +7,8 @@ cask 'multipass' do
   name 'Multipass'
   homepage 'https://github.com/CanonicalLtd/multipass/'
 
+  depends_on macos: '>= :sierra'
+
   pkg "multipass-#{version} mac-Darwin.pkg"
 
   uninstall launchctl: 'com.canonical.multipassd',
