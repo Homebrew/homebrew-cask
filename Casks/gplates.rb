@@ -12,5 +12,4 @@ cask 'gplates' do
   depends_on macos: '>= :mavericks'
 
   app "GPlates-#{version}/GPlates.app"
-  binary "#{appdir}/GPlates.app/Contents/MacOS/gplates"
 end
