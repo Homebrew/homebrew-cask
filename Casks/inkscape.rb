@@ -28,7 +28,12 @@ cask 'inkscape' do
       EOS
     end
 
-    zap trash: '~/Library/Application Support/Inkscape'
+    zap trash: [
+                 '~/Library/Application Support/Inkscape',
+                 '~/Library/Application Support/org.inkscape.Inkscape',
+                 '~/Library/Preferences/org.inkscape.Inkscape.plist',
+                 '~/Library/Saved Application State/org.inkscape.Inkscape.savedState',
+               ]
   end
 
   name 'Inkscape'
