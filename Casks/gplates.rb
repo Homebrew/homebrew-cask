@@ -4,7 +4,8 @@ cask 'gplates' do
 
   # downloads.sourceforge.net/gplates was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/gplates/#{version.major_minor}/GPlates-#{version}-Darwin-x86_64.dmg"
-  appcast "https://sourceforge.net/projects/gplates/rss?path=/#{version.major_minor}"
+  appcast 'https://sourceforge.net/projects/gplates/rss?path=/',
+          configuration version.major_minor
   name 'GPlates'
   homepage 'https://www.gplates.org/'
 
