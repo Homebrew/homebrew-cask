@@ -9,7 +9,5 @@ cask 'gplates' do
   name 'GPlates'
   homepage 'https://www.gplates.org/'
 
-  depends_on macos: '>= :mavericks'
-
   app "GPlates-#{version}/GPlates.app"
 end
