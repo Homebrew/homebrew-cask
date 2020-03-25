@@ -12,4 +12,6 @@ cask 'fontforge' do
   depends_on macos: '>= :yosemite'
 
   app 'FontForge.app'
+
+  zap trash: '~/.cache/fontforge'
 end
