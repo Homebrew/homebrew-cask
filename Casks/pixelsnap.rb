@@ -7,5 +7,7 @@ cask 'pixelsnap' do
   name 'PixelSnap'
   homepage 'https://getpixelsnap.com/'
 
+  auto_updates true
+
   app "PixelSnap #{version.major}.app"
 end
