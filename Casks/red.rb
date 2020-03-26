@@ -6,7 +6,6 @@ cask 'red' do
   name 'Red Programming Language'
   homepage 'https://www.red-lang.org/'
 
-  # red doesn't work on Catalina, see https://github.com/red/red/issues/4359#issuecomment-602205340
   depends_on macos: '<= :mojave'
   container type: :naked
 
