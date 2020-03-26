@@ -1,6 +1,6 @@
 cask 'appgate-sdp-client' do
-  version '5.0.3'
-  sha256 '4049883de86ad957bee9b2add65d8380552b4d468f29a5c8840e18411e7bfda1'
+  version '5.1.0'
+  sha256 '51b99894557e15946b0a9fd2c6c4ea36f690611eee259acce4197dab9503d70d'
 
   url "https://sdpdownloads.appgate.com/AppGate-SDP-#{version.major_minor}/clients/AppGate-SDP-#{version}-Installer.dmg"
   appcast "https://www.appgate.com/software-defined-perimeter/support/appgate-sdp-v#{version.major}-#{version.minor}"
