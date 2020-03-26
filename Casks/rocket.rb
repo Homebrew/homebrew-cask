@@ -3,7 +3,7 @@ cask 'rocket' do
   sha256 'bdf1bfcd8fb5cbd04896f006624ea44d464cfff252a16123f83643831cbe280e'
 
   url "https://macrelease.matthewpalmer.net/distribution/appcasts/Rocket-#{version.after_comma}.dmg"
-  appcast 'https://updates.devmate.com/net.matthewpalmer.Rocket.xml'
+  appcast 'https://macrelease.matthewpalmer.net/distribution/appcasts/rocket.xml'
   name 'Rocket'
   homepage 'https://matthewpalmer.net/rocket/'
 
