@@ -7,5 +7,7 @@ cask 'protopie' do
   name 'ProtoPie'
   homepage 'https://www.protopie.io/'
 
+  auto_updates true
+
   app 'ProtoPie.app'
 end
