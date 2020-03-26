@@ -1,6 +1,6 @@
 cask 'fontlab' do
-  version '7.1.0.7363'
-  sha256 '4f04709328045673e5be4db31f547e91a2af8af3ce9aa90818bf8d227c4c2c35'
+  version '7.1.1.7382'
+  sha256 '9b9fc338d047539e64b1042062d739875d7e49afc556fc0f8a50f25caa8a44f8'
 
   # fontlab.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://fontlab.s3.amazonaws.com/fontlab-#{version.major}/#{version.split('.').last}/FontLab-#{version.major}-Mac-Install-#{version.split('.').last}.dmg"
