@@ -6,11 +6,7 @@ cask 'papers' do
   name 'ReadCube Papers'
   homepage 'https://www.readcube.com/home'
 
-  installer script: {
-                      executable:   'Papers Installer.app/Contents/MacOS/Papers Installer',
-                      sudo:         true,
-                      print_stderr: false,
-                    }
+  installer manual: 'Papers Installer.app'
 
   uninstall quit:   'com.ReadCube.Papers',
             delete: '/Applications/Papers.app'
