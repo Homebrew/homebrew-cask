@@ -1,20 +1,23 @@
 cask 'papers' do
-  version '4.0.0'
-  sha256 '8c63a193ced25c92db168e415b3a537efb828c86bd62b7615bc95508d3532801'
+  version :latest
+  sha256 :no_check
 
-  url 'https://download.readcube.com/app/Install%20Papers.pkg'
-  appcast 'https://s3.amazonaws.com/update.readcube.com/desktop/updates/latest-mac.yml'
+  url 'https://download.readcube.com/app/Install%20Papers.zip'
   name 'ReadCube Papers'
   homepage 'https://www.readcube.com/home'
 
-  pkg 'Install Papers.pkg'
+  installer manual: 'Papers Installer.app'
 
-  uninstall pkgutil: 'com.papersapp.PapersInstaller'
+  uninstall quit:   'com.ReadCube.Papers',
+            delete: '/Applications/Papers.app'
 
   zap trash: [
-               '~/Library/Preferences/com.ReadCube.Papers.plist',
-               '~/Library/Caches/com.ReadCube.Papers.ShipIt',
-               '~/Library/Saved Application State/com.ReadCube.Papers.savedState',
+               '~/Library/Application Support/Papers',
                '~/Library/Caches/com.ReadCube.Papers',
+               '~/Library/Caches/com.ReadCube.Papers.ShipIt',
+               '~/Library/Cookies/com.ReadCube.Papers-Installer.binarycookies',
+               '~/Library/Logs/Papers',
+               '~/Library/Preferences/com.ReadCube.Papers.plist',
+               '~/Library/Saved Application State/com.ReadCube.Papers.savedState',
              ]
 end
