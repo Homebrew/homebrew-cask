@@ -1,6 +1,6 @@
 cask 'chromium' do
-  version '752440'
-  sha256 'c9d35545dd7770494549ff076088f27106785a511d9b67bb8c59906d126668ae'
+  version '753610'
+  sha256 'e56ec4bb53aff7bb83ad20d688301be8032b14f01d33932abe2a89aae5b2da7a'
 
   # commondatastorage.googleapis.com/chromium-browser-snapshots/Mac was verified as official when first introduced to the cask
   url "https://commondatastorage.googleapis.com/chromium-browser-snapshots/Mac/#{version}/chrome-mac.zip"
