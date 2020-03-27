@@ -7,5 +7,5 @@ cask 'comparemerge' do
   name 'CompareMerge'
   homepage 'https://sourceforge.net/projects/comparemergenosandbox/'
 
-  app "CompareMerge #{version.before_comma}/CompareMerge #{version.before_comma}.app"
+  app "CompareMerge#{version.before_comma}/CompareMerge#{version.before_comma}.app"
 end
