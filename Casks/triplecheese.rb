@@ -16,6 +16,7 @@ cask 'triplecheese' do
                        'com.u-he.TripleCheese.data.pkg',
                        'com.u-he.TripleCheese.documentation.pkg',
                        'com.u-he.TripleCheese.presets.pkg',
+                       'com.u-he.TripleCheese.tuningFiles.pkg',
                        'com.u-he.TripleCheese.vst.pkg',
                      ]
 
