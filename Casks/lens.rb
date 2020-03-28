@@ -12,7 +12,7 @@ cask 'lens' do
 
   zap trash: [
                '~/Library/Application Support/Lens',
-               '~/Library/Caches/Lens'
+               '~/Library/Caches/Lens',
                '~/Library/Preferences/com.electron.kontena-lens.plist',
                '~/Library/Saved Application State/com.electron.kontena-lens.savedState',
              ]
