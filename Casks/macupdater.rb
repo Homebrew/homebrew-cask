@@ -13,10 +13,11 @@ cask 'macupdater' do
   binary "#{appdir}/MacUpdater.app/Contents/Resources/macupdater_client"
 
   zap trash: [
-               '~/Library/Application Support/MacUpdater/',
+               '~/Library/Application Scripts/com.corecode.MacUpdaterLaunchHelper',
+               '~/Library/Application Support/MacUpdater',
                '~/Library/Caches/com.corecode.MacUpdater',
                '~/Library/Containers/com.corecode.MacUpdaterLaunchHelper',
-               '~/Library/Application Scripts/com.corecode.MacUpdaterLaunchHelper/',
+               '~/Library/Cookies/com.corecode.MacUpdater.binarycookies',
                '~/Library/Preferences/com.corecode.MacUpdater.plist',
              ]
 end
