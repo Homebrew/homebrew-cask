@@ -16,7 +16,6 @@ cask 'contexts' do
                '~/Library/Application Support/com.contextsformac.Contexts',
                '~/Library/Caches/com.contextsformac.Contexts',
                '~/Library/Logs/Contexts',
-               '~/Library/Preferences/ContextStoreAgent.plist',
                '~/Library/Preferences/com.contextsformac.Contexts.plist',
              ]
 end
