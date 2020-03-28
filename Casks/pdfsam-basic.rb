@@ -8,7 +8,5 @@ cask 'pdfsam-basic' do
   name 'PDFsam Basic'
   homepage 'https://pdfsam.org/'
 
-  pkg "PDFsam Basic-#{version}.pkg"
-
-  uninstall pkgutil: 'org.pdfsam.basic'
+  app 'PDFsam Basic.app'
 end
