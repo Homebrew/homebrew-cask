@@ -22,5 +22,6 @@ cask 'fork' do
                '~/Library/Logs/Fork.log',
                '~/Library/Preferences/com.DanPristupov.Fork.plist',
                '~/Library/Saved Application State/com.DanPristupov.Fork.savedState',
+               '~/Library/WebKit/com.DanPristupov.Fork',
              ]
 end
