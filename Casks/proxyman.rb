@@ -13,7 +13,14 @@ cask 'proxyman' do
   app 'Proxyman.app'
 
   uninstall delete:    '/Library/PrivilegedHelperTools/com.proxyman.NSProxy.HelperTool',
-            launchctl: 'com.proxyman.NSProxy.HelperTool'
+            launchctl: 'com.proxyman.NSProxy.HelperTool',
+            script:    {
+                         executable:   '/usr/bin/security',
+                         args:         ['delete-certificate', '-c', 'Proxyman CA'],
+                         must_succeed: false,
+                         print_stderr: false,
+                         sudo:         true,
+                       }
 
   zap trash: [
                '~/Library/Application Support/com.proxyman',
