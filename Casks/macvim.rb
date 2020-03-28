@@ -9,6 +9,7 @@ cask 'macvim' do
 
   auto_updates true
   conflicts_with formula: 'macvim'
+  depends_on macos: '>= :catalina'
 
   app 'MacVim.app'
 
