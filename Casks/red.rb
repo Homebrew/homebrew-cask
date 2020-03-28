@@ -10,4 +10,6 @@ cask 'red' do
   container type: :naked
 
   binary "red-#{version.no_dots}", target: 'red'
+
+  zap trash: '~/.red'
 end
