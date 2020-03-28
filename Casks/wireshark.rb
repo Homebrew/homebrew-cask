@@ -19,7 +19,9 @@ cask 'wireshark' do
     set_ownership '/Library/Application Support/Wireshark'
 
     if File.read('/etc/group').match?(%r{^access_bpf})
-      system_command '/usr/sbin/dseditgroup', args: ['-o', 'delete', 'access_bpf'], sudo: true
+      system_command '/usr/sbin/dseditgroup',
+                     args: ['-o', 'delete', 'access_bpf'],
+                     sudo: true
     end
   end
 
