@@ -1,4 +1,4 @@
-cask 'screenso' do
+cask 'screen' do
   version '1.0.17'
   sha256 '2f02dfaf4132e7eeba1578fff0b3169031e9405364b2e3ac91ed17d7895dfc8d'
 
