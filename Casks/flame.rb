@@ -4,7 +4,7 @@ cask 'flame' do
 
   # github.com/tominsam/flametouch was verified as official when first introduced to the cask
   url "https://github.com/tominsam/flametouch/releases/download/#{version}/Flame_#{version}.zip"
-  appcast 'https://movieos.org/code/flame/'
+  appcast 'https://github.com/tominsam/flametouch/releases.atom'
   name 'Flame'
   homepage 'https://movieos.org/code/flame/'
 
