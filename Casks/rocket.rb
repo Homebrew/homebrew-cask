@@ -7,6 +7,8 @@ cask 'rocket' do
   name 'Rocket'
   homepage 'https://matthewpalmer.net/rocket/'
 
+  auto_updates true
+
   app 'Rocket.app'
 
   zap trash: [
