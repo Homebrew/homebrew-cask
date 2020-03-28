@@ -4,6 +4,7 @@ cask 'maltego' do
 
   # maltego-downloads.s3.us-east-2.amazonaws.com was verified as official when first introduced to the cask
   url "https://maltego-downloads.s3.us-east-2.amazonaws.com/mac/Maltego.v#{version}.dmg"
+  appcast 'https://maltego-downloads.s3.us-east-2.amazonaws.com/info.json'
   name 'Maltego'
   homepage 'https://www.maltego.com/pricing-plans/'
 
