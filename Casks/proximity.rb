@@ -11,4 +11,8 @@ cask 'proximity' do
 
   audio_unit_plugin 'Proximity.component'
   vst_plugin 'Proximity.vst'
+
+  caveats do
+    discontinued
+  end
 end
