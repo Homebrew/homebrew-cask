@@ -2,7 +2,6 @@ cask 'screenso' do
   version '1.0.17'
   sha256 '2f02dfaf4132e7eeba1578fff0b3169031e9405364b2e3ac91ed17d7895dfc8d'
 
-  # download.screen.so was verified as official when first introduced to the cask
   url "https://download.screen.so/desktop-app/darwin/#{version}/Screen.dmg"
   appcast 'https://download.screen.so/'
   name 'Screen'
