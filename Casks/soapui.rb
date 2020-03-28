@@ -33,6 +33,6 @@ cask 'soapui' do
                '~/.soapuios',
                '~/default-soapui-workspace.xml',
                '~/soapui-settings.xml',
-               "~/Library/Application Support/SoapUI-*",
+               '~/Library/Application Support/SoapUI-*',
              ]
 end
