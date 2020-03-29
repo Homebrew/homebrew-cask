@@ -12,6 +12,9 @@ cask 'proxyman' do
 
   app 'Proxyman.app'
 
+  uninstall delete:    '/Library/PrivilegedHelperTools/com.proxyman.NSProxy.HelperTool',
+            launchctl: 'com.proxyman.NSProxy.HelperTool'
+
   zap trash: [
                '~/Library/Application Support/com.proxyman',
                '~/Library/Application Support/com.proxyman.NSProxy',
@@ -21,6 +24,7 @@ cask 'proxyman' do
                '~/Library/Cookies/com.proxyman.NSProxy.binarycookies',
                '~/Library/Preferences/com.proxyman.plist',
                '~/Library/Preferences/com.proxyman.NSProxy.plist',
+               '~/Library/Saved Application State/com.proxyman.NSProxy.savedState',
                '~/.proxyman',
              ]
 end
