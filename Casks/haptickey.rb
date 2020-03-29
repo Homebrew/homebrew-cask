@@ -10,4 +10,11 @@ cask 'haptickey' do
   depends_on macos: '>= :sierra'
 
   app 'HapticKey.app'
+
+  uninstall quit: 'at.niw.HapticKey'
+
+  zap trash: [
+               '~/Library/Caches/at.niw.HapticKey',
+               '~/Library/Preferences/at.niw.HapticKey.plist',
+             ]
 end
