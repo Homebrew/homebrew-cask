@@ -1,6 +1,6 @@
 cask 'iglance' do
-  version '2.0.2'
-  sha256 '446756b278b1f8265048ced6851556030bce4812a0a62dc60af61c049148738a'
+  version '2.0.3'
+  sha256 '4f5c416d99c35884e28ad7b418c28b6f8c1cd75faa33895ae5f85d3ad04b0735'
 
   url "https://github.com/iglance/iglance/releases/download/v#{version}/iGlance_v#{version}.zip"
   appcast 'https://github.com/iglance/iglance/releases.atom'
