@@ -12,5 +12,6 @@ cask 'macintosh-explorer' do
 
   caveats do
     discontinued
+    free_license 'https://www.ragesw.com/products/discontinued.php?product=explorer'
   end
 end
