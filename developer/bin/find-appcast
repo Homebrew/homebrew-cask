@@ -23,14 +23,9 @@ def verify_appcast(appcast_type, *urls)
 end
 
 def url_exist?(url)
-  uri = URI.parse(url)
-  response = Net::HTTP.get_response(uri)
-  response.is_a? Net::HTTPSuccess
-rescue URI::InvalidURIError,
-       Errno::ECONNREFUSED,
-       SocketError,
-       OpenSSL::SSL::SSLError
-  false
+  return false unless url
+
+  system('curl', '--silent', '--location', '--fail', url, out: File::NULL)
 end
 
 def find_sparkle(app)
