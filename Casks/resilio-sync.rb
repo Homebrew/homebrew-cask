@@ -10,4 +10,15 @@ cask 'resilio-sync' do
   auto_updates true
 
   app 'Resilio Sync.app'
+
+  uninstall quit: 'com.resilio.Sync'
+
+  zap trash: [
+               '~/Library/Application Scripts/com.resilio.Sync.FinderExtension',
+               '~/Library/Application Support/Resilio Sync',
+               '~/Library/Caches/com.resilio.Sync',
+               '~/Library/Containers/com.resilio.Sync.FinderExtension',
+               '~/Library/Group Containers/group.com.resilio.Sync',
+               '~/Library/Preferences/com.resilio.Sync.plist',
+             ]
 end
