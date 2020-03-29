@@ -21,6 +21,8 @@ cask 'osxfuse' do
                      ],
             kext:    'com.github.osxfuse.filesystems.osxfusefs'
 
+  zap trash: '~/Library/Caches/com.github.osxfuse.OSXFUSEPrefPane'
+
   caveats do
     reboot
   end
