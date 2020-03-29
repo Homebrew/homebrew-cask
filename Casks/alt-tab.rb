@@ -11,4 +11,11 @@ cask 'alt-tab' do
   depends_on macos: '>= :sierra'
 
   app 'AltTab.app'
+
+  uninstall quit: 'com.lwouis.alt-tab-macos'
+
+  zap trash: [
+               '~/Library/Caches/com.lwouis.alt-tab-macos',
+               '~/Library/Preferences/com.lwouis.alt-tab-macos.plist',
+             ]
 end
