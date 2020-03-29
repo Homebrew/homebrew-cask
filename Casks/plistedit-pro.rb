@@ -16,6 +16,7 @@ cask 'plistedit-pro' do
                '~/Library/Application Support/PlistEdit Pro',
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.fatcatsoftware.pledpro.sfl2',
                '~/Library/Application Support/com.fatcatsoftware.pledpro',
+               '~/Library/Caches/com.apple.helpd/Generated/com.fatcatsoftware.pledpro.help*',
                '~/Library/Caches/com.fatcatsoftware.pledpro',
                '~/Library/Preferences/com.fatcatsoftware.pledpro.plist',
              ]
