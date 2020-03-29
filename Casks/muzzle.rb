@@ -10,4 +10,12 @@ cask 'muzzle' do
   depends_on macos: '>= :el_capitan'
 
   app 'Muzzle.app'
+
+  uninstall quit: 'com.incident57.Muzzle'
+
+  zap trash: [
+               '~/Library/Caches/com.incident57.Muzzle',
+               '~/Library/Cookies/com.incident57.Muzzle.binarycookies',
+               '~/Library/Preferences/com.incident57.Muzzle.plist',
+             ]
 end
