@@ -20,6 +20,7 @@ cask 'textmate' do
   zap trash: [
                '~/Library/Application Support/TextMate',
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macromates.textmate.sfl2',
+               "~/Library/Caches/com.apple.helpd/Generated/TextMate #{version.major} Help*",
                '~/Library/Caches/com.macromates.TextMate',
                '~/Library/Preferences/com.macromates.TextMate.plist',
                '~/Library/Preferences/com.macromates.TextMate.preview.plist',
