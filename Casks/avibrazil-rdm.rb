@@ -12,5 +12,8 @@ cask 'avibrazil-rdm' do
 
   pkg "RDM-#{version}.pkg"
 
-  uninstall pkgutil: 'net.alkalay.RDM'
+  uninstall quit:    'net.alkalay.RDM',
+            pkgutil: 'net.alkalay.RDM'
+
+  zap trash: '~/Library/Preferences/net.alkalay.RDM.plist'
 end
