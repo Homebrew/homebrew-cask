@@ -10,7 +10,5 @@ cask 'openaudible' do
 
   app 'OpenAudible.app'
 
-  zap trash: [
-               '/Library/OpenAudible',
-             ]
+  zap trash: '/Library/OpenAudible'
 end
