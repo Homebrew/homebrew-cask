@@ -13,6 +13,8 @@ cask 'ueli' do
   uninstall quit: 'ueli'
 
   zap trash: [
+               '~/Library/Logs/ueli',
                '~/Library/Application Support/ueli',
+               '~/Library/Preferences/com.electron.ueli.plist',
              ]
 end
