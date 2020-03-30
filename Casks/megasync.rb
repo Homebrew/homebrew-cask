@@ -1,6 +1,6 @@
 cask 'megasync' do
-  version '4.3.1'
-  sha256 '187bf5c4721fa74f235aa0f9c12e8303755f840c83bbeb63ad000b33bc1ea32b'
+  version '4.3.2'
+  sha256 '896d922bb94f4e2884403a7a8d2d1979bd7c8a29ffa6056fc08d850c421340e7'
 
   url 'https://mega.nz/MEGAsyncSetup.dmg'
   appcast 'https://github.com/meganz/MEGAsync/releases.atom'
