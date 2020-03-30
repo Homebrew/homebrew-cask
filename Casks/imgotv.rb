@@ -5,14 +5,13 @@ cask 'imgotv' do
   # download.imgo.tv was verified as official when first introduced to the cask
   url "https://download.imgo.tv/app/pc/newmac/#{version.before_comma}-#{version.after_comma}/mgtv-mango2-#{version.before_comma}.dmg"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?user_agent=Mac%20OS%20X&url=http://pcconf.api.mgtv.com/getPcDownloadUrl?source=mango2'
-  name 'hunantv'
-  name '芒果视频'
+  name '芒果TV'
   homepage 'https://www.mgtv.com/app/'
 
   auto_updates true
   depends_on macos: '>= :yosemite'
 
-  app '芒果TV极速版.app'
+  app '芒果TV.app'
 
   zap trash: [
                '~/Library/Preferences/com.hunantv.osx.imgotv.plist',
