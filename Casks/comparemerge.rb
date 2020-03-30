@@ -1,11 +1,11 @@
 cask 'comparemerge' do
-  version '2.11z,105'
-  sha256 '5c9cfbed48fee3e913713b2b1e14c5dc2719018803f04d1f67bd3fc470b0b886'
+  version '2.11z,107'
+  sha256 'd1f669e3e7dffc3a77d193994cb4028ee5545aad20f8d36443b0f11ee8a0c74f'
 
-  url "https://downloads.sourceforge.net/comparemergenosandbox/CompareMerge%20#{version.before_comma}%28#{version.major}%29.zip"
+  url "https://downloads.sourceforge.net/comparemergenosandbox/CompareMerge#{version.before_comma}#{version.after_comma}.zip"
   appcast 'https://sourceforge.net/projects/comparemergenosandbox/rss'
   name 'CompareMerge'
   homepage 'https://sourceforge.net/projects/comparemergenosandbox/'
 
-  app "CompareMerge#{version.before_comma}/CompareMerge#{version.before_comma}.app"
+  app "CompareMerge#{version.before_comma}#{version.after_comma}/CompareMerge#{version.before_comma}#{version.after_comma}.app"
 end
