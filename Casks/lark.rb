@@ -1,6 +1,6 @@
 cask 'lark' do
-  version '3.20.6'
-  sha256 '232d1d19b1687cedf47f19b297494a47c43c347fb0229e65d69a9f5a45542221'
+  version '3.21.3'
+  sha256 'e819ee0108f4d351f3246a8f57f6eb1d43e4241c5be2cd90d720af9284d40832'
 
   # sf3-ttcdn-tos.pstatp.com was verified as official when first introduced to the cask
   url "https://sf3-ttcdn-tos.pstatp.com/obj/ee-appcenter/Lark-#{version}.dmg"
