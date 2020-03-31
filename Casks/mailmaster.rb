@@ -1,6 +1,6 @@
 cask 'mailmaster' do
-  version :latest
-  sha256 :no_check
+  version '2.14.1'
+  sha256 '4fe9fb8956a8290eb4f6dad34ba8991a840aaf9c72724ab98c0c4d9db977b704'
 
   # client.dl.126.net/macmail/dashi was verified as official when first introduced to the cask
   url 'http://client.dl.126.net/macmail/dashi/mailmaster.dmg'
