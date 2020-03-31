@@ -1,7 +1,7 @@
 cask 'lego-mindstorms-ev3' do
   # note: "3" is not a version number, but an intrinsic part of the product name
-  version '1.4.3'
-  sha256 '90a2a3a904065ae751afb4d78ac23a38eecf2b9e3683c92c6147b7aea7dc7f5d'
+  version '1.4.4'
+  sha256 'cb912667968e08604e755278d0e2f2fc69556349938cb36b708c5ecd8c74af29'
 
   # le-www-live-s.legocdn.com/downloads/LMS-EV3 was verified as official when first introduced to the cask
   url "https://le-www-live-s.legocdn.com/downloads/LMS-EV3/LMS-EV3_Full-setup_#{version}_en-us_osx.dmg"
