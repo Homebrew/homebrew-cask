@@ -8,5 +8,5 @@ cask 'macstroke' do
   homepage 'https://github.com/mtjo/MacStroke'
 
   app 'MacStroke.app'
-  
+
 end
