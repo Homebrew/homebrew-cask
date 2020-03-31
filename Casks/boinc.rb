@@ -10,7 +10,8 @@ cask 'boinc' do
 
   pkg "boinc_#{version}_macOSX_x86_64/BOINC Installer.app/Contents/Resources/BOINC.pkg"
 
-  uninstall pkgutil: 'edu.berkeley.boinc'
+  uninstall pkgutil:   'edu.berkeley.boinc',
+            launchctl: 'edu.berkeley.boinc-sshelper'
 
   zap trash: [
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/edu.berkeley.boinc.sfl*',
