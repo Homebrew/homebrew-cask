@@ -13,11 +13,11 @@ This document describes the algorithm implemented in the `generate_cask_token` s
 
 ## Purpose
 
-The purpose of these stringent conventions is to:
+Software vendors are often inconsistent with their naming. By enforcing strict naming conventions we aim to:
 
-* Unambiguously boil down the name of the software into a unique identifier
-* Minimize renaming events
 * Prevent duplicate submissions
+* Minimize renaming events
+* Unambiguously boil down the name of the software into a unique identifier
 
 The token itself should be:
 
