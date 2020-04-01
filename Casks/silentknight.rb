@@ -9,4 +9,10 @@ cask 'silentknight' do
   homepage 'https://eclecticlight.co/lockrattler-systhist/'
 
   app "silentknight#{version.no_dots}/SilentKnight.app"
+
+  zap trash: [
+               '~/Library/Caches/co.eclecticlight.SilentKnight',
+               '~/Library/Preferences/co.eclecticlight.SilentKnight.plist',
+               '~/Library/Saved Application State/co.eclecticlight.SilentKnight.savedState',
+             ]
 end
