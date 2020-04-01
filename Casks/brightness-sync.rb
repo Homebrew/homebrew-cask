@@ -7,5 +7,7 @@ cask 'brightness-sync' do
   name 'Brightness Sync'
   homepage 'https://github.com/OCJvanDijk/Brightness-Sync'
 
+  depends_on macos: '>= :catalina'
+
   app 'Brightness Sync.app'
 end
