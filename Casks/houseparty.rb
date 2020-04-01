@@ -8,4 +8,12 @@ cask 'houseparty' do
   homepage 'https://houseparty.com/'
 
   app 'Houseparty.app'
+
+  zap trash: [
+               '~/Library/Application Support/com.herzick.mac',
+               '~/Library/Caches/com.herzick.mac',
+               '~/Library/Preferences/Houseparty.plist',
+               '~/Library/Preferences/HousepartyAnalytics.plist',
+               '~/Library/Preferences/com.herzick.mac.plist',
+             ]
 end
