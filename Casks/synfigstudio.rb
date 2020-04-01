@@ -4,7 +4,7 @@ cask 'synfigstudio' do
 
   # github.com/synfig/synfig was verified as official when first introduced to the cask
   url "https://github.com/synfig/synfig/releases/download/v#{version.major_minor_patch}/SynfigStudio-#{version}.dmg"
-  appcast 'https://github.com/synfig/synfig/releases.atom'
+  appcast 'https://github.com/synfig/synfig/releases.atom',
           configuration: version.major_minor_patch
   name 'Synfig Studio'
   homepage 'https://synfig.org/'
