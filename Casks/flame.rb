@@ -8,5 +8,7 @@ cask 'flame' do
   name 'Flame'
   homepage 'https://movieos.org/code/flame/'
 
+  depends_on macos: '>= :catalina'
+
   app 'Flame.app'
 end
