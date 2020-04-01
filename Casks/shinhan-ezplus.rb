@@ -6,7 +6,12 @@ cask 'shinhan-ezplus' do
   name 'Shinhan ezPlus'
   homepage 'https://main.shinhan.com/hpe/index.jsp#040201040200'
 
+
   pkg 'SHBEzPlusMac.pkg'
 
   uninstall pkgutil: 'com.mygreatcompany.pkg.SHBEzPlusMac'
+
+  caveats do
+    depends_on_java '6'
+  end
 end
