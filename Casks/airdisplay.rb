@@ -3,7 +3,7 @@ cask 'airdisplay' do
   sha256 '8e03a4728114114dde6c580003aea0fb6be94154c193c92f86c2da4415519b92'
 
   url "https://www.avatron.com/updates/software/airdisplay/ad#{version.no_dots}.zip"
-  appcast 'https://avatron.com/air-display-hosts/'
+  appcast 'https://www.avatron.com/updates/software/airdisplay/appcast.xml'
   name 'Air Display'
   homepage 'https://avatron.com/applications/air-display/'
 
