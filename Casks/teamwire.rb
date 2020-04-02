@@ -1,6 +1,6 @@
 cask 'teamwire' do
-  version '2.0.2'
-  sha256 '642ff287120938ee1ada930264081bb132409438f32d728e7b015b4a169963f8'
+  version '2.1.0'
+  sha256 'c6b96a0abe8089dee02a25ecba0f5c42244f9b8a76ea7a01bbd4bb76cfb84865'
 
   url "https://desktop.teamwire.eu/dist/#{version}/Teamwire-macos64_#{version}.dmg"
   name 'Teamwire'
