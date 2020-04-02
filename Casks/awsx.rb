@@ -4,6 +4,6 @@ cask 'awsx' do
 
   url "https://github.com/mertongngl/awsx/archive/v#{version}.zip"
   name 'awsx'
-  homepage 'https://github.com/mertongngl/awsx'
+  homepage 'https://github.com/mertongngl/awsx/'
   binary "awsx-#{version}/awsx"
 end
