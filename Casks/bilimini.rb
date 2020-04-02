@@ -9,5 +9,5 @@ cask 'bilimini' do
 
   auto_updates true
 
-  app 'mac/bilimini.app'
+  app 'bilimini.app'
 end
