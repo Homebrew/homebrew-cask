@@ -1,6 +1,6 @@
 cask 'tandem' do
-  version '1.5.0'
-  sha256 '02917cbdf5dec79c9bfb84696e606dc2b64667971ce5ff9758a4361fb1eb6055'
+  version '1.5.1'
+  sha256 'c1ca526b4efb9c412b40cf2054e6102f3bb57d9aab9c48e8f25143d5bde00ff2'
 
   # tandem-app.sfo2.cdn.digitaloceanspaces.com was verified as official when first introduced to the cask
   url "https://tandem-app.sfo2.cdn.digitaloceanspaces.com/Tandem-#{version}-mac.zip"
