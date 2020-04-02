@@ -20,6 +20,7 @@ cask 'zoomus' do
             signal:     [
                           ['KILL', 'us.zoom.xos'],
                         ],
+            pkgutil:    'us.zoom.pkg.videmeeting',
             login_item: 'ZoomOpener',
             delete:     [
                           '/Applications/zoom.us.app',
