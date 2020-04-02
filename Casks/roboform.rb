@@ -1,5 +1,5 @@
 cask 'roboform' do
-  version '8.8.2'
+  version '8.8.1'
   sha256 'accb52496fa599cf88fa1dd511a72905ace3ce4c87bba1cde23133a0afb837bd'
 
   url "https://www.roboform.com/dist/roboform-mac-v#{version.major}.dmg"
