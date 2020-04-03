@@ -1,6 +1,6 @@
 cask 'wrike' do
-  version '3.2.0'
-  sha256 '1768adcfe542876d5daf0548443f1e0221c07e35fcc252039bf122799b8fc4aa'
+  version '3.2.1'
+  sha256 'c129249152f5e8db882bf3ac24efd6e37e60ce227321dae462c6b9044ae5ccdb'
 
   url "https://dl.wrike.com/download/WrikeDesktopApp.v#{version}.dmg"
   appcast 'https://www.wrike.com/frontend/electron-app/changelog.json'
