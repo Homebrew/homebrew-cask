@@ -15,8 +15,10 @@ cask 'telegram' do
   zap trash: [
                '~/Library/Application Scripts/ru.keepcoder.Telegram',
                '~/Library/Application Scripts/ru.keepcoder.Telegram.TelegramShare',
+               '~/Library/Caches/ru.keepcoder.Telegram',
                '~/Library/Containers/ru.keepcoder.Telegram',
                '~/Library/Containers/ru.keepcoder.Telegram.TelegramShare',
+               '~/Library/Cookies/ru.keepcoder.Telegram.binarycookies',
                '~/Library/Group Containers/*.ru.keepcoder.Telegram',
                '~/Library/Preferences/ru.keepcoder.Telegram.plist',
                '~/Library/Saved Application State/ru.keepcoder.Telegram.savedState',
