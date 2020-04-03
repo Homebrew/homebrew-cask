@@ -22,8 +22,10 @@ cask 'microsoft-edge' do
       pkgutil:   'com.microsoft.package.Microsoft_AutoUpdate.app',
       delete:    '/Library/PrivilegedHelperTools/com.microsoft.autoupdate.helper',
       trash:     [
-                   '~/Library/Preferences/com.microsoft.edgemac.plist',
                    '/Library/Application Support/Microsoft',
                    '~/Library/Application Support/Microsoft Edge',
+                   '~/Library/Caches/Microsoft Edge',
+                   '~/Library/Preferences/com.microsoft.edgemac.plist',
+                   '~/Library/Saved Application State/com.microsoft.edgemac.savedState',
                  ]
 end
