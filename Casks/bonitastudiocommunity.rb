@@ -1,6 +1,6 @@
 cask 'bonitastudiocommunity' do
-  version '7.10.0'
-  sha256 '4d4d5ca09aa9568a5c268828fa9565e68aeacd256babc8cb6b4e4f8c7c2a2e9b'
+  version '7.10.3'
+  sha256 '1172464d3718f7d24d7e5ae6b041d2f6832487193b934472e95a568daf218e9d'
 
   # release.ow2.org was verified as official when first introduced to the cask
   url "https://release.ow2.org/bonita/BonitaStudioCommunity-#{version}-x86_64.dmg"
