@@ -10,8 +10,17 @@ cask 'avast-secureline-vpn' do
 
   uninstall pkgutil:   'com.avast.secureline',
             launchctl: [
-                         'com.avast.secureline*',
-                         '*.com.avast.osx.secureline.avastsecurelinehelper',
+                         'com.avast.secureline.update',
+                         'com.avast.secureline.uninstall',
+                         'com.avast.secureline.service',
+                         'com.avast.secureline.init',
+                         'com.avast.secureline.burger',
+                         'com.avast.secureline.userinit',
+                         'com.avast.secureline.update-agent',
+                         # '6H4HRTU5E3' seems like a random string, but cursory investigation shows
+                         # this launchd job has the same prefix when installed in other environments.
+                         # Also multiple results for this in Google
+                         '6H4HRTU5E3.com.avast.osx.secureline.avastsecurelinehelper',
                          'com.avast.secureline.home.userinit',
                        ],
             delete:    '/Applications/AvastSecureLine.app'
