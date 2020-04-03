@@ -7,5 +7,7 @@ cask 'qlimagesize' do
   name 'qlImageSize'
   homepage 'https://github.com/Nyx0uf/qlImageSize'
 
+  depends_on macos: '>= :high_sierra'
+
   qlplugin 'qlImageSize.qlgenerator'
 end
