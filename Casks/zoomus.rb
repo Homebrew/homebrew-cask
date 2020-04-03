@@ -1,6 +1,6 @@
 cask 'zoomus' do
-  version '4.6.19178.0323'
-  sha256 'c270ac7d529ab4fe28b3ec0a2d8861855fd76cb07dec664833c3577edc5fecd8'
+  version '4.6.19273.0402'
+  sha256 '6985b7aaf4dcad85d27563bf73fec0c0ac26a552a005a835bc2f7c8fd28ae043'
 
   # d11yldzmag5yn.cloudfront.net was verified as official when first introduced to the cask
   url "https://d11yldzmag5yn.cloudfront.net/prod/#{version}/Zoom.pkg"
@@ -20,6 +20,7 @@ cask 'zoomus' do
             signal:     [
                           ['KILL', 'us.zoom.xos'],
                         ],
+            pkgutil:    'us.zoom.pkg.videmeeting',
             login_item: 'ZoomOpener',
             delete:     [
                           '/Applications/zoom.us.app',
