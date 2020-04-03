@@ -7,6 +7,8 @@ cask 'mdimagesizemdimporter' do
   name 'mdImageSize'
   homepage 'https://github.com/Nyx0uf/qlImageSize'
 
+  depends_on macos: '>= :high_sierra'
+
   artifact 'mdImageSize.mdimporter', target: "#{ENV['HOME']}/Library/Spotlight/mdImageSize.mdimporter"
 
   postflight do
