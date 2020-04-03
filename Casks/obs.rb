@@ -8,4 +8,10 @@ cask 'obs' do
   homepage 'https://obsproject.com/'
 
   app 'OBS.app'
+
+  zap trash: [
+               '~/Library/Application Support/obs-studio',
+               '~/Library/Preferences/com.obsproject.obs-studio.plist',
+               '~/Library/Saved Application State/com.obsproject.obs-studio.savedState',
+             ]
 end

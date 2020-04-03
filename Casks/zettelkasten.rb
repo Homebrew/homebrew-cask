@@ -1,9 +1,10 @@
 cask 'zettelkasten' do
-  version '3.2.7'
-  sha256 '7e975f1cfaf3e06c0f394bf57686456915411355ded2b5736cdb99e9928544be'
+  version '3.3.0'
+  sha256 '0249695dd3742819624720e457559f707131d6864c76c911fd553e06781cc2f9'
 
-  url "http://zettelkasten.danielluedecke.de/download/Zettelkasten#{version.major}_mac.zip"
-  appcast 'http://zettelkasten.danielluedecke.de/'
+  # github.com/sjPlot/Zettelkasten was verified as official when first introduced to the cask
+  url "https://github.com/sjPlot/Zettelkasten/releases/download/v#{version}/Zettelkasten_#{version}.dmg"
+  appcast 'https://github.com/sjPlot/Zettelkasten/releases.atom'
   name 'zettelkasten'
   homepage 'http://zettelkasten.danielluedecke.de/'
 

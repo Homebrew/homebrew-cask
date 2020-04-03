@@ -1,6 +1,6 @@
 cask 'fork' do
-  version '1.0.90'
-  sha256 '95262c348419b0236262578c6cd02dd6b1a38a2babd6ed14a3db26a31f56a070'
+  version '1.0.91.1'
+  sha256 '5e8c023bdee75c0df557d84051a616bdad14917e809b99e3e99cf7d667ca227e'
 
   # forkapp.ams3.cdn.digitaloceanspaces.com/mac was verified as official when first introduced to the cask
   url "https://forkapp.ams3.cdn.digitaloceanspaces.com/mac/Fork-#{version}.dmg"
@@ -14,9 +14,14 @@ cask 'fork' do
   binary "#{appdir}/Fork.app/Contents/Resources/fork_cli", target: 'fork'
 
   zap trash: [
+               '~/Library/Application Support/Fork',
                '~/Library/Application Support/com.DanPristupov.Fork',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.danpristupov.fork.sfl2',
                '~/Library/Caches/com.DanPristupov.Fork',
+               '~/Library/Cookies/com.DanPristupov.Fork.binarycookies',
+               '~/Library/Logs/Fork.log',
                '~/Library/Preferences/com.DanPristupov.Fork.plist',
                '~/Library/Saved Application State/com.DanPristupov.Fork.savedState',
+               '~/Library/WebKit/com.DanPristupov.Fork',
              ]
 end

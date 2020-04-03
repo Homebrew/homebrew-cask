@@ -11,4 +11,20 @@ cask 'dashlane' do
   depends_on macos: '>= :sierra'
 
   app 'Dashlane.app'
+
+  uninstall launchctl: 'com.dashlane.DashlaneAgent'
+
+  zap trash: [
+               '~/Library/Application Scripts/com.dashlane.Dashlane.SafariExtensionDMG',
+               '~/Library/Application Support/Dashlane',
+               '~/Library/Application Support/com.dashlane.Dashlane',
+               '~/Library/Application Support/com.dashlane.DashlaneAgent',
+               '~/Library/Caches/com.dashlane.Dashlane',
+               '~/Library/Caches/com.dashlane.DashlaneAgent',
+               '~/Library/Caches/com.dashlane.DashlanePluginService',
+               '~/Library/Containers/com.dashlane.Dashlane.SafariExtensionDMG',
+               '~/Library/Preferences/com.dashlane.Dashlane.plist',
+               '~/Library/Preferences/com.dashlane.DashlaneAgent.plist',
+               '~/Library/Preferences/com.dashlane.DashlanePluginService.plist',
+             ]
 end

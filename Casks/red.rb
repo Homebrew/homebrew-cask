@@ -6,7 +6,10 @@ cask 'red' do
   name 'Red Programming Language'
   homepage 'https://www.red-lang.org/'
 
+  depends_on macos: '<= :mojave'
   container type: :naked
 
   binary "red-#{version.no_dots}", target: 'red'
+
+  zap trash: '~/.red'
 end

@@ -1,4 +1,4 @@
-cask 'mendeley-desktop' do
+cask 'mendeley' do
   version '1.19.4'
   sha256 'bd9584152eb0bd375ce98b874981a44d87435d0e7b5a411734d9db63f48f7260'
 

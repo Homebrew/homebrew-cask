@@ -7,5 +7,7 @@ cask 'pref-setter' do
   name 'Pref Setter'
   homepage 'http://www.nightproductions.net/prefsetter.html'
 
+  depends_on macos: '<= :mojave'
+
   app 'Pref Setter/Pref Setter.app'
 end

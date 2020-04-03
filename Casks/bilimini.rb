@@ -1,6 +1,6 @@
 cask 'bilimini' do
-  version '1.3.0'
-  sha256 '2a4dca57927a58d8f797347324730065a554fdf147d1e0746e72f4da5f0c244d'
+  version '1.4.1'
+  sha256 '9ef45dfffaeefd271e2aa75cc1e7b8fac1fe912631ba012fe54cb2dcd886b74e'
 
   url "https://github.com/chitosai/bilimini/releases/download/v#{version}/bilimini-#{version}-mac.zip"
   appcast 'https://github.com/chitosai/bilimini/releases.atom'
@@ -9,5 +9,5 @@ cask 'bilimini' do
 
   auto_updates true
 
-  app 'mac/bilimini.app'
+  app 'bilimini.app'
 end

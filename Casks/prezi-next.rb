@@ -1,6 +1,6 @@
 cask 'prezi-next' do
-  version '1.41.1'
-  sha256 '297c37566a259f39ed9a2347892e36fa5252fbd248d3b9fb94f536711868a6bf'
+  version '1.42.1'
+  sha256 'cc1395584dd25e51c27d29a1ad2526cc769a76603d7b8357e7f1eed052691201'
 
   url "https://desktopassets.prezi.com/mac/pitch/releases/Prezi_Next_#{version}.dmg"
   appcast 'https://prezidesktop.s3.amazonaws.com/assets/mac/pitch/updates/prezi-business.xml'

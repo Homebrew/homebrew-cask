@@ -10,4 +10,9 @@ cask 'soqlxplorer' do
   depends_on macos: '>= :high_sierra'
 
   app 'SoqlXplorer.app'
+
+  zap trash: [
+               '~/Library/Caches/com.pocketsoap.osx.SoqlXplorer',
+               '~/Library/Preferences/com.pocketsoap.osx.SoqlXplorer.plist',
+             ]
 end

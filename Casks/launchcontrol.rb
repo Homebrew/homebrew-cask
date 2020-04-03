@@ -15,7 +15,10 @@ cask 'launchcontrol' do
             launchctl: 'com.soma-zone.LaunchControl.Helper'
 
   zap trash: [
+               '~/Library/Application Support/LaunchControl',
                '~/Library/Caches/com.apple.helpd/Generated/com.soma-zone.LaunchControl.help*',
+               '~/Library/Caches/com.apple.helpd/Generated/LaunchControl Help*',
+               '~/Library/Caches/com.soma-zone.LaunchControl',
                '~/Library/Preferences/com.soma-zone.LaunchControl.plist',
              ]
 end

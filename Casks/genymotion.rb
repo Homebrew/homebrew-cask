@@ -12,4 +12,12 @@ cask 'genymotion' do
   app 'Genymotion.app'
   app 'Genymotion Shell.app'
   binary "#{appdir}/Genymotion Shell.app/Contents/MacOS/genyshell"
+
+  zap trash: [
+               '~/Library/Caches/Genymobile',
+               '~/Library/Preferences/com.genymobile.Genymotion.plist',
+               '~/Library/Preferences/com.genymobile.soft.Genymotion.plist',
+               '~/Library/Saved Application State/com.genymobile.genymotion.savedState',
+               '~/Library/Saved Application State/com.genymobile.player.savedState',
+             ]
 end

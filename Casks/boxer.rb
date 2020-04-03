@@ -9,6 +9,7 @@ cask 'boxer' do
   homepage 'http://boxerapp.com/'
 
   auto_updates true
+  depends_on macos: '<= :mojave'
 
   app 'Boxer.app'
 end

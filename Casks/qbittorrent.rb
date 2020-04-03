@@ -1,6 +1,6 @@
 cask 'qbittorrent' do
-  version '4.2.1'
-  sha256 '8cb2ad026e051f33a01556d646c54b5daa4004806eb73a9b601f73bf94373c18'
+  version '4.2.3'
+  sha256 '422ecaaedf610eb359ea1042ea57d0fb92d87754f66b432b3f2b17d1d21607c2'
 
   # sourceforge.net/qbittorrent was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/qbittorrent/qbittorrent-mac/qbittorrent-#{version}/qbittorrent-#{version}.dmg"

@@ -1,6 +1,6 @@
 cask 'platelet' do
-  version '0.0.14'
-  sha256 '93e1d15ed8bf0eed4b9ee2faf7d22f867faa4b62c2e5c1606a4a25c29d533705'
+  version '0.0.19'
+  sha256 '5a524d75bd5995e182d2ff8a2ff4c45124c8f986c79b2f4d1af5da75c2ff4c28'
 
   url "https://github.com/amorist/platelet/releases/download/v#{version}/platelet-#{version}.dmg"
   appcast 'https://github.com/amorist/platelet/releases.atom'

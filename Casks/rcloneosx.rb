@@ -1,6 +1,6 @@
 cask 'rcloneosx' do
-  version '2.1.1'
-  sha256 '1cd44df7407b811d286906c314d9c0a3c6fa38939f741389aacc1fb5727d9d5b'
+  version '2.1.5'
+  sha256 'be9e0baeb95f20e3ad1fc69ec2f33eca9bdbcd930744bab9082354a9bbb3bb94'
 
   url "https://github.com/rsyncOSX/rcloneosx/releases/download/v#{version}/RcloneOSX-#{version}.dmg"
   appcast 'https://github.com/rsyncOSX/rcloneosx/releases.atom'

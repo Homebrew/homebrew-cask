@@ -1,6 +1,6 @@
 cask 'ace-link' do
-  version '1.5.0'
-  sha256 '1fc3da543dd1749b1aa18b324f5bbfaf2d5205129caf731ae91420742e369895'
+  version '1.6.0'
+  sha256 'f0ca63579ea30ca4bb9206f51ad9cd9607e9c460730d9a649d1f30555faf9587'
 
   url "https://github.com/blaise-io/acelink/releases/download/#{version}/Ace.Link.#{version}.dmg"
   appcast 'https://github.com/blaise-io/acelink/releases.atom'

@@ -1,6 +1,6 @@
 cask 'veusz' do
-  version '3.2'
-  sha256 '3acc96082ab0fe22b8caa8e78654c3afe4bd32e2df4d38b3b171c22686227471'
+  version '3.2.1'
+  sha256 'ee81b517f07c7ff1a31a7ec6f18a41380aa97506866a366db86114a585221902'
 
   # github.com/veusz/veusz was verified as official when first introduced to the cask
   url "https://github.com/veusz/veusz/releases/download/veusz-#{version}/veusz-#{version}-AppleOSX.dmg"
