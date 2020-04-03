@@ -1,6 +1,6 @@
 cask 'telavox-flow' do
-  version '1.96.0'
-  sha256 '5862be3ab456ad9937b24a7455acd0b292dec6c82bceb0af08cff4b8b0a34fc0'
+  version '1.97.0'
+  sha256 'ade8f6b0d925db3eb38443815609e7390d78da9af9a97be17c6811744647d17c'
 
   # s3.eu-west-2.amazonaws.com/flow-desktop was verified as official when first introduced to the cask
   url "https://s3.eu-west-2.amazonaws.com/flow-desktop/Flow-#{version}.dmg"
