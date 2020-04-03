@@ -11,8 +11,8 @@ cask 'devdocs' do
 
   zap trash: [
                '~/Library/Application Support/DevDocs',
-               '~/Library/Preferences/com.egoistian.devdocs-app.helper.plist',
-               '~/Library/Preferences/com.egoistian.devdocs-app.plist',
-               '~/Library/Saved Application State/com.egoistian.devdocs-app.savedState',
+               '~/Library/Logs/DevDocs',
+               '~/Library/Preferences/sh.egoist.devdocs.plist',
+               '~/Library/Saved Application State/sh.egoist.devdocs.savedState',
              ]
 end
