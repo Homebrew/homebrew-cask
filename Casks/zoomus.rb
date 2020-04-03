@@ -34,12 +34,13 @@ cask 'zoomus' do
                '~/Documents/Zoom',
                '~/Library/Application Support/zoom.us',
                '~/Library/Caches/us.zoom.xos',
-               '~/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin',
+               '~/Library/Cookies/us.zoom.xos.binarycookies',
                '~/Library/Logs/zoom.us',
                '~/Library/Logs/zoominstall.log',
                '~/Library/Preferences/ZoomChat.plist',
                '~/Library/Preferences/us.zoom.xos.plist',
                '~/Library/Safari/PerSiteZoomPreferences.plist',
+               '~/Library/SafariTechnologyPreview/PerSiteZoomPreferences.plist',
                '~/Library/Saved Application State/us.zoom.xos.savedState',
              ]
 end
