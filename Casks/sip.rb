@@ -17,7 +17,10 @@ cask 'sip' do
 
   app 'Sip.app'
 
+  uninstall quit: 'io.sipapp.Sip-paddle'
+
   zap trash: [
+               '~/.sip_v*',
                '~/Library/Application Support/Sip',
                '~/Library/Application Support/io.sipapp.Sip-paddle',
                '~/Library/Application Support/CrashReporter/Sip_*.plist',
