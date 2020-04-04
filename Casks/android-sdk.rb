@@ -5,7 +5,7 @@ cask 'android-sdk' do
   # dl.google.com/android/repository was verified as official when first introduced to the cask
   url "https://dl.google.com/android/repository/commandlinetools-mac-#{version}_latest.zip"
   name 'android-sdk'
-  homepage 'https://developer.android.com/index.html'
+  homepage 'https://developer.android.com/'
 
   binary "#{staged_path}/tools/android"
   binary "#{staged_path}/tools/bin/archquery"
