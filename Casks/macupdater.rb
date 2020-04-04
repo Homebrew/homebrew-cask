@@ -15,6 +15,7 @@ cask 'macupdater' do
   zap trash: [
                '~/Library/Application Scripts/com.corecode.MacUpdaterLaunchHelper',
                '~/Library/Application Support/MacUpdater',
+               '~/Library/Application Support/MacUpdaterInstallHelper',
                '~/Library/Caches/com.corecode.MacUpdater',
                '~/Library/Containers/com.corecode.MacUpdaterLaunchHelper',
                '~/Library/Cookies/com.corecode.MacUpdater.binarycookies',
