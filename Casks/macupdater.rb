@@ -12,6 +12,9 @@ cask 'macupdater' do
   app 'MacUpdater.app'
   binary "#{appdir}/MacUpdater.app/Contents/Resources/macupdater_client"
 
+  uninstall quit:      'com.corecode.MacUpdater',
+            launchctl: 'com.corecode.MacUpdaterLaunchHelper'
+
   zap trash: [
                '~/Library/Application Scripts/com.corecode.MacUpdaterLaunchHelper',
                '~/Library/Application Support/MacUpdater',
