@@ -4,7 +4,7 @@ cask 'mplab-xc32' do
 
   url "https://ww1.microchip.com/downloads/en/DeviceDoc/xc32-v#{version}-full-install-osx-installer.dmg"
   name 'MPLab XC32 Compiler'
-  homepage 'http://www.microchip.com/pagehandler/en-us/devtools/mplabxc/home.html'
+  homepage 'https://www.microchip.com/mplab/compilers'
 
   installer script: {
                       executable: "xc32-v#{version}-osx-installer.app/Contents/MacOS/installbuilder.sh",
