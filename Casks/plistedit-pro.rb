@@ -1,6 +1,6 @@
 cask 'plistedit-pro' do
-  version '1.9.1'
-  sha256 '7211bd42186e92e6c122f564a608a91108e6373848d4e52a7cd1c31974d6fd15'
+  version '1.9.2'
+  sha256 '5db33711689cc911a33af8f5140e27436df392e13f0fece3de0ba11ac4e0f839'
 
   url 'https://www.fatcatsoftware.com/plisteditpro/PlistEditPro.zip'
   appcast 'https://www.fatcatsoftware.com/plisteditpro/plisteditpro_appcast.xml'
