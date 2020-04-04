@@ -1,6 +1,6 @@
 cask 'keeweb' do
-  version '1.12.3'
-  sha256 '68c00946b6c377bcd79d49549026d250f04f2d22522219b06b5dc625cb7fc8b9'
+  version '1.13.0'
+  sha256 '605126d51387fe7296c3fbed6e944f8b319cfd7b813cb61308d07b1417983b95'
 
   # github.com/keeweb/keeweb was verified as official when first introduced to the cask
   url "https://github.com/keeweb/keeweb/releases/download/v#{version}/KeeWeb-#{version}.mac.dmg"
