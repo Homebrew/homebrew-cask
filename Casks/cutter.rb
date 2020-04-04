@@ -13,9 +13,9 @@ cask 'cutter' do
   app 'Cutter.app'
 
   zap trash: [
-               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/test.cutter.sfl*',
-               '~/Library/Preferences/com.cutter.cutter.plist*',
-               '~/Library/Preferences/test.cutter.plist',
-               '~/Library/Saved Application State/test.cutter.savedState',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.radare.cutter.sfl*',
+               '~/Library/Application Support/RadareOrg/Cutter',
+               '~/Library/Preferences/org.radare.cutter.plist',
+               '~/Library/Saved Application State/org.radare.cutter.savedState',
              ]
 end
