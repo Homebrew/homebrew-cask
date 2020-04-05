@@ -1,5 +1,5 @@
 cask 'accessmenubarapps' do
-  version '2.6.1'
+  version '2.6.19'
   sha256 'fe8a08d721af4b9e5e71bb71f3b876169fecde8219b53c01938861c2781fb16c'
 
   url "https://www.ortisoft.de/resources/AccessMenuBarApps#{version}.zip"
