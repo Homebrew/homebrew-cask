@@ -1,0 +1,22 @@
+cask 'wpsoffice-cn' do
+  version '2.1.2,3417'
+  sha256 '9f560401cbaab011b7edfed119f2b8230422ddccea5d6d37c9d6101c53b04d6d'
+
+  # wdl1.pcfg.cache.wpscdn.com was verified as official when first introduced to the cask
+  # url "https://wdl1.pcfg.cache.wpscdn.com/wpsdl/macwpsoffice/download/#{version.before_comma}.#{version.after_comma}/WPSOffice_#{version.before_comma}(#{version.after_comma}).dmg"
+  
+  url "http://package.mac.wpscdn.cn/mac_wps_pkg/#{version.before_comma}/WPS_Office_#{version.before_comma}(#{version.after_comma}).dmg"
+  name 'WPS Office for Mac'
+  homepage 'https://mac.wps.cn/'
+
+  depends_on macos: '>= :sierra'
+
+  app 'wpsoffice.app'
+
+  uninstall quit: 'com.kingsoft.wpsoffice.mac'
+
+  zap trash: [
+               '~/Library/Application Scripts/com.kingsoft.wpsoffice.mac',
+               '~/Library/Containers/com.kingsoft.wpsoffice.mac',
+             ]
+end
