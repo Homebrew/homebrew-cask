@@ -8,6 +8,8 @@ cask 'torguard' do
   name 'TorGuard'
   homepage 'https://torguard.net/'
 
+  depends_on macos: '<= :mojave'
+
   pkg 'Install TorGuard.pkg'
 
   uninstall pkgutil: 'net.torguard.TorGuardDesktopQt',
