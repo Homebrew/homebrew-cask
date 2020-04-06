@@ -3,6 +3,7 @@ cask 'mplab-xc32' do
   sha256 '98eb7107ed13cd08efd5ea1329a1778913ce692225590d7909ec2d62dfccd1be'
 
   url "https://ww1.microchip.com/downloads/en/DeviceDoc/xc32-v#{version}-full-install-osx-installer.dmg"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.microchip.com/mplabxc32osx'
   name 'MPLab XC32 Compiler'
   homepage 'https://www.microchip.com/mplab/compilers'
 
