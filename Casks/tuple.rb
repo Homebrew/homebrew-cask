@@ -8,5 +8,7 @@ cask 'tuple' do
   name 'Tuple'
   homepage 'https://tuple.app/'
 
+  auto_updates true
+
   app 'Tuple.app'
 end
