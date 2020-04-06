@@ -1,6 +1,6 @@
 cask 'hackintool' do
-  version '3.3.6'
-  sha256 'afe640403b4cae952174ecfe77ba91cc30da58340bb0a1277430dc691451e84e'
+  version '3.3.7'
+  sha256 'de376ebae5a0bc53ed1f7778c94c3ef1009737eb5f2ce0a6e7be717b3bd835a5'
 
   url "https://github.com/headkaze/Hackintool/releases/download/#{version}/Hackintool.zip"
   appcast 'https://github.com/headkaze/Hackintool/releases.atom'
