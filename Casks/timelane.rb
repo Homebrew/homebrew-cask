@@ -8,5 +8,7 @@ cask 'timelane' do
   name 'Timelane'
   homepage 'http://timelane.tools/'
 
+  depends_on macos: '>= :mojave'
+
   app 'Timelane.app'
 end
