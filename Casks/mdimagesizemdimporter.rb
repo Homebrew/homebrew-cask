@@ -9,9 +9,5 @@ cask 'mdimagesizemdimporter' do
 
   depends_on macos: '>= :high_sierra'
 
-  artifact 'mdImageSize.mdimporter', target: "#{ENV['HOME']}/Library/Spotlight/mdImageSize.mdimporter"
-
-  postflight do
-    system_command '/usr/bin/mdimport', args: ['-r', "#{ENV['HOME']}/Library/Spotlight/mdImageSize.mdimporter"]
-  end
+  mdimporter 'mdImageSize.mdimporter'
 end
