@@ -12,7 +12,6 @@ cask 'grads' do
   binary "grads-#{version}/bin/gribmap"
   binary "grads-#{version}/bin/gribscan"
   binary "grads-#{version}/bin/stnmap"
-  binary "grads-#{version}/bin/wgrib"
 
   caveats <<~EOS
     In order to use the GrADS tools, you will need
