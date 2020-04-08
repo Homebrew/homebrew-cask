@@ -8,6 +8,8 @@ cask 'cleanmymac' do
   name 'CleanMyMac X'
   homepage 'https://macpaw.com/cleanmymac'
 
+  auto_updates true
+
   app 'CleanMyMac X.app'
 
   uninstall delete:     [
