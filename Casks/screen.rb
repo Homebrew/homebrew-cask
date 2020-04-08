@@ -1,6 +1,6 @@
 cask 'screen' do
-  version '1.0.23'
-  sha256 'fa53f449dcd2c4537b81f09e14e9e04031445c148527550de75f11dbfdc21e2b'
+  version '1.0.24'
+  sha256 '6667a58d998080dcc75c2c6ff1c029e7c4154f9bf5a5a45448154fce503b95fd'
 
   url "https://download.screen.so/desktop-app/darwin/#{version}/Screen.dmg"
   appcast 'https://download.screen.so/'
