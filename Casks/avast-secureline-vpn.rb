@@ -8,15 +8,15 @@ cask 'avast-secureline-vpn' do
 
   pkg 'Avast SecureLine VPN.pkg'
 
-  uninstall pkgutil:   'com.avast.secureline',
-            launchctl: [
-                         'com.avast.secureline*',
-                         '*.com.avast.osx.secureline.avastsecurelinehelper',
-                         'com.avast.secureline.home.userinit',
-                       ],
-            delete:    '/Applications/AvastSecureLine.app'
+  uninstall script: {
+                      executable: '/Library/Application Support/AvastSecureLine/hub/uninstall.sh',
+                      sudo:       true,
+                    }
 
   zap trash: [
+               '/Library/Application Support/AvastHUB',
+               '/Library/Application Support/AvastSecureLine',
+               '~/Library/Application Support/AvastSecureLine',
                '~/Library/Cookies/com.avast.osx.secureline.binarycookies',
                '~/Library/Caches/com.avast.osx.secureline',
                '~/Library/Group Containers/*.com.avast.osx.secureline*',
