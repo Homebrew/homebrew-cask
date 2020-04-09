@@ -7,9 +7,5 @@ cask 'epubmdimporter' do
   name 'EPUB Spotlight'
   homepage 'https://github.com/jaketmp/ePub-quicklook'
 
-  artifact 'epub.mdimporter', target: "#{ENV['HOME']}/Library/Spotlight/AA_epub.mdimporter"
-
-  postflight do
-    system_command '/usr/bin/mdimport', args: ['-r', "#{ENV['HOME']}/Library/Spotlight/AA_epub.mdimporter"]
-  end
+  mdimporter 'epub.mdimporter', target: 'AA_epub.mdimporter'
 end

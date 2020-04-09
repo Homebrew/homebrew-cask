@@ -2,13 +2,12 @@ cask 'iina' do
   version '1.0.6'
   sha256 '51cce921ef52f00df9b474e230f33d5a947c5b6e4d33aac4213a0e07b4b4a246'
 
-  url "https://dl-portal.iina.io/IINA.v#{version}.dmg"
-  appcast 'https://www.iina.io/appcast.xml'
+  url "https://dl.iina.io/IINA.v#{version}.dmg"
+  appcast 'https://iina.io/appcast.xml'
   name 'IINA'
   homepage 'https://iina.io/'
 
   auto_updates true
-  conflicts_with cask: 'iina-nightly'
   depends_on macos: '>= :el_capitan'
 
   app 'IINA.app'

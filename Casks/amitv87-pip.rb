@@ -1,6 +1,6 @@
 cask 'amitv87-pip' do
-  version '1.20'
-  sha256 '5d9a8c215ac29d1586d914335fd6d2700414b9e13890174ffa22c7cbeac4ba3a'
+  version '1.30'
+  sha256 'e4797b97d37a0b49e363db4e941a67362e1a9d2d8f67de54394deb690ccac4b8'
 
   url "https://github.com/amitv87/PiP/releases/download/#{version}/PiP-#{version}.dmg"
   appcast 'https://github.com/amitv87/PiP/releases.atom'

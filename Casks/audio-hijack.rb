@@ -7,6 +7,7 @@ cask 'audio-hijack' do
   name 'Audio Hijack'
   homepage 'https://www.rogueamoeba.com/audiohijack/'
 
+  auto_updates true
   depends_on macos: '>= :sierra'
 
   app 'Audio Hijack.app'
