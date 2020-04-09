@@ -14,6 +14,7 @@ cask 'nordvpn' do
 
   uninstall quit:       'com.nordvpn.NordVPN',
             launchctl:  [
+                          'com.nordvpn.osx.helper',
                           'com.nordvpn.NordVPN.Helper',
                           '271com.nordvpn.osx.helper',
                           '273com.nordvpn.osx.helper',
