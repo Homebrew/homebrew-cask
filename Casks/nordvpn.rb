@@ -14,6 +14,8 @@ cask 'nordvpn' do
 
   uninstall quit:       'com.nordvpn.NordVPN',
             launchctl:  'com.nordvpn.NordVPN.Helper',
+                        '271com.nordvpn.osx.helper',
+                        '273com.nordvpn.osx.helper',
             delete:     '/Library/PrivilegedHelperTools/com.nordvpn.NordVPN.Helper',
             login_item: 'NordVPN',
             pkgutil:    'com.nordvpn.osx'
