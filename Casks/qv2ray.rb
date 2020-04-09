@@ -4,7 +4,7 @@ cask 'qv2ray' do
 
   # github.com/Qv2ray/Qv2ray/releases/download/v was verified as official when first introduced to the cask
   url "https://github.com/Qv2ray/Qv2ray/releases/download/v#{version}/qv2ray-#{version}-Darwin.dmg"
-  appcast 'https://github.com/Qv2ray/Qv2ray/releases.qv2ray'
+  appcast 'https://github.com/Qv2ray/Qv2ray/releases.atom'
   name 'Qv2ray'
   homepage 'https://qv2ray.github.io/'
 
