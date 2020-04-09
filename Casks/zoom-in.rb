@@ -9,4 +9,9 @@ cask 'zoom-in' do
   homepage 'https://zoom-in.app/'
 
   app 'Zoom In.app'
+
+  zap trash: [
+               '~/Library/Application Scripts/com.nothingmagical.zoom-in',
+               '~/Library/Containers/com.nothingmagical.zoom-in',
+             ]
 end
