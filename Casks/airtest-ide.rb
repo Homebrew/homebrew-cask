@@ -4,7 +4,7 @@ cask 'airtest-ide' do
 
   url 'https://airtestproject.s3.netease.com/downloads/AirtestIDE/AirtestIDE_2020-01-20_py3_Mac10-12.dmg'
   name 'AirtestIDE'
-  homepage 'https://airtest.netease.com'
+  homepage 'https://airtest.netease.com/'
 
   app 'AirtestIDE.app'
 end
