@@ -5,7 +5,7 @@ cask 'porting-kit' do
   url "http://portingkit.com/kit/Porting%20Kit%20#{version}.zip"
   appcast 'http://portingkit.com/kit/updatecast.xml'
   name 'Porting Kit'
-  homepage 'http://portingkit.com/en/'
+  homepage 'http://portingkit.com/'
 
   auto_updates true
   conflicts_with cask: 'porting-kit-legacy'
