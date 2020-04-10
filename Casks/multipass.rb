@@ -22,6 +22,9 @@ cask 'multipass' do
                        ]
 
   zap trash: [
+               '~/Library/Application Support/multipass',
+               '~/Library/Application Support/multipass-gui',
+               '~/Library/Preferences/multipass',
                '/var/root/Library/Application Support/multipassd',
                '/var/root/Library/Preferences/multipassd',
                '/Library/Logs/Multipass',
