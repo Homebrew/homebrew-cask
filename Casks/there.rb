@@ -1,6 +1,6 @@
 cask 'there' do
-  version '1.8.6'
-  sha256 '9354c8d06583bb3440a3719c343f08d06c3d0aacb601b5c29b278709ef6cbdd0'
+  version '1.8.7'
+  sha256 'd067183225167e7b86ae2a6d21d54f4b4508781c9f59a813f2097b1f14994205'
 
   # github.com/therehq/there-desktop was verified as official when first introduced to the cask
   url "https://github.com/therehq/there-desktop/releases/download/v#{version}/There-#{version}-mac.zip"
