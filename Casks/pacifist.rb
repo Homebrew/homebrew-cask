@@ -10,4 +10,11 @@ cask 'pacifist' do
   auto_updates true
 
   app 'Pacifist.app'
+
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.charlessoft.pacifist.sfl2',
+               '~/Library/Preferences/com.charlessoft.pacifist.plist',
+               '~/Library/QuickLook/Pacifist.qlgenerator',
+               '~/Library/Saved Application State/com.charlessoft.pacifist.savedState',
+             ]
 end
