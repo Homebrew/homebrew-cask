@@ -30,7 +30,7 @@ cask 'mactex-no-gui' do
                    'attributeSetting' => 0,
                  },
                  {
-                   # GUI-Applications
+                   # GUI Applications
                    'choiceIdentifier' => 'choice3',
                    'choiceAttribute'  => 'selected',
                    'attributeSetting' => 0,
