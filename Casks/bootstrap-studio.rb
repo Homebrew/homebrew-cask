@@ -2,7 +2,7 @@ cask 'bootstrap-studio' do
   version '5.0.3'
   sha256 'd208d5bb2b87ec1ea65ab2017317f35050a8d13c96e5bf6106817ef47c1fea6f'
 
-  url "https://bootstrapstudio.io/releases/desktop/#{version}/Bootstrap%20Studio.dmg"
+  url 'https://bootstrapstudio.io/releases/desktop/#{version}/Bootstrap%20Studio.dmg'
   name 'Bootstrap Studio'
   homepage 'https://bootstrapstudio.io/'
 
@@ -21,4 +21,3 @@ cask 'bootstrap-studio' do
                '~/Library/Saved Application State/bg.zine.bootstrapstudio.savedState',
              ]
 end
-
