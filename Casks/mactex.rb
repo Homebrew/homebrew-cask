@@ -30,7 +30,7 @@ cask 'mactex' do
                    'attributeSetting' => 0,
                  },
                  {
-                   # GUI-Applications
+                   # GUI Applications
                    'choiceIdentifier' => 'choice3',
                    'choiceAttribute'  => 'selected',
                    'attributeSetting' => 1,
