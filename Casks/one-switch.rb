@@ -1,6 +1,6 @@
 cask 'one-switch' do
-  version '1.10,228'
-  sha256 '1fda510ebdf5a398957ac131d4f4dcd60e39c3cedc3dd3b11ff1c113d9a5e8fd'
+  version '1.11,234'
+  sha256 '184a01f87ba4882414c3a8fc4a3966bfe13a6e8d0b25fed4a563f8c69bb04273'
 
   url "https://fireball.studio/api/release_manager/downloads/studio.fireball.OneSwitch/#{version.after_comma}.zip"
   appcast 'https://fireball.studio/api/release_manager/studio.fireball.OneSwitch.xml'
