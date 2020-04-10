@@ -4,7 +4,7 @@ cask 'day-o' do
 
   url "https://shauninman.com/assets/downloads/Day-#{version}.zip"
   name 'Day-O'
-  homepage 'https://shauninman.com/archive/2016/10/20/day_o_2_mac_menu_bar_clock'
+  homepage 'https://shauninman.com/archive/2020/04/08/day_o_mac_menu_bar_clock_for_catalina'
 
   app "Day-#{version}/Day-O.app"
 
