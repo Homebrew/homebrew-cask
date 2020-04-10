@@ -13,7 +13,7 @@ cask 'mactex-no-gui' do
                          'mactex',
                        ]
   depends_on formula: 'ghostscript'
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :high_sierra'
 
   pkg "mactex-#{version.no_dots}.pkg",
       choices: [
