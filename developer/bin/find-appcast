@@ -48,10 +48,10 @@ def find_electron_builder(app)
   channel = data['channel']
   name = data['name']
   owner = data['owner']
-  path = data['path'].sub(%r{^/(.*)/$}, '\1') rescue nil
+  path = data['path'].gsub(%r{^/|/$}, '') rescue nil
   region = data['region']
   repo = data['repo']
-  url = data['url']
+  url = data['url'].chomp('/') rescue nil
 
   possible_appcasts = [
     "#{url}/latest-mac.yml",
@@ -61,7 +61,8 @@ def find_electron_builder(app)
     "https://#{bucket}.s3.amazonaws.com/#{path}/latest-mac.yml",
     "https://s3-#{region}.amazonaws.com/#{bucket}/#{path}/latest-mac.yml",
     "https://s3.amazonaws.com/#{bucket}/#{path}/latest-mac.yml",
-    "https://#{name}.#{region}.digitaloceanspaces.com/latest-mac.yml"
+    "https://#{name}.#{region}.digitaloceanspaces.com/latest-mac.yml",
+    "https://#{name}.#{region}.digitaloceanspaces.com/#{path}/latest-mac.yml",
   ]
 
   unless verify_appcast('electron-builder', *possible_appcasts)
