@@ -9,4 +9,6 @@ cask 'jd-gui' do
   homepage 'http://jd.benow.ca/'
 
   app "jd-gui-osx-#{version}/JD-GUI.app"
+
+  zap trash: '~/Library/Saved Application State/jd.jd-gui.savedState'
 end

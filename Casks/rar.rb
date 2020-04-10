@@ -6,14 +6,10 @@ cask 'rar' do
   name 'RAR Archiver'
   homepage 'https://www.rarlab.com/'
 
+  conflicts_with formula: 'unrar'
+
   binary 'rar/rar'
   binary 'rar/unrar'
   artifact 'rar/default.sfx', target: "#{HOMEBREW_PREFIX}/lib/default.sfx"
   artifact 'rar/rarfiles.lst', target: "#{HOMEBREW_PREFIX}/etc/rarfiles.lst"
-
-  caveats <<~EOS
-    Instructions on using rar and unrar are available in
-
-      #{staged_path}/rar/rar.txt
-  EOS
 end
