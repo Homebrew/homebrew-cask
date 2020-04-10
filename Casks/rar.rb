@@ -6,6 +6,8 @@ cask 'rar' do
   name 'RAR Archiver'
   homepage 'https://www.rarlab.com/'
 
+  conflicts_with formula: 'unrar'
+
   binary 'rar/rar'
   binary 'rar/unrar'
   artifact 'rar/default.sfx', target: "#{HOMEBREW_PREFIX}/lib/default.sfx"
