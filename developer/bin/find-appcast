@@ -61,7 +61,8 @@ def find_electron_builder(app)
     "https://#{bucket}.s3.amazonaws.com/#{path}/latest-mac.yml",
     "https://s3-#{region}.amazonaws.com/#{bucket}/#{path}/latest-mac.yml",
     "https://s3.amazonaws.com/#{bucket}/#{path}/latest-mac.yml",
-    "https://#{name}.#{region}.digitaloceanspaces.com/latest-mac.yml"
+    "https://#{name}.#{region}.digitaloceanspaces.com/latest-mac.yml",
+    "https://#{name}.#{region}.digitaloceanspaces.com/#{path}/latest-mac.yml",
   ]
 
   unless verify_appcast('electron-builder', *possible_appcasts)
