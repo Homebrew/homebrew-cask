@@ -3,6 +3,7 @@ cask 'bootstrap-studio' do
   sha256 'd208d5bb2b87ec1ea65ab2017317f35050a8d13c96e5bf6106817ef47c1fea6f'
 
   url "https://bootstrapstudio.io/releases/desktop/#{version}/Bootstrap%20Studio.dmg"
+  appcast 'https://bootstrapstudio.io/pages/releases'
   name 'Bootstrap Studio'
   homepage 'https://bootstrapstudio.io/'
 
