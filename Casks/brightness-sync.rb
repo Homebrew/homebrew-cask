@@ -1,6 +1,6 @@
 cask 'brightness-sync' do
-  version '2.0.1'
-  sha256 'f522c7422bb0958a4406e9f2ec431681771dfdfe1e134f0169d630927bc62e98'
+  version '2.1.0'
+  sha256 '8b0340aff27984332948abd09c86d93a3f26e50d832e784c6b953bb8c9b8b79a'
 
   url "https://github.com/OCJvanDijk/Brightness-Sync/releases/download/v#{version}/Brightness.Sync.app.zip"
   appcast 'https://github.com/OCJvanDijk/Brightness-Sync/releases.atom'
