@@ -8,8 +8,12 @@ cask 'corona-tracker' do
   name 'Corona Tracker'
   homepage 'https://coronatracker.samabox.com/'
 
-  auto_updates true
   depends_on macos: '>= :catalina'
 
   app 'Corona Tracker.app'
+
+  zap trash: [
+               '~/Library/Containers/maccatalyst.com.samabox.corona',
+               '~/Library/Application Scripts/maccatalyst.com.samabox.corona',
+             ]
 end
