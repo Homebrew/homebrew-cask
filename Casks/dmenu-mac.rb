@@ -1,4 +1,4 @@
-cask 'dmenu' do
+cask 'dmenu-mac' do
   version '0.5.0'
   sha256 'a930912caecfa5ba10f7926741bf0fddf847ba3bd982f4f5149ae0d1e53842ec'
 
