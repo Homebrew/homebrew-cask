@@ -8,4 +8,12 @@ cask 'sigviewer' do
   homepage 'https://github.com/cbrnr/sigviewer'
 
   app 'sigviewer.app'
+
+  zap trash: [
+               '~/Library/Preferences/com.http-github-com-cbrnr-sigviewer.SigViewer.plist',
+               '~/Library/Preferences/com.yourcompany.sigviewer.plist',
+               '~/Library/Application Support/CrashReporter/sigviewer_*.plist',
+               '~/Library/Logs/DiagnosticReports/sigviewer_*.crash',
+               '~/Library/Saved Application State/com.yourcompany.sigviewer.savedState',
+             ]
 end
