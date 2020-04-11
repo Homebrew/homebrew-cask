@@ -8,7 +8,7 @@ cask 'day-o' do
 
   depends_on macos: '>= :catalina'
 
-  app "Day-#{version}/Day-O.app"
+  app "Day-#{version.major_minor}/Day-O.app"
 
   zap trash: '~/Library/Preferences/com.shauninman.Day-O.plist'
 end
