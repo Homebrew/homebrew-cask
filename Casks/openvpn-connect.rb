@@ -7,7 +7,7 @@ cask 'openvpn-connect' do
   name 'OpenVPN Connect client'
   homepage 'https://openvpn.net/client-connect-vpn-for-mac-os/'
 
-  pkg 'OpenVPN Connect Installer_signed.pkg'
+  pkg 'OpenVPN_Connect_Installer_signed.pkg'
 
   uninstall script: {
                       executable: '/Applications/OpenVPN/Uninstall OpenVPN Connect.app/Contents/Resources/remove.sh',
