@@ -3,7 +3,8 @@ cask 'algodoo' do
   sha256 '9f3419d0da9cca0f0f5abc0b8a228197221c92fcbc35138ed2bb0b9251820a66'
 
   url "http://www.algodoo.com/download/Algodoo_#{version.dots_to_underscores}-MacOS.dmg"
-  appcast 'https://www.algodoo.com/download/'
+  appcast 'http://www.algodoo.com/download/',
+          configuration: version.dots_to_underscores
   name 'Algodoo'
   homepage 'https://www.algodoo.com/'
 
