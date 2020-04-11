@@ -11,7 +11,7 @@ cask 'basictex' do
                          'mactex-no-gui',
                          'mactex',
                        ]
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :high_sierra'
 
   pkg "mactex-basictex-#{version.no_dots}.pkg"
 
