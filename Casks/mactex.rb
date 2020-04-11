@@ -19,25 +19,25 @@ cask 'mactex' do
       choices: [
                  {
                    # Ghostscript
-                   'choiceIdentifier' => 'choice1',
+                   'choiceIdentifier' => 'org.tug.mactex.ghostscript9.50',
                    'choiceAttribute'  => 'selected',
                    'attributeSetting' => 0,
                  },
                  {
                    # Ghostscript Dynamic Library
-                   'choiceIdentifier' => 'choice2',
+                   'choiceIdentifier' => 'org.tug.mactex.ghostscript9.50libgs',
                    'choiceAttribute'  => 'selected',
                    'attributeSetting' => 0,
                  },
                  {
                    # GUI Applications
-                   'choiceIdentifier' => 'choice3',
+                   'choiceIdentifier' => 'org.tug.mactex.gui2020',
                    'choiceAttribute'  => 'selected',
                    'attributeSetting' => 1,
                  },
                  {
                    # TeXLive
-                   'choiceIdentifier' => 'choice4',
+                   'choiceIdentifier' => 'org.tug.mactex.texlive2020',
                    'choiceAttribute'  => 'selected',
                    'attributeSetting' => 1,
                  },
