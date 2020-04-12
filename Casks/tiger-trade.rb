@@ -4,6 +4,7 @@ cask 'tiger-trade' do
 
   # s.tigerfintech.com was verified as official when first introduced to the cask
   url "https://s.tigerfintech.com/desktop/cdn/f/TigerTrade_#{version.before_comma}_#{version.after_comma.before_colon}_#{version.after_colon}.dmg"
+  appcast 'https://www.itiger.com/download/mac'
   name 'Tiger Trade'
   name '老虎证券'
   homepage 'https://www.itiger.com/'
