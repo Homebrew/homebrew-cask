@@ -8,6 +8,8 @@ cask 'zoom-in' do
   name 'Zoom In'
   homepage 'https://zoom-in.app/'
 
+  depends_on macos: '>= :mojave'
+
   app 'Zoom In.app'
 
   zap trash: [
