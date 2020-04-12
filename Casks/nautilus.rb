@@ -1,8 +1,9 @@
 cask 'nautilus' do
-  version '1.2.0'
-  sha256 'c810144c0b105539b01581b7c260c292472b0b83f8a60c23cc35f4b32dd077de'
+  version '1.3.0'
+  sha256 '93a5eb32c27d4ae2d01ee5140f66a2bfa5f7bba1113c0734e2997af8afe9acce'
 
   url "https://nautilusdev.com/release/Nautilus-#{version}.dmg"
+  appcast 'https://github.com/oslabs-beta/nautilus/releases.atom'
   name 'Nautilus'
   homepage 'https://nautilusdev.com/'
 
