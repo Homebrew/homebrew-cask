@@ -1,13 +1,15 @@
 cask 'arq' do
-  version '5.17.3'
-  sha256 '98db29e7b18dcfd388b001451f3367b72844bf6f59e170bea38c967231a59d19'
+  version '6.1.6'
+  sha256 '66381156ae3db5c53179f2d482b7a22e8d07a16b791826d83567f76be798cd52'
 
-  url "https://www.arqbackup.com/download/arqbackup/Arq_#{version}.zip"
-  appcast "https://www.arqbackup.com/download/arqbackup/arq#{version.major}.xml"
+  url "https://www.arqbackup.com/download/arqbackup/Arq#{version.major}.pkg"
+  appcast 'https://www.arqbackup.com/'
   name 'Arq'
   homepage 'https://www.arqbackup.com/'
 
   auto_updates true
 
-  app 'Arq.app'
+  pkg "Arq#{version.major}.pkg"
+
+  uninstall pkgutil: 'letsasktravis'
 end
