@@ -11,5 +11,5 @@ cask 'arq' do
 
   pkg "Arq#{version.major}.pkg"
 
-  uninstall pkgutil: 'letsasktravis'
+  uninstall pkgutil: 'com.haystacksoftware.Arq'
 end
