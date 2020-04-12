@@ -11,5 +11,8 @@ cask 'red' do
 
   binary "red-#{version.no_dots}", target: 'red'
 
-  zap trash: '~/.red'
+  zap trash: [
+               '~/.red',
+               '~/Library/Saved Application State/org.redlang.red-ttx.savedState',
+             ]
 end
