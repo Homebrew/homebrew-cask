@@ -11,8 +11,12 @@ cask 'rocket' do
 
   app 'Rocket.app'
 
+  uninstall quit: 'net.matthewpalmer.Rocket'
+
   zap trash: [
+               '/Users/Shared/Rocket',
                '~/Library/Application Support/Rocket',
+               '~/Library/Caches/net.matthewpalmer.Rocket',
                '~/Library/Preferences/net.matthewpalmer.Rocket.plist',
              ]
 end
