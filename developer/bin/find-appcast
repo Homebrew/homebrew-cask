@@ -48,7 +48,7 @@ def find_electron_builder(app)
   channel = data['channel']
   name = data['name']
   owner = data['owner']
-  path = data['path'].sub(%r{^/(.*)/$}, '\1') rescue nil
+  path = data['path']
   region = data['region']
   repo = data['repo']
   url = data['url']
@@ -63,7 +63,7 @@ def find_electron_builder(app)
     "https://s3.amazonaws.com/#{bucket}/#{path}/latest-mac.yml",
     "https://#{name}.#{region}.digitaloceanspaces.com/latest-mac.yml",
     "https://#{name}.#{region}.digitaloceanspaces.com/#{path}/latest-mac.yml",
-  ]
+  ].map { |appcast| appcast.gsub(%r{(?<!:)/{2,}}, '/') } # Collapse groups of two or more forward slahses into one, except when preceded by a colon
 
   unless verify_appcast('electron-builder', *possible_appcasts)
     warn <<~MESSAGE
