@@ -11,6 +11,6 @@ cask 'flashprint' do
   app 'FlashPrint.app'
 
   zap trash: [
-               '/Users/khushrajrathod/Library/Preferences/FlashForge.FlashPrint.plist',
+               '~/Library/Preferences/FlashForge.FlashPrint.plist',
              ]
 end
