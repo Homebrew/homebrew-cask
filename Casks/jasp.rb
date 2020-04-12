@@ -4,7 +4,7 @@ cask 'jasp' do
 
   url "https://static.jasp-stats.org/JASP-#{version}.dmg"
   appcast 'https://jasp-stats.org/download/',
-          configuration: version.chomp('.0').chomp('.0')
+          configuration: version.sub(%r{(.0)+$}, '')
   name 'JASP'
   homepage 'https://jasp-stats.org/'
 
