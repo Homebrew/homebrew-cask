@@ -15,7 +15,10 @@ cask 'hex-fiend' do
   binary "#{appdir}/Hex Fiend.app/Contents/Resources/hexf"
 
   zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.ridiculousfish.hexfiend.sfl2',
+               '~/Library/Application Support/com.ridiculousfish.HexFiend',
                '~/Library/Caches/com.ridiculousfish.HexFiend',
+               '~/Library/Cookies/com.ridiculousfish.HexFiend.binarycookies',
                '~/Library/Preferences/com.ridiculousfish.HexFiend.plist',
                '~/Library/Saved Application State/com.ridiculousfish.HexFiend.savedState',
              ]
