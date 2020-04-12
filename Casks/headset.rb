@@ -12,7 +12,11 @@ cask 'headset' do
 
   zap trash: [
                '~/Library/Application Support/Headset',
-               '~/Library/Preferences/co.headsetapp.app.helper.plist',
+               '~/Library/Caches/co.headsetapp.app',
+               '~/Library/Caches/co.headsetapp.app.ShipIt',
+               '~/Library/Cookies/co.headsetapp.app.binarycookies',
+               '~/Library/Logs/Headset',
+               '~/Library/Preferences/ByHost/co.headsetapp.app.ShipIt.*.plist',
                '~/Library/Preferences/co.headsetapp.app.plist',
                '~/Library/Saved Application State/co.headsetapp.app.savedState',
              ]
