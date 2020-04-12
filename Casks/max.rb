@@ -19,5 +19,5 @@ cask 'max' do
   name 'Max'
   homepage 'https://sbooth.org/Max/'
 
-  zap trash: '~/Library/Preferences/comorg.sbooth.Max.plist'
+  zap trash: '~/Library/Preferences/org.sbooth.Max.plist'
 end
