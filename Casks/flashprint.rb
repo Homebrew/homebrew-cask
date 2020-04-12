@@ -8,8 +8,10 @@ cask 'flashprint' do
 
   auto_updates true
 
-  app 'FlashPrint.app'
-
+  pkg 'FlashPrint.pkg'
+  
+  uninstall pkgutil: 'com.sz3dp.pkg.FlashPrint'
+  
   zap trash: [
                '~/Library/Preferences/FlashForge.FlashPrint.plist',
              ]
