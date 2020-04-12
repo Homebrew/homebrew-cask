@@ -32,13 +32,13 @@ cask 'mactex-no-gui' do
                  },
                  {
                    # GUI Applications
-                   'choiceIdentifier' => 'org.tug.mactex.gui2020',
+                   'choiceIdentifier' => "org.tug.mactex.gui#{version.major}",
                    'choiceAttribute'  => 'selected',
                    'attributeSetting' => 0,
                  },
                  {
                    # TeXLive
-                   'choiceIdentifier' => 'org.tug.mactex.texlive2020',
+                   'choiceIdentifier' => "org.tug.mactex.texlive#{version.major}",
                    'choiceAttribute'  => 'selected',
                    'attributeSetting' => 1,
                  },
