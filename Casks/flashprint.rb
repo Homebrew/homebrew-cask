@@ -12,7 +12,5 @@ cask 'flashprint' do
 
   uninstall pkgutil: 'com.sz3dp.pkg.FlashPrint'
 
-  zap trash: [
-               '~/Library/Preferences/FlashForge.FlashPrint.plist',
-             ]
+  zap trash: '~/Library/Preferences/FlashForge.FlashPrint.plist'
 end
