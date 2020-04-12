@@ -13,6 +13,7 @@ cask 'xamarin-ios' do
   uninstall pkgutil: [
                        'com.xamarin.xamarin.ios.pkg',
                        'com.xamarin.xamarin-ios-build-host.pkg',
+                       'com.xamarin.monotouch.pkg',
                      ]
 
   zap trash: [
