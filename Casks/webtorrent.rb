@@ -19,6 +19,7 @@ cask 'webtorrent' do
                '~/Library/Caches/io.webtorrent.webtorrent.ShipIt',
                '~/Library/Caches/WebTorrent',
                '~/Library/Cookies/io.webtorrent.webtorrent.binarycookies',
+               '~/Library/Preferences/ByHost/io.webtorrent.webtorrent.ShipIt.*.plist',
                '~/Library/Preferences/io.webtorrent.webtorrent-helper.plist',
                '~/Library/Preferences/io.webtorrent.webtorrent.plist',
                '~/Library/Saved Application State/io.webtorrent.webtorrent.savedState',
