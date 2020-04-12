@@ -4,7 +4,6 @@ cask 'screenflick' do
 
   url "https://store.araelium.com/screenflick/downloads/versions/Screenflick#{version}.zip"
   appcast 'https://arweb-assets.s3.amazonaws.com/downloads/screenflick/updates.json'
- 
   name 'Screenflick'
   homepage 'https://www.araelium.com/screenflick/'
 
