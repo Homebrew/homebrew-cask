@@ -16,6 +16,7 @@ cask 'alt-tab' do
 
   zap trash: [
                '~/Library/Caches/com.lwouis.alt-tab-macos',
+               '~/Library/Cookies/com.lwouis.alt-tab-macos.binarycookies',
                '~/Library/Preferences/com.lwouis.alt-tab-macos.plist',
              ]
 end
