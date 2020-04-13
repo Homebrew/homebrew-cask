@@ -7,4 +7,11 @@ cask 'spires' do
   homepage 'https://member.ipmu.jp/yuji.tachikawa/spires/'
 
   app 'spires.app'
+
+  zap trash: [
+               '~/Library/Application Support/spires',
+               '~/Library/Caches/com.yujitach.spires',
+               '~/Library/Cookies/com.yujitach.spires.binarycookies',
+               '~/Library/Preferences/com.yujitach.spires.plist',
+             ]
 end
