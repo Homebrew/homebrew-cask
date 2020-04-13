@@ -11,14 +11,6 @@ cask 'thor' do
 
   app 'Thor.app'
 
-  postflight do
-    system_command 'xattr',
-                   args: [
-                           '-dr', 'com.apple.quarantine',
-                           "#{appdir}/Thor.app"
-                         ]
-  end
-
   uninstall quit: 'me.alvinzhu.Thor'
 
   zap trash: [
