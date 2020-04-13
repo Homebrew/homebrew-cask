@@ -11,6 +11,5 @@ cask 'alacritty' do
 
   zap delete: [
                 '~/Library/Saved Application State/io.alacritty.savedState',
-                '~/.config/alacritty',
               ]
 end
