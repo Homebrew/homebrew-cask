@@ -24,8 +24,9 @@ cask 'proxyman' do
     end
   end
 
-  uninstall delete:    '/Library/PrivilegedHelperTools/com.proxyman.NSProxy.HelperTool',
-            launchctl: 'com.proxyman.NSProxy.HelperTool'
+  uninstall quit:      'com.proxyman.NSProxy',
+            launchctl: 'com.proxyman.NSProxy.HelperTool',
+            delete:    '/Library/PrivilegedHelperTools/com.proxyman.NSProxy.HelperTool'
 
   zap trash: [
                '~/Library/Application Support/com.proxyman',
