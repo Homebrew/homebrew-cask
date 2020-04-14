@@ -9,4 +9,9 @@ cask 'ios-app-signer' do
   homepage 'https://dantheman827.github.io/ios-app-signer/'
 
   app 'iOS App Signer.app'
+
+  zap trash: [
+               '~/Library/Caches/com.DanTheMan827.AppSigner',
+               '~/Library/Preferences/com.DanTheMan827.AppSigner.plist',
+             ]
 end
