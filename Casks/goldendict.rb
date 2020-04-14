@@ -6,7 +6,7 @@ cask 'goldendict' do
   url "https://download.sourceforge.net/goldendict/GoldenDict-#{version.before_comma}-#{version.after_comma}.dmg"
   appcast 'https://sourceforge.net/projects/goldendict/rss'
   name 'GoldenDict'
-  homepage 'https://github.com/goldendict/goldendict'
+  homepage 'http://goldendict.org/'
 
   depends_on macos: '>= :sierra'
 
