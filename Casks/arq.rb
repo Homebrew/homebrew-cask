@@ -11,5 +11,10 @@ cask 'arq' do
 
   pkg "Arq#{version.major}.pkg"
 
-  uninstall pkgutil: 'com.haystacksoftware.Arq'
+  uninstall pkgutil:   'com.haystacksoftware.Arq',
+            quit:      'com.haystacksoftware.Arq',
+            launchctl: [
+                         'com.haystacksoftware.ArqMonitor',
+                         'com.haystacksoftware.arqagent',
+                       ]
 end
