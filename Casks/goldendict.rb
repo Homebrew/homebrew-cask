@@ -3,7 +3,7 @@ cask 'goldendict' do
   sha256 'bc04acbd5db51d50b8b6262d69117304df96776472b7a1df7ad42dafafe573ff'
 
   # sourceforge.net/project/goldendict was verified as official when first introduced to the cask
-  url "https://download.sourceforge.net/project/goldendict/early%20access%20builds/MacOS/GoldenDict-#{version.before_comma}-#{version.after_comma}.dmg"
+  url "https://download.sourceforge.net/goldendict/GoldenDict-#{version.before_comma}-#{version.after_comma}.dmg"
   appcast 'https://sourceforge.net/projects/goldendict/rss'
   name 'GoldenDict'
   homepage 'https://github.com/goldendict/goldendict'
