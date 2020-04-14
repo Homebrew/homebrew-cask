@@ -18,12 +18,14 @@ cask 'amazon-photos' do
             launchctl: 'com.amazon.clouddrive'
 
   zap trash: [
-               '~/Library/Logs/Amazon Cloud Drive/',
-               '~/Library/Logs/Amazon Drive/',
-               '~/Library/Preferences/com.amazon.clouddrive.mac.plist',
-               '~/Library/Application Scripts/Amazon Cloud Drive/',
-               '~/Library/Application Support/Amazon Drive/',
-               '~/Library/Caches/com.amazon.clouddrive.mac/',
+               '~/Library/Application Scripts/Amazon Cloud Drive',
+               '~/Library/Application Support/Amazon Cloud Drive',
+               '~/Library/Application Support/Amazon Drive',
+               '~/Library/Caches/com.amazon.clouddrive.mac.installer',
+               '~/Library/Caches/com.amazon.clouddrive.mac',
                '~/Library/Cookies/com.amazon.clouddrive.mac.binarycookies',
+               '~/Library/Logs/Amazon Cloud Drive',
+               '~/Library/Logs/Amazon Drive',
+               '~/Library/Preferences/com.amazon.clouddrive.mac.plist',
              ]
 end
