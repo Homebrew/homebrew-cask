@@ -1,6 +1,6 @@
 cask 'arq' do
-  version '6.1.6'
-  sha256 '66381156ae3db5c53179f2d482b7a22e8d07a16b791826d83567f76be798cd52'
+  version '6.1.11'
+  sha256 '2be994991a7336ea53660e763d939cd23b43b44212c02bbe9358a7fd070a8bc9'
 
   url "https://www.arqbackup.com/download/arqbackup/Arq#{version.major}.pkg"
   appcast 'https://www.arqbackup.com/'
