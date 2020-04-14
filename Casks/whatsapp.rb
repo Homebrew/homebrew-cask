@@ -16,6 +16,7 @@ cask 'whatsapp' do
                '~/Library/Application Support/WhatsApp.ShipIt',
                '~/Library/Caches/WhatsApp',
                '~/Library/Caches/WhatsApp.ShipIt',
+               '~/Library/Preferences/ByHost/WhatsApp.ShipIt.*.plist',
                '~/Library/Preferences/WhatsApp.plist',
                '~/Library/Preferences/WhatsApp-Helper.plist',
                '~/Library/Saved Application State/WhatsApp.savedState',
