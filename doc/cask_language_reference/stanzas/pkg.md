@@ -24,7 +24,7 @@ pkg 'AlinofTimer.pkg', allow_untrusted: true
 
 ## `pkg choices:`
 
-`pkg choices:` can be used to override `.pkg`’s default install options via `-applyChoiceChangesXML`. It uses a deserialized version of the `choiceChanges` property list (refer to the `CHOICE CHANGES FILE` section of the `installer` manual page by running the command `man installer` for further information).
+`pkg choices:` can be used to override `.pkg`’s default install options via `-applyChoiceChangesXML`. It uses a deserialized version of the `choiceChanges` property list (refer to the `CHOICE CHANGES FILE` section of the `installer` manual page by running `man installer`).
 
 Running the  macOS command:
 
