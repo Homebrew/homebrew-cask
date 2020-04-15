@@ -1,13 +1,20 @@
 cask 'arq' do
-  version '5.17.3'
-  sha256 '98db29e7b18dcfd388b001451f3367b72844bf6f59e170bea38c967231a59d19'
+  version '6.1.11'
+  sha256 '2be994991a7336ea53660e763d939cd23b43b44212c02bbe9358a7fd070a8bc9'
 
-  url "https://www.arqbackup.com/download/arqbackup/Arq_#{version}.zip"
-  appcast "https://www.arqbackup.com/download/arqbackup/arq#{version.major}.xml"
+  url "https://www.arqbackup.com/download/arqbackup/Arq#{version.major}.pkg"
+  appcast 'https://www.arqbackup.com/'
   name 'Arq'
   homepage 'https://www.arqbackup.com/'
 
   auto_updates true
 
-  app 'Arq.app'
+  pkg "Arq#{version.major}.pkg"
+
+  uninstall pkgutil:   'com.haystacksoftware.Arq',
+            quit:      'com.haystacksoftware.Arq',
+            launchctl: [
+                         'com.haystacksoftware.ArqMonitor',
+                         'com.haystacksoftware.arqagent',
+                       ]
 end
