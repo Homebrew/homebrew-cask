@@ -5,7 +5,6 @@ cask 'pycharm-with-anaconda-plugin' do
   url "https://download.jetbrains.com/python/pycharm-professional-anaconda-#{version.before_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=PCC&latest=true&type=release'
   name 'Jetbrains PyCharm with Anaconda plugin'
-  name 'PyCharm with Anaconda plugin'
   homepage 'https://www.jetbrains.com/pycharm/promo/anaconda'
 
   auto_updates true
