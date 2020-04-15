@@ -1,6 +1,6 @@
 cask 'lunar' do
-  version '3.1.4'
-  sha256 'f698589e23fdfb95c818b5369cb436b07e24aa6ab42969d6773b858dcac4fc77'
+  version '3.1.5'
+  sha256 '67696ba7f0c752904fed5bcaa0efbff9331d6c18853d56c241927c7dc4f3f906'
 
   url "https://lunar.fyi/download/#{version}"
   appcast 'https://lunar.fyi/appcast.xml'

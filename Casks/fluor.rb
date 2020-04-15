@@ -8,7 +8,12 @@ cask 'fluor' do
   name 'Fluor'
   homepage 'https://fluorapp.net/'
 
+  auto_updates true
   depends_on macos: '>= :sierra'
 
   app 'Fluor.app'
+
+  uninstall quit: 'com.pyrolyse.Fluor'
+
+  zap trash: '~/Library/Preferences/com.pyrolyse.Fluor.plist'
 end
