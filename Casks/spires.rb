@@ -7,6 +7,9 @@ cask 'spires' do
   name 'spires'
   homepage 'https://member.ipmu.jp/yuji.tachikawa/spires/'
 
+  auto_updates true
+  depends_on macos: '>= :el_capitan'
+
   app 'spires.app'
 
   zap trash: [
@@ -14,5 +17,6 @@ cask 'spires' do
                '~/Library/Caches/com.yujitach.spires',
                '~/Library/Cookies/com.yujitach.spires.binarycookies',
                '~/Library/Preferences/com.yujitach.spires.plist',
+               '~/Library/Saved Application State/com.yujitach.spires.savedState',
              ]
 end
