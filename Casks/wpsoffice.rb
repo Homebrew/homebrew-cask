@@ -18,7 +18,6 @@ cask 'wpsoffice' do
                  '~/Library/Application Scripts/com.kingsoft.wpsoffice.mac.global',
                  '~/Library/Containers/com.kingsoft.wpsoffice.mac.global',
                ]
-    'en_US'
   end
 
   language 'zh', 'CN' do
@@ -40,6 +39,5 @@ cask 'wpsoffice' do
                  '~/Library/Application Scripts/com.kingsoft.wpsoffice.mac',
                  '~/Library/Containers/com.kingsoft.wpsoffice.mac',
                ]
-    'zh_CN'
   end
 end
