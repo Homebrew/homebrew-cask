@@ -1,4 +1,4 @@
-cask 'firestorm-opensim' do
+cask 'firestormos' do
   version '6.0.2.56680'
   sha256 'f8e5fa3b1a72aff67ce91d44f82f536d898a9b4c3a818414799ccb8d288e7e97'
 
