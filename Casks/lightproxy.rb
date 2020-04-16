@@ -9,4 +9,16 @@ cask 'lightproxy' do
   homepage 'https://alibaba.github.io/lightproxy/'
 
   app 'LightProxy.app'
+
+  uninstall_postflight do
+    stdout, * = system_command '/usr/bin/security',
+                               args: ['find-certificate', '-a', '-c', 'LigthProxy', '-Z'],
+                               sudo: true
+    hashes = stdout.lines.grep(%r{^SHA-256 hash:}) { |l| l.split(':').second.strip }
+    hashes.each do |h|
+      system_command '/usr/bin/security',
+                     args: ['delete-certificate', '-Z', h],
+                     sudo: true
+    end
+  end
 end
