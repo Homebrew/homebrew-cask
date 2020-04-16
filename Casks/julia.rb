@@ -1,6 +1,6 @@
 cask 'julia' do
   version '1.4.1'
-  sha256 'b8a3c767a859a88cb468b93c09ef3057e5fadd3001e2fff0ca8d376254088c45'
+  sha256 '5e1084e996903842bb2ac5bcde4cd3f670c10e0b15eaa4b812d12bea944704de'
 
   url "https://julialang-s3.julialang.org/bin/mac/x64/#{version.major_minor}/julia-#{version}-mac64.dmg"
   appcast 'https://github.com/JuliaLang/julia/releases.atom'
