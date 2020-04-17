@@ -3,7 +3,7 @@ cask 'baidunetdisk' do
   sha256 'c6017603268449774bcea61a9385ba7fc913614121ef75da047e793de5fba125'
 
   # baidupcs.com/issue/netdisk/MACguanjia was verified as official when first introduced to the cask
-  url "http://wppkg.baidupcs.com/issue/netdisk/MACguanjia/BaiduNetdisk_mac_#{version}.dmg"
+  url "https://wppkg.baidupcs.com/issue/netdisk/MACguanjia/BaiduNetdisk_mac_#{version}.dmg"
   appcast 'https://pan.baidu.com/disk/cmsdata?do=client'
   name 'Baidu NetDisk'
   name '百度网盘'
