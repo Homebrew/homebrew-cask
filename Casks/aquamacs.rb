@@ -6,7 +6,7 @@ cask 'aquamacs' do
   url "https://github.com/davidswelt/aquamacs-emacs/releases/download/Aquamacs-#{version}/Aquamacs-Emacs-#{version}.dmg"
   appcast 'https://github.com/davidswelt/aquamacs-emacs/releases.atom'
   name 'Aquamacs'
-  homepage 'http://aquamacs.org/'
+  homepage 'https://aquamacs.org/'
 
   app 'Aquamacs.app'
 
