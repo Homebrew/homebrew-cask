@@ -3,7 +3,7 @@ cask 'trojan-qt5' do
   sha256 '3a3ac0f68376cc51f1699f0e2da7d648d629bd367431ebbfc92136c59e04bb1a'
 
   url "https://github.com/TheWanderingCoel/Trojan-Qt5/releases/download/v#{version}/Trojan-Qt5-macOS.dmg"
-  appcast 'https://raw.githubusercontent.com/TheWanderingCoel/Trojan-Qt5/master/resources/Appcast_macOS.xml'
+  appcast 'https://github.com/TheWanderingCoel/Trojan-Qt5/releases.atom'
   name 'Trojan-Qt5'
   homepage 'https://github.com/TheWanderingCoel/Trojan-Qt5'
 
