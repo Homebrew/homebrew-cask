@@ -1,6 +1,6 @@
 cask 'vscodium' do
-  version '1.44.1'
-  sha256 '4bfa6261e7d95c6457ebc49d6928a00f13c7f2d36954eebcecf26683b151fe31'
+  version '1.44.2'
+  sha256 '3e4be630a6abb8cafc96609f401a28faf3e84452d969bd4fa4a1a6530a649cdf'
 
   url "https://github.com/VSCodium/vscodium/releases/download/#{version}/VSCodium.#{version}.dmg"
   appcast 'https://github.com/VSCodium/vscodium/releases.atom'
