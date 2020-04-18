@@ -9,5 +9,5 @@ cask 'presentation' do
 
   pkg "osx-presentation-#{version}.pkg"
 
-  uninstall pkgutil: ''
+  uninstall pkgutil: 'fr.imag.iihm.blanch.osx-presentation'
 end
