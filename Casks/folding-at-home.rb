@@ -4,9 +4,9 @@ cask 'folding-at-home' do
 
   # download.foldingathome.org/releases/public/release/fah-installer was verified as official when first introduced to the cask
   url "https://download.foldingathome.org/releases/public/release/fah-installer/osx-10.11-64bit/v#{version.major_minor}/fah-installer_#{version}_x86_64.mpkg.zip"
-  appcast 'https://download.foldingathome.org/releases/public/release/fah-installer/'
+  appcast 'https://foldingathome.org/alternative-downloads/'
   name 'Folding@home'
-  homepage 'https://folding.stanford.edu/'
+  homepage 'https://foldingathome.org/'
 
   pkg "fah-installer_#{version}_x86_64.pkg"
 
