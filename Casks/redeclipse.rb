@@ -5,6 +5,7 @@ cask 'redeclipse' do
   # github.com was verified as official when first introduced to the cask
   url 'https://github.com/redeclipse/base/releases/download/v2.0.0/redeclipse_2.0.0_mac.tar.bz2'
   appcast 'https://github.com/redeclipse/base/releases.atom'
+  name 'Red Eclipse'
   homepage 'https://www.redeclipse.net/'
 
   app 'redeclipse.app'
