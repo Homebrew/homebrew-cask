@@ -7,7 +7,7 @@ cask 'thunder' do
   appcast 'https://static-xl9-ssl.xunlei.com/json/mac_download_url.json'
   name 'Thunder'
   name '迅雷'
-  homepage 'https://mac.xunlei.com/'
+  homepage 'https://www.xunlei.com/'
 
   auto_updates true
   depends_on macos: '>= :yosemite'
