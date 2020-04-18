@@ -1,12 +1,11 @@
 cask 'folding-at-home' do
-  version '7.5.1'
-  sha256 '94fd47ff55120c1c869d0dfbf366ae418406a3b47b0fa1bcf94014777abb72a6'
+  version '7.6.9'
+  sha256 '9475e8aef3614daf92e3cfc8748be5e10e1c5b38a5c5da30ce3fe60f754de16b'
 
-  # download.foldingathome.org/releases/public/release/fah-installer was verified as official when first introduced to the cask
   url "https://download.foldingathome.org/releases/public/release/fah-installer/osx-10.11-64bit/v#{version.major_minor}/fah-installer_#{version}_x86_64.mpkg.zip"
-  appcast 'https://download.foldingathome.org/releases/public/release/fah-installer/'
+  appcast 'https://download.foldingathome.org/js/fah-downloads.js'
   name 'Folding@home'
-  homepage 'https://folding.stanford.edu/'
+  homepage 'https://foldingathome.org/'
 
   pkg "fah-installer_#{version}_x86_64.pkg"
 
