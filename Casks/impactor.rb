@@ -9,4 +9,12 @@ cask 'impactor' do
   homepage 'http://www.cydiaimpactor.com/'
 
   app 'Impactor.app'
+
+  zap trash: [
+               '~/Library/Application Support/Impactor',
+               '~/Library/Caches/com.saurik.Impactor',
+               '~/Library/Cookies/com.saurik.Impactor.binarycookies',
+               '~/Library/Preferences/com.saurik.Impactor.plist',
+               '~/Library/Saved Application State/com.saurik.Impactor.savedState',
+             ]
 end
