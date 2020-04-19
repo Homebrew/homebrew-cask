@@ -1,9 +1,9 @@
 cask 'hook' do
-  version '1.4'
-  sha256 '60b25c4c5c160ce1360c55700d5aaf6357fc76a931aeae86a8e2e2c0cfdd9564'
+  version '1.5.1'
+  sha256 'fbfcf66c02b08c1234bb6cf443dc9d6aa93c232b0d9113c110bdd419ee6819e5'
 
-  # appcenter-filemanagement-distrib5ede6f06e.azureedge.net was verified as official when first introduced to the cask
-  url 'https://appcenter-filemanagement-distrib5ede6f06e.azureedge.net/9833b7ef-39a1-42cc-ab0e-6def214e04ad/Hook_productivity_app_1.4.dmg?sv=2018-03-28&sr=c&sig=dJjtgIzjzjrRMsS7EaZgMLpS23wlQ2BYTpjnlXBpZOw%3D&se=2020-03-28T22%3A36%3A35Z&sp=r'
+  # appcenter-filemanagement-distrib2ede6f06e.azureedge.net was verified as official when first introduced to the cask
+  url 'https://appcenter-filemanagement-distrib2ede6f06e.azureedge.net/0abd8c0f-8c31-48cc-8c4a-a82b81e91dc7/Hook%20productivity%20app%201.5.1.dmg?sv=2019-02-02&sr=c&sig=PRZAnwX5PKFED%2BnBKOSw0IURxiDEl%2BFC7SrdC9VejaQ%3D&se=2020-04-20T10%3A18%3A56Z&sp=r'
   appcast 'https://api.appcenter.ms/v0.1/public/sparkle/apps/a77a1a87-7d69-435d-90ea-7365b2f7bddb'
   name 'Hook'
   homepage 'https://hookproductivity.com/'
