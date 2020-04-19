@@ -1,6 +1,6 @@
 cask 'apache-directory-studio' do
-  version '2.0.0.v20180908-M14'
-  sha256 '845392529c86e52697c1edac1f0603261324ff2a649e697dbdf566ee5f5f8e5e'
+  version '2.0.0.v20200411-M15'
+  sha256 '1e3208fcdf42ae107796a06a00240c08b9f0c24c8b07a61e94b968112657fda8'
 
   url "https://www.apache.org/dyn/closer.cgi?path=/directory/studio/#{version}/ApacheDirectoryStudio-#{version}-macosx.cocoa.x86_64.dmg"
   appcast 'http://apache.mirror.serversaustralia.com.au/directory/studio/'
