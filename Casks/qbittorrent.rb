@@ -8,7 +8,7 @@ cask 'qbittorrent' do
   name 'qBittorrent'
   homepage 'https://www.qbittorrent.org/'
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :high_sierra'
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app 'qbittorrent.app', target: 'qBittorrent.app'
