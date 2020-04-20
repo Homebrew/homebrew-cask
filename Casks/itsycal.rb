@@ -15,7 +15,7 @@ cask 'itsycal' do
     appcast 'https://itsycal.s3.amazonaws.com/itsycal.xml'
   end
 
-  # itsycal.s3.amazonaws.com was verified as official when first introduced to the cask
+  # itsycal.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://itsycal.s3.amazonaws.com/Itsycal-#{version}.zip"
   name 'Itsycal'
   homepage 'https://www.mowglii.com/itsycal/'
