@@ -2,7 +2,7 @@ cask 'softube-central' do
   version '1.1.9'
   sha256 'd66d429ede5361d452938a565273135751a4d7c22730f94b912cd193fa7d4afd'
 
-  # softubestorage.b-cdn.net was verified as official when first introduced to the cask
+  # softubestorage.b-cdn.net/ was verified as official when first introduced to the cask
   url "https://softubestorage.b-cdn.net/softubecentral/Softube%20Central-#{version}.pkg"
   name 'Softube Central'
   homepage 'https://www.softube.com/softube-central/'
