@@ -2,7 +2,7 @@ cask 'android-sdk' do
   version '4333796'
   sha256 'ecb29358bc0f13d7c2fa0f9290135a5b608e38434aad9bf7067d0252c160853e'
 
-  # dl.google.com/android/repository was verified as official when first introduced to the cask
+  # dl.google.com/android/repository/ was verified as official when first introduced to the cask
   url "https://dl.google.com/android/repository/sdk-tools-darwin-#{version}.zip"
   name 'android-sdk'
   homepage 'https://developer.android.com/index.html'
