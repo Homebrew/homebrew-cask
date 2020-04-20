@@ -2,7 +2,7 @@ cask 'miro-formerly-realtimeboard' do
   version :latest
   sha256 :no_check
 
-  # desktop.realtimeboard.com was verified as official when first introduced to the cask
+  # desktop.realtimeboard.com/ was verified as official when first introduced to the cask
   url 'https://desktop.realtimeboard.com/platforms/darwin/Miro%20-%20formerly%20RealtimeBoard.dmg'
   name 'Miro'
   name 'RealtimeBoard'
