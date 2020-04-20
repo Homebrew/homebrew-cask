@@ -2,7 +2,7 @@ cask 'vox' do
   version '3398.3,1580250435'
   sha256 '7b28a89217fad66944e9308e967a5e8dedb73f2536da543e6620c62575c6d730'
 
-  # devmate.com/com.coppertino.Vox was verified as official when first introduced to the cask
+  # devmate.com/com.coppertino.Vox/ was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.coppertino.Vox/#{version.before_comma}/#{version.after_comma}/Vox-#{version.before_comma}.zip"
   appcast 'https://updates.devmate.com/com.coppertino.Vox.xml'
   name 'VOX'
