@@ -2,7 +2,7 @@ cask 'miniconda' do
   version '4.7.12'
   sha256 'a879d93f42bdc796a4b975a11d109dfacc11a7ba6c4106aedf657d5e1fd79410'
 
-  # repo.anaconda.com/miniconda was verified as official when first introduced to the cask
+  # repo.anaconda.com/miniconda/ was verified as official when first introduced to the cask
   url "https://repo.anaconda.com/miniconda/Miniconda3-#{version}-MacOSX-x86_64.sh"
   name 'Continuum Analytics Miniconda'
   homepage 'https://conda.io/miniconda.html'
