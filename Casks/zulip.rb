@@ -2,7 +2,7 @@ cask 'zulip' do
   version '5.0.0'
   sha256 'a8189b22e9ba51db256e427e968ddd5324f6b02fa62bf7201957154733c6acb7'
 
-  # github.com/zulip/zulip-desktop was verified as official when first introduced to the cask
+  # github.com/zulip/zulip-desktop/ was verified as official when first introduced to the cask
   url "https://github.com/zulip/zulip-desktop/releases/download/v#{version}/Zulip-#{version}.dmg"
   appcast 'https://github.com/zulip/zulip-desktop/releases.atom'
   name 'Zulip'
