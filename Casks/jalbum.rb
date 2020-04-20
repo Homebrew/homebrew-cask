@@ -1,6 +1,6 @@
 cask 'jalbum' do
   version '20.0.0'
-  sha256 'ad5e8c3203d6c8b42fb279310ef512269e7b0b7be4ad0c29c5537f47ab077b78'
+  sha256 '115e3ab0d02564a9a59f25d25a16cfebd2344e2e71843d558575685a10a376c3'
 
   url "https://download.jalbum.net/download/#{version.major}/MacOSX/jAlbum.dmg"
   appcast 'https://jalbum.net/en/software/download/previous',
