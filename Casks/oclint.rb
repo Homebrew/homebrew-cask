@@ -2,7 +2,7 @@ cask 'oclint' do
   version '0.13.1,17.4.0'
   sha256 'c67f014a1ce997e62a242fe9154a9ac0a4ea50ad07b0417f3fb8b13f20e1ab90'
 
-  # github.com/oclint/oclint was verified as official when first introduced to the cask
+  # github.com/oclint/oclint/ was verified as official when first introduced to the cask
   url "https://github.com/oclint/oclint/releases/download/v#{version.before_comma}/oclint-#{version.before_comma}-x86_64-darwin-#{version.after_comma}.tar.gz"
   appcast 'https://github.com/oclint/oclint/releases.atom'
   name 'OCLint'
