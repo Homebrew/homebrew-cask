@@ -7,7 +7,7 @@ cask 'jedit-omega' do
     sha256 '5728b4cb26af5c61f33f6a81f94b801396598897b85f97e7d76e36807d1a0986'
   end
 
-  # artman21.co.jp was verified as official when first introduced to the cask
+  # artman21.co.jp/ was verified as official when first introduced to the cask
   url "http://download.artman21.co.jp/product/JeditOmega/JeditOmega#{version.no_dots}.dmg"
   appcast 'http://www.artman21.com/en/jeditOmega/history.html'
   name 'Jedit Ω'
