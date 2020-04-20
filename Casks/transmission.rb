@@ -2,7 +2,7 @@ cask 'transmission' do
   version '2.94'
   sha256 '2cae915ae0e37fc5983406ca7fbd53a054a7153d3bfd7a6cef117a8a28d8a78a'
 
-  # github.com/transmission/transmission-releases was verified as official when first introduced to the cask
+  # github.com/transmission/transmission-releases/ was verified as official when first introduced to the cask
   url "https://github.com/transmission/transmission-releases/raw/master/Transmission-#{version}.dmg"
   appcast 'https://github.com/transmission/transmission/releases.atom'
   name 'Transmission'
