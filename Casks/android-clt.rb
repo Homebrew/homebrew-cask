@@ -16,11 +16,11 @@ cask 'android-clt' do
   binary "#{staged_path}/tools/bin/sdkmanager"
 
   postflight do
-    FileUtils.ln_sf(staged_path.to_s, "#{HOMEBREW_PREFIX}/share/android-sdk")
+    FileUtils.ln_sf(staged_path.to_s, "#{HOMEBREW_PREFIX}/share/android-clt")
   end
 
   uninstall_postflight do
-    FileUtils.rm_f("#{HOMEBREW_PREFIX}/share/android-sdk")
+    FileUtils.rm_f("#{HOMEBREW_PREFIX}/share/android-clt")
   end
 
   caveats do
@@ -28,7 +28,7 @@ cask 'android-clt' do
     <<~EOS
       You can control android sdk packages via the sdkmanager command.
       You may want to add to your profile:
-        'export ANDROID_SDK_ROOT="#{HOMEBREW_PREFIX}/share/android-sdk"'
+        'export ANDROID_SDK_ROOT="#{HOMEBREW_PREFIX}/share/android-clt"'
     EOS
   end
 end
