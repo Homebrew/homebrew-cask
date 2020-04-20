@@ -7,7 +7,7 @@ cask 'hammerspoon' do
     sha256 'a06a8a78c5fb43a72550d1162fa702a7f383b09ea638c44062f83026dcd2e5ff'
   end
 
-  # github.com/Hammerspoon/hammerspoon was verified as official when first introduced to the cask
+  # github.com/Hammerspoon/hammerspoon/ was verified as official when first introduced to the cask
   url "https://github.com/Hammerspoon/hammerspoon/releases/download/#{version}/Hammerspoon-#{version}.zip"
   appcast 'https://github.com/Hammerspoon/hammerspoon/releases.atom'
   name 'Hammerspoon'
