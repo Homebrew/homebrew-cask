@@ -10,7 +10,7 @@ cask 'coteditor' do
     sha256 '735c767bf7e7af1864c53587405186925265cca48329702e2b24817f474327f8'
   end
 
-  # github.com/coteditor/CotEditor was verified as official when first introduced to the cask
+  # github.com/coteditor/CotEditor/ was verified as official when first introduced to the cask
   url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
   appcast 'https://github.com/coteditor/CotEditor/releases.atom'
   name 'CotEditor'
