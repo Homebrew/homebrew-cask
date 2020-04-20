@@ -1,6 +1,6 @@
 cask 'dd-utility' do
-  version '1.9'
-  sha256 'b28d2b5676b702aeab42ee0b973c58ed66fd293988d4aa43730bd90f4d79e663'
+  version '1.11'
+  sha256 '1c33a998b7c9b7a9fa59222d2e7cc0410f0cec85650e8647308c33ee0af1e956'
 
   url "https://github.com/thefanclub/dd-utility/raw/master/DMG/ddUtility-#{version}.dmg"
   name 'dd Utility'
