@@ -2,7 +2,7 @@ cask 'zoomus' do
   version '4.6.20561.0413'
   sha256 '6c88d261f7784f1278f9aa7edcaa438cd919e7525cd66a17f019a2bcfae30eea'
 
-  # d11yldzmag5yn.cloudfront.net was verified as official when first introduced to the cask
+  # d11yldzmag5yn.cloudfront.net/ was verified as official when first introduced to the cask
   url "https://d11yldzmag5yn.cloudfront.net/prod/#{version}/Zoom.pkg"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://zoom.us/client/latest/Zoom.pkg'
   name 'Zoom.us'

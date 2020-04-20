@@ -2,7 +2,7 @@ cask 'thonny-xxl' do
   version '3.2.7'
   sha256 'd22a59aebf219c0f8afae3b6d340ef08804311e7e4e19bca76b51620386cf9cc'
 
-  # github.com/thonny/thonny was verified as official when first introduced to the cask
+  # github.com/thonny/thonny/ was verified as official when first introduced to the cask
   url "https://github.com/thonny/thonny/releases/download/v#{version}/thonny-xxl-#{version}.pkg"
   appcast 'https://github.com/thonny/thonny/releases.atom'
   name 'Thonny (XXL bundle)'

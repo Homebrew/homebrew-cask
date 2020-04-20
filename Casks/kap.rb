@@ -2,7 +2,7 @@ cask 'kap' do
   version '3.2.0'
   sha256 '3944d7a0ec9ad386e26c10f7e49827ad099e33a8afb5f82f110e48b315a7b017'
 
-  # github.com/wulkano/kap was verified as official when first introduced to the cask
+  # github.com/wulkano/kap/ was verified as official when first introduced to the cask
   url "https://github.com/wulkano/kap/releases/download/v#{version.major_minor_patch}/Kap-#{version}.dmg"
   appcast 'https://github.com/wulkano/kap/releases.atom'
   name 'Kap'

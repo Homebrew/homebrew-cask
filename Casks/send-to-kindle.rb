@@ -2,7 +2,7 @@ cask 'send-to-kindle' do
   version :latest
   sha256 :no_check
 
-  # sendtokindle.s3.amazonaws.com was verified as official when first introduced to the cask
+  # sendtokindle.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url 'https://sendtokindle.s3.amazonaws.com/SendToKindleForMac-installer.pkg'
   name 'Send to Kindle'
   homepage 'https://www.amazon.com/gp/sendtokindle/mac'

@@ -2,7 +2,7 @@ cask 'anka-flow' do
   version '2.2.2.116'
   sha256 '72b01734ef1e53f93f809eee31257c418424ee8afa1616e99063c8fbceeed5cf'
 
-  # d1efqjhnhbvc57.cloudfront.net was verified as official when first introduced to the cask
+  # d1efqjhnhbvc57.cloudfront.net/ was verified as official when first introduced to the cask
   url "https://d1efqjhnhbvc57.cloudfront.net/Anka-#{version}.pkg",
       referer: 'https://veertu.com/download-anka-run/'
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://veertu.com/downloads/ankaflow-latest'

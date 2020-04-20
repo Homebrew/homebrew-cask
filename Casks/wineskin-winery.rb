@@ -2,7 +2,7 @@ cask 'wineskin-winery' do
   version '1.7'
   sha256 'ef3ae1fe17a7bc622a59171985f304f506aea7ca0ad342281536dac8609eac32'
 
-  # sourceforge.net/wineskin was verified as official when first introduced to the cask
+  # sourceforge.net/wineskin/ was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/wineskin/Wineskin%20Winery.app%20Version%20#{version}.zip"
   appcast 'https://sourceforge.net/projects/wineskin/rss'
   name 'Wineskin Winery'

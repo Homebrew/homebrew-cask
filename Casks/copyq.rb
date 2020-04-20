@@ -2,7 +2,7 @@ cask 'copyq' do
   version '3.10.0'
   sha256 '647db6305c4ad975b2dddef23aac648e1d61dde827df4e00a3b6f3c506f1848d'
 
-  # github.com/hluk/CopyQ was verified as official when first introduced to the cask
+  # github.com/hluk/CopyQ/ was verified as official when first introduced to the cask
   url "https://github.com/hluk/CopyQ/releases/download/v#{version}/CopyQ.dmg"
   appcast 'https://github.com/hluk/CopyQ/releases.atom'
   name 'CopyQ'

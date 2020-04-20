@@ -2,7 +2,7 @@ cask 'duet' do
   version '2.3.1.6'
   sha256 '6585b0280d55cf75b31d98ff9071f9bff8ddb8a66deb867724ffe836dd007a12'
 
-  # duet.nyc3.cdn.digitaloceanspaces.com/Mac was verified as official when first introduced to the cask
+  # duet.nyc3.cdn.digitaloceanspaces.com/Mac/ was verified as official when first introduced to the cask
   url "https://duet.nyc3.cdn.digitaloceanspaces.com/Mac/#{version.major_minor.dots_to_underscores}/duet-#{version.dots_to_hyphens}.zip"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://updates.duetdisplay.com/latestMac',
           configuration: version.dots_to_hyphens

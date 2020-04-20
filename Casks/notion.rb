@@ -2,7 +2,7 @@ cask 'notion' do
   version '2.0.7'
   sha256 '48915df088d544c7dc41767c14d9c165a5b867668270cd985875354af8b65166'
 
-  # desktop-release.notion-static.com was verified as official when first introduced to the cask
+  # desktop-release.notion-static.com/ was verified as official when first introduced to the cask
   url "https://desktop-release.notion-static.com/Notion-#{version}.dmg"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.notion.so/desktop/mac/download&user_agent=MacOS'
   name 'Notion'

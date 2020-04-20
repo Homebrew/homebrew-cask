@@ -2,7 +2,7 @@ cask 'amazon-photos' do
   version :latest
   sha256 :no_check
 
-  # d29x207vrinatv.cloudfront.net was verified as official when first introduced to the cask
+  # d29x207vrinatv.cloudfront.net/ was verified as official when first introduced to the cask
   url 'https://d29x207vrinatv.cloudfront.net/mac/AmazonPhotosInstaller.dmg'
   name 'Amazon Drive'
   name 'Amazon Photos'

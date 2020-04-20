@@ -2,7 +2,7 @@ cask 'franz' do
   version '5.4.1'
   sha256 'bfa3202715746148115537d011642c40aae12060fccf2a5599d97d4521cc99fc'
 
-  # github.com/meetfranz/franz was verified as official when first introduced to the cask
+  # github.com/meetfranz/franz/ was verified as official when first introduced to the cask
   url "https://github.com/meetfranz/franz/releases/download/v#{version}/franz-#{version}.dmg"
   appcast 'https://github.com/meetfranz/franz/releases.atom'
   name 'Franz'
