@@ -8,4 +8,10 @@ cask 'molsoftbrowser' do
   homepage 'https://www.molsoft.com/icm_browser.html'
 
   app 'MolsoftBrowser64.app'
+
+  zap trash: [
+               '~/.browser',
+               '~/Library/Preferences/com.molsoft.plist',
+               '~/Library/Preferences/icmbrowser64.plist',
+             ]
 end
