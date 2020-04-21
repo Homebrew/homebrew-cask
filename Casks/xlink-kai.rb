@@ -1,6 +1,6 @@
 cask 'xlink-kai' do
-  version '7.4.35'
-  sha256 'ebc988dd6491439b897f8f6e51f870a919f0d416a7d6096a62441c8e7bf05d05'
+  version '7.4.36'
+  sha256 '931b8250de58bf24553e26cb6507186005520d8eec4c6f83d1db63c613693717'
 
   # github.com/Team-XLink/releases/ was verified as official when first introduced to the cask
   url "https://github.com/Team-XLink/releases/releases/download/v#{version}/XLink.Kai.app.zip"
