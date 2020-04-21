@@ -12,6 +12,9 @@ cask 'krisp' do
 
   pkg "krisp_#{version}.pkg"
 
-  uninstall quit:    'ai.2Hz.krisp',
+  uninstall quit:    [
+                       'ai.2Hz.krisp',
+                       'ai.krisp.krispMac',
+                     ],
             pkgutil: 'ai.2Hz.Krisp'
 end
