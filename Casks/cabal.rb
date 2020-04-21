@@ -1,8 +1,8 @@
 cask 'cabal' do
-  version '4.1.1'
-  sha256 '9b0c959135674663839cc0b80533a7a94603dda8977f817fa954e4d1ca5e40d3'
+  version '5.0.1'
+  sha256 '0ca563c84fb7536f0d0f8eb2011a2175d68183cb89d139573a5004d2c0e60075'
 
-  # github.com/cabal-club/cabal-desktop was verified as official when first introduced to the cask
+  # github.com/cabal-club/cabal-desktop/ was verified as official when first introduced to the cask
   url "https://github.com/cabal-club/cabal-desktop/releases/download/v#{version}/cabal-desktop-#{version}-mac.dmg"
   appcast 'https://github.com/cabal-club/cabal-desktop/releases.atom'
   name 'Cabal'

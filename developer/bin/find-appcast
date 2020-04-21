@@ -23,14 +23,9 @@ def verify_appcast(appcast_type, *urls)
 end
 
 def url_exist?(url)
-  uri = URI.parse(url)
-  response = Net::HTTP.get_response(uri)
-  response.is_a? Net::HTTPSuccess
-rescue URI::InvalidURIError,
-       Errno::ECONNREFUSED,
-       SocketError,
-       OpenSSL::SSL::SSLError
-  false
+  return false unless url
+
+  system('curl', '--silent', '--location', '--fail', url, out: File::NULL)
 end
 
 def find_sparkle(app)
@@ -51,9 +46,10 @@ def find_electron_builder(app)
   data = YAML.load_file(appcast_file)
   bucket = data['bucket']
   channel = data['channel']
+  endpoint = data['endpoint']
   name = data['name']
   owner = data['owner']
-  path = data['path'].sub(%r{^/(.*)/$}, '\1') rescue nil
+  path = data['path']
   region = data['region']
   repo = data['repo']
   url = data['url']
@@ -66,8 +62,10 @@ def find_electron_builder(app)
     "https://#{bucket}.s3.amazonaws.com/#{path}/latest-mac.yml",
     "https://s3-#{region}.amazonaws.com/#{bucket}/#{path}/latest-mac.yml",
     "https://s3.amazonaws.com/#{bucket}/#{path}/latest-mac.yml",
-    "https://#{name}.#{region}.digitaloceanspaces.com/latest-mac.yml"
-  ]
+    "https://#{name}.#{region}.digitaloceanspaces.com/latest-mac.yml",
+    "https://#{name}.#{region}.digitaloceanspaces.com/#{path}/latest-mac.yml",
+    "#{endpoint}/#{bucket}/#{path}/latest-mac.yml",
+  ].map { |appcast| appcast.gsub(%r{(?<!:)/{2,}}, '/') } # Collapse groups of two or more forward slahses into one, except when preceded by a colon
 
   unless verify_appcast('electron-builder', *possible_appcasts)
     warn <<~MESSAGE

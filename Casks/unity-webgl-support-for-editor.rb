@@ -1,6 +1,6 @@
 cask 'unity-webgl-support-for-editor' do
-  version '2019.3.6f1,5c3fb0a11183'
-  sha256 '640fa0c9efd6a24f6dd8b832fb0a9fa045e5573e1e1ac2a0f821f8d946ed40bc'
+  version '2019.3.10f1,5968d7f82152'
+  sha256 'df2ab0f241115659bef80a1db4aa6202cfe90e9eb67e9764e7574aedb275a058'
 
   url "https://netstorage.unity3d.com/unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-WebGL-Support-for-Editor-#{version.before_comma}.pkg"
   appcast 'https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json'

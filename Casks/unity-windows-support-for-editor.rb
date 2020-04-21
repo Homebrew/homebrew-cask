@@ -1,6 +1,6 @@
 cask 'unity-windows-support-for-editor' do
-  version '2019.3.6f1,5c3fb0a11183'
-  sha256 '1fb4f0ba2ec2a9ab660e48744289c81d042ab009d2e757d432bc5c6e2f060406'
+  version '2019.3.10f1,5968d7f82152'
+  sha256 '008006c153bf688ef198a914b90cae7b5f5ed25b85134172b85a0d5acaefaac0'
 
   url "https://netstorage.unity3d.com/unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-#{version.before_comma}.pkg"
   appcast 'https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json'

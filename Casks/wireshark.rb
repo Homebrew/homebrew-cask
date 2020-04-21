@@ -1,6 +1,6 @@
 cask 'wireshark' do
-  version '3.2.2'
-  sha256 'c6bda7aba34c441dc8b3998ffbe938ea37a98cf9e4cbf0136a8b65229ce0887f'
+  version '3.2.3'
+  sha256 '066a05b20dce30f55a9ae8543cdf62771250352ab74c93186b8fb8a37a3aaf18'
 
   url "https://1.na.dl.wireshark.org/osx/all-versions/Wireshark%20#{version}%20Intel%2064.dmg"
   appcast 'https://www.wireshark.org/update/0/Wireshark/0.0.0/macOS/x86-64/en-US/stable.xml'
@@ -19,7 +19,9 @@ cask 'wireshark' do
     set_ownership '/Library/Application Support/Wireshark'
 
     if File.read('/etc/group').match?(%r{^access_bpf})
-      system_command '/usr/sbin/dseditgroup', args: ['-o', 'delete', 'access_bpf'], sudo: true
+      system_command '/usr/sbin/dseditgroup',
+                     args: ['-o', 'delete', 'access_bpf'],
+                     sudo: true
     end
   end
 

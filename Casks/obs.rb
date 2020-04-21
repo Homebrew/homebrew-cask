@@ -1,6 +1,6 @@
 cask 'obs' do
-  version '24.0.6'
-  sha256 '7cb521f4eaeebf5807991d22604fd08af146728d1df7a1f4f6c38230f2f32a0d'
+  version '25.0.7'
+  sha256 '5626ada067653edab3b76e314d2522fc9cdc0a8f44fb98a9b4a2b10ae3f9fdf2'
 
   url "https://cdn-fastly.obsproject.com/downloads/obs-mac-#{version}.dmg"
   appcast 'https://github.com/obsproject/obs-studio/releases.atom'
@@ -8,4 +8,10 @@ cask 'obs' do
   homepage 'https://obsproject.com/'
 
   app 'OBS.app'
+
+  zap trash: [
+               '~/Library/Application Support/obs-studio',
+               '~/Library/Preferences/com.obsproject.obs-studio.plist',
+               '~/Library/Saved Application State/com.obsproject.obs-studio.savedState',
+             ]
 end

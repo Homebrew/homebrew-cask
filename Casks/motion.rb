@@ -1,8 +1,8 @@
 cask 'motion' do
-  version '0.3.0'
-  sha256 'e48718d7fcc5dc0982d0aec5828ce07d19d57eb47a2322c31c5b31a3441cd118'
+  version '0.4.0'
+  sha256 '58e7ce2612a4d604f9b96a2f7e84d4aeba4efeeab3ab76e32436d7b178705bf0'
 
-  # github.com/philipardeljan/getmotion was verified as official when first introduced to the cask
+  # github.com/philipardeljan/getmotion/ was verified as official when first introduced to the cask
   url "https://github.com/philipardeljan/getmotion/releases/download/v#{version}/motion.dmg"
   appcast 'https://github.com/philipardeljan/getmotion/releases.atom'
   name 'Motion'

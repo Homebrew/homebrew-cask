@@ -10,4 +10,14 @@ cask 'hiddenbar' do
   depends_on macos: '>= :high_sierra'
 
   app 'Hidden Bar.app'
+
+  uninstall quit:      'com.dwarvesv.minimalbar',
+            launchctl: 'com.dwarvesv.LauncherApplication'
+
+  zap trash: [
+               '~/Library/Application Scripts/com.dwarvesv.LauncherApplication',
+               '~/Library/Application Scripts/com.dwarvesv.minimalbar',
+               '~/Library/Containers/com.dwarvesv.LauncherApplication',
+               '~/Library/Containers/com.dwarvesv.minimalbar',
+             ]
 end

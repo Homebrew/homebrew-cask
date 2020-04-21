@@ -1,6 +1,6 @@
 cask 'tableau-public' do
-  version '2020.1.0'
-  sha256 '2da00fbe44c7d405950a64be3f6e520656c2eeae5fd326437b354ddcfbcadc31'
+  version '2020.1.2'
+  sha256 '9b5780df4f52fefb447722f7a22e80b05cfbfd3f77cc57954c09d7f48b96dcff'
 
   url "https://downloads.tableau.com/public/TableauPublic-#{version.dots_to_hyphens}.dmg"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.tableau.com/downloads/public/mac',

@@ -1,8 +1,8 @@
 cask 'freeplane' do
-  version '1.8.0'
-  sha256 '639b3e0e0bc60f3b6e180a0a29f8a0fa6fc02b55332dde2c7d2647f91a618a86'
+  version '1.8.2'
+  sha256 '4dffa2932b640675d4df9bd742e735c5cee5983fafd51c49dfb39e9c90235d54'
 
-  # downloads.sourceforge.net/freeplane was verified as official when first introduced to the cask
+  # downloads.sourceforge.net/freeplane/ was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/freeplane/freeplane%20stable/Freeplane-#{version}.dmg"
   appcast 'https://sourceforge.net/projects/freeplane/rss?path=/freeplane%20stable'
   name 'Freeplane'

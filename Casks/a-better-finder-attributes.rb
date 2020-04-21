@@ -1,6 +1,6 @@
 cask 'a-better-finder-attributes' do
-  version '6.21'
-  sha256 'cb31226e4c7d137a5f6357b3ca75dc1c25b6b88c51ec1d065ffdd553224e1338'
+  version '6.22'
+  sha256 '5a01dc9a4bd7383f2c9b09f36ad8cd2798ef16321c62b88488ae7980f09ddbbe'
 
   url 'https://www.publicspace.net/download/ABFAX.dmg'
   appcast "https://www.publicspace.net/app/signed_abfa#{version.major}.xml"

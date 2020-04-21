@@ -1,6 +1,6 @@
 cask 'fontbase' do
-  version '2.10.3'
-  sha256 'afb1fc07643747ed156bf5afc276055c70785a8655bb8bcdb0eda94abd95516d'
+  version '2.11.2'
+  sha256 'e0192136addaacf313ce05cbd451952d206590d1f0ba790a7c918185c75bbe7f'
 
   url "https://releases.fontba.se/mac/FontBase-#{version}.dmg"
   appcast 'https://releases.fontba.se/mac/latest-mac.yml'

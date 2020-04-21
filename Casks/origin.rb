@@ -1,8 +1,8 @@
 cask 'origin' do
-  version '10.5.65.38147'
-  sha256 'a397c1ccc74a509fec4aa11addf5c7d668d673dacc3e8a67a61b51ad37ee1e17'
+  version '10.5.66.38849'
+  sha256 'ca53f5ae24c73a8099ebb02644d4bbb3479e0fa6e4344277d84b63a088c1c552'
 
-  # origin-a.akamaihd.net was verified as official when first introduced to the cask
+  # origin-a.akamaihd.net/ was verified as official when first introduced to the cask
   url "https://origin-a.akamaihd.net/Origin-Client-Download/origin/mac/live/OriginUpdate_#{version.dots_to_underscores}.zip"
   appcast "https://api1.origin.com/autopatch/2/upgradeFrom/#{version}/en_US/PROD?platform=MAC&osVersion=10.14.0"
   name 'Origin'

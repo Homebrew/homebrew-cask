@@ -1,6 +1,6 @@
 cask 'hand-mirror' do
-  version '1.1'
-  sha256 'f9fcc787e09efb8b9a085331dcc6559548bcdb09e29082c0299e42d8221bf585'
+  version '1.1.2'
+  sha256 'da590bc7666646185e647c7ab53c28d007f37bd32360d3decf78729677ea798e'
 
   url "https://handmirror.app/Hand%20Mirror%20#{version}.dmg"
   appcast 'https://handmirror.app'

@@ -1,8 +1,8 @@
 cask 'proxyman' do
-  version '1.19.0'
-  sha256 '6eb042a1a05076bfc2f391aaa6984c15105893eed42e8b835901dc6cd2c5b4e2'
+  version '1.21.0'
+  sha256 '3ea55bb49b017f622ade32a8f252d3af9dba93e0d8ca5589c63a9f85039984b2'
 
-  # github.com/ProxymanApp/Proxyman was verified as official when first introduced to the cask
+  # github.com/ProxymanApp/Proxyman/ was verified as official when first introduced to the cask
   url "https://github.com/ProxymanApp/Proxyman/releases/download/#{version}/Proxyman_#{version}.dmg"
   appcast 'https://github.com/ProxymanApp/Proxyman/releases.atom'
   name 'Proxyman'
@@ -11,6 +11,22 @@ cask 'proxyman' do
   auto_updates true
 
   app 'Proxyman.app'
+
+  uninstall_postflight do
+    stdout, * = system_command '/usr/bin/security',
+                               args: ['find-certificate', '-a', '-c', 'Proxyman', '-Z'],
+                               sudo: true
+    hashes = stdout.lines.grep(%r{^SHA-256 hash:}) { |l| l.split(':').second.strip }
+    hashes.each do |h|
+      system_command '/usr/bin/security',
+                     args: ['delete-certificate', '-Z', h],
+                     sudo: true
+    end
+  end
+
+  uninstall quit:      'com.proxyman.NSProxy',
+            launchctl: 'com.proxyman.NSProxy.HelperTool',
+            delete:    '/Library/PrivilegedHelperTools/com.proxyman.NSProxy.HelperTool'
 
   zap trash: [
                '~/Library/Application Support/com.proxyman',
@@ -21,6 +37,7 @@ cask 'proxyman' do
                '~/Library/Cookies/com.proxyman.NSProxy.binarycookies',
                '~/Library/Preferences/com.proxyman.plist',
                '~/Library/Preferences/com.proxyman.NSProxy.plist',
+               '~/Library/Saved Application State/com.proxyman.NSProxy.savedState',
                '~/.proxyman',
              ]
 end

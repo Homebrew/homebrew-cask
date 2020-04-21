@@ -1,11 +1,11 @@
 cask 'porting-kit' do
-  version '3.0.18'
-  sha256 'e1ce4dcfd18dab42717d2e52e16a8c781c84ff48653ed32565a984f5251d4448'
+  version '3.0.21'
+  sha256 '1d2d30262259af326de22f330bda4f9b35a563d8c2bc35da13bb473ab68264a8'
 
   url "http://portingkit.com/kit/Porting%20Kit%20#{version}.zip"
   appcast 'http://portingkit.com/kit/updatecast.xml'
   name 'Porting Kit'
-  homepage 'http://portingkit.com/en/'
+  homepage 'http://portingkit.com/'
 
   auto_updates true
   conflicts_with cask: 'porting-kit-legacy'

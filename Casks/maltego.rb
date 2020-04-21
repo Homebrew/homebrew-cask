@@ -1,10 +1,12 @@
 cask 'maltego' do
-  version '4.2.7.12570'
-  sha256 '66b18e7bac3f039d8e13080f1dce63f1ca2d530e9a89a7f23fe5ec91aa918036'
+  version '4.2.9.12898'
+  sha256 'a11167cfa3b6ae70bc539dbcc89f70fa44a2aa6690f054b6f62d204c17ec9f5d'
 
-  url "https://www.paterva.com/malv#{version.major_minor_patch.no_dots}/Maltego.v#{version}.dmg"
+  # maltego-downloads.s3.us-east-2.amazonaws.com/ was verified as official when first introduced to the cask
+  url "https://maltego-downloads.s3.us-east-2.amazonaws.com/mac/Maltego.v#{version}.dmg"
+  appcast 'https://maltego-downloads.s3.us-east-2.amazonaws.com/info.json'
   name 'Maltego'
-  homepage 'https://www.paterva.com/web7/buy/maltego-clients.php'
+  homepage 'https://www.maltego.com/pricing-plans/'
 
   app 'Maltego.app'
 

@@ -2,7 +2,7 @@ cask 'imaging-edge' do
   version '2.0.2_1911a,DqbvQuTn2u'
   sha256 '8ccb39c6f716a388cd825b084fb83c85e73865a3397fd1badd034157d4b64b09'
 
-  # ids.update.sony.net/IDC was verified as official when first introduced to the cask
+  # ids.update.sony.net/IDC/ was verified as official when first introduced to the cask
   url "http://ids.update.sony.net/IDC/#{version.after_comma}/IE#{version.before_comma.no_dots}.dmg"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://support.d-imaging.sony.co.jp/disoft_DL/imagingedge_DL/mac?fm=en',
           configuration: version.after_comma

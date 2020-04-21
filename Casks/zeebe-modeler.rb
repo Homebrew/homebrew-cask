@@ -1,8 +1,8 @@
 cask 'zeebe-modeler' do
-  version '0.8.0'
-  sha256 '76b6ae41ea5001aee3ea284d3db0486709e79d21310c73c02dadd1d373b9d6ea'
+  version '0.9.0'
+  sha256 '0e5635e92d0301de2c5c41ddf34faf0f647d62586ae3d16941b4d661951bee32'
 
-  # github.com/zeebe-io/zeebe-modeler was verified as official when first introduced to the cask
+  # github.com/zeebe-io/zeebe-modeler/ was verified as official when first introduced to the cask
   url "https://github.com/zeebe-io/zeebe-modeler/releases/download/v#{version}/zeebe-modeler-#{version}-mac.zip"
   appcast 'https://github.com/zeebe-io/zeebe-modeler/releases.atom'
   name 'Zeebe Modeler'

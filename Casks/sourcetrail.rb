@@ -1,8 +1,9 @@
 cask 'sourcetrail' do
-  version '2019.4.102'
-  sha256 '4d98f578b8452ddf39f37eb7ca588802ba65c27aff5f4fd06709403c7f845766'
+  version '2020.1.117'
+  sha256 'a63122d1b7e4b89e0103fe837d86453a8cdef24cdb552e6a35fa58938494040d'
 
-  url "https://www.sourcetrail.com/downloads/#{version}/osx/64bit"
+  # github.com/CoatiSoftware/Sourcetrail/ was verified as official when first introduced to the cask
+  url "https://github.com/CoatiSoftware/Sourcetrail/releases/download/#{version}/Sourcetrail_#{version.dots_to_underscores}_macOS_64bit.dmg"
   appcast 'https://github.com/CoatiSoftware/Sourcetrail/releases.atom'
   name 'Sourcetrail'
   homepage 'https://www.sourcetrail.com/'

@@ -1,8 +1,8 @@
 cask '1password-cli' do
-  version '0.9.3'
-  sha256 '95930bea6946430ecf6b3a1ac1698c8e1142e74046cac2cd1825ec74620d4b45'
+  version '0.9.4'
+  sha256 'b22238cc2c981abda2e59cb55396b34d95996c52f41f62de1c4903f77477eb3b'
 
-  # cache.agilebits.com/dist/1P/op/pkg was verified as official when first introduced to the cask
+  # cache.agilebits.com/dist/1P/op/pkg/ was verified as official when first introduced to the cask
   url "https://cache.agilebits.com/dist/1P/op/pkg/v#{version}/op_darwin_amd64_v#{version}.pkg"
   appcast 'https://app-updates.agilebits.com/product_history/CLI'
   name '1Password CLI'

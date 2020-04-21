@@ -10,4 +10,11 @@ cask 'platypus' do
   auto_updates true
 
   app 'Platypus.app'
+
+  zap trash: [
+               '~/Library/Application Support/Platypus',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.sveinbjorn.platypus.sfl2',
+               '~/Library/Caches/org.sveinbjorn.Platypus',
+               '~/Library/Preferences/org.sveinbjorn.Platypus.plist',
+             ]
 end

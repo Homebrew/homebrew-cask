@@ -1,8 +1,8 @@
 cask 'dcv-viewer' do
-  version '2019.1.1535'
-  sha256 'f9f50d92c9c8bc07a319e4cb6cdc282aaebc643394d900ba02a8a364d0df143f'
+  version '2020.0.1710'
+  sha256 'e31300784ba7a1069426b2c359db25848e4d47dbb0aa2d0cbe0f8692d6ec3b51'
 
-  # d1uj6qtbmh3dt5.cloudfront.net was verified as official when first introduced to the cask
+  # d1uj6qtbmh3dt5.cloudfront.net/ was verified as official when first introduced to the cask
   url "https://d1uj6qtbmh3dt5.cloudfront.net/#{version.major_minor}/Clients/nice-dcv-viewer-#{version}.dmg"
   appcast 'https://www.nice-dcv.com/'
   name 'NICE DCV Viewer'

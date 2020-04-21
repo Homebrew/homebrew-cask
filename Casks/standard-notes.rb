@@ -1,8 +1,8 @@
 cask 'standard-notes' do
-  version '3.3.3'
-  sha256 '6d87fee761c3cdc0647857e59122068a0d5bdeda01cd454bb0f32f47b709e809'
+  version '3.3.5'
+  sha256 '5259c98d2e1c0d274d925619c21ffae6f67d154a35f738b92d11b922edfabdd8'
 
-  # github.com/standardnotes/desktop was verified as official when first introduced to the cask
+  # github.com/standardnotes/desktop/ was verified as official when first introduced to the cask
   url "https://github.com/standardnotes/desktop/releases/download/v#{version}/Standard-Notes-#{version}-mac.zip"
   appcast 'https://github.com/standardnotes/desktop/releases.atom'
   name 'Standard Notes'

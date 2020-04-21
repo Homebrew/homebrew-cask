@@ -1,13 +1,14 @@
 cask 'jasp' do
-  version '0.11.1.0'
-  sha256 '1e7b215daaf195d101fda0be37b9627940f9dbdcbba376b1841da7261947fc68'
+  version '0.12.1.0'
+  sha256 '3a249eb1aef8c0d5f13e6dfffad2b6e5190ac3d203e04f74ed75b59e20e95504'
 
   url "https://static.jasp-stats.org/JASP-#{version}.dmg"
-  appcast 'https://jasp-stats.org/download/'
+  appcast 'https://jasp-stats.org/download/',
+          configuration: version.sub(%r{(.0)+$}, '')
   name 'JASP'
   homepage 'https://jasp-stats.org/'
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :high_sierra'
 
   app 'JASP.app'
 end

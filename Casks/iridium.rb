@@ -3,7 +3,7 @@ cask 'iridium' do
   sha256 '304e5f434adc70ff6afd30ce133415907db066d5427c18801fe7168ac8c4b4e4'
 
   url "https://downloads.iridiumbrowser.de/macos/#{version}/iridium-browser_#{version}_macos.dmg"
-  appcast 'https://iridiumbrowser.de/downloads/macos'
+  appcast 'https://iridiumbrowser.de/news/'
   name 'Iridium Browser'
   homepage 'https://iridiumbrowser.de/'
 

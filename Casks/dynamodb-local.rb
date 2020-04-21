@@ -2,7 +2,7 @@ cask 'dynamodb-local' do
   version :latest
   sha256 :no_check
 
-  # dynamodb-local.s3.amazonaws.com was verified as official when first introduced to the cask
+  # dynamodb-local.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url 'https://dynamodb-local.s3.amazonaws.com/dynamodb_local_latest.tar.gz'
   name 'Amazon DynamoDB Local'
   homepage 'https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html'

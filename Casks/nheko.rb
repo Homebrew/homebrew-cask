@@ -1,8 +1,8 @@
 cask 'nheko' do
-  version '0.6.4'
-  sha256 '1214025539bfbbcb4f0808efe1c6f49f478171d8ce9dceb786dfc200f8755546'
+  version '0.7.0'
+  sha256 '455d4c554eed7830119a6e6480a90d5c09dbab0590a5ea17cd75cb154556e10b'
 
-  # github.com/Nheko-Reborn/nheko was verified as official when first introduced to the cask
+  # github.com/Nheko-Reborn/nheko/ was verified as official when first introduced to the cask
   url "https://github.com/Nheko-Reborn/nheko/releases/download/v#{version}/nheko-v#{version}.dmg"
   appcast 'https://github.com/Nheko-Reborn/nheko/releases.atom'
   name 'Nheko'

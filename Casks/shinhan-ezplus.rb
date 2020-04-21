@@ -9,4 +9,8 @@ cask 'shinhan-ezplus' do
   pkg 'SHBEzPlusMac.pkg'
 
   uninstall pkgutil: 'com.mygreatcompany.pkg.SHBEzPlusMac'
+
+  caveats do
+    depends_on_java '6'
+  end
 end

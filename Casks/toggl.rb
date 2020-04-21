@@ -1,8 +1,8 @@
 cask 'toggl' do
-  version '7.5.49'
-  sha256 '4b0fc1582fde9d2115d0d7250ee3e3f6f5602548d74b6ba916ca4c3516d67b0d'
+  version '7.5.85'
+  sha256 '8ad2f539abaebe77083e92c1ea0d608d4d174e8c7fd1aa6f2475eda30949fbc3'
 
-  # github.com/toggl-open-source/toggldesktop was verified as official when first introduced to the cask
+  # github.com/toggl-open-source/toggldesktop/ was verified as official when first introduced to the cask
   url "https://github.com/toggl-open-source/toggldesktop/releases/download/v#{version}/TogglDesktop-#{version.dots_to_underscores}.dmg"
   appcast 'https://assets.toggl.com/installers/darwin_stable_appcast.xml'
   name 'TogglDesktop'

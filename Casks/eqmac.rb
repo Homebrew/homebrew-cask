@@ -2,11 +2,10 @@ cask 'eqmac' do
   version '2.2'
   sha256 'ff60579197b52571d9686bbfaec695dfa75797b8a9314fbf69a673bbeb12e1fc'
 
-  # github.com/nodeful/eqMac was verified as official when first introduced to the cask
-  url "https://github.com/nodeful/eqMac#{version.major}/releases/download/V#{version}/eqMac#{version.major}.dmg"
-  appcast "https://github.com/nodeful/eqMac#{version.major}/releases.atom"
+  url "https://github.com/bitgapp/eqMac/releases/download/V#{version}/eqMac#{version.major}.dmg"
+  appcast 'https://github.com/bitgapp/eqMac/releases.atom'
   name 'eqMac'
-  homepage 'https://www.bitgapp.com/eqmac/'
+  homepage 'https://github.com/bitgapp/eqMac/releases/'
 
   app "eqMac#{version.major}.app"
   installer script: {
