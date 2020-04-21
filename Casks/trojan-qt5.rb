@@ -1,4 +1,4 @@
-cask 'trojan' do
+cask 'trojan-qt5' do
   version '0.0.8'
   sha256 '3a3ac0f68376cc51f1699f0e2da7d648d629bd367431ebbfc92136c59e04bb1a'
 
