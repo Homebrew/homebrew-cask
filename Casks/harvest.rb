@@ -8,7 +8,7 @@ cask 'harvest' do
   homepage 'https://www.getharvest.com/mac-time-tracking'
 
   auto_updates true
-  depends_on macos: '>= :high_sierra'
+  depends_on macos: '>= :mojave'
 
   app 'Harvest.app'
 end
