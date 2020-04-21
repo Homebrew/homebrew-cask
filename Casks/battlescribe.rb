@@ -14,5 +14,9 @@ cask 'battlescribe' do
                        'net.battlescribe.desktop.dataindexer',
                        'net.battlescribe.desktop.jre',
                        'net.battlescribe.desktop.rostereditor',
+                     ],
+            delete:  [
+                       '/Applications/BattleScribe Tools/',
+                       '/Applications/BattleScribe.app',
                      ]
 end
