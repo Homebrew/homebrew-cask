@@ -18,9 +18,9 @@ cask 'wireshark' do
   uninstall_preflight do
     set_ownership '/Library/Application Support/Wireshark'
 
-    if File.read('/etc/group').match?(%r{^access_bpf})
+    if system('/usr/bin/dscl . -read /Groups/access_bpf &> /dev/null')
       system_command '/usr/sbin/dseditgroup',
-                     args: ['-o', 'delete', 'access_bpf'],
+                     args: ['-q', '-o', 'delete', 'access_bpf'],
                      sudo: true
     end
   end
@@ -28,5 +28,10 @@ cask 'wireshark' do
   uninstall pkgutil:   'org.wireshark.*',
             launchctl: 'org.wireshark.ChmodBPF'
 
-  zap trash: '~/Library/Saved Application State/org.wireshark.Wireshark.savedState'
+  zap trash: [
+               '~/Library/Saved Application State/org.wireshark.Wireshark.savedState',
+               '~/Library/Caches/org.wireshark.Wireshark',
+               '~/Library/Cookies/org.wireshark.Wireshark.binarycookies',
+               '~/Library/Preferences/org.wireshark.Wireshark.plist',
+             ]
 end
