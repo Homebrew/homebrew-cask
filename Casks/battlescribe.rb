@@ -7,6 +7,7 @@ cask 'battlescribe' do
   name 'BattleScribe'
   homepage 'https://battlescribe.net/'
 
-  suite 'BattleScribe Tools'
-  app 'BattleScribe.app'
+  pkg "BattleScribe_#{version}_Installer.pkg"
+  
+  uninstall pkgutil: 'dunno'  
 end
