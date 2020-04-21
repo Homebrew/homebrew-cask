@@ -16,6 +16,8 @@ cask 'google-earth-pro' do
                          'com.google.keystone.agent',
                          'com.google.keystone.system.agent',
                          'com.google.keystone.daemon',
+                         'com.google.keystone.xpcservice',
+                         'com.google.keystone.system.xpcservice',
                        ]
 
   zap trash: [
