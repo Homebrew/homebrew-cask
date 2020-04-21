@@ -18,7 +18,7 @@ cask 'wireshark' do
   uninstall_preflight do
     set_ownership '/Library/Application Support/Wireshark'
 
-    if system('/usr/bin/dscl . -read /Groups/access_bpf &> /dev/null')
+    if (system_command '/usr/bin/dscl', args: ['.', '-read', '/Groups/access_bpf'])
       system_command '/usr/sbin/dseditgroup',
                      args: ['-q', '-o', 'delete', 'access_bpf'],
                      sudo: true
