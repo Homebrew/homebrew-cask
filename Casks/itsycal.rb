@@ -10,8 +10,8 @@ cask 'itsycal' do
     sha256 'fda1ba5611deaf4d5b834118b3af37ea9c5d08d1f8c813d04e7dd0552a270e11'
     appcast 'https://itsycal.s3.amazonaws.com/itsycal.xml'
   else
-    version '0.12.2'
-    sha256 '9594d39d299776073e0bc2aaedfa459e10d01ad9e918fabaa139794b073b9084'
+    version '0.12.3'
+    sha256 'fda1ba5611deaf4d5b834118b3af37ea9c5d08d1f8c813d04e7dd0552a270e11'
     appcast 'https://itsycal.s3.amazonaws.com/itsycal.xml'
   end
 
