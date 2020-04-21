@@ -1,6 +1,6 @@
 cask 'zappy' do
-  version '2.1.3'
-  sha256 '1ca6c8f602e85a0ebd2987df4e6e409a2a42a713daafd1ac3d2d0d0c27b7ad48'
+  version '2.1.4'
+  sha256 '32f5687a00c3b0ccb0721dc1d1d2be9e1531dcdba73be870a2da692c10e9febc'
 
   url "https://zappy.zapier.com/releases/zappy-#{version}.zip"
   appcast 'https://zappy.zapier.com/releases/appcast.xml'
