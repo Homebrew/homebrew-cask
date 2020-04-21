@@ -8,6 +8,11 @@ cask 'battlescribe' do
   homepage 'https://battlescribe.net/'
 
   pkg "BattleScribe_#{version}_Installer.pkg"
-  
-  uninstall pkgutil: 'dunno'  
+
+  uninstall pkgutil: [
+                       'net.battlescribe.desktop.dataeditor',
+                       'net.battlescribe.desktop.dataindexer',
+                       'net.battlescribe.desktop.jre',
+                       'net.battlescribe.desktop.rostereditor',
+                     ]
 end
