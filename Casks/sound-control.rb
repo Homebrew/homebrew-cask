@@ -1,6 +1,6 @@
 cask 'sound-control' do
-  version '2.4.2,5156'
-  sha256 '16597cf39c91b1bdd012684e09d68050ac117ba812336651ce9d704e303816e6'
+  version '2.4.3,5156'
+  sha256 '2f86d4f9c30b122dbc5b79c182b0d9b19492839919c032268d2632e7a3d5a8e2'
 
   # staticz.net/ was verified as official when first introduced to the cask
   url "https://staticz.com/download/#{version.after_comma}/"
