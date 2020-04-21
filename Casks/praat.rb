@@ -1,9 +1,9 @@
 cask 'praat' do
-  version '6.1.12'
-  sha256 'c3da9f39833f923f40f91e3842cf5730f72b17fb06eb365df807a06a7a108c06'
+  version '6.1.13'
+  sha256 'b1de1e489d2a923b3ef0aaa1103486a8a6dbc574645af3bfa8964618d3269412'
 
   # github.com/praat/praat/ was verified as official when first introduced to the cask
-  url "https://github.com/praat/praat/releases/download/v#{version}/praat#{version.no_dots}_mac64.dmg"
+  url "https://github.com/praat/praat/releases/download/v#{version}a/praat#{version.no_dots}_mac64.dmg"
   appcast 'https://github.com/praat/praat/releases.atom'
   name 'Praat'
   homepage 'http://www.fon.hum.uva.nl/praat/'
