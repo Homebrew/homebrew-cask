@@ -1,6 +1,6 @@
 cask 'helo' do
-  version '1.0.1'
-  sha256 'db9e98a370686cd6fa928f5ec7bd4b974005c5700b42022fd79fa7c3edc27dd4'
+  version '1.0.2'
+  sha256 '952d103f3e2df875c0d3d4405ae9e3a908a037e73ee78514d57e3811996670fd'
 
   # helo.fra1.digitaloceanspaces.com was verified as official when first introduced to the cask
   url "https://helo.fra1.digitaloceanspaces.com/helo/HELO-#{version}.dmg"
