@@ -8,5 +8,7 @@ cask 'stand' do
   name 'Stand'
   homepage 'https://getstandapp.com/'
 
+  depends_on macos: '>= :catalina'
+
   app 'Stand.app'
 end
