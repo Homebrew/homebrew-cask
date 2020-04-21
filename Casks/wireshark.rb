@@ -25,8 +25,16 @@ cask 'wireshark' do
     end
   end
 
-  uninstall pkgutil:   'org.wireshark.*',
+  uninstall pkgutil:   [
+                         'org.wireshark.ChmodBPF.pkg',
+                         'org.wireshark.path_helper.pkg',
+                       ],
             launchctl: 'org.wireshark.ChmodBPF'
 
-  zap trash: '~/Library/Saved Application State/org.wireshark.Wireshark.savedState'
+  zap trash: [
+               '~/Library/Caches/org.wireshark.Wireshark',
+               '~/Library/Cookies/org.wireshark.Wireshark.binarycookies',
+               '~/Library/Preferences/org.wireshark.Wireshark.plist',
+               '~/Library/Saved Application State/org.wireshark.Wireshark.savedState',
+             ]
 end
