@@ -30,7 +30,7 @@ cask 'wireshark' do
                    sudo: true
   end
 
-  uninstall pkgutil:   'org.wireshark.*',
+  uninstall pkgutil: 'org.wireshark.*'
 
   zap trash: [
                '~/Library/Caches/org.wireshark.Wireshark',
