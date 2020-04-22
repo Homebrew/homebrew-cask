@@ -7,5 +7,7 @@ cask 'syntax-highlight' do
   name 'Syntax Highlight'
   homepage 'https://github.com/sbarex/SourceCodeSyntaxHighlight'
 
+  depends_on macos: '>= :catalina'
+
   app 'Syntax Highlight.app'
 end
