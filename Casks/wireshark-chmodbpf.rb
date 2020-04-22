@@ -13,18 +13,15 @@ cask 'wireshark-chmodbpf' do
   pkg 'Install ChmodBPF.pkg'
 
   uninstall_preflight do
-    set_ownership '/Library/Application Support/Wireshark'
-
-    stdout, * = system_command '/usr/bin/dscl', args: ['.', '-list', '/Groups']
-    next unless stdout.lines.map(&:strip).include? 'access_bpf'
-
-    system_command '/usr/sbin/dseditgroup',
-                   args: ['-q', '-o', 'delete', 'access_bpf'],
+    system_command '/usr/sbin/installer',
+                   args: [
+                           '-pkg', "#{staged_path}/Uninstall ChmodBPF.pkg",
+                           '-target', '/'
+                         ],
                    sudo: true
   end
 
-  uninstall pkgutil:   'org.wireshark.ChmodBPF.pkg',
-            launchctl: 'org.wireshark.ChmodBPF'
+  uninstall pkgutil: 'org.wireshark.ChmodBPF.pkg'
 
   caveats do
     reboot
