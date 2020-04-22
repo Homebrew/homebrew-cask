@@ -1,6 +1,6 @@
 cask 'microblog' do
-  version '1.9.2'
-  sha256 '31c7b987cf8b01001839dd78edd068b449c296e32de303c448aefab272e1cae5'
+  version '1.9.3'
+  sha256 '38b0ed27d2ef16d798bb4af988be80a964c0d008d70adfba26505ed7e1c00deb'
 
   # s3.amazonaws.com/micro.blog/ was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/micro.blog/mac/Micro.blog_#{version}.zip"
