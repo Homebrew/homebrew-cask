@@ -19,4 +19,8 @@ cask 'spectacle' do
                '~/Library/Cookies/com.divisiblebyzero.Spectacle.binarycookies',
                '~/Library/Preferences/com.divisiblebyzero.Spectacle.plist',
              ]
+
+  caveats do
+    discontinued
+  end
 end
