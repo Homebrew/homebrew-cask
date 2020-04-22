@@ -12,7 +12,17 @@ cask 'intel-power-gadget' do
   depends_on macos: '>= :high_sierra'
 
   pkg 'Install Intel Power Gadget.pkg'
+  
+  uninstall_preflight do
+    system_command '/usr/sbin/installer',
+                   args: [
+                           '-pkg', '/Applications/Intel Power Gadget/Uninstaller.pkg',
+                           '-target', '/'
+                         ],
+                   sudo: true
+  end
 
-  uninstall pkgutil: 'com.intel.pkg.PowerGadget.*',
-            kext:    'EnergyDriver'
+  uninstall pkgutil: 'com.intel.pkg.PowerGadget.*'
+
+  zap trash: '~/Library/Caches/com.intel.PowerGadget'
 end
