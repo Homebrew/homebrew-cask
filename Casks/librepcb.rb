@@ -9,7 +9,5 @@ cask 'librepcb' do
 
   app 'librepcb.app'
 
-  zap delete: [
-                '~/Library/Saved Application State/com.yourcompany.librepcb.savedState',
-              ]
+  zap delete: '~/Library/Saved Application State/com.yourcompany.librepcb.savedState'
 end
