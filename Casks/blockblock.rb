@@ -1,8 +1,4 @@
 cask 'blockblock' do
-  appcast 'https://objective-see.com/products/changelogs/BlockBlock.txt'
-  name 'BlockBlock'
-  homepage 'https://objective-see.com/products/blockblock.html'
-
   if MacOS.version <= :mojave
     version '0.9.9.4'
     sha256 '6ab3a8224e8bc77b9abe8d41492c161454c6b0266e60e61b06931fed4b431282'
@@ -40,6 +36,10 @@ cask 'blockblock' do
                         sudo:       true,
                       }
   end
+
+  appcast 'https://objective-see.com/products/changelogs/BlockBlock.txt'
+  name 'BlockBlock'
+  homepage 'https://objective-see.com/products/blockblock.html'
 
   zap trash: '~/Library/Preferences/com.objectiveSee.BlockBlock.plist'
 end
