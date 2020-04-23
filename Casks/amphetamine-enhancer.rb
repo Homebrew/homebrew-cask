@@ -6,7 +6,10 @@ cask 'amphetamine-enhancer' do
   name 'Amphetamine Enhancer'
   homepage 'https://github.com/x74353/Amphetamine-Enhancer'
 
-  caveats 'requires Amphetamine 5.0+ from Mac App Store'
-  caveats 'uninstall any scripts within the app before uninstalling'
-  caveats 'uninstall any scripts within the app before uninstalling'
+  caveats <<~EOS
+    "Requires Amphetamine 5.0+ from Mac App Store."
+    "Remember to uninstall any scripts within the app before uninstalling"
+  EOS
+  
+  app 'Amphetamine Enhancer.app'
 end
