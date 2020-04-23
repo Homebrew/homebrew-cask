@@ -1,5 +1,5 @@
 cask 'unicodechecker' do
-  version '1.21.1,755'
+  version '1.22,776'
   sha256 '0b6019277bade20ccd2904adf0fd29c7395ab495e02ace8c5b58d4e33ebd6587'
 
   url 'https://earthlingsoft.net/UnicodeChecker/UnicodeChecker.zip'
