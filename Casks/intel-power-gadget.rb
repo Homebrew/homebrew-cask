@@ -3,8 +3,7 @@ cask 'intel-power-gadget' do
   sha256 '22ed3fe050c3b965841ccc5590a3a03bb9498f8620e01ba4dea5557dcd24fe43'
 
   url "https://software.intel.com/file/#{version.after_comma}/download"
-  appcast 'https://software.intel.com/en-us/articles/intel-power-gadget',
-          configuration: version.after_comma
+  appcast 'https://software.intel.com/sites/landingpage/powergadget/?app=IntelPowerGadgetMac'
   name 'Intel Power Gadget'
   homepage 'https://software.intel.com/en-us/articles/intel-power-gadget'
 
