@@ -7,5 +7,7 @@ cask 'noxappplayer' do
   name 'NoxAppPlayer'
   homepage 'https://www.bignox.com/'
 
+  container nested: 'NoxAppPlayerInstaller.app/Contents/MacOS/NoxAppPlayer.zip'
+
   app 'NoxAppPlayer.app'
 end
