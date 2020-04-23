@@ -8,4 +8,10 @@ cask 'deadbolt' do
   homepage 'https://github.com/alichtman/deadbolt'
 
   app 'Deadbolt.app'
+  
+  zap trash: [
+               '~/Library/Application Support/deadbolt',
+               '~/Library/Preferences/org.alichtman.deadbolt.plist',
+               '~/Library/Saved Application State/org.alichtman.deadbolt.savedState',
+             ]
 end
