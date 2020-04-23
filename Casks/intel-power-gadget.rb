@@ -12,7 +12,7 @@ cask 'intel-power-gadget' do
   depends_on macos: '>= :high_sierra'
 
   pkg 'Install Intel Power Gadget.pkg'
-  
+
   uninstall_preflight do
     system_command '/usr/sbin/installer',
                    args: [
