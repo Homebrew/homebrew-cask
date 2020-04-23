@@ -1,6 +1,6 @@
 cask 'chalk' do
-  version '1.5.2'
-  sha256 'f8a58291ce8e3cd3a8fd6b6570ccd571070338296cd68823506ea93df3079b4a'
+  version '1.5.3'
+  sha256 'd5f3e22c18921d4b2899dd573442a1ab662245eb3f36675b6f6683c9ca3ae52b'
 
   url "https://www.chachatelier.fr/chalk/downloads/Chalk-#{version.dots_to_underscores}.dmg",
       user_agent: :fake
