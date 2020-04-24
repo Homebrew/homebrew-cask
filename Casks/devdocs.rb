@@ -11,6 +11,7 @@ cask 'devdocs' do
   app 'DevDocs.app'
 
   zap trash: [
+               '~/.devdocs',
                '~/Library/Application Support/DevDocs',
                '~/Library/Logs/DevDocs',
                '~/Library/Preferences/sh.egoist.devdocs.plist',
