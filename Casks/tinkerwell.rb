@@ -11,6 +11,7 @@ cask 'tinkerwell' do
   app 'Tinkerwell.app'
 
   zap trash: [
+               '~/.config/tinkerwell',
                '~/Library/Application Support/Tinkerwell',
                '~/Library/Logs/Tinkerwell',
                '~/Library/Preferences/de.beyondco.tinkerwell.plist',
