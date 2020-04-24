@@ -4,7 +4,7 @@ cask 'rolisteam' do
 
   # sourceforge.net/projects/rolisteam/files/ was verified as official when first introduced to the cask
 
-  url "https://sourceforge.net/projects/rolisteam/files/#{version}/rcse_v#{version}_MacOs.dmg/download"
+  url "https://sourceforge.net/projects/rolisteam/files/#{version}/rolisteam_v#{version}_MacOs.dmg/download"
   appcast 'https://sourceforge.net/projects/rolisteam/rss'
   name 'Rolisteam'
   homepage 'https://rolisteam.org/'
