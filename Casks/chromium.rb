@@ -1,6 +1,6 @@
 cask 'chromium' do
-  version '761197'
-  sha256 'eaa769e827fe839c75cf28adbe8411bfece7a8258179a9daa1a01238fee263d6'
+  version '762311'
+  sha256 '1ceb7992244fc0eced6abe79415e24c20e497674b215f7ff2b1e00ca7b1e616e'
 
   # commondatastorage.googleapis.com/chromium-browser-snapshots/Mac/ was verified as official when first introduced to the cask
   url "https://commondatastorage.googleapis.com/chromium-browser-snapshots/Mac/#{version}/chrome-mac.zip"
@@ -8,13 +8,27 @@ cask 'chromium' do
   name 'Chromium'
   homepage 'https://www.chromium.org/Home'
 
+  conflicts_with cask: [
+                         'eloston-chromium',
+                         'freesmug-chromium',
+                       ]
+
   app 'chrome-mac/Chromium.app'
-  binary "#{appdir}/Chromium.app/Contents/MacOS/Chromium", target: 'chromium'
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/chromium.wrapper.sh"
+  binary shimscript, target: 'chromium'
+
+  preflight do
+    IO.write shimscript, <<~EOS
+      #!/bin/sh
+      '#{appdir}/Chromium.app/Contents/MacOS/Chromium' "$@"
+    EOS
+  end
 
   zap trash: [
-               '~/Library/Preferences/org.chromium.Chromium.plist',
-               '~/Library/Caches/Chromium',
                '~/Library/Application Support/Chromium',
+               '~/Library/Caches/Chromium',
+               '~/Library/Preferences/org.chromium.Chromium.plist',
                '~/Library/Saved Application State/org.chromium.Chromium.savedState',
              ]
 end
