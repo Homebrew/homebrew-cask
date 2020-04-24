@@ -11,7 +11,10 @@ cask 'r' do
 
   pkg "R-#{version}.pkg"
 
-  uninstall pkgutil: 'org.r-project*',
+  uninstall pkgutil: [
+                       'org.r-project*',
+                       'org.R-project*',
+                     ],
             delete:  [
                        '/Library/Frameworks/R.Framework',
                        '/usr/bin/R',
