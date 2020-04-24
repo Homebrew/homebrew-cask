@@ -29,6 +29,7 @@ cask 'proxyman' do
             delete:    '/Library/PrivilegedHelperTools/com.proxyman.NSProxy.HelperTool'
 
   zap trash: [
+               '~/.proxyman*',
                '~/Library/Application Support/com.proxyman',
                '~/Library/Application Support/com.proxyman.NSProxy',
                '~/Library/Caches/Proxyman',
@@ -38,6 +39,5 @@ cask 'proxyman' do
                '~/Library/Preferences/com.proxyman.plist',
                '~/Library/Preferences/com.proxyman.NSProxy.plist',
                '~/Library/Saved Application State/com.proxyman.NSProxy.savedState',
-               '~/.proxyman',
              ]
 end
