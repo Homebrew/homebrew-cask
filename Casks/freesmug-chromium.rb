@@ -7,6 +7,11 @@ cask 'freesmug-chromium' do
   appcast 'https://sourceforge.net/projects/osxportableapps/rss?path=/Chromium'
   name 'Chromium'
   homepage 'http://www.freesmug.org/chromium'
+  
+  conflicts_with cask: [
+                         'chromium',
+                         'eloston-chromium',
+                       ]
 
   app 'Chromium.app'
 end
