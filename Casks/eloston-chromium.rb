@@ -8,6 +8,11 @@ cask 'eloston-chromium' do
   name 'Ungoogled Chromium'
   homepage 'https://ungoogled-software.github.io/ungoogled-chromium-binaries/'
 
+  conflicts_with cask: [
+                         'eloston-chromium',
+                         'freesmug-chromium',
+                       ]
+
   app 'Chromium.app'
 
   zap trash: [
