@@ -9,7 +9,7 @@ cask 'expressvpn' do
 
   auto_updates true
 
-  pkg "expressvpn-install_v#{version}.pkg"
+  pkg "expressvpn_mac_#{version}_release.pkg"
 
   uninstall pkgutil:   'com.expressvpn.ExpressVPN',
             launchctl: [
