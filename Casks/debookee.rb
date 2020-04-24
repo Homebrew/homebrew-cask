@@ -17,6 +17,7 @@ cask 'debookee' do
             launchctl: 'com.iwaxx.Debookee.PacketTool'
 
   zap trash: [
+               '~/.debookee',
                '~/Library/Application Support/com.iwaxx.Debookee',
                '~/Library/Caches/com.iwaxx.Debookee',
                '~/Library/Cookies/com.iwaxx.Debookee.binarycookies',
