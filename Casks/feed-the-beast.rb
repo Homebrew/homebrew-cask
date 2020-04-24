@@ -4,6 +4,7 @@ cask 'feed-the-beast' do
 
   # apps.modpacks.ch/FTBApp was verified as official when first introduced to the cask
   url "https://apps.modpacks.ch/FTBApp/release/#{version}/FTBA_macos_#{version.dots_to_underscores}.dmg"
+  appcast 'https://www.feed-the-beast.com/app_release.xml'
   name 'Feed the Beast'
   homepage 'https://www.feed-the-beast.com/'
 
