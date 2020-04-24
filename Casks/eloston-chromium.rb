@@ -9,7 +9,7 @@ cask 'eloston-chromium' do
   homepage 'https://ungoogled-software.github.io/ungoogled-chromium-binaries/'
 
   conflicts_with cask: [
-                         'eloston-chromium',
+                         'chromium',
                          'freesmug-chromium',
                        ]
 
