@@ -29,6 +29,7 @@ cask 'inkscape' do
     end
 
     zap trash: [
+                 '~/.config/inkscape',
                  '~/Library/Application Support/Inkscape',
                  '~/Library/Application Support/org.inkscape.Inkscape',
                  '~/Library/Preferences/org.inkscape.Inkscape.plist',
