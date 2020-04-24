@@ -13,6 +13,8 @@ cask 'cutter' do
   app 'Cutter.app'
 
   zap trash: [
+               '~/.config/RadareOrg',
+               '~/.local/share/radare2',
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.radare.cutter.sfl*',
                '~/Library/Application Support/RadareOrg/Cutter',
                '~/Library/Preferences/org.radare.cutter.plist',
