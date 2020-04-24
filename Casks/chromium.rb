@@ -1,6 +1,6 @@
 cask 'chromium' do
-  version '761663'
-  sha256 'efc538b8239224b870b654b47129ad02450a60c7801a5c31b9e0699f359b6c3f'
+  version '762126'
+  sha256 '30f8b666815f1eb54900dff038ae5d6a419a48bdf883e63f3fdce6a9f0b1e611'
 
   # commondatastorage.googleapis.com/chromium-browser-snapshots/Mac/ was verified as official when first introduced to the cask
   url "https://commondatastorage.googleapis.com/chromium-browser-snapshots/Mac/#{version}/chrome-mac.zip"
@@ -21,9 +21,9 @@ cask 'chromium' do
   end
 
   zap trash: [
-               '~/Library/Preferences/org.chromium.Chromium.plist',
-               '~/Library/Caches/Chromium',
                '~/Library/Application Support/Chromium',
+               '~/Library/Caches/Chromium',
+               '~/Library/Preferences/org.chromium.Chromium.plist',
                '~/Library/Saved Application State/org.chromium.Chromium.savedState',
              ]
 end
