@@ -1,5 +1,5 @@
 cask 'wiznote' do
-  version '2.8.2,2020-04-22'
+  version '2.8.5,2020-04-22'
   sha256 'fc851924922d6a655e1c47091471024247d25c79a677638d5f940e3a986de988'
 
   url "https://get.wiz.cn/wiznote-macos-#{version.after_comma}.dmg"
