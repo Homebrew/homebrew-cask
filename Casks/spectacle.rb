@@ -12,6 +12,8 @@ cask 'spectacle' do
 
   app 'Spectacle.app'
 
+  uninstall quit: 'com.divisiblebyzero.Spectacle'
+
   zap trash: [
                '~/Library/Application Support/Spectacle',
                '~/Library/Caches/com.divisiblebyzero.Spectacle',
@@ -21,6 +23,11 @@ cask 'spectacle' do
              ]
 
   caveats do
+    puts <<~EOS
+      Spectacle users have recommended Rectangle as an open source
+      alternative. It can also be installed using Homebrew Cask:
+        brew cask install rectangle
+    EOS
     discontinued
   end
 end
