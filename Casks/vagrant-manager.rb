@@ -6,7 +6,7 @@ cask 'vagrant-manager' do
   url "https://github.com/lanayotech/vagrant-manager/releases/download/#{version}/vagrant-manager-#{version}.dmg"
   appcast 'https://github.com/lanayotech/vagrant-manager/releases.atom'
   name 'Vagrant Manager'
-  homepage 'http://vagrantmanager.com/'
+  homepage 'https://www.vagrantmanager.com/'
 
   app 'Vagrant Manager.app'
 
