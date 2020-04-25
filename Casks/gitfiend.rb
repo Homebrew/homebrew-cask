@@ -7,6 +7,8 @@ cask 'gitfiend' do
   name 'GitFiend'
   homepage 'https://gitfiend.com/'
 
+  auto_updates true
+
   app 'GitFiend.app'
 
   zap trash: [
