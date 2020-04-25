@@ -4,7 +4,7 @@ cask 'memory' do
 
   # timelytimetracking.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url 'https://timelytimetracking.s3.amazonaws.com/mac_tracker/Memory.zip'
-  appcast 'https://timelytimetracking.s3.amazonaws.com/mac_tracker/sparkle.xml'
+  appcast 'https://memorymacapp.s3-eu-west-1.amazonaws.com/sparkle.xml'
   name 'Memory Tracker by Timely'
   homepage 'https://timelyapp.com/'
 
