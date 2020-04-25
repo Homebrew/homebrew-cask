@@ -7,4 +7,10 @@ cask 'gitfiend' do
   homepage 'https://gitfiend.com/'
 
   app 'GitFiend.app'
+
+  zap trash: [
+               '~/Library/Application Support/GitFiend',
+               '~/Library/Preferences/com.tobysuggate.gitfiend.plist',
+               '~/Library/Saved Application State/com.tobysuggate.gitfiend.savedState',
+             ]
 end
