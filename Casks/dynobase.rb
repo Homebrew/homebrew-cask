@@ -4,6 +4,7 @@ cask 'dynobase' do
 
   # hazel.rwilinski.now.sh was verified as official when first introduced to the cask
   url 'https://hazel.rwilinski.now.sh/download/darwin'
+  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=#{url}"
   name 'Dynobase'
   homepage 'https://dynobase.dev/'
 
