@@ -1,5 +1,5 @@
 cask 'sabaki' do
-  version '0.51.0'
+  version '0.51.1'
   sha256 '8d2085b7dd90add0f20e3e77d81f85337bff803d22fe828b90b340c3e9b55099'
 
   # github.com/SabakiHQ/Sabaki/ was verified as official when first introduced to the cask
