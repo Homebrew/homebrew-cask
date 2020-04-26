@@ -12,7 +12,13 @@ cask 'launchcontrol' do
   app 'LaunchControl.app'
 
   uninstall delete:    '/Library/PrivilegedHelperTools/com.soma-zone.LaunchControl.Helper',
-            launchctl: 'com.soma-zone.LaunchControl.Helper'
+            launchctl: 'com.soma-zone.LaunchControl.Helper',
+            quit:      [
+                         'com.soma-zone.JobWatch',
+                         'com.soma-zone.LaunchControl',
+                         'com.soma-zone.LicenseWindow',
+                         'com.soma-zone.QuickLaunch',
+                       ]
 
   zap trash: [
                '~/Library/Application Support/LaunchControl',
