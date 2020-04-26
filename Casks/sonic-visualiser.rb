@@ -11,4 +11,11 @@ cask 'sonic-visualiser' do
   depends_on macos: '>= :sierra'
 
   app 'Sonic Visualiser.app'
+
+  zap trash: [
+               '~/Library/Saved Application State/org.sonicvisualiser.SonicVisualiser.savedState',
+               '~/Library/Preferences/org.sonicvisualiser.Sonic Visualiser.plist',
+               '~/Library/Preferences/org.sonicvisualiser.SonicVisualiser.plist',
+               '~/Library/Application Support/sonic-visualiser/',
+             ]
 end
