@@ -36,12 +36,12 @@ cask 'tor-browser' do
     'en-US'
   end
 
-  language 'es-ar' do
+  language 'es-AR' do
     sha256 '69c6050f2b5ac00e3ce5a981e99d72b3479b0d90f9c606b415b1b66da6fa1658'
     'es-AR'
   end
 
-  language 'es-es' do
+  language 'es-ES' do
     sha256 'f9f27b74fcbacc9ff9ae5c267a7b10030f357a13caa5c6e3d0cfdb6c88f697be'
     'es-ES'
   end
@@ -151,12 +151,12 @@ cask 'tor-browser' do
     'vi'
   end
 
-  language 'zh-cn' do
+  language 'zh-CN' do
     sha256 '96574251b885c12b48a3495e843e434f9174e02bb83121b578e17d9dbebf1ffb'
     'zh-CN'
   end
 
-  language 'zh-tw' do
+  language 'zh-TW' do
     sha256 'd03b2cd5ebd7ef1dc215944253d1070ec64b402389c210081cf95c1e270925b7'
     'zh-TW'
   end
