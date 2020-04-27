@@ -1,6 +1,6 @@
 cask 'genymotion' do
-  version '3.0.4'
-  sha256 '03c1643b72a6f11d0848ef8bbdd0ec7c642917619f7440033c9b4303147a9abe'
+  version '3.1.0'
+  sha256 '87b8c45705b633933a3b0ac401b8a9c46f9bfa1d7856af89c1b475c3a1ebe00c'
 
   url "https://dl.genymotion.com/releases/genymotion-#{version}/genymotion-#{version}.dmg"
   appcast 'https://www.genymotion.com/product-release-note/desktop/'
