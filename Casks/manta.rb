@@ -6,7 +6,7 @@ cask 'manta' do
   url "https://github.com/hql287/Manta/releases/download/v#{version}/Manta-#{version}-mac.zip"
   appcast 'https://github.com/hql287/Manta/releases.atom'
   name 'Manta'
-  homepage 'https://manta.life/'
+  homepage 'https://getmanta.app/'
 
   app 'Manta.app'
 end
