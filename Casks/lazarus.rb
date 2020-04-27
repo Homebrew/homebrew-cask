@@ -1,6 +1,6 @@
 cask 'lazarus' do
   version '2.0.8'
-  sha256 '7cacde9e30ca5055acaa54f28793e2c5c296ac440b3d27594340caf26c25150a'
+  sha256 'a2cf0b4594d5ee5b0750d244c1607afe0eda4cc95f641a67aab996582c76e66d'
 
   # sourceforge.net/lazarus/ was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/lazarus/LazarusIDE-#{version}-macos-x86_64.pkg"
