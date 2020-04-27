@@ -9,6 +9,16 @@ cask 'jd-gui' do
   homepage 'http://jd.benow.ca/'
 
   app "jd-gui-osx-#{version}/JD-GUI.app"
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/jd-gui.wrapper.sh"
+  binary shimscript, target: 'jd-gui'
+
+  preflight do
+    IO.write shimscript, <<~EOS
+      #!/bin/sh
+      nohup #{appdir}/JD-GUI.app/Contents/MacOS/universalJavaApplicationStub "$@" > /dev/null 2>&1 &
+    EOS
+  end
 
   zap trash: '~/Library/Saved Application State/jd.jd-gui.savedState'
 end
