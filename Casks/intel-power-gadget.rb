@@ -3,7 +3,8 @@ cask 'intel-power-gadget' do
   sha256 '22ed3fe050c3b965841ccc5590a3a03bb9498f8620e01ba4dea5557dcd24fe43'
 
   url "https://software.intel.com/file/#{version.after_comma}/download"
-  appcast 'https://software.intel.com/sites/landingpage/powergadget/?app=IntelPowerGadgetMac'
+  appcast 'https://software.intel.com/en-us/articles/intel-power-gadget',
+          configuration: version.after_comma
   name 'Intel Power Gadget'
   homepage 'https://software.intel.com/en-us/articles/intel-power-gadget'
 
@@ -12,16 +13,6 @@ cask 'intel-power-gadget' do
 
   pkg 'Install Intel Power Gadget.pkg'
 
-  uninstall_preflight do
-    system_command '/usr/sbin/installer',
-                   args: [
-                           '-pkg', '/Applications/Intel Power Gadget/Uninstaller.pkg',
-                           '-target', '/'
-                         ],
-                   sudo: true
-  end
-
-  uninstall pkgutil: 'com.intel.pkg.PowerGadget.*'
-
-  zap trash: '~/Library/Caches/com.intel.PowerGadget'
+  uninstall pkgutil: 'com.intel.pkg.PowerGadget.*',
+            kext:    'EnergyDriver'
 end
