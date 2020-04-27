@@ -1,6 +1,6 @@
 cask 'glip' do
-  version '20.2.11'
-  sha256 '62a113e78ba94144fcf7d0aac43b603b6502771f4304695bd14392c27c0cd835'
+  version '20.2.12'
+  sha256 '022f49a68b0c12e383c6466b430c58def9f6b249b4b92372d249181958dcc5ea'
 
   # downloads.ringcentral.com/glip/rc/ was verified as official when first introduced to the cask
   url "https://downloads.ringcentral.com/glip/rc/#{version}/mac/RingCentral-#{version}.dmg"
