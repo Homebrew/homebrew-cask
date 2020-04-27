@@ -26,6 +26,7 @@ cask 'remotix-agent' do
                           'com.nulana.rxagentmac.rc',
                         ],
             login_item: 'Remotix Agent',
+            quit:       'com.nulana.rxagentmac',
             delete:     [
                           '/Library/LaunchAgents/com.nulana.rxagentmac.user.plist',
                           '/Library/LaunchDaemons/com.nulana.rxagentmac.daemon.plist',
