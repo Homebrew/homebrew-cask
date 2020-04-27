@@ -1,6 +1,6 @@
 cask 'rapidweaver' do
-  version '8.6.1,20831'
-  sha256 '7d5f1d8a3f71bcfdbb5ad15eb733d2b4173e37237571020212ee204811fa1d08'
+  version '8.6.2,20836'
+  sha256 'fb138240beaa0f0f27f4ba2314db8eadc36d168585b8ec366928fb9ed2cdad0b'
 
   # github.com/realmacsoftware/ was verified as official when first introduced to the cask
   url "https://github.com/realmacsoftware/RapidWeaver#{version.major}-releases/releases/download/#{version.before_comma}-%28#{version.after_comma}%29/RapidWeaver#{version.major}.zip"
