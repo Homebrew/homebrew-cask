@@ -5,7 +5,7 @@ cask 'macpass' do
   # github.com/MacPass/MacPass/ was verified as official when first introduced to the cask
   url "https://github.com/MacPass/MacPass/releases/download/#{version}/MacPass-#{version}.zip"
   appcast 'https://github.com/MacPass/MacPass/releases.atom'
-  name 'MacPass'
+  name 'MacPass KeePass-compatible password manager'
   homepage 'https://macpass.github.io/'
 
   auto_updates true
