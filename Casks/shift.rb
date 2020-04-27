@@ -1,6 +1,6 @@
 cask 'shift' do
-  version '4.0.22'
-  sha256 '85457183bf5300484fc8f892cd068264b7ec518ec3357ddb6114edacdeb1ae48'
+  version '4.0.25'
+  sha256 '95142435a998148050282cf5a1f36937ea4e6386f1c137ae79b894afa3e9c332'
 
   url "https://update.tryshift.com/download/version/#{version}/osx_64"
   appcast 'https://tryshift.com/download/?platform=mac'

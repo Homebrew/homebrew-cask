@@ -14,6 +14,7 @@ cask 'genymotion' do
   binary "#{appdir}/Genymotion Shell.app/Contents/MacOS/genyshell"
 
   zap trash: [
+               '~/.Genymobile',
                '~/Library/Caches/Genymobile',
                '~/Library/Preferences/com.genymobile.Genymotion.plist',
                '~/Library/Preferences/com.genymobile.soft.Genymotion.plist',

@@ -1,13 +1,14 @@
 cask 'feed-the-beast' do
-  version :latest
-  sha256 :no_check
+  version '1.0.8'
+  sha256 'b03fe156f41b202b72c6ad554ecdfa7c77f503abf665a12e6acdeaabaef3f88d'
 
-  # dist.creeper.host/FTB2/ was verified as official when first introduced to the cask
-  url 'https://dist.creeper.host/FTB2/launcher/FTB_Launcher.zip'
+  # apps.modpacks.ch/FTBApp was verified as official when first introduced to the cask
+  url "https://apps.modpacks.ch/FTBApp/release/#{version}/FTBA_macos_#{version.dots_to_underscores}.dmg"
+  appcast 'https://www.feed-the-beast.com/app_release.xml'
   name 'Feed the Beast'
   homepage 'https://www.feed-the-beast.com/'
 
-  app 'Feed The Beast.app'
+  app 'FTBApp.app'
 
   zap trash: '~/Library/Application Support/ftblauncher'
 

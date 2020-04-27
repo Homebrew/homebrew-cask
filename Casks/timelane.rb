@@ -1,8 +1,8 @@
 cask 'timelane' do
-  version '1.0.0'
-  sha256 'cee79be7ffd8f1e6d06cc937fe1addc895fa531a99c439cbe7fbd30589c6fed8'
+  version '1.2'
+  sha256 '96af1b29474a33e37dbe90df3a8171b3c505eaa55db1d791d1be0ef007bfb781'
 
-  # github.com/icanzilb/Timelane was verified as official when first introduced to the cask
+  # github.com/icanzilb/Timelane/ was verified as official when first introduced to the cask
   url "https://github.com/icanzilb/Timelane/releases/download/#{version}/Timelane.app-#{version}.zip"
   appcast 'https://github.com/icanzilb/Timelane/releases.atom'
   name 'Timelane'

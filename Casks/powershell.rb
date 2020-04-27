@@ -17,11 +17,5 @@ cask 'powershell' do
                '~/.cache/powershell',
                '~/.config/PowerShell',
                '~/.local/share/powershell',
-             ],
-      rmdir: [
-               '~/.cache',
-               '~/.config',
-               '~/.local/share',
-               '~/.local',
              ]
 end

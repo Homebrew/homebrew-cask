@@ -1,6 +1,6 @@
 cask 'macgdbp' do
-  version '2.0'
-  sha256 'c9b7dedab6b011023374f6412906455a707ad2f7fa07dc101b6545e441f945b1'
+  version '2.0.2'
+  sha256 '438ea8cdbc4fc35b6cc80888e27a4e290f8c7023decc155227eed373ff2d0cfe'
 
   url "https://www.bluestatic.org/downloads/macgdbp/macgdbp-#{version}.zip"
   appcast 'https://www.bluestatic.org/versioncast.php/macgdbp'

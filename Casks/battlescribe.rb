@@ -1,12 +1,22 @@
 cask 'battlescribe' do
-  version '2.03.14'
-  sha256 '91c4bfaf47137608bf71c14aecc2e5e5a7df61797de5d013c7fdaa5b54980650'
+  version '2.03.15'
+  sha256 'e4ad9f59538835d49d953549e8f00b210367f7db363b7a66aad8aa57e5c4e7f8'
 
-  url "https://battlescribe.net/files/BattleScribe_#{version}_Installer.dmg"
+  url "https://battlescribe.net/files/BattleScribe_#{version}_Installer.pkg"
   appcast 'https://battlescribe.net/?tab=downloads'
   name 'BattleScribe'
   homepage 'https://battlescribe.net/'
 
-  suite 'BattleScribe Tools'
-  app 'BattleScribe.app'
+  pkg "BattleScribe_#{version}_Installer.pkg"
+
+  uninstall pkgutil: [
+                       'net.battlescribe.desktop.dataeditor',
+                       'net.battlescribe.desktop.dataindexer',
+                       'net.battlescribe.desktop.jre',
+                       'net.battlescribe.desktop.rostereditor',
+                     ],
+            delete:  [
+                       '/Applications/BattleScribe Tools/',
+                       '/Applications/BattleScribe.app',
+                     ]
 end

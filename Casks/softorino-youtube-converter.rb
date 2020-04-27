@@ -1,6 +1,6 @@
 cask 'softorino-youtube-converter' do
-  version '2.1.14'
-  sha256 '6b88e76c6b686c7a00982aaede60a171894ca726ae9020d2be4b7a6ce3ae4dff'
+  version '2.1.15'
+  sha256 '6bce22d99dfc17d081f8d901cc2d3dd4bb9938de9c90793019fffe9557f81e33'
 
   url "https://shining.softorino.com/shine_uploads/softorinoyoutubeconverter#{version.major}mac_#{version}.dmg"
   appcast 'https://shining.softorino.com/appcast.php?abbr=syc2m'

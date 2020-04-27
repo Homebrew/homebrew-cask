@@ -1,8 +1,8 @@
 cask 'tidepool-uploader' do
-  version '2.28.0'
-  sha256 '239c308e760f2d7977ef810325e66b84460a17fabb5d90a6286906d83e7fac21'
+  version '2.28.1'
+  sha256 '7f7b0642a8b0e72d1931409c63cec0af8e15f88d9e1aabbff240c31fed6b720a'
 
-  # github.com/tidepool-org/chrome-uploader was verified as official when first introduced to the cask
+  # github.com/tidepool-org/chrome-uploader/ was verified as official when first introduced to the cask
   url "https://github.com/tidepool-org/chrome-uploader/releases/download/v#{version}/tidepool-uploader-#{version}.dmg/"
   appcast 'https://github.com/tidepool-org/chrome-uploader/releases.atom'
   name 'Tidepool Uploader'
