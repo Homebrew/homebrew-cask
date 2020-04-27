@@ -37,7 +37,7 @@ cask 'blockblock' do
                       }
   end
 
-  appcast 'https://objective-see.com/products/blockblock.html'
+  appcast 'https://objective-see.com/products/changelogs/BlockBlock.txt'
   name 'BlockBlock'
   homepage 'https://objective-see.com/products/blockblock.html'
 
