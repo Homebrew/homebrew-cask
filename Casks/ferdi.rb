@@ -1,6 +1,6 @@
 cask 'ferdi' do
   version '5.5.0'
-  sha256 'fa9bd9e2c97a20272a36ccecec9ac5311e7776bbdfbbbdcf06a0a6e95fadac94'
+  sha256 'bd77ff1c43c10e177beaf145a437faed70ceb6830d47bef3a65f7254427b2cb9'
 
   # github.com/getferdi/ferdi/ was verified as official when first introduced to the cask
   url "https://github.com/getferdi/ferdi/releases/download/v#{version}/Ferdi-#{version}.dmg"
