@@ -3,8 +3,8 @@ cask 'mysqlworkbench' do
     version '6.3.10'
     sha256 '29857bf84bebb7c4442ce147e44602d00f8c001e3c09b3a6e3af356767e08d2c'
   else
-    version '8.0.19'
-    sha256 '04dc687fb98b6f312ae0046cdaf414ec566d9044aa77097bbe91a2f79e940401'
+    version '8.0.20'
+    sha256 'a5c11b83fbcb1817e982eed7a6d170ffca6c67d3a9496817c395c4a60b571cc0'
   end
 
   url "https://cdn.mysql.com/Downloads/MySQLGUITools/mysql-workbench-community-#{version}-macos-x86_64.dmg"
