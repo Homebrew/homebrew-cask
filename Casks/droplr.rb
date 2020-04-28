@@ -10,5 +10,5 @@ cask 'droplr' do
   auto_updates true
   depends_on macos: '>= :sierra'
 
-  app 'Droplr.app'
+  pkg "Droplr#{version.before_comma.no_dots}-#{version.after_comma}.pkg"
 end
