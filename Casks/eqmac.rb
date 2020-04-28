@@ -8,5 +8,19 @@ cask 'eqmac' do
   homepage 'https://github.com/bitgapp/eqMac/releases/'
 
   app "eqMac.app"
+  installer script: {
+                      executable: "#{staged_path}/eqMac.app/Contents/Resources/install_driver.sh",
+                      sudo:       true,
+                    }
 
+  uninstall quit:   "com.bitgapp.eqMac",
+            script: {
+                      executable: "#{appdir}/eqMac.app/Contents/Resources/uninstall_driver.sh",
+                      sudo:       true,
+                    }
+
+  zap trash: [
+               "~/Library/Caches/com.bitgapp.eqMac",
+               "~/Library/Cookies/com.bitgapp.eqMac.binarycookies",
+             ]
 end
