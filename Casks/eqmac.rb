@@ -1,8 +1,10 @@
 cask 'eqmac' do
-  version :latest
-  sha256 :no_check
+  version '0.0.1'
+  sha256 '00538e305f4ad90c688fc4fd9dd07969f713e35051ef98971cda53368996f918'
 
-  url 'https://update.eqmac.app/eqMac.dmg'
+  # github.com/bitgapp/eqMac was verified as official when first introduced to the cask
+  url "https://github.com/bitgapp/eqMac/releases/download/v#{version}/eqMac.dmg"
+  appcast 'https://github.com/bitgapp/eqMac/releases.atom'
   name 'eqMac'
   homepage 'https://eqmac.app/'
 
@@ -12,9 +14,17 @@ cask 'eqmac' do
                       sudo:       true,
                     }
 
-  uninstall quit:   'com.bitgapp.eqmac',
+  uninstall quit:   [
+                      'com.bitgapp.eqmac',
+                      'com.bitgapp.eqmac-LaunchAtLoginHelper',
+                    ],
             script: {
                       executable: "#{appdir}/eqMac.app/Contents/Resources/uninstall_driver.sh",
                       sudo:       true,
                     }
+
+  zap trash: [
+               '~/Library/Caches/com.bitgapp.eqmac',
+               '~/Library/Cookies/com.bitgapp.eqmac.binarycookies',
+             ]
 end
