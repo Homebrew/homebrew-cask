@@ -10,4 +10,13 @@ cask 'cleanshot' do
   auto_updates true
 
   app 'CleanShot X.app'
+
+  uninstall quit: 'pl.maketheweb.cleanshotx'
+
+  zap trash: [
+               '~/Library/Application Support/CleanShot',
+               '~/Library/Caches/SentryCrash/CleanShot X',
+               '~/Library/Caches/pl.maketheweb.cleanshotx',
+               '~/Library/Preferences/pl.maketheweb.cleanshotx.plist',
+             ]
 end
