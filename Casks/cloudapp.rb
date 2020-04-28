@@ -1,6 +1,6 @@
 cask 'cloudapp' do
-  version '5.8.1-1904'
-  sha256 '5d9e0c8c68a9a0ad79d0b18e2d54bcea035b71b6af0263513a12a758ed62a320'
+  version '6.1.1.1986'
+  sha256 '3ac0eb456009e341bd22691f9d2b9116bf0c40425f8d86adcefcd4e8436609a8'
 
   url "http://downloads.getcloudapp.com/mac/CloudApp-#{version}.zip"
   appcast 'https://d2plwz9jdz9z5d.cloudfront.net/mac/latest/appcast.xml'
