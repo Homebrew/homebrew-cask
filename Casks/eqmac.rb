@@ -2,7 +2,7 @@ cask 'eqmac' do
   version '2.2'
   sha256 'ff60579197b52571d9686bbfaec695dfa75797b8a9314fbf69a673bbeb12e1fc'
 
-  url "https://github.com/bitgapp/eqMac/releases/download/V#{version}/eqMac#{version.major}.dmg"
+  url "https://github.com/bitgapp/eqMac/releases/download/v#{version}/eqMac.dmg"
   appcast 'https://github.com/bitgapp/eqMac/releases.atom'
   name 'eqMac'
   homepage 'https://github.com/bitgapp/eqMac/releases/'
