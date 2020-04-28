@@ -1,10 +1,10 @@
 cask 'runway' do
-  version '0.11.3'
-  sha256 '7ee28d8f0b523adff8ab1277b3b3b6b71f1aa87cfb7a342e9038ca416ec55db5'
+  version '0.12.0'
+  sha256 '5dd2d58062176520a42419c57c1c5367731ca59a6f59191241caaf6adeef0c25'
 
   # runway-releases.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://runway-releases.s3.amazonaws.com/Runway-#{version}.dmg"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://api.runwayml.com/v1/download?platform=mac'
+  appcast 'https://runway-releases.s3.amazonaws.com/latest-mac.yml'
   name 'Runway'
   homepage 'https://runwayml.com/'
 
