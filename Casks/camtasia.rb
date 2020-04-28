@@ -1,5 +1,5 @@
 cask 'camtasia' do
-  version '2020.0.0'
+  version '2020.0.1'
   sha256 '8c526e3357ab43cc07d3961d4466a6f032754a0cd87697e12021148fd4c1bc02'
 
   url 'https://download.techsmith.com/camtasiamac/releases/Camtasia.dmg'
@@ -8,7 +8,7 @@ cask 'camtasia' do
   homepage 'https://www.techsmith.com/camtasia.html'
 
   auto_updates true
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :high_sierra'
 
   app "Camtasia #{version.major}.app"
 end
