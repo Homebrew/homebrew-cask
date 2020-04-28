@@ -1,4 +1,4 @@
-# If an app isn’t included in `upgrade`
+# Why some apps aren’t included in `upgrade`
 
 After running `brew cask upgrade`, you may notice some casks you think should be upgrading, aren’t.
 
