@@ -10,8 +10,6 @@ cask 'elektron-overbridge' do
 
   pkg "Elektron Overbridge Installer #{version}.pkg"
 
-  uninstall script: {
-                      executable: '/Applications/Elektron/Overbridge_Uninstaller.app/Contents/MacOS/Overbridge_Uninstaller',
-                      sudo:       true,
-                    }
+  uninstall pkgutil: 'se.elektron.overbridge.*',
+            delete: '/Applications/Elektron'
 end
