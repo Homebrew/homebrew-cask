@@ -1,6 +1,6 @@
 cask 'stack-stack' do
-  version '2.7.3'
-  sha256 '4e52945fcdc1b7f3ff5e72245493074dcebd47cd00b6cc8431f62f68c9cfdade'
+  version '2.11.0'
+  sha256 'd8addd413cc6a86c7421b3119476107ff582756adf3f691b31e60294daf372ef'
 
   # s3.eu-central-1.amazonaws.com/stack-v1 was verified as official when first introduced to the cask
   url "https://s3.eu-central-1.amazonaws.com/stack-v1/builds/prod/Stack-#{version}.dmg"
