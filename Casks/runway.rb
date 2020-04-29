@@ -4,7 +4,7 @@ cask 'runway' do
 
   # runway-releases.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://runway-releases.s3.amazonaws.com/Runway-#{version}.dmg"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://api.runwayml.com/v1/download?platform=mac'
+  appcast 'https://runway-releases.s3.amazonaws.com/latest-mac.yml'
   name 'Runway'
   homepage 'https://runwayml.com/'
 
