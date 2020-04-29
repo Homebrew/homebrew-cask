@@ -7,5 +7,11 @@ cask 'plecs-standalone' do
   name 'PLECS'
   homepage 'https://www.plexim.com/'
 
-  app 'PLECS 4.3.app'
+  app "PLECS #{version.major_minor}.app"
+
+  zap trash: [
+               '~/Library/Application Support/Plexim',
+               '~/Library/Preferences/com.plexim.PLECS.plist',
+               '~/Library/Saved Application State/com.plexim.plecs.savedState',
+             ]
 end
