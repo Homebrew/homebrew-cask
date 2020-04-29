@@ -1,6 +1,6 @@
 cask 'robofont' do
-  version '3.3'
-  sha256 '2ee6460201abe754710188c0a18ff725af1599c49d38ffa6ca5828f33bd04683'
+  version '3.4'
+  sha256 'df986128e4630f93ef38fb9245f04f0b0fd2b603b0caa1753a6d62015e8b98a8'
 
   # static.typemytype.com/robofont/ was verified as official when first introduced to the cask
   url 'https://static.typemytype.com/robofont/RoboFont.dmg'
