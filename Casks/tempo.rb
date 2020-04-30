@@ -1,6 +1,6 @@
 cask 'tempo' do
-  version '4.19.0'
-  sha256 'a236fe1f792ec233adce23229287fe1324e25ff00f8832f71573793b4102a27e'
+  version '4.20.0'
+  sha256 '3c77aa9850ba8dbc9748366d02b756e8cce38548009ca44c2119aba217520035'
 
   url "https://download.yourtempo.co/release/Tempo-#{version}.dmg"
   appcast 'https://download.yourtempo.co/release/latest-mac.yml'
