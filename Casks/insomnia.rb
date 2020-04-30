@@ -5,12 +5,12 @@ cask 'insomnia' do
   # github.com/Kong/insomnia/ was verified as official when first introduced to the cask
   url "https://github.com/Kong/insomnia/releases/download/designer%40#{version}/Insomnia.Designer-#{version}.dmg"
   appcast 'https://insomnia.rest/changelog/index.xml'
-  name 'Insomnia'
+  name 'Insomnia Designer'
   homepage 'https://insomnia.rest/'
 
   auto_updates true
 
-  app 'Insomnia.app'
+  app 'Insomnia Designer.app'
 
   zap trash: [
                '~/Library/Application Support/Insomnia',
