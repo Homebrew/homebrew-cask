@@ -8,7 +8,7 @@ cask 'insomnia-designer' do
   name 'Insomnia Designer'
   homepage 'https://insomnia.rest/'
 
-  app 'Insomnia Designer.app'
+  app 'Insomnia\ Designer.app'
 
   zap trash: [
                '~/Library/Application Support/Insomnia Designer',
