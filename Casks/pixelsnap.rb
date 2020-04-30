@@ -10,4 +10,13 @@ cask 'pixelsnap' do
   auto_updates true
 
   app "PixelSnap #{version.major}.app"
+
+  uninstall quit: 'pl.maketheweb.pixelsnap2'
+
+  zap trash: [
+               '~/Library/Application Support/PixelSnap',
+               '~/Library/Caches/SentryCrash/PixelSnap 2',
+               '~/Library/Caches/pl.maketheweb.pixelsnap2',
+               '~/Library/Preferences/pl.maketheweb.pixelsnap2.plist',
+             ]
 end
