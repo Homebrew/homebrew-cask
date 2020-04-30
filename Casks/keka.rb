@@ -14,6 +14,7 @@ cask 'keka' do
   app 'Keka.app'
 
   zap trash: [
+               '~/Library/Containers/com.aone.keka',
                '~/Library/Application Support/Keka',
                '~/Library/Caches/com.aone.keka',
                '~/Library/Preferences/com.aone.keka.plist',
