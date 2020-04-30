@@ -9,4 +9,13 @@ cask 'insomnia-designer' do
   homepage 'https://insomnia.rest/'
 
   app 'Insomnia Designer.app'
+
+  zap trash: [
+               '~/Library/Application Support/Insomnia Designer',
+               '~/Library/Caches/com.insomnia.designer',
+               '~/Library/Caches/com.insomnia.designer.ShipIt',
+               '~/Library/Logs/Insomnia Designer',
+               '~/Library/Preferences/com.insomnia.designer.plist',
+               '~/Library/Saved Application State/com.insomnia.designer.savedState',
+             ]
 end
