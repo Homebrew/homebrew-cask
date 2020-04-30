@@ -3,7 +3,7 @@ cask 'edrawmax' do
   sha256 :no_check
 
   language 'CN' do
-    url 'https://www.edrawsoft.cn/2download/edrawmax-cn.dmg'
+    url 'http://cc-download.edrawsoft.cn/edraw-max_cn_full5381.dmg'
     homepage 'https://www.edrawsoft.cn/'
   end
 
