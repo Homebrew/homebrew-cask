@@ -8,7 +8,7 @@ cask 'edrawmax' do
   end
 
   language 'en', default: true do
-    url 'https://www.edrawsoft.com/archives/edrawmax.dmg'
+    url 'http://download.edrawsoft.com/edraw-max_full5380.dmg'
     homepage 'https://www.edrawsoft.com/'
   end
 
