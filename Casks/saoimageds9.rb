@@ -12,9 +12,9 @@ cask 'saoimageds9' do
     url "https://ds9.si.edu/download/macoscatalina/SAOImageDS9%20#{version}.dmg"
   end
 
-  appcast 'https://ds9.si.edu/site/Download.html'
+  appcast 'https://sites.google.com/cfa.harvard.edu/saoimageds9/download'
   name 'SAOImage DS9'
-  homepage 'https://ds9.si.edu/site/Home.html'
+  homepage 'https://sites.google.com/cfa.harvard.edu/saoimageds9/home'
 
   depends_on macos: '>= :high_sierra'
 
