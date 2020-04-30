@@ -1,6 +1,6 @@
 cask 'superproductivity' do
-  version '5.0.12'
-  sha256 '7a5fc306b52f26dda3662845af9668253509078df9f562cd9a4c241e87a02005'
+  version '5.0.15'
+  sha256 '1f6eca53125ecc2a41a77883c77d910c32c3a22a521b9ddba04f5949364fac20'
 
   # github.com/johannesjo/super-productivity/ was verified as official when first introduced to the cask
   url "https://github.com/johannesjo/super-productivity/releases/download/v#{version}/superProductivity-#{version}-mac.zip"
