@@ -3,6 +3,7 @@ cask 'zecwallet' do
   sha256 '052b271e992cc9513f39875a5d373f41a96d0a212c2f7ca8f223d22e7890a94a'
 
   url "https://github.com/adityapk00/zecwallet-lite/releases/download/v#{version}/Zecwallet.Lite-#{version}.dmg"
+  appcast 'https://github.com/adityapk00/zecwallet-lite/releases.atom'
   name 'Zecwallet Lite'
   homepage 'https://www.zecwallet.co/'
 
