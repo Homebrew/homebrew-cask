@@ -7,7 +7,7 @@ cask 'stay' do
   name 'Stay'
   homepage 'https://cordlessdog.com/stay/'
 
-  depends_on macos: '>= :high_sierra'
+  depends_on macos: '>= :mojave'
 
   app 'Stay.app'
 
