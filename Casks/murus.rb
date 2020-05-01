@@ -1,6 +1,6 @@
 cask 'murus' do
-  version '2.0.2'
-  sha256 '377c5df5e0c77c04e0f52c0d75cc26b44ae3098ff0ac0cb61073b48f68e5f83b'
+  version '2.0.3'
+  sha256 '41fc9a86cf52a6cf8a7deb417ebc6baa2d57f72b6d2e71956f36eb18e3181402'
 
   # github.com/TheMurusTeam/Murus/ was verified as official when first introduced to the cask
   url "https://github.com/TheMurusTeam/Murus/releases/download/v#{version}/murus-#{version}.zip"
