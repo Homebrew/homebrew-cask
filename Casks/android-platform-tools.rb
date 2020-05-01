@@ -1,6 +1,6 @@
 cask 'android-platform-tools' do
-  version '29.0.6'
-  sha256 '7555e8e24958cae4cfd197135950359b9fe8373d4862a03677f089d215119a3a'
+  version '30.0.0'
+  sha256 '74f3fd31032163c9d83383c266fcecf35a22b86986a7949572737b1aaf91715b'
 
   # google.com/android/repository/ was verified as official when first introduced to the cask
   url "https://dl.google.com/android/repository/platform-tools_r#{version}-darwin.zip"
