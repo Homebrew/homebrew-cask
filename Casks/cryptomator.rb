@@ -1,6 +1,6 @@
 cask 'cryptomator' do
-  version '1.5.2'
-  sha256 '5c25a8e61b421ad3e51b34e8f99ad08b595ccf712d5310037858b13b092f3713'
+  version '1.5.3'
+  sha256 'cff42fe249b44fe8971af4eeabc1ca553b0c60345d2878d9cdbd474a5b17bc9e'
 
   # dl.bintray.com/cryptomator/cryptomator/ was verified as official when first introduced to the cask
   url "https://dl.bintray.com/cryptomator/cryptomator/#{version}/Cryptomator-#{version}.dmg"
