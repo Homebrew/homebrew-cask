@@ -18,7 +18,7 @@ cask 'gitfiend' do
     IO.write shimscript, <<~EOS
       #!/bin/sh
       node() { ELECTRON_RUN_AS_NODE=1 "#{appdir}/GitFiend.app/Contents/MacOS/GitFiend" "${@}"; }
-      project="$(node -e 'console.log(path.resolve(process.argv[1]))' "${1}")"
+      readonly project="$(node -e 'console.log(path.resolve(process.argv[1]))' "${1}")"
       open -a "#{appdir}/GitFiend.app" --args "${project}"
     EOS
   end
