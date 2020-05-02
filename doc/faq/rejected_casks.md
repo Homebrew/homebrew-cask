@@ -15,7 +15,7 @@ Common reasons to reject a Cask entirely:
 + The download URL for the app is both behind a login/registration form and from a host that differs from the homepage, meaning users can’t easily verify its authenticity. [alehouse/homebrew-unofficial](https://github.com/alehouse/homebrew-unofficial) is a sister repo where you may wish to submit your cask.
 + The Cask is for an app that is unmaintained (no releases in the last year, or [explicitly discontinued](https://github.com/Homebrew/homebrew-cask/pull/22699)).
 + The Cask is for an app that is too obscure. Examples:
-  + An app from a GitHub repository that is [not notable enough](https://github.com/Homebrew/homebrew-cask/pull/28103). To quailifiy as notable the repository needs to be 30 days or older and have either:
+  + An app from a GitHub repository that is [not notable enough](https://github.com/Homebrew/homebrew-cask/pull/28103). To quailifiy as notable, the repository needs to be 30 days or older and have either:
     + ≥ 75 stars, or
     + ≥ 30 watchers, or
     + ≥ 30 forks
