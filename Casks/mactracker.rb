@@ -1,6 +1,6 @@
 cask 'mactracker' do
-  version '7.9'
-  sha256 'b73051559db9d5b3a7d1d0e44a70f3b7b36784bfc7c732863017325c10bffca1'
+  version '7.9.1'
+  sha256 'fb811b503fd16580299cf56195b20a50c46fce07e332b1a73a759df6f4c6d116'
 
   url "https://www.mactracker.ca/downloads/Mactracker_#{version}.zip"
   appcast 'https://update.mactracker.ca/appcast-b.xml'
