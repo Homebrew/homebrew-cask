@@ -12,6 +12,8 @@ cask 'spectacle' do
 
   app 'Spectacle.app'
 
+  uninstall quit: 'com.divisiblebyzero.Spectacle'
+
   zap trash: [
                '~/Library/Application Support/Spectacle',
                '~/Library/Caches/com.divisiblebyzero.Spectacle',
