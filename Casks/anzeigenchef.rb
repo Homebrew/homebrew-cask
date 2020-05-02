@@ -7,7 +7,6 @@ cask 'anzeigenchef' do
   name 'AnzeigenChef'
   homepage 'https://anzeigenchef.roundcubes.de/'
 
-  auto_updates false
   depends_on macos: '>= :sierra'
 
   app 'AnzeigenChef.app'
