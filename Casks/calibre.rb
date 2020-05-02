@@ -6,7 +6,7 @@ cask 'calibre' do
   else
     version '4.15.0'
     sha256 '335d84d46c3f01dec853516c73974756a92b177e7926c2776c612fb08d098aeb'
-    url "https://download.calibre-ebook.com/#{version}/calibre-#{version}.dmg"
+    url "https://github.com/kovidgoyal/calibre/releases/download/v#{version}/calibre-#{version}.dmg"
     appcast 'https://github.com/kovidgoyal/calibre/releases.atom'
   end
 
