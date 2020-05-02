@@ -4,7 +4,7 @@ cask 'betterzip' do
 
   # macitbetter.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://macitbetter.s3.amazonaws.com/BetterZip-#{version}.zip"
-  appcast "https://macitbetter.com/BetterZip#{version.major}.rss"
+  appcast 'https://macitbetter.com/version-history/'
   name 'BetterZip'
   homepage 'https://macitbetter.com/'
 
