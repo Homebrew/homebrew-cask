@@ -23,11 +23,6 @@ cask 'spectacle' do
              ]
 
   caveats do
-    puts <<~EOS
-      Spectacle users have recommended Rectangle as an open source
-      alternative. It can also be installed using Homebrew Cask:
-        brew cask install rectangle
-    EOS
     discontinued
   end
 end
