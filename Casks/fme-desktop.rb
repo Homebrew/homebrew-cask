@@ -2,7 +2,7 @@ cask 'fme-desktop' do
   version '2020.0.1-b20218'
   sha256 '7662db9172aa732c5b2ee144167914d07f0de18fc608d133ac15f112785dd582'
 
-  url "https://downloads.safe.com/fme/2020/fme-desktop-#{version}-macosx.dmg"
+  url "https://downloads.safe.com/fme/#{version.major}/fme-desktop-#{version}-macosx.dmg"
   appcast 'https://www.safe.com/support/downloads/',
           configuration: version.major_minor
   name 'FME Desktop'
