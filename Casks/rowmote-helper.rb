@@ -1,6 +1,6 @@
 cask 'rowmote-helper' do
-  version '4.1.9'
-  sha256 '2929277d4d394a8a40f311d0974a7da559911c2a727e3655aa0c5fa1a9af5390'
+  version '4.2'
+  sha256 'a3dba1835b34abf08a33f4c02c875cf4ef181b534615a25021b024a4cdda568f'
 
   url "https://regularrateandrhythm.com/rowmote-pro/rh/rowmote-helper-#{version}.zip"
   appcast 'https://www.regularrateandrhythm.com/apps/rowmote-pro/rowmote-appcast.xml'
