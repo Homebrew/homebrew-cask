@@ -2,7 +2,8 @@ cask 'betterzip' do
   version '4.2.5'
   sha256 '6fda66723dfacba7d7ffbf1817e06031aa7faeec586cd11b9619db28940fa179'
 
-  url "https://macitbetter.com/dl/BetterZip-#{version}.zip"
+  # macitbetter.s3.amazonaws.com/ was verified as official when first introduced to the cask
+  url "https://macitbetter.s3.amazonaws.com/BetterZip-#{version}.zip"
   appcast "https://macitbetter.com/BetterZip#{version.major}.rss"
   name 'BetterZip'
   homepage 'https://macitbetter.com/'
