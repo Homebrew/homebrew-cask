@@ -1,6 +1,6 @@
 cask 'eqmac' do
-  version '0.1.0'
-  sha256 '3a001ad91913f90c9bfb3096f07171b6b0c130b4fca1c3c2e3b95414a6781578'
+  version '0.1.1'
+  sha256 'a59ee2ab63b81c1ff39de09bcdb97cf2c65457d79d5ba172a190b7206fa2ad54'
 
   # github.com/bitgapp/eqMac/ was verified as official when first introduced to the cask
   url "https://github.com/bitgapp/eqMac/releases/download/v#{version}/eqMac.dmg"
