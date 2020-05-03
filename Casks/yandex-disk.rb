@@ -1,6 +1,6 @@
 cask 'yandex-disk' do
-  version '3.1.12,30'
-  sha256 '3dfe93e18950cd3d8f91f4d3f379972ec8436783a304075471994eb22167562f'
+  version '3.1.17,30'
+  sha256 'f94f29b997ab5342158c5f67e32ddd678fb34d48a2fd6ddbbbafeecdfd5393db'
 
   url "https://disk.yandex.ru/download/YandexDisk#{version.after_comma}.dmg/?instant=1"
   name 'Yandex.Disk'
