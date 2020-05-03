@@ -4,7 +4,7 @@ cask 'insomnia-designer' do
 
   # github.com/Kong/insomnia/ was verified as official when first introduced to the cask
   url "https://github.com/Kong/insomnia/releases/download/designer%40#{version}/Insomnia.Designer-#{version}.dmg"
-  appcast 'https://insomnia.rest/changelog/index.xml'
+  appcast 'https://api.insomnia.rest/changelog.json?app=com.insomnia.designer'
   name 'Insomnia Designer'
   homepage 'https://insomnia.rest/'
 
