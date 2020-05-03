@@ -4,9 +4,9 @@ cask 'betterzip' do
 
   # macitbetter.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://macitbetter.s3.amazonaws.com/BetterZip-#{version}.zip"
-  appcast 'http://macitbetter.com/version-history/'
+  appcast "https://macitbetter.com/BetterZip#{version.major}.rss"
   name 'BetterZip'
-  homepage 'http://macitbetter.com/'
+  homepage 'https://macitbetter.com/'
 
   auto_updates true
   depends_on macos: '>= :yosemite'
