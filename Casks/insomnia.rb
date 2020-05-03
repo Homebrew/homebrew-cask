@@ -4,7 +4,7 @@ cask 'insomnia' do
 
   # github.com/getinsomnia/insomnia/ was verified as official when first introduced to the cask
   url "https://github.com/getinsomnia/insomnia/releases/download/v#{version}/Insomnia-#{version}.dmg"
-  appcast 'https://insomnia.rest/changelog/index.xml'
+  appcast 'https://api.insomnia.rest/changelog.json?app=com.insomnia.app'
   name 'Insomnia'
   homepage 'https://insomnia.rest/'
 
