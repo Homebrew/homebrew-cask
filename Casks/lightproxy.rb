@@ -1,5 +1,5 @@
 cask 'lightproxy' do
-  version '1.1.12'
+  version '1.1.13'
   sha256 '56c82500f8e8321dcf7418e0b4d543982b07e549c982862ea8e71276811228f6'
 
   # gw.alipayobjects.com/os/LightProxy/ was verified as official when first introduced to the cask
