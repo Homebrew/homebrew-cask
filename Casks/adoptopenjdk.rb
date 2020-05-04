@@ -8,7 +8,7 @@ cask 'adoptopenjdk' do
   name 'AdoptOpenJDK Java Development Kit'
   homepage 'https://adoptopenjdk.net/'
 
-  artifact "jdk-#{version.before_comma}+#{version.after_comma}", target: "/Library/Java/JavaVirtualMachines/adoptopenjdk-#{version.before_comma}.jdk"
+  artifact "jdk-#{version.before_comma}+#{version.after_comma}", target: "/Library/Java/JavaVirtualMachines/adoptopenjdk-#{version.major}.jdk"
 
   caveats <<~EOS
     More versions are available in the AdoptOpenJDK tap:
