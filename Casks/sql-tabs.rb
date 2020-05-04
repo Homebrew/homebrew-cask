@@ -1,9 +1,9 @@
 cask 'sql-tabs' do
-  version '1.0.0'
-  sha256 'd3fa156de487b0f8956136d2999617ceec365cf989578340f523544fe0ccf81c'
+  version '1.1.0'
+  sha256 '692b0c27a596d049dd64e158a543b768f7d4bd9df869b4365c9d8efc36b59b8e'
 
   # github.com/sasha-alias/sqltabs/ was verified as official when first introduced to the cask
-  url "https://github.com/sasha-alias/sqltabs/releases/download/v#{version}/sqltabs.mac.dmg"
+  url "https://github.com/sasha-alias/sqltabs/releases/download/v#{version}/SQL-Tabs-#{version}.dmg"
   appcast 'https://github.com/sasha-alias/sqltabs/releases.atom'
   name 'SQL Tabs'
   homepage 'https://www.sqltabs.com/'
