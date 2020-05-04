@@ -1,6 +1,6 @@
 cask 'neofinder' do
-  version '7.5.1'
-  sha256 'be58f3847b629f8bce29d1399970c7baec3d7267f6d8a50065334ac3ded6659f'
+  version '7.5.2'
+  sha256 'dfb8ea64c2e99fe59bfe28a3f4bd5bd45951273a3cc3436a58d9f69eaf0bfa7b'
 
   # wfs-apps.de/ was verified as official when first introduced to the cask
   url "https://www.wfs-apps.de/updates/neofinder.#{version}.zip"
