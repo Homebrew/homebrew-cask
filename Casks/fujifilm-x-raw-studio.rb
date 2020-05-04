@@ -15,6 +15,6 @@ cask 'fujifilm-x-raw-studio' do
   zap trash: [
                '~/Library/Application Support/com.fujifilm.denji',
                '~/Library/Preferences/com.fujifilm.denji.X-RAW-STUDIO.plist',
-               '~/Library/Saved Application State/com.fujifilm.denji.X-RAW-STUDIO.savedState/',
+               '~/Library/Saved Application State/com.fujifilm.denji.X-RAW-STUDIO.savedState',
              ]
 end
