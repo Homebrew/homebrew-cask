@@ -11,6 +11,7 @@ cask 'yyets' do
   app '人人影视.app'
 
   zap trash: [
+               '~/Library/Application Support/rrshare',
                '~/Library/Application Support/人人影视',
                '~/Library/Caches/人人影视',
                '~/Library/Preferences/com.yyets.rrshare.人人影视.plist',
