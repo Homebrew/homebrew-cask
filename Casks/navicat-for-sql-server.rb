@@ -1,6 +1,6 @@
 cask 'navicat-for-sql-server' do
-  version '15.0.14'
-  sha256 '3bcbe21610791e73773e3a968019b8415b8cf56f6ca3ae8ed943c50b69957ce6'
+  version '15.0.15'
+  sha256 '3d61a5e507ce8f17f71b065f7a37eac5639b14b7f2b1d73810d7112028e370d6'
 
   url "http://download.navicat.com/download/navicat#{version.major_minor.no_dots}_sqlserver_en.dmg"
   appcast 'https://updater.navicat.com/mac/navicat_updates.php?appName=Navicat%20for%20SQL%20Server&appLang=en'
