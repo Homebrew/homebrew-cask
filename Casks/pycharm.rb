@@ -17,6 +17,7 @@ cask 'pycharm' do
 
   zap trash: [
                "~/Library/Application Support/PyCharm#{version.major_minor}",
+               "~/Library/Application Support/JetBrains/PyCharm#{version.major_minor}",
                "~/Library/Caches/PyCharm#{version.major_minor}",
                "~/Library/Logs/PyCharm#{version.major_minor}",
                "~/Library/Preferences/PyCharm#{version.major_minor}",
