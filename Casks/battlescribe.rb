@@ -1,6 +1,6 @@
 cask 'battlescribe' do
   version '2.03.18'
-  sha256 '3cd4c152c59497500abc327d7cea8897e3dd16e7668da35bfda325634703c22a'
+  sha256 '50f1a7c6815ff2a0f5b7f4f8348a59bd6798bd568035cc845980d9192be3d5bc'
 
   url "https://battlescribe.net/files/BattleScribe_#{version}_Installer.pkg"
   appcast 'https://battlescribe.net/?tab=downloads'
