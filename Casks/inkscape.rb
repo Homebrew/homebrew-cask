@@ -11,8 +11,8 @@ cask 'inkscape' do
 
     zap trash: '~/.inkscape-etc'
   else
-    version '1.0.0rc1'
-    sha256 'c8b1e7e274512a8f7e63a2687376e132d3967b2adbd7163c2d69535e2688957e'
+    version '1.0.0'
+    sha256 '9b42468815b4bcbc8ccb76a239aea48a2965dbd2f3ae7c3b560c7f2a7e48a955'
 
     url "https://media.inkscape.org/dl/resources/file/Inkscape-#{version}.dmg"
 
