@@ -3,6 +3,8 @@ cask 'inkscape' do
   sha256 '9b42468815b4bcbc8ccb76a239aea48a2965dbd2f3ae7c3b560c7f2a7e48a955'
 
   url "https://media.inkscape.org/dl/resources/file/Inkscape-#{version}.dmg"
+  appcast 'https://gitlab.com/inkscape/inkscape/-/tags?format=atom',
+          configuration: version.major_minor
   name 'Inkscape'
   homepage 'https://inkscape.org/'
 
