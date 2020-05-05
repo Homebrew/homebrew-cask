@@ -6,7 +6,7 @@ cask 'rssowl' do
   url "https://github.com/rssowl/RSSOwl/releases/download/#{version}/RSSOwl.#{version}.dmg"
   appcast 'https://github.com/rssowl/RSSOwl/releases.atom'
   name 'RSSOwl'
-  homepage 'http://www.rssowl.org/'
+  homepage 'https://www.rssowl.org/'
 
   app 'RSSOwl.app'
 end
