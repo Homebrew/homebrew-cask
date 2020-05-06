@@ -1,9 +1,9 @@
 cask 'yyets' do
   version '3.2.2'
-  sha256 'dd0d1c9ad5f8550c06328f85d7249877e2ffa76ee2c99960c6d760b903c8c708'
+  sha256 '3d45291ea48a234fe838c18c9253b3be4c97a0dca351e86287fe8a7bd41bf3aa'
 
-  url "http://appdown.rrys.tv/RRShare#{version}.dmg"
-  appcast 'http://tj.playcvn.com/app/init?platform=5'
+  url "http://appdown.rrys.tv/RRShare_#{version}.dmg"
+  appcast 'http://app.rrys.tv/'
   name 'YYeTs'
   name '人人影视'
   homepage 'http://app.rrys.tv/'
@@ -12,8 +12,8 @@ cask 'yyets' do
 
   zap trash: [
                '~/Library/Application Support/rrshare',
-               '~/Library/Application Support/人人影视',
                '~/Library/Caches/人人影视',
                '~/Library/Preferences/com.yyets.rrshare.人人影视.plist',
+               '~/Library/Saved Application State/com.yyets.RRShare.savedState',
              ]
 end
