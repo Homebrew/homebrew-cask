@@ -17,11 +17,15 @@ cask 'zoomus' do
   end
 
   uninstall quit:       'us.zoom.ZoomOpener',
-            signal:     [
-                          ['KILL', 'us.zoom.xos'],
-                        ],
+            signal:     ['KILL', 'us.zoom.xos'],
             pkgutil:    'us.zoom.pkg.videmeeting',
             login_item: 'ZoomOpener',
+            script:     {
+                          executable:   '/usr/bin/defaults',
+                          args:         ['delete', 'us.zoom.xos'],
+                          must_succeed: false,
+                          sudo:         true,
+                        },
             delete:     [
                           '/Applications/zoom.us.app',
                           '/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin',
