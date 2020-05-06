@@ -56,6 +56,7 @@ def find_electron_builder(app)
 
   possible_appcasts = [
     "#{url}/latest-mac.yml",
+    "#{url}/updates/latest/mac/latest-mac.yml",
     "https://github.com/#{owner}/#{repo}/releases.atom",
     "https://#{bucket}.s3.amazon-aws.yml/#{channel}/latest-mac.yml",
     "https://#{bucket}.s3.amazonaws.com/latest-mac.yml",
