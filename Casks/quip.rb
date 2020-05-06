@@ -1,6 +1,6 @@
 cask 'quip' do
-  version '7.9.0'
-  sha256 '49cc729c8d24d20f8eaefed9109cde2d0b3fa69f037de47cbbf5955a2e499e5a'
+  version '7.10.3'
+  sha256 '1e7ce8846a5b061663894a2e34aa133ccec3aa7f889228fcce35073424796945'
 
   # quip-clients.com/ was verified as official when first introduced to the cask
   url "https://quip-clients.com/macosx_#{version}.dmg"
