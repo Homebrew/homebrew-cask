@@ -1,6 +1,6 @@
 cask 'codespace' do
-  version :latest
-  sha256 :no_check
+  version '1.1.2'
+  sha256 '34a25da2b6034571a93ae278e41ccb4a94e6cf1c523567a4ba61dbba1e9ff001'
 
   url 'https://codespace.app/download/latest'
   appcast 'https://codespace.app/releases'
