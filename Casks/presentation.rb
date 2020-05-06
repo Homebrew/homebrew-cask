@@ -1,6 +1,6 @@
 cask 'presentation' do
-  version '2.2.0'
-  sha256 '8c441e174e3d3920681c58b40b586c1d10af604f68659dbb264ae7c0572d90b2'
+  version '2.2.1'
+  sha256 'a782153138ac65e71c976365494beabddcccbec509df592af57a3fe8d188a7a0'
 
   url "http://iihm.imag.fr/blanch/software/osx-presentation/releases/osx-presentation-#{version}.pkg"
   appcast 'http://iihm.imag.fr/blanch/software/osx-presentation/'
