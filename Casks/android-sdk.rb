@@ -5,7 +5,7 @@ cask 'android-sdk' do
   # dl.google.com/android/repository/ was verified as official when first introduced to the cask
   url "https://dl.google.com/android/repository/sdk-tools-darwin-#{version}.zip"
   name 'android-sdk'
-  homepage 'https://developer.android.com/index.html'
+  homepage 'https://developer.android.com/studio/releases/sdk-tools'
 
   binary "#{staged_path}/tools/android"
   binary "#{staged_path}/tools/bin/archquery"
