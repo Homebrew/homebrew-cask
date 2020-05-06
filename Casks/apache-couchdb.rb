@@ -1,6 +1,6 @@
 cask 'apache-couchdb' do
-  version '3.0.0'
-  sha256 '09f85a7c93f96db1a9669dd6af9c9fcff2862223419d06b908d54b6f8feb4e68'
+  version '3.1.0'
+  sha256 'a6309b41c60db137877f67ebb4b4d1674cdba3c0abac247c6dff89cd591ca116'
 
   # couchdbneighbourhoodie.fra1.digitaloceanspaces.com/ was verified as official when first introduced to the cask
   url "https://couchdbneighbourhoodie.fra1.digitaloceanspaces.com/downloads/#{version}/mac/Apache-CouchDB.zip"
