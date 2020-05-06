@@ -4,7 +4,7 @@ cask 'freeyourmusic' do
 
   # dzqeytqqx888.cloudfront.net/ was verified as official when first introduced to the cask
   url "https://dzqeytqqx888.cloudfront.net/FreeYourMusic-#{version}.dmg"
-  appcast 'https://freeyourmusic.com/'
+  appcast 'https://stamp-live.s3.amazonaws.com/latest-mac.yml'
   name 'FreeYourMusic⁩'
   homepage 'https://freeyourmusic.com/'
 
