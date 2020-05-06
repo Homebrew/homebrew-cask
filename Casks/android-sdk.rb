@@ -31,11 +31,6 @@ cask 'android-sdk' do
 
   caveats do
     depends_on_java '8'
-    <<~EOS
-      You can control android sdk packages via the sdkmanager command.
-      You may want to add to your profile:
-
-        'export ANDROID_SDK_ROOT="#{HOMEBREW_PREFIX}/share/android-sdk"'
-    EOS
+    discontinued
   end
 end
