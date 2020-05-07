@@ -10,4 +10,14 @@ cask 'nteract' do
   auto_updates true
 
   app 'nteract.app'
+
+  uninstall delete: '/usr/local/bin/nteract'
+
+  zap trash: [
+               '~/Library/Application Support/Caches/nteract-updater',
+               '~/Library/Application Support/nteract',
+               '~/Library/Logs/nteract',
+               '~/Library/Preferences/io.nteract.nteract.plist',
+               '~/Library/Saved Application State/io.nteract.nteract.savedState',
+             ]
 end
