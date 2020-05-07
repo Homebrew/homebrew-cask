@@ -1,6 +1,6 @@
 cask 'gearboy' do
-  version '3.0.4'
-  sha256 '9dfecdd54d4809a445f796064a2c2d78bb019ac01b98f495e8cc3c3437f94c37'
+  version '3.1.0'
+  sha256 '3a2991acc45fc6234bff69493b66b5ff82b6969627b0e2fcca878de988530371'
 
   url "https://github.com/drhelius/Gearboy/releases/download/gearboy-#{version}/Gearboy-#{version}-macOS.zip"
   appcast 'https://github.com/drhelius/Gearboy/releases.atom'
