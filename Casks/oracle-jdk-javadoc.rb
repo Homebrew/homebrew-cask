@@ -9,13 +9,9 @@ cask 'oracle-jdk-javadoc' do
   name 'Oracle Java Standard Edition Development Kit Documentation'
   homepage 'https://www.oracle.com/technetwork/java/javase/documentation/index.html'
 
-  artifact 'docs', target: "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents/Home/docs"
+  artifact 'docs', target: "/Library/Java/JavaVirtualMachines/jdk-#{version.major}.jdk/Contents/Home/docs"
 
-  uninstall rmdir: [
-                     "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents/Home",
-                     "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents",
-                     "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk",
-                   ]
+  uninstall rmdir: "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk"
 
   caveats do
     license 'https://www.oracle.com/technetwork/java/javase/terms/license/index.html'
