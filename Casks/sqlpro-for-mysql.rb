@@ -4,7 +4,7 @@ cask 'sqlpro-for-mysql' do
 
   # d3fwkemdw8spx3.cloudfront.net/mysql/ was verified as official when first introduced to the cask
   url "https://d3fwkemdw8spx3.cloudfront.net/mysql/SQLProMySQL.#{version}.zip"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.mysqlui.com/download.php'
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?user_agent=Macintosh&url=https://www.mysqlui.com/download.php'
   name 'SQLPro for MySQL'
   homepage 'https://www.mysqlui.com/'
 
