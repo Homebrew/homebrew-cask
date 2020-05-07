@@ -11,9 +11,7 @@ cask 'nteract' do
 
   app 'nteract.app'
 
-  uninstall delete: [
-                      '/usr/local/bin/nteract',
-                    ]
+  uninstall delete: '/usr/local/bin/nteract'
 
   zap trash: [
                '~/Library/Application Support/Caches/nteract-updater',
