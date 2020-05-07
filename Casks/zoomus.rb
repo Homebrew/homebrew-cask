@@ -29,6 +29,7 @@ cask 'zoomus' do
             delete:     [
                           '/Applications/zoom.us.app',
                           '/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin',
+                          '/Library/Logs/DiagnosticReports/zoom.us*',
                           '~/.zoomus/ZoomOpener.app',
                           '~/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin',
                         ]
@@ -44,6 +45,7 @@ cask 'zoomus' do
                '~/Library/Cookies/us.zoom.xos.binarycookies',
                '~/Library/Logs/zoom.us',
                '~/Library/Logs/zoominstall.log',
+               '~/Library/Logs/ZoomPhone',
                '~/Library/Mobile Documents/iCloud~us~zoom~videomeetings',
                '~/Library/Preferences/ZoomChat.plist',
                '~/Library/Preferences/us.zoom.airhost.plist',
