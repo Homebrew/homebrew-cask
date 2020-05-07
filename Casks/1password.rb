@@ -20,9 +20,4 @@ cask '1password' do
                '~/Library/Logs/1Password',
                '~/Library/Preferences/com.agilebits.onepassword*',
              ]
-
-  caveats <<~EOS
-    Performing a zap on this cask removes files pertaining to both #{token}
-    and the associated 1Password Safari browser extension.
-  EOS
 end
