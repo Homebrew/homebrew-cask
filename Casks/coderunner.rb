@@ -8,4 +8,10 @@ cask 'coderunner' do
   homepage 'https://coderunnerapp.com/'
 
   app 'CodeRunner.app'
+
+  zap trash: [
+               '~/Library/Application Support/CodeRunner',
+               '~/Library/Caches/com.krill.CodeRunner',
+               '~/Library/Saved Application State/com.krill.CodeRunner.savedState',
+             ]
 end
