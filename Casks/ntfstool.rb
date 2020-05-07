@@ -4,7 +4,6 @@ cask 'ntfstool' do
 
   url "https://github.com/ntfstool/ntfstool/releases/download/#{version}/NTFSTool-#{version}.dmg"
   appcast 'https://github.com/ntfstool/ntfstool/releases.atom'
-  name 'ntfstool'
   name 'NTFSTool'
   homepage 'https://github.com/ntfstool/ntfstool'
 
