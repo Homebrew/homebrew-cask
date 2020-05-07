@@ -1,6 +1,6 @@
 cask 'clockify' do
-  version '2.4.6'
-  sha256 '2a413d6badd45b12f367d7ec3626290171df3dbc862f0fb4c50fbb3f4f60f6a2'
+  version '2.4.7'
+  sha256 'a270dbf8058c624f5e69e4918637d1d819ffb534243623939700f56794daa9d6'
 
   # clockify-resources.s3.eu-central-1.amazonaws.com/ was verified as official when first introduced to the cask
   url 'https://clockify-resources.s3.eu-central-1.amazonaws.com/downloads/ClockifyDesktop.zip'
