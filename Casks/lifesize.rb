@@ -1,6 +1,6 @@
 cask 'lifesize' do
-  version '2.210.2657'
-  sha256 'd5ff9ac654868c8bb9a090c46bfdf002b0b95fac0c35090c4f62393741dc01e4'
+  version '2.210.2665'
+  sha256 '685b7f4ddfa2799824123fe19a9f4a8c8339a79e2d4b32cf1f6768019709be7b'
 
   # download.lifesizecloud.com/ was verified as official when first introduced to the cask
   url "https://download.lifesizecloud.com/Lifesize-#{version}.dmg"
