@@ -17,13 +17,19 @@ cask 'zoomus' do
   end
 
   uninstall quit:       'us.zoom.ZoomOpener',
-            signal:     [
-                          ['KILL', 'us.zoom.xos'],
-                        ],
+            signal:     ['KILL', 'us.zoom.xos'],
             pkgutil:    'us.zoom.pkg.videmeeting',
             login_item: 'ZoomOpener',
+            script:     {
+                          executable:   '/usr/bin/defaults',
+                          args:         ['delete', 'us.zoom.xos'],
+                          must_succeed: false,
+                          sudo:         true,
+                        },
             delete:     [
                           '/Applications/zoom.us.app',
+                          '/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin',
+                          '/Library/Logs/DiagnosticReports/zoom.us*',
                           '~/.zoomus/ZoomOpener.app',
                           '~/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin',
                         ]
@@ -32,12 +38,18 @@ cask 'zoomus' do
                '~/.zoomus',
                '~/Desktop/Zoom',
                '~/Documents/Zoom',
+               '~/Library/Application Support/CloudDocs/session/containers/iCloud.us.zoom.videomeetings',
+               '~/Library/Application Support/CloudDocs/session/containers/iCloud.us.zoom.videomeetings.plist',
                '~/Library/Application Support/zoom.us',
                '~/Library/Caches/us.zoom.xos',
                '~/Library/Cookies/us.zoom.xos.binarycookies',
                '~/Library/Logs/zoom.us',
                '~/Library/Logs/zoominstall.log',
+               '~/Library/Logs/ZoomPhone',
+               '~/Library/Mobile Documents/iCloud~us~zoom~videomeetings',
                '~/Library/Preferences/ZoomChat.plist',
+               '~/Library/Preferences/us.zoom.airhost.plist',
+               '~/Library/Preferences/us.zoom.xos.Hotkey.plist',
                '~/Library/Preferences/us.zoom.xos.plist',
                '~/Library/Safari/PerSiteZoomPreferences.plist',
                '~/Library/SafariTechnologyPreview/PerSiteZoomPreferences.plist',
