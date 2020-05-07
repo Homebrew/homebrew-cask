@@ -11,7 +11,7 @@ cask 'oracle-jdk-javadoc' do
 
   artifact 'docs', target: "/Library/Java/JavaVirtualMachines/jdk-#{version.major}.jdk/Contents/Home/docs"
 
-  uninstall rmdir: "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk
+  uninstall rmdir: "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk"
 
   caveats do
     license 'https://www.oracle.com/technetwork/java/javase/terms/license/index.html'
