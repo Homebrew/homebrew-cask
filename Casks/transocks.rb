@@ -7,7 +7,7 @@ cask 'transocks' do
   name 'Transocks'
   homepage 'https://www.transocks.com/'
 
-  pkg "Transocks_Mac_#{version}.pkg"
+  pkg "Transocks_Mac_v#{version}_release.pkg"
 
   uninstall pkgutil: 'com.穿梭Transocks',
             trash:   '~/.transocks_vendor'
