@@ -1,15 +1,18 @@
 cask 'transocks' do
-  version '2.4.3'
-  sha256 'ae29de42a72e4dd41d57ade632c1e05e843ff59d8b8dedd66602882001d627a8'
+  version '3.0.3'
+  sha256 '913ef1303afc211b1e08c4ccc9d4387ca2911252bd4c434653f92a8223285436'
 
-  url "https://www.transocks.com/download/mac/Transocks_Mac_#{version}.pkg"
-  appcast 'https://www.transocks.com/js/data.js'
+  url "https://www.transocks.com/download/mac/Transocks_Mac_v#{version}_release.pkg"
+  appcast 'https://www.transocks.com/api/1/app/links'
   name 'Transocks'
   homepage 'https://www.transocks.com/'
 
-  pkg "Transocks_Mac_#{version}.pkg"
+  pkg "Transocks_Mac_v#{version}_release.pkg"
 
-  uninstall pkgutil: 'com.穿梭Transocks',
+  uninstall pkgutil: [
+                       'com.穿梭Transocks',
+                       'com.transocks.mac.signed',
+                     ],
             trash:   '~/.transocks_vendor'
 
   zap trash: [
