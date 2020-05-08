@@ -10,5 +10,7 @@ cask 'duo-connect' do
 
   depends_on macos: '>= :yosemite'
 
+  pkg "DuoConnect-#{version}.pkg"
+
   uninstall pkgutil: 'com.duo.connect.bin'
 end
