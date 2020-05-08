@@ -4,7 +4,7 @@ cask 'marginnote' do
 
   # marginstudy.com/ was verified as official when first introduced to the cask
   url "https://marginstudy.com/mac/MarginNote#{version.major}.dmg"
-  appcast 'https://dist.marginnote.cn/marginnote3.xml'
+  appcast "https://dist.marginnote.cn/marginnote#{version.major}.xml"
   name 'MarginNote'
   homepage 'https://www.marginnote.com/'
 
