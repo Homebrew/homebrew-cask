@@ -10,18 +10,19 @@ cask 'transocks' do
   pkg "Transocks_Mac_v#{version}_release.pkg"
 
   uninstall pkgutil: [
-                       'com.穿梭Transocks',
                        'com.transocks.mac.signed',
                      ],
-            trash:   '~/.transocks_vendor'
+            trash:   [
+                       '/Library/LaunchDaemons/com.transocks.mac.daemon.plist',
+                       '/Library/PrivilegedHelperTools/com.transocks.mac.daemon',
+                     ]
 
   zap trash: [
-               '/Library/Logs/DiagnosticReports/穿梭Transocks*',
+               '~/Library/Caches/com.transocks.mac.signed',
+               '~/Library/Logs/DiagnosticReports/穿梭Transocks*',
                '~/Library/Application Support/CrashReporter/穿梭Transocks*',
-               '~/Library/Logs/穿梭Transocks',
-               '~/Library/Preferences/com.github.Electron.plist',
-               '~/Library/Saved Application State/com.github.Electron.savedState',
-               '~/.transocks_store.tmp',
-               '~/.transocks.log',
+               '/Library/Application Support/CrashReporter/穿梭Transocks*',
+               '~/Library/Preferences/com.transocks.mac.signed.plist',
+               '~/Library/Saved Application State/com.transocks.mac.signed.savedState',
              ]
 end
