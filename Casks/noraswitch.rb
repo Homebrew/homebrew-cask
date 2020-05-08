@@ -11,7 +11,8 @@ cask 'noraswitch' do
 
   app 'noraSwitch.app'
 
-  uninstall quit: 'com.trrn.noraSwitch', launchctl: 'com.trrn.noraSwitch-LaunchAtLoginHelper'
+  uninstall quit:      'com.trrn.noraSwitch',
+            launchctl: 'com.trrn.noraSwitch-LaunchAtLoginHelper'
 
   zap trash: [
                '~/Library/Application Support/com.trrn.noraSwitch',
