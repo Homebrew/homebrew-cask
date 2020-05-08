@@ -1,5 +1,5 @@
 cask 'auristor-client' do
-  version '0.192'
+  version '0.194'
 
   if MacOS.version <= :el_capitan
     sha256 'e813336062adf2d40acfb1c268498e074ec5f3d514e93efe53afd1368a3e0aee'
@@ -14,7 +14,7 @@ cask 'auristor-client' do
     sha256 '38fe71d60379c09954631994f52286fab0d601b9ee561c21757a56e3c29d90f3'
     url "https://www.auristor.com/downloads/auristor/osx/macos-10.14/Auristor-client-#{version}-Mojave.dmg"
   else
-    sha256 'a399d4815bfda945ecbde924feef758ec20768fd252bf9f19fcc00f9174fcf86'
+    sha256 '734da14030894e4f866f59f6aa4f4b7094aba3779956211b8699ec16ace3eab1'
     url "https://www.auristor.com/downloads/auristor/osx/macos-10.15/Auristor-client-#{version}-Catalina.dmg"
   end
 
