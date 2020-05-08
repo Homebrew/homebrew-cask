@@ -1,6 +1,6 @@
 cask 'pycharm-with-anaconda-plugin' do
   version '2020.1.1'
-  sha256 '6a3db1131ca312a12ad0fc68369103c3e9c77e97486c63c8717b29dbdc3b06b4'
+  sha256 'aaaab145b0a84e81dd2d2bd6caee2da2315e8667fcf24faa4adefa493093620f'
 
   url "https://download.jetbrains.com/python/pycharm-professional-anaconda-#{version}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=PCC&latest=true&type=release'
