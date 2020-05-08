@@ -3,7 +3,7 @@ cask 'threads' do
   sha256 '649425f5ee960e197578f689898a4df9d96c6b6c0d8d51b9867ff8a4142c9b6a'
 
   url "https://downloads.threads.com/mac/Threads-#{version}.dmg"
-  appcast 'https://update.threads.com/update/mac/0.3.0'
+  appcast 'https://update.threads.com/update/mac/0.0.0'
   name 'Threads'
   homepage 'https://threads.com/'
 
