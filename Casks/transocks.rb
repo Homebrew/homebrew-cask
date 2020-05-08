@@ -9,7 +9,10 @@ cask 'transocks' do
 
   pkg "Transocks_Mac_v#{version}_release.pkg"
 
-  uninstall pkgutil: 'com.穿梭Transocks',
+  uninstall pkgutil: [
+                       'com.穿梭Transocks',
+                       'com.transocks.mac.signed',
+                     ],
             trash:   '~/.transocks_vendor'
 
   zap trash: [
