@@ -1,14 +1,13 @@
-cask 'glip' do
-  version '20.2.12'
-  sha256 '022f49a68b0c12e383c6466b430c58def9f6b249b4b92372d249181958dcc5ea'
+cask 'ringcentral-classic' do
+  version '20.2.20'
+  sha256 'f7da52b2c132240a93e3fbff0bd92a0276288703ea2e2a7b9d54474be3f489cc'
 
-  # downloads.ringcentral.com/glip/rc/ was verified as official when first introduced to the cask
-  url "https://downloads.ringcentral.com/glip/rc/#{version}/mac/RingCentral-#{version}.dmg"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://downloads.ringcentral.com/glip/rc/GlipForMac'
-  name 'Glip'
-  homepage 'https://glip.com/'
+  url "https://downloads.ringcentral.com/glip/rc/#{version}/mac/RingCentral%20Classic-#{version}.dmg"
+  name 'RingCentral Classic'
+  homepage 'https://www.ringcentral.com/apps/rc-classic'
 
-  app 'Glip.app'
+  # Renamed for consistency: app name is different in the Finder and in a shell.
+  app 'Glip.app', target: 'RingCentral Classic.app'
 
   uninstall signal: [
                       ['TERM', 'com.Glip.Glip.helper'],
