@@ -1,6 +1,6 @@
 cask 'spires' do
-  version '1.8.7'
-  sha256 '04f8ae57bd5c47473aa46fb5ed80e85250baba0736ebbcd814db4ee3ad05c6b6'
+  version '1.8.8'
+  sha256 '24677b889acfdb40af786cf2abf58369dcb60474491105a44d0cd9aa5f774f4e'
 
   url "https://member.ipmu.jp/yuji.tachikawa/spires/zips/spires_#{version}.zip"
   appcast 'https://member.ipmu.jp/yuji.tachikawa/spires/spires-Update.xml'
