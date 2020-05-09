@@ -9,6 +9,8 @@ cask 'middle' do
 
   app 'Middle.app'
 
+  auto_updates true
+
   uninstall quit: 'com.knollsoft.Middle'
 
   zap trash: [
