@@ -1,4 +1,4 @@
-cask 'iriun' do
+cask 'iriunwebcam' do
   version '2.3.2'
   sha256 '03b9f69dfc1a09ee7a1be88c8f4041507491df8c2f52bea77506e7ff8e62c63e'
 
