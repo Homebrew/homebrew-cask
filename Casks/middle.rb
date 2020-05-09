@@ -7,9 +7,9 @@ cask 'middle' do
   name 'Middle'
   homepage 'https://middleclick.app/'
 
-  app 'Middle.app'
-
   auto_updates true
+
+  app 'Middle.app'
 
   uninstall quit: 'com.knollsoft.Middle'
 
