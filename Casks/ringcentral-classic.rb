@@ -6,7 +6,8 @@ cask 'ringcentral-classic' do
   name 'RingCentral Classic'
   homepage 'https://www.ringcentral.com/apps/rc-classic'
 
-  app 'RingCentral Classic.app'
+  # Renamed for consistency: app name is different in the Finder and in a shell.
+  app 'Glip.app', target: 'RingCentral Classic.app'
 
   uninstall signal: [
                       ['TERM', 'com.Glip.Glip.helper'],
