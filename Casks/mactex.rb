@@ -75,4 +75,7 @@ cask 'mactex' do
                '/usr/local/texlive',
                '~/Library/texlive',
              ]
+  caveats do
+    'You must restart your terminal window for the installation of MacTex CLI tools to take effect.'
+  end
 end
