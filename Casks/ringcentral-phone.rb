@@ -7,5 +7,6 @@ cask 'ringcentral-phone' do
   name 'RingCentral Phone'
   homepage 'https://www.ringcentral.com/apps/rc-phone'
 
-  app 'RingCentral Phone.app'
+  # Renamed for consistency: app name is different in the Finder and in a shell.
+  app 'RingCentral for Mac.app', target: 'RingCentral Phone.app'
 end
