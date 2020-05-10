@@ -77,6 +77,7 @@ cask 'mactex' do
              ]
 
   caveats do
-    'You must restart your terminal window for the installation of MacTex CLI tools to take effect.'
+    'You must restart your terminal window for the installation of MacTex CLI tools to take effect.  Bash or zsh users can run the command:
+      eval "$(/usr/libexec/path_helper)"'
   end
 end
