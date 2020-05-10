@@ -20,7 +20,7 @@ cask 'onyx' do
     version '3.6.8'
     sha256 'd27529bc497b03c2486fcb8f0d3bfbb4e4a30d4abe25eddcd059ab47aaea6672'
   else
-    version '3.8.0'
+    version '3.8.1'
     sha256 '58a5816448b7289ee2745a1a7a8d8a90aaaf5be155209eeba214270127def834'
   end
 
