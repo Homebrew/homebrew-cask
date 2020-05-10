@@ -1,5 +1,5 @@
 cask 'sofa-server' do
-  version '1.3.4'
+  version '2.0'
   sha256 '14860aa797c3ef39c9c81d829e77b63f36a7dc4c1190b90542a7e614a37e7ed5'
 
   url 'https://flavio.tordini.org/files/sofa/sofa-server.dmg'
