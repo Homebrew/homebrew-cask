@@ -4,7 +4,8 @@ cask 'teamdrive' do
 
   # teamdrive.net/ was verified as official when first introduced to the cask
   url "https://download.teamdrive.net/#{version.major_minor}.#{version.split('.').last}/TMDR/mac-10.14.6/Install-TeamDrive-#{version}_TMDR.dmg"
-  appcast 'https://teamdrive.com/en/downloads/'
+  appcast 'https://teamdrive.com/en/downloads/',
+          configuration: version.major_minor_patch
   name 'TeamDrive'
   homepage 'https://www.teamdrive.com/'
 
