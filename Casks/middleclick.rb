@@ -13,4 +13,8 @@ cask 'middleclick' do
             quit:       'com.rouge41.middleClick'
 
   zap trash: '~/Library/Preferences/com.rouge41.middleClick.plist'
+
+  caaveats do
+    discontinued
+  end
 end
