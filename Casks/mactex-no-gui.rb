@@ -60,4 +60,11 @@ cask 'mactex-no-gui' do
                '/usr/local/texlive',
                '~/Library/texlive',
              ]
+
+  caveats <<~EOS
+    You must restart your terminal window for the installation of MacTex CLI tools to take effect.
+    Alternatively, Bash and Zsh users can run the command:
+
+      eval "$(/usr/libexec/path_helper)"
+  EOS
 end
