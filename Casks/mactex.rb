@@ -76,8 +76,10 @@ cask 'mactex' do
                '~/Library/texlive',
              ]
 
-  caveats do
-    'You must restart your terminal window for the installation of MacTex CLI tools to take effect.  Bash or zsh users can run the command:
-      eval "$(/usr/libexec/path_helper)"'
-  end
+  caveats <<~EOS
+    You must restart your terminal window for the installation of MacTex CLI tools to take effect.
+    Alternatively, Bash and Zsh users can run the command:
+
+      eval "$(/usr/libexec/path_helper)"
+  EOS
 end
