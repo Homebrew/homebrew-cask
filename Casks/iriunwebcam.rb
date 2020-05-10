@@ -4,6 +4,7 @@ cask 'iriunwebcam' do
 
   # 1758658189.rsc.cdn77.org was verified as official when first introduced to the cask
   url "https://1758658189.rsc.cdn77.org/IriunWebcam-#{version}.pkg"
+  appcast 'https://iriun.com/'
   name 'Iriun'
   homepage 'https://iriun.com/'
 
