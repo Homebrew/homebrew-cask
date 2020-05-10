@@ -11,4 +11,10 @@ cask 'notable' do
   auto_updates true
 
   app 'Notable.app'
+
+  zap trash: [
+               '~/Library/Saved Application State/com.fabiospampinato.notable.savedState',
+               '~/Library/Preferences/com.fabiospampinato.notable.plist',
+               '~/Library/Application Support/Notable',
+             ]
 end
