@@ -10,6 +10,17 @@ cask 'pacifist' do
   auto_updates true
 
   app 'Pacifist.app'
+  qlplugin 'Pacifist.qlgenerator'
+
+  preflight do
+    system_command '/usr/bin/tar', args: [
+                                           '--extract',
+                                           '--file',
+                                           "#{staged_path}/Pacifist.app/Contents/Resources/QLPlugin.tbz",
+                                           '--directory',
+                                           staged_path,
+                                         ]
+  end
 
   zap trash: [
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.charlessoft.pacifist.sfl2',
