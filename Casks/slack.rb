@@ -9,6 +9,7 @@ cask 'slack' do
   homepage 'https://slack.com/'
 
   auto_updates true
+  conflicts_with cask: 'slack-beta'
 
   app 'Slack.app'
 
