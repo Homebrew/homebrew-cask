@@ -8,4 +8,6 @@ cask 'epichrome' do
   homepage 'https://github.com/dmarmor/epichrome'
 
   pkg "epichrome-#{version}.pkg"
+
+  uninstall pkgutil: 'org.epichrome.Epichrome'
 end
