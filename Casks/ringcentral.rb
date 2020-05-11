@@ -5,12 +5,13 @@ cask 'ringcentral' do
   url 'https://app.ringcentral.com/downloads/RingCentral.pkg'
   appcast 'https://app.ringcentral.com/download/latest-mac.yml'
   name 'RingCentral'
-  homepage 'https://www.ringcentral.com/apps/rc-app'
+  homepage 'https://www.ringcentral.com/rcapp.html'
 
   pkg 'RingCentral.pkg'
 
-  uninstall quit:   'RingCentral',
-            delete: '/Applications/RingCentral.app'
+  uninstall delete:  '/Applications/RingCentral.app',
+            quit:    'RingCentral',
+            pkgutil: 'com.ringcentral.glip'
 
   zap trash: [
                '~/Library/Application Support/RingCentral',
