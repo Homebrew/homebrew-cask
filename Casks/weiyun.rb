@@ -1,6 +1,6 @@
 cask 'weiyun' do
-  version '3.0.4.406_2dc389'
-  sha256 'be41ee57871992cb4ecfd477ecbb2bb6c264512c531d92c7f4ddf356b48bd64e'
+  version '3.0.5.408_7dd9d0'
+  sha256 '718bf7806d76645a2d7379fde23a668096a87ad7cd25649a1ebaff82e84a67be'
 
   # dldir1.qq.com/weiyun/ was verified as official when first introduced to the cask
   url "https://dldir1.qq.com/weiyun/Weiyun_Mac_#{version}.dmg"
