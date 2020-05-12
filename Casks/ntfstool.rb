@@ -1,6 +1,6 @@
 cask 'ntfstool' do
-  version '2.3.0'
-  sha256 'dcab362ff0e3b3f0bc0fae6429246d178812c0cdd554a0c931502c89dda8e8c8'
+  version '2.3.2'
+  sha256 '4c8179aebdd171bf1b6ef2d58a4cf89c5f92cab17be68abc4ddfa1ee3b004112'
 
   url "https://github.com/ntfstool/ntfstool/releases/download/#{version}/NTFSTool-#{version}.dmg"
   appcast 'https://github.com/ntfstool/ntfstool/releases.atom'
