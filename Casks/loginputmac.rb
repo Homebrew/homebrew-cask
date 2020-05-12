@@ -1,5 +1,5 @@
 cask 'loginputmac' do
-  version '2.3.5_1'
+  version '2.3.5'
   sha256 '91c5e011792f3ab2ee7f3e69ff7ea3a45c156f02b574cba2c57dbcfec82dd4a6'
 
   # loginput-mac2.content-delivery.top/ was verified as official when first introduced to the cask
