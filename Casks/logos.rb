@@ -1,6 +1,6 @@
 cask 'logos' do
-  version '8.12.0.0017'
-  sha256 '3900d550dc7dab9232d8f51f15b4de838b3fb4039da23eb7a84ec58f1f7696db'
+  version '8.13.0.0008'
+  sha256 '42e00d4d0c7e579d3673196ccabc8ce3b758eb70da4028bc5e1f7ba03fa2879c'
 
   # downloads.logoscdn.com/ was verified as official when first introduced to the cask
   url "https://downloads.logoscdn.com/LBS8/Installer/#{version}/LogosMac.dmg"
