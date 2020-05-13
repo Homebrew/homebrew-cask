@@ -3,7 +3,7 @@ cask 'publish-or-perish' do
   sha256 'ac916558cda184fe5dd3c65236b154db8c4f0962d90b9b4c7b412fa71fb3e47e'
 
   url 'https://harzing.com/download/PoP7Mac.pkg'
-  appcast 'https://harzing.com/resources/publish-or-perish/os-x'
+  appcast 'https://harzing.com/download/pop7mac.txt'
   name 'Harzing Publish or Perish'
   homepage 'https://harzing.com/resources/publish-or-perish'
 
