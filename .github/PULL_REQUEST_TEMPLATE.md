@@ -5,7 +5,7 @@ After making all changes to a cask, verify:
 - [ ] `brew cask audit --download {{cask_file}}` is error-free.
 - [ ] `brew cask style --fix {{cask_file}}` reports no offenses.
 - [ ] There are no [open pull requests](https://github.com/Homebrew/homebrew-cask/pulls) for the same update.
-- [ ] The submission is for [a stable version](https://github.com/Homebrew/homebrew-cask/blob/master/doc/development/adding_a_cask.md#finding-a-home-for-your-cask) or [documented exception](https://github.com/Homebrew/homebrew-cask/blob/master/doc/development/adding_a_cask.md#but-there-is-no-stable-version).
+- [ ] The submission is for [a stable version](https://github.com/Homebrew/homebrew-cask/blob/master/doc/development/adding_a_cask.md#stable-versions) or [documented exception](https://github.com/Homebrew/homebrew-cask/blob/master/doc/development/adding_a_cask.md#but-there-is-no-stable-version).
 
 Additionally, **if adding a new cask**:
 
