@@ -10,7 +10,7 @@ cask 'macsvg' do
 
   depends_on macos: '>= :mojave'
 
-  app "macSVG-v#{version}/macSVG.app"
+  app 'macSVG.app'
 
   zap trash: [
                '~/Library/Application Scripts/com.arkphone.macsvg',
