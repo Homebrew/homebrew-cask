@@ -1,5 +1,5 @@
 cask 'publish-or-perish' do
-  version '7.21.2782'
+  version '7.19.2782'
   sha256 'ac916558cda184fe5dd3c65236b154db8c4f0962d90b9b4c7b412fa71fb3e47e'
 
   url 'https://harzing.com/download/PoP7Mac.pkg'
