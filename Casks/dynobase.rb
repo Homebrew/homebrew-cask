@@ -1,6 +1,6 @@
 cask 'dynobase' do
-  version '0.6.1'
-  sha256 '2e469798300b9090e809d82bd2948d1b23fd42d233586ea2dbdbc2456be1c9ec'
+  version '0.7.0'
+  sha256 '08501be8f7b6d3b805c51e3012b5fbd751daedcbc898fbdd81ddd5d11afff362'
 
   # hazel.rwilinski.now.sh was verified as official when first introduced to the cask
   url 'https://hazel.rwilinski.now.sh/download/darwin'
