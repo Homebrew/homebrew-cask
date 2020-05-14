@@ -12,7 +12,10 @@ cask 'nomachine-enterprise-client' do
   # To ensure it ran, verify if /Library/Application Support/NoMachine/nxuninstall.sh no longer exists
   uninstall delete:    '/Applications/NoMachine.app',
             pkgutil:   'com.nomachine.nomachine.NoMachine*.pkg',
-            launchctl: 'com.nomachine.uninstall'
+            launchctl: [
+                         'com.nomachine.uninstall',
+                         'com.nomachine.nxlaunchconf',
+                       ]
 
   zap trash: '~/Library/Preferences/com.nomachine.nxdock.plist'
 end
