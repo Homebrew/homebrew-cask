@@ -16,6 +16,4 @@ cask 'nomachine-enterprise-client' do
                          'com.nomachine.uninstall',
                          'com.nomachine.nxlaunchconf',
                        ]
-
-  zap trash: '~/Library/Preferences/com.nomachine.nxdock.plist'
 end
