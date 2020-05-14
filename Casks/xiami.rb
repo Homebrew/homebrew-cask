@@ -1,6 +1,6 @@
 cask 'xiami' do
-  version '7.5.6,dd3237c0a4dd99385ddbc853f23c5fd8'
-  sha256 '6a5576f2c53d42a1c61f1ddc9503486d039aa6ed0388246ea53aec9b32a8338c'
+  version '7.5.7,725505ae6e1c3d671abfb85dcdde5c4c'
+  sha256 'e50858a5e5a8c0c02818e7b474b020b95fb05b696c6e60dcad6b1cc40d1488e1'
 
   url "https://files.xiami.com/webh5/files/xiamiMac/#{version.after_comma}.xiamimac#{version.before_comma.dots_to_hyphens}.zip"
   appcast 'https://g.alicdn.com/music/desktop-app/XiamiMac.xml'

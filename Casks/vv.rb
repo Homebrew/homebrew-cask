@@ -1,6 +1,6 @@
 cask 'vv' do
-  version '2.2.0'
-  sha256 'c8ad6f262aff9a72f9515a7f6ce6ec9eb5c7e46710158efe4953b30340bdc65f'
+  version '2.2.1'
+  sha256 'be2c837b078ac2199f1c2a4862a94ed4f71aacdf0012ee784907a650abe88972'
 
   url "https://github.com/vv-vim/vv/releases/download/v#{version}/VV-#{version}.dmg"
   appcast 'https://github.com/vv-vim/vv/releases.atom'

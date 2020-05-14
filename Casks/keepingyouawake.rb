@@ -12,6 +12,9 @@ cask 'keepingyouawake' do
 
   app 'KeepingYouAwake.app'
 
+  uninstall launchctl: 'info.marcel-dierkes.KeepingYouAwake.Launcher',
+            quit:      'info.marcel-dierkes.KeepingYouAwake'
+
   zap trash: [
                '~/Library/Application Scripts/info.marcel-dierkes.KeepingYouAwake',
                '~/Library/Application Scripts/info.marcel-dierkes.KeepingYouAwake.Launcher',
@@ -20,6 +23,7 @@ cask 'keepingyouawake' do
                '~/Library/Caches/info.marcel-dierkes.KeepingYouAwake',
                '~/Library/Containers/info.marcel-dierkes.KeepingYouAwake',
                '~/Library/Containers/info.marcel-dierkes.KeepingYouAwake.Launcher',
+               '~/Library/Cookies/info.marcel-dierkes.KeepingYouAwake.binarycookies',
                '~/Library/Preferences/info.marcel-dierkes.KeepingYouAwake.plist',
                '~/Library/Saved Application State/info.marcel-dierkes.KeepingYouAwake.savedState',
              ]

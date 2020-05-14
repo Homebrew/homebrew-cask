@@ -1,6 +1,6 @@
 cask 'camunda-modeler' do
-  version '3.7.1'
-  sha256 '4e9fcd1db124954133271ddbe5d6e3fcfbcfdb496d781e52d9280fb9faefae75'
+  version '3.7.3'
+  sha256 'c0f6648e71d052a35aa95dca8acdc77efa75297c2f02739a2492c62f3e390c7c'
 
   url "https://camunda.org/release/camunda-modeler/#{version}/camunda-modeler-#{version}-mac.zip"
   appcast 'https://camunda.com/download/modeler/'

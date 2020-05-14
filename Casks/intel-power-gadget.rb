@@ -14,5 +14,10 @@ cask 'intel-power-gadget' do
   pkg 'Install Intel Power Gadget.pkg'
 
   uninstall pkgutil: 'com.intel.pkg.PowerGadget.*',
-            kext:    'EnergyDriver'
+            kext:    'com.intel.driver.EnergyDriver'
+
+  zap trash: [
+               '~/Library/Caches/com.intel.PowerGadget',
+               '~/Library/Preferences/com.intel.PowerGadget.plist',
+             ]
 end

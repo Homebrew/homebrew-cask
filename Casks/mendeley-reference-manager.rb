@@ -1,6 +1,6 @@
 cask 'mendeley-reference-manager' do
-  version '2.22.0'
-  sha256 '3988cb36b703b3f91ed59df6719fbb026e327db5fd31d53c51c27096b912e636'
+  version '2.25.0'
+  sha256 '25bd3feb8005383f16f379b33532f7d08190a2cdb93bfc74798f22e50da72c23'
 
   url "https://static.mendeley.com/bin/desktop/mendeley-reference-manager-#{version}.dmg"
   appcast 'https://static.mendeley.com/bin/desktop/latest-mac.yml'

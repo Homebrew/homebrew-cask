@@ -1,9 +1,8 @@
 cask 'sia-ui' do
-  version '1.4.4'
-  sha256 'd525497ea96e16c032b567cbbd5ed61cd14e20d54942f0759364901f8afb4bd1'
+  version '1.4.7'
+  sha256 '041a6a9bba98db7ecde27a2ce46ddf1f129dd8dba72bc59b732b096e13334330'
 
   url "https://sia.tech/releases/Sia-UI-v#{version}.dmg"
-  appcast 'https://sia.tech/1.f737981720cd8bbc13de.js'
   name 'Sia-UI'
   homepage 'https://sia.tech/'
 

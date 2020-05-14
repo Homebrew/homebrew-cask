@@ -1,8 +1,8 @@
 cask 'ridibooks' do
-  version '0.7.10'
-  sha256 'a704bffbacb5bff9e4beee8c0db255937bbfbda33f2ee3b52cc1f0536b9279ee'
+  version '0.7.11'
+  sha256 '54f3aaf8d235ce0f40f0849ce764529e477bd8491ae168ab4a8c0ed9dd0834ba'
 
-  # viewer-ota.ridicdn.net/pc_electron was verified as official when first introduced to the cask
+  # viewer-ota.ridicdn.net/pc_electron/ was verified as official when first introduced to the cask
   url "https://viewer-ota.ridicdn.net/pc_electron/Ridibooks-#{version}.dmg"
   appcast 'https://s3-ap-northeast-2.amazonaws.com/viewer-ota.ridicdn.net/pc_electron/latest-mac.yml'
   name 'Ridibooks'

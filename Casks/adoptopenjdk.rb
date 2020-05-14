@@ -1,8 +1,8 @@
 cask 'adoptopenjdk' do
-  version '14,36'
-  sha256 'c55f1ae6c0c9e48ef4e9a4dc9c6d29a668bb06ae43d168c05c17028c56139b23'
+  version '14.0.1,7'
+  sha256 'e85e446fac091f74e9e962bee5efb77c347fca3ad138a5db058cc62cb4d86e2a'
 
-  # github.com/AdoptOpenJDK was verified as official when first introduced to the cask
+  # github.com/AdoptOpenJDK/ was verified as official when first introduced to the cask
   url "https://github.com/AdoptOpenJDK/openjdk#{version.major}-binaries/releases/download/jdk-#{version.before_comma}%2B#{version.after_comma}/OpenJDK#{version.major}U-jdk_x64_mac_hotspot_#{version.before_comma}_#{version.after_comma}.pkg"
   appcast "https://github.com/AdoptOpenJDK/openjdk#{version.major}-binaries/releases/latest"
   name 'AdoptOpenJDK Java Development Kit'

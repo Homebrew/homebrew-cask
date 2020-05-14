@@ -1,8 +1,8 @@
 cask 'texworks' do
-  version '0.6.4,202003151024:982c11c'
-  sha256 '081cf97fc463203d50b3b8032529853cfb4088d55d87121dde98a4498c62efd9'
+  version '0.6.5,202003251937:649699a'
+  sha256 'c171ad80782485f0bdd15a611fc234a94d38144fb2ee183ec50377338df5d690'
 
-  # github.com/TeXworks/texworks was verified as official when first introduced to the cask
+  # github.com/TeXworks/texworks/ was verified as official when first introduced to the cask
   url "https://github.com/TeXworks/texworks/releases/download/release-#{version.before_comma}/TeXworks-osx-#{version.before_comma}-#{version.after_comma.before_colon}-git_#{version.after_colon}.dmg"
   appcast 'https://github.com/TeXworks/texworks/releases.atom'
   name 'TeXworks'

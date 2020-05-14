@@ -1,6 +1,6 @@
 cask 'subethaedit' do
-  version '5.1.2'
-  sha256 'bff2e4fcd47d1a2d6f5b9eefed0109136d07977ad31556b7c121e4c38b08a859'
+  version '5.1.3'
+  sha256 '2d3a943bf4ac114852929334cbc8789d9891de54cf1b3ff0eff5ba3dafd4c7fc'
 
   url "https://subethaedit.net/Releases/SubEthaEdit-#{version}.zip"
   appcast 'https://subethaedit.net/appcast.xml'

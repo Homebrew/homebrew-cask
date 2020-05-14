@@ -1,8 +1,8 @@
 cask 'downie' do
-  version '4.0.5,4082'
-  sha256 'f031d344ccf0aae9d50db13b7e0f25585e0f66247ac9162ad7f17d9193d31b62'
+  version '4.0.10,4101'
+  sha256 '91140a397ba1edf8da380e97c68de7e965cd949593e907fd2135dde9ac2b0bdf'
 
-  # charliemonroesoftware.com was verified as official when first introduced to the cask
+  # charliemonroesoftware.com/ was verified as official when first introduced to the cask
   url "https://charliemonroesoftware.com/trial/downie/v#{version.major}/Downie_#{version.major}_#{version.after_comma}.dmg"
   appcast "https://charliemonroesoftware.com/trial/downie/v#{version.major}/updates.xml"
   name 'Downie'

@@ -1,8 +1,8 @@
 cask 'proclaim' do
-  version '2.12.0.0027'
-  sha256 'd17cbc15512e8e9f2331cc07f0bc6caa0ed4c0e1dcc6291e815c772ce590b54c'
+  version '2.12.0.0040'
+  sha256 '9896ab9a6498b9d20cd56f2e11bbc9f44cc41dc021ecf356354d28d83cf9472a'
 
-  # logoscdn.com/Proclaim was verified as official when first introduced to the cask
+  # logoscdn.com/Proclaim/ was verified as official when first introduced to the cask
   url "https://downloads.logoscdn.com/Proclaim/Installer/#{version}/Proclaim.dmg"
   appcast 'http://downloads.proclaimonline.com/mac/appcast.xml'
   name 'Faithlife Proclaim'

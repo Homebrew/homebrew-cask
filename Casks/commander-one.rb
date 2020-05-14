@@ -1,8 +1,8 @@
 cask 'commander-one' do
-  version '2.4.1'
-  sha256 '0d8007f3afa10dfacb26c2fe177c38ae6076be5394baab555e705ed0f80c496b'
+  version '2.4.2'
+  sha256 '969ff4d2c1679f6c18f7e38848400b27f165c4cd7d6ff0c5a2b40378b53a7e7e'
 
-  # cdn.electronic.us was verified as official when first introduced to the cask
+  # cdn.electronic.us/ was verified as official when first introduced to the cask
   url 'https://cdn.electronic.us/products/commander/mac/download/commander.dmg'
   appcast 'https://cdn.electronic.us/products/commander/mac/update/settings.xml'
   name 'Commander One'

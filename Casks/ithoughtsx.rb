@@ -1,8 +1,8 @@
 cask 'ithoughtsx' do
-  version '5.19'
-  sha256 'f0c9660c8f622e77afe529b92151449e2ec14d5cd9b26488f4de7a906c56274c'
+  version '5.20'
+  sha256 '394887e5a918f3661509c2501c3fb35ec441c81224ef500bef7ab4e95c286135'
 
-  # ithoughtsx.s3.amazonaws.com was verified as official when first introduced to the cask
+  # ithoughtsx.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://ithoughtsx.s3.amazonaws.com/iThoughtsX_#{version.dots_to_underscores}.zip"
   appcast 'https://ithoughtsx.s3.amazonaws.com/ithoughtsx.xml'
   name 'iThoughtsX'

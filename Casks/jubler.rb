@@ -1,9 +1,9 @@
 cask 'jubler' do
-  version '7.0.0-alpha1'
-  sha256 '27247aca18009d1f42531b6059d2a7418795b1fdda515a560562cfa08a670379'
+  version '7.0.0'
+  sha256 '9d535ff444638804719d04010018c2b4ac620a7004866e5a9b7c3e5136fb798a'
 
-  # github.com/teras/Jubler was verified as official when first introduced to the cask
-  url "https://github.com/teras/Jubler/releases/download/v#{version}/Jubler-#{version}.1.dmg"
+  # github.com/teras/Jubler/ was verified as official when first introduced to the cask
+  url "https://github.com/teras/Jubler/releases/download/v#{version}/Jubler-#{version}.dmg"
   appcast 'https://github.com/teras/Jubler/releases.atom'
   name 'Jubler'
   homepage 'https://www.jubler.org/'

@@ -9,7 +9,21 @@ cask 'charles' do
 
   app 'Charles.app'
 
-  uninstall quit: 'com.xk72.Charles'
+  uninstall_postflight do
+    stdout, * = system_command '/usr/bin/security',
+                               args: ['find-certificate', '-a', '-c', 'Charles', '-Z'],
+                               sudo: true
+    hashes = stdout.lines.grep(%r{^SHA-256 hash:}) { |l| l.split(':').second.strip }
+    hashes.each do |h|
+      system_command '/usr/bin/security',
+                     args: ['delete-certificate', '-Z', h],
+                     sudo: true
+    end
+  end
+
+  uninstall quit:      'com.xk72.Charles',
+            launchctl: 'com.xk72.Charles.ProxyHelper',
+            delete:    '/Library/PrivilegedHelperTools/com.xk72.Charles.ProxyHelper'
 
   zap trash: [
                '~/Library/Application Support/Charles',

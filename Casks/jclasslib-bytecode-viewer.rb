@@ -1,6 +1,6 @@
 cask 'jclasslib-bytecode-viewer' do
-  version '5.5'
-  sha256 '3c8e04e4560298fa276f7cfd1c4733d3dd049ab06c69e42e1f7b300ea76ccda4'
+  version '5.5.1'
+  sha256 'dd158ca2c71dacaeec163851c5b6473d7213dc2bb3d1b2e0437f9a4e73bd1bfe'
 
   url "https://github.com/ingokegel/jclasslib/releases/download/#{version}/jclasslib_macos_#{version.dots_to_underscores}.dmg"
   appcast 'https://github.com/ingokegel/jclasslib/releases.atom'

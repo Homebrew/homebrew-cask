@@ -1,6 +1,6 @@
 cask 'boinc' do
-  version '7.14.2'
-  sha256 '0160f9e7f89a94a7b201f9cea2626ff0c6ae96e8e84e46927d1e605b0e25a7ff'
+  version '7.16.6'
+  sha256 '35e853ae2f637a109112a05256d038d543374da8a9b77997f37f2fb2f9cca277'
 
   url "https://boinc.berkeley.edu/dl/boinc_#{version}_macOSX_x86_64.zip"
   appcast 'https://boinc.berkeley.edu/download.php'
@@ -10,7 +10,8 @@ cask 'boinc' do
 
   pkg "boinc_#{version}_macOSX_x86_64/BOINC Installer.app/Contents/Resources/BOINC.pkg"
 
-  uninstall pkgutil: 'edu.berkeley.boinc'
+  uninstall pkgutil:   'edu.berkeley.boinc',
+            launchctl: 'edu.berkeley.boinc-sshelper'
 
   zap trash: [
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/edu.berkeley.boinc.sfl*',
