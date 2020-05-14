@@ -2,10 +2,13 @@ cask 'baiduhi' do
   version :latest
   sha256 :no_check
 
-  url 'https://im.baidu.com/download/machi_setup.dmg'
+  # hi-static.cdn.bcebos.com/ was verified as official when first introduced to the cask
+  url 'https://hi-static.cdn.bcebos.com/hi-official/infoflow_setup.dmg'
   name 'Baidu Hi'
   name '百度 Hi'
-  homepage 'https://hi.baidu.com/'
+  name '如流'
+  name 'infoflow'
+  homepage 'https://infoflow.baidu.com/'
 
-  app '百度Hi.app'
+  app '如流.app'
 end
