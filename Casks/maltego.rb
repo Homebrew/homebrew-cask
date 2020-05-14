@@ -13,6 +13,6 @@ cask 'maltego' do
   zap trash: '~/Library/Application Support/maltego'
 
   caveats do
-    depends_on_java '8'
+    depends_on_java '11'
   end
 end
