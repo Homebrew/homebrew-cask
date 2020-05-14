@@ -1,10 +1,11 @@
 cask 'mactex' do
-  version '2019.0508'
-  sha256 'ce6fa6d3ec5a4058d5889cfc36bf634fd8a5aefb6601d10c853e5f5d76455f4a'
+  version '2020.0407'
+  sha256 'a33af89de36c7c84a76050c9704d50d23892e9c2070f04f6a53e1c6d5a332f67'
 
-  # mirror.ctan.org/systems/mac/mactex was verified as official when first introduced to the cask
+  # mirror.ctan.org/systems/mac/mactex/ was verified as official when first introduced to the cask
   url "http://mirror.ctan.org/systems/mac/mactex/mactex-#{version.no_dots}.pkg"
-  appcast 'https://www.tug.org/mactex/downloading.html'
+  appcast 'https://www.tug.org/mactex/downloading.html',
+          configuration: version.major
   name 'MacTeX'
   homepage 'https://www.tug.org/mactex/'
 
@@ -13,27 +14,33 @@ cask 'mactex' do
                          'mactex-no-gui',
                        ]
   depends_on formula: 'ghostscript'
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :high_sierra'
 
   pkg "mactex-#{version.no_dots}.pkg",
       choices: [
                  {
-                   # TeXLive
-                   'choiceIdentifier' => 'choice1',
-                   'choiceAttribute'  => 'selected',
-                   'attributeSetting' => 1,
-                 },
-                 {
-                   # GUI-Applications
-                   'choiceIdentifier' => 'choice2',
-                   'choiceAttribute'  => 'selected',
-                   'attributeSetting' => 1,
-                 },
-                 {
                    # Ghostscript
-                   'choiceIdentifier' => 'choice3',
+                   'choiceIdentifier' => 'org.tug.mactex.ghostscript9.50',
                    'choiceAttribute'  => 'selected',
                    'attributeSetting' => 0,
+                 },
+                 {
+                   # Ghostscript Dynamic Library
+                   'choiceIdentifier' => 'org.tug.mactex.ghostscript9.50libgs',
+                   'choiceAttribute'  => 'selected',
+                   'attributeSetting' => 0,
+                 },
+                 {
+                   # GUI Applications
+                   'choiceIdentifier' => "org.tug.mactex.gui#{version.major}",
+                   'choiceAttribute'  => 'selected',
+                   'attributeSetting' => 1,
+                 },
+                 {
+                   # TeXLive
+                   'choiceIdentifier' => "org.tug.mactex.texlive#{version.major}",
+                   'choiceAttribute'  => 'selected',
+                   'attributeSetting' => 1,
                  },
                ]
 
@@ -59,22 +66,20 @@ cask 'mactex' do
                '~/Library/Caches/TeXShop',
                '~/Library/Preferences/TeXShop.plist',
                '~/Library/TeXShop',
-               # BibDesk:
-               '~/Library/Application Support/BibDesk',
-               '~/Library/Caches/com.apple.helpd/Generated/edu.ucsd.cs.mmccrack.bibdesk.help*',
-               '~/Library/Caches/edu.ucsd.cs.mmccrack.bibdesk',
-               '~/Library/Cookies/edu.ucsd.cs.mmccrack.bibdesk.binarycookies',
-               '~/Library/Preferences/edu.ucsd.cs.mmccrack.bibdesk.plist',
                # LaTeXiT:
                '~/Library/Caches/fr.chachatelier.pierre.LaTeXiT',
                '~/Library/Cookies/fr.chachatelier.pierre.LaTeXiT.binarycookies',
                '~/Library/Preferences/fr.chachatelier.pierre.LaTeXiT.plist',
-               # TeX Live Utility:
-               '~/Library/Application Support/TeX Live Utility',
-               '~/Library/Caches/com.apple.helpd/Generated/TeX Live Utility Help*',
              ],
       rmdir: [
                '/usr/local/texlive',
                '~/Library/texlive',
              ]
+
+  caveats <<~EOS
+    You must restart your terminal window for the installation of MacTex CLI tools to take effect.
+    Alternatively, Bash and Zsh users can run the command:
+
+      eval "$(/usr/libexec/path_helper)"
+  EOS
 end

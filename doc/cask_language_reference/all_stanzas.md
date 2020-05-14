@@ -29,6 +29,7 @@ Each Cask must declare one or more *artifacts* (i.e. something to install).
 | `manpage`          | yes                           | relative path to a Man Page that should be linked into the respective man page folder on installation, e.g. `/usr/local/share/man/man3` for `my_app.3`
 | `prefpane`         | yes                           | relative path to a Preference Pane that should be moved into the `~/Library/PreferencePanes` folder on installation
 | `qlplugin`         | yes                           | relative path to a QuickLook Plugin that should be moved into the `~/Library/QuickLook` folder on installation
+| `mdimporter`       | yes                           | relative path to a Spotlight metadata importer that should be moved into the `~/Library/Spotlight` folder on installation
 | `screen_saver`     | yes                           | relative path to a Screen Saver that should be moved into the `~/Library/Screen Savers` folder on installation
 | `service`          | yes                           | relative path to a Service that should be moved into the `~/Library/Services` folder on installation
 | `audio_unit_plugin`| yes                           | relative path to an Audio Unit plugin that should be moved into the `~/Library/Audio/Components` folder on installation

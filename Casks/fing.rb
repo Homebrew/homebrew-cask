@@ -1,6 +1,6 @@
 cask 'fing' do
-  version '5.4.0'
-  sha256 'e7e2fe5906c6f6e21ff8d620f463fcae7f895d3f4c732426214dff4b8dc868aa'
+  version '5.5.0'
+  sha256 'a9254738782e50197cc944becc7b5f84ce534797d82dec0c9391a75580ba016d'
 
   url "https://www.fing.com/images/uploads/general/CLI_macOSX_#{version}.zip"
   appcast 'https://www.fing.com/products/development-toolkit/'

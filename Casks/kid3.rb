@@ -3,7 +3,7 @@ cask 'kid3' do
   version '3.8.2'
   sha256 '0265456af936c96f36c3fb29d60077d5123d670a6bb2cb26e40251daf7e8964d'
 
-  # downloads.sourceforge.net/kid3 was verified as official when first introduced to the cask
+  # downloads.sourceforge.net/kid3/ was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/kid3/kid3-#{version}-Darwin.dmg"
   appcast 'https://sourceforge.net/p/kid3/news/feed.rss'
   name 'Kid3'

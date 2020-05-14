@@ -1,6 +1,6 @@
 cask 'wordpresscom' do
-  version '5.0.0'
-  sha256 '64a5313011b22d13bb825eb00cee0b3542912d7002fadd2ca1cac780b726fb58'
+  version '5.1.0'
+  sha256 '3b9fa9a302445e52805c5d00e154f964f5cd397095206a17775ab8c4ab68fbb5'
 
   url "https://public-api.wordpress.com/rest/v1.1/desktop/osx/download?type=app&ref=update&version=#{version}"
   appcast 'https://public-api.wordpress.com/rest/v1.1/desktop/osx/version?compare=0.1.0&channel=stable'

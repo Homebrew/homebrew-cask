@@ -40,10 +40,10 @@ The examples above can become hard to read, however. Since many of these changes
 |--------------------------|--------------------|--------------------|
 | `major`                  | `1.2.3-a45,ccdd88` | `1`                |
 | `minor`                  | `1.2.3-a45,ccdd88` | `2`                |
-| `patch`                  | `1.2.3-a45,ccdd88` | `3`                |
+| `patch`                  | `1.2.3-a45,ccdd88` | `3-a45`            |
 | `major_minor`            | `1.2.3-a45,ccdd88` | `1.2`              |
-| `major_minor_patch`      | `1.2.3-a45,ccdd88` | `1.2.3`            |
-| `minor_patch`            | `1.2.3-a45,ccdd88` | `2.3`              |
+| `major_minor_patch`      | `1.2.3-a45,ccdd88` | `1.2.3-a45`        |
+| `minor_patch`            | `1.2.3-a45,ccdd88` | `2.3-a45`          |
 | `before_comma`           | `1.2.3-a45,ccdd88` | `1.2.3-a45`        |
 | `after_comma`            | `1.2.3-a45,ccdd88` | `ccdd88`           |
 | `dots_to_hyphens`        | `1.2.3-a45,ccdd88` | `1-2-3-a45,ccdd88` |

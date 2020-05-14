@@ -1,8 +1,8 @@
 cask 'free-download-manager' do
-  version '5.1'
+  version '5.1.38'
   sha256 :no_check # required as upstream package is updated in-place
 
-  url "https://dn3.freedownloadmanager.org/#{version.major}/#{version}-latest/fdm.dmg"
+  url "https://dn3.freedownloadmanager.org/#{version.major}/#{version.major_minor}-latest/fdm.dmg"
   appcast 'https://www.freedownloadmanager.org/download.htm'
   name 'Free Download Manager'
   homepage 'https://www.freedownloadmanager.org/'

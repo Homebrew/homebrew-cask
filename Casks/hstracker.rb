@@ -1,8 +1,8 @@
 cask 'hstracker' do
-  version '1.6.17'
-  sha256 'bbc12a4afa524d13451bd08a0a275551fb344336aa4a54ca950dc59da59554b3'
+  version '1.6.30'
+  sha256 '73ec8da77feb6d7cbd22ce5b75262cf1056e24122e10aa86674f2c8dff0431ec'
 
-  # github.com/HearthSim/HSTracker was verified as official when first introduced to the cask
+  # github.com/HearthSim/HSTracker/ was verified as official when first introduced to the cask
   url "https://github.com/HearthSim/HSTracker/releases/download/#{version}/HSTracker.app.zip"
   appcast 'https://github.com/HearthSim/HSTracker/releases.atom'
   name 'Hearthstone Deck Tracker'

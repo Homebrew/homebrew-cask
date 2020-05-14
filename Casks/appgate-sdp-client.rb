@@ -1,8 +1,9 @@
 cask 'appgate-sdp-client' do
-  version '5.1.0'
-  sha256 '51b99894557e15946b0a9fd2c6c4ea36f690611eee259acce4197dab9503d70d'
+  version '5.1.2'
+  sha256 '6b8d24110293e13b8cab58251e6a2bb3ceecc171ab04c7f7205fce352afe2521'
 
-  url "https://sdpdownloads.appgate.com/AppGate-SDP-#{version.major_minor}/clients/AppGate-SDP-#{version}-Installer.dmg"
+  # bin.appgate-sdp.com/ was verified as official when first introduced to the cask
+  url "https://bin.appgate-sdp.com/#{version.major_minor}/client/AppGate-SDP-#{version}-Installer.dmg"
   appcast "https://www.appgate.com/software-defined-perimeter/support/appgate-sdp-v#{version.major}-#{version.minor}"
   name 'AppGate SDP Client for macOS'
   homepage 'https://www.appgate.com/software-defined-perimeter/support'

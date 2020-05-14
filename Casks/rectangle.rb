@@ -1,21 +1,25 @@
 cask 'rectangle' do
-  version '0.23'
-  sha256 'c3721b55986e64cfd652d469f16477dcb48a74ccf64425eea3a93b1babb91636'
+  version '0.27'
+  sha256 '0a4bf3d4f252b80ed1a6f8b4beca646163eb01fefff457b33d333e42fee46330'
 
-  # github.com/rxhanson/Rectangle/releases/download/v was verified as official when first introduced to the cask
-  url "https://github.com/rxhanson/Rectangle/releases/download/v#{version}/Rectangle#{version}.dmg"
+  url "https://rectangleapp.com/downloads/Rectangle#{version}.dmg"
   appcast 'https://www.rectangleapp.com/downloads/updates.xml'
   name 'Rectangle'
   homepage 'https://rectangleapp.com/'
 
   auto_updates true
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :el_capitan'
 
   app 'Rectangle.app'
 
+  uninstall quit:      'com.knollsoft.Rectangle',
+            launchctl: 'com.knollsoft.RectangleLauncher'
+
   zap trash: [
-               '~/Library/Preferences/com.knollsoft.Rectangle.plist',
+               '~/Library/Application Scripts/com.knollsoft.RectangleLauncher',
                '~/Library/Application Support/Rectangle',
                '~/Library/Caches/com.knollsoft.Rectangle',
+               '~/Library/Containers/com.knollsoft.RectangleLauncher',
+               '~/Library/Preferences/com.knollsoft.Rectangle.plist',
              ]
 end

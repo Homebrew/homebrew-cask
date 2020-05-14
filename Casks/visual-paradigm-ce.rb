@@ -1,6 +1,6 @@
 cask 'visual-paradigm-ce' do
-  version '16.1,20200301'
-  sha256 'dd25e4a57b20378057f12f6600d9381ad6ee2c0646f70b5bb88a9cecbfdf8ba7'
+  version '16.1,20200501'
+  sha256 '3594e18d6ccaa39f58b954869ac1c0e2e00cd5b189551e49feaf82d16f53a353'
 
   url "https://www.visual-paradigm.com/downloads/vpce/Visual_Paradigm_CE_#{version.before_comma.dots_to_underscores}_#{version.after_comma}_OSX_WithJRE.dmg"
   appcast 'https://www.visual-paradigm.com/downloads/vpce/checksum.html',

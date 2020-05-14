@@ -1,6 +1,6 @@
 cask 'fm3-edit' do
-  version '1.00.00'
-  sha256 'dec293c8f7755ce970129125a9414d2f39dd7136795ce915221a06c0b70d5027'
+  version '1.01.02'
+  sha256 'f4b89d42b45b8ff674e1bafcb22e4010253f86f0410abafdaf2148c71e8c9d89'
 
   url "https://www.fractalaudio.com/downloads/FM3-Edit/FM3-Edit-OSX-v#{version.tr('.', 'p')}.dmg"
   appcast 'https://www.fractalaudio.com/fm3-edit/'

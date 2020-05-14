@@ -19,11 +19,13 @@ cask 'appcleaner' do
 
   app 'AppCleaner.app'
 
-  uninstall quit: 'net.freemacsoft.AppCleaner'
+  uninstall quit:      'net.freemacsoft.AppCleaner',
+            launchctl: 'net.freemacsoft.AppCleaner-SmartDelete'
 
   zap trash: [
                '~/Library/Caches/net.freemacsoft.AppCleaner',
                '~/Library/Preferences/net.freemacsoft.AppCleaner.plist',
+               '~/Library/Preferences/net.freemacsoft.AppCleaner-SmartDelete.plist',
                '~/Library/Saved Application State/net.freemacsoft.AppCleaner.savedState',
              ]
 end

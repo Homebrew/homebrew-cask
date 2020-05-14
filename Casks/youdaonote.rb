@@ -1,8 +1,8 @@
 cask 'youdaonote' do
-  version '3.5.8'
-  sha256 '7889123a7987369849aef1bca17c25ee2a153d09ea12cf3cfa475de1ab305f6f'
+  version '3.5.9'
+  sha256 'b529384109007f86be688206d077b60e9367bfe0bdd1ecc917104da424b6d914'
 
-  # download.ydstatic.com/notewebsite/downloads was verified as official when first introduced to the cask
+  # download.ydstatic.com/notewebsite/downloads/ was verified as official when first introduced to the cask
   url 'https://download.ydstatic.com/notewebsite/downloads/YoudaoNote.dmg'
   appcast 'https://note.youdao.com/update/updateConfig.json'
   name 'YoudaoNote'

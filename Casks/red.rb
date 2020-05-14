@@ -10,4 +10,9 @@ cask 'red' do
   container type: :naked
 
   binary "red-#{version.no_dots}", target: 'red'
+
+  zap trash: [
+               '~/.red',
+               '~/Library/Saved Application State/org.redlang.red-ttx.savedState',
+             ]
 end

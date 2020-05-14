@@ -1,8 +1,8 @@
 cask 'thonny' do
   version '3.2.7'
-  sha256 'f70a3dc2321e2ab0abf433900a5a36c231d1cccdd1e4aba48c400926f34d3c2b'
+  sha256 '0dc9d7b34bbe70cc3256575cfaed055614e8967dd3a26b8ce088998529429042'
 
-  # github.com/thonny/thonny was verified as official when first introduced to the cask
+  # github.com/thonny/thonny/ was verified as official when first introduced to the cask
   url "https://github.com/thonny/thonny/releases/download/v#{version}/thonny-#{version}.pkg"
   appcast 'https://github.com/thonny/thonny/releases.atom'
   name 'Thonny'
@@ -12,7 +12,7 @@ cask 'thonny' do
 
   pkg "thonny-#{version}.pkg"
 
-  uninstall quit:    'Thonny',
+  uninstall quit:    'org.thonny.Thonny',
             pkgutil: 'org.thonny.Thonny.component',
             delete:  '/Applications/Thonny.app'
 

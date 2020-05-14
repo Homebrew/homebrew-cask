@@ -1,6 +1,6 @@
 cask 'google-earth-pro' do
-  version '7.3.2.5776'
-  sha256 'e84a9e1421f1e1200e7cd7fa1aa811caacab59216f73287293c3ba643c438060'
+  version '7.3.3.7699'
+  sha256 '06292b03a475a895fd2a3e49f3f25d83481930dcd405783ad1a1966a0c923191'
 
   url 'https://dl.google.com/earth/client/advanced/current/GoogleEarthProMac-Intel.dmg'
   name 'Google Earth Pro'
@@ -16,6 +16,8 @@ cask 'google-earth-pro' do
                          'com.google.keystone.agent',
                          'com.google.keystone.system.agent',
                          'com.google.keystone.daemon',
+                         'com.google.keystone.xpcservice',
+                         'com.google.keystone.system.xpcservice',
                        ]
 
   zap trash: [

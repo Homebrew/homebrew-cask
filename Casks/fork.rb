@@ -1,8 +1,8 @@
 cask 'fork' do
-  version '1.0.91.1'
-  sha256 '5e8c023bdee75c0df557d84051a616bdad14917e809b99e3e99cf7d667ca227e'
+  version '1.0.92'
+  sha256 '4027b44e947e291895af93d6f24e4bf26736d812830ab358f295432dd6f8cc19'
 
-  # forkapp.ams3.cdn.digitaloceanspaces.com/mac was verified as official when first introduced to the cask
+  # forkapp.ams3.cdn.digitaloceanspaces.com/mac/ was verified as official when first introduced to the cask
   url "https://forkapp.ams3.cdn.digitaloceanspaces.com/mac/Fork-#{version}.dmg"
   appcast 'https://git-fork.com/update/feed.xml'
   name 'Fork'
@@ -22,5 +22,6 @@ cask 'fork' do
                '~/Library/Logs/Fork.log',
                '~/Library/Preferences/com.DanPristupov.Fork.plist',
                '~/Library/Saved Application State/com.DanPristupov.Fork.savedState',
+               '~/Library/WebKit/com.DanPristupov.Fork',
              ]
 end

@@ -1,6 +1,6 @@
 cask 'opera' do
-  version '67.0.3575.97'
-  sha256 'fb89c528c4aec65d8c5186a4807b4f0c87966ade9270666650bd080fa938f647'
+  version '68.0.3618.104'
+  sha256 'ed5fd9f7a24574a962b1e24cce9f60f60b5e9e73d4cefbdd97f396dc41c4c034'
 
   url "https://get.geo.opera.com/pub/opera/desktop/#{version}/mac/Opera_#{version}_Setup.dmg"
   appcast 'https://ftp.opera.com/pub/opera/desktop/'

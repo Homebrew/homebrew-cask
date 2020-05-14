@@ -2,7 +2,7 @@ cask 'gqrx' do
   version '2.11.5'
   sha256 '896cefcb2825840178b6dbfb894b01543b1c8225539e6969052133223a59ffee'
 
-  # github.com/csete/gqrx was verified as official when first introduced to the cask
+  # github.com/csete/gqrx/ was verified as official when first introduced to the cask
   url "https://github.com/csete/gqrx/releases/download/v#{version.major_minor_patch}/Gqrx-#{version}.dmg"
   appcast 'https://github.com/csete/gqrx/releases.atom'
   name 'Gqrx'

@@ -1,9 +1,9 @@
 cask 'remotix-agent' do
-  version '1.3.3'
-  sha256 '1c499be234ddcd11604e500645e32d3cfbe32b6d65f6e8a65ebd5b0692d4cd1e'
+  version '1.3.5'
+  sha256 '6bc975c7dc4e49edaba5c918009f0bc80518d9fdebd91e7da11cb2fe25239349'
 
   url 'https://downloads.remotixcloud.com/agent-mac/RemotixAgent.pkg'
-  appcast 'https://remotixcloud.com/downloads/'
+  appcast 'https://remotix.com/downloads-mac/'
   name 'Remotix Agent'
   homepage 'https://remotixcloud.com/'
 
@@ -26,6 +26,7 @@ cask 'remotix-agent' do
                           'com.nulana.rxagentmac.rc',
                         ],
             login_item: 'Remotix Agent',
+            quit:       'com.nulana.rxagentmac',
             delete:     [
                           '/Library/LaunchAgents/com.nulana.rxagentmac.user.plist',
                           '/Library/LaunchDaemons/com.nulana.rxagentmac.daemon.plist',

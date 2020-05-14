@@ -1,8 +1,8 @@
 cask 'lark' do
-  version '3.20.6'
-  sha256 '232d1d19b1687cedf47f19b297494a47c43c347fb0229e65d69a9f5a45542221'
+  version '3.22.5'
+  sha256 '59511f6bb7307316a6366845a5d585656179f1425241d7316aa4222369412134'
 
-  # sf3-ttcdn-tos.pstatp.com was verified as official when first introduced to the cask
+  # sf3-ttcdn-tos.pstatp.com/ was verified as official when first introduced to the cask
   url "https://sf3-ttcdn-tos.pstatp.com/obj/ee-appcenter/Lark-#{version}.dmg"
   appcast 'https://www.larksuite.com/api/downloads'
   name 'Lark'

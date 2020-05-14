@@ -1,6 +1,6 @@
 cask 'xamarin-mac' do
-  version '6.16.0.0'
-  sha256 'c1cab2ba1a9ea58858647a7e70b011e8f40dd21baff666f78e2244e08132c15d'
+  version '6.16.0.13'
+  sha256 '43e7ad19bbc4cdc60eb6d7a01bcca27ccf0434c31c9e3ba18f15d99c91736873'
 
   url "https://dl.xamarin.com/XamarinforMac/Mac/xamarin.mac-#{version}.pkg"
   appcast 'https://docs.microsoft.com/en-us/xamarin/mac/release-notes/',
