@@ -5,8 +5,8 @@ cask 'calibre' do
     # github.com/kovidgoyal/calibre/ was verified as official when first introduced to the cask
     url "https://github.com/kovidgoyal/calibre/releases/download/v#{version}/calibre-#{version}.dmg"
   else
-    version '4.15.0'
-    sha256 '335d84d46c3f01dec853516c73974756a92b177e7926c2776c612fb08d098aeb'
+    version '4.16.0'
+    sha256 'e2f801919b1d23bf07c791781a0daf50678f1ead8772673d44fb1aa16a91e8f8'
     # github.com/kovidgoyal/calibre/ was verified as official when first introduced to the cask
     url "https://github.com/kovidgoyal/calibre/releases/download/v#{version}/calibre-#{version}.dmg"
     appcast 'https://github.com/kovidgoyal/calibre/releases.atom'
