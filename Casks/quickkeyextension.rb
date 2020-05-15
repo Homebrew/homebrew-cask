@@ -1,4 +1,4 @@
-cask 'quickkey-extension' do
+cask 'quickkeyextension' do
   version :latest
   sha256 :no_check
 
