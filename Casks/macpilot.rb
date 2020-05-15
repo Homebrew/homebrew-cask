@@ -10,4 +10,11 @@ cask 'macpilot' do
   depends_on macos: '>= :high_sierra'
 
   app 'MacPilot.app'
+
+  zap trash: [
+               '~/Library/Application Support/com.koingosw.MacPilot',
+               '~/Library/Caches/com.koingosw.MacPilot',
+               '~/Library/Preferences/com.koingosw.MacPilot.plist',
+               '~/Library/Saved Application State/com.koingosw.MacPilot.savedState',
+             ]
 end
