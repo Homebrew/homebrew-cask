@@ -7,7 +7,7 @@ cask 'bricklink-studio' do
   name 'Stud.io'
   homepage 'https://studio.bricklink.com/v2/build/studio.page'
 
-  pkg 'Stud.io.pkg'
+  pkg 'Studio+2.0.pkg'
 
   uninstall pkgutil: 'com.bricklink.pkg.Studio'
 end
