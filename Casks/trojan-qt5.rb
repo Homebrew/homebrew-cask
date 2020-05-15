@@ -1,4 +1,5 @@
 cask 'trojan-qt5' do
+  # note: "5" is not a version number, but an intrinsic part of the product name
   version '1.0.4'
   sha256 '408b817d41badf68618c09cc43474a6f0c8ac00693bba0305b13c2f52bd3a1bc'
 
