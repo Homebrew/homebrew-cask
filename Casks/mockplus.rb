@@ -9,5 +9,5 @@ cask 'mockplus' do
   name '摩客'
   homepage 'https://www.mockplus.com/'
 
-  app 'Mockplus.app'
+  app 'Mockplus Classic.app'
 end
