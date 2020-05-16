@@ -1,6 +1,6 @@
 cask 'packetproxy' do
-  version '2.1.3'
-  sha256 '60dbffdd1655e938529c0ca4c0a89076c49ccc45e481f41369ed2bd67055436d'
+  version '2.1.4'
+  sha256 '82087d0f0aee7420887c3e4a2da0f86ea522ff38ca064518ad31f4dbd0e0fb81'
 
   url "https://github.com/DeNA/PacketProxy/releases/download/#{version}/PacketProxy-#{version}-Installer-Mac-Signed.dmg"
   appcast 'https://github.com/DeNA/PacketProxy/releases.atom'
