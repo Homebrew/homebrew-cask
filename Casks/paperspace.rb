@@ -1,6 +1,6 @@
 cask 'paperspace' do
-  version '7.2.0.10'
-  sha256 '06c8a22e437f43f2ffa52d64413daf37003208d027d0012df71271d0143e59d3'
+  version '8.4.0.4'
+  sha256 '0d37f2d87b4a772a44a63e9a6467e2dc290e3e134691aff497df7e14996fc942'
 
   # ps-receiver.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://ps-receiver.s3.amazonaws.com/darwin/Paperspace-#{version}.dmg"
