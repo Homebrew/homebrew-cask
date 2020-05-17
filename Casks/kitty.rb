@@ -10,7 +10,18 @@ cask 'kitty' do
   depends_on macos: '>= :sierra'
 
   app 'kitty.app'
-  binary "#{appdir}/kitty.app/Contents/MacOS/kitty"
+  # Symlinking the kitty CLI to /usr/local/bin will cause it to use Homebrew's
+  # Python instead of the one bundled with the app, causing it to crash.
+  # (https://github.com/kovidgoyal/kitty/issues/1950)
+  shimscript = "#{staged_path}/kitty.wrapper.sh"
+  binary shimscript, target: 'kitty'
+
+  preflight do
+    IO.write shimscript, <<~EOS
+      #!/bin/sh
+      exec '#{appdir}/kitty.app/Contents/MacOS/kitty' "$@"
+    EOS
+  end
 
   zap trash: [
                '~/.config/kitty',
