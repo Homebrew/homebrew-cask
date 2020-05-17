@@ -9,8 +9,10 @@ cask 'kitty' do
 
   depends_on macos: '>= :sierra'
 
+  # Symlinking the kitty binary is known to cause problems. It should also be
+  # unnecessary because the kitty binary should already be in PATH when using
+  # kitty. https://github.com/kovidgoyal/kitty/issues/1950
   app 'kitty.app'
-  binary "#{appdir}/kitty.app/Contents/MacOS/kitty"
 
   zap trash: [
                '~/.config/kitty',
