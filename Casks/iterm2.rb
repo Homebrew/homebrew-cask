@@ -4,7 +4,7 @@ cask 'iterm2' do
   sha256 'ec50ecd509942d2d800e1c4672223e47504b05e64aebf687f24c4a29d9f534a0'
 
   url "https://iterm2.com/downloads/stable/iTerm2-#{version.dots_to_underscores}.zip"
-  appcast 'https://iterm2.com/appcasts/full_changes.txt'
+  appcast 'https://iterm2.com/appcasts/newest/final_new.xml'
   name 'iTerm2'
   homepage 'https://www.iterm2.com/'
 
