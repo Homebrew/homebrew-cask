@@ -24,7 +24,11 @@ cask 'p4v' do
       #!/bin/bash
       set -euo pipefail
       COMMAND=$(basename "$0")
-      exec "#{appdir}/${COMMAND}.app/Contents/MacOS/${COMMAND}" "$@" 2> /dev/null
+      if [[ "$COMMAND" == "p4merge" ]]; then
+        exec "#{appdir}/${COMMAND}.app/Contents/Resources/launch${COMMAND}" "$@" 2> /dev/null
+      else
+        exec "#{appdir}/${COMMAND}.app/Contents/MacOS/${COMMAND}" "$@" 2> /dev/null
+      fi
     EOS
   end
 
