@@ -1,6 +1,6 @@
 cask 'textexpander' do
-  version '6.5.4'
-  sha256 'b4dc8f951902c17e09b549940d7f5f5913b6dbf7b154c807a4f0cc8d9b68ca7e'
+  version '6.5.5'
+  sha256 'ff6b054397d1065da36789b9d84c8a76a89960488233127ac8cfdf2bbdd5dd9d'
 
   # cdn.textexpander.com/mac/ was verified as official when first introduced to the cask
   url "https://cdn.textexpander.com/mac/TextExpander_#{version}.zip"
