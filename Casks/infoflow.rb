@@ -1,4 +1,4 @@
-cask 'baiduhi' do
+cask 'infoflow' do
   version :latest
   sha256 :no_check
 
