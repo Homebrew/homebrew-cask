@@ -3,7 +3,6 @@ cask 'jellyfin' do
   sha256 'e60ebbda1998a2f1daebdb33a46b4b1076696cec01f5b33c974342a8f75bed27'
 
   url "https://repo.jellyfin.org/releases/server/macos/stable/Jellyfin_#{version}.dmg"
-  appcast 'https://github.com/jellyfin/jellyfin/releases.atom'
   name 'Jellyfin'
   homepage 'https://jellyfin.org/'
 
