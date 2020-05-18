@@ -12,11 +12,11 @@ cask 'glance' do
   app 'Glance.app'
 
   zap trash: [
-               '~/Library/Application\ Scripts/com.samuelmeuli.Glance/',
-               '~/Library/Application\ Scripts/com.samuelmeuli.Glance.QLPlugin/',
-               '~/Library/Containers/com.samuelmeuli.Glance/',
-               '~/Library/Containers/com.samuelmeuli.Glance.QLPlugin/',
-               '~/Library/Group\ Containers/group.com.samuelmeuli.glance/',
+               '~/Library/Application Scripts/com.samuelmeuli.Glance',
+               '~/Library/Application Scripts/com.samuelmeuli.Glance.QLPlugin',
+               '~/Library/Containers/com.samuelmeuli.Glance',
+               '~/Library/Containers/com.samuelmeuli.Glance.QLPlugin',
+               '~/Library/Group Containers/group.com.samuelmeuli.glance',
              ]
 
   caveats <<~EOS
