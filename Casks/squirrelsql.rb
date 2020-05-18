@@ -77,6 +77,8 @@ cask 'squirrelsql' do
     system_command '/usr/bin/java', args: ['-jar', "#{appdir}/SQuirreLSQL.app/Uninstaller/uninstaller.jar", '-f', '-c']
   end
 
+  uninstall delete: "#{appdir}/SQuirreLSQL.app"
+
   zap trash: '~/.squirrel-sql'
 
   caveats do
