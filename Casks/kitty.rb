@@ -10,7 +10,16 @@ cask 'kitty' do
   depends_on macos: '>= :sierra'
 
   app 'kitty.app'
-  binary "#{appdir}/kitty.app/Contents/MacOS/kitty"
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/kitty.wrapper.sh"
+  binary shimscript, target: 'kitty'
+
+  preflight do
+    IO.write shimscript, <<~EOS
+      #!/bin/sh
+      exec '#{appdir}/kitty.app/Contents/MacOS/kitty' "$@"
+    EOS
+  end
 
   zap trash: [
                '~/.config/kitty',
