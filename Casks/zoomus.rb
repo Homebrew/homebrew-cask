@@ -1,6 +1,6 @@
 cask 'zoomus' do
-  version '5.0.24030.0508'
-  sha256 'efcbe16adc30b34a38432fa696ad9a0775c80fb6d188fc8a3c15c7c4032c17e0'
+  version '5.0.24978.0517'
+  sha256 '0f5a891755751406e8132cd3cf8165d5604850c8059769142df130218304abc8'
 
   # d11yldzmag5yn.cloudfront.net/ was verified as official when first introduced to the cask
   url "https://d11yldzmag5yn.cloudfront.net/prod/#{version}/Zoom.pkg"
@@ -28,6 +28,7 @@ cask 'zoomus' do
                         },
             delete:     [
                           '/Applications/zoom.us.app',
+                          '/Library/Audio/Plug-Ins/HAL/ZoomAudioDevice.driver',
                           '/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin',
                           '/Library/Logs/DiagnosticReports/zoom.us*',
                           '~/.zoomus/ZoomOpener.app',
