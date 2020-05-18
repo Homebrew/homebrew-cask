@@ -24,6 +24,7 @@ cask 'openemu' do
                '~/Library/Application Support/OpenEmu',
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.openemu.openemu.sfl*',
                '~/Library/Application Support/org.openemu.OEXPCCAgent.Agents',
+               '~/Library/Caches/OpenEmu',
                '~/Library/Caches/org.openemu.OpenEmu',
                '~/Library/Cookies/org.openemu.OpenEmu.binarycookies',
                '~/Library/Preferences/org.openemu.Atari800.plist',
