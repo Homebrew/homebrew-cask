@@ -2,7 +2,7 @@ cask 'lightproxy' do
   version '1.1.16'
   sha256 'a5d324bd39a2c21b0c8d0c21cf94e8e4c189dc36b52be4118463e1ac99181b77'
 
-  # github.com/alibaba/ was verified as official when first introduced to the cask
+  # github.com/alibaba/lightproxy/ was verified as official when first introduced to the cask
   url "https://github.com/alibaba/lightproxy/releases/download/v#{version}/LightProxy-#{version}.dmg"
   appcast 'https://github.com/alibaba/lightproxy/releases.atom'
   name 'LightProxy'
