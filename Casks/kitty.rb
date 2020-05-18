@@ -10,9 +10,7 @@ cask 'kitty' do
   depends_on macos: '>= :sierra'
 
   app 'kitty.app'
-  # Symlinking the kitty CLI to /usr/local/bin will cause it to use Homebrew's
-  # Python instead of the one bundled with the app, causing it to crash.
-  # (https://github.com/kovidgoyal/kitty/issues/1950)
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/kitty.wrapper.sh"
   binary shimscript, target: 'kitty'
 
