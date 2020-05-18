@@ -11,4 +11,12 @@ cask 'altserver' do
   depends_on macos: '>= :mojave'
 
   app 'AltServer.app'
+
+  uninstall quit: 'com.rileytestut.AltServer'
+
+  zap trash: [
+               '~/Library/Caches/com.rileytestut.AltServer',
+               '~/Library/Cookies/com.rileytestut.AltServer.binarycookies',
+               '~/Library/Preferences/com.rileytestut.AltServer.plist',
+             ]
 end
