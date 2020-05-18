@@ -9,5 +9,5 @@ cask 'tip' do
 
   app 'Tip.app'
 
-  zap trash: "~/Library/Application\ Scripts/tanin.tip/provider.script"
+  zap trash: '~/Library/Application Scripts/tanin.tip'
 end
