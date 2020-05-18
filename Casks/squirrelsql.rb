@@ -1,6 +1,6 @@
 cask 'squirrelsql' do
-  version '4.0.0'
-  sha256 'c15829260abb45f47e6927492e45c6b696f8edec41d10e96b36f214146bd0f38'
+  version '4.1.0'
+  sha256 'ab49aeb1f57ef857202972102e3d7cebe5f52d531a0198c193c4ecc782d9c2e8'
 
   # sourceforge.net/squirrel-sql/ was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/squirrel-sql/1-stable/#{version}/squirrel-sql-#{version}-MACOSX-install.jar"
@@ -73,9 +73,11 @@ cask 'squirrelsql' do
     system_command '/usr/bin/java', args: ['-jar', "#{staged_path}/squirrel-sql-#{version}-MACOSX-install.jar", installoptions.to_s]
   end
 
-  uninstall_postflight do
+  uninstall_preflight do
     system_command '/usr/bin/java', args: ['-jar', "#{appdir}/SQuirreLSQL.app/Uninstaller/uninstaller.jar", '-f', '-c']
   end
+
+  uninstall delete: "#{appdir}/SQuirreLSQL.app"
 
   zap trash: '~/.squirrel-sql'
 
