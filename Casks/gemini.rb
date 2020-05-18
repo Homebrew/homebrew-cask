@@ -11,9 +11,10 @@ cask 'gemini' do
   app "Gemini #{version.major}.app"
 
   zap trash: [
-               '~/Library/Application Support/Gemini 2',
-               '~/Library/Caches/com.macpaw.site.Gemini2',
-               '~/Library/Preferences/com.macpaw.site.Gemini2.plist',
-               '~/Library/Saved Application State/com.macpaw.site.Gemini2.savedState',
+               '~/Library/Application Support/Gemini*',
+               '~/Library/Caches/com.macpaw.site.Gemini*',
+               '~/Library/Logs/com.macpaw.site.Gemini*',
+               '~/Library/Preferences/com.macpaw.site.Gemini*',
+               '~/Library/Saved Application State/com.macpaw.site.Gemini*',
              ]
 end
