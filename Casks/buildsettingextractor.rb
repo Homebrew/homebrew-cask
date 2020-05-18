@@ -1,6 +1,6 @@
 cask 'buildsettingextractor' do
-  version '1.3.2'
-  sha256 '874ea0c1c8ebcae77288481ba8afa7daba052d1167bb696375835a7fae4daf42'
+  version '1.4'
+  sha256 'd13fe380c21ca3231f62bc1f148be0690bf70f27971d5baae9fa6ccdb11b114c'
 
   url "https://github.com/dempseyatgithub/BuildSettingExtractor/releases/download/v#{version}/BuildSettingExtractor_#{version}.dmg"
   appcast 'https://github.com/dempseyatgithub/BuildSettingExtractor/releases.atom'
