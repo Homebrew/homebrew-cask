@@ -1,9 +1,9 @@
 cask 'zalo' do
-  version '20.3.3'
-  sha256 'ae2b694e8eebc2a582a1cbe11d99d8dd18e65aed449271f78bf5c777197d1a26'
+  version '20.4.2'
+  sha256 '2864653a83c1dbb4a3693b2726d2897ad1d654ce9e19262122023ffed55dcb62'
 
   # res-zaloapp-aka.zdn.vn/mac/ was verified as official when first introduced to the cask
-  url "https://res-zaloapp-aka.zdn.vn/mac/ZaloSetup_#{version}.dmg"
+  url "https://res-zaloapp-aka.zdn.vn/mac/ZaloSetup-#{version}.dmg#"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?user_agent=Macintosh&url=https://zalo.me/download/zalo-pc'
   name 'Zalo'
   homepage 'https://zalo.me/'
