@@ -4,7 +4,7 @@ cask 'jamovi' do
 
   url "https://www.jamovi.org/downloads/jamovi-#{version}-macos.dmg"
   appcast 'https://www.jamovi.org/download.html',
-          configuration: "#{version.chomp('.0')} solid"
+          configuration: "solid</td><td>.dmg</td><td>#{version.chomp('.0')}"
   name 'jamovi'
   homepage 'https://www.jamovi.org/'
 
