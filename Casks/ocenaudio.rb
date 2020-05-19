@@ -2,7 +2,7 @@ cask 'ocenaudio' do
   version '3.7.15'
 
   if MacOS.version <= :high_sierra
-    sha256 '47553175f53633a9f03a3a12fff44b27335d7223555f398d92ffa09aa6ee3776'
+    sha256 '52a544285a93d41c5ef41aaeaf1a82585f4e77085faeeff92dabaa710356a6ce'
 
     url 'https://www.ocenaudio.com/downloads/index.php/ocenaudio_sierra.dmg'
   else
