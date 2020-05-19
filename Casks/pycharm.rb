@@ -1,6 +1,6 @@
 cask 'pycharm' do
-  version '2020.1,201.6668.115'
-  sha256 'd24a2c7c40d17658b9e095ae10646a67a8b421e5214297a477e1981da3f704dd'
+  version '2020.1.1,201.7223.92'
+  sha256 '159903f24106bf52b816a953405109eaffe3ffc708830474f360e74195fa96fd'
 
   url "https://download.jetbrains.com/python/pycharm-professional-#{version.before_comma}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=PCP&latest=true&type=release'
@@ -17,8 +17,11 @@ cask 'pycharm' do
 
   zap trash: [
                "~/Library/Application Support/PyCharm#{version.major_minor}",
+               "~/Library/Application Support/JetBrains/PyCharm#{version.major_minor}",
                "~/Library/Caches/PyCharm#{version.major_minor}",
                "~/Library/Logs/PyCharm#{version.major_minor}",
                "~/Library/Preferences/PyCharm#{version.major_minor}",
+               '~/Library/Preferences/jetbrains.pycharm.*.plist',
+               '~/Library/Saved Application State/com.jetbrains.pycharm.savedState',
              ]
 end

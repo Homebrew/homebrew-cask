@@ -1,12 +1,13 @@
 cask 'presentation' do
-  version '2.0'
-  sha256 '871bbd6ed4eb0d3dfed4c060b11197d86bbdde2ac1dc2d8fb35cff72ff3bfce9'
+  version '2.2.1'
+  sha256 'a782153138ac65e71c976365494beabddcccbec509df592af57a3fe8d188a7a0'
 
-  url "http://iihm.imag.fr/blanch/software/osx-presentation/releases/osx-presentation-#{version}.dmg"
+  url "http://iihm.imag.fr/blanch/software/osx-presentation/releases/osx-presentation-#{version}.pkg"
   appcast 'http://iihm.imag.fr/blanch/software/osx-presentation/'
   name 'Présentation'
   homepage 'http://iihm.imag.fr/blanch/software/osx-presentation/'
 
-  app 'Présentation.app'
-  binary "#{appdir}/Présentation.app/Contents/MacOS/presentation.py", target: 'presentation'
+  pkg "osx-presentation-#{version}.pkg"
+
+  uninstall pkgutil: 'fr.imag.iihm.blanch.osx-presentation'
 end

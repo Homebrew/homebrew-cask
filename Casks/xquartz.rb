@@ -2,7 +2,7 @@ cask 'xquartz' do
   version '2.7.11'
   sha256 '32e50e8f1e21542b847041711039fa78d44febfed466f834a9281c44d75cd6c3'
 
-  # bintray.com/xquartz was verified as official when first introduced to the cask
+  # bintray.com/xquartz/ was verified as official when first introduced to the cask
   url "https://dl.bintray.com/xquartz/downloads/XQuartz-#{version}.dmg"
   appcast 'https://www.xquartz.org/releases/sparkle/release.xml'
   name 'XQuartz'

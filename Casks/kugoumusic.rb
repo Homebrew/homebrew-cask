@@ -1,6 +1,6 @@
 cask 'kugoumusic' do
-  version '2.9.8'
-  sha256 'b7cc6628b5546c76b1e13be504283787f225168a7939661512496bb90a031b52'
+  version '3.0.0'
+  sha256 '098889877822d04dd09bffe7076f28d0f19f2caa2b8cc364f5945cc9c3f37667'
 
   url "http://downmini.kugou.com/mac/Kugou_V#{version}.dmg"
   appcast 'http://download.kugou.com/mac.html'

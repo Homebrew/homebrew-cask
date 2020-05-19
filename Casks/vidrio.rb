@@ -1,6 +1,6 @@
 cask 'vidrio' do
-  version '1.14'
-  sha256 '3d9b0a5b0fb5e7505b9f69b100cfbb811fa7a5a30b65dea5549d8b44a586214a'
+  version '1.18'
+  sha256 'bd6ae788d5a992b634641dd2b08ae8b59dbbc5291c1a6bcd0fe7a372a40314d2'
 
   url "https://vidr.io/releases/Vidrio-#{version}.dmg"
   appcast 'https://vidr.io/latest-version'

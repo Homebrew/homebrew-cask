@@ -1,8 +1,8 @@
 cask 'igdm' do
-  version '2.8.1'
-  sha256 '252ea2e15861484fd086be49d22fd104b96764dcc4f244cfcce520ecfd281543'
+  version '3.0.1'
+  sha256 'b114842282b64daccc3530790aedc4ed09914fa16e14724948c392b6d48236df'
 
-  # github.com/ifedapoolarewaju/igdm was verified as official when first introduced to the cask
+  # github.com/ifedapoolarewaju/igdm/ was verified as official when first introduced to the cask
   url "https://github.com/ifedapoolarewaju/igdm/releases/download/v#{version}/IGdm-#{version}.dmg"
   appcast 'https://github.com/ifedapoolarewaju/igdm/releases.atom'
   name 'IG:dm'

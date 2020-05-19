@@ -46,6 +46,7 @@ def find_electron_builder(app)
   data = YAML.load_file(appcast_file)
   bucket = data['bucket']
   channel = data['channel']
+  endpoint = data['endpoint']
   name = data['name']
   owner = data['owner']
   path = data['path']
@@ -55,6 +56,7 @@ def find_electron_builder(app)
 
   possible_appcasts = [
     "#{url}/latest-mac.yml",
+    "#{url}/updates/latest/mac/latest-mac.yml",
     "https://github.com/#{owner}/#{repo}/releases.atom",
     "https://#{bucket}.s3.amazon-aws.yml/#{channel}/latest-mac.yml",
     "https://#{bucket}.s3.amazonaws.com/latest-mac.yml",
@@ -63,6 +65,7 @@ def find_electron_builder(app)
     "https://s3.amazonaws.com/#{bucket}/#{path}/latest-mac.yml",
     "https://#{name}.#{region}.digitaloceanspaces.com/latest-mac.yml",
     "https://#{name}.#{region}.digitaloceanspaces.com/#{path}/latest-mac.yml",
+    "#{endpoint}/#{bucket}/#{path}/latest-mac.yml",
   ].map { |appcast| appcast.gsub(%r{(?<!:)/{2,}}, '/') } # Collapse groups of two or more forward slahses into one, except when preceded by a colon
 
   unless verify_appcast('electron-builder', *possible_appcasts)

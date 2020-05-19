@@ -1,8 +1,8 @@
 cask 'keka' do
-  version '1.1.26'
-  sha256 '78842a355218276627866cd0b5ab7c54ba07bb4a2d13d9013589af0cc255eeb7'
+  version '1.1.29'
+  sha256 '2f0edc0897913351b408427e96898b71548a648c538423b789e5a8d0e02fd69c'
 
-  # github.com/aonez/Keka was verified as official when first introduced to the cask
+  # github.com/aonez/Keka/ was verified as official when first introduced to the cask
   url "https://github.com/aonez/Keka/releases/download/v#{version}/Keka-#{version}.dmg"
   appcast 'https://github.com/aonez/Keka/releases.atom'
   name 'Keka'
@@ -14,6 +14,7 @@ cask 'keka' do
   app 'Keka.app'
 
   zap trash: [
+               '~/Library/Containers/com.aone.keka',
                '~/Library/Application Support/Keka',
                '~/Library/Caches/com.aone.keka',
                '~/Library/Preferences/com.aone.keka.plist',

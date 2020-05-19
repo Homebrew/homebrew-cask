@@ -1,8 +1,8 @@
 cask 'amadeus-pro' do
-  version '2.7.5'
-  sha256 'c8362dc9eb44dcf1dc1cdb57a57c44f161d1f18b12a1b1b15b11cbd4e4cfcc6a'
+  version '2.8.3'
+  sha256 '5355ec8eaccaa85d30ec03d9db0804ed4dc21878e71e28a93ff0f8eafe717226'
 
-  # s3.amazonaws.com/AmadeusPro2 was verified as official when first introduced to the cask
+  # s3.amazonaws.com/AmadeusPro2/ was verified as official when first introduced to the cask
   url 'https://s3.amazonaws.com/AmadeusPro2/AmadeusPro.zip'
   appcast 'https://www.hairersoft.com/pro.html'
   name 'Amadeus Pro'

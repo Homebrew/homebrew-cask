@@ -1,8 +1,8 @@
 cask 'edfbrowser' do
-  version '1.73,c0e3d267ed183574364cd5560eeba06f'
-  sha256 '6667e37cebbaa749ade461a3b717f00872dc747969c7ce21c484573a69b27e90'
+  version '1.75,17cf821fec8dc9b27e9632c055307117'
+  sha256 'a0ac2209b2e4372964ba9b4d2e26bdd0b5fad86316fbd982f7b759b2b4305bb4'
 
-  # gitlab.com/whitone/EDFbrowser was verified as official when first introduced to the cask
+  # gitlab.com/whitone/EDFbrowser/ was verified as official when first introduced to the cask
   url "https://gitlab.com/whitone/EDFbrowser/uploads/#{version.after_comma}/EDFbrowser-#{version.before_comma}.dmg"
   appcast 'https://gitlab.com/whitone/EDFbrowser/-/tags?format=atom'
   name 'EDFbrowser'

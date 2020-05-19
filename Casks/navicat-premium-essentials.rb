@@ -1,6 +1,6 @@
 cask 'navicat-premium-essentials' do
-  version '15.0.12'
-  sha256 'feab820b0c8eaef02cc9f6f3321650eeae41cc3f052eb061d9c80cbea2f42fc9'
+  version '15.0.16'
+  sha256 'c9c771ab581d46c677b87cd992a77da64ae4a589b58f2a72daf9045434c33d6a'
 
   url "http://download.navicat.com/download/navicatess#{version.major_minor.no_dots}_premium_en.dmg"
   appcast 'https://updater.navicat.com/mac/navicat_updates.php?appName=Navicat%20Premium%20Essentials&appLang=en'

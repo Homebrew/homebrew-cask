@@ -2,7 +2,7 @@ cask 'wireshark' do
   version '3.2.3'
   sha256 '066a05b20dce30f55a9ae8543cdf62771250352ab74c93186b8fb8a37a3aaf18'
 
-  url "https://1.na.dl.wireshark.org/osx/all-versions/Wireshark%20#{version}%20Intel%2064.dmg"
+  url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20Intel%2064.dmg"
   appcast 'https://www.wireshark.org/update/0/Wireshark/0.0.0/macOS/x86-64/en-US/stable.xml'
   name 'Wireshark'
   homepage 'https://www.wireshark.org/'
@@ -16,17 +16,27 @@ cask 'wireshark' do
   pkg 'Add Wireshark to the system path.pkg'
 
   uninstall_preflight do
-    set_ownership '/Library/Application Support/Wireshark'
-
-    if File.read('/etc/group').match?(%r{^access_bpf})
-      system_command '/usr/sbin/dseditgroup',
-                     args: ['-o', 'delete', 'access_bpf'],
-                     sudo: true
-    end
+    system_command '/usr/sbin/installer',
+                   args: [
+                           '-pkg', "#{staged_path}/Uninstall ChmodBPF.pkg",
+                           '-target', '/'
+                         ],
+                   sudo: true
+    system_command '/usr/sbin/installer',
+                   args: [
+                           '-pkg', "#{staged_path}/Remove Wireshark from the system path.pkg",
+                           '-target', '/'
+                         ],
+                   sudo: true
   end
 
-  uninstall pkgutil:   'org.wireshark.*',
-            launchctl: 'org.wireshark.ChmodBPF'
+  uninstall pkgutil: 'org.wireshark.*'
 
-  zap trash: '~/Library/Saved Application State/org.wireshark.Wireshark.savedState'
+  zap trash: [
+               '~/Library/Caches/org.wireshark.Wireshark',
+               '~/Library/Cookies/org.wireshark.Wireshark.binarycookies',
+               '~/Library/Preferences/org.wireshark.Wireshark.plist',
+               '~/Library/Saved Application State/org.wireshark.Wireshark.savedState',
+               '~/.config/wireshark',
+             ]
 end

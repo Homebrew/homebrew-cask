@@ -1,11 +1,11 @@
 cask 'kicad' do
-  version '5.1.5-0'
+  version '5.1.6-0'
 
   if MacOS.version <= :high_sierra
-    sha256 '321567935eaeb9184d3595294da3c895175d3e53cf19aa227ecb6adcb792f3a6'
+    sha256 'cb2baef00e877509996eb89e5b0addc99298db53bd4bd6c8dc4d8797fd22d809'
     url "https://kicad-downloads.s3.cern.ch/osx/stable/kicad-unified-#{version}.dmg"
   else
-    sha256 'c51aa2b997124c92faaead694e7ea633808d3a1d838f5331632ea5864ac32ecf'
+    sha256 '8e262b653209776ad32393566be0a0b1c560ade8cb9877bfcf5289dde21b99dd'
     url "https://kicad-downloads.s3.cern.ch/osx/stable/kicad-unified-#{version}-10_14.dmg"
   end
 

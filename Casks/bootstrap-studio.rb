@@ -1,6 +1,6 @@
 cask 'bootstrap-studio' do
-  version '5.0.3'
-  sha256 'd208d5bb2b87ec1ea65ab2017317f35050a8d13c96e5bf6106817ef47c1fea6f'
+  version '5.1.0'
+  sha256 'b16905708248b8ede9fffb3fdecdd21cb6c6acd928732b5b1b11baf08362b0a5'
 
   url "https://bootstrapstudio.io/releases/desktop/#{version}/Bootstrap%20Studio.dmg"
   appcast 'https://bootstrapstudio.io/pages/releases'
@@ -12,6 +12,7 @@ cask 'bootstrap-studio' do
   app 'Bootstrap Studio.app'
 
   zap trash: [
+               '~/Library/Application Support/bstudio',
                '~/Library/Application Support/CrashReporter/Bootstrap Studio*',
                '~/Library/Caches/bg.zine.bootstrapstudio',
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/bg.zine.bootstrapstudio.sfl2',

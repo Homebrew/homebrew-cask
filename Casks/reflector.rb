@@ -10,8 +10,8 @@ cask 'reflector' do
   app "Reflector #{version.major}.app"
 
   zap trash: [
-               '~/Library/Application Support/Logs/Reflector3.log*',
-               '~/Library/Caches/com.squirrels.Reflector-3',
-               '~/Library/Preferences/com.squirrels.Reflector-3.plist',
+               '~/Library/Application Support/Logs/Reflector*.log*',
+               '~/Library/Caches/com.squirrels.Reflector-*',
+               '~/Library/Preferences/com.squirrels.Reflector-*.plist',
              ]
 end

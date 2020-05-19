@@ -1,9 +1,9 @@
 cask 'odrive' do
-  version '6624'
-  sha256 '9baf2588d72e0979939874b8235aa8fa26cfd180f32970e453e17cc17122a1e8'
+  version '6677'
+  sha256 '1289a0c7d8abeeb85270419b9f6eb156583455447620a2da5863443918af342a'
 
   # downloads can be found at https://www.odrive.com/downloaddesktop
-  # d3huse1s6vwzq6.cloudfront.net was verified as official when first introduced to the cask
+  # d3huse1s6vwzq6.cloudfront.net/ was verified as official when first introduced to the cask
   url "https://d3huse1s6vwzq6.cloudfront.net/odrivesync.#{version}.dmg"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.odrive.com/downloaddesktop?platform=mac'
   name 'odrive'

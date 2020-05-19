@@ -1,6 +1,6 @@
 cask 'kitty' do
-  version '0.17.2'
-  sha256 'e5fe49584b4327402a49d7465b426b1626d147a474a7a0d8e355697e65df4db2'
+  version '0.17.4'
+  sha256 '9be739b3c7c5ae051cd3140d235f7a5a9958059abdfa53607a6b3985a65476f0'
 
   url "https://github.com/kovidgoyal/kitty/releases/download/v#{version}/kitty-#{version}.dmg"
   appcast 'https://github.com/kovidgoyal/kitty/releases.atom'
@@ -10,7 +10,16 @@ cask 'kitty' do
   depends_on macos: '>= :sierra'
 
   app 'kitty.app'
-  binary "#{appdir}/kitty.app/Contents/MacOS/kitty"
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/kitty.wrapper.sh"
+  binary shimscript, target: 'kitty'
+
+  preflight do
+    IO.write shimscript, <<~EOS
+      #!/bin/sh
+      exec '#{appdir}/kitty.app/Contents/MacOS/kitty' "$@"
+    EOS
+  end
 
   zap trash: [
                '~/.config/kitty',

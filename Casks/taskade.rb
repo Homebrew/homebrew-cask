@@ -1,6 +1,6 @@
 cask 'taskade' do
-  version '3.0.0'
-  sha256 '75fa033aaaa08ac02d20f4cfbe25ec6a8ee464b42a770b9b2a7e529e46e6895f'
+  version '3.1.1'
+  sha256 '2ef44ffc26d16a3f35fbf742f6add8a97b17ba1e0700dd24fc316d5307c6b2a9'
 
   url "https://apps.taskade.com/updates/Taskade-#{version}-mac.zip"
   appcast 'https://www.taskade.com/downloads'

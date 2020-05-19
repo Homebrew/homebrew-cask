@@ -1,8 +1,8 @@
 cask 'electron' do
-  version '8.2.1'
-  sha256 '3dd2e09883b1ae2fac361c59fc671473889c6dbaecc0998cc35914ea76ddf0e4'
+  version '8.3.0'
+  sha256 '582c9f9b53e8752885aa14d829f9318283f1d56eeb12982a03051d795a23e535'
 
-  # github.com/electron/electron was verified as official when first introduced to the cask
+  # github.com/electron/electron/ was verified as official when first introduced to the cask
   url "https://github.com/electron/electron/releases/download/v#{version}/electron-v#{version}-darwin-x64.zip"
   appcast 'https://github.com/electron/electron/releases.atom'
   name 'Electron'

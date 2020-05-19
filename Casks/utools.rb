@@ -1,8 +1,8 @@
 cask 'utools' do
-  version '0.8.9-beta'
-  sha256 'f4c206ee440974d1b3386333f28533d603bbfd0a0878f00c6721b74765a1c967'
+  version '1.0.6-beta'
+  sha256 'c59e4ff48d965e2f55b3e9fe4cdc740231e73841bb3396d7f7930a27e1e2225b'
 
-  # resource.u-tools.cn was verified as official when first introduced to the cask
+  # resource.u-tools.cn/ was verified as official when first introduced to the cask
   url "https://resource.u-tools.cn/currentversion/uTools-#{version}.dmg"
   appcast 'https://resource.u-tools.cn/currentversion/latest-mac.yml'
   name 'uTools'

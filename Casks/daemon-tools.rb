@@ -1,8 +1,8 @@
 cask 'daemon-tools' do
-  version '7.3.603'
-  sha256 'fea8203c973dc65c21405d8d9b3c6032c1d31226011ab06c0e56e713da0a2f3c'
+  version '8.0.663'
+  sha256 '74213d0cbc504529279506ea3cdce60703cd4c1d6b33826018445be5b438cb4f'
 
-  # web-search-home.com was verified as official when first introduced to the cask
+  # web-search-home.com/ was verified as official when first introduced to the cask
   url 'http://web-search-home.com/download/dtLiteMac'
   appcast 'http://resources.web-search-home.com/xml/DAEMONToolsLite-appcast.xml'
   name 'DAEMON Tools'

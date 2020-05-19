@@ -1,9 +1,9 @@
 cask 'futuniuniu' do
-  version '10.4.642_202004131013'
-  sha256 'f49aa27c4bdd0ae7f395e04e3539c713b97de871a0bd089eafd870d3ac5804a6'
+  version '10.5.652_202005112106'
+  sha256 'c0ad11d345646ee6f75c069335553287f28ff1bbcf0617921bcb45b2baee326d'
 
-  # software-file-1251001049.file.myqcloud.com was verified as official when first introduced to the cask
-  url "https://software-file-1251001049.file.myqcloud.com/FTNNForMac_#{version}_website.dmg"
+  # software-file-1251001049.file.myqcloud.com/ was verified as official when first introduced to the cask
+  url "https://software-file-1251001049.file.myqcloud.com/FTNNForMac_#{version}_Website.dmg"
   appcast 'https://www.futu5.com/tools'
   name 'FutuNiuniu'
   name '富途牛牛'

@@ -11,6 +11,7 @@
   "docker-compose": "homebrew/core",
   "exa": "homebrew/core",
   "exiftool": "homebrew/core",
+  "fastlane": "homebrew/core",
   "fpc": "homebrew/core",
   "gedit": "homebrew/core",
   "ghc": "homebrew/core",

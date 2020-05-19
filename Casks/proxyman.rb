@@ -1,8 +1,8 @@
 cask 'proxyman' do
-  version '1.21.0'
-  sha256 '3ea55bb49b017f622ade32a8f252d3af9dba93e0d8ca5589c63a9f85039984b2'
+  version '1.23.0'
+  sha256 'fdd7b3ed443baae38175b3bcea2ab65dddbe0c940d64e44a44d6bed92b5ae418'
 
-  # github.com/ProxymanApp/Proxyman was verified as official when first introduced to the cask
+  # github.com/ProxymanApp/Proxyman/ was verified as official when first introduced to the cask
   url "https://github.com/ProxymanApp/Proxyman/releases/download/#{version}/Proxyman_#{version}.dmg"
   appcast 'https://github.com/ProxymanApp/Proxyman/releases.atom'
   name 'Proxyman'
@@ -29,6 +29,7 @@ cask 'proxyman' do
             delete:    '/Library/PrivilegedHelperTools/com.proxyman.NSProxy.HelperTool'
 
   zap trash: [
+               '~/.proxyman*',
                '~/Library/Application Support/com.proxyman',
                '~/Library/Application Support/com.proxyman.NSProxy',
                '~/Library/Caches/Proxyman',
@@ -38,6 +39,5 @@ cask 'proxyman' do
                '~/Library/Preferences/com.proxyman.plist',
                '~/Library/Preferences/com.proxyman.NSProxy.plist',
                '~/Library/Saved Application State/com.proxyman.NSProxy.savedState',
-               '~/.proxyman',
              ]
 end

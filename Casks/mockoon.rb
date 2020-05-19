@@ -1,8 +1,8 @@
 cask 'mockoon' do
-  version '1.7.0'
-  sha256 'b0fe241a107cd2af68a23ce9ea5864a1f153ddcf69dbbb71ce60a816f01d53b2'
+  version '1.8.0'
+  sha256 '5c9d951a26acb33584cf1a1ceaf374ada52428a440efb6070edfed1ac448678e'
 
-  # github.com/mockoon/mockoon was verified as official when first introduced to the cask
+  # github.com/mockoon/mockoon/ was verified as official when first introduced to the cask
   url "https://github.com/mockoon/mockoon/releases/download/v#{version}/mockoon.setup.#{version}.dmg"
   appcast 'https://github.com/mockoon/mockoon/releases.atom'
   name 'Mockoon'

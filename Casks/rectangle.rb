@@ -1,6 +1,6 @@
 cask 'rectangle' do
-  version '0.25'
-  sha256 '9c5f8009ea024712b88e53e3d75735363b5367f060f6d59475ff97a79a80ba01'
+  version '0.29'
+  sha256 'e9e259d6b27e378b9a197164ce19c1a9d180861c01691f07642ef568927268a7'
 
   url "https://rectangleapp.com/downloads/Rectangle#{version}.dmg"
   appcast 'https://www.rectangleapp.com/downloads/updates.xml'
@@ -11,6 +11,9 @@ cask 'rectangle' do
   depends_on macos: '>= :el_capitan'
 
   app 'Rectangle.app'
+
+  uninstall quit:      'com.knollsoft.Rectangle',
+            launchctl: 'com.knollsoft.RectangleLauncher'
 
   zap trash: [
                '~/Library/Application Scripts/com.knollsoft.RectangleLauncher',

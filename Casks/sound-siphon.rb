@@ -1,8 +1,8 @@
 cask 'sound-siphon' do
-  version '3.2.1,5876'
-  sha256 'a3e28bdb4e848b43a84834ad1c07db3ddfc6c4970cd1624f7fa6133531971619'
+  version '3.2.3,5876'
+  sha256 '0e5e955a2976963580d14d1711263a8d0688a1160e4cbd147f848fa2e098e8f7'
 
-  # staticz.net was verified as official when first introduced to the cask
+  # staticz.net/ was verified as official when first introduced to the cask
   url "https://staticz.com/download/#{version.after_comma}/"
   appcast "http://staticz.net/updates/soundsiphon#{version.major}.rss"
   name 'SoundSiphon'

@@ -1,8 +1,8 @@
 cask 'razorsql' do
-  version '9.0.9'
-  sha256 '95fefa4498725539a6fa9f136cdd3894b6aba622135dd67d49e1df670ba927df'
+  version '9.1.1'
+  sha256 '836812ea45ce357bf2e8dc513e92e7373925e519cc684951eb0000af9822b610'
 
-  # s3.dualstack.us-east-1.amazonaws.com was verified as official when first introduced to the cask
+  # s3.dualstack.us-east-1.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://s3.dualstack.us-east-1.amazonaws.com/downloads.razorsql.com/downloads/#{version.dots_to_underscores}/razorsql#{version.dots_to_underscores}.dmg"
   appcast 'https://razorsql.com/updates.html'
   name 'RazorSQL'

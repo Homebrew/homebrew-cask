@@ -1,7 +1,7 @@
 cask 'banking-4' do
   # note: "4" is not a version number, but an intrinsic part of the product name
-  version '7.2.8.7397'
-  sha256 '694fd6a5db026df2003f43e9bc70521c5008af086822f32bd10026d66bcc72c6'
+  version '7.3.1'
+  sha256 '652c14223c2f22feaa2acf1a72d6722e7159d2dac7dcfdbf378369dd4f23f1fa'
 
   url 'https://subsembly.com/download/MacBanking4.pkg'
   appcast 'https://subsembly.com/banking4-macos-updates.php'

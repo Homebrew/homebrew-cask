@@ -2,7 +2,7 @@ cask 'softmaker-freeoffice' do
   version '2018,976'
   sha256 'a93564f66b1c5748dea3cd3672226dedb3d6c1f9126c3c73eaa843c222336b56'
 
-  # softmaker.net was verified as official when first introduced to the cask
+  # softmaker.net/ was verified as official when first introduced to the cask
   url "https://www.softmaker.net/down/softmaker-freeoffice-#{version.before_comma}.pkg"
   appcast 'https://www.freeoffice.com/en/support/version-history',
           configuration: version.after_comma

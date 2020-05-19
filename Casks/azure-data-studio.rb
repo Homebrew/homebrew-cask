@@ -1,9 +1,9 @@
 cask 'azure-data-studio' do
-  version '1.16.1'
-  sha256 'db228bcb4204f6cb5d1a17edd63bdb24cb3754de974fe3c048f64ca4a2e505ed'
+  version '1.17.1'
+  sha256 '47d59aab2baa2ec5b7ac5012cc84b2723603cb6c31f4dcf07a94ca6566b72cdc'
 
-  # github.com/Microsoft/azuredatastudio was verified as official when first introduced to the cask
-  url "https://github.com/Microsoft/azuredatastudio/releases/download/#{version}/azuredatastudio-macos-#{version}.zip"
+  # azuredatastudiobuilds.blob.core.windows.net was verified as official when first introduced to the cask
+  url "https://azuredatastudiobuilds.blob.core.windows.net/releases/#{version}/azuredatastudio-macos-#{version}.zip"
   appcast 'https://github.com/Microsoft/azuredatastudio/releases.atom'
   name 'Azure Data Studio'
   homepage 'https://docs.microsoft.com/en-us/sql/azure-data-studio/'

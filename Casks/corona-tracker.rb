@@ -1,8 +1,8 @@
 cask 'corona-tracker' do
-  version '1.6'
-  sha256 '25de160574deb71081f37c6573f867d29db2cbfee94b2431f4a684a6ada0a49a'
+  version '1.7'
+  sha256 '9cb1a81483a8f41446ac80e00deb668904fb4860e36321132cc5774249ee48cf'
 
-  # github.com/MhdHejazi/CoronaTracker was verified as official when first introduced to the cask
+  # github.com/MhdHejazi/CoronaTracker/ was verified as official when first introduced to the cask
   url "https://github.com/MhdHejazi/CoronaTracker/releases/download/v#{version}/CoronaTracker-macOS.zip"
   appcast 'https://github.com/MhdHejazi/CoronaTracker/releases.atom'
   name 'Corona Tracker'

@@ -1,8 +1,8 @@
 cask 'hbuilderx' do
-  version '2.6.11.20200409'
-  sha256 '6084ac251c01f4a75ae553b95b2d1a7af2033741b70d79006a596133b04366cb'
+  version '2.6.16.20200424'
+  sha256 '5a858bad055af25542c26e0c97474a148419e74c5d4da6842f1856f52a5f8dad'
 
-  # download.dcloud.net.cn was verified as official when first introduced to the cask
+  # download.dcloud.net.cn/ was verified as official when first introduced to the cask
   url "https://download.dcloud.net.cn/HBuilderX.#{version}.dmg"
   appcast 'https://dcloud.io/docs/HBuilder.json'
   name 'HBuilderX'

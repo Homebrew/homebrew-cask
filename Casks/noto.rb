@@ -7,6 +7,8 @@ cask 'noto' do
   name 'Noto'
   homepage 'https://brunophilipe.com/software/noto/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Noto.app'
 
   zap trash: [
