@@ -1,6 +1,6 @@
 cask 'enpass' do
-  version '6.4.1.643'
-  sha256 '4dc48f1ef867194a57dd34a262b7fd0826e9e32fcc4c22feab14eb006760ad07'
+  version '6.4.2.669'
+  sha256 'c121a4182822fe09b5b69bd2d9dc85ea243a9ea4d219bae0f17a630215b985c2'
 
   url "https://dl.enpass.io/stable/mac/package/#{version}/Enpass.pkg"
   appcast 'https://rest.enpass.io/enpass/alert/?format=json&language=en%7Cen&os=osx%7C10.14&package=in.sinew.Enpass-Desktop.App&version=0.0.0'
