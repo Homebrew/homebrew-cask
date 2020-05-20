@@ -1,6 +1,6 @@
 cask 'openaudible' do
-  version '2.0.7'
-  sha256 '642b067614c120bdfc8378c0fd1b16f303ae508c988df72c807a87ac15550dd8'
+  version '2.0.8'
+  sha256 '46ee778e429e1b7b5896227513afc357a38df369c1daadd8a08a0981113c8520'
 
   # github.com/openaudible/ was verified as official when first introduced to the cask
   url "https://github.com/openaudible/openaudible/releases/download/v#{version}/OpenAudible_#{version}_mac.dmg"
