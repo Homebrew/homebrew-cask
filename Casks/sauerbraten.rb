@@ -6,7 +6,7 @@ cask 'sauerbraten' do
   url "https://downloads.sourceforge.net/sauerbraten/sauerbraten_#{version.dots_to_underscores}_collect_edition_macosx.dmg"
   appcast 'https://sourceforge.net/projects/sauerbraten/rss'
   name 'Cube 2: Sauerbraten'
-  homepage 'http://sauerbraten.org/'
+  homepage 'http://cubeengine.com/'
 
   app 'Sauerbraten.app'
 end
