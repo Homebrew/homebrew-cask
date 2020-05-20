@@ -11,6 +11,7 @@ cask 'couchbase-server-enterprise' do
     sha256 'c2f6969d60658d2873153627b23385c92109f88a36e45889fc39e26599f6fa0f'
 
     url "https://packages.couchbase.com/releases/#{version}/couchbase-server-enterprise_#{version}-macos_x86_64.dmg"
+    appcast 'http://appcast.couchbase.com/membasex.xml'
 
     app 'Couchbase Server.app'
   end
