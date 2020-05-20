@@ -7,5 +7,7 @@ cask 'ipfs' do
   name 'IPFS Desktop'
   homepage 'https://github.com/ipfs-shipyard/ipfs-desktop'
 
+  auto_updates true
+
   app 'IPFS Desktop.app'
 end
