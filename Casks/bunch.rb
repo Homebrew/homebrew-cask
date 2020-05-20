@@ -1,6 +1,6 @@
 cask 'bunch' do
-  version '1.2.3,42'
-  sha256 '433ae9232173a4f9e3f4b7669236790f7e6b6d3580d80f60e90907cc8bd5a6f7'
+  version '1.2.4,44'
+  sha256 '0d78878d90c55be7cd56e2572c5c97ad8204d116cbe4f1f568465d1a0e85b925'
 
   url "https://cdn3.brettterpstra.com/updates/bunch/Bunch#{version.before_comma}#{version.after_comma}.dmg"
   appcast 'https://brettterpstra.com/updates/bunch/appcast.xml'
