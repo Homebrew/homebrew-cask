@@ -8,7 +8,7 @@ cask 'jdk-mission-control' do
   name 'JDK Mission Control'
   homepage 'https://jdk.java.net/jmc/'
 
-  app "jmc-#{version.major}+#{version.after_comma}_osx-x64_bin/JDK Mission Control.app"
+  app "jmc-#{version.before_comma}+#{version.after_comma}_osx-x64_bin/JDK Mission Control.app"
 
   caveats do
     depends_on_java '11'
