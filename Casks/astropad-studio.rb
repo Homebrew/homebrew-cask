@@ -4,7 +4,7 @@ cask 'astropad-studio' do
 
   # s3.amazonaws.com/astropad.com/ was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/astropad.com/downloads/AstropadStudio-#{version}.dmg"
-  appcast 'https://astropad.com/downloads/studio-sparkle.xml'
+  appcast 'https://s3.amazonaws.com/astropad.com/downloads/studio-sparkle.xml'
   name 'Astropad Studio'
   homepage 'https://astropad.com/'
 
