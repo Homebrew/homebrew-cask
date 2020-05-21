@@ -1,10 +1,9 @@
 cask 'lightworks' do
-  version '14.5.0'
-  sha256 '8b7d5890f7c0f2ede05d4de16a7a09e5bfc5b322690e70cbd2e481e3638e738c'
+  version '2020.1_r122068'
+  sha256 'c55738a83be001b2d020af7d77629791838c044428a7e74ca2260735023757a9'
 
-  url "https://downloads.lwks.com/v#{version.major_minor.dots_to_hyphens}-new/lightworks_v#{version}.dmg"
-  appcast 'https://www.lwks.com/index.php?option=com_lwks&view=download&Itemid=206&tab=2',
-          configuration: version.major_minor
+  url "https://cdn.lwks.com/releases/lightworks_#{version}.dmg"
+  appcast 'https://www.lwks.com/index.php?option=com_lwks&view=download&Itemid=206&tab=2'
   name 'Lightworks'
   homepage 'https://www.lwks.com/'
 
