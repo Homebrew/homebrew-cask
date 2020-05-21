@@ -1,6 +1,6 @@
 cask 'gitfiend' do
-  version '0.22.8'
-  sha256 '8d0eaaf47074c28d97f8fca7780e11f868adb8ab97f18c8e196f54817a86237d'
+  version '0.23.1'
+  sha256 '2b231a127c92857fa46d3832cf3bdde4486e75fad48e248cf1696474b1357394'
 
   url "https://gitfiend.com/resources/GitFiend-#{version}.dmg"
   appcast 'https://gitfiend.com/app-info'
@@ -17,9 +17,7 @@ cask 'gitfiend' do
   preflight do
     IO.write shimscript, <<~EOS
       #!/bin/sh
-      node() { ELECTRON_RUN_AS_NODE=1 "#{appdir}/GitFiend.app/Contents/MacOS/GitFiend" "${@}"; }
-      readonly project="$(node -e 'console.log(path.resolve(process.argv[1]))' "${1}")"
-      open -a "#{appdir}/GitFiend.app" --args "${project}"
+      exec '#{appdir}/GitFiend.app/Contents/MacOS/GitFiend' "$@"
     EOS
   end
 
