@@ -18,7 +18,7 @@ cask 'scilab' do
     depends_on_java '8'
 
     <<~EOS
-      If prompted to install the legacy Java 6, point #{token} to your installed JDK with the enableJDK tool provided by the vendor:
+      If prompted to install the legacy Java 6, use the enableJDK tool provided by the vendor to enable installed JDK to use with #{token}:
 
         https://www.utc.fr/~mottelet/scilab_for_macOS.html
     EOS
