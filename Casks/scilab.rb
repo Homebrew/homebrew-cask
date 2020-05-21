@@ -18,10 +18,9 @@ cask 'scilab' do
     depends_on_java '8'
 
     <<~EOS
-      When launching the app, if propmted to install legacy Java 6 after
-      installing JDK, use this utility provided by the developer to enable
-      installed JDK to use with Scilab:
-      https://www.utc.fr/~mottelet/java/enableJDK.dmg
+      When launching the app, if prompted to install legacy Java 6 after installing JDK, use the utility provided by the developer to enable installed JDK to use with Scilab:
+
+        https://www.utc.fr/~mottelet/java/enableJDK.dmg
     EOS
   end
 end
