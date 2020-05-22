@@ -1,9 +1,10 @@
 cask 'baidunetdisk' do
-  version '3.2.0.9'
+  version '3.2.0'
+  bundlever = "#{version}.9"
   sha256 '3b08163e41e9a497a56337c484da5b60541534f85a9d242b236914781589d055'
 
   # baidupcs.com/issue/netdisk/MACguanjia/ was verified as official when first introduced to the cask
-  url "https://wppkg.baidupcs.com/issue/netdisk/MACguanjia/BaiduNetdisk_mac_#{version}.dmg"
+  url "https://wppkg.baidupcs.com/issue/netdisk/MACguanjia/BaiduNetdisk_mac_#{bundlever}.dmg"
   appcast 'https://pan.baidu.com/disk/cmsdata?do=client'
   name 'Baidu NetDisk'
   name '百度网盘'
