@@ -4,7 +4,7 @@ cask 'accurics-cli' do
 
   url 'http://downloads.accurics.com/cli/accurics-cli.dmg'
   name 'Accurics CLI'
-  homepage 'https://www.accurics.com'
+  homepage 'https://www.accurics.com/'
 
   binary 'accurics-cli'
 end
