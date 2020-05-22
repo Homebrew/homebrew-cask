@@ -1,8 +1,8 @@
 cask 'adobe-acrobat-reader' do
-  version '20.009.20063'
-  sha256 'c1ac09a5e82df9e27f313d41750e25960ffe9ee789247f5131e4bf858868d7df'
+  version '20.009.20065'
+  sha256 '177e2ad4b2c99b98be2a11fc091045be14918b4e068bfcc679eff77433c99f4b'
 
-  url "https://ardownload2.adobe.com/pub/adobe/reader/mac/AcrobatDC/#{version.no_dots}/AcroRdrDC_#{version.no_dots}_MUI.dmg"
+  url "https://ardownload2.adobe.com/pub/adobe/reader/mac/AcrobatDC/#{version.no_dots}/AcroRdrDCUpd#{version.no_dots}_MUI.dmg"
   appcast 'https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/index.html'
   name 'Adobe Acrobat Reader DC'
   homepage 'https://acrobat.adobe.com/us/en/acrobat/pdf-reader.html'
