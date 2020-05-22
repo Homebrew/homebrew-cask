@@ -1,6 +1,6 @@
 cask 'azure-data-studio' do
-  version '1.17.1'
-  sha256 '47d59aab2baa2ec5b7ac5012cc84b2723603cb6c31f4dcf07a94ca6566b72cdc'
+  version '1.18.0'
+  sha256 '89c859d1b36f22be8198ceef96d8eb408f488ae82ad53479ee2e4ea6ecfe4488'
 
   # azuredatastudiobuilds.blob.core.windows.net was verified as official when first introduced to the cask
   url "https://azuredatastudiobuilds.blob.core.windows.net/releases/#{version}/azuredatastudio-macos-#{version}.zip"
