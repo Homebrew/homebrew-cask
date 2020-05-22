@@ -8,5 +8,16 @@ cask 'beaker-browser' do
   name 'Beaker Browser'
   homepage 'https://beakerbrowser.com/'
 
+  auto_updates true
+
   app 'Beaker Browser.app'
+
+  zap trash: [
+               '~/Library/Application Support/Beaker Browser',
+               '~/Library/Application Support/Caches/beaker-browser-updater',
+               '~/Library/Caches/com.pfrazee.beaker-browser',
+               '~/Library/Caches/com.pfrazee.beaker-browser.ShipIt',
+               '~/Library/Preferences/com.pfrazee.beaker-browser.plist',
+               '~/Library/Saved Application State/com.pfrazee.beaker-browser.savedState',
+             ]
 end
