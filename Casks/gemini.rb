@@ -16,5 +16,6 @@ cask 'gemini' do
                '~/Library/Logs/com.macpaw.site.Gemini*',
                '~/Library/Preferences/com.macpaw.site.Gemini*',
                '~/Library/Saved Application State/com.macpaw.site.Gemini*',
+               "/Users/Shared/Gemini #{version.major}",
              ]
 end
