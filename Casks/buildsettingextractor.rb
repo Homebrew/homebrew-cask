@@ -7,5 +7,7 @@ cask 'buildsettingextractor' do
   name 'BuildSettingExtractor'
   homepage 'https://github.com/dempseyatgithub/BuildSettingExtractor'
 
+  depends_on macos: '>= :mojave'
+
   app 'BuildSettingExtractor.app'
 end
