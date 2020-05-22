@@ -11,7 +11,7 @@ cask 'responsively' do
   app 'ResponsivelyApp.app'
 
   zap trash: [
-    '~/Library/Application Support/ResponsivelyApp',
-    '~/Library/Preferences/app.responsively.plist'
-  ]
+               '~/Library/Application Support/ResponsivelyApp',
+               '~/Library/Preferences/app.responsively.plist',
+             ]
 end
