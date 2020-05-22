@@ -13,7 +13,7 @@ cask 'navicat-premium' do
 
   appcast 'https://updater.navicat.com/mac/navicat_updates.php?appName=Navicat%20Premium&appLang=en'
   name 'Navicat Premium'
-  homepage "https://www.navicat#{language[0]}/products/navicat-premium"
+  homepage "https://www.navicat.com/products/navicat-premium"
 
   app 'Navicat Premium.app'
 end
