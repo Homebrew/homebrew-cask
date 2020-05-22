@@ -8,7 +8,7 @@ cask 'imaging-edge' do
   name 'Sony Imaging Edge'
   homepage 'https://imagingedge.sony.net/en-us/ie-desktop.html'
 
-  pkg "ied_#{version.before_comma}.pkg"
+  pkg "ied_#{version.before_comma.dots_to_underscores}.pkg"
 
   uninstall pkgutil: 'com.sony.ImagingEdgeVer.1.pkg',
             delete:  '/Applications/Imaging Edge'
