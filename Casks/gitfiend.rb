@@ -10,6 +10,16 @@ cask 'gitfiend' do
   auto_updates true
 
   app 'GitFiend.app'
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/gitfiend.wrapper.sh"
+  binary shimscript, target: 'gitfiend'
+
+  preflight do
+    IO.write shimscript, <<~EOS
+      #!/bin/sh
+      exec '#{appdir}/GitFiend.app/Contents/MacOS/GitFiend' "$@"
+    EOS
+  end
 
   zap trash: [
                '~/Library/Application Support/GitFiend',
