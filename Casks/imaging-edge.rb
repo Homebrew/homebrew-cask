@@ -4,7 +4,7 @@ cask 'imaging-edge' do
 
   # di.update.sony.net/NEX/ was verified as official when first introduced to the cask
   url "https://di.update.sony.net/NEX/#{version.after_comma}/ied_#{version.before_comma}.dmg"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://support.d-imaging.sony.co.jp/disoft_DL/imagingedge_DL/mac?fm=en',
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://support.d-imaging.sony.co.jp/disoft_DL/desktop_DL/mac?fm=en',
           configuration: version.after_comma
   name 'Sony Imaging Edge'
   homepage 'https://support.d-imaging.sony.co.jp/app/imagingedge/'
