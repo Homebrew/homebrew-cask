@@ -10,5 +10,5 @@ cask 'accurics-cli' do
 
   binary 'accurics-cli'
 
-  zap trash: ['~/.accurics-cli/']
+  zap trash: '~/.accurics-cli/'
 end
