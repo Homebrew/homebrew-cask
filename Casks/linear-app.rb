@@ -4,7 +4,7 @@ cask 'linear-app' do
 
   url "https://download.linear.app/darwin/Linear-darwin-x64-#{version}.zip"
   name 'Linear'
-  homepage 'https://linear.app'
+  homepage 'https://linear.app/'
 
   app 'Linear.app'
 end
