@@ -43,7 +43,8 @@ The following methods may be called to generate standard warning messages:
 | `discontinued`                     | all software development has been officially discontinued upstream.
 | `free_license 'web_page'`          | users may get an official license to use the software at `web_page`.
 | `kext`                             | users may need to enable their kexts in System Preferences → Security & Privacy → General.
-| `license 'web_page'`               | software has a usage license at `web_page`.
+| `unsigned_accessibility`           | users will need to re-enable the app on each update in System Preferences → Security & Privacy → Privacy as it is unsigned.
+| `license 'web_page'`               | software has a usage license at `web_page`.
 
 Example:
 

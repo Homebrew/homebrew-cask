@@ -19,4 +19,8 @@ cask 'copyq' do
       exec '#{appdir}/CopyQ.app/Contents/MacOS/CopyQ' "$@"
     EOS
   end
+
+  caveats do
+    unsigned_accessibility
+  end
 end
