@@ -8,7 +8,7 @@ cask 'rstudio' do
   name 'RStudio'
   homepage 'https://www.rstudio.com/'
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :high_sierra'
 
   app 'RStudio.app'
 
