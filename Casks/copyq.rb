@@ -19,4 +19,16 @@ cask 'copyq' do
       exec '#{appdir}/CopyQ.app/Contents/MacOS/CopyQ' "$@"
     EOS
   end
+
+  caveats <<~EOS
+    As the CopyQ app is not signed, you will have to re-grant Accessibility
+    access every time the app is updated:
+
+    Run:
+      open /System/Library/PreferencePanes/Security.prefPane
+    or go to:
+      System Preferences -> Security & Privacy -> Accessibility
+    then:
+      Untick and retick CopyQ.app
+  EOS
 end
