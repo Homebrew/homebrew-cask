@@ -1,14 +1,14 @@
 cask 'accurics-cli' do
-  version '0.0.3'
-  sha256 'b0d1ec5975ae3717f48657a57c07cbf0f606cccf00b879fb9236567f6f63213d'
+  version '0.0.4'
+  sha256 '74f0f00ac9f8f4ad47f5dcb81eaabad1587eedf458d41ec5d91d54490376b0ae'
 
-  url 'http://downloads.accurics.com/cli/accurics-cli.dmg'
-  appcast 'http://downloads.accurics.com/cli/accurics-cli.yml',
+  url "http://downloads.accurics.com/cli/#{version}/accurics-cli.dmg"
+  appcast "http://downloads.accurics.com/cli/#{version}/accurics-cli.yml",
           configuration: version
   name 'Accurics CLI'
   homepage 'https://www.accurics.com/'
 
-  binary 'accurics-cli'
+  binary 'accurics'
 
-  zap trash: '~/.accurics-cli/'
+  zap trash: '~/.accurics/'
 end
