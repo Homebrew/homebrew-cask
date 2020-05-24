@@ -7,6 +7,7 @@ import hashlib
 
 def getsha(url, version, language):
     url = url.replace("#{version}", version)
+    url = url.replace("#{version.major_minor.no_dots}", ''.join(version.split(".")[0:2]))
     url = url.replace("#{language}", language)
     response = urllib2.urlopen(url)
     download = response.read()
