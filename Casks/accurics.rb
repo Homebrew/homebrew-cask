@@ -1,4 +1,4 @@
-cask 'accurics-cli' do
+cask 'accurics' do
   version '0.0.4'
   sha256 '74f0f00ac9f8f4ad47f5dcb81eaabad1587eedf458d41ec5d91d54490376b0ae'
 
