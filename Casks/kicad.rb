@@ -28,7 +28,7 @@ cask 'kicad' do
 
   uninstall rmdir: [
                      '/Library/Application Support/kicad',
-                     "{appdir}/KiCad",
+                     "#{appdir}/KiCad",
                    ]
 
   zap trash: '~/Library/Preferences/kicad'
