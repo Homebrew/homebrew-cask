@@ -1,6 +1,6 @@
 cask 'knotes' do
-  version '1.6.0'
-  sha256 '8884b6a67f1c43b7880ff5da957f2c0684f3afb12a6f1fc24b960d72e2f9bae9'
+  version '1.7.0'
+  sha256 '809b39fedc8a0b095d2823d0f5efcacb94354892c06da03cc4c6e2fc4341dedd'
 
   # knotes-release-cn.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://knotes-release-cn.s3.amazonaws.com/mac/Knotes-#{version}-mac.zip"
