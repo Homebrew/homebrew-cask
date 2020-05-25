@@ -2,6 +2,7 @@ cask 'macpilot' do
   if MacOS.version <= :mojave
     version '11.1.3'
     sha256 '1990b04414896ef24767e58cd9b56901460375ee8fb805572ca34da019bcda58'
+
     url 'https://www.koingosw.com/products/macpilot/download/old/macpilot_11.1.3_intel_for_1013to1015.dmg'
   else
     version '11.1.4'
