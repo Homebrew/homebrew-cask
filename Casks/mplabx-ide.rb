@@ -27,7 +27,7 @@ cask 'mplabx-ide' do
 
   postflight do
     set_ownership staged_path.to_s
-    set_ownership "#{appdir}/microchip"
+    set_ownership '/Applications/microchip'
   end
 
   uninstall script: {
@@ -36,5 +36,5 @@ cask 'mplabx-ide' do
                       input:      ['y', 3],
                       sudo:       true,
                     },
-            delete: ["#{appdir}/microchip"]
+            delete: '/Applications/microchip'
 end
