@@ -1,6 +1,6 @@
 cask 'framer-x' do
-  version '36850,1581607967'
-  sha256 'cb038c9bc30b146af209bec51b1e443b937c2639da8572770e15185c275cf63c'
+  version '36854,1590141192'
+  sha256 'ff8d2ea3ad84600942c25466e0fbc8efbf5cf0fa9995a8ac6796442a5e3e2359'
 
   url "https://dl.framer.com/com.framer.x/#{version.before_comma}/#{version.after_comma}/FramerX-#{version.before_comma}.zip"
   appcast 'https://updates.framer.com/sparkle/com.framer.x'
