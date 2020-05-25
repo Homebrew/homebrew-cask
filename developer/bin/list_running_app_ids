@@ -9,12 +9,14 @@
 
 require "open3"
 require "set"
+require "io/console"
 
 ###
 ### globals
 ###
 
 $opt_test = nil
+$COLUMNS = IO.console.winsize.last
 
 ###
 ### methods
@@ -86,23 +88,18 @@ def excluded_app_name(app_name)
   %r{^osascript$}.match(app_name) # this script itself
 end
 
-def expand(table)
-  @COLUMNS = `/usr/bin/tput cols`.to_i
-  puts `echo '#{table}'| /usr/bin/expand -t#{@COLUMNS / 2}`
-end
-
 def report_apps
   running = Set.new
   @app_names.zip(@bundle_ids, @unix_ids).each do |app_name, bundle_id, _unix_id|
     next if excluded_bundle_id bundle_id
     next if excluded_app_name app_name
     bundle_id.gsub!(%r{^(missing value)$}, '<\1>')
-    running.add "#{bundle_id}\t#{app_name}"
+    running.add "#{bundle_id.ljust($COLUMNS / 2)}\t#{app_name}"
   end
 
-  expand "bundle_id\tapp_name"
-  puts "-" * @COLUMNS + "\n"
-  expand running.to_a.sort.join "\n"
+  puts "bundle_id".ljust($COLUMNS / 2) + "\tapp_name"
+  puts "-" * $COLUMNS
+  puts running.to_a.sort.join "\n"
 end
 
 ###
