@@ -1,0 +1,12 @@
+cask 'obsidian' do
+  version '0.6.4'
+  sha256 '1da5fffd869201ba044137ebfaf0f0659982a653f3f5b75d6634c410f8eb6b8c'
+
+  # github.com was verified as official when first introduced to the cask
+  url 'https://github.com/obsidianmd/obsidian-releases/releases/download/v0.6.4/Obsidian-0.6.4.dmg'
+  appcast 'https://github.com/obsidianmd/obsidian-releases/releases.atom'
+  name '0.6.4'
+  homepage 'https://obsidian.md/'
+
+  app 'Obsidian.app'
+end
