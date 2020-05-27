@@ -14,7 +14,6 @@ cask 'expressvpn' do
   uninstall script:  {
                        executable: "#{appdir}/ExpressVPN.app/Contents/Resources/uninstall.tool",
                        input:      ['Yes'],
-                       sudo:       true,
                      },
             pkgutil: 'com.expressvpn.ExpressVPN'
 end
