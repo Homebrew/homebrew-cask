@@ -1,6 +1,6 @@
 cask 'responsively' do
-  version '0.1.4'
-  sha256 '7a671573de3dd66b8dacc7cb6a94c86c9f1290ae4b66970e265d90f8bcdaa005'
+  version '0.1.5'
+  sha256 'a16a8310ce700a7c5594d1556eec5e30c9c816df7da92bd120c2c1dbebb5c6f0'
 
   # github.com/manojVivek/responsively-app/ was verified as official when first introduced to the cask
   url "https://github.com/manojVivek/responsively-app/releases/download/v#{version}/ResponsivelyApp-#{version}.dmg"
