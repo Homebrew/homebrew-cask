@@ -1,13 +1,14 @@
 cask 'bricklink-studio' do
-  version :latest
-  sha256 :no_check
+  version '2.1.4_2'
+  sha256 'f63a924d4f0349322e298c68691ce080046995c59b8dfa02d803a3af03bf0a1b'
 
-  # blstudio.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url 'https://blstudio.s3.amazonaws.com/Studio2.0/Studio+2.0.pkg'
-  name 'Stud.io'
-  homepage 'https://studio.bricklink.com/v2/build/studio.page'
+  # s3.amazonaws.com/blstudio/ was verified as official when first introduced to the cask
+  url "https://s3.amazonaws.com/blstudio/Studio#{version.major}.0/Archive/#{version}/Studio+#{version.major}.0.pkg"
+  appcast 'https://www.bricklink.com/v3/studio/download.page'
+  name 'Studio'
+  homepage 'https://www.bricklink.com/v3/studio/download.page'
 
-  pkg 'Studio+2.0.pkg'
+  pkg "Studio+#{version.major}.0.pkg"
 
-  uninstall pkgutil: 'com.bricklink.pkg.Studio'
+  uninstall pkgutil: "com.bricklink.pkg.Studio#{version.major}.0"
 end
