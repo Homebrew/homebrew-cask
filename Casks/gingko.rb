@@ -1,6 +1,6 @@
 cask 'gingko' do
-  version '2.4.11'
-  sha256 '29533740f8b406f61ad6b620323ad23968b30a5e726bfff8b1697b2f8dca8390'
+  version '2.4.13'
+  sha256 '46fb75be0b6b4cc1b6d8de657ded195996e181cd4063df25634be5399ff6b9a3'
 
   # github.com/gingko/client/ was verified as official when first introduced to the cask
   url "https://github.com/gingko/client/releases/download/v#{version}/Gingko-#{version}-mac.zip"

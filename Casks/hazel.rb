@@ -15,6 +15,7 @@ cask 'hazel' do
   uninstall quit: 'com.noodlesoft.HazelHelper'
 
   zap trash: [
+               '~/Library/Logs/Hazel',
                '~/Library/Application Support/Hazel',
                '~/Library/Preferences/com.noodlesoft.Hazel.plist',
                '~/Library/Preferences/com.noodlesoft.HazelHelper.plist',
