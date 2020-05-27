@@ -5,7 +5,7 @@ cask 'connectiq' do
   url "https://developer.garmin.com/downloads/connect-iq/sdks/connectiq-sdk-mac-#{version}.dmg"
   appcast 'https://developer.garmin.com/connect-iq/sdk/'
   name 'Garmin Connect IQ SDK'
-  homepage 'https://developer.garmin.com/connect-iq'
+  homepage 'https://developer.garmin.com/connect-iq/'
 
   app "connectiq-sdk-mac-#{version}/bin/ConnectIQ.app"
   binary "connectiq-sdk-mac-#{version}/bin/connectiq"
