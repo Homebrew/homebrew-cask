@@ -1,12 +1,12 @@
 cask 'intel-power-gadget' do
-  version '3.7.0,843900'
-  sha256 '22ed3fe050c3b965841ccc5590a3a03bb9498f8620e01ba4dea5557dcd24fe43'
+  version '3.6.0'
+  sha256 'b99c5c55b541e7b6c5d1a390b11ee662352b8dae955df183d7e1113cebd94ab6'
 
-  url "https://software.intel.com/file/#{version.after_comma}/download"
-  appcast 'https://software.intel.com/en-us/articles/intel-power-gadget',
-          configuration: version.after_comma
+  url 'https://software.intel.com/content/dam/develop/external/us/en/documents/Intel%20Power%20Gadget.dmg'
+  appcast 'https://software.intel.com/content/www/us/en/develop/articles/intel-power-gadget.html',
+          configuration: version.major
   name 'Intel Power Gadget'
-  homepage 'https://software.intel.com/en-us/articles/intel-power-gadget'
+  homepage 'https://software.intel.com/content/www/us/en/develop/articles/intel-power-gadget.html'
 
   auto_updates true
   depends_on macos: '>= :high_sierra'
