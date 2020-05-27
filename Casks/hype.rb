@@ -1,6 +1,6 @@
 cask 'hype' do
-  version '4.0.3'
-  sha256 '56f57bc7c9be4d535ac1ed32f3c227c50bcb3651c11d474282a56bee4537a876'
+  version '4.0.5'
+  sha256 'b82df0a64efb6bacca003f1efa57fff577fc32a61196459548b68ab200f9dd36'
 
   url 'https://tumult.com/hype/download/Hype.zip'
   appcast "https://tumult.com/hype/appcast_hype#{version.major}.xml"
