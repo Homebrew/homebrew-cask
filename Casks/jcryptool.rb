@@ -3,7 +3,8 @@ cask 'jcryptool' do
   sha256 '8c6e6b3fe803f40e7c5e9a910a47e6c3c5f0f5a8884932dd253e63f8b83194af'
 
   url "https://www.cryptool.org/jctdownload/Builds/downloads/stable/jcryptool-#{version}-macosx.cocoa.x86_64.tar.gz"
-  appcast 'https://www.cryptool.org/en/jct-downloads/stable'
+  appcast 'https://www.cryptool.org/en/jct-downloads',
+          configuration: version.major_minor
   name 'JCrypTool'
   homepage 'https://www.cryptool.org/en/jcryptool'
 
