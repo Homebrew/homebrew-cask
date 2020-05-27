@@ -5,7 +5,7 @@ cask 'obsidian' do
   # github.com/obsidianmd/ was verified as official when first introduced to the cask
   url "https://github.com/obsidianmd/obsidian-releases/releases/download/v#{version}/Obsidian-#{version}.dmg"
   appcast 'https://github.com/obsidianmd/obsidian-releases/releases.atom'
-  name '0.6.4'
+  name 'Obsidian'
   homepage 'https://obsidian.md/'
 
   app 'Obsidian.app'
