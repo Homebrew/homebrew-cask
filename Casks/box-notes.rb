@@ -4,6 +4,7 @@ cask 'box-notes' do
 
   # boxcdn.net/ was verified as official when first introduced to the cask
   url 'https://e3.boxcdn.net/box-installers/boxnotes/mac/latest/Box%20Notes.zip'
+  appcast "https://notes.services.box.com/updates/latest?platform=darwin&v=#{version.major}.0.0"
   name 'Box Notes'
   homepage 'https://www.box.com/resources/downloads/notes'
 
