@@ -8,7 +8,7 @@ cask 'auristor-client' do
     sha256 'dee691a8b1e8712ebe9dfaa912b84cb5918e7b9810227cfcfbbc20d1a2bde6c1'
     url "https://www.auristor.com/downloads/auristor/osx/macos-10.13/AuriStor-client-#{version}-HighSierra.dmg"
   elsif MacOS.version <= :mojave
-    sha256 '47830671ce3b5cb7253b9554701ec81bf61d4b4153c2a882e86774868c5dbad9'
+    sha256 '9b0ff041d5158ab63b95e2520a01c81a9e6535f06955ff1e0c18a0b635b4f553'
     url "https://www.auristor.com/downloads/auristor/osx/macos-10.14/Auristor-client-#{version}-Mojave.dmg"
   else
     sha256 'f24a450376bbfe9d6994c34a4bd8fe05af3c5522d93b01a8930d808d88dc5ca1'
