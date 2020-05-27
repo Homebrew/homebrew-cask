@@ -7,5 +7,7 @@ cask 'mountain-duck' do
   name 'Mountain Duck'
   homepage 'https://mountainduck.io/'
 
+  auto_updates true
+
   app 'Mountain Duck.app'
 end
