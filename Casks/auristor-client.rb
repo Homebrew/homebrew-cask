@@ -5,7 +5,7 @@ cask 'auristor-client' do
     sha256 '909f53f46b1dcfe627fd421f3b91f0e62010b35891d4407100780a5c52cc1704'
     url "https://www.auristor.com/downloads/auristor/osx/macos-10.12/AuriStor-client-#{version}-Sierra.dmg"
   elsif MacOS.version <= :high_sierra
-    sha256 'f0d2e9c4f94e9178e790174b24a6c0e4b9593cafd0d6191ef0321c69cc141c24'
+    sha256 'dee691a8b1e8712ebe9dfaa912b84cb5918e7b9810227cfcfbbc20d1a2bde6c1'
     url "https://www.auristor.com/downloads/auristor/osx/macos-10.13/AuriStor-client-#{version}-HighSierra.dmg"
   elsif MacOS.version <= :mojave
     sha256 '47830671ce3b5cb7253b9554701ec81bf61d4b4153c2a882e86774868c5dbad9'
