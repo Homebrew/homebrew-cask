@@ -9,4 +9,10 @@ cask 'obsidian' do
   homepage 'https://obsidian.md/'
 
   app 'Obsidian.app'
+
+  zap trash: [
+               '~/Library/Application Support/obsidian',
+               '~/Library/Preferences/md.obsidian.plist',
+               '~/Library/Saved Application State/md.obsidian.savedState',
+             ]
 end
