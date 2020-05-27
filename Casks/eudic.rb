@@ -1,5 +1,5 @@
 cask 'eudic' do
-  version '2020-04-05,3.9.6'
+  version '2020-04-27,3.9.6'
   sha256 '5cec29af3ff50a6658c81c33466166aa0de18097ec649ec82557517cf2f73d2e'
 
   # static.frdic.com/ was verified as official when first introduced to the cask
