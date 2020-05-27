@@ -1,6 +1,6 @@
 cask 'qq' do
-  version '6.6.3'
-  sha256 'fbaf81be78769bca07675d56612aeb4e3f7ef2ab3929901e262ed7baa81243b8'
+  version '6.6.5'
+  sha256 'f9c81cbc54c61bd1bb6a3aa7c9de82b52766b2cad0b15d02acf8b914535074c1'
 
   url "https://dldir1.qq.com/qqfile/QQforMac/QQ_#{version}.dmg"
   appcast 'https://im.qq.com/proxy/domain/qzonestyle.gtimg.cn/qzone/qzactStatics/configSystem/data/1373/config1.js'
