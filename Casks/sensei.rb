@@ -1,6 +1,6 @@
 cask 'sensei' do
-  version '1.2.2,52'
-  sha256 '88299beb2d6e7774a542486fa8e7a6fa21457c68981d89847405a3374e4fb8b1'
+  version '1.2.3,53'
+  sha256 '23850d570e3cdd8dbe353bf5c88e9ddfc6cc89e2130226eebc9a09c6ce747472'
 
   # cindori.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url 'https://cindori.s3.amazonaws.com/Sensei.dmg'
