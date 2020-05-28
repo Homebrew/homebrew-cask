@@ -12,9 +12,11 @@ cask 'coteditor' do
 
   # github.com/coteditor/CotEditor/ was verified as official when first introduced to the cask
   url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
-  appcast 'https://github.com/coteditor/CotEditor/releases.atom'
+  appcast 'https://coteditor.com/appcast.xml'
   name 'CotEditor'
   homepage 'https://coteditor.com/'
+
+  auto_updates true
 
   app 'CotEditor.app'
   binary "#{appdir}/CotEditor.app/Contents/SharedSupport/bin/cot"
