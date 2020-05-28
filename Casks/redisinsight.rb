@@ -9,7 +9,5 @@ cask 'redisinsight' do
 
   app 'redisinsight.app'
 
-  zap trash: [
-               '~/Library/Saved Application State/com.redislabs.redisinsight.savedState',
-             ]
+  zap trash: '~/Library/Saved Application State/com.redislabs.redisinsight.savedState'
 end
