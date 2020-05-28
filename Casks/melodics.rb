@@ -1,6 +1,6 @@
 cask 'melodics' do
-  version '2.1.4423'
-  sha256 'a1d334f563f729ef41d00b407537b0f3329e54a9e1a8f777d0c462d2856d2bba'
+  version '2.1.4451'
+  sha256 'e6f328148141143cdd3a6d70b906a6d0fe24f55ea9110d59fc79c0b7acbd2754'
 
   url "https://web-cdn.melodics.com/download/MelodicsV#{version.major}.dmg"
   appcast "https://web-cdn.melodics.com/download/osxupdatescastv#{version.major}.xml"
