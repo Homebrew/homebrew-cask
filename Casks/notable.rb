@@ -16,5 +16,6 @@ cask 'notable' do
                '~/Library/Saved Application State/com.fabiospampinato.notable.savedState',
                '~/Library/Preferences/com.fabiospampinato.notable.plist',
                '~/Library/Application Support/Notable',
+               '~/.notable.json',
              ]
 end
