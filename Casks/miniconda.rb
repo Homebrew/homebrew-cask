@@ -1,9 +1,9 @@
 cask 'miniconda' do
-  version 'py37_4.8.2'
+  version '4.8.2'
   sha256 'd1fca4f74f9971c27220122723843f6c879a5d13ff59c01fca17ef62a1576732'
 
   # repo.anaconda.com/miniconda/ was verified as official when first introduced to the cask
-  url "https://repo.anaconda.com/miniconda/Miniconda3-#{version}-MacOSX-x86_64.sh"
+  url "https://repo.anaconda.com/miniconda/Miniconda3-py37_#{version}-MacOSX-x86_64.sh"
   name 'Continuum Analytics Miniconda'
   homepage 'https://conda.io/miniconda.html'
 
@@ -11,7 +11,7 @@ cask 'miniconda' do
   container type: :naked
 
   installer script: {
-                      executable: "Miniconda3-#{version}-MacOSX-x86_64.sh",
+                      executable: "Miniconda3-py37_#{version}-MacOSX-x86_64.sh",
                       args:       ['-b', '-p', "#{caskroom_path}/base"],
                     }
   binary "#{caskroom_path}/base/condabin/conda"
