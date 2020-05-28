@@ -6,13 +6,20 @@ cask 'gfortran' do
     # github.com/fxcoudert/gfortran-for-macOS/ was verified as official when first introduced to the cask
     url "https://github.com/fxcoudert/gfortran-for-macOS/releases/download/#{version}/gfortran-#{version}-ElCapitan.dmg"
     pkg "gfortran-#{version}-ElCapitan/gfortran.pkg"
-  else
+  elsif MacOS.version == :sierra
     version '6.3'
     sha256 '38b81bc878dba41cfdbb0c335aec5a97554a5d1766fb3e3ca6be7da0df9e8e09'
 
     # github.com/fxcoudert/gfortran-for-macOS/ was verified as official when first introduced to the cask
     url "https://github.com/fxcoudert/gfortran-for-macOS/releases/download/#{version}/gfortran-#{version}-Sierra.dmg"
-    pkg 'gfortran.pkg'
+    pkg "gfortran-#{version}-Sierra/gfortran.pkg"
+  else
+    version '8.2'
+    sha256 '81d379231ba5671a5ef1b7832531f53be5a1c651701a61d87e1d877c4f06d369'
+
+    # github.com/fxcoudert/gfortran-for-macOS/ was verified as official when first introduced to the cask
+    url "https://github.com/fxcoudert/gfortran-for-macOS/releases/download/#{version}/gfortran-#{version}-Mojave.dmg"
+    pkg "gfortran-#{version}-Mojave/gfortran.pkg"
   end
 
   appcast 'https://github.com/fxcoudert/gfortran-for-macOS/releases.atom'
