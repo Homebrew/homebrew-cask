@@ -1,9 +1,9 @@
 cask 'intelliscape-caffeine' do
-  version '1.1.2'
-  sha256 '365367f8b3314ffabc1d821f996943755ebc4f90f5ca1433f3123ddb62e1835e'
+  version '1.1.3'
+  sha256 '240e5ab832a25ed0af43aeffd1d66dc663dfea7c2525d918c214d6107981a03b'
 
-  # cl.ly/2d0e01d909e4/ was verified as official when first introduced to the cask
-  url 'https://cl.ly/2d0e01d909e4/download/Caffeine.dmg'
+  # https://github.com/IntelliScape/caffeine/releases/download/1.1.3/Caffeine.dmg was verified as official when first introduced to the cask
+  url 'https://github.com/IntelliScape/caffeine/releases/download/1.1.3/Caffeine.dmg'
   appcast 'https://intelliscapesolutions.com/apps/caffeine/releasenotes'
   name 'Caffeine'
   homepage 'https://intelliscapesolutions.com/apps/caffeine'
