@@ -1,22 +1,23 @@
 cask 'miniconda' do
   version '4.8.2'
-  sha256 'd1fca4f74f9971c27220122723843f6c879a5d13ff59c01fca17ef62a1576732'
+  sha256 'f3ede3a58d82fb5dcbca52d291a9edb5cd962d84d823a20693dd4bb27506cdd0'
 
   # repo.anaconda.com/miniconda/ was verified as official when first introduced to the cask
-  url "https://repo.anaconda.com/miniconda/Miniconda3-py37_#{version}-MacOSX-x86_64.sh"
+  url "https://repo.anaconda.com/miniconda/Miniconda3-#{version}-MacOSX-x86_64.pkg"
   name 'Continuum Analytics Miniconda'
   homepage 'https://conda.io/miniconda.html'
 
   auto_updates true
-  container type: :naked
 
-  installer script: {
-                      executable: "Miniconda3-py37_#{version}-MacOSX-x86_64.sh",
-                      args:       ['-b', '-p', "#{caskroom_path}/base"],
-                    }
-  binary "#{caskroom_path}/base/condabin/conda"
+  pkg 'Miniconda3-latest-MacOSX-x86_64.pkg'
 
-  uninstall delete: "#{caskroom_path}/base"
+  uninstall pkgutil: [
+                       'io.continuum.pkg.apreinstall',
+                       'io.continuum.pkg.conda.exe',
+                       'io.continuum.pkg.pathupdate',
+                       'io.continuum.pkg.postextract',
+                       'io.continuum.pkg.preconda',
+                     ]
 
   zap trash: [
                '~/.condarc',
