@@ -9,7 +9,7 @@ cask 'miniconda' do
 
   auto_updates true
 
-  pkg 'Miniconda3-latest-MacOSX-x86_64.pkg'
+  pkg 'Miniconda3-#{version}-MacOSX-x86_64.pkg'
 
   uninstall pkgutil: [
                        'io.continuum.pkg.apreinstall',
