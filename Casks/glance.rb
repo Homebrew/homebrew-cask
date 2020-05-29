@@ -1,6 +1,6 @@
 cask 'glance' do
-  version '1.1.0'
-  sha256 'bd14584dd7f81fa13217e02f6d6cbdc24344f553059abc7dc2d037e54680fbdb'
+  version '1.2.0'
+  sha256 '8584901c292a2a7ce084ee25b0b3e020d143e193ab198b69831b398cdc164c06'
 
   url "https://github.com/samuelmeuli/glance/releases/download/v#{version}/Glance.dmg"
   appcast 'https://github.com/samuelmeuli/glance/releases.atom'
