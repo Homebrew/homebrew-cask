@@ -1,6 +1,6 @@
 cask 'jami' do
-  version '20200513.0952'
-  sha256 '746900b5d8b6268f7c79e85cbcf53f8bc0b0fcffe186cb87ae06df21772dd0dd'
+  version '20200529.1006'
+  sha256 'dfc7ec4963344a7e4ab9e60a38d8cbea9f269921a8960bce5f44b021ec817f84'
 
   url "https://dl.jami.net/mac_osx/jami-#{version.no_dots}.dmg"
   appcast 'https://dl.jami.net/mac_osx/sparkle-ring.xml',
