@@ -7,6 +7,8 @@ cask 'adguard' do
   name 'Adguard'
   homepage 'https://adguard.com/'
 
+  auto_updates true
+
   pkg 'AdGuard.pkg'
 
   uninstall pkgutil: 'com.adguard.mac.adguard-pkg'
