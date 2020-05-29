@@ -1,6 +1,6 @@
 cask 'tableau' do
-  version '2020.2.0'
-  sha256 'c54a6e13924414da49db3b60d3d380ee548bc940f56af2044369e781f9f27690'
+  version '2020.2.1'
+  sha256 '8437d0fd125cdc76849adef9fffec0dbe162445d549811246d2f333cacc13db9'
 
   url "https://downloads.tableau.com/tssoftware/TableauDesktop-#{version.dots_to_hyphens}.dmg"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.tableau.com/downloads/desktop/mac',
