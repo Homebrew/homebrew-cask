@@ -4,7 +4,7 @@ cask 'mblock' do
 
   # dl.makeblock.com/ was verified as official when first introduced to the cask
   url "https://dl.makeblock.com/mblock#{version.major}/darwin/V#{version}.pkg"
-  appcast 'https://www.mblock.cc/mblock-software/'
+  appcast 'https://www.mblock.cc/releaselogs-mblock5/'
   name 'mBlock'
   homepage 'https://www.mblock.cc/'
 
