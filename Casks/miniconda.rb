@@ -1,9 +1,9 @@
 cask 'miniconda' do
-  version '4.8.2'
+  version 'py37_4.8.2'
   sha256 'f3ede3a58d82fb5dcbca52d291a9edb5cd962d84d823a20693dd4bb27506cdd0'
 
   # repo.anaconda.com/miniconda/ was verified as official when first introduced to the cask
-  url "https://repo.anaconda.com/miniconda/Miniconda3-py37_#{version}-MacOSX-x86_64.pkg"
+  url "https://repo.anaconda.com/miniconda/Miniconda3-#{version}-MacOSX-x86_64.pkg"
   name 'Continuum Analytics Miniconda'
   homepage 'https://conda.io/miniconda.html'
 
@@ -24,10 +24,4 @@ cask 'miniconda' do
                '~/.conda',
                '~/.continuum',
              ]
-
-  caveats <<~EOS
-    Please run the following to setup your shell:
-
-      conda init "$(basename "${SHELL}")"
-  EOS
 end
