@@ -12,7 +12,5 @@ cask 'cryptomator' do
 
   app 'Cryptomator.app'
 
-  zap trash: [
-               '~/Library/Application Support/Cryptomator',
-             ]
+  zap trash: '~/Library/Application Support/Cryptomator'
 end
