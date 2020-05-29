@@ -11,4 +11,8 @@ cask 'cryptomator' do
   depends_on macos: '>= :yosemite'
 
   app 'Cryptomator.app'
+
+  zap trash: [
+               '~/Library/Application Support/Cryptomator',
+             ]
 end
