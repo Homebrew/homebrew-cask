@@ -36,6 +36,7 @@ cask 'vmware-fusion' do
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-vmx-debug"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-vmx-stats"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/VMware OVF Tool/ovftool"
+  binary "#{appdir}/VMware Fusion.app/Contents/Library/vkd/bin/vctl"
 
   postflight do
     system_command "#{appdir}/VMware Fusion.app/Contents/Library/Initialize VMware Fusion.tool",
