@@ -7,7 +7,7 @@ cask 'monero-wallet' do
   name 'Monero Wallet'
   homepage 'https://getmonero.org/'
 
-  app 'monero-wallet-gui.app'
+  app "monero-gui-v#{version}/monero-wallet-gui.app"
 
   zap trash: [
                '~/.bitmonero',
