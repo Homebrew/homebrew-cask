@@ -6,7 +6,7 @@ cask 'notable' do
   url "https://github.com/notable/notable/releases/download/v#{version}/Notable-#{version}.dmg"
   appcast 'https://github.com/notable/notable/releases.atom'
   name 'Notable'
-  homepage 'https://notable.md/'
+  homepage 'https://notable.app/'
 
   auto_updates true
 
