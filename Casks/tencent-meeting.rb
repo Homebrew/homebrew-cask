@@ -9,4 +9,10 @@ cask 'tencent-meeting' do
   homepage 'https://meeting.tencent.com/'
 
   app 'TencentMeeting.app'
+
+  zap trash: [
+               '/Users/draque/Library/Caches/com.tencent.meeting',
+               '/Users/draque/Library/Containers/com.tencent.meeting',
+               '/Users/draque/Library/Preferences/com.tencent.meeting.plist',
+             ]
 end
