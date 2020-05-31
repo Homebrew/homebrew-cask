@@ -7,8 +7,7 @@ cask 'podman' do
   name 'podman'
   homepage 'https://github.com/containers/libpod/'
 
-  # Renamed for consistency with previous releases
-  binary 'podman-remote-darwin', target: 'podman'
+  binary 'podman-remote-darwin'
 
   zap trash: '~/.config/containers/podman-remote.config'
 end
