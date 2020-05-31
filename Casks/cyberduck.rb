@@ -14,6 +14,7 @@ cask 'cyberduck' do
   zap trash: [
                '~/Library/Application Support/Cyberduck',
                '~/Library/Caches/ch.sudo.cyberduck',
+               '~/Library/Group Containers/G69SCX94XU.duck',
                '~/Library/Preferences/ch.sudo.cyberduck.plist',
                '~/Library/Saved Application State/ch.sudo.cyberduck.savedState',
              ]
