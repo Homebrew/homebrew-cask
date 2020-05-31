@@ -1,6 +1,6 @@
 cask 'prepros' do
-  version '7.2.24'
-  sha256 'a017e461d1c336fc4a10cea7ce54d1645f7e1b27df3755f77102308b78c785a6'
+  version '7.2.25'
+  sha256 'd79ece1a2b45a82a8da50a6697a8c2dde2d99dce7080e124503cf27d5ffcb07a'
 
   url "https://downloads.prepros.io/v#{version.major}/Prepros-#{version}.zip"
   appcast 'https://www.macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://prepros.io/downloads/stable/mac'
