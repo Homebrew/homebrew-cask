@@ -8,6 +8,7 @@ cask 'paletro' do
   homepage 'https://appmakes.io/paletro'
 
   auto_updates true
+  depends_on macos: '>= :mojave'
 
   app 'Paletro.app'
 
