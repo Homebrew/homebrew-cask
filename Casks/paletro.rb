@@ -3,13 +3,13 @@ cask 'paletro' do
   sha256 '8e36dfa44c9c68674cac45880a812192fc69400e018dded201c53e0593f9fffe'
   
   url "https://appmakes.io/paletro/download/Paletro-#{version}.dmg"
-  appcast "https://appmakes.io/paletro/update.xml"
+  appcast 'https://appmakes.io/paletro/update.xml'
   name 'Paletro'
-  homepage 'https://appmakes.io/paletro/'
+  homepage 'https://appmakes.io/paletro'
 
   auto_updates true
 
-  app "Paletro.app"
+  app 'Paletro.app'
 
   zap trash: [
                '~/Library/Application Scripts/io.appmakes.PaletroLaunchHelper/',
