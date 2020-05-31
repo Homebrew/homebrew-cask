@@ -11,8 +11,8 @@ cask 'tencent-meeting' do
   app 'TencentMeeting.app'
 
   zap trash: [
-               '/Users/draque/Library/Caches/com.tencent.meeting',
-               '/Users/draque/Library/Containers/com.tencent.meeting',
-               '/Users/draque/Library/Preferences/com.tencent.meeting.plist',
+               '~/Library/Caches/com.tencent.meeting',
+               '~/Library/Containers/com.tencent.meeting',
+               '~/Library/Preferences/com.tencent.meeting.plist',
              ]
 end
