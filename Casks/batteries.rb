@@ -8,5 +8,7 @@ cask 'batteries' do
   name 'Batteries'
   homepage 'https://www.fadel.io/batteries/'
 
+  depends_on macos: '>= :mojave'
+
   app 'Batteries.app'
 end
