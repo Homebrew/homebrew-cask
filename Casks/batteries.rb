@@ -11,4 +11,14 @@ cask 'batteries' do
   depends_on macos: '>= :mojave'
 
   app 'Batteries.app'
+
+  zap trash: [
+               '~/Library/Caches/io.fadel.Batteries',
+               '~/Library/Caches/io.fadel.Batteries.Helper',
+               '~/Library/Containers/io.fadel.Batteries.BatteriesTodayExtension',
+               '~/Library/Preferences/io.fadel.Batteries.Helper.plist',
+               '~/Library/Preferences/io.fadel.Batteries.plist',
+               '~/Library/Group Containers/KUC6B4JW25.io.fadel.Batteries',
+               '~/Library/Application Scripts/io.fadel.Batteries.BatteriesTodayExtension',
+             ]
 end
