@@ -10,4 +10,10 @@ cask 'mountain-duck' do
   auto_updates true
 
   app 'Mountain Duck.app'
+
+  zap trash: [
+               '~/Library/Application Scripts/io.mountainduck.findersync',
+               '~/Library/Containers/io.mountainduck.findersync',
+               '~/Library/Group Containers/G69SCX94XU.duck',
+             ]
 end
