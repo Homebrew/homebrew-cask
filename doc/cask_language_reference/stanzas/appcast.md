@@ -22,10 +22,10 @@ The [`find-appcast`](https://github.com/Homebrew/homebrew-cask/blob/master/devel
 
 | key       | value       |
 | --------- | ----------- |
-| `lookup:` | a custom string for `brew cask audit --appcast {{cask_file}}` to check against. |
+| `configuration:` | a custom string for `brew cask audit --appcast {{cask_file}}` to check against. |
 
-Example of using `lookup`: [`hwsensors.rb`](https://github.com/Homebrew/homebrew-cask/blob/546f1c8276ebd0c4e3c8aac7a344931ee53726cb/Casks/hwsensors.rb#L6L7)
+Example of using `configuration`: [`hwsensors.rb`](https://github.com/Homebrew/homebrew-cask/blob/546f1c8276ebd0c4e3c8aac7a344931ee53726cb/Casks/hwsensors.rb#L6L7)
 
 The main casks repo only accepts submissions for stable versions of software (and [documented exceptions](https://github.com/Homebrew/homebrew-cask/blob/master/doc/development/adding_a_cask.md#but-there-is-no-stable-version)), but it still gets pull requests for unstable versions. By checking the submitted `version` against the contents of an appcast, we can better detect these invalid cases.
 
-But if a `version` is `6.26.1440` and the appcast’s contents only show `6.24`, the check for “is `version` in the appcast feed” will fail. With `lookup`, the check is told to “look for this string instead of `version`”. In the example, `lookup: version.major_minor` is saying “look for `6.24`”, making the check succeed.
+But if a `version` is `6.26.1440` and the appcast’s contents only show `6.24`, the check for “is `version` in the appcast feed” will fail. With `configuration`, the check is told to “look for this string instead of `version`”. In the example, `configuration: version.major_minor` is saying “look for `6.24`”, making the check succeed.
