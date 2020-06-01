@@ -1,9 +1,9 @@
 cask 'numi' do
-  version '3.27.665'
-  sha256 '16a24cd111b96a94719bdbdb1f35c4b66b82b30a8d8c143683f90361dff1510e'
+  version '3.28.668'
+  sha256 'b4966d8f265fb0c1c8ad9aa804302cb43e3946429ad293f54ee94be00f6e92c6'
 
   url "https://s5.numi.app/updates/#{version}/Numi.zip"
-  appcast 'https://s5.numi.app/updates/updates.xml'
+  appcast 'https://s5.numi.app/appcasts/updates-50.xml'
   name 'Numi'
   homepage 'https://numi.app/'
 

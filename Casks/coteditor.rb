@@ -16,6 +16,8 @@ cask 'coteditor' do
   name 'CotEditor'
   homepage 'https://coteditor.com/'
 
+  auto_updates true
+
   app 'CotEditor.app'
   binary "#{appdir}/CotEditor.app/Contents/SharedSupport/bin/cot"
 

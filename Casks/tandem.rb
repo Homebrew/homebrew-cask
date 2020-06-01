@@ -1,6 +1,6 @@
 cask 'tandem' do
-  version '1.5.7'
-  sha256 'dbd8aabcb4e9c1a170638d13577d0451784a9c0e4ed125f481a18d35f068e99d'
+  version '1.5.8'
+  sha256 'bc01cb61ba7ad40d350c7c2a04d4758f6f95a9f5d6ed27693ced994848212eaf'
 
   # wisp-app.s3-accelerate.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://wisp-app.s3-accelerate.amazonaws.com/Tandem-#{version}-mac.zip"

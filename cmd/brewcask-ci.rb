@@ -132,7 +132,7 @@ module Cask
             ensure
               cask_and_formula_dependencies.reverse.each do |cask_or_formula|
                 next unless cask_or_formula.is_a?(Cask)
-                Installer.new(cask_or_formula, verbose: true).uninstall if cask_or_formula.installed?
+                Installer.new(cask_or_formula, verbose: true).uninstall if cask_or_formula.any_version_installed?
               end
             end
 

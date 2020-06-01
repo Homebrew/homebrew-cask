@@ -7,8 +7,8 @@ cask 'docker' do
     sha256 'f69bd8f9d0863497819b998d27da4825b65884519f3f6a0e2ce1d4c5cdd26f5e'
   end
 
-  url "https://download.docker.com/mac/stable/#{version.after_comma}/Docker.dmg"
-  appcast 'https://download.docker.com/mac/stable/appcast.xml'
+  url "https://desktop.docker.com/mac/stable/#{version.after_comma}/Docker.dmg"
+  appcast 'https://desktop.docker.com/mac/stable/appcast.xml'
   name 'Docker Desktop'
   name 'Docker Community Edition'
   name 'Docker CE'

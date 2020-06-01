@@ -6,7 +6,7 @@ cask 'notable' do
   url "https://github.com/notable/notable/releases/download/v#{version}/Notable-#{version}.dmg"
   appcast 'https://github.com/notable/notable/releases.atom'
   name 'Notable'
-  homepage 'https://notable.md/'
+  homepage 'https://notable.app/'
 
   auto_updates true
 
@@ -16,5 +16,6 @@ cask 'notable' do
                '~/Library/Saved Application State/com.fabiospampinato.notable.savedState',
                '~/Library/Preferences/com.fabiospampinato.notable.plist',
                '~/Library/Application Support/Notable',
+               '~/.notable.json',
              ]
 end

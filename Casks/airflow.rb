@@ -1,6 +1,6 @@
 cask 'airflow' do
-  version '3.1.0'
-  sha256 '579ec8c5c6f769dd5b0bfda8fe5a49d0103f70bcfd2a16d99d9eacff2bff76c7'
+  version '3.1.2'
+  sha256 'f0dfcafd0ef4c0775865d2c8e0534cdb2eecad1a9fd1fdcc79cce252c3adfcd1'
 
   # cdn.downloads.iocave.net/Airflow/ was verified as official when first introduced to the cask
   url "https://cdn.downloads.iocave.net/Airflow/Airflow%20#{version}.zip"

@@ -1,6 +1,6 @@
 cask 'code-notes' do
-  version '1.2.3'
-  sha256 '6c1677382088bba2b480d04cc07ecc814e39cb1c79050fe5f2fbb73115fa16c3'
+  version '1.2.4'
+  sha256 'c3844123d14642d423f8f04e4fca1bbe7661c54b109cd8eb3eb1cfda8a6d8a60'
 
   # github.com/lauthieb/code-notes/ was verified as official when first introduced to the cask
   url "https://github.com/lauthieb/code-notes/releases/download/#{version}/code-notes-#{version}.dmg"

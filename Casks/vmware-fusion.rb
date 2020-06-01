@@ -1,6 +1,6 @@
 cask 'vmware-fusion' do
-  version '11.5.3-15870345'
-  sha256 'd87c97b72847e82e7986cd3a0aacfa8287df7f96433d209e546472e44ca61990'
+  version '11.5.5-16269456'
+  sha256 '20cdb359334cd7fd5953ab73264610e03c75a8bcf7f1601ba6535ca8bd53fd83'
 
   url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version}.dmg"
   appcast 'https://softwareupdate.vmware.com/cds/vmw-desktop/fusion.xml'
@@ -8,7 +8,7 @@ cask 'vmware-fusion' do
   homepage 'https://www.vmware.com/products/fusion.html'
 
   auto_updates true
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :mojave'
 
   app 'VMware Fusion.app'
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmnet-bridge"
@@ -36,6 +36,7 @@ cask 'vmware-fusion' do
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-vmx-debug"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-vmx-stats"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/VMware OVF Tool/ovftool"
+  binary "#{appdir}/VMware Fusion.app/Contents/Library/vkd/bin/vctl"
 
   postflight do
     system_command "#{appdir}/VMware Fusion.app/Contents/Library/Initialize VMware Fusion.tool",

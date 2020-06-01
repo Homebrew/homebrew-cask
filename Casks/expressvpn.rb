@@ -11,9 +11,9 @@ cask 'expressvpn' do
 
   pkg "expressvpn_mac_#{version}_release.pkg"
 
-  uninstall pkgutil:   'com.expressvpn.ExpressVPN',
-            launchctl: [
-                         'com.expressvpn.ExpressVPN.agent',
-                         'com.expressvpn.ExpressVPN.update',
-                       ]
+  uninstall script:  {
+                       executable: "#{appdir}/ExpressVPN.app/Contents/Resources/uninstall.tool",
+                       input:      ['Yes'],
+                     },
+            pkgutil: 'com.expressvpn.ExpressVPN'
 end

@@ -1,11 +1,13 @@
 cask 'adguard' do
-  version '2.3.2.710'
-  sha256 'ce4d082e36b92917ccd4c1e22675cab9fbe3bf32d6ea64b6e5ec5eb82dbc30dd'
+  version '2.4.8.797'
+  sha256 'cc6af6b1dcf5895612e60be1541aac0e233bf1775214e91b0458d9bf581ed50c'
 
   url "https://static.adguard.com/mac/release/AdGuard-#{version}.dmg"
   appcast 'https://static.adguard.com/mac/adguard-release-appcast.xml'
   name 'Adguard'
   homepage 'https://adguard.com/'
+
+  auto_updates true
 
   pkg 'AdGuard.pkg'
 

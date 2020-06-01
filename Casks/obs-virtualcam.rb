@@ -1,6 +1,6 @@
 cask 'obs-virtualcam' do
-  version '1.1.2,a70ec47'
-  sha256 '38a59fd4a75374c2fe101d796006e210647ae4dae6825b80720e495ed6219ac5'
+  version '1.2.0,3ca8f62'
+  sha256 '656e4613b34ef8c4ebd3ccf63ce3ae1f4c018fa44f1ce4e53405b9b13c0a76c4'
 
   url "https://github.com/johnboiles/obs-mac-virtualcam/releases/download/v#{version.before_comma}/obs-mac-virtualcam-#{version.after_comma}-v#{version.before_comma}.pkg"
   appcast 'https://github.com/johnboiles/obs-mac-virtualcam/releases.atom'
