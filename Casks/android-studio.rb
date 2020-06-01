@@ -20,6 +20,7 @@ cask 'android-studio' do
                "~/Library/Logs/AndroidStudio#{version.major_minor}",
                "~/Library/Preferences/AndroidStudio#{version.major_minor}",
                '~/Library/Preferences/com.android.Emulator.plist',
+               '~/Library/Preferences/com.google.android.studio.plist',
                '~/Library/Saved Application State/com.google.android.studio.savedState',
                '~/.android',
              ],
