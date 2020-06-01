@@ -10,4 +10,11 @@ cask 'jetbrains-toolbox' do
   auto_updates true
 
   app 'JetBrains Toolbox.app'
+
+  zap trash: [
+               '~/Library/Saved Application State/com.jetbrains.toolbox.savedState',
+               '~/Library/Logs/JetBrains/Toolbox',
+               '~/Library/Preferences/com.jetbrains.toolbox.renderer.plist',
+               '~/Library/Application Support/JetBrains/Toolbox',
+             ]
 end
