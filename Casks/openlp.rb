@@ -1,6 +1,6 @@
 cask 'openlp' do
-  version '2.9.1'
-  sha256 '1ab87856634a8761d6598e1b4f2c468c3b32676f8e35f63f322a54b803bf823f'
+  version '2.4.6'
+  sha256 '5994c41d3b7aefbd84624fb4d8fc09bf63eda7693e2ed68e1a36b4f8abe60094'
 
   url "https://get.openlp.org/#{version}/OpenLP-#{version}.dmg"
   appcast 'https://get.openlp.org'
