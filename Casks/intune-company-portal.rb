@@ -1,4 +1,4 @@
-cask 'company-portal' do
+cask 'intune-company-portal' do
   version '2.5.200500'
   sha256 'bbed1fdaaad2d47d39177ef38b14c99382f575e48f6d52e68647bb56bbb5e25c'
 
