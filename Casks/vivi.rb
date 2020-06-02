@@ -1,6 +1,6 @@
 cask 'vivi' do
-  version '2.19.0'
-  sha256 '1c5570600243fa9e91735f42a33e686e0f6bfb5fe7c441f9a4eaea90b04f31fa'
+  version '2.19.1'
+  sha256 'c6dc9400d3d5649db62ae07f6545c23fd35f3534528f0fdc13321d5c2c98353c'
 
   url "https://downloads.vivi.io/app/#{version}/Vivi.pkg"
   name 'Vivi'
