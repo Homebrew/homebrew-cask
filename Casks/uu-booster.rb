@@ -1,6 +1,6 @@
 cask 'uu-booster' do
-  version '2.0.0,145'
-  sha256 '7f5d945c435806f74b348d324be62e03103c566cdd39aaaeec5b0d18082dac63'
+  version '2.0.1,149'
+  sha256 '320663e2ea521983ccdd0c496c58209c2fe176faf9b2c511716a7993949c4fd7'
 
   # uu.gdl.netease.com/ was verified as official when first introduced to the cask
   url "https://uu.gdl.netease.com/UU-macOS-#{version.before_comma}(#{version.after_comma}).dmg"
