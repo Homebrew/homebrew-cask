@@ -8,7 +8,7 @@ cask 'shadowsocksx-ng-r8' do
   homepage 'https://github.com/paradiseduo/ShadowsocksX-NG-R8/'
 
   conflicts_with cask: 'shadowsocksx'
-  depends_on macos: '>= :el_capitan'
+  depends_on macos: '>= :high_sierra'
 
   app 'ShadowsocksX-NG-R8.app'
 
