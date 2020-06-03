@@ -7,5 +7,5 @@ cask 'another-redis-desktop-manager' do
   name 'Another Redis Desktop Manager'
   homepage 'https://github.com/qishibo/AnotherRedisDesktopManager/'
 
-  app 'Another.Redis.Desktop.Manager.app'
+  app 'Another Redis Desktop Manager.app'
 end
