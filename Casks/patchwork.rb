@@ -1,6 +1,6 @@
 cask 'patchwork' do
-  version '3.17.7'
-  sha256 'e3ece220cba7931adc6a879d3f2dadcb358cc3cdfeed63b745383e5021244469'
+  version '3.18.0'
+  sha256 '9f98b5a0574ae854f2ef970db70e9f542013340f38dab4ab9b2bda7abb6d9278'
 
   url "https://github.com/ssbc/patchwork/releases/download/v#{version}/Patchwork-#{version}.dmg"
   appcast 'https://github.com/ssbc/patchwork/releases.atom'
