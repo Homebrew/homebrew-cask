@@ -21,10 +21,14 @@ cask 'omnidisksweeper' do
   name 'OmniDiskSweeper'
   homepage 'https://www.omnigroup.com/more/'
 
+  auto_updates true
+
   app 'OmniDiskSweeper.app'
 
   zap trash: [
                '~/Library/Application Scripts/com.omnigroup.OmniSoftwareUpdate.OSUCheckService',
+               '~/Library/Caches/com.apple.helpd/Generated/OmniDiskSweeper Help*',
+               '~/Library/Caches/com.omnigroup.OmniDiskSweeper',
                '~/Library/Containers/com.omnigroup.OmniSoftwareUpdate.OSUCheckService',
                '~/Library/Preferences/com.omnigroup.OmniDiskSweeper.plist',
                '~/Library/Preferences/com.omnigroup.OmniSoftwareUpdate.plist',
