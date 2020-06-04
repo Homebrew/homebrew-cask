@@ -22,4 +22,4 @@ cask 'blender-lts' do
       '#{appdir}/Blender.app/Contents/MacOS/Blender' "$@"
     EOS
   end
-end 
+end
