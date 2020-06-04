@@ -17,4 +17,10 @@ cask 'sb-command' do
             rmdir:  [
                       '/Applications/Creative',
                     ]
+
+  zap trash: [
+             '~/Library/Application Support/Creative.SB-Command',
+             '~/Library/Application Support/Creative.SB-Command.logs',
+             '~/Library/Preferences/Creative.SB-Command.plist',
+           ]
 end
