@@ -1,4 +1,4 @@
-cask 'blender-LTS' do
+cask 'blender-lts' do
   version '2.83.0'
   sha256 '5573b491f1190ca828f6dd0024cad18dab0c379ce44cd63a1622154ace4b8295'
 
