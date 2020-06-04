@@ -7,4 +7,9 @@ cask 'nord-sound-manager' do
   homepage 'https://www.nordkeyboards.com/downloads/software-tools/nord-sound-manager'
 
   app "Nord Sound Manager v#{version}.app"
+
+  zap trash: [
+               '~/Library/Preferences/com.clavia.NordSoundManager.plist',
+               '~/Library/Saved Application State/com.clavia.NordSoundManager.savedState',
+             ]
 end
