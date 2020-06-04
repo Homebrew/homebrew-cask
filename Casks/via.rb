@@ -9,4 +9,10 @@ cask 'via' do
   homepage 'https://caniusevia.com/'
 
   app 'VIA.app'
+
+  zap trash: [
+               '~/Library/Application Support/VIA',
+               '~/Library/Logs/VIA',
+               '~/Library/Preferences/org.via.configurator.plist',
+             ]
 end
