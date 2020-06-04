@@ -7,8 +7,12 @@ cask 'sb-command' do
   homepage 'https://support.creative.com/'
   pkg 'INSTALL.pkg'
   uninstall script: {
+    
                             executable:'/Applications/Creative/Uninstaller.app/Contents/MacOS/Uninstaller',
                             must_succeed: true,
                             print_stderr: false,
                           }
+        rmdir: [
+               '/Applications/Creative',
+             ]
 end
