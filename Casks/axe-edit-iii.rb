@@ -9,7 +9,5 @@ cask 'axe-edit-iii' do
 
   app 'Axe-Edit III.app'
 
-  uninstall delete: "#{staged_path}/#{token}"
-
   zap trash: '~/Library/Application Support/Fractal Audio/Axe-Edit III'
 end
