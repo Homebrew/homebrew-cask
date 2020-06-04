@@ -3,7 +3,7 @@ cask 'qqlive' do
   sha256 '96acb51c86ebc65a73555cffb864bba39edb2abf96b86e0959f69b585d1e49a7'
 
   url "https://dldir1.qq.com/qqtv/mac/TencentVideo_V#{version}.dmg"
-  appcast 'https://v.qq.com/download.html#mac'
+  appcast 'https://v.qq.com/biu/download#Mac'
   name 'QQLive'
   name '腾讯视频'
   homepage 'https://v.qq.com/download.html#mac'
