@@ -5,14 +5,16 @@ cask 'sb-command' do
   url 'https://download.creative.com/manualdn/Applications/100300/SEwNEWcs2X/SBCMD_MAC_L11_1_02_04.dmg'
   name 'Sound Blaster Command'
   homepage 'https://support.creative.com/'
+
   pkg 'INSTALL.pkg'
+
   uninstall script: {
-    
-                            executable:'/Applications/Creative/Uninstaller.app/Contents/MacOS/Uninstaller',
-                            must_succeed: true,
-                            print_stderr: false,
-                          },
-        rmdir: [
-               '/Applications/Creative',
-             ]
+
+                      executable:   '/Applications/Creative/Uninstaller.app/Contents/MacOS/Uninstaller',
+                      must_succeed: true,
+                      print_stderr: false,
+                    },
+            rmdir:  [
+                      '/Applications/Creative',
+                    ]
 end
