@@ -11,7 +11,7 @@ cask 'sb-command' do
                             executable:'/Applications/Creative/Uninstaller.app/Contents/MacOS/Uninstaller',
                             must_succeed: true,
                             print_stderr: false,
-                          }
+                          },
         rmdir: [
                '/Applications/Creative',
              ]
