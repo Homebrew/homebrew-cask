@@ -182,7 +182,7 @@ brew cask audit my-new-cask --download
 You should also check stylistic details with `brew cask style`:
 
 ```bash
-$ brew cask style --fix my-new-cask
+brew cask style --fix my-new-cask
 ```
 
 Keep in mind all of these checks will be made when you submit your PR, so by doing them in advance you’re saving everyone a lot of time and trouble.
