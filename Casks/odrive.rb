@@ -9,7 +9,7 @@ cask 'odrive' do
   name 'odrive'
   homepage 'https://www.odrive.com/'
 
-  pkg "odrive.#{version}.pkg"
+  pkg "odrivesync.#{version}.pkg"
 
   uninstall quit:    'com.oxygencloud.odrive',
             pkgutil: 'com.oxygen.odrive.*'
