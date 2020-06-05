@@ -1,8 +1,9 @@
 cask 'fireworks' do
-  version :latest
-  sha256 :no_check
+  version '1.2'
+  sha256 '925774f32399c6b11e8e07cab5fb39f30c5bf7df6896540992065e5bac0327cd'
 
   url 'https://www.fireworksapp.xyz/public/fireworks.zip'
+  appcast 'https://www.fireworksapp.xyz'
   name 'Fireworks'
   homepage 'https://www.fireworksapp.xyz/'
 
