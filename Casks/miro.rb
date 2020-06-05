@@ -1,4 +1,4 @@
-cask 'miro-formerly-realtimeboard' do
+cask 'miro' do
   version :latest
   sha256 :no_check
 
