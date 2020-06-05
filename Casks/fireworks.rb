@@ -8,4 +8,9 @@ cask 'fireworks' do
   homepage 'https://www.fireworksapp.xyz/'
 
   app 'Fireworks.app'
+
+  zap trash: [
+             '~/Library/Application Scripts/com.Besher-Al-Maleh.fireworks',
+             '~/Library/Containers/com.Besher-Al-Maleh.fireworks',
+             ]
 end
