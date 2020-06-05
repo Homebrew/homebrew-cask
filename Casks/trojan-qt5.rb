@@ -1,7 +1,7 @@
 cask 'trojan-qt5' do
   # note: "5" is not a version number, but an intrinsic part of the product name
-  version '1.1.6'
-  sha256 '30a56fe5146db9746b41d2a1011f45e85925461004262a89d19666a34a5a22d0'
+  version '1.1.5'
+  sha256 '3ac14256a6dfbd0cb222bf67c154cd50688ef93bfd2396f4576af863317f3408'
 
   url "https://github.com/TheWanderingCoel/Trojan-Qt5/releases/download/v#{version}/Trojan-Qt5-macOS.dmg"
   appcast 'https://github.com/TheWanderingCoel/Trojan-Qt5/releases.atom'
