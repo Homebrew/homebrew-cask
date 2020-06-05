@@ -182,8 +182,7 @@ brew cask audit my-new-cask --download
 You should also check stylistic details with `brew cask style`:
 
 ```bash
-$ cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask
-$ brew cask style Casks/my-new-cask.rb [--fix]
+$ brew cask style --fix my-new-cask
 ```
 
 Keep in mind all of these checks will be made when you submit your PR, so by doing them in advance you’re saving everyone a lot of time and trouble.
