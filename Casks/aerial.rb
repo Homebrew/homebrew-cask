@@ -1,6 +1,6 @@
 cask 'aerial' do
-  version '1.9.0'
-  sha256 '63444bacfe2a4948f8cce55c620759f09fe89958de8fa9924f508670100940d8'
+  version '1.9.1'
+  sha256 '63e04c6b7a1217f88afbd0422232dfaf00dda88d06abe6ec464bf24df1b6b4c0'
 
   url "https://github.com/JohnCoates/Aerial/releases/download/v#{version}/Aerial.saver.zip"
   appcast 'https://github.com/JohnCoates/Aerial/releases.atom'
