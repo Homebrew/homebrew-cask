@@ -9,7 +9,7 @@ cask 'wwdc' do
   homepage 'https://wwdc.io/'
 
   auto_updates true
-  depends_on macos: '>= :high_sierra'
+  depends_on macos: '>= :mojave'
 
   app 'WWDC.app'
 
