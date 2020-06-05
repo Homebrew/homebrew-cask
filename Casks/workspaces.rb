@@ -3,7 +3,7 @@ cask 'workspaces' do
   sha256 '351cec8103e54c5917b836f4cbe46fa240609db4150d564d7bcc17d4dcba2ae6'
 
   url "https://www.apptorium.com/public/products/workspaces/releases/Workspaces-#{version}.zip"
-   appcast 'https://www.apptorium.com/updates/workspaces' 
+  appcast 'https://www.apptorium.com/updates/workspaces'
   name 'Workspaces'
   homepage 'https://www.apptorium.com/workspaces'
 
