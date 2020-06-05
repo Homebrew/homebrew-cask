@@ -3,7 +3,7 @@ cask 'launchcontrol' do
   sha256 '3bb6ad46e8610b093321f0fc71d7d580f4c3aa6c54ffdb435f1dc8988183b0dc'
 
   url "https://www.soma-zone.com/download/files/LaunchControl-#{version}.tar.bz2"
-  appcast 'https://www.soma-zone.com/LaunchControl/a/appcast.xml'
+  appcast 'https://www.soma-zone.com/LaunchControl/a/appcast_update.xml'
   name 'LaunchControl'
   homepage 'https://www.soma-zone.com/LaunchControl/'
 
