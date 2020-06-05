@@ -6,6 +6,8 @@ cask 'sound-blaster-command' do
   name 'Sound Blaster Command'
   homepage 'https://support.creative.com/'
 
+  depends_on macos: '>= :sierra'
+
   pkg 'INSTALL.pkg'
 
   uninstall script: {
