@@ -10,4 +10,9 @@ cask 'meetingbar' do
   depends_on macos: '>= :catalina'
 
   app 'MeetingBar.app'
+
+  zap trash: [
+               '~/Library/Application Scripts/leits.MeetingBar',
+               '~/Library/Containers/leits.MeetingBar',
+             ]
 end
