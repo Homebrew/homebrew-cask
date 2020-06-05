@@ -4,7 +4,7 @@ cask 'aviatrix-vpn-client' do
 
   # aviatrix-download.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url 'https://aviatrix-download.s3.amazonaws.com/AviatrixVPNClient/AVPNC_mac.pkg'
-  appcast 'https://docs.aviatrix.com/HowTos/changelog.html'
+  appcast 'https://docs.aviatrix.com/Downloads/samlclient.html'
   name 'Aviatrix VPN Client'
   homepage 'https://docs.aviatrix.com/Downloads/samlclient.html'
 
