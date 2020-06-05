@@ -10,7 +10,7 @@ cask 'fireworks' do
   app 'Fireworks.app'
 
   zap trash: [
-             '~/Library/Application Scripts/com.Besher-Al-Maleh.fireworks',
-             '~/Library/Containers/com.Besher-Al-Maleh.fireworks',
+               '~/Library/Application Scripts/com.Besher-Al-Maleh.fireworks',
+               '~/Library/Containers/com.Besher-Al-Maleh.fireworks',
              ]
 end
