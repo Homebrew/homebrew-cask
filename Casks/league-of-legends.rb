@@ -15,10 +15,11 @@ cask 'league-of-legends' do
                '~/Library/Saved Application State/com.riotgames.LeagueofLegends.LeagueClientUx.savedState',
                '~/Library/Preferences/com.riotgames.LeagueofLegends.LeagueClientUxHelper.plist',
                '~/Library/Caches/com.riotgames.LeagueofLegends.LeagueClient',
-               '/Users/Shared/Riot Games/RiotClientInstalls.json',
-               '/Users/Shared/Riot Games/com.riot.riotclient.checkinstalls-lock',
+               '/Users/Shared/Riot Games',
              ],
-      rmdir: '~/Documents/League of Legends',
-      rmdir: '~/../Shared/Riot Games/Riot Client.app',
-      rmdir: '~/../Shared/Riot Games/Metadata'
+      rmdir: [
+               '~/Documents/League of Legends',
+               '/Users/Shared/Riot Games/Riot Client.app',
+               '/Users/Shared/Riot Games/Metadata',
+             ]
 end
