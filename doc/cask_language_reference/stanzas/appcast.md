@@ -29,3 +29,5 @@ Example of using `configuration`: [`hwsensors.rb`](https://github.com/Homebrew/h
 The main casks repo only accepts submissions for stable versions of software (and [documented exceptions](https://github.com/Homebrew/homebrew-cask/blob/master/doc/development/adding_a_cask.md#but-there-is-no-stable-version)), but it still gets pull requests for unstable versions. By checking the submitted `version` against the contents of an appcast, we can better detect these invalid cases.
 
 But if a `version` is `6.26.1440` and the appcast’s contents only show `6.24`, the check for “is `version` in the appcast feed” will fail. With `configuration`, the check is told to “look for this string instead of `version`”. In the example, `configuration: version.major_minor` is saying “look for `6.24`”, making the check succeed.
+
+If no `configuration` is given, the check considers from the beginning of the `version` string until the first character that isn’t alphanumeric or a period. Example: if `version` is `6.26b-14,40`, the check will see `6.26b`. This is so it covers most cases by default, while still allowing complex `version`s suitable for interpolation on the rest of the cask.
