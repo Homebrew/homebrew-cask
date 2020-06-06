@@ -3,7 +3,7 @@ cask 'linear-linear' do
   sha256 '825611a1d80b3721c71e912d10015b1a1e44b59f40767616f7a0bba77c7de7ce'
 
   url "https://download.linear.app/darwin/Linear-darwin-x64-#{version}.zip"
-  appcast 'https://api.linear.app/update/darwin/1.0.0'
+  appcast 'https://api.linear.app/update/darwin/0.0.0'
   name 'Linear'
   homepage 'https://linear.app/'
 
