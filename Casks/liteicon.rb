@@ -15,6 +15,8 @@ cask 'liteicon' do
   name 'LiteIcon'
   homepage 'https://freemacsoft.net/liteicon/'
 
+  auto_updates true
+
   app 'LiteIcon.app'
 
   uninstall quit:      'net.freemacsoft.LiteIcon',
