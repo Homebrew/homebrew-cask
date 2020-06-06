@@ -8,4 +8,6 @@ cask 'wormhole' do
   homepage 'https://er.run/'
 
   app 'Wormhole.app'
+
+  zap trash: '~/Library/Saved Application State/er.Wormhole.savedState'
 end
