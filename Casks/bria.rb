@@ -1,6 +1,6 @@
 cask 'bria' do
-  version '6.1.0_103103'
-  sha256 'e9ed4d75d022eda758ca963c4155e80e7d0d6fa5140871baef77289ea7ee7500'
+  version '6.1.1_103836'
+  sha256 'e2a0bab2d8d55c787cbc7078208aaadfebd0f04edde51e536b568a2c0f5c4066'
 
   # counterpath.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://counterpath.s3.amazonaws.com/downloads/Bria_#{version}.dmg"
