@@ -1,6 +1,6 @@
 cask 'encryptme' do
-  version '4.2.1'
-  sha256 '3971992f81456f13d35b1781fae84b4776a3a64128c1e4507a79da3c967a2963'
+  version '4.2.3'
+  sha256 '036c693afa300fa3374863860b11595e8849bb76021667dc65401b48ab935238'
 
   url "https://static.encrypt.me/downloads/osx/updates/Release/EncryptMe-#{version}.dmg"
   appcast 'https://www.getcloak.com/updates/osx/public/'
