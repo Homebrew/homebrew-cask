@@ -7,7 +7,7 @@ cask 'geburtstagschecker' do
   name 'GeburtstagsChecker'
   homepage 'https://earthlingsoft.net/GeburtstagsChecker/'
 
-  app "GeburtstagsChecker #{version.before_comma} (#{version.after_comma})/GeburtstagsChecker.app"
+  app 'GeburtstagsChecker.app'
 
   zap trash: [
                '~/Library/Caches/earthlingsoft.GeburtstagsChecker',
