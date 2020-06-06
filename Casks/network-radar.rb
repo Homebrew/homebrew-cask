@@ -3,6 +3,7 @@ cask 'network-radar' do
   sha256 :no_check
 
   url 'https://witt-software.com/downloads/networkradar/Network%20Radar.dmg'
+  appcast 'https://www.witt-software.com/releasenotes/?app=networkradar'
   name 'Network Radar'
   homepage 'https://www.witt-software.com/networkradar'
 
