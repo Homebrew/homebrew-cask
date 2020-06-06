@@ -4,6 +4,7 @@ cask 'wormhole' do
 
   # files.octopusgame.com was verified as official when first introduced to the cask
   url 'https://files.octopusgame.com/os/WormholeInstaller.dmg'
+  appcast 'https://er.run/release'
   name 'Wormhole'
   homepage 'https://er.run/'
 
