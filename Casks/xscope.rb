@@ -1,6 +1,6 @@
 cask 'xscope' do
   version '4.4.1'
-  sha256 'dbbc939eca01ac8dc9994f5bd81130fbf980bdd6c9e66f23cf51fa585c8c0729'
+  sha256 '2a4de71cb6b6ee56b466ff26ba70c104b5f2a2455e1f61af852ac43c0f4e6e19'
 
   # iconfactory.com/ was verified as official when first introduced to the cask
   url "https://iconfactory.com/assets/software/xscope/xScope-#{version}.zip"
