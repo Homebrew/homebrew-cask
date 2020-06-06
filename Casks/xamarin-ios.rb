@@ -1,10 +1,9 @@
 cask 'xamarin-ios' do
-  version '13.18.1.31'
-  sha256 '1fc2e761d923578a73b614145ed30ecac3b6b6807a54f3e617576c15d731758e'
+  version '13.18.2.1'
+  sha256 '7dcbf386f6c8695ca2fa52c3a91fcdd1040da2903879da8ffb3b9695831e45b0'
 
   url "https://dl.xamarin.com/MonoTouch/Mac/xamarin.ios-#{version}.pkg"
-  appcast 'https://docs.microsoft.com/en-us/xamarin/ios/release-notes/',
-          configuration: version.major_minor
+  appcast 'https://github.com/xamarin/xamarin-macios/releases.atom'
   name 'Xamarin.iOS'
   homepage 'https://www.xamarin.com/platform'
 

@@ -1,6 +1,6 @@
 cask 'camtasia' do
-  version '2020.0.2'
-  sha256 '1c317e2c0b5aded72228b6df3c992e6692e9e026791166e50f23dca22562c175'
+  version '2020.0.3'
+  sha256 '3078fb2b5a865296432c58b84981c6eeaf630c2c1b52b2195b43424a8f33a569'
 
   url 'https://download.techsmith.com/camtasiamac/releases/Camtasia.dmg'
   appcast 'https://support.techsmith.com/hc/en-us/articles/115006624748-Camtasia-Mac-Version-History'

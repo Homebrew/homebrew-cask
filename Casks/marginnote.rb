@@ -1,6 +1,6 @@
 cask 'marginnote' do
-  version '3.6.10'
-  sha256 '7e840da55ba1b656bce010a6fa28101b02a8925936ed3d890e0e06f070178db5'
+  version '3.6.11'
+  sha256 '0c7560beecdd91396452890a919147c902191fc07ad6da841a81ac67832d5010'
 
   # marginstudy.com/ was verified as official when first introduced to the cask
   url "https://marginstudy.com/mac/MarginNote#{version.major}.dmg"

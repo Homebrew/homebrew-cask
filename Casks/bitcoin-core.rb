@@ -1,6 +1,6 @@
 cask 'bitcoin-core' do
-  version '0.19.1'
-  sha256 '206d8d92189d22e735393abebeb7a2e7237a119dd448b4a40df8c357da1287b2'
+  version '0.20.0'
+  sha256 'a6e44b928d9ac04f11d43e920f4971fbdf1e77a8c28f7c14fafdd741ca7bc99f'
 
   url "https://bitcoincore.org/bin/bitcoin-core-#{version}/bitcoin-#{version}-osx.dmg"
   appcast 'https://github.com/bitcoin/bitcoin/releases.atom'

@@ -1,6 +1,6 @@
 cask 'navicat-data-modeler-essentials' do
-  version '3.0.9'
-  sha256 'd7d3550c645352af43b3a68f87a8725c4d4880cce93703d47434bcebd7679f3a'
+  version '3.0.11'
+  sha256 '3ec863e78d68ebc28f64fb65d0ed1f824f0bb8f2fd0b80b2ffe61a495b63a233'
 
   url "http://download3.navicat.com/updater/modeler0#{version.major_minor.no_dots}_ess_mac_en.zip"
   appcast 'https://updater.navicat.com/mac/navicat_updates.php?appName=Navicat%20Data%20Modeler%20Essentials'
