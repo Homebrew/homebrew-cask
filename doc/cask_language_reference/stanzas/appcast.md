@@ -2,6 +2,8 @@
 
 The value of the `appcast` stanza is a string, holding the URL for an appcast which provides information on future updates.
 
+The main casks repo only accepts submissions for stable versions of software (and [documented exceptions](https://github.com/Homebrew/homebrew-cask/blob/master/doc/development/adding_a_cask.md#but-there-is-no-stable-version)), but it still gets pull requests for unstable versions. By checking the submitted `version` against the contents of an appcast, we can better detect these invalid cases.
+
 Example: [`atom.rb`](https://github.com/Homebrew/homebrew-cask/blob/645dbb8228ec2f1f217ed1431e188687aac13ca5/Casks/atom.rb#L7)
 
 There are a few different ways the `appcast` can be determined:
@@ -24,10 +26,8 @@ The [`find-appcast`](https://github.com/Homebrew/homebrew-cask/blob/master/devel
 | --------------- | ----------- |
 | `must_contain:` | a custom string for `brew cask audit --appcast {{cask_file}}` to check against. |
 
-Example of using `must_contain`: [`hwsensors.rb`](https://github.com/Homebrew/homebrew-cask/blob/546f1c8276ebd0c4e3c8aac7a344931ee53726cb/Casks/hwsensors.rb#L6L7)
-
-The main casks repo only accepts submissions for stable versions of software (and [documented exceptions](https://github.com/Homebrew/homebrew-cask/blob/master/doc/development/adding_a_cask.md#but-there-is-no-stable-version)), but it still gets pull requests for unstable versions. By checking the submitted `version` against the contents of an appcast, we can better detect these invalid cases.
-
-However, if a `version` is `6.26.1440` and the appcast’s contents only show `6.24`, the check for “is `version` in the appcast feed” will fail. With `must_contain`, the check is told to “look for this string instead of `version`”. In the example, `must_contain: version.major_minor` is saying “look for `6.24`”, making the check succeed.
+Sometimes a `version` doesn’t match a string on the webpage, in which case we tweak what to search for. Example: if `version` is `6.26.1440` and the appcast’s contents only show `6.24`, the check for “is `version` in the appcast feed” will fail. With `must_contain`, the check is told to “look for this string instead of `version`”. In the example, `must_contain: version.major_minor` is saying “look for `6.24`”, making the check succeed.
 
 If no `must_contain` is given, the check considers from the beginning of the `version` string until the first character that isn’t alphanumeric or a period. Example: if `version` is `6.26b-14,40`, the check will see `6.26b`. This is so it covers most cases by default, while still allowing complex `version`s suitable for interpolation on the rest of the cask.
+
+Example of using `must_contain`: [`hwsensors.rb`](https://github.com/Homebrew/homebrew-cask/blob/546f1c8276ebd0c4e3c8aac7a344931ee53726cb/Casks/hwsensors.rb#L6L7)
