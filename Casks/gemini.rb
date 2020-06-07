@@ -13,6 +13,7 @@ cask 'gemini' do
   zap trash: [
                '~/Library/Application Support/Gemini*',
                '~/Library/Caches/com.macpaw.site.Gemini*',
+               '~/Library/Cookies/com.macpaw.site.Gemini*.binarycookies',
                '~/Library/Logs/com.macpaw.site.Gemini*',
                '~/Library/Preferences/com.macpaw.site.Gemini*',
                '~/Library/Saved Application State/com.macpaw.site.Gemini*',
