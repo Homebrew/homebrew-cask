@@ -7,6 +7,8 @@ cask 'network-radar' do
   name 'Network Radar'
   homepage 'https://www.witt-software.com/networkradar'
 
+  depends_on macos: '>= :el_capitan'
+
   app 'Network Radar.app'
 
   zap trash: [
