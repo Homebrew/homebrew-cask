@@ -1,6 +1,6 @@
 cask 'iridient-developer' do
-  version '3.3.12'
-  sha256 '946708634b42f0b081c9b0aab9a62f32bf5dd083afe9efa29c12ef0e9807a210'
+  version '3.3.13'
+  sha256 'cc7015a73a41c5209643d5a8ccf06748e5e46e640b0dc889564f4d9c2a5202c0'
 
   url "https://www.iridientdigital.com/downloads/IridientDeveloper_#{version.no_dots}.dmg"
   appcast 'https://www.iridientdigital.com/products/rawdeveloper_history.html'
