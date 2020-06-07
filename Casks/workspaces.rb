@@ -14,6 +14,7 @@ cask 'workspaces' do
   zap trash: [
                '~/Application Support/Workspaces',
                '~/Library/Application Support/com.apptorium.Workspaces*',
+               '~/Library/Application Scripts/com.apptorium.Workspaces*',
                '~/Library/Caches/com.apptorium.Workspaces*',
                '~/Library/Containers/com.apptorium.Workspaces-Helper',
                '~/Library/Cookies/com.apptorium.Workspaces*.binarycookies',
