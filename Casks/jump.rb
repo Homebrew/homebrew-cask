@@ -9,5 +9,9 @@ cask 'jump' do
 
   app 'Jump Desktop.app'
 
-  zap trash: '~/Documents/JumpDesktop'
+  zap trash: [
+               '~/Documents/JumpDesktop',
+               '~/Library/Caches/com.p5sys.jump.mac.viewer.web',
+               '~/Library/Cookies/com.p5sys.jump.mac.viewer.web.binarycookies',
+             ]
 end
