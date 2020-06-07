@@ -29,6 +29,7 @@ cask 'coconutbattery' do
                '~/Library/Caches/com.coconut-flavour.coconutBattery*',
                '~/Library/Group Containers/*.coconut-flavour.coconutBattery',
                '~/Library/Preferences/com.coconut-flavour.coconutBattery.plist',
+               '~/Library/Preferences/com.coconut-flavour.coconutBattery-Menu.plist',
                '~/Library/Saved Application State/com.coconut-flavour.coconutBattery.savedState',
              ]
 end
