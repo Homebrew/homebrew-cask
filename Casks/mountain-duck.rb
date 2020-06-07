@@ -15,5 +15,6 @@ cask 'mountain-duck' do
                '~/Library/Application Scripts/io.mountainduck.findersync',
                '~/Library/Containers/io.mountainduck.findersync',
                '~/Library/Group Containers/G69SCX94XU.duck',
+               '~/Library/Preferences/io.mountainduck.plist',
              ]
 end
