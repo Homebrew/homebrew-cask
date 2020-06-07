@@ -1,6 +1,6 @@
 cask 'expressvpn' do
-  version '7.8.3.4'
-  sha256 'accf6ac3426161ec00fb525ea8e341e53571165ddfd06cad98aace6aef464365'
+  version '7.8.4.2'
+  sha256 '01616e697516b6cef8986b0ff71290cf041a68f45e20ab7762c198af670ac4a3'
 
   url "https://download.expressvpn.xyz/clients/mac/expressvpn_mac_#{version}_release.pkg"
   appcast 'https://www.expressvpn.xyz/vpn-software/vpn-mac'
