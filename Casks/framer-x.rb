@@ -21,4 +21,5 @@ cask 'framer-x' do
 
         https://www.framer.com/support/using-framer/framer-x/
     EOS
+  end
 end
