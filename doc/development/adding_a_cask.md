@@ -264,7 +264,7 @@ $ git status
 The Command above will not work with fish but here is the right one:
 
 ```bash
-  cd (brew --repository)/Library/Taps/homebrew/homebrew-cask
+cd (brew --repository)/Library/Taps/homebrew/homebrew-cask
 ```
 
 So far, so good. Now make a feature branch `my-new-cask-branch` that you’ll use in your pull request:
