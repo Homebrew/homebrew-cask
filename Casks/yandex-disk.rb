@@ -8,7 +8,7 @@ cask 'yandex-disk' do
 
   auto_updates true
 
-  app 'Yandex.Disk.app'
+  app 'Yandex.Disk.2.app'
 
   zap trash: [
                '~/Library/Application Support/Yandex.Disk.2',
