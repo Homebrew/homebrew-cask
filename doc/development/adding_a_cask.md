@@ -249,7 +249,6 @@ for details.
 
 ## Submitting Your Changes
 
-
 Hop into your Tap and check to make sure your new Cask is there:
 
 ```bash
