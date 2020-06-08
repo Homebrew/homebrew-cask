@@ -11,4 +11,15 @@ cask 'framer-x' do
   depends_on macos: '>= :high_sierra'
 
   app 'Framer X.app'
+
+  caveats do
+    discontinued
+
+    <<~EOS
+      This software has been deprecated in favor of Framer Desktop (framer cask).
+      Your Framer X license will be honoured on the new software:
+
+        https://www.framer.com/support/using-framer/framer-x/
+    EOS
+  end
 end
