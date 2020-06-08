@@ -1,6 +1,6 @@
 cask 'teamdrive' do
-  version '4.6.11.2639'
-  sha256 '92442ac57fdb578f310b33b9df9c2a01cf1033b99291529bfe1d407a41bdf6fb'
+  version '4.6.11.2640'
+  sha256 '9a8b6ce5b2e1b7745d917f8b1c5c5b926d19222a9d8d9d14192c294b2da03768'
 
   # teamdrive.net/ was verified as official when first introduced to the cask
   url "https://download.teamdrive.net/#{version.major_minor}.#{version.split('.').last}/TMDR/mac-10.14.6/Install-TeamDrive-#{version}_TMDR.dmg"
