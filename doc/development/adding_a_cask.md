@@ -176,7 +176,7 @@ brew cask uninstall my-new-cask
 If everything looks good, you’ll also want to make sure your Cask passes audit with:
 
 ```bash
-brew cask audit my-new-cask --download
+brew cask audit --download my-new-cask
 ```
 
 You should also check stylistic details with `brew cask style`:
@@ -249,6 +249,7 @@ for details.
 
 ## Submitting Your Changes
 
+
 Hop into your Tap and check to make sure your new Cask is there:
 
 ```bash
@@ -259,6 +260,12 @@ $ git status
 #   (use "git add <file>..." to include in what will be committed)
 #
 #       Casks/my-new-cask.rb
+```
+
+The Command above will not work with fish but here is the right one:
+
+```bash
+  cd (brew --repository)/Library/Taps/homebrew/homebrew-cask
 ```
 
 So far, so good. Now make a feature branch `my-new-cask-branch` that you’ll use in your pull request:
