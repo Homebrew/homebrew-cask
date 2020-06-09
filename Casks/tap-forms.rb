@@ -9,4 +9,9 @@ cask 'tap-forms' do
   homepage 'https://www.tapforms.com/'
 
   app "Tap Forms Mac #{version.major}.app"
+
+  zap trash: [
+               '~/Library/Application Scripts/com.tapzapp.tapforms-mac',
+               '~/Library/Containers/com.tapzapp.tapforms-mac',
+             ]
 end
