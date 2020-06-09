@@ -17,10 +17,4 @@ cask 'secretive' do
                '~/Library/Containers/com.maxgoedjen.Secretive.Host',
                '~/Library/Containers/com.maxgoedjen.Secretive.SecretAgent',
              ]
-  zap trash: [
-               '~/Library/Application Scripts/com.maxgoedjen.Secretive.Host',
-               '~/Library/Application Scripts/com.maxgoedjen.Secretive.SecretAgent',
-               '~/Library/Containers/com.maxgoedjen.Secretive.Host',
-               '~/Library/Containers/com.maxgoedjen.Secretive.SecretAgent',
-             ]
 end
