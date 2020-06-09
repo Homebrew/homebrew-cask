@@ -1,6 +1,6 @@
 cask 'mumble' do
-  version '1.3.0'
-  sha256 'ffe648f07e3749dac1b7e9e82eb15b032e4547b8bfd48d568a618057dea6ee49'
+  version '1.3.1'
+  sha256 '052ba6d5bc1fc64aed90881bcab036bf93ae857228be316243a6eb15dac99ce6'
 
   # github.com/mumble-voip/mumble/ was verified as official when first introduced to the cask
   url "https://github.com/mumble-voip/mumble/releases/download/#{version}/Mumble-#{version}.dmg"
