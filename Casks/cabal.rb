@@ -1,6 +1,6 @@
 cask 'cabal' do
-  version '5.0.5'
-  sha256 'a2e5e109a7face70c18484006e4f1e33dc600583bec419a02f0ec73cc9ea80dc'
+  version '5.1.0'
+  sha256 '1feb5274b5b1f26e7550bfdb4afb2e40107ef01c562be3dd1304d9217f1827b0'
 
   # github.com/cabal-club/cabal-desktop/ was verified as official when first introduced to the cask
   url "https://github.com/cabal-club/cabal-desktop/releases/download/v#{version}/cabal-desktop-#{version}-mac.dmg"
