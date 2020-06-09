@@ -8,6 +8,13 @@ cask 'secretive' do
   homepage 'https://github.com/maxgoedjen/secretive'
 
   depends_on macos: '>= :catalina'
+  
+  zap trash: [
+             '~/Library/Application Scripts/com.maxgoedjen.Secretive.Host',
+             '~/Library/Application Scripts/com.maxgoedjen.Secretive.SecretAgent',
+             '~/Library/Containers/com.maxgoedjen.Secretive.Host',
+             '~/Library/Containers/com.maxgoedjen.Secretive.SecretAgent'
+  ]
 
   app 'Secretive.app'
 end
