@@ -8,6 +8,8 @@ cask 'lego-digital-designer' do
   name 'Lego Digital Designer'
   homepage 'https://www.lego.com/en-us/ldd'
 
+  depends_on macos: '<= :mojave'
+
   pkg 'LDD.pkg'
 
   uninstall pkgutil: 'com.LEGO.LDD'
