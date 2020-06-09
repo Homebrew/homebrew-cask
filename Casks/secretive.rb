@@ -7,5 +7,7 @@ cask 'secretive' do
   name 'Secretive'
   homepage 'https://github.com/maxgoedjen/secretive'
 
+  depends_on macos: '>= :catalina'
+
   app 'Secretive.app'
 end
