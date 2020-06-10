@@ -1,6 +1,6 @@
 cask 'memory' do
-  version '2020.12'
-  sha256 'a6ebb3f3ebb8ff9f2a6de85d71e21d96ad78df3fb9541dbff1fedcb6e3f879ca'
+  version '2020.13'
+  sha256 '1a4a59713c59e411693915bd9bc26ed971b19749dc04b734fe69f039df03d9aa'
 
   # memorymacapp.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url 'https://memorymacapp.s3.amazonaws.com/Memory.zip'
