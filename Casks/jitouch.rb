@@ -2,9 +2,7 @@ cask 'jitouch' do
   version :latest
   sha256 :no_check
 
-  if MacOS.version <= :mavericks
-    url 'https://www.jitouch.com/jitouch_mavericks.zip'
-  elsif MacOS.version <= :el_capitan
+  if MacOS.version <= :el_capitan
     url 'https://www.jitouch.com/jitouch_el_capitan.zip'
   elsif MacOS.version <= :sierra
     url 'https://www.jitouch.com/jitouch_sierra.zip'
