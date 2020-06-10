@@ -1,5 +1,5 @@
 cask 'arq' do
-  version '6.2.30'
+  version '6.2.35'
   sha256 '5449dc2bbc3e2f3119fc1f842192cfea02d454e72bac1be2b845d70021c0c6bb'
 
   url "https://www.arqbackup.com/download/arqbackup/Arq#{version.major}.pkg"
