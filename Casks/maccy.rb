@@ -7,6 +7,7 @@ cask 'maccy' do
   appcast 'https://github.com/p0deje/Maccy/releases.atom'
   name 'Maccy'
   homepage 'https://maccy.app/'
+
   auto_updates true
 
   depends_on macos: '>= :high_sierra'
