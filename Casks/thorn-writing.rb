@@ -8,7 +8,5 @@ cask 'thorn-writing' do
   name 'Thorn Writing'
   homepage 'https://thorn.greathin.gs/'
 
-  depends_on macos: '>= :mavericks'
-
   app 'Thorn Writing.app'
 end

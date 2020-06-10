@@ -8,7 +8,6 @@ cask 'eme' do
   homepage 'https://github.com/egoist/eme'
 
   auto_updates true
-  depends_on macos: '>= :mavericks'
 
   app 'EME.app'
 end

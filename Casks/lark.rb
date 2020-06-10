@@ -8,7 +8,5 @@ cask 'lark' do
   name 'Lark'
   homepage 'https://www.larksuite.com/'
 
-  depends_on macos: '>= :mavericks'
-
   app 'Lark.app'
 end

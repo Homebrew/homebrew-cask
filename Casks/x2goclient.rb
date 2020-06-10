@@ -1,10 +1,7 @@
 cask 'x2goclient' do
   version '4.1.2.2,20200213'
 
-  if MacOS.version <= :mavericks
-    sha256 'a2f21018a3bcce179b9ccd00ce13e4cbc3f2a7a245eaea56482216fc07d87436'
-    url "https://code.x2go.org/releases/binary-macosx/x2goclient/releases/#{version.before_comma}/x2goclient-#{version.before_comma}.#{version.after_comma}.OSX_10_9.dmg"
-  elsif MacOS.version <= :el_capitan
+  if MacOS.version <= :el_capitan
     sha256 '7ad7c500fd61f23061c1ec6977f82e9cfa69b7edd0b01f7c97d0f3f1f527cff4'
     url "https://code.x2go.org/releases/binary-macosx/x2goclient/releases/#{version.before_comma}/x2goclient-#{version.before_comma}.#{version.after_comma}.OSX_10_11.dmg"
   else
