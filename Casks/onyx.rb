@@ -1,10 +1,7 @@
 cask 'onyx' do
   macos_release = MacOS.version.to_s.delete('.')
 
-  if MacOS.version == :mavericks
-    version '2.8.9'
-    sha256 '01fe01a4e2acdc55383fbe12eea9e2c32659cf1fc283f021987a356bdf820a58'
-  elsif MacOS.version == :yosemite
+  if MacOS.version == :yosemite
     version '3.0.2'
     sha256 '9672a1b300501ec7c726508561c885f2b5e82069ef65145796dc40b0d386a8b0'
   elsif MacOS.version == :el_capitan
@@ -31,7 +28,6 @@ cask 'onyx' do
 
   # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.
   depends_on macos: [
-                      :mavericks,
                       :yosemite,
                       :el_capitan,
                       :sierra,
