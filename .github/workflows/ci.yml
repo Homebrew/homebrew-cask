@@ -40,4 +40,3 @@ jobs:
           CI: true
           HOMEBREW_COLOR: 1
           HOMEBREW_DEVELOPER: 1
-          CURL_SSL_BACKEND: secure-transport
