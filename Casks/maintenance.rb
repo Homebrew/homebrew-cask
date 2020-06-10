@@ -1,8 +1,5 @@
 cask 'maintenance' do
-  if MacOS.version == :mavericks
-    version '1.9.1'
-    sha256 '80ae32babc867c83cd0b48519f03c80a1cd48808f570703e6f930a57af8797f5'
-  elsif MacOS.version == :yosemite
+  if MacOS.version == :yosemite
     version '2.0.7'
     sha256 '5c926159c0610fe705b0f23b56672f1c5e46c970f92013839c772147379520f9'
   elsif MacOS.version == :el_capitan
@@ -29,7 +26,6 @@ cask 'maintenance' do
 
   # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.
   depends_on macos: [
-                      :mavericks,
                       :yosemite,
                       :el_capitan,
                       :sierra,
