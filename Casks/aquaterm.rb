@@ -7,6 +7,8 @@ cask 'aquaterm' do
   name 'AquaTerm'
   homepage 'https://sourceforge.net/projects/aquaterm/'
 
+  depends_on macos: '>= :high_sierra'
+
   pkg 'AquaTermInstaller.pkg'
 
   uninstall pkgutil: 'net.sourceforge.aquaterm.aquaterm.*',

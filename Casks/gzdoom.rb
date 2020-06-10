@@ -1,8 +1,9 @@
 cask 'gzdoom' do
-  version '3.4.1'
-  sha256 'f8724a28ad36ad197e2e0b54c648d272ef7438bec4b13bf389c924f5701ef2af'
+  version '4.4.0'
+  sha256 '40cf781f2246666c0b3312a262dd538bef0e52cf3dcc85b7cf099c6d7e3548ba'
 
-  url "https://zdoom.org/files/gzdoom/bin/gzdoom-bin-#{version.dots_to_hyphens}.dmg"
+  # github.com/coelckers/gzdoom/ was verified as official when first introduced to the cask
+  url "https://github.com/coelckers/gzdoom/releases/download/g#{version}/gzdoom-#{version.dots_to_hyphens}-macOS.dmg"
   appcast 'https://github.com/coelckers/gzdoom/releases.atom'
   name 'gzdoom'
   homepage 'https://zdoom.org/index'

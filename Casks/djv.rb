@@ -1,11 +1,12 @@
 cask 'djv' do
-  version '1.1.0'
-  sha256 'b922fc5d94e57d436779aa912d3f07746f541124149d5f4d8198d4ef0e2e8fd5'
+  version '1.3.0'
+  sha256 '5702e1a084377e0c0486b68c0fb5014b4e7aa3f4dbcd61bd489359859ad7589f'
 
-  url "https://downloads.sourceforge.net/djv/djv-stable/#{version}/djv-#{version}-OSX-64.dmg"
+  # downloads.sourceforge.net/djv/ was verified as official when first introduced to the cask
+  url "https://downloads.sourceforge.net/djv/djv-stable/#{version}/DJV-#{version}-Darwin.dmg"
   appcast 'https://sourceforge.net/projects/djv/rss?path=/djv-stable'
   name 'DJV Imaging'
-  homepage 'http://djv.sourceforge.net/'
+  homepage 'https://djv.sourceforge.io/'
 
-  app "djv-#{version}-OSX-64.app"
+  app 'DJV.app'
 end

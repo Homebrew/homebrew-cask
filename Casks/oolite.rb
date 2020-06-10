@@ -1,8 +1,8 @@
 cask 'oolite' do
-  version '1.86'
-  sha256 'bee8226c78fee15ae7c20180ca2587f2397bfa48e592339b1e59a1da0de91906'
+  version '1.88'
+  sha256 '9d369f9ebd8c72d2c9395dc893fe5e8d1561248641d8440b92a8e86e24cd6134'
 
-  # github.com/OoliteProject/oolite was verified as official when first introduced to the cask
+  # github.com/OoliteProject/oolite/ was verified as official when first introduced to the cask
   url "https://github.com/OoliteProject/oolite/releases/download/#{version}/Oolite-#{version}.zip"
   appcast 'https://github.com/OoliteProject/oolite/releases.atom'
   name 'oolite'

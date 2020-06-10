@@ -1,10 +1,13 @@
 cask 'popclip' do
-  version '1.5.8'
-  sha256 '323707f9933c798a909ddb5536839d755f4bbf29d698d4eaec229c29596c888f'
+  version '2019.10'
+  sha256 '052cb6d24d1060fcc133837603c8d48bc937f3c0d9ad34eea6f695aedffb50e4'
 
   url "https://pilotmoon.com/downloads/PopClip-#{version}.zip"
-  name 'Popclip'
+  appcast 'https://softwareupdate.pilotmoon.com/update/popclip/appcast.xml'
+  name 'PopClip'
   homepage 'https://pilotmoon.com/popclip/'
 
-  app 'Popclip.app'
+  depends_on macos: '>= :sierra'
+
+  app 'PopClip.app'
 end

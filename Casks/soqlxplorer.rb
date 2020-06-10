@@ -1,13 +1,18 @@
 cask 'soqlxplorer' do
-  version '2.90'
-  sha256 '2017024c55b1a7383785300f05cf31594f39faf711bad2f1563a97e4da365f4b'
+  version '3.3'
+  sha256 'df52a4749a712c7f527af3f87dcd88c8e08ff25714c666070c09f78f68ca36a3'
 
-  url "http://www.pocketsoap.com/osx/soqlx/soqlXplorer_v#{version}.zip"
-  appcast 'http://www.pocketsoap.com/osx/soqlx/appcast.xml'
+  url "https://www.pocketsoap.com/osx/soqlx/SoqlXplorer_v#{version}.zip"
+  appcast 'https://www.pocketsoap.com/osx/soqlx/appcast.xml'
   name 'SoqlXplorer'
-  homepage 'http://www.pocketsoap.com/osx/soqlx/'
+  homepage 'https://www.pocketsoap.com/osx/soqlx/'
 
-  depends_on macos: '>= :mavericks'
+  depends_on macos: '>= :high_sierra'
 
   app 'SoqlXplorer.app'
+
+  zap trash: [
+               '~/Library/Caches/com.pocketsoap.osx.SoqlXplorer',
+               '~/Library/Preferences/com.pocketsoap.osx.SoqlXplorer.plist',
+             ]
 end

@@ -1,16 +1,7 @@
 cask 'deeper' do
   macos_release = MacOS.version.to_s.delete('.')
 
-  if MacOS.version == :snow_leopard
-    version '1.3.4'
-    sha256 '529279266457186a8583232d83dabc944c08f6837f62875e300a4ea206ce98e8'
-  elsif MacOS.version == :lion
-    version '1.4.9'
-    sha256 '710edc7c8e75a3b4810810ead3d4dc230504eef1fca404ddd96e974ae4b6a96a'
-  elsif MacOS.version == :mountain_lion
-    version '1.7.1'
-    sha256 '2a7227942ef2671987a87de17b304d4f021f83ed7f772a47ed24a418bb5e829c'
-  elsif MacOS.version == :mavericks
+  if MacOS.version == :mavericks
     version '1.9.1'
     sha256 'a601cee489825685b28fcf71e5b3801ec45ff73d5a015aa9948eb8641616383a'
   elsif MacOS.version == :yosemite
@@ -22,9 +13,15 @@ cask 'deeper' do
   elsif MacOS.version == :sierra
     version '2.2.3'
     sha256 '33fee21b65279e4459b6469dbc68f0c6df91663ed26d6b62042b21883efda0ed'
+  elsif MacOS.version == :high_sierra
+    version '2.3.3'
+    sha256 '08ac5820428bcce74548786e8fda947edfaa31cf4a822d5c443835e73a11dd3b'
+  elsif MacOS.version == :mojave
+    version '2.4.8'
+    sha256 '13dbe7bd680963aca91c40a4fd1e16648b63538f3213692db22dd91a3e3f2c89'
   else
-    version '2.2.9'
-    sha256 'e8ba65dfa56d671fd406dd1e67db51f679cc7fe57ea4dd51791d33b1e0ae7eaf'
+    version '2.5.7'
+    sha256 'b943059906447fe402db779ae832823bfc5c2f5c55ec0499cdb0051cc89ce210'
   end
 
   url "https://www.titanium-software.fr/download/#{macos_release}/Deeper.dmg"
@@ -34,14 +31,13 @@ cask 'deeper' do
 
   # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.
   depends_on macos: [
-                      :snow_leopard,
-                      :lion,
-                      :mountain_lion,
                       :mavericks,
                       :yosemite,
                       :el_capitan,
                       :sierra,
                       :high_sierra,
+                      :mojave,
+                      :catalina,
                     ]
 
   app 'Deeper.app'

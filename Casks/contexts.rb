@@ -13,7 +13,9 @@ cask 'contexts' do
 
   zap trash: [
                '~/Library/Application Support/.com.contextsformac.Contexts.plist',
+               '~/Library/Application Support/com.contextsformac.Contexts',
                '~/Library/Caches/com.contextsformac.Contexts',
+               '~/Library/Logs/Contexts',
                '~/Library/Preferences/com.contextsformac.Contexts.plist',
              ]
 end

@@ -4,7 +4,7 @@ cask 'qqbrowser' do
 
   url 'https://dldir1.qq.com/invc/tt/QQBrowser_for_Mac.dmg'
   name 'QQ浏览器'
-  homepage 'http://browser.qq.com/mac/'
+  homepage 'https://browser.qq.com/mac/'
 
   app 'QQBrowser.app'
 

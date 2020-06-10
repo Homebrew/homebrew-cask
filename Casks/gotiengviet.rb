@@ -1,14 +1,11 @@
 cask 'gotiengviet' do
-  version :latest
-  sha256 :no_check
+  version '2.2'
+  sha256 '5b1a601f832f97aa5cc395d37972d5d8a967f7e38ce43677f1e383089b44dd0a'
 
   url 'https://www.trankynam.com/gotv/downloads/GoTiengViet.dmg'
+  appcast 'https://www.trankynam.com/gotv/macos/GoTiengVietMacOSX-Appcast.xml'
   name 'GoTiengViet'
   homepage 'https://www.trankynam.com/gotv/'
 
-  accessibility_access true
-
   app 'GoTiengViet.app'
-
-  uninstall login_item: 'GoTiengViet'
 end

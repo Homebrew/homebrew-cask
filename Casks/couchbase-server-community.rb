@@ -1,8 +1,9 @@
 cask 'couchbase-server-community' do
-  version '5.0.1'
-  sha256 '14ccc4fad7f4fc4cc66e6dcaa384781b1c5f18b60a5bb58c6b508dbc29bab9be'
+  version '6.5.1'
+  sha256 '940497d462e22dfe28d7ab6e1d2d9245a8326c06ad6733692f3e8eb6887ff682'
 
-  url "http://packages.couchbase.com/releases/#{version}/couchbase-server-community_#{version}-macos_x86_64.zip"
+  url "https://packages.couchbase.com/releases/#{version}/couchbase-server-community_#{version}-macos_x86_64.dmg"
+  appcast 'http://appcast.couchbase.com/membasex.xml'
   name 'Couchbase Server'
   homepage 'https://www.couchbase.com/'
 

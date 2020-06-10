@@ -5,7 +5,7 @@ cask 'qlcommonmark' do
   url "https://github.com/digitalmoksha/QLCommonMark/releases/download/v#{version}/QLCommonMark.qlgenerator.zip"
   appcast 'https://github.com/digitalmoksha/QLCommonMark/releases.atom'
   name 'QLCommonMark'
-  homepage 'github.com/digitalmoksha/QLCommonMark/'
+  homepage 'https://github.com/digitalmoksha/QLCommonMark/'
 
   qlplugin 'QLCommonMark.qlgenerator'
 end

@@ -1,12 +1,12 @@
 cask 'screens-connect' do
-  version '4.7.5790,1523046092'
-  sha256 '19cbf3dbbd7a2028b95efe1d6ccae8051f0ece032188195f08b56d02cc86384d'
+  version '4.9.2,20577:1572284765'
+  sha256 '008d543ff93fbe393cae9f55529fcd5e9ffeb241ac0f67eb7f4e1fc70a6d69e5'
 
-  # dl.devmate.com/com.edovia.Screens-Connect was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.edovia.Screens-Connect/#{version.patch}/#{version.after_comma}/ScreensConnect-#{version.patch}.zip"
+  # dl.devmate.com/com.edovia.Screens-Connect/ was verified as official when first introduced to the cask
+  url "https://dl.devmate.com/com.edovia.Screens-Connect/#{version.after_comma.before_colon}/#{version.after_colon}/ScreensConnect-#{version.after_comma.before_colon}.zip"
   appcast 'https://updates.devmate.com/com.edovia.Screens-Connect.xml'
   name 'Screens Connect'
-  homepage 'https://screensconnect.com/'
+  homepage 'https://screensconnect.com/en/'
 
   depends_on macos: '>= :el_capitan'
 

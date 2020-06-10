@@ -1,8 +1,8 @@
 cask 'webtorrent' do
-  version '0.20.0'
-  sha256 '80b0c58632139e7e537d1a2ee2bbf26e6b65f1e9abde3a5ad7a5a073c3c8f228'
+  version '0.21.0'
+  sha256 'caa0be97dadae10fa2ea45f33e2707bcf203893935dbbd835eed4a7103cca448'
 
-  # github.com/webtorrent/webtorrent-desktop was verified as official when first introduced to the cask
+  # github.com/webtorrent/webtorrent-desktop/ was verified as official when first introduced to the cask
   url "https://github.com/webtorrent/webtorrent-desktop/releases/download/v#{version}/WebTorrent-v#{version}.dmg"
   appcast 'https://github.com/webtorrent/webtorrent-desktop/releases.atom'
   name 'WebTorrent Desktop'
@@ -19,6 +19,7 @@ cask 'webtorrent' do
                '~/Library/Caches/io.webtorrent.webtorrent.ShipIt',
                '~/Library/Caches/WebTorrent',
                '~/Library/Cookies/io.webtorrent.webtorrent.binarycookies',
+               '~/Library/Preferences/ByHost/io.webtorrent.webtorrent.ShipIt.*.plist',
                '~/Library/Preferences/io.webtorrent.webtorrent-helper.plist',
                '~/Library/Preferences/io.webtorrent.webtorrent.plist',
                '~/Library/Saved Application State/io.webtorrent.webtorrent.savedState',

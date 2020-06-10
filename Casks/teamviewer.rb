@@ -1,8 +1,9 @@
 cask 'teamviewer' do
-  version '13'
-  sha256 :no_check # required as upstream package is updated in-place
+  version '15.6.7'
+  sha256 '3a15a15d4903191230a7697c6d791c89108dcebe52b618f681869f96ce12bdbc'
 
-  url "https://download.teamviewer.com/download/version_#{version}x/TeamViewer.dmg"
+  url 'https://download.teamviewer.com/download/TeamViewer.dmg'
+  appcast 'https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=14.7.1965&os=macos&osversion=10.15.1&type=1&channel=1'
   name 'TeamViewer'
   homepage 'https://www.teamviewer.com/'
 
@@ -11,7 +12,20 @@ cask 'teamviewer' do
 
   pkg 'Install TeamViewer.pkg'
 
-  uninstall delete: "#{staged_path}/#{token}" # This Cask should be uninstalled manually.
+  uninstall delete:    [
+                         "#{staged_path}/#{token}", # This Cask should be uninstalled manually.
+                         '/Applications/TeamViewer.app',
+                       ],
+            pkgutil:   'com.teamviewer.teamviewer.*',
+            launchctl: [
+                         'com.teamviewer.desktop',
+                         'com.teamviewer.service',
+                         'com.teamviewer.Helper',
+                         'com.teamviewer.teamviewer',
+                         'com.teamviewer.teamviewer_desktop',
+                         'com.teamviewer.teamviewer_service',
+                       ],
+            quit:      'com.teamviewer.TeamViewer'
 
   zap trash: [
                '/Library/Preferences/com.teamviewer.teamviewer.preferences.plist',
@@ -24,4 +38,11 @@ cask 'teamviewer' do
                '~/Library/Preferences/com.teamviewer.teamviewer.preferences.plist',
                '~/Library/Saved Application State/com.teamviewer.TeamViewer.savedState',
              ]
+
+  caveats <<~EOS
+    WARNING: #{token} has a bug in Catalina where it doesn't deal well with being uninstalled by other utilities.
+    The recommended way to remove it is by running their uninstaller under:
+
+       Preferences → Advanced
+  EOS
 end

@@ -1,21 +1,12 @@
 cask 'maciasl' do
-  if MacOS.version == :lion
-    version '1.3'
-    sha256 '6ba1eafbdf8d954f3c72fc4d5d9e06e15b101522ac253772a06c8579c45675de'
+  version '1.5.7'
+  sha256 'ee99590b7e8821fe61f13245d404f98cf36cfedd52e09f293d67b1f76cac03ca'
 
-    url "https://downloads.sourceforge.net/maciasl/#{version}/MaciASL_Lion.zip"
-  else
-    version '1.4'
-    sha256 '24c0dbaa9a13231b8c8e364ef0e6d60656718320ce69d8bb23aa5bc27e82e87d'
-
-    url "https://downloads.sourceforge.net/maciasl/#{version}/MaciASL.zip"
-    appcast 'https://sourceforge.net/projects/maciasl/rss'
-  end
-
+  url "https://github.com/acidanthera/MaciASL/releases/download/#{version}/MaciASL-#{version}-RELEASE.zip"
+  appcast 'https://github.com/acidanthera/MaciASL/releases.atom'
   name 'MaciASL'
-  homepage 'https://sourceforge.net/projects/maciasl/'
-
-  depends_on macos: '>= :lion'
+  homepage 'https://github.com/acidanthera/MaciASL'
 
   app 'MaciASL.app'
+  binary "#{appdir}/MaciASL.app/Contents/MacOS/iasl-stable", target: 'iasl'
 end

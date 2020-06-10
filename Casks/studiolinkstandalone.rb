@@ -1,14 +1,12 @@
 cask 'studiolinkstandalone' do
-  version '17.03.1-beta'
-  sha256 '313339a57e3c49463509237f247f96f4279efbceb319916f6f0e6f78fe967925'
+  version '20.05.0'
+  sha256 '2c3fb57894207db5fe3c475456210bd83fd70246ad21211977d743a5466fbb87'
 
-  # github.com/Studio-Link-v2/backend was verified as official when first introduced to the cask
-  url "https://github.com/Studio-Link-v2/backend/releases/download/v#{version}/studio-link-standalone-osx.zip"
-  appcast 'https://github.com/Studio-Link-v2/backend/releases.atom'
+  # download.studio.link/ was verified as official when first introduced to the cask
+  url "https://download.studio.link/releases/v#{version}-stable/osx/signed/studio-link-standalone-v#{version}-stable.zip"
+  appcast 'https://gitlab.com/studio.link/app/-/tags?format=atom'
   name 'Studio Link Standalone'
-  homepage 'https://doku.studio-link.de/standalone/installation-standalone.html'
+  homepage 'https://studio-link.de/'
 
   app 'StudioLinkStandalone.app'
-
-  zap trash: '~/.studio-link'
 end

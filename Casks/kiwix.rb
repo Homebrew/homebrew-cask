@@ -1,10 +1,11 @@
 cask 'kiwix' do
-  version '0.9'
-  sha256 '98e677aee3c106c6ec5b16791d3be7c22274b3b32cc44a9cce1eeca6275b7bcc'
+  version '2.1'
+  sha256 '61056a5f48dce8ec63f1082e0b41c4fcbd0e8cf3f36dc06a1f6a3ef29c215669'
 
-  url "http://download.kiwix.org/bin/#{version}/kiwix-#{version}.dmg"
+  url "https://download.kiwix.org/release/kiwix-desktop-macos/kiwix-desktop-macos_#{version}.dmg"
+  appcast 'https://www.macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://download.kiwix.org/release/kiwix-desktop-macos/kiwix-desktop-macos.dmg'
   name 'Kiwix'
-  homepage 'http://www.kiwix.org/'
+  homepage 'https://www.kiwix.org/'
 
   app 'Kiwix.app'
 end

@@ -23,6 +23,6 @@ cask 'glimmerblocker' do
 
   caveats <<~EOS
     You must deactivate GlimmerBlocker from the installed preference
-    pane before uninstalling. See http://glimmerblocker.org/wiki/Uninstall.
+    pane before uninstalling. See https://glimmerblocker.org/wiki/Uninstall.
   EOS
 end

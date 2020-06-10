@@ -7,7 +7,6 @@ cask 'pdf-images' do
   name 'PDF-Images'
   homepage 'https://sourceforge.net/projects/pdf-images/'
 
-  depends_on macos: '>= :mountain_lion'
-
   app 'PDF-Images.app'
+  binary "#{appdir}/PDF-Images.app/Contents/MacOS/pdfimages"
 end

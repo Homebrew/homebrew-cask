@@ -1,12 +1,14 @@
 cask 'pencil2d' do
-  version '0.6.1.1'
-  sha256 'bce374e85b2d49641cf3325aeb91f5cdfaaa02c2defc83c95092e1f8c56e4bb9'
+  version '0.6.4'
+  sha256 'af744904373c33f7a18a6cb52af577d13ee8ffae62dd81472fc141b549925a0b'
 
-  # github.com/pencil2d/pencil was verified as official when first introduced to the cask
+  # github.com/pencil2d/pencil/ was verified as official when first introduced to the cask
   url "https://github.com/pencil2d/pencil/releases/download/v#{version}/pencil2d-mac-#{version}.zip"
   appcast 'https://github.com/pencil2d/pencil/releases.atom'
   name 'Pencil2D Animation'
   homepage 'https://www.pencil2d.org/'
+
+  depends_on macos: '>= :sierra'
 
   app 'Pencil2D/Pencil2D.app'
 end

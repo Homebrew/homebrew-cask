@@ -1,11 +1,13 @@
 cask 'simpholders' do
-  version '2.2'
-  sha256 '0f12b0076f2bef08cd3129916a6fbe6f92bd7601a96bc787bfc0c5feda4b4d4a'
+  version '3.0.10,2277'
+  sha256 'edcfb7b1c78873755487640615960980f2c13ae56a565f67c55d30ad1657f134'
 
-  url "https://simpholders.com/site/assets/files/1968/simpholders_#{version.dots_to_underscores}.dmg"
+  url "https://simpholders.com/site/assets/files/#{version.after_comma}/simpholders_#{version.before_comma.dots_to_underscores}.dmg"
   appcast 'https://simpholders.com/releases/'
   name 'SimPholders'
   homepage 'https://simpholders.com/'
+
+  depends_on macos: '>= :mojave'
 
   app 'SimPholders.app'
 end

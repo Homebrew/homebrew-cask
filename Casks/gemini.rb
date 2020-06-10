@@ -1,9 +1,9 @@
 cask 'gemini' do
-  version '2.4.7,1531762923'
-  sha256 'f953d8451e5d1ec53dcccafe51ed6ba2a9d6a1d890c1ee4eae3d584f5b9aad13'
+  version '2.6.3,339:1588959090'
+  sha256 '9edb7522cb87263be972e1fec5f93610fe0c7f09cf6e6a2a19a40c5c4f1a6f89'
 
   # dl.devmate.com/com.macpaw.site.Gemini was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.macpaw.site.Gemini#{version.major}/#{version.before_comma}/#{version.after_comma}/Gemini#{version.major}-#{version.before_comma}.zip"
+  url "https://dl.devmate.com/com.macpaw.site.Gemini#{version.major}/#{version.after_comma.before_colon}/#{version.after_colon}/Gemini#{version.major}-#{version.after_comma.before_colon}.zip"
   appcast "https://updates.devmate.com/com.macpaw.site.Gemini#{version.major}.xml"
   name 'Gemini'
   homepage 'https://macpaw.com/gemini'
@@ -11,9 +11,12 @@ cask 'gemini' do
   app "Gemini #{version.major}.app"
 
   zap trash: [
-               '~/Library/Application Support/Gemini 2',
-               '~/Library/Caches/com.macpaw.site.Gemini2',
-               '~/Library/Preferences/com.macpaw.site.Gemini2.plist',
-               '~/Library/Saved Application State/com.macpaw.site.Gemini2.savedState',
+               '~/Library/Application Support/Gemini*',
+               '~/Library/Caches/com.macpaw.site.Gemini*',
+               '~/Library/Cookies/com.macpaw.site.Gemini*.binarycookies',
+               '~/Library/Logs/com.macpaw.site.Gemini*',
+               '~/Library/Preferences/com.macpaw.site.Gemini*',
+               '~/Library/Saved Application State/com.macpaw.site.Gemini*',
+               "/Users/Shared/Gemini #{version.major}",
              ]
 end

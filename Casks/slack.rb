@@ -1,13 +1,15 @@
 cask 'slack' do
-  version '3.2.0'
-  sha256 'e5be907a51cd0d5b128532284afe1c913608c584936a5e55d94c75a9f48c4322'
+  version '4.6.0'
+  sha256 '80bf799d57c6220abe43a67a904a7bb4befdb67cda9f5cf3849a31dfb1edaa25'
 
-  # downloads.slack-edge.com was verified as official when first introduced to the cask
-  url "https://downloads.slack-edge.com/mac_releases/Slack-#{version}-macOS.zip"
+  # downloads.slack-edge.com/ was verified as official when first introduced to the cask
+  url "https://downloads.slack-edge.com/releases/macos/#{version}/prod/x64/Slack-#{version}-macOS.dmg"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://slack.com/ssb/download-osx'
   name 'Slack'
   homepage 'https://slack.com/'
 
   auto_updates true
+  conflicts_with cask: 'slack-beta'
 
   app 'Slack.app'
 
@@ -24,8 +26,11 @@ cask 'slack' do
                '~/Library/Cookies/com.tinyspeck.slackmacgap.binarycookies',
                '~/Library/Group Containers/*.com.tinyspeck.slackmacgap',
                '~/Library/Group Containers/*.slack',
+               '~/Library/Logs/Slack',
+               '~/Library/Preferences/ByHost/com.tinyspeck.slackmacgap.ShipIt.*.plist',
                '~/Library/Preferences/com.tinyspeck.slackmacgap.helper.plist',
                '~/Library/Preferences/com.tinyspeck.slackmacgap.plist',
                '~/Library/Saved Application State/com.tinyspeck.slackmacgap.savedState',
+               '~/Library/WebKit/com.tinyspeck.slackmacgap',
              ]
 end

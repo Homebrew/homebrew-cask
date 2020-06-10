@@ -3,23 +3,21 @@ cask 'hammerspoon' do
     version '0.9.46'
     sha256 '20f7e81624b6f007d6fdd8944cab3d9ba48c36fd0b4f1405a590526b5d4859bc'
   else
-    version '0.9.70'
-    sha256 'bafabce321fbc7148c7a9e1941a414e00a3046f0afe13761a7e6a1e3885b154b'
+    version '0.9.78'
+    sha256 'a06a8a78c5fb43a72550d1162fa702a7f383b09ea638c44062f83026dcd2e5ff'
   end
 
-  # github.com/Hammerspoon/hammerspoon was verified as official when first introduced to the cask
+  # github.com/Hammerspoon/hammerspoon/ was verified as official when first introduced to the cask
   url "https://github.com/Hammerspoon/hammerspoon/releases/download/#{version}/Hammerspoon-#{version}.zip"
   appcast 'https://github.com/Hammerspoon/hammerspoon/releases.atom'
   name 'Hammerspoon'
-  homepage 'http://www.hammerspoon.org/'
+  homepage 'https://www.hammerspoon.org/'
 
   auto_updates true
-  accessibility_access true
 
   app 'Hammerspoon.app'
 
-  uninstall quit:       'org.hammerspoon.Hammerspoon',
-            login_item: 'Hammerspoon'
+  uninstall quit: 'org.hammerspoon.Hammerspoon'
 
   zap trash: [
                '~/.hammerspoon',

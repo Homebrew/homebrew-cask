@@ -1,15 +1,14 @@
 cask 'nosleep' do
-  version '1.4.0'
-  sha256 '29e7f771970dce41936372687a5160700e2208357ef1ce37d81ac95c9188efe8'
+  version '1.5.1'
+  sha256 '2dd5293c41a16a35deeaf903cc9f10092721b8869b69ef263231a73a4202cb5a'
 
-  # github.com/integralpro/nosleep was verified as official when first introduced to the cask
-  url "https://github.com/integralpro/nosleep/releases/download/v#{version}/NoSleep-#{version}.dmg"
+  # github.com/integralpro/nosleep/ was verified as official when first introduced to the cask
+  url "https://github.com/integralpro/nosleep/releases/download/#{version}/NoSleep-#{version}.dmg"
   appcast 'https://github.com/integralpro/nosleep/releases.atom'
   name 'NoSleep'
   homepage 'https://integralpro.github.io/nosleep/'
 
-  pkg 'NoSleep.pkg'
+  depends_on macos: '>= :high_sierra'
 
-  uninstall script:  'Uninstall.command',
-            pkgutil: 'com.protech.pkg.NoSleep'
+  app 'NoSleep.app'
 end

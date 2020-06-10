@@ -1,9 +1,11 @@
 cask 'minecraftpe' do
-  version '1-4-release-20180624'
-  sha256 'a2d733992b0ad9b2cc11cef45dc700724481d66892353617c204e2eadbc84f65'
+  version '1.12.62'
+  sha256 '07dbbe77b9f213fab5513941a2a06d29487196c6c1b730666c522c60736846a2'
 
-  # meedownloads.azureedge.net was verified as official when first introduced to the cask
-  url "https://meedownloads.azureedge.net/#{version}/macOS/Minecraft_Education_Edition.dmg"
+  # meedownloads.azureedge.net/ was verified as official when first introduced to the cask
+  url 'https://meedownloads.azureedge.net/retailbuilds/MacOS/Minecraft_Education_Edition.dmg'
+  appcast 'https://minecrafteducation.zendesk.com/hc/en-us/articles/360001447967-What-s-New-in-Minecraft-Education-Edition',
+          configuration: version.chomp('.0')
   name 'Minecraft Education Edition'
   homepage 'https://education.minecraft.net/'
 

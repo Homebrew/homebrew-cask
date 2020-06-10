@@ -1,15 +1,30 @@
 cask 'inkscape' do
-  version '0.92.2-1,11269'
-  sha256 'faece7a9a5fa9db7724b0c761f7f2014676d00ef8b90a0ef506fa39d09209fea'
+  version '1.0.0'
+  sha256 '9b42468815b4bcbc8ccb76a239aea48a2965dbd2f3ae7c3b560c7f2a7e48a955'
 
-  url "https://inkscape.org/gallery/item/#{version.after_comma}/Inkscape-#{version.before_comma}-x11-10.7-x86_64.dmg"
+  url "https://media.inkscape.org/dl/resources/file/Inkscape-#{version}.dmg"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://inkscape.org/release',
+          configuration: version.major_minor
   name 'Inkscape'
   homepage 'https://inkscape.org/'
 
-  depends_on x11: true
-
   app 'Inkscape.app'
-  binary "#{appdir}/Inkscape.app/Contents/Resources/bin/inkscape"
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/inkscape.wrapper.sh"
+  binary shimscript, target: 'inkscape'
 
-  zap trash: '~/.inkscape-etc'
+  preflight do
+    IO.write shimscript, <<~EOS
+      #!/bin/sh
+      exec '#{staged_path}/Inkscape.app/Contents/MacOS/Inkscape' "$@"
+    EOS
+  end
+
+  zap trash: [
+               '~/.config/inkscape',
+               '~/Library/Application Support/Inkscape',
+               '~/Library/Application Support/org.inkscape.Inkscape',
+               '~/Library/Preferences/org.inkscape.Inkscape.plist',
+               '~/Library/Saved Application State/org.inkscape.Inkscape.savedState',
+             ]
 end

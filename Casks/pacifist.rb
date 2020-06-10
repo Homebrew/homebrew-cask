@@ -1,18 +1,31 @@
 cask 'pacifist' do
-  if MacOS.version <= :lion
-    version '3.2.17'
-    sha256 'd38e12293bc6087ddb09275e3c5ab34faa670e87e9dd41e04a587dd387f7b1d3'
-  else
-    version '3.6'
-    sha256 'e0571facfaebb843327426c2a356beb4b8c537aebce3b83848a0887453562f8c'
-  end
+  version '3.6.2'
+  sha256 'e8bd4595462e2cb6f900705ef69fdc9f044aea1e2759e347c3e9667c757fd6af'
 
   url "https://www.charlessoft.com/pacifist_download/Pacifist_#{version}.dmg"
   appcast 'https://www.charlessoft.com/cgi-bin/pacifist_sparkle.cgi'
   name 'Pacifist'
   homepage 'https://www.charlessoft.com/'
 
-  depends_on macos: '>= :tiger'
+  auto_updates true
 
   app 'Pacifist.app'
+  qlplugin 'Pacifist.qlgenerator'
+
+  preflight do
+    system_command '/usr/bin/tar', args: [
+                                           '--extract',
+                                           '--file',
+                                           "#{staged_path}/Pacifist.app/Contents/Resources/QLPlugin.tbz",
+                                           '--directory',
+                                           staged_path,
+                                         ]
+  end
+
+  zap trash: [
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.charlessoft.pacifist.sfl2',
+               '~/Library/Preferences/com.charlessoft.pacifist.plist',
+               '~/Library/QuickLook/Pacifist.qlgenerator',
+               '~/Library/Saved Application State/com.charlessoft.pacifist.savedState',
+             ]
 end

@@ -1,15 +1,15 @@
 cask 'x2goclient' do
-  version '4.1.1.0'
+  version '4.1.2.2,20200213'
 
   if MacOS.version <= :mavericks
-    sha256 '459ac9363a32601b078c43586e0c5b6a42f3f6eb98947877ef7eacae8fc3181c'
-    url "https://code.x2go.org/releases/binary-macosx/x2goclient/releases/#{version}/x2goclient-#{version}.20171029_OSX_10_9.dmg"
+    sha256 'a2f21018a3bcce179b9ccd00ce13e4cbc3f2a7a245eaea56482216fc07d87436'
+    url "https://code.x2go.org/releases/binary-macosx/x2goclient/releases/#{version.before_comma}/x2goclient-#{version.before_comma}.#{version.after_comma}.OSX_10_9.dmg"
   elsif MacOS.version <= :el_capitan
-    sha256 'a852dbcd134a30f0d442001707982b7fc11c64d5fed5813feec20d06de274301'
-    url "https://code.x2go.org/releases/binary-macosx/x2goclient/releases/#{version}/x2goclient-#{version}.20171029.OSX_10_10.dmg"
+    sha256 '7ad7c500fd61f23061c1ec6977f82e9cfa69b7edd0b01f7c97d0f3f1f527cff4'
+    url "https://code.x2go.org/releases/binary-macosx/x2goclient/releases/#{version.before_comma}/x2goclient-#{version.before_comma}.#{version.after_comma}.OSX_10_11.dmg"
   else
-    sha256 'e6e2c4384218711d6b4480c8c9f8f44a726930a594f4c15431ecbd2092f77cb4'
-    url "https://code.x2go.org/releases/binary-macosx/x2goclient/releases/#{version}/x2goclient-#{version}.20171029.OSX_10_12.dmg"
+    sha256 'f41c1a20cc5d6e420a4800954aa18f7b86ed52f4300e187990aa78451be5225a'
+    url "https://code.x2go.org/releases/binary-macosx/x2goclient/releases/#{version.before_comma}/x2goclient-#{version.before_comma}.#{version.after_comma}.OSX_10_13.dmg"
   end
 
   name 'X2Go Client'
@@ -19,5 +19,10 @@ cask 'x2goclient' do
 
   app 'x2goclient.app'
 
-  zap trash: '~/Library/Preferences/x2goclient.plist'
+  zap trash: [
+               '~/.x2go',
+               '~/.x2goclient',
+               '~/Library/Application Support/CrashReporter/x2goclient_*.plist',
+               '~/Library/Preferences/x2goclient.plist',
+             ]
 end

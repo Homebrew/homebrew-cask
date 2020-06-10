@@ -1,11 +1,13 @@
 cask 'figtree' do
-  version '1.4.3,96'
-  sha256 '462eec7fe70530f86993e53dcce59ee45428628947574e2f91f5274c09898600'
+  version '1.4.4'
+  sha256 '4a11741143982a9b7fea78e60c8315ce8e8436eeb96ab3ee5376c53c83e54b9b'
 
-  url "http://tree.bio.ed.ac.uk/download.php?id=#{version.after_comma}"
+  # github.com/rambaut/figtree/ was verified as official when first introduced to the cask
+  url "https://github.com/rambaut/figtree/releases/download/v#{version}/FigTree.v#{version}.dmg"
+  appcast 'https://github.com/rambaut/figtree/releases.atom'
   name 'FigTree'
   homepage 'http://tree.bio.ed.ac.uk/software/figtree/'
 
-  app "FigTree v#{version.before_comma}.app"
+  app "FigTree v#{version}.app"
   qlplugin 'QuickLook Plugin/FigTreeQuickLookPlugin.qlgenerator'
 end

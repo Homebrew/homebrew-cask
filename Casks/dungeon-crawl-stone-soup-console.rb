@@ -1,6 +1,6 @@
 cask 'dungeon-crawl-stone-soup-console' do
-  version '0.21.1'
-  sha256 '43c3b8fbef69f801b223d2c8a0d9bcbd23e04369e8462d0f4bf389f84cdc9638'
+  version '0.23.0'
+  sha256 '49d4e7812438193de33c4c3cc3bc3456692860e4843815c5573e63d21bae4a4e'
 
   url "https://crawl.develz.org/release/#{version.major_minor}/stone_soup-#{version}-console-macosx.zip"
   appcast 'https://github.com/crawl/crawl/releases.atom'

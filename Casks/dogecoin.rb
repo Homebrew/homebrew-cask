@@ -1,12 +1,12 @@
 cask 'dogecoin' do
-  version '1.10.0'
-  sha256 'be854af97efecf30ee18ed846a3bf3a780a0eb0e459a49377d7a8261c212b322'
+  version '1.14.2'
+  sha256 'd8cbb26ceeb5e395417ed5e8984fc3b1d8990f8d5866deb837a4d82a17dba62e'
 
-  # github.com/dogecoin/dogecoin was verified as official when first introduced to the cask
-  url "https://github.com/dogecoin/dogecoin/releases/download/v#{version}/dogecoin-#{version}-osx-signed.dmg"
+  # github.com/dogecoin/dogecoin/ was verified as official when first introduced to the cask
+  url "https://github.com/dogecoin/dogecoin/releases/download/v#{version}/dogecoin-#{version}-osx.dmg"
   appcast 'https://github.com/dogecoin/dogecoin/releases.atom'
   name 'Dogecoin'
-  homepage 'http://dogecoin.com/'
+  homepage 'https://dogecoin.com/'
 
   app 'Dogecoin-Qt.app'
 

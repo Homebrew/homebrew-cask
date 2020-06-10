@@ -1,9 +1,10 @@
 cask 'authy' do
-  version '1.6.0'
-  sha256 'd8d4fe46e0e3cf39c3296e0c97d626cdfebc4be5e8eb141c1bca14e8eaf2cfb5'
+  version '1.8.1'
+  sha256 '96f455597746926672c5005551feca9563dc93f769ac27bbf923e6afde5bb01d'
 
-  # s3.amazonaws.com/authy-electron-repository-production was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/authy-electron-repository-production/authy/stable/#{version}/darwin/x64/Authy%20Desktop-#{version}.dmg"
+  # authy-electron-repository-production.s3.amazonaws.com/ was verified as official when first introduced to the cask
+  url "https://authy-electron-repository-production.s3.amazonaws.com/authy/stable/#{version}/darwin/x64/Authy%20Desktop-#{version}.dmg"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://electron.authy.com/download%3Fchannel=stable%26arch=x64%26platform=darwin%26version=latest%26product=authy'
   name 'Authy Desktop'
   homepage 'https://authy.com/'
 

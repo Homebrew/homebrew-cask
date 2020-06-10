@@ -1,13 +1,11 @@
 cask 'fly' do
-  version '3.13.0'
-  sha256 '4a47a960d6d75612374bba1b8348c18caeb63c8368efba5911e8824021669df6'
+  version '6.1.0'
+  sha256 '1e33de1f8f845283b73f664a9a8bc6fb8dbf6b2d2d973e89ff44b7298f2bf7f2'
 
-  url "https://github.com/concourse/concourse/releases/download/v#{version}/fly_darwin_amd64"
+  url "https://github.com/concourse/concourse/releases/download/v#{version}/fly-#{version}-darwin-amd64.tgz"
   appcast 'https://github.com/concourse/concourse/releases.atom'
   name 'fly'
-  homepage 'https://github.com/concourse/fly'
+  homepage 'https://github.com/concourse/concourse'
 
-  container type: :naked
-
-  binary 'fly_darwin_amd64', target: 'fly'
+  binary 'fly'
 end

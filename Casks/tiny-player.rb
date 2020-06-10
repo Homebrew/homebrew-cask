@@ -1,11 +1,11 @@
 cask 'tiny-player' do
-  version '1.2.3'
-  sha256 'a433521c5e469e7ab03a083721162fff0bec9d1282181ca366965d5d0ee98d58'
+  version '1.2.12'
+  sha256 'b0163d8bf55e32d634ea1f04dc1453c1d927d2c418c8479caf0911286f6ac52a'
 
-  url "http://download.catnapgames.com/TinyPlayer-#{version}.zip"
-  appcast 'http://download.catnapgames.com/TinyPlayerAppcast.xml'
+  url "https://download.catnapgames.com/TinyPlayer-#{version}.zip"
+  appcast 'https://download.catnapgames.com/TinyPlayerAppcast.xml'
   name 'Tiny Player for Mac'
-  homepage 'http://www.catnapgames.com/tiny-player-for-mac/'
+  homepage 'https://www.catnapgames.com/tiny-player-for-mac/'
 
   auto_updates true
 

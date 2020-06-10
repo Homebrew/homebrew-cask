@@ -1,14 +1,12 @@
 cask 'openra' do
-  version '20180307'
-  sha256 'a8cf3a77ff1cccfaa66d973f4abbfa1c30106f39da97ce4d0fd0e823cee86b52'
+  version '20200503'
+  sha256 '0240e82003fc46af6b321efd0a5ef7703f4f0293fe75212ef29cad67a705c4fb'
 
-  # github.com/OpenRA/OpenRA was verified as official when first introduced to the cask
+  # github.com/OpenRA/OpenRA/ was verified as official when first introduced to the cask
   url "https://github.com/OpenRA/OpenRA/releases/download/release-#{version}/OpenRA-release-#{version}.dmg"
   appcast 'https://github.com/OpenRA/OpenRA/releases.atom'
   name 'OpenRA'
-  homepage 'http://www.openra.net/'
-
-  depends_on cask: 'mono-mdk'
+  homepage 'https://www.openra.net/'
 
   app 'OpenRA - Dune 2000.app'
   app 'OpenRA - Red Alert.app'

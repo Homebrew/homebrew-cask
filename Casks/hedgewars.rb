@@ -1,14 +1,9 @@
 cask 'hedgewars' do
-  if MacOS.version <= :el_capitan
-    version '0.9.22'
-    sha256 'adc0b6dd3b47de115e85db1cb72841836444c0ebc77caee8139bfd6561e28fe8'
-  else
-    version '0.9.23'
-    sha256 '2a5fbfa005ec6aeea172270397025c17a2c117224dd21db5214b8cbbeade411b'
-  end
+  version '1.0.0'
+  sha256 '5a0bdd9bc4cb7beea03b95a2549c1cf994ea8646f6621f5353dd22d79c757404'
 
-  url "http://www.hedgewars.org/download/releases/Hedgewars-#{version}.dmg"
-  appcast 'https://www.hedgewars.org/download/appcast.xml'
+  url "https://www.hedgewars.org/download/releases/Hedgewars-#{version}.dmg"
+  appcast 'https://hedgewars.org/'
   name 'Hedgewars'
   homepage 'https://hedgewars.org/'
 

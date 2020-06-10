@@ -1,11 +1,18 @@
 cask 'barrier' do
-  version '2.1.0'
-  sha256 'f12738524bc002f830e711f1f054c892c5ea71af968a842b9d51a5d4276ca415'
+  version '2.3.2'
+  sha256 'b5ebc59c4152f827a0551f265c026d3d78d7bc0d2d8ad1bd9ad0961d1815a2d0'
 
-  url "https://github.com/debauchee/barrier/releases/download/v#{version}/barrier-#{version}.dmg"
+  url "https://github.com/debauchee/barrier/releases/download/v#{version}/Barrier-#{version}-Release.dmg"
   appcast 'https://github.com/debauchee/barrier/releases.atom'
   name 'Barrier'
   homepage 'https://github.com/debauchee/barrier/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Barrier.app'
+
+  zap trash: [
+               '~/Library/Application Support/barrier',
+               '~/Library/Saved Application State/barrier.savedState',
+             ]
 end

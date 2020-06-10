@@ -1,12 +1,12 @@
 cask 'codelite' do
-  version :latest
-  sha256 :no_check
+  version '14.0.0'
+  sha256 '502c4bd7636226cd7defbe38dbf6ad45781b24e22058524c0037d6176146e33e'
 
   url 'https://downloads.codelite.org/downloads.php?osx'
+  appcast 'https://github.com/eranif/codelite/releases.atom',
+          configuration: version.chomp('.0')
   name 'CodeLite'
   homepage 'https://codelite.org/'
-
-  depends_on macos: '>= :mountain_lion'
 
   app 'codelite.app'
 

@@ -1,11 +1,12 @@
 cask 'lynkeos' do
-  version '2.10'
-  sha256 'bd27055c51575555a1c8fe546cf057c57c0e45ea5d252510847277734dc550a4'
+  version '3.3'
+  sha256 '5d5a3eca3aea628ac201f31a59b41377240db62a58f2e9c14ca172de3d0dc25a'
 
+  # downloads.sourceforge.net/lynkeos/ was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/lynkeos/lynkeos/#{version}/Lynkeos-App-#{version.dots_to_hyphens}.zip"
   appcast 'https://sourceforge.net/projects/lynkeos/rss?path=/lynkeos'
   name 'Lynkeos'
-  homepage 'http://lynkeos.sourceforge.net/'
+  homepage 'https://lynkeos.sourceforge.io/'
 
   app "Lynkeos-App-#{version.dots_to_hyphens}/Lynkeos.app"
 end

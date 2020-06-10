@@ -1,6 +1,6 @@
 cask 'vmware-fusion' do
-  version '10.1.2-8502123'
-  sha256 'b3310fc8ee64bae6e994e0e2720282b037857cc22ffd8427a713f0c84ac4e556'
+  version '11.5.5-16269456'
+  sha256 '20cdb359334cd7fd5953ab73264610e03c75a8bcf7f1601ba6535ca8bd53fd83'
 
   url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version}.dmg"
   appcast 'https://softwareupdate.vmware.com/cds/vmw-desktop/fusion.xml'
@@ -8,6 +8,7 @@ cask 'vmware-fusion' do
   homepage 'https://www.vmware.com/products/fusion.html'
 
   auto_updates true
+  depends_on macos: '>= :mojave'
 
   app 'VMware Fusion.app'
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmnet-bridge"
@@ -18,6 +19,7 @@ cask 'vmware-fusion' do
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmnet-netifup"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmnet-sniffer"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmrun"
+  binary "#{appdir}/VMware Fusion.app/Contents/Library/vmrest"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmss2core"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-aewp"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-authd"
@@ -34,6 +36,7 @@ cask 'vmware-fusion' do
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-vmx-debug"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-vmx-stats"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/VMware OVF Tool/ovftool"
+  binary "#{appdir}/VMware Fusion.app/Contents/Library/vkd/bin/vctl"
 
   postflight do
     system_command "#{appdir}/VMware Fusion.app/Contents/Library/Initialize VMware Fusion.tool",
@@ -44,6 +47,8 @@ cask 'vmware-fusion' do
   uninstall_preflight do
     set_ownership "#{appdir}/VMware Fusion.app"
   end
+
+  uninstall delete: '/etc/paths.d/com.vmware.fusion.public'
 
   zap trash: [
                '/Library/Application Support/VMware',

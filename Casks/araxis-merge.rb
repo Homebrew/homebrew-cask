@@ -1,9 +1,5 @@
 cask 'araxis-merge' do
-  if MacOS.version <= :mountain_lion
-    version '2014.4459'
-    sha256 '7945e0fd583880bf4bbb65899c7184692d683f247764e73f435e0685954028f0'
-    url "https://www.araxis.com/download/Merge#{version}-OSX10.8.dmg"
-  elsif MacOS.version <= :mavericks
+  if MacOS.version <= :mavericks
     version '2016.4774'
     sha256 '341b47242f30aca3ce3c0af9112c95f3bdac5f5ae262aa1894a9632b46fef6ab'
     url "https://www.araxis.com/download/Merge#{version}-OSX10.9.dmg"
@@ -12,16 +8,14 @@ cask 'araxis-merge' do
     sha256 'abba11a92e1f50d913356d31123bed5bb08838ce39c4659206fd24c32432c4b3'
     url "https://www.araxis.com/download/Merge#{version}-OSX10.10.dmg"
   else
-    version '2018.5008'
-    sha256 'db47fa9e0d90313a3eb0239248e2cb23489d3ca695ebe9a1299e188efd4a4bb2'
+    version '2020.5350'
+    sha256 '916cbada651214ce55282ccb93923e22ab17a1ee1227217f5dd949b8f7de7fcb'
     url "https://www.araxis.com/download/Merge#{version}-macOS.dmg"
   end
 
   appcast 'https://www.araxis.com/news-feed.atom'
   name 'Araxis Merge'
   homepage 'https://www.araxis.com/merge/'
-
-  depends_on macos: '>= :mountain_lion'
 
   app 'Araxis Merge.app'
   binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxisgitdiff"

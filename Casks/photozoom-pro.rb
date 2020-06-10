@@ -1,8 +1,9 @@
 cask 'photozoom-pro' do
-  version '7'
+  version '8'
   sha256 :no_check # required as upstream package is updated in-place
 
-  url "http://files.benvista.com/PhotoZoom_Pro_#{version}.dmg"
+  url "https://www.benvista.com/photozoompro#{version}/download/mac",
+      user_agent: :fake
   name 'PhotoZoom Pro'
   homepage 'https://www.benvista.com/photozoompro'
 

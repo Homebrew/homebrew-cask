@@ -1,17 +1,17 @@
 cask 'simsim' do
-  version '1.3.4'
-  sha256 'cbfdd3b500f381bf60dc0111047e6bc5e85090c17eb47319027c7327d650ca9b'
+  version '1.4.4'
+  sha256 '7f6fc17b934df27c2034dedd8c34f764bf431d98a1a757cdcde8e47a029b4c3f'
 
-  url "https://github.com/dsmelov/simsim/releases/download/#{version}/SimSim_#{version}.dmg"
+  url "https://github.com/dsmelov/simsim/releases/download/#{version}/SimSim_#{version}.zip"
   appcast 'https://github.com/dsmelov/simsim/releases.atom'
   name 'SimSim'
   homepage 'https://github.com/dsmelov/simsim/'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'SimSim.app'
 
-  uninstall quit:       'com.dsmelov.SimSim',
-            login_item: 'SimSim',
-            kext:       'com.dsmelov.SimSim'
+  uninstall quit: 'com.dsmelov.SimSim'
 
   zap trash: '~/Library/Preferences/com.dsmelov.SimSim.plist'
 end

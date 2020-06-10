@@ -2,17 +2,14 @@ cask 'spotify' do
   version :latest
   sha256 :no_check
 
-  # scdn.co was verified as official when first introduced to the cask
+  # scdn.co/ was verified as official when first introduced to the cask
   url 'https://download.scdn.co/Spotify.dmg'
   name 'Spotify'
   homepage 'https://www.spotify.com/'
 
-  depends_on macos: '>= :lion'
-
   app 'Spotify.app'
 
-  uninstall launchctl:  'com.spotify.webhelper',
-            login_item: 'Spotify'
+  uninstall launchctl: 'com.spotify.webhelper'
 
   zap trash: [
                '~/Library/Application Support/Spotify',

@@ -1,8 +1,8 @@
 cask 'dhs' do
-  version '1.3.1'
-  sha256 '3fc293da9f4730790e8c07833e0225fa6b57d2455bec53dd8e5b1e50de41c8d4'
+  version '1.4.1'
+  sha256 '6d0ce00e0e111059e157bae26d4a913d7cb7c42cee6493b638c2c5019fe987fc'
 
-  # bitbucket.org/objective-see was verified as official when first introduced to the cask
+  # bitbucket.org/objective-see/ was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/DHS_#{version}.zip"
   appcast 'https://objective-see.com/products/changelogs/DHS.txt'
   name 'Dylib Hijack Scanner'

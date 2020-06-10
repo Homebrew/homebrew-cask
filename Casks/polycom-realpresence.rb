@@ -1,10 +1,12 @@
 cask 'polycom-realpresence' do
-  version '3.9.0.69879'
-  sha256 '8b2e42522d79c438d0067cdfa8a99743fca98e1e5c759d74565ead4ff9d34265'
+  version '3.10.3.72504'
+  sha256 '1dc2d12cd5b6e7a90b4fe369e422f20a6a2a42c229fe6b67af8e83e3422f7024'
 
-  url "https://downloads.polycom.com/video/realpresence_desktop/RPDMac_#{version.dots_to_underscores}.dmg"
+  url "https://downloads.polycom.com/video/realpresence_desktop/RPDesktop_#{version.dots_to_underscores}.dmg"
+  appcast 'https://support.polycom.com/content/support/north-america/usa/en/support/video/realpresence-desktop/realpresence-desktop.html',
+          configuration: version.dots_to_underscores
   name 'Polycom RealPresence Desktop'
-  homepage 'http://www.polycom.com/products-services/hd-telepresence-video-conferencing/realpresence-desktop/realpresence-desktop.html'
+  homepage 'https://www.polycom.com/products-services/hd-telepresence-video-conferencing/realpresence-desktop/realpresence-desktop.html'
 
   pkg 'RealPresenceDesktop.pkg'
 

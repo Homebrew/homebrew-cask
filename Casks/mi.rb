@@ -1,13 +1,11 @@
 cask 'mi' do
-  version '3.0.0'
-  sha256 '6239a38e289a00555341ee55dbc97d99a11a1fca9b4f1724fac194df73167727'
+  version '3.0.4'
+  sha256 'f6e5d1a6845277a9bb5b994df713f9523a0ce7e9071ed85a3a88917adee281e7'
 
   url "https://www.mimikaki.net/download/mi#{version}.dmg"
   appcast 'https://www.mimikaki.net/download/appcast.xml'
   name 'mi'
   homepage 'https://www.mimikaki.net/'
-
-  depends_on macos: '>= :lion'
 
   app 'mi.app'
 

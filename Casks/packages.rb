@@ -1,11 +1,13 @@
 cask 'packages' do
-  version '1.2.3'
-  sha256 '77e88cf1b02cee232ece0c24c61e30da20274f3c0e1a6107d06030dd126d677c'
+  version '1.2.9'
+  sha256 '70ac111417728c17b1f27d5520afd87c33f899f12de8ace0f703e3e1c500b28e'
 
   url 'http://s.sudre.free.fr/Software/files/Packages.dmg'
-  appcast 'http://s.sudre.free.fr/Software/documentation/RemoteVersion.plist'
+  appcast 'http://s.sudre.free.fr/Software/Packages/about.html'
   name 'Packages'
   homepage 'http://s.sudre.free.fr/Software/Packages/about.html'
+
+  auto_updates true
 
   pkg 'packages/Packages.pkg'
 

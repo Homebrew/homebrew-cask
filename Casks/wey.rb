@@ -1,6 +1,6 @@
 cask 'wey' do
-  version '0.3.0'
-  sha256 'b0d596aa92b0eb40181fba9201ed7604d1df3b0d6ce62d8e913cd1e99e1dd966'
+  version '0.3.7'
+  sha256 '5ebbfad23a598d64c2fa1c311877546ae9b9c4e41e4040395496231fc70f68ec'
 
   url "https://github.com/yue/wey/releases/download/v#{version}/wey-v#{version}-darwin-x64.zip"
   appcast 'https://github.com/yue/wey/releases.atom'

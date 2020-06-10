@@ -1,4 +1,4 @@
-# How to Use Homebrew-Cask
+# How to Use Homebrew Cask
 
 ## Getting Started
 
@@ -11,7 +11,7 @@ $ brew --version
 
 ## Frequently Used Commands
 
-Homebrew-Cask is implemented as a subcommand of Homebrew. All Homebrew-Cask commands begin with `brew cask`. Homebrew-Cask has its own set of command verbs many of which are similar to Homebrew’s. The most frequently-used
+Homebrew Cask is implemented as a subcommand of Homebrew. All Homebrew Cask commands begin with `brew cask`. Homebrew Cask has its own set of command verbs many of which are similar to Homebrew’s. The most frequently-used
 commands are:
 
 * `install` — installs the given Cask
@@ -66,8 +66,8 @@ Note that `uninstall --force` is currently imperfect. See the man page for more 
 * `list` — with no args, lists installed Casks; given installed Casks, lists staged files (with `--full-name`, include tap name)
 * `fetch` — downloads remote application files for the given Cask to the local cache (with `--force`, re-download even if already cached)
 * `doctor` — checks for configuration issues
-* `cleanup` — cleans up cached downloads (with `--outdated`, only cleans old downloads)
-* `home` — opens the homepage of the given Cask; or with no arguments, the Homebrew-Cask project page
+* `style` — checks Cask style using RuboCop
+* `home` — opens the homepage of the given Cask; or with no arguments, the Homebrew Cask project page
 * `zap` — try to remove *all* files associated with a Cask (may include resources shared with other applications)
 * `outdated` - lists all outdated Casks
 * `upgrade` - updates all outdated Casks
@@ -88,7 +88,7 @@ The following aliases and abbreviations are provided for convenience:
 
 ## Tab Completion
 
-Homebrew-Cask comes with `bash` and `zsh` completion for the `brew cask` command.
+Homebrew Cask comes with `bash` and `zsh` completion for the `brew cask` command.
 
 See https://docs.brew.sh/Shell-Completion for more information.
 
@@ -123,23 +123,20 @@ Caffeine.app (app)
 
 ## Updating/Upgrading Casks
 
-Since the Homebrew-Cask repository is a Homebrew Tap, you’ll pull down the latest Casks every time you issue the regular Homebrew command `brew update`. You can check for outdated Casks with `brew cask outdated` and install the outdated Casks with `brew cask upgrade`. Many applications update themselves, so their Casks are ignored by `brew cask outdated` and `brew cask upgrade`. This behaviour can be overridden by adding `--greedy` to the command.
+Since the Homebrew Cask repository is a Homebrew Tap, you’ll pull down the latest Casks every time you issue the regular Homebrew command `brew update`. You can check for outdated Casks with `brew cask outdated` and install the outdated Casks with `brew cask upgrade`. Many applications update themselves, so their Casks are ignored by `brew cask outdated` and `brew cask upgrade`. This behaviour can be overridden by adding `--greedy` to the command.
 
-It is generally safe to run updates from within an application.
+## Updating/Upgrading the Homebrew Cask Tool
 
-## Updating/Upgrading the Homebrew-Cask Tool
-
-Homebrew [automatically taps and keeps Homebrew-Cask updated](https://github.com/Homebrew/homebrew-cask/pull/15381). `brew update` is all that is required.
+Homebrew [automatically taps and keeps Homebrew Cask updated](https://github.com/Homebrew/homebrew-cask/pull/15381). `brew update` is all that is required.
 
 ## Additional Taps (optional)
 
-The primary Homebrew-Cask Tap includes most of the Casks that a typical user will be interested in. There are a few additional Taps where we store different kinds of Casks.
+The primary Homebrew Cask Tap includes most of the Casks that a typical user will be interested in. There are a few additional Taps where we store different kinds of Casks.
 
 | Tap name | description |
 | -------- | ----------- |
 | [Homebrew/cask-versions](https://github.com/Homebrew/homebrew-cask-versions) | contains alternate versions of Casks (e.g. betas, nightly releases, old versions)
 | [Homebrew/cask-fonts](https://github.com/Homebrew/homebrew-cask-fonts)       | contains Casks that install fonts
-| [Homebrew/cask-eid](https://github.com/Homebrew/homebrew-cask-eid)           | contains Casks that install electronic identity card software of various countries
 | [Homebrew/cask-drivers](https://github.com/Homebrew/homebrew-cask-drivers)   | contains Casks that install drivers for various devices
 
 You can tap any of the above with a `brew tap` command:
@@ -196,7 +193,7 @@ Most `brew cask` commands can accept a Cask token as an argument. As described a
 
 `brew cask` also accepts three other forms as arguments:
 
-* A path to a Cask file, _eg_: `/usr/local/Library/Taps/Homebrew/homebrew-cask/Casks/google-chrome.rb`.
+* A path to a Cask file, _eg_: `/usr/local/Library/Taps/homebrew/homebrew-cask/Casks/google-chrome.rb`.
 * A `curl`-retrievable URI to a Cask file, _eg_: `https://raw.githubusercontent.com/Homebrew/homebrew-cask/f25b6babcd398abf48e33af3d887b2d00de1d661/Casks/google-chrome.rb`.
 * A file in the current working directory, _eg_: `my-modfied-google-chrome.rb`. Note that matching Tapped Cask tokens will be preferred over this form when there is a conflict. To force the use of a Cask file in the current directory, specify a pathname with slashes, _eg_: `./google-chrome.rb`.
 

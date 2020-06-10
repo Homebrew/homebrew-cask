@@ -1,11 +1,11 @@
 cask 'meshmixer' do
-  version '3p4'
-  sha256 '2a08316e18be5a8c688747d49e4ef4d09565ba298ecaff1d0cd8e2280f7ea373'
+  version '3p5'
+  sha256 'ec13996680ea8636c0f4a82386824e73eea8c6a2145f4b16383f167ab5777281'
 
-  # s3.amazonaws.com/meshmixer.release was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/meshmixer.release/Autodesk_Meshmixer_v#{version}_macOS.pkg"
+  url "http://www.meshmixer.com/downloads/Autodesk_Meshmixer_v#{version}_MacOS.pkg"
+  appcast 'http://meshmixer.com/download.html'
   name 'MeshMixer'
-  homepage 'https://meshmixer.com/'
+  homepage 'http://meshmixer.com/'
 
   pkg "Autodesk_Meshmixer_v#{version}_macOS.pkg"
 

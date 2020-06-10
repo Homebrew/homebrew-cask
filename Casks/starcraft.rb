@@ -2,7 +2,7 @@ cask 'starcraft' do
   version :latest
   sha256 :no_check
 
-  # battle.net was verified as official when first introduced to the cask
+  # battle.net/ was verified as official when first introduced to the cask
   url 'https://www.battle.net/download/getInstallerForGame?os=MAC&version=LIVE&gameProgram=STARCRAFT'
   name 'Starcraft'
   homepage 'https://starcraft.com/'

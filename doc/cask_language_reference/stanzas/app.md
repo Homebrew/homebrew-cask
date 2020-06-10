@@ -30,7 +30,7 @@ artifact 'openman.1', target: '/usr/local/share/man/man1/openman.1'
 
 ## target: Works on Most Artifact Types
 
-The `target:` key works similarly for most Cask artifacts, such as `app`, `binary`, `colorpicker`, `dictionary`, `font`, `input_method`, `prefpane`, `qlplugin`, `service`, `suite`, and `artifact`.
+The `target:` key works similarly for most Cask artifacts, such as `app`, `binary`, `colorpicker`, `dictionary`, `font`, `input_method`, `prefpane`, `qlplugin`, `mdimporter`, `service`, `suite`, and `artifact`.
 
 ## target: Should Only Be Used in Select Cases
 

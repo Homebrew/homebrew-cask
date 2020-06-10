@@ -1,8 +1,8 @@
 cask 'drawio' do
-  version '8.8.0'
-  sha256 '07bcd4c3defb29f63892ee7d48bfa382c912abb8d6c3d4110528d7478c9ff2ac'
+  version '13.0.3'
+  sha256 'decea8307b0f63720e5d7abb8cac1eb88d0022109199757f672a3641e7695488'
 
-  # github.com/jgraph/drawio-desktop was verified as official when first introduced to the cask
+  # github.com/jgraph/drawio-desktop/ was verified as official when first introduced to the cask
   url "https://github.com/jgraph/drawio-desktop/releases/download/v#{version}/draw.io-#{version}.dmg"
   appcast 'https://github.com/jgraph/drawio-desktop/releases.atom'
   name 'draw.io Desktop'
@@ -11,8 +11,12 @@ cask 'drawio' do
   app 'draw.io.app'
 
   zap trash: [
+               '~/Library/Application Support/draw.io',
+               '~/Library/Caches/com.jgraph.drawio.desktop',
+               '~/Library/Logs/draw.io',
                '~/Library/Preferences/com.jgraph.drawio.desktop.helper.plist',
                '~/Library/Preferences/com.jgraph.drawio.desktop.plist',
                '~/Library/Saved Application State/com.jgraph.drawio.desktop.savedState',
+               '~/Library/WebKit/com.jgraph.drawio.desktop',
              ]
 end

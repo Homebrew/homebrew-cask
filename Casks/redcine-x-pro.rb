@@ -1,10 +1,12 @@
 cask 'redcine-x-pro' do
-  version '50.0.0,43840'
-  sha256 'c617328a331cf2c1dc10fd71e9a0827516b2de6c6cd71404f913d621a77564f1'
+  version '51.0.47074'
+  sha256 '4f8021224cd4e705ca18f2709540731046e991efb23e7232e157ad59b89604c1'
 
-  url "http://downloads.red.com/software/rcx/mac/release/#{version.major}.#{version.after_comma}/REDCINE-X_PRO_Build_#{version.major_minor}.pkg"
+  # red_3.s3.amazonaws.com/ was verified as official when first introduced to the cask
+  url "https://red_3.s3.amazonaws.com/downloads/software/rcx/RELEASE%20CANDIDATE/REDCINE-X_PRO_Build_#{version.major_minor}.pkg"
+  appcast 'https://www.red.com/RedSuiteCentric/SCA-Kilimanjaro/services/Download.Service.ss?downloadIdentifier=redcine-x-pro-mac'
   name 'REDCINE-X PRO'
-  homepage 'http://www.red.com/'
+  homepage 'https://www.red.com/'
 
   pkg "REDCINE-X_PRO_Build_#{version.major_minor}.pkg"
 

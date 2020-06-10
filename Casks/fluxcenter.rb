@@ -1,12 +1,11 @@
 cask 'fluxcenter' do
-  version '1.2.15.47859'
-  sha256 'f9a6557d1ab8dfe21b8cb0d215907fbb174fe66a94c06d61c2650e4e90ad4043'
+  version '1.2.16.47921'
+  sha256 'b5114d716950881732878d8a8cc1c027e47b57ea90d579afea6637ac89b87d14'
 
-  url "https://fluxhome.com/wp-content/uploads/files/Center/MacOS/Flux_FluxCenter_MacOS_Installer_(#{version}).dmg"
+  url "https://www.flux.audio/wp-content/uploads/files/Center/MacOS/Flux_FluxCenter_MacOS_Installer_(#{version}).dmg"
+  appcast 'https://www.flux.audio/wp-content/uploads/files/Center/changeLog.txt'
   name 'FluxCenter'
-  homepage 'http://www.fluxhome.com/'
-
-  depends_on macos: '>= :lion'
+  homepage 'https://www.flux.audio/'
 
   app 'FluxCenter.app'
 end

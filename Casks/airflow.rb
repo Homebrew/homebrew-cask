@@ -1,14 +1,15 @@
 cask 'airflow' do
-  version '2.3.9u1'
-  sha256 '4562442dc8ed62c93ecb2d61c012fabeb5f8acddbfe0475f4d01b1668645cf85'
+  version '3.1.3u1'
+  sha256 'd7dd65cae80df5bb073ab7ed12d5552d2be727c5babac400ac9a84372cabe544'
 
-  # amazonaws.com/Airflow was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/Airflow/Download/Airflow%20#{version}.zip"
-  appcast 'https://s3.amazonaws.com/Airflow/Updates/appcast-osx.xml'
+  # cdn.downloads.iocave.net/Airflow/ was verified as official when first introduced to the cask
+  url "https://cdn.downloads.iocave.net/Airflow/Airflow%20#{version}.zip"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://airflowapp.com/download/latest?mac'
   name 'Airflow'
   homepage 'https://airflowapp.com/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'Airflow.app'
 

@@ -1,8 +1,8 @@
 cask 'vagrant' do
-  version '2.1.2'
-  sha256 'dd9cacd2d1fcf03e22343de9698f89c1547ab74cfb4a64b7deb8ed1b3e12bb16'
+  version '2.2.9'
+  sha256 '529cde2a78e6df38ec906b65c70b36a087e2601eab42e25856e35b20ccb027c0'
 
-  # hashicorp.com/vagrant was verified as official when first introduced to the cask
+  # hashicorp.com/vagrant/ was verified as official when first introduced to the cask
   url "https://releases.hashicorp.com/vagrant/#{version}/vagrant_#{version}_x86_64.dmg"
   appcast 'https://github.com/hashicorp/vagrant/releases.atom'
   name 'Vagrant'

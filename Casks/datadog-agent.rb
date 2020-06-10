@@ -1,9 +1,10 @@
 cask 'datadog-agent' do
-  version '6.1.2-1'
-  sha256 'e2399cc9ddbf9f2ffecd32b48698857d1fd23cd504bd3527f0bb73c94d83542f'
+  version '7.19.1-1'
+  sha256 '35c415cd57e2ae57482959acb19ad6f7675491464ce75484d8e0bf7fb407065c'
 
-  # s3.amazonaws.com/dd-agent was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/dd-agent/datadog-agent-#{version}.dmg"
+  # dd-agent.s3.amazonaws.com/ was verified as official when first introduced to the cask
+  url "https://dd-agent.s3.amazonaws.com/datadog-agent-#{version}.dmg"
+  appcast 'https://github.com/DataDog/datadog-agent/releases.atom'
   name 'Datadog Agent'
   homepage 'https://www.datadoghq.com/'
 
@@ -11,15 +12,21 @@ cask 'datadog-agent' do
 
   preflight do
     require 'etc'
-    File.open('/tmp/datadog-install-user', 'w') { |f| f.write(Etc.getlogin) }
+    File.write('/tmp/datadog-install-user', Etc.getlogin)
   end
 
-  uninstall pkgutil: 'com.datadoghq.agent'
+  uninstall launchctl: 'com.datadoghq.agent',
+            # pkgutil: 'com.datadoghq.agent' # this is commented out because PKG uninstallation seems to fail due to missing files caused by case insensitivity and files that differ only in case. See https://github.com/Homebrew/homebrew-cask/pull/54739.
+            delete:    [
+                         '/Applications/Datadog Agent.app',
+                         '/opt/datadog-agent/',
+                         '/private/var/db/receipts/com.datadoghq.agent.*',
+                       ]
 
   zap trash: '/opt/datadog-agent'
 
   caveats <<~EOS
-    You will need to update /opt/datadog-agent/etc/datadog.conf and replace APIKEY with your api key
+    You will need to update /opt/datadog-agent/etc/datadog.yaml and replace APIKEY with your api key
 
     If you ever want to start/stop the Agent, please use the Datadog Agent App or datadog-agent command.
     It will start automatically at login, if you want to enable it at startup, run these commands:

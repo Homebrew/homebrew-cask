@@ -6,8 +6,6 @@ cask 'heaven' do
   name 'Heaven Benchmark'
   homepage 'https://benchmark.unigine.com/heaven'
 
-  depends_on macos: '>= mountain_lion'
-
   app 'Heaven.app'
 
   zap trash: [

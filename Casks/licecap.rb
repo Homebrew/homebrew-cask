@@ -1,6 +1,6 @@
 cask 'licecap' do
-  version '1.28'
-  sha256 '130c8cd34b0048297433df9bce5dbc1b52e0e5b3d798c2cbc5be68773f3adbc6'
+  version '1.30'
+  sha256 'de2af536ced4a81ef6c89c237741037bd12a4532a231d1fc2f3bc456d175c382'
 
   url "https://www.cockos.com/licecap/licecap#{version.no_dots}.dmg"
   appcast 'https://www.cockos.com/licecap/'

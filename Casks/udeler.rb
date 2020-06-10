@@ -1,8 +1,8 @@
 cask 'udeler' do
-  version '1.6.0'
-  sha256 '3ad01d8280c862bd8c9efb4ff94178128ea0001309a858766f7b442cf43f3ad4'
+  version '1.8.2'
+  sha256 '5a2b65b7e5d4db864a0895a72b7fc76626ed4c2c0204abe50b84c0b6f81f6d7f'
 
-  url "https://github.com/FaisalUmair/udemy-downloader-gui/releases/download/v#{version}/Udeler-#{version}-mac.zip"
+  url "https://github.com/FaisalUmair/udemy-downloader-gui/releases/download/v#{version}/Udeler-#{version}-mac.dmg"
   appcast 'https://github.com/FaisalUmair/udemy-downloader-gui/releases.atom'
   name 'Udeler'
   homepage 'https://github.com/FaisalUmair/udemy-downloader-gui/'

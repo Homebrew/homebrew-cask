@@ -1,13 +1,23 @@
 cask 'reveal' do
-  version '16'
-  sha256 '17e67e58b0ec8766c06c996a572b53e6b3b2beeb1f823d9d3412de9b6a38ede6'
+  version '26'
+  sha256 '9cf292d91163030a10dc0da73ebf7d9b1e736b849aeb12c8617a09e38ef81a5e'
 
   url "https://download.revealapp.com/Reveal.app-#{version}.zip"
-  appcast 'https://revealapp.com/download/'
+  appcast 'https://updates.devmate.com/com.ittybittyapps.Reveal2.xml'
   name 'Reveal'
   homepage 'https://revealapp.com/'
 
-  depends_on macos: '>= :sierra'
+  auto_updates true
+  depends_on macos: '>= :mojave'
 
   app 'Reveal.app'
+
+  zap trash: [
+               '~/Library/Application Support/Reveal',
+               '~/Library/Caches/com.ittybittyapps.Reveal2',
+               '~/Library/Logs/com.ittybittyapps.Reveal2',
+               '~/Library/Preferences/com.ittybittyapps.Reveal2.plist',
+               '~/Library/Saved Application State/com.ittybittyapps.Reveal2.savedState',
+               '/Users/Shared/Reveal',
+             ]
 end

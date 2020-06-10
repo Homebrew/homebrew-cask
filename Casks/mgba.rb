@@ -1,14 +1,14 @@
 cask 'mgba' do
-  version '0.6.3'
-  sha256 '4a86bb19c5e7027727903f7bcb1678e8a7e6dff4219c044e03349cc2d17ae5f3'
+  version '0.8.1'
+  sha256 '867b6d588351505ffae9e90ee75373fc7044a08dbb2c40ada9b91d12e255b295'
 
-  # github.com/mgba-emu/mgba was verified as official when first introduced to the cask
+  # github.com/mgba-emu/mgba/ was verified as official when first introduced to the cask
   url "https://github.com/mgba-emu/mgba/releases/download/#{version}/mGBA-#{version}-osx.tar.xz"
   appcast 'https://github.com/mgba-emu/mgba/releases.atom'
   name 'mGBA'
   homepage 'https://mgba.io/'
 
-  app "mGBA-#{version}-osx/mGBA.app"
+  app "mGBA-#{version}-osx/Applications/mGBA.app"
 
   zap trash: [
                '~/Library/Preferences/com.endrift.mgba-qt.plist',

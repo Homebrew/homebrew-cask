@@ -1,21 +1,18 @@
 cask 'auristor-client' do
-  version '0.170'
+  version '0.195'
 
-  if MacOS.version == :mavericks
-    sha256 'cab27067e65c1ae467333f1fc4840faf7d8887a907f1d2723a91344181fcdf9d'
-    url "https://www.auristor.com/downloads/auristor/osx/macos-10.9/AuriStor-client-#{version}-Mavericks.dmg"
-  elsif MacOS.version == :yosemite
-    sha256 '6f47a61ba2184cc1a83284807ef685626ba4f480a7ad6d52e9a07cf50596e93c'
-    url "https://www.auristor.com/downloads/auristor/osx/macos-10.10/AuriStor-client-#{version}-Yosemite.dmg"
-  elsif MacOS.version == :el_capitan
-    sha256 'ce04a065f9609660cc06fdefc044ff7585888d4ca54bd943c786bca8ff04fc1c'
-    url "https://www.auristor.com/downloads/auristor/osx/macos-10.11/AuriStor-client-#{version}-ElCapitan.dmg"
-  elsif MacOS.version == :sierra
-    sha256 '3acb856ba898e01ad2352aa5c01de229806713bf51f7a3a5ef6d68e2ab87712c'
+  if MacOS.version <= :sierra
+    sha256 '909f53f46b1dcfe627fd421f3b91f0e62010b35891d4407100780a5c52cc1704'
     url "https://www.auristor.com/downloads/auristor/osx/macos-10.12/AuriStor-client-#{version}-Sierra.dmg"
-  else
-    sha256 '6f9bcffeee74b38e9737f65ba7435fbddf7b41259cbf441637b0ea21d9916e85'
+  elsif MacOS.version <= :high_sierra
+    sha256 'dee691a8b1e8712ebe9dfaa912b84cb5918e7b9810227cfcfbbc20d1a2bde6c1'
     url "https://www.auristor.com/downloads/auristor/osx/macos-10.13/AuriStor-client-#{version}-HighSierra.dmg"
+  elsif MacOS.version <= :mojave
+    sha256 '9b0ff041d5158ab63b95e2520a01c81a9e6535f06955ff1e0c18a0b635b4f553'
+    url "https://www.auristor.com/downloads/auristor/osx/macos-10.14/Auristor-client-#{version}-Mojave.dmg"
+  else
+    sha256 'f24a450376bbfe9d6994c34a4bd8fe05af3c5522d93b01a8930d808d88dc5ca1'
+    url "https://www.auristor.com/downloads/auristor/osx/macos-10.15/Auristor-client-#{version}-Catalina.dmg"
   end
 
   name 'AuriStor File System Client'
@@ -23,14 +20,21 @@ cask 'auristor-client' do
 
   # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.
   depends_on macos: [
-                      :mavericks,
-                      :yosemite,
-                      :el_capitan,
                       :sierra,
                       :high_sierra,
+                      :mojave,
+                      :catalina,
                     ]
 
-  pkg 'Auristor-Lite.pkg'
+  if MacOS.version <= :high_sierra
+    pkg 'Auristor-Lite.pkg'
+  elsif MacOS.version <= :mojave
+    pkg 'Auristor-Lite.pkg'
+  elsif MacOS.version <= :catalina
+    pkg 'Auristor-Lite.pkg'
+  else
+    pkg 'Auristor.pkg'
+  end
 
   uninstall pkgutil:   'com.auristor.yfs-*',
             launchctl: [

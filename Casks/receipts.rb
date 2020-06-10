@@ -1,6 +1,6 @@
 cask 'receipts' do
-  version '1.8.1-197'
-  sha256 '78536ff2dee072586bc64d1f9c2879dbd766aa5a18fb8120b9cdbcd63bd58a27'
+  version '1.9.7-295'
+  sha256 '4f3e262322aad4d09bdc686b06098ae07c647ff2d6dcf9bc1c45834cd93b244d'
 
   url "https://www.receipts-app.com/update/download/Receipts-#{version}.zip"
   appcast 'https://www.receipts-app.com/updater.php'

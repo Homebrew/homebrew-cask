@@ -1,29 +1,27 @@
 cask 'miniconda' do
-  version :latest
-  sha256 :no_check
+  version 'py37_4.8.2'
+  sha256 'f3ede3a58d82fb5dcbca52d291a9edb5cd962d84d823a20693dd4bb27506cdd0'
 
-  # repo.continuum.io/miniconda was verified as official when first introduced to the cask
-  url 'https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh'
+  # repo.anaconda.com/miniconda/ was verified as official when first introduced to the cask
+  url "https://repo.anaconda.com/miniconda/Miniconda3-#{version}-MacOSX-x86_64.pkg"
   name 'Continuum Analytics Miniconda'
-  homepage 'https://www.anaconda.com/what-is-anaconda/'
+  homepage 'https://conda.io/miniconda.html'
 
-  depends_on macos: '>= :lion'
-  container type: :naked
+  auto_updates true
 
-  installer script: {
-                      executable: 'Miniconda3-latest-MacOSX-x86_64.sh',
-                      args:       ['-b', '-p', "#{HOMEBREW_PREFIX}/miniconda3"],
-                      sudo:       true,
-                    }
+  pkg "Miniconda3-#{version}-MacOSX-x86_64.pkg"
 
-  postflight do
-    set_ownership "#{HOMEBREW_PREFIX}/miniconda3"
-  end
+  uninstall pkgutil: [
+                       'io.continuum.pkg.apreinstall',
+                       'io.continuum.pkg.conda.exe',
+                       'io.continuum.pkg.pathupdate',
+                       'io.continuum.pkg.postextract',
+                       'io.continuum.pkg.preconda',
+                     ]
 
-  uninstall delete: "#{HOMEBREW_PREFIX}/miniconda3"
-
-  caveats do
-    path_environment_variable "#{HOMEBREW_PREFIX}/miniconda3/bin"
-    files_in_usr_local
-  end
+  zap trash: [
+               '~/.condarc',
+               '~/.conda',
+               '~/.continuum',
+             ]
 end

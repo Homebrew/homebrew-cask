@@ -1,9 +1,10 @@
 cask 'minecraft-server' do
-  version '1.12.2'
-  sha256 'fe1f9274e6dad9191bf6e6e8e36ee6ebc737f373603df0946aafcded0d53167e'
+  version '1.15.2,bb2b6b1aefcd70dfd1892149ac3a215f6c636b07'
+  sha256 '80cf86dc2004ec6a2dc0183d1c75a9af3ba0669f7c332e4247afb1d76fb67e8a'
 
-  # s3.amazonaws.com/Minecraft.Download was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/Minecraft.Download/versions/#{version}/minecraft_server.#{version}.jar"
+  # launcher.mojang.com/ was verified as official when first introduced to the cask
+  url "https://launcher.mojang.com/v#{version.major}/objects/#{version.after_comma}/server.jar"
+  appcast 'https://minecraft.net/en-us/download/server/'
   name 'Minecraft Server'
   homepage 'https://minecraft.net/'
 
@@ -21,7 +22,7 @@ cask 'minecraft-server' do
     IO.write shimscript, <<~EOS
       #!/bin/sh
       cd '#{config_dir}' && \
-        exec /usr/bin/java -Xmx1024M -Xms1024M -jar '#{staged_path}/minecraft_server.#{version}.jar' nogui
+        exec /usr/bin/java ${@:--Xms1024M -Xmx1024M} -jar '#{staged_path}/server.jar' nogui
     EOS
   end
 

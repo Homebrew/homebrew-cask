@@ -1,46 +1,26 @@
 #!/bin/bash
-#
-# list_recent_pkg_ids
-#
 
-###
-### settings
-###
+readonly program="$(basename "${0}")"
 
-set -e               # exit on any uncaught error
-set +o histexpand    # don't expand history expressions
-shopt -s nocasematch # case-insensitive regular expressions
+function usage {
+  echo "
+    List pkg receipt IDs for the 10 most recently installed packages. Package IDs attributed to Apple are excluded from the output.
 
-###
-### main
-###
+    Usage:
+      ${program} [options]
 
-_list_recent_pkg_ids () {
-    /bin/ls -t /var/db/receipts |                        \
-    /usr/bin/egrep '\.plist$' |                          \
-    /usr/bin/perl -pe 's{\A([^/]+)\.plist\Z}{$1}sg' |    \
-    /usr/bin/egrep -v '^com\.apple\.' |                  \
-    /usr/bin/head -10
+    Options:
+      -h, --help   Show this message.
+  " | sed -E 's/ {4}//'
 }
 
-# process args
-if [[ $1 =~ ^-+h(elp)?$ ]]; then
-    printf "list_recent_pkg_ids
-
-Print pkg receipt IDs for the 10 most-recently-installed packages,
-which may be useful in a Cask uninstall stanza, eg
-
-    uninstall pkgutil: 'pkg.receipt.id.goes.here'
-
-Package IDs attributed to Apple are excluded from the output.
-
-See CONTRIBUTING.md for more information.
-
-"
-    exit
+if [[ "${1}" =~ ^(-h|--help)$ ]]; then
+  usage
+  exit 0
 fi
 
-# dispatch main
-_list_recent_pkg_ids "${@}"
-
-#
+/bin/ls -t /var/db/receipts | \
+  /usr/bin/grep '\.plist$' | \
+  /usr/bin/grep --invert-match '^com\.apple\.' | \
+  /usr/bin/sed 's/\.plist$//' | \
+  /usr/bin/head -10

@@ -1,10 +1,11 @@
 cask 'mactex' do
-  version '2018.0417'
-  sha256 'e6ee8f69ca6e5ca5d20a31afc3dff3b4e5aa7a0b1b89ace9864ac22b10c34b98'
+  version '2020.0407'
+  sha256 'a33af89de36c7c84a76050c9704d50d23892e9c2070f04f6a53e1c6d5a332f67'
 
-  # mirror.ctan.org/systems/mac/mactex was verified as official when first introduced to the cask
+  # mirror.ctan.org/systems/mac/mactex/ was verified as official when first introduced to the cask
   url "http://mirror.ctan.org/systems/mac/mactex/mactex-#{version.no_dots}.pkg"
-  appcast 'https://www.tug.org/mactex/downloading.html'
+  appcast 'https://www.tug.org/mactex/downloading.html',
+          configuration: version.major
   name 'MacTeX'
   homepage 'https://www.tug.org/mactex/'
 
@@ -13,27 +14,33 @@ cask 'mactex' do
                          'mactex-no-gui',
                        ]
   depends_on formula: 'ghostscript'
-  depends_on macos: '>= :yosemite'
+  depends_on macos: '>= :high_sierra'
 
   pkg "mactex-#{version.no_dots}.pkg",
       choices: [
                  {
-                   # TeXLive
-                   'choiceIdentifier' => 'choice1',
-                   'choiceAttribute'  => 'selected',
-                   'attributeSetting' => 1,
-                 },
-                 {
-                   # GUI-Applications
-                   'choiceIdentifier' => 'choice2',
-                   'choiceAttribute'  => 'selected',
-                   'attributeSetting' => 1,
-                 },
-                 {
                    # Ghostscript
-                   'choiceIdentifier' => 'choice3',
+                   'choiceIdentifier' => 'org.tug.mactex.ghostscript9.50',
                    'choiceAttribute'  => 'selected',
                    'attributeSetting' => 0,
+                 },
+                 {
+                   # Ghostscript Dynamic Library
+                   'choiceIdentifier' => 'org.tug.mactex.ghostscript9.50libgs',
+                   'choiceAttribute'  => 'selected',
+                   'attributeSetting' => 0,
+                 },
+                 {
+                   # GUI Applications
+                   'choiceIdentifier' => "org.tug.mactex.gui#{version.major}",
+                   'choiceAttribute'  => 'selected',
+                   'attributeSetting' => 1,
+                 },
+                 {
+                   # TeXLive
+                   'choiceIdentifier' => "org.tug.mactex.texlive#{version.major}",
+                   'choiceAttribute'  => 'selected',
+                   'attributeSetting' => 1,
                  },
                ]
 
@@ -44,7 +51,6 @@ cask 'mactex' do
             delete:  [
                        "/usr/local/texlive/#{version.major}",
                        '/Applications/TeX',
-                       '/Library/PreferencePanes/TeXDistPrefPane.prefPane',
                        '/Library/TeX',
                        '/etc/paths.d/TeX',
                        '/etc/manpaths.d/TeX',
@@ -56,29 +62,24 @@ cask 'mactex' do
                # TexShop:
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/texshop.sfl*',
                '~/Library/Application Support/TeXShop',
-               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/TeXShop Help*',
+               '~/Library/Caches/com.apple.helpd/Generated/TeXShop Help*',
                '~/Library/Caches/TeXShop',
                '~/Library/Preferences/TeXShop.plist',
                '~/Library/TeXShop',
-               # BibDesk:
-               '~/Library/Application Support/BibDesk',
-               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/edu.ucsd.cs.mmccrack.bibdesk.help*',
-               '~/Library/Caches/edu.ucsd.cs.mmccrack.bibdesk',
-               '~/Library/Cookies/edu.ucsd.cs.mmccrack.bibdesk.binarycookies',
-               '~/Library/Preferences/edu.ucsd.cs.mmccrack.bibdesk.plist',
                # LaTeXiT:
                '~/Library/Caches/fr.chachatelier.pierre.LaTeXiT',
                '~/Library/Cookies/fr.chachatelier.pierre.LaTeXiT.binarycookies',
                '~/Library/Preferences/fr.chachatelier.pierre.LaTeXiT.plist',
-               # TeX Live Utility:
-               '~/Library/Application Support/TeX Live Utility',
-               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/TeX Live Utility Help*',
-               # Excalibur:
-               '~/Library/Preferences/Excalibur Preferences',
-               '~/Library/Saved Application State/edu.bucknell.Excalibur.savedState',
              ],
       rmdir: [
                '/usr/local/texlive',
                '~/Library/texlive',
              ]
+
+  caveats <<~EOS
+    You must restart your terminal window for the installation of MacTex CLI tools to take effect.
+    Alternatively, Bash and Zsh users can run the command:
+
+      eval "$(/usr/libexec/path_helper)"
+  EOS
 end

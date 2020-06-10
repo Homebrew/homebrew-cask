@@ -2,14 +2,12 @@ cask 'android-file-transfer' do
   version :latest
   sha256 :no_check
 
-  # google.com/dl/androidjumper was verified as official when first introduced to the cask
+  # google.com/dl/androidjumper/ was verified as official when first introduced to the cask
   url 'https://dl.google.com/dl/androidjumper/mtp/current/androidfiletransfer.dmg'
   name 'Android File Transfer'
   homepage 'https://www.android.com/filetransfer/'
 
   app 'Android File Transfer.app'
-
-  uninstall login_item: 'Android File'
 
   zap trash: [
                '~/Library/Application Support/Google/Android File Transfer',

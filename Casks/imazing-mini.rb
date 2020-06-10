@@ -1,20 +1,18 @@
 cask 'imazing-mini' do
-  version '2.6.3,9078:1529433965'
-  sha256 'cb83801e8fa44aebfa9b54fa68777799bb98a362f6b2a24de842da920b57cc58'
+  version '2.8.1,9825:1542056055'
+  sha256 'f6bd3704edbc9f9e4cd2497952155771bd50285ae9a3b99f7adb0f5210572a8b'
 
-  # dl.devmate.com/com.DigiDNA.iMazing2Mac.Mini was verified as official when first introduced to the cask
+  # dl.devmate.com/com.DigiDNA.iMazing2Mac.Mini/ was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.DigiDNA.iMazing2Mac.Mini/#{version.after_comma.before_colon}/#{version.after_colon}/iMazingMini2forMac-#{version.after_comma.before_colon}.dmg"
   appcast "https://updates.devmate.com/com.DigiDNA.iMazing#{version.major}Mac.Mini.xml"
   name 'iMazing Mini'
-  homepage 'https://imazing.com/mini'
+  homepage 'https://imazing.com/backup-iphone-ipad'
 
   conflicts_with cask: 'imazing'
-  depends_on macos: '>= :mountain_lion'
 
   app 'iMazing Mini.app'
 
-  uninstall login_item: 'iMazing Mini',
-            quit:       "com.DigiDNA.iMazing#{version.major}Mac.Mini"
+  uninstall quit: "com.DigiDNA.iMazing#{version.major}Mac.Mini"
 
   zap trash: [
                '~/Library/Application Support/iMazing',

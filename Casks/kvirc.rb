@@ -1,10 +1,13 @@
 cask 'kvirc' do
-  version '4.2.0'
-  sha256 'bb450b5abc2012cfc6c3f2cce3c8b13239acad4553cdd73d48f8d47dd8cf61c2'
+  version '5.0.0'
+  sha256 'd0793ab8a14de5388bc36f99945191120ec3349ab3f2c24f76f4dd11ab9b4874'
 
-  url "ftp://ftp.kvirc.de/pub/kvirc/#{version}/binary/osx/KVIrc-#{version}-Equilibrium.dmg"
+  url "ftp://ftp.kvirc.net/pub/kvirc/#{version}/binary/macosx/KVIrc-#{version}.dmg"
+  appcast 'https://github.com/kvirc/KVIrc/releases.atom'
   name 'KVIrc'
-  homepage 'http://www.kvirc.de/'
+  homepage 'https://www.kvirc.net/'
+
+  depends_on macos: '>= :high_sierra'
 
   app 'KVIrc.app'
 

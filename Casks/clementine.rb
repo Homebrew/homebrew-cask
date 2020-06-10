@@ -2,7 +2,7 @@ cask 'clementine' do
   version '1.3.1'
   sha256 '825aa66996237e1d3ea2723b24188ead203f298d0bec89f4c3bc6582d9e63e3a'
 
-  # github.com/clementine-player/Clementine was verified as official when first introduced to the cask
+  # github.com/clementine-player/Clementine/ was verified as official when first introduced to the cask
   url "https://github.com/clementine-player/Clementine/releases/download/#{version}/clementine-#{version}.dmg"
   appcast 'https://github.com/clementine-player/Clementine/releases.atom'
   name 'Clementine'

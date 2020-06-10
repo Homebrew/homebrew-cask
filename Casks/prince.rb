@@ -1,19 +1,20 @@
 cask 'prince' do
-  version '11.4'
-  sha256 'd360101c46c7d6586584216a090f2c99f4a9f65d5133a6154eed5fbddf8b461a'
+  version '13.5'
+  sha256 '6c0f35494f2ca7fc6909513c03f09fbe6a9184b8bc28ecc34032ab53844d0f04'
 
-  url "https://www.princexml.com/download/prince-#{version}-macosx.tar.gz"
+  url "https://www.princexml.com/download/prince-#{version}-macos.tar.gz"
+  appcast 'https://www.princexml.com/download/'
   name 'Prince'
   homepage 'https://www.princexml.com/'
 
-  installer script: "prince-#{version}-macosx/install.sh"
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/prince-#{version}-macos/prince.wrapper.sh"
+  binary shimscript, target: 'prince'
 
-  uninstall delete: [
-                      '/usr/local/bin/prince',
-                      '/usr/local/lib/prince',
-                    ]
-
-  caveats do
-    files_in_usr_local
+  preflight do
+    IO.write shimscript, <<~EOS
+      #!/bin/sh
+      exec '#{staged_path}/prince-#{version}-macos/lib/prince/bin/prince' --prefix '#{staged_path}/prince-#{version}-macos/lib/prince' "$@"
+    EOS
   end
 end

@@ -1,12 +1,14 @@
 cask 'mjolnir' do
-  version '0.4.3'
-  sha256 '7f7a9579427f258a34663abed46845c81c35f676f63b2ae1acef2a7729745572'
+  version '1.0.2'
+  sha256 'eb39b9ff76258c3aa7970f70465a7c858290ce798e5b8e411cb5b7d300de16d1'
 
-  # github.com/sdegutis/mjolnir was verified as official when first introduced to the cask
-  url "https://github.com/sdegutis/mjolnir/releases/download/#{version}/Mjolnir-#{version}.tgz"
-  appcast 'https://github.com/sdegutis/mjolnir/releases.atom'
+  # github.com/mjolnirapp/mjolnir/ was verified as official when first introduced to the cask
+  url "https://github.com/mjolnirapp/mjolnir/releases/download/#{version}/Mjolnir.app.zip"
+  appcast 'https://github.com/mjolnirapp/mjolnir/releases.atom'
   name 'Mjolnir'
-  homepage 'https://www.mjolnir.io/'
+  homepage 'https://mjolnir.rocks/'
+
+  depends_on macos: '>= :sierra'
 
   app 'Mjolnir.app'
 end

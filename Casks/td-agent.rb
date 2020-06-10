@@ -1,10 +1,10 @@
 cask 'td-agent' do
-  version '2.3.5-1'
-  sha256 '2f2973ed29a3edd416cc5dad6b924751a2cdb8cdbb2792dc5344f3e13529b190'
+  version '3.1.1-0'
+  sha256 'aea92474070fc973315228dde287a32111d29cb52f4a94bc7f73cfa73d88afc8'
 
-  # packages.treasuredata.com.s3.amazonaws.com was verified as official when first introduced to the cask
-  url "http://packages.treasuredata.com.s3.amazonaws.com/2/macosx/td-agent-#{version}.dmg"
-  appcast 'https://td-agent-package-browser.herokuapp.com/2/macosx'
+  # packages.treasuredata.com.s3.amazonaws.com/ was verified as official when first introduced to the cask
+  url "http://packages.treasuredata.com.s3.amazonaws.com/#{version.major}/macosx/td-agent-#{version}.dmg"
+  appcast "https://td-agent-package-browser.herokuapp.com/#{version.major}/macosx"
   name 'td-agent'
   homepage 'https://www.fluentd.org/'
 

@@ -1,6 +1,6 @@
 cask 'adobe-air-sdk' do
-  version '30.0.0.107'
-  sha256 'f1f95129fbc48b0625cda9d94c4e02fa704f287698dd1ff7d5051a617fca3077'
+  version '31.0.0.96'
+  sha256 '820bfd701177320f152ac2b70f4538e7cd970905520c591e46209a6bca897125'
 
   url "https://airdownload.adobe.com/air/mac/download/#{version.major_minor}/AIRSDK_Compiler.dmg"
   appcast 'https://helpx.adobe.com/au/air/kb/archived-air-sdk-version.html'
@@ -50,7 +50,7 @@ cask 'adobe-air-sdk' do
   end
 
   uninstall_postflight do
-    FileUtils.rm("#{HOMEBREW_PREFIX}/share/adobe-air-sdk")
+    FileUtils.rm_f("#{HOMEBREW_PREFIX}/share/adobe-air-sdk")
   end
 
   caveats <<~EOS

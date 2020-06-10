@@ -1,6 +1,6 @@
 cask 'horndis' do
-  version '9.0'
-  sha256 '2b973b0c13f2138dd1a5a2fce61daf042894ee9b7b0e883b86e9d6c37d691c4d'
+  version '9.2'
+  sha256 '15f5c6cbe14e5c0f11bf27172dfbcdf3b753122d128807d6bad94c8f4c2b71e1'
 
   url "https://github.com/jwise/HoRNDIS/releases/download/rel#{version}/HoRNDIS-#{version}.pkg"
   appcast 'https://github.com/jwise/HoRNDIS/releases.atom'

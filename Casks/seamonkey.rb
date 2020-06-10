@@ -1,38 +1,38 @@
 cask 'seamonkey' do
-  version '2.49.3'
+  version '2.53.2'
 
   language 'de' do
-    sha256 '3bc0a913e420f77f5a44b1ff763ba6f1995b1f775e4a432793a08a57ddf058d1'
+    sha256 '06dd692e8debe3d8c64f34659f675ae207bf4f1d60b2a9810ab2a389d37c691f'
     'de'
   end
 
   language 'en-GB' do
-    sha256 'd22813aff2321cc17fdef594142a2c292ecb5f45b61f590c42b660b2c6c48a0e'
+    sha256 '46fdc10bc29f757bccd9cb3cf933490d06a59c63c2fbc572ca626d7bd25e00dd'
     'en-GB'
   end
 
-  language 'en', default: true do
-    sha256 '8e39beaedc4d0f340c2d92e4f584f644cf9c18e03f3af0913ac9cc95092c9c98'
+  language 'en-US', default: true do
+    sha256 '4ed0131465029c5e6403bf881fd7469f7f7d002b436703166275fa131cab073e'
     'en-US'
   end
 
   language 'fr' do
-    sha256 '620501393f2475037e4552442b61dfc3245ba31980a8be2647d76bc5edfbb571'
+    sha256 '075f2fb8f3b2195c8475132054ac9a3d429b575349d6592b16943fedfed9ee68'
     'fr'
   end
 
   language 'it' do
-    sha256 '3fb078dc08ca8756c76adde6313744d4f0ea3870b769c447070fd7f5f3796df8'
+    sha256 'b3fd64c5dfd7417a54415ce92c20b53ac98be784f263069c1f9d3ca654cc70b7'
     'it'
   end
 
   language 'ru' do
-    sha256 '623145931366e21042fc226bd8103b06721c4bd7106197c33b0447a9521439c4'
+    sha256 '796867c304b411d07c9f0bf92a9f7330ae97ff830da461386855efc756def3f1'
     'ru'
   end
 
-  # mozilla.org/pub/seamonkey/releases was verified as official when first introduced to the cask
-  url "https://ftp.mozilla.org/pub/seamonkey/releases/#{version}/mac/#{language}/SeaMonkey%20#{version}.dmg"
+  # mozilla.org/pub/seamonkey/releases/ was verified as official when first introduced to the cask
+  url "https://archive.mozilla.org/pub/seamonkey/releases/#{version}/mac/#{language}/seamonkey-#{version}.#{language}.mac.dmg"
   appcast 'https://www.seamonkey-project.org/releases/'
   name 'SeaMonkey'
   homepage 'https://www.seamonkey-project.org/'

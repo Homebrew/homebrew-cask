@@ -1,8 +1,8 @@
 cask 'music-manager' do
-  version '1.0.243.1116'
-  sha256 'e425d1724d092ae5ddfb28ad4304439754394b91ab3ff3063b66196d2ffe4bee'
+  version '1.0.635.372'
+  sha256 'df5332024548f3e2995c66a3a5c861211014a3794d107c27fe3cde2065cc8937'
 
-  url "https://dl.google.com/dl/androidjumper/mac/#{version.sub(%r{^\d+\.\d+\.}, '').delete('.')}/musicmanager.dmg"
+  url 'https://dl.google.com/dl/androidjumper/mac/6350372/musicmanager.dmg'
   name 'Google Play Music Manager'
   homepage 'https://play.google.com/music/listen'
 
@@ -10,9 +10,8 @@ cask 'music-manager' do
   # Original discussion: https://github.com/Homebrew/homebrew-cask/pull/4282
   app 'MusicManager.app', target: 'Music Manager.app'
 
-  uninstall delete:     '~/Library/PreferencePanes/MusicManager.prefPane',
-            login_item: 'Music Manager',
-            quit:       'com.google.musicmanager'
+  uninstall delete: '~/Library/PreferencePanes/MusicManager.prefPane',
+            quit:   'com.google.musicmanager'
 
   zap trash: [
                '~/Library/Application Support/Google/MusicManager',

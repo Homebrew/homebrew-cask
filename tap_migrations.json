@@ -11,6 +11,7 @@
   "docker-compose": "homebrew/core",
   "exa": "homebrew/core",
   "exiftool": "homebrew/core",
+  "fastlane": "homebrew/core",
   "fpc": "homebrew/core",
   "gedit": "homebrew/core",
   "ghc": "homebrew/core",
@@ -22,6 +23,7 @@
   "hyper": "homebrew/core",
   "idris": "homebrew/core",
   "jenkins": "homebrew/core",
+  "minikube": "homebrew/core",
   "mitmproxy": "homebrew/core",
   "mosh": "homebrew/core",
   "nmap": "homebrew/core",
@@ -32,7 +34,6 @@
   "pandoc": "homebrew/core",
   "pgloader": "homebrew/core",
   "pgweb": "homebrew/core",
-  "phantomjs": "homebrew/core",
   "purescript": "homebrew/core",
   "python": "homebrew/core",
   "python3": "homebrew/core",
@@ -48,5 +49,6 @@
   "syncthing": "homebrew/core",
   "terraform": "homebrew/core",
   "vault": "homebrew/core",
+  "vfuse": "homebrew/core",
   "volatility": "homebrew/core"
 }

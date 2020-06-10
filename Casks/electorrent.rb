@@ -1,6 +1,6 @@
 cask 'electorrent' do
-  version '2.3.1'
-  sha256 '31bd50f59a77dd78b13fb951e43c0e5bb38ae5faa08908cae23e86cee2b465db'
+  version '2.7.1'
+  sha256 'e254a87fd5ef2d4df0e57f3b4fc4cc9390ca1b1b7f9d5cae66a39206428e0786'
 
   url "https://github.com/Tympanix/Electorrent/releases/download/v#{version}/electorrent-#{version}.dmg"
   appcast 'https://github.com/Tympanix/Electorrent/releases.atom'

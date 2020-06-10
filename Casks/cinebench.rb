@@ -1,10 +1,22 @@
 cask 'cinebench' do
-  version 'R15.038'
-  sha256 'a255ca5b7fddd1dfe896058ba01fdf3d141de639309e7325aa6c241cd658a4f3'
+  version 'R20,281795'
+  sha256 'c2ee9b2dab04cdd8fc1b1a03bb2303cdaf1495cbc2614cd2f3fa56cd8151e47e'
 
-  url "http://http.maxon.net/pub/benchmarks/CINEBENCH#{version}.dmg"
+  url "https://http.maxon.net/pub/cinebench/Cinebench#{version.before_comma}.dmg"
   name 'Cinebench'
   homepage 'https://www.maxon.net/products/cinebench/'
 
-  app "CINEBENCH #{version}"
+  depends_on macos: '>= :el_capitan'
+
+  app 'Cinebench.app'
+
+  uninstall quit: 'net.maxon.cinebench'
+
+  zap trash: [
+               '~/Documents/MAXON',
+               '~/Library/Caches/net.maxon.cinebench',
+               '~/Library/Caches/net.maxon.cinema4d',
+               '~/Library/Preferences/MAXON',
+               '~/Library/Saved Application State/net.maxon.cinebench.savedState',
+             ]
 end

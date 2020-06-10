@@ -1,8 +1,5 @@
 cask 'monolingual' do
-  if MacOS.version <= :snow_leopard
-    version '1.4.5'
-    sha256 '7684b6b6d41b784d06e636f5e7993ca3730680ccbfa83e90e74b43be58ad3e21'
-  elsif MacOS.version <= :mavericks
+  if MacOS.version <= :mavericks
     version '1.5.10'
     sha256 '2dd4d1164ced9c6ff431eb99db12e46faa10747c7753ed3889d6df493ee096a5'
   elsif MacOS.version <= :yosemite
@@ -15,11 +12,11 @@ cask 'monolingual' do
     version '1.7.8'
     sha256 '42771c3c4d615a39ab502d7723f3c7d23e6b384b56bbcebcbdd5a04cf2495c41'
   else
-    version '1.8.0'
-    sha256 '688551572319035a532e98a4f2a467a43256d3b44e50916695dfdb5f73d052f1'
+    version '1.8.2'
+    sha256 'd4acf912fa132d7615c88940f5a997505e1880a8d6f9af47f0da427d9e0cd13f'
   end
 
-  # github.com/IngmarStein/Monolingual was verified as official when first introduced to the cask
+  # github.com/IngmarStein/Monolingual/ was verified as official when first introduced to the cask
   url "https://github.com/IngmarStein/Monolingual/releases/download/v#{version}/Monolingual-#{version}.dmg"
   appcast 'https://github.com/IngmarStein/Monolingual/releases.atom'
   name 'Monolingual'

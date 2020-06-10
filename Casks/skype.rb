@@ -1,9 +1,10 @@
 cask 'skype' do
-  version '8.26.0.70'
-  sha256 'c49b78e2c805649d7e51147f965484bba46606954dc8feab468ebe52386c8062'
+  version '8.61.0.77'
+  sha256 '03c9c1a048f09d6c1520c9e8d5f74d13ce40ae6abed49f6ac4cbb1f4e26900a1'
 
-  # endpoint920510.azureedge.net/s4l/s4l/download/mac was verified as official when first introduced to the cask
+  # endpoint920510.azureedge.net/s4l/s4l/download/mac/ was verified as official when first introduced to the cask
   url "https://endpoint920510.azureedge.net/s4l/s4l/download/mac/Skype-#{version}.dmg"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://go.skype.com/mac.download'
   name 'Skype'
   homepage 'https://www.skype.com/'
 
@@ -18,6 +19,7 @@ cask 'skype' do
                '~/Library/Address Book Plug-Ins/SkypeABChatter.bundle',
                '~/Library/Application Scripts/com.skype.skype.shareagent',
                '~/Library/Application Support/Skype',
+               '~/Library/Application Support/Skype Helper',
                '~/Library/Application Support/T/SkypeRT',
                '~/Library/Application Support/CrashReporter/Skype_*.plist',
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.skype.skype.sfl*',

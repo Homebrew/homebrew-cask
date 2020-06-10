@@ -1,10 +1,10 @@
 cask 'timely' do
-  version '0.4.8'
-  sha256 '2184d8ed6e951e2cf1d5da22626740c8825d2bfea4fd9f7b83e771d219e86622'
+  version '1.1.0'
+  sha256 'e1e56f6ebcea702ab4bb71f9fe74eeb3c2ca4f866f59caa5a44952df84f2809a'
 
-  # github.com/Timely was verified as official when first introduced to the cask
-  url "https://github.com/Timely/desktop-releases/releases/download/osx64-v#{version}/Timely-#{version}.dmg"
-  appcast 'https://github.com/Timely/desktop-releases/releases.atom'
+  # github.com/Timely/ was verified as official when first introduced to the cask
+  url "https://github.com/Timely/desktop-releases/releases/download/darwin-x64-prod-#{version}/Timely-#{version}.dmg"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://app.timelyapp.com/download/mac'
   name 'Timely'
   homepage 'https://timelyapp.com/'
 

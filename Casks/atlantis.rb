@@ -1,11 +1,11 @@
 cask 'atlantis' do
-  version '0.9.9.4'
-  sha256 '52957a5b92b1fd3612aa7a3a07f5238236dad4397a6a256a03355c331433e540'
+  version '0.9.9.7'
+  sha256 '64a5066991c50c32426e539d10b4bc89db5af435bd86fedf7938d4a19907fe76'
 
-  url "http://www.riverdark.net/atlantis/downloads/Atlantis-#{version}.dmg"
-  appcast 'http://www.riverdark.net/atlantis/downloads/'
+  url "https://www.riverdark.net/atlantis/downloads/Atlantis-#{version}.zip"
+  appcast 'https://www.riverdark.net/atlantis/downloads/'
   name 'Atlantis'
-  homepage 'http://www.riverdark.net/atlantis/'
+  homepage 'https://www.riverdark.net/atlantis/'
 
   app 'Atlantis.app'
 end

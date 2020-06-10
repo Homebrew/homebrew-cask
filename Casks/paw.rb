@@ -1,11 +1,14 @@
 cask 'paw' do
-  version '3.1.7-3001007002'
-  sha256 'c2ede505c1173cc0407e4c0a9f93469abae88d8170cd8b53ae93b23971b13b6f'
+  version '3.1.10'
+  sha256 'bbf45359fd48bd4700d834ce9155ee679f88a450e2b857fc879247d4689d877d'
 
   url "https://cdn-builds.paw.cloud/paw/Paw-#{version}.zip"
   appcast 'https://paw.cloud/api/v2/updates/appcast'
   name 'Paw'
   homepage 'https://paw.cloud/'
+
+  auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'Paw.app'
 

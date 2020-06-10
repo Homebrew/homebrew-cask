@@ -1,12 +1,13 @@
 cask 'activedock' do
-  version '149,1531825149'
-  sha256 '25ed25d4a097d527b218374a011a0be81a16c48eb89c218fae98fbe7138d85d2'
+  version '1.60'
+  sha256 'bdbd55b5914bb858e87a590328b8d0c075c984ec007c71ae42d190909d52e22e'
 
-  # dl.devmate.com/com.sergey-gerasimenko.ActiveDock was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.sergey-gerasimenko.ActiveDock/#{version.before_comma}/#{version.after_comma}/ActiveDock-#{version.before_comma}.zip"
-  appcast 'https://updates.devmate.com/com.sergey-gerasimenko.ActiveDock.xml'
+  url 'https://noteifyapp.com/download/ActiveDock.dmg'
+  appcast 'https://macplus-software.com/downloads/ActiveDock.xml'
   name 'ActiveDock'
-  homepage 'http://www.noteifyapp.com/activedock/'
+  homepage 'https://www.noteifyapp.com/activedock/'
+
+  depends_on macos: '>= :high_sierra'
 
   app 'ActiveDock.app'
 end

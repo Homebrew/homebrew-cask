@@ -1,13 +1,22 @@
 cask 'mosaic' do
-  version '1.1.2'
-  sha256 'afd19bc961ef322e9f695e2350c1f4e5d8e63a9b07d0b64544cd15447d4ef0de'
+  version '1.2.6'
+  sha256 '3b03b8329f1ff75499662a708e43536cafddd7ef51bff417f865b0f0f71e2326'
 
-  url "http://lightpillar.com/appdata/mosaic/archive/Mosaic_#{version.dots_to_underscores}.pkg"
-  appcast 'http://lightpillar.com/appdata/mosaic/features/version-history.html'
+  url "https://lightpillar.com/appdata/mosaic/archive/Mosaic_#{version.dots_to_underscores}.pkg"
+  appcast 'https://lightpillar.com/appdata/mosaic/features/version-history.html'
   name 'Mosaic'
   homepage 'https://lightpillar.com/mosaic.html'
 
   pkg "Mosaic_#{version.dots_to_underscores}.pkg"
 
-  uninstall pkgutil: 'com.btinternet.pkg.Mosaic'
+  uninstall pkgutil: [
+                       'com.btinternet.pkg.Mosaic',
+                       'com.lightpillar.Mosaic.pkg',
+                     ]
+
+  zap trash: [
+               '~/Library/Application Support/com.lightpillar.Mosaic',
+               '~/Library/Caches/com.lightpillar.Mosaic',
+               '~/Library/Preferences/com.lightpillar.Mosaic.plist',
+             ]
 end

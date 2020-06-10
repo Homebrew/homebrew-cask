@@ -2,9 +2,9 @@ cask 'mindmaster' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.edrawsoft.cn/2download/mindmaster-cn.dmg'
+  url 'http://download.edrawsoft.com/mindmaster_full5378.dmg'
   name 'MindMaster'
-  homepage 'http://www.edrawsoft.cn/mindmaster/'
+  homepage 'https://www.edrawsoft.com/mindmaster/'
 
   app 'MindMaster.app'
 end

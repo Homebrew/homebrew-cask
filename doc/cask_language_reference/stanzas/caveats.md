@@ -1,6 +1,6 @@
 # caveats
 
-Sometimes there are particularities with the installation of a piece of software that cannot or should not be handled programmatically by Homebrew-Cask. In those instances, `caveats` is the way to inform the user. Information in `caveats` is displayed when a cask is invoked with either `install` or `info`.
+Sometimes there are particularities with the installation of a piece of software that cannot or should not be handled programmatically by Homebrew Cask. In those instances, `caveats` is the way to inform the user. Information in `caveats` is displayed when a cask is invoked with either `install` or `info`.
 
 To avoid flooding users with too many messages (thus desensitising them to the important ones), `caveats` should be used sparingly and exclusively for installation-related matters. If you’re not sure a `caveat` you find pertinent is installation-related or not, ask a maintainer. As a general rule, if your case isn’t already covered in our comprehensive [`caveats Mini-DSL`](#caveats-mini-dsl), it’s unlikely to be accepted.
 
@@ -42,9 +42,9 @@ The following methods may be called to generate standard warning messages:
 | `files_in_usr_local`               | the Cask installs files to `/usr/local`, which may confuse Homebrew.
 | `discontinued`                     | all software development has been officially discontinued upstream.
 | `free_license 'web_page'`          | users may get an official license to use the software at `web_page`.
-| `malware 'radar_number'`           | app has been reported to bundle malware. See [the FAQ](https://github.com/Homebrew/homebrew-cask/blob/master/doc/faq/apps_with_malware.md) for the necessary steps.
 | `kext`                             | users may need to enable their kexts in System Preferences → Security & Privacy → General.
-| `license 'web_page'`               | software has a usage license at `web_page`.
+| `unsigned_accessibility`           | users will need to re-enable the app on each update in System Preferences → Security & Privacy → Privacy as it is unsigned.
+| `license 'web_page'`               | software has a usage license at `web_page`.
 
 Example:
 

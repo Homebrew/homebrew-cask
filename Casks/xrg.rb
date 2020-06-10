@@ -1,11 +1,11 @@
 cask 'xrg' do
-  version '2.5.0'
-  sha256 'c9cc0e808a87376c838fa6e4a9c04fef9143a8ddedcfce9f7187258d7eac9ec9'
+  version '2.8.2'
+  sha256 'b55ce935ed9843cd318fab490ca24249fb1d593aa3ced2484ab333e3560cedb8'
 
   url "https://download.gauchosoft.com/xrg/XRG-release-#{version}.zip"
-  appcast 'http://www.gauchosoft.com/Products/XRG/'
+  appcast 'https://gauchosoft.com/Products/XRG/'
   name 'XRG'
-  homepage 'http://www.gauchosoft.com/Products/XRG/'
+  homepage 'https://gauchosoft.com/Products/XRG/'
 
   app 'XRG.app'
 

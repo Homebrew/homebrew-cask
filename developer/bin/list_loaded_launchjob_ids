@@ -1,84 +1,26 @@
 #!/bin/bash
-#
-# list_loaded_launchjob_ids
-#
 
-###
-### settings
-###
+readonly program="$(basename "${0}")"
 
-set -e                # exit on any uncaught error
-set +o histexpand     # don't expand history expressions
-shopt -s nocasematch  # case-insensitive regular expressions
+function usage {
+  echo "
+    List IDs for currently loaded launchd jobs. Job IDs attributed to Apple are excluded from the output.
 
-###
-### global variables
-###
+    Usage:
+      ${program} [options]
 
-###
-### functions
-###
-
-launchjob_id_source_1 () {
-    if [[ "$EUID" -ne 0 ]]; then
-        /usr/bin/sudo -p 'Optionally give your sudo password: ' -- /bin/launchctl list | /usr/bin/cut -f3
-    fi
+    Options:
+      -h, --help   Show this message.
+  " | sed -E 's/ {4}//'
 }
 
-launchjob_id_source_2 () {
-    /bin/launchctl list | /usr/bin/cut -f3
-}
-
-merge_sources () {
-    /usr/bin/sort | /usr/bin/uniq
-}
-
-clean_sources () {
-    /usr/bin/egrep -v '^Label$' |                   \
-    /usr/bin/egrep -v '^com\.apple\.' |             \
-    /usr/bin/egrep -v '^0x[0-9a-f]+\.anonymous\.' | \
-    /usr/bin/egrep -v '^\[0x' |                     \
-    /usr/bin/egrep -v '\.[0-9]+$'
-}
-
-###
-### main
-###
-
-_list_loaded_launchjob_ids () {
-
-    {
-      launchjob_id_source_1;
-      launchjob_id_source_2;
-    } |                     \
-    clean_sources |         \
-    merge_sources
-
-}
-
-# process args
-if [[ $1 =~ ^-+h(elp)?$ ]]; then
-    printf "list_loaded_launchjob_ids
-
-List IDs for currently-loaded launchctl jobs, which may be useful
-in a Cask uninstall stanza, eg
-
-    uninstall launchctl: 'job.id.goes.here'
-
-If this command is not run as the superuser, you will be prompted
-for a password to run a subcommand using 'sudo'. The password is
-not required, but supplying it may reveal additional job ids.
-To skip using the password, press <return> repeatedly.
-
-Launchctl jobs attributed to Apple are excluded from the output.
-
-See CONTRIBUTING.md and 'man launchctl' for more information.
-
-"
-    exit
+if [[ "${1}" =~ ^(-h|--help)$ ]]; then
+  usage
+  exit 0
 fi
 
-# dispatch main
-_list_loaded_launchjob_ids "${@}"
-
-#
+(/usr/bin/sudo -p 'The system password is required to see all launchd jobs: ' -- /bin/launchctl list && /bin/launchctl list) | \
+  /usr/bin/cut -f3 | \
+  /usr/bin/grep --invert-match '^Label$' | \
+  /usr/bin/grep --invert-match '^com\.apple\.' | \
+  /usr/bin/grep --extended-regexp --invert-match '\.[0-9]+$'

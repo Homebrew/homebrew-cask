@@ -1,10 +1,11 @@
 cask 'pixelstick' do
-  version :latest
-  sha256 :no_check
+  version '2.16.2'
+  sha256 'b1b19315cdd3632d503789df6da1842f5ce3fbf7b0da9e2da63503af27f8934c'
 
   url 'https://plumamazing.com/bin/pixelstick/pixelstick.zip'
+  appcast 'https://plumamazing.com/product/pixelstick/changelog/appcast/'
   name 'PixelStick'
-  homepage 'https://plumamazing.com/product-category/mac/pixelstick'
+  homepage 'https://plumamazing.com/product/pixelstick'
 
   app 'PixelStick.app'
 end

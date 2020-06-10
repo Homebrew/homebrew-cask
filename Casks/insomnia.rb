@@ -1,10 +1,10 @@
 cask 'insomnia' do
-  version '5.16.6'
-  sha256 '96edaf9953f11f35c7ee17e47deb9e08dfc812514fc1e169e8f7ce7e975deb54'
+  version '2020.2.1'
+  sha256 'dc5424d207df02e8e6cbfb33546009199ff720f4849287fbb6e6c563d0364729'
 
-  # github.com/getinsomnia/insomnia was verified as official when first introduced to the cask
-  url "https://github.com/getinsomnia/insomnia/releases/download/v#{version}/Insomnia-#{version}.dmg"
-  appcast 'https://insomnia.rest/changelog/index.xml'
+  # github.com/Kong/insomnia/ was verified as official when first introduced to the cask
+  url "https://github.com/Kong/insomnia/releases/download/core%40#{version}/Insomnia.Core-#{version}.dmg"
+  appcast 'https://api.insomnia.rest/changelog.json?app=com.insomnia.app'
   name 'Insomnia'
   homepage 'https://insomnia.rest/'
 
@@ -17,6 +17,7 @@ cask 'insomnia' do
                '~/Library/Caches/com.insomnia.app',
                '~/Library/Caches/com.insomnia.app.ShipIt',
                '~/Library/Cookies/com.insomnia.app.binarycookies',
+               '~/Library/Preferences/ByHost/com.insomnia.app.ShipIt.*.plist',
                '~/Library/Preferences/com.insomnia.app.helper.plist',
                '~/Library/Preferences/com.insomnia.app.plist',
                '~/Library/Saved Application State/com.insomnia.app.savedState',

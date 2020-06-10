@@ -1,13 +1,14 @@
 cask 'latexdraw' do
-  version '3.3.8'
-  sha256 '92f25a620d25af07281d8941174cf6420fde8ce8050938e05c65e1f13a83d2fa'
+  version '3.3.9'
+  sha256 '1197536a5ce3b343e85696fbc5f2821092e885086760d9af4bfe11c073551f6b'
 
+  # downloads.sourceforge.net/latexdraw/ was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/latexdraw/LaTeXDraw-#{version}.app.zip"
   appcast 'https://sourceforge.net/projects/latexdraw/rss?path=/latexdraw'
   name 'LaTexDraw'
-  homepage 'http://latexdraw.sourceforge.net/'
+  homepage 'https://latexdraw.sourceforge.io/'
 
-  app "LaTexDraw-#{version}.app"
+  app "LaTeXDraw-#{version}.app"
 
   caveats do
     depends_on_java '8'

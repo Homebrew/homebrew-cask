@@ -1,14 +1,12 @@
 cask 'icab' do
-  version '5.8.5'
-  sha256 'dded84c2d0b1bc8d734002eb6fb1eb608cebc0417499f5587a95f8df78f7c940'
+  version '5.9.2'
+  sha256 '3700c7a4078b7a867ac2037db7a0f3252056170b99f5bfd8257150c956a4f7ac'
 
-  # icab.clauss-net.de was verified as official when first introduced to the cask
-  url "http://icab.clauss-net.de/icab/iCab_#{version}_Intel.zip"
+  # icab.clauss-net.de/ was verified as official when first introduced to the cask
+  url "https://icab.clauss-net.de/icab/iCab_#{version}_Intel.zip"
   appcast 'http://www.icab.de/dl.php'
   name 'iCab'
   homepage 'http://www.icab.de/'
 
-  depends_on macos: '>= :lion'
-
-  app "iCab #{version} (64+32 Bit Intel Version for macOS 10.7-10.13)/iCab.app"
+  app "iCab #{version} (64 Bit Intel for macOS 10.9-10.15)/iCab.app"
 end

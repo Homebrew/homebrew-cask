@@ -1,13 +1,15 @@
 cask 'epic-games' do
-  version '7.12.1'
-  sha256 '706c734473e606bac7f9213fc65f049d91740f028117196994008344ff663545'
+  version '10.15.2'
+  sha256 '9512e859ad79cda86c8ab95ce6bbb1e7e6d2e02d24ba5ed5aa5a277c0fa5e9d3'
 
-  url "https://download-dynamic.epicgames.com/Builds/UnrealEngineLauncher/Installers/EpicInstaller-#{version}.dmg"
-  appcast 'https://forums.unrealengine.com/unreal-engine/announcements-and-releases/1928-latest-launcher-release-notes'
+  # epicgames-download1.akamaized.net/ was verified as official when first introduced to the cask
+  url "https://epicgames-download1.akamaized.net/Builds/UnrealEngineLauncher/Installers/Mac/EpicInstaller-#{version}.dmg"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncher.dmg'
   name 'Epic Games Launcher'
   homepage 'https://www.epicgames.com/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'Epic Games Launcher.app'
 

@@ -1,9 +1,9 @@
 cask 'gingko' do
-  version '2.1.5'
-  sha256 '9aa477abef38f5f5639de24c98d72976d3e705473dd43bb625e68be43b6d04ca'
+  version '2.4.15'
+  sha256 'bb1367b0a07a80872be253eda0519ec801e0b96b04d59c5bff3f825cf9e380c4'
 
-  # github.com/gingko/client was verified as official when first introduced to the cask
-  url "https://github.com/gingko/client/releases/download/v#{version}/gingko-client-#{version}-mac.zip"
+  # github.com/gingko/client/ was verified as official when first introduced to the cask
+  url "https://github.com/gingko/client/releases/download/v#{version}/Gingko-#{version}-mac.zip"
   appcast 'https://github.com/gingko/client/releases.atom'
   name 'Gingko'
   homepage 'https://gingko.io/'

@@ -1,11 +1,13 @@
 cask 'moneymoney' do
-  version '2.3.5'
-  sha256 '37c97a9f7ca0950f1b0be23f496713cedc0953e3025104ddc8246ad2b7591a96'
+  version '2.3.27'
+  sha256 'b3920162fa7a165280eab49e08ad2b875623020967bdc98cc5e83fe34009b6fa'
 
   url 'https://service.moneymoney-app.com/1/MoneyMoney.zip'
   appcast 'https://service.moneymoney-app.com/1/Appcast.xml'
   name 'MoneyMoney'
   homepage 'https://moneymoney-app.com/'
+
+  auto_updates true
 
   app 'MoneyMoney.app'
 end

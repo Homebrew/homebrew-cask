@@ -1,6 +1,6 @@
 cask 'lastfm' do
-  version '2.1.37'
-  sha256 'dc46e58111f8555fc0b1d6d2bd11e8fd4e4c45c6c7e953d106e07be8d6d8b448'
+  version '2.1.39'
+  sha256 '0b86111e68c3e54edd68e1a00a4390e3b13d10f6166161619cc8cadcfd053eba'
 
   url "https://cdn.last.fm/client/Mac/Last.fm-#{version}.zip"
   appcast 'https://cdn.last.fm/client/Mac/updates.xml'

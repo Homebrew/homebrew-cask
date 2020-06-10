@@ -1,26 +1,17 @@
 cask 'obs' do
-  version '21.1.1'
-  sha256 '52a422a6cc42c62911c2a8d2d3b569c8ac725d5fcd13ab1f7bcaa23863ef9926'
+  version '25.0.8'
+  sha256 '5674f446c22e34ea2696386a4d04aa201ac692c8217f610ee3c1d002e371d11f'
 
-  # github.com/obsproject/obs-studio was verified as official when first introduced to the cask
-  url "https://github.com/obsproject/obs-studio/releases/download/#{version}/obs-mac-#{version}-installer.pkg"
+  url "https://cdn-fastly.obsproject.com/downloads/obs-mac-#{version}.dmg"
   appcast 'https://github.com/obsproject/obs-studio/releases.atom'
   name 'OBS'
   homepage 'https://obsproject.com/'
 
-  pkg "obs-mac-#{version}-installer.pkg"
-
-  uninstall pkgutil: [
-                       'org.obsproject.pkg.obs-studio',
-                       'zakk.lol.SyphonInject',
-                     ]
+  app 'OBS.app'
 
   zap trash: [
-               '/Library/Application Support/obs-studio',
-               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.obsproject.obs-studio.sfl*',
-               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/zakk.lol.syphoninject.sfl*',
                '~/Library/Application Support/obs-studio',
-               '/private/var/db/receipts/zakk.lol.SyphonInject.bom',
-               '/private/var/db/receipts/zakk.lol.SyphonInject.plist',
+               '~/Library/Preferences/com.obsproject.obs-studio.plist',
+               '~/Library/Saved Application State/com.obsproject.obs-studio.savedState',
              ]
 end

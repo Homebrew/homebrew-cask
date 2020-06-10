@@ -1,14 +1,17 @@
 cask 'adobe-digital-editions' do
-  version '4.5'
-  sha256 :no_check # required as upstream package is updated in-place
+  version '4.5.11'
+  sha256 '4bfdb9fdefb7a65bc5227518531ffba2cd2d547a1293265709a526a153800e7e'
 
-  url "https://download.adobe.com/pub/adobe/digitaleditions/ADE_#{version}_Installer.dmg"
+  url "https://adedownload.adobe.com/pub/adobe/digitaleditions/ADE_#{version.major_minor}_Installer.dmg"
+  appcast 'https://www.adobe.com/solutions/ebook/digital-editions/download.html'
   name 'Adobe Digital Editions'
   homepage 'https://www.adobe.com/solutions/ebook/digital-editions.html'
 
-  pkg "Digital Editions #{version} Installer.pkg"
+  pkg "Digital Editions #{version.major_minor} Installer.pkg"
 
-  uninstall pkgutil: 'com.adobe.adobedigitaleditions.app'
+  uninstall quit:    'com.adobe.adobedigitaleditions.app',
+            pkgutil: 'com.adobe.adobedigitaleditions.app',
+            delete:  '/Applications/Adobe Digital Editions.app'
 
   zap trash: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.adobe.adobedigitaleditions.app.sfl*'
 end

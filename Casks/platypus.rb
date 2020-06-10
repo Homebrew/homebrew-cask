@@ -1,6 +1,6 @@
 cask 'platypus' do
-  version '5.2'
-  sha256 '09d6511a62a6965b0d69c7e92455ead70853c299bf1649ea52ba00e528cb34f4'
+  version '5.3'
+  sha256 'efc66e943e6327896d0c1b82b0c1798c9ea17cffa03581e4949541c30d9833b0'
 
   url "https://sveinbjorn.org/files/software/platypus/platypus#{version}.zip"
   appcast 'https://www.sveinbjorn.org/files/appcasts/PlatypusAppcast.xml'
@@ -9,5 +9,12 @@ cask 'platypus' do
 
   auto_updates true
 
-  app "Platypus-#{version}/Platypus.app"
+  app 'Platypus.app'
+
+  zap trash: [
+               '~/Library/Application Support/Platypus',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.sveinbjorn.platypus.sfl2',
+               '~/Library/Caches/org.sveinbjorn.Platypus',
+               '~/Library/Preferences/org.sveinbjorn.Platypus.plist',
+             ]
 end

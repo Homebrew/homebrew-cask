@@ -1,9 +1,10 @@
 cask 'goodsync' do
-  version '10.9.2'
-  sha256 '3b8dc3e2ae9fe7f3c5434207fba73e3d922e48eaf51aea34663f5d6b8f3b14b0'
+  version '11.2.0.0'
+  sha256 '18550fa916d2b2278b7f72cb5b601f75739de90a8a134017970b3b48510a428a'
 
   url "https://www.goodsync.com/download/goodsync-v#{version.major}-mac.dmg"
-  appcast 'https://www.goodsync.com/download'
+  appcast 'https://www.goodsync.com/download?os=macos',
+          configuration: version.major_minor_patch
   name 'GoodSync'
   homepage 'https://www.goodsync.com/'
 

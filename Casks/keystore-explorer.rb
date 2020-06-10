@@ -1,12 +1,12 @@
 cask 'keystore-explorer' do
-  version '5.3.2'
-  sha256 'd06c1300dea98c1188b0ffb34cac6653bd3e08048f860f56f51e142fea9aaced'
+  version '5.4.3'
+  sha256 '04bb9a03f56fb279fb9778bd440179b69cd6b2455da02ed1304c73e736afd26d'
 
-  # github.com/kaikramer/keystore-explorer was verified as official when first introduced to the cask
+  # github.com/kaikramer/keystore-explorer/ was verified as official when first introduced to the cask
   url "https://github.com/kaikramer/keystore-explorer/releases/download/v#{version}/kse-#{version.no_dots}.dmg"
   appcast 'https://github.com/kaikramer/keystore-explorer/releases.atom'
   name 'KeyStore Explorer'
-  homepage 'http://keystore-explorer.org/'
+  homepage 'https://keystore-explorer.org/'
 
   app 'KeyStore Explorer.app'
 end

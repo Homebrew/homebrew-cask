@@ -1,11 +1,12 @@
 cask 'line-bot-designer' do
-  version '1.0.0'
-  sha256 'cb7d52cfc199089c585741d44338f47b1c995687eac4c3e0338c41d8b3fe31ed'
+  version '1.3.3'
+  sha256 '96216a3614a2c1419fa7b94043db23d55a86d128d44a1b4f2bccd5fdd03f7667'
 
-  # d.line-scdn.net was verified as official when first introduced to the cask
+  # d.line-scdn.net/ was verified as official when first introduced to the cask
   url "https://d.line-scdn.net/r/devcenter/bot-designer/LINE%20Bot%20Designer-#{version}.dmg"
+  appcast 'https://developers.line.biz/en/bot-designer/download/'
   name 'LINE Bot Designer'
-  homepage 'https://developers.line.me/en/bot-designer/overview/'
+  homepage 'https://developers.line.biz/en/'
 
   app 'LINE Bot Designer.app'
 end

@@ -1,11 +1,13 @@
 cask 'brook' do
-  version '20180707'
-  sha256 'bb5a736063aba9116aedf0f2f5901b5b94425302854feacca8a406c85249daeb'
+  version '20200502'
+  sha256 '264a726cc575bb56f07b4245f19e63baeef0e6786825fef3ccd103958d2ffdd7'
 
-  url "https://github.com/txthinking/brook/releases/download/v#{version}/Brook.dmg"
+  url "https://github.com/txthinking/brook/releases/download/v#{version}/Brook.pkg"
   appcast 'https://github.com/txthinking/brook/releases.atom'
   name 'Brook'
   homepage 'https://github.com/txthinking/brook'
 
-  app 'Brook.app'
+  pkg 'Brook.pkg'
+
+  uninstall pkgutil: 'com.txthinking.base.pkg'
 end

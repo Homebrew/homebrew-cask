@@ -1,15 +1,14 @@
 cask 'porting-kit' do
-  version '2.9.484'
-  sha256 '22e63c95e9789bda7dca3dbaa3c949df16791b5650e9354dd84d491bec72380f'
+  version '3.0.30'
+  sha256 'e63a7a0141ef5130552e973c29e3a05e646b5a55e4c23f2b5a855cc3580469b4'
 
-  url "http://portingkit.com/kit/Porting%20Kit%20#{version}.zip"
-  appcast 'http://portingkit.com/kit/updatecast.xml'
+  url "https://portingkit.com/kit/Porting%20Kit%20#{version}.zip"
+  appcast 'https://portingkit.com/kit/updatecast.xml'
   name 'Porting Kit'
-  homepage 'http://portingkit.com/en/'
+  homepage 'https://portingkit.com/'
 
   auto_updates true
   conflicts_with cask: 'porting-kit-legacy'
-  depends_on macos: '>= :mountain_lion'
 
   app 'Porting Kit.app'
 
@@ -20,5 +19,6 @@ cask 'porting-kit' do
                '~/Library/Cookies/edu.ufrj.vitormm.Porting-Kit.binarycookies',
                '~/Library/Preferences/edu.ufrj.vitormm.Porting-Kit.plist',
                '~/Library/Saved Application State/edu.ufrj.vitormm.Porting-Kit.savedState',
+               '~/Library/WebKit/edu.ufrj.vitormm.Porting-Kit',
              ]
 end

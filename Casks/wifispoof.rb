@@ -1,8 +1,8 @@
 cask 'wifispoof' do
-  version '3.1.1'
-  sha256 'a2c297bd409f867364588d9e01ae74d96f2029d468237e96ca8cc8c045d72d1b'
+  version '3.4.8'
+  sha256 '2a8aaef2cd0b0682650aebdf34818b1a4411d88c4fc275b5e1ee5dea894506e2'
 
-  # sweetpproductions.com/products was verified as official when first introduced to the cask
+  # sweetpproductions.com/products/ was verified as official when first introduced to the cask
   url "https://sweetpproductions.com/products/wifispoof#{version.major}/WiFiSpoof#{version.major}.dmg"
   appcast "https://sweetpproductions.com/products/wifispoof#{version.major}/appcast.xml"
   name 'WiFiSpoof'

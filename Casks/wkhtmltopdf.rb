@@ -2,7 +2,9 @@ cask 'wkhtmltopdf' do
   version '0.12.5'
   sha256 '2718c057249a133fe413b3c8cfb33b755a2e18a8e233329168f1af462cd6de5f'
 
-  url "https://downloads.wkhtmltopdf.org/#{version.major_minor}/#{version}/wkhtmltox-#{version}-1.macos-cocoa.pkg"
+  # github.com/wkhtmltopdf/wkhtmltopdf/ was verified as official when first introduced to the cask
+  url "https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/#{version}/wkhtmltox-#{version}-1.macos-cocoa.pkg"
+  appcast 'https://github.com/wkhtmltopdf/wkhtmltopdf/releases.atom'
   name 'wkhtmltopdf'
   homepage 'https://wkhtmltopdf.org/'
 

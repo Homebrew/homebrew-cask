@@ -1,10 +1,13 @@
 cask 'mousepose' do
-  version '3.2.7'
-  sha256 '05a3c5175206e971b386a75cd28e51873fdff6c47e24c5673a8116af127d336c'
+  version '4.1,10196'
+  sha256 'f8a87300c434777ac6e3c2ad11d1b4197ac78fc8b7fe1fb6c7d13ce213c56336'
 
-  url "https://cdn.boinx.com/software/mousepose/Boinx_Mousepose_#{version}-10878.app.zip"
+  url "https://cdn.boinx.com/software/mousepose/Boinx_Mousepose_#{version.before_comma}-#{version.after_comma}.app.zip"
+  appcast 'https://sparkle.boinx.com/appcast.lasso?appName=mousepose'
   name 'Mouseposé'
   homepage 'https://boinx.com/mousepose/overview/'
+
+  depends_on macos: '>= :high_sierra'
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   # Original discussion: https://github.com/Homebrew/homebrew-cask/pull/15708

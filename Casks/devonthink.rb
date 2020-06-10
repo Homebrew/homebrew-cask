@@ -1,15 +1,30 @@
 cask 'devonthink' do
-  version '2.10.1'
-  sha256 'e08348ad43b26bb0faab682c1546e8a3d0a1e40fa5f785b3daa456f48e4ae2cf'
+  version '3.5'
+  sha256 '222e77551763f6c98d87bdf99c30663af7e886e52f988fb31be1c9c9f1103fa5'
 
-  # amazonaws.com/DTWebsiteSupport was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/DTWebsiteSupport/download/devonthink/#{version}/DEVONthink_Personal.app.zip"
-  appcast 'https://www.devontechnologies.com/fileadmin/templates/filemaker/sparkle.php?product=217255&format=xml'
-  name 'DEVONthink Personal'
-  homepage 'https://www.devontechnologies.com/products/devonthink/devonthink-personal.html'
+  url "https://download.devontechnologies.com/download/devonthink/#{version}/DEVONthink_#{version.major}.app.zip"
+  appcast 'https://api.devontechnologies.com/1/apps/sparkle/sparkle.php?id=300900000'
+  name 'DEVONthink'
+  homepage 'https://www.devontechnologies.com/apps/devonthink/'
 
   auto_updates true
-  depends_on macos: '>= :mavericks'
 
-  app 'DEVONthink.app'
+  app "DEVONthink #{version.major}.app"
+
+  zap trash: [
+               '~/Library/Application Scripts/com.devon-technologies.*',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.devon-technologies.think*.sfl2',
+               '~/Library/Application Support/DEVONthink*',
+               '~/Library/Caches/com.apple.helpd/Generated/com.devontechnologies.devonthink.help*',
+               '~/Library/Caches/com.devon-technologies.think*',
+               '~/Library/Containers/com.devon-technologies.*',
+               '~/Library/Cookies/com.devon-technologies.think*.binarycookies',
+               '~/Library/Group Containers/679S2QUWR8.think*',
+               '~/Library/Metadata/com.devon-technologies.think*',
+               '~/Library/Preferences/com.devon-technologies.think*',
+               '~/Library/Saved Application State/com.devon-technologies.think*.savedState',
+               '~/Library/Scripts/Applications/DEVONagent',
+               '~/Library/Scripts/Folder Action Scripts/DEVONthink*',
+               '~/Library/WebKit/com.devon-technologies.think*',
+             ]
 end

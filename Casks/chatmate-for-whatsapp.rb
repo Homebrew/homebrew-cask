@@ -1,12 +1,14 @@
 cask 'chatmate-for-whatsapp' do
-  version '4.2.4,470:1518834547'
-  sha256 '0959e533dad25ad0d8fa1ba6e59e55b0e7ef6c97d8a28a59dd4fdaca9f46d4fd'
+  version '4.3.1,482:1537891987'
+  sha256 'af6b75282d8b0c0782246f771a4718675616cbdc6b62682a9e055641ab1e5ac7'
 
-  # dl.devmate.com/net.coldx.mac.WhatsApp was verified as official when first introduced to the cask
+  # dl.devmate.com/net.coldx.mac.WhatsApp/ was verified as official when first introduced to the cask
   url "https://dl.devmate.com/net.coldx.mac.WhatsApp/#{version.after_comma.before_colon}/#{version.after_colon}/ChatMateforWhatsApp-#{version.after_comma.before_colon}.zip"
   appcast 'https://updates.devmate.com/net.coldx.mac.WhatsApp.xml'
   name 'ChatMate for WhatsApp'
   homepage 'https://chatmate.io/'
+
+  depends_on macos: '>= :sierra'
 
   app 'ChatMate for WhatsApp.app'
 

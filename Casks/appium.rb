@@ -1,9 +1,9 @@
 cask 'appium' do
-  version '1.6.2'
-  sha256 'a95306aaac264e68e880b269eda777fe9c1e0526b4d8b9409272faf1df051bf6'
+  version '1.17.1-1'
+  sha256 'c11fe0106972f43688fd850352b87d39b6e0b80e85a67e954eea30c903ed8421'
 
-  # github.com/appium/appium-desktop was verified as official when first introduced to the cask.
-  url "https://github.com/appium/appium-desktop/releases/download/v#{version}/appium-desktop-#{version}-mac.zip"
+  # github.com/appium/appium-desktop/ was verified as official when first introduced to the cask
+  url "https://github.com/appium/appium-desktop/releases/download/v#{version}/Appium-mac-#{version}.dmg"
   appcast 'https://github.com/appium/appium-desktop/releases.atom'
   name 'Appium Desktop'
   homepage 'https://appium.io/'

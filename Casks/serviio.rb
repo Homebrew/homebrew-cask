@@ -1,10 +1,11 @@
 cask 'serviio' do
-  version '1.9.2'
-  sha256 'de9a2918ae15b7bdd3042a5007a621bd111dcc552e6b580b74d7c1293fad26ed'
+  version '2.1'
+  sha256 '2a6d948c00205c5c4cf60127ed94a8e0e6965a145e5162b298f3108492f73cae'
 
-  url "http://download.serviio.org/releases/serviio-#{version}-osx.tar.gz"
+  url "https://download.serviio.org/releases/serviio-#{version}-osx.tar.gz"
+  appcast 'https://www.serviio.org/download'
   name 'Serviio'
-  homepage 'http://serviio.org/'
+  homepage 'https://serviio.org/'
 
   pkg "Serviio-#{version}.pkg"
 

@@ -1,16 +1,17 @@
 cask 'blue-jeans' do
-  version '1.6.8'
-  sha256 '9f76c386659697c11752b8e0c04d40c4a07c08733a6c928bbff11210303789db'
+  version '2.20.0.264'
+  sha256 '1fc9d7b5f28fe74beeed7c0b6e3e6ea52231b39c7bece89ea652717f44a39705'
 
-  url "https://swdl.bluejeans.com/desktop/mac/launchers/BlueJeansLauncher_live_#{version.no_dots}.dmg"
+  url "https://swdl.bluejeans.com/desktop-app/mac/#{version.major_minor_patch}/#{version}/BlueJeansInstaller.dmg"
+  appcast 'https://www.bluejeans.com/downloads'
   name 'Blue Jeans videoconferencing'
   homepage 'https://www.bluejeans.com/'
 
-  installer manual: 'Blue Jeans Launcher.app'
+  installer manual: 'BlueJeansInstaller.app'
 
   uninstall signal: [
-                      ['TERM', 'com.bluejeans.nw.app'],
-                      ['TERM', 'com.bluejeans.nw.helper'],
+                      ['TERM', 'com.bluejeansnet.Blue'],
+                      ['TERM', 'com.bluejeansnet.BlueMenulet'],
                     ],
-            delete: '~/Applications/Blue Jeans.app'
+            delete: '/Applications/Blue Jeans.app'
 end

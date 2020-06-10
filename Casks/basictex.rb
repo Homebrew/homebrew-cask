@@ -1,8 +1,8 @@
 cask 'basictex' do
-  version '2018.0417'
-  sha256 'f815d68391f74c5bc639ae421804bfb1342eb346e1eca23d11eb9ee3d4d9db46'
+  version '2020.0407'
+  sha256 'c6a27c95a8af3bc26121cc3be415f3fc7120ffaa4ff4c1a860a7fe9fe78ac31e'
 
-  # mirror.ctan.org/systems/mac/mactex was verified as official when first introduced to the cask
+  # mirror.ctan.org/systems/mac/mactex/ was verified as official when first introduced to the cask
   url "http://mirror.ctan.org/systems/mac/mactex/mactex-basictex-#{version.no_dots}.pkg"
   name 'BasicTeX'
   homepage 'https://www.tug.org/mactex/morepackages.html'
@@ -11,7 +11,7 @@ cask 'basictex' do
                          'mactex-no-gui',
                          'mactex',
                        ]
-  depends_on macos: '>= :yosemite'
+  depends_on macos: '>= :high_sierra'
 
   pkg "mactex-basictex-#{version.no_dots}.pkg"
 
@@ -31,4 +31,11 @@ cask 'basictex' do
                '/usr/local/texlive',
                '~/Library/texlive',
              ]
+
+  caveats <<~EOS
+    You must restart your terminal window for the installation of MacTex CLI tools to take effect.
+    Alternatively, Bash and Zsh users can run the command:
+
+      eval "$(/usr/libexec/path_helper)"
+  EOS
 end

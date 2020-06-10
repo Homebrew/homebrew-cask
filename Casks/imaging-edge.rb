@@ -1,15 +1,17 @@
 cask 'imaging-edge' do
-  version '1.2.0_1805a,9FloiwulRZ'
-  sha256 '79f063cd1b51f9f54541075f296945e7eb894878e7a59276247bb91691cb76cc'
+  version '1.0.02,2BqD6b8EKL'
+  sha256 'b4eab497dc35974f9d56261c326ef2af538153b27455b93756d980d5786bb379'
 
-  # ids.update.sony.net/IDC was verified as official when first introduced to the cask
-  url "http://ids.update.sony.net/IDC/#{version.after_comma}/IE#{version.before_comma.no_dots}.dmg"
+  url "https://di.update.sony.net/NEX/#{version.after_comma}/ied_#{version.before_comma.dots_to_underscores}.dmg"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://support.d-imaging.sony.co.jp/disoft_DL/desktop_DL/mac?fm=en',
+          configuration: version.after_comma
   name 'Sony Imaging Edge'
-  homepage 'https://support.d-imaging.sony.co.jp/app/imagingedge/'
+  homepage 'https://imagingedge.sony.net/en-us/ie-desktop.html'
 
-  pkg 'IE_INST.pkg'
+  pkg "ied_#{version.before_comma.dots_to_underscores}.pkg"
 
-  uninstall pkgutil: "com.sony.ImagingEdgeVer.#{version.major}.pkg"
+  uninstall pkgutil: 'com.sony.ImagingEdgeVer.1.pkg',
+            delete:  '/Applications/Imaging Edge'
 
   zap trash: [
                '~/Library/Caches/com.sony.Viewer',

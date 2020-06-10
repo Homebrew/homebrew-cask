@@ -1,9 +1,9 @@
 cask 'mjml' do
-  version '2.9.0'
-  sha256 '0dfae8495120f5150bdca92f9ce0782f71412d56cdcfffb51fbc48b02c6cc318'
+  version '3.0.2'
+  sha256 'ab7118386b9a39d34ebf9e4101dac640a7b59bc3eee499500fa51cd7531dc307'
 
-  # github.com/mjmlio/mjml-app was verified as official when first introduced to the cask
-  url "https://github.com/mjmlio/mjml-app/releases/download/v#{version}/mjml-app-#{version}-mac.zip"
+  # github.com/mjmlio/mjml-app/ was verified as official when first introduced to the cask
+  url "https://github.com/mjmlio/mjml-app/releases/download/v#{version}/mjml-app-#{version}-mac.dmg"
   appcast 'https://github.com/mjmlio/mjml-app/releases.atom'
   name 'MJML'
   homepage 'https://mjmlio.github.io/mjml-app/'

@@ -1,14 +1,15 @@
 cask 'postgres' do
-  version '2.1.4'
-  sha256 'f035d6df7dbc99988c8f418888657b0f7a09c3654f7a692ca47c42e9ffb047bc'
+  version '2.3.5'
+  sha256 '4c806bc5bce9626201968a1994dcdedb63660f150ba1810b811ba65c09493e38'
 
-  # github.com/PostgresApp/PostgresApp was verified as official when first introduced to the cask
-  url "https://github.com/PostgresApp/PostgresApp/releases/download/v#{version}/Postgres-#{version}.dmg"
+  # github.com/PostgresApp/PostgresApp/ was verified as official when first introduced to the cask
+  url "https://github.com/PostgresApp/PostgresApp/releases/download/v#{version}/Postgres-#{version}-10-11-12.dmg"
   appcast 'https://github.com/PostgresApp/PostgresApp/releases.atom'
   name 'Postgres'
   homepage 'https://postgresapp.com/'
 
   auto_updates true
+  depends_on macos: '>= :sierra'
 
   app 'Postgres.app'
 

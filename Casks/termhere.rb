@@ -2,11 +2,11 @@ cask 'termhere' do
   version '1.2.1'
   sha256 '8311c29b09f982ce829d5733865c715f4f457d0a46dcab2beb18462a73a37b9d'
 
-  # github.com/hbang/TermHere was verified as official when first introduced to the cask
+  # github.com/hbang/TermHere/ was verified as official when first introduced to the cask
   url "https://github.com/hbang/TermHere/releases/download/#{version}/TermHere.#{version}.dmg"
   appcast 'https://github.com/hbang/TermHere/releases.atom'
   name 'TermHere'
-  homepage 'https://hbang.ws/apps/termhere'
+  homepage 'https://hbang.ws/apps/termhere/'
 
   app 'TermHere.app'
 

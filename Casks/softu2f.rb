@@ -1,6 +1,6 @@
 cask 'softu2f' do
-  version '0.0.17'
-  sha256 '5587405776f3249732099059b7e8bc880bf67e7c1647f453ce77b727c0bcd052'
+  version '0.0.19'
+  sha256 'a70e41c69acab59fdac6c03aab70675177f94db31069a5b15166f067e23db97f'
 
   url "https://github.com/github/SoftU2F/releases/download/#{version}/SoftU2F.pkg"
   appcast 'https://github.com/github/SoftU2F/releases.atom'
@@ -13,5 +13,6 @@ cask 'softu2f' do
 
   uninstall launchctl: 'com.github.SoftU2F',
             kext:      'com.github.SoftU2FDriver',
+            delete:    '/Applications/SoftU2F.app',
             pkgutil:   'com.GitHub.SoftU2F'
 end

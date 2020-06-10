@@ -1,13 +1,15 @@
 cask 'cd-to' do
-  version '2.6.0'
-  sha256 'a92def521d332a373f655a41338d0ec18dfaa6e24eb9ec2ca6df281398db3d46'
+  version '3.1'
+  sha256 '2871b5324210a04eb13b27aa69ab572215a6ac11a33ca96de8e8526b39f77113'
 
-  url "https://github.com/jbtule/cdto/releases/download/#{version.dots_to_underscores}/cdto_#{version.dots_to_underscores.gsub(%r{_\d$}, '')}.zip"
+  url "https://github.com/jbtule/cdto/releases/download/v#{version}/cdto_#{version.dots_to_underscores}.zip"
   appcast 'https://github.com/jbtule/cdto/releases.atom'
   name 'cd to'
   homepage 'https://github.com/jbtule/cdto'
 
-  app "cdto_#{version.dots_to_underscores.gsub(%r{_\d$}, '')}/terminal/cd to.app"
+  depends_on macos: '>= :mojave'
+
+  app 'cd to.app'
 
   caveats <<~EOS
     To complete installation:
@@ -15,7 +17,5 @@ cask 'cd-to' do
     2. Drag "cd to.app" onto the Finder toolbar while holding down the command(⌘) and option(⌥) keys.
 
     To use, just click on the new button and instantly opens a new Terminal.app window.
-
-    Only "cd to.app" for Terminal.app has been added to the Applications folder. The iterm and x11_term versions are also staged.
   EOS
 end

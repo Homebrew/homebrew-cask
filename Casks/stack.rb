@@ -1,9 +1,10 @@
 cask 'stack' do
-  version '2.2.4.163'
-  sha256 '4ace1320a2adc7530ab1e4b97c4892b1a5c8882fc0fa233259e07acdfeb85b0c'
+  version '2.6.4.20200506'
+  sha256 '676241a70d26832f8910bdeb64e5c44f8ff265a27b1267c2daf15beefe4e4a00'
 
-  # transip.net/stack was verified as official when first introduced to the cask
+  # transip.net/stack/ was verified as official when first introduced to the cask
   url "https://mirror.transip.net/stack/software/osx/stack-#{version}.pkg"
+  appcast 'https://mirror.transip.net/stack/update/?version=0.0.0&platform=macos&oem=stack&versionsuffix=&updatesegment=18&sparkle=true'
   name 'STACK'
   homepage 'https://www.transip.nl/stack'
 

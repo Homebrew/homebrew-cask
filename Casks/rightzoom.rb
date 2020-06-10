@@ -1,14 +1,11 @@
 cask 'rightzoom' do
-  version :latest
-  sha256 :no_check
+  version '2.3'
+  sha256 '026b18288814a6c548fe18730b4959b8e968ffb2eef31517796e72f7b988242c'
 
-  url 'http://www.blazingtools.com/mac/RightZoom.zip'
+  url "https://www.blazingtools.com/mac/RightZoom#{version.no_dots}.zip"
+  appcast 'https://www.blazingtools.com/right_zoom_mac.html'
   name 'Right Zoom'
-  homepage 'http://www.blazingtools.com/right_zoom_mac.html'
+  homepage 'https://www.blazingtools.com/right_zoom_mac.html'
 
   app 'RightZoom.app'
-
-  caveats do
-    discontinued
-  end
 end

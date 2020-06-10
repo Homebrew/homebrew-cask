@@ -1,12 +1,17 @@
 cask 'deadbolt' do
-  version '1.2,15:1469916188'
-  sha256 'b6b57135032711d04a566d4068ddef65c7641d11e3a0d98fe72d6639272959cc'
+  version '0.1.0'
+  sha256 'c302f1c532082b200d844d17cd8feadc61821d97591fb5a0dbb1bb97c3a5981b'
 
-  # dl.devmate.com/com.goodman-wilson.deadbolt was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.goodman-wilson.deadbolt/#{version.after_comma.before_colon}/#{version.after_colon}/deadbolt-#{version.after_comma.before_colon}.zip"
-  appcast 'https://updates.devmate.com/com.goodman-wilson.deadbolt.xml'
+  url "https://github.com/alichtman/deadbolt/releases/download/#{version}/Deadbolt-#{version}.dmg"
+  appcast 'https://github.com/alichtman/deadbolt/releases.atom'
   name 'Deadbolt'
-  homepage 'https://deadbolt.goodman-wilson.com/'
+  homepage 'https://github.com/alichtman/deadbolt'
 
   app 'Deadbolt.app'
+
+  zap trash: [
+               '~/Library/Application Support/deadbolt',
+               '~/Library/Preferences/org.alichtman.deadbolt.plist',
+               '~/Library/Saved Application State/org.alichtman.deadbolt.savedState',
+             ]
 end

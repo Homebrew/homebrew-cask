@@ -1,14 +1,14 @@
 cask 'blender' do
-  version '2.79b'
-  sha256 '07592ebb50749638202d51a6220b05e4c9b070d149fce34bb6ce8757fad2f152'
+  version '2.83'
+  sha256 '5573b491f1190ca828f6dd0024cad18dab0c379ce44cd63a1622154ace4b8295'
 
-  url "https://download.blender.org/release/Blender#{version.major_minor}/blender-#{version}-macOS-10.6.zip"
+  url "https://download.blender.org/release/Blender#{version.major_minor.delete('a-z')}/blender-#{version}.0-macOS.dmg"
+  appcast 'https://download.blender.org/release/',
+          configuration: version.delete('a-z')
   name 'Blender'
   homepage 'https://www.blender.org/'
 
-  # Renamed for consistency: app name is different in the Finder and in a shell.
-  app "blender-#{version}-macOS-10.6/blender.app", target: 'Blender.app'
-  app "blender-#{version}-macOS-10.6/blenderplayer.app", target: 'Blenderplayer.app'
+  app 'Blender.app'
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/blender.wrapper.sh"
   binary shimscript, target: 'blender'
@@ -19,7 +19,7 @@ cask 'blender' do
 
     IO.write shimscript, <<~EOS
       #!/bin/bash
-      '#{appdir}/Blender.app/Contents/MacOS/blender' "$@"
+      '#{appdir}/Blender.app/Contents/MacOS/Blender' "$@"
     EOS
   end
 end

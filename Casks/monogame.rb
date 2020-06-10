@@ -1,10 +1,12 @@
 cask 'monogame' do
-  version '3.6'
-  sha256 '2a948ff5a6e197c9487ec33b0c1cc9943d1f04b61ed15f25cf3942f90e319fc2'
+  version '3.7.1'
+  sha256 'b869b6c71181295db0b245221151dde43b012f23ef3be52b525650f5923cfa87'
 
-  url "http://www.monogame.net/releases/v#{version}/MonoGame.pkg"
+  # github.com/MonoGame/MonoGame/ was verified as official when first introduced to the cask
+  url "https://github.com/MonoGame/MonoGame/releases/download/v#{version}/MonoGame.pkg"
+  appcast 'https://github.com/MonoGame/MonoGame/releases.atom'
   name 'MonoGame'
-  homepage 'http://www.monogame.net/'
+  homepage 'https://www.monogame.net/'
 
   pkg 'MonoGame.pkg'
 

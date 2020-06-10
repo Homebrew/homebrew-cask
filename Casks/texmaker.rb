@@ -1,11 +1,11 @@
 cask 'texmaker' do
-  version '5.0.2'
-  sha256 'c23a912f7fc47d2dd28590d3a704f8e3df55a68f2ab21267a16b294d59fe9657'
+  version '5.0.4'
+  sha256 '3ff64e0993b91fd19b5ecb8f48c2004e86bf125b2334aca5c2a20abef27424d3'
 
-  url "http://www.xm1math.net/texmaker/assets/files/texmaker-#{version}.dmg"
-  appcast 'http://www.xm1math.net/texmaker/log.html'
+  url "https://www.xm1math.net/texmaker/assets/files/texmaker-#{version}.dmg"
+  appcast 'https://www.xm1math.net/texmaker/assets/files/'
   name 'Texmaker'
-  homepage 'http://www.xm1math.net/texmaker/'
+  homepage 'https://www.xm1math.net/texmaker/'
 
   app 'texmaker.app'
 end

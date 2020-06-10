@@ -9,8 +9,33 @@ cask 'betwixt' do
 
   app 'Betwixt-darwin-x64/Betwixt.app'
 
+  uninstall_postflight do
+    cert = "#{ENV['HOME']}/Library/Application Support/betwixt/ssl/certs/ca.pem"
+    next unless File.exist? cert
+
+    stdout, * = system_command '/usr/bin/openssl',
+                               args: [
+                                       'x509',
+                                       '-fingerprint', '-sha256',
+                                       '-noout',
+                                       '-in', cert
+                                     ]
+    hash = stdout.lines.first.split('=').second.delete(':').strip
+    stdout, * = system_command '/usr/bin/security',
+                               args: ['find-certificate', '-a', '-c', 'NodeMITMProxyCA', '-Z'],
+                               sudo: true
+    hashes = stdout.lines.grep(%r{^SHA-256 hash:}) { |l| l.split(':').second.strip }
+    if hashes.include?(hash)
+      system_command '/usr/bin/security',
+                     args: ['delete-certificate', '-Z', hash],
+                     sudo: true
+    end
+  end
+
   zap trash: [
                '~/Library/Application Support/betwixt',
                '~/Library/Caches/betwixt',
+               '~/Library/Preferences/com.electron.betwixt.plist',
+               '~/Library/Saved Application State/com.electron.betwixt.savedState',
              ]
 end

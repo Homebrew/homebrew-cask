@@ -1,9 +1,10 @@
 cask 'inssider' do
-  version '4.2.3.4'
-  sha256 'f499dce56c59a2a3091bcd994a85adc5a26c9e14917daa1f3bacabc0fc87a4b1'
+  version '0.0.2.14,5'
+  sha256 '8d995306facb7d1341a54521a7cd8e76290ff44763fa00a7dfca85932f82a524'
 
-  # metageek.net was verified as official when first introduced to the cask
-  url "http://files.metageek.net/downloads/inSSIDer#{version.major}-installer.dmg"
+  # nyc3.digitaloceanspaces.com/Installers/Mac/ was verified as official when first introduced to the cask
+  url "https://metageek-desktop.nyc3.digitaloceanspaces.com/Installers/Mac/inSSIDer-#{version.after_comma}/inSSIDer.dmg"
+  appcast "https://metageek-desktop.nyc3.digitaloceanspaces.com/Installers/Mac/inSSIDer-#{version.after_comma}/inssider_#{version.after_comma}_mac_appcast.xml"
   name 'inSSIDer'
   homepage 'https://www.metageek.com/products/inssider/'
 

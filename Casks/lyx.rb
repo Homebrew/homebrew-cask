@@ -1,12 +1,12 @@
 cask 'lyx' do
-  version '2.3.0'
-  sha256 '45a8da0cd9ccdc4f3764864048c890e9d234ef559a5a4db89cce93bbaaee46da'
+  version '2.3.4.2'
+  sha256 '37c390de4405f3ee9ce4e2feba6ba8f66bc937f4fe4c67573b747215e1843551'
 
-  url "ftp://ftp.lyx.org/pub/lyx/bin/#{version}/LyX-#{version}+qt5-x86_64-cocoa.dmg"
+  # ftp.lip6.fr/pub/lyx/ was verified as official when first introduced to the cask
+  url "https://ftp.lip6.fr/pub/lyx/bin/#{version.major_minor_patch}/LyX-#{version}+qt5-x86_64-cocoa.dmg"
   appcast 'https://www.lyx.org/misc/rss/lyx_news_feed.xml'
   name 'LyX'
   homepage 'https://www.lyx.org/'
-  gpg "#{url}.sig", key_id: 'de7a44fac7fb382d'
 
   app 'LyX.app'
 

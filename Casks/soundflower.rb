@@ -23,4 +23,8 @@ cask 'soundflower' do
                           },
             pkgutil:      'com.cycling74.soundflower.*',
             kext:         'com.Cycling74.driver.Soundflower'
+
+  caveats do
+    kext
+  end
 end

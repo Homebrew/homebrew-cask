@@ -2,9 +2,9 @@ cask 'ilya-birman-typography-layout' do
   version '3.6'
   sha256 '95366ae651a39f59fa6fd92e07edac6961d02d33ef0ea2e479152a703c567b6c'
 
-  url "http://ilyabirman.ru/projects/typography-layout/download/ilya-birman-typolayout-#{version}-mac.dmg"
+  url "https://ilyabirman.ru/projects/typography-layout/download/ilya-birman-typolayout-#{version}-mac.dmg"
   name 'Ilya Birman typography layout'
-  homepage 'http://ilyabirman.ru/projects/typography-layout/'
+  homepage 'https://ilyabirman.ru/projects/typography-layout/'
 
   artifact 'Install Ilya Birman Typography Layout.app/Contents/Resources/Layout/Ilya Birman Typography Layout.bundle', target: Pathname.new(File.expand_path('~')).join('Library/Keyboard Layouts/Ilya Birman Typography Layout.bundle')
 

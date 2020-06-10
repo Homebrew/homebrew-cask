@@ -1,12 +1,12 @@
 cask 'fontexplorer-x-pro' do
-  version '6.0.5'
-  sha256 '69e8e419166a01fa84b550268b3f8c3769374c771735aeb6bef78db91891b0bb'
+  version '7.0.1'
+  sha256 '3edf5cd6f7cb9312dee1b5bc74959419dcb842f5ad669d496df1e1c6d193b8ab'
 
-  url "http://fast.fontexplorerx.com/FontExplorerXPro#{version.no_dots}.dmg"
+  url "https://fast.fontexplorerx.com/FontExplorerXPro#{version.no_dots}.dmg"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect_curl.cgi?url=https://fex.linotype.com/download/mac/FontExplorerXPro.dmg',
+          configuration: version.no_dots
   name 'FontExplorer X Pro'
   homepage 'https://www.fontexplorerx.com/'
-
-  depends_on macos: '>= :mountain_lion'
 
   app 'FontExplorer X Pro.app'
 

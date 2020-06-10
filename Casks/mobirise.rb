@@ -2,7 +2,7 @@ cask 'mobirise' do
   version :latest
   sha256 :no_check
 
-  url 'http://download.mobirise.com/mobirise-free-mac.zip'
+  url 'https://download.mobirise.com/MobiriseSetup.dmg'
   name 'Mobirise'
   homepage 'https://mobirise.com/'
 

@@ -1,11 +1,11 @@
 cask 'webpquicklook' do
-  version '2.2'
-  sha256 'b7495e90589f2f9ee13c331d840ff638399817bd906da61aa32bb21a9c26f32b'
+  version :latest
+  sha256 :no_check
 
-  url "https://github.com/dchest/webp-quicklook/releases/download/v#{version}/WebP-#{version}.qlgenerator.zip"
-  appcast 'https://github.com/dchest/webp-quicklook/releases.atom'
-  name 'WebP QuickLook Plugin'
-  homepage 'https://github.com/dchest/webp-quicklook'
+  # raw.githubusercontent.com/emin/WebPQuickLook/ was verified as official when first introduced to the cask
+  url 'https://raw.githubusercontent.com/emin/WebPQuickLook/master/WebpQuickLook.tar.gz'
+  name 'WebPQuickLook'
+  homepage 'https://github.com/emin/WebPQuickLook'
 
-  qlplugin 'WebP.qlgenerator'
+  qlplugin 'WebpQuickLook.qlgenerator'
 end

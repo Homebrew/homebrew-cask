@@ -1,6 +1,6 @@
 cask 'discord' do
-  version '0.0.251'
-  sha256 '98fe2d3d29b8e6ea676f8ce633122c3cc8d2541bff8fb20ffa40f014224e4a3a'
+  version '0.0.257'
+  sha256 'ab533a1d51391171190991f6f337b2baab69bdc79cf9b8f2c21228881ad41712'
 
   url "https://cdn.discordapp.com/apps/osx/#{version}/Discord.dmg"
   appcast 'https://discordapp.com/api/stable/updates?platform=osx'

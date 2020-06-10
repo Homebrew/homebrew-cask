@@ -1,11 +1,11 @@
 cask 'texshop' do
-  version '4.01'
-  sha256 'b66e0769b7e2289f2a905a9cffa626164276b1a75d249fb6cce95100f3ca95d6'
+  version '4.44'
+  sha256 '67f8f1ea196209a65dd996db875e19307f947e697a5b70dad0571ed88f4fd0ad'
 
-  url "http://pages.uoregon.edu/koch/texshop/texshop-64/texshop#{version.no_dots}.zip"
-  appcast 'http://pages.uoregon.edu/koch/texshop/texshop-64/texshopappcast.xml'
+  url "https://pages.uoregon.edu/koch/texshop/texshop-64/texshop#{version.no_dots}.zip"
+  appcast 'https://pages.uoregon.edu/koch/texshop/texshop-64/texshopappcast.xml'
   name 'TeXShop'
-  homepage 'http://pages.uoregon.edu/koch/texshop/'
+  homepage 'https://pages.uoregon.edu/koch/texshop/'
 
   auto_updates true
   depends_on macos: '>= :yosemite'

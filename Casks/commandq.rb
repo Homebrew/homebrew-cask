@@ -1,11 +1,14 @@
 cask 'commandq' do
-  version '1.0.4'
-  sha256 '1183a2baf3775bd47851c94636ebe41356e4b53fce1dd35b4b70b9298294a107'
+  version '2.0.5'
+  sha256 '9f7529ecfe83f8a77eeb0d8ad42cacfd843ecfa30508d4aa243546fb8655627b'
 
-  url "http://dl.clickontyler.com/commandq/commandq_#{version}.zip"
-  appcast 'https://shine.clickontyler.com/appcast.php?id=16'
+  # download.clickontyler.com/ was verified as official when first introduced to the cask
+  url "https://download.clickontyler.com/commandq/commandq20_#{version.no_dots}.zip"
+  appcast 'https://shine.clickontyler.com/appcast.php?id=43'
   name 'CommandQ'
-  homepage 'https://clickontyler.com/commandq/'
+  homepage 'https://commandqapp.com/'
+
+  depends_on macos: '>= :sierra'
 
   app 'CommandQ.app'
 end

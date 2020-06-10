@@ -1,9 +1,9 @@
 cask 'persepolis-download-manager' do
-  version '3.1.0'
-  sha256 '70be7692e4b7a5f596a570dbcd4b9c5c077ab5481986952fa59c3dc228bc9bb5'
+  version '3.2.0'
+  sha256 '39514a158201483a713c918d744b823f63ae39142aa2024713c21174385400a3'
 
-  # github.com/persepolisdm/persepolis was verified as official when first introduced to the cask
-  url "https://github.com/persepolisdm/persepolis/releases/download/#{version}/persepolis_#{version.dots_to_underscores}_mac.dmg"
+  # github.com/persepolisdm/persepolis/ was verified as official when first introduced to the cask
+  url "https://github.com/persepolisdm/persepolis/releases/download/#{version}/persepolis_#{version}_mac.zip"
   appcast 'https://github.com/persepolisdm/persepolis/releases.atom'
   name 'Persepolis'
   homepage 'https://persepolisdm.github.io/'

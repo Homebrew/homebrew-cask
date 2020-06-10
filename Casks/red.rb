@@ -1,12 +1,18 @@
 cask 'red' do
-  version '0.6.3'
-  sha256 '3558eb6c7973443c91361b9d2b5824a4b3229209af0a13a580f46ae0f4043e81'
+  version '0.6.4'
+  sha256 '43bab7be96978b7740879eefd9131dbd51280ed319e96d83f87b2df05ea938c7'
 
-  url "http://static.red-lang.org/dl/mac/red-#{version.no_dots}"
+  url "https://static.red-lang.org/dl/mac/red-#{version.no_dots}"
   name 'Red Programming Language'
-  homepage 'http://www.red-lang.org/'
+  homepage 'https://www.red-lang.org/'
 
+  depends_on macos: '<= :mojave'
   container type: :naked
 
   binary "red-#{version.no_dots}", target: 'red'
+
+  zap trash: [
+               '~/.red',
+               '~/Library/Saved Application State/org.redlang.red-ttx.savedState',
+             ]
 end

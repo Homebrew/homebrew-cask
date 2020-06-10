@@ -1,12 +1,14 @@
 cask 'tysimulator' do
-  version '0.8.1'
-  sha256 '064c8fa2a35607e262e131c150e837af28fb357e38308cb02f0bbf0eff51ea49'
+  version '0.10.0'
+  sha256 '9d441e0224878d79da4aff25dfc11f9b161518812bb03beed7c9de423c047b8a'
 
-  # github.com/luckytianyiyan/TySimulator was verified as official when first introduced to the cask
-  url "https://github.com/luckytianyiyan/TySimulator/releases/download/#{version}/TySimulator.#{version}.dmg"
-  appcast 'https://github.com/luckytianyiyan/TySimulator/releases.atom'
+  # github.com/ty0x2333/TySimulator/ was verified as official when first introduced to the cask
+  url "https://github.com/ty0x2333/TySimulator/releases/download/#{version}/TySimulator.#{version}.dmg"
+  appcast 'https://github.com/ty0x2333/TySimulator/releases.atom'
   name 'TySimulator'
   homepage 'https://tysimulator.com/'
+
+  depends_on macos: '>= :sierra'
 
   app 'TySimulator.app'
 

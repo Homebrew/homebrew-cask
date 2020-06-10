@@ -1,23 +1,14 @@
 cask 'paraview' do
-  if MacOS.version == :snow_leopard
-    version '4.3.1'
-    sha256 'f968263782d1407c769c8d7b28872a43adb263d0820c9bebe0e0ea8cf2aaa3a0'
-    url "http://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v#{version.major_minor}&type=binary&os=osx&downloadFile=ParaView-#{version}-Darwin-64bit-SnowLeopard.dmg"
-    app 'paraview.app'
-  elsif MacOS.version == :lion
-    version '5.1.2'
-    sha256 '629fc1919a85f3f46343a307aa18f5e270a6254faf2d5e3e39adc738214789ae'
-    url "http://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v#{version.major_minor}&type=binary&os=osx&downloadFile=ParaView-#{version}-Qt4-OpenGL2-MPI-OSX10.7-64bit.dmg"
-    app 'paraview.app'
-  else
-    version '5.4.0'
-    sha256 '491a8730c0cae9b08fb32ec2316af7c60a88346049262bb65caa5545dfa98c92'
-    url "http://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v#{version.major_minor}&type=binary&os=osx&downloadFile=ParaView-#{version}-Qt5-OpenGL2-MPI-OSX10.8-64bit.dmg",
-        user_agent: :fake
-    app "ParaView-#{version}.app"
-  end
+  version '5.8.0'
+  sha256 '36e84be8d389806f17fbc5a30b26bc242566bc919ba94dffb07d05cb6fbdbdb5'
 
-  appcast 'http://www.paraview.org/files/paraview-download.js'
+  url "https://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v#{version.major_minor}&type=binary&os=macOS&downloadFile=ParaView-#{version}-MPI-OSX10.12-Python2.7-64bit.dmg",
+      user_agent: :fake
+  appcast 'https://www.paraview.org/files/listing.txt'
   name 'ParaView'
   homepage 'https://www.paraview.org/'
+
+  depends_on macos: '>= :sierra'
+
+  app "ParaView-#{version}.app"
 end

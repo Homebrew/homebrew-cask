@@ -1,13 +1,12 @@
 cask 'mumble' do
-  version '1.2.19'
-  sha256 '3784911cff35d1611c1aad1bdce74dda4d3a7f682cd83e256b1e4283d82bf368'
+  version '1.3.1'
+  sha256 '052ba6d5bc1fc64aed90881bcab036bf93ae857228be316243a6eb15dac99ce6'
 
-  # github.com/mumble-voip/mumble was verified as official when first introduced to the cask
+  # github.com/mumble-voip/mumble/ was verified as official when first introduced to the cask
   url "https://github.com/mumble-voip/mumble/releases/download/#{version}/Mumble-#{version}.dmg"
   appcast 'https://github.com/mumble-voip/mumble/releases.atom'
   name 'Mumble'
   homepage 'https://wiki.mumble.info/wiki/Main_Page'
-  gpg "#{url}.sig", key_url: 'https://github.com/mumble-voip/mumble-gpg-signatures/raw/master/mumble-auto-build-2017.asc'
 
   app 'Mumble.app'
 end

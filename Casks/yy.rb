@@ -1,9 +1,10 @@
 cask 'yy' do
-  version '1.1.17'
-  sha256 '06fff26693211c640867454de2ab4cc9e380194bf254ae339518bb22fbd90af2'
+  version '1.8.0'
+  sha256 'c97c1380584d67893aa55f4ecc0dbce8951f36e53e801e0732b3dda499dcdd64'
 
-  # yydl.duowan.com/mac/YY was verified as official when first introduced to the cask
-  url "http://yydl.duowan.com/mac/YY/#{version}/YY-#{version}.dmg"
+  # yydl.duowan.com/mac/YY/ was verified as official when first introduced to the cask
+  url "https://yydl.duowan.com/mac/YY/#{version}/YY-#{version}.dmg"
+  appcast 'https://www.yy.com/index/t/download'
   name 'YY'
   homepage 'https://www.yy.com/'
 

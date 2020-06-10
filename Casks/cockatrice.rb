@@ -1,12 +1,23 @@
 cask 'cockatrice' do
-  version '2.6.1,2018-07-17:Father_of_Ruins_Revision_1'
-  sha256 'b35790a9391195d5bd9087f73a9eedac7e3cdd413b1dfeae65fe226bfa5354ac'
+  version '2.7.4,2020-03-20:Dawn_of_Hope_Revision_1'
 
-  # github.com/Cockatrice/Cockatrice was verified as official when first introduced to the cask
-  url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.after_comma.before_colon}-Release-#{version.before_comma}/Cockatrice-#{version.after_colon}-#{version.before_comma}.dmg"
+  if MacOS.version <= :high_sierra
+    sha256 '9525b9c8e9011eb017e795fd9090990c096c66a5b707184cd19ff0d3ba421c19'
+
+    # github.com/Cockatrice/Cockatrice/ was verified as official when first introduced to the cask
+    url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.after_comma.before_colon}-Release-#{version.before_comma}/Cockatrice-#{version.after_colon}-#{version.before_comma}-macos10.13.dmg"
+  else
+    sha256 'cacad08859a9de04548828476e16ad148ad29169fd4674282a2bdd0808b74b9f'
+
+    # github.com/Cockatrice/Cockatrice/ was verified as official when first introduced to the cask
+    url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.after_comma.before_colon}-Release-#{version.before_comma}/Cockatrice-#{version.after_colon}-#{version.before_comma}-macos10.14.zip"
+  end
+
   appcast 'https://github.com/Cockatrice/Cockatrice/releases.atom'
   name 'Cockatrice'
   homepage 'https://cockatrice.github.io/'
+
+  depends_on macos: '>= :sierra'
 
   app 'cockatrice.app'
   app 'oracle.app'

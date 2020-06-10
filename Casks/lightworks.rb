@@ -1,12 +1,11 @@
 cask 'lightworks' do
-  version '14.0.0'
-  sha256 '06d64bee517bfb13bbb1d5739dfd184fd2931bb8c1fab835bc066cbb6c41192d'
+  version '2020.1_r122068'
+  sha256 'c55738a83be001b2d020af7d77629791838c044428a7e74ca2260735023757a9'
 
-  url "http://downloads.lwks.com/v#{version.major}/lightworks_v#{version}.dmg"
+  url "https://cdn.lwks.com/releases/lightworks_#{version}.dmg"
+  appcast 'https://www.lwks.com/index.php?option=com_lwks&view=download&Itemid=206&tab=2'
   name 'Lightworks'
   homepage 'https://www.lwks.com/'
-
-  depends_on macos: '>= :mountain_lion'
 
   app 'Lightworks.app'
 

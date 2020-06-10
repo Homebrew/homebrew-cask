@@ -1,14 +1,30 @@
 cask 'rambox' do
-  version '0.5.17'
-  sha256 '530ce10f337261e77be3c954dae7fd3cdda4299a55585876ca7e4ac54a315e97'
+  version '0.7.5'
+  sha256 '3977a7b9929969624663390296fc644a72d107852ce1b7c786e3f84f4412057a'
 
-  # github.com/saenzramiro/rambox was verified as official when first introduced to the cask
-  url "https://github.com/saenzramiro/rambox/releases/download/#{version}/Rambox-#{version}-mac.zip"
-  appcast 'https://github.com/saenzramiro/rambox/releases.atom'
+  # github.com/ramboxapp/community-edition/ was verified as official when first introduced to the cask
+  url "https://github.com/ramboxapp/community-edition/releases/download/#{version}/Rambox-#{version}-mac.zip"
+  appcast 'https://github.com/ramboxapp/community-edition/releases.atom'
   name 'Rambox'
-  homepage 'http://rambox.pro/'
+  homepage 'https://rambox.pro/'
 
   app 'Rambox.app'
 
-  uninstall login_item: 'Rambox'
+  zap trash: [
+               '~/Library/Application Support/CrashReporter/Rambox Helper_*.plist',
+               '~/Library/Application Support/CrashReporter/Rambox_*.plist',
+               '~/Library/Application Support/Rambox',
+               '~/Library/Caches/com.grupovrs.ramboxce',
+               '~/Library/Caches/com.grupovrs.ramboxce.ShipIt',
+               '~/Library/Caches/com.saenzramiro.rambox',
+               '~/Library/Logs/Rambox',
+               '~/Library/Preferences/ByHost/com.grupovrs.ramboxce.ShipIt.*.plist',
+               '~/Library/Preferences/com.grupovrs.ramboxce.helper.plist',
+               '~/Library/Preferences/com.grupovrs.ramboxce.plist',
+               '~/Library/Preferences/com.saenzramiro.rambox.helper.plist',
+               '~/Library/Preferences/com.saenzramiro.rambox.plist',
+               '~/Library/Saved Application State/com.grupovrs.ramboxce.savedState',
+               '~/Library/Saved Application State/com.saenzramiro.rambox.savedState',
+               '~/Library/WebKit/com.saenzramiro.rambox',
+             ]
 end

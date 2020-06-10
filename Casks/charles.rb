@@ -1,6 +1,6 @@
 cask 'charles' do
-  version '4.2.6'
-  sha256 '164d21d1b5090cdf427e9985d4af8d1eef1c0ea733215121a18de886ffea299f'
+  version '4.5.6'
+  sha256 'c00a002476b7a453ff1585288781081f71a81daacf0e39fa362e733a65f7258c'
 
   url "https://www.charlesproxy.com/assets/release/#{version}/charles-proxy-#{version}.dmg"
   appcast 'https://www.charlesproxy.com/latest.do'
@@ -9,7 +9,21 @@ cask 'charles' do
 
   app 'Charles.app'
 
-  uninstall quit: 'com.xk72.Charles'
+  uninstall_postflight do
+    stdout, * = system_command '/usr/bin/security',
+                               args: ['find-certificate', '-a', '-c', 'Charles', '-Z'],
+                               sudo: true
+    hashes = stdout.lines.grep(%r{^SHA-256 hash:}) { |l| l.split(':').second.strip }
+    hashes.each do |h|
+      system_command '/usr/bin/security',
+                     args: ['delete-certificate', '-Z', h],
+                     sudo: true
+    end
+  end
+
+  uninstall quit:      'com.xk72.Charles',
+            launchctl: 'com.xk72.Charles.ProxyHelper',
+            delete:    '/Library/PrivilegedHelperTools/com.xk72.Charles.ProxyHelper'
 
   zap trash: [
                '~/Library/Application Support/Charles',

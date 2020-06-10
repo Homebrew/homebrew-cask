@@ -8,4 +8,11 @@ cask 'menubar-colors' do
   homepage 'https://github.com/nvzqz/Menubar-Colors'
 
   app 'Menubar Colors.app'
+
+  uninstall quit: 'com.nikolaivazquez.Menubar-Colors'
+
+  zap trash: [
+               '~/Library/Caches/com.nikolaivazquez.Menubar-Colors',
+               '~/Library/Preferences/com.nikolaivazquez.Menubar-Colors.plist',
+             ]
 end

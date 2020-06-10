@@ -9,12 +9,14 @@
 
 require "open3"
 require "set"
+require "io/console"
 
 ###
 ### globals
 ###
 
 $opt_test = nil
+$COLUMNS = IO.console.winsize.last
 
 ###
 ### methods
@@ -92,12 +94,12 @@ def report_apps
     next if excluded_bundle_id bundle_id
     next if excluded_app_name app_name
     bundle_id.gsub!(%r{^(missing value)$}, '<\1>')
-    running.add "#{bundle_id}\t#{app_name}"
+    running.add "#{bundle_id.ljust($COLUMNS / 2)}\t#{app_name}"
   end
 
-  puts "bundle_id\tapp_name\n"
-  puts "--------------------------------------\n"
-  puts running.to_a.sort
+  puts "bundle_id".ljust($COLUMNS / 2) + "\tapp_name"
+  puts "-" * $COLUMNS
+  puts running.to_a.sort.join "\n"
 end
 
 ###

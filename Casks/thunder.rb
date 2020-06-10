@@ -1,13 +1,15 @@
 cask 'thunder' do
-  version '3.2.4.3658'
-  sha256 '10bfc0a4a00e022f465ecc1f5bcc89b793704273330c3217ca957370f2c03db1'
+  version '3.4.1.4368'
+  sha256 'a732b748d95005fbf7ecfe3373be037940b10127dc1adf3de30a4a05d46a97f2'
 
-  # down.sandai.net was verified as official when first introduced to the cask
-  url "http://down.sandai.net/mac/thunder_#{version}.dmg"
+  # down.sandai.net/ was verified as official when first introduced to the cask
+  url "https://down.sandai.net/mac/thunder_#{version}.dmg"
+  appcast 'https://static-xl9-ssl.xunlei.com/json/mac_download_url.json'
   name 'Thunder'
   name '迅雷'
-  homepage 'http://mac.xunlei.com/'
+  homepage 'https://www.xunlei.com/'
 
+  auto_updates true
   depends_on macos: '>= :yosemite'
 
   app 'Thunder.app'

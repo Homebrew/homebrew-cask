@@ -7,5 +7,9 @@ cask 'jtool' do
   homepage 'http://newosxbook.com/tools/jtool.html'
 
   binary 'jtool'
-  artifact 'jtool.1', target: "#{HOMEBREW_PREFIX}/share/man/man1/jtool.1"
+  manpage 'jtool.1'
+
+  caveats do
+    discontinued
+  end
 end

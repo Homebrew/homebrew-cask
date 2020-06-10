@@ -1,14 +1,14 @@
 cask 'optimage' do
-  version '2.1.1'
-  sha256 'fdc04c3533ac40e3a19296b661bed46a02e50f0d0bd01a6eee652393d3d5e6d4'
+  version '3.3.1'
+  sha256 'c836764790332f499c74896c78846abe70e0a22129028b9233bd08b5af30d25f'
 
-  url 'https://getoptimage.com/download/optimage-mac.zip'
-  appcast 'https://getoptimage.com/appcast.xml'
+  url 'https://optimage.app/download/optimage-mac.zip'
+  appcast 'https://optimage.app/appcast.xml'
   name 'Optimage'
-  homepage 'https://getoptimage.com/'
+  homepage 'https://optimage.app/'
 
   auto_updates true
-  depends_on macos: '>= :mountain_lion'
 
   app 'Optimage.app'
+  binary "#{appdir}/Optimage.app/Contents/MacOS/cli/optimage"
 end

@@ -1,24 +1,24 @@
 cask 'wavebox' do
-  version '3.14.6'
-  sha256 'e8d91f703d74114a399d366b9c57c88bba1779c2aa2bd8cc67dc87d205f157d7'
+  version '10.0.179.1'
+  sha256 'a2c1a2096d020cca0a2b8fa2e71a91f79f6f5d59010c8652e8f79b59e9bd1a86'
 
-  # github.com/wavebox/waveboxapp was verified as official when first introduced to the cask
-  url "https://github.com/wavebox/waveboxapp/releases/download/v#{version}/Wavebox_#{version.dots_to_underscores}_osx.dmg"
-  appcast 'https://github.com/wavebox/waveboxapp/releases.atom'
+  # download.wavebox.app/ was verified as official when first introduced to the cask
+  url "https://download.wavebox.app/core/mac/Install%20Wavebox%20#{version}.dmg"
+  appcast 'https://download.wavebox.app/core/mac/appcast.xml'
   name 'Wavebox'
   homepage 'https://wavebox.io/'
 
+  auto_updates true
+
   app 'Wavebox.app'
 
-  uninstall quit:       'io.wavebox.wavebox',
-            login_item: 'Wavebox'
+  uninstall quit: 'io.wavebox.wavebox'
 
   zap trash: [
-               '~/Library/Application Support/wavebox',
-               '~/Library/Caches/io.wavebox.wavebox',
-               '~/Library/Caches/io.wavebox.wavebox.ShipIt',
-               '~/Library/Preferences/io.wavebox.wavebox.helper.plist',
-               '~/Library/Preferences/io.wavebox.wavebox.plist',
-               '~/Library/Saved Application State/io.wavebox.wavebox.savedState',
+               '~/Library/Application Support/WaveboxApp',
+               '~/Library/Caches/com.bookry.wavebox',
+               '~/Library/Caches/WaveboxApp',
+               '~/Library/Preferences/com.bookry.wavebox.plist',
+               '~/Library/Saved Application State/com.bookry.wavebox.savedState',
              ]
 end

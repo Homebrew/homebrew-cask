@@ -1,6 +1,6 @@
 cask 'beamer' do
-  version '3.3.2'
-  sha256 'da58fa737a303f9d3bbe3885faae77c41678d94bb776f292fc6a8206f6d2f4bb'
+  version '3.4'
+  sha256 '3076376d6615a74ac71f07d15805798d7d15056cf77f4501fbf6c4e5806928df'
 
   url "https://beamer-app.com/resources/downloads/Beamer-#{version}.zip"
   appcast "https://beamer-app.com/beamer#{version.major}-appcast.xml"

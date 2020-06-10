@@ -1,18 +1,15 @@
 cask 'xamarin-mac' do
-  version '4.2.1.29'
-  sha256 'bc834bc7e07b8b689d57c34b374cfe5105549a5f49712a9681cbcc5ebd46b330'
+  version '6.18.2.1'
+  sha256 '1fd7e2c6c839aa958a568261c3af3df358d4ac64bfc73079a4c65e3455b4dccb'
 
   url "https://dl.xamarin.com/XamarinforMac/Mac/xamarin.mac-#{version}.pkg"
-  appcast 'https://xampubdl.blob.core.windows.net/static/installer_assets/v3/Mac/Universal/InstallationManifest.xml'
+  appcast 'https://github.com/xamarin/xamarin-macios/releases.atom'
   name 'Xamarin Mac'
   homepage 'https://www.xamarin.com/platform'
 
-  depends_on cask: 'mono-mdk'
+  depends_on cask: 'homebrew/cask-versions/mono-mdk-for-visual-studio'
 
   pkg "xamarin.mac-#{version}.pkg"
 
-  uninstall pkgutil: [
-                       "xamarin.mac-#{version}.pkg",
-                       "xamarin.mac-uninstall-#{version}.pkg",
-                     ]
+  uninstall pkgutil: 'com.xamarin.mac-.*'
 end

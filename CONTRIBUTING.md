@@ -11,7 +11,7 @@
 
 ## Updating a Cask
 
-Notice an application that's out-of-date in Homebrew-Cask? In most cases, it's very simple to update it. We have a [script](https://github.com/vitorgalvao/tiny-scripts/blob/master/cask-repair) that will ask for the new version number, and take care of updating the Cask file and submitting a pull request to us:
+Notice an application that's out-of-date in Homebrew Cask? In most cases, it's very simple to update it. We have a [script](https://github.com/vitorgalvao/tiny-scripts/blob/master/cask-repair) that will ask for the new version number, and take care of updating the Cask file and submitting a pull request to us:
 
 ```bash
 # install and setup script - only needed once
@@ -22,7 +22,7 @@ cask-repair --help
 cask-repair <outdated_cask>
 ```
 
-If there is a more complicated change, or there is a case where `cask-repair` fails (for example, where a Cask uses a [`url do` block](https://github.com/Homebrew/homebrew-cask/blob/60531a2812005dd5f17dc92f3ce7419af3c5d019/Casks/audacity.rb#L5#L15) or the [`language` stanza](https://github.com/Homebrew/homebrew-cask/blob/306b8fbd9502036f1ca742f70c569d8677b62403/Casks/firefox.rb#L4L74)), you can also follow the steps in [Adding a Cask](doc/development/adding_a_cask.md) to do the same thing manually. Remember to update the `version` and `shasum` values.
+If there is a more complicated change, or there is a case where `cask-repair` fails (for example, where a Cask uses a [`url do` block](https://github.com/Homebrew/homebrew-cask-versions/blob/2bf0f13dd49d263ebec0ca56e58ad8458633f789/Casks/vlc-nightly.rb#L5L10) or the [`language` stanza](https://github.com/Homebrew/homebrew-cask/blob/306b8fbd9502036f1ca742f70c569d8677b62403/Casks/firefox.rb#L4L74)), you can also follow the steps in [Adding a Cask](doc/development/adding_a_cask.md) to do the same thing manually. Remember to update the `version` and `sha256` values.
 
 
 ## Getting Set Up To Contribute
@@ -35,7 +35,7 @@ For manual updates, you'll need to fork the repository and add your copy as a re
 
 ```bash
 $ github_user='<my-github-username>'
-$ cd "$(brew --repository)"/Library/Taps/Homebrew/homebrew-cask
+$ cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask
 $ git remote add "${github_user}" "https://github.com/${github_user}/homebrew-cask"
 ```
 
@@ -46,9 +46,9 @@ $ git remote add "${github_user}" "https://github.com/${github_user}/homebrew-ca
 
 ## Adding a Cask
 
-Notice an application that's not in Homebrew-Cask yet? Make sure it's not yet in [Homebrew/cask-versions](https://github.com/Homebrew/homebrew-cask-versions) or [Homebrew/core](https://github.com/Homebrew/homebrew-core) (can be searched with `brew search`). Mac App Store apps can't be installed via Homebrew-Cask, but check out [mas](https://github.com/mas-cli/mas) for an alternative.
+Notice an application that's not in Homebrew Cask yet? Make sure it's not yet in [Homebrew/cask-versions](https://github.com/Homebrew/homebrew-cask-versions) or [Homebrew/core](https://github.com/Homebrew/homebrew-core) (can be searched with `brew search`). Mac App Store apps can't be installed via Homebrew Cask, but check out [mas](https://github.com/mas-cli/mas) for an alternative.
 
-With a bit of work, you can create a Cask for it. [This document](doc/development/adding_a_cask.md) will walk you through creating a new Cask, testing it, and submitting it to us.
+With a bit of work, you can create a Cask for it. The document [Adding A Cask](doc/development/adding_a_cask.md) will help you create, test, and submit a new Cask to us.
 
 
 ## Style guide

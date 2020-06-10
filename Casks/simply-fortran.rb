@@ -1,9 +1,17 @@
 cask 'simply-fortran' do
-  version '2.41'
-  sha256 '355340df3167b993807f90c8c3d51cec7eb1e246cadfe7377585fc3ab2c308a2'
+  if MacOS.version <= :mojave
+    version '3.12.3271'
 
-  # download.approximatrix.com/simplyfortran was verified as official when first introduced to the cask
-  url "http://download.approximatrix.com/simplyfortran/#{version}/SimplyFortran-#{version}.dmg"
+    sha256 'ebe257a6715fae7869b16a435547679a74b65fb2af8767c32a687262535e7d4c'
+    url "https://download.simplyfortran.com/#{version.major_minor}/macos/simplyfortran-#{version}.legacy.dmg"
+  else
+    version '3.12.3272'
+
+    sha256 '99e461f76eeb8ab39425efbd6a63332bcf136117c5cdad9abaf46e9a94a6a929'
+    url "https://download.simplyfortran.com/#{version.major_minor}/macos/simplyfortran-#{version}.dmg"
+  end
+  appcast 'https://simplyfortran.com/download/?platform=macos',
+          configuration: version.major_minor
   name 'Simply Fortran'
   homepage 'https://simplyfortran.com/'
 

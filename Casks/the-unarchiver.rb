@@ -1,15 +1,14 @@
 cask 'the-unarchiver' do
-  version '4.0.0,120:1528909123'
-  sha256 'fc59d9dcd40d65642083991b93b44ded782518f9395e248ee246b360b23ee740'
+  version '4.2.2,129:1590582775'
+  sha256 '0c586d9f95d23cead58c7b314f74b6158f7917673e1163034267030d4a65d32f'
 
-  # devmate.com/com.macpaw.site.theunarchiver was verified as official when first introduced to the cask
+  # devmate.com/com.macpaw.site.theunarchiver/ was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.macpaw.site.theunarchiver/#{version.after_comma.before_colon}/#{version.after_colon}/TheUnarchiver-#{version.after_comma.before_colon}.zip"
   appcast 'https://updates.devmate.com/com.macpaw.site.theunarchiver.xml'
   name 'The Unarchiver'
   homepage 'https://theunarchiver.com/'
 
   auto_updates true
-  depends_on macos: '>= :lion'
 
   app 'The Unarchiver.app'
 

@@ -1,6 +1,6 @@
 cask 'bloodhound' do
-  version '1.5.2'
-  sha256 'a2090197c5cf82c6799cf7f8f7f1d0d42436882c67814b70d458c4ae8e9c7e32'
+  version '3.0.4'
+  sha256 'a0411b1b8ea64d342813eefa92371a40ea46ae27bcfca61b72a66950322ecd3f'
 
   url "https://github.com/BloodHoundAD/BloodHound/releases/download/#{version}/BloodHound-darwin-x64.zip"
   appcast 'https://github.com/BloodHoundAD/BloodHound/releases.atom'

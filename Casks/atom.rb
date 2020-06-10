@@ -1,15 +1,14 @@
 cask 'atom' do
-  version '1.28.2'
-  sha256 '448c23f718e2b50eb4900cbe4930ec7fa9b71aeed24b2229cc380e53af12c3ea'
+  version '1.47.0'
+  sha256 '6b6a86fa76c84f036891ce947363e7e188d0efdc5dfc7b1dcca93da4db8b9fa9'
 
-  # github.com/atom/atom was verified as official when first introduced to the cask
+  # github.com/atom/atom/ was verified as official when first introduced to the cask
   url "https://github.com/atom/atom/releases/download/v#{version}/atom-mac.zip"
   appcast 'https://github.com/atom/atom/releases.atom'
   name 'Github Atom'
   homepage 'https://atom.io/'
 
   auto_updates true
-  depends_on macos: '>= :mavericks'
 
   app 'Atom.app'
   binary "#{appdir}/Atom.app/Contents/Resources/app/apm/bin/apm"
@@ -24,8 +23,11 @@ cask 'atom' do
                '~/Library/Application Support/com.github.atom.ShipIt',
                '~/Library/Caches/com.github.atom',
                '~/Library/Caches/com.github.atom.ShipIt',
+               '~/Library/Logs/Atom',
+               '~/Library/Preferences/ByHost/com.github.atom.ShipIt.*.plist',
                '~/Library/Preferences/com.github.atom.helper.plist',
                '~/Library/Preferences/com.github.atom.plist',
                '~/Library/Saved Application State/com.github.atom.savedState',
+               '~/Library/WebKit/com.github.atom',
              ]
 end

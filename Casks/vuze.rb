@@ -15,8 +15,4 @@ cask 'vuze' do
   uninstall delete: '/Applications/Vuze.app'
 
   zap trash: '~/Library/Application Support/Vuze'
-
-  caveats do
-    depends_on_java
-  end
 end

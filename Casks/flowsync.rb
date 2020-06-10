@@ -1,9 +1,10 @@
 cask 'flowsync' do
-  version '2.6.4'
-  sha256 '6a5c3d76b969cfc48c2adb26149e7911fafc1f1ae0b860f72db107e773b072ba'
+  version '3.0.0.1337'
+  sha256 '201df0ae0dbdf662f63dff6b161aeb99b2f05cca04e42eb393baf96969e36863'
 
-  # dngo5v6w7xama.cloudfront.net was verified as official when first introduced to the cask
+  # dngo5v6w7xama.cloudfront.net/ was verified as official when first introduced to the cask
   url "https://dngo5v6w7xama.cloudfront.net/connect/download/FlowSync_#{version}.pkg"
+  appcast 'https://flow.polar.com/start'
   name 'Polar FlowSync Software'
   homepage 'https://support.polar.com/uk-en/support/flowsync'
 

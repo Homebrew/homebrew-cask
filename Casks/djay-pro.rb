@@ -1,6 +1,6 @@
 cask 'djay-pro' do
-  version '2.0.6,201806121430'
-  sha256 'cc2d8ab3c93df39971107a81db75e06c554eb876a517e94cf2e273115654ce7d'
+  version '2.2.2,202006031125'
+  sha256 '7d136eb34bf8cca4ae6053c23c14e2072cbe508c1f1adb0f2ee74fe65b55894e'
 
   url "http://download.algoriddim.com/djay/#{version.after_comma}/djay_Pro_#{version.before_comma}.zip"
   appcast 'https://www.algoriddim.com/djay-pro-mac/releasenotes/appcast'

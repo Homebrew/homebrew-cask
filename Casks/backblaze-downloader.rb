@@ -7,4 +7,11 @@ cask 'backblaze-downloader' do
   homepage 'https://www.backblaze.com/'
 
   app 'Backblaze Downloader.app'
+
+  uninstall quit: 'com.backblaze.BackblazeDownloader'
+
+  zap trash: [
+               '~/Library/Logs/BackblazeDownloader',
+               '~/Library/Preferences/com.backblaze.BackblazeDownloader.plist',
+             ]
 end

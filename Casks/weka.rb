@@ -1,12 +1,13 @@
 cask 'weka' do
-  version '3.8.2'
-  sha256 '59eeb176bbb43fd37d2dc278cb615d476110d6b8030d5cd912342f04eeecf8f9'
+  version '3.8.4'
+  sha256 '312347853807fad45dff5afd2bc293a4c5face03e4bf16a5f0ae9b10b53aaf2a'
 
-  # sourceforge.net/weka was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/weka/weka-#{version.dots_to_hyphens}-oracle-jvm.dmg"
-  appcast 'https://sourceforge.net/projects/weka/rss'
+  # sourceforge.net/weka/ was verified as official when first introduced to the cask
+  url "https://downloads.sourceforge.net/weka/weka-#{version.dots_to_hyphens}-azul-zulu-osx.dmg"
+  appcast 'https://www.macupdater.net/cgi-bin/extract_text/extract_text_split_easy.cgi?url=https://waikato.github.io/weka-wiki/downloading_weka/&splitter_1=trunk&index_1=0',
+          configuration: version.dots_to_hyphens
   name 'Weka'
   homepage 'https://www.cs.waikato.ac.nz/ml/weka/'
 
-  app "weka-#{version.dots_to_hyphens}-oracle-jvm.app"
+  app "weka-#{version.dots_to_hyphens}-azul-zulu.app"
 end

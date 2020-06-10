@@ -1,14 +1,12 @@
 cask 'typinator' do
-  version '7.6'
-  sha256 '148155fc028494ee3821c97dbf4dc03e507335b56adcdf0c5d583fea87d169dc'
+  version '8.3'
+  sha256 'ffee1891dd797857cadbda445177f7b6aacafbfb5f8420becaf5ec64bd860313'
 
-  url "http://www.ergonis.com/downloads/products/typinator/Typinator#{version.no_dots}-Install.dmg",
+  url "https://www.ergonis.com/downloads/products/typinator/Typinator#{version.no_dots}-Install.dmg",
       user_agent: :fake
-  appcast 'http://www.ergonis.com/products/typinator/history.html'
+  appcast 'https://update.ergonis.com/vck/typinator.xml'
   name 'Typinator'
-  homepage 'http://www.ergonis.com/'
-
-  accessibility_access true
+  homepage 'https://www.ergonis.com/'
 
   app 'Typinator.app'
 end

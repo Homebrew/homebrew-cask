@@ -6,6 +6,8 @@ cask 'zoomus-outlook-plugin' do
   name 'Zoom.us Outlook Plugin'
   homepage 'https://www.zoom.us/'
 
+  depends_on macos: '<= :mojave'
+
   pkg 'ZoomMacOutlookPlugin.pkg'
 
   uninstall script:    {

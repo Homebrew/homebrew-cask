@@ -1,8 +1,8 @@
 cask 'marshallofsound-google-play-music-player' do
-  version '4.6.1'
-  sha256 '14bbaf4f81c302b787b36c1d0fdc44a990dcb73dd987e8b5fd0f259283a1fa2e'
+  version '4.7.1'
+  sha256 'de6409bca32072d231ff636b68589329731923239ebf1c36e6f557fa26ebddf6'
 
-  # github.com/MarshallOfSound/Google-Play-Music-Desktop-Player-UNOFFICIAL- was verified as official when first introduced to the cask
+  # github.com/MarshallOfSound/Google-Play-Music-Desktop-Player-UNOFFICIAL-/ was verified as official when first introduced to the cask
   url "https://github.com/MarshallOfSound/Google-Play-Music-Desktop-Player-UNOFFICIAL-/releases/download/v#{version}/Google.Play.Music.Desktop.Player.OSX.zip"
   appcast 'https://github.com/MarshallOfSound/Google-Play-Music-Desktop-Player-UNOFFICIAL-/releases.atom'
   name 'Google Play Music Desktop Player'
@@ -10,11 +10,10 @@ cask 'marshallofsound-google-play-music-player' do
 
   app 'Google Play Music Desktop Player.app'
 
-  uninstall login_item: 'Google Play Music Desktop Player',
-            signal:     [
-                          ['TERM', 'google-play-music-desktop-player'],
-                          ['TERM', 'google-play-music-desktop-player.helper'],
-                        ]
+  uninstall signal: [
+                      ['TERM', 'google-play-music-desktop-player'],
+                      ['TERM', 'google-play-music-desktop-player.helper'],
+                    ]
 
   zap trash: [
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/google-play-music-desktop-player.sfl*',

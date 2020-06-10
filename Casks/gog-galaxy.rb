@@ -1,13 +1,13 @@
 cask 'gog-galaxy' do
-  version '1.2.44.30'
-  sha256 'e0b72b497c59b72531d4a304597ff2ad69c48a12b8833cf918032a29691818e6'
+  version '2.0.15.43'
+  sha256 'bd199375fe6f05d3e317ca8c9705d6583c25feba424312dc8bd29fa3f9987aaa'
 
   url "https://cdn.gog.com/open/galaxy/client/galaxy_client_#{version}.pkg"
+  appcast 'https://www.macupdater.net/cgi-bin/extract_text/extract_text_split_easy.cgi?url=https://gog.com/galaxy&encoding=utf-8&user_agent=Macintosh'
   name 'GOG Galaxy Client'
   homepage 'https://www.gog.com/galaxy'
 
   auto_updates true
-  depends_on macos: '>= :mountain_lion'
 
   pkg "galaxy_client_#{version}.pkg"
 
@@ -15,6 +15,7 @@ cask 'gog-galaxy' do
             launchctl: [
                          'com.gog.galaxy.ClientService',
                          'com.gog.galaxy.commservice',
+                         'com.gog.galaxy.autoLauncher',
                        ]
 
   zap trash: [

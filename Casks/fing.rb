@@ -1,13 +1,13 @@
 cask 'fing' do
-  version '3.0,2016-09'
-  sha256 'a8497ce00d58609d8677c6c7850e479420516d94e9f37d681dbdc970359294c6'
+  version '5.5.0'
+  sha256 'a9254738782e50197cc944becc7b5f84ce534797d82dec0c9391a75580ba016d'
 
-  # 39qiv73eht2y1az3q51pykkf-wpengine.netdna-ssl.com was verified as official when first introduced to the cask
-  url "https://39qiv73eht2y1az3q51pykkf-wpengine.netdna-ssl.com/wp-content/uploads/#{version.after_comma.hyphens_to_slashes}/overlook-fing-#{version.before_comma}.dmg_.zip"
+  url "https://www.fing.com/images/uploads/general/CLI_macOSX_#{version}.zip"
+  appcast 'https://www.fing.com/products/development-toolkit/'
   name 'Fing'
-  homepage 'https://www.fing.io/'
+  homepage 'https://www.fing.com/products/development-toolkit/'
 
-  pkg "overlook-fing-#{version.before_comma}.pkg"
+  pkg "Fing-#{version}-osX.pkg"
 
-  uninstall pkgutil: 'com.Overlook.Fing'
+  uninstall pkgutil: 'Fing'
 end

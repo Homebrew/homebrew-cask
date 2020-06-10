@@ -8,15 +8,16 @@ cask 'shiftit' do
   homepage 'https://github.com/fikovnik/ShiftIt/'
 
   auto_updates true
-  accessibility_access true
 
   app 'ShiftIt.app'
-
-  uninstall login_item: 'Shiftit'
 
   zap trash: [
                '~/Library/Application Support/ShiftIt',
                '~/Library/Caches/org.shiftitapp.ShiftIt',
                '~/Library/Preferences/org.shiftitapp.ShiftIt.plist',
              ]
+
+  caveats do
+    discontinued
+  end
 end

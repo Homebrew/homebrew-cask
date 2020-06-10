@@ -1,9 +1,18 @@
 cask 'visit' do
-  version '2.13.2'
-  sha256 'e7e05ec4393f1f1c944b1963ff8f2619383f506a3b05546c91de61082ba4bb21'
+  if MacOS.version <= :high_sierra
+    version '3.1.1'
+    sha256 '4213daed23de17ee8bcfba779a96cce3ef92d3075ae666f7aeaffa824d484924'
 
-  # portal.nersc.gov/project/visit was verified as official when first introduced to the cask
-  url "https://portal.nersc.gov/project/visit/releases/#{version}/VisIt-#{version}-10.11.dmg"
+    # github.com/visit-dav/visit/ was verified as official when first introduced to the cask
+    url "https://github.com/visit-dav/visit/releases/download/v#{version}/visit#{version}.darwin-x86_64-10.13.dmg"
+  else
+    version '3.1.2'
+    sha256 '10a8c52d947f4c1adea820238775273da3d60a1b2484d5cbd4fe5781451f567d'
+
+    # github.com/visit-dav/visit/ was verified as official when first introduced to the cask
+    url "https://github.com/visit-dav/visit/releases/download/v#{version}/visit#{version}.darwin-x86_64-10_14.dmg"
+  end
+
   appcast 'https://wci.llnl.gov/simulation/computer-codes/visit/executables'
   name 'VisIt'
   homepage 'https://wci.llnl.gov/simulation/computer-codes/visit'

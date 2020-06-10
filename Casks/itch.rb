@@ -1,12 +1,24 @@
 cask 'itch' do
-  version '23.6.3'
-  sha256 '3ed905c4e7e0ad37004dd235a0dcf27325adac10fb829d3bfcd076c25442fda4'
+  version '1.17.0'
+  sha256 '9053778cbae81ce09129364e0b3ec7f2b9abdd9705334011398d2d66d553c31c'
 
-  # github.com/itchio/itch was verified as official when first introduced to the cask
-  url "https://github.com/itchio/itch/releases/download/v#{version}/itch-mac.dmg"
+  # broth.itch.ovh/ was verified as official when first introduced to the cask
+  url "https://broth.itch.ovh/itch-setup/darwin-amd64/#{version}/archive/default"
   appcast 'https://github.com/itchio/itch/releases.atom'
-  name 'itch'
+  name 'itch.io'
   homepage 'https://itch.io/app'
 
-  app 'itch.app'
+  installer script: 'itch-setup'
+
+  uninstall delete: [
+                      '~/Applications/itch.app',
+                      '~/Library/Application Support/itch-setup/',
+                    ],
+            quit:   'io.itch.mac'
+
+  zap trash: [
+               '~/Library/Application Support/itch/',
+               '~/Library/Preferences/io.itch.mac.helper.plist',
+               '~/Library/Preferences/io.itch.mac.plist',
+             ]
 end

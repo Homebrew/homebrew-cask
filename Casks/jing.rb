@@ -7,7 +7,5 @@ cask 'jing' do
   name 'Jing'
   homepage 'https://www.techsmith.com/jing.html'
 
-  depends_on macos: '>= :mountain_lion'
-
   app 'Jing.app'
 end

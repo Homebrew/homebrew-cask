@@ -1,12 +1,12 @@
 cask 'frescobaldi' do
-  version '2.20.0'
-  sha256 '575910ceaeb6016355dcfac77ab5dcfceca42a7ff84db5f3316030231cb86bfc'
+  version '3.1.2'
+  sha256 'd70c9004c6745c46b04bc28cda9bc1e6e664d4208090dd92e29f65cf10135d7f'
 
-  # github.com/wbsoft/frescobaldi was verified as official when first introduced to the cask
-  url "https://github.com/wbsoft/frescobaldi/releases/download/v#{version}/Frescobaldi-#{version}-x86_64.dmg"
-  appcast 'https://github.com/wbsoft/frescobaldi/releases.atom'
+  # github.com/frescobaldi/frescobaldi/ was verified as official when first introduced to the cask
+  url "https://github.com/frescobaldi/frescobaldi/releases/download/v#{version}/Frescobaldi-#{version}-x86_64.dmg"
+  appcast 'https://github.com/frescobaldi/frescobaldi/releases.atom'
   name 'Frescobaldi'
-  homepage 'http://frescobaldi.org/'
+  homepage 'https://frescobaldi.org/'
 
   app 'Frescobaldi.app'
 

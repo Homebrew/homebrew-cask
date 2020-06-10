@@ -1,15 +1,15 @@
 cask 'fantastical' do
-  version '2.5.1'
-  sha256 '78770017e12f9e71c73e3c29434cfcb35e0ad99c9f0e6a5681b51cb26a2d69fc'
+  version '3.0.13'
+  sha256 '18cb5258144c9abaec53bf5d8169d77b0996863eb626e6c319c16d09cb50b30c'
 
-  url "http://cdn.flexibits.com/Fantastical_#{version}.zip"
-  appcast "https://flexibits.com/fantastical/appcast#{version.major}.php"
+  url "https://cdn.flexibits.com/Fantastical_#{version}.zip"
+  appcast 'https://flexibits.com/fantastical/appcast2.php'
   name 'Fantastical'
   homepage 'https://flexibits.com/fantastical'
 
   auto_updates true
 
-  app "Fantastical #{version.major}.app"
+  app 'Fantastical.app'
 
   uninstall launchctl: "com.flexibits.fantastical#{version.major}.mac.launcher",
             quit:      "com.flexibits.fantastical#{version.major}.mac"

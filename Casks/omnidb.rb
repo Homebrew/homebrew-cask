@@ -1,8 +1,9 @@
 cask 'omnidb' do
-  version '2.9.0'
-  sha256 '87b706cb82a48287a5ad138b4f4da728bbfc977b827d173bd26a9a83add4ca70'
+  version '2.17.0'
+  sha256 '8fdd482d45d1b2d4d330074d94238d91cc91242239a3ebb62ccc3319bacd5d16'
 
   url "https://omnidb.org/dist/#{version}/omnidb-app_#{version}-mac.dmg"
+  appcast 'https://github.com/OmniDB/OmniDB/releases.atom'
   name 'OmniDB'
   homepage 'https://omnidb.org/'
 

@@ -1,6 +1,6 @@
 cask 'xact' do
-  version '2.45'
-  sha256 'ff3a41294e530c887a838734a5cbda19c59fd2a48048c6525bff445e5ff5caac'
+  version '2.50'
+  sha256 'ba56aeb49109894b202495309ab28080db3eb4aec67d5b9c03b580a73ee0e9d7'
 
   url "http://xact.scottcbrown.org/xACT#{version}.zip"
   appcast 'http://xactupdate.scottcbrown.org/xACT.xml'

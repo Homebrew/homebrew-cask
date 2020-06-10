@@ -1,12 +1,12 @@
 cask 'aware' do
-  version '1.0.3'
-  sha256 '65dcaef6735c649e2b6a406f48583609ca9d66e7680ca69eb61871502613dec3'
+  version '1.0.5'
+  sha256 'be402c451387555348864df72f31b63845a42423a8debe67304efdd6138a99cb'
 
-  # github.com/josh/Aware was verified as official when first introduced to the cask
-  url "https://github.com/josh/Aware/releases/download/v#{version}/Aware.zip"
+  # github.com/josh/Aware/ was verified as official when first introduced to the cask
+  url "https://github.com/josh/Aware/releases/download/v#{version}/Aware.app.zip"
   appcast 'https://github.com/josh/Aware/releases.atom'
   name 'Aware'
-  homepage 'http://awaremac.com/'
+  homepage 'https://awaremac.com/'
 
   app 'Aware.app'
 end

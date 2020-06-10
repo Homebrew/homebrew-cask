@@ -1,8 +1,8 @@
 cask 'whatsyoursign' do
-  version '1.5.0'
-  sha256 '04176ae70b0850f963951a7d1e28beafbd004d5bcdc4b707dbe2b15fe59a3d83'
+  version '1.6.1'
+  sha256 'dcdb7379eaae0e7dcf189481b480cc29185fe537963d9ef1872d32086807fee0'
 
-  # bitbucket.org/objective-see was verified as official when first introduced to the cask
+  # bitbucket.org/objective-see/ was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/WhatsYourSign_#{version}.zip"
   appcast 'https://objective-see.com/products/changelogs/WhatsYourSign.txt'
   name 'What\'s Your Sign?'

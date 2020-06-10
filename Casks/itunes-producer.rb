@@ -5,10 +5,11 @@ cask 'itunes-producer' do
     url "https://itunesconnect.apple.com/itunesproducer/iTunesProducer_#{version}.dmg"
     sha256 '3e14f399e350f31e4b0e3c1833ef4bb0102912f67096440bd572b00a7f008257'
   else
-    version '3.1.1'
+    version '3.1.2'
 
-    url "https://itunesconnect.apple.com/downloads/Software/iTunesProducer/iTunesProducer_#{version}.dmg"
-    sha256 '0d98071c7354aab510d95bd8ad961814b773285c1a4faab9fbf33df7230f66f6'
+    url "https://itunespartner.apple.com/assets/downloads/iTunesProducer_#{version}.dmg"
+    appcast 'https://itunespartner.apple.com/en/music/tools'
+    sha256 '553a99b08ae34635ed777278fea7c3037e178ad3f7700d57914eec0fb8892435'
   end
 
   name 'iTunes Producer'

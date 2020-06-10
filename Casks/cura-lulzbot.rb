@@ -1,8 +1,10 @@
 cask 'cura-lulzbot' do
-  version '3.2.21'
-  sha256 '2e09eaf2c17b2ff92f66ad174443dae46af0af42815c501d727014d77b3e931d'
+  version '3.6.21,ce3e47a08065c6687f0a226a4f1b2dc3'
+  sha256 '1548b15734ab2299f2fb8106e1b6f3242e5efe66286306f64b7675a0f354ff2c'
 
-  url "https://download.lulzbot.com/Software/cura-lulzbot/mac/cura-lulzbot_#{version}.dmg"
+  # gitlab.com/lulzbot3d/cura-le/cura-lulzbot/ was verified as official when first introduced to the cask
+  url "https://gitlab.com/lulzbot3d/cura-le/cura-lulzbot/uploads/#{version.after_comma}/cura-lulzbot_#{version.before_comma}.dmg"
+  appcast 'https://gitlab.com/lulzbot3d/cura-le/cura-lulzbot/-/tags?format=atom'
   name 'Cura LulzBot Edition'
   homepage 'https://www.lulzbot.com/learn/tutorials/cura-lulzbot-edition-installation-osx'
 

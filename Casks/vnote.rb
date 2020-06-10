@@ -1,8 +1,8 @@
 cask 'vnote' do
-  version '1.19'
-  sha256 '34de409d13061f2293d68d5c901ffec582e002225afc2e50dd22fe128ca0dfc3'
+  version '2.9.1'
+  sha256 '7611fca118e2b5894b1530ae049db9ede91ebbabdd6fc5f135cb61d724f8f12d'
 
-  # github.com/tamlok/vnote was verified as official when first introduced to the cask
+  # github.com/tamlok/vnote/ was verified as official when first introduced to the cask
   url "https://github.com/tamlok/vnote/releases/download/v#{version}/VNote-#{version}-x64.dmg"
   appcast 'https://github.com/tamlok/vnote/releases.atom'
   name 'VNote'

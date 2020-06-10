@@ -7,5 +7,5 @@ cask 'procexp' do
   homepage 'http://www.newosxbook.com/tools/procexp.html'
 
   binary 'procexp.universal', target: 'procexp'
-  artifact 'procexp.1', target: "#{HOMEBREW_PREFIX}/share/man/man1/procexp.1"
+  manpage 'procexp.1'
 end

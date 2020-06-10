@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  - pull_request
+
+jobs:
+  ci:
+    runs-on: macos-latest
+    steps:
+      - name: brew pull
+        run: |
+          brew update-reset "$(brew --repository)"
+
+          HOMEBREW_INSTALL_BUNDLER_GEMS_FIRST=1 brew config
+
+          brew tap "${GITHUB_REPOSITORY}"
+
+          # Get latest version of `brew cask ci` command.
+          if [ "${GITHUB_REPOSITORY}" != Homebrew/homebrew-cask ]; then
+            brew update-reset "$(brew --repository homebrew/cask)"
+          fi
+
+          brew update-reset "$(brew --repository "${GITHUB_REPOSITORY}")"
+
+          brew pull --clean "${PR_URL}"
+        env:
+          PR_URL: ${{ github.event.pull_request._links.html.href }}
+          HOMEBREW_COLOR: 1
+          HOMEBREW_DEVELOPER: 1
+      - name: brew cask ci
+        run: |
+          cd "$(brew --repository "${GITHUB_REPOSITORY}")"
+          unset HOMEBREW_CASK_OPTS
+          brew cask ci
+        env:
+          CI: true
+          HOMEBREW_COLOR: 1
+          HOMEBREW_DEVELOPER: 1
