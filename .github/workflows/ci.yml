@@ -7,11 +7,13 @@ jobs:
   ci:
     runs-on: macos-latest
     steps:
-      - name: brew pull       
+      - name: Check out Pull Request
         run: |
-          brew update-reset "$(brew --repository)"
+          brew update-reset "$(brew --repository)" "$(brew --repository homebrew/core)"
 
           HOMEBREW_INSTALL_BUNDLER_GEMS_FIRST=1 brew config
+
+          brew install hub
 
           brew tap "${GITHUB_REPOSITORY}"
 
@@ -21,12 +23,9 @@ jobs:
           fi
 
           brew update-reset "$(brew --repository "${GITHUB_REPOSITORY}")"
-
-          # Install `hub`
-          curl -fsSL https://github.com/github/hub/raw/master/script/get | bash -s 2.14.1
           
           cd "$(brew --repository "${GITHUB_REPOSITORY}")"
-          hub pr checkout ${PR_NUMBER}
+          hub pr checkout "${PR_NUMBER}"
         env:
           PR_NUMBER: ${{ github.event.pull_request.number }}
           GITHUB_TOKEN: ${{ github.token }}
