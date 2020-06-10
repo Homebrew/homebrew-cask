@@ -1,6 +1,6 @@
 cask 'futuniuniu' do
-  version '10.5.654_202005201902'
-  sha256 '08876f85becb7daee9ade3055f2c0631aa4cc920b705a692e9c8ad0be6f38830'
+  version '10.6.664_202006091529'
+  sha256 '9752771aca1b8b108171bd0861580573b58442dc3fea496000b7213912b49576'
 
   # software-file-1251001049.file.myqcloud.com/ was verified as official when first introduced to the cask
   url "https://software-file-1251001049.file.myqcloud.com/FTNNForMac_#{version}_Website.dmg"
