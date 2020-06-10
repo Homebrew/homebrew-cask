@@ -13,7 +13,7 @@ jobs:
 
           HOMEBREW_INSTALL_BUNDLER_GEMS_FIRST=1 brew config
 
-          brew install hub
+          brew install gh
 
           brew tap "${GITHUB_REPOSITORY}"
 
@@ -25,9 +25,9 @@ jobs:
           brew update-reset "$(brew --repository "${GITHUB_REPOSITORY}")"
           
           cd "$(brew --repository "${GITHUB_REPOSITORY}")"
-          hub pr checkout "${PR_NUMBER}"
+          gh pr checkout "${PR_URL}"
         env:
-          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_URL: ${{ github.event.pull_request._links.html.href }}
           GITHUB_TOKEN: ${{ github.token }}
           HOMEBREW_COLOR: 1
           HOMEBREW_DEVELOPER: 1
