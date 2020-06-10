@@ -23,10 +23,12 @@ jobs:
           brew update-reset "$(brew --repository "${GITHUB_REPOSITORY}")"
           
           cd "$(brew --repository "${GITHUB_REPOSITORY}")"
-          gh pr checkout "${PR_URL}"
+          patch="$(mktemp)"
+          curl -sSfL "${PR_URL}.patch" -o "${patch}"
+          git am --whitespace=nowarn "${patch}"
+          rm "${patch}"
         env:
           PR_URL: ${{ github.event.pull_request._links.html.href }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           HOMEBREW_COLOR: 1
           HOMEBREW_DEVELOPER: 1
       - name: brew cask ci
