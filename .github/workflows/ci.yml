@@ -7,7 +7,7 @@ jobs:
   ci:
     runs-on: macos-latest
     steps:
-      - name: brew pull
+      - name: Check out Pull Request
         run: |
           brew update-reset "$(brew --repository)"
 
@@ -21,8 +21,12 @@ jobs:
           fi
 
           brew update-reset "$(brew --repository "${GITHUB_REPOSITORY}")"
-
-          brew pull --clean "${PR_URL}"
+          
+          cd "$(brew --repository "${GITHUB_REPOSITORY}")"
+          patch="$(mktemp)"
+          curl -sSfL "${PR_URL}.patch" -o "${patch}"
+          git am --whitespace=nowarn "${patch}"
+          rm "${patch}"
         env:
           PR_URL: ${{ github.event.pull_request._links.html.href }}
           HOMEBREW_COLOR: 1
