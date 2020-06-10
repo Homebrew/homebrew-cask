@@ -1,10 +1,7 @@
 cask 'deeper' do
   macos_release = MacOS.version.to_s.delete('.')
 
-  if MacOS.version == :mavericks
-    version '1.9.1'
-    sha256 'a601cee489825685b28fcf71e5b3801ec45ff73d5a015aa9948eb8641616383a'
-  elsif MacOS.version == :yosemite
+  if MacOS.version == :yosemite
     version '2.0.4'
     sha256 '70a8ae37e6a62541a03b1b144ff92bac38585ce936b1acc12ce484416db13b8f'
   elsif MacOS.version == :el_capitan
@@ -31,7 +28,6 @@ cask 'deeper' do
 
   # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.
   depends_on macos: [
-                      :mavericks,
                       :yosemite,
                       :el_capitan,
                       :sierra,
