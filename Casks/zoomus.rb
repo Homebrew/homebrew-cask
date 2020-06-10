@@ -9,6 +9,7 @@ cask 'zoomus' do
   homepage 'https://www.zoom.us/'
 
   auto_updates true
+  conflicts_with cask: 'zoomus-it'
 
   pkg 'Zoom.pkg'
 
