@@ -24,7 +24,7 @@ jobs:
           
           cd "$(brew --repository "${GITHUB_REPOSITORY}")"
           patch="$(mktemp)"
-          curl -sSfL "${PR_URL}.patch" -o "${patch}"
+          curl --silent --show-error --fail --location "${PR_URL}.patch" --output "${patch}"
           git am --whitespace=nowarn "${patch}"
           rm "${patch}"
         env:
