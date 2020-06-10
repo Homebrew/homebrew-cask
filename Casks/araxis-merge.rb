@@ -1,9 +1,5 @@
 cask 'araxis-merge' do
-  if MacOS.version <= :mavericks
-    version '2016.4774'
-    sha256 '341b47242f30aca3ce3c0af9112c95f3bdac5f5ae262aa1894a9632b46fef6ab'
-    url "https://www.araxis.com/download/Merge#{version}-OSX10.9.dmg"
-  elsif MacOS.version <= :yosemite
+  if MacOS.version <= :yosemite
     version '2017.4884'
     sha256 'abba11a92e1f50d913356d31123bed5bb08838ce39c4659206fd24c32432c4b3'
     url "https://www.araxis.com/download/Merge#{version}-OSX10.10.dmg"
