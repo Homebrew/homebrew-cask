@@ -9,11 +9,9 @@ jobs:
     steps:
       - name: Check out Pull Request
         run: |
-          brew update-reset "$(brew --repository)" "$(brew --repository homebrew/core)"
+          brew update-reset "$(brew --repository)"
 
           HOMEBREW_INSTALL_BUNDLER_GEMS_FIRST=1 brew config
-
-          brew install gh
 
           brew tap "${GITHUB_REPOSITORY}"
 
