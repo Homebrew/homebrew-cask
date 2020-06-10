@@ -22,7 +22,7 @@ jobs:
 
           brew update-reset "$(brew --repository "${GITHUB_REPOSITORY}")"
 
-          brew pull --clean "${PR_URL}"
+          hub checkout "${PR_URL}"
         env:
           PR_URL: ${{ github.event.pull_request._links.html.href }}
           HOMEBREW_COLOR: 1
