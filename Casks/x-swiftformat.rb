@@ -14,6 +14,6 @@ cask 'x-swiftformat' do
   zap trash: [
                '~/Library/Preferences/com.ruiaureliano.xswiftformat.plist',
                '~/Library/Caches/com.ruiaureliano.xswiftformat',
-               '~/Library/Containers/com.ruiaureliano.xswiftformat'
+               '~/Library/Containers/com.ruiaureliano.xswiftformat',
              ]
 end
