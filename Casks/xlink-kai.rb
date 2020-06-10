@@ -8,7 +8,6 @@ cask 'xlink-kai' do
   name 'XLink Kai'
   homepage 'https://www.teamxlink.co.uk/'
 
-  depends_on macos: '>= :mavericks'
   depends_on cask: 'wireshark-chmodbpf'
 
   app 'XLink Kai.app'

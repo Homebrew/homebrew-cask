@@ -1,8 +1,5 @@
 cask 'itsycal' do
-  if MacOS.version <= :mavericks
-    version '0.8.15'
-    sha256 '6470719a1f702c807f98a992880def5f499858231bf35924eaf3e0d5df48b436'
-  elsif MacOS.version <= :el_capitan
+  if MacOS.version <= :el_capitan
     version '0.10.16'
     sha256 'dbf1b104c7a3a2ca3ead9879145cb0557955c29d53f35a92b42f48e68122957c'
   elsif MacOS.version <= :high_sierra
