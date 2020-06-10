@@ -33,7 +33,6 @@ The available values for macOS releases are:
 
 | symbol             | corresponding string
 | -------------------|----------------------
-| `:mavericks`       | `'10.9'`
 | `:yosemite`        | `'10.10'`
 | `:el_capitan`      | `'10.11'`
 | `:sierra`          | `'10.12'`
@@ -52,11 +51,11 @@ depends_on macos: ['10.13', '10.14']
 
 ### Setting a Minimum macOS Release
 
-`depends_on macos:` can also accept a string starting with a comparison operator such as `>=`, followed by an macOS release in the form above. The following are both valid expressions meaning “at least macOS 10.9”:
+`depends_on macos:` can also accept a string starting with a comparison operator such as `>=`, followed by an macOS release in the form above. The following are both valid expressions meaning “at least macOS 10.10”:
 
 ```ruby
-depends_on macos: '>= :mavericks'
-depends_on macos: '>= 10.9'
+depends_on macos: '>= :yosemite'
+depends_on macos: '>= 10.10'
 ```
 
 A comparison expression cannot be combined with any other form of `depends_on macos:`.
