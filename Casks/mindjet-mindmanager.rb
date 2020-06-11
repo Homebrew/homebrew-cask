@@ -4,7 +4,7 @@ cask 'mindjet-mindmanager' do
 
   url "https://download.mindjet.com/MindManager_Mac_#{version}.dmg"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.mindjet.com/latest-release-notes-mac-english',
-          configuration: version.dots_to_underscores
+          must_contain: version.dots_to_underscores
   name 'Mindmanager'
   homepage 'https://www.mindjet.com/mindmanager/'
 
