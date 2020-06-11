@@ -5,7 +5,7 @@ cask 'amazon-music' do
   # morpho-releases.s3-us-west-2.amazonaws.com/mac/ was verified as official when first introduced to the cask
   url "https://morpho-releases.s3-us-west-2.amazonaws.com/mac/#{version.after_comma}/AmazonMusicInstaller.dmg"
   appcast 'https://www.amazon.com/gp/dmusic/desktop/downloadPlayer',
-          configuration: version.after_comma
+          must_contain: version.after_comma
   name 'Amazon Music'
   homepage 'https://www.amazon.com/musicapps'
 
