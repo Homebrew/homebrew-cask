@@ -10,7 +10,5 @@ cask 'colorpicker' do
 
   app 'Colorpicker.app'
 
-  zap trash: [
-               '~/Library/Application Support/Colorpicker',
-             ]
+  zap trash: '~/Library/Application Support/Colorpicker'
 end
