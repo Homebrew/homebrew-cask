@@ -1,6 +1,6 @@
 cask 'ivpn' do
-  version '2.12.2'
-  sha256 'f3657528b6f96f444e83e889a0a6cc6f337ae7328f15718e40ea424fc102aa2f'
+  version '2.12.3'
+  sha256 '858b8fcf618a6213e1021f108d5f0986e79d6faca378a7b6d33d39c48490585e'
 
   url "https://cdn.ivpn.net/releases/osx/IVPN-#{version}.dmg"
   appcast 'https://www.ivpn.net/setup/mac-changelog.html'
