@@ -4,7 +4,7 @@ cask 'fontexplorer-x-pro' do
 
   url "https://fast.fontexplorerx.com/FontExplorerXPro#{version.no_dots}.dmg"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect_curl.cgi?url=https://fex.linotype.com/download/mac/FontExplorerXPro.dmg',
-          configuration: version.no_dots
+          must_contain: version.no_dots
   name 'FontExplorer X Pro'
   homepage 'https://www.fontexplorerx.com/'
 
