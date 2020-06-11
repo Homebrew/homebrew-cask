@@ -4,7 +4,7 @@ cask 'hwsensors' do
 
   url "https://github.com/kozlekek/HWSensors/releases/download/#{version.major_minor}/HWSensors.#{version}.pkg.zip"
   appcast 'https://github.com/kozlekek/HWSensors/releases.atom',
-          configuration: version.major_minor
+          must_contain: version.major_minor
   name 'HWSensors'
   homepage 'https://github.com/kozlekek/HWSensors/'
 
