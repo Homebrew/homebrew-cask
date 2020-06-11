@@ -5,7 +5,7 @@ cask 'krita' do
   # kde.org/stable/krita/ was verified as official when first introduced to the cask
   url "https://download.kde.org/stable/krita/#{version}/krita-#{version}.dmg"
   appcast 'https://download.kde.org/stable/krita/',
-          configuration: version.major_minor_patch
+          must_contain: version.major_minor_patch
   name 'Krita'
   homepage 'https://krita.org/'
 
