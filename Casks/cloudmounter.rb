@@ -4,7 +4,7 @@ cask 'cloudmounter' do
 
   url 'https://cdn.eltima.com/download/cloudmounter.dmg'
   appcast 'https://cdn.eltima.com/download/cloudmounter-update/settings.xml',
-          configuration: version.major_minor
+          must_contain: version.major_minor
   name 'Eltima CloudMounter'
   homepage 'https://mac.eltima.com/mount-cloud-drive.html'
 
