@@ -5,7 +5,7 @@ cask 'sharepod' do
   # cdn.macroplant.com/ was verified as official when first introduced to the cask
   url "http://cdn.macroplant.com/release/Sharepod-#{version}.dmg"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://macroplant.com/sharepod/download/&user_agent=Macintosh',
-          configuration: version.major_minor_patch
+          must_contain: version.major_minor_patch
   name 'Sharepod'
   homepage 'https://www.getsharepod.com/'
 
