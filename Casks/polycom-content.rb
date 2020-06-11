@@ -4,7 +4,7 @@ cask 'polycom-content' do
 
   url "https://downloads.polycom.com/video/content-app/PolycomContentApp_#{version.dots_to_underscores}.dmg"
   appcast 'https://support.polycom.com/content/support/north-america/usa/en/support/video/polycom-content-app.html',
-          configuration: version.dots_to_underscores
+          must_contain: version.dots_to_underscores
   name 'Polycom Content App'
   homepage 'https://www.polycom.com/content-collaboration/content-sharing/content-app.html'
 
