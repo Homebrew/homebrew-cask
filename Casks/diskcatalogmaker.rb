@@ -4,7 +4,7 @@ cask 'diskcatalogmaker' do
 
   url 'https://download.diskcatalogmaker.com/zip/DiskCatalogMaker.zip'
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://download.diskcatalogmaker.com/zip/DiskCatalogMaker.zip',
-          configuration: version.no_dots
+          must_contain: version.no_dots
   name 'DiskCatalogMaker'
   homepage 'https://diskcatalogmaker.com/'
 
