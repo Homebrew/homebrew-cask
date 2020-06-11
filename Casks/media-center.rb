@@ -4,7 +4,7 @@ cask 'media-center' do
 
   url "https://files.jriver.com/mediacenter/channels/v#{version.major}/latest/MediaCenter#{version.no_dots}.dmg"
   appcast 'https://www.jriver.com/download.html',
-          configuration: version.no_dots
+          must_contain: version.no_dots
   name 'JRiver Media Center'
   homepage 'https://www.jriver.com/'
 
