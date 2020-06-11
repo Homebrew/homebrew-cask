@@ -5,7 +5,7 @@ cask 'rotato' do
   # dl.devmate.com/com.mortenjust.Rendermock/ was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.mortenjust.Rendermock/#{version.major}/#{version.minor}/DesignCamera-#{version.major}.zip"
   appcast 'https://updates.devmate.com/com.mortenjust.Rendermock.xml',
-          configuration: "#{version.major}/#{version.minor}"
+          must_contain: "#{version.major}/#{version.minor}"
   name 'Rotato'
   homepage 'https://rotato.xyz/'
 
