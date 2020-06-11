@@ -5,7 +5,7 @@ cask 'prudent' do
   # github.com/PrudentMe/main/ was verified as official when first introduced to the cask
   url "https://github.com/PrudentMe/main/releases/download/#{version.after_comma}/Prudent.zip"
   appcast 'https://github.com/PrudentMe/main/releases.atom',
-          configuration: version.after_comma
+          must_contain: version.after_comma
   name 'Prudent'
   homepage 'https://prudent.me/'
 
