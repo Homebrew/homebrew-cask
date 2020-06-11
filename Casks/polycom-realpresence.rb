@@ -4,7 +4,7 @@ cask 'polycom-realpresence' do
 
   url "https://downloads.polycom.com/video/realpresence_desktop/RPDesktop_#{version.dots_to_underscores}.dmg"
   appcast 'https://support.polycom.com/content/support/north-america/usa/en/support/video/realpresence-desktop/realpresence-desktop.html',
-          configuration: version.dots_to_underscores
+          must_contain: version.dots_to_underscores
   name 'Polycom RealPresence Desktop'
   homepage 'https://www.polycom.com/products-services/hd-telepresence-video-conferencing/realpresence-desktop/realpresence-desktop.html'
 
