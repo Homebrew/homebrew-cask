@@ -4,7 +4,7 @@ cask 'lego-digital-designer' do
 
   url "https://www.lego.com/assets/franchisesites/ldd/installer/SetupLDD-MAC-#{version.dots_to_underscores}.zip"
   appcast 'https://www.lego.com/en-us/ldd/download',
-          configuration: version.dots_to_underscores
+          must_contain: version.dots_to_underscores
   name 'Lego Digital Designer'
   homepage 'https://www.lego.com/en-us/ldd'
 
