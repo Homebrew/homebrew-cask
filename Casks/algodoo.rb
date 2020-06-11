@@ -4,7 +4,7 @@ cask 'algodoo' do
 
   url "http://www.algodoo.com/download/Algodoo_#{version.dots_to_underscores}-MacOS.dmg"
   appcast 'http://www.algodoo.com/download/',
-          configuration: version.dots_to_underscores
+          must_contain: version.dots_to_underscores
   name 'Algodoo'
   homepage 'https://www.algodoo.com/'
 
