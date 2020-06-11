@@ -5,7 +5,7 @@ cask 'xamarin-workbooks' do
   # github.com/Microsoft/workbooks/ was verified as official when first introduced to the cask
   url "https://github.com/Microsoft/workbooks/releases/download/v#{version}/XamarinInteractive-#{version}.pkg"
   appcast 'https://docs.microsoft.com/en-us/xamarin/tools/inspector/release-notes/',
-          configuration: version.chomp('.0')
+          must_contain: version.chomp('.0')
   name 'Xamarin Workbooks'
   homepage 'https://docs.microsoft.com/en-us/xamarin/tools/workbooks/'
 
