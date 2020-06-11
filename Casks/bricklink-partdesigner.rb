@@ -9,7 +9,6 @@ cask 'bricklink-partdesigner' do
   homepage 'https://bricklink.com/v3/studio/partdesigner.page'
 
   auto_updates true
-  depends_on macos: '>= :mavericks'
   depends_on cask: 'bricklink-studio'
 
   pkg 'PartDesigner.pkg'
