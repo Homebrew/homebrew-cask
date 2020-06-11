@@ -4,7 +4,7 @@ cask 'proxifier' do
 
   url 'https://www.proxifier.com/download/ProxifierMac.dmg'
   appcast 'https://www.proxifier.com/changelog/mac.html',
-          configuration: version.major_minor
+          must_contain: version.major_minor
   name 'Proxifier'
   homepage 'https://www.proxifier.com/mac/'
 
