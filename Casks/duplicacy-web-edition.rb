@@ -1,6 +1,6 @@
 cask 'duplicacy-web-edition' do
-  version '1.3.0'
-  sha256 '164114f76923902117943aac0fcdc590413e23fcc3843dd6adb3abe6266c759e'
+  version '1.3.1'
+  sha256 'cf11fad6ef11c97a6c6450c3623d71e0bd7bdc49603ce66bc239cd33898d05a9'
 
   # acrosync.com/duplicacy-web/ was verified as official when first introduced to the cask
   url "https://acrosync.com/duplicacy-web/duplicacy_web_osx_x64_#{version}.dmg"
