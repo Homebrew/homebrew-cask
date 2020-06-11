@@ -4,7 +4,7 @@ cask 'accurics' do
 
   url "http://downloads.accurics.com/cli/#{version}/accurics-cli.dmg"
   appcast "http://downloads.accurics.com/cli/#{version}/accurics-cli.yml",
-          configuration: version
+          must_contain: version
   name 'Accurics CLI'
   homepage 'https://www.accurics.com/'
 
