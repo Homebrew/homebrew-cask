@@ -4,7 +4,7 @@ cask 'smartgit' do
 
   url "https://www.syntevo.com/downloads/smartgit/smartgit-macosx-#{version.dots_to_underscores}.dmg"
   appcast 'https://www.syntevo.com/smartgit/changelog.txt',
-          configuration: version.chomp('.0')
+          must_contain: version.chomp('.0')
   name 'SmartGit'
   homepage 'https://www.syntevo.com/smartgit/'
 
