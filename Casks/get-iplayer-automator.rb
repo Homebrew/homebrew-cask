@@ -4,7 +4,7 @@ cask 'get-iplayer-automator' do
 
   url "https://github.com/Ascoware/get-iplayer-automator/releases/download/v#{version.before_comma}/Get.iPlayer.Automator.v#{version.before_comma}.#{version.after_comma}.zip"
   appcast 'https://github.com/Ascoware/get-iplayer-automator/releases.atom',
-          configuration: version.before_comma
+          must_contain: version.before_comma
   name 'Get iPlayer Automator'
   homepage 'https://github.com/Ascoware/get-iplayer-automator'
 
