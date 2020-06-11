@@ -4,7 +4,7 @@ cask 'igv' do
 
   url "https://data.broadinstitute.org/igv/projects/downloads/#{version.major_minor}/IGV_#{version}.app.zip"
   appcast 'https://data.broadinstitute.org/igv/projects/downloads/',
-          configuration: version.major_minor
+          must_contain: version.major_minor
   name 'Integrative Genomics Viewer (IGV)'
   homepage 'https://software.broadinstitute.org/software/igv/'
 
