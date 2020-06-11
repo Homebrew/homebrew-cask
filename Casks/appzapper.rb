@@ -4,7 +4,7 @@ cask 'appzapper' do
 
   url "https://appzapper.com/downloads/appzapper#{version.no_dots}.zip"
   appcast 'https://www.appzapper.com/',
-          configuration: version.no_dots
+          must_contain: version.no_dots
   name 'AppZapper'
   homepage 'https://www.appzapper.com/'
 
