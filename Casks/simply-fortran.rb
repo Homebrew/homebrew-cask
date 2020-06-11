@@ -11,7 +11,7 @@ cask 'simply-fortran' do
     url "https://download.simplyfortran.com/#{version.major_minor}/macos/simplyfortran-#{version}.dmg"
   end
   appcast 'https://simplyfortran.com/download/?platform=macos',
-          configuration: version.major_minor
+          must_contain: version.major_minor
   name 'Simply Fortran'
   homepage 'https://simplyfortran.com/'
 
