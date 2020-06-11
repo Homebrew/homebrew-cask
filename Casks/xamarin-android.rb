@@ -4,7 +4,7 @@ cask 'xamarin-android' do
 
   url "https://dl.xamarin.com/MonoforAndroid/Mac/xamarin.android-#{version}.pkg"
   appcast 'https://docs.microsoft.com/en-us/xamarin/android/release-notes/',
-          configuration: version.major_minor
+          must_contain: version.major_minor
   name 'Xamarin.Android'
   homepage 'https://www.xamarin.com/platform'
 
