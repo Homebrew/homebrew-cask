@@ -4,7 +4,7 @@ cask 'jami' do
 
   url "https://dl.jami.net/mac_osx/jami-#{version.no_dots}.dmg"
   appcast 'https://dl.jami.net/mac_osx/sparkle-ring.xml',
-          configuration: version.no_dots
+          must_contain: version.no_dots
   name 'Jami'
   name 'Savoir-faire Linux Ring'
   homepage 'https://jami.net/'
