@@ -5,7 +5,7 @@ cask 'softmaker-freeoffice' do
   # softmaker.net/ was verified as official when first introduced to the cask
   url "https://www.softmaker.net/down/softmaker-freeoffice-#{version.before_comma}.pkg"
   appcast 'https://www.freeoffice.com/en/support/version-history',
-          configuration: version.after_comma
+          must_contain: version.after_comma
   name 'SoftMaker FreeOffice'
   homepage 'https://www.freeoffice.com/'
 
