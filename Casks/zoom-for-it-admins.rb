@@ -6,7 +6,7 @@ cask 'zoom-for-it-admins' do
   url "https://d11yldzmag5yn.cloudfront.net/prod/#{version}/ZoomInstallerIT.pkg"
   appcast 'https://zoom.us/download'
   name 'Zoom.us for IT'
-  homepage 'https://www.zoom.us/'
+  homepage 'https://support.zoom.us/hc/en-us/articles/115001799006-Mass-Deployment-with-Preconfigured-Settings-for-Mac'
 
   auto_updates true
   conflicts_with cask: 'zoomus'
