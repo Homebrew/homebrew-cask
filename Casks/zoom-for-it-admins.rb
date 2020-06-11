@@ -5,7 +5,7 @@ cask 'zoom-for-it-admins' do
   # d11yldzmag5yn.cloudfront.net/ was verified as official when first introduced to the cask
   url "https://d11yldzmag5yn.cloudfront.net/prod/#{version}/ZoomInstallerIT.pkg"
   appcast 'https://zoom.us/download'
-  name 'Zoom.us for IT'
+  name 'Zoom for IT Admins'
   homepage 'https://support.zoom.us/hc/en-us/articles/115001799006-Mass-Deployment-with-Preconfigured-Settings-for-Mac'
 
   auto_updates true
