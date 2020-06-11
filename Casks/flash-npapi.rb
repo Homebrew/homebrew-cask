@@ -4,7 +4,7 @@ cask 'flash-npapi' do
 
   url "https://fpdownload.adobe.com/pub/flashplayer/pdc/#{version}/install_flash_player_osx.dmg"
   appcast 'https://fpdownload.adobe.com/pub/flashplayer/update/current/xml/version_en_mac_pl.xml',
-          configuration: version.tr('.', ',')
+          must_contain: version.tr('.', ',')
   name 'Adobe Flash Player NPAPI (plugin for Safari and Firefox)'
   homepage 'https://get.adobe.com/flashplayer/'
 
