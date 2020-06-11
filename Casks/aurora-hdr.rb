@@ -4,7 +4,7 @@ cask 'aurora-hdr' do
 
   url "https://downloads.skylum.com/aurorahdr2019/mac/AuroraHDR2019_Distribution_v#{version.dots_to_underscores}.zip"
   appcast 'http://aurorahdr2019mac.update.skylum.com/',
-          configuration: version.dots_to_underscores
+          must_contain: version.dots_to_underscores
   name 'Aurora HDR'
   homepage 'https://skylum.com/aurorahdr'
 
