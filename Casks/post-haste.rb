@@ -4,7 +4,7 @@ cask 'post-haste' do
 
   url "https://www.digitalrebellion.com/download/posthaste?version=#{version.after_comma}"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.digitalrebellion.com/download/posthaste',
-          configuration: version.after_comma
+          must_contain: version.after_comma
   name 'Post Haste'
   homepage 'https://www.digitalrebellion.com/posthaste/'
 
