@@ -4,7 +4,7 @@ cask 'pdf-converter-master' do
 
   url "https://www.lightenpdf.com/upload/download/pdf-converter-master-#{version.no_dots}.dmg"
   appcast 'https://www.lightenpdf.com/pdf-converter-mac.html',
-          configuration: version.no_dots
+          must_contain: version.no_dots
   name 'PDF Converter Master'
   homepage 'https://www.lightenpdf.com/pdf-converter-mac.html'
 
