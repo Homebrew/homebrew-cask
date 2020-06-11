@@ -4,7 +4,7 @@ cask 'inkscape' do
 
   url "https://media.inkscape.org/dl/resources/file/Inkscape-#{version}.dmg"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://inkscape.org/release',
-          configuration: version.major_minor
+          must_contain: version.major_minor
   name 'Inkscape'
   homepage 'https://inkscape.org/'
 
