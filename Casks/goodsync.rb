@@ -4,7 +4,7 @@ cask 'goodsync' do
 
   url "https://www.goodsync.com/download/goodsync-v#{version.major}-mac.dmg"
   appcast 'https://www.goodsync.com/download?os=macos',
-          configuration: version.major_minor_patch
+          must_contain: version.major_minor_patch
   name 'GoodSync'
   homepage 'https://www.goodsync.com/'
 
