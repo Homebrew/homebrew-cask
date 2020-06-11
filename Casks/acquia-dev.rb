@@ -4,7 +4,7 @@ cask 'acquia-dev' do
 
   url "https://dev.acquia.com/sites/default/files/file/#{version.minor_patch.dots_to_hyphens}/AcquiaDevDesktop-#{version.dots_to_hyphens}.dmg"
   appcast 'https://dev.acquia.com/downloads',
-          configuration: version.dots_to_hyphens
+          must_contain: version.dots_to_hyphens
   name 'Acquia Dev Desktop'
   homepage 'https://www.acquia.com/drupal/acquia-dev-desktop'
 
