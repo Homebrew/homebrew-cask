@@ -4,7 +4,7 @@ cask 'mesasqlite' do
 
   url "http://www.desertsandsoftware.com/DEMOS/MesaSQLite#{version.no_dots}.zip"
   appcast 'http://www.desertsandsoftware.com/?page_id=99',
-          configuration: version.no_dots
+          must_contain: version.no_dots
   name 'MesaSQLite'
   homepage 'http://www.desertsandsoftware.com/wordpress/?page_id=17'
 
