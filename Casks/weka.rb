@@ -5,7 +5,7 @@ cask 'weka' do
   # sourceforge.net/weka/ was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/weka/weka-#{version.dots_to_hyphens}-azul-zulu-osx.dmg"
   appcast 'https://www.macupdater.net/cgi-bin/extract_text/extract_text_split_easy.cgi?url=https://waikato.github.io/weka-wiki/downloading_weka/&splitter_1=trunk&index_1=0',
-          configuration: version.dots_to_hyphens
+          must_contain: version.dots_to_hyphens
   name 'Weka'
   homepage 'https://www.cs.waikato.ac.nz/ml/weka/'
 
