@@ -4,7 +4,7 @@ cask 'qt3dstudio' do
 
   url "https://download.qt.io/official_releases/qt3dstudio/#{version.major_minor}/qt-3dstudio-opensource-mac-x64-#{version}.dmg"
   appcast 'https://download.qt.io/official_releases/qt3dstudio/',
-          configuration: version.major_minor
+          must_contain: version.major_minor
   name 'Qt 3D Studio'
   homepage 'https://www.qt.io/developers/'
 
