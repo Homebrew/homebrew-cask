@@ -4,7 +4,7 @@ cask 'tiles' do
 
   url "https://updates.sempliva.com/tiles/Tiles-#{version.after_comma}.dmg"
   appcast 'https://updates.sempliva.com/tiles/updates.xml',
-          configuration: version.after_comma
+          must_contain: version.after_comma
   name 'Sempliva Tiles'
   homepage 'https://www.sempliva.com/tiles/'
 
