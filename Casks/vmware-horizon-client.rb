@@ -4,7 +4,7 @@ cask 'vmware-horizon-client' do
 
   url "https://download3.vmware.com/software/view/viewclients/#{version.after_comma}/VMware-Horizon-Client-#{version.before_comma}.dmg"
   appcast 'https://docs.vmware.com/en/VMware-Horizon-Client-for-Mac/',
-          configuration: version.major_minor
+          must_contain: version.major_minor
   name 'VMware Horizon Client'
   homepage 'https://www.vmware.com/'
 
