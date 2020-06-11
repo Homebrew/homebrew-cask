@@ -9,7 +9,6 @@ cask 'bricklink-studio' do
   homepage 'https://bricklink.com/v3/studio/download.page'
 
   auto_updates true
-  depends_on macos: '>= :mavericks'
 
   pkg "Studio #{version.major}.0.pkg"
 
