@@ -4,7 +4,7 @@ cask 'clip-studio-paint' do
 
   url "https://vd.clipstudio.net/clipcontent/paint/app/#{version.no_dots}/CSP_#{version.no_dots}m_app.pkg"
   appcast 'https://www.clipstudio.net/en/dl',
-          configuration: version.no_dots
+          must_contain: version.no_dots
   name 'CLIP STUDIO PAINT'
   homepage 'https://www.clipstudio.net/en'
 
