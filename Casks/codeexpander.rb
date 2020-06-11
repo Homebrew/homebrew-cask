@@ -4,7 +4,7 @@ cask 'codeexpander' do
 
   url "https://github.com/oncework/codeexpander/releases/download/#{version.major_minor}.x/CodeExpander-#{version}.dmg"
   appcast 'https://github.com/oncework/codeexpander/releases.atom',
-          configuration: version.major_minor
+          must_contain: version.major_minor
   name 'CodeExpander'
   homepage 'https://github.com/oncework/codeexpander'
 
