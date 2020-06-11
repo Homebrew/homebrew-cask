@@ -4,7 +4,7 @@ cask 'folx' do
 
   url 'https://cdn.eltima.com/download/downloader_mac.dmg'
   appcast 'https://cdn.eltima.com/download/folx-updater/folx.xml',
-          configuration: version.major_minor
+          must_contain: version.major_minor
   name 'Folx'
   homepage 'https://mac.eltima.com/download-manager.html'
 
