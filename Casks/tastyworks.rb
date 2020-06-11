@@ -4,7 +4,7 @@ cask 'tastyworks' do
 
   url "https://download.tastyworks.com/desktop-#{version.major}.x.x/#{version}/tastyworks-#{version}.dmg"
   appcast 'https://tastyworks.freshdesk.com/support/solutions/articles/43000435186-recent-release-notes',
-          configuration: version.major_minor
+          must_contain: version.major_minor
   name 'tastyworks'
   homepage 'https://tastyworks.com/'
 
