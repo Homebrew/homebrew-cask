@@ -4,7 +4,7 @@ cask 'pdf-toolbox' do
 
   url "https://www.lightenpdf.com/upload/download/PDF-Toolbox-Mac-#{version.no_dots}.dmg"
   appcast 'https://www.lightenpdf.com/pdf-toolbox-mac.html',
-          configuration: version.no_dots
+          must_contain: version.no_dots
   name 'PDF Toolbox'
   homepage 'https://www.lightenpdf.com/pdf-toolbox-mac.html'
 
