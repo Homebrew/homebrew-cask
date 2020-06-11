@@ -1,14 +1,14 @@
 cask 'wkhtmltopdf' do
-  version '0.12.5'
-  sha256 '2718c057249a133fe413b3c8cfb33b755a2e18a8e233329168f1af462cd6de5f'
+  version '0.12.6-1'
+  sha256 '6ddc677c0f86c354fdd221b888f7dff48ff85ca587bc1564dbf5fe7cdb4c65b5'
 
-  # github.com/wkhtmltopdf/wkhtmltopdf/ was verified as official when first introduced to the cask
-  url "https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/#{version}/wkhtmltox-#{version}-1.macos-cocoa.pkg"
-  appcast 'https://github.com/wkhtmltopdf/wkhtmltopdf/releases.atom'
+  # github.com/wkhtmltopdf/packaging/ was verified as official when first introduced to the cask
+  url "https://github.com/wkhtmltopdf/packaging/releases/download/#{version}/wkhtmltox-#{version}.macos-cocoa.pkg"
+  appcast 'https://github.com/wkhtmltopdf/packaging/releases.atom'
   name 'wkhtmltopdf'
   homepage 'https://wkhtmltopdf.org/'
 
-  pkg "wkhtmltox-#{version}-1.macos-cocoa.pkg"
+  pkg "wkhtmltox-#{version}.macos-cocoa.pkg"
 
   uninstall pkgutil: 'org.wkhtmltopdf.wkhtmltox',
             delete:  [
