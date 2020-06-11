@@ -4,7 +4,7 @@ cask 'popo' do
 
   url "http://popo.netease.com/file/popomac/POPO_Mac_V#{version.dots_to_underscores}.dmg"
   appcast 'http://popo.netease.com/',
-          configuration: version.dots_to_underscores
+          must_contain: version.dots_to_underscores
   name 'NetEase POPO'
   homepage 'http://popo.netease.com/'
 
