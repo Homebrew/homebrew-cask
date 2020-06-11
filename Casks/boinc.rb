@@ -4,7 +4,7 @@ cask 'boinc' do
 
   url "https://boinc.berkeley.edu/dl/boinc_#{version}_macOSX_x86_64.zip"
   appcast 'https://boinc.berkeley.edu/wiki/Release_Notes',
-          configuration: version.major_minor
+          must_contain: version.major_minor
   name 'Berkeley Open Infrastructure for Network Computing'
   name 'BOINC'
   homepage 'https://boinc.berkeley.edu/'
