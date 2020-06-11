@@ -5,7 +5,7 @@ cask 'superduper' do
   # shirtpocket.s3.amazonaws.com/SuperDuper/ was verified as official when first introduced to the cask
   url 'https://shirtpocket.s3.amazonaws.com/SuperDuper/SuperDuper!.dmg'
   appcast 'https://versioncheck.blacey.com/superduper/version.xml?VSN=100',
-          configuration: version.after_comma
+          must_contain: version.after_comma
   name 'SuperDuper!'
   homepage 'https://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html'
 
