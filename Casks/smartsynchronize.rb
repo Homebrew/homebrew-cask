@@ -4,7 +4,7 @@ cask 'smartsynchronize' do
 
   url "https://www.syntevo.com/downloads/smartsynchronize/smartsynchronize-macosx-#{version.dots_to_underscores}.dmg"
   appcast 'https://www.syntevo.com/smartsynchronize/changelog.txt',
-          configuration: version.chomp('.0')
+          must_contain: version.chomp('.0')
   name 'SmartSynchronize'
   homepage 'https://www.syntevo.com/smartsynchronize/'
 
