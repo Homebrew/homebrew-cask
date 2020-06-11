@@ -4,7 +4,7 @@ cask 'beatunes' do
 
   url "http://coxy.beatunes.com/download/beaTunes-#{version.dots_to_hyphens}.dmg"
   appcast 'https://www.beatunes.com/en/beatunes-download.html',
-          configuration: version.dots_to_hyphens
+          must_contain: version.dots_to_hyphens
   name 'beaTunes'
   homepage 'https://www.beatunes.com/'
 
