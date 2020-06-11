@@ -4,7 +4,7 @@ cask 'bankid' do
 
   url "https://install.bankid.com/Repository/BankID_installation_#{version.dots_to_underscores}.pkg"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://install.bankid.com/FileDownloader?fileId=Mac',
-          configuration: version.dots_to_underscores
+          must_contain: version.dots_to_underscores
   name 'BankID'
   homepage 'https://install.bankid.com/'
 
