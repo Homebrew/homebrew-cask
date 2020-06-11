@@ -4,7 +4,7 @@ cask 'qgis' do
 
   url 'https://qgis.org/downloads/macos/qgis-macos-pr.dmg'
   appcast 'https://qgis.org/downloads/macos/qgis-macos-pr.sha256sum',
-          configuration: version.dots_to_underscores
+          must_contain: version.dots_to_underscores
   name 'QGIS'
   homepage 'https://www.qgis.org/'
 
