@@ -4,7 +4,7 @@ cask 'imaging-edge' do
 
   url "https://di.update.sony.net/NEX/#{version.after_comma}/ied_#{version.before_comma.dots_to_underscores}.dmg"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://support.d-imaging.sony.co.jp/disoft_DL/desktop_DL/mac?fm=en',
-          configuration: version.after_comma
+          must_contain: version.after_comma
   name 'Sony Imaging Edge'
   homepage 'https://imagingedge.sony.net/en-us/ie-desktop.html'
 
