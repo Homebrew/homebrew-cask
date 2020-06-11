@@ -4,7 +4,7 @@ cask 'dendroscope' do
 
   url "https://software-ab.informatik.uni-tuebingen.de/download/dendroscope/Dendroscope_macos_#{version.dots_to_underscores}.dmg"
   appcast 'https://software-ab.informatik.uni-tuebingen.de/download/dendroscope3/welcome.html',
-          configuration: version.dots_to_underscores
+          must_contain: version.dots_to_underscores
   name 'Dendroscope'
   homepage 'https://www.wsi.uni-tuebingen.de/lehrstuehle/algorithms-in-bioinformatics/software/dendroscope/'
 
