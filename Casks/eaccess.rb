@@ -4,7 +4,7 @@ cask 'eaccess' do
 
   url 'https://glutz.com/service/downloads/?dwnldid=97482'
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=https://glutz.com/service/downloads/?dwnldid=97482',
-          configuration: version.dots_to_underscores
+          must_contain: version.dots_to_underscores
   name 'eAccess Desktop'
   homepage 'https://glutz.com/service/download/software-and-firmware/'
 
