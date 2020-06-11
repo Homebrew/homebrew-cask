@@ -4,7 +4,7 @@ cask 'blender' do
 
   url "https://download.blender.org/release/Blender#{version.major_minor.delete('a-z')}/blender-#{version}.0-macOS.dmg"
   appcast 'https://download.blender.org/release/',
-          configuration: version.delete('a-z')
+          must_contain: version.delete('a-z')
   name 'Blender'
   homepage 'https://www.blender.org/'
 
