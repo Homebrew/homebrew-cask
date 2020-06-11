@@ -5,7 +5,7 @@ cask 'macs-fan-control' do
   # github.com/crystalidea/macs-fan-control/ was verified as official when first introduced to the cask
   url "https://github.com/crystalidea/macs-fan-control/releases/download/v#{version.major_minor_patch}/macsfancontrol.zip"
   appcast 'https://github.com/crystalidea/macs-fan-control/releases.atom',
-          configuration: version.major_minor_patch
+          must_contain: version.major_minor_patch
   name 'Macs Fan Control'
   homepage 'https://www.crystalidea.com/macs-fan-control'
 
