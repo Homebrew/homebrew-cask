@@ -4,7 +4,7 @@ cask 'jcryptool' do
 
   url "https://www.cryptool.org/jctdownload/Builds/downloads/stable/jcryptool-#{version}-macosx.cocoa.x86_64.tar.gz"
   appcast 'https://www.cryptool.org/en/jct-downloads',
-          configuration: version.major_minor
+          must_contain: version.major_minor
   name 'JCrypTool'
   homepage 'https://www.cryptool.org/en/jcryptool'
 
