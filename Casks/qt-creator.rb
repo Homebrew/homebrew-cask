@@ -4,7 +4,7 @@ cask 'qt-creator' do
 
   url "https://download.qt.io/official_releases/qtcreator/#{version.major_minor}/#{version}/qt-creator-opensource-mac-x86_64-#{version}.dmg"
   appcast 'https://download.qt.io/official_releases/qtcreator/',
-          configuration: version.major_minor
+          must_contain: version.major_minor
   name 'Qt Creator'
   homepage 'https://www.qt.io/developers/'
 
