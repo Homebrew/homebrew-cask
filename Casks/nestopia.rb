@@ -4,7 +4,7 @@ cask 'nestopia' do
 
   url 'https://www.bannister.org/cgi-bin/download.cgi?nestopia'
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?user_agent=Macintosh&url=https://www.bannister.org/cgi-bin/download.cgi%3Fnestopia',
-          configuration: version.no_dots
+          must_contain: version.no_dots
   name 'Nestopia'
   homepage 'https://www.bannister.org/software/nestopia.htm'
 
