@@ -4,7 +4,7 @@ cask 'tcl' do
 
   url "https://downloads.activestate.com/ActiveTcl/releases/#{version.before_comma}/ActiveTcl-#{version.after_comma}-macosx10.9-x86_64.pkg"
   appcast 'https://www.activestate.com/products/tcl/downloads/',
-          configuration: version.major_minor
+          must_contain: version.major_minor
   name 'ActiveTcl'
   homepage 'https://www.activestate.com/products/tcl/'
 
