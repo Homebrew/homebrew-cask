@@ -4,7 +4,7 @@ cask 'native-access' do
 
   url 'https://native-instruments.com/fileadmin/downloads/Native_Access_Installer.dmg'
   appcast "https://native-instruments.com/forum/threads/official-update-status-native-access-current-version-#{version.major_minor_patch.dots_to_hyphens}.313999",
-          configuration: version.major_minor_patch
+          must_contain: version.major_minor_patch
   name 'Native Access'
   homepage 'https://native-instruments.com/specials/native-access'
 
