@@ -4,7 +4,7 @@ cask 'qiyimedia' do
 
   url 'https://mbdapp.iqiyi.com/j/ot/iQIYIMedia_000.dmg'
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://mbdapp.iqiyi.com/j/ot/iQIYIMedia_000.dmg',
-          configuration: version.before_comma
+          must_contain: version.before_comma
   name '爱奇艺视频'
   homepage 'https://app.iqiyi.com/mac/player/index.html'
 
