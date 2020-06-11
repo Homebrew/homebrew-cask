@@ -4,7 +4,7 @@ cask 'iridium' do
 
   url "https://downloads.iridiumbrowser.de/macos/#{version.major_minor}-0/iridiumbrowser-#{version}.dmg"
   appcast 'https://iridiumbrowser.de/news/',
-          configuration: version.major_minor
+          must_contain: version.major_minor
   name 'Iridium Browser'
   homepage 'https://iridiumbrowser.de/'
 
