@@ -5,7 +5,7 @@ cask 'yacreader' do
   # github.com/YACReader/yacreader/ was verified as official when first introduced to the cask
   url "https://github.com/YACReader/yacreader/releases/download/#{version.major_minor_patch}/YACReader-#{version}.MacOSX-Intel.dmg"
   appcast 'https://github.com/YACReader/yacreader/releases.atom',
-          configuration: version.major_minor_patch
+          must_contain: version.major_minor_patch
   name 'YACReader'
   homepage 'https://www.yacreader.com/'
 
