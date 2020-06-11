@@ -5,7 +5,7 @@ cask 'bonitastudiocommunity' do
   # release.ow2.org/ was verified as official when first introduced to the cask
   url "https://release.ow2.org/bonita/BonitaStudioCommunity-#{version}-x86_64.dmg"
   appcast 'https://www.bonitasoft.com/downloads',
-          configuration: version.major_minor
+          must_contain: version.major_minor
   name 'Bonita Studio Community Edition'
   homepage 'https://www.bonitasoft.com/downloads'
 
