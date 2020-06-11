@@ -4,7 +4,7 @@ cask 'nvidia-geforce-now' do
 
   url "https://ota-downloads.nvidia.com/ota/GeForceNOW-release_#{version.after_comma}.dmg"
   appcast "https://ota.nvidia.com/release/available?product=GFN-mac&version=#{version.before_comma}&channel=OFFICIAL",
-          configuration: '[]' # Only happens when there are no newer versions
+          must_contain: '[]' # Only happens when there are no newer versions
   name 'NVIDIA GeForce NOW'
   homepage 'https://www.nvidia.com/en-us/geforce/products/geforce-now/'
 
