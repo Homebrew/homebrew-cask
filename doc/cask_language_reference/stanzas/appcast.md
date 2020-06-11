@@ -30,4 +30,4 @@ Sometimes a `version` doesn’t match a string on the webpage, in which case we 
 
 If no `must_contain` is given, the check considers from the beginning of the `version` string until the first character that isn’t alphanumeric or a period. Example: if `version` is `6.26b-14,40`, the check will see `6.26b`. This is so it covers most cases by default, while still allowing complex `version`s suitable for interpolation on the rest of the cask.
 
-Example of using `must_contain`: [`hwsensors.rb`](https://github.com/Homebrew/homebrew-cask/blob/546f1c8276ebd0c4e3c8aac7a344931ee53726cb/Casks/hwsensors.rb#L6L7)
+Example of using `must_contain`: [`hwsensors.rb`](https://github.com/Homebrew/homebrew-cask/blob/87bc3860f43d5b14d0c38ae8de469d24ee7f5b2f/Casks/hwsensors.rb#L6L7)
