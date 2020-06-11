@@ -4,7 +4,7 @@ cask 'antconc' do
 
   url "https://www.laurenceanthony.net/software/antconc/releases/AntConc#{version.no_dots}/AntConc.zip"
   appcast 'https://www.laurenceanthony.net/software/antconc/releases/',
-          configuration: version.no_dots
+          must_contain: version.no_dots
   name 'AntConc'
   homepage 'https://www.laurenceanthony.net/software/antconc/'
 
