@@ -4,7 +4,7 @@ cask 'intel-power-gadget' do
 
   url 'https://software.intel.com/content/dam/develop/external/us/en/documents/Intel%20Power%20Gadget.dmg'
   appcast 'https://software.intel.com/content/www/us/en/develop/articles/intel-power-gadget.html',
-          configuration: version.major
+          must_contain: version.major
   name 'Intel Power Gadget'
   homepage 'https://software.intel.com/content/www/us/en/develop/articles/intel-power-gadget.html'
 
