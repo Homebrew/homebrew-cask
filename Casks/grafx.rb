@@ -4,7 +4,7 @@ cask 'grafx' do
 
   url "https://pulkomandy.tk/projects/GrafX#{version.major}/downloads/#{version.after_comma}"
   appcast 'https://gitlab.com/GrafX2/grafX2/-/tags?format=atom',
-          configuration: version.major_minor
+          must_contain: version.major_minor
   name 'GrafX2'
   homepage "https://pulkomandy.tk/projects/GrafX#{version.major}"
 
