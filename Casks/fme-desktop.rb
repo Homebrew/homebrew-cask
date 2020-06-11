@@ -4,7 +4,7 @@ cask 'fme-desktop' do
 
   url "https://downloads.safe.com/fme/#{version.major}/fme-desktop-#{version}-macosx.dmg"
   appcast 'https://www.safe.com/support/downloads/',
-          configuration: version.major_minor
+          must_contain: version.major_minor
   name 'FME Desktop'
   homepage 'https://www.safe.com/'
 
