@@ -6,7 +6,7 @@ cask 'frhelper' do
   url "https://static.frdic.com/pkg/fhmac.dmg?v=#{version.after_comma}",
       user_agent: :fake
   appcast 'https://www.eudic.net/v4/fr/app/download',
-          configuration: version.after_comma
+          must_contain: version.after_comma
   name 'Frhelper'
   name '法语助手'
   homepage 'https://www.eudic.net/v4/fr/app/frhelper'
