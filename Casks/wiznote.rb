@@ -4,7 +4,7 @@ cask 'wiznote' do
 
   url "https://get.wiz.cn/wiznote-macos-#{version.after_comma}.dmg"
   appcast 'https://www.macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://url.wiz.cn/u/mac',
-          configuration: version.after_comma
+          must_contain: version.after_comma
   name 'WizNote'
   homepage 'https://www.wiz.cn/wiznote-mac.html'
 
