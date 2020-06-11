@@ -4,7 +4,7 @@ cask 'time-sink' do
 
   url "https://manytricks.com/download/_do_not_hotlink_/timesink#{version.no_dots}.dmg"
   appcast 'https://manytricks.com/timesink/appcast',
-          configuration: version.chomp('.0')
+          must_contain: version.chomp('.0')
   name 'Time Sink'
   homepage 'https://manytricks.com/timesink/'
 
