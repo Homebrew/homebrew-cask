@@ -1,4 +1,4 @@
-cask 'zoomus-it' do
+cask 'zoom-for-it-admins' do
   version '5.0.26223.0603'
   sha256 '15612fac01df6e3ac560e217758826d9cdb3d2caa843b173bb3340a54fe76a2c'
 
