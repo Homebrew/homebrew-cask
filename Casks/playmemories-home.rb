@@ -5,7 +5,7 @@ cask 'playmemories-home' do
   # pmb.update.sony.net/PMH/ was verified as official when first introduced to the cask
   url "http://pmb.update.sony.net/PMH/#{version.after_comma}/PMHOME_#{version.before_comma.no_dots}DL.dmg"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://support.d-imaging.sony.co.jp/disoft_DL/PMHMAC_DL/mac?fm=ttl&fm=ja',
-          configuration: version.before_comma.no_dots
+          must_contain: version.before_comma.no_dots
   name 'PlayMemories Home'
   homepage 'https://support.d-imaging.sony.co.jp/www/disoft/int/download/playmemories-home/mac/en/'
 
