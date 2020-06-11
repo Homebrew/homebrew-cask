@@ -4,7 +4,7 @@ cask 'lyrics-master' do
 
   url "http://www.kenichimaehashi.com/lyricsmaster/download/LyricsMaster#{version.no_dots}.dmg"
   appcast 'http://www.kenichimaehashi.com/lyricsmaster/',
-          configuration: version.major_minor_patch
+          must_contain: version.major_minor_patch
   name 'Lyrics Master'
   homepage 'http://www.kenichimaehashi.com/lyricsmaster/'
 
