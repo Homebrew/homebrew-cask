@@ -12,7 +12,7 @@ cask 'reaper' do
   end
 
   appcast 'https://www.cockos.com/reaper/latestversion/?p=osx_64',
-          configuration: version.after_comma
+          must_contain: version.after_comma
   name 'REAPER'
   homepage 'https://www.reaper.fm/'
 
