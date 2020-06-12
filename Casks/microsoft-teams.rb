@@ -1,6 +1,6 @@
 cask 'microsoft-teams' do
-  version '1.3.00.15561'
-  sha256 '3d4421b62f8bd8d77a2921236d23443bce4cdd01d097d8b047b50e031d84854f'
+  version '1.3.00.9271'
+  sha256 '6da9d7d11baf17a3900bd8394b3d92edc2849ab3cea748daa0fccc1ffc3371fb'
 
   url "https://statics.teams.microsoft.com/production-osx/#{version}/Teams_osx.pkg"
   appcast 'https://teams.microsoft.com/downloads/DesktopUrl?env=production&plat=osx'
