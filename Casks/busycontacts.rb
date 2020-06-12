@@ -1,5 +1,5 @@
 cask 'busycontacts' do
-  version '1.4.7,140801'
+  version '1.4.7,14081'
   sha256 'b0b002345254928a960155810898399184b293ac400008d206bd50d3ab3267e0'
 
   url 'https://www.busymac.com/download/BusyContacts.zip'
