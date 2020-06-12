@@ -7,7 +7,7 @@ cask 'framer' do
   name 'Framer'
   homepage 'https://www.framer.com/desktop/'
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :mojave'
 
   app 'Framer.app'
 end
