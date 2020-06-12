@@ -18,4 +18,8 @@ cask 'powershell' do
                '~/.config/PowerShell',
                '~/.local/share/powershell',
              ]
+
+  caveats <<~EOS
+    For faster updates use https://github.com/PowerShell/Homebrew-Tap#powershell-stable
+  EOS
 end
