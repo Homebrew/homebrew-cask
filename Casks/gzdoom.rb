@@ -1,6 +1,6 @@
 cask 'gzdoom' do
-  version '4.4.0'
-  sha256 '40cf781f2246666c0b3312a262dd538bef0e52cf3dcc85b7cf099c6d7e3548ba'
+  version '4.4.1'
+  sha256 '9dd083cc8f65060698f300c274eefea8364987a4a548524a446f703330b91fb6'
 
   # github.com/coelckers/gzdoom/ was verified as official when first introduced to the cask
   url "https://github.com/coelckers/gzdoom/releases/download/g#{version}/gzdoom-#{version.dots_to_hyphens}-macOS.dmg"
