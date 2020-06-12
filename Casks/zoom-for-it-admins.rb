@@ -1,17 +1,17 @@
-cask 'zoomus' do
+cask 'zoom-for-it-admins' do
   version '5.0.26223.0603'
-  sha256 '3b4ca2ae2ab87db91187093119f26a06c9c4e6ddd4eb28b61cc86ecb2af1fdce'
+  sha256 '15612fac01df6e3ac560e217758826d9cdb3d2caa843b173bb3340a54fe76a2c'
 
   # d11yldzmag5yn.cloudfront.net/ was verified as official when first introduced to the cask
-  url "https://d11yldzmag5yn.cloudfront.net/prod/#{version}/Zoom.pkg"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://zoom.us/client/latest/Zoom.pkg'
-  name 'Zoom.us'
-  homepage 'https://www.zoom.us/'
+  url "https://d11yldzmag5yn.cloudfront.net/prod/#{version}/ZoomInstallerIT.pkg"
+  appcast 'https://zoom.us/download'
+  name 'Zoom for IT Admins'
+  homepage 'https://support.zoom.us/hc/en-us/articles/115001799006-Mass-Deployment-with-Preconfigured-Settings-for-Mac'
 
   auto_updates true
-  conflicts_with cask: 'zoom-for-it-admins'
+  conflicts_with cask: 'zoomus'
 
-  pkg 'Zoom.pkg'
+  pkg 'ZoomInstallerIT.pkg'
 
   postflight do
     set_ownership '~/Library/Application Support/zoom.us'
