@@ -14,4 +14,12 @@ cask 'blue-jeans' do
                       ['TERM', 'com.bluejeansnet.BlueMenulet'],
                     ],
             delete: '/Applications/Blue Jeans.app'
+
+  zap trash: [
+               '~/Library/Application Support/Blue Jeans',
+               '~/Library/Application Support/BlueJeans',
+               '~/Library/Caches/com.bluejeansnet.Blue',
+               '~/Library/Preferences/com.bluejeansnet.Blue.plist',
+               '~/Library/Preferences/com.bluejeansnet.BlueMenulet.plist',
+             ]
 end
