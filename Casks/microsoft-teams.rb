@@ -3,7 +3,7 @@ cask 'microsoft-teams' do
   sha256 '3d4421b62f8bd8d77a2921236d23443bce4cdd01d097d8b047b50e031d84854f'
 
   url "https://statics.teams.microsoft.com/production-osx/#{version}/Teams_osx.pkg"
-  appcast 'https://teams.microsoft.com/downloads/DesktopUrl?env=production&plat=osx'
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://aka.ms/teamsmac'
   name 'Microsoft Teams'
   homepage 'https://teams.microsoft.com/downloads'
 
