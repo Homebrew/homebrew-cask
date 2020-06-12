@@ -1,6 +1,6 @@
 cask 'colorsnapper' do
-  version '1.6.2'
-  sha256 '687cfc23035804db63bca7fff606ab512c1297d057e0da6d7424f1e29ec427de'
+  version '1.6.3'
+  sha256 'a8e99b92276cc085c2dbddb406760480c77d95e9518eda4aa6c9b94f7793db13'
 
   # cs2-binaries.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://cs2-binaries.s3.amazonaws.com/ColorSnapper2-#{version.dots_to_underscores}.zip"
