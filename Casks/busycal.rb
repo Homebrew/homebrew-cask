@@ -1,5 +1,5 @@
 cask 'busycal' do
-  version '3.10.1,401010'
+  version '3.10.1,401014'
   sha256 'e63633bed3837a12ce6593311cab653192541a003d0b0a3795ff2992b9b812f9'
 
   url 'https://www.busymac.com/download/BusyCal.zip'
