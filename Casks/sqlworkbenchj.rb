@@ -1,5 +1,5 @@
 cask 'sqlworkbenchj' do
-  version '124'
+  version '125'
   sha256 '2173c7f00172bef3fed23e7f57e168a9d156c72c311af032ba469139f80d9fe9'
 
   url "https://www.sql-workbench.eu/Workbench-Build#{version}-Mac.tgz"
