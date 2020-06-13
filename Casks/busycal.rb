@@ -1,6 +1,6 @@
 cask 'busycal' do
-  version '3.10.1,401014'
-  sha256 'e63633bed3837a12ce6593311cab653192541a003d0b0a3795ff2992b9b812f9'
+  version '3.10.1,401016'
+  sha256 '0b535cad25ab4e23bdcb3c9b20d893b5622342e7cd81223317b20374353b9457'
 
   url 'https://www.busymac.com/download/BusyCal.zip'
   appcast 'https://www.busymac.com/busycal/news.plist'
