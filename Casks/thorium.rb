@@ -1,4 +1,4 @@
-cask 'thorium-reader' do
+cask 'thorium' do
   version '1.3.0'
   sha256 '058d0dddd3217cb72afc5131b621782e2f4116d3a7405f63f747c011b87b6601'
 
