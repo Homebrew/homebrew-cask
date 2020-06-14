@@ -3,8 +3,8 @@ cask 'coteditor' do
     version '3.2.8'
     sha256 '73dd20d27b75c7b0c46242a465adb3df5b5f0b901f42c5a9a85777a57c4a17d6'
   else
-    version '3.9.0'
-    sha256 '4122d048991848ec9b970c8edacbcac388700028dcb7fb4ffc2f36cba854a9a0'
+    version '3.9.1'
+    sha256 '37a03792fe673c59d80e127ec826a8168b1d20fdbcd07ee976b54a5ae15f592e'
   end
 
   # github.com/coteditor/CotEditor/ was verified as official when first introduced to the cask
