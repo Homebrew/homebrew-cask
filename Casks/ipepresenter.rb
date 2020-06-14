@@ -1,6 +1,6 @@
 cask 'ipepresenter' do
-  version '7.2.18'
-  sha256 '1e2e6b7f245d639098d03117a43795a099052a0b910934aa532a36513190f6b4'
+  version '7.2.19'
+  sha256 '8a9145e3269a1037809345a7f386dd1ca4924322299661c73236977608d36317'
 
   # bintray.com/otfried/ was verified as official when first introduced to the cask
   url "https://dl.bintray.com/otfried/generic/ipe/#{version.major_minor}/ipepresenter-#{version}-mac.dmg"
