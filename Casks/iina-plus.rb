@@ -7,5 +7,5 @@ cask 'iina-plus' do
   name 'IINA+'
   homepage 'https://github.com/xjbeta/iina-plus'
 
-  app 'iina+.app'
+  app "iina+ #{version.before_comma}.app"
 end
