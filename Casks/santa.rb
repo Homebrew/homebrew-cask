@@ -17,4 +17,6 @@ cask 'santa' do
                          'com.google.santad',
                        ],
             pkgutil:   'com.google.santa'
+
+  caveats "For #{token} to use EndpointSecurity, it must be granted Full Disk Access under System Preferences → Security & Privacy → Privacy"
 end
