@@ -9,4 +9,9 @@ cask 'thorium' do
   homepage 'https://edrlab.org/software/thorium-reader/'
 
   app 'Thorium.app'
+
+  zap trash: [
+               '~/Library/Application Support/EDRLab.ThoriumReader',
+               '~/Library/Preferences/io.github.edrlab.thorium.plist',
+             ]
 end
