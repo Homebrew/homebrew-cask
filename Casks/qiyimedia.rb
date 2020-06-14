@@ -1,5 +1,5 @@
 cask 'qiyimedia' do
-  version '20200612,,5.19.3-271'
+  version '20200612,5.19.3-271'
   sha256 '2d71630cdd9750cbe67ca9c88f7eac6f956b7ff69c4697e278fa9d7d79b7ec2f'
 
   url 'https://mbdapp.iqiyi.com/j/ot/iQIYIMedia_000.dmg'
