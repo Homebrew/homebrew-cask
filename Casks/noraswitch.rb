@@ -1,6 +1,6 @@
 cask 'noraswitch' do
-  version '1.0.1'
-  sha256 '4027f96ad1ad2f95720eefb72a02e3d9cabd67558074fca515275a9c7205a224'
+  version '1.0.2'
+  sha256 '10e6219420a817f573335bfdd3a19167c2a77c9578d1abba22412f0167eab5f1'
 
   url "https://noraswitch.com/dmg/noraSwitch%20#{version}.dmg"
   appcast 'https://noraswitch.com/appcast.xml'
