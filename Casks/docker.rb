@@ -40,6 +40,7 @@ cask 'docker' do
   zap trash: [
                '/usr/local/bin/docker-compose.backup',
                '/usr/local/bin/docker.backup',
+               '~/Library/Application Support/Docker Desktop',
                '~/Library/Application Scripts/com.docker.helper',
                '~/Library/Caches/KSCrashReports/Docker',
                '~/Library/Caches/com.docker.docker',
@@ -48,6 +49,9 @@ cask 'docker' do
                '~/Library/Containers/com.docker.helper',
                '~/Library/Group Containers/group.com.docker',
                '~/Library/Preferences/com.docker.docker.plist',
+               '~/Library/Preferences/com.electron.docker-frontend.plist',
+               '~/Library/Saved Application State/com.electron.docker-frontend.savedState',
+               '~/Library/Logs/Docker Desktop',
              ],
       rmdir: [
                '~/Library/Caches/KSCrashReports',
