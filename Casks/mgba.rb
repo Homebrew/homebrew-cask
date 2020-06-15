@@ -1,6 +1,6 @@
 cask 'mgba' do
-  version '0.8.1'
-  sha256 '867b6d588351505ffae9e90ee75373fc7044a08dbb2c40ada9b91d12e255b295'
+  version '0.8.2'
+  sha256 '1065a797d9a6d1c58b2dad11a2fc5921c49f869985e5694e6bf615b116c36cee'
 
   # github.com/mgba-emu/mgba/ was verified as official when first introduced to the cask
   url "https://github.com/mgba-emu/mgba/releases/download/#{version}/mGBA-#{version}-osx.tar.xz"
