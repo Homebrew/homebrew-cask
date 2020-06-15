@@ -1,6 +1,6 @@
 cask 'wwdc' do
-  version '7.0.1'
-  sha256 '455b7ac02d8fb90ca4df525af27982d0d0f31a51cd9c2eb20e3bbcb1c920ddfb'
+  version '7.0.2'
+  sha256 '0bbc4c9734e83cf292837dcab9a19c69f2e61e5db909d96088f416920f8f0ecd'
 
   # github.com/insidegui/WWDC/ was verified as official when first introduced to the cask
   url "https://github.com/insidegui/WWDC/releases/download/#{version}/WWDC_v#{version}.zip"
