@@ -1,6 +1,6 @@
 cask 'itch' do
-  version '1.17.0'
-  sha256 '9053778cbae81ce09129364e0b3ec7f2b9abdd9705334011398d2d66d553c31c'
+  version '1.18.0'
+  sha256 'cfc76d52483d3e649026f29ddb6f136207964ea54eee996ee62a7a4e17326e05'
 
   # broth.itch.ovh/ was verified as official when first introduced to the cask
   url "https://broth.itch.ovh/itch-setup/darwin-amd64/#{version}/archive/default"
