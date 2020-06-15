@@ -1,6 +1,6 @@
 cask 'wkhtmltopdf' do
-  version '0.12.6-1'
-  sha256 '6ddc677c0f86c354fdd221b888f7dff48ff85ca587bc1564dbf5fe7cdb4c65b5'
+  version '0.12.6-2'
+  sha256 '81a66b77b508fede8dbcaa67127203748376568b3673a17f6611b6d51e9894f8'
 
   # github.com/wkhtmltopdf/packaging/ was verified as official when first introduced to the cask
   url "https://github.com/wkhtmltopdf/packaging/releases/download/#{version}/wkhtmltox-#{version}.macos-cocoa.pkg"
