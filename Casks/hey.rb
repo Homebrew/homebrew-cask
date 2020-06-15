@@ -11,7 +11,7 @@ cask 'hey' do
   app 'Hey.app'
   
   zap trash: [ 
-                '~/Library/Application\ Support/HEY' 
+                '~/Library/Application Support/HEY' 
                 '~/Library/Preferences/com.hey.app.desktop.plist'
              ]
 end
