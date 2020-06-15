@@ -1,10 +1,10 @@
 cask 'gcc-arm-embedded' do
   # Exists as a cask because it is impractical as a formula:
   # https://github.com/Homebrew/homebrew-core/pull/45780#issuecomment-569246452
-  version '9-2019-q4-major'
-  sha256 '1249f860d4155d9c3ba8f30c19e7a88c5047923cea17e0d08e633f12408f01f0'
+  version '9-2020-q2-update'
+  sha256 'bbb9b87e442b426eca3148fa74705c66b49a63f148902a0ea46f676ec24f9ac6'
 
-  url "https://developer.arm.com/-/media/Files/downloads/gnu-rm/9-2019q4/RC2.1/gcc-arm-none-eabi-#{version}-mac.tar.bz2"
+  url "https://developer.arm.com/-/media/Files/downloads/gnu-rm/#{version.sub(%r{^(\d-\d{4})-(q\d)-(major|update)$}, '\1\2')}/gcc-arm-none-eabi-#{version}-mac.tar.bz2"
   name 'GCC ARM Embedded'
   homepage 'https://developer.arm.com/open-source/gnu-toolchain/gnu-rm'
 
