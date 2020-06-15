@@ -9,4 +9,9 @@ cask 'hey' do
   homepage 'https://hey.com/'
 
   app 'Hey.app'
+  
+  zap trash: [ 
+                '~/Library/Application\ Support/HEY' 
+                '~/Library/Preferences/com.hey.app.desktop.plist'
+             ]
 end
