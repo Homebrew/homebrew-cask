@@ -3,7 +3,7 @@ cask 'realm-studio' do
   sha256 'cb849642b1da4a690bd2c50d2be2bf67abc5e343f2792f31bbd3807dfd5580d7'
 
   url "https://static.realm.io/downloads/realm-studio/Realm%20Studio-#{version}-mac.zip"
-  appcast 'https://github.com/realm/realm-studio/releases'
+  appcast 'https://github.com/realm/realm-studio/releases.atom'
   name 'Realm Studio'
   homepage 'https://realm.io/products/realm-studio/'
 
