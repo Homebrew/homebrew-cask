@@ -4,6 +4,7 @@ cask 'hey-mail' do
 
   # hey-desktop.s3.amazonaws.com was verified as official when first introduced to the cask
   url "https://hey-desktop.s3.amazonaws.com/HEY-#{version}.dmg"
+  appcast 'https://hey-desktop.s3.amazonaws.com/latest-mac.yml'
   name 'Hey'
   homepage 'https://hey.com/'
 
