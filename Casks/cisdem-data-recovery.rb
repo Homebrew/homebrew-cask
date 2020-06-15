@@ -1,6 +1,6 @@
 cask 'cisdem-data-recovery' do
-  version '6.3.0'
-  sha256 'f0c23ab96eaa3f4d99fe21b426c3489bc571a1de8c350a9ea4fbc022cc3a6306'
+  version '6.4.0'
+  sha256 '3624f99d258fb7f6af77f5226d8528b08dbc5840069ef38be3c681efcd146cc2'
 
   url 'http://download.cisdem.com/cisdem-datarecovery.dmg'
   appcast 'https://www.cisdem.com/data-recovery-mac/release-notes.html'
