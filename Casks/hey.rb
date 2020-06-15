@@ -1,4 +1,4 @@
-cask 'basecamp-hey' do
+cask 'hey' do
   version '1.0.4'
   sha256 'f484d461b51c4f15f776baeeb3c3ab9deceb64a14a1b976471e2784b818e68c7'
 
