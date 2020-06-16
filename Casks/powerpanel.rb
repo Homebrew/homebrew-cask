@@ -9,7 +9,7 @@ cask 'powerpanel' do
 
   depends_on macos: '>= :sierra'
 
-  app 'PowerPanel.app'
+  app 'CyberPower PowerPanel Personal Installer.app'
 
   uninstall pkgutil:   'com.cpsww.ppupsd',
             launchctl: 'com.cpsww.ppupsd'
