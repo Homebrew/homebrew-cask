@@ -14,6 +14,16 @@ cask 'wireshark' do
   app 'Wireshark.app'
   pkg 'Install ChmodBPF.pkg'
   pkg 'Add Wireshark to the system path.pkg'
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/wireshark.wrapper.sh"
+  binary shimscript, target: 'wireshark'
+
+  preflight do
+    IO.write shimscript, <<~EOS
+      #!/bin/sh
+      exec #{appdir}/Wireshark.app/Contents/MacOS/Wireshark "$@"
+    EOS
+  end
 
   uninstall_preflight do
     system_command '/usr/sbin/installer',
