@@ -9,5 +9,5 @@ cask 'activedock' do
 
   depends_on macos: '>= :high_sierra'
 
-  app 'ActiveDock.app'
+  app "ActiveDock #{version.before_comma}.app"
 end
