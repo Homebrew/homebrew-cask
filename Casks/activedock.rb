@@ -1,5 +1,5 @@
 cask 'activedock' do
-  version '2.0'
+  version '2.0,2001'
   sha256 '141e78798a46a169ce7cec5b98ad51f99a0b41711d3db29cbe01632b4212187b'
 
   url 'https://noteifyapp.com/download/ActiveDock.dmg'
