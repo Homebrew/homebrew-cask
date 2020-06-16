@@ -9,12 +9,6 @@ cask 'osquery' do
 
   pkg "osquery-#{version}.pkg"
 
-  uninstall delete:    [
-                         '/private/var/log/osquery',
-                         '/private/var/osquery',
-                         '/usr/local/bin/osqueryctl',
-                         '/usr/local/bin/osqueryd',
-                       ],
-            launchctl: 'com.facebook.osqueryd',
+  uninstall launchctl: 'com.facebook.osqueryd',
             pkgutil:   'com.facebook.osquery'
 end
