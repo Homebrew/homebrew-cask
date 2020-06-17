@@ -9,7 +9,7 @@ cask 'betterzip' do
   homepage 'https://macitbetter.com/'
 
   auto_updates true
-  depends_on macos: '>= :yosemite'
+  depends_on macos: '>= :high_sierra'
 
   app 'BetterZip.app'
 
