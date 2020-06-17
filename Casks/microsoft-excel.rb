@@ -43,6 +43,7 @@ cask 'microsoft-excel' do
                    'com.microsoft.autoupdate.helpertool',
                    'com.microsoft.autoupdate.helper',
                    'com.microsoft.update.agent',
+                   'com.microsoft.autoupdate2',
                  ],
       pkgutil:   'com.microsoft.package.Microsoft_AutoUpdate.app'
 end
