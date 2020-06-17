@@ -22,7 +22,7 @@ cask 'microsoft-excel' do
                          'com.microsoft.office.licensingV2.helper',
                          'com.microsoft.update.agent',
                        ],
-            quit:      'com.microsoft.autoupdate2',
+            quit:      'com.microsoft.autoupdate2'
 
   zap trash:     [
                    '~/Library/Application Scripts/com.microsoft.Excel',
