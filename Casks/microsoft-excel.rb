@@ -18,7 +18,11 @@ cask 'microsoft-excel' do
                          'com.microsoft.package.Microsoft_Excel.app',
                          'com.microsoft.pkg.licensing',
                        ],
-            launchctl: 'com.microsoft.office.licensingV2.helper'
+            launchctl: [
+                         'com.microsoft.office.licensingV2.helper',
+                         'com.microsoft.update.agent',
+                       ]
+            quit:      'com.microsoft.autoupdate2',
 
   zap trash:     [
                    '~/Library/Application Scripts/com.microsoft.Excel',
@@ -43,7 +47,6 @@ cask 'microsoft-excel' do
                    'com.microsoft.autoupdate.helpertool',
                    'com.microsoft.autoupdate.helper',
                    'com.microsoft.update.agent',
-                   'com.microsoft.autoupdate2',
                  ],
       pkgutil:   'com.microsoft.package.Microsoft_AutoUpdate.app'
 end
