@@ -2,10 +2,10 @@ cask 'keyboardcleantool' do
   version :latest
   sha256 :no_check
 
-  # bettertouchtool.net/releases/ was verified as official when first introduced to the cask
-  url 'https://bettertouchtool.net/releases/KeyboardCleanTool.zip'
+  # formerly boastr.net, then bettertouchtool.net - now folivora.ai
+  url 'https://folivora.ai/releases/KeyboardCleanTool.zip'
   name 'KeyboardCleanTool'
-  homepage 'https://www.boastr.net/downloads/'
+  homepage 'https://folivora.ai/keyboardcleantool'
 
   app 'KeyboardCleanTool.app'
 end
