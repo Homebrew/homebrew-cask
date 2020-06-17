@@ -50,7 +50,8 @@ cask 'microsoft-office' do
                          'com.microsoft.OneDriveUpdaterDaemon',
                          'com.microsoft.autoupdate.helper',
                          'com.microsoft.update.agent',
-                       ]
+                       ],
+            quit:      'com.microsoft.autoupdate2'
 
   zap trash:     [
                    '~/Library/Application Scripts/com.microsoft.Excel',
