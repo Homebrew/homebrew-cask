@@ -1,6 +1,6 @@
 cask 'suitcase-fusion' do
-  version '21.1.0'
-  sha256 '6ee8471be74b2069a33fef764bf7d42ffc14be6a9e3d14b3a9b5ae71828db074'
+  version '21.1.1'
+  sha256 '8348d09cd84cdaf16cfa4fccf28b79008f0516deb88c76ce3eeccb961b709337'
 
   url "https://bin.extensis.com/SuitcaseFusion-M-#{version.dots_to_hyphens}.dmg"
   appcast "https://www.extensis.com/support/suitcase-fusion-#{version.major}/release-notes/"
