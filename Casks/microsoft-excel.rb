@@ -21,7 +21,7 @@ cask 'microsoft-excel' do
             launchctl: [
                          'com.microsoft.office.licensingV2.helper',
                          'com.microsoft.update.agent',
-                       ]
+                       ],
             quit:      'com.microsoft.autoupdate2',
 
   zap trash:     [
