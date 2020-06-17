@@ -24,8 +24,8 @@ cask 'miniconda' do
                '~/.conda',
                '~/.continuum',
              ]
-  
-  caveats "The correct way to add conda to your path is by sourcing 
-           /opt/miniconda3/etc/profile.d/conda.sh path either every 
-           time you want or in your .bashrc file" 
+
+  caveats "The correct way to add conda to your path is by sourcing
+           /opt/miniconda3/etc/profile.d/conda.sh path either every
+           time you want or in your .bashrc file"
 end
