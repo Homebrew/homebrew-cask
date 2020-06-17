@@ -1,6 +1,6 @@
 cask 'privatevpn' do
-  version '3.0.2'
-  sha256 '84620dcfbc50533d6773c17c454eeb10c9592421605992f1c63ea78db124a387'
+  version '3.0.3'
+  sha256 'f661d72ba3fe23790376ead1ad78d56c65a78840a65c5dccc4cf83f81b0d9c26'
 
   url 'https://privatevpn.com/client/PrivateVPN.dmg'
   appcast 'https://xu515.pvdatanet.com/v3/mac/appcast.xml'
