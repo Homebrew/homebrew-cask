@@ -7,7 +7,7 @@ cask 'app-cleaner' do
   name 'Nektony App Cleaner & Uninstaller'
   homepage 'https://nektony.com/mac-app-cleaner'
 
-  app 'App Cleaner & Uninstaller.app'
+  app "App Cleaner #{version.major}.app"
 
   zap trash: [
                '~/Library/Application Scripts/com.nektony.App-Cleaner-Pro',
