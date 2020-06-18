@@ -5,7 +5,7 @@ cask 'blackhole' do
   url "https://existential.audio/downloads/BlackHole.v#{version}.pkg"
   appcast 'https://github.com/ExistentialAudio/BlackHole/releases.atom'
   name 'BlackHole'
-  homepage 'http://existential.audio/blackhole/'
+  homepage 'https://existential.audio/blackhole/'
 
   pkg "BlackHole.v#{version}.pkg"
 
