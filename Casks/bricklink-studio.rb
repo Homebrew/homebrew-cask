@@ -2,8 +2,8 @@ cask 'bricklink-studio' do
   version '2.1.5_10'
   sha256 'f5d36786aab7590f1415e15682047025718787027797e56d54d206b510345b27'
 
-  # s3.amazonaws.com/blstudio was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/blstudio/Studio#{version.major}.0/Archive/#{version}/Studio+#{version.major}.0.pkg"
+  # blstudio.s3.amazonaws.com/ was verified as official when first introduced to the cask
+  url "https://blstudio.s3.amazonaws.com/Studio#{version.major}.0/Archive/#{version}/Studio+#{version.major}.0.pkg"
   appcast 'https://bricklink.com/v3/studio/download.page'
   name 'Studio'
   homepage 'https://bricklink.com/v3/studio/download.page'
