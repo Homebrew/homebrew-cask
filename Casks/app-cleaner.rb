@@ -2,7 +2,7 @@ cask 'app-cleaner' do
   version '7.0'
   sha256 'c809a9e00d1de525906e7305a53897eb06ed77110a5b58f7fc002c1a7d4e96c3'
 
-  url 'https://nektony.com/pro-support/mac-app-cleaner-pro/update/update.zip'
+  url 'https://nektony.com/download/app-cleaner-uninstaller/app-cleaner-uninstaller.dmg'
   appcast 'https://nektony.com/pro-support/app-cleaner/update/update.xml'
   name 'Nektony App Cleaner & Uninstaller'
   homepage 'https://nektony.com/mac-app-cleaner'
