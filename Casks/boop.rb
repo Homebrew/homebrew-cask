@@ -9,4 +9,9 @@ cask 'boop' do
   homepage 'https://boop.okat.best/'
 
   app 'Boop.app'
+
+  zap trash: [
+               '~/Library/Application Scripts/com.okatbest.boop',
+               '~/Library/Containers/com.okatbest.boop',
+             ]
 end
