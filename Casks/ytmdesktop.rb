@@ -7,5 +7,5 @@ cask 'ytmdesktop' do
   name 'YouTube Music Desktop App'
   homepage 'https://ytmdesktop.app'
 
-  app 'ytmdesktop.app'
+  app 'YouTube Music Desktop App.app'
 end
