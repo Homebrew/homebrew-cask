@@ -1,12 +1,12 @@
 cask 'colour-contrast-analyser' do
-  version '2.4'
-  sha256 'bf8559d329675e776d4b5be382d789b2c94087d8f5f88386112406e6e59f02c9'
+  version '3.1.0'
+  sha256 '0e47c4be616b95b4ce262e225e4775e5951590f3a0ad98a51dae0d220f2f1fe6'
 
-  # github.com/ThePacielloGroup/CCA-OSX/ was verified as official when first introduced to the cask
-  url "https://github.com/ThePacielloGroup/CCA-OSX/releases/download/#{version}/Colour.Contrast.Analyser.app.zip"
-  appcast 'https://github.com/ThePacielloGroup/CCA-OSX/releases.atom'
-  name 'Colour Contrast Analyser'
-  homepage 'https://www.paciellogroup.com/resources/contrastanalyser/'
+  # github.com/ThePacielloGroup/CCAe was verified as official when first introduced to the cask
+  url "https://github.com/ThePacielloGroup/CCAe/releases/download/v#{version}/CCA-#{version}.dmg"
+  appcast 'https://github.com/ThePacielloGroup/CCAe/releases.atom'
+  name 'Colour Contrast Analyser (CCA)'
+  homepage 'https://developer.paciellogroup.com/resources/contrastanalyser/'
 
-  app 'Colour Contrast Analyser.app'
+  app 'Colour Contrast Analyser (CCA).app'
 end
