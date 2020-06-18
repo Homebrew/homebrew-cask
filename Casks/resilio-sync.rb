@@ -1,6 +1,6 @@
 cask 'resilio-sync' do
-  version '2.7.0'
-  sha256 'ea7b33283c6993c1d6f2ed3e75ba5743bf014b3a19351f5cfeb6dddd8f8cb842'
+  version '2.7.1'
+  sha256 'ac17763ded34445e52ad958279631707ad91604d8fa7a8ff225286c4b43124f5'
 
   url "https://download-cdn.resilio.com/#{version}/osx/Resilio-Sync.dmg"
   appcast "https://help.resilio.com/hc/en-us/articles/206216855-Sync-#{version.major}-x-change-log"
