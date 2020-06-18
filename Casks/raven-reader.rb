@@ -1,6 +1,6 @@
 cask 'raven-reader' do
-  version '0.8.0'
-  sha256 '83e31fb5ecc770b49d46370188da039a0fa710d3a7b3489f9e62d4dab45062d4'
+  version '0.8.1'
+  sha256 '1e719727703a29eee7fa23bae27be85b6ac0f69b6090135aaef6c8e1addc7bfd'
 
   url "https://download.ravenreader.app/ravenreader/Raven%20Reader-#{version}-mac.zip"
   appcast 'https://download.ravenreader.app/ravenreader/latest-mac.yml'
