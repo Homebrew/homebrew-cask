@@ -1,13 +1,13 @@
 cask 'app-cleaner' do
-  version '6.10'
-  sha256 '827f6a75c6ef61557611025b6b4717630a9f22e5847e5f4d34c0cf2fe1d5d05d'
+  version '7.0'
+  sha256 'a900a7ae17283d579fb1eee6ef8dd259d79455b7543b12fdd5f1b66e2db9dfb3'
 
   url 'https://nektony.com/download/app-cleaner-uninstaller/app-cleaner-uninstaller.dmg'
-  appcast 'https://nektony.com/promo/mac-app-cleaner-pro/update/update.xml'
+  appcast 'https://nektony.com/pro-support/app-cleaner/update/update.xml'
   name 'Nektony App Cleaner & Uninstaller'
   homepage 'https://nektony.com/mac-app-cleaner'
 
-  app 'App Cleaner.app'
+  app "App Cleaner #{version.major}.app"
 
   zap trash: [
                '~/Library/Application Scripts/com.nektony.App-Cleaner-Pro',
