@@ -10,7 +10,7 @@ When a plain URL string is insufficient to fetch a file, additional information 
 
 | key                | value       |
 | ------------------ | ----------- |
-| `verified:`        | a string repeating the beginning of `url`, for verification purposes. [See below](https://github.com/Homebrew/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/url.md#when-url-and-homepage-hostnames-differ-add-verified).
+| `verified:`        | a string repeating the beginning of `url`, for verification purposes. [See below](#when-url-and-homepage-hostnames-differ-add-verified).
 | `using:`           | the symbol `:post` is the only legal value
 | `cookies:`         | a hash of cookies to be set in the download request
 | `referer:`         | a string holding the URL to set as referer in the download request
