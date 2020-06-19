@@ -1,6 +1,6 @@
 cask 'securesafe' do
-  version '2.7.0'
-  sha256 '85da709463cea53b41b2609eb650ce85be90178c123bd815c1c3f1f5da558529'
+  version '2.7.1'
+  sha256 'dc501d465214a986c777019b16cef2ee77bd7062a3c23a7839ab6aa62d4b2366'
 
   url "https://www.securesafe.com/downloads/SecureSafe_#{version}.pkg"
   appcast 'https://www.securesafe.com/en/downloads/'
