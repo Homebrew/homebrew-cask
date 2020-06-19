@@ -10,7 +10,7 @@ cask 'zoom-in' do
 
   depends_on macos: '>= :mojave'
 
-  app 'Zoom In.app'
+  app 'ZoomIn.app'
 
   zap trash: [
                '~/Library/Application Scripts/com.nothingmagical.zoom-in',
