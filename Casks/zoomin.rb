@@ -1,4 +1,4 @@
-cask 'zoom-in' do
+cask 'zoomin' do
   version '1.0.4'
   sha256 '32d39c18cd8f1a6bf2549b3d9208623e910920e89800374c218354a5a9722ab5'
 
@@ -10,7 +10,7 @@ cask 'zoom-in' do
 
   depends_on macos: '>= :mojave'
 
-  app 'Zoom In.app'
+  app 'ZoomIn.app'
 
   zap trash: [
                '~/Library/Application Scripts/com.nothingmagical.zoom-in',
