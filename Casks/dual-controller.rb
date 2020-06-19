@@ -2,6 +2,7 @@ cask 'dual-controller' do
   version '2.59'
   sha256 'fd153aa9ba241646359bab316c614fd2408fd88abd4743b8252b4e08daee544a'
 
+  # gscs-b2c.lge.com was verified as official when first introduced to the cask
   url 'http://gscs-b2c.lge.com/downloadFile?fileId=tZUjIlaZXB4k12pcp3PA'
   name 'LG Dual Controller'
   homepage 'https://www.lg.com/us/support/software-firmware-drivers'
