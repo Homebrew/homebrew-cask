@@ -1,6 +1,6 @@
 cask 'zoom-in' do
-  version '1.0.3'
-  sha256 'd27cd9bd969ef252537dd7d50175739021781e80219072159211786527e74864'
+  version '1.0.4'
+  sha256 '32d39c18cd8f1a6bf2549b3d9208623e910920e89800374c218354a5a9722ab5'
 
   # github.com/nothingmagical/ZoomIn/ was verified as official when first introduced to the cask
   url "https://github.com/nothingmagical/ZoomIn/releases/download/v#{version}/ZoomIn-#{version}.zip"
