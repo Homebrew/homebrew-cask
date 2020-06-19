@@ -1,4 +1,4 @@
-cask 'zoom-in' do
+cask 'zoomin' do
   version '1.0.4'
   sha256 '32d39c18cd8f1a6bf2549b3d9208623e910920e89800374c218354a5a9722ab5'
 
