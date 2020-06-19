@@ -4,7 +4,7 @@ cask 'dual-controller' do
 
   url 'http://gscs-b2c.lge.com/downloadFile?fileId=tZUjIlaZXB4k12pcp3PA'
   name 'LG Dual Controller'
-  homepage 'https://www.lg.com/jp/support/software-firmware'
+  homepage 'https://www.lg.com/us/support/software-firmware-drivers'
 
   pkg 'DC2.59_MultiSubPC_PKG_20190121.pkg'
 
