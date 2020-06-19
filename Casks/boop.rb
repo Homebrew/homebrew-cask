@@ -8,6 +8,8 @@ cask 'boop' do
   name 'Boop'
   homepage 'https://boop.okat.best/'
 
+  depends_on macos: '>= :mojave'
+
   app 'Boop.app'
 
   zap trash: [
