@@ -1,4 +1,4 @@
-cask 'ytmdesktop-player' do
+cask 'ytmdesktop-youtube-music' do
   version '1.11.0'
   sha256 '2a6a0280d4242d5a0ae48e021999269dac8b5d755115ef2d0d09b521947d61e4'
 
