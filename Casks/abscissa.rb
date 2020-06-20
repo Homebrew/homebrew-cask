@@ -1,6 +1,6 @@
 cask 'abscissa' do
-  version '4.0.2'
-  sha256 '6b78b8cee2141bd528b11c5d5b7754cde82b1f21f35db0ab86fd363015d535a3'
+  version '4.0.3'
+  sha256 '348162e44c506fc0a3f0259c226d09ebc3122f74778a173d99e4fdbe26f81675'
 
   url "http://rbruehl.macbay.de/Abscissa/Downloads/Abscissa-#{version}.zip"
   appcast 'http://rbruehl.macbay.de/Abscissa/Downloads/'
