@@ -13,5 +13,5 @@ cask 'funter' do
   name 'Funter'
   homepage 'https://nektony.com/products/funter'
 
-  app 'Funter.app'
+  app "Funter #{version.major}.app"
 end
