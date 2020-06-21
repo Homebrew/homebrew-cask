@@ -1,19 +1,19 @@
 cask 'bingpaper' do
-  version '0.11.1'
+  version '0.11.1,46'
   sha256 '29694e8ae3bea1a50719865ffe4ca19e7794b1c7dc733a2cd532056cf35641ee'
 
-  url "https://github.com/pengsrc/BingPaper/releases/download/v#{version}/BingPaper.v#{version}.build.46.zip"
+  url "https://github.com/pengsrc/BingPaper/releases/download/v#{version.before_comma}/BingPaper.v#{version.before_comma}.build.#{version.after_comma}.zip"
   appcast 'https://github.com/pengsrc/BingPaper/releases.atom'
   name 'BingPaper'
   homepage 'https://github.com/pengsrc/BingPaper'
 
-  auto_updates false
-
   app 'BingPaper.app'
 
-  uninstall quit: 'io.pjw.mac.BingPaper'
+  uninstall launchctl: 'io.pjw.mac.BingPaperLoginItem',
+            quit:      'io.pjw.mac.BingPaper'
 
-  zap trash: [
+  zap rmdir: '~/Pictures/BingPaper',
+      trash: [
                '~/Library/Application Scripts/io.pjw.mac.BingPaper',
                '~/Library/Application Scripts/io.pjw.mac.BingPaperLoginItem',
                '~/Library/Containers/io.pjw.mac.BingPaper',
