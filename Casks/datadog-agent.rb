@@ -31,7 +31,7 @@ cask 'datadog-agent' do
     If you ever want to start/stop the Agent, please use the Datadog Agent App or datadog-agent command.
     It will start automatically at login, if you want to enable it at startup, run these commands:
 
-    sudo cp '/opt/datadog-agent/etc/com.datadoghq.agent.plist' /Library/LaunchDaemons
+    sudo cp '/opt/datadog-agent/etc/com.datadoghq.agent.plist.example' /Library/LaunchDaemons/com.datadoghq.agent.plist
     sudo launchctl load -w /Library/LaunchDaemons/com.datadoghq.agent.plist
   EOS
 end
