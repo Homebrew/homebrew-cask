@@ -8,6 +8,7 @@ cask 'subsync' do
   name 'subsync'
   homepage 'https://subsync.online/'
 
+  app 'subsync.app'
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/subsync.wrapper.sh"
   binary shimscript, target: 'subsync'
