@@ -9,4 +9,5 @@ cask 'kui' do
   homepage 'https://kui.tools/'
 
   app 'Kui-darwin-x64/Kui.app'
+  binary "#{appdir}/Kui.app/Contents/Resources/kubectl-kui"
 end
