@@ -7,7 +7,7 @@ cask 'airmedia' do
   name 'Crestron AirMedia'
   homepage 'https://www.crestron.com/microsites/airmedia-mobile-wireless-hd-presentations'
 
-  container nested: "airmedia_osx_#{version}_guest/airmedia_osx_#{version}_guest.dmg"
+  container nested: "airmedia_osx_#{version.dots_to_underscores}_guest/airmedia_osx_#{version}_guest.dmg"
 
   app 'Crestron AirMedia.app'
 end
