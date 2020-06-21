@@ -21,7 +21,6 @@ cask 'subsync' do
   end
 
   zap trash: [
-               '~/Library/Preferences/subsync/subsync.json',
-               '~/Library/Preferences/subsync/assets/',
+               '~/Library/Preferences/subsync/',
              ]
 end
