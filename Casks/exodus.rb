@@ -1,6 +1,6 @@
 cask 'exodus' do
-  version '20.6.8'
-  sha256 'ddf6eb949624e6f512b518063c3a20b6ddfd177faa7af619ae98f41b306c2154'
+  version '20.6.18'
+  sha256 '7c842f77d72d87292f58d60ca81dcc442eca555e665db6cac09e7adab47c34dd'
 
   url "https://downloads.exodus.io/releases/exodus-macos-#{version}.dmg"
   appcast 'https://www.exodus.io/releases/'
