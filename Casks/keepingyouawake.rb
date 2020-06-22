@@ -12,8 +12,7 @@ cask 'keepingyouawake' do
 
   app 'KeepingYouAwake.app'
 
-  uninstall launchctl: 'info.marcel-dierkes.KeepingYouAwake.Launcher',
-            quit:      'info.marcel-dierkes.KeepingYouAwake'
+  uninstall quit: 'info.marcel-dierkes.KeepingYouAwake'
 
   zap trash: [
                '~/Library/Application Scripts/info.marcel-dierkes.KeepingYouAwake',
