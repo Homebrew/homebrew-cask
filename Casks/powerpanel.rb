@@ -12,5 +12,6 @@ cask 'powerpanel' do
   installer manual: 'CyberPower PowerPanel Personal Installer.app'
 
   uninstall pkgutil:   'com.cpsww.ppupsd',
-            launchctl: 'com.cpsww.ppupsd'
+            launchctl: 'com.cpsww.ppupsd',
+            delete:    '/Applications/CyberPower PowerPanel Personal'
 end
