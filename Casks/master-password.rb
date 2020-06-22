@@ -8,7 +8,7 @@ cask 'master-password' do
 
   app 'Master Password.app'
 
-  uninstall quit:      'com.lyndir.lhunath.MasterPassword.Mac'
+  uninstall quit: 'com.lyndir.lhunath.MasterPassword.Mac'
 
   zap trash: [
                '~/Library/Application Scripts/com.lyndir.lhunath.MasterPassword.Mac',
