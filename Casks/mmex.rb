@@ -1,6 +1,6 @@
 cask 'mmex' do
-  version '1.3.4'
-  sha256 '8338c3e8c859b900d86437b8ff72e80c16f440b568068419bc65aa920a4f66a7'
+  version '1.3.5'
+  sha256 'ed27e39373c0e74ea856e2cb91b3b6f99fb745b8ec8b83424f7e406e8428fa7d'
 
   # sourceforge.net/projects/moneymanagerex/ was verified as official when first introduced to the cask
   url 'https://sourceforge.net/projects/moneymanagerex/files/latest/download'
