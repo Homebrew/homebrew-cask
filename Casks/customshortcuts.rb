@@ -8,4 +8,10 @@ cask 'customshortcuts' do
   homepage 'https://www.houdah.com/customShortcuts/'
 
   app 'CustomShortcuts.app'
+
+  zap trash: [
+               '~Library/Application Support/com.houdah.CustomShortcuts',
+               '~/Library/Caches/com.houdah.CustomShortcuts',
+               '~/Library/Preferences/com.houdah.CustomShortcuts.plist',
+             ]
 end
