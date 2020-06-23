@@ -11,4 +11,8 @@ cask 'qtvlm' do
   depends_on macos: '>= :sierra'
 
   app 'qtVlm'
+
+  zap trash: [
+               '~/Library/Saved Application State/com.meltemus.qtVlm.savedState',
+             ]
 end
