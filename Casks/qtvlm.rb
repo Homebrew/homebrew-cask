@@ -8,5 +8,7 @@ cask 'qtvlm' do
   name 'qtvlm'
   homepage 'https://www.meltemus.com/index.php/en/'
 
+  depends_on macos: '>= :sierra'
+
   app 'qtVlm'
 end
