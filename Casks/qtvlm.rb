@@ -12,7 +12,5 @@ cask 'qtvlm' do
 
   app 'qtVlm'
 
-  zap trash: [
-               '~/Library/Saved Application State/com.meltemus.qtVlm.savedState',
-             ]
+  zap trash: '~/Library/Saved Application State/com.meltemus.qtVlm.savedState'
 end
