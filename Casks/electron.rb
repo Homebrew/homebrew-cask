@@ -6,7 +6,7 @@ cask 'electron' do
   url "https://github.com/electron/electron/releases/download/v#{version}/electron-v#{version}-darwin-x64.zip"
   appcast 'https://github.com/electron/electron/releases.atom'
   name 'Electron'
-  homepage 'hhttps://electronjs.org/'
+  homepage 'https://electronjs.org/'
 
   app 'Electron.app'
 
