@@ -7,6 +7,8 @@ cask 'bingpaper' do
   name 'BingPaper'
   homepage 'https://github.com/pengsrc/BingPaper'
 
+  depends_on macos: '>= :catalina'
+
   app 'BingPaper.app'
 
   uninstall launchctl: 'io.pjw.mac.BingPaperLoginItem',
