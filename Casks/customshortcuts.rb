@@ -10,7 +10,7 @@ cask 'customshortcuts' do
   app 'CustomShortcuts.app'
 
   zap trash: [
-               '~Library/Application Support/com.houdah.CustomShortcuts',
+               '~/Library/Application Support/com.houdah.CustomShortcuts',
                '~/Library/Caches/com.houdah.CustomShortcuts',
                '~/Library/Preferences/com.houdah.CustomShortcuts.plist',
              ]
