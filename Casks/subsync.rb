@@ -20,7 +20,5 @@ cask 'subsync' do
     EOS
   end
 
-  zap trash: [
-               '~/Library/Preferences/subsync/',
-             ]
+  zap trash: '~/Library/Preferences/subsync/'
 end
