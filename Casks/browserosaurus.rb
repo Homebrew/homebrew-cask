@@ -8,5 +8,7 @@ cask 'browserosaurus' do
   name 'Browserosaurus'
   homepage 'https://will-stone.github.io/browserosaurus/'
 
+  auto_updates true
+
   app 'Browserosaurus.app'
 end
