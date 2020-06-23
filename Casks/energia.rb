@@ -4,6 +4,8 @@ cask 'energia' do
 
   # s3.amazonaws.com/energiaUS was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/energiaUS/distributions/energia-#{version}-macosx-signed.zip"
+  appcast 'https://energia.nu/download/',
+          must_contain: version
   name 'Energia'
   homepage 'https://energia.nu/'
 
