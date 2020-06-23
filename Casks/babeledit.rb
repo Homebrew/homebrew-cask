@@ -9,4 +9,6 @@ cask 'babeledit' do
   homepage 'https://www.codeandweb.com/babeledit'
 
   app 'BabelEdit.app'
+
+  zap trash: '~/Library/Preferences/de.code-and-web.BabelEdit.plist'
 end
