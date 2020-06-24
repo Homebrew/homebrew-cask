@@ -1,6 +1,6 @@
 cask 'linear-linear' do
-  version '1.2.5'
-  sha256 '825611a1d80b3721c71e912d10015b1a1e44b59f40767616f7a0bba77c7de7ce'
+  version '1.2.6'
+  sha256 '7eb241720d3112189afb5a1e68fc79978d14d18ef9574dd508667f3337049394'
 
   url "https://download.linear.app/darwin/Linear-darwin-x64-#{version}.zip"
   appcast 'https://api.linear.app/update/darwin/0.0.0'
