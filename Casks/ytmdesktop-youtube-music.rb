@@ -8,4 +8,9 @@ cask 'ytmdesktop-youtube-music' do
   homepage 'https://ytmdesktop.app/'
 
   app 'YouTube Music Desktop App.app'
+  
+  zap trash: [
+               '~/Library/Preferences/app.ytmd.plist',
+               '~/Library/Saved Application State/app.ytmd.savedState',
+             ]
 end
