@@ -8,7 +8,7 @@ cask 'navicat-premium' do
   end
 
   language 'en', default: true do
-    sha256 'ba0ddffa076c7d01384dedf7383bcc33695d27c584223944e62f8df388403f3d'
+    sha256 'abc959616d08b2f0dabe08f40068013bfb716352f725197e2221f92e0e828707'
     url "http://download.navicat.com/download/navicat#{version.major_minor.no_dots}_premium_en.dmg"
     appcast 'https://updater.navicat.com/mac/navicat_updates.php?appName=Navicat%20Premium&appLang=en'
     homepage 'https://www.navicat.com/products/navicat-premium'
