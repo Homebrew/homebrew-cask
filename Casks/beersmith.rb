@@ -2,8 +2,8 @@ cask 'beersmith' do
   version '3.1.5'
   sha256 'b63093792ce02ba175414ae620dbbada9cfdd91ec0ed4d84e5b60699a5b76ce8'
 
-  # beersmith-3.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://beersmith-3.s3.amazonaws.com/BeerSmith#{version.dots_to_underscores}.dmg"
+  # beersmith3-1.s3.amazonaws.com/ was verified as official when first introduced to the cask
+  url "https://beersmith3-1.s3.amazonaws.com/BeerSmith#{version.dots_to_underscores}.dmg"
   appcast 'https://beersmith.com/download-beersmith/'
   name 'BeerSmith'
   homepage 'https://beersmith.com/'
