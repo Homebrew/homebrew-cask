@@ -2,7 +2,7 @@ cask 'navicat-premium' do
   version '15.0.17'
 
   language 'zh', 'CN' do
-    sha256 '2fe70a1cc4ab9f633746886a6a6048bf55af12635ed0b3c9d08c512d0524db4c'
+    sha256 'f46f38799aaa69d830c04f789f917151bdab1eeee617433daaea6d33b5a7bd2d'
     url "http://download.navicat.com.cn/download/navicat#{version.major_minor.no_dots}_premium_cs.dmg"
     homepage 'https://www.navicat.com.cn/products/navicat-premium'
   end
