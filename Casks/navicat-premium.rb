@@ -1,5 +1,5 @@
 cask 'navicat-premium' do
-  version '15.0.17'
+  version '15.0.18'
 
   language 'zh-CN' do
     sha256 'f46f38799aaa69d830c04f789f917151bdab1eeee617433daaea6d33b5a7bd2d'
