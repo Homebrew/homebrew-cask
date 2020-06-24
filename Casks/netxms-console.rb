@@ -9,7 +9,5 @@ cask 'netxms-console' do
 
   app 'NetXMS Console.app'
 
-  zap trash: [
-               '~/.nxmc',
-             ]
+  zap trash: '~/.nxmc'
 end
