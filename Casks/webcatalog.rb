@@ -1,6 +1,6 @@
 cask 'webcatalog' do
-  version '22.0.1'
-  sha256 '4950b1a2a2f5653b03b4bb09df13e97ee48617aa78910f566c914a670f88aadc'
+  version '22.0.2'
+  sha256 'e691f6a61a8bfbb0bea4a74653f0006ede92f7697b6e38d228e5f1db9c2b53fd'
 
   # github.com/quanglam2807/webcatalog/ was verified as official when first introduced to the cask
   url "https://github.com/quanglam2807/webcatalog/releases/download/v#{version}/WebCatalog-#{version}-mac.zip"
