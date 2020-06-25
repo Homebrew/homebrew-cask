@@ -7,12 +7,12 @@ cask 'sequel-ace' do
   name 'Sequel Ace'
   homepage 'https://github.com/Sequel-Ace/Sequel-Ace'
 
-  app 'Sequel Pro.app'
+  app 'Sequel Ace.app'
 
   zap trash: [
                '~/Library/Application Support/Sequel Ace',
-               '~/Library/Caches/com.sequelpro.SequelAce',
-               '~/Library/Preferences/com.sequelpro.SequelAce.plist',
+               '~/Library/Caches/com.sequelace.SequelAce',
+               '~/Library/Preferences/com.sequelace.SequelAce.plist',
                '~/Library/Saved Application State/com.sequelace.SequelAce.savedState',
              ]
 end
