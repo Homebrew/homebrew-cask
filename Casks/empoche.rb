@@ -1,6 +1,6 @@
 cask 'empoche' do
-  version '0.4.3'
-  sha256 '3bdcbc742be337db49e63bb4c675938e3a921993be733980404c6fc41b016bf5'
+  version '0.4.4'
+  sha256 '49eec7f431548aa3848b88085c158f2d2191b712a23be1133498a2748c1718a8'
 
   # empoche-desktop.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://empoche-desktop.s3.amazonaws.com/Empoche-#{version}-mac.zip"
