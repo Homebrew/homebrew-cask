@@ -1,6 +1,6 @@
 cask 'utools' do
-  version '1.1.1'
-  sha256 'f4792db7d82af7c562d6a194f0f2e9cb681f1d8b5b5ee59078607cfdbbd201fa'
+  version '1.1.3'
+  sha256 'e8403c2b8a19a1863fb306fc8b8b038ce13a8c96bc38e263ac73dfbb34aa555c'
 
   # resource.u-tools.cn/ was verified as official when first introduced to the cask
   url "https://resource.u-tools.cn/currentversion/uTools-#{version}.dmg"
