@@ -1,6 +1,6 @@
 cask 'airdisplay' do
-  version '3.3.3'
-  sha256 '773b71d4a572d7af79dc9812f77f2299c73ba5045a0d29cbdf5943d2505a4025'
+  version '3.4.1'
+  sha256 '71468b687c6a0a9e715a94e9afd15b69dae44098ebdfcf2a0071eb5d9d3636ce'
 
   url "https://www.avatron.com/updates/software/airdisplay/ad#{version.no_dots}.zip"
   appcast 'https://www.avatron.com/updates/software/airdisplay/appcast.xml'
