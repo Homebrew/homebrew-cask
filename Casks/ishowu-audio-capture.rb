@@ -9,4 +9,8 @@ cask 'ishowu-audio-capture' do
   pkg "iShowU Audio Capture-#{version}.pkg"
 
   uninstall pkgutil: 'com.shinywhitebox.iShowU-Audio-Capture'
+
+  caveats do
+    kext
+  end
 end
