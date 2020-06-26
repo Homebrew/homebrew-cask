@@ -1,6 +1,6 @@
 cask 'astropad' do
-  version '3.4.0'
-  sha256 'bc90d1888452a08d48e52b5ef298bcc4e5ab67fc29fef5aa8b8a95ffbea23f02'
+  version '3.4.1'
+  sha256 '6edacd8c0985cd51304618a1ea9963a0a71fdf09be7af56d7d9c336b94b6ff3a'
 
   url "https://downloads.astropad.com/standard/Astropad-#{version}.dmg"
   appcast 'https://s3.amazonaws.com/astropad.com/downloads/sparkle.xml'
