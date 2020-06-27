@@ -13,9 +13,7 @@ cask 'nordvpn-teams' do
   pkg 'NordVPNTeams.pkg'
 
   uninstall quit:      'com.nordvpn.macos.teams.NordVPNTeamsLauncher',
-            launchctl: [
-                         'com.nordvpn.macos.teams.21696',
-                       ],
+            launchctl: 'com.nordvpn.macos.teams.21696',
             delete:    '/Library/PrivilegedHelperTools/com.nordvpn.osx.helper',
             pkgutil:   'com.nordvpn.macos.teams'
 
