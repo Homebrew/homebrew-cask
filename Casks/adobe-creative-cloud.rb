@@ -2,7 +2,7 @@ cask 'adobe-creative-cloud' do
   version '5.2.0.436'
   sha256 'c0591e474e30d6451e190ffd8caff8622260bedaaac00278ddbf24f81aa127d1'
 
-  url "https://ccmdl.adobe.com/AdobeProducts/KCCC/CCD/#{version.major_minor.dots_to_hyphens}/osx10/ACCCx#{version.dots_to_underscores}.dmg"
+  url "https://ccmdl.adobe.com/AdobeProducts/KCCC/CCD/#{version.major_minor.dots_to_underscores}/osx10/ACCCx#{version.dots_to_underscores}.dmg"
   name 'Adobe Creative Cloud'
   homepage 'https://creative.adobe.com/products/creative-cloud'
 
