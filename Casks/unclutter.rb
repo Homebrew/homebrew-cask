@@ -8,4 +8,12 @@ cask 'unclutter' do
   homepage 'https://unclutterapp.com/'
 
   app 'Unclutter.app'
+
+  zap trash: [
+               '~/Library/Application Support/Unclutter',
+               '~/Library/Caches/com.softwareambience.Unclutter',
+               '~/Library/Containers/com.softwareambience.Unclutter',
+               '~/Library/Group Containers/*.com.softwareanbience.Unclutter',
+               '~/Library/Preferences/com.softwareambience.Unclutter.plist',
+             ]
 end
