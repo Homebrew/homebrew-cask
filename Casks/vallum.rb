@@ -10,5 +10,9 @@ cask 'vallum' do
 
   pkg 'Vallum.pkg'
 
-  uninstall pkgutil: 'it.murus.afw.Vallum'
+  uninstall pkgutil:   'it.murus.afw.Vallum',
+            launchctl: [
+                         'it.murus.afw.core',
+                         'it.murus.afw.helper',
+                       ]
 end
