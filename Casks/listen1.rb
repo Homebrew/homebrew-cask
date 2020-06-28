@@ -1,7 +1,7 @@
 cask 'listen1' do
   # note: "1" is not a version number, but an intrinsic part of the product name
-  version '2.7.2'
-  sha256 'b64cae4a4ae91292d18167418e2edf7ec663c08481ba601852911f3c5a1de6fc'
+  version '2.8.0'
+  sha256 '6aa89b54ff4c1c357e046d98821b5e5ef50fb2cd10a99371a494f093aad59896'
 
   # github.com/listen1/listen1_desktop/ was verified as official when first introduced to the cask
   url "https://github.com/listen1/listen1_desktop/releases/download/v#{version}/Listen1_#{version}_mac.dmg"
