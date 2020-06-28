@@ -1,5 +1,5 @@
 cask 'marginnote' do
-  version '3.6.12'
+  version '3.6.13'
   sha256 'a64b89b5cc27204f067a67b3217e71ea4e038de956ddbed1a81dd95fb98457e2'
 
   # marginstudy.com/ was verified as official when first introduced to the cask
