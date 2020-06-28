@@ -2,12 +2,15 @@ cask 'karabiner-elements' do
   if MacOS.version == :el_capitan
     version '11.6.0'
     sha256 'c1b06252ecc42cdd8051eb3d606050ee47b04532629293245ffdfa01bbc2430d'
+
+    url "https://pqrs.org/osx/karabiner/files/Karabiner-Elements-#{version}.dmg"
   else
-    version '12.9.0'
+    version '12.10.0'
     sha256 '4fbb27421b90f1c4a8091986b47de16813227304a8325c6fa1860f7c7d013dc4'
+
+    url "https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg"
   end
 
-  url "https://pqrs.org/osx/karabiner/files/Karabiner-Elements-#{version}.dmg"
   appcast 'https://pqrs.org/osx/karabiner/files/karabiner-elements-appcast.xml'
   name 'Karabiner Elements'
   homepage 'https://pqrs.org/osx/karabiner/'
