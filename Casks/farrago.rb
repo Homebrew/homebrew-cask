@@ -7,6 +7,7 @@ cask 'farrago' do
   name 'Farrago'
   homepage 'https://rogueamoeba.com/farrago/'
 
+  auto_updates true
   depends_on macos: '>= :sierra'
 
   app 'Farrago.app'
