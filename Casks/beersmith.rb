@@ -1,6 +1,6 @@
 cask 'beersmith' do
-  version '3.1.5'
-  sha256 'b63093792ce02ba175414ae620dbbada9cfdd91ec0ed4d84e5b60699a5b76ce8'
+  version '3.1.6'
+  sha256 '049df9ff8a0f11d9ac8c70a8b37482b4a93fcda28b739a9f4775f43b55774f79'
 
   # beersmith3-1.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://beersmith3-1.s3.amazonaws.com/BeerSmith#{version.dots_to_underscores}.dmg"
