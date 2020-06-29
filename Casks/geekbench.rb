@@ -12,6 +12,8 @@ cask 'geekbench' do
   name 'Geekbench'
   homepage 'https://www.geekbench.com/'
 
+  auto_updates true
+
   app "Geekbench #{version.major}.app"
 
   zap trash: [
