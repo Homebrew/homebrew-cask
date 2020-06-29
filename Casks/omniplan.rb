@@ -15,6 +15,7 @@ cask 'omniplan' do
   name 'OmniPlan'
   homepage 'https://www.omnigroup.com/omniplan/'
 
+  auto_updates true
   depends_on macos: '>= :high_sierra'
 
   app 'OmniPlan.app'
