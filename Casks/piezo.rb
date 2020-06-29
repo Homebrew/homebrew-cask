@@ -7,6 +7,7 @@ cask 'piezo' do
   name 'Piezo'
   homepage 'https://rogueamoeba.com/piezo/'
 
+  auto_updates true
   depends_on macos: '>= :sierra'
 
   app 'Piezo.app'
