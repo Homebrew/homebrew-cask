@@ -7,6 +7,8 @@ cask 'timing' do
   name 'Timing'
   homepage 'https://timingapp.com/'
 
+  auto_updates true
+
   app 'Timing.app'
 
   uninstall login_item: 'TimingHelper'
