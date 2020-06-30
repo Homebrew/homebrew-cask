@@ -6,6 +6,8 @@ cask 'timing' do
   appcast 'https://timingapp.com/updates/timing2.xml'
   name 'Timing'
   homepage 'https://timingapp.com/'
+  
+  auto_updates true
 
   app 'Timing.app'
 
