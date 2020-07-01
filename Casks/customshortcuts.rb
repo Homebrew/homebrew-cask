@@ -7,6 +7,8 @@ cask 'customshortcuts' do
   name 'CustomShortcuts'
   homepage 'https://www.houdah.com/customShortcuts/'
 
+  auto_updates true
+
   app 'CustomShortcuts.app'
 
   zap trash: [
