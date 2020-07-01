@@ -1,5 +1,5 @@
 cask 'sipgate-softphone' do
-  version '1.9.12'
+  version '1.9.16'
   sha256 'fa938c5475cfcec00dce8778ffa1e2048922a81f4e4f11d053581b9dd3b742f6'
 
   # sipgate-desktop-app.s3.eu-central-1.amazonaws.com was verified as official when first introduced to the cask
