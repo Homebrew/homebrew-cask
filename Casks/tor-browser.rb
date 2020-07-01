@@ -101,9 +101,19 @@ cask 'tor-browser' do
     'ko'
   end
 
+  language 'lt' do
+    sha256 'eaa3ef512136fc0a19d16834194e6a2496a6d888091c271bb6d79b0c6625092f'
+    'lt'
+  end
+
   language 'mk' do
     sha256 'ee24ef612211f555e2f8070b28d2143688b0afcbd4cba7e9b15304ced2edea4a'
     'mk'
+  end
+
+  language 'ms' do
+    sha256 '423cf37e11392c9e77066ab6bf598aabea9b1b26a6526f7cc3c0319b5ee1a444'
+    'ms'
   end
 
   language 'nb' do
@@ -139,6 +149,11 @@ cask 'tor-browser' do
   language 'sv' do
     sha256 'a865a963528339ccc54edb42c581c16d5ae25003d3814f7ed6c022c79928e5c5'
     'sv-SE'
+  end
+
+  language 'th' do
+    sha256 'b9eb9642f34333306f2a83b5dc5d86484f0ad953d3868e566e5377fc08f97bc7'
+    'th'
   end
 
   language 'tr' do
