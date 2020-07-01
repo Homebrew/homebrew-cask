@@ -1,6 +1,6 @@
 cask 'glyphfinder' do
-  version '1.2.0'
-  sha256 '371374cbb85c72530d5953235ec32efc24457c181dcad7fc058121acaf014be2'
+  version '1.3.0'
+  sha256 '82cf68acc2fb2be861ed98ade7f553a3b43967a0859cba477f5b35b9030145cd'
 
   # ueber.fra1.cdn.digitaloceanspaces.com/glyphfinder/ was verified as official when first introduced to the cask
   url "https://ueber.fra1.cdn.digitaloceanspaces.com/glyphfinder/mac/Glyphfinder-#{version}-mac.dmg"
