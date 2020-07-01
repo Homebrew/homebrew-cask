@@ -1,9 +1,9 @@
 cask 'sipgate-softphone' do
   version '1.9.16'
-  sha256 'fa938c5475cfcec00dce8778ffa1e2048922a81f4e4f11d053581b9dd3b742f6'
+  sha256 '047dd79849c1f227fccd67b2e5ecf217c475ea3cec24c881cf9e2737c7308842'
 
-  # sipgate-desktop-app.s3.eu-central-1.amazonaws.com was verified as official when first introduced to the cask
-  url 'https://sipgate-desktop-app.s3.eu-central-1.amazonaws.com/sipgate-softphone.dmg'
+  # sipgate-desktop-app-dev.s3.amazonaws.com/ was verified as official when first introduced to the cask
+  url "https://sipgate-desktop-app-dev.s3.amazonaws.com/sipgate-softphone-#{version}.dmg"
   appcast 'https://sipgate-desktop-app-dev.s3.amazonaws.com/latest-mac.yml'
   name 'sipgate softphone'
   homepage 'https://www.sipgateteam.de/softphone'
