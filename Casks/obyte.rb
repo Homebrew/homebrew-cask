@@ -1,6 +1,6 @@
 cask 'obyte' do
-  version '3.1.1'
-  sha256 '16035610cbd7682c9d286330b90c9320c0443c470920b70d468f81da6cd7a28b'
+  version '3.2.0'
+  sha256 '3f27fc1627c1588141e5f6330d7aeca6c11db602a346cb9c86a5c94084b6258f'
 
   # github.com/byteball/obyte-gui-wallet/ was verified as official when first introduced to the cask
   url "https://github.com/byteball/obyte-gui-wallet/releases/download/v#{version}/Obyte-osx64.dmg"
