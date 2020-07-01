@@ -2,7 +2,7 @@ cask 'customshortcuts' do
   version '1.0.2'
   sha256 'cb9011104f384200f062bba948399d28b668412c03532bfa695d734b9a25270e'
 
-  url "https://www.houdah.com/customShortcuts/download_assets/CustomShortcuts#{version}.zip"
+  url "https://dl.houdah.com/customShortcuts/updates/cast_assets/CustomShortcuts#{version}.zip"
   appcast 'https://www.houdah.com/customShortcuts/updates/cast.xml'
   name 'CustomShortcuts'
   homepage 'https://www.houdah.com/customShortcuts/'
