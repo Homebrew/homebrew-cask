@@ -1,6 +1,6 @@
 cask 'wallpaper-wizard' do
-  version '2.1.6'
-  sha256 '250b877fb73d4c8a968b56990b8847bce83b005801dcf3fef915bdecaab4259b'
+  version '2.2.0'
+  sha256 '8237a147a685cf4831a637b3fbf113ccb14f1150801450b2f1cc96f2f5b7942c'
 
   # dl.devmate.com/com.macpaw.WallWiz-site/ was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.macpaw.WallWiz-site/WallpaperWizard-#{version.major}.dmg"
