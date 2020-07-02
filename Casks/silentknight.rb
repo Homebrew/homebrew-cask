@@ -1,5 +1,5 @@
 cask 'silentknight' do
-  version '1.8,2020.06'
+  version '1.8'
   sha256 '6076892e23d989f81f3050ef2a70ebe12979dd8480fb40a3c76890927d277550'
 
   # eclecticlightdotcom.files.wordpress.com/ was verified as official when first introduced to the cask
