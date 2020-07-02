@@ -1,6 +1,6 @@
 cask 'daemon-tools' do
-  version '8.0.663'
-  sha256 '74213d0cbc504529279506ea3cdce60703cd4c1d6b33826018445be5b438cb4f'
+  version '8.1.703'
+  sha256 '496886d4738a1501ed852bea862cb3cf0b8ff69fdb2e8acbeed142992e4aa1b9'
 
   # web-search-home.com/ was verified as official when first introduced to the cask
   url 'http://web-search-home.com/download/dtLiteMac'
