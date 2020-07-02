@@ -8,4 +8,10 @@ cask 'freetube' do
   homepage 'https://github.com/FreeTubeApp/FreeTube'
 
   app 'FreeTube.app'
+
+  zap trash: [
+    '~/Library/Application Support/FreeTube',
+    '~/Library/Preferences/io.freetubeapp.freetube.plist',
+    '~/Library/Saved Application State/io.freetubeapp.freetube.savedState'
+  ]
 end
