@@ -8,7 +8,7 @@ cask 'silentknight' do
   name 'SilentKnight'
   homepage 'https://eclecticlight.co/lockrattler-systhist/'
 
-  app "silentknight#{version.no_dots}/SilentKnight.app"
+  app "silentknight#{version.before_comma.no_dots}/SilentKnight.app"
 
   zap trash: [
                '~/Library/Caches/co.eclecticlight.SilentKnight',
