@@ -1,6 +1,6 @@
 cask 'xaos' do
-  version '4.0'
-  sha256 'b546012110d508af24113c52449f507d716823f0c25fd29d5a7cd38113b25d58'
+  version '4.1'
+  sha256 'adc6ece52c1df78d5c2ca8c3409a89ef0c0ca3fc222e8c693fb5c2b658c8a934'
 
   # github.com/xaos-project/XaoS/ was verified as official when first introduced to the cask
   url "https://github.com/xaos-project/XaoS/releases/download/release-#{version}/XaoS-#{version}.dmg"
