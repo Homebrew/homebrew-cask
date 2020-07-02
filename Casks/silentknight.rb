@@ -1,14 +1,14 @@
 cask 'silentknight' do
-  version '1.7'
-  sha256 '23b0c313244c4e40954d648a313cd3a9333db567b6e6b2aca591b3c610923cf4'
+  version '1.8,2020.06'
+  sha256 '6076892e23d989f81f3050ef2a70ebe12979dd8480fb40a3c76890927d277550'
 
   # eclecticlightdotcom.files.wordpress.com/ was verified as official when first introduced to the cask
-  url "https://eclecticlightdotcom.files.wordpress.com/2020/05/silentknight#{version.no_dots}.zip"
+  url "https://eclecticlightdotcom.files.wordpress.com/#{version.after_comma.major}/#{version.after_comma.minor}/silentknight#{version.before_comma.no_dots}.zip"
   appcast 'https://eclecticlight.co/lockrattler-systhist/'
   name 'SilentKnight'
   homepage 'https://eclecticlight.co/lockrattler-systhist/'
 
-  app "silentknight#{version.no_dots}/SilentKnight.app"
+  app "silentknight#{version.before_comma.no_dots}/SilentKnight.app"
 
   zap trash: [
                '~/Library/Caches/co.eclecticlight.SilentKnight',
