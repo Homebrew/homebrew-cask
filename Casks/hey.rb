@@ -1,6 +1,6 @@
 cask 'hey' do
-  version '1.0.6'
-  sha256 'd8ac5db02bf311bf1ade3a5e69a9bc587bbb56df0d2792be029071a1571c9c13'
+  version '1.0.8'
+  sha256 '214ee981bc0c6383984231294697985d21f12a18df0272690805c0bf0454460d'
 
   # hey-desktop.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://hey-desktop.s3.amazonaws.com/HEY-#{version}.dmg"
