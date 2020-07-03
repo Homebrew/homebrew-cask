@@ -1,6 +1,6 @@
 cask 'meshlab' do
   version '2020.07'
-  sha256 '84a560b25bda62b26c4e74359d6da0c30b154f60b6deabfad93a177500d0e99b'
+  sha256 '96e249fc4e1b8d02495db468f4094c3669487c90f56104292e84a477960a89d9'
 
   # github.com/cnr-isti-vclab/meshlab/ was verified as official when first introduced to the cask
   url "https://github.com/cnr-isti-vclab/meshlab/releases/download/Meshlab-#{version}/MeshLab#{version}-macos.dmg"
