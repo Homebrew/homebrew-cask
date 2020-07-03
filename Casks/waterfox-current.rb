@@ -1,6 +1,6 @@
 cask 'waterfox-current' do
-  version '2020.06,6820.6.2'
-  sha256 '945e3a87cfd1eb194ee5fd5dcb751ba16dc7eb6c1ffbf9637c7c28d2c4e2729f'
+  version '2020.07,6820.6.30'
+  sha256 '7262baa3c17208c720eaeca872388f7a2df3530acc2869228c32bbb208218afc'
 
   url "https://cdn.waterfox.net/releases/osx64/installer/Waterfox%20Current%20#{version.before_comma}%20Setup.dmg"
   appcast 'https://www.waterfox.net/download/'
