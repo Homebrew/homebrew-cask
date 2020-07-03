@@ -1,8 +1,8 @@
 cask 'endurance' do
-  version '3.0,45'
-  sha256 '84a1d401fc7575fa0e34f0ea7292a97e7f8e51fa87036273b169c2ec31ff437a'
+  version '3.0.1'
+  sha256 'f4805baea7824ac6e3a695b841e0306cf789c72fabb5fd7dd579c76a11992069'
 
-  url "https://enduranceapp.com/prerelease/Endurance#{version.before_comma}r#{version.after_comma}.zip"
+  url "https://enduranceapp.com/downloads/Endurance#{version}.zip"
   appcast 'https://enduranceapp.com/appcast'
   name 'Endurance'
   homepage 'https://enduranceapp.com/'
