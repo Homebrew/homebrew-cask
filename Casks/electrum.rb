@@ -1,6 +1,6 @@
 cask 'electrum' do
-  version '3.3.8'
-  sha256 '767b4f1e1f11bb7489f73c989f538257340ab35bc27d1fe1a62cf68dab187b36'
+  version '4.0.1'
+  sha256 'ae3ae05d9fe537c2300475279ad3624d24ab911dc31e8f3024d8dbce39f085c0'
 
   url "https://download.electrum.org/#{version}/electrum-#{version}.dmg"
   appcast 'https://github.com/spesmilo/electrum/releases.atom'
