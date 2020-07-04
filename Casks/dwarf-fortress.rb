@@ -11,7 +11,11 @@ cask 'dwarf-fortress' do
   binary shimscript, target: 'dwarf-fortress'
 
   preflight do
-    FileUtils.mv(staged_path.join('df_osx/libs/SDL_ttf.framework/Frameworks/FreeType.framework'), staged_path.join('df_osx/libs/SDL_ttf.framework/Frameworks/freetype.framework'))
+    begin
+      FileUtils.mv(staged_path.join('df_osx/libs/SDL_ttf.framework/Frameworks/FreeType.framework'), staged_path.join('df_osx/libs/SDL_ttf.framework/Frameworks/freetype.framework'))
+    rescue SystemCallError
+      # Ignore failed renames (occurs on case-insensitive drives).
+    end
     IO.write shimscript, <<~EOS
       #!/bin/sh
       exec '#{staged_path}/df_osx/df' "$@"
