@@ -11,9 +11,11 @@ cask 'audirvana' do
 
   zap trash: [
                '/Library/LaunchDaemons/com.audirvana.Audirvana-Plus.plist',
+               '/Library/LaunchDaemons/com.audirvana.SysOptimizerTool.plist',
                '/Library/PrivilegedHelperTools/com.audirvana.Audirvana-Plus',
                '~/Library/Caches/com.audirvana.Audirvana-Plus',
                '~/Library/Cookies/com.audirvana.Audirvana-Plus.binarycookies',
+               '~/Library/Preferencescom.audirvana.Audirvana.plist',
                '~/Library/Preferences/com.audirvana.Audirvana-Plus.plist',
              ]
 end
