@@ -10,6 +10,7 @@ After making all changes to a cask, verify:
 Additionally, **if adding a new cask**:
 
 - [ ] Named the cask according to the [token reference](https://github.com/Homebrew/homebrew-cask/blob/master/doc/cask_language_reference/token_reference.md).
+- [ ] `brew cask audit --new-cask {{cask_file}}` worked successfully.
 - [ ] `brew cask install {{cask_file}}` worked successfully.
 - [ ] `brew cask uninstall {{cask_file}}` worked successfully.
 - [ ] Checked the cask was not [already refused](https://github.com/Homebrew/homebrew-cask/search?q=is%3Aclosed&type=Issues).
