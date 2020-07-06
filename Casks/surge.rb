@@ -1,6 +1,6 @@
 cask 'surge' do
-  version '3.5.3-1094'
-  sha256 '772c59f92debdecc6cccb7c57fa3d70a4cc0c5be56136d6da37486499878f03e'
+  version '3.5.4-1119'
+  sha256 'cb747d0f2abb974496b12624ae52c939a4c87588952feb3ead732dd346f8d332'
 
   url "https://www.nssurge.com/mac/v#{version.major}/Surge-#{version}.zip"
   appcast "https://www.nssurge.com/mac/v#{version.major}/appcast-signed.xml"
