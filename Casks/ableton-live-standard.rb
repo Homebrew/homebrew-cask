@@ -7,6 +7,8 @@ cask 'ableton-live-standard' do
   name 'Ableton Live Standard'
   homepage 'https://www.ableton.com/en/live/'
 
+  auto_updates true
+
   app "Ableton Live #{version.major} Standard.app"
 
   zap trash: '~/Library/*/*[Aa]bleton*',
