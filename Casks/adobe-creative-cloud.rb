@@ -6,6 +6,8 @@ cask 'adobe-creative-cloud' do
   name 'Adobe Creative Cloud'
   homepage 'https://creative.adobe.com/products/creative-cloud'
 
+  auto_updates true
+
   installer script: {
                       executable:   "#{staged_path}/Install.app/Contents/MacOS/Install",
                       args:         ['--mode=silent'],
