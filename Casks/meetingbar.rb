@@ -1,6 +1,6 @@
 cask 'meetingbar' do
-  version '1.2'
-  sha256 'b5bc97ec8b3ed7a61a265a6964e8c2179ea4dd6dfa2569c3f56a0f81cbdf17c2'
+  version '1.3'
+  sha256 'ab1309ffa0f00ca590951d8ae827c2c54180ea48b6b327e209d9261427361097'
 
   url "https://github.com/leits/MeetingBar/releases/download/v#{version}/MeetingBar.dmg"
   appcast 'https://github.com/leits/MeetingBar/releases.atom'
