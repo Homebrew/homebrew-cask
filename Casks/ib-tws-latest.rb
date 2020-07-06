@@ -1,4 +1,4 @@
-cask 'interactivebrokers_tws-latest' do
+cask 'ib-tws-latest' do
   version :latest
   sha256 :no_check
 
