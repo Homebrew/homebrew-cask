@@ -1,10 +1,9 @@
 cask 'eaccess' do
-  version '1.13.1'
-  sha256 'c05daad636bef0c5ccc58ee75138bfc2d9da76c25af7a16664fbc9f756209546'
+  version '1.13.2'
+  sha256 'edb3eb022f2147e12d722f234ef12c7ec5c3f937004f3dd6e0165883fc5e7de1'
 
-  url 'https://glutz.com/service/downloads/?dwnldid=97482'
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=https://glutz.com/service/downloads/?dwnldid=97482',
-          must_contain: version.dots_to_underscores
+  url 'https://glutz.com/service/downloads/?dwnldid=97676'
+  appcast 'https://glutz.com/service/downloads/soft-und-firmware/'
   name 'eAccess Desktop'
   homepage 'https://glutz.com/service/download/software-and-firmware/'
 
