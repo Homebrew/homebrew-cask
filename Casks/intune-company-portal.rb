@@ -3,7 +3,7 @@ cask 'intune-company-portal' do
   sha256 'bbed1fdaaad2d47d39177ef38b14c99382f575e48f6d52e68647bb56bbb5e25c'
 
   url "https://officecdn.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/CompanyPortal_#{version}-Installer.pkg"
-  appcast 'https://docs.microsoft.com/en-us/officeupdates/update-history-office-for-mac'
+  appcast 'https://www.macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://go.microsoft.com/fwlink/?linkid=853070'
   name 'Company Portal'
   homepage 'https://docs.microsoft.com/en-us/mem/intune/user-help/enroll-your-device-in-intune-macos-cp'
 
