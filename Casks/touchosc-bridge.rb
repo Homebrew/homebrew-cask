@@ -1,6 +1,6 @@
 cask 'touchosc-bridge' do
-  version '1.5.0'
-  sha256 '53ce1e920e05b844c3fa2bb1e891fec2b8de9e4917ec0fa01feecfcb772cd767'
+  version '1.6.0'
+  sha256 '2a9d20a033e18cf27af61a65d29d02dedadb23e6e2ece346586f860a2bc239f0'
 
   url "https://hexler.net/pub/touchosc/touchosc-bridge-#{version}-macos.zip"
   appcast 'https://hexler.net/software/touchosc'
