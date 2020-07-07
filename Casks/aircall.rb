@@ -10,5 +10,5 @@ cask 'aircall' do
 
   auto_updates true
 
-  app 'mac/Aircall.app'
+  app 'Aircall.app'
 end
