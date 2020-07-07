@@ -11,9 +11,9 @@ cask 'moose' do
   app 'moose.app'
 
   zap trash: [
-             '~/Library/Application Support/moose',
-             '~/Library/Logs/moose',
-             '~/Library/Preferences/com.riteshkr.moose.plist',
-             '~/Library/Saved Application State/com.riteshkr.moose.savedState',
-           ]
+               '~/Library/Application Support/moose',
+               '~/Library/Logs/moose',
+               '~/Library/Preferences/com.riteshkr.moose.plist',
+               '~/Library/Saved Application State/com.riteshkr.moose.savedState',
+             ]
 end
