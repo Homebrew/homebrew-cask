@@ -4,6 +4,7 @@ cask 'moose' do
 
   # github.com/ritz078/moose/ was verified as official when first introduced to the cask
   url "https://github.com/ritz078/moose/releases/download/v#{version}/moose-#{version}-mac.zip"
+  appcast 'https://github.com/ritz078/moose/releases.atom'
   name 'moose'
   homepage 'https://getmoose.in/'
 
