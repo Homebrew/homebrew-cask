@@ -1,6 +1,6 @@
 cask 'osquery' do
-  version '4.3.0'
-  sha256 '197eae9624ec830bf3fec53b79b11e084792a04a461c3241d95cf6aebd3e6ac2'
+  version '4.4.0'
+  sha256 '6ecb24891ed65b486962dd640a4313bc168ecca4d757bfd486fb5bf9ef6390dd'
 
   url "https://pkg.osquery.io/darwin/osquery-#{version}.pkg"
   appcast 'https://github.com/osquery/osquery/releases.atom'
