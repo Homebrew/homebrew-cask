@@ -21,5 +21,7 @@ cask 'league-of-legends' do
                '~/Documents/League of Legends',
                '/Users/Shared/Riot Games/Riot Client.app',
                '/Users/Shared/Riot Games/Metadata',
+               '~/Library/Application Support/Riot Games/League of Legends',
+               '~/Library/Application Support/Riot Games/Install League of Legends',
              ]
 end
