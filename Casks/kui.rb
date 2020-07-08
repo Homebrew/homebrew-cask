@@ -1,6 +1,6 @@
 cask 'kui' do
-  version '8.10.9'
-  sha256 '707fbbed0a1d5e1064a7e25c1bea5c7a1131305f28ac3700595afe418911d9b9'
+  version '8.10.10'
+  sha256 '9c9609d3e670c6d5338644913bf78620606cf3fb044a11a60a8c26c5ffd2f401'
 
   # github.com/IBM/kui was verified as official when first introduced to the cask
   url "https://github.com/IBM/kui/releases/download/v#{version}/Kui-darwin-x64.tar.bz2"
