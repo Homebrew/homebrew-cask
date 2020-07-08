@@ -1,6 +1,6 @@
 cask 'eloston-chromium' do
-  version '81.0.4044.138-1'
-  sha256 '3d6c402573a77e26b3572fabda3613523cdce19f334ae503629285dc7b4c79b8'
+  version '83.0.4103.116-1'
+  sha256 '0537a4f8e1a7f8d51fc0b45ca0b4102de3380853a685ab9dff387b1db37a5188'
 
   # github.com/kramred/ungoogled-chromium-binaries/ was verified as official when first introduced to the cask
   url "https://github.com/kramred/ungoogled-chromium-binaries/releases/download/#{version}/ungoogled-chromium_#{version}.1_macos.dmg"
