@@ -1,6 +1,6 @@
 cask 'openvpn-connect' do
-  version '3.2.0,1426'
-  sha256 '1a67cf9cfc87079e02d32d8f8fbd6f83be245f2a7401c8234cd0f400deb2a88e'
+  version '3.2.1,1484'
+  sha256 '00a3b10c29c13336e52eae6f6dd3960058e9c77e463eaf0742378a31ad0485d4'
 
   url "https://swupdate.openvpn.net/downloads/connect/openvpn-connect-#{version.before_comma}.#{version.after_comma}_signed.dmg"
   appcast 'https://openvpn.net/client-connect-vpn-for-mac-os/'
