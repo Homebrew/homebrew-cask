@@ -1,4 +1,4 @@
-cask 'uniconverter' do
+cask 'wondershare-uniconverter' do
   version '12.0.0.28'
   sha256 '9e5769f4d83eaf5ee664da6aa1b0af9c104a9675f6495dc5f0b94db04b536479'
 
@@ -6,7 +6,7 @@ cask 'uniconverter' do
   name 'UniConverter'
   homepage 'https://videoconverter.wondershare.com/'
 
-  app 'UniConverter.app'
+  app 'Wondershare UniConverter.app'
 
   zap trash: [
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.wondershare.video-converter-ultimate.sfl*',
