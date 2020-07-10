@@ -19,6 +19,6 @@ cask 'gloomhaven-helper' do
   end
 
   caveats do
-    depends_on_java
+    depends_on_java '8+'
   end
 end
