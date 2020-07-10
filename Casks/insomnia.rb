@@ -1,6 +1,6 @@
 cask 'insomnia' do
-  version '2020.2.2'
-  sha256 'ba80c77f973009af3f72dfa6f06202c41f157aa36b8dbc6c175444516796819f'
+  version '2020.3.0'
+  sha256 '1c4aa4f0f86bb1a3c93a36af02befdbd0bae0680c4d84eddba6a345ec86f5437'
 
   # github.com/Kong/insomnia/ was verified as official when first introduced to the cask
   url "https://github.com/Kong/insomnia/releases/download/core%40#{version}/Insomnia.Core-#{version}.dmg"
