@@ -22,5 +22,5 @@ cask 'podman' do
     FileUtils.rm(man1)
   end
 
-  zap trash: "#{ENV['HOME']}/.config/containers"
+  zap trash: '~/.config/containers'
 end
