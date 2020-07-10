@@ -13,6 +13,8 @@ cask 'resolume-arena' do
                          'com.resolume.pkg.ResolumeArena.*',
                          'com.resolume.pkg.ResolumeDXV',
                          'com.resolume.pkg.ResolumeQuickLook',
+                         'com.resolume.pkg.ResolumeAlley',
+                         'com.resolume.pkg.ResolumeCommon',
                        ],
             delete:    "/Applications/Resolume Arena #{version.major}",
             signal:    ['TERM', 'com.resolume.arena'],
