@@ -2,10 +2,10 @@ cask 'podman' do
   version '2.0.2'
   sha256 '5ae54572d791b1a0f22090c5873ba288c777564d0ea4c23c0a32e3708819c0dc'
 
-  url "https://github.com/containers/libpod/releases/download/v#{version}/podman-remote-release-darwin.zip"
-  appcast 'https://github.com/containers/libpod/releases.atom'
+  url "https://github.com/containers/podman/releases/download/v#{version}/podman-remote-release-darwin.zip"
+  appcast 'https://github.com/containers/podman/releases.atom'
   name 'podman'
-  homepage 'https://github.com/containers/libpod/'
+  homepage 'https://github.com/containers/podman/'
 
   binary 'podman'
 
