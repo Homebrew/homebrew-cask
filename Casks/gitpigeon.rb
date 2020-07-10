@@ -7,6 +7,8 @@ cask 'gitpigeon' do
   name 'GitPigeon'
   homepage 'https://www.gitpigeon.com/'
 
+  depends_on macos: '>= :mojave'
+
   app 'GitPigeon.app'
 
   zap trash: [
