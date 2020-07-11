@@ -8,6 +8,8 @@ cask 'mumu' do
   name 'Mumu'
   homepage 'https://getmumu.com/'
 
+  depends_on macos: '>= :high_sierra'
+
   app 'Mumu.app'
 
   zap trash: [
