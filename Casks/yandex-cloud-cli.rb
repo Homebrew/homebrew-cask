@@ -18,7 +18,7 @@ cask 'yandex-cloud-cli' do
   binary 'yandex-cloud-cli/bin/docker-credential-yc'
   binary 'yandex-cloud-cli/bin/yc'
 
-  uninstall delete: "#{staged_path}/#{token}" # Not actually necessary, since it would be deleted anyway. It is present to make clear an uninstall was not forgotten and that for this cask it is indeed this simple.
+  uninstall delete: "#{staged_path}/#{token}"
 
   caveats <<~EOS
     To install shell completions add this to your profile:
