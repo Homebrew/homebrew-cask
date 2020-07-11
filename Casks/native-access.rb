@@ -32,10 +32,13 @@ cask 'native-access' do
                '~/Library/Caches/Native Instruments/Native Access*',
                '~/Library/Preferences/com.native-instruments.Native Access.plist',
                '~/Library/Preferences/com.native-instruments.Shared.plist',
+               '/private/var/folders/*/*/*/com.native-instruments.Native Access',
+               '/private/var/folders/*/*/*/metalink-*.meta4',
              ],
       rmdir: [
                '/Library/Application Support/Native Instruments/*',
                '/Library/Application Support/Native Instruments',
                '~/Library/Application Support/Native Instruments',
+               '/private/var/log/Native Instruments',
              ]
 end
