@@ -7,5 +7,7 @@ cask 'slimhud' do
   name 'SlimHUD'
   homepage 'https://github.com/AlexPerathoner/SlimHUD/'
 
+  depends_on macos: '>= :mojave'
+
   app 'SlimHUD.app'
 end
