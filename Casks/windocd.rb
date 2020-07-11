@@ -8,5 +8,7 @@ cask 'windocd' do
   name 'windOCD'
   homepage 'https://windocd.myownapp.com/'
 
+  depends_on macos: '>= :sierra'
+
   app 'windOCD.app'
 end
