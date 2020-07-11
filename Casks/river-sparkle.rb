@@ -8,4 +8,10 @@ cask 'river-sparkle' do
   homepage 'https://sparkleapp.com/'
 
   app 'Sparkle.app'
+
+  zap trash: [
+               '~/Library/Application Support/eu.riverdesign.sparkle',
+               '~/Library/Caches/eu.riverdesign.sparkle',
+               '~/Library/Preferences/eu.riverdesign.sparkle.plist',
+             ]
 end
