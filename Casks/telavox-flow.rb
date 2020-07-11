@@ -10,7 +10,7 @@ cask 'telavox-flow' do
 
   auto_updates true
 
-  app 'Flow.app'
+  app 'Telavox.app'
 
   zap trash: [
                '~/Library/Application Support/Flow',
