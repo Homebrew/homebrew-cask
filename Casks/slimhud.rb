@@ -10,6 +10,6 @@ cask 'slimhud' do
   depends_on macos: '>= :mojave'
 
   app 'SlimHUD.app'
-  
+
   zap trash: '~/Library/Preferences/AlexP.SlimHUD.plist'
 end
