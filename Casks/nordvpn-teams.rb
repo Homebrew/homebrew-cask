@@ -1,6 +1,6 @@
 cask 'nordvpn-teams' do
-  version '1.4.0'
-  sha256 '5c549a6bc5f930f13471284a4ef20d7676bb43bf551d72e5e3873e4e588c2cd8'
+  version '1.4.1'
+  sha256 'ed25d9da5e34aed726599413b1c87360994040ba74f20ea7d29383ed6b801d45'
 
   # downloads.nordteams.com/ was verified as official when first introduced to the cask
   url 'https://downloads.nordteams.com/mac/latest/NordVPNTeams.pkg'
