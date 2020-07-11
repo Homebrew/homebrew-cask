@@ -9,12 +9,12 @@ cask 'windocd' do
   homepage 'https://windocd.myownapp.com/'
 
   depends_on macos: '>= :sierra'
-  
+
   app 'windOCD.app'
-  
+
   zap trash: [
-             '~/Library/Application Support/windOCD',
-             '~/Library/Caches/com.myownapp.windOCD',
-             '~/Library/Preferences/com.myownapp.windOCD.plist',
-           ]
+               '~/Library/Application Support/windOCD',
+               '~/Library/Caches/com.myownapp.windOCD',
+               '~/Library/Preferences/com.myownapp.windOCD.plist',
+             ]
 end
