@@ -1,5 +1,5 @@
 cask 'yandex-cloud-cli' do
-  version :latest # Must remain unversioned, else all installed yandex-cloud components would be lost on upgrade
+  version :latest
   sha256 :no_check
 
   # yandexcloud.net/yandexcloud-yc/ was verified as official when first introduced to the cask
