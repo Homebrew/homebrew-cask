@@ -4,6 +4,7 @@ cask 'mumu' do
 
   # paddle.s3.amazonaws.com/fulfillment_downloads/116824/ was verified as official when first introduced to the cask
   url "https://paddle.s3.amazonaws.com/fulfillment_downloads/116824/597910/3UjvmpBGSxuQuBAVlQm6_Mumu%20#{version}.dmg"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://vendors.paddle.com/download/product/597910'
   name 'Mumu'
   homepage 'https://getmumu.com/'
 
