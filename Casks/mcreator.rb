@@ -8,4 +8,6 @@ cask 'mcreator' do
   homepage 'https://mcreator.net/'
 
   app 'MCreator.app'
+
+  zap trash: '~/.mcreator'
 end
