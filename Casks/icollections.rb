@@ -7,5 +7,7 @@ cask 'icollections' do
   name 'iCollections'
   homepage 'https://naarakstudio.com/icollections/'
 
+  depends_on macos: '>= :sierra'
+
   app 'iCollections.app'
 end
