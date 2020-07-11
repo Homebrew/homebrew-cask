@@ -1,6 +1,6 @@
 cask 'joplin' do
-  version '1.0.224'
-  sha256 '9280e6b66aab3fb00cecf2db569623f4924d81f3ec9d778a78db8b524f3dd8cf'
+  version '1.0.226'
+  sha256 '50d047df89dbbb4c7a9cfa6be2dad310498a2d0d945991d33efe03271b68e076'
 
   # github.com/laurent22/joplin/ was verified as official when first introduced to the cask
   url "https://github.com/laurent22/joplin/releases/download/v#{version}/Joplin-#{version}.dmg"
