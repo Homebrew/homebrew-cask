@@ -6,5 +6,5 @@ cask 'icollections' do
   name 'iCollections'
   homepage 'https://naarakstudio.com/icollections/'
 
-  app 'iCollections'
+  app 'iCollections.app'
 end
