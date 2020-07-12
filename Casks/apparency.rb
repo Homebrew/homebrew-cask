@@ -10,4 +10,11 @@ cask 'apparency' do
   depends_on macos: '>= :mojave'
 
   app 'Apparency.app'
+
+  zap trash: [
+               '~/Library/Application Scripts/com.mothersruin.Apparency',
+               '~/Library/Application Scripts/com.mothersruin.Apparency.QLPreviewExtension',
+               '~/Library/Containers/com.mothersruin.Apparency',
+               '~/Library/Containers/com.mothersruin.Apparency.QLPreviewExtension',
+             ]
 end
