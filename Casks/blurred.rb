@@ -1,6 +1,6 @@
 cask 'blurred' do
-  version '1.1.0'
-  sha256 '81414e9e9b094039f49453060200eef3e13ac98c8a3e3d61beefd53fa3d0f7fb'
+  version '1.2.0'
+  sha256 '15903ce2484f783c53cbad905ea93a5045c87767e7b89e37300d2200902dff37'
 
   url "https://github.com/dwarvesf/blurred/releases/download/v#{version}/Blurred.#{version}.dmg"
   appcast 'https://github.com/dwarvesf/blurred/releases.atom'
