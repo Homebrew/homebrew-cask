@@ -1,6 +1,6 @@
 cask 'qv2ray' do
-  version '2.6.0'
-  sha256 '0f9536e87cee6b4451bb67be7023a7d1886420ab9ef5c219cf0fb752006a2eb2'
+  version '2.6.1'
+  sha256 'a1966e09d6cdf78d80aff10218cab7d4e226d69b4f114e1d7535b79dc62e4afa'
 
   # github.com/Qv2ray/Qv2ray/ was verified as official when first introduced to the cask
   url "https://github.com/Qv2ray/Qv2ray/releases/download/v#{version}/Qv2ray-v#{version}.macOS-x64.dmg"
