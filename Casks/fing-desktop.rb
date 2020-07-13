@@ -3,6 +3,7 @@ cask 'fing-desktop' do
   sha256 :no_check
 
   url 'https://get.fing.com/fing-desktop-releases/mac/Fing.dmg'
+  appcast 'https://get.fing.com/fing-desktop-releases/mac/latest-mac.yml'
   name 'Fing Desktop'
   homepage 'https://www.fing.com/products/fing-desktop'
 
