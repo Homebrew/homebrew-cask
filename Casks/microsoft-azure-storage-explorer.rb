@@ -5,7 +5,6 @@ cask 'microsoft-azure-storage-explorer' do
   # github.com was verified as official when first introduced to the cask
   url 'https://github.com/microsoft/AzureStorageExplorer/releases/download/v1.14.0/Mac_StorageExplorer.zip'
   appcast 'https://github.com/microsoft/AzureStorageExplorer/releases.atom'
-
   name 'Microsoft Azure Storage Explorer'
   homepage 'https://azure.microsoft.com/en-us/features/storage-explorer/'
 
