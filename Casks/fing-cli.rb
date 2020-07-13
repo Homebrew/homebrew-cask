@@ -4,7 +4,7 @@ cask 'fing-cli' do
 
   url "https://www.fing.com/images/uploads/general/CLI_macOSX_#{version}.zip"
   appcast 'https://www.fing.com/products/development-toolkit/'
-  name 'Fing'
+  name 'Fing Desktop Embedded CLI'
   homepage 'https://www.fing.com/products/development-toolkit/'
 
   pkg "Fing-#{version}-osX.pkg"
