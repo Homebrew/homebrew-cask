@@ -13,6 +13,6 @@ cask 'fing-desktop' do
   zap trash: [
               '~/Library/Application Support/Fing',
               '~/Library/Preferences/com.fing.app.plist',
-              '~/Library/Saved Application State/com.fing.app.savedState'
+              '~/Library/Saved Application State/com.fing.app.savedState',
              ]
 end
