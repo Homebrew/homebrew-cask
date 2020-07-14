@@ -13,7 +13,8 @@ cask 'rectangle' do
 
   app 'Rectangle.app'
 
-  uninstall quit: 'com.knollsoft.Rectangle'
+  uninstall quit:      'com.knollsoft.Rectangle',
+            launchctl: 'com.knollsoft.RectangleLauncher'
 
   zap trash: [
                '~/Library/Application Scripts/com.knollsoft.RectangleLauncher',
