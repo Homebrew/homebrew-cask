@@ -9,6 +9,10 @@ cask 'sunlogin-x' do
 
   pkg 'SunloginClient.pkg'
 
-  uninstall quit:    'com.oray.sunlogin.macclient',
-            pkgutil: 'com.mygreatcompany.pkg.SunloginClient'
+  uninstall quit:      'com.oray.sunlogin.macclient',
+            pkgutil:   'com.mygreatcompany.pkg.SunloginClient',
+            launchctl: [
+                         'com.oray.sunlogin.desktopagent',
+                         'com.oray.sunlogin.helper',
+                       ]
 end
