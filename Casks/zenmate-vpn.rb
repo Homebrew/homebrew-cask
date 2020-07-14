@@ -1,6 +1,6 @@
 cask 'zenmate-vpn' do
-  version '5.0.1.14'
-  sha256 'a2eca4e6eeb7d0a3057bbd16bfdcfc3bed5d1125b02673e43589ab3e5a734db2'
+  version '5.1.0.21'
+  sha256 'aba2b4714517e55c852d21e217690de14e1b9b623e50a1e9516398f49978c85d'
 
   url "https://download.zenmate.com/mac/#{version.major}/zm_#{version}.dmg"
   appcast 'https://download.zenmate.com/mac/zenmate.xml'
