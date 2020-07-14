@@ -9,7 +9,7 @@ cask 'qv2ray' do
   homepage 'https://qv2ray.github.io/'
 
   auto_updates true
-  depends_on macos: '>= :high_sierra'
+  depends_on macos: '> :high_sierra'
 
   app 'qv2ray.app'
 end
