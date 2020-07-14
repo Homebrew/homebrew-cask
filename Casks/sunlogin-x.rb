@@ -14,5 +14,6 @@ cask 'sunlogin-x' do
             launchctl: [
                          'com.oray.sunlogin.desktopagent',
                          'com.oray.sunlogin.helper',
+                         'com.oray.sunlogin.service',
                        ]
 end
