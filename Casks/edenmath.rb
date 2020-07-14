@@ -1,6 +1,6 @@
 cask 'edenmath' do
-  version :latest
-  sha256 :no_check
+  version '1.2.2'
+  sha256 'd171214b7b8d8e07cc855cb78b094064bd440d826243170afac3c11b89a6cf7a'
 
   url 'http://www.edenwaith.com/downloads/edenmath.dmg'
   name 'EdenMath'
