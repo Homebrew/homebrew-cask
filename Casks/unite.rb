@@ -8,6 +8,7 @@ cask 'unite' do
   name 'Unite'
   homepage 'https://bzgapps.com/unite'
 
+  auto_updates true
   depends_on macos: '>= :high_sierra'
 
   app 'Unite.app'
