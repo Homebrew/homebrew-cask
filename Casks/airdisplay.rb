@@ -7,6 +7,8 @@ cask 'airdisplay' do
   name 'Air Display'
   homepage 'https://avatron.com/applications/air-display/'
 
+  depends_on macos: '>= :mojave'
+
   pkg 'Air Display Installer.pkg'
 
   uninstall pkgutil: [
