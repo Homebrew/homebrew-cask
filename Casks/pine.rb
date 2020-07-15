@@ -11,5 +11,12 @@ cask 'pine' do
 
   app 'Pine.app'
 
-  zap trash: '~/Library/Caches/io.github.lukakerr.pine'
+  zap trash: [
+               '~/Library/Application Support/Pine',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.github.lukakerr.pine.sfl2',
+               '~/Library/Caches/io.github.lukakerr.Pine',
+               '~/Library/Preferences/io.github.lukakerr.Pine.plist',
+               '~/Library/Saved Application State/io.github.lukakerr.Pine.savedState',
+               '~/Library/WebKit/io.github.lukakerr.Pine',
+             ]
 end
