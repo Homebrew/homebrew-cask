@@ -1,6 +1,6 @@
 cask 'virtualbox' do
-  version '6.1.10,138449'
-  sha256 'ef0ca4924922514b6ad71469998821f2cf7c596b4b8b59736c3699759e0f1df8'
+  version '6.1.12,139181'
+  sha256 '96c45572213e68fb58ee6669f99caf1126e61495de7e710363350e07f3a1c4d6'
 
   url "https://download.virtualbox.org/virtualbox/#{version.before_comma}/VirtualBox-#{version.before_comma}-#{version.after_comma}-OSX.dmg"
   appcast 'https://download.virtualbox.org/virtualbox/LATEST.TXT'
