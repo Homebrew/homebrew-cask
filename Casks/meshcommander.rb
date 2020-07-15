@@ -5,7 +5,7 @@ cask 'meshcommander' do
   # bintray.com/gomesjj/APPS/ was verified as official when first introduced to the cask
   url "https://bintray.com/gomesjj/APPS/download_file?file_path=#{version.no_dots}%2FMeshCommander.dmg.zip"
   appcast 'https://dl.bintray.com/gomesjj/APPS/',
-          must_contain: "#{version.major_minor}#{version.patch}"
+          must_contain: version.no_dots
   name 'MeshCommander'
   homepage 'https://www.devtty.uk/apple/Intel_Mesh_Commander_on_Mac_OS_X/'
 
