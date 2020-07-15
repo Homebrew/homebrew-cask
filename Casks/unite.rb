@@ -1,6 +1,6 @@
 cask 'unite' do
-  version '3.0.1,DlLu0Oy7SNODqh2FocjT'
-  sha256 'a6f524772789f919d8e0a9374bd06697407f06e9c1abb3c350985747a42968a4'
+  version '3.1,WiusgeYwTKaK9HQ7XWkT'
+  sha256 '9a16c4fdcfbd63c301102fb024a9a2d47301eb63d24d52cd307c38bbbe2bb685'
 
   # paddle.s3.amazonaws.com/fulfillment_downloads/20398/576531/ was verified as official when first introduced to the cask
   url "https://paddle.s3.amazonaws.com/fulfillment_downloads/20398/576531/#{version.after_comma}_Unite.zip"
