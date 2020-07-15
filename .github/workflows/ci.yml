@@ -9,6 +9,9 @@ jobs:
     steps:
       - name: Check out Pull Request
         run: |
+          git config --global user.email "homebrew-ops@lists.sfconservancy.org"
+          git config --global user.name "BrewTestBot"
+
           brew update-reset "$(brew --repository)"
 
           HOMEBREW_INSTALL_BUNDLER_GEMS_FIRST=1 brew config
