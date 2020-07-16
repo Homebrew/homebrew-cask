@@ -8,6 +8,7 @@ cask 'sessionrestore' do
   homepage 'https://sessionrestore.sweetpproductions.com/'
 
   auto_updates true
+  depends_on macos: '>= :mojave'
 
   app 'SessionRestore.app'
 
