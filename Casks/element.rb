@@ -1,5 +1,5 @@
 cask 'element' do
-  version '1.6.8'
+  version '1.7.1'
   sha256 '4a03fb655c33d525995af5874aedfa3b5b2277ebf986e89f08564de222125c3b'
 
   # packages.riot.im/desktop was verified as official when first introduced to the cask
@@ -14,6 +14,7 @@ cask 'element' do
 
   zap trash: [
                '~/Library/Application Support/Riot',
+               '~/Library/Application Support/Element (Riot)',
                '~/Library/Caches/im.riot.app',
                '~/Library/Caches/im.riot.app.ShipIt',
                '~/Library/Logs/Riot',
