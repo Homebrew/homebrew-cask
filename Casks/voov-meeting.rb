@@ -1,4 +1,4 @@
-cask 'voov' do
+cask 'voov-meeting' do
   version '1.6.0'
   sha256 '581aeaa2004e8ab4df26a5383ff89fdb6886e1fcdcced9c60e96be2d49e4aa55'
 
@@ -8,4 +8,12 @@ cask 'voov' do
   homepage 'https://voovmeeting.com/'
 
   app 'VooV Meeting.app'
+
+  zap trash: [
+              'Containers/com.tencent.tencentmeeting',
+              'Preferences/com.tencent.tencentmeeting.plist',
+              'Saved Application State/com.tencent.tencentmeeting.savedState',
+              'WebKit/com.tencent.tencentmeeting',
+              'Application Support/com.tencent.rqd/com.tencent.tencentmeeting',
+  ]
 end
