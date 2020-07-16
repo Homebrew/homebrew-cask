@@ -11,10 +11,10 @@ cask 'voov-meeting' do
   app 'VooV Meeting.app'
 
   zap trash: [
-               'Containers/com.tencent.tencentmeeting',
-               'Preferences/com.tencent.tencentmeeting.plist',
-               'Saved Application State/com.tencent.tencentmeeting.savedState',
-               'WebKit/com.tencent.tencentmeeting',
-               'Application Support/com.tencent.rqd/com.tencent.tencentmeeting',
+               '~/Library/Containers/com.tencent.tencentmeeting',
+               '~/Library/Preferences/com.tencent.tencentmeeting.plist',
+               '~/Library/Saved Application State/com.tencent.tencentmeeting.savedState',
+               '~/Library/WebKit/com.tencent.tencentmeeting',
+               '~/Library/Application Support/com.tencent.rqd/com.tencent.tencentmeeting',
              ]
 end
