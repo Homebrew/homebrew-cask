@@ -1,6 +1,6 @@
 cask 'element' do
   version '1.7.1'
-  sha256 '4a03fb655c33d525995af5874aedfa3b5b2277ebf986e89f08564de222125c3b'
+  sha256 '7ee9e2c1fd455ee887b0ca224dc275a4dca8ee48fb37471556f49d38da41476a'
 
   # packages.riot.im/desktop was verified as official when first introduced to the cask
   url "https://packages.riot.im/desktop/install/macos/Element%20(Riot)-#{version}.dmg"
