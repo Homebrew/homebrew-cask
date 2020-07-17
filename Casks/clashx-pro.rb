@@ -8,4 +8,12 @@ cask 'clashx-pro' do
   homepage 'https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public'
 
   app 'ClashX Pro.app'
+
+  zap trash: [
+               'Caches/com.plausiblelabs.crashreporter.data/com.west2online.ClashXPro',
+               'Caches/com.west2online.ClashXPro',
+               'Logs/ClashX Pro',
+               'Preferences/com.west2online.ClashXPro.plist',
+               'Application Support/com.west2online.ClashXPro',
+             ]
 end
