@@ -10,10 +10,10 @@ cask 'clashx-pro' do
   app 'ClashX Pro.app'
 
   zap trash: [
-               'Caches/com.plausiblelabs.crashreporter.data/com.west2online.ClashXPro',
-               'Caches/com.west2online.ClashXPro',
-               'Logs/ClashX Pro',
-               'Preferences/com.west2online.ClashXPro.plist',
-               'Application Support/com.west2online.ClashXPro',
+               '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.west2online.ClashXPro',
+               '~/Library/Caches/com.west2online.ClashXPro',
+               '~/Library/Logs/ClashX Pro',
+               '~/Library/Preferences/com.west2online.ClashXPro.plist',
+               '~/Library/Application Support/com.west2online.ClashXPro',
              ]
 end
