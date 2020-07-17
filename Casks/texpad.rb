@@ -12,9 +12,9 @@ cask 'texpad' do
 
   # download.texpadapp.com/ was verified as official when first introduced to the cask
   url "https://download.texpadapp.com/apps/osx/updates/Texpad_#{version.before_comma.dots_to_underscores}__#{version.after_comma.before_colon}__#{version.after_colon}.dmg"
-  appcast 'https://www.texpad.com/static-collected/upgrades/texpadappcast.xml'
+  appcast 'https://www.texpad.com/mac'
   name 'Texpad'
-  homepage 'https://www.texpad.com/osx'
+  homepage 'https://www.texpad.com/mac'
 
   auto_updates true
 
