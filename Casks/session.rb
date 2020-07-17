@@ -1,6 +1,6 @@
 cask 'session' do
-  version '1.0.9'
-  sha256 'dcdcaf12c18ef8b41fea50700b8c39580353757ac818a00a4c4e15ceeb482bf8'
+  version '1.1.2'
+  sha256 '2e9a7236f8043513f0fae83198af614666d26d770a3eb0c6690cab4ade8f5d44'
 
   # github.com/loki-project/session-desktop/ was verified as official when first introduced to the cask
   url "https://github.com/loki-project/session-desktop/releases/download/v#{version}/session-messenger-desktop-mac-#{version}.dmg"
