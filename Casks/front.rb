@@ -1,6 +1,6 @@
 cask 'front' do
-  version '3.22.1'
-  sha256 'c57c711ec8e39695b63bf93b637e206b34ce3cad7f67e61ed11e28818f0068c6'
+  version '3.23.1'
+  sha256 'be70734e5b2c8b29839fec8c8cf4d77478c639352fd03ba854a805aaaa9b6245'
 
   url "https://dl.frontapp.com/desktop/builds/#{version}/Front-#{version}.zip"
   appcast 'https://dl.frontapp.com/desktop/updates/latest/mac/latest-mac.yml'
