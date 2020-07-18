@@ -8,8 +8,6 @@ cask 'webtorrent' do
   name 'WebTorrent Desktop'
   homepage 'https://webtorrent.io/desktop/'
 
-  auto_updates true
-
   app 'WebTorrent.app'
 
   zap trash: [
