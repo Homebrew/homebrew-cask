@@ -7,9 +7,8 @@ cask 'ableton-live' do
   name 'Ableton Live'
   homepage 'https://www.ableton.com/en/live/'
 
+  auto_updates true
   depends_on macos: '>= :el_capitan'
-
-  auto_update true
 
   app "Ableton Live #{version.major} Trial.app"
 
