@@ -9,5 +9,8 @@ cask 'opencpn' do
 
   pkg "OpenCPN_#{version.before_comma} #{version.after_comma}.pkg"
 
-  uninstall pkgutil: 'org.opencpn'
+  uninstall pkgutil: [
+                       'org.opencpn.pkg.OpenCPN',
+                       'org.opencpn',
+                     ]
 end
