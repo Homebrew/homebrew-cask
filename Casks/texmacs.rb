@@ -7,7 +7,7 @@ cask 'texmacs' do
   name 'GNU TeXmacs'
   homepage 'https://www.texmacs.org/'
 
-  app "TeXmacs-#{version}.app"
+  app 'TeXmacs.app'
 
   zap trash: '~/.TeXmacs'
 end
