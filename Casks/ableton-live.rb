@@ -9,6 +9,8 @@ cask 'ableton-live' do
 
   depends_on macos: '>= :el_capitan'
 
+  auto_update true
+
   app "Ableton Live #{version.major} Trial.app"
 
   uninstall quit: 'com.ableton.live'
