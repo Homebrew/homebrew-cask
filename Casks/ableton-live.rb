@@ -9,7 +9,7 @@ cask 'ableton-live' do
 
   depends_on macos: '>= :el_capitan'
 
-  auto_update true
+  auto_updates true
 
   app "Ableton Live #{version.major} Trial.app"
 
