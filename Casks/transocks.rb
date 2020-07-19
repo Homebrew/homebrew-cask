@@ -1,21 +1,18 @@
 cask 'transocks' do
-  version '3.0.3'
-  sha256 '913ef1303afc211b1e08c4ccc9d4387ca2911252bd4c434653f92a8223285436'
+  version '3.0.5'
+  sha256 'f0d53681c350ae0d886a4e3f23486f89300f8d37b94e9c3c6dc60074cc944801'
 
-  url "https://www.transocks.com/download/mac/Transocks_Mac_v#{version}_release.pkg"
-  appcast 'https://www.transocks.org/transocks-mac-update.xml'
+  url "https://www.transocks.com/download/mac/Transocks_Mac_Official_v#{version}.dmg"
+  appcast 'https://www.transocks.org/updateInfo/Original_update.xml'
   name 'Transocks'
   homepage 'https://www.transocks.com/'
 
-  pkg "Transocks_Mac_v#{version}_release.pkg"
+  app '穿梭Transocks.app'
 
-  uninstall pkgutil: [
-                       'com.transocks.mac.signed',
-                     ],
-            trash:   [
-                       '/Library/LaunchDaemons/com.transocks.mac.daemon.plist',
-                       '/Library/PrivilegedHelperTools/com.transocks.mac.daemon',
-                     ]
+  uninstall trash: [
+                     '/Library/LaunchDaemons/com.transocks.mac.daemon.plist',
+                     '/Library/PrivilegedHelperTools/com.transocks.mac.daemon',
+                   ]
 
   zap trash: [
                '~/Library/Caches/com.transocks.mac.signed',
