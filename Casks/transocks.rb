@@ -1,6 +1,6 @@
 cask 'transocks' do
-  version '3.0.3'
-  sha256 '913ef1303afc211b1e08c4ccc9d4387ca2911252bd4c434653f92a8223285436'
+  version '3.0.5'
+  sha256 'eb83e7122fdd63c779f744466e0378df5b2694817ee62689ea57ca30309f5551'
 
   url "https://www.transocks.com/download/mac/Transocks_Mac_v#{version}_release.pkg"
   appcast 'https://www.transocks.org/transocks-mac-update.xml'
