@@ -13,7 +13,5 @@ cask 'hermit-crab' do
 
   uninstall quit: 'com.belkadan.Hermit-Crab'
 
-  zap trash: [
-               '~/Library/Preferences/com.belkadan.Hermit-Crab.plist',
-             ]
+  zap trash: '~/Library/Preferences/com.belkadan.Hermit-Crab.plist',
 end
