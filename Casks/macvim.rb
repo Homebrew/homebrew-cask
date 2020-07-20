@@ -8,11 +8,7 @@ cask 'macvim' do
   homepage 'https://github.com/macvim-dev/macvim'
 
   auto_updates true
-  conflicts_with formula: [
-                            'ex-vi',
-                            'macvim',
-                            'vim',
-                          ]
+  conflicts_with formula: 'macvim'
 
   app 'MacVim.app'
 
