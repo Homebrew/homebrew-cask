@@ -7,6 +7,8 @@ cask 'mate-translate' do
   appcast 'https://gikken.co/mate/appcast.xml'
   name 'Mate Translate'
   homepage 'https://twopeoplesoftware.com/mate'
+  
+  depends_on macos: '>= :mojave'
 
   app 'Mate Translate.app'
 end
