@@ -9,4 +9,10 @@ cask 'project-slippi-dolphin' do
   homepage 'https://slippi.gg/'
 
   app 'Dolphin.app'
+
+  zap trash: [
+               '~/Library/Application Support/Dolphin',
+               '~/Library/Preferences/org.dolphin-emu.dolphin.plist',
+               '~/Slippi',
+             ]
 end
