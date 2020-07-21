@@ -9,7 +9,7 @@ on:
 jobs:
   automerge:
     if: startsWith( github.repository, 'Homebrew/' )
-    runs-on: homebrew/ubuntu16.04:master
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
       - uses: ./.github/actions/automerge
