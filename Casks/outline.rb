@@ -1,6 +1,6 @@
 cask 'outline' do
-  version '3.23.1'
-  sha256 'cd41a98975ca6349f9c12053cde2b0e4f4727c9936558cb9558a6ab5a5ebfe09'
+  version '3.24.0'
+  sha256 'cb796869054f5fb6407737eeb9299c0110598e8f7e514a0a24fccd3c82647344'
 
   url "http://static.outline.ws/versions/Outline_#{version}.zip"
   appcast 'https://gorillized.s3.amazonaws.com/versions/update_channel.xml'

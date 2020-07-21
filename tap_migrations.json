@@ -23,6 +23,7 @@
   "hyper": "homebrew/core",
   "idris": "homebrew/core",
   "jenkins": "homebrew/core",
+  "lunchy": "homebrew/core",
   "minikube": "homebrew/core",
   "mitmproxy": "homebrew/core",
   "mosh": "homebrew/core",

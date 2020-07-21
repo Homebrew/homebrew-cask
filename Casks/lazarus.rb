@@ -11,7 +11,7 @@ cask 'lazarus' do
   depends_on formula: 'fpc'
   depends_on cask: 'fpcsrc'
 
-  pkg "LazarusIDE-#{version}-macos-x86_64.pkg"
+  pkg "Lazarus-#{version}-x86_64-macosx.pkg"
 
   uninstall pkgutil: 'org.lazarus-ide.pkg.LazarusIDE',
             delete:  '/Applications/Lazarus.app'

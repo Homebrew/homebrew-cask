@@ -1,6 +1,6 @@
 cask 'youdaonote' do
-  version '3.6.0'
-  sha256 '0382e5edaec5c3871469a0e4389a97b032d2e4c5d9369a1822d20179b1f48369'
+  version '3.6.1'
+  sha256 '7abe1ab5e1240c7d84bf479e89c219751be81b58006117aa1991f409a2fec809'
 
   # download.ydstatic.com/notewebsite/downloads/ was verified as official when first introduced to the cask
   url 'https://download.ydstatic.com/notewebsite/downloads/YoudaoNote.dmg'
