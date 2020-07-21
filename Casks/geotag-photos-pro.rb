@@ -1,6 +1,6 @@
 cask 'geotag-photos-pro' do
-  version '1.6.1'
-  sha256 'fa48eb533d5e8210e11681cc17ad6482150d0c7bf711a294dd8cfbd4c51a11ea'
+  version '1.6.3'
+  sha256 '78b0d269c11c4e65b42108197ce97dd875247ea0f4c7d86aeec6f6d3d5acad0b'
 
   # github.com/tappytaps/geotag-desktop-app/ was verified as official when first introduced to the cask
   url "https://github.com/tappytaps/geotag-desktop-app/releases/download/v#{version}/Geotag-Photos-Pro-2-#{version}.dmg"

@@ -7,6 +7,7 @@ cask 'ableton-live-lite' do
   name 'Ableton Live Lite'
   homepage 'https://www.ableton.com/en/products/live-lite/'
 
+  auto_updates true
   depends_on macos: '>= :el_capitan'
 
   app "Ableton Live #{version.major} Lite.app"

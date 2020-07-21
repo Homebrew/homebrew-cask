@@ -1,6 +1,6 @@
 cask 'bricklink-partdesigner' do
-  version '1.0.6_1'
-  sha256 '737be1fefec9b8923707e4379dee590e96bf7a9b9e7c34415bd3cbe8c100c796'
+  version '1.0.6_5'
+  sha256 '161639b438eff18b4b71434ec9616634735200031ce9c99b673972e9032a44dc'
 
   # dzncyaxjqx7p3.cloudfront.net/ was verified as official when first introduced to the cask
   url 'https://dzncyaxjqx7p3.cloudfront.net/PartDesigner/PartDesigner.pkg'

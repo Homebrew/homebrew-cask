@@ -4,7 +4,7 @@ cask 'caffeine' do
 
   # github.com/IntelliScape/caffeine/releases was verified as official when first introduced to the cask
   url "https://github.com/IntelliScape/caffeine/releases/download/#{version}/Caffeine.dmg"
-  appcast 'https://intelliscapesolutions.com/apps/caffeine'
+  appcast 'https://github.com/IntelliScape/caffeine/releases.atom'
   name 'Caffeine'
   homepage 'https://intelliscapesolutions.com/apps/caffeine'
 
