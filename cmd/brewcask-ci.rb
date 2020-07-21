@@ -10,8 +10,12 @@ require_relative "lib/travis"
 module Cask
   class Cmd
     class Ci < AbstractCommand
-      option "--only-style", :only_style, false
-      option "--annotate-style-violations", :annotate_style_violations, false
+      def self.escape(s)
+        s.gsub(/\r/, '%0D')
+         .gsub(/\n/, '%0A')
+         .gsub(/]/, '%5D')
+         .gsub(/;/, '%3B');
+      end
 
       def run
         unless ENV.key?("CI")
@@ -44,8 +48,6 @@ module Cask
 
         overall_success = true
 
-        style_status = nil
-        style_failed_casks = []
         style_offenses = []
 
         modified_cask_files.each do |path|
@@ -54,37 +56,23 @@ module Cask
           overall_success &= step "brew cask style #{cask.token}", "style" do
             begin
               Style.run(path)
-              style_status ||= 'success'
               true
             rescue => e
-              style_status = 'action_required'
-
               json = Style.rubocop(path, json: true)
 
-              style_offenses +=
-                json.fetch("files")
-                    .flat_map do |file|
-                      file.fetch("offenses").map do |o|
-                        {
-                          title:            o.fetch("cop_name"),
-                          message:          o.fetch("message"),
-                          path:             Pathname(file.fetch("path")).relative_path_from(tap.path).to_s,
-                          start_line:       o.fetch("location").fetch("start_line"),
-                          start_column:     o.fetch("location").fetch("start_column"),
-                          end_line:         o.fetch("location").fetch("last_line"),
-                          end_column:       o.fetch("location").fetch("last_column"),
-                          annotation_level: 'failure',
-                        }
-                      end
-                    end
-
-              style_failed_casks << cask.token
+              json.fetch("files").each do |file|
+                file.fetch("offenses").each do |o|
+                  path = Pathname(file.fetch("path")).relative_path_from(tap.path).to_s
+                  line = o.fetch("location").fetch("start_line")
+                  column = o.fetch("location").fetch("start_column")
+                  message = o.fetch("message")
+                  puts "::error file=#{self.class.escape(path)},line=#{line},col=#{column}::#{self.class.escape(message)}"
+                end
+              end
 
               false
             end
           end
-
-          next if only_style?
 
           overall_success &= step "brew cask audit #{cask.token}", "audit" do
             Auditor.audit(cask, audit_download: true,
@@ -163,56 +151,6 @@ module Cask
               false
             end
           end
-        end
-
-        style_status ||= 'neutral'
-
-        if annotate_style_violations?
-          event = JSON.parse(File.read(ENV.fetch("HOMEBREW_GITHUB_EVENT_PATH")))
-
-          case ENV["HOMEBREW_GITHUB_EVENT_NAME"]
-          when "pull_request"
-            pr = event.fetch("pull_request")
-            repo = pr.fetch("base").fetch("repo").fetch("full_name")
-            head_sha = pr.fetch("head").fetch("sha")
-          when "check_run"
-            repo = event.fetch("repository").fetch("full_name")
-            head_sha = event.fetch("check_run").fetch("head_sha")
-          else
-            raise
-          end
-
-          output = case style_status
-          when 'neutral'
-            { title: 'Style check skipped.', summary: 'No matching files changed.' }
-          when 'success'
-            { title: 'Style check succeeded.', summary: 'No style violations found.' }
-          when 'action_required', 'failure'
-            {
-              title: 'Style check failed, run `brew cask style --fix`.',
-              summary: <<~MARKDOWN,
-                #{style_offenses.count} style violations were found. Run
-
-                ```
-                brew cask style --fix #{style_failed_casks.join(' ')}
-                ```
-
-                and fix the remaining violations manually, if any.
-              MARKDOWN
-              annotations: style_offenses
-            }
-          else
-            raise
-          end
-
-          GitHub.create_check_run(repo: repo, data: {
-            name: 'style',
-            head_sha: head_sha,
-            conclusion: style_status,
-            completed_at: Time.now.iso8601,
-            details_url: "https://github.com/Homebrew/homebrew-cask/blob/master/CONTRIBUTING.md#style-guide",
-            output: output,
-          })
         end
 
         if overall_success

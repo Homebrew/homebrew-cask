@@ -21,7 +21,7 @@ jobs:
           fi
 
           brew update-reset "$(brew --repository "${GITHUB_REPOSITORY}")"
-          
+
           cd "$(brew --repository "${GITHUB_REPOSITORY}")"
           patch="$(mktemp)"
           curl --silent --show-error --fail --location "${PR_URL}.patch" --output "${patch}"
@@ -39,6 +39,5 @@ jobs:
           unset HOMEBREW_CASK_OPTS
           brew cask ci
         env:
-          CI: true
           HOMEBREW_COLOR: 1
           HOMEBREW_DEVELOPER: 1
