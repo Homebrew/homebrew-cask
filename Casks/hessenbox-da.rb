@@ -4,7 +4,9 @@ cask 'hessenbox-da' do
 
   url 'https://hessenbox.tu-darmstadt.de/client_deployment/HESSENBOX_DA_Latest_Mac.dmg'
   name 'Hessenbox DA Mac OS Client, Hessenbox TU Darmstadt Client'
-  homepage 'https://hessenbox.tu-darmstadt.de/'
+  homepage 'https://www.hrz.tu-darmstadt.de/speicherplatz_datensicherung_und_server/hessenbox_da/index.en.jsp'
 
   app 'HESSENBOX-DA.app'
+
+  zap trash: '~/.PowerFolder'
 end
