@@ -1,6 +1,6 @@
 cask 'rescuetime' do
-  version '2.15.0.1'
-  sha256 '4df6804e31ee27df280aa6b20f80e7d2cf0c5e94e42a0659c2bd2e434d26bd7d'
+  version '2.16.0.1'
+  sha256 '92bc00db7f9c9c90c07428bd6e92e786ef36bfad4c4d1d4ca2684eb5345ac90f'
 
   url 'https://www.rescuetime.com/installers/RescueTimeInstaller.pkg'
   appcast 'https://www.rescuetime.com/installers/appcast'
