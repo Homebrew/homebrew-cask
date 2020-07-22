@@ -8,6 +8,8 @@ cask 'kiwi-for-g-suite' do
   name 'Kiwi For G Suite'
   homepage 'https://www.kiwiforgmail.com/'
 
+  auto_updates true
+
   pkg 'Kiwi for G Suite.pkg'
 
   uninstall pkgutil: 'com.zive.kiwi.qb-pkg.gsuite',
