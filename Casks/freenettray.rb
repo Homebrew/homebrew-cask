@@ -9,4 +9,9 @@ cask 'freenettray' do
   homepage 'https://freenetproject.org/'
 
   app 'FreenetTray.app'
+
+  zap trash: [
+               '~/Library/Application Support/Freenet',
+               '~/Library/Preferences/org.freenetproject.mactray.plist',
+             ]
 end
