@@ -1,6 +1,6 @@
 cask 'protonvpn' do
-  version '1.7.0'
-  sha256 '3aa4ee40b9710317eed46b8fcc9916c314e783e30fa42bd2e3f9c6d9a947125f'
+  version '1.6.0'
+  sha256 'cb7bf9be13cb160b2f0fee3531885198c17c8450051a47acf3eef00321551162'
 
   url "https://protonvpn.com/download/ProtonVPN_mac_v#{version}.dmg"
   appcast 'https://protonvpn.com/download/macos-update2.xml'
