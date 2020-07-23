@@ -22,3 +22,7 @@ $ brew cask zap td-toolbelt             # also removes org.ruby-lang.installer
 The form of `zap` stanza follows the [`uninstall` stanza](uninstall.md). All of the same directives are available. The `trash:` key is preferred over `delete:`.
 
 Example: [dropbox.rb](https://github.com/Homebrew/homebrew-cask/blob/31cd96cc0e00dab1bff74d622e32d816bafd1f6f/Casks/dropbox.rb#L17-L35)
+
+## zap Creation
+
+The simplest method is to use @nrlquaker's [CreateZap Project](https://github.com/nrlquaker/homebrew-createzap), which can automatically generate the stanza. In the few instances, it fails to pick anything up; manual creation may be required. Manual creation can be facilitated with some of the developer tools that are already available in Homebrew Cask, using `sudo find / -iname "*{search item}*"`, or an uninstaller tool (such as [AppCleaner](https://github.com/Homebrew/homebrew-cask/blob/master/Casks/appcleaner.rb)).
