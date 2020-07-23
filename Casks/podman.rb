@@ -1,6 +1,6 @@
 cask 'podman' do
-  version '2.0.2'
-  sha256 '5ae54572d791b1a0f22090c5873ba288c777564d0ea4c23c0a32e3708819c0dc'
+  version '2.0.3'
+  sha256 '789f1719727d4e6b43813f8b2561e19ec669f627d1b794246b44393627c0f674'
 
   url "https://github.com/containers/podman/releases/download/v#{version}/podman-remote-release-darwin.zip"
   appcast 'https://github.com/containers/podman/releases.atom'
@@ -12,9 +12,6 @@ cask 'podman' do
   postflight do
     man1 = Dir["#{staged_path}/docs/*.1"]
     FileUtils.mv(man1, "#{HOMEBREW_PREFIX}/share/man/man1/")
-
-    FileUtils.mkdir_p "#{ENV['HOME']}/.config/containers"
-    FileUtils.mv("#{staged_path}/containers.conf", "#{ENV['HOME']}/.config/containers/containers.conf") unless File.exist?("#{ENV['HOME']}/.config/containers/containers.conf")
   end
 
   uninstall_postflight do
