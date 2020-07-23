@@ -14,6 +14,7 @@ cask 'apparency' do
   zap trash: [
                '~/Library/Application Scripts/com.mothersruin.Apparency',
                '~/Library/Application Scripts/com.mothersruin.Apparency.QLPreviewExtension',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mothersruin.apparency.sfl*',
                '~/Library/Containers/com.mothersruin.Apparency',
                '~/Library/Containers/com.mothersruin.Apparency.QLPreviewExtension',
              ]
