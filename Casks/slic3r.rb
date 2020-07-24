@@ -8,4 +8,10 @@ cask 'slic3r' do
   homepage 'https://slic3r.org/'
 
   app 'Slic3r.app'
+
+  zap trash: [
+               '~/Library/Application Support/Slic3r',
+               '~/Library/Preferences/org.slic3r.Slic3r.plist',
+               '~/Library/Saved Application State/org.slic3r.Slic3r.savedState',
+             ]
 end
