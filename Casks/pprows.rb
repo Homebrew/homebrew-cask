@@ -9,7 +9,5 @@ cask 'pprows' do
 
   app 'PPRows.app'
 
-  zap trash: [
-               '~/Library/Preferences/com.jkpang.PPRows.plist',
-             ]
+  zap trash: '~/Library/Preferences/com.jkpang.PPRows.plist'
 end
