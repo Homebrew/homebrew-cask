@@ -14,6 +14,7 @@ cask 'intune-company-portal' do
 
   uninstall pkgutil:   [
                          'com.microsoft.package.Microsoft_AutoUpdate.app',
+                         'com.microsoft.CompanyPortalMac',
                          'com.microsoft.CompanyPortal',
                        ],
             delete:    [
