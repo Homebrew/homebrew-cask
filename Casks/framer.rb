@@ -7,6 +7,7 @@ cask 'framer' do
   name 'Framer'
   homepage 'https://www.framer.com/desktop/'
 
+  auto_updates true
   depends_on macos: '>= :mojave'
 
   app 'Framer.app'
