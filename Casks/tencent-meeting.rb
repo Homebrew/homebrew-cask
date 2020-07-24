@@ -1,5 +1,5 @@
 cask 'tencent-meeting' do
-  version '1.6.7.452'
+  version '1.7.0.430'
   sha256 'd1ea7bbfbd8f05ac444f6dde2059c53a92d25e36d9cfa370a355ea4abd6bbc53'
 
   # qq.com was verified as official when first introduced to the cask
