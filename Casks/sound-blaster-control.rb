@@ -11,7 +11,7 @@ cask 'sound-blaster-control' do
   pkg 'Install.pkg'
 
   uninstall script: {
-                      executable:   '/Applications/Creative/Creative\ Uninstaller.app/Contents/MacOS/Uninstaller',
+                      executable:   '/Applications/Creative/Creative Uninstaller.app/Contents/MacOS/Uninstaller',
                       must_succeed: true,
                       print_stderr: false,
                     },
