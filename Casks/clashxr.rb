@@ -1,6 +1,6 @@
 cask 'clashxr' do
-  version '1.30.0'
-  sha256 '1e12b79a90231764252557c30cd60a78158340acdab5f3082ff22fd42305a336'
+  version '1.30.1'
+  sha256 '13b845e31e13380e031a4df3650711398cbb16f8e2b01b91736a8b9d0bfd753a'
 
   url "https://github.com/paradiseduo/ClashXR/releases/download/#{version}/ClashXR.dmg"
   appcast 'https://github.com/paradiseduo/ClashXR/releases.atom'
