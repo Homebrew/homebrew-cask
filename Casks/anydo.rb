@@ -1,6 +1,6 @@
 cask 'anydo' do
-  version '4.2.96'
-  sha256 '700c4776e92e070bdad6cdfcfb812d3278d50d5e4e663fdeae71ffa621b8b38d'
+  version '4.2.97'
+  sha256 '81e8b3baf2eb52625b26727fb1381811e64ac7d740b47bebe057907948f15f0c'
 
   url 'https://electron-app.any.do/Any.do.dmg'
   appcast 'https://electron-app.any.do/latest-mac.yml'
