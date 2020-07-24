@@ -12,8 +12,6 @@ cask 'browserstacklocal' do
   uninstall launchctl: 'com.browserstack.local'
 
   zap trash: [
-               '/tmp/BrowserStackLocal.dmg',
-               '/tmp/bstack-local-app.log',
                '~/.bstack',
                '~/Library/Caches/com.browserstack.Local',
              ]
