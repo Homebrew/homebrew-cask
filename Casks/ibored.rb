@@ -1,6 +1,6 @@
 cask 'ibored' do
-  version '1.1.19'
-  sha256 'c507817d3b286f831e2ebb08e24b21e2183d166e3ef5e513f631b3f01bf6f495'
+  version '1.2'
+  sha256 'e85fbcc99f4920ed36e9f2f0b1c1bd55448eb2544c88888c64200d0786e88972'
 
   url "https://files.tempel.org/iBored/iBored-Mac_#{version}.zip"
   appcast 'https://apps.tempel.org/iBored/releasenotes.html'
