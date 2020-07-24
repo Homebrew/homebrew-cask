@@ -1,6 +1,6 @@
 cask 'eme' do
-  version '0.15.0'
-  sha256 '4147bf3e896cba431d041aa203b19aa26df03f368d29ba97af8728acaac2429d'
+  version '0.15.1'
+  sha256 '60228e7217214b66ab3e07272c7c4dc2fe67e0bb031b89d51062859fb7235d56'
 
   url "https://github.com/egoist/eme/releases/download/v#{version}/EME-#{version}.dmg"
   appcast 'https://github.com/egoist/eme/releases.atom'
