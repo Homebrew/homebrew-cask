@@ -8,8 +8,6 @@ cask 'pycharm-ce' do
   name 'PyCharm CE'
   homepage 'https://www.jetbrains.com/pycharm/'
 
-  auto_updates true
-
   app 'PyCharm CE.app'
 
   uninstall_postflight do
