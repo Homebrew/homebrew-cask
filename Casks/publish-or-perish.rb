@@ -1,6 +1,6 @@
 cask 'publish-or-perish' do
-  version '7.23.2852'
-  sha256 '94dbf1ce0b56eded8344ffc2ceb62abdfb64da8cf8dbc6714bcc6c433a5d97c5'
+  version '7.24.2867'
+  sha256 'a9756d5af600ce0951c71c3adad165132ab247c61ea838c1da16cbcc2d42769e'
 
   url 'https://harzing.com/download/PoP7Mac.pkg'
   appcast 'https://harzing.com/resources/publish-or-perish/os-x'
