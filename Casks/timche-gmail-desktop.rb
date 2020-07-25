@@ -1,4 +1,4 @@
-cask 'gmail-desktop' do
+cask 'timche-gmail-desktop' do
   version '2.20.0'
   sha256 '0cbde7446c1545000397b0b818eb0a7069d915438f5acea5315c844f3a74e5ca'
 
