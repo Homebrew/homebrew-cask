@@ -1,6 +1,6 @@
 cask 'cryo' do
-  version '0.5.14'
-  sha256 '4688112bcfa04d56501c8aa1c82e1a48577df01beebbc3167fc5cc1a499aa2bc'
+  version '0.5.16'
+  sha256 '6792c4aece5af05c16ec57534e102d9f19bffc42a7c6b6cdf84d745834636771'
 
   url "https://cryonet.io/downloads/macos/cryo_#{version}_macos.zip"
   name 'cryo'
