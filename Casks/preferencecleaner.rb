@@ -7,5 +7,5 @@ cask 'preferencecleaner' do
   name 'PreferenceCleaner'
   homepage 'https://www.echomist.co.uk/software/PreferenceCleaner.php'
 
-  app 'PreferenceCleaner.app'
+  app "PreferenceCleaner #{version.major}.app"
 end
