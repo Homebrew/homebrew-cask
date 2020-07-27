@@ -11,7 +11,7 @@ cask "vnc-server" do
 
   uninstall_preflight do
     system_command "/Applications/RealVNC/Uninstall VNC Server.app/Contents/Resources/uninstaller.sh",
-      print_stderr: false, sudo: true
+                   print_stderr: false, sudo: true
   end
 
   uninstall launchctl: [
