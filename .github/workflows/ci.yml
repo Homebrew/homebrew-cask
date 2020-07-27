@@ -41,3 +41,9 @@ jobs:
         env:
           HOMEBREW_COLOR: 1
           HOMEBREW_DEVELOPER: 1
+      - name: brew cask style
+        run: |
+          # don't care about `brew cask style` here.
+          brew untap adoptopenjdk/openjdk
+
+          brew cask style
