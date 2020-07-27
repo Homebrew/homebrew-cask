@@ -15,7 +15,7 @@ cask "facebook-ios-sdk" do
   artifact "FBSDKCoreKit.framework", target: "#{ENV["HOME"]}/Documents/FacebookSDK/FBSDKCoreKit.framework"
   artifact "FBSDKLoginKit.framework", target: "#{ENV["HOME"]}/Documents/FacebookSDK/FBSDKLoginKit.framework"
   artifact "FBSDKMessengerShareKit.framework",
-    target: "#{ENV["HOME"]}/Documents/FacebookSDK/FBSDKMessengerShareKit.framework"
+           target: "#{ENV["HOME"]}/Documents/FacebookSDK/FBSDKMessengerShareKit.framework"
   artifact "FBSDKPlacesKit.framework", target: "#{ENV["HOME"]}/Documents/FacebookSDK/FBSDKPlacesKit.framework"
   artifact "FBSDKShareKit.framework", target: "#{ENV["HOME"]}/Documents/FacebookSDK/FBSDKShareKit.framework"
   artifact "Samples", target: "#{ENV["HOME"]}/Documents/FacebookSDK/Samples"
