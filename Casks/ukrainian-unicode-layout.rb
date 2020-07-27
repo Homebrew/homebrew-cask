@@ -8,5 +8,5 @@ cask "ukrainian-unicode-layout" do
   homepage "https://github.com/korzhyk/OSX-Ukrainian-Unicode-Layout"
 
   artifact "macOS-Ukrainian-Unicode-Layout-#{version}",
-    target: "#{ENV["HOME"]}/Library/Keyboard Layouts/Ukrainian-Unicode-Layout.bundle"
+           target: "#{ENV["HOME"]}/Library/Keyboard Layouts/Ukrainian-Unicode-Layout.bundle"
 end
