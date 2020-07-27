@@ -23,10 +23,10 @@ $COLUMNS = IO.console.winsize.last
 ###
 
 def check_ruby
-  if RUBY_VERSION.to_f < 2.0
-    print "You are currently using Ruby ", RUBY_VERSION, ", but version 2.0 or above is required."
-    exit 1
-  end
+  return if RUBY_VERSION.to_f >= 2.0
+
+  print "You are currently using Ruby ", RUBY_VERSION, ", but version 2.0 or above is required."
+  exit 1
 end
 
 def usage
@@ -64,8 +64,9 @@ def process_args
 end
 
 def load_apps
-  out, err, status = Open3.capture3("/usr/bin/osascript", "-e",
-    'tell application "System Events" to get (name, bundle identifier, unix id) of every process')
+  out, err, status =
+    Open3.capture3("/usr/bin/osascript", "-e",
+                   'tell application "System Events" to get (name, bundle identifier, unix id) of every process')
   if status.exitstatus.positive?
     puts err
     exit status.exitstatus
