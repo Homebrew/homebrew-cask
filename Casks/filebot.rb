@@ -10,7 +10,7 @@ cask "filebot" do
   app "FileBot.app"
   binary "#{appdir}/FileBot.app/Contents/MacOS/filebot.sh", target: "filebot"
   binary "#{appdir}/FileBot.app/Contents/Resources/bash_completion.d/filebot_completion",
-    target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/filebot"
+         target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/filebot"
 
   zap trash: "~/Library/Preferences/net.filebot.ui.plist"
 end
