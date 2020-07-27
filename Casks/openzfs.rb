@@ -36,8 +36,8 @@ cask "openzfs" do
     IO.write(uninstall_zfs, IO.read(uninstall_zfs).gsub("zfs get name", "/usr/local/bin/zfs get name"))
     IO.write(uninstall_zfs, IO.read(uninstall_zfs).gsub(
                               "sudo /sbin/kextunload -b net.lundman.zfs",
-      "sudo /bin/launchctl unload /Library/LaunchDaemons/org.openzfsonosx.zed.plist && " \
-      "sudo /sbin/kextunload -b net.lundman.zfs",
+                              "sudo /bin/launchctl unload /Library/LaunchDaemons/org.openzfsonosx.zed.plist && " \
+                              "sudo /sbin/kextunload -b net.lundman.zfs",
                             ))
   end
 
