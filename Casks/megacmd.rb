@@ -1,13 +1,13 @@
-cask 'megacmd' do
+cask "megacmd" do
   version :latest
   sha256 :no_check
 
-  url 'https://mega.nz/MEGAcmdSetup.dmg'
-  name 'MEGAcmd'
-  homepage 'https://mega.nz/cmd'
+  url "https://mega.nz/MEGAcmdSetup.dmg"
+  name "MEGAcmd"
+  homepage "https://mega.nz/cmd"
 
-  app 'MEGAcmd.app'
-  binary "#{appdir}/MEGAcmd.app/Contents/MacOS/MEGAcmdShell", target: 'megacmd'
+  app "MEGAcmd.app"
+  binary "#{appdir}/MEGAcmd.app/Contents/MacOS/MEGAcmdShell", target: "megacmd"
   binary "#{appdir}/MEGAcmd.app/Contents/MacOS/mega-attr"
   binary "#{appdir}/MEGAcmd.app/Contents/MacOS/mega-backup"
   binary "#{appdir}/MEGAcmd.app/Contents/MacOS/mega-cancel"
@@ -68,7 +68,7 @@ cask 'megacmd' do
   binary "#{appdir}/MEGAcmd.app/Contents/MacOS/mega-webdav"
   binary "#{appdir}/MEGAcmd.app/Contents/MacOS/mega-whoami"
 
-  zap trash: '~/.megaCmd'
+  zap trash: "~/.megaCmd"
 
   caveats <<~EOS
     #{token} only works if called from /Applications, so you may need to install it with
