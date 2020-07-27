@@ -1,6 +1,6 @@
 cask 'boop' do
-  version '1.2.0'
-  sha256 '60b285689b818f0dbe2c268ec79678d2f61f9047d5402991b6b66ddf606c6056'
+  version '1.2.1'
+  sha256 '9a8aa41f8ffe62596572aa2c4effbccef6e686e3515932bd22713d1825b8f5d8'
 
   # github.com/IvanMathy/Boop was verified as official when first introduced to the cask
   url "https://github.com/IvanMathy/Boop/releases/download/#{version}/Boop.zip"
