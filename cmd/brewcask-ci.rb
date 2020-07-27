@@ -5,7 +5,6 @@ require "utils/formatter"
 
 require_relative "lib/capture"
 require_relative "lib/check"
-require_relative "lib/travis"
 
 module Cask
   class Cmd
@@ -158,44 +157,27 @@ module Cask
 
       private
 
-      def step(name, travis_id)
-        unless ENV.key?("TRAVIS_COMMIT_RANGE")
-          puts Formatter.headline(name, color: :yellow)
-          return yield != false
-        end
-
+      def step(name)
         success = false
         output = nil
 
-        Travis.fold travis_id do
-          print Formatter.headline("#{name} ", color: :yellow)
+        print Formatter.headline("#{name} ", color: :yellow)
 
-          real_stdout = $stdout.dup
+        real_stdout = $stdout.dup
 
-          travis_wait = Thread.new do
-            loop do
-              sleep 595
-              real_stdout.print "\u200b"
-            end
-          end
+        success, output = capture do
+          yield != false
+        rescue => e
+          $stderr.puts e.message
+          $stderr.puts e.backtrace
+          false
+        end
 
-          success, output = capture do
-            yield != false
-          rescue => e
-            $stderr.puts e.message
-            $stderr.puts e.backtrace
-            false
-          end
-
-          travis_wait.kill
-          travis_wait.join
-
-          if success
-            puts Formatter.success("✔")
-            puts output unless output.empty?
-          else
-            puts Formatter.error("✘")
-          end
+        if success
+          puts Formatter.success("✔")
+          puts output unless output.empty?
+        else
+          puts Formatter.error("✘")
         end
 
         puts output unless success
