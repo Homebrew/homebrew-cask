@@ -10,24 +10,20 @@ require_relative "lib/travis"
 module Cask
   class Cmd
     class Ci < AbstractCommand
-      def self.escape(s)
-        s.gsub(/\r/, '%0D')
-         .gsub(/\n/, '%0A')
-         .gsub(/]/, '%5D')
-         .gsub(/;/, '%3B');
+      def self.escape(string)
+        string.gsub(/\r/, "%0D")
+              .gsub(/\n/, "%0A")
+              .gsub(/]/, "%5D")
+              .gsub(/;/, "%3B")
       end
 
       def run
-        unless ENV.key?("CI")
-          raise CaskError, "This command isn’t meant to be run locally."
-        end
+        raise CaskError, "This command isn’t meant to be run locally." unless ENV.key?("CI")
 
         $stdout.sync = true
         $stderr.sync = true
 
-        unless tap
-          raise CaskError, "This command must be run from inside a tap directory."
-        end
+        raise CaskError, "This command must be run from inside a tap directory." unless tap
 
         @commit_range = begin
           commit_range_start = system_command!("git", args: ["rev-parse", "origin/master"]).stdout.chomp
@@ -35,7 +31,8 @@ module Cask
           "#{commit_range_start}...#{commit_range_end}"
         end
 
-        ruby_files_in_wrong_directory = modified_ruby_files - (modified_cask_files + modified_command_files + modified_github_files)
+        ruby_files_in_wrong_directory =
+          modified_ruby_files - (modified_cask_files + modified_command_files + modified_github_files)
 
         unless ruby_files_in_wrong_directory.empty?
           raise CaskError, "Casks are in the wrong directory:\n" +
@@ -48,37 +45,34 @@ module Cask
 
         overall_success = true
 
-        style_offenses = []
-
         modified_cask_files.each do |path|
           cask = CaskLoader.load(path)
 
           overall_success &= step "brew cask style #{cask.token}", "style" do
-            begin
-              Style.run(path)
-              true
-            rescue => e
-              json = Style.rubocop(path, json: true)
+            Style.run(path)
+            true
+          rescue
+            json = Style.rubocop(path, json: true)
 
-              json.fetch("files").each do |file|
-                file.fetch("offenses").each do |o|
-                  path = Pathname(file.fetch("path")).relative_path_from(tap.path).to_s
-                  line = o.fetch("location").fetch("start_line")
-                  column = o.fetch("location").fetch("start_column")
-                  message = o.fetch("message")
-                  puts "::error file=#{self.class.escape(path)},line=#{line},col=#{column}::#{self.class.escape(message)}"
-                end
+            json.fetch("files").each do |file|
+              file.fetch("offenses").each do |o|
+                path = Pathname(file.fetch("path")).relative_path_from(tap.path).to_s
+                line = o.fetch("location").fetch("start_line")
+                column = o.fetch("location").fetch("start_column")
+                message = o.fetch("message")
+                puts "::error file=#{self.class.escape(path)},line=#{line},col=#{column}" \
+                     "::#{self.class.escape(message)}"
               end
-
-              false
             end
+
+            false
           end
 
           overall_success &= step "brew cask audit #{cask.token}", "audit" do
-            Auditor.audit(cask, audit_download: true,
-                                audit_appcast: true,
+            Auditor.audit(cask, audit_download:        true,
+                                audit_appcast:         true,
                                 audit_token_conflicts: added_cask_files.include?(path),
-                                commit_range: @commit_range)
+                                commit_range:          @commit_range)
           end
 
           if (macos_requirement = cask.depends_on.macos) && !macos_requirement.satisfied?
@@ -108,7 +102,7 @@ module Cask
           overall_success &= step "brew cask uninstall #{cask.token}", "uninstall" do
             success = begin
               if manual_installer?(cask)
-                puts 'Cask has a manual installer, skipping...'
+                puts "Cask has a manual installer, skipping..."
               else
                 installer.uninstall
               end
@@ -118,8 +112,9 @@ module Cask
               $stderr.puts e.backtrace
               false
             ensure
-              cask_and_formula_dependencies.reverse.each do |cask_or_formula|
+              cask_and_formula_dependencies.reverse_each do |cask_or_formula|
                 next unless cask_or_formula.is_a?(Cask)
+
                 Installer.new(cask_or_formula, verbose: true).uninstall if cask_or_formula.installed?
               end
             end
@@ -132,24 +127,24 @@ module Cask
             false
           end
 
-          if check.success? && !check.success?(ignore_exceptions: false)
-            overall_success &= step "brew cask zap #{cask.token}", "zap" do
-              success = begin
-                Installer.new(cask, verbose: true).zap
-                true
-              rescue => e
-                $stderr.puts e.message
-                $stderr.puts e.backtrace
-                false
-              end
+          next unless check.success? && !check.success?(ignore_exceptions: false)
 
-              check.after
-
-              next success if check.success?(ignore_exceptions: false)
-
-              $stderr.puts check.message(stanza: "zap")
+          overall_success &= step "brew cask zap #{cask.token}", "zap" do
+            success = begin
+              Installer.new(cask, verbose: true).zap
+              true
+            rescue => e
+              $stderr.puts e.message
+              $stderr.puts e.backtrace
               false
             end
+
+            check.after
+
+            next success if check.success?(ignore_exceptions: false)
+
+            $stderr.puts check.message(stanza: "zap")
+            false
           end
         end
 
@@ -185,13 +180,11 @@ module Cask
           end
 
           success, output = capture do
-            begin
-              yield != false
-            rescue => e
-              $stderr.puts e.message
-              $stderr.puts e.backtrace
-              false
-            end
+            yield != false
+          rescue => e
+            $stderr.puts e.message
+            $stderr.puts e.backtrace
+            false
           end
 
           travis_wait.kill
