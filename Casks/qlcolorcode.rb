@@ -13,7 +13,7 @@ cask "qlcolorcode" do
 
   postflight do
     system_command "/usr/bin/defaults",
-      args: ["write", "org.n8gray.QLColorCode", "pathHL", "#{HOMEBREW_PREFIX}/bin/highlight"]
+                   args: ["write", "org.n8gray.QLColorCode", "pathHL", "#{HOMEBREW_PREFIX}/bin/highlight"]
   end
 
   zap trash: "~/Library/Preferences/org.n8gray.QLColorCode.plist"
