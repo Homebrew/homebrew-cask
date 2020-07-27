@@ -1,10 +1,10 @@
-cask 'nifty' do
+cask "nifty" do
   version :latest
   sha256 :no_check
 
-  url 'https://niftypm.com/apps/Nifty.dmg'
-  name 'Nifty'
-  homepage 'https://niftypm.com/'
+  url "https://niftypm.com/apps/Nifty.dmg"
+  name "Nifty"
+  homepage "https://niftypm.com/"
 
-  app 'Nifty.app'
+  app "Nifty.app"
 end
