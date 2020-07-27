@@ -71,17 +71,17 @@ def find_electron_builder(app)
     appcast.gsub(%r{(?<!:)/{2,}}, "/")
   end
 
-  unless verify_appcast("electron-builder", *possible_appcasts)
-    warn <<~MESSAGE
+  return if verify_appcast("electron-builder", *possible_appcasts)
 
-      An "app-update.yml" file was found, but we could not parse it.
-      Please report this on https://github.com/Homebrew/homebrew-cask/
-      Provide this info:
+  warn <<~MESSAGE
 
-    MESSAGE
+    An "app-update.yml" file was found, but we could not parse it.
+    Please report this on https://github.com/Homebrew/homebrew-cask/
+    Provide this info:
 
-    puts appcast_file.read
-  end
+  MESSAGE
+
+  puts appcast_file.read
 end
 
 App = Pathname(ARGV[0]).freeze
