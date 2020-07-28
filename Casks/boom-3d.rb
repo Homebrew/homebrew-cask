@@ -1,6 +1,6 @@
 cask "boom-3d" do
-  version "1.3.6"
-  sha256 "f3ba9b6c05dc2db2ab347f46b08f7470e49ff684729a1cb90c1172191a65b17f"
+  version "1.3.7"
+  sha256 "53db7742b2c81f721502b867e58cf57376e8397ab5b06ae38fb73ea772197b1a"
 
   # d3jbf8nvvpx3fh.cloudfront.net/ was verified as official when first introduced to the cask
   url "https://d3jbf8nvvpx3fh.cloudfront.net/Boom3D/Update/v#{version}/Boom_3D_Update.dmg"
