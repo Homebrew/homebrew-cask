@@ -1,6 +1,6 @@
 cask "ableton-live-intro" do
-  version "10.1.15"
-  sha256 "7ff089e26ec16c9fe8a9161257d85e7cb432f6cb5f1287bcf82c67a254005085"
+  version "10.1.17"
+  sha256 "09610fde65791f3f301b64ccf45a0d836626d294c3156f7a68457f63ff3ac3b2"
 
   url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_intro_#{version}_64.dmg"
   appcast "https://www.ableton.com/en/release-notes/live-#{version.major}/"
