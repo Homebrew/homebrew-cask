@@ -8,7 +8,7 @@ cask "sim-genie" do
   name "Sim Genie"
   homepage "https://simgenie.app/"
 
-  depends_on macos: '>= :mojave'
+  depends_on macos: ">= :mojave"
 
   app "Sim Genie.app"
 end
