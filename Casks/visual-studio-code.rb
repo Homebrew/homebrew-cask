@@ -3,7 +3,7 @@ cask "visual-studio-code" do
   sha256 "3b6590adc122bbac85a28d260103f8ebec4fb369f87ef9a26d3375fb020cafce"
 
   url "https://update.code.visualstudio.com/#{version}/darwin/stable"
-  appcast "https://vscode-update.azurewebsites.net/api/update/darwin/stable/VERSION"
+  appcast "https://update.code.visualstudio.com/api/update/darwin/stable/VERSION"
   name "Microsoft Visual Studio Code"
   name "VS Code"
   homepage "https://code.visualstudio.com/"
