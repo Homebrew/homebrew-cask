@@ -1,6 +1,6 @@
 cask "mindjet-mindmanager" do
-  version "13.0.181"
-  sha256 "8820a1cd65a8452d0965516c7fcb21ac11a4530481aec694c9ce8da67bf8ce4f"
+  version "13.1.115"
+  sha256 "767951dc902b8c179a16122e5981eaa866bcf513d4065d95c2623c4285e96cf0"
 
   url "https://download.mindjet.com/MindManager_Mac_#{version}.dmg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.mindjet.com/latest-release-notes-mac-english",
