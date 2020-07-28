@@ -45,8 +45,9 @@ CASK_REPOS.each do |repo|
     '.travis.yml',
     'Casks/.rubocop.yml',
   ].each do |path|
-    FileUtils.rm_rf File.join(repo_dir, path)
-    FileUtils.cp_r path, File.join(repo_dir, path)
+    dst_path = File.join(repo_dir, path)
+    FileUtils.rm_rf dst_path
+    FileUtils.cp_r path, dst_path if File.exist?(dst_path)
   end
 
   # Remove actions which should only be run from the main repo.
