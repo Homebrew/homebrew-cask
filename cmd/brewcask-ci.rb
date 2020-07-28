@@ -68,10 +68,34 @@ module Cask
           end
 
           overall_success &= step "brew cask audit #{cask.token}" do
-            Auditor.audit(cask, audit_download:        true,
-                                audit_appcast:         true,
-                                audit_token_conflicts: added_cask_files.include?(path),
-                                commit_range:          @commit_range)
+            result = Auditor.audit(cask, audit_download:        true,
+                                   audit_appcast:         true,
+                                   audit_token_conflicts: added_cask_files.include?(path),
+                                   commit_range:          @commit_range)
+
+            if result.is_a?(Hash) # TODO: Remove check when https://github.com/Homebrew/brew/pull/8115 is merged.
+              success = true
+
+              path = Pathname(cask.sourcefile_path).relative_path_from(tap.path).to_s
+              result.each do |type, messages|
+                messages.each do |message|
+                  if type == :warning
+                    if tap.official?
+                      success = false
+                      type = :error
+                    end
+                  else
+                    success = false
+                  end
+
+                  puts "::#{type} file=#{self.class.escape(path)}::#{self.class.escape(message)}"
+                end
+              end
+
+              success
+            else
+              result
+            end
           end
 
           if (macos_requirement = cask.depends_on.macos) && !macos_requirement.satisfied?
