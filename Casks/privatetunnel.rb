@@ -8,7 +8,7 @@ cask "privatetunnel" do
   name "Private Tunnel"
   homepage "https://www.privatetunnel.com/home/"
 
-  pkg "PrivateTunnel#{version.before_comma.dots_to_underscores}(#{version.after_comma}).pkg"
+  pkg "Private_Tunnel_#{version.before_comma.dots_to_underscores}(#{version.after_comma})_Installer_signed.pkg"
 
   uninstall script: "Uninstaller.command"
 end
