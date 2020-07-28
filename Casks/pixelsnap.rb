@@ -1,6 +1,6 @@
 cask "pixelsnap" do
-  version "2.3.2"
-  sha256 "b0f8d4fa3f3fddc83c9ce161ec242bc160612867cdfe9ddd739a1cda292198f4"
+  version "2.3.3"
+  sha256 "598986c82952471cb328ab3114f136a8d572912a6e29e0125626e9a31f4a3d32"
 
   url "https://updates.getpixelsnap.com/v#{version.major}/PixelSnap-#{version.major}-#{version}.dmg"
   appcast "https://updates.getpixelsnap.com/v#{version.major}/appcast.xml"
