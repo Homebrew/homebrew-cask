@@ -5,7 +5,6 @@ require "utils/formatter"
 
 require_relative "lib/capture"
 require_relative "lib/check"
-require_relative "lib/travis"
 
 module Cask
   class Cmd
@@ -48,7 +47,7 @@ module Cask
         modified_cask_files.each do |path|
           cask = CaskLoader.load(path)
 
-          overall_success &= step "brew cask style #{cask.token}", "style" do
+          overall_success &= step "brew cask style #{cask.token}" do
             Style.run(path)
             true
           rescue
@@ -68,7 +67,7 @@ module Cask
             false
           end
 
-          overall_success &= step "brew cask audit #{cask.token}", "audit" do
+          overall_success &= step "brew cask audit #{cask.token}" do
             Auditor.audit(cask, audit_download:        true,
                                 audit_appcast:         true,
                                 audit_token_conflicts: added_cask_files.include?(path),
@@ -84,11 +83,13 @@ module Cask
 
           installer = Installer.new(cask, verbose: true)
 
-          cask_and_formula_dependencies = installer.missing_cask_and_formula_dependencies
-
           check = Check.new
 
-          overall_success &= step "brew cask install #{cask.token}", "install" do
+          cask_and_formula_dependencies = nil
+
+          overall_success &= step "brew cask install #{cask.token}" do
+            cask_and_formula_dependencies = installer.missing_cask_and_formula_dependencies
+
             if was_installed
               old_cask = CaskLoader.load(cask.installed_caskfile)
               Installer.new(old_cask, verbose: true).zap
@@ -99,7 +100,7 @@ module Cask
             installer.install
           end
 
-          overall_success &= step "brew cask uninstall #{cask.token}", "uninstall" do
+          overall_success &= step "brew cask uninstall #{cask.token}" do
             success = begin
               if manual_installer?(cask)
                 puts "Cask has a manual installer, skipping..."
@@ -129,7 +130,7 @@ module Cask
 
           next unless check.success? && !check.success?(ignore_exceptions: false)
 
-          overall_success &= step "brew cask zap #{cask.token}", "zap" do
+          overall_success &= step "brew cask zap #{cask.token}" do
             success = begin
               Installer.new(cask, verbose: true).zap
               true
@@ -158,47 +159,34 @@ module Cask
 
       private
 
-      def step(name, travis_id)
-        unless ENV.key?("TRAVIS_COMMIT_RANGE")
-          puts Formatter.headline(name, color: :yellow)
-          return yield != false
-        end
-
+      def step(name)
         success = false
         output = nil
 
-        Travis.fold travis_id do
-          print Formatter.headline("#{name} ", color: :yellow)
-
-          real_stdout = $stdout.dup
-
-          travis_wait = Thread.new do
-            loop do
-              sleep 595
-              real_stdout.print "\u200b"
-            end
-          end
-
-          success, output = capture do
-            yield != false
-          rescue => e
-            $stderr.puts e.message
-            $stderr.puts e.backtrace
-            false
-          end
-
-          travis_wait.kill
-          travis_wait.join
-
-          if success
-            puts Formatter.success("✔")
-            puts output unless output.empty?
-          else
-            puts Formatter.error("✘")
-          end
+        success, output = capture do
+          yield != false
+        rescue => e
+          $stderr.puts e.message
+          $stderr.puts e.backtrace
+          false
         end
 
-        puts output unless success
+        headline = Formatter.headline("#{name}", color: :yellow)
+
+        group = if success
+          "#{headline} #{Formatter.success("✔")}"
+        else
+          "#{headline} #{Formatter.error("✘")}"
+        end
+
+        if success
+          puts "::group::#{group}"
+          puts output
+          puts "::endgroup::#{group}"
+        else
+          puts group
+          puts output
+        end
 
         success
       end
