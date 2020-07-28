@@ -128,7 +128,7 @@ def passed_ci?(check_runs = [])
               .map { |(k, v)| [k, v.max_by { |status| Time.parse(status.fetch("completed_at")) }] }
   ]
 
-  check_runs.dig("Travis CI - Pull Request", "conclusion") == "success"
+  check_runs.dig("ci", "conclusion") == "success"
 end
 
 begin
