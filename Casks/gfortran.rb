@@ -1,13 +1,12 @@
 cask "gfortran" do
-  case MacOS.version
-  when :el_capitan
+  if MacOS.version <= :el_capitan
     version "6.1"
     sha256 "eb817bce64bf9032595e09166bdaaf740c83bf7258f900b79cd6786437bacbf4"
 
     # github.com/fxcoudert/gfortran-for-macOS/ was verified as official when first introduced to the cask
     url "https://github.com/fxcoudert/gfortran-for-macOS/releases/download/#{version}/gfortran-#{version}-ElCapitan.dmg"
     pkg "gfortran-#{version}-ElCapitan/gfortran.pkg"
-  when :sierra
+  elsif MacOS.version <= :high_sierra
     version "6.3"
     sha256 "38b81bc878dba41cfdbb0c335aec5a97554a5d1766fb3e3ca6be7da0df9e8e09"
 
