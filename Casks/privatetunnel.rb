@@ -1,9 +1,9 @@
 cask "privatetunnel" do
-  version "2.8"
-  sha256 "924c19ecbc7794e5ca09a79be21e04a8b7733ecba57ff0d048335218371c56c5"
+  version "3.0.1.1643"
+  sha256 "47c693662f88b43a4734442287489d4623a6bd7cdeb837ac79fe94c27f0a059d"
 
-  # swupdate.openvpn.org/privatetunnel/ was verified as official when first introduced to the cask
-  url "https://swupdate.openvpn.org/privatetunnel/client/privatetunnel-mac-#{version}.dmg"
+  # swupdate.openvpn.net/downloads/privatetunnel/ was verified as official when first introduced to the cask
+  url "https://swupdate.openvpn.net/downloads/privatetunnel/private-tunnel-#{version}_signed.dmg"
   appcast "https://www.privatetunnel.com/apps/"
   name "Private Tunnel"
   homepage "https://www.privatetunnel.com/home/"
