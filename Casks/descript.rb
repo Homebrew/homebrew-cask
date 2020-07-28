@@ -1,12 +1,13 @@
-cask 'descript' do
+cask "descript" do
   version :latest
   sha256 :no_check
 
   url "https://electron.descript.com/Descript%20Installer.app.zip"
-  name 'Descript'
-  homepage 'https://www.descript.com/'
+  name "Descript"
+  homepage "https://www.descript.com/"
 
-  pkg 'Descript Installer.app'
+  installer script: "Descript Installer.app/Contents/MacOS/Descript Installer"
 
-  # uninstall pkgutil: 'com.avatron.pkg.AirDisplay'
+  # uninstall pkgutil: 'com.descript.beachcube' # this didnt remove the app
+  uninstall delete: "/Applications/Descript.app"
 end
