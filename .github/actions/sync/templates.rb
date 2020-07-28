@@ -47,7 +47,7 @@ CASK_REPOS.each do |repo|
   ].each do |path|
     dst_path = File.join(repo_dir, path)
     FileUtils.rm_rf dst_path
-    FileUtils.cp_r path, dst_path if File.exist?(dst_path)
+    FileUtils.cp_r path, dst_path if File.exist?(path)
   end
 
   # Remove actions which should only be run from the main repo.
