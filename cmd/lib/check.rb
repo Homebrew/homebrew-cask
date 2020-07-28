@@ -2,24 +2,24 @@ require "forwardable"
 
 class Check
   CHECKS = {
-    installed_apps: -> {
+    installed_apps:       lambda {
       ["/Applications", File.expand_path("~/Applications")]
         .flat_map { |dir| (0..5).map { |i| "/*" * i }.flat_map { |glob| Dir["#{dir}#{glob}.app"] } }
     },
-    installed_kexts: -> {
+    installed_kexts:      lambda {
       system_command!("/usr/sbin/kextstat", args: ["-kl"], print_stderr: false)
         .stdout
         .lines
         .map { |l| l.match(/^.{52}([^\s]+)/)[1] }
         .grep_v(/^com\.apple\./)
     },
-    installed_pkgs: -> {
+    installed_pkgs:       lambda {
       Pathname("/var/db/receipts")
         .children
         .grep(/\.plist$/)
         .map { |path| path.basename.to_s.sub(/\.plist$/, "") }
     },
-    installed_launchjobs: -> {
+    installed_launchjobs: lambda {
       format_launchjob = lambda { |file|
         name = file.basename(".plist").to_s
 
@@ -41,7 +41,7 @@ class Check
         .select(&:exist?)
         .map(&format_launchjob)
     },
-    loaded_launchjobs: -> {
+    loaded_launchjobs:    lambda {
       launchctl = lambda do |sudo|
         system_command!("/bin/launchctl", args: ["list"], print_stderr: false, sudo: sudo)
           .stdout
@@ -53,7 +53,7 @@ class Check
         .map { |l| l.split(/\s+/)[2] }
         .grep_v(/^com\.apple\./)
     },
-  }
+  }.freeze
 
   class Diff
     attr_reader :removed, :added
@@ -95,7 +95,7 @@ class Check
 
     @diff = {}
 
-    CHECKS.keys.each do |name|
+    CHECKS.each_key do |name|
       @diff[name] = Diff.new(@before[name], @after[name])
     end
 
@@ -105,8 +105,8 @@ class Check
 
   def success?(ignore_exceptions: true)
     diff.values
-      .map { |v| v.added.reject { |s| ignore_exceptions ? zap_exceptions.include?(s) : false  } }
-      .all?(&:none?)
+        .map { |v| v.added.reject { |s| ignore_exceptions ? zap_exceptions.include?(s) : false } }
+        .all?(&:none?)
   end
 
   def zap_exceptions
@@ -122,47 +122,65 @@ class Check
     lines = []
 
     pkg_files = diff[:installed_pkgs]
-                 .added
-                 .flat_map { |id| Cask::Pkg.new(id).pkgutil_bom_all.map(&:to_s) }
+                .added
+                .flat_map { |id| Cask::Pkg.new(id).pkgutil_bom_all.map(&:to_s) }
 
     installed_apps = diff[:installed_apps].added - pkg_files
 
     if installed_apps.any?
-      lines << Formatter.error("Some applications are still installed, add them to #{Formatter.identifier("#{stanza} delete:")}", label: "Error")
+      lines << Formatter.error(
+        "Some applications are still installed, add them to #{Formatter.identifier("#{stanza} delete:")}",
+        label: "Error",
+      )
       lines << installed_apps.join("\n")
     end
 
     if (installed_kexts = diff[:installed_kexts].added).any?
-      lines << Formatter.error("Some kernel extensions are still installed, add them to #{Formatter.identifier("#{stanza} kext:")}", label: "Error")
+      lines << Formatter.error(
+        "Some kernel extensions are still installed, add them to #{Formatter.identifier("#{stanza} kext:")}",
+        label: "Error",
+      )
       lines << installed_kexts.join("\n")
     end
 
     if (installed_packages = diff[:installed_pkgs].added).any?
-      lines << Formatter.error("Some packages are still installed, add them to #{Formatter.identifier("#{stanza} pkgutil:")}", label: "Error")
+      lines << Formatter.error(
+        "Some packages are still installed, add them to #{Formatter.identifier("#{stanza} pkgutil:")}",
+        label: "Error",
+      )
       lines << installed_packages.join("\n")
     end
 
     if (installed_launchjobs = diff[:installed_launchjobs].added).any?
-      lines << Formatter.error("Some launch jobs are still installed, add them to #{Formatter.identifier("#{stanza} launchctl:")}", label: "Error")
+      lines << Formatter.error(
+        "Some launch jobs are still installed, add them to #{Formatter.identifier("#{stanza} launchctl:")}",
+        label: "Error",
+      )
       lines << installed_launchjobs.join("\n")
     end
 
     running_apps = diff[:loaded_launchjobs]
-                     .added
-                     .select { |id| id.match?(/\.\d+\Z/) }
-                     .map { |id| id.sub(/\.\d+\Z/, "") }
+                   .added
+                   .select { |id| id.match?(/\.\d+\Z/) }
+                   .map { |id| id.sub(/\.\d+\Z/, "") }
 
     loaded_launchjobs = diff[:loaded_launchjobs]
-                         .added
-                         .reject { |id| id.match?(/\.\d+\Z/) }
+                        .added
+                        .reject { |id| id.match?(/\.\d+\Z/) }
 
     if running_apps.any?
-      lines << Formatter.error("Some applications are still running, add them to #{Formatter.identifier("#{stanza} quit:")}", label: "Error")
+      lines << Formatter.error(
+        "Some applications are still running, add them to #{Formatter.identifier("#{stanza} quit:")}",
+        label: "Error",
+      )
       lines << running_apps.join("\n")
     end
 
     if loaded_launchjobs.any?
-      lines << Formatter.error("Some launch jobs were not unloaded, add them to #{Formatter.identifier("#{stanza} launchctl:")}", label: "Error")
+      lines << Formatter.error(
+        "Some launch jobs were not unloaded, add them to #{Formatter.identifier("#{stanza} launchctl:")}",
+        label: "Error",
+      )
       lines << loaded_launchjobs.join("\n")
     end
 

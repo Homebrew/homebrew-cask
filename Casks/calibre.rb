@@ -1,20 +1,20 @@
-cask 'calibre' do
+cask "calibre" do
   if MacOS.version <= :high_sierra
-    version '3.48.0'
-    sha256 '68829cd902b8e0b2b7d5cf7be132df37bcc274a1e5720b4605d2dd95f3a29168'
+    version "3.48.0"
+    sha256 "68829cd902b8e0b2b7d5cf7be132df37bcc274a1e5720b4605d2dd95f3a29168"
     url "https://download.calibre-ebook.com/#{version}/calibre-#{version}.dmg"
   else
-    version '4.21.0'
-    sha256 'efce0c1fb209e4404fffdc8e9b444e8a17bd31b50250f4e053c9bb0a6bf37ec8'
+    version "4.21.0"
+    sha256 "efce0c1fb209e4404fffdc8e9b444e8a17bd31b50250f4e053c9bb0a6bf37ec8"
     # github.com/kovidgoyal/calibre/ was verified as official when first introduced to the cask
     url "https://github.com/kovidgoyal/calibre/releases/download/v#{version}/calibre-#{version}.dmg"
-    appcast 'https://github.com/kovidgoyal/calibre/releases.atom'
+    appcast "https://github.com/kovidgoyal/calibre/releases.atom"
   end
 
-  name 'calibre'
-  homepage 'https://calibre-ebook.com/'
+  name "calibre"
+  homepage "https://calibre-ebook.com/"
 
-  app 'calibre.app'
+  app "calibre.app"
   binary "#{appdir}/calibre.app/Contents/MacOS/calibre"
   binary "#{appdir}/calibre.app/Contents/MacOS/calibre-complete"
   binary "#{appdir}/calibre.app/Contents/MacOS/calibre-customize"
@@ -37,10 +37,10 @@ cask 'calibre' do
   binary "#{appdir}/calibre.app/Contents/MacOS/web2disk"
 
   zap trash: [
-               '~/Library/Caches/calibre',
-               '~/Library/Preferences/calibre',
-               '~/Library/Preferences/net.kovidgoyal.calibre.plist',
-               '~/Library/Saved Application State/com.calibre-ebook.ebook-viewer.savedState',
-               '~/Library/Saved Application State/net.kovidgoyal.calibre.savedState',
-             ]
+    "~/Library/Caches/calibre",
+    "~/Library/Preferences/calibre",
+    "~/Library/Preferences/net.kovidgoyal.calibre.plist",
+    "~/Library/Saved Application State/com.calibre-ebook.ebook-viewer.savedState",
+    "~/Library/Saved Application State/net.kovidgoyal.calibre.savedState",
+  ]
 end
