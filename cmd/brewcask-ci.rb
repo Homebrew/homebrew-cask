@@ -69,33 +69,31 @@ module Cask
 
           overall_success &= step "brew cask audit #{cask.token}" do
             result = Auditor.audit(cask, audit_download:        true,
-                                   audit_appcast:         true,
-                                   audit_token_conflicts: added_cask_files.include?(path),
-                                   commit_range:          @commit_range)
+                                         audit_appcast:         true,
+                                         audit_token_conflicts: added_cask_files.include?(path),
+                                         commit_range:          @commit_range)
 
-            if result.is_a?(Hash) # TODO: Remove check when https://github.com/Homebrew/brew/pull/8115 is merged.
-              success = true
+            success = true
 
-              path = Pathname(cask.sourcefile_path).relative_path_from(tap.path).to_s
-              result.each do |type, messages|
-                messages.each do |message|
-                  if type == :warning
-                    if tap.official?
-                      success = false
-                      type = :error
-                    end
-                  else
-                    success = false
-                  end
+            path = Pathname(cask.sourcefile_path).relative_path_from(tap.path).to_s
 
-                  puts "::#{type} file=#{self.class.escape(path)}::#{self.class.escape(message)}"
+            messages = result[:warnings].map { |message| [:warning, message] } +
+                       result[:errors].map { |message| [:error, message] }
+
+            messages.each do |type, message|
+              if type == :warnings
+                if tap.official?
+                  success = false
+                  type = :error
                 end
+              else
+                success = false
               end
 
-              success
-            else
-              result
+              puts "::#{type} file=#{self.class.escape(path)}::#{self.class.escape(message)}"
             end
+
+            success
           end
 
           if (macos_requirement = cask.depends_on.macos) && !macos_requirement.satisfied?
@@ -184,9 +182,6 @@ module Cask
       private
 
       def step(name)
-        success = false
-        output = nil
-
         success, output = capture do
           yield != false
         rescue => e
@@ -195,7 +190,7 @@ module Cask
           false
         end
 
-        headline = Formatter.headline("#{name}", color: :yellow)
+        headline = Formatter.headline(name.to_s, color: :yellow)
 
         group = if success
           "#{headline} #{Formatter.success("✔")}"
