@@ -7,6 +7,8 @@ cask 'transcribe' do
   name 'Transcribe!'
   homepage 'https://www.seventhstring.com/xscribe/overview.html'
 
+  depends_on macos: '>= :yosemite'
+
   app 'Transcribe!.app'
 
   uninstall quit: 'com.seventhstring.transcribe'
