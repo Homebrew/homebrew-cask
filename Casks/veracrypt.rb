@@ -12,5 +12,16 @@ cask "veracrypt" do
 
   pkg "VeraCrypt_Installer.pkg"
 
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/veracrypt.wrapper.sh"
+  binary shimscript, target: "veracrypt"
+
+  preflight do
+    IO.write shimscript, <<~EOS
+      #!/bin/sh
+      exec '#{appdir}/VeraCrypt.app/Contents/MacOS/VeraCrypt' "$@"
+    EOS
+  end
+
   uninstall pkgutil: "com.idrix.pkg.veracrypt"
 end
