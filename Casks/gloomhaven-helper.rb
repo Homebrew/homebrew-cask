@@ -1,14 +1,15 @@
-cask 'gloomhaven-helper' do
-  version '8.4.4'
-  sha256 'a391db88dd7c1290ae4fe5060014979da7412f8b16cbbe97c598886a3d59581a'
+cask "gloomhaven-helper" do
+  version "8.4.6"
+  sha256 "7b2161b1ca159a7584d89355d72b8aae2c7c06c281eee8c26a75da16697dea96"
 
   url "https://esotericsoftware.com/files/ghh/GloomhavenHelper-#{version}.zip"
-  name 'Gloomhaven Helper'
-  homepage 'https://esotericsoftware.com/gloomhaven-helper'
+  appcast "http://esotericsoftware.com/gloomhaven-helper"
+  name "Gloomhaven Helper"
+  homepage "https://esotericsoftware.com/gloomhaven-helper"
 
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/GloomhavenHelper/gloomhaven-helper.wrapper.sh"
-  binary shimscript, target: 'gloomhaven-helper'
+  binary shimscript, target: "gloomhaven-helper"
 
   preflight do
     IO.write shimscript, <<~EOS
@@ -19,6 +20,6 @@ cask 'gloomhaven-helper' do
   end
 
   caveats do
-    depends_on_java '8+'
+    depends_on_java "8+"
   end
 end

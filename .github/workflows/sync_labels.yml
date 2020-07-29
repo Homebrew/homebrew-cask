@@ -6,7 +6,7 @@ jobs:
   sync_labels:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@main
       - uses: ./.github/actions/sync
         with:
           args: /labels.rb

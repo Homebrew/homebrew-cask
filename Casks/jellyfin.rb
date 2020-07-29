@@ -1,11 +1,11 @@
-cask 'jellyfin' do
-  version '10.5.5b'
-  sha256 'e60ebbda1998a2f1daebdb33a46b4b1076696cec01f5b33c974342a8f75bed27'
+cask "jellyfin" do
+  version "10.6.1"
+  sha256 "0d7b562f0b799302db417a9ab5eb2bf07fdc8ca19b28649798ebcf266c949c1e"
 
-  url "https://repo.jellyfin.org/releases/server/macos/stable/Jellyfin_#{version}.dmg"
-  appcast 'https://repo.jellyfin.org/releases/server/macos/stable/README_FIRST.txt'
-  name 'Jellyfin'
-  homepage 'https://jellyfin.org/'
+  url "https://repo.jellyfin.org/releases/server/macos/stable/combined/Jellyfin_#{version}.dmg"
+  appcast "https://repo.jellyfin.org/releases/server/macos/stable/"
+  name "Jellyfin"
+  homepage "https://jellyfin.org/"
 
-  app 'Jellyfin.app'
+  app "Jellyfin.app"
 end

@@ -1,11 +1,11 @@
-cask 'data-integration' do
-  version '8.3.0.0-371'
-  sha256 'c0dbb17248135423fe6336bc8f45b01c2cf15a9b0498fa1d27c24588b3fa2872'
+cask "data-integration" do
+  version "9.0.0.0-423"
+  sha256 "05adf26c8b51fb14d1ea75e73579a7718d881228f502a4be5d1ce3a27d5c7997"
 
   url "https://downloads.sourceforge.net/pentaho/pdi-ce-#{version}.zip"
-  appcast 'https://sourceforge.net/projects/pentaho/rss?path=/'
-  name 'Pentaho Data Integration'
-  homepage 'https://sourceforge.net/projects/pentaho/'
+  appcast "https://sourceforge.net/projects/pentaho/rss?path=/"
+  name "Pentaho Data Integration"
+  homepage "https://sourceforge.net/projects/pentaho/"
 
-  app 'data-integration/Data Integration.app'
+  app "data-integration/Data Integration.app"
 end

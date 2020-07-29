@@ -1,13 +1,13 @@
-cask 'loom' do
-  version '0.42.2'
-  sha256 '298cd6f2d45aa94a45eb3475bd2fb0c0237b35336782e31843370ba02336b1bf'
+cask "loom" do
+  version "0.44.0"
+  sha256 "15fd88357412bc10cf969e3e0e27dd891a4c40bafb671e38219cc9084429abcc"
 
   url "https://cdn.loom.com/desktop-packages/Loom-#{version}.dmg"
-  appcast 'https://s3-us-west-2.amazonaws.com/loom.desktop.packages/loom-inc-production/desktop-packages/latest-mac.yml'
-  name 'Loom'
-  homepage 'https://www.loom.com/'
+  appcast "https://s3-us-west-2.amazonaws.com/loom.desktop.packages/loom-inc-production/desktop-packages/latest-mac.yml"
+  name "Loom"
+  homepage "https://www.loom.com/"
 
   auto_updates true
 
-  app 'Loom.app'
+  app "Loom.app"
 end

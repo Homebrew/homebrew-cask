@@ -21,10 +21,12 @@ jobs:
           fi
 
           brew update-reset "$(brew --repository "${GITHUB_REPOSITORY}")"
-          
+
           cd "$(brew --repository "${GITHUB_REPOSITORY}")"
           patch="$(mktemp)"
           curl --silent --show-error --fail --location "${PR_URL}.patch" --output "${patch}"
+          git config --global user.name github-actions
+          git config --global user.email github-actions@github.com
           git am --whitespace=nowarn "${patch}"
           rm "${patch}"
         env:
@@ -37,6 +39,6 @@ jobs:
           unset HOMEBREW_CASK_OPTS
           brew cask ci
         env:
-          CI: true
           HOMEBREW_COLOR: 1
           HOMEBREW_DEVELOPER: 1
+          HOMEBREW_PULL_REQUEST_REPOSITORY: ${{ github.event.pull_request.head.repo.full_name }}

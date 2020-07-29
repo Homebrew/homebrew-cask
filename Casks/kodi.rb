@@ -1,19 +1,19 @@
-cask 'kodi' do
-  version '18.7-Leia'
-  sha256 '88822a1a4aa3dba8959cf84a49fb65ec2dd93ab08fc38467bd8af927707ba153'
+cask "kodi" do
+  version "18.8-Leia"
+  sha256 "0ed0c5be2ae98028ff87d431d812cd8ae004145df4fd3d5439f0cd600bfe4cb9"
 
   url "https://mirrors.kodi.tv/releases/osx/x86_64/kodi-#{version}-x86_64.dmg"
-  appcast 'https://github.com/xbmc/xbmc/releases.atom'
-  name 'Kodi'
-  homepage 'https://kodi.tv/'
+  appcast "https://github.com/xbmc/xbmc/releases.atom"
+  name "Kodi"
+  homepage "https://kodi.tv/"
 
-  app 'Kodi.app'
+  app "Kodi.app"
 
   zap trash: [
-               '~/.kodi',
-               '~/Library/Application Support/Kodi',
-               '~/Library/Logs/kodi.log',
-               '~/Library/Logs/kodi.old.log',
-               '~/Library/Saved Application State/org.xbmc.kodi.savedState',
-             ]
+    "~/.kodi",
+    "~/Library/Application Support/Kodi",
+    "~/Library/Logs/kodi.log",
+    "~/Library/Logs/kodi.old.log",
+    "~/Library/Saved Application State/org.xbmc.kodi.savedState",
+  ]
 end

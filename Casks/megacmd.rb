@@ -1,13 +1,76 @@
-cask 'megacmd' do
+cask "megacmd" do
   version :latest
   sha256 :no_check
 
-  url 'https://mega.nz/MEGAcmdSetup.dmg'
-  name 'MEGAcmd'
-  homepage 'https://mega.nz/cmd'
+  url "https://mega.nz/MEGAcmdSetup.dmg"
+  name "MEGAcmd"
+  homepage "https://mega.nz/cmd"
 
+<<<<<<< HEAD
   app 'MEGAcmd.app'
-  binary "#{appdir}/MEGAcmd.app/Contents/MacOS/MEGAcmdShell", target: 'megacmd'
+  binary 'MEGAcmd.app/Contents/MacOS/MEGAcmdShell', target: 'megacmd'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-attr'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-backup'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-cancel'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-cat'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-cd'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-cmd'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-confirm'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-confirmcancel'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-cp'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-debug'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-deleteversions'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-df'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-du'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-errorcode'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-exclude'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-exec'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-export'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-find'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-ftp'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-get'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-graphics'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-help'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-https'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-import'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-invite'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-ipc'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-killsession'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-lcd'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-log'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-login'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-logout'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-lpwd'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-ls'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-mediainfo'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-mkdir'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-mount'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-mv'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-passwd'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-permissions'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-preview'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-put'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-pwd'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-quit'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-reload'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-rm'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-session'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-share'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-showpcr'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-signup'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-speedlimit'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-sync'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-thumbnail'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-transfers'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-tree'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-userattr'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-users'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-version'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-webdav'
+  binary 'MEGAcmd.app/Contents/MacOS/mega-whoami'
+=======
+  app "MEGAcmd.app"
+  binary "#{appdir}/MEGAcmd.app/Contents/MacOS/MEGAcmdShell", target: "megacmd"
   binary "#{appdir}/MEGAcmd.app/Contents/MacOS/mega-attr"
   binary "#{appdir}/MEGAcmd.app/Contents/MacOS/mega-backup"
   binary "#{appdir}/MEGAcmd.app/Contents/MacOS/mega-cancel"
@@ -67,8 +130,9 @@ cask 'megacmd' do
   binary "#{appdir}/MEGAcmd.app/Contents/MacOS/mega-version"
   binary "#{appdir}/MEGAcmd.app/Contents/MacOS/mega-webdav"
   binary "#{appdir}/MEGAcmd.app/Contents/MacOS/mega-whoami"
+>>>>>>> upstream/core-code-patch-2
 
-  zap trash: '~/.megaCmd'
+  zap trash: "~/.megaCmd"
 
   caveats <<~EOS
     #{token} only works if called from /Applications, so you may need to install it with

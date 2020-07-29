@@ -11,7 +11,7 @@ jobs:
     if: startsWith( github.repository, 'Homebrew/' )
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@main
       - uses: ./.github/actions/automerge
         env:
           HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
