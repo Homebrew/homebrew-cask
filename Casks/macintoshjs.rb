@@ -8,4 +8,10 @@ cask "macintoshjs" do
   homepage "https://github.com/felixrieseberg/macintosh.js"
 
   app "macintosh.js.app"
+
+  zap trash: [
+    "~/Library/Application Support/macintosh.js",
+    "~/Library/Preferences/com.felixrieseberg.macintoshjs.plist",
+    "~/Library/Saved Application State/com.felixrieseberg.macintoshjs.savedState",
+  ]
 end
