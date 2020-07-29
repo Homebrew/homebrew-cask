@@ -1,8 +1,8 @@
 cask 'microsoft-office' do
-  version '16.35.20030802'
-  sha256 'da6f028ab5a69fc48668a311a74231a9cdcda1576d2ebb1c06e7a7dd53ed8510'
+  version '16.38.20061401'
+  sha256 'f495ad16b78da91f2e8d7ec2225628d39a41cfa48b4e84ab4e5553695a1d0491'
 
-  # officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate was verified as official when first introduced to the cask
+  # officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/ was verified as official when first introduced to the cask
   url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Office_#{version}_Installer.pkg"
   name 'Microsoft Office'
   homepage 'https://products.office.com/mac/microsoft-office-for-mac/'
@@ -12,6 +12,7 @@ cask 'microsoft-office' do
                          'microsoft-word',
                          'microsoft-excel',
                          'microsoft-powerpoint',
+                         'microsoft-outlook',
                          'onedrive',
                        ]
   depends_on macos: '>= :sierra'
@@ -49,7 +50,8 @@ cask 'microsoft-office' do
                          'com.microsoft.OneDriveUpdaterDaemon',
                          'com.microsoft.autoupdate.helper',
                          'com.microsoft.update.agent',
-                       ]
+                       ],
+            quit:      'com.microsoft.autoupdate2'
 
   zap trash:     [
                    '~/Library/Application Scripts/com.microsoft.Excel',

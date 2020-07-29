@@ -1,6 +1,6 @@
 cask 'activedock' do
-  version '1.54'
-  sha256 '95206e53fa4d62d8ad0b9eb3cd42c1ac7a552bc0e2a2e49d345c631ea19a1890'
+  version '2.0,2004'
+  sha256 'a4e05dccd1b8e85f299cce56968679f936b15b1f22d56f6468f1c305aa605137'
 
   url 'https://noteifyapp.com/download/ActiveDock.dmg'
   appcast 'https://macplus-software.com/downloads/ActiveDock.xml'
@@ -9,5 +9,5 @@ cask 'activedock' do
 
   depends_on macos: '>= :high_sierra'
 
-  app 'ActiveDock.app'
+  app "ActiveDock #{version.before_comma.major}.app"
 end

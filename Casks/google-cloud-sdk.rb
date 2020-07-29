@@ -22,11 +22,11 @@ cask 'google-cloud-sdk' do
     #{token} is installed at #{staged_path}/#{token}. Add your profile:
 
       for bash users
-        source '#{staged_path}/#{token}/path.bash.inc'
-        source '#{staged_path}/#{token}/completion.bash.inc'
+        source "#{staged_path}/#{token}/path.bash.inc"
+        source "#{staged_path}/#{token}/completion.bash.inc"
 
       for zsh users
-        source '#{staged_path}/#{token}/path.zsh.inc'
-        source '#{staged_path}/#{token}/completion.zsh.inc'
+        source "#{staged_path}/#{token}/path.zsh.inc"
+        source "#{staged_path}/#{token}/completion.zsh.inc"
   EOS
 end

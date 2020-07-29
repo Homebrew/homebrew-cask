@@ -2,9 +2,9 @@ cask 'kafka-tool' do
   version :latest
   sha256 :no_check
 
-  url 'http://www.kafkatool.com/download2/kafkatool.dmg'
+  url 'https://www.kafkatool.com/download2/kafkatool.dmg'
   name 'Kafka Tool'
-  homepage 'http://www.kafkatool.com/index.html'
+  homepage 'https://www.kafkatool.com/index.html'
 
   installer script: {
                       executable: 'Kafka Tool 2 Installer.app/Contents/MacOS/JavaApplicationStub',

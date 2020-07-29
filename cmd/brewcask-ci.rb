@@ -91,7 +91,7 @@ module Cask
           overall_success &= step "brew cask audit #{cask.token}", "audit" do
             Auditor.audit(cask, audit_download: true,
                                 audit_appcast: true,
-                                check_token_conflicts: added_cask_files.include?(path),
+                                audit_token_conflicts: added_cask_files.include?(path),
                                 commit_range: @commit_range)
           end
 
@@ -134,7 +134,7 @@ module Cask
             ensure
               cask_and_formula_dependencies.reverse.each do |cask_or_formula|
                 next unless cask_or_formula.is_a?(Cask)
-                Installer.new(cask_or_formula, verbose: true).uninstall if cask_or_formula.installed?
+                Installer.new(cask_or_formula, verbose: true).uninstall if cask_or_formula.any_version_installed?
               end
             end
 

@@ -1,6 +1,6 @@
 cask 'airy' do
-  version '3.12,252'
-  sha256 '316f855fbbdf28e7222c9fceb771be06e84ffec3a7409eaa6720124dcee9724c'
+  version '3.15,283'
+  sha256 '3efb32bf817876802fa88d8b72def106c783a07efd600d89322261d8fbb9610e'
 
   url 'https://cdn.eltima.com/download/airy.dmg'
   appcast 'https://cdn.eltima.com/download/airy-update/airy.xml'

@@ -1,8 +1,8 @@
 cask 'microsoft-powerpoint' do
-  version '16.35.20030802'
-  sha256 '65292f7cda8c53fb796332b84398f3a4528831cced9e7e5614a778055f7683af'
+  version '16.38.20061401'
+  sha256 '603646e4ae1a8f22beb721068e1531d49f522d6d94cb9e51b950bc23e0a86f00'
 
-  # officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate was verified as official when first introduced to the cask
+  # officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/ was verified as official when first introduced to the cask
   url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_PowerPoint_#{version}_Installer.pkg"
   appcast 'https://docs.microsoft.com/en-us/officeupdates/update-history-office-for-mac'
   name 'Microsoft PowerPoint'
@@ -18,7 +18,8 @@ cask 'microsoft-powerpoint' do
                          'com.microsoft.package.Microsoft_PowerPoint.app',
                          'com.microsoft.pkg.licensing',
                        ],
-            launchctl: 'com.microsoft.office.licensingV2.helper'
+            launchctl: 'com.microsoft.office.licensingV2.helper',
+            quit:      'com.microsoft.autoupdate2'
 
   zap trash:     [
                    '~/Library/Application Scripts/com.microsoft.Powerpoint',

@@ -1,6 +1,6 @@
 cask 'oracle-jdk-javadoc' do
-  version '13.0.2,8:d4173c853231432d94f001e99d882ca7'
-  sha256 'dca17ad71ed4f6887cb6e02ab066d6bc5cd4b030a812fa7859a0c3e5145209d4'
+  version '14.0.1,7:664493ef4a6946b186ff29eb326336a2'
+  sha256 'ec3e41df14e63ee111a716126191464bc8791f98e50c3188e258aab3010fdc9d'
 
   url "https://download.oracle.com/otn-pub/java/jdk/#{version.before_comma}+#{version.after_comma.before_colon}/#{version.after_colon}/jdk-#{version.before_comma}_doc-all.zip",
       cookies: {
@@ -11,11 +11,7 @@ cask 'oracle-jdk-javadoc' do
 
   artifact 'docs', target: "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents/Home/docs"
 
-  uninstall rmdir: [
-                     "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents/Home",
-                     "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk/Contents",
-                     "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk",
-                   ]
+  uninstall rmdir: "/Library/Java/JavaVirtualMachines/jdk-#{version.before_comma}.jdk"
 
   caveats do
     license 'https://www.oracle.com/technetwork/java/javase/terms/license/index.html'

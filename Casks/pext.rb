@@ -1,8 +1,8 @@
 cask 'pext' do
-  version '0.29'
-  sha256 '858f0ee1686f606629c0d0253c7f69165dbc621b49e63487d7f47c721c6bd28b'
+  version '0.30'
+  sha256 'b4ed7401c253ea747f92c7f32f10f3703901501513b7ec437b9117061d4ff958'
 
-  # github.com/Pext/Pext was verified as official when first introduced to the cask
+  # github.com/Pext/Pext/ was verified as official when first introduced to the cask
   url "https://github.com/Pext/Pext/releases/download/v#{version}/Pext-#{version}.dmg"
   appcast 'https://github.com/Pext/Pext/releases.atom'
   name 'Pext'

@@ -1,6 +1,6 @@
 cask 'milkman' do
-  version '4.2.0'
-  sha256 'c26655a4938288c3479e68f0e9f9e2c33f82dbccbfb5d2a76d6a403be31a9094'
+  version '4.5.0'
+  sha256 '2537bbc8f71cfaf4f209ffbf665ca9c605a61743fa7d8c241b843c0c72ac9a5b'
 
   url "https://github.com/warmuuh/milkman/releases/download/#{version}/milkman-dist-appbundle-macos64-bin.tgz"
   appcast 'https://github.com/warmuuh/milkman/releases.atom'

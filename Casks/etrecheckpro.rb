@@ -2,7 +2,7 @@ cask 'etrecheckpro' do
   version :latest
   sha256 :no_check
 
-  url 'https://etrecheck.com/download/EtreCheck.zip'
+  url 'https://cdn.etrecheck.com/EtreCheckPro.zip'
   name 'EtreCheck'
   homepage 'https://etrecheck.com/'
 

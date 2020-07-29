@@ -1,6 +1,6 @@
 cask 'gloomhaven-helper' do
-  version '8.3.1'
-  sha256 'c937fa37bdbe72e65c780aefb9c3de741a16140f26b701c2d8a192bd8196dcce'
+  version '8.3.6'
+  sha256 'c02ee7e43bc16f780b6c168b9735328a8cef69731c993c57ece88557ec94ea4d'
 
   url "https://esotericsoftware.com/files/ghh/GloomhavenHelper-#{version}.zip"
   name 'Gloomhaven Helper'

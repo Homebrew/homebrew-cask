@@ -8,4 +8,5 @@ cask 'textadept' do
   homepage 'https://foicica.com/textadept/'
 
   app "textadept_#{version}.osx/Textadept.app"
+  binary "textadept_#{version}.osx/ta"
 end

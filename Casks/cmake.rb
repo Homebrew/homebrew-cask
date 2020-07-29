@@ -1,6 +1,6 @@
 cask 'cmake' do
-  version '3.16.5'
-  sha256 'c6f9d22e435414a7b453cd7f517f1c16c9a505ea64a36695ce498c8679b59332'
+  version '3.17.3'
+  sha256 '3cc6538f000e010e0002dc2d27d93f6a6f071218a3044808bdb6db98228b32ba'
 
   url "https://www.cmake.org/files/v#{version.major_minor}/cmake-#{version}-Darwin-x86_64.dmg"
   appcast 'https://cmake.org/files/LatestRelease/'

@@ -1,8 +1,8 @@
 cask 'xiami' do
-  version '7.5.6,dd3237c0a4dd99385ddbc853f23c5fd8'
-  sha256 '6a5576f2c53d42a1c61f1ddc9503486d039aa6ed0388246ea53aec9b32a8338c'
+  version '7.5.8,30b52410ba8955c21df3c3555fa75f6c:a916a2565fc172a83bc0106f1f4c23d5'
+  sha256 '6afc939ec54927ef8cee8ab4c015477e3efbda9e638242877bffadd183f39bb2'
 
-  url "https://files.xiami.com/webh5/files/xiamiMac/#{version.after_comma}.xiamimac#{version.before_comma.dots_to_hyphens}.zip"
+  url "https://files.xiami.com/xiamiMac/#{version.after_comma.before_colon}/#{version.after_colon}.zip"
   appcast 'https://g.alicdn.com/music/desktop-app/XiamiMac.xml'
   name 'Xiami'
   name '虾米音乐'

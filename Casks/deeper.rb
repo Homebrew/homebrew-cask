@@ -1,10 +1,7 @@
 cask 'deeper' do
   macos_release = MacOS.version.to_s.delete('.')
 
-  if MacOS.version == :mavericks
-    version '1.9.1'
-    sha256 'a601cee489825685b28fcf71e5b3801ec45ff73d5a015aa9948eb8641616383a'
-  elsif MacOS.version == :yosemite
+  if MacOS.version == :yosemite
     version '2.0.4'
     sha256 '70a8ae37e6a62541a03b1b144ff92bac38585ce936b1acc12ce484416db13b8f'
   elsif MacOS.version == :el_capitan
@@ -20,8 +17,8 @@ cask 'deeper' do
     version '2.4.8'
     sha256 '13dbe7bd680963aca91c40a4fd1e16648b63538f3213692db22dd91a3e3f2c89'
   else
-    version '2.5.4'
-    sha256 'e55f05347bd9147405aefb6938af838a78442a136ed2962adb9814b61f74dd7b'
+    version '2.5.8'
+    sha256 '0139ceb7b376df670f504bce74031ab4047070817c4d2168a6cc0a92cb946b82'
   end
 
   url "https://www.titanium-software.fr/download/#{macos_release}/Deeper.dmg"
@@ -31,7 +28,6 @@ cask 'deeper' do
 
   # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.
   depends_on macos: [
-                      :mavericks,
                       :yosemite,
                       :el_capitan,
                       :sierra,

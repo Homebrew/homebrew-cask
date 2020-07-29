@@ -15,7 +15,7 @@ Homebrew Cask is designed to work like a traditional Unix tool:
 
 Homebrew Cask is still young, and should be considered in alpha.
 
-We have good support for a variety of artifacts such as apps, pkgs, binaries, plugins, and [fonts](https://github.com/Homebrew/homebrew-cask-fonts/). Homebrew Cask can install and uninstall any of those. However, these commands don’t work well with multiple versions, and most importantly, we currently can’t `upgrade` ([but are working on it](https://github.com/Homebrew/homebrew-cask/issues/29301)).
+We have good support for a variety of artifacts such as apps, pkgs, binaries, plugins, and [fonts](https://github.com/Homebrew/homebrew-cask-fonts/).
 
 ### Casks and Formulae
 

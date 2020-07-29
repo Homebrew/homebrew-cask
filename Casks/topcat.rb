@@ -1,6 +1,6 @@
 cask 'topcat' do
-  version '4.7'
-  sha256 '1ec6f9fb353b1a09bedddf4a8137e78b00915ef1f95aba984881eb0cd3771a75'
+  version '4.7-1'
+  sha256 'b1d66adfe19ff15f9d27fd1da35c3652af12b6b62a29f9d1ead154f422ec5d32'
 
   url 'http://www.star.bris.ac.uk/~mbt/topcat/topcat-full.dmg'
   appcast 'http://www.star.bris.ac.uk/~mbt/topcat/sun253/versions.html'

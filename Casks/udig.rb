@@ -13,9 +13,9 @@ cask 'udig' do
     depends_on_java '8'
 
     <<~EOS
-      #{token} will fail to launch if you don't have java 1.8 installed as the system default;
-      otherwise you can point #{token} to java 1.8 by editing:
-      /Applications/udig/udig.app/Contents/Info.plist
+      #{token} will fail to launch unless java 1.8 is installed as the system’s default. Point #{token} to java 1.8 by editing:
+
+        #{appdir}/udig/udig.app/Contents/Info.plist
     EOS
   end
 end

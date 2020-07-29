@@ -1,6 +1,6 @@
 cask 'devonthink' do
-  version '3.0.4'
-  sha256 '58f2dc9877505782dc3529a4c805f4faa29728ea8c4d276670935dd779b21e31'
+  version '3.5.1'
+  sha256 '8a580f66bb0fdb880db3f3868a7241155dfed6b9d68183191cf26b138fb89188'
 
   url "https://download.devontechnologies.com/download/devonthink/#{version}/DEVONthink_#{version.major}.app.zip"
   appcast 'https://api.devontechnologies.com/1/apps/sparkle/sparkle.php?id=300900000'
@@ -19,8 +19,7 @@ cask 'devonthink' do
                '~/Library/Caches/com.devon-technologies.think*',
                '~/Library/Containers/com.devon-technologies.*',
                '~/Library/Cookies/com.devon-technologies.think*.binarycookies',
-               '~/Library/Group Containers/*.devon-technologies.*',
-               '~/Library/Group Containers/*.think*',
+               '~/Library/Group Containers/679S2QUWR8.think*',
                '~/Library/Metadata/com.devon-technologies.think*',
                '~/Library/Preferences/com.devon-technologies.think*',
                '~/Library/Saved Application State/com.devon-technologies.think*.savedState',

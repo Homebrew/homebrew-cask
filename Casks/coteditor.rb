@@ -1,20 +1,19 @@
 cask 'coteditor' do
-  if MacOS.version <= :mavericks
-    version '2.5.7'
-    sha256 'f2c6eed9bfa31999f559396642e7bec0eb90ce0e3398f266fed8b3db5bdab37c'
-  elsif MacOS.version <= :yosemite
+  if MacOS.version <= :yosemite
     version '3.2.8'
     sha256 '73dd20d27b75c7b0c46242a465adb3df5b5f0b901f42c5a9a85777a57c4a17d6'
   else
-    version '3.8.12'
-    sha256 '735c767bf7e7af1864c53587405186925265cca48329702e2b24817f474327f8'
+    version '3.9.1'
+    sha256 '37a03792fe673c59d80e127ec826a8168b1d20fdbcd07ee976b54a5ae15f592e'
   end
 
-  # github.com/coteditor/CotEditor was verified as official when first introduced to the cask
+  # github.com/coteditor/CotEditor/ was verified as official when first introduced to the cask
   url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
   appcast 'https://github.com/coteditor/CotEditor/releases.atom'
   name 'CotEditor'
   homepage 'https://coteditor.com/'
+
+  auto_updates true
 
   app 'CotEditor.app'
   binary 'CotEditor.app/Contents/SharedSupport/bin/cot'

@@ -3,11 +3,11 @@ cask 'birdfont' do
     version '2.19.4'
     sha256 '013d9c42c2252b57079453bd27e4c18dbbc09eda55563ff1516fd079c0499f76'
   elsif MacOS.version <= :mojave
-    version '3.32.2'
-    sha256 '858ed49d0a517861c2f5512c80640fe134c9ad9137fb88d1d3962fab5a768b19'
+    version '4.3.0'
+    sha256 'cc0055ab21b127c50acca9aa14475f9dbff299ce4c4908a7e6246657f2729f62'
   else
-    version '3.33.0'
-    sha256 '231a6b22c3ae30de3d9e8d638eccbc39ec41c0d667e97261d8b7b71184c612f1'
+    version '4.3.1'
+    sha256 '092eebc6ce12dd6efddc0e6d47844d913211360b51d4c19758e7e646096742f7'
   end
 
   url "https://birdfont.org/download/birdfont-#{version}-free.dmg"

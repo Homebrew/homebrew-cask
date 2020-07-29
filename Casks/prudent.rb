@@ -1,11 +1,11 @@
 cask 'prudent' do
-  version '79.0.3945.88,20'
-  sha256 'e59778c5683cc2b648d962365f5879030f9a467f02b4d6d4bb6df2975d5af361'
+  version '22.0.43.3,22'
+  sha256 '6169cad58f68b4115c768812a76ae015496da3ff197161e63d382891c04f7746'
 
-  # github.com/PrudentMe/main was verified as official when first introduced to the cask
+  # github.com/PrudentMe/main/ was verified as official when first introduced to the cask
   url "https://github.com/PrudentMe/main/releases/download/#{version.after_comma}/Prudent.zip"
   appcast 'https://github.com/PrudentMe/main/releases.atom',
-          configuration: version.after_comma
+          must_contain: version.after_comma
   name 'Prudent'
   homepage 'https://prudent.me/'
 

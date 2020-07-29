@@ -1,6 +1,6 @@
 cask 'serviio' do
-  version '2.0'
-  sha256 '69ca6080fc92d147ee9c6d2bc7d71d9548e5770762e0e73066d4ac82557fbc6e'
+  version '2.1'
+  sha256 '2a6d948c00205c5c4cf60127ed94a8e0e6965a145e5162b298f3108492f73cae'
 
   url "https://download.serviio.org/releases/serviio-#{version}-osx.tar.gz"
   appcast 'https://www.serviio.org/download'

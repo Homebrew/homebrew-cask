@@ -1,8 +1,8 @@
 cask 'sensei' do
-  version '1.1.7,23'
-  sha256 'a82cee406d07624e64c6f03cad3f8418d02a23e48636b2b2927b475f16128278'
+  version '1.2.4,54'
+  sha256 'c9ed44ae58361b1ab5d72eebfb2d9be5310b00395d7d88ecfc232d0832226b4e'
 
-  # cindori.s3.amazonaws.com was verified as official when first introduced to the cask
+  # cindori.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url 'https://cindori.s3.amazonaws.com/Sensei.dmg'
   appcast 'https://api.appcenter.ms/v0.1/public/sparkle/apps/51fc066a-f4b4-49ec-b966-b2f476d2eede'
   name 'Sensei'

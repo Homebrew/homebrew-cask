@@ -10,4 +10,12 @@ cask 'whichspace' do
   depends_on macos: '> :yosemite'
 
   app 'WhichSpace.app'
+
+  uninstall quit: 'io.gechr.WhichSpace'
+
+  zap trash: [
+               '~/Library/Caches/io.gechr.WhichSpace',
+               '~/Library/Preferences/io.gechr.WhichSpace.plist',
+               '~/Library/Saved Application State/io.gechr.WhichSpace.savedState',
+             ]
 end

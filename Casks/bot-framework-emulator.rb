@@ -1,6 +1,6 @@
 cask 'bot-framework-emulator' do
-  version '4.7.0'
-  sha256 '1e7b0444538e81bb1b1a1ce6254e0474afcce21105d1da9766db6a517b78b54a'
+  version '4.9.0'
+  sha256 '94f2b2c1c6ecfc493ca0fd7c36196c302c84d67fa9e02aefe641553a21cc8822'
 
   url "https://github.com/Microsoft/BotFramework-Emulator/releases/download/v#{version}/botframework-emulator-#{version}-mac.zip"
   appcast 'https://github.com/Microsoft/BotFramework-Emulator/releases.atom'
@@ -9,7 +9,7 @@ cask 'bot-framework-emulator' do
 
   auto_updates true
 
-  app 'mac/Bot Framework Emulator.app'
+  app 'Bot Framework Emulator.app'
 
   uninstall quit: 'com.electron.botframework-emulator'
 

@@ -8,4 +8,10 @@ cask 'table-tool' do
   homepage 'https://github.com/jakob/TableTool'
 
   app 'Table Tool.app'
+
+  zap trash: [
+               '~/Library/Application Scripts/at.eggerapps.tabletool',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/at.eggerapps.tabletool.sfl2',
+               '~/Library/Containers/at.eggerapps.tabletool',
+             ]
 end

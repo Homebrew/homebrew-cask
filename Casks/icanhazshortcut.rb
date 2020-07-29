@@ -1,6 +1,6 @@
 cask 'icanhazshortcut' do
-  version '1.1.0'
-  sha256 'f82fce672409edf3147c60df383ae7e293eadd96a224054194af5d98f042673c'
+  version '1.2.0'
+  sha256 '39b911e7375ee8073df5680fc869519b8072597ae97ed2e404a3065a69254327'
 
   url "https://github.com/deseven/icanhazshortcut/releases/download/#{version}/ichs.dmg"
   appcast 'https://github.com/deseven/icanhazshortcut/releases.atom'

@@ -1,6 +1,6 @@
 cask 'yam-display' do
-  version '1.8.2'
-  sha256 'f905b4cd69d947739542961a05dbabe8a8f50a8613675e70290960fb5cd6e935'
+  version '1.8.4'
+  sha256 'b3ba345681f9f6bf7ab153ff2eafc9a3578f9d3b31060bdbcb921e6c2c7c492a'
 
   url "https://www.yamdisplay.com/app/YamDisplay#{version}.zip"
   appcast 'https://www.yamdisplay.com/app/appcast.xml'

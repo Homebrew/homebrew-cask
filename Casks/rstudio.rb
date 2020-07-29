@@ -1,14 +1,14 @@
 cask 'rstudio' do
-  version '1.2.5033'
-  sha256 'b67c987569e4638f14d64178ce34201e036f7dd318917f99a7624036c3f56885'
+  version '1.3.959'
+  sha256 '7c5b695dfd68f236186c9d4a4b87426868dce753fde3d2783abecfe956e780f3'
 
-  # rstudio.org was verified as official when first introduced to the cask
+  # rstudio.org/ was verified as official when first introduced to the cask
   url "https://download1.rstudio.org/desktop/macos/RStudio-#{version}.dmg"
   appcast 'https://www.rstudio.org/links/check_for_update?version=1.0.0&os=mac'
   name 'RStudio'
   homepage 'https://www.rstudio.com/'
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :high_sierra'
 
   app 'RStudio.app'
 

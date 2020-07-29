@@ -1,8 +1,8 @@
 cask 'movist-pro' do
-  version '2.2.15'
-  sha256 '1d53d9cc7e8e7bd500a754f3875593e9609ec59693c8bde083bf3ad98988c1ff'
+  version '2.2.19'
+  sha256 '91d302fc76263e029abd5b808d2ede602357f5f935426424c5971c6cfee25c4e'
 
-  # d2uukrxj8lf22z.cloudfront.net was verified as official when first introduced to the cask
+  # d2uukrxj8lf22z.cloudfront.net/ was verified as official when first introduced to the cask
   url 'https://d2uukrxj8lf22z.cloudfront.net/MovistPro.app.zip'
   appcast 'https://s3.ap-northeast-2.amazonaws.com/update.cocoable.com/appcast.xml'
   name 'Movist Pro'

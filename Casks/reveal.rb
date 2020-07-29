@@ -1,6 +1,6 @@
 cask 'reveal' do
-  version '24'
-  sha256 'f208463dc399e2ff6b307f16d3d6d89757fc34272163b72f10b6c886602864a5'
+  version '26'
+  sha256 '9cf292d91163030a10dc0da73ebf7d9b1e736b849aeb12c8617a09e38ef81a5e'
 
   url "https://download.revealapp.com/Reveal.app-#{version}.zip"
   appcast 'https://updates.devmate.com/com.ittybittyapps.Reveal2.xml'
@@ -8,7 +8,7 @@ cask 'reveal' do
   homepage 'https://revealapp.com/'
 
   auto_updates true
-  depends_on macos: '>= :high_sierra'
+  depends_on macos: '>= :mojave'
 
   app 'Reveal.app'
 

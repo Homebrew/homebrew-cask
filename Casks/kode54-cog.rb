@@ -1,8 +1,8 @@
 cask 'kode54-cog' do
-  version '1122,7f3da31b4'
-  sha256 'a63452b62a510310071f1f2d801d6fe55ad7c51fc9c3a9fea26cc58b39597bd0'
+  version '1148,3b628c398'
+  sha256 '08a9db7b22c3507272f0919b5d1b9264881c413edd1c58c90ce0b3cb5f0e3fd8'
 
-  # losno.co/cog was verified as official when first introduced to the cask
+  # losno.co/cog/ was verified as official when first introduced to the cask
   url "https://f.losno.co/cog/Cog-#{version.after_comma}.zip"
   appcast 'https://balde.losno.co/cog/mercury.xml'
   name 'Cog'

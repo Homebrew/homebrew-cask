@@ -1,13 +1,14 @@
 cask 'maccy' do
-  version '0.8.3'
-  sha256 '7834716b4dc517a19665f459e136ac41597bb648d88d06073143dba7bd5221e2'
+  version '0.12.0'
+  sha256 '8a10dff4762620008e0166abfd1eb3b14eb94e261dc0b5ff54dbca46b87ca505'
 
-  # github.com/p0deje/Maccy was verified as official when first introduced to the cask
+  # github.com/p0deje/Maccy/ was verified as official when first introduced to the cask
   url "https://github.com/p0deje/Maccy/releases/download/#{version}/Maccy.app.zip"
   appcast 'https://github.com/p0deje/Maccy/releases.atom'
   name 'Maccy'
   homepage 'https://maccy.app/'
 
+  auto_updates true
   depends_on macos: '>= :high_sierra'
 
   app 'Maccy.app'

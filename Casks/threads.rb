@@ -1,9 +1,9 @@
 cask 'threads' do
-  version '0.4.0'
-  sha256 '025669c445510e1ba4511a3bc51dcec2454fca4ce9dfb30c0b3fff95afc18d4b'
+  version '0.5.1'
+  sha256 '649425f5ee960e197578f689898a4df9d96c6b6c0d8d51b9867ff8a4142c9b6a'
 
   url "https://downloads.threads.com/mac/Threads-#{version}.dmg"
-  appcast 'https://d111it5gwc8pcx.cloudfront.net/static/App.4a47906c52618800f007.js'
+  appcast 'https://update.threads.com/update/mac/0.0.0'
   name 'Threads'
   homepage 'https://threads.com/'
 

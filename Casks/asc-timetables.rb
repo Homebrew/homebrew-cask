@@ -4,7 +4,7 @@ cask 'asc-timetables' do
 
   url "https://www.asctimetables.com/download/asctimetables_#{version.dots_to_underscores}.dmg"
   appcast 'https://www.asctimetables.com/',
-          configuration: version.dots_to_underscores
+          must_contain: version.dots_to_underscores
   name 'aSc TimeTables'
   homepage 'https://www.asctimetables.com/'
 

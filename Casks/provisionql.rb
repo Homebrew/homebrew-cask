@@ -9,7 +9,9 @@ cask 'provisionql' do
 
   qlplugin 'ProvisionQL.qlgenerator'
 
-  caveats do
-    'To prevent mobileprovision QuickLook override by Xcode: https://github.com/ealeksandrov/ProvisionQL/issues/20'
-  end
+  caveats <<~EOS
+    To prevent mobileprovision QuickLook override by Xcode:
+
+      https://github.com/ealeksandrov/ProvisionQL/issues/20
+  EOS
 end

@@ -1,6 +1,6 @@
 cask 'mongodb-compass-community' do
-  version '1.20.5'
-  sha256 '38ed4d47bc6998f05cf3f5326e970102b70a783d168d7d385288789d4645083b'
+  version '1.21.2'
+  sha256 'af2840d0a71a15d01160b547766cd291acc2f15955f1dee1ac79cc9db60153ba'
 
   url "https://downloads.mongodb.com/compass/mongodb-compass-community-#{version}-darwin-x64.dmg"
   appcast 'https://www.mongodb.com/download-center/compass'

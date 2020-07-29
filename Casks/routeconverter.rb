@@ -4,7 +4,7 @@ cask 'routeconverter' do
 
   url 'https://static.routeconverter.com/download/RouteConverterMac.app.zip'
   appcast 'https://static.routeconverter.com/download/previous-releases/',
-          configuration: version.major_minor
+          must_contain: version.major_minor
   name 'RouteConverter'
   homepage 'https://www.routeconverter.com/'
 

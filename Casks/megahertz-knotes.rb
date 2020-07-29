@@ -1,6 +1,6 @@
 cask 'megahertz-knotes' do
-  version '2.2.1'
-  sha256 'c32719d5128800f71cb685c7f846d227f3e01e3a61a9db1f12236ff25b310b35'
+  version '2.4.0'
+  sha256 '2c15b74006e17a04603cf7d8a802636d4e8fbbd1078ffd4a216f6eadc2d87f67'
 
   url "http://cdn.knotesapp.cn/download/%e7%b3%af%e8%af%8d%e7%ac%94%e8%ae%b0-#{version}.dmg"
   appcast "https://knotes#{version.major}-release-cn.s3.amazonaws.com/mac/latest-mac.yml"

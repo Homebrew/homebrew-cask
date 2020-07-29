@@ -7,6 +7,7 @@ cask 'macfusion-ng' do
   name 'Macfusion'
   homepage "https://github.com/macfusion-ng/macfusion#{version.major}/"
 
+  conflicts_with cask: 'macfusion'
   depends_on formula: 'sshfs'
 
   app 'Macfusion.app'
@@ -18,4 +19,14 @@ cask 'macfusion-ng' do
       File.symlink("#{HOMEBREW_PREFIX}/bin/sshfs", 'sshfs-static')
     end
   end
+
+  uninstall launchctl: 'org.mgorbach.macfusion2.macfusionAgent'
+
+  zap trash: [
+               '~/Library/Application Support/Macfusion',
+               '~/Library/Caches/org.mgorbach.macfusion2',
+               '~/Library/Logs/MacFusion2.log',
+               '~/Library/Preferences/org.mgorbach.macfusion2.plist',
+               '~/Library/Saved Application State/org.mgorbach.macfusion2.savedState',
+             ]
 end

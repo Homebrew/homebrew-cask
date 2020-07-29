@@ -1,11 +1,22 @@
 cask 'ringcentral' do
-  version '19.4.0'
-  sha256 'f04cc4e35718aa1fe4fed4b9c0bb55d8984327e3aa30ef8bd99ac714c0ec102b'
+  version '20.2.30'
+  sha256 'a163e5cec8734052967392eb8cd9ddd52a72f985a8abce27eb2380ea0926ad95'
 
-  url "https://downloads.ringcentral.com/sp/RingCentralPhone-#{version}.dmg"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://downloads.ringcentral.com/sp/RingCentralForMac'
-  name 'RingCentral for Mac'
-  homepage 'https://www.ringcentral.com/apps/rc-phone'
+  url 'https://app.ringcentral.com/downloads/RingCentral.pkg'
+  appcast 'https://app.ringcentral.com/download/latest-mac.yml'
+  name 'RingCentral'
+  homepage 'https://www.ringcentral.com/rcapp.html'
 
-  app 'RingCentral for Mac.app'
+  pkg 'RingCentral.pkg'
+
+  uninstall delete:  '/Applications/RingCentral.app',
+            quit:    'RingCentral',
+            pkgutil: 'com.ringcentral.glip'
+
+  zap trash: [
+               '~/Library/Application Support/RingCentral',
+               '~/Library/Logs/RingCentral',
+               '~/Library/Preferences/com.ringcentral.glip.plist',
+               '~/Library/Saved Application State/com.ringcentral.glip.savedState',
+             ]
 end

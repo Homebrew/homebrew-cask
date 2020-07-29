@@ -4,7 +4,7 @@ cask 'icc' do
 
   url "http://download.chessclub.com/desktop/mac/ICCforMac.#{version.after_comma}.pkg"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=http://download.chessclub.com/desktop/mac/ICCforMac.latest.pkg',
-          configuration: version.after_comma
+          must_contain: version.after_comma
   name 'ICC for Mac'
   homepage 'https://www.chessclub.com/download-software/icc-for-mac'
 

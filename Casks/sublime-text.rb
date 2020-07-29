@@ -4,7 +4,7 @@ cask 'sublime-text' do
 
   url "https://download.sublimetext.com/Sublime%20Text%20Build%20#{version.no_dots}.dmg"
   appcast "https://www.sublimetext.com/updates/#{version.major}/stable/appcast_osx.xml",
-          configuration: version.no_dots
+          must_contain: version.no_dots
   name 'Sublime Text'
   homepage "https://www.sublimetext.com/#{version.major}"
 

@@ -10,4 +10,14 @@ cask 'gas-mask' do
   auto_updates true
 
   app 'Gas Mask.app'
+
+  uninstall quit: 'ee.clockwise.gmask'
+
+  zap trash: [
+               '~/Library/Caches/com.apple.helpd/Generated/Gas Mask Help*',
+               '~/Library/Caches/ee.clockwise.gmask',
+               '~/Library/Gas Mask',
+               '~/Library/Logs/Gas Mask.log',
+               '~/Library/Preferences/ee.clockwise.gmask.plist',
+             ]
 end

@@ -1,6 +1,6 @@
 cask 'virtualhostx' do
-  version '2020.03,1008'
-  sha256 '3082b331c232acc3b8a92fcee4ef2f940c9145a2fe49ff86c5e6efa97271cfd9'
+  version '2020.06,1012'
+  sha256 '2924c88aa39aa3d920ef9ca2e6fdcabe609fc8241941c9823b6d6a7c9fef629c'
 
   url "https://download.clickontyler.com/virtualhostx/virtualhostxpro_#{version.after_comma}.zip"
   appcast 'https://shine.clickontyler.com/appcast.php?id=45'

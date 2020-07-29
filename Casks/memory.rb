@@ -1,12 +1,12 @@
 cask 'memory' do
-  version '2019.31'
-  sha256 '5313247b3c80ff9cebfc0cb9411d9a8d8b3d27b1aec046b9514f2698ce1bfa4b'
+  version '2020.14'
+  sha256 '376167bd5cd7f05b321fdaf88bad74e495fbac139fb692d870964c7396277327'
 
-  # timelytimetracking.s3.amazonaws.com was verified as official when first introduced to the cask
-  url 'https://timelytimetracking.s3.amazonaws.com/mac_tracker/Memory.zip'
-  appcast 'https://timelytimetracking.s3.amazonaws.com/mac_tracker/sparkle.xml'
+  # memorymacapp.s3.amazonaws.com/ was verified as official when first introduced to the cask
+  url 'https://memorymacapp.s3.amazonaws.com/Memory.zip'
+  appcast 'https://memorymacapp.s3-eu-west-1.amazonaws.com/sparkle.xml'
   name 'Memory Tracker by Timely'
-  homepage 'https://timelyapp.com/'
+  homepage 'https://memory.ai/timely/'
 
   auto_updates true
   depends_on macos: '>= :high_sierra'

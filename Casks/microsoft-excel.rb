@@ -1,8 +1,8 @@
 cask 'microsoft-excel' do
-  version '16.35.20030802'
-  sha256 'dfe5f4230dc3e4b85ff226e260580fbd5a85893dd17c6165721f92a03fdfdf91'
+  version '16.38.20061401'
+  sha256 'bbb20a8ecbd8b31d0b2d01c00a566f8bc837ec5f700e3d83b8d0ab867b977c65'
 
-  # officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate was verified as official when first introduced to the cask
+  # officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/ was verified as official when first introduced to the cask
   url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Excel_#{version}_Installer.pkg"
   appcast 'https://docs.microsoft.com/en-us/officeupdates/update-history-office-for-mac'
   name 'Microsoft Excel'
@@ -18,7 +18,11 @@ cask 'microsoft-excel' do
                          'com.microsoft.package.Microsoft_Excel.app',
                          'com.microsoft.pkg.licensing',
                        ],
-            launchctl: 'com.microsoft.office.licensingV2.helper'
+            launchctl: [
+                         'com.microsoft.office.licensingV2.helper',
+                         'com.microsoft.update.agent',
+                       ],
+            quit:      'com.microsoft.autoupdate2'
 
   zap trash:     [
                    '~/Library/Application Scripts/com.microsoft.Excel',

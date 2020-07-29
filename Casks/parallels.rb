@@ -1,6 +1,6 @@
 cask 'parallels' do
-  version '15.1.3-47255'
-  sha256 '65783ac8c4ef6e86600f9d46351504088654e962d0f9a98ca82b603bb99028d8'
+  version '15.1.4-47270'
+  sha256 '7a0a876c5a357c0744626117c359b09e28920b35ec9b63f2dbbafe3bd7a639fd'
 
   url "https://download.parallels.com/desktop/v#{version.major}/#{version}/ParallelsDesktop-#{version}.dmg"
   appcast 'https://kb.parallels.com/eu/124724'
@@ -45,11 +45,17 @@ cask 'parallels' do
 
   zap trash: [
                '~/.parallels_settings',
+               '~/Library/Caches/com.apple.helpd/Generated/com.parallels.desktop.console.help*',
                '~/Library/Caches/com.parallels.desktop.console',
+               '~/Library/Caches/Parallels Software/Parallels Desktop',
+               '~/Library/Logs/parallels.log',
+               '~/Library/Parallels/Parallels Desktop',
                '~/Library/Preferences/com.parallels.desktop.console.LSSharedFileList.plist',
                '~/Library/Preferences/com.parallels.desktop.console.plist',
                '~/Library/Preferences/com.parallels.Parallels Desktop Statistics.plist',
+               '~/Library/Preferences/com.parallels.Parallels Desktop Events.plist',
                '~/Library/Preferences/com.parallels.Parallels Desktop.plist',
                '~/Library/Preferences/com.parallels.Parallels.plist',
+               '~/Library/Preferences/com.parallels.PDInfo.plist',
              ]
 end

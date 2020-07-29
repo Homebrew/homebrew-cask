@@ -1,6 +1,6 @@
 cask 'boxcryptor' do
-  version '2.33.1015'
-  sha256 'edcf64ba0be52662c555b18d98b57ff59ba88a2289ebf44e957721924608b8b5'
+  version '2.34.1023'
+  sha256 'c40db48d5aa5e3bf39e1bfc9171633c70adce95c499b3f85bde76bc7f0dc57bf'
 
   url "https://downloads.boxcryptor.com/boxcryptor/mac/Boxcryptor_v#{version}_Installer.dmg"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.boxcryptor.com/l/download-macosx'

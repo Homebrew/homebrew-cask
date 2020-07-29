@@ -1,14 +1,13 @@
 cask 'framer' do
-  version '18203,1539331096'
-  sha256 '3e8a2d275d5da0ad8601228b2241d26a383d3d31cf540c6a437c16fa3d7b2b49'
+  version '50437,1591893511'
+  sha256 '1c6ea657ff534cbef79befa03b756309b34e229c0ce49790042e2850671aa00b'
 
-  # devmate.com/com.motif.framer was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.motif.framer/#{version.before_comma}/#{version.after_comma}/FramerStudio-#{version.before_comma}.zip"
-  appcast 'https://updates.devmate.com/com.motif.framer.xml'
+  url "https://dl.framer.com/com.framer.desktop/#{version.before_comma}/#{version.after_comma}/FramerDesktop-#{version.before_comma}.zip"
+  appcast 'https://updates.framer.com/sparkle/com.framer.desktop'
   name 'Framer'
-  homepage 'https://framer.com/'
+  homepage 'https://www.framer.com/desktop/'
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :mojave'
 
   app 'Framer.app'
 end

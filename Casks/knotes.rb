@@ -1,12 +1,12 @@
 cask 'knotes' do
-  version '1.6.0'
-  sha256 '8884b6a67f1c43b7880ff5da957f2c0684f3afb12a6f1fc24b960d72e2f9bae9'
+  version '2.5.0'
+  sha256 '0f5d0da7eb1e1460da300931d4eabe06e3506b5e813ae408782717f9760a8ee6'
 
-  # s3.ap-northeast-2.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://s3.ap-northeast-2.amazonaws.com/knotes-release-cn/mac/Knotes-#{version}-mac.zip"
-  appcast 'http://knotesapp.com/'
+  # knotes2.s3-ap-northeast-1.amazonaws.com/ was verified as official when first introduced to the cask
+  url "https://knotes2.s3-ap-northeast-1.amazonaws.com/download/mac/Knotes-#{version}.dmg"
+  appcast 'https://knotesapp.com/'
   name 'Knotes'
-  homepage 'http://knotesapp.com/'
+  homepage 'https://knotesapp.com/'
 
   app 'Knotes.app'
 

@@ -4,7 +4,7 @@ cask 'simplediagrams' do
 
   url "https://www.simplediagrams.com/download/simplediagrams_installer_#{version.dots_to_underscores}.dmg"
   appcast 'https://www.simplediagrams.com/downloads',
-          configuration: version.dots_to_underscores
+          must_contain: version.dots_to_underscores
   name 'SimpleDiagrams'
   homepage 'https://www.simplediagrams.com/'
 

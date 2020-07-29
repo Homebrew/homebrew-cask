@@ -2,7 +2,7 @@ cask 'lulu' do
   version '1.2.3'
   sha256 '9c7bf4333af8dc7330614f2c9a389feac27334bc07f4b6039107b97eb476a3df'
 
-  # bitbucket.org/objective-see was verified as official when first introduced to the cask
+  # bitbucket.org/objective-see/ was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/LuLu_#{version}.zip"
   appcast 'https://objective-see.com/products/changelogs/LuLu.txt'
   name 'LuLu'

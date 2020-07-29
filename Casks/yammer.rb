@@ -1,8 +1,8 @@
 cask 'yammer' do
-  version '3.4.5'
-  sha256 'd26bdb80f1f054494b8fa271df6008d86be526b734cc997264062f9a6ca2165c'
+  version '3.4.7'
+  sha256 'c2ea97eb2e6fcb7d6a898ab37377a84bc6b2bef02f9353592b3d0f72d057be96'
 
-  # yammerdesktopapp.blob.core.windows.net/binaries/dist was verified as official when first introduced to the cask
+  # yammerdesktopapp.blob.core.windows.net/binaries/dist/ was verified as official when first introduced to the cask
   url "https://yammerdesktopapp.blob.core.windows.net/binaries/dist/darwin/x64/#{version}/Yammer-#{version}.dmg"
   appcast 'https://www.macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://aka.ms/yammer_desktop_mac'
   name 'Yammer'

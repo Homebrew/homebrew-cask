@@ -2,7 +2,7 @@ cask 'turbo-boost-switcher' do
   version '2.9.1'
   sha256 '4531450baa9ae28c73df08689d05e4c71e3e5cfbc86b5becdd6c095de3b9cdb7'
 
-  # turbo-boost-switcher.s3.amazonaws.com was verified as official when first introduced to the cask
+  # turbo-boost-switcher.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://turbo-boost-switcher.s3.amazonaws.com/Turbo+Boost+Switcher_#{version}.zip"
   appcast 'https://www.rugarciap.com/turbo-boost-switcher-for-os-x/'
   name 'Turbo Boost Switcher'

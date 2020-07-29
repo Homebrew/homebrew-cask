@@ -1,6 +1,6 @@
 cask 'powershell' do
-  version '7.0.0'
-  sha256 '80f75903e9f33b407a7f15c087a2c2b12a93dc153469e091d18048d01080085e'
+  version '7.0.2'
+  sha256 'f25aa06ce580ce5dd844d3dcfcdd335d56268e0fdd9f3944a303494bc5ee85dd'
 
   url "https://github.com/PowerShell/PowerShell/releases/download/v#{version}/powershell-#{version}-osx-x64.pkg"
   appcast 'https://github.com/PowerShell/PowerShell/releases.atom'
@@ -17,11 +17,5 @@ cask 'powershell' do
                '~/.cache/powershell',
                '~/.config/PowerShell',
                '~/.local/share/powershell',
-             ],
-      rmdir: [
-               '~/.cache',
-               '~/.config',
-               '~/.local/share',
-               '~/.local',
              ]
 end

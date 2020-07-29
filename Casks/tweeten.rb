@@ -1,8 +1,8 @@
 cask 'tweeten' do
-  version '4.7.0'
-  sha256 '5e474280cd59193ae7c5419978b3501f386818955f15782dfa9ecda1c8ac987c'
+  version '5.0.3'
+  sha256 '942a5dcd010caae035e511939e98ef2135d458434f5d575fc3e652e179cbec50'
 
-  # github.com/MehediH/Tweeten was verified as official when first introduced to the cask
+  # github.com/MehediH/Tweeten/ was verified as official when first introduced to the cask
   url "https://github.com/MehediH/Tweeten/releases/download/v#{version}/tweeten-darwin-x64.zip"
   appcast 'https://github.com/MehediH/Tweeten/releases.atom'
   name 'Tweeten'

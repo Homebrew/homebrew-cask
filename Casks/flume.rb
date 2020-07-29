@@ -3,7 +3,7 @@ cask 'flume' do
   sha256 '25b80175858387a19a3eedde2df3b25a5b28b420fdd9bad1a8b552a0a86320ea'
 
   url "https://flumeapp.com/files/Flume-#{version}.zip"
-  appcast 'https://help.flumeapp.com/general/whatsnew'
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://flumeapp.com/download/'
   name 'Flume'
   homepage 'https://flumeapp.com/'
 

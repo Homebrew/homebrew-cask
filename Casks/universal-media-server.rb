@@ -1,8 +1,8 @@
 cask 'universal-media-server' do
-  version '9.3.0'
-  sha256 '253415f252f979fb515dcecd3d498223d6010dc1cbf9830ea9f743f9500b80a2'
+  version '9.6.2'
+  sha256 '874c91cb7876be4075228c2606780cbce5d03f7a5f7dd4b6b9dbc449b73d41c8'
 
-  # github.com/UniversalMediaServer/UniversalMediaServer was verified as official when first introduced to the cask
+  # github.com/UniversalMediaServer/UniversalMediaServer/ was verified as official when first introduced to the cask
   url "https://github.com/UniversalMediaServer/UniversalMediaServer/releases/download/#{version}/UMS-#{version}.dmg"
   appcast 'https://github.com/UniversalMediaServer/UniversalMediaServer/releases.atom'
   name 'Universal Media Server'

@@ -1,8 +1,8 @@
 cask 'microsoft-word' do
-  version '16.35.20030802'
-  sha256 '27bb4cad84f7e15aa5e0ab48c18e620f08a4aa1af05352847e8aa8924390005f'
+  version '16.38.20061401'
+  sha256 'f59eb3bd14a836d2c0cc55e499d80047f6edffb482c9fcf173303220dbd4d29c'
 
-  # officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate was verified as official when first introduced to the cask
+  # officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/ was verified as official when first introduced to the cask
   url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Word_#{version}_Installer.pkg"
   appcast 'https://docs.microsoft.com/en-us/officeupdates/update-history-office-for-mac'
   name 'Microsoft Word'
@@ -18,7 +18,8 @@ cask 'microsoft-word' do
                          'com.microsoft.package.Microsoft_Word.app',
                          'com.microsoft.pkg.licensing',
                        ],
-            launchctl: 'com.microsoft.office.licensingV2.helper'
+            launchctl: 'com.microsoft.office.licensingV2.helper',
+            quit:      'com.microsoft.autoupdate2'
 
   zap trash:     [
                    '~/Library/Application Scripts/com.microsoft.Word',

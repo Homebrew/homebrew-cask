@@ -1,6 +1,6 @@
 cask 'vmware-fusion' do
-  version '11.5.1-15018442'
-  sha256 'ca80376b6e13b99944bc322604643d7d4d643dff55f099ba72f6e8a131030b1d'
+  version '11.5.5-16269456'
+  sha256 '20cdb359334cd7fd5953ab73264610e03c75a8bcf7f1601ba6535ca8bd53fd83'
 
   url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version}.dmg"
   appcast 'https://softwareupdate.vmware.com/cds/vmw-desktop/fusion.xml'
@@ -8,7 +8,7 @@ cask 'vmware-fusion' do
   homepage 'https://www.vmware.com/products/fusion.html'
 
   auto_updates true
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :mojave'
 
   app 'VMware Fusion.app'
   binary 'VMware Fusion.app/Contents/Library/vmnet-bridge'

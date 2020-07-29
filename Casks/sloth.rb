@@ -12,6 +12,7 @@ cask 'sloth' do
   app 'Sloth.app'
 
   zap trash: [
+               '~/Library/Caches/org.sveinbjorn.Sloth',
                '~/Library/Preferences/org.sveinbjorn.Sloth.plist',
                '~/Library/Saved Application State/org.sveinbjorn.Sloth.savedState',
              ]

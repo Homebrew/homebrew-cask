@@ -2,7 +2,7 @@ cask 'webcamoid' do
   version '8.7.1'
   sha256 '70f4af7be8d9b012196dddbceb88c87026d63c2b87caaf275eb1a09d107a4c52'
 
-  # github.com/webcamoid/webcamoid was verified as official when first introduced to the cask
+  # github.com/webcamoid/webcamoid/ was verified as official when first introduced to the cask
   url "https://github.com/webcamoid/webcamoid/releases/download/#{version}/webcamoid-portable-#{version}-x86_64.dmg"
   appcast 'https://github.com/webcamoid/webcamoid/releases.atom'
   name 'Webcamoid'

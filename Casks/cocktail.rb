@@ -1,11 +1,5 @@
 cask 'cocktail' do
-  if MacOS.version <= :mavericks
-    version '7.9.1'
-    sha256 'b8b5c37df3a2c44406f9fdf1295357d03b8fca6a9112b61401f0cca2b8e37033'
-
-    url "https://www.maintain.se/downloads/sparkle/mavericks/Cocktail_#{version}.zip"
-    appcast 'https://www.maintain.se/downloads/sparkle/mavericks/mavericks.xml'
-  elsif MacOS.version <= :yosemite
+  if MacOS.version <= :yosemite
     version '8.9.2'
     sha256 'acc7d191313fa0eb4109ae56f62f73e7ed6685f7d7d438d5138b85d68e40edd8'
 
@@ -30,14 +24,14 @@ cask 'cocktail' do
     url "https://www.maintain.se/downloads/sparkle/highsierra/Cocktail_#{version}.zip"
     appcast 'https://www.maintain.se/downloads/sparkle/highsierra/highsierra.xml'
   elsif MacOS.version <= :mojave
-    version '12.4.2'
-    sha256 'cae4d5f4eee8a37064290fddda584d4ce90add02dc7c66ec56c5842e5dc82c2b'
+    version '12.5'
+    sha256 'bdbda2d7c86e598dd9504ba3158dcab71d0b9e2b935b2917c45bb1696fc105cd'
 
     url "https://www.maintain.se/downloads/sparkle/mojave/Cocktail_#{version}.zip"
     appcast 'https://www.maintain.se/downloads/sparkle/mojave/mojave.xml'
   else
-    version '13.2'
-    sha256 '7b5360e9bf378983a0eadd9e8ac83723a05264934d3f5c535ef43aac8d11ac71'
+    version '13.2.3'
+    sha256 '02d4dfd4afb3508535b419ac8bcee10b6169dd0646a6049960338317ec7a6714'
 
     url "https://www.maintain.se/downloads/sparkle/catalina/Cocktail_#{version}.zip"
     appcast 'https://www.maintain.se/downloads/sparkle/catalina/catalina.xml'

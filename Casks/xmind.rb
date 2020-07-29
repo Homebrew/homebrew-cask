@@ -4,7 +4,7 @@ cask 'xmind' do
 
   url "https://dl3.xmind.net/xmind-#{version.after_comma}-macosx.dmg"
   appcast 'https://www.xmind.net/download/xmind8/',
-          configuration: version.after_comma
+          must_contain: version.after_comma
   name 'XMind'
   homepage 'https://www.xmind.net/'
 

@@ -10,7 +10,7 @@ cask 'openemu' do
     sha256 '6ca94d3d6264464b5088aaabb551dfe5415cb217fa1e6b257ac9b93772c39de6'
   end
 
-  # github.com/OpenEmu/OpenEmu was verified as official when first introduced to the cask
+  # github.com/OpenEmu/OpenEmu/ was verified as official when first introduced to the cask
   url "https://github.com/OpenEmu/OpenEmu/releases/download/v#{version}/OpenEmu_#{version}.zip"
   appcast 'https://github.com/OpenEmu/OpenEmu/releases.atom'
   name 'OpenEmu'
@@ -24,6 +24,7 @@ cask 'openemu' do
                '~/Library/Application Support/OpenEmu',
                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.openemu.openemu.sfl*',
                '~/Library/Application Support/org.openemu.OEXPCCAgent.Agents',
+               '~/Library/Caches/OpenEmu',
                '~/Library/Caches/org.openemu.OpenEmu',
                '~/Library/Cookies/org.openemu.OpenEmu.binarycookies',
                '~/Library/Preferences/org.openemu.Atari800.plist',

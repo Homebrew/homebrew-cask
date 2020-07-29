@@ -1,11 +1,12 @@
 cask 'razorsql' do
-  version '9.0.8'
-  sha256 '7e4292ffb7af39294de1fa44c49330d12f63f4338d9cb7395122d386efc94b03'
+  version '9.1.2'
+  sha256 '5d2edd3eb8e099b935ab9f692334587272e5c81440404a6e451b1317a68b2548'
 
-  url "http://downloads.razorsql.com/downloads/#{version.dots_to_underscores}/razorsql#{version.dots_to_underscores}_x64.dmg"
+  # s3.dualstack.us-east-1.amazonaws.com/ was verified as official when first introduced to the cask
+  url "https://s3.dualstack.us-east-1.amazonaws.com/downloads.razorsql.com/downloads/#{version.dots_to_underscores}/razorsql#{version.dots_to_underscores}.dmg"
   appcast 'https://razorsql.com/updates.html'
   name 'RazorSQL'
-  homepage 'https://razorsql.com/download_mac.html'
+  homepage 'https://razorsql.com/'
 
   depends_on macos: '>= :high_sierra'
 

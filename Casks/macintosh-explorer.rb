@@ -6,5 +6,12 @@ cask 'macintosh-explorer' do
   name 'Macintosh Explorer'
   homepage 'https://www.ragesw.com/products/explorer.html'
 
+  depends_on macos: '<= :mojave'
+
   app 'Macintosh Explorer.app'
+
+  caveats do
+    discontinued
+    free_license 'https://www.ragesw.com/products/discontinued.php?product=explorer'
+  end
 end

@@ -1,6 +1,6 @@
 cask 'celldesigner' do
   version '4.4.2'
-  sha256 'b23708f82842f4c138c2ba8d2ecd7d94942c9cedf05bcf6cc6b683e11305209c'
+  sha256 '992a8350756ab8df7a02fab3b0fd76339b0ec6a286db5af4f284664c79a0f2c4'
 
   url "http://www.systems-biology.org/download/CellDesigner-#{version}-osx-installer.dmg"
   appcast 'http://systems-biology.org/software/celldesigner/'

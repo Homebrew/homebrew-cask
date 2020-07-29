@@ -7,4 +7,10 @@ cask 'figma' do
   homepage 'https://www.figma.com/'
 
   app 'Figma.app'
+
+  zap trash: [
+               '~/Library/Application Support/Figma',
+               '~/Library/Preferences/com.figma.Desktop.plist',
+               '~/Library/Saved Application State/com.figma.Desktop.savedState',
+             ]
 end

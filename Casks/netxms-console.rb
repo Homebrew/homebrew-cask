@@ -1,6 +1,6 @@
 cask 'netxms-console' do
-  version '3.2.400'
-  sha256 '3b830a4f6069bde867566c1e8951443ddb8f1c25e9c222527cd0430a258914a0'
+  version '3.3.320'
+  sha256 '16b83367034961be803d60b8fb0b031056f42c6625d7ca9dd875e7e7a7535e1d'
 
   url "https://netxms.org/download/releases/#{version.major_minor}/nxmc-#{version}.dmg"
   appcast "https://netxms.org/download/releases/#{version.major_minor}/"

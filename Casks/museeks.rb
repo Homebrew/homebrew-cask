@@ -1,8 +1,8 @@
 cask 'museeks' do
-  version '0.11.3'
-  sha256 'ec057e1ca37be375a914165315a470db8216ae227ff32c34e6405b2ca88abdc6'
+  version '0.11.4'
+  sha256 'd4f5cc7a591dce18ea890a0cb9ef2c667fe59c175ab9c6939dcd9b7ee8a8a55e'
 
-  # github.com/martpie/museeks was verified as official when first introduced to the cask
+  # github.com/martpie/museeks/ was verified as official when first introduced to the cask
   url "https://github.com/martpie/museeks/releases/download/#{version}/museeks.dmg"
   appcast 'https://github.com/martpie/museeks/releases.atom'
   name 'Museeks'

@@ -4,7 +4,7 @@ cask 'pencil' do
 
   url "https://pencil.evolus.vn/dl/V#{version}/Pencil-#{version}.dmg"
   appcast 'https://github.com/evolus/pencil/releases.atom',
-          configuration: version.major_minor_patch
+          must_contain: version.major_minor_patch
   name 'Pencil'
   homepage 'https://pencil.evolus.vn/'
 

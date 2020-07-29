@@ -1,11 +1,11 @@
 cask 'react-studio' do
-  version '1.7.9,372'
-  sha256 'fdbda36703ea770a24a0ecfa9b799ca41cf6ebb5efde23221a78faecab6740fb'
+  version '1.7.16,384'
+  sha256 '91f2f43f9a9dbfa0c99148302a6b30bb74e3a1af559d7de9795e81fc3537ffe2'
 
-  # s3.amazonaws.com/sc.neonto.com was verified as official when first introduced to the cask
+  # s3.amazonaws.com/sc.neonto.com/ was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/sc.neonto.com/ReactStudio_v#{version.before_comma.no_dots}_build#{version.after_comma}.zip"
   appcast 'https://www.macupdater.net/cgi-bin/extract_text/send_post_request.cgi?url=https://reactstudio.com/api/download/reactstudio',
-          configuration: version.before_comma.no_dots
+          must_contain: version.before_comma.no_dots
   name 'ReactStudio'
   homepage 'https://reactstudio.com/'
 

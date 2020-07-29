@@ -1,8 +1,8 @@
 cask 'android-ndk' do
-  version '19'
-  sha256 '04159ade2fc5c7d055248cf65664039b8596f4b9ee3fbc44a9bf2ce2ee28d95d'
+  version '21'
+  sha256 'b82a49ec591d6f283acc7a241a8c56a14788320bf85a3375b5f2309b3b0c9b45'
 
-  # dl.google.com/android/repository/android-ndk was verified as official when first introduced to the cask
+  # dl.google.com/android/repository/ was verified as official when first introduced to the cask
   url "https://dl.google.com/android/repository/android-ndk-r#{version}-darwin-x86_64.zip"
   name 'Android NDK'
   homepage 'https://developer.android.com/ndk/index.html'

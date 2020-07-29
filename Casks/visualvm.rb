@@ -1,8 +1,8 @@
 cask 'visualvm' do
-  version '2.0'
-  sha256 '6c52c108dce9d1c6f3844bc5360f7496fedcacec0e59b4a8087d467ee84a0a70'
+  version '2.0.2'
+  sha256 '20e91893a4f19a1e69b8b0e545935db75674dfd6282861f3a1206dc2689e16c8'
 
-  # github.com/oracle/visualvm was verified as official when first introduced to the cask
+  # github.com/oracle/visualvm/ was verified as official when first introduced to the cask
   url "https://github.com/oracle/visualvm/releases/download/#{version}/VisualVM_#{version.no_dots}.dmg"
   appcast 'https://github.com/oracle/visualvm/releases.atom'
   name 'VisualVM'

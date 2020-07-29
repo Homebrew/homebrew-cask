@@ -1,6 +1,6 @@
 cask 'kodi' do
-  version '18.6-Leia'
-  sha256 '492a47eae5d279d700d2281cca36138e9ca483160196c48db98f08de04161ec5'
+  version '18.7-Leia'
+  sha256 '88822a1a4aa3dba8959cf84a49fb65ec2dd93ab08fc38467bd8af927707ba153'
 
   url "https://mirrors.kodi.tv/releases/osx/x86_64/kodi-#{version}-x86_64.dmg"
   appcast 'https://github.com/xbmc/xbmc/releases.atom'

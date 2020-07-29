@@ -1,8 +1,8 @@
 cask 'macdown' do
-  version '0.8.0d71'
-  sha256 '6376343fe54a8f4c1dfe3b7c2a2bef0988d636692e2ffc2d20bd4f21543cc78f'
+  version '0.7.2'
+  sha256 '271f11eb64c19fccee2615e092067cdecc29adf0c2ed0703dae9acda8fa0a672'
 
-  # github.com/MacDownApp/macdown was verified as official when first introduced to the cask
+  # github.com/MacDownApp/macdown/ was verified as official when first introduced to the cask
   url "https://github.com/MacDownApp/macdown/releases/download/v#{version}/MacDown.app.zip"
   appcast 'https://macdown.uranusjr.com/sparkle/macdown/stable/appcast.xml'
   name 'MacDown'

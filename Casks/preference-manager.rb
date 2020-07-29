@@ -4,7 +4,7 @@ cask 'preference-manager' do
 
   url "https://www.digitalrebellion.com/download/prefman?version=#{version.no_dots}"
   appcast 'https://www.digitalrebellion.com/prefman/changelog',
-          configuration: version.major_minor_patch
+          must_contain: version.major_minor_patch
   name 'Preference Manager'
   homepage 'https://www.digitalrebellion.com/prefman/'
 

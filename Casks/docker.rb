@@ -3,12 +3,12 @@ cask 'docker' do
     version '18.06.1-ce-mac73,26764'
     sha256 '3429eac38cf0d198039ad6e1adce0016f642cdb914a34c67ce40f069cdb047a5'
   else
-    version '2.2.0.3,42716'
-    sha256 '5892e709d97811290f3de79ddc5d21d0ac799435a444a38f4eebbdc019d6561b'
+    version '2.3.0.3,45519'
+    sha256 'f69bd8f9d0863497819b998d27da4825b65884519f3f6a0e2ce1d4c5cdd26f5e'
   end
 
-  url "https://download.docker.com/mac/stable/#{version.after_comma}/Docker.dmg"
-  appcast 'https://download.docker.com/mac/stable/appcast.xml'
+  url "https://desktop.docker.com/mac/stable/#{version.after_comma}/Docker.dmg"
+  appcast 'https://desktop.docker.com/mac/stable/appcast.xml'
   name 'Docker Desktop'
   name 'Docker Community Edition'
   name 'Docker CE'
@@ -40,6 +40,7 @@ cask 'docker' do
   zap trash: [
                '/usr/local/bin/docker-compose.backup',
                '/usr/local/bin/docker.backup',
+               '~/Library/Application Support/Docker Desktop',
                '~/Library/Application Scripts/com.docker.helper',
                '~/Library/Caches/KSCrashReports/Docker',
                '~/Library/Caches/com.docker.docker',
@@ -48,6 +49,9 @@ cask 'docker' do
                '~/Library/Containers/com.docker.helper',
                '~/Library/Group Containers/group.com.docker',
                '~/Library/Preferences/com.docker.docker.plist',
+               '~/Library/Preferences/com.electron.docker-frontend.plist',
+               '~/Library/Saved Application State/com.electron.docker-frontend.savedState',
+               '~/Library/Logs/Docker Desktop',
              ],
       rmdir: [
                '~/Library/Caches/KSCrashReports',

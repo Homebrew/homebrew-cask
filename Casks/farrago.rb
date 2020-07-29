@@ -1,6 +1,6 @@
 cask 'farrago' do
-  version '1.2.7'
-  sha256 'aadf04c3a13c43bbaf3007ef93606eb955d5487a06e3fe9cda30f9b4c8890a98'
+  version '1.5.1'
+  sha256 'c685afb2bca284c2d206fbb930f7fac41d56962c42e26a3a08cd915ad8dfa84e'
 
   url 'https://rogueamoeba.com/farrago/download/Farrago.zip'
   appcast 'https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&bundleid=com.rogueamoeba.farrago&system=10140'

@@ -1,6 +1,6 @@
 cask 'syncmate' do
-  version '8.0.469'
-  sha256 '97eb95fdf49fb8d493a3b9691a9ec40b7df1d88b4c272aa238ad5e95cef5c3a1'
+  version '8.1.475'
+  sha256 '991e806647abe4bbcf84f37872d64ed9dc11856e6f3270fd74ceb293a7415be7'
 
   # cdn.electronic.us/products/syncmate/ was verified as official when first introduced to the cask
   url "https://cdn.electronic.us/products/syncmate/mac/update/SyncMate_#{version}.zip"

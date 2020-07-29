@@ -1,10 +1,10 @@
 cask 'flash-npapi' do
-  version '32.0.0.344'
-  sha256 '6d73b0cb2814d749b1d27d8d680abb47d2b30cb9fce96e2ac01bba4ea46c8954'
+  version '32.0.0.387'
+  sha256 'fdff9cb21041444934cd08e21dcace03c58400a04414b1b1b3618139d70609b7'
 
   url "https://fpdownload.adobe.com/pub/flashplayer/pdc/#{version}/install_flash_player_osx.dmg"
   appcast 'https://fpdownload.adobe.com/pub/flashplayer/update/current/xml/version_en_mac_pl.xml',
-          configuration: version.tr('.', ',')
+          must_contain: version.tr('.', ',')
   name 'Adobe Flash Player NPAPI (plugin for Safari and Firefox)'
   homepage 'https://get.adobe.com/flashplayer/'
 

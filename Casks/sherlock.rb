@@ -1,9 +1,9 @@
 cask 'sherlock' do
-  version '1.7.4'
-  sha256 '2eb61363bbd22ccbbf93f188a33fcc897a16311b9112b84563c7217bf6cbd958'
+  version '1.7.5'
+  sha256 'd73e08704081b4b87c89a84eaa9deff4b303c2746a76b1fe56000cc1c90a34da'
 
-  # rink.hockeyapp.net/api was verified as official when first introduced to the cask
-  url 'https://rink.hockeyapp.net/api/2/apps/d2096a451f9849fd84ddb59fc0a30efe/app_versions/2?format=zip'
+  # dl.devmate.com/io.inspiredcode.Sherlock/ was verified as official when first introduced to the cask
+  url 'https://dl.devmate.com/io.inspiredcode.Sherlock/Sherlock.dmg'
   appcast 'http://sparkle.sherlock.inspiredcode.io'
   name 'Sherlock'
   homepage 'https://sherlock.inspiredcode.io/'

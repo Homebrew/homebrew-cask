@@ -1,8 +1,8 @@
 cask 'microsoft-edge' do
-  version '80.0.361.66'
-  sha256 '11b14ed28608d1d02046f0cdea161ccb020bcb16213859329be66ef6e6753a19'
+  version '83.0.478.54'
+  sha256 '1044280cdf2574e5edb9769d3cd820a9be81ab07376bf6aaa31d7d256f33fc35'
 
-  # officecdn-microsoft-com.akamaized.net was verified as official when first introduced to the cask
+  # officecdn-microsoft-com.akamaized.net/ was verified as official when first introduced to the cask
   url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/MicrosoftEdge-#{version}.pkg"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://go.microsoft.com/fwlink/?linkid=2069148'
   name 'Microsoft Edge'
@@ -22,8 +22,10 @@ cask 'microsoft-edge' do
       pkgutil:   'com.microsoft.package.Microsoft_AutoUpdate.app',
       delete:    '/Library/PrivilegedHelperTools/com.microsoft.autoupdate.helper',
       trash:     [
-                   '~/Library/Preferences/com.microsoft.edgemac.plist',
                    '/Library/Application Support/Microsoft',
                    '~/Library/Application Support/Microsoft Edge',
+                   '~/Library/Caches/Microsoft Edge',
+                   '~/Library/Preferences/com.microsoft.edgemac.plist',
+                   '~/Library/Saved Application State/com.microsoft.edgemac.savedState',
                  ]
 end

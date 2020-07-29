@@ -1,6 +1,6 @@
 cask 'vesta' do
-  version '3.4.7'
-  sha256 '77f7d6fbe19b294489da75eb987c7dff37846ea357d702414a803339ac0557db'
+  version '3.4.8'
+  sha256 'd33aea8403662cf7ce32d8620f3f5df910b240e07acff54e4b3f17d1b146e638'
 
   url "https://jp-minerals.org/vesta/archives/#{version}/VESTA.dmg"
   name 'VESTA'

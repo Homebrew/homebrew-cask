@@ -16,11 +16,5 @@ cask 'sfdx' do
                '~/.cache/sfdx',
                '~/.config/sfdx',
                '~/.local/share/sfdx',
-             ],
-      rmdir: [
-               '~/.cache',
-               '~/.config',
-               '~/.local/share',
-               '~/.local',
              ]
 end

@@ -1,16 +1,16 @@
 cask 'rekordbox' do
-  version '5.8.4'
-  sha256 '8dd1a88652f5b8a1fb823c24f15e1e7db8b2c2bc7eff35855fece4e05f83326a'
+  version '6.0.1,20200521085017'
+  sha256 'c42720e38eda3f55c6a9857930648c20b98d9815460a5a68914a237ff4a4756f'
 
-  url "https://rekordbox.com/_app/files/Install_rekordbox_#{version.dots_to_underscores}.pkg.zip"
-  appcast 'https://rekordbox.com/en/support/releasenote.php'
+  url "https://cdn.rekordbox.com/files/#{version.after_comma}/Install_rekordbox_#{version.before_comma.dots_to_underscores}.pkg_.zip"
+  appcast 'https://rekordbox.com/en/support/releasenote/'
   name 'rekordbox'
   homepage 'https://rekordbox.com/en/'
 
   auto_updates true
-  depends_on macos: '>= :yosemite'
+  depends_on macos: '>= :high_sierra'
 
-  pkg "Install_rekordbox_#{version.dots_to_underscores}.pkg"
+  pkg "Install_rekordbox_#{version.before_comma.dots_to_underscores}.pkg"
 
   uninstall pkgutil: "com.pioneer.rekordbox.#{version.major}.*",
             delete:  "/Applications/rekordbox #{version.major}"
