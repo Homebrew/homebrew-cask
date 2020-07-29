@@ -1,8 +1,8 @@
 cask 'xcodeclangformat' do
-  version '1.1.0'
-  sha256 'd6fd1a1af949bbc99e0e0a3e15c8c5b3ce4d138b6b8943ee17459dc2dbc4f583'
+  version '1.2.0'
+  sha256 'bd6e0c78230a4912741356d96d69753f5fb911193c40168f3a0978096eb2c4a3'
 
-  url "https://github.com/mapbox/XcodeClangFormat/releases/download/v#{version}/XcodeClangFormat-v#{version}.zip"
+  url "https://github.com/mapbox/XcodeClangFormat/releases/download/v#{version}/XcodeClangFormat.zip"
   appcast 'https://github.com/mapbox/XcodeClangFormat/releases.atom'
   name 'XcodeClangFormat'
   homepage 'https://github.com/mapbox/XcodeClangFormat'

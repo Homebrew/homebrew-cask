@@ -1,6 +1,6 @@
 cask 'tableau-prep' do
-  version '2020.2.2'
-  sha256 'ab34865c13702c168e7ca20e979f1794017599e50f1df93b3e79611cfe934e73'
+  version '2020.2.3'
+  sha256 '1fc8b6c16dc83547f16751cbfe469ba58d85cb37cdc5e9a1c814f5ca833880ab'
 
   url "https://downloads.tableau.com/esdalt/tableau_prep/#{version}/TableauPrep-#{version.dots_to_hyphens}.dmg"
   appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.tableau.com/downloads/prep/mac',

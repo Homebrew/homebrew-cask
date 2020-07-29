@@ -9,4 +9,11 @@ cask 'nuclear' do
   homepage 'https://nuclear.js.org/'
 
   app 'nuclear.app'
+
+  zap trash: [
+               '~/Library/Application Support/nuclear',
+               '~/Library/Logs/nuclear',
+               '~/Library/Preferences/nuclear.plist',
+               '~/Library/Saved Application State/nuclear.savedState',
+             ]
 end

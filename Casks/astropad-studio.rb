@@ -1,6 +1,6 @@
 cask 'astropad-studio' do
-  version '3.4.0'
-  sha256 '0e6020a293d3e1ea48082afc0b8b3148f79b9b7f260f653e3d0a1b63e0235e68'
+  version '3.4.1'
+  sha256 'daaa20466a73ca4bbae15aa6bb40c270561a1e76f72970405d475093ab8a16fa'
 
   # s3.amazonaws.com/astropad.com/ was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/astropad.com/downloads/AstropadStudio-#{version}.dmg"

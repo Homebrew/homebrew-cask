@@ -1,13 +1,13 @@
 cask 'adobe-creative-cloud' do
-  version :latest
-  sha256 :no_check
+  version '5.2.0.436'
+  sha256 'c0591e474e30d6451e190ffd8caff8622260bedaaac00278ddbf24f81aa127d1'
 
-  url 'https://ccmdls.adobe.com/AdobeProducts/KCCC/1/osx10/CreativeCloudInstaller.dmg'
+  url "https://ccmdl.adobe.com/AdobeProducts/KCCC/CCD/#{version.major_minor.dots_to_underscores}/osx10/ACCCx#{version.dots_to_underscores}.dmg"
   name 'Adobe Creative Cloud'
   homepage 'https://creative.adobe.com/products/creative-cloud'
 
   installer script: {
-                      executable:   "#{staged_path}/Creative Cloud Installer.app/Contents/MacOS/Install",
+                      executable:   "#{staged_path}/Install.app/Contents/MacOS/Install",
                       args:         ['--mode=silent'],
                       sudo:         true,
                       print_stderr: false,

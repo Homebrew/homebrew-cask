@@ -1,6 +1,6 @@
 cask 'paletro' do
-  version '1.2.0'
-  sha256 'f31cc8eece4adfdba10d50b3b248b2a58361728bfa33754675d90b8dfe9f04ac'
+  version '1.3.0'
+  sha256 '28592b47b1e4f37d6d623e7e6a0452f4ef497b0b14e3f37bacdd2c16b7170af1'
 
   url "https://appmakes.io/paletro/download/Paletro-#{version}.dmg"
   appcast 'https://appmakes.io/paletro/update.xml'

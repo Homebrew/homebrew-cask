@@ -1,6 +1,6 @@
 cask 'loom' do
-  version '0.40.2'
-  sha256 'ac24db174abfae33a9be88080e6d6e84c5a5ff64293a4d92dbca8e26caade36a'
+  version '0.41.0'
+  sha256 'a12491d679a817e83d6f7a445065e0047ad32dd0b879258f60f7e3e635c87596'
 
   url "https://cdn.loom.com/desktop-packages/Loom-#{version}.dmg"
   appcast 'https://s3-us-west-2.amazonaws.com/loom.desktop.packages/loom-inc-production/desktop-packages/latest-mac.yml'

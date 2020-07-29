@@ -1,6 +1,6 @@
 cask 'ringcentral' do
-  version '20.2.30'
-  sha256 'a163e5cec8734052967392eb8cd9ddd52a72f985a8abce27eb2380ea0926ad95'
+  version '20.2.31'
+  sha256 'acbf0577337546da9275a602a13f79c1482cf287e17cde2774b2cc4df82d464b'
 
   url 'https://app.ringcentral.com/downloads/RingCentral.pkg'
   appcast 'https://app.ringcentral.com/download/latest-mac.yml'

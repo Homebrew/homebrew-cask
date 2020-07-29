@@ -1,6 +1,6 @@
 cask 'cljstyle' do
-  version '0.12.1'
-  sha256 '5847c209b691542905b1ea549eca02de89c0dbfad6959880484207773591b001'
+  version '0.13.0'
+  sha256 'f2c29e27f15a1bf30d86ee8850be778466fc201cffc2c29745c149ef4beafedd'
 
   url "https://github.com/greglook/cljstyle/releases/download/#{version}/cljstyle_#{version}_macos.tar.gz"
   appcast 'https://github.com/greglook/cljstyle/releases.atom'

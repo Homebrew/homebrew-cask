@@ -1,6 +1,6 @@
 cask 'ridibooks' do
-  version '0.7.11'
-  sha256 '54f3aaf8d235ce0f40f0849ce764529e477bd8491ae168ab4a8c0ed9dd0834ba'
+  version '0.8.1'
+  sha256 'b17a3528bdea6d4907366aa4cb0629c359572366d3eda926dae816f34ea7793b'
 
   # viewer-ota.ridicdn.net/pc_electron/ was verified as official when first introduced to the cask
   url "https://viewer-ota.ridicdn.net/pc_electron/Ridibooks-#{version}.dmg"

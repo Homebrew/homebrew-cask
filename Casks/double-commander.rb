@@ -1,6 +1,6 @@
 cask 'double-commander' do
-  version '0.9.8-9296'
-  sha256 '4f80b2eb299c54bf83ff389c60f60d4381530f8631874897ec6e294ac2b83e84'
+  version '0.9.9-9478'
+  sha256 '741703155b71ee0f5b73c5f220b394e220d8a5c32ad9e3e59740f839cb46e340'
 
   # downloads.sourceforge.net/doublecmd/ was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/doublecmd/doublecmd-#{version}.qt.x86_64.dmg"

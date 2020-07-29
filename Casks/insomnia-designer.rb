@@ -8,6 +8,8 @@ cask 'insomnia-designer' do
   name 'Insomnia Designer'
   homepage 'https://insomnia.rest/'
 
+  auto_updates true
+
   app 'Insomnia Designer.app'
 
   zap trash: [

@@ -1,6 +1,6 @@
 cask 'plex' do
-  version '1.12.1.1253-c29aa096'
-  sha256 '311faae49a199c52f09510da7609dc15e2e10e57b1f60757eff97a88645ae1fb'
+  version '1.13.0.1275-bbd8d37b'
+  sha256 'd52273828cd043e34ce5f2dc2d5938fd14a55787fb8f716810120e7f01600f55'
 
   url "https://downloads.plex.tv/plex-desktop/#{version}/macos/Plex-#{version}-x86_64.zip"
   appcast 'https://plex.tv/api/downloads/6.json'

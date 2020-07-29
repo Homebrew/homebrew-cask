@@ -1,6 +1,6 @@
 cask 'polycom-realpresence' do
-  version '3.10.3.72504'
-  sha256 '1dc2d12cd5b6e7a90b4fe369e422f20a6a2a42c229fe6b67af8e83e3422f7024'
+  version '3.10.4.72927'
+  sha256 '5945aded85e88325b4e7930aaaa30b7371188190da61d4d55e682646db2018b2'
 
   url "https://downloads.polycom.com/video/realpresence_desktop/RPDesktop_#{version.dots_to_underscores}.dmg"
   appcast 'https://support.polycom.com/content/support/north-america/usa/en/support/video/realpresence-desktop/realpresence-desktop.html',
