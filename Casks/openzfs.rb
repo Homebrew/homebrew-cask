@@ -6,6 +6,15 @@ cask "openzfs" do
   name "OpenZFS on OS X"
   homepage "https://openzfsonosx.org/"
 
+  # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.
+  depends_on macos: [
+    :el_capitan,
+    :sierra,
+    :high_sierra,
+    :mojave,
+    :catalina,
+  ]
+
   if MacOS.version <= :el_capitan
     pkg "OpenZFS on OS X #{version.major_minor_patch} El Capitan.pkg"
   elsif MacOS.version <= :sierra
@@ -17,16 +26,7 @@ cask "openzfs" do
   elsif MacOS.version <= :catalina
     pkg "OpenZFS on OS X #{version.major_minor_patch} Catalina.pkg"
   end
-
-  # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.
-  depends_on macos: [
-    :el_capitan,
-    :sierra,
-    :high_sierra,
-    :mojave,
-    :catalina,
-  ]
-
+  
   uninstall_preflight do
     uninstall_zfs = "#{staged_path}/Docs & Scripts/uninstall-openzfsonosx.sh"
     IO.write(uninstall_zfs, IO.read(uninstall_zfs).gsub("$(which zpool)", "/usr/local/bin/zpool"))
