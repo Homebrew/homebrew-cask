@@ -30,10 +30,10 @@ url = cask.split("  url \"")[1].split("\"")[0]
 version = sys.argv[2]
 
 for line in cask.split("\n"):
-    if line.startswith("  version '"):
-        print "  version '" + version + "'"
-    elif line.startswith("    sha256 '"):
-        language = cask.split(line)[1].split("'")[1].split("'")[0]
-        print "    sha256 '" + getsha(url, version, language) + "'"
+    if line.startswith("  version \""):
+        print "  version \"" + version + "\""
+    elif line.startswith("    sha256 \""):
+        language = cask.split(line)[1].split("\"")[1].split("\"")[0]
+        print "    sha256 \"" + getsha(url, version, language) + "\""
     else:
         print line
