@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 cask "adobe-dng-converter" do
   version "12.3"
   sha256 "1cfac471868ad6032d53207dfddf92d6f2f2e8ec2aeb2a0d1b2a9b016956cea8"
-=======
-cask 'adobe-dng-converter' do
-  version '12.3'
-  sha256 '1cfac471868ad6032d53207dfddf92d6f2f2e8ec2aeb2a0d1b2a9b016956cea8'
->>>>>>> upstream/revert-86582-cask_repair_update-adobe-dng-converter
 
   url "https://download.adobe.com/pub/adobe/dng/mac/DNGConverter_#{version.dots_to_underscores}.dmg"
   appcast "https://supportdownloads.adobe.com/product.jsp?product=106&platform=Macintosh"
