@@ -26,7 +26,7 @@ cask "openzfs" do
   elsif MacOS.version <= :catalina
     pkg "OpenZFS on OS X #{version.major_minor_patch} Catalina.pkg"
   end
-  
+
   uninstall_preflight do
     uninstall_zfs = "#{staged_path}/Docs & Scripts/uninstall-openzfsonosx.sh"
     IO.write(uninstall_zfs, IO.read(uninstall_zfs).gsub("$(which zpool)", "/usr/local/bin/zpool"))
