@@ -1,11 +1,11 @@
-cask 'loginputmac' do
-  version '2.3.5'
-  sha256 '91c5e011792f3ab2ee7f3e69ff7ea3a45c156f02b574cba2c57dbcfec82dd4a6'
+cask "loginputmac" do
+  version "2.3.7"
+  sha256 "a64bb6c4c608e5a87c37eb7345e1ddbcade52634c7eae24c9b49b5a385b58578"
 
   # loginput-mac2.content-delivery.top/ was verified as official when first introduced to the cask
   url "https://loginput-mac2.content-delivery.top/loginputmac#{version.major}_latest.pkg"
   appcast "https://im.logcg.com/appcast#{version.major}.xml"
-  name 'LoginputMac'
+  name "LoginputMac"
   homepage "https://im.logcg.com/loginputmac#{version.major}"
 
   auto_updates true

@@ -1,12 +1,12 @@
-cask 'watchguard-mobile-vpn-with-ssl' do
-  version '12.5.3,615421'
-  sha256 'b8a4f9ce908f19df6122fdf24445fdb233d812f2f6b5f08261ca2e4cca0c3784'
+cask "watchguard-mobile-vpn-with-ssl" do
+  version "12.5.3,615421"
+  sha256 "b8a4f9ce908f19df6122fdf24445fdb233d812f2f6b5f08261ca2e4cca0c3784"
 
   url "http://cdn.watchguard.com/SoftwareCenter/Files/MUVPN_SSL/#{version.before_comma.dots_to_underscores}/WG-MVPN-SSL_#{version.before_comma.dots_to_underscores}.dmg"
-  name 'WatchGuard Mobile VPN with SSL'
-  homepage 'https://www.watchguard.com/'
+  name "WatchGuard Mobile VPN with SSL"
+  homepage "https://www.watchguard.com/"
 
   pkg "WatchGuard Mobile VPN with SSL Installer V#{version.after_comma}.mpkg"
 
-  uninstall pkgutil: 'com.watchguard.*'
+  uninstall pkgutil: "com.watchguard.*"
 end

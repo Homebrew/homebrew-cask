@@ -1,18 +1,18 @@
-cask 'retroarch-metal' do
-  version '1.8.8'
-  sha256 'f930cecf16c784d890360b4b1639bd68b021e2472bc9112ac5b4fc4f3c49c71b'
+cask "retroarch-metal" do
+  version "1.8.9"
+  sha256 "adcc14ceb06aa5c84cc8a973c75cc7a211ec7eb6310744aa3907e73b3cf81dd4"
 
   url "https://buildbot.libretro.com/stable/#{version}/apple/osx/x86_64/RetroArch_Metal.dmg"
-  appcast 'https://buildbot.libretro.com/stable/'
-  name 'RetroArch Metal'
-  homepage 'https://www.libretro.com/'
+  appcast "https://buildbot.libretro.com/stable/"
+  name "RetroArch Metal"
+  homepage "https://www.libretro.com/"
 
   conflicts_with cask: [
-                         'retroarch',
-                         'retroarch-cg',
-                       ]
+    "retroarch",
+    "retroarch-cg",
+  ]
 
-  app 'RetroArch.app'
+  app "RetroArch.app"
 
-  zap trash: '~/Library/Application Support/RetroArch'
+  zap trash: "~/Library/Application Support/RetroArch"
 end

@@ -1,11 +1,11 @@
-cask 'nethackcocoa' do
-  version '0.3.4'
-  sha256 '83a9db8f633996a563fbe939141404625f9cf66180612215484f391df0475e94'
+cask "nethackcocoa" do
+  version "0.3.4"
+  sha256 "83a9db8f633996a563fbe939141404625f9cf66180612215484f391df0475e94"
 
   url "https://github.com/dirkz/NetHack-Cocoa/releases/download/v#{version}/NetHackCocoa-#{version}.dmg"
-  appcast 'https://github.com/dirkz/NetHack-Cocoa/releases.atom'
-  name 'NetHackCocoa'
-  homepage 'https://github.com/dirkz/NetHack-Cocoa'
+  appcast "https://github.com/dirkz/NetHack-Cocoa/releases.atom"
+  name "NetHackCocoa"
+  homepage "https://github.com/dirkz/NetHack-Cocoa"
 
-  app 'NetHackCocoa.app'
+  app "NetHackCocoa.app"
 end

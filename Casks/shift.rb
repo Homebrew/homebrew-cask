@@ -1,11 +1,11 @@
-cask 'shift' do
-  version '5.0.65'
-  sha256 '456837d6a0041d09a6c67bf4dc8d953de019a83091f87d62bc218dc3366c798e'
+cask "shift" do
+  version "5.0.77"
+  sha256 "86520befaae45bf8441f2d8d68b98a5023ac05d0a3dddbc3412102375d98e544"
 
   url "https://update.tryshift.com/download/version/#{version}/osx_64"
-  appcast 'https://tryshift.com/download/?platform=mac'
-  name 'Shift'
-  homepage 'https://tryshift.com/'
+  appcast "https://tryshift.com/download/?platform=mac"
+  name "Shift"
+  homepage "https://tryshift.com/"
 
-  app 'Shift.app'
+  app "Shift.app"
 end

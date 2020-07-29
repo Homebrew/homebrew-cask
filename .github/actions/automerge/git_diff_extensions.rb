@@ -73,11 +73,11 @@ module GitDiffExtension
     end
 
     def version
-      to_s[/\A[+-]\s*version '([^']+)'\Z/, 1]
+      to_s[/\A[+-]\s*version "([^"]+)"\Z/, 1]
     end
 
     def sha256?
-      to_s.match?(/\A[+-]\s*sha256 '[0-9a-f]{64}'\Z/)
+      to_s.match?(/\A[+-]\s*sha256 "[0-9a-f]{64}"\Z/)
     end
   end
 end

@@ -1,27 +1,27 @@
-cask 'macupdater' do
-  version '1.5.5'
-  sha256 'e5fe09b3d93226a0be7f83676b12ccb3e7871643da5f5d51d1ce10f5c5f53ecd'
+cask "macupdater" do
+  version "1.5.6"
+  sha256 "ada2f02f42b656f7d9e5bac34e366a95c17322b5b873d3731e34ddef8d14c8e9"
 
   url "https://www.corecode.io/downloads/macupdater_#{version}.dmg"
-  appcast 'https://www.corecode.io/macupdater/macupdater.xml'
-  name 'MacUpdater'
-  homepage 'https://www.corecode.io/macupdater/index.html'
+  appcast "https://www.corecode.io/macupdater/macupdater.xml"
+  name "MacUpdater"
+  homepage "https://www.corecode.io/macupdater/index.html"
 
   auto_updates true
 
-  app 'MacUpdater.app'
+  app "MacUpdater.app"
   binary "#{appdir}/MacUpdater.app/Contents/Resources/macupdater_client"
 
-  uninstall quit:      'com.corecode.MacUpdater',
-            launchctl: 'com.corecode.MacUpdaterLaunchHelper'
+  uninstall quit:      "com.corecode.MacUpdater",
+            launchctl: "com.corecode.MacUpdaterLaunchHelper"
 
   zap trash: [
-               '~/Library/Application Scripts/com.corecode.MacUpdaterLaunchHelper',
-               '~/Library/Application Support/MacUpdater',
-               '~/Library/Application Support/MacUpdaterInstallHelper',
-               '~/Library/Caches/com.corecode.MacUpdater',
-               '~/Library/Containers/com.corecode.MacUpdaterLaunchHelper',
-               '~/Library/Cookies/com.corecode.MacUpdater.binarycookies',
-               '~/Library/Preferences/com.corecode.MacUpdater.plist',
-             ]
+    "~/Library/Application Scripts/com.corecode.MacUpdaterLaunchHelper",
+    "~/Library/Application Support/MacUpdater",
+    "~/Library/Application Support/MacUpdaterInstallHelper",
+    "~/Library/Caches/com.corecode.MacUpdater",
+    "~/Library/Containers/com.corecode.MacUpdaterLaunchHelper",
+    "~/Library/Cookies/com.corecode.MacUpdater.binarycookies",
+    "~/Library/Preferences/com.corecode.MacUpdater.plist",
+  ]
 end

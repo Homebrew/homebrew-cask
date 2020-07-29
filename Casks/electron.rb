@@ -1,19 +1,19 @@
-cask 'electron' do
-  version '9.0.5'
-  sha256 '4897b6121ad2792fd7c0b71f37967d1a251425c3e68d35e293e8f8ccf4166a5e'
+cask "electron" do
+  version "9.1.1"
+  sha256 "354078a716b0e86bb7754f8e372318e69ce64a67e782ef25cea3ee3195fb190d"
 
   # github.com/electron/electron/ was verified as official when first introduced to the cask
   url "https://github.com/electron/electron/releases/download/v#{version}/electron-v#{version}-darwin-x64.zip"
-  appcast 'https://github.com/electron/electron/releases.atom'
-  name 'Electron'
-  homepage 'https://electronjs.org/'
+  appcast "https://github.com/electron/electron/releases.atom"
+  name "Electron"
+  homepage "https://electronjs.org/"
 
-  app 'Electron.app'
+  app "Electron.app"
 
   zap trash: [
-               '~/Library/Application Support/Electron',
-               '~/Library/Caches/Electron',
-               '~/Library/Preferences/com.github.electron.helper.plist',
-               '~/Library/Preferences/com.github.electron.plist',
-             ]
+    "~/Library/Application Support/Electron",
+    "~/Library/Caches/Electron",
+    "~/Library/Preferences/com.github.electron.helper.plist",
+    "~/Library/Preferences/com.github.electron.plist",
+  ]
 end

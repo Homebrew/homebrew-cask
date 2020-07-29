@@ -1,10 +1,11 @@
-cask 'qqmacmgr' do
-  version '2.4.14'
-  sha256 'b276bbabcbffca0ef7e14b590b7ebffcceb7102350192a785c57c6d9e6bad14e'
+cask "qqmacmgr" do
+  version "2.4.16"
+  sha256 "6ff8fe1fe173ac7c78c0140dec616a1b426237b1b5e3053851a03b3df515c38e"
 
-  url "https://dlied6.qq.com/invc/xfspeed/mac/verupdate/QQMacMgr_#{version}.dmg"
-  name '腾讯电脑管家'
-  homepage 'https://mac.gj.qq.com/'
+  # pm.myapp.com/invc/xfspeed was verified as official when first introduced to the cask
+  url "https://pm.myapp.com/invc/xfspeed/qqpcmgr/module_update/QQMacMgr_#{version}.dmg"
+  name "腾讯电脑管家"
+  homepage "https://lemon.qq.com/index_o.html"
 
-  app 'QQMacMgr.app'
+  app "QQMacMgr.app"
 end
