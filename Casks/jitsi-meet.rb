@@ -1,6 +1,6 @@
 cask "jitsi-meet" do
-  version "2.3.0"
-  sha256 "65cc4a529a3f76e36d75a40f0c03987c46a3874f64a6bd8e775ff6ba85f78747"
+  version "2.3.1"
+  sha256 "a247278b9297b460dd2e298dc91de0fed0e7ad09af9147ba2b813d2d344b6b2a"
 
   url "https://github.com/jitsi/jitsi-meet-electron/releases/download/v#{version}/jitsi-meet.dmg"
   appcast "https://github.com/jitsi/jitsi-meet-electron/releases.atom"
