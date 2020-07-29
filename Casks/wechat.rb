@@ -1,6 +1,6 @@
 cask "wechat" do
-  version "2.4.2.17"
-  sha256 "5af7a2d825de0e6be2186b054c70e287583f1d68df95af2be23eb5e27025a6f0"
+  version "2.4.2.18"
+  sha256 "1fb4acf13ab4a4af1966e7fe9e23747c922ce33ee55dbd12e5d212aa5eb5ace8"
 
   url "https://dldir1.qq.com/weixin/mac/WeChatMac.dmg"
   appcast "https://dldir1.qq.com/weixin/mac/mac-release.xml"

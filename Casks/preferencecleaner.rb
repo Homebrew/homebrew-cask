@@ -7,5 +7,7 @@ cask "preferencecleaner" do
   name "PreferenceCleaner"
   homepage "https://www.echomist.co.uk/software/PreferenceCleaner.php"
 
+  depends_on macos: ">= :catalina"
+
   app "PreferenceCleaner #{version.major}.app"
 end
