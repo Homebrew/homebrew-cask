@@ -1,10 +1,10 @@
 cask "eloston-chromium" do
-  version "84.0.4147.89-1"
-  sha256 "af81afc0f82d19eb77496bf3ca0f9db4091c17119b8d28f2b34d44c33029f24f"
+  version "84.0.4147.105-1.1"
+  sha256 "d660a6bf52a4513a4e8fd2d338a13000ebb704698e0a6c438c585269ed9bbb8f"
 
-  # github.com/kramred/ungoogled-chromium-binaries/ was verified as official when first introduced to the cask
-  url "https://github.com/kramred/ungoogled-chromium-binaries/releases/download/#{version}/ungoogled-chromium_#{version}.1_macos.dmg"
-  appcast "https://github.com/kramred/ungoogled-chromium-binaries/releases.atom"
+  # github.com/kramred/ungoogled-chromium-macos/ was verified as official when first introduced to the cask
+  url "https://github.com/kramred/ungoogled-chromium-macos/releases/download/#{version}/ungoogled-chromium_#{version}_macos.dmg"
+  appcast "https://github.com/kramred/ungoogled-chromium-macos/releases.atom"
   name "Ungoogled Chromium"
   homepage "https://ungoogled-software.github.io/ungoogled-chromium-binaries/"
 
