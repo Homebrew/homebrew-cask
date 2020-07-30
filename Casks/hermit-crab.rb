@@ -1,6 +1,6 @@
 cask "hermit-crab" do
-  version "1.0.2"
-  sha256 "5e33cc918264fb39c97eb256e899f971a504f89b907429627e15f4b8ba1d8ada"
+  version "1.0.3"
+  sha256 "f948f646c1a27f77921a21800f859653134db2631926c4b2f68658f84dd063a1"
 
   url "https://belkadan.com/hermitcrab/updates/HermitCrab-#{version}.zip"
   appcast "https://belkadan.com/hermitcrab/updates/"
