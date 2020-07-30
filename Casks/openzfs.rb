@@ -15,16 +15,15 @@ cask "openzfs" do
     :catalina,
   ]
 
-  case MacOS.version
-  when :el_capitan
+  if MacOS.version <= :el_capitan
     pkg "OpenZFS on OS X #{version.major_minor_patch} El Capitan.pkg"
-  when :sierra
+  elsif MacOS.version <= :sierra
     pkg "OpenZFS on OS X #{version.major_minor_patch} Sierra.pkg"
-  when :high_sierra
+  elsif MacOS.version <= :high_sierra
     pkg "OpenZFS on OS X #{version.major_minor_patch} High Sierra.pkg"
-  when :mojave
+  elsif MacOS.version <= :mojave
     pkg "OpenZFS on OS X #{version.major_minor_patch} Mojave.pkg"
-  when :catalina
+  elsif MacOS.version <= :catalina
     pkg "OpenZFS on OS X #{version.major_minor_patch} Catalina.pkg"
   end
 
