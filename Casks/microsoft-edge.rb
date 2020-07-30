@@ -9,24 +9,24 @@ cask "microsoft-edge" do
   homepage "https://www.microsoft.com/edge"
 
   auto_updates true
+  depends_on cask: "microsoft-auto-update"
 
-  pkg "MicrosoftEdge-#{version}.pkg"
-
-  uninstall quit:    "com.microsoft.autoupdate.fba",
-            pkgutil: "com.microsoft.edgemac",
-            rmdir:   "/Library/Application Support/Microsoft"
-
-  zap launchctl: [
-    "com.microsoft.autoupdate.helper",
-    "com.microsoft.update.agent",
-  ],
-      pkgutil:   "com.microsoft.package.Microsoft_AutoUpdate.app",
-      delete:    "/Library/PrivilegedHelperTools/com.microsoft.autoupdate.helper",
-      trash:     [
-        "/Library/Application Support/Microsoft",
-        "~/Library/Application Support/Microsoft Edge",
-        "~/Library/Caches/Microsoft Edge",
-        "~/Library/Preferences/com.microsoft.edgemac.plist",
-        "~/Library/Saved Application State/com.microsoft.edgemac.savedState",
+  pkg "MicrosoftEdge-#{version}.pkg",
+      choices: [
+        {
+          "choiceIdentifier" => "com.microsoft.package.Microsoft_AutoUpdate.app", # Office16_all_autoupdate.pkg
+          "choiceAttribute"  => "selected",
+          "attributeSetting" => 0,
+        },
       ]
+
+  uninstall pkgutil: "com.microsoft.edgemac"
+
+  zap trash: [
+    "~/Library/Application Support/Microsoft Edge",
+    "~/Library/Caches/Microsoft Edge",
+    "~/Library/Preferences/com.microsoft.edgemac.plist",
+    "~/Library/Saved Application State/com.microsoft.edgemac.savedState",
+  ],
+      rmdir: "/Library/Application Support/Microsoft"
 end
