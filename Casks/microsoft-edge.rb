@@ -12,7 +12,7 @@ cask "microsoft-edge" do
 
   pkg "MicrosoftEdge-#{version}.pkg"
 
-  uninstall quit: "com.microsoft.autoupdate.fba",
+  uninstall quit:    "com.microsoft.autoupdate.fba",
             pkgutil: "com.microsoft.edgemac",
             rmdir:   "/Library/Application Support/Microsoft"
 
