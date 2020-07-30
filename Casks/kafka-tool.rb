@@ -8,12 +8,12 @@ cask "kafka-tool" do
   homepage "https://www.kafkatool.com/index.html"
 
   installer script: {
-    executable: "Kafka Tool 2 Installer.app/Contents/MacOS/JavaApplicationStub",
+    executable: "Kafka Tool #{version.major} Installer.app/Contents/MacOS/JavaApplicationStub",
     args:       ["-q"],
     sudo:       true,
   }
 
   uninstall delete: "/Applications/Kafka Tool.app"
 
-  zap trash: "~/.kafkatool2"
+  zap trash: "~/.kafkatool#{version.major}"
 end
