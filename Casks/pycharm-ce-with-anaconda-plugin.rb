@@ -1,6 +1,6 @@
 cask "pycharm-ce-with-anaconda-plugin" do
-  version "2020.1.4"
-  sha256 "703a4c0e1f12c3a75bec9318bb178b214cfba410c76b481a2058b1e1f90217a7"
+  version "2020.2"
+  sha256 "e6b9a04ae7cf96d9939f57daac3b2f28161cfad2459f445ab23e19108c8fd999"
 
   url "https://download.jetbrains.com/python/pycharm-community-anaconda-#{version}.dmg"
   appcast "https://data.services.jetbrains.com/products/releases?code=PCC&latest=true&type=release"
