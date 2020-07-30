@@ -132,6 +132,7 @@ cask "firefox" do
     "firefox-beta",
     "firefox-esr",
   ]
+  depends_on macos: ">= :sierra"
 
   app "Firefox.app"
 
