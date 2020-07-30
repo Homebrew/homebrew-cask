@@ -12,7 +12,8 @@ cask "microsoft-edge" do
 
   pkg "MicrosoftEdge-#{version}.pkg"
 
-  uninstall pkgutil: "com.microsoft.edgemac",
+  uninstall quit: "com.microsoft.autoupdate.fba",
+            pkgutil: "com.microsoft.edgemac",
             rmdir:   "/Library/Application Support/Microsoft"
 
   zap launchctl: [
