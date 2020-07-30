@@ -10,5 +10,8 @@ cask "privatetunnel" do
 
   pkg "Private_Tunnel_#{version.before_comma.dots_to_underscores}(#{version.after_comma})_Installer_signed.pkg"
 
-  uninstall script: "Uninstaller.command"
+  uninstall script: {
+    executable: "/Applications/Private Tunnel/Uninstall Private Tunnel.app/Contents/Resources/remove.sh",
+    sudo:       true,
+  }
 end
