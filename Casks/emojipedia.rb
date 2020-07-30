@@ -1,11 +1,11 @@
-cask 'emojipedia' do
-  version '20190306'
-  sha256 '32c2e398cac48a9fbd05e45b1a11b791c539bb09aa964c54ec066e2a6aa1f047'
+cask "emojipedia" do
+  version "20190306"
+  sha256 "32c2e398cac48a9fbd05e45b1a11b791c539bb09aa964c54ec066e2a6aa1f047"
 
   url "https://github.com/gingerbeardman/Emojipedia/releases/download/#{version}/Emojipedia.dictionary.zip"
-  appcast 'https://github.com/gingerbeardman/Emojipedia/releases.atom'
-  name 'Emojipedia'
-  homepage 'https://github.com/gingerbeardman/Emojipedia'
+  appcast "https://github.com/gingerbeardman/Emojipedia/releases.atom"
+  name "Emojipedia"
+  homepage "https://github.com/gingerbeardman/Emojipedia"
 
-  dictionary 'Emojipedia.dictionary'
+  dictionary "Emojipedia.dictionary"
 end

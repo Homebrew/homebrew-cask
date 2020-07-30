@@ -1,25 +1,25 @@
-cask 'mplab-xc32' do
-  version '2.41'
-  sha256 '36b33b2020563de1ace9562cfd8828475139c93f28b04702f8c48556f195e007'
+cask "mplab-xc32" do
+  version "2.41"
+  sha256 "36b33b2020563de1ace9562cfd8828475139c93f28b04702f8c48556f195e007"
 
   url "https://ww1.microchip.com/downloads/en/DeviceDoc/xc32-v#{version}-full-install-osx-installer.dmg"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.microchip.com/mplabxc32osx'
-  name 'MPLab XC32 Compiler'
-  homepage 'https://www.microchip.com/mplab/compilers'
+  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.microchip.com/mplabxc32osx"
+  name "MPLab XC32 Compiler"
+  homepage "https://www.microchip.com/mplab/compilers"
 
   installer script: {
-                      executable: "xc32-v#{version}-osx-installer.app/Contents/MacOS/installbuilder.sh",
-                      args:       [
-                                    '--mode', 'unattended',
-                                    '--unattendedmodeui', 'none',
-                                    '--ModifyAll', '0',
-                                    '--netservername', '""',
-                                    '--LicenseType', 'FreeMode',
-                                    '--prefix', staged_path.to_s
-                                  ],
-                      input:      ['y'],
-                      sudo:       true,
-                    }
+    executable: "xc32-v#{version}-osx-installer.app/Contents/MacOS/installbuilder.sh",
+    args:       [
+      "--mode", "unattended",
+      "--unattendedmodeui", "none",
+      "--ModifyAll", "0",
+      "--netservername", '""',
+      "--LicenseType", "FreeMode",
+      "--prefix", staged_path.to_s
+    ],
+    input:      ["y"],
+    sudo:       true,
+  }
   binary "#{staged_path}/bin/xc32-ar"
   binary "#{staged_path}/bin/xc32-as"
   binary "#{staged_path}/bin/xc32-bin2hex"
@@ -48,8 +48,8 @@ cask 'mplab-xc32' do
   end
 
   uninstall script: {
-                      executable: "Uninstall-xc32-v#{version}.app/Contents/MacOS/installbuilder.sh",
-                      args:       ['--mode', 'unattended'],
-                      sudo:       true,
-                    }
+    executable: "Uninstall-xc32-v#{version}.app/Contents/MacOS/installbuilder.sh",
+    args:       ["--mode", "unattended"],
+    sudo:       true,
+  }
 end

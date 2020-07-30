@@ -1,11 +1,11 @@
-cask 'fiji' do
+cask "fiji" do
   version :latest
   sha256 :no_check
 
   # downloads.imagej.net/fiji/ was verified as official when first introduced to the cask
-  url 'https://downloads.imagej.net/fiji/latest/fiji-macosx.zip'
-  name 'Fiji'
-  homepage 'https://fiji.sc/'
+  url "https://downloads.imagej.net/fiji/latest/fiji-macosx.zip"
+  name "Fiji"
+  homepage "https://fiji.sc/"
 
-  app 'Fiji.app'
+  app "Fiji.app"
 end
