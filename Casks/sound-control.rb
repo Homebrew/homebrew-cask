@@ -1,5 +1,5 @@
 cask "sound-control" do
-  version "2.5.0"
+  version "2.5.0,5156"
   sha256 "2c327d85678ab0a15c4603c90fcdeac65b43b6488df1e99b2e58213175dfd6ec"
 
   # staticz.net/ was verified as official when first introduced to the cask
