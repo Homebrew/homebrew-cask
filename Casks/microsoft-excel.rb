@@ -10,9 +10,17 @@ cask "microsoft-excel" do
 
   auto_updates true
   conflicts_with cask: "microsoft-office"
+  depends_on cask: "microsoft-auto-update"
   depends_on macos: ">= :sierra"
 
-  pkg "Microsoft_Excel_#{version}_Installer.pkg"
+  pkg "Microsoft_Excel_#{version}_Installer.pkg",
+      choices: [
+        {
+          "choiceIdentifier" => "com.microsoft.autoupdate", # Office16_all_autoupdate.pkg
+          "choiceAttribute"  => "selected",
+          "attributeSetting" => 0,
+        },
+      ]
 
   uninstall pkgutil:   [
     "com.microsoft.package.Microsoft_Excel.app",
@@ -20,33 +28,12 @@ cask "microsoft-excel" do
   ],
             launchctl: [
               "com.microsoft.office.licensingV2.helper",
-              "com.microsoft.update.agent",
-            ],
-            quit:      "com.microsoft.autoupdate2"
+            ]
 
-  zap trash:     [
+  zap trash: [
     "~/Library/Application Scripts/com.microsoft.Excel",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.excel.sfl*",
-    "~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate.fba",
-    "~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate2",
-    "~/Library/Caches/com.microsoft.autoupdate.fba",
-    "~/Library/Caches/com.microsoft.autoupdate2",
     "~/Library/Containers/com.microsoft.Excel",
-    "~/Library/Cookies/com.microsoft.autoupdate.fba.binarycookies",
-    "~/Library/Cookies/com.microsoft.autoupdate2.binarycookies",
     "~/Library/Preferences/com.microsoft.Excel.plist",
-    "~/Library/Preferences/com.microsoft.autoupdate.fba.plist",
-    "~/Library/Preferences/com.microsoft.autoupdate2.plist",
-    "~/Library/Saved Application State/com.microsoft.autoupdate2.savedState",
-  ],
-      rmdir:     [
-        "~/Library/Caches/Microsoft/uls",
-        "~/Library/Caches/Microsoft",
-      ],
-      launchctl: [
-        "com.microsoft.autoupdate.helpertool",
-        "com.microsoft.autoupdate.helper",
-        "com.microsoft.update.agent",
-      ],
-      pkgutil:   "com.microsoft.package.Microsoft_AutoUpdate.app"
+  ]
 end

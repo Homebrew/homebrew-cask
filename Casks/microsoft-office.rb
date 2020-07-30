@@ -15,9 +15,17 @@ cask "microsoft-office" do
     microsoft-outlook
     onedrive
   ]
+  depends_on cask: "microsoft-auto-update"
   depends_on macos: ">= :sierra"
 
-  pkg "Microsoft_Office_#{version}_Installer.pkg"
+  pkg "Microsoft_Office_#{version}_Installer.pkg",
+      choices: [
+        {
+          "choiceIdentifier" => "com.microsoft.autoupdate", # Office16_all_autoupdate.pkg
+          "choiceAttribute"  => "selected",
+          "attributeSetting" => 0,
+        },
+      ]
 
   uninstall pkgutil:   [
     "com.microsoft.package.DFonts",
@@ -40,7 +48,6 @@ cask "microsoft-office" do
               "/Applications/Microsoft PowerPoint.app",
               "/Applications/Microsoft Word.app",
               "/Applications/OneDrive.app",
-              "/Library/PrivilegedHelperTools/com.microsoft.autoupdate.helper",
             ],
             launchctl: [
               "com.microsoft.office.licensing.helper",
@@ -48,12 +55,9 @@ cask "microsoft-office" do
               "com.microsoft.OneDriveStandaloneUpdater",
               "com.microsoft.OneDriveStandaloneUpdaterDaemon",
               "com.microsoft.OneDriveUpdaterDaemon",
-              "com.microsoft.autoupdate.helper",
-              "com.microsoft.update.agent",
-            ],
-            quit:      "com.microsoft.autoupdate2"
+            ]
 
-  zap trash:     [
+  zap trash: [
     "~/Library/Application Scripts/com.microsoft.Excel",
     "~/Library/Application Scripts/com.microsoft.Office365ServiceV2",
     "~/Library/Application Scripts/com.microsoft.Outlook",
@@ -65,12 +69,7 @@ cask "microsoft-office" do
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.powerpoint.sfl*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.word.sfl*",
     "~/Library/Application Support/CrashReporter/Microsoft Error Reporting_*.plist",
-    "~/Library/Application Support/Microsoft AutoUpdate",
     "~/Library/Application Support/Microsoft Update Assistant",
-    "~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate.fba",
-    "~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate2",
-    "~/Library/Caches/com.microsoft.autoupdate.fba",
-    "~/Library/Caches/com.microsoft.autoupdate2",
     "~/Library/Caches/com.microsoft.OneDriveStandaloneUpdater",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDriveStandaloneUpdater",
     "~/Library/Containers/com.microsoft.Excel",
@@ -82,8 +81,6 @@ cask "microsoft-office" do
     "~/Library/Containers/com.microsoft.errorreporting",
     "~/Library/Containers/com.microsoft.netlib.shipassertprocess",
     "~/Library/Containers/com.microsoft.onenote.mac",
-    "~/Library/Cookies/com.microsoft.autoupdate.fba.binarycookies",
-    "~/Library/Cookies/com.microsoft.autoupdate2.binarycookies",
     "~/Library/Group Containers/UBF8T346G9.Office",
     "~/Library/Group Containers/UBF8T346G9.OfficeOneDriveSyncIntegration",
     "~/Library/Group Containers/UBF8T346G9.OfficeOsfWebHost",
@@ -92,21 +89,6 @@ cask "microsoft-office" do
     "~/Library/Preferences/com.microsoft.Outlook.plist",
     "~/Library/Preferences/com.microsoft.Powerpoint.plist",
     "~/Library/Preferences/com.microsoft.Word.plist",
-    "~/Library/Preferences/com.microsoft.autoupdate.fba.plist",
-    "~/Library/Preferences/com.microsoft.autoupdate2.plist",
-    "~/Library/Saved Application State/com.microsoft.autoupdate2.savedState",
     "~/Library/Saved Application State/com.microsoft.office.setupassistant.savedState",
-  ],
-      rmdir:     [
-        "~/Library/Caches/Microsoft/uls",
-        "~/Library/Caches/Microsoft",
-      ],
-      launchctl: [
-        "com.microsoft.autoupdate.helpertool",
-        "com.microsoft.autoupdate.helper",
-        "com.microsoft.update.agent",
-      ],
-      pkgutil:   [
-        "com.microsoft.package.Microsoft_AutoUpdate.app",
-      ]
+  ]
 end

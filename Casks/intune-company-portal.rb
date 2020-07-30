@@ -8,24 +8,23 @@ cask "intune-company-portal" do
   homepage "https://docs.microsoft.com/en-us/mem/intune/user-help/enroll-your-device-in-intune-macos-cp"
 
   auto_updates true
+  depends_on cask: "microsoft-auto-update"
   depends_on macos: ">= :mojave"
 
-  pkg "CompanyPortal_#{version}-Installer.pkg"
+  pkg "CompanyPortal_#{version}-Installer.pkg",
+      choices: [
+        {
+          "choiceIdentifier" => "com.microsoft.package.Microsoft_AutoUpdate.app", # Office16_autoupdate_updater.pkg
+          "choiceAttribute"  => "selected",
+          "attributeSetting" => 0,
+        },
+      ]
 
-  uninstall pkgutil:   [
-    "com.microsoft.package.Microsoft_AutoUpdate.app",
+  uninstall pkgutil: [
     "com.microsoft.CompanyPortalMac",
     "com.microsoft.CompanyPortal",
   ],
-            delete:    [
+            delete:  [
               "/Applications/Company Portal.app",
-              "/Library/PrivilegedHelperTools/com.microsoft.autoupdate.helper",
-            ],
-            launchctl: [
-              "com.microsoft.autoupdate.helper",
-              "com.microsoft.update.agent",
-            ],
-            quit:      [
-              "com.microsoft.autoupdate.fba",
             ]
 end
