@@ -81,10 +81,11 @@ cask "thunderbird" do
     "zh-CN"
   end
 
+  # ftp.mozilla.org was verified as official when first introduced to the cask
   url "https://ftp.mozilla.org/pub/thunderbird/releases/#{version}/mac/#{language}/Thunderbird%20#{version}.dmg"
   appcast "https://www.thunderbird.net/en-US/thunderbird/releases/"
   name "Mozilla Thunderbird"
-  homepage "https://www.mozilla.org/thunderbird/"
+  homepage "https://www.thunderbird.net/"
 
   auto_updates true
   conflicts_with cask: "thunderbird-beta"
