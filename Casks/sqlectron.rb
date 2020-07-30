@@ -8,7 +8,7 @@ cask "sqlectron" do
   name "Sqlectron"
   homepage "https://sqlectron.github.io/"
 
-  app "Sqlectron.app"
+  app "sqlectron.app"
 
   zap trash: [
     "~/.sqlectron.json",
