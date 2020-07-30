@@ -10,10 +10,11 @@ module Cask
   class Cmd
     class Ci < AbstractCommand
       def self.escape(string)
-        string.gsub(/\r/, "%0D")
-              .gsub(/\n/, "%0A")
-              .gsub(/]/, "%5D")
-              .gsub(/;/, "%3B")
+        Tty.strip_ansi(string)
+           .gsub(/\r/, "%0D")
+           .gsub(/\n/, "%0A")
+           .gsub(/]/, "%5D")
+           .gsub(/;/, "%3B")
       end
 
       def run
@@ -144,13 +145,21 @@ module Cask
 
             check.after
 
-            next success if check.success?
+            next success if check.success?(stanza: :uninstall)
 
-            $stderr.puts check.message
+            errors = check.errors(stanza: :uninstall)
+
+            errors.each do |error|
+              $stderr.puts error
+            end
+
+            path = Pathname(cask.sourcefile_path).relative_path_from(tap.path).to_s
+            puts "::error file=#{self.class.escape(path)}::#{self.class.escape(errors.join("\n\n"))}"
+
             false
           end
 
-          next unless check.success? && !check.success?(ignore_exceptions: false)
+          next unless check.success?(stanza: :uninstall) && !check.success?(stanza: :zap)
 
           overall_success &= step "brew cask zap #{cask.token}" do
             success = begin
@@ -164,9 +173,18 @@ module Cask
 
             check.after
 
-            next success if check.success?(ignore_exceptions: false)
+            next success if check.success?(stanza: :zap)
 
-            $stderr.puts check.message(stanza: "zap")
+            errors = check.errors(stanza: :zap)
+
+            errors.each do |error|
+              $stderr.puts error
+            end
+
+            path = Pathname(cask.sourcefile_path).relative_path_from(tap.path).to_s
+            puts "::error file=#{self.class.escape(path)}::#{self.class.escape(errors.join("\n\n"))}"
+
+            $stderr.puts
             false
           end
         end
