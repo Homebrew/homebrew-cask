@@ -1,14 +1,14 @@
-cask 'openaudible' do
-  version '2.1.1'
-  sha256 'e5748088a5ce26dc1709f5b8c6fb6fba41486ff82fe7546af246a4f1d9b0072a'
+cask "openaudible" do
+  version "2.3"
+  sha256 "fde17fed3b36006653f39cbb3e7f513de5d06f6e61d67ea08e55ce4a0612c099"
 
   # github.com/openaudible/ was verified as official when first introduced to the cask
   url "https://github.com/openaudible/openaudible/releases/download/v#{version}/OpenAudible_#{version}_mac.dmg"
-  appcast 'https://github.com/openaudible/openaudible/releases.atom'
-  name 'OpenAudible'
-  homepage 'https://openaudible.org/'
+  appcast "https://github.com/openaudible/openaudible/releases.atom"
+  name "OpenAudible"
+  homepage "https://openaudible.org/"
 
-  app 'OpenAudible.app'
+  app "OpenAudible.app"
 
-  zap trash: '/Library/OpenAudible'
+  zap trash: "/Library/OpenAudible"
 end

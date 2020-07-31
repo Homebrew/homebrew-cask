@@ -9,28 +9,24 @@ def capture
     $stderr.reopen(w)
 
     thread = Thread.new do
-      begin
-        yield
-      ensure
-        w.close
-      end
+      yield
+    ensure
+      w.close
     end
     thread.abort_on_exception = true
 
     output = ""
 
     loop do
-      begin
-        selected = IO.select([r], [], [], 1)
+      selected = IO.select([r], [], [], 1)
 
-        if reader = selected&.dig(0, 0)
-          output << (reader.readline_nonblock || "")
-        else
-          break if w.closed?
-        end
-      rescue IO::WaitReadable
-        retry
+      if (reader = selected&.dig(0, 0))
+        output << (reader.readline_nonblock || "")
+      elsif w.closed?
+        break
       end
+    rescue IO::WaitReadable
+      retry
     end
 
     result = thread.value

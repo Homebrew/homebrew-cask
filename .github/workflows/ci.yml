@@ -7,11 +7,27 @@ jobs:
   ci:
     runs-on: macos-latest
     steps:
-      - name: brew pull
+      - name: Update Homebrew
+        id: update_homebrew
         run: |
-          brew update-reset "$(brew --repository)"
+          set -euo pipefail
 
-          HOMEBREW_INSTALL_BUNDLER_GEMS_FIRST=1 brew config
+          homebrew_repository="$(brew --repository)"
+
+          brew update-reset "${homebrew_repository}"
+
+          echo "::set-output name=homebrew_gems_cache_id::$(shasum -a 256 "${homebrew_repository}/Library/Homebrew/Gemfile.lock" | cut -f1 -d ' ')"
+          echo "::set-output name=homebrew_gems_cache_dir::${homebrew_repository}/Library/Homebrew/vendor/bundle/ruby"
+      - name: Cache Homebrew Gems
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.update_homebrew.outputs.homebrew_gems_cache_dir }}
+          key: homebrew-gems-cache-${{ steps.update_homebrew.outputs.homebrew_gems_cache_id }}
+      - name: Install Homebrew Gems
+        run: brew install-bundler-gems
+      - name: Check out Pull Request
+        run: |
+          set -euo pipefail
 
           brew tap "${GITHUB_REPOSITORY}"
 
@@ -22,7 +38,13 @@ jobs:
 
           brew update-reset "$(brew --repository "${GITHUB_REPOSITORY}")"
 
-          brew pull --clean "${PR_URL}"
+          cd "$(brew --repository "${GITHUB_REPOSITORY}")"
+          patch="$(mktemp)"
+          curl --silent --show-error --fail --location "${PR_URL}.patch" --output "${patch}"
+          git config --global user.name github-actions
+          git config --global user.email github-actions@github.com
+          git am --whitespace=nowarn "${patch}"
+          rm "${patch}"
         env:
           PR_URL: ${{ github.event.pull_request._links.html.href }}
           HOMEBREW_COLOR: 1
@@ -33,6 +55,11 @@ jobs:
           unset HOMEBREW_CASK_OPTS
           brew cask ci
         env:
-          CI: true
           HOMEBREW_COLOR: 1
           HOMEBREW_DEVELOPER: 1
+      - name: brew cask style
+        run: |
+          # don't care about `brew cask style` here.
+          brew untap adoptopenjdk/openjdk
+
+          brew cask style

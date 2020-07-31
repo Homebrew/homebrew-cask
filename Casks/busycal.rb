@@ -1,25 +1,25 @@
-cask 'busycal' do
-  version '3.10.1,401010'
-  sha256 '30b0582cfcc9abd15e10c0e88cd00566b0cc32a47ca4b67f1723fd7e6e3a3cac'
+cask "busycal" do
+  version "3.10.2,401028"
+  sha256 "d41041c3f95b680d7c86f8d4a5469d3258a182349742011cf9d355eab9658a19"
 
-  url 'https://www.busymac.com/download/BusyCal.zip'
-  appcast 'https://www.busymac.com/busycal/news.plist'
-  name 'BusyCal'
-  homepage 'https://busymac.com/busycal/index.html'
+  url "https://www.busymac.com/download/BusyCal.zip"
+  appcast "https://www.busymac.com/busycal/news.plist"
+  name "BusyCal"
+  homepage "https://busymac.com/busycal/index.html"
 
   auto_updates true
 
-  pkg 'BusyCal Installer.pkg'
+  pkg "BusyCal Installer.pkg"
 
   uninstall pkgutil: "com.busymac.busycal#{version.major}.pkg",
             quit:    "N4RA379GBW.com.busymac.busycal#{version.major}.alarm",
-            signal:  ['TERM', "com.busymac.busycal#{version.major}"]
+            signal:  ["TERM", "com.busymac.busycal#{version.major}"]
 
   zap trash: [
-               "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.busymac.busycal#{version.major}.sfl*",
-               "~/Library/Containers/com.busymac.busycal#{version.major}",
-               "~/Library/Containers/N4RA379GBW.com.busymac.busycal#{version.major}.alarm",
-               "~/Library/Group Containers/com.busymac.busycal#{version.major}",
-               "~/Library/Group Containers/N4RA379GBW.com.busymac.busycal#{version.major}",
-             ]
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.busymac.busycal#{version.major}.sfl*",
+    "~/Library/Containers/com.busymac.busycal#{version.major}",
+    "~/Library/Containers/N4RA379GBW.com.busymac.busycal#{version.major}.alarm",
+    "~/Library/Group Containers/com.busymac.busycal#{version.major}",
+    "~/Library/Group Containers/N4RA379GBW.com.busymac.busycal#{version.major}",
+  ]
 end

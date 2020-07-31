@@ -1,14 +1,14 @@
-cask 'goodsync' do
-  version '11.2.0.0'
-  sha256 '18550fa916d2b2278b7f72cb5b601f75739de90a8a134017970b3b48510a428a'
+cask "goodsync" do
+  version "11.2.7.9"
+  sha256 "12f6246358cefc6e56baae9546a7d776667e1ecc7586026b32151a499830b9a7"
 
   url "https://www.goodsync.com/download/goodsync-v#{version.major}-mac.dmg"
-  appcast 'https://www.goodsync.com/download?os=macos',
-          configuration: version.major_minor_patch
-  name 'GoodSync'
-  homepage 'https://www.goodsync.com/'
+  appcast "https://www.goodsync.com/download?os=macos",
+          must_contain: version.major_minor_patch
+  name "GoodSync"
+  homepage "https://www.goodsync.com/"
 
-  depends_on macos: '>= :yosemite'
+  depends_on macos: ">= :yosemite"
 
-  app 'GoodSync.app'
+  app "GoodSync.app"
 end

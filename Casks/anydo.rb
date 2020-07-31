@@ -1,13 +1,13 @@
-cask 'anydo' do
-  version '4.2.88'
-  sha256 'ff8cd007c5d994d75d22ee0eb789d6ae350b0cc0b8293ebae768e1b89b3720ee'
+cask "anydo" do
+  version "4.2.100"
+  sha256 "f1a674b253897dc69253e41d9a19b688859a1b5c6c763c8217e9275db1ed7257"
 
-  url 'https://electron-app.any.do/Any.do.dmg'
-  appcast 'https://electron-app.any.do/latest-mac.yml'
-  name 'Any.do'
-  homepage 'https://www.any.do/'
+  url "https://electron-app.any.do/Any.do.dmg"
+  appcast "https://electron-app.any.do/latest-mac.yml"
+  name "Any.do"
+  homepage "https://www.any.do/"
 
-  depends_on macos: '>= :high_sierra'
+  depends_on macos: ">= :high_sierra"
 
-  app 'Any.do.app'
+  app "Any.do.app"
 end

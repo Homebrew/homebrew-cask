@@ -1,10 +1,10 @@
-cask 'clickup' do
-  version '2.0.8'
-  sha256 '79bda23295db0e9c66fc7a72dc3a1226a8620384feaeacba6539bb4ed7eb092e'
+cask "clickup" do
+  version "2.0.16"
+  sha256 "8f592e68de863d2daf9cd74d9d5f1465e14a33b7d38632cdb6ecf8d8b39b1aa4"
 
   url "https://attachments.clickup.com/desktop/clickup-desktop-#{version}-mac.dmg"
-  name 'ClickUp'
-  homepage 'https://clickup.com/'
+  name "ClickUp"
+  homepage "https://clickup.com/"
 
-  app 'ClickUp.app'
+  app "ClickUp.app"
 end

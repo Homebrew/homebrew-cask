@@ -5,25 +5,25 @@ require "utils/formatter"
 
 require_relative "lib/capture"
 require_relative "lib/check"
-require_relative "lib/travis"
 
 module Cask
   class Cmd
     class Ci < AbstractCommand
-      option "--only-style", :only_style, false
-      option "--annotate-style-violations", :annotate_style_violations, false
+      def self.escape(string)
+        Tty.strip_ansi(string)
+           .gsub(/\r/, "%0D")
+           .gsub(/\n/, "%0A")
+           .gsub(/]/, "%5D")
+           .gsub(/;/, "%3B")
+      end
 
       def run
-        unless ENV.key?("CI")
-          raise CaskError, "This command isn’t meant to be run locally."
-        end
+        raise CaskError, "This command isn’t meant to be run locally." unless ENV.key?("CI")
 
         $stdout.sync = true
         $stderr.sync = true
 
-        unless tap
-          raise CaskError, "This command must be run from inside a tap directory."
-        end
+        raise CaskError, "This command must be run from inside a tap directory." unless tap
 
         @commit_range = begin
           commit_range_start = system_command!("git", args: ["rev-parse", "origin/master"]).stdout.chomp
@@ -31,66 +31,66 @@ module Cask
           "#{commit_range_start}...#{commit_range_end}"
         end
 
-        ruby_files_in_wrong_directory = modified_ruby_files - (modified_cask_files + modified_command_files + modified_github_files)
+        ruby_files_in_wrong_directory =
+          modified_ruby_files - (modified_cask_files + modified_command_files + modified_github_files)
 
         unless ruby_files_in_wrong_directory.empty?
           raise CaskError, "Casks are in the wrong directory:\n" +
                            ruby_files_in_wrong_directory.join("\n")
         end
 
-        if modified_cask_files.count > 1 && tap.name != "homebrew/cask-fonts"
-          raise CaskError, "More than one cask modified; please submit a pull request for each cask separately."
-        end
-
         overall_success = true
-
-        style_status = nil
-        style_failed_casks = []
-        style_offenses = []
 
         modified_cask_files.each do |path|
           cask = CaskLoader.load(path)
 
-          overall_success &= step "brew cask style #{cask.token}", "style" do
-            begin
-              Style.run(path)
-              style_status ||= 'success'
-              true
-            rescue => e
-              style_status = 'action_required'
+          overall_success &= step "brew cask style #{cask.token}" do
+            Style.run(path)
+            true
+          rescue
+            json = Style.rubocop(path, json: true)
 
-              json = Style.rubocop(path, json: true)
-
-              style_offenses +=
-                json.fetch("files")
-                    .flat_map do |file|
-                      file.fetch("offenses").map do |o|
-                        {
-                          title:            o.fetch("cop_name"),
-                          message:          o.fetch("message"),
-                          path:             Pathname(file.fetch("path")).relative_path_from(tap.path).to_s,
-                          start_line:       o.fetch("location").fetch("start_line"),
-                          start_column:     o.fetch("location").fetch("start_column"),
-                          end_line:         o.fetch("location").fetch("last_line"),
-                          end_column:       o.fetch("location").fetch("last_column"),
-                          annotation_level: 'failure',
-                        }
-                      end
-                    end
-
-              style_failed_casks << cask.token
-
-              false
+            json.fetch("files").each do |file|
+              file.fetch("offenses").each do |o|
+                path = Pathname(file.fetch("path")).relative_path_from(tap.path).to_s
+                line = o.fetch("location").fetch("start_line")
+                column = o.fetch("location").fetch("start_column")
+                message = o.fetch("message")
+                puts "::error file=#{self.class.escape(path)},line=#{line},col=#{column}" \
+                     "::#{self.class.escape(message)}"
+              end
             end
+
+            false
           end
 
-          next if only_style?
+          overall_success &= step "brew cask audit #{cask.token}" do
+            result = Auditor.audit(cask, audit_download:        true,
+                                         audit_appcast:         true,
+                                         audit_token_conflicts: added_cask_files.include?(path),
+                                         commit_range:          @commit_range)
 
-          overall_success &= step "brew cask audit #{cask.token}", "audit" do
-            Auditor.audit(cask, audit_download: true,
-                                audit_appcast: true,
-                                audit_token_conflicts: added_cask_files.include?(path),
-                                commit_range: @commit_range)
+            success = true
+
+            path = Pathname(cask.sourcefile_path).relative_path_from(tap.path).to_s
+
+            messages = result[:warnings].map { |message| [:warning, message] } +
+                       result[:errors].map { |message| [:error, message] }
+
+            messages.each do |type, message|
+              if type == :warnings
+                if tap.official?
+                  success = false
+                  type = :error
+                end
+              else
+                success = false
+              end
+
+              puts "::#{type} file=#{self.class.escape(path)}::#{self.class.escape(message)}"
+            end
+
+            success
           end
 
           if (macos_requirement = cask.depends_on.macos) && !macos_requirement.satisfied?
@@ -102,11 +102,13 @@ module Cask
 
           installer = Installer.new(cask, verbose: true)
 
-          cask_and_formula_dependencies = installer.missing_cask_and_formula_dependencies
-
           check = Check.new
 
-          overall_success &= step "brew cask install #{cask.token}", "install" do
+          cask_and_formula_dependencies = nil
+
+          overall_success &= step "brew cask install #{cask.token}" do
+            cask_and_formula_dependencies = installer.missing_cask_and_formula_dependencies
+
             if was_installed
               old_cask = CaskLoader.load(cask.installed_caskfile)
               Installer.new(old_cask, verbose: true).zap
@@ -117,10 +119,10 @@ module Cask
             installer.install
           end
 
-          overall_success &= step "brew cask uninstall #{cask.token}", "uninstall" do
+          overall_success &= step "brew cask uninstall #{cask.token}" do
             success = begin
               if manual_installer?(cask)
-                puts 'Cask has a manual installer, skipping...'
+                puts "Cask has a manual installer, skipping..."
               else
                 installer.uninstall
               end
@@ -130,89 +132,57 @@ module Cask
               $stderr.puts e.backtrace
               false
             ensure
-              cask_and_formula_dependencies.reverse.each do |cask_or_formula|
+              cask_and_formula_dependencies.reverse_each do |cask_or_formula|
                 next unless cask_or_formula.is_a?(Cask)
-                Installer.new(cask_or_formula, verbose: true).uninstall if cask_or_formula.any_version_installed?
+
+                Installer.new(cask_or_formula, verbose: true).uninstall if cask_or_formula.installed?
               end
             end
 
             check.after
 
-            next success if check.success?
+            next success if check.success?(stanza: :uninstall)
 
-            $stderr.puts check.message
+            errors = check.errors(stanza: :uninstall)
+
+            errors.each do |error|
+              $stderr.puts error
+            end
+
+            path = Pathname(cask.sourcefile_path).relative_path_from(tap.path).to_s
+            puts "::error file=#{self.class.escape(path)}::#{self.class.escape(errors.join("\n\n"))}"
+
             false
           end
 
-          if check.success? && !check.success?(ignore_exceptions: false)
-            overall_success &= step "brew cask zap #{cask.token}", "zap" do
-              success = begin
-                Installer.new(cask, verbose: true).zap
-                true
-              rescue => e
-                $stderr.puts e.message
-                $stderr.puts e.backtrace
-                false
-              end
+          next unless check.success?(stanza: :uninstall) && !check.success?(stanza: :zap)
 
-              check.after
-
-              next success if check.success?(ignore_exceptions: false)
-
-              $stderr.puts check.message(stanza: "zap")
+          overall_success &= step "brew cask zap #{cask.token}" do
+            success = begin
+              Installer.new(cask, verbose: true).zap
+              true
+            rescue => e
+              $stderr.puts e.message
+              $stderr.puts e.backtrace
               false
             end
+
+            check.after
+
+            next success if check.success?(stanza: :zap)
+
+            errors = check.errors(stanza: :zap)
+
+            errors.each do |error|
+              $stderr.puts error
+            end
+
+            path = Pathname(cask.sourcefile_path).relative_path_from(tap.path).to_s
+            puts "::error file=#{self.class.escape(path)}::#{self.class.escape(errors.join("\n\n"))}"
+
+            $stderr.puts
+            false
           end
-        end
-
-        style_status ||= 'neutral'
-
-        if annotate_style_violations?
-          event = JSON.parse(File.read(ENV.fetch("HOMEBREW_GITHUB_EVENT_PATH")))
-
-          case ENV["HOMEBREW_GITHUB_EVENT_NAME"]
-          when "pull_request"
-            pr = event.fetch("pull_request")
-            repo = pr.fetch("base").fetch("repo").fetch("full_name")
-            head_sha = pr.fetch("head").fetch("sha")
-          when "check_run"
-            repo = event.fetch("repository").fetch("full_name")
-            head_sha = event.fetch("check_run").fetch("head_sha")
-          else
-            raise
-          end
-
-          output = case style_status
-          when 'neutral'
-            { title: 'Style check skipped.', summary: 'No matching files changed.' }
-          when 'success'
-            { title: 'Style check succeeded.', summary: 'No style violations found.' }
-          when 'action_required', 'failure'
-            {
-              title: 'Style check failed, run `brew cask style --fix`.',
-              summary: <<~MARKDOWN,
-                #{style_offenses.count} style violations were found. Run
-
-                ```
-                brew cask style --fix #{style_failed_casks.join(' ')}
-                ```
-
-                and fix the remaining violations manually, if any.
-              MARKDOWN
-              annotations: style_offenses
-            }
-          else
-            raise
-          end
-
-          GitHub.create_check_run(repo: repo, data: {
-            name: 'style',
-            head_sha: head_sha,
-            conclusion: style_status,
-            completed_at: Time.now.iso8601,
-            details_url: "https://github.com/Homebrew/homebrew-cask/blob/master/CONTRIBUTING.md#style-guide",
-            output: output,
-          })
         end
 
         if overall_success
@@ -225,49 +195,31 @@ module Cask
 
       private
 
-      def step(name, travis_id)
-        unless ENV.key?("TRAVIS_COMMIT_RANGE")
-          puts Formatter.headline(name, color: :yellow)
-          return yield != false
+      def step(name)
+        success, output = capture do
+          yield != false
+        rescue => e
+          $stderr.puts e.message
+          $stderr.puts e.backtrace
+          false
         end
 
-        success = false
-        output = nil
+        headline = Formatter.headline(name.to_s, color: :yellow)
 
-        Travis.fold travis_id do
-          print Formatter.headline("#{name} ", color: :yellow)
-
-          real_stdout = $stdout.dup
-
-          travis_wait = Thread.new do
-            loop do
-              sleep 595
-              real_stdout.print "\u200b"
-            end
-          end
-
-          success, output = capture do
-            begin
-              yield != false
-            rescue => e
-              $stderr.puts e.message
-              $stderr.puts e.backtrace
-              false
-            end
-          end
-
-          travis_wait.kill
-          travis_wait.join
-
-          if success
-            puts Formatter.success("✔")
-            puts output unless output.empty?
-          else
-            puts Formatter.error("✘")
-          end
+        group = if success
+          "#{headline} #{Formatter.success("✔")}"
+        else
+          "#{headline} #{Formatter.error("✘")}"
         end
 
-        puts output unless success
+        if success
+          puts "::group::#{group}"
+          puts output
+          puts "::endgroup::#{group}"
+        else
+          puts group
+          puts output
+        end
 
         success
       end

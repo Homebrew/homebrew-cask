@@ -1,13 +1,13 @@
-cask 'menubar-stats' do
-  version '3.2.1'
-  sha256 '8fc7a2487973f4912fbc3750e1f012132445fbbc9df30f7faa09d1ac01270428'
+cask "menubar-stats" do
+  version "3.4"
+  sha256 "0aef6819ee0cf4304e78f634f1c319b310206e068f12e8929e3498a57e9a33ff"
 
-  url 'https://seense.com/menubarstats/updateapp/mbs.zip'
-  appcast 'https://www.seense.com/menubarstats/updateapp/appcast.xml'
-  name 'MenuBar Stats'
-  homepage 'https://seense.com/menubarstats/'
+  url "https://seense.com/menubarstats/updateapp/mbs.zip"
+  appcast "https://www.seense.com/menubarstats/updateapp/appcast.xml"
+  name "MenuBar Stats"
+  homepage "https://seense.com/menubarstats/"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'MenuBar Stats.app'
+  app "MenuBar Stats.app"
 end

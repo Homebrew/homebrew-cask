@@ -1,11 +1,11 @@
-cask 'linphone' do
-  version '4.1.1'
-  sha256 'b1a5e518c1c564d47f992adadb09ea8cdb51f35e1a0935d4e2060468f893328e'
+cask "linphone" do
+  version "4.2.2"
+  sha256 "8e02953ba76bfbaf81f4cbdf3cce869ecb6a0dea3b18f4bf91962bee943fcc28"
 
-  url "https://www.linphone.org/releases/macosx/Linphone-#{version}-mac.dmg"
-  appcast 'https://www.linphone.org/releases/macosx/RELEASE'
-  name 'Linphone'
-  homepage 'https://www.linphone.org/'
+  url "https://www.linphone.org/releases/macosx/app/Linphone-#{version}-mac.dmg"
+  appcast "https://www.linphone.org/releases/macosx/RELEASE"
+  name "Linphone"
+  homepage "https://www.linphone.org/"
 
-  app 'Linphone.app'
+  app "Linphone.app"
 end

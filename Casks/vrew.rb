@@ -1,15 +1,15 @@
-cask 'vrew' do
-  version '0.4.22'
-  sha256 'cb4d5fa942a56e409932783930d29d0f708627a22a691da9bf904d639f571d72'
+cask "vrew" do
+  version "0.4.31"
+  sha256 "ccc848a635619a8cb753af9b75c1f01016ebd9e314b2eeab81759c35b906bed6"
 
   url "https://vrew-files.voyagerx.com/Vrew-#{version}.dmg"
-  name 'vrew'
-  homepage 'https://vrew.voyagerx.com/'
+  name "vrew"
+  homepage "https://vrew.voyagerx.com/"
 
-  app 'Vrew.app'
+  app "Vrew.app"
 
   zap trash: [
-               '~/Library/Application Support/vrew',
-               '~/Library/Preferences/com.voyagerx.vrew.plist',
-             ]
+    "~/Library/Application Support/vrew",
+    "~/Library/Preferences/com.voyagerx.vrew.plist",
+  ]
 end

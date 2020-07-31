@@ -12,7 +12,7 @@ When a plain URL string is insufficient to fetch a file, additional information 
 | ------------------ | ----------- |
 | `using:`           | the symbol `:post` is the only legal value
 | `cookies:`         | a hash of cookies to be set in the download request
-| `referer:`         | a string holding the URL to set as referrer in the download request
+| `referer:`         | a string holding the URL to set as referer in the download request
 | `header:`          | a string holding the header to set for the download request.
 | `user_agent:`      | a string holding the user agent to set for the download request. Can also be set to the symbol `:fake`, which will use a generic Browser-like user agent string. We prefer `:fake` when the server does not require a specific user agent.
 | `data:`            | a hash of parameters to be set in the POST request

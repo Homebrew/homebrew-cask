@@ -1,11 +1,11 @@
-cask 'iina-plus' do
-  version '0.4.14,20040415'
-  sha256 '5429313015620e880c16dc30c6b5b4f9e187394914710f8b078f17e2aea42d50'
+cask "iina-plus" do
+  version "0.5.0,20072018"
+  sha256 "2245826be480346e1f33fa1af942bcc6d57c727a34823a29f6caeb61030178e2"
 
   url "https://github.com/xjbeta/iina-plus/releases/download/#{version.before_comma}(#{version.after_comma})/iina+.#{version.before_comma}.zip"
-  appcast 'https://github.com/xjbeta/iina-plus/releases.atom'
-  name 'IINA+'
-  homepage 'https://github.com/xjbeta/iina-plus'
+  appcast "https://github.com/xjbeta/iina-plus/releases.atom"
+  name "IINA+"
+  homepage "https://github.com/xjbeta/iina-plus"
 
-  app 'iina+.app'
+  app "iina+.app"
 end

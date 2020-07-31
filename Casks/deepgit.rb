@@ -1,11 +1,11 @@
-cask 'deepgit' do
-  version '4'
-  sha256 '20b9d7e46c693188d5faade3ca42831e75f6654ed7fe7a0880b62aebc67012e6'
+cask "deepgit" do
+  version "4.0.1"
+  sha256 "e1905388c46e1e73e27fdc260350c95923186d962ef5bdc9c59ebba155f53041"
 
   url "https://www.syntevo.com/downloads/deepgit/deepgit-macosx-#{version.dots_to_underscores}.dmg"
-  appcast 'https://syntevo.com/deepgit/download'
-  name 'DeepGit'
-  homepage 'https://www.syntevo.com/deepgit/'
+  appcast "https://syntevo.com/deepgit/download"
+  name "DeepGit"
+  homepage "https://www.syntevo.com/deepgit/"
 
-  app 'DeepGit.app'
+  app "DeepGit.app"
 end

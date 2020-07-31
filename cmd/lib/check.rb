@@ -2,24 +2,24 @@ require "forwardable"
 
 class Check
   CHECKS = {
-    installed_apps: -> {
+    installed_apps:       lambda {
       ["/Applications", File.expand_path("~/Applications")]
         .flat_map { |dir| (0..5).map { |i| "/*" * i }.flat_map { |glob| Dir["#{dir}#{glob}.app"] } }
     },
-    installed_kexts: -> {
+    installed_kexts:      lambda {
       system_command!("/usr/sbin/kextstat", args: ["-kl"], print_stderr: false)
         .stdout
         .lines
         .map { |l| l.match(/^.{52}([^\s]+)/)[1] }
         .grep_v(/^com\.apple\./)
     },
-    installed_pkgs: -> {
+    installed_pkgs:       lambda {
       Pathname("/var/db/receipts")
         .children
         .grep(/\.plist$/)
         .map { |path| path.basename.to_s.sub(/\.plist$/, "") }
     },
-    installed_launchjobs: -> {
+    installed_launchjobs: lambda {
       format_launchjob = lambda { |file|
         name = file.basename(".plist").to_s
 
@@ -41,7 +41,7 @@ class Check
         .select(&:exist?)
         .map(&format_launchjob)
     },
-    loaded_launchjobs: -> {
+    loaded_launchjobs:    lambda {
       launchctl = lambda do |sudo|
         system_command!("/bin/launchctl", args: ["list"], print_stderr: false, sudo: sudo)
           .stdout
@@ -53,7 +53,7 @@ class Check
         .map { |l| l.split(/\s+/)[2] }
         .grep_v(/^com\.apple\./)
     },
-  }
+  }.freeze
 
   class Diff
     attr_reader :removed, :added
@@ -95,7 +95,7 @@ class Check
 
     @diff = {}
 
-    CHECKS.keys.each do |name|
+    CHECKS.each_key do |name|
       @diff[name] = Diff.new(@before[name], @after[name])
     end
 
@@ -103,69 +103,97 @@ class Check
   end
   private :diff
 
-  def success?(ignore_exceptions: true)
-    diff.values
-      .map { |v| v.added.reject { |s| ignore_exceptions ? zap_exceptions.include?(s) : false  } }
-      .all?(&:none?)
+  def success?(stanza:)
+    diff.values.all? { |v| filter_exceptions(v.added, stanza: stanza).none? }
   end
 
-  def zap_exceptions
+  def zap_exception?(id)
     [
       "com.microsoft.autoupdate.helper",
       "com.microsoft.package.Microsoft_AU_Bootstrapper.app",
       "com.microsoft.package.Microsoft_AutoUpdate.app",
       "com.microsoft.update.agent",
-    ].freeze
+    ].include?(id)
   end
 
-  def message(stanza: "uninstall")
-    lines = []
+  def filter_exceptions(ids, stanza:)
+    ids.reject { |id| stanza == :uninstall ? zap_exception?(id) : false }
+  end
+
+  def errors(stanza:)
+    errors = []
 
     pkg_files = diff[:installed_pkgs]
-                 .added
-                 .flat_map { |id| Cask::Pkg.new(id).pkgutil_bom_all.map(&:to_s) }
-
-    installed_apps = diff[:installed_apps].added - pkg_files
-
+                .added
+                .flat_map { |id| Cask::Pkg.new(id).pkgutil_bom_all.map(&:to_s) }
+    installed_apps = filter_exceptions(diff[:installed_apps].added - pkg_files, stanza: stanza)
     if installed_apps.any?
-      lines << Formatter.error("Some applications are still installed, add them to #{Formatter.identifier("#{stanza} delete:")}", label: "Error")
-      lines << installed_apps.join("\n")
+      message = Formatter.error(
+        "Some applications are still installed, add them to #{Formatter.identifier("#{stanza} delete:")}\n",
+        label: "Error",
+      )
+      message += installed_apps.join("\n")
+      errors << message
     end
 
-    if (installed_kexts = diff[:installed_kexts].added).any?
-      lines << Formatter.error("Some kernel extensions are still installed, add them to #{Formatter.identifier("#{stanza} kext:")}", label: "Error")
-      lines << installed_kexts.join("\n")
+    installed_kexts = filter_exceptions(diff[:installed_kexts].added, stanza: stanza)
+    if installed_kexts.any?
+      message = Formatter.error(
+        "Some kernel extensions are still installed, add them to #{Formatter.identifier("#{stanza} kext:")}\n",
+        label: "Error",
+      )
+      message += installed_kexts.join("\n")
+      errors << message
     end
 
-    if (installed_packages = diff[:installed_pkgs].added).any?
-      lines << Formatter.error("Some packages are still installed, add them to #{Formatter.identifier("#{stanza} pkgutil:")}", label: "Error")
-      lines << installed_packages.join("\n")
+    installed_packages = filter_exceptions(diff[:installed_pkgs].added, stanza: stanza)
+    if installed_packages.any?
+      message = Formatter.error(
+        "Some packages are still installed, add them to #{Formatter.identifier("#{stanza} pkgutil:")}\n",
+        label: "Error",
+      )
+      message += installed_packages.join("\n")
+      errors << message
     end
 
-    if (installed_launchjobs = diff[:installed_launchjobs].added).any?
-      lines << Formatter.error("Some launch jobs are still installed, add them to #{Formatter.identifier("#{stanza} launchctl:")}", label: "Error")
-      lines << installed_launchjobs.join("\n")
+    installed_launchjobs = filter_exceptions(diff[:installed_launchjobs].added, stanza: stanza)
+    if installed_launchjobs.any?
+      message = Formatter.error(
+        "Some launch jobs are still installed, add them to #{Formatter.identifier("#{stanza} launchctl:")}\n",
+        label: "Error",
+      )
+      message += installed_launchjobs.join("\n")
+      errors << message
     end
 
-    running_apps = diff[:loaded_launchjobs]
-                     .added
-                     .select { |id| id.match?(/\.\d+\Z/) }
-                     .map { |id| id.sub(/\.\d+\Z/, "") }
+    running_apps = filter_exceptions(diff[:loaded_launchjobs]
+                   .added
+                   .select { |id| id.match?(/\.\d+\Z/) }
+                   .map { |id| id.sub(/\.\d+\Z/, "") }, stanza: stanza)
 
-    loaded_launchjobs = diff[:loaded_launchjobs]
-                         .added
-                         .reject { |id| id.match?(/\.\d+\Z/) }
+
+    loaded_launchjobs = filter_exceptions(diff[:loaded_launchjobs]
+                        .added
+                        .reject { |id| id.match?(/\.\d+\Z/) }, stanza: stanza)
 
     if running_apps.any?
-      lines << Formatter.error("Some applications are still running, add them to #{Formatter.identifier("#{stanza} quit:")}", label: "Error")
-      lines << running_apps.join("\n")
+      message = Formatter.error(
+        "Some applications are still running, add them to #{Formatter.identifier("#{stanza} quit:")}\n",
+        label: "Error",
+      )
+      message += running_apps.join("\n")
+      errors << message
     end
 
     if loaded_launchjobs.any?
-      lines << Formatter.error("Some launch jobs were not unloaded, add them to #{Formatter.identifier("#{stanza} launchctl:")}", label: "Error")
-      lines << loaded_launchjobs.join("\n")
+      message = Formatter.error(
+        "Some launch jobs were not unloaded, add them to #{Formatter.identifier("#{stanza} launchctl:")}\n",
+        label: "Error",
+      )
+      message += loaded_launchjobs.join("\n")
+      errors << message
     end
 
-    lines.join("\n")
+    errors
   end
 end

@@ -1,16 +1,16 @@
-cask 'virtual-ii' do
+cask "virtual-ii" do
   version :latest
   sha256 :no_check
 
-  url 'https://virtualii.com/VirtualII.dmg'
-  name 'Virtual ]['
-  homepage 'https://virtualii.com/'
+  url "https://virtualii.com/VirtualII.dmg"
+  name "Virtual ]["
+  homepage "https://virtualii.com/"
 
-  suite 'Virtual ]['
+  suite "Virtual ]["
 
   preflight do
     # There is no sub-folder in the DMG; the root *is* the folder
-    FileUtils.mv(staged_path.children, staged_path.join('Virtual ][').tap(&:mkpath))
+    FileUtils.mv(staged_path.children, staged_path.join("Virtual ][").tap(&:mkpath))
   end
 
   caveats <<~EOS

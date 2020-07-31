@@ -1,13 +1,13 @@
-cask 'airmedia' do
-  version '3.1.29'
-  sha256 '95585254f8d82e16229af9f89da0806f0c5ff8f927d2b21efcdeefd88b912b52'
+cask "airmedia" do
+  version "3.2.1"
+  sha256 "ed764c62cddba87135b30b4c4ac6dfd7de6e97524c8592a817f5121618f582a9"
 
   url "https://www.crestron.com/Crestron/media/Crestron/WidenResources/Web%20Miscellaneous/airmedia_osx_#{version.dots_to_underscores}_guest.zip"
-  appcast 'https://www.crestron.com/en-US/Products/Featured-Solutions/Airmedia'
-  name 'Crestron AirMedia'
-  homepage 'https://www.crestron.com/microsites/airmedia-mobile-wireless-hd-presentations'
+  appcast "https://www.crestron.com/en-US/Products/Featured-Solutions/Airmedia"
+  name "Crestron AirMedia"
+  homepage "https://www.crestron.com/microsites/airmedia-mobile-wireless-hd-presentations"
 
-  container nested: "airmedia_osx_#{version}_guest/airmedia_osx_#{version}_guest.dmg"
+  container nested: "airmedia_osx_#{version.dots_to_underscores}_guest/airmedia_osx_#{version}_guest.dmg"
 
-  app 'Crestron AirMedia.app'
+  app "Crestron AirMedia.app"
 end
