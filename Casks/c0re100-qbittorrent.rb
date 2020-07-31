@@ -1,6 +1,6 @@
 cask "c0re100-qbittorrent" do
-  version "4.2.5.11"
-  sha256 "8dd2d4b70b3af1bcec83023eb85c130d25e1e0c05fb759d77d876752e7ad6d84"
+  version "4.2.5.13"
+  sha256 "33969041e23de89db4ce50b9dbec3fbff08231c8f41c94320180b0e8ef4faf00"
 
   url "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-#{version}/qBittorrent-#{version}.dmg"
   appcast "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases.atom"
