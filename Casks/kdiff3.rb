@@ -20,13 +20,4 @@ cask "kdiff3" do
   end
 
   zap trash: "~/.kdiff3rc"
-
-  caveats <<~END
-    kdiff3 is not signed, so you will need to reauthorize the app to run every
-    time the app is updated.
-
-    Run the app once. If macOS blocks it from running, go to:
-      System Preferences → Security & Privacy → General
-    To re-enable, click Open Anyway.
-  END
 end
