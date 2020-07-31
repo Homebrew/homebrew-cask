@@ -42,5 +42,5 @@ file_name = File.basename(file_raw_url)
 local_file = File.join(Dir.mktmpdir, file_name)
 
 File.write(local_file, URI(file_raw_url).read)
-system("brew", "cask", "audit", "--download", local_file)
-system("brew", "cask", "style", local_file)
+abort "Audit failed" unless system("brew", "cask", "audit", "--download", local_file)
+abort "Style check failed" unless system("brew", "cask", "style", local_file)
