@@ -10,7 +10,6 @@ cask "kafka-tool" do
   installer script: {
     executable: "Kafka Tool #{version.major} Installer.app/Contents/MacOS/JavaApplicationStub",
     args:       ["-q"],
-    sudo:       true,
   }
 
   uninstall delete: "/Applications/Kafka Tool.app"
