@@ -7,8 +7,6 @@ cask "scratch-link" do
   name "Scratch Link"
   homepage "https://github.com/LLK/scratch-link"
 
-  license :bsd
-
   pkg "scratch-link-#{version}.pkg"
 
   uninstall pkgutil: "edu.mit.scratch.scratch-link"
