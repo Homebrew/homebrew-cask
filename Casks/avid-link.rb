@@ -12,8 +12,7 @@ cask "avid-link" do
 
   uninstall_script = "#{appdir}/Avid_Uninstallers/Avid Link/Avid Link Uninstaller.app/Contents/MacOS/AvidUninstaller"
 
-  uninstall launchctl: "com.avid.AvidLink.uninstall.HelperTool",
-            script:    {
+  uninstall script:    {
               executable:   uninstall_script.to_s,
               args:         ["-no-gui", "-all"],
               sudo:         true,
