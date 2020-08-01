@@ -10,14 +10,16 @@ cask "avid-link" do
 
   pkg "AvidLink_Installer.pkg"
 
-  uninstall quit:   "com.avid.link",
-            script: {
-              executable:   "#{appdir}/Avid_Uninstallers/Avid Link/Avid Link Uninstaller.app/Contents/MacOS/AvidUninstaller",
+  uninstall_script = "#{appdir}/Avid_Uninstallers/Avid Link/Avid Link Uninstaller.app/Contents/MacOS/AvidUninstaller"
+
+  uninstall launchctl: "com.avid.AvidLink.uninstall.HelperTool",
+            script:    {
+              executable:   uninstall_script.to_s,
               args:         ["-no-gui", "-all"],
               sudo:         true,
               must_succeed: true,
             },
-            delete: [
+            delete:    [
               "/Applications/Avid/Application Manager/",
               "/Library/Logs/Avid/AppManagerHelper/",
               "/Library/Logs/Avid/AppManagerUI/",
