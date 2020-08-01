@@ -4,7 +4,7 @@ cask "daily-english-listening" do
 
   # static.frdic.com/pkg/ting_en/ was verified as official when first introduced to the cask
   url "https://static.frdic.com/pkg/ting_en/ting_en.dmg",
-           user_agent: :fake
+      user_agent: :fake,
   appcast "https://static.frdic.com/pkg/ting_en/latest-mac.yml"
   name "Daily English Listening"
   name "每日英语听力"
