@@ -1,6 +1,6 @@
 cask "gretl" do
-  version "2020b"
-  sha256 "a6537914d2e221b372c12261d224f14825563fe0bb69c7f980b16b277e09939e"
+  version "2020c"
+  sha256 "cedc6b931ed5aaed4fe065bf720f2e0f032c6b59a92a467fe4adcf51c38af520"
 
   # downloads.sourceforge.net/gretl/ was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/gretl/gretl-#{version}-quartz.pkg"
