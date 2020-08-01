@@ -3,7 +3,6 @@ cask "avid-link" do
   sha256 "b1e354e91b5702937f068f7303c23c5e9cec4a0e72996f5321fc765e2fcd14ee"
 
   url "http://cdn.avid.com/AvidLink/#{version}/B0C4DA46/Avid_Link_#{version[2..]}_Mac.dmg"
-  # avid.secure.force.com was verified as official when first introduced to the cask
   appcast "https://avid.secure.force.com/pkb/articles/en_US/User_Guide/Avid-Link-Documentation"
   name "Avid Link"
   homepage "https://www.avid.com/products/avid-link"
@@ -36,8 +35,4 @@ cask "avid-link" do
     "~/Library/Caches/Avid/Avid Link/",
     "~/Library/Caches/Avid Technology/Avid Link/",
   ]
-
-  caveats do
-    license "https://www.avid.com/legal/end-user-license-terms-for-avid-software"
-  end
 end
