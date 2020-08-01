@@ -3,7 +3,6 @@ cask "sibelius" do
   sha256 "ccc4efa05e11235e25b89add0b2ef66c9f85cd799cdbf138197ef52c6580e36c"
 
   url "http://cdn.avid.com/Sibelius/Sibelius/#{version}/708D428E/Sibelius_#{version}_Mac.dmg"
-  # avid.secure.force.com was verified as official when first introduced to the cask
   appcast "https://avid.secure.force.com/pkb/articles/en_US/Compatibility/Sibelius-Operating-System-Compatibility-Chart"
   name "Sibelius"
   homepage "https://www.avid.com/sibelius"
@@ -42,8 +41,4 @@ cask "sibelius" do
     "~/Library/Saved Application State/com.avid.sibelius.savedState",
     "~/Documents/Scores/Sibelius Example Scores",
   ]
-
-  caveats do
-    license "https://www.avid.com/legal/end-user-license-terms-for-avid-software"
-  end
 end
