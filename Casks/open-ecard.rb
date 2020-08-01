@@ -8,9 +8,7 @@ cask "open-ecard" do
   name "Open eCard"
   homepage "https://www.openecard.org/"
 
-  pkg "Open eCard App.pkg"
-
-  uninstall pkgutil: "com.openecard.pkg.OpeneCardApp"
+  app "Open-eCard-App.app"
 
   zap trash: "~/.openecard"
 end
