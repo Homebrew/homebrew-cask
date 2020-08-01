@@ -1,6 +1,6 @@
 cask "imgotv" do
-  version "6.3.0"
-  sha256 "b7485f7a3b126fc245ae3eef6316327079896d3cc5f5f6a29f761d06cbf4a6ce"
+  version "6.3.1"
+  sha256 "b122d88e2340c8119cd24ee5862c8e1587af41da08816bd1c887e80fbfbcf37f"
 
   # download.imgo.tv/ was verified as official when first introduced to the cask
   url "https://download.imgo.tv/app/mac/#{version}/mgtv-mango-#{version}.dmg"
