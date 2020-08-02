@@ -4,8 +4,8 @@ cask "ksnip" do
 
   url "https://github.com/ksnip/ksnip/releases/download/v#{version}/ksnip-#{version}.dmg"
   appcast "https://github.com/ksnip/ksnip/releases.atom"
-  name "Ksnip"
+  name "ksnip"
   homepage "https://github.com/ksnip/ksnip"
 
-  app "Ksnip.app"
+  app "ksnip.app"
 end
