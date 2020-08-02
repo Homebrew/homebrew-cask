@@ -1,6 +1,6 @@
 cask "mcreator" do
-  version "2020.3"
-  sha256 "d3c4b39886ae70f10592502c02834b5ddfcadc4c52c4eb062cff24fa404c691a"
+  version "2020.4"
+  sha256 "5e90742782d1e787261b8e2e42e1de1b95fb648aa2a46f2c392c72525a61beb0"
 
   url "https://mcreator.net/repository/#{version.dots_to_hyphens}/MCreator%20#{version}%20Mac%2064bit.dmg"
   appcast "https://mcreator.net/changelog"
