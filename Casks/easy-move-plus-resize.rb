@@ -7,5 +7,5 @@ cask "easy-move-plus-resize" do
   name "Easy Move+Resize"
   homepage "https://github.com/dmarcotte/easy-move-resize"
 
-  app "Easy Move+Resize.app"
+  app "easy-move-resize/Easy Move+Resize.app"
 end
