@@ -11,4 +11,15 @@ cask "ledger-live" do
   auto_updates true
 
   app "Ledger Live.app"
+
+  uninstall quit: [
+    "com.ledger.live",
+    "com.ledger.live.helper",
+  ]
+
+  zap trash: [
+    "~/Library/Application Support/Ledger Live",
+    "~/Library/Preferences/com.ledger.live.plist",
+    "~/Library/Saved Application State/com.ledger.live.savedState",
+  ]
 end
