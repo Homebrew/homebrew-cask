@@ -8,6 +8,8 @@ cask "hey" do
   name "Hey"
   homepage "https://hey.com/"
 
+  auto_updates true
+
   app "Hey.app"
 
   zap trash: [
