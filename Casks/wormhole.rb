@@ -1,6 +1,6 @@
 cask "wormhole" do
-  version "1.2.6"
-  sha256 "f9c35b78fd89d75df63b3e9a045faf7f260a9e27d1b3b2378870c6d5e6db6c0e"
+  version "1.2.7"
+  sha256 "4800194de3fa5dee961fdd9a63ffa1a751a05c5f0db4558bef73b136212fb9c2"
 
   # files.octopusgame.com/ was verified as official when first introduced to the cask
   url "https://files.octopusgame.com/os/WormholeInstaller.dmg"
