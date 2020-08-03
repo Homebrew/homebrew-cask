@@ -8,5 +8,7 @@ cask "fontlab" do
   name "Fontlab"
   homepage "https://www.fontlab.com/font-editor/fontlab/"
 
+  auto_updates true
+
   app "FontLab #{version.major}.app"
 end
