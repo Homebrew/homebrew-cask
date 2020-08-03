@@ -9,4 +9,11 @@ cask "mark-text" do
   homepage "https://marktext.app/"
 
   app "Mark Text.app"
+
+  zap trash: [
+    "~/Library/Application Support/marktext",
+    "~/Library/Preferences/com.github.marktext.marktext.plist",
+    "~/Library/Saved Application State/com.github.marktext.marktext.savedState",
+    "~/Library/Logs/Mark Text",
+  ]
 end
