@@ -10,4 +10,19 @@ cask "spotmenu" do
   auto_updates true
 
   app "SpotMenu.app"
+
+  uninstall quit:       [
+    "com.KMikiy.SpotMenu",
+  ],
+            login_item: [
+              "SpotMenu",
+            ]
+
+  zap trash: [
+    "~/Library/Application Scripts/com.KMikiy.SpotMenu.SpotMenuToday",
+    "~/Library/Application Support/com.KMikiy.SpotMenu",
+    "~/Library/Containers/com.KMikiy.SpotMenu.SpotMenuToday",
+    "~/Library/Group Containers/group.KMikiy.SpotMenu",
+    "~/Library/Preferences/com.KMikiy.SpotMenu.plist",
+  ]
 end
