@@ -1,6 +1,6 @@
 cask "keyboard-maestro" do
-  version "9.0.5"
-  sha256 "de57500c8ffe6b19366ce7117faa12674797dd90a65a47196e7ec147e90487fe"
+  version "9.0.6"
+  sha256 "37025041a112a567cb215d4cc9748986f5a6569defb8ec412f3bae607dd337b6"
 
   # stairways.com/ was verified as official when first introduced to the cask
   url "https://files.stairways.com/keyboardmaestro-#{version.no_dots}.zip"
