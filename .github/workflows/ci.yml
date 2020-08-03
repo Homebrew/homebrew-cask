@@ -49,6 +49,12 @@ jobs:
           PR_URL: ${{ github.event.pull_request._links.html.href }}
           HOMEBREW_COLOR: 1
           HOMEBREW_DEVELOPER: 1
+      - name: brew cask style
+        run: |
+          # don't care about `brew cask style` here.
+          brew untap adoptopenjdk/openjdk
+
+          brew cask style
       - name: brew cask ci
         run: |
           cd "$(brew --repository "${GITHUB_REPOSITORY}")"
@@ -57,9 +63,3 @@ jobs:
         env:
           HOMEBREW_COLOR: 1
           HOMEBREW_DEVELOPER: 1
-      - name: brew cask style
-        run: |
-          # don't care about `brew cask style` here.
-          brew untap adoptopenjdk/openjdk
-
-          brew cask style
