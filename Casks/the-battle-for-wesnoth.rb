@@ -4,7 +4,7 @@ cask "the-battle-for-wesnoth" do
 
   # sourceforge.net/wesnoth/ was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/wesnoth/Wesnoth_#{version}.dmg"
-  appcast "https://sourceforge.net/projects/wesnoth/rss"
+  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://sourceforge.net/projects/wesnoth/files/latest/download&user_agent=Intel%20Mac%20OS%20X"
   name "The Battle for Wesnoth"
   homepage "https://wesnoth.org/"
 
