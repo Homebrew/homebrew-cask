@@ -16,8 +16,19 @@ jobs:
 
           brew update-reset "${homebrew_repository}"
 
+          brew tap-info --installed
+
+          brew cask uninstall $(brew cask ls | grep adoptopenjdk)
+          brew untap adoptopenjdk/openjdk
+
+          brew cask ls
+
           echo "::set-output name=homebrew_gems_cache_id::$(shasum -a 256 "${homebrew_repository}/Library/Homebrew/Gemfile.lock" | cut -f1 -d ' ')"
           echo "::set-output name=homebrew_gems_cache_dir::${homebrew_repository}/Library/Homebrew/vendor/bundle/ruby"
+        env:
+          HOMEBREW_COLOR: 1
+          HOMEBREW_DEVELOPER: 1
+          HOMEBREW_CASK_OPTS:
       - name: Cache Homebrew Gems
         uses: actions/cache@v2
         with:
@@ -49,6 +60,7 @@ jobs:
           PR_URL: ${{ github.event.pull_request._links.html.href }}
           HOMEBREW_COLOR: 1
           HOMEBREW_DEVELOPER: 1
+          HOMEBREW_CASK_OPTS:
       - name: brew cask ci
         run: |
           cd "$(brew --repository "${GITHUB_REPOSITORY}")"
@@ -57,10 +69,8 @@ jobs:
         env:
           HOMEBREW_COLOR: 1
           HOMEBREW_DEVELOPER: 1
+          HOMEBREW_CASK_OPTS:
       - name: brew cask style
         run: |
-          # don't care about `brew cask style` here.
-          brew untap adoptopenjdk/openjdk
-
           brew cask style
         if: always()

@@ -5,8 +5,8 @@ def capture
   old_stderr = $stderr.dup
 
   PTY.open do |r, w|
-    $stdout.reopen(w)
-    $stderr.reopen(w)
+    # $stdout.reopen(w)
+    # $stderr.reopen(w)
 
     thread = Thread.new do
       yield
@@ -17,17 +17,17 @@ def capture
 
     output = ""
 
-    loop do
-      selected = IO.select([r], [], [], 1)
-
-      if (reader = selected&.dig(0, 0))
-        output << (reader.readline_nonblock || "")
-      elsif w.closed?
-        break
-      end
-    rescue IO::WaitReadable
-      retry
-    end
+    # loop do
+    #   selected = IO.select([r], [], [], 1)
+    #
+    #   if (reader = selected&.dig(0, 0))
+    #     output << (reader.readline_nonblock || "")
+    #   elsif w.closed?
+    #     break
+    #   end
+    # rescue IO::WaitReadable
+    #   retry
+    # end
 
     result = thread.value
 
