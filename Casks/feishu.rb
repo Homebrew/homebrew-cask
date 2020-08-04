@@ -1,9 +1,9 @@
 cask "feishu" do
-  version "3.28.1"
-  sha256 "22086cd6301c6c5da6b3b8145e4b9e6fac3cd6960f493c2bece1676ebd997f86"
+  version "3.29.2,e21fcc"
+  sha256 "c7293a9890c0ff65afead3a20293c02d0016beda7510b3921908dbc6b3519dd2"
 
   # sf3-ttcdn-tos.pstatp.com/ was verified as official when first introduced to the cask
-  url "https://sf3-ttcdn-tos.pstatp.com/obj/ee-appcenter/Feishu-#{version}.dmg"
+  url "https://sf3-ttcdn-tos.pstatp.com/obj/ee-appcenter/#{version.after_comma}/Feishu-#{version.before_comma}.dmg"
   appcast "https://www.feishu.cn/api/downloads"
   name "feishu"
   homepage "https://www.feishu.cn/"
