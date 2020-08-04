@@ -1,6 +1,6 @@
 cask "zoomus" do
-  version "5.1.28648.0705"
-  sha256 "5131befde7d890dc9b3e6507b9100a32c223c83d709b87ef00240103e391408d"
+  version "5.2.42625.0804"
+  sha256 "d39027311d17363480fe746bf54793fbf3666dbfa83b48a5758e32094379f9a6"
 
   # d11yldzmag5yn.cloudfront.net/ was verified as official when first introduced to the cask
   url "https://d11yldzmag5yn.cloudfront.net/prod/#{version}/Zoom.pkg"
