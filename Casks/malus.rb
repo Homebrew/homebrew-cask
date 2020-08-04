@@ -1,9 +1,9 @@
 cask "malus" do
-  version "1.1.1,1.0.1"
+  version "1.1.1"
   sha256 "2a9998cbe5c4b291e627a5c8c7b3e7a853e6a87e60128679675de802cb9c6e5b"
 
   # malus.s3cdn.net/ was verified as official when first introduced to the cask
-  url "https://malus.s3cdn.net/uploads/Malus-#{version.after_comma.dots_to_underscores}.dmg"
+  url "https://malus.s3cdn.net/uploads/Malus-mac-#{version.dots_to_underscores}.dmg"
   appcast "https://api.getmalus.com/api/checkDesktopUpdate?type=mac"
   name "Malus"
   homepage "https://getmalus.com/"
