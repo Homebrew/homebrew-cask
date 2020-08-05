@@ -9,6 +9,7 @@ cask "ticktick" do
   homepage "https://www.ticktick.com/home"
 
   auto_updates true
+  depends_on macos: ">= :sierra"
 
   app "TickTick.app"
 end
