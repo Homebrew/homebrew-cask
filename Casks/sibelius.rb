@@ -8,8 +8,7 @@ cask "sibelius" do
   homepage "https://www.avid.com/sibelius"
 
   auto_updates true
-  depends_on macos: ">= :sierra",
-             cask:  "avid-link"
+  depends_on macos: ">= :sierra"
 
   pkg "Install Sibelius.pkg",
       choices: [
@@ -21,24 +20,43 @@ cask "sibelius" do
         {
           "choiceIdentifier" => "com.avid.tmp.AvidLink.pkg",
           "choiceAttribute"  => "selected",
-          "attributeSetting" => 0,
+          "attributeSetting" => 1,
         },
       ]
 
-  uninstall pkgutil: [
-    "com.avid.pkg.sibelius.2018.fonts",
-    "com.avid.pkg.sibelius.app",
-    "com.avid.pkg.sibelius.englishscores",
-    "com.avid.pkg.sibelius.rewire",
-  ],
-            trash:   [
+  uninstall launchctl: "com.avid.AvidLink.uninstall.HelperTool",
+            pkgutil:   [
+              "com.avid.pkg.sibelius.2018.fonts",
+              "com.avid.pkg.sibelius.app",
+              "com.avid.pkg.sibelius.englishscores",
+              "com.avid.pkg.sibelius.rewire",
+            ],
+            script:    {
+              executable:   "#{appdir}/Avid_Uninstallers/Avid Link/Avid Link Uninstaller.app/Contents/MacOS/AvidUninstaller",
+              args:         ["-no-gui", "-all"],
+              sudo:         true,
+              must_succeed: true,
+            },
+            trash:     [
               "/Library/Application Support/Avid/Sibelius/",
               "/Users/Shared/Library/Application Support/Digidesign/Air/StructureSibelius",
+            ],
+            delete:    [
+              "/Applications/Avid/Application Manager/",
+              "/Library/Logs/Avid/AppManagerHelper/",
+              "/Library/Logs/Avid/AppManagerUI/",
             ]
 
   zap trash: [
     "~/Library/Application Support/Avid/Sibelius/",
     "~/Library/Saved Application State/com.avid.sibelius.savedState",
     "~/Documents/Scores/Sibelius Example Scores",
+    "~/Library/Application Support/Avid Link/",
+    "~/Library/Application Support/AvidLink/",
+    "~/Library/Application Support/Avid Technology/AvidLink/",
+    "~/Library/Preferences/com.avid.Avid Link.plist",
+    "~/Library/Preferences/com.avid.link.plist",
+    "~/Library/Caches/Avid/Avid Link/",
+    "~/Library/Caches/Avid Technology/Avid Link/",
   ]
 end
