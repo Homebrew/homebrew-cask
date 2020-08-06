@@ -11,7 +11,6 @@ cask "veracrypt" do
   depends_on cask: "osxfuse"
 
   pkg "VeraCrypt_Installer.pkg"
-
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/veracrypt.wrapper.sh"
   binary shimscript, target: "veracrypt"
