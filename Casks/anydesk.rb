@@ -1,6 +1,6 @@
 cask "anydesk" do
-  version "5.6.0"
-  sha256 "bc5606943ad25155651c5fe6a17562bae9088d092e1b8cf7c1bc2eaeb9cbe219"
+  version "6.0.0"
+  sha256 "3e1a0e43b20259405c42da095ae1da1449e0194779407de9e15a9962b997a005"
 
   url "https://download.anydesk.com/anydesk.dmg"
   appcast "https://anydesk.com/en/downloads/mac-os"
