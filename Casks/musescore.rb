@@ -1,15 +1,9 @@
 cask "musescore" do
   version "3.5.0"
-  shortversion = if version.patch.to_s == "0"
-    version.major_minor.to_s
-  else
-    version
-  end
-
   sha256 "42f67d022604c6da5a31850ffeb0b2adde0bcc8f675aea6acfdc791eefa73047"
 
   # github.com/musescore/MuseScore/ was verified as official when first introduced to the cask
-  url "https://github.com/musescore/MuseScore/releases/download/v#{shortversion}/MuseScore-#{version}.dmg"
+  url "https://github.com/musescore/MuseScore/releases/download/v#{version.chomp(".0")}/MuseScore-#{version}.dmg"
   appcast "https://github.com/musescore/MuseScore/releases.atom"
   name "MuseScore"
   homepage "https://musescore.org/"
