@@ -10,8 +10,13 @@ cask "privatetunnel" do
 
   pkg "Private_Tunnel_#{version.before_comma.dots_to_underscores}(#{version.after_comma})_Installer_signed.pkg"
 
-  uninstall script: {
-    executable: "/Applications/Private Tunnel/Uninstall Private Tunnel.app/Contents/MacOS/uninstaller",
-    sudo:       true,
-  }
+  uninstall pkgutil:   [
+    "org.openvpn.privatetunnel.pkg",
+    "org.openvpn.privatetunnel_framework.pkg",
+    "org.openvpn.privatetunnel_launch.pkg",
+    "org.openvpn.privatetunnel_uninstall.pkg",
+  ],
+            delete:    "/Applications/Private Tunnel.app",
+            quit:      "org.openvpn.proivatetunnel.app",
+            launchctl: "org.openvpn.privatetunnel"
 end
