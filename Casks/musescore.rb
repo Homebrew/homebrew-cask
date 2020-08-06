@@ -1,9 +1,15 @@
 cask "musescore" do
-  version "3.4.2"
-  sha256 "59f7ee60d77b63a67a89f998f19ae3434959b6ed2eeb20c9e90ff56f5659f824"
+  version "3.5.0"
+  shortversion = if version.patch.to_s == "0"
+    version.major_minor.to_s
+  else
+    version
+  end
+
+  sha256 "42f67d022604c6da5a31850ffeb0b2adde0bcc8f675aea6acfdc791eefa73047"
 
   # github.com/musescore/MuseScore/ was verified as official when first introduced to the cask
-  url "https://github.com/musescore/MuseScore/releases/download/v#{version}/MuseScore-#{version}.dmg"
+  url "https://github.com/musescore/MuseScore/releases/download/v#{shortversion}/MuseScore-#{version}.dmg"
   appcast "https://github.com/musescore/MuseScore/releases.atom"
   name "MuseScore"
   homepage "https://musescore.org/"
