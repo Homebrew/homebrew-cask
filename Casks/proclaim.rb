@@ -8,5 +8,7 @@ cask "proclaim" do
   name "Faithlife Proclaim"
   homepage "https://proclaim.faithlife.com/"
 
+  depends_on macos: ">= :mojave"
+
   app "Proclaim.app"
 end
