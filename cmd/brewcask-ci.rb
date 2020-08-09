@@ -6,9 +6,13 @@ require "utils/formatter"
 require_relative "lib/capture"
 require_relative "lib/check"
 
+require "timeout"
+
 module Cask
   class Cmd
     class Ci < AbstractCommand
+      STEP_TIMEOUT = 10 * 60
+
       def self.escape(string)
         Tty.strip_ansi(string)
            .gsub(/\r/, "%0D")
@@ -197,7 +201,12 @@ module Cask
 
       def step(name)
         success, output = capture do
-          yield != false
+          Timeout.timeout STEP_TIMEOUT do
+            yield != false
+          end
+        rescue Timeout::Error
+          $stderr.puts "Timed out after #{STEP_TIMEOUT} seconds."
+          false
         rescue => e
           $stderr.puts e.message
           $stderr.puts e.backtrace
