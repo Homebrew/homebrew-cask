@@ -6,7 +6,6 @@
 [open pull requests]: https://github.com/Homebrew/homebrew-cask/pulls
 [already refused]: https://github.com/Homebrew/homebrew-cask/search?q=is%3Aclosed&type=Issues
 
-
 ## Adding a Cask
 
 Making a new Cask is easy. Follow the directions in [Getting Set Up To Contribute](../../CONTRIBUTING.md#getting-set-up-to-contribute) to begin.
@@ -155,7 +154,6 @@ Example:
   app 'TexmakerMacosxLion/texmaker.app'
   ```
 
-
 ## Testing Your New Cask
 
 Give it a shot with:
@@ -268,19 +266,19 @@ $ git checkout -b my-new-cask-branch
 Switched to a new branch 'my-new-cask-branch'
 ```
 
-Stage your Cask with: 
+Stage your Cask with:
 
 ```bash
 $ git add Casks/my-new-cask.rb
-``` 
+```
 
-You can view the changes that are to be committed with: 
+You can view the changes that are to be committed with:
 
 ```bash
 $ git diff --cached
 ```
 
-Commit your changes with: 
+Commit your changes with:
 
 ```bash
 $ git commit -v
@@ -329,21 +327,19 @@ If you are using [GitHub two-factor authentication](https://help.github.com/arti
 The `git push` command prints a suggestion to create a pull request:
 
 ```
-remote: Create a pull request for 'new-cask-cask' on GitHub by visiting:                                          
+remote: Create a pull request for 'new-cask-cask' on GitHub by visiting:
 remote:      https://github.com/{{my-github-username}}/homebrew-cask/pull/new/my-new-cask-branch
 ```
 
 #### b) use suggestion at Github website
 
-Now go to the [`homebrew-cask` GitHub repository](https://github.com/Homebrew/homebrew-cask). GitHub will often show your `my-new-cask-branch` branch with a handy button to `Compare & pull request`. 
-
+Now go to the [`homebrew-cask` GitHub repository](https://github.com/Homebrew/homebrew-cask). GitHub will often show your `my-new-cask-branch` branch with a handy button to `Compare & pull request`.
 
 #### c) manually create a pull request at Github website
 
 Otherwise, click the `New pull request` button and choose to `compare across forks`. The base fork should be `Homebrew/homebrew-cask @ master`, and the head fork should be `my-github-username/homebrew-cask @ my-new-cask-branch`. You can also add any further comments to your pull request at this stage.
 
-
-#### Congratulations! 
+#### Congratulations!
 
 You are done now, and your Cask should be pulled in or otherwise noticed in a while. If a maintainer suggests some changes, just make them on the `my-new-cask-branch` branch locally and [push](#pushing).
 
