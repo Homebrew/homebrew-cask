@@ -5,7 +5,6 @@ cask "cliqz" do
   language "de" do
     "de"
   end
-
   language "en", default: true do
     "en-US"
   end
