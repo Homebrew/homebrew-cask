@@ -6,5 +6,7 @@ cask "mcgimp" do
   name "McGimp"
   homepage "https://www.partha.com/"
 
+  depends_on macos: ">= :mojave"
+
   app "McGimp-#{version}.app"
 end
