@@ -8,5 +8,7 @@ cask "mpeg-streamclip" do
   name "MPEG Streamclip"
   homepage "http://www.squared5.com/"
 
+  depends_on macos: "<= :mojave"
+
   app "MPEG Streamclip.app"
 end
