@@ -137,6 +137,7 @@ app
 pkg
 installer
 binary
+manpage
 colorpicker
 dictionary
 font
