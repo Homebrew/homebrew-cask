@@ -171,7 +171,6 @@ class Check
                    .select { |id| id.match?(/\.\d+\Z/) }
                    .map { |id| id.sub(/\.\d+\Z/, "") }, stanza: stanza)
 
-
     loaded_launchjobs = filter_exceptions(diff[:loaded_launchjobs]
                         .added
                         .reject { |id| id.match?(/\.\d+\Z/) }, stanza: stanza)
