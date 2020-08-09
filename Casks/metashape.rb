@@ -1,6 +1,6 @@
 cask "metashape" do
-  version "1.6.3"
-  sha256 "5a5c8336805edf21ebb69f54afa1a8b4d39c0ee5bb56de1d0b8ca216d873bae2"
+  version "1.6.4"
+  sha256 "f72115a79ecf30b0950fe612187ffb3aeb0fdb20300fba41edab2e5431db0af9"
 
   url "http://download.agisoft.com/metashape_#{version.dots_to_underscores}.dmg"
   appcast "https://www.agisoft.com/downloads/installer/"
