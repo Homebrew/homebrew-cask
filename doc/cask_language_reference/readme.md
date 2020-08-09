@@ -54,7 +54,6 @@ The available symbols for macOS versions are: `:yosemite`, `:el_capitan`, `:sier
 
 Note that in the official Homebrew Cask repositories only the symbolic names are allowed. The numeric comparison may only be used for third-party taps.
 
-
 ### Always Fall Through to the Newest Case
 
 Conditionals should be constructed so that the default is the newest OS version. When using an `if` statement, test for older versions, and then let the `else` statement hold the latest and greatest. This makes it more likely that the Cask will work without alteration when a new OS is released. Example (from [coconutbattery.rb](https://github.com/Homebrew/homebrew-cask/blob/2c801af44be29fff7f3cb2996455fce5dd95d1cc/Casks/coconutbattery.rb)):
@@ -72,7 +71,6 @@ end
 ### Switch Between Languages or Regions
 
 If a cask is available in multiple languages, you can use the `language` stanza to switch between languages or regions based on the system locale.
-
 
 ## Arbitrary Ruby Methods
 
@@ -112,7 +110,6 @@ cask '<cask-token>' do
 enclosed in single quotes.
 
 There are currently some arbitrary limitations on Cask tokens which are in the process of being removed. The Travis bot will catch any errors during the transition.
-
 
 ## Stanza order
 
