@@ -125,6 +125,7 @@ language
 url
 appcast
 name
+desc
 homepage
 
 auto_updates
