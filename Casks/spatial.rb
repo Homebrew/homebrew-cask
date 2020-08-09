@@ -5,7 +5,6 @@ cask "spatial" do
   language "en", default: true do
     url "https://console.improbable.io/toolbelt/download/latest/mac"
   end
-
   language "zh", "CN" do
     url "https://console.spatialoschina.com/toolbelt/download/latest/mac"
   end

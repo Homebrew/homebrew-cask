@@ -5,23 +5,18 @@ cask "pokerstars" do
   language "US", default: true do
     [".net", ".net", ".net"]
   end
-
   language "DK" do
     [".dk", ".net", ".net"]
   end
-
   language "GR" do
     [".gr", ".net", ".net"]
   end
-
   language "IT" do
     [".it", ".net", ".net"]
   end
-
   language "GB" do
     [".uk", "UK", ".uk"]
   end
-
   language "PT" do
     [".pt", "PT", ".pt"]
   end
