@@ -1,8 +1,8 @@
 cask "sqlworkbenchj" do
-  version "124"
-  sha256 "2173c7f00172bef3fed23e7f57e168a9d156c72c311af032ba469139f80d9fe9"
+  version "126"
+  sha256 "1ae9bfbde5642aab3a5fe0372be92d34293a59edfc74a743b1a4318015be5cb9"
 
-  url "https://www.sql-workbench.eu/Workbench-Build#{version}-Mac.tgz"
+  url "https://www.sql-workbench.eu/Workbench-Build#{version}-with-optional-libs.zip"
   appcast "https://www.sql-workbench.eu/wb_news.xml"
   name "SQL Workbench/J"
   homepage "https://www.sql-workbench.eu/"
