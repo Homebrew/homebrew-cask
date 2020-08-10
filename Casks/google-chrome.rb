@@ -1,5 +1,5 @@
 cask "google-chrome" do
-  version "84.0.4147.105"
+  version "84.0.4147.125"
   sha256 "9598479cdf3e2dab474a3b770549dc56a43b823627f323c04ba8810916a8a854"
 
   url "https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg"
