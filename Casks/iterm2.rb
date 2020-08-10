@@ -4,11 +4,12 @@ cask "iterm2" do
   sha256 "6811b520699e8331b5d80b5da1e370e0ed467e68bc56906f08ecfa986e318167"
 
   url "https://iterm2.com/downloads/stable/iTerm2-#{version.dots_to_underscores}.zip"
-  appcast "https://iterm2.com/appcasts/newest/final_new.xml"
+  appcast "https://iterm2.com/appcasts/final_modern.xml"
   name "iTerm2"
   homepage "https://www.iterm2.com/"
 
   auto_updates true
+  conflicts_with cask: "iterm2-beta"
   depends_on macos: ">= :sierra"
 
   app "iTerm.app"
