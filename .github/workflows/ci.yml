@@ -57,6 +57,7 @@ jobs:
         env:
           HOMEBREW_COLOR: 1
           HOMEBREW_DEVELOPER: 1
+          HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: brew cask style
         run: |
           # don't care about `brew cask style` here.

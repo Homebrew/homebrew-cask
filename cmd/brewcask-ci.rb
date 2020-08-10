@@ -68,10 +68,15 @@ module Cask
             false
           end
 
+          new_cask = added_cask_files.include?(path)
+
           overall_success &= step "brew cask audit #{cask.token}" do
             result = Auditor.audit(cask, audit_download:        true,
                                          audit_appcast:         true,
-                                         audit_token_conflicts: added_cask_files.include?(path),
+                                         audit_online:          true,
+                                         audit_token_conflicts: new_cask,
+                                         audit_strict:          tap.official?,
+                                         audit_new_cask:        new_cask,
                                          commit_range:          @commit_range)
 
             success = true
@@ -82,7 +87,7 @@ module Cask
                        result[:errors].map { |message| [:error, message] }
 
             messages.each do |type, message|
-              if type == :warnings
+              if type == :warning
                 if tap.official?
                   success = false
                   type = :error
