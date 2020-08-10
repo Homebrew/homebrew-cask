@@ -2,11 +2,11 @@ cask "cocoaspell" do
   version "2.5"
   sha256 "d8dd01e6471df86f55d5f272a33fdb421f49a2fb923a9858a8772ec4367d333c"
 
-  url "https://people.ict.usc.edu/~leuski/cocoaspell/cocoAspell.#{version}.dmg",
+  url "https://people.ict.usc.edu/leuski/public_html/cocoaspell/cocoAspell.#{version}.dmg",
       user_agent: :fake
-  appcast "https://people.ict.usc.edu/~leuski/cocoaspell/"
+  appcast "https://people.ict.usc.edu/leuski/public_html/cocoaspell/home.php"
   name "cocoAspell"
-  homepage "https://people.ict.usc.edu/~leuski/cocoaspell/"
+  homepage "https://people.ict.usc.edu/leuski/public_html/cocoaspell/home.php"
 
   depends_on macos: ">= :el_capitan"
 
