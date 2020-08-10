@@ -11,7 +11,7 @@ require "timeout"
 module Cask
   class Cmd
     class Ci < AbstractCommand
-      STEP_TIMEOUT = 10 * 60
+      STEP_TIMEOUT = 15 * 60
 
       def self.escape(string)
         Tty.strip_ansi(string)
