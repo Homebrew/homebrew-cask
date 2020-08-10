@@ -23,6 +23,7 @@ jobs:
         with:
           path: ${{ steps.update_homebrew.outputs.homebrew_gems_cache_dir }}
           key: homebrew-gems-cache-${{ steps.update_homebrew.outputs.homebrew_gems_cache_id }}
+          restore-keys: homebrew-gems-cache-
       - name: Install Homebrew Gems
         run: brew install-bundler-gems
       - name: Check out Pull Request
