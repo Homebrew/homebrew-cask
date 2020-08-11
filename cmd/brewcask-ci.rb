@@ -150,37 +150,9 @@ module Cask
 
             check.after
 
-            next success if check.success?(stanza: :uninstall)
+            errors = check.errors
 
-            errors = check.errors(stanza: :uninstall)
-
-            errors.each do |error|
-              $stderr.puts error
-            end
-
-            path = Pathname(cask.sourcefile_path).relative_path_from(tap.path).to_s
-            puts "::error file=#{self.class.escape(path)}::#{self.class.escape(errors.join("\n\n"))}"
-
-            false
-          end
-
-          next unless check.success?(stanza: :uninstall) && !check.success?(stanza: :zap)
-
-          overall_success &= step "brew cask zap #{cask.token}" do
-            success = begin
-              Installer.new(cask, verbose: true).zap
-              true
-            rescue => e
-              $stderr.puts e.message
-              $stderr.puts e.backtrace
-              false
-            end
-
-            check.after
-
-            next success if check.success?(stanza: :zap)
-
-            errors = check.errors(stanza: :zap)
+            next true if errors.empty?
 
             errors.each do |error|
               $stderr.puts error
@@ -189,7 +161,6 @@ module Cask
             path = Pathname(cask.sourcefile_path).relative_path_from(tap.path).to_s
             puts "::error file=#{self.class.escape(path)}::#{self.class.escape(errors.join("\n\n"))}"
 
-            $stderr.puts
             false
           end
         end
