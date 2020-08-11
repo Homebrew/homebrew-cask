@@ -13,7 +13,14 @@ cask "microsoft-outlook" do
   depends_on cask: "microsoft-auto-update"
   depends_on macos: ">= :sierra"
 
-  pkg "Microsoft_Outlook_#{version}_Installer.pkg"
+  pkg "Microsoft_Outlook_#{version}_Installer.pkg",
+      choices: [
+        {
+          "choiceIdentifier" => "com.microsoft.autoupdate", # Office16_all_autoupdate.pkg
+          "choiceAttribute"  => "selected",
+          "attributeSetting" => 0,
+        },
+      ]
 
   uninstall pkgutil:   [
     "com.microsoft.package.Microsoft_Outlook.app",
