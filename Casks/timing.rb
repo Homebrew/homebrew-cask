@@ -5,6 +5,7 @@ cask "timing" do
   url "https://updates.timingapp.com/download/Timing-#{version}.dmg"
   appcast "https://timingapp.com/updates/timing2.xml"
   name "Timing"
+  name "Timing 2"
   homepage "https://timingapp.com/"
 
   auto_updates true

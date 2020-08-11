@@ -5,6 +5,7 @@ cask "pencil2d" do
   # github.com/pencil2d/pencil/ was verified as official when first introduced to the cask
   url "https://github.com/pencil2d/pencil/releases/download/v#{version}/pencil2d-mac-#{version}.zip"
   appcast "https://github.com/pencil2d/pencil/releases.atom"
+  name "Pencil2D"
   name "Pencil2D Animation"
   homepage "https://www.pencil2d.org/"
 

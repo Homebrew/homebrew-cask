@@ -6,6 +6,7 @@ cask "go-agent" do
   url "https://download.gocd.io/binaries/#{version}/osx/go-agent-#{version}-osx.zip"
   appcast "https://github.com/gocd/gocd/releases.atom"
   name "Go Agent"
+  name "GoCD Agent"
   homepage "https://www.gocd.org/"
 
   app "Go Agent.app"

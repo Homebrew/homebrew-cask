@@ -5,6 +5,7 @@ cask "gimp" do
   url "https://download.gimp.org/pub/gimp/v#{version.major_minor}/osx/gimp-#{version}-x86_64.dmg"
   appcast "https://download.gimp.org/pub/gimp/v#{version.major_minor}/osx/"
   name "GIMP"
+  name "GNU Image Manipulation Program"
   homepage "https://www.gimp.org/"
 
   app "GIMP-#{version.major_minor}.app"
