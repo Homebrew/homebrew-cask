@@ -4,6 +4,7 @@ cask "fraise" do
 
   url "https://github.com/downloads/jfmoy/Fraise/Fraise%20#{version}.zip"
   name "Fraise"
+  desc "Lightweight but powerful text editor"
   homepage "https://github.com/jfmoy/Fraise"
 
   depends_on macos: "<= :el_capitan"

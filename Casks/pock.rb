@@ -5,6 +5,7 @@ cask "pock" do
   url "https://pock.dev/download.php?file=pock_#{version.dots_to_underscores}.zip"
   appcast "https://github.com/pigigaldi/Pock/releases.atom"
   name "Pock"
+  desc "Utility to display the Dock in the Touch Bar"
   homepage "https://pock.dev/"
 
   depends_on macos: ">= :sierra"

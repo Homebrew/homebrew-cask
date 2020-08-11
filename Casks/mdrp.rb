@@ -5,6 +5,7 @@ cask "mdrp" do
   url "https://www.macdvdripperpro.com/MDRP_v#{version.no_dots}.zip"
   appcast "https://www.macdvdripperpro.com/mdrp_sparkle#{version.major}.xml"
   name "Mac DVDRipper Pro"
+  desc "Utility to rip and copy DVD content"
   homepage "https://www.macdvdripperpro.com/"
 
   app "MDRP.app"

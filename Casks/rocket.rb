@@ -5,6 +5,7 @@ cask "rocket" do
   url "https://macrelease.matthewpalmer.net/distribution/appcasts/Rocket-#{version.after_comma}.dmg"
   appcast "https://macrelease.matthewpalmer.net/distribution/appcasts/rocket.xml"
   name "Rocket"
+  desc "Emoji picker optimized for blind people"
   homepage "https://matthewpalmer.net/rocket/"
 
   auto_updates true

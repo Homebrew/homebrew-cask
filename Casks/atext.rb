@@ -5,6 +5,7 @@ cask "atext" do
   url "https://www.trankynam.com/atext/downloads/aText.dmg"
   appcast "https://www.trankynam.com/atext/aText-Appcast.xml"
   name "aText"
+  desc "Tool to replace abbreviations while typing"
   homepage "https://www.trankynam.com/atext/"
 
   auto_updates true

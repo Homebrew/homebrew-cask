@@ -4,6 +4,7 @@ cask "timemachineeditor" do
 
   url "https://tclementdev.com/timemachineeditor/TimeMachineEditor.pkg"
   name "TimeMachineEditor"
+  desc "Utility to change the default backup interval of Time Machine"
   homepage "https://tclementdev.com/timemachineeditor/"
 
   pkg "TimeMachineEditor.pkg"

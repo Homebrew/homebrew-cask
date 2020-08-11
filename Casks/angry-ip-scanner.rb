@@ -6,6 +6,7 @@ cask "angry-ip-scanner" do
   url "https://github.com/angryip/ipscan/releases/download/#{version}/ipscan-mac-#{version}.zip"
   appcast "https://github.com/angryip/ipscan/releases.atom"
   name "Angry IP Scanner"
+  desc "Open-source, cross-platform network scanner"
   homepage "https://angryip.org/"
 
   app "Angry IP Scanner.app"

@@ -6,6 +6,7 @@ cask "tuxera-ntfs" do
   appcast "https://ntfsformac.tuxera.com/get/",
           must_contain: "tuxerantfs_#{version}.dmg"
   name "Tuxera NTFS"
+  desc "File system and storage management software"
   homepage "https://ntfsformac.tuxera.com/"
 
   pkg ".packages/Flat/Install Tuxera NTFS.mpkg"

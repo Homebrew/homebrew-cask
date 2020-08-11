@@ -5,6 +5,7 @@ cask "skyfonts" do
   url "https://cdn1.skyfonts.com/client/Monotype_SkyFonts_Mac64_#{version}.dmg"
   appcast "https://api.skyfonts.com/api/SkyFontsAppCast?osid=3"
   name "SkyFonts"
+  desc "Font manager"
   homepage "https://skyfonts.com/"
 
   installer manual: "Install SkyFonts.app"

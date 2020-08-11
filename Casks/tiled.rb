@@ -6,6 +6,7 @@ cask "tiled" do
   url "https://github.com/bjorn/tiled/releases/download/v#{version}/Tiled-#{version}-macos.zip"
   appcast "https://github.com/bjorn/tiled/releases.atom"
   name "Tiled"
+  desc "Flexible level editor"
   homepage "https://www.mapeditor.org/"
 
   depends_on macos: ">= :sierra"

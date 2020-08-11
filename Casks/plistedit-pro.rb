@@ -5,6 +5,7 @@ cask "plistedit-pro" do
   url "https://www.fatcatsoftware.com/plisteditpro/PlistEditPro.zip"
   appcast "https://www.fatcatsoftware.com/plisteditpro/plisteditpro_appcast.xml"
   name "PlistEdit Pro"
+  desc "Property list and JSON editor"
   homepage "https://www.fatcatsoftware.com/plisteditpro/"
 
   auto_updates true

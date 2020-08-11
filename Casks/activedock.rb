@@ -5,6 +5,7 @@ cask "activedock" do
   url "https://noteifyapp.com/download/ActiveDock.dmg"
   appcast "https://macplus-software.com/downloads/ActiveDock.xml"
   name "ActiveDock"
+  desc "Customizable dock, application launcher, dock replacement"
   homepage "https://www.noteifyapp.com/activedock/"
 
   depends_on macos: ">= :high_sierra"

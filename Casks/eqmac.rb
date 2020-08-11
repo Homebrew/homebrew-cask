@@ -6,6 +6,7 @@ cask "eqmac" do
   url "https://github.com/bitgapp/eqMac/releases/download/v#{version}/eqMac.dmg"
   appcast "https://github.com/bitgapp/eqMac/releases.atom"
   name "eqMac"
+  desc "System-wide audio equalizer"
   homepage "https://eqmac.app/"
 
   app "eqMac.app"

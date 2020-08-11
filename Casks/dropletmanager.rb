@@ -5,6 +5,7 @@ cask "dropletmanager" do
   url "https://github.com/deivuh/DODropletManager-OSX/releases/download/v#{version}/DropletManager.v#{version}.zip"
   appcast "https://github.com/deivuh/DODropletManager-OSX/releases.atom"
   name "DigitalOcean Droplets Manager"
+  desc "Digital Ocean droplet manager"
   homepage "https://github.com/deivuh/DODropletManager-OSX"
 
   app "DropletManager.app"

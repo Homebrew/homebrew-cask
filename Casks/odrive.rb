@@ -7,6 +7,7 @@ cask "odrive" do
   url "https://d3huse1s6vwzq6.cloudfront.net/odrivesync.#{version}.pkg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.odrive.com/downloaddesktop?platform=mac"
   name "odrive"
+  desc "Tool to make any cloud storage unified, synchronized, shareable, and encrypted"
   homepage "https://www.odrive.com/"
 
   pkg "odrivesync.#{version}.pkg"

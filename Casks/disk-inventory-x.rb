@@ -6,6 +6,7 @@ cask "disk-inventory-x" do
       user_agent: :fake
   appcast "http://www.derlien.com/downloads/index.html"
   name "Disk Inventory X"
+  desc "Disk usage utility"
   homepage "http://www.derlien.com/"
 
   depends_on macos: ">= :high_sierra"

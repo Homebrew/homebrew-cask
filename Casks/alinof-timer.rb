@@ -4,6 +4,7 @@ cask "alinof-timer" do
 
   url "https://www.alinofsoftware.ch/resources/AlinofTimer.pkg"
   name "Alinof Timer"
+  desc "Timer app"
   homepage "https://www.alinofsoftware.ch/apps/products-timer/index.html"
 
   pkg "AlinofTimer.pkg"

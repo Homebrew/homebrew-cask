@@ -6,6 +6,7 @@ cask "asciidocfx" do
   url "https://github.com/asciidocfx/AsciidocFX/releases/download/v#{version}/AsciidocFX_Mac.dmg"
   appcast "https://github.com/asciidocfx/AsciidocFX/releases.atom"
   name "AsciidocFX"
+  desc "Asciidoc Editor and Toolchain to build books, documents and slides"
   homepage "https://www.asciidocfx.com/"
 
   installer script: {

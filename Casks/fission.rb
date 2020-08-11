@@ -5,6 +5,7 @@ cask "fission" do
   url "https://rogueamoeba.com/fission/download/Fission.zip"
   appcast "https://rogueamoeba.com/fission/releasenotes.php"
   name "Fission"
+  desc "Audio editor"
   homepage "https://rogueamoeba.com/fission/"
 
   depends_on macos: ">= :sierra"

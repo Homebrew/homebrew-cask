@@ -5,6 +5,7 @@ cask "markright" do
   url "https://github.com/dvcrn/markright/releases/download/#{version}/MarkRight_Mac.dmg"
   appcast "https://github.com/dvcrn/markright/releases.atom"
   name "MarkRight"
+  desc "Electron-powered markdown editor with live preview"
   homepage "https://github.com/dvcrn/markright"
 
   app "MarkRight.app"

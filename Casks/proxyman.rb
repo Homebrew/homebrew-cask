@@ -6,6 +6,7 @@ cask "proxyman" do
   url "https://github.com/ProxymanApp/Proxyman/releases/download/#{version}/Proxyman_#{version}.dmg"
   appcast "https://github.com/ProxymanApp/Proxyman/releases.atom"
   name "Proxyman"
+  desc "Modern and intuitive HTTP Debugging Proxy app"
   homepage "https://proxyman.io/"
 
   auto_updates true

@@ -6,6 +6,7 @@ cask "startupizer" do
   url "https://dl.devmate.com/com.gentlebytes.Startupizer2/#{version.after_comma.before_colon}/#{version.after_colon}/Startupizer#{version.major}-#{version.after_comma.before_colon}.zip"
   appcast "https://updates.devmate.com/com.gentlebytes.Startupizer#{version.major}.xml"
   name "Startupizer#{version.major}"
+  desc "Login items handler"
   homepage "http://gentlebytes.com/startupizer/"
 
   app "Startupizer#{version.major}.app"

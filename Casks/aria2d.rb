@@ -6,6 +6,7 @@ cask "aria2d" do
   url "https://raw.githubusercontent.com/xjbeta/AppUpdaterAppcasts/master/Aria2D/Aria2D%20#{version}.dmg"
   appcast "https://raw.githubusercontent.com/xjbeta/AppUpdaterAppcasts/master/Aria2D/Appcast.xml"
   name "Aria2D"
+  desc "Aria2 GUI"
   homepage "https://github.com/xjbeta/Aria2D"
 
   depends_on macos: ">= :sierra"

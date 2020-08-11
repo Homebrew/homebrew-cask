@@ -5,6 +5,7 @@ cask "viscosity" do
   url "https://swupdate.sparklabs.com/download/mac/release/viscosity/Viscosity%20#{version}.dmg"
   appcast "https://swupdate.sparklabs.com/appcast/mac/release/viscosity/"
   name "Viscosity"
+  desc "VPN client for secure internet access and private browsing"
   homepage "https://www.sparklabs.com/viscosity/"
 
   auto_updates true

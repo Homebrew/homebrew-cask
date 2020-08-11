@@ -5,6 +5,7 @@ cask "bettertouchtool" do
   url "https://folivora.ai/releases/BetterTouchTool.zip"
   appcast "https://www.corecode.io/macupdater/appcasts/bettertouchtool.txt"
   name "BetterTouchTool"
+  desc "Tool to customize input devices and automate computer systems"
   homepage "https://folivora.ai/"
 
   auto_updates true

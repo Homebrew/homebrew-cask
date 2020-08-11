@@ -5,6 +5,7 @@ cask "clashx" do
   url "https://github.com/yichengchen/clashX/releases/download/#{version}/ClashX.dmg"
   appcast "https://github.com/yichengchen/clashX/releases.atom"
   name "ClashX"
+  desc "Rule-based custom proxy with GUI based on clash"
   homepage "https://github.com/yichengchen/clashX"
 
   auto_updates true

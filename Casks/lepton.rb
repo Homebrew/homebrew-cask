@@ -6,6 +6,7 @@ cask "lepton" do
   url "https://github.com/hackjutsu/Lepton/releases/download/v#{version}/Lepton-#{version}.dmg"
   appcast "https://github.com/hackjutsu/Lepton/releases.atom"
   name "Lepton"
+  desc "Snippet management app"
   homepage "https://hackjutsu.com/Lepton/"
 
   app "Lepton.app"

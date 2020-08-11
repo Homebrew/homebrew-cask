@@ -10,6 +10,7 @@ cask "vidrio" do
   url "https://vidr.io/releases/macos/Vidrio-#{version}.dmg"
   appcast "https://vidr.io/latest-version"
   name "Vidrio"
+  desc "Presentation design tool"
   homepage "https://vidr.io/"
 
   app "Vidrio.app"

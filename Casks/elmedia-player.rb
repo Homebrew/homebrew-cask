@@ -5,6 +5,7 @@ cask "elmedia-player" do
   url "https://cdn.eltima.com/download/elmediaplayer.dmg"
   appcast "https://cdn.eltima.com/download/elmediaplayer-update/elmediaplayer.xml"
   name "Elmedia Player"
+  desc "Video and audio player"
   homepage "https://mac.eltima.com/media-player.html"
 
   app "Elmedia Player.app"

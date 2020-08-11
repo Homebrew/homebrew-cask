@@ -6,6 +6,7 @@ cask "1password-cli" do
   url "https://cache.agilebits.com/dist/1P/op/pkg/v#{version}/op_darwin_amd64_v#{version}.pkg"
   appcast "https://app-updates.agilebits.com/product_history/CLI"
   name "1Password CLI"
+  desc "Command-line helper for the 1Password password manager"
   homepage "https://support.1password.com/command-line/"
 
   pkg "op_darwin_amd64_v#{version}.pkg"

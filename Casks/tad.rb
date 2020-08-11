@@ -6,6 +6,7 @@ cask "tad" do
   url "https://github.com/antonycourtney/tad/releases/download/v#{version}/Tad-#{version}.dmg"
   appcast "https://github.com/antonycourtney/tad/releases.atom"
   name "Tad"
+  desc "Desktop application for viewing and analyzing tabular data"
   homepage "https://www.tadviewer.com/"
 
   app "Tad.app"

@@ -5,6 +5,7 @@ cask "ao" do
   url "https://github.com/klaussinani/ao/releases/download/v#{version}/Ao-#{version}.dmg"
   appcast "https://github.com/klaussinani/ao/releases.atom"
   name "Ao"
+  desc "Elegant Microsoft To-Do desktop app"
   homepage "https://github.com/klaussinani/ao"
 
   app "Ao.app"

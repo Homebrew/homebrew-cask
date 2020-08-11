@@ -5,6 +5,7 @@ cask "vlc" do
   url "https://get.videolan.org/vlc/#{version}/macosx/vlc-#{version}.dmg"
   appcast "https://www.videolan.org/vlc/download-macosx.html"
   name "VLC media player"
+  desc "Open-source cross-platform multimedia player"
   homepage "https://www.videolan.org/vlc/"
 
   auto_updates true

@@ -5,6 +5,7 @@ cask "folding-at-home" do
   url "https://download.foldingathome.org/releases/public/release/fah-installer/osx-10.11-64bit/v#{version.major_minor}/fah-installer_#{version}_x86_64.mpkg.zip"
   appcast "https://download.foldingathome.org/js/fah-downloads.js"
   name "Folding@home"
+  desc "Graphical interface control for Folding"
   homepage "https://foldingathome.org/"
 
   pkg "fah-installer_#{version}_x86_64.pkg"

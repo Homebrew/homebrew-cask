@@ -5,6 +5,7 @@ cask "nisus-thesaurus" do
   url "https://nisus.com/files/public/NisusThesaurus-v#{version.no_dots}.zip"
   appcast "https://nisus.com/Thesaurus/updates.php"
   name "Nisus Thesaurus"
+  desc "Electronic thesaurus that for the 'Service' menu"
   homepage "https://nisus.com/Thesaurus/"
 
   app "Nisus Thesaurus.app"

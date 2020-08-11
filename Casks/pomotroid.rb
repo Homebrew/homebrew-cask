@@ -5,6 +5,7 @@ cask "pomotroid" do
   url "https://github.com/Splode/pomotroid/releases/download/v#{version}/pomotroid-#{version}-macos.dmg"
   appcast "https://github.com/Splode/pomotroid/releases.atom"
   name "Pomotroid"
+  desc "Timer application"
   homepage "https://github.com/Splode/pomotroid"
 
   app "Pomotroid.app"

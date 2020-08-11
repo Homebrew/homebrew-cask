@@ -6,6 +6,7 @@ cask "visual-studio-code" do
   appcast "https://update.code.visualstudio.com/api/update/darwin/stable/VERSION"
   name "Microsoft Visual Studio Code"
   name "VS Code"
+  desc "Open-source code editor"
   homepage "https://code.visualstudio.com/"
 
   auto_updates true

@@ -6,6 +6,7 @@ cask "banking-4" do
   url "https://subsembly.com/download/MacBanking4.pkg"
   appcast "https://subsembly.com/banking4-macos-updates.php"
   name "Banking 4"
+  desc "German accounting software"
   homepage "https://subsembly.com/banking4.html"
 
   auto_updates true

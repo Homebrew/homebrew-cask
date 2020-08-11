@@ -6,6 +6,7 @@ cask "zulip" do
   url "https://github.com/zulip/zulip-desktop/releases/download/v#{version}/Zulip-#{version}.dmg"
   appcast "https://github.com/zulip/zulip-desktop/releases.atom"
   name "Zulip"
+  desc "Desktop client for the Zulip open source team chat platform"
   homepage "https://zulipchat.com/apps/"
 
   auto_updates true

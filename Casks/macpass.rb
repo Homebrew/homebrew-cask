@@ -6,6 +6,7 @@ cask "macpass" do
   url "https://github.com/MacPass/MacPass/releases/download/#{version}/MacPass-#{version}.zip"
   appcast "https://github.com/MacPass/MacPass/releases.atom"
   name "MacPass"
+  desc "Open-source, KeePass-client and password manager"
   homepage "https://macpass.github.io/"
 
   auto_updates true

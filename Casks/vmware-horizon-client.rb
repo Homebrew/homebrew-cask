@@ -5,6 +5,7 @@ cask "vmware-horizon-client" do
   url "https://download3.vmware.com/software/view/viewclients/#{version.after_comma}/VMware-Horizon-Client-#{version.before_comma}.dmg"
   appcast "https://my.vmware.com/channel/public/api/v1.0/dlg/details?locale=en_US&downloadGroup=CART21FQ2_MAC_800&productId=1027&rPId=48989"
   name "VMware Horizon Client"
+  desc "Virtual machine client"
   homepage "https://www.vmware.com/"
 
   depends_on macos: ">= :sierra"

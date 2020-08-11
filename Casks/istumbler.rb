@@ -5,6 +5,7 @@ cask "istumbler" do
   url "https://istumbler.net/downloads/istumbler-#{version}.dmg"
   appcast "https://istumbler.net/feeds/appcast.rss"
   name "iStumbler"
+  desc "Wireless discovery tool"
   homepage "https://istumbler.net/"
 
   auto_updates true

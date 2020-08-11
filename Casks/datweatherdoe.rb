@@ -5,6 +5,7 @@ cask "datweatherdoe" do
   url "https://github.com/inderdhir/DatWeatherDoe/releases/download/#{version}/DatWeatherDoe-#{version}.dmg"
   appcast "https://github.com/inderdhir/DatWeatherDoe/releases.atom"
   name "DatWeatherDoe"
+  desc "Menu bar weather app"
   homepage "https://github.com/inderdhir/DatWeatherDoe"
 
   app "DatWeatherDoe.app"

@@ -5,6 +5,7 @@ cask "mellow" do
   url "https://github.com/mellow-io/mellow/releases/download/v#{version}/Mellow-#{version}.dmg"
   appcast "https://github.com/mellow-io/mellow/releases.atom"
   name "Mellow"
+  desc "Rule-based global transparent proxy client"
   homepage "https://github.com/mellow-io/mellow"
 
   app "Mellow.app"

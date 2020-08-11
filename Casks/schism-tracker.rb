@@ -5,6 +5,7 @@ cask "schism-tracker" do
   url "https://github.com/schismtracker/schismtracker/releases/download/#{version}/schismtracker-#{version}-osx.tar.gz"
   appcast "https://github.com/schismtracker/schismtracker/releases.atom"
   name "Schism Tracker"
+  desc "Oldschool sample-based music composition tool"
   homepage "https://github.com/schismtracker/schismtracker"
 
   app "schismtracker/Schism Tracker.app"

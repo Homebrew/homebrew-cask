@@ -6,6 +6,7 @@ cask "netnewswire" do
   url "https://github.com/brentsimmons/NetNewsWire/releases/download/mac-#{version}/NetNewsWire#{version}.zip"
   appcast "https://github.com/brentsimmons/NetNewsWire/releases.atom"
   name "NetNewsWire"
+  desc "Free and open-source RSS reader"
   homepage "https://ranchero.com/netnewswire/"
 
   auto_updates true

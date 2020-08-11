@@ -6,6 +6,7 @@ cask "meshlab" do
   url "https://github.com/cnr-isti-vclab/meshlab/releases/download/Meshlab-#{version}/MeshLab#{version}-macos.dmg"
   appcast "https://github.com/cnr-isti-vclab/meshlab/releases.atom"
   name "MeshLab"
+  desc "Open-source mesh processing system"
   homepage "https://www.meshlab.net/"
 
   app "meshlab.app"

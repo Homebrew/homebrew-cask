@@ -6,6 +6,7 @@ cask "rowanj-gitx" do
   url "https://github.com/rowanj/gitx/releases/download/builds/#{version.major_minor}/#{version.patch}/GitX-dev-#{version.patch}.dmg"
   appcast "https://github.com/rowanj/gitx/releases.atom"
   name "GitX-dev"
+  desc "Native graphical client for the git version control system"
   homepage "https://rowanj.github.io/gitx/"
 
   conflicts_with cask: "gitx"

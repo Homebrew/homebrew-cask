@@ -6,6 +6,7 @@ cask "jalbum" do
   appcast "https://jalbum.net/en/software/release-notes",
           must_contain: version.major_minor.chomp(".0")
   name "jAlbum"
+  desc "Tool to create photo album websites from local images"
   homepage "https://jalbum.net/"
 
   app "jAlbum.app"

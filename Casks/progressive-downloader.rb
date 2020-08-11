@@ -5,6 +5,7 @@ cask "progressive-downloader" do
   url "https://www.macpsd.net/update/#{version}/PSD.dmg"
   appcast "https://www.macpsd.net/"
   name "Progressive Downloader"
+  desc "Download manager"
   homepage "https://www.macpsd.net/"
 
   depends_on macos: ">= :yosemite"

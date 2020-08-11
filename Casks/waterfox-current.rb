@@ -5,6 +5,7 @@ cask "waterfox-current" do
   url "https://cdn.waterfox.net/releases/osx64/installer/Waterfox%20Current%20#{version.before_comma}%20Setup.dmg"
   appcast "https://www.waterfox.net/download/"
   name "Waterfox Current"
+  desc "Web browser"
   homepage "https://www.waterfox.net/"
 
   app "Waterfox Current.app"

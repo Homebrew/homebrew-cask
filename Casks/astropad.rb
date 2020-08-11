@@ -5,6 +5,7 @@ cask "astropad" do
   url "https://downloads.astropad.com/standard/Astropad-#{version}.dmg"
   appcast "https://s3.amazonaws.com/astropad.com/downloads/sparkle.xml"
   name "Astropad"
+  desc "Utility to turn an iPad into a drawing tablet"
   homepage "https://astropad.com/"
 
   app "Astropad.app"

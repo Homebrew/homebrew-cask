@@ -5,6 +5,7 @@ cask "flotato" do
   # vendors.paddle.com/download/product/558359 was verified as official when first introduced to the cask
   url "https://vendors.paddle.com/download/product/558359"
   name "Flotato"
+  desc "Tool to turn any web page into a desktop app"
   homepage "https://flotato.com/"
 
   app "Flotato.app"

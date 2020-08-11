@@ -6,6 +6,7 @@ cask "vnote" do
   url "https://github.com/tamlok/vnote/releases/download/v#{version}/VNote-#{version}-x64.dmg"
   appcast "https://github.com/tamlok/vnote/releases.atom"
   name "VNote"
+  desc "Note-taking application that knows programmers and Markdown better"
   homepage "https://tamlok.github.io/vnote/"
 
   app "VNote.app"

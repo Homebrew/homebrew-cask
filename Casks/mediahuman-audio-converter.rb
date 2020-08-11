@@ -4,6 +4,7 @@ cask "mediahuman-audio-converter" do
 
   url "https://www.mediahuman.com/download/MHAudioConverter.dmg"
   name "MediaHuman Audio Converter"
+  desc "Audio converter"
   homepage "https://www.mediahuman.com/audio-converter/"
 
   app "MediaHuman Audio Converter.app"

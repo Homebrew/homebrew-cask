@@ -5,6 +5,7 @@ cask "xmind-zen" do
   url "https://www.xmind.net/xmind/downloads/XMind-2020-for-macOS-#{version}.dmg"
   appcast "https://www.xmind.net/download/"
   name "XMind"
+  desc "Brainstorming and mind mapping app"
   homepage "https://www.xmind.net/zen/"
 
   app "XMind.app"

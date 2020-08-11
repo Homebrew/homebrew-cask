@@ -6,6 +6,7 @@ cask "ferdi" do
   url "https://github.com/getferdi/ferdi/releases/download/v#{version}/Ferdi-#{version}.dmg"
   appcast "https://github.com/getferdi/ferdi/releases.atom"
   name "Ferdi"
+  desc "Free messaging app for popular messengers"
   homepage "https://getferdi.com/"
 
   auto_updates true

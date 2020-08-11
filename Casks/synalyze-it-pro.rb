@@ -6,6 +6,7 @@ cask "synalyze-it-pro" do
   url "https://www.synalyze-it.com/Downloads/SynalyzeItProTA_#{version}.zip"
   appcast "https://www.synalyze-it.com/SynalyzeItPro/appcast.xml"
   name "Synalyze It! Pro"
+  desc "Hex editing and binary file analysis app"
   homepage "https://www.synalysis.net/"
 
   app "Synalyze It! Pro.app"

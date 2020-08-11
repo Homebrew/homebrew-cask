@@ -7,6 +7,7 @@ cask "yinxiangbiji" do
           must_contain: version.sub("_", " ")
   name "Evernote"
   name "印象笔记"
+  desc "Note taking app"
   homepage "https://www.yinxiang.com/"
 
   auto_updates true

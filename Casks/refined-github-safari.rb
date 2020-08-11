@@ -5,6 +5,7 @@ cask "refined-github-safari" do
   url "https://github.com/lautis/refined-github-safari/releases/download/v#{version}/Refined-GitHub-for-Safari.zip"
   appcast "https://github.com/lautis/refined-github-safari/releases.atom"
   name "Refined GitHub for Safari"
+  desc "Safari version of the Refined Github extension"
   homepage "https://github.com/lautis/refined-github-safari"
 
   depends_on macos: ">= :mojave"

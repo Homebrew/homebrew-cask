@@ -5,6 +5,7 @@ cask "appdelete" do
   url "https://www.reggieashworth.com/downloads/AppDelete.dmg"
   appcast "https://www.reggieashworth.com/AD#{version.major}Appcast.xml"
   name "AppDelete"
+  desc "App uninstaller"
   homepage "https://www.reggieashworth.com/appdelete.html"
 
   auto_updates true

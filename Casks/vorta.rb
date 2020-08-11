@@ -5,6 +5,7 @@ cask "vorta" do
   url "https://github.com/borgbase/vorta/releases/download/v#{version}/vorta-#{version}.dmg"
   appcast "https://github.com/borgbase/vorta/releases.atom"
   name "Vorta"
+  desc "Desktop Backup Client for Borg"
   homepage "https://github.com/borgbase/vorta"
 
   auto_updates true

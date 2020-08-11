@@ -5,6 +5,7 @@ cask "icloud-control" do
   url "https://github.com/Obbut/iCloud-Control/releases/download/#{version}/iCloud.Control.zip"
   appcast "https://github.com/Obbut/iCloud-Control/releases.atom"
   name "iCloud Control"
+  desc "User-controlled selective sync for iCloud Drive"
   homepage "https://github.com/Obbut/iCloud-Control"
 
   app "iCloud Control.app"

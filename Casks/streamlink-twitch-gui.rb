@@ -5,6 +5,7 @@ cask "streamlink-twitch-gui" do
   url "https://github.com/streamlink/streamlink-twitch-gui/releases/download/v#{version}/streamlink-twitch-gui-v#{version}-macOS.tar.gz"
   appcast "https://github.com/streamlink/streamlink-twitch-gui/releases.atom"
   name "Streamlink Twitch GUI"
+  desc "Multi platform Twitch.tv browser for Streamlink"
   homepage "https://github.com/streamlink/streamlink-twitch-gui/"
 
   depends_on formula: "streamlink"

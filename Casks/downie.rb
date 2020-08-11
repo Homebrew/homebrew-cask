@@ -6,6 +6,7 @@ cask "downie" do
   url "https://charliemonroesoftware.com/trial/downie/v#{version.major}/Downie_#{version.major}_#{version.after_comma}.dmg"
   appcast "https://charliemonroesoftware.com/trial/downie/v#{version.major}/updates.xml"
   name "Downie"
+  desc "Downloads videos from different websites"
   homepage "https://software.charliemonroe.net/downie.php"
 
   auto_updates true

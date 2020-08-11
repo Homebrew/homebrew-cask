@@ -5,6 +5,7 @@ cask "lastfm" do
   url "https://cdn.last.fm/client/Mac/Last.fm-#{version}.zip"
   appcast "https://cdn.last.fm/client/Mac/updates.xml"
   name "Last.fm Scrobbler"
+  desc "Music services manager"
   homepage "https://www.last.fm/"
 
   app "Last.fm.app"

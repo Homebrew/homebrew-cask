@@ -5,6 +5,7 @@ cask "androidtool" do
   url "https://github.com/mortenjust/androidtool-mac/releases/download/#{version}/AndroidTool.zip"
   appcast "https://github.com/mortenjust/androidtool-mac/releases.atom"
   name "AndroidTool"
+  desc "App for recording the screen and installing apps in iOS and Android"
   homepage "https://github.com/mortenjust/androidtool-mac"
 
   app "AndroidTool.app"

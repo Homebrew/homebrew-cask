@@ -8,6 +8,7 @@ cask "gns3" do
   appcast "https://github.com/GNS3/gns3-gui/releases.atom"
   name "GNS3"
   name "Graphical Network Simulator 3"
+  desc "GUI for the Dynamips Cisco router emulator"
   homepage "https://www.gns3.com/"
 
   depends_on macos: ">= :high_sierra"

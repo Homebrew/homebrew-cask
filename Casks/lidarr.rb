@@ -6,6 +6,7 @@ cask "lidarr" do
   url "https://github.com/lidarr/Lidarr/releases/download/v#{version}/Lidarr.master.#{version}.osx-app.zip"
   appcast "https://github.com/lidarr/Lidarr/releases.atom"
   name "Lidarr"
+  desc "Looks and smells like Sonarr but made for music"
   homepage "https://lidarr.audio/"
 
   app "Lidarr.app"

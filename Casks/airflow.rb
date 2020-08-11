@@ -6,6 +6,7 @@ cask "airflow" do
   url "https://cdn.downloads.iocave.net/Airflow/Airflow%20#{version}.zip"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://airflowapp.com/download/latest?mac"
   name "Airflow"
+  desc "Watch local content on Apple TV and Chromecast"
   homepage "https://airflowapp.com/"
 
   auto_updates true

@@ -5,6 +5,7 @@ cask "nslogger" do
   url "https://github.com/fpillet/NSLogger/releases/download/v#{version}/NSLogger-Desktop.Viewer-v#{version}.zip"
   appcast "https://github.com/fpillet/NSLogger/releases.atom"
   name "NSLogger"
+  desc "Modern, flexible logging tool"
   homepage "https://github.com/fpillet/NSLogger"
 
   app "NSLogger.app"

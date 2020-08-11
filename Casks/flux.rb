@@ -5,6 +5,7 @@ cask "flux" do
   url "https://justgetflux.com/mac/Flux#{version}.zip"
   appcast "https://justgetflux.com/mac/macflux.xml"
   name "f.lux"
+  desc "Screen color temperature controller"
   homepage "https://justgetflux.com/"
 
   auto_updates true

@@ -6,6 +6,7 @@ cask "zoomus" do
   url "https://d11yldzmag5yn.cloudfront.net/prod/#{version}/Zoom.pkg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://zoom.us/client/latest/Zoom.pkg"
   name "Zoom.us"
+  desc "Video communication and virtual meeting platform"
   homepage "https://www.zoom.us/"
 
   auto_updates true

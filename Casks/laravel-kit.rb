@@ -6,6 +6,7 @@ cask "laravel-kit" do
   url "https://github.com/tmdh/laravel-kit/releases/download/v#{version}/laravel-kit-#{version}-mac.zip"
   appcast "https://github.com/tmdh/laravel-kit/releases.atom"
   name "Laravel Kit"
+  desc "Desktop app for executing Laravel artisan commands"
   homepage "https://tmdh.github.io/laravel-kit"
 
   auto_updates true

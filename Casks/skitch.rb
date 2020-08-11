@@ -5,6 +5,7 @@ cask "skitch" do
   url "https://cdn1.evernote.com/skitch/mac/release/Skitch-#{version}.zip"
   appcast "https://evernote.s3.amazonaws.com/skitch/mac/release/skitch-appcast.xml"
   name "Skitch"
+  desc "Screen capture tool with mark up and sharing features"
   homepage "https://evernote.com/products/skitch"
 
   auto_updates true

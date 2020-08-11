@@ -6,6 +6,7 @@ cask "silentknight" do
   url "https://eclecticlightdotcom.files.wordpress.com/#{version.after_comma.major}/#{version.after_comma.minor}/silentknight#{version.before_comma.no_dots}.zip"
   appcast "https://eclecticlight.co/lockrattler-systhist/"
   name "SilentKnight"
+  desc "Automatically checks computer's security"
   homepage "https://eclecticlight.co/lockrattler-systhist/"
 
   depends_on macos: ">= :el_capitan"

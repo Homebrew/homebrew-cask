@@ -5,6 +5,7 @@ cask "pomolectron" do
   url "https://github.com/amitmerchant1990/pomolectron/releases/download/v#{version}/Pomolectron-darwin-x64.zip"
   appcast "https://github.com/amitmerchant1990/pomolectron/releases.atom"
   name "Pomolectron"
+  desc "Pomodoro app for the menu bar/tray"
   homepage "https://github.com/amitmerchant1990/pomolectron"
 
   app "Pomolectron-darwin-x64/Pomolectron.app"

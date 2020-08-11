@@ -5,6 +5,7 @@ cask "timche-gmail-desktop" do
   url "https://github.com/timche/gmail-desktop/releases/download/v#{version}/gmail-desktop-#{version}-mac.dmg"
   appcast "https://github.com/timche/gmail-desktop/releases.atom"
   name "Gmail Desktop"
+  desc "Gmail client"
   homepage "https://github.com/timche/gmail-desktop"
 
   app "Gmail Desktop.app"

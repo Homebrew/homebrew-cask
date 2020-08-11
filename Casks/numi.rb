@@ -6,6 +6,7 @@ cask "numi" do
   appcast "https://github.com/nikolaeu/numi/releases.atom",
           must_contain: version.major_minor
   name "Numi"
+  desc "Calculator and converter application"
   homepage "https://numi.app/"
 
   auto_updates true

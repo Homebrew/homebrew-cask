@@ -5,6 +5,7 @@ cask "calendar-366" do
   url "https://nspektor.com/downloads/Calendar366_v#{version}.dmg"
   appcast "https://nspektor.com/downloads/Calendar366IIAsset.xml"
   name "Calendar 366 II"
+  desc "Menu bar calendar for events and reminders"
   homepage "https://nspektor.com/calendar366/mac"
 
   app "Calendar 366 II.app"

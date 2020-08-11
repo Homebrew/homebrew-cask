@@ -5,6 +5,7 @@ cask "agenda" do
   url "https://downloads.agenda.com/Agenda_#{version}.zip"
   appcast "https://downloads.agenda.com/AgendaSparkleAppcast.xml"
   name "Agenda"
+  desc "Note taking application focusing on dates"
   homepage "https://agenda.com/"
 
   depends_on macos: ">= :sierra"

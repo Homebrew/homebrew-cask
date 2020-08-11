@@ -5,6 +5,7 @@ cask "marked" do
   url "https://updates.marked2app.com/Marked#{version.before_comma}#{version.after_comma}.zip"
   appcast "https://updates.marked2app.com/marked.xml"
   name "Marked"
+  desc "Previewer for Markdown, MultiMarkdown and other text markup languages"
   homepage "https://marked2app.com/"
 
   auto_updates true

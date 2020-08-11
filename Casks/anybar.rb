@@ -5,6 +5,7 @@ cask "anybar" do
   url "https://github.com/tonsky/AnyBar/releases/download/#{version}/AnyBar-#{version}.zip"
   appcast "https://github.com/tonsky/AnyBar/releases.atom"
   name "AnyBar"
+  desc "Menu bar status indicator"
   homepage "https://github.com/tonsky/AnyBar"
 
   app "AnyBar.app"

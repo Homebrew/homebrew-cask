@@ -6,6 +6,7 @@ cask "spectacle-editor" do
   url "https://github.com/FormidableLabs/spectacle-editor/releases/download/v#{version}/Spectacle.Editor-#{version}.dmg"
   appcast "https://github.com/FormidableLabs/spectacle-editor/releases.atom"
   name "Spectacle Editor"
+  desc "Drag and drop Spectacle editor"
   homepage "https://formidable.com/open-source/spectacle-editor/"
 
   app "Spectacle Editor.app"

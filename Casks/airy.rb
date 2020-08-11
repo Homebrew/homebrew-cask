@@ -5,6 +5,7 @@ cask "airy" do
   url "https://cdn.eltima.com/download/airy.dmg"
   appcast "https://cdn.eltima.com/download/airy-update/airy.xml"
   name "Airy"
+  desc "YouTube video and MP3 downloader"
   homepage "https://mac.eltima.com/youtube-downloader-mac.html"
 
   app "Airy.app"

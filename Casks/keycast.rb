@@ -5,6 +5,7 @@ cask "keycast" do
   url "https://github.com/cho45/KeyCast/releases/download/v#{version}/KeyCast.dmg"
   appcast "https://github.com/cho45/KeyCast/releases.atom"
   name "KeyCast"
+  desc "Record keystroke for screencast"
   homepage "https://github.com/cho45/KeyCast"
 
   app "KeyCast.app"

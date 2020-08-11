@@ -6,6 +6,7 @@ cask "fenix" do
   url "https://github.com/coreybutler/fenix/releases/download/v#{version}/fenix-osx-#{version}.zip"
   appcast "https://github.com/coreybutler/fenix/releases.atom"
   name "Fenix"
+  desc "Simple and visual static web server with collaboration features"
   homepage "https://fenixwebserver.com/"
 
   container nested: "Fenix_#{version}.dmg"

@@ -6,6 +6,7 @@ cask "qutebrowser" do
   url "https://github.com/qutebrowser/qutebrowser/releases/download/v#{version}/qutebrowser-#{version}.dmg"
   appcast "https://github.com/qutebrowser/qutebrowser/releases.atom"
   name "qutebrowser"
+  desc "Keyboard-driven, vim-like browser based on PyQt5"
   homepage "https://www.qutebrowser.org/"
 
   app "qutebrowser.app"

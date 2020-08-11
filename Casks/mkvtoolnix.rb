@@ -5,7 +5,7 @@ cask "mkvtoolnix" do
   url "https://mkvtoolnix.download/macos/MKVToolNix-#{version}.dmg"
   appcast "https://mkvtoolnix.download/macos/"
   name "MKVToolNix"
-  desc "Set of tools to create, alter and inspect Matroska files"
+  desc "Set of tools to create, alter and inspect Matroska files (MKV)"
   homepage "https://mkvtoolnix.download/"
 
   conflicts_with formula: "mkvtoolnix"

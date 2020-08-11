@@ -5,6 +5,7 @@ cask "axe-electrum" do
   url "https://github.com/axerunners/electrum-axe/releases/download/#{version}/axe-electrum-#{version}-macosx.dmg"
   appcast "https://github.com/axerunners/electrum-axe/releases.atom"
   name "Axe Electrum"
+  desc "Client for AXE network"
   homepage "https://github.com/axerunners/electrum-axe"
 
   app "Axe Electrum.app"

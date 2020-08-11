@@ -11,6 +11,7 @@ cask "funter" do
   end
 
   name "Funter"
+  desc "Shows hidden files and folders and switches their visibility in Finder"
   homepage "https://nektony.com/products/funter"
 
   app "Funter #{version.major}.app"

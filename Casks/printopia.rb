@@ -5,6 +5,7 @@ cask "printopia" do
   url "https://www.decisivetactics.com/products/printopia/dl/Printopia_#{version}.zip"
   appcast "https://www.decisivetactics.com/api/checkupdate?x-app_id=com.decisivetactics.printopia"
   name "Printopia"
+  desc "Wireless printing to any printer"
   homepage "https://www.decisivetactics.com/products/printopia/"
 
   app "Printopia.app"

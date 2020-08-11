@@ -5,6 +5,7 @@ cask "vivaldi" do
   url "https://downloads.vivaldi.com/stable/Vivaldi.#{version}.dmg"
   appcast "https://update.vivaldi.com/update/1.0/public/mac/appcast.xml"
   name "Vivaldi"
+  desc "Web browser focusing on customization and control"
   homepage "https://vivaldi.com/"
 
   auto_updates true

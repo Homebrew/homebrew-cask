@@ -6,6 +6,7 @@ cask "jettison" do
   appcast "https://stclairsoft.com/cgi-bin/sparkle.cgi?JT"
   name "Jettison"
   name "St. Clair Software Jettison"
+  desc "Automatically ejects external drives"
   homepage "https://stclairsoft.com/Jettison/"
 
   auto_updates true

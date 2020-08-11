@@ -4,6 +4,7 @@ cask "itrash" do
 
   url "https://www.osxbytes.com/iTrash.dmg?forcedownload"
   name "iTrash"
+  desc "Uninstalls all files of an application"
   homepage "https://www.osxbytes.com/itrash.html"
 
   app "iTrash.app"

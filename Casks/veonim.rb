@@ -5,6 +5,7 @@ cask "veonim" do
   url "https://github.com/veonim/veonim/releases/download/#{version}/veonim-#{version}-mac.zip"
   appcast "https://github.com/veonim/veonim/releases.atom"
   name "veonim"
+  desc "Modal IDE built on neovim"
   homepage "https://github.com/veonim/veonim"
 
   app "veonim.app"

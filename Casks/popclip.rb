@@ -5,6 +5,7 @@ cask "popclip" do
   url "https://pilotmoon.com/downloads/PopClip-#{version}.zip"
   appcast "https://softwareupdate.pilotmoon.com/update/popclip/appcast.xml"
   name "PopClip"
+  desc "Used to access context-specific actions when text is selected"
   homepage "https://pilotmoon.com/popclip/"
 
   depends_on macos: ">= :sierra"

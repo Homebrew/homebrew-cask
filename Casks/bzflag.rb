@@ -5,6 +5,7 @@ cask "bzflag" do
   url "https://download.bzflag.org/bzflag/macos/#{version}/BZFlag-#{version}-macOS.zip"
   appcast "https://github.com/BZFlag-Dev/bzflag/releases.atom"
   name "BZFlag"
+  desc "3D multi-player tank battle game"
   homepage "https://www.bzflag.org/"
 
   app "BZFlag-#{version}.app"

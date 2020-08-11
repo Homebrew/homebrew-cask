@@ -6,6 +6,7 @@ cask "textexpander" do
   url "https://cdn.textexpander.com/mac/TextExpander_#{version}.zip"
   appcast "https://smilesoftware.com/appcast/TextExpander#{version.major}.xml"
   name "TextExpander"
+  desc "Inserts pre-made snippets of text anywhere"
   homepage "https://smilesoftware.com/TextExpander"
 
   auto_updates true

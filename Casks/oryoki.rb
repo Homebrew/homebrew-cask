@@ -8,6 +8,7 @@ cask "oryoki" do
   name "Oryoki"
   name "Ōryōki"
   name "応量器"
+  desc "Experimental web browser with a thin interface"
   homepage "http://oryoki.io/"
 
   depends_on macos: ">= :el_capitan"

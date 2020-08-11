@@ -6,6 +6,7 @@ cask "warzone-2100" do
   url "https://github.com/Warzone2100/warzone2100/releases/download/#{version}/warzone2100_macOS.zip"
   appcast "https://github.com/Warzone2100/warzone2100/releases.atom"
   name "Warzone 2100"
+  desc "Free and open-source real time strategy game"
   homepage "https://wz2100.net/"
 
   app "Warzone 2100.app"

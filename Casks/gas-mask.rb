@@ -5,6 +5,7 @@ cask "gas-mask" do
   url "http://gmask.clockwise.ee/files/gas_mask_#{version}.zip"
   appcast "http://gmask.clockwise.ee/check_update/"
   name "Gas Mask"
+  desc "Hosts file editor/manager"
   homepage "http://clockwise.ee/"
 
   auto_updates true

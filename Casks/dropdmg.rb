@@ -5,6 +5,7 @@ cask "dropdmg" do
   url "https://c-command.com/downloads/DropDMG-#{version}.dmg"
   appcast "https://c-command.com/dropdmg/"
   name "DropDMG"
+  desc "Tool to create system disk images and cross-platform archives"
   homepage "https://c-command.com/dropdmg/"
 
   app "DropDMG.app"

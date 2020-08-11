@@ -6,6 +6,7 @@ cask "pycharm-edu" do
   appcast "https://data.services.jetbrains.com/products/releases?code=PCE&latest=true&type=release"
   name "Jetbrains PyCharm Educational Edition"
   name "PyCharm Edu"
+  desc "Professional IDE for scientific and web Python development"
   homepage "https://www.jetbrains.com/pycharm-edu/"
 
   auto_updates true

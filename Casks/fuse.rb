@@ -8,6 +8,7 @@ cask "fuse" do
   name "Fuse Studio"
   name "Fuse Open"
   name "Fuse Fusetools"
+  desc "Visual desktop tool suite for working with the Fuse framework"
   homepage "https://fuse-open.github.io/"
 
   pkg "fuse_osx_#{version.dots_to_underscores}.pkg"

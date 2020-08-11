@@ -6,6 +6,7 @@ cask "lens" do
   url "https://github.com/lensapp/lens/releases/download/v#{version}/Lens-#{version}.dmg"
   appcast "https://github.com/lensapp/lens/releases.atom"
   name "Lens"
+  desc "Kubernetes IDE"
   homepage "https://k8slens.dev/"
 
   app "Lens.app"

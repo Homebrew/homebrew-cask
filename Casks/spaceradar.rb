@@ -5,6 +5,7 @@ cask "spaceradar" do
   url "https://github.com/zz85/space-radar/releases/download/v#{version}/SpaceRadar-darwin-x64.zip"
   appcast "https://github.com/zz85/space-radar/releases.atom"
   name "SpaceRadar"
+  desc "Disk And Memory Space Visualization App built with Electron & d3.js"
   homepage "https://github.com/zz85/space-radar"
 
   app "SpaceRadar.app"

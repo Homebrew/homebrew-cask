@@ -6,6 +6,7 @@ cask "bisq" do
   url "https://github.com/bisq-network/bisq/releases/download/v#{version}/Bisq-#{version}.dmg"
   appcast "https://github.com/bisq-network/bisq/releases.atom"
   name "Bisq"
+  desc "Decentralized bitcoin exchange network"
   homepage "https://bisq.network/"
 
   app "Bisq.app"

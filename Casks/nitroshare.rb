@@ -5,6 +5,7 @@ cask "nitroshare" do
   url "https://launchpad.net/nitroshare/#{version.major_minor}/#{version}/+download/nitroshare-#{version}-osx.dmg"
   appcast "https://github.com/nitroshare/nitroshare-desktop/releases.atom"
   name "NitroShare"
+  desc "Network file transfer application"
   homepage "https://launchpad.net/nitroshare"
 
   app "nitroshare.app"

@@ -6,6 +6,7 @@ cask "amazon-photos" do
   url "https://d29x207vrinatv.cloudfront.net/mac/AmazonPhotosInstaller.dmg"
   name "Amazon Drive"
   name "Amazon Photos"
+  desc "Photo storage and sharing service"
   homepage "https://www.amazon.com/Amazon-Photos/b?node=13234696011"
 
   installer script: {

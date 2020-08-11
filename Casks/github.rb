@@ -6,6 +6,7 @@ cask "github" do
   url "https://desktop.githubusercontent.com/releases/#{version}/GitHubDesktop.zip"
   appcast "https://github.com/desktop/desktop/releases.atom"
   name "GitHub Desktop"
+  desc "Desktop client for GitHub repositories"
   homepage "https://desktop.github.com/"
 
   auto_updates true

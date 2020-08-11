@@ -5,6 +5,7 @@ cask "cityofzion-neon" do
   url "https://github.com/CityOfZion/neon-wallet/releases/download/#{version}/Neon-#{version}.Mac.dmg"
   appcast "https://github.com/CityOfZion/neon-wallet/releases.atom"
   name "Neon Wallet"
+  desc "Light wallet for the NEO blockchain"
   homepage "https://github.com/CityOfZion/neon-wallet"
 
   app "Neon.app"

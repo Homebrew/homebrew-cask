@@ -6,6 +6,7 @@ cask "microsoft-edge" do
   url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/MicrosoftEdge-#{version}.pkg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://go.microsoft.com/fwlink/?linkid=2069148"
   name "Microsoft Edge"
+  desc "Multi-platform web browser"
   homepage "https://www.microsoft.com/edge"
 
   auto_updates true

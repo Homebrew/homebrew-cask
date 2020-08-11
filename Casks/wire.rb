@@ -6,6 +6,7 @@ cask "wire" do
   url "https://github.com/wireapp/wire-desktop/releases/download/macos%2F#{version}/Wire.pkg"
   appcast "https://github.com/wireapp/wire-desktop/releases.atom"
   name "Wire"
+  desc "Collaboration platform focusing on security"
   homepage "https://wire.com/"
 
   pkg "Wire.pkg"

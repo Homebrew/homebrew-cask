@@ -6,6 +6,7 @@ cask "spectacle" do
   url "https://spectacle.s3.amazonaws.com/downloads/Spectacle+#{version}.zip"
   appcast "https://www.spectacleapp.com/updates/appcast.xml"
   name "Spectacle"
+  desc "Move and resize windows with ease"
   homepage "https://www.spectacleapp.com/"
 
   auto_updates true

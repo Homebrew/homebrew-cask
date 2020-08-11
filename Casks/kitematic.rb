@@ -6,6 +6,7 @@ cask "kitematic" do
   url "https://github.com/docker/kitematic/releases/download/v#{version}/Kitematic-#{version}-Mac.zip"
   appcast "https://github.com/docker/kitematic/releases.atom"
   name "Kitematic"
+  desc "Visual user interface for Docker Container management"
   homepage "https://kitematic.com/"
 
   app "Kitematic.app"

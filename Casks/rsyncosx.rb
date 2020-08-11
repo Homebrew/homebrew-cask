@@ -5,6 +5,7 @@ cask "rsyncosx" do
   url "https://github.com/rsyncOSX/RsyncOSX/releases/download/v#{version}/RsyncOSX.#{version}.dmg"
   appcast "https://github.com/rsyncOSX/RsyncOSX/releases.atom"
   name "RsyncOSX"
+  desc "GUI for rsync"
   homepage "https://github.com/rsyncOSX/RsyncOSX"
 
   depends_on macos: ">= :mojave"

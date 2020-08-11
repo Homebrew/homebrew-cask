@@ -5,6 +5,7 @@ cask "nrlquaker-winbox" do
   url "https://github.com/nrlquaker/winbox-mac/releases/download/v#{version}/Winbox-mac-#{version}.zip"
   appcast "https://github.com/nrlquaker/winbox-mac/releases.atom"
   name "Winbox-mac"
+  desc "MikroTik Winbox"
   homepage "https://github.com/nrlquaker/winbox-mac/"
 
   app "Winbox-mac.app"

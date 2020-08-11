@@ -6,6 +6,7 @@ cask "gitkraken" do
   url "https://release.gitkraken.com/darwin/installGitKraken.dmg"
   appcast "https://www.gitkraken.com/download"
   name "GitKraken"
+  desc "Git client focusing on productivity"
   homepage "https://www.gitkraken.com/"
 
   auto_updates true

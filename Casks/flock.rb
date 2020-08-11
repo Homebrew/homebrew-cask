@@ -6,6 +6,7 @@ cask "flock" do
   url "https://updates.flock.co/fl_mac_electron/Flock-macOS-#{version}.dmg"
   appcast "https://bingo.flock.co/mac_electron.php"
   name "Flock"
+  desc "Business messaging and team collaboration app"
   homepage "https://flock.com/"
 
   app "Flock.app"

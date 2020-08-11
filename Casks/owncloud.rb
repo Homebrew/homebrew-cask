@@ -5,6 +5,7 @@ cask "owncloud" do
   url "https://download.owncloud.com/desktop/stable/ownCloud-#{version}.pkg"
   appcast "https://github.com/owncloud/client/releases.atom"
   name "ownCloud"
+  desc "Desktop syncing client for ownCloud"
   homepage "https://owncloud.com/"
 
   depends_on macos: ">= :sierra"

@@ -5,6 +5,7 @@ cask "launchcontrol" do
   url "https://www.soma-zone.com/download/files/LaunchControl-#{version}.tar.bz2"
   appcast "https://www.soma-zone.com/LaunchControl/a/appcast_update.xml"
   name "LaunchControl"
+  desc "Create, manage and debug system- and user services"
   homepage "https://www.soma-zone.com/LaunchControl/"
 
   auto_updates true

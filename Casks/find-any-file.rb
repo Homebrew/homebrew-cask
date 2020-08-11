@@ -6,6 +6,7 @@ cask "find-any-file" do
   url "https://s3.amazonaws.com/files.tempel.org/FindAnyFile_#{version}.zip"
   appcast "https://findanyfile.app/appcast2.php"
   name "Find Any File"
+  desc "File finder"
   homepage "https://apps.tempel.org/FindAnyFile/"
 
   app "Find Any File.app"

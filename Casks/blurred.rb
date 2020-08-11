@@ -5,6 +5,7 @@ cask "blurred" do
   url "https://github.com/dwarvesf/blurred/releases/download/v#{version}/Blurred.#{version}.dmg"
   appcast "https://github.com/dwarvesf/blurred/releases.atom"
   name "Blurred"
+  desc "Utility to dim background/inactive content in the screen"
   homepage "https://github.com/dwarvesf/blurred/"
 
   depends_on macos: ">= :catalina"

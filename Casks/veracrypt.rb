@@ -6,6 +6,7 @@ cask "veracrypt" do
   url "https://launchpad.net/veracrypt/trunk/#{version.downcase}/+download/VeraCrypt_#{version}.dmg"
   appcast "https://github.com/veracrypt/VeraCrypt/releases.atom"
   name "VeraCrypt"
+  desc "Disk encryption software focusing on security based on TrueCrypt"
   homepage "https://www.veracrypt.fr/"
 
   depends_on cask: "osxfuse"

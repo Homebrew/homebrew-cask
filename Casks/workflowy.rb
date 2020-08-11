@@ -6,6 +6,7 @@ cask "workflowy" do
   url "https://github.com/workflowy/desktop/releases/download/v#{version}/WorkFlowy.dmg"
   appcast "https://github.com/workflowy/desktop/releases.atom"
   name "WorkFlowy"
+  desc "Notetaking tool"
   homepage "https://workflowy.com/downloads/mac/"
 
   auto_updates true

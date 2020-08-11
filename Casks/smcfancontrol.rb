@@ -5,6 +5,7 @@ cask "smcfancontrol" do
   url "https://www.eidac.de/smcfancontrol/smcfancontrol_#{version.dots_to_underscores}.zip"
   appcast "https://www.eidac.de/smcfancontrol/smcfancontrol.xml"
   name "smcFanControl"
+  desc "Sets a minimum speed for built-in fans"
   homepage "https://www.eidac.de/?cat=40"
 
   app "smcFanControl.app"

@@ -6,6 +6,7 @@ cask "ytmdesktop-youtube-music" do
   url "https://github.com/ytmdesktop/ytmdesktop/releases/download/v#{version}/YouTube.Music.Desktop.App-#{version}.dmg"
   appcast "https://github.com/ytmdesktop/ytmdesktop/releases.atom"
   name "YouTube Music Desktop App"
+  desc "YouTube music client"
   homepage "https://ytmdesktop.app/"
 
   app "YouTube Music Desktop App.app"

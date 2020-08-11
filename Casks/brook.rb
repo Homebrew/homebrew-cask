@@ -5,6 +5,7 @@ cask "brook" do
   url "https://github.com/txthinking/brook/releases/download/v#{version}/Brook.dmg"
   appcast "https://github.com/txthinking/brook/releases.atom"
   name "Brook"
+  desc "Cross-platform proxy/vpn software"
   homepage "https://github.com/txthinking/brook"
 
   app "Brook.app"

@@ -5,6 +5,7 @@ cask "lab" do
   url "https://github.com/c8r/lab/releases/download/#{version.after_comma}/Lab-#{version.before_comma}-mac.zip"
   appcast "https://github.com/c8r/lab/releases.atom"
   name "Lab"
+  desc "React UI component design tool"
   homepage "https://github.com/c8r/lab/"
 
   app "Lab.app"

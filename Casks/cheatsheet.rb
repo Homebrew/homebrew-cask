@@ -6,6 +6,7 @@ cask "cheatsheet" do
   url "https://mediaatelier.com/CheatSheet/CheatSheet_#{version}.zip"
   appcast "https://mediaatelier.com/CheatSheet/feed.php"
   name "CheatSheet"
+  desc "Tool to list all active shortcuts of the current application"
   homepage "https://www.cheatsheetapp.com/CheatSheet/"
 
   app "CheatSheet.app"

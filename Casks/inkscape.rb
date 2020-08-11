@@ -6,6 +6,7 @@ cask "inkscape" do
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://inkscape.org/release",
           must_contain: version.major_minor
   name "Inkscape"
+  desc "Vector graphics editor"
   homepage "https://inkscape.org/"
 
   app "Inkscape.app"

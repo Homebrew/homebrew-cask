@@ -5,6 +5,7 @@ cask "quaternion" do
   url "https://github.com/quotient-im/Quaternion/releases/download/#{version}/quaternion-#{version}.dmg"
   appcast "https://github.com/quotient-im/Quaternion/releases.atom"
   name "Quaternion"
+  desc "IM client for Matrix"
   homepage "https://github.com/quotient-im/Quaternion"
 
   depends_on macos: ">= :high_sierra"

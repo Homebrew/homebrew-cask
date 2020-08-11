@@ -6,6 +6,7 @@ cask "pdf-expert" do
   url "https://d1ke680phyeohy.cloudfront.net/versions/#{version.after_comma}/PDFExpert.dmg"
   appcast "https://d1ke680phyeohy.cloudfront.net/release/appcast.xml"
   name "PDF Expert"
+  desc "PDF reader, editor and annotator"
   homepage "https://pdfexpert.com/"
 
   auto_updates true

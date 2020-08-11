@@ -6,6 +6,7 @@ cask "ricochet" do
   url "https://github.com/ricochet-im/ricochet/releases/download/v#{version.major_minor_patch}/ricochet-#{version}-macos.dmg"
   appcast "https://github.com/ricochet-im/ricochet/releases.atom"
   name "Ricochet"
+  desc "Anonymous peer-to-peer instant messaging"
   homepage "https://ricochet.im/"
 
   app "Ricochet.app"

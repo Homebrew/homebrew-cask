@@ -5,6 +5,7 @@ cask "mist" do
   url "https://github.com/ethereum/mist/releases/download/v#{version}/Mist-macosx-#{version.dots_to_hyphens}.dmg"
   appcast "https://github.com/ethereum/mist/releases.atom"
   name "Mist"
+  desc "Browser for Ðapps on the Ethereum network"
   homepage "https://github.com/ethereum/mist"
 
   app "Mist.app"

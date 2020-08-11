@@ -5,6 +5,7 @@ cask "linear-linear" do
   url "https://download.linear.app/darwin/Linear-darwin-x64-#{version}.zip"
   appcast "https://api.linear.app/update/darwin/0.0.0"
   name "Linear"
+  desc "App to manage software development and track bugs"
   homepage "https://linear.app/"
 
   app "Linear.app"

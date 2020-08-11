@@ -6,6 +6,7 @@ cask "universal-media-server" do
   url "https://github.com/UniversalMediaServer/UniversalMediaServer/releases/download/#{version}/UMS-#{version}.dmg"
   appcast "https://github.com/UniversalMediaServer/UniversalMediaServer/releases.atom"
   name "Universal Media Server"
+  desc "Media server supporting DLNA, UPnP and HTTP(S)"
   homepage "https://www.universalmediaserver.com/"
 
   app "Universal Media Server.app"

@@ -70,6 +70,7 @@ cask "thunderbird" do
   url "https://ftp.mozilla.org/pub/thunderbird/releases/#{version}/mac/#{language}/Thunderbird%20#{version}.dmg"
   appcast "https://www.thunderbird.net/en-US/thunderbird/releases/"
   name "Mozilla Thunderbird"
+  desc "Customizable email client"
   homepage "https://www.thunderbird.net/"
 
   auto_updates true

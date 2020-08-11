@@ -6,6 +6,7 @@ cask "tribler" do
   url "https://github.com/Tribler/tribler/releases/download/v#{version}/Tribler-#{version}.dmg"
   appcast "https://github.com/Tribler/tribler/releases.atom"
   name "Tribler"
+  desc "Privacy enhanced BitTorrent client with P2P content discovery"
   homepage "https://www.tribler.org/"
 
   app "Tribler.app"

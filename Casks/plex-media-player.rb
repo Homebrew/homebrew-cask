@@ -5,6 +5,7 @@ cask "plex-media-player" do
   url "https://downloads.plex.tv/plexmediaplayer/#{version}/PlexMediaPlayer-#{version}-macosx-x86_64.zip"
   appcast "https://plex.tv/api/downloads/3.json"
   name "Plex Media Player"
+  desc "Home media player"
   homepage "https://www.plex.tv/"
 
   auto_updates true

@@ -6,6 +6,7 @@ cask "ethereum-wallet" do
   appcast "https://github.com/ethereum/mist/releases.atom"
   name "Ethereum Wallet"
   name "Mist"
+  desc "Browser for Ðapps on the Ethereum network"
   homepage "https://github.com/ethereum/mist"
 
   app "Ethereum Wallet.app"

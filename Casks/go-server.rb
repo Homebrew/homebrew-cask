@@ -7,6 +7,7 @@ cask "go-server" do
   appcast "https://github.com/gocd/gocd/releases.atom"
   name "Go Server"
   name "GoCD Server"
+  desc "Server for the Go Continuous Delivery platform"
   homepage "https://www.gocd.org/"
 
   app "Go Server.app"

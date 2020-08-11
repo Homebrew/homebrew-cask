@@ -4,6 +4,7 @@ cask "vuze" do
 
   url "https://cf1.vuze.com/files/J7/VuzeBittorrentClientInstaller.dmg"
   name "Vuze"
+  desc "Bit torrent client"
   homepage "https://www.vuze.com/"
 
   installer script: {

@@ -6,6 +6,7 @@ cask "tower" do
   url "https://fournova-app-updates.s3.amazonaws.com/apps/tower3-mac/#{version.after_comma.before_colon}-#{version.after_colon}/Tower-#{version.before_comma}-#{version.after_comma.before_colon}.zip"
   appcast "https://updates.fournova.com/updates/tower3-mac/stable"
   name "Tower"
+  desc "Git client focusing on power and productivity"
   homepage "https://www.git-tower.com/"
 
   auto_updates true

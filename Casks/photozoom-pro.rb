@@ -5,6 +5,7 @@ cask "photozoom-pro" do
   url "https://www.benvista.com/photozoompro#{version}/download/mac",
       user_agent: :fake
   name "PhotoZoom Pro"
+  desc "Software for enlarging and downsizing digital photos and graphics"
   homepage "https://www.benvista.com/photozoompro"
 
   pkg "PhotoZoom Pro #{version} Installer.mpkg"

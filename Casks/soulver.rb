@@ -5,6 +5,7 @@ cask "soulver" do
   url "https://soulver.app/mac/sparkle/soulver-#{version}.zip"
   appcast "https://soulver.app/mac/sparkle/appcast.xml"
   name "Soulver"
+  desc "Notepad with a built-in calculator"
   homepage "https://soulver.app/"
 
   auto_updates true

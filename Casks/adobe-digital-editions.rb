@@ -5,6 +5,7 @@ cask "adobe-digital-editions" do
   url "https://adedownload.adobe.com/pub/adobe/digitaleditions/ADE_#{version.major_minor}_Installer.dmg"
   appcast "https://www.adobe.com/solutions/ebook/digital-editions/download.html"
   name "Adobe Digital Editions"
+  desc "E-book reader"
   homepage "https://www.adobe.com/solutions/ebook/digital-editions.html"
 
   pkg "Digital Editions #{version.major_minor} Installer.pkg"

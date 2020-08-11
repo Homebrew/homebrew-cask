@@ -5,6 +5,7 @@ cask "taskade" do
   url "https://apps.taskade.com/updates/Taskade-#{version}-mac.zip"
   appcast "https://www.taskade.com/downloads"
   name "Taskade"
+  desc "Task manager for teams"
   homepage "https://www.taskade.com/"
 
   app "Taskade.app"

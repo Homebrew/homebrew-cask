@@ -5,6 +5,7 @@ cask "workplace-chat" do
   url "https://www.facebook.com/work/chat/download/mac",
       referer: "https://www.facebook.com/workplace/chat-app"
   name "Facebook Workplace Chat"
+  desc "Communications portal for your organisation"
   homepage "https://www.facebook.com/workplace/chat-app"
 
   app "Workplace Chat.app"

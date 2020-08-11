@@ -5,6 +5,7 @@ cask "findergo" do
   url "https://github.com/onmyway133/FinderGo/releases/download/#{version}/FinderGo.zip"
   appcast "https://github.com/onmyway133/FinderGo/releases.atom"
   name "FinderGo"
+  desc "Open terminal quickly from Finder"
   homepage "https://github.com/onmyway133/FinderGo"
 
   depends_on macos: ">= :sierra"

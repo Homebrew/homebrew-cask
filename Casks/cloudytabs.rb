@@ -5,6 +5,7 @@ cask "cloudytabs" do
   url "https://github.com/josh-/CloudyTabs/releases/download/v#{version}/CloudyTabs.zip"
   appcast "https://github.com/josh-/CloudyTabs/releases.atom"
   name "CloudyTabs"
+  desc "Menu bar application that lists iCloud Tabs"
   homepage "https://github.com/josh-/CloudyTabs/"
 
   app "CloudyTabs.app"

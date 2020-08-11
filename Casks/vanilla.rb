@@ -5,6 +5,7 @@ cask "vanilla" do
   url "https://macrelease.matthewpalmer.net/distribution/appcasts/Vanilla-#{version.after_comma}.dmg"
   appcast "https://updates.devmate.com/net.matthewpalmer.Vanilla.xml"
   name "Vanilla"
+  desc "Tool to hide menu bar icons"
   homepage "https://matthewpalmer.net/vanilla/"
 
   depends_on macos: ">= :sierra"

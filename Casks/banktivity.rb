@@ -6,6 +6,7 @@ cask "banktivity" do
   url "https://www.iggsoft.com/banktivity/Banktivity#{version.major}_Web.dmg"
   appcast "https://www.iggsoftware.com/product-versions.json"
   name "Banktivity"
+  desc "App to manage bank accounts in one place"
   homepage "https://www.iggsoftware.com/banktivity/"
 
   depends_on macos: ">= :high_sierra"

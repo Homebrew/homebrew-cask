@@ -5,6 +5,7 @@ cask "busycontacts" do
   url "https://www.busymac.com/download/BusyContacts.zip"
   appcast "https://www.busymac.com/busycontacts/news.plist"
   name "BusyContacts"
+  desc "Contact manager focusing on efficiency"
   homepage "https://www.busymac.com/busycontacts/index.html"
 
   auto_updates true

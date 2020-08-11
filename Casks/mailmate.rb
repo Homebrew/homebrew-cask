@@ -6,6 +6,7 @@ cask "mailmate" do
   url "https://updates.mailmate-app.com/archives/MailMate_r#{version}.tbz"
   appcast "https://updates.mailmate-app.com/10.14/release"
   name "MailMate"
+  desc "IMAP email client"
   homepage "https://freron.com/"
 
   auto_updates true

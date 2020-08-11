@@ -6,6 +6,7 @@ cask "nheko" do
   url "https://github.com/Nheko-Reborn/nheko/releases/download/v#{version}/nheko-v#{version}.dmg"
   appcast "https://github.com/Nheko-Reborn/nheko/releases.atom"
   name "Nheko"
+  desc "No longer maintained - Desktop client for the Matrix protocol"
   homepage "https://nheko-reborn.github.io/"
 
   app "Nheko.app"

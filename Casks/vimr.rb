@@ -6,6 +6,7 @@ cask "vimr" do
   url "https://github.com/qvacua/vimr/releases/download/v#{version}/VimR-v#{version}.tar.bz2"
   appcast "https://github.com/qvacua/vimr/releases.atom"
   name "VimR"
+  desc "GUI for the Neovim text editor"
   homepage "http://vimr.org/"
 
   auto_updates true

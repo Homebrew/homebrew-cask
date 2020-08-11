@@ -5,6 +5,7 @@ cask "free-download-manager" do
   url "https://dn3.freedownloadmanager.org/#{version.major}/latest/fdm.dmg"
   appcast "https://www.freedownloadmanager.org/download-fdm-for-mac.htm"
   name "Free Download Manager"
+  desc "Download accelerator and organizer"
   homepage "https://www.freedownloadmanager.org/"
 
   auto_updates true

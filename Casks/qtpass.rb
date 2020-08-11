@@ -6,6 +6,7 @@ cask "qtpass" do
   url "https://github.com/IJHack/qtpass/releases/download/v#{version}/qtpass-#{version}.dmg"
   appcast "https://github.com/IJHack/qtpass/releases.atom"
   name "QtPass"
+  desc "Multi-platform GUI for pass, the standard unix password manager"
   homepage "https://qtpass.org/"
 
   depends_on macos: ">= :sierra"

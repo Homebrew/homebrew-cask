@@ -6,6 +6,7 @@ cask "popchar" do
       user_agent: :fake
   appcast "https://update.ergonis.com/vck/popcharx.xml"
   name "PopChar X"
+  desc "Utility to display all characters of a font"
   homepage "https://www.ergonis.com/products/popcharx/"
 
   app "PopChar.app"

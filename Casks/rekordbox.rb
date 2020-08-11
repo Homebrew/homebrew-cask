@@ -5,6 +5,7 @@ cask "rekordbox" do
   url "https://cdn.rekordbox.com/files/#{version.after_comma}/Install_rekordbox_#{version.before_comma.dots_to_underscores}.pkg_.zip"
   appcast "https://rekordbox.com/en/support/releasenote/"
   name "rekordbox"
+  desc "Free Dj app to prepare and manage your music files"
   homepage "https://rekordbox.com/en/"
 
   auto_updates true

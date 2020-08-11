@@ -5,6 +5,7 @@ cask "meetingbar" do
   url "https://github.com/leits/MeetingBar/releases/download/v#{version}/MeetingBar.dmg"
   appcast "https://github.com/leits/MeetingBar/releases.atom"
   name "MeetingBar"
+  desc "Shows the next meeting in the menu bar"
   homepage "https://github.com/leits/MeetingBar"
 
   depends_on macos: ">= :catalina"

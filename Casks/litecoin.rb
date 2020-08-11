@@ -5,6 +5,7 @@ cask "litecoin" do
   url "https://download.litecoin.org/litecoin-#{version}/osx/litecoin-#{version}-osx.dmg"
   appcast "https://github.com/litecoin-project/litecoin/releases.atom"
   name "Litecoin"
+  desc "Cryptocurrency wallet"
   homepage "https://litecoin.org/"
 
   app "Litecoin-Qt.app"

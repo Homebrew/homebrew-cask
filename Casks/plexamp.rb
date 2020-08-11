@@ -6,6 +6,7 @@ cask "plexamp" do
   url "https://plexamp.plex.tv/plexamp.plex.tv/desktop/Plexamp-#{version}.dmg"
   appcast "https://plexamp.plex.tv/plexamp.plex.tv/desktop/latest-mac.yml"
   name "Plexamp"
+  desc "Music player focusing on visuals"
   homepage "https://plexamp.com/"
 
   app "Plexamp.app"

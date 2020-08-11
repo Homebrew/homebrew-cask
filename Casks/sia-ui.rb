@@ -4,6 +4,7 @@ cask "sia-ui" do
 
   url "https://sia.tech/releases/Sia-UI-v#{version}.dmg"
   name "Sia-UI"
+  desc "Graphical frontend for Sia"
   homepage "https://sia.tech/"
 
   app "Sia-UI.app"

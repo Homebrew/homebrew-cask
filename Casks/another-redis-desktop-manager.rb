@@ -5,6 +5,7 @@ cask "another-redis-desktop-manager" do
   url "https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v#{version}/Another-Redis-Desktop-Manager.#{version}.dmg"
   appcast "https://github.com/qishibo/AnotherRedisDesktopManager/releases.atom"
   name "Another Redis Desktop Manager"
+  desc "Redis desktop manager"
   homepage "https://github.com/qishibo/AnotherRedisDesktopManager/"
 
   app "Another Redis Desktop Manager.app"

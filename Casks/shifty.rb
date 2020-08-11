@@ -6,6 +6,7 @@ cask "shifty" do
   url "https://github.com/thompsonate/Shifty/releases/download/v#{version}/Shifty-#{version}.zip"
   appcast "https://github.com/thompsonate/Shifty/releases.atom"
   name "Shifty"
+  desc "Menu bar app that provides more control over Night Shift"
   homepage "https://shifty.natethompson.io/"
 
   depends_on macos: ">= :sierra"

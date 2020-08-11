@@ -12,6 +12,7 @@ cask "bartender" do
   appcast "https://www.macbartender.com/B2/updates/Appcast.xml",
           must_contain: version.dots_to_hyphens
   name "Bartender"
+  desc "Menu bar icon organizer"
   homepage "https://www.macbartender.com/"
 
   auto_updates true

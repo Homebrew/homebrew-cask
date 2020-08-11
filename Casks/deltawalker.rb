@@ -6,6 +6,7 @@ cask "deltawalker" do
   url "https://deltawalker.s3.amazonaws.com/DeltaWalker-#{version}.dmg"
   appcast "https://www.deltawalker.com/assets/js/main.js"
   name "DeltaWalker"
+  desc "Tool to compare and synchronize files and folders"
   homepage "https://www.deltawalker.com/"
 
   app "DeltaWalker.app"

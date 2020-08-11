@@ -6,6 +6,7 @@ cask "bibdesk" do
   url "https://downloads.sourceforge.net/bibdesk/BibDesk/BibDesk-#{version}/BibDesk-#{version}.dmg"
   appcast "https://bibdesk.sourceforge.io/bibdesk.xml"
   name "BibDesk"
+  desc "Edit and manage bibliographies"
   homepage "https://bibdesk.sourceforge.io/"
 
   auto_updates true

@@ -11,6 +11,7 @@ cask "coconutbattery" do
   end
 
   name "coconutBattery"
+  desc "Tool to show live information about the batteries in various devices"
   homepage "https://www.coconut-flavour.com/coconutbattery/"
 
   auto_updates true

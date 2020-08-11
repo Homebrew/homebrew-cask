@@ -5,6 +5,7 @@ cask "bilibili" do
   url "https://github.com/typcn/bilibili-mac-client/releases/download/#{version}/Bilibili.dmg"
   appcast "https://github.com/typcn/bilibili-mac-client/releases.atom"
   name "Bilibili"
+  desc "Unofficial bilibili client"
   homepage "https://github.com/typcn/bilibili-mac-client/"
 
   auto_updates true

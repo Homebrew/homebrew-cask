@@ -6,6 +6,7 @@ cask "meld" do
   url "https://github.com/yousseb/meld/releases/download/#{version.after_comma}/meldmerge.dmg"
   appcast "https://github.com/yousseb/meld/releases.atom"
   name "Meld for OSX"
+  desc "Visual diff and merge tool"
   homepage "https://yousseb.github.io/meld/"
 
   depends_on macos: ">= :high_sierra"

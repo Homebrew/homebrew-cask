@@ -5,6 +5,7 @@ cask "michaelvillar-timer" do
   url "https://github.com/michaelvillar/timer-app/releases/download/#{version}/Timer.app.zip"
   appcast "https://github.com/michaelvillar/timer-app/releases.atom"
   name "Timer"
+  desc "Timer application"
   homepage "https://github.com/michaelvillar/timer-app"
 
   app "Timer.app"

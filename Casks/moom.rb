@@ -5,6 +5,7 @@ cask "moom" do
   url "https://manytricks.com/download/_do_not_hotlink_/moom#{version.no_dots}.dmg"
   appcast "https://manytricks.com/moom/appcast"
   name "Moom"
+  desc "Utility to move and zoom windows—on one display"
   homepage "https://manytricks.com/moom/"
 
   auto_updates true

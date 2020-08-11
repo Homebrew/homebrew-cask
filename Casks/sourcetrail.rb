@@ -6,6 +6,7 @@ cask "sourcetrail" do
   url "https://github.com/CoatiSoftware/Sourcetrail/releases/download/#{version}/Sourcetrail_#{version.dots_to_underscores}_macOS_64bit.dmg"
   appcast "https://github.com/CoatiSoftware/Sourcetrail/releases.atom"
   name "Sourcetrail"
+  desc "Free and open-source cross-platform source explorer"
   homepage "https://www.sourcetrail.com/"
 
   app "Sourcetrail.app"

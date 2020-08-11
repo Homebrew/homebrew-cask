@@ -6,6 +6,7 @@ cask "wallpaper-wizard" do
   url "https://dl.devmate.com/com.macpaw.WallWiz-site/WallpaperWizard-#{version.major}.dmg"
   appcast "https://updates.devmate.com/com.macpaw.WallWiz-site.xml"
   name "Wallpaper Wizard"
+  desc "Adjustable wallpaper application"
   homepage "https://wallwiz.com/"
 
   app "Wallpaper Wizard.app"

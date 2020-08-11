@@ -4,6 +4,7 @@ cask "roon" do
 
   url "https://download.roonlabs.com/builds/Roon.dmg"
   name "Roon"
+  desc "Music player"
   homepage "https://roonlabs.com/"
 
   app "Roon.app"

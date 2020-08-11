@@ -6,6 +6,7 @@ cask "there" do
   url "https://github.com/therehq/there-desktop/releases/download/v#{version}/There-#{version}-mac.zip"
   appcast "https://github.com/therehq/there-desktop/releases.atom"
   name "There"
+  desc "Tool to display the local times of people in a team"
   homepage "https://there.pm/"
 
   app "There.app"

@@ -5,6 +5,7 @@ cask "chrysalis" do
   url "https://github.com/keyboardio/Chrysalis/releases/download/chrysalis-#{version}/Chrysalis-#{version}.dmg"
   appcast "https://github.com/keyboardio/Chrysalis/releases.atom"
   name "Chrysalis"
+  desc "Graphical configurator for Kaleidoscope-powered keyboards"
   homepage "https://github.com/keyboardio/Chrysalis"
 
   app "Chrysalis.app"

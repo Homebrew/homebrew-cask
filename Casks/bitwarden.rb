@@ -6,6 +6,7 @@ cask "bitwarden" do
   url "https://github.com/bitwarden/desktop/releases/download/v#{version}/Bitwarden-#{version}-mac.zip"
   appcast "https://github.com/bitwarden/desktop/releases.atom"
   name "Bitwarden"
+  desc "Desktop password and login vault"
   homepage "https://bitwarden.com/"
 
   auto_updates true

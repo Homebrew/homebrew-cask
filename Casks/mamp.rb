@@ -5,6 +5,7 @@ cask "mamp" do
   url "https://downloads.mamp.info/MAMP-PRO/releases/#{version}/MAMP_MAMP_PRO_#{version}.pkg"
   appcast "https://www.mamp.info/en/downloads/"
   name "MAMP"
+  desc "Web development solution with Apache, Nginx, PHP & MySQL"
   homepage "https://www.mamp.info/"
 
   auto_updates true

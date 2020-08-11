@@ -5,6 +5,7 @@ cask "stats" do
   url "https://github.com/exelban/stats/releases/download/v#{version}/Stats.dmg"
   appcast "https://github.com/exelban/stats/releases.atom"
   name "Stats"
+  desc "System monitor for the menu bar"
   homepage "https://github.com/exelban/stats"
 
   auto_updates true

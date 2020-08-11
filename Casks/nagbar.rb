@@ -6,6 +6,7 @@ cask "nagbar" do
   url "https://github.com/volendavidov/NagBar/releases/download/#{version}/NagBar.zip"
   appcast "https://github.com/volendavidov/NagBar/releases.atom"
   name "NagBar"
+  desc "Status bar monitor for Nagios, Icinga/2 and Thruk"
   homepage "https://sites.google.com/site/nagbarapp/home"
 
   app "NagBar.app"

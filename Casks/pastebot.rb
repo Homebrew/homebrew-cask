@@ -5,6 +5,7 @@ cask "pastebot" do
   # tapbots.net/ was verified as official when first introduced to the cask
   url "https://tapbots.net/pastebot#{version.major}/Pastebot.dmg"
   name "Pastebot"
+  desc "Workflow application to improve productivity"
   homepage "https://tapbots.com/pastebot/"
 
   depends_on macos: ">= :high_sierra"

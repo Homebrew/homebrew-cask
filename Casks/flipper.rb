@@ -7,6 +7,7 @@ cask "flipper" do
   appcast "https://github.com/facebook/flipper/releases.atom"
   name "Facebook Flipper"
   name "Sonar"
+  desc "Desktop debugging platform for mobile developers"
   homepage "https://fbflipper.com/"
 
   app "Flipper.app"

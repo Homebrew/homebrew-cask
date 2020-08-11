@@ -5,6 +5,7 @@ cask "molotov" do
   url "https://desktop-auto-upgrade.molotov.tv/mac/Molotov-v#{version}.dmg"
   appcast "https://desktop-auto-upgrade.molotov.tv/mac/manifest.json"
   name "Molotov"
+  desc "French TV streaming service"
   homepage "https://www.molotov.tv/"
 
   app "Molotov.app"

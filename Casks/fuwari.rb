@@ -6,6 +6,7 @@ cask "fuwari" do
   url "https://github.com/kentya6/Fuwari/releases/download/v#{version}/Fuwari.zip"
   appcast "https://github.com/kentya6/Fuwari/releases.atom"
   name "Fuwari"
+  desc "Floating screenshot like a sticky"
   homepage "https://fuwari-app.com/"
 
   app "Fuwari/Fuwari.app"

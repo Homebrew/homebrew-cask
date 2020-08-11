@@ -5,6 +5,7 @@ cask "jumpshare" do
   url "https://apps.jumpshare.com/desktop/mac/updates/Jumpshare-#{version}.tar.bz2"
   appcast "https://apps.jumpshare.com/desktop/mac/updates/appcast.xml"
   name "Jumpshare"
+  desc "File sharing, screen recording, and screenshot capture app"
   homepage "https://jumpshare.com/"
 
   depends_on macos: ">= :high_sierra"

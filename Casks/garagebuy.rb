@@ -6,6 +6,7 @@ cask "garagebuy" do
   url "https://www.iwascoding.de/downloads/GarageBuy_#{version}.dmg"
   appcast "https://www.iwascoding.com/GarageBuy/Downloads.html"
   name "GarageBuy"
+  desc "App to assist with finding, tracking, and purchasing items on eBay"
   homepage "https://www.iwascoding.com/GarageBuy/"
 
   depends_on macos: ">= :sierra"

@@ -5,6 +5,7 @@ cask "licecap" do
   url "https://www.cockos.com/licecap/licecap#{version.no_dots}.dmg"
   appcast "https://www.cockos.com/licecap/"
   name "LICEcap"
+  desc "Animated screen capture application"
   homepage "https://www.cockos.com/licecap/"
 
   app "LICEcap.app"

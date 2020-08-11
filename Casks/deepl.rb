@@ -4,6 +4,7 @@ cask "deepl" do
 
   url "https://appdownload.deepl.com/macos/DeepL.dmg"
   name "DeepL"
+  desc "Trains AIs to understand and translate texts"
   homepage "https://www.deepl.com/"
 
   auto_updates true

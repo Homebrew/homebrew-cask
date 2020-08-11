@@ -6,6 +6,7 @@ cask "transmission" do
   url "https://github.com/transmission/transmission-releases/raw/master/Transmission-#{version}.dmg"
   appcast "https://github.com/transmission/transmission/releases.atom"
   name "Transmission"
+  desc "Open-source BitTorrent client"
   homepage "https://transmissionbt.com/"
 
   auto_updates true

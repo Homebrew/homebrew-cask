@@ -5,6 +5,7 @@ cask "flycut" do
   url "https://github.com/TermiT/Flycut/releases/download/#{version}/Flycut.#{version}.zip"
   appcast "https://github.com/TermiT/Flycut/releases.atom"
   name "Flycut"
+  desc "Clipboard manager for developers"
   homepage "https://github.com/TermiT/Flycut"
 
   app "Flycut.app"

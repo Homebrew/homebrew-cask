@@ -7,6 +7,7 @@ cask "pd-l2ork" do
   appcast "https://github.com/agraef/purr-data/releases.atom"
   name "Pd-l2ork"
   name "Purr Data"
+  desc "Purr Data - Jonathan Wilkes' cross-platform Pd-l2ork version"
   homepage "https://agraef.github.io/purr-data/"
 
   app "Pd-l2ork.app"

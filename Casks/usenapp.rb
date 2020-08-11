@@ -5,7 +5,7 @@ cask "usenapp" do
   url "https://www.usenapp.com/download/Usenapp-#{version}.dmg"
   appcast "https://www.usenapp.com/download/appcast_unp1.xml"
   name "Usenapp"
-  desc "Newsreader and usenet client"
+  desc "Newsreader and Usenet client"
   homepage "https://www.usenapp.com/"
 
   app "Usenapp.app"

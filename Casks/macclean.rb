@@ -4,6 +4,7 @@ cask "macclean" do
 
   url "https://dl.imobie.com/macclean-mac.dmg"
   name "MacClean"
+  desc "System cleaning app"
   homepage "https://www.imobie.com/macclean/"
 
   app "MacClean.app"

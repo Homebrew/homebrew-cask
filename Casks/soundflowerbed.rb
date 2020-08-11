@@ -5,6 +5,7 @@ cask "soundflowerbed" do
   url "https://github.com/mLupine/SoundflowerBed/releases/download/#{version}-release/SoundflowerBed-#{version}-release.dmg"
   appcast "https://github.com/mLupine/SoundflowerBed/releases.atom"
   name "SoundflowerBed"
+  desc "Taps into Soundflower channels and route them to an audio device"
   homepage "https://github.com/mLupine/SoundflowerBed"
 
   app "SoundflowerBed.app"

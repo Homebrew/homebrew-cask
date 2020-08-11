@@ -5,6 +5,7 @@ cask "fluid" do
   url "https://fluidapp.com/dist/Fluid_#{version}.zip"
   appcast "https://fluidapp.com/appcast/fluid#{version.major}.rss"
   name "Fluid"
+  desc "Tool to turn a website into a desktop app"
   homepage "https://fluidapp.com/"
 
   depends_on macos: ">= :sierra"

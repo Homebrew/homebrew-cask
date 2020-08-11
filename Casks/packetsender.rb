@@ -6,6 +6,7 @@ cask "packetsender" do
   url "https://github.com/dannagle/PacketSender/releases/download/v#{version}/PacketSender_v#{version}.dmg"
   appcast "https://github.com/dannagle/PacketSender/releases.atom"
   name "Packet Sender"
+  desc "Network utility for sending / receiving TCP, UDP, SSL"
   homepage "https://packetsender.com/"
 
   depends_on macos: ">= :sierra"

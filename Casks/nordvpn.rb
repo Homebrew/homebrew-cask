@@ -6,6 +6,7 @@ cask "nordvpn" do
   url "https://downloads.nordcdn.com/apps/macos/generic/NordVPN-OpenVPN/latest/NordVPN.pkg"
   appcast "https://downloads.nordcdn.com/apps/macos/generic/NordVPN-OpenVPN/latest/update_pkg.xml"
   name "NordVPN"
+  desc "VPN client for secure internet access and private browsing"
   homepage "https://nordvpn.com/"
 
   auto_updates true

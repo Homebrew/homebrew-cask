@@ -5,6 +5,7 @@ cask "rescuetime" do
   url "https://www.rescuetime.com/installers/RescueTimeInstaller.pkg"
   appcast "https://www.rescuetime.com/installers/appcast"
   name "RescueTime"
+  desc "Time optimising application"
   homepage "https://www.rescuetime.com/"
 
   pkg "RescueTimeInstaller.pkg"

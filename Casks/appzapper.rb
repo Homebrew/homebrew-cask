@@ -6,6 +6,7 @@ cask "appzapper" do
   appcast "https://www.appzapper.com/",
           must_contain: version.no_dots
   name "AppZapper"
+  desc "Tool to uninstall unwanted applications and their support files"
   homepage "https://www.appzapper.com/"
 
   auto_updates true

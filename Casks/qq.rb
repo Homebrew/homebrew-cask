@@ -5,6 +5,7 @@ cask "qq" do
   url "https://dldir1.qq.com/qqfile/QQforMac/QQ_#{version}.dmg"
   appcast "https://im.qq.com/proxy/domain/qzonestyle.gtimg.cn/qzone/qzactStatics/configSystem/data/1373/config1.js"
   name "QQ"
+  desc "Instant messaging tool"
   homepage "https://im.qq.com/macqq/"
 
   app "QQ.app"

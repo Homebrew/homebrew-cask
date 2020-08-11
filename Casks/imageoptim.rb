@@ -5,6 +5,7 @@ cask "imageoptim" do
   url "https://imageoptim.com/ImageOptim#{version}.tar.bz2"
   appcast "https://imageoptim.com/appcast.xml"
   name "ImageOptim"
+  desc "Tool to optimize images to a smaller size"
   homepage "https://imageoptim.com/mac"
 
   auto_updates true

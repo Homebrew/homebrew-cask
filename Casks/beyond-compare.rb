@@ -5,6 +5,7 @@ cask "beyond-compare" do
   url "https://www.scootersoftware.com/BCompareOSX-#{version}.zip"
   appcast "https://www.scootersoftware.com/download.php"
   name "Beyond Compare"
+  desc "Compare files and folders"
   homepage "https://www.scootersoftware.com/"
 
   auto_updates true

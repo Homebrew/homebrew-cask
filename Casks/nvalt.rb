@@ -6,6 +6,7 @@ cask "nvalt" do
   url "https://updates.designheresy.com/nvalt/nvALT#{version.no_hyphens}.dmg"
   appcast "https://updates.designheresy.com/nvalt/updates.xml"
   name "nvALT"
+  desc "Note taking app"
   homepage "https://brettterpstra.com/projects/nvalt/"
 
   app "nvALT.app"

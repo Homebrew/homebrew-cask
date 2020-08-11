@@ -6,6 +6,7 @@ cask "lincastor" do
   url "https://onflapp.github.io/blog/releases/lincastor/LinCastor.zip"
   appcast "https://onflapp.github.io/blog/releases/lincastor/appcast.xml"
   name "LinCastor"
+  desc "Blog Site"
   homepage "https://onflapp.wordpress.com/lincastor/"
 
   depends_on macos: ">= :sierra"

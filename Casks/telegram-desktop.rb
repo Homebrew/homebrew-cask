@@ -6,6 +6,7 @@ cask "telegram-desktop" do
   url "https://github.com/telegramdesktop/tdesktop/releases/download/v#{version}/tsetup.#{version}.dmg"
   appcast "https://github.com/telegramdesktop/tdesktop/releases.atom"
   name "Telegram Desktop"
+  desc "Desktop client for Telegram messenger"
   homepage "https://desktop.telegram.org/"
 
   auto_updates true

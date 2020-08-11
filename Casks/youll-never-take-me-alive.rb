@@ -6,6 +6,7 @@ cask "youll-never-take-me-alive" do
   appcast "https://github.com/iSECPartners/yontma-mac/releases.atom"
   name "You'll Never Take Me Alive!"
   name "YoNTMA"
+  desc "Utility to enhance the protection of encrypted data"
   homepage "https://github.com/iSECPartners/yontma-mac"
 
   app "You'll Never Take Me Alive!.app"

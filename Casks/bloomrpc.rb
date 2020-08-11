@@ -5,6 +5,7 @@ cask "bloomrpc" do
   url "https://github.com/uw-labs/bloomrpc/releases/download/#{version}/BloomRPC-#{version}.dmg"
   appcast "https://github.com/uw-labs/bloomrpc/releases.atom"
   name "BloomRPC"
+  desc "GUI Client for GRPC Services"
   homepage "https://github.com/uw-labs/bloomrpc"
 
   app "BloomRPC.app"

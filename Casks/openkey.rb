@@ -5,6 +5,7 @@ cask "openkey" do
   url "https://github.com/tuyenvm/OpenKey/releases/download/#{version}/OpenKey#{version}.dmg"
   appcast "https://github.com/tuyenvm/OpenKey/releases.atom"
   name "OpenKey"
+  desc "Vietnamese input system"
   homepage "https://github.com/tuyenvm/OpenKey/"
 
   app "OpenKey.app"

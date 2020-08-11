@@ -5,6 +5,7 @@ cask "whichspace" do
   url "https://github.com/gechr/WhichSpace/releases/download/v#{version}/WhichSpace.zip"
   appcast "https://github.com/gechr/WhichSpace/releases.atom"
   name "WhichSpace"
+  desc "Active space menu bar icon"
   homepage "https://github.com/gechr/WhichSpace"
 
   depends_on macos: "> :yosemite"

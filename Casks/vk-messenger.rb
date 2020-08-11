@@ -5,6 +5,7 @@ cask "vk-messenger" do
   # desktop.userapi.com/mac/master/ was verified as official when first introduced to the cask
   url "https://desktop.userapi.com/mac/master/vk.dmg"
   name "VK Messenger"
+  desc "Messenger app"
   homepage "https://vk.com/messenger"
 
   app "VK Messenger.app"

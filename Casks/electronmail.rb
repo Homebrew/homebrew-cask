@@ -5,6 +5,7 @@ cask "electronmail" do
   url "https://github.com/vladimiry/ElectronMail/releases/download/v#{version}/electron-mail-#{version}-mac-mojave.dmg"
   appcast "https://github.com/vladimiry/ElectronMail/releases.atom"
   name "ElectronMail"
+  desc "Unofficial ProtonMail Desktop App"
   homepage "https://github.com/vladimiry/ElectronMail"
 
   app "ElectronMail.app"

@@ -6,6 +6,7 @@ cask "uncolored" do
   url "https://github.com/n457/Uncolored/releases/download/v.#{version}/Uncolored-v.#{version}-osx-x64.dmg"
   appcast "https://github.com/n457/Uncolored/releases.atom"
   name "(Un)colored"
+  desc "Rich text (HTML & Markdown) editor that saves documents with themes"
   homepage "https://n457.github.io/Uncolored/"
 
   app "Uncolored.app"

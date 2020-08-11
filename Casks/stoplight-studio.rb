@@ -6,6 +6,7 @@ cask "stoplight-studio" do
   url "https://github.com/stoplightio/studio/releases/download/v#{version}/stoplight-studio-mac.dmg"
   appcast "https://github.com/stoplightio/studio/releases.atom"
   name "Stoplight Studio"
+  desc "Editor for designing and documenting APIs"
   homepage "https://stoplight.io/studio/"
 
   app "Stoplight Studio.app"

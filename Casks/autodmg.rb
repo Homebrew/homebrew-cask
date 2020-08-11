@@ -5,6 +5,7 @@ cask "autodmg" do
   url "https://github.com/MagerValp/AutoDMG/releases/download/v#{version}/AutoDMG-#{version}.dmg"
   appcast "https://github.com/MagerValp/AutoDMG/releases.atom"
   name "AutoDMG"
+  desc "App for creating deployable system images from a system installer"
   homepage "https://github.com/MagerValp/AutoDMG"
 
   depends_on macos: ">= :sierra"

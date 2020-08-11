@@ -6,6 +6,7 @@ cask "gemini" do
   url "https://dl.devmate.com/com.macpaw.site.Gemini#{version.major}/#{version.after_comma.before_colon}/#{version.after_colon}/Gemini#{version.major}-#{version.after_comma.before_colon}.zip"
   appcast "https://updates.devmate.com/com.macpaw.site.Gemini#{version.major}.xml"
   name "Gemini"
+  desc "Disk space cleaner that finds and deletes duplicated and similar files"
   homepage "https://macpaw.com/gemini"
 
   app "Gemini #{version.major}.app"

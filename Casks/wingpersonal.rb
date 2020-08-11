@@ -5,6 +5,7 @@ cask "wingpersonal" do
   url "https://wingware.com/pub/wing-personal/#{version}/wing-personal-#{version}.dmg"
   appcast "https://www.wingware.com/downloads/wing-personal"
   name "WingPersonal"
+  desc "Free Python IDE designed for students and hobbyists"
   homepage "https://www.wingware.com/"
 
   depends_on macos: ">= :sierra"

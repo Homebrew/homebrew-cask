@@ -5,6 +5,7 @@ cask "audio-hijack" do
   url "https://rogueamoeba.com/audiohijack/download/AudioHijack.zip"
   appcast "https://www.rogueamoeba.com/audiohijack/releasenotes.php"
   name "Audio Hijack"
+  desc "Records audio from any application"
   homepage "https://www.rogueamoeba.com/audiohijack/"
 
   auto_updates true

@@ -6,6 +6,7 @@ cask "nally" do
   url "https://yllan.github.io/nally/download/Nally-#{version}.app.zip"
   appcast "https://yllan.org/app/Nally/"
   name "Nally"
+  desc "Beautiful telnet/ssh client optimized for Mandarin BBS"
   homepage "https://yllan.org/app/Nally/"
 
   app "Nally.app"

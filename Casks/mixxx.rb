@@ -5,6 +5,7 @@ cask "mixxx" do
   url "https://downloads.mixxx.org/mixxx-#{version}/mixxx-#{version}-osxintel.dmg"
   appcast "https://www.mixxx.org/download/"
   name "Mixxx"
+  desc "Open-source DJ software"
   homepage "https://www.mixxx.org/"
 
   app "Mixxx.app"

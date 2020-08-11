@@ -5,6 +5,7 @@ cask "podcastmenu" do
   url "https://github.com/insidegui/PodcastMenu/raw/master/Releases/PodcastMenu_v#{version}.zip"
   appcast "https://github.com/insidegui/PodcastMenu/raw/master/Releases/appcast.xml"
   name "PodcastMenu"
+  desc "Tool to display Overcast on the menu bar"
   homepage "https://github.com/insidegui/PodcastMenu"
 
   auto_updates true

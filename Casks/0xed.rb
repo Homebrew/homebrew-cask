@@ -5,6 +5,7 @@ cask "0xed" do
   url "https://www.suavetech.com/download/0xED-#{version}.tar.bz2"
   appcast "https://www.suavetech.com/0xed/history.html"
   name "0xED"
+  desc "Hex editor"
   homepage "https://www.suavetech.com/0xed/"
 
   app "0xED.app"

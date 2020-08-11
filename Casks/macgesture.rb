@@ -5,6 +5,7 @@ cask "macgesture" do
   url "https://github.com/MacGesture/MacGesture/releases/download/#{version}/MacGesture-#{version}.zip"
   appcast "https://github.com/MacGesture/MacGesture/releases.atom"
   name "MacGesture"
+  desc "Utility to set up global mouse gestures"
   homepage "https://github.com/MacGesture/MacGesture"
 
   app "MacGesture.app"

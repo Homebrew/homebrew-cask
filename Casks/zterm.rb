@@ -5,6 +5,7 @@ cask "zterm" do
   url "https://www.dalverson.com/zterm/ZTerm#{version}.dmg"
   appcast "https://www.dalverson.com/zterm/"
   name "ZTerm"
+  desc "Terminal emulation program"
   homepage "https://www.dalverson.com/zterm/"
 
   app "ZTerm.app"

@@ -5,6 +5,7 @@ cask "trilium-notes" do
   url "https://github.com/zadam/trilium/releases/download/v#{version}/trilium-mac-x64-#{version}.zip"
   appcast "https://github.com/zadam/trilium/releases.atom"
   name "Trilium Notes"
+  desc "Personal knowledge base"
   homepage "https://github.com/zadam/trilium"
 
   app "trilium-mac-x64/Trilium Notes.app"

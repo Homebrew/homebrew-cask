@@ -6,6 +6,7 @@ cask "invisiblix" do
   url "https://downloads.sourceforge.net/invisiblix/invisibliX-#{version}.zip"
   appcast "https://invisiblix.read-write.fr/appcast.xml"
   name "invisibliX"
+  desc "Allows viewing and manipulation of hidden files in Finder"
   homepage "https://invisiblix.read-write.fr/"
 
   app "invisibliX.app"
