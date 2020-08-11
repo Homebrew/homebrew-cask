@@ -111,7 +111,7 @@ class Check
     installed_apps = diff[:installed_apps].added - pkg_files
     if installed_apps.any?
       message = Formatter.error(
-        "Some applications are still installed, add them to #{Formatter.identifier("#{stanza} delete:")}\n",
+        "Some applications are still installed, add them to #{Formatter.identifier("uninstall delete:")}\n",
         label: "Error",
       )
       message += installed_apps.join("\n")
@@ -121,7 +121,7 @@ class Check
     installed_kexts = diff[:installed_kexts].added
     if installed_kexts.any?
       message = Formatter.error(
-        "Some kernel extensions are still installed, add them to #{Formatter.identifier("#{stanza} kext:")}\n",
+        "Some kernel extensions are still installed, add them to #{Formatter.identifier("uninstall kext:")}\n",
         label: "Error",
       )
       message += installed_kexts.join("\n")
@@ -131,7 +131,7 @@ class Check
     installed_packages = diff[:installed_pkgs].added
     if installed_packages.any?
       message = Formatter.error(
-        "Some packages are still installed, add them to #{Formatter.identifier("#{stanza} pkgutil:")}\n",
+        "Some packages are still installed, add them to #{Formatter.identifier("uninstall pkgutil:")}\n",
         label: "Error",
       )
       message += installed_packages.join("\n")
@@ -141,7 +141,7 @@ class Check
     installed_launchjobs = diff[:installed_launchjobs].added
     if installed_launchjobs.any?
       message = Formatter.error(
-        "Some launch jobs are still installed, add them to #{Formatter.identifier("#{stanza} launchctl:")}\n",
+        "Some launch jobs are still installed, add them to #{Formatter.identifier("uninstall launchctl:")}\n",
         label: "Error",
       )
       message += installed_launchjobs.join("\n")
@@ -159,7 +159,7 @@ class Check
 
     if running_apps.any?
       message = Formatter.error(
-        "Some applications are still running, add them to #{Formatter.identifier("#{stanza} quit:")}\n",
+        "Some applications are still running, add them to #{Formatter.identifier("uninstall quit:")}\n",
         label: "Error",
       )
       message += running_apps.join("\n")
@@ -168,7 +168,7 @@ class Check
 
     if loaded_launchjobs.any?
       message = Formatter.error(
-        "Some launch jobs were not unloaded, add them to #{Formatter.identifier("#{stanza} launchctl:")}\n",
+        "Some launch jobs were not unloaded, add them to #{Formatter.identifier("uninstall launchctl:")}\n",
         label: "Error",
       )
       message += loaded_launchjobs.join("\n")
