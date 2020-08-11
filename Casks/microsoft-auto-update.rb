@@ -13,6 +13,7 @@ cask "microsoft-auto-update" do
   uninstall quit:      [
     "com.microsoft.autoupdate2",
     "com.microsoft.autoupdate.fba",
+    "com.microsoft.errorreporting",
   ],
             launchctl: [
               "com.microsoft.autoupdate.helpertool",
