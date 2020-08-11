@@ -1,6 +1,6 @@
 cask "microsoft-auto-update" do
-  version "4.25.20071300"
-  sha256 "b8e3d4391e48732f42217589784d8b3417f6f14489d9de04395198a01bfdfa46"
+  version "4.26.20081000"
+  sha256 "e81ceadf900a0c7e7d593720d08146dbc1c55868d5b21c7e7a175aa36dfe0178"
 
   # officecdn-microsoft-com.akamaized.net/ was verified as official when first introduced to the cask
   url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_AutoUpdate_#{version}_Updater.pkg"
@@ -13,6 +13,7 @@ cask "microsoft-auto-update" do
   uninstall quit:      [
     "com.microsoft.autoupdate2",
     "com.microsoft.autoupdate.fba",
+    "com.microsoft.errorreporting",
   ],
             launchctl: [
               "com.microsoft.autoupdate.helpertool",
