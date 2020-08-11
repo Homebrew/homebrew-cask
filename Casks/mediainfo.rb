@@ -1,4 +1,4 @@
-cask 'mediainfo' do
+cask "mediainfo" do
   version "20.08"
   sha256 "753c24f51349cde35f58f46f5e04c3e052ff9857c1d6c24a5329d341b7113525"
 
@@ -12,8 +12,8 @@ cask 'mediainfo' do
   app "MediaInfo.app"
 
   zap trash: [
-               "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.mediaarea.mediainfo.mac-old.sfl*",
-               "~/Library/Preferences/net.mediaarea.mediainfo.mac-old.plist",
-               "~/Library/Saved Application State/net.mediaarea.mediainfo.mac-old.savedState",
-             ]
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.mediaarea.mediainfo.mac-old.sfl*",
+    "~/Library/Preferences/net.mediaarea.mediainfo.mac-old.plist",
+    "~/Library/Saved Application State/net.mediaarea.mediainfo.mac-old.savedState",
+  ]
 end
