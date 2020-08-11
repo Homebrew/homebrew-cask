@@ -1,6 +1,6 @@
 cask "flightgear" do
   version "2018.3.6"
-  sha256 "cfc8667d68f2a08323f1abfa172e6a7bcbf465fa4f00a6576309066332974306"
+  sha256 "43b82f3319cdb2eb09b742a5988faa389a9a25cf0be2f0aa77430c573ca3482a"
 
   # sourceforge.net/project/flightgear/ was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/project/flightgear/release-#{version.major_minor}/FlightGear-#{version}.dmg"
