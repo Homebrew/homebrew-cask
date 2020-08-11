@@ -7,6 +7,13 @@ jobs:
   ci:
     runs-on: macos-latest
     steps:
+      - name: Clean up CI machine
+        run: |
+          if ! brew cask ls visual-studio &>/dev/null; then
+            if ! rm -r '/Applications/Visual Studio.app'; then
+              echo '::warning::Workaround for Visual Studio is no longer needed.'
+            fi
+          fi
       - name: Update Homebrew
         id: update_homebrew
         run: |
