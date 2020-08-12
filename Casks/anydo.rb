@@ -7,7 +7,7 @@ cask "anydo" do
   name "Any.do"
   homepage "https://www.any.do/"
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "Any.do.app"
 end
