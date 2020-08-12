@@ -1,6 +1,6 @@
 cask "musicbrainz-picard" do
-  version "2.4"
-  sha256 "5ceaa46f405c60fd53e5dad4de0e52202a99909a4b071e4d3fcdfe1307f0419a"
+  version "2.4.1"
+  sha256 "3eb56ecc3895d3a497a45b124945237c2e6d0711778b162ea32e420ea05a3b18"
 
   # musicbrainz.osuosl.org/pub/ was verified as official when first introduced to the cask
   url "https://musicbrainz.osuosl.org/pub/musicbrainz/picard/MusicBrainz-Picard-#{version}.dmg"
