@@ -1,0 +1,25 @@
+name: CI (deprecated)
+
+on:
+  - pull_request
+
+jobs:
+  ci-deprecated:
+    name: ci-deprecated
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@main
+      - name: Check out Pull Request
+        uses: ./.github/actions/checkout_cask_pr
+        id: checkout_cask_pr
+      - name: Cache Homebrew Gems
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.checkout_cask_pr.outputs.homebrew_gems_cache_dir }}
+          key: homebrew-gems-cache-${{ steps.checkout_cask_pr.outputs.homebrew_gems_cache_id }}
+          restore-keys: homebrew-gems-cache-
+      - name: Install Homebrew Gems
+        run: brew install-bundler-gems
+      - name: Run brew cask ci
+        run: brew cask ci
+        working-directory: ${{ steps.checkout_cask_pr.outputs.tap_path }}
