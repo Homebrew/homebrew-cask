@@ -1,8 +1,8 @@
 cask "a-better-finder-attributes" do
   version "6.23"
-  sha256 "9340d55ce1433836942424648cff0accdb70445f2cbd81a219d7c8eca6b74877"
+  sha256 "a8c45d2684f893e947d4be9b7fc0fb06b40df99257e203d7827519e83c193ce9"
 
-  url "https://www.publicspace.net/download/ABFAX.dmg"
+  url "https://www.publicspace.net/download/signedABFA#{version.major}.zip"
   appcast "https://www.publicspace.net/app/signed_abfa#{version.major}.xml"
   name "A Better Finder Attributes"
   homepage "https://www.publicspace.net/ABetterFinderAttributes/"
