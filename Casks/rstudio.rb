@@ -1,6 +1,6 @@
 cask "rstudio" do
-  version "1.3.1056"
-  sha256 "f343c77da23e642bc2a3be7263b3f719571d586285c91e8822e0b9276dbd25d1"
+  version "1.3.1073"
+  sha256 "0878b305c8013cca32f0b383c033203bdb6b9492eb6e598766de76af677b367c"
 
   # rstudio.org/ was verified as official when first introduced to the cask
   url "https://download1.rstudio.org/desktop/macos/RStudio-#{version}.dmg"
