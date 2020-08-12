@@ -1,4 +1,4 @@
-cask "fme-desktop" do
+cask "fme" do
   version "2020.1.1-b20608"
   sha256 "099e7834f6e8b5724d532fdfd3e9aef9d5495842fe83dbd248d6862af90b6f6d"
 
