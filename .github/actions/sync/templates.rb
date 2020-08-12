@@ -3,6 +3,7 @@
 require 'fileutils'
 require 'open3'
 require 'tmpdir'
+require 'pathname'
 
 CASK_REPOS = [
   'Homebrew/homebrew-cask-drivers',
@@ -30,37 +31,42 @@ SH
 FileUtils.chmod '+x', ENV['GIT_ASKPASS']
 
 CASK_REPOS.each do |repo|
-  repo_dir = "#{tmpdir}/#{repo}"
+  repo_dir = Pathname("#{tmpdir}/#{repo}")
 
   puts "Cloning #{repo}…"
-  git 'clone', "https://github.com/#{repo}.git", '--quiet', '--depth=1', repo_dir
+  git 'clone', "https://github.com/#{repo}.git", '--quiet', '--depth=1', repo_dir.to_s
   puts
 
   puts 'Detecting changes…'
   [
     '.editorconfig',
     '.gitattributes',
-    '.github',
+    '.github/actions/{automerge,checkout_cask_pr}/**/*',
+    '.github/ISSUE_TEMPLATE/*.md',
+    '.github/workflows/{automerge,ci,old-ci}.yml',
     '.gitignore',
     '.travis.yml',
     'Casks/.rubocop.yml',
-  ].each do |path|
-    dst_path = File.join(repo_dir, path)
-    FileUtils.rm_rf dst_path
-    FileUtils.cp_r path, dst_path if File.exist?(path)
+  ].each do |glob|
+    src_paths = Pathname.glob(glob)
+    dst_paths = Pathname.glob(repo_dir.join(glob))
+
+    dst_paths.each do |path|
+      FileUtils.rm_f path
+    end
+
+    src_paths.each do |path|
+      repo_dir.join(path.dirname).mkpath
+      FileUtils.cp path, repo_dir.join(path)
+    end
   end
 
-  # Remove actions which should only be run from the main repo.
-  FileUtils.rm_r File.join(repo_dir, '.github/actions/sync')
-  FileUtils.rm   File.join(repo_dir, '.github/workflows/sync_labels.yml')
-  FileUtils.rm   File.join(repo_dir, '.github/workflows/sync_templates_and_ci_config.yml')
+  FileUtils.rm repo_dir.join('.github/ISSUE_TEMPLATE/02_feature_request.md')
 
-  FileUtils.rm File.join(repo_dir, '.github/ISSUE_TEMPLATE/02_feature_request.md')
+  workflow = File.read(repo_dir.join('.github/PULL_REQUEST_TEMPLATE.md'))
+  File.write repo_dir.join('.github/PULL_REQUEST_TEMPLATE.md'), workflow.gsub(/Homebrew\/homebrew-cask\/(pulls|issues|search)/, "#{repo}/\\1")
 
-  workflow = File.read(File.join(repo_dir, '.github/PULL_REQUEST_TEMPLATE.md'))
-  File.write File.join(repo_dir, '.github/PULL_REQUEST_TEMPLATE.md'), workflow.gsub(/Homebrew\/homebrew-cask\/(pulls|issues|search)/, "#{repo}/\\1")
-
-  out, err, status = Open3.capture3('git', '-C', repo_dir, 'status', '--porcelain', '--ignore-submodules=dirty')
+  out, err, status = Open3.capture3('git', '-C', repo_dir.to_s, 'status', '--porcelain', '--ignore-submodules=dirty')
   raise err unless status.success?
 
   repo_changed = !out.chomp.empty?
@@ -71,21 +77,21 @@ CASK_REPOS.each do |repo|
     next
   end
 
-  git '-C', repo_dir, 'add', '--all'
+  git '-C', repo_dir.to_s, 'add', '--all'
 
-  out, err, status = Open3.capture3('git', '-C', repo_dir, 'diff', '--name-only', '--staged')
+  out, err, status = Open3.capture3('git', '-C', repo_dir.to_s, 'diff', '--name-only', '--staged')
   raise err unless status.success?
 
   modified_paths = out.lines.map(&:chomp)
 
   modified_paths.each do |modified_path|
     puts "Detected changes to #{modified_path}."
-    git '-C', repo_dir, 'commit', modified_path, '--message', "#{File.basename(modified_path)}: update to match main repo", '--quiet'
+    git '-C', repo_dir.to_s, 'commit', modified_path, '--message', "#{File.basename(modified_path)}: update to match main repo", '--quiet'
   end
   puts
 
   puts 'Pushing changes…'
-  git '-C', repo_dir, 'push', 'origin', 'master'
+  git '-C', repo_dir.to_s, 'push', 'origin', 'master'
 
   puts
 end
