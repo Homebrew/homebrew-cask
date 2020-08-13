@@ -1,6 +1,6 @@
 cask "transcribe" do
-  version "8.75.1"
-  sha256 "cca410ca85e6c1b19170fa973dc2cc4d90713e04e2e9b3f144186a50482ff6bc"
+  version "8.75.2"
+  sha256 "f01781100cd3b9987c8f8892145a2eaa358df07b92e10e26f30b6a877f5b352c"
 
   url "https://www.seventhstring.com/xscribe/transcribe.dmg"
   appcast "https://www.seventhstring.com/xscribe/history.html"
