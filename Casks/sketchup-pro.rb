@@ -1,36 +1,36 @@
 cask "sketchup-pro" do
-  version "20.1.228,2020.1"
+  version "20.2.171,2020.2"
 
   language "de" do
-    sha256 "54c9ec6e7c13d920be52d63a83f17487b219473fcd7a2920ee36957af08f1815"
+    sha256 "834c0255ba4b0aa59f60e93d78245b6b02d05bcf1c99e9b86cae478d9a67bce8"
     "de"
   end
   language "en", default: true do
-    sha256 "54c9ec6e7c13d920be52d63a83f17487b219473fcd7a2920ee36957af08f1815"
+    sha256 "834c0255ba4b0aa59f60e93d78245b6b02d05bcf1c99e9b86cae478d9a67bce8"
     "en"
   end
   language "es" do
-    sha256 "54c9ec6e7c13d920be52d63a83f17487b219473fcd7a2920ee36957af08f1815"
+    sha256 "834c0255ba4b0aa59f60e93d78245b6b02d05bcf1c99e9b86cae478d9a67bce8"
     "es"
   end
   language "fr" do
-    sha256 "54c9ec6e7c13d920be52d63a83f17487b219473fcd7a2920ee36957af08f1815"
+    sha256 "834c0255ba4b0aa59f60e93d78245b6b02d05bcf1c99e9b86cae478d9a67bce8"
     "fr"
   end
   language "it" do
-    sha256 "54c9ec6e7c13d920be52d63a83f17487b219473fcd7a2920ee36957af08f1815"
+    sha256 "834c0255ba4b0aa59f60e93d78245b6b02d05bcf1c99e9b86cae478d9a67bce8"
     "it"
   end
   language "ja" do
-    sha256 "54c9ec6e7c13d920be52d63a83f17487b219473fcd7a2920ee36957af08f1815"
+    sha256 "834c0255ba4b0aa59f60e93d78245b6b02d05bcf1c99e9b86cae478d9a67bce8"
     "ja"
   end
   language "ko" do
-    sha256 "54c9ec6e7c13d920be52d63a83f17487b219473fcd7a2920ee36957af08f1815"
+    sha256 "834c0255ba4b0aa59f60e93d78245b6b02d05bcf1c99e9b86cae478d9a67bce8"
     "ko"
   end
   language "pt-BR" do
-    sha256 "54c9ec6e7c13d920be52d63a83f17487b219473fcd7a2920ee36957af08f1815"
+    sha256 "834c0255ba4b0aa59f60e93d78245b6b02d05bcf1c99e9b86cae478d9a67bce8"
     "pt-BR"
   end
   language "ru" do
