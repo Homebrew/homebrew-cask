@@ -41,6 +41,8 @@ CASK_REPOS.each do |repo|
   [
     '.editorconfig',
     '.gitattributes',
+    '.github/*.md',
+    '.github/*.yml',
     '.github/actions/{automerge,checkout_cask_pr}/**/*',
     '.github/ISSUE_TEMPLATE/*.md',
     '.github/workflows/{automerge,ci,old-ci}.yml',
@@ -90,8 +92,11 @@ CASK_REPOS.each do |repo|
   end
   puts
 
-  puts 'Pushing changes…'
-  git '-C', repo_dir.to_s, 'push', 'origin', 'master'
-
-  puts
+  if ENV["GITHUB_REF"] == "refs/heads/master"
+    puts 'Pushing changes…'
+    git '-C', repo_dir.to_s, 'push', 'origin', 'master'
+    puts
+  else
+    puts 'Would push changes…'
+  end
 end
