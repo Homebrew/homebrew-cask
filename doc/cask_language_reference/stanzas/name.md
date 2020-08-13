@@ -2,7 +2,7 @@
 
 `name` accepts a UTF-8 string defining the name of the software, including capitalization and punctuation. It is used to help with searchability and disambiguation.
 
-Unlike the [token](https://github.com/Homebrew/homebrew-cask/blob/master/doc/cask_language_reference/token_reference.md), which is simplified and reduced to a limited set of characters, the `name` stanza can include the proper capitalization, spacing and punctuation to match the official name of the software. For disambiguation purposes, it is recommended to spell out the name of the application, and including the vendor name if necessary. A good example is [`pycharm-ce`](https://github.com/Homebrew/homebrew-cask/blob/fc05c0353aebb28e40db72faba04b82ca832d11a/Casks/pycharm-ce.rb#L6-L7), whose name is spelled out as `Jetbrains PyCharm Community Edition` makes sense even though it is likely never referenced as such anywhere.
+Unlike the [token](https://github.com/Homebrew/homebrew-cask/blob/master/doc/cask_language_reference/token_reference.md), which is simplified and reduced to a limited set of characters, the `name` stanza can include the proper capitalization, spacing and punctuation to match the official name of the software. For disambiguation purposes, it is recommended to spell out the name of the application, and including the vendor name if necessary. A good example is [`pycharm-ce`](https://github.com/Homebrew/homebrew-cask/blob/fc05c0353aebb28e40db72faba04b82ca832d11a/Casks/pycharm-ce.rb#L6-L7), whose name is spelled out as `Jetbrains PyCharm Community Edition`, even though it is likely never referenced as such anywhere.
 
 Additional details about the software can be provided in the [desc](desc.md) stanza.
 
