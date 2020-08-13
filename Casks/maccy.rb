@@ -16,7 +16,7 @@ cask "maccy" do
   uninstall quit: "org.p0deje.Maccy"
 
   zap login_item: "Maccy",
-      trash: [
+      trash:      [
         "~/Library/Application Scripts/org.p0deje.Maccy",
         "~/Library/Containers/org.p0deje.Maccy",
       ]
