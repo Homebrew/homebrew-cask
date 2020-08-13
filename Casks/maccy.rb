@@ -19,5 +19,5 @@ cask "maccy" do
       trash: [
         "~/Library/Application Scripts/org.p0deje.Maccy",
         "~/Library/Containers/org.p0deje.Maccy",
-  ]
+      ]
 end
