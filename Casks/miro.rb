@@ -1,6 +1,16 @@
-class Miro < Cask
-  url 'http://ftp.osuosl.org/pub/pculture.org/miro/osx/Miro.dmg'
-  homepage 'http://www.getmiro.com/'
-  version '5.0.4'
-  sha1 'e752e6ca859d469ff5f4de88b33ebb0d44329b71'
+cask "miro" do
+  version :latest
+  sha256 :no_check
+
+  url "https://desktop.miro.com/platforms/darwin/Miro.dmg"
+  name "Miro"
+  name "RealtimeBoard"
+  homepage "https://miro.com/"
+
+  app "Miro.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.electron.realtimeboard.plist",
+    "~/Library/Saved Application State/com.electron.realtimeboard.savedState",
+  ]
 end

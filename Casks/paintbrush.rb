@@ -1,6 +1,19 @@
-class Paintbrush < Cask
-  url 'http://downloads.sourceforge.net/project/paintbrush/Paintbrush%202.x/Paintbrush%202.1.1/Paintbrush-2.1.1.zip?r=http%3A%2F%2Fpaintbrush.sourceforge.net%2Fdownloads%2F&ts=1351154031&use_mirror=superb-dca2'
-  homepage 'http://paintbrush.sourceforge.net/'
-  version '2.1.1'
-  sha1 'f8dedc7b22ed017dea43d76b5686b226ebe13ef2'
+cask "paintbrush" do
+  version "2.5.0"
+  sha256 "fca1d23f6da1ff1fe6768ba67cd692362cbf86ad9adf72431514740a37c513b6"
+
+  # downloads.sourceforge.net/paintbrush/ was verified as official when first introduced to the cask
+  url "https://downloads.sourceforge.net/paintbrush/Paintbrush%202.x/Paintbrush%20#{version}/Paintbrush-#{version}.zip"
+  appcast "https://paintbrush.sourceforge.io/updates#{version.major}x.xml"
+  name "Paintbrush"
+  homepage "https://paintbrush.sourceforge.io/"
+
+  app "Paintbrush.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.soggywaffles.paintbrush.sfl*",
+    "~/Library/Preferences/com.soggywaffles.Paintbrush.LSSharedFileList.plist",
+    "~/Library/Preferences/com.soggywaffles.Paintbrush.plist",
+    "~/Library/Caches/com.soggywaffles.Paintbrush",
+  ]
 end

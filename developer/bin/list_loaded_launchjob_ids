@@ -1,0 +1,26 @@
+#!/bin/bash
+
+readonly program="$(basename "${0}")"
+
+function usage {
+  echo "
+    List IDs for currently loaded launchd jobs. Job IDs attributed to Apple are excluded from the output.
+
+    Usage:
+      ${program} [options]
+
+    Options:
+      -h, --help   Show this message.
+  " | sed -E 's/ {4}//'
+}
+
+if [[ "${1}" =~ ^(-h|--help)$ ]]; then
+  usage
+  exit 0
+fi
+
+(/usr/bin/sudo -p 'The system password is required to see all launchd jobs: ' -- /bin/launchctl list && /bin/launchctl list) | \
+  /usr/bin/cut -f3 | \
+  /usr/bin/grep --invert-match '^Label$' | \
+  /usr/bin/grep --invert-match '^com\.apple\.' | \
+  /usr/bin/grep --extended-regexp --invert-match '\.[0-9]+$'

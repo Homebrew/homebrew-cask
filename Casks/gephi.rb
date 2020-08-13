@@ -1,6 +1,12 @@
-class Gephi < Cask
-  url 'https://launchpad.net/gephi/0.8/0.8.1beta/+download/gephi-0.8.1-beta.dmg'
-  homepage 'http://gephi.org/'
-  version '0.8.1'
-  sha1 '0bd1d9d5b1da69b77217949b788597a952cbd846'
+cask "gephi" do
+  version "0.9.2"
+  sha256 "e83641108bcab4326526293acf2da48ac107c95b811d7f23e1fc1c621489f097"
+
+  # github.com/gephi/gephi/ was verified as official when first introduced to the cask
+  url "https://github.com/gephi/gephi/releases/download/v#{version}/gephi-#{version}-macos.dmg"
+  appcast "https://github.com/gephi/gephi/releases.atom"
+  name "Gephi"
+  homepage "https://gephi.org/"
+
+  app "Gephi.app"
 end

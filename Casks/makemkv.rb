@@ -1,6 +1,16 @@
-class Makemkv < Cask
-  url 'http://www.makemkv.com/download/makemkv_v1.7.8_osx.dmg'
-  homepage 'http://www.makemkv.com/'
-  version '1.7.8'
-  sha1 '33b486d4ae7a6e93dd75fa25411d365bb46b9387'
+cask "makemkv" do
+  version "1.15.2"
+  sha256 "841bf2e6bbd13f793a84595aa1bb1bb02861eb4dae848d26cd96fe0ddd53f970"
+
+  url "https://www.makemkv.com/download/makemkv_v#{version}_osx.dmg"
+  appcast "https://www.makemkv.com/download/"
+  name "MakeMKV"
+  homepage "https://www.makemkv.com/"
+
+  app "MakeMKV.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.makemkv.MakeMKV.plist",
+    "~/Library/Saved Application State/com.makemkv.MakeMKV.savedState",
+  ]
 end

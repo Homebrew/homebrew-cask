@@ -1,6 +1,14 @@
-class Unetbootin < Cask
-  url 'http://unetbootin.sourceforge.net/unetbootin-mac-latest.zip'
-  homepage 'http://unetbootin.sourceforge.net/'
-  version 'latest'
-  sha1 'afdf677dc7fa6668a4772c25ce279c91900df86a'
+cask "unetbootin" do
+  version "681"
+  sha256 "9e6b90a15c208d7979dc1e45ccb8e7e17f669d0143ccc96c914ac42af4c4ff20"
+
+  # github.com/unetbootin/unetbootin/ was verified as official when first introduced to the cask
+  url "https://github.com/unetbootin/unetbootin/releases/download/#{version}/unetbootin-mac-#{version}.dmg"
+  appcast "https://github.com/unetbootin/unetbootin/releases.atom"
+  name "UNetbootin"
+  homepage "https://unetbootin.github.io/"
+
+  app "unetbootin.app"
+
+  zap trash: "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.yourcompany.unetbootin.sfl*"
 end

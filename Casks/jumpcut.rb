@@ -1,7 +1,14 @@
-class Jumpcut < Cask
-  url 'http://downloads.sourceforge.net/project/jumpcut/jumpcut/0.63/Jumpcut_0.63.tgz'
-  homepage 'http://jumpcut.sourceforge.net/'
-  version '0.63'
-  sha1 '6ac88694f84b549f87c7c20bbf028f1d174d9e40'
-end
+cask "jumpcut" do
+  version "0.72"
+  sha256 "37c354d14394ca0af113a38295b3c1f8ec4e44e1f9bd90346f7a1cdebea78fc5"
 
+  # github.com/snark/jumpcut/ was verified as official when first introduced to the cask
+  url "https://github.com/snark/jumpcut/releases/download/v#{version}/Jumpcut-#{version}.tar.bz2"
+  appcast "https://github.com/snark/jumpcut/releases.atom"
+  name "Jumpcut"
+  homepage "https://snark.github.io/jumpcut/"
+
+  depends_on macos: ">= :el_capitan"
+
+  app "Jumpcut.app"
+end

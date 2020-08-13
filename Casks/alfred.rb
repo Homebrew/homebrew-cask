@@ -1,6 +1,24 @@
-class Alfred < Cask
-  url 'http://cachefly.alfredapp.com/Alfred_2.0.1_173.zip'
-  homepage 'http://www.alfredapp.com/'
-  version '2.0.1_173'
-  sha1 '3b5e59e799d7f42bc73fbd425e85b6154608a98b'
+cask "alfred" do
+  version "4.1_1167"
+  sha256 "a84da06a7624eadf38842bfa949a3ecebbf3da3c7eb130ece4fbcfb2cad27c3f"
+
+  url "https://cachefly.alfredapp.com/Alfred_#{version}.dmg"
+  appcast "https://www.alfredapp.com/app/update#{version.major}/general.xml"
+  name "Alfred"
+  desc "Application launcher and productivity software"
+  homepage "https://www.alfredapp.com/"
+
+  auto_updates true
+
+  app "Alfred #{version.major}.app"
+
+  uninstall quit: "com.runningwithcrayons.Alfred"
+
+  zap trash: [
+    "~/Library/Application Support/Alfred",
+    "~/Library/Caches/com.runningwithcrayons.Alfred",
+    "~/Library/Preferences/com.runningwithcrayons.Alfred.plist",
+    "~/Library/Preferences/com.runningwithcrayons.Alfred-Preferences.plist",
+    "~/Library/Saved Application State/com.runningwithcrayons.Alfred-Preferences.savedState",
+  ]
 end

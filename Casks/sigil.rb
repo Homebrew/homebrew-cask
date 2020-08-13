@@ -1,6 +1,20 @@
-class Sigil < Cask
-  url 'http://sigil.googlecode.com/files/Sigil-0.6.2-Mac-Package.dmg'
-  homepage 'http://code.google.com/p/sigil/'
-  version '0.6.2'
-  sha1 '4fe9d60e6a5f2809f2311494e906c72d6fef0755'
+cask "sigil" do
+  version "1.3.0"
+  sha256 "8adb6e959c02e982a07cd848e7e20f832424dc9a92620fbbc0a59f8791fa7859"
+
+  # github.com/Sigil-Ebook/Sigil/ was verified as official when first introduced to the cask
+  url "https://github.com/Sigil-Ebook/Sigil/releases/download/#{version}/Sigil.app-#{version}-Mac.txz"
+  appcast "https://github.com/Sigil-Ebook/Sigil/releases.atom"
+  name "Sigil"
+  homepage "https://sigil-ebook.com/"
+
+  depends_on macos: ">= :sierra"
+
+  app "Sigil.app"
+
+  zap trash: [
+    "~/Library/Application Support/sigil-ebook",
+    "~/Library/Preferences/com.sigil-ebook.Sigil.app.plist",
+    "~/Library/Saved Application State/com.sigil-ebook.Sigil.app.savedState",
+  ]
 end

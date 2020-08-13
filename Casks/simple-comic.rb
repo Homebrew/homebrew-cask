@@ -1,6 +1,12 @@
-class SimpleComic < Cask
-  url 'http://dancingtortoisedownload.s3.amazonaws.com/SimpleComic_1.7_252.zip'
-  homepage 'http://dancingtortoise.com/simplecomic/'
-  version '1.7.252'
-  sha1 'c8efa6078ce2691b7dddf2b3b7b808f65cead227'
+cask "simple-comic" do
+  version "1.7_252"
+  sha256 "4ddd18a02a79fc8201824e6ab99291c6d4c8680f79f94bc372bf71f0535def35"
+
+  # github.com/dancingtortoise/Simple-Comic/ was verified as official when first introduced to the cask
+  url "https://github.com/dancingtortoise/Simple-Comic/releases/download/#{version}/SimpleComic_#{version}.zip"
+  appcast "https://github.com/dancingtortoise/Simple-Comic/releases.atom"
+  name "Simple Comic"
+  homepage "https://dancingtortoise.github.io/"
+
+  app "Simple Comic.app"
 end

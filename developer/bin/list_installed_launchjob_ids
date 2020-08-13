@@ -1,0 +1,90 @@
+#!/bin/bash
+#
+# list_installed_launchjob_ids
+#
+
+###
+### settings
+###
+
+set -e                # exit on any uncaught error
+set +o histexpand     # don't expand history expressions
+shopt -s nocasematch  # case-insensitive regular expressions
+
+###
+### global variables
+###
+
+# prefer GNU xargs
+xargs="$(/usr/bin/which gxargs || printf '/usr/bin/xargs')"
+
+###
+### functions
+###
+
+launchjob_id_source_1 () {
+    /usr/bin/find ~/Library/LaunchAgents/          \
+                  ~/Library/LaunchDaemons/         \
+                  /Library/LaunchAgents/           \
+                  /Library/LaunchDaemons/          \
+                  -type f -print0 2>/dev/null |    \
+    "$xargs" -0 /usr/bin/perl -0777 -ne            \
+      'while (m{<key>\s*Label\s*</key>\s*<string>([^<]+?)</string>}sg) { print "$1\n" }'
+}
+
+merge_sources () {
+    /usr/bin/sort | /usr/bin/uniq
+}
+
+clean_sources () {
+    /usr/bin/egrep -v '^com\.apple\.'
+}
+
+mark_up_sources () {
+    /usr/bin/perl -pe 's{\n}{\000}sg' |                                                \
+    "$xargs" -0 -I{} -n1 /bin/bash -c                                                  \
+      'printf "{}"; /bin/launchctl list "{}" >/dev/null 2>&1 && printf " (+)"; printf "\n"'
+}
+
+###
+### main
+###
+
+_list_installed_launchjob_ids () {
+
+    {
+      launchjob_id_source_1;
+    } |                     \
+    merge_sources |         \
+    clean_sources |         \
+    mark_up_sources
+
+}
+
+# process args
+if [[ $1 =~ ^-+h(elp)?$ ]]; then
+    printf "list_installed_launchjob_ids
+
+List all installed launchjob IDs, which may be useful
+in a Cask uninstall stanza, eg
+
+    uninstall launchctl: 'job.id.goes.here'
+
+Launchctl jobs attributed to Apple will be ommitted.
+
+If a launchctl job is currently loaded, and visible to the current
+user, it will be followed by a plus symbol '(+)' in the output.
+This can be verified via the command
+
+    /bin/launchctl list 'job.id.goes.here'
+
+See CONTRIBUTING.md and 'man launchctl' for more information.
+
+"
+    exit
+fi
+
+# dispatch main
+_list_installed_launchjob_ids "${@}"
+
+#

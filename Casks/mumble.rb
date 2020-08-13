@@ -1,6 +1,12 @@
-class Mumble < Cask
-  url 'http://ignum.dl.sourceforge.net/project/mumble/Mumble/1.2.3a/Mumble-1.2.3a.dmg'
-  homepage 'http://mumble.sourceforge.net'
-  version '1.2.3a'
-  sha1 '5831f6bcd630c338a898cf67b93ab6d083d0dc41'
+cask "mumble" do
+  version "1.3.2"
+  sha256 "badd93282e0a9bdca88f769ab9f0172dd275ae4dc5eeb3a85321941837a8c760"
+
+  # github.com/mumble-voip/mumble/ was verified as official when first introduced to the cask
+  url "https://github.com/mumble-voip/mumble/releases/download/#{version}/Mumble-#{version}.dmg"
+  appcast "https://github.com/mumble-voip/mumble/releases.atom"
+  name "Mumble"
+  homepage "https://wiki.mumble.info/wiki/Main_Page"
+
+  app "Mumble.app"
 end

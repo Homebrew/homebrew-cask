@@ -1,6 +1,23 @@
-class Flux < Cask
-  url 'http://instruktion.net/theescapers/downloads/FluxV4.zip'
-  homepage 'http://www.theescapers.com/flux/'
-  version '4'
-  sha1 '4c5ef6573bd6b55915ec26bf6ba16c10f83b30d1'
+cask "flux" do
+  version "40.1"
+  sha256 "1844305519b450cfe3c5475e99f6c06fb2eea51e65c1b0ee25f6671a49fff75d"
+
+  url "https://justgetflux.com/mac/Flux#{version}.zip"
+  appcast "https://justgetflux.com/mac/macflux.xml"
+  name "f.lux"
+  homepage "https://justgetflux.com/"
+
+  auto_updates true
+
+  app "Flux.app"
+
+  uninstall quit: "org.herf.Flux"
+
+  zap trash: [
+    "~/Library/Application Support/Flux",
+    "~/Library/Caches/org.herf.Flux",
+    "~/Library/Containers/com.justgetflux.flux",
+    "~/Library/Cookies/org.herf.Flux.binarycookies",
+    "~/Library/Preferences/org.herf.Flux.plist",
+  ]
 end

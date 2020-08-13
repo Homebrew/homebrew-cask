@@ -1,6 +1,24 @@
-class Xld < Cask
-  url 'http://xld.googlecode.com/files/xld-20130127.dmg'
-  homepage 'http://tmkk.undo.jp/xld/index_e.html'
-  version '2013-01-27'
-  sha1 '367949fa230bfe20122ccf27c399bf7953f9a214'
+cask "xld" do
+  version "2019.10.04"
+  sha256 "6fedfede1f54d691b69f0d6dc5477062c57fe6c48b7f86624a47eb1b58a1e4ef"
+
+  # sourceforge.net/xld/ was verified as official when first introduced to the cask
+  url "https://downloads.sourceforge.net/xld/xld-#{version.no_dots}.dmg"
+  appcast "https://svn.code.sf.net/p/xld/code/appcast/xld-appcast_e.xml",
+          must_contain: version.no_dots
+  name "X Lossless Decoder"
+  name "XLD"
+  homepage "https://tmkk.undo.jp/xld/index_e.html"
+
+  auto_updates true
+
+  app "XLD.app"
+  binary "CLI/xld"
+
+  zap trash: [
+    "~/Library/Application Support/XLD",
+    "~/Library/Preferences/jp.tmkk.XLD.plist",
+    "~/Library/Caches/jp.tmkk.XLD",
+    "~/Library/Saved Application State/jp.tmkk.XLD.savedState",
+  ]
 end
