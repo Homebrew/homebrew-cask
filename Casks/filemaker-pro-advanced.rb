@@ -1,24 +1,17 @@
 cask "filemaker-pro-advanced" do
-  version "18.0.3.317"
-  sha256 "4eba410556271b6a60eaed58450e2539b10281698ba854c96ab10c564040eda0"
+  version "19.0.1.116"
+  sha256 "b561a0ebc62f7b6f50bc5e1b7c05660e5a1ead2027dd296907b3ff644f0b51dc"
 
-  url "https://fmdl.filemaker.com/esd/fmpa_#{version}.dmg"
+  url "https://downloads.claris.com/esd/fmp_#{version}.dmg"
   appcast "https://www.filemaker.com/redirects/ss.txt"
   name "FileMaker Pro Advanced"
-  homepage "https://www.filemaker.com/"
+  homepage "https://www.claris.com/filemaker/"
 
   auto_updates true
 
-  pkg "FileMaker Pro #{version.major} Advanced.pkg"
-
-  preflight do
-    file = "#{staged_path}/Assisted Install.txt"
-    IO.write(file, IO.read(file).sub("AI_LICENSE_ACCEPTED=0", "AI_LICENSE_ACCEPTED=1"))
-  end
-
-  uninstall pkgutil: "com.filemaker.FMPA#{version.major}*"
+  app "FileMaker Pro.app"
 
   caveats do
-    license "https://www.filemaker.com/company/legal/docs/eula/fmpa_eula_wwe.pdf"
+    license "https://www.claris.com/company/legal/docs/eula/filemaker-pro/fmp_eula_en.pdf"
   end
 end
