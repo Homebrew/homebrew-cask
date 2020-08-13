@@ -9,6 +9,10 @@ require_relative "lib/ci_matrix"
 module Cask
   class Cmd
     class Ci < AbstractCommand
+      def self.description
+        "Test changes in a Homebrew Cask tap."
+      end
+
       def run
         with_env HOMEBREW_DEVELOPER: nil do
           odeprecated "brew cask ci"
