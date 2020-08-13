@@ -34,19 +34,19 @@ cask "sketchup-pro" do
     "pt-BR"
   end
   language "ru" do
-    sha256 "54c9ec6e7c13d920be52d63a83f17487b219473fcd7a2920ee36957af08f1815"
+    sha256 "834c0255ba4b0aa59f60e93d78245b6b02d05bcf1c99e9b86cae478d9a67bce8"
     "ru"
   end
   language "sv" do
-    sha256 "54c9ec6e7c13d920be52d63a83f17487b219473fcd7a2920ee36957af08f1815"
+    sha256 "834c0255ba4b0aa59f60e93d78245b6b02d05bcf1c99e9b86cae478d9a67bce8"
     "sv"
   end
   language "zh-CN" do
-    sha256 "54c9ec6e7c13d920be52d63a83f17487b219473fcd7a2920ee36957af08f1815"
+    sha256 "834c0255ba4b0aa59f60e93d78245b6b02d05bcf1c99e9b86cae478d9a67bce8"
     "zh-CN"
   end
   language "zh-TW" do
-    sha256 "54c9ec6e7c13d920be52d63a83f17487b219473fcd7a2920ee36957af08f1815"
+    sha256 "834c0255ba4b0aa59f60e93d78245b6b02d05bcf1c99e9b86cae478d9a67bce8"
     "zh-TW"
   end
 
