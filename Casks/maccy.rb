@@ -17,6 +17,7 @@ cask "maccy" do
 
   zap login_item: "Maccy",
       trash:      [
+        "~/Library/Preferences/org.p0deje.Maccy.plist",
         "~/Library/Application Scripts/org.p0deje.Maccy",
         "~/Library/Containers/org.p0deje.Maccy",
       ]
