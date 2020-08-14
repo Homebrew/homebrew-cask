@@ -20,8 +20,12 @@ module CiMatrix
     changed_files[:modified_cask_files].map do |path|
       cask = Cask::CaskLoader.load(path)
 
-      audit_args = ["--download", "--appcast", "--online", "--token-conflicts", "--strict"]
-      audit_args << "--new-cask" if changed_files[:added_files].include?(path)
+      audit_args = ["--download", "--appcast", "--online", "--strict"]
+
+      if changed_files[:added_files].include?(path)
+        audit_args << "--token-conflicts"
+        audit_args << "--new-cask"
+      end
 
       {
         name:              cask.token,
