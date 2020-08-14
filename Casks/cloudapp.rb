@@ -7,6 +7,8 @@ cask "cloudapp" do
   name "CloudApp"
   homepage "https://www.getcloudapp.com/"
 
+  auto_updates true
+
   app "CloudApp.app"
 
   zap trash: "~/Library/Preferences/com.linebreak.CloudAppMacOSX.plist"
