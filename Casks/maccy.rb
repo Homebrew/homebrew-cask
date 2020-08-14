@@ -1,6 +1,6 @@
 cask "maccy" do
-  version "0.14.1"
-  sha256 "d9512f737b5ac14620cafca286adc95f7036d5fc9c4fab07da563e42bc0b4002"
+  version "0.15.0"
+  sha256 "57fe3b4798ac0fb429ba92be1f249e4e744ae43e7346df722db62df28de091ab"
 
   # github.com/p0deje/Maccy/ was verified as official when first introduced to the cask
   url "https://github.com/p0deje/Maccy/releases/download/#{version}/Maccy.app.zip"
@@ -16,5 +16,9 @@ cask "maccy" do
   uninstall quit: "org.p0deje.Maccy"
 
   zap login_item: "Maccy",
-      trash:      "~/Library/Preferences/org.p0deje.Maccy.plist"
+      trash:      [
+        "~/Library/Preferences/org.p0deje.Maccy.plist",
+        "~/Library/Application Scripts/org.p0deje.Maccy",
+        "~/Library/Containers/org.p0deje.Maccy",
+      ]
 end
