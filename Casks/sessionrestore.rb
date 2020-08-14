@@ -1,6 +1,6 @@
 cask "sessionrestore" do
-  version "2.1.6"
-  sha256 "e2537a5a4430b9065f49441d84e7f7c34857d6ecd405d208f3dcaed859d17d04"
+  version "2.1.7"
+  sha256 "f3071a69aa5a1abe24003ee9d0329fb2de8257e36e7ed79bf99ab21e9d4f5e70"
 
   url "https://sweetpproductions.com/products/sessionrestore/SessionRestore.dmg"
   appcast "https://sweetpproductions.com/products/sessionrestore/appcast.xml"
