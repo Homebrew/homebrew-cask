@@ -10,4 +10,9 @@ cask "streamlabs-obs" do
   auto_updates true
 
   app "Streamlabs OBS.app"
+
+  zap trash: [
+    "~/Library/Application Support/slobs-client",
+    "~/Library/Application Support/slobs-plugins",
+  ]
 end
