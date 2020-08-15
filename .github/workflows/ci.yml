@@ -123,6 +123,8 @@ jobs:
 
       - name: Run brew cask audit ${{ matrix.name }}
         run: brew cask audit ${{ join(matrix.audit_args, ' ') }} '${{ matrix.cask }}'
+        env:
+          HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.HOMEBREW_READ_ONLY_GITHUB_API_TOKEN }}
         working-directory: ${{ matrix.working_directory }}
         timeout-minutes: 30
 
