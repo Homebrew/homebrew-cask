@@ -7,5 +7,7 @@ cask "streamlabs-obs" do
   name "Streamlabs OBS"
   homepage "https://streamlabs.com/"
 
+  auto_updates true
+
   app "Streamlabs OBS.app"
 end
