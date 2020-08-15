@@ -10,9 +10,9 @@ cask "usenapp" do
   app "Usenapp.app"
 
   zap trash: [
-             '~/Library/Application Support/Usenapp',
-             '~/Library/Caches/com.xoroxsoft.usenapp',
-             '~/Library/Preferences/com.xoroxsoft.usenapp.plist',
-             '~/Library/Saved Application State/com.xoroxsoft.usenapp.savedState',
-           ]
+    "~/Library/Application Support/Usenapp",
+    "~/Library/Caches/com.xoroxsoft.usenapp",
+    "~/Library/Preferences/com.xoroxsoft.usenapp.plist",
+    "~/Library/Saved Application State/com.xoroxsoft.usenapp.savedState",
+  ]
 end
