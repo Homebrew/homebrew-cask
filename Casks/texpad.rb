@@ -6,8 +6,8 @@ cask "texpad" do
     version "1.8.5,404:f8f30e5"
     sha256 "676a1b071142c022cdfda57668c811f7747b36ded442548073fe6dda1b9ca934"
   else
-    version "1.8.15,526:72a159b"
-    sha256 "dda0ef7642c25cce779c6c58a5670ed221fab713ae88aca0fc57b9c245c7bc0a"
+    version "1.8.15,529:346c842"
+    sha256 "480bf4a3e8fd809c1eb07cb00099ed0d362996738a872efb42cb179488e8c1e1"
   end
 
   # download.texpadapp.com/ was verified as official when first introduced to the cask
