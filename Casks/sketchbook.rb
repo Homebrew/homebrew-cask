@@ -11,4 +11,10 @@ cask "sketchbook" do
 
   uninstall quit:    "com.autodesk.SketchBook",
             pkgutil: ".*SketchBook.*"
+
+  zap trash: [
+    "~/Library/Caches/com.autodesk.SketchBook",
+    "~/Library/Preferences/com.autodesk.SketchBook.plist",
+    "~/Library/Application Support/Autodesk/SketchBook",
+  ]
 end
