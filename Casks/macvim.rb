@@ -29,8 +29,4 @@ cask "macvim" do
     "~/Library/Preferences/org.vim.MacVim.LSSharedFileList.plist",
     "~/Library/Preferences/org.vim.MacVim.plist",
   ]
-
-  caveats <<~EOS
-    To avoid overwriting vim binaries from other formulae or casks, install with the "--no-binaries" flag.
-  EOS
 end
