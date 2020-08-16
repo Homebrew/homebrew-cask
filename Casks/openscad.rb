@@ -8,7 +8,16 @@ cask "openscad" do
   homepage "https://www.openscad.org/"
 
   app "OpenSCAD.app"
-  binary "#{appdir}/OpenSCAD.app/Contents/MacOS/OpenSCAD", target: "openscad"
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/openscad.wrapper.sh"
+  binary shimscript, target: "openscad"
+
+  preflight do
+    IO.write shimscript, <<~EOS
+      #!/bin/sh
+      '#{appdir}/OpenSCAD.app/Contents/MacOS/OpenSCAD' "$@"
+    EOS
+  end
 
   zap trash: [
     "~/Library/Caches/org.openscad.OpenSCAD",
