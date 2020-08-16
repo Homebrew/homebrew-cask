@@ -8,8 +8,6 @@ cask "flutter" do
   desc "UI toolkit for building applications for mobile, web and desktop"
   homepage "https://flutter.dev/"
 
-  # Flutter manages its components by itself so it should not be updated by
-  # Homebrew in most cases, else those components would be lost on upgrade
   auto_updates true
   depends_on macos: ">= :catalina"
 
