@@ -1,8 +1,9 @@
 cask "easyeda" do
-  version :latest
-  sha256 :no_check
+  version "6.3.53"
+  sha256 "794d6fb526a9fa5d0a7d554513f70ca7f6fa6b4f19d8eaa62701e909a8aeacb4"
 
-  url "https://image.easyeda.com/files/easyeda-client-mac-x64.dmg"
+  url "https://image.easyeda.com/files/easyeda-#{version}-mac-x64.zip"
+  appcast "https://easyeda.com/page/download"
   name "EasyEDA"
   homepage "https://easyeda.com/"
 
