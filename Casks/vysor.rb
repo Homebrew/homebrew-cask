@@ -1,6 +1,6 @@
 cask "vysor" do
-  version "3.1.3"
-  sha256 "b6626e8ad2324c6a1e40f52a87899708124c36d71e6132de28068b5989ed7ac8"
+  version "3.1.4"
+  sha256 "dc77dc49179ff0381a62cd2301dbc012bc026381b11d70410cce638ca3211c21"
 
   # github.com/koush/vysor.io/ was verified as official when first introduced to the cask
   url "https://github.com/koush/vysor.io/releases/download/v#{version}/Vysor-mac-#{version}.zip"
