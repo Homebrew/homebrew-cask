@@ -3,7 +3,7 @@ cask "retroarch" do
   sha256 "2d5ea12c92364803465e67376aa496529109f01db9ce182c02bc4e0bc6ca19cd"
 
   url "https://buildbot.libretro.com/stable/#{version}/apple/osx/x86_64/RetroArch.dmg"
-  appcast "https://buildbot.libretro.com/stable/"
+  appcast "https://retroarch.com/?page=platforms"
   name "RetroArch"
   homepage "https://www.libretro.com/"
 
