@@ -1,22 +1,22 @@
-cask 'zappy' do
-  version '2.5.4'
-  sha256 'c168ad7db84edaf1412cb14b951b238e5cd6eac92e2fa9822619a98672484f19'
+cask "zappy" do
+  version "2.5.5"
+  sha256 "51dcd3d361040802b2b89f6daffb016acbc26faf5c9769a0de055f71caa6c186"
 
   url "https://zappy.zapier.com/releases/zappy-#{version}.zip"
-  appcast 'https://zappy.zapier.com/releases/appcast.xml'
-  name 'Zappy'
-  homepage 'https://zapier.com/zappy'
+  appcast "https://zappy.zapier.com/releases/appcast.xml"
+  name "Zappy"
+  homepage "https://zapier.com/zappy"
 
   auto_updates true
 
-  app 'Zappy.app'
+  app "Zappy.app"
 
-  uninstall quit: 'com.blackbeltlabs.Zappy'
+  uninstall quit: "com.blackbeltlabs.Zappy"
 
   zap trash: [
-               '~/Library/Application Support/com.blackbeltlabs.Zappy',
-               '~/Library/Caches/com.blackbeltlabs.Zappy',
-               '~/Library/Preferences/com.blackbeltlabs.Zappy.plist',
-               '~/Library/zappy',
-             ]
+    "~/Library/Application Support/com.blackbeltlabs.Zappy",
+    "~/Library/Caches/com.blackbeltlabs.Zappy",
+    "~/Library/Preferences/com.blackbeltlabs.Zappy.plist",
+    "~/Library/zappy",
+  ]
 end

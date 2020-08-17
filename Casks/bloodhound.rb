@@ -1,11 +1,11 @@
-cask 'bloodhound' do
-  version '3.0.4'
-  sha256 'a0411b1b8ea64d342813eefa92371a40ea46ae27bcfca61b72a66950322ecd3f'
+cask "bloodhound" do
+  version "3.0.5"
+  sha256 "2f29ef1160800ac8190ccf6ab09e546fc35a2aaa66b70393a9256a765d46fb46"
 
   url "https://github.com/BloodHoundAD/BloodHound/releases/download/#{version}/BloodHound-darwin-x64.zip"
-  appcast 'https://github.com/BloodHoundAD/BloodHound/releases.atom'
-  name 'bloodhound'
-  homepage 'https://github.com/BloodHoundAD/BloodHound'
+  appcast "https://github.com/BloodHoundAD/BloodHound/releases.atom"
+  name "bloodhound"
+  homepage "https://github.com/BloodHoundAD/BloodHound"
 
-  app 'BloodHound-darwin-x64/BloodHound.app'
+  app "BloodHound-darwin-x64/BloodHound.app"
 end

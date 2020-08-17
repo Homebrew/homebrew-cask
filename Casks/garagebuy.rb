@@ -1,14 +1,14 @@
-cask 'garagebuy' do
-  version '3.4b2'
-  sha256 '9df802f477095b07ad7513aaa07563dc57c552a0ca2b4d1b54c1b13ad033a769'
+cask "garagebuy" do
+  version "3.4.1"
+  sha256 "fcb7a7bad17990e9f19c94cfcfd3b3b24ff61c3652fdd2d9d41c249c7797257e"
 
   # iwascoding.de/ was verified as official when first introduced to the cask
   url "https://www.iwascoding.de/downloads/GarageBuy_#{version}.dmg"
-  appcast 'https://www.iwascoding.com/GarageBuy/Downloads.html'
-  name 'GarageBuy'
-  homepage 'https://www.iwascoding.com/GarageBuy/'
+  appcast "https://www.iwascoding.com/GarageBuy/Downloads.html"
+  name "GarageBuy"
+  homepage "https://www.iwascoding.com/GarageBuy/"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'GarageBuy.app'
+  app "GarageBuy.app"
 end

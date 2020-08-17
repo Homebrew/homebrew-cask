@@ -1,11 +1,11 @@
-cask 'musictube' do
-  version '1.12.1'
-  sha256 'af748a4afdb577b3eb2bed4166c8d80cb7e82d9a9051878afee7abf5e5a3b084'
+cask "musictube" do
+  version "1.13.1"
+  sha256 "30eaa0863be443e3f322ee8369aae074fc0195d7f287ce44924ef7ca9d65e841"
 
-  url 'https://flavio.tordini.org/files/musictube/musictube.dmg'
-  appcast 'https://flavio.tordini.org/musictube-ws/appcast.xml'
-  name 'Musictube'
-  homepage 'https://flavio.tordini.org/musictube'
+  url "https://flavio.tordini.org/files/musictube/musictube.dmg"
+  appcast "https://flavio.tordini.org/musictube-ws/appcast.xml"
+  name "Musictube"
+  homepage "https://flavio.tordini.org/musictube"
 
-  app 'Musictube.app'
+  app "Musictube.app"
 end

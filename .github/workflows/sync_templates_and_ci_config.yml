@@ -3,14 +3,15 @@ name: Sync templates and CI config.
 on:
   push:
     branches:
+      - debug-sync
       - master
 
 jobs:
   sync_templates_and_ci_config:
-    if: startsWith( github.repository, 'Homebrew/' )
+    if: startsWith(github.repository, 'Homebrew/')
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@main
       - uses: ./.github/actions/sync
         with:
           args: /templates.rb

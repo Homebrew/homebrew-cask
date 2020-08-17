@@ -1,11 +1,12 @@
-cask 'sitebulb' do
-  version '3.7'
-  sha256 'd1c8053fd8d92b0e8ce37c2da6edaaf72adec82266874bfd9b4491bff5f7d4f9'
+cask "sitebulb" do
+  version "4.0.0"
+  sha256 "86e52aa57caca7fd38864db420c7def8cac5a5abd812ffee9b020cf668795ec9"
 
-  url "https://downloads.sitebulb.com/#{version}/macOS/Sitebulb.dmg"
-  appcast 'https://sitebulb.com/download/'
-  name 'Sitebulb'
-  homepage 'https://sitebulb.com/'
+  url "https://downloads.sitebulb.com/#{version.major}/macOS/Sitebulb.dmg"
+  appcast "https://sitebulb.com/download/",
+          must_contain: version.major_minor
+  name "Sitebulb"
+  homepage "https://sitebulb.com/"
 
-  app 'Sitebulb.app'
+  app "Sitebulb.app"
 end

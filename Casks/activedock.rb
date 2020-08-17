@@ -1,13 +1,13 @@
-cask 'activedock' do
-  version '2.1,2010'
-  sha256 'cdc029195d6cdbdafb62f3a78c257f697a0185ac0d1d08960dc82e5eaf3b21c1'
+cask "activedock" do
+  version "2.33,2033"
+  sha256 "7c9d135f986585b5de5ffbd7090dd265d25f487fc3042e1618adc3000af14ff1"
 
-  url 'https://noteifyapp.com/download/ActiveDock.dmg'
-  appcast 'https://macplus-software.com/downloads/ActiveDock.xml'
-  name 'ActiveDock'
-  homepage 'https://www.noteifyapp.com/activedock/'
+  url "https://noteifyapp.com/download/ActiveDock.dmg"
+  appcast "https://macplus-software.com/downloads/ActiveDock.xml"
+  name "ActiveDock"
+  homepage "https://www.noteifyapp.com/activedock/"
 
-  depends_on macos: '>= :high_sierra'
+  depends_on macos: ">= :high_sierra"
 
   app "ActiveDock #{version.before_comma.major}.app"
 end

@@ -5,16 +5,17 @@
 Each Cask is a Ruby block, beginning with a special header line. The Cask definition itself is always enclosed in a `do … end` block. Example:
 
 ```ruby
-cask 'alfred' do
-  version '2.7.1_387'
-  sha256 'a3738d0513d736918a6d71535ef3d85dd184af267c05698e49ac4c6b48f38e17'
+cask "alfred" do
+  version "2.7.1_387"
+  sha256 "a3738d0513d736918a6d71535ef3d85dd184af267c05698e49ac4c6b48f38e17"
 
   url "https://cachefly.alfredapp.com/Alfred_#{version}.zip"
-  name 'Alfred'
-  homepage 'https://www.alfredapp.com/'
+  name "Alfred"
+  desc "Application launcher and productivity software"
+  homepage "https://www.alfredapp.com/"
 
-  app 'Alfred 2.app'
-  app 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
+  app "Alfred 2.app"
+  app "Alfred 2.app/Contents/Preferences/Alfred Preferences.app"
 end
 ```
 
@@ -54,7 +55,6 @@ The available symbols for macOS versions are: `:yosemite`, `:el_capitan`, `:sier
 
 Note that in the official Homebrew Cask repositories only the symbolic names are allowed. The numeric comparison may only be used for third-party taps.
 
-
 ### Always Fall Through to the Newest Case
 
 Conditionals should be constructed so that the default is the newest OS version. When using an `if` statement, test for older versions, and then let the `else` statement hold the latest and greatest. This makes it more likely that the Cask will work without alteration when a new OS is released. Example (from [coconutbattery.rb](https://github.com/Homebrew/homebrew-cask/blob/2c801af44be29fff7f3cb2996455fce5dd95d1cc/Casks/coconutbattery.rb)):
@@ -72,7 +72,6 @@ end
 ### Switch Between Languages or Regions
 
 If a cask is available in multiple languages, you can use the `language` stanza to switch between languages or regions based on the system locale.
-
 
 ## Arbitrary Ruby Methods
 
@@ -113,7 +112,6 @@ enclosed in single quotes.
 
 There are currently some arbitrary limitations on Cask tokens which are in the process of being removed. The Travis bot will catch any errors during the transition.
 
-
 ## Stanza order
 
 Having a common order for stanzas makes Casks easier to update and parse. Below is the complete stanza sequence (no Cask will have all stanzas). The empty lines shown here are also important, as they help to visually delineate information.
@@ -127,6 +125,7 @@ language
 url
 appcast
 name
+desc
 homepage
 
 auto_updates
@@ -139,6 +138,7 @@ app
 pkg
 installer
 binary
+manpage
 colorpicker
 dictionary
 font

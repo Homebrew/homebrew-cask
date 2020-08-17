@@ -1,20 +1,20 @@
-cask 'clashxr' do
-  version '1.20.3'
-  sha256 '6bc1823d89563604b277c8d9e8568147b4c41fd86fecc8b5d467bc858c05b00f'
+cask "clashxr" do
+  version "1.30.1"
+  sha256 "13b845e31e13380e031a4df3650711398cbb16f8e2b01b91736a8b9d0bfd753a"
 
   url "https://github.com/paradiseduo/ClashXR/releases/download/#{version}/ClashXR.dmg"
-  appcast 'https://github.com/paradiseduo/ClashXR/releases.atom'
-  name 'ClashXR'
-  homepage 'https://github.com/paradiseduo/ClashXR'
+  appcast "https://github.com/paradiseduo/ClashXR/releases.atom"
+  name "ClashXR"
+  homepage "https://github.com/paradiseduo/ClashXR"
 
   auto_updates true
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'ClashXR.app'
+  app "ClashXR.app"
 
   zap trash: [
-               '~/Library/Preferences/com.west2online.ClashXR.plist',
-               '~/Library/Logs/ClashXR',
-               '~/.config/clash/',
-             ]
+    "~/Library/Preferences/com.west2online.ClashXR.plist",
+    "~/Library/Logs/ClashXR",
+    "~/.config/clash/",
+  ]
 end

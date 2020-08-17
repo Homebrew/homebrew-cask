@@ -2,6 +2,14 @@ require "git_diff"
 
 module GitDiffExtension
   refine GitDiff::Diff do
+    def cask_name
+      File.basename(files.first.b_path, '.rb') if single_cask?
+    end
+
+    def cask_path
+      files.first.b_path if single_cask?
+    end
+
     def simple?
       single_cask? && only_version_or_checksum?
     end
@@ -10,7 +18,7 @@ module GitDiffExtension
       return false unless files.count == 1
       file = files.first
       return false unless file.a_path == file.b_path
-      file.a_path.match?(%r{\ACasks/[^/]+\.rb\Z})
+      file.b_path.match?(%r{\ACasks/[^/]+\.rb\Z})
     end
 
     def only_version_or_checksum?
@@ -73,11 +81,11 @@ module GitDiffExtension
     end
 
     def version
-      to_s[/\A[+-]\s*version '([^']+)'\Z/, 1]
+      to_s[/\A[+-]\s*version "([^"]+)"\Z/, 1]
     end
 
     def sha256?
-      to_s.match?(/\A[+-]\s*sha256 '[0-9a-f]{64}'\Z/)
+      to_s.match?(/\A[+-]\s*sha256 "[0-9a-f]{64}"\Z/)
     end
   end
 end

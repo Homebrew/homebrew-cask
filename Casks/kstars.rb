@@ -1,11 +1,11 @@
-cask 'kstars' do
-  version '3.4.2'
-  sha256 'fea23b50fb903fc56b048f8ea36470325f32ca967d01b6f410b0f89ac564b215'
+cask "kstars" do
+  version "3.4.3"
+  sha256 "6bf27a3c97a81b520783d5ea864faa9ee3343ed5aa6e1a38f88f49e2e829375b"
 
   # indilib.org/jdownloads/kstars/ was verified as official when first introduced to the cask
   url "https://www.indilib.org/jdownloads/kstars/kstars-#{version}.dmg"
-  name 'KStars'
-  homepage 'https://edu.kde.org/kstars/'
+  name "KStars"
+  homepage "https://edu.kde.org/kstars/"
 
-  app 'kstars.app'
+  app "kstars.app"
 end

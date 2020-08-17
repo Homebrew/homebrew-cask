@@ -1,13 +1,13 @@
-cask 'marsedit' do
-  version '4.3.7'
-  sha256 'dab353d0abd0e5f09efc91ccc4d9845c141bd8100e3b44286e31294974b52022'
+cask "marsedit" do
+  version "4.4.2"
+  sha256 "8a8100eb8fe9d42cfee5fca2fbd93519f0e8b11f067f9e0ebcd5e7e109764fda"
 
   url "https://red-sweater.com/marsedit/MarsEdit#{version}.zip"
-  appcast 'https://red-sweater.com/marsedit/appcast4.php'
-  name 'MarsEdit'
-  homepage 'https://red-sweater.com/marsedit/'
+  appcast "https://red-sweater.com/marsedit/appcast4.php"
+  name "MarsEdit"
+  homepage "https://red-sweater.com/marsedit/"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'MarsEdit.app'
+  app "MarsEdit.app"
 end

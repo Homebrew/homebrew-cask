@@ -1,15 +1,15 @@
-cask 'feishu' do
-  version '3.26.6'
-  sha256 '0c09e8f00f57e1a3ca087eb6aa5c64d6217ad3b177477a4ddc8579134567df60'
+cask "feishu" do
+  version "3.29.3,1cd9bf"
+  sha256 "970e2c6011330b6d48005f559baf44ce73c430ec901c907d101b8691d9f2e498"
 
   # sf3-ttcdn-tos.pstatp.com/ was verified as official when first introduced to the cask
-  url "https://sf3-ttcdn-tos.pstatp.com/obj/ee-appcenter/Feishu-#{version}.dmg"
-  appcast 'https://www.feishu.cn/api/downloads'
-  name 'feishu'
-  homepage 'https://www.feishu.cn/'
+  url "https://sf3-ttcdn-tos.pstatp.com/obj/ee-appcenter/#{version.after_comma}/Feishu-#{version.before_comma}.dmg"
+  appcast "https://www.feishu.cn/api/downloads"
+  name "feishu"
+  homepage "https://www.feishu.cn/"
 
   auto_updates true
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
-  app 'Lark.app', target: 'Feishu.app'
+  app "Lark.app", target: "Feishu.app"
 end

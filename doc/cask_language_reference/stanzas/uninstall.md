@@ -10,7 +10,7 @@ IF YOU CANNOT DESIGN A WORKING `UNINSTALL` STANZA, PLEASE SUBMIT YOUR CASK ANYWA
 
 For most Casks, uninstall actions are determined automatically, and an explicit `uninstall` stanza is not needed. However, a Cask which uses the `pkg` or `installer manual:` stanzas will **not** know how to uninstall correctly unless an `uninstall` stanza is given.
 
-So, while the Cask language does not enforce the requirement, it is much better for end-users if every `pkg` and `installer manual:` has a corresponding `uninstall`.
+So, while the [Cask DSL](../readme.md) does not enforce the requirement, it is much better for end-users if every `pkg` and `installer manual:` has a corresponding `uninstall`.
 
 The `uninstall` stanza is available for non-`pkg` Casks, and is useful for a few corner cases. However, the documentation below concerns the typical case of using `uninstall` to define procedures for a `pkg`.
 

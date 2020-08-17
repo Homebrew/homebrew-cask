@@ -1,11 +1,11 @@
-cask 'chronicle' do
-  version '9.7.0'
-  sha256 '7ed6b98e0b237aa7ce954931ac15cd392d64062587f79c0b25d1cb8d86124aa9'
+cask "chronicle" do
+  version "9.7.2"
+  sha256 "cc3bfd5ccea35b5ff63a12034d817e7df2d3adfd00ddfb42935f84f5f4fce343"
 
-  url 'https://www.chronicleapp.com/static/downloads/chroniclepro.zip'
-  appcast 'http://www.littlefin.com/downloads/chronicle8.xml'
-  name 'Chronicle'
-  homepage 'https://chronicleapp.com/'
+  url "https://www.chronicleapp.com/static/downloads/chroniclepro.zip"
+  appcast "https://chronicleapp.com/chronicle8.xml"
+  name "Chronicle"
+  homepage "https://chronicleapp.com/"
 
-  app 'Chronicle Pro.app'
+  app "Chronicle Pro.app"
 end
