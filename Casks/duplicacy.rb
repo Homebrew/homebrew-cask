@@ -1,9 +1,10 @@
 cask "duplicacy" do
-  version "2.1.2"
-  sha256 "c9343d7c82d9f5e632b4f3de9e4a2439849f861ab7c6e4d754ea8e945f776a4f"
+  version "2.6.1"
+  sha256 "db08423f54abc19bb8607da93ff7d67c452c19c41140f8d292af3e722ea24a3b"
 
-  # acrosync.com/duplicacy/ was verified as official when first introduced to the cask
-  url "https://acrosync.com/duplicacy/duplicacy_gui_osx_#{version}.dmg"
+  # github.com was verified as official when first introduced to the cask
+  url "https://github.com/gilbertchen/duplicacy/releases/download/v#{version}/duplicacy_osx_x64_#{version}"
+  appcast "https://github.com/gilbertchen/duplicacy/releases.atom"
   name "Duplicacy"
   homepage "https://duplicacy.com/"
 
