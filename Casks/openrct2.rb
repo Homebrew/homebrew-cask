@@ -8,5 +8,7 @@ cask "openrct2" do
   name "OpenRCT2"
   homepage "https://openrct2.io/"
 
+  depends_on macos: ">= :mojave"
+
   app "OpenRCT2.app"
 end
