@@ -9,7 +9,7 @@ cask "audirvana" do
 
   auto_updates true
 
-  app 'Audirvana.app'
+  app "Audirvana.app"
 
   zap trash: [
     "/Library/LaunchDaemons/com.audirvana.Audirvana-Plus.plist",
