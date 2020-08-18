@@ -16,7 +16,7 @@ cask "cutter" do
     "~/.config/RadareOrg",
     "~/.local/share/radare2",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.radare.cutter.sfl*",
-    "~/Library/Application Support/RadareOrg/Cutter",
+    "~/Library/Application Support/RadareOrg",
     "~/Library/Preferences/org.radare.cutter.plist",
     "~/Library/Saved Application State/org.radare.cutter.savedState",
   ]

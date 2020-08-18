@@ -11,13 +11,13 @@ cask "lulu" do
   depends_on macos: ">= :sierra"
 
   installer script: {
-    executable: "#{staged_path}/Lulu Installer.app/Contents/MacOS/LuLu Installer",
+    executable: "#{staged_path}/LuLu Installer.app/Contents/MacOS/LuLu Installer",
     args:       ["-install"],
     sudo:       true,
   }
 
   uninstall script: {
-    executable: "#{staged_path}/Lulu Installer.app/Contents/MacOS/LuLu Installer",
+    executable: "#{staged_path}/LuLu Installer.app/Contents/MacOS/LuLu Installer",
     args:       ["-uninstall"],
     sudo:       true,
   }
