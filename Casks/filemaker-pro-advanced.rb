@@ -1,10 +1,10 @@
-cask "filemaker-pro-advanced" do
+cask "filemaker-pro" do
   version "19.0.1.116"
   sha256 "b561a0ebc62f7b6f50bc5e1b7c05660e5a1ead2027dd296907b3ff644f0b51dc"
 
   url "https://downloads.claris.com/esd/fmp_#{version}.dmg"
   appcast "https://www.filemaker.com/redirects/ss.txt"
-  name "FileMaker Pro Advanced"
+  name "FileMaker Pro"
   homepage "https://www.claris.com/filemaker/"
 
   auto_updates true
