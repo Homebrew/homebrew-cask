@@ -1,10 +1,10 @@
 cask "teradici-pcoip-client" do
-  version "2020.07"
-  sha256 "0a494414547c1bf66a843f21d0a14edad1d1abcf1994dd3159b304556239cd3c"
+  version "20.07.2"
+  sha256 "70a2cbb8e329cb459ff076ed754e44d1f168d291714bd4f4c5efebb87902959d"
 
-  url "https://downloads.teradici.com/mac/stable/pcoip-client_20.07.0.dmg"
+  url "https://downloads.teradici.com/mac/stable/pcoip-client_#{version}.dmg"
   name "Teradici PCoIP Software Client for macOS"
-  desc "Connections can be made to virtual machines via PCoIP agents and Remote Workstation Cards"
+  desc "PCoIP client for VM Agents and Remote Workstation Cards"
   homepage "https://docs.teradici.com/find/product/software-and-mobile-clients/"
 
   app "PCoIPClient.app"
