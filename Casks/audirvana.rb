@@ -7,6 +7,8 @@ cask "audirvana" do
   name "Audirvana"
   homepage "https://audirvana.com/"
 
+  auto_updates true
+
   app "Audirvana.app"
 
   zap trash: [
