@@ -7,6 +7,8 @@ cask "fontbase" do
   name "FontBase"
   homepage "https://fontba.se/"
 
+  auto_updates true
+
   app "FontBase.app"
 
   zap trash: [
