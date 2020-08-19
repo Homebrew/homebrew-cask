@@ -1,6 +1,6 @@
 cask "tiles" do
-  version "1.0.3,6da1f344"
-  sha256 "07dce874aaf7c014916507b2f9f694da4fcecbb2e5c754612e0f301216b78604"
+  version "1.1.0,7e414856"
+  sha256 "349231a477da63c1f1e70bf329f10a03496d3d79a63975d8cf3fa4e06e056abd"
 
   url "https://updates.sempliva.com/tiles/Tiles-#{version.after_comma}.dmg"
   appcast "https://updates.sempliva.com/tiles/updates.xml",
