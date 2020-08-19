@@ -5,7 +5,7 @@ cask "colorchecker-camera-calibration" do
   # downloads.xrite.com/downloads/software/ColorCheckerPassport/Mac/ was verified as official when first introduced to the cask
   url "https://downloads.xrite.com/downloads/software/ColorCheckerPassport/Mac/v#{version}/ColorCheckerCameraCalibration.zip"
   name "ColorChecker Camera Calibration"
-  desc "XRite's ColorChecker Camera Calibration"
+  desc "Software to build custom camera profiles"
   homepage "https://xritephoto.com/ph_product_overview.aspx?ID=2632&action=overview"
 
   pkg "ColorChecker Camera Calibration.pkg"
