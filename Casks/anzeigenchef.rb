@@ -1,6 +1,6 @@
 cask "anzeigenchef" do
-  version "2.1.044"
-  sha256 "973741126a94e12b9a5f71d3fd4c38e8c3a79566797b10a584ab2fd66c83b710"
+  version "2.1.045"
+  sha256 "9067315f8d7dc294be576758be3b9de99dc208e3171483dd740f0ee88f2ad063"
 
   url "https://anzeigenchef.roundcubes.de/downloads/mac/AnzeigenChef.app.zip"
   appcast "https://anzeigenchef.roundcubes.de/downloads/mac/appcast.xml"
