@@ -4,7 +4,7 @@ cask "google-analytics-opt-out" do
 
   url "https://dl.google.com/analytics/optout/safari/GoogleAnalyticsOptOut_#{version}.dmg"
   name "Google Analytics Opt Out"
-  desc "Google Analytics Opt-out Browser Add-on"
+  desc "Prevent website visitor's data from being used by Google Analytics JavaScript"
   homepage "https://tools.google.com/dlpage/gaoptout"
 
   app "Google Analytics Opt Out.app"
