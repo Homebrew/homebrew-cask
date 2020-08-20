@@ -1,4 +1,4 @@
-cask "fing-desktop" do
+cask "fing" do
   version "2.1.0"
   sha256 "4a9bb7c0fb8531cacc60fd4247c55ae322224cf300ecb67de303710bf9773631"
 
