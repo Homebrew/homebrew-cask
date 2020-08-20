@@ -1,4 +1,4 @@
-cask "teradici-pcoip-client" do
+cask "pcoipclient" do
   version "20.07.2"
   sha256 "70a2cbb8e329cb459ff076ed754e44d1f168d291714bd4f4c5efebb87902959d"
 
