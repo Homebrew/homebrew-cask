@@ -8,5 +8,5 @@ cask "freeyourmusic" do
   name "FreeYourMusic⁩"
   homepage "https://freeyourmusic.com/"
 
-  app "FreeYourMusic.app"
+  app "FreeYourMusic/FreeYourMusic.app"
 end
