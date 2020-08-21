@@ -1,6 +1,6 @@
 cask "blender" do
   module Utils
-    def sha256_parser(version)
+    def self.sha256_parser(version)
       require "open-uri"
       sha256url = "https://download.blender.org/release/Blender#{version.major_minor.delete("a-z")}/blender-#{version}.sha256"
 
