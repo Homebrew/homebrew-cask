@@ -19,6 +19,11 @@ cask "gloomhaven-helper" do
     EOS
   end
 
+  zap trash: [
+    "~/.ghh",
+    "~/.prefs/ghh",
+  ]
+
   caveats do
     depends_on_java "8+"
   end

@@ -6,7 +6,6 @@ cask "navicat-premium" do
     url "http://download.navicat.com.cn/download/navicat#{version.major_minor.no_dots}_premium_cs.dmg"
     homepage "https://www.navicat.com.cn/products/navicat-premium"
   end
-
   language "en", default: true do
     sha256 "68a77024aeab2db4664733c12721b446f0c661e370fa6250e24ae8b20fb27d48"
     url "http://download.navicat.com/download/navicat#{version.major_minor.no_dots}_premium_en.dmg"

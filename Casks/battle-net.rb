@@ -5,7 +5,6 @@ cask "battle-net" do
   language "en", default: true do
     url "https://www.battle.net/download/getInstallerForGame?os=mac&locale=enUS&version=LIVE&gameProgram=BATTLENET_APP"
   end
-
   language "zh", "CN" do
     url "https://www.battle.net/download/getInstallerForGame?os=mac&installer=Battle.net-Setup-zhCN.zip"
   end

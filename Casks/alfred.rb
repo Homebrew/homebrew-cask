@@ -5,6 +5,7 @@ cask "alfred" do
   url "https://cachefly.alfredapp.com/Alfred_#{version}.dmg"
   appcast "https://www.alfredapp.com/app/update#{version.major}/general.xml"
   name "Alfred"
+  desc "Application launcher and productivity software"
   homepage "https://www.alfredapp.com/"
 
   auto_updates true

@@ -3,12 +3,17 @@ name: Scheduled automerge.
 on:
   # Keeps failing, try enabling again in future.
   # status:
+  push:
+    branches:
+      - debug-automerge
+    paths:
+      - .github/actions/automerge/**
   schedule:
     - cron: '*/15 * * * *'
 
 jobs:
   automerge:
-    if: startsWith( github.repository, 'Homebrew/' )
+    if: startsWith(github.repository, 'Homebrew/')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main

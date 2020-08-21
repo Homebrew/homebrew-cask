@@ -1,9 +1,8 @@
 cask "bettertouchtool" do
-  version "3.400-1629"
-  sha256 "1adde58147712d82dc6c35936f23110b7fded4f3a754342ef09e0c22a850fdc0"
+  version "3.402-1633"
+  sha256 "578f2e62805ae21e880c60e13ec455ec6057745edaff14214eb5c6eac5cf7705"
 
-  # bettertouchtool.net/releases/ was verified as official when first introduced to the cask
-  url "https://bettertouchtool.net/releases/btt#{version}.zip"
+  url "https://folivora.ai/releases/BetterTouchTool.zip"
   appcast "https://www.corecode.io/macupdater/appcasts/bettertouchtool.txt"
   name "BetterTouchTool"
   homepage "https://folivora.ai/"

@@ -1,6 +1,6 @@
 cask "mountain-duck" do
-  version "4.0.1.16800"
-  sha256 "8eb4724d23388ae6bf7eb1c139905e24e7fd238cd48d4145c91bc7918bf598c6"
+  version "4.1.1.16941"
+  sha256 "956b23437162200f018bd7c4f627bf8c6b470267fbbd58d0e9f55afb4a8e09a8"
 
   url "https://dist.mountainduck.io/Mountain%20Duck-#{version}.zip"
   appcast "https://version.mountainduck.io/#{version.major}/macos/changelog.rss"

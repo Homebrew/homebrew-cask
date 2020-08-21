@@ -6,7 +6,6 @@ cask "edrawmax" do
     url "http://cc-download.edrawsoft.cn/edraw-max_cn_full5381.dmg"
     homepage "https://www.edrawsoft.cn/"
   end
-
   language "en", default: true do
     url "http://download.edrawsoft.com/edraw-max_full5380.dmg"
     homepage "https://www.edrawsoft.com/"

@@ -1,13 +1,12 @@
 cask "ibm-cloud-cli" do
-  version "0.21.0"
-  sha256 "2ff070a944fd9516a72bf7659513f8351acd09eb5d434601e754b33b2e411faa"
+  version "1.1.0"
+  sha256 "5fabea7058974f14c19417c3b66dd8ad71f421f1acfb2a4d8d2580735fcc20ee"
 
-  # public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/ was verified as official when first introduced to the cask
   url "https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/#{version}/IBM_Cloud_CLI_#{version}.pkg"
   appcast "https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases.atom"
   name "Bluemix-CLI"
   name "IBM Cloud CLI"
-  homepage "https://clis.ng.bluemix.net/ui/home.html"
+  homepage "https://cloud.ibm.com/docs/cli/index.html"
 
   depends_on cask: "docker"
   depends_on formula: "kubectl"
