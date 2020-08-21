@@ -6,7 +6,7 @@ cask "blender" do
 
       f = URI(sha256url).open
       f.each_line do |line|
-        line.match(/blender-#{version}-macOS.dmg/) {|m| return m.split(" ")[0]}
+        line.match(/blender-#{version}-macOS.dmg/) {|m| return m.string.split(" ")[0]}
       end
     end
   end
