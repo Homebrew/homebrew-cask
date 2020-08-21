@@ -1,6 +1,6 @@
 cask "blender" do
   module Utils
-    def get_sha256(version)
+    def get_sha256
       require "open-uri"
       sha256url = "https://download.blender.org/release/Blender#{version.major_minor.delete("a-z")}/blender-#{version}.sha256"
 
@@ -12,7 +12,7 @@ cask "blender" do
   end
 
   version "2.83.5"
-  sha256 Utils.get_sha256(version)
+  sha256 Utils.get_sha256
 
   url "https://download.blender.org/release/Blender#{version.major_minor.delete("a-z")}/blender-#{version}-macOS.dmg"
   appcast "https://download.blender.org/release/",
