@@ -132,20 +132,40 @@ jobs:
         id: deps
         run: |
           brew ruby <<'EOF'
+            require 'cask/cask_loader'
+            require 'cask/installer'
+
             cask = Cask::CaskLoader.load('${{ matrix.cask }}')
+
+            cask_conflicts = cask.conflicts_with&.dig(:cask).to_a
+            formula_conflicts = cask.conflicts_with&.dig(:formula).to_a
+
             installer = Cask::Installer.new(cask)
-
             cask_and_formula_dependencies = installer.missing_cask_and_formula_dependencies
-
-            puts cask_and_formula_dependencies.map(&:inspect)
 
             cask_dependencies = cask_and_formula_dependencies.select { |d| d.is_a?(Cask::Cask) }.map(&:full_name)
             formula_dependencies = cask_and_formula_dependencies.select { |d| d.is_a?(Formula) }.map(&:full_name)
 
+            puts "::set-output name=cask_conflicts::#{JSON.generate(cask_conflicts)}"
             puts "::set-output name=cask_dependencies::#{JSON.generate(cask_dependencies)}"
+            puts "::set-output name=formula_conflicts::#{JSON.generate(formula_conflicts)}"
             puts "::set-output name=formula_dependencies::#{JSON.generate(formula_dependencies)}"
           EOF
         working-directory: ${{ matrix.working_directory }}
+        timeout-minutes: 30
+
+      - name: Uninstall conflicting formulae
+        run: |
+          brew uninstall ${{ join(fromJSON(steps.deps.outputs.formula_conflicts), ' ') }}
+        working-directory: ${{ matrix.working_directory }}
+        if: success() && join(fromJSON(steps.deps.outputs.formula_conflicts)) != ''
+        timeout-minutes: 30
+
+      - name: Uninstall conflicting casks
+        run: |
+          brew cask uninstall ${{ join(fromJSON(steps.deps.outputs.cask_conflicts), ' ') }}
+        working-directory: ${{ matrix.working_directory }}
+        if: success() && join(fromJSON(steps.deps.outputs.cask_conflicts)) != ''
         timeout-minutes: 30
 
       - name: Run brew cask zap ${{ matrix.name }}
