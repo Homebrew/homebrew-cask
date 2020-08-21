@@ -137,8 +137,8 @@ jobs:
 
             cask = Cask::CaskLoader.load('${{ matrix.cask }}')
 
-            cask_conflicts = cask.conflicts_with&.dig(:cask).to_a
-            formula_conflicts = cask.conflicts_with&.dig(:formula).to_a
+            cask_conflicts = cask.conflicts_with&.dig(:cask).to_a.select { |c| Cask::CaskLoader.load(c).installed? }
+            formula_conflicts = cask.conflicts_with&.dig(:formula).to_a.select { |f| Formula[f].any_version_installed? }
 
             installer = Cask::Installer.new(cask)
             cask_and_formula_dependencies = installer.missing_cask_and_formula_dependencies
