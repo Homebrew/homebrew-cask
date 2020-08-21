@@ -1,6 +1,6 @@
 cask "mumu" do
-  version "1.1.2,AjOnLLkkT8ycuoFpJJ1p"
-  sha256 "a0672673e7260cba26ea6d698a6421688159bbc0d7c1185f3b4b0f056336e6c2"
+  version "1.1.3,qUmKKw5uTdCIl7sOWPjv"
+  sha256 "f1a4c16dfe1fa5bab0bf3f8548e9fdf53261ac3c539ab54dc0a930a8c317ccd0"
 
   # paddle.s3.amazonaws.com/fulfillment_downloads/116824/597910/ was verified as official when first introduced to the cask
   url "https://paddle.s3.amazonaws.com/fulfillment_downloads/116824/597910/#{version.after_comma}_Mumu%20#{version.before_comma}.dmg"
