@@ -3,15 +3,12 @@ cask "webots" do
   sha256 "84ebf8f401045918323e9fc60a25ebffaacfe4869f92b5d5084dac6cf8d48841"
 
   # github.com/cyberbotics/webots was verified as official when first introduced to the cask
-  url "https://github.com/cyberbotics/webots/releases/download/R2020b/webots-#{version}.dmg"
-  appcast "https://github.com/cyberbotics/webots/releases.atom",
-          must_contain: version
+  url "https://github.com/cyberbotics/webots/releases/download/#{version}/webots-#{version}.dmg"
+  appcast "https://github.com/cyberbotics/webots/releases.atom"
   name "Cyberbotics Webots Robot Simulator"
   name "Webots"
   desc "Open source desktop application used to simulate robots"
   homepage "https://www.cyberbotics.com/"
-
-  #  license "Apache-2.0"
 
   auto_updates true
   depends_on macos: ">= :mojave"
