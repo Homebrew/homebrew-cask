@@ -1,7 +1,20 @@
 cask "blender" do
+  module Utils
+    def getSHA256(version)
+      require 'open-uri'
+      sha256url = "https://download.blender.org/release/Blender#{version.major_minor.delete("a-z")}/blender-#{version}.sha256"
+
+      f = URI(sha256url).open
+      f.each_line do |line|
+        if line =~ /blender-#{version}-macOS.dmg/
+        return line.split(" ")[0]
+      end
+     end
+    end
+  end
+  
   version "2.83.5"
-  urlstring = "https://download.blender.org/release/Blender#{version.major_minor.delete("a-z")}/blender-#{version}-macOS.dmg"
-  sha256 Digest::SHA256.hexdigest(urlstring)
+  sha256 getSHA256(version)
 
   url "https://download.blender.org/release/Blender#{version.major_minor.delete("a-z")}/blender-#{version}-macOS.dmg"
   appcast "https://download.blender.org/release/",
