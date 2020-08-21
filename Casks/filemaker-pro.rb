@@ -5,6 +5,7 @@ cask "filemaker-pro" do
   url "https://downloads.claris.com/esd/fmp_#{version}.dmg"
   appcast "https://www.filemaker.com/redirects/ss.txt"
   name "FileMaker Pro"
+  desc "Cross-platform relational database and rapid application development platform from Claris International"
   homepage "https://www.claris.com/filemaker/"
 
   auto_updates true
