@@ -1,0 +1,35 @@
+#!/usr/bin/env ruby
+
+raise 'A cask token, bundle ID, or app name argument is required, or a combination thereof' if ARGV.empty?
+
+raise 'A cask-token, bundle.ID, or App Name argument is required' if ARGV.empty?
+
+args = ARGV.join ' '
+
+search = [
+  '/Library',
+  '/Library/*',
+  "#{Dir.home}/Library",
+  "#{Dir.home}/Library/*",
+  "#{Dir.home}/Documents",
+  "#{Dir.home}/Documents/*",
+  '/Users/Shared',
+  '/private/var/**',
+]
+
+if %r{^\w+\.\w+\.\w+$}.match? args
+  ids = ARGV
+else
+  stdout, = Open3.capture2 'brew', 'cask', 'find-bundle-id', *args
+  ids = stdout.lines.map(&:chomp).reject(&:empty?)
+end
+ids += ids.map { |id| id.split('.').drop 1 }.flatten.compact.uniq
+
+name = File.basename(args, '.app').split(%r{\W}).join '*'
+names = [name] + ids
+
+pattern = "{,#{Dir.home}}/{#{search.join ','}}/*{#{names.join ','}}*"
+
+associated = Dir.glob pattern, File::FNM_CASEFOLD
+
+puts associated.map { |path| path.sub Dir.home, '~' }.uniq.sort
