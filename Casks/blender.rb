@@ -1,8 +1,9 @@
 cask "blender" do
   version "2.83.5"
-
+  urlstring = "https://download.blender.org/release/Blender#{version.major_minor.delete("a-z")}/blender-#{version}-macOS.dmg"
+  sha256 Digest::SHA256.hexdigest(urlstring)
+  
   url "https://download.blender.org/release/Blender#{version.major_minor.delete("a-z")}/blender-#{version}-macOS.dmg"
-  sha256 Digest::SHA256.hexdigest(url.string)
   appcast "https://download.blender.org/release/",
           must_contain: version.major_minor.delete("a-z")
   name "Blender"
