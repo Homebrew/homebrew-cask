@@ -6,11 +6,22 @@ cask "cutter" do
   url "https://github.com/radareorg/cutter/releases/download/v#{version}/Cutter-v#{version}-x64.macOS.dmg"
   appcast "https://github.com/radareorg/cutter/releases.atom"
   name "Cutter"
-  homepage "https://radare.org/cutter/"
+  desc "Reverse engineering platform powered by radare2"
+  homepage "https://cutter.re/"
 
   depends_on macos: ">= :sierra"
 
   app "Cutter.app"
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/cutter.wrapper.sh"
+  binary shimscript, target: "cutter"
+
+  preflight do
+    IO.write shimscript, <<~EOS
+      #!/bin/sh
+      '#{appdir}/Cutter.app/Contents/MacOS/Cutter' "$@"
+    EOS
+  end
 
   zap trash: [
     "~/.config/RadareOrg",
