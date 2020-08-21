@@ -1,6 +1,6 @@
 cask "remotix-agent" do
-  version "1.4.4-20597"
-  sha256 "2b1807e9ad9041241de2039295fbbfee0ad839336eeb4bc5dff541f60bb7b9e8"
+  version "1.4.5-20616"
+  sha256 "230b3ee763e02ec0f39cd78f4356e589ea086984856af39ab69fd1572cbb70f1"
 
   # remotix.com/agent-mac was verified as official when first introduced to the cask
   url "https://downloads.remotix.com/agent-mac/RemotixAgent-#{version}.pkg"
