@@ -9,4 +9,17 @@ cask "vipriser" do
   homepage "https://onflapp.github.io/blog/pages/vipriser-pdf-ops/vipriser.html"
 
   app "VipRiser.app"
+
+  zap trash: [
+    "/Library/LaunchAgents/com.onflapp.VipRiserAgent.plist",
+    "~/Library/Application Support/VipRiser",
+    "~/Library/Application Support/com.onflapp.VipRiser",
+    "~/Library/Caches/metadata/VipRiser",
+    "~/Library/Caches/com.onflapp.VipRiser",
+    "~/Library/Preferences/com.apple.print.custompresets.forprinter.Print_to_VipRiser.plist",
+    "~/Library/Preferences/com.apple.print.custompresets.forprinter.VipRiser.plist",
+    "~/Library/Preferences/com.onflapp.VipRiser.plist",
+    "/var/db/recipts/com.onflapp.vipriser.driver.bom",
+    "/var/db/recipts/com.onflapp.vipriser.driver.plist",
+  ]
 end
