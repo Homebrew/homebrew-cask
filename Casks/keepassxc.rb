@@ -8,6 +8,8 @@ cask "keepassxc" do
   name "KeePassXC"
   homepage "https://keepassxc.org/"
 
+  depends_on macos: ">= :high_sierra"
+
   app "KeePassXC.app"
   binary "#{appdir}/KeePassXC.app/Contents/MacOS/keepassxc-cli"
 
