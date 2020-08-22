@@ -7,5 +7,5 @@ cask "psychopy" do
   name "PsychoPy"
   homepage "https://github.com/psychopy/psychopy"
 
-  app "PsychoPy3.app"
+  app "PsychoPy.app"
 end
