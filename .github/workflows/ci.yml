@@ -33,7 +33,7 @@ jobs:
     outputs:
       matrix: ${{ steps.generate-matrix.outputs.matrix }}
     runs-on: macos-latest
-    if: github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'syntax-only')
+    if: contains(['pull_request', 'pull_request_target'], github.event_name) && !contains(github.event.pull_request.labels.*.name, 'syntax-only')
     steps:
       - uses: actions/checkout@main
       - name: Check out Pull Request
