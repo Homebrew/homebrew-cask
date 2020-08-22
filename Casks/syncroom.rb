@@ -18,13 +18,8 @@ cask "syncroom" do
   ]
 
   zap trash: [
-    "/Applications/Yamaha/SYNCROOM",
     "~/Library/Caches/jp.co.yamaha.ux.SYNCROOM",
     "~/Library/Preferences/jp.co.yamaha.ux.syncroom.SYNCROOM.plist",
     "~/Library/Saved Application State/jp.co.yamaha.ux.SYNCROOM.savedState",
-    "/var/db/recipts/jp.co.yamaha.ux.SYNCROOM-AU-BRIDGE.pkg.bom",
-    "/var/db/recipts/jp.co.yamaha.ux.SYNCROOM-AU-BRIDGE.pkg.plist",
-    "/var/db/recipts/jp.co.yamaha.ux.SYNCROOM.pkg.bom",
-    "/var/db/recipts/jp.co.yamaha.ux.SYNCROOM.pkg.plist",
   ]
 end
