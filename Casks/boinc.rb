@@ -1,6 +1,6 @@
 cask "boinc" do
-  version "7.16.6"
-  sha256 "35e853ae2f637a109112a05256d038d543374da8a9b77997f37f2fb2f9cca277"
+  version "7.16.9"
+  sha256 "6839fa9a179d4d09c411f8aaca2b7574e49dbd66918ccc1f56cba9e4929f6fa0"
 
   url "https://boinc.berkeley.edu/dl/boinc_#{version}_macOSX_x86_64.zip"
   appcast "https://boinc.berkeley.edu/wiki/Release_Notes",
