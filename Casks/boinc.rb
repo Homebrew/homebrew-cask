@@ -3,8 +3,7 @@ cask "boinc" do
   sha256 "35e853ae2f637a109112a05256d038d543374da8a9b77997f37f2fb2f9cca277"
 
   url "https://boinc.berkeley.edu/dl/boinc_#{version}_macOSX_x86_64.zip"
-  appcast "https://boinc.berkeley.edu/wiki/Release_Notes",
-          must_contain: version.major_minor
+  appcast "https://www.macupdater.net/cgi-bin/extract_text/download_with_useragent.cgi?url=https://boinc.berkeley.edu/download.php&user_agent=Mac"
   name "Berkeley Open Infrastructure for Network Computing"
   name "BOINC"
   homepage "https://boinc.berkeley.edu/"
