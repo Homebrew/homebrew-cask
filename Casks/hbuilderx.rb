@@ -1,6 +1,6 @@
 cask "hbuilderx" do
-  version "2.8.6.20200814"
-  sha256 "505144387eaf7a955e9bd5bfb962432d820b79dc78cf015331ad69123fe7654f"
+  version "2.8.8.20200820"
+  sha256 "cdf78ed915fe11cac303f56b9968dd63eeabc897dffb0297920dbc44b6294cc1"
 
   # download1.dcloud.net.cn/ was verified as official when first introduced to the cask
   url "https://download1.dcloud.net.cn/download/HBuilderX.#{version}.dmg"
