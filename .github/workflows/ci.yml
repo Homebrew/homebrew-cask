@@ -1,8 +1,7 @@
 name: CI
 
 on:
-  pull_request_target:
-    types: [synchronize, opened, reopened, labeled, unlabeled]
+  - pull_request
 
 jobs:
   syntax:
