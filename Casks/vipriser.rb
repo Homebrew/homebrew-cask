@@ -10,8 +10,9 @@ cask "vipriser" do
 
   app "VipRiser.app"
 
+  uninstall launchctl: "com.onflapp.VipRiserAgent"
+
   zap trash: [
-    "/Library/LaunchAgents/com.onflapp.VipRiserAgent.plist",
     "~/Library/Application Support/VipRiser",
     "~/Library/Application Support/com.onflapp.VipRiser",
     "~/Library/Caches/metadata/VipRiser",
