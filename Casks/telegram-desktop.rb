@@ -9,7 +9,7 @@ cask "telegram-desktop" do
   homepage "https://desktop.telegram.org/"
 
   auto_updates true
-  conflicts_with cask: "telegram-desktop-dev"
+  conflicts_with cask: "homebrew/cask-versions/telegram-desktop-dev"
 
   # Renamed to avoid conflict with telegram
   app "Telegram.app", target: "Telegram Desktop.app"
