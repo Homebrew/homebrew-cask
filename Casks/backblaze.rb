@@ -1,10 +1,8 @@
 cask "backblaze" do
-  version "7.0.2.464"
-  sha256 "4956a72674d1901a6ec5a98ec0089ebfde743c5bb63e7644c3103e113e26d6d8"
+  version :latest
+  sha256 :no_check
 
   url "https://secure.backblaze.com/mac/install_backblaze.dmg"
-  appcast "https://secure.backblaze.com/api/clientversion.xml",
-          must_contain: "mac_version=\"#{version}\""
   name "Backblaze"
   homepage "https://backblaze.com/"
 
