@@ -8,14 +8,7 @@ cask "backblaze" do
 
   installer manual: "Backblaze Installer.app"
 
-  uninstall launchctl: [
-    "com.backblaze.bzserv",
-    "com.backblaze.bzbmenu",
-  ],
-            delete:    [
-              "#{appdir}/Backblaze.app",
-              "/Library/PreferencePanes/BackblazeBackup.prefPane",
-            ]
+  uninstall script: "#{staged_path}/Backblaze Uninstaller.app/Contents/MacOS/Backblaze Uninstaller"
 
   zap trash: [
     "/Library/Backblaze.bzpkg",
