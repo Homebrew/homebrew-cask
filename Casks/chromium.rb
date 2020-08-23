@@ -1,5 +1,5 @@
 cask "chromium" do
-  version "800852"
+  version "800858"
   sha256 "1b3ccbf116f37d6961a75b2fe05af301d018b2e2bbedc1b8f15896d7639e3b7e"
 
   # commondatastorage.googleapis.com/chromium-browser-snapshots/Mac/ was verified as official when first introduced to the cask
