@@ -7,6 +7,8 @@ cask "rsyncosx" do
   name "RsyncOSX"
   homepage "https://github.com/rsyncOSX/RsyncOSX"
 
+  depends_on macos: ">= :mojave"
+
   app "RsyncOSX.app"
 
   zap trash: [
