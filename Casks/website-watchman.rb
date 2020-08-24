@@ -1,6 +1,6 @@
 cask "website-watchman" do
-  version "2.9.1"
-  sha256 "4bc2a242478165f2da20fe20c0c231b375998f2c97d247badbc07c3e740e35ba"
+  version "2.10.0"
+  sha256 "4b49cd66175ac30fe082e43720664d08265b1cc6fd50fde93276f9612b8cb77e"
 
   url "https://peacockmedia.software/mac/watchman/watchman.dmg"
   appcast "https://peacockmedia.software/mac/watchman/"
