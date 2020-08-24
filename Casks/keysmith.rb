@@ -8,5 +8,7 @@ cask "keysmith" do
   desc "Create custom keyboard shortcuts for anything"
   homepage "https://www.keysmith.app/"
 
+  depends_on macos: ">= :catalina"
+
   app "Keysmith.app"
 end
