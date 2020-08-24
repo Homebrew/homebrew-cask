@@ -6,7 +6,7 @@ cask 'toolreleases' do
   url "https://github.com/DeveloperMaris/ToolReleases/releases/download/v#{version.before_comma}/ToolReleases_v#{version.before_comma}.b#{version.after_comma}.zip"
   appcast 'https://developermaris.github.io/ToolReleases/appcast.xml'
   name 'ToolReleases'
-  desc 'This application for free retrieves, notifies and shows you the latest Apple tool releases (including Beta releases) from publicly available Apple RSS feed in a formatted list on your status bar so that you would not miss any new releases coming out.'
+  desc 'Informs about the latest Apple tool releases (including Beta releases)'
   homepage 'https://github.com/DeveloperMaris/ToolReleases'
 
   depends_on macos: '>= :catalina'
