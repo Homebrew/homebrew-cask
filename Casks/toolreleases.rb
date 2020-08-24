@@ -11,5 +11,5 @@ cask "toolreleases" do
 
   depends_on macos: ">= :catalina"
 
-  app 'ToolReleases.app'
+  app "ToolReleases.app"
 end
