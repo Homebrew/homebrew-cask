@@ -9,5 +9,7 @@ cask "vb-cable" do
 
   pkg "vb-cable-installer.pkg"
 
-  uninstall pkgutil: "com.vbaudio.vbcable"
+  uninstall launchctl: "com.vbaudio.vbcableagent",
+            pkgutil: "com.vbaudio.vbcable",
+            delete: "/Library/Preferences/com.vbaudio.vbcable.plist"
 end
