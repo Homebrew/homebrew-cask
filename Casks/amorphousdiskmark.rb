@@ -2,9 +2,9 @@ cask "amorphousdiskmark" do
   version :latest
   sha256 :no_check
 
-  url "http://katsurashareware.com/dl/AmorphousDiskMark.zip"
+  url "https://katsurashareware.com/dl/AmorphousDiskMark.zip"
   name "AmorphousDiskMark"
-  homepage "http://www.katsurashareware.com/pgs/adm.html"
+  homepage "https://katsurashareware.com/pgs/adm.html"
 
   app "AmorphousDiskMark.app"
 
