@@ -8,7 +8,6 @@ cask "texstudio" do
   name "TeXstudio"
   homepage "https://texstudio.org/"
 
-  conflicts_with cask: "texstudio-beta"
   depends_on macos: ">= :sierra"
 
   app "texstudio.app"
