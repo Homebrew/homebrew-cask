@@ -2,8 +2,8 @@ cask "accurics" do
   version "0.0.4"
   sha256 "74f0f00ac9f8f4ad47f5dcb81eaabad1587eedf458d41ec5d91d54490376b0ae"
 
-  url "http://downloads.accurics.com/cli/#{version}/accurics-cli.dmg"
-  appcast "http://downloads.accurics.com/cli/#{version}/accurics-cli.yml",
+  url "https://downloads.accurics.com/cli/#{version}/accurics-cli.dmg"
+  appcast "https://downloads.accurics.com/cli/#{version}/accurics-cli.yml",
           must_contain: version
   name "Accurics CLI"
   homepage "https://www.accurics.com/"
