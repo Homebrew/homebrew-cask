@@ -7,6 +7,7 @@ cask "amazon-chime" do
   name "Amazon Chime"
   homepage "https://chime.aws/"
 
+  auto_updates true
   depends_on macos: ">= :el_capitan"
 
   app "Amazon Chime.app"
