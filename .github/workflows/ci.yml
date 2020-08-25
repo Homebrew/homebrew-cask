@@ -4,27 +4,43 @@ on:
   pull_request_target:
     types: [synchronize, opened, reopened, labeled, unlabeled]
 
+env:
+  HOMEBREW_DEVELOPER: 1
+  HOMEBREW_NO_AUTO_UPDATE: 1
+
 jobs:
   syntax:
     name: syntax
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@main
-      - name: Check out Pull Request
-        uses: ./.github/actions/checkout_cask_pr
-        id: checkout_cask_pr
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+        with:
+          test-bot: false
+
       - name: Cache Homebrew Gems
         uses: actions/cache@v2
         with:
-          path: ${{ steps.checkout_cask_pr.outputs.homebrew_gems_cache_dir }}
-          key: homebrew-gems-cache-${{ steps.checkout_cask_pr.outputs.homebrew_gems_cache_id }}
-          restore-keys: homebrew-gems-cache-
+          path: ${{ steps.set-up-homebrew.outputs.gems-path }}
+          key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
+          restore-keys: ${{ runner.os }}-rubygems-
+
+      - name: Check out Pull Request
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
       - name: Install Homebrew Gems
         run: brew install-bundler-gems
+
       - name: Uninstall third-party taps
         run: brew untap adoptopenjdk/openjdk
+
       - name: Run brew cask style
         run: brew cask style
+
       - name: Run brew cask audit
         run: brew cask audit
         if: always()
@@ -33,16 +49,23 @@ jobs:
     outputs:
       matrix: ${{ steps.generate-matrix.outputs.matrix }}
     runs-on: macos-latest
-    if: github.event_name == 'pull_request_target' && !contains(github.event.pull_request.labels.*.name, 'syntax-only')
+    if: (github.event_name == 'pull_request' || github.event_name == 'pull_request_target') && !contains(github.event.pull_request.labels.*.name, 'syntax-only')
     steps:
-      - uses: actions/checkout@main
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+        with:
+          test-bot: false
+
       - name: Check out Pull Request
-        uses: ./.github/actions/checkout_cask_pr
-        id: checkout_cask_pr
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
       - name: Generate CI matrix
         id: generate-matrix
         run: brew ruby "$(brew --repository homebrew/cask)/cmd/lib/generate-matrix.rb"
-        working-directory: ${{ steps.checkout_cask_pr.outputs.tap_path }}
 
   test:
     name: test (${{ matrix.name }})
@@ -51,11 +74,17 @@ jobs:
     strategy:
       matrix: ${{ fromJson(needs.generate-matrix.outputs.matrix) }}
     steps:
-      - uses: actions/checkout@main
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+        with:
+          test-bot: false
 
       - name: Check out Pull Request
-        uses: ./.github/actions/checkout_cask_pr
-        id: checkout_cask_pr
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
 
       - name: Clean up CI machine
         run: |
@@ -68,9 +97,9 @@ jobs:
       - name: Cache Homebrew Gems
         uses: actions/cache@v2
         with:
-          path: ${{ steps.checkout_cask_pr.outputs.homebrew_gems_cache_dir }}
-          key: homebrew-gems-cache-${{ steps.checkout_cask_pr.outputs.homebrew_gems_cache_id }}
-          restore-keys: homebrew-gems-cache-
+          path: ${{ steps.set-up-homebrew.outputs.gems-path }}
+          key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
+          restore-keys: ${{ runner.os }}-rubygems-
 
       - name: Install Homebrew Gems
         run: brew install-bundler-gems
@@ -96,7 +125,6 @@ jobs:
             puts "::set-output name=manual_installer::#{JSON.generate(manual_installer)}"
             puts "::set-output name=macos_requirement_satisfied::#{JSON.generate(macos_requirement_satisfied)}"
           EOF
-        working-directory: ${{ matrix.working_directory }}
 
       - name: Run brew cask style ${{ matrix.name }}
         run: |
@@ -120,13 +148,11 @@ jobs:
 
             exit 1
           EOF
-        working-directory: ${{ matrix.working_directory }}
 
       - name: Run brew cask audit ${{ matrix.name }}
         run: brew cask audit ${{ join(matrix.audit_args, ' ') }} '${{ matrix.cask }}'
         env:
           HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.HOMEBREW_READ_ONLY_GITHUB_API_TOKEN }}
-        working-directory: ${{ matrix.working_directory }}
         timeout-minutes: 30
 
       - name: Gather dependency information
@@ -152,27 +178,23 @@ jobs:
             puts "::set-output name=formula_conflicts::#{JSON.generate(formula_conflicts)}"
             puts "::set-output name=formula_dependencies::#{JSON.generate(formula_dependencies)}"
           EOF
-        working-directory: ${{ matrix.working_directory }}
         timeout-minutes: 30
 
       - name: Uninstall conflicting formulae
         run: |
           brew uninstall ${{ join(fromJSON(steps.deps.outputs.formula_conflicts), ' ') }}
-        working-directory: ${{ matrix.working_directory }}
         if: success() && join(fromJSON(steps.deps.outputs.formula_conflicts)) != ''
         timeout-minutes: 30
 
       - name: Uninstall conflicting casks
         run: |
           brew cask uninstall ${{ join(fromJSON(steps.deps.outputs.cask_conflicts), ' ') }}
-        working-directory: ${{ matrix.working_directory }}
         if: success() && join(fromJSON(steps.deps.outputs.cask_conflicts)) != ''
         timeout-minutes: 30
 
       - name: Run brew cask zap ${{ matrix.name }}
         run: |
           brew cask zap '${{ matrix.cask }}'
-        working-directory: ${{ matrix.working_directory }}
         if: fromJSON(steps.info.outputs.was_installed)
         timeout-minutes: 30
 
@@ -187,27 +209,23 @@ jobs:
         id: install
         run: |
           brew cask install '${{ matrix.cask }}'
-        working-directory: ${{ matrix.working_directory }}
         if: success() && fromJSON(steps.info.outputs.macos_requirement_satisfied)
         timeout-minutes: 30
 
       - name: Run brew cask uninstall ${{ matrix.name }}
         run: brew cask uninstall '${{ matrix.cask }}'
-        working-directory: ${{ matrix.working_directory }}
         if: steps.install.outcome == 'success' && !fromJSON(steps.info.outputs.manual_installer)
         timeout-minutes: 30
 
       - name: Uninstall formula dependencies
         run: |
           brew uninstall ${{ join(fromJSON(steps.deps.outputs.formula_dependencies), ' ') }}
-        working-directory: ${{ matrix.working_directory }}
         if: success() && join(fromJSON(steps.deps.outputs.formula_dependencies)) != ''
         timeout-minutes: 30
 
       - name: Uninstall cask dependencies
         run: |
           brew cask uninstall ${{ join(fromJSON(steps.deps.outputs.cask_dependencies), ' ') }}
-        working-directory: ${{ matrix.working_directory }}
         if: success() && join(fromJSON(steps.deps.outputs.cask_dependencies)) != ''
         timeout-minutes: 30
 
