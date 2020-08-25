@@ -10,8 +10,8 @@ cask "google-chrome" do
 
   auto_updates true
   conflicts_with cask: [
-    "google-chrome-beta",
-    "google-chrome-dev",
+    "homebrew/cask-versions/google-chrome-beta",
+    "homebrew/cask-versions/google-chrome-dev",
   ]
   depends_on macos: ">= :yosemite"
 
