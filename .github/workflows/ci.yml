@@ -1,7 +1,7 @@
 name: CI
 
 on:
-  pull_request_target:
+  pull_request: # Change to `pull_request` for debugging.
     types: [synchronize, opened, reopened, labeled, unlabeled]
 
 env:
@@ -49,7 +49,8 @@ jobs:
   generate-matrix:
     outputs:
       matrix: ${{ steps.generate-matrix.outputs.matrix }}
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
+    container: homebrew/ubuntu16.04:master
     if: (github.event_name == 'pull_request' || github.event_name == 'pull_request_target') && !contains(github.event.pull_request.labels.*.name, 'syntax-only')
     steps:
       - name: Set up Homebrew
@@ -88,6 +89,15 @@ jobs:
           ref: refs/pull/${{ github.event.pull_request.number }}/head
           fetch-depth: 0
           persist-credentials: false
+
+      - name: Zap vagrant
+        run: |
+          set -x
+
+          cd "$(brew --caskroom vagrant)"
+          cat .metadata/*/*/Casks/vagrant.rb
+
+          brew cask zap vagrant
 
       - name: Clean up CI machine
         run: |
@@ -197,7 +207,7 @@ jobs:
 
       - name: Run brew cask zap ${{ matrix.name }}
         run: |
-          brew cask zap '${{ matrix.cask }}'
+          brew cask zap '${{ matrix.name }}'
         if: fromJSON(steps.info.outputs.was_installed)
         timeout-minutes: 30
 
