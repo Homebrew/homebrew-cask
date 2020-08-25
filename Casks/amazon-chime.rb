@@ -6,9 +6,8 @@ cask "amazon-chime" do
   appcast "https://clients.chime.aws/mac/appcast"
   name "Amazon Chime"
   homepage "https://chime.aws/"
-  
-  auto_updates true
 
+  auto_updates true
   depends_on macos: ">= :el_capitan"
 
   app "Amazon Chime.app"
