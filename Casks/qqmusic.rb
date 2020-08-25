@@ -1,8 +1,9 @@
 cask "qqmusic" do
-  version :latest
+  version :"7.1.2"
   sha256 :"f3c803f3066656ea7770cbaea3daf2c3daca56b3390f849d5130e05765ed2389"
 
   url "https://dldir1.qq.com/music/clntupate/mac/QQMusicMac_Mgr.dmg"
+  appcast "https://y.qq.com/download/download.html"
   name "QQ音乐"
   homepage "https://y.qq.com/"
 
