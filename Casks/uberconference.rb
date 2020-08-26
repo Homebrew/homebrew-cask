@@ -1,6 +1,6 @@
 cask "uberconference" do
-  version "2.0.4"
-  sha256 "4cf47171b3065c5dd6bb20e3e6419b7233ffe4d2f3979b259a21e2e217f44fb5"
+  version "2.2.2"
+  sha256 "3c9d39c239aca2e292d17221656bcd20347bbfaabaaa777c76e92e7ab80dfff2"
 
   # See https://help.uberconference.com/hc/en-us/articles/360033352091-Use-the-Desktop-App
   # storage.googleapis.com/ was verified as official when first introduced to the cask
