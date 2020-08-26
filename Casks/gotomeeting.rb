@@ -5,7 +5,7 @@ cask "gotomeeting" do
   url "https://link.gotomeeting.com/latest-dmg"
   appcast "https://support.goto.com/meeting/help/whats-new-g2m010012"
   name "GotoMeeting"
-  desc "It is an online meeting, desktop sharing, and video conferencing software package"
+  desc "It's an online meeting, desktop sharing, and video conferencing software package"
   homepage "https://www.gotomeeting.com/"
 
   app "GotoMeeting.app"
