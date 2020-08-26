@@ -4,7 +4,9 @@ cask "daedalus-mainnet" do
 
   # update-cardano-mainnet.iohk.io/ was verified as official when first introduced to the cask
   url "https://update-cardano-mainnet.iohk.io/daedalus-#{version.before_comma}-mainnet-#{version.after_comma}.pkg"
+  appcast "https://update-cardano-mainnet.iohk.io/daedalus-latest-version.json"
   name "Daedalus Mainnet"
+  desc "Cryptocurrency wallet for ada on the Cardano blockchain"
   homepage "https://daedaluswallet.io/"
 
   depends_on macos: ">= :high_sierra"
