@@ -73,7 +73,7 @@ cask "thunderbird" do
   homepage "https://www.thunderbird.net/"
 
   auto_updates true
-  conflicts_with cask: "thunderbird-beta"
+  conflicts_with cask: "homebrew/cask-versions/thunderbird-beta"
 
   app "Thunderbird.app"
 
