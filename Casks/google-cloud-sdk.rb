@@ -33,5 +33,8 @@ cask "google-cloud-sdk" do
       for zsh users
         source "#{staged_path}/#{token}/path.zsh.inc"
         source "#{staged_path}/#{token}/completion.zsh.inc"
+
+      for fish users
+        set -g fish_user_paths "#{staged_path}/#{token}/path.fish.inc" $fish_user_paths
   EOS
 end
