@@ -1,7 +1,7 @@
 name: CI
 
 on:
-  pull_request_target:
+  pull_request:
     types: [synchronize, opened, reopened, labeled, unlabeled]
 
 env:
@@ -29,7 +29,6 @@ jobs:
       - name: Check out Pull Request
         uses: actions/checkout@v2
         with:
-          ref: refs/pull/${{ github.event.pull_request.number }}/head
           fetch-depth: 0
           persist-credentials: false
 
@@ -50,7 +49,7 @@ jobs:
     outputs:
       matrix: ${{ steps.generate-matrix.outputs.matrix }}
     runs-on: macos-latest
-    if: (github.event_name == 'pull_request' || github.event_name == 'pull_request_target') && !contains(github.event.pull_request.labels.*.name, 'syntax-only')
+    if: github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'syntax-only')
     steps:
       - name: Set up Homebrew
         id: set-up-homebrew
@@ -61,7 +60,6 @@ jobs:
       - name: Check out Pull Request
         uses: actions/checkout@v2
         with:
-          ref: refs/pull/${{ github.event.pull_request.number }}/head
           fetch-depth: 0
           persist-credentials: false
 
@@ -73,6 +71,7 @@ jobs:
     name: test (${{ matrix.name }})
     needs: generate-matrix
     runs-on: macos-latest
+    if: ${{ needs.generate-matrix.outputs.matrix != '{"include":[]}' }}
     strategy:
       matrix: ${{ fromJson(needs.generate-matrix.outputs.matrix) }}
     steps:
@@ -85,7 +84,6 @@ jobs:
       - name: Check out Pull Request
         uses: actions/checkout@v2
         with:
-          ref: refs/pull/${{ github.event.pull_request.number }}/head
           fetch-depth: 0
           persist-credentials: false
 
@@ -155,7 +153,7 @@ jobs:
       - name: Run brew cask audit ${{ matrix.name }}
         run: brew cask audit ${{ join(matrix.audit_args, ' ') }} '${{ matrix.cask }}'
         env:
-          HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.HOMEBREW_READ_ONLY_GITHUB_API_TOKEN }}
+          HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         timeout-minutes: 30
 
       - name: Gather dependency information
