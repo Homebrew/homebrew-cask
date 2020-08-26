@@ -6,7 +6,7 @@ cask "daedalus-mainnet" do
   url "https://update-cardano-mainnet.iohk.io/daedalus-#{version.before_comma}-mainnet-#{version.after_comma}.pkg"
   appcast "https://update-cardano-mainnet.iohk.io/daedalus-latest-version.json"
   name "Daedalus Mainnet"
-  desc "Wallet for the Cardano blockchain"
+  desc "Cryptocurrency wallet for ada on the Cardano blockchain"
   homepage "https://daedaluswallet.io/"
 
   depends_on macos: ">= :high_sierra"
