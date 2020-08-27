@@ -1,5 +1,5 @@
 cask "zeplin" do
-  version "3.7.1,968"
+  version "3.8,994"
   sha256 "220a7b7479e769e00745390b2056f2f6fcfd32197ce39d68c6b5a994eea60869"
 
   url "https://api.zeplin.io/urls/download-mac"
