@@ -6,7 +6,7 @@ cask "ocenaudio" do
 
     url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_sierra.dmg"
   else
-    sha256 "34e5cbeb17e7c390287f805c28bc9fac5a335793d0f1273aff95c39eca3e8eae"
+    sha256 "2439f8a425a17e8d751a217e61ee9a96cfe3da0f963be637829fa794088e48d8"
 
     url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_mojave.dmg"
   end
