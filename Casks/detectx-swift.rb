@@ -9,7 +9,6 @@ cask "detectx-swift" do
   homepage "https://sqwarq.com/detectx/"
 
   auto_updates true
-  conflicts_with cask: "detectx"
   depends_on macos: ">= :el_capitan"
 
   app "DetectX Swift.app"
