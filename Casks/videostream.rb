@@ -18,8 +18,3 @@ cask "videostream" do
             pkgutil:   "com.videostream",
             signal:    ["TERM", "com.videostream"]
 end
-
-Error: Some launch jobs are still installed, add them to uninstall launchctl:
-com.google.keystone.agent (com.google.keystone.user.agent)
-com.google.keystone.xpcservice (com.google.keystone.user.xpcservice)
-Error: Some launch jobs were not unloaded, add them to uninstall launchctl:
