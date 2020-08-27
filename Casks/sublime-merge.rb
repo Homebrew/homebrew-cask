@@ -9,7 +9,7 @@ cask "sublime-merge" do
   homepage "https://www.sublimemerge.com/"
 
   auto_updates true
-  conflicts_with cask: "sublime-merge-dev"
+  conflicts_with cask: "homebrew/cask-versions/sublime-merge-dev"
 
   app "Sublime Merge.app"
   binary "#{appdir}/Sublime Merge.app/Contents/SharedSupport/bin/smerge"
