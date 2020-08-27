@@ -7,9 +7,11 @@ cask "pdf-over" do
   desc "Digitally sign PDFs with the Austrian Buergerkarte"
   homepage "https://webstart.buergerkarte.at/pdf-over/"
 
-  depends_on cask: "oracle-jdk"
-
   app "PDF-Over.app"
 
   uninstall trash: "~/.pdf-over"
+
+  caveats do
+    depends_on_java "8+"
+  end
 end
