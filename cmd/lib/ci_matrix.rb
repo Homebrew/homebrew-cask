@@ -36,8 +36,11 @@ module CiMatrix
       end
 
       {
-        name:       cask.token,
-        cask:       "./#{path}",
+        name:       "test (#{cask.token})",
+        cask:       {
+          token: cask.token,
+          path:  "./#{path}",
+        },
         audit_args: audit_args,
       }
     end
