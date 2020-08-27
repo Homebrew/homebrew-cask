@@ -8,7 +8,7 @@ cask "kafka-tool" do
   homepage "https://www.kafkatool.com/index.html"
 
   installer script: {
-    executable: "Kafka Tool #{version.major} Installer.app/Contents/MacOS/JavaApplicationStub",
+    executable: "Kafka Tool #{version.major}.app/Contents/MacOS/JavaApplicationStub",
     args:       ["-q"],
   }
 
