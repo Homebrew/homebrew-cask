@@ -1,6 +1,6 @@
 cask "tweetbot" do
-  version "3.4.000,4"
-  sha256 "9016c4a6727fd0c860092b56ffd9e6481cd35e056188099352eaa1ce213ab0e6"
+  version "3.4.100,4"
+  sha256 "e57b54c79c87d81ce694fd34b511eeeb724f8a9578d04d8034d0805d5143b6a3"
 
   # tapbots.net/ was verified as official when first introduced to the cask
   url "https://tapbots.net/tweetbot#{version.after_comma}/Tweetbot.#{version.before_comma.no_dots}.zip"
