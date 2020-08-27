@@ -8,7 +8,6 @@ cask "insync" do
   homepage "https://www.insynchq.com/"
 
   auto_updates true
-  conflicts_with cask: "insync-beta"
 
   app "Insync.app"
 end
