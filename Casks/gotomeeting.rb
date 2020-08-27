@@ -4,7 +4,7 @@ cask "gotomeeting" do
 
   # builds.cdn.getgo.com/builds/g2m/ was verified as official when first introduced to the cask
   url "https://builds.cdn.getgo.com/builds/g2m/#{version.after_comma}/GoToMeeting.dmg"
-  appcast "https://support.goto.com/meeting/help#g2m-whats-new"
+  appcast "https://support.goto.com/meeting/help#g2m-whats-new",
           must_contain: version.before_comma
   name "GotoMeeting"
   desc "An online meeting, desktop sharing and video conferencing software package"
@@ -13,8 +13,8 @@ cask "gotomeeting" do
   app "GotoMeeting.app"
   
   zap trash: [
-    "~/Library/Application\ Support/LogMeInInc/GoToMeeting",
-    "~/Library/Application\ Support/LogMeInInc/GoToMeetingElectron", 
+    "~/Library/Application Support/LogMeInInc/GoToMeeting",
+    "~/Library/Application Support/LogMeInInc/GoToMeetingElectron", 
     "~/Library/LaunchAgents/com.logmein.GoToMeeting.G2MAIRUploader.plist",
     "~/Library/LaunchAgents/com.logmein.GoToMeeting.G2MUpdate.plist",
   ]
