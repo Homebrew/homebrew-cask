@@ -10,7 +10,7 @@ ARGV.push("--help") if ARGV.empty?
 
 OptionParser.new do |opt|
   opt.banner = <<~BANNER
-    Run `brew cask` `audi` and `style` checks locally, from a pull request URL.
+    Run `brew cask` `audit` and `style` checks locally, from a pull request URL.
     Useful when online CI is broken.
 
     Usage:

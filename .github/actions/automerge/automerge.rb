@@ -75,10 +75,10 @@ def merge_pull_request(pr, check_runs = GitHub.check_runs(pr: pr).fetch("check_r
   tap = Tap.fetch(repo)
   pr_name = "#{tap.name}##{number}"
 
-  skip "CI status for pull request #{pr_name} is not successful." unless passed_ci?(check_runs)
-
   diff = diff_for_pull_request(pr)
   skip "Pull request #{pr_name} is not a “simple” version bump." unless diff.simple?
+
+  skip "CI status for pull request #{pr_name} is not successful." unless passed_ci?(check_runs, diff.cask_name)
 
   if diff.version_changed?
     if diff.version_decreased?
@@ -87,9 +87,7 @@ def merge_pull_request(pr, check_runs = GitHub.check_runs(pr: pr).fetch("check_r
 
     tap.install(full_clone: true) unless tap.installed?
 
-    cask_path = diff.files.first.a_path
-
-    out, _ = system_command! 'git', args: ['-C', tap.path, 'log', '--pretty=format:', '-G', '\s+version\s+\'', '--follow', '--patch', '--', cask_path]
+    out, _ = system_command! 'git', args: ['-C', tap.path, 'log', '--pretty=format:', '-G', '\s+version\s+\'', '--follow', '--patch', '--', diff.cask_path]
 
     # Workaround until https://github.com/anolson/git_diff/pull/16 is merged and released.
     out.gsub!(/^copy (from|to)/, 'rename \1')
@@ -100,6 +98,11 @@ def merge_pull_request(pr, check_runs = GitHub.check_runs(pr: pr).fetch("check_r
     if previous_versions.include?(diff.new_version)
       skip "Version in pull request #{pr_name} changed to a previous version. Previous versions were:\n#{previous_versions.join("\n")}"
     end
+  end
+
+  if ENV["GITHUB_REF"] != 'refs/heads/master'
+    puts "Would merge pull request #{pr_name}…"
+    return
   end
 
   puts "Merging pull request #{pr_name}…"
@@ -121,19 +124,23 @@ def merge_pull_request(pr, check_runs = GitHub.check_runs(pr: pr).fetch("check_r
   end
 end
 
-def passed_ci?(check_runs = [])
+def passed_ci?(check_runs, cask_name)
+  return false if check_runs.empty?
+  return false if cask_name.nil?
+
   check_runs = Hash[
     check_runs.select { |check_run| check_run.fetch("status") == "completed" }
               .group_by { |check_run| check_run.fetch("name") }
               .map { |(k, v)| [k, v.max_by { |status| Time.parse(status.fetch("completed_at")) }] }
   ]
 
-  check_runs.dig("ci", "conclusion") == "success"
+  check_runs.all? { |_name, check_run| check_run["conclusion"] == "success" } &&
+    (check_runs.dig("test (#{cask_name})", "conclusion") == "success")
 end
 
 begin
   case ENV["GITHUB_EVENT_NAME"]
-  when "schedule"
+  when "push", "schedule"
     prs = GitHub.pull_requests(ENV["GITHUB_REPOSITORY"], state: :open, base: "master")
 
     skip "No open pull requests found." if prs.empty?
@@ -168,7 +175,7 @@ begin
       exit 1
     end
   else
-    skip "Unsupported GitHub Actions event."
+    raise "Unsupported GitHub Actions event: #{ENV["GITHUB_EVENT_NAME"].inspect}"
   end
 rescue NeutralSystemExit => e
   puts e.message

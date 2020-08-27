@@ -1,6 +1,6 @@
 cask "garagebuy" do
-  version "3.4"
-  sha256 "8f51a225baa867b45ad98188a0eb360eee8dbfa7bb320514daf84e6ba80051b0"
+  version "3.4.2"
+  sha256 "bf274c032c958f712f674558f437e458fea89bfff5c90d01791aa6c82fcf0707"
 
   # iwascoding.de/ was verified as official when first introduced to the cask
   url "https://www.iwascoding.de/downloads/GarageBuy_#{version}.dmg"

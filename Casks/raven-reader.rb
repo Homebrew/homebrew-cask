@@ -1,9 +1,10 @@
 cask "raven-reader" do
-  version "0.8.3"
-  sha256 "e1d2796df71d2c0202ac4929aeecb548cc0e2fb6e54f392cd2eddade2ab5776a"
+  version "1.0.0"
+  sha256 "7e77c6546c3d1d08490ec22709d77c51c6621b5d0597af07778c6da488ad1b21"
 
-  url "https://download.ravenreader.app/ravenreader/Raven%20Reader-#{version}-mac.zip"
-  appcast "https://download.ravenreader.app/ravenreader/latest-mac.yml"
+  # download.helloefficiency.com/ravenreader/ was verified as official when first introduced to the cask
+  url "https://download.helloefficiency.com/ravenreader/Raven%20Reader-#{version}.dmg"
+  appcast "https://ridereceiptspro.sfo2.digitaloceanspaces.com/ravenreader/latest-mac.yml"
   name "Raven Reader"
   homepage "https://ravenreader.app/"
 

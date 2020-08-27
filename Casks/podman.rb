@@ -1,6 +1,6 @@
 cask "podman" do
-  version "2.0.3"
-  sha256 "9231c305c4e8c7374863c7377ac38a493e06fef09cea3bba975694941ae8dce3"
+  version "2.0.5"
+  sha256 "d178936b8f768676e17d2ac9bd8bea739c45988c97fd98aace3506655bfab056"
 
   url "https://github.com/containers/podman/releases/download/v#{version}/podman-remote-release-darwin.zip"
   appcast "https://github.com/containers/podman/releases.atom"

@@ -1,12 +1,12 @@
 cask "responsively" do
-  version "0.9.0"
-  sha256 "f330dc9134b96a21bac77a43f240392391973b4acf82b6b1840ba6b962addde8"
+  version "0.11.0"
+  sha256 "b295d2677de6ac47fef8f12c6aa5ae261e49237edc9e3b0d5711b36a82932b04"
 
-  # github.com/manojVivek/responsively-app/ was verified as official when first introduced to the cask
-  url "https://github.com/manojVivek/responsively-app/releases/download/v#{version}/ResponsivelyApp-#{version}.dmg"
-  appcast "https://github.com/manojVivek/responsively-app/releases.atom"
+  # github.com/responsively-org/responsively-app/ was verified as official when first introduced to the cask
+  url "https://github.com/responsively-org/responsively-app/releases/download/v#{version}/ResponsivelyApp-#{version}.dmg"
+  appcast "https://github.com/responsively-org/responsively-app/releases.atom"
   name "Responsively"
-  homepage "https://manojvivek.github.io/responsively-app/"
+  homepage "https://responsively.app/"
 
   app "ResponsivelyApp.app"
 

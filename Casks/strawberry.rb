@@ -1,6 +1,6 @@
 cask "strawberry" do
-  version "0.6.13"
-  sha256 "cdf2d8cfc6189f9d20d83c51d880779bb71841787f31ec351f8a899029bd348c"
+  version "0.7.2"
+  sha256 "f85d1ff66d501f2e0c06349ce98e237fd91d73894a71e96d8363ffd804ccc04e"
 
   # github.com/strawberrymusicplayer/strawberry/ was verified as official when first introduced to the cask
   url "https://github.com/strawberrymusicplayer/strawberry/releases/download/#{version}/strawberry-#{version}.dmg"

@@ -7,6 +7,7 @@ cask "fontforge" do
   appcast "https://github.com/fontforge/fontforge/releases.atom",
           must_contain: version.major_minor_patch.dots_to_hyphens
   name "FontForge"
+  desc "Font editor and converter for outline and bitmap fonts"
   homepage "https://fontforge.github.io/en-US/"
 
   depends_on macos: ">= :yosemite"

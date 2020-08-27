@@ -1,6 +1,6 @@
 cask "insync" do
-  version "3.2.3.40853"
-  sha256 "c61a67e4c3eedaed7868c285ee2f3c404476bb39e0483015e2313a1082053efd"
+  version "3.2.6.40863"
+  sha256 "c732aa4e3fc2bf58b051e3ce440f32ceeb2877681aa9c84ef1658fd3736ef2d6"
 
   url "http://s.insynchq.com/builds/Insync-#{version}.dmg"
   appcast "https://www.insynchq.com/downloads?start=true"
@@ -8,7 +8,6 @@ cask "insync" do
   homepage "https://www.insynchq.com/"
 
   auto_updates true
-  conflicts_with cask: "insync-beta"
 
   app "Insync.app"
 end

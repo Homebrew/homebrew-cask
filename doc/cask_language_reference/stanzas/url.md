@@ -17,7 +17,7 @@ When a plain URL string is insufficient to fetch a file, additional information 
 | `user_agent:`      | a string holding the user agent to set for the download request. Can also be set to the symbol `:fake`, which will use a generic Browser-like user agent string. We prefer `:fake` when the server does not require a specific user agent.
 | `data:`            | a hash of parameters to be set in the POST request
 
-Example of using `cookies:`: [java.rb](https://github.com/Homebrew/homebrew-cask/blob/472930df191d66747a57d5c96c0d00511d56e21b/Casks/java.rb#L5#L8)
+Example of using `cookies:`: [java.rb](https://github.com/Homebrew/homebrew-cask/blob/472930df191d66747a57d5c96c0d00511d56e21b/Casks/java.rb#L5-L8)
 
 Example of using `referer:`: [rrootage.rb](https://github.com/Homebrew/homebrew-cask/blob/312ae841f1f1b2ec07f4d88b7dfdd7fbdf8d4f94/Casks/rrootage.rb#L5)
 

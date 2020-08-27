@@ -1,6 +1,6 @@
 cask "wire" do
-  version "3.18.3728"
-  sha256 "b4f87f375552ea498089a36232be115f72da797c8131bb95d33d15ee4b9a2376"
+  version "3.19.3799"
+  sha256 "8933f3c4180f072ebb21d0e624a43e904a97e10fa682a7f9e596b41b1eb168eb"
 
   # github.com/wireapp/wire-desktop/ was verified as official when first introduced to the cask
   url "https://github.com/wireapp/wire-desktop/releases/download/macos%2F#{version}/Wire.pkg"

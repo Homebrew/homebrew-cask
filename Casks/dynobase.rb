@@ -1,6 +1,6 @@
 cask "dynobase" do
-  version "0.8.6"
-  sha256 "2a8a0b5f85946a5daf1903ed428824fb91900599924b90aab6e235c6d141472d"
+  version "1.0.0"
+  sha256 "3d99ded7b37bbbf0df77a9f20379fa0140f57c3ec7de154f79e61e0dc42ce04a"
 
   # github.com/Dynobase/dynobase was verified as official when first introduced to the cask
   url "https://github.com/Dynobase/dynobase/releases/download/#{version}/Dynobase-#{version}.dmg"

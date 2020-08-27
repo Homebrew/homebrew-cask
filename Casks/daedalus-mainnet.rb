@@ -1,10 +1,12 @@
 cask "daedalus-mainnet" do
-  version "2.0.0,13980"
-  sha256 "97d336d45b022b0390446497dbe8b43bb6174436df12d43c4fc2b953ce22b703"
+  version "2.1.0,14079"
+  sha256 "c541091d7368359eb7046e36525a03949a391e81455c879f94fb02d53e5c2620"
 
   # update-cardano-mainnet.iohk.io/ was verified as official when first introduced to the cask
   url "https://update-cardano-mainnet.iohk.io/daedalus-#{version.before_comma}-mainnet-#{version.after_comma}.pkg"
+  appcast "https://update-cardano-mainnet.iohk.io/daedalus-latest-version.json"
   name "Daedalus Mainnet"
+  desc "Cryptocurrency wallet for ada on the Cardano blockchain"
   homepage "https://daedaluswallet.io/"
 
   depends_on macos: ">= :high_sierra"

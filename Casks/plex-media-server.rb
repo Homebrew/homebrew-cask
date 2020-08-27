@@ -10,7 +10,7 @@ cask "plex-media-server" do
   auto_updates true
 
   app "Plex Media Server.app"
-  binary "#{appdir}/Plex Media Server.app/Contents/MacOS/Plex Media Scanner", target: "pms"
+  binary "#{appdir}/Plex Media Server.app/Contents/MacOS/Plex Media Scanner", target: "plexms"
 
   uninstall quit:      "com.plexapp.plexmediaserver",
             launchctl: "com.plexapp.mediaserver"
