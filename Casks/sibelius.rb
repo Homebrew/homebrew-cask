@@ -43,7 +43,8 @@ cask "sibelius" do
   zap launchctl: "com.avid.AvidLink.uninstall.HelperTool",
       pkgutil:   "com.avid.tmp.AvidLink.pkg",
       script:    {
-        executable:   "#{appdir}/Avid_Uninstallers/Avid Link/Avid Link Uninstaller.app/Contents/MacOS/AvidUninstaller",
+        executable:   "#{appdir}/Avid_Uninstallers/Avid Link/Avid Link Uninstaller.app/" \
+                      "Contents/MacOS/AvidUninstaller",
         args:         ["-no-gui", "-all"],
         sudo:         true,
         must_succeed: true,
