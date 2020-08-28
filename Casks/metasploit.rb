@@ -3,7 +3,6 @@ cask "metasploit" do
   sha256 :no_check
 
   url "https://osx.metasploit.com/metasploitframework-latest.pkg"
-  # appcast "https://osx.metasploit.com/LATEST"
   name "Metasploit Framework"
   homepage "https://www.metasploit.com/"
 
