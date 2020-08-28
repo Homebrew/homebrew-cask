@@ -1,6 +1,6 @@
 cask "supertuxkart" do
-  version "1.1"
-  sha256 "ed1783b2e3220ce3b69a88b39528c101154bdfdca10f4ff4a66d065e802334f3"
+  version "1.2"
+  sha256 "0ce988c748f254dcf2cf441c575e4715ee578bb439a9535b045cc1a60618a2ed"
 
   # sourceforge.net/supertuxkart/ was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/supertuxkart/SuperTuxKart-#{version}-mac.zip"
