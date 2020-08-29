@@ -8,6 +8,8 @@ cask "silentknight" do
   name "SilentKnight"
   homepage "https://eclecticlight.co/lockrattler-systhist/"
 
+  depends_on macos: ">= :el_capitan"
+
   app "silentknight#{version.before_comma.no_dots}/SilentKnight.app"
 
   zap trash: [
