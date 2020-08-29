@@ -1,6 +1,6 @@
 cask "app-cleaner" do
-  version "7.0.2"
-  sha256 "7b1fdfcb61f0ea12075dda65c04062f87d0b3c465ef455cc45e5c398002b4764"
+  version "7.0.3"
+  sha256 "6b83428a2a0267df6eb8f9637ced57ac2e1832aea69568c8d82f49bd6186d4d4"
 
   url "https://nektony.com/download/app-cleaner-uninstaller/app-cleaner-uninstaller.dmg"
   appcast "https://nektony.com/pro-support/app-cleaner/update/update.xml"

@@ -1,8 +1,8 @@
 cask "easyeda" do
-  version "6.3.53"
-  sha256 "794d6fb526a9fa5d0a7d554513f70ca7f6fa6b4f19d8eaa62701e909a8aeacb4"
+  version "6.4.5"
+  sha256 "6e3e7d9b443fa72b6b81c2d8f0a0dbe8568b38d2c552dfac73789db8dd576ade"
 
-  url "https://image.easyeda.com/files/easyeda-#{version}-mac-x64.zip"
+  url "https://image.easyeda.com/files/easyeda-mac-darwin-#{version}.zip"
   appcast "https://easyeda.com/page/download"
   name "EasyEDA"
   homepage "https://easyeda.com/"

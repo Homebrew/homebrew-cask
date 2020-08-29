@@ -3,7 +3,7 @@ cask "gloomhaven-helper" do
   sha256 "7b2161b1ca159a7584d89355d72b8aae2c7c06c281eee8c26a75da16697dea96"
 
   url "https://esotericsoftware.com/files/ghh/GloomhavenHelper-#{version}.zip"
-  appcast "http://esotericsoftware.com/gloomhaven-helper"
+  appcast "https://esotericsoftware.com/gloomhaven-helper"
   name "Gloomhaven Helper"
   homepage "https://esotericsoftware.com/gloomhaven-helper"
 

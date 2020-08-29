@@ -1,6 +1,6 @@
 cask "preform" do
-  version "3.7.1,481"
-  sha256 "f33e385d6cef90e0ad7f04d933404ccf3997ae52a2504b420a01730f998bf04a"
+  version "3.8.0,513"
+  sha256 "cdbccb5b2b1c969646be1c8efe3bb56f123703d9b8dad274b4c3bfc967a7a114"
 
   # s3.amazonaws.com/FormlabsReleases/ was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/FormlabsReleases/Release/#{version.before_comma}/PreForm_#{version.before_comma}_release_origin_release_#{version.before_comma}_build_#{version.after_comma}.dmg"

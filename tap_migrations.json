@@ -36,6 +36,7 @@
   "pandoc": "homebrew/core",
   "pgloader": "homebrew/core",
   "pgweb": "homebrew/core",
+  "podman": "homebrew/core",
   "purescript": "homebrew/core",
   "python": "homebrew/core",
   "python3": "homebrew/core",

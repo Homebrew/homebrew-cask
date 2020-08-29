@@ -9,7 +9,7 @@ on:
     paths:
       - .github/actions/automerge/**
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '*/30 * * * *'
 
 jobs:
   automerge:

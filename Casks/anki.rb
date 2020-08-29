@@ -1,6 +1,6 @@
 cask "anki" do
-  version "2.1.30"
-  sha256 "906774a4a7f93d94b06908b5c0053c16cbccdfb73d5420da174ca398a885010c"
+  version "2.1.32"
+  sha256 "1e3a87bb69fef7df157a56593820b86e390ca5d789f4cf87f37ca08f3a78bf9b"
 
   # github.com/ankitects/anki/ was verified as official when first introduced to the cask
   url "https://github.com/ankitects/anki/releases/download/#{version}/anki-#{version}-mac.dmg"

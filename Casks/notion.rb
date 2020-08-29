@@ -8,6 +8,8 @@ cask "notion" do
   name "Notion"
   homepage "https://www.notion.so/"
 
+  auto_updates true
+
   app "Notion.app"
 
   zap trash: [

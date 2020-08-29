@@ -1,6 +1,6 @@
 cask "kafka-tool" do
-  version "2.0.7"
-  sha256 "8f4a008a4d3ce83e274d15796474770165961c6b66b59503e03ccd8c6b93ebbd"
+  version "2.0.8"
+  sha256 "fe88a7778cbf78aa397f20c962c21779a78c237307a9627ea65fd42db266a779"
 
   url "https://www.kafkatool.com/download2/kafkatool.dmg"
   appcast "https://www.kafkatool.com/download.html"
@@ -8,7 +8,7 @@ cask "kafka-tool" do
   homepage "https://www.kafkatool.com/index.html"
 
   installer script: {
-    executable: "Kafka Tool #{version.major} Installer.app/Contents/MacOS/JavaApplicationStub",
+    executable: "Kafka Tool #{version.major}.app/Contents/MacOS/JavaApplicationStub",
     args:       ["-q"],
   }
 
