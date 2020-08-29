@@ -3,7 +3,7 @@ name: Sync labels.
 on: label
 
 jobs:
-  sync_labels:
+  sync-labels:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main
