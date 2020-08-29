@@ -188,9 +188,11 @@ jobs:
 
       - name: Run brew cask install ${{ matrix.cask.token }}
         id: install
-        run: |
-          brew cask install '${{ matrix.cask.path }}'
-        if: success() && steps.info.outcome == 'success' && fromJSON(steps.info.outputs.macos_requirement_satisfied)
+        run: brew cask install '${{ matrix.cask.path }}'
+        if: >
+          success() && steps.info.outcome == 'success' &&
+          fromJSON(steps.info.outputs.macos_requirement_satisfied) &&
+          !contains(github.event.pull_request.labels.*.name, 'skip-install')
         timeout-minutes: 30
 
       - name: Run brew cask uninstall ${{ matrix.cask.token }}
