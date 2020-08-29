@@ -12,11 +12,11 @@ cask "toolreleases" do
 
   app "ToolReleases.app"
 
-  uninstall login_item: 'ToolReleases',
-            quit: 'com.developermaris.ToolReleases'
+  uninstall login_item: "ToolReleases",
+                  quit: "com.developermaris.ToolReleases"
 
   zap trash: [
-               '~/Library/Caches/com.developermaris.ToolReleases',
-               '~/Library/Preferences/com.developermaris.ToolReleases.plist'
-             ]
+    "~/Library/Caches/com.developermaris.ToolReleases",
+    "~/Library/Preferences/com.developermaris.ToolReleases.plist",
+  ]
 end
