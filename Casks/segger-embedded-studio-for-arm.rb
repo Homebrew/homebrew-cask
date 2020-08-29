@@ -1,6 +1,6 @@
 cask "segger-embedded-studio-for-arm" do
-  version "5.10"
-  sha256 "a72d3a0932556e6a82f2a57def899044b94aa5b2c429bc8654e3427e794649b4"
+  version "5.10a"
+  sha256 "c3ca930b6cc75c24d4f19f288b606d24ea5acb2d7cb122160e275429eaf76859"
 
   url "https://www.segger.com/downloads/embedded-studio/Setup_EmbeddedStudio_ARM_v#{version.no_dots}_macos_x64.dmg"
   appcast "https://studio.segger.com/arm_segger_studio_release_notes.htm"
