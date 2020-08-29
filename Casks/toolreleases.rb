@@ -11,4 +11,12 @@ cask "toolreleases" do
   depends_on macos: ">= :catalina"
 
   app "ToolReleases.app"
+
+  uninstall login_item: 'ToolReleases',
+            quit: 'com.developermaris.ToolReleases'
+
+  zap trash: [
+               '~/Library/Caches/com.developermaris.ToolReleases',
+               '~/Library/Preferences/com.developermaris.ToolReleases.plist'
+             ]
 end
