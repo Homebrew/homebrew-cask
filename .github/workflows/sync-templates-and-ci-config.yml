@@ -7,7 +7,7 @@ on:
       - master
 
 jobs:
-  sync_templates_and_ci_config:
+  sync-templates-and-ci-config:
     if: github.repository == 'Homebrew/homebrew-cask'
     runs-on: ubuntu-latest
     strategy:
