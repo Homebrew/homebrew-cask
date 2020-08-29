@@ -75,6 +75,8 @@ def merge_pull_request(pr, check_runs = GitHub.check_runs(pr: pr).fetch("check_r
   tap = Tap.fetch(repo)
   pr_name = "#{tap.name}##{number}"
 
+  skip "Pull request #{pr_name} has labels." if pr.fetch("labels").any?
+
   diff = diff_for_pull_request(pr)
   skip "Pull request #{pr_name} is not a “simple” version bump." unless diff.simple?
 
