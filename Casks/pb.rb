@@ -6,7 +6,7 @@ cask "pb" do
   url "https://github.com/sidneys/pb-for-desktop/releases/download/v#{version}/pb-for-desktop-#{version}-mac.zip"
   appcast "https://github.com/sidneys/pb-for-desktop/releases.atom"
   name "PB for Desktop"
-  desc "Unofficial Pushbullet desktop app to get push notifications on Mac"
+  desc "Unofficial Pushbullet desktop app to get push notifications"
   homepage "https://sidneys.github.io/pb-for-desktop"
 
   auto_updates true
