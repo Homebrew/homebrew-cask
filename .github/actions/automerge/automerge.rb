@@ -137,7 +137,8 @@ def passed_ci?(check_runs, cask_name)
   ]
 
   check_runs.all? { |_name, check_run| check_run["conclusion"] == "success" } &&
-    (check_runs.dig("test (#{cask_name})", "conclusion") == "success")
+    (check_runs.dig("test (#{cask_name})", "conclusion") == "success") &&
+    (check_runs.dig("conclusion", "conclusion") == "success")
 end
 
 begin
