@@ -45,7 +45,7 @@ CASK_REPOS.each do |repo|
     '.github/*.yml',
     '.github/actions/{automerge,checkout_cask_pr}/**/*',
     '.github/ISSUE_TEMPLATE/*.md',
-    '.github/workflows/{automerge,ci,old-ci}.yml',
+    '.github/workflows/{automerge,ci,rebase}.yml',
     '.gitignore',
     '.travis.yml',
     'Casks/.rubocop.yml',
