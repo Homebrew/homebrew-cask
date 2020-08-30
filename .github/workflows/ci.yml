@@ -29,7 +29,7 @@ jobs:
       - name: Generate CI matrix
         id: generate-matrix
         run: |
-          if ${{ contains(github.event.pull_request.labels.*.name, 'syntax-only') }}; then
+          if ${{ contains(github.event.pull_request.labels.*.name, 'ci-syntax-only') }}; then
             flags=(--syntax-only)
           else
             flags=()
@@ -192,7 +192,7 @@ jobs:
         if: >
           success() && steps.info.outcome == 'success' &&
           fromJSON(steps.info.outputs.macos_requirement_satisfied) &&
-          !contains(github.event.pull_request.labels.*.name, 'skip-install')
+          !contains(github.event.pull_request.labels.*.name, 'ci-skip-install')
         timeout-minutes: 30
 
       - name: Run brew cask uninstall ${{ matrix.cask.token }}
