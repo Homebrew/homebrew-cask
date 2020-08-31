@@ -246,4 +246,4 @@ jobs:
     if: always()
     steps:
       - name: Result
-        run: ${{ needs.test.result == 'success' }}
+        run: ${{ (contains(github.event.pull_request.labels.*.name, 'ci-verified-manually') && needs.test.result != 'success') || needs.test.result == 'success' }}
