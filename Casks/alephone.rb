@@ -8,5 +8,5 @@ cask "alephone" do
   name "Aleph One"
   homepage "https://alephone.lhowon.org/"
 
-  app "AlephOne.app"
+  app "Aleph One.app"
 end
