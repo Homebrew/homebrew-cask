@@ -1,4 +1,4 @@
-cask "alephone" do
+cask "aleph-one" do
   version "20200830"
   sha256 "690de4bf50086f021181aed0b98c4fe2b0a35bf66a3df04c50910763eb071ec7"
 
