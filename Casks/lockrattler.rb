@@ -11,4 +11,10 @@ cask "lockrattler" do
   depends_on macos: ">= :el_capitan"
 
   app "lockrattler#{version.before_comma.major}#{version.before_comma.minor}/LockRattler.app"
+
+  zap trash: [
+    "~/Library/Caches/co.eclecticlight.LockRattler",
+    "~/Library/Preferences/co.eclecticlight.LockRattler.plist",
+    "~/Library/Saved Application State/co.eclecticlight.LockRattler.savedState",
+  ]
 end
