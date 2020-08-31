@@ -11,7 +11,6 @@ cask "lrtimelapse" do
 
   uninstall script:  {
     executable: "/usr/local/LRTimelapse/uninstall.sh",
-    input:      "\n",
     sudo:       true,
   },
             pkgutil: [
