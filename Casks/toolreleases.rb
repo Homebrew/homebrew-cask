@@ -13,7 +13,7 @@ cask "toolreleases" do
   app "ToolReleases.app"
 
   uninstall login_item: "ToolReleases",
-                  quit: "com.developermaris.ToolReleases"
+            quit:       "com.developermaris.ToolReleases"
 
   zap trash: [
     "~/Library/Caches/com.developermaris.ToolReleases",
