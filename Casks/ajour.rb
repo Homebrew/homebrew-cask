@@ -5,7 +5,7 @@ cask "ajour" do
   url "https://github.com/casperstorm/ajour/releases/download/#{version}/ajour-#{version}.dmg"
   appcast "https://github.com/casperstorm/ajour/releases.atom"
   name "Ajour"
-  desc "World of Warcraft addon manager written in Rust"
+  desc "World of Warcraft addon manager"
   homepage "https://github.com/casperstorm/ajour"
 
   app "Ajour.app"
