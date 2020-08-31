@@ -1,6 +1,6 @@
 cask "yojimbo" do
-  version "4.5"
-  sha256 "6b65cf378bfbe259e59b03d00c3a9211c765e7c094d9d90102d7a0373f994b76"
+  version "4.5.1"
+  sha256 "754f63322e8bdfa7a41565f5d571d0bb37e2e8c8ae97b4478674ff87a30fd106"
 
   # s3.amazonaws.com/BBSW-download/ was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/BBSW-download/Yojimbo_#{version}.dmg"
