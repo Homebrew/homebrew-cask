@@ -3,7 +3,7 @@ cask "zotero" do
   sha256 "26c3d59834b81d46cff3fd53791e2d758a971943102d21093d0b8b23b18f77f9"
 
   url "https://download.zotero.org/client/release/#{version}/Zotero-#{version}.dmg"
-  appcast "https://github.com/zotero/zotero/releases.atom"
+  appcast "https://www.zotero.org/download/"
   name "Zotero"
   homepage "https://www.zotero.org/"
 
