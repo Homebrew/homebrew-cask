@@ -4,7 +4,7 @@ cask "zbuc-imgur" do
 
   url "https://github.com/zbuc/imgurBar/raw/master/imgur.dmg"
   name "imgurBar"
-  desc "Menubar application to upload images to imgur"
+  desc "Upload images to imgur from the menubar"
   homepage "https://github.com/zbuc/imgurBar"
 
   app "imgur.app"
