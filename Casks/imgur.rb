@@ -7,4 +7,6 @@ cask "imgur" do
   homepage "https://github.com/zbuc/imgurBar"
 
   app "imgur.app"
+
+  zap trash: "~/Library/Caches/com.zbuc.imgur"
 end
