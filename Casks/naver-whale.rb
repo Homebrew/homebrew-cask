@@ -6,7 +6,7 @@ cask "naver-whale" do
   url "http://update.whale.naver.net/downloads/installers/NaverWhale.dmg"
   appcast "https://whale.naver.com/changelog/"
   name "네이버 웨일"
-  desc "Web browser made by Naver Co., Ltd."
+  desc "Web browser made by Naver Co., Ltd"
   homepage "https://whale.naver.com/ko/"
 
   app "네이버 웨일.app"
