@@ -2,9 +2,8 @@ cask "love" do
   version "11.3"
   sha256 "f506af5a6443a559d8edf9b165fd817acb5accdf9873a3be9baf41ab09e0d2d9"
 
-  # bitbucket.org/rude/love/ is not the official repository anymore
-  # project migrated to GitHub
-  url "https://github.com/love2d/love/releases/download/#{version}/love-#{version}-macos.zip"
+  # github.com/love2d/love/releases/download/ was verified as official when first introduced to the cask
+  url "github.com/love2d/love/releases/download/#{version}/love-#{version}-macos.zip"
   appcast "https://love2d.org/"
   name "LÖVE"
   homepage "https://love2d.org/"
