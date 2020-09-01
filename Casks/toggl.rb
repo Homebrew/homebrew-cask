@@ -9,8 +9,8 @@ cask "toggl" do
   homepage "https://www.toggl.com/toggl-desktop/"
 
   conflicts_with cask: [
-    "toggl-beta",
-    "toggl-dev",
+    "homebrew/cask-versions/toggl-beta",
+    "homebrew/cask-versions/toggl-dev",
   ]
 
   app "TogglDesktop.app"
