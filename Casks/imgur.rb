@@ -8,7 +8,5 @@ cask "imgur" do
 
   app "imgur.app"
 
-  zap trash: [
-    "~/Library/Caches/com.zbuc.imgur",
-  ]
+  zap trash: "~/Library/Caches/com.zbuc.imgur"
 end
