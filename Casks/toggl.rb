@@ -7,6 +7,6 @@ cask "toggl" do
   appcast "https://toggl-open-source.github.io/toggldesktop/assets/releases/darwin_stable_appcast.xml"
   name "TogglDesktop"
   homepage "https://www.toggl.com/toggl-desktop/"
-  
+
   app "TogglDesktop.app"
 end
