@@ -5,7 +5,7 @@ cask "pcoipclient" do
   url "https://downloads.teradici.com/mac/stable/pcoip-client_#{version}.dmg"
   appcast "https://downloads.teradici.com/mac/stable/"
   name "Teradici PCoIP Software Client for macOS"
-  desc "PCoIP client for VM Agents and Remote Workstation Cards"
+  desc "Client for VM agents and remote workstation cards"
   homepage "https://docs.teradici.com/find/product/software-and-mobile-clients/"
 
   app "PCoIPClient.app"
