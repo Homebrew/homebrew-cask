@@ -3,7 +3,8 @@ cask "zbuc-imgur" do
   sha256 :no_check
 
   url "https://github.com/zbuc/imgurBar/raw/master/imgur.dmg"
-  name "imgur"
+  name "imgurBar"
+  desc "Menubar application to upload images to imgur"
   homepage "https://github.com/zbuc/imgurBar"
 
   app "imgur.app"
