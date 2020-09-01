@@ -8,7 +8,7 @@ cask "naver-whale" do
   name "네이버 웨일"
   homepage "https://whale.naver.com/ko/"
 
-  app "Whale.app"
+  app "네이버 웨일.app"
 
   zap trash: [
     "~/Library/Caches/com.naver.Whale",
