@@ -1,4 +1,4 @@
-cask "imgur" do
+cask "zbuc-imgur" do
   version :latest
   sha256 :no_check
 
