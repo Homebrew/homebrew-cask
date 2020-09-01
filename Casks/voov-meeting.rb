@@ -1,6 +1,6 @@
 cask "voov-meeting" do
-  version "1.7.0.520,1410000198"
-  sha256 "355b1646b7d1b47f611fe9cc7deed7b66b4d581199a89e49f04852e96bf3d03b"
+  version "1.7.1.510,1410000198"
+  sha256 "7e43ecc30d0eb99ab511bb8709b89d6c3916a5a05b638d1c4980210669ac669a"
 
   # down.qq.com/download/ was verified as official when first introduced to the cask
   url "https://down.qq.com/download/VooVMeeting_#{version.after_comma}_#{version.before_comma}.publish.dmg"
