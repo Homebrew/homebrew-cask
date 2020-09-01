@@ -7,11 +7,6 @@ cask "toggl" do
   appcast "https://toggl-open-source.github.io/toggldesktop/assets/releases/darwin_stable_appcast.xml"
   name "TogglDesktop"
   homepage "https://www.toggl.com/toggl-desktop/"
-
-  conflicts_with cask: [
-    "homebrew/cask-versions/toggl-beta",
-    "homebrew/cask-versions/toggl-dev",
-  ]
-
+  
   app "TogglDesktop.app"
 end
