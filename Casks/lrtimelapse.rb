@@ -19,4 +19,8 @@ cask "lrtimelapse" do
               "com.lrtimelapse.LRTimelapse#{version.major}",
               "com.lrttimelapse.LRTTools",
             ]
+
+  caveats do
+    files_in_usr_local
+  end
 end
