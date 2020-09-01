@@ -1,6 +1,6 @@
 cask "microsoft-edge" do
-  version "85.0.564.41"
-  sha256 "dca28134f4b34755fdb22a8ca4e29aeadf4e436c9d2d4a4f5bc45f5e1248e3f4"
+  version "85.0.564.44"
+  sha256 "c157a5fc10e3124b803b503b8eacf439b2b52b2a94440196171860d05860345c"
 
   # officecdn-microsoft-com.akamaized.net/ was verified as official when first introduced to the cask
   url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/MicrosoftEdge-#{version}.pkg"
