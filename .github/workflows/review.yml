@@ -7,19 +7,14 @@ jobs:
     if: startsWith(github.repository, 'Homebrew/')
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.pull_request.base.branch }}
-          persist-credentials: false
       - name: Generate Review
         id: review
-        uses: ./.github/actions/review
-        env:
-          HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: Homebrew/actions/review-cask-pr@master
       - name: Review Pull Request
         uses: andrewmusgrave/automatic-pull-request-review@c365a9e4bdd5bc80d431c4cf173707ca15b909b4
         if: steps.review.outputs.event
         with:
           repo-token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
           event: ${{ steps.review.outputs.event }}
-          body: ${{ steps.review.outputs.message }}
+          body: |
+            ${{ steps.review.outputs.message }}
