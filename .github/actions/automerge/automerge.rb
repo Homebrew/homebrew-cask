@@ -177,6 +177,8 @@ begin
     elsif failed_prs.any?
       exit 1
     end
+  when "workflow_run"
+    puts "Not implemented."
   else
     raise "Unsupported GitHub Actions event: #{ENV["GITHUB_EVENT_NAME"].inspect}"
   end
