@@ -7,10 +7,10 @@ jobs:
     if: startsWith(github.repository, 'Homebrew/')
     runs-on: ubuntu-latest
     steps:
-      - name: Generate Review
+      - name: Review Pull Request
         id: review
         uses: Homebrew/actions/review-cask-pr@master
-      - name: Review Pull Request
+      - name: Post Pull Request Review
         uses: andrewmusgrave/automatic-pull-request-review@c365a9e4bdd5bc80d431c4cf173707ca15b909b4
         if: steps.review.outputs.event
         with:
