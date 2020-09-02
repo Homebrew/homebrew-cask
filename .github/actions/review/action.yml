@@ -1,0 +1,9 @@
+name: Automatically review a Homebrew Cask pull request
+description: Review version bump pull requests.
+author: Homebrew
+branding:
+  icon: git-pull-request
+  color: yellow
+runs:
+  using: docker
+  image: Dockerfile
