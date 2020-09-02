@@ -1,5 +1,3 @@
-# frozen_string_literal: false
-
 cask "blender" do
   version "2.90.0"
   sha256 "51a999d21bf50a6e1f8423b9190571403ee1adc1248911207af13ce21599320b"
