@@ -85,33 +85,9 @@ jobs:
       - name: Install Homebrew Gems
         run: brew install-bundler-gems
 
-      - name: Run brew cask style ${{ matrix.cask.token }}
-        run: |
-          if ${{ !matrix.cask }}; then
-            brew cask style
-            exit $?
-          fi
-
-          brew cask style '${{ matrix.cask.path }}' || brew ruby <<'EOF'
-            path = Pathname('${{ matrix.cask.path }}')
-            json = Cask::Cmd::Style.rubocop(path.expand_path, json: true)
-
-            json.fetch("files").each do |file|
-              file.fetch("offenses").each do |o|
-                line = o.fetch("location").fetch("start_line")
-                column = o.fetch("location").fetch("start_column")
-                message = Tty.strip_ansi(o.fetch("message"))
-                             .gsub(/\r/, '%0D')
-                             .gsub(/\n/, '%0A')
-                             .gsub(/]/, '%5D')
-                             .gsub(/;/, '%3B')
-
-                puts "::error file=#{path},line=#{line},col=#{column}::#{message}"
-              end
-            end
-
-            exit 1
-          EOF
+      - name: Run brew cask style
+        run: brew cask style
+        if: success() && !matrix.cask
 
       - name: Run brew cask audit ${{ matrix.cask.token }}
         run: |
