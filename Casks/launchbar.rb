@@ -8,6 +8,7 @@ cask "launchbar" do
   homepage "https://www.obdev.at/products/launchbar/index.html"
 
   auto_updates true
+  depends_on macos: ">= :mojave"
 
   app "LaunchBar.app"
 
