@@ -7,6 +7,8 @@ cask "camo-studio" do
   name "Camo Studio"
   homepage "https://reincubate.com/camo/"
 
+  auto_updates true
+
   app "Camo Studio.app"
 
   uninstall delete: "/Library/CoreMediaIO/Plug-Ins/DAL/ReincubateCamoDAL.plugin"
