@@ -1,3 +1,5 @@
+# frozen_string_literal: false
+
 cask "blender" do
   version "2.90.0"
   sha256 "51a999d21bf50a6e1f8423b9190571403ee1adc1248911207af13ce21599320b"
@@ -7,6 +9,8 @@ cask "blender" do
           must_contain: version.major_minor.delete("a-z")
   name "Blender"
   homepage "https://www.blender.org/"
+
+  conflicts_with cask: "homebrew/cask-versions/blender-lts"
 
   app "Blender.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
