@@ -7,14 +7,14 @@ cask "gotomeeting" do
   appcast "https://support.goto.com/meeting/help#g2m-whats-new",
           must_contain: version.before_comma
   name "GotoMeeting"
-  desc "An online meeting, desktop sharing and video conferencing software package"
+  desc "Online meeting, desktop sharing and video conferencing software package"
   homepage "https://www.gotomeeting.com/"
 
   app "GotoMeeting.app"
-  
+
   zap trash: [
     "~/Library/Application Support/LogMeInInc/GoToMeeting",
-    "~/Library/Application Support/LogMeInInc/GoToMeetingElectron", 
+    "~/Library/Application Support/LogMeInInc/GoToMeetingElectron",
     "~/Library/LaunchAgents/com.logmein.GoToMeeting.G2MAIRUploader.plist",
     "~/Library/LaunchAgents/com.logmein.GoToMeeting.G2MUpdate.plist",
   ]
