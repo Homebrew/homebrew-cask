@@ -10,7 +10,7 @@ cask "cloudflare-warp" do
   pkg "Cloudflare WARP.pkg"
 
   uninstall script: {
-    executable: "/Applications/Cloudflare\ WARP.app/Contents/Resources/uninstall.sh",
+    executable: "/Applications/Cloudflare WARP.app/Contents/Resources/uninstall.sh",
     input:      ["Y\n"],
     sudo:       true,
   }
