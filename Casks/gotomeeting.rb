@@ -4,8 +4,7 @@ cask "gotomeeting" do
 
   # builds.cdn.getgo.com/builds/g2m/ was verified as official when first introduced to the cask
   url "https://builds.cdn.getgo.com/builds/g2m/#{version.after_comma}/GoToMeeting.dmg"
-  appcast "https://support.goto.com/meeting/help#g2m-whats-new",
-          must_contain: version.before_comma
+  appcast "https://support.goto.com/meeting/help#g2m-whats-new"
   name "GotoMeeting"
   desc "Online meeting, desktop sharing and video conferencing software package"
   homepage "https://www.gotomeeting.com/"
