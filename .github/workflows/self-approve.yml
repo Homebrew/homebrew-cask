@@ -9,6 +9,7 @@ on:
 
 jobs:
   self-approve:
+    runs-on: ubuntu-latest
     steps:
       - name: Post Pull Request Review
         if: github.event.workflow_dispatch
