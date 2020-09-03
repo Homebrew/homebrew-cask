@@ -6,7 +6,7 @@ cask "snes9x" do
   url "http://www.s9x-w32.de/dl/snes9x-#{version}-macosx-i386.zip"
   appcast "http://www.s9x-w32.de/dl/"
   name "Snes9x"
-  homepage "http://www.snes9x.com/"
+  homepage "https://www.snes9x.com/"
 
   app "snes9x-#{version}-macosx-i386/Snes9x.app"
 end
