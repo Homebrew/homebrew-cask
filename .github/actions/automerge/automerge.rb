@@ -180,6 +180,9 @@ begin
 
     merge_pull_requests(prs)
   when "check_run"
+
+  when "workflow_dispatch"
+
   else
     raise "Unsupported GitHub Actions event: #{ENV["GITHUB_EVENT_NAME"].inspect}"
   end
