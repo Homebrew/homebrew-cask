@@ -17,4 +17,4 @@ jobs:
           token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
           pull_request: ${{ github.event.inputs.pull_request }}
           event: APPROVE
-          body: Self-approved by @${{ github.user }}.
+          body: Self-approved by @${{ github.actor }}.
