@@ -1,6 +1,6 @@
 cask "amd-power-gadget" do
-  version "0.6.4"
-  sha256 "51ad04b1e8407f65cde123d8c5a7cf1b3dfaf560e17ec8e9f50f4652251d7ab8"
+  version "0.6.5"
+  sha256 "73a7940805ce2679bb8c0e49a18afef95abf6dc66d2bc0486da27846e36cf428"
 
   url "https://github.com/trulyspinach/SMCAMDProcessor/releases/download/#{version}/AMD.Power.Gadget.app.zip"
   appcast "https://github.com/trulyspinach/SMCAMDProcessor/releases.atom"
