@@ -182,7 +182,15 @@ begin
   when "check_run"
 
   when "workflow_dispatch"
+    inputs = event.fetch("inputs")
 
+    prs = if pr_number = inputs["pull_request"]
+      [GitHub.open_api("https://api.github.com/repos/#{repository}/pulls/#{pr_number}")]
+    else
+      GitHub.pull_requests(repository, state: :open, base: "master")
+    end
+
+    merge_pull_requests(prs)
   else
     raise "Unsupported GitHub Actions event: #{ENV["GITHUB_EVENT_NAME"].inspect}"
   end
