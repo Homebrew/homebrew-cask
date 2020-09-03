@@ -14,11 +14,26 @@ jobs:
       matrix: ${{ steps.generate-matrix.outputs.matrix }}
     runs-on: ubuntu-latest
     steps:
+      - name: Debug
+        run: |
+
+
+          brew update-reset "$(brew --repo)"
+
+          cd "$(brew --repo)"
+
+          hub checkout https://github.com/Homebrew/brew/pull/8592
+
+          brew tap homebrew/cask --verbose --debug
       - name: Set up Homebrew
         id: set-up-homebrew
-        uses: Homebrew/actions/setup-homebrew@master
+        uses: Homebrew/actions/setup-homebrew@527ca1ca12ccf2ea2b732bb66203a2e49a73c7aa
         with:
           test-bot: false
+          debug: true
+        env:
+          HOMEBREW_VERBOSE: 1
+          HOMEBREW_DEBUG: 1
 
       - name: Check out Pull Request
         uses: actions/checkout@v2
