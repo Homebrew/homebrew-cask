@@ -6,4 +6,4 @@ set -euo pipefail
 export HOME=/home/linuxbrew
 
 export HOMEBREW_GITHUB_API_TOKEN="${INPUT_TOKEN}"
-brew ruby -- /automerge.rb "${GITHUB_EVENT_NAME}" "${GITHUB_EVENT_PATH}"
+brew ruby -- /automerge.rb "${GITHUB_EVENT_NAME}" "${GITHUB_EVENT_PATH}" "${GITHUB_REPOSITORY}"
