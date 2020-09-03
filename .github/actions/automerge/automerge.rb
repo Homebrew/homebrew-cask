@@ -178,8 +178,8 @@ begin
   when "workflow_run"
     prs = find_pull_requests_for_workflow_run(event)
 
-
     merge_pull_requests(prs)
+  when "check_run"
   else
     raise "Unsupported GitHub Actions event: #{ENV["GITHUB_EVENT_NAME"].inspect}"
   end
