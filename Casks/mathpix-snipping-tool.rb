@@ -1,10 +1,11 @@
 cask "mathpix-snipping-tool" do
-  version "2.5.1.171"
-  sha256 "a4dfe017f2934cc7eb185749af7d4f79a6054fa755fe24e1eff99df00c49ae53"
+  version "2.6.0.183"
+  sha256 "fb02b2d31716bfc0d1df084269cd95f51fe4fcd05854e9d1e45653cdf0365b4f"
 
   url "https://mathpix.com/dmg/SnippingTool-v#{version}.dmg"
   appcast "https://mathpix.com/appcast.xml"
   name "Mathpix Snipping Tool"
+  desc "Scanner app for math and science"
   homepage "https://mathpix.com/"
 
   auto_updates true
