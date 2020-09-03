@@ -8,7 +8,7 @@ using GitDiffExtension
 
 require "utils/github"
 
-event_name, event_path, = ARGV
+event_name, event_path, repository = ARGV
 
 event = JSON.parse(File.read(event_path))
 
@@ -20,26 +20,28 @@ puts "EVENT:"
 puts JSON.pretty_generate(event)
 puts
 
-def find_pull_request_for_status(event)
-  repo = event.fetch("repository").fetch("full_name")
+def find_pull_requests_for_workflow_run(event)
+  workflow_run = event.fetch("workflow_run")
 
-  branch = event.fetch("branches").find { |branch| branch.fetch("commit").fetch("sha") == event.fetch("commit").fetch("sha") }
+  prs = workflow_run.fetch("pull_requests")
+  prs = prs.map { |pr| GitHub.open_api(pr.fetch("url")) }
 
-  unless branch
-    puts "Status does not match commit."
-    return
-  end
+  return prs unless prs.empty?
 
-  /https:\/\/api.github.com\/repos\/(?<pr_author>[^\/]+)\// =~ branch.fetch("commit").fetch("url")
+  base_repo = event.fetch("repository")
+
+  head_repo = workflow_run.fetch("head_repository")
+  head_branch = workflow_run.fetch("head_branch")
+  head_sha = workflow_run.fetch("head_sha")
 
   GitHub.pull_requests(
-    repo,
-    base: "#{event.fetch("repository").fetch("default_branch")}",
-    head: "#{pr_author}:#{branch.fetch("name")}",
+    base_repo.fetch("full_name"),
+    base: base_repo.fetch("default_branch"),
+    head: "#{head_repo.fetch("owner").fetch("login")}:#{head_branch}",
     state: :open,
     sort: :updated,
     direction: :desc,
-  ).find { |pr| pr.fetch("head").fetch("sha") == event.fetch("commit").fetch("sha") }
+  ).select { |pr| pr.fetch("head").fetch("sha") == head_sha }
 end
 
 def diff_for_pull_request(pr)
@@ -140,6 +142,11 @@ def passed_ci?(check_runs, cask_name)
 end
 
 def merge_pull_requests(prs)
+  if prs.empty?
+    puts "No pull requests found."
+    return
+  end
+
   failed_prs = []
 
   prs.each do |pr|
@@ -165,17 +172,12 @@ end
 begin
   case event_name
   when "push", "schedule"
-    prs = GitHub.pull_requests(event.fetch("repository").fetch("full_name"), state: :open, base: "master")
-
-    if prs.empty?
-      puts "No open pull requests found."
-      exit
-    end
+    prs = GitHub.pull_requests(repository, state: :open, base: "master")
 
     merge_pull_requests(prs)
   when "workflow_run"
-    prs = event.fetch("workflow_run").fetch("pull_requests")
-    prs = prs.map { |pr| GitHub.open_api(pr.fetch("url")) }
+    prs = find_pull_requests_for_workflow_run(event)
+
 
     merge_pull_requests(prs)
   else
