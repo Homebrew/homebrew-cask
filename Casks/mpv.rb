@@ -6,8 +6,10 @@ cask "mpv" do
   url "https://laboratory.stolendata.net/~djinn/mpv_osx/mpv-#{version}.tar.gz"
   appcast "https://laboratory.stolendata.net/~djinn/mpv_osx/"
   name "mpv"
+  desc "Media player based on MPlayer and mplayer2"
   homepage "https://mpv.io/"
 
+  conflicts_with formula: "mpv"
   depends_on macos: ">= :yosemite"
 
   app "mpv.app"

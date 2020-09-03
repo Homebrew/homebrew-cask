@@ -1,0 +1,18 @@
+name: Update Pull Request Branch
+
+on:
+  workflow_dispatch:
+    inputs:
+      pull_request:
+        description: Pull request number
+        required: true
+
+jobs:
+  update-pr-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update Pull Request Branch
+        uses: juliangruber/update-pull-request-branch-action@21b674cd8723ec811ff2a0e6d1377507878b7f30
+        with:
+          number: ${{ github.event.inputs.pull_request }}
+          github-token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}

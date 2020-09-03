@@ -1,6 +1,6 @@
 cask "slite" do
-  version "1.1.17"
-  sha256 "9d8aa1dc774ac826f31a2ce63804167908b5bf3efd839f2fd8680fbbd166ba03"
+  version "1.1.18"
+  sha256 "55579d7b266eb845372b19c12c3e875550e7dd2ea388f58160fca8ff48465a11"
 
   url "https://download.slite.com/mac"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=https://download.slite.com/mac"

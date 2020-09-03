@@ -2,35 +2,15 @@ require "json"
 
 Homebrew.install_gem! "git_diff"
 require "git_diff"
+
 require_relative "git_diff_extensions"
 using GitDiffExtension
 
 require "utils/github"
 
-ENV["GITHUB_ACTION"]     = ENV.delete("HOMEBREW_GITHUB_ACTION")
-ENV["GITHUB_ACTOR"]      = ENV.delete("HOMEBREW_GITHUB_ACTOR")
-ENV["GITHUB_EVENT_NAME"] = ENV.delete("HOMEBREW_GITHUB_EVENT_NAME")
-ENV["GITHUB_EVENT_PATH"] = ENV.delete("HOMEBREW_GITHUB_EVENT_PATH")
-ENV["GITHUB_REPOSITORY"] = ENV.delete("HOMEBREW_GITHUB_REPOSITORY")
-ENV["GITHUB_SHA"]        = ENV.delete("HOMEBREW_GITHUB_SHA")
-ENV["GITHUB_WORKFLOW"]   = ENV.delete("HOMEBREW_GITHUB_WORKFLOW")
-ENV["GITHUB_WORKSPACE"]  = ENV.delete("HOMEBREW_GITHUB_WORKSPACE")
+event_name, event_path, repository = ARGV
 
-class NeutralSystemExit < SystemExit
-  def initialize(message)
-    super(78, message)
-  end
-end
-
-def skip(message = nil)
-  $stderr.puts message unless message.nil?
-  raise NeutralSystemExit.new(message)
-end
-
-$stdout.sync = true
-$stderr.sync = true
-
-event = JSON.parse(File.read(ENV.fetch("GITHUB_EVENT_PATH")))
+event = JSON.parse(File.read(event_path))
 
 puts "ENV:"
 puts ENV.to_h.sort_by { |k, | k }.select { |k,| k.start_with?("GITHUB_") }.map { |k, v| "#{k}=#{v}" }
@@ -40,23 +20,28 @@ puts "EVENT:"
 puts JSON.pretty_generate(event)
 puts
 
-def find_pull_request_for_status(event)
-  repo = event.fetch("repository").fetch("full_name")
+def find_pull_requests_for_workflow_run(event)
+  workflow_run = event.fetch("workflow_run")
 
-  branch = event.fetch("branches").find { |branch| branch.fetch("commit").fetch("sha") == event.fetch("commit").fetch("sha") }
+  prs = workflow_run.fetch("pull_requests")
+  prs = prs.map { |pr| GitHub.open_api(pr.fetch("url")) }
 
-  skip "Status does not match commit." unless branch
+  return prs unless prs.empty?
 
-  /https:\/\/api.github.com\/repos\/(?<pr_author>[^\/]+)\// =~ branch.fetch("commit").fetch("url")
+  base_repo = event.fetch("repository")
+
+  head_repo = workflow_run.fetch("head_repository")
+  head_branch = workflow_run.fetch("head_branch")
+  head_sha = workflow_run.fetch("head_sha")
 
   GitHub.pull_requests(
-    repo,
-    base: "#{event.fetch("repository").fetch("default_branch")}",
-    head: "#{pr_author}:#{branch.fetch("name")}",
+    base_repo.fetch("full_name"),
+    base: base_repo.fetch("default_branch"),
+    head: "#{head_repo.fetch("owner").fetch("login")}:#{head_branch}",
     state: :open,
     sort: :updated,
     direction: :desc,
-  ).find { |pr| pr.fetch("head").fetch("sha") == event.fetch("commit").fetch("sha") }
+  ).select { |pr| pr.fetch("head").fetch("sha") == head_sha }
 end
 
 def diff_for_pull_request(pr)
@@ -75,28 +60,51 @@ def merge_pull_request(pr, check_runs = GitHub.check_runs(pr: pr).fetch("check_r
   tap = Tap.fetch(repo)
   pr_name = "#{tap.name}##{number}"
 
-  diff = diff_for_pull_request(pr)
-  skip "Pull request #{pr_name} is not a “simple” version bump." unless diff.simple?
+  if pr.fetch("labels").any?
+    puts "Pull request #{pr_name} has labels."
+    return
+  end
 
-  skip "CI status for pull request #{pr_name} is not successful." unless passed_ci?(check_runs, diff.cask_name)
+  reviews = GitHub.open_api("#{pr.fetch("url")}/reviews")
+  if reviews.any?
+    if !reviews.all? { |r| r.fetch("state") == "APPROVED" && r.fetch("author_association") == "MEMBER" }
+      puts "Pull request #{pr_name} has non-approval reviews:"
+      puts JSON.pretty_generate(reviews)
+      return
+    end
+  else
+    puts "Pull request #{pr_name} does not have any approvals."
+    return
+  end
+
+  diff = diff_for_pull_request(pr)
+
+  unless diff.simple?
+    puts "Pull request #{pr_name} is not a “simple” version bump."
+    return
+  end
+
+  unless passed_ci?(check_runs, diff.cask_name)
+    puts "CI status for pull request #{pr_name} is not successful."
+    return
+  end
 
   if diff.version_changed?
     if diff.version_decreased?
-      skip "Version in pull request #{pr_name} decreased from #{diff.old_version.inspect} to #{diff.new_version.inspect}."
+      puts "Version in pull request #{pr_name} decreased from #{diff.old_version.inspect} to #{diff.new_version.inspect}."
+      return
     end
 
     tap.install(full_clone: true) unless tap.installed?
 
     out, _ = system_command! 'git', args: ['-C', tap.path, 'log', '--pretty=format:', '-G', '\s+version\s+\'', '--follow', '--patch', '--', diff.cask_path]
 
-    # Workaround until https://github.com/anolson/git_diff/pull/16 is merged and released.
-    out.gsub!(/^copy (from|to)/, 'rename \1')
-
     version_diff = GitDiff.from_string(out)
     previous_versions = version_diff.additions.select { |l| l.version? }.map { |l| l.version }.uniq
 
     if previous_versions.include?(diff.new_version)
-      skip "Version in pull request #{pr_name} changed to a previous version. Previous versions were:\n#{previous_versions.join("\n")}"
+      puts "Version in pull request #{pr_name} changed to a previous version. Previous versions were:\n#{previous_versions.join("\n")}"
+      return
     end
   end
 
@@ -135,48 +143,61 @@ def passed_ci?(check_runs, cask_name)
   ]
 
   check_runs.all? { |_name, check_run| check_run["conclusion"] == "success" } &&
-    (check_runs.dig("test (#{cask_name})", "conclusion") == "success")
+    (check_runs.dig("test (#{cask_name})", "conclusion") == "success") &&
+    (check_runs.dig("conclusion", "conclusion") == "success")
+end
+
+def merge_pull_requests(prs)
+  if prs.empty?
+    puts "No pull requests found."
+    return
+  end
+
+  failed_prs = []
+
+  prs.each do |pr|
+    begin
+      merge_pull_request(pr)
+    rescue => e
+      repo   = pr.fetch("base").fetch("repo").fetch("full_name")
+      number = pr.fetch("number")
+
+      tap = Tap.fetch(repo)
+      pr_name = "#{tap.name}##{number}"
+
+      puts "Error while processing #{pr_name}:"
+      puts e
+      puts e.backtrace
+      failed_prs << pr
+    end
+  end
+
+  exit 1 if failed_prs.any?
 end
 
 begin
-  case ENV["GITHUB_EVENT_NAME"]
+  case event_name
   when "push", "schedule"
-    prs = GitHub.pull_requests(ENV["GITHUB_REPOSITORY"], state: :open, base: "master")
+    prs = GitHub.pull_requests(repository, state: :open, base: "master")
 
-    skip "No open pull requests found." if prs.empty?
+    merge_pull_requests(prs)
+  when "workflow_run"
+    prs = find_pull_requests_for_workflow_run(event)
 
-    merged_prs = []
-    failed_prs = []
-    skipped_prs = []
+    merge_pull_requests(prs)
+  when "check_run"
 
-    prs.each do |pr|
-      begin
-        merge_pull_request(pr)
-        merged_prs << pr
-      rescue NeutralSystemExit => e
-        skipped_prs << pr
-      rescue => e
-        repo   = pr.fetch("base").fetch("repo").fetch("full_name")
-        number = pr.fetch("number")
+  when "workflow_dispatch"
+    inputs = event.fetch("inputs")
 
-        tap = Tap.fetch(repo)
-        pr_name = "#{tap.name}##{number}"
-
-        puts "Error while processing #{pr_name}:"
-        puts e
-        puts e.backtrace
-        failed_prs << pr
-      end
+    prs = if pr_number = inputs["pull_request"]
+      [GitHub.open_api("https://api.github.com/repos/#{repository}/pulls/#{pr_number}")]
+    else
+      GitHub.pull_requests(repository, state: :open, base: "master")
     end
 
-    if (merged_prs + failed_prs).empty? && skipped_prs.any?
-      skip
-    elsif failed_prs.any?
-      exit 1
-    end
+    merge_pull_requests(prs)
   else
     raise "Unsupported GitHub Actions event: #{ENV["GITHUB_EVENT_NAME"].inspect}"
   end
-rescue NeutralSystemExit => e
-  puts e.message
 end

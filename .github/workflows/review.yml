@@ -1,0 +1,20 @@
+name: Review
+
+on: pull_request_target
+
+jobs:
+  review:
+    if: startsWith(github.repository, 'Homebrew/')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Review Pull Request
+        id: review
+        uses: Homebrew/actions/review-cask-pr@master
+      - name: Post Pull Request Review
+        uses: Homebrew/actions/post-review@master
+        if: steps.review.outputs.event
+        with:
+          token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+          event: ${{ steps.review.outputs.event }}
+          body: |
+            ${{ steps.review.outputs.message }}

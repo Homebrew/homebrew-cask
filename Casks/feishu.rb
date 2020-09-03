@@ -1,6 +1,6 @@
 cask "feishu" do
-  version "3.29.3,1cd9bf"
-  sha256 "970e2c6011330b6d48005f559baf44ce73c430ec901c907d101b8691d9f2e498"
+  version "3.31.1,7842ae"
+  sha256 "43347844e10e8af392bdcba927acbbd691f963fe14dff42448563585381656b3"
 
   # sf3-ttcdn-tos.pstatp.com/ was verified as official when first introduced to the cask
   url "https://sf3-ttcdn-tos.pstatp.com/obj/ee-appcenter/#{version.after_comma}/Feishu-#{version.before_comma}.dmg"

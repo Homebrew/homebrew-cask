@@ -6,6 +6,7 @@ cask "joplin" do
   url "https://github.com/laurent22/joplin/releases/download/v#{version}/Joplin-#{version}.dmg"
   appcast "https://github.com/laurent22/joplin/releases.atom"
   name "Joplin"
+  desc "Note taking and to-do application with synchronization capabilities"
   homepage "https://joplin.cozic.net/"
 
   app "Joplin.app"

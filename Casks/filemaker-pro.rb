@@ -9,6 +9,7 @@ cask "filemaker-pro" do
   homepage "https://www.claris.com/filemaker/"
 
   auto_updates true
+  depends_on macos: ">= :mojave"
 
   app "FileMaker Pro.app"
 
