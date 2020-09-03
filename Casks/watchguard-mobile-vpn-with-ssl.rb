@@ -8,5 +8,9 @@ cask "watchguard-mobile-vpn-with-ssl" do
 
   pkg "WatchGuard Mobile VPN with SSL Installer V#{version.after_comma}.mpkg"
 
-  uninstall pkgutil: "com.watchguard.*"
+  uninstall pkgutil: "com.watchguard.*",
+            delete:  [
+              "/Applications/WatchGuard/Uninstall WG SSL VPN.app",
+              "/Applications/WatchGuard/WatchGuard Mobile VPN with SSL.app",
+            ]
 end
