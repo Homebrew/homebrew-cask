@@ -9,11 +9,12 @@ on:
 
 jobs:
   self-approve:
-    - name: Post Pull Request Review
-      if: github.event.workflow_dispatch
-      uses: Homebrew/actions/post-review@master
-      with:
-        token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
-        pull_request: ${{ github.event.inputs.pull_request }}
-        event: APPROVE
-        body: Self-approved by @${{ github.user }}.
+    steps:
+      - name: Post Pull Request Review
+        if: github.event.workflow_dispatch
+        uses: Homebrew/actions/post-review@master
+        with:
+          token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+          pull_request: ${{ github.event.inputs.pull_request }}
+          event: APPROVE
+          body: Self-approved by @${{ github.user }}.
