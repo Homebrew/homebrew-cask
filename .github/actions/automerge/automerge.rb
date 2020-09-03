@@ -66,12 +66,14 @@ def merge_pull_request(pr, check_runs = GitHub.check_runs(pr: pr).fetch("check_r
   end
 
   reviews = GitHub.open_api("#{pr.fetch("url")}/reviews")
-  if reviews.any? && !reviews.all? { |r| r["state"] == "APPROVED" }
-    puts "Pull request #{pr_name} has non-approval reviews:"
-    puts JSON.pretty_generate(reviews)
-    return
+  if reviews.any?
+    if !reviews.all? { |r| r.fetch("state") == "APPROVED" && r.fetch("author_association") == "MEMBER" }
+      puts "Pull request #{pr_name} has non-approval reviews:"
+      puts JSON.pretty_generate(reviews)
+      return
+    end
   else
-    puts "Pull request does not have any approvals."
+    puts "Pull request #{pr_name} does not have any approvals."
     return
   end
 
