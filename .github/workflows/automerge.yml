@@ -10,6 +10,9 @@ on:
       - .github/actions/automerge/**
   schedule:
     - cron: '*/30 * * * *'
+  check_run:
+    types:
+      - completed
   workflow_run:
     workflows:
       - CI
