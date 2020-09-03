@@ -12,8 +12,10 @@ jobs:
   generate-matrix:
     outputs:
       matrix: ${{ steps.generate-matrix.outputs.matrix }}
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
+      - name: Installed Taps
+        run: brew tap
       - name: Set up Homebrew
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
