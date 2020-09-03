@@ -67,7 +67,8 @@ def merge_pull_request(pr, check_runs = GitHub.check_runs(pr: pr).fetch("check_r
 
   reviews = GitHub.open_api("#{pr.fetch("url")}/reviews")
   if reviews.any?
-    puts "Pull request #{pr_name} has reviews."
+    puts "Pull request #{pr_name} has reviews:"
+    puts JSON.pretty_generate(reviews)
     return
   end
 
