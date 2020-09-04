@@ -13,6 +13,6 @@ cask "masterway-note" do
   auto_updates true
 
   pkg "大师笔记masterwaynote.pkg"
-  
-  uninstall pkgutil: 'YQ.Masterway.macOS'
+
+  uninstall pkgutil: "YQ.Masterway.macOS"
 end
