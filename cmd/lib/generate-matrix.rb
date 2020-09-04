@@ -18,13 +18,7 @@ syntax_job = {
 matrix = [syntax_job]
 
 unless labels.include?("ci-syntax-only")
-  cask_matrix = CiMatrix.generate(tap)
-
-  cask_matrix.each do |job|
-    job[:skip_install] = labels.include?("ci-skip-install")
-  end
-
-  matrix += cask_matrix
+  matrix += CiMatrix.generate(tap, labels: labels)
 end
 
 puts JSON.pretty_generate(matrix)
