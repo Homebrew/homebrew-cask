@@ -60,60 +60,34 @@ def merge_pull_request(pr, check_runs = GitHub.check_runs(pr: pr).fetch("check_r
   tap = Tap.fetch(repo)
   pr_name = "#{tap.name}##{number}"
 
-  if pr.fetch("labels").any?
-    puts "Pull request #{pr_name} has labels."
+  if pr.fetch("labels").map { |l| l.fetch("name") }.include?("do not merge")
+    puts "Pull request #{pr_name} is marked as “do not merge”."
     return
   end
 
   reviews = GitHub.open_api("#{pr.fetch("url")}/reviews")
-  if reviews.any?
-    if !reviews.all? { |r| r.fetch("state") == "APPROVED" && r.fetch("author_association") == "MEMBER" }
-      puts "Pull request #{pr_name} has non-approval reviews:"
-      puts JSON.pretty_generate(reviews)
-      return
-    end
-  else
-    puts "Pull request #{pr_name} does not have any approvals."
+  approvals = reviews.count { |r| r.fetch("state") == "APPROVED" && r.fetch("author_association") == "MEMBER" }
+  if approvals.zero?
+    puts "Pull request #{pr_name} does not have any member approvals."
     return
   end
 
-  diff = diff_for_pull_request(pr)
-
-  unless diff.simple?
-    puts "Pull request #{pr_name} is not a “simple” version bump."
-    return
-  end
-
-  unless passed_ci?(check_runs, diff.cask_name)
+  unless passed_ci?(check_runs)
     puts "CI status for pull request #{pr_name} is not successful."
     return
   end
 
-  if diff.version_changed?
-    if diff.version_decreased?
-      puts "Version in pull request #{pr_name} decreased from #{diff.old_version.inspect} to #{diff.new_version.inspect}."
-      return
-    end
-
-    tap.install(full_clone: true) unless tap.installed?
-
-    out, _ = system_command! 'git', args: ['-C', tap.path, 'log', '--pretty=format:', '-G', '\s+version\s+\'', '--follow', '--patch', '--', diff.cask_path]
-
-    version_diff = GitDiff.from_string(out)
-    previous_versions = version_diff.additions.select { |l| l.version? }.map { |l| l.version }.uniq
-
-    if previous_versions.include?(diff.new_version)
-      puts "Version in pull request #{pr_name} changed to a previous version. Previous versions were:\n#{previous_versions.join("\n")}"
-      return
-    end
-  end
-
-  if ENV["GITHUB_REF"] != 'refs/heads/master'
-    puts "Would merge pull request #{pr_name}…"
+  if pr.fetch("mergeable_state") != "clean"
+    puts "Pull request #{pr_name} is not mergeable."
     return
   end
 
-  puts "Merging pull request #{pr_name}…"
+  if ENV["GITHUB_REF"] != 'refs/heads/master'
+    puts "Would merge pull request #{pr_name} with #{merge_method} strategy …"
+    return
+  end
+
+  puts "Merging pull request #{pr_name} with #{merge_method} strategy …"
 
   begin
     tries ||= 0
@@ -121,7 +95,7 @@ def merge_pull_request(pr, check_runs = GitHub.check_runs(pr: pr).fetch("check_r
     GitHub.merge_pull_request(
       repo,
       number: number, sha: sha,
-      merge_method: :squash,
+      merge_method: merge_method,
     )
 
     puts "Pull request #{pr_name} merged successfully."
@@ -132,9 +106,27 @@ def merge_pull_request(pr, check_runs = GitHub.check_runs(pr: pr).fetch("check_r
   end
 end
 
-def passed_ci?(check_runs, cask_name)
+def determine_merge_method(pr)
+  commits = GitHub.open_api(pr.fetch("commits_url"))
+  files = GitHub.open_api("#{pr.fetch("url")}/files")
+
+  changed_files = pr.fetch("changed_files")
+
+  only_casks = files.all? { |f| f.fetch("filename").start_with?("Casks/") }
+
+  if only_casks
+    if changed_files == 1
+      return :squash
+    elsif files.count == commits.count
+      return :rebase
+    end
+  end
+
+  :squash
+end
+
+def passed_ci?(check_runs)
   return false if check_runs.empty?
-  return false if cask_name.nil?
 
   check_runs = Hash[
     check_runs.select { |check_run| check_run.fetch("status") == "completed" }
@@ -142,9 +134,7 @@ def passed_ci?(check_runs, cask_name)
               .map { |(k, v)| [k, v.max_by { |status| Time.parse(status.fetch("completed_at")) }] }
   ]
 
-  check_runs.all? { |_name, check_run| check_run["conclusion"] == "success" } &&
-    (check_runs.dig("test (#{cask_name})", "conclusion") == "success") &&
-    (check_runs.dig("conclusion", "conclusion") == "success")
+  check_runs.dig("conclusion", "conclusion") == "success"
 end
 
 def merge_pull_requests(prs)
