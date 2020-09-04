@@ -1,6 +1,6 @@
 cask "xctu" do
-  version "40003027_Z"
-  sha256 "edcf9849b4581ad2aa196562331e888b1b030e459ec51ede5693b21a8aac4a9c"
+  version "40003027_AA"
+  sha256 "9d5edbf6470367716780a310d265e1610cc0f2f40f394a14a10ad36f7dd6d821"
 
   url "https://ftp1.digi.com/support/utilities/#{version}.zip"
   appcast "https://www.digi.com/support/includes/utilities.aspx?pid=3352"
