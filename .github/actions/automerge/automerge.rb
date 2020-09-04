@@ -38,24 +38,22 @@ def find_pull_requests_for_workflow_run(event)
   ).select { |pr| pr.fetch("head").fetch("sha") == head_sha }
 end
 
-def merge_pull_request(pr)
-  # Reload pull request to get all data.
+def merge_pull_request(pr_name, pr, repo:, number:, sha:, last_try:)
+  # Reload pull request to get fresh (and all) data.
   pr = GitHub.open_api(pr.fetch("url"))
 
-  repo   = pr.fetch("base").fetch("repo").fetch("full_name")
-  number = pr.fetch("number")
-  sha    = pr.fetch("head").fetch("sha")
+  mergeable_state = pr.fetch("mergeable_state")
+  if mergeable_state != "clean"
+    if mergeable_state == "unknown" && !last_try
+      return :retry
+    end
 
-  tap = Tap.fetch(repo)
-  pr_name = "#{tap.name}##{number}"
-
-  if pr.fetch("labels").map { |l| l.fetch("name") }.include?("do not merge")
-    puts "Pull request #{pr_name} is marked as “do not merge”."
+    puts "Pull request #{pr_name} is not mergeable (#{mergeable_state})."
     return
   end
 
-  if pr.fetch("mergeable_state") != "clean"
-    puts "Pull request #{pr_name} is not mergeable."
+  if pr.fetch("labels").map { |l| l.fetch("name") }.include?("do not merge")
+    puts "Pull request #{pr_name} is marked as “do not merge”."
     return
   end
 
@@ -72,30 +70,24 @@ def merge_pull_request(pr)
     return
   end
 
-
   merge_method = determine_merge_method(pr)
 
   if ENV["GITHUB_REF"] != 'refs/heads/master'
-    puts "Would merge pull request #{pr_name} with #{merge_method} method …"
+    puts "Would merge pull request #{pr_name} with #{merge_method} method."
     return
   end
 
-  puts "Merging pull request #{pr_name} with #{merge_method} method …"
-
   begin
-    tries ||= 0
-
     GitHub.merge_pull_request(
       repo,
       number: number, sha: sha,
       merge_method: merge_method,
     )
 
-    puts "Pull request #{pr_name} merged successfully."
+    puts "Merged pull request #{pr_name} successfully with #{merge_method} method."
   rescue => e
-    raise "Failed to merge pull request #{pr_name}:\n#{e}" if (tries += 1) > 3
-    sleep 5
-    retry
+    raise "Failed to merge pull request #{pr_name} with #{merge_method} method:\n#{e}" if last_try
+    :retry
   end
 end
 
@@ -136,26 +128,42 @@ def merge_pull_requests(prs)
     return
   end
 
-  failed_prs = []
+  queue = Queue.new
 
   prs.each do |pr|
+    queue << [pr, 0]
+  end
+
+  failed = false
+
+  until queue.empty?
+    pr, tries = queue.deq
+
+    repo   = pr.fetch("base").fetch("repo").fetch("full_name")
+    number = pr.fetch("number")
+    sha    = pr.fetch("head").fetch("sha")
+
+    tap = Tap.fetch(repo)
+    pr_name = "#{tap.name}##{number}"
+
+    sleep 5 if tries > 0
+
     begin
-      merge_pull_request(pr)
+      tries += 1
+      last_try = tries >= 3
+
+      if merge_pull_request(pr_name, pr, repo: repo, number: number, sha: sha, last_try: last_try) == :retry
+        queue.enq [pr, tries]
+      end
     rescue => e
-      repo   = pr.fetch("base").fetch("repo").fetch("full_name")
-      number = pr.fetch("number")
-
-      tap = Tap.fetch(repo)
-      pr_name = "#{tap.name}##{number}"
-
       puts "Error while processing #{pr_name}:"
       puts e
       puts e.backtrace
-      failed_prs << pr
+      failed = true
     end
   end
 
-  exit 1 if failed_prs.any?
+  exit 1 if failed
 end
 
 begin
