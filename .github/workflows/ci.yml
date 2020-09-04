@@ -1,8 +1,6 @@
 name: CI
 
-on:
-  pull_request:
-    types: [synchronize, opened, reopened, labeled, unlabeled]
+on: pull_request
 
 env:
   HOMEBREW_DEVELOPER: 1
@@ -220,4 +218,4 @@ jobs:
     if: always()
     steps:
       - name: Result
-        run: ${{ (contains(github.event.pull_request.labels.*.name, 'ci-verified-manually') && needs.test.result != 'success') || needs.test.result == 'success' }}
+        run: ${{ needs.test.result == 'success' }}
