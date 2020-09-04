@@ -7,6 +7,7 @@ on:
 env:
   HOMEBREW_DEVELOPER: 1
   HOMEBREW_NO_AUTO_UPDATE: 1
+  HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   generate-matrix:
@@ -29,13 +30,7 @@ jobs:
       - name: Generate CI matrix
         id: generate-matrix
         run: |
-          if ${{ contains(github.event.pull_request.labels.*.name, 'ci-syntax-only') }}; then
-            flags=(--syntax-only)
-          else
-            flags=()
-          fi
-
-          brew ruby -- "$(brew --repository homebrew/cask)/cmd/lib/generate-matrix.rb" "${flags[@]}"
+          brew ruby -- "$(brew --repository homebrew/cask)/cmd/lib/generate-matrix.rb" "${{ github.event.pull_request.url }}"
 
   test:
     name: ${{ matrix.name }}
@@ -97,8 +92,6 @@ jobs:
           fi
 
           brew cask audit ${{ join(matrix.audit_args, ' ') }} '${{ matrix.cask.path }}'
-        env:
-          HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         timeout-minutes: 30
         if: always()
 
@@ -173,7 +166,7 @@ jobs:
         if: >
           always() && steps.info.outcome == 'success' &&
           fromJSON(steps.info.outputs.macos_requirement_satisfied) &&
-          !contains(github.event.pull_request.labels.*.name, 'ci-skip-install')
+          !matrix.skip_install
         timeout-minutes: 30
 
       - name: Run brew cask uninstall ${{ matrix.cask.token }}
