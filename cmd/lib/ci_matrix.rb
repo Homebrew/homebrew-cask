@@ -31,7 +31,6 @@ module CiMatrix
 
       if changed_files[:added_files].include?(path)
         audit_args << "--strict"
-        audit_args << "--token-conflicts"
         audit_args << "--new-cask"
       end
 
