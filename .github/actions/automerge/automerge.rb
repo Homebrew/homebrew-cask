@@ -1,11 +1,5 @@
 require "json"
 
-Homebrew.install_gem! "git_diff"
-require "git_diff"
-
-require_relative "git_diff_extensions"
-using GitDiffExtension
-
 require "utils/github"
 
 event_name, event_path, repository = ARGV
@@ -42,14 +36,6 @@ def find_pull_requests_for_workflow_run(event)
     sort: :updated,
     direction: :desc,
   ).select { |pr| pr.fetch("head").fetch("sha") == head_sha }
-end
-
-def diff_for_pull_request(pr)
-  diff_url = pr.fetch("diff_url")
-
-  output, _, status = curl_output("--location", diff_url)
-
-  GitDiff.from_string(output) if status.success?
 end
 
 def merge_pull_request(pr, check_runs = GitHub.check_runs(pr: pr).fetch("check_runs"))
