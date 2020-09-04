@@ -30,7 +30,6 @@ module CiMatrix
       audit_args = ["--download", "--appcast", "--online"]
 
       if changed_files[:added_files].include?(path)
-        audit_args << "--strict"
         audit_args << "--new-cask"
       end
 
