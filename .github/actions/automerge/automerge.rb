@@ -38,7 +38,10 @@ def find_pull_requests_for_workflow_run(event)
   ).select { |pr| pr.fetch("head").fetch("sha") == head_sha }
 end
 
-def merge_pull_request(pr, check_runs = GitHub.check_runs(pr: pr).fetch("check_runs"))
+def merge_pull_request(pr)
+  # Reload pull request to get all data.
+  pr = GitHub.open_api(pr.fetch("url"))
+
   repo   = pr.fetch("base").fetch("repo").fetch("full_name")
   number = pr.fetch("number")
   sha    = pr.fetch("head").fetch("sha")
@@ -51,6 +54,11 @@ def merge_pull_request(pr, check_runs = GitHub.check_runs(pr: pr).fetch("check_r
     return
   end
 
+  if pr.fetch("mergeable_state") != "clean"
+    puts "Pull request #{pr_name} is not mergeable."
+    return
+  end
+
   reviews = GitHub.open_api("#{pr.fetch("url")}/reviews")
   approvals = reviews.count { |r| r.fetch("state") == "APPROVED" && r.fetch("author_association") == "MEMBER" }
   if approvals.zero?
@@ -58,22 +66,21 @@ def merge_pull_request(pr, check_runs = GitHub.check_runs(pr: pr).fetch("check_r
     return
   end
 
+  check_runs = GitHub.check_runs(pr: pr).fetch("check_runs")
   unless passed_ci?(check_runs)
     puts "CI status for pull request #{pr_name} is not successful."
     return
   end
 
-  if pr.fetch("mergeable_state") != "clean"
-    puts "Pull request #{pr_name} is not mergeable."
-    return
-  end
+
+  merge_method = determine_merge_method(pr)
 
   if ENV["GITHUB_REF"] != 'refs/heads/master'
-    puts "Would merge pull request #{pr_name} with #{merge_method} strategy …"
+    puts "Would merge pull request #{pr_name} with #{merge_method} method …"
     return
   end
 
-  puts "Merging pull request #{pr_name} with #{merge_method} strategy …"
+  puts "Merging pull request #{pr_name} with #{merge_method} method …"
 
   begin
     tries ||= 0
