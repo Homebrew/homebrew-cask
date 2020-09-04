@@ -1,8 +1,9 @@
 cask "robo-3t" do
-  version "1.3.1,7419c40"
-  sha256 "a853ab5f61ee839540a0f43cfcd545c8115355d639b6d038a62ddf08c94a41b9"
+  version "1.4.0,12e54cc"
+  sha256 "a95ef2029a0d430b935dcd29dc18d48c86b3ccc92e26855db1afd256ef0ccf5b"
 
-  url "https://download-test.robomongo.org/mac/robo3t-#{version.before_comma}-darwin-x86_64-#{version.after_comma}.dmg"
+  # download.studio3t.com was verified as official when first introduced to the cask
+  url "https://download.studio3t.com/robomongo/mac/robo3t-#{version.before_comma}-darwin-x86_64-#{version.after_comma}.dmg"
   appcast "https://robomongo.org/download"
   name "Robo 3T (formerly Robomongo)"
   homepage "https://robomongo.org/"
