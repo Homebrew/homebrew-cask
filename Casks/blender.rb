@@ -6,7 +6,10 @@ cask "blender" do
   appcast "https://download.blender.org/release/",
           must_contain: version.major_minor.delete("a-z")
   name "Blender"
+  desc "Free and open-source 3D creation suite"
   homepage "https://www.blender.org/"
+
+  conflicts_with cask: "homebrew/cask-versions/blender-lts"
 
   app "Blender.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
