@@ -63,9 +63,7 @@ def merge_pull_request(pr_name, pr, repo:, number:, sha:, last_try:)
   end
 
   mergeable_state = pr.fetch("mergeable_state")
-  if mergeable_state != "clean"
-    return :retry if mergeable_state == "unknown" && !last_try
-
+  if !["clean", "unknown"].include?(mergeable_state)
     puts "Pull request #{pr_name} is not mergeable (#{mergeable_state})."
     return
   end
@@ -144,11 +142,11 @@ def merge_pull_requests(prs)
     tap = Tap.fetch(repo)
     pr_name = "#{tap.name}##{number}"
 
-    sleep 5 if tries.positive?
+    sleep 2**tries if tries.positive?
 
     begin
       tries += 1
-      last_try = tries >= 3
+      last_try = tries >= 5
 
       if merge_pull_request(pr_name, pr, repo: repo, number: number, sha: sha, last_try: last_try) == :retry
         queue.enq [pr, tries]
