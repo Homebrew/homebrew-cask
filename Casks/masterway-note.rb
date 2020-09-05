@@ -14,5 +14,6 @@ cask "masterway-note" do
 
   pkg "大师笔记masterwaynote.pkg"
 
-  uninstall pkgutil: "YQ.Masterway.macOS"
+  uninstall pkgutil: "YQ.Masterway.macOS",
+            quit:    "YQ.Masterway.macOS"
 end
