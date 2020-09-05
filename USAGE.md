@@ -9,6 +9,7 @@ $ brew --version
 0.9.5
 ```
 
+
 ## Frequently Used Commands
 
 Homebrew Cask is implemented as a subcommand of Homebrew. All Homebrew Cask commands begin with `brew cask`. Homebrew Cask has its own set of command verbs many of which are similar to Homebrew’s. The most frequently-used
