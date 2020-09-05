@@ -1,3 +1,5 @@
+# frozen_string_literal: false
+
 require "json"
 
 require "utils/github"
@@ -7,7 +9,7 @@ event_name, event_path, repository = ARGV
 event = JSON.parse(File.read(event_path))
 
 puts "ENV:"
-puts ENV.to_h.sort_by { |k, | k }.select { |k,| k.start_with?("GITHUB_") }.map { |k, v| "#{k}=#{v}" }
+puts ENV.to_h.sort.select { |k,| k.start_with?("GITHUB_") }.map { |k, v| "#{k}=#{v}" }
 puts
 
 puts "EVENT:"
@@ -30,10 +32,10 @@ def find_pull_requests_for_workflow_run(event)
 
   GitHub.pull_requests(
     base_repo.fetch("full_name"),
-    base: base_repo.fetch("default_branch"),
-    head: "#{head_repo.fetch("owner").fetch("login")}:#{head_branch}",
-    state: :open,
-    sort: :updated,
+    base:      base_repo.fetch("default_branch"),
+    head:      "#{head_repo.fetch("owner").fetch("login")}:#{head_branch}",
+    state:     :open,
+    sort:      :updated,
     direction: :desc,
   ).select { |pr| pr.fetch("head").fetch("sha") == head_sha }
 end
@@ -44,9 +46,7 @@ def merge_pull_request(pr_name, pr, repo:, number:, sha:, last_try:)
 
   mergeable_state = pr.fetch("mergeable_state")
   if mergeable_state != "clean"
-    if mergeable_state == "unknown" && !last_try
-      return :retry
-    end
+    return :retry if mergeable_state == "unknown" && !last_try
 
     puts "Pull request #{pr_name} is not mergeable (#{mergeable_state})."
     return
@@ -72,7 +72,7 @@ def merge_pull_request(pr_name, pr, repo:, number:, sha:, last_try:)
 
   merge_method = determine_merge_method(pr)
 
-  if ENV["GITHUB_REF"] != 'refs/heads/master'
+  if ENV["GITHUB_REF"] != "refs/heads/master"
     puts "Would merge pull request #{pr_name} with #{merge_method} method."
     return
   end
@@ -81,12 +81,13 @@ def merge_pull_request(pr_name, pr, repo:, number:, sha:, last_try:)
     GitHub.merge_pull_request(
       repo,
       number: number, sha: sha,
-      merge_method: merge_method,
+      merge_method: merge_method
     )
 
     puts "Merged pull request #{pr_name} successfully with #{merge_method} method."
   rescue => e
     raise "Failed to merge pull request #{pr_name} with #{merge_method} method:\n#{e}" if last_try
+
     :retry
   end
 end
@@ -100,11 +101,8 @@ def determine_merge_method(pr)
   only_casks = files.all? { |f| f.fetch("filename").start_with?("Casks/") }
 
   if only_casks
-    if changed_files == 1
-      return :squash
-    elsif files.count == commits.count
-      return :rebase
-    end
+    return :squash if changed_files == 1
+    return :rebase if files.count == commits.count
   end
 
   :squash
@@ -146,7 +144,7 @@ def merge_pull_requests(prs)
     tap = Tap.fetch(repo)
     pr_name = "#{tap.name}##{number}"
 
-    sleep 5 if tries > 0
+    sleep 5 if tries.positive?
 
     begin
       tries += 1
@@ -176,12 +174,10 @@ begin
     prs = find_pull_requests_for_workflow_run(event)
 
     merge_pull_requests(prs)
-  when "check_run"
-
   when "workflow_dispatch"
     inputs = event.fetch("inputs")
 
-    prs = if pr_number = inputs["pull_request"]
+    prs = if (pr_number = inputs["pull_request"])
       [GitHub.open_api("https://api.github.com/repos/#{repository}/pulls/#{pr_number}")]
     else
       GitHub.pull_requests(repository, state: :open, base: "master")
