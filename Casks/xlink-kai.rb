@@ -1,6 +1,6 @@
 cask "xlink-kai" do
-  version "7.4.37"
-  sha256 "bd9fad75377aaade3cfa3d0ed83538ff970bf688c11bee5e8408707f7c52d7bd"
+  version "7.4.38"
+  sha256 "67e9b35ef505671812c5ee48b7fe6888ebc6d3e62d12b51a10ed1df1ac9cfd63"
 
   # github.com/Team-XLink/releases/ was verified as official when first introduced to the cask
   url "https://github.com/Team-XLink/releases/releases/download/v#{version}/XLink.Kai.macOS.zip"
