@@ -4,7 +4,7 @@ cask "duo-connect" do
 
   # dl.duosecurity.com/ was verified as official when first introduced to the cask
   url "https://dl.duosecurity.com/DuoConnect-#{version}.pkg"
-  appcast "https://duo.com/docs/duoconnect-notes"
+  appcast "https://duo.com/docs/checksums#duoconnect-for-macos"
   name "DuoConnect"
   homepage "https://guide.duo.com/duoconnect"
 
