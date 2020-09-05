@@ -13,6 +13,6 @@ cask "digikam" do
   uninstall pkgutil: "org.freedesktop.digikam",
             delete: [
               "/Applications/digikam.app",
-              /Applications/showfoto.app",
+              "/Applications/showfoto.app",
             ]
 end
