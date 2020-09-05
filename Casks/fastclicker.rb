@@ -4,7 +4,7 @@ cask "fastclicker" do
 
   url "http://www.advanced-mouse-auto-clicker.com/setup/FastClicker.zip"
   name "FastClicker"
-  desc "Mac Auto Clicker is a Mouse Automation Utility"
+  desc "Auto clicker and mouse automation utility"
   homepage "http://www.advanced-mouse-auto-clicker.com/mac-auto-clicker.html"
 
   app "FastClicker.app"
