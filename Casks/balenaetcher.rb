@@ -8,6 +8,8 @@ cask "balenaetcher" do
   name "Etcher"
   homepage "https://balena.io/etcher"
 
+  auto_updates true
+
   app "balenaEtcher.app"
 
   uninstall quit: [
