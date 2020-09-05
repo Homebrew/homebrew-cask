@@ -5,7 +5,7 @@ cask "klogg" do
   url "https://github.com/variar/klogg/releases/download/v#{version}/klogg-#{version}.0-r589-OSX.dmg"
   appcast "https://github.com/variar/klogg/releases.atom"
   name "Klogg"
-  desc "GUI application for complex log files"
+  desc "Fast, advanced log explorer"
   homepage "https://github.com/variar/klogg"
 
   app "klogg.app"
