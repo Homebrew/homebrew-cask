@@ -11,5 +11,8 @@ cask "digikam" do
   pkg "digiKam-#{version}-MacOS-x86-64.pkg"
 
   uninstall pkgutil: "org.freedesktop.digikam",
-            delete:  "/Applications/digiKam"
+            delete: [
+              "/Applications/digikam.app",
+              /Applications/showfoto.app",
+            ]
 end
