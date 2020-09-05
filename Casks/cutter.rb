@@ -1,6 +1,6 @@
 cask "cutter" do
-  version "1.11.1"
-  sha256 "6f35931d52915ce093825ecad6288c1798ca99af7cffde1592a7e2119deb98b6"
+  version "1.12.0"
+  sha256 "700327f904de00a29b8622eb7548b96181c50f0842d726a84be2a8f7558cae83"
 
   # github.com/radareorg/cutter/ was verified as official when first introduced to the cask
   url "https://github.com/radareorg/cutter/releases/download/v#{version}/Cutter-v#{version}-x64.macOS.dmg"
