@@ -44,14 +44,6 @@ def merge_pull_request(pr_name, pr, repo:, number:, sha:, last_try:)
   # Reload pull request to get fresh (and all) data.
   pr = GitHub.open_api(pr.fetch("url"))
 
-  mergeable_state = pr.fetch("mergeable_state")
-  if mergeable_state != "clean"
-    return :retry if mergeable_state == "unknown" && !last_try
-
-    puts "Pull request #{pr_name} is not mergeable (#{mergeable_state})."
-    return
-  end
-
   if pr.fetch("labels").map { |l| l.fetch("name") }.include?("do not merge")
     puts "Pull request #{pr_name} is marked as “do not merge”."
     return
@@ -67,6 +59,14 @@ def merge_pull_request(pr_name, pr, repo:, number:, sha:, last_try:)
   check_runs = GitHub.check_runs(pr: pr).fetch("check_runs")
   unless passed_ci?(check_runs)
     puts "CI status for pull request #{pr_name} is not successful."
+    return
+  end
+
+  mergeable_state = pr.fetch("mergeable_state")
+  if mergeable_state != "clean"
+    return :retry if mergeable_state == "unknown" && !last_try
+
+    puts "Pull request #{pr_name} is not mergeable (#{mergeable_state})."
     return
   end
 
