@@ -1,8 +1,6 @@
 name: Automerge
 
 on:
-  # Keeps failing, try enabling again in future.
-  # status:
   push:
     branches:
       - debug-automerge
