@@ -182,6 +182,9 @@ begin
     end
 
     merge_pull_requests(prs)
+  when "pull_request_review"
+    pr = event.fetch("pull_request")
+    merge_pull_requests([pr])
   else
     raise "Unsupported GitHub Actions event: #{ENV["GITHUB_EVENT_NAME"].inspect}"
   end

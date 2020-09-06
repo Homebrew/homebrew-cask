@@ -18,6 +18,9 @@ on:
       - CI
     types:
       - completed
+  pull_request_review:
+    types:
+      - submitted
   workflow_dispatch:
     inputs:
       pull_request:
