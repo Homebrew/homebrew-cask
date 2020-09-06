@@ -10,4 +10,11 @@ cask "fanny" do
   depends_on macos: ">= :high_sierra"
 
   app "FannyWidget-v#{version}/Fanny.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.fannywidget.today-extension",
+    "~/Library/Containers/com.fannywidget.today-extension",
+    "~/Library/Group Containers/fanny-shared-defaults",
+    "~/Library/Preferences/com.fannywidget.plist",
+  ]
 end
