@@ -7,7 +7,7 @@ cask "gotomeeting" do
   appcast "https://support.goto.com/meeting/help#g2m-whats-new"
   name "GotoMeeting"
   desc "Online meeting, desktop sharing and video conferencing software package"
-  homepage "https://www.gotomeeting.com/"
+  homepage "https://www.goto.com/meeting"
 
   app "GotoMeeting.app"
 
