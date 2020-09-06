@@ -29,7 +29,7 @@ on:
 
 jobs:
   automerge:
-    if: startsWith(github.repository, 'Homebrew/')
+    if: startsWith(github.repository, 'Homebrew/') && (github.event.review.state == 'approved' || !github.event.review)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main
