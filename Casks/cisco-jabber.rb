@@ -4,6 +4,7 @@ cask "cisco-jabber" do
   
     url "https://binaries.webex.com/jabberclientmac/#{version}/Install_Cisco-Jabber-Mac.pkg"
     name "Cisco Jabber"
+    desk "Jabber client from Cisco"
     homepage "https://www.webex.com/downloads/jabber.html"
   
     pkg "Install_Cisco-Jabber-Mac.pkg"
