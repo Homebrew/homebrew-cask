@@ -63,7 +63,7 @@ def merge_pull_request(pr_name, pr, repo:, number:, sha:, last_try:)
   end
 
   mergeable_state = pr.fetch("mergeable_state")
-  if !["clean", "unknown"].include?(mergeable_state)
+  if !["clean", "unstable", "unknown"].include?(mergeable_state)
     puts "Pull request #{pr_name} is not mergeable (#{mergeable_state})."
     return
   end
