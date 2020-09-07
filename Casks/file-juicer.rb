@@ -1,5 +1,5 @@
 cask "file-juicer" do
-  version "4.86"
+  version "4.87"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://echoone.com/filejuicer/FileJuicer-#{version}.zip"
