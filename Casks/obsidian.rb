@@ -1,6 +1,6 @@
 cask "obsidian" do
-  version "0.8.9"
-  sha256 "0c99fd1f51837cd66c74bfda058493cb85506caaf6c5b59535e1d4309aaf8f4f"
+  version "0.8.12"
+  sha256 "cfa582391f8cef0aca90212fddc5dc5317abeab4071f2e2d59727e8539b83c47"
 
   # github.com/obsidianmd/ was verified as official when first introduced to the cask
   url "https://github.com/obsidianmd/obsidian-releases/releases/download/v#{version}/Obsidian-#{version}.dmg"
