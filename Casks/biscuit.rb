@@ -1,6 +1,6 @@
 cask "biscuit" do
-  version "1.2.10"
-  sha256 "ec16e5e0af604f570ebbe83fef6f01780b2126babd710329cce386b97d377626"
+  version "1.2.11"
+  sha256 "2dc5ae1867ad09b6f27559bc19b42ecb5b24892ab86286703d28cc52e4271480"
 
   # github.com/agata/dl.biscuit/ was verified as official when first introduced to the cask
   url "https://github.com/agata/dl.biscuit/releases/download/v#{version}/Biscuit-#{version}.dmg"
