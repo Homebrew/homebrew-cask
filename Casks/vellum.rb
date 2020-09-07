@@ -1,6 +1,6 @@
 cask "vellum" do
   version "2.7.2"
-  sha256 "116bf7df0d5d5bb115ed3477ccb1a976f2fb19d38f3ff54f8e6272f33c07bcc1"
+  sha256 "e7622f5e12202f0a5f895687a1a2e8a62c94483c36530303ced3a8d097c5e071"
 
   # 180g.s3.amazonaws.com/downloads/ was verified as official when first introduced to the cask
   url "https://180g.s3.amazonaws.com/downloads/Vellum-#{version.no_dots}00.zip"
