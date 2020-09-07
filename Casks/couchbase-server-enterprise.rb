@@ -16,6 +16,8 @@ cask "couchbase-server-enterprise" do
     app "Couchbase Server.app"
   end
 
+  conflicts_with cask: "couchbase-server-community"
+
   name "Couchbase Server"
   homepage "https://www.couchbase.com/"
 end
