@@ -20,7 +20,7 @@ puts 'Detecting changes…'
   '.github/*.yml',
   '.github/actions/{automerge}/**/*',
   '.github/ISSUE_TEMPLATE/*.md',
-  '.github/workflows/{automerge,ci,rebase,review}.yml',
+  '.github/workflows/{automerge,ci,rebase,rerun-workflow,review}.yml',
   '.gitignore',
   '.travis.yml',
   'Casks/.rubocop.yml',
