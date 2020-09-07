@@ -24,6 +24,8 @@ cask "github" do
     "~/Library/Caches/com.github.GitHubClient.ShipIt",
     "~/Library/Preferences/com.github.GitHubClient.helper.plist",
     "~/Library/Preferences/com.github.GitHubClient.plist",
+    "~/Library/Preferences/ByHost/com.github.GitHubClient.ShipIt.*.plist",
+    "~/Library/Logs/GitHub Desktop",
   ],
       rmdir: "~/.config/git"
 end
