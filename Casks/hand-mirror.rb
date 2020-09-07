@@ -6,5 +6,7 @@ cask "hand-mirror" do
   name "Hand Mirror"
   homepage "https://handmirror.app/"
 
+  depends_on macos: '>= :catalina'
+
   app "Hand Mirror.app"
 end
