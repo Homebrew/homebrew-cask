@@ -8,6 +8,7 @@ on:
       - completed
   pull_request_target:
     types:
+      - closed
       - labeled
       - unlabeled
   schedule:
@@ -25,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Re-run CI workflow
-        uses: reitermarkus/rerun-workflow@8b554b23fd731eac62c7d8d392a0f262b7400b35
+        uses: reitermarkus/rerun-workflow@327008de871fa48cbbaf7ecd82ee19d59a829c29
         with:
           token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
           once-label: ci-requeue
