@@ -8,4 +8,12 @@ cask "cool-retro-term" do
   homepage "https://github.com/Swordfish90/cool-retro-term"
 
   app "cool-retro-term.app"
+
+  zap trash: [
+    "~/Library/Application Support/cool-retro-term",
+    "~/Library/Caches/cool-retro-term",
+    "~/Library/Preferences/com.yourcompany.cool-retro-term.plist",
+    "~/Library/Preferences/com.yourcompany.cool-retro-term.cool-retro-term.plist",
+    "~/Library/Saved Application State/com.yourcompany.cool-retro-term.savedState",
+  ]
 end
