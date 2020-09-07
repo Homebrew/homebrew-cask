@@ -15,6 +15,7 @@ cask "alt-tab" do
   uninstall quit: "com.lwouis.alt-tab-macos"
 
   zap trash: [
+    "~/Library/Application Support/com.lwouis.alt-tab-macos",
     "~/Library/Caches/com.lwouis.alt-tab-macos",
     "~/Library/Cookies/com.lwouis.alt-tab-macos.binarycookies",
     "~/Library/Preferences/com.lwouis.alt-tab-macos.plist",
