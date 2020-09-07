@@ -1,5 +1,5 @@
 cask "chromedriver" do
-  version "85.0.4183.87"
+  version "86.0.4240.22"
   sha256 "717ff47c926b6cfa5ebcb60d7cb57a42f338fa657083928d8e1d74ff9c4833dd"
 
   # chromedriver.storage.googleapis.com/ was verified as official when first introduced to the cask
