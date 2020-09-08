@@ -1,6 +1,6 @@
 cask "fing" do
-  version "2.1.0"
-  sha256 "4a9bb7c0fb8531cacc60fd4247c55ae322224cf300ecb67de303710bf9773631"
+  version "2.2.0"
+  sha256 "8671a909468a5bd09bb7951b3cd8ff0490235175b934e4159b79aaa6d35e7861"
 
   url "https://get.fing.com/fing-desktop-releases/mac/Fing.dmg"
   appcast "https://get.fing.com/fing-desktop-releases/mac/latest-mac.yml"
