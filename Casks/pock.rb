@@ -10,4 +10,11 @@ cask "pock" do
   depends_on macos: ">= :sierra"
 
   app "Pock.app"
+
+  zap trash: [
+    "~/Library/Application Support/Pock",
+    "~/Library/Application Support/com.pigigaldi.pock",
+    "~/Library/Caches/com.pigigaldi.pock",
+    "~/Library/Preferences/com.pigigaldi.pock.plist",
+  ]
 end
