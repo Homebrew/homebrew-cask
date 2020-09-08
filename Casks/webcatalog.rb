@@ -1,6 +1,6 @@
 cask "webcatalog" do
-  version "24.3.1"
-  sha256 "d7a164fa654b60f190cdb623a5efe1f9859df68372f37a99356c2ce5886a58ef"
+  version "24.3.2"
+  sha256 "4d54cd9d957674cbc720c8938f5906a828a98f1acc748b9df2b7506a48584148"
 
   # github.com/atomery/webcatalog/ was verified as official when first introduced to the cask
   url "https://github.com/atomery/webcatalog/releases/download/v#{version}/WebCatalog-#{version}-mac.zip"
