@@ -1,4 +1,4 @@
-cask "toggl" do
+cask "toggl-track" do
   version "7.5.260"
   sha256 "4c001d7d9940ccd5563be1f03773ceeaca46efaf07be30819e04746e42bbeee3"
 
@@ -7,7 +7,7 @@ cask "toggl" do
   appcast "https://toggl-open-source.github.io/toggldesktop/assets/releases/darwin_stable_appcast.xml"
   name "Toggl Desktop"
   name "Toggl Track"
-  homepage "https://www.toggl.com/toggl-desktop/"
+  homepage "https://www.toggl.com/track/toggl-desktop/"
 
   app "Toggl Track.app"
 end
