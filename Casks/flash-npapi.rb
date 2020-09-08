@@ -1,6 +1,6 @@
 cask "flash-npapi" do
-  version "32.0.0.414"
-  sha256 "76f760cc1e84625445e6b88a80d30323d89457b97b80d4a6f4c75fe40d0c5e77"
+  version "32.0.0.433"
+  sha256 "8c9e70076f24215352f3ddc0859688d56beae78185de31c0379498b77491707e"
 
   url "https://fpdownload.adobe.com/pub/flashplayer/pdc/#{version}/install_flash_player_osx.dmg"
   appcast "https://fpdownload.adobe.com/pub/flashplayer/update/current/xml/version_en_mac_pl.xml",
