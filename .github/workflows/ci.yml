@@ -72,7 +72,7 @@ jobs:
             echo '::warning::Untapping adoptopenjdk/openjdk is no longer necessary.'
           fi
           
-          ls -al /usr/local/bin/pod
+          realpath /usr/local/bin/pod
 
       - name: Cache Homebrew Gems
         uses: actions/cache@v2
