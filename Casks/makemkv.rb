@@ -8,6 +8,7 @@ cask "makemkv" do
   homepage "https://www.makemkv.com/"
 
   app "MakeMKV.app"
+  binary "#{appdir}/MakeMKV.app/Contents/MacOS/makemkvcon"
 
   zap trash: [
     "~/Library/Preferences/com.makemkv.MakeMKV.plist",
