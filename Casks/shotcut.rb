@@ -1,6 +1,6 @@
 cask "shotcut" do
-  version "20.09.01"
-  sha256 "c3838f2c7c09ba749c5f66bbf03c8041795ed0b2c38a2f32654e8bf85ac7a806"
+  version "20.07.11"
+  sha256 "8b94e22bc54fcb5ee6fb5f1642ecb66ef92b128df6a5b488f2415c41c7a6175f"
 
   # github.com/mltframework/shotcut/ was verified as official when first introduced to the cask
   url "https://github.com/mltframework/shotcut/releases/download/v#{version}/shotcut-macos-signed-#{version.no_dots}.dmg"
