@@ -62,7 +62,7 @@ jobs:
             echo '::warning::Removing `dotnet` symlink is no longer necessary.'
           fi
 
-          if ! gem uninstall cocoapods; then
+          if ! sudo gem uninstall cocoapods; then
             echo '::warning::Removing `cocoapods` is no longer necessary.'
           fi
 
