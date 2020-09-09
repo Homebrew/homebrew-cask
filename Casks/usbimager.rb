@@ -5,7 +5,7 @@ cask "usbimager" do
   url "https://gitlab.com/bztsrc/usbimager/-/raw/binaries/usbimager_#{version}-intel-macosx-cocoa.zip"
   appcast "https://gitlab.com/bztsrc/usbimager/-/tags?format=atom"
   name "USBImager"
-  desc "GUI application that writes compressed disk images to USB drives and creates backups"
+  desc "GUI application that writes compressed images to USB drives and creates backups"
   homepage "https://gitlab.com/bztsrc/usbimager"
 
   app "USBImager.app"
