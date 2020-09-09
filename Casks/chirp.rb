@@ -1,6 +1,6 @@
 cask "chirp" do
-  version "20200902"
-  sha256 "82b3339c963257000b2b4b0661fbcb1b69ea6c6b539da1c8468ab83fa35a9ff8"
+  version "20200909"
+  sha256 "7a229d0d5927fd417c14ece81a959eb900c126e4c88e0ed140bef313f7d4e3c6"
 
   url "https://trac.chirp.danplanet.com/chirp_daily/LATEST/chirp-unified-daily-#{version}.app.zip"
   appcast "https://trac.chirp.danplanet.com/chirp_daily/LATEST/SHA1SUM"
