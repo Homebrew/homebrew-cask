@@ -1,5 +1,5 @@
 cask "lrtimelapse" do
-  version "5.5.0"
+  version "5.5.1_b1"
   sha256 "ac29d5399ecbdd0b4e0ba97b3146e68626bd3193071b8e4f0861871235f87643"
 
   url "https://lrtimelapse.com/files/lrtimelapse-#{version.major}-mac/"
