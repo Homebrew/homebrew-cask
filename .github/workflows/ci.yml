@@ -62,8 +62,8 @@ jobs:
             echo '::warning::Removing `dotnet` symlink is no longer necessary.'
           fi
 
-          if ! sudo gem uninstall cocoapods; then
-            echo '::warning::Removing `cocoapods` is no longer necessary.'
+          if ! rm /usr/local/bin/pod; then
+            echo '::warning::Removing `cocoapods` symlink is no longer necessary.'
           fi
 
           if brew tap-info adoptopenjdk/openjdk; then
@@ -71,8 +71,6 @@ jobs:
           else
             echo '::warning::Untapping adoptopenjdk/openjdk is no longer necessary.'
           fi
-          
-          ls -al "$(readlink /usr/local/bin/pod)"
 
       - name: Cache Homebrew Gems
         uses: actions/cache@v2
