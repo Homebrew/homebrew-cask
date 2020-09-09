@@ -11,8 +11,11 @@ jobs:
   generate-matrix:
     outputs:
       matrix: ${{ steps.generate-matrix.outputs.matrix }}
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
+      - name: Debug
+        run: |
+          ls -al /usr/local/bin/pod
       - name: Set up Homebrew
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
