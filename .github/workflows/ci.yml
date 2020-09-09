@@ -11,11 +11,8 @@ jobs:
   generate-matrix:
     outputs:
       matrix: ${{ steps.generate-matrix.outputs.matrix }}
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
-      - name: Debug
-        run: |
-          ls -al /usr/local/bin/pod
       - name: Set up Homebrew
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
@@ -74,6 +71,8 @@ jobs:
           else
             echo '::warning::Untapping adoptopenjdk/openjdk is no longer necessary.'
           fi
+          
+          ls -al /usr/local/bin/pod
 
       - name: Cache Homebrew Gems
         uses: actions/cache@v2
