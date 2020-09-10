@@ -1,5 +1,5 @@
 cask "amazon-music" do
-  version "7.12.0.2203,2005262203_1ee547b2e9653d9520168396897e3c22"
+  version "7.13.0.2210,2005262203_1ee547b2e9653d9520168396897e3c22"
   sha256 "7d31d7e568e5e2acd497fd2cb56c41fa68d89d7af804aaba5b95b6fb8cb6fa57"
 
   # morpho-releases.s3-us-west-2.amazonaws.com/mac/ was verified as official when first introduced to the cask
