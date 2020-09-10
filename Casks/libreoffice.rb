@@ -6,9 +6,10 @@ cask "libreoffice" do
   url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/LibreOffice_#{version}_MacOS_x86-64.dmg"
   appcast "https://download.documentfoundation.org/libreoffice/stable/"
   name "LibreOffice"
+  desc "Free cross-platform office suite"
   homepage "https://www.libreoffice.org/"
 
-  conflicts_with cask: "libreoffice-still"
+  conflicts_with cask: "homebrew/cask-versions/libreoffice-still"
   depends_on macos: ">= :sierra"
 
   app "LibreOffice.app"
