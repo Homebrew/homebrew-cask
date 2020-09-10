@@ -6,6 +6,7 @@ cask "mos" do
   url "https://github.com/Caldis/Mos/releases/download/#{version}/Mos.Versions.#{version}.dmg"
   appcast "https://github.com/Caldis/Mos/releases.atom"
   name "Mos"
+  desc "Smooths scrolling and set mouse scroll directions independently"
   homepage "https://mos.caldis.me/"
 
   app "Mos.app"

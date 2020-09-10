@@ -6,6 +6,7 @@ cask "nightingale" do
   url "https://github.com/nightingale-media-player/nightingale-hacking/releases/download/nightingale-#{version.before_comma}/Nightingale_#{version.before_comma}-#{version.after_comma}_macosx-i686.dmg"
   appcast "https://github.com/nightingale-media-player/nightingale-hacking/releases.atom"
   name "Nightingale"
+  desc "Working tree for the community fork of Songbird, Nightingale"
   homepage "https://getnightingale.com/"
 
   app "Nightingale.app"

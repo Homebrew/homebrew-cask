@@ -13,6 +13,7 @@ cask "bbedit" do
   url "https://s3.amazonaws.com/BBSW-download/BBEdit_#{version}.dmg"
   appcast "https://versioncheck.barebones.com/BBEdit.xml"
   name "BBEdit"
+  desc "Text, code, and markup editor"
   homepage "https://www.barebones.com/products/bbedit/"
 
   auto_updates true

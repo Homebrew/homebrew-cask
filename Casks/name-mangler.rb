@@ -5,6 +5,7 @@ cask "name-mangler" do
   url "https://manytricks.com/download/namemangler"
   appcast "https://manytricks.com/namemangler/appcast/"
   name "Name Mangler"
+  desc "Multi-file renaming tool"
   homepage "https://manytricks.com/namemangler/"
 
   auto_updates true

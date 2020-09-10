@@ -6,6 +6,7 @@ cask "icq" do
   url "https://icq-www.hb.bizmrg.com/mac/x64/#{version}/icq.dmg"
   appcast "https://icq-www.hb.bizmrg.com/mac/x64/#{version}/version.xml"
   name "ICQ"
+  desc "Messenger application"
   homepage "https://icq.com/desktop"
 
   auto_updates true

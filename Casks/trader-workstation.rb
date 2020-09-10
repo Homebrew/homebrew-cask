@@ -4,6 +4,7 @@ cask "trader-workstation" do
 
   url "https://download2.interactivebrokers.com/installers/tws/stable-standalone/tws-stable-standalone-macosx-x64.dmg"
   name "Trader Workstation"
+  desc "Trading software"
   homepage "https://www.interactivebrokers.com/"
 
   installer script: {

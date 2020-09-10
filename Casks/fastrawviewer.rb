@@ -5,6 +5,7 @@ cask "fastrawviewer" do
   url "https://updates.fastrawviewer.com/data/FastRawViewer-#{version}.dmg"
   appcast "https://www.fastrawviewer.com/download"
   name "FastRawViewer"
+  desc "Opens RAW files and renders them on-the-fly"
   homepage "https://www.fastrawviewer.com/"
 
   app "FastRawViewer.app"

@@ -6,6 +6,7 @@ cask "webtorrent" do
   url "https://github.com/webtorrent/webtorrent-desktop/releases/download/v#{version}/WebTorrent-v#{version}.dmg"
   appcast "https://github.com/webtorrent/webtorrent-desktop/releases.atom"
   name "WebTorrent Desktop"
+  desc "Torrent streaming application"
   homepage "https://webtorrent.io/desktop/"
 
   app "WebTorrent.app"

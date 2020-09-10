@@ -5,6 +5,7 @@ cask "wifi-explorer" do
   url "https://www.intuitibits.com/downloads/WiFiExplorer_#{version}.dmg"
   appcast "https://www.intuitibits.com/appcasts/wifiexplorercast.xml"
   name "WiFi Explorer"
+  desc "Scan, monitor, and troubleshoot wireless networks"
   homepage "https://www.intuitibits.com/products/wifi-explorer/"
 
   app "WiFi Explorer.app"

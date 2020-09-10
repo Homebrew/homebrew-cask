@@ -5,6 +5,7 @@ cask "outline" do
   url "https://static.outline.ws/versions/Outline_#{version}.zip"
   appcast "https://gorillized.s3.amazonaws.com/versions/update_channel.xml"
   name "Outline"
+  desc "Note taking app"
   homepage "https://outline.ws/"
 
   app "Outline.app"

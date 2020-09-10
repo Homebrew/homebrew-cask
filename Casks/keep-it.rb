@@ -5,6 +5,7 @@ cask "keep-it" do
   url "https://reinventedsoftware.com/keepit/downloads/KeepIt_#{version}.dmg"
   appcast "https://reinventedsoftware.com/keepit/downloads/keepit.xml"
   name "Keep It"
+  desc "Notebook, scrapbook and organizer tool"
   homepage "https://reinventedsoftware.com/keepit/"
 
   auto_updates true

@@ -5,6 +5,7 @@ cask "radio-silence" do
   url "https://radiosilenceapp.com/downloads/Radio_Silence_#{version}.pkg"
   appcast "https://radiosilenceapp.com/update"
   name "Radio Silence"
+  desc "Network monitor and firewall"
   homepage "https://radiosilenceapp.com/"
 
   pkg "Radio_Silence_#{version}.pkg"

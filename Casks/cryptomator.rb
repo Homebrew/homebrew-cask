@@ -6,6 +6,7 @@ cask "cryptomator" do
   url "https://dl.bintray.com/cryptomator/cryptomator/#{version}/Cryptomator-#{version}.dmg"
   appcast "https://github.com/cryptomator/cryptomator/releases.atom"
   name "Cryptomator"
+  desc "Multi-platform client-side cloud file encryption tool"
   homepage "https://cryptomator.org/"
 
   depends_on macos: ">= :yosemite"

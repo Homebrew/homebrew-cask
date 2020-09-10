@@ -6,6 +6,7 @@ cask "marginnote" do
   url "https://marginstudy.com/mac/MarginNote#{version.major}.dmg"
   appcast "https://dist.marginnote.cn/marginnote#{version.major}.xml"
   name "MarginNote"
+  desc "E-reader"
   homepage "https://www.marginnote.com/"
 
   auto_updates true

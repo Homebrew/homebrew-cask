@@ -5,6 +5,7 @@ cask "typora" do
   url "https://www.typora.io/download/Typora-#{version}.dmg"
   appcast "https://www.typora.io/download/dev_update.xml"
   name "Typora"
+  desc "Configurable document editor that supports Markdown"
   homepage "https://typora.io/"
 
   auto_updates true

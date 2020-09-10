@@ -6,6 +6,7 @@ cask "chatology" do
   url "https://d60ism0l33mmr.cloudfront.net/Chatology_#{version}.zip"
   appcast "https://flexibits.com/chatology/appcast.php"
   name "Chatology"
+  desc "Chat manager and message search software"
   homepage "https://flexibits.com/chatology"
 
   app "Chatology.app"

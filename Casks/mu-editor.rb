@@ -6,6 +6,7 @@ cask "mu-editor" do
   url "https://github.com/mu-editor/mu/releases/download/#{version}/mu-editor.dmg"
   appcast "https://github.com/mu-editor/mu/releases.atom"
   name "Mu"
+  desc "Small, simple editor for beginner Python programmers"
   homepage "https://codewith.mu/"
 
   app "mu-editor.app"

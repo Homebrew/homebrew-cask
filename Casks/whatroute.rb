@@ -5,6 +5,7 @@ cask "whatroute" do
   url "https://downloads.whatroute.net/software/whatroute-#{version}.zip"
   appcast "https://www.whatroute.net/whatroute#{version.major}appcast.xml"
   name "WhatRoute"
+  desc "Network diagnostic utility"
   homepage "https://www.whatroute.net/"
 
   depends_on macos: ">= :yosemite"

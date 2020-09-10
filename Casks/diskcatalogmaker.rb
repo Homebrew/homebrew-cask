@@ -6,6 +6,7 @@ cask "diskcatalogmaker" do
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://download.diskcatalogmaker.com/zip/DiskCatalogMaker.zip",
           must_contain: version.no_dots
   name "DiskCatalogMaker"
+  desc "Toast-bundled version of DiskCatalogMaker"
   homepage "https://diskcatalogmaker.com/"
 
   app "DiskCatalogMaker.app"

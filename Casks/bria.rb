@@ -6,6 +6,7 @@ cask "bria" do
   url "https://counterpath.s3.amazonaws.com/downloads/Bria_#{version}.dmg"
   appcast "https://www.macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.counterpath.com/Bria6forMac"
   name "Bria"
+  desc "Softphone application"
   homepage "https://www.counterpath.com/bria-solo/"
 
   app "Bria.app"

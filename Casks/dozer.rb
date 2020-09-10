@@ -5,6 +5,7 @@ cask "dozer" do
   url "https://github.com/Mortennn/Dozer/releases/download/v#{version}/Dozer.#{version}.dmg"
   appcast "https://github.com/Mortennn/Dozer/releases.atom"
   name "Dozer"
+  desc "Tool to hide status bar icons"
   homepage "https://github.com/Mortennn/Dozer"
 
   auto_updates true

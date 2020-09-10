@@ -7,6 +7,7 @@ cask "amazon-music" do
   appcast "https://www.amazon.com/gp/dmusic/desktop/downloadPlayer",
           must_contain: version.after_comma
   name "Amazon Music"
+  desc "Desktop client for Amazon Music"
   homepage "https://www.amazon.com/musicapps"
 
   auto_updates true

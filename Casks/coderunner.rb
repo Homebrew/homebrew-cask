@@ -5,6 +5,7 @@ cask "coderunner" do
   url "https://coderunnerapp.com/download/update/CodeRunner-#{version}.zip"
   appcast "https://coderunnerapp.com/appcast.xml"
   name "CodeRunner"
+  desc "Multi-language programming editor"
   homepage "https://coderunnerapp.com/"
 
   app "CodeRunner.app"

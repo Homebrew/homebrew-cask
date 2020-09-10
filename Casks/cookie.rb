@@ -5,6 +5,7 @@ cask "cookie" do
   url "https://sweetpproductions.com/products/cookieapp/Cookie.dmg"
   appcast "https://sweetpproductions.com/products/cookieapp/appcast.xml"
   name "Cookie"
+  desc "Protection from tracking and online profiling"
   homepage "https://sweetpproductions.com/"
 
   depends_on macos: ">= :mojave"

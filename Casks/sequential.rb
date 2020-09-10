@@ -5,6 +5,7 @@ cask "sequential" do
   url "http://sequentialx.com/Sequential#{version}.zip"
   appcast "http://sequentialx.com/sequential.xml"
   name "Sequential"
+  desc "Displays folders and archives of images and PDF files"
   homepage "http://sequentialx.com/"
 
   app "Sequential.app"

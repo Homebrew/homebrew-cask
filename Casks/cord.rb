@@ -6,6 +6,7 @@ cask "cord" do
   url "https://downloads.sourceforge.net/cord/cord/#{version}/CoRD_#{version}.zip"
   appcast "https://cord.sourceforge.io/sparkle.xml"
   name "CoRD"
+  desc "Remote desktop client"
   homepage "https://cord.sourceforge.io/"
 
   app "CoRD.app"

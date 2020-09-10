@@ -5,6 +5,7 @@ cask "taskpaper" do
   url "https://www.taskpaper.com/assets/app/TaskPaper-#{version}.dmg"
   appcast "https://www.taskpaper.com/assets/app/TaskPaper.rss"
   name "TaskPaper"
+  desc "App to make lists and help with organization"
   homepage "https://www.taskpaper.com/"
 
   auto_updates true

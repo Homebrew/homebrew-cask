@@ -5,6 +5,7 @@ cask "pixelsnap" do
   url "https://updates.getpixelsnap.com/v#{version.major}/PixelSnap-#{version.major}-#{version}.dmg"
   appcast "https://updates.getpixelsnap.com/v#{version.major}/appcast.xml"
   name "PixelSnap"
+  desc "Screen measuring tool"
   homepage "https://getpixelsnap.com/"
 
   auto_updates true

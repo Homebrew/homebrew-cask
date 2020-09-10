@@ -5,6 +5,7 @@ cask "texshop" do
   url "https://pages.uoregon.edu/koch/texshop/texshop-64/texshop#{version.no_dots}.zip"
   appcast "https://pages.uoregon.edu/koch/texshop/texshop-64/texshopappcast.xml"
   name "TeXShop"
+  desc "TeX previewer"
   homepage "https://pages.uoregon.edu/koch/texshop/"
 
   auto_updates true

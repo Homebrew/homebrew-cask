@@ -5,6 +5,7 @@ cask "launchbar" do
   url "https://www.obdev.at/downloads/launchbar/LaunchBar-#{version}.dmg"
   appcast "https://sw-update.obdev.at/update-feeds/launchbar-#{version.major}.plist"
   name "LaunchBar"
+  desc "Productivity tool"
   homepage "https://www.obdev.at/products/launchbar/index.html"
 
   auto_updates true

@@ -6,6 +6,7 @@ cask "lark" do
   url "https://sf3-ttcdn-tos.pstatp.com/obj/ee-appcenter/#{version.after_comma}/Lark-#{version.before_comma}.dmg"
   appcast "https://www.larksuite.com/api/downloads"
   name "Lark"
+  desc "Project management software"
   homepage "https://www.larksuite.com/"
 
   app "Lark.app"

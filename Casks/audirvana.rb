@@ -5,6 +5,7 @@ cask "audirvana" do
   url "https://audirvana.com/delivery/Audirvana_#{version}.dmg"
   appcast "https://audirvana.com/delivery/audirvana#{version.major}_#{version.minor}_appcast.xml"
   name "Audirvana"
+  desc "Audio playback software"
   homepage "https://audirvana.com/"
 
   auto_updates true

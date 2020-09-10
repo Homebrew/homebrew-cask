@@ -5,6 +5,7 @@ cask "sloth" do
   url "https://sveinbjorn.org/files/software/sloth/sloth-#{version}.zip"
   appcast "https://sveinbjorn.org/files/appcasts/SlothAppcast.xml"
   name "Sloth"
+  desc "Displays all open files and sockets in use by all running processes"
   homepage "https://sveinbjorn.org/sloth"
 
   auto_updates true

@@ -10,6 +10,7 @@ cask "isyncr" do
   url "https://www.jrtstudio.com/files/iSyncr%20Desktop%20#{version}.pkg"
   appcast "https://www.jrtstudio.com/files/SlashiSyncr38.js"
   name "iSyncr Desktop"
+  desc "Syncs iTunes to Android over a USB or WiFi connection"
   homepage "https://www.jrtstudio.com/iSyncr-iTunes-for-Android"
 
   pkg "iSyncr Desktop #{version}.pkg"

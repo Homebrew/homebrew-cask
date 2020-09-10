@@ -5,6 +5,7 @@ cask "yep" do
   url "https://www.ironicsoftware.com/downloads/Yep.zip"
   appcast "https://ironicsoftware.com/downloads/yep.xml"
   name "Yep"
+  desc "Document manager"
   homepage "https://www.ironicsoftware.com/yep/"
 
   app "Yep.app"

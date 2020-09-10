@@ -6,6 +6,7 @@ cask "handbrake" do
   url "https://github.com/HandBrake/HandBrake/releases/download/#{version}/HandBrake-#{version}.dmg"
   appcast "https://github.com/HandBrake/HandBrake/releases.atom"
   name "HandBrake"
+  desc "Open-source video transcoder"
   homepage "https://handbrake.fr/"
 
   auto_updates true

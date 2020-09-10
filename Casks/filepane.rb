@@ -6,6 +6,7 @@ cask "filepane" do
   url "https://dl.devmate.com/com.mymixapps.FilePane/#{version.before_comma}/#{version.after_comma}/FilePane-#{version.before_comma}.dmg"
   appcast "https://updates.devmate.com/com.mymixapps.FilePane.xml"
   name "FilePane"
+  desc "File management multi-tool"
   homepage "https://mymixapps.com/filepane"
 
   app "FilePane.app"

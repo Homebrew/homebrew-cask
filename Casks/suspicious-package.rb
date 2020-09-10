@@ -5,6 +5,7 @@ cask "suspicious-package" do
   url "https://www.mothersruin.com/software/downloads/SuspiciousPackage.dmg"
   appcast "https://www.mothersruin.com/software/SuspiciousPackage/data/SuspiciousPackageVersionInfo.plist"
   name "Suspicious Package"
+  desc "Application for inspecting installer packages"
   homepage "https://www.mothersruin.com/software/SuspiciousPackage/"
 
   depends_on macos: ">= :high_sierra"

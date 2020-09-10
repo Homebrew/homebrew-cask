@@ -4,6 +4,7 @@ cask "hand-mirror" do
 
   url "https://handmirror.app/Hand%20Mirror%20#{version}.dmg"
   name "Hand Mirror"
+  desc "Tool to quick-check your appearance before a videocall"
   homepage "https://handmirror.app/"
 
   depends_on macos: ">= :catalina"

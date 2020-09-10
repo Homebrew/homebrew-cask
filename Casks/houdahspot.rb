@@ -5,6 +5,7 @@ cask "houdahspot" do
   url "https://dl.houdah.com/houdahSpot/updates/cast#{version.major}_assets/HoudahSpot#{version}.zip"
   appcast "https://www.houdah.com/houdahSpot/updates/cast#{version.major}.xml"
   name "HoudahSpot"
+  desc "File searching application"
   homepage "https://www.houdah.com/houdahSpot/"
 
   depends_on macos: ">= :high_sierra"

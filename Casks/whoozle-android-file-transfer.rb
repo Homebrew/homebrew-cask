@@ -6,6 +6,7 @@ cask "whoozle-android-file-transfer" do
   url "https://github.com/whoozle/android-file-transfer-linux/releases/download/v#{version}/AndroidFileTransferForLinux.dmg"
   appcast "https://github.com/whoozle/android-file-transfer-linux/releases.atom"
   name "Android File Transfer"
+  desc "Android File Transfer for Linux"
   homepage "https://whoozle.github.io/android-file-transfer-linux/"
 
   conflicts_with cask: "whoozle-android-file-transfer-nightly"

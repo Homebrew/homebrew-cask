@@ -7,6 +7,7 @@ cask "tweetbot" do
   appcast "https://tapbots.net/tweetbot#{version.after_comma}/update.plist",
           must_contain: version.before_comma.no_dots
   name "Tweetbot"
+  desc "Twitter client"
   homepage "https://tapbots.com/tweetbot/mac/"
 
   depends_on macos: ">= :high_sierra"

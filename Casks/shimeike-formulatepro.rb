@@ -5,6 +5,7 @@ cask "shimeike-formulatepro" do
   url "https://github.com/shimeike/formulatepro/releases/download/v#{version}a/FormulatePro-#{version}.dmg"
   appcast "https://github.com/shimeike/formulatepro/releases.atom"
   name "FormulatePro"
+  desc "Overlays text and graphics on PDF documents"
   homepage "https://github.com/shimeike/formulatepro/"
 
   app "FormulatePro.app"

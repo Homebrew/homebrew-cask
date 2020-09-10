@@ -6,6 +6,7 @@ cask "feishu" do
   url "https://sf3-ttcdn-tos.pstatp.com/obj/ee-appcenter/#{version.after_comma}/Feishu-#{version.before_comma}.dmg"
   appcast "https://www.feishu.cn/api/downloads"
   name "feishu"
+  desc "Project management software"
   homepage "https://www.feishu.cn/"
 
   auto_updates true

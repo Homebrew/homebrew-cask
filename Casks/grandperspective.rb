@@ -6,6 +6,7 @@ cask "grandperspective" do
   url "https://downloads.sourceforge.net/grandperspectiv/grandperspective/#{version}/GrandPerspective-#{version.dots_to_underscores}.dmg"
   appcast "https://sourceforge.net/projects/grandperspectiv/rss?path=/grandperspective"
   name "GrandPerspective"
+  desc "Graphically shows disk usage within a file system"
   homepage "https://grandperspectiv.sourceforge.io/"
 
   app "GrandPerspective.app"

@@ -6,6 +6,7 @@ cask "skim" do
   url "https://downloads.sourceforge.net/skim-app/Skim/Skim-#{version}/Skim-#{version}.dmg"
   appcast "https://skim-app.sourceforge.io/skim.xml"
   name "Skim"
+  desc "PDF reader and note-taking application"
   homepage "https://skim-app.sourceforge.io/"
 
   auto_updates true

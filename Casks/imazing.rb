@@ -5,6 +5,7 @@ cask "imazing" do
   url "https://downloads.imazing.com/mac/iMazing/#{version}/iMazing_#{version}.dmg"
   appcast "https://downloads.imazing.com/com.DigiDNA.iMazing#{version.major}Mac.xml"
   name "iMazing"
+  desc "iPhone management application"
   homepage "https://imazing.com/"
 
   auto_updates true

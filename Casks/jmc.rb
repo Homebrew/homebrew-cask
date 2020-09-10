@@ -5,6 +5,7 @@ cask "jmc" do
   url "https://github.com/jcm93/jmc/releases/download/v#{version}/jmc.app.zip"
   appcast "https://github.com/jcm93/jmc/releases.atom"
   name "jmc"
+  desc "Media organizer"
   homepage "https://github.com/jcm93/jmc"
 
   app "jmc.app"

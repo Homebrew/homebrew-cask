@@ -5,6 +5,7 @@ cask "nullpomino" do
   url "https://github.com/nullpomino/nullpomino/releases/download/v#{version}/NullpoMino#{version}.dmg"
   appcast "https://github.com/nullpomino/nullpomino/releases.atom"
   name "NullpoMino"
+  desc "Action puzzle game"
   homepage "https://github.com/nullpomino/nullpomino"
 
   app "NullpoMino_#{version}.app"

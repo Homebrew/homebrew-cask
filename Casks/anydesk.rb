@@ -5,6 +5,7 @@ cask "anydesk" do
   url "https://download.anydesk.com/anydesk.dmg"
   appcast "https://anydesk.com/en/downloads/mac-os"
   name "AnyDesk"
+  desc "Allows connection to a computer remotely"
   homepage "https://anydesk.com/remote-desktop"
 
   app "AnyDesk.app"

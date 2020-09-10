@@ -5,6 +5,7 @@ cask "icons" do
   url "https://github.com/exherb/icons/releases/download/#{version}/icons-v#{version}-macos-x64.zip"
   appcast "https://github.com/exherb/icons/releases.atom"
   name "Icons"
+  desc "Tool to generate icons for apps"
   homepage "https://github.com/exherb/icons"
 
   app "Icons.app"

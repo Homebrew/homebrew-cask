@@ -4,6 +4,7 @@ cask "tidal" do
 
   url "https://download.tidal.com/desktop/TIDAL.dmg"
   name "TIDAL"
+  desc "Music streaming service with high fidelity sound and hi-def video quality"
   homepage "https://tidal.com/"
 
   app "TIDAL.app"

@@ -6,6 +6,7 @@ cask "gifox" do
   url "https://d3si16icyi9iar.cloudfront.net/gifox/#{version.after_comma}.dmg"
   appcast "https://www.macupdater.net/cgi-bin/extract_text/download_with_useragent.cgi?url=https://api.gifox.io/appcast?prereleases=false"
   name "gifox"
+  desc "App to record the screen"
   homepage "https://gifox.io/"
 
   app "Gifox.app"

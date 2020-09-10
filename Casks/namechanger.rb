@@ -5,6 +5,7 @@ cask "namechanger" do
   url "https://www.mrrsoftware.com/Downloads/NameChanger/Updates/NameChanger-#{version.dots_to_underscores}.zip"
   appcast "https://mrrsoftware.com/Downloads/NameChanger/Updates/NameChangerSoftwareUpdates.xml"
   name "NameChanger"
+  desc "Rename a list of files quickly"
   homepage "https://mrrsoftware.com/namechanger/"
 
   auto_updates true

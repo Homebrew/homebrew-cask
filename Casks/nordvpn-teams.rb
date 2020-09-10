@@ -6,6 +6,7 @@ cask "nordvpn-teams" do
   url "https://downloads.nordteams.com/mac/latest/NordVPNTeams.pkg"
   appcast "https://downloads.nordteams.com/mac/update.xml"
   name "NordVPN Teams"
+  desc "Security software for business"
   homepage "https://nordvpnteams.com/"
 
   auto_updates true

@@ -4,6 +4,7 @@ cask "mediahuman-youtube-downloader" do
 
   url "https://www.mediahuman.com/download/YouTubeDownloader.dmg"
   name "MediaHuman YouTube Downloader"
+  desc "YouTube videos downloader"
   homepage "https://www.mediahuman.com/youtube-downloader/"
 
   app "MediaHuman YouTube Downloader.app"

@@ -5,6 +5,7 @@ cask "cardhop" do
   url "https://cdn.flexibits.com/Cardhop_#{version}.zip"
   appcast "https://flexibits.com/cardhop/appcast.php"
   name "Cardhop"
+  desc "Contacts manager"
   homepage "https://flexibits.com/cardhop"
 
   auto_updates true

@@ -6,6 +6,7 @@ cask "youku" do
   appcast "https://pd.youku.com/pc"
   name "Youku"
   name "优酷"
+  desc "Chinese video streaming and sharing platform"
   homepage "https://pd.youku.com/pc"
 
   app "优酷.app"

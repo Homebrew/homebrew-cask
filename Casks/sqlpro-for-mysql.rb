@@ -6,6 +6,7 @@ cask "sqlpro-for-mysql" do
   url "https://d3fwkemdw8spx3.cloudfront.net/mysql/SQLProMySQL.#{version}.zip"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?user_agent=Macintosh&url=https://www.mysqlui.com/download.php"
   name "SQLPro for MySQL"
+  desc "MySQL & MariaDB database client"
   homepage "https://www.mysqlui.com/"
 
   app "SQLPro for MySQL.app"

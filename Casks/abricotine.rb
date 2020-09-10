@@ -6,6 +6,7 @@ cask "abricotine" do
   url "https://github.com/brrd/Abricotine/releases/download/#{version}/Abricotine-#{version}-osx-x64.zip"
   appcast "https://github.com/brrd/Abricotine/releases.atom"
   name "abricotine"
+  desc "Markdown editor with inline preview"
   homepage "https://abricotine.brrd.fr/"
 
   app "Abricotine-darwin-x64/Abricotine.app"

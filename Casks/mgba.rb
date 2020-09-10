@@ -6,6 +6,7 @@ cask "mgba" do
   url "https://github.com/mgba-emu/mgba/releases/download/#{version}/mGBA-#{version}-osx.tar.xz"
   appcast "https://github.com/mgba-emu/mgba/releases.atom"
   name "mGBA"
+  desc "Game Boy Advance emulator"
   homepage "https://mgba.io/"
 
   app "mGBA-#{version}-osx/Applications/mGBA.app"

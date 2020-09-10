@@ -6,6 +6,7 @@ cask "brave-browser" do
   url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Browser/stable/#{version.after_comma}/Brave-Browser.dmg"
   appcast "https://updates.bravesoftware.com/sparkle/Brave-Browser/stable/appcast.xml"
   name "Brave"
+  desc "Web browser focusing on privacy"
   homepage "https://brave.com/"
 
   auto_updates true

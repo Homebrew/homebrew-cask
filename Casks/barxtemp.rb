@@ -11,6 +11,7 @@ cask "barxtemp" do
   url "https://github.com/Gabriele91/barXtemp/releases/download/#{version}/barXtemp.app.zip"
   appcast "https://github.com/Gabriele91/barXtemp/releases.atom"
   name "barXtemp"
+  desc "Simple app to get the computer temperature"
   homepage "https://gabriele91.github.io/barXtemp/"
 
   depends_on macos: ">= :yosemite"

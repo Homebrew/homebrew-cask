@@ -4,6 +4,7 @@ cask "quik" do
 
   url "https://software.gopro.com/Mac/GoPro_Quik-MacInstaller-#{version}.dmg"
   name "GoPro Quik"
+  desc "Access and edit GoPro photos and videos"
   homepage "https://shop.gopro.com/softwareandapp/quik-%7C-desktop/Quik-Desktop.html"
 
   pkg "GoPro Quik.pkg"

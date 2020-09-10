@@ -5,6 +5,7 @@ cask "shadowsocksx" do
   url "https://github.com/shadowsocks/shadowsocks-iOS/releases/download/#{version}/ShadowsocksX-#{version}.dmg"
   appcast "https://github.com/shadowsocks/shadowsocks-iOS/releases.atom"
   name "ShadowsocksX"
+  desc "Removed according to regulations"
   homepage "https://github.com/shadowsocks/shadowsocks-iOS/wiki/Shadowsocks-for-OSX-Help"
 
   app "ShadowsocksX.app"

@@ -22,6 +22,7 @@ cask "onyx" do
   url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete(".")}/OnyX.dmg"
   appcast "https://www.titanium-software.fr/en/onyx.html"
   name "OnyX"
+  desc "Verify system files structure, run miscellaneous maintenance and more"
   homepage "https://www.titanium-software.fr/en/onyx.html"
 
   # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.

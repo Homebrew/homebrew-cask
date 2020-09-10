@@ -5,6 +5,7 @@ cask "hotswitch" do
   url "https://oniatsu.github.io/HotSwitch/release/zip/HotSwitch.zip"
   appcast "https://github.com/oniatsu/HotSwitch/releases.atom"
   name "HotSwitch"
+  desc "Fast window switcher using a 2-stroke hotkey"
   homepage "https://oniatsu.github.io/HotSwitch/"
 
   app "HotSwitch.app"

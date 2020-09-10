@@ -13,6 +13,7 @@ cask "birdfont" do
   url "https://birdfont.org/download/birdfont-#{version}-free.dmg"
   appcast "https://birdfont.org/purchase.php"
   name "BirdFont"
+  desc "Free font editor"
   homepage "https://birdfont.org/"
 
   depends_on macos: ">= :el_capitan"

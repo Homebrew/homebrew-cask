@@ -5,6 +5,7 @@ cask "eme" do
   url "https://github.com/egoist/eme/releases/download/v#{version}/EME-#{version}.dmg"
   appcast "https://github.com/egoist/eme/releases.atom"
   name "EME"
+  desc "Markdown editor"
   homepage "https://github.com/egoist/eme"
 
   auto_updates true

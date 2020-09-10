@@ -6,6 +6,7 @@ cask "pibakery" do
   url "https://github.com/davidferguson/pibakery/releases/download/v#{version}/PiBakery.pkg"
   appcast "https://github.com/davidferguson/pibakery/releases.atom"
   name "PiBakery"
+  desc "Blocks-based setup tool for Raspberry Pi"
   homepage "https://www.pibakery.org/"
 
   pkg "PiBakery.pkg"

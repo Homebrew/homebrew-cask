@@ -5,6 +5,7 @@ cask "r" do
   url "https://cloud.r-project.org/bin/macosx/R-#{version}.pkg"
   appcast "https://cloud.r-project.org/bin/macosx/"
   name "R"
+  desc "Environment for statistical computing and graphics"
   homepage "https://www.r-project.org/"
 
   depends_on macos: ">= :el_capitan"

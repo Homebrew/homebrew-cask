@@ -5,6 +5,7 @@ cask "joshjon-nocturnal" do
   url "https://github.com/joshjon/nocturnal/releases/download/v#{version}/Nocturnal-#{version}.zip"
   appcast "https://github.com/joshjon/nocturnal/releases.atom"
   name "Nocturnal"
+  desc "Dimness and night shift menu bar app"
   homepage "https://github.com/joshjon/nocturnal"
 
   depends_on macos: ">= :high_sierra"

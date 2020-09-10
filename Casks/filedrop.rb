@@ -5,6 +5,7 @@ cask "filedrop" do
   # commondatastorage.googleapis.com/filedropme/ was verified as official when first introduced to the cask
   url "https://commondatastorage.googleapis.com/filedropme/Filedrop.dmg"
   name "Filedrop"
+  desc "File sharing software"
   homepage "http://www.filedropme.com/"
 
   app "Filedrop.app"

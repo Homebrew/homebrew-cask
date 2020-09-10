@@ -5,6 +5,7 @@ cask "pdfshaver" do
   url "https://github.com/tparry/PDFShaver.app/releases/download/v#{version}/PDFShaver.zip"
   appcast "https://github.com/tparry/PDFShaver.app/releases.atom"
   name "PDFShaver"
+  desc "Shrink PDF files to make them smaller"
   homepage "https://github.com/tparry/PDFShaver.app"
 
   app "PDFShaver.app"

@@ -5,6 +5,7 @@ cask "mia-for-gmail" do
   url "https://www.miaforgmail.com/application/notifier-pro-for-gmail/MiaForGmail.dmg"
   appcast "https://www.sovapps.com/application/notifier-pro-for-gmail/notifier.xml"
   name "Mia for Gmail"
+  desc "Desktop email client for Gmail"
   homepage "https://www.miaforgmail.com/"
 
   auto_updates true

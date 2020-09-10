@@ -6,6 +6,7 @@ cask "encryptme" do
   appcast "https://www.getcloak.com/updates/osx/public/"
   name "EncryptMe"
   name "Cloak"
+  desc "VPN and encryption software"
   homepage "https://encrypt.me/"
 
   auto_updates true

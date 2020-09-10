@@ -6,6 +6,7 @@ cask "folx" do
   appcast "https://cdn.eltima.com/download/folx-updater/folx.xml",
           must_contain: version.major_minor
   name "Folx"
+  desc "Download manager with a torrent client"
   homepage "https://mac.eltima.com/download-manager.html"
 
   auto_updates true

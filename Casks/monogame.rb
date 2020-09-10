@@ -6,6 +6,7 @@ cask "monogame" do
   url "https://github.com/MonoGame/MonoGame/releases/download/v#{version}/MonoGame.pkg"
   appcast "https://github.com/MonoGame/MonoGame/releases.atom"
   name "MonoGame"
+  desc "Framework for creating cross-platform games"
   homepage "https://www.monogame.net/"
 
   pkg "MonoGame.pkg"

@@ -5,6 +5,7 @@ cask "wpsoffice" do
   # wdl1.pcfg.cache.wpscdn.com/ was verified as official when first introduced to the cask
   url "https://wdl1.pcfg.cache.wpscdn.com/wpsdl/macwpsoffice/download/#{version.before_comma}.#{version.after_comma}/WPSOffice_#{version.before_comma}(#{version.after_comma}).dmg"
   name "WPS Office"
+  desc "All-in-one office suite"
   homepage "https://www.wps.com/mac/"
 
   depends_on macos: ">= :sierra"

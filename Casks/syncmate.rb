@@ -6,6 +6,7 @@ cask "syncmate" do
   url "https://cdn.electronic.us/products/syncmate/mac/update/SyncMate_#{version}.zip"
   appcast "https://cdn.eltima.com/download/syncmate-update/syncmate6.xml"
   name "SyncMate"
+  desc "All-in-one sync tool"
   homepage "https://mac.eltima.com/sync-mac.html"
 
   app "SyncMate.app"

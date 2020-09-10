@@ -5,6 +5,7 @@ cask "cleartext" do
   url "https://github.com/mortenjust/cleartext-mac/releases/download/#{version}/Cleartext.zip"
   appcast "https://github.com/mortenjust/cleartext-mac/releases.atom"
   name "Cleartext"
+  desc "Text editor"
   homepage "https://github.com/mortenjust/cleartext-mac"
 
   app "Cleartext.app"

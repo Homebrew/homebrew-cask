@@ -5,6 +5,7 @@ cask "boxcryptor" do
   url "https://downloads.boxcryptor.com/boxcryptor/mac/Boxcryptor_v#{version}_Installer.dmg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.boxcryptor.com/l/download-macosx"
   name "Boxcryptor"
+  desc "Tool to encrypt files and folders in various cloud storage services"
   homepage "https://www.boxcryptor.com/en/"
 
   depends_on macos: ">= :sierra"

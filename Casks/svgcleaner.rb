@@ -5,7 +5,7 @@ cask "svgcleaner" do
   url "https://github.com/RazrFalcon/svgcleaner-gui/releases/download/v#{version}/svgcleaner_macos_#{version}.zip"
   appcast "https://github.com/RazrFalcon/svgcleaner-gui/releases.atom"
   name "SVG Cleaner"
-  desc "Cleans your SVG files by removing unnecessary data"
+  desc "Tool to clean up SVG files by removing unnecessary data"
   homepage "https://github.com/RazrFalcon/svgcleaner-gui/"
 
   conflicts_with formula: "svgcleaner"

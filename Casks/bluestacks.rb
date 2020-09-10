@@ -6,6 +6,7 @@ cask "bluestacks" do
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://cloud.bluestacks.com/api/getdownloadnow?platform=mac",
           must_contain: version.before_comma
   name "BlueStacks"
+  desc "Mobile gaming platform"
   homepage "https://www.bluestacks.com/"
 
   depends_on macos: ">= :sierra"

@@ -5,6 +5,7 @@ cask "cryptr" do
   url "https://github.com/adobe/cryptr/releases/download/v#{version}/Cryptr-#{version}.dmg"
   appcast "https://github.com/adobe/cryptr/releases.atom"
   name "Cryptr"
+  desc "GUI for Hashicorp's Vault"
   homepage "https://github.com/adobe/cryptr"
 
   app "Cryptr.app"

@@ -5,6 +5,7 @@ cask "mendeley" do
   url "https://desktop-download.mendeley.com/download/Mendeley-Desktop-#{version}-OSX-Universal.dmg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.mendeley.com/autoupdates/installer/Mac-x64/stable-incoming"
   name "Mendeley Desktop"
+  desc "Research management tool"
   homepage "https://www.mendeley.com/reference-management/mendeley-desktop"
 
   app "Mendeley Desktop.app"

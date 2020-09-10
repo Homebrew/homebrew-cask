@@ -6,6 +6,7 @@ cask "corona-tracker" do
   url "https://github.com/MhdHejazi/CoronaTracker/releases/download/v#{version}/CoronaTracker-macOS.zip"
   appcast "https://github.com/MhdHejazi/CoronaTracker/releases.atom"
   name "Corona Tracker"
+  desc "Coronavirus tracker app with maps and charts"
   homepage "https://coronatracker.samabox.com/"
 
   depends_on macos: ">= :catalina"

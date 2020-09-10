@@ -6,6 +6,7 @@ cask "obyte" do
   url "https://github.com/byteball/obyte-gui-wallet/releases/download/v#{version}/Obyte-osx64.dmg"
   appcast "https://github.com/byteball/obyte-gui-wallet/releases.atom"
   name "Obyte"
+  desc "Smart payments made simple"
   homepage "https://obyte.org/"
 
   app "Obyte.app"

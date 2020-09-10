@@ -6,6 +6,7 @@ cask "keepassxc" do
   url "https://github.com/keepassxreboot/keepassxc/releases/download/#{version}/KeePassXC-#{version}.dmg"
   appcast "https://github.com/keepassxreboot/keepassxc/releases.atom"
   name "KeePassXC"
+  desc "Password manager app"
   homepage "https://keepassxc.org/"
 
   depends_on macos: ">= :high_sierra"

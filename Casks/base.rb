@@ -5,6 +5,7 @@ cask "base" do
   url "https://files.menial.co.uk/base/base_#{version}.zip"
   appcast "https://update.menial.co.uk/software/base/"
   name "Menial Base"
+  desc "App to create, design, edit and browse SQLite 3 database files"
   homepage "https://menial.co.uk/base/"
 
   depends_on macos: ">= :mojave"

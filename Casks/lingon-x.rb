@@ -10,6 +10,7 @@ cask "lingon-x" do
   url "https://www.peterborgapps.com/downloads/LingonX#{version.major}.zip"
   appcast "https://www.peterborgapps.com/updates/lingonx#{version.major}.plist"
   name "Lingon X"
+  desc "Automator software to start apps, run scripts or commands and more"
   homepage "https://www.peterborgapps.com/lingon/"
 
   depends_on macos: ">= :high_sierra"

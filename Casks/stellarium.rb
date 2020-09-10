@@ -6,6 +6,7 @@ cask "stellarium" do
   url "https://github.com/Stellarium/stellarium/releases/download/v#{version}/Stellarium-#{version}.zip"
   appcast "https://github.com/Stellarium/stellarium/releases.atom"
   name "Stellarium"
+  desc "Tool to render realistic skies in real time on the screen"
   homepage "https://stellarium.org/"
 
   depends_on macos: ">= :sierra"

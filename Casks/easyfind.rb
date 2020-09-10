@@ -5,6 +5,7 @@ cask "easyfind" do
   url "https://download.devontechnologies.com/download/freeware/easyfind/#{version}/EasyFind.app.zip"
   appcast "https://www.devontechnologies.com/apps/freeware"
   name "EasyFind"
+  desc "Find files, folders, or contents in any file"
   homepage "https://www.devontechnologies.com/apps/freeware"
 
   app "EasyFind.app"

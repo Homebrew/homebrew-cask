@@ -4,6 +4,7 @@ cask "anytrans" do
 
   url "https://dl.imobie.com/anytrans-for-ios.zip"
   name "AnyTrans"
+  desc "Device content manager"
   homepage "https://www.imobie.com/anytrans/"
 
   app "AnyTrans.app"

@@ -4,6 +4,7 @@ cask "ip-in-menu-bar" do
 
   url "https://www.monkeybreadsoftware.de/Software/IPinmenubar.dmg"
   name "IP in menu bar"
+  desc "Shows current IP address in menu bar"
   homepage "https://www.monkeybreadsoftware.de/Software/IPinmenubar.shtml"
 
   app "IP in menu bar.app"

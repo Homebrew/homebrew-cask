@@ -5,6 +5,7 @@ cask "meta" do
   url "https://www.nightbirdsevolve.com/meta/updates/bin/Meta%20#{version}.zip"
   appcast "https://www.nightbirdsevolve.com/meta/updates/"
   name "Meta"
+  desc "Tag editor for digital music"
   homepage "https://www.nightbirdsevolve.com/meta/"
 
   app "Meta.app"

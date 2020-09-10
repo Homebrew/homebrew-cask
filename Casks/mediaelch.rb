@@ -6,6 +6,7 @@ cask "mediaelch" do
   url "https://github.com/Komet/MediaElch/releases/download/v#{version}/MediaElch_#{version}_macOS.dmg"
   appcast "https://github.com/Komet/MediaElch/releases.atom"
   name "MediaElch"
+  desc "Media Manager for Kodi"
   homepage "https://www.kvibes.de/en/mediaelch/"
 
   depends_on macos: ">= :sierra"

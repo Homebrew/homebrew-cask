@@ -5,6 +5,7 @@ cask "gifrocket" do
   url "https://www.gifrocket.com/Gifrocket.#{version}.zip"
   appcast "https://www.gifrocket.com/"
   name "Gifrocket"
+  desc "Tool to create GIFs from videos"
   homepage "https://www.gifrocket.com/"
 
   app "Gifrocket.app"

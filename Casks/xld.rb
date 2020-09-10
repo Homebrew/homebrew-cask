@@ -8,6 +8,7 @@ cask "xld" do
           must_contain: version.no_dots
   name "X Lossless Decoder"
   name "XLD"
+  desc "Lossless audio decoder"
   homepage "https://tmkk.undo.jp/xld/index_e.html"
 
   auto_updates true

@@ -6,6 +6,7 @@ cask "tikzit" do
   url "https://github.com/tikzit/tikzit/releases/download/v#{version}/tikzit-osx.dmg"
   appcast "https://github.com/tikzit/tikzit/releases.atom"
   name "TikZiT"
+  desc "PGF/TikZ diagram editor"
   homepage "https://tikzit.github.io/"
 
   depends_on macos: ">= :sierra"

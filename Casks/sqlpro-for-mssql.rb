@@ -6,6 +6,7 @@ cask "sqlpro-for-mssql" do
   url "https://d3fwkemdw8spx3.cloudfront.net/mssql/SQLProMSSQL.#{version}.app.zip"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?user_agent=Macintosh&url=https://www.macsqlclient.com/download.php"
   name "SQLPro for MSSQL"
+  desc "Microsoft SQL Server database client"
   homepage "https://www.macsqlclient.com/"
 
   app "SQLPro for MSSQL.app"

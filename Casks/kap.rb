@@ -6,6 +6,7 @@ cask "kap" do
   url "https://github.com/wulkano/kap/releases/download/v#{version.major_minor_patch}/Kap-#{version}.dmg"
   appcast "https://github.com/wulkano/kap/releases.atom"
   name "Kap"
+  desc "Open-source screen recorder built with web technology"
   homepage "https://getkap.co/"
 
   auto_updates true

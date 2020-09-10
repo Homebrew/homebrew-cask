@@ -5,6 +5,7 @@ cask "syntax-highlight" do
   url "https://github.com/sbarex/SourceCodeSyntaxHighlight/releases/download/#{version}/Syntax.Highlight.zip"
   appcast "https://github.com/sbarex/SourceCodeSyntaxHighlight/releases.atom"
   name "Syntax Highlight"
+  desc "Quicklook extension for source files"
   homepage "https://github.com/sbarex/SourceCodeSyntaxHighlight"
 
   depends_on macos: ">= :catalina"

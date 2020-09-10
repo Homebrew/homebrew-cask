@@ -5,6 +5,7 @@ cask "spechtlite" do
   url "https://github.com/zhuhaow/SpechtLite/releases/download/#{version}/SpechtLite.zip"
   appcast "https://github.com/zhuhaow/SpechtLite/releases.atom"
   name "SpechtLite"
+  desc "Rule-based proxy"
   homepage "https://github.com/zhuhaow/SpechtLite"
 
   app "SpechtLite.app"

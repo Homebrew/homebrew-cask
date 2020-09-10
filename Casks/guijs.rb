@@ -6,6 +6,7 @@ cask "guijs" do
   url "https://github.com/Akryum/guijs/releases/download/v#{version}/guijs.app.tgz"
   appcast "https://github.com/Akryum/guijs/releases.atom"
   name "guijs"
+  desc "Graphical interface to manage JS projects"
   homepage "https://guijs.dev/"
 
   app "guijs.app"

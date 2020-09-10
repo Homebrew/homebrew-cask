@@ -5,6 +5,7 @@ cask "discord" do
   url "https://cdn.discordapp.com/apps/osx/#{version}/Discord.dmg"
   appcast "https://discordapp.com/api/stable/updates?platform=osx"
   name "Discord"
+  desc "Voice and text chat software"
   homepage "https://discordapp.com/"
 
   auto_updates true

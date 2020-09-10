@@ -5,6 +5,7 @@ cask "fireworks" do
   url "https://www.fireworksapp.xyz/public/fireworks.zip"
   appcast "https://www.fireworksapp.xyz"
   name "Fireworks"
+  desc "Particle effects editor"
   homepage "https://www.fireworksapp.xyz/"
 
   app "Fireworks.app"

@@ -5,6 +5,7 @@ cask "bitbar" do
   url "https://github.com/matryer/bitbar/releases/download/v#{version}/BitBar-v#{version}.zip"
   appcast "https://github.com/matryer/bitbar/releases.atom"
   name "BitBar"
+  desc "Utility to display the output from any script or program in the menu bar"
   homepage "https://github.com/matryer/bitbar/"
 
   app "BitBar.app"

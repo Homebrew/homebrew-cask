@@ -5,6 +5,7 @@ cask "thought-train" do
   url "https://thoughttrain.cc/downloads/thought-train-#{version}.pkg"
   appcast "https://github.com/marcperel/thought-train-production/releases.atom"
   name "Thought Train"
+  desc "Note taking and to-do-list application"
   homepage "https://www.thoughttrain.cc/"
 
   pkg "thought-train-#{version}.pkg"

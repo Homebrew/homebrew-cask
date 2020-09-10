@@ -6,6 +6,7 @@ cask "extraterm" do
   url "https://github.com/sedwards2009/extraterm/releases/download/v#{version}/extraterm-#{version}-darwin-x64.zip"
   appcast "https://github.com/sedwards2009/extraterm/releases.atom"
   name "extraterm"
+  desc "Swiss army chainsaw of terminal emulators"
   homepage "https://extraterm.org/"
 
   app "extraterm-#{version}-darwin-x64/extraterm.app"

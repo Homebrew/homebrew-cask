@@ -5,6 +5,7 @@ cask "ableton-live" do
   url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_trial_#{version}_64.dmg"
   appcast "https://www.ableton.com/en/release-notes/live-#{version.major}/"
   name "Ableton Live"
+  desc "Sound and music editor"
   homepage "https://www.ableton.com/en/live/"
 
   auto_updates true

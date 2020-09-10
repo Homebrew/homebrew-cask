@@ -5,6 +5,7 @@ cask "spotifree" do
   url "https://github.com/ArtemGordinsky/Spotifree/releases/download/#{version}/Spotifree.dmg"
   appcast "https://github.com/ArtemGordinsky/Spotifree/releases.atom"
   name "Spotifree"
+  desc "Automatically mutes ads on Spotify (not supported)"
   homepage "https://github.com/ArtemGordinsky/Spotifree/"
 
   app "Spotifree.app"

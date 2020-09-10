@@ -5,6 +5,7 @@ cask "katana" do
   url "https://github.com/bluegill/katana/releases/download/v#{version}/katana-#{version}-mac.zip"
   appcast "https://github.com/bluegill/katana/releases.atom"
   name "Katana"
+  desc "Open-source screenshot utility"
   homepage "https://github.com/bluegill/katana/"
 
   app "Katana.app"

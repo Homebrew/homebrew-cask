@@ -6,6 +6,7 @@ cask "tableau" do
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.tableau.com/downloads/desktop/mac",
           must_contain: version.dots_to_hyphens
   name "Tableau Desktop"
+  desc "Popular analytics platform"
   homepage "https://www.tableau.com/products/desktop/download"
 
   depends_on macos: ">= :yosemite"

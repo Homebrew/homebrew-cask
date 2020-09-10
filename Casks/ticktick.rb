@@ -6,6 +6,7 @@ cask "ticktick" do
   url "https://appest-public.s3.amazonaws.com/download/mac/TickTick_#{version.before_comma}_#{version.after_comma}.dmg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.ticktick.com/static/getApp/download?type=mac"
   name "TickTick"
+  desc "To-do & task list manager"
   homepage "https://www.ticktick.com/home"
 
   auto_updates true

@@ -5,6 +5,7 @@ cask "beacon-scanner" do
   url "https://github.com/mlwelles/BeaconScanner/releases/download/#{version}/Beacon.Scanner.zip"
   appcast "https://github.com/mlwelles/BeaconScanner/releases.atom"
   name "BeaconScanner"
+  desc "Utility to scan for iBeacon-compatible devices"
   homepage "https://github.com/mlwelles/BeaconScanner/"
 
   app "Beacon Scanner.app"

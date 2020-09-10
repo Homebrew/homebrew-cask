@@ -5,6 +5,7 @@ cask "busycal" do
   url "https://www.busymac.com/download/BusyCal.zip"
   appcast "https://www.busymac.com/busycal/news.plist"
   name "BusyCal"
+  desc "Calendar software focusing on flexibility and reliability"
   homepage "https://busymac.com/busycal/index.html"
 
   auto_updates true

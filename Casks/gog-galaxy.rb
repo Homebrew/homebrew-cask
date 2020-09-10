@@ -5,6 +5,7 @@ cask "gog-galaxy" do
   url "https://cdn.gog.com/open/galaxy/client/galaxy_client_#{version}.pkg"
   appcast "https://www.macupdater.net/cgi-bin/extract_text/extract_text_split_easy.cgi?url=https://gog.com/galaxy&encoding=utf-8&user_agent=Macintosh"
   name "GOG Galaxy Client"
+  desc "GOG gaming client"
   homepage "https://www.gog.com/galaxy"
 
   auto_updates true

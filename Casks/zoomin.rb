@@ -6,6 +6,7 @@ cask "zoomin" do
   url "https://github.com/nothingmagical/ZoomIn/releases/download/v#{version}/ZoomIn-#{version}.zip"
   appcast "https://github.com/nothingmagical/ZoomIn/releases.atom"
   name "Zoom In"
+  desc "Safari extension for opening Zoom right away"
   homepage "https://zoom-in.app/"
 
   depends_on macos: ">= :mojave"

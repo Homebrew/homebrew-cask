@@ -6,6 +6,7 @@ cask "keeweb" do
   url "https://github.com/keeweb/keeweb/releases/download/v#{version}/KeeWeb-#{version}.mac.dmg"
   appcast "https://github.com/keeweb/keeweb/releases.atom"
   name "KeeWeb"
+  desc "Free cross-platform password manager compatible with KeePass"
   homepage "https://keeweb.info/"
 
   auto_updates true

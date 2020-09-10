@@ -5,6 +5,7 @@ cask "gargoyle" do
   url "https://github.com/garglk/garglk/releases/download/#{version}/gargoyle-#{version}-mac-nota.dmg"
   appcast "https://github.com/garglk/garglk/releases.atom"
   name "Gargoyle"
+  desc "Cross-platform IO layer for an interactive fiction player"
   homepage "https://github.com/garglk/garglk"
 
   app "Gargoyle.app"

@@ -13,6 +13,7 @@ cask "omniplan" do
 
   appcast "https://update.omnigroup.com/appcast/com.omnigroup.OmniPlan#{version.major}"
   name "OmniPlan"
+  desc "Project planning and management software"
   homepage "https://www.omnigroup.com/omniplan/"
 
   auto_updates true

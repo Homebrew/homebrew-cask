@@ -5,6 +5,7 @@ cask "gray" do
   url "https://github.com/zenangst/Gray/releases/download/#{version}/Gray.zip"
   appcast "https://github.com/zenangst/Gray/releases.atom"
   name "Gray"
+  desc "Tool to set light or dark appearance on a per-app basis"
   homepage "https://github.com/zenangst/Gray"
 
   depends_on macos: ">= :mojave"

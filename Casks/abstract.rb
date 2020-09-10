@@ -5,6 +5,7 @@ cask "abstract" do
   url "https://downloads.goabstract.com/mac/Abstract-#{version}.zip"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://api.goabstract.com/releases/latest/download"
   name "Abstract"
+  desc "Collaborative design tool with support for Sketch files"
   homepage "https://www.goabstract.com/"
 
   auto_updates true

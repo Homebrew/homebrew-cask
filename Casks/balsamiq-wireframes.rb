@@ -5,6 +5,7 @@ cask "balsamiq-wireframes" do
   url "https://builds.balsamiq.com/bwd/Balsamiq%20Wireframes%20#{version}.dmg"
   appcast "https://builds.balsamiq.com/bwd/mac.jsonp"
   name "Balsamiq Wireframes"
+  desc "UI wireframing tool"
   homepage "https://balsamiq.com/"
 
   app "Balsamiq Wireframes.app"

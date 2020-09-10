@@ -15,6 +15,7 @@ cask "mysqlworkbench" do
   end
 
   name "MySQL Workbench"
+  desc "Visual tool to design, develop and administer MySQL servers"
   homepage "https://www.mysql.com/products/workbench/"
 
   app "MySQLWorkbench.app"

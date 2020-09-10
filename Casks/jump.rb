@@ -5,6 +5,7 @@ cask "jump" do
   url "https://dl.jumpdesktop.com/downloads/JumpDesktopMac.zip"
   appcast "https://jumpdesktop.com/downloads/viewer/jdmac-web-appcast.xml"
   name "Jump Desktop"
+  desc "Remote desktop application"
   homepage "https://jumpdesktop.com/#jdmac"
 
   app "Jump Desktop.app"

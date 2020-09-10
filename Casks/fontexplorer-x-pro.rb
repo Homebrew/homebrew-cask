@@ -6,6 +6,7 @@ cask "fontexplorer-x-pro" do
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect_curl.cgi?url=https://fex.linotype.com/download/mac/FontExplorerXPro.dmg",
           must_contain: version.no_dots
   name "FontExplorer X Pro"
+  desc "Font finder and organizer"
   homepage "https://www.fontexplorerx.com/"
 
   app "FontExplorer X Pro.app"

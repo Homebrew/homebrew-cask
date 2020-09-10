@@ -5,6 +5,7 @@ cask "filebot" do
   url "https://get.filebot.net/filebot/FileBot_#{version}/FileBot_#{version}.app.tar.xz"
   appcast "https://app.filebot.net/update.xml"
   name "FileBot"
+  desc "Tool for organizing and renaming movies, TV shows, anime or music"
   homepage "https://www.filebot.net/"
 
   app "FileBot.app"

@@ -6,6 +6,7 @@ cask "pandora" do
   url "https://p-desktop-app.s3.amazonaws.com/releases/Pandora-#{version}.dmg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://pdora.co/desktop_mac_download"
   name "Pandora"
+  desc "Desktop client for the Pandora web radio service"
   homepage "https://www.pandora.com/desktop"
 
   app "Pandora.app"

@@ -5,6 +5,7 @@ cask "transnomino" do
   url "https://transnomino.bastiaanverreijt.com/download/Transnomino-#{version}.dmg"
   appcast "https://transnomino.bastiaanverreijt.com/"
   name "Transnomino"
+  desc "Batch rename utility"
   homepage "https://transnomino.bastiaanverreijt.com/"
 
   auto_updates true

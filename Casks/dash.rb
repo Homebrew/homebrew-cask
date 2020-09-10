@@ -10,6 +10,7 @@ cask "dash" do
   url "https://kapeli.com/downloads/v#{version.major}/Dash.zip"
   appcast "https://kapeli.com/Dash#{version.major}.xml"
   name "Dash"
+  desc "API documentation browser and code snippet manager"
   homepage "https://kapeli.com/dash"
 
   auto_updates true

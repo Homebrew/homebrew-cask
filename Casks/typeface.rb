@@ -5,6 +5,7 @@ cask "typeface" do
   url "https://dcdn.typefaceapp.com/latest"
   appcast "https://dcdn.typefaceapp.com/appcast.xml"
   name "Typeface"
+  desc "Font manager application"
   homepage "https://typefaceapp.com/"
 
   app "Typeface.app"

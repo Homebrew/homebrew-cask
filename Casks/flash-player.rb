@@ -5,6 +5,7 @@ cask "flash-player" do
   url "https://fpdownload.adobe.com/pub/flashplayer/updaters/#{version.major}/flashplayer_#{version.major}_sa.dmg"
   appcast "https://www.adobe.com/support/flashplayer/debug_downloads.html"
   name "Adobe Flash Player projector"
+  desc "Adobe Flash player"
   homepage "https://www.adobe.com/support/flashplayer/debug_downloads.html"
 
   app "Flash Player.app"

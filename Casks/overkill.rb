@@ -5,6 +5,7 @@ cask "overkill" do
   url "https://github.com/KrauseFx/overkill-for-mac/releases/download/#{version}/Overkill.zip"
   appcast "https://github.com/KrauseFx/overkill-for-mac/releases.atom"
   name "Overkill"
+  desc "Stop iTunes from opening when you connect your iPhone"
   homepage "https://github.com/KrauseFx/overkill-for-mac"
 
   depends_on macos: ">= :sierra"

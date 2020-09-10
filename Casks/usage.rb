@@ -5,6 +5,7 @@ cask "usage" do
   url "https://mediaatelier.com/Usage/Usage_#{version}.zip"
   appcast "https://mediaatelier.com/Usage/feed.php"
   name "Usage"
+  desc "Tracks application usage"
   homepage "https://www.mediaatelier.com/Usage/"
 
   app "Usage.app"

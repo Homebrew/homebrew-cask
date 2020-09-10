@@ -6,6 +6,7 @@ cask "detectx-swift" do
   url "https://s3.amazonaws.com/sqwarq.com/PublicZips/DetectX_Swift.dmg"
   appcast "https://s3.amazonaws.com/sqwarq.com/AppCasts/dtxswift.xml"
   name "DetectX Swift"
+  desc "Searching and troubleshooting tool"
   homepage "https://sqwarq.com/detectx/"
 
   auto_updates true

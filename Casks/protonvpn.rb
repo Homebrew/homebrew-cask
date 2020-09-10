@@ -5,6 +5,7 @@ cask "protonvpn" do
   url "https://protonvpn.com/download/ProtonVPN_mac_v#{version}.dmg"
   appcast "https://protonvpn.com/download/macos-update2.xml"
   name "ProtonVPN"
+  desc "VPN client focusing on security"
   homepage "https://protonvpn.com/"
 
   auto_updates true

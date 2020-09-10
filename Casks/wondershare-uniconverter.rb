@@ -4,6 +4,7 @@ cask "wondershare-uniconverter" do
 
   url "https://download.wondershare.com/cbs_down/video-converter-ultimate-mac_full735.dmg"
   name "UniConverter"
+  desc "Video editing software"
   homepage "https://videoconverter.wondershare.com/"
 
   app "Wondershare UniConverter.app"

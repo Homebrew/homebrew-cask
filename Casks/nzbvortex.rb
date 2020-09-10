@@ -5,6 +5,7 @@ cask "nzbvortex" do
   url "https://www.nzbvortex.com/downloads/NZBVortex-#{version}.zip"
   appcast "https://www.nzbvortex.com/update/appcast_v#{version.major}.xml"
   name "NZBVortex"
+  desc "NZB client, optimized for performance and ease of use"
   homepage "https://www.nzbvortex.com/landing/"
 
   app "NZBVortex #{version.major}.app"

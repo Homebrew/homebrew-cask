@@ -4,6 +4,7 @@ cask "aimersoft-video-converter-ultimate" do
 
   url "https://download.aimersoft.com/cbs_down/aimer-mac-video-converter-ultimate_full747.dmg"
   name "Aimersoft Video Converter Ultimate"
+  desc "Video converter app"
   homepage "https://www.aimersoft.com/video-converter-ultimate.html"
 
   app "Aimersoft Video Converter Ultimate.app"

@@ -6,6 +6,7 @@ cask "standard-notes" do
   url "https://github.com/standardnotes/desktop/releases/download/v#{version}/Standard-Notes-#{version}-mac.zip"
   appcast "https://github.com/standardnotes/desktop/releases.atom"
   name "Standard Notes"
+  desc "Free, open-source, and completely encrypted notes app"
   homepage "https://standardnotes.org/"
 
   auto_updates true

@@ -5,6 +5,7 @@ cask "adguard" do
   url "https://static.adguard.com/mac/release/AdGuard-#{version}.dmg"
   appcast "https://static.adguard.com/mac/adguard-release-appcast.xml"
   name "Adguard"
+  desc "Stand alone ad blocker"
   homepage "https://adguard.com/"
 
   auto_updates true

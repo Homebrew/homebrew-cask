@@ -5,6 +5,7 @@ cask "netbeans" do
   url "https://www-eu.apache.org/dist/netbeans/netbeans/#{version}/Apache-NetBeans-#{version}-bin-macosx.dmg"
   appcast "https://www-eu.apache.org/dist/netbeans/netbeans/"
   name "NetBeans IDE"
+  desc "Open-source development environment, tooling"
   homepage "https://netbeans.apache.org/download/index.html"
 
   pkg "Apache NetBeans #{version}.pkg"

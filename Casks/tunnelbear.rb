@@ -6,6 +6,7 @@ cask "tunnelbear" do
   url "https://tunnelbear.s3.amazonaws.com/downloads/mac/TunnelBear-#{version}.zip"
   appcast "https://tunnelbear.s3.amazonaws.com/downloads/mac/appcast.xml"
   name "TunnelBear"
+  desc "VPN client for secure internet access and private browsing"
   homepage "https://www.tunnelbear.com/"
 
   app "TunnelBear.app"

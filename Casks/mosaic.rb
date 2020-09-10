@@ -5,6 +5,7 @@ cask "mosaic" do
   url "https://lightpillar.com/appdata/mosaic/archive/Mosaic_#{version.dots_to_underscores}.pkg"
   appcast "https://lightpillar.com/appdata/mosaic/features/version-history.html"
   name "Mosaic"
+  desc "Resize and reposition apps"
   homepage "https://lightpillar.com/mosaic.html"
 
   pkg "Mosaic_#{version.dots_to_underscores}.pkg"

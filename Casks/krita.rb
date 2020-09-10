@@ -7,6 +7,7 @@ cask "krita" do
   appcast "https://download.kde.org/stable/krita/",
           must_contain: version.major_minor_patch
   name "Krita"
+  desc "Free and open-source painting and sketching program"
   homepage "https://krita.org/"
 
   depends_on macos: ">= :sierra"

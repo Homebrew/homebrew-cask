@@ -5,6 +5,7 @@ cask "aria2gui" do
   url "https://github.com/yangshun1029/aria2gui/releases/download/#{version}/Aria2GUI-v#{version}.zip"
   appcast "https://github.com/yangshun1029/aria2gui/releases.atom"
   name "Aria2GUI"
+  desc "Graphical user interface for Aria2"
   homepage "https://github.com/yangshun1029/aria2gui"
 
   app "Aria2GUI.app"

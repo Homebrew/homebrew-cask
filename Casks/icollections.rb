@@ -6,6 +6,7 @@ cask "icollections" do
   appcast "https://naarakstudio.com/download/icollections/update.ver",
           must_contain: version.after_comma
   name "iCollections"
+  desc "App to help keep the desktop organized"
   homepage "https://naarakstudio.com/icollections/"
 
   depends_on macos: ">= :sierra"

@@ -6,6 +6,7 @@ cask "xee" do
   url "https://dl.devmate.com/cx.c3.Xee3/#{version.after_comma.before_colon}/#{version.after_colon}/Xee-#{version.after_comma.before_colon}.zip"
   appcast "https://updates.devmate.com/cx.c3.Xee3.xml"
   name "Xee³"
+  desc "Image viewer and file browser"
   homepage "https://theunarchiver.com/xee"
 
   auto_updates true

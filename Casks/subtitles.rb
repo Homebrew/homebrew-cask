@@ -5,6 +5,7 @@ cask "subtitles" do
   url "https://subtitlesapp.com/download/Subtitles-mac-#{version}.zip"
   appcast "https://subtitlesapp.com/updates.xml"
   name "Subtitles"
+  desc "Automatically downloads subtitles movies and TV shows"
   homepage "https://subtitlesapp.com/"
 
   app "Subtitles.app"

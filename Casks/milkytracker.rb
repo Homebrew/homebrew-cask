@@ -6,6 +6,7 @@ cask "milkytracker" do
   url "https://github.com/milkytracker/MilkyTracker/releases/download/v#{version}/milkytracker-#{version}.dmg"
   appcast "https://github.com/milkytracker/MilkyTracker/releases.atom"
   name "MilkyTracker"
+  desc "Music tracker compatible with FT2"
   homepage "https://milkytracker.titandemo.org/"
 
   app "MilkyTracker.app"

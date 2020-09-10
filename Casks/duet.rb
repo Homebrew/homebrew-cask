@@ -7,6 +7,7 @@ cask "duet" do
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://updates.duetdisplay.com/latestMac",
           must_contain: version.dots_to_hyphens
   name "Duet"
+  desc "Tool for using an iPad as a second display"
   homepage "https://www.duetdisplay.com/"
 
   auto_updates true

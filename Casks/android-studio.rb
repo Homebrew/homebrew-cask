@@ -7,6 +7,7 @@ cask "android-studio" do
   appcast "https://dl.google.com/android/studio/patches/updates.xml",
           must_contain: version.before_comma
   name "Android Studio"
+  desc "Tools for building Android applications"
   homepage "https://developer.android.com/studio/index.html"
 
   auto_updates true

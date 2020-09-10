@@ -5,6 +5,7 @@ cask "vv" do
   url "https://github.com/vv-vim/vv/releases/download/v#{version}/VV-#{version}.dmg"
   appcast "https://github.com/vv-vim/vv/releases.atom"
   name "VV"
+  desc "Neovim client"
   homepage "https://github.com/vv-vim/vv"
 
   depends_on formula: "neovim"

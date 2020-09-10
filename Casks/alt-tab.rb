@@ -5,6 +5,7 @@ cask "alt-tab" do
   url "https://github.com/lwouis/alt-tab-macos/releases/download/v#{version}/AltTab-#{version}.zip"
   appcast "https://github.com/lwouis/alt-tab-macos/releases.atom"
   name "alt-tab"
+  desc "Utility to set up alt-tap to switch between windows"
   homepage "https://github.com/lwouis/alt-tab-macos"
 
   auto_updates true

@@ -5,6 +5,7 @@ cask "kext-updater" do
   url "https://update.kextupdater.de/kextupdater/kextupdaterng.zip"
   appcast "https://update.kextupdater.de/kextupdater/appcastng.xml"
   name "Kext Updater"
+  desc "Automatic updater for kernel extensions required by 'Hackintoshes'"
   homepage "https://kextupdater.de/"
 
   app "Kext Updater.app"

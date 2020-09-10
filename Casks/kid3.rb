@@ -7,6 +7,7 @@ cask "kid3" do
   url "https://downloads.sourceforge.net/kid3/kid3-#{version}-Darwin.dmg"
   appcast "https://sourceforge.net/p/kid3/news/feed.rss"
   name "Kid3"
+  desc "Audio tagger focusing on efficiency"
   homepage "https://kid3.sourceforge.io/"
 
   app "kid3.app"

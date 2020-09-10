@@ -6,6 +6,7 @@ cask "wwdc" do
   url "https://github.com/insidegui/WWDC/releases/download/#{version}/WWDC_v#{version}.zip"
   appcast "https://github.com/insidegui/WWDC/releases.atom"
   name "WWDC"
+  desc "Allows access to WWDC livestreams, videos and sessions"
   homepage "https://wwdc.io/"
 
   auto_updates true

@@ -6,6 +6,7 @@ cask "oversight" do
   url "https://bitbucket.org/objective-see/deploy/downloads/OverSight_#{version}.zip"
   appcast "https://objective-see.com/products/changelogs/OverSight.txt"
   name "OverSight"
+  desc "Monitors computer mic and webcam"
   homepage "https://objective-see.com/products/oversight.html"
 
   depends_on macos: ">= :yosemite"

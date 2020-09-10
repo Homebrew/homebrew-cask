@@ -4,6 +4,7 @@ cask "mounty" do
 
   url "https://mounty.app/releases/Mounty.dmg"
   name "Mounty for NTFS"
+  desc "Re-mounts write-protected NTFS volumes"
   homepage "https://mounty.app/"
 
   app "Mounty.app"

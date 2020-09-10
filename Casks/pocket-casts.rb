@@ -5,6 +5,7 @@ cask "pocket-casts" do
   url "https://static.pocketcasts.com/mac/PocketCasts.zip"
   appcast "https://static2.pocketcasts.com/mac/appcast.xml"
   name "Pocket Casts"
+  desc "Podcast platform"
   homepage "https://play.pocketcasts.com/"
 
   auto_updates true

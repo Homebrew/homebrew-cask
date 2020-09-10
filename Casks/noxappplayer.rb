@@ -5,6 +5,7 @@ cask "noxappplayer" do
   url "https://res06.bignox.com/full/#{version.after_comma.before_colon}/#{version.after_colon}.dmg?filename=Nox_installer_for_mac_intl_#{version.before_comma}.dmg"
   appcast "https://www.macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.bignox.com/en/download/fullPackage/mac_fullzip"
   name "NoxAppPlayer"
+  desc "Android emulator to play mobile games"
   homepage "https://www.bignox.com/"
 
   container nested: "NoxAppPlayerInstaller.app/Contents/MacOS/NoxAppPlayer.zip"

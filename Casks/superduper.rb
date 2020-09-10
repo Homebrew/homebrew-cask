@@ -7,6 +7,7 @@ cask "superduper" do
   appcast "https://versioncheck.blacey.com/superduper/version.xml?VSN=100",
           must_contain: version.after_comma
   name "SuperDuper!"
+  desc "Backup, recovery and cloning software"
   homepage "https://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html"
 
   app "SuperDuper!.app"

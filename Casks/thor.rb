@@ -5,6 +5,7 @@ cask "thor" do
   url "https://github.com/gbammc/Thor/releases/download/#{version}/Thor_#{version}.zip"
   appcast "https://github.com/gbammc/Thor/releases.atom"
   name "Thor"
+  desc "Utility to switch between applications"
   homepage "https://github.com/gbammc/Thor/"
 
   auto_updates true

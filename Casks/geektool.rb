@@ -6,6 +6,7 @@ cask "geektool" do
   url "https://dl.devmate.com/org.tynsoe.GeekTool/#{version.before_comma}/#{version.after_comma}/GeekTool-#{version.before_comma}.zip"
   appcast "https://updates.devmate.com/org.tynsoe.GeekTool.xml"
   name "GeekTool"
+  desc "Desktop customization tool"
   homepage "https://www.tynsoe.org/v2/geektool/"
 
   app "GeekTool.app"

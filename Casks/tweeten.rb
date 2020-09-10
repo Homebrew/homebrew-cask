@@ -6,6 +6,7 @@ cask "tweeten" do
   url "https://github.com/MehediH/Tweeten/releases/download/v#{version}/tweeten-darwin-x64.zip"
   appcast "https://github.com/MehediH/Tweeten/releases.atom"
   name "Tweeten"
+  desc "Twitter client"
   homepage "https://tweetenapp.com/"
 
   app "Tweeten.app"

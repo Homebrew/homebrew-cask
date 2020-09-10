@@ -6,6 +6,7 @@ cask "daedalus" do
   url "https://github.com/input-output-hk/daedalus/releases/download/#{version.before_comma}/daedalus-#{version.before_comma}-cardano-sl-#{version.after_comma.before_colon}-mainnet-macos-#{version.after_comma.after_colon}.pkg"
   appcast "https://github.com/input-output-hk/daedalus/releases.atom"
   name "Daedalus"
+  desc "Cryptocurrency wallet"
   homepage "https://daedaluswallet.io/"
 
   pkg "daedalus-#{version.before_comma}-cardano-sl-#{version.after_comma.before_colon}-mainnet-macos-#{version.after_comma.after_colon}.pkg"

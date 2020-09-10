@@ -6,6 +6,7 @@ cask "sqlitestudio" do
   url "https://github.com/pawelsalawa/sqlitestudio/releases/download/#{version}/SQLiteStudio-#{version}.dmg"
   appcast "https://github.com/pawelsalawa/sqlitestudio/releases.atom"
   name "SQLiteStudio"
+  desc "Create, edit, browse SQLite databases"
   homepage "https://sqlitestudio.pl/"
 
   auto_updates true

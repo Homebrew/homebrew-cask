@@ -5,6 +5,7 @@ cask "stay" do
   url "https://cordlessdog.com/stay/versions/Stay%20#{version}.dmg"
   appcast "https://cordlessdog.com/stay/appcast.xml"
   name "Stay"
+  desc "Windows manager"
   homepage "https://cordlessdog.com/stay/"
 
   depends_on macos: ">= :mojave"

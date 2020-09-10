@@ -5,6 +5,7 @@ cask "sonic-pi" do
   url "https://sonic-pi.net/files/releases/v#{version}/sonic-pi-for-mac-v#{version}.zip"
   appcast "https://github.com/samaaron/sonic-pi/releases.atom"
   name "Sonic Pi"
+  desc "Code-based music creation and performance tool"
   homepage "https://sonic-pi.net/"
 
   app "Sonic Pi.app"

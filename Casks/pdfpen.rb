@@ -5,6 +5,7 @@ cask "pdfpen" do
   url "https://dl.smilesoftware.com/com.smileonmymac.PDFpen/#{version.before_comma}/#{version.after_comma}/PDFpen-#{version.before_comma}.zip"
   appcast "https://updates.smilesoftware.com/com.smileonmymac.PDFpen.xml"
   name "PDFpen"
+  desc "PDF editor"
   homepage "https://smilesoftware.com/PDFpen"
 
   depends_on macos: ">= :sierra"

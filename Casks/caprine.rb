@@ -5,6 +5,7 @@ cask "caprine" do
   url "https://github.com/sindresorhus/caprine/releases/download/v#{version}/Caprine-#{version}.dmg"
   appcast "https://github.com/sindresorhus/caprine/releases.atom"
   name "Caprine"
+  desc "Elegant Facebook Messenger desktop app"
   homepage "https://github.com/sindresorhus/caprine"
 
   auto_updates true

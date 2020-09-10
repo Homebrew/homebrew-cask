@@ -6,6 +6,7 @@ cask "station" do
   url "https://github.com/getstation/desktop-app-releases/releases/download/#{version}/Station-#{version}.dmg"
   appcast "https://github.com/getstation/desktop-app-releases/releases.atom"
   name "Station"
+  desc "Browser that organizes all your web applications"
   homepage "https://getstation.com/"
 
   auto_updates true

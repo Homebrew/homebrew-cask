@@ -6,6 +6,7 @@ cask "quip" do
   url "https://quip-clients.com/macosx_#{version}.dmg"
   appcast "https://api.quip.com/-/sparkle-feed?manual=0"
   name "Quip"
+  desc "Tool for teams to create living documents"
   homepage "https://quip.com/"
 
   auto_updates true

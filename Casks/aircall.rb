@@ -6,6 +6,7 @@ cask "aircall" do
   url "https://aircall-electron-releases.s3.amazonaws.com/production/Aircall-#{version}.zip"
   appcast "https://electron.aircall.io/update/osx/0.0.0"
   name "Aircall"
+  desc "Cloud-based call center and phone system software"
   homepage "https://aircall.io/"
 
   auto_updates true

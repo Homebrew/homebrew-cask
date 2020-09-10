@@ -5,6 +5,7 @@ cask "vnc-viewer" do
   url "https://www.realvnc.com/download/file/viewer.files/VNC-Viewer-#{version}-MacOSX-x86_64.dmg"
   appcast "https://www.realvnc.com/en/connect/download/viewer/macos/"
   name "Real VNC Viewer"
+  desc "Remote desktop application focusing on security"
   homepage "https://www.realvnc.com/"
 
   app "VNC Viewer.app"

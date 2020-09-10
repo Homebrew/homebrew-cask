@@ -5,6 +5,7 @@ cask "transocks" do
   url "https://www.transocks.com/download/mac/Transocks_Official_v#{version}.dmg"
   appcast "https://www.transocks.org/updateInfo/Original_update.xml"
   name "Transocks"
+  desc "Tool to optimize access to various video music resources"
   homepage "https://www.transocks.com/"
 
   app "穿梭Transocks.app"

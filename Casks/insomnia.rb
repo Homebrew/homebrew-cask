@@ -6,6 +6,7 @@ cask "insomnia" do
   url "https://github.com/Kong/insomnia/releases/download/core%40#{version}/Insomnia.Core-#{version}.dmg"
   appcast "https://api.insomnia.rest/changelog.json?app=com.insomnia.app"
   name "Insomnia"
+  desc "Cross-platform HTTP and GraphQL Client"
   homepage "https://insomnia.rest/"
 
   auto_updates true

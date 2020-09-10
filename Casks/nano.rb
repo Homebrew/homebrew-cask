@@ -6,6 +6,7 @@ cask "nano" do
   url "https://github.com/nanocurrency/nano-node/releases/download/V#{version}/nano-node-V#{version}-Darwin.dmg"
   appcast "https://github.com/nanocurrency/nano-node/releases.atom"
   name "Nano"
+  desc "Local node for the Nano cryptocurrency"
   homepage "https://nano.org/"
 
   depends_on macos: ">= :sierra"

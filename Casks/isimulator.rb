@@ -5,6 +5,7 @@ cask "isimulator" do
   url "https://github.com/wigl/iSimulator/releases/download/#{version}/iSimulator.zip"
   appcast "https://github.com/wigl/iSimulator/releases.atom"
   name "iSimulator"
+  desc "Utility to control and manage the Simulator"
   homepage "https://github.com/wigl/iSimulator"
 
   app "iSimulator.app"

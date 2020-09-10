@@ -6,6 +6,7 @@ cask "do-not-disturb" do
   url "https://bitbucket.org/objective-see/deploy/downloads/DoNotDisturb_#{version}.zip"
   appcast "https://objective-see.com/products/changelogs/DoNotDisturb.txt"
   name "Do Not Disturb"
+  desc "Open-source physical access (aka 'evil maid') attack detector"
   homepage "https://objective-see.com/products/dnd.html"
 
   depends_on macos: ">= :sierra"

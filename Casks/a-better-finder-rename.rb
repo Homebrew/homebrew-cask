@@ -5,6 +5,7 @@ cask "a-better-finder-rename" do
   url "https://www.publicspace.net/download/ABFRX#{version.major}.dmg"
   appcast "https://www.publicspace.net/app/signed_abfr#{version.major}.xml"
   name "A Better Finder Rename"
+  desc "Renamer for files, music and photos"
   homepage "https://www.publicspace.net/ABetterFinderRename/"
 
   auto_updates true

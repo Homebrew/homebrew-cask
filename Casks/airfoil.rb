@@ -5,6 +5,7 @@ cask "airfoil" do
   url "https://rogueamoeba.com/airfoil/mac/download/Airfoil.zip"
   appcast "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&bundleid=com.rogueamoeba.Airfoil&platform=osx"
   name "Airfoil"
+  desc "Sends audio from computer to outputs"
   homepage "https://www.rogueamoeba.com/airfoil/mac/"
 
   auto_updates true

@@ -6,6 +6,7 @@ cask "lulu" do
   url "https://bitbucket.org/objective-see/deploy/downloads/LuLu_#{version}.zip"
   appcast "https://objective-see.com/products/changelogs/LuLu.txt"
   name "LuLu"
+  desc "Open-source firewall to block unknown outgoing connections"
   homepage "https://objective-see.com/products/lulu.html"
 
   depends_on macos: ">= :sierra"

@@ -5,6 +5,7 @@ cask "opensim" do
   url "https://github.com/luosheng/OpenSim/releases/download/#{version}/OpenSim.app.zip"
   appcast "https://github.com/luosheng/OpenSim/releases.atom"
   name "OpenSim"
+  desc "Open-source alternative to SimPholders, written in Swift"
   homepage "https://github.com/luosheng/OpenSim/"
 
   app "OpenSim.app"

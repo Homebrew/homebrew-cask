@@ -6,6 +6,7 @@ cask "knockknock" do
   url "https://bitbucket.org/objective-see/deploy/downloads/KnockKnock_#{version}.zip"
   appcast "https://objective-see.com/products/changelogs/KnockKnock.txt"
   name "KnockKnock"
+  desc "Tool to show what is persistently installed on the computer"
   homepage "https://objective-see.com/products/knockknock.html"
 
   app "KnockKnock.app"

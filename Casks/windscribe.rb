@@ -4,6 +4,7 @@ cask "windscribe" do
 
   url "https://assets.windscribe.com/desktop/mac/Windscribe.dmg"
   name "Windscribe"
+  desc "VPN client for secure internet access and private browsing"
   homepage "https://windscribe.com/"
 
   app "Windscribe.app"

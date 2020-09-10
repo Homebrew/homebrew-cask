@@ -5,6 +5,7 @@ cask "sketchbook" do
   url "https://update.sketchbook.com/mac/SketchBook_v#{version}_mac.dmg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://update.sketchbook.com/mac/latest"
   name "Autodesk Sketchbook"
+  desc "Draw, paint, & sketch application"
   homepage "https://www.sketchbook.com/"
 
   pkg "SketchBook_v#{version}_mac.pkg"

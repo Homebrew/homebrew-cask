@@ -6,6 +6,7 @@ cask "pycharm-ce" do
   appcast "https://data.services.jetbrains.com/products/releases?code=PCC&latest=true&type=release"
   name "Jetbrains PyCharm Community Edition"
   name "PyCharm CE"
+  desc "Free and open-source IDE for Python programming - Community Edition"
   homepage "https://www.jetbrains.com/pycharm/"
 
   auto_updates true

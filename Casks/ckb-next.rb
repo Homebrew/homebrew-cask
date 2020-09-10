@@ -5,6 +5,7 @@ cask "ckb-next" do
   url "https://github.com/ckb-next/ckb-next/releases/download/v#{version}/ckb-next_v#{version}.dmg"
   appcast "https://github.com/ckb-next/ckb-next/releases.atom"
   name "ckb-next"
+  desc "RGB driver"
   homepage "https://github.com/ckb-next/ckb-next"
 
   depends_on macos: ">= :sierra"

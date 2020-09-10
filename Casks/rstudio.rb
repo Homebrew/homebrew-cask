@@ -6,6 +6,7 @@ cask "rstudio" do
   url "https://download1.rstudio.org/desktop/macos/RStudio-#{version}.dmg"
   appcast "https://www.rstudio.org/links/check_for_update?version=1.0.0&os=mac"
   name "RStudio"
+  desc "Data science software focusing on R and Python"
   homepage "https://www.rstudio.com/"
 
   depends_on macos: ">= :high_sierra"

@@ -14,6 +14,7 @@ cask "texpad" do
   url "https://download.texpadapp.com/apps/osx/updates/Texpad_#{version.before_comma.dots_to_underscores}__#{version.after_comma.before_colon}__#{version.after_colon}.dmg"
   appcast "https://www.texpad.com/mac"
   name "Texpad"
+  desc "LaTeX editor"
   homepage "https://www.texpad.com/mac"
 
   auto_updates true

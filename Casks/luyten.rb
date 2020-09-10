@@ -6,6 +6,7 @@ cask "luyten" do
   url "https://github.com/deathmarine/Luyten/releases/download/v#{version}_Rebuilt_with_Latest_depenencies/luyten-OSX-#{version}.zip"
   appcast "https://github.com/deathmarine/Luyten/releases.atom"
   name "Luyten"
+  desc "Open-source Java decompiler GUI for Procyon"
   homepage "https://deathmarine.github.io/Luyten/"
 
   app "Luyten.app"

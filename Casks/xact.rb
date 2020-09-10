@@ -5,6 +5,7 @@ cask "xact" do
   url "http://xact.scottcbrown.org/xACT#{version}.zip"
   appcast "http://xactupdate.scottcbrown.org/xACT.xml"
   name "xACT"
+  desc "Suite of free packages for tensor computer algebra in the Wolfram Language"
   homepage "http://xact.scottcbrown.org/"
 
   app "xACT#{version}/xACT.app"

@@ -5,6 +5,7 @@ cask "opera" do
   url "https://get.geo.opera.com/pub/opera/desktop/#{version}/mac/Opera_#{version}_Setup.dmg"
   appcast "https://ftp.opera.com/pub/opera/desktop/"
   name "Opera"
+  desc "Cross-platform web browser"
   homepage "https://www.opera.com/"
 
   auto_updates true

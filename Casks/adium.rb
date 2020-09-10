@@ -6,6 +6,7 @@ cask "adium" do
   url "https://adiumx.cachefly.net/Adium_#{version}.dmg"
   appcast "https://www.adium.im/sparkle/appcast-release.xml"
   name "Adium"
+  desc "Instant messaging application"
   homepage "https://www.adium.im/"
 
   auto_updates true

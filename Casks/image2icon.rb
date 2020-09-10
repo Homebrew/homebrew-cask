@@ -6,6 +6,7 @@ cask "image2icon" do
   url "https://sf-applications.s3.amazonaws.com/Image2Icon/app-releases/Image2icon#{version}.zip"
   appcast "http://apps.shinynode.com/apps/image2icon_appcast.xml"
   name "Image2Icon"
+  desc "Icon creator and file and folder customizer"
   homepage "http://www.img2icnsapp.com/"
 
   app "Image2Icon.app"

@@ -5,6 +5,7 @@ cask "reactotron" do
   url "https://github.com/infinitered/reactotron/releases/download/v#{version}/Reactotron-#{version}-mac.zip"
   appcast "https://github.com/infinitered/reactotron/releases.atom"
   name "Reactotron"
+  desc "Desktop app for inspecting React JS and React Native projects"
   homepage "https://github.com/infinitered/reactotron"
 
   auto_updates true

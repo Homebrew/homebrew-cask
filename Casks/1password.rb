@@ -5,6 +5,7 @@ cask "1password" do
   url "https://c.1password.com/dist/1P/mac#{version.major}/1Password-#{version}.zip"
   appcast "https://app-updates.agilebits.com/product_history/OPM#{version.major}"
   name "1Password"
+  desc "Password manager that keeps all passwords secure behind one password"
   homepage "https://1password.com/"
 
   auto_updates true

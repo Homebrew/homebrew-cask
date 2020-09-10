@@ -6,6 +6,7 @@ cask "free-ruler" do
   url "https://github.com/pascalpp/FreeRuler/releases/download/v#{version}/free-ruler-#{version}.zip"
   appcast "https://github.com/pascalpp/FreeRuler/releases.atom"
   name "Free Ruler"
+  desc "Horizontal and vertical rulers"
   homepage "http://www.pascal.com/software/freeruler/"
 
   app "Free Ruler.app"

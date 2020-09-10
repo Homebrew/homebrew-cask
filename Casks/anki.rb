@@ -6,6 +6,7 @@ cask "anki" do
   url "https://github.com/ankitects/anki/releases/download/#{version}/anki-#{version}-mac.dmg"
   appcast "https://changes.ankiweb.net/README.md"
   name "Anki"
+  desc "Memory training application"
   homepage "https://apps.ankiweb.net/"
 
   depends_on macos: ">= :sierra"

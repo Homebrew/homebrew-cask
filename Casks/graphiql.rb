@@ -5,6 +5,7 @@ cask "graphiql" do
   url "https://github.com/skevy/graphiql-app/releases/download/v#{version}/graphiql-app-#{version}-mac.zip"
   appcast "https://github.com/skevy/graphiql-app/releases.atom"
   name "GraphiQL App"
+  desc "Light, Electron-based Wrapper around GraphiQL"
   homepage "https://github.com/skevy/graphiql-app"
 
   app "GraphiQL.app"

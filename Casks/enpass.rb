@@ -5,6 +5,7 @@ cask "enpass" do
   url "https://dl.enpass.io/stable/mac/package/#{version}/Enpass.pkg"
   appcast "https://rest.enpass.io/enpass/alert/?format=json&language=en%7Cen&os=osx%7C10.14&package=in.sinew.Enpass-Desktop.App&version=0.0.0"
   name "Enpass"
+  desc "Password and credentials mananger"
   homepage "https://www.enpass.io/"
 
   depends_on macos: ">= :sierra"

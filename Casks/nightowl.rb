@@ -5,6 +5,7 @@ cask "nightowl" do
   url "https://nightowl.kramser.xyz/files/NightOwl.dmg"
   appcast "https://nightowl.kramser.xyz/"
   name "NightOwl"
+  desc "Utility to toggle dark mode"
   homepage "https://nightowl.kramser.xyz/"
 
   depends_on macos: ">= :mojave"

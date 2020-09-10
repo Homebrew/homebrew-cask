@@ -6,6 +6,7 @@ cask "latexit" do
       user_agent: :fake
   appcast "https://pierre.chachatelier.fr/latexit/downloads/latexit-sparkle-en.rss"
   name "LaTeXiT"
+  desc "Graphical interface for LaTeX"
   homepage "https://www.chachatelier.fr/latexit/"
 
   auto_updates true

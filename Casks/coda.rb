@@ -5,6 +5,7 @@ cask "coda" do
   url "https://download.panic.com/coda/Coda%20#{version}.zip"
   appcast "https://www.panic.com/updates/update.php?appName=Coda%202&appVersion=1"
   name "Panic Coda"
+  desc "Text editor"
   homepage "https://panic.com/coda/"
 
   auto_updates true

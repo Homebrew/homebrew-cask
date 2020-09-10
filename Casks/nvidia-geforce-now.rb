@@ -6,6 +6,7 @@ cask "nvidia-geforce-now" do
   appcast "https://ota.nvidia.com/release/available?product=GFN-mac&version=#{version.before_comma}&channel=OFFICIAL",
           must_contain: "[]" # Only happens when there are no newer versions
   name "NVIDIA GeForce NOW"
+  desc "Cloud gaming platform"
   homepage "https://www.nvidia.com/en-us/geforce/products/geforce-now/"
 
   depends_on macos: ">= :yosemite"

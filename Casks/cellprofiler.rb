@@ -6,6 +6,7 @@ cask "cellprofiler" do
   url "https://dpvpof9ygr7ad.cloudfront.net/CellProfiler-#{version}.app.zip"
   appcast "https://github.com/CellProfiler/CellProfiler/releases.atom"
   name "CellProfiler"
+  desc "Open-source application for biological image analysis"
   homepage "https://cellprofiler.org/"
 
   app "CellProfiler-#{version}.app"

@@ -6,6 +6,7 @@ cask "time-sink" do
   appcast "https://manytricks.com/timesink/appcast",
           must_contain: version.chomp(".0")
   name "Time Sink"
+  desc "Tracks how you spend your time on your computer"
   homepage "https://manytricks.com/timesink/"
 
   auto_updates true

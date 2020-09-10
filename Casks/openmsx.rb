@@ -6,6 +6,7 @@ cask "openmsx" do
   url "https://github.com/openMSX/openMSX/releases/download/RELEASE_#{version.dots_to_underscores}/openmsx-#{version}-mac-x86_64-bin.dmg"
   appcast "https://github.com/openMSX/openMSX/releases.atom"
   name "openMSX"
+  desc "MSX emulator"
   homepage "https://openmsx.org/"
 
   app "openMSX.app"

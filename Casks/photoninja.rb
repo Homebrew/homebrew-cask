@@ -6,6 +6,7 @@ cask "photoninja" do
   url "https://picturecode.cachefly.net/photoninja/downloads/Install_PhotoNinja_#{version}.dmg"
   appcast "https://www.picturecode.com/download.php"
   name "Photo Ninja"
+  desc "Professional RAW converter"
   homepage "https://www.picturecode.com/index.php"
 
   app "PhotoNinja_#{version}.app"

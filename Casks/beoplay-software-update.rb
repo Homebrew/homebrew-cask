@@ -7,6 +7,7 @@ cask "beoplay-software-update" do
   appcast "https://bang-olufsen.zendesk.com/hc/en-us/articles/360041405132-beoplay-software-updater",
           must_contain: version.dots_to_hyphens
   name "Beoplay Software Update"
+  desc "Software updater for Beoplay products"
   homepage "https://www.bang-olufsen.com/en/product-support/accessories/beoplay-software-updater"
 
   app "Beoplay Software Update.app"

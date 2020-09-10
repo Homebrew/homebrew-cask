@@ -6,6 +6,7 @@ cask "browserosaurus" do
   url "https://github.com/will-stone/browserosaurus/releases/download/v#{version}/Browserosaurus-#{version}.dmg"
   appcast "https://github.com/will-stone/browserosaurus/releases.atom"
   name "Browserosaurus"
+  desc "Open-source browser prompter"
   homepage "https://will-stone.github.io/browserosaurus/"
 
   auto_updates true

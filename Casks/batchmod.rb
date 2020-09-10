@@ -5,6 +5,7 @@ cask "batchmod" do
   url "https://www.lagentesoft.com/resources/batchmod_#{version.no_dots}.zip"
   appcast "https://www.macchampion.com/arbysoft/batchmodappcast.xml"
   name "BatChmod"
+  desc "Utility for manipulating file and folder privileges"
   homepage "https://www.lagentesoft.com/batchmod/"
 
   app "BatChmod.app"

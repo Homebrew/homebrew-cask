@@ -5,6 +5,7 @@ cask "wey" do
   url "https://github.com/yue/wey/releases/download/v#{version}/wey-v#{version}-darwin-x64.zip"
   appcast "https://github.com/yue/wey/releases.atom"
   name "Wey"
+  desc "Open-source Slack desktop app"
   homepage "https://github.com/yue/wey"
 
   app "Wey.app"

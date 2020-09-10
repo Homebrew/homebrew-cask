@@ -6,6 +6,7 @@ cask "goofy" do
   url "https://github.com/danielbuechele/goofy/releases/download/v#{version}/Goofy-#{version}.dmg"
   appcast "https://github.com/danielbuechele/goofy/releases.atom"
   name "Goofy"
+  desc "Desktop client for Facebook Messenger"
   homepage "https://www.goofyapp.com/"
 
   app "Goofy.app"

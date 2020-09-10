@@ -7,6 +7,7 @@ cask "youdaonote" do
   appcast "https://note.youdao.com/update/updateConfig.json"
   name "YoudaoNote"
   name "有道云笔记"
+  desc "Multi-platform note application"
   homepage "https://note.youdao.com/"
 
   app "YoudaoNote.app"

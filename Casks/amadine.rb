@@ -6,6 +6,7 @@ cask "amadine" do
   url "https://belightsoft.s3.amazonaws.com/Amadine.dmg"
   appcast "https://www.belightsoft.com/download/updates/appcast_Amadine.xml"
   name "Amadine"
+  desc "Vector graphic and illustration software"
   homepage "https://amadine.com/"
 
   depends_on macos: ">= :sierra"

@@ -5,6 +5,7 @@ cask "mendeley-reference-manager" do
   url "https://static.mendeley.com/bin/desktop/mendeley-reference-manager-#{version}.dmg"
   appcast "https://static.mendeley.com/bin/desktop/latest-mac.yml"
   name "Mendeley Reference Manager"
+  desc "Research management tool"
   homepage "https://www.mendeley.com/download-reference-manager/macOS/"
 
   app "Mendeley Reference Manager.app"

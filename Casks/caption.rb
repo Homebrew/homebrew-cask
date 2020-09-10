@@ -6,6 +6,7 @@ cask "caption" do
   url "https://github.com/gielcobben/caption/releases/download/v#{version}/caption-#{version}-mac.zip"
   appcast "https://github.com/gielcobben/caption/releases.atom"
   name "Caption"
+  desc "Finds and sets up subtitles automatically"
   homepage "https://getcaption.co/"
 
   app "Caption.app"

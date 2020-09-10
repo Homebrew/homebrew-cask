@@ -6,6 +6,7 @@ cask "typinator" do
       user_agent: :fake
   appcast "https://update.ergonis.com/vck/typinator.xml"
   name "Typinator"
+  desc "Tool to automate the insertion of frequently used text and graphics"
   homepage "https://www.ergonis.com/"
 
   app "Typinator.app"

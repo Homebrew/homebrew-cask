@@ -6,6 +6,7 @@ cask "tiles" do
   appcast "https://updates.sempliva.com/tiles/updates.xml",
           must_contain: version.after_comma
   name "Sempliva Tiles"
+  desc "Window manager"
   homepage "https://www.sempliva.com/tiles/"
 
   app "Tiles.app"

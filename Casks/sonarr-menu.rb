@@ -5,6 +5,7 @@ cask "sonarr-menu" do
   url "https://github.com/jefbarn/Sonarr-Menu/releases/download/v#{version}/Sonarr-Menu.v#{version}.zip"
   appcast "https://github.com/jefbarn/Sonarr-Menu/releases.atom"
   name "Sonarr Menu"
+  desc "Utility that adds a menu to the Status Bar for managing Sonarr"
   homepage "https://github.com/jefbarn/Sonarr-Menu/"
 
   depends_on cask: "sonarr"

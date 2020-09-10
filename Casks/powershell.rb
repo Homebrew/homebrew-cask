@@ -5,6 +5,7 @@ cask "powershell" do
   url "https://github.com/PowerShell/PowerShell/releases/download/v#{version}/powershell-#{version}-osx-x64.pkg"
   appcast "https://github.com/PowerShell/PowerShell/releases.atom"
   name "PowerShell"
+  desc "Command-line shell and scripting language"
   homepage "https://github.com/PowerShell/PowerShell"
 
   depends_on macos: ">= :high_sierra"

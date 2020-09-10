@@ -5,6 +5,7 @@ cask "grids" do
   url "https://gridsapp.net/bin/Grids_#{version}.zip"
   appcast "https://gridsapp.net/appcast.json"
   name "Grids"
+  desc "Instagram desktop application"
   homepage "https://gridsapp.net/"
 
   auto_updates true

@@ -5,6 +5,7 @@ cask "power-manager" do
   url "https://www.dssw.co.uk/powermanager/dsswpowermanager-#{version.no_dots}.dmg"
   appcast "https://version.dssw.co.uk/powermanager/"
   name "Power Manager"
+  desc "Utility to automate tasks and improve power management"
   homepage "https://dssw.co.uk/powermanager/"
 
   auto_updates true

@@ -6,6 +6,7 @@ cask "get-backup-pro" do
   url "https://belightsoft.s3.amazonaws.com/updates/Get+Backup+Pro+#{version.major}.zip"
   appcast "https://www.belightsoft.com/download/updates/appcast_getbackup_pro#{version.major}.xml"
   name "Get Backup Pro #{version.major}"
+  desc "Backup software with folder synchronization"
   homepage "https://www.belightsoft.com/products/getbackup/"
 
   auto_updates true

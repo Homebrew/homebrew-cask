@@ -5,6 +5,7 @@ cask "apple-events" do
   url "https://github.com/insidegui/AppleEvents/releases/download/#{version}/AppleEvents_v#{version}.zip"
   appcast "https://github.com/insidegui/AppleEvents/releases.atom"
   name "Apple Events"
+  desc "Unofficial Apple Events app"
   homepage "https://github.com/insidegui/AppleEvents"
 
   auto_updates true

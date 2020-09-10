@@ -6,6 +6,7 @@ cask "fsnotes" do
   url "https://github.com/glushchenko/fsnotes/releases/download/#{version}/FSNotes_#{version}.zip"
   appcast "https://github.com/glushchenko/fsnotes/releases.atom"
   name "FSNotes"
+  desc "Notes manager"
   homepage "https://fsnot.es/"
 
   app "FSNotes.app"

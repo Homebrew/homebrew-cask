@@ -5,6 +5,7 @@ cask "nocturne" do
   url "https://github.com/Daij-Djan/nocturne/blob/master/Dist/#{version}.zip?raw=true"
   appcast "https://raw.githubusercontent.com/Daij-Djan/nocturne/master/README.md"
   name "Nocturne"
+  desc "Adjust display colors to suit low light conditions"
   homepage "https://github.com/Daij-Djan/nocturne"
 
   app "Nocturne.app"

@@ -6,6 +6,7 @@ cask "aurora-hdr" do
   appcast "http://aurorahdr2019mac.update.skylum.com/",
           must_contain: version.dots_to_underscores
   name "Aurora HDR"
+  desc "HDR photo editor with filters, batch processing and more"
   homepage "https://skylum.com/aurorahdr"
 
   app "Aurora HDR 2019.app"

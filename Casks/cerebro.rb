@@ -6,6 +6,7 @@ cask "cerebro" do
   url "https://github.com/KELiON/cerebro/releases/download/v#{version}/cerebro-#{version}.dmg"
   appcast "https://github.com/KELiON/cerebro/releases.atom"
   name "Cerebro"
+  desc "Open-source productivity booster with a brain"
   homepage "https://cerebroapp.com/"
 
   app "Cerebro.app"

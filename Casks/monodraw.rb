@@ -5,6 +5,7 @@ cask "monodraw" do
   url "https://updates.helftone.com/monodraw/downloads/Monodraw-#{version.after_comma}.zip"
   appcast "https://updates.helftone.com/monodraw/appcast-beta.xml"
   name "Monodraw"
+  desc "Tool to create text-based art"
   homepage "https://monodraw.helftone.com/"
 
   depends_on macos: ">= :mojave"

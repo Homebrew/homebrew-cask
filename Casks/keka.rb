@@ -6,6 +6,7 @@ cask "keka" do
   url "https://github.com/aonez/Keka/releases/download/v#{version}/Keka-#{version}.dmg"
   appcast "https://github.com/aonez/Keka/releases.atom"
   name "Keka"
+  desc "File archiver"
   homepage "https://www.keka.io/"
 
   auto_updates true

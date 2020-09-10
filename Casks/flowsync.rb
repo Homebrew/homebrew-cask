@@ -6,6 +6,7 @@ cask "flowsync" do
   url "https://dngo5v6w7xama.cloudfront.net/connect/download/FlowSync_#{version}.pkg"
   appcast "https://flow.polar.com/start"
   name "Polar FlowSync Software"
+  desc "Syncing software for Polar Flow products"
   homepage "https://support.polar.com/uk-en/support/flowsync"
 
   pkg "FlowSync_#{version}.pkg"

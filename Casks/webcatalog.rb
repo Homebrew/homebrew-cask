@@ -6,6 +6,7 @@ cask "webcatalog" do
   url "https://github.com/atomery/webcatalog/releases/download/v#{version}/WebCatalog-#{version}-mac.zip"
   appcast "https://github.com/atomery/webcatalog/releases.atom"
   name "WebCatalog"
+  desc "Tool to run web apps like desktop apps"
   homepage "https://atomery.com/webcatalog/"
 
   auto_updates true

@@ -5,6 +5,7 @@ cask "obs" do
   url "https://cdn-fastly.obsproject.com/downloads/obs-mac-#{version}.dmg"
   appcast "https://github.com/obsproject/obs-studio/releases.atom"
   name "OBS"
+  desc "Open-source software for live streaming and screen recording"
   homepage "https://obsproject.com/"
 
   app "OBS.app"

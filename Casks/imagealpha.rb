@@ -5,6 +5,7 @@ cask "imagealpha" do
   url "https://pngmini.com/ImageAlpha#{version}.tar.bz2"
   appcast "https://pngmini.com/appcast.xml"
   name "ImageAlpha"
+  desc "Utility to reduce the size of 24-bit PNG files"
   homepage "https://pngmini.com/"
 
   app "ImageAlpha.app"

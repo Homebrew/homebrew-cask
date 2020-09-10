@@ -5,6 +5,7 @@ cask "chiaki" do
   url "https://github.com/thestr4ng3r/chiaki/releases/download/v#{version}/Chiaki-v#{version}-macOS-x86_64.dmg"
   appcast "https://github.com/thestr4ng3r/chiaki/releases.atom"
   name "Chiaki"
+  desc "Free and open-source PS4 remote play client"
   homepage "https://github.com/thestr4ng3r/chiaki"
 
   app "Chiaki.app"

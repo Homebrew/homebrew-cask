@@ -5,6 +5,7 @@ cask "ableton-live-lite" do
   url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_lite_#{version}_64.dmg"
   appcast "https://www.ableton.com/en/release-notes/live-#{version.major}/"
   name "Ableton Live Lite"
+  desc "Sound and music editor"
   homepage "https://www.ableton.com/en/products/live-lite/"
 
   auto_updates true

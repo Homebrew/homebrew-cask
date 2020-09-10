@@ -5,6 +5,7 @@ cask "lunar" do
   url "https://lunar.fyi/download/#{version}"
   appcast "https://lunar.fyi/appcast.xml"
   name "Lunar"
+  desc "Adaptive brightness for external displays"
   homepage "https://lunar.fyi/"
 
   auto_updates true

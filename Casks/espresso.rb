@@ -6,6 +6,7 @@ cask "espresso" do
   url "https://downloads.kangacode.com/Espresso/Espresso_#{version}.zip"
   appcast "https://espressoapp.com/updates/"
   name "Espresso"
+  desc "Website editor focusing on flair and efficiency"
   homepage "https://espressoapp.com/"
 
   depends_on macos: ">= :sierra"

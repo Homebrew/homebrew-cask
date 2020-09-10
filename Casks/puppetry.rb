@@ -6,6 +6,7 @@ cask "puppetry" do
   url "https://github.com/dsheiko/puppetry/releases/download/v#{version}/puppetry-mac-v#{version}.zip"
   appcast "https://github.com/dsheiko/puppetry/releases.atom"
   name "Puppetry"
+  desc "Web testing solution for non-developers on top of Puppeteer and Jest"
   homepage "https://puppetry.app/"
 
   app "puppetry.app"

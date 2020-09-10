@@ -5,6 +5,7 @@ cask "nimble-commander" do
   url "https://magnumbytes.com/downloads/releases/nimble-commander-#{version.before_comma}(#{version.after_comma}).dmg"
   appcast "https://magnumbytes.com/downloads/releases/sparkle-nimble-commander.xml"
   name "Nimble Commander"
+  desc "Dual-pane file manager"
   homepage "https://magnumbytes.com/"
 
   app "Nimble Commander.app"

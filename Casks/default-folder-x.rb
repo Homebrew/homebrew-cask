@@ -5,6 +5,7 @@ cask "default-folder-x" do
   url "https://www.stclairsoft.com/download/DefaultFolderX-#{version}.dmg"
   appcast "https://www.stclairsoft.com/cgi-bin/sparkle.cgi?DX5"
   name "Default Folder X"
+  desc "Utility to enhance the Open and Save dialogs in applications"
   homepage "https://www.stclairsoft.com/DefaultFolderX/"
 
   auto_updates true

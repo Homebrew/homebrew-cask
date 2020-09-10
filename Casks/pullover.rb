@@ -5,6 +5,7 @@ cask "pullover" do
   url "https://github.com/cgrossde/Pullover/releases/download/#{version}/Pullover_#{version}.dmg"
   appcast "https://github.com/cgrossde/Pullover/releases.atom"
   name "Pullover"
+  desc "Unofficial multi-platform Pushover desktop client"
   homepage "https://github.com/cgrossde/Pullover"
 
   app "pullover.app"

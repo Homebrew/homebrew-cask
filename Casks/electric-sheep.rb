@@ -6,6 +6,7 @@ cask "electric-sheep" do
   url "https://d100rc88eim93q.cloudfront.net/electricsheep-#{version}.dmg"
   appcast "https://electricsheep.org/#/download"
   name "Electric Sheep"
+  desc "Collaborative abstract artwork software"
   homepage "https://gold.electricsheep.org/"
 
   pkg "Electric Sheep.pkg"

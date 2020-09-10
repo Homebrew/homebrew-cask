@@ -6,6 +6,7 @@ cask "postbox" do
   url "https://d3nx85trn0lqsg.cloudfront.net/mac/postbox-#{version}-mac64.dmg"
   appcast "https://www.postbox-inc.com/download/success-mac"
   name "Postbox"
+  desc "Email client focusing on privacy protection"
   homepage "https://www.postbox-inc.com/"
 
   auto_updates true

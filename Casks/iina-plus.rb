@@ -5,6 +5,7 @@ cask "iina-plus" do
   url "https://github.com/xjbeta/iina-plus/releases/download/#{version.before_comma}(#{version.after_comma})/iina+.#{version.before_comma}.zip"
   appcast "https://github.com/xjbeta/iina-plus/releases.atom"
   name "IINA+"
+  desc "Extra danmaku support for iina. (iina 弹幕支持"
   homepage "https://github.com/xjbeta/iina-plus"
 
   app "iina+.app"

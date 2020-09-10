@@ -5,6 +5,7 @@ cask "deezer" do
   url "https://www.deezer.com/desktop/download/artifact/darwin/x64/#{version}"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.deezer.com/desktop/download%3Fplatform%3Ddarwin%26architecture=x64"
   name "Deezer"
+  desc "Music player"
   homepage "https://www.deezer.com/download"
 
   auto_updates true

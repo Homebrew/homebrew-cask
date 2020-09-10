@@ -6,6 +6,7 @@ cask "betterzip" do
   url "https://macitbetter.s3.amazonaws.com/BetterZip-#{version}.zip"
   appcast "https://macitbetter.com/BetterZip#{version.major}.rss"
   name "BetterZip"
+  desc "Utility to create and modify archives"
   homepage "https://macitbetter.com/"
 
   auto_updates true

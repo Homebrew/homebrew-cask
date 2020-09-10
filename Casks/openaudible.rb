@@ -6,6 +6,7 @@ cask "openaudible" do
   url "https://github.com/openaudible/openaudible/releases/download/v#{version}/OpenAudible_#{version}_mac.dmg"
   appcast "https://github.com/openaudible/openaudible/releases.atom"
   name "OpenAudible"
+  desc "Open-source audible manager"
   homepage "https://openaudible.org/"
 
   app "OpenAudible.app"

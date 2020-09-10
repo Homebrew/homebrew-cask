@@ -4,6 +4,7 @@ cask "home-inventory" do
 
   url "https://binaryformations.com/homeinventory/HomeInventory.dmg"
   name "Home Inventory"
+  desc "Documentation application for home and belongings"
   homepage "https://binaryformations.com/products/home-inventory/"
 
   depends_on macos: ">= :sierra"

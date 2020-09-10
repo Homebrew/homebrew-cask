@@ -6,6 +6,7 @@ cask "gpodder" do
   url "https://github.com/gpodder/gpodder/releases/download/#{version}/macOS-gPodder-#{version}.zip"
   appcast "https://github.com/gpodder/gpodder/releases.atom"
   name "gPodder"
+  desc "Podcast client"
   homepage "https://gpodder.github.io/"
 
   app "gPodder.app"

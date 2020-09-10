@@ -13,6 +13,7 @@ cask "evernote" do
   url "https://cdn1.evernote.com/mac-smd/public/Evernote_RELEASE_#{version}.dmg"
   appcast "https://update.evernote.com/public/ENMacSMD/EvernoteMacUpdate.xml"
   name "Evernote"
+  desc "App for note taking, organizing, task lists, and archiving"
   homepage "https://evernote.com/"
 
   auto_updates true

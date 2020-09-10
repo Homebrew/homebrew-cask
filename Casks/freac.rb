@@ -6,6 +6,7 @@ cask "freac" do
   url "https://github.com/enzo1982/freac/releases/download/v#{version}/freac-#{version}-macosx.dmg"
   appcast "https://github.com/enzo1982/freac/releases.atom"
   name "fre:ac"
+  desc "Audio converter and CD ripper"
   homepage "https://www.freac.org/"
 
   app "freac.app"

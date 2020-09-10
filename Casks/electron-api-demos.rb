@@ -5,6 +5,7 @@ cask "electron-api-demos" do
   url "https://github.com/electron/electron-api-demos/releases/download/v#{version}/electron-api-demos-mac.zip"
   appcast "https://github.com/electron/electron-api-demos/releases.atom"
   name "Electron API Demos"
+  desc "Explore the Electron APIs"
   homepage "https://github.com/electron/electron-api-demos"
 
   app "Electron API Demos.app"

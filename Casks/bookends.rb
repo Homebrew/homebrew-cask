@@ -4,6 +4,7 @@ cask "bookends" do
 
   url "https://www.sonnysoftware.com/Bookends.dmg"
   name "Bookends"
+  desc "Reference management and bibliography software"
   homepage "https://www.sonnysoftware.com/"
 
   app "Bookends.app"

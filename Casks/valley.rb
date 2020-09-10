@@ -4,6 +4,7 @@ cask "valley" do
 
   url "https://assets.unigine.com/d/Unigine_Valley-#{version}.dmg"
   name "Valley Benchmark"
+  desc "Software to test performance and stability for PC hardware"
   homepage "https://benchmark.unigine.com/valley"
 
   app "Valley.app"

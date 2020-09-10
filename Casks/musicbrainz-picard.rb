@@ -6,6 +6,7 @@ cask "musicbrainz-picard" do
   url "https://musicbrainz.osuosl.org/pub/musicbrainz/picard/MusicBrainz-Picard-#{version}.dmg"
   appcast "https://picard.musicbrainz.org/downloads/"
   name "MusicBrainz Picard"
+  desc "Cross-platform music tagger"
   homepage "https://picard.musicbrainz.org/"
 
   depends_on macos: ">= :sierra"

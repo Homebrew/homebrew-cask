@@ -5,6 +5,7 @@ cask "brisync" do
   url "https://github.com/czarny/Brisync/releases/download/v#{version}/Brisync.zip"
   appcast "https://github.com/czarny/Brisync/releases.atom"
   name "Brisync"
+  desc "Utility to automatically control the brightness of external displays"
   homepage "https://github.com/czarny/Brisync/"
 
   depends_on macos: ">= :sierra"

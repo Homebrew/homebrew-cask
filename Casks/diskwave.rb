@@ -5,6 +5,7 @@ cask "diskwave" do
   url "https://diskwave.barthe.ph/download/DiskWave_#{version}.dmg"
   appcast "https://diskwave.barthe.ph/changelog.html"
   name "DiskWave"
+  desc "Utility to determine what files and folders consume the most disk space"
   homepage "https://diskwave.barthe.ph/"
 
   app "DiskWave.app"

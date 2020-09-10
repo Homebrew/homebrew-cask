@@ -4,6 +4,7 @@ cask "foxmail" do
 
   url "https://www.foxmail.com/mac/download"
   name "Foxmail"
+  desc "Simple, yet not common"
   homepage "https://www.foxmail.com/"
 
   app "Foxmail.app"

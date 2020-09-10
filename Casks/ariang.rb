@@ -5,6 +5,7 @@ cask "ariang" do
   url "https://github.com/mayswind/AriaNg-Native/releases/download/#{version}/AriaNg_Native-#{version}-macOS.dmg"
   appcast "https://github.com/mayswind/AriaNg-Native/releases.atom"
   name "AriaNg Native"
+  desc "Better aria2 desktop frontend than AriaNg"
   homepage "https://github.com/mayswind/AriaNg-Native"
 
   app "AriaNg Native.app"

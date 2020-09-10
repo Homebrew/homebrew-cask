@@ -5,6 +5,7 @@ cask "yo" do
   url "https://github.com/sheagcraig/yo/releases/download/#{version}/yo-#{version}.pkg"
   appcast "https://github.com/sheagcraig/yo/releases.atom"
   name "Yo Scheduler"
+  desc "Utility to emit Notification Center messages from the command-line"
   homepage "https://github.com/sheagcraig/yo"
 
   pkg "yo-#{version}.pkg"

@@ -5,6 +5,7 @@ cask "iexplorer" do
   url "https://assets.macroplant.com/download/#{version.after_comma}/iExplorer-#{version.before_comma}.dmg"
   appcast "https://macroplant.com/iexplorer/mac/v#{version.major}/appcast"
   name "iExplorer"
+  desc "iOS device backup software and file manager"
   homepage "https://macroplant.com/iexplorer"
 
   app "iExplorer.app"

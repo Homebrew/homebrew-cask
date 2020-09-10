@@ -5,6 +5,7 @@ cask "ssh-config-editor" do
   url "https://hejki.org/download/ssheditor/SSHConfigEditor-#{version.after_comma}.zip"
   appcast "https://hejki.org/download/ssheditor/appcast.xml"
   name "SSH Config Editor"
+  desc "Tool for managing the OpenSSH ssh client configuration file"
   homepage "https://www.hejki.org/ssheditor/"
 
   app "SSH Config Editor.app"

@@ -6,6 +6,7 @@ cask "ganache" do
   url "https://github.com/trufflesuite/ganache/releases/download/v#{version}/Ganache-#{version}-mac.dmg"
   appcast "https://github.com/trufflesuite/ganache/releases.atom"
   name "Ganache"
+  desc "Personal blockchain for Ethereum development"
   homepage "https://truffleframework.com/ganache/"
 
   app "Ganache.app"

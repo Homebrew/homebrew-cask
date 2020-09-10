@@ -6,6 +6,7 @@ cask "stretchly" do
   url "https://github.com/hovancik/stretchly/releases/download/v#{version}/stretchly-#{version}.dmg"
   appcast "https://github.com/hovancik/stretchly/releases.atom"
   name "Stretchly"
+  desc "Break time reminder app"
   homepage "https://hovancik.net/stretchly/"
 
   app "Stretchly.app"
