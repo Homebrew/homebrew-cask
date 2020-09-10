@@ -398,6 +398,7 @@ cask "libreoffice-language-pack" do
   url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/LibreOffice_#{version}_MacOS_x86-64_langpack_#{language}.dmg"
   appcast "https://download.documentfoundation.org/libreoffice/stable/"
   name "LibreOffice Language Pack"
+  desc "Collection of alternate languages for LibreOffice"
   homepage "https://www.libreoffice.org/"
 
   depends_on cask: "libreoffice"
