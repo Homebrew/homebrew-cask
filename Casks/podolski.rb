@@ -6,6 +6,7 @@ cask "podolski" do
   url "https://uhedownloads-heckmannaudiogmb.netdna-ssl.com/releases/Podolski_#{version.before_comma.no_dots}_#{version.after_comma}_Mac.zip"
   appcast "https://u-he.com/products/podolski/releasenotes.html"
   name "Podolski"
+  desc "Nice and easy synthesizer"
   homepage "https://u-he.com/products/podolski/"
 
   pkg "Podolski_#{version.after_comma}_Mac/Podolski #{version.before_comma} Installer.pkg"

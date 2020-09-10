@@ -5,7 +5,8 @@ cask "surge-synthesizer" do
   # github.com/surge-synthesizer/releases/ was verified as official when first introduced to the cask
   url "https://github.com/surge-synthesizer/releases/releases/download/#{version}/Surge-#{version}-Setup.dmg"
   appcast "https://github.com/surge-synthesizer/releases/releases.atom"
-  name "Surge - A Digital Synthesizer"
+  name "Surge"
+  desc "Free & open source hybrid synthesizer"
   homepage "https://surge-synthesizer.github.io/"
 
   pkg "Surge-#{version}-Setup.pkg"
