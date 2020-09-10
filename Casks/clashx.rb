@@ -12,7 +12,22 @@ cask "clashx" do
 
   app "ClashX.app"
 
+  uninstall delete:    [
+    "/Library/PrivilegedHelperTools/com.west2online.ClashX.ProxyConfigHelper",
+    "/Library/LaunchDaemons/com.west2online.ClashX.ProxyConfigHelper.plist",
+  ],
+            launchctl: "com.west2online.ClashX.ProxyConfigHelper",
+            quit:      "com.west2online.ClashX"
+
   zap trash: [
+    "~/Library/Application Support/com.west2online.ClashX",
+    "/private/var/folders/*/*/*/com.apple.WebKit.Networking+com.west2online.ClashX",
+    "/private/var/folders/*/*/*/com.apple.WebKit.WebContent+com.west2online.ClashX",
+    "/private/var/folders/*/*/*/com.west2online.ClashX",
+    "~/Library/Cookies/com.west2online.ClashX.binarycookies",
+    "~/Library/Caches/io.fabric.sdk.mac.data/com.west2online.ClashX",
+    "~/Library/Caches/com.west2online.ClashX",
+    "~/Library/Caches/com.crashlytics.data/com.west2online.ClashX",
     "~/Library/Preferences/com.west2online.ClashX.plist",
     "~/Library/Logs/ClashX",
     "~/.config/clash/",
