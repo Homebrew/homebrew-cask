@@ -8,7 +8,6 @@ cask "porting-kit" do
   homepage "https://portingkit.com/"
 
   auto_updates true
-  conflicts_with cask: "porting-kit-legacy"
 
   app "Porting Kit.app"
 
