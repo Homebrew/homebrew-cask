@@ -21,9 +21,6 @@ cask "clashx" do
 
   zap trash: [
     "~/Library/Application Support/com.west2online.ClashX",
-    "/private/var/folders/*/*/*/com.apple.WebKit.Networking+com.west2online.ClashX",
-    "/private/var/folders/*/*/*/com.apple.WebKit.WebContent+com.west2online.ClashX",
-    "/private/var/folders/*/*/*/com.west2online.ClashX",
     "~/Library/Cookies/com.west2online.ClashX.binarycookies",
     "~/Library/Caches/io.fabric.sdk.mac.data/com.west2online.ClashX",
     "~/Library/Caches/com.west2online.ClashX",
