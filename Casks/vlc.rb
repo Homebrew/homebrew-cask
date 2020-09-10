@@ -5,10 +5,11 @@ cask "vlc" do
   url "https://get.videolan.org/vlc/#{version}/macosx/vlc-#{version}.dmg"
   appcast "https://www.videolan.org/vlc/download-macosx.html"
   name "VLC media player"
+  desc "Open-source cross-platform multimedia player"
   homepage "https://www.videolan.org/vlc/"
 
   auto_updates true
-  conflicts_with cask: "vlc-nightly"
+  conflicts_with cask: "homebrew/cask-versions/vlc-nightly"
 
   app "VLC.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
