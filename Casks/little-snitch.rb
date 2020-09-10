@@ -5,10 +5,11 @@ cask "little-snitch" do
   url "https://www.obdev.at/downloads/littlesnitch/LittleSnitch-#{version}.dmg"
   appcast "https://www.obdev.at/products/littlesnitch/releasenotes.html"
   name "Little Snitch"
+  desc "Host-based application firewall"
   homepage "https://www.obdev.at/products/littlesnitch/index.html"
 
   auto_updates true
-  conflicts_with cask: "little-snitch-nightly"
+  conflicts_with cask: "homebrew/cask-versions/little-snitch-nightly"
   depends_on macos: ">= :el_capitan"
   container type: :naked
 
