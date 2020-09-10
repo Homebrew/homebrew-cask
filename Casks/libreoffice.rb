@@ -9,7 +9,7 @@ cask "libreoffice" do
   desc "Free cross-platform office suite"
   homepage "https://www.libreoffice.org/"
 
-  conflicts_with cask: "libreoffice-still"
+  conflicts_with cask: "homebrew/cask-versions/libreoffice-still"
   depends_on macos: ">= :sierra"
 
   app "LibreOffice.app"
