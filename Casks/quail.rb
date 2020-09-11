@@ -5,6 +5,7 @@ cask "quail" do
   url "https://github.com/1000ch/quail/releases/download/v#{version}/Quail-#{version}.dmg"
   appcast "https://github.com/1000ch/quail/releases.atom"
   name "Quail"
+  desc "Unofficial but officially accepted esa app"
   homepage "https://github.com/1000ch/quail"
 
   app "Quail.app"

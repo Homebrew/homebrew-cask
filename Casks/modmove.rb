@@ -5,6 +5,7 @@ cask "modmove" do
   url "https://github.com/keith/modmove/releases/download/#{version}/ModMove.app.zip"
   appcast "https://github.com/keith/modmove/releases.atom"
   name "ModMove"
+  desc "Utility to move/resize windows using modifiers and the mouse"
   homepage "https://github.com/keith/modmove"
 
   app "ModMove.app"

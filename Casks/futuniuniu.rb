@@ -7,6 +7,7 @@ cask "futuniuniu" do
   appcast "https://www.futu5.com/tools"
   name "FutuNiuniu"
   name "富途牛牛"
+  desc "Trading application"
   homepage "https://hk.futu5.com/"
 
   # Renamed for consistency: app name is different in the Finder and in a shell.

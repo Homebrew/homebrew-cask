@@ -6,6 +6,7 @@ cask "tipp10" do
   url "https://www.tipp10.com/en/download/tipp10_mac_v#{version.dots_to_hyphens}.dmg"
   appcast "https://www.tipp10.com/en/download/"
   name "TIPP10"
+  desc "Free touch typing tutor"
   homepage "https://www.tipp10.com/"
 
   app "TIPP10.app"

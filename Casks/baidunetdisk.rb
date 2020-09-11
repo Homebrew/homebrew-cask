@@ -7,6 +7,7 @@ cask "baidunetdisk" do
   appcast "https://pan.baidu.com/disk/cmsdata?do=client"
   name "Baidu NetDisk"
   name "百度网盘"
+  desc "Cloud storage service"
   homepage "https://pan.baidu.com/download"
 
   depends_on macos: ">= :yosemite"

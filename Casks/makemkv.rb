@@ -5,9 +5,11 @@ cask "makemkv" do
   url "https://www.makemkv.com/download/makemkv_v#{version}_osx.dmg"
   appcast "https://www.makemkv.com/download/"
   name "MakeMKV"
+  desc "Video format converter (transcoder)"
   homepage "https://www.makemkv.com/"
 
   app "MakeMKV.app"
+  binary "#{appdir}/MakeMKV.app/Contents/MacOS/makemkvcon"
 
   zap trash: [
     "~/Library/Preferences/com.makemkv.MakeMKV.plist",

@@ -6,6 +6,7 @@ cask "auryo" do
   url "https://github.com/Superjo149/auryo/releases/download/v#{version}/Auryo-#{version}.dmg"
   appcast "https://github.com/Superjo149/auryo/releases.atom"
   name "Auryo"
+  desc "Unofficial desktop app for Soundcloud"
   homepage "https://auryo.com/"
 
   app "Auryo.app"

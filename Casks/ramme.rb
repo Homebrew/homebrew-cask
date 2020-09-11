@@ -5,6 +5,7 @@ cask "ramme" do
   url "https://github.com/terkelg/ramme/releases/download/v#{version}/Ramme-#{version}.dmg"
   appcast "https://github.com/terkelg/ramme/releases.atom"
   name "Ramme"
+  desc "Unofficial Instagram Desktop App"
   homepage "https://github.com/terkelg/ramme/"
 
   app "Ramme.app"

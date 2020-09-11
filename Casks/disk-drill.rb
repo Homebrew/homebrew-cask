@@ -5,6 +5,7 @@ cask "disk-drill" do
   url "https://www.cleverfiles.com/releases/DiskDrill_#{version}.zip"
   appcast "https://www.cleverfiles.com/releases/auto-update/dd2-newestr.xml"
   name "Disk Drill"
+  desc "Data recovery software"
   homepage "https://www.cleverfiles.com/"
 
   app "Disk Drill.app"

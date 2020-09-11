@@ -5,6 +5,7 @@ cask "clock-bar" do
   url "https://github.com/nihalsharma/Clock-Bar/files/#{version.after_comma}/Clock.Bar.app.zip"
   appcast "https://github.com/nihalsharma/Clock-Bar/releases.atom"
   name "Clock Bar"
+  desc "Macbook | Clock, right on the touch bar"
   homepage "https://github.com/nihalsharma/Clock-Bar/"
 
   app "Clock Bar.app"

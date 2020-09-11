@@ -16,6 +16,7 @@ cask "scribus" do
   end
 
   name "Scribus"
+  desc "Free and open-source page layout program"
   homepage "https://www.scribus.net/"
 
   app "Scribus.app"

@@ -6,6 +6,7 @@ cask "gnucash" do
   url "https://github.com/Gnucash/gnucash/releases/download/#{version.before_comma}/Gnucash-Intel-#{version.before_comma.chomp("b")}-#{version.after_comma}.dmg"
   appcast "https://github.com/Gnucash/gnucash/releases.atom"
   name "GnuCash"
+  desc "Double-entry accounting program"
   homepage "https://www.gnucash.org/"
 
   app "Gnucash.app"

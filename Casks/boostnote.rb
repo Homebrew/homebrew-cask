@@ -6,6 +6,7 @@ cask "boostnote" do
   url "https://github.com/BoostIO/boost-releases/releases/download/v#{version}/Boostnote-mac.zip"
   appcast "https://github.com/BoostIO/boost-releases/releases.atom"
   name "Boostnote"
+  desc "Markdown editor for developers"
   homepage "https://boostnote.io/"
 
   auto_updates true

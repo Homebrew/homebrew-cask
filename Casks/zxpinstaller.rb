@@ -6,6 +6,7 @@ cask "zxpinstaller" do
   url "https://github.com/guideguide/ZXPInstaller/releases/download/#{version}/ZXPInstaller.dmg"
   appcast "https://github.com/guideguide/ZXPInstaller/releases.atom"
   name "ZXPInstaller"
+  desc "Adobe extensions installer"
   homepage "https://zxpinstaller.com/"
 
   app "ZXPInstaller.app"

@@ -5,6 +5,7 @@ cask "roboform" do
   url "https://www.roboform.com/dist/roboform-mac-v#{version.major}.dmg"
   appcast "https://www.roboform.com/news-mac"
   name "RoboForm"
+  desc "Password manager and form filler application"
   homepage "https://www.roboform.com/"
 
   auto_updates true

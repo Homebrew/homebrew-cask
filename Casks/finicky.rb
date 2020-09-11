@@ -5,6 +5,7 @@ cask "finicky" do
   url "https://github.com/johnste/finicky/releases/download/v#{version}/Finicky.zip"
   appcast "https://github.com/johnste/finicky/releases.atom"
   name "Finicky"
+  desc "Utility for customizing which browser to start"
   homepage "https://github.com/johnste/finicky"
 
   depends_on macos: ">= :sierra"

@@ -6,6 +6,7 @@ cask "qbittorrent" do
   url "https://downloads.sourceforge.net/qbittorrent/qbittorrent-mac/qbittorrent-#{version}/qbittorrent-#{version}.dmg"
   appcast "https://sourceforge.net/projects/qbittorrent/rss?path=/qbittorrent-mac"
   name "qBittorrent"
+  desc "Peer to peer Bitorrent client"
   homepage "https://www.qbittorrent.org/"
 
   depends_on macos: ">= :high_sierra"

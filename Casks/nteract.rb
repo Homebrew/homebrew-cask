@@ -5,6 +5,7 @@ cask "nteract" do
   url "https://github.com/nteract/nteract/releases/download/v#{version}/nteract-#{version}.dmg"
   appcast "https://github.com/nteract/nteract/releases.atom"
   name "nteract"
+  desc "Interactive computing suite"
   homepage "https://github.com/nteract/nteract"
 
   auto_updates true

@@ -7,6 +7,7 @@ cask "night-owl" do
   appcast "https://sites.google.com/site/yorufukurou/distribution/appcast.xml"
   name "NightOwl"
   name "YoruFukurou"
+  desc "Twitter client app"
   homepage "https://sites.google.com/site/yorufukurou/home-en"
 
   depends_on macos: ">= :mojave"

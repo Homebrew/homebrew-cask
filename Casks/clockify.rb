@@ -6,6 +6,7 @@ cask "clockify" do
   url "https://clockify-resources.s3.eu-central-1.amazonaws.com/downloads/ClockifyDesktop.zip"
   appcast "https://clockify-resources.s3.eu-central-1.amazonaws.com/downloads/appcast.xml"
   name "Clockify"
+  desc "Time tracking tool for agencies and freelancers"
   homepage "https://clockify.me/mac-time-tracking"
 
   auto_updates true

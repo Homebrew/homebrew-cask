@@ -5,6 +5,7 @@ cask "inform" do
   url "http://inform7.com/apps/#{version}/I7-#{version}-OSX-Interim.dmg"
   appcast "http://inform7.com/downloads/"
   name "Inform"
+  desc "Writing system for interactive fiction based on natural language"
   homepage "http://inform7.com/"
 
   app "Inform.app"

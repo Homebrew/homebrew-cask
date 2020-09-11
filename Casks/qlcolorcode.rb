@@ -1,6 +1,6 @@
 cask "qlcolorcode" do
-  version "3.0.2"
-  sha256 "7b4b0d51854de546c247895e519d6dbcb3b6722f9d430b18a10a1a898ca7a4ca"
+  version "3.1.1"
+  sha256 "1ef649b456817a3761ec640cf56ddd9cd20a39c5caf72fd79521edf3da2dd714"
 
   url "https://github.com/anthonygelibert/QLColorCode/releases/download/release-#{version}/QLColorCode.qlgenerator.zip"
   appcast "https://github.com/anthonygelibert/QLColorCode/releases.atom"

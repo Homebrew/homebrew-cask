@@ -5,6 +5,7 @@ cask "pycharm" do
   url "https://download.jetbrains.com/python/pycharm-professional-#{version.before_comma}.dmg"
   appcast "https://data.services.jetbrains.com/products/releases?code=PCP&latest=true&type=release"
   name "PyCharm"
+  desc "IDE for professional Python development"
   homepage "https://www.jetbrains.com/pycharm/"
 
   auto_updates true

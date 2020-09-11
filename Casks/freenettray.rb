@@ -6,6 +6,7 @@ cask "freenettray" do
   url "https://github.com/freenet/mactray/releases/download/v#{version}/FreenetTray_#{version}.zip"
   appcast "https://github.com/freenet/mactray/releases.atom"
   name "Freenet"
+  desc "Menu bar application to control Freenet"
   homepage "https://freenetproject.org/"
 
   app "FreenetTray.app"

@@ -5,6 +5,7 @@ cask "hocus-focus" do
   url "https://hocusfoc.us/static/releases/hocusfocus-#{version}.zip"
   appcast "https://hocusfoc.us/updates.xml"
   name "Hocus Focus"
+  desc "Automatically hides inactive application windows"
   homepage "https://hocusfoc.us/"
 
   app "Hocus Focus.app"

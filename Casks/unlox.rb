@@ -5,6 +5,7 @@ cask "unlox" do
   url "https://unlox.it/download/"
   appcast "https://unlox.it/download/update.php"
   name "Unlox"
+  desc "Unlock your computer with your fingerprint"
   homepage "https://unlox.it/get"
 
   depends_on macos: ">= :high_sierra"

@@ -5,6 +5,7 @@ cask "no-ip-duc" do
   url "https://www.noip.com/client/macos/No-IP_DUC_v#{version}.dmg"
   appcast "https://www.noip.com/client/macos/appcast.xml"
   name "No-IP DUC"
+  desc "Keeps current IP address in sync"
   homepage "https://www.noip.com/download?page=mac"
 
   app "No-IP DUC.app"

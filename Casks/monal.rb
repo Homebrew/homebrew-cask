@@ -4,6 +4,7 @@ cask "monal" do
 
   url "https://monal.im/Monal-OSX/Monal-OSX.zip"
   name "Monal"
+  desc "Tool to securely connect to chat servers"
   homepage "https://monal.im/"
 
   depends_on macos: ">= :catalina"

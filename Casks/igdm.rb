@@ -6,6 +6,7 @@ cask "igdm" do
   url "https://github.com/ifedapoolarewaju/igdm/releases/download/v#{version}/IGdm-#{version}.dmg"
   appcast "https://github.com/ifedapoolarewaju/igdm/releases.atom"
   name "IG:dm"
+  desc "Desktop application for Instagram DMs"
   homepage "https://igdm.me/"
 
   app "IGdm.app"

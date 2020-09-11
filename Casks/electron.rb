@@ -6,6 +6,7 @@ cask "electron" do
   url "https://github.com/electron/electron/releases/download/v#{version}/electron-v#{version}-darwin-x64.zip"
   appcast "https://github.com/electron/electron/releases.atom"
   name "Electron"
+  desc "Build cross-platform desktop apps with JavaScript, HTML, and CSS"
   homepage "https://electronjs.org/"
 
   app "Electron.app"

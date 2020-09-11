@@ -4,6 +4,7 @@ cask "simplecap" do
 
   url "http://lakesoft.jp/simplecap/download/SimpleCap-#{version}.zip"
   name "SimpleCap"
+  desc "Screenshot utility"
   homepage "http://lakesoft.jp/simplecap-en/"
 
   app "SimpleCap.app"

@@ -5,6 +5,7 @@ cask "workbench" do
   url "https://github.com/mxcl/Workbench/releases/download/#{version}/Workbench-#{version}.zip"
   appcast "https://github.com/mxcl/Workbench/releases.atom"
   name "Workbench"
+  desc "Seamless, automatic, “dotfile” sync to iCloud"
   homepage "https://github.com/mxcl/Workbench"
 
   auto_updates true

@@ -13,6 +13,7 @@ cask "themeengine" do
   end
 
   name "ThemeEngine"
+  desc "App to edit compiled .car files"
   homepage "https://github.com/alexzielenski/ThemeEngine/"
 
   app "ThemeEngine.app"

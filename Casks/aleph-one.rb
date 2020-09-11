@@ -6,6 +6,7 @@ cask "aleph-one" do
   url "https://github.com/Aleph-One-Marathon/alephone/releases/download/release-#{version}/AlephOne-#{version}-Mac.dmg"
   appcast "https://github.com/Aleph-One-Marathon/alephone/releases.atom"
   name "Aleph One"
+  desc "Open-source continuation of Bungie’s Marathon 2 game engine"
   homepage "https://alephone.lhowon.org/"
 
   app "Aleph One.app"

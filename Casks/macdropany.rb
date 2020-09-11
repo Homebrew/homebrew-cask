@@ -5,6 +5,7 @@ cask "macdropany" do
   url "https://github.com/sebthedev/MacDropAny/releases/download/v#{version}/MacDropAny.#{version}.zip"
   appcast "https://github.com/sebthedev/MacDropAny/releases.atom"
   name "MacDropAny"
+  desc "Syncs any local folder with the cloud"
   homepage "https://github.com/sebthedev/MacDropAny"
 
   depends_on macos: ">= :yosemite"

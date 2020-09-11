@@ -14,5 +14,6 @@ cask "diskmaker-x" do
   url "https://diskmakerx.com/downloads/DiskMaker_X_#{version.no_dots}.dmg"
   appcast "https://diskmakerx.com/feed/"
   name "DiskMaker X"
+  desc "Tool to build a system install disk"
   homepage "https://diskmakerx.com/"
 end

@@ -5,6 +5,7 @@ cask "basictex" do
   # mirror.ctan.org/systems/mac/mactex/ was verified as official when first introduced to the cask
   url "http://mirror.ctan.org/systems/mac/mactex/mactex-basictex-#{version.no_dots}.pkg"
   name "BasicTeX"
+  desc "Compact TeX distribution as alternative to the full TeX Live / MacTeX"
   homepage "https://www.tug.org/mactex/morepackages.html"
 
   conflicts_with cask: [

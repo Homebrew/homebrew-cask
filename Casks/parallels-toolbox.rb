@@ -5,6 +5,7 @@ cask "parallels-toolbox" do
   url "https://download.parallels.com/toolbox/v#{version.major}/#{version}/ParallelsToolbox-#{version}.dmg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.parallels.com/directdownload/toolbox/"
   name "Parallels Toolbox"
+  desc "Bundle with over 30 tools"
   homepage "https://www.parallels.com/products/toolbox/"
 
   installer manual: "Install Parallels Toolbox.app"

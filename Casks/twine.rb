@@ -6,6 +6,7 @@ cask "twine" do
   url "https://github.com/klembot/twinejs/releases/download/#{version}/twine_#{version}_macos.dmg"
   appcast "https://github.com/klembot/twinejs/releases.atom"
   name "Twine"
+  desc "Tool for telling interactive, nonlinear stories"
   homepage "https://twinery.org/"
 
   app "Twine.app"

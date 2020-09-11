@@ -6,6 +6,7 @@ cask "syncthing" do
   url "https://github.com/syncthing/syncthing-macos/releases/download/v#{version}/Syncthing-#{version}.dmg"
   appcast "https://github.com/syncthing/syncthing-macos/releases.atom"
   name "Syncthing"
+  desc "Real time file synchronization software"
   homepage "https://syncthing.net/"
 
   auto_updates true

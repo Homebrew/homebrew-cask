@@ -6,6 +6,7 @@ cask "ccmenu" do
   url "https://github.com/erikdoe/ccmenu/releases/download/v#{version}/CCMenu.app.zip"
   appcast "https://github.com/erikdoe/ccmenu/releases.atom"
   name "CCMenu"
+  desc "Application to monitor continuous integration servers"
   homepage "http://ccmenu.org/"
 
   app "CCMenu.app"

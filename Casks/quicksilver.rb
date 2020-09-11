@@ -5,6 +5,7 @@ cask "quicksilver" do
   url "https://qsapp.com/archives/downloads/Quicksilver%20#{version}.dmg"
   appcast "https://qsapp.com/archives/"
   name "Quicksilver"
+  desc "Productivity application"
   homepage "https://qsapp.com/"
 
   auto_updates true

@@ -5,6 +5,7 @@ cask "qmoji" do
   url "https://github.com/jaredly/qmoji/releases/download/#{version}/qmoji.zip"
   appcast "https://github.com/jaredly/qmoji/releases.atom"
   name "qmoji"
+  desc "Like mojibar, but written in reasonml"
   homepage "https://github.com/jaredly/qmoji"
 
   app "qmoji.app"

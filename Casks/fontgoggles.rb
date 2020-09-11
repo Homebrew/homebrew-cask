@@ -6,6 +6,7 @@ cask "fontgoggles" do
   url "https://github.com/justvanrossum/fontgoggles/releases/download/v#{version}/FontGoggles.dmg"
   appcast "https://github.com/justvanrossum/fontgoggles/releases.atom"
   name "FontGoggles"
+  desc "Font viewer for various font formats"
   homepage "https://fontgoggles.org/"
 
   app "FontGoggles.app"

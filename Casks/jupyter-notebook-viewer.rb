@@ -5,6 +5,7 @@ cask "jupyter-notebook-viewer" do
   url "https://github.com/tuxu/nbviewer-app/releases/download/#{version}/nbviewer-app.zip"
   appcast "https://github.com/tuxu/nbviewer-app/releases.atom"
   name "Jupyter Notebook Viewer"
+  desc "Utility to render Jupyter notebooks"
   homepage "https://github.com/tuxu/nbviewer-app"
 
   depends_on macos: ">= :sierra"

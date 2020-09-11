@@ -5,6 +5,7 @@ cask "houseparty" do
   # houseparty-mac-builds.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://houseparty-mac-builds.s3.amazonaws.com/Houseparty.dmg"
   name "Houseparty"
+  desc "Face-to-face social networking app"
   homepage "https://houseparty.com/"
 
   app "Houseparty.app"

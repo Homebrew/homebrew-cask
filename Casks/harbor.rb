@@ -5,6 +5,7 @@ cask "harbor" do
   url "https://github.com/madeintandem/harbor/releases/download/v#{version}/Harbor.app.zip"
   appcast "https://github.com/madeintandem/harbor/releases.atom"
   name "Harbor"
+  desc "Tool to monitor Codeship builds from the status bar"
   homepage "https://github.com/madeintandem/harbor"
 
   app "Harbor.app"

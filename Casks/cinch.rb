@@ -5,6 +5,7 @@ cask "cinch" do
   url "https://www.irradiatedsoftware.com/downloads/Cinch_#{version}.zip"
   appcast "https://www.irradiatedsoftware.com/updates/profiles/cinch.php"
   name "Cinch"
+  desc "Window management tool"
   homepage "https://www.irradiatedsoftware.com/cinch/"
 
   app "Cinch.app"

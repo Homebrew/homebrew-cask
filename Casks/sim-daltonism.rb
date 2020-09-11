@@ -5,6 +5,7 @@ cask "sim-daltonism" do
   url "https://littoral.michelf.ca/apps/sim-daltonism/sim-daltonism-#{version}.zip"
   appcast "https://littoral.michelf.ca/apps/sim-daltonism/"
   name "Sim Daltonism"
+  desc "Color blindness simulator for videos and images"
   homepage "https://michelf.ca/projects/mac/sim-daltonism/"
 
   app "Sim Daltonism.app"

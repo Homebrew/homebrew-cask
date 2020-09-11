@@ -6,6 +6,7 @@ cask "plover" do
   url "https://github.com/openstenoproject/plover/releases/download/v#{version}/plover-#{version}-py2-mac.dmg"
   appcast "https://github.com/openstenoproject/plover/releases.atom"
   name "Plover"
+  desc "Open-source stenotype engine"
   homepage "https://www.openstenoproject.org/plover/"
 
   app "Plover.app"

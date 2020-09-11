@@ -5,6 +5,7 @@ cask "julia" do
   url "https://julialang-s3.julialang.org/bin/mac/x64/#{version.major_minor}/julia-#{version}-mac64.dmg"
   appcast "https://github.com/JuliaLang/julia/releases.atom"
   name "Julia"
+  desc "Programming language for technical computing"
   homepage "https://julialang.org/"
 
   app "Julia-#{version.major_minor}.app"

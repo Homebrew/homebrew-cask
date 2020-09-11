@@ -6,6 +6,7 @@ cask "openconnect-gui" do
   url "https://github.com/openconnect/openconnect-gui/releases/download/v#{version}/openconnect-gui-#{version}.high_sierra.bottle.tar.gz"
   appcast "https://github.com/openconnect/openconnect-gui/releases.atom"
   name "OpenConnect-GUI"
+  desc "GitLab mirror - Graphical OpenConnect client (beta phase)"
   homepage "https://openconnect.github.io/openconnect-gui/"
 
   app "openconnect-gui/#{version}/OpenConnect-GUI.app"

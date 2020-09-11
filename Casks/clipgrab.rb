@@ -5,6 +5,7 @@ cask "clipgrab" do
   url "https://download.clipgrab.org/ClipGrab-#{version}.dmg"
   appcast "https://clipgrab.org/"
   name "ClipGrab"
+  desc "Downloads videos and audio from websites"
   homepage "https://clipgrab.org/"
 
   depends_on macos: ">= :sierra"

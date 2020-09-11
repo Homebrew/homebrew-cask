@@ -6,6 +6,7 @@ cask "headset" do
   url "https://github.com/headsetapp/headset-electron/releases/download/v#{version}/Headset-#{version}.dmg"
   appcast "https://github.com/headsetapp/headset-electron/releases.atom"
   name "Headset"
+  desc "Music player powered by YouTube and Reddit"
   homepage "https://headsetapp.co/"
 
   app "Headset.app"

@@ -15,6 +15,7 @@ cask "itsycal" do
   # itsycal.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://itsycal.s3.amazonaws.com/Itsycal-#{version}.zip"
   name "Itsycal"
+  desc "Menu bar calendar"
   homepage "https://www.mowglii.com/itsycal/"
 
   auto_updates true

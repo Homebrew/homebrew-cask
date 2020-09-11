@@ -6,6 +6,7 @@ cask "musescore" do
   url "https://github.com/musescore/MuseScore/releases/download/v#{version.chomp(".0")}/MuseScore-#{version}.dmg"
   appcast "https://github.com/musescore/MuseScore/releases.atom"
   name "MuseScore"
+  desc "Open-source music notation software"
   homepage "https://musescore.org/"
 
   depends_on macos: ">= :yosemite"

@@ -6,6 +6,7 @@ cask "dragthing" do
   url "https://tlasystems.s3.amazonaws.com/DragThing-#{version}.dmg"
   appcast "https://www.dragthing.com/english/download.html"
   name "DragThing"
+  desc "Desktop organizer"
   homepage "https://www.dragthing.com/"
 
   app "DragThing.app"

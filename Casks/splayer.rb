@@ -6,6 +6,7 @@ cask "splayer" do
   url "https://github.com/chiflix/splayerx/releases/download/#{version}/SPlayer-#{version}.dmg"
   appcast "https://github.com/chiflix/splayerx/releases.atom"
   name "SPlayer"
+  desc "Media player"
   homepage "https://splayer.org/"
 
   app "SPlayer.app"

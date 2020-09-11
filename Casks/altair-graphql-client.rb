@@ -6,6 +6,7 @@ cask "altair-graphql-client" do
   url "https://github.com/imolorhe/altair/releases/download/v#{version}/altair_#{version}_mac.zip"
   appcast "https://github.com/imolorhe/altair/releases.atom"
   name "Altair GraphQL Client"
+  desc "GraphQL client"
   homepage "https://altair.sirmuel.design/"
 
   app "Altair GraphQL Client.app"

@@ -6,6 +6,7 @@ cask "fromscratch" do
   url "https://github.com/Kilian/fromscratch/releases/download/v#{version}/FromScratch-#{version}.dmg"
   appcast "https://github.com/Kilian/fromscratch/releases.atom"
   name "FromScratch"
+  desc "Autosaving Scratchpad. A simple but smart note-taking app"
   homepage "https://fromscratch.rocks/"
 
   app "FromScratch.app"

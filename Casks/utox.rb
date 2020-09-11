@@ -6,6 +6,8 @@ cask "utox" do
   url "https://github.com/uTox/uTox/releases/download/v#{version}/uTox.#{version}.dmg"
   appcast "https://github.com/uTox/uTox/releases.atom"
   name "uTox"
+  name "µTox"
+  desc "Tox client"
   homepage "https://www.tox.chat/"
 
   app "uTox.app"

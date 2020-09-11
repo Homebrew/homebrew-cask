@@ -5,6 +5,7 @@ cask "micro-snitch" do
   url "https://www.obdev.at/downloads/MicroSnitch/MicroSnitch-#{version}.zip"
   appcast "https://www.obdev.at/products/microsnitch/download.html"
   name "Micro Snitch"
+  desc "Monitors and reports any microphone and camera activity"
   homepage "https://www.obdev.at/products/microsnitch/index.html"
 
   auto_updates true

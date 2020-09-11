@@ -6,6 +6,7 @@ cask "the-unarchiver" do
   url "https://dl.devmate.com/com.macpaw.site.theunarchiver/#{version.after_comma.before_colon}/#{version.after_colon}/TheUnarchiver-#{version.after_comma.before_colon}.zip"
   appcast "https://updates.devmate.com/com.macpaw.site.theunarchiver.xml"
   name "The Unarchiver"
+  desc "Unpacks archive files"
   homepage "https://theunarchiver.com/"
 
   auto_updates true

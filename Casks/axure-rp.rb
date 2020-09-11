@@ -6,6 +6,7 @@ cask "axure-rp" do
   url "https://axure.cachefly.net/AxureRP-Setup.dmg"
   appcast "https://www.axure.com/release-history"
   name "Axure RP"
+  desc "Planning and prototyping tool for developers"
   homepage "https://www.axure.com/"
 
   app "Axure RP #{version.major}.app"

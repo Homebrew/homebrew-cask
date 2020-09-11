@@ -5,6 +5,7 @@ cask "betaflight-configurator" do
   url "https://github.com/betaflight/betaflight-configurator/releases/download/#{version}/betaflight-configurator_#{version}_macOS.dmg"
   appcast "https://github.com/betaflight/betaflight-configurator/releases.atom"
   name "Betaflight-Configurator"
+  desc "Configuration tool for the Betaflight firmware"
   homepage "https://github.com/betaflight/betaflight-configurator"
 
   app "Betaflight Configurator.app"

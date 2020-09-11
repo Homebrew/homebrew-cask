@@ -22,6 +22,7 @@ cask "deeper" do
   url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete(".")}/Deeper.dmg"
   appcast "https://www.titanium-software.fr/en/release_deeper.html"
   name "Deeper"
+  desc "Tool to enable and disable hidden functions of Finder and other apps"
   homepage "https://www.titanium-software.fr/en/deeper.html"
 
   # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.

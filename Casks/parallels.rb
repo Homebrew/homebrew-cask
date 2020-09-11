@@ -5,6 +5,7 @@ cask "parallels" do
   url "https://download.parallels.com/desktop/v#{version.major}/#{version}/ParallelsDesktop-#{version}.dmg"
   appcast "https://kb.parallels.com/en/125053"
   name "Parallels Desktop"
+  desc "Desktop virtualization software"
   homepage "https://www.parallels.com/products/desktop/"
 
   auto_updates true

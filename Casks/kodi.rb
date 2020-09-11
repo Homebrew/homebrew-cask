@@ -5,6 +5,7 @@ cask "kodi" do
   url "https://mirrors.kodi.tv/releases/osx/x86_64/kodi-#{version}-x86_64.dmg"
   appcast "https://github.com/xbmc/xbmc/releases.atom"
   name "Kodi"
+  desc "Free and open-source media player"
   homepage "https://kodi.tv/"
 
   app "Kodi.app"

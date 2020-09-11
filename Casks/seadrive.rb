@@ -6,6 +6,7 @@ cask "seadrive" do
   url "https://download.seadrive.org/seadrive-#{version}.dmg"
   appcast "https://www.seafile.com/en/download/"
   name "Seadrive"
+  desc "Manual for Seafile server"
   homepage "https://www.seafile.com/en/home/"
 
   app "Seadrive.app"

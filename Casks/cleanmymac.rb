@@ -6,6 +6,7 @@ cask "cleanmymac" do
   url "https://dl.devmate.com/com.macpaw.CleanMyMac#{version.major}/CleanMyMacX.dmg"
   appcast "https://updates.devmate.com/com.macpaw.CleanMyMac#{version.major}.xml"
   name "CleanMyMac X"
+  desc "Tool to remove unnecessary files and folders from disk"
   homepage "https://macpaw.com/cleanmymac"
 
   auto_updates true

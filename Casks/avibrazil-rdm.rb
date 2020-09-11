@@ -6,6 +6,7 @@ cask "avibrazil-rdm" do
   url "https://avi.alkalay.net/software/RDM/RDM-#{version}.pkg"
   appcast "https://avi.alkalay.net/software/RDM/"
   name "RDM"
+  desc "Utility to set a Retina display to custom resolutions"
   homepage "https://github.com/avibrazil/RDM"
 
   depends_on macos: ">= :sierra"

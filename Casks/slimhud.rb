@@ -5,6 +5,7 @@ cask "slimhud" do
   url "https://github.com/AlexPerathoner/SlimHUD/releases/download/v#{version}/SlimHUD.zip"
   appcast "https://github.com/AlexPerathoner/SlimHUD/releases.atom"
   name "SlimHUD"
+  desc "Replacement for the volume, brightness and keyboard backlight HUDs"
   homepage "https://github.com/AlexPerathoner/SlimHUD/"
 
   depends_on macos: ">= :mojave"

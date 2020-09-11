@@ -6,6 +6,7 @@ cask "devonagent" do
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/devonagent/#{version}/DEVONagent_Pro.app.zip"
   appcast "https://api.devontechnologies.com/1/apps/sparkle/sparkle.php?id=300005193"
   name "DEVONagent Pro"
+  desc "Tool to help searching the web more efficiently"
   homepage "https://www.devontechnologies.com/apps/devonagent"
 
   auto_updates true

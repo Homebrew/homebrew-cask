@@ -6,6 +6,7 @@ cask "fork" do
   url "https://forkapp.ams3.cdn.digitaloceanspaces.com/mac/Fork-#{version}.dmg"
   appcast "https://git-fork.com/update/feed.xml"
   name "Fork"
+  desc "GIT client"
   homepage "https://git-fork.com/"
 
   auto_updates true

@@ -5,6 +5,7 @@ cask "one-switch" do
   url "https://fireball.studio/api/release_manager/downloads/studio.fireball.OneSwitch/#{version.after_comma}.zip"
   appcast "https://fireball.studio/api/release_manager/studio.fireball.OneSwitch.xml"
   name "One Switch"
+  desc "All system and utility switches in one place"
   homepage "https://fireball.studio/oneswitch"
 
   depends_on macos: ">= :mojave"

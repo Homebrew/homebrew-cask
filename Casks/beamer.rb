@@ -5,6 +5,7 @@ cask "beamer" do
   url "https://beamer-app.com/resources/downloads/Beamer-#{version}.zip"
   appcast "https://beamer-app.com/beamer#{version.major}-appcast.xml"
   name "Beamer"
+  desc "Desktop casting/streaming app for Apple TV and Chromecast"
   homepage "https://beamer-app.com/"
 
   app "Beamer.app"

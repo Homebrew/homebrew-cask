@@ -6,6 +6,7 @@ cask "element" do
   url "https://packages.riot.im/desktop/install/macos/Element-#{version}.dmg"
   appcast "https://github.com/vector-im/riot-desktop/releases.atom"
   name "Element (Riot)"
+  desc "Matrix collaboration client"
   homepage "https://element.io/get-started"
 
   auto_updates true

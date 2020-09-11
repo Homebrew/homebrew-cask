@@ -5,6 +5,7 @@ cask "hackintool" do
   url "https://github.com/headkaze/Hackintool/releases/download/#{version}/Hackintool.zip"
   appcast "https://github.com/headkaze/Hackintool/releases.atom"
   name "Hackintool"
+  desc "Hackintosh patching tool"
   homepage "https://github.com/headkaze/Hackintool"
 
   auto_updates true

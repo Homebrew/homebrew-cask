@@ -5,6 +5,7 @@ cask "jetbrains-toolbox" do
   url "https://download.jetbrains.com/toolbox/jetbrains-toolbox-#{version}.dmg"
   appcast "https://data.services.jetbrains.com/products/releases?code=TBA&latest=true&type=release"
   name "JetBrains Toolbox"
+  desc "JetBrains tools manager"
   homepage "https://www.jetbrains.com/toolbox/app/"
 
   auto_updates true

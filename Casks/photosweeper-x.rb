@@ -5,6 +5,7 @@ cask "photosweeper-x" do
   url "https://overmacs.com/downloads/PhotoSweeper_X.dmg"
   appcast "https://overmacs.com/feeds/photosweeper_update.xml"
   name "PhotoSweeper X"
+  desc "Tool to eliminate similar or duplicate photos"
   homepage "https://overmacs.com/"
 
   depends_on macos: ">= :sierra"

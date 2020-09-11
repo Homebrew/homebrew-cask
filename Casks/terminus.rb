@@ -6,6 +6,7 @@ cask "terminus" do
   url "https://github.com/Eugeny/terminus/releases/download/v#{version}/terminus-#{version}-macos.zip"
   appcast "https://github.com/Eugeny/terminus/releases.atom"
   name "Terminus"
+  desc "Terminal for a more modern age"
   homepage "https://eugeny.github.io/terminus/"
 
   app "Terminus.app"

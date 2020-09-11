@@ -7,6 +7,7 @@ cask "tiger-trade" do
   appcast "https://up.play-analytics.com/app/upgrade/latest?lang=zh_CN&platform=darwin&appVer=1"
   name "Tiger Trade"
   name "老虎证券"
+  desc "Trading platform"
   homepage "https://www.itiger.com/download/mac"
 
   depends_on macos: ">= :sierra"

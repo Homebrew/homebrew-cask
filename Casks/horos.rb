@@ -13,6 +13,7 @@ cask "horos" do
   url "https://horosproject.org/horos-content/Horos#{version}.dmg"
   appcast "https://github.com/horosproject/horos/releases.atom"
   name "Horos – Free, open medical image viewer"
+  desc "Medical image viewer"
   homepage "https://horosproject.org/"
 
   app "Horos.app"

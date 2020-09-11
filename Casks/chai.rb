@@ -5,6 +5,7 @@ cask "chai" do
   url "https://github.com/lvillani/chai/releases/download/v#{version}/Chai-v#{version}.zip"
   appcast "https://github.com/lvillani/chai/releases.atom"
   name "Chai"
+  desc "Utility to prevent the system from going to sleep"
   homepage "https://github.com/lvillani/chai"
 
   depends_on macos: ">= :sierra"

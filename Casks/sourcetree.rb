@@ -21,6 +21,7 @@ cask "sourcetree" do
 
   appcast "https://product-downloads.atlassian.com/software/sourcetree/Appcast/SparkleAppcastGroup0.xml"
   name "Atlassian SourceTree"
+  desc "Graphical client for Git version control"
   homepage "https://www.sourcetreeapp.com/"
 
   auto_updates true

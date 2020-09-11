@@ -5,6 +5,7 @@ cask "gitify" do
   url "https://github.com/manosim/gitify/releases/download/v#{version}/Gitify-#{version}-mac.zip"
   appcast "https://github.com/manosim/gitify/releases.atom"
   name "Gitify"
+  desc "App that shows GitHub notifications on the desktop"
   homepage "https://github.com/manosim/gitify"
 
   app "Gitify.app"

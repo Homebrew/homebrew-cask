@@ -5,6 +5,7 @@ cask "rcloneosx" do
   url "https://github.com/rsyncOSX/rcloneosx/releases/download/v#{version}/rcloneosx.#{version}.dmg"
   appcast "https://github.com/rsyncOSX/rcloneosx/releases.atom"
   name "RcloneOSX"
+  desc "GUI for rclone"
   homepage "https://github.com/rsyncOSX/rcloneosx"
 
   depends_on formula: "rclone"

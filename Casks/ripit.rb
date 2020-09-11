@@ -5,6 +5,7 @@ cask "ripit" do
   url "http://files.thelittleappfactory.com/ripit/RipIt.zip"
   appcast "http://files.thelittleappfactory.com/ripit/appcast.xml"
   name "RipIt"
+  desc "DVD ripper"
   homepage "http://thelittleappfactory.com/ripit/"
 
   auto_updates true

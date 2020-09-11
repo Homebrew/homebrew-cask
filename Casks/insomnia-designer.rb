@@ -6,6 +6,7 @@ cask "insomnia-designer" do
   url "https://github.com/Kong/insomnia/releases/download/designer%40#{version}/Insomnia.Designer-#{version}.dmg"
   appcast "https://api.insomnia.rest/changelog.json?app=com.insomnia.designer"
   name "Insomnia Designer"
+  desc "API design platform for GraphQL and REST"
   homepage "https://insomnia.rest/"
 
   auto_updates true

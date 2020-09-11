@@ -5,6 +5,7 @@ cask "protonmail-unofficial" do
   url "https://github.com/protonmail-desktop/application/releases/download/v#{version}/protonmail-desktop-unofficial-#{version}.dmg"
   appcast "https://github.com/protonmail-desktop/application/releases.atom"
   name "Protonmail Desktop"
+  desc "Unofficial Electron wrapper for ProtonMail"
   homepage "https://github.com/protonmail-desktop/application"
 
   app "Protonmail Desktop (unofficial).app"

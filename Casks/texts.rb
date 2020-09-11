@@ -5,6 +5,7 @@ cask "texts" do
   url "http://www.texts.io/Texts-#{version}.dmg"
   appcast "http://www.texts.io/download/"
   name "Texts"
+  desc "Word processor that uses plain text Markdown"
   homepage "http://www.texts.io/"
 
   app "Texts.app"

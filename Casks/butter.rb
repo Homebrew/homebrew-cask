@@ -5,6 +5,7 @@ cask "butter" do
   url "https://github.com/harukasan/butter/releases/download/v#{version}/Butter_#{version}.dmg"
   appcast "https://github.com/harukasan/butter/releases.atom"
   name "Butter"
+  desc "Melted idobata.io client"
   homepage "https://github.com/harukasan/butter"
 
   app "Butter.app"

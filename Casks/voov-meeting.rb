@@ -7,6 +7,7 @@ cask "voov-meeting" do
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://voovmeeting.com/download/darwin"
   name "VooV Meeting"
   name "Tencent Meeting International Version"
+  desc "Cross-border video conferencing software"
   homepage "https://voovmeeting.com/"
 
   app "VooV Meeting.app"

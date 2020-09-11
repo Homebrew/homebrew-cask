@@ -5,6 +5,7 @@ cask "moneywiz" do
   url "https://mac.wiz.money/MoneyWiz_Mac_Free.dmg"
   appcast "https://macdistribution.wiz.money/version_info_free.xml"
   name "MoneyWiz"
+  desc "Finance management application"
   homepage "https://wiz.money/"
 
   depends_on macos: ">= :sierra"

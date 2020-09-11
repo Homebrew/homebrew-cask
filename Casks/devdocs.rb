@@ -5,6 +5,7 @@ cask "devdocs" do
   url "https://github.com/egoist/devdocs-desktop/releases/download/v#{version}/DevDocs-#{version}.dmg"
   appcast "https://github.com/egoist/devdocs-desktop/releases.atom"
   name "DevDocs App"
+  desc "Full-featured desktop app for DevDocs.io"
   homepage "https://github.com/egoist/devdocs-desktop/"
 
   app "DevDocs.app"

@@ -4,6 +4,7 @@ cask "surfshark" do
 
   url "https://downloads.surfshark.com/macOS/latest/Surfshark.dmg"
   name "Surfshark"
+  desc "VPN client for secure internet access and private browsing"
   homepage "https://surfshark.com/"
 
   app "Surfshark.app"

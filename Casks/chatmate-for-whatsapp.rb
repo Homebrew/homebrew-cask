@@ -6,6 +6,7 @@ cask "chatmate-for-whatsapp" do
   url "https://dl.devmate.com/net.coldx.mac.WhatsApp/#{version.after_comma.before_colon}/#{version.after_colon}/ChatMateforWhatsApp-#{version.after_comma.before_colon}.zip"
   appcast "https://updates.devmate.com/net.coldx.mac.WhatsApp.xml"
   name "ChatMate for WhatsApp"
+  desc "Extension app WhatsApp"
   homepage "https://chatmate.io/"
 
   depends_on macos: ">= :sierra"

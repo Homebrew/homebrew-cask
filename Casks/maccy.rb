@@ -6,6 +6,7 @@ cask "maccy" do
   url "https://github.com/p0deje/Maccy/releases/download/#{version}/Maccy.app.zip"
   appcast "https://github.com/p0deje/Maccy/releases.atom"
   name "Maccy"
+  desc "Clipboard manager"
   homepage "https://maccy.app/"
 
   auto_updates true

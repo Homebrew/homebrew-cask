@@ -5,6 +5,7 @@ cask "camera-live" do
   url "https://github.com/v002/v002-Camera-Live/releases/download/#{version}/Camera.Live.zip"
   appcast "https://github.com/v002/v002-Camera-Live/releases.atom"
   name "Camera Live"
+  desc "Live Syphon Camera"
   homepage "https://github.com/v002/v002-Camera-Live"
 
   app "Camera Live.app"

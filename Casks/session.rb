@@ -6,6 +6,7 @@ cask "session" do
   url "https://github.com/loki-project/session-desktop/releases/download/v#{version}/session-messenger-desktop-mac-#{version}.dmg"
   appcast "https://github.com/loki-project/session-desktop/releases.atom"
   name "Session"
+  desc "Onion routing based messenger"
   homepage "https://getsession.org/"
 
   app "Session.app"

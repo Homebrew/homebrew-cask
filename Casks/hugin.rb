@@ -6,6 +6,7 @@ cask "hugin" do
   url "https://downloads.sourceforge.net/hugin/Hugin-#{version}.dmg"
   appcast "https://sourceforge.net/projects/hugin/rss"
   name "Hugin"
+  desc "Cross-platform panorama photo stitcher"
   homepage "https://hugin.sourceforge.io/"
 
   suite "Hugin"

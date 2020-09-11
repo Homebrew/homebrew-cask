@@ -4,6 +4,7 @@ cask "candybar" do
 
   url "https://download.panic.com/candybar/CandyBar%20#{version}.zip"
   name "CandyBar"
+  desc "Tool to modify file icons"
   homepage "https://panic.com/blog/candybar-mountain-lion-and-beyond/"
 
   app "CandyBar.app"

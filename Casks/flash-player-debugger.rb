@@ -5,6 +5,7 @@ cask "flash-player-debugger" do
   url "https://fpdownload.adobe.com/pub/flashplayer/updaters/#{version.major}/flashplayer_#{version.major}_sa_debug.dmg"
   appcast "https://www.adobe.com/support/flashplayer/debug_downloads.html"
   name "Adobe Flash Player projector content debugger"
+  desc "Debugger for Adobe Flash player"
   homepage "https://www.adobe.com/support/flashplayer/debug_downloads.html"
 
   # Renamed to avoid conflict with flash-player.

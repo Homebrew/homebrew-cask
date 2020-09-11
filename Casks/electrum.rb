@@ -5,6 +5,7 @@ cask "electrum" do
   url "https://download.electrum.org/#{version}/electrum-#{version}.dmg"
   appcast "https://github.com/spesmilo/electrum/releases.atom"
   name "Electrum"
+  desc "Bitcoin thin client"
   homepage "https://electrum.org/"
 
   app "Electrum.app"

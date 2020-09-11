@@ -5,6 +5,7 @@ cask "knuff" do
   url "https://github.com/KnuffApp/Knuff/releases/download/v#{version}/Knuff.app.zip"
   appcast "https://github.com/KnuffApp/Knuff/releases.atom"
   name "Knuff"
+  desc "Debug application for Apple Push Notification Service (APNs)"
   homepage "https://github.com/KnuffApp/Knuff"
 
   app "Knuff.app"

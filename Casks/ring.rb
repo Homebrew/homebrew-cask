@@ -6,6 +6,7 @@ cask "ring" do
   url "https://ring-mac-app-assets.s3.amazonaws.com/production/Ring_#{version}.zip"
   appcast "https://ring-mac-app-assets.s3.amazonaws.com/production/ring-appcast.xml"
   name "Ring"
+  desc "Client for Ring’s Wi-Fi connected video doorbells and security cameras"
   homepage "https://ring.com/"
 
   auto_updates true

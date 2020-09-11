@@ -5,6 +5,7 @@ cask "onionshare" do
   url "https://onionshare.org/dist/#{version}/OnionShare-#{version}.pkg"
   appcast "https://github.com/micahflee/onionshare/releases.atom"
   name "OnionShare"
+  desc "Securely and anonymously send and receive files"
   homepage "https://onionshare.org/"
 
   pkg "OnionShare-#{version}.pkg"

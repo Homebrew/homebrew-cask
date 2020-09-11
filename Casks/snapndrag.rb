@@ -5,6 +5,7 @@ cask "snapndrag" do
   url "https://yellowmug.com/download/SnapNDrag_#{version}.dmg"
   appcast "https://yellowmug.com/snapndrag/appcast-1014.xml"
   name "SnapNDrag"
+  desc "Screen capture application"
   homepage "https://www.yellowmug.com/snapndrag/"
 
   app "SnapNDrag.app"

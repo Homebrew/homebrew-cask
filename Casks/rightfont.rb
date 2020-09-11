@@ -5,6 +5,7 @@ cask "rightfont" do
   url "https://rightfontapp.com/update/rightfont.zip"
   appcast "https://rightfontapp.com/update/appcast#{version.major}.xml"
   name "RightFont"
+  desc "Font manager that helps preview, install, sync and manage fonts"
   homepage "https://rightfontapp.com/"
 
   auto_updates true

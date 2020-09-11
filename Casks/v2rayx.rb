@@ -6,6 +6,7 @@ cask "v2rayx" do
   url "https://github.com/Cenmrev/V2RayX/releases/download/v#{version}/V2RayX.app.zip"
   appcast "https://github.com/Cenmrev/V2RayX/releases.atom"
   name "V2RayX"
+  desc "GUI for v2ray-core"
   homepage "https://github.com/Cenmrev/V2RayX"
 
   app "V2RayX.app"

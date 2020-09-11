@@ -5,6 +5,7 @@ cask "kiwix" do
   url "https://download.kiwix.org/release/kiwix-desktop-macos/kiwix-desktop-macos_#{version}.dmg"
   appcast "https://www.macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://download.kiwix.org/release/kiwix-desktop-macos/kiwix-desktop-macos.dmg"
   name "Kiwix"
+  desc "App providing offline access to Wikipedia and many other web sites"
   homepage "https://www.kiwix.org/"
 
   app "Kiwix.app"

@@ -5,6 +5,7 @@ cask "scroll-reverser" do
   url "https://pilotmoon.com/downloads/ScrollReverser-#{version}.zip"
   appcast "https://softwareupdate.pilotmoon.com/update/scrollreverser/appcast.xml"
   name "Scroll Reverser"
+  desc "Tool to reverse the direction of scrolling"
   homepage "https://pilotmoon.com/scrollreverser/"
 
   app "Scroll Reverser.app"

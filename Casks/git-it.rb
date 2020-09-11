@@ -5,6 +5,7 @@ cask "git-it" do
   url "https://github.com/jlord/git-it-electron/releases/download/#{version}/Git-it-Mac-x64.zip"
   appcast "https://github.com/jlord/git-it-electron/releases.atom"
   name "Git-it"
+  desc "Desktop app for learning Git and GitHub"
   homepage "https://github.com/jlord/git-it-electron"
 
   app "Git-it-Mac-x64/Git-it.app"

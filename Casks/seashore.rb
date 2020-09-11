@@ -5,6 +5,7 @@ cask "seashore" do
   url "https://github.com/robaho/seashore/releases/download/v#{version}/seashore-bin-#{version}.dmg"
   appcast "https://github.com/robaho/seashore/releases.atom"
   name "Seashore"
+  desc "Image editing application similar to GIMP"
   homepage "https://github.com/robaho/seashore"
 
   app "Seashore.app"

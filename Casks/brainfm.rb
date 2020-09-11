@@ -5,6 +5,7 @@ cask "brainfm" do
   url "https://github.com/Dinius/Brain.fm-Desktop-Client/releases/download/v#{version}/brainfm-macos.zip"
   appcast "https://github.com/Dinius/Brain.fm-Desktop-Client/releases.atom"
   name "Brain.fm"
+  desc "Desktop client for brain.fm"
   homepage "https://github.com/Dinius/Brain.fm-Desktop-Client"
 
   app "Brain.fm.app"

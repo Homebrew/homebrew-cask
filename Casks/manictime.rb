@@ -5,6 +5,7 @@ cask "manictime" do
   url "https://cdn.manictime.com/setup/mac/ManicTime-v#{version}.dmg"
   appcast "https://www.manictime.com/mac/download"
   name "ManicTime"
+  desc "Time tracker that automatically collects computer usage data"
   homepage "https://www.manictime.com/Mac"
 
   depends_on macos: ">= :sierra"

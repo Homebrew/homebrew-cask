@@ -6,6 +6,7 @@ cask "swifty" do
   url "https://github.com/swiftyapp/swifty/releases/download/v#{version}/Swifty-#{version}.dmg"
   appcast "https://github.com/swiftyapp/swifty/releases.atom"
   name "Swifty"
+  desc "Offline password manager tool"
   homepage "https://getswifty.pro/"
 
   auto_updates true

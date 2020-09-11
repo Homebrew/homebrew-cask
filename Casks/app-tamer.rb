@@ -5,6 +5,7 @@ cask "app-tamer" do
   url "https://www.stclairsoft.com/download/AppTamer-#{version}.dmg"
   appcast "https://www.stclairsoft.com/cgi-bin/sparkle.cgi?AT"
   name "AppTamer"
+  desc "CPU management applicataion"
   homepage "https://www.stclairsoft.com/AppTamer/"
 
   app "App Tamer.app"

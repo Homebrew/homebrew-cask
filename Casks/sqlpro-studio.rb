@@ -6,6 +6,7 @@ cask "sqlpro-studio" do
   url "https://d3fwkemdw8spx3.cloudfront.net/studio/SQLProStudio.#{version}.app.zip"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?user_agent=Macintosh&url=https://www.sqlprostudio.com/download.php"
   name "SQLPro Studio"
+  desc "Database management tool"
   homepage "https://www.sqlprostudio.com/"
 
   app "SQLPro Studio.app"

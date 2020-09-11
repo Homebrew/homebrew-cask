@@ -5,6 +5,7 @@ cask "integrity" do
   url "https://peacockmedia.software/mac/integrity/integrity.dmg"
   appcast "https://peacockmedia.software/mac/integrity/version_history.html"
   name "Integrity"
+  desc "Tool to scans a website checking for broken links"
   homepage "https://peacockmedia.software/mac/integrity/"
 
   app "Integrity.app"

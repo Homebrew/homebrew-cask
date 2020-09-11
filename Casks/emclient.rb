@@ -5,6 +5,7 @@ cask "emclient" do
   url "https://cdn-dist.emclient.com/dist/v#{version}_Mac/setup.pkg"
   appcast "https://www.emclient.com/release-history?os=mac"
   name "eM Client"
+  desc "Email client"
   homepage "https://www.emclient.com/"
 
   auto_updates true

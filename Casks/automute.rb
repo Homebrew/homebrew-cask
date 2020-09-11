@@ -5,6 +5,7 @@ cask "automute" do
   url "https://github.com/Lorenzo45/AutoMute/releases/download/v#{version}/AutoMute.zip"
   appcast "https://github.com/Lorenzo45/AutoMute/releases.atom"
   name "AutoMute"
+  desc "Mute or unmute the system based on the current Wi-Fi network"
   homepage "https://github.com/Lorenzo45/AutoMute"
 
   app "AutoMute.app"

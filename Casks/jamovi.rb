@@ -6,6 +6,7 @@ cask "jamovi" do
   appcast "https://www.jamovi.org/download.html",
           must_contain: "solid</td><td>.dmg</td><td>#{version.chomp(".0")}"
   name "jamovi"
+  desc "Free and open statistical software"
   homepage "https://www.jamovi.org/"
 
   auto_updates true

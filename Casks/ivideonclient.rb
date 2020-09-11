@@ -6,6 +6,7 @@ cask "ivideonclient" do
   url "https://updates.iv-cdn.com/bundles/ivideon_client/#{version}/IvideonClient_#{version}_macosx-x86-64.dmg"
   appcast "https://www.ivideon.com/downloads/"
   name "Ivideon Client"
+  desc "App to watch Ivideon’s cloud-based surveillance videos"
   homepage "https://www.ivideon.com/"
 
   app "IvideonClient.app"

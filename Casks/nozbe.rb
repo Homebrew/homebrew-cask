@@ -4,6 +4,7 @@ cask "nozbe" do
 
   url "https://files.nozbe.com/#{version.no_dots}/release/Nozbe.app.zip"
   name "Nozbe"
+  desc "Task manager"
   homepage "https://nozbe.com/"
 
   depends_on macos: ">= :sierra"

@@ -11,6 +11,7 @@ cask "coteditor" do
   url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
   appcast "https://github.com/coteditor/CotEditor/releases.atom"
   name "CotEditor"
+  desc "Plain-text editor for web pages, program source codes and more"
   homepage "https://coteditor.com/"
 
   auto_updates true

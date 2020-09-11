@@ -7,6 +7,7 @@ cask "macs-fan-control" do
   appcast "https://github.com/crystalidea/macs-fan-control/releases.atom",
           must_contain: version.major_minor_patch
   name "Macs Fan Control"
+  desc "Controls and monitors all fans on Apple computers"
   homepage "https://www.crystalidea.com/macs-fan-control"
 
   auto_updates true

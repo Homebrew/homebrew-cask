@@ -4,6 +4,7 @@ cask "mcgimp" do
 
   url "https://www.partha.com/downloads/GIMP/McGimp-#{version}.app.zip"
   name "McGimp"
+  desc "Recompiled GIMP installation"
   homepage "https://www.partha.com/"
 
   depends_on macos: ">= :mojave"

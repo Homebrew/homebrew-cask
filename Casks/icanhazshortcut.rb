@@ -5,6 +5,7 @@ cask "icanhazshortcut" do
   url "https://github.com/deseven/icanhazshortcut/releases/download/#{version}/ichs.dmg"
   appcast "https://github.com/deseven/icanhazshortcut/releases.atom"
   name "iCanHazShortcut"
+  desc "Shortcut manager"
   homepage "https://github.com/deseven/icanhazshortcut/"
 
   app "iCanHazShortcut.app"

@@ -5,6 +5,7 @@ cask "tg-pro" do
   url "https://www.tunabellysoftware.com/resources/TG%20Pro%20#{version}.dmg"
   appcast "https://www.tunabellysoftware.com/resources/sparkle/tgpro.xml"
   name "TG Pro"
+  desc "Temperature monitoring, fan control and diagnostics"
   homepage "https://www.tunabellysoftware.com/tgpro/"
 
   app "TG Pro.app"

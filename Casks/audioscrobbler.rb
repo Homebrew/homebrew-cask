@@ -5,6 +5,7 @@ cask "audioscrobbler" do
   url "https://github.com/mxcl/Audioscrobbler.app/releases/download/#{version}/Audioscrobbler-#{version}.zip"
   appcast "https://github.com/mxcl/Audioscrobbler.app/releases.atom"
   name "Audioscrobbler"
+  desc "Minimal, robust iTunes scrobbling"
   homepage "https://github.com/mxcl/Audioscrobbler.app"
 
   app "Audioscrobbler.app"

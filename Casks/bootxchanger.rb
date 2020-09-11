@@ -6,6 +6,7 @@ cask "bootxchanger" do
   url "https://github.com/zydeco/bootxchanger/releases/download/v#{version}/bootxchanger_#{version}.dmg"
   appcast "https://github.com/zydeco/bootxchanger/releases.atom"
   name "BootXChanger"
+  desc "Utility to change the boot logo on old Macs"
   homepage "https://namedfork.net/bootxchanger/"
 
   app "BootXChanger.app"

@@ -5,6 +5,7 @@ cask "codekit" do
   url "https://codekitapp.com/binaries/codekit-#{version.after_comma}.zip"
   appcast "https://codekitapp.com/api/#{version.major}/appcast.xml"
   name "CodeKit"
+  desc "App for building websites"
   homepage "https://codekitapp.com/"
 
   auto_updates true

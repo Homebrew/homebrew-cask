@@ -30,6 +30,7 @@ cask "seamonkey" do
   url "https://archive.mozilla.org/pub/seamonkey/releases/#{version}/mac/#{language}/seamonkey-#{version}.#{language}.mac.dmg"
   appcast "https://www.seamonkey-project.org/releases/"
   name "SeaMonkey"
+  desc "Development of SeaMonkey Internet Application Suite"
   homepage "https://www.seamonkey-project.org/"
 
   auto_updates true

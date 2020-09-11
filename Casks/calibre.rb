@@ -12,6 +12,7 @@ cask "calibre" do
   end
 
   name "calibre"
+  desc "E-books management software"
   homepage "https://calibre-ebook.com/"
 
   app "calibre.app"

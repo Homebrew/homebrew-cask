@@ -6,6 +6,7 @@ cask "reggy" do
   url "https://github.com/downloads/samsouder/reggy/Reggy_v#{version}.tbz"
   appcast "http://reggyapp.com/appcast.xml"
   name "Reggy"
+  desc "Interactive regular expression validator and tester"
   homepage "http://reggyapp.com/"
 
   app "Reggy.app"

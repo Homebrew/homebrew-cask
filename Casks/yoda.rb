@@ -5,6 +5,7 @@ cask "yoda" do
   url "https://github.com/whoisandy/yoda/releases/download/v#{version}/yoda-installer-#{version}.dmg"
   appcast "https://github.com/whoisandy/yoda/releases.atom"
   name "Yoda"
+  desc "App to browse and download YouTube videos"
   homepage "https://github.com/whoisandy/yoda"
 
   app "Yoda.app"

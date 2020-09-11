@@ -23,6 +23,7 @@ cask "omnifocus" do
 
   appcast "https://update.omnigroup.com/appcast/com.omnigroup.OmniFocus#{version.major}"
   name "OmniFocus"
+  desc "Scheduling application focusing on organization"
   homepage "https://www.omnigroup.com/omnifocus/"
 
   auto_updates true

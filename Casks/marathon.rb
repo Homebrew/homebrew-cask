@@ -6,6 +6,7 @@ cask "marathon" do
   url "https://github.com/Aleph-One-Marathon/alephone/releases/download/release-#{version}/Marathon-#{version}-Mac.dmg"
   appcast "https://github.com/Aleph-One-Marathon/alephone/releases.atom"
   name "Marathon"
+  desc "Bungie’s Marathon 2 game engine"
   homepage "https://alephone.lhowon.org/"
 
   app "Marathon.app"

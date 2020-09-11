@@ -6,6 +6,7 @@ cask "ballast" do
   url "https://github.com/jamsinclair/ballast/releases/download/v#{version}/ballast-v#{version}.zip"
   appcast "https://github.com/jamsinclair/ballast/releases.atom"
   name "ballast"
+  desc "Status Bar app to keep the audio balance from drifting"
   homepage "https://jamsinclair.nz/ballast"
 
   depends_on macos: ">= :sierra"

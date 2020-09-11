@@ -6,6 +6,7 @@ cask "ultimaker-cura" do
   appcast "https://github.com/Ultimaker/Cura/releases.atom"
   name "Ultimaker Cura"
   name "Cura"
+  desc "3D printer and slicing GUI"
   homepage "https://ultimaker.com/en/products/cura-software"
 
   app "Ultimaker Cura.app"

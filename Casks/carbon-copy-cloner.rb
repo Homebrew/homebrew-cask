@@ -6,6 +6,7 @@ cask "carbon-copy-cloner" do
   url "https://bombich.scdn1.secure.raxcdn.com/software/files/ccc-#{version}.zip"
   appcast "https://bombich.com/software/updates/ccc.php?os_major=10&os_minor=14&os_bugfix=0&ccc=#{version.split(".").last}&beta=0"
   name "Carbon Copy Cloner"
+  desc "Hard disk backup and cloning utility"
   homepage "https://bombich.com/"
 
   auto_updates true

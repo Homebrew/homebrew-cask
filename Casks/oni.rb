@@ -6,6 +6,7 @@ cask "oni" do
   url "https://github.com/onivim/oni/releases/download/v#{version}/Oni-#{version}-osx.dmg"
   appcast "https://github.com/onivim/oni/releases.atom"
   name "Oni"
+  desc "Modal text editor powered by Neovim"
   homepage "https://www.onivim.io/"
 
   app "Oni.app"

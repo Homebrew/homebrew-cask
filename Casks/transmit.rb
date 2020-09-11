@@ -5,6 +5,7 @@ cask "transmit" do
   url "https://www.panic.com/transmit/d/Transmit%20#{version}.zip"
   appcast "https://library.panic.com/releasenotes/transmit#{version.major}/"
   name "Transmit"
+  desc "File transfer application"
   homepage "https://panic.com/transmit/"
 
   auto_updates true

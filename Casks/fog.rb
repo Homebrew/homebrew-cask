@@ -5,6 +5,7 @@ cask "fog" do
   url "https://github.com/vitorgalvao/fog/releases/download/#{version}/Fog-#{version}-mac.zip"
   appcast "https://github.com/vitorgalvao/fog/releases.atom"
   name "Fog"
+  desc "Unofficial overcast.fm podcast app"
   homepage "https://github.com/vitorgalvao/fog"
 
   app "Fog.app"

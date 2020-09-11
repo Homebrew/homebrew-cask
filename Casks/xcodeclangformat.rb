@@ -5,6 +5,7 @@ cask "xcodeclangformat" do
   url "https://github.com/mapbox/XcodeClangFormat/releases/download/v#{version}/XcodeClangFormat.zip"
   appcast "https://github.com/mapbox/XcodeClangFormat/releases.atom"
   name "XcodeClangFormat"
+  desc "Format code in Xcode with clang-format"
   homepage "https://github.com/mapbox/XcodeClangFormat"
 
   app "XcodeClangFormat.app"

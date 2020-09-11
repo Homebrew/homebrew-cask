@@ -38,6 +38,7 @@ cask "cocktail" do
   end
 
   name "Cocktail"
+  desc "Cleans, repairs and optimizes computer systems"
   homepage "https://www.maintain.se/cocktail/"
 
   app "Cocktail.app"

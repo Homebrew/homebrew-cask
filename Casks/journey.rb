@@ -6,6 +6,7 @@ cask "journey" do
   url "https://github.com/2-App-Studio/journey-releases/releases/download/v#{version}/Journey-darwin-#{version}.zip"
   appcast "https://github.com/2-App-Studio/journey-releases/releases.atom"
   name "Journey"
+  desc "Diary app"
   homepage "https://2appstudio.com/journey/"
 
   auto_updates true

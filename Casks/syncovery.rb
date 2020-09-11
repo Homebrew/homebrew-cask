@@ -5,6 +5,7 @@ cask "syncovery" do
   url "https://www.syncovery.com/release/SyncoveryMac#{version}.dmg"
   appcast "https://www.syncovery.com/download/mac/"
   name "Syncovery"
+  desc "File synchronization and backup software"
   homepage "https://www.syncovery.com/"
 
   pkg "SyncoveryMac (double-click to install).pkg"

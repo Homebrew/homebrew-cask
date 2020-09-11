@@ -4,6 +4,7 @@ cask "sf-symbols" do
 
   url "https://developer.apple.com/design/downloads/SF-Symbols.dmg"
   name "SF Symbols"
+  desc "Tool that provides consistent, highly configurable symbols for apps"
   homepage "https://developer.apple.com/design/human-interface-guidelines/sf-symbols/overview/"
 
   depends_on macos: ">= :mojave"

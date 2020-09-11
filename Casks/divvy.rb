@@ -5,6 +5,7 @@ cask "divvy" do
   url "https://mizage.com/downloads/Divvy_#{version}.zip"
   appcast "https://mizage.com/updates/profiles/divvy.php"
   name "Divvy"
+  desc "Application window manager focusing on simplicity"
   homepage "https://mizage.com/divvy/"
 
   app "Divvy.app"

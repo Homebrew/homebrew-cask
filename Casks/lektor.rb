@@ -6,6 +6,7 @@ cask "lektor" do
   url "https://github.com/lektor/lektor/releases/download/#{version}/Lektor-#{version}.dmg"
   appcast "https://github.com/lektor/lektor/releases.atom"
   name "Lektor"
+  desc "Static file content management system"
   homepage "https://www.getlektor.com/"
 
   app "Lektor.app"

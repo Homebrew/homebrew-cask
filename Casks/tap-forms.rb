@@ -6,6 +6,7 @@ cask "tap-forms" do
   url "https://vendors.paddle.com/download/product/503174"
   appcast "https://www.tapforms.com/app/tf-mac-#{version.major}.1-sparkle-appcast.xml"
   name "Tap Forms 5"
+  desc "Helps to organize important files in one place"
   homepage "https://www.tapforms.com/"
 
   app "Tap Forms Mac #{version.major}.app"

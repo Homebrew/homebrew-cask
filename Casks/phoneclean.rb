@@ -4,6 +4,7 @@ cask "phoneclean" do
 
   url "https://dl.imobie.com/phoneclean.zip"
   name "PhoneClean"
+  desc "Cleans and maintains iPhones"
   homepage "https://www.imobie.com/phoneclean/"
 
   app "PhoneClean.app"

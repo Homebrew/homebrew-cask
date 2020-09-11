@@ -5,6 +5,7 @@ cask "apple-juice" do
   url "https://github.com/raphaelhanneken/apple-juice/releases/download/#{version}/Apple.Juice.dmg"
   appcast "https://github.com/raphaelhanneken/apple-juice/releases.atom"
   name "Apple Juice"
+  desc "Battery gauge that displays the remaining battery time and more"
   homepage "https://github.com/raphaelhanneken/apple-juice"
 
   depends_on macos: ">= :sierra"

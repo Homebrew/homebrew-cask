@@ -6,6 +6,7 @@ cask "veusz" do
   url "https://github.com/veusz/veusz/releases/download/veusz-#{version}/veusz-#{version}-AppleOSX.dmg"
   appcast "https://github.com/veusz/veusz/releases.atom"
   name "Veusz"
+  desc "Scientific plotting application"
   homepage "https://veusz.github.io/"
 
   app "Veusz.app"

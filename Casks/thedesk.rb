@@ -6,6 +6,7 @@ cask "thedesk" do
   url "https://github.com/cutls/TheDesk/releases/download/v#{version}/TheDesk-#{version}.dmg"
   appcast "https://github.com/cutls/TheDesk/releases.atom"
   name "TheDesk"
+  desc "Mastodon/Misskey Client for PC"
   homepage "https://thedesk.top/"
 
   app "TheDesk.app"

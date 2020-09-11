@@ -5,6 +5,7 @@ cask "permute" do
   url "https://trial.charliemonroe.net/permute/v#{version.major}/Permute_#{version.major}_#{version.after_comma}.dmg"
   appcast "https://trial.charliemonroe.net/permute/updates_#{version.major}.xml"
   name "Permute"
+  desc "Converts and edits video, audio or image files"
   homepage "https://software.charliemonroe.net/permute.php"
 
   auto_updates true

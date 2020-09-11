@@ -6,6 +6,7 @@ cask "colorsnapper" do
   url "https://cs2-binaries.s3.amazonaws.com/ColorSnapper2-#{version.dots_to_underscores}.zip"
   appcast "https://cs2-appcast.s3.amazonaws.com/appcast.xml"
   name "ColorSnapper 2"
+  desc "Color picking application"
   homepage "https://colorsnapper.com/"
 
   app "ColorSnapper2.app"

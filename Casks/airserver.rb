@@ -5,6 +5,7 @@ cask "airserver" do
   url "https://dl.airserver.com/mac/AirServer-#{version}.dmg"
   appcast "https://www.airserver.com/downloads/mac/appcast.xml"
   name "AirServer"
+  desc "Screen mirroring receiver"
   homepage "https://www.airserver.com/"
 
   app "AirServer.app"

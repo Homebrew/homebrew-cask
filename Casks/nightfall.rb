@@ -5,6 +5,7 @@ cask "nightfall" do
   url "https://github.com/r-thomson/Nightfall/releases/download/v#{version}/Nightfall.dmg"
   appcast "https://github.com/r-thomson/Nightfall/releases.atom"
   name "Nightfall"
+  desc "Menu bar utility for toggling dark mode"
   homepage "https://github.com/r-thomson/Nightfall/"
 
   depends_on macos: ">= :catalina"

@@ -17,6 +17,7 @@ cask "monolingual" do
   url "https://github.com/IngmarStein/Monolingual/releases/download/v#{version}/Monolingual-#{version}.dmg"
   appcast "https://github.com/IngmarStein/Monolingual/releases.atom"
   name "Monolingual"
+  desc "Utility to remove unnecessary language resources from the system"
   homepage "https://ingmarstein.github.io/Monolingual/"
 
   app "Monolingual.app"

@@ -5,6 +5,7 @@ cask "menubar-stats" do
   url "https://seense.com/menubarstats/updateapp/mbs.zip"
   appcast "https://www.seense.com/menubarstats/updateapp/appcast.xml"
   name "MenuBar Stats"
+  desc "System monitor with temperature & fans plugins"
   homepage "https://seense.com/menubarstats/"
 
   depends_on macos: ">= :sierra"

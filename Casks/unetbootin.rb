@@ -6,6 +6,7 @@ cask "unetbootin" do
   url "https://github.com/unetbootin/unetbootin/releases/download/#{version}/unetbootin-mac-#{version}.dmg"
   appcast "https://github.com/unetbootin/unetbootin/releases.atom"
   name "UNetbootin"
+  desc "Tool to install Linux/BSD distributions to a partition or USB drive"
   homepage "https://unetbootin.github.io/"
 
   app "unetbootin.app"

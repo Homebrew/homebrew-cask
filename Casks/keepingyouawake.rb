@@ -6,7 +6,7 @@ cask "keepingyouawake" do
   url "https://github.com/newmarcel/KeepingYouAwake/releases/download/#{version}/KeepingYouAwake-#{version}.zip"
   appcast "https://github.com/newmarcel/KeepingYouAwake/releases.atom"
   name "KeepingYouAwake"
-  desc "Prevents your computer from going to sleep"
+  desc "Tool to prevent the system from going into sleep mode"
   homepage "https://keepingyouawake.app/"
 
   auto_updates true

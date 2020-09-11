@@ -5,6 +5,7 @@ cask "plex" do
   url "https://downloads.plex.tv/plex-desktop/#{version}/macos/Plex-#{version}-x86_64.zip"
   appcast "https://plex.tv/api/downloads/6.json"
   name "Plex"
+  desc "Home media server"
   homepage "https://www.plex.tv/"
 
   auto_updates true

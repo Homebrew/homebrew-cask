@@ -5,6 +5,7 @@ cask "unclutter" do
   url "https://unclutterapp.com/files/Unclutter.zip"
   appcast "https://unclutterapp.com/updates/"
   name "Unclutter"
+  desc "Desktop storage area for notes, files and pasteboard clips"
   homepage "https://unclutterapp.com/"
 
   app "Unclutter.app"

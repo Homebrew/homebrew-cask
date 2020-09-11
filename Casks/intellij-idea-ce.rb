@@ -6,6 +6,7 @@ cask "intellij-idea-ce" do
   appcast "https://data.services.jetbrains.com/products/releases?code=IIC&latest=true&type=release"
   name "IntelliJ IDEA Community Edition"
   name "IntelliJ IDEA CE"
+  desc "IDE for Java development - community edition"
   homepage "https://www.jetbrains.com/idea/"
 
   auto_updates true

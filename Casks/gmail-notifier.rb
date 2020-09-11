@@ -5,6 +5,7 @@ cask "gmail-notifier" do
   url "https://github.com/jashephe/Gmail-Notifier/releases/download/v#{version}/Gmail.Notifier.v#{version}.zip"
   appcast "https://github.com/jashephe/Gmail-Notifier/releases.atom"
   name "Gmail Notifier"
+  desc "Minimalist Gmail inbox notifications app"
   homepage "https://github.com/jashephe/Gmail-Notifier"
 
   app "Gmail Notifier.app"

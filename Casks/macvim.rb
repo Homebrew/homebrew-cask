@@ -5,6 +5,7 @@ cask "macvim" do
   url "https://github.com/macvim-dev/macvim/releases/download/snapshot-#{version.after_comma}/MacVim.dmg"
   appcast "https://github.com/macvim-dev/macvim/releases.atom"
   name "MacVim"
+  desc "Text editor"
   homepage "https://github.com/macvim-dev/macvim"
 
   auto_updates true

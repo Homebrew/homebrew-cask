@@ -5,6 +5,7 @@ cask "shadowsocksx-ng-r" do
   url "https://github.com/qinyuhang/ShadowsocksX-NG-R/releases/download/#{version}/ShadowsocksX-NG-R8.dmg"
   appcast "https://github.com/qinyuhang/ShadowsocksX-NG-R/releases.atom"
   name "ShadowsocksX-NG-R"
+  desc "Next Generation of ShadowsocksX"
   homepage "https://github.com/qinyuhang/ShadowsocksX-NG-R/"
 
   conflicts_with cask: "shadowsocksx"

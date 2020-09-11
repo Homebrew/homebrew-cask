@@ -3,7 +3,8 @@ cask "java" do
   sha256 "386a96eeef63bf94b450809d69ceaa1c9e32a97230e0a120c1b41786b743ae84"
 
   url "https://download.java.net/java/GA/jdk#{version.before_comma}/#{version.after_colon}/#{version.after_comma.before_colon}/GPL/openjdk-#{version.before_comma}_osx-x64_bin.tar.gz"
-  name "OpenJDK Java Development Kit"
+  name "OpenJDK"
+  desc "Development kit for the Java programming language"
   homepage "https://openjdk.java.net/"
 
   artifact "jdk-#{version.before_comma}.jdk", target: "/Library/Java/JavaVirtualMachines/openjdk-#{version.before_comma}.jdk"

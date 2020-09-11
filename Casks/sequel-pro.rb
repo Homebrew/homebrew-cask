@@ -6,6 +6,7 @@ cask "sequel-pro" do
   url "https://github.com/sequelpro/sequelpro/releases/download/release-#{version}/sequel-pro-#{version}.dmg"
   appcast "https://github.com/sequelpro/sequelpro/releases.atom"
   name "Sequel Pro"
+  desc "MySQL/MariaDB database management platform"
   homepage "https://www.sequelpro.com/"
 
   app "Sequel Pro.app"

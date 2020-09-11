@@ -5,6 +5,7 @@ cask "harvest" do
   url "https://www.getharvest.com//harvest/mac/Harvest-#{version}.zip"
   appcast "https://www.getharvest.com/harvest/mac/appcast.xml"
   name "Harvest"
+  desc "Time tracking application"
   homepage "https://www.getharvest.com/mac-time-tracking"
 
   auto_updates true

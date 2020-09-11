@@ -5,6 +5,7 @@ cask "mattermost" do
   url "https://releases.mattermost.com/desktop/#{version}/mattermost-desktop-#{version}-mac.zip"
   appcast "https://github.com/mattermost/desktop/releases.atom"
   name "Mattermost"
+  desc "Open-source, self-hosted Slack-alternative"
   homepage "https://about.mattermost.com/"
 
   app "Mattermost.app"

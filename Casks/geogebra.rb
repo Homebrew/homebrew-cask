@@ -6,6 +6,7 @@ cask "geogebra" do
   appcast "https://download.geogebra.org/installers/#{version.major_minor}/version.txt",
           must_contain: version.dots_to_hyphens
   name "GeoGebra"
+  desc "Solve, save and share math problems, graph functions, etc"
   homepage "https://www.geogebra.org/"
 
   app "GeoGebra Classic #{version.major}.app"

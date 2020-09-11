@@ -5,6 +5,7 @@ cask "kubecontext" do
   url "https://github.com/turkenh/KubeContext/releases/download/v#{version}/KubeContext.zip"
   appcast "https://github.com/turkenh/KubeContext/releases.atom"
   name "KubeContext"
+  desc "Menu bar app for managing Kubernetes contexts"
   homepage "https://github.com/turkenh/KubeContext"
 
   app "KubeContext.app"

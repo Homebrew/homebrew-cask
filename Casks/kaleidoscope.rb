@@ -6,6 +6,7 @@ cask "kaleidoscope" do
   url "https://appcasts.hypergiant.com/ks/prod/Kaleidoscope-#{version.before_comma}-build-#{version.after_comma}.zip"
   appcast "https://appcasts.hypergiant.com/ks/prod/updates"
   name "Kaleidoscope"
+  desc "Spots differences in text and image files"
   homepage "https://www.kaleidoscopeapp.com/"
 
   auto_updates true

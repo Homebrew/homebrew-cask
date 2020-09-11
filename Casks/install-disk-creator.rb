@@ -4,6 +4,7 @@ cask "install-disk-creator" do
 
   url "https://macdaddy.io/InstallDiskCreator.zip"
   name "Install Disk Creator"
+  desc "Utility to create bootable system install disks"
   homepage "https://macdaddy.io/install-disk-creator/"
 
   app "Install Disk Creator.app"

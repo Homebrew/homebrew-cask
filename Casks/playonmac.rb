@@ -5,6 +5,7 @@ cask "playonmac" do
   url "https://repository.playonmac.com/PlayOnMac/PlayOnMac_#{version}.dmg"
   appcast "https://repository.playonmac.com/PlayOnMac/"
   name "PlayOnMac"
+  desc "Allows installation and use of software designed for Windows"
   homepage "https://www.playonmac.com/"
 
   app "PlayOnMac.app"

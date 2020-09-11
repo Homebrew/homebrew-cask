@@ -5,6 +5,7 @@ cask "open-in-code" do
   url "https://github.com/sozercan/OpenInCode/releases/download/v#{version}/OpenInCodeLight.zip"
   appcast "https://github.com/sozercan/OpenInCode/releases.atom"
   name "OpenInCode"
+  desc "Finder toolbar app to open current folder in Visual Studio Code"
   homepage "https://github.com/sozercan/OpenInCode"
 
   app "Open in Code.app"

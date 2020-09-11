@@ -5,6 +5,7 @@ cask "picgo" do
   url "https://github.com/Molunerfinn/PicGo/releases/download/v#{version}/PicGo-#{version}-mac.zip"
   appcast "https://github.com/Molunerfinn/PicGo/releases.atom"
   name "PicGo"
+  desc "Tool for uploading images"
   homepage "https://github.com/Molunerfinn/PicGo"
 
   app "PicGo.app"

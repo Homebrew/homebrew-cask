@@ -5,6 +5,7 @@ cask "a-better-finder-attributes" do
   url "https://www.publicspace.net/download/signedABFA#{version.major}.zip"
   appcast "https://www.publicspace.net/app/signed_abfa#{version.major}.xml"
   name "A Better Finder Attributes"
+  desc "File and photo tweaking tool"
   homepage "https://www.publicspace.net/ABetterFinderAttributes/"
 
   app "A Better Finder Attributes #{version.major}.app"

@@ -5,6 +5,7 @@ cask "amm" do
   url "https://github.com/15cm/AMM/releases/download/v#{version}/AMM_v#{version}.dmg"
   appcast "https://github.com/15cm/AMM/releases.atom"
   name "AMM"
+  desc "Aria2 Menubar Monitor"
   homepage "https://github.com/15cm/AMM"
 
   app "AMM.app"

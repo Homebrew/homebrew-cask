@@ -5,7 +5,8 @@ cask "pritunl" do
   # github.com/pritunl/pritunl-client-electron/ was verified as official when first introduced to the cask
   url "https://github.com/pritunl/pritunl-client-electron/releases/download/#{version}/Pritunl.pkg.zip"
   appcast "https://github.com/pritunl/pritunl-client-electron/releases.atom"
-  name "Pritunl OpenVPN Client"
+  name "Pritunl"
+  desc "OpenVPN client"
   homepage "https://client.pritunl.com/"
 
   pkg "Pritunl.pkg"

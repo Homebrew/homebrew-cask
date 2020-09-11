@@ -5,6 +5,7 @@ cask "airparrot" do
   url "https://download.airsquirrels.com/AirParrot#{version.major}/Mac/AirParrot-#{version}.dmg"
   appcast "https://www.airsquirrels.com/airparrot/release-notes/mac"
   name "AirParrot"
+  desc "Tool to wirelessly mirror the screen or stream media files"
   homepage "https://www.airsquirrels.com/airparrot/"
 
   app "AirParrot #{version.major}.app"

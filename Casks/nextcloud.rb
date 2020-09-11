@@ -10,6 +10,7 @@ cask "nextcloud" do
   url "https://download.nextcloud.com/desktop/releases/Mac/Installer/Nextcloud-#{version}.pkg"
   appcast "https://download.nextcloud.com/desktop/releases/Mac/Installer/"
   name "Nextcloud"
+  desc "Desktop sync client for Nextcloud software products"
   homepage "https://nextcloud.com/"
 
   depends_on macos: ">= :yosemite"

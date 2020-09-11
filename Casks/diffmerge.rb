@@ -4,6 +4,7 @@ cask "diffmerge" do
 
   url "http://download.sourcegear.com/DiffMerge/#{version.major_minor_patch}/DiffMerge.#{version}.intel.stable.dmg"
   name "DiffMerge"
+  desc "Visually compare and merge files"
   homepage "https://www.sourcegear.com/diffmerge/"
 
   app "DiffMerge.app"

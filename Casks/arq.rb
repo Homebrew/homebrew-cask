@@ -5,6 +5,7 @@ cask "arq" do
   url "https://www.arqbackup.com/download/arqbackup/Arq#{version.major}.pkg"
   appcast "https://www.arqbackup.com/download/arqbackup/arq#{version.major}_release_notes.html"
   name "Arq"
+  desc "Multi-cloud backup application"
   homepage "https://www.arqbackup.com/"
 
   auto_updates true

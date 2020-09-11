@@ -5,6 +5,7 @@ cask "freeze" do
   url "https://www.freezeapp.net/download/Freeze.zip"
   appcast "https://www.freezeapp.net/appcast.xml"
   name "Freeze"
+  desc "Amazon Glacier file transfer client"
   homepage "https://www.freezeapp.net/"
 
   app "Freeze.app"

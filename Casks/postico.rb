@@ -6,6 +6,7 @@ cask "postico" do
   url "https://eggerapps-downloads.s3.amazonaws.com/postico-#{version}.zip"
   appcast "https://eggerapps.at/postico/docs/?file=changelist.html"
   name "Postico"
+  desc "GUI client for PostgreSQL databases"
   homepage "https://eggerapps.at/postico/"
 
   app "Postico.app"

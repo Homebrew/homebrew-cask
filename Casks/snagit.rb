@@ -4,6 +4,7 @@ cask "snagit" do
 
   url "https://download.techsmith.com/snagitmac/releases/Snagit.dmg"
   name "Snagit"
+  desc "Screen capture software"
   homepage "https://www.techsmith.com/screen-capture.html"
 
   depends_on macos: ">= :sierra"

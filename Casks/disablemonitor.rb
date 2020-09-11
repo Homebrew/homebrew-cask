@@ -5,6 +5,7 @@ cask "disablemonitor" do
   url "https://github.com/Eun/DisableMonitor/releases/download/G#{version}/DisableMonitor-G#{version}.zip"
   appcast "https://github.com/Eun/DisableMonitor/releases.atom"
   name "DisableMonitor"
+  desc "Tool to enable or disable a monitor"
   homepage "https://github.com/Eun/DisableMonitor"
 
   app "DisableMonitor.app"

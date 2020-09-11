@@ -5,6 +5,7 @@ cask "writer" do
   url "https://github.com/HendrikNoeller/Writer/releases/download/#{version}/Writer.app.zip"
   appcast "https://github.com/HendrikNoeller/Writer/releases.atom"
   name "Writer"
+  desc "Screenwriting app based on the fountain language"
   homepage "https://github.com/HendrikNoeller/Writer"
 
   app "Writer.app"

@@ -5,6 +5,7 @@ cask "reflector" do
   url "https://download.airsquirrels.com/Reflector#{version.major}/Mac/Reflector-#{version}.dmg"
   appcast "https://updates.airsquirrels.com/Reflector#{version.major}/Mac/Reflector#{version.major}.xml"
   name "Reflector"
+  desc "Wireless screen-mirroring application"
   homepage "https://www.airsquirrels.com/reflector/"
 
   app "Reflector #{version.major}.app"

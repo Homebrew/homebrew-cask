@@ -5,6 +5,7 @@ cask "xit" do
   url "https://github.com/Uncommon/Xit/releases/download/#{version}/Xit.zip"
   appcast "https://github.com/Uncommon/Xit/releases.atom"
   name "Xit"
+  desc "GUI for the git version control system"
   homepage "https://github.com/Uncommon/Xit"
 
   depends_on macos: ">= :mojave"

@@ -5,6 +5,7 @@ cask "kawa" do
   url "https://github.com/utatti/kawa/releases/download/v#{version}/Kawa.zip"
   appcast "https://github.com/utatti/kawa/releases.atom"
   name "Kawa"
+  desc "Alternative input source switcher"
   homepage "https://github.com/utatti/kawa"
 
   app "Kawa.app"

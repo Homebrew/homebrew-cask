@@ -6,6 +6,7 @@ cask "storyboarder" do
   url "https://github.com/wonderunit/storyboarder/releases/download/v#{version}/Storyboarder-#{version}.dmg"
   appcast "https://github.com/wonderunit/storyboarder/releases.atom"
   name "Wonder Unit Storyboarder"
+  desc "Visualize a story as fast you can draw stick figures"
   homepage "https://wonderunit.com/storyboarder/"
 
   app "Storyboarder.app"

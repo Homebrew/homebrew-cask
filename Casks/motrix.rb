@@ -6,6 +6,7 @@ cask "motrix" do
   url "https://github.com/agalwood/Motrix/releases/download/v#{version}/Motrix-#{version}.dmg"
   appcast "https://github.com/agalwood/Motrix/releases.atom"
   name "Motrix"
+  desc "Open-source download manager"
   homepage "https://motrix.app/"
 
   app "Motrix.app"

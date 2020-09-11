@@ -5,6 +5,7 @@ cask "spectx" do
   url "https://get.spectx.com/03f21b939e022/SpectXDesktop-v#{version}.dmg"
   appcast "https://www.macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://go.spectx.com/get/?desktop-osx64"
   name "SpectX Desktop"
+  desc "Parse and investigate raw log files"
   homepage "https://www.spectx.com/"
 
   app "SpectXDesktop.app"

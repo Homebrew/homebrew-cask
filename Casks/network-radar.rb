@@ -5,6 +5,7 @@ cask "network-radar" do
   url "https://witt-software.com/downloads/networkradar/Network%20Radar.dmg"
   appcast "https://www.witt-software.com/releasenotes/?app=networkradar"
   name "Network Radar"
+  desc "Tool to scan and monitor the network"
   homepage "https://www.witt-software.com/networkradar"
 
   depends_on macos: ">= :el_capitan"

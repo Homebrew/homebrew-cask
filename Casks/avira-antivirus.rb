@@ -5,6 +5,7 @@ cask "avira-antivirus" do
   # install.avira-update.com/ was verified as official when first introduced to the cask
   url "https://install.avira-update.com/package/wks_avira/osx/int/pecl/Avira_Antivirus.pkg"
   name "Avira Antivirus"
+  desc "Antivirus and VPN software"
   homepage "https://www.avira.com/en/free-antivirus-mac/"
 
   depends_on macos: ">= :el_capitan"

@@ -5,6 +5,7 @@ cask "stremio" do
   url "https://dl.strem.io/shell-osx/v#{version}/Stremio+#{version}.dmg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.strem.io/download?platform=mac%26four=true"
   name "Stremio"
+  desc "Open-source media center"
   homepage "https://www.strem.io/"
 
   app "Stremio.app"

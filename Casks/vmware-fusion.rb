@@ -5,6 +5,7 @@ cask "vmware-fusion" do
   url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version}.dmg"
   appcast "https://softwareupdate.vmware.com/cds/vmw-desktop/fusion.xml"
   name "VMware Fusion"
+  desc "App to run other operating systems without rebooting"
   homepage "https://www.vmware.com/products/fusion.html"
 
   auto_updates true

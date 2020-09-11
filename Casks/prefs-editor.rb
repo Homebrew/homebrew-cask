@@ -5,6 +5,7 @@ cask "prefs-editor" do
   url "https://files.tempel.org/Various/OSX_Prefs_Editor/PrefsEditor-#{version}_64bit.zip"
   appcast "https://apps.tempel.org/PrefsEditor/appcast.xml"
   name "Prefs Editor"
+  desc "Graphical user interface for the 'defaults' command"
   homepage "https://apps.tempel.org/PrefsEditor/"
 
   app "Prefs Editor.app"

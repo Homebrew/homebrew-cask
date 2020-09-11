@@ -5,6 +5,7 @@ cask "machoexplorer" do
   url "https://github.com/everettjf/MachOExplorer/releases/download/v#{version}/MachOExplorer.dmg"
   appcast "https://github.com/everettjf/MachOExplorer/releases.atom"
   name "MachOExplorer"
+  desc "Mach-O Executable File Explorer"
   homepage "https://github.com/everettjf/MachOExplorer"
 
   app "MachOExplorer.app"

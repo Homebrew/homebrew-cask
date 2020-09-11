@@ -5,6 +5,7 @@ cask "paw" do
   url "https://cdn-builds.paw.cloud/paw/Paw-#{version}.zip"
   appcast "https://paw.cloud/api/v2/updates/appcast"
   name "Paw"
+  desc "HTTP client that helps testing and describing APIs"
   homepage "https://paw.cloud/"
 
   auto_updates true

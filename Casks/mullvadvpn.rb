@@ -6,6 +6,7 @@ cask "mullvadvpn" do
   url "https://github.com/mullvad/mullvadvpn-app/releases/download/#{version}/MullvadVPN-#{version}.pkg"
   appcast "https://github.com/mullvad/mullvadvpn-app/releases.atom"
   name "Mullvad VPN"
+  desc "VPN client"
   homepage "https://mullvad.net/"
 
   conflicts_with cask: "mullvadvpn-beta"

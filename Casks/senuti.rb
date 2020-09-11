@@ -4,6 +4,7 @@ cask "senuti" do
 
   url "https://fadingred.com/senuti_#{version}.zip"
   name "Senuti"
+  desc "Transfers songs, playlists, or videos from an iPod to a computer"
   homepage "https://fadingred.com/"
 
   app "Senuti.app"

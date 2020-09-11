@@ -6,6 +6,7 @@ cask "inky" do
   url "https://github.com/inkle/inky/releases/download/#{version}/Inky_mac.dmg"
   appcast "https://github.com/inkle/inky/releases.atom"
   name "Inky"
+  desc "Editor for ink: inkle's narrative scripting language"
   homepage "https://www.inklestudios.com/ink/"
 
   app "Inky.app"

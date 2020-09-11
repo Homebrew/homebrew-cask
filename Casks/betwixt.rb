@@ -5,6 +5,7 @@ cask "betwixt" do
   url "https://github.com/kdzwinel/betwixt/releases/download/#{version}/Betwixt-darwin-x64.zip"
   appcast "https://github.com/kdzwinel/betwixt/releases.atom"
   name "Betwixt"
+  desc "Web Debugging Proxy based on Chrome DevTools Network panel"
   homepage "https://github.com/kdzwinel/betwixt"
 
   app "Betwixt-darwin-x64/Betwixt.app"

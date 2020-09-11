@@ -5,6 +5,7 @@ cask "yakyak" do
   url "https://github.com/yakyak/yakyak/releases/download/v#{version}/yakyak-#{version}-osx.zip"
   appcast "https://github.com/yakyak/yakyak/releases.atom"
   name "Yakyak"
+  desc "Desktop chat client for Google Hangouts"
   homepage "https://github.com/yakyak/yakyak"
 
   app "YakYak-darwin-x64/YakYak.app"

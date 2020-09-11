@@ -5,6 +5,7 @@ cask "webpack-dashboard" do
   url "https://github.com/FormidableLabs/electron-webpack-dashboard/releases/download/v#{version}/webpack-dashboard-app-#{version}.dmg"
   appcast "https://github.com/FormidableLabs/electron-webpack-dashboard/releases.atom"
   name "Webpack Dashboard"
+  desc "Electron Desktop GUI for Webpack Dashboard"
   homepage "https://github.com/FormidableLabs/electron-webpack-dashboard"
 
   app "Webpack Dashboard.app"

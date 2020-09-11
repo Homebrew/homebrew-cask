@@ -6,6 +6,7 @@ cask "rapidweaver" do
   url "https://github.com/realmacsoftware/RapidWeaver#{version.major}-releases/releases/download/#{version.before_comma}-%28#{version.after_comma}%29/RapidWeaver#{version.major}.zip"
   appcast "https://github.com/realmacsoftware/RapidWeaver#{version.major}-releases/releases.atom"
   name "RapidWeaver"
+  desc "Web design software"
   homepage "https://www.realmacsoftware.com/rapidweaver/"
 
   depends_on macos: ">= :sierra"

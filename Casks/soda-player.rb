@@ -5,6 +5,7 @@ cask "soda-player" do
   url "https://releases.sodaplayer.com/mac/Soda%20Player%20#{version}.dmg"
   appcast "https://www.sodaplayer.com"
   name "Soda Player"
+  desc "Video player and streaming platform"
   homepage "https://www.sodaplayer.com/"
 
   auto_updates true

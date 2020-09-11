@@ -5,6 +5,7 @@ cask "graphsketcher" do
   url "https://github.com/graphsketcher/GraphSketcher/releases/download/#{version}/GraphSketcher.zip"
   appcast "https://github.com/graphsketcher/GraphSketcher/releases.atom"
   name "GraphSketcher"
+  desc "Graph drawing and data plotting app"
   homepage "https://github.com/graphsketcher/GraphSketcher"
 
   app "GraphSketcher/GraphSketcher.app"

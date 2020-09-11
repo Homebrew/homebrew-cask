@@ -4,6 +4,7 @@ cask "cpuinfo" do
 
   url "https://github.com/yusukeshibata/cpuinfo/blob/master/dist/cpuinfo.zip?raw=true"
   name "cpuinfo"
+  desc "CPU meter menu bar app"
   homepage "https://github.com/yusukeshibata/cpuinfo/"
 
   app "cpuinfo.app"

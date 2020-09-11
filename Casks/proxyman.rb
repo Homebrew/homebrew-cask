@@ -1,11 +1,12 @@
 cask "proxyman" do
-  version "2.5.3"
-  sha256 "dc63b08b46e8e410f7a246821d3754ad7a08f35488958dbc4796afcac3f75737"
+  version "2.6.0"
+  sha256 "b30fabb1a51795b5837dc35edeb47bf968fe654a38fa00595ab4edb9b00f75b0"
 
   # github.com/ProxymanApp/Proxyman/ was verified as official when first introduced to the cask
   url "https://github.com/ProxymanApp/Proxyman/releases/download/#{version}/Proxyman_#{version}.dmg"
   appcast "https://github.com/ProxymanApp/Proxyman/releases.atom"
   name "Proxyman"
+  desc "Modern and intuitive HTTP Debugging Proxy app"
   homepage "https://proxyman.io/"
 
   auto_updates true

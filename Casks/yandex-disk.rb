@@ -4,6 +4,7 @@ cask "yandex-disk" do
 
   url "https://disk.yandex.ru/download/YandexDisk#{version.after_comma}.dmg/?instant=1"
   name "Yandex.Disk"
+  desc "Cloud storage"
   homepage "https://disk.yandex.ru/"
 
   auto_updates true

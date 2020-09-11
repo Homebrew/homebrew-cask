@@ -5,6 +5,7 @@ cask "sketch" do
   url "https://download.sketchapp.com/sketch-#{version}.zip"
   appcast "https://download.sketchapp.com/sketch-versions.xml"
   name "Sketch"
+  desc "Digital design and prototyping platform"
   homepage "https://www.sketchapp.com/"
 
   auto_updates true

@@ -5,6 +5,7 @@ cask "wail" do
   url "https://github.com/machawk1/wail/releases/download/v#{version}/WAIL_v#{version}_macOS.dmg"
   appcast "https://github.com/machawk1/wail/releases.atom"
   name "WAIL"
+  desc "Web Archiving Integration Layer: One-Click User Instigated Preservation"
   homepage "https://github.com/machawk1/wail"
 
   app "WAIL.app"

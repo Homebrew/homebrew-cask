@@ -6,6 +6,7 @@ cask "luxmark" do
   url "https://github.com/LuxCoreRender/LuxMark/releases/download/luxmark_v#{version}/luxmark-macos64-v#{version}.zip"
   appcast "https://github.com/LuxCoreRender/LuxMark/releases.atom"
   name "LuxMark"
+  desc "OpenCL benchmark"
   homepage "http://www.luxmark.info/"
 
   app "LuxMark.app"

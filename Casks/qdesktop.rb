@@ -5,6 +5,7 @@ cask "qdesktop" do
   url "https://github.com/qvacua/qdesktop/releases/download/v#{version.before_comma}-#{version.after_comma}/Qdesktop-#{version.before_comma}.zip"
   appcast "https://github.com/qvacua/qdesktop/releases.atom"
   name "Qdesktop"
+  desc "App to set a website as the desktop background"
   homepage "https://github.com/qvacua/qdesktop"
 
   app "Qdesktop.app"

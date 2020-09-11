@@ -10,6 +10,7 @@ cask "linkliar" do
   url "https://github.com/halo/LinkLiar/releases/download/#{version}/LinkLiar.app.zip"
   appcast "https://github.com/halo/LinkLiar/releases.atom"
   name "LinkLiar"
+  desc "Link-Layer MAC spoofing GUI for macOS"
   homepage "https://github.com/halo/LinkLiar"
 
   app "LinkLiar.app"
