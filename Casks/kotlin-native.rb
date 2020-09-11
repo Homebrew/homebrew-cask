@@ -8,7 +8,7 @@ cask "kotlin-native" do
   name "Kotlin Native"
   homepage "https://kotlinlang.org/docs/reference/native-overview.html"
 
-  # conflicts_with formula: "kotlin"
+  conflicts_with formula: "kotlin"
 
   binary "kotlin-native-macos-#{version}/bin/cinterop"
   binary "kotlin-native-macos-#{version}/bin/jsinterop"
