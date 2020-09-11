@@ -4,7 +4,7 @@ cask "electron" do
 
   # github.com/electron/electron/ was verified as official when first introduced to the cask
   url "https://github.com/electron/electron/releases/download/v#{version}/electron-v#{version}-darwin-x64.zip"
-  appcast "https://github.com/electron/electron/releases.atom"
+  appcast "https://www.electronjs.org/releases/stable"
   name "Electron"
   desc "Build cross-platform desktop apps with JavaScript, HTML, and CSS"
   homepage "https://electronjs.org/"
