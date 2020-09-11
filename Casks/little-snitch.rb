@@ -9,7 +9,6 @@ cask "little-snitch" do
   homepage "https://www.obdev.at/products/littlesnitch/index.html"
 
   auto_updates true
-  conflicts_with cask: "homebrew/cask-versions/little-snitch-nightly"
   depends_on macos: ">= :el_capitan"
   container type: :naked
 
