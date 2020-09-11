@@ -6,6 +6,7 @@ cask "dexed" do
   url "https://github.com/asb2m10/dexed/releases/download/v#{version}hf1/dexed-#{version}-osx.zip"
   appcast "https://github.com/asb2m10/dexed/releases.atom"
   name "Dexed"
+  desc "DX7 FM synthesizer"
   homepage "https://asb2m10.github.io/dexed/"
 
   pkg "dexed-#{version}-osx.mpkg"
