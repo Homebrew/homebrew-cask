@@ -4,7 +4,7 @@ cask "kotlin-native" do
 
   # github.com/JetBrains/kotlin/ was verified as official when first introduced to the cask
   url "https://github.com/JetBrains/kotlin/releases/download/v#{version}/kotlin-native-macos-#{version}.tar.gz"
-  appcast "https://github.com/JetBrains/kotlin-native/releases.atom"
+  # appcast "https://github.com/JetBrains/kotlin-native/releases.atom"
   name "Kotlin Native"
   homepage "https://kotlinlang.org/docs/reference/native-overview.html"
 
