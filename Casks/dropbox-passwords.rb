@@ -4,7 +4,7 @@ cask "dropbox-passwords" do
 
   # clientupdates.dropboxstatic.com was verified as official when first introduced to the cask
   url "https://clientupdates.dropboxstatic.com/dbx-releng/dropbox_passwords/mac/DropboxPasswords_#{version}.dmg"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.dropbox.com/dropbox-passwords-download/mac/beta"
+  appcast "https://www.dropbox.com/dropbox-passwords-download/mac/beta"
   name "Dropbox Passwords"
   desc "Password manager that syncs across devices"
   homepage "https://www.dropbox.com/features/security/passwords"
