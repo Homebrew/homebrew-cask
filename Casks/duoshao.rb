@@ -4,6 +4,7 @@ cask "duoshao" do
 
   # haokuai.cdn.tinyservices.net/duoshao/ was verified as official when first introduced to the cask
   url "https://haokuai.cdn.tinyservices.net/duoshao/Duoshao-#{version}.dmg"
+  appcast "https://electron-releases-1259797650.cos.ap-nanjing.myqcloud.com/duoshao/latest-mac.yml"
   name "duoshao"
   desc "duoshao"
   homepage "https://duoshao.net/"
