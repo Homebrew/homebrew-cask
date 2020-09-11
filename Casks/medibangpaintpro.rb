@@ -8,4 +8,9 @@ cask "medibangpaintpro" do
   homepage "https://medibangpaint.com/en/pc/"
 
   app "MediBangPaintPro.app"
+
+   zap trash: [
+    "~/Library/Preferences/com.medibang.cloudalpaca.plist",
+    "~/Library/Saved Application State/com.medibang.cloudalpaca.savedState",
+  ]
 end
