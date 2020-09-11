@@ -3,7 +3,8 @@ cask "ringcentral" do
   sha256 "4a3676241c419e02c2d606cd8c75b4841ada24120513fe337c579d31b12860fe"
 
   url "https://app.ringcentral.com/downloads/RingCentral.pkg"
-  appcast "https://app.ringcentral.com/download/latest-mac.yml"
+  appcast "https://app.ringcentral.com/download/latest-mac.yml",
+          must_contain: version.major_minor_patch
   name "RingCentral"
   homepage "https://www.ringcentral.com/rcapp.html"
 
