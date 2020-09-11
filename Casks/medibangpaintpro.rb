@@ -9,7 +9,7 @@ cask "medibangpaintpro" do
 
   app "MediBangPaintPro.app"
 
-   zap trash: [
+  zap trash: [
     "~/Library/Preferences/com.medibang.cloudalpaca.plist",
     "~/Library/Saved Application State/com.medibang.cloudalpaca.savedState",
   ]
