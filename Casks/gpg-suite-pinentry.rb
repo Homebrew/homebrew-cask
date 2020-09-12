@@ -106,5 +106,12 @@ cask "gpg-suite-pinentry" do
 
   caveats do
     files_in_usr_local
+
+    <<~EOS
+      You can now set this as your pinentry program like
+
+      ~/.gnupg/gpg-agent.conf
+          pinentry-program #{HOMEBREW_PREFIX}/MacGPG2/libexec/pinentry-mac.app/Contents/MacOS/pinentry-mac
+    EOS
   end
 end
