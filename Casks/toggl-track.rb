@@ -9,5 +9,7 @@ cask "toggl-track" do
   desc "Time tracker"
   homepage "https://www.toggl.com/track/toggl-desktop/"
 
+  auto_updates true
+
   app "Toggl Track.app"
 end
