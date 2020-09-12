@@ -4,13 +4,8 @@ on:
   push:
     branches:
       - debug-automerge
-    paths:
-      - .github/actions/automerge/**
   schedule:
-    - cron: '*/30 * * * *'
-  check_run:
-    types:
-      - completed
+    - cron: '0 * * * *'
   workflow_run:
     workflows:
       - CI
@@ -19,10 +14,13 @@ on:
   pull_request_review:
     types:
       - submitted
+  pull_request_target:
+    types:
+      - ready_for_review
   workflow_dispatch:
     inputs:
-      pull_request:
-        description: Pull request number
+      pull-request:
+        description: Pull Request Number
         required: false
 
 jobs:
@@ -30,7 +28,10 @@ jobs:
     if: startsWith(github.repository, 'Homebrew/') && (github.event.review.state == 'approved' || !github.event.review)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@main
-      - uses: ./.github/actions/automerge
+      - uses: reitermarkus/automerge@a3335f47360dda76f19a473df3522cf773c64627
         with:
           token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+          merge-method: squash
+          do-not-merge-labels: 'do not merge'
+          pull-request: ${{ github.event.inputs.pull-request }}
+          dry-run: ${{ github.ref == 'refs/heads/debug-automerge' }}
