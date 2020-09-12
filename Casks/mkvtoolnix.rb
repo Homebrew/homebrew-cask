@@ -8,12 +8,15 @@ cask "mkvtoolnix" do
   desc "Set of tools to create, alter and inspect Matroska files (MKV)"
   homepage "https://mkvtoolnix.download/"
 
-  conflicts_with formula: "mkvtoolnix"
   depends_on macos: ">= :mojave"
 
   app "MKVToolNix-#{version.major_minor_patch}.app"
-  binary "#{appdir}/MKVToolNix-#{version.major_minor_patch}.app/Contents/MacOS/mkvextract"
-  binary "#{appdir}/MKVToolNix-#{version.major_minor_patch}.app/Contents/MacOS/mkvinfo"
-  binary "#{appdir}/MKVToolNix-#{version.major_minor_patch}.app/Contents/MacOS/mkvmerge"
-  binary "#{appdir}/MKVToolNix-#{version.major_minor_patch}.app/Contents/MacOS/mkvpropedit"
+
+  caveats do
+    <<~EOS
+      If you require the MKVToolNix command-line tools:
+
+        brew install mkvtoolnix
+    EOS
+  end
 end
