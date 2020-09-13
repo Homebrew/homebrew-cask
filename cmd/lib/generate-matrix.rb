@@ -18,7 +18,12 @@ syntax_job = {
 matrix = [syntax_job]
 
 unless labels.include?("ci-syntax-only")
-  matrix += CiMatrix.generate(tap, labels: labels)
+  cask_jobs = CiMatrix.generate(tap, labels: labels)
+
+  # If casks were changed, skip `audit` for all others.
+  syntax_job[:skip_audit] = true if cask_jobs.any?
+
+  matrix += cask_jobs
 end
 
 puts JSON.pretty_generate(matrix)
