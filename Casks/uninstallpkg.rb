@@ -7,6 +7,8 @@ cask "uninstallpkg" do
   name "UninstallPKG"
   homepage "https://www.corecode.io/uninstallpkg/"
 
+  depends_on macos: ">= :mojave"
+
   app "UninstallPKG.app"
 
   uninstall delete:    "/Library/PrivilegedHelperTools/com.corecode.UninstallPKGDeleteHelper",
