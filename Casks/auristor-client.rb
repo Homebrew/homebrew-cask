@@ -22,15 +22,7 @@ cask "auristor-client" do
     :catalina,
   ]
 
-  if MacOS.version <= :high_sierra
-    pkg "Auristor-Lite.pkg"
-  elsif MacOS.version <= :mojave
-    pkg "Auristor-Lite.pkg"
-  elsif MacOS.version <= :catalina
-    pkg "Auristor-Lite.pkg"
-  else
-    pkg "Auristor.pkg"
-  end
+  pkg "Auristor-Lite.pkg"
 
   uninstall pkgutil:   "com.auristor.yfs-*",
             launchctl: [
