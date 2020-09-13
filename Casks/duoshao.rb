@@ -6,7 +6,7 @@ cask "duoshao" do
   url "https://haokuai.cdn.tinyservices.net/duoshao/Duoshao-#{version}.dmg"
   appcast "https://electron-releases-1259797650.cos.ap-nanjing.myqcloud.com/duoshao/latest-mac.yml"
   name "duoshao"
-  desc "A lightweight accounting app"
+  desc "Collaborative accounting with double-entry bookkeeping"
   homepage "https://duoshao.net/"
 
   app "多少记账.app"
