@@ -95,7 +95,7 @@ jobs:
 
           brew cask audit ${{ join(matrix.audit_args, ' ') }} '${{ matrix.cask.path }}'
         timeout-minutes: 30
-        if: always()
+        if: always() && !matrix.skip_audit
 
       - name: Gather cask information
         id: info
