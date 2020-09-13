@@ -1,6 +1,6 @@
 cask "exodus" do
-  version "20.8.28"
-  sha256 "643848c40f5dc71749ffd8417a9df9ef5a984993d8332297233b37481e518ecb"
+  version "20.9.11"
+  sha256 "6e5bd7101c76670f4b6e7b83fdbf838376fb40ad715c41eead925d464b022801"
 
   url "https://downloads.exodus.io/releases/exodus-macos-#{version}.dmg"
   appcast "https://www.exodus.io/releases/"
