@@ -25,7 +25,14 @@ on:
 
 jobs:
   automerge:
-    if: startsWith(github.repository, 'Homebrew/') && (github.event.review.state == 'approved' || !github.event.review)
+    if: >
+      startsWith(github.repository, 'Homebrew/') &&
+      (
+        (
+          github.event.review.state == 'approved' &&
+          github.event.pull_request.base.repo.full_name == github.event.pull_request.head.repo.full_name
+        ) || github.event_name != 'pull_request_review'
+      )
     runs-on: ubuntu-latest
     steps:
       - uses: reitermarkus/automerge@a3335f47360dda76f19a473df3522cf773c64627
