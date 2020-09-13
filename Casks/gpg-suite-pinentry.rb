@@ -111,7 +111,7 @@ cask "gpg-suite-pinentry" do
       You can now set this as your pinentry program like
 
       ~/.gnupg/gpg-agent.conf
-          pinentry-program #{HOMEBREW_PREFIX}/MacGPG2/libexec/pinentry-mac.app/Contents/MacOS/pinentry-mac
+          pinentry-program /usr/local/MacGPG2/libexec/pinentry-mac.app/Contents/MacOS/pinentry-mac
     EOS
   end
 end
