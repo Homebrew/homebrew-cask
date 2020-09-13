@@ -1,6 +1,6 @@
 cask "hookshot" do
-  version "1.6.3"
-  sha256 "59156731c816a6a316be7898144ab1a52f1ad806c72ba857c0400194876dcb18"
+  version "1.7"
+  sha256 "91bdae08ba1cb4e285803730d478b5549c9cc042234f245f0fd79afa2e84eb1a"
 
   url "https://hookshot.app/downloads/Hookshot#{version}.dmg"
   appcast "https://hookshot.app/downloads/updates.xml"
