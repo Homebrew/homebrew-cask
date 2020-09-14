@@ -1,5 +1,5 @@
 cask "masterway-note" do
-  version "1.2.0"
+  version "1.2.0,59"
   sha256 "303f2f63a01da52ac17e8a37bbdd227269a43a66d43d7f0b2debad132b848411"
 
   # prota.oss-cn-beijing.aliyuncs.com/ was verified as official when first introduced to the cask
