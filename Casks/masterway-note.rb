@@ -1,11 +1,10 @@
 cask "masterway-note" do
-  version "1.2.0"
-  sha256 "dc65476d865f52bab13396c608e233c3f6399d63b65dddde4ffba5fdf6721d46"
+  version "1.2.0,59"
+  sha256 "303f2f63a01da52ac17e8a37bbdd227269a43a66d43d7f0b2debad132b848411"
 
   # prota.oss-cn-beijing.aliyuncs.com/ was verified as official when first introduced to the cask
-  url "https://prota.oss-cn-beijing.aliyuncs.com/downloads/#{version.major_minor}/%E5%A4%A7%E5%B8%88%E7%AC%94%E8%AE%B0masterwaynote.pkg"
-  appcast "https://www.macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://masterwaynote.com/download/macos",
-          must_contain: version.major_minor
+  url "https://prota.oss-cn-beijing.aliyuncs.com/downloads/latest/%E5%A4%A7%E5%B8%88%E7%AC%94%E8%AE%B0masterwaynote.pkg"
+  appcast "https://masterwaynote.com/autoupdate/darwin?bundleId=1"
   name "Masterway Note"
   name "大师笔记"
   homepage "https://masterwaynote.com/"
