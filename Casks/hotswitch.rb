@@ -1,6 +1,6 @@
 cask "hotswitch" do
-  version "1.20"
-  sha256 "55696b292a79f603a4b14c8272232ea30d13b78b4974fd135b9d0a0dd6331be6"
+  version "1.21"
+  sha256 "ee1c0d171d1726ab2771408c1dc0e8427e0eeed0e110150e9f000e4dbf3a6801"
 
   url "https://oniatsu.github.io/HotSwitch/release/zip/HotSwitch.zip"
   appcast "https://github.com/oniatsu/HotSwitch/releases.atom"
