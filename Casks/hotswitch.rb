@@ -8,5 +8,5 @@ cask "hotswitch" do
   desc "Fast window switcher using a 2-stroke hotkey"
   homepage "https://oniatsu.github.io/HotSwitch/"
 
-  app "HotSwitch.app"
+  app "Users/ao/Downloads/HotSwitch 2020-09-14 03-48-40/HotSwitch.app"
 end
