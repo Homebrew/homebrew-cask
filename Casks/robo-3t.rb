@@ -4,7 +4,7 @@ cask "robo-3t" do
 
   # download.studio3t.com was verified as official when first introduced to the cask
   url "https://download.studio3t.com/robomongo/mac/robo3t-#{version.before_comma}-darwin-x86_64-#{version.after_comma}.dmg"
-  appcast "https://robomongo.org/download"
+  appcast "https://github.com/Studio3T/robomongo/releases"
   name "Robo 3T (formerly Robomongo)"
   desc "MongoDB management tool (formerly Robomongo)"
   homepage "https://robomongo.org/"
