@@ -1,6 +1,6 @@
 cask "activedock" do
-  version "2.44,2044"
-  sha256 "1d87b5f3b3e0e8e04e559a22a9bda092c9244b78e182d1bd8d67a993a6d9b07b"
+  version "2.47,2047"
+  sha256 "91090c75cdde41f9c236a6b60fa10581fceae53edbb4131660abc70842ccabf5"
 
   url "https://noteifyapp.com/download/ActiveDock.dmg"
   appcast "https://macplus-software.com/downloads/ActiveDock.xml"
