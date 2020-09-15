@@ -5,6 +5,7 @@ cask "spires" do
   url "https://member.ipmu.jp/yuji.tachikawa/spires/zips/spires_#{version}.zip"
   appcast "https://member.ipmu.jp/yuji.tachikawa/spires/spires-Update.xml"
   name "spires"
+  desc "Frontend for inspire-hep and arxiv"
   homepage "https://member.ipmu.jp/yuji.tachikawa/spires/"
 
   auto_updates true
