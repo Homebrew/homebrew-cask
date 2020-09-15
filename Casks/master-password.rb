@@ -4,6 +4,7 @@ cask "master-password" do
 
   url "http://www.masterpasswordapp.com/masterpassword-mac.zip"
   name "Master Password"
+  desc "Stateless password management solution"
   homepage "http://www.masterpasswordapp.com/"
 
   app "Master Password.app"
