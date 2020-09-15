@@ -6,6 +6,7 @@ cask "ipe" do
   url "https://dl.bintray.com/otfried/generic/ipe/#{version.major_minor}/ipe-#{version}-mac.dmg"
   appcast "http://ipe.otfried.org/"
   name "Ipe"
+  desc "Extensible drawing editor"
   homepage "http://ipe.otfried.org/"
 
   depends_on macos: ">= :yosemite"
