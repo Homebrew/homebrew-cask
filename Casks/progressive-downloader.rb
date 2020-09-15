@@ -1,6 +1,6 @@
 cask "progressive-downloader" do
-  version "4.7"
-  sha256 "9e6cefef9e01b7e98cb2d6419a571773b06bc142217cc9f97e1e572bcc79efe6"
+  version "4.7.1"
+  sha256 "55844fb90760856c2435a79d7e64b1c4edc349078e127375a3d03efe5f79b12a"
 
   url "https://www.macpsd.net/update/#{version}/PSD.dmg"
   appcast "https://www.macpsd.net/"
