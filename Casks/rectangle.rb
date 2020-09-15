@@ -6,6 +6,7 @@ cask "rectangle" do
   url "https://github.com/rxhanson/Rectangle/releases/download/v#{version}/Rectangle#{version}.dmg"
   appcast "https://www.rectangleapp.com/downloads/updates.xml"
   name "Rectangle"
+  desc "Window management app based on Spectacle"
   homepage "https://rectangleapp.com/"
 
   auto_updates true
