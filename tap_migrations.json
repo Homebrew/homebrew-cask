@@ -23,6 +23,7 @@
   "hub": "homebrew/core",
   "hyper": "homebrew/core",
   "idris": "homebrew/core",
+  "java": "homebrew/core",
   "jenkins": "homebrew/core",
   "lunchy": "homebrew/core",
   "minikube": "homebrew/core",
