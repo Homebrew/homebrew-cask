@@ -6,6 +6,7 @@ cask "ipepresenter" do
   url "https://dl.bintray.com/otfried/generic/ipe/#{version.major_minor}/ipepresenter-#{version}-mac.dmg"
   appcast "http://ipepresenter.otfried.org/"
   name "IpePresenter"
+  desc "Presentation tool to show PDF presentations"
   homepage "http://ipepresenter.otfried.org/"
 
   depends_on macos: ">= :yosemite"
