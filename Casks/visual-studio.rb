@@ -7,6 +7,7 @@ cask "visual-studio" do
   appcast "https://docs.microsoft.com/en-us/visualstudio/releasenotes/vs2019-mac-relnotes",
           must_contain: version.major_minor_patch
   name "Visual Studio for Mac"
+  desc "Microsoft's Integrated Development Environment"
   homepage "https://www.visualstudio.com/vs/visual-studio-mac/"
 
   auto_updates true
