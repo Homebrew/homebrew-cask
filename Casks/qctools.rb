@@ -1,11 +1,11 @@
-cask 'qctools' do
-  version '1.0'
-  sha256 'ee4ab0803dc387ad4475544ba3f97ccd5126d3f237d5349bebae48bef18b85a9'
+cask "qctools" do
+  version "1.1"
+  sha256 "53a250ccfad607dc04820c8159a3cc006c5c2ccb3b272d38ab1ddf011a81ef3e"
 
-  url "https://github.com/bavc/qctools/releases/download/v#{version.major_minor_patch}/QCTools.Mac.-.QCTools_#{version}_mac.dmg"
-  appcast 'https://github.com/bavc/qctools/releases.atom'
-  name 'QCTools'
-  homepage 'https://github.com/bavc/qctools'
+  url "https://mediaarea.net/download/binary/qctools/#{version}/QCTools_#{version}_mac.dmg"
+  appcast "https://github.com/bavc/qctools/releases.atom"
+  name "QCTools"
+  homepage "https://mediaarea.net/QCTools"
 
-  app 'QCTools.app'
+  app "QCTools.app"
 end

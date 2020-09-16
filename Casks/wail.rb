@@ -1,11 +1,12 @@
-cask 'wail' do
-  version '0.2019.05.21'
-  sha256 '45a50a28bfe4c385e93b4053259fdc35265ef0603a3e65e5caf37f1432788b79'
+cask "wail" do
+  version "0.2019.05.21"
+  sha256 "45a50a28bfe4c385e93b4053259fdc35265ef0603a3e65e5caf37f1432788b79"
 
   url "https://github.com/machawk1/wail/releases/download/v#{version}/WAIL_v#{version}_macOS.dmg"
-  appcast 'https://github.com/machawk1/wail/releases.atom'
-  name 'WAIL'
-  homepage 'https://github.com/machawk1/wail'
+  appcast "https://github.com/machawk1/wail/releases.atom"
+  name "WAIL"
+  desc "Web Archiving Integration Layer: One-Click User Instigated Preservation"
+  homepage "https://github.com/machawk1/wail"
 
-  app 'WAIL.app'
+  app "WAIL.app"
 end

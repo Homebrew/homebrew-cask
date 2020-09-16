@@ -1,23 +1,24 @@
-cask 'discord' do
-  version '0.0.255'
-  sha256 '9d04c35b97d40c6370318ab8301984dc982e08174b223a979007449688120fe8'
+cask "discord" do
+  version "0.0.259"
+  sha256 "927b7174671aeede430e5a71f9a8eee1991e2dab5309a8ee623dd1fb04706517"
 
   url "https://cdn.discordapp.com/apps/osx/#{version}/Discord.dmg"
-  appcast 'https://discordapp.com/api/stable/updates?platform=osx'
-  name 'Discord'
-  homepage 'https://discordapp.com/'
+  appcast "https://discordapp.com/api/stable/updates?platform=osx"
+  name "Discord"
+  desc "Voice and text chat software"
+  homepage "https://discordapp.com/"
 
   auto_updates true
 
-  app 'Discord.app'
+  app "Discord.app"
 
   zap trash: [
-               '~/Library/Application Support/discord',
-               '~/Library/Caches/com.hnc.Discord',
-               '~/Library/Caches/com.hnc.Discord.ShipIt',
-               '~/Library/Cookies/com.hnc.Discord.binarycookies',
-               '~/Library/Preferences/com.hnc.Discord.helper.plist',
-               '~/Library/Preferences/com.hnc.Discord.plist',
-               '~/Library/Saved Application State/com.hnc.Discord.savedState',
-             ]
+    "~/Library/Application Support/discord",
+    "~/Library/Caches/com.hnc.Discord",
+    "~/Library/Caches/com.hnc.Discord.ShipIt",
+    "~/Library/Cookies/com.hnc.Discord.binarycookies",
+    "~/Library/Preferences/com.hnc.Discord.helper.plist",
+    "~/Library/Preferences/com.hnc.Discord.plist",
+    "~/Library/Saved Application State/com.hnc.Discord.savedState",
+  ]
 end

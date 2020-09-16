@@ -1,11 +1,12 @@
-cask 'runway' do
-  version '1.9'
-  sha256 'bd063e9f8db568aa2c57d5f7464dbdfead7b21dec8a80f112b0b78a349578114'
+cask "runway" do
+  version "0.14.4"
+  sha256 "0c1c5b3d14ae1bf4b7bd61dd4474feffefb3c185e900bf519d34f230866d886f"
 
-  url "http://celestialteapot.com/runway/dist/Runway_#{version}.zip"
-  appcast 'http://celestialteapot.com/runway/appcast/runway.rss'
-  name 'Runway'
-  homepage 'http://celestialteapot.com/runway/'
+  # runway-releases.s3.amazonaws.com/ was verified as official when first introduced to the cask
+  url "https://runway-releases.s3.amazonaws.com/Runway-#{version}.dmg"
+  appcast "https://runway-releases.s3.amazonaws.com/latest-mac.yml"
+  name "Runway"
+  homepage "https://runwayml.com/"
 
-  app 'Runway.app'
+  app "Runway.app"
 end

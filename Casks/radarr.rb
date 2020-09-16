@@ -1,12 +1,19 @@
-cask 'radarr' do
-  version '0.2.0.1358'
-  sha256 '0cf9d05c8e971e834a591fef60f1a6f3e685a2999751cb118a537c118d5f5466'
+cask "radarr" do
+  version "0.2.0.1504"
+  sha256 "c85738b7a6a087a1670801eef391f8ab31b326e2003fc01c5cd21372eed88c75"
 
-  # github.com/Radarr/Radarr was verified as official when first introduced to the cask
+  # github.com/Radarr/Radarr/ was verified as official when first introduced to the cask
   url "https://github.com/Radarr/Radarr/releases/download/v#{version}/Radarr.develop.#{version}.osx-app.zip"
-  appcast 'https://github.com/Radarr/Radarr/releases.atom'
-  name 'Radarr'
-  homepage 'https://radarr.video/'
+  appcast "https://github.com/Radarr/Radarr/releases.atom"
+  name "Radarr"
+  desc "Fork of Sonarr to work with movies à la Couchpotato"
+  homepage "https://radarr.video/"
 
-  app 'Radarr.app'
+  depends_on formula: "mono"
+
+  app "Radarr.app"
+
+  preflight do
+    set_permissions "#{staged_path}/Radarr.app", "0755"
+  end
 end

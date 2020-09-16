@@ -1,6 +1,6 @@
 # language
 
-The `language` stanza can match language codes ([ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) or [ISO 639-2](https://en.wikipedia.org/wiki/ISO_639-2)), regional identifiers ([ISO 3166-1 Alpha 2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)) and script codes ([ISO 15924](https://en.wikipedia.org/wiki/ISO_15924)), or a combination thereof.
+The `language` stanza can match [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) language codes, regional identifiers ([ISO 3166-1 Alpha 2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)) and script codes ([ISO 15924](https://en.wikipedia.org/wiki/ISO_15924)), or a combination thereof.
 
 US English should always be used as the default language:
 

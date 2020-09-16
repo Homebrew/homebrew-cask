@@ -1,21 +1,30 @@
-cask 'reaper' do
-  version '5.98.100'
-  sha256 'bed85d0e1517fee5bd561ee43c584786d3f55fa0ddaf944dfa93fd818fae7dd6'
+cask "reaper" do
+  version "6.13.0,6.13"
 
-  url "https://www.reaper.fm/files/#{version.major}.x/reaper#{version.no_dots.sub(%r{0*$}, '')}_x86_64.dmg"
-  appcast 'https://www.cockos.com/reaper/latestversion/?p=osx_64',
-          configuration: "#{version.major}.#{version.minor}#{version.patch.sub(%r{0*$}, '')}"
-  name 'REAPER'
-  homepage 'https://www.reaper.fm/'
+  if MacOS.version <= :mojave
+    sha256 "58f4e622a39fe7f57cd07a96e33d485b9fff8dfac5633bb0ac2b4255d2d9a972"
 
-  app 'REAPER64.app'
-  app 'ReaMote64.app'
+    url "https://www.reaper.fm/files/#{version.major}.x/reaper#{version.after_comma.no_dots}_x86_64.dmg"
+  else
+    sha256 "cc5b583c57ac8723820e3c448632713294354a3f7661bae4cae37bb22bf6cdba"
+
+    url "https://www.reaper.fm/files/#{version.major}.x/reaper#{version.after_comma.no_dots}_x86_64_catalina.dmg"
+  end
+
+  appcast "https://www.cockos.com/reaper/latestversion/?p=osx_64",
+          must_contain: version.after_comma
+  name "REAPER"
+  desc "Digital audio production application"
+  homepage "https://www.reaper.fm/"
+
+  app "REAPER64.app"
+  app "ReaMote64.app"
 
   zap trash: [
-               '~/Library/Application Support/REAPER',
-               '~/Library/Saved Application State/com.cockos.reaper.savedState',
-               '~/Library/Saved Application State/com.cockos.reaperhosti386.savedState',
-               '~/Library/Saved Application State/com.cockos.reaperhostx8664.savedState',
-               '~/Library/Saved Application State/com.cockos.ReaMote.savedState',
-             ]
+    "~/Library/Application Support/REAPER",
+    "~/Library/Saved Application State/com.cockos.reaper.savedState",
+    "~/Library/Saved Application State/com.cockos.reaperhosti386.savedState",
+    "~/Library/Saved Application State/com.cockos.reaperhostx8664.savedState",
+    "~/Library/Saved Application State/com.cockos.ReaMote.savedState",
+  ]
 end

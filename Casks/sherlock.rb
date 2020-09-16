@@ -1,13 +1,14 @@
-cask 'sherlock' do
-  version '1.6.0'
-  sha256 '54df9ffad9d298c5b1e6a6097373bb4e047bdcd3727676317071eeabbac91195'
+cask "sherlock" do
+  version "1.8.0"
+  sha256 "3865549e0c4c17c6bc69b552d61c611d3ffad35193d00f4a296465b7e4419dca"
 
-  url 'https://sherlock.inspiredcode.io/download-dmg'
-  appcast 'https://updates.devmate.com/io.inspiredcode.Sherlock.xml'
-  name 'Sherlock'
-  homepage 'https://sherlock.inspiredcode.io/'
+  # dl.devmate.com/io.inspiredcode.Sherlock/ was verified as official when first introduced to the cask
+  url "https://dl.devmate.com/io.inspiredcode.Sherlock/Sherlock.dmg"
+  appcast "http://sparkle.sherlock.inspiredcode.io"
+  name "Sherlock"
+  homepage "https://sherlock.inspiredcode.io/"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'Sherlock.app'
+  app "Sherlock.app"
 end

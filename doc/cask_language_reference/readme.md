@@ -5,16 +5,17 @@
 Each Cask is a Ruby block, beginning with a special header line. The Cask definition itself is always enclosed in a `do … end` block. Example:
 
 ```ruby
-cask 'alfred' do
-  version '2.7.1_387'
-  sha256 'a3738d0513d736918a6d71535ef3d85dd184af267c05698e49ac4c6b48f38e17'
+cask "alfred" do
+  version "2.7.1_387"
+  sha256 "a3738d0513d736918a6d71535ef3d85dd184af267c05698e49ac4c6b48f38e17"
 
   url "https://cachefly.alfredapp.com/Alfred_#{version}.zip"
-  name 'Alfred'
-  homepage 'https://www.alfredapp.com/'
+  name "Alfred"
+  desc "Application launcher and productivity software"
+  homepage "https://www.alfredapp.com/"
 
-  app 'Alfred 2.app'
-  app 'Alfred 2.app/Contents/Preferences/Alfred Preferences.app'
+  app "Alfred 2.app"
+  app "Alfred 2.app/Contents/Preferences/Alfred Preferences.app"
 end
 ```
 
@@ -43,14 +44,16 @@ Tests against `MacOS.version` may use either symbolic names or version
 strings with numeric comparison operators:
 
 ```ruby
-if MacOS.version <= :mavericks     # symbolic name
+if MacOS.version <= :mojave        # symbolic name
 ```
 
 ```ruby
-if MacOS.version <= '10.9'         # version string
+if MacOS.version <= "10.14"        # version string
 ```
 
-The available symbols for macOS versions are: `:mavericks`, `:yosemite`, `:el_capitan`, `:sierra`, `:high_sierra`, and `:mojave`. The corresponding numeric version strings should be given as major releases containing a single dot.
+The available symbols for macOS versions are: `:yosemite`, `:el_capitan`, `:sierra`, `:high_sierra`, `:mojave`, and `:catalina`. The corresponding numeric version strings should be given as major releases containing a single dot.
+
+Note that in the official Homebrew Cask repositories only the symbolic names are allowed. The numeric comparison may only be used for third-party taps.
 
 ### Always Fall Through to the Newest Case
 
@@ -70,25 +73,24 @@ end
 
 If a cask is available in multiple languages, you can use the `language` stanza to switch between languages or regions based on the system locale.
 
-
 ## Arbitrary Ruby Methods
 
 In the exceptional case that the Cask DSL is insufficient, it is possible to define arbitrary Ruby variables and methods inside the Cask by creating a `Utils` namespace. Example:
 
 ```ruby
-cask 'myapp' do
+cask "myapp" do
   module Utils
     def self.arbitrary_method
       ...
     end
   end
 
-  name 'MyApp'
-  version '1.0'
-  sha256 'a32565cdb1673f4071593d4cc9e1c26bc884218b62fef8abc450daa47ba8fa92'
+  name "MyApp"
+  version "1.0"
+  sha256 "a32565cdb1673f4071593d4cc9e1c26bc884218b62fef8abc450daa47ba8fa92"
 
   url "https://#{Utils.arbitrary_method}"
-  homepage 'https://www.example.com/'
+  homepage "https://www.example.com/"
   ...
 end
 ```
@@ -102,14 +104,13 @@ Variables and methods should not be defined outside the `Utils` namespace, as th
 The first non-comment line in a Cask follows the form:
 
 ```ruby
-cask '<cask-token>' do
+cask "<cask-token>" do
 ```
 
 [`<cask-token>`](token_reference.md) should match the Cask filename, without the `.rb` extension,
 enclosed in single quotes.
 
 There are currently some arbitrary limitations on Cask tokens which are in the process of being removed. The Travis bot will catch any errors during the transition.
-
 
 ## Stanza order
 
@@ -124,6 +125,7 @@ language
 url
 appcast
 name
+desc
 homepage
 
 auto_updates
@@ -136,6 +138,7 @@ app
 pkg
 installer
 binary
+manpage
 colorpicker
 dictionary
 font
@@ -143,6 +146,7 @@ input_method
 internet_plugin
 prefpane
 qlplugin
+mdimporter
 screen_saver
 service
 audio_unit_plugin

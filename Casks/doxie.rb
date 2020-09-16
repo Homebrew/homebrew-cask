@@ -1,10 +1,11 @@
-cask 'doxie' do
-  version :latest
-  sha256 :no_check
+cask "doxie" do
+  version "2.12.2"
+  sha256 "6f48066eca465fc17838ed9552eb5421472dcdc40757ee484014d6d9e256446b"
 
-  url 'https://www.getdoxie.com/resources/files/download_current_mac.php'
-  name 'Doxie'
-  homepage 'https://www.getdoxie.com/'
+  url "https://download.getdoxie.com/Doxie-#{version}.dmg"
+  appcast "https://r.getdoxie.com/app/sparkle/doxie-macos.xml"
+  name "Doxie"
+  homepage "https://www.getdoxie.com/"
 
-  app 'Doxie.app'
+  app "Doxie.app"
 end

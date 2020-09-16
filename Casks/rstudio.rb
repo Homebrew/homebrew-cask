@@ -1,18 +1,19 @@
-cask 'rstudio' do
-  version '1.2.1335'
-  sha256 '9633421e4c8fd8a439fcf54be495c489734b12900c5ffc378fb2fecc6e1bff51'
+cask "rstudio" do
+  version "1.3.1073"
+  sha256 "0878b305c8013cca32f0b383c033203bdb6b9492eb6e598766de76af677b367c"
 
-  # rstudio.org was verified as official when first introduced to the cask
+  # rstudio.org/ was verified as official when first introduced to the cask
   url "https://download1.rstudio.org/desktop/macos/RStudio-#{version}.dmg"
-  appcast 'https://www.rstudio.org/links/check_for_update?version=1.0.0&os=mac'
-  name 'RStudio'
-  homepage 'https://www.rstudio.com/'
+  appcast "https://www.rstudio.org/links/check_for_update?version=1.0.0&os=mac"
+  name "RStudio"
+  desc "Data science software focusing on R and Python"
+  homepage "https://www.rstudio.com/"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :high_sierra"
 
-  app 'RStudio.app'
+  app "RStudio.app"
 
-  zap trash: '~/.rstudio-desktop'
+  zap trash: "~/.rstudio-desktop"
 
   caveats <<~EOS
     #{token} depends on R. The R Project provides official binaries:

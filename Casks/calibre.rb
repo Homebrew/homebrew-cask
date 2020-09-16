@@ -1,13 +1,21 @@
-cask 'calibre' do
-  version '3.46.0'
-  sha256 'fcb5c85c517f9d8bd012f356bdfa7f0f8987bbe279e1b6aa6f44334e8a3f3378'
+cask "calibre" do
+  if MacOS.version <= :high_sierra
+    version "3.48.0"
+    sha256 "68829cd902b8e0b2b7d5cf7be132df37bcc274a1e5720b4605d2dd95f3a29168"
+    url "https://download.calibre-ebook.com/#{version}/calibre-#{version}.dmg"
+  else
+    version "4.23.0"
+    sha256 "422b8f452f2d801f612f28f262421a8b18195c5f9473c0997b828d6f4b91b005"
+    # github.com/kovidgoyal/calibre/ was verified as official when first introduced to the cask
+    url "https://github.com/kovidgoyal/calibre/releases/download/v#{version}/calibre-#{version}.dmg"
+    appcast "https://github.com/kovidgoyal/calibre/releases.atom"
+  end
 
-  url "https://download.calibre-ebook.com/#{version}/calibre-#{version}.dmg"
-  appcast 'https://github.com/kovidgoyal/calibre/releases.atom'
-  name 'calibre'
-  homepage 'https://calibre-ebook.com/'
+  name "calibre"
+  desc "E-books management software"
+  homepage "https://calibre-ebook.com/"
 
-  app 'calibre.app'
+  app "calibre.app"
   binary "#{appdir}/calibre.app/Contents/MacOS/calibre"
   binary "#{appdir}/calibre.app/Contents/MacOS/calibre-complete"
   binary "#{appdir}/calibre.app/Contents/MacOS/calibre-customize"
@@ -30,10 +38,10 @@ cask 'calibre' do
   binary "#{appdir}/calibre.app/Contents/MacOS/web2disk"
 
   zap trash: [
-               '~/Library/Caches/calibre',
-               '~/Library/Preferences/calibre',
-               '~/Library/Preferences/net.kovidgoyal.calibre.plist',
-               '~/Library/Saved Application State/com.calibre-ebook.ebook-viewer.savedState',
-               '~/Library/Saved Application State/net.kovidgoyal.calibre.savedState',
-             ]
+    "~/Library/Caches/calibre",
+    "~/Library/Preferences/calibre",
+    "~/Library/Preferences/net.kovidgoyal.calibre.plist",
+    "~/Library/Saved Application State/com.calibre-ebook.ebook-viewer.savedState",
+    "~/Library/Saved Application State/net.kovidgoyal.calibre.savedState",
+  ]
 end

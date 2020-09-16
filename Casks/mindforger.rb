@@ -1,12 +1,13 @@
-cask 'mindforger' do
-  version '1.49.0'
-  sha256 '2e5b5cfd55d054fbc67039fe38c683c2b6e3e4e8e52c9f74f246162d7f2c3b46'
+cask "mindforger" do
+  version "1.52.0"
+  sha256 "bae855dad678b54a557829877320ee892958be0e20de8661a6d4ee7e3b62bcd0"
 
-  # github.com/dvorka/mindforger was verified as official when first introduced to the cask
-  url "https://github.com/dvorka/mindforger/releases/download/#{version.major_minor}.0/mindforger-macos10.12-#{version}.dmg"
-  appcast 'https://github.com/dvorka/mindforger/releases.atom'
-  name 'MindForger'
-  homepage 'https://www.mindforger.com/'
+  # github.com/dvorka/mindforger/ was verified as official when first introduced to the cask
+  url "https://github.com/dvorka/mindforger/releases/download/#{version}/mindforger-macos-#{version}.dmg"
+  appcast "https://github.com/dvorka/mindforger/releases.atom"
+  name "MindForger"
+  desc "Thinking notebook and Markdown IDE"
+  homepage "https://www.mindforger.com/"
 
-  app 'mindforger.app'
+  app "mindforger.app"
 end

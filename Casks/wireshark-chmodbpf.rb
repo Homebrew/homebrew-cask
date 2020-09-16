@@ -1,41 +1,27 @@
-cask 'wireshark-chmodbpf' do
-  version '3.0.2'
-  sha256 '2e32ed900bc0bb85430ebe45eef39c5097423eb8cb3a7bd4b08e704f599ab430'
+cask "wireshark-chmodbpf" do
+  version "3.2.6"
+  sha256 "e63b7345e8a068a4c3e6dcd8b2de61fe66c03e78f3c8002a94829d152e1566d5"
 
   url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20Intel%2064.dmg"
-  appcast 'https://www.wireshark.org/download/osx/'
-  name 'Wireshark-ChmodBPF'
-  homepage 'https://www.wireshark.org/'
+  appcast "https://www.wireshark.org/update/0/Wireshark/0.0.0/macOS/x86-64/en-US/stable.xml"
+  name "Wireshark-ChmodBPF"
+  homepage "https://www.wireshark.org/"
 
-  conflicts_with cask: 'wireshark'
-  depends_on macos: '>= :sierra'
+  conflicts_with cask: "wireshark"
+  depends_on macos: ">= :sierra"
 
-  pkg "Wireshark #{version} Intel 64.pkg",
-      choices: [
-                 {
-                   'choiceIdentifier' => 'wireshark',
-                   'choiceAttribute'  => 'selected',
-                   'attributeSetting' => 0,
-                 },
-                 {
-                   'choiceIdentifier' => 'chmodbpf',
-                   'choiceAttribute'  => 'selected',
-                   'attributeSetting' => 1,
-                 },
-                 {
-                   'choiceIdentifier' => 'cli',
-                   'choiceAttribute'  => 'selected',
-                   'attributeSetting' => 0,
-                 },
-               ]
+  pkg "Install ChmodBPF.pkg"
 
   uninstall_preflight do
-    set_ownership '/Library/Application Support/Wireshark'
-    system_command '/usr/sbin/dseditgroup', args: ['-o', 'delete', 'access_bpf'], sudo: true
+    system_command "/usr/sbin/installer",
+                   args: [
+                     "-pkg", "#{staged_path}/Uninstall ChmodBPF.pkg",
+                     "-target", "/"
+                   ],
+                   sudo: true
   end
 
-  uninstall pkgutil:   'org.wireshark.ChmodBPF.pkg',
-            launchctl: 'org.wireshark.ChmodBPF'
+  uninstall pkgutil: "org.wireshark.ChmodBPF.pkg"
 
   caveats do
     reboot

@@ -1,12 +1,13 @@
-cask 'qt-design-studio' do
-  version '1.2.0'
-  sha256 '37d17e4b514c72328698f13df7d8ffcb98d0e47de98f8d8f260d7ef23a3b231a'
+cask "qt-design-studio" do
+  version "1.6.0"
+  sha256 "4e3bee4715b05014971fb23d2475e4a28aa4cb283380453cc8fff138cd19a822"
 
   url "https://download.qt.io/official_releases/qtdesignstudio/#{version}/qt-designstudio-mac-x86_64-#{version}-community.dmg"
-  name 'Qt Design Studio'
-  homepage 'https://www.qt.io/ui-framework'
+  appcast "https://download.qt.io/official_releases/qtdesignstudio/"
+  name "Qt Design Studio"
+  homepage "https://www.qt.io/ui-framework"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
   installer manual: "qt-designstudio-mac-x86_64-#{version}-community.app"
 

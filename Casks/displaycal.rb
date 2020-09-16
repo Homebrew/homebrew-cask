@@ -1,23 +1,23 @@
-cask 'displaycal' do
-  version '3.8.5.0'
-  sha256 'c80d1995ad218cc9f79e5739e0fa785f51347e2130aa674f2eb6579a46690010'
+cask "displaycal" do
+  version "3.8.9.3"
+  sha256 "3e3f4a506c3ffc1e2004d57c6cd521d6cacb1bb6a71f9e3fa4cd81ab6ad4f31a"
 
-  # sourceforge.net/dispcalgui was verified as official when first introduced to the cask
+  # sourceforge.net/dispcalgui/ was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/dispcalgui/release/#{version}/DisplayCAL-#{version}.pkg"
-  appcast 'https://sourceforge.net/projects/dispcalgui/rss?path=/release'
-  name 'DisplayCAL'
-  homepage 'https://displaycal.net/'
+  appcast "https://sourceforge.net/projects/dispcalgui/rss?path=/release"
+  name "DisplayCAL"
+  homepage "https://displaycal.net/"
 
   auto_updates true
-  depends_on formula: 'argyll-cms'
+  depends_on formula: "argyll-cms"
 
   pkg "DisplayCAL-#{version}.pkg"
 
-  uninstall pkgutil: 'net.displaycal.*.DisplayCAL.*'
+  uninstall pkgutil: "net.displaycal.*.DisplayCAL.*"
 
   zap trash: [
-               '~/Library/Application Support/dispcalGUI',
-               '~/Library/Logs/dispcalGUI',
-               '~/Library/Preferences/dispcalGUI',
-             ]
+    "~/Library/Application Support/dispcalGUI",
+    "~/Library/Logs/dispcalGUI",
+    "~/Library/Preferences/dispcalGUI",
+  ]
 end

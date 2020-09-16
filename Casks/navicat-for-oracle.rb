@@ -1,11 +1,12 @@
-cask 'navicat-for-oracle' do
-  version '12.1.24'
-  sha256 'de862a4fc6564ab46b88eaa73914794186a999d1e39f8d7866bf78714cc672ec'
+cask "navicat-for-oracle" do
+  version "15.0.21"
+  sha256 "e4daad3bd9d56258b93a4a0e8c86279b1e1f60e2f9ba1e833a0611150a8687f2"
 
   url "http://download.navicat.com/download/navicat#{version.major_minor.no_dots}_ora_en.dmg"
-  appcast 'https://www.navicat.com/updater/v120/sysProfileInfo.php?appName=Navicat%20for%20Oracle&appLang=en'
-  name 'Navicat for Oracle'
-  homepage 'https://www.navicat.com/products/navicat-for-oracle'
+  appcast "https://updater.navicat.com/mac/navicat_updates.php?appName=Navicat%20for%20Oracle&appLang=en"
+  name "Navicat for Oracle"
+  desc "Database administration and development tool for Oracle"
+  homepage "https://www.navicat.com/products/navicat-for-oracle"
 
-  app 'Navicat for Oracle.app'
+  app "Navicat for Oracle.app"
 end

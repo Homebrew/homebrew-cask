@@ -1,11 +1,12 @@
-cask 'chronicle' do
-  version '9.1.1'
-  sha256 '883b3ca116959481448b84f1179043edee98f662be7699a74dc83e1557f81ca9'
+cask "chronicle" do
+  version "9.7.2"
+  sha256 "cc3bfd5ccea35b5ff63a12034d817e7df2d3adfd00ddfb42935f84f5f4fce343"
 
-  url 'https://www.chronicleapp.com/static/downloads/chroniclepro.zip'
-  appcast 'http://www.littlefin.com/downloads/chronicle8.xml'
-  name 'Chronicle'
-  homepage 'https://chronicleapp.com/'
+  url "https://www.chronicleapp.com/static/downloads/chroniclepro.zip"
+  appcast "https://chronicleapp.com/chronicle8.xml"
+  name "Chronicle"
+  desc "Personal finance manager"
+  homepage "https://chronicleapp.com/"
 
-  app 'Chronicle Pro.app'
+  app "Chronicle Pro.app"
 end

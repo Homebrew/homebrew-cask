@@ -1,11 +1,11 @@
-cask 'navicat-premium-essentials' do
-  version '12.1.24'
-  sha256 '532daca7b7dcaf9449501e858986d1da55263b9178b19aa317fbb4640270d1ce'
+cask "navicat-premium-essentials" do
+  version "15.0.21"
+  sha256 "da219dd981b67592f499f4b60549fd5572e34de7f9ff322354aec53e1cd1ade1"
 
   url "http://download.navicat.com/download/navicatess#{version.major_minor.no_dots}_premium_en.dmg"
-  appcast 'https://www.navicat.com/updater/v120/sysProfileInfo.php?appName=Navicat%20Premium%20Essentials&appLang=en'
-  name 'Navicat Premium Essentials'
-  homepage 'https://navicat.com/products/navicat-essentials'
+  appcast "https://updater.navicat.com/mac/navicat_updates.php?appName=Navicat%20Premium%20Essentials&appLang=en"
+  name "Navicat Premium Essentials"
+  homepage "https://navicat.com/products/navicat-essentials"
 
-  app 'Navicat Premium Essentials.app'
+  app "Navicat Premium Essentials.app"
 end

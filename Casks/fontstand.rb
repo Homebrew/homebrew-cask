@@ -1,11 +1,11 @@
-cask 'fontstand' do
+cask "fontstand" do
   version :latest
   sha256 :no_check
 
-  url 'https://fontstand.com/application/download',
+  url "https://fontstand.com/application/download",
       user_agent: :fake
-  name 'Fontstand'
-  homepage 'https://fontstand.com/'
+  name "Fontstand"
+  homepage "https://fontstand.com/"
 
-  app 'Fontstand.app'
+  app "Fontstand.app"
 end

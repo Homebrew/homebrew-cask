@@ -1,19 +1,18 @@
-cask 'libreoffice' do
-  version '6.3.0'
-  sha256 '49da45b516fc8407051ed589852b9bb20e545efc4de636ad6321a9afb0989f42'
+cask "libreoffice" do
+  version "7.0.1"
+  sha256 "54581de9f904c5b65dda3be79862fccd3f7abe864f14fb2cff3561fcc96eaaf7"
 
-  # documentfoundation.org was verified as official when first introduced to the cask
+  # documentfoundation.org/ was verified as official when first introduced to the cask
   url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/LibreOffice_#{version}_MacOS_x86-64.dmg"
-  appcast "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/"
-  name 'LibreOffice'
-  homepage 'https://www.libreoffice.org/'
+  appcast "https://download.documentfoundation.org/libreoffice/stable/"
+  name "LibreOffice"
+  desc "Free cross-platform office suite"
+  homepage "https://www.libreoffice.org/"
 
-  conflicts_with cask: [
-                         'libreoffice-rc',
-                         'libreoffice-still',
-                       ]
+  conflicts_with cask: "homebrew/cask-versions/libreoffice-still"
+  depends_on macos: ">= :sierra"
 
-  app 'LibreOffice.app'
+  app "LibreOffice.app"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/gengal"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/regmerge"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/regview"
@@ -26,7 +25,7 @@ cask 'libreoffice' do
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/xpdfimport"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/soffice.wrapper.sh"
-  binary shimscript, target: 'soffice'
+  binary shimscript, target: "soffice"
 
   preflight do
     IO.write shimscript, <<~EOS
@@ -36,9 +35,9 @@ cask 'libreoffice' do
   end
 
   zap trash: [
-               '~/Library/Application Support/LibreOffice',
-               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.libreoffice.script.sfl*',
-               '~/Library/Preferences/org.libreoffice.script.plist',
-               '~/Library/Saved Application State/org.libreoffice.script.savedState',
-             ]
+    "~/Library/Application Support/LibreOffice",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.libreoffice.script.sfl*",
+    "~/Library/Preferences/org.libreoffice.script.plist",
+    "~/Library/Saved Application State/org.libreoffice.script.savedState",
+  ]
 end

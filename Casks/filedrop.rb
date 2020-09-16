@@ -1,11 +1,12 @@
-cask 'filedrop' do
+cask "filedrop" do
   version :latest
   sha256 :no_check
 
-  # commondatastorage.googleapis.com/filedropme was verified as official when first introduced to the cask
-  url 'https://commondatastorage.googleapis.com/filedropme/Filedrop.dmg'
-  name 'Filedrop'
-  homepage 'http://www.filedropme.com/'
+  # commondatastorage.googleapis.com/filedropme/ was verified as official when first introduced to the cask
+  url "https://commondatastorage.googleapis.com/filedropme/Filedrop.dmg"
+  name "Filedrop"
+  desc "File sharing software"
+  homepage "http://www.filedropme.com/"
 
-  app 'Filedrop.app'
+  app "Filedrop.app"
 end

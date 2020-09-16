@@ -1,12 +1,12 @@
-cask 'xaos' do
-  version '3.6'
-  sha256 '1a3864f354759c03c13150ef541b48d06cf74351360a85a8b46e73a45edc7054'
+cask "xaos" do
+  version "4.2"
+  sha256 "80b01d8cd10b6cd6d567058acaf9430398e5608f5e179048a4167ecc57b3bd90"
 
-  # sourceforge.net/xaos was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/xaos/xaos-#{version}-macosx.dmg"
-  appcast 'https://sourceforge.net/projects/xaos/rss'
-  name 'GNU XaoS'
-  homepage 'http://matek.hu/xaos/doku.php'
+  # github.com/xaos-project/XaoS/ was verified as official when first introduced to the cask
+  url "https://github.com/xaos-project/XaoS/releases/download/release-#{version}/XaoS-#{version}.dmg"
+  appcast "https://github.com/xaos-project/XaoS/releases.atom"
+  name "GNU XaoS"
+  homepage "https://xaos-project.github.io/"
 
-  app 'XaoS.app'
+  app "XaoS.app"
 end

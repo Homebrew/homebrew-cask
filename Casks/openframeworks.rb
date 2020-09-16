@@ -1,11 +1,11 @@
-cask 'openframeworks' do
-  version '0.10.1'
-  sha256 '2157b4c5368b65512682c77fc84c133db93daf8b7611f11818b813466b17c546'
+cask "openframeworks" do
+  version "0.11.0"
+  sha256 "4701be5c3cb480019ceb1ef6d936e29a958f1ef1fd980752f428babee89a5e25"
 
   url "https://openframeworks.cc/versions/v#{version}/of_v#{version}_osx_release.zip"
-  appcast 'https://github.com/openframeworks/openFrameworks/releases.atom'
-  name 'Openframeworks'
-  homepage 'https://openframeworks.cc/'
+  appcast "https://github.com/openframeworks/openFrameworks/releases.atom"
+  name "Openframeworks"
+  homepage "https://openframeworks.cc/"
 
   suite "of_v#{version}_osx_release"
 end

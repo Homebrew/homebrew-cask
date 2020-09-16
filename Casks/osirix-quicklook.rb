@@ -1,12 +1,12 @@
-cask 'osirix-quicklook' do
+cask "osirix-quicklook" do
   version :latest
   sha256 :no_check
 
-  url 'https://www.osirix-viewer.com/Museum/OsiriXQuickLookInstaller.zip'
-  name 'OsiriX DICOM QuickLook'
-  homepage 'https://www.osirix-viewer.com/'
+  url "https://www.osirix-viewer.com/Museum/OsiriXQuickLookInstaller.zip"
+  name "OsiriX DICOM QuickLook"
+  homepage "https://www.osirix-viewer.com/"
 
-  pkg 'OsiriXQuickLookInstaller.pkg'
+  pkg "OsiriXQuickLookInstaller.pkg"
 
-  uninstall pkgutil: 'com.pixmeo.osirix.osirixQuicklookPlugin.OsiriXQuickLookPlugin.pkg'
+  uninstall pkgutil: "com.pixmeo.osirix.osirixQuicklookPlugin.OsiriXQuickLookPlugin.pkg"
 end

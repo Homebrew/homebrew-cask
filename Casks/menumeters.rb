@@ -1,16 +1,23 @@
-cask 'menumeters' do
-  version '1.9.7bis'
-  sha256 '6cf2f7b312c1c13f74e9d56082f48b50b7ca5909ee3589df916a65818ac390d9'
+cask "menumeters" do
+  version "2.0.7"
+  sha256 "a63217c32670f19913f2f814c91b760b5df57413649440e8f1c80821b763713e"
 
-  # github.com/yujitach/MenuMeters was verified as official when first introduced to the cask
-  url "https://github.com/yujitach/MenuMeters/releases/download/#{version}/MenuMeters_#{version.major_minor_patch}.zip"
-  appcast 'https://github.com/yujitach/MenuMeters/releases.atom'
-  name 'MenuMeters for El Capitan (and later)'
-  homepage 'https://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/'
+  url "https://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/zips/MenuMeters_#{version}.zip"
+  appcast "https://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/MenuMeters-Update.xml"
+  name "MenuMeters for El Capitan (and later)"
+  homepage "https://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/"
 
-  depends_on macos: '>= :el_capitan'
+  auto_updates true
+  depends_on macos: ">= :el_capitan"
 
-  prefpane 'MenuMeters.prefPane'
+  app "MenuMeters.app"
 
-  zap trash: '~/Library/Preferences/com.ragingmenace.MenuMeters.plist'
+  uninstall quit: "com.yujitach.MenuMeters"
+
+  zap trash: [
+    "~/Library/Caches/com.yujitach.MenuMeters",
+    "~/Library/PreferencesPanes/MenuMeters.prefPane",
+    "~/Library/Preferences/com.ragingmenace.MenuMeters.plist",
+    "~/Library/Preferences/com.yujitach.MenuMeters.plist",
+  ]
 end

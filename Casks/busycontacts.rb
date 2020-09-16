@@ -1,16 +1,17 @@
-cask 'busycontacts' do
-  version '1.3.5,130500'
-  sha256 '5300615705f44335d2eb80433a056518adee2fe224a97fedd409a1314c77dd7b'
+cask "busycontacts" do
+  version "1.4.10,141003"
+  sha256 "3e2b8bf06207282400eb39f9c8554ee2e10c8f178b87bb7e8816f32084fdd8df"
 
-  url 'https://www.busymac.com/download/BusyContacts.zip'
-  appcast 'https://www.busymac.com/busycontacts/news.plist'
-  name 'BusyContacts'
-  homepage 'https://www.busymac.com/busycontacts/index.html'
+  url "https://www.busymac.com/download/BusyContacts.zip"
+  appcast "https://www.busymac.com/busycontacts/news.plist"
+  name "BusyContacts"
+  desc "Contact manager focusing on efficiency"
+  homepage "https://www.busymac.com/busycontacts/index.html"
 
   auto_updates true
 
-  pkg 'BusyContacts Installer.pkg'
+  pkg "BusyContacts Installer.pkg"
 
-  uninstall pkgutil: 'com.busymac.busycontacts.pkg',
-            signal:  ['KILL', 'com.busymac.busycontacts']
+  uninstall pkgutil: "com.busymac.busycontacts.pkg",
+            signal:  ["KILL", "com.busymac.busycontacts"]
 end

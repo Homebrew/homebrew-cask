@@ -1,29 +1,29 @@
 require "forwardable"
 
-class Check
+module Check
   CHECKS = {
-    installed_apps: -> {
+    installed_apps:       lambda {
       ["/Applications", File.expand_path("~/Applications")]
-        .flat_map { |dir| (0..5).map { |i| "/*" * i }.map { |glob| Dir["#{dir}#{glob}"] } }
+        .flat_map { |dir| (0..5).map { |i| "/*" * i }.flat_map { |glob| Dir["#{dir}#{glob}.app"] } }
     },
-    installed_kexts: -> {
+    installed_kexts:      lambda {
       system_command!("/usr/sbin/kextstat", args: ["-kl"], print_stderr: false)
         .stdout
         .lines
         .map { |l| l.match(/^.{52}([^\s]+)/)[1] }
         .grep_v(/^com\.apple\./)
     },
-    installed_pkgs: -> {
+    installed_pkgs:       lambda {
       Pathname("/var/db/receipts")
         .children
         .grep(/\.plist$/)
         .map { |path| path.basename.to_s.sub(/\.plist$/, "") }
     },
-    installed_launchjobs: -> {
+    installed_launchjobs: lambda {
       format_launchjob = lambda { |file|
         name = file.basename(".plist").to_s
 
-        xml, = system_command! "plutil", args: ["-convert", "xml1", "-o", "-", "--", file]
+        xml, = system_command! "plutil", args: ["-convert", "xml1", "-o", "-", "--", file], sudo: true
 
         label = Plist.parse_xml(xml)["Label"]
         (name == label) ? name : "#{name} (#{label})"
@@ -41,7 +41,7 @@ class Check
         .select(&:exist?)
         .map(&format_launchjob)
     },
-    loaded_launchjobs: -> {
+    loaded_launchjobs:    lambda {
       launchctl = lambda do |sudo|
         system_command!("/bin/launchctl", args: ["list"], print_stderr: false, sudo: sudo)
           .stdout
@@ -53,7 +53,8 @@ class Check
         .map { |l| l.split(/\s+/)[2] }
         .grep_v(/^com\.apple\./)
     },
-  }
+  }.freeze
+  private_constant :CHECKS
 
   class Diff
     attr_reader :removed, :added
@@ -69,90 +70,73 @@ class Check
       removed.any? || added.any?
     end
   end
+  private_constant :Diff
 
-  def before
-    @before = {}
-
-    CHECKS.each do |name, block|
-      @before[name] = block.call
-    end
+  def self.all
+    CHECKS.transform_values(&:call)
   end
 
-  def after
-    @after = {}
+  def self.errors(before, after)
+    diff = {}
 
-    CHECKS.each do |name, block|
-      @after[name] = block.call
-    end
-  end
-
-  def diff
-    return @diff if defined?(@diff)
-
-    @diff = {}
-
-    CHECKS.keys.each do |name|
-      @diff[name] = Diff.new(@before[name], @after[name])
+    CHECKS.each_key do |name|
+      diff[name] = Diff.new(before[name], after[name])
     end
 
-    @diff
-  end
-  private :diff
-
-  def success?
-    diff.values.map(&:added).all?(&:none?)
-  end
-
-  def message
-    return if success?
-
-    lines = []
+    errors = []
 
     pkg_files = diff[:installed_pkgs]
-                 .added
-                 .flat_map { |id| Cask::Pkg.new(id).pkgutil_bom_all.map(&:to_s) }
-
+                .added
+                .flat_map { |id| Cask::Pkg.new(id).pkgutil_bom_all.map(&:to_s) }
     installed_apps = diff[:installed_apps].added - pkg_files
-
     if installed_apps.any?
-      lines << Formatter.error("Some applications are still installed, add them to #{Formatter.identifier("uninstall delete:")}", label: "Error")
-      lines << installed_apps.join("\n")
+      message = "Some applications are still installed, add them to #{Formatter.identifier("uninstall delete:")}\n"
+      message += installed_apps.join("\n")
+      errors << message
     end
 
-    if diff[:installed_kexts].added.any?
-      lines << Formatter.error("Some kernel extensions are still installed, add them to #{Formatter.identifier("uninstall kext:")}", label: "Error")
-      lines << diff[:installed_kexts].added.join("\n")
+    installed_kexts = diff[:installed_kexts].added
+    if installed_kexts.any?
+      message = "Some kernel extensions are still installed, add them to #{Formatter.identifier("uninstall kext:")}\n"
+      message += installed_kexts.join("\n")
+      errors << message
     end
 
-    if diff[:installed_pkgs].added.any?
-      lines << Formatter.error("Some packages are still installed, add them to #{Formatter.identifier("uninstall pkgutil:")}", label: "Error")
-      lines << diff[:installed_pkgs].added.join("\n")
+    installed_packages = diff[:installed_pkgs].added
+    if installed_packages.any?
+      message = "Some packages are still installed, add them to #{Formatter.identifier("uninstall pkgutil:")}\n"
+      message += installed_packages.join("\n")
+      errors << message
     end
 
-    if diff[:installed_launchjobs].added.any?
-      lines << Formatter.error("Some launch jobs are still installed, add them to #{Formatter.identifier("uninstall launchctl:")}", label: "Error")
-      lines << diff[:installed_launchjobs].added.join("\n")
+    installed_launchjobs = diff[:installed_launchjobs].added
+    if installed_launchjobs.any?
+      message = "Some launch jobs are still installed, add them to #{Formatter.identifier("uninstall launchctl:")}\n"
+      message += installed_launchjobs.join("\n")
+      errors << message
     end
 
     running_apps = diff[:loaded_launchjobs]
-                     .added
-                     .select { |id| id.match?(/\.\d+\Z/) }
-                     .map { |id| id.sub(/\.\d+\Z/, "") }
+                   .added
+                   .select { |id| id.match?(/\.\d+\Z/) }
+                   .map { |id| id.sub(/\.\d+\Z/, "") }
 
     loaded_launchjobs = diff[:loaded_launchjobs]
-                         .added
-                         .reject { |id| id.match?(/\.\d+\Z/) }
+                        .added
+                        .reject { |id| id.match?(/\.\d+\Z/) }
 
     if running_apps.any?
-      lines << Formatter.error("Some applications are still running, add them to #{Formatter.identifier("uninstall quit:")}", label: "Error")
-      lines << running_apps.join("\n")
+      message = "Some applications are still running, add them to #{Formatter.identifier("uninstall quit:")}\n"
+      message += running_apps.join("\n")
+      errors << message
     end
 
     if loaded_launchjobs.any?
-      lines << Formatter.error("Some launch jobs were not unloaded, add them to #{Formatter.identifier("uninstall launchctl:")}", label: "Error")
-      lines << loaded_launchjobs.join("\n")
+      message = "Some launch jobs were not unloaded, add them to #{Formatter.identifier("uninstall launchctl:")}\n"
+      message += loaded_launchjobs.join("\n")
+      errors << message
     end
 
-    lines.join("\n")
+    errors
   end
 end

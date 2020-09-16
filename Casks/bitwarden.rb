@@ -1,28 +1,31 @@
-cask 'bitwarden' do
-  version '1.15.2'
-  sha256 '9e14f3d6f5e5f72d963aa8edd7120066d2b51da3d84802bf5fb0191d6139fa51'
+cask "bitwarden" do
+  version "1.21.0"
+  sha256 "589e33e910e3adc5928bccddf14f087926e6deab70cc940fb0f617b8c5b6b144"
 
-  # github.com/bitwarden/desktop was verified as official when first introduced to the cask
+  # github.com/bitwarden/desktop/ was verified as official when first introduced to the cask
   url "https://github.com/bitwarden/desktop/releases/download/v#{version}/Bitwarden-#{version}-mac.zip"
-  appcast 'https://github.com/bitwarden/desktop/releases.atom'
-  name 'Bitwarden'
-  homepage 'https://bitwarden.com/'
+  appcast "https://github.com/bitwarden/desktop/releases.atom"
+  name "Bitwarden"
+  desc "Desktop password and login vault"
+  homepage "https://bitwarden.com/"
 
-  app 'Bitwarden.app'
+  auto_updates true
+
+  app "Bitwarden.app"
 
   uninstall quit: [
-                    'com.bitwarden.desktop',
-                    'com.bitwarden.desktop.helper',
-                  ]
+    "com.bitwarden.desktop",
+    "com.bitwarden.desktop.helper",
+  ]
 
   zap trash: [
-               '~/Library/Logs/Bitwarden',
-               '~/Library/Application Support/Bitwarden',
-               '~/Library/Caches/com.bitwarden.desktop',
-               '~/Library/Caches/com.bitwarden.desktop.ShipIt',
-               '~/Library/Preferences/ByHost/com.bitwarden.desktop.ShipIt.*.plist',
-               '~/Library/Preferences/com.bitwarden.desktop.plist',
-               '~/Library/Preferences/com.bitwarden.desktop.helper.plist',
-               '~/Library/Saved Application State/com.bitwarden.desktop.savedState',
-             ]
+    "~/Library/Logs/Bitwarden",
+    "~/Library/Application Support/Bitwarden",
+    "~/Library/Caches/com.bitwarden.desktop",
+    "~/Library/Caches/com.bitwarden.desktop.ShipIt",
+    "~/Library/Preferences/ByHost/com.bitwarden.desktop.ShipIt.*.plist",
+    "~/Library/Preferences/com.bitwarden.desktop.plist",
+    "~/Library/Preferences/com.bitwarden.desktop.helper.plist",
+    "~/Library/Saved Application State/com.bitwarden.desktop.savedState",
+  ]
 end

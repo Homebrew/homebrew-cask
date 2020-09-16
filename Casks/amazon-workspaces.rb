@@ -1,14 +1,14 @@
-cask 'amazon-workspaces' do
-  version '2.5.9'
-  sha256 '215c762adc7fcc35cb161604a74f25f0b7ac9e94f9c9727c4945349826b1bcfe'
+cask "amazon-workspaces" do
+  version "3.0.9.1231"
+  sha256 "f363e1cadd72ea706591617f5660f7bafdaa249af1979e80d58bb21c0fd430df"
 
-  # d2td7dqidlhjx7.cloudfront.net was verified as official when first introduced to the cask
-  url 'https://d2td7dqidlhjx7.cloudfront.net/prod/global/osx/WorkSpaces.pkg'
-  appcast 'https://d2td7dqidlhjx7.cloudfront.net/prod/global/osx/WorkSpacesAppCast_macOS_20171023.xml'
-  name 'Amazon Workspaces'
-  homepage 'https://clients.amazonworkspaces.com/'
+  # workspaces-client-updates.s3.amazonaws.com/ was verified as official when first introduced to the cask
+  url "https://workspaces-client-updates.s3.amazonaws.com/prod/iad/osx/WorkSpaces.pkg"
+  appcast "https://d2td7dqidlhjx7.cloudfront.net/prod/iad/osx/WorkSpacesAppCast_macOS_20171023.xml"
+  name "Amazon Workspaces"
+  homepage "https://clients.amazonworkspaces.com/"
 
-  pkg 'WorkSpaces.pkg'
+  pkg "WorkSpaces.pkg"
 
-  uninstall pkgutil: 'com.amazon.workspaces'
+  uninstall pkgutil: "com.amazon.workspaces"
 end

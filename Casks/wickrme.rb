@@ -1,12 +1,12 @@
-cask 'wickrme' do
-  version '5.28.6'
-  sha256 'd58ea4423469ef2530dcfd1caeb97ad3e507fd801baabf6e9bde0f9a4808348b'
+cask "wickrme" do
+  version "5.62.8"
+  sha256 "e7c725b5ce305f9db7d1ba6bca0fda4866b2993a90fcca41f1a51f4e1d701638"
 
-  # s3.amazonaws.com/static.wickr.com was verified as official when first introduced to the cask
+  # s3.amazonaws.com/static.wickr.com/ was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/static.wickr.com/downloads/mac/me/WickrMe-#{version}.dmg"
-  appcast 'https://rink.hockeyapp.net/api/2/apps/5af5d569264b4cc68e1f5156e8f80fb9'
-  name 'Wickr Me'
-  homepage 'https://wickr.com/products/personal/'
+  appcast "https://me-download.wickr.com/api/multiVerify/me/undefined/"
+  name "Wickr Me"
+  homepage "https://wickr.com/products/personal/"
 
-  app 'WickrMe.app'
+  app "WickrMe.app"
 end

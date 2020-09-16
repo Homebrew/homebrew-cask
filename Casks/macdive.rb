@@ -1,11 +1,11 @@
-cask 'macdive' do
-  version '2.10.13'
-  sha256 '3583431d3526eeca15effc51874ee37a16cda5c73b1bb6511af125402612ce9f'
+cask "macdive" do
+  version "2.11.4"
+  sha256 "acbd7c7f7e4fe81d47526a4acb6cd2cb9f0062e836c0f3340092dd7cccaf1d58"
 
   url "https://www.mac-dive.com/downloads/MacDive_#{version}.dmg"
-  appcast 'https://www.mac-dive.com/shimmer/?appcast&appName=MacDive'
-  name 'MacDive'
-  homepage 'https://www.mac-dive.com/'
+  appcast "https://www.mac-dive.com/shimmer/?appcast&appName=MacDive"
+  name "MacDive"
+  homepage "https://www.mac-dive.com/"
 
-  app 'MacDive.app'
+  app "MacDive.app"
 end

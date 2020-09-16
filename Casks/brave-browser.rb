@@ -1,20 +1,21 @@
-cask 'brave-browser' do
-  version '0.67.125'
-  sha256 'bee908db8912c6f090b3ece8c5c24e36654752329fe3c9c18fc1bdb601c4a29f'
+cask "brave-browser" do
+  version "85.1.13.86,113.86"
+  sha256 "c60fe25cc5de4df5b29253b3b60d0f067a8cda1a7eda6ae1dc79c891844a819a"
 
-  # github.com/brave/brave-browser was verified as official when first introduced to the cask
-  url "https://github.com/brave/brave-browser/releases/download/v#{version}/Brave-Browser.dmg"
-  appcast 'https://updates.bravesoftware.com/sparkle/Brave-Browser/stable/appcast.xml'
-  name 'Brave'
-  homepage 'https://brave.com/'
+  # updates-cdn.bravesoftware.com/sparkle/Brave-Browser/ was verified as official when first introduced to the cask
+  url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Browser/stable/#{version.after_comma}/Brave-Browser.dmg"
+  appcast "https://updates.bravesoftware.com/sparkle/Brave-Browser/stable/appcast.xml"
+  name "Brave"
+  desc "Web browser focusing on privacy"
+  homepage "https://brave.com/"
 
   auto_updates true
 
-  app 'Brave Browser.app'
+  app "Brave Browser.app"
 
   zap trash: [
-               '~/Library/Application Support/BraveSoftware/Brave-Browser',
-               '~/Library/Preferences/com.brave.Browser.plist',
-               '~/Library/Saved Application State/com.brave.Browser.savedState',
-             ]
+    "~/Library/Application Support/BraveSoftware/Brave-Browser",
+    "~/Library/Preferences/com.brave.Browser.plist",
+    "~/Library/Saved Application State/com.brave.Browser.savedState",
+  ]
 end

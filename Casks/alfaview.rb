@@ -1,13 +1,13 @@
-cask 'alfaview' do
-  version '7.44828'
-  sha256 '2e984149e5510586bc259a9578a7896a7b36ea0e977b1a4458ee86b01463520d'
+cask "alfaview" do
+  version "8.8.3"
+  sha256 "c87757b9030ca4a96bde98568e1936af70a431803adb2c7d119bf2e7ac5a50b2"
 
   url "https://assets.alfaview.com/stable/mac/alfaview-mac-production-#{version}.dmg"
-  appcast 'https://alfaview.com/downloads'
-  name 'Alfaview'
-  homepage 'https://alfaview.com/'
+  appcast "https://production-alfaview-assets.alfaview.com/stable/mac/version.info"
+  name "Alfaview"
+  homepage "https://alfaview.com/"
 
-  app 'alfaview.app'
+  app "alfaview.app"
 
-  zap trash: '~/Library/Application Support/alfaview'
+  zap trash: "~/Library/Application Support/alfaview"
 end

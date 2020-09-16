@@ -1,11 +1,11 @@
-cask 'sirimote' do
-  version '1.3.0'
-  sha256 '76b37c23006847d763fde28fcc2ac0499eff4a18ed9dcda8508d4acfc4e25ac3'
+cask "sirimote" do
+  version "1.3.7"
+  sha256 "1a4c7fbf5476215278a26dedfdec6a81860fbf5ec53c157f2cf0466a645d8d35"
 
-  url 'https://eternalstorms.at/sirimote/SiriMote.zip'
-  appcast 'https://eternalstorms.at/sirimote/updatefeed.xml'
-  name 'SiriMote'
-  homepage 'https://eternalstorms.at/sirimote'
+  url "https://eternalstorms.at/sirimote/SiriMote.zip"
+  appcast "https://eternalstorms.at/sirimote/updatefeed.xml"
+  name "SiriMote"
+  homepage "https://eternalstorms.at/sirimote"
 
-  app 'SiriMote.app'
+  app "SiriMote.app"
 end

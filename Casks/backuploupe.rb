@@ -1,11 +1,12 @@
-cask 'backuploupe' do
-  version '2.16'
-  sha256 '2e8d0ebfbcd20a010e481a5e82dd683f6feae06fe8b7ef40e9043b1c60f14efe'
+cask "backuploupe" do
+  version "3.0.6"
+  sha256 "0772aa299bf0f5f14a169696b5c651b426836ad80efefd90e63a0ceb8faafb2f"
 
   url "https://www.soma-zone.com/download/files/BackupLoupe-#{version}.tar.bz2"
-  appcast 'https://www.soma-zone.com/BackupLoupe/a/appcast.xml'
-  name 'BackupLoupe'
-  homepage 'https://www.soma-zone.com/BackupLoupe/'
+  appcast "https://www.soma-zone.com/BackupLoupe/a/appcast-update-#{version.major}.xml"
+  name "BackupLoupe"
+  desc "Alternative GUI for Time Machine"
+  homepage "https://www.soma-zone.com/BackupLoupe/"
 
-  app 'BackupLoupe.app'
+  app "BackupLoupe.app"
 end

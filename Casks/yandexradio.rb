@@ -1,11 +1,11 @@
-cask 'yandexradio' do
-  version '1.5.7,126'
-  sha256 '59fbe6b7ff5b10a1e0ea0e94d03a91f2729be920763a7f2e3cde47f96c2fc1f9'
+cask "yandexradio" do
+  version "2.0.2,145"
+  sha256 "dad4c3ef5acc5543ce2ea5a44ea85cee2443d339b04d9fe566fb9dd2538fb67c"
 
-  url "http://tutra.ru/app/Yandex.Radio.#{version.before_comma}(#{version.after_comma}).dmg"
-  appcast 'http://tutra.ru/app/yandex.radio/appcast.xml'
-  name 'Yandex.Radio'
-  homepage 'http://tutra.ru/app/yandex.radio/'
+  url "http://tutra.ru/app/Yandex.Radio.#{version.before_comma}-#{version.after_comma}.dmg"
+  appcast "http://tutra.ru/app/yandex.radio/appcast.xml"
+  name "Yandex.Radio"
+  homepage "http://tutra.ru/app/yandex.radio/"
 
-  app 'Yandex.Radio.app'
+  app "Yandex.Radio.app"
 end

@@ -1,13 +1,13 @@
-cask 'racket' do
-  version '7.4'
-  sha256 'abc8143c48ffb5876a975228acc5fe324b6c56e159a09f0f6e9a2a766abbb65d'
+cask "racket" do
+  version "7.8"
+  sha256 "88bf81c54d2ea777194cec5534baaf5096f4398660e09c9075abaf821ec5e135"
 
   url "https://mirror.racket-lang.org/installers/#{version}/racket-#{version}-x86_64-macosx.dmg"
-  appcast 'https://download.racket-lang.org/all-versions.html'
-  name 'Racket'
-  homepage 'https://racket-lang.org/'
+  appcast "https://download.racket-lang.org/all-versions.html"
+  name "Racket"
+  homepage "https://racket-lang.org/"
 
-  conflicts_with cask: 'racket-cs'
+  conflicts_with cask: "racket-cs"
 
   suite "Racket v#{version}"
   binary "#{appdir}/Racket v#{version}/bin/drracket"

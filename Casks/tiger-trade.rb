@@ -1,12 +1,16 @@
-cask 'tiger-trade' do
-  version '5.0.1'
-  sha256 'd6799a5576de340a11a768c3591ef2895b3c9d63ecac8cee58881ee6b66050fb'
+cask "tiger-trade" do
+  version "6.1.2,20200908:8A94F4"
+  sha256 "fbbf1ef9c2594c3e9bd80db5a830415876cf7e38b4a0ac76c6515fb9538d2a3d"
 
-  # s.tigerfintech.com was verified as official when first introduced to the cask
-  url "https://s.tigerfintech.com/desktop/cdn/f/TigerTrade-#{version}.dmg"
-  name 'Tiger Trade'
-  name '老虎证券'
-  homepage 'https://www.itiger.com/'
+  # s.tigerfintech.com/ was verified as official when first introduced to the cask
+  url "https://s.tigerfintech.com/desktop/cdn/f/TigerTrade_#{version.before_comma}_#{version.after_comma.before_colon}_#{version.after_colon}.dmg"
+  appcast "https://up.play-analytics.com/app/upgrade/latest?lang=zh_CN&platform=darwin&appVer=1"
+  name "Tiger Trade"
+  name "老虎证券"
+  desc "Trading platform"
+  homepage "https://www.itiger.com/download/mac"
 
-  app 'Tiger Trade.app'
+  depends_on macos: ">= :sierra"
+
+  app "Tiger Trade.app"
 end

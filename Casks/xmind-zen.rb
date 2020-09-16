@@ -1,13 +1,14 @@
-cask 'xmind-zen' do
-  version '9.2.1-201906120058,2019'
-  sha256 'a9ab7496256a2dfc9b96cc2d26dca41a93b566e8e47e674ac7539a3510d982a7'
+cask "xmind-zen" do
+  version "10.2.1-202007271856"
+  sha256 "a41f8647ef655e19e4a8066746475be95fd13b501c9fa09cc81abadb1da29580"
 
-  url "https://dl3.xmind.net/XMind-ZEN-Update-#{version.after_comma}-for-macOS-#{version.before_comma}.dmg"
-  appcast 'https://www.xmind.net/download/'
-  name 'XMind ZEN'
-  homepage 'https://www.xmind.net/zen/'
+  url "https://www.xmind.net/xmind/downloads/XMind-2020-for-macOS-#{version}.dmg"
+  appcast "https://www.xmind.net/download/"
+  name "XMind"
+  desc "Brainstorming and mind mapping app"
+  homepage "https://www.xmind.net/zen/"
 
-  app 'XMind ZEN.app'
+  app "XMind.app"
 
-  zap trash: '~/Library/Application Support/XMind ZEN'
+  zap trash: "~/Library/Application Support/XMind ZEN"
 end

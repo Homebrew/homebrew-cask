@@ -1,11 +1,12 @@
-cask 'wey' do
-  version '0.3.5'
-  sha256 'baa4b7446bacfda9e24d6cc64306757b77341a7ef0d4dbb4f557dce1f3c94d03'
+cask "wey" do
+  version "0.3.7"
+  sha256 "5ebbfad23a598d64c2fa1c311877546ae9b9c4e41e4040395496231fc70f68ec"
 
   url "https://github.com/yue/wey/releases/download/v#{version}/wey-v#{version}-darwin-x64.zip"
-  appcast 'https://github.com/yue/wey/releases.atom'
-  name 'Wey'
-  homepage 'https://github.com/yue/wey'
+  appcast "https://github.com/yue/wey/releases.atom"
+  name "Wey"
+  desc "Open-source Slack desktop app"
+  homepage "https://github.com/yue/wey"
 
-  app 'Wey.app'
+  app "Wey.app"
 end

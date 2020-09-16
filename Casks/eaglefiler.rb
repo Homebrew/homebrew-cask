@@ -1,11 +1,11 @@
-cask 'eaglefiler' do
-  version '1.8.8'
-  sha256 '959150aa38a6c3f63cec43840bf9190f97645702f26efd3b14d17bd46bb7ba63'
+cask "eaglefiler" do
+  version "1.8.14"
+  sha256 "1040bb6388bb689227eaad5ccaa9f4f2e1961b029a8f4f8eb1f211c3a993c150"
 
   url "https://c-command.com/downloads/EagleFiler-#{version}.dmg"
-  appcast 'https://c-command.com/eaglefiler/help/version-history'
-  name 'EagleFiler'
-  homepage 'https://c-command.com/eaglefiler/'
+  appcast "https://c-command.com/eaglefiler/help/version-history"
+  name "EagleFiler"
+  homepage "https://c-command.com/eaglefiler/"
 
-  app 'EagleFiler.app'
+  app "EagleFiler.app"
 end

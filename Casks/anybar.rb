@@ -1,11 +1,12 @@
-cask 'anybar' do
-  version '0.1.4'
-  sha256 'b245d3ad2c73a10eeef53647a72b0f31a239ef0005656db7fccabea872bb2bd8'
+cask "anybar" do
+  version "0.2.1"
+  sha256 "7e1f65d9fd7a8cbf7370c78c1e1f45568f2999f02f76337aa31dfd847b6cfc79"
 
   url "https://github.com/tonsky/AnyBar/releases/download/#{version}/AnyBar-#{version}.zip"
-  appcast 'https://github.com/tonsky/AnyBar/releases.atom'
-  name 'AnyBar'
-  homepage 'https://github.com/tonsky/AnyBar'
+  appcast "https://github.com/tonsky/AnyBar/releases.atom"
+  name "AnyBar"
+  desc "Menu bar status indicator"
+  homepage "https://github.com/tonsky/AnyBar"
 
-  app 'AnyBar.app'
+  app "AnyBar.app"
 end

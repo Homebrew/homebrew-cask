@@ -1,11 +1,11 @@
-cask 'tongbu' do
-  version '1.2.7.0_1'
-  sha256 '5f655b0bf7097dd53a56129dceb5205a1ac4af717fd8e7b8d78328d366baca8a'
+cask "tongbu" do
+  version "3.0.9.0"
+  sha256 "32a2309a115d9d017ea0657e5b9a5c69be9d49000ec1a6a3e74890ad9e89c555"
 
-  url "http://qd.tongbu.com/qd/tbzsqd/zsmac_#{version.split('_')[0]}/Tongbu_mac_v#{version}.dmg"
-  appcast 'https://zs.tongbu.com/mac/'
-  name 'Tongbu'
-  homepage 'https://www.tongbu.com/mac'
+  url "http://qd.tongbu.com/qd/tbzsqd/zsmac_#{version}/Tongbu_mac_#{version}.dmg"
+  appcast "https://zs.tongbu.com/mac/"
+  name "Tongbu"
+  homepage "https://zs.tongbu.com/mac/"
 
-  app 'Tongbu.app'
+  app "Tongbu.app"
 end

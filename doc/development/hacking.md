@@ -15,7 +15,7 @@ Homebrew Cask is designed to work like a traditional Unix tool:
 
 Homebrew Cask is still young, and should be considered in alpha.
 
-We have good support for a variety of artifacts such as apps, pkgs, binaries, plugins, and [fonts](https://github.com/Homebrew/homebrew-cask-fonts/). Homebrew Cask can install and uninstall any of those. However, these commands don’t work well with multiple versions, and most importantly, we currently can’t `upgrade` ([but are working on it](https://github.com/Homebrew/homebrew-cask/issues/29301)).
+We have good support for a variety of artifacts such as apps, pkgs, binaries, plugins, and [fonts](https://github.com/Homebrew/homebrew-cask-fonts/).
 
 ### Casks and Formulae
 
@@ -38,7 +38,7 @@ The Homebrew Cask core code is included in [Homebrew](https://github.com/Homebre
 If you are developing a subcommand, you can force `brew cask` to dispatch a specific file by giving a fully-qualified path to the file containing the subcommand, like this:
 
 ```bash
-$ brew cask /usr/local/Homebrew/Library/Homebrew/cask/lib/hbc/cli/info.rb google-chrome
+$ brew cask /usr/local/Homebrew/Library/Homebrew/cask/cmd/info.rb google-chrome
 ```
 
 ### Forcing a Specific macOS Release
@@ -65,7 +65,7 @@ Instead of in the `$PATH`, an external command can also be located in the `cmd` 
 
 ### The Internal Command `_stanza`
 
-[`_stanza`](https://github.com/Homebrew/brew/blob/master/Library/Homebrew/cask/lib/hbc/cli/internal_stanza.rb) is a useful command to contributors who want to build a tool that leans on the information from Homebrew Cask. It extracts and renders a specific stanza for either a given Cask or every Cask.
+[`_stanza`](https://github.com/Homebrew/brew/blob/master/Library/Homebrew/cask/cmd/internal_stanza.rb) is a useful command to contributors who want to build a tool that leans on the information from Homebrew Cask. It extracts and renders a specific stanza for either a given Cask or every Cask.
 
 The syntax is
 

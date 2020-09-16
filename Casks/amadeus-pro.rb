@@ -1,13 +1,13 @@
-cask 'amadeus-pro' do
-  version '2.6.1'
-  sha256 'fde9153e92501534d65bb299b428b25092f36a852ab81a71d205cef552e6df09'
+cask "amadeus-pro" do
+  version "2.8.4"
+  sha256 "34d89cb521e7bccef39c02f07ec5dbf25d5255a5e93d563e4b774c79a5a5829e"
 
-  # s3.amazonaws.com/AmadeusPro2 was verified as official when first introduced to the cask
-  url 'https://s3.amazonaws.com/AmadeusPro2/AmadeusPro.zip'
-  appcast 'https://s3.amazonaws.com/AmadeusPro2/versions.rtf',
-          configuration: version.major_minor
-  name 'Amadeus Pro'
-  homepage 'https://www.hairersoft.com/pro.html'
+  # s3.amazonaws.com/AmadeusPro2/ was verified as official when first introduced to the cask
+  url "https://s3.amazonaws.com/AmadeusPro2/AmadeusPro.zip"
+  appcast "https://www.hairersoft.com/pro.html"
+  name "Amadeus Pro"
+  desc "Multi-purpose audio recorder, editor and converter"
+  homepage "https://www.hairersoft.com/pro.html"
 
-  app 'Amadeus Pro.app'
+  app "Amadeus Pro.app"
 end

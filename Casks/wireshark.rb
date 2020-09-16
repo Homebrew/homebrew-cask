@@ -1,38 +1,43 @@
-cask 'wireshark' do
-  version '3.0.3'
-  sha256 '71d0196e7368715958598c8286f5219eb24fad08acf1cfe9186ef19d29e04ae9'
+cask "wireshark" do
+  version "3.2.6"
+  sha256 "e63b7345e8a068a4c3e6dcd8b2de61fe66c03e78f3c8002a94829d152e1566d5"
 
   url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20Intel%2064.dmg"
-  appcast 'https://www.macupdater.net/cgi-bin/extract_text/extract_text_split_easy.cgi?url=https://www.wireshark.org/download.html&splitter_1=stable&index_1=1&splitter_2=development&index_2=0'
-  name 'Wireshark'
-  homepage 'https://www.wireshark.org/'
+  appcast "https://www.wireshark.org/update/0/Wireshark/0.0.0/macOS/x86-64/en-US/stable.xml"
+  name "Wireshark"
+  desc "Network protocol analyzer"
+  homepage "https://www.wireshark.org/"
 
-  conflicts_with cask: 'wireshark-chmodbpf'
-  depends_on macos: '>= :sierra'
+  auto_updates true
+  conflicts_with cask: "wireshark-chmodbpf"
+  depends_on macos: ">= :sierra"
 
-  pkg "Wireshark #{version} Intel 64.pkg"
+  app "Wireshark.app"
+  pkg "Install ChmodBPF.pkg"
+  pkg "Add Wireshark to the system path.pkg"
 
   uninstall_preflight do
-    set_ownership '/Library/Application Support/Wireshark'
-    system_command '/usr/sbin/dseditgroup', args: ['-o', 'delete', 'access_bpf'], sudo: true
+    system_command "/usr/sbin/installer",
+                   args: [
+                     "-pkg", "#{staged_path}/Uninstall ChmodBPF.pkg",
+                     "-target", "/"
+                   ],
+                   sudo: true
+    system_command "/usr/sbin/installer",
+                   args: [
+                     "-pkg", "#{staged_path}/Remove Wireshark from the system path.pkg",
+                     "-target", "/"
+                   ],
+                   sudo: true
   end
 
-  uninstall pkgutil:   'org.wireshark.*',
-            launchctl: 'org.wireshark.ChmodBPF',
-            delete:    [
-                         '/private/etc/manpaths.d/Wireshark',
-                         '/private/etc/paths.d/Wireshark',
-                         '/usr/local/bin/capinfos',
-                         '/usr/local/bin/dftest',
-                         '/usr/local/bin/dumpcap',
-                         '/usr/local/bin/editcap',
-                         '/usr/local/bin/mergecap',
-                         '/usr/local/bin/randpkt',
-                         '/usr/local/bin/rawshark',
-                         '/usr/local/bin/text2pcap',
-                         '/usr/local/bin/tshark',
-                         '/usr/local/bin/wireshark',
-                       ]
+  uninstall pkgutil: "org.wireshark.*"
 
-  zap trash: '~/Library/Saved Application State/org.wireshark.Wireshark.savedState'
+  zap trash: [
+    "~/Library/Caches/org.wireshark.Wireshark",
+    "~/Library/Cookies/org.wireshark.Wireshark.binarycookies",
+    "~/Library/Preferences/org.wireshark.Wireshark.plist",
+    "~/Library/Saved Application State/org.wireshark.Wireshark.savedState",
+    "~/.config/wireshark",
+  ]
 end

@@ -1,22 +1,23 @@
-cask 'gifox' do
-  version '010601.03'
-  sha256 'b0dea197c7c0f1533de4ca2d0402247780bc0463eecdfd8dfa3928f81e5399a9'
+cask "gifox" do
+  version "2.2.3,020203.00"
+  sha256 "de8eb279d7cf890705ff2ce5ef3543cb662709d49797f7c6365bcf00f129145d"
 
-  # d1hsvn1xu03mmy.cloudfront.net/gifox was verified as official when first introduced to the cask
-  url "https://d1hsvn1xu03mmy.cloudfront.net/gifox/#{version}.dmg"
-  appcast 'https://d1hsvn1xu03mmy.cloudfront.net/gifox/appcast.xml'
-  name 'gifox'
-  homepage 'https://gifox.io/'
+  # d3si16icyi9iar.cloudfront.net/gifox/ was verified as official when first introduced to the cask
+  url "https://d3si16icyi9iar.cloudfront.net/gifox/#{version.after_comma}.dmg"
+  appcast "https://www.macupdater.net/cgi-bin/extract_text/download_with_useragent.cgi?url=https://api.gifox.io/appcast?prereleases=false"
+  name "gifox"
+  desc "App to record the screen"
+  homepage "https://gifox.io/"
 
-  app 'Gifox.app'
+  app "Gifox.app"
 
-  uninstall launchctl: 'com.gifox.gifox.agent',
-            quit:      'com.gifox.gifox'
+  uninstall launchctl: "com.gifox.gifox#{version.major}.agent",
+            quit:      "com.gifox.gifox#{version.major}"
 
   zap trash: [
-               '~/Library/Application Support/Gifox',
-               '~/Library/Caches/com.gifox.gifox',
-               '~/Library/Cookies/com.gifox.gifox.binarycookies',
-               '~/Library/Preferences/com.gifox.gifox.plist',
-             ]
+    "~/Library/Application Support/Gifox #{version.major}",
+    "~/Library/Caches/com.gifox.gifox#{version.major}",
+    "~/Library/Cookies/com.gifox.gifox#{version.major}.binarycookies",
+    "~/Library/Preferences/com.gifox.gifox#{version.major}.plist",
+  ]
 end

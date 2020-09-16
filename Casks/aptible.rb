@@ -1,13 +1,15 @@
-cask 'aptible' do
-  version '0.16.1,20180730142201,176'
-  sha256 'b9bc547ffdc1ce6551d0d79690ab7d4192ad4abe831a7ce4aa9a8236feeba7da'
+cask "aptible" do
+  version "0.16.7,20200812001716,217"
+  sha256 "e186135254a7257e6f661b5520f5e2058ae8ed6b3574b81532a1a67d3f82ce0b"
 
-  # omnibus-aptible-toolbelt.s3.amazonaws.com was verified as official when first introduced to the cask
+  # omnibus-aptible-toolbelt.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://omnibus-aptible-toolbelt.s3.amazonaws.com/aptible/omnibus-aptible-toolbelt/master/#{version.after_comma.after_comma}/pkg/aptible-toolbelt-#{version.before_comma}%2B#{version.after_comma.before_comma}-mac-os-x.10.11.6-1.pkg"
-  name 'Aptible Toolbelt'
-  homepage 'https://www.aptible.com/support/toolbelt/'
+  name "Aptible Toolbelt"
+  homepage "https://www.aptible.com/documentation/deploy/cli.html"
+
+  depends_on formula: "libu2f-host"
 
   pkg "aptible-toolbelt-#{version.before_comma}+#{version.after_comma.before_comma}-mac-os-x.10.11.6-1.pkg"
 
-  uninstall pkgutil: 'com.aptible.toolbelt'
+  uninstall pkgutil: "com.aptible.toolbelt"
 end

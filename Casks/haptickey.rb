@@ -1,13 +1,20 @@
-cask 'haptickey' do
-  version '0.4.6'
-  sha256 '71d2905f01fe45acb74452f3a92c37bdcb2d0ca605a831fe4f0854fe3d968d04'
+cask "haptickey" do
+  version "0.5.0"
+  sha256 "ea7ce3a3c0761a0e0cbd13f2bccdc64c3f0cff363ecf89fcacb7081f634a412f"
 
   url "https://github.com/niw/HapticKey/releases/download/#{version}/HapticKey.app.zip"
-  appcast 'https://github.com/niw/HapticKey/releases.atom'
-  name 'HapticKey'
-  homepage 'https://github.com/niw/HapticKey'
+  appcast "https://github.com/niw/HapticKey/releases.atom"
+  name "HapticKey"
+  homepage "https://github.com/niw/HapticKey"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'HapticKey.app'
+  app "HapticKey.app"
+
+  uninstall quit: "at.niw.HapticKey"
+
+  zap trash: [
+    "~/Library/Caches/at.niw.HapticKey",
+    "~/Library/Preferences/at.niw.HapticKey.plist",
+  ]
 end

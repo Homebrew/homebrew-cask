@@ -1,14 +1,17 @@
-cask 'banking-4' do
+cask "banking-4" do
   # note: "4" is not a version number, but an intrinsic part of the product name
-  version '7.1.0,7160'
-  sha256 '9fb3e0740daf22372aab4b730776f21c61b29557a74fe128047a77fbf2bb3a07'
+  version "7.4.0"
+  sha256 "fb1c42e63c62ad8aa5c643f656001971900a05ff42cd354daf3f2bfc4aea5ae1"
 
-  url 'https://subsembly.com/download/MacBanking4.pkg'
-  appcast 'https://subsembly.com/banking4-macos-updates.php'
-  name 'Banking 4'
-  homepage 'https://subsembly.com/banking4.html'
+  url "https://subsembly.com/download/MacBanking4.pkg"
+  appcast "https://subsembly.com/banking4-macos-updates.php"
+  name "Banking 4"
+  desc "German accounting software"
+  homepage "https://subsembly.com/banking4.html"
 
-  pkg 'MacBanking4.pkg'
+  auto_updates true
 
-  uninstall pkgutil: 'com.subsembly.Banking4'
+  pkg "MacBanking4.pkg"
+
+  uninstall pkgutil: "com.subsembly.Banking4"
 end

@@ -125,8 +125,6 @@ Caffeine.app (app)
 
 Since the Homebrew Cask repository is a Homebrew Tap, you’ll pull down the latest Casks every time you issue the regular Homebrew command `brew update`. You can check for outdated Casks with `brew cask outdated` and install the outdated Casks with `brew cask upgrade`. Many applications update themselves, so their Casks are ignored by `brew cask outdated` and `brew cask upgrade`. This behaviour can be overridden by adding `--greedy` to the command.
 
-It is generally safe to run updates from within an application.
-
 ## Updating/Upgrading the Homebrew Cask Tool
 
 Homebrew [automatically taps and keeps Homebrew Cask updated](https://github.com/Homebrew/homebrew-cask/pull/15381). `brew update` is all that is required.

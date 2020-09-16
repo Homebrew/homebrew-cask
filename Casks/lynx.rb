@@ -1,15 +1,15 @@
-cask 'lynx' do
-  version '6.5.9.0'
-  sha256 '1d724bbcf0d5940d88851057c3d6156bb9b4968c731d0cc96192190d72f5952f'
+cask "lynx" do
+  version "6.6.5.0"
+  sha256 "8daebc2dfaddda48b6f27f3d10a7fe0bd4cf66d05ff962a148deb2c8e8be5048"
 
-  url 'https://download.saharasupport.com/lynx/production/macx/Lynx-install.dmg'
-  appcast 'https://downloads.saharasupport.com/lynx/production/macx/version.txt'
-  name 'Lynx by Clevertouch'
-  homepage 'https://download.saharasupport.com/'
+  url "https://download.saharasupport.com/lynx/production/macx/Lynx-install.dmg"
+  appcast "https://downloads.saharasupport.com/lynx/production/macx/version.txt"
+  name "Lynx by Clevertouch"
+  homepage "https://download.saharasupport.com/"
 
   auto_updates true
 
-  pkg 'Lynx.pkg'
+  pkg "Lynx.pkg"
 
-  uninstall pkgutil: 'uk.co.cleverproducts.lynx'
+  uninstall pkgutil: "uk.co.cleverproducts.lynx"
 end

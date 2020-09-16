@@ -1,11 +1,12 @@
-cask 'reunion' do
-  version '12.0.0.181218'
-  sha256 '6c4946169eb2f57d3726615265b29a6483ddfbccf19e610f832c5fadba8fd1e6'
+cask "reunion" do
+  version "12.0.0.200602"
+  sha256 "5ec2e7eb77df874ba889dadd1fa7cbff898708f02a862ed726a605ace69c9dab"
 
   url "https://store.leisterpro.com/updates/reunion#{version.major}/Reunion-#{version.dots_to_hyphens}.zip"
-  appcast "https://store.leisterpro.com/updates/reunion#{version.major}/appcast.xml"
-  name 'Reunion'
-  homepage 'http://www.leisterpro.com/'
+  appcast "https://store.leisterpro.com/updates/reunion#{version.major}/appcast.xml",
+          must_contain: version.dots_to_hyphens
+  name "Reunion"
+  homepage "https://www.leisterpro.com/"
 
   app "Reunion #{version.major}.app"
 end

@@ -1,27 +1,33 @@
-cask 'sip' do
+cask "sip" do
   if MacOS.version <= :sierra
-    version '1.1.6'
-    sha256 'bb170a54090aab5703388a3e7a22e9cf4e4d98e84f5658893e1e6f9677b9a51e'
+    version "1.2"
+    sha256 "93569421eef761ccdd2784d73e5f201d29e5e22ad6814a7a169f459f460bf4ff"
   else
-    version '2.1'
-    sha256 'e04de227daa86b1c50bc980baef2fb97323f0fe7da7fe8b8d829669cfb64c163'
+    version "2.3.1"
+    sha256 "c1dc9b78a4577d20b2a1e03105f3c9840555f857b1a1fb1fa60ba98dcf4700f9"
   end
 
   url "https://sipapp.io/updates/v#{version.major}/sip-#{version}.zip"
   appcast "https://sipapp.io/updates/v#{version.major}/sip.xml"
-  name 'Sip'
-  homepage 'https://sipapp.io/'
+  name "Sip"
+  desc "Collect, organize & share colors"
+  homepage "https://sipapp.io/"
 
-  depends_on macos: '>= :sierra'
+  auto_updates true
+  depends_on macos: ">= :sierra"
 
-  app 'Sip.app'
+  app "Sip.app"
+
+  uninstall quit: "io.sipapp.Sip-paddle"
 
   zap trash: [
-               '~/Library/Application Support/Sip',
-               '~/Library/Application Support/io.sipapp.Sip-paddle',
-               '~/Library/Caches/io.sipapp.Sip-paddle',
-               '~/Library/Cookies/io.sipapp.Sip-paddle.binarycookies',
-               '~/Library/Preferences/io.sipapp.Sip-paddle.plist',
-               '~/Library/Saved Application State/io.sipapp.Sip-paddle.savedState',
-             ]
+    "~/.sip_v*",
+    "~/Library/Application Support/Sip",
+    "~/Library/Application Support/io.sipapp.Sip-paddle",
+    "~/Library/Application Support/CrashReporter/Sip_*.plist",
+    "~/Library/Caches/io.sipapp.Sip-paddle",
+    "~/Library/Cookies/io.sipapp.Sip-paddle.binarycookies",
+    "~/Library/Preferences/io.sipapp.Sip-paddle.plist",
+    "~/Library/Saved Application State/io.sipapp.Sip-paddle.savedState",
+  ]
 end

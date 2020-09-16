@@ -1,11 +1,12 @@
-cask 'textadept' do
-  version '10.5'
-  sha256 'ab691e3a4a8958d390dcaacff1083f8acdc28539b7d54de77077d5145401308b'
+cask "textadept" do
+  version "10.8"
+  sha256 "3c5fb990325f4af3ef443a97dad2409fb0986faf1e553b8f87f6d42dfb6fcc24"
 
   url "https://foicica.com/textadept/download/textadept_#{version}.osx.zip"
-  appcast 'https://foicica.com/textadept/feed'
-  name 'Textadept'
-  homepage 'https://foicica.com/textadept/'
+  appcast "https://foicica.com/textadept/feed"
+  name "Textadept"
+  homepage "https://foicica.com/textadept/"
 
   app "textadept_#{version}.osx/Textadept.app"
+  binary "textadept_#{version}.osx/ta"
 end

@@ -1,23 +1,25 @@
-cask 'wkhtmltopdf' do
-  version '0.12.5'
-  sha256 '2718c057249a133fe413b3c8cfb33b755a2e18a8e233329168f1af462cd6de5f'
+cask "wkhtmltopdf" do
+  version "0.12.6-2"
+  sha256 "81a66b77b508fede8dbcaa67127203748376568b3673a17f6611b6d51e9894f8"
 
-  url "https://downloads.wkhtmltopdf.org/#{version.major_minor}/#{version}/wkhtmltox-#{version}-1.macos-cocoa.pkg"
-  name 'wkhtmltopdf'
-  homepage 'https://wkhtmltopdf.org/'
+  # github.com/wkhtmltopdf/packaging/ was verified as official when first introduced to the cask
+  url "https://github.com/wkhtmltopdf/packaging/releases/download/#{version}/wkhtmltox-#{version}.macos-cocoa.pkg"
+  appcast "https://github.com/wkhtmltopdf/packaging/releases.atom"
+  name "wkhtmltopdf"
+  homepage "https://wkhtmltopdf.org/"
 
-  pkg "wkhtmltox-#{version}-1.macos-cocoa.pkg"
+  pkg "wkhtmltox-#{version}.macos-cocoa.pkg"
 
-  uninstall pkgutil: 'org.wkhtmltopdf.wkhtmltox',
+  uninstall pkgutil: "org.wkhtmltopdf.wkhtmltox",
             delete:  [
-                       '/usr/local/include/wkhtmltox',
-                       '/usr/local/lib/libwkhtmltox.dylib',
-                       "/usr/local/lib/libwkhtmltox.#{version.major}.dylib",
-                       "/usr/local/lib/libwkhtmltox.#{version.major_minor}.dylib",
-                       "/usr/local/lib/libwkhtmltox.#{version.sub(%r{-.*$}, '')}.dylib",
-                       '/usr/local/bin/wkhtmltoimage',
-                       '/usr/local/bin/wkhtmltopdf',
-                     ]
+              "/usr/local/include/wkhtmltox",
+              "/usr/local/lib/libwkhtmltox.dylib",
+              "/usr/local/lib/libwkhtmltox.#{version.major}.dylib",
+              "/usr/local/lib/libwkhtmltox.#{version.major_minor}.dylib",
+              "/usr/local/lib/libwkhtmltox.#{version.sub(/-.*$/, "")}.dylib",
+              "/usr/local/bin/wkhtmltoimage",
+              "/usr/local/bin/wkhtmltopdf",
+            ]
 
   caveats do
     files_in_usr_local

@@ -1,13 +1,13 @@
-cask 'unity-download-assistant' do
-  version '2019.2.0f1,20c1667945cf'
-  sha256 '5ced7eeb3adf22477d8f83ec454c275e13071c2c15e98986b4f380921effaac9'
+cask "unity-download-assistant" do
+  version "2020.1.1f1,2285c3239188"
+  sha256 "c40fe051a57f0d8d04a724b8374207434450d3e52ae7abc5c138668b6941a6f8"
 
   url "https://netstorage.unity3d.com/unity/#{version.after_comma}/UnityDownloadAssistant-#{version.before_comma}.dmg"
-  appcast 'https://unity3d.com/get-unity/download/archive'
-  name 'Unity'
-  homepage 'https://unity3d.com/unity/'
+  appcast "https://unity3d.com/get-unity/download/archive"
+  name "Unity"
+  homepage "https://unity3d.com/unity/"
 
-  installer manual: 'Unity Download Assistant.app'
+  installer manual: "Unity Download Assistant.app"
 
-  uninstall pkgutil: 'com.unity3d.*'
+  uninstall pkgutil: "com.unity3d.*"
 end

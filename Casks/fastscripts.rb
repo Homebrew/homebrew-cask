@@ -1,13 +1,14 @@
-cask 'fastscripts' do
-  version '2.7.8'
-  sha256 'a0c0bc96f1f35cd569fdab04643a6c5aec6ecf85505440f0e3887f395ee288c3'
+cask "fastscripts" do
+  version "2.8.1"
+  sha256 "400b06282155a92e55b3cbe753e6b809bce4bd5f6e548776a2cbb3b617cb8d17"
 
   url "https://red-sweater.com/fastscripts/FastScripts#{version}.zip"
-  appcast 'https://red-sweater.com/fastscripts/appcast2.php'
-  name 'FastScripts'
-  homepage 'https://red-sweater.com/fastscripts/'
+  appcast "https://red-sweater.com/fastscripts/appcast2.php"
+  name "FastScripts"
+  desc "Tool for running time-saving scripts"
+  homepage "https://red-sweater.com/fastscripts/"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'FastScripts.app'
+  app "FastScripts.app"
 end

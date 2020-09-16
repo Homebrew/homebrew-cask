@@ -1,13 +1,13 @@
-cask 'dashcam-viewer' do
-  version '3.2.7'
-  sha256 '112a950db5ab95acaa5c659321bf744ee2b3b0615737754845dabb8028714e23'
+cask "dashcam-viewer" do
+  version "3.5.2"
+  sha256 "10185deb860485661feb3e9b12dcabca31507f89d3e0a659d4f9a334d0fb1777"
 
-  # aws-website-dcv-downloads-c8kwd.s3.amazonaws.com/dcv was verified as official when first introduced to the cask
-  url "https://aws-website-dcv-downloads-c8kwd.s3.amazonaws.com/dcv/Dashcam_Viewer_v#{version}.dmg"
-  appcast 'https://dashcamviewer.com/'
-  name 'Dashcam Viewer'
-  name 'Dashcam Viewer by Earthshine Software'
-  homepage 'https://dashcamviewer.com/'
+  # filedn.com/l2s8TAtm4VASBX72ds0zYD8/dcv/ was verified as official when first introduced to the cask
+  url "https://filedn.com/l2s8TAtm4VASBX72ds0zYD8/dcv/Dashcam_Viewer_v#{version}.dmg"
+  appcast "https://dashcamviewer.com/"
+  name "Dashcam Viewer"
+  name "Dashcam Viewer by Earthshine Software"
+  homepage "https://dashcamviewer.com/"
 
-  app 'Dashcam Viewer.app'
+  app "Dashcam Viewer.app"
 end

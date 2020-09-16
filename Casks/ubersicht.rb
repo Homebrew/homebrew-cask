@@ -1,24 +1,26 @@
-cask 'ubersicht' do
-  version '1.4.59'
-  sha256 '98aadcbc9ceb4367ee43cda8ef1371084f919a9b2ec2f21a963031bcc841d6d4'
+cask "ubersicht" do
+  version "1.5.62"
+  sha256 "b2c35433f0b091cdd7b898bcacd91869efa92b6833b49271953c53e6ad600c0c"
 
-  url "http://tracesof.net/uebersicht/releases/Uebersicht-#{version}.app.zip"
-  appcast 'http://tracesof.net/uebersicht/updates.xml.rss'
-  name 'Übersicht'
-  homepage 'http://tracesof.net/uebersicht/'
+  url "https://tracesof.net/uebersicht/releases/Uebersicht-#{version}.app.zip"
+  appcast "https://tracesof.net/uebersicht/updates.xml.rss"
+  name "Übersicht"
+  desc "Run commands and display their output on the desktop"
+  homepage "https://tracesof.net/uebersicht/"
 
   auto_updates true
-  depends_on macos: '>= :yosemite'
+  depends_on macos: ">= :yosemite"
 
-  app 'Übersicht.app'
+  app "Übersicht.app"
 
-  uninstall login_item: 'Übersicht'
+  uninstall login_item: "Übersicht",
+            quit:       "tracesOf.Uebersicht"
 
   zap trash: [
-               '~/Library/Application Support/Übersicht',
-               '~/Library/Application Support/tracesOf.Uebersicht',
-               '~/Library/Caches/tracesOf.Uebersicht',
-               '~/Library/Preferences/tracesOf.Uebersicht.plist',
-               '~/Library/WebKit/tracesOf.Uebersicht',
-             ]
+    "~/Library/Application Support/Übersicht",
+    "~/Library/Application Support/tracesOf.Uebersicht",
+    "~/Library/Caches/tracesOf.Uebersicht",
+    "~/Library/Preferences/tracesOf.Uebersicht.plist",
+    "~/Library/WebKit/tracesOf.Uebersicht",
+  ]
 end

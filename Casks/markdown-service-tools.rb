@@ -1,10 +1,10 @@
-cask 'markdown-service-tools' do
-  version '2.16'
-  sha256 'fcc9c9b88b164547315cde305d4b4096243268b84d24c054e2731449c9e47633'
+cask "markdown-service-tools" do
+  version "2.16"
+  sha256 "fcc9c9b88b164547315cde305d4b4096243268b84d24c054e2731449c9e47633"
 
   url "https://brettterpstra.com/downloads/MarkdownServiceTools#{version}.zip"
-  name 'Markdown Service Tools'
-  homepage 'https://brettterpstra.com/projects/markdown-service-tools/'
+  name "Markdown Service Tools"
+  homepage "https://brettterpstra.com/projects/markdown-service-tools/"
 
   service "MarkdownServiceTools#{version}/md - Code - Make Code Block.workflow"
   service "MarkdownServiceTools#{version}/md - Convert - HTML to Clipboard.workflow"

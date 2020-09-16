@@ -1,13 +1,12 @@
-cask 'rawtherapee' do
-  version '5.6'
-  sha256 '274861597061e3febb204a8cd844bbadb20cdd925738f91d35fff382c6cec9f2'
+cask "rawtherapee" do
+  version "5.8"
+  sha256 "6fe7cd08bd59b1ca9135e587be0d600d62487d0b9baaa6157972135fe3018f8a"
 
-  url "https://rawtherapee.com/releases_head/mac/RawTherapee_OSX_10.9_64_#{version}.zip"
-  appcast 'https://github.com/Beep6581/RawTherapee/releases.atom'
-  name 'RawTherapee'
-  homepage 'https://rawtherapee.com/'
+  url "https://www.rawtherapee.com/shared/builds/mac/RawTherapee_#{version}.dmg"
+  appcast "https://github.com/Beep6581/RawTherapee/releases.atom"
+  name "RawTherapee"
+  desc "Cross-platform raw photo processing program"
+  homepage "https://rawtherapee.com/"
 
-  container nested: "RawTherapee_OSX_10.9_64_#{version}.dmg"
-
-  app 'RawTherapee.app'
+  app "RawTherapee.app"
 end

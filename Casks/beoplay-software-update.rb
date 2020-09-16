@@ -1,11 +1,14 @@
-cask 'beoplay-software-update' do
-  version '1.0.6'
-  sha256 '2419f18444c711360664492b88d397c06f18298469425833f1e1185c632ecc76'
+cask "beoplay-software-update" do
+  version "1.0.6"
+  sha256 "7e0500f935557f34d46625e4abe7081cdaa343558a973d3284000ab4c37b21a6"
 
-  url 'https://www.beoplay.com/~/media/81c0752c82974b2794f731f6d4cd5fe9.ashx'
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=#{url}"
-  name 'BeoPlay Software Update'
-  homepage 'https://www.beoplay.com/support/product%20support/beoplay%20updater'
+  # bangolufsenassistentgohe.blob.core.windows.net/ was verified as official when first introduced to the cask
+  url "https://bangolufsenassistentgohe.blob.core.windows.net/manuals/APPS%20AND%20ACCESSORIES/BEOPLAY%20SOFTWARE%20UPDATER/beoplay-software-updater-#{version.dots_to_hyphens}-mac%20(5).dmg"
+  appcast "https://bang-olufsen.zendesk.com/hc/en-us/articles/360041405132-beoplay-software-updater",
+          must_contain: version.dots_to_hyphens
+  name "Beoplay Software Update"
+  desc "Software updater for Beoplay products"
+  homepage "https://www.bang-olufsen.com/en/product-support/accessories/beoplay-software-updater"
 
-  app 'BeoPlay Software Update.app'
+  app "Beoplay Software Update.app"
 end

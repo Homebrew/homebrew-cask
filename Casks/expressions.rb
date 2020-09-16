@@ -1,16 +1,17 @@
-cask 'expressions' do
-  version '1.3.1'
-  sha256 '1d8daf05089da36d9d95e107e2b20c69e65e3160b73ba1da848220aa1114de08'
+cask "expressions" do
+  version "1.3.3"
+  sha256 "cce8506474d9c071ce9e945c7709e21cadcab2e962805b3b3ba61246723195ad"
 
   url "https://www.apptorium.com/public/products/expressions/releases/Expressions-#{version}.zip"
-  appcast 'https://updates.devmate.com/com.apptorium.Expressions-dm.xml'
-  name 'Expressions'
-  homepage 'https://www.apptorium.com/expressions'
+  appcast "https://updates.devmate.com/com.apptorium.Expressions-dm.xml"
+  name "Expressions"
+  desc "Regular expressions manager app"
+  homepage "https://www.apptorium.com/expressions"
 
-  app 'Expressions.app'
+  app "Expressions.app"
 
   zap trash: [
-               '~/Library/Application Scripts/com.apptorium.Expressions-dm',
-               '~/Library/Containers/com.apptorium.Expressions-dm',
-             ]
+    "~/Library/Application Scripts/com.apptorium.Expressions-dm",
+    "~/Library/Containers/com.apptorium.Expressions-dm",
+  ]
 end

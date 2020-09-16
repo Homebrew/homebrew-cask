@@ -1,25 +1,25 @@
-cask 'kotlin-native' do
-  version '1.3.31'
-  sha256 '964e54649f93d3f269f3753cb7b97739d03c26fe2237a144dcecb92779c36d77'
+cask "kotlin-native" do
+  version "1.4.0"
+  sha256 "476f920631b0ccb4b8e25456ef49356fb33d6e3960e9f2ec8def0aaa23284168"
 
-  # github.com/JetBrains/kotlin was verified as official when first introduced to the cask
-  url "https://github.com/JetBrains/kotlin/releases/download/v#{version}/kotlin-native-macos-#{version}.tar.gz"
-  appcast 'https://github.com/JetBrains/kotlin-native/releases.atom'
-  name 'Kotlin Native'
-  homepage 'https://kotlinlang.org/docs/reference/native-overview.html'
+  # github.com/JetBrains/kotlin/ was verified as official when first introduced to the cask
+  url "https://github.com/JetBrains/kotlin/releases/download/v#{version}/kotlin-native-macos-#{version.major_minor}.tar.gz"
+  appcast "https://github.com/JetBrains/kotlin-native/releases.atom"
+  name "Kotlin Native"
+  homepage "https://kotlinlang.org/docs/reference/native-overview.html"
 
-  conflicts_with formula: 'kotlin'
+  conflicts_with formula: "kotlin"
 
-  binary "kotlin-native-macos-#{version}/bin/cinterop"
-  binary "kotlin-native-macos-#{version}/bin/jsinterop"
-  binary "kotlin-native-macos-#{version}/bin/klib"
-  binary "kotlin-native-macos-#{version}/bin/konan-lldb"
-  binary "kotlin-native-macos-#{version}/bin/konanc"
-  binary "kotlin-native-macos-#{version}/bin/kotlinc"
-  binary "kotlin-native-macos-#{version}/bin/kotlinc-native"
-  binary "kotlin-native-macos-#{version}/bin/run_konan"
+  binary "kotlin-native-macos-#{version.major_minor}/bin/cinterop"
+  binary "kotlin-native-macos-#{version.major_minor}/bin/jsinterop"
+  binary "kotlin-native-macos-#{version.major_minor}/bin/klib"
+  binary "kotlin-native-macos-#{version.major_minor}/bin/konan-lldb"
+  binary "kotlin-native-macos-#{version.major_minor}/bin/konanc"
+  binary "kotlin-native-macos-#{version.major_minor}/bin/kotlinc"
+  binary "kotlin-native-macos-#{version.major_minor}/bin/kotlinc-native"
+  binary "kotlin-native-macos-#{version.major_minor}/bin/run_konan"
 
   caveats do
-    depends_on_java '6+'
+    depends_on_java "6+"
   end
 end

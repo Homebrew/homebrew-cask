@@ -1,11 +1,11 @@
-cask 'notebooks' do
-  version '1.4.5'
-  sha256 '11571a75a89ba5aac2f846e95e3d3520d3c47b034b8df2166e93d98a7dde310a'
+cask "notebooks" do
+  version "2.2"
+  sha256 "2704b5bd6e15f53da472842edda34a2b3bc20f4452c74eea197d84277bd0963e"
 
-  url 'https://notebooksapp.com/Download/Notebooks.zip'
-  appcast 'https://www.notebooksapp.com/NBMacAppcast.xml'
-  name 'Notebooks'
-  homepage 'https://www.notebooksapp.com/mac/'
+  url "https://www.notebooksapp.com/Download/macOS/v#{version.major}/Notebooks.dmg"
+  appcast "https://notebooksapp.com/Download/macOS/v#{version.major}/Notebooks#{version.major}Appcast.xml"
+  name "Notebooks"
+  homepage "https://www.notebooksapp.com/mac/"
 
-  app 'Notebooks.app'
+  app "Notebooks.app"
 end

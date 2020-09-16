@@ -1,11 +1,11 @@
-cask 'majsoul-plus' do
-  version '1.12.1'
-  sha256 'f7f2df64930dc38bd55d1e8f9495158981e04faad5304c0ef372e2653f81bc3a'
+cask "majsoul-plus" do
+  version "2.0.1"
+  sha256 "efac0e077f871a092ce1654466055fdc73c74f22da6a2364588d7b460443a52b"
 
-  url "https://github.com/MajsoulPlus/majsoul-plus/releases/download/v#{version}/Majsoul_Plus-darwin.dmg"
-  appcast 'https://github.com/MajsoulPlus/majsoul-plus/releases.atom'
-  name 'Majsoul Plus'
-  homepage 'https://github.com/MajsoulPlus/majsoul-plus/'
+  url "https://github.com/MajsoulPlus/majsoul-plus/releases/download/v#{version}/Majsoul_Plus-#{version}-darwin.dmg"
+  appcast "https://github.com/MajsoulPlus/majsoul-plus/releases.atom"
+  name "Majsoul Plus"
+  homepage "https://github.com/MajsoulPlus/majsoul-plus/"
 
-  app 'Majsoul Plus.app'
+  app "Majsoul Plus.app"
 end

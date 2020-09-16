@@ -1,11 +1,12 @@
-cask 'gpower' do
-  version '3.1.9.4'
-  sha256 'a423bfec96f532b9656af71cb8778aafac6c6c7c5d3a2114efab2fbb883107d2'
+cask "gpower" do
+  version "3.1.9.6"
+  sha256 "841390e00110ccdd5201f334af985b54837b9f9b4ffb3151d49e28efb9bb3964"
 
-  url "http://www.gpower.hhu.de/fileadmin/redaktion/Fakultaeten/Mathematisch-Naturwissenschaftliche_Fakultaet/Psychologie/AAP/gpower/GPowerMac_#{version}.zip"
-  appcast 'http://www.gpower.hhu.de/'
-  name 'G*Power'
-  homepage 'http://www.gpower.hhu.de/'
+  url "https://www.psychologie.hhu.de/fileadmin/redaktion/Fakultaeten/Mathematisch-Naturwissenschaftliche_Fakultaet/Psychologie/AAP/gpower/GPowerMac_#{version}.zip"
+  appcast "https://www.psychologie.hhu.de/arbeitsgruppen/allgemeine-psychologie-und-arbeitspsychologie/gpower.html"
+  name "G*Power"
+  desc "Tool to compute statistical power analyses"
+  homepage "https://www.psychologie.hhu.de/arbeitsgruppen/allgemeine-psychologie-und-arbeitspsychologie/gpower.html"
 
-  app 'G*Power.app'
+  app "G*Power.app"
 end

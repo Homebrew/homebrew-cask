@@ -1,21 +1,20 @@
-cask 'exodus' do
-  version '19.8.7'
-  sha256 '91667ccf0eb2d43fea1d6a82e8cf810c044db01a41f3990c4cac033ac6a83fe8'
+cask "exodus" do
+  version "20.9.11"
+  sha256 "6e5bd7101c76670f4b6e7b83fdbf838376fb40ad715c41eead925d464b022801"
 
-  # exodusbin.azureedge.net was verified as official when first introduced to the cask
-  url "https://exodusbin.azureedge.net/releases/exodus-macos-#{version}.dmg"
-  appcast 'https://www.exodus.io/releases/'
-  name 'Exodus'
-  homepage 'https://www.exodus.io/'
+  url "https://downloads.exodus.io/releases/exodus-macos-#{version}.dmg"
+  appcast "https://www.exodus.io/releases/"
+  name "Exodus"
+  homepage "https://www.exodus.io/"
 
   auto_updates true
 
-  app 'Exodus.app'
+  app "Exodus.app"
 
   zap trash: [
-               '~/Library/Application Support/Exodus',
-               '~/Library/Preferences/com.electron.exodus.helper.plist',
-               '~/Library/Preferences/com.electron.exodus.plist',
-               '~/Library/Saved Application State/com.electron.exodus.savedState',
-             ]
+    "~/Library/Application Support/Exodus",
+    "~/Library/Preferences/com.electron.exodus.helper.plist",
+    "~/Library/Preferences/com.electron.exodus.plist",
+    "~/Library/Saved Application State/com.electron.exodus.savedState",
+  ]
 end

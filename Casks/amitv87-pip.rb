@@ -1,13 +1,14 @@
-cask 'amitv87-pip' do
-  version '1.01'
-  sha256 '8920d51bb664645740816b8ca0490b6da23b38642c749b1b3cd6c2f7e6b3df37'
+cask "amitv87-pip" do
+  version "1.40"
+  sha256 "8df2ae6c3a4bdfadeb477d598d0c09def97d78675ebd8f8af83ab476641b2d16"
 
-  url "https://github.com/amitv87/PiP/releases/download/#{version}/PiP-#{version}.dmg"
-  appcast 'https://github.com/amitv87/PiP/releases.atom'
-  name 'PiP'
-  homepage 'https://github.com/amitv87/PiP'
+  url "https://github.com/amitv87/PiP/releases/download/v#{version}/PiP-#{version}.dmg"
+  appcast "https://github.com/amitv87/PiP/releases.atom"
+  name "PiP"
+  desc "Always on top window preview"
+  homepage "https://github.com/amitv87/PiP"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'PiP.app'
+  app "PiP.app"
 end

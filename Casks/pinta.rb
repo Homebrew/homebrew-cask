@@ -1,14 +1,15 @@
-cask 'pinta' do
-  version '1.6'
-  sha256 '8d9f04397bf279166e7c23cd6686342fb6b1a7e6d70546eefa23de73c4e251bf'
+cask "pinta" do
+  version "1.7"
+  sha256 "eab26f25f78f906127a4b12991d39483f96f43ded1a75837aad5b539f27abb0c"
 
-  # github.com/PintaProject/Pinta was verified as official when first introduced to the cask
+  # github.com/PintaProject/Pinta/ was verified as official when first introduced to the cask
   url "https://github.com/PintaProject/Pinta/releases/download/#{version}/Pinta.app.zip"
-  appcast 'https://github.com/PintaProject/Pinta/releases.atom'
-  name 'Pinta'
-  homepage 'https://pinta-project.com/pintaproject/pinta/'
+  appcast "https://github.com/PintaProject/Pinta/releases.atom"
+  name "Pinta"
+  desc "Simple Gtk# Paint Program"
+  homepage "https://www.pinta-project.com/"
 
-  depends_on cask: 'mono-mdk'
+  depends_on cask: "mono-mdk"
 
-  app 'Pinta.app'
+  app "Pinta.app"
 end

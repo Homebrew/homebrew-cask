@@ -1,17 +1,17 @@
-cask 'smlnj' do
-  version '110.91'
-  sha256 '8476fe570b13f722b9b81182590144ccb770495a5534fa77600a7c592028568a'
+cask "smlnj" do
+  version "110.98.1"
+  sha256 "d48372aa13fa2e5ce0979f8cf7964252468cee4748ca9f2111747b200cece4ea"
 
-  # smlnj.cs.uchicago.edu was verified as official when first introduced to the cask
-  url "http://smlnj.cs.uchicago.edu/dist/working/#{version}/smlnj-x86-#{version}.pkg"
-  name 'Standard ML of New Jersey'
-  homepage 'https://www.smlnj.org/'
+  # smlnj.cs.uchicago.edu/ was verified as official when first introduced to the cask
+  url "http://smlnj.cs.uchicago.edu/dist/working/#{version}/smlnj-amd64-#{version}.pkg"
+  name "Standard ML of New Jersey"
+  homepage "https://www.smlnj.org/"
 
-  pkg "smlnj-x86-#{version}.pkg"
+  pkg "smlnj-amd64-#{version}.pkg"
 
-  uninstall pkgutil: 'org.smlnj.x86.pkg'
+  uninstall pkgutil: "org.smlnj.amd64.pkg"
 
   caveats do
-    path_environment_variable '/usr/local/smlnj/bin'
+    path_environment_variable "/usr/local/smlnj/bin"
   end
 end

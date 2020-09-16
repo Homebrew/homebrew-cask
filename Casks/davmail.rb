@@ -1,14 +1,14 @@
-cask 'davmail' do
-  version '4.9.0-2652'
-  sha256 '463591fefd8ae9af7fd1e7f78f6ef278a61b5dbd3c72bff22f58ad1996975b13'
+cask "davmail" do
+  version "5.5.1-3299"
+  sha256 "d906cc113a055bd3c494fe917907df2562c4bee94726aa08ed13cdb519b9dbe9"
 
-  # downloads.sourceforge.net/davmail was verified as official when first introduced to the cask
+  # downloads.sourceforge.net/davmail/ was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/davmail/DavMail-MacOSX-#{version}.app.zip"
-  appcast 'https://sourceforge.net/projects/davmail/rss'
-  name 'DavMail'
-  homepage 'https://davmail.sourceforge.io/'
+  appcast "https://sourceforge.net/projects/davmail/rss"
+  name "DavMail"
+  homepage "https://davmail.sourceforge.io/"
 
-  app 'DavMail.app'
+  app "DavMail.app"
 
   caveats do
     depends_on_java

@@ -1,17 +1,17 @@
-cask 'parsec' do
+cask "parsec" do
   version :latest
   sha256 :no_check
 
-  # s3.dualstack.us-east-1.amazonaws.com/parsec-build was verified as official when first introduced to the cask
-  url 'https://s3.dualstack.us-east-1.amazonaws.com/parsec-build/package/parsec-macos.pkg'
-  name 'Parsec'
-  homepage 'https://parsecgaming.com/'
+  # s3.dualstack.us-east-1.amazonaws.com/parsec-build/ was verified as official when first introduced to the cask
+  url "https://s3.dualstack.us-east-1.amazonaws.com/parsec-build/package/parsec-macos.pkg"
+  name "Parsec"
+  homepage "https://parsecgaming.com/"
 
-  pkg 'parsec-macos.pkg'
+  pkg "parsec-macos.pkg"
 
   postflight do
-    set_ownership '~/.parsec'
+    set_ownership "~/.parsec"
   end
 
-  uninstall pkgutil: 'tv.parsec.www'
+  uninstall pkgutil: "tv.parsec.www"
 end

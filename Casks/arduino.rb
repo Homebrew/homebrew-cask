@@ -1,21 +1,18 @@
-cask 'arduino' do
-  version '1.8.9'
-  sha256 '7868dd8f6d350956b4d0c7e3d443f717209244a2dc3f374da115d5252a45bf56'
+cask "arduino" do
+  version "1.8.13"
+  sha256 "84be3fc0be0c18563cb2b5e53971da6aa83e20f1de37e6debae3b55f8b0edbb3"
 
   url "https://downloads.arduino.cc/arduino-#{version}-macosx.zip"
-  appcast 'https://github.com/arduino/Arduino/releases.atom'
-  name 'Arduino'
-  homepage 'https://www.arduino.cc/'
+  appcast "https://github.com/arduino/Arduino/releases.atom"
+  name "Arduino"
+  desc "Open-source electronics prototyping platform"
+  homepage "https://www.arduino.cc/"
 
-  app 'Arduino.app'
+  app "Arduino.app"
   binary "#{appdir}/Arduino.app/Contents/Java/arduino-builder"
 
   zap trash: [
-               '~/Library/Arduino15',
-               '~/Library/Preferences/cc.arduino.Arduino.plist',
-             ]
-
-  caveats do
-    depends_on_java
-  end
+    "~/Library/Arduino15",
+    "~/Library/Preferences/cc.arduino.Arduino.plist",
+  ]
 end

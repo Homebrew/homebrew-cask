@@ -1,12 +1,13 @@
-cask 'veusz' do
-  version '3.0.1'
-  sha256 '70fe6d61be9d49628422c7cb5177095fedbad95e04de7c9a398a22f77adaad3a'
+cask "veusz" do
+  version "3.2.1"
+  sha256 "ee81b517f07c7ff1a31a7ec6f18a41380aa97506866a366db86114a585221902"
 
-  # github.com/veusz/veusz was verified as official when first introduced to the cask
+  # github.com/veusz/veusz/ was verified as official when first introduced to the cask
   url "https://github.com/veusz/veusz/releases/download/veusz-#{version}/veusz-#{version}-AppleOSX.dmg"
-  appcast 'https://github.com/veusz/veusz/releases.atom'
-  name 'Veusz'
-  homepage 'https://veusz.github.io/'
+  appcast "https://github.com/veusz/veusz/releases.atom"
+  name "Veusz"
+  desc "Scientific plotting application"
+  homepage "https://veusz.github.io/"
 
-  app 'Veusz.app'
+  app "Veusz.app"
 end
