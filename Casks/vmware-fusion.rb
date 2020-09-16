@@ -9,7 +9,7 @@ cask "vmware-fusion" do
   homepage "https://www.vmware.com/products/fusion.html"
 
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :catalina"
 
   app "VMware Fusion.app"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmnet-bridge"
