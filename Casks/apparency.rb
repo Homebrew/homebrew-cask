@@ -5,7 +5,7 @@ cask "apparency" do
   url "https://mothersruin.com/software/downloads/Apparency.dmg"
   appcast "https://www.mothersruin.com/software/Apparency/data/ApparencyVersionInfo.plist"
   name "Apparency"
-  desc "Inspecting application bundles"
+  desc "Inspect application bundles"
   homepage "https://www.mothersruin.com/software/Apparency/"
 
   depends_on macos: ">= :mojave"
