@@ -6,8 +6,8 @@ cask "visual-studio" do
   url "https://dl.xamarin.com/VsMac/VisualStudioForMac-#{version}.dmg"
   appcast "https://docs.microsoft.com/en-us/visualstudio/releasenotes/vs2019-mac-relnotes",
           must_contain: version.major_minor_patch
-  name "Visual Studio for Mac"
-  desc "Microsoft's Integrated Development Environment"
+  name "Microsoft Visual Studio"
+  desc "Integrated development environment"
   homepage "https://www.visualstudio.com/vs/visual-studio-mac/"
 
   auto_updates true
