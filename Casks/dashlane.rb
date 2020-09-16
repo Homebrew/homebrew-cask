@@ -1,6 +1,6 @@
 cask "dashlane" do
-  version "6.2033.0.38023"
-  sha256 "1bee74b348c501032b6aa6a030c3c613b136e0c70f8e460e58cd2c0115402ec4"
+  version "6.2037.0.39133"
+  sha256 "dc10f8369e437e48e2bde47b4333c3cc528cff236bd0f415995cbd18d3dd0813"
 
   # d3mfqat9ni8wb5.cloudfront.net/releases/ was verified as official when first introduced to the cask
   url "https://d3mfqat9ni8wb5.cloudfront.net/releases/#{version.major_minor_patch}/#{version}/release/Dashlane.dmg"
