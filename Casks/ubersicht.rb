@@ -5,6 +5,7 @@ cask "ubersicht" do
   url "https://tracesof.net/uebersicht/releases/Uebersicht-#{version}.app.zip"
   appcast "https://tracesof.net/uebersicht/updates.xml.rss"
   name "Übersicht"
+  desc "Run commands and display their output on the desktop"
   homepage "https://tracesof.net/uebersicht/"
 
   auto_updates true
