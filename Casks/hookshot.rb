@@ -7,6 +7,7 @@ cask "hookshot" do
   name "Hookshot"
   homepage "https://hookshot.app/"
 
+  auto_updates true
   depends_on macos: ">= :sierra"
 
   app "Hookshot.app"
