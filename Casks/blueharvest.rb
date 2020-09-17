@@ -4,7 +4,7 @@ cask "blueharvest" do
 
   url "https://zeroonetwenty.com/blueharvest/downloads/BlueHarvest#{version.no_dots}.dmg"
   appcast "https://zeroonetwenty.com/blueharvest/release-notes.html",
-          must_contain: "#{version.no_dots}.dmg"  
+          must_contain: "#{version.no_dots}.dmg"
   name "BlueHarvest"
   homepage "https://zeroonetwenty.com/blueharvest/"
 
