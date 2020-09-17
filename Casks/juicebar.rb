@@ -1,6 +1,6 @@
 cask "juicebar" do
-  version "1.0.66"
-  sha256 "748346b6d32dc35e59465f5f3742761d58ca4e07cb797c007c4480801526753a"
+  version "1.0.68"
+  sha256 "144b413b57396a850ef82886398023d5eb1d3e04154004dfb11086fe6017d343"
 
   url "https://mango.get-juicebar.com/v#{version.major}/bundles/macOS/latest"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=https://mango.get-juicebar.com/v#{version.major}/bundles/macOS/latest"
