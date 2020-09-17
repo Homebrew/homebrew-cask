@@ -5,6 +5,7 @@ cask "james" do
   url "https://github.com/james-proxy/james/releases/download/v#{version}/james-#{version}.dmg"
   appcast "https://github.com/james-proxy/james/releases.atom"
   name "James"
+  desc "Web Debugging Proxy Application"
   homepage "https://github.com/james-proxy/james"
 
   app "James.app"

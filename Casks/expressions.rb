@@ -5,6 +5,7 @@ cask "expressions" do
   url "https://www.apptorium.com/public/products/expressions/releases/Expressions-#{version}.zip"
   appcast "https://updates.devmate.com/com.apptorium.Expressions-dm.xml"
   name "Expressions"
+  desc "Regular expressions manager app"
   homepage "https://www.apptorium.com/expressions"
 
   app "Expressions.app"

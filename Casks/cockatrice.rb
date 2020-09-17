@@ -15,6 +15,7 @@ cask "cockatrice" do
 
   appcast "https://github.com/Cockatrice/Cockatrice/releases.atom"
   name "Cockatrice"
+  desc "Cross-platform virtual tabletop for multiplayer card games"
   homepage "https://cockatrice.github.io/"
 
   depends_on macos: ">= :high_sierra"

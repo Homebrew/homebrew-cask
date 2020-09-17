@@ -4,6 +4,7 @@ cask "panic-unison" do
 
   url "https://download.panic.com/unison/Unison%20#{version}.zip"
   name "Panic Unison"
+  desc "App to access Usenet Newsgroups"
   homepage "https://panic.com/blog/the-future-of-unison/"
 
   app "Unison.app"

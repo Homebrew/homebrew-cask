@@ -19,6 +19,7 @@ cask "omnidisksweeper" do
 
   appcast "https://update.omnigroup.com/appcast/com.omnigroup.OmniDiskSweeper"
   name "OmniDiskSweeper"
+  desc "Finds large, unwanted files and deletes them"
   homepage "https://www.omnigroup.com/more/"
 
   auto_updates true

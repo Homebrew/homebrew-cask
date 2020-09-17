@@ -1,10 +1,11 @@
 cask "pastebot" do
-  version "2.3.0"
-  sha256 "4e5f981d49da996cc4fb9ee04e443f20f4b1fb5012c742545f120f2ba8c2bc30"
+  version "2.3.1"
+  sha256 "90ff5fc47b7df7714389de10c92801707382f405a38feaad2decd7354538ff2b"
 
   # tapbots.net/ was verified as official when first introduced to the cask
   url "https://tapbots.net/pastebot#{version.major}/Pastebot.dmg"
   name "Pastebot"
+  desc "Workflow application to improve productivity"
   homepage "https://tapbots.com/pastebot/"
 
   depends_on macos: ">= :high_sierra"

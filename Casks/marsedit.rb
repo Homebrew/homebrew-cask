@@ -5,6 +5,7 @@ cask "marsedit" do
   url "https://red-sweater.com/marsedit/MarsEdit#{version}.zip"
   appcast "https://red-sweater.com/marsedit/appcast4.php"
   name "MarsEdit"
+  desc "Tool to write, preview and publish blogs"
   homepage "https://red-sweater.com/marsedit/"
 
   depends_on macos: ">= :sierra"

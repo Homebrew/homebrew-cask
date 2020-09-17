@@ -6,6 +6,7 @@ cask "impactor" do
   url "https://cache.saurik.com/impactor/mac/Impactor_#{version}.dmg"
   appcast "https://cydia.saurik.com/api/appcast/1"
   name "Impactor"
+  desc "GUI tool for working with mobile devices"
   homepage "http://www.cydiaimpactor.com/"
 
   app "Impactor.app"

@@ -5,6 +5,7 @@ cask "clamxav" do
   url "https://cdn.clamxav.com/ClamXAVdownloads/ClamXAV_#{version}.zip"
   appcast "https://www.clamxav.com/sparkle/appcast#{version.major}.xml"
   name "ClamXAV"
+  desc "Anti-virus and malware scanner"
   homepage "https://www.clamxav.com/"
 
   app "ClamXAV.app"

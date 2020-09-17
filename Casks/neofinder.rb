@@ -6,6 +6,7 @@ cask "neofinder" do
   url "https://www.wfs-apps.de/updates/neofinder.#{version}.zip"
   appcast "https://www.wfs-apps.de/updates/neofinder-appcast-64.xml"
   name "NeoFinder"
+  desc "Digital media asset manager"
   homepage "https://www.cdfinder.de/"
 
   app "NeoFinder.app"

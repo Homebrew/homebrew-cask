@@ -5,6 +5,7 @@ cask "blocs" do
   url "https://blocsapp.com/download/Blocs#{version.major}.zip"
   appcast "https://blocsapp.com/release-notes.html"
   name "Blocs"
+  desc "Visual web design software"
   homepage "https://blocsapp.com/"
 
   auto_updates true

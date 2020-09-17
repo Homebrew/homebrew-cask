@@ -6,6 +6,7 @@ cask "sigil" do
   url "https://github.com/Sigil-Ebook/Sigil/releases/download/#{version}/Sigil.app-#{version}-Mac.txz"
   appcast "https://github.com/Sigil-Ebook/Sigil/releases.atom"
   name "Sigil"
+  desc "EPUB ebook editor"
   homepage "https://sigil-ebook.com/"
 
   depends_on macos: ">= :sierra"

@@ -4,6 +4,7 @@ cask "moneydance" do
 
   url "https://infinitekind.com/stabledl/current/Moneydance.zip"
   name "Moneydance"
+  desc "Personal financial management application focused on privacy"
   homepage "https://infinitekind.com/moneydance"
 
   app "Moneydance.app"

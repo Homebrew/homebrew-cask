@@ -5,6 +5,7 @@ cask "musictube" do
   url "https://flavio.tordini.org/files/musictube/musictube.dmg"
   appcast "https://flavio.tordini.org/musictube-ws/appcast.xml"
   name "Musictube"
+  desc "Streaming music player"
   homepage "https://flavio.tordini.org/musictube"
 
   app "Musictube.app"

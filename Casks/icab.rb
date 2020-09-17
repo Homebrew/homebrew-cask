@@ -6,6 +6,7 @@ cask "icab" do
   url "https://icab.clauss-net.de/icab/iCab_#{version}_Intel.zip"
   appcast "http://www.icab.de/dl.php"
   name "iCab"
+  desc "Alternative web browser"
   homepage "http://www.icab.de/"
 
   app "iCab #{version} (64 Bit Intel for macOS 10.9-10.15)/iCab.app"

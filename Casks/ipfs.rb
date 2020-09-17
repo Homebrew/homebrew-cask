@@ -5,6 +5,7 @@ cask "ipfs" do
   url "https://github.com/ipfs-shipyard/ipfs-desktop/releases/download/v#{version}/ipfs-desktop-#{version}.dmg"
   appcast "https://github.com/ipfs-shipyard/ipfs-desktop/releases.atom"
   name "IPFS Desktop"
+  desc "Menu bar application for the IPFS peer-to-peer network"
   homepage "https://github.com/ipfs-shipyard/ipfs-desktop"
 
   auto_updates true

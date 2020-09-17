@@ -4,6 +4,7 @@ cask "au-lab" do
 
   url "https://images.apple.com/itunes/mastered-for-itunes/docs/au_lab.zip"
   name "AU Lab"
+  desc "Digital audio mixing application"
   homepage "https://www.apple.com/itunes/mastered-for-itunes/"
 
   app "AU Lab.app"

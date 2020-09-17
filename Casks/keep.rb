@@ -5,6 +5,7 @@ cask "keep" do
   url "https://github.com/tmcinerney/keep/releases/download/v#{version}/keep.v#{version}.zip"
   appcast "https://github.com/tmcinerney/keep/releases.atom"
   name "Keep"
+  desc "Run Google Keep in the menu bar"
   homepage "https://github.com/tmcinerney/keep/"
 
   app "Keep.app"

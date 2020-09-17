@@ -5,6 +5,7 @@ cask "mailbutler" do
   url "https://downloads.mailbutler.io/sparkle/public/Mailbutler_#{version.after_comma}.zip"
   appcast "https://www.mailbutler.io/appcast#{version.major}.php"
   name "Mailbutler"
+  desc "Personal assistant and productivity tool for Apple Mail"
   homepage "https://www.mailbutler.io/"
 
   depends_on macos: ">= :sierra"

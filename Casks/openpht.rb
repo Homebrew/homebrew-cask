@@ -5,6 +5,7 @@ cask "openpht" do
   url "https://github.com/RasPlex/OpenPHT/releases/download/v#{version}/OpenPHT-#{version}-macosx-x86_64.zip"
   appcast "https://github.com/RasPlex/OpenPHT/releases.atom"
   name "OpenPHT"
+  desc "Community-driven fork of Plex Home Theater"
   homepage "https://github.com/RasPlex/OpenPHT"
 
   app "OpenPHT.app"

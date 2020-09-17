@@ -5,6 +5,7 @@ cask "modulair" do
   url "https://www.fullbucket.de/music/dl/modulair_#{version.dots_to_underscores}_mac.pkg"
   appcast "https://www.fullbucket.de/music/modulair.html"
   name "ModulAir"
+  desc "Polyphonic modular synthesizer"
   homepage "https://www.fullbucket.de/music/modulair.html"
 
   pkg "modulair_#{version.dots_to_underscores}_mac.pkg"

@@ -5,6 +5,7 @@ cask "peakhour" do
   url "https://updates.peakhourapp.com/releases/PeakHour%20#{version.before_comma}.zip"
   appcast "https://updates.peakhourapp.com/PeakHour#{version.major}Appcast.xml"
   name "PeakHour"
+  desc "Network bandwidth and network quality visualiser"
   homepage "https://www.peakhourapp.com/"
 
   auto_updates true

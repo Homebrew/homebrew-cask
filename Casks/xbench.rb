@@ -5,6 +5,7 @@ cask "xbench" do
   url "http://xbench.com/Xbench_#{version}.dmg"
   appcast "http://xbench.com/"
   name "Xbench"
+  desc "Benchmarking software"
   homepage "http://xbench.com/"
 
   app "XBench.app"

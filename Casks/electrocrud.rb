@@ -5,6 +5,7 @@ cask "electrocrud" do
   url "https://github.com/garrylachman/ElectroCRUD/releases/download/#{version}/ElectroCRUD-#{version}.dmg"
   appcast "https://github.com/garrylachman/ElectroCRUD/releases.atom"
   name "ElectroCRUD"
+  desc "Database CRUD application"
   homepage "https://github.com/garrylachman/ElectroCRUD"
 
   app "ElectroCRUD.app"

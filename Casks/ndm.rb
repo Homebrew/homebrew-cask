@@ -6,6 +6,7 @@ cask "ndm" do
   url "https://github.com/720kb/ndm/releases/download/v#{version}/ndm-#{version}.dmg"
   appcast "https://github.com/720kb/ndm/releases.atom"
   name "ndm"
+  desc "Desktop manager for the Node.js Package Manager (NPM)"
   homepage "https://720kb.github.io/ndm/"
 
   app "ndm.app"

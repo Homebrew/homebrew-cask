@@ -6,6 +6,7 @@ cask "whatsyoursign" do
   url "https://bitbucket.org/objective-see/deploy/downloads/WhatsYourSign_#{version}.zip"
   appcast "https://objective-see.com/products/changelogs/WhatsYourSign.txt"
   name "What's Your Sign?"
+  desc "Shows a files cryptographic signing information"
   homepage "https://objective-see.com/products/whatsyoursign.html"
 
   depends_on macos: ">= :yosemite"

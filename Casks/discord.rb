@@ -1,10 +1,11 @@
 cask "discord" do
-  version "0.0.258"
-  sha256 "1275e1f50430f05ed5aef3c4808eb2f2e6f86c7c93ecd8604798b35ac3f07b88"
+  version "0.0.259"
+  sha256 "927b7174671aeede430e5a71f9a8eee1991e2dab5309a8ee623dd1fb04706517"
 
   url "https://cdn.discordapp.com/apps/osx/#{version}/Discord.dmg"
   appcast "https://discordapp.com/api/stable/updates?platform=osx"
   name "Discord"
+  desc "Voice and text chat software"
   homepage "https://discordapp.com/"
 
   auto_updates true

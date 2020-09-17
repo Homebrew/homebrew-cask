@@ -5,6 +5,7 @@ cask "path-finder" do
   url "https://get.cocoatech.com/PF#{version.major}.dmg"
   appcast "https://get.cocoatech.com/releasecast.xml"
   name "Path Finder"
+  desc "File manager"
   homepage "https://cocoatech.com/"
 
   auto_updates true

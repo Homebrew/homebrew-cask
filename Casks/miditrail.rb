@@ -6,6 +6,7 @@ cask "miditrail" do
   url "http://dl.osdn.jp/miditrail/#{version.after_comma}/MIDITrail-Ver.#{version.before_comma}-macOS.zip"
   appcast "https://ja.osdn.net/projects/miditrail/releases/rss"
   name "MIDITrail"
+  desc "MIDI player which provides 3D visualization of MIDI data sets"
   homepage "https://osdn.net/projects/miditrail/"
 
   app "MIDITrail/MIDITrail.app"

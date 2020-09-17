@@ -5,6 +5,7 @@ cask "todour" do
   url "https://nerdur.com/Todour-v#{version}.dmg"
   appcast "https://github.com/SverrirValgeirsson/Todour/releases.atom"
   name "Todour"
+  desc "Todo.txt application Todour"
   homepage "https://nerdur.com/todour-pl/"
 
   app "Todour.app"

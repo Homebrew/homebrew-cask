@@ -5,6 +5,7 @@ cask "vcv-rack" do
   url "https://vcvrack.com/downloads/Rack-#{version}-mac.zip"
   appcast "https://vcvrack.com/Rack.html"
   name "VCV Rack"
+  desc "Open-source virtual modular synthesizer"
   homepage "https://vcvrack.com/"
 
   app "Rack.app"

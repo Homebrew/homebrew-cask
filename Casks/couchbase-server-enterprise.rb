@@ -18,4 +18,6 @@ cask "couchbase-server-enterprise" do
 
   name "Couchbase Server"
   homepage "https://www.couchbase.com/"
+
+  conflicts_with cask: "couchbase-server-community"
 end

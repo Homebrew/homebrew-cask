@@ -6,6 +6,7 @@ cask "opentoonz" do
   url "https://github.com/opentoonz/opentoonz/releases/download/v#{version}/OpenToonz.pkg"
   appcast "https://github.com/opentoonz/opentoonz/releases.atom"
   name "OpenToonz"
+  desc "Open-source full-featured 2D animation creation software"
   homepage "https://opentoonz.github.io/e/index.html"
 
   pkg "OpenToonz.pkg"

@@ -5,6 +5,7 @@ cask "statusfy" do
   url "https://github.com/paulyoung/Statusfy/releases/download/#{version}/Statusfy.zip"
   appcast "https://github.com/paulyoung/Statusfy/releases.atom"
   name "Statusfy"
+  desc "Spotify in the status bar"
   homepage "https://github.com/paulyoung/Statusfy"
 
   app "Statusfy.app"

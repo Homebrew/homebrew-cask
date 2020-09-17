@@ -1,10 +1,11 @@
 cask "cookie" do
-  version "6.1.4"
-  sha256 "e33c924d10944933d42b8b831a70ad2107243dae871af8a37ce50e2d7ec62384"
+  version "6.1.5"
+  sha256 "a9295873f93bcc9edd497ac6041ff5a5adcb3fc9079b8e15aaa0188927dba057"
 
   url "https://sweetpproductions.com/products/cookieapp/Cookie.dmg"
   appcast "https://sweetpproductions.com/products/cookieapp/appcast.xml"
   name "Cookie"
+  desc "Protection from tracking and online profiling"
   homepage "https://sweetpproductions.com/"
 
   depends_on macos: ">= :mojave"

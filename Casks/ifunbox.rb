@@ -5,6 +5,7 @@ cask "ifunbox" do
   url "http://dl.i-funbox.com/updates/ifunbox.mac/#{version}/ifunboxmac.dmg"
   appcast "http://dl.i-funbox.com/updates/ifunbox.mac/update.xml"
   name "iFunBox"
+  desc "File management software for iPhone and other Apple products"
   homepage "http://www.i-funbox.com/"
 
   app "iFunBox.app"

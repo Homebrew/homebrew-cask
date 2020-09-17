@@ -6,6 +6,7 @@ cask "goldencheetah" do
   url "https://github.com/GoldenCheetah/GoldenCheetah/releases/download/V#{version}/GoldenCheetah_v#{version}_64bit_MacOS.dmg"
   appcast "https://github.com/GoldenCheetah/GoldenCheetah/releases.atom"
   name "GoldenCheetah"
+  desc "Performance software for cyclists, runners and triathletes"
   homepage "https://www.goldencheetah.org/"
 
   app "GoldenCheetah.app"

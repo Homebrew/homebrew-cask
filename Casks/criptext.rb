@@ -4,6 +4,7 @@ cask "criptext" do
 
   url "https://cdn.criptext.com/Criptext-Email-Desktop/mac/Criptext-latest.dmg"
   name "Criptext"
+  desc "Email service that's built around privacy"
   homepage "https://criptext.com/"
 
   app "Criptext.app"

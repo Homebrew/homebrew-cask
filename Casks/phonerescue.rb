@@ -4,6 +4,7 @@ cask "phonerescue" do
 
   url "https://dl.imobie.com/phonerescue-for-ios.zip"
   name "PhoneRescue"
+  desc "Data recovery tool"
   homepage "https://www.imobie.com/phonerescue/"
 
   app "PhoneRescue.app"

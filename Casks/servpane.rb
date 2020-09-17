@@ -5,6 +5,7 @@ cask "servpane" do
   url "https://github.com/aderyabin/ServPane/releases/download/v#{version}/ServPane-#{version}.dmg"
   appcast "https://github.com/aderyabin/ServPane/releases.atom"
   name "ServPane"
+  desc "Launchd menu bar app"
   homepage "https://github.com/aderyabin/ServPane"
 
   app "ServPane.app"

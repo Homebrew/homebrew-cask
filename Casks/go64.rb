@@ -6,6 +6,7 @@ cask "go64" do
   url "https://www.stclairsoft.com/download/Go64-#{version}.zip"
   appcast "https://www.stclairsoft.com/cgi-bin/sparkle.cgi?GO"
   name "Go64"
+  desc "Scan computer disk for 32-bit applications"
   homepage "https://www.stclairsoft.com/Go64/"
 
   auto_updates true

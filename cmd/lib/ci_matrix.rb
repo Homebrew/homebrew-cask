@@ -3,7 +3,7 @@ require_relative "changed_files"
 module CiMatrix
   MAX_JOBS = 256
 
-  def self.generate(tap)
+  def self.generate(tap, labels: [])
     odie "This command must be run from inside a tap directory." unless tap
 
     changed_files = ChangedFiles.collect(tap)
@@ -27,11 +27,15 @@ module CiMatrix
     changed_files[:modified_cask_files].map do |path|
       cask = Cask::CaskLoader.load(path)
 
-      audit_args = ["--download", "--appcast", "--online"]
+      appcast_arg = if labels.include?("ci-skip-appcast")
+        "--no-appcast"
+      else
+        "--appcast"
+      end
+
+      audit_args = ["--download", appcast_arg, "--online"]
 
       if changed_files[:added_files].include?(path)
-        audit_args << "--strict"
-        audit_args << "--token-conflicts"
         audit_args << "--new-cask"
       end
 
@@ -42,6 +46,7 @@ module CiMatrix
           path:  "./#{path}",
         },
         audit_args: audit_args,
+        skip_install: labels.include?("ci-skip-install"),
       }
     end
   end

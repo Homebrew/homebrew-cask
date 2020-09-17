@@ -4,6 +4,7 @@ cask "hue-topia" do
 
   url "https://peacockmedia.software/mac/huetopia/huetopia.dmg"
   name "Hue-topia"
+  desc "Manual control over Philips Hue bulbs"
   homepage "https://peacockmedia.software/mac/huetopia/"
 
   app "Hue-topia.app"

@@ -6,6 +6,7 @@ cask "goodsync" do
   appcast "https://www.goodsync.com/download?os=macos",
           must_contain: version.major_minor_patch
   name "GoodSync"
+  desc "File synchronization and backup software"
   homepage "https://www.goodsync.com/"
 
   depends_on macos: ">= :yosemite"

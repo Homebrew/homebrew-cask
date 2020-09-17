@@ -1,10 +1,11 @@
 cask "plex" do
-  version "1.17.0.1376-439f8b7f"
-  sha256 "6b3298ceb54423f8388de8c4858754c263dcce846dca12ba9680564257908063"
+  version "1.19.0.1399-31d8c803"
+  sha256 "0f28a88e1a2cad75c12a4dd7abdccefe91cda4a5f4e11a840ce326d673e4cda2"
 
   url "https://downloads.plex.tv/plex-desktop/#{version}/macos/Plex-#{version}-x86_64.zip"
   appcast "https://plex.tv/api/downloads/6.json"
   name "Plex"
+  desc "Home media server"
   homepage "https://www.plex.tv/"
 
   auto_updates true

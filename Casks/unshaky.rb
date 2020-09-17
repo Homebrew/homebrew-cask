@@ -5,6 +5,7 @@ cask "unshaky" do
   url "https://github.com/aahung/Unshaky/releases/download/v#{version}/Unshaky_v#{version}.zip"
   appcast "https://github.com/aahung/Unshaky/releases.atom"
   name "Unshaky"
+  desc "Software fix for double key presses on Apple's butterfly keyboard"
   homepage "https://github.com/aahung/Unshaky"
 
   depends_on macos: ">= :sierra"

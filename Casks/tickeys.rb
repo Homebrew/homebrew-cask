@@ -6,6 +6,7 @@ cask "tickeys" do
   url "https://github.com/yingDev/Tickeys/releases/download/#{version}/Tickeys-#{version}-yosemite.dmg"
   appcast "https://github.com/yingDev/Tickeys/releases.atom"
   name "Tickeys"
+  desc "Utility for producing audio feedback when typing"
   homepage "https://www.yingdev.com/projects/tickeys"
 
   app "Tickeys.app"

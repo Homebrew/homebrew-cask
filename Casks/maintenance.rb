@@ -22,6 +22,7 @@ cask "maintenance" do
   url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete(".")}/Maintenance.dmg"
   appcast "https://www.titanium-software.fr/en/release_maintenance.html"
   name "Maintenance"
+  desc "Operating system maintenance and cleaning utility"
   homepage "https://www.titanium-software.fr/en/maintenance.html"
 
   # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.

@@ -6,6 +6,7 @@ cask "tagspaces" do
   url "https://github.com/tagspaces/tagspaces/releases/download/v#{version}/tagspaces-mac-#{version}.zip"
   appcast "https://github.com/tagspaces/tagspaces/releases.atom"
   name "TagSpaces"
+  desc "Offline, open-source, document manager with tagging support"
   homepage "https://www.tagspaces.org/"
 
   app "TagSpaces.app"

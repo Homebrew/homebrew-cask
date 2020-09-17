@@ -5,6 +5,7 @@ cask "packetproxy" do
   url "https://github.com/DeNA/PacketProxy/releases/download/#{version}/PacketProxy-#{version}-Installer-Mac-Signed.dmg"
   appcast "https://github.com/DeNA/PacketProxy/releases.atom"
   name "PacketProxy"
+  desc "Local proxy written in Java"
   homepage "https://github.com/DeNA/PacketProxy"
 
   app "PacketProxy.app"

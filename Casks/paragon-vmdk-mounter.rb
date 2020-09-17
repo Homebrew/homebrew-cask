@@ -4,6 +4,7 @@ cask "paragon-vmdk-mounter" do
 
   url "https://dl.paragon-software.com/free/VMDK_MOUNTER_2014.dmg"
   name "Paragon VMDK Mounter"
+  desc "Mounts a virtual container by double click"
   homepage "https://www.paragon-software.com/home/vd-mounter-mac-free/"
 
   pkg "Paragon VMDK Mounter.pkg"

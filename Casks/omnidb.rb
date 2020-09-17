@@ -5,6 +5,7 @@ cask "omnidb" do
   url "https://omnidb.org/dist/#{version}/omnidb-app_#{version}-mac.dmg"
   appcast "https://github.com/OmniDB/OmniDB/releases.atom"
   name "OmniDB"
+  desc "Web tool for database management"
   homepage "https://omnidb.org/"
 
   app "OmniDB.app"

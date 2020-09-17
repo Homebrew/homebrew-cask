@@ -6,6 +6,7 @@ cask "nodebox" do
   url "https://github.com/nodebox/nodebox/releases/download/v#{version}/NodeBox-#{version}.zip"
   appcast "https://www.nodebox.net/node/release-notes.html"
   name "NodeBox"
+  desc "Node-based data application for visualization and generative design"
   homepage "https://www.nodebox.net/node/"
 
   app "NodeBox.app"

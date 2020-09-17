@@ -10,6 +10,7 @@ cask "clean-me" do
   url "https://github.com/Kevin-De-Koninck/Clean-Me/releases/download/v#{version}/Clean.Me.app.zip"
   appcast "https://github.com/Kevin-De-Koninck/Clean-Me/releases.atom"
   name "Clean-me"
+  desc "System cleaner for logs, caches and more"
   homepage "https://github.com/Kevin-De-Koninck/Clean-Me"
 
   depends_on macos: ">= :sierra"

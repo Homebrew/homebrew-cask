@@ -6,6 +6,7 @@ cask "gitup" do
   url "https://gitup-builds.s3.amazonaws.com/stable/GitUp.zip"
   appcast "https://github.com/git-up/GitUp/releases.atom"
   name "GitUp"
+  desc "Git interface focused on visual interaction"
   homepage "https://gitup.co/"
 
   auto_updates true
@@ -13,5 +14,9 @@ cask "gitup" do
   app "GitUp.app"
   binary "#{appdir}/GitUp.app/Contents/SharedSupport/gitup"
 
-  zap trash: "~/Library/Preferences/co.gitup.mac.plist"
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/co.gitup.mac.sfl*",
+    "~/Library/Caches/co.gitup.mac",
+    "~/Library/Preferences/co.gitup.mac.plist",
+  ]
 end

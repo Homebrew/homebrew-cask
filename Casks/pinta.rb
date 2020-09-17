@@ -6,6 +6,7 @@ cask "pinta" do
   url "https://github.com/PintaProject/Pinta/releases/download/#{version}/Pinta.app.zip"
   appcast "https://github.com/PintaProject/Pinta/releases.atom"
   name "Pinta"
+  desc "Simple Gtk# Paint Program"
   homepage "https://www.pinta-project.com/"
 
   depends_on cask: "mono-mdk"

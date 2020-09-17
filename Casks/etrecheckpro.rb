@@ -4,6 +4,7 @@ cask "etrecheckpro" do
 
   url "https://cdn.etrecheck.com/EtreCheckPro.zip"
   name "EtreCheck"
+  desc "Utility to finds and fix problems on computer systems"
   homepage "https://etrecheck.com/"
 
   app "EtreCheckPro.app"

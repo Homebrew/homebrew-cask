@@ -6,6 +6,7 @@ cask "mpeg-streamclip" do
   url "http://www.alfanet.it/squared5/MPEG_Streamclip_#{version}.dmg"
   appcast "http://www.squared5.com/svideo/mpeg-streamclip-mac.html"
   name "MPEG Streamclip"
+  desc "Video converter, player, and editor"
   homepage "http://www.squared5.com/"
 
   depends_on macos: "<= :mojave"

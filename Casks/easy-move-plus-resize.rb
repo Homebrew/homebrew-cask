@@ -5,6 +5,7 @@ cask "easy-move-plus-resize" do
   url "https://github.com/dmarcotte/easy-move-resize/releases/download/#{version}/Easy.Move.Resize.app.zip"
   appcast "https://github.com/dmarcotte/easy-move-resize/releases.atom"
   name "Easy Move+Resize"
+  desc "Utility to support moving and resizing using a modifier key and mouse drag"
   homepage "https://github.com/dmarcotte/easy-move-resize"
 
   app "easy-move-resize/Easy Move+Resize.app"

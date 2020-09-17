@@ -5,6 +5,7 @@ cask "blu-ray-player-pro" do
   url "https://cdn.macblurayplayer.com/mac-bluray-player-pro3/Blu-ray_Player_Pro_#{version}.dmg"
   appcast "https://cdn.macblurayplayer.com/mac-bluray-player-pro3/appcast/Appcast.xml"
   name "Macgo Mac Blu-ray Player Pro"
+  desc "Blu-ray player software"
   homepage "https://www.macblurayplayer.com/"
 
   app "Blu-ray Player Pro.app"

@@ -7,6 +7,7 @@ cask "playmemories-home" do
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://support.d-imaging.sony.co.jp/disoft_DL/PMHMAC_DL/mac?fm=ttl&fm=ja",
           must_contain: version.before_comma.no_dots
   name "PlayMemories Home"
+  desc "Freeware that manages and edits photos and videos"
   homepage "https://support.d-imaging.sony.co.jp/www/disoft/int/download/playmemories-home/mac/en/"
 
   pkg "PMH_INST.pkg"

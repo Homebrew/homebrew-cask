@@ -4,6 +4,7 @@ cask "amorphousdiskmark" do
 
   url "https://katsurashareware.com/dl/AmorphousDiskMark.zip"
   name "AmorphousDiskMark"
+  desc "App to measure storage read/write performance"
   homepage "https://katsurashareware.com/pgs/adm.html"
 
   app "AmorphousDiskMark.app"

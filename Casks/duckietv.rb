@@ -6,6 +6,7 @@ cask "duckietv" do
   url "https://github.com/SchizoDuckie/DuckieTV/releases/download/#{version}/DuckieTV-#{version}-OSX-x64.pkg"
   appcast "https://github.com/SchizoDuckie/DuckieTV/releases.atom"
   name "duckieTV"
+  desc "Tool to track TV shows with semi-automagic torrent integration"
   homepage "https://schizoduckie.github.io/DuckieTV/"
 
   pkg "DuckieTV-#{version}-OSX-x64.pkg"

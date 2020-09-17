@@ -6,6 +6,7 @@ cask "dash-dash" do
   url "https://github.com/dashpay/dash/releases/download/v#{version}/dashcore-#{version}-osx.dmg"
   appcast "https://github.com/dashpay/dash/releases.atom"
   name "Dash"
+  desc "Dash - Reinventing Cryptocurrency"
   homepage "https://www.dash.org/"
 
   app "Dash-Qt.app"

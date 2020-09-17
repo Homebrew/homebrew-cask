@@ -54,6 +54,7 @@ cask "sketchup-pro" do
   url "https://www.sketchup.com/sketchup/SketchUpPro-#{language}-dmg"
   appcast "https://help.sketchup.com/en/release-notes-0"
   name "SketchUp"
+  desc "3D visualization software"
   homepage "https://www.sketchup.com/"
 
   installer manual: "Double-Click to Install Sketchup.app"

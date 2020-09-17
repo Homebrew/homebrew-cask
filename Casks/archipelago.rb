@@ -5,6 +5,7 @@ cask "archipelago" do
   url "https://github.com/npezza93/archipelago/releases/download/v#{version}/Archipelago-#{version}.dmg"
   appcast "https://github.com/npezza93/archipelago/releases.atom"
   name "Archipelago"
+  desc "Open-source terminal emulator built on web technology"
   homepage "https://github.com/npezza93/archipelago"
 
   app "Archipelago.app"

@@ -4,6 +4,7 @@ cask "viber" do
 
   url "https://download.viber.com/desktop/mac/Viber.dmg"
   name "Viber"
+  desc "Calling and messaging application focusing on security"
   homepage "https://www.viber.com/"
 
   depends_on macos: ">= :sierra"

@@ -5,6 +5,7 @@ cask "nocturnal" do
   url "https://github.com/HarshilShah/Nocturnal/releases/download/#{version}/Nocturnal.zip"
   appcast "https://github.com/HarshilShah/Nocturnal/releases.atom"
   name "Nocturnal"
+  desc "Simple app to toggle dark mode with one click"
   homepage "https://github.com/HarshilShah/Nocturnal"
 
   depends_on macos: ">= :mojave"

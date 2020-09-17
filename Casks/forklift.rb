@@ -5,6 +5,7 @@ cask "forklift" do
   url "https://download.binarynights.com/ForkLift#{version}.zip"
   appcast "https://updates.binarynights.com/ForkLift#{version.major}/update.xml"
   name "ForkLift"
+  desc "Finder replacement and FTP, SFTP, WebDAV and Amazon s3 client"
   homepage "https://binarynights.com/"
 
   auto_updates true

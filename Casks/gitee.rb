@@ -5,6 +5,7 @@ cask "gitee" do
   url "https://github.com/Nightonke/Gitee/releases/download/v#{version}/Gitee.zip"
   appcast "https://github.com/Nightonke/Gitee/releases.atom"
   name "Gitee"
+  desc "Status bar application for GitHub"
   homepage "https://github.com/Nightonke/Gitee"
 
   app "Gitee.app"

@@ -4,6 +4,7 @@ cask "smart-converter-pro" do
 
   url "https://download.shedworx.com/scp#{version.major}/SmartConverterPro-#{version}.dmg"
   name "Smart Converter Pro"
+  desc "Video converter"
   homepage "https://shedworx.com/smart-converter-pro"
 
   depends_on macos: ">= :high_sierra"

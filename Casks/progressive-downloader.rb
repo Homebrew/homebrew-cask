@@ -1,10 +1,11 @@
 cask "progressive-downloader" do
-  version "4.6"
-  sha256 "12ba2053bc41e4d1c7e453c23f19743a3e2b42de0acf6f9f60637581274ff4f5"
+  version "4.7.1"
+  sha256 "55844fb90760856c2435a79d7e64b1c4edc349078e127375a3d03efe5f79b12a"
 
   url "https://www.macpsd.net/update/#{version}/PSD.dmg"
   appcast "https://www.macpsd.net/"
   name "Progressive Downloader"
+  desc "Download manager"
   homepage "https://www.macpsd.net/"
 
   depends_on macos: ">= :yosemite"

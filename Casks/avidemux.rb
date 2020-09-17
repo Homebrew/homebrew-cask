@@ -15,6 +15,7 @@ cask "avidemux" do
 
   appcast "https://sourceforge.net/projects/avidemux/rss?path=/avidemux"
   name "Avidemux"
+  desc "Open-source cross-platform video editor"
   homepage "https://www.avidemux.org/"
 
   app "Avidemux_#{version}.app"

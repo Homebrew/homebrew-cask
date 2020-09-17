@@ -31,7 +31,7 @@ about: Create a report to help us improve
 {{replace this}}
 ```
 
-#### Output of `brew cask doctor`
+#### Output of `brew doctor --verbose`
 
 ```
 {{replace this}}

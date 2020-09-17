@@ -6,6 +6,7 @@ cask "mp4tools" do
       referer: "http://www.emmgunn.com/mp4tools-home/mp4tools-downloads/"
   appcast "http://www.emmgunn.com/mp4tools-home/mp4tools-downloads/"
   name "MP4tools"
+  desc "Create and edit MP4 videos"
   homepage "http://www.emmgunn.com/mp4tools-home/"
 
   app "mp4tools#{version}/MP4Tools.app"

@@ -5,7 +5,7 @@ cask "toolreleases" do
   url "https://github.com/DeveloperMaris/ToolReleases/releases/download/v#{version.before_comma}/ToolReleases_v#{version.before_comma}.b#{version.after_comma}.zip"
   appcast "https://github.com/DeveloperMaris/ToolReleases/releases.atom"
   name "ToolReleases"
-  desc "Informs about the latest Apple tool releases (including Beta releases)"
+  desc "Utility to notify about the latest Apple tool releases (including Beta releases)"
   homepage "https://github.com/DeveloperMaris/ToolReleases"
 
   depends_on macos: ">= :catalina"

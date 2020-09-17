@@ -5,6 +5,7 @@ cask "namebench" do
   # googleapis.com/google-code-archive-downloads/v2/code.google.com/namebench/ was verified as official when first introduced to the cask
   url "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/namebench/namebench-#{version}-Mac_OS_X.dmg"
   name "namebench"
+  desc "DNS server finder"
   homepage "https://code.google.com/archive/p/namebench/"
 
   app "namebench.app"

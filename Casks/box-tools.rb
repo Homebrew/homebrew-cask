@@ -1,14 +1,23 @@
-cask "box-edit" do
+cask "box-tools" do
   version :latest
   sha256 :no_check
 
   # e3.boxcdn.net/box-installers/boxedit/mac/currentrelease/ was verified as official when first introduced to the cask
   url "https://e3.boxcdn.net/box-installers/boxedit/mac/currentrelease/BoxToolsInstaller.dmg"
-  name "Box Edit"
+  name "Box Tools"
+  desc "Create and edit any file directly from a web browser"
   homepage "https://www.box.com/resources/downloads"
 
-  app "Install Box Tools.app/Contents/Resources/Box Edit.app",
-      target: "#{ENV["HOME"]}/Library/Application Support/Box/Box Edit/Box Edit.app"
+  apps = [
+    "Device Trust",
+    "Edit",
+    "Local Com Server",
+    "Tools Custom Apps",
+  ]
+  apps.each do |a|
+    app "Install Box Tools.app/Contents/Resources/Box #{a}.app",
+        target: "#{ENV["HOME"]}/Library/Application Support/Box/Box Edit/Box #{a}.app"
+  end
 
   uninstall quit: [
     "com.Box.Box-Edit",

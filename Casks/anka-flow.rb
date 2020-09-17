@@ -5,7 +5,7 @@ cask "anka-flow" do
   # d1efqjhnhbvc57.cloudfront.net/ was verified as official when first introduced to the cask
   url "https://d1efqjhnhbvc57.cloudfront.net/Anka-#{version}.pkg",
       referer: "https://veertu.com/download-anka-run/"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://veertu.com/downloads/ankaflow-latest"
+  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://veertu.com/downloads/anka-virtualization-latest"
   name "Veertu Anka Flow"
   homepage "https://veertu.com/"
 

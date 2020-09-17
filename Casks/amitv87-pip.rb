@@ -5,6 +5,7 @@ cask "amitv87-pip" do
   url "https://github.com/amitv87/PiP/releases/download/v#{version}/PiP-#{version}.dmg"
   appcast "https://github.com/amitv87/PiP/releases.atom"
   name "PiP"
+  desc "Always on top window preview"
   homepage "https://github.com/amitv87/PiP"
 
   depends_on macos: ">= :sierra"

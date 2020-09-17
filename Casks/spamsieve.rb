@@ -5,6 +5,7 @@ cask "spamsieve" do
   url "https://c-command.com/downloads/SpamSieve-#{version}.dmg"
   appcast "https://c-command.com/spamsieve/"
   name "SpamSieve"
+  desc "Spam filtering extension for e-mail clients"
   homepage "https://c-command.com/spamsieve/"
 
   app "SpamSieve.app"

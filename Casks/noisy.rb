@@ -4,6 +4,7 @@ cask "noisy" do
 
   url "https://github.com/downloads/jonshea/Noisy/Noisy.zip"
   name "Noisy"
+  desc "White noise generator"
   homepage "https://github.com/jonshea/Noisy"
 
   app "Noisy.app"

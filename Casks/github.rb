@@ -1,11 +1,12 @@
 cask "github" do
-  version "2.5.4-ebf46061"
-  sha256 "251ea6e663a647c81ad0019365aa7221964375f956ded70490c4b9e6bb2dbb5a"
+  version "2.5.5-f57dc10d"
+  sha256 "fe39c280c746b66d13dbcc5acfeb946f77b680954ecda2bf29a560a98a9d2638"
 
   # githubusercontent.com/ was verified as official when first introduced to the cask
   url "https://desktop.githubusercontent.com/releases/#{version}/GitHubDesktop.zip"
   appcast "https://github.com/desktop/desktop/releases.atom"
   name "GitHub Desktop"
+  desc "Desktop client for GitHub repositories"
   homepage "https://desktop.github.com/"
 
   auto_updates true
@@ -24,6 +25,8 @@ cask "github" do
     "~/Library/Caches/com.github.GitHubClient.ShipIt",
     "~/Library/Preferences/com.github.GitHubClient.helper.plist",
     "~/Library/Preferences/com.github.GitHubClient.plist",
+    "~/Library/Preferences/ByHost/com.github.GitHubClient.ShipIt.*.plist",
+    "~/Library/Logs/GitHub Desktop",
   ],
       rmdir: "~/.config/git"
 end

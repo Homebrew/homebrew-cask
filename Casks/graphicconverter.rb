@@ -6,6 +6,7 @@ cask "graphicconverter" do
   url "https://www.lemkesoft.info/files/graphicconverter/gc#{version.major}_build#{version.after_comma}.zip"
   appcast "https://www.lemkesoft.info/sparkle/graphicconverter/graphicconverter#{version.major}.xml"
   name "GraphicConverter"
+  desc "For browsing, enhancing and converting images"
   homepage "https://www.lemkesoft.de/en/products/graphicconverter/"
 
   auto_updates true

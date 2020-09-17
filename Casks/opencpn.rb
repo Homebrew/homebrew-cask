@@ -5,6 +5,7 @@ cask "opencpn" do
   url "http://download.opencpn.org/#{version.before_comma}/OpenCPN_#{version.before_comma}+#{version.after_comma}.pkg"
   appcast "https://github.com/OpenCPN/OpenCPN/releases.atom"
   name "OpenCPN"
+  desc "Full-featured and concise ChartPlotter/Navigator"
   homepage "https://www.opencpn.org/"
 
   pkg "OpenCPN_#{version.before_comma} #{version.after_comma}.pkg"

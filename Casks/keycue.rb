@@ -7,6 +7,7 @@ cask "keycue" do
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.ergonis.com/downloads/keycue-install.dmg",
           must_contain: version.no_dots
   name "KeyCue"
+  desc "Finds, learns and remembers keyboard shortcuts"
   homepage "https://www.ergonis.com/products/keycue/"
 
   app "KeyCue.app"

@@ -10,6 +10,7 @@ cask "sip" do
   url "https://sipapp.io/updates/v#{version.major}/sip-#{version}.zip"
   appcast "https://sipapp.io/updates/v#{version.major}/sip.xml"
   name "Sip"
+  desc "Collect, organize & share colors"
   homepage "https://sipapp.io/"
 
   auto_updates true

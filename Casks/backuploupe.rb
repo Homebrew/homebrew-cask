@@ -5,6 +5,7 @@ cask "backuploupe" do
   url "https://www.soma-zone.com/download/files/BackupLoupe-#{version}.tar.bz2"
   appcast "https://www.soma-zone.com/BackupLoupe/a/appcast-update-#{version.major}.xml"
   name "BackupLoupe"
+  desc "Alternative GUI for Time Machine"
   homepage "https://www.soma-zone.com/BackupLoupe/"
 
   app "BackupLoupe.app"

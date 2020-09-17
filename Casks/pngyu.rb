@@ -5,6 +5,7 @@ cask "pngyu" do
   url "https://nukesaq88.github.io/Pngyu/download/Pngyu_mac_#{version.no_dots}.zip"
   appcast "https://nukesaq88.github.io/Pngyu/"
   name "Pngyu"
+  desc "Front-end GUI application for pngquant"
   homepage "https://nukesaq88.github.io/Pngyu/"
 
   app "Pngyu.app"

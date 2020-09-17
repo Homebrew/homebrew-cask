@@ -9,6 +9,7 @@ cask "ipartition" do
 
   url "https://coriolis-systems.com/downloads/iPartition-#{version}.dmg"
   name "iPartition"
+  desc "Disk partitioning tool"
   homepage "https://coriolis-systems.com/iPartition/"
 
   app "iPartition.app"

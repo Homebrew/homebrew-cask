@@ -6,6 +6,7 @@ cask "flame" do
   url "https://github.com/tominsam/flametouch/releases/download/#{version}/Flame_#{version}.zip"
   appcast "https://github.com/tominsam/flametouch/releases.atom"
   name "Flame"
+  desc "Rendezvous service browser for iPhone / iPod touch"
   homepage "https://movieos.org/code/flame/"
 
   depends_on macos: ">= :catalina"

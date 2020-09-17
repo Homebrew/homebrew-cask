@@ -5,6 +5,7 @@ cask "acorn" do
   url "https://flyingmeat.com/download/Acorn-#{version}.zip"
   appcast "https://www.flyingmeat.com/download/acorn#{version.major}update.xml"
   name "Acorn"
+  desc "Image editor focused on simplicity"
   homepage "https://flyingmeat.com/acorn/"
 
   auto_updates true

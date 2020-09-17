@@ -5,7 +5,10 @@ cask "fuse" do
   # github.com/fuse-open/fuse-studio/ was verified as official when first introduced to the cask
   url "https://github.com/fuse-open/fuse-studio/releases/download/#{version}/fuse_osx_#{version.dots_to_underscores}.pkg"
   appcast "https://github.com/fuse-open/fuse-studio/releases.atom"
+  name "Fuse Studio"
+  name "Fuse Open"
   name "Fuse Fusetools"
+  desc "Visual desktop tool suite for working with the Fuse framework"
   homepage "https://fuse-open.github.io/"
 
   pkg "fuse_osx_#{version.dots_to_underscores}.pkg"

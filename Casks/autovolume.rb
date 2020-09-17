@@ -5,6 +5,7 @@ cask "autovolume" do
   url "https://github.com/jesse-c/AutoVolume/releases/download/v#{version}/AutoVolume.app.zip"
   appcast "https://github.com/jesse-c/AutoVolume/releases.atom"
   name "AutoVolume"
+  desc "Tool that automatically sets the volume to a specified volume"
   homepage "https://github.com/jesse-c/AutoVolume"
 
   depends_on macos: ">= :sierra"

@@ -5,6 +5,7 @@ cask "platypus" do
   url "https://sveinbjorn.org/files/software/platypus/platypus#{version}.zip"
   appcast "https://www.sveinbjorn.org/files/appcasts/PlatypusAppcast.xml"
   name "Platypus"
+  desc "Tool to create native applications from command-line scripts"
   homepage "https://sveinbjorn.org/platypus"
 
   auto_updates true

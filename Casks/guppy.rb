@@ -5,6 +5,7 @@ cask "guppy" do
   url "https://github.com/joshwcomeau/guppy/releases/download/v#{version}/Guppy-#{version}.dmg"
   appcast "https://github.com/joshwcomeau/guppy/releases.atom"
   name "Guppy"
+  desc "Friendly application manager and task runner for React.js"
   homepage "https://github.com/joshwcomeau/guppy"
 
   app "Guppy.app"

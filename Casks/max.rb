@@ -17,6 +17,7 @@ cask "max" do
   end
 
   name "Max"
+  desc "Creats high-quality audio files in various formats, from CDs or files"
   homepage "https://sbooth.org/Max/"
 
   zap trash: "~/Library/Preferences/org.sbooth.Max.plist"

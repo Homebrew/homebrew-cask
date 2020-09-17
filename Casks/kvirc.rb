@@ -5,6 +5,7 @@ cask "kvirc" do
   url "ftp://ftp.kvirc.net/pub/kvirc/#{version}/binary/macosx/KVIrc-#{version}.dmg"
   appcast "https://github.com/kvirc/KVIrc/releases.atom"
   name "KVIrc"
+  desc "IRC Client"
   homepage "https://www.kvirc.net/"
 
   depends_on macos: ">= :high_sierra"

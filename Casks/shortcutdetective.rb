@@ -4,6 +4,7 @@ cask "shortcutdetective" do
 
   url "https://www.irradiatedsoftware.com/downloads/ShortcutDetective.zip"
   name "ShortcutDetective"
+  desc "Detects which app receives a keyboard shortcut (hotkey)"
   homepage "https://www.irradiatedsoftware.com/labs/"
 
   app "ShortcutDetective.app"

@@ -6,6 +6,7 @@ cask "open-ecard" do
   url "https://github.com/ecsec/open-ecard/releases/download/#{version}/Open-eCard-App-#{version}.dmg"
   appcast "https://github.com/ecsec/open-ecard/releases.atom"
   name "Open eCard"
+  desc "Client side implementation of the eCard-API-Framework (BSI TR-03112)"
   homepage "https://www.openecard.org/"
 
   app "Open-eCard-App.app"

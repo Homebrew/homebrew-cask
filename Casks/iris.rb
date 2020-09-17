@@ -6,6 +6,7 @@ cask "iris" do
   url "https://raw.githubusercontent.com/danielng01/product-builds/master/Iris/macOS/Iris-#{version}-OSX.zip"
   appcast "https://iristech.co/iris/"
   name "Iris"
+  desc "Blue light filter and eye protection software"
   homepage "https://iristech.co/iris/"
 
   app "Iris.app"

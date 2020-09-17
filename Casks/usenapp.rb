@@ -1,11 +1,11 @@
 cask "usenapp" do
-  version "0.80.8"
-  sha256 "244b34383383e5f4c81ace42c1eff82c19ee2cdcf2b90bcde907e5d055e74c41"
+  version "0.90.2"
+  sha256 "dcd28e0d714517a86db4279afebc88986889314b28b5a95b46bf4d2191bc8d1c"
 
   url "https://www.usenapp.com/download/Usenapp-#{version}.dmg"
   appcast "https://www.usenapp.com/download/appcast_unp1.xml"
   name "Usenapp"
-  desc "Newsreader and usenet client for Mac OSX"
+  desc "Newsreader and Usenet client"
   homepage "https://www.usenapp.com/"
 
   app "Usenapp.app"

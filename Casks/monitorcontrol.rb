@@ -5,6 +5,7 @@ cask "monitorcontrol" do
   url "https://github.com/the0neyouseek/MonitorControl/releases/download/v#{version}/MonitorControl.#{version}.dmg"
   appcast "https://github.com/the0neyouseek/MonitorControl/releases.atom"
   name "MonitorControl"
+  desc "Tool to control external monitor brightness & volume"
   homepage "https://github.com/the0neyouseek/MonitorControl"
 
   depends_on macos: ">= :sierra"

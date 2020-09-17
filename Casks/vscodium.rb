@@ -5,6 +5,7 @@ cask "vscodium" do
   url "https://github.com/VSCodium/vscodium/releases/download/#{version}/VSCodium.#{version}.dmg"
   appcast "https://github.com/VSCodium/vscodium/releases.atom"
   name "VSCodium"
+  desc "Binary releases of VS Code without MS branding/telemetry/licensing"
   homepage "https://github.com/VSCodium/vscodium"
 
   auto_updates true

@@ -5,6 +5,7 @@ cask "zenmap" do
   url "https://nmap.org/dist/nmap-#{version}.dmg"
   appcast "https://nmap.org/dist/?C=M&O=D"
   name "Zenmap"
+  desc "Multi-platform graphical interface for official Nmap Security Scanner"
   homepage "https://nmap.org/zenmap/"
 
   depends_on formula: "nmap"

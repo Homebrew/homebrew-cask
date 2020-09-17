@@ -5,6 +5,7 @@ cask "chronicle" do
   url "https://www.chronicleapp.com/static/downloads/chroniclepro.zip"
   appcast "https://chronicleapp.com/chronicle8.xml"
   name "Chronicle"
+  desc "Personal finance manager"
   homepage "https://chronicleapp.com/"
 
   app "Chronicle Pro.app"

@@ -5,6 +5,7 @@ cask "ubar" do
   url "https://www.brawersoftware.com/downloads/ubar/ubar#{version.no_dots}.zip"
   appcast "https://brawersoftware.com/appcasts/feeds/ubar/ubar#{version.major}.xml"
   name "uBar"
+  desc "Window manager and productivity tool"
   homepage "https://brawersoftware.com/products/ubar"
 
   app "uBar.app"

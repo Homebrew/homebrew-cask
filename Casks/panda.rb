@@ -5,6 +5,7 @@ cask "panda" do
   url "https://github.com/pablosproject/Panda-Mac-app/releases/download/#{version}/Panda.zip"
   appcast "https://github.com/pablosproject/Panda-Mac-app/releases.atom"
   name "Panda"
+  desc "Utility to switch from light to dark mode"
   homepage "https://github.com/pablosproject/Panda-Mac-app"
 
   auto_updates true

@@ -6,6 +6,7 @@ cask "all-in-one-messenger" do
   url "https://all-in-one-messenger.ams3.digitaloceanspaces.com/All-in-One%20Messenger-#{version}.dmg"
   appcast "https://all-in-one-messenger.ams3.digitaloceanspaces.com/latest-mac.yml"
   name "All-in-One Messenger"
+  desc "Combined interface for various messaging platforms"
   homepage "https://allinone.im/"
 
   auto_updates true

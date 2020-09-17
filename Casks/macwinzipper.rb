@@ -5,6 +5,7 @@ cask "macwinzipper" do
   url "https://tida.co.jp/files/MacWinZipper-#{version}.dmg"
   appcast "https://tida.co.jp/macwinzipper"
   name "MacWinZipper"
+  desc "Zip archiver"
   homepage "https://tida.co.jp/macwinzipper"
 
   app "MacWinZipper.app"

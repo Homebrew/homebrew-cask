@@ -6,6 +6,7 @@ cask "jbrowse" do
   url "https://github.com/GMOD/jbrowse/releases/download/#{version}-release/JBrowse-#{version}-desktop-darwin-x64.zip"
   appcast "https://github.com/GMOD/jbrowse/releases.atom"
   name "jbrowse"
+  desc "Genome browser"
   homepage "https://jbrowse.org/"
 
   app "JBrowse-#{version}-desktop-darwin-x64/JBrowse-#{version}-desktop.app"

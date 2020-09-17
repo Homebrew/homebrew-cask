@@ -5,6 +5,7 @@ cask "electron-cash" do
   url "https://electroncash.org/downloads/#{version}/mac/Electron-Cash-#{version}-macosx.dmg"
   appcast "https://github.com/Electron-Cash/Electron-Cash/releases.atom"
   name "Electron Cash"
+  desc "Thin client for Bitcoin Cash"
   homepage "https://www.electroncash.org/"
 
   app "Electron-Cash.app"

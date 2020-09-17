@@ -5,6 +5,7 @@ cask "geotag" do
   url "https://www.snafu.org/GeoTag/GeoTag-#{version}.dmg"
   appcast "https://github.com/marchyman/GeoTag/releases.atom"
   name "GeoTag"
+  desc "Geo location editor for images"
   homepage "https://www.snafu.org/GeoTag/"
 
   depends_on macos: ">= :sierra"

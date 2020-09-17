@@ -6,6 +6,7 @@ cask "vsee" do
   url "https://d2q5hugz2rti4w.cloudfront.net/mac/#{version.after_comma}/vseemac.dmg"
   appcast "https://client.vsee.com/mac/appcast.xml"
   name "VSee"
+  desc "Group video calls, screen sharing and instant messaging"
   homepage "https://vsee.com/"
 
   app "VSee.app"

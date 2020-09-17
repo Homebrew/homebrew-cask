@@ -5,6 +5,7 @@ cask "upterm" do
   url "https://github.com/railsware/upterm/releases/download/v#{version}/upterm-#{version}-macOS.dmg"
   appcast "https://github.com/railsware/upterm/releases.atom"
   name "Upterm"
+  desc "Terminal emulator for the 21st century"
   homepage "https://github.com/railsware/upterm"
 
   app "Upterm.app"

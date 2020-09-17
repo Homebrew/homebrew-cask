@@ -26,5 +26,6 @@ cask "marshallofsound-google-play-music-player" do
     "~/Library/Preferences/google-play-music-desktop-player.helper.plist",
     "~/Library/Preferences/google-play-music-desktop-player.plist",
     "~/Library/Saved Application State/google-play-music-desktop-player.savedState",
+    "~/Library/Logs/Google Play Music Desktop Player",
   ]
 end

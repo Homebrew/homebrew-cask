@@ -4,6 +4,7 @@ cask "movist" do
 
   url "https://github.com/downloads/samiamwork/Movist/Movist.app.zip"
   name "Movist"
+  desc "Movie Player based on QuickTime & FFmpeg"
   homepage "https://github.com/samiamwork/Movist"
 
   app "Movist.app"

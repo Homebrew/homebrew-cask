@@ -5,6 +5,7 @@ cask "quicksync" do
   url "https://gse.gigaset.com/fileadmin/gigaset/images/CORE/QuickSync/Mac_#{version}/QuickSync.dmg"
   appcast "https://www.gigaset.com/hq_en/cms/service/support-detail/gigaset-quicksync-mac-version.html"
   name "QuickSync"
+  desc "Syncing software for Gigaset products"
   homepage "https://www.gigaset.com/hq_en/cms/home/support/support/downloads/quicksync/quicksync-for-mac.html"
 
   app "QuickSync.app"

@@ -1,10 +1,11 @@
 cask "whatsapp" do
-  version "2.2035.14"
-  sha256 "57bb238be33b2cf69e29e9631997986c2eefe9a11145da0cc24148be3a349bc2"
+  version "2.2037.6"
+  sha256 "e267facbac2a058371ec567ff367914b98459538162a075846c52c121a2d9490"
 
   url "https://web.whatsapp.com/desktop/mac/files/release-#{version}.zip"
   appcast "https://web.whatsapp.com/desktop/mac/releases?platform=darwin&arch=x64"
   name "WhatsApp"
+  desc "Desktop client for WhatsApp"
   homepage "https://www.whatsapp.com/"
 
   auto_updates true

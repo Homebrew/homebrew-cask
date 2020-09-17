@@ -4,6 +4,7 @@ cask "google-earth-pro" do
 
   url "https://dl.google.com/earth/client/advanced/current/GoogleEarthProMac-Intel.dmg"
   name "Google Earth Pro"
+  desc "Virtual globe"
   homepage "https://www.google.com/earth/"
 
   pkg "Install Google Earth Pro #{version}.pkg"

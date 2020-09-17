@@ -6,6 +6,7 @@ cask "cloudmounter" do
   appcast "https://cdn.eltima.com/download/cloudmounter-update/settings.xml",
           must_contain: version.major_minor
   name "Eltima CloudMounter"
+  desc "Mounts cloud storages as local disks"
   homepage "https://mac.eltima.com/mount-cloud-drive.html"
 
   app "CloudMounter.app"

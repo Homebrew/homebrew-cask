@@ -5,6 +5,7 @@ cask "curio" do
   url "https://www.zengobi.com/downloads/Curio#{version.no_dots}.zip"
   appcast "https://www.zengobi.com/appcasts/Curio14-2ZaxaUUlKorRS4Hf.xml"
   name "Curio"
+  desc "Note-taking and organizing app"
   homepage "https://zengobi.com/curio/"
 
   depends_on macos: ">= :mojave"

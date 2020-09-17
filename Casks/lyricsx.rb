@@ -5,6 +5,7 @@ cask "lyricsx" do
   url "https://github.com/ddddxxx/LyricsX/releases/download/v#{version.before_comma}/LyricsX_#{version.before_comma}+#{version.after_comma}.zip"
   appcast "https://github.com/ddddxxx/LyricsX/releases.atom"
   name "LyricsX"
+  desc "Lyrics for iTunes, Spotify, Vox and Audirvana Plus"
   homepage "https://github.com/ddddxxx/LyricsX"
 
   auto_updates true

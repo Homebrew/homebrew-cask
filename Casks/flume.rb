@@ -5,6 +5,7 @@ cask "flume" do
   url "https://flumeapp.com/files/Flume-#{version}.zip"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://flumeapp.com/download/"
   name "Flume"
+  desc "Instagram desktop client"
   homepage "https://flumeapp.com/"
 
   auto_updates true

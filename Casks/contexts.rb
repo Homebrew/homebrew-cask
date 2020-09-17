@@ -5,6 +5,7 @@ cask "contexts" do
   url "https://contexts.co/releases/Contexts-#{version}.dmg"
   appcast "https://contexts.co/appcasts/stable.xml"
   name "Contexts"
+  desc "Allows switching between application windows"
   homepage "https://contexts.co/"
 
   app "Contexts.app"

@@ -1,10 +1,11 @@
 cask "rcloneosx" do
-  version "2.2.1"
-  sha256 "38d1f45614e6b4541e31eaafdf7126178dbb3de6ef8389efe1bb13ee846078d7"
+  version "2.2.5"
+  sha256 "dc44945e81c66ce9238212a4878cb35c507d364069e2361cd76b333bf0e0ab0c"
 
   url "https://github.com/rsyncOSX/rcloneosx/releases/download/v#{version}/rcloneosx.#{version}.dmg"
   appcast "https://github.com/rsyncOSX/rcloneosx/releases.atom"
   name "RcloneOSX"
+  desc "GUI for rclone"
   homepage "https://github.com/rsyncOSX/rcloneosx"
 
   depends_on formula: "rclone"

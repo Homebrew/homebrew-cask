@@ -6,6 +6,7 @@ cask "duplicati" do
   url "https://github.com/duplicati/duplicati/releases/download/v#{version.before_comma}-#{version.before_comma}_beta_#{version.after_comma}/duplicati-#{version.before_comma}_beta_#{version.after_comma}.dmg"
   appcast "https://github.com/duplicati/duplicati/releases.atom"
   name "Duplicati"
+  desc "Store securely encrypted backups in the cloud!"
   homepage "https://www.duplicati.com/"
 
   depends_on formula: "mono"

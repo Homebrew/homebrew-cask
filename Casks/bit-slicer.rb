@@ -6,6 +6,7 @@ cask "bit-slicer" do
   url "https://zgcoder.net/software/bitslicer/dist/stable/Bit_Slicer_#{version}.zip"
   appcast "https://zgcoder.net/bitslicer/update/appcast.xml"
   name "Bit Slicer"
+  desc "Universal game trainer"
   homepage "https://github.com/zorgiepoo/bit-slicer/"
 
   app "Bit Slicer.app"

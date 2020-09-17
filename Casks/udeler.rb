@@ -5,6 +5,7 @@ cask "udeler" do
   url "https://github.com/FaisalUmair/udemy-downloader-gui/releases/download/v#{version}/Udeler-#{version}-mac.dmg"
   appcast "https://github.com/FaisalUmair/udemy-downloader-gui/releases.atom"
   name "Udeler"
+  desc "Desktop application for downloading Udemy Courses"
   homepage "https://github.com/FaisalUmair/udemy-downloader-gui/"
 
   app "Udeler.app"

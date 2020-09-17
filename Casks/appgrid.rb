@@ -5,6 +5,7 @@ cask "appgrid" do
   url "https://github.com/mjolnirapp/AppGrid/releases/download/#{version}/AppGrid-#{version}.zip"
   appcast "https://github.com/mjolnirapp/AppGrid/releases.atom"
   name "AppGrid"
+  desc "Window manager with Vim–like hotkeys"
   homepage "https://github.com/mjolnirapp/AppGrid/"
 
   app "AppGrid.app"

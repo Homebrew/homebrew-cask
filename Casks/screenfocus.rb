@@ -5,6 +5,7 @@ cask "screenfocus" do
   url "https://www.apptorium.com/public/products/screenfocus/releases/ScreenFocus-#{version}.zip"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.apptorium.com/screenfocus/trial"
   name "ScreenFocus"
+  desc "Tool to manage multiple screens"
   homepage "https://www.apptorium.com/screenfocus"
 
   app "ScreenFocus.app"

@@ -5,6 +5,7 @@ cask "cisdem-document-reader" do
   url "https://download.cisdem.com/cisdem-documentreader.dmg"
   appcast "https://www.cisdem.com/document-reader-mac/release-notes.html"
   name "Cisdem Document Reader"
+  desc "Document reader to open and view Windows-based files"
   homepage "https://www.cisdem.com/document-reader-mac.html"
 
   app "Cisdem Document Reader.app"

@@ -6,6 +6,7 @@ cask "movist-pro" do
   url "https://s3.ap-northeast-2.amazonaws.com/update.cocoable.com/MovistPro_#{version}.app.zip"
   appcast "https://s3.ap-northeast-2.amazonaws.com/update.cocoable.com/appcast.xml"
   name "Movist Pro"
+  desc "Media player"
   homepage "https://movistprime.com/"
 
   app "Movist Pro.app"

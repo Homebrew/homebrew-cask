@@ -5,6 +5,7 @@ cask "inav-configurator" do
   url "https://github.com/iNavFlight/inav-configurator/releases/download/#{version}/INAV-Configurator_macOS_#{version}.zip"
   appcast "https://github.com/iNavFlight/inav-configurator/releases.atom"
   name "INAV Configurator"
+  desc "Configuration tool for the INAV flight control system"
   homepage "https://github.com/iNavFlight/inav-configurator/"
 
   app "INAV Configurator.app"

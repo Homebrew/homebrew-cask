@@ -6,6 +6,7 @@ cask "shimo" do
   url "https://downloads.mailbutler.io/Shimo_#{version}.zip"
   appcast "https://www.shimovpn.com/appcast#{version.major}.php"
   name "Shimo"
+  desc "VPN client for secure internet access and private browsing"
   homepage "https://www.shimovpn.com/"
 
   auto_updates true

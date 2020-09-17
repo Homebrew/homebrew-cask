@@ -6,6 +6,7 @@ cask "vox" do
   url "https://dl.devmate.com/com.coppertino.Vox/#{version.before_comma}/#{version.after_comma}/Vox-#{version.before_comma}.zip"
   appcast "https://updates.devmate.com/com.coppertino.Vox.xml"
   name "VOX"
+  desc "Music player for high resoluion (Hi-Res) music through the external sources"
   homepage "https://vox.rocks/mac-music-player"
 
   auto_updates true

@@ -6,6 +6,7 @@ cask "nuclear" do
   url "https://github.com/nukeop/nuclear/releases/download/v#{version}/nuclear-#{version}.dmg"
   appcast "https://github.com/nukeop/nuclear/releases.atom"
   name "Nuclear"
+  desc "Streaming music player"
   homepage "https://nuclear.js.org/"
 
   app "nuclear.app"

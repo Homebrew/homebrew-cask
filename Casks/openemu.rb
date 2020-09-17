@@ -14,6 +14,7 @@ cask "openemu" do
   url "https://github.com/OpenEmu/OpenEmu/releases/download/v#{version}/OpenEmu_#{version}.zip"
   appcast "https://github.com/OpenEmu/OpenEmu/releases.atom"
   name "OpenEmu"
+  desc "Retro video game emulation"
   homepage "https://openemu.org/"
 
   auto_updates true

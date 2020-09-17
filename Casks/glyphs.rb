@@ -5,6 +5,7 @@ cask "glyphs" do
   url "https://updates.glyphsapp.com/Glyphs#{version.major_minor_patch}-#{version.after_comma}.zip"
   appcast "https://updates.glyphsapp.com/appcast#{version.major}.xml"
   name "Glyphs"
+  desc "Font Editor"
   homepage "https://glyphsapp.com/"
 
   auto_updates true

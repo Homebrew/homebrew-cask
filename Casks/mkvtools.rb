@@ -5,6 +5,7 @@ cask "mkvtools" do
   url "http://www.emmgunn.com/downloads/mkvtools#{version}.zip"
   appcast "http://www.emmgunn.com/mkvtools-home/mkvtools-downloads/"
   name "MKVtools"
+  desc "App to create and edit MKV videos"
   homepage "http://www.emmgunn.com/mkvtools-home/"
 
   app "mkvtools#{version}/MKVtools.app"

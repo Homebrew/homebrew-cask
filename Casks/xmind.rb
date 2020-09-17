@@ -6,6 +6,7 @@ cask "xmind" do
   appcast "https://www.xmind.net/download/xmind8/",
           must_contain: version.after_comma
   name "XMind"
+  desc "Mind mapping and brainstorming tool"
   homepage "https://www.xmind.net/"
 
   app "XMind.app"

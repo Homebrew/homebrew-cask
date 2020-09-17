@@ -5,6 +5,7 @@ cask "switchresx" do
   url "https://www.madrau.com/data/switchresx/SwitchResX#{version.major}.zip"
   appcast "https://www.madrau.com/SRXCurrentVersion#{version.major}"
   name "SwitchResX"
+  desc "Controls screen display settings"
   homepage "https://www.madrau.com/"
 
   prefpane "SwitchResX.app/Contents/Resources/SwitchResX.prefPane"

@@ -5,6 +5,7 @@ cask "nfov" do
   url "https://github.com/nrlquaker/nfov/releases/download/v#{version}/nfov-darwin-x64-#{version}.zip"
   appcast "https://github.com/nrlquaker/nfov/releases.atom"
   name "nfov"
+  desc "ASCII / ANSI art viewer"
   homepage "https://github.com/nrlquaker/nfov"
 
   app "nfov.app"

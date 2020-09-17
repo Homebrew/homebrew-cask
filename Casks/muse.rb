@@ -5,6 +5,7 @@ cask "muse" do
   url "https://github.com/xzzz9097/Muse/releases/download/v#{version}/Muse.app.zip"
   appcast "https://github.com/xzzz9097/Muse/releases.atom"
   name "Muse"
+  desc "Open-source Spotify controller with TouchBar support"
   homepage "https://github.com/xzzz9097/Muse"
 
   depends_on macos: ">= :sierra"

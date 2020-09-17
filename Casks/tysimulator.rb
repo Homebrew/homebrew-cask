@@ -6,6 +6,7 @@ cask "tysimulator" do
   url "https://github.com/ty0x2333/TySimulator/releases/download/#{version}/TySimulator.#{version}.dmg"
   appcast "https://github.com/ty0x2333/TySimulator/releases.atom"
   name "TySimulator"
+  desc "Utility for fast access to your iPhone Simulator apps"
   homepage "https://tysimulator.com/"
 
   depends_on macos: ">= :sierra"

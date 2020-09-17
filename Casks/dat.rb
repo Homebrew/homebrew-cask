@@ -6,6 +6,7 @@ cask "dat" do
   url "https://github.com/dat-land/dat-desktop/releases/download/v#{version}/dat-desktop-#{version}-mac.zip"
   appcast "https://github.com/dat-land/dat-desktop/releases.atom"
   name "Dat Desktop"
+  desc "Peer to peer data sharing app built for humans"
   homepage "https://datproject.org/"
 
   app "Dat Desktop.app"

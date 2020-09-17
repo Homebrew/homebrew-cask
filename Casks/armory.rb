@@ -6,6 +6,7 @@ cask "armory" do
   url "https://github.com/goatpig/BitcoinArmory/releases/download/v#{version}/armory_#{version}_osx.tar.gz"
   appcast "https://github.com/goatpig/BitcoinArmory/releases.atom"
   name "Armory"
+  desc "Python-Based Bitcoin Software"
   homepage "https://btcarmory.com/"
 
   app "Armory.app"

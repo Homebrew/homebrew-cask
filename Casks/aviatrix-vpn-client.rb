@@ -1,6 +1,6 @@
 cask "aviatrix-vpn-client" do
-  version "2.11.6"
-  sha256 "0b7b0913fede47ce456436d86a2931ec486a8a4d495c68f46968e09d4911183b"
+  version "2.12.10"
+  sha256 "b4482aa1628aee4cef3c74a143debf70d384ab14742769045bc44eab86171787"
 
   # aviatrix-download.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://aviatrix-download.s3.amazonaws.com/AviatrixVPNClient/AVPNC_mac.pkg"

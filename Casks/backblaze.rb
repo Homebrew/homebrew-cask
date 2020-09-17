@@ -9,6 +9,8 @@ cask "backblaze" do
   desc "Data backup and storage service"
   homepage "https://backblaze.com/"
 
+  auto_updates true
+
   installer manual: "bzdoinstall.app"
 
   uninstall launchctl: [

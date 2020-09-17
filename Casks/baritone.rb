@@ -6,6 +6,7 @@ cask "baritone" do
   url "https://github.com/tma02/baritone/releases/download/v#{version}/Baritone-macOS.zip"
   appcast "https://github.com/tma02/baritone/releases.atom"
   name "Baritone"
+  desc "Spotify controls that live in the menu bar"
   homepage "https://tma02.github.io/baritone/"
 
   app "Baritone-darwin-x64/Baritone.app"

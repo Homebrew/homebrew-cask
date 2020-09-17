@@ -6,6 +6,7 @@ cask "murus" do
   url "https://github.com/TheMurusTeam/Murus/releases/download/v#{version}/murus-#{version}.zip"
   appcast "https://github.com/TheMurusTeam/Murus/releases.atom"
   name "Murus Firewall"
+  desc "Firewall app"
   homepage "https://www.murusfirewall.com/"
 
   app "Murus.app"

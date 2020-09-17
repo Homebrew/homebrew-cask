@@ -1,10 +1,11 @@
 cask "netbeans" do
-  version "12.0"
-  sha256 "d7f8f857b5f2a1fe54c73721671b9f86933c2d6e63535de5427569754acc85de"
+  version "12.1"
+  sha256 "0676fb3c1f7e1af99c8f3d4016799635f3dfcf578d998320b8408fa3a69ab823"
 
   url "https://www-eu.apache.org/dist/netbeans/netbeans/#{version}/Apache-NetBeans-#{version}-bin-macosx.dmg"
   appcast "https://www-eu.apache.org/dist/netbeans/netbeans/"
   name "NetBeans IDE"
+  desc "Open-source development environment, tooling"
   homepage "https://netbeans.apache.org/download/index.html"
 
   pkg "Apache NetBeans #{version}.pkg"

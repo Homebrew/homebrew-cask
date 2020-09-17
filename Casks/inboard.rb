@@ -5,6 +5,7 @@ cask "inboard" do
   url "https://inboardapp.com/trial/Inboard-#{version}.zip"
   appcast "https://inboardapp.com/appcast.xml"
   name "Inboard"
+  desc "App to organize screenshots and photos"
   homepage "https://inboardapp.com/"
 
   depends_on macos: ">= :high_sierra"

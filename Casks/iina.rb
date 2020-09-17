@@ -5,6 +5,7 @@ cask "iina" do
   url "https://dl-portal.iina.io/IINA.v#{version}.dmg"
   appcast "https://iina.io/appcast.xml"
   name "IINA"
+  desc "Free and open-source media player"
   homepage "https://iina.io/"
 
   auto_updates true

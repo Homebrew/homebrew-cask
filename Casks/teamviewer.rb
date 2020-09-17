@@ -5,6 +5,7 @@ cask "teamviewer" do
   url "https://download.teamviewer.com/download/TeamViewer.dmg"
   appcast "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=14.7.1965&os=macos&osversion=10.15.1&type=1&channel=1"
   name "TeamViewer"
+  desc "Remote access and connectivity software focused on security"
   homepage "https://www.teamviewer.com/"
 
   auto_updates true

@@ -5,6 +5,7 @@ cask "bloodhound" do
   url "https://github.com/BloodHoundAD/BloodHound/releases/download/#{version}/BloodHound-darwin-x64.zip"
   appcast "https://github.com/BloodHoundAD/BloodHound/releases.atom"
   name "bloodhound"
+  desc "Six Degrees of Domain Admin"
   homepage "https://github.com/BloodHoundAD/BloodHound"
 
   app "BloodHound-darwin-x64/BloodHound.app"

@@ -6,6 +6,7 @@ cask "the-cheat" do
   url "https://chazmcgarvey.github.io/thecheat/thecheat-#{version}.dmg"
   appcast "https://github.com/chazmcgarvey/thecheat/releases.atom"
   name "The Cheat"
+  desc "Game trainer"
   homepage "https://github.com/chazmcgarvey/thecheat"
 
   app "The Cheat.app"

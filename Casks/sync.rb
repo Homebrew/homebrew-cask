@@ -4,6 +4,7 @@ cask "sync" do
 
   url "https://www.sync.com/download/apple/Sync.dmg"
   name "Sync"
+  desc "Store, share and access files from anywhere"
   homepage "https://www.sync.com/"
 
   app "Sync.app"

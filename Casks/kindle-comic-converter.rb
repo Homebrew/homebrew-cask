@@ -5,6 +5,8 @@ cask "kindle-comic-converter" do
   url "https://kcc.iosphe.re/OSX/KindleComicConverter_osx_#{version}.dmg"
   appcast "https://github.com/ciromattia/kcc/releases.atom"
   name "Kindle Comic Converter"
+  name "KCC"
+  desc "Comic and manga converter for ebook readers"
   homepage "https://kcc.iosphe.re/"
 
   depends_on macos: ">= :mojave"

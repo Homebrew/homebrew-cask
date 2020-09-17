@@ -5,6 +5,7 @@ cask "messenger-native" do
   url "https://github.com/gastonmorixe/MessengerNative/releases/download/#{version}/Mac64_MessengerNative#{version}.zip"
   appcast "https://github.com/gastonmorixe/MessengerNative/releases.atom"
   name "Messenger Native"
+  desc "Facebook's Messenger Native"
   homepage "https://github.com/gastonmorixe/MessengerNative"
 
   app "osx64/Messenger Native.app"

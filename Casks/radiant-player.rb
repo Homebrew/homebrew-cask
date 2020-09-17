@@ -6,6 +6,7 @@ cask "radiant-player" do
   url "https://github.com/radiant-player/radiant-player-mac/releases/download/v#{version}/radiant-player-v#{version}.zip"
   appcast "https://github.com/radiant-player/radiant-player-mac/releases.atom"
   name "Radiant Player"
+  desc "App wrapper for Google Play Music"
   homepage "https://radiant-player.github.io/radiant-player-mac/"
 
   app "Radiant Player.app"

@@ -6,6 +6,7 @@ cask "mellowplayer" do
   url "https://github.com/ColinDuquesnoy/MellowPlayer/releases/download/#{version}/MellowPlayer.dmg"
   appcast "https://github.com/ColinDuquesnoy/MellowPlayer/releases.atom"
   name "MellowPlayer"
+  desc "Moved to gitlab"
   homepage "https://colinduquesnoy.github.io/MellowPlayer/"
 
   app "MellowPlayer.app"

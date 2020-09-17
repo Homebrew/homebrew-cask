@@ -5,6 +5,7 @@ cask "resilio-sync" do
   url "https://download-cdn.resilio.com/#{version}/osx/Resilio-Sync.dmg"
   appcast "https://help.resilio.com/hc/en-us/articles/206216855-Sync-#{version.major}-x-change-log"
   name "Resilio Sync"
+  desc "File sync and share software"
   homepage "https://www.resilio.com/"
 
   auto_updates true

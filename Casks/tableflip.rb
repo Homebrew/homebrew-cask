@@ -6,6 +6,7 @@ cask "tableflip" do
   url "https://update.christiantietze.de/tableflip/v#{version.major}/TableFlip-v#{version}.zip"
   appcast "https://update.christiantietze.de/tableflip/v#{version.major}/release.xml"
   name "TableFlip"
+  desc "App to edit markdown files in place"
   homepage "https://tableflipapp.com/"
 
   auto_updates true

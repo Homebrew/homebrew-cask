@@ -2,10 +2,12 @@ cask "tuxera-ntfs" do
   version "2019"
   sha256 "ac655a302afbbe2022ec9c2af3df65e8bcd1bb66a783770025f78f3595a2798f"
 
-  url "https://download.tuxera.com/mac/tuxerantfs_#{version}.dmg"
-  appcast "https://www.tuxera.com/products/tuxera-ntfs-for-mac/download/"
+  url "https://tuxera.com/mac/tuxerantfs_#{version}.dmg"
+  appcast "https://ntfsformac.tuxera.com/get/",
+          must_contain: "tuxerantfs_#{version}.dmg"
   name "Tuxera NTFS"
-  homepage "https://www.tuxera.com/products/tuxera-ntfs-for-mac/"
+  desc "File system and storage management software"
+  homepage "https://ntfsformac.tuxera.com/"
 
   pkg ".packages/Flat/Install Tuxera NTFS.mpkg"
 

@@ -5,6 +5,7 @@ cask "wjoy" do
   url "https://github.com/alxn1/wjoy/releases/download/#{version}/wjoy.#{version}.dmg"
   appcast "https://github.com/alxn1/wjoy/releases.atom"
   name "WJoy"
+  desc "Nintendo wiimote driver"
   homepage "https://github.com/alxn1/wjoy"
 
   app "Wjoy.app"

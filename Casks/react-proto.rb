@@ -6,6 +6,7 @@ cask "react-proto" do
   url "https://github.com/React-Proto/react-proto/releases/download/v#{version}/React-Proto-#{version}.dmg"
   appcast "https://github.com/React-Proto/react-proto/releases.atom"
   name "React Proto"
+  desc "React application prototyping tool for developers and designers"
   homepage "https://react-proto.github.io/react-proto"
 
   app "React-Proto.app"

@@ -15,4 +15,9 @@ cask "cmake" do
   binary "#{appdir}/CMake.app/Contents/bin/cpack"
   binary "#{appdir}/CMake.app/Contents/bin/ctest"
   binary "#{appdir}/CMake.app/Contents/bin/cmake-gui"
+
+  zap trash: [
+    "~/Library/Preferences/org.cmake.cmake.plist",
+    "~/Library/Saved Application State/org.cmake.cmake.savedState",
+  ]
 end

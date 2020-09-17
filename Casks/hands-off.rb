@@ -5,6 +5,7 @@ cask "hands-off" do
   url "https://www.oneperiodic.com/files/Hands%20Off!%20v#{version}.dmg"
   appcast "https://www.oneperiodic.com/handsoff#{version.major}.xml"
   name "Hands Off!"
+  desc "Tool to monitor and control application access to network and disks"
   homepage "https://www.oneperiodic.com/products/handsoff/"
 
   app "Hands Off!.app"

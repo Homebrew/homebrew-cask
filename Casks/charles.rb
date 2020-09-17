@@ -5,6 +5,7 @@ cask "charles" do
   url "https://www.charlesproxy.com/assets/release/#{version}/charles-proxy-#{version}.dmg"
   appcast "https://www.charlesproxy.com/latest.do"
   name "Charles"
+  desc "Web debugging Proxy application"
   homepage "https://www.charlesproxy.com/"
 
   app "Charles.app"

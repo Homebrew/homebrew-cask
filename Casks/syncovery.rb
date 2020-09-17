@@ -1,10 +1,11 @@
 cask "syncovery" do
-  version "8.68b"
-  sha256 "4baefc054e8f07100acfd77b1e8591ff1065d98cdb193059fb57fed482701424"
+  version "8.68i"
+  sha256 "917b6f80fd73ec40508ef97781289c4f265530a3110e92191f0116cdadbb2efb"
 
   url "https://www.syncovery.com/release/SyncoveryMac#{version}.dmg"
   appcast "https://www.syncovery.com/download/mac/"
   name "Syncovery"
+  desc "File synchronization and backup software"
   homepage "https://www.syncovery.com/"
 
   pkg "SyncoveryMac (double-click to install).pkg"

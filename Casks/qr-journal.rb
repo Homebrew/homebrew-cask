@@ -5,6 +5,7 @@ cask "qr-journal" do
   url "https://www.joshjacob.com/mac-development/QRJournal#{version}.dmg"
   appcast "https://www.joshjacob.com/mac-development/qrjournal.php"
   name "QR Journal"
+  desc "Allows users with an iSight (or compatible) camera to read QR codes"
   homepage "https://www.joshjacob.com/mac-development/qrjournal.php"
 
   app "QR Journal.app"

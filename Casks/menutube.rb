@@ -6,6 +6,7 @@ cask "menutube" do
   url "https://github.com/edanchenkov/MenuTube/releases/download/#{version}/MenuTube-#{version}.dmg"
   appcast "https://github.com/edanchenkov/MenuTube/releases.atom"
   name "MenuTube"
+  desc "Tool to capture YouTube into the menu bar"
   homepage "https://edanchenkov.github.io/MenuTube/"
 
   app "MenuTube.app"

@@ -1,11 +1,11 @@
 cask "qcad" do
-  version "3.25.0"
+  version "3.25.2"
 
   if MacOS.version <= :high_sierra
-    sha256 "f904031d67ee95adadc773d314ca154c448324447b628527df51d213f90e2c70"
+    sha256 "33aff3060a27956cc33cd738bef3d385a7cc2a408a1662605422b99af5275750"
     url "https://www.qcad.org/archives/qcad/qcad-#{version}-trial-macos-10.10-10.13.dmg"
   else
-    sha256 "6ceb9145f8646d5a2c5c9de59e952b68bbdf1f544275b7ada95d0173eed84ea4"
+    sha256 "6f3ecfdcfd2411acb5477894a0725ddda8cc7027542e34946b7c33a6cbfd32df"
     url "https://www.qcad.org/archives/qcad/qcad-#{version}-trial-macos-10.14-10.15.dmg"
   end
 

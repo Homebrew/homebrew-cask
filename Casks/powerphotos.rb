@@ -23,6 +23,7 @@ cask "powerphotos" do
 
   appcast "https://www.fatcatsoftware.com/powerphotos/powerphotos_appcast.xml"
   name "PowerPhotos"
+  desc "Tool to organize photo libraries"
   homepage "https://www.fatcatsoftware.com/powerphotos/"
 
   auto_updates true

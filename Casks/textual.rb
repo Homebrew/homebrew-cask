@@ -5,6 +5,7 @@ cask "textual" do
   url "https://cached.codeux.com/textual/downloads/resources/builds/standard-release/Textual-#{version.after_comma}.zip"
   appcast "https://textual-updates-backend.codeux.com/sparkle/feeds/v7/feed-one.xml"
   name "Textual"
+  desc "Application for interacting with Internet Relay Chat (IRC) chatrooms"
   homepage "https://www.codeux.com/textual/"
 
   auto_updates true

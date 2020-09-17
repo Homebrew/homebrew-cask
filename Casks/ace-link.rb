@@ -5,6 +5,7 @@ cask "ace-link" do
   url "https://github.com/blaise-io/acelink/releases/download/#{version}/Ace.Link.#{version}.dmg"
   appcast "https://github.com/blaise-io/acelink/releases.atom"
   name "Ace Link"
+  desc "Menu bar app that allows playing Ace Stream video streams in the VLC player"
   homepage "https://github.com/blaise-io/acelink"
 
   depends_on macos: ">= :high_sierra"
