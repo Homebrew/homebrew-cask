@@ -4,7 +4,7 @@ cask "jetbrains-space" do
 
   url "https://download.jetbrains.com/space/jetbrains-space.dmg"
   name "JetBrains Space"
-  desc "Desktop client application for JetBrains Space"
+  desc "Team communication and collaboration software"
   homepage "https://www.jetbrains.com/space/"
 
   app "JetBrains Space.app"
