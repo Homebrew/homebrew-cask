@@ -80,11 +80,12 @@ jobs:
           restore-keys: ${{ runner.os }}-rubygems-
 
       - name: Install Homebrew Gems
+        id: gems
         run: brew install-bundler-gems
 
       - name: Run brew cask style
         run: brew cask style
-        if: success() && !matrix.cask
+        if: always() && steps.gems.outcome == 'success' && !matrix.cask
 
       - name: Run brew cask audit ${{ matrix.cask.token }}
         run: |
@@ -95,7 +96,7 @@ jobs:
 
           brew cask audit ${{ join(matrix.audit_args, ' ') }} '${{ matrix.cask.path }}'
         timeout-minutes: 30
-        if: always() && !matrix.skip_audit
+        if: always() && steps.gems.outcome == 'success' && !matrix.skip_audit
 
       - name: Gather cask information
         id: info
@@ -134,7 +135,7 @@ jobs:
             puts "::set-output name=formula_conflicts::#{JSON.generate(formula_conflicts)}"
             puts "::set-output name=formula_dependencies::#{JSON.generate(formula_dependencies)}"
           EOF
-        if: always() && matrix.cask
+        if: always() && steps.gems.outcome == 'success' && matrix.cask
 
       - name: Uninstall conflicting formulae
         run: |
