@@ -1,10 +1,10 @@
 cask "latexdraw" do
-  version "3.3.9"
-  sha256 "1197536a5ce3b343e85696fbc5f2821092e885086760d9af4bfe11c073551f6b"
+  version "4.0.1"
+  sha256 "f1daf6accb538cb7c8fc465a4a65d74dfa0e97b23a0ed8fecc60f4fe8cb7f81a"
 
   # downloads.sourceforge.net/latexdraw/ was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/latexdraw/LaTeXDraw-#{version}.app.zip"
-  appcast "https://sourceforge.net/projects/latexdraw/rss?path=/latexdraw"
+  url "https://downloads.sourceforge.net/latexdraw/LaTeXDraw-#{version}.dmg"
+  appcast "https://github.com/latexdraw/latexdraw/releases.atom"
   name "LaTexDraw"
   homepage "https://latexdraw.sourceforge.io/"
 
