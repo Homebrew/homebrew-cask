@@ -1,14 +1,14 @@
 cask "copytranslator" do
-    version "9.0.2"
-    sha256 "5da337e06e1ac6325627f99a0662042b1d97689613685cc046441d41d6d1f075"
+  version "9.0.2"
+  sha256 "5da337e06e1ac6325627f99a0662042b1d97689613685cc046441d41d6d1f075"
 
-    url "https://github.com/CopyTranslator/CopyTranslator/releases/download/v#{version}/copytranslator-#{version}.dmg"
-    appcast "https://github.com/CopyTranslator/CopyTranslator/releases.atom"
-    
-    name "copytranslator"
-    homepage "https://copytranslator.github.io/"
+  url "https://github.com/CopyTranslator/CopyTranslator/releases/download/v#{version}/copytranslator-#{version}.dmg"
+  appcast "https://github.com/CopyTranslator/CopyTranslator/releases.atom"
 
-    depends_on macos: ">= :sierra"
+  name "copytranslator"
+  homepage "https://copytranslator.github.io/"
 
-    app "copytranslator.app"
+  depends_on macos: ">= :sierra"
+
+  app "copytranslator.app"
 end
