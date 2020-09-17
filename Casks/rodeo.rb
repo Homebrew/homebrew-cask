@@ -6,6 +6,7 @@ cask "rodeo" do
   url "https://github.com/yhat/rodeo/releases/download/v#{version}/Rodeo-#{version}.dmg"
   appcast "https://github.com/yhat/rodeo/releases.atom"
   name "Rodeo"
+  desc "Data science IDE for Python"
   homepage "https://rodeo.yhat.com/"
 
   app "Rodeo.app"

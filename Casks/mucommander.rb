@@ -6,6 +6,7 @@ cask "mucommander" do
   url "https://github.com/mucommander/mucommander/releases/download/#{version}/mucommander-#{version}.dmg"
   appcast "https://github.com/mucommander/mucommander/releases.atom"
   name "muCommander"
+  desc "Lightweight, cross-platform file manager with a dual-pane interface"
   homepage "https://www.mucommander.com/"
 
   app "muCommander.app"

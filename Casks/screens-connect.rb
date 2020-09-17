@@ -6,6 +6,7 @@ cask "screens-connect" do
   url "https://dl.devmate.com/com.edovia.Screens-Connect/#{version.after_comma.before_colon}/#{version.after_colon}/ScreensConnect-#{version.after_comma.before_colon}.zip"
   appcast "https://updates.devmate.com/com.edovia.Screens-Connect.xml"
   name "Screens Connect"
+  desc "Remote desktop software"
   homepage "https://screensconnect.com/en/"
 
   depends_on macos: ">= :el_capitan"

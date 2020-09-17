@@ -13,6 +13,7 @@ cask "liteicon" do
   url "https://www.freemacsoft.net/downloads/LiteIcon_#{version}.zip"
   appcast "https://freemacsoft.net/liteicon/updates.xml"
   name "LiteIcon"
+  desc "Tool to change system icons"
   homepage "https://freemacsoft.net/liteicon/"
 
   auto_updates true

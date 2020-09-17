@@ -1,12 +1,13 @@
 cask "meshlab" do
-  version "2020.07"
-  sha256 "96e249fc4e1b8d02495db468f4094c3669487c90f56104292e84a477960a89d9"
+  version "2020.09"
+  sha256 "9046a4f9b45d24d004fa302370ca9a7bab027b2927400d9a60fbdbb4a0fb20c6"
 
   # github.com/cnr-isti-vclab/meshlab/ was verified as official when first introduced to the cask
   url "https://github.com/cnr-isti-vclab/meshlab/releases/download/Meshlab-#{version}/MeshLab#{version}-macos.dmg"
   appcast "https://github.com/cnr-isti-vclab/meshlab/releases.atom"
   name "MeshLab"
-  homepage "http://www.meshlab.net/"
+  desc "Open-source mesh processing system"
+  homepage "https://www.meshlab.net/"
 
   app "meshlab.app"
 

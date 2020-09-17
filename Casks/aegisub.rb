@@ -5,6 +5,7 @@ cask "aegisub" do
   url "http://ftp.aegisub.org/pub/releases/Aegisub-#{version}.dmg"
   appcast "http://www.aegisub.org/downloads/#current"
   name "Aegisub"
+  desc "Cross-platform, open-source tool for creating and modifying subtitles"
   homepage "http://www.aegisub.org/"
 
   app "Aegisub.app"

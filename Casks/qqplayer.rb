@@ -5,6 +5,7 @@ cask "qqplayer" do
   url "https://dldir1.qq.com/qqyy/mac/QQPlayer#{version}.dmg"
   appcast "https://player.qq.com/"
   name "QQ影音"
+  desc "Media player"
   homepage "https://player.qq.com/"
 
   app "QQPlayerMac.app"

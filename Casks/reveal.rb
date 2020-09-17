@@ -5,6 +5,7 @@ cask "reveal" do
   url "https://download.revealapp.com/Reveal.app-#{version}.zip"
   appcast "https://updates.devmate.com/com.ittybittyapps.Reveal2.xml"
   name "Reveal"
+  desc "Runtime view debugger"
   homepage "https://revealapp.com/"
 
   auto_updates true

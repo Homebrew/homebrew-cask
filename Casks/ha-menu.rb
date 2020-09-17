@@ -1,6 +1,6 @@
 cask "ha-menu" do
-  version "2.3.1"
-  sha256 "8f9efa785b6bb573bce41993552d503f1064cbe43f08e3c7f97cbe5cfb8843ec"
+  version "2.4.0"
+  sha256 "30f2d593998a36e1a70a065c1b4f2a61186cc905b21fc6fd6d94edf0631e8212"
 
   # github.com/codechimp-org/ha-menu/ was verified as official when first introduced to the cask
   url "https://github.com/codechimp-org/ha-menu/releases/download/#{version}/HA.Menu.zip"

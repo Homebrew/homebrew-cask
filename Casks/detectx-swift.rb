@@ -1,15 +1,15 @@
 cask "detectx-swift" do
-  version "1.096"
-  sha256 "49e77dfb115b9238a8f60f069499be5625123ccda9179ebc6be087647a319393"
+  version "1.0971"
+  sha256 "6449316b55de59cacc738df72e13c93a3c6fad4520db49cb16753037e45ecd0d"
 
   # s3.amazonaws.com/sqwarq.com/ was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/sqwarq.com/PublicZips/DetectX_Swift.dmg"
   appcast "https://s3.amazonaws.com/sqwarq.com/AppCasts/dtxswift.xml"
   name "DetectX Swift"
+  desc "Searching and troubleshooting tool"
   homepage "https://sqwarq.com/detectx/"
 
   auto_updates true
-  conflicts_with cask: "detectx"
   depends_on macos: ">= :el_capitan"
 
   app "DetectX Swift.app"

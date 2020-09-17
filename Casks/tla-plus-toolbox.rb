@@ -6,6 +6,7 @@ cask "tla-plus-toolbox" do
   url "https://github.com/tlaplus/tlaplus/releases/download/v#{version}/TLAToolbox-#{version}-macosx.cocoa.x86_64.zip"
   appcast "https://github.com/tlaplus/tlaplus/releases.atom"
   name "TLA+ Toolbox"
+  desc "IDE for TLA+"
   homepage "https://lamport.azurewebsites.net/tla/toolbox.html"
 
   app "TLA+ Toolbox.app"

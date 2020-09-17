@@ -5,6 +5,7 @@ cask "keybase" do
   url "https://prerelease.keybase.io/darwin-updates/Keybase-#{version.before_comma}%2B#{version.after_comma}.zip"
   appcast "https://prerelease.keybase.io/update-darwin-prod-v2.json"
   name "Keybase"
+  desc "End-to-end encryption software"
   homepage "https://keybase.io/"
 
   auto_updates true

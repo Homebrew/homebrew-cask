@@ -5,6 +5,7 @@ cask "jsui" do
   url "https://github.com/kitze/JSUI/releases/download/v#{version}/JSUI-#{version}-mac.zip"
   appcast "https://github.com/kitze/JSUI/releases.atom"
   name "JSUI"
+  desc "UI toolkit for managing JavaScript apps"
   homepage "https://github.com/kitze/JSUI"
 
   auto_updates true

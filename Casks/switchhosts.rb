@@ -7,6 +7,7 @@ cask "switchhosts" do
   appcast "https://github.com/oldj/SwitchHosts/releases.atom",
           must_contain: version.major_minor_patch
   name "SwitchHosts!"
+  desc "App to switch hosts"
   homepage "https://oldj.github.io/SwitchHosts/"
 
   app "SwitchHosts!.app"

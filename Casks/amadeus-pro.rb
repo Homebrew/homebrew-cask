@@ -6,6 +6,7 @@ cask "amadeus-pro" do
   url "https://s3.amazonaws.com/AmadeusPro2/AmadeusPro.zip"
   appcast "https://www.hairersoft.com/pro.html"
   name "Amadeus Pro"
+  desc "Multi-purpose audio recorder, editor and converter"
   homepage "https://www.hairersoft.com/pro.html"
 
   app "Amadeus Pro.app"

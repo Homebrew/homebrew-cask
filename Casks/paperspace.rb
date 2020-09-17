@@ -1,10 +1,9 @@
 cask "paperspace" do
-  version "9.3.0.1147"
-  sha256 "e824961ecd14c4780b3e89f80ca7098e28dfea188a7e86f96157ceabe02e1fde"
+  version "9.4.1.1292"
+  sha256 "a77a32d7c5dcee2aae4575ceb645b23709213d8dc3a71e2990733dfb8106bc16"
 
-  # ps-receiver.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://ps-receiver.s3.amazonaws.com/prod/darwin/Paperspace-#{version}.dmg"
-  appcast "https://www.macupdater.net/cgi-bin/extract_text/extract_text_split_easy.cgi?url=https://www.paperspace.com/download&user_agent=Mozilla/5.0%20(Macintosh%3B%20Intel%20Mac%20OS%20X%2010_14_5)"
+  url "https://assets.paperspace.com/native-app/prod/darwin/Paperspace-#{version}.dmg"
+  appcast "https://www.macupdater.net/cgi-bin/extract_text/send_post_request_data.cgi?url=https://api.paperspace.io/receivers/latestVersion&data={%22component%22:%22paperspaceInstaller%22,%22os%22:%22mac%22}&headers={%22user-agent%22:%22Mozilla%22,%22content-type%22:%22application/json%22}"
   name "Paperspace"
   homepage "https://www.paperspace.com/"
 

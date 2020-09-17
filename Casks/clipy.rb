@@ -6,6 +6,7 @@ cask "clipy" do
   url "https://github.com/Clipy/Clipy/releases/download/#{version}/Clipy_#{version}.dmg"
   appcast "https://github.com/Clipy/Clipy/releases.atom"
   name "Clipy"
+  desc "Clipboard extension app"
   homepage "https://clipy-app.com/"
 
   depends_on macos: ">= :yosemite"

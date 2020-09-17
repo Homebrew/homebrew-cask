@@ -5,6 +5,7 @@ cask "sqlitemanager" do
   url "https://www.sqlabs.com/download/SQLiteManager.zip"
   appcast "https://www.sqlabs.com/sqlitemanager#summary"
   name "SQLiteManager"
+  desc "Database management system for sqlite databases"
   homepage "https://www.sqlabs.com/sqlitemanager.php"
 
   app "SQLiteManager.app"

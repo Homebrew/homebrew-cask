@@ -5,6 +5,7 @@ cask "graphql-ide" do
   url "https://github.com/andev-software/graphql-ide/releases/download/v#{version}/GraphQL.IDE.zip"
   appcast "https://github.com/andev-software/graphql-ide/releases.atom"
   name "GraphQL IDE"
+  desc "IDE for exploring GraphQL APIs"
   homepage "https://github.com/andev-software/graphql-ide"
 
   app "GraphQL IDE.app"

@@ -5,6 +5,7 @@ cask "kmbmpdc" do
   url "https://github.com/arttuperala/kmbmpdc/releases/download/v#{version}/kmbmpdc.tar.gz"
   appcast "https://github.com/arttuperala/kmbmpdc/releases.atom"
   name "kmbmpdc"
+  name "kawaii menu bar music player daemon controller"
   homepage "https://github.com/arttuperala/kmbmpdc"
 
   auto_updates true

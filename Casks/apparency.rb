@@ -1,10 +1,11 @@
 cask "apparency" do
-  version "1.0"
-  sha256 "8c1c6369e54f6f5a92e0927b98426f8e952e2aefbf8eabfc926e2b875b38fa9d"
+  version "1.1"
+  sha256 "810708d82bc1bed6e339776a60f8c5214aada870a17795c673e778e5006a3f1b"
 
   url "https://mothersruin.com/software/downloads/Apparency.dmg"
   appcast "https://www.mothersruin.com/software/Apparency/data/ApparencyVersionInfo.plist"
   name "Apparency"
+  desc "Inspect application bundles"
   homepage "https://www.mothersruin.com/software/Apparency/"
 
   depends_on macos: ">= :mojave"

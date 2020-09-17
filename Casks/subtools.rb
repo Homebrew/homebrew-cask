@@ -4,6 +4,7 @@ cask "subtools" do
 
   url "http://www.emmgunn.com/downloads/subtools#{version}.zip"
   name "SUBtools"
+  desc "Helper-application for MP4tools, MKVtools, and AVItools"
   homepage "http://www.emmgunn.com/subtools-home/"
 
   app "subtools#{version}/SUBtools.app"

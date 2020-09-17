@@ -5,6 +5,7 @@ cask "paparazzi" do
   url "https://derailer.org/paparazzi/Paparazzi!%20#{version}.dmg"
   appcast "https://derailer.org/paparazzi/appcast/"
   name "Paparazzi!"
+  desc "Utility to take screenshots of webpages"
   homepage "https://derailer.org/paparazzi/"
 
   app "Paparazzi!.app"

@@ -6,6 +6,7 @@ cask "hacker-menu" do
   url "https://github.com/jingweno/hacker-menu/releases/download/v#{version}/hacker-menu-mac.zip"
   appcast "https://github.com/jingweno/hacker-menu/releases.atom"
   name "Hacker Menu"
+  desc "Hacker News Delivered to Desktop :dancers:"
   homepage "https://hackermenu.io/"
 
   app "Hacker Menu.app"

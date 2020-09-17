@@ -5,6 +5,7 @@ cask "blooo" do
   url "https://www.fullbucket.de/music/dl/blooo_#{version.dots_to_underscores}_mac.pkg"
   appcast "https://www.fullbucket.de/music/blooo.html"
   name "the blooo"
+  desc "Polyphonic synthesizer"
   homepage "https://www.fullbucket.de/music/blooo.html"
 
   pkg "blooo_#{version.dots_to_underscores}_mac.pkg"

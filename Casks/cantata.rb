@@ -5,6 +5,7 @@ cask "cantata" do
   url "https://github.com/CDrummond/cantata/releases/download/v#{version}/Cantata-#{version}.dmg"
   appcast "https://github.com/CDrummond/cantata/releases.atom"
   name "Cantata"
+  desc "Qt5 Graphical MPD Client"
   homepage "https://github.com/cdrummond/cantata"
 
   depends_on macos: ">= :sierra"

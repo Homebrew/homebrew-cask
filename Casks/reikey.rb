@@ -6,6 +6,7 @@ cask "reikey" do
   url "https://bitbucket.org/objective-see/deploy/downloads/ReiKey_#{version}.zip"
   appcast "https://objective-see.com/products/changelogs/ReiKey.txt"
   name "ReiKey"
+  desc "Scans, detects, and monitors keyboard taps"
   homepage "https://objective-see.com/products/reikey.html"
 
   depends_on macos: ">= :high_sierra"

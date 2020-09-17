@@ -1,11 +1,12 @@
 cask "nuclear" do
-  version "0.6.3,fca030"
-  sha256 "ae4e3f599089bb484ac503547c8553517da0689a1f9d2515487bac174f4a0e4d"
+  version "0.6.5"
+  sha256 "405b9eda43dabd29a8e4048779209cc409366ac6a619e4412368b733f85bf55c"
 
   # github.com/nukeop/nuclear/ was verified as official when first introduced to the cask
-  url "https://github.com/nukeop/nuclear/releases/download/v#{version.before_comma}/nuclear-#{version.after_comma}.dmg"
+  url "https://github.com/nukeop/nuclear/releases/download/v#{version}/nuclear-#{version}.dmg"
   appcast "https://github.com/nukeop/nuclear/releases.atom"
   name "Nuclear"
+  desc "Streaming music player"
   homepage "https://nuclear.js.org/"
 
   app "nuclear.app"

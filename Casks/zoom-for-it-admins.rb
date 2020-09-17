@@ -1,6 +1,6 @@
 cask "zoom-for-it-admins" do
-  version "5.2.42634.0805"
-  sha256 "2809c7e1c413f5229bc0b87a7a0210ae6a550450b0418de4de64624ec3d963b8"
+  version "5.2.45131.0907"
+  sha256 "d03d2d6db5e1669d6c894c2fb16525c4f2cfc77997060aca436c44d8898cf6ee"
 
   # d11yldzmag5yn.cloudfront.net/ was verified as official when first introduced to the cask
   url "https://d11yldzmag5yn.cloudfront.net/prod/#{version}/ZoomInstallerIT.pkg"

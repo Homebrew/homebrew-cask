@@ -6,6 +6,7 @@ cask "cocoarestclient" do
   url "https://github.com/mmattozzi/cocoa-rest-client/releases/download/#{version}/CocoaRestClient-#{version}.dmg"
   appcast "https://github.com/mmattozzi/cocoa-rest-client/releases.atom"
   name "CocoaRestClient"
+  desc "App for testing HTTP/REST endpoints"
   homepage "https://mmattozzi.github.io/cocoa-rest-client/"
 
   depends_on macos: ">= :sierra"

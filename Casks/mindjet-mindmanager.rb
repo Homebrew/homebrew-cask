@@ -6,6 +6,7 @@ cask "mindjet-mindmanager" do
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.mindjet.com/latest-release-notes-mac-english",
           must_contain: version.dots_to_underscores
   name "Mindmanager"
+  desc "Mind Mapping Tool"
   homepage "https://www.mindjet.com/mindmanager/"
 
   depends_on macos: ">= :high_sierra"

@@ -6,6 +6,7 @@ cask "mkchromecast" do
   url "https://github.com/muammar/mkchromecast/releases/download/#{version}/mkchromecast_v#{version}.dmg"
   appcast "https://github.com/muammar/mkchromecast/releases.atom"
   name "mkchromecast"
+  desc "Tool to cast audio/video to Google Cast and Sonos Devices"
   homepage "https://mkchromecast.com/"
 
   depends_on cask: "soundflower"

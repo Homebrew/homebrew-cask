@@ -5,6 +5,7 @@ cask "snwe" do
   url "https://github.com/blahsd/snwe/releases/download/v#{version}/snwe.app.zip"
   appcast "https://github.com/blahsd/snwe/releases.atom"
   name "snwe"
+  desc "Extensible, customisable, menu bar replacement"
   homepage "https://github.com/blahsd/snwe"
 
   app "snwe.app"

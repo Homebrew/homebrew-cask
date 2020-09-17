@@ -10,6 +10,7 @@ cask "geekbench" do
   url "https://cdn.geekbench.com/Geekbench-#{version}-Mac.zip"
   appcast "https://www.primatelabs.com/appcast/geekbench#{version.major}.xml"
   name "Geekbench"
+  desc "Tool to measure the computer system's performance"
   homepage "https://www.geekbench.com/"
 
   auto_updates true

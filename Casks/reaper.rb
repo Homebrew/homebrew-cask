@@ -14,6 +14,7 @@ cask "reaper" do
   appcast "https://www.cockos.com/reaper/latestversion/?p=osx_64",
           must_contain: version.after_comma
   name "REAPER"
+  desc "Digital audio production application"
   homepage "https://www.reaper.fm/"
 
   app "REAPER64.app"

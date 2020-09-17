@@ -6,6 +6,7 @@ cask "noti" do
   url "https://github.com/jariz/Noti/releases/download/#{version}/Noti.dmg"
   appcast "https://github.com/jariz/Noti/releases.atom"
   name "Noti"
+  desc "Utility to show notifications from an Android device"
   homepage "https://noti.center/"
 
   auto_updates true

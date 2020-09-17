@@ -6,6 +6,7 @@ cask "texworks" do
   url "https://github.com/TeXworks/texworks/releases/download/release-#{version.before_comma}/TeXworks-osx-#{version.before_comma}-#{version.after_comma.before_colon}-git_#{version.after_colon}.dmg"
   appcast "https://github.com/TeXworks/texworks/releases.atom"
   name "TeXworks"
+  desc "Main codebase"
   homepage "https://www.tug.org/texworks/"
 
   depends_on macos: ">= :high_sierra"

@@ -1,10 +1,11 @@
 cask "4k-video-downloader" do
-  version "4.12.5.3670"
-  sha256 "6b4852b9ab9fe3a19771eae4d33dac7c9c43fd7ac461271ed6c45bb9f8ac1e57"
+  version "4.13.1.3840"
+  sha256 "8f04d750e867677a9b0fa7e8d6d19c825e0318f435d3debade14defd995c471d"
 
   url "https://dl.4kdownload.com/app/4kvideodownloader_#{version.major_minor_patch}.dmg"
   appcast "https://www.4kdownload.com/download"
   name "4K Video Downloader"
+  desc "Free video downloader"
   homepage "https://www.4kdownload.com/products/product-videodownloader"
 
   depends_on macos: ">= :sierra"

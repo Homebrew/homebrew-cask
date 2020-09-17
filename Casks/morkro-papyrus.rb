@@ -5,6 +5,7 @@ cask "morkro-papyrus" do
   url "https://github.com/morkro/papyrus/releases/download/#{version}/Papyrus-osx-#{version}.zip"
   appcast "https://github.com/morkro/papyrus/releases.atom"
   name "Papyrus"
+  desc "Unofficial Dropbox Paper desktop app"
   homepage "https://github.com/morkro/papyrus"
 
   app "Papyrus.app"

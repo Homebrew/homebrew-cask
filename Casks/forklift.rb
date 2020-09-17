@@ -1,10 +1,11 @@
 cask "forklift" do
-  version "3.4"
-  sha256 "c47e08d9ccc6b7cd7271a4bd33482716acb2004a6d4aa1b355213137bab96924"
+  version "3.4.2"
+  sha256 "0d0cb31474fe84390338bd7abe406d7a1b4b729d5e35fb3cdbd1ca4b651384dd"
 
   url "https://download.binarynights.com/ForkLift#{version}.zip"
   appcast "https://updates.binarynights.com/ForkLift#{version.major}/update.xml"
   name "ForkLift"
+  desc "Finder replacement and FTP, SFTP, WebDAV and Amazon s3 client"
   homepage "https://binarynights.com/"
 
   auto_updates true

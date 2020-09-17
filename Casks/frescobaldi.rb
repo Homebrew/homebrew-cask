@@ -6,6 +6,7 @@ cask "frescobaldi" do
   url "https://github.com/frescobaldi/frescobaldi/releases/download/v#{version}/Frescobaldi-#{version}-x86_64.dmg"
   appcast "https://github.com/frescobaldi/frescobaldi/releases.atom"
   name "Frescobaldi"
+  desc "LilyPond Editor"
   homepage "https://frescobaldi.org/"
 
   app "Frescobaldi.app"

@@ -6,6 +6,7 @@ cask "mongotron" do
   url "https://github.com/officert/mongotron/releases/download/#{version}/Mongotron-darwin-x64.zip"
   appcast "https://github.com/officert/mongotron/releases.atom"
   name "Mongotron"
+  desc "Cross-platform Mongo DB management"
   homepage "http://mongotron.io/"
 
   app "Mongotron-darwin-x64/Mongotron.app"

@@ -6,6 +6,7 @@ cask "boxer" do
   url "https://github.com/alunbestor/Boxer/releases/download/v#{version}/boxer-#{version}.zip"
   appcast "https://github.com/alunbestor/Boxer/releases.atom"
   name "Boxer"
+  desc "DOS game emulator"
   homepage "http://boxerapp.com/"
 
   auto_updates true

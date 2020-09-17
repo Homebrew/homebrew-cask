@@ -5,6 +5,7 @@ cask "cloudapp" do
   url "http://downloads.getcloudapp.com/mac/CloudApp-#{version}.zip"
   appcast "https://d2plwz9jdz9z5d.cloudfront.net/mac/latest/appcast.xml"
   name "CloudApp"
+  desc "Visual communication platform"
   homepage "https://www.getcloudapp.com/"
 
   auto_updates true

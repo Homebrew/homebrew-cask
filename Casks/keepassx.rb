@@ -5,6 +5,7 @@ cask "keepassx" do
   url "https://www.keepassx.org/releases/#{version}/KeePassX-#{version}.dmg"
   appcast "https://github.com/keepassx/keepassx/releases.atom"
   name "KeePassX"
+  desc "Personal data manager focusing on security"
   homepage "https://www.keepassx.org/"
 
   app "KeePassX.app"

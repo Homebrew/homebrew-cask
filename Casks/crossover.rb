@@ -5,6 +5,7 @@ cask "crossover" do
   url "https://media.codeweavers.com/pub/crossover/cxmac/demo/crossover-#{version}.zip"
   appcast "https://www.codeweavers.com/xml/versions/cxmac.xml"
   name "CrossOver"
+  desc "Tool to run Windows software"
   homepage "https://www.codeweavers.com/products/crossover-mac/"
 
   app "CrossOver.app"

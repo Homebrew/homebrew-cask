@@ -5,6 +5,7 @@ cask "apppolice" do
   url "https://github.com/fuyu/apppolice/releases/download/v#{version}/apppolice.dmg"
   appcast "https://github.com/fuyu/apppolice/releases.atom"
   name "AppPolice"
+  desc "App for quickly limiting CPU usage of any running process"
   homepage "https://github.com/fuyu/apppolice"
 
   app "AppPolice.app"

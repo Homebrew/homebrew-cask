@@ -1,10 +1,11 @@
 cask "soulver" do
-  version "3.4.6-127"
-  sha256 "20aa15ec7248e007c80675292d5f5428e394787ab45546805c9a4f43ff41fb0b"
+  version "3.4.7-135"
+  sha256 "e35206182dffdc57bb7f91a0db8cffc198a621919d30d863f44744da12f971cb"
 
   url "https://soulver.app/mac/sparkle/soulver-#{version}.zip"
   appcast "https://soulver.app/mac/sparkle/appcast.xml"
   name "Soulver"
+  desc "Notepad with a built-in calculator"
   homepage "https://soulver.app/"
 
   auto_updates true

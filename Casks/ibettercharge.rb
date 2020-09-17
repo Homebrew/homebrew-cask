@@ -6,6 +6,7 @@ cask "ibettercharge" do
   url "https://dl.devmate.com/com.softorino.iBetterCharge/#{version.before_comma}/#{version.after_comma}/iBetterCharge-#{version.before_comma}.zip"
   appcast "https://updates.devmate.com/com.softorino.iBetterCharge.xml"
   name "iBetterCharge"
+  desc "Battery level monitoring software"
   homepage "https://softorino.com/ibettercharge/"
 
   app "iBetterCharge.app"

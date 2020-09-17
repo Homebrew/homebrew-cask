@@ -6,6 +6,7 @@ cask "wechat" do
   appcast "https://dldir1.qq.com/weixin/mac/mac-release.xml"
   name "WeChat for Mac"
   name "微信 Mac 版"
+  desc "Free messaging and calling application"
   homepage "https://mac.weixin.qq.com/"
 
   auto_updates true

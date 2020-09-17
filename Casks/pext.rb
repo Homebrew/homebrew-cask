@@ -6,6 +6,7 @@ cask "pext" do
   url "https://github.com/Pext/Pext/releases/download/v#{version}/Pext-#{version}.dmg"
   appcast "https://github.com/Pext/Pext/releases.atom"
   name "Pext"
+  desc "Python-based extendable tool"
   homepage "https://pext.io/"
 
   app "Pext.app"

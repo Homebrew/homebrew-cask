@@ -1,12 +1,14 @@
 cask "whichspace" do
-  version "0.2.4"
-  sha256 "d062876e0194438dab6a1dcc9b19df01f7c6ee204e9218579e9e21c085883484"
+  version "0.3.1"
+  sha256 "44897d0ead43703a0dc23ba5d8c81fbea06fbe9f0b40fbd20f1542531ddbc994"
 
   url "https://github.com/gechr/WhichSpace/releases/download/v#{version}/WhichSpace.zip"
   appcast "https://github.com/gechr/WhichSpace/releases.atom"
   name "WhichSpace"
+  desc "Active space menu bar icon"
   homepage "https://github.com/gechr/WhichSpace"
 
+  auto_updates true
   depends_on macos: "> :yosemite"
 
   app "WhichSpace.app"
@@ -15,6 +17,7 @@ cask "whichspace" do
 
   zap trash: [
     "~/Library/Caches/io.gechr.WhichSpace",
+    "~/Library/Cookies/io.gechr.WhichSpace.binarycookies",
     "~/Library/Preferences/io.gechr.WhichSpace.plist",
     "~/Library/Saved Application State/io.gechr.WhichSpace.savedState",
   ]

@@ -5,6 +5,7 @@ cask "table-tool" do
   url "https://github.com/jakob/TableTool/releases/download/v#{version}/tabletool-#{version}.zip"
   appcast "https://github.com/jakob/TableTool/releases.atom"
   name "Table Tool"
+  desc "CSV file editor"
   homepage "https://github.com/jakob/TableTool"
 
   app "Table Tool.app"

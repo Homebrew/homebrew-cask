@@ -13,6 +13,7 @@ cask "macpilot" do
   end
 
   name "MacPilot"
+  desc "Graphical user interface for the command terminal"
   homepage "https://www.koingosw.com/products/macpilot/"
 
   depends_on macos: ">= :high_sierra"

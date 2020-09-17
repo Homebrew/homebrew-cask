@@ -6,6 +6,7 @@ cask "deco" do
   url "https://github.com/decosoftware/deco-ide/releases/download/v#{version}/Deco-#{version}.pkg"
   appcast "https://github.com/decosoftware/deco-ide/releases.atom"
   name "Deco"
+  desc "IDE for building React Native applications"
   homepage "https://www.decosoftware.com/"
 
   # pkg cannot be installed automatically and the .zip of the `app` has errors

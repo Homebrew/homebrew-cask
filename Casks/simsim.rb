@@ -5,6 +5,7 @@ cask "simsim" do
   url "https://github.com/dsmelov/simsim/releases/download/#{version}/SimSim_#{version}.zip"
   appcast "https://github.com/dsmelov/simsim/releases.atom"
   name "SimSim"
+  desc "Tool to explore iOS application folders in Terminal or Finder"
   homepage "https://github.com/dsmelov/simsim/"
 
   depends_on macos: ">= :high_sierra"

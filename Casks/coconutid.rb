@@ -5,6 +5,7 @@ cask "coconutid" do
   url "https://www.coconut-flavour.com/downloads/coconutID_#{version}.zip"
   appcast "https://www.coconut-flavour.com/updates/coconutID.xml"
   name "coconutID"
+  desc "Shows a Macs or iPhones manufacturing date"
   homepage "https://www.coconut-flavour.com/coconutid/"
 
   auto_updates true

@@ -6,7 +6,10 @@ cask "notion" do
   url "https://desktop-release.notion-static.com/Notion-#{version}.dmg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.notion.so/desktop/mac/download&user_agent=MacOS"
   name "Notion"
+  desc "App to write, plan, collaborate, and get organized"
   homepage "https://www.notion.so/"
+
+  auto_updates true
 
   app "Notion.app"
 

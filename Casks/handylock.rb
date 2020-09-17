@@ -5,6 +5,7 @@ cask "handylock" do
   # netputing.s3.amazonaws.com/handyLock/ was verified as official when first introduced to the cask
   url "https://netputing.s3.amazonaws.com/handyLock/handyLock+v#{version}.zip"
   name "handyLock"
+  desc "Desktop software for Harmony devices"
   homepage "http://www.netputing.com/applications/handylock/"
 
   app "handyLock.app"

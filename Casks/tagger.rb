@@ -6,6 +6,7 @@ cask "tagger" do
   url "https://github.com/Bilalh/Tagger/releases/download/1.8.0/Tagger_#{version}.zip"
   appcast "https://github.com/Bilalh/Tagger/releases.atom"
   name "Tagger"
+  desc "Music metadata editor supporting batch edits and importing VGMdb data"
   homepage "https://bilalh.github.io/projects/tagger/"
 
   app "Tagger.app"

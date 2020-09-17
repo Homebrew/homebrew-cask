@@ -5,6 +5,7 @@ cask "quiterss" do
   url "https://quiterss.org/files/#{version}_/QuiteRSS-#{version}.dmg"
   appcast "https://github.com/QuiteRSS/quiterss/releases.atom"
   name "QuiteRSS"
+  desc "Free news feeds reader"
   homepage "https://quiterss.org/"
 
   app "quiterss.app"

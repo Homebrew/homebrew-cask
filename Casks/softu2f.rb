@@ -5,6 +5,7 @@ cask "softu2f" do
   url "https://github.com/github/SoftU2F/releases/download/#{version}/SoftU2F.pkg"
   appcast "https://github.com/github/SoftU2F/releases.atom"
   name "Soft U2F"
+  desc "Software-based U2F authenticator"
   homepage "https://github.com/github/SoftU2F"
 
   depends_on macos: ">= :sierra"

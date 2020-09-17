@@ -1,10 +1,11 @@
 cask "busycal" do
-  version "3.10.2,401028"
-  sha256 "d41041c3f95b680d7c86f8d4a5469d3258a182349742011cf9d355eab9658a19"
+  version "3.10.4,401052"
+  sha256 "ef3c9f8b7bac91af80fdba2ce207ba2d7e2d40d82a521bba5876928283390254"
 
   url "https://www.busymac.com/download/BusyCal.zip"
   appcast "https://www.busymac.com/busycal/news.plist"
   name "BusyCal"
+  desc "Calendar software focusing on flexibility and reliability"
   homepage "https://busymac.com/busycal/index.html"
 
   auto_updates true

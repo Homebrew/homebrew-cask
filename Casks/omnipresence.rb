@@ -13,6 +13,7 @@ cask "omnipresence" do
   url "https://downloads.omnigroup.com/software/MacOSX/#{version.after_comma}/OmniPresence-#{version.before_comma}.dmg"
   appcast "https://update.omnigroup.com/appcast/com.omnigroup.OmniPresence"
   name "OmniPresence"
+  desc "Document syncing application"
   homepage "https://www.omnigroup.com/omnipresence"
 
   app "OmniPresence.app"

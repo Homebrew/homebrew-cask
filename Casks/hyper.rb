@@ -6,6 +6,7 @@ cask "hyper" do
   url "https://github.com/zeit/hyper/releases/download/#{version}/hyper-#{version}-mac.zip"
   appcast "https://github.com/zeit/hyper/releases.atom"
   name "Hyper"
+  desc "Terminal built on web technologies"
   homepage "https://hyper.is/"
 
   auto_updates true

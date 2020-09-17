@@ -5,6 +5,7 @@ cask "soundcloud-downloader" do
   url "https://black-burn.ch/app/SCD2/download/#{version}"
   appcast "https://black-burn.ch/apps/SCD2/updates/gold.xml?hwni=1"
   name "SoundCloud Downloader"
+  desc "Download songs from soundcloud to a computer"
   homepage "https://black-burn.ch/app/SCD2"
 
   app "SoundCloud Downloader.app"

@@ -5,6 +5,7 @@ cask "discretescroll" do
   url "https://github.com/emreyolcu/discrete-scroll/releases/download/v#{version}/DiscreteScroll.zip"
   appcast "https://github.com/emreyolcu/discrete-scroll/releases.atom"
   name "DiscreteScroll"
+  desc "Utility to fix a common scroll wheel problem"
   homepage "https://github.com/emreyolcu/discrete-scroll"
 
   app "DiscreteScroll.app"

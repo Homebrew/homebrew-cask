@@ -12,6 +12,7 @@ cask "omnioutliner" do
   end
   appcast "https://update.omnigroup.com/appcast/com.omnigroup.OmniOutliner#{version.major}"
   name "OmniOutliner"
+  desc "Note taking applciation and information organizer"
   homepage "https://www.omnigroup.com/omnioutliner/"
 
   app "OmniOutliner.app"

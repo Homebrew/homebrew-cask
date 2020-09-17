@@ -6,6 +6,7 @@ cask "spotspot" do
   url "https://github.com/will-stone/SpotSpot/releases/download/v#{version}/SpotSpot-#{version}.dmg"
   appcast "https://github.com/will-stone/SpotSpot/releases.atom"
   name "SpotSpot"
+  desc "Spotify mini-player"
   homepage "https://will-stone.github.io/SpotSpot/"
 
   app "SpotSpot.app"

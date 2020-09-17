@@ -7,5 +7,7 @@ cask "poedit" do
   name "Poedit"
   homepage "https://poedit.net/"
 
+  auto_updates true
+
   app "Poedit.app"
 end

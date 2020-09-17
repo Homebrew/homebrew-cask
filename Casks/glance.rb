@@ -5,6 +5,7 @@ cask "glance" do
   url "https://github.com/samuelmeuli/glance/releases/download/v#{version}/Glance.dmg"
   appcast "https://github.com/samuelmeuli/glance/releases.atom"
   name "Glance"
+  desc "Utility to provide quick look previews for files that aren't natively supported"
   homepage "https://github.com/samuelmeuli/glance"
 
   depends_on macos: ">= :catalina"

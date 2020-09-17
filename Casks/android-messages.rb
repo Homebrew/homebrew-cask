@@ -5,6 +5,7 @@ cask "android-messages" do
   url "https://github.com/chrisknepper/android-messages-desktop/releases/download/v#{version}/Android-Messages-#{version}.dmg"
   appcast "https://github.com/chrisknepper/android-messages-desktop/releases.atom"
   name "Android Messages Desktop"
+  desc "Desktop client for Android Messages"
   homepage "https://github.com/chrisknepper/android-messages-desktop"
 
   app "Android Messages.app"

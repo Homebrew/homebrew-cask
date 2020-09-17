@@ -6,6 +6,7 @@ cask "dropshare" do
   url "https://d2wvuuix8c9e48.cloudfront.net/Dropshare#{version.major}-#{version.after_comma}.app.zip"
   appcast "https://dropshare.app/sparkle/Dropshare#{version.major}.xml"
   name "Dropshare"
+  desc "File sharing solution"
   homepage "https://dropshare.app/"
 
   app "Dropshare #{version.major}.app"

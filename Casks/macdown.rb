@@ -6,6 +6,7 @@ cask "macdown" do
   url "https://github.com/MacDownApp/macdown/releases/download/v#{version}/MacDown.app.zip"
   appcast "https://macdown.uranusjr.com/sparkle/macdown/stable/appcast.xml"
   name "MacDown"
+  desc "Open-source Markdown editor"
   homepage "https://macdown.uranusjr.com/"
 
   auto_updates true

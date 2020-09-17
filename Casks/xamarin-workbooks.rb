@@ -7,6 +7,7 @@ cask "xamarin-workbooks" do
   appcast "https://docs.microsoft.com/en-us/xamarin/tools/inspector/release-notes/",
           must_contain: version.chomp(".0")
   name "Xamarin Workbooks"
+  desc "C# documentation and coding materials"
   homepage "https://docs.microsoft.com/en-us/xamarin/tools/workbooks/"
 
   depends_on macos: ">= :el_capitan"

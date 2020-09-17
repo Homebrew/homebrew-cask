@@ -6,6 +6,7 @@ cask "coccinellida" do
   url "https://downloads.sourceforge.net/coccinellida/Coccinellida-#{version}.zip"
   appcast "https://raw.githubusercontent.com/troydm/coccinellida/master/sparkle.xml"
   name "Coccinellida"
+  desc "Simple SSH tunnel manager"
   homepage "https://coccinellida.sourceforge.io/"
 
   app "Coccinellida.app"

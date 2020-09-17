@@ -6,6 +6,7 @@ cask "hex-fiend" do
   url "https://github.com/ridiculousfish/HexFiend/releases/download/v#{version}/Hex_Fiend_#{version}.dmg"
   appcast "https://github.com/ridiculousfish/HexFiend/releases.atom"
   name "Hex Fiend"
+  desc "Hex editor focussing on speed"
   homepage "https://ridiculousfish.com/hexfiend/"
 
   auto_updates true

@@ -1,6 +1,6 @@
 cask "logdna-agent" do
-  version "1.6.2"
-  sha256 "350956cbeddf0f0b1cf991a58d659e2a4c2344b621370e10c8adb950f9c6bc47"
+  version "1.6.5"
+  sha256 "7dde78a9930f75e3ab0111a1361a2764670d03b70a992158f833cfa42d415998"
 
   # github.com/logdna/logdna-agent/ was verified as official when first introduced to the cask
   url "https://github.com/logdna/logdna-agent/releases/download/#{version}/logdna-agent-#{version}.pkg"

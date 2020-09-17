@@ -1,6 +1,6 @@
 cask "sonic-visualiser" do
-  version "4.1,2719"
-  sha256 "31d0fe9bb3403de07136411bb7f82c1ebd6cc6fab04bc2756048226e5ca20500"
+  version "4.2,2759"
+  sha256 "2eedac658572e570366f6658850a7830e3c56e8be4ccb2de63cd88a8948468d8"
 
   # code.soundsoftware.ac.uk/ was verified as official when first introduced to the cask
   url "https://code.soundsoftware.ac.uk/attachments/download/#{version.after_comma}/Sonic%20Visualiser-#{version.before_comma}.dmg"

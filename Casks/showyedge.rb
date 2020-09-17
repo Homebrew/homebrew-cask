@@ -6,6 +6,7 @@ cask "showyedge" do
   url "https://github.com/pqrs-org/ShowyEdge/releases/download/v#{version}/ShowyEdge-#{version}.dmg"
   appcast "https://pqrs.org/osx/ShowyEdge/files/appcast.xml"
   name "ShowyEdge"
+  desc "Visible indicator of the current input source"
   homepage "https://pqrs.org/osx/ShowyEdge/"
 
   app "ShowyEdge.app"

@@ -6,6 +6,7 @@ cask "brackets" do
   url "https://github.com/adobe/brackets/releases/download/release-#{version}/Brackets.Release.#{version}.dmg"
   appcast "https://github.com/adobe/brackets/releases.atom"
   name "Brackets"
+  desc "Open-source code editor for web-developement"
   homepage "http://brackets.io/"
 
   app "Brackets.app"

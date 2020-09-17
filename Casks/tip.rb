@@ -5,6 +5,7 @@ cask "tip" do
   url "https://github.com/tanin47/tip/releases/download/v#{version}/Tip.zip"
   appcast "https://github.com/tanin47/tip/releases.atom"
   name "Tip"
+  desc "Programmable tooltip that can be used with any app"
   homepage "https://github.com/tanin47/tip"
 
   app "Tip.app"

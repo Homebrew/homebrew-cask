@@ -5,6 +5,7 @@ cask "explorer" do
   url "https://github.com/jfbouzereau/explorer/releases/download/#{version}/Explorer-darwin-x64.zip"
   appcast "https://github.com/jfbouzereau/explorer/releases.atom"
   name "Explorer"
+  desc "Data Explorer"
   homepage "https://github.com/jfbouzereau/explorer"
 
   app "Explorer-darwin-x64.app"

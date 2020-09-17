@@ -6,6 +6,7 @@ cask "db-browser-for-sqlite" do
   url "https://github.com/sqlitebrowser/sqlitebrowser/releases/download/v#{version}/DB.Browser.for.SQLite-#{version}.dmg"
   appcast "https://github.com/sqlitebrowser/sqlitebrowser/releases.atom"
   name "SQLite Database Browser"
+  desc "Database browser for SQLite (DB4S) project"
   homepage "https://sqlitebrowser.org/"
 
   app "DB Browser for SQLite.app"

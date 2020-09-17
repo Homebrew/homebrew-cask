@@ -5,6 +5,7 @@ cask "whatsize" do
   url "https://www.whatsizemac.com/software/whatsize#{version.major}/whatsize_#{version}.tgz"
   appcast "https://www.whatsizemac.com/software/whatsize#{version.major}/release/notes.xml"
   name "WhatSize"
+  desc "File system utility used to view and reclaim disk space"
   homepage "https://www.whatsizemac.com/"
 
   depends_on macos: ">= :sierra"

@@ -5,7 +5,8 @@ cask "quassel" do
   # github.com/quassel/quassel/ was verified as official when first introduced to the cask
   url "https://github.com/quassel/quassel/releases/download/#{version}/QuasselMono_MacOSX-x86_64_#{version}.dmg"
   appcast "https://github.com/quassel/quassel/releases.atom"
-  name "Quassel IRC"
+  name "Quassel"
+  desc "IRC client"
   homepage "https://quassel-irc.org/"
 
   app "Quassel.app"

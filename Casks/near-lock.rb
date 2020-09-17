@@ -5,6 +5,7 @@ cask "near-lock" do
   url "https://nearlock.me/downloads/nearlock.dmg"
   appcast "https://nearlock.me/downloads/nearlock.xml"
   name "Near Lock"
+  desc "Automatically lock and unlock the system with your iPhone"
   homepage "https://nearlock.me/"
 
   app "Near Lock.app"

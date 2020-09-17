@@ -6,6 +6,7 @@ cask "lmms" do
   url "https://github.com/LMMS/lmms/releases/download/v#{version}/lmms-#{version}-mac10.13.dmg"
   appcast "https://github.com/LMMS/lmms/releases.atom"
   name "LMMS"
+  desc "Cross-platform music production software"
   homepage "https://lmms.io/"
 
   depends_on macos: ">= :high_sierra"

@@ -5,6 +5,7 @@ cask "qyooo" do
   url "https://www.fullbucket.de/music/dl/qyooo_#{version.dots_to_underscores}_mac.pkg"
   appcast "https://www.fullbucket.de/music/qyooo.html"
   name "the qyooo"
+  desc "Complex modulation synthesizer"
   homepage "https://www.fullbucket.de/music/qyooo.html"
 
   pkg "qyooo_#{version.dots_to_underscores}_mac.pkg"

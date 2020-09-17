@@ -5,6 +5,7 @@ cask "menubar-countdown" do
   # capablehands.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://capablehands.s3.amazonaws.com/downloads/MenubarCountdown-#{version}.zip"
   name "Menubar Countdown"
+  desc "Countdown timer for the menu bar"
   homepage "https://github.com/kristopherjohnson/MenubarCountdown"
 
   app "MenubarCountdown-#{version}/Menubar Countdown.app"

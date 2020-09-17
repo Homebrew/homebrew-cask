@@ -48,7 +48,7 @@ if MacOS.version <= :mojave        # symbolic name
 ```
 
 ```ruby
-if MacOS.version <= '10.14'        # version string
+if MacOS.version <= "10.14"        # version string
 ```
 
 The available symbols for macOS versions are: `:yosemite`, `:el_capitan`, `:sierra`, `:high_sierra`, `:mojave`, and `:catalina`. The corresponding numeric version strings should be given as major releases containing a single dot.
@@ -78,19 +78,19 @@ If a cask is available in multiple languages, you can use the `language` stanza 
 In the exceptional case that the Cask DSL is insufficient, it is possible to define arbitrary Ruby variables and methods inside the Cask by creating a `Utils` namespace. Example:
 
 ```ruby
-cask 'myapp' do
+cask "myapp" do
   module Utils
     def self.arbitrary_method
       ...
     end
   end
 
-  name 'MyApp'
-  version '1.0'
-  sha256 'a32565cdb1673f4071593d4cc9e1c26bc884218b62fef8abc450daa47ba8fa92'
+  name "MyApp"
+  version "1.0"
+  sha256 "a32565cdb1673f4071593d4cc9e1c26bc884218b62fef8abc450daa47ba8fa92"
 
   url "https://#{Utils.arbitrary_method}"
-  homepage 'https://www.example.com/'
+  homepage "https://www.example.com/"
   ...
 end
 ```
@@ -104,7 +104,7 @@ Variables and methods should not be defined outside the `Utils` namespace, as th
 The first non-comment line in a Cask follows the form:
 
 ```ruby
-cask '<cask-token>' do
+cask "<cask-token>" do
 ```
 
 [`<cask-token>`](token_reference.md) should match the Cask filename, without the `.rb` extension,

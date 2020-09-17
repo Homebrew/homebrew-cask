@@ -5,6 +5,7 @@ cask "postbird" do
   url "https://github.com/Paxa/postbird/releases/download/#{version}/Postbird-#{version}.dmg"
   appcast "https://github.com/Paxa/postbird/releases.atom"
   name "Postbird"
+  desc "Open-source PostgreSQL GUI client"
   homepage "https://github.com/Paxa/postbird"
 
   app "Postbird.app"

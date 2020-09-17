@@ -1,11 +1,13 @@
 cask "hand-mirror" do
-  version "1.1.2"
-  sha256 "da590bc7666646185e647c7ab53c28d007f37bd32360d3decf78729677ea798e"
+  version "1.3.1"
+  sha256 "0c88e844d5161f093e374ef0e89c0eeddf589eab2db7e5b2c15c810255496167"
 
   url "https://handmirror.app/Hand%20Mirror%20#{version}.dmg"
-  appcast "https://handmirror.app"
   name "Hand Mirror"
+  desc "Tool to quick-check your appearance before a videocall"
   homepage "https://handmirror.app/"
+
+  depends_on macos: ">= :catalina"
 
   app "Hand Mirror.app"
 end

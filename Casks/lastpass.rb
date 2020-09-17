@@ -1,10 +1,11 @@
 cask "lastpass" do
-  version "4.54.0"
-  sha256 "8cba57460c948f7b6a1291526dcf10440196f2d5bbefbed430ddc66bb81bccf3"
+  version "4.56.0"
+  sha256 "c59fc1bc438cbf54adb374c9b78d70a97acbfe1d09914b490ce4cfd966f59ec3"
 
   url "https://download.cloud.lastpass.com/mac/LastPass.dmg"
   appcast "https://download.cloud.lastpass.com/mac/AppCast.xml"
   name "LastPass"
+  desc "Cross-platform password manager"
   homepage "https://www.lastpass.com/"
 
   auto_updates true

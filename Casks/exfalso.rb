@@ -6,6 +6,7 @@ cask "exfalso" do
   url "https://github.com/quodlibet/quodlibet/releases/download/release-#{version}/ExFalso-#{version}.dmg"
   appcast "https://github.com/quodlibet/quodlibet/releases.atom"
   name "Ex Falso"
+  desc "Music tag editor"
   homepage "https://quodlibet.readthedocs.io/"
 
   app "ExFalso.app"

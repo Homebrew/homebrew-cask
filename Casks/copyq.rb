@@ -6,6 +6,7 @@ cask "copyq" do
   url "https://github.com/hluk/CopyQ/releases/download/v#{version}/CopyQ.dmg"
   appcast "https://github.com/hluk/CopyQ/releases.atom"
   name "CopyQ"
+  desc "Clipboard manager with advanced features"
   homepage "https://hluk.github.io/CopyQ/"
 
   app "CopyQ.app"

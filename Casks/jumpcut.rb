@@ -6,6 +6,7 @@ cask "jumpcut" do
   url "https://github.com/snark/jumpcut/releases/download/v#{version}/Jumpcut-#{version}.tar.bz2"
   appcast "https://github.com/snark/jumpcut/releases.atom"
   name "Jumpcut"
+  desc "Clipboard manager"
   homepage "https://snark.github.io/jumpcut/"
 
   depends_on macos: ">= :el_capitan"

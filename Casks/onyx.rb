@@ -15,13 +15,14 @@ cask "onyx" do
     version "3.6.8"
     sha256 "d27529bc497b03c2486fcb8f0d3bfbb4e4a30d4abe25eddcd059ab47aaea6672"
   else
-    version "3.8.4"
-    sha256 "ceee72dff52e73ea8acae847ad1fec2f68a2552da693c6d4439e71e0ac1473cc"
+    version "3.8.5"
+    sha256 "8c0ab6fbc0ade0444f34aad7d21c3c9274acf0b597a20c8f2311547a52bc74e9"
   end
 
   url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete(".")}/OnyX.dmg"
   appcast "https://www.titanium-software.fr/en/onyx.html"
   name "OnyX"
+  desc "Verify system files structure, run miscellaneous maintenance and more"
   homepage "https://www.titanium-software.fr/en/onyx.html"
 
   # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.

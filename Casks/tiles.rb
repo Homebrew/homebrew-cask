@@ -1,11 +1,12 @@
 cask "tiles" do
-  version "1.0.3,6da1f344"
-  sha256 "07dce874aaf7c014916507b2f9f694da4fcecbb2e5c754612e0f301216b78604"
+  version "1.1.1,15113647"
+  sha256 "83a523f5d180e20d9b9d35c5544678a06fde202ea6407ff725847fda021fc9bc"
 
   url "https://updates.sempliva.com/tiles/Tiles-#{version.after_comma}.dmg"
   appcast "https://updates.sempliva.com/tiles/updates.xml",
           must_contain: version.after_comma
   name "Sempliva Tiles"
+  desc "Window manager"
   homepage "https://www.sempliva.com/tiles/"
 
   app "Tiles.app"

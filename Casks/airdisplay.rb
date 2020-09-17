@@ -5,6 +5,7 @@ cask "airdisplay" do
   url "https://www.avatron.com/updates/software/airdisplay/ad#{version.no_dots}.zip"
   appcast "https://www.avatron.com/updates/software/airdisplay/appcast.xml"
   name "Air Display"
+  desc "Utility for using a tablet as a second monitor"
   homepage "https://avatron.com/applications/air-display/"
 
   depends_on macos: ">= :mojave"

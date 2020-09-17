@@ -6,6 +6,7 @@ cask "radarr" do
   url "https://github.com/Radarr/Radarr/releases/download/v#{version}/Radarr.develop.#{version}.osx-app.zip"
   appcast "https://github.com/Radarr/Radarr/releases.atom"
   name "Radarr"
+  desc "Fork of Sonarr to work with movies à la Couchpotato"
   homepage "https://radarr.video/"
 
   depends_on formula: "mono"

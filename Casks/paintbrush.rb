@@ -6,6 +6,7 @@ cask "paintbrush" do
   url "https://downloads.sourceforge.net/paintbrush/Paintbrush%202.x/Paintbrush%20#{version}/Paintbrush-#{version}.zip"
   appcast "https://paintbrush.sourceforge.io/updates#{version.major}x.xml"
   name "Paintbrush"
+  desc "Image editor"
   homepage "https://paintbrush.sourceforge.io/"
 
   app "Paintbrush.app"

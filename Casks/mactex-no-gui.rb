@@ -7,6 +7,7 @@ cask "mactex-no-gui" do
   appcast "https://www.tug.org/mactex/downloading.html",
           must_contain: version.major
   name "MacTeX"
+  desc "Full TeX Live distribution without GUI applications"
   homepage "https://www.tug.org/mactex/"
 
   conflicts_with cask: [

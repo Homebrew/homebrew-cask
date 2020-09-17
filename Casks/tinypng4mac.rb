@@ -5,6 +5,7 @@ cask "tinypng4mac" do
   url "https://github.com/kyleduo/TinyPNG4Mac/releases/download/v#{version}/TinyPNG4Mac_#{version.dots_to_underscores}.zip"
   appcast "https://github.com/kyleduo/TinyPNG4Mac/releases.atom"
   name "TinyPNG4Mac"
+  desc "TinyPNG client"
   homepage "https://github.com/kyleduo/TinyPNG4Mac"
 
   app "TinyPNG4Mac.app"

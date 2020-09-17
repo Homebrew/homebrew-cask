@@ -1,10 +1,11 @@
 cask "abstract" do
-  version "95.0.1"
-  sha256 "c71143b8e99b930f2fee2fcbd93a1eded48cd64da67b7d1e9a077dd6c829a449"
+  version "96.0.0"
+  sha256 "cc3e901200f153f07ae0ea4ddeb0f8e1ec573837b2dac2cd76871c28f37a7224"
 
   url "https://downloads.goabstract.com/mac/Abstract-#{version}.zip"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://api.goabstract.com/releases/latest/download"
   name "Abstract"
+  desc "Collaborative design tool with support for Sketch files"
   homepage "https://www.goabstract.com/"
 
   auto_updates true

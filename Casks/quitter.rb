@@ -5,6 +5,7 @@ cask "quitter" do
   url "https://marco.org/appcasts/Quitter.zip"
   appcast "https://marco.org/appcasts/quitter.xml"
   name "Quitter"
+  desc "Automatically hides or quits apps after periods of inactivity"
   homepage "https://marco.org/apps#quitter"
 
   auto_updates true

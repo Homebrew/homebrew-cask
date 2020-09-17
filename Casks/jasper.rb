@@ -6,6 +6,7 @@ cask "jasper" do
   url "https://github.com/jasperapp/jasper/releases/download/v#{version}/jasper_v#{version}_mac.zip"
   appcast "https://github.com/jasperapp/jasper/releases.atom"
   name "Jasper"
+  desc "Issue reader for GitHub"
   homepage "https://jasperapp.io/"
 
   app "Jasper.app"

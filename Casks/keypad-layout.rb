@@ -5,6 +5,7 @@ cask "keypad-layout" do
   url "https://github.com/janten/keypad-layout/releases/download/#{version}/Keypad-Layout.zip"
   appcast "https://github.com/janten/keypad-layout/releases.atom"
   name "Keypad Layout"
+  desc "Utility to control window layout using the Ctrl key and the numeric keypad"
   homepage "https://github.com/janten/keypad-layout"
 
   app "Keypad Layout.app"

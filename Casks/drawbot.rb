@@ -6,6 +6,7 @@ cask "drawbot" do
   url "https://github.com/typemytype/drawbot/releases/download/#{version}/DrawBot.dmg"
   appcast "https://github.com/typemytype/drawbot/releases.atom"
   name "DrawBot"
+  desc "Write Python scripts to generate two-dimensional graphics"
   homepage "https://www.drawbot.com/"
 
   app "DrawBot.app"

@@ -30,14 +30,15 @@ cask "cocktail" do
     url "https://www.maintain.se/downloads/sparkle/mojave/Cocktail_#{version}.zip"
     appcast "https://www.maintain.se/downloads/sparkle/mojave/mojave.xml"
   else
-    version "13.2.4"
-    sha256 "1b7a7b166636796bb1385059278bd9c6d3ee8a134a0148631f779e87e2739373"
+    version "13.2.5"
+    sha256 "673d50145c63ffef48d3b881c7274e89fb6063058a6e7d0d7e7b29378424d852"
 
     url "https://www.maintain.se/downloads/sparkle/catalina/Cocktail_#{version}.zip"
     appcast "https://www.maintain.se/downloads/sparkle/catalina/catalina.xml"
   end
 
   name "Cocktail"
+  desc "Cleans, repairs and optimizes computer systems"
   homepage "https://www.maintain.se/cocktail/"
 
   app "Cocktail.app"

@@ -13,6 +13,7 @@ cask "karabiner-elements" do
 
   appcast "https://pqrs.org/osx/karabiner/files/karabiner-elements-appcast.xml"
   name "Karabiner Elements"
+  desc "Keyboard customizer"
   homepage "https://pqrs.org/osx/karabiner/"
 
   auto_updates true

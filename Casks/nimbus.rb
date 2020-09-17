@@ -5,6 +5,7 @@ cask "nimbus" do
   url "https://github.com/jnordberg/irccloudapp/releases/download/#{version}/Nimbus.zip"
   appcast "https://github.com/jnordberg/irccloudapp/releases.atom"
   name "Nimbus"
+  desc "Standalone IRCCloud desktop client"
   homepage "https://github.com/jnordberg/irccloudapp"
 
   app "Nimbus.app"

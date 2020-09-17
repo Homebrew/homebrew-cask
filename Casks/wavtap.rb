@@ -5,6 +5,7 @@ cask "wavtap" do
   url "https://github.com/pje/WavTap/releases/download/#{version}/WavTap.#{version}.pkg"
   appcast "https://github.com/pje/WavTap/releases.atom"
   name "WavTap"
+  desc "Tool to globally capture whatever sound is playing"
   homepage "https://github.com/pje/wavtap"
 
   pkg "WavTap.#{version}.pkg"

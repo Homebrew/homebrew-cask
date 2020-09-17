@@ -5,6 +5,7 @@ cask "latest" do
   url "https://max.codes/latest/Latest.zip"
   appcast "https://max.codes/latest/update.xml"
   name "Latest"
+  desc "Utility that shows the latest app updates"
   homepage "https://max.codes/latest"
 
   auto_updates true

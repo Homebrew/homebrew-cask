@@ -5,6 +5,7 @@ cask "prizmo" do
   url "https://www.creaceed.com/downloads/prizmo#{version.major}_#{version}.zip"
   appcast "https://www.creaceed.com/appcasts/prizmo#{version.major}.xml"
   name "Prizmo"
+  desc "Scanning application with Optical Character Recognition (OCR)"
   homepage "https://creaceed.com/prizmo"
 
   auto_updates true

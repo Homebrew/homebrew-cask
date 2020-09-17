@@ -5,6 +5,7 @@ cask "fldigi" do
   url "https://downloads.sourceforge.net/fldigi/fldigi/fldigi-#{version.before_comma}_x86_64.dmg"
   appcast "https://sourceforge.net/projects/fldigi/rss?path=/fldigi"
   name "fldigi"
+  desc "Ham radio digital modem application"
   homepage "https://sourceforge.net/projects/fldigi/files/fldigi/"
 
   app "fldigi-#{version.before_comma}.app"

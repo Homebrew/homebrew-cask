@@ -7,6 +7,7 @@ cask "eddie" do
   appcast "https://github.com/AirVPN/Eddie/releases.atom"
   name "Air VPN"
   name "Eddie"
+  desc "OpenVPN UI"
   homepage "https://airvpn.org/macos/"
 
   app "Eddie.app"

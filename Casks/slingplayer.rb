@@ -6,6 +6,7 @@ cask "slingplayer" do
   url "http://download.slingmedia.com/SlingplayerDesktop/Mac/#{version}/SlingplayerDesktop-#{version}.dmg"
   appcast "https://www.slingbox.com/Products/SlingplayerApps.aspx"
   name "Slingplayer Desktop"
+  desc "Desktop application for Sling products"
   homepage "https://www.slingbox.com/"
 
   app "Slingplayer Desktop.app"

@@ -6,6 +6,7 @@ cask "qtum" do
   url "https://github.com/qtumproject/qtum/releases/download/mainnet-ignition-v#{version.major_minor_patch}/qtum-#{version}-osx-unsigned.dmg"
   appcast "https://github.com/qtumproject/qtum/releases.atom"
   name "Qtum"
+  desc "Cryptocurrency wallet"
   homepage "https://qtum.org/"
 
   app "Qtum-Qt.app"

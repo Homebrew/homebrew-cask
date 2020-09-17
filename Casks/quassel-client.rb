@@ -5,6 +5,7 @@ cask "quassel-client" do
   url "https://quassel-irc.org/pub/QuasselClient_MacOSX-x86_64_#{version}.dmg"
   appcast "https://github.com/quassel/quassel/releases.atom"
   name "Quassel IRC"
+  desc "Quassel IRC: Chat comfortably.  Everywhere"
   homepage "https://quassel-irc.org/"
 
   app "Quassel Client.app"

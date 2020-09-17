@@ -5,6 +5,7 @@ cask "devolo-cockpit" do
   url "https://www.devolo.com/fileadmin/Web-Content/DE/products/hnw/devolo-cockpit/software/devolo-cockpit-v#{version.dots_to_hyphens}.dmg"
   appcast "https://www.devolo.com/support/downloads/download/devolo-cockpit"
   name "Devolo dLAN Cockpit"
+  desc "Configuration and network monitoring software"
   homepage "https://www.devolo.com/internet-in-any-room/devolo-cockpit"
 
   installer manual: "#{staged_path}/devolo Cockpit Installation.app"

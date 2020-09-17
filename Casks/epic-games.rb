@@ -6,6 +6,7 @@ cask "epic-games" do
   url "https://epicgames-download1.akamaized.net/Builds/UnrealEngineLauncher/Installers/Mac/EpicInstaller-#{version}.dmg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncher.dmg"
   name "Epic Games Launcher"
+  desc "Launcher for *Epic Games* games"
   homepage "https://www.epicgames.com/"
 
   auto_updates true

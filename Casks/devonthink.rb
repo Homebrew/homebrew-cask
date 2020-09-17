@@ -5,6 +5,7 @@ cask "devonthink" do
   url "https://download.devontechnologies.com/download/devonthink/#{version}/DEVONthink_#{version.major}.app.zip"
   appcast "https://api.devontechnologies.com/1/apps/sparkle/sparkle.php?id=300900000"
   name "DEVONthink"
+  desc "Collect, organize, edit and annotate documents"
   homepage "https://www.devontechnologies.com/apps/devonthink/"
 
   auto_updates true

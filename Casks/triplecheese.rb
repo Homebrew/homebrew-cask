@@ -6,6 +6,7 @@ cask "triplecheese" do
   url "https://uhedownloads-heckmannaudiogmb.netdna-ssl.com/releases/TripleCheese_#{version.before_comma.no_dots}_#{version.after_comma}_Mac.zip"
   appcast "https://u-he.com/products/triplecheese/releasenotes.html"
   name "Triple Cheese"
+  desc "Luscious and cheesy synthesizer"
   homepage "https://u-he.com/products/triplecheese/"
 
   pkg "TripleCheese_#{version.after_comma}_Mac/TripleCheese #{version.before_comma} Installer.pkg"

@@ -5,6 +5,7 @@ cask "shiftit" do
   url "https://github.com/fikovnik/ShiftIt/releases/download/version-#{version}/ShiftIt-#{version}.zip"
   appcast "https://github.com/fikovnik/ShiftIt/releases.atom"
   name "ShiftIt"
+  desc "Tool to manage the size and position of windows"
   homepage "https://github.com/fikovnik/ShiftIt/"
 
   auto_updates true

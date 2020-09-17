@@ -1,10 +1,11 @@
 cask "whale" do
-  version "1.3.0"
-  sha256 "2e28460cef4cf1d8df6be24e4be6dc5e3c9e94b84aec02f0a1516218e087d8ac"
+  version "2.0.0"
+  sha256 "d89d7e9c61653eae3bf6d35f391cbe3cfc031c4e5c41b1ec4018a9c6cc4485bc"
 
   url "https://github.com/1000ch/whale/releases/download/v#{version}/Whale-#{version}.dmg"
   appcast "https://github.com/1000ch/whale/releases.atom"
   name "Whale"
+  desc "Unofficial Trello app :whale:"
   homepage "https://github.com/1000ch/whale"
 
   app "Whale.app"

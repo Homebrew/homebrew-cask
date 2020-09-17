@@ -5,6 +5,7 @@ cask "plug" do
   url "https://www.plugformac.com/updates/plug#{version.major}/Plug-latest.dmg"
   appcast "https://www.plugformac.com/updates/plug#{version.major}/sparklecast.xml"
   name "Plug"
+  desc "Music player for The Hype Machine"
   homepage "https://www.plugformac.com/"
 
   app "Plug.app"

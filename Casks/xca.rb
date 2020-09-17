@@ -6,6 +6,7 @@ cask "xca" do
   url "https://github.com/chris2511/xca/releases/download/RELEASE.#{version}/xca-#{version}.dmg"
   appcast "https://github.com/chris2511/xca/releases.atom"
   name "XCA"
+  desc "X Certificate and Key management"
   homepage "https://hohnstaedt.de/xca/"
 
   app "xca.app"

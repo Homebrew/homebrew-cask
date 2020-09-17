@@ -1,10 +1,11 @@
 cask "spires" do
-  version "1.9.3"
-  sha256 "a9a59f5716ca394575a070745a82ae93a98a8dad80695ae27ac2317be7c9a9c5"
+  version "1.9.4"
+  sha256 "121634028843bb345c9d03c5e637ff8194b428035663aaa947ef9bc1594765de"
 
   url "https://member.ipmu.jp/yuji.tachikawa/spires/zips/spires_#{version}.zip"
   appcast "https://member.ipmu.jp/yuji.tachikawa/spires/spires-Update.xml"
   name "spires"
+  desc "Frontend for inspire-hep and arxiv"
   homepage "https://member.ipmu.jp/yuji.tachikawa/spires/"
 
   auto_updates true

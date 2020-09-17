@@ -4,6 +4,7 @@ cask "boxofsnoo-fairmount" do
 
   url "https://github.com/downloads/pmetzger/Fairmount/Fairmount-#{version}.dmg"
   name "Fairmount"
+  desc "DVD mounting software, originally from Metakine"
   homepage "https://github.com/BoxOfSnoo/Fairmount"
 
   app "Fairmount.app"

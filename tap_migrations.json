@@ -1,6 +1,7 @@
 {
   "azure-cli": "homebrew/core",
   "basex": "homebrew/core",
+  "borgbackup": "homebrew/core",
   "chronograf": "homebrew/core",
   "cocoapods": "homebrew/core",
   "consul": "homebrew/core",
@@ -22,6 +23,7 @@
   "hub": "homebrew/core",
   "hyper": "homebrew/core",
   "idris": "homebrew/core",
+  "java": "homebrew/core",
   "jenkins": "homebrew/core",
   "lunchy": "homebrew/core",
   "minikube": "homebrew/core",
@@ -35,6 +37,7 @@
   "pandoc": "homebrew/core",
   "pgloader": "homebrew/core",
   "pgweb": "homebrew/core",
+  "podman": "homebrew/core",
   "purescript": "homebrew/core",
   "python": "homebrew/core",
   "python3": "homebrew/core",

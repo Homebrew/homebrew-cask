@@ -5,6 +5,7 @@ cask "kern" do
   url "https://www.fullbucket.de/music/dl/kern_#{version.dots_to_underscores}_mac.pkg"
   appcast "https://www.fullbucket.de/music/kern.html"
   name "Kern"
+  desc "Performance synthesizer"
   homepage "https://www.fullbucket.de/music/kern.html"
 
   pkg "kern_#{version.dots_to_underscores}_mac.pkg"

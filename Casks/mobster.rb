@@ -5,6 +5,7 @@ cask "mobster" do
   url "https://github.com/dillonkearns/mobster/releases/download/v#{version}/Mobster-#{version}.dmg"
   appcast "https://github.com/dillonkearns/mobster/releases.atom"
   name "Mobster"
+  desc "Pair and mob programming timer"
   homepage "https://github.com/dillonkearns/mobster/"
 
   app "Mobster.app"

@@ -6,6 +6,7 @@ cask "dingtalk" do
   appcast "https://im.dingtalk.com/manifest/appcast_en.xml"
   name "DingTalk"
   name "钉钉"
+  desc "Teamwork app by Alibaba Group"
   homepage "https://www.dingtalk.com/"
 
   auto_updates true

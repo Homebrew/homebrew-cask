@@ -6,6 +6,7 @@ cask "cakebrew" do
   url "https://cakebrew-377a.kxcdn.com/cakebrew-#{version}.dmg"
   appcast "https://www.cakebrew.com/appcast/profileInfo.php"
   name "Cakebrew"
+  desc "GUI app for Homebrew"
   homepage "https://www.cakebrew.com/"
 
   auto_updates true

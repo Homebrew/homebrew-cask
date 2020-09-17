@@ -6,6 +6,7 @@ cask "winclone" do
   url "https://twocanoes-software-updates.s3.amazonaws.com/Winclone#{version.major}.dmg"
   appcast "https://twocanoes.com/winclone/updates/winclone8-software-updates.xml"
   name "Winclone"
+  desc "Boot Camp cloning and backup solution"
   homepage "https://twocanoes.com/products/mac/winclone"
 
   depends_on macos: ">= :mojave"

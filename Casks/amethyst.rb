@@ -12,6 +12,7 @@ cask "amethyst" do
 
   appcast "https://github.com/ianyh/Amethyst/releases.atom"
   name "Amethyst"
+  desc "Automatic tiling window manager similar to xmonad"
   homepage "https://ianyh.com/amethyst/"
 
   auto_updates true

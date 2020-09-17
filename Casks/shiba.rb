@@ -5,6 +5,7 @@ cask "shiba" do
   url "https://github.com/rhysd/Shiba/releases/download/v#{version}/Shiba-darwin-x64.zip"
   appcast "https://github.com/rhysd/Shiba/releases.atom"
   name "Shiba"
+  desc "Rich markdown live preview app with linter"
   homepage "https://github.com/rhysd/Shiba/"
 
   app "Shiba-darwin-x64/Shiba.app"

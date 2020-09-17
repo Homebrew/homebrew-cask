@@ -5,6 +5,7 @@ cask "ascension" do
   url "https://github.com/ansilove/Ascension/releases/download/v#{version}/Ascension_v#{version}.zip"
   appcast "https://github.com/ansilove/Ascension/releases.atom"
   name "Ascension"
+  desc "ANSI/ASCII art viewer"
   homepage "https://github.com/ansilove/Ascension"
 
   app "Ascension.app"

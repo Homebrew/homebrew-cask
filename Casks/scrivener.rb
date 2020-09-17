@@ -6,6 +6,7 @@ cask "scrivener" do
   url "https://scrivener.s3.amazonaws.com/mac_updates/Scrivener_1012_#{version.after_comma}.zip"
   appcast "https://www.literatureandlatte.com/downloads/scrivener-#{version.major}.xml"
   name "Scrivener"
+  desc "Word processing software with a typewriter style"
   homepage "https://literatureandlatte.com/scrivener.php"
 
   auto_updates true

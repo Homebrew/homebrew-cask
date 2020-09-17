@@ -5,6 +5,7 @@ cask "jewelrybox" do
   url "https://github.com/remear/jewelrybox/releases/download/#{version}/JewelryBox_v#{version}.tar.bz2"
   appcast "https://github.com/remear/jewelrybox/releases.atom"
   name "JewelryBox"
+  desc "RVM manager"
   homepage "https://github.com/remear/jewelrybox"
 
   app "JewelryBox.app"

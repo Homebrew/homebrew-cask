@@ -6,6 +6,7 @@ cask "pencil" do
   appcast "https://github.com/evolus/pencil/releases.atom",
           must_contain: version.major_minor_patch
   name "Pencil"
+  name "The Pencil Project"
   homepage "https://pencil.evolus.vn/"
 
   app "Pencil.app"

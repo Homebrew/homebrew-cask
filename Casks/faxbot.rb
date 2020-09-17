@@ -5,6 +5,7 @@ cask "faxbot" do
   url "https://www.hosy.de/faxer/Faxer.zip"
   appcast "https://www.hosy.de/faxer/version.xml"
   name "Faxbot"
+  desc "Send Faxes via FRITZ!Box"
   homepage "https://www.hosy.de/faxer/"
 
   app "Faxbot.app"

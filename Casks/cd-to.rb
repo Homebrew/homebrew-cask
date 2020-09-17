@@ -5,6 +5,7 @@ cask "cd-to" do
   url "https://github.com/jbtule/cdto/releases/download/v#{version}/cdto_#{version.dots_to_underscores}.zip"
   appcast "https://github.com/jbtule/cdto/releases.atom"
   name "cd to"
+  desc "Finder Toolbar app to open the current directory in the Terminal"
   homepage "https://github.com/jbtule/cdto"
 
   depends_on macos: ">= :mojave"

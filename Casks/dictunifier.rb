@@ -5,6 +5,7 @@ cask "dictunifier" do
   url "https://github.com/jjgod/mac-dictionary-kit/releases/download/v#{version}/DictUnifier-#{version}.zip"
   appcast "https://github.com/jjgod/mac-dictionary-kit/releases.atom"
   name "DictUnifier"
+  desc "Dictionary conversion tool"
   homepage "https://github.com/jjgod/mac-dictionary-kit/"
 
   app "DictUnifier.app"

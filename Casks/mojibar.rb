@@ -5,6 +5,7 @@ cask "mojibar" do
   url "https://github.com/muan/mojibar/releases/download/#{version}/mojibar.zip"
   appcast "https://github.com/muan/mojibar/releases.atom"
   name "Mojibar"
+  desc "Emoji searcher as a menu bar app"
   homepage "https://github.com/muan/mojibar"
 
   app "Mojibar-darwin-x64/Mojibar.app"

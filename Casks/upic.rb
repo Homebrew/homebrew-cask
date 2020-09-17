@@ -5,6 +5,7 @@ cask "upic" do
   url "https://github.com/gee1k/uPic/releases/download/v#{version}/uPic.zip"
   appcast "https://github.com/gee1k/uPic/releases.atom"
   name "uPic"
+  desc "Native and simple picture and file upload tool"
   homepage "https://github.com/gee1k/uPic"
 
   depends_on macos: ">= :sierra"

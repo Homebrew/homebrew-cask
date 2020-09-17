@@ -16,13 +16,14 @@ cask "powerphotos" do
     sha256 "e7c7d5970b734827a5f112029491d2d97f9a6bb318f457893905718bea6b595a"
     url "https://www.fatcatsoftware.com/powerphotos/PowerPhotos_#{version.no_dots}.zip"
   else
-    version "1.8.4"
-    sha256 "958852200adf7fc6e7a72a3f66e4cf5720e02db635fb9adecb8938c4d476adf0"
+    version "1.8.5"
+    sha256 "365b6c8c9f5e356daa56ae2666498b826746cc1301ee3acdbe66379e7d3e67d0"
     url "https://www.fatcatsoftware.com/powerphotos/PowerPhotos.zip"
   end
 
   appcast "https://www.fatcatsoftware.com/powerphotos/powerphotos_appcast.xml"
   name "PowerPhotos"
+  desc "Tool to organize photo libraries"
   homepage "https://www.fatcatsoftware.com/powerphotos/"
 
   auto_updates true

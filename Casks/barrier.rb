@@ -5,6 +5,7 @@ cask "barrier" do
   url "https://github.com/debauchee/barrier/releases/download/v#{version}/Barrier-#{version}-Release.dmg"
   appcast "https://github.com/debauchee/barrier/releases.atom"
   name "Barrier"
+  desc "Open-source KVM software"
   homepage "https://github.com/debauchee/barrier/"
 
   depends_on macos: ">= :sierra"

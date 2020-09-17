@@ -5,6 +5,7 @@ cask "geany" do
   url "https://download.geany.org/geany-#{version}_osx.dmg"
   appcast "https://github.com/geany/geany/releases.atom"
   name "Geany"
+  desc "Fast and lightweight IDE"
   homepage "https://www.geany.org/"
 
   app "Geany.app"

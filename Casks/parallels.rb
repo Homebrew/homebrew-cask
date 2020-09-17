@@ -1,10 +1,11 @@
 cask "parallels" do
-  version "16.0.0-48916"
-  sha256 "a87596f7731654da4ef1d88a0d30a905a9982987b0f112c023ad5bd348376cfd"
+  version "16.0.1-48919"
+  sha256 "517cae09f789b6868ec4b82837a47ea6a3012da17c8cb5d56dbdc45dfb946987"
 
   url "https://download.parallels.com/desktop/v#{version.major}/#{version}/ParallelsDesktop-#{version}.dmg"
   appcast "https://kb.parallels.com/en/125053"
   name "Parallels Desktop"
+  desc "Desktop virtualization software"
   homepage "https://www.parallels.com/products/desktop/"
 
   auto_updates true

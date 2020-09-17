@@ -5,6 +5,7 @@ cask "uncrustifyx" do
   url "https://github.com/ryanmaxwell/UncrustifyX/releases/download/#{version}/UncrustifyX-#{version}.zip"
   appcast "https://github.com/ryanmaxwell/UncrustifyX/releases.atom"
   name "UncrustifyX"
+  desc "Uncrustify utility and documentation browser"
   homepage "https://github.com/ryanmaxwell/UncrustifyX"
 
   app "UncrustifyX.app"

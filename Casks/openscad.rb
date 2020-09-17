@@ -5,10 +5,10 @@ cask "openscad" do
   url "https://files.openscad.org/OpenSCAD-#{version}.dmg"
   appcast "https://github.com/openscad/openscad/releases.atom"
   name "OpenSCAD"
+  desc "Programmable solid 3D CAD modeller"
   homepage "https://www.openscad.org/"
 
   app "OpenSCAD.app"
-  binary "#{appdir}/OpenSCAD.app/Contents/MacOS/OpenSCAD", target: "openscad"
 
   zap trash: [
     "~/Library/Caches/org.openscad.OpenSCAD",

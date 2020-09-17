@@ -4,9 +4,10 @@ cask "dropbox" do
 
   url "https://www.dropbox.com/download?plat=mac&full=1"
   name "Dropbox"
+  desc "Client for the Dropbox cloud storage service"
   homepage "https://www.dropbox.com/"
 
-  conflicts_with cask: "dropbox-beta"
+  conflicts_with cask: "homebrew/cask-versions/dropbox-beta"
 
   app "Dropbox.app"
 

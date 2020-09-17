@@ -2,9 +2,10 @@ cask "iina" do
   version "1.0.7"
   sha256 "1b1938b3a9640b4c26960aefab1ebe077bfaaf4b7a62ccfce5a7e138c9c56d75"
 
-  url "https://dl.iina.io/IINA.v#{version}.dmg"
+  url "https://dl-portal.iina.io/IINA.v#{version}.dmg"
   appcast "https://iina.io/appcast.xml"
   name "IINA"
+  desc "Free and open-source media player"
   homepage "https://iina.io/"
 
   auto_updates true

@@ -1,14 +1,17 @@
 cask "backblaze" do
-  version "7.0.1.452"
-  sha256 "7b60cca1e2bd74cd947dd67bd292e48407a6aae878c617da956e8f816dcf5657"
+  version "7.0.2.464"
+  sha256 "1fed02eb7190c0ce052b6f1c0f5b33a7e89178cd1501a46cf99c2842109f9edf"
 
-  url "https://secure.backblaze.com/mac/install_backblaze.dmg"
+  url "https://secure.backblaze.com/api/install_backblaze?file=bzinstall-mac-#{version}.zip"
   appcast "https://secure.backblaze.com/api/clientversion.xml",
           must_contain: "mac_version=\"#{version}\""
   name "Backblaze"
+  desc "Data backup and storage service"
   homepage "https://backblaze.com/"
 
-  installer manual: "Backblaze Installer.app"
+  auto_updates true
+
+  installer manual: "bzdoinstall.app"
 
   uninstall launchctl: [
     "com.backblaze.bzserv",

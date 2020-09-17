@@ -1,11 +1,12 @@
 cask "pycharm-edu" do
-  version "2020.2,202.6397.112"
-  sha256 "a9f8c09a021a8e283156e0df5eee7809a5741eaff37fc8b13483efcd248db978"
+  version "2020.2.1,202.6948.82"
+  sha256 "9bc2c4e9c0d093aa8dedf7d899ac65aeced7a81db0b2bb69f574c229c3770d7b"
 
   url "https://download.jetbrains.com/python/pycharm-edu-#{version.before_comma}.dmg"
   appcast "https://data.services.jetbrains.com/products/releases?code=PCE&latest=true&type=release"
   name "Jetbrains PyCharm Educational Edition"
   name "PyCharm Edu"
+  desc "Professional IDE for scientific and web Python development"
   homepage "https://www.jetbrains.com/pycharm-edu/"
 
   auto_updates true

@@ -1,10 +1,11 @@
 cask "hotswitch" do
-  version "1.20"
-  sha256 "55696b292a79f603a4b14c8272232ea30d13b78b4974fd135b9d0a0dd6331be6"
+  version "1.21"
+  sha256 "8469f8804214983ff57cf5f7553e63abcafdfffbca7f4a471a799636e1560639"
 
   url "https://oniatsu.github.io/HotSwitch/release/zip/HotSwitch.zip"
   appcast "https://github.com/oniatsu/HotSwitch/releases.atom"
   name "HotSwitch"
+  desc "Fast window switcher using a 2-stroke hotkey"
   homepage "https://oniatsu.github.io/HotSwitch/"
 
   app "HotSwitch.app"

@@ -1,10 +1,11 @@
 cask "grids" do
-  version "6.1.2"
-  sha256 "52222ea98e78352a2ec9f2c702b2e83cff063ba494f85c202b059eb3b4330129"
+  version "6.1.4"
+  sha256 "8c5460e5e516a36a2504a303f02ebbb4322dba67fe1db7d206f69d2d94a710ec"
 
   url "https://gridsapp.net/bin/Grids_#{version}.zip"
   appcast "https://gridsapp.net/appcast.json"
   name "Grids"
+  desc "Instagram desktop application"
   homepage "https://gridsapp.net/"
 
   auto_updates true

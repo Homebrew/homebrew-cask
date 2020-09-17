@@ -5,6 +5,7 @@ cask "macintoshjs" do
   url "https://github.com/felixrieseberg/macintosh.js/releases/download/v#{version}/macintosh.js-darwin-x64-#{version}.zip"
   appcast "https://github.com/felixrieseberg/macintosh.js/releases.atom"
   name "macintosh.js"
+  desc "Virtual Apple Macintosh with System 8, running in Electron"
   homepage "https://github.com/felixrieseberg/macintosh.js"
 
   app "macintosh.js.app"

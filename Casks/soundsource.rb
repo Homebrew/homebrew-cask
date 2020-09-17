@@ -5,6 +5,7 @@ cask "soundsource" do
   url "https://rogueamoeba.com/soundsource/download/SoundSource.zip"
   appcast "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&bundleid=com.rogueamoeba.soundsource&system=10146&version=5000000"
   name "SoundSource"
+  desc "Sound and audio controller"
   homepage "https://rogueamoeba.com/soundsource/"
 
   auto_updates true

@@ -5,6 +5,7 @@ cask "tex-live-utility" do
   url "https://github.com/amaxwell/tlutility/releases/download/#{version}/TeX.Live.Utility.app-#{version}.dmg"
   appcast "https://github.com/amaxwell/tlutility/releases.atom"
   name "TeX Live Utility"
+  desc "Graphical user interface for TeX Live Manager"
   homepage "https://github.com/amaxwell/tlutility"
 
   auto_updates true

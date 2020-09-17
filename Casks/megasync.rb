@@ -5,6 +5,7 @@ cask "megasync" do
   url "https://mega.nz/MEGAsyncSetup.dmg"
   appcast "https://github.com/meganz/MEGAsync/releases.atom"
   name "MEGAsync"
+  desc "Syncs files between computers and MEGA Cloud drives"
   homepage "https://mega.nz/"
 
   app "MEGAsync.app"

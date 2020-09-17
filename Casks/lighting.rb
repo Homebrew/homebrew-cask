@@ -5,6 +5,7 @@ cask "lighting" do
   url "https://github.com/tatey/Lighting/releases/download/#{version}/Lighting-#{version}.zip"
   appcast "https://github.com/tatey/Lighting/releases.atom"
   name "Lighting"
+  desc "Tool to control LIFX lights via a Notification Center widget"
   homepage "https://github.com/tatey/Lighting"
 
   app "Lighting.app"

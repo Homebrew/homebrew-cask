@@ -1,10 +1,11 @@
 cask "typora" do
-  version "0.9.9.34.2"
-  sha256 "af9cdc2c0ab14916a8c4c956c966921230a7de2ce433e657d79a88fb2ff6f36c"
+  version "0.9.9.35.2"
+  sha256 "add7d085b213c999378e0aab3e75d6473ac2bcb793df63a06287592dea2f0878"
 
   url "https://www.typora.io/download/Typora-#{version}.dmg"
   appcast "https://www.typora.io/download/dev_update.xml"
   name "Typora"
+  desc "Configurable document editor that supports Markdown"
   homepage "https://typora.io/"
 
   auto_updates true

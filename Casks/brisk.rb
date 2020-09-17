@@ -5,6 +5,7 @@ cask "brisk" do
   url "https://github.com/br1sk/brisk/releases/download/#{version}/Brisk.app.tar.gz"
   appcast "https://github.com/br1sk/brisk/releases.atom"
   name "Brisk"
+  desc "App for submitting radars"
   homepage "https://github.com/br1sk/brisk"
 
   app "Brisk.app"

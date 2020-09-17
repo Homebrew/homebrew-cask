@@ -1,6 +1,6 @@
 cask "propresenter" do
-  version "7.1.3,117506823"
-  sha256 "e6b804befba44714f9a4984b97b9c59a4c6d5ec8130f0c1375fe9b7dc9db04a5"
+  version "7.2,117571592"
+  sha256 "7ca6cfb51d2abd9234ba8eb9cbee099e923ef87d55525399492a9709bdec59d1"
 
   url "https://renewedvision.com/downloads/propresenter/mac/ProPresenter_#{version.before_comma}_#{version.after_comma}.zip"
   appcast "https://api.renewedvision.com/v1/pro/upgrade?platform=macos&osVersion=0&appVersion=0&buildNumber=0&includeNotes=0"

@@ -6,6 +6,7 @@ cask "hwsensors" do
   appcast "https://github.com/kozlekek/HWSensors/releases.atom",
           must_contain: version.major_minor
   name "HWSensors"
+  desc "Tool to access information from available hardware sensors"
   homepage "https://github.com/kozlekek/HWSensors/"
 
   pkg "HWSensors.#{version}.pkg"

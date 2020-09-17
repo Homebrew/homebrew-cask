@@ -6,6 +6,7 @@ cask "stepmania" do
   url "https://github.com/stepmania/stepmania/releases/download/v#{version}/StepMania-#{version}-mac.dmg"
   appcast "https://github.com/stepmania/stepmania/releases.atom"
   name "StepMania"
+  desc "Advanced rhythm game designed for both home and arcade use"
   homepage "https://www.stepmania.com/"
 
   app "StepMania-#{version}/Stepmania.app"

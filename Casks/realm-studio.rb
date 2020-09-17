@@ -5,6 +5,7 @@ cask "realm-studio" do
   url "https://static.realm.io/downloads/realm-studio/Realm%20Studio-#{version}-mac.zip"
   appcast "https://github.com/realm/realm-studio/releases.atom"
   name "Realm Studio"
+  desc "Tool for Realm Database and Realm Platform"
   homepage "https://realm.io/products/realm-studio/"
 
   auto_updates true

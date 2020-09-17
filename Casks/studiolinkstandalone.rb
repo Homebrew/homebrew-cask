@@ -1,6 +1,6 @@
 cask "studiolinkstandalone" do
-  version "20.05.3"
-  sha256 "2be4dbf7e9d2220823b13849f63b3ea84f2ef7e56864c9b39767da0d9b3086dc"
+  version "20.05.5"
+  sha256 "33cde83fb612f2d0f152cd32e788a0da15d97c3c59dc7dea273f567130eb9c0b"
 
   # download.studio.link/ was verified as official when first introduced to the cask
   url "https://download.studio.link/releases/v#{version}-stable/osx/signed/studio-link-standalone-v#{version}-stable.zip"

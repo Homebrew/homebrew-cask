@@ -1,7 +1,9 @@
 require_relative "changed_files"
 
 module CiMatrix
-  def self.generate(tap)
+  MAX_JOBS = 256
+
+  def self.generate(tap, labels: [])
     odie "This command must be run from inside a tap directory." unless tap
 
     changed_files = ChangedFiles.collect(tap)
@@ -17,21 +19,34 @@ module CiMatrix
       odie "Found Ruby files in wrong directory:\n#{ruby_files_in_wrong_directory.join("\n")}"
     end
 
+    modified_cask_files = changed_files[:modified_cask_files]
+
+    jobs = modified_cask_files.count
+    odie "Maximum job matrix size exceeded: #{jobs}/#{MAX_JOBS}" if jobs > MAX_JOBS
+
     changed_files[:modified_cask_files].map do |path|
       cask = Cask::CaskLoader.load(path)
 
-      audit_args = ["--download", "--appcast", "--online", "--strict"]
+      appcast_arg = if labels.include?("ci-skip-appcast")
+        "--no-appcast"
+      else
+        "--appcast"
+      end
+
+      audit_args = ["--download", appcast_arg, "--online"]
 
       if changed_files[:added_files].include?(path)
-        audit_args << "--token-conflicts"
         audit_args << "--new-cask"
       end
 
       {
-        name:              cask.token,
-        cask:              "./#{path}",
-        working_directory: tap.path,
-        audit_args:        audit_args,
+        name:       "test (#{cask.token})",
+        cask:       {
+          token: cask.token,
+          path:  "./#{path}",
+        },
+        audit_args: audit_args,
+        skip_install: labels.include?("ci-skip-install"),
       }
     end
   end

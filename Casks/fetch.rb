@@ -5,6 +5,7 @@ cask "fetch" do
   url "https://fetchsoftworks.com/fetch/download/Fetch_#{version}.zip"
   appcast "https://updates.fetchsoftworks.com/list/fetch-#{version.major}K0-release.xml"
   name "Fetch"
+  desc "File transfer client"
   homepage "https://fetchsoftworks.com/fetch/"
 
   app "Fetch.app"

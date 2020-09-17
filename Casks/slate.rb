@@ -6,6 +6,7 @@ cask "slate" do
   url "http://slate.ninjamonkeysoftware.com/Slate.dmg"
   appcast "https://www.ninjamonkeysoftware.com/slate/appcast.xml"
   name "Slate"
+  desc "Window management application (replacement for Divvy/SizeUp/ShiftIt)"
   homepage "https://github.com/jigish/slate"
 
   app "Slate.app"

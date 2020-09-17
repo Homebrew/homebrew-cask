@@ -6,6 +6,7 @@ cask "kextviewr" do
   url "https://bitbucket.org/objective-see/deploy/downloads/KextViewr_#{version}.zip"
   appcast "https://objective-see.com/products/changelogs/KextViewr.txt"
   name "KextViewr"
+  desc "Display all currently loaded kexts"
   homepage "https://objective-see.com/products/kextviewr.html"
 
   app "KextViewr.app"

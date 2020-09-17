@@ -5,6 +5,7 @@ cask "maria" do
   url "https://github.com/shincurry/Maria/releases/download/v#{version.before_comma}/Maria_v#{version.before_comma}_build#{version.after_comma}.dmg"
   appcast "https://github.com/shincurry/Maria/releases.atom"
   name "Maria"
+  desc "App/widget for aria2 download tool"
   homepage "https://github.com/shincurry/Maria"
 
   app "Maria.app"

@@ -5,6 +5,7 @@ cask "iglance" do
   url "https://github.com/iglance/iglance/releases/download/v#{version}/iGlance_v#{version}.zip"
   appcast "https://github.com/iglance/iglance/releases.atom"
   name "iGlance"
+  desc "System monitor for the status bar"
   homepage "https://github.com/iglance/iGlance"
 
   auto_updates true

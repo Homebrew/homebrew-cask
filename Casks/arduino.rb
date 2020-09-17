@@ -5,6 +5,7 @@ cask "arduino" do
   url "https://downloads.arduino.cc/arduino-#{version}-macosx.zip"
   appcast "https://github.com/arduino/Arduino/releases.atom"
   name "Arduino"
+  desc "Open-source electronics prototyping platform"
   homepage "https://www.arduino.cc/"
 
   app "Arduino.app"

@@ -6,6 +6,7 @@ cask "shuttle" do
   url "https://github.com/fitztrev/shuttle/releases/download/v#{version}/Shuttle.zip"
   appcast "https://github.com/fitztrev/shuttle/releases.atom"
   name "Shuttle"
+  desc "Simple shortcut menu"
   homepage "https://fitztrev.github.io/shuttle/"
 
   app "Shuttle.app"

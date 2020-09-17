@@ -1,11 +1,12 @@
 cask "inkscape" do
-  version "1.0.0"
-  sha256 "9b42468815b4bcbc8ccb76a239aea48a2965dbd2f3ae7c3b560c7f2a7e48a955"
+  version "1.0.1"
+  sha256 "52597712673dedf56d2c084e26d906fd376a382a792d1ac2315a9de697a66dd6"
 
   url "https://media.inkscape.org/dl/resources/file/Inkscape-#{version}.dmg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://inkscape.org/release",
           must_contain: version.major_minor
   name "Inkscape"
+  desc "Vector graphics editor"
   homepage "https://inkscape.org/"
 
   app "Inkscape.app"

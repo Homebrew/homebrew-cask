@@ -3,13 +3,14 @@ cask "dash" do
     version "4.6.7"
     sha256 "e2b5eb996645b25f12ccae15e24b1b0d8007bc5fed925e14ce7be45a2b693fb6"
   else
-    version "5.3.0"
-    sha256 "731e22e82afb6484d76ae55a387fea3717f27974824708b200712d463d623439"
+    version "5.4.0"
+    sha256 "6c49b237710f05bcd09656247d392f1fc770c04b6a4e2d8ac8ef572dc196efd2"
   end
 
   url "https://kapeli.com/downloads/v#{version.major}/Dash.zip"
   appcast "https://kapeli.com/Dash#{version.major}.xml"
   name "Dash"
+  desc "API documentation browser and code snippet manager"
   homepage "https://kapeli.com/dash"
 
   auto_updates true

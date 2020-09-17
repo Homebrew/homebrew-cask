@@ -5,6 +5,7 @@ cask "expandrive" do
   url "https://updates.expandrive.com/apps/expandrive#{version.major}/v/#{version.dots_to_hyphens}/update_download"
   appcast "https://updates.expandrive.com/appcast/expandrive#{version.major}.json?version=#{version.major}.0.0"
   name "ExpanDrive"
+  desc "Network drive and browser for cloud storage"
   homepage "https://www.expandrive.com/apps/expandrive/"
 
   app "ExpanDrive.app"

@@ -6,6 +6,7 @@ cask "subsync" do
   url "https://github.com/sc0ty/subsync/releases/download/#{version.major_minor}/subsync-#{version}-mac-x86_64.dmg"
   appcast "https://github.com/sc0ty/subsync/releases.atom"
   name "subsync"
+  desc "Subtitle speech synchronizer"
   homepage "https://subsync.online/"
 
   app "subsync.app"

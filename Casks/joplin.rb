@@ -1,11 +1,12 @@
 cask "joplin" do
-  version "1.0.233"
-  sha256 "f8734de24064f8dfd088d9df2e2f72f8aeaee4391e907e5ed70d37c939cdd2ca"
+  version "1.0.245"
+  sha256 "62804b1971ecadc64f810627b08e6a3815c838a6da382ae94dbb9e8bc4a99017"
 
   # github.com/laurent22/joplin/ was verified as official when first introduced to the cask
   url "https://github.com/laurent22/joplin/releases/download/v#{version}/Joplin-#{version}.dmg"
   appcast "https://github.com/laurent22/joplin/releases.atom"
   name "Joplin"
+  desc "Note taking and to-do application with synchronization capabilities"
   homepage "https://joplin.cozic.net/"
 
   app "Joplin.app"

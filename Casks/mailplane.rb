@@ -1,6 +1,6 @@
 cask "mailplane" do
-  version "4.2.5,4826"
-  sha256 "bc7947625fefa9556987cf9391838f0241f66b6085ab1c55e686ca70216f313e"
+  version "4.2.6,4828"
+  sha256 "77408c1332758a7e03e2e0c32d1d2097c724f10e9ae56ec8270508736f00a41c"
 
   url "https://update.mailplaneapp.com/builds/Mailplane_#{version.major}_#{version.after_comma}.tbz"
   appcast "https://update.mailplaneapp.com/appcast.php?rqsr=1&osVersion=10.14.1&appVersion=#{version.after_comma}&shortVersionString=#{version.before_comma}"

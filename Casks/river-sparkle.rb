@@ -5,6 +5,7 @@ cask "river-sparkle" do
   url "https://sparkleapp.com/update/Sparkle.zip"
   appcast "https://sparkleapp.com/update/appcast.php?lang=en"
   name "Sparkle"
+  desc "App to build websites"
   homepage "https://sparkleapp.com/"
 
   app "Sparkle.app"

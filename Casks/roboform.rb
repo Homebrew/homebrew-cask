@@ -1,10 +1,11 @@
 cask "roboform" do
-  version "8.9.2"
-  sha256 "3343cc86b670cc3e137b1d040b1537d28c4d3c87441bca42aedebe5658a473e0"
+  version "8.9.3"
+  sha256 "439ca543c4cf4ea1f8f9884fa9bfa6774fbbcda43493afc625f70ba635d23182"
 
   url "https://www.roboform.com/dist/roboform-mac-v#{version.major}.dmg"
   appcast "https://www.roboform.com/news-mac"
   name "RoboForm"
+  desc "Password manager and form filler application"
   homepage "https://www.roboform.com/"
 
   auto_updates true

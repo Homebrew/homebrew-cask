@@ -1,10 +1,11 @@
 cask "macvim" do
-  version "8.2.539,163"
-  sha256 "5ab07a704909b52fa2b28ffa69b06389447d8a013242354bae6c185b6df1da37"
+  version "8.2.1456,165"
+  sha256 "42205ff4bcd46e22b1be30e2116c0f68965b181c1e250d0c4717b4167d48b475"
 
   url "https://github.com/macvim-dev/macvim/releases/download/snapshot-#{version.after_comma}/MacVim.dmg"
   appcast "https://github.com/macvim-dev/macvim/releases.atom"
   name "MacVim"
+  desc "Text editor"
   homepage "https://github.com/macvim-dev/macvim"
 
   auto_updates true
@@ -29,8 +30,4 @@ cask "macvim" do
     "~/Library/Preferences/org.vim.MacVim.LSSharedFileList.plist",
     "~/Library/Preferences/org.vim.MacVim.plist",
   ]
-
-  caveats <<~EOS
-    To avoid overwriting vim binaries from other formulae or casks, install with the "--no-binaries" flag.
-  EOS
 end

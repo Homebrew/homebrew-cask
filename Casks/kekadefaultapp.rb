@@ -5,6 +5,7 @@ cask "kekadefaultapp" do
   url "https://github.com/aonez/Keka/releases/download/v#{version.before_comma}/KekaDefaultApp.v#{version.after_comma}.zip"
   appcast "https://github.com/aonez/Keka/releases.atom"
   name "KekaDefaultApp"
+  desc "File archiver"
   homepage "https://github.com/aonez/Keka/wiki/Default-application"
 
   app "KekaDefaultApp.app"

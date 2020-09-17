@@ -15,13 +15,14 @@ cask "maintenance" do
     version "2.5.6"
     sha256 "d3b0152ce543b84ed597daba3360f74c3f20b4fb2b41d71005f3a7b311d4d681"
   else
-    version "2.6.9"
-    sha256 "498a60da7efe9c8ed91b2c8990c53415aee5a3218ca75e53cea00abab01f8f0c"
+    version "2.7.0"
+    sha256 "8518a5225b02803d870103fabf0d1f50bf12e5d7308e38a255acebf6d0a0e276"
   end
 
   url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete(".")}/Maintenance.dmg"
   appcast "https://www.titanium-software.fr/en/release_maintenance.html"
   name "Maintenance"
+  desc "Operating system maintenance and cleaning utility"
   homepage "https://www.titanium-software.fr/en/maintenance.html"
 
   # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.

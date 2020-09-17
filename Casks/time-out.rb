@@ -5,6 +5,7 @@ cask "time-out" do
   url "https://www.dejal.com/download/timeout-#{version}.zip"
   appcast "https://dejal.net/appcast/?prod=timeout&aed=direct&from=2037&rel=gen"
   name "Time Out"
+  desc "Customizable timing of breaks"
   homepage "https://www.dejal.com/timeout/"
 
   app "Time Out.app"

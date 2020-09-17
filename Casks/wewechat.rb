@@ -5,6 +5,7 @@ cask "wewechat" do
   url "https://github.com/trazyn/weweChat/releases/download/v#{version}/wewechat-#{version}-mac.dmg"
   appcast "https://github.com/trazyn/weweChat/releases.atom"
   name "weweChat"
+  desc "Unofficial WeChat client"
   homepage "https://github.com/trazyn/weweChat"
 
   app "wewechat.app"

@@ -1,10 +1,11 @@
 cask "musictube" do
-  version "1.13.1"
-  sha256 "30eaa0863be443e3f322ee8369aae074fc0195d7f287ce44924ef7ca9d65e841"
+  version "1.13.2"
+  sha256 "ed93e0a63871bf224a661f7dade67340f40dfdacc2067913ccdfc1fe5e99357e"
 
   url "https://flavio.tordini.org/files/musictube/musictube.dmg"
   appcast "https://flavio.tordini.org/musictube-ws/appcast.xml"
   name "Musictube"
+  desc "Streaming music player"
   homepage "https://flavio.tordini.org/musictube"
 
   app "Musictube.app"

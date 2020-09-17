@@ -1,10 +1,11 @@
 cask "mattermost" do
-  version "4.5.2"
-  sha256 "d3d3cacf9185d9887fb3460eb66b6fbce398c7a7d85b8cc058a7385f89639e38"
+  version "4.5.4"
+  sha256 "a6eb3abbc5604c10e5a970e87123225ead52c7182f0acc9ea27bb42bb5011725"
 
   url "https://releases.mattermost.com/desktop/#{version}/mattermost-desktop-#{version}-mac.zip"
   appcast "https://github.com/mattermost/desktop/releases.atom"
   name "Mattermost"
+  desc "Open-source, self-hosted Slack-alternative"
   homepage "https://about.mattermost.com/"
 
   app "Mattermost.app"

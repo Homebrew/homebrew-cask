@@ -1,11 +1,12 @@
 cask "tunnelbear" do
-  version "3.9.10"
-  sha256 "df58613d85472b34fd2f23af56b84e870520495073371b979867fd044451dc43"
+  version "4.0.0"
+  sha256 "a26d9b126b6ce9e8d0d8bcc6509c529255b196f3aa57b210405d10fc1a75b221"
 
   # tunnelbear.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://tunnelbear.s3.amazonaws.com/downloads/mac/TunnelBear-#{version}.zip"
   appcast "https://tunnelbear.s3.amazonaws.com/downloads/mac/appcast.xml"
   name "TunnelBear"
+  desc "VPN client for secure internet access and private browsing"
   homepage "https://www.tunnelbear.com/"
 
   app "TunnelBear.app"

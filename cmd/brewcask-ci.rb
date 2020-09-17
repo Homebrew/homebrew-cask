@@ -30,7 +30,7 @@ module Cask
         overall_success = true
 
         matrix.each do |m|
-          path = m[:cask]
+          path = m[:cask][:path]
 
           cask = CaskLoader.load(path)
 

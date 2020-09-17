@@ -1,11 +1,12 @@
 cask "bitwarden" do
-  version "1.20.1"
-  sha256 "890973fc10926151ff069b506900f65e304c9def238281005ccd2170f3d37f91"
+  version "1.21.0"
+  sha256 "589e33e910e3adc5928bccddf14f087926e6deab70cc940fb0f617b8c5b6b144"
 
   # github.com/bitwarden/desktop/ was verified as official when first introduced to the cask
   url "https://github.com/bitwarden/desktop/releases/download/v#{version}/Bitwarden-#{version}-mac.zip"
   appcast "https://github.com/bitwarden/desktop/releases.atom"
   name "Bitwarden"
+  desc "Desktop password and login vault"
   homepage "https://bitwarden.com/"
 
   auto_updates true

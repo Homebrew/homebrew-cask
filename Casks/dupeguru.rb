@@ -6,6 +6,7 @@ cask "dupeguru" do
   url "https://github.com/arsenetar/dupeguru/releases/download/#{version}/dupeguru_osx_#{version.dots_to_underscores}.dmg"
   appcast "https://github.com/arsenetar/dupeguru/releases.atom"
   name "dupeGuru"
+  desc "Finds duplicate files in a computer system"
   homepage "https://dupeguru.voltaicideas.net/"
 
   app "dupeGuru.app"

@@ -6,6 +6,7 @@ cask "exist-db" do
   url "https://bintray.com/artifact/download/existdb/releases/eXist-db-#{version}.dmg"
   appcast "https://github.com/eXist-db/exist/releases.atom"
   name "eXist-db"
+  desc "Native XML database and application platform"
   homepage "https://exist-db.org/exist/apps/homepage/index.html"
 
   app "eXist-db.app"

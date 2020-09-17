@@ -6,7 +6,10 @@ cask "cocoapods" do
   url "https://github.com/CocoaPods/CocoaPods-app/releases/download/#{version}/CocoaPods.app-#{version}.tar.bz2"
   appcast "https://app.cocoapods.org/sparkle"
   name "CocoaPods.app"
+  desc "Dependency manager for Cocoa projects"
   homepage "https://cocoapods.org/"
+
+  conflicts_with formula: "cocoapods"
 
   app "CocoaPods.app"
   binary "#{appdir}/CocoaPods.app/Contents/Helpers/pod"
@@ -18,7 +21,5 @@ cask "cocoapods" do
                           "-bool", "true"]
   end
 
-  zap trash: [
-    "~/Library/Preferences/org.cocoapods.CocoaPods.plist",
-  ]
+  zap trash: "~/Library/Preferences/org.cocoapods.CocoaPods.plist"
 end

@@ -1,6 +1,6 @@
 cask "remember-the-milk" do
-  version "1.2.3"
-  sha256 "07fe37118f66c5eb1396f6c4b2c2ea6df17f279f0c16b8cc2a11d9c197a4b167"
+  version "1.2.7"
+  sha256 "0c054b2342f77d2be9f16a0e4fabfd99ca125ac07c27213ddb3b26564a23d41b"
 
   url "https://www.rememberthemilk.com/download/mac/RememberTheMilk-#{version}.zip"
   appcast "https://www.rememberthemilk.com/services/mac/"

@@ -6,6 +6,7 @@ cask "nzbget" do
   url "https://github.com/nzbget/nzbget/releases/download/v#{version}/nzbget-#{version}-bin-macos.zip"
   appcast "https://github.com/nzbget/nzbget/releases.atom"
   name "NZBGet"
+  desc "Usenet downloader focusing on efficiency"
   homepage "https://nzbget.net/"
 
   app "NZBGet.app"

@@ -6,6 +6,7 @@ cask "stella" do
   url "https://github.com/stella-emu/stella/releases/download/#{version}/Stella-#{version}-macos.dmg"
   appcast "https://github.com/stella-emu/stella/releases.atom"
   name "Stella"
+  desc "Multi-platform Atari 2600 Emulator"
   homepage "https://stella-emu.github.io/"
 
   app "Stella.app"

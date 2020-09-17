@@ -2,8 +2,8 @@ cask "stageplotpro" do
   version "2.9.9.2"
   sha256 "748786ecec45adb5a506be89d5875573a3269ccb8dbaa729938d4986496c16da"
 
-  url "http://www.stageplot.com/download/StagePlotPro_#{version}.dmg"
-  appcast "http://www.stageplot.com/DownloadPage.html"
+  url "https://www.stageplot.com/download/StagePlotPro_#{version}.dmg"
+  appcast "https://www.stageplot.com/DownloadPage.html"
   name "StagePlotPro"
   homepage "https://www.stageplot.com/"
 

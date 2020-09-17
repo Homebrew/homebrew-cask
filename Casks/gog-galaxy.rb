@@ -1,10 +1,11 @@
 cask "gog-galaxy" do
-  version "2.0.19.22"
-  sha256 "4475c188263b4ddde0bac267fb1c3eab3494b5b527e78ae5ea91a5b721ea913a"
+  version "2.0.20.38"
+  sha256 "67c47190352ba12461b187113b89cadd7cfdd68b8987bd006d1944b29ebd3a68"
 
   url "https://cdn.gog.com/open/galaxy/client/galaxy_client_#{version}.pkg"
   appcast "https://www.macupdater.net/cgi-bin/extract_text/extract_text_split_easy.cgi?url=https://gog.com/galaxy&encoding=utf-8&user_agent=Macintosh"
   name "GOG Galaxy Client"
+  desc "GOG gaming client"
   homepage "https://www.gog.com/galaxy"
 
   auto_updates true

@@ -8,6 +8,7 @@ cask "neteasemusic" do
   appcast "https://music.163.com/api/mac/appcast.xml"
   name "NetEase cloud music"
   name "网易云音乐"
+  desc "Music streaming platform"
   homepage "https://music.163.com/"
 
   depends_on macos: ">= :sierra"

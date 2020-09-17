@@ -5,6 +5,7 @@ cask "screens" do
   url "https://updates.edovia.com/com.edovia.screens#{version.major}.mac/Screens_#{version.before_comma}b#{version.after_comma}.zip"
   appcast "https://updates.edovia.com/com.edovia.screens#{version.major}.mac/appcast.xml"
   name "Screens"
+  desc "Remote access software focusing on usability"
   homepage "https://edovia.com/screens-mac/"
 
   auto_updates true

@@ -6,6 +6,7 @@ cask "iterm2" do
   url "https://iterm2.com/downloads/stable/iTerm2-#{version.dots_to_underscores}.zip"
   appcast "https://iterm2.com/appcasts/final_modern.xml"
   name "iTerm2"
+  desc "Terminal emulator as alternative to Apple's Terminal app"
   homepage "https://www.iterm2.com/"
 
   auto_updates true

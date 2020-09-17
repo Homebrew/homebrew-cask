@@ -5,6 +5,7 @@ cask "container-ps" do
   url "https://github.com/Toinane/container-ps/releases/download/#{version}/Container.PS-#{version}.dmg"
   appcast "https://github.com/Toinane/container-ps/releases.atom"
   name "Container PS"
+  desc "App to show all docker images"
   homepage "https://github.com/Toinane/container-ps"
 
   app "Container PS.app"

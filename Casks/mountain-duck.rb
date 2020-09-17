@@ -1,10 +1,11 @@
 cask "mountain-duck" do
-  version "4.1.0.16877"
-  sha256 "0616fefd02d86f8246a3ea5bcc529fd07bf3e88504bb83c28181a4fad9e1af3a"
+  version "4.2.1.17080"
+  sha256 "81831f928d0d82f448b8b02c8541ee24e82f9accdc8de2ec4c85c3400851d947"
 
   url "https://dist.mountainduck.io/Mountain%20Duck-#{version}.zip"
   appcast "https://version.mountainduck.io/#{version.major}/macos/changelog.rss"
   name "Mountain Duck"
+  desc "Mounts servers and cloud storages as a disk on the desktop"
   homepage "https://mountainduck.io/"
 
   auto_updates true

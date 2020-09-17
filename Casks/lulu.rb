@@ -6,18 +6,19 @@ cask "lulu" do
   url "https://bitbucket.org/objective-see/deploy/downloads/LuLu_#{version}.zip"
   appcast "https://objective-see.com/products/changelogs/LuLu.txt"
   name "LuLu"
+  desc "Open-source firewall to block unknown outgoing connections"
   homepage "https://objective-see.com/products/lulu.html"
 
   depends_on macos: ">= :sierra"
 
   installer script: {
-    executable: "#{staged_path}/Lulu Installer.app/Contents/MacOS/LuLu Installer",
+    executable: "#{staged_path}/LuLu Installer.app/Contents/MacOS/LuLu Installer",
     args:       ["-install"],
     sudo:       true,
   }
 
   uninstall script: {
-    executable: "#{staged_path}/Lulu Installer.app/Contents/MacOS/LuLu Installer",
+    executable: "#{staged_path}/LuLu Installer.app/Contents/MacOS/LuLu Installer",
     args:       ["-uninstall"],
     sudo:       true,
   }

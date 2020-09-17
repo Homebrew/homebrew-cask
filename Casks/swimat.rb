@@ -5,6 +5,7 @@ cask "swimat" do
   url "https://github.com/Jintin/Swimat/releases/download/v#{version}/Swimat.zip"
   appcast "https://github.com/Jintin/Swimat/releases.atom"
   name "Swimat"
+  desc "Xcode formatter plug-in for Swift code"
   homepage "https://github.com/Jintin/Swimat"
 
   app "Swimat.app"

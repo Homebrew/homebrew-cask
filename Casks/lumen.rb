@@ -5,6 +5,7 @@ cask "lumen" do
   url "https://github.com/anishathalye/lumen/releases/download/v#{version}/Lumen.zip"
   appcast "https://github.com/anishathalye/lumen/releases.atom"
   name "Lumen"
+  desc "Magic auto brightness based on screen contents :bulb:"
   homepage "https://github.com/anishathalye/lumen"
 
   app "Lumen.app"

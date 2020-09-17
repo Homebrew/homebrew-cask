@@ -5,6 +5,7 @@ cask "dolphin" do
   url "https://dl-mirror.dolphin-emu.org/#{version}/dolphin-#{version}.dmg"
   appcast "https://github.com/dolphin-emu/dolphin/releases.atom"
   name "Dolphin"
+  desc "Emulator to play GameCube & Wii games"
   homepage "https://dolphin-emu.org/"
 
   app "Dolphin.app"

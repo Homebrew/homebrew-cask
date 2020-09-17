@@ -6,6 +6,7 @@ cask "tidepool-uploader" do
   url "https://github.com/tidepool-org/chrome-uploader/releases/download/v#{version}/tidepool-uploader-#{version}.dmg/"
   appcast "https://github.com/tidepool-org/chrome-uploader/releases.atom"
   name "Tidepool Uploader"
+  desc "Uploads diabetes device data to Tidepool's backend"
   homepage "https://tidepool.org/"
 
   app "Tidepool Uploader.app"

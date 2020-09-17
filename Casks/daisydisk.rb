@@ -1,10 +1,11 @@
 cask "daisydisk" do
-  version "4.10"
-  sha256 "fdf7addeaf07c873337823c58a22b1d70e51f6ed3258b4e8013a05bb8d955a1c"
+  version "4.11"
+  sha256 "c1014689dd105494fba0b66a315fff21aa87758f383d02c79eef6e3b72cf1756"
 
   url "https://www.daisydiskapp.com/downloads/DaisyDisk.zip"
   appcast "https://daisydiskapp.com/downloads/appcastReleaseNotes.php?appEdition=Standard&osVersion=10.15"
   name "DaisyDisk"
+  desc "Disk space visualizer"
   homepage "https://daisydiskapp.com/"
 
   auto_updates true

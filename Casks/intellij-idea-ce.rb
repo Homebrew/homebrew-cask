@@ -1,11 +1,12 @@
 cask "intellij-idea-ce" do
-  version "2020.2,202.6397.94"
-  sha256 "b67a92d4e4407952fc7b650dc86c82e8fae17e5d242172ed4eaea2dce98c6205"
+  version "2020.2.2,202.7319.50"
+  sha256 "fc413ca9c2c5c7d86d8a59c4b3e3f7066fcc51e1ecc8086adc0e7e507f6220c0"
 
   url "https://download.jetbrains.com/idea/ideaIC-#{version.before_comma}.dmg"
   appcast "https://data.services.jetbrains.com/products/releases?code=IIC&latest=true&type=release"
   name "IntelliJ IDEA Community Edition"
   name "IntelliJ IDEA CE"
+  desc "IDE for Java development - community edition"
   homepage "https://www.jetbrains.com/idea/"
 
   auto_updates true

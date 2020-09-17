@@ -5,6 +5,7 @@ cask "otx" do
   url "https://github.com/x43x61x69/otx/releases/download/v#{version.before_comma}/otx_#{version.after_comma}.zip"
   appcast "https://github.com/x43x61x69/otx/releases.atom"
   name "otx"
+  desc "Mach-O disassembler"
   homepage "https://github.com/x43x61x69/otx"
 
   auto_updates true

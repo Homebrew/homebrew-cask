@@ -1,11 +1,12 @@
 cask "visual-studio-code" do
-  version "1.48.0"
-  sha256 "dda20ac032d78628cde395546ad29447d8810cd2fd1507a459f132e3383ab9ee"
+  version "1.49.0"
+  sha256 "c0e1e192b2981a046ab497f8eb2c5d7d3f39f9b0d44ca94f267608799bd6f51f"
 
   url "https://update.code.visualstudio.com/#{version}/darwin/stable"
   appcast "https://update.code.visualstudio.com/api/update/darwin/stable/VERSION"
   name "Microsoft Visual Studio Code"
   name "VS Code"
+  desc "Open-source code editor"
   homepage "https://code.visualstudio.com/"
 
   auto_updates true

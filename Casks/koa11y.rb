@@ -6,6 +6,7 @@ cask "koa11y" do
   url "https://github.com/open-indy/Koa11y/releases/download/v#{version}/OSX_Koa11y_#{version}.zip"
   appcast "https://github.com/open-indy/Koa11y/releases.atom"
   name "Koa11y"
+  desc "Easily check for website accessibility issues"
   homepage "https://open-indy.github.io/Koa11y/"
 
   app "Koa11y.app"

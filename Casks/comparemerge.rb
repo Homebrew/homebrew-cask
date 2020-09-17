@@ -5,6 +5,7 @@ cask "comparemerge" do
   url "https://downloads.sourceforge.net/comparemergenosandbox/CompareMerge#{version.before_comma}#{version.after_comma}.zip"
   appcast "https://sourceforge.net/projects/comparemergenosandbox/rss"
   name "CompareMerge"
+  desc "Tool for file comparison and merging text-like files"
   homepage "https://sourceforge.net/projects/comparemergenosandbox/"
 
   app "CompareMerge#{version.before_comma}#{version.after_comma}/CompareMerge#{version.before_comma}#{version.after_comma}.app"
