@@ -4,6 +4,7 @@ cask "jetbrains-space" do
 
   url "https://download.jetbrains.com/space/jetbrains-space.dmg"
   name "JetBrains Space"
+  desc "macOS client application for JetBrains Space"
   homepage "https://www.jetbrains.com/space/"
 
   app "JetBrains Space.app"
