@@ -8,6 +8,7 @@ cask "whichspace" do
   desc "Active space menu bar icon"
   homepage "https://github.com/gechr/WhichSpace"
 
+  auto_updates true
   depends_on macos: "> :yosemite"
 
   app "WhichSpace.app"
@@ -16,6 +17,7 @@ cask "whichspace" do
 
   zap trash: [
     "~/Library/Caches/io.gechr.WhichSpace",
+    "~/Library/Cookies/io.gechr.WhichSpace.binarycookies",
     "~/Library/Preferences/io.gechr.WhichSpace.plist",
     "~/Library/Saved Application State/io.gechr.WhichSpace.savedState",
   ]

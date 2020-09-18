@@ -5,6 +5,7 @@ cask "bingpaper" do
   url "https://github.com/pengsrc/BingPaper/releases/download/v#{version.before_comma}/BingPaper.v#{version.before_comma}.build.#{version.after_comma}.zip"
   appcast "https://github.com/pengsrc/BingPaper/releases.atom"
   name "BingPaper"
+  desc "Use the Bing daily photo as your wallpaper"
   homepage "https://github.com/pengsrc/BingPaper"
 
   depends_on macos: ">= :catalina"
