@@ -1,21 +1,35 @@
 name: Rebase Pull Request
 
 on:
-  issue_comment:
-    types: [created]
+  repository_dispatch:
+    types: [rebase-command]
 
 jobs:
   rebase_pull_request:
     name: Rebase Pull Request
-    if: github.event.issue.pull_request != '' && github.event.comment.author_association == 'MEMBER' && contains(github.event.comment.body, '@BrewTestBot rebase')
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Pull Request
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-          persist-credentials: false
       - name: Rebase Pull Request
-        uses: cirrus-actions/rebase@b91cdc98c0c0d3c4673647a74a68731bf3c29276
-        env:
-          GITHUB_TOKEN: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+        uses: peter-evans/rebase@4a740021d5fa2d93c53642380fde7f28b08a1fcf
+        id: rebase
+        with:
+          token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+          head: ${{ github.event.client_payload.pull_request.head.label }}
+
+      - name: Add 👍 Reaction
+        if: always() && steps.rebase.outputs.rebased-count == 1
+        uses: peter-evans/create-or-update-comment@41f3207a84f33bd70388036109082784d059dcaa
+        with:
+          token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+          repository: ${{ github.event.client_payload.github.payload.repository.full_name }}
+          comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
+          reaction-type: '+1'
+
+      - name: Add 👎 Reaction
+        if: always() && steps.rebase.outputs.rebased-count != 1
+        uses: peter-evans/create-or-update-comment@41f3207a84f33bd70388036109082784d059dcaa
+        with:
+          token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+          repository: ${{ github.event.client_payload.github.payload.repository.full_name }}
+          comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
+          reaction-type: '-1'
