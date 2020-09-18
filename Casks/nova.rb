@@ -13,7 +13,5 @@ cask "nova" do
   app "Nova.app"
   binary "#{appdir}/Nova.app/Contents/MacOS/Nova", target: "nova"
 
-  zap trash: [
-    "~/Library/Application Support/Nova",
-  ]
+  zap trash: "~/Library/Application Support/Nova"
 end
