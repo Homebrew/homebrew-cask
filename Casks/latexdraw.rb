@@ -9,8 +9,4 @@ cask "latexdraw" do
   homepage "https://latexdraw.sourceforge.io/"
 
   app "LaTeXDraw.app"
-
-  caveats do
-    depends_on_java "8"
-  end
 end
