@@ -8,6 +8,8 @@ cask "blueharvest" do
   name "BlueHarvest"
   homepage "https://zeroonetwenty.com/blueharvest/"
 
+  depends_on macos: ">= :catalina"
+
   app "BlueHarvest.app"
 
   uninstall delete:    "/Library/PrivilegedHelperTools/com.zeroonetwenty.BlueHarvestHelper#{version.major}",
