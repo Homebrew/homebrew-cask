@@ -5,7 +5,7 @@ cask "trackers-away" do
   url "https://github.com/tim-hub/TrackersAway/releases/download/v#{version}/Trackers-Away-#{version}.dmg"
   appcast "https://github.com/tim-hub/TrackersAway/releases.atom"
   name "Trackers Away"
-  desc "The best cross-platform ads and trackers blocker and hosts manager."
+  desc "The best cross-platform ads and trackers blocker and hosts manager"
   homepage "https://github.com/tim-hub/TrackersAway/"
 
   app "Trackers Away.app"
