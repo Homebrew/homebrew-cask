@@ -5,7 +5,7 @@ cask "copytranslator" do
   # github.com/CopyTranslator/CopyTranslator/ was verified as official when first introduced to the cask
   url "https://github.com/CopyTranslator/CopyTranslator/releases/download/v#{version}/copytranslator-#{version}.dmg"
   appcast "https://github.com/CopyTranslator/CopyTranslator/releases.atom"
-  name "copytranslator"
+  name "CopyTranslator"
   desc "复制即翻译的外文辅助阅读翻译解决方案"
   homepage "https://copytranslator.github.io/"
   
