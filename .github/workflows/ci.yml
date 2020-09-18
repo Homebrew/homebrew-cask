@@ -58,6 +58,13 @@ jobs:
             fi
           fi
 
+          if ! rm /usr/local/share/man/man1/al.1 || \
+             ! sudo rm /etc/paths.d/mono-commands || \
+             ! sudo rm -r /Library/Frameworks/Mono.framework || \
+             ! sudo pkgutil --forget com.xamarin.mono-MDK.pkg; then
+            echo '::warning::Uninstalling Mono is no longer necessary.'
+          fi
+
           if ! rm /usr/local/bin/dotnet; then
             echo '::warning::Removing `dotnet` symlink is no longer necessary.'
           fi
