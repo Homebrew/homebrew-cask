@@ -38,9 +38,6 @@ jobs:
       matrix:
         include: ${{ fromJson(needs.generate-matrix.outputs.matrix) }}
     steps:
-      - run: ls -al /usr/local/share/man/man1/al.1
-      - run: brew ls
-      - run: brew ls --casks
       - name: Set up Homebrew
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
@@ -59,6 +56,13 @@ jobs:
             if ! rm -r '/Applications/Visual Studio.app'; then
               echo '::warning::Removing Visual Studio is no longer necessary.'
             fi
+          fi
+
+          if ! rm /usr/local/share/man/man1/al.1 || \
+             ! sudo rm /etc/paths.d/mono-commands || \
+             ! sudo rm -r /Library/Frameworks/Mono.framework || \
+             ! sudo pkgutil --forget com.xamarin.mono-MDK.pkg; then
+            echo '::warning::Uninstalling Mono is no longer necessary.'
           fi
 
           if ! rm /usr/local/bin/dotnet; then
