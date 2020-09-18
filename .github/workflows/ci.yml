@@ -39,6 +39,8 @@ jobs:
         include: ${{ fromJson(needs.generate-matrix.outputs.matrix) }}
     steps:
       - run: ls -al /usr/local/share/man/man1/al.1
+      - run: brew ls
+      - run: brew ls --casks
       - name: Set up Homebrew
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
