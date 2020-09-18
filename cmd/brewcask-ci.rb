@@ -92,7 +92,7 @@ module Cask
 
             after = Check.all
 
-            errors = Check.errors(before, after)
+            errors = Check.errors(before, after, cask: cask)
 
             next success if errors.empty?
 

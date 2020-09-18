@@ -199,26 +199,21 @@ jobs:
       - name: Compare installed and running apps and services with snapshot
         run: |
           brew ruby -r "$(brew --repository homebrew/cask)/cmd/lib/check.rb" <<'EOF'
+            require "cask/cask_loader"
+            require "utils/github/actions"
+
             before = JSON.parse(<<~'EOS').transform_keys(&:to_sym)
               ${{ steps.snapshot.outputs.before }}
             EOS
             after = Check.all
 
-            errors = Check.errors(before, after)
+            cask = Cask::CaskLoader.load('${{ matrix.cask.path }}')
+            errors = Check.errors(before, after, cask: cask)
 
             errors.each do |error|
               onoe error
+              puts GitHub::Actions::Annotation.new(:error, error, file: '${{ matrix.cask.path }}')
             end
-
-            error = errors.map { |e|
-              Tty.strip_ansi(e)
-                .gsub(/\r/, '%0D')
-                .gsub(/\n/, '%0A')
-                .gsub(/]/, '%5D')
-                .gsub(/;/, '%3B')
-            }.join("\n\n")
-
-            puts "::error file=${{ matrix.cask.path }}::#{error}"
 
             exit 1 if errors.any?
           EOF
