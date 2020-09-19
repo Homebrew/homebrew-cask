@@ -6,7 +6,7 @@ cask "copytranslator" do
   url "https://github.com/CopyTranslator/CopyTranslator/releases/download/v#{version}/copytranslator-#{version}.dmg"
   appcast "https://github.com/CopyTranslator/CopyTranslator/releases.atom"
   name "CopyTranslator"
-  desc "A tool that translates text in real-time while copying"
+  desc "Tool that translates text in real-time while copying"
   homepage "https://copytranslator.github.io/"
 
   depends_on macos: ">= :sierra"
