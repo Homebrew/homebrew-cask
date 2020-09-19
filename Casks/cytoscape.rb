@@ -20,6 +20,6 @@ cask "cytoscape" do
   }
 
   caveats do
-    depends_on_java
+    depends_on_java "11"
   end
 end
