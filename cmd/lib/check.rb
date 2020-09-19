@@ -127,13 +127,13 @@ module Check
                         .added
                         .reject { |id| id.match?(/\.\d+\Z/) }
 
-    if (running_apps - uninstall_directives.fetch(:quit, [])).any?
+    if (running_apps - Array(uninstall_directives[:quit])).any?
       message = "Some applications are still running, add them to #{Formatter.identifier("uninstall quit:")}\n"
       message += running_apps.join("\n")
       errors << message
     end
 
-    if (loaded_launchjobs - uninstall_directives.fetch(:launchctl, [])).any?
+    if (loaded_launchjobs - Array(uninstall_directives[:launchctl])).any?
       message = "Some launch jobs were not unloaded, add them to #{Formatter.identifier("uninstall launchctl:")}\n"
       message += loaded_launchjobs.join("\n")
       errors << message
