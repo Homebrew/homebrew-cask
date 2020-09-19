@@ -58,6 +58,13 @@ jobs:
             fi
           fi
 
+          if ! rm /usr/local/share/man/man1/al.1 || \
+             ! sudo rm /etc/paths.d/mono-commands || \
+             ! sudo rm -r /Library/Frameworks/Mono.framework || \
+             ! sudo pkgutil --forget com.xamarin.mono-MDK.pkg; then
+            echo '::warning::Uninstalling Mono is no longer necessary.'
+          fi
+
           if ! rm /usr/local/bin/dotnet; then
             echo '::warning::Removing `dotnet` symlink is no longer necessary.'
           fi
@@ -80,11 +87,12 @@ jobs:
           restore-keys: ${{ runner.os }}-rubygems-
 
       - name: Install Homebrew Gems
+        id: gems
         run: brew install-bundler-gems
 
       - name: Run brew cask style
         run: brew cask style
-        if: success() && !matrix.cask
+        if: always() && steps.gems.outcome == 'success' && !matrix.cask
 
       - name: Run brew cask audit ${{ matrix.cask.token }}
         run: |
@@ -95,7 +103,7 @@ jobs:
 
           brew cask audit ${{ join(matrix.audit_args, ' ') }} '${{ matrix.cask.path }}'
         timeout-minutes: 30
-        if: always() && !matrix.skip_audit
+        if: always() && steps.gems.outcome == 'success' && !matrix.skip_audit
 
       - name: Gather cask information
         id: info
@@ -134,7 +142,7 @@ jobs:
             puts "::set-output name=formula_conflicts::#{JSON.generate(formula_conflicts)}"
             puts "::set-output name=formula_dependencies::#{JSON.generate(formula_dependencies)}"
           EOF
-        if: always() && matrix.cask
+        if: always() && steps.gems.outcome == 'success' && matrix.cask
 
       - name: Uninstall conflicting formulae
         run: |
@@ -191,26 +199,21 @@ jobs:
       - name: Compare installed and running apps and services with snapshot
         run: |
           brew ruby -r "$(brew --repository homebrew/cask)/cmd/lib/check.rb" <<'EOF'
+            require "cask/cask_loader"
+            require "utils/github/actions"
+
             before = JSON.parse(<<~'EOS').transform_keys(&:to_sym)
               ${{ steps.snapshot.outputs.before }}
             EOS
             after = Check.all
 
-            errors = Check.errors(before, after)
+            cask = Cask::CaskLoader.load('${{ matrix.cask.path }}')
+            errors = Check.errors(before, after, cask: cask)
 
             errors.each do |error|
               onoe error
+              puts GitHub::Actions::Annotation.new(:error, error, file: '${{ matrix.cask.path }}')
             end
-
-            error = errors.map { |e|
-              Tty.strip_ansi(e)
-                .gsub(/\r/, '%0D')
-                .gsub(/\n/, '%0A')
-                .gsub(/]/, '%5D')
-                .gsub(/;/, '%3B')
-            }.join("\n\n")
-
-            puts "::error file=${{ matrix.cask.path }}::#{error}"
 
             exit 1 if errors.any?
           EOF
