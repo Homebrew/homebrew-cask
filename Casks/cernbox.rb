@@ -4,7 +4,7 @@ cask "cernbox" do
 
   url "https://cernbox.cern.ch/cernbox/doc/MacOSX/cernbox-#{version}.pkg"
   name "CERNBox Client"
-  desc "Acccess to cloud storage for users with a regular CERN computing account"
+  desc "Cloud storage for CERN users"
   homepage "https://cernbox.web.cern.ch/cernbox/"
 
   pkg "cernbox-#{version}.pkg"
