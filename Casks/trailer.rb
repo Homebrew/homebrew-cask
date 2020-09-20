@@ -1,6 +1,6 @@
 cask "trailer" do
-  version "1.7.0"
-  sha256 "8dd50193a29e011ea1a190f6eb6ac5ed68a9078d32e09a10563786b238b8e187"
+  version "1.7.1"
+  sha256 "74139d6ccde6368d5d549bbb7517f796eb3913192a4117a60a3209225ba4a84f"
 
   # github.com/ptsochantaris/trailer/ was verified as official when first introduced to the cask
   url "https://github.com/ptsochantaris/trailer/releases/download/#{version}/Trailer-#{version.no_dots}.zip"
