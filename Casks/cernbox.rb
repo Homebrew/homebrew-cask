@@ -10,14 +10,14 @@ cask "cernbox" do
 
   pkg "cernbox-#{version}.pkg"
 
-  uninstall pkgutil: "ch.cern.cernbox"
-
-  uninstall login_item: "cernbox"
-
-  # Warning: Application 'ch.cern.cernbox' did not quit. Enable Automation Access for “Terminal > System Events” in “System Preferences > Security > Privacy > Automation” if you haven't already.
   # uninstall quit: [ "ch.cern.cernbox" ]
-
+  # The above did not work with:
+  # Warning: Application 'ch.cern.cernbox' did not quit. Enable Automation Access for “Terminal > System Events” in “System Preferences > Security > Privacy > Automation” if you haven't already.
+  
   uninstall signal: [
                       ['TERM', "ch.cern.cernbox"],
-                    ]
+                    ],
+            login_item: "cernbox",
+            pkgutil: "ch.cern.cernbox"
+  
 end
