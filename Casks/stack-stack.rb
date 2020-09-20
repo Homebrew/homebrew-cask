@@ -4,7 +4,7 @@ cask "stack-stack" do
 
   # stack-v1.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://stack-v1.s3.amazonaws.com/builds/prod/Stack-#{version}.dmg"
-  appcast "https://stack-v1.s3.amazonaws.com/"
+  appcast "https://stack-v1.s3.amazonaws.com/builds/prod/latest-mac.yml"
   name "Stack"
   homepage "https://stackers.app/"
 
