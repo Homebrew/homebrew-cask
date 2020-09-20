@@ -1,5 +1,5 @@
 cask "klayout" do
-  version "0.26.6"
+  version "0.26.7"
 
   if MacOS.version <= :high_sierra
     sha256 "a5153ebc166991432076ae3e98d9ed5a2429d9dae959d44b05fe0aeaa51df0c9"
@@ -12,7 +12,7 @@ cask "klayout" do
     # klayout.org/ was verified as official when first introduced to the cask
     url "https://www.klayout.org/downloads/MacOS/ST-klayout-#{version}-macOS-Mojave-1-qt5MP-RsysPsys.dmg"
   else
-    sha256 "a07f22090d76c2d1b7f16d43d6e7f124927e0a70fdab3707069a5fb97a477a47"
+    sha256 "168ea785124be810c8dc54455648165646a7ae1bfb71fe8bb8858cffe5a433ad"
 
     # klayout.org/ was verified as official when first introduced to the cask
     url "https://www.klayout.org/downloads/MacOS/ST-klayout-#{version}-macOS-Catalina-1-qt5MP-RsysPsys.dmg"
