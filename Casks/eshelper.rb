@@ -9,7 +9,7 @@ cask "eshelper" do
           must_contain: version.after_comma
   name "Eshelper"
   name "西语助手"
-  desc "Spanish Learning Helper"
+  desc "Spanish dictionary"
   homepage "https://www.eudic.net/v4/es/app/eshelper/"
 
   app "Eudic_es.app"
