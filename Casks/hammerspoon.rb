@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 cask "hammerspoon" do
-  version "0.9.78"
-  sha256 "a06a8a78c5fb43a72550d1162fa702a7f383b09ea638c44062f83026dcd2e5ff"
+  version "0.9.79"
+  sha256 "5a67ce08a6fe13a820242c4f94d051c76c6b5ea3f65596653dfe834492896132"
 
   # github.com/Hammerspoon/hammerspoon/ was verified as official when first introduced to the cask
   url "https://github.com/Hammerspoon/hammerspoon/releases/download/#{version}/Hammerspoon-#{version}.zip"
