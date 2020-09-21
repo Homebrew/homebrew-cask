@@ -1,0 +1,42 @@
+name: Cache
+
+on:
+  push:
+    branches:
+      - master
+      - debug-cache
+
+jobs:
+  cancel-previous-runs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cancel Previous Runs
+        uses: n1hility/cancel-previous-runs@953c92201f368370112ea2754545cb4468d89f12
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+  update:
+    if: startsWith(github.repository, 'Homebrew/')
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest]
+    steps:
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+        with:
+          test-bot: false
+
+      - name: Cache Homebrew Gems
+        id: cache
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.set-up-homebrew.outputs.gems-path }}
+          key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
+          restore-keys: ${{ runner.os }}-rubygems-
+
+      - name: Install Homebrew Gems
+        id: gems
+        run: brew install-bundler-gems
+        if: steps.cache.outputs.cache-hit != 'true'
