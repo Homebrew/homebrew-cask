@@ -9,6 +9,7 @@ cask "nova" do
   homepage "https://nova.app/"
 
   auto_updates true
+  depends_on macos: ">= :mojave"
 
   app "Nova.app"
   binary "#{appdir}/Nova.app/Contents/MacOS/Nova", target: "nova"
