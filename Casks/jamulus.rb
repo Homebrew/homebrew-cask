@@ -1,6 +1,6 @@
 cask "jamulus" do
-  version "3.5.10"
-  sha256 "4f891976d3499f4511752c625b48e05751d561aaca7bed1601240560e81de1c8"
+  version "3.5.11"
+  sha256 "6aed7335fc97f709e5e494d5a1ae909203026a33011dd6d88c76ce3d8dac025e"
 
   url "https://downloads.sourceforge.net/llcon/Jamulus-#{version}-installer-mac.dmg"
   appcast "https://sourceforge.net/projects/llcon/rss"
