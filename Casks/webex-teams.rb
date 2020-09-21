@@ -2,7 +2,7 @@ cask "webex-teams" do
   version :latest
   sha256 :no_check
 
-  url "https://www.webex.com/downloads/WebexTeams.dmg"
+  url "https://binaries.webex.com/WebexTeamsDesktop-MACOS-Gold/WebexTeams.dmg" 
   name "Webex Teams"
   homepage "https://www.webex.com/"
 
