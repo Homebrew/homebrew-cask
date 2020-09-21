@@ -13,7 +13,6 @@ cask "wpsoffice-cn" do
   desc "All-in-one office suite"
   homepage "https://www.wps.cn/product/wpsmac/"
 
-  auto_updates true
   conflicts_with cask: "wpsoffice"
   depends_on macos: ">= :sierra"
 
