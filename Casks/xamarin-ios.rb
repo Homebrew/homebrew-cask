@@ -1,6 +1,6 @@
 cask "xamarin-ios" do
-  version "13.20.2.2"
-  sha256 "20b2f82b14386723e0762d07020995fd635be7df0429fa3a6d47770cd1935902"
+  version "14.0.0.0"
+  sha256 "b53974838ed67b7ee329837f742233542950a4760c698fa692a4b5b6c3f34f97"
 
   url "https://dl.xamarin.com/MonoTouch/Mac/xamarin.ios-#{version}.pkg"
   appcast "https://github.com/xamarin/xamarin-macios/releases.atom"
