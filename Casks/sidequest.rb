@@ -6,6 +6,7 @@ cask "sidequest" do
   url "https://github.com/SideQuestVR/SideQuest/releases/download/v#{version}/SideQuest-#{version}.dmg"
   appcast "https://github.com/SideQuestVR/SideQuest/releases.atom"
   name "SideQuest"
+  desc "Virtual reality content platform"
   homepage "https://sidequestvr.com/"
 
   depends_on macos: ">= :sierra"
