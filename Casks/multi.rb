@@ -5,7 +5,7 @@ cask "multi" do
   url "https://github.com/hkgumbs/multi/releases/download/v#{version}/Multi.#{version}.dmg"
   appcast "https://github.com/hkgumbs/multi/releases.atom"
   name "Multi"
-  desc "Create a custom, lightweight app from a group of websites"
+  desc "Create apps from groups of websites"
   homepage "https://github.com/hkgumbs/multi"
 
   app "Multi.app"
