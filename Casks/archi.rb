@@ -5,18 +5,10 @@ cask "archi" do
   url "https://www.archimatetool.com/downloads/71cb57dd/Archi-Mac-#{version}.zip"
   appcast "https://github.com/archimatetool/archi/releases.atom"
   name "Archimate modeling"
-  desc "Open source modelling toolkit to create ArchiMate 3.1 models and sketches"
+  desc "Open source modelling toolkit to create ArchiMate 3.1 and sketches"
   homepage "https://www.archimatetool.com/"
 
   auto_updates true
 
   app "Archi"
-
-  def caveats
-    <<~EOS
-      To remove application from quarantine execute the following command
-        xattr -r -d com.apple.quarantine /Applications/Archi/Archi.app
-      Or install cask using --no-quarantine option
-    EOS
-  end
 end
