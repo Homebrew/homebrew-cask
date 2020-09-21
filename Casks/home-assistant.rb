@@ -9,8 +9,9 @@ cask "home-assistant" do
   desc "Companion app for Home Assistant home automation software"
   homepage "https://companion.home-assistant.io/"
 
-  app "Home Assistant.app"
   depends_on macos: ">= :catalina"
+
+  app "Home Assistant.app"
 
   zap trash: [
     "~/Library/Application Scripts/io.robbie.HomeAssistant",
