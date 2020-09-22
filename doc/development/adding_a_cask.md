@@ -246,7 +246,7 @@ For unrelated Apps that share a name, the most popular one (usually the one alre
 
 ### Unofficial, Vendorless, and Walled Builds
 
-We do not accept these casks since they offer a higher-than-normal security risk. [alehouse/homebrew-unofficial](https://github.com/alehouse/homebrew-unofficial) is a sister repo where you may wish to submit your cask.
+We do not accept these casks since they offer a higher-than-normal security risk.
 
 ### Fonts
 
