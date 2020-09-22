@@ -1,4 +1,6 @@
 cask 'gitx' do
+  desc "GitX is an OS X (MacOS) native graphical client for the git version control system."
+
   if MacOS.version <= :snow_leopard
     version '0.14.81'
     sha256 'ba61b4b84cb613a6196e6bd1d3102ad460ec0645a885b1cb94132e5244e1d330'
