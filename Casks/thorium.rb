@@ -4,8 +4,9 @@ cask "thorium" do
 
   # github.com/edrlab/thorium-reader was verified as official when first introduced to the cask
   url "https://github.com/edrlab/thorium-reader/releases/download/v#{version}/Thorium-#{version}.dmg"
-  appcast "https://github.com/edrlab/thorium-reader/releases"
+  appcast "https://github.com/edrlab/thorium-reader/releases.atom"
   name "Thorium Reader"
+  desc "Epub reader"
   homepage "https://www.edrlab.org/software/thorium-reader/"
 
   app "Thorium.app"
