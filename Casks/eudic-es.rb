@@ -8,8 +8,9 @@ cask "eudic-es" do
   appcast "https://www.eudic.net/v4/es/app/download",
           must_contain: version.after_comma
   name "Eshelper"
+  name "Spanish Assistant"
   name "西语助手"
-  desc "Spanish Dictionary"
+  desc "Spanish dictionary"
   homepage "https://www.eudic.net/v4/es/app/download"
 
   app "Eudic_es.app"
