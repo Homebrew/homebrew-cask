@@ -40,6 +40,6 @@ jobs:
           token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
           merge-method: squash
           squash-title: true
-          do-not-merge-labels: 'do not merge'
+          do-not-merge-labels: 'do not merge,awaiting maintainer feedback,awaiting user reply'
           pull-request: ${{ github.event.inputs.pull-request }}
           dry-run: ${{ github.ref == 'refs/heads/debug-automerge' }}
