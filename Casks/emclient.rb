@@ -1,9 +1,9 @@
 cask "emclient" do
-  version "8.0.2958.0"
+  version "8.0.2958"
   sha256 "236ced99ef79c3d4973d4a9a69bba03a7d0e29586035823f20f8f70bf2426d83"
 
-  url "https://www.emclient.com/dist/latest/setup.pkg"
-  appcast "https://www.emclient.com/release-history?os=mac"
+  url "https://cdn-dist.emclient.com/dist/v#{version}_Mac/setup.pkg"
+  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.emclient.com/dist/latest/setup.pkg"
   name "eM Client"
   desc "Email client"
   homepage "https://www.emclient.com/"
