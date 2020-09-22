@@ -5,10 +5,10 @@ cask "archi" do
   url "https://www.archimatetool.com/downloads/71cb57dd/Archi-Mac-#{version}.zip"
   appcast "https://github.com/archimatetool/archi/releases.atom"
   name "Archimate modeling"
-  desc "Open source modelling toolkit to create ArchiMate 3.1 and sketches"
+  desc "Toolkit for the ArchiMate modelling language"
   homepage "https://www.archimatetool.com/"
 
   auto_updates true
 
-  app "Archi"
+  suite "Archi"
 end
