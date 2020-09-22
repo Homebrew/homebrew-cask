@@ -10,7 +10,7 @@ cask "archi" do
 
   auto_updates true
 
-  app "Archi.app"
+  app "Archi/Archi.app"
 
   zap trash: "~/Library/Application Support/Archi4"
 end
