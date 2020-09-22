@@ -10,9 +10,7 @@ cask "archi" do
 
   auto_updates true
 
-  suite "Archi"
+  app "Archi.app"
 
-  zap trash: [
-    "~/Library/Application Support/Archi4",
-  ]
+  zap trash: "~/Library/Application Support/Archi4"
 end
