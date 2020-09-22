@@ -1,6 +1,6 @@
 cask "realm-studio" do
-  version "3.11.0"
-  sha256 "cb849642b1da4a690bd2c50d2be2bf67abc5e343f2792f31bbd3807dfd5580d7"
+  version "5.0.0"
+  sha256 "188c49a42b5405b5083881c7c951ccd44f0e12d788d961f0a3633afdbdc66c74"
 
   url "https://static.realm.io/downloads/realm-studio/Realm%20Studio-#{version}-mac.zip"
   appcast "https://github.com/realm/realm-studio/releases.atom"
