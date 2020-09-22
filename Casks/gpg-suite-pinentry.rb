@@ -5,6 +5,7 @@ cask "gpg-suite-pinentry" do
   url "https://releases.gpgtools.org/GPG_Suite-#{version}.dmg"
   appcast "https://gpgtools.org/releases/gka/appcast.xml"
   name "GPG Suite Pinentry"
+  desc "A GUI pinentry program from the GPG Suite for GPG"
   homepage "https://gpgtools.org/"
 
   auto_updates true
