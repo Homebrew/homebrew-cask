@@ -1,6 +1,6 @@
 cask "nova" do
-  version "1.0"
-  sha256 "c5414f5cf6888a8c53f91b53d5bdd1cd246e31aafad3c3bec381c10ef6a44a94"
+  version "1.1"
+  sha256 "9edacf86441d704bce464637bc0d3e2c5018baa4ef2b13b4f78f2a072752166c"
 
   # panic-c157.kxcdn.com/ was verified as official when first introduced to the cask
   url "https://panic-c157.kxcdn.com/nova/Nova%20#{version}.zip"
