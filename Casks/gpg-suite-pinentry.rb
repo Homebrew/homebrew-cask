@@ -109,7 +109,7 @@ cask "gpg-suite-pinentry" do
     files_in_usr_local
 
     <<~EOS
-      You may need to set "pinentry-gram" in `~/.gnupg/gpg-agent.conf` as follows:
+      You may need to set "pinentry-program" in `~/.gnupg/gpg-agent.conf` as follows:
 
         pinentry-program /usr/local/MacGPG2/libexec/pinentry-mac.app/Contents/MacOS/pinentry-mac
     EOS
