@@ -5,14 +5,14 @@ cask "db-browser-for-sqlite" do
   # github.com/sqlitebrowser/sqlitebrowser/ was verified as official when first introduced to the cask
   url "https://github.com/sqlitebrowser/sqlitebrowser/releases/download/v#{version}/DB.Browser.for.SQLite-#{version}.dmg"
   appcast "https://github.com/sqlitebrowser/sqlitebrowser/releases.atom"
-  name "SQLite Database Browser"
+  name "DB Browser for SQLite"
   desc "Database browser for SQLite (DB4S) project"
   homepage "https://sqlitebrowser.org/"
 
   app "DB Browser for SQLite.app"
 
   zap trash: [
-    "~/Library/Preferences/net.sourceforge.sqlitebrowser.plist",
+    "~/Library/Preferences/com.sqlitebrowser.sqlitebrowser.plist",
     "~/Library/Saved Application State/net.sourceforge.sqlitebrowser.savedState",
   ]
 end
