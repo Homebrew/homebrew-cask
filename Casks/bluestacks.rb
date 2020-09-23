@@ -23,7 +23,10 @@ cask "bluestacks" do
     "com.BlueStacks.AppPlayer.UninstallWatcher",
     "com.BlueStacks.AppPlayer.Updater",
   ],
-            delete:    "/Library/PrivilegedHelperTools/com.BlueStacks.AppPlayer.bstservice_helper"
+            delete:    [
+              "#{appdir}/BlueStacks.app",
+              "/Library/PrivilegedHelperTools/com.BlueStacks.AppPlayer.bstservice_helper",
+            ]
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bluestacks.bluestacks.sfl*",
