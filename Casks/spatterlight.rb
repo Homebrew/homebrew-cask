@@ -6,7 +6,10 @@ cask "spatterlight" do
   url "https://github.com/angstsmurf/spatterlight/releases/download/v#{version}/Spatterlight_Catalina.zip"
   appcast "https://github.com/angstsmurf/spatterlight/releases.atom"
   name "Spatterlight"
+  desc "Play most kinds of interactive fiction game files"
   homepage "http://ccxvii.net/spatterlight/"
+
+  depends_on macos: ">= :catalina"
 
   app "Spatterlight.app"
 end
