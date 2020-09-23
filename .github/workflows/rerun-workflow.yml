@@ -17,12 +17,15 @@ on:
 jobs:
   rerun-workflow:
     if: >
-      github.event.label.name == 'ci-requeue' ||
-      github.event.label.name == 'ci-retry' ||
-      github.event.label.name == 'ci-skip-appcast' ||
-      github.event.label.name == 'ci-skip-install' ||
-      github.event.label.name == 'ci-syntax-only' ||
-      !github.event.label.name
+      startsWith(github.repository, "Homebrew/") && 
+      (
+        github.event.label.name == 'ci-requeue' ||
+        github.event.label.name == 'ci-retry' ||
+        github.event.label.name == 'ci-skip-appcast' ||
+        github.event.label.name == 'ci-skip-install' ||
+        github.event.label.name == 'ci-syntax-only' ||
+        !github.event.label.name
+      )
     runs-on: ubuntu-latest
     steps:
       - name: Re-run CI workflow
