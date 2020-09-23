@@ -1,6 +1,6 @@
 cask "native-access" do
-  version "1.12.1.129"
-  sha256 "21d7f6cde1a173c12392e323bf8d23e51460f389e38552c367bb8ab41d61f20e"
+  version "1.12.2.132"
+  sha256 "2154793ab479cbd08737916c5cbfe1087cda7b20e04c63a1186c4397218b5a41"
 
   url "https://native-instruments.com/fileadmin/downloads/Native_Access_Installer.dmg"
   appcast "https://native-instruments.com/forum/threads/official-update-status-native-access-current-version-#{version.major_minor_patch.dots_to_hyphens}.313999",
