@@ -12,5 +12,8 @@ cask "unity-ios-support-for-editor" do
 
   pkg "UnitySetup-iOS-Support-for-Editor-#{version.before_comma}.pkg"
 
-  uninstall pkgutil: "com.unity3d.iOSSupport"
+  uninstall pkgutil: [
+    "com.unity3d.iOSSupport",
+    "com.unity3d.UnityEditor5.x",
+  ]
 end
