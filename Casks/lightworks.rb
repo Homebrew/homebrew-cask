@@ -5,6 +5,7 @@ cask "lightworks" do
   url "https://cdn.lwks.com/releases/#{version.before_comma}/lightworks_#{version.before_comma}_#{version.after_comma}.dmg"
   appcast "https://www.lwks.com/index.php?option=com_lwks&view=download&Itemid=206&tab=2"
   name "Lightworks"
+  desc "Complete video creation package"
   homepage "https://www.lwks.com/"
 
   app "Lightworks.app"
