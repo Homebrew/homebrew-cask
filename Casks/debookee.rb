@@ -6,6 +6,7 @@ cask "debookee" do
   url "https://www.iwaxx.com/debookee/debookee.zip"
   appcast "https://www.iwaxx.com/debookee/appcast.php"
   name "Debookee"
+  desc "Network traffic analyzer"
   homepage "https://debookee.com/"
 
   auto_updates true
