@@ -14,7 +14,7 @@ cask "bluestacks" do
   installer manual: "BlueStacks Installer.app"
 
   uninstall_preflight do
-    set_ownership "#{appdir}/BlueStacks.app"
+    set_ownership "/Applications/BlueStacks.app"
   end
 
   uninstall launchctl: [
@@ -24,7 +24,7 @@ cask "bluestacks" do
     "com.BlueStacks.AppPlayer.Updater",
   ],
             delete:    [
-              "#{appdir}/BlueStacks.app",
+              "/Applications/BlueStacks.app",
               "/Library/PrivilegedHelperTools/com.BlueStacks.AppPlayer.bstservice_helper",
             ]
 
