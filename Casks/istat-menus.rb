@@ -15,6 +15,8 @@ cask "istat-menus" do
 
   uninstall delete:    [
     "/Library/Application Support/iStat Menus #{version.major}",
+    "/Library/LaunchDaemons/com.bjango.istatmenus.fans.plist",
+    "/Library/Logs/iStat Menus",
     "/Library/PrivilegedHelperTools/com.bjango.istatmenus.installerhelper",
   ],
             launchctl: [
@@ -47,8 +49,6 @@ cask "istat-menus" do
     "~/Library/Preferences/com.bjango.istatmenus.plist",
     "~/Library/Preferences/com.bjango.istatmenus#{version.major}.extras.plist",
     "~/Library/Preferences/com.bjango.istatmenus.status.plist",
-    "/Library/Logs/iStat Menus",
-    "/Library/LaunchDaemons/com.bjango.istatmenus.fans.plist",
     "/Users/Shared/.iStatMenus",
   ]
 end
