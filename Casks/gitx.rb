@@ -19,12 +19,12 @@ cask "gitx" do
   url "https://github.com/gitx/gitx/releases/download/build#{s}/#{version.major_minor}/#{version.patch}/GitX-dev-#{version.patch}.dmg"
   appcast "https://github.com/gitx/gitx/releases.atom"
   name "GitX"
-  desc "Is a native graphical client for the git version control system"
+  desc "GUI for git"
   homepage "https://github.com/gitx/gitx"
 
-  conflicts_with cask: %w[
-    laullon-gitx
-    rowanj-gitx
+  conflicts_with cask: [
+    "laullon-gitx",
+    "rowanj-gitx",
   ]
 
   app "GitX.app"
