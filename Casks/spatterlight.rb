@@ -8,5 +8,7 @@ cask "spatterlight" do
   name "Spatterlight"
   homepage "http://ccxvii.net/spatterlight/"
 
+  depends_on macos: ">= :catalina"
+
   app "Spatterlight.app"
 end
