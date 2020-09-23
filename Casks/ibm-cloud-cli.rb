@@ -5,7 +5,7 @@ cask "ibm-cloud-cli" do
   url "https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/#{version}/IBM_Cloud_CLI_#{version}.pkg"
   appcast "https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases.atom"
   name "Bluemix-CLI"
-  name "IBM Cloud CLI"
+  desc "IBM Cloud command-line interface"
   homepage "https://cloud.ibm.com/docs/cli/index.html"
 
   depends_on cask: "docker"
