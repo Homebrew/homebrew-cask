@@ -4,7 +4,7 @@ cask "loni-pipeline" do
 
   url "https://pipeline.loni.usc.edu/download.php?file=pipeline_releases/Pipeline-#{version}-macosx.dmg"
   name "LONI Pipeline"
-  desc "Free distributed system for for collaborative neuroimaging research"
+  desc "Free distributed system for collaborative neuroimaging research"
   homepage "https://pipeline.loni.usc.edu/"
 
   app "LONI Pipeline.app"
