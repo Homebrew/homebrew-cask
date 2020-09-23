@@ -9,10 +9,7 @@ cask "gitx" do
   desc "GUI for git"
   homepage "https://github.com/gitx/gitx"
 
-  conflicts_with cask: [
-    "laullon-gitx",
-    "rowanj-gitx",
-  ]
+  conflicts_with cask: "rowanj-gitx"
 
   app "GitX.app"
   binary "#{appdir}/GitX.app/Contents/Resources/gitx"
