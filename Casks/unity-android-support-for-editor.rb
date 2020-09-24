@@ -6,6 +6,7 @@ cask "unity-android-support-for-editor" do
   url "https://netstorage.unity3d.com/unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-#{version.before_comma}.pkg"
   appcast "https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json"
   name "Unity Android Build Support"
+  desc "Android taget support for Unity"
   homepage "https://unity.com/products"
 
   depends_on cask: "unity"
