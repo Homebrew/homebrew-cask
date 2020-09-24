@@ -104,18 +104,13 @@ jobs:
         id: gems
         run: brew install-bundler-gems
 
-      - name: Run brew style ${{ matrix.tap }}
-        run: brew style ${{ matrix.tap }}
+      - name: Run brew style ${{ matrix.cask.token || matrix.tap }}
+        run: brew style ${{ matrix.cask.path || matrix.tap }}
         if: always() && steps.gems.outcome == 'success' && !matrix.cask
 
-      - name: Run brew cask audit ${{ matrix.cask.token }}
+      - name: Run brew cask audit ${{ matrix.cask.token || matrix.tap }}
         run: |
-          if ${{ !matrix.cask }}; then
-            brew cask audit
-            exit $?
-          fi
-
-          brew cask audit ${{ join(matrix.audit_args, ' ') }} '${{ matrix.cask.path }}'
+          brew cask audit ${{ join(matrix.audit_args, ' ') }} '${{ matrix.cask.path || matrix.tap }}'
         timeout-minutes: 30
         if: always() && steps.gems.outcome == 'success' && !matrix.skip_audit
 
