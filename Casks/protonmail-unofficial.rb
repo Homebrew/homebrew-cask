@@ -8,5 +8,5 @@ cask "protonmail-unofficial" do
   desc "Unofficial Electron wrapper for ProtonMail"
   homepage "https://github.com/unofficial-protonmail-desktop/application"
 
-  app 'Unofficial desktop client for ProtonMail.app'
+  app "Unofficial desktop client for ProtonMail.app"
 end
