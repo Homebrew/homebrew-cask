@@ -1,6 +1,6 @@
 cask "izip" do
-  version "3.7"
-  sha256 "7be4dbc10384072058e56164b3a58a5164127e556e4a343a3acc14fd6f8104ba"
+  version "3.9"
+  sha256 "6832ef37f7ac8b234360e2aec45328df1d15365ee1ec9f51b05184a7aa426915"
 
   url "https://www.izip.com/izip.dmg"
   appcast "https://www.izip.com/download"
