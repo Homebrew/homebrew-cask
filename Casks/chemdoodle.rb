@@ -5,6 +5,7 @@ cask "chemdoodle" do
   url "https://www.ichemlabs.com/downloads/ChemDoodle-macos-#{version}.dmg"
   appcast "https://www.ichemlabs.com/download#chemdoodle/osx-installation-instructions/"
   name "ChemDoodle"
+  desc "2D chemical drawing, publishing and informatics"
   homepage "https://www.ichemlabs.com/"
 
   depends_on macos: ">= :yosemite"
