@@ -4,7 +4,7 @@ cask "craft" do
 
   url "https://craft.do/builds/Craft.dmg"
   name "Craft"
-  desc "Fresh take on documents"
+  desc "Document editor"
   homepage "https://craft.do/"
 
   app "Craft.app"
