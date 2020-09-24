@@ -1,7 +1,7 @@
 cask "neo4j" do
   # note: "4" is not a version number, but an intrinsic part of the product name
-  version "1.3.4"
-  sha256 "811b9f6daa1afee4a13ab0526ef0a3c8c6a49794d14ae328d49453a3e035c044"
+  version "1.3.8"
+  sha256 "ea91245e122094864d7265f69511f9f8cd96d873b6c9257964a9c766a1f65283"
 
   url "https://neo4j.com/artifact.php?name=neo4j-desktop-#{version}.dmg"
   appcast "https://neo4j.com/download/"
