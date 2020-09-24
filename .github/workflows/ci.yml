@@ -104,8 +104,8 @@ jobs:
         id: gems
         run: brew install-bundler-gems
 
-      - name: Run brew cask style
-        run: brew cask style
+      - name: Run brew style ${{ matrix.tap }}
+        run: brew style ${{ matrix.tap }}
         if: always() && steps.gems.outcome == 'success' && !matrix.cask
 
       - name: Run brew cask audit ${{ matrix.cask.token }}
