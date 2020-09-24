@@ -6,6 +6,7 @@ cask "unity-windows-support-for-editor" do
   url "https://netstorage.unity3d.com/unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-#{version.before_comma}.pkg"
   appcast "https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json"
   name "Unity Windows (Mono) Build Support"
+  desc "Windows (Mono) taget support for Unity"
   homepage "https://unity.com/products"
 
   depends_on cask: "unity"
