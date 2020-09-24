@@ -1,6 +1,6 @@
 cask "ccleaner" do
-  version "1.17.603"
-  sha256 "6d23feade57576502460ccd7e032713b9692ef6fd60ce4908562079dd4b1db4d"
+  version "1.18.28"
+  sha256 "a83921da501ffd6fe5856ce29f9c695eb255220bf5c661e067516bff4a1c77e1"
 
   url "https://download.ccleaner.com/mac/CCMacSetup#{version.major_minor.no_dots}.dmg"
   appcast "https://www.ccleaner.com/ccleaner/download?mac"
