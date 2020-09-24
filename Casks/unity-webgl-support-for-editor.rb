@@ -6,14 +6,12 @@ cask "unity-webgl-support-for-editor" do
   url "https://netstorage.unity3d.com/unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-WebGL-Support-for-Editor-#{version.before_comma}.pkg"
   appcast "https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json"
   name "Unity WebGL Build Support"
+  desc "WebGL taget support for Unity"
   homepage "https://unity.com/products"
 
   depends_on cask: "unity"
 
   pkg "UnitySetup-WebGL-Support-for-Editor-#{version.before_comma}.pkg"
 
-  uninstall pkgutil: [
-    "com.unity3d.WebGLSupport",
-    "com.unity3d.UnityEditor5.x",
-    ]
+  uninstall pkgutil: "com.unity3d.WebGLSupport"
 end
