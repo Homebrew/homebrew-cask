@@ -3,8 +3,8 @@ cask "nextcloud" do
     version "2.6.5.20200710-legacy"
     sha256 "4c67e50361dd5596fb884002d1ed907fe109d607fba2cabe07e505addd164519"
   else
-    version "3.0.1"
-    sha256 "aea710cf0fae1f42fdffe6ca94b46929ef4a288ac51809de513a04a6f2a074b4"
+    version "3.0.2"
+    sha256 "69103a648bf59220a1dd09030ea2e7ba39fdf910ac456769701eadaea27682fb"
   end
 
   url "https://download.nextcloud.com/desktop/releases/Mac/Installer/Nextcloud-#{version}.pkg"
