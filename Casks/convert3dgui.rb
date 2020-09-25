@@ -9,9 +9,9 @@ cask "convert3dgui" do
     ext = "dmg"
     "https://master.dl.sourceforge.net/project/#{project_name}/#{project_name}/#{version}/#{filename}.#{ext}"
   end
-
+  appcast "https://sourceforge.net/projects/c3d/rss?path=/c3d/1.0.0"
   name "Convert3DGUI"
-  desc "A command-line tool for converting 3D images between common file formats"
+  desc "Command-line tool for converting 3D images between common file formats"
   homepage "https://sourceforge.net/projects/c3d"
 
   app "Convert3DGUI.app"
