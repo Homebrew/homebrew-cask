@@ -6,7 +6,7 @@ cask "rotki" do
   url "https://github.com/rotki/rotki/releases/download/v#{version}/rotki-darwin-v#{version}.dmg"
   appcast "https://github.com/rotki/rotki/releases.atom"
   name "Rotki"
-  desc "Open source portfolio tracking and accounting tool that respects your privacy"
+  desc "Portfolio tracking and accounting tool"
   homepage "https://rotki.com/"
 
   app "rotki.app"
