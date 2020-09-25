@@ -14,6 +14,3 @@ cask "classicftp" do
     "~/Library/Preferences/com.nchsoftware.classicftp.plist",
   ]
 end
-
-
-
