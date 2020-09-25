@@ -9,7 +9,7 @@ cask "dexed" do
   desc "DX7 FM synthesizer"
   homepage "https://asb2m10.github.io/dexed/"
 
-  pkg "dexed-#{version}-osx.mpkg"
+  pkg "dexed-#{version}.mpkg"
 
   uninstall pkgutil: [
     "com.digitalsuburban.DexedStandalone",
