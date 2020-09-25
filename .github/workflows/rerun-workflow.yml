@@ -17,7 +17,7 @@ on:
 jobs:
   rerun-workflow:
     if: >
-      startsWith(github.repository, "Homebrew/") && 
+      startsWith(github.repository, 'Homebrew/') && 
       (
         github.event.label.name == 'ci-requeue' ||
         github.event.label.name == 'ci-retry' ||
