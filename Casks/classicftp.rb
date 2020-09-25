@@ -4,6 +4,7 @@ cask "classicftp" do
 
   url "https://www.nchsoftware.com/classic/classicmaci.zip"
   name "ClassicFTP"
+  desc "Intuitive FTP File Transfer Software"
   homepage "https://www.nchsoftware.com/classic/index.html"
 
   app "ClassicFTP.app"
