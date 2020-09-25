@@ -6,6 +6,7 @@ cask "techsmith-capture" do
   name "TechSmith Capture"
   desc "Screen capture software"
   homepage "https://www.techsmith.com/jing-tool.html"
+  appcast "https://assets.techsmith.com/techsmithcapture/mac/TechSmithCaptureAppcast.xml"
 
   depends_on macos: ">= :high_sierra"
 
