@@ -6,7 +6,6 @@ cask "tigerjython" do
   name "TigerJython"
   desc "Jython-based educational programming environment"
   homepage "https://www.tjgroup.ch/"
-  
+
   suite "TigerJython"
-  zap trash: "~/Library/Caches/org.aplu.TigerJython-Mac"
 end
