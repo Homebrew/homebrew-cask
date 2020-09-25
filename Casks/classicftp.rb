@@ -10,8 +10,8 @@ cask "classicftp" do
   app "ClassicFTP.app"
 
   zap trash: [
-    "~/Library/Application Support/ClassicFTP ",
-    "~/Library/Preferences/com.nchsoftware.classicftp.plist ",
+    "~/Library/Application Support/ClassicFTP",
+    "~/Library/Preferences/com.nchsoftware.classicftp.plist",
   ]
 end
 
