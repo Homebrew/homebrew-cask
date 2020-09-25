@@ -1,4 +1,4 @@
-cask "boost-note-next" do
+cask "boost-note" do
   version "0.9.0"
   sha256 "7ec52d8dc2a7a0746b2e5efc5703fb16d1fc3ed6f8c170277d502580a1bf7331"
 
