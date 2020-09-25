@@ -7,7 +7,7 @@ cask "techsmith-capture" do
   name "TechSmith Capture"
   desc "Screen capture software"
   homepage "https://www.techsmith.com/jing-tool.html"
-  
+
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
