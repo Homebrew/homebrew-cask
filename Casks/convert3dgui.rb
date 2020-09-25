@@ -5,7 +5,7 @@ cask "convert3dgui" do
   url "https://master.dl.sourceforge.net/project/c3d/c3d/Nightly/c3d-nightly-MacOS-.dmg"
   name "Convert3DGUI"
   desc "A command-line tool for converting 3D images between common file formats"
-  homepage "http://www.itksnap.org/pmwiki/pmwiki.php?n=Convert3D.Documentation"
+  homepage "https://sourceforge.net/projects/c3d"
 
   app "Convert3DGUI.app"
 
