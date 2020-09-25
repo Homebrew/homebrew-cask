@@ -6,14 +6,12 @@ cask "boost-note-next" do
   url "https://github.com/BoostIO/BoostNote.next/releases/download/v#{version}/boost-note-mac.dmg"
   appcast "https://github.com/BoostIO/BoostNote.next/releases.atom"
   name "Boostnote.Next"
-  desc "Intuitive and stylish markdown note app for the developers"
+  desc "Markdown note editor for developers"
   homepage "https://boostnote.io/"
 
   app "Boost Note.app"
 
-  uninstall signal: [
-    ["TERM", "com.boostio.boostnote"],
-  ]
+  uninstall signal: ["TERM", "com.boostio.boostnote"]
 
   zap trash: [
     "~/Library/Application Support/Boost Note",
