@@ -7,7 +7,7 @@ cask "praat" do
   appcast "https://github.com/praat/praat/releases.atom"
   name "Praat"
   desc "Doing phonetics by computer"
-  homepage "http://www.fon.hum.uva.nl/praat/"
+  homepage "https://www.fon.hum.uva.nl/praat/"
 
   app "Praat.app"
   binary "#{appdir}/Praat.app/Contents/MacOS/Praat", target: "praat"
