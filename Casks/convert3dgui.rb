@@ -3,7 +3,7 @@ cask "convert3dgui" do
   sha256 "73fb4bce06f4194bba3a6bd6302ce34dfc13b939d01ea370173113a63ef04e4b"
   
   url do
-    require 'open-uri'
+    require "open-uri"
     project_name = "c3d"
     filename = "c3d-#{version}-MacOS-x86_64"
     ext = "dmg"
