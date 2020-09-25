@@ -8,4 +8,6 @@ cask "tigerjython" do
   homepage "https://www.tjgroup.ch/"
 
   suite "TigerJython"
+  
+  zap trash: "~/Library/Caches/org.aplu.TigerJython-Mac"
 end
