@@ -1,6 +1,6 @@
 cask "aws-vault" do
-  version "6.1.0"
-  sha256 "a974eb3149f02532af23f532deb40ee3380269eb6d74e2d2e8447b37806da397"
+  version "6.2.0"
+  sha256 "c6364250172b8fe0a8b5b90d9cbbb69283fe9b97a1e0ddf53468e85fd8af8bd3"
 
   url "https://github.com/99designs/aws-vault/releases/download/v#{version}/aws-vault-darwin-amd64.dmg"
   appcast "https://github.com/99designs/aws-vault/releases.atom"
