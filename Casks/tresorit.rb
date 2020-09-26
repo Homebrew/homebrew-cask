@@ -8,4 +8,11 @@ cask "tresorit" do
   homepage "https://tresorit.com/"
 
   app "Tresorit.app"
+
+  uninstall login_item: "Tresorit"
+
+  zap trash: [
+    "~/Library/Application Support/Tresorit",
+    "~/Library/Preferences/com.tresorit.mac.plist",
+  ]
 end
