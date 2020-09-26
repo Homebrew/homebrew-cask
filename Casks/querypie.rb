@@ -6,7 +6,7 @@ cask "querypie" do
   url "https://d2f8621kw7pn7s.cloudfront.net/latest/QueryPie-#{version}.dmg"
   appcast "https://d2f8621kw7pn7s.cloudfront.net/latest/latest-mac.yml"
   name "QueryPie"
-  desc "Most advanced Data Warehouse Client for data analytics teams"
+  desc "Data warehouse client for data analytics teams"
   homepage "https://www.querypie.com/"
 
   app "QueryPie.app"
