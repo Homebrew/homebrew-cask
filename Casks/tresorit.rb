@@ -9,10 +9,10 @@ cask "tresorit" do
 
   app "Tresorit.app"
 
-  uninstall login_item: 'Tresorit',
+  uninstall login_item: "Tresorit"
 
   zap trash: [
-               '~/Library/Application Support/Tresorit',
-               '~/Library/Preferences/com.tresorit.mac.plist',
-             ]
+    "~/Library/Application Support/Tresorit",
+    "~/Library/Preferences/com.tresorit.mac.plist",
+  ]
 end
