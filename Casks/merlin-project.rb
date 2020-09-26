@@ -1,5 +1,5 @@
 cask "merlin-project" do
-  version "6.4.2"
+  version "6.4.3"
   sha256 "2428d8e28e7c8d929df6287b084ce8b08ec214ab5f193af3185b422036d8a8c9"
 
   url "https://www.projectwizards.net/downloads/MerlinProject.zip"
