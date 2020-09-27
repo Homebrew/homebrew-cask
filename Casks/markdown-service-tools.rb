@@ -48,4 +48,10 @@ cask "markdown-service-tools" do
   service "MarkdownServiceTools#{version}/md - Wrap - Backticks.workflow"
   service "MarkdownServiceTools#{version}/md - Wrap - Parenthesis.workflow"
   service "MarkdownServiceTools#{version}/md - Wrap - Square Brackets.workflow"
+
+  caveats <<~EOS
+    All Markdown conversion services require MultiMarkdown:
+
+      brew install multimarkdown
+  EOS
 end
