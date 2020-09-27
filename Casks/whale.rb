@@ -1,6 +1,6 @@
 cask "whale" do
-  version "2.0.0"
-  sha256 "d89d7e9c61653eae3bf6d35f391cbe3cfc031c4e5c41b1ec4018a9c6cc4485bc"
+  version "2.0.1"
+  sha256 "6627d1f2d264ad0a4d300763089c875e21ad7bcd1b37557fbbcb77c108033238"
 
   url "https://github.com/1000ch/whale/releases/download/v#{version}/Whale-#{version}.dmg"
   appcast "https://github.com/1000ch/whale/releases.atom"
