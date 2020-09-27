@@ -1,6 +1,6 @@
 cask "markdown-service-tools" do
-  version "2.16"
-  sha256 "fcc9c9b88b164547315cde305d4b4096243268b84d24c054e2731449c9e47633"
+  version "3.0.3"
+  sha256 "7bdfc033d4fb84818b7062eda5aae73c6b593477a7511d3d438909d0b7f52cad"
 
   url "https://brettterpstra.com/downloads/MarkdownServiceTools#{version}.zip"
   name "Markdown Service Tools"
