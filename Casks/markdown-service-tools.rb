@@ -4,6 +4,7 @@ cask "markdown-service-tools" do
 
   url "https://brettterpstra.com/downloads/MarkdownServiceTools#{version}.zip"
   name "Markdown Service Tools"
+  desc "Collection of services designed to make writing Markdown text that much easier"
   homepage "https://brettterpstra.com/projects/markdown-service-tools/"
 
   service "MarkdownServiceTools#{version}/md - Code - Make Code Block.workflow"
