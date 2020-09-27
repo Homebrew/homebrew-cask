@@ -3,8 +3,10 @@ cask "iridient-developer" do
   sha256 "3eafbea911ea8e69f5910ff49f122843855cebb57f1ef5c8e301bedb01f8c3d2"
 
   url "https://www.iridientdigital.com/downloads/IridientDeveloper_#{version.no_dots}.dmg"
-  appcast "https://www.iridientdigital.com/products/rawdeveloper_history.html"
+  appcast "https://www.iridientdigital.com/products/rawdeveloper_history.html",
+          must_contain: version.major_minor
   name "Iridient Developer"
+  desc "Image processing application"
   homepage "https://www.iridientdigital.com/"
 
   app "Iridient Developer.app"
