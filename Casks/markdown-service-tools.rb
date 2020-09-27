@@ -4,7 +4,7 @@ cask "markdown-service-tools" do
 
   url "https://brettterpstra.com/downloads/MarkdownServiceTools#{version}.zip"
   name "Markdown Service Tools"
-  desc "Collection of services designed to make writing Markdown text that much easier"
+  desc "Collection of services for Markdown-formatted text"
   homepage "https://brettterpstra.com/projects/markdown-service-tools/"
 
   service "MarkdownServiceTools#{version}/md - Convert - MultiMarkdown to RTF.workflow"
