@@ -7,6 +7,8 @@ cask "markdown-service-tools" do
   desc "Collection of services for Markdown-formatted text"
   homepage "https://brettterpstra.com/projects/markdown-service-tools/"
 
+  depends_on formula: "multimarkdown"
+
   service "MarkdownServiceTools#{version}/md - Convert - MultiMarkdown to RTF.workflow"
   service "MarkdownServiceTools#{version}/md - Code - Make Code Block.workflow"
   service "MarkdownServiceTools#{version}/md - Code - Make Fenced Code Block.workflow"
@@ -48,10 +50,4 @@ cask "markdown-service-tools" do
   service "MarkdownServiceTools#{version}/md - Wrap - Backticks.workflow"
   service "MarkdownServiceTools#{version}/md - Wrap - Parenthesis.workflow"
   service "MarkdownServiceTools#{version}/md - Wrap - Square Brackets.workflow"
-
-  caveats <<~EOS
-    All Markdown conversion services require MultiMarkdown:
-
-      brew install multimarkdown
-  EOS
 end
