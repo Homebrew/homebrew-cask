@@ -7,6 +7,7 @@ cask "minecraftpe" do
   appcast "https://educommunity.minecraft.net/hc/en-us/categories/360003907132",
           must_contain: version.chomp(".0")
   name "Minecraft Education Edition"
+  desc "Educational version of Minecraft"
   homepage "https://education.minecraft.net/"
 
   depends_on macos: ">= :sierra"
