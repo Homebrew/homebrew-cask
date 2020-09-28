@@ -4,8 +4,8 @@ cask "hoststool" do
 
   url "https://github.com/ZzzM/HostsToolforMac/releases/download/#{version}/HostsToolForMac.zip"
   appcast "https://github.com/ZzzM/HostsToolforMac/releases.atom"
-  name "HostsToolForMac.zip"
-  desc "local hosts update tool"
+  name "Hosts tool for Mac"
+  desc "Local hosts update tool"
   homepage "https://github.com/ZzzM/HostsToolforMac/"
 
   depends_on macos: ">= :sierra"
