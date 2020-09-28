@@ -16,6 +16,7 @@ cask "dropbox" do
 
   zap trash: [
     "/Library/DropboxHelperTools",
+    "/Library/Preferences/com.getdropbox.dropbox.dbkextd.plist",
     "~/.dropbox",
     "~/Library/Application Scripts/com.dropbox.foldertagger",
     "~/Library/Application Scripts/com.getdropbox.dropbox.garcon",
