@@ -6,7 +6,7 @@ cask "butt" do
   url "https://downloads.sourceforge.net/butt/butt-#{version}.dmg"
   appcast "https://sourceforge.net/projects/butt/rss"
   name "Broadcast Using This Tool"
-  homepage "https://danielnoethen.de/"
+  homepage "https://danielnoethen.de/butt/"
 
   app "butt.app"
 end
