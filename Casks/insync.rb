@@ -1,6 +1,6 @@
 cask "insync" do
-  version "3.2.7.40868"
-  sha256 "aabf29bcdf5c34c7bbb495024e0c6cd1dc4f723631f8bca8aafa40569fc7a274"
+  version "3.2.8.40877"
+  sha256 "f9c35fccd005b0ab60ea7ae57db2c51c988a0137cbf9d63b50d3b6e956f3d812"
 
   url "http://s.insynchq.com/builds/Insync-#{version}.dmg"
   appcast "https://www.insynchq.com/downloads?start=true"
