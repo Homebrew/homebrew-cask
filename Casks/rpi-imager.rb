@@ -1,4 +1,4 @@
-cask "raspberry-pi-imager" do
+cask "rpi-imager" do
   version "1.4"
   sha256 "85b337e9ccbec6dd39b0ddbf4b9b4cb1f39fb90f6923a3fea694b2300e936538"
 
