@@ -4,6 +4,7 @@ cask "macx-dvd-ripper-pro" do
 
   url "https://www.macxdvd.com/download/macx-dvd-ripper-pro.dmg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_filesize.cgi?url=https://www.macxdvd.com/download/macx-dvd-ripper-pro.dmg"
+          must_contain: ""
   name "MacX DVD Ripper Pro"
   desc "DVD ripping application"
   homepage "https://www.macxdvd.com/mac-dvd-ripper-pro/"
