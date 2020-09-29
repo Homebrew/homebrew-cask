@@ -1,6 +1,6 @@
 cask "cisdem-document-reader" do
-  version "5.3.0"
-  sha256 "6174bd2cea282730e9ecda661d7e851b762062ec50ced0815fbf0a7719ad2215"
+  version "5.4.0"
+  sha256 "ea0a74d013babebf26df7998b2a55cfc38f59d40005e2002cf094f9e104d36e2"
 
   url "https://download.cisdem.com/cisdem-documentreader.dmg"
   appcast "https://www.cisdem.com/document-reader-mac/release-notes.html"
