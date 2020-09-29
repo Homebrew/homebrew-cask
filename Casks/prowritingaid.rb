@@ -4,7 +4,7 @@ cask "prowritingaid" do
 
   url "https://cdn.prowritingaid.com/prowritingaid-desktop/desktop_#{version.dots_to_underscores}/ProWritingAid.dmg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_sizeandmodified.cgi?url=https://cdn.prowritingaid.com/prowritingaid-desktop/ProWritingAid.dmg",
-          must_contain: ''
+          must_contain: ""
   name "ProWritingAid"
   homepage "https://prowritingaid.com/"
 
