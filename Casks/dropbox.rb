@@ -12,10 +12,13 @@ cask "dropbox" do
   app "Dropbox.app"
 
   uninstall launchctl: "com.dropbox.DropboxMacUpdate.agent",
-            kext:      "com.getdropbox.dropbox.kext"
+            kext:      "com.getdropbox.dropbox.kext",
+            delete:    [
+              "/Library/DropboxHelperTools",
+              "/Library/Preferences/com.getdropbox.dropbox.dbkextd.plist",
+            ]
 
   zap trash: [
-    "/Library/DropboxHelperTools",
     "~/.dropbox",
     "~/Library/Application Scripts/com.dropbox.foldertagger",
     "~/Library/Application Scripts/com.getdropbox.dropbox.garcon",
