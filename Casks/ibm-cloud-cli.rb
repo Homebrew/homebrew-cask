@@ -1,6 +1,6 @@
 cask "ibm-cloud-cli" do
-  version "1.2.2"
-  sha256 "4b7efaf3fb4b96399daa57fa2fe856fad63ebc90c184006bd972a853e12f709c"
+  version "1.2.3"
+  sha256 "bb83ef2f6238999b24cde3123d41037f91c015e92969aa49ef78cb330cec1627"
 
   url "https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/#{version}/IBM_Cloud_CLI_#{version}.pkg"
   appcast "https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases.atom"
