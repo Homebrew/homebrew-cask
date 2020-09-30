@@ -6,7 +6,6 @@ cask "flipper" do
   url "https://github.com/facebook/flipper/releases/download/v#{version}/Flipper-mac.zip"
   appcast "https://github.com/facebook/flipper/releases.atom"
   name "Facebook Flipper"
-  name "Sonar"
   desc "Desktop debugging platform for mobile developers"
   homepage "https://fbflipper.com/"
 
