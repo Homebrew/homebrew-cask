@@ -8,8 +8,6 @@ cask "videostream" do
   desc "Stream media from your computer to Chromecast"
   homepage "https://getvideostream.com/"
 
-  depends_on cask: "google-chrome"
-
   pkg "Videostream.pkg"
 
   uninstall launchctl: [
