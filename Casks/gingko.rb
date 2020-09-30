@@ -6,6 +6,7 @@ cask "gingko" do
   url "https://github.com/gingko/client/releases/download/v#{version}/Gingko-#{version}-mac.zip"
   appcast "https://github.com/gingko/client/releases.atom"
   name "Gingko"
+  desc "Word processor that shows structure and content"
   homepage "https://gingko.io/"
 
   app "Gingko.app"
