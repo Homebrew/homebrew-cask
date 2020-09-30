@@ -1,6 +1,6 @@
 cask "waltr" do
-  version "2.6.26"
-  sha256 "47ebc0efeebd56a32b6ce5187e4b20998cf4ac4a9ee03e4af9584dc602147145"
+  version "2.6.27"
+  sha256 "5b1ca23244d060c6ca941f96ca78e91fbff5cde34cdf5d9879468fee6e2929f3"
 
   # dl.devmate.com/com.softorino.waltr2/ was verified as official when first introduced to the cask
   url "https://shining.softorino.com/shine_uploads/waltr#{version.major}mac_#{version}.dmg"
