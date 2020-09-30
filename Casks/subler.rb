@@ -6,7 +6,7 @@ cask "subler" do
   url "https://bitbucket.org/galad87/subler/downloads/Subler-#{version}.zip"
   appcast "https://subler.org/appcast/appcast.xml"
   name "Subler"
-  desc "App to mux and tag mp4 files"
+  desc "Mux and tag mp4 files"
   homepage "https://subler.org/"
 
   auto_updates true
