@@ -10,5 +10,6 @@ cask "yggdrasil" do
 
   pkg "yggdrasil-#{version}-macos-amd64.pkg"
 
-  uninstall launchctl: ["yggdrasil"], pkgutil: "io.github.yggdrasil-network.pkg"
+  uninstall launchctl: "yggdrasil",
+            pkgutil:   "io.github.yggdrasil-network.pkg"
 end
