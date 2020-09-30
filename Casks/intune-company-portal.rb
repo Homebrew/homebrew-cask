@@ -1,6 +1,6 @@
 cask "intune-company-portal" do
   version "2.8.200800"
-  sha256 "e041f3c2f0c88078579cee41a065c13e2465f6b625831b755abce25fd25301ff"
+  sha256 "8861d2a095c0da32940fa31463eb9ab80eb8242045cbdfa8bc95b58d601292f7"
 
   url "https://officecdn.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/CompanyPortal_#{version}-Installer.pkg"
   appcast "https://www.macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://go.microsoft.com/fwlink/?linkid=853070"
