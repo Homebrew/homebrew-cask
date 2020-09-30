@@ -6,6 +6,7 @@ cask "malus" do
   url "https://malus.s3cdn.net/uploads/Malus-mac150.dmg"
   appcast "https://api.getmalus.com/api/checkDesktopUpdate?type=mac"
   name "Malus"
+  desc "Proxy to help accessing various online media resources/services"
   homepage "https://getmalus.com/"
 
   auto_updates true
