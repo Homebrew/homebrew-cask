@@ -1,6 +1,6 @@
 cask "masterway-note" do
-  version "1.2.0,59"
-  sha256 "303f2f63a01da52ac17e8a37bbdd227269a43a66d43d7f0b2debad132b848411"
+  version "1.2.0,60"
+  sha256 "74684b9ebe07ee7c05e7b0b5e49063b802d29df20c35af82b796eb408b7c4e88"
 
   # prota.oss-cn-beijing.aliyuncs.com/ was verified as official when first introduced to the cask
   url "https://prota.oss-cn-beijing.aliyuncs.com/downloads/latest/%E5%A4%A7%E5%B8%88%E7%AC%94%E8%AE%B0masterwaynote.pkg"
