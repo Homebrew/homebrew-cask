@@ -5,7 +5,10 @@ cask "videostream" do
   url "https://cdn.getvideostream.com/videostream-native-updates/macOS/Videostream.pkg"
   appcast "https://videostream-cdn.s3.amazonaws.com/videostream-native-updates/macOS/manifest.json"
   name "Videostream"
+  desc "Stream media from your computer to Chromecast"
   homepage "https://getvideostream.com/"
+
+  depends_on cask: "google-chrome"
 
   pkg "Videostream.pkg"
 
