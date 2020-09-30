@@ -5,6 +5,7 @@ cask "olive" do
   url "https://olivevideoeditor.org/dl/Olive-#{version.after_comma}-macOS-x86_64.zip"
   appcast "https://github.com/olive-editor/olive/releases.atom"
   name "Olive"
+  desc "Non-linear video editor"
   homepage "https://olivevideoeditor.org/"
 
   app "Olive.app"
