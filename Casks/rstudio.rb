@@ -4,7 +4,7 @@ cask "rstudio" do
 
   # rstudio.org/ was verified as official when first introduced to the cask
   url "https://download1.rstudio.org/desktop/macos/RStudio-#{version}.dmg"
-  appcast "https://www.rstudio.org/links/check_for_update?version=1.0.0&os=mac"
+  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://rstudio.org/download/latest/stable/desktop/mac/RStudio-latest.dmg"
   name "RStudio"
   desc "Data science software focusing on R and Python"
   homepage "https://www.rstudio.com/"
