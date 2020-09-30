@@ -1,6 +1,6 @@
 cask "sirimote" do
-  version "1.3.7"
-  sha256 "1a4c7fbf5476215278a26dedfdec6a81860fbf5ec53c157f2cf0466a645d8d35"
+  version "1.3.8"
+  sha256 "f586ea75fea9c4ab069b0fe7976ab79c188018739b11a26a9d7239f74f52a52d"
 
   url "https://eternalstorms.at/sirimote/SiriMote.zip"
   appcast "https://eternalstorms.at/sirimote/updatefeed.xml"
