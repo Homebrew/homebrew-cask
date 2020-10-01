@@ -1,5 +1,5 @@
 cask "sage" do
-  if MacOS.version <= :mojave
+  if MacOS.version <= :el_capitan
     version "9.1,10.11.6"
     sha256 "23c13690b8a72deca1628dd0e66a0f7b83557f98c13c3db1dc7eb15d80cf3a8d"
   else
