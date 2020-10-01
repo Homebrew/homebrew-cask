@@ -5,6 +5,7 @@ cask "matterhorn" do
   url "https://github.com/matterhorn-chat/matterhorn/releases/download/#{version}/matterhorn-#{version}-Darwin-x86_64.tar.bz2"
   appcast "https://github.com/matterhorn-chat/matterhorn/releases.atom"
   name "Matterhorn"
+  desc "A Unix terminal client for Mattermost"
   homepage "https://github.com/matterhorn-chat/matterhorn"
 
   binary "matterhorn-#{version}-Darwin-x86_64/matterhorn"
