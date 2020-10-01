@@ -1,6 +1,6 @@
 cask "doly" do
-  version "2.19.0"
-  sha256 "379cb026668d7952a060ecf6f8abd6810bd19c3d8ad7f440bebe153c29d2d2cf"
+  version "2.22.0"
+  sha256 "b2141a1ae3443d20472a275c938ad82d6e9b61ef7916a1112e6e08bdf770f860"
 
   url "http://doly.jp/download/doly-mac_#{version}.dmg"
   appcast "http://doly.jp/update_mac.html"
