@@ -1,6 +1,6 @@
 cask "airparrot" do
-  version "3.0.0"
-  sha256 "79e985c3cd6bbfe0a3d87424d658d1193a884b98bf27c44dda76270156c2ee87"
+  version "3.1.0"
+  sha256 "15455aea75e9b3c166be297a1391cc9d71c71f29b0133b8b91fdd655f320c238"
 
   url "https://download.airsquirrels.com/AirParrot#{version.major}/Mac/AirParrot-#{version}.dmg"
   appcast "https://www.airsquirrels.com/airparrot/release-notes/mac"
