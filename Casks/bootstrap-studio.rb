@@ -5,6 +5,7 @@ cask "bootstrap-studio" do
   url "https://bootstrapstudio.io/releases/desktop/#{version}/Bootstrap%20Studio.dmg"
   appcast "https://bootstrapstudio.io/pages/releases"
   name "Bootstrap Studio"
+  desc "Design and prototype websites using the Bootstrap framework"
   homepage "https://bootstrapstudio.io/"
 
   auto_updates true
