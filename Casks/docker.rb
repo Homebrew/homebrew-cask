@@ -25,6 +25,7 @@ cask "docker" do
     "/usr/local/bin/docker",
     "/usr/local/bin/docker-compose",
     "/usr/local/bin/docker-credential-desktop",
+    "/usr/local/bin/docker-credential-ecr-login",
     "/usr/local/bin/docker-credential-osxkeychain",
     "/usr/local/bin/hyperkit",
     "/usr/local/bin/kubectl",
