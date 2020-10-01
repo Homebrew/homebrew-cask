@@ -1,6 +1,6 @@
 cask "gdlauncher" do
-  version "1.0.10"
-  sha256 "66b54fae5fdc01fb8027e1f0fcdb0c8e441cf36d24eb74aa5adde168064866c1"
+  version "1.0.11"
+  sha256 "df52870383f0f1c4cdd9bb7e6c97212ef9768a78e8cefaa1db5c53f8e1f0fd28"
 
   # github.com/gorilla-devs/GDLauncher/ was verified as official when first introduced to the cask
   url "https://github.com/gorilla-devs/GDLauncher/releases/download/v#{version}/GDLauncher-mac-setup.dmg"
