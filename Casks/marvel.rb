@@ -6,6 +6,7 @@ cask "marvel" do
   url "https://storage.googleapis.com/sketch-plugin/#{version}/Marvel.zip"
   appcast "https://storage.googleapis.com/sketch-plugin/app.xml"
   name "Marvel"
+  desc "Prototyping, testing and handoff tools"
   homepage "https://marvelapp.com/"
 
   app "Marvel.app"
