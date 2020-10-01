@@ -7,20 +7,21 @@ cask "tenable-nessus-agent" do
   desc "Agent for Nessus vulnerability scanner"
   homepage "https://www.tenable.com/"
 
-  caveats "See https://docs.tenable.com/nessus/Content/InstallNessusAgentMacOSX.htm#Link-Agent-Using-Command-Line-Interface for instructions to link the agent to a server."
-
   pkg "Install Nessus Agent.pkg"
-  uninstall pkgutil: [
-    "com.tenablesecurity.NessusAgent.Preferences"
-  ],
-  delete: [
-    "/Library/NessusAgent",
-    "/Library/LaunchDaemons/com.tenablesecurity.nessusagent.plist",
-    "/Library/PreferencePanes/Nessus Agent Preferences.prefPane",
-    "/private/etc/tenable_tag"
-  ],
-  launchctl: [
-    "com.tenablesecurity.nessusagent"
-  ]
 
+  uninstall pkgutil:   [
+    "com.tenablesecurity.NessusAgent.Preferences",
+  ],
+            delete:    [
+              "/Library/NessusAgent",
+              "/Library/LaunchDaemons/com.tenablesecurity.nessusagent.plist",
+              "/Library/PreferencePanes/Nessus Agent Preferences.prefPane",
+              "/private/etc/tenable_tag",
+            ],
+            launchctl: [
+              "com.tenablesecurity.nessusagent",
+            ]
+
+  caveats "See https://docs.tenable.com/nessus/Content/InstallNessusAgentMacOSX.htm"\
+    "#Link-Agent-Using-Command-Line-Interface for instructions to link the agent to a server."
 end
