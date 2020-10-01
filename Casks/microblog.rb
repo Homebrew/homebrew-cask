@@ -9,7 +9,7 @@ cask "microblog" do
   homepage "https://help.micro.blog/2017/mac-version/"
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   app "Micro.blog.app"
 
