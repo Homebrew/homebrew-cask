@@ -6,6 +6,7 @@ cask "acquia-dev" do
   appcast "https://dev.acquia.com/downloads",
           must_contain: version.dots_to_hyphens
   name "Acquia Dev Desktop"
+  desc "Install, test, and build Drupal sites locally"
   homepage "https://www.acquia.com/drupal/acquia-dev-desktop"
 
   installer manual: "Acquia Dev Desktop Installer.app"
@@ -15,4 +16,10 @@ cask "acquia-dev" do
     args:       ["--mode", "unattended", "--unattendedmodeui", "none"],
     sudo:       true,
   }
+
+  zap trash: [
+    "~/.acquia",
+    "~/Library/Caches/com.acquia.acquia-dev-desktop#{version.major}",
+    "~/Library/Saved Application State/com.acquia.acquia-dev-desktop#{version.major}.savedState",
+  ]
 end
