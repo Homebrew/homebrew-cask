@@ -6,7 +6,7 @@ cask "stack-stack" do
   url "https://stack-v1.s3.amazonaws.com/builds/prod/Stack-#{version}.dmg"
   appcast "https://stack-v1.s3.amazonaws.com/builds/prod/latest-mac.yml"
   name "Stack"
-  homepage "https://stackers.app/"
+  homepage "https://getstack.app/"
 
   auto_updates true
   depends_on macos: ">= :yosemite"
