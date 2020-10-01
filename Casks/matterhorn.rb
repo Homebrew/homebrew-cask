@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 cask "matterhorn" do
   version "50200.10.2"
   sha256 "cd54f4758eafe8babf58534d3fb0bfde7e01c930cf1539bbe4500b783a73710c"
