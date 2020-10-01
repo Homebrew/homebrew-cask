@@ -1,6 +1,6 @@
 cask "tableau-reader" do
-  version "2020.3.0"
-  sha256 "49c0782f6a5901f678a341e39b7325f84908cad54c961995ed806e4a7be46266"
+  version "2020.3.1"
+  sha256 "5d4faa90a351074a29151b1954a8fefb357fdb04903c45e70e2ccea93a85ba3d"
 
   url "https://downloads.tableau.com/tssoftware/TableauReader-#{version.dots_to_hyphens}.dmg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.tableau.com/downloads/reader/mac",
