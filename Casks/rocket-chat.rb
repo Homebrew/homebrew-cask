@@ -6,6 +6,7 @@ cask "rocket-chat" do
   url "https://github.com/RocketChat/Rocket.Chat.Electron/releases/download/#{version}/rocketchat-#{version}.dmg"
   appcast "https://github.com/RocketChat/Rocket.Chat.Electron/releases.atom"
   name "Rocket.Chat"
+  desc "Official desktop client for Rocket.Chat"
   homepage "https://rocket.chat/"
 
   auto_updates true
