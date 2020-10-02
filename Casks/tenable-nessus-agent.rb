@@ -18,4 +18,8 @@ cask "tenable-nessus-agent" do
               "/private/etc/tenable_tag",
             ],
             launchctl: "com.tenablesecurity.nessusagent"
+
+  caveats do
+    license "https://static.tenable.com/prod_docs/tenable_slas.html"
+  end
 end
