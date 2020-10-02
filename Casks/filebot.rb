@@ -1,6 +1,6 @@
 cask "filebot" do
   version "4.9.2"
-  sha256 "138eceb4905f14ac318293ac6d3bf0223aa2a1145de1fd2a722531597b77161f"
+  sha256 "15c92853503f17958e7fbbe5d4640458021327126a4b4c9410a9d3d8086e02dc"
 
   url "https://get.filebot.net/filebot/FileBot_#{version}/FileBot_#{version}.app.tar.xz"
   appcast "https://app.filebot.net/update.xml"
