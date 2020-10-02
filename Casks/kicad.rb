@@ -1,14 +1,15 @@
 cask "kicad" do
   version "5.1.7-0"
-
   sha256 "7f136cf18fbea59b2bae22e08ca55e198994baf1c3ad57875d3e59ad295304c0"
-  url "https://kicad-downloads.s3.cern.ch/osx/stable/kicad-unified-#{version}-10_14.dmg"
 
+  # kicad-downloads.s3.cern.ch was verified as official when first introduced to the cask
+  url "https://kicad-downloads.s3.cern.ch/osx/stable/kicad-unified-#{version}-10_14.dmg"
   appcast "https://kicad-downloads.s3.cern.ch/?delimiter=/&prefix=osx/stable/"
   name "KiCad"
+  desc "Cross Platform and Open Source Electronics Design Automation Suite"
   homepage "https://kicad-pcb.org/"
 
-  depends_on macos: '>= :mojave'
+  depends_on macos: ">= :mojave"
 
   app "KiCad/kicad.app",            target: "KiCad/KiCad.app"
   app "KiCad/bitmap2component.app", target: "KiCad/bitmap2component.app"
