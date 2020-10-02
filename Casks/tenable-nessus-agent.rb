@@ -3,7 +3,7 @@ cask "tenable-nessus-agent" do
   sha256 "5f9cc7c8ac49226488e21bc2dac1a96ed38a8ed501ebda2e2915137dfc1a43d3"
 
   url "https://www.tenable.com/downloads/api/v1/public/pages/nessus-agents/downloads/11493/download?i_agree_to_tenable_license_agreement=true"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=https://www.tenable.com/downloads/api/v1/public/pages/nessus-agents/downloads/11493/download?i_agree_to_tenable_license_agreement=true'
+  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=https://www.tenable.com/downloads/api/v1/public/pages/nessus-agents/downloads/11493/download?i_agree_to_tenable_license_agreement=true"
   name "Tenable Nessus Agent"
   desc "Agent for Nessus vulnerability scanner"
   homepage "https://www.tenable.com/"
