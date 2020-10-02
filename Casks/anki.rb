@@ -4,7 +4,7 @@ cask "anki" do
 
   # github.com/ankitects/anki/ was verified as official when first introduced to the cask
   url "https://github.com/ankitects/anki/releases/download/#{version}/anki-#{version}-mac.dmg"
-  appcast "https://changes.ankiweb.net/README.md"
+  appcast "https://github.com/ankitects/anki/releases.atom"
   name "Anki"
   desc "Memory training application"
   homepage "https://apps.ankiweb.net/"
