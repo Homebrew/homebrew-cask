@@ -1,6 +1,6 @@
 cask "amazon-workspaces" do
-  version "3.0.10.1308"
-  sha256 "d6ab0bb85918c4283e9b55e152ca62e30b7ae7e5aa1386dcac39150f9119f3ff"
+  version "3.0.11.1344"
+  sha256 "e70092f91850be1b1b168431ae197b5a4541a55e3f88824c2c21069400409de7"
 
   # workspaces-client-updates.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://workspaces-client-updates.s3.amazonaws.com/prod/iad/osx/WorkSpaces.pkg"
