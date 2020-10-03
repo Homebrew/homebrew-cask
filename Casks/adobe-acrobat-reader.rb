@@ -1,6 +1,6 @@
 cask "adobe-acrobat-reader" do
-  version "20.012.20041"
-  sha256 "d93a04cdf86bbea7a4ac19110f49948fea77e1ac011673dca8a588e3f7893c95"
+  version "20.012.20048"
+  sha256 "68ce6007f0f4589309386ac4c5904971f9ec3836e40be3ed219e8a9979af9b0f"
 
   url "https://ardownload2.adobe.com/pub/adobe/reader/mac/AcrobatDC/#{version.no_dots}/AcroRdrDC_#{version.no_dots}_MUI.dmg"
   appcast "https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/index.html"
