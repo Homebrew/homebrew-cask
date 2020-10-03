@@ -6,7 +6,7 @@ cask "visit" do
     # github.com/visit-dav/visit/ was verified as official when first introduced to the cask
     url "https://github.com/visit-dav/visit/releases/download/v#{version}/visit#{version}.darwin-x86_64-10.13.dmg"
   else
-    version "3.1.2"
+    version "3.1.3"
     sha256 "10a8c52d947f4c1adea820238775273da3d60a1b2484d5cbd4fe5781451f567d"
 
     # github.com/visit-dav/visit/ was verified as official when first introduced to the cask
