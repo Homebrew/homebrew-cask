@@ -4,7 +4,7 @@ cask "tripmode" do
 
   # tripmode-updates.ch/app was verified as official when first introduced to the cask
   url "https://tripmode-updates.ch/app/TripMode-#{version}-app.dmg"
-  appcast "https://www.tripmode.ch/app/appcast.xml"
+  appcast "https://tripmode-updates.ch/app/appcast-v#{version.major}.xml"
   name "TripMode"
   homepage "https://www.tripmode.ch/"
 
