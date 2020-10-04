@@ -8,6 +8,8 @@ cask "obs" do
   desc "Open-source software for live streaming and screen recording"
   homepage "https://obsproject.com/"
 
+  auto_updates true
+
   app "OBS.app"
 
   zap trash: [
