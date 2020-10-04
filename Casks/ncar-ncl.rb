@@ -1,7 +1,7 @@
 cask "ncar-ncl" do
   version "6.5.0"
 
-  if MacOS.version == :sierra
+  if MacOS.version <= :sierra
     sha256 "b107934b17085c39053467aa3faa07f00b4e18a89271a0b15eec6768d6ab06fb"
     url "https://www.earthsystemgrid.org/dataset/ncl.#{version.no_dots}.dap/file/ncl_ncarg-#{version}-MacOS_10.12_64bit_gnu710.tar.gz"
   else
