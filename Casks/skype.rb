@@ -19,6 +19,7 @@ cask "skype" do
     "~/Library/Address Book Plug-Ins/SkypeABSMS.bundle",
     "~/Library/Address Book Plug-Ins/SkypeABChatter.bundle",
     "~/Library/Application Scripts/com.skype.skype.shareagent",
+    "~/Library/Application Support/Microsoft/Skype for Desktop",
     "~/Library/Application Support/Skype",
     "~/Library/Application Support/Skype Helper",
     "~/Library/Application Support/T/SkypeRT",
