@@ -9,4 +9,9 @@ cask "anydesk" do
   homepage "https://anydesk.com/remote-desktop"
 
   app "AnyDesk.app"
+
+  zap trash: [
+    "~/.anydesk",
+    "~/Library/Preferences/com.philandro.anydesk.plist",
+  ]
 end
