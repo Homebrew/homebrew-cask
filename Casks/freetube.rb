@@ -5,6 +5,7 @@ cask "freetube" do
   url "https://github.com/FreeTubeApp/FreeTube/releases/download/v#{version}-beta/freetube-#{version}-mac.dmg.zip"
   appcast "https://github.com/FreeTubeApp/FreeTube/releases.atom"
   name "FreeTube"
+  desc "YouTube player focusing on privacy"
   homepage "https://github.com/FreeTubeApp/FreeTube"
 
   app "FreeTube.app"
