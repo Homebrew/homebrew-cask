@@ -11,6 +11,8 @@ cask "showyedge" do
 
   app "ShowyEdge.app"
 
+  depends_on macos: ">= :catalina"
+
   zap trash: [
     "~/Library/Caches/org.pqrs.ShowyEdge",
     "~/Library/Preferences/org.pqrs.ShowyEdge.plist",
