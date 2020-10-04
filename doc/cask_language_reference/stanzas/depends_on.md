@@ -51,11 +51,10 @@ depends_on macos: ['10.14', '10.15']
 
 ### Setting a Minimum macOS Release
 
-`depends_on macos:` can also accept a string starting with a comparison operator such as `>=`, followed by an macOS release in the form above. The following are both valid expressions meaning “at least macOS 10.15”:
+`depends_on macos:` can also accept a string starting with a comparison operator such as `>=`, followed by an macOS release in the form above. The following is a valid expression meaning “at least macOS Catalina (10.15)”:
 
 ```ruby
 depends_on macos: '>= :catalina'
-depends_on macos: '>= 10.15'
 ```
 
 A comparison expression cannot be combined with any other form of `depends_on macos:`.
