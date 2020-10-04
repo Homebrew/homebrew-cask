@@ -4,7 +4,7 @@ cask "kryoflux-dtc" do
 
   url "https://www.kryoflux.com/download/kryoflux_#{version}_macosx.zip"
   appcast "https://www.kryoflux.com/?page=download"
-  name "KryoFlux DTC"
+  name "KryoFlux DiskTool Console"
   desc "Host software command-line interface"
   homepage "https://www.kryoflux.com/"
 
