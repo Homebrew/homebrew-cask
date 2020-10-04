@@ -5,8 +5,8 @@ cask "karabiner-elements" do
 
     url "https://pqrs.org/osx/karabiner/files/Karabiner-Elements-#{version}.dmg"
   else
-    version "12.10.0"
-    sha256 "53252f7d07e44f04972afea2a16ac595552c28715aa65ff4a481a1c18c8be2f4"
+    version "13.0.0"
+    sha256 "18e3f255fd479046f36e57f2c2e0319568aad48784d6deb84c6ae40e9c92db2b"
 
     url "https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg"
   end
