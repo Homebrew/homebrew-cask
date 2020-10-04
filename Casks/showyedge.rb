@@ -9,9 +9,9 @@ cask "showyedge" do
   desc "Visible indicator of the current input source"
   homepage "https://pqrs.org/osx/ShowyEdge/"
 
-  app "ShowyEdge.app"
-
   depends_on macos: ">= :catalina"
+
+  app "ShowyEdge.app"
 
   zap trash: [
     "~/Library/Caches/org.pqrs.ShowyEdge",
