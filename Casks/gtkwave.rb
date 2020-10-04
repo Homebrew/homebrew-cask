@@ -6,9 +6,10 @@ cask "gtkwave" do
   url "https://downloads.sourceforge.net/gtkwave/gtkwave-#{version}-osx-app/gtkwave.zip"
   appcast "https://sourceforge.net/projects/gtkwave/rss"
   name "GTKWave"
+  desc "GTK+ based wave viewer"
   homepage "https://gtkwave.sourceforge.io/"
 
-  depends_on x11: true
+  depends_on cask: "xquartz"
 
   app "gtkwave.app"
   binary "#{appdir}/gtkwave.app/Contents/Resources/bin/gtkwave_bin_launcher.sh", target: "gtkwave"
