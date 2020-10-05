@@ -12,9 +12,10 @@ cask "ncar-ncl" do
   appcast "https://www.ncl.ucar.edu/current_release.shtml"
   name "NCAR Command Language"
   name "ncl"
+  desc "Interpreted language for scientific data analysis and visualization"
   homepage "https://www.ncl.ucar.edu/"
 
-  depends_on x11: true
+  depends_on cask: "xquartz"
   depends_on formula: "gcc"
   depends_on macos: ">= :high_sierra"
 
