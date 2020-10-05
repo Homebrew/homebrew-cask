@@ -31,11 +31,14 @@ cask "karabiner-elements" do
   depends_on macos: ">= :el_capitan"
 
   uninstall signal:  [
-    ["TERM", "org.pqrs.Karabiner-Elements"],
+    
     ["TERM", "karabiner_grabber"],
     ["TERM", "karabiner_console_user_server"],
   ],
-            pkgutil: "org.pqrs.Karabiner-Elements",
+            pkgutil:   [
+    "org.pqrs.Karabiner-Elements",
+    "org.pqrs.Karabiner-DriverKit-VirtualHIDDevice",
+  ],              
             script:  {
               executable: "/Library/Application Support/org.pqrs/Karabiner-Elements/uninstall_core.sh",
               sudo:       true,
