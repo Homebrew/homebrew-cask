@@ -1,11 +1,12 @@
 cask "gtkwave" do
-  version "3.3.103"
-  sha256 "53156f87b6cb644b9b658c1c8b50a92ec88c27dee0c21a4d427f619bdbe1b835"
+  version "3.3.107"
+  sha256 "0024fa80f4566bc053d705200263c7e7d72f2ae111bf670dc6af90403540d3c7"
 
   # downloads.sourceforge.net/gtkwave/ was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/gtkwave/gtkwave-#{version}-osx-app/gtkwave.zip"
   appcast "https://sourceforge.net/projects/gtkwave/rss"
   name "GTKWave"
+  desc "GTK+ based wave viewer"
   homepage "https://gtkwave.sourceforge.io/"
 
   depends_on x11: true
