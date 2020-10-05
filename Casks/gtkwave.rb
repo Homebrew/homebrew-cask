@@ -9,7 +9,7 @@ cask "gtkwave" do
   desc "GTK+ based wave viewer"
   homepage "https://gtkwave.sourceforge.io/"
 
-  depends_on cask: "xquartz"
+  depends_on x11: true
 
   app "gtkwave.app"
   binary "#{appdir}/gtkwave.app/Contents/Resources/bin/gtkwave_bin_launcher.sh", target: "gtkwave"
