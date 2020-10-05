@@ -1,6 +1,6 @@
 cask "moneymoney" do
-  version "2.3.32"
-  sha256 "1a6e408ea26f243fc83d6a63bbc6149a02b3ce5f511b600b38f94eb7cc3ad956"
+  version "2.3.33"
+  sha256 "7c536147b63f1d57967e301b228f63b6a3d408e1edb330b0796ee358be0e2de6"
 
   url "https://service.moneymoney-app.com/1/MoneyMoney.zip"
   appcast "https://service.moneymoney-app.com/1/Appcast.xml"
