@@ -5,6 +5,7 @@ cask "josm" do
   url "https://josm.openstreetmap.de/download/macosx/josm-macosx-#{version}.zip"
   appcast "https://josm.openstreetmap.de/"
   name "JOSM"
+  desc "Extensible editor for OpenStreetMap"
   homepage "https://josm.openstreetmap.de/"
 
   app "JOSM.app"
