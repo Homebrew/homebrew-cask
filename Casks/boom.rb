@@ -15,7 +15,6 @@ cask "boom" do
 
   uninstall kext:      "com.globaldelight.driver.Boom2Device",
             launchctl: [
-              "com.globaldelight.Boom2.*",
               "com.globaldelight.Boom2Daemon",
             ],
             signal:    ["TERM", "com.globaldelight.Boom2"]
