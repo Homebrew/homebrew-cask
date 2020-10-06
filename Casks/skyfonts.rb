@@ -3,7 +3,7 @@ cask "skyfonts" do
   sha256 "b2526d96898895db1c3f2caf3b1ab825898408b097e1efd88fbf33dd6bf9515f"
 
   url "https://cdn1.skyfonts.com/client/Monotype_SkyFonts_Mac64_#{version}.dmg"
-  appcast "https://api.skyfonts.com/api/SkyFontsAppCast?osid=3"
+  appcast "https://api.skyfonts.com/api/SkyFontsAppCast"
   name "SkyFonts"
   desc "Font manager"
   homepage "https://skyfonts.com/"
