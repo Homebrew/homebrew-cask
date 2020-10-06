@@ -9,7 +9,7 @@ cask "parallels" do
   homepage "https://www.parallels.com/products/desktop/"
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "Parallels Desktop.app"
 
