@@ -1,6 +1,6 @@
 cask "appgate-sdp-client" do
-  version "5.2.1"
-  sha256 "8f32357c7c8a9a1a17a89af6d5244aa82f88275659fe93dabcfb2a4df51272f9"
+  version "5.2.2"
+  sha256 "e19d9390dd2a826faa9f7ab6cfbf9d509ecb3a72346eeda69ad5c67c32af127a"
 
   # bin.appgate-sdp.com/ was verified as official when first introduced to the cask
   url "https://bin.appgate-sdp.com/#{version.major_minor}/client/AppGate-SDP-#{version}-Installer.dmg"
