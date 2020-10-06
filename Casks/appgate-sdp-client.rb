@@ -6,6 +6,7 @@ cask "appgate-sdp-client" do
   url "https://bin.appgate-sdp.com/#{version.major_minor}/client/AppGate-SDP-#{version}-Installer.dmg"
   appcast "https://www.appgate.com/software-defined-perimeter/support/appgate-sdp-v#{version.major}-#{version.minor}"
   name "AppGate SDP Client for macOS"
+  desc "Software-defined perimeter for secure network access"
   homepage "https://www.appgate.com/software-defined-perimeter/support"
 
   depends_on macos: ">= :el_capitan"
