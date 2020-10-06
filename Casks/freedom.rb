@@ -1,6 +1,6 @@
 cask "freedom" do
-  version "2.4.1"
-  sha256 "386e539b5363b5db3cb4d2df03910dda0e607407d9326ad5bf89ce0f95a821ef"
+  version "2.4.2"
+  sha256 "faf76534b3042100578389c3f7dc178ff80a3d691eaed070e380f6fe5208152d"
 
   url "https://cdn.freedom.to/installers/updates/mac/#{version}/Freedom.zip"
   appcast "https://cdn.freedom.to/installers/updates/mac/Appcast.xml"
