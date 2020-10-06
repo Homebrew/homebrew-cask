@@ -1,6 +1,6 @@
 cask "kitty" do
-  version "0.19.0"
-  sha256 "bac258f7a9759bd3eced20de2acf27167555dd423b03a1c1ff3ad61fcc87b885"
+  version "0.19.1"
+  sha256 "4c9e0724e2e04d2369d408e587621ac5a8ae82cf177878c1b1a2ce1400cfb2bb"
 
   url "https://github.com/kovidgoyal/kitty/releases/download/v#{version}/kitty-#{version}.dmg"
   appcast "https://github.com/kovidgoyal/kitty/releases.atom"
