@@ -23,10 +23,9 @@ cask "intellij-idea-ce" do
   end
 
   zap trash: [
-    "~/Library/Application Support/IdeaIC#{version.major_minor}",
-    "~/Library/Caches/IdeaIC#{version.major_minor}",
-    "~/Library/Logs/IdeaIC#{version.major_minor}",
-    "~/Library/Preferences/IdeaIC#{version.major_minor}",
+    "~/Library/Application Support/JetBrains/IdeaIC#{version.major_minor}",
+    "~/Library/Caches/JetBrains/IdeaIC#{version.major_minor}",
+    "~/Library/Logs/JetBrains/IdeaIC#{version.major_minor}",
     "~/Library/Preferences/com.jetbrains.intellij.ce.plist",
     "~/Library/Saved Application State/com.jetbrains.intellij.ce.savedState",
   ]
