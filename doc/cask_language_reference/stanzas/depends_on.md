@@ -27,11 +27,11 @@ depends_on formula: 'unar'
 
 ### Requiring an Exact macOS Release
 
-The value for `depends_on macos:` may be a symbol, string, or an array, listing the exact compatible macOS releases.
+The value for `depends_on macos:` may be a symbol or an array, listing the exact compatible macOS releases.
 
 The available values for macOS releases are:
 
-| symbol             | corresponding string
+| symbol             | corresponding release
 | -------------------|----------------------
 | `:yosemite`        | `'10.10'`
 | `:el_capitan`      | `'10.11'`
@@ -45,8 +45,6 @@ Only major releases are covered (version numbers containing a single dot). The s
 ```ruby
 depends_on macos: :catalina
 depends_on macos: [:mojave, :catalina]
-depends_on macos: '10.15'
-depends_on macos: ['10.14', '10.15']
 ```
 
 ### Setting a Minimum macOS Release
