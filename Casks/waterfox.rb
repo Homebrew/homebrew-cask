@@ -1,6 +1,6 @@
 cask "waterfox" do
   version "2020.09"
-  sha256 "f98452eadb537f73354da1787ba535c1ce9a8e3447e97f3431825e8455d9f357"
+  sha256 "042f63a955d0bae80f9030727ff74fca2c66bdbf117a4a465b0ea4a050f5813e"
 
   url "https://cdn.waterfox.net/releases/osx64/installer/Waterfox%20Classic%20#{version}%20Setup.dmg"
   appcast "https://www.waterfox.net/releases/"
