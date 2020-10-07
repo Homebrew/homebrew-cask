@@ -4,7 +4,7 @@ cask "pdfmaker" do
 
   url "https://www.smittytone.net/files/pdfmaker/pdfmaker-2-1-0.dmg"
   name "pdfmaker"
-  desc "A command line tool to build PDFs from JPEG images"
+  desc "Command-line tool to build PDFs from JPEG images"
   homepage "https://www.smittytone.net/pdfmaker/index.html"
 
   binary "pdfmaker"
