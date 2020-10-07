@@ -4,6 +4,7 @@ cask "zoolz" do
 
   url "https://downloads.zoolz.com/zoolz2/Zoolz.pkg"
   name "Zoolz"
+  desc "Client for the Zoolz cloud storage service"
   homepage "https://home.zoolz.com/"
 
   pkg "Zoolz.pkg"
