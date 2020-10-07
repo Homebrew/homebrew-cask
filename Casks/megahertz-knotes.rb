@@ -2,13 +2,14 @@ cask "megahertz-knotes" do
   version "2.6.0"
   sha256 "5946b48b0e6ac588331336f760711c11c53ef9b0030616f39db6e9a41551d434"
 
-  url "http://cdn.knotesapp.cn/download/Knotes-#{version}.dmg"
+  # knotes2.s3-ap-northeast-1.amazonaws.com/ was verified as official when first introduced to the cask
+  url "https://knotes2.s3-ap-northeast-1.amazonaws.com/download/mac/Knotes-#{version}.dmg"
   appcast "https://knotes#{version.major}-release-cn.s3.amazonaws.com/mac/latest-mac.yml"
   name "Knotes"
-  name "糯词笔记"
-  homepage "https://knotesapp.cn/"
+  desc "Reading notes management tool"
+  homepage "https://knotesapp.com/"
 
-  app "糯词笔记.app"
+  app "Knotes.app"
 
   zap trash: [
     "~/Library/Application Support/Knotes*",
