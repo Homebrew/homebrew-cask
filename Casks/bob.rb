@@ -1,6 +1,6 @@
 cask "bob" do
-  version "0.4.0"
-  sha256 "2862b11cd2cb456a1b684e5a7d06fc4dc6433ad1c18af4d61c04a4dbc1150a30"
+  version "0.5.1"
+  sha256 "972c919635c85a96cabaa76237e788122593f04e9e0d7c724150cecc8db8c306"
 
   url "https://github.com/ripperhe/Bob/releases/download/v#{version}/Bob.app.zip"
   appcast "https://github.com/ripperhe/Bob/releases.atom"
