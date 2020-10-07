@@ -8,7 +8,7 @@ cask "android-studio" do
           must_contain: version.before_comma.chomp(".0")
   name "Android Studio"
   desc "Tools for building Android applications"
-  homepage "https://developer.android.com/studio/index.html"
+  homepage "https://developer.android.com/studio/"
 
   auto_updates true
 
