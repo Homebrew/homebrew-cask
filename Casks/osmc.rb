@@ -2,7 +2,7 @@ cask "osmc" do
   version :latest
   sha256 :no_check
 
-  url "http://download.osmc.tv/installers/osmc-installer.dmg"
+  url "https://download.osmc.tv/installers/osmc-installer.dmg"
   name "OSMC"
   homepage "https://osmc.tv/"
 
