@@ -2,7 +2,7 @@ cask "ringcentral-meetings" do
   version :latest
   sha256 :no_check
 
-  url "http://dn.ringcentral.com/data/web/download/RCMeetings/1210/RCMeetingsClientSetup.pkg"
+  url "https://dn.ringcentral.com/data/web/download/RCMeetings/1210/RCMeetingsClientSetup.pkg"
   name "RingCentral Meetings for Mac"
   homepage "https://www.ringcentral.com/online-meetings/overview.html"
 
