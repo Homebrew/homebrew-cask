@@ -9,7 +9,7 @@ cask "whichspace" do
   homepage "https://github.com/gechr/WhichSpace"
 
   auto_updates true
-  depends_on macos: "> :yosemite"
+  depends_on macos: "=> :el_capitan"
 
   app "WhichSpace.app"
 
