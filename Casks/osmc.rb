@@ -4,6 +4,7 @@ cask "osmc" do
 
   url "https://download.osmc.tv/installers/osmc-installer.dmg"
   name "OSMC"
+  desc "Free and open source media center"
   homepage "https://osmc.tv/"
 
   # Renamed for clarity: app name is inconsistent with its branding.
