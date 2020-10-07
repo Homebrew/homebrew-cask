@@ -4,13 +4,15 @@ cask "ringcentral-meetings" do
 
   url "https://dn.ringcentral.com/data/web/download/RCMeetings/1210/RCMeetingsClientSetup.pkg"
   name "RingCentral Meetings for Mac"
+  desc "Video conferencing, screen sharing, and team messaging platform"
   homepage "https://www.ringcentral.com/online-meetings/overview.html"
 
   pkg "RCMeetingsClientSetup.pkg"
 
-  uninstall delete: "/Applications/RingCentral Meetings.app",
-            quit:   "us.zoom.RingCentralOpener",
-            signal: [
+  uninstall delete:  "/Applications/RingCentral Meetings.app",
+            pkgutil: "us.zoom.pkg.ringcentral",
+            quit:    "us.zoom.RingCentralOpener",
+            signal:  [
               ["KILL", "us.zoom.ringcentral"],
             ]
 
