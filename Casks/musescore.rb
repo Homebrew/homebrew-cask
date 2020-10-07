@@ -11,7 +11,7 @@ cask "musescore" do
 
   depends_on macos: ">= :yosemite"
 
-  app "MuseScore #{version}.app"
+  app "MuseScore #{version.major}.app"
   # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/mscore.wrapper.sh"
   binary shimscript, target: "mscore"
