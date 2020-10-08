@@ -12,7 +12,7 @@ cask "box-drive" do
   pkg "Box.pkg"
 
   uninstall pkgutil:   "com.box.desktop.installer.*",
-            launchctl: "com.box.desktop.*",
+            launchctl: "com.box.desktop.helper",
             script:    "/Library/Application Support/Box/uninstall_box_drive",
             quit:      [
               "com.box.Box-Local-Com-Server",
