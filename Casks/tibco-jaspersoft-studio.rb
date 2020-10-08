@@ -1,6 +1,6 @@
 cask "tibco-jaspersoft-studio" do
-  version "6.14.0"
-  sha256 "8dd900162503297297ec01e07e1f34633e8b82aa8abe6343e64b57b1ae8f06a2"
+  version "6.15.0"
+  sha256 "00e5cf1bc27db5baf53e85d3bcc80422c7629be4382308a6f96c6497cb842166"
 
   # sourceforge.net/jasperstudio/ was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/jasperstudio/JaspersoftStudio-#{version}/TIB_js-studiocomm_#{version}_macosx_x86_64.dmg"
