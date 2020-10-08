@@ -9,7 +9,7 @@ cask "minizincide" do
   desc "Open-source constraint modeling language and IDE"
   homepage "https://www.minizinc.org/index.html"
 
-  conflicts_with formula: "unrar"
+  conflicts_with formula: "minizinc"
   depends_on macos: ">= :sierra"
 
   app "MiniZincIDE.app"
