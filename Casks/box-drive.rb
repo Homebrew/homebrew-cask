@@ -5,7 +5,7 @@ cask "box-drive" do
   # e3.boxcdn.net/ was verified as official when first introduced to the cask
   url "https://e3.boxcdn.net/box-installers/desktop/releases/mac/Box.pkg"
   name "Box Drive"
-  desc "Box Drive is an enterprise cloud drive"
+  desc "Client for the Box cloud storage service"
   homepage "https://www.box.com/drive"
 
   conflicts_with cask: "box-sync"
