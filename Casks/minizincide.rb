@@ -6,7 +6,10 @@ cask "minizincide" do
   url "https://github.com/MiniZinc/MiniZincIDE/releases/download/#{version}/MiniZincIDE-#{version}-bundled.dmg"
   appcast "https://github.com/MiniZinc/MiniZincIDE/releases.atom"
   name "MiniZincIDE"
-  homepage "https://www.minizinc.org/ide/index.html"
+  desc "Open-source constraint modeling language and IDE"
+  homepage "https://www.minizinc.org/index.html"
 
   app "MiniZincIDE.app"
+  binary "#{appdir}/MiniZincIDE.app/Contents/Resources/minizinc"
+  binary "#{appdir}/MiniZincIDE.app/Contents/Resources/mzn2doc"
 end
