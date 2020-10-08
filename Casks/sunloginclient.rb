@@ -1,6 +1,6 @@
 cask "sunloginclient" do
-  version "10.2.0.28522"
-  sha256 "3b854bff658cf6c514ff007dbb73c61b48187d32b353ff637ed9b25fff7dd78e"
+  version "10.5.0.31882"
+  sha256 "760fde445f0e7755b584c8f3f9ed84b7fbabcceed9b383de07e10172186d3ea8"
 
   url "https://dl-cdn.oray.com/sunlogin/mac/SunloginClient_#{version}.dmg"
   name "Sunlogin X"
