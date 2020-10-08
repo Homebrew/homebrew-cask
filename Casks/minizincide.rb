@@ -9,6 +9,9 @@ cask "minizincide" do
   desc "Open-source constraint modeling language and IDE"
   homepage "https://www.minizinc.org/index.html"
 
+  conflicts_with formula: "unrar"
+  depends_on macos: ">= :sierra"
+
   app "MiniZincIDE.app"
   binary "#{appdir}/MiniZincIDE.app/Contents/Resources/minizinc"
   binary "#{appdir}/MiniZincIDE.app/Contents/Resources/mzn2doc"
