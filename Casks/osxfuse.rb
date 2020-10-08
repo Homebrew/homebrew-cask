@@ -19,7 +19,7 @@ cask "osxfuse" do
     "com.github.osxfuse.pkg.MacFUSE",
     "com.github.osxfuse.pkg.PrefPane",
   ],
-            kext:    "com.github.osxfuse.filesystems.osxfusefs"
+            kext:    "com.github.osxfuse.filesystems.osxfuse"
 
   zap trash: "~/Library/Caches/com.github.osxfuse.OSXFUSEPrefPane"
 
