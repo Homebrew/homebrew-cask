@@ -9,7 +9,7 @@ cask "evernote" do
     sha256 "eb9a92d57ceb54570c009e37fa7657a0fa3ab927a445eef382487a3fdde6bb97"
 
     url "https://cdn1.evernote.com/mac-smd/public/Evernote_RELEASE_#{version}.dmg"
-  elif MacOS.version <= :high_sierra
+  elsif MacOS.version <= :high_sierra
     version "7.14_458244"
     sha256 "1049a40b8497c0e37d7fed8828552dba89fa52c826134e05b0d56e431e5033ad"
 
