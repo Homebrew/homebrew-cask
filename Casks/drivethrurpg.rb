@@ -6,7 +6,10 @@ cask "drivethrurpg" do
   url "https://dtrpg-library-app.s3.us-east-2.amazonaws.com/DriveThruRPG.dmg"
   appcast "https://www.drivethrurpg.com/library_client.php?os=Macintosh"
   name "DriveThruRPG Library App"
+  desc "DriveThruRPG library sync to compatible devices"
   homepage "https://www.drivethrurpg.com/library_client.php"
+
+  depends_on macos: ">= :high_sierra"
 
   app "DriveThruRPG.app"
 end
