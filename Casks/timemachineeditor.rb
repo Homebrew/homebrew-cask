@@ -1,6 +1,6 @@
 cask "timemachineeditor" do
-  version :latest
-  sha256 :no_check
+  version "5.1.6"
+  sha256 "c15d2aa072cfcb974e7991863d5ba0380df2a874aaf25d285c1ab462068dbb36"
 
   url "https://tclementdev.com/timemachineeditor/TimeMachineEditor.pkg"
   name "TimeMachineEditor"
@@ -8,6 +8,6 @@ cask "timemachineeditor" do
   homepage "https://tclementdev.com/timemachineeditor/"
 
   pkg "TimeMachineEditor.pkg"
-
+    
   uninstall pkgutil: "com.tclementdev.pkg.timemachineeditor"
 end
