@@ -1,6 +1,6 @@
 cask "altserver" do
-  version "1.3.2"
-  sha256 "7c1db4387a700f389d173a8cf56d385673419b4c2227e1de4251101c5f14f153"
+  version "1.4"
+  sha256 "1107c408f584dd2b3579562ecda59544b1f6547a1fb025c1a502a19b972c4272"
 
   # f000.backblazeb2.com/file/ was verified as official when first introduced to the cask
   url "https://f000.backblazeb2.com/file/altstore/altserver/#{version.dots_to_underscores}.zip"
