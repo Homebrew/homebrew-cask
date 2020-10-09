@@ -1,6 +1,6 @@
 cask "streamlabs-obs" do
-  version "0.24.1"
-  sha256 "868fc8ae019f002f13378451ccaefb9cd9ee4f668e8a51044cc94947776260a2"
+  version "0.25.0"
+  sha256 "b75a7a30db2c0bacaf50a141bfb5565f78d162cb7151449c13be3004b0d0891c"
 
   url "https://slobs-cdn.streamlabs.com/Streamlabs+OBS-#{version}.dmg"
   appcast "https://slobs-cdn.streamlabs.com/latest-mac.yml"
