@@ -5,6 +5,7 @@ cask "airtame" do
   url "https://downloads-cdn.airtame.com/app/latest/mac/Airtame-#{version}.dmg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://downloads-website.airtame.com/get.php?platform=mac"
   name "Airtame"
+  desc "Wireless screen sharing platform"
   homepage "https://airtame.com/"
 
   auto_updates true
