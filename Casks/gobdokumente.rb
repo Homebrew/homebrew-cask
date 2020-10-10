@@ -13,6 +13,7 @@ cask "gobdokumente" do
   appcast "https://sparkle.moapp.software/gobdokumente.xml"
   name "GoBDokumente"
   name "GoBDocuments"
+  desc "Document management system"
   homepage "https://gobdokumente.de/"
 
   depends_on macos: ">= :el_capitan"
