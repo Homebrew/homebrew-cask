@@ -9,13 +9,11 @@ cask "recaf" do
   desc "Java bytecode editor that simplifies editing compiled Java applications"
   homepage "https://www.coley.software/Recaf/"
 
-  container type: :naked
-
   auto_updates true
+  container type: :naked
 
   # Renamed for clarity: jar file contains necessary JavaFX dependancies
   app "recaf-#{version}-J8-jar-with-dependencies.jar", target: "Recaf.jar"
-
 
   # Ideally, we disable auto-updates with this preference
   postflight do
@@ -36,9 +34,9 @@ cask "recaf" do
     EOS
   end
 
+  zap trash: "~/Library/Preferences/Recaf"
+
   caveats do
     depends_on_java "8+"
   end
-
-  zap trash: "~/Library/Preferences/Recaf"
 end
