@@ -21,7 +21,7 @@ cask "datadog-agent" do
             # missing files caused by case insensitivity and files that differ only in case.
             # See https://github.com/Homebrew/homebrew-cask/pull/54739.
             delete:    [
-              "/Applications/Datadog Agent.app/",
+              "/Applications/Datadog Agent.app",
               "/opt/datadog-agent/",
               "/private/var/db/receipts/com.datadoghq.agent.*",
             ]
