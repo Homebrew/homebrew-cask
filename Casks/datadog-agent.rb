@@ -6,6 +6,7 @@ cask "datadog-agent" do
   url "https://dd-agent.s3.amazonaws.com/datadog-agent-#{version}.dmg"
   appcast "https://github.com/DataDog/datadog-agent/releases.atom"
   name "Datadog Agent"
+  desc "Monitoring and security across systems, apps, and services"
   homepage "https://www.datadoghq.com/"
 
   pkg "datadog-agent-#{version}.pkg"
@@ -20,7 +21,7 @@ cask "datadog-agent" do
             # missing files caused by case insensitivity and files that differ only in case.
             # See https://github.com/Homebrew/homebrew-cask/pull/54739.
             delete:    [
-              "/Applications/Datadog Agent.app",
+              "/Applications/Datadog Agent.app/",
               "/opt/datadog-agent/",
               "/private/var/db/receipts/com.datadoghq.agent.*",
             ]
