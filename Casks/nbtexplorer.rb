@@ -5,6 +5,7 @@ cask "nbtexplorer" do
   # hocuspocus.taloncrossing.com/ was verified as official when first introduced to the cask
   url "http://hocuspocus.taloncrossing.com/rii/NBTExplorer-Mac-#{version}.zip"
   name "NBTExplorer"
+  desc "Named Binary Tag (NBT) data editor for Minecraft"
   homepage "https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-tools/1262665-nbtexplorer-nbt-editor-for-windows-and-mac"
 
   depends_on macos: "<= :mojave"
