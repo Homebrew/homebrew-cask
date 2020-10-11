@@ -7,6 +7,7 @@ cask "teamdrive" do
   appcast "https://teamdrive.com/en/downloads/",
           must_contain: version.major_minor_patch
   name "TeamDrive"
+  desc "Secure cloud storage service"
   homepage "https://www.teamdrive.com/"
 
   installer script: {
