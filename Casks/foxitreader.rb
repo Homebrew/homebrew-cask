@@ -9,7 +9,7 @@ cask "foxitreader" do
   desc "PDF reader"
   homepage "https://www.foxitsoftware.com/pdf-reader/"
 
-  pkg "FoxitReader#{version.no_dots}.setup.pkg"
+  pkg "FoxitReader#{version.no_dots}.L10N.Setup.pkg"
 
   uninstall pkgutil: [
     "com.foxitsoftware.reader.pkg",
