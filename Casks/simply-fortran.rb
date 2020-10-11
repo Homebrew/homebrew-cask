@@ -11,6 +11,7 @@ cask "simply-fortran" do
   appcast "https://simplyfortran.com/download/?platform=macos",
           must_contain: version.major_minor
   name "Simply Fortran"
+  desc "Fortran development environment"
   homepage "https://simplyfortran.com/"
 
   app "Simply Fortran.app"
