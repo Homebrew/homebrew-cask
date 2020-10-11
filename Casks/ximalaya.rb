@@ -7,6 +7,7 @@ cask "ximalaya" do
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.ximalaya.com/down/lite?client=mac"
   name "ximalaya"
   name "喜马拉雅"
+  desc "Platform for podcasting and audio-sharing"
   homepage "https://www.ximalaya.com/"
 
   app "喜马拉雅.app"
