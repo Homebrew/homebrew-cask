@@ -12,7 +12,7 @@ cask "recaf" do
   auto_updates true
   container type: :naked
 
-  # Renamed for clarity: jar file contains necessary JavaFX dependancies
+  # Renamed for clarity: jar file name is overly complex
   app "recaf-#{version}-J8-jar-with-dependencies.jar", target: "Recaf.jar"
 
   zap trash: "~/Library/Preferences/Recaf"
