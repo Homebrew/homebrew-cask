@@ -15,25 +15,6 @@ cask "recaf" do
   # Renamed for clarity: jar file contains necessary JavaFX dependancies
   app "recaf-#{version}-J8-jar-with-dependencies.jar", target: "Recaf.jar"
 
-  # Ideally, we disable auto-updates with this preference
-  postflight do
-    FileUtils.mkdir_p ENV["HOME"]+"/Library/Preferences/Recaf/config"
-
-    IO.write "#{ENV["HOME"]}/Library/Preferences/Recaf/config/update.json", <<~EOS
-      {
-        "update.active": false,
-        "update.lastcheck": 1600000000000,
-        "update.frequency": "WEEKLY"
-      }
-    EOS
-
-    IO.write "#{ENV["HOME"]}/Library/Preferences/Recaf/config/backend.json", <<~EOS
-      {
-        "backend.firsttime": false
-      }
-    EOS
-  end
-
   zap trash: "~/Library/Preferences/Recaf"
 
   caveats do
