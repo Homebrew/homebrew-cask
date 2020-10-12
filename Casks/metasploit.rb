@@ -2,9 +2,10 @@ cask "metasploit" do
   version "6.0.11,20201012102846"
   sha256 "90b21ed0e71ebdb4eccf9c1c524a5cfb022dc8a51ea83881d7da72223cfbab6a"
 
-  url "https://osx.metasploit.com/metasploit-framework-6.0.11+20201012102846-1rapid7-1.pkg"
+  url "https://osx.metasploit.com/metasploit-framework-#{version.before_comma}+#{version.after_comma}-1rapid7-1.pkg"
   appcast "https://osx.metasploit.com/LATEST"
   name "Metasploit Framework"
+  desc "Penetration testing framework"
   homepage "https://www.metasploit.com/"
 
   depends_on formula: "nmap"
