@@ -21,12 +21,12 @@ cask "nextcloud" do
   uninstall pkgutil: "com.nextcloud.desktopclient"
 
   zap trash: [
-    "~/Library/Application Support/Nextcloud",
-    "~/Library/Preferences/Nextcloud",
-    "~/Library/Preferences/com.nextcloud.desktopclient.plist",
     "~/Library/Application Scripts/com.nextcloud.desktopclient.FinderSyncExt",
-    "~/Library/Group Containers/com.nextcloud.desktopclient",
-    "~/Library/Containers/com.nextcloud.desktopclient.FinderSyncExt",
+    "~/Library/Application Support/Nextcloud",
     "~/Library/Caches/Nextcloud",
+    "~/Library/Containers/com.nextcloud.desktopclient.FinderSyncExt",
+    "~/Library/Group Containers/com.nextcloud.desktopclient",
+    "~/Library/Preferences/com.nextcloud.desktopclient.plist",
+    "~/Library/Preferences/Nextcloud",
   ]
 end
