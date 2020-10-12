@@ -6,6 +6,7 @@ cask "klokki" do
   url "https://storage.yandexcloud.net/klokki/Klokki.dmg"
   appcast "https://storage.yandexcloud.net/klokki/appcast.xml"
   name "Klokki"
+  desc "Automatic time-tracking solution or freelancers and makers"
   homepage "https://klokki.com/"
 
   depends_on macos: ">= :mojave"
