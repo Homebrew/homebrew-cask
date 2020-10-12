@@ -8,7 +8,7 @@ cask "klokki" do
   name "Klokki"
   homepage "https://klokki.com/"
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :mojave"
 
   app "Klokki.app"
 end
