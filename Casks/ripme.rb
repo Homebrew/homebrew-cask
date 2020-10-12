@@ -5,7 +5,7 @@ cask "ripme" do
   url "https://github.com/RipMeApp/ripme/releases/download/#{version}/ripme.jar"
   appcast "https://github.com/RipMeApp/ripme/releases.atom"
   name "RipMe"
-  desc "Java based Album ripper for various websites"
+  desc "Album ripper for various websites"
   homepage "https://github.com/RipMeApp/ripme"
 
   auto_updates true
