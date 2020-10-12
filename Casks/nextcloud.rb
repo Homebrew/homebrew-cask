@@ -19,4 +19,14 @@ cask "nextcloud" do
   binary "#{appdir}/nextcloud.app/Contents/MacOS/nextcloudcmd"
 
   uninstall pkgutil: "com.nextcloud.desktopclient"
+
+  zap trash: [
+    "~/Library/Application Support/Nextcloud",
+    "~/Library/Preferences/Nextcloud",
+    "~/Library/Preferences/com.nextcloud.desktopclient.plist",
+    "~/Library/Application Scripts/com.nextcloud.desktopclient.FinderSyncExt",
+    "~/Library/Group Containers/com.nextcloud.desktopclient",
+    "~/Library/Containers/com.nextcloud.desktopclient.FinderSyncExt",
+    "~/Library/Caches/Nextcloud",
+  ]
 end
