@@ -1,6 +1,6 @@
 cask "scilab" do
   version "6.1.0"
-  sha256 "91dd69c6bba19be4d50862a8d746807d3c7b91e8c547070d275c7092ebb0562b"
+  sha256 "97d60eae1d8b7396d3773d53f86e9b533c6ac0b64db2d3725a5ef0d38017915a"
 
   # utc.fr/~mottelet/scilab/ was verified as official when first introduced to the cask
   url "https://www.utc.fr/~mottelet/scilab/download/branch-#{version.major_minor}/scilab-branch-#{version.major_minor}-x86_64.dmg"
