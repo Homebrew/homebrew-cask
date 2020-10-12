@@ -8,5 +8,7 @@ cask "menubar-countdown" do
   desc "Countdown timer for the menu bar"
   homepage "https://github.com/kristopherjohnson/MenubarCountdown"
 
+  depends_on macos: ">= :mojave"
+
   app "Menubar Countdown.app"
 end
