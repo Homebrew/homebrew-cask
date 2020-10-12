@@ -1,6 +1,6 @@
 cask "navicat-for-sqlite" do
-  version "15.0.21"
-  sha256 "d12fa018f5a88a73df5eab6041a5a8f3cbe6df8409ce969d0f433b9cee8a73c7"
+  version "15.0.22"
+  sha256 "f2455804cb845a82ab1439ca0f668dcdf9d2adc7ee749558a39f59627b858b52"
 
   url "http://download.navicat.com/download/navicat#{version.major_minor.no_dots}_sqlite_en.dmg"
   appcast "https://updater.navicat.com/mac/navicat_updates.php?appName=Navicat%20for%20SQLite&appLang=en"
