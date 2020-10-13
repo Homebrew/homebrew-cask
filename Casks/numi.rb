@@ -1,6 +1,6 @@
 cask "numi" do
-  version "3.28.668"
-  sha256 "b4966d8f265fb0c1c8ad9aa804302cb43e3946429ad293f54ee94be00f6e92c6"
+  version "3.29.675"
+  sha256 "76e20b0791e6c6deae4c7a2949a161d6b902b4c9745b2bca06b0368335d5f749"
 
   url "https://s5.numi.app/updates/#{version}/Numi.zip"
   appcast "https://github.com/nikolaeu/numi/releases.atom",
