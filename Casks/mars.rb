@@ -4,25 +4,15 @@ cask "mars" do
 
   url "https://courses.missouristate.edu/KenVollmar/mars/MARS_#{version.before_comma.dots_to_underscores}_#{version.after_comma}/Mars#{version.before_comma.dots_to_underscores}.jar"
   appcast "https://courses.missouristate.edu/KenVollmar/mars/Help/MarsHelpHistory.html"
-  name "MIPS Assembler and Runtime Simulator"
   name "MARS"
+  desc "Mips Assembly and Runtime Simulator"
   homepage "https://courses.missouristate.edu/KenVollmar/mars/index.htm"
 
   container type: :naked
 
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/mars.wrapper.sh"
-  binary shimscript, target: "mars"
-
-  preflight do
-    IO.write shimscript, <<~EOS
-      #!/bin/bash
-      cd "$(dirname "$(readlink -n "${0}")")" && \
-        java "${@}" -jar 'Mars#{version.before_comma.dots_to_underscores}.jar'
-    EOS
-  end
+  app "Mars#{version.before_comma.dots_to_underscores}.jar", target: "Mars.jar"
 
   caveats do
-    depends_on_java
+    depends_on_java "9+"
   end
 end
