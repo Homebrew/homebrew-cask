@@ -5,6 +5,7 @@ cask "webviewscreensaver" do
   url "https://github.com/liquidx/webviewscreensaver/releases/download/v#{version}/WebViewScreenSaver-#{version}.zip"
   appcast "https://github.com/liquidx/webviewscreensaver/releases.atom"
   name "WebViewScreenSaver"
+  desc "Screen saver that displays web pages"
   homepage "https://github.com/liquidx/webviewscreensaver"
 
   depends_on macos: ">= :yosemite"
