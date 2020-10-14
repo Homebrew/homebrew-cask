@@ -1,6 +1,6 @@
 cask "flash-player" do
-  version "32.0.0.433"
-  sha256 "5263d55e6e69018a7457fd868c2b020762637b4bc4ce2339d9066f4321bdbc4d"
+  version "32.0.0.445"
+  sha256 "4b5ae8707a2d9c00a88fc2328f56d30c21a83c354d96f8050628b052e565ab84"
 
   url "https://fpdownload.adobe.com/pub/flashplayer/updaters/#{version.major}/flashplayer_#{version.major}_sa.dmg"
   appcast "https://www.adobe.com/support/flashplayer/debug_downloads.html"
