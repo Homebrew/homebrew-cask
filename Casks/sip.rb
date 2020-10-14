@@ -4,7 +4,7 @@ cask "sip" do
     sha256 "93569421eef761ccdd2784d73e5f201d29e5e22ad6814a7a169f459f460bf4ff"
   else
     version "2.4"
-    sha256 "448e6e6ccc696b919aba5edf2068e114268d3ef86e8ebdd7151bd961d50b13d3"
+    sha256 "19f956975113698abc10c869948f2616fe90d26cb4f2ff1cbfc56f2cfcd9247f"
   end
 
   url "https://sipapp.io/updates/v#{version.major}/sip-#{version}.zip"
