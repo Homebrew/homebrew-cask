@@ -8,5 +8,5 @@ cask "easy-move-plus-resize" do
   desc "Utility to support moving and resizing using a modifier key and mouse drag"
   homepage "https://github.com/dmarcotte/easy-move-resize"
 
-  app "easy-move-resize/Easy Move+Resize.app"
+  app "Easy Move+Resize.app"
 end
