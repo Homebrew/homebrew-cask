@@ -1,12 +1,15 @@
 cask "strawberry" do
-  version "0.8.1"
-  sha256 "fb30c2c24465c13bdd4c710190d93bfc88e4368c2495cdb60fc3cac9a001fc12"
+  version "0.8.2"
+  sha256 "3e2a71e55e18f472a442b58cd69c8d747ddf7efb0a999caafbb0b9e0af302c9b"
 
   # github.com/strawberrymusicplayer/strawberry/ was verified as official when first introduced to the cask
-  url "https://github.com/strawberrymusicplayer/strawberry/releases/download/#{version}/strawberry-#{version}-catalina.dmg"
+  url "https://github.com/strawberrymusicplayer/strawberry/releases/download/#{version}/strawberry-#{version}.dmg"
   appcast "https://github.com/strawberrymusicplayer/strawberry/releases.atom"
   name "Strawberry"
+  desc "Music player and music collection organizer"
   homepage "https://www.strawberrymusicplayer.org/"
+
+  depends_on macos: ">= :catalina"
 
   app "strawberry.app"
 
