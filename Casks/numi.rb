@@ -1,10 +1,9 @@
 cask "numi" do
-  version "3.29.675"
-  sha256 "76e20b0791e6c6deae4c7a2949a161d6b902b4c9745b2bca06b0368335d5f749"
+  version "3.28.668"
+  sha256 "4daf9adde47117891559a31360aae6262fcdb9e0a092658ec4471aa4aafbc634"
 
-  url "https://s5.numi.app/updates/#{version}/Numi.zip"
-  appcast "https://github.com/nikolaeu/numi/releases.atom",
-          must_contain: version.major_minor
+  url "https://s3.numi.app/updates/#{version}/Numi.dmg"
+  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://s1.numi.app/download"
   name "Numi"
   desc "Calculator and converter application"
   homepage "https://numi.app/"
