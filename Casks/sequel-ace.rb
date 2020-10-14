@@ -1,6 +1,6 @@
 cask "sequel-ace" do
-  version "2.1.8"
-  sha256 "a3151bfa78381a08821310dc816bea59d529348b82a8411b22980fd72ce4678b"
+  version "2.2.0"
+  sha256 "82197e91694990bffa323a1c726732e3fb29f9b8268174e97e4c19a089b94d3b"
 
   url "https://github.com/Sequel-Ace/Sequel-Ace/releases/download/#{version}/Sequel-Ace-#{version}-release.zip"
   appcast "https://github.com/Sequel-Ace/Sequel-Ace/releases.atom"
