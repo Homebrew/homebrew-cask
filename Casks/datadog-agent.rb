@@ -9,24 +9,21 @@ cask "datadog-agent" do
   desc "Monitoring and security across systems, apps, and services"
   homepage "https://www.datadoghq.com/"
 
-  pkg "datadog-agent-#{version}.pkg"
+  installer manual: "datadog-agent-#{version}.pkg"
 
-  preflight do
-    require "etc"
-    File.write("/tmp/datadog-install-user", Etc.getlogin)
-  end
-
-  uninstall launchctl: "com.datadoghq.agent",
-            # pkgutil: 'com.datadoghq.agent' # this is commented out because PKG uninstallation seems to fail due to
-            # missing files caused by case insensitivity and files that differ only in case.
-            # See https://github.com/Homebrew/homebrew-cask/pull/54739.
+  uninstall quit:      "com.datadoghq.agent",
+            launchctl: "com.datadoghq.agent",
+            pkgutil:   "com.datadoghq.agent",
             delete:    [
               "/Applications/Datadog Agent.app",
-              "/opt/datadog-agent/",
-              "/private/var/db/receipts/com.datadoghq.agent.*",
+              "/opt/datadog-agent",
+              "/usr/local/bin/datadog-agent",
             ]
 
-  zap trash: "/opt/datadog-agent"
+  zap trash: [
+    "~/.datadog-agent",
+    "~/Library/LaunchAgents/com.datadoghq.agent.plist",
+  ]
 
   caveats <<~EOS
     You will need to update /opt/datadog-agent/etc/datadog.yaml and replace APIKEY with your api key
