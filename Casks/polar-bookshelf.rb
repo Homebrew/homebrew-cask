@@ -8,5 +8,5 @@ cask "polar-bookshelf" do
   name "Polar Bookshelf"
   homepage "https://getpolarized.io/"
 
-  app "Polar Bookshelf.app"
+  app "Polar.app"
 end
