@@ -4,8 +4,7 @@ cask "messenger" do
 
   # www.facebook.com/messenger/desktop/ was verified as official when first introduced to the cask
   url "https://www.facebook.com/messenger/desktop/update/#{version.after_comma}.zip"
-  appcast "https://www.facebook.com/messenger/desktop/update/latest-mac.yml",
-          must_contain: version.before_comma
+  appcast "https://www.facebook.com/messenger/desktop/update/latest-mac.yml"
   name "Facebook Messenger"
   desc "Native desktop app for Messenger (formerly Facebook Messenger)"
   homepage "https://www.messenger.com/desktop"
