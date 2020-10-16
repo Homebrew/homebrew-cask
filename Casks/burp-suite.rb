@@ -1,10 +1,11 @@
 cask "burp-suite" do
   version "2020.10"
-  sha256 "d9a3eeee4c9fc42e59384cc30b569bbc9813c144b4457c20494cd45fb3250ec4"
+  sha256 "07b2e4cc4f62e4f0925505ffc835b7f0f2cc6a56c80e6d5ee84f46bbf19dfb9f"
 
   url "https://portswigger.net/burp/releases/download?product=community&version=#{version}&type=MacOsx"
   appcast "https://portswigger.net/burp/releases?initialTab=community"
   name "Burp Suite"
+  desc "Set of manual tools for exploring web security"
   homepage "https://portswigger.net/burp/"
 
   installer script: {
