@@ -6,6 +6,7 @@ cask "polar-bookshelf" do
   url "https://github.com/burtonator/polar-bookshelf/releases/download/v#{version}/Polar-#{version}.dmg"
   appcast "https://github.com/burtonator/polar-bookshelf/releases.atom"
   name "Polar Bookshelf"
+  desc "Integrated reading environment"
   homepage "https://getpolarized.io/"
 
   app "Polar.app"
