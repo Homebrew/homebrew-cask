@@ -1,4 +1,3 @@
-
 cask "wolfram-engine" do
   version "12.1.1"
   sha256 "fe43def3b2828286ffae0fee8ee82227322751d68467d4a60d2283be6df41fe3"
