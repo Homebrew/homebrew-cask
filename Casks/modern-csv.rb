@@ -10,5 +10,5 @@ cask "modern-csv" do
 
   app "Modern CSV.app"
 
-  zap trash: ["~/Library/Application Support/Modern CSV"]
+  zap trash: "~/Library/Application Support/Modern CSV"
 end
