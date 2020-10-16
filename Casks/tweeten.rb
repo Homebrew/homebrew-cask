@@ -10,4 +10,11 @@ cask "tweeten" do
   homepage "https://tweetenapp.com/"
 
   app "Tweeten.app"
+
+  zap trash: [
+    "~/Library/Application Support/Tweeten",
+    "~/Library/Logs/Tweeten",
+    "~/Library/Preferences/com.builtbymeh.tweeten.plist",
+    "~/Library/Saved Application State/com.builtbymeh.tweeten.savedState",
+  ]
 end
