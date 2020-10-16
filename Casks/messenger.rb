@@ -10,7 +10,7 @@ cask "messenger" do
 
   app "Messenger.app"
 
-  zap :trash [
+  zap trash: [
     '~/Library/Application Support/Messenger',
     '~/Library/Caches/Messenger',
     '~/Library/Logs/Messenger',
