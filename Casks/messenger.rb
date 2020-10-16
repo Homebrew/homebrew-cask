@@ -9,4 +9,11 @@ cask "messenger" do
   homepage "https://www.messenger.com/desktop"
 
   app "Messenger.app"
+
+  zap :trash [
+    '~/Library/Application Support/Messenger',
+    '~/Library/ApplicationSupport/Messenger',
+    '~/Library/Caches/Messenger',
+    '~/Library/Logs/Messenger',
+  ]
 end
