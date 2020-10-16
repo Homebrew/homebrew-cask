@@ -4,7 +4,7 @@ cask "wechat" do
 
   url "https://dldir1.qq.com/weixin/mac/WeChatMac.dmg"
   # There is an appcast at https://dldir1.qq.com/weixin/mac/mac-release.xml,
-  # but it’s slower to update than the submissions we get. See:
+  # but it's slower to update than the submissions we get. See:
   #   https://github.com/Homebrew/homebrew-cask/pull/90907#issuecomment-710107547
   name "WeChat for Mac"
   name "微信 Mac 版"
