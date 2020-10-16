@@ -15,8 +15,8 @@ cask "tweetbot" do
   app "Tweetbot.app"
 
   zap trash: [
-    "~/Library/Application Scripts/com.tapbots.Tweetbot3Mac",
-    "~/Library/Containers/com.tapbots.Tweetbot3Mac",
-    "~/Library/Group Containers/*.com.tapbots.Tweetbot3Mac",
+    "~/Library/Application Scripts/com.tapbots.Tweetbot#{version.major}Mac",
+    "~/Library/Containers/com.tapbots.Tweetbot#{version.major}Mac",
+    "~/Library/Group Containers/*.com.tapbots.Tweetbot#{version.major}Mac",
   ]
 end
