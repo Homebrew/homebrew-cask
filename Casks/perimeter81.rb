@@ -11,5 +11,10 @@ cask "perimeter81" do
 
   uninstall pkgutil: [
     "com.safervpn.osx.smb",
+  ], launchctl: [
+    "com.perimeter81.Perimeter81",
+    "com.perimeter81.osx.HelperTool",
+  ], quit: [
+    "com.safervpn.osx.smb",
   ]
 end
