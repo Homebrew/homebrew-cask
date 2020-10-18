@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 cask "electrum" do
   version "4.0.4"
   sha256 "39f09e721aecec9b324ce1daf4ec5dd5b2403acce552c178bcbe61dc7503e006"
@@ -9,6 +7,8 @@ cask "electrum" do
   name "Electrum"
   desc "Bitcoin thin client"
   homepage "https://electrum.org/"
+
+  depends_on macos: ">= :high_sierra"
 
   app "Electrum.app"
 
