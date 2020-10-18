@@ -7,7 +7,7 @@ cask "mcgimp" do
   desc "Recompiled GIMP installation"
   homepage "https://www.partha.com/"
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :sierra"
 
   app "McGimp-#{version}.app"
 end
