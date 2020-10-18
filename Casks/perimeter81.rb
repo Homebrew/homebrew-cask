@@ -13,7 +13,7 @@ cask "perimeter81" do
   uninstall quit:      [
     "com.perimeter81.Perimeter81",
     "com.safervpn.osx.smb",
-  ]
+  ],
             launchctl: [
               "com.perimeter81.Perimeter81",
               "com.perimeter81.osx.HelperTool",
