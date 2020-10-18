@@ -1,3 +1,4 @@
+# typed: false
 cask "perimeter81" do
   version :latest
   sha256 :no_check
@@ -9,12 +10,10 @@ cask "perimeter81" do
 
   pkg "Perimeter81.pkg"
 
-  uninstall pkgutil: [
-    "com.safervpn.osx.smb",
-  ], launchctl: [
-    "com.perimeter81.Perimeter81",
-    "com.perimeter81.osx.HelperTool",
-  ], quit: [
-    "com.safervpn.osx.smb",
-  ]
+  uninstall pkgutil:   "com.safervpn.osx.smb",
+            launchctl: [
+              "com.perimeter81.Perimeter81",
+              "com.perimeter81.osx.HelperTool",
+            ],
+            quit:      "com.safervpn.osx.smb"
 end
