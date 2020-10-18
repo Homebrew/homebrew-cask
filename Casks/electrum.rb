@@ -8,6 +8,8 @@ cask "electrum" do
   desc "Bitcoin thin client"
   homepage "https://electrum.org/"
 
+  depends_on macos: ">= :high_sierra"
+
   app "Electrum.app"
 
   zap trash: [
