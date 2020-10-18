@@ -4,7 +4,8 @@ cask "musescore" do
 
   # github.com/musescore/MuseScore/ was verified as official when first introduced to the cask
   url "https://github.com/musescore/MuseScore/releases/download/v#{version.major_minor_patch}/MuseScore-#{version}.dmg"
-  appcast "https://github.com/musescore/MuseScore/releases.atom"
+  appcast "https://github.com/musescore/MuseScore/releases.atom",
+          must_contain: version.major_minor_patch
   name "MuseScore"
   desc "Open-source music notation software"
   homepage "https://musescore.org/"
