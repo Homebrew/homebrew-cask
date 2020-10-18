@@ -1,19 +1,22 @@
-# typed: false
 cask "perimeter81" do
+  # note: "81" is not a version number, but an intrinsic part of the product name
   version :latest
   sha256 :no_check
 
   url "https://static.perimeter81.com/apps/osx/Perimeter81.pkg"
   name "Perimeter 81"
-  desc "Zero Trust Network as a Service client"
+  desc "Zero trust network as a service client"
   homepage "https://perimeter81.com/"
 
   pkg "Perimeter81.pkg"
 
-  uninstall pkgutil:   "com.safervpn.osx.smb",
+  uninstall quit:      [
+    "com.perimeter81.Perimeter81",
+    "com.safervpn.osx.smb",
+  ]
             launchctl: [
               "com.perimeter81.Perimeter81",
               "com.perimeter81.osx.HelperTool",
             ],
-            quit:      "com.safervpn.osx.smb"
+            pkgutil:   "com.safervpn.osx.smb"
 end
