@@ -10,10 +10,7 @@ cask "perimeter81" do
 
   pkg "Perimeter81.pkg"
 
-  uninstall quit:      [
-    "com.perimeter81.Perimeter81",
-    "com.safervpn.osx.smb",
-  ],
+  uninstall quit:      "com.perimeter81.Perimeter81",
             launchctl: [
               "com.perimeter81.Perimeter81",
               "com.perimeter81.osx.HelperTool",
