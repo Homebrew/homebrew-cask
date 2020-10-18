@@ -10,7 +10,7 @@ cask "perimeter81" do
 
   pkg "Perimeter81.pkg"
 
-  uninstall pkgutil:   "com.safervpn.osx.smb"
+  uninstall pkgutil:   "com.safervpn.osx.smb",
             quit:      [
               "com.perimeter81.Perimeter81",
               "com.safervpn.osx.smb",
