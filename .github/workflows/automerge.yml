@@ -16,6 +16,7 @@ on:
       - submitted
   pull_request_target:
     types:
+      - unlabeled
       - ready_for_review
   workflow_dispatch:
     inputs:
