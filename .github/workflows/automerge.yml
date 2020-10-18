@@ -16,6 +16,7 @@ on:
       - submitted
   pull_request_target:
     types:
+      - unlabeled
       - ready_for_review
   workflow_dispatch:
     inputs:
@@ -35,7 +36,7 @@ jobs:
       )
     runs-on: ubuntu-latest
     steps:
-      - uses: reitermarkus/automerge@36c2ac3bbf61c8ff12c119ca37a659da5875deca
+      - uses: reitermarkus/automerge@ce17e6ff62b56d78e4e0ab61ff4af6e85bfd8fdf
         with:
           token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
           merge-method: squash
