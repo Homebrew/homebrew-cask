@@ -5,6 +5,7 @@ cask "native-access" do
   url "https://native-instruments.com/fileadmin/downloads/Native_Access_Installer.dmg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_sizeandmodified.cgi?url=https://native-instruments.com/fileadmin/downloads/Native_Access_Installer.dmg"
   name "Native Access"
+  desc "Administration tool for Native Instruments products"
   homepage "https://native-instruments.com/specials/native-access"
 
   auto_updates true
