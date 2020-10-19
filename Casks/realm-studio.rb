@@ -11,7 +11,7 @@ cask "realm-studio" do
 
   auto_updates true
 
-  app "Realm Studio.app"
+  app "MongoDB Realm Studio.app"
 
   zap delete: [
     "~/Library/Application Support/Realm Studio",
