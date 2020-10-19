@@ -7,7 +7,7 @@ cask "microsoft-auto-update" do
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://go.microsoft.com/fwlink/?linkid=830196"
   name "Microsoft Auto Update"
   homepage "https://docs.microsoft.com/officeupdates/release-history-microsoft-autoupdate"
-  
+
   auto_updates true
 
   pkg "Microsoft_AutoUpdate_#{version}_Updater.pkg"
