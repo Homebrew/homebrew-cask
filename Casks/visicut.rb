@@ -9,4 +9,8 @@ cask "visicut" do
   homepage "https://visicut.org/"
 
   app "VisiCut.app"
+
+  caveats do
+    depends_on_java "11+"
+  end
 end
