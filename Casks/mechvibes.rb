@@ -6,7 +6,7 @@ cask "mechvibes" do
   url "https://github.com/hainguyents13/mechvibes/releases/download/v#{version}/Mechvibes-#{version}.dmg"
   appcast "https://github.com/hainguyents13/mechvibes/releases.atom"
   name "Mechvibes"
-  desc "Lets you play mechanical keyboard sounds as you type on your keyboard"
+  desc "Play mechanical keyboard sounds as you type"
   homepage "https://mechvibes.com/"
 
   app "Mechvibes.app"
