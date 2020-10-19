@@ -1,5 +1,5 @@
 cask "icollections" do
-  version "6.6,66012"
+  version "6.6,66015"
   sha256 "f386cc0326970da0e4ab488169abbca5709f49e47b6571d9037cb35c7053293b"
 
   url "https://naarakstudio.com/download/iCollections.dmg"
