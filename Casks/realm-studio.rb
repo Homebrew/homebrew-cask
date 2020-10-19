@@ -1,8 +1,9 @@
 cask "realm-studio" do
-  version "5.0.0"
-  sha256 "188c49a42b5405b5083881c7c951ccd44f0e12d788d961f0a3633afdbdc66c74"
+  version "10.0.0"
+  sha256 "4a11a57f22770f722c1fc1a6f038bf6088f79625b691aef99b66d2aad650c4f6"
 
-  url "https://static.realm.io/downloads/realm-studio/Realm%20Studio-#{version}-mac.zip"
+  # github.com/realm was verified as official when first introduced to the cask
+  url "https://github.com/realm/realm-studio/releases/download/v#{version}/MongoDB.Realm.Studio-#{version}.dmg"
   appcast "https://github.com/realm/realm-studio/releases.atom"
   name "Realm Studio"
   desc "Tool for Realm Database and Realm Platform"
