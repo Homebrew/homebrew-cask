@@ -6,7 +6,7 @@ cask "termius" do
   url "https://s3.amazonaws.com/termius.desktop.autoupdate/mac/Termius.dmg"
   appcast "https://s3.amazonaws.com/termius.desktop.autoupdate/mac/latest-mac.yml"
   name "Termius"
-  desc "Command-line solution for system administrators and network engineers"
+  desc "Cross-platform SSH client"
   homepage "https://www.termius.com/"
 
   app "Termius.app"
