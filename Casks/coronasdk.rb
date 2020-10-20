@@ -5,7 +5,7 @@ cask "solar2d" do
   # github.com/coronalabs/corona was verified as official when first introduced to the cask
   url "https://github.com/coronalabs/corona/releases/download/#{version.minor}/Solar2D-macOS-#{version}.dmg"
   appcast "https://github.com/coronalabs/corona/releases.atom"
-  name "Corona SDK"
+  name "Solar2D"
   homepage "https://coronalabs.com/"
 
   suite "Corona-#{version.minor}"
