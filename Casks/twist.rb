@@ -5,6 +5,7 @@ cask "twist" do
   url "https://downloads.twist.com/mac/Twist-#{version.before_comma}.dmg"
   appcast "https://downloads.twist.com/mac/AppCast.xml"
   name "Twist"
+  desc "Team communication and collaboration software"
   homepage "https://twist.com/"
 
   depends_on macos: ">= :el_capitan"
