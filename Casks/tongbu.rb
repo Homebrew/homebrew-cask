@@ -5,6 +5,7 @@ cask "tongbu" do
   url "http://qd.tongbu.com/qd/tbzsqd/zsmac_#{version}/%E5%90%8C%E6%AD%A5%E5%8A%A9%E6%89%8B_mac_v#{version}_empty.dmg"
   appcast "https://zs.tongbu.com/mac/"
   name "Tongbu"
+  desc "Mobile phone management tool"
   homepage "https://zs.tongbu.com/mac/"
 
   app "Tongbu.app"
