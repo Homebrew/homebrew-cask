@@ -5,6 +5,7 @@ cask "virtualbox-extension-pack" do
   url "https://download.virtualbox.org/virtualbox/#{version}/Oracle_VM_VirtualBox_Extension_Pack-#{version}.vbox-extpack"
   appcast "https://download.virtualbox.org/virtualbox/LATEST.TXT"
   name "Oracle VirtualBox Extension Pack"
+  desc "x86 and AMD64/Intel64 virtualization"
   homepage "https://www.virtualbox.org/"
 
   conflicts_with cask: "virtualbox-extension-pack-beta"
