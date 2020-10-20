@@ -4,7 +4,7 @@ cask "ddnet" do
 
   url "https://ddnet.tw/downloads/DDNet-#{version}-osx.dmg"
   name "DDNet"
-  desc "DDRaceNetwork. A big cooperative racing modification in Teeworlds"
+  desc "Teeworlds version of DDRace"
   homepage "https://ddnet.tw/"
 
   app "DDNet.app"
