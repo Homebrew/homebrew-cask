@@ -7,5 +7,6 @@ cask "lx-music" do
   name "洛雪音乐助手桌面版 LX Music Desktop"
   desc "一个基于 Electron + Vue 开发的音乐软件。 A music app base on Electron & Vue"
   homepage "https://github.com/lyswhut/lx-music-desktop/"
+  
   app "lx-music-desktop.app"
 end
