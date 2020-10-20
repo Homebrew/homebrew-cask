@@ -1,11 +1,12 @@
-cask "coronasdk" do
-  version "2018.3326"
-  sha256 "f02dde42feaaec458e7ad170a9474693864148a5a1e01fbf828f4c6b9208a89d"
+cask "solar2d" do
+  version "2020.3621"
+  sha256 "6c179f454f55f82afe5749561a3c3ec96d3bd9f566b62ac94775f28742fb4aa0"
 
-  url "https://developer.coronalabs.com/sites/default/files/Corona-#{version}.dmg"
-  appcast "https://coronalabs.com/"
+  # github.com/coronalabs/corona was verified as official when first introduced to the cask
+  url "https://github.com/coronalabs/corona/releases/download/#{version.minor}/Solar2D-macOS-#{version}.dmg"
+  appcast "https://github.com/coronalabs/corona/releases.atom"
   name "Corona SDK"
   homepage "https://coronalabs.com/"
 
-  suite "Corona"
+  suite "Corona-#{version.minor}"
 end
