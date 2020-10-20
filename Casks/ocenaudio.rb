@@ -1,6 +1,3 @@
-# typed: false
-# frozen_string_literal: true
-
 cask "ocenaudio" do
   version "3.9.5"
 
