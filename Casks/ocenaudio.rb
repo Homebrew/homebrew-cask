@@ -12,6 +12,7 @@ cask "ocenaudio" do
   end
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=https://www.ocenaudio.com/downloads/index.php/ocenaudio_mojave.dmg"
   name "ocenaudio"
+  desc "Easy, fast and powerful audio editor"
   homepage "https://www.ocenaudio.com/en"
 
   depends_on macos: ">= :sierra"
