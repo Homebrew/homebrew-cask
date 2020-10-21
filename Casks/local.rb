@@ -1,6 +1,6 @@
 cask "local" do
-  version "5.8.1,4931"
-  sha256 "15c53088e530d8c43a0442f1f62df19952808e841b71fde5158d7ca11ebc40c6"
+  version "5.9.0,4961"
+  sha256 "0bd3d638910429fb7753c694d5d9ecb8bda18fbf229b7fddc160ab504f72ec63"
 
   url "https://cdn.localwp.com/releases-stable/#{version.before_comma}+#{version.after_comma}/local-#{version.before_comma}-mac.dmg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://cdn.localwp.com/stable/latest/mac"

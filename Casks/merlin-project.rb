@@ -1,6 +1,6 @@
 cask "merlin-project" do
-  version "6.4.3"
-  sha256 "2428d8e28e7c8d929df6287b084ce8b08ec214ab5f193af3185b422036d8a8c9"
+  version "6.4.5"
+  sha256 "0d0dc8704ae00a261a28bd5a4af7ea863d78cc0b2c75448f2c93568fbcd8d53f"
 
   url "https://www.projectwizards.net/downloads/MerlinProject.zip"
   appcast "https://www.projectwizards.net/en/support/release-notes/merlin-project-pwstore/xml"

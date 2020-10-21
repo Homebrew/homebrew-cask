@@ -1,6 +1,6 @@
 cask "mamp" do
-  version "5.7"
-  sha256 "af75ba30ccb079e8abc3da67c4619b08fda97db474ead1d1a664e4584991cd77"
+  version "6.0.1"
+  sha256 "dda16a6fbe7a431d67ed5e3cf403336a1ca646efaa9b0639cbb58648a1dbb5b1"
 
   url "https://downloads.mamp.info/MAMP-PRO/releases/#{version}/MAMP_MAMP_PRO_#{version}.pkg"
   appcast "https://www.mamp.info/en/downloads/"

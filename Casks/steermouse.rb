@@ -1,6 +1,6 @@
 cask "steermouse" do
-  version "5.5.2"
-  sha256 "37f41af70f3d14bc117e11a0a5cad2e77d8e224b35f35b1608d1cf24840b61fe"
+  version "5.5.3"
+  sha256 "0283fc6ff7769c332fe2418992ebbf1dc76207666190dadc94a44d38ed857eec"
 
   url "https://plentycom.jp/ctrl/files_sm/SteerMouse#{version}.dmg"
   appcast "https://plentycom.jp/en/steermouse/download.php"

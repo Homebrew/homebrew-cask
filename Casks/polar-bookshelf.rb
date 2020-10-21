@@ -1,12 +1,13 @@
 cask "polar-bookshelf" do
-  version "1.100.13"
-  sha256 "bd1652de7de8457cc7a986d977f20d07666334702bbe06748096be6c06179fcb"
+  version "2.0.42"
+  sha256 "a7aee91820b18d848abe92cbd7c7c36d6fb935a9b846941b316ed42c1b687687"
 
   # github.com/burtonator/polar-bookshelf/ was verified as official when first introduced to the cask
-  url "https://github.com/burtonator/polar-bookshelf/releases/download/v#{version}/polar-bookshelf-#{version}.dmg"
+  url "https://github.com/burtonator/polar-bookshelf/releases/download/v#{version}/Polar-#{version}.dmg"
   appcast "https://github.com/burtonator/polar-bookshelf/releases.atom"
   name "Polar Bookshelf"
+  desc "Integrated reading environment"
   homepage "https://getpolarized.io/"
 
-  app "Polar Bookshelf.app"
+  app "Polar.app"
 end

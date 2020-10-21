@@ -1,6 +1,6 @@
 cask "ajour" do
-  version "0.4.0"
-  sha256 "a3448469bc3a3eba63cad60a7c90d1d1c08b2f9f25ae6ade8a3878de6e3686de"
+  version "0.4.1"
+  sha256 "e934c8b21944e3264e2863135502552a10780df7d749620374ebb1d0cc44325d"
 
   url "https://github.com/casperstorm/ajour/releases/download/#{version}/ajour.dmg"
   appcast "https://github.com/casperstorm/ajour/releases.atom"
