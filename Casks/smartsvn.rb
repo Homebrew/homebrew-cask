@@ -5,9 +5,12 @@ cask "smartsvn" do
   url "https://www.smartsvn.com/downloads/smartsvn/smartsvn-macosx-#{version.dots_to_underscores}.dmg"
   appcast "https://www.smartsvn.com/documents/smartsvn/changelog.txt"
   name "SmartSVN"
+  desc "Subversion client"
   homepage "https://www.smartsvn.com/"
 
-  app "SmartSVN #{version.major}.app"
+  depends_on macos: ">= :el_capitan"
+
+  app "SmartSVN.app"
 
   zap trash: [
     "~/Library/Preferences/com.syntevo.smartsvn.plist",
