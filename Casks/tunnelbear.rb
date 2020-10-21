@@ -12,7 +12,8 @@ cask "tunnelbear" do
   app "TunnelBear.app"
 
   uninstall quit:      "com.tunnelbear.mac.TunnelBear",
-            launchctl: "com.tunnelbear.mac.tbeard"
+            launchctl: "com.tunnelbear.mac.tbeard",
+            delete:    "/Library/PrivilegedHelperTools/com.tunnelbear.mac.tbeard"
 
   zap trash: [
     "~/Library/Preferences/com.tunnelbear.mac.TunnelBear.plist",
