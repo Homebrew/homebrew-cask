@@ -1,6 +1,6 @@
 cask "wechat" do
-  version "2.5.0.18"
-  sha256 "b6b8a71ed623ce0ee6c941b2a03d80c8937ac142279dbc95dd01fedc32321986"
+  version :latest
+  sha256 :no_check
 
   url "https://dldir1.qq.com/weixin/mac/WeChatMac.dmg"
   # There is an appcast at https://dldir1.qq.com/weixin/mac/mac-release.xml,
@@ -11,7 +11,6 @@ cask "wechat" do
   desc "Free messaging and calling application"
   homepage "https://mac.weixin.qq.com/"
 
-  auto_updates true
   depends_on macos: ">= :yosemite"
 
   app "WeChat.app"
