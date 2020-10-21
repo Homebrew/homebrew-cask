@@ -1,6 +1,6 @@
 cask "silentknight" do
-  version "1.10,2020.08"
-  sha256 "43da2c9a4fce2e682dec2a6811651d784ab2e6ad87e3976078f7461b42a9aa75"
+  version "1.11,2020.10"
+  sha256 "60edc7a1f298bc8e61419985e57f8676570e5f12f65f1b391b2ab8caba30934b"
 
   # eclecticlightdotcom.files.wordpress.com/ was verified as official when first introduced to the cask
   url "https://eclecticlightdotcom.files.wordpress.com/#{version.after_comma.major}/#{version.after_comma.minor}/silentknight#{version.before_comma.no_dots}.zip"
