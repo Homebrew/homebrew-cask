@@ -9,6 +9,7 @@ cask "keepassxc" do
   desc "Password manager app"
   homepage "https://keepassxc.org/"
 
+  conflicts_with cask: "homebrew/cask-versions/keepassxc-beta"
   depends_on macos: ">= :high_sierra"
 
   app "KeePassXC.app"
