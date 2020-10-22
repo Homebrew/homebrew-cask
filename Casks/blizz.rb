@@ -1,6 +1,6 @@
 cask "blizz" do
-  version "15.11.2"
-  sha256 "1f7020033e670e7feb4f76090883628a5ad943be3179c4d94f7b312acfb649be"
+  version "15.11.4"
+  sha256 "fa3363000df086ab424e7da3d79156f709e04bed115e60ad70827be2e21c3938"
 
   # dl.teamviewer.com/ was verified as official when first introduced to the cask
   url "https://dl.teamviewer.com/blizz/installer/mac/#{version}/Blizz.dmg"
