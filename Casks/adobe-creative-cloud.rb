@@ -1,10 +1,11 @@
 cask "adobe-creative-cloud" do
-  version "5.2.0.436"
-  sha256 "c0591e474e30d6451e190ffd8caff8622260bedaaac00278ddbf24f81aa127d1"
+  version "5.3.1.470"
+  sha256 "9e0c49b0078f2ad76129185ddfb3467a8061c7e160e71b877617f899fca62d5a"
 
-  url "https://ccmdl.adobe.com/AdobeProducts/KCCC/CCD/#{version.major_minor.dots_to_underscores}/osx10/ACCCx#{version.dots_to_underscores}.dmg"
+  url "https://ccmdl.adobe.com/AdobeProducts/KCCC/CCD/#{version.major_minor_patch.dots_to_underscores}/osx10/ACCCx#{version.dots_to_underscores}.dmg"
   name "Adobe Creative Cloud"
-  homepage "https://creative.adobe.com/products/creative-cloud"
+  desc "Collection of apps and services for photography, design, video, web, and UX"
+  homepage "https://www.adobe.com/creativecloud.html"
 
   installer script: {
     executable:   "#{staged_path}/Install.app/Contents/MacOS/Install",
