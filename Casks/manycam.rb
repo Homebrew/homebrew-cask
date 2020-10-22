@@ -6,18 +6,21 @@ cask "manycam" do
   url "https://download3.manycams.com/ManyCam.dmg"
   appcast "https://manycam.com/mac_changes/"
   name "ManyCam"
-  desc "Live Video Made Better"
+  desc "Live streaming software"
   homepage "https://manycam.com/"
 
   depends_on macos: ">= :el_capitan"
 
   pkg "ManyCam-#{version}.pkg"
 
-  uninstall quit:   "com.visicom.ManyCam.application",
-            script: {
-              executable: "/Applications/ManyCam/Uninstall\ ManyCam.app/Contents/MacOS/Uninstall\ ManyCam",
-              args:       ["--mode", "unattended"],
-              sudo:       true,
-            },
-            delete: "/Applications/ManyCam"
+  uninstall pkgutil:   "com.visicom.ManyCam.installer.pkg",
+            quit:      "com.visicom.ManyCam.application",
+            launchctl: "com.visicom.ManyCam.VideoDevice.agent"
+
+  zap trash: [
+    "~/Library/Application Support/Visicom Media",
+    "~/Library/Preferences/com.visicom-media.ManyCam.plist",
+    "~/Library/Saved Application State/com.visicom.ManyCam.application.savedState",
+    "~/Pictures/ManyCam",
+  ]
 end
