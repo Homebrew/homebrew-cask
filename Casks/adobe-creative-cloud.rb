@@ -4,6 +4,7 @@ cask "adobe-creative-cloud" do
 
   url "https://ccmdl.adobe.com/AdobeProducts/KCCC/CCD/#{version.major_minor_patch.dots_to_underscores}/osx10/ACCCx#{version.dots_to_underscores}.dmg"
   name "Adobe Creative Cloud"
+  desc "Collection of apps and services for photography, design, video, web, UX, and more"
   homepage "https://www.adobe.com/creativecloud.html"
 
   installer script: {
