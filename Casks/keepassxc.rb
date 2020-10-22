@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 cask "keepassxc" do
   version "2.6.2"
   sha256 "29bfaf99f2c8a47063b2da0b67054f10c90cafe248db84411a26ecc974711ba7"
