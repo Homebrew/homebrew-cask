@@ -1,6 +1,6 @@
 cask "audio-hijack" do
-  version "3.7.2"
-  sha256 "1aeef85f4c60f419be2255733977da1b550e1a134d21ffa358aca91687830e94"
+  version "3.7.3"
+  sha256 "f12437b9e31be344b6a9a1e54cad0f24e1e41c0e6a4adc5cee3aec2df894abc7"
 
   url "https://rogueamoeba.com/audiohijack/download/AudioHijack.zip"
   appcast "https://www.rogueamoeba.com/audiohijack/releasenotes.php"
