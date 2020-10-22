@@ -8,7 +8,7 @@ cask "tiger-trade" do
   name "Tiger Trade"
   name "老虎证券"
   desc "Trading platform"
-  homepage "https://www.itiger.com/download/mac"
+  homepage "https://www.itiger.com/download/"
 
   depends_on macos: ">= :sierra"
 
