@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 cask "keepassxc" do
   version "2.6.2"
   sha256 "29bfaf99f2c8a47063b2da0b67054f10c90cafe248db84411a26ecc974711ba7"
@@ -11,6 +9,7 @@ cask "keepassxc" do
   desc "Password manager app"
   homepage "https://keepassxc.org/"
 
+  conflicts_with cask: "homebrew/cask-versions/keepassxc-beta"
   depends_on macos: ">= :high_sierra"
 
   app "KeePassXC.app"
