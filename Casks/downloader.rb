@@ -1,4 +1,4 @@
-cask "downloader-for-apple-developers" do
+cask "downloader" do
   version "2.0.1"
   sha256 "f9f5d4a62030f4d97232409aaca0e697696afa82fae2d0320448c27e98c90abe"
 
