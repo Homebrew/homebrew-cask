@@ -1,6 +1,6 @@
 cask "unity" do
-  version "2020.1.9f1,145f5172610f"
-  sha256 "5dd076f370a0dc42d28c4daab2e8a6da5c4f6d2c596fe07124fdf11997561bff"
+  version "2020.1.10f1,974a9d56f159"
+  sha256 "1f389baf22bf8dfa55fa4665cd387b0975072c2ac182cb6de629eae685658008"
 
   # download.unity3d.com/download_unity/ was verified as official when first introduced to the cask
   url "https://download.unity3d.com/download_unity/#{version.after_comma}/MacEditorInstaller/Unity-#{version.before_comma}.pkg"
