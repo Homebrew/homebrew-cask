@@ -4,6 +4,7 @@ cask 'bitlord' do
 
   url "https://www.bitlord.com/osx/BitLord-ver#{version.after_comma}.dmg"
   name 'BitLord'
+  desc 'Torrent downloader and streamer'
   homepage 'https://www.bitlord.com/'
 
   app 'BitLord.app'
