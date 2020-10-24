@@ -4,7 +4,10 @@ cask "wondershare-filmora" do
 
   url "https://download.wondershare.com/filmora-mac_full718.dmg"
   name "Wondershare Filmora"
+  desc "Video editor"
   homepage "https://filmora.wondershare.com/video-editor/"
+
+  depends_on macos: ">= :sierra"
 
   app "Wondershare Filmora.app"
 end
