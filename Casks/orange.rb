@@ -5,6 +5,7 @@ cask "orange" do
   url "https://download.biolab.si/download/files/Orange#{version.major}-#{version}-Python3.7.6.dmg"
   appcast "https://github.com/biolab/orange3/releases.atom"
   name "Orange"
+  desc "Component-based data mining software"
   homepage "https://orange.biolab.si/"
 
   app "Orange#{version.major}.app"
