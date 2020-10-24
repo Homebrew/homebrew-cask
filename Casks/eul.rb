@@ -9,4 +9,8 @@ cask "eul" do
   homepage "https://github.com/gao-sun/eul"
 
   app "eul.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.gaosun.eul.plist",
+  ]
 end
