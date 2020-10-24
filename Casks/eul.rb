@@ -10,7 +10,5 @@ cask "eul" do
 
   app "eul.app"
 
-  zap trash: [
-    "~/Library/Preferences/com.gaosun.eul.plist",
-  ]
+  zap trash: "~/Library/Preferences/com.gaosun.eul.plist"
 end
