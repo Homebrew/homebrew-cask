@@ -1,6 +1,6 @@
 cask 'bitlord' do
   version '2.4.6,348'
-  sha256 '35b4c5c6d880973f05c1ef2fa16b996b7c82aca88a4412c17d2f50e24f51ca09'
+  sha256 '081ec26228213772ca9655f6e469529e7932d628efb10beda72405ad87cfbc39'
 
   url "https://www.bitlord.com/osx/BitLord-ver#{version.after_comma}.dmg"
   name 'BitLord'
