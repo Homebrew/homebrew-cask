@@ -5,7 +5,7 @@ cask "eul" do
   url "https://github.com/gao-sun/eul/releases/download/v#{version}/eul.app.zip"
   appcast "https://github.com/gao-sun/eul/releases.atom"
   name "eul"
-  desc "Status monitoring app written in SwiftUI"
+  desc "Status monitoring"
   homepage "https://github.com/gao-sun/eul"
 
   app "eul.app"
