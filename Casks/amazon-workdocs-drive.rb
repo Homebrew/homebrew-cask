@@ -8,10 +8,21 @@ cask "amazon-workdocs-drive" do
   desc "Fully managed, secure enterprise storage and sharing service"
   homepage "https://aws.amazon.com/workdocs/"
 
+  depends_on macos: ">= :el_capitan"
+
   pkg "AmazonWorkDocsDrive.pkg"
 
   uninstall signal:    ["TERM", "com.Amazon.WorkDocs.Drive"],
-            pkgutil:   ["com.Amazon.WorkDocs.Drive",
-                        "com.Amazon.WorkDocs.Drive.pkg.Core"],
+            pkgutil:   [
+              "com.Amazon.WorkDocs.Drive",
+              "com.Amazon.WorkDocs.Drive.pkg.Core",
+            ],
             launchctl: "com.Amazon.WorkDocs.DriveUpdater"
+
+  zap trash: [
+        "~/Library/Application Scripts/com.Amazon.WorkDocs.DriveFinderExtension",
+        "~/Library/Containers/com.Amazon.WorkDocs.DriveFinderExtension",
+        "~/Library/Preferences/com.amazon.workdocs.workdocsclient.plist",
+        "~/Library/LaunchAgents/com.amazon.workdocs.workdocsclient.plist"
+      ]
 end
