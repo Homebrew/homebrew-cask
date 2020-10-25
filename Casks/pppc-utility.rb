@@ -6,9 +6,10 @@ cask "pppc-utility" do
   appcast "https://github.com/jamf/PPPC-Utility/releases.atom"
   name "PPPC Utility"
   name "Privacy Preferences Policy Control Utility"
+  desc "Create configuration profiles containing a PPPC payload"
   homepage "https://github.com/jamf/PPPC-Utility"
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "PPPC Utility.app"
 
