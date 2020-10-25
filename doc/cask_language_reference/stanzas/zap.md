@@ -25,10 +25,11 @@ Example: [dropbox.rb](https://github.com/Homebrew/homebrew-cask/blob/31cd96cc0e0
 
 ## zap Creation
 
-The simplest method is to use @nrlquaker's [CreateZap Project](https://github.com/nrlquaker/homebrew-createzap), which can automatically generate the stanza. In a few instances, it fails to pick anything up so manual creation may be required.
+The simplest method is to use [@nrlquaker's CreateZap](https://github.com/nrlquaker/homebrew-createzap), which can automatically generate the stanza. In a few instances it may fail to pick up anything and manual creation may be required.
 
 Manual creation can be facilitated with:
-- some of the developer tools that are already available in Homebrew Cask,
-- `sudo find / -iname "*{search item}*"`,
-- an uninstaller tool (such as [AppCleaner](https://github.com/Homebrew/homebrew-cask/blob/master/Casks/appcleaner.rb))
-- or visually inspecting the usual suspects, i.e. `/Library/{'Application Support',LaunchAgents,LaunchDaemons,Frameworks,Logs,Preferences,PrivilegedHelperTools}` and `~/Library/{'Application Support',Caches,Containers,LaunchAgents,Logs,Preferences,'Saved Application State'}`.
+
+* Some of the developer tools are already available in Homebrew Cask.
+* `sudo find / -iname "*{{search item}}*"`
+* An uninstaller tool such as [AppCleaner](https://github.com/Homebrew/homebrew-cask/blob/master/Casks/appcleaner.rb).
+* Inspecting the usual suspects, i.e. `/Library/{'Application Support',LaunchAgents,LaunchDaemons,Frameworks,Logs,Preferences,PrivilegedHelperTools}` and `~/Library/{'Application Support',Caches,Containers,LaunchAgents,Logs,Preferences,'Saved Application State'}`.
