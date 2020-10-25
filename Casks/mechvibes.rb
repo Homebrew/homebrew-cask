@@ -1,9 +1,9 @@
 cask "mechvibes" do
-  version "2.1.1"
-  sha256 "aad610a9eba39869586eeb14b67c9ea6a29ea532763e413449b2f975e419c82f"
+  version "2.2.0"
+  sha256 "3da58cac995893c9f42f1ebc59b0b03d59681ded3482a15639658ddfdf2419d5"
 
-  # github.com/hainguyents13/mechvibes/ was verified as official when first introduced to the cask
-  url "https://github.com/hainguyents13/mechvibes/releases/download/v#{version}/Mechvibes-#{version}.dmg"
+  # downloads.sourceforge.net/mechvibes/ was verified as official when first introduced to the cask
+  url "https://downloads.sourceforge.net/mechvibes/v#{version}/Mechvibes-#{version}.dmg"
   appcast "https://github.com/hainguyents13/mechvibes/releases.atom"
   name "Mechvibes"
   desc "Play mechanical keyboard sounds as you type"
