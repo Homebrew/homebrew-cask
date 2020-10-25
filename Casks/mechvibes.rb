@@ -4,7 +4,7 @@ cask "mechvibes" do
 
   # downloads.sourceforge.net/mechvibes/ was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/mechvibes/v#{version}/Mechvibes-#{version}.dmg"
-  appcast "https://github.com/hainguyents13/mechvibes/releases.atom"
+  appcast "https://sourceforge.net/projects/mechvibes/rss"
   name "Mechvibes"
   desc "Play mechanical keyboard sounds as you type"
   homepage "https://mechvibes.com/"
