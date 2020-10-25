@@ -8,7 +8,7 @@ cask "pppc-utility" do
   name "Privacy Preferences Policy Control Utility"
   homepage "https://github.com/jamf/PPPC-Utility"
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "PPPC Utility.app"
 
