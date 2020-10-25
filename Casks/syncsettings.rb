@@ -11,4 +11,9 @@ cask "syncsettings" do
   depends_on macos: ">= :high_sierra"
 
   app "SyncSettings.app"
+
+zap trash: [
+   '~/Library/Application Support/SyncSettings',
+   '~/Library/Preferences/com.jeremyvizzini.syncsettings.macos.plist'
+ ]
 end
