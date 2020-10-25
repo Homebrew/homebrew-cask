@@ -11,10 +11,10 @@ cask "aio-creator-neo" do
   pkg "AIO CREATOR NEO installieren.pkg"
 
   uninstall quit:    "com.mediola.aiocreatorneo",
-            pkgutil: "com.mediola.pkg.creatorneoinstaller"
+            pkgutil: "com.mediola.pkg.creatorneoinstaller",
+            delete:  "/Library/Application Support/AIO CREATOR NEO"
 
   zap delete: [
-    "/Library/Application Support/AIO CREATOR NEO",
     "~/Library/Application Support/AIO CREATOR NEO",
     "~/Library/Caches/AIO CREATOR NEO",
     "~/Library/Preferences/com.mediola.aiocreatorneo.plist",
