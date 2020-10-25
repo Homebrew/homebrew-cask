@@ -12,8 +12,8 @@ cask "syncsettings" do
 
   app "SyncSettings.app"
 
-zap trash: [
-   '~/Library/Application Support/SyncSettings',
-   '~/Library/Preferences/com.jeremyvizzini.syncsettings.macos.plist'
- ]
+  zap trash: [
+    "~/Library/Application Support/SyncSettings",
+    "~/Library/Preferences/com.jeremyvizzini.syncsettings.macos.plist"
+  ]
 end
