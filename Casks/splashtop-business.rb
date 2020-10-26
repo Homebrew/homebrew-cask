@@ -6,12 +6,14 @@ cask "splashtop-business" do
   url "https://d17kmd0va0f0mp.cloudfront.net/macclient/STB/Splashtop_Business_Mac_INSTALLER_v#{version}.dmg"
   appcast "https://www.splashtop.com/wp-content/themes/responsive/downloadx.php?product=stb&platform=mac-client"
   name "Splashtop Business"
+  desc "Remote access software"
   homepage "https://www.splashtop.com/business"
 
   pkg "Splashtop Business.pkg"
 
-  uninstall pkgutil: [
-    "com.splashtop.stb.*",
-    "com.splashtop.splashtopBusiness.*",
-  ]
+  uninstall quit:    "com.splashtop.stb.macosx",
+            pkgutil: [
+              "com.splashtop.stb.*",
+              "com.splashtop.splashtopBusiness.*",
+            ]
 end
