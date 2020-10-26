@@ -20,9 +20,9 @@ cask "amazon-workdocs-drive" do
             launchctl: "com.Amazon.WorkDocs.DriveUpdater"
 
   zap trash: [
-        "~/Library/Application Scripts/com.Amazon.WorkDocs.DriveFinderExtension",
-        "~/Library/Containers/com.Amazon.WorkDocs.DriveFinderExtension",
-        "~/Library/Preferences/com.amazon.workdocs.workdocsclient.plist",
-        "~/Library/LaunchAgents/com.amazon.workdocs.workdocsclient.plist"
-      ]
+    "~/Library/Application Scripts/com.Amazon.WorkDocs.DriveFinderExtension",
+    "~/Library/Containers/com.Amazon.WorkDocs.DriveFinderExtension",
+    "~/Library/LaunchAgents/com.amazon.workdocs.workdocsclient.plist",
+    "~/Library/Preferences/com.amazon.workdocs.workdocsclient.plist",
+  ]
 end
