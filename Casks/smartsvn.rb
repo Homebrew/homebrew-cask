@@ -1,6 +1,6 @@
 cask "smartsvn" do
-  version "14.0.0"
-  sha256 "637cf6ee156c9dd8c9a2db1ad21b9cff324cc505f125a6a1a235b009a358337b"
+  version "14.0.1"
+  sha256 "743fa455562765ced91bcc82362d36154bbeb7c5c68c37991f7009a8095c567a"
 
   url "https://www.smartsvn.com/downloads/smartsvn/smartsvn-macosx-#{version.dots_to_underscores}.dmg"
   appcast "https://www.smartsvn.com/documents/smartsvn/changelog.txt"
