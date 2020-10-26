@@ -11,5 +11,6 @@ cask "eqmac" do
 
   pkg "eqMac.pkg"
 
-  uninstall pkgutil: "com.bitgapp.eqmac"
+  uninstall pkgutil: "com.bitgapp.eqmac.pkg",
+            quit:    "com.bitgapp.eqmac"
 end
