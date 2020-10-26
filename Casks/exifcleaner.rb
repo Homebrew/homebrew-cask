@@ -10,8 +10,9 @@ cask "exifcleaner" do
   homepage "https://exifcleaner.com/"
 
   app "ExifCleaner.app"
-  
+
   zap trash: [
     "~/Library/Application Support/ExifCleaner",
     "~/Library/Saved Application State/com.exifcleaner.savedState",
+  ]
 end
