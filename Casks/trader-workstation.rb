@@ -1,5 +1,5 @@
 cask "trader-workstation" do
-  version "981.2b"
+  version "978.2h"
   sha256 "08c9557e995625166b0a45905043a73611cc5b76d1b0a891347084da8fce0ae1"
 
   url "https://download2.interactivebrokers.com/installers/tws/stable-standalone/tws-stable-standalone-macosx-x64.dmg"
