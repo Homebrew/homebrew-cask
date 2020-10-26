@@ -6,6 +6,7 @@ cask "obsidian" do
   url "https://github.com/obsidianmd/obsidian-releases/releases/download/v#{version}/Obsidian-#{version}.dmg"
   appcast "https://github.com/obsidianmd/obsidian-releases/releases.atom"
   name "Obsidian"
+  desc "Knowledge base that works on top of a local folder of plain text Markdown files"
   homepage "https://obsidian.md/"
 
   app "Obsidian.app"
