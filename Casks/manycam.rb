@@ -21,6 +21,5 @@ cask "manycam" do
     "~/Library/Application Support/Visicom Media",
     "~/Library/Preferences/com.visicom-media.ManyCam.plist",
     "~/Library/Saved Application State/com.visicom.ManyCam.application.savedState",
-    "~/Pictures/ManyCam",
   ]
 end
