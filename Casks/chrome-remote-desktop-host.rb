@@ -14,16 +14,16 @@ cask "chrome-remote-desktop-host" do
     args:       ["--no-ui"],
     sudo:       true,
   },
+            launchctl: [
+              "com.google.keystone.daemon",
+              "com.google.keystone.system.xpcservice",
+              "org.chromium.chromoting",
+            ],
             pkgutil:   [
               "com.google.pkg.ChromeRemoteDesktopHost",
               "com.google.pkg.ChromeRemoteDesktopHostService",
               "com.google.pkg.ChromeRemoteDesktopHostUninstaller",
               "com.google.pkg.Keystone",
-            ],
-            launchctl: [
-              "com.google.keystone.daemon",
-              "com.google.keystone.system.xpcservice",
-              "org.chromium.chromoting",
             ]
 
   caveats do
