@@ -34,7 +34,7 @@ cask "firefox" do
     "es-ES"
   end
   language "fi" do
-    sha256 "cee674a87c738fffd9450cddc42df1a0eb737109540eea232ad84e892b6779b4"
+    sha256 "d2a010f290b74bb23787dc55072d78c1061a493aaabaeea814124e3a02ccec46"
     "fi"
   end
   language "fr" do
