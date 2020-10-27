@@ -4,6 +4,7 @@ cask "internxt-drive" do
 
   # github.com/internxt/drive-desktop was verified as official when first introduced to the cask
   url "https://github.com/internxt/drive-desktop/releases/download/v#{version}/internxt-drive-#{version}.dmg"
+  appcast "https://github.com/internxt/drive-desktop/releases.atom"
   name "Internxt Drive"
   desc "End-to-end encrypted, free, open source cloud storage"
   homepage "https://internxt.com/drive"
