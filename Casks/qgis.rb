@@ -9,5 +9,5 @@ cask "qgis" do
   desc "Free and Open Source Geographic Information System"
   homepage "https://www.qgis.org/"
 
-  app "QGIS#{version.major_minor}.app"
+  app "QGIS.app"
 end
