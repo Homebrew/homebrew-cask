@@ -1,6 +1,6 @@
 cask "imazing" do
   version "2.12.7.14385"
-  sha256 "2edf9fcf68f490bb8bad4a810ae418c7ea91503029867649902d23074844ebb4"
+  sha256 "d617753c77a4ee1631cbcac808d9fe23afc496145ce10500b13e4f36ca7538f7"
 
   url "https://downloads.imazing.com/mac/iMazing/#{version}/iMazing_#{version}.dmg"
   appcast "https://downloads.imazing.com/com.DigiDNA.iMazing#{version.major}Mac.xml"
