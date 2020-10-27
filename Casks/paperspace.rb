@@ -1,6 +1,6 @@
 cask "paperspace" do
-  version "10.0.0.1561"
-  sha256 "e5a4a921223d98a6b8a698299ec1646a4a79e01fec83427fd395ab9e89bca7ff"
+  version "10.1.0.1622"
+  sha256 "498a8c9575a0ce1eb20ee7b0599a9bd12266901d6e7c7983f5ace7f264d06d01"
 
   url "https://assets.paperspace.com/native-app/prod/darwin/Paperspace-#{version}.dmg"
   appcast "https://www.macupdater.net/cgi-bin/extract_text/send_post_request_data.cgi?url=https://api.paperspace.io/receivers/latestVersion&data={%22component%22:%22paperspaceInstaller%22,%22os%22:%22mac%22}&headers={%22user-agent%22:%22Mozilla%22,%22content-type%22:%22application/json%22}"
