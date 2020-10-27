@@ -12,8 +12,7 @@ cask "padloc" do
   app "Padloc.app"
 
   zap trash: [
-               '~/Library/Application Support/Padloc',
-               '~/Library/Application Support/Caches/padloc-updater'
-             ]
-
+    "~/Library/Application Support/Padloc",
+    "~/Library/Application Support/Caches/padloc-updater",
+  ]
 end
