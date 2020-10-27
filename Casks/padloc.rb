@@ -10,4 +10,10 @@ cask "padloc" do
   homepage "https://padloc.app/"
 
   app "Padloc.app"
+
+  zap trash: [
+               '~/Library/Application Support/Padloc',
+               '~/Library/Application Support/Caches/padloc-updater'
+             ]
+
 end
