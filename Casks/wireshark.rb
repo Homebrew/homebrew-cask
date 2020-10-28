@@ -14,7 +14,26 @@ cask "wireshark" do
 
   app "Wireshark.app"
   pkg "Install ChmodBPF.pkg"
-  pkg "Add Wireshark to the system path.pkg"
+  pkg "Add Wireshark to the system path.pkg"  
+  binary "#{appdir}/Wireshark.app/Contents/MacOS/capinfos"
+  binary "#{appdir}/Wireshark.app/Contents/MacOS/captype"
+  binary "#{appdir}/Wireshark.app/Contents/MacOS/dftest"
+  binary "#{appdir}/Wireshark.app/Contents/MacOS/dumpcap"
+  binary "#{appdir}/Wireshark.app/Contents/MacOS/editcap"
+  binary "#{appdir}/Wireshark.app/Contents/MacOS/idl2wrs"
+  binary "#{appdir}/Wireshark.app/Contents/MacOS/mergecap"
+  binary "#{appdir}/Wireshark.app/Contents/MacOS/mmdbresolve"
+  binary "#{appdir}/Wireshark.app/Contents/MacOS/randpkt"
+  binary "#{appdir}/Wireshark.app/Contents/MacOS/rawshark"
+  binary "#{appdir}/Wireshark.app/Contents/MacOS/reordercap"
+  binary "#{appdir}/Wireshark.app/Contents/MacOS/sharkd"
+  binary "#{appdir}/Wireshark.app/Contents/MacOS/text2pcap"
+  binary "#{appdir}/Wireshark.app/Contents/MacOS/tshark"
+  binary "#{appdir}/Wireshark.app/Contents/MacOS/extcap/androiddump"
+  binary "#{appdir}/Wireshark.app/Contents/MacOS/extcap/ciscodump"
+  binary "#{appdir}/Wireshark.app/Contents/MacOS/extcap/randpktdump"
+  binary "#{appdir}/Wireshark.app/Contents/MacOS/extcap/sshdump"
+  binary "#{appdir}/Wireshark.app/Contents/MacOS/extcap/udpdump"
 
   uninstall_preflight do
     system_command "/usr/sbin/installer",
