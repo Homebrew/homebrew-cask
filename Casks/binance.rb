@@ -1,8 +1,9 @@
 cask "binance" do
-  version :latest
-  sha256 :no_check
+  version "1.5.1"
+  sha256 "75eafc57148592610b8a4bfb5dff3974bb63be96bff7d9f893b4722f23d4b111"
 
-  url "https://ftp.binance.com/electron-desktop/mac/production/binance.dmg"
+  url "https://ftp.binance.com/electron-desktop/mac/production/binance-#{version}.dmg"
+  appcast "https://ftp.binance.com/electron-desktop/mac/production/latest-mac.yml"
   name "Binance"
   desc "Cryptocurrency exchange"
   homepage "http://binance.com/"
