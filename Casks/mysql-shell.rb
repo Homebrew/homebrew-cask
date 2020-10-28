@@ -1,6 +1,6 @@
 cask "mysql-shell" do
-  version "8.0.21"
-  sha256 "bdabf0a30a34c5c3d7692d44c175d65f041797f5ab1f70090e7ab3796e3bb6c4"
+  version "8.0.22"
+  sha256 "77152a69cbd2cf974b9c92254f4500598cad9da71f13cab5a2139c0026a8f5e6"
 
   url "https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-#{version}-macos10.15-x86-64bit.dmg"
   name "MySQL Shell"
