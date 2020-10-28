@@ -1,6 +1,6 @@
 cask "sipgate-softphone" do
-  version "1.10.22"
-  sha256 "595cf252adc8e4d50ea0a44847e9158d93c5b270afd33e70624127f90beedb6c"
+  version "1.10.23"
+  sha256 "c491ae798dba175f24f1e2225691774b967dff5d2a1d3cf8d7cd3bf912cab261"
 
   # sipgate-desktop-app-dev.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://sipgate-desktop-app-dev.s3.amazonaws.com/sipgate-softphone-#{version}.dmg"
