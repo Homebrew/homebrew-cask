@@ -1,6 +1,6 @@
 cask "xattred" do
   version "1.3,2020.08"
-  sha256 "523d1de0ad778d5990f4bfab78f81cf1619610fc697a90f7fc6673a034ed0ba8"
+  sha256 "606823107254a9a66af2c67d0e6aa25ae820d8dfba2be5427325d05c4a5482a7"
 
   # eclecticlightdotcom.files.wordpress.com/ was verified as official when first introduced to the cask
   url "https://eclecticlightdotcom.files.wordpress.com/#{version.after_comma.major}/#{version.after_comma.minor}/xattred#{version.before_comma.no_dots}.zip"
