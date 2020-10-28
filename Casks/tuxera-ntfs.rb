@@ -3,7 +3,7 @@ cask "tuxera-ntfs" do
   sha256 "ac655a302afbbe2022ec9c2af3df65e8bcd1bb66a783770025f78f3595a2798f"
 
   url "https://tuxera.com/mac/tuxerantfs_#{version}.dmg"
-  appcast "https://ntfsformac.tuxera.com/get/",
+  appcast "https://ntfsformac.tuxera.com/",
           must_contain: "tuxerantfs_#{version}.dmg"
   name "Tuxera NTFS"
   desc "File system and storage management software"
