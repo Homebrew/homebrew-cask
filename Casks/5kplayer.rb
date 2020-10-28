@@ -1,6 +1,6 @@
 cask "5kplayer" do
-  version "6.3.0"
-  sha256 "31def518c9c7023bea83e0ae9d273a5f8e45f0bb1a8ffb512d06242136011b9c"
+  version "6.4.0"
+  sha256 "323d0ea6a41c4f19a29c31167cdd68eaaabcab3b1cbaaeba075d7422805a58c9"
 
   url "https://www.5kplayer.com/download/5kplayer.dmg"
   appcast "https://www.5kplayer.com/upgrade/mac/updatecast.xml"

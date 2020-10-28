@@ -1,6 +1,6 @@
 cask "extraterm" do
-  version "0.53.0"
-  sha256 "76691ed6b58bae3bb771436845700d0945f177395944fb8e5f855c9586ab781e"
+  version "0.54.0"
+  sha256 "24297ca6f8bf2e87a5baef13a7a482c01a9229c143a660b5f3ed96c5c254f3fd"
 
   # github.com/sedwards2009/extraterm/ was verified as official when first introduced to the cask
   url "https://github.com/sedwards2009/extraterm/releases/download/v#{version}/extraterm-#{version}-darwin-x64.zip"

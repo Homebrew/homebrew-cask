@@ -1,6 +1,6 @@
 cask "swinsian" do
-  version "2.2.4"
-  sha256 "2135ff20c9077e1205b9e12ad3ab1fb688b22a2be4ca4db7f5710b08498118e2"
+  version "2.3.1"
+  sha256 "b2a365b18de692056911b6db72b411421039bd4950fec83109cc9f6732908780"
 
   url "https://www.swinsian.com/sparkle/Swinsian_#{version}.zip"
   appcast "https://www.swinsian.com/sparkle/sparklecast.xml"

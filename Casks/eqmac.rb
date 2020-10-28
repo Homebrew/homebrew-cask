@@ -1,31 +1,16 @@
 cask "eqmac" do
-  version "0.3.2"
-  sha256 "e00714eac2b082251f700032943508c1006873edd84f621583388e2e2ca6860d"
+  version "0.3.5"
+  sha256 "a369a847e4dc0d54c4859218563bbbdbfc585362a5864c3c9de4f198c7be1b26"
 
   # github.com/bitgapp/eqMac/ was verified as official when first introduced to the cask
-  url "https://github.com/bitgapp/eqMac/releases/download/v#{version}/eqMac.dmg"
+  url "https://github.com/bitgapp/eqMac/releases/download/v#{version}/eqMac.pkg"
   appcast "https://github.com/bitgapp/eqMac/releases.atom"
   name "eqMac"
   desc "System-wide audio equalizer"
   homepage "https://eqmac.app/"
 
-  app "eqMac.app"
-  installer script: {
-    executable: "#{staged_path}/eqMac.app/Contents/Resources/install_driver.sh",
-    sudo:       true,
-  }
+  pkg "eqMac.pkg"
 
-  uninstall quit:   [
-    "com.bitgapp.eqmac",
-    "com.bitgapp.eqmac-LaunchAtLoginHelper",
-  ],
-            script: {
-              executable: "#{appdir}/eqMac.app/Contents/Resources/uninstall_driver.sh",
-              sudo:       true,
-            }
-
-  zap trash: [
-    "~/Library/Caches/com.bitgapp.eqmac",
-    "~/Library/Cookies/com.bitgapp.eqmac.binarycookies",
-  ]
+  uninstall pkgutil: "com.bitgapp.eqmac.pkg",
+            quit:    "com.bitgapp.eqmac"
 end

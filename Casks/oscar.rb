@@ -1,6 +1,6 @@
 cask "oscar" do
-  version "1.1.1"
-  sha256 "69f0f5e37f8c8aeaf2c2f03993cf1a15dc00952657fb6dd8fa4f7bb2b2b1b720"
+  version "1.2.0"
+  sha256 "adaa1c9412c3e3d37fe275d1e1670b38fa1cdfdf58bd829a9db03cbd8f66a179"
 
   # apneaboard.com/OSCAR/ was verified as official when first introduced to the cask
   url "https://www.apneaboard.com/OSCAR/OSCAR-#{version}.dmg"

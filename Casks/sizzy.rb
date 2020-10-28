@@ -1,6 +1,6 @@
 cask "sizzy" do
-  version "0.37.0"
-  sha256 "3130c825be024dec0b66fefa8d28705d5799ca544bce7151af3a1ef23d0bff77"
+  version "0.40.0"
+  sha256 "658a514ca984285f1c537a523623da279eb6cbd3dc4de5d39607d037d4c606a1"
 
   url "https://sizzy.co/get-app"
   appcast "https://www.macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://sizzy.co/get-app&user_agent=Intel%20Mac%20OS%20X"

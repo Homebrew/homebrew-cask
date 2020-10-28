@@ -1,9 +1,9 @@
 cask "dashlane" do
-  version "6.2039.0.39656"
-  sha256 "cfb10ece711650847a2efb631cd3d54ba292f6a0a8ed99a3611cb8d2829c8098"
+  version "6.2042.0.40348"
+  sha256 "993bdf4327a16db2380fade380b86757b7d0e86985a4e933fc2348d00a84e11f"
 
   # d3mfqat9ni8wb5.cloudfront.net/releases/ was verified as official when first introduced to the cask
-  url "https://d3mfqat9ni8wb5.cloudfront.net/releases/#{version.major_minor_patch}/#{version}/release/Dashlane.dmg"
+  url "https://d3mfqat9ni8wb5.cloudfront.net/releases/#{version.major_minor_patch}/#{version}/release-mac-#{version.major_minor_patch}/Dashlane.dmg"
   appcast "https://ws1.dashlane.com/5/binaries/query?format=json&os=OS_X_10_14_5&target=archive&platform=launcher_macosx"
   name "Dashlane"
   desc "Password manager and digital wallet application"

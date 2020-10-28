@@ -1,6 +1,6 @@
 cask "keepassxc" do
-  version "2.6.1"
-  sha256 "ac0a74369f4009a6d5922840c3df8fe4641c11af8643cc60b9ba6103ff1eceda"
+  version "2.6.2"
+  sha256 "29bfaf99f2c8a47063b2da0b67054f10c90cafe248db84411a26ecc974711ba7"
 
   # github.com/keepassxreboot/keepassxc/ was verified as official when first introduced to the cask
   url "https://github.com/keepassxreboot/keepassxc/releases/download/#{version}/KeePassXC-#{version}.dmg"
@@ -9,6 +9,7 @@ cask "keepassxc" do
   desc "Password manager app"
   homepage "https://keepassxc.org/"
 
+  conflicts_with cask: "homebrew/cask-versions/keepassxc-beta"
   depends_on macos: ">= :high_sierra"
 
   app "KeePassXC.app"

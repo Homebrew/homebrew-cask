@@ -1,6 +1,6 @@
 cask "thor" do
-  version "1.5.2"
-  sha256 "db2df1e126613b0a10c421b7fc78853d6bed319bfe43c47649eef645dd43bf52"
+  version "1.5.3"
+  sha256 "b3f84bd5a9a69fe9b8e8fd7458d17d5df1e9bd6b6c78284a90748fcf6d8773d2"
 
   url "https://github.com/gbammc/Thor/releases/download/#{version}/Thor_#{version}.zip"
   appcast "https://github.com/gbammc/Thor/releases.atom"
