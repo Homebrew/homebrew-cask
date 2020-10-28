@@ -12,7 +12,5 @@ cask "opera-gx" do
 
   app "Opera GX.app"
 
-  zap trash: [
-    "~/Library/Application Support/com.operasoftware.OperaGX/",
-  ]
+  zap trash: "~/Library/Application Support/com.operasoftware.OperaGX"
 end
