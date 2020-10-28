@@ -1,7 +1,3 @@
-usage: ./update_multilangual_casks <cask.rb> <new-version>
-for example: ./update_multilangual_casks /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask/Casks/firefox.rb 66.0
-usage: ./update_multilangual_casks <cask.rb> <new-version>
-for example: ./update_multilangual_casks /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask/Casks/firefox.rb 66.0
 cask "firefox" do
   version "82.0.2"
 
