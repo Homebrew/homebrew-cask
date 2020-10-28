@@ -1,5 +1,5 @@
 cask "firefox" do
-  version "82.0.1"
+  version "82.0.2"
 
   language "cs" do
     sha256 "4ad20c54ed14a2c119f81adf72709e3f755332c824db724283c56dc1071ab7a8"
@@ -14,7 +14,7 @@ cask "firefox" do
     "en-GB"
   end
   language "en", default: true do
-    sha256 "470823962053c06c8d28256fa6a7ec6c60c373413a4022988effb0be27a35f56"
+    sha256 "09368f133828b3a64748add77b73304f1e53df5102dba919447d6c4654ba0be0"
     "en-US"
   end
   language "eo" do
