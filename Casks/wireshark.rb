@@ -1,3 +1,4 @@
+# typed: false
 cask "wireshark" do
   version "3.2.7"
   sha256 "1347138534c6d9adb2ee1af7898cac2248b63bfb1ac6afee54e17725ab333106"
@@ -14,7 +15,7 @@ cask "wireshark" do
 
   app "Wireshark.app"
   pkg "Install ChmodBPF.pkg"
-  pkg "Add Wireshark to the system path.pkg"  
+  pkg "Add Wireshark to the system path.pkg"
   binary "#{appdir}/Wireshark.app/Contents/MacOS/capinfos"
   binary "#{appdir}/Wireshark.app/Contents/MacOS/captype"
   binary "#{appdir}/Wireshark.app/Contents/MacOS/dftest"
