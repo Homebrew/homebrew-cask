@@ -9,4 +9,10 @@ cask "binance" do
   homepage "http://binance.com/"
 
   app "Binance.app"
+
+  zap trash: [
+               '~/Library/Application Support/Binance',
+               '~/Library/Saved Application State/com.binance.BinanceDesktop.savedState',
+               '~/Library/Logs/Binance',
+             ]
 end
