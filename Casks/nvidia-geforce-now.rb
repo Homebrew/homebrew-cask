@@ -1,5 +1,5 @@
 cask "nvidia-geforce-now" do
-  version "2.0.24.94,4670DB"
+  version "2.0.24.105,4670DB"
   sha256 "9eb6eff9390ddfdfcf518519bd028cec11075773b7ede5a947892e5763202837"
 
   url "https://ota-downloads.nvidia.com/ota/GeForceNOW-release.app_#{version.after_comma}.zip"
