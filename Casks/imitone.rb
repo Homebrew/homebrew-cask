@@ -5,6 +5,7 @@ cask "imitone" do
   url "https://imitone.com/beta/imitone-#{version}.dmg"
   appcast "https://imitone.com/beta/"
   name "imitone"
+  desc "Convert voice to midi in real time"
   homepage "https://imitone.com/"
 
   app "imitone.app"
