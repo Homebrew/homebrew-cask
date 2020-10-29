@@ -10,7 +10,7 @@ cask "securesafe" do
 
   depends_on macos: ">= :sierra"
 
-  pkg "SecureSafe_#{version}.pkg"
+  pkg "SecureSafe-#{version}.pkg"
 
   uninstall pkgutil: [
     "com.dswiss.securesafe.pkg.sync",
