@@ -110,4 +110,9 @@ cask "parallels" do
     "/private/var/folders/qm/0fjbztdj28d5d9x2h411gxm00000gn/C/com.parallels.winapp.*",
     "/private/var/root/Library/Preferences/com.parallels.desktop.plist",
   ]
+
+  caveats do
+    kext
+    files_in_usr_local
+  end
 end
