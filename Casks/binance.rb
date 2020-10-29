@@ -11,8 +11,8 @@ cask "binance" do
   app "Binance.app"
 
   zap trash: [
-               '~/Library/Application Support/Binance',
-               '~/Library/Saved Application State/com.binance.BinanceDesktop.savedState',
-               '~/Library/Logs/Binance',
-             ]
+    "~/Library/Application Support/Binance",
+    "~/Library/Saved Application State/com.binance.BinanceDesktop.savedState",
+    "~/Library/Logs/Binance",
+  ]
 end
