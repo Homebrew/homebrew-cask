@@ -28,9 +28,33 @@ cask "parallels" do
 
   uninstall_preflight do
     set_ownership "#{appdir}/Parallels Desktop.app"
+
+    # Kill off leftover services like prl_naptd
+    system_command "/usr/bin/pkill",
+                   args: ["-f", "#{appdir}/Parallels Desktop.app"],
+                   sudo: true
   end
 
-  uninstall delete: [
+  uninstall_postflight do
+    # "Parallels records in the /etc/hosts file have #prl_hostonly in the string."
+    #   -- https://kb.parallels.com/en/123300
+    system_command! "/usr/bin/sed",
+                    args: ["-i", ".orig", "/#prl_hostonly/d", "/etc/hosts"],
+                    sudo: true
+  end
+
+  uninstall quit: [
+    "com.parallels.desktop.console",
+    "com.parallels.vm",
+  ], kext: [
+    # com.parallels.kext.netbridge goes first, because it depends
+    # on com.parallels.kext.{hypervisor,vnic}
+    "com.parallels.kext.netbridge",
+    "com.parallels.kext.hypervisor",
+    "com.parallels.kext.vnic",
+    "com.parallels.kext.usbconnect",
+  ], delete: [
+    "/Library/Parallels",
     "/usr/local/bin/prl_convert",
     "/usr/local/bin/prl_disk_tool",
     "/usr/local/bin/prl_perf_ctl",
@@ -38,6 +62,13 @@ cask "parallels" do
     "/usr/local/bin/prlctl",
     "/usr/local/bin/prlexec",
     "/usr/local/bin/prlsrvctl",
+    "/usr/local/etc/bash_completion.d/prlctl",
+    "/usr/local/etc/bash_completion.d/prlsrvctl",
+    "/usr/local/share/man/man8/prl_convert.8",
+    "/usr/local/share/man/man8/prl_disk_tool.8",
+    "/usr/local/share/man/man8/prlctl.8",
+    "/usr/local/share/man/man8/prlexec.8",
+    "/usr/local/share/man/man8/prlsrvctl.8",
   ]
 
   zap trash: [
