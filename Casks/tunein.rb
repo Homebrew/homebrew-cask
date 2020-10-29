@@ -14,7 +14,6 @@ cask "tunein" do
     "~/Library/Application Support/TuneIn",
     "~/Library/Caches/com.tunein.desktop",
     "~/Library/Caches/com.tunein.desktop.ShipIt",
-    "~/Library/Containers/com.getdropbox.dropbox.garcon",
     "~/Library/Logs/TuneIn",
     "~/Library/Preferences/com.tunein.desktop.plist",
   ]
