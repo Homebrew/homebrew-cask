@@ -9,7 +9,7 @@ cask "banktivity" do
   desc "App to manage bank accounts in one place"
   homepage "https://www.iggsoftware.com/banktivity/"
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
-  app "Banktivity #{version.major}.app"
+  app "Banktivity.app"
 end
