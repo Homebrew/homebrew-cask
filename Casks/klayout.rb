@@ -2,7 +2,7 @@ cask "klayout" do
   version "0.26.8"
 
   if MacOS.version <= :high_sierra
-    sha256 "a5153ebc166991432076ae3e98d9ed5a2429d9dae959d44b05fe0aeaa51df0c9"
+    sha256 "b6ee7a8ee71e8cb218b6ecea4df6865cb1d0f49b646101246543bd7de1d6d5e7"
 
     # klayout.org/ was verified as official when first introduced to the cask
     url "https://www.klayout.org/downloads/MacOS/ST-klayout-#{version}-macOS-HighSierra-1-qt5MP-RsysPsys.dmg"
