@@ -6,6 +6,7 @@ cask "vellum" do
   url "https://180g.s3.amazonaws.com/downloads/Vellum-#{version.no_dots}00.zip"
   appcast "https://get.180g.co/updates/vellum/"
   name "Vellum"
+  desc "Ebook creation software"
   homepage "https://vellum.pub/"
 
   auto_updates true
