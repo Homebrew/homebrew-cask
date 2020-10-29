@@ -9,4 +9,13 @@ cask "tunein" do
   homepage "https://tunein.com/"
 
   app "TuneIn.app"
+
+  zap trash: [
+               '~/Library/Application Support/TuneIn',
+               '~/Library/Caches/com.tunein.desktop',
+               '~/Library/Caches/com.tunein.desktop.ShipIt',
+               '~/Library/Containers/com.getdropbox.dropbox.garcon',
+               '~/Library/Logs/TuneIn',
+               '~/Library/Preferences/com.tunein.desktop.plist',
+             ]
 end
