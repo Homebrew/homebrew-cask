@@ -6,7 +6,7 @@ cask "menumeters" do
   url "https://github.com/yujitach/MenuMeters/releases/download/#{version}/MenuMeters_#{version}.zip"
   appcast "https://github.com/yujitach/MenuMeters/releases.atom"
   name "MenuMeters for El Capitan (and later)"
-  desc "Is a set of CPU, memory, disk, and network monitoring tools"
+  desc "Set of CPU, memory, disk, and network monitoring tools"
   homepage "https://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/"
 
   auto_updates true
