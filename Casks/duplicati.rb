@@ -1,9 +1,9 @@
 cask "duplicati" do
-  version "2.0.5.1,2020-01-18"
-  sha256 "38509531cc9a007b98527af604f9a5faeb41b9221a79c7bd36e8846a32f1fda0"
+  version "2.0.5.111,2020-09-26"
+  sha256 "98a62f67337e0db74c0ce86082d98a0670d269e367090bc2cc3f9ad5e7e8a46b"
 
   # github.com/duplicati/duplicati/ was verified as official when first introduced to the cask
-  url "https://github.com/duplicati/duplicati/releases/download/v#{version.before_comma}-#{version.before_comma}_beta_#{version.after_comma}/duplicati-#{version.before_comma}_beta_#{version.after_comma}.dmg"
+  url "https://github.com/duplicati/duplicati/releases/download/v#{version.before_comma}-#{version.before_comma}_canary_#{version.after_comma}/duplicati-#{version.before_comma}_canary_#{version.after_comma}.dmg"
   appcast "https://github.com/duplicati/duplicati/releases.atom"
   name "Duplicati"
   desc "Store securely encrypted backups in the cloud!"
