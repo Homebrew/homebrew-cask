@@ -9,8 +9,8 @@ cask "wireshark" do
   homepage "https://www.wireshark.org/"
 
   auto_updates true
-  conflicts_with cask: "wireshark-chmodbpf"
-  conflicts_with formula: "wireshark"
+  conflicts_with cask:    "wireshark-chmodbpf",
+                 formula: "wireshark"
   depends_on macos: ">= :sierra"
 
   app "Wireshark.app"
