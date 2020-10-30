@@ -1,4 +1,3 @@
-# typed: false
 cask "wireshark" do
   version "3.2.7"
   sha256 "1347138534c6d9adb2ee1af7898cac2248b63bfb1ac6afee54e17725ab333106"
@@ -11,6 +10,7 @@ cask "wireshark" do
 
   auto_updates true
   conflicts_with cask: "wireshark-chmodbpf"
+  conflicts_with formula: "wireshark"
   depends_on macos: ">= :sierra"
 
   app "Wireshark.app"
