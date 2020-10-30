@@ -6,8 +6,8 @@ cask "nextcloud" do
     # github.com/nextcloud/desktop/ was verified as official when first introduced to the cask
     url "https://github.com/nextcloud/desktop/releases/download/v#{version.major_minor_patch}/Nextcloud-#{version}.pkg"
   else
-    version "3.0.2"
-    sha256 "69103a648bf59220a1dd09030ea2e7ba39fdf910ac456769701eadaea27682fb"
+    version "3.0.3"
+    sha256 "272e968cc5f08fab30b58677eadbc7fbd9d28c68d09daadc1869eba90f83d512"
 
     # github.com/nextcloud/desktop/ was verified as official when first introduced to the cask
     url "https://github.com/nextcloud/desktop/releases/download/v#{version}/Nextcloud-#{version}.pkg"
