@@ -1,6 +1,3 @@
-# typed: false
-# frozen_string_literal: true
-
 cask "dangerzone" do
   version "0.1.4"
   sha256 "cdd035d5f0d48b78c36e7e4df4a7218875213600ce8ae79c0309547c0068b4b1"
