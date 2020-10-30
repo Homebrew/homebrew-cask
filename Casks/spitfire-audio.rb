@@ -8,4 +8,16 @@ cask "spitfire-audio" do
   homepage "https://www.spitfireaudio.com/info/library-manager/"
 
   app "Spitfire Audio.app"
+
+  uninstall delete: [
+    "/Library/LaunchDaemons/com.spitfireaudio.LibraryManagerHelper.plist",
+    "/Library/Logs/Spitfire Audio",
+    "/Library/PrivilegedHelperTools/com.spitfireaudio.LibraryManagerHelper",
+  ]
+
+  zap delete: [
+    "~/Library/Caches/com.spitfireaudio.spitfireaudio",
+    "~/Library/Preferences/com.spitfireaudio.spitfireaudio.plist",
+  ],
+      rmdir:  "~/Music/Spitfire Audio"
 end
