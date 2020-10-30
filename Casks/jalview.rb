@@ -1,4 +1,5 @@
 cask "jalview" do
+  desc "Jalview is a free program for multiple sequence alignment editing, visualisation, analysis and figure generation."
   version "2.11.1.3"
   sha256 "180862a3db9ae57aa355dad5ed5e196a8e2ffa7b2118659ba2a216f244551575"
 
