@@ -6,6 +6,7 @@ cask "securesafe" do
   url "https://www.dswiss.com/userdata/downloads/securesafe-#{version}.pkg"
   appcast "https://www.securesafe.com/en/downloads/"
   name "SecureSafe"
+  desc "Secure online storage"
   homepage "https://www.securesafe.com/"
 
   depends_on macos: ">= :sierra"
