@@ -18,6 +18,5 @@ cask "spitfire-audio" do
   zap delete: [
     "~/Library/Caches/com.spitfireaudio.spitfireaudio",
     "~/Library/Preferences/com.spitfireaudio.spitfireaudio.plist",
-  ],
-      rmdir:  "~/Music/Spitfire Audio"
+  ]
 end
