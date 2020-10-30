@@ -4,8 +4,8 @@ cask "calibre" do
     sha256 "68829cd902b8e0b2b7d5cf7be132df37bcc274a1e5720b4605d2dd95f3a29168"
     url "https://download.calibre-ebook.com/#{version}/calibre-#{version}.dmg"
   else
-    version "5.3.0"
-    sha256 "5270330f0dbbc7413a9927cbda212963ecba8907bae4fb95ed2dcd3805fd7d19"
+    version "5.4.0"
+    sha256 "9cd4b5eaf3209c7b34e7ea6a464c55c0f24156cf295b8654ecb806600ad402ea"
     # github.com/kovidgoyal/calibre/ was verified as official when first introduced to the cask
     url "https://github.com/kovidgoyal/calibre/releases/download/v#{version}/calibre-#{version}.dmg"
     appcast "https://github.com/kovidgoyal/calibre/releases.atom"
