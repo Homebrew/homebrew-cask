@@ -9,7 +9,7 @@ cask "dangerzone" do
   url "https://github.com/firstlookmedia/dangerzone/releases/download/v#{version}/Dangerzone.#{version}.dmg"
   appcast "https://github.com/firstlookmedia/dangerzone/releases.atom"
   name "Dangerzone"
-  desc "Convert potentially dangerous PDFs or Office documents into to safe PDFs"
+  desc "Convert potentially dangerous PDFs or Office documents into safe PDFs"
   homepage "https://dangerzone.rocks/"
 
   app "Dangerzone.app"
