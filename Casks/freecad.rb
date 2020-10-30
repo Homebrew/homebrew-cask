@@ -6,6 +6,7 @@ cask "freecad" do
   url "https://github.com/FreeCAD/FreeCAD/releases/download/#{version.before_comma}/FreeCAD_#{version.major_minor}-#{version.after_comma}-rev1-OSX-x86_64-conda-Qt5-Py3.dmg"
   appcast "https://github.com/FreeCAD/FreeCAD/releases.atom"
   name "FreeCAD"
+  desc "3D parametric modeler"
   homepage "https://www.freecadweb.org/"
 
   app "FreeCAD.app"
