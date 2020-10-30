@@ -5,7 +5,7 @@ cask "staruml" do
   url "https://staruml.io/download/releases-v#{version.major}/StarUML-#{version}.dmg"
   appcast "https://staruml.io/"
   name "StarUML"
-  desc "Sophisticated software modeler aimed to support agile and concise modeling"
+  desc "Software modeler"
   homepage "https://staruml.io/"
 
   app "StarUML.app"
