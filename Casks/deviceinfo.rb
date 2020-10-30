@@ -7,7 +7,7 @@ cask "deviceinfo" do
   desc "Cross-platform apps that display device information"
   homepage "https://corenion.github.io/DeviceInfo/"
 
-  app "DeviceInfo.app"
-
   depends_on macos: ">= :sierra"
+
+  app "DeviceInfo.app"
 end
