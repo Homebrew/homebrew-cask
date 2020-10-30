@@ -5,7 +5,7 @@ cask "desktoppr" do
   url "https://github.com/scriptingosx/desktoppr/releases/download/v#{version}/desktoppr-#{version}.pkg"
   appcast "https://github.com/scriptingosx/desktoppr/releases.atom"
   name "desktoppr"
-  desc "Simple command-line tool to set the desktop picture on macOS"
+  desc "Simple command-line tool to set the desktop picture"
   homepage "https://github.com/scriptingosx/desktoppr"
 
   pkg "desktoppr-#{version}.pkg"
