@@ -10,4 +10,14 @@ cask "deltachat" do
   homepage "https://delta.chat/"
 
   app "DeltaChat.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/chat.delta.desktop.electron",
+    "~/Library/Application Support/CrashReporter/DeltaChat *_*.plist",
+    "~/Library/Application Support/DeltaChat",
+    "~/Library/Containers/chat.delta.desktop.electron",
+    "~/Library/Group Containers/*.chat.delta.desktop.electron",
+    "~/Library/Preferences/chat.delta.desktop.electron.plist",
+    "~/Library/Saved Application State/chat.delta.desktop.electron.savedState",
+  ]
 end
