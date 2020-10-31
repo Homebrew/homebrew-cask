@@ -6,6 +6,7 @@ cask "knime" do
   url "https://download.knime.org/analytics-platform/macosx/knime_#{version}.app.macosx.cocoa.x86_64.dmg"
   appcast "https://www.knime.com/downloads/download-knime"
   name "KNIME Analytics Platform"
+  desc "Is the open source software for creating data science"
   homepage "https://www.knime.com/"
 
   app "KNIME #{version}.app"
