@@ -4,6 +4,7 @@ cask "regexhibit" do
 
   url "https://roger-jolly.nl/software/downloads/regexhibit/RegExhibit.zip"
   name "RegExhibit"
+  desc "Perl regex assistant"
   homepage "https://roger-jolly.nl/software/#regexhibit"
 
   app "RegExhibit.app"
