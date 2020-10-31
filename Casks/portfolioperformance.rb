@@ -6,7 +6,8 @@ cask "portfolioperformance" do
   url "https://github.com/buchen/portfolio/releases/download/#{version}/PortfolioPerformance-#{version}.dmg"
   appcast "https://github.com/buchen/portfolio/releases.atom"
   name "Portfolio Performance"
-  homepage "https://www.portfolio-performance.info/portfolio/"
+  desc "Calculate the overall performance of an investment portfolio"
+  homepage "https://www.portfolio-performance.info/en/"
 
   auto_updates true
 
