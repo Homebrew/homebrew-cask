@@ -6,6 +6,7 @@ cask "posterazor" do
   url "https://downloads.sourceforge.net/posterazor/Binary%20Releases/#{version}/PosteRazor-#{version}-OSX.dmg"
   appcast "https://sourceforge.net/projects/posterazor/rss"
   name "PosteRazor"
+  desc "Raster image splitter"
   homepage "https://posterazor.sourceforge.io/"
 
   app "PosteRazor.app"
