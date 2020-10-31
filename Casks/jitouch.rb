@@ -11,6 +11,7 @@ cask "jitouch" do
   end
 
   name "jitouch"
+  desc "Multi-touch gestures editor"
   homepage "https://www.jitouch.com/"
 
   prefpane "jitouch/Jitouch.prefPane"
