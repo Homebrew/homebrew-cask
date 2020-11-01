@@ -9,7 +9,7 @@ cask "sky-ticket" do
   homepage "https://skyticket.sky.de/"
 
   app "Sky Ticket.app"
-  
+
   zap trash: [
     "~/Library/Logs/Sky Ticket",
     "~/Library/Preferences/com.electron.sky-ticket.helper.plist",
