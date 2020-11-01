@@ -1,9 +1,11 @@
 cask "vrew" do
-  version "0.6.0"
-  sha256 "4f8230521d5e32b55c57673cc95ccdfce4672859277d9f34a3a19962661a9ed3"
+  version "0.6.1"
+  sha256 "ef417441f950482e318d68b83da7d2e635a97564709f6d9636e891a001079b47"
 
   url "https://vrew-files.voyagerx.com/Vrew-#{version}.dmg"
+  appcast "https://s3-ap-northeast-2.amazonaws.com/vrew-files.voyagerx.com/latest-mac.yml"
   name "vrew"
+  desc "Video editor"
   homepage "https://vrew.voyagerx.com/"
 
   app "Vrew.app"
