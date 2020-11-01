@@ -6,7 +6,6 @@ cask "boxy-suite" do
   name "Boxy Suite"
   homepage "https://www.boxysuite.com/"
 
-  app "Boxy Dashboard.app"
   app "Boxy for Gmail.app"
   app "Boxy for Calendar.app"
   app "Boxy for Keep.app"
