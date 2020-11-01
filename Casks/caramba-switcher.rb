@@ -12,4 +12,14 @@ cask "caramba-switcher" do
 
   uninstall quit:    "tech.caramba.switcher",
             pkgutil: "tech.caramba.switcher"
+
+  zap trash: [
+    "/System/Volumes/Data/private/var/db/receipts/tech.caramba.switcher.bom",
+    "/System/Volumes/Data/private/var/db/receipts/tech.caramba.switcher.plist",
+    "/System/Volumes/Data/usr/local/Caskroom/caramba-switcher",
+    "/System/Volumes/Data/usr/local/Caskroom/caramba-switcher",
+    "/usr/local/Caskroom/caramba-switcher",
+    "~/Library/Caches/Homebrew/Cask/caramba-switcher--:latest.pkg",
+    "~/Library/Caches/Homebrew/Cask/caramba-switcher--latest.pkg",
+  ]
 end
