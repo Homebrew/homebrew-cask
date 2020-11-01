@@ -10,4 +10,11 @@ cask "pdfsam-basic" do
   homepage "https://pdfsam.org/"
 
   app "PDFsam Basic.app"
+
+  zap trash: [
+    "~/Library/Preferences/org.pdfsam.modules.plist",
+    "~/Library/Preferences/org.pdfsam.stage.plist",
+    "~/Library/Preferences/org.pdfsam.user.plist",
+    "~/Library/Saved Application State/org.pdfsam.basic.savedState",
+  ]
 end
