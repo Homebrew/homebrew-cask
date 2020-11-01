@@ -8,7 +8,7 @@ cask "jamulus" do
   name "Jamulus"
   homepage "https://llcon.sourceforge.io/"
 
-  auto_updates true
+  depends_on macos: ">= :el_capitan"
 
   app "Jamulus.app"
   app "JamulusServer.app"
