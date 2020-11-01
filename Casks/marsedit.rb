@@ -1,6 +1,6 @@
 cask "marsedit" do
-  version "4.4.5"
-  sha256 "8eb2908c239c7229af40df66097baba62e8b66ca9e9edb17c84def88823d4486"
+  version "4.4.6"
+  sha256 "41883427134caaacb374f7e75b6d307f7808596af2cecdbc4f8628c0e732c603"
 
   url "https://red-sweater.com/marsedit/MarsEdit#{version}.zip"
   appcast "https://red-sweater.com/marsedit/appcast4.php"
