@@ -10,7 +10,7 @@ cask "vellum" do
   homepage "https://vellum.pub/"
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   app "Vellum.app"
 
