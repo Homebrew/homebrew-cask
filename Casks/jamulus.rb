@@ -8,8 +8,8 @@ cask "jamulus" do
   name "Jamulus"
   homepage "https://llcon.sourceforge.io/"
 
-  auto_updates true
-
+  auto_updates false
+  
   app "Jamulus.app"
   app "JamulusServer.app"
 end
