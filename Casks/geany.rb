@@ -1,8 +1,8 @@
 cask "geany" do
   version "1.37"
-  sha256 "223edf07ef5eb3404a953a1c93af9737fe097668160327a94e41133e3ded4dcc"
+  sha256 "dc8ed9352f0b433503e4d8eef3e6da3e4e2e5d5d1b1b2d63a3e3c85518a74cc5"
 
-  url "https://download.geany.org/geany-#{version}_osx-2.dmg"
+  url "https://download.geany.org/geany-#{version}_osx-3.dmg"
   appcast "https://github.com/geany/geany/releases.atom"
   name "Geany"
   desc "Fast and lightweight IDE"
