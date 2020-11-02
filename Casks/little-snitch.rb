@@ -3,7 +3,7 @@ cask "little-snitch" do
   sha256 "f60f49273f7d11b2d4ca39abd8f94d611e3b29137fa6db25adeb69ac8eda68ef"
 
   url "https://www.obdev.at/downloads/littlesnitch/LittleSnitch-#{version}.dmg"
-  appcast "https://sw-update.obdev.at/update-feeds/littlesnitch5.plist"
+  appcast "https://sw-update.obdev.at/update-feeds/littlesnitch#{version.major}.plist"
   name "Little Snitch"
   desc "Host-based application firewall"
   homepage "https://www.obdev.at/products/littlesnitch/index.html"
