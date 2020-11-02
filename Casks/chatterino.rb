@@ -5,7 +5,7 @@ cask "chatterino" do
   url "https://chatterino.com/download/#{version}/Chatterino.dmg"
   appcast "https://chatterino.com/changelog"
   name "Chatterino"
-  desc "Chat client for twitch chat. It aims to be an improved version of the twitch web chat"
+  desc "A desktop chat client for twitch chat"
   homepage "https://chatterino.com/"
 
   app "chatterino.app"
