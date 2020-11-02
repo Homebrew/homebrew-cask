@@ -6,5 +6,7 @@ cask "zipcleaner" do
   name "ZipCleaner"
   homepage "https://roger-jolly.nl/software/#zipcleaner"
 
+  depends_on macos: "<= :mojave"
+
   app "ZipCleaner.app"
 end
