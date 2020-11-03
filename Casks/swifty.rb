@@ -1,6 +1,6 @@
 cask "swifty" do
-  version "0.6.0"
-  sha256 "ea4d11b0525d3417bfe02172ca550a00d66d004c84bb94f0d0362568373076b4"
+  version "0.6.1"
+  sha256 "2bf1e6f04b0b9c9a0e43d5499b4e072e1e2ee200beb37b5a4bd82344db968428"
 
   # github.com/swiftyapp/swifty/ was verified as official when first introduced to the cask
   url "https://github.com/swiftyapp/swifty/releases/download/v#{version}/Swifty-#{version}.dmg"
