@@ -11,6 +11,6 @@ cask "chatterino" do
   app "chatterino.app"
 
   zap trash: [
-    "~/Library/Application Support/chatterino"
+    "~/Library/Application Support/chatterino",
   ]
 end
