@@ -1,9 +1,15 @@
 cask "little-snitch" do
-  version "4.6"
-  sha256 "47475aae4ba506f01b0399552c0d3362cb2ecbf0df95cf27aded5d685a4f875d"
+  if MacOS.version <= :mojave
+    version "4.5.2"
+    sha256 "52116bb4e5186fed441c7cab835b4dd822243248f402334b486f0c7b20062c13"
+    url "https://obdev.at/downloads/littlesnitch/legacy/LittleSnitch-#{version}.dmg"
+  else
+    version "4.6"
+    sha256 "47475aae4ba506f01b0399552c0d3362cb2ecbf0df95cf27aded5d685a4f875d"
+    url "https://www.obdev.at/downloads/littlesnitch/LittleSnitch-#{version}.dmg"
+  end
 
-  url "https://www.obdev.at/downloads/littlesnitch/LittleSnitch-#{version}.dmg"
-  appcast "https://www.obdev.at/products/littlesnitch/releasenotes.html"
+  appcast "https://www.obdev.at/products/littlesnitch/releasenotes#{version.major}.html"
   name "Little Snitch"
   desc "Host-based application firewall"
   homepage "https://www.obdev.at/products/littlesnitch/index.html"
