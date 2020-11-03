@@ -15,6 +15,8 @@ cask "calibre" do
   desc "E-books management software"
   homepage "https://calibre-ebook.com/"
 
+  conflicts_with cask: "homebrew/cask-versions/calibre4"
+
   app "calibre.app"
   binary "#{appdir}/calibre.app/Contents/MacOS/calibre"
   binary "#{appdir}/calibre.app/Contents/MacOS/calibre-complete"
