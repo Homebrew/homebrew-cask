@@ -28,12 +28,12 @@ cask "google-cloud-sdk" do
     #{token} is installed at #{staged_path}/#{token}. Add your profile:
 
       for bash users
-        export "CLOUDSDK_PYTHON=#{HOMEBREW_PREFIX}/opt/python@3.8/libexec/bin/python"
+        export CLOUDSDK_PYTHON="#{HOMEBREW_PREFIX}/opt/python@3.8/libexec/bin/python"
         source "#{staged_path}/#{token}/path.bash.inc"
         source "#{staged_path}/#{token}/completion.bash.inc"
 
       for zsh users
-        export "CLOUDSDK_PYTHON=#{HOMEBREW_PREFIX}/opt/python@3.8/libexec/bin/python"
+        export CLOUDSDK_PYTHON="#{HOMEBREW_PREFIX}/opt/python@3.8/libexec/bin/python"
         source "#{staged_path}/#{token}/path.zsh.inc"
         source "#{staged_path}/#{token}/completion.zsh.inc"
 
