@@ -1,3 +1,4 @@
+# typed: false
 cask "aspera-connect" do
   version "3.10.1.181943"
   sha256 "aff234db6ce414044a7932926137a8f451dd6bcc026c1b5f067283d43e1d18c7"
@@ -12,8 +13,8 @@ cask "aspera-connect" do
   installer manual: "IBM Aspera Connect Installer.app"
 
   uninstall script: {
-              executable: "~/Library/Application Support/Aspera/Aspera Connect/uninstall_connect.sh",
-              args:       ["-f"]
-            },
+    executable: "~/Library/Application Support/Aspera/Aspera Connect/uninstall_connect.sh",
+    args:       ["-f"],
+  },
             delete: "~/Library/Logs/Aspera_Connect"
 end
