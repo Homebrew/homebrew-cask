@@ -1,9 +1,10 @@
 cask "aliwangwang" do
-  version "20180413-1510-8.00.44"
-  sha256 "06de2d82ffb839350ee54bd16227f910b7709563f86ceb67d32ff0e050fb6515"
+  version "20200723-8.01.03"
+  sha256 "c7ed5cc9ace67b6ba65ee84dae24cb467e36118359b7538762036071ead0ba05"
 
-  url "https://alimarket.taobao.com/markets/qnww/aliww-download?wh_from=macos"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=https://alimarket.taobao.com/markets/qnww/aliww-download?wh_from=macos"
+  # gw.alipayobjects.com was verified as official when first introduced to the cask
+  url "https://gw.alipayobjects.com/os/bmw-prod/9b3facdd-e15f-4013-a883-b48ef641d700.dmg"
+  appcast "https://jdy.tmall.com/version/check?version=8.00.44M&nick=cask&platform=macww"
   name "Ali Wangwang"
   homepage "https://alimarket.taobao.com/markets/qnww/portal-group/ww/index"
 
