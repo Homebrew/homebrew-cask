@@ -9,15 +9,16 @@ cask "google-cloud-sdk" do
 
   depends_on formula: "python@3.8"
 
-  installer script: {
-    executable: "/usr/bin/env",
-    args:       [
-      "CLOUDSDK_PYTHON=#{HOMEBREW_PREFIX}/opt/python@3.8/libexec/bin/python",
-      "#{caskroom_path}/latest/google-cloud-sdk/install.sh",
-      "--usage-reporting", "false", "--bash-completion", "false", "--path-update", "false",
-      "--rc-path", "false", "--quiet"
-    ],
-  }
+  stage_only true
+
+  postflight do
+    system_command "#{staged_path}/#{token}/install.sh",
+                   args: [
+                     "--usage-reporting", "false", "--bash-completion", "false", "--path-update", "false",
+                     "--rc-path", "false", "--quiet"
+                   ],
+                   env:  { "CLOUDSDK_PYTHON" => "#{HOMEBREW_PREFIX}/opt/python@3.8/libexec/bin/python" }
+  end
 
   # Not actually necessary, since it would be deleted anyway.
   # It is present to make clear an uninstall was not forgotten and that for this cask it is indeed this simple.
