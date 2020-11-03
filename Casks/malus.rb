@@ -1,6 +1,6 @@
 cask "malus" do
-  version "1.4.1"
-  sha256 "31c2ce3fb49b0325b1ad230a6667732300cd4cf174ced4707aad6dde58dfd8c6"
+  version "1.5.0"
+  sha256 "0aa09ca35933a4783f735e2c8dc9dbd10a8d692b0be3ccf547e7713376324bc3"
 
   # malus.s3cdn.net was verified as official when first introduced to the cask
   url "https://malus.s3cdn.net/uploads/Malus-mac-#{version.no_dots}.dmg"
