@@ -7,19 +7,13 @@ cask "aspera-connect" do
   appcast "https://downloads.asperasoft.com/connect2/",
           must_contain: version.dots_to_underscores
   name "Aspera Connect"
-  homepage "https://asperasoft.com/software/transfer-clients/connect-web-browser-plug-in/"
+  homepage "https://www.ibm.com/aspera/connect/"
 
-  pkg "IBMAsperaConnectInstaller.pkg"
+  installer manual: "IBM Aspera Connect Installer.app"
 
-  uninstall pkgutil: [
-    "com.aspera.AsperaWeb",
-    "com.aspera.connect",
-    "com.aspera.crypt",
-    "com.aspera.launcher",
-  ],
-            script:  {
-              executable: "/Library/Application Support/Aspera/Aspera Connect/uninstall_connect.sh",
-              args:       ["-f"],
-              sudo:       true,
-            }
+  uninstall script: {
+              executable: "~/Library/Application Support/Aspera/Aspera Connect/uninstall_connect.sh",
+              args:       ["-f"]
+            },
+            delete: "~/Library/Logs/Aspera_Connect"
 end
