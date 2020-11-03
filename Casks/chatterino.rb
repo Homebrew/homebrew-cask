@@ -9,4 +9,8 @@ cask "chatterino" do
   homepage "https://chatterino.com/"
 
   app "chatterino.app"
+
+  zap trash: [
+    "~/Library/Application Support/chatterino"
+  ]
 end
