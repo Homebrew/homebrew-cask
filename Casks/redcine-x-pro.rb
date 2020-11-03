@@ -1,6 +1,6 @@
 cask "redcine-x-pro" do
-  version "52.1.49582"
-  sha256 "37ef15737675493866898b6a6e9125b6418fab65dfe1b9cb9df6588295d19ab5"
+  version "52.2.50136"
+  sha256 "d16bd655838b91b7999b8651d4f28347f4e57492cf15c7139328629909b91624"
 
   url "http://downloads.red.com/software/rcx/mac/release/#{version.major}.#{version.patch}/REDCINE-X_PRO_Build_#{version.major_minor}.pkg"
   appcast "https://www.red.com/RedSuiteCentric/SCA-Kilimanjaro/services/Download.Service.ss?downloadIdentifier=redcine-x-pro-mac"
