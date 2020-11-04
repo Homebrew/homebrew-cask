@@ -12,6 +12,6 @@ cask "electric" do
   app "electricBinary-9.07.jar"
 
   caveats do
-    depends_on_java "6+"
+    depends_on_java
   end
 end
