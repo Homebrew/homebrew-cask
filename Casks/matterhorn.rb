@@ -1,6 +1,6 @@
 cask "matterhorn" do
-  version "50200.10.2"
-  sha256 "cd54f4758eafe8babf58534d3fb0bfde7e01c930cf1539bbe4500b783a73710c"
+  version "50200.11.0"
+  sha256 "614f3036c65819ea280c6f2ce55ed434ea2a1e04105fc3be386f69064340df7e"
 
   url "https://github.com/matterhorn-chat/matterhorn/releases/download/#{version}/matterhorn-#{version}-Darwin-x86_64.tar.bz2"
   appcast "https://github.com/matterhorn-chat/matterhorn/releases.atom"
