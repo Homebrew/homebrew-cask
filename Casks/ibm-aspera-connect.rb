@@ -7,7 +7,7 @@ cask "ibm-aspera-connect" do
   appcast "https://www.ibm.com/aspera/connect/",
           must_contain: version.dots_to_underscores
   name "IBM Aspera Connect"
-  desc "Facilitate high-speed uploads and downloads with an Aspera transfer server"
+  desc "Facilitate uploads and downloads with an Aspera transfer server"
   homepage "https://www.ibm.com/aspera/connect/"
 
   installer manual: "IBM Aspera Connect Installer.app"
