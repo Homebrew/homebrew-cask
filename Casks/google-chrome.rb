@@ -9,10 +9,6 @@ cask "google-chrome" do
   homepage "https://www.google.com/chrome/"
 
   auto_updates true
-  conflicts_with cask: [
-    "homebrew/cask-versions/google-chrome-beta",
-    "homebrew/cask-versions/google-chrome-dev",
-  ]
   depends_on macos: ">= :yosemite"
 
   app "Google Chrome.app"
