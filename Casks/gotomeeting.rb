@@ -6,11 +6,11 @@ cask "gotomeeting" do
   url "https://builds.cdn.getgo.com/builds/g2m/#{version.after_comma}/GoToMeeting.dmg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://link.gotomeeting.com/latest-dmg",
           must_contain: version.after_comma
-  name "GotoMeeting"
-  desc "Online meeting, desktop sharing and video conferencing software package"
+  name "GoToMeeting"
+  desc "Online meeting, desktop sharing, and video conferencing"
   homepage "https://www.goto.com/meeting"
 
-  app "GotoMeeting.app"
+  app "GoToMeeting.app"
 
   zap trash: [
     "~/Library/Application Support/LogMeInInc/GoToMeeting",
