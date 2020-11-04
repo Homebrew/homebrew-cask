@@ -6,7 +6,7 @@ cask "megasync" do
   appcast "https://github.com/meganz/MEGAsync/releases.atom"
   name "MEGAsync"
   desc "Syncs files between computers and MEGA Cloud drives"
-  homepage "https://mega.nz/"
+  homepage "https://mega.nz/sync"
 
   app "MEGAsync.app"
 
