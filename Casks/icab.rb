@@ -1,6 +1,6 @@
 cask "icab" do
-  version "6.0.5"
-  sha256 "b2a5c24c3be117800ce36762b3f9f390720cea00aef654d07a09d540ca19f76a"
+  version "6.0.5.1"
+  sha256 "c51322df747350c18c41cb09ce6deb3b545000cfe161dad769c6bc65a598b9af"
 
   # icab.clauss-net.de/ was verified as official when first introduced to the cask
   url "http://icab.clauss-net.de/icab/iCab_#{version}.zip"
