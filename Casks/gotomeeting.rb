@@ -7,7 +7,7 @@ cask "gotomeeting" do
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://link.gotomeeting.com/latest-dmg",
           must_contain: version.after_comma
   name "GoToMeeting"
-  desc "Online meeting, desktop sharing, and video conferencing"
+  desc "Online meetings, desktop sharing, and video conferencing"
   homepage "https://www.goto.com/meeting"
 
   app "GoToMeeting.app"
