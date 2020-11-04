@@ -9,5 +9,8 @@ cask "freecad" do
   desc "3D parametric modeler"
   homepage "https://www.freecadweb.org/"
 
+  conflicts_with cask: "homebrew/cask-versions/freecad-pre"
+  depends_on macos: ">= :sierra"
+
   app "FreeCAD.app"
 end
