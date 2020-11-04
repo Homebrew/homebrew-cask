@@ -5,7 +5,7 @@ cask "gobdokumente" do
     url "https://download.moapp.software/GoBDokumente.zip"
   else
     version "1.7.2"
-    sha256 "2c788492fd66ffec93c70cbd0d1c10ceb03bcf2af1f8ccc5fbbbbb154e4999b1"
+    sha256 "f01564c3115619eddedeb9a4045c895fc8bbaaeb8d320a459cd71c62da92edc4"
     url "https://download.moapp.software/GoBDokumente_BS.zip"
   end
 

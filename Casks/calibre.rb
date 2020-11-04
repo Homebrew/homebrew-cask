@@ -4,8 +4,8 @@ cask "calibre" do
     sha256 "68829cd902b8e0b2b7d5cf7be132df37bcc274a1e5720b4605d2dd95f3a29168"
     url "https://download.calibre-ebook.com/#{version}/calibre-#{version}.dmg"
   else
-    version "5.4.1"
-    sha256 "ac58f67c345570be0568d295d4e2a0254a8c7fc4efaf0e3fbb41fcbacad33dbf"
+    version "5.4.2"
+    sha256 "d25131eae42c52e0b4af25d905b0e0d6cacbc87433e7de2efbaf82d0771f3389"
     # github.com/kovidgoyal/calibre/ was verified as official when first introduced to the cask
     url "https://github.com/kovidgoyal/calibre/releases/download/v#{version}/calibre-#{version}.dmg"
     appcast "https://github.com/kovidgoyal/calibre/releases.atom"
@@ -14,6 +14,8 @@ cask "calibre" do
   name "calibre"
   desc "E-books management software"
   homepage "https://calibre-ebook.com/"
+
+  conflicts_with cask: "homebrew/cask-versions/calibre4"
 
   app "calibre.app"
   binary "#{appdir}/calibre.app/Contents/MacOS/calibre"

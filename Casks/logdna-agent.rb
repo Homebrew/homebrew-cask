@@ -1,6 +1,6 @@
 cask "logdna-agent" do
-  version "2.0.0"
-  sha256 "ad87d1598b91130a9940c71412f15b4da356408d1a37bcfa7244cca18a452b37"
+  version "2.1.0"
+  sha256 "5b15b0d400db76795d4938f1dd9027d02a1c141685568a6cd9f18ca48a026acd"
 
   # github.com/logdna/logdna-agent/ was verified as official when first introduced to the cask
   url "https://github.com/logdna/logdna-agent/releases/download/#{version}/logdna-agent-#{version}.pkg"
@@ -15,8 +15,8 @@ cask "logdna-agent" do
             launchctl: "com.logdna.logdna-agentd"
 
   caveats <<~EOS
-    When you first start logdna-agent, you must set your LogDNA API key with the command:
-      sudo logdna-agent -k <api-key>
+    When you first start logdna-agent, you must set your LogDNA Ingestion Key with the command:
+      sudo logdna-agent -k <ingestion-key>
 
     To always run logdna-agent in the background, use the command:
       sudo launchctl load -w /Library/LaunchDaemons/com.logdna.logdna-agent.plist
