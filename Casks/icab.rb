@@ -12,5 +12,5 @@ cask "icab" do
 
   depends_on macos: ">= :high_sierra"
 
-  app "iCab #{version}/iCab.app"
+  app "iCab #{version.major_minor_patch}/iCab.app"
 end
