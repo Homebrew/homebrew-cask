@@ -1,4 +1,4 @@
-cask "electric-vlsi" do
+cask "electric" do
   version "9.07"
   sha256 "3e383f673183265700e0c13a5f7b1d3348247465c3d8817c845d62e4c92d86ce"
 
