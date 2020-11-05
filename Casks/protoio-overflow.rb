@@ -1,4 +1,4 @@
-cask "overflowio" do
+cask "protoio-overflow" do
   version "1.10.1"
   sha256 "2a682fc721e0d8a712f845cde460490b7c353c256e80e3fa4714bffa44f2a683"
 
@@ -9,4 +9,9 @@ cask "overflowio" do
   homepage "https://overflow.io/"
 
   app "Overflow.app"
+
+  zap trash: [
+    "~/Library/Preferences/io.overflow.mac.app.plist",
+    "~/Library/Application Support/overflow",
+  ]
 end
