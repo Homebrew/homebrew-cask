@@ -8,11 +8,15 @@ cask "wifi-explorer" do
   desc "Scan, monitor, and troubleshoot wireless networks"
   homepage "https://www.intuitibits.com/products/wifi-explorer/"
 
+  depends_on macos: ">= :high_sierra"
+
   app "WiFi Explorer.app"
 
   zap trash: [
     "~/Library/Caches/wifiexplorer",
     "~/Library/Cookies/wifiexplorer.binarycookies",
+    "~/Library/Group Containers/2B9R362QNU.com.adriangranados.wifiexplorer",
+    "~/Library/Preferences/com.adriangranados.wifiexplorer*",
     "~/Library/Preferences/wifiexplorer.plist",
     "~/Library/Saved Application State/wifiexplorer.savedState",
   ]
