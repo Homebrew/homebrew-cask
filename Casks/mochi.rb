@@ -1,6 +1,6 @@
 cask "mochi" do
-  version "1.6.13"
-  sha256 "edbc2ef66e0e7d50d46a446e75cc123746c8c0a1b14e62e740a9f45ef53657f2"
+  version "1.6.14"
+  sha256 "5c628f992ed6735e2ad0887746557d3f629ef358d479a4d161e001f937ce3f1e"
 
   url "https://mochi.cards/releases/Mochi-#{version}.dmg"
   appcast "https://mochi.cards/"
