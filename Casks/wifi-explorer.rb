@@ -15,5 +15,7 @@ cask "wifi-explorer" do
     "~/Library/Cookies/wifiexplorer.binarycookies",
     "~/Library/Preferences/wifiexplorer.plist",
     "~/Library/Saved Application State/wifiexplorer.savedState",
+    "~/Library/Group Containers/2B9R362QNU.com.adriangranados.wifiexplorer",
+    "~/Library/Preferences/com.adriangranados.wifiexplorer*",
   ]
 end
