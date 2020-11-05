@@ -1,6 +1,6 @@
 cask "abstract" do
-  version "96.0.1"
-  sha256 "f204344f57bbf9a41d815938526c749f46da12e275ef8e1a93b121cdddd0f498"
+  version "96.1.1"
+  sha256 "7635910fb3294c24e2b125d55c2e37fe0340f0c3fbb0858c8c7f2ff96bff8981"
 
   url "https://downloads.goabstract.com/mac/Abstract-#{version}.zip"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://api.goabstract.com/releases/latest/download"
