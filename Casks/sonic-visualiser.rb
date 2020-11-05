@@ -6,6 +6,7 @@ cask "sonic-visualiser" do
   url "https://bintray.com/sonic-visualiser/sonic-visualiser/download_file?file_path=Sonic+Visualiser-#{version}.dmg"
   appcast "https://code.soundsoftware.ac.uk/projects/sonic-visualiser/repository/raw/CHANGELOG"
   name "Sonic Visualiser"
+  desc "Visualisation, analysis, and annotation of music audio recordings"
   homepage "https://www.sonicvisualiser.org/"
 
   depends_on macos: ">= :sierra"
