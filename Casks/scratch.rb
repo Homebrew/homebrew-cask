@@ -1,6 +1,6 @@
 cask "scratch" do
-  version "3.17.1"
-  sha256 "e3b84a84afa75f0b42cd0cbf605ba60a3172a9f8f9c8598c6a5af13ae2cc347d"
+  version "3.18.1"
+  sha256 "5c447f3d88feeb193cb607a81eec585c74226c83b824f62d57524b33aabd4c44"
 
   url "https://downloads.scratch.mit.edu/desktop/Scratch%20#{version}.dmg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://downloads.scratch.mit.edu/desktop/Scratch.dmg"
