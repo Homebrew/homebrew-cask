@@ -1,6 +1,6 @@
 cask "plexamp" do
-  version "3.2.2"
-  sha256 "1b9d9bf3aafc08ef4032a46c69e7e8ecde5cd6d53cbc897d6d30e66386a705d0"
+  version "3.3.1"
+  sha256 "4faf2897d3c96e57d01a5391e1067ee8cf7da15873f990459a61538b82408ded"
 
   # plexamp.plex.tv/ was verified as official when first introduced to the cask
   url "https://plexamp.plex.tv/plexamp.plex.tv/desktop/Plexamp-#{version}.dmg"
