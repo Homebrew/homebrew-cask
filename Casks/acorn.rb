@@ -14,8 +14,8 @@ cask "acorn" do
 
   zap trash: [
     "~/Library/Application Support/Acorn",
-    "~/Library/Caches/com.flyingmeat.Acorn6",
-    "~/Library/Preferences/com.flyingmeat.Acorn6.plist",
-    "~/Library/Saved Application State/com.flyingmeat.Acorn6.savedState",
+    "~/Library/Caches/com.flyingmeat.Acorn#{version.major}",
+    "~/Library/Preferences/com.flyingmeat.Acorn#{version.major}.plist",
+    "~/Library/Saved Application State/com.flyingmeat.Acorn#{version.major}.savedState",
   ]
 end
