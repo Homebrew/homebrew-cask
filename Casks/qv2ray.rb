@@ -13,7 +13,5 @@ cask "qv2ray" do
 
   app "qv2ray.app"
 
-  zap trash: [
-    "~/Library/Preferences/qv2ray",
-  ]
+  zap trash: "~/Library/Preferences/qv2ray"
 end
