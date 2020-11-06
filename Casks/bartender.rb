@@ -14,7 +14,7 @@ cask "bartender" do
   else
     version "4.0.18"
     sha256 "b696a150bd111a121fb344932399ade4baabfcd3f3251c1a50e62875f7b276a4"
-    url "https://macbartender.com/B2/updates/B4Latest/Bartender%20#{version.major}.zip",
+    url "https://macbartender.com/B2/updates/B4Latest/Bartender%20#{version.major}.dmg",
         referer: "https://www.macbartender.com"
     appcast "https://www.macbartender.com/B2/updates/AppcastB#{version.major}.xml"
   end
