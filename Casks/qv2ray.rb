@@ -13,7 +13,7 @@ cask "qv2ray" do
   depends_on formula: "v2ray/v2ray/v2ray-core"
 
   app "qv2ray.app"
-  
+
   zap trash: [
     "~/Library/Preferences/qv2ray",
   ]
