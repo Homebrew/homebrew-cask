@@ -9,6 +9,8 @@ cask "knime" do
   desc "Software to create and productionize data science"
   homepage "https://www.knime.com/"
 
+  depends_on macos: ">= :high_sierra"
+
   app "KNIME #{version}.app"
 
   zap trash: [
