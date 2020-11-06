@@ -11,4 +11,11 @@ cask "acorn" do
   auto_updates true
 
   app "Acorn.app"
+
+  zap trash: [
+    "~/Library/Application Support/Acorn",
+    "~/Library/Caches/com.flyingmeat.Acorn6",
+    "~/Library/Preferences/com.flyingmeat.Acorn6.plist",
+    "~/Library/Saved Application State/com.flyingmeat.Acorn6.savedState",
+  ]
 end
