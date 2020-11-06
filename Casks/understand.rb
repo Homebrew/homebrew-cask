@@ -5,6 +5,7 @@ cask "understand" do
   url "http://builds.scitools.com/all_builds/b#{version.patch}/Understand/Understand-#{version}-MacOSX-x86.dmg"
   appcast "https://scitools.com/download/all-builds/"
   name "SciTools Understand"
+  desc "Code visualization and exploration tools"
   homepage "https://scitools.com/features/"
 
   app "Understand.app"
