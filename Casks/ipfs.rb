@@ -1,11 +1,14 @@
-cask 'ipfs' do
-  version '0.9.5'
-  sha256 'c1803d6a8ae176764293632e9368cdef4689e2ef6f9a5ca302bc7bdada019129'
+cask "ipfs" do
+  version "0.13.2"
+  sha256 "e05caeaf457d994ab6b4ce25f6e2572b227f632f378c63a40cfbf5bfd9bf5efd"
 
-  url "https://github.com/ipfs-shipyard/ipfs-desktop/releases/download/v#{version}/ipfs-desktop-#{version}.dmg"
-  appcast 'https://github.com/ipfs-shipyard/ipfs-desktop/releases.atom'
-  name 'IPFS Desktop'
-  homepage 'https://github.com/ipfs-shipyard/ipfs-desktop'
+  url "https://github.com/ipfs-shipyard/ipfs-desktop/releases/download/v#{version}/IPFS-Desktop-#{version}.dmg"
+  appcast "https://github.com/ipfs-shipyard/ipfs-desktop/releases.atom"
+  name "IPFS Desktop"
+  desc "Menu bar application for the IPFS peer-to-peer network"
+  homepage "https://github.com/ipfs-shipyard/ipfs-desktop"
 
-  app 'IPFS Desktop.app'
+  auto_updates true
+
+  app "IPFS Desktop.app"
 end

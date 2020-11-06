@@ -1,12 +1,14 @@
-cask 'stand' do
-  version '1.0_4'
-  sha256 '8919e43c9c591657d8d6961b25e8dc5f77d706d71eb246839be22522a82bb0ec'
+cask "stand" do
+  version "2.0"
+  sha256 "eb0555f6376757105e1faea1fd1f9e4afae21eef73fdd5c7d0fb0c76a8cd9702"
 
-  # get-stand-app.s3.amazonaws.com was verified as official when first introduced to the cask
-  url "https://get-stand-app.s3.amazonaws.com/#{version.sub(%r{.*_}, '')}/Stand.zip"
-  appcast 'https://standapp-sparkle-updater.herokuapp.com/'
-  name 'Stand'
-  homepage 'https://getstandapp.com/'
+  # f001.backblazeb2.com/file/stand-app/ was verified as official when first introduced to the cask
+  url "https://f001.backblazeb2.com/file/stand-app/#{version}/Stand.zip"
+  appcast "https://standapp-sparkle-updater.herokuapp.com/"
+  name "Stand"
+  homepage "https://getstandapp.com/"
 
-  app 'Stand.app'
+  depends_on macos: ">= :catalina"
+
+  app "Stand.app"
 end

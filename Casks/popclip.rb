@@ -1,13 +1,14 @@
-cask 'popclip' do
-  version '2019.9.1'
-  sha256 '4dccb918097bc8c61a23054257a54b581446eae7987162ea99581afbebf73a8c'
+cask "popclip" do
+  version "2020.10"
+  sha256 "c968666b645d96aa93b30391b27d68384b6bc26af58147809f78904641876443"
 
   url "https://pilotmoon.com/downloads/PopClip-#{version}.zip"
-  appcast 'https://softwareupdate.pilotmoon.com/update/popclip/appcast.xml'
-  name 'PopClip'
-  homepage 'https://pilotmoon.com/popclip/'
+  appcast "https://softwareupdate.pilotmoon.com/update/popclip/appcast.xml"
+  name "PopClip"
+  desc "Used to access context-specific actions when text is selected"
+  homepage "https://pilotmoon.com/popclip/"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'PopClip.app'
+  app "PopClip.app"
 end

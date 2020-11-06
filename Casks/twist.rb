@@ -1,13 +1,14 @@
-cask 'twist' do
-  version '1.6.18,6719'
-  sha256 '9fa80be6f9baf41f9cbc1849d138c0aa98b56c2b845be931008b59db863d11f2'
+cask "twist" do
+  version "0.2.3,7025"
+  sha256 "8dfadf3cb9f952f04c5aa3eb37c0298151fb831b5ed70ff35682d8af692eedae"
 
-  url "https://downloads.twistapp.com/mac/Twist-#{version.after_comma}.zip"
-  appcast 'https://downloads.twistapp.com/mac/AppCast.xml'
-  name 'Twist'
-  homepage 'https://twistapp.com/'
+  url "https://downloads.twist.com/mac/Twist-#{version.before_comma}.dmg"
+  appcast "https://downloads.twist.com/mac/AppCast.xml"
+  name "Twist"
+  desc "Team communication and collaboration software"
+  homepage "https://twist.com/"
 
-  depends_on macos: '>= :el_capitan'
+  depends_on macos: ">= :el_capitan"
 
-  app 'Twist.app'
+  app "Twist.app"
 end

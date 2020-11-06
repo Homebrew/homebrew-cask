@@ -1,11 +1,11 @@
-cask 'remember-the-milk' do
-  version '1.1.15'
-  sha256 'd051a885892d871dc9e6236d523dff2aa5e3732db4bd2cee2b8c100136052677'
+cask "remember-the-milk" do
+  version "1.2.9"
+  sha256 "c3e04a8b19a8b9c5e57ecc8f51fc8adf3aad28df644fee162839b72954724334"
 
   url "https://www.rememberthemilk.com/download/mac/RememberTheMilk-#{version}.zip"
-  appcast 'https://www.rememberthemilk.com/services/mac/'
-  name 'Remember The Milk'
-  homepage 'https://www.rememberthemilk.com/'
+  appcast "https://www.rememberthemilk.com/services/mac/"
+  name "Remember The Milk"
+  homepage "https://www.rememberthemilk.com/"
 
-  app 'Remember The Milk.app'
+  app "Remember The Milk.app"
 end

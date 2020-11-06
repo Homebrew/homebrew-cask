@@ -1,15 +1,15 @@
-cask 'jami' do
-  version '20191002.1514'
-  sha256 '6e21be307b182edcdb92fe8053835f34bba129626eb5ff6307956c7a53ecbfe0'
+cask "jami" do
+  version "20201027.1914"
+  sha256 "4b04bb7f0ff931080d87024cf65c790768c9ad2180da64371b16230c3d0d21a9"
 
-  url "https://dl.ring.cx/mac_osx/jami-#{version.no_dots}.dmg"
-  appcast 'https://dl.ring.cx/mac_osx/sparkle-ring.xml',
-          configuration: version.no_dots
-  name 'Jami'
-  name 'Savoir-faire Linux Ring'
-  homepage 'https://ring.cx/'
+  url "https://dl.jami.net/mac_osx/jami-#{version.no_dots}.dmg"
+  appcast "https://dl.jami.net/mac_osx/sparkle-ring.xml",
+          must_contain: version.no_dots
+  name "Jami"
+  name "Savoir-faire Linux Ring"
+  homepage "https://jami.net/"
 
   auto_updates true
 
-  app 'Jami.app'
+  app "Jami.app"
 end

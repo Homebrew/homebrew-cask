@@ -1,14 +1,15 @@
-cask 'workflowy' do
-  version '1.3.5-4650'
-  sha256 '64466d21247f98c16effcc2c6407eedf9cad2d49c23fe79c0e7b0b63c67fa92a'
+cask "workflowy" do
+  version "1.3.5-12260"
+  sha256 "7a42b70c3e67e2fae55584abe0d4d2a98610fcac0fd8188b519ec87f716c59e0"
 
-  # github.com/workflowy/desktop was verified as official when first introduced to the cask
+  # github.com/workflowy/desktop/ was verified as official when first introduced to the cask
   url "https://github.com/workflowy/desktop/releases/download/v#{version}/WorkFlowy.dmg"
-  appcast 'https://github.com/workflowy/desktop/releases.atom'
-  name 'WorkFlowy'
-  homepage 'https://workflowy.com/downloads/mac/'
+  appcast "https://github.com/workflowy/desktop/releases.atom"
+  name "WorkFlowy"
+  desc "Notetaking tool"
+  homepage "https://workflowy.com/downloads/mac/"
 
   auto_updates true
 
-  app 'WorkFlowy.app'
+  app "WorkFlowy.app"
 end

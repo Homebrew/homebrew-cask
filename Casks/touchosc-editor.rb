@@ -1,14 +1,15 @@
-cask 'touchosc-editor' do
-  version '1.8.6'
-  sha256 '79400ed8df5559286495b72e2b7d0655a69cd5f199c14d65667ee5fbe7e3e9ce'
+cask "touchosc-editor" do
+  version "1.8.9"
+  sha256 "59e9992f29569b950dfeea397814e88cea5b45b1ed7ddaa8f748774ac6db6db7"
 
   url "https://hexler.net/pub/touchosc/touchosc-editor-#{version}-macos.zip"
-  appcast 'https://hexler.net/software/touchosc'
-  name 'TouchOSC Editor'
-  homepage 'https://hexler.net/software/touchosc'
+  appcast "https://hexler.net/software/touchosc"
+  name "TouchOSC Editor"
+  homepage "https://hexler.net/software/touchosc"
 
   app "touchosc-editor-#{version}-macos/TouchOSC Editor.app"
-  artifact "touchosc-editor-#{version}-macos/layouts", target: Pathname.new(File.expand_path('~')).join('Library/Application Support/TouchOSCEditor/layouts')
+  artifact "touchosc-editor-#{version}-macos/layouts",
+           target: Pathname.new(File.expand_path("~")).join("Library/Application Support/TouchOSCEditor/layouts")
 
-  zap trash: '~/Library/*/*TouchOSCEditor*'
+  zap trash: "~/Library/*/*TouchOSCEditor*"
 end

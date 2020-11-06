@@ -1,12 +1,17 @@
-cask 'ios-app-signer' do
-  version '1.13'
-  sha256 'd6a6e09c430b4827d8e02f6df745383f754a4d99ab53c2baae19bd9eb46d8dd4'
+cask "ios-app-signer" do
+  version "1.13.1"
+  sha256 "baf6826427706b0b3f685ffb3beced86cf348b74d60e1f81d75c4c3e8a779f47"
 
-  # github.com/DanTheMan827/ios-app-signer was verified as official when first introduced to the cask
+  # github.com/DanTheMan827/ios-app-signer/ was verified as official when first introduced to the cask
   url "https://github.com/DanTheMan827/ios-app-signer/releases/download/#{version}/iOS.App.Signer.app.zip"
-  appcast 'https://github.com/DanTheMan827/ios-app-signer/releases.atom'
-  name 'iOS App Signer'
-  homepage 'https://dantheman827.github.io/ios-app-signer/'
+  appcast "https://github.com/DanTheMan827/ios-app-signer/releases.atom"
+  name "iOS App Signer"
+  homepage "https://dantheman827.github.io/ios-app-signer/"
 
-  app 'iOS App Signer.app'
+  app "iOS App Signer.app"
+
+  zap trash: [
+    "~/Library/Caches/com.DanTheMan827.AppSigner",
+    "~/Library/Preferences/com.DanTheMan827.AppSigner.plist",
+  ]
 end

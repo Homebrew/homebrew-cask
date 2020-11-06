@@ -1,13 +1,13 @@
-cask 'android-ndk' do
-  version '19'
-  sha256 '04159ade2fc5c7d055248cf65664039b8596f4b9ee3fbc44a9bf2ce2ee28d95d'
+cask "android-ndk" do
+  version "21"
+  sha256 "b82a49ec591d6f283acc7a241a8c56a14788320bf85a3375b5f2309b3b0c9b45"
 
-  # dl.google.com/android/repository/android-ndk was verified as official when first introduced to the cask
+  # dl.google.com/android/repository/ was verified as official when first introduced to the cask
   url "https://dl.google.com/android/repository/android-ndk-r#{version}-darwin-x86_64.zip"
-  name 'Android NDK'
-  homepage 'https://developer.android.com/ndk/index.html'
+  name "Android NDK"
+  homepage "https://developer.android.com/ndk/index.html"
 
-  conflicts_with cask: 'crystax-ndk'
+  conflicts_with cask: "crystax-ndk"
 
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/ndk_exec.sh"
@@ -21,12 +21,12 @@ cask 'android-ndk' do
     EOS
   end
 
-  [
-    'ndk-build',
-    'ndk-depends',
-    'ndk-gdb',
-    'ndk-stack',
-    'ndk-which',
+  %w[
+    ndk-build
+    ndk-depends
+    ndk-gdb
+    ndk-stack
+    ndk-which
   ].each { |link_name| binary shimscript, target: link_name }
 
   uninstall_postflight do

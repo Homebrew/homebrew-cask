@@ -1,17 +1,20 @@
-cask 'smartsvn' do
-  version '11.0.3'
-  sha256 '5f1d4d0c84ed747d398b476aeeab90e5a188c312b77fbf548205caf7b18810a3'
+cask "smartsvn" do
+  version "14.0.1"
+  sha256 "743fa455562765ced91bcc82362d36154bbeb7c5c68c37991f7009a8095c567a"
 
   url "https://www.smartsvn.com/downloads/smartsvn/smartsvn-macosx-#{version.dots_to_underscores}.dmg"
-  appcast 'https://www.smartsvn.com/documents/smartsvn/changelog.txt'
-  name 'SmartSVN'
-  homepage 'https://www.smartsvn.com/'
+  appcast "https://www.smartsvn.com/documents/smartsvn/changelog.txt"
+  name "SmartSVN"
+  desc "Subversion client"
+  homepage "https://www.smartsvn.com/"
 
-  app "SmartSVN #{version.major}.app"
+  depends_on macos: ">= :el_capitan"
+
+  app "SmartSVN.app"
 
   zap trash: [
-               '~/Library/Preferences/com.syntevo.smartsvn.plist',
-               '~/Library/Preferences/SmartSVN',
-               '~/Library/Saved Application State/com.syntevo.smartsvn.savedState',
-             ]
+    "~/Library/Preferences/com.syntevo.smartsvn.plist",
+    "~/Library/Preferences/SmartSVN",
+    "~/Library/Saved Application State/com.syntevo.smartsvn.savedState",
+  ]
 end

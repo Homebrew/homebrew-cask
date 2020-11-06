@@ -1,11 +1,11 @@
-cask 'android-sdk' do
-  version '4333796'
-  sha256 'ecb29358bc0f13d7c2fa0f9290135a5b608e38434aad9bf7067d0252c160853e'
+cask "android-sdk" do
+  version "4333796"
+  sha256 "ecb29358bc0f13d7c2fa0f9290135a5b608e38434aad9bf7067d0252c160853e"
 
-  # dl.google.com/android/repository was verified as official when first introduced to the cask
+  # dl.google.com/android/repository/ was verified as official when first introduced to the cask
   url "https://dl.google.com/android/repository/sdk-tools-darwin-#{version}.zip"
-  name 'android-sdk'
-  homepage 'https://developer.android.com/index.html'
+  name "android-sdk"
+  homepage "https://developer.android.com/studio/releases/sdk-tools"
 
   binary "#{staged_path}/tools/android"
   binary "#{staged_path}/tools/bin/archquery"
@@ -30,12 +30,7 @@ cask 'android-sdk' do
   end
 
   caveats do
-    depends_on_java '8'
-    <<~EOS
-      You can control android sdk packages via the sdkmanager command.
-      You may want to add to your profile:
-
-        'export ANDROID_SDK_ROOT="#{HOMEBREW_PREFIX}/share/android-sdk"'
-    EOS
+    depends_on_java "8"
+    discontinued
   end
 end

@@ -1,12 +1,12 @@
-cask 'pokerth' do
-  version '1.1.1'
-  sha256 '910e6da1b460456a98f61e86246fe4a9015c1f4be69420ca7c8016e84c16b31d'
+cask "pokerth" do
+  version "1.1.2"
+  sha256 "bce46072dd13ebfa6253a49aca92d9ca28c28f77cb63831d5ed67b7b167ef7a3"
 
-  # downloads.sourceforge.net/pokerth was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/pokerth/PokerTH-#{version}.dmg"
-  appcast 'https://sourceforge.net/projects/pokerth/rss'
-  name 'PokerTH'
-  homepage 'https://www.pokerth.net/'
+  # downloads.sourceforge.net/pokerth/ was verified as official when first introduced to the cask
+  url "https://downloads.sourceforge.net/pokerth/PokerTH_#{version}.dmg"
+  appcast "https://sourceforge.net/projects/pokerth/rss"
+  name "PokerTH"
+  homepage "https://www.pokerth.net/"
 
-  app 'pokerth.app'
+  app "pokerth.app"
 end

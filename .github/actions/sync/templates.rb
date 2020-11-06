@@ -2,90 +2,68 @@
 
 require 'fileutils'
 require 'open3'
-require 'tmpdir'
-
-CASK_REPOS = [
-  'Homebrew/homebrew-cask-drivers',
-  'Homebrew/homebrew-cask-fonts',
-  'Homebrew/homebrew-cask-versions',
-].freeze
-
-tmpdir = Dir.mktmpdir
+require 'pathname'
 
 def git(*args)
   system 'git', *args
   exit $?.exitstatus unless $?.success?
 end
 
-git 'config', '--global', 'user.name', 'BrewTestBot'
-git 'config', '--global', 'user.email', 'homebrew-ops@lists.sfconservancy.org'
+repo_dir = Pathname(ARGV[0])
+repo = ARGV[1]
 
-ENV['GIT_ASKPASS'] = File.join(tmpdir, 'git_askpass.sh')
+puts 'Detecting changes…'
+[
+  '.editorconfig',
+  '.gitattributes',
+  '.github/*.md',
+  '.github/*.yml',
+  '.github/actions/{automerge}/**/*',
+  '.github/ISSUE_TEMPLATE/*.md',
+  '.github/workflows/{automerge,cache,ci,dispatch-command,rebase,rerun-workflow,review,self-approve}.yml',
+  '.gitignore',
+  '.travis.yml',
+  'Casks/.rubocop.yml',
+].each do |glob|
+  src_paths = Pathname.glob(glob)
+  dst_paths = Pathname.glob(repo_dir.join(glob))
 
-File.write ENV['GIT_ASKPASS'], <<~SH
-  #!/bin/sh
-  echo "$HOMEBREW_GITHUB_API_TOKEN"
-SH
-
-FileUtils.chmod '+x', ENV['GIT_ASKPASS']
-
-CASK_REPOS.each do |repo|
-  repo_dir = "#{tmpdir}/#{repo}"
-
-  puts "Cloning #{repo}…"
-  git 'clone', "https://github.com/#{repo}.git", '--quiet', '--depth=1', repo_dir
-  puts
-
-  puts 'Detecting changes…'
-  [
-    '.editorconfig',
-    '.gitattributes',
-    '.github',
-    '.gitignore',
-    '.travis.yml',
-    'Casks/.rubocop.yml',
-  ].each do |path|
-    FileUtils.rm_rf File.join(repo_dir, path)
-    FileUtils.cp_r path, File.join(repo_dir, path)
+  dst_paths.each do |path|
+    FileUtils.rm_f path
   end
 
-  # Remove actions which should only be run from the main repo.
-  FileUtils.rm_r File.join(repo_dir, '.github/actions/sync')
-  FileUtils.rm   File.join(repo_dir, '.github/workflows/generate_formulae.brew.sh_data.yml')
-  FileUtils.rm   File.join(repo_dir, '.github/workflows/sync_labels.yml')
-  FileUtils.rm   File.join(repo_dir, '.github/workflows/sync_templates_and_ci_config.yml')
-
-  FileUtils.rm File.join(repo_dir, '.github/ISSUE_TEMPLATE/02_feature_request.md')
-
-  workflow = File.read(File.join(repo_dir, '.github/PULL_REQUEST_TEMPLATE.md'))
-  File.write File.join(repo_dir, '.github/PULL_REQUEST_TEMPLATE.md'), workflow.gsub(/Homebrew\/homebrew-cask\/(pulls|issues|search)/, "#{repo}/\\1")
-
-  out, err, status = Open3.capture3('git', '-C', repo_dir, 'status', '--porcelain', '--ignore-submodules=dirty')
-  raise err unless status.success?
-
-  repo_changed = !out.chomp.empty?
-
-  unless repo_changed
-    puts 'No changed detected.'
-    puts
-    next
+  src_paths.each do |path|
+    repo_dir.join(path.dirname).mkpath
+    FileUtils.cp path, repo_dir.join(path)
   end
-
-  git '-C', repo_dir, 'add', '--all'
-
-  out, err, status = Open3.capture3('git', '-C', repo_dir, 'diff', '--name-only', '--staged')
-  raise err unless status.success?
-
-  modified_paths = out.lines.map(&:chomp)
-
-  modified_paths.each do |modified_path|
-    puts "Detected changes to #{modified_path}."
-    git '-C', repo_dir, 'commit', modified_path, '--message', "#{File.basename(modified_path)}: update to match main repo", '--quiet'
-  end
-  puts
-
-  puts 'Pushing changes…'
-  git '-C', repo_dir, 'push', 'origin', 'master'
-
-  puts
 end
+
+FileUtils.rm repo_dir.join('.github/ISSUE_TEMPLATE/02_feature_request.md')
+
+workflow = File.read(repo_dir.join('.github/PULL_REQUEST_TEMPLATE.md'))
+File.write repo_dir.join('.github/PULL_REQUEST_TEMPLATE.md'), workflow.gsub(/Homebrew\/homebrew-cask\/(pulls|issues|search)/, "#{repo}/\\1")
+
+out, err, status = Open3.capture3('git', '-C', repo_dir.to_s, 'status', '--porcelain', '--ignore-submodules=dirty')
+raise err unless status.success?
+
+repo_changed = !out.chomp.empty?
+
+unless repo_changed
+  puts 'No changed detected.'
+  exit
+end
+
+git '-C', repo_dir.to_s, 'add', '--all'
+
+out, err, status = Open3.capture3('git', '-C', repo_dir.to_s, 'diff', '--name-only', '--staged')
+raise err unless status.success?
+
+modified_paths = out.lines.map(&:chomp)
+
+modified_paths.each do |modified_path|
+  puts "Detected changes to #{modified_path}."
+  git '-C', repo_dir.to_s, 'commit', modified_path, '--message', "#{File.basename(modified_path)}: update to match main repo", '--quiet'
+end
+puts
+
+puts '::set-output name=pull_request::true'

@@ -1,11 +1,11 @@
-cask 'vapor' do
-  version '3.1.0'
-  sha256 'f3bfcbc348358826704dc790ec81317f9f270b70bb6d2889eb6ece0be4c94ccb'
+cask "vapor" do
+  version "3.2.0"
+  sha256 "2c81e9b5f6d9744b18aadb07eb88ba1be606f0db6c062f4591fedcd6633aa072"
 
-  url "https://github.com/NCAR/VAPOR/releases/download/#{version}/Vapor-#{version}-Mac.dmg"
-  appcast 'https://github.com/NCAR/VAPOR/releases.atom'
-  name 'VAPOR'
-  homepage 'https://github.com/NCAR/VAPOR'
+  url "https://github.com/NCAR/VAPOR/releases/download/#{version}/VAPOR3-#{version}-Darwin.dmg"
+  appcast "https://github.com/NCAR/VAPOR/releases.atom"
+  name "VAPOR"
+  homepage "https://github.com/NCAR/VAPOR"
 
-  app 'vapor.app'
+  app "vapor.app"
 end

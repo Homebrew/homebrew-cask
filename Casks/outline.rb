@@ -1,11 +1,12 @@
-cask 'outline' do
-  version '3.21.5'
-  sha256 '0c8137bb7f668d44e860d1fb968051738f2d610ebbe2ce551daa55aeed7a7f9e'
+cask "outline" do
+  version "3.2007.1"
+  sha256 "8e5b231d0a33b0fca5be533b7a1fd546aa699515bc93f349991d0d186c17ceae"
 
-  url "http://static.outline.ws/versions/Outline_#{version}.zip"
-  appcast 'https://gorillized.s3.amazonaws.com/versions/update_channel.xml'
-  name 'Outline'
-  homepage 'http://outline.ws/'
+  url "https://static.outline.ws/versions/Outline_#{version}.zip"
+  appcast "https://gorillized.s3.amazonaws.com/versions/update_channel.xml"
+  name "Outline"
+  desc "Note taking app"
+  homepage "https://outline.ws/"
 
-  app 'Outline.app'
+  app "Outline.app"
 end

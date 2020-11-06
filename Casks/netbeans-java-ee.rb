@@ -1,10 +1,10 @@
-cask 'netbeans-java-ee' do
-  version '8.2'
-  sha256 '5b897c3f1fa657749d5dcddbc3a95a1a15ec35e7cab08aad34befadd7ec3f1e7'
+cask "netbeans-java-ee" do
+  version "8.2"
+  sha256 "5b897c3f1fa657749d5dcddbc3a95a1a15ec35e7cab08aad34befadd7ec3f1e7"
 
   url "https://download.netbeans.org/netbeans/#{version}/final/bundles/netbeans-#{version}-javaee-macosx.dmg"
-  name 'NetBeans IDE for Java EE'
-  homepage 'https://netbeans.org/'
+  name "NetBeans IDE for Java EE"
+  homepage "https://netbeans.org/"
 
   pkg "NetBeans #{version}.pkg"
 
@@ -28,6 +28,6 @@ cask 'netbeans-java-ee' do
   # the macOS installer, so it's insufficient to just delete the paths exposed
   # by pkgutil, hence the additional ":delete" option below.
 
-  uninstall pkgutil: 'org.netbeans.ide.*|glassfish.*',
-            delete:  '/Applications/NetBeans'
+  uninstall pkgutil: "org.netbeans.ide.*|glassfish.*",
+            delete:  "/Applications/NetBeans"
 end

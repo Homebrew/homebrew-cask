@@ -24,7 +24,7 @@ pkg 'AlinofTimer.pkg', allow_untrusted: true
 
 ## `pkg choices:`
 
-`pkg choices:` can be used to override `.pkg`’s default install options via `-applyChoiceChangesXML`. It uses a deserialized version of the `choiceChanges` property list (refer to the `CHOICE CHANGES FILE` section of the [`installer` man page](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man8/installer.8.html) for further information).
+`pkg choices:` can be used to override `.pkg`’s default install options via `-applyChoiceChangesXML`. It uses a deserialized version of the `choiceChanges` property list (refer to the `CHOICE CHANGES FILE` section of the `installer` manual page by running `man -P 'less --pattern "^CHOICE CHANGES FILE"' installer`).
 
 Running the  macOS command:
 
@@ -36,7 +36,7 @@ will output an XML which you can use to extract the `choices:` values, as well a
 
 See [this pull request for wireshark-chmodbpf](https://github.com/Homebrew/homebrew-cask/pull/26997) and [this one for wine-staging](https://github.com/Homebrew/homebrew-cask/pull/27937) for some examples of the procedure.
 
-Example ([wireshark-chmodbpf.rb](https://github.com/Homebrew/homebrew-cask/blob/f95b8a8306b91fe9da7908b842f4a5fa80f7afe0/Casks/wireshark-chmodbpf.rb#L9#L26)):
+Example ([wireshark-chmodbpf.rb](https://github.com/Homebrew/homebrew-cask/blob/f95b8a8306b91fe9da7908b842f4a5fa80f7afe0/Casks/wireshark-chmodbpf.rb#L9-L26)):
 ```ruby
 pkg "Wireshark #{version} Intel 64.pkg",
     choices: [
@@ -58,7 +58,7 @@ pkg "Wireshark #{version} Intel 64.pkg",
              ]
 ```
 
-Example ([wine-staging.rb](https://github.com/Homebrew/homebrew-cask/blob/51b65f6a5a25a7f79af4d372e1a0bf1dc3849251/Casks/wine-staging.rb#L11#L18)):
+Example ([wine-staging.rb](https://github.com/Homebrew/homebrew-cask/blob/51b65f6a5a25a7f79af4d372e1a0bf1dc3849251/Casks/wine-staging.rb#L11-L18)):
 ```ruby
 pkg "winehq-staging-#{version}.pkg",
     choices: [

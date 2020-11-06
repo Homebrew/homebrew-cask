@@ -1,21 +1,22 @@
-cask 'qqplayer' do
-  version '1.0.4.278'
-  sha256 'a60a9115dcbe197ce62a3e9344408b0d1b4a4494b2c9f65e2c44eef5ae9ef7d2'
+cask "qqplayer" do
+  version "1.1.1.1208"
+  sha256 "c3194077db0f6ccbf38eda19575198750793005f127054ff5e86dc95b2922336"
 
   url "https://dldir1.qq.com/qqyy/mac/QQPlayer#{version}.dmg"
-  appcast 'https://player.qq.com/'
-  name 'QQ影音'
-  homepage 'https://player.qq.com/'
+  appcast "https://player.qq.com/"
+  name "QQ影音"
+  desc "Media player"
+  homepage "https://player.qq.com/"
 
-  app 'QQPlayerMac.app'
+  app "QQPlayerMac.app"
 
-  uninstall quit: 'com.tencent.qqplayermac'
+  uninstall quit: "com.tencent.qqplayermac"
 
   zap trash: [
-               '~/Library/Application Support/com.tencent.qqplayermac',
-               '~/Library/Caches/com.tencent.qqplayermac',
-               '~/Library/Preferences/com.tencent.qqplayermac.plist',
-               '~/Library/Saved Application State/com.tencent.qqpplayermac.savedState',
-               '~/Library/Containers/com.tencent.qqplayermac',
-             ]
+    "~/Library/Application Support/com.tencent.qqplayermac",
+    "~/Library/Caches/com.tencent.qqplayermac",
+    "~/Library/Preferences/com.tencent.qqplayermac.plist",
+    "~/Library/Saved Application State/com.tencent.qqpplayermac.savedState",
+    "~/Library/Containers/com.tencent.qqplayermac",
+  ]
 end

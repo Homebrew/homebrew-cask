@@ -1,10 +1,10 @@
-cask 'renpy' do
-  version '7.3.2'
-  sha256 '129dd7cce3a1e99982f07b4f4c5571111d52dca9c80f2167badadec045101abf'
+cask "renpy" do
+  version "7.3.5"
+  sha256 "3d6a46450be9bde378b9df43dc734550a511356081969f464af7a190f60761f9"
 
   url "https://www.renpy.org/dl/#{version}/renpy-#{version}-sdk.zip"
-  name 'Ren\'Py'
-  homepage 'https://www.renpy.org/'
+  name "Ren'Py"
+  homepage "https://www.renpy.org/"
 
   suite "renpy-#{version}-sdk"
 end

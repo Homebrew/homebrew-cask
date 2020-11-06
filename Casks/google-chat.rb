@@ -1,18 +1,18 @@
-cask 'google-chat' do
-  version '19.9.101'
-  sha256 'a02ab1c58b8af0b2bd3e0cbb6b16a14979befd4be32458823ea188f3565bea32'
+cask "google-chat" do
+  version "20.9.281"
+  sha256 "6cff1d7d42bf130e052cdbd8fd0d5c1e9b4b60ab872c26a4b8944f28c88c8e68"
 
   url "https://dl.google.com/chat/#{version}/InstallHangoutsChat.dmg"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://dl.google.com/chat/latest/InstallHangoutsChat.dmg'
-  name 'Chat'
-  homepage 'https://gsuite.google.com/products/chat/'
+  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://dl.google.com/chat/latest/InstallHangoutsChat.dmg"
+  name "Chat"
+  homepage "https://gsuite.google.com/products/chat/"
 
-  app 'Chat.app'
+  app "Chat.app"
 
   zap trash: [
-               '~/Library/Logs/Chat',
-               '~/Library/Saved Application State/com.google.chat.savedState',
-               '~/Library/Application Support/Chat',
-               '~/Library/Preferences/com.google.chat*',
-             ]
+    "~/Library/Logs/Chat",
+    "~/Library/Saved Application State/com.google.chat.savedState",
+    "~/Library/Application Support/Chat",
+    "~/Library/Preferences/com.google.chat*",
+  ]
 end

@@ -1,14 +1,15 @@
-cask 'kactus' do
-  version '0.3.25'
-  sha256 'f2e9fbf3f3b59e21832f2eeba35c379b173b1ae33cec84d6e02c7653ad2e356b'
+cask "kactus" do
+  version "0.3.31"
+  sha256 "55c81ba037559fcaf36422ebcac1574bccc1d7eb29806ac10692e4f0b4ea8119"
 
-  # github.com/kactus-io/kactus was verified as official when first introduced to the cask
+  # github.com/kactus-io/kactus/ was verified as official when first introduced to the cask
   url "https://github.com/kactus-io/kactus/releases/download/v#{version}/Kactus-macos.zip"
-  appcast 'https://github.com/kactus-io/kactus/releases.atom'
-  name 'Kactus'
-  homepage 'https://kactus.io/'
+  appcast "https://github.com/kactus-io/kactus/releases.atom"
+  name "Kactus"
+  desc "True version control tool for designers"
+  homepage "https://kactus.io/"
 
-  depends_on cask: 'sketch'
+  depends_on cask: "sketch"
 
-  app 'Kactus.app'
+  app "Kactus.app"
 end

@@ -11,18 +11,13 @@
 
 ## Updating a Cask
 
-Notice an application that's out-of-date in Homebrew Cask? In most cases, it's very simple to update it. We have a [script](https://github.com/vitorgalvao/tiny-scripts/blob/master/cask-repair) that will ask for the new version number, and take care of updating the Cask file and submitting a pull request to us:
+Notice an application that's out-of-date in Homebrew Cask? In most cases, it's very simple to update it. We have a command that will accept a new version number and take care of updating the Cask file and submitting a pull request to us:
 
 ```bash
-# install and setup script - only needed once
-brew install vitorgalvao/tiny-scripts/cask-repair
-cask-repair --help
-
-# use to update <outdated_cask>
-cask-repair <outdated_cask>
+brew bump-cask-pr --version <new_version> <outdated_cask>
 ```
 
-If there is a more complicated change, or there is a case where `cask-repair` fails (for example, where a Cask uses a [`url do` block](https://github.com/Homebrew/homebrew-cask/blob/60531a2812005dd5f17dc92f3ce7419af3c5d019/Casks/audacity.rb#L5#L15) or the [`language` stanza](https://github.com/Homebrew/homebrew-cask/blob/306b8fbd9502036f1ca742f70c569d8677b62403/Casks/firefox.rb#L4L74)), you can also follow the steps in [Adding a Cask](doc/development/adding_a_cask.md) to do the same thing manually. Remember to update the `version` and `shasum` values.
+If you want more control over the PR or are looking for our old tool, install [`cask-repair`](https://github.com/vitorgalvao/tiny-scripts/blob/master/cask-repair) (`brew install vitorgalvao/tiny-scripts/cask-repair`). You can also follow the steps in [Adding a Cask](doc/development/adding_a_cask.md) for more complicated changes.
 
 
 ## Getting Set Up To Contribute

@@ -1,14 +1,14 @@
-cask 'pagico' do
-  version '8.18.2427'
-  sha256 '4d852f807f09812d3deb52c202ae81fedb46e8944a67bf65999682680e0b893a'
+cask "pagico" do
+  version "9.5.20201104"
+  sha256 "afc21b0d138c7c43087cf6b820ad7e50a7a7f4b58419eaaeeb6ee7896e87e555"
 
   url "https://www.pagico.com/downloads/Pagico_macOS_r#{version.patch}.dmg"
   appcast "https://www.pagico.com/api/pagico#{version.major}.mac.xml",
-          configuration: version.patch
-  name 'Pagico'
-  homepage 'https://www.pagico.com/'
+          must_contain: version.patch
+  name "Pagico"
+  homepage "https://www.pagico.com/"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'Pagico.app'
+  app "Pagico.app"
 end

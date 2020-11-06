@@ -1,0 +1,18 @@
+name: Dispatch Command
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  dispatch-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch /rebase Command
+        uses: peter-evans/slash-command-dispatch@dd795ccdfd5ee8c71691adc7c137b1b69b47d3c0
+        with:
+          token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+          reaction-token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+          commands: rebase
+          permission: triage
+          issue-type: pull-request

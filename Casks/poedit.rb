@@ -1,19 +1,13 @@
-cask 'poedit' do
-  if MacOS.version <= :mavericks
-    version '1.8.12'
-    sha256 '0aa721a0733eb04635685d280093aeef56b28c0baddf0fc265e1c7d448dbc615'
+cask "poedit" do
+  version "2.4.1"
+  sha256 "7686a43d66252b86f7bb96ae5f10926829fbb091b13045b94b7762d5a3d939ed"
 
-    url "https://poedit.net/dl/Poedit-#{version}.zip"
-  else
-    version '2.2.4'
-    sha256 'b6e8801f72d442efcb3c15a7d0c965df14e69bcd494352a37d45b065e1bb3ceb'
+  url "https://download.poedit.net/Poedit-#{version}.zip"
+  appcast "https://poedit.net/updates_v#{version.major}/osx/appcast"
+  name "Poedit"
+  homepage "https://poedit.net/"
 
-    url "https://download.poedit.net/Poedit-#{version}.zip"
-    appcast "https://poedit.net/updates_v#{version.major}/osx/appcast"
-  end
+  auto_updates true
 
-  name 'Poedit'
-  homepage 'https://poedit.net/'
-
-  app 'Poedit.app'
+  app "Poedit.app"
 end

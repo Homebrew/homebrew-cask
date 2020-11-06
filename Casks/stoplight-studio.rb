@@ -1,12 +1,13 @@
-cask 'stoplight-studio' do
-  version '1.2.0'
-  sha256 'cc22d3f563df1f2c4cb94a8a206dfcd3d686e8fa743fca45512d87d8c1b23dec'
+cask "stoplight-studio" do
+  version "2.1.0"
+  sha256 "b7348eb320ebe5e65889f0b1fffac29bbd49949adbf8cb781486050d3762156d"
 
-  # github.com/stoplightio/studio was verified as official when first introduced to the cask
-  url "https://github.com/stoplightio/studio/releases/download/v#{version}/Stoplight-Studio-#{version}.dmg"
-  appcast 'https://github.com/stoplightio/studio/releases.atom'
-  name 'Stoplight Studio'
-  homepage 'https://stoplight.io/studio/'
+  # github.com/stoplightio/studio/ was verified as official when first introduced to the cask
+  url "https://github.com/stoplightio/studio/releases/download/v#{version}/stoplight-studio-mac.dmg"
+  appcast "https://github.com/stoplightio/studio/releases.atom"
+  name "Stoplight Studio"
+  desc "Editor for designing and documenting APIs"
+  homepage "https://stoplight.io/studio/"
 
-  app 'Stoplight Studio.app'
+  app "Stoplight Studio.app"
 end

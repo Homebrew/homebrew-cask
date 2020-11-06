@@ -1,43 +1,39 @@
-cask 'seamonkey' do
-  version '2.49.5'
+cask "seamonkey" do
+  version "2.53.4"
 
-  language 'de' do
-    sha256 '0659f9566934b407a603b25a7085f1e16014dfe89f316183e18212d87bab09e3'
-    'de'
+  language "de" do
+    sha256 "028b526965be854a81e9f09429ef2787a8f296a3c461116804bdea236e6b3b01"
+    "de"
+  end
+  language "en-GB" do
+    sha256 "edbb5845566c986239f5ba0ed1941d6e43d36d72adbc3f7e32375953c89855a2"
+    "en-GB"
+  end
+  language "en-US", default: true do
+    sha256 "c3f2603a141878ce0e7b2cab3d3351a32707b00b677b79b395cc969a08873020"
+    "en-US"
+  end
+  language "fr" do
+    sha256 "eec9e5fbad24be0d8331951f332597c3fdc3174bc3f4b20103b3b01fa2c31f6e"
+    "fr"
+  end
+  language "it" do
+    sha256 "f9972ff9a80bca3f9c7404a8281f5162363fb100f3d4a33fd4e0aba7ac8aa65c"
+    "it"
+  end
+  language "ru" do
+    sha256 "0eec1ff3c9f015cc5ef0ce8e94bfce352c02906df49703b34086a5fb5e81fb8a"
+    "ru"
   end
 
-  language 'en-GB' do
-    sha256 '24cd1ce1e271d792bc0654a5a7b3e681d41682379f1d897bd04f048bc3db650f'
-    'en-GB'
-  end
-
-  language 'en-US', default: true do
-    sha256 'b46028af8258442aa82e5ff81a9e9678bb93b3374ece5b8a747de4dd5560b5d4'
-    'en-US'
-  end
-
-  language 'fr' do
-    sha256 '46e7eab0ff2c16081c26be7718c3dd90918d38e31c5222f0f0bb8d85cd10b328'
-    'fr'
-  end
-
-  language 'it' do
-    sha256 '7526c9ba63b306f69a7b47d6c08779f4e865f19ff2ed92c2508f454c39cacafc'
-    'it'
-  end
-
-  language 'ru' do
-    sha256 '48e7253db8ef62c78b88b9baaf1c6425b2097b1009aeec465a84951f358fd84b'
-    'ru'
-  end
-
-  # mozilla.org/pub/seamonkey/releases was verified as official when first introduced to the cask
-  url "https://archive.mozilla.org/pub/seamonkey/releases/#{version}/mac/#{language}/seamonkey-#{version}.dmg"
-  appcast 'https://www.seamonkey-project.org/releases/'
-  name 'SeaMonkey'
-  homepage 'https://www.seamonkey-project.org/'
+  # mozilla.org/pub/seamonkey/releases/ was verified as official when first introduced to the cask
+  url "https://archive.mozilla.org/pub/seamonkey/releases/#{version}/mac/#{language}/seamonkey-#{version}.#{language}.mac.dmg"
+  appcast "https://www.seamonkey-project.org/releases/"
+  name "SeaMonkey"
+  desc "Development of SeaMonkey Internet Application Suite"
+  homepage "https://www.seamonkey-project.org/"
 
   auto_updates true
 
-  app 'SeaMonkey.app'
+  app "SeaMonkey.app"
 end

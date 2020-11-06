@@ -1,0 +1,33 @@
+name: Review
+
+on: pull_request_target
+
+jobs:
+  review:
+    if: startsWith(github.repository, 'Homebrew/')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Label Pull Request
+        uses: Homebrew/actions/label-pull-requests@master
+        with:
+          token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+          def: |
+            [
+              {
+                "label": "documentation",
+                "path": ".*\\.md"
+              }
+            ]
+        if: always()
+      - name: Review Pull Request
+        id: review
+        uses: Homebrew/actions/review-cask-pr@master
+        if: always()
+      - name: Post Pull Request Review
+        uses: Homebrew/actions/post-review@master
+        with:
+          token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+          event: ${{ steps.review.outputs.event }}
+          body: |
+            ${{ steps.review.outputs.message }}
+        if: always() && steps.review.outputs.event

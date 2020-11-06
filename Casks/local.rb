@@ -1,23 +1,19 @@
-cask 'local' do
-  version '5.0.6'
-  sha256 'ae2b8d7567ebd0cfebe274222dc95b7603515266f9477a0cac8695cddee12bb5'
+cask "local" do
+  version "5.9.0,4961"
+  sha256 "0bd3d638910429fb7753c694d5d9ecb8bda18fbf229b7fddc160ab504f72ec63"
 
-  # local-by-flywheel-flywheel.netdna-ssl.com/releases was verified as official when first introduced to the cask
-  url "https://local-by-flywheel-flywheel.netdna-ssl.com/releases/#{version.dots_to_hyphens}/local-#{version.dots_to_hyphens}-mac.dmg"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://local-by-flywheel-flywheel.netdna-ssl.com/latest/mac',
-          configuration: version.dots_to_hyphens
-  name 'Local by Flywheel'
-  homepage 'https://local.getflywheel.com/'
+  url "https://cdn.localwp.com/releases-stable/#{version.before_comma}+#{version.after_comma}/local-#{version.before_comma}-mac.dmg"
+  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://cdn.localwp.com/stable/latest/mac"
+  name "Local"
+  homepage "https://localwp.com/"
 
-  depends_on cask: 'virtualbox'
-
-  app 'Local.app'
+  app "Local.app"
 
   zap trash: [
-               '~/Library/Application Support/Local by Flywheel',
-               '~/Library/Logs/local-by-flywheel.log',
-               '~/Library/Preferences/com.getflywheel.local.plist',
-               '~/Library/Preferences/com.getflywheel.local.helper.plist',
-               '~/Library/Saved Application State/com.getflywheel.local.savedState',
-             ]
+    "~/Library/Application Support/Local by Flywheel",
+    "~/Library/Logs/local-by-flywheel.log",
+    "~/Library/Preferences/com.getflywheel.local.plist",
+    "~/Library/Preferences/com.getflywheel.local.helper.plist",
+    "~/Library/Saved Application State/com.getflywheel.local.savedState",
+  ]
 end

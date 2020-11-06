@@ -1,11 +1,13 @@
-cask 'omnidb' do
-  version '2.16.0'
-  sha256 '4b5a861162564d2d4c0fbd656d9f372897d83dd61c0bfaa4842da22b4af744f3'
+cask "omnidb" do
+  version "2.17.0"
+  sha256 "8fdd482d45d1b2d4d330074d94238d91cc91242239a3ebb62ccc3319bacd5d16"
 
-  url "https://omnidb.org/dist/#{version}/omnidb-app_#{version}-mac.dmg"
-  appcast 'https://github.com/OmniDB/OmniDB/releases.atom'
-  name 'OmniDB'
-  homepage 'https://omnidb.org/'
+  # github.com/OmniDB/OmniDB was verified as official when first introduced to the cask
+  url "https://github.com/OmniDB/OmniDB/releases/download/#{version}/omnidb-app_#{version}-mac.dmg"
+  appcast "https://github.com/OmniDB/OmniDB/releases.atom"
+  name "OmniDB"
+  desc "Web tool for database management"
+  homepage "https://omnidb.org/"
 
-  app 'OmniDB.app'
+  app "OmniDB.app"
 end

@@ -1,11 +1,10 @@
-cask 'colorpicker-propicker' do
-  version '1.0'
-  sha256 'd1c07c116fee22dbbaea86c285327b5468b82863ba575e8fe462a2dcec023891'
+cask "colorpicker-propicker" do
+  version "1.1"
+  sha256 "33131b0d4137da33f839f867f215425c2f5c3f59d459c5a5db5a96a592353157"
 
-  url "https://www.irradiated.net/appcasts/pro-picker/releases/#{version}/ProPicker.zip"
-  appcast 'https://www.irradiated.net/pages/blank/release-notes.php?app=pro-picker'
-  name 'Pro Picker'
-  homepage 'https://www.irradiated.net/?page=pro-picker'
+  url "https://irradiated.net/files/pro-picker.zip"
+  name "Pro Picker"
+  homepage "https://irradiated.net/tool/pro-picker/"
 
-  colorpicker 'ProPicker.colorPicker'
+  colorpicker "ProPicker.colorPicker"
 end

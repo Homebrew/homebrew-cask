@@ -1,11 +1,15 @@
-cask 'drivethrurpg' do
-  version '2.0.3.2'
-  sha256 'a3cb7400e6f474057ea3045e73eafb63d46c81f130bc37b9fa03f601f21ad9c2'
+cask "drivethrurpg" do
+  version "3.0.0.7"
+  sha256 "33f13331b9e285e27fc6eb83d1cfb3489a64785ac301c8ce47d3857f1fce7e39"
 
-  url 'https://watermark.drivethrurpg.com/DriveThruRPG-setup-osx.dmg'
-  appcast 'https://www.drivethrurpg.com/library_client.php?os=Macintosh'
-  name 'DriveThruRPG Library App'
-  homepage 'https://www.drivethrurpg.com/library_client.php'
+  # dtrpg-library-app.s3.us-east-2.amazonaws.com/ was verified as official when first introduced to the cask
+  url "https://dtrpg-library-app.s3.us-east-2.amazonaws.com/DriveThruRPG.dmg"
+  appcast "https://www.drivethrurpg.com/library_client.php?os=Macintosh"
+  name "DriveThruRPG Library App"
+  desc "Sync DriveThruRPG libraries to compatible devices"
+  homepage "https://www.drivethrurpg.com/library_client.php"
 
-  app 'DriveThruRPG.app'
+  depends_on macos: ">= :high_sierra"
+
+  app "DriveThruRPG.app"
 end

@@ -1,20 +1,21 @@
-cask 'soulver' do
-  version '3.1.2.2-54'
-  sha256 'f731d53296cdd44914571a20f4c4fa039ccfca5528371d59214d2c712ed34030'
+cask "soulver" do
+  version "3.4.10-144"
+  sha256 "9f243ac76f3dc8a7c4a3cfa4ccbb7b4e5fe3663a79730a9aaed6f1ae2ea7fd4d"
 
   url "https://soulver.app/mac/sparkle/soulver-#{version}.zip"
-  appcast 'https://soulver.app/mac/sparkle/appcast.xml'
-  name 'Soulver'
-  homepage 'https://soulver.app/'
+  appcast "https://soulver.app/mac/sparkle/appcast.xml"
+  name "Soulver"
+  desc "Notepad with a built-in calculator"
+  homepage "https://soulver.app/"
 
   auto_updates true
-  depends_on macos: '>= :mojave'
+  depends_on macos: ">= :mojave"
 
   app "Soulver #{version.major}.app"
 
   zap trash: [
-               '~/Library/Application Support/Soulver 3',
-               '~/Library/Application Support/app.soulver.mac',
-               '~/Library/Preferences/app.soulver.mac.plist',
-             ]
+    "~/Library/Application Support/Soulver 3",
+    "~/Library/Application Support/app.soulver.mac",
+    "~/Library/Preferences/app.soulver.mac.plist",
+  ]
 end

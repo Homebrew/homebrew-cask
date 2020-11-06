@@ -1,11 +1,11 @@
-cask 'sia-ui' do
-  version '1.4.1.2'
-  sha256 'ebd6d89a1012098a26f3da4338ae37a5b2194891f8176eaa1cb3cc5b678410e1'
+cask "sia-ui" do
+  version "1.5.1"
+  sha256 "79d7faefa05e32d7b48fb4efac238b90a96020a537ac9e48211dcb47c76cd5e0"
 
   url "https://sia.tech/releases/Sia-UI-v#{version}.dmg"
-  appcast 'https://gitlab.com/api/v4/projects/7508674/releases'
-  name 'Sia-UI'
-  homepage 'https://sia.tech/'
+  name "Sia-UI"
+  desc "Graphical frontend for Sia"
+  homepage "https://sia.tech/"
 
-  app 'Sia-UI.app'
+  app "Sia-UI.app"
 end

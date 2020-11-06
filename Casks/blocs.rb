@@ -1,14 +1,15 @@
-cask 'blocs' do
-  version '3.4.1'
-  sha256 'dc90e7fa8cc84d5c5e19d3ec35b202b69ef8f5d09622bd0245f8b2b1416c22de'
+cask "blocs" do
+  version "3.5.5"
+  sha256 "b6d77c7d61279a71625b273f573fb8bb2fd9b7045ac6893faa23cc2d33513640"
 
   url "https://blocsapp.com/download/Blocs#{version.major}.zip"
-  appcast 'https://blocsapp.com/release-notes.html'
-  name 'Blocs'
-  homepage 'https://blocsapp.com/'
+  appcast "https://blocsapp.com/release-notes.html"
+  name "Blocs"
+  desc "Visual web design software"
+  homepage "https://blocsapp.com/"
 
   auto_updates true
   container nested: "Blocs#{version.major}/Blocs-#{version.major}.dmg"
 
-  app 'Blocs.app'
+  app "Blocs.app"
 end

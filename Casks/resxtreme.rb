@@ -1,12 +1,12 @@
-cask 'resxtreme' do
+cask "resxtreme" do
   version :latest
   sha256 :no_check
 
-  url 'http://resxtreme.com/download/ResXtreme.zip'
-  name 'ResXtreme'
-  homepage 'http://resxtreme.com/'
+  url "http://resxtreme.com/download/ResXtreme.zip"
+  name "ResXtreme"
+  homepage "http://resxtreme.com/"
 
-  app 'ResXtreme.app'
+  app "ResXtreme.app"
 
-  zap trash: '~/Library/Preferences/info.chrismiles.ResXtreme.plist'
+  zap trash: "~/Library/Preferences/info.chrismiles.ResXtreme.plist"
 end

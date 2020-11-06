@@ -1,37 +1,244 @@
 name: CI
 
-on:
-  - pull_request
+on: pull_request
+
+env:
+  HOMEBREW_DEVELOPER: 1
+  HOMEBREW_NO_AUTO_UPDATE: 1
+  HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
-  ci:
-    runs-on: macOS-10.14
+  generate-matrix:
+    outputs:
+      matrix: ${{ steps.generate-matrix.outputs.matrix }}
+    runs-on: ubuntu-latest
     steps:
-      - name: brew pull
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+        with:
+          test-bot: false
+
+      - name: Check out Pull Request
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Generate CI matrix
+        id: generate-matrix
         run: |
-          brew update-reset "$(brew --repository)"
+          brew ruby -- "$(brew --repository homebrew/cask)/cmd/lib/generate-matrix.rb" "${{ github.event.pull_request.url }}"
 
-          HOMEBREW_INSTALL_BUNDLER_GEMS_FIRST=1 brew config
+  test:
+    name: ${{ matrix.name }}
+    needs: generate-matrix
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        include: ${{ fromJson(needs.generate-matrix.outputs.matrix) }}
+    steps:
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+        with:
+          test-bot: false
 
-          brew tap "${GITHUB_REPOSITORY}"
+      - name: Check out Pull Request
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
 
-          # Get latest version of `brew cask ci` command.
-          if [ "${GITHUB_REPOSITORY}" != Homebrew/homebrew-cask ]; then
-            brew update-reset "$(brew --repository homebrew/cask)"
+      - name: Clean up CI machine
+        run: |
+          if ! brew cask ls visual-studio &>/dev/null; then
+            if ! rm -r '/Applications/Visual Studio.app'; then
+              echo '::warning::Removing Visual Studio is no longer necessary.'
+            fi
           fi
 
-          brew update-reset "$(brew --repository "${GITHUB_REPOSITORY}")"
+          if ! rm /usr/local/share/man/man1/al.1 || \
+             ! sudo rm /etc/paths.d/mono-commands || \
+             ! sudo rm -r /Library/Frameworks/Mono.framework || \
+             ! sudo pkgutil --forget com.xamarin.mono-MDK.pkg; then
+            echo '::warning::Uninstalling Mono is no longer necessary.'
+          fi
 
-          brew pull --clean "${PR_URL}"
-        env:
-          PR_URL: ${{ github.event.pull_request._links.html.href }}
-          HOMEBREW_COLOR: 1
-          HOMEBREW_DEVELOPER: 1
-      - name: brew cask ci
+          if ! rm /usr/local/bin/dotnet; then
+            echo '::warning::Removing `dotnet` symlink is no longer necessary.'
+          fi
+
+          if ! rm /usr/local/bin/pod; then
+            echo '::warning::Removing `cocoapods` symlink is no longer necessary.'
+          fi
+
+          if brew tap-info adoptopenjdk/openjdk; then
+            brew untap adoptopenjdk/openjdk
+          else
+            echo '::warning::Untapping adoptopenjdk/openjdk is no longer necessary.'
+          fi
+
+      # Workaround until the `cache` action uses the changes from
+      # https://github.com/actions/toolkit/pull/580.
+      - name: Unlink workspace
         run: |
-          cd "$(brew --repository "${GITHUB_REPOSITORY}")"
-          brew cask ci
-        env:
-          CI: true
-          HOMEBREW_COLOR: 1
-          HOMEBREW_DEVELOPER: 1
+          mv "${GITHUB_WORKSPACE}" "${GITHUB_WORKSPACE}-link"
+          mkdir "${GITHUB_WORKSPACE}"
+
+      - name: Cache Homebrew Gems
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.set-up-homebrew.outputs.gems-path }}
+          key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
+          restore-keys: ${{ runner.os }}-rubygems-
+
+      # Workaround until the `cache` action uses the changes from
+      # https://github.com/actions/toolkit/pull/580.
+      - name: Re-link workspace
+        run: |
+          rmdir "${GITHUB_WORKSPACE}"
+          mv "${GITHUB_WORKSPACE}-link" "${GITHUB_WORKSPACE}"
+
+      - name: Install Homebrew Gems
+        id: gems
+        run: brew install-bundler-gems
+
+      - name: Run brew style ${{ matrix.cask.token || matrix.tap }}
+        run: brew style '${{ matrix.cask.path || matrix.tap }}'
+        if: always() && steps.gems.outcome == 'success' && !matrix.cask
+
+      - name: Run brew cask audit ${{ matrix.cask.token || matrix.tap }}
+        run: |
+          brew cask audit ${{ join(matrix.audit_args, ' ') }} '${{ matrix.cask.path || matrix.tap }}'
+        timeout-minutes: 30
+        if: always() && steps.gems.outcome == 'success' && !matrix.skip_audit
+
+      - name: Gather cask information
+        id: info
+        run: |
+          brew ruby <<'EOF'
+            require 'cask/cask_loader'
+            require 'cask/installer'
+
+            cask = Cask::CaskLoader.load('${{ matrix.cask.path }}')
+
+            was_installed = cask.installed?
+            manual_installer = cask.artifacts.any? { |artifact|
+              artifact.is_a?(Cask::Artifact::Installer::ManualInstaller)
+            }
+
+            macos_requirement_satisfied = if macos_requirement = cask.depends_on.macos
+              macos_requirement.satisfied?
+            else
+              true
+            end
+
+            cask_conflicts = cask.conflicts_with&.dig(:cask).to_a.select { |c| Cask::CaskLoader.load(c).installed? }
+            formula_conflicts = cask.conflicts_with&.dig(:formula).to_a.select { |f| Formula[f].any_version_installed? }
+
+            installer = Cask::Installer.new(cask)
+            cask_and_formula_dependencies = installer.missing_cask_and_formula_dependencies
+
+            cask_dependencies = cask_and_formula_dependencies.select { |d| d.is_a?(Cask::Cask) }.map(&:full_name)
+            formula_dependencies = cask_and_formula_dependencies.select { |d| d.is_a?(Formula) }.map(&:full_name)
+
+            puts "::set-output name=was_installed::#{JSON.generate(was_installed)}"
+            puts "::set-output name=manual_installer::#{JSON.generate(manual_installer)}"
+            puts "::set-output name=macos_requirement_satisfied::#{JSON.generate(macos_requirement_satisfied)}"
+            puts "::set-output name=cask_conflicts::#{JSON.generate(cask_conflicts)}"
+            puts "::set-output name=cask_dependencies::#{JSON.generate(cask_dependencies)}"
+            puts "::set-output name=formula_conflicts::#{JSON.generate(formula_conflicts)}"
+            puts "::set-output name=formula_dependencies::#{JSON.generate(formula_dependencies)}"
+          EOF
+        if: always() && steps.gems.outcome == 'success' && matrix.cask
+
+      - name: Uninstall conflicting formulae
+        run: |
+          brew uninstall ${{ join(fromJSON(steps.info.outputs.formula_conflicts), ' ') }}
+        if: always() && steps.info.outcome == 'success' && join(fromJSON(steps.info.outputs.formula_conflicts)) != ''
+        timeout-minutes: 30
+
+      - name: Uninstall conflicting casks
+        run: |
+          brew cask uninstall ${{ join(fromJSON(steps.info.outputs.cask_conflicts), ' ') }}
+        if: always() && steps.info.outcome == 'success' && join(fromJSON(steps.info.outputs.cask_conflicts)) != ''
+        timeout-minutes: 30
+
+      - name: Run brew cask zap ${{ matrix.cask.token }}
+        run: |
+          brew cask zap '${{ matrix.cask.path }}'
+        if: always() && steps.info.outcome == 'success' && fromJSON(steps.info.outputs.was_installed)
+        timeout-minutes: 30
+
+      - name: Take snapshot of installed and running apps and services
+        id: snapshot
+        run: |
+          brew ruby -r "$(brew --repository homebrew/cask)/cmd/lib/check.rb" <<'EOF'
+            puts "::set-output name=before::#{JSON.generate(Check.all)}"
+          EOF
+        if: always() && steps.info.outcome == 'success'
+
+      - name: Run brew cask install ${{ matrix.cask.token }}
+        id: install
+        run: brew cask install '${{ matrix.cask.path }}'
+        if: >
+          always() && steps.info.outcome == 'success' &&
+          fromJSON(steps.info.outputs.macos_requirement_satisfied) &&
+          !matrix.skip_install
+        timeout-minutes: 30
+
+      - name: Run brew cask uninstall ${{ matrix.cask.token }}
+        run: brew cask uninstall '${{ matrix.cask.path }}'
+        if: always() && steps.install.outcome == 'success' && !fromJSON(steps.info.outputs.manual_installer)
+        timeout-minutes: 30
+
+      - name: Uninstall formula dependencies
+        run: |
+          brew uninstall ${{ join(fromJSON(steps.info.outputs.formula_dependencies), ' ') }}
+        if: always() && steps.install.outcome == 'success' && join(fromJSON(steps.info.outputs.formula_dependencies)) != ''
+        timeout-minutes: 30
+
+      - name: Uninstall cask dependencies
+        run: |
+          brew cask uninstall ${{ join(fromJSON(steps.info.outputs.cask_dependencies), ' ') }}
+        if: always() && steps.install.outcome == 'success' && join(fromJSON(steps.info.outputs.cask_dependencies)) != ''
+        timeout-minutes: 30
+
+      - name: Compare installed and running apps and services with snapshot
+        run: |
+          brew ruby -r "$(brew --repository homebrew/cask)/cmd/lib/check.rb" <<'EOF'
+            require "cask/cask_loader"
+            require "utils/github/actions"
+
+            before = JSON.parse(<<~'EOS').transform_keys(&:to_sym)
+              ${{ steps.snapshot.outputs.before }}
+            EOS
+            after = Check.all
+
+            cask = Cask::CaskLoader.load('${{ matrix.cask.path }}')
+            errors = Check.errors(before, after, cask: cask)
+
+            errors.each do |error|
+              onoe error
+              puts GitHub::Actions::Annotation.new(:error, error, file: '${{ matrix.cask.path }}')
+            end
+
+            exit 1 if errors.any?
+          EOF
+        if: always() && steps.snapshot.outcome == 'success'
+
+      # Workaround until the `cache` action uses the changes from
+      # https://github.com/actions/toolkit/pull/580.
+      - name: Unlink workspace
+        run: |
+          rm "${GITHUB_WORKSPACE}"
+          mkdir "${GITHUB_WORKSPACE}"
+  conclusion:
+    name: conclusion
+    needs: test
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - name: Result
+        run: ${{ needs.test.result == 'success' }}

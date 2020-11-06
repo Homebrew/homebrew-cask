@@ -1,12 +1,15 @@
-cask 'mate-translate' do
-  version '6.1.1,1570627713'
-  sha256 '05c2446f4bdd2d9363a4846ac019168dfa7ce476ca93edd08fc54a7d44d5d203'
+cask "mate-translate" do
+  version "7.0.1"
+  sha256 "f865966ff61a124414c6622f30dff0e6ffd7556a8145836cca3735e2325b86d8"
 
-  # dl.devmate.com/com.twopeoplesoftware.InstantTranslate-nomas was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.twopeoplesoftware.InstantTranslate-nomas/#{version.before_comma}/#{version.after_comma}/InstantTranslate-#{version.before_comma}.zip"
-  appcast 'https://updates.devmate.com/com.twopeoplesoftware.InstantTranslate-nomas.xml'
-  name 'Mate Translate'
-  homepage 'https://twopeoplesoftware.com/mate'
+  # gikken.co/mate/ was verified as official when first introduced to the cask
+  url "https://gikken.co/mate/MateTranslate.zip"
+  appcast "https://gikken.co/mate/appcast.xml"
+  name "Mate Translate"
+  desc "Select text in any app and translate it"
+  homepage "https://twopeoplesoftware.com/mate"
 
-  app 'Mate Translate.app'
+  depends_on macos: ">= :mojave"
+
+  app "Mate Translate.app"
 end

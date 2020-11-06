@@ -1,20 +1,27 @@
-cask 'scilab' do
-  version '6.0.2'
-  sha256 '136a9d405cebd425458076073a84dc256f69f1d4b8dc1c87612e6cc4bbf6ab5d'
+cask "scilab" do
+  version "6.1.0"
+  sha256 "97d60eae1d8b7396d3773d53f86e9b533c6ac0b64db2d3725a5ef0d38017915a"
 
-  # utc.fr/~mottelet/scilab was verified as official when first introduced to the cask
-  url "https://www.utc.fr/~mottelet/scilab/download/#{version}/scilab-#{version}-x86_64.dmg"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.scilab.org/download/'
-  name 'Scilab'
-  homepage 'https://www.scilab.org/'
+  # utc.fr/~mottelet/scilab/ was verified as official when first introduced to the cask
+  url "https://www.utc.fr/~mottelet/scilab/download/branch-#{version.major_minor}/scilab-branch-#{version.major_minor}-x86_64.dmg"
+  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.scilab.org/download/"
+  name "Scilab"
+  desc "Software for numerical computation"
+  homepage "https://www.scilab.org/"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :high_sierra"
 
-  app "scilab-#{version}.app"
-  binary "#{appdir}/Scilab-#{version}.app/Contents/MacOS/bin/scilab"
-  binary "#{appdir}/Scilab-#{version}.app/Contents/MacOS/bin/scilab-cli"
+  app "scilab-branch-#{version.major_minor}.app"
+  binary "#{appdir}/Scilab-branch-#{version.major_minor}.app/Contents/MacOS/bin/scilab"
+  binary "#{appdir}/Scilab-branch-#{version.major_minor}.app/Contents/MacOS/bin/scilab-cli"
 
   caveats do
-    depends_on_java '8'
+    depends_on_java "8"
+
+    <<~EOS
+      If prompted to install the legacy Java 6, use the enableJDK tool provided by the vendor to enable installed JDK to use with #{token}:
+
+        https://www.utc.fr/~mottelet/scilab_for_macOS.html
+    EOS
   end
 end

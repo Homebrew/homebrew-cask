@@ -1,16 +1,16 @@
-cask 'jaxx-liberty' do
-  version '2.3.0'
-  sha256 '4638234b0a21a8c51d0e4fd6aa054aad271dcc2908aa1e7a30c3a7ea2708325c'
+cask "jaxx-liberty" do
+  version "2.4.6"
+  sha256 "da93cbc60c72710d4b4cb34897751ca481a0fdbd72c06955a94e364b894c3085"
 
   url "https://download-liberty.jaxx.io/Jaxx.Liberty-#{version}.dmg"
-  appcast 'https://jaxx.io/downloads.html'
-  name 'Jaxx Blockchain Wallet'
-  homepage 'https://jaxx.io/'
+  appcast "https://download-liberty.jaxx.io/latest-mac.yml"
+  name "Jaxx Blockchain Wallet"
+  homepage "https://jaxx.io/"
 
-  app 'Jaxx Liberty.app'
+  app "Jaxx Liberty.app"
 
   zap trash: [
-               '~/Library/Application Support/jaxx',
-               '~/Library/Logs/jaxx',
-             ]
+    "~/Library/Application Support/jaxx",
+    "~/Library/Logs/jaxx",
+  ]
 end

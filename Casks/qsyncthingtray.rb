@@ -1,13 +1,14 @@
-cask 'qsyncthingtray' do
-  version '0.5.8'
-  sha256 '1a8bf6975d5f9b1952edf1a070e35338d2c0f6ff9939e3dcda742280baa645b1'
+cask "qsyncthingtray" do
+  version "0.5.8"
+  sha256 "1a8bf6975d5f9b1952edf1a070e35338d2c0f6ff9939e3dcda742280baa645b1"
 
   url "https://github.com/sieren/QSyncthingTray/releases/download/#{version}/QSyncthingTray_#{version}_MAC.dmg"
-  appcast 'https://github.com/sieren/QSyncthingTray/releases.atom'
-  name 'QSyncthingTray'
-  homepage 'https://github.com/sieren/QSyncthingTray'
+  appcast "https://github.com/sieren/QSyncthingTray/releases.atom"
+  name "QSyncthingTray"
+  desc "Cross-platform tray app for Syncthing"
+  homepage "https://github.com/sieren/QSyncthingTray"
 
-  app 'QSyncthingTray.app'
+  app "QSyncthingTray.app"
 
-  zap trash: '~/Library/Preferences/com.sieren.QSyncthingTray.plist'
+  zap trash: "~/Library/Preferences/com.sieren.QSyncthingTray.plist"
 end

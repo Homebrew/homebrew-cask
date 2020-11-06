@@ -1,17 +1,18 @@
-cask 'mgba' do
-  version '0.7.3'
-  sha256 '9d36dc2d09afcefde615f3894ecdcc24dfb577ad926912841a4cca83f3728814'
+cask "mgba" do
+  version "0.8.4"
+  sha256 "9d0389f20ab60d125ca45de6ae59ce6b88e0c3613b19b3c0e8f440b2e7afc138"
 
-  # github.com/mgba-emu/mgba was verified as official when first introduced to the cask
+  # github.com/mgba-emu/mgba/ was verified as official when first introduced to the cask
   url "https://github.com/mgba-emu/mgba/releases/download/#{version}/mGBA-#{version}-osx.tar.xz"
-  appcast 'https://github.com/mgba-emu/mgba/releases.atom'
-  name 'mGBA'
-  homepage 'https://mgba.io/'
+  appcast "https://github.com/mgba-emu/mgba/releases.atom"
+  name "mGBA"
+  desc "Game Boy Advance emulator"
+  homepage "https://mgba.io/"
 
   app "mGBA-#{version}-osx/Applications/mGBA.app"
 
   zap trash: [
-               '~/Library/Preferences/com.endrift.mgba-qt.plist',
-               '~/Library/Saved Application State/com.endrift.mgba-qt.savedState',
-             ]
+    "~/Library/Preferences/com.endrift.mgba-qt.plist",
+    "~/Library/Saved Application State/com.endrift.mgba-qt.savedState",
+  ]
 end

@@ -1,12 +1,12 @@
-cask 'openboardview' do
-  version 'R7.3'
-  sha256 '6c56c201c122a97b4d4ade7dd38140dec66d84a03eb2d9b52d33e479d9e70e61'
+cask "openboardview" do
+  version "8.0"
+  sha256 "c854a721709701afd428df8e2b00e1e66818b0cac1998e7513d7f23c73347b5b"
 
-  # github.com/OpenBoardView/OpenBoardView was verified as official when first introduced to the cask
+  # github.com/OpenBoardView/OpenBoardView/ was verified as official when first introduced to the cask
   url "https://github.com/OpenBoardView/OpenBoardView/releases/download/#{version}/OpenBoardView-#{version}-Darwin.dmg"
-  appcast 'https://github.com/OpenBoardView/OpenBoardView/releases.atom'
-  name 'OpenBoardView'
-  homepage 'https://openboardview.org/'
+  appcast "https://github.com/OpenBoardView/OpenBoardView/releases.atom"
+  name "OpenBoardView"
+  homepage "https://openboardview.org/"
 
-  app 'openboardview.app'
+  app "openboardview.app"
 end

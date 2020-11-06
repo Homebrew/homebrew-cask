@@ -19,7 +19,7 @@ if [[ "${1}" =~ ^(-h|--help)$ ]]; then
   exit 0
 fi
 
-(sudo -p 'The system password is required to see all launchd jobs: ' -- /bin/launchctl list && /bin/launchctl list) | \
+(/usr/bin/sudo -p 'The system password is required to see all launchd jobs: ' -- /bin/launchctl list && /bin/launchctl list) | \
   /usr/bin/cut -f3 | \
   /usr/bin/grep --invert-match '^Label$' | \
   /usr/bin/grep --invert-match '^com\.apple\.' | \

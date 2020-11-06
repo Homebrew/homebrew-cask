@@ -1,15 +1,15 @@
-cask 'dynamodb-local' do
+cask "dynamodb-local" do
   version :latest
   sha256 :no_check
 
-  # dynamodb-local.s3.amazonaws.com was verified as official when first introduced to the cask
-  url 'https://dynamodb-local.s3.amazonaws.com/dynamodb_local_latest.tar.gz'
-  name 'Amazon DynamoDB Local'
-  homepage 'https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html'
+  # dynamodb-local.s3.amazonaws.com/ was verified as official when first introduced to the cask
+  url "https://dynamodb-local.s3.amazonaws.com/dynamodb_local_latest.tar.gz"
+  name "Amazon DynamoDB Local"
+  homepage "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html"
 
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/dynamodb-local.wrapper.sh"
-  binary shimscript, target: 'dynamodb-local'
+  binary shimscript, target: "dynamodb-local"
 
   preflight do
     IO.write shimscript, <<~EOS
@@ -20,6 +20,6 @@ cask 'dynamodb-local' do
   end
 
   caveats do
-    depends_on_java '6+'
+    depends_on_java "6+"
   end
 end

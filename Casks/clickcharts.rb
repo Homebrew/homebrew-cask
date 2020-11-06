@@ -1,11 +1,11 @@
-cask 'clickcharts' do
+cask "clickcharts" do
   version :latest
   sha256 :no_check
 
-  url 'https://www.nchsoftware.com/chart/clickchartspmaci.zip',
+  url "https://www.nchsoftware.com/chart/clickchartspmaci.zip",
       user_agent: :fake
-  name 'ClickCharts'
-  homepage 'https://www.nchsoftware.com/'
+  name "ClickCharts"
+  homepage "https://www.nchsoftware.com/"
 
-  app 'ClickCharts.app'
+  app "ClickCharts.app"
 end

@@ -1,12 +1,13 @@
-cask 'outline-manager' do
-  version '1.2.4'
-  sha256 'ae9c97468e97dc57dfc4baaec6c7d09324d6db0de62723f8f31922cc7c7d4725'
+cask "outline-manager" do
+  version "1.6.1"
+  sha256 "329db2c8c64c5b8700f0ade335d69c68020dd5ab0ff788a68c90771b1dc6905a"
 
-  # github.com/Jigsaw-Code/outline-server was verified as official when first introduced to the cask
+  # github.com/Jigsaw-Code/outline-server/ was verified as official when first introduced to the cask
   url "https://github.com/Jigsaw-Code/outline-server/releases/download/v#{version}/Outline-Manager.dmg"
-  appcast 'https://github.com/Jigsaw-Code/outline-server/releases.atom'
-  name 'Outline Manager'
-  homepage 'https://www.getoutline.org/'
+  appcast "https://github.com/Jigsaw-Code/outline-server/releases.atom"
+  name "Outline Manager"
+  desc "Tool to create and manage Outline servers, powered by Shadowsocks"
+  homepage "https://www.getoutline.org/"
 
-  app 'Outline Manager.app'
+  app "Outline Manager.app"
 end

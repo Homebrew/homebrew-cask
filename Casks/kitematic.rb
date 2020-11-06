@@ -1,22 +1,23 @@
-cask 'kitematic' do
-  version '0.17.9'
-  sha256 '1c22a87b82c57f8c5d7b264c7ebb79bb243a9f34668b936c5237cbe4c0247e40'
+cask "kitematic" do
+  version "0.17.13"
+  sha256 "d2e3dba17680eec4789851fba376bb573799f448eea7beb2d7aa990f24feb402"
 
-  # github.com/docker/kitematic was verified as official when first introduced to the cask
+  # github.com/docker/kitematic/ was verified as official when first introduced to the cask
   url "https://github.com/docker/kitematic/releases/download/v#{version}/Kitematic-#{version}-Mac.zip"
-  appcast 'https://github.com/docker/kitematic/releases.atom'
-  name 'Kitematic'
-  homepage 'https://kitematic.com/'
+  appcast "https://github.com/docker/kitematic/releases.atom"
+  name "Kitematic"
+  desc "Visual user interface for Docker Container management"
+  homepage "https://kitematic.com/"
 
-  app 'Kitematic.app'
+  app "Kitematic.app"
 
   zap trash: [
-               '~/Kitematic',
-               '~/Library/Application Support/Kitematic',
-               '~/Library/Caches/Kitematic',
-               '~/Library/Logs/Kitematic',
-               '~/Library/Preferences/com.electron.kitematic.plist',
-               '~/Library/Preferences/com.electron.kitematic.helper.plist',
-               '~/Library/Saved Application State/com.electron.kitematic.savedState',
-             ]
+    "~/Kitematic",
+    "~/Library/Application Support/Kitematic",
+    "~/Library/Caches/Kitematic",
+    "~/Library/Logs/Kitematic",
+    "~/Library/Preferences/com.electron.kitematic.plist",
+    "~/Library/Preferences/com.electron.kitematic.helper.plist",
+    "~/Library/Saved Application State/com.electron.kitematic.savedState",
+  ]
 end

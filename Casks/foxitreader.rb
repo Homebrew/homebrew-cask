@@ -1,17 +1,19 @@
-cask 'foxitreader' do
-  version '3.4.0'
-  sha256 '9b845d9aa1e580874c28587e2c707afbcbabe126b463b220490d2295df569726'
+cask "foxitreader" do
+  version "4.1.0"
+  sha256 "9cb030a61430f529ab05e3a06f3cd3b0432c9aeb5eb5bf16e6543830af50e9da"
 
-  url "https://cdn09.foxitsoftware.com/pub/foxit/reader/desktop/mac/#{version.major}.x/#{version.major_minor}/ML/FoxitReader#{version.no_dots}.setup.pkg"
-  appcast 'https://www.foxitsoftware.com/downloads/downloadForm.php?retJson=1&product=Foxit-Reader&platform=Mac-OS-X'
-  name 'Foxit Reader'
-  homepage 'https://www.foxitsoftware.com/pdf-reader/'
+  url "https://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/mac/#{version.major}.x/#{version.major_minor}/ML/FoxitReader#{version.no_dots}.L10N.Setup.pkg"
+  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.foxitsoftware.com/downloads/latest.html%3Fproduct%3DFoxit-Reader%26platform%3DMac-OS-X",
+          must_contain: version.no_dots
+  name "Foxit Reader"
+  desc "PDF reader"
+  homepage "https://www.foxitsoftware.com/pdf-reader/"
 
-  pkg "FoxitReader#{version.no_dots}.setup.pkg"
+  pkg "FoxitReader#{version.no_dots}.L10N.Setup.pkg"
 
   uninstall pkgutil: [
-                       'com.foxitsoftware.reader.pkg',
-                       'com.foxit.pkg.reader',
-                     ],
-            delete:  '/Applications/Foxit Reader.app'
+    "com.foxitsoftware.reader.pkg",
+    "com.foxit.pkg.reader",
+  ],
+            delete:  "/Applications/Foxit Reader.app"
 end

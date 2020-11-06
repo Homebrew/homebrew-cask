@@ -1,11 +1,12 @@
-cask 'crunch' do
-  version '3.0.1'
-  sha256 'af380230c6d83a097a9e537bf5f01136190294e6cb41d44da1b604eec7915766'
+cask "crunch" do
+  version "4.0.0"
+  sha256 "6969fcb91e5a93b9d9e604cca2e6a98b6ebdcc7dde0c53803c25d379d3e4e729"
 
   url "https://github.com/chrissimpkins/Crunch/releases/download/v#{version}/Crunch-Installer.dmg"
-  appcast 'https://github.com/chrissimpkins/Crunch/releases.atom'
-  name 'Crunch'
-  homepage 'https://github.com/chrissimpkins/Crunch'
+  appcast "https://github.com/chrissimpkins/Crunch/releases.atom"
+  name "Crunch"
+  desc "Insane(ly slow but wicked good) PNG image optimization"
+  homepage "https://github.com/chrissimpkins/Crunch"
 
-  app 'Crunch.app'
+  app "Crunch.app"
 end

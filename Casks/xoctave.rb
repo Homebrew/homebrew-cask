@@ -1,15 +1,15 @@
-cask 'xoctave' do
+cask "xoctave" do
   version :latest
   sha256 :no_check
 
-  url 'http://www.xoctave.com/demo/xoctave%20demo.dmg',
+  url "http://www.xoctave.com/demo/xoctave%20demo.dmg",
       user_agent: :fake
-  name 'Xoctave'
-  homepage 'http://www.xoctave.com/'
+  name "Xoctave"
+  homepage "http://www.xoctave.com/"
 
-  app 'Xoctave.app'
+  app "Xoctave.app"
 
-  uninstall quit: 'org.magnifier.magnifier'
+  uninstall quit: "org.magnifier.magnifier"
 
-  zap trash: '~/xoctave'
+  zap trash: "~/xoctave"
 end

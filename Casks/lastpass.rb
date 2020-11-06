@@ -1,14 +1,15 @@
-cask 'lastpass' do
-  version '4.35.0'
-  sha256 '5f75ab807ade055118da037eea19deda0ec15e2fe01c78818beeb3dc9a0604af'
+cask "lastpass" do
+  version "4.59.0"
+  sha256 "ca217c5d6ad37de63e515e0335686553f5799dd7b380b949c57d28025f3933e9"
 
-  url 'https://download.cloud.lastpass.com/mac/LastPass.dmg'
-  appcast 'https://download.cloud.lastpass.com/mac/AppCast.xml'
-  name 'LastPass'
-  homepage 'https://www.lastpass.com/'
+  url "https://download.cloud.lastpass.com/mac/LastPass.dmg"
+  appcast "https://download.cloud.lastpass.com/mac/AppCast.xml"
+  name "LastPass"
+  desc "Cross-platform password manager"
+  homepage "https://www.lastpass.com/"
 
   auto_updates true
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'LastPass.app'
+  app "LastPass.app"
 end

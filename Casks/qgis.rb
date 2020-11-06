@@ -1,11 +1,13 @@
-cask 'qgis' do
-  version '3.8.3'
-  sha256 'd2d421524233ef86e43981ea67357302f4c55df7acda5d6f6f01a89f99330fb8'
+cask "qgis" do
+  version "3.16.0"
+  sha256 "d9ebc0394ab9ceabce1cec64244484eff14dad0873d60970c57bac3738e299b9"
 
-  url 'https://qgis.org/downloads/macos/qgis-macos-pr.dmg'
-  appcast 'https://www.qgis.org/'
-  name 'QGIS'
-  homepage 'https://www.qgis.org/'
+  url "https://qgis.org/downloads/macos/qgis-macos-pr.dmg"
+  appcast "https://qgis.org/downloads/macos/qgis-macos-pr.sha256sum",
+          must_contain: version.dots_to_underscores
+  name "QGIS"
+  desc "Free and open source Geographic Information System"
+  homepage "https://www.qgis.org/"
 
-  app "QGIS#{version.major_minor}.app"
+  app "QGIS.app"
 end

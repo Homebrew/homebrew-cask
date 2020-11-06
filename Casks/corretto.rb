@@ -1,12 +1,12 @@
-cask 'corretto' do
-  version '11.0.5.10.1'
-  sha256 '7fd818917bc291f7c3fbd730ecc07d9643ed803ca9159e8d9ac572fe33e812a7'
+cask "corretto" do
+  version "15.0.1.9.1"
+  sha256 "e52699df867a28f5dcf22a99a1a0d8c9356659ff9f3ed1e5e24375e3619d7622"
 
-  # d3pxv6yz143wms.cloudfront.net was verified as official when first introduced to the cask
-  url "https://d3pxv6yz143wms.cloudfront.net/#{version}/amazon-corretto-#{version}-macosx-x64.pkg"
-  appcast "https://docs.aws.amazon.com/en_us/corretto/latest/corretto-#{version.major}-ug/corretto-#{version.major}-ug.rss"
-  name 'Amazon Corretto'
-  homepage 'https://aws.amazon.com/corretto/'
+  url "https://corretto.aws/downloads/resources/#{version.sub(/-\d+/, "")}/amazon-corretto-#{version}-macosx-x64.pkg"
+  appcast "https://www.macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://corretto.aws/downloads/latest/amazon-corretto-#{version.major}-x64-macos-jdk.pkg"
+  name "AWS Corretto JDK"
+  desc "OpenJDK distribution from Amazon"
+  homepage "https://corretto.aws/"
 
   pkg "amazon-corretto-#{version}-macosx-x64.pkg"
 

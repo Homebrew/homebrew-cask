@@ -1,18 +1,19 @@
-cask 'ridibooks' do
-  version '2.7.3'
-  sha256 '1654cdf1f7f43969498bc3ea2a76c0094b2aaccb934d89be964a66dbf2bb375e'
+cask "ridibooks" do
+  version "0.8.9"
+  sha256 "5221ca3b7ef94d84fd1e1e452645eeec745bfce8e89e25a2f41adb2195bd2ae1"
 
-  url "https://viewer-ota.ridibooks.com/mac/ridibooks-#{version}.dmg"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://getapp.ridibooks.com/mac'
-  name 'Ridibooks'
-  homepage 'https://ridibooks.com/support/app/download'
+  # viewer-ota.ridicdn.net/pc_electron/ was verified as official when first introduced to the cask
+  url "https://viewer-ota.ridicdn.net/pc_electron/Ridibooks-#{version}.dmg"
+  appcast "https://s3-ap-northeast-2.amazonaws.com/viewer-ota.ridicdn.net/pc_electron/latest-mac.yml"
+  name "Ridibooks"
+  homepage "https://ridibooks.com/support/app/download"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'Ridibooks.app'
+  app "Ridibooks.app"
 
   zap trash: [
-               '~/Library/Application Support/RIDI',
-               '~/Library/Preferences/com.ridibooks.Ridibooks.plist',
-             ]
+    "~/Library/Application Support/RIDI",
+    "~/Library/Preferences/com.ridibooks.Ridibooks.plist",
+  ]
 end

@@ -13,16 +13,11 @@ This document describes the algorithm implemented in the `generate_cask_token` s
 
 ## Purpose
 
-The purpose of these stringent conventions is to:
+Software vendors are often inconsistent with their naming. By enforcing strict naming conventions we aim to:
 
-* Unambiguously boil down the name of the software into a unique identifier
-* Minimize renaming events
 * Prevent duplicate submissions
-
-The token itself should be:
-
-* Suitable for use as a filename
-* Mnemonic
+* Minimize renaming events
+* Unambiguously boil down the name of the software into a unique identifier
 
 Details of software names and brands will inevitably be lost in the conversion to a minimal token. To capture the vendor’s full name for a distribution, use the [`name`](https://github.com/Homebrew/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/name.md) within a Cask. `name` accepts an unrestricted UTF-8 string.
 
@@ -102,8 +97,6 @@ To convert the App’s Simplified Name (above) to a token:
 * Delete any character which is not alphanumeric or a hyphen.
 * Collapse a series of multiple hyphens into one hyphen.
 * Delete a leading or trailing hyphen.
-
-We avoid defining Cask tokens in the repository which differ only by the placement of hyphens. Prepend the vendor name if needed to disambiguate the token.
 
 ## Cask Filenames
 

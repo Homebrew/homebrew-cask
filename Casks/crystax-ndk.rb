@@ -1,12 +1,12 @@
-cask 'crystax-ndk' do
-  version '10.3.2'
-  sha256 '382bc6bf8bf4fb1278372ac70f4b86cf6a633d60b33f30b6895f5c9975d3d7bf'
+cask "crystax-ndk" do
+  version "10.3.2"
+  sha256 "382bc6bf8bf4fb1278372ac70f4b86cf6a633d60b33f30b6895f5c9975d3d7bf"
 
   url "https://www.crystax.net/download/crystax-ndk-#{version}-darwin-x86_64.tar.xz"
-  name 'Crystax NDK'
-  homepage 'https://www.crystax.net/android/ndk'
+  name "Crystax NDK"
+  homepage "https://www.crystax.net/android/ndk"
 
-  conflicts_with cask: 'android-ndk'
+  conflicts_with cask: "android-ndk"
 
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/ndk_exec.sh"
@@ -20,12 +20,12 @@ cask 'crystax-ndk' do
     EOS
   end
 
-  [
-    'ndk-build',
-    'ndk-depends',
-    'ndk-gdb',
-    'ndk-stack',
-    'ndk-which',
+  %w[
+    ndk-build
+    ndk-depends
+    ndk-gdb
+    ndk-stack
+    ndk-which
   ].each { |link_name| binary shimscript, target: link_name }
 
   uninstall_postflight do

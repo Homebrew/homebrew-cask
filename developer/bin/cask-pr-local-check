@@ -1,0 +1,47 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "json"
+require "open-uri"
+require "optparse"
+require "tmpdir"
+
+# Options
+ARGV.push("--help") if ARGV.empty?
+
+OptionParser.new do |opt|
+  opt.banner = <<~BANNER
+    Run `brew cask` `audit` and `style` checks locally, from a pull request URL.
+    Useful when online CI is broken.
+
+    Usage:
+      #{File.basename($PROGRAM_NAME)} <pr url>
+
+    Options:
+  BANNER
+
+  opt.on("-h", "--help", "Show this help.") do
+    puts opt
+    exit 0
+  end
+end.parse!
+
+pr_url = ARGV[0]
+
+unless %r{^https://github.com/Homebrew/homebrew-cask.*}.match?(pr_url)
+  abort "URL is not from an official Homebrew Cask tap"
+end
+
+pr_api = pr_url.sub(%r{^https://github.com/([^/]+)/([^/]+)/pull/([^/]+).*},
+                    'https://api.github.com/repos/\1/\2/pulls/\3/files')
+pr_json = JSON.parse(URI(pr_api).read)
+
+abort "PR needs to have a single file" if pr_json.count != 1
+
+file_raw_url = pr_json[0]["raw_url"]
+file_name = File.basename(file_raw_url)
+local_file = File.join(Dir.mktmpdir, file_name)
+
+File.write(local_file, URI(file_raw_url).read)
+abort "Audit failed" unless system("brew", "cask", "audit", "--download", local_file)
+abort "Style check failed" unless system("brew", "cask", "style", local_file)

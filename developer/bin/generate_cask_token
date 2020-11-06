@@ -1,10 +1,10 @@
-#!/System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/ruby
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
 #
 # generate_cask_token
 #
 # todo:
-#
-# remove Ruby 2.0 dependency and change shebang line
 #
 # detect Cask files which differ only by the placement of hyphens.
 #
@@ -22,6 +22,7 @@ begin
   # not available by default
   require "active_support/inflector"
 rescue LoadError
+  nil
 end
 
 ###
@@ -29,95 +30,95 @@ end
 ###
 
 EXPANDED_SYMBOLS = {
-                     "+" => "plus",
-                     "@" => "at",
-                   }.freeze
+  "+" => "plus",
+  "@" => "at",
+}.freeze
 
-CASK_FILE_EXTENSION = ".rb".freeze
+CASK_FILE_EXTENSION = ".rb"
 
 # Hardcode App names that cannot be transformed automatically.
 # Example: in "x48.app", "x48" is not a version number.
 # The value in the hash should be a valid Cask token.
 APP_EXCEPTION_PATS = {
-                       # looks like a trailing version, but is not.
-                       %r{\Aiterm\Z}i               => "iterm2",
-                       %r{\Aiterm2\Z}i              => "iterm2",
-                       %r{\Apgadmin3\Z}i            => "pgadmin3",
-                       %r{\Ax48\Z}i                 => "x48",
-                       %r{\Avitamin-r[\s\d\.]*\Z}i  => "vitamin-r",
-                       %r{\Aimagealpha\Z}i          => "imagealpha",
-                       # upstream is in the midst of changing branding
-                       %r{\Abitcoin-?qt\Z}i         => "bitcoin-core",
-                       # "mac" cannot be separated from the name because it is in an English phrase
-                       %r{\Aplayonmac\Z}i           => "playonmac",
-                       %r{\Acleanmymac[\s\d\.]*\Z}i => "cleanmymac",
-                       # arguably we should not have kept these two exceptions
-                       %r{\Akismac\Z}i              => "kismac",
-                       %r{\Avoicemac\Z}i            => "voicemac",
-                     }.freeze
+  # looks like a trailing version, but is not.
+  /\Aiterm\Z/i              => "iterm2",
+  /\Aiterm2\Z/i             => "iterm2",
+  /\Apgadmin3\Z/i           => "pgadmin3",
+  /\Ax48\Z/i                => "x48",
+  /\Avitamin-r[\s\d.]*\Z/i  => "vitamin-r",
+  /\Aimagealpha\Z/i         => "imagealpha",
+  # upstream is in the midst of changing branding
+  /\Abitcoin-?qt\Z/i        => "bitcoin-core",
+  # "mac" cannot be separated from the name because it is in an English phrase
+  /\Aplayonmac\Z/i          => "playonmac",
+  /\Acleanmymac[\s\d.]*\Z/i => "cleanmymac",
+  # arguably we should not have kept these two exceptions
+  /\Akismac\Z/i             => "kismac",
+  /\Avoicemac\Z/i           => "voicemac",
+}.freeze
 
 # Preserve trailing patterns on App names that could be mistaken
 # for version numbers, etc
 PRESERVE_TRAILING_PATS = [
-                           %r{id3}i,
-                           %r{mp3}i,
-                           %r{3[\s-]*d}i,
-                           %r{diff3}i,
-                           %r{\A[^\d]+\+\Z}i,
-                         ].freeze
+  /id3/i,
+  /mp3/i,
+  /3[\s-]*d/i,
+  /diff3/i,
+  /\A[^\d]+\+\Z/i,
+].freeze
 
 # The code that employs these patterns against App names
 # - hacks a \b (word-break) between CamelCase and snake_case transitions
 # - anchors the pattern to end-of-string
 # - applies the patterns repeatedly until there is no match
 REMOVE_TRAILING_PATS = [
-                         # spaces
-                         %r{\s+}i,
+  # spaces
+  /\s+/i,
 
-                         # generic terms
-                         %r{\bapp}i,
-                         %r{\b(?:quick[\s-]*)?launcher}i,
+  # generic terms
+  /\bapp/i,
+  /\b(?:quick[\s-]*)?launcher/i,
 
-                         # "mac", "for mac", "for OS X", "macOS", "for macOS".
-                         %r{\b(?:for)?[\s-]*mac(?:intosh|OS)?}i,
-                         %r{\b(?:for)?[\s-]*os[\s-]*x}i,
+  # "mac", "for mac", "for OS X", "macOS", "for macOS".
+  /\b(?:for)?[\s-]*mac(?:intosh|OS)?/i,
+  /\b(?:for)?[\s-]*os[\s-]*x/i,
 
-                         # hardware designations such as "for x86", "32-bit", "ppc"
-                         %r{(?:\bfor\s*)?x.?86}i,
-                         %r{(?:\bfor\s*)?\bppc}i,
-                         %r{(?:\bfor\s*)?\d+.?bits?}i,
+  # hardware designations such as "for x86", "32-bit", "ppc"
+  /(?:\bfor\s*)?x.?86/i,
+  /(?:\bfor\s*)?\bppc/i,
+  /(?:\bfor\s*)?\d+.?bits?/i,
 
-                         # frameworks
-                         %r{\b(?:for)?[\s-]*(?:oracle|apple|sun)*[\s-]*(?:jvm|java|jre)}i,
-                         %r{\bgtk}i,
-                         %r{\bqt}i,
-                         %r{\bwx}i,
-                         %r{\bcocoa}i,
+  # frameworks
+  /\b(?:for)?[\s-]*(?:oracle|apple|sun)*[\s-]*(?:jvm|java|jre)/i,
+  /\bgtk/i,
+  /\bqt/i,
+  /\bwx/i,
+  /\bcocoa/i,
 
-                         # localizations
-                         %r{en\s*-\s*us}i,
+  # localizations
+  /en\s*-\s*us/i,
 
-                         # version numbers
-                         %r{[^a-z0-9]+}i,
-                         %r{\b(?:version|alpha|beta|gamma|release|release.?candidate)(?:[\s\.\d-]*\d[\s\.\d-]*)?}i,
-                         %r{\b(?:v|ver|vsn|r|rc)[\s\.\d-]*\d[\s\.\d-]*}i,
-                         %r{\d+(?:[a-z\.]\d+)*}i,
-                         %r{\b\d+\s*[a-z]}i,
-                         %r{\d+\s*[a-c]}i, # constrained to a-c b/c of false positives
-                       ].freeze
+  # version numbers
+  /[^a-z0-9]+/i,
+  /\b(?:version|alpha|beta|gamma|release|release.?candidate)(?:[\s.\d-]*\d[\s.\d-]*)?/i,
+  /\b(?:v|ver|vsn|r|rc)[\s.\d-]*\d[\s.\d-]*/i,
+  /\d+(?:[a-z.]\d+)*/i,
+  /\b\d+\s*[a-z]/i,
+  /\d+\s*[a-c]/i, # constrained to a-c b/c of false positives
+].freeze
 
 # Patterns which are permitted (undisturbed) following an interior version number
 AFTER_INTERIOR_VERSION_PATS = [
-                                %r{ce}i,
-                                %r{pro}i,
-                                %r{professional}i,
-                                %r{client}i,
-                                %r{server}i,
-                                %r{host}i,
-                                %r{viewer}i,
-                                %r{launcher}i,
-                                %r{installer}i,
-                              ].freeze
+  /ce/i,
+  /pro/i,
+  /professional/i,
+  /client/i,
+  /server/i,
+  /host/i,
+  /viewer/i,
+  /launcher/i,
+  /installer/i,
+].freeze
 
 ###
 ### classes
@@ -125,15 +126,15 @@ AFTER_INTERIOR_VERSION_PATS = [
 
 class AppName < String
   def self.remove_trailing_pat
-    @@remove_trailing_pat ||= %r{(?<=.)(?:#{REMOVE_TRAILING_PATS.join('|')})\Z}i
+    @@remove_trailing_pat ||= /(?<=.)(?:#{REMOVE_TRAILING_PATS.join('|')})\Z/i
   end
 
   def self.preserve_trailing_pat
-    @@preserve_trailing_pat ||= %r{(?:#{PRESERVE_TRAILING_PATS.join('|')})\Z}i
+    @@preserve_trailing_pat ||= /(?:#{PRESERVE_TRAILING_PATS.join('|')})\Z/i
   end
 
   def self.after_interior_version_pat
-    @@after_interior_version_pat ||= %r{(?:#{AFTER_INTERIOR_VERSION_PATS.join('|')})}i
+    @@after_interior_version_pat ||= /(?:#{AFTER_INTERIOR_VERSION_PATS.join('|')})/i
   end
 
   def english_from_app_bundle
@@ -141,55 +142,50 @@ class AppName < String
     return self unless File.exist?(self)
 
     # check Info.plist CFBundleDisplayName
-    bundle_name = Open3.popen3(*%w[
-                                  /usr/libexec/PlistBuddy -c
-                                ],
+    bundle_name = Open3.popen3("/usr/libexec/PlistBuddy", "-c",
                                "Print CFBundleDisplayName",
                                Pathname.new(self).join("Contents", "Info.plist").to_s) do |_stdin, stdout, _stderr|
-      begin
-        stdout.gets.force_encoding("UTF-8").chomp
-      rescue
-      end
+      stdout.gets.force_encoding("UTF-8").chomp
+    rescue
+      nil
     end
-    return AppName.new(bundle_name) if bundle_name && bundle_name.ascii_only?
+    return AppName.new(bundle_name) if bundle_name&.ascii_only?
 
     # check Info.plist CFBundleName
-    bundle_name = Open3.popen3(*%w[
-                                  /usr/libexec/PlistBuddy -c
-                                ],
+    bundle_name = Open3.popen3("/usr/libexec/PlistBuddy", "-c",
                                "Print CFBundleName",
                                Pathname.new(self).join("Contents", "Info.plist").to_s) do |_stdin, stdout, _stderr|
-      begin
-        stdout.gets.force_encoding("UTF-8").chomp
-      rescue
-      end
+      stdout.gets.force_encoding("UTF-8").chomp
+    rescue
+      nil
     end
-    return AppName.new(bundle_name) if bundle_name && bundle_name.ascii_only?
+    return AppName.new(bundle_name) if bundle_name&.ascii_only?
 
     # check localization strings
     local_strings_file = Pathname.new(self).join("Contents", "Resources", "en.lproj", "InfoPlist.strings")
-    local_strings_file = Pathname.new(self).join("Contents", "Resources", "English.lproj", "InfoPlist.strings") unless local_strings_file.exist?
+    unless local_strings_file.exist?
+      local_strings_file = Pathname.new(self).join("Contents", "Resources", "English.lproj", "InfoPlist.strings")
+    end
     if local_strings_file.exist?
       bundle_name = File.open(local_strings_file, "r:UTF-16LE:UTF-8") do |fh|
-        %r{\ACFBundle(?:Display)?Name\s*=\s*"(.*)";\Z}.match(fh.readlines.grep(%r{^CFBundle(?:Display)?Name\s*=\s*}).first) do |match|
+        /\ACFBundle(?:Display)?Name\s*=\s*"(.*)";\Z/.match(
+          fh.readlines.grep(/^CFBundle(?:Display)?Name\s*=\s*/).first,
+        ) do |match|
           match.captures.first
         end
       end
-      return AppName.new(bundle_name) if bundle_name && bundle_name.ascii_only?
+      return AppName.new(bundle_name) if bundle_name&.ascii_only?
     end
 
     # check Info.plist CFBundleExecutable
-    bundle_name = Open3.popen3(*%w[
-                                  /usr/libexec/PlistBuddy -c
-                                ],
+    bundle_name = Open3.popen3("/usr/libexec/PlistBuddy", "-c",
                                "Print CFBundleExecutable",
                                Pathname.new(self).join("Contents", "Info.plist").to_s) do |_stdin, stdout, _stderr|
-      begin
-        stdout.gets.force_encoding("UTF-8").chomp
-      rescue
-      end
+      stdout.gets.force_encoding("UTF-8").chomp
+    rescue
+      nil
     end
-    return AppName.new(bundle_name) if bundle_name && bundle_name.ascii_only?
+    return AppName.new(bundle_name) if bundle_name&.ascii_only?
 
     self
   end
@@ -203,13 +199,14 @@ class AppName < String
   end
 
   def remove_extension
-    sub(%r{\.app\Z}i, "")
+    sub(/\.app\Z/i, "")
   end
 
   def decompose_to_ascii
     # crudely (and incorrectly) decompose extended latin characters to ASCII
     return self if ascii_only?
     return self unless respond_to?(:mb_chars)
+
     AppName.new(mb_chars.normalize(:kd).each_char.select(&:ascii_only?).join)
   end
 
@@ -222,27 +219,25 @@ class AppName < String
 
   def insert_vertical_tabs_for_camel_case
     app_name = AppName.new(self)
-    if app_name.sub!(%r{(#{self.class.preserve_trailing_pat})\Z}i, "")
-      trailing = Regexp.last_match(1)
-    end
-    app_name.gsub!(%r{([^A-Z])([A-Z])}, "\\1\v\\2")
-    app_name.sub!(%r{\Z}, trailing) if trailing
+    trailing = Regexp.last_match(1) if app_name.sub!(/(#{self.class.preserve_trailing_pat})\Z/i, "")
+    app_name.gsub!(/([^A-Z])([A-Z])/, "\\1\v\\2")
+    app_name.sub!(/\Z/, trailing) if trailing
     app_name
   end
 
   def insert_vertical_tabs_for_snake_case
-    gsub(%r{_}, "\v")
+    tr("_", "\v")
   end
 
   def clean_up_vertical_tabs
-    gsub(%r{\v}, "")
+    delete("\v")
   end
 
   def remove_interior_versions!
     # done separately from REMOVE_TRAILING_PATS because this
     # requires a substitution with a backreference
-    sub!(%r{(?<=.)[\.\d]+(#{self.class.after_interior_version_pat})\Z}i, '\1')
-    sub!(%r{(?<=.)[\s\.\d-]*\d[\s\.\d-]*(#{self.class.after_interior_version_pat})\Z}i, '-\1')
+    sub!(/(?<=.)[.\d]+(#{self.class.after_interior_version_pat})\Z/i, '\1')
+    sub!(/(?<=.)[\s.\d-]*\d[\s.\d-]*(#{self.class.after_interior_version_pat})\Z/i, '-\1')
   end
 
   def remove_trailing_strings_and_versions
@@ -258,6 +253,7 @@ class AppName < String
 
   def simplified
     return @simplified if @simplified
+
     @simplified = english_from_app_bundle
                   .basename
                   .decompose_to_ascii
@@ -269,23 +265,23 @@ end
 
 class CaskFileName < String
   def spaces_to_hyphens
-    gsub(%r{ +}, "-")
+    gsub(/ +/, "-")
   end
 
   def delete_invalid_chars
-    gsub(%r{[^a-z0-9-]+}, "")
+    gsub(/[^a-z0-9-]+/, "")
   end
 
   def collapse_multiple_hyphens
-    gsub(%r{--+}, "-")
+    gsub(/--+/, "-")
   end
 
   def delete_leading_hyphens
-    gsub(%r{^--+}, "")
+    gsub(/^--+/, "")
   end
 
   def delete_hyphens_before_numbers
-    gsub(%r{-([0-9])}, '\1')
+    gsub(/-([0-9])/, '\1')
   end
 
   def spell_out_symbols
@@ -293,32 +289,34 @@ class CaskFileName < String
     EXPANDED_SYMBOLS.each do |k, v|
       cask_file_name.gsub!(k, " #{v} ")
     end
-    cask_file_name.sub(%r{ +\Z}, "")
+    cask_file_name.sub(/ +\Z/, "")
   end
 
   def add_extension
-    sub(%r{(?:#{escaped_cask_file_extension})?\Z}i, CASK_FILE_EXTENSION)
+    sub(/(?:#{escaped_cask_file_extension})?\Z/i, CASK_FILE_EXTENSION)
   end
 
   def remove_extension
-    sub(%r{#{escaped_cask_file_extension}\Z}i, "")
+    sub(/#{escaped_cask_file_extension}\Z/i, "")
   end
 
   def from_simplified_app_name
     return @from_simplified_app_name if @from_simplified_app_name
+
     @from_simplified_app_name = if APP_EXCEPTION_PATS.rassoc(remove_extension)
-                                  remove_extension
-                                else
-                                  remove_extension
-                                    .downcase
-                                    .spell_out_symbols
-                                    .spaces_to_hyphens
-                                    .delete_invalid_chars
-                                    .collapse_multiple_hyphens
-                                    .delete_leading_hyphens
-                                    .delete_hyphens_before_numbers
+      remove_extension
+    else
+      remove_extension
+        .downcase
+        .spell_out_symbols
+        .spaces_to_hyphens
+        .delete_invalid_chars
+        .collapse_multiple_hyphens
+        .delete_leading_hyphens
+        .delete_hyphens_before_numbers
     end
     raise "Could not determine Simplified App name" if @from_simplified_app_name.empty?
+
     @from_simplified_app_name.add_extension
   end
 end
@@ -329,16 +327,13 @@ end
 
 def project_root
   Dir.chdir File.dirname(File.expand_path(__FILE__))
-  @git_root ||= Open3.popen3(*%w[
-                                git rev-parse --show-toplevel
-                              ]) do |_stdin, stdout, _stderr|
-    begin
-      Pathname.new(stdout.gets.chomp)
-    rescue
-      raise "could not find project root"
-    end
+  @git_root ||= Open3.popen3("git", "rev-parse", "--show-toplevel") do |_stdin, stdout, _stderr|
+    Pathname.new(stdout.gets.chomp)
+  rescue
+    raise "could not find project root"
   end
   raise "could not find project root" unless @git_root.exist?
+
   @git_root
 end
 
@@ -360,15 +355,16 @@ end
 
 def warnings
   return @warnings if @warnings
+
   @warnings = []
-  unless APP_EXCEPTION_PATS.rassoc(cask_token)
-    if %r{\d} =~ cask_token
-      @warnings.push "WARNING: '#{cask_token}' contains digits. Digits which are version numbers should be removed."
-    end
+  if !APP_EXCEPTION_PATS.rassoc(cask_token) && /\d/.match?(cask_token)
+    @warnings.push "WARNING: '#{cask_token}' contains digits. Digits which are version numbers should be removed."
   end
   filename = project_root.join("Casks", cask_file_name)
   if filename.exist?
-    @warnings.push "WARNING: the file '#{filename}' already exists. Prepend the vendor name if this is not a duplicate."
+    @warnings.push(
+      "WARNING: the file '#{filename}' already exists. Prepend the vendor name if this is not a duplicate.",
+    )
   end
   @warnings
 end
@@ -378,34 +374,34 @@ def report
   puts "Proposed token:               #{cask_token}"
   puts "Proposed file name:           #{cask_file_name}"
   puts "Cask Header Line:             cask '#{cask_token}' do"
-  unless warnings.empty?
-    $stderr.puts "\n"
-    $stderr.puts warnings
-    $stderr.puts "\n"
-    exit 1
-  end
+  return if warnings.empty?
+
+  $stderr.puts "\n"
+  $stderr.puts warnings
+  $stderr.puts "\n"
+  exit 1
 end
 
 ###
 ### main
 ###
 
-usage = <<-EOS
-Usage: generate_cask_token [ -debug ] <application.app>
+usage = <<~EOS
+  Usage: generate_cask_token [ -debug ] <application.app>
 
-Given an Application name or a path to an Application, propose a
-Cask token, filename, and header line.
+  Given an Application name or a path to an Application, propose a
+  Cask token, filename, and header line.
 
-With -debug, also provide the internal "Simplified App Name".
+  With -debug, also provide the internal "Simplified App Name".
 
 EOS
 
-if ARGV.first =~ %r{^-+h(elp)?$}i
+if /^-+h(elp)?$/i.match?(ARGV.first)
   puts usage
   exit 0
 end
 
-if ARGV.first =~ %r{^-+debug?$}i
+if /^-+debug?$/i.match?(ARGV.first)
   $debug = 1
   ARGV.shift
 end

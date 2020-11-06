@@ -1,17 +1,17 @@
-cask 'tableau-reader' do
-  version '2019.3.0'
-  sha256 '23318c1c5463a33c8dab41fe173ed211eb0f3eb3d2feb80bdbc8ce0adfd00b62'
+cask "tableau-reader" do
+  version "2020.3.2"
+  sha256 "7bec29a01bfccfef5e8373b2ee12374a47e990f6efc86e6712e7359fe1a66821"
 
   url "https://downloads.tableau.com/tssoftware/TableauReader-#{version.dots_to_hyphens}.dmg"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.tableau.com/downloads/reader/mac',
-          configuration: version.dots_to_hyphens
-  name 'Tableau Reader'
-  homepage 'https://www.tableau.com/products/reader'
+  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.tableau.com/downloads/reader/mac",
+          must_contain: version.dots_to_hyphens
+  name "Tableau Reader"
+  homepage "https://www.tableau.com/products/reader"
 
-  pkg 'Tableau Reader.pkg'
+  pkg "Tableau Reader.pkg"
 
   uninstall pkgutil: [
-                       'com.tableausoftware.FLEXNet.*',
-                       'com.tableausoftware.Reader.app',
-                     ]
+    "com.tableausoftware.FLEXNet.*",
+    "com.tableausoftware.Reader.app",
+  ]
 end

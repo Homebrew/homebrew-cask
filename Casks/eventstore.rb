@@ -1,10 +1,10 @@
-cask 'eventstore' do
-  version '5.0.2'
-  sha256 'c42d61c675416c7537827ab882702c55fd6c19a2b04ad28aec413ef82e9d7675'
+cask "eventstore" do
+  version "5.0.8"
+  sha256 "707e7fda884b9a0c03238f5e56d4927dfb85deda4402f5690c505a839b5159c4"
 
   url "https://eventstore.org/downloads/macos/EventStore-OSS-MacOS-macOS-v#{version}.tar.gz"
-  name 'Event Store'
-  homepage 'https://eventstore.org/'
+  name "Event Store"
+  homepage "https://eventstore.org/"
 
   binary "EventStore-OSS-MacOS-macOS-v#{version}/eventstore"
   binary "EventStore-OSS-MacOS-macOS-v#{version}/eventstore-testclient"

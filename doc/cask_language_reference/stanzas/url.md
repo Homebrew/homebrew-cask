@@ -12,12 +12,12 @@ When a plain URL string is insufficient to fetch a file, additional information 
 | ------------------ | ----------- |
 | `using:`           | the symbol `:post` is the only legal value
 | `cookies:`         | a hash of cookies to be set in the download request
-| `referer:`         | a string holding the URL to set as referrer in the download request
+| `referer:`         | a string holding the URL to set as referer in the download request
 | `header:`          | a string holding the header to set for the download request.
 | `user_agent:`      | a string holding the user agent to set for the download request. Can also be set to the symbol `:fake`, which will use a generic Browser-like user agent string. We prefer `:fake` when the server does not require a specific user agent.
 | `data:`            | a hash of parameters to be set in the POST request
 
-Example of using `cookies:`: [java.rb](https://github.com/Homebrew/homebrew-cask/blob/472930df191d66747a57d5c96c0d00511d56e21b/Casks/java.rb#L5#L8)
+Example of using `cookies:`: [java.rb](https://github.com/Homebrew/homebrew-cask/blob/472930df191d66747a57d5c96c0d00511d56e21b/Casks/java.rb#L5-L8)
 
 Example of using `referer:`: [rrootage.rb](https://github.com/Homebrew/homebrew-cask/blob/312ae841f1f1b2ec07f4d88b7dfdd7fbdf8d4f94/Casks/rrootage.rb#L5)
 
@@ -79,33 +79,23 @@ If these formats are not available, and the application is macOS-exclusive (othe
 https://sourceforge.net/projects/{{project_name}}/files/latest/download
 ```
 
-## Personal Hosting Such as Dropbox
-
-URLs from dropbox.com or cl.ly/cloudapp.com are not readily distinguishable as being controlled by the original software vendor. These URLs should be used only when given as such on the official project website.
-
-Also make sure to give the URL for the binary download itself, rather than a preview page. (See <https://www.dropbox.com/help/201/en>.)
-
 ## Some Providers Block Command-line Downloads
 
 Some hosting providers actively block command-line HTTP clients. Such URLs cannot be used in Casks.
 
-Some providers do not actively block command-line HTTP clients but use URLs that change periodically, or even on each visit (example: FossHub). For those, see section [URLs that Change on Every Visit](#urls-that-change-on-every-visit).
+Other providers may use URLs that change periodically, or even on each visit (example: FossHub). While some cases [could be circumvented](#using-a-block-to-defer-code-execution), they tend to occur when the vendor is actively trying to prevent automated downloads, so we prefer to not add those casks to the main repository.
 
-## Vendor URLs Are Preferred
+## Using a Block to Defer Code Execution
 
-When possible, it is best to use a download URL from the original developer or vendor, rather than an aggregator such as `macupdate.com`.
-
-## URLs that Change on Every Visit
-
-Some providers use disposable URLs, which a Cask author cannot know in advance. Such URLs may change daily, or on every visit, and sometimes need to be dynamically obtained from a landing site.
+Some casks—notably nightlies—have versioned download URLs but are updated so often that they become impractical to keep current with the usual process. For those, we want to dynamically determine `url`.
 
 ### The Problem
 
 In theory, one can write arbitrary Ruby code right in the Cask definition to fetch and construct a disposable URL.
 
-However, this typically involves an HTTP/S round trip to a landing site, which may take a long time. Because of the way Homebrew Cask loads and parses Casks, it is not acceptable that such expensive operations be performed directly in the body of a Cask definition.
+However, this typically involves an HTTP round trip to a landing site, which may take a long time. Because of the way Homebrew Cask loads and parses Casks, it is not acceptable that such expensive operations be performed directly in the body of a Cask definition.
 
-### Using a Block to Defer Code Execution
+### Writing the Block
 
 Similar to the `preflight`, `postflight`, `uninstall_preflight`, and `uninstall_postflight` blocks, the `url` stanza offers an optional _block syntax_:
 
@@ -120,8 +110,7 @@ url do
 end
 ```
 
-The block is only evaluated when needed, for example on download time or when auditing a Cask.
-Inside a block, you may safely do things such as HTTP/S requests that may take a long time to execute. You may also refer to the `@cask` instance variable, and invoke any method available on `@cask`.
+The block is only evaluated when needed, for example on download time or when auditing a Cask. Inside a block, you may safely do things such as HTTP/S requests that may take a long time to execute. You may also refer to the `@cask` instance variable, and invoke any method available on `@cask`.
 
 The block will be called immediately before downloading; its result value will be assumed to be a `String` and subsequently used as a download URL.
 

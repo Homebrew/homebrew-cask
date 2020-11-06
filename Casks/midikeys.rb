@@ -1,11 +1,12 @@
-cask 'midikeys' do
-  version '1.8'
-  sha256 '673a11c0317ec8930940cc18bf8eef3de0d3040845c635722e99907f866a9b80'
+cask "midikeys" do
+  version "1.9.0"
+  sha256 "1a0d01695e039683429ff9fd679d4094756b95f2e46efb967e54eb14948ddb18"
 
-  url "http://www.manyetas.com/creed/MidiKeys_#{version}.zip"
-  appcast 'https://immosw.com/versions/midikeys/appcast.xml'
-  name 'MidiKeys'
-  homepage 'http://www.manyetas.com/creed/midikeys.html'
+  # github.com/flit/MidiKeys/ was verified as official when first introduced to the cask
+  url "https://github.com/flit/MidiKeys/releases/download/v#{version}/MidiKeys_#{version.major_minor}.zip"
+  appcast "https://immosw.com/versions/midikeys/appcast.xml"
+  name "MidiKeys"
+  homepage "https://www.manyetas.com/creed/midikeys.html"
 
-  app 'MidiKeys/MidiKeys.app'
+  app "MidiKeys.app"
 end

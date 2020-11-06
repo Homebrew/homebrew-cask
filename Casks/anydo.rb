@@ -1,13 +1,14 @@
-cask 'anydo' do
-  version '4.2.49'
-  sha256 '16c1ff093a6a62bb04dc92b09e92e1edfb0913c472f7d0423a44d7fae25ca1ea'
+cask "anydo" do
+  version "4.2.113"
+  sha256 "74b028520e7ae25e5157e81d85aceb82905313e45e6018cecc597d6171312174"
 
-  url 'https://electron-app.any.do/Any.do.dmg'
-  appcast 'https://electron-app.any.do/latest-mac.yml'
-  name 'Any.do'
-  homepage 'https://www.any.do/'
+  url "https://electron-app.any.do/Any.do.dmg"
+  appcast "https://electron-app.any.do/latest-mac.yml"
+  name "Any.do"
+  desc "Reminder, planner & calendar"
+  homepage "https://www.any.do/"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :catalina"
 
-  app 'Any.do.app'
+  app "Any.do.app"
 end

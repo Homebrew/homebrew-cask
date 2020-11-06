@@ -1,14 +1,16 @@
-cask 'openvanilla' do
-  version '1.4.0'
-  sha256 '7c5387f824c27b0f078e7c12ee2593cd410912c2672f766161f99433d2c0e076'
+cask "openvanilla" do
+  version "1.6.0,3271"
+  sha256 "40c243581f21846c9af2f20381cdf055ad722e7f7d69b6255a5503b20d35f0a6"
 
-  # github.com/openvanilla/openvanilla was verified as official when first introduced to the cask
-  url "https://github.com/openvanilla/openvanilla/releases/download/#{version}/OpenVanilla-Installer-Mac-#{version}.zip"
-  appcast 'https://github.com/openvanilla/openvanilla/releases.atom'
-  name 'OpenVanilla'
-  homepage 'https://openvanilla.org/'
+  # github.com/openvanilla/openvanilla/ was verified as official when first introduced to the cask
+  url "https://github.com/openvanilla/openvanilla/releases/download/#{version.before_comma}/OpenVanilla-Installer-Mac-#{version.before_comma}.zip"
+  appcast "https://github.com/openvanilla/openvanilla/releases.atom"
+  name "OpenVanilla"
+  homepage "https://openvanilla.org/"
 
-  input_method 'OpenVanillaInstaller.app/Contents/Resources/OpenVanilla.app'
+  container nested: "OpenVanillaInstaller.app/Contents/Resources/NotarizedArchives/OpenVanilla-r#{version.after_comma}.zip"
+
+  input_method "OpenVanilla.app"
 
   caveats do
     logout

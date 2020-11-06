@@ -1,0 +1,52 @@
+name: Sync templates and CI config.
+
+on:
+  push:
+    branches:
+      - debug-sync
+      - master
+
+jobs:
+  sync-templates-and-ci-config:
+    if: github.repository == 'Homebrew/homebrew-cask'
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        repo:
+          - Homebrew/homebrew-cask-drivers
+          - Homebrew/homebrew-cask-fonts
+          - Homebrew/homebrew-cask-versions
+    steps:
+      - name: Clone main repository
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: Clone secondary repository
+        uses: actions/checkout@v2
+        with:
+          repository: ${{ matrix.repo }}
+          path: vendor/${{ matrix.repo }}
+          persist-credentials: false
+
+      - name: Configure Git user
+        uses: Homebrew/actions/git-user-config@master
+        with:
+          username: BrewTestBot
+
+      - name: Detect changes
+        id: detect_changes
+        run: ./.github/actions/sync/templates.rb 'vendor/${{ matrix.repo }}' '${{ matrix.repo }}' 'sync-templates-and-ci-config'
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@c7f493a8000b8aeb17a1332e326ba76b57cb83eb
+        with:
+          path: vendor/${{ matrix.repo }}
+          token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+          branch: sync-templates-and-ci-config
+          title: Synchronize templates and CI configuration.
+          body: >
+            This pull request was created automatically by the
+            [`sync-templates-and-ci-config`](https://github.com/Homebrew/homebrew-cask/blob/master/.github/workflows/sync-templates-and-ci-config.yml)
+            workflow.
+        if: ${{ steps.detect_changes.outputs.pull_request == 'true' }}

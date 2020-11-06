@@ -1,12 +1,16 @@
-cask 'icab' do
-  version '5.8.6'
-  sha256 '8ef3f51a54a129b9edf193f8f5d251888981b41bd829d3d457ef6b7930c4a125'
+cask "icab" do
+  version "6.0.5.1"
+  sha256 "d3910c63ba1036df5048b1cacafd4b1d41e9d06517438322791256cbe50aa848"
 
-  # icab.clauss-net.de was verified as official when first introduced to the cask
-  url "https://icab.clauss-net.de/icab/iCab_#{version}_Intel.zip"
-  appcast 'http://www.icab.de/dl.php'
-  name 'iCab'
-  homepage 'http://www.icab.de/'
+  # icab.clauss-net.de/ was verified as official when first introduced to the cask
+  url "http://icab.clauss-net.de/icab/iCab_#{version.major_minor_patch}.zip"
+  appcast "http://www.icab.de/download.html",
+          must_contain: version.major_minor
+  name "iCab"
+  desc "Alternative web browser"
+  homepage "http://www.icab.de/"
 
-  app "iCab #{version} (64+32 Bit Intel Version for macOS 10.7-10.14)/iCab.app"
+  depends_on macos: ">= :high_sierra"
+
+  app "iCab #{version.major_minor_patch}/iCab.app"
 end

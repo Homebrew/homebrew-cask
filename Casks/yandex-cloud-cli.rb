@@ -1,11 +1,32 @@
-cask 'yandex-cloud-cli' do
-  version '0.41.1'
-  sha256 '5a61097604d3b8d2d402d7d8fe878860399e7e8795c901bd01032e47586264c9'
+cask "yandex-cloud-cli" do
+  version :latest
+  sha256 :no_check
 
-  # yandexcloud.net/yandexcloud-yc was verified as official when first introduced to the cask
-  url "https://storage.yandexcloud.net/yandexcloud-yc/release/#{version}/darwin/amd64/yc"
-  name 'Yandex Cloud CLI'
-  homepage 'https://cloud.yandex.com/docs/cli/'
+  # yandexcloud.net/yandexcloud-yc/ was verified as official when first introduced to the cask
+  url "https://storage.yandexcloud.net/yandexcloud-yc/install.sh"
+  name "Yandex Cloud CLI"
+  homepage "https://cloud.yandex.com/docs/cli/"
 
-  binary 'yc'
+  installer script: {
+    executable: "install.sh",
+    args:       ["-i", "#{staged_path}/#{token}", "-n"],
+  }
+  installer script: {
+    executable: "yandex-cloud-cli/bin/yc",
+    args:       ["components", "post-update"],
+  }
+  binary "yandex-cloud-cli/bin/docker-credential-yc"
+  binary "yandex-cloud-cli/bin/yc"
+
+  uninstall delete: "#{staged_path}/#{token}"
+
+  caveats <<~EOS
+    To install shell completions add this to your profile:
+
+      for bash users
+        source "#{staged_path}/#{token}/completion.bash.inc"
+
+      for zsh users
+        source "#{staged_path}/#{token}/completion.zsh.inc"
+  EOS
 end

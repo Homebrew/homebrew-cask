@@ -1,11 +1,12 @@
-cask 'izip' do
-  version '3.5'
-  sha256 '2501c6b9d237864aa5942afd5a67c5f89fbc13dee48b2ccb8cfb164715943327'
+cask "izip" do
+  version "3.9"
+  sha256 "6832ef37f7ac8b234360e2aec45328df1d15365ee1ec9f51b05184a7aa426915"
 
-  url "https://www.izip.com/izip_update_#{version.no_dots}.zip"
-  appcast 'https://www.izip.com/updates'
-  name 'iZip'
-  homepage 'https://www.izip.com/'
+  url "https://www.izip.com/izip.dmg"
+  appcast "https://www.izip.com/download"
+  name "iZip"
+  desc "App to manage ZIP, ZIPX, RAR, TAR, 7ZIP and other compressed files"
+  homepage "https://www.izip.com/"
 
-  app 'iZip.app'
+  app "iZip.app"
 end

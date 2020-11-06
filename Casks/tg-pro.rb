@@ -1,20 +1,21 @@
-cask 'tg-pro' do
-  version '2.43'
-  sha256 'd2b3136c3d9a29df7dd3e2f15aeb5bcc838d16d1ecfaf126c5779572c772bfe2'
+cask "tg-pro" do
+  version "2.52"
+  sha256 "ca23fcaa6ced56840023211887039c124165c059c3a5d76fa4e7faf188ca1b16"
 
   url "https://www.tunabellysoftware.com/resources/TG%20Pro%20#{version}.dmg"
-  appcast 'https://www.tunabellysoftware.com/resources/sparkle/tgpro.xml'
-  name 'TG Pro'
-  homepage 'https://www.tunabellysoftware.com/tgpro/'
+  appcast "https://www.tunabellysoftware.com/resources/sparkle/tgpro.xml"
+  name "TG Pro"
+  desc "Temperature monitoring, fan control and diagnostics"
+  homepage "https://www.tunabellysoftware.com/tgpro/"
 
-  app 'TG Pro.app'
+  app "TG Pro.app"
 
   zap trash: [
-               '/Library/LaunchDaemons/com.tunabellysoftware.TGFanHelper.plist',
-               '/Library/PrivilegedHelperTools/com.tunabellysoftware.TGFanHelper',
-               '~/Library/Application Support/TG Pro',
-               '~/Library/Caches/com.tunabellysoftware.tgpro',
-               '~/Library/Cookies/com.tunabellysoftware.tgpro.binarycookies',
-               '~/Library/Preferences/com.tunabellysoftware.tgpro.plist',
-             ]
+    "/Library/LaunchDaemons/com.tunabellysoftware.TGFanHelper.plist",
+    "/Library/PrivilegedHelperTools/com.tunabellysoftware.TGFanHelper",
+    "~/Library/Application Support/TG Pro",
+    "~/Library/Caches/com.tunabellysoftware.tgpro",
+    "~/Library/Cookies/com.tunabellysoftware.tgpro.binarycookies",
+    "~/Library/Preferences/com.tunabellysoftware.tgpro.plist",
+  ]
 end

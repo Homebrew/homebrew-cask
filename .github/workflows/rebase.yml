@@ -1,0 +1,35 @@
+name: Rebase Pull Request
+
+on:
+  repository_dispatch:
+    types: [rebase-command]
+
+jobs:
+  rebase_pull_request:
+    name: Rebase Pull Request
+    runs-on: ubuntu-latest
+    steps:
+      - name: Rebase Pull Request
+        uses: peter-evans/rebase@36b58e88d1c56f26a0865ea5c90465a84e18e85b
+        id: rebase
+        with:
+          token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+          head: ${{ github.event.client_payload.pull_request.head.label }}
+
+      - name: Add 👍 Reaction
+        if: always() && steps.rebase.outputs.rebased-count == 1
+        uses: peter-evans/create-or-update-comment@93b7c58cfab6e4355cd3027f73c7c731437e85fa
+        with:
+          token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+          repository: ${{ github.event.client_payload.github.payload.repository.full_name }}
+          comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
+          reaction-type: '+1'
+
+      - name: Add 👎 Reaction
+        if: always() && steps.rebase.outputs.rebased-count != 1
+        uses: peter-evans/create-or-update-comment@93b7c58cfab6e4355cd3027f73c7c731437e85fa
+        with:
+          token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+          repository: ${{ github.event.client_payload.github.payload.repository.full_name }}
+          comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
+          reaction-type: '-1'

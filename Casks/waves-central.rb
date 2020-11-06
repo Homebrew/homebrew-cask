@@ -1,10 +1,11 @@
-cask 'waves-central' do
+cask "waves-central" do
   version :latest
   sha256 :no_check
 
-  url 'http://cf-installers.waves.com/WavesCentral/Install_Waves_Central.dmg'
-  name 'Waves Central'
-  homepage 'https://www.waves.com/'
+  url "https://cf-installers.waves.com/WavesCentral/Install_Waves_Central.dmg"
+  name "Waves Central"
+  desc "Client to install and activate Waves products"
+  homepage "https://www.waves.com/"
 
-  app 'Waves Central.app'
+  app "Waves Central.app"
 end

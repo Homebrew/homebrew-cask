@@ -1,13 +1,13 @@
-cask 'ionic-lab' do
+cask "ionic-lab" do
   version :latest
   sha256 :no_check
 
-  # ionic-io-assets.s3.amazonaws.com was verified as official when first introduced to the cask
-  url 'https://ionic-io-assets.s3.amazonaws.com/labs/IonicLab.dmg'
-  name 'IonicLab'
-  homepage 'https://lab.ionic.io/'
+  # ionic-io-assets.s3.amazonaws.com/ was verified as official when first introduced to the cask
+  url "https://ionic-io-assets.s3.amazonaws.com/labs/IonicLab.dmg"
+  name "IonicLab"
+  homepage "https://lab.ionic.io/"
 
-  app 'Ionic Lab.app'
+  app "Ionic Lab.app"
 
   caveats do
     discontinued

@@ -1,11 +1,12 @@
-cask 'navicat-for-mysql' do
-  version '12.1.27'
-  sha256 'ea969a9d837eaf4d79df3df736fdbd70a273ef29e50a58c27b804d940711c28f'
+cask "navicat-for-mysql" do
+  version "15.0.22"
+  sha256 "11a79f0281a51a6e395e31a35e2252cba1c3b8b2c324c9bd17eec82a8e66bcdb"
 
   url "http://download.navicat.com/download/navicat#{version.major_minor.no_dots}_mysql_en.dmg"
-  appcast 'https://www.navicat.com/updater/v120/sysProfileInfo.php?appName=Navicat%20for%20MySQL&appLang=en'
-  name 'Navicat for MySQL'
-  homepage 'https://www.navicat.com/products/navicat-for-mysql'
+  appcast "https://updater.navicat.com/mac/navicat_updates.php?appName=Navicat%20for%20MySQL&appLang=en"
+  name "Navicat for MySQL"
+  desc "Database administration and development tool"
+  homepage "https://www.navicat.com/products/navicat-for-mysql"
 
-  app 'Navicat for MySQL.app'
+  app "Navicat for MySQL.app"
 end

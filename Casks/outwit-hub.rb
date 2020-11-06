@@ -1,10 +1,10 @@
-cask 'outwit-hub' do
+cask "outwit-hub" do
   version :latest
   sha256 :no_check
 
-  url 'https://www.outwit.com/downloads/release/outwit-hub.en-US.mac64.dmg'
-  name 'OutWit Hub'
-  homepage 'https://www.outwit.com/'
+  url "https://www.outwit.com/downloads/release/outwit-hub.en-US.mac64.dmg"
+  name "OutWit Hub"
+  homepage "https://www.outwit.com/"
 
-  app 'Outwit Hub.app'
+  app "Outwit Hub.app"
 end

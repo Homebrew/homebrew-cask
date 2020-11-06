@@ -1,18 +1,19 @@
-cask 'tastyworks' do
-  version '1.0.16'
-  sha256 'd2c16129f6031da04c2402dee449ddeaa64ae3766df22fd50e7917314c8d61f7'
+cask "tastyworks" do
+  version "1.10.0"
+  sha256 "111ddded882be3a244cd560c9b3cf2303cc98347ae5dfb95aa38f00dd0ecb492"
 
   url "https://download.tastyworks.com/desktop-#{version.major}.x.x/#{version}/tastyworks-#{version}.dmg"
-  appcast 'https://tastyworks.com/technology.html'
-  name 'tastyworks'
-  homepage 'https://tastyworks.com/'
+  appcast "https://tastyworks.freshdesk.com/support/solutions/articles/43000435186-recent-release-notes",
+          must_contain: version.major_minor
+  name "tastyworks"
+  homepage "https://tastyworks.com/"
 
   auto_updates true
 
-  app 'tastyworks.app'
+  app "tastyworks.app"
 
   zap trash: [
-               '~/Library/Application Support/tastyworks',
-               '~/Library/Saved Application State/com.tastyworks.desktop.savedState',
-             ]
+    "~/Library/Application Support/tastyworks",
+    "~/Library/Saved Application State/com.tastyworks.desktop.savedState",
+  ]
 end

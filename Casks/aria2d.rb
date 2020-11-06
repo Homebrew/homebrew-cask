@@ -1,14 +1,15 @@
-cask 'aria2d' do
-  version '458,1569152996'
-  sha256 '083e285fd294f5878661c0e599eb02ca00460c34f8df193fadaf5015cc54feb1'
+cask "aria2d" do
+  version "1.3.5"
+  sha256 "9bb019fb9b19b878403767fd07423633a0daaeb1ed6ca807c64043b3b4f76ce1"
 
-  # dl.devmate.com/com.xjbeta.Aria2D was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.xjbeta.Aria2D/#{version.before_comma}/#{version.after_comma}/Aria2D-#{version.before_comma}.zip"
-  appcast 'https://updates.devmate.com/com.xjbeta.Aria2D.xml'
-  name 'Aria2D'
-  homepage 'https://github.com/xjbeta/Aria2D'
+  # githubusercontent.com/xjbeta/ was verified as official when first introduced to the cask
+  url "https://raw.githubusercontent.com/xjbeta/AppUpdaterAppcasts/master/Aria2D/Aria2D%20#{version}.dmg"
+  appcast "https://raw.githubusercontent.com/xjbeta/AppUpdaterAppcasts/master/Aria2D/Appcast.xml"
+  name "Aria2D"
+  desc "Aria2 GUI"
+  homepage "https://github.com/xjbeta/Aria2D"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'Aria2D.app'
+  app "Aria2D.app"
 end

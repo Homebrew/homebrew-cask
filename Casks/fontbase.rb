@@ -1,18 +1,20 @@
-cask 'fontbase' do
-  version '2.10.2'
-  sha256 '3829985f2ee91d2eb420f2fe0ea088c9ef6eaaf1895b0a490198fde78a49b6bd'
+cask "fontbase" do
+  version "2.13.2"
+  sha256 "210732e11a335d44f51ac63b0ae53751cd7cba430f40a9138c89f075f6e6ed3e"
 
   url "https://releases.fontba.se/mac/FontBase-#{version}.dmg"
-  appcast 'https://releases.fontba.se/mac/latest-mac.yml'
-  name 'FontBase'
-  homepage 'https://fontba.se/'
+  appcast "https://releases.fontba.se/mac/latest-mac.yml"
+  name "FontBase"
+  homepage "https://fontba.se/"
 
-  app 'FontBase.app'
+  auto_updates true
+
+  app "FontBase.app"
 
   zap trash: [
-               '~/Library/Preferences/com.dominiklevitsky.fontbase.helper.plist',
-               '~/Library/Preferences/com.dominiklevitsky.fontbase.plist',
-               '~/Library/Application Support/FontBase',
-               '~/Library/Saved Application State/com.dominiklevitsky.fontbase.savedState',
-             ]
+    "~/Library/Preferences/com.dominiklevitsky.fontbase.helper.plist",
+    "~/Library/Preferences/com.dominiklevitsky.fontbase.plist",
+    "~/Library/Application Support/FontBase",
+    "~/Library/Saved Application State/com.dominiklevitsky.fontbase.savedState",
+  ]
 end

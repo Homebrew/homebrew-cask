@@ -60,14 +60,14 @@ If the issue is still not solved, see the guides for common problems:
 
 ## Requests
 
-* Cask requests will be automatically closed. If you want a cask added, [submit a pull request](https://github.com/Homebrew/homebrew-cask/blob/master/CONTRIBUTING.md#adding-a-cask).
+* Issues requesting new casks will be closed. If you want a cask added to the main repositories, [submit a pull request](https://github.com/Homebrew/homebrew-cask/blob/master/CONTRIBUTING.md#adding-a-cask).
 * For a feature request, [use this template](https://github.com/Homebrew/homebrew-cask/issues/new?template=02_feature_request.md).
 
 ## Questions? Wanna chat?
 
 We’re really rather friendly! Here are the best places to talk about the project:
 
-* If none of the templates above is appropriate, [open an issue](https://github.com/Homebrew/homebrew-cask/issues/new).
+* [Open an issue](https://github.com/Homebrew/homebrew-cask/issues/new/choose).
 * Join us on [discourse.brew.sh (forum)](https://discourse.brew.sh)
 
 ## License

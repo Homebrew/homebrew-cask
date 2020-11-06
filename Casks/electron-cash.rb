@@ -1,13 +1,14 @@
-cask 'electron-cash' do
-  version '4.0.10'
-  sha256 '8e2bd667a9681ec896f080d00e5d5655c00e52291561bf8dedb481c10fc69a29'
+cask "electron-cash" do
+  version "4.2.0"
+  sha256 "0d229e60c803536aab7510d14a66a8aaf8bcad936d637ee220329443d75ae76f"
 
   url "https://electroncash.org/downloads/#{version}/mac/Electron-Cash-#{version}-macosx.dmg"
-  appcast 'https://github.com/Electron-Cash/Electron-Cash/releases.atom'
-  name 'Electron Cash'
-  homepage 'https://www.electroncash.org/'
+  appcast "https://github.com/Electron-Cash/Electron-Cash/releases.atom"
+  name "Electron Cash"
+  desc "Thin client for Bitcoin Cash"
+  homepage "https://www.electroncash.org/"
 
-  app 'Electron-Cash.app'
+  app "Electron-Cash.app"
 
-  zap trash: '~/.electron-cash'
+  zap trash: "~/.electron-cash"
 end

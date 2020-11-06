@@ -1,16 +1,46 @@
-name: Scheduled automerge.
+name: Automerge
 
 on:
-  # Keeps failing, try enabling again in future.
-  # status:
+  push:
+    branches:
+      - debug-automerge
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '0 * * * *'
+  workflow_run:
+    workflows:
+      - CI
+    types:
+      - completed
+  pull_request_review:
+    types:
+      - submitted
+  pull_request_target:
+    types:
+      - unlabeled
+      - ready_for_review
+  workflow_dispatch:
+    inputs:
+      pull-request:
+        description: Pull Request Number
+        required: false
 
 jobs:
   automerge:
+    if: >
+      startsWith(github.repository, 'Homebrew/') &&
+      (
+        (
+          github.event.review.state == 'approved' &&
+          github.event.pull_request.base.repo.full_name == github.event.pull_request.head.repo.full_name
+        ) || github.event_name != 'pull_request_review'
+      )
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - uses: ./.github/actions/automerge
-        env:
-          HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+      - uses: reitermarkus/automerge@6f1c6022acbe3fa86f0cdd2c2d1ea446fc035cfe
+        with:
+          token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+          merge-method: squash
+          squash-title: true
+          do-not-merge-labels: 'do not merge,awaiting maintainer feedback,awaiting user reply'
+          pull-request: ${{ github.event.inputs.pull-request }}
+          dry-run: ${{ github.ref == 'refs/heads/debug-automerge' }}

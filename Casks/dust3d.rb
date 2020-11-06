@@ -1,12 +1,12 @@
-cask 'dust3d' do
-  version '1.0.0-beta.24'
-  sha256 '7d56d34edb3d02af05805317ac4285849d30adc8959a420aa5c88ffe73b22725'
+cask "dust3d" do
+  version "1.0.0-rc.6"
+  sha256 "bc2714e22a9c1ad712a9dc8fca806b50d1f47142da7e02e5a74ff95c402959aa"
 
-  # github.com/huxingyi/dust3d was verified as official when first introduced to the cask
+  # github.com/huxingyi/dust3d/ was verified as official when first introduced to the cask
   url "https://github.com/huxingyi/dust3d/releases/download/#{version}/dust3d-#{version}.dmg"
-  appcast 'https://github.com/huxingyi/dust3d/releases.atom'
-  name 'Dust3D'
-  homepage 'https://dust3d.org/'
+  appcast "https://github.com/huxingyi/dust3d/releases.atom"
+  name "Dust3D"
+  homepage "https://dust3d.org/"
 
   app "dust3d-#{version}.app"
 end

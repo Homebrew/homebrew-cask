@@ -1,17 +1,20 @@
-cask 'qiyimedia' do
-  version '20191014,5.14.11'
-  sha256 'd9a8c09fd7b5f039d6e600ef755a6aa5c592ee15af7b52824f8b3c8c01bec02b'
+cask "qiyimedia" do
+  version "20200914,11.9.0"
+  sha256 "f92a51ddcdd906935a5e4298f17c56e7c9e1af5da375867082ade0fcda8f44d2"
 
-  url 'https://mbdapp.iqiyi.com/j/ot/iQIYIMedia_000.dmg'
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://mbdapp.iqiyi.com/j/ot/iQIYIMedia_000.dmg'
-  name '爱奇艺视频'
-  homepage 'https://app.iqiyi.com/mac/player/index.html'
+  url "https://mbdapp.iqiyi.com/j/ot/iQIYIMedia_271.dmg"
+  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://mbdapp.iqiyi.com/j/ot/iQIYIMedia_271.dmg",
+          must_contain: version.before_comma
+  name "爱奇艺视频"
+  homepage "https://app.iqiyi.com/mac/player/index.html"
 
-  app '爱奇艺.app'
+  depends_on macos: ">= :catalina"
+
+  app "爱奇艺.app"
 
   zap trash: [
-               '~/Library/Application Scripts/com.iqiyi.player',
-               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.iqiyi.player.sfl*',
-               '~/Library/Containers/com.iqiyi.player',
-             ]
+    "~/Library/Application Scripts/com.iqiyi.player",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.iqiyi.player.sfl*",
+    "~/Library/Containers/com.iqiyi.player",
+  ]
 end

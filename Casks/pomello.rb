@@ -1,11 +1,11 @@
-cask 'pomello' do
-  version '0.10.7'
-  sha256 '9535536d27a12947572343909d71510bdfd678a32e47720ffb1ff455b07adc7f'
+cask "pomello" do
+  version "0.10.14"
+  sha256 "a4082996e0fb71af673e11b55b73efaa6602bd0acbc7b895a39f9d4e28dce0b7"
 
-  url 'https://pomelloapp.com/download/mac/latest'
-  appcast 'https://pomelloapp.com/download/mac'
-  name 'Pomello'
-  homepage 'https://pomelloapp.com/'
+  url "https://pomelloapp.com/download/mac/latest"
+  appcast "https://pomelloapp.com/download/mac"
+  name "Pomello"
+  homepage "https://pomelloapp.com/"
 
-  app 'Pomello.app'
+  app "Pomello.app"
 end

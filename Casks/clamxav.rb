@@ -1,18 +1,19 @@
-cask 'clamxav' do
-  version '3.0.14_8208'
-  sha256 'd829a9af263f264efe490f2ab8ed06bf937fbee553165a5f164bd9640bdedb47'
+cask "clamxav" do
+  version "3.1.1_8632"
+  sha256 "3168436f9cdffef0a1ab2f705cdaad287d6374c537119fd65462a2997ad6e919"
 
   url "https://cdn.clamxav.com/ClamXAVdownloads/ClamXAV_#{version}.zip"
   appcast "https://www.clamxav.com/sparkle/appcast#{version.major}.xml"
-  name 'ClamXAV'
-  homepage 'https://www.clamxav.com/'
+  name "ClamXAV"
+  desc "Anti-virus and malware scanner"
+  homepage "https://www.clamxav.com/"
 
-  app 'ClamXAV.app'
+  app "ClamXAV.app"
 
   zap trash: [
-               '~/Library/Caches/uk.co.markallan.clamxav',
-               '~/Library/Logs/clamXav-scan.*',
-             ]
+    "~/Library/Caches/uk.co.markallan.clamxav",
+    "~/Library/Logs/clamXav-scan.*",
+  ]
 
   caveats do
     # this happens sometime after installation, but still worth warning about

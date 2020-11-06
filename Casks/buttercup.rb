@@ -1,12 +1,13 @@
-cask 'buttercup' do
-  version '1.17.0'
-  sha256 'bcb4ff0c4ecba8b79541e41b4c18474894f0059d58c98a050539fcd5854c6dab'
+cask "buttercup" do
+  version "1.20.5"
+  sha256 "37cb9c643fd8564d3e0114f15a640f36caf7b5e82d8ca7b5cc8f65657c133c81"
 
-  # github.com/buttercup/buttercup-desktop was verified as official when first introduced to the cask
-  url "https://github.com/buttercup/buttercup-desktop/releases/download/v#{version}/Buttercup-#{version}-mac.zip"
-  appcast 'https://github.com/buttercup/buttercup-desktop/releases.atom'
-  name 'Buttercup'
-  homepage 'https://buttercup.pw/'
+  # github.com/buttercup/buttercup-desktop/ was verified as official when first introduced to the cask
+  url "https://github.com/buttercup/buttercup-desktop/releases/download/v#{version}/Buttercup-#{version}.dmg"
+  appcast "https://github.com/buttercup/buttercup-desktop/releases.atom"
+  name "Buttercup"
+  desc "Javascript Secrets Vault - Multi-Platform Desktop Application"
+  homepage "https://buttercup.pw/"
 
-  app 'Buttercup.app'
+  app "Buttercup.app"
 end

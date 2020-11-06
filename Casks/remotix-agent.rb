@@ -1,38 +1,35 @@
-cask 'remotix-agent' do
-  version '1.2.4'
-  sha256 '281de5dc3d626ad26fd304baf994d80e3f6d0462cd01281d21f5eb82785be397'
+cask "remotix-agent" do
+  version "1.4.11-21038"
+  sha256 "ae8b3a4593ea3f95ba7d18176d84df32860f4868a71c4f5eed026995cb9166a1"
 
-  url 'https://downloads.remotixcloud.com/agent-mac/RemotixAgent.pkg'
-  name 'Remotix Agent'
-  homepage 'https://remotixcloud.com/'
+  # remotix.com/agent-mac was verified as official when first introduced to the cask
+  url "https://downloads.remotix.com/agent-mac/RemotixAgent-#{version}.pkg"
+  appcast "https://remotix.com/downloads-mac/"
+  name "Remotix Agent"
+  homepage "https://remotixcloud.com/"
 
   auto_updates true
 
-  pkg 'RemotixAgent.pkg'
+  pkg "RemotixAgent-#{version}.pkg"
 
   uninstall pkgutil:    [
-                          'com.nulana.rxagentmac.daemon',
-                          'com.nulana.rxagentmac',
-                        ],
+    "com.nulana.rxagentmac.daemon",
+    "com.nulana.rxagentmac",
+  ],
             signal:     [
-                          ['TERM', 'com.nulana.rxagentmac.user'],
-                          ['QUIT', 'com.nulana.rxagentmac.user'],
-                          ['INT', 'com.nulana.rxagentmac.user'],
-                          ['HUP', 'com.nulana.rxagentmac.user'],
-                          ['KILL', 'com.nulana.rxagentmac.user'],
-                          ['TERM', 'com.nulana.rxagentmac'],
-                          ['QUIT', 'com.nulana.rxagentmac'],
-                          ['INT', 'com.nulana.rxagentmac'],
-                          ['HUP', 'com.nulana.rxagentmac'],
-                          ['KILL', 'com.nulana.rxagentmac'],
-                        ],
+              ["KILL", "com.nulana.rxagentmac.user"],
+              ["KILL", "com.nulana.rxagentmac"],
+            ],
             launchctl:  [
-                          'com.nulana.rxagentmac.user',
-                          'com.nulana.rxagentmac.daemon',
-                        ],
-            login_item: 'Remotix Agent',
+              "com.nulana.rxagentmac.user",
+              "com.nulana.rxagentmac.daemon",
+              "com.nulana.rxagentmac.gui",
+              "com.nulana.rxagentmac.rc",
+            ],
+            login_item: "Remotix Agent",
+            quit:       "com.nulana.rxagentmac",
             delete:     [
-                          '/Library/LaunchAgents/com.nulana.rxagentmac.user.plist',
-                          '/Library/LaunchDaemons/com.nulana.rxagentmac.daemon.plist',
-                        ]
+              "/Library/LaunchAgents/com.nulana.rxagentmac.user.plist",
+              "/Library/LaunchDaemons/com.nulana.rxagentmac.daemon.plist",
+            ]
 end

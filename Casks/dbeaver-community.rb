@@ -1,16 +1,17 @@
-cask 'dbeaver-community' do
-  version '6.2.2'
-  sha256 '8259594122bd27d9b05fb4824c070ebc8bfcbec4e4998119d3490a14ccb6e35d'
+cask "dbeaver-community" do
+  version "7.2.4"
+  sha256 "bc95d5ef8a8720a76db62d651bb98a1b6a48966c04b097cbb9a99c531892ecdd"
 
-  # github.com/dbeaver/dbeaver was verified as official when first introduced to the cask
+  # github.com/dbeaver/dbeaver/ was verified as official when first introduced to the cask
   url "https://github.com/dbeaver/dbeaver/releases/download/#{version}/dbeaver-ce-#{version}-macos.dmg"
-  appcast 'https://github.com/dbeaver/dbeaver/releases.atom'
-  name 'DBeaver Community Edition'
-  homepage 'https://dbeaver.io/'
+  appcast "https://github.com/dbeaver/dbeaver/releases.atom"
+  name "DBeaver Community Edition"
+  desc "Free universal database tool and SQL client"
+  homepage "https://dbeaver.io/"
 
-  app 'DBeaver.app'
+  app "DBeaver.app"
 
   caveats do
-    depends_on_java '8+'
+    depends_on_java "8+"
   end
 end

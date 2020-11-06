@@ -1,11 +1,12 @@
-cask 'fastrawviewer' do
-  version '1.5.3.1519'
-  sha256 '13de302a1069136c89db652ae72e0823a8d61eb6d90fac8044c35d5bc64717ea'
+cask "fastrawviewer" do
+  version "1.6.1.1665"
+  sha256 "23a1223de88347d9c939746a3dab3bd1a0169d6ac52198fef67903f1d7717b88"
 
   url "https://updates.fastrawviewer.com/data/FastRawViewer-#{version}.dmg"
-  appcast 'https://www.fastrawviewer.com/download'
-  name 'FastRawViewer'
-  homepage 'https://www.fastrawviewer.com/'
+  appcast "https://www.fastrawviewer.com/download"
+  name "FastRawViewer"
+  desc "Opens RAW files and renders them on-the-fly"
+  homepage "https://www.fastrawviewer.com/"
 
-  app 'FastRawViewer.app'
+  app "FastRawViewer.app"
 end
