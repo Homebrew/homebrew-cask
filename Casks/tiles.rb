@@ -10,6 +10,7 @@ cask "tiles" do
   homepage "https://www.sempliva.com/tiles/"
 
   auto_updates true
+  depends_on macos: ">= :el_capitan"
 
   app "Tiles.app"
 
