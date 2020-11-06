@@ -10,4 +10,10 @@ cask "knime" do
   homepage "https://www.knime.com/"
 
   app "KNIME #{version}.app"
+
+  zap trash: [
+    "~/Library/Caches/org.knime.product",
+    "~/Library/Preferences/org.knime.product.plist",
+    "~/Library/Saved Application State/org.knime.product.savedState",
+  ]
 end
