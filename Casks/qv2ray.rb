@@ -6,10 +6,16 @@ cask "qv2ray" do
   url "https://github.com/Qv2ray/Qv2ray/releases/download/v#{version}/Qv2ray-v#{version}.macOS-x64.dmg"
   appcast "https://github.com/Qv2ray/Qv2ray/releases.atom"
   name "Qv2ray"
-  homepage "https://qv2ray.github.io/"
+  desc "V2Ray GUI Client with extensive protocol support"
+  homepage "https://qv2ray.net/"
 
-  auto_updates true
-  depends_on macos: ">= :high_sierra"
+  conflicts_with cask: 'qv2ray'
+  depends_on macos: ">= :mojave"
+  depends_on formula: "v2ray/v2ray/v2ray-core"
 
   app "qv2ray.app"
+  
+  zap trash: [
+    "~/Library/Preferences/qv2ray",
+  ]
 end
