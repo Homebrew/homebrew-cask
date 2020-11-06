@@ -10,7 +10,6 @@ cask "qv2ray" do
   homepage "https://qv2ray.net/"
 
   depends_on macos: ">= :mojave"
-  depends_on formula: "v2ray/v2ray/v2ray-core"
 
   app "qv2ray.app"
 
