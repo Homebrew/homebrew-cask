@@ -9,7 +9,6 @@ cask "qv2ray" do
   desc "V2Ray GUI Client with extensive protocol support"
   homepage "https://qv2ray.net/"
 
-  conflicts_with cask: 'qv2ray'
   depends_on macos: ">= :mojave"
   depends_on formula: "v2ray/v2ray/v2ray-core"
 
