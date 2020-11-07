@@ -1,6 +1,6 @@
 cask "kaleidoscope" do
-  version "2.3.1,1441-apr-7-2020"
-  sha256 "720abc4bc1a5cdb0d58fb1794d16c9d4e00d82a570d428ff7b44e36fa45212bd"
+  version "2.3.4,1444-nov-6-2020"
+  sha256 "5d488be4aef2a46108832b625e07711eca5efab926926022f75956702d301b10"
 
   # appcasts.hypergiant.com/ks/prod/ was verified as official when first introduced to the cask
   url "https://appcasts.hypergiant.com/ks/prod/Kaleidoscope-#{version.before_comma}-build-#{version.after_comma}.zip"
