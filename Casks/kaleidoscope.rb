@@ -2,7 +2,7 @@ cask "kaleidoscope" do
   version "2.3.4,1444-nov-6-2020"
   sha256 "8dd95241d5ee02674c78bc7a4b2dc19adbb81c6db16d1d59dc5c9cf9440891fd"
 
-  # updates.kaleidoscope.app was verified as official when first introduced to the cask
+  # updates.kaleidoscope.app/ was verified as official when first introduced to the cask
   url "https://updates.kaleidoscope.app/v2/prod/Kaleidoscope-#{version.before_comma}-build-#{version.after_comma}.app.zip"
   appcast "https://appcasts.hypergiant.com/ks/prod/updates"
   name "Kaleidoscope"
