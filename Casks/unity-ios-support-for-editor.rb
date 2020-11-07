@@ -1,6 +1,6 @@
 cask "unity-ios-support-for-editor" do
-  version "2020.1.11f1,698c1113cef0"
-  sha256 "469aa61a118f01b722dfee50906a9ae4af957c0034b3805a0b15d116d65329bd"
+  version "2020.1.12f1,55b56f0a86e3"
+  sha256 "ecccacac1c64857bce84ec65b2031f038ce4e1893f5ac4c96b97bdf9a2711bd4"
 
   # download.unity3d.com/download_unity/ was verified as official when first introduced to the cask
   url "https://download.unity3d.com/download_unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-#{version.before_comma}.pkg"
