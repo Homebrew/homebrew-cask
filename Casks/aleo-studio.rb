@@ -4,7 +4,6 @@ cask "aleo-studio" do
 
   # aleo-studio-releases.sfo2.digitaloceanspaces.com/ was verified as official when first introduced to the cask
   url "https://aleo-studio-releases.sfo2.digitaloceanspaces.com/#{version}/Aleo%20Studio-#{version}.pkg"
-  appcast "https://github.com/fitztrev/shuttle/releases.atom"
   name "Aleo Studio"
   desc "World's First IDE for Zero-Knowledge Proofs"
   homepage "https://aleo.studio/"
