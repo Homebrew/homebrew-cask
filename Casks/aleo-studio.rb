@@ -5,14 +5,12 @@ cask "aleo-studio" do
   # aleo-studio-releases.sfo2.digitaloceanspaces.com/ was verified as official when first introduced to the cask
   url "https://aleo-studio-releases.sfo2.digitaloceanspaces.com/#{version}/Aleo%20Studio-#{version}.pkg"
   name "Aleo Studio"
-  desc "World's First IDE for Zero-Knowledge Proofs"
+  desc "IDE for zero-knowledge proofs"
   homepage "https://aleo.studio/"
 
   depends_on macos: ">= :high_sierra"
 
-  pkg "Aleo Studio-0.10.3.pkg"
+  pkg "Aleo Studio-#{version}.pkg"
 
-  uninstall pkgutil: [
-    "com.studio.aleo",
-  ]
+  uninstall pkgutil: "com.studio.aleo"
 end
