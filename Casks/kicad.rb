@@ -7,7 +7,7 @@ cask "kicad" do
   appcast "https://kicad-downloads.s3.cern.ch/?delimiter=/&prefix=osx/stable/"
   name "KiCad"
   desc "Electronics design automation suite"
-  homepage "https://kicad-pcb.org/"
+  homepage "https://kicad.org/"
 
   depends_on macos: ">= :mojave"
 
