@@ -1,6 +1,6 @@
 cask "fontforge" do
-  version "2020.03.14.67687b0"
-  sha256 "394e4b1d216abd3d716dba94d9b6c7eacfdd9b3fa0c48d29fcaa1e27695593ce"
+  version "2020.11.07.21ad4a1"
+  sha256 "64e7193485b2047ff497ec43a39793e18593b2702a0724810f8c2c8ca8a34999"
 
   # github.com/fontforge/fontforge/ was verified as official when first introduced to the cask
   url "https://github.com/fontforge/fontforge/releases/download/#{version.major_minor_patch.no_dots}/FontForge-#{version.dots_to_hyphens}.app.dmg"
