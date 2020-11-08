@@ -1,5 +1,5 @@
 cask "macx-dvd-ripper-pro" do
-  version "6.5.4,20201021"
+  version "6.5.4,20201015"
   sha256 "fc7ad20e55eedac7f1c864658ef8fe65e89a8bb227a68a829c06a83e1882f81a"
 
   url "https://www.macxdvd.com/download/macx-dvd-ripper-pro.dmg"
