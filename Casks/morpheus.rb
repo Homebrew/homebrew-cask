@@ -6,7 +6,10 @@ cask "morpheus" do
   url "https://imc.zih.tu-dresden.de/morpheus/packages/mac/Morpheus_#{version}.dmg"
   appcast "https://morpheus.gitlab.io/download/"
   name "Morpheus"
+  desc "Modelling environment for multi-cellular systems biology"
   homepage "https://morpheus.gitlab.io/"
+
+  conflicts_with cask: "homebrew/cask-versions/morpheus-beta"
 
   app "Morpheus.app"
 
