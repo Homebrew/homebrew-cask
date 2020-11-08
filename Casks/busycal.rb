@@ -1,14 +1,15 @@
 cask "busycal" do
-  version "3.11,411115"
-  sha256 "f14625f5a22da30bd2d2a1ad34c3b1119478a21410fb2e52779c2e12635be67e"
+  version "3.11-2020-11-08-00-46"
+  sha256 "00c2214561b980e658d9e6cf192eb295f88dca577ee63ef04414886565df3738"
 
   url "https://www.busymac.com/download/BusyCal.zip"
-  appcast "https://www.busymac.com/busycal/news.plist"
+  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.busymac.com/download/BusyCal.zip"
   name "BusyCal"
   desc "Calendar software focusing on flexibility and reliability"
   homepage "https://busymac.com/busycal/index.html"
 
   auto_updates true
+  depends_on macos: ">= :el_capitan"
 
   pkg "BusyCal Installer.pkg"
 
