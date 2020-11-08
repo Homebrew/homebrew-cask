@@ -6,6 +6,7 @@ cask "pulse-sms" do
   url "https://github.com/maplemedia/pulse-sms-desktop/releases/download/v#{version}/pulse-sms-#{version}.dmg"
   appcast "https://github.com/maplemedia/pulse-sms-desktop/releases.atom"
   name "Pulse SMS"
+  desc "Desktop client for Pulse SMS"
   homepage "https://messenger.klinkerapps.com/overview/platform-mac.html"
 
   app "Pulse SMS.app"
