@@ -1,6 +1,6 @@
 cask "pdf-squeezer" do
-  version "4.1.1"
-  sha256 "71bd848a5fcc4e6d0738827802e1dd1c2f0efc640e25e6f911808d3e8265c355"
+  version "4.2"
+  sha256 "9b6f46c29d1410848f47d7d2dbf39ff7d585861155a8ea8b3124bcb990fded94"
 
   url "https://www.witt-software.com/downloads/pdfsqueezer/PDF%20Squeezer.dmg"
   appcast "https://www.witt-software.com/downloads/pdfsqueezer/pdfsq4-appcast.xml"
