@@ -1,6 +1,6 @@
 cask "dropbox-passwords" do
-  version "5.2.4"
-  sha256 "74d41ac8296c4dfa71cda236320173c83856b1d99fcc6bcc9de820d669cd85ba"
+  version "7.2.25"
+  sha256 "8ef1fd2a6d1aac57b5bdcade398fa0bc387a9a079113df66e96fa56817269a06"
 
   # clientupdates.dropboxstatic.com was verified as official when first introduced to the cask
   url "https://clientupdates.dropboxstatic.com/dbx-releng/dropbox_passwords/mac/DropboxPasswords_#{version}.dmg"
