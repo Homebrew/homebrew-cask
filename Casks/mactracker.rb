@@ -5,6 +5,7 @@ cask "mactracker" do
   url "https://www.mactracker.ca/downloads/Mactracker_#{version}.zip"
   appcast "https://update.mactracker.ca/appcast-b.xml"
   name "Mactracker"
+  desc "Detailed information on every Apple product ever made"
   homepage "https://mactracker.ca/"
 
   auto_updates true

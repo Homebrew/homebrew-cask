@@ -5,6 +5,7 @@ cask "symboliclinker" do
   url "https://github.com/nickzman/symboliclinker/releases/download/v#{version}/SymbolicLinker#{version}.dmg"
   appcast "https://github.com/nickzman/symboliclinker/releases.atom"
   name "SymbolicLinker"
+  desc "Service that allows users to make symbolic links in the Finder"
   homepage "https://github.com/nickzman/symboliclinker"
 
   service "SymbolicLinker.service"

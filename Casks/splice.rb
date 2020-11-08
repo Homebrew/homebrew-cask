@@ -6,6 +6,7 @@ cask "splice" do
   url "https://splicedesktop.s3.amazonaws.com/darwin/stable/Splice.app.zip"
   appcast "https://api.splice.com/v2/desktop/darwin/stable/latest?v=0.0.0"
   name "Splice"
+  desc "Cloud-based music creation and collaboration platform"
   homepage "https://splice.com/"
 
   app "Splice.app"

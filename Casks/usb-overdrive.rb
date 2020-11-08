@@ -4,6 +4,7 @@ cask "usb-overdrive" do
 
   url "https://www.usboverdrive.com/download/USB-Overdrive-#{version.no_dots}.dmg"
   name "USB Overdrive"
+  desc "USB and Bluetooth device driver"
   homepage "https://www.usboverdrive.com/"
 
   pkg "Install USB Overdrive.pkg"

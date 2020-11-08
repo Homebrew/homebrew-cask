@@ -5,6 +5,7 @@ cask "spotify" do
   # scdn.co/ was verified as official when first introduced to the cask
   url "https://download.scdn.co/Spotify.dmg"
   name "Spotify"
+  desc "Music streaming service"
   homepage "https://www.spotify.com/"
 
   app "Spotify.app"

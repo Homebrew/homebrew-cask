@@ -6,6 +6,7 @@ cask "bricklink-studio" do
   url "https://blstudio.s3.amazonaws.com/Studio#{version.major}.0/Archive/#{version}/Studio+#{version.major}.0.pkg"
   appcast "https://www.bricklink.com/v3/studio/download.page"
   name "Studio"
+  desc "Build, render, and create LEGO instructions"
   homepage "https://www.bricklink.com/v3/studio/download.page"
 
   auto_updates true

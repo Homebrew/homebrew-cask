@@ -4,6 +4,7 @@ cask "raindropio" do
 
   url "https://raindrop.io/releases/mac/Raindrop.dmg"
   name "Raindrop.io"
+  desc "All-in-one bookmark manager"
   homepage "https://raindrop.io/"
 
   app "Raindrop.io.app"

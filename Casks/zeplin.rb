@@ -5,6 +5,7 @@ cask "zeplin" do
   url "https://api.zeplin.io/urls/download-mac"
   appcast "https://rink.hockeyapp.net/api/2/apps/8926efffe734b6d303d09f41d90c34fc"
   name "Zeplin"
+  desc "Share, organize and collaborate on designs"
   homepage "https://zeplin.io/"
 
   auto_updates true
