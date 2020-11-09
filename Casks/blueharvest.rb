@@ -1,6 +1,6 @@
 cask "blueharvest" do
-  version "8.0.4"
-  sha256 "24cba7a436a51c9249b8c1f5f660231915b1d74e53e558a9a8a693b9ba3e54ab"
+  version "8.0.5"
+  sha256 "09ad2c64b12736abf5a52ec92fdf6b10a786d215e4a6a05863aa27f0dafbb8fb"
 
   url "https://zeroonetwenty.com/blueharvest/downloads/BlueHarvest#{version.no_dots}.dmg"
   appcast "https://zeroonetwenty.com/blueharvest/release-notes.html",
