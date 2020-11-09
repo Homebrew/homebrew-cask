@@ -5,6 +5,7 @@ cask "octoscreen" do
   url "https://github.com/orderedlist/octoscreen/releases/download/#{version}/Octoscreen.saver.zip"
   appcast "https://github.com/orderedlist/octoscreen/releases.atom"
   name "Octoscreen"
+  desc "Screensaver with octicons"
   homepage "https://github.com/orderedlist/octoscreen"
 
   screen_saver "Octoscreen.saver"

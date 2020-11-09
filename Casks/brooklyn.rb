@@ -5,6 +5,7 @@ cask "brooklyn" do
   url "https://github.com/pedrommcarrasco/Brooklyn/releases/download/#{version}/Brooklyn.saver.zip"
   appcast "https://github.com/pedrommcarrasco/Brooklyn/releases.atom"
   name "Brooklyn"
+  desc "Screen saver based on animations presented during Apple Special Event Brooklyn"
   homepage "https://github.com/pedrommcarrasco/Brooklyn"
 
   screen_saver "Brooklyn.saver"

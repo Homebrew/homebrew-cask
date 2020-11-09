@@ -5,6 +5,7 @@ cask "shift" do
   url "https://update.tryshift.com/download/version/#{version}/osx_64"
   appcast "https://tryshift.com/download/?platform=mac"
   name "Shift"
+  desc "Workstation to streamline your accounts, apps, and workflows"
   homepage "https://tryshift.com/"
 
   app "Shift.app"

@@ -6,6 +6,7 @@ cask "sublime-merge" do
   url "https://download.sublimetext.com/sublime_merge_build_#{version}_mac.zip"
   appcast "https://www.sublimemerge.com/updates/stable_update_check"
   name "Sublime Merge"
+  desc "Git client"
   homepage "https://www.sublimemerge.com/"
 
   auto_updates true
