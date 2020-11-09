@@ -5,6 +5,7 @@ cask "iridium" do
   url "https://downloads.iridiumbrowser.de/macos/#{version.major_minor}-0/iridiumbrowser-#{version}.dmg"
   appcast "https://iridiumbrowser.de/downloads/macos"
   name "Iridium Browser"
+  desc "Web browser focusing on security and privacy"
   homepage "https://iridiumbrowser.de/"
 
   app "Iridium.app"
