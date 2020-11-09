@@ -1,4 +1,7 @@
-# frozen_string_literal: false
+# frozen_string_literal: true
+
+require "cask/cask_loader"
+require "cask/installer"
 
 require "utils/github"
 require "utils/formatter"
@@ -14,9 +17,7 @@ module Cask
       end
 
       def run
-        with_env HOMEBREW_DEVELOPER: nil do
-          odeprecated "brew cask ci"
-        end
+        odeprecated "brew cask ci", disable_on: Time.new(2020, 12, 31)
 
         raise CaskError, "This command isn’t meant to be run locally." unless ENV.key?("CI")
 

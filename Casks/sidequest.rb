@@ -1,6 +1,6 @@
 cask "sidequest" do
-  version "0.10.14"
-  sha256 "3f6f398e56f3b2ca4dc7107f5a77ecc188de9dc5629fbc9faea3a9383d7b0b28"
+  version "0.10.18"
+  sha256 "a04aac781b7426234a5891f93e4fdf141a7d1fe9e6f2253572b0601f1d8e356a"
 
   # github.com/SideQuestVR/SideQuest/ was verified as official when first introduced to the cask
   url "https://github.com/SideQuestVR/SideQuest/releases/download/v#{version}/SideQuest-#{version}.dmg"

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative "changed_files"
 
 module CiMatrix
@@ -9,7 +11,11 @@ module CiMatrix
     changed_files = ChangedFiles.collect(tap)
 
     ruby_files_in_wrong_directory =
-      changed_files[:modified_ruby_files] - (changed_files[:modified_cask_files] + changed_files[:modified_command_files] + changed_files[:modified_github_actions_files])
+      changed_files[:modified_ruby_files] - (
+      changed_files[:modified_cask_files] +
+      changed_files[:modified_command_files] +
+      changed_files[:modified_github_actions_files]
+    )
 
     if ruby_files_in_wrong_directory.any?
       ruby_files_in_wrong_directory.each do |path|
@@ -35,17 +41,16 @@ module CiMatrix
 
       audit_args = ["--download", appcast_arg, "--online"]
 
-      if changed_files[:added_files].include?(path)
-        audit_args << "--new-cask"
-      end
+      audit_args << "--new-cask" if changed_files[:added_files].include?(path)
 
       {
-        name:       "test (#{cask.token})",
-        cask:       {
+        name:         "test (#{cask.token})",
+        tap:          tap.name,
+        cask:         {
           token: cask.token,
           path:  "./#{path}",
         },
-        audit_args: audit_args,
+        audit_args:   audit_args,
         skip_install: labels.include?("ci-skip-install"),
       }
     end

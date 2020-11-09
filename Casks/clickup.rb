@@ -1,9 +1,11 @@
 cask "clickup" do
-  version "2.0.17"
-  sha256 "7b69e6180074efe4e99d726911066ac9e96166be4439fe13d633e065859048fe"
+  version "2.0.20"
+  sha256 "f9255a34450cc504864d2560c798cec44644ce72ce1ed0860024d59ff2a8a63c"
 
   url "https://attachments.clickup.com/desktop/clickup-desktop-#{version}-mac.dmg"
+  appcast "https://github.com/clickup/clickup-release/releases.atom"
   name "ClickUp"
+  desc "Productivity platform for tasks, docs, goals, and chat"
   homepage "https://clickup.com/"
 
   app "ClickUp.app"

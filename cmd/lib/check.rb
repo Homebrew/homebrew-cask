@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "forwardable"
 
 module Check
@@ -77,7 +79,7 @@ module Check
   end
 
   def self.errors(before, after, cask:)
-    uninstall_directives = cask.artifacts.select { |a| a.class == Cask::Artifact::Uninstall }.first&.directives || {}
+    uninstall_directives = cask.artifacts.find { |a| a.instance_of?(Cask::Artifact::Uninstall) }&.directives || {}
 
     diff = {}
 

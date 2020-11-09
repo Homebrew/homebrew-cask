@@ -3,10 +3,15 @@ cask "macpilot" do
     version "11.1.3"
     sha256 "1990b04414896ef24767e58cd9b56901460375ee8fb805572ca34da019bcda58"
 
-    url "https://www.koingosw.com/products/macpilot/download/old/macpilot_11.1.3_intel_for_1013to1015.dmg"
-  else
+    url "https://www.koingosw.com/products/macpilot/download/old/macpilot_#{version}_intel_for_1013to1015.dmg"
+  elsif MacOS.version <= :catalina
     version "11.1.4"
     sha256 "75fc421d51ebd172ebdf149400fbcd010cf1224529e2e7d3fdf1915e62757f64"
+
+    url "https://www.koingosw.com/products/macpilot/download/old/macpilot_#{version.no_dots}_intel_for_1015.dmg"
+  else
+    version "12.0"
+    sha256 "29e6a546f79393c515c2fbe3b1a170799aa7223f1efa1051e8948af5be7e91cb"
 
     url "https://www.koingosw.com/products/macpilot/download/macpilot.dmg"
     appcast "https://www.koingosw.com/postback/versioncheck.php?appname=macpilot&type=sparkle"

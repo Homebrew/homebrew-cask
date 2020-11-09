@@ -2,16 +2,26 @@ cask "evernote" do
   if MacOS.version <= :yosemite
     version "6.12.3_455520"
     sha256 "fdda9701f1d8ff56a5e8bcadcf5b04dba66ad7e08511700de4675d20fda2bc71"
+
+    url "https://cdn1.evernote.com/mac-smd/public/Evernote_RELEASE_#{version}.dmg"
   elsif MacOS.version <= :el_capitan
     version "7.2.3_456885"
     sha256 "eb9a92d57ceb54570c009e37fa7657a0fa3ab927a445eef382487a3fdde6bb97"
-  else
+
+    url "https://cdn1.evernote.com/mac-smd/public/Evernote_RELEASE_#{version}.dmg"
+  elsif MacOS.version <= :high_sierra
     version "7.14_458244"
     sha256 "1049a40b8497c0e37d7fed8828552dba89fa52c826134e05b0d56e431e5033ad"
+
+    url "https://cdn1.evernote.com/mac-smd/public/Evernote_RELEASE_#{version}.dmg"
+  else
+    version "10.2.4-1949"
+    sha256 "2d0d0483d9e2e1f9f52021fb34a4ee3ab9cf2da7f8e654bfdddfa5663ef5baa5"
+
+    url "https://cdn1.evernote.com/boron/mac/builds/Evernote-#{version}.dmg"
   end
 
-  url "https://cdn1.evernote.com/mac-smd/public/Evernote_RELEASE_#{version}.dmg"
-  appcast "https://update.evernote.com/public/ENMacSMD/EvernoteMacUpdate.xml"
+  appcast "https://evernote.s3.amazonaws.com/boron/mac/public/latest-mac.yml"
   name "Evernote"
   desc "App for note taking, organizing, task lists, and archiving"
   homepage "https://evernote.com/"

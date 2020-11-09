@@ -1,6 +1,6 @@
 cask "tiger-trade" do
-  version "6.1.2,20200908:8A94F4"
-  sha256 "fbbf1ef9c2594c3e9bd80db5a830415876cf7e38b4a0ac76c6515fb9538d2a3d"
+  version "6.3.0,20201021:9BD3E9"
+  sha256 "66ef2b3bf3e524a07f0bf7b537269313462c881210e48a9fb9c646a4a7904d2b"
 
   # s.tigerfintech.com/ was verified as official when first introduced to the cask
   url "https://s.tigerfintech.com/desktop/cdn/f/TigerTrade_#{version.before_comma}_#{version.after_comma.before_colon}_#{version.after_colon}.dmg"
@@ -8,7 +8,7 @@ cask "tiger-trade" do
   name "Tiger Trade"
   name "老虎证券"
   desc "Trading platform"
-  homepage "https://www.itiger.com/download/mac"
+  homepage "https://www.itiger.com/download/"
 
   depends_on macos: ">= :sierra"
 

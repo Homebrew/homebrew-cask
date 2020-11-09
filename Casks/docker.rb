@@ -3,8 +3,8 @@ cask "docker" do
     version "18.06.1-ce-mac73,26764"
     sha256 "3429eac38cf0d198039ad6e1adce0016f642cdb914a34c67ce40f069cdb047a5"
   else
-    version "2.3.0.5,48029"
-    sha256 "4f588d98551f316dbfb048e2449358f7b717f48e69b8089d4d1aed61ed9cd60f"
+    version "2.5.0.0,49427"
+    sha256 "db78429815fd571bbed319ece03fbe227a3d497b7d1d37c87b0e5a3600b9a23b"
   end
 
   url "https://desktop.docker.com/mac/stable/#{version.after_comma}/Docker.dmg"
@@ -25,6 +25,7 @@ cask "docker" do
     "/usr/local/bin/docker",
     "/usr/local/bin/docker-compose",
     "/usr/local/bin/docker-credential-desktop",
+    "/usr/local/bin/docker-credential-ecr-login",
     "/usr/local/bin/docker-credential-osxkeychain",
     "/usr/local/bin/hyperkit",
     "/usr/local/bin/kubectl",

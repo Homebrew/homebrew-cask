@@ -9,5 +9,7 @@ cask "tla-plus-toolbox" do
   desc "IDE for TLA+"
   homepage "https://lamport.azurewebsites.net/tla/toolbox.html"
 
+  conflicts_with cask: "homebrew/cask-versions/tla-plus-toolbox-nightly"
+
   app "TLA+ Toolbox.app"
 end

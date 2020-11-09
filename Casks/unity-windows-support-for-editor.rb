@@ -1,11 +1,13 @@
 cask "unity-windows-support-for-editor" do
-  version "2020.1.1f1,2285c3239188"
-  sha256 "ce6ce9dd7c2738d20307b80791ac9f478cb8e1d373447fdbe5e7a28899b0a83a"
+  version "2020.1.12f1,55b56f0a86e3"
+  sha256 "56c1c3ef317a28d296567b6dc5bdd6fb9b0fff974d75f7b85e14836c3630235b"
 
-  url "https://netstorage.unity3d.com/unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-#{version.before_comma}.pkg"
+  # download.unity3d.com/download_unity/ was verified as official when first introduced to the cask
+  url "https://download.unity3d.com/download_unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-#{version.before_comma}.pkg"
   appcast "https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json"
   name "Unity Windows (Mono) Build Support"
-  homepage "https://unity3d.com/unity/"
+  desc "Windows (Mono) taget support for Unity"
+  homepage "https://unity.com/products"
 
   depends_on cask: "unity"
 

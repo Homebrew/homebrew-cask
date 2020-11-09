@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ChangedFiles
   def self.collect(tap)
     commit_range_start = system_command!("git", args: ["rev-parse", "origin/master"]).stdout.chomp

@@ -5,6 +5,7 @@ cask "gpg-suite-pinentry" do
   url "https://releases.gpgtools.org/GPG_Suite-#{version}.dmg"
   appcast "https://gpgtools.org/releases/gka/appcast.xml"
   name "GPG Suite Pinentry"
+  desc "Pinentry GUI for GPG Suite"
   homepage "https://gpgtools.org/"
 
   auto_updates true
@@ -106,5 +107,11 @@ cask "gpg-suite-pinentry" do
 
   caveats do
     files_in_usr_local
+
+    <<~EOS
+      You may need to set "pinentry-program" in `~/.gnupg/gpg-agent.conf` as follows:
+
+        pinentry-program /usr/local/MacGPG2/libexec/pinentry-mac.app/Contents/MacOS/pinentry-mac
+    EOS
   end
 end

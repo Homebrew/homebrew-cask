@@ -4,8 +4,9 @@ cask "turbo-boost-switcher" do
 
   # turbo-boost-switcher.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://turbo-boost-switcher.s3.amazonaws.com/Turbo+Boost+Switcher_#{version}.zip"
-  appcast "https://www.rugarciap.com/turbo-boost-switcher-for-os-x/"
+  appcast "https://www.rugarciap.com/turbo-boost-switcher-for-os-x-blog/"
   name "Turbo Boost Switcher"
+  desc "Enable and disable the Intel CPU Turbo Boost feature"
   homepage "https://www.rugarciap.com/turbo-boost-switcher-for-os-x/"
 
   # App renamed to remove "(English)" suffix

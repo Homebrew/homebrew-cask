@@ -1,6 +1,6 @@
 cask "codekit" do
-  version "3.12.5,32186"
-  sha256 "ba213c300f9f26fb5e65e34d46203368f4e89fd5b35f8f322d63223ad54471c7"
+  version "3.13.3,33081"
+  sha256 "9d12b68ddd2d8b2bdd0efc75079834bb4e2213380d3db53b66996520210710a5"
 
   url "https://codekitapp.com/binaries/codekit-#{version.after_comma}.zip"
   appcast "https://codekitapp.com/api/#{version.major}/appcast.xml"

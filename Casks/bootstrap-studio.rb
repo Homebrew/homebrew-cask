@@ -1,10 +1,11 @@
 cask "bootstrap-studio" do
-  version "5.3.1"
-  sha256 "d5d37efc2011cd474d425b3fb1104b696dee097fde4f0022af43abdf7a3bc9bf"
+  version "5.4.3"
+  sha256 "5c234607daf567afb4c5aff06d8239be292f9e9b0b2d03800f0cf9e7aaddd0d3"
 
   url "https://bootstrapstudio.io/releases/desktop/#{version}/Bootstrap%20Studio.dmg"
   appcast "https://bootstrapstudio.io/pages/releases"
   name "Bootstrap Studio"
+  desc "Design and prototype websites using the Bootstrap framework"
   homepage "https://bootstrapstudio.io/"
 
   auto_updates true

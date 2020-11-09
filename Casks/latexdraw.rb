@@ -1,6 +1,6 @@
 cask "latexdraw" do
-  version "4.0.1"
-  sha256 "f1daf6accb538cb7c8fc465a4a65d74dfa0e97b23a0ed8fecc60f4fe8cb7f81a"
+  version "4.0.2"
+  sha256 "2f74545c75fbd153f2b60e9a2ffb36a6c6bad35be401284be48a30c001d85bcb"
 
   # downloads.sourceforge.net/latexdraw/ was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/latexdraw/LaTeXDraw-#{version}.dmg"

@@ -1,6 +1,6 @@
 cask "airfoil" do
-  version "5.9.1"
-  sha256 "4c62d7b5b8045b1f6adc07b1f4167341ed65978259f83bb817812903282080c6"
+  version "5.9.3"
+  sha256 "ce799d5ccbbc9b099d7fa7245176230fbcc7d87a56fa293e9b11c143d466de4e"
 
   url "https://rogueamoeba.com/airfoil/mac/download/Airfoil.zip"
   appcast "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&bundleid=com.rogueamoeba.Airfoil&platform=osx"

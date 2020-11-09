@@ -1,6 +1,6 @@
 cask "electron" do
-  version "10.1.2"
-  sha256 "2e2696cb187a65330276ec8110537bba9f0a10fc9342dd958ea1b9c37d5aab4c"
+  version "10.1.5"
+  sha256 "30dc5d5a913c38c6ae7fa6913b1a907545f0230157efc066e2d5a7affd26cd1e"
 
   # github.com/electron/electron/ was verified as official when first introduced to the cask
   url "https://github.com/electron/electron/releases/download/v#{version}/electron-v#{version}-darwin-x64.zip"

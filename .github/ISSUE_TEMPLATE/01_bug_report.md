@@ -25,7 +25,7 @@ about: Create a report to help us improve
 {{replace this}}
 ```
 
-#### Output of command with `--force --verbose --debug`
+#### Output of command with `--verbose --debug`
 
 ```
 {{replace this}}

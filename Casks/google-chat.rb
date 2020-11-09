@@ -1,6 +1,6 @@
 cask "google-chat" do
-  version "20.8.301"
-  sha256 "186d8d556b3890c5ee12ff98fa3ee6ed513c48c063dfd03a4ef90b53ce7ba4fe"
+  version "20.9.281"
+  sha256 "6cff1d7d42bf130e052cdbd8fd0d5c1e9b4b60ab872c26a4b8944f28c88c8e68"
 
   url "https://dl.google.com/chat/#{version}/InstallHangoutsChat.dmg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://dl.google.com/chat/latest/InstallHangoutsChat.dmg"

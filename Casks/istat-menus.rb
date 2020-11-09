@@ -1,8 +1,8 @@
 cask "istat-menus" do
-  version "6.40"
+  version "6.50"
   sha256 :no_check # required as upstream package is updated in-place
 
-  url "https://files.bjango.com/istatmenus#{version.major}/istatmenus#{version}.zip"
+  url "https://cdn.bjango.com/files/istatmenus#{version.major}/istatmenus#{version}.zip"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://download.bjango.com/istatmenus/"
   name "iStats Menus"
   desc "System monitoring app"
@@ -15,6 +15,8 @@ cask "istat-menus" do
 
   uninstall delete:    [
     "/Library/Application Support/iStat Menus #{version.major}",
+    "/Library/LaunchDaemons/com.bjango.istatmenus.fans.plist",
+    "/Library/Logs/iStat Menus",
     "/Library/PrivilegedHelperTools/com.bjango.istatmenus.installerhelper",
   ],
             launchctl: [
@@ -47,8 +49,6 @@ cask "istat-menus" do
     "~/Library/Preferences/com.bjango.istatmenus.plist",
     "~/Library/Preferences/com.bjango.istatmenus#{version.major}.extras.plist",
     "~/Library/Preferences/com.bjango.istatmenus.status.plist",
-    "/Library/Logs/iStat Menus",
-    "/Library⁩/LaunchDaemons⁩/com.bjango.istatmenus.fans.plist",
     "/Users/Shared/.iStatMenus",
   ]
 end

@@ -1,6 +1,6 @@
 cask "itubedownloader" do
-  version "6.5.22"
-  sha256 "890fe2583094750da3dca451e128f0a33e94c4db4869e3d727a1620d2841f5cc"
+  version "6.5.24"
+  sha256 "042c8e6279b18beed144b3cea991c43247edc2f622a73d2fa2be3c0e6d98a4ee"
 
   # itubedownloader.s3.us-east-2.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://itubedownloader.s3.us-east-2.amazonaws.com/iTubeDownloader.dmg"

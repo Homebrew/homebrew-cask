@@ -1,6 +1,6 @@
 cask "pd-l2ork" do
-  version "2.14.0"
-  sha256 "349ecd772705011ee483a1b29e3bd2a000b1adabd5911dd41572b31279b15c42"
+  version "2.15.2"
+  sha256 "f120b2e6f161db0f4022b8dac16247b30bdcaea5088ba0e00b014d5d9a2d457e"
 
   # github.com/agraef/purr-data/ was verified as official when first introduced to the cask
   url "https://github.com/agraef/purr-data/releases/download/#{version}/osx_10.11-x86_64-dmg.zip"

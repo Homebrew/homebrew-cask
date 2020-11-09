@@ -1,6 +1,6 @@
 cask "jumpshare" do
-  version "2.6.4"
-  sha256 "e12adcd32da3cb9443728c6a3718376e69c57a36e8bd575ed13be14df0631b08"
+  version "2.6.6"
+  sha256 "f0a3faefe0bcd1cffc4ca51e48103b8a7a3773cab64a991995203f897925e0e6"
 
   url "https://apps.jumpshare.com/desktop/mac/updates/Jumpshare-#{version}.tar.bz2"
   appcast "https://apps.jumpshare.com/desktop/mac/updates/appcast.xml"

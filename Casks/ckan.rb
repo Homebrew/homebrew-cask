@@ -1,6 +1,6 @@
 cask "ckan" do
-  version "1.28.0"
-  sha256 "c3b87542bc6610c57f020db780ac761bfbdc140ab9b0993d318525ca45802ab5"
+  version "1.29.0"
+  sha256 "b512639ffc673a895b23aab147346a7c1c4e34dd46ff6d9eea3c312c08f1e9ad"
 
   url "https://github.com/KSP-CKAN/CKAN/releases/download/v#{version}/CKAN.dmg"
   appcast "https://github.com/KSP-CKAN/CKAN/releases.atom"

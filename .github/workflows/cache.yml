@@ -3,11 +3,13 @@ name: Cache
 on:
   push:
     branches:
-      - master
       - debug-cache
+  schedule:
+    - cron: '0 */6 * * *' # every 6 hours
 
 jobs:
   cancel-previous-runs:
+    if: startsWith(github.repository, 'Homebrew/')
     runs-on: ubuntu-latest
     steps:
       - name: Cancel Previous Runs
@@ -17,16 +19,25 @@ jobs:
 
   update:
     if: startsWith(github.repository, 'Homebrew/')
-    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [macos-latest, ubuntu-latest]
+        os:
+          - macos-latest
+          - ubuntu-latest
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Set up Homebrew
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
         with:
           test-bot: false
+
+      # Workaround until the `cache` action uses the changes from
+      # https://github.com/actions/toolkit/pull/580.
+      - name: Unlink workspace
+        run: |
+          rm "${GITHUB_WORKSPACE}"
+          mkdir "${GITHUB_WORKSPACE}"
 
       - name: Cache Homebrew Gems
         id: cache

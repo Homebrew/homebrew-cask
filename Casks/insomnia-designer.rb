@@ -1,6 +1,6 @@
 cask "insomnia-designer" do
-  version "2020.4.0"
-  sha256 "53dc0d219b152f5a681c5dd42bd8f56282651ecf9abb367e7b33e593eb0cd700"
+  version "2020.4.2"
+  sha256 "91c5c0e93d2a0b7618fa6ea3184819a6b243878cce94d533d72e2d4033d723e9"
 
   # github.com/Kong/insomnia/ was verified as official when first introduced to the cask
   url "https://github.com/Kong/insomnia/releases/download/designer%40#{version}/Insomnia.Designer-#{version}.dmg"

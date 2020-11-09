@@ -1,6 +1,6 @@
 cask "postman" do
-  version "7.32.0"
-  sha256 "d083ec6c88cb27d7bfa5c8fa8e7cf87af0ff66739d1497cfa43b3b7bbb76e57f"
+  version "7.35.0"
+  sha256 "fe717027a9ebb77119b14cd93d0786c078d161f3959aac7c49c61e5d5c52cf16"
 
   # dl.pstmn.io/download/version/ was verified as official when first introduced to the cask
   url "https://dl.pstmn.io/download/version/#{version}/osx64"
@@ -18,6 +18,7 @@ cask "postman" do
     "~/Library/Application Support/com.postmanlabs.mac.ShipIt",
     "~/Library/Caches/Postman",
     "~/Library/Caches/com.postmanlabs.mac",
+    "~/Library/Caches/com.postmanlabs.mac.ShipIt",
     "~/Library/Preferences/ByHost/com.postmanlabs.mac.ShipIt.*.plist",
     "~/Library/Preferences/com.postmanlabs.mac.plist",
     "~/Library/Saved Application State/com.postmanlabs.mac.savedState",

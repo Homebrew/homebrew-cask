@@ -1,6 +1,6 @@
 cask "oracle-jdk" do
-  version "15,36:779bf45e88a44cbd9ea6621d33e33db1"
-  sha256 "5a012a7f6205449b9faac855708e9591fc04fec66de46b7ddeda8d3e87a157c7"
+  version "15.0.1,9:51f4f36ad4ef43e39d0dfdbaf6549e32"
+  sha256 "aad54ae4766d82ebd0de5189e71bdc6cd7336f0d62fda5eba24f2072a6de34d0"
 
   url "https://download.oracle.com/otn-pub/java/jdk/#{version.before_comma}+#{version.after_comma.before_colon}/#{version.after_colon}/jdk-#{version.before_comma}_osx-x64_bin.dmg",
       cookies: {

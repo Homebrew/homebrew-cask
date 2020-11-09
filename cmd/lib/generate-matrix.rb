@@ -1,4 +1,4 @@
-# frozen_string_literal: false
+# frozen_string_literal: true
 
 require "utils/github"
 
@@ -13,6 +13,7 @@ tap = Tap.from_path(Dir.pwd)
 
 syntax_job = {
   name: "syntax",
+  tap:  tap.name,
 }
 
 matrix = [syntax_job]

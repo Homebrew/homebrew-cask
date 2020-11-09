@@ -79,6 +79,13 @@ jobs:
             echo '::warning::Untapping adoptopenjdk/openjdk is no longer necessary.'
           fi
 
+      # Workaround until the `cache` action uses the changes from
+      # https://github.com/actions/toolkit/pull/580.
+      - name: Unlink workspace
+        run: |
+          mv "${GITHUB_WORKSPACE}" "${GITHUB_WORKSPACE}-link"
+          mkdir "${GITHUB_WORKSPACE}"
+
       - name: Cache Homebrew Gems
         uses: actions/cache@v2
         with:
@@ -86,22 +93,24 @@ jobs:
           key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
           restore-keys: ${{ runner.os }}-rubygems-
 
+      # Workaround until the `cache` action uses the changes from
+      # https://github.com/actions/toolkit/pull/580.
+      - name: Re-link workspace
+        run: |
+          rmdir "${GITHUB_WORKSPACE}"
+          mv "${GITHUB_WORKSPACE}-link" "${GITHUB_WORKSPACE}"
+
       - name: Install Homebrew Gems
         id: gems
         run: brew install-bundler-gems
 
-      - name: Run brew cask style
-        run: brew cask style
+      - name: Run brew style ${{ matrix.cask.token || matrix.tap }}
+        run: brew style '${{ matrix.cask.path || matrix.tap }}'
         if: always() && steps.gems.outcome == 'success' && !matrix.cask
 
-      - name: Run brew cask audit ${{ matrix.cask.token }}
+      - name: Run brew cask audit ${{ matrix.cask.token || matrix.tap }}
         run: |
-          if ${{ !matrix.cask }}; then
-            brew cask audit
-            exit $?
-          fi
-
-          brew cask audit ${{ join(matrix.audit_args, ' ') }} '${{ matrix.cask.path }}'
+          brew cask audit ${{ join(matrix.audit_args, ' ') }} '${{ matrix.cask.path || matrix.tap }}'
         timeout-minutes: 30
         if: always() && steps.gems.outcome == 'success' && !matrix.skip_audit
 
@@ -218,6 +227,13 @@ jobs:
             exit 1 if errors.any?
           EOF
         if: always() && steps.snapshot.outcome == 'success'
+
+      # Workaround until the `cache` action uses the changes from
+      # https://github.com/actions/toolkit/pull/580.
+      - name: Unlink workspace
+        run: |
+          rm "${GITHUB_WORKSPACE}"
+          mkdir "${GITHUB_WORKSPACE}"
   conclusion:
     name: conclusion
     needs: test

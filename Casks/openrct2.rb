@@ -1,6 +1,6 @@
 cask "openrct2" do
-  version "0.3.0"
-  sha256 "1f8afb192678245c44df831b5af57af85d66deec6ccacbf464fb3928cf9a4c0f"
+  version "0.3.2"
+  sha256 "ff03b02b585c1deb669e5800f10c83789bd3d23fdd7a126a49c897db1d8f859a"
 
   # github.com/OpenRCT2/OpenRCT2/ was verified as official when first introduced to the cask
   url "https://github.com/OpenRCT2/OpenRCT2/releases/download/v#{version}/OpenRCT2-#{version}-macos-x86-64.zip"
@@ -9,7 +9,7 @@ cask "openrct2" do
   desc "Open-source re-implementation of RollerCoaster Tycoon 2"
   homepage "https://openrct2.io/"
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :high_sierra"
 
   app "OpenRCT2.app"
 end
