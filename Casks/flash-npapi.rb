@@ -5,6 +5,7 @@ cask "flash-npapi" do
   url "https://fpdownload.adobe.com/pub/flashplayer/pdc/#{version}/install_flash_player_osx.dmg"
   appcast "https://www.adobe.com/support/flashplayer/debug_downloads.html"
   name "Adobe Flash Player NPAPI (plugin for Safari and Firefox)"
+  desc "Adobe Flash player plugin for Safari and Firefox"
   homepage "https://get.adobe.com/flashplayer/"
 
   auto_updates true
