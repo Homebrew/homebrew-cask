@@ -5,6 +5,7 @@ cask "flash-player-debugger-ppapi" do
   url "https://fpdownload.adobe.com/pub/flashplayer/updaters/#{version.major}/flashplayer_#{version.major}_ppapi_debug.dmg"
   appcast "https://www.adobe.com/support/flashplayer/debug_downloads.html"
   name "Adobe Flash Player PPAPI (plugin for Opera and chromium) content debugger"
+  desc "Adobe Flash Player plugin for Opera and chromium content debugger"
   homepage "https://www.adobe.com/support/flashplayer/debug_downloads.html"
 
   pkg "Install Adobe Pepper Flash Player Debugger.app/Contents/Resources/Adobe Flash Player Debugger.pkg"
