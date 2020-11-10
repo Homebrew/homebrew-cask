@@ -6,11 +6,10 @@ cask "freeplane" do
   url "https://downloads.sourceforge.net/freeplane/freeplane%20stable/Freeplane-#{version}.dmg"
   appcast "https://sourceforge.net/projects/freeplane/rss?path=/freeplane%20stable"
   name "Freeplane"
+  desc "Mind mapping and knowledge management software"
   homepage "https://freeplane.sourceforge.io/"
 
   app "Freeplane.app"
 
-  zap trash: [
-    "~/Library/Saved Application State/org.freeplane.launcher.savedState",
-  ]
+  zap trash: "~/Library/Saved Application State/org.freeplane.launcher.savedState"
 end
