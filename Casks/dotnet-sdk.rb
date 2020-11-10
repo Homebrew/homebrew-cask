@@ -10,7 +10,7 @@ cask "dotnet-sdk" do
   url "https://download.visualstudio.microsoft.com/download/pr/#{version.after_comma.before_colon}/#{version.after_colon}/dotnet-sdk-#{version.before_comma}-osx-x64.pkg"
   appcast "https://www.microsoft.com/net/download/macos"
   name ".NET SDK"
-  desc ".NET is a free, cross-platform, open-source developer platform"
+  desc "Free, cross-platform, open-source developer platform"
   homepage "https://www.microsoft.com/net/core#macos"
 
   conflicts_with cask: [
