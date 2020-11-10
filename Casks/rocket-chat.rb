@@ -1,6 +1,6 @@
 cask "rocket-chat" do
-  version "3.0.6"
-  sha256 "465f24b1ceaa5ca1007a5d51d59755be0125e91b06ed9b78bbab4cb4ddec005e"
+  version "3.0.7"
+  sha256 "76e00304c547c5689a7a457903d170fa09d4f0284eab25675e1a73d9acb62f9a"
 
   # github.com/RocketChat/Rocket.Chat.Electron/ was verified as official when first introduced to the cask
   url "https://github.com/RocketChat/Rocket.Chat.Electron/releases/download/#{version}/rocketchat-#{version}.dmg"
