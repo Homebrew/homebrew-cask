@@ -1,6 +1,6 @@
 cask "techsmith-capture" do
-  version "1.3.25"
-  sha256 "8999a3e51bd17f33d6c87e6189468674b5a706860cabc9fbc7456e048d5cb6bb"
+  version "1.3.27"
+  sha256 "51e327ea27ebbf32e5d7e44ca83f16209a1196596c1f61406e4a7b4536f5a0ad"
 
   url "https://assets.techsmith.com/techsmithcapture/mac/TechSmithCapture.dmg"
   appcast "https://assets.techsmith.com/techsmithcapture/mac/TechSmithCaptureAppcast.xml"
