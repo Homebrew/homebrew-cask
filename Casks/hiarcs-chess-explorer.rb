@@ -5,6 +5,7 @@ cask "hiarcs-chess-explorer" do
   url "https://www.hiarcs.com/hce/HIARCS-Chess-Explorer-Installer-v#{version}.pkg"
   appcast "https://www.hiarcs.com/mac-chess-explorer-download.htm"
   name "(Deep) HIARCS Chess Explorer"
+  desc "Chess database, analysis and game playing program"
   homepage "https://www.hiarcs.com/mac-chess-explorer.htm"
 
   pkg "HIARCS-Chess-Explorer-Installer-v#{version}.pkg"
