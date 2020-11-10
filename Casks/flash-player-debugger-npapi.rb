@@ -1,10 +1,11 @@
 cask "flash-player-debugger-npapi" do
-  version "32.0.0.445"
-  sha256 "a3cd363098648f989c5dbc356b79bd9c54083b8149f5669bc13b3b3275017a2f"
+  version "32.0.0.453"
+  sha256 "45d3553799f8ebbd76a8f28822d573900669a17763255aab70688a07104ee90f"
 
   url "https://fpdownload.adobe.com/pub/flashplayer/updaters/#{version.major}/flashplayer_#{version.major}_plugin_debug.dmg"
   appcast "https://www.adobe.com/support/flashplayer/debug_downloads.html"
   name "Adobe Flash Player NPAPI (plugin for Safari and Firefox) content debugger"
+  desc "Adobe Flash Player plugin for Safari and Firefox content debugger"
   homepage "https://www.adobe.com/support/flashplayer/debug_downloads.html"
 
   pkg "Install Adobe Flash Player Debugger.app/Contents/Resources/Adobe Flash Player Debugger.pkg"
