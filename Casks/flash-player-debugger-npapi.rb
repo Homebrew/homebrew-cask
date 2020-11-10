@@ -5,6 +5,7 @@ cask "flash-player-debugger-npapi" do
   url "https://fpdownload.adobe.com/pub/flashplayer/updaters/#{version.major}/flashplayer_#{version.major}_plugin_debug.dmg"
   appcast "https://www.adobe.com/support/flashplayer/debug_downloads.html"
   name "Adobe Flash Player NPAPI (plugin for Safari and Firefox) content debugger"
+  desc "Adobe Flash Player plugin for Safari and Firefox content debugger"
   homepage "https://www.adobe.com/support/flashplayer/debug_downloads.html"
 
   pkg "Install Adobe Flash Player Debugger.app/Contents/Resources/Adobe Flash Player Debugger.pkg"
