@@ -9,4 +9,8 @@ cask "freeplane" do
   homepage "https://freeplane.sourceforge.io/"
 
   app "Freeplane.app"
+
+  zap trash: [
+    "~/Library/Saved Application State/org.freeplane.launcher.savedState",
+  ]
 end
