@@ -10,5 +10,5 @@ cask "merlin-project" do
 
   depends_on macos: ">= :sierra"
 
-  app "Merlin Project #{version.major}.app"
+  app "Merlin Project.app"
 end
