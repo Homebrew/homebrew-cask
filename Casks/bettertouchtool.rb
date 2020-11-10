@@ -1,6 +1,6 @@
 cask "bettertouchtool" do
-  version "3.404-1635"
-  sha256 "d4480e1645c0410458fc8577e17967bd1fdc66cf8299e302c3c36ba6b7949210"
+  version "3.502-1639"
+  sha256 "7fd688ba7bef185315e4fa767c7cfc20b5ef4b420f9db2d33dd44398b2790cc4"
 
   url "https://folivora.ai/releases/BetterTouchTool.zip"
   appcast "https://www.corecode.io/macupdater/appcasts/bettertouchtool.txt"
