@@ -4,9 +4,9 @@ cask "difffork" do
 
   # dotfork.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://dotfork.s3.amazonaws.com/DiffFork.app.zip"
-  appcast "http://www.dotfork.com/"
+  appcast "https://dotfork.com/"
   name "DiffFork"
-  homepage "http://www.dotfork.com/"
+  homepage "https://dotfork.com/"
 
   app "DiffFork.app"
 end
