@@ -1,6 +1,6 @@
 cask "iconjar" do
-  version "2.6.2,45107"
-  sha256 "a92fbaf1851e47f584f0541ec5e1b886d07d5ae8c886f1a87b805e32a1e467f1"
+  version "2.6.3,45185"
+  sha256 "398ed6b8335603a4a09cbb537cf230af571c61b280c63fcbfccf408a82ef5524"
 
   url "https://geticonjar.com/releases/IconJar.app.#{version.after_comma}.zip"
   appcast "https://geticonjar.com/releases/stable.xml"
