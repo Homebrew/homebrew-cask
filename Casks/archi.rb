@@ -10,11 +10,6 @@ cask "archi" do
 
   app "Archi/Archi.app"
 
-  preflight do
-    # https://github.com/archimatetool/archi/issues/555
-    Quarantine.release! download_path: "#{staged_path}/Archi/Archi.app"
-  end
-
   zap trash: [
     "~/Library/Application Support/Archi#{version.major}",
     "~/Library/Caches/com.archimatetool.editor",
