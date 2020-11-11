@@ -9,6 +9,7 @@ cask "qlcolorcode" do
   homepage "https://github.com/anthonygelibert/QLColorCode"
 
   depends_on formula: "highlight"
+  depends_on macos: ">= :catalina"
 
   qlplugin "QLColorCode.qlgenerator"
 
