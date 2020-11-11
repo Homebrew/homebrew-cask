@@ -1,6 +1,6 @@
 cask "electron-fiddle" do
-  version "0.16.0"
-  sha256 "b3a70530aa6422b208663e025ec25a1047f40e08f970e6d6a84fa65ad978b251"
+  version "0.17.6"
+  sha256 "f6e22f366b77c84918222e0572a7ea5c493f8a262cb9576336caa3759918f18f"
 
   # github.com/electron/fiddle/ was verified as official when first introduced to the cask
   url "https://github.com/electron/fiddle/releases/download/v#{version}/Electron.Fiddle-darwin-x64-#{version}.zip"

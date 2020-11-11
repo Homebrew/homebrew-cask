@@ -1,14 +1,14 @@
-cask "waterfox" do
-  version "2020.02"
-  sha256 "9c27aac645c269e765229adeeb48dcd298aab3b578709c70f3b9acdfdad07275"
+cask "waterfox-classic" do
+  version "2020.10,5620.10.20"
+  sha256 "4c6493bad04d12be6268e40cd44774fcb17aa545a5b7c2e335cdd141ea9e9ca9"
 
-  # storage-waterfox.netdna-ssl.com/ was verified as official when first introduced to the cask
-  url "https://storage-waterfox.netdna-ssl.com/releases/osx64/installer/Waterfox%20Classic%20#{version}%20Setup.dmg"
+  url "https://cdn.waterfox.net/releases/osx64/installer/Waterfox%20Classic%20#{version.before_comma}%20Setup.dmg"
   appcast "https://www.waterfox.net/releases/"
-  name "Waterfox"
+  name "Waterfox Classic"
+  desc "Cross-platform web browser"
   homepage "https://www.waterfox.net/"
 
-  app "Waterfox.app"
+  app "Waterfox Classic.app"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.waterfox.sfl*",

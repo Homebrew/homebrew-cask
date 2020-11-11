@@ -6,6 +6,7 @@ cask "hydrogen" do
   url "https://downloads.sourceforge.net/hydrogen/Hydrogen-#{version}.dmg"
   appcast "https://sourceforge.net/projects/hydrogen/rss?path=/Hydrogen"
   name "Hydrogen"
+  desc "Software synthesizer"
   homepage "http://www.hydrogen-music.org/"
 
   depends_on macos: ">= :sierra"

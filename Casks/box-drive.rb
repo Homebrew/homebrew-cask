@@ -5,6 +5,7 @@ cask "box-drive" do
   # e3.boxcdn.net/ was verified as official when first introduced to the cask
   url "https://e3.boxcdn.net/box-installers/desktop/releases/mac/Box.pkg"
   name "Box Drive"
+  desc "Client for the Box cloud storage service"
   homepage "https://www.box.com/drive"
 
   conflicts_with cask: "box-sync"
@@ -12,7 +13,7 @@ cask "box-drive" do
   pkg "Box.pkg"
 
   uninstall pkgutil:   "com.box.desktop.installer.*",
-            launchctl: "com.box.desktop.*",
+            launchctl: "com.box.desktop.helper",
             script:    "/Library/Application Support/Box/uninstall_box_drive",
             quit:      [
               "com.box.Box-Local-Com-Server",

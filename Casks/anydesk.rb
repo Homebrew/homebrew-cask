@@ -1,6 +1,6 @@
 cask "anydesk" do
-  version "6.0.2"
-  sha256 "492fab19db6457fa30200436b8e882a05bd72f5a222ea79be554f60260aaca6f"
+  version "6.0.3"
+  sha256 "6f58174a530eef5bbf9d62d46dd4493e6928daf824aadecbc60e54cc37200ede"
 
   url "https://download.anydesk.com/anydesk.dmg"
   appcast "https://anydesk.com/en/downloads/mac-os"
@@ -9,4 +9,9 @@ cask "anydesk" do
   homepage "https://anydesk.com/remote-desktop"
 
   app "AnyDesk.app"
+
+  zap trash: [
+    "~/.anydesk",
+    "~/Library/Preferences/com.philandro.anydesk.plist",
+  ]
 end

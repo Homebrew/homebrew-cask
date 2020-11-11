@@ -1,6 +1,6 @@
 cask "pcoipclient" do
-  version "20.07.3"
-  sha256 "9733f0d9dfb71cf47410155de011f6045adc48e932b63e9188d4e2deea0e7809"
+  version "20.10.0"
+  sha256 "632d6323558611b3141432bebca84e8d208034853e2e9df53dd6af29170da52a"
 
   url "https://downloads.teradici.com/mac/stable/pcoip-client_#{version}.dmg"
   appcast "https://downloads.teradici.com/mac/stable/"

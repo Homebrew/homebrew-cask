@@ -6,6 +6,7 @@ cask "bricklink-partdesigner" do
   url "https://dzncyaxjqx7p3.cloudfront.net/PartDesigner/PartDesigner.pkg"
   appcast "https://bricklink.com/v3/studio/partdesigner.page"
   name "PartDesigner"
+  desc "Design your own LEGO parts"
   homepage "https://bricklink.com/v3/studio/partdesigner.page"
 
   auto_updates true

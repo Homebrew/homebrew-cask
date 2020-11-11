@@ -1,6 +1,6 @@
 cask "flutter" do
-  version "1.20.4"
-  sha256 "08fcbcc9c902bc6f245d660b6d68f1da420fbdd5878902b5687961a5fb43e9f7"
+  version "1.22.3"
+  sha256 "7cad68c2e678c9f7e59214c036558d7caa627577452be759efa8e4ff82a9a703"
 
   # storage.googleapis.com/flutter_infra/ was verified as official when first introduced to the cask
   url "https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_#{version}-stable.zip"

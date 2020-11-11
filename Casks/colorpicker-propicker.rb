@@ -1,6 +1,6 @@
 cask "colorpicker-propicker" do
-  version "1.0"
-  sha256 "f5d99b75e74005f7899cb47a0098c112fb43ef7e5a11b1e947c2db3566be8716"
+  version "1.1"
+  sha256 "33131b0d4137da33f839f867f215425c2f5c3f59d459c5a5db5a96a592353157"
 
   url "https://irradiated.net/files/pro-picker.zip"
   name "Pro Picker"

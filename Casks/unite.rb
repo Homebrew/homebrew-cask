@@ -6,6 +6,7 @@ cask "unite" do
   url "https://paddle.s3.amazonaws.com/fulfillment_downloads/20398/576531/#{version.after_comma}_Unite.zip"
   appcast "https://drive.google.com/uc?export=download&id=1pPlm8G1yluV7ipcRh-2pmXP-nATWsjTK"
   name "Unite"
+  desc "Turn websites into apps"
   homepage "https://bzgapps.com/unite"
 
   auto_updates true

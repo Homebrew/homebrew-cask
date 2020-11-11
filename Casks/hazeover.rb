@@ -1,5 +1,5 @@
 cask "hazeover" do
-  version "1.8.6-970"
+  version "1.8.6,980"
   sha256 "4d18a833babc96bcf19982a413d2d9c3b3334b1057cddc87d4c804acff6acafa"
 
   url "https://hazeover.com/HazeOver.dmg"

@@ -5,6 +5,7 @@ cask "android-platform-tools" do
   # google.com/android/repository/ was verified as official when first introduced to the cask
   url "https://dl.google.com/android/repository/platform-tools_r#{version}-darwin.zip"
   name "Android SDK Platform-Tools"
+  desc "Android SDK component"
   homepage "https://developer.android.com/studio/releases/platform-tools.html"
 
   binary "#{staged_path}/platform-tools/adb"

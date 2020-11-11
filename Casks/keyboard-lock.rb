@@ -4,6 +4,7 @@ cask "keyboard-lock" do
 
   url "http://keylock.io/public/app/Keyboard-Lock-#{version}.zip"
   name "Keyboard Lock"
+  desc "Simple keyboard locker"
   homepage "http://keylock.io/"
 
   app "Keyboard Lock.app"

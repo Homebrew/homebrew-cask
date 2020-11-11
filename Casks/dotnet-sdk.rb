@@ -3,13 +3,14 @@ cask "dotnet-sdk" do
     version "2.2.402,7430e32b-092b-4448-add7-2dcf40a7016d:1076952734fbf775062b48344d1a1587"
     sha256 "e74d816bc034d0fcdfa847286a6cad097227d4864da1c97fe801012af0c26341"
   else
-    version "3.1.402,340e6cc2-cce5-44ad-aab6-012233d90aa7:265cf15bcbe10fb8445060f792e48bf9"
-    sha256 "76c34d468e28ae3419186cc7711563b591c9d25dfa9a441960e56cc9af4bbe79"
+    version "5.0.100,3bdcd7d2-1444-4f7d-a254-504a994ffe39:e4f42b83604673f971748c722aa20bec"
+    sha256 "8f601ad822d9abb2f96a81f6a949629c46c7416d67ab55decbf358ffa5fc8deb"
   end
 
   url "https://download.visualstudio.microsoft.com/download/pr/#{version.after_comma.before_colon}/#{version.after_colon}/dotnet-sdk-#{version.before_comma}-osx-x64.pkg"
   appcast "https://www.microsoft.com/net/download/macos"
-  name ".NET Core SDK"
+  name ".NET SDK"
+  desc "Free, cross-platform, open-source developer platform"
   homepage "https://www.microsoft.com/net/core#macos"
 
   conflicts_with cask: [

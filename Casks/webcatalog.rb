@@ -1,13 +1,13 @@
 cask "webcatalog" do
-  version "24.8.0"
-  sha256 "9ca3e41ff303b04f4b9392c420560340fb6325295781742232e5adfaa8e3429e"
+  version "25.14.2"
+  sha256 "e50e8af0a1ae1b7973d7c2dda3f51bcaf6200737957334463fbd050bac931c0e"
 
-  # github.com/atomery/webcatalog/ was verified as official when first introduced to the cask
-  url "https://github.com/atomery/webcatalog/releases/download/v#{version}/WebCatalog-#{version}-mac.zip"
-  appcast "https://github.com/atomery/webcatalog/releases.atom"
+  # github.com/webcatalog/webcatalog-app/ was verified as official when first introduced to the cask
+  url "https://github.com/webcatalog/webcatalog-app/releases/download/v#{version}/WebCatalog-#{version}.dmg"
+  appcast "https://github.com/webcatalog/webcatalog-app/releases.atom"
   name "WebCatalog"
   desc "Tool to run web apps like desktop apps"
-  homepage "https://atomery.com/webcatalog/"
+  homepage "https://webcatalog.app/"
 
   auto_updates true
 

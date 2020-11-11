@@ -1,9 +1,9 @@
 cask "freac" do
-  version "1.1.2"
-  sha256 "cd0e8d9c0763780beba59dc991aa1e7eaff6079d16c720cc94f0c6ab0cd8d62d"
+  version "1.1.3a"
+  sha256 "6c065681c9ce594048c561deafe15e1f11cf84e9ce8fb4f4a1fece12e5055b9a"
 
   # github.com/enzo1982/freac/ was verified as official when first introduced to the cask
-  url "https://github.com/enzo1982/freac/releases/download/v#{version}/freac-#{version}-macosx.dmg"
+  url "https://github.com/enzo1982/freac/releases/download/v#{version.delete("a")}/freac-#{version}-macosx.dmg"
   appcast "https://github.com/enzo1982/freac/releases.atom"
   name "fre:ac"
   desc "Audio converter and CD ripper"

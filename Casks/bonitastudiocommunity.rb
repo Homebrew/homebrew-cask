@@ -1,6 +1,6 @@
 cask "bonitastudiocommunity" do
-  version "7.11.1"
-  sha256 "898af74f05e7b9b297b15225c662e62f0d18fb35a661483f62f9dfe2f9dfbbcb"
+  version "7.11.3"
+  sha256 "f2ce99981f34d82c22acf0b4adc99825c4225f719b75ea617dd4cde1d214e5b2"
 
   # github.com/bonitasoft/bonita-platform-releases was verified as official when first introduced to the cask
   url "https://github.com/bonitasoft/bonita-platform-releases/releases/download/#{version}/BonitaStudioCommunity-#{version}-x86_64.dmg"

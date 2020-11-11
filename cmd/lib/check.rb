@@ -79,7 +79,7 @@ module Check
   end
 
   def self.errors(before, after, cask:)
-    uninstall_directives = cask.artifacts.find { |a| a.class == Cask::Artifact::Uninstall }&.directives || {}
+    uninstall_directives = cask.artifacts.find { |a| a.instance_of?(Cask::Artifact::Uninstall) }&.directives || {}
 
     diff = {}
 

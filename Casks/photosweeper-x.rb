@@ -1,6 +1,6 @@
 cask "photosweeper-x" do
-  version "3.7.0"
-  sha256 "6a4fa5e1f6ac90930a7a2f71fd72aca5808be9a374aad63f0e189651d226c5a9"
+  version "3.8.1"
+  sha256 "962675a1e8bd9ea69aaaa1d8f6a5b96ce124be10148b4f970cc3abdb7393c252"
 
   url "https://overmacs.com/downloads/PhotoSweeper_X.dmg"
   appcast "https://overmacs.com/feeds/photosweeper_update.xml"

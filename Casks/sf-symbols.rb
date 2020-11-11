@@ -1,7 +1,7 @@
 cask "sf-symbols" do
   if MacOS.version <= :mojave
     version "1.1"
-    sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    sha256 "eddca84dde246f358429e47a8a7906b026d892dba97e556b555b27e7070de04e"
     url "https://devimages-cdn.apple.com/design/resources/download/SF-Symbols.dmg"
   else
     version "2.0"

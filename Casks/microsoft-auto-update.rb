@@ -1,12 +1,15 @@
 cask "microsoft-auto-update" do
-  version "4.27.20091302"
-  sha256 "b04fc2b3f01d1948623c3cadb60f269a0ecc559ed6f99f9dd29236d08fa8395f"
+  version "4.29.20110804"
+  sha256 "7ede97d524ce7e7869a4033d25270057e670588886f7a0e02628cc7fcb4f7851"
 
   # officecdn-microsoft-com.akamaized.net/ was verified as official when first introduced to the cask
   url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_AutoUpdate_#{version}_Updater.pkg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://go.microsoft.com/fwlink/?linkid=830196"
   name "Microsoft Auto Update"
+  desc "Provides updates to various Microsoft products"
   homepage "https://docs.microsoft.com/officeupdates/release-history-microsoft-autoupdate"
+
+  auto_updates true
 
   pkg "Microsoft_AutoUpdate_#{version}_Updater.pkg"
 

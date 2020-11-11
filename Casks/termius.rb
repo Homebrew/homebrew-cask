@@ -1,12 +1,12 @@
 cask "termius" do
-  version "6.5.1"
-  sha256 "a31be9d7efe42313a217da8239ae1bfe45fb6bc0d19e4854f1a1b59fda1ac038"
+  version "7.0.1"
+  sha256 "756a2ed1f971bc07b91352339a88a0fe9e0d26bab3dba6f2fa30ee0931135555"
 
   # s3.amazonaws.com/termius.desktop.autoupdate/mac/ was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/termius.desktop.autoupdate/mac/Termius.dmg"
   appcast "https://s3.amazonaws.com/termius.desktop.autoupdate/mac/latest-mac.yml"
   name "Termius"
-  desc "Command-line solution for system administrators and network engineers"
+  desc "Cross-platform SSH client"
   homepage "https://www.termius.com/"
 
   app "Termius.app"

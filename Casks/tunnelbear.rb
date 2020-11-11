@@ -1,6 +1,6 @@
 cask "tunnelbear" do
-  version "4.0.1"
-  sha256 "f1451a71a4003179fcc499ce807c55732f34f72b2baa2d72cce6820b4c19d5f5"
+  version "4.0.2"
+  sha256 "6581cdcb34cb8ac19b724990618b8f18efdc4e9f82c095b359f6fc51de7ef37f"
 
   # tunnelbear.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://tunnelbear.s3.amazonaws.com/downloads/mac/TunnelBear-#{version}.zip"
@@ -12,7 +12,8 @@ cask "tunnelbear" do
   app "TunnelBear.app"
 
   uninstall quit:      "com.tunnelbear.mac.TunnelBear",
-            launchctl: "com.tunnelbear.mac.tbeard"
+            launchctl: "com.tunnelbear.mac.tbeard",
+            delete:    "/Library/PrivilegedHelperTools/com.tunnelbear.mac.tbeard"
 
   zap trash: [
     "~/Library/Preferences/com.tunnelbear.mac.TunnelBear.plist",

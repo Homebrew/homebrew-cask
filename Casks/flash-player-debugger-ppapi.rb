@@ -1,10 +1,11 @@
 cask "flash-player-debugger-ppapi" do
-  version "32.0.0.433"
-  sha256 "e262d5644e078f6fbe78b384f659e1899038f18be8fc92911e1167a6c2cb7d04"
+  version "32.0.0.453"
+  sha256 "232d82649f93610da603621a7aeb5c17e946461e021e03469cdda727dfb53595"
 
   url "https://fpdownload.adobe.com/pub/flashplayer/updaters/#{version.major}/flashplayer_#{version.major}_ppapi_debug.dmg"
   appcast "https://www.adobe.com/support/flashplayer/debug_downloads.html"
   name "Adobe Flash Player PPAPI (plugin for Opera and chromium) content debugger"
+  desc "Adobe Flash Player plugin for Opera and chromium content debugger"
   homepage "https://www.adobe.com/support/flashplayer/debug_downloads.html"
 
   pkg "Install Adobe Pepper Flash Player Debugger.app/Contents/Resources/Adobe Flash Player Debugger.pkg"

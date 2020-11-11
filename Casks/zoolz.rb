@@ -2,8 +2,9 @@ cask "zoolz" do
   version :latest
   sha256 :no_check
 
-  url "http://downloads.zoolz.com/zoolz2/Zoolz.pkg"
+  url "https://downloads.zoolz.com/zoolz2/Zoolz.pkg"
   name "Zoolz"
+  desc "Client for the Zoolz cloud storage service"
   homepage "https://home.zoolz.com/"
 
   pkg "Zoolz.pkg"
