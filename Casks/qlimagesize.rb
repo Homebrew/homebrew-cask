@@ -10,4 +10,6 @@ cask "qlimagesize" do
   depends_on macos: ">= :high_sierra"
 
   qlplugin "qlImageSize.qlgenerator"
+  
+  caveats "#{token} only shows info for natively unsupported images on Catalina, see https://github.com/Nyx0uf/qlImageSize/issues/45 for details."
 end
