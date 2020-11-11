@@ -1,6 +1,6 @@
 cask "muzzle" do
-  version "1.5,304"
-  sha256 "2f3c3c839787408d5b991651b5ba25323a12904b4d155e8074f68e7afea3f845"
+  version "1.6,401"
+  sha256 "5509fb21513990d02a92b07e0ce6d283340e1e6bdf0176f880ae594152555645"
 
   url "https://muzzleapp.com/binaries/muzzle-#{version.after_comma}.zip"
   appcast "https://muzzleapp.com/api/1/appcast.xml"
