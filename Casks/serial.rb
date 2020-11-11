@@ -1,6 +1,6 @@
 cask "serial" do
-  version "2.0.2"
-  sha256 "f22fe5a062cfc4cb5be64a4e864f21078a7b2606d1b551a0aae69ae6b57459e8"
+  version "2.0.3"
+  sha256 "07edfef330e0377659b44b5c350b21ed566ee68f7f4963b425712703753bd542"
 
   url "https://download.decisivetactics.com/downloads/serial/Serial_#{version}.zip"
   appcast "https://api.decisivetactics.com/api/v1/public/appcast?app=serial"
