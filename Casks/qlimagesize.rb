@@ -5,6 +5,7 @@ cask "qlimagesize" do
   url "https://github.com/Nyx0uf/qlImageSize/releases/download/#{version}/qlImageSize.qlgenerator.zip"
   appcast "https://github.com/Nyx0uf/qlimagesize/releases.atom"
   name "qlImageSize"
+  desc "Display image info and preview unsupported formats in QuickLook"
   homepage "https://github.com/Nyx0uf/qlImageSize"
 
   depends_on macos: ">= :high_sierra"
