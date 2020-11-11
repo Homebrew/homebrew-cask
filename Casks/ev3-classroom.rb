@@ -7,7 +7,9 @@ cask "ev3-classroom" do
   url "https://le-www-live-s.legocdn.com/downloads/LME-Scratch/LME-Scratch_Full-setup_#{version}_en-US_MacOS.dmg"
   name "EV3 Classroom"
   desc "Companion app for the LEGO MINDSTORMS Education EV3 Core Set"
-  homepage "https://www.lego.com/en-us/mindstorms"
+  homepage "https://education.lego.com/en-us/downloads/mindstorms-ev3/software"
+
+  depends_on macos: ">= :mojave"
 
   app "EV3 Classroom.app"
 end
