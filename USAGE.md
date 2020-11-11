@@ -167,7 +167,7 @@ You can also modify the default installation locations used when issuing `brew c
 
 * `--appdir=/my/path` changes the path where the applications will be moved. Default is `/Applications`.
 * `--fontdir=/my/path` changes the path for Fonts. Default is `~/Library/Fonts`.
-* See `man brew-cask` for the other default installation locations and the flags to change them.
+* See `man brew` for the other default installation locations and the flags to change them.
 
 To make these settings persistent, you might want to add the following line to your `.bash_profile` or `.zshenv`:
 
