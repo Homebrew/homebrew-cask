@@ -9,7 +9,7 @@ cask "texshop" do
   homepage "https://pages.uoregon.edu/koch/texshop/"
 
   auto_updates true
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :sierra"
 
   app "TeXShop.app"
 
