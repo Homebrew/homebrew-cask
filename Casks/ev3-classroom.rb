@@ -5,7 +5,7 @@ cask "ev3-classroom" do
 
   # le-www-live-s.legocdn.com/downloads/LME-Scratch/ was verified as official when first introduced to the cask
   url "https://le-www-live-s.legocdn.com/downloads/LME-Scratch/LME-Scratch_Full-setup_#{version}_en-US_MacOS.dmg"
-  appcast "https://education.lego.com/en-us/downloads/mindstorms-ev3/software"
+  appcast "https://s3.amazonaws.com/ev3-education-electron-updates/latest-mac.yml"
   name "EV3 Classroom"
   desc "Companion app for the LEGO MINDSTORMS Education EV3 Core Set"
   homepage "https://www.lego.com/en-us/mindstorms"
