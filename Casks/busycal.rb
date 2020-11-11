@@ -1,6 +1,6 @@
 cask "busycal" do
-  version "3.11-2020-11-09-06-07"
-  sha256 "ec0ea242328d92b584f6271c2289d05fe1da7916fedaf50d0a00653127acb997"
+  version "3.11-2020-11-11-04-44"
+  sha256 "2133991159671a97161ed5d7d946c4f9707dc99b11658f81f23dcccb76152b0c"
 
   url "https://www.busymac.com/download/BusyCal.zip"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.busymac.com/download/BusyCal.zip"
