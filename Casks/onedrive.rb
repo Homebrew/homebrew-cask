@@ -35,6 +35,7 @@ cask "onedrive" do
     "~/Library/Application Support/OneDriveUpdater",
     "~/Library/Application Scripts/com.microsoft.OneDrive.FinderSync",
     "~/Library/Application Scripts/com.microsoft.OneDriveLauncher",
+    "~/Library/Application Scripts/com.microsoft.OneDrive-mac",
     "~/Library/Caches/com.microsoft.OneDrive",
     "~/Library/Caches/com.microsoft.OneDriveUpdater",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDrive",
