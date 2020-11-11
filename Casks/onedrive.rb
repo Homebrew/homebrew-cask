@@ -45,6 +45,8 @@ cask "onedrive" do
     "~/Library/Cookies/com.microsoft.OneDrive.binarycookies",
     "~/Library/Cookies/com.microsoft.OneDriveUpdater.binarycookies",
     "~/Library/Group Containers/*.OneDriveStandaloneSuite",
+    "~/Library/Group Containers/*.OneDriveSyncClientSuite",
+    "~/Library/Group Containers/*.OfficeOneDriveSyncIntegration",
     "~/Library/Logs/OneDrive",
     "~/Library/Preferences/com.microsoft.OneDrive.plist",
     "~/Library/Preferences/com.microsoft.OneDriveUpdater.plist",
