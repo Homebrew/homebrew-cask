@@ -1,11 +1,12 @@
 cask "stack-stack" do
-  version "3.14.1"
-  sha256 "7273d3ab6c3def27ea4b17d7dc40b02ffb1305ab316463790e2bf0aee23b56dd"
+  version "3.15.0"
+  sha256 "a7ff9a68b9559605f0f47165c5b80fdbe116189bd6c7b72c5726c890591644b2"
 
   # stack-v1.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://stack-v1.s3.amazonaws.com/builds/prod/Stack-#{version}.dmg"
   appcast "https://stack-v1.s3.amazonaws.com/builds/prod/latest-mac.yml"
   name "Stack"
+  desc "Workspace to manage all your productivity apps from one place"
   homepage "https://getstack.app/"
 
   auto_updates true

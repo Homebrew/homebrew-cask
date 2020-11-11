@@ -1,9 +1,9 @@
 cask "krita" do
-  version "4.3.0"
-  sha256 "5a8da4d00dc2678a865a3d4938eba4b1a739fc92ffc700e91eae56b67162ce28"
+  version "4.4.1"
+  sha256 "922f228fa35119cca3aa6c2dbf5f76a3307f83bed6d7cee2fe3de5b6b92a1abd"
 
-  # kde.org/stable/krita/ was verified as official when first introduced to the cask
-  url "https://download.kde.org/stable/krita/#{version}/krita-#{version}.dmg"
+  # cdn.download.kde.org/stable/krita/ was verified as official when first introduced to the cask
+  url "https://cdn.download.kde.org/stable/krita/#{version.major_minor_patch}/krita-#{version}.dmg"
   appcast "https://download.kde.org/stable/krita/",
           must_contain: version.major_minor_patch
   name "Krita"

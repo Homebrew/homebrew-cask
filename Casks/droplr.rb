@@ -5,6 +5,7 @@ cask "droplr" do
   url "https://files.droplr.com/apps/mac/Droplr-#{version.before_comma.no_dots}.dmg"
   appcast "https://droplr.com/appcast/appcast-sandbox.xml"
   name "Droplr"
+  desc "Screenshot and screen recorder"
   homepage "https://droplr.com/"
 
   auto_updates true

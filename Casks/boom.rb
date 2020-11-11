@@ -1,6 +1,6 @@
 cask "boom" do
-  version "1.6.11"
-  sha256 "624f8f01299d657e677098acfe4df6291136da5cff9949218168f4aced9a3be3"
+  version "1.6.12"
+  sha256 "5245955060a740c009ec8b789d1e3b02809f07874e02407d5344d1c2240ff96a"
 
   # d13nae1tw8tdnq.cloudfront.net/Boom2mac/ was verified as official when first introduced to the cask
   url "https://d13nae1tw8tdnq.cloudfront.net/Boom2mac/webstore/Boom2.dmg"

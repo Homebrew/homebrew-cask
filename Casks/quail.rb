@@ -1,6 +1,6 @@
 cask "quail" do
-  version "2.0.1"
-  sha256 "ea54eac6a637768f83d623a1c686005fb6f963a46728f3a9f2eb3fc8bd08d739"
+  version "2.0.2"
+  sha256 "806a07d923ea74f2d3a2b5d345ff7e2f6c14d703fd3264e81de6e802db0a58a8"
 
   url "https://github.com/1000ch/quail/releases/download/v#{version}/Quail-#{version}.dmg"
   appcast "https://github.com/1000ch/quail/releases.atom"

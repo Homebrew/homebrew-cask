@@ -5,9 +5,11 @@ cask "qlcolorcode" do
   url "https://github.com/anthonygelibert/QLColorCode/releases/download/release-#{version}/QLColorCode.qlgenerator.zip"
   appcast "https://github.com/anthonygelibert/QLColorCode/releases.atom"
   name "QLColorCode"
+  desc "QuickLook plug-in that renders source code with syntax highlighting"
   homepage "https://github.com/anthonygelibert/QLColorCode"
 
   depends_on formula: "highlight"
+  depends_on macos: ">= :catalina"
 
   qlplugin "QLColorCode.qlgenerator"
 

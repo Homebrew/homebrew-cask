@@ -1,6 +1,6 @@
 cask "fellow" do
-  version "1.0.12"
-  sha256 "8a03ea0a694d6d205e4d632f19b78e2f7adc79acc48375e75c9a4cc5b4867d4e"
+  version "1.0.15"
+  sha256 "bc9712f077b055d93ed638203910aa85e79cf59bd0fae52a92ecd879f6d34318"
 
   url "https://cdn.fellow.app/desktop/#{version}/darwin/stable/Fellow.dmg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://fellow.app/desktop/download/darwin/latest/"

@@ -6,6 +6,7 @@ cask "thingsmacsandboxhelper" do
   url "https://culturedcode.cachefly.net/things/thingssandboxhelper/#{version}/ThingsHelper.zip"
   appcast "https://culturedcode.com/things/mac/help/things-sandboxing-helper-things3/"
   name "ThingsMacSandboxHelper"
+  desc "Helper application for Things"
   homepage "https://culturedcode.com/things/mac/help/things-sandboxing-helper-things#{version.major}/"
 
   app "ThingsMacSandboxHelper.app"

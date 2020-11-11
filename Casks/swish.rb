@@ -6,6 +6,7 @@ cask "swish" do
   url "https://github.com/chrenn/swish-dl/releases/download/#{version}/Swish.zip"
   appcast "https://highlyopinionated.co/swish/appcast.xml"
   name "Swish"
+  desc "Control windows and applications right from your trackpad"
   homepage "https://highlyopinionated.co/swish/"
 
   auto_updates true

@@ -1,6 +1,6 @@
 cask "localizationeditor" do
-  version "2.6"
-  sha256 "113eba2fff6939a539d01c8e6c3cde48af1e07546bf9bf60d566a4b456ece763"
+  version "2.7"
+  sha256 "36b551052aa37f8961fcc9274bba0bc101a35f1f9bfc0b22b6f2b8caeccb9a3e"
 
   url "https://github.com/igorkulman/iOSLocalizationEditor/releases/download/v#{version}/LocalizationEditor.app.zip"
   appcast "https://github.com/igorkulman/iOSLocalizationEditor/releases.atom"

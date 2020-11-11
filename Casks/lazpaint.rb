@@ -1,6 +1,6 @@
 cask "lazpaint" do
-  version "7.1.4"
-  sha256 "dd72a7fdd6d71bb40b091f23ae4bacd70d14fcb770cda884728e93861e9f7cf5"
+  version "7.1.5"
+  sha256 "76954876437a62b2fb5364ddbc290a7d2c59db1d5fe90e22b62fb7cad9b12c20"
 
   # github.com/bgrabitmap/lazpaint/ was verified as official when first introduced to the cask
   url "https://github.com/bgrabitmap/lazpaint/releases/download/v#{version}/lazpaint#{version}_macos64.dmg"

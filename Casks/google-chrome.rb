@@ -1,6 +1,6 @@
 cask "google-chrome" do
-  version "86.0.4240.75"
-  sha256 "3ab76266189a7b2c5b9f789fbae7f7d25404e7158ee3e841dc0692eae2718182"
+  version "86.0.4240.193"
+  sha256 "55cb8876604e5797aa8f935f296f04448f62fa94c82f858cd214370ff5e2c0ba"
 
   url "https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg"
   appcast "https://omahaproxy.appspot.com/history?os=mac;channel=stable"
@@ -9,10 +9,6 @@ cask "google-chrome" do
   homepage "https://www.google.com/chrome/"
 
   auto_updates true
-  conflicts_with cask: [
-    "homebrew/cask-versions/google-chrome-beta",
-    "homebrew/cask-versions/google-chrome-dev",
-  ]
   depends_on macos: ">= :yosemite"
 
   app "Google Chrome.app"

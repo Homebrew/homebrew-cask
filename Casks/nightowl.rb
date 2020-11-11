@@ -1,6 +1,6 @@
 cask "nightowl" do
-  version "0.2.9"
-  sha256 "a06f7f47f52e625f5bf41d83e55ad25eedc23ae0fee463a4659521f777debceb"
+  version "0.3.0"
+  sha256 "8b0ff3c73b0beda859550b3569a8a10592548a3723f96bfcf06d928bc169e6e3"
 
   url "https://nightowl.kramser.xyz/files/NightOwl.dmg"
   appcast "https://nightowl.kramser.xyz/"

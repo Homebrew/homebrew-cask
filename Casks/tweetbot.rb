@@ -13,4 +13,10 @@ cask "tweetbot" do
   depends_on macos: ">= :high_sierra"
 
   app "Tweetbot.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.tapbots.Tweetbot#{version.major}Mac",
+    "~/Library/Containers/com.tapbots.Tweetbot#{version.major}Mac",
+    "~/Library/Group Containers/*.com.tapbots.Tweetbot#{version.major}Mac",
+  ]
 end

@@ -4,6 +4,7 @@ cask "backblaze-downloader" do
 
   url "https://secure.backblaze.com/mac_restore_downloader"
   name "Backblaze Downloader"
+  desc "Download Backblaze restored files more reliabily"
   homepage "https://www.backblaze.com/"
 
   app "Backblaze Downloader.app"

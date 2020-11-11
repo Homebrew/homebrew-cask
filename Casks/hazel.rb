@@ -6,6 +6,7 @@ cask "hazel" do
   url "https://s3.amazonaws.com/Noodlesoft/Hazel-#{version}.dmg"
   appcast "https://www.noodlesoft.com/Products/Hazel/generate-appcast.php"
   name "Hazel"
+  desc "Automated organization"
   homepage "https://www.noodlesoft.com/"
 
   auto_updates true

@@ -1,8 +1,8 @@
 cask "ipfs" do
-  version "0.13.1"
-  sha256 "ec3fae4bc4f0f1cb4a3b892abc4e19de36918dc36fe9ede3aa193a7dfe8ef21e"
+  version "0.13.2"
+  sha256 "e05caeaf457d994ab6b4ce25f6e2572b227f632f378c63a40cfbf5bfd9bf5efd"
 
-  url "https://github.com/ipfs-shipyard/ipfs-desktop/releases/download/v#{version}/ipfs-desktop-#{version}.dmg"
+  url "https://github.com/ipfs-shipyard/ipfs-desktop/releases/download/v#{version}/IPFS-Desktop-#{version}.dmg"
   appcast "https://github.com/ipfs-shipyard/ipfs-desktop/releases.atom"
   name "IPFS Desktop"
   desc "Menu bar application for the IPFS peer-to-peer network"

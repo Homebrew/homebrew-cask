@@ -5,6 +5,7 @@ cask "qlmarkdown" do
   url "https://github.com/toland/qlmarkdown/releases/download/v#{version}/QLMarkdown.qlgenerator.zip"
   appcast "https://github.com/toland/qlmarkdown/releases.atom"
   name "QLMarkdown"
+  desc "QuickLook generator for Markdown files"
   homepage "https://github.com/toland/qlmarkdown"
 
   qlplugin "QLMarkdown.qlgenerator"

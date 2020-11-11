@@ -3,8 +3,8 @@ cask "appcleaner" do
     version "3.4"
     sha256 "0c60d929478c1c91e0bad76d3c04795665c07a05e45e33321db845429c9aefa8"
   else
-    version "3.5"
-    sha256 "9a67033977622f8523c6d11315fd646b4b3b7b2675ec7c10b37b4d5f5602acb3"
+    version "3.5.1"
+    sha256 "64b707b4841458300b02374d4b95acfed27e453ba1bbf50f7d1fc4fb0f2d1b70"
     appcast "https://freemacsoft.net/appcleaner/Updates.xml"
   end
 

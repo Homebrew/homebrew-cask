@@ -1,6 +1,6 @@
 cask "onedrive" do
-  version "20.143.0716.0003"
-  sha256 "2281caba9c0ac8a01e4bbe07845c7fdb3ea911b8c02176f62c21b7045684c6aa"
+  version "20.169.0823.0006"
+  sha256 "a40beb0994207abf6c50de3839b586a8e6064e727e3ac859e2a8cc862fc898ac"
 
   # oneclient.sfx.ms/Mac/Direct/ was verified as official when first introduced to the cask
   url "https://oneclient.sfx.ms/Mac/Direct/#{version}/OneDrive.pkg"
@@ -35,6 +35,7 @@ cask "onedrive" do
     "~/Library/Application Support/OneDriveUpdater",
     "~/Library/Application Scripts/com.microsoft.OneDrive.FinderSync",
     "~/Library/Application Scripts/com.microsoft.OneDriveLauncher",
+    "~/Library/Application Scripts/com.microsoft.OneDrive-mac",
     "~/Library/Caches/com.microsoft.OneDrive",
     "~/Library/Caches/com.microsoft.OneDriveUpdater",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDrive",
@@ -44,6 +45,8 @@ cask "onedrive" do
     "~/Library/Cookies/com.microsoft.OneDrive.binarycookies",
     "~/Library/Cookies/com.microsoft.OneDriveUpdater.binarycookies",
     "~/Library/Group Containers/*.OneDriveStandaloneSuite",
+    "~/Library/Group Containers/*.OneDriveSyncClientSuite",
+    "~/Library/Group Containers/*.OfficeOneDriveSyncIntegration",
     "~/Library/Logs/OneDrive",
     "~/Library/Preferences/com.microsoft.OneDrive.plist",
     "~/Library/Preferences/com.microsoft.OneDriveUpdater.plist",

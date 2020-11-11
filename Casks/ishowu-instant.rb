@@ -1,6 +1,6 @@
 cask "ishowu-instant" do
-  version "1.3.5"
-  sha256 "3e55de169c44adac469e0e481ef5bb61cb8366d4bdad00bbc17fb778d58f1fc7"
+  version "1.4.0"
+  sha256 "eaa255cd315bb81323da017ec166850f0b08510c257808997eae1a077e6c6dd5"
 
   url "https://www.shinywhitebox.com/downloads/instant/iShowU_Instant_#{version}.dmg"
   appcast "https://www.shinywhitebox.com/store/appcast.php?p=14"

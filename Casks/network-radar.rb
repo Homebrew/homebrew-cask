@@ -1,9 +1,9 @@
 cask "network-radar" do
-  version "2.9.2"
-  sha256 "8726f8f7eb61d8f31279477ad4aa9af7429374658a80343e7700b56d6e987ff0"
+  version "2.10"
+  sha256 "566f9049d68e7287a5a2dc1da0ff04bca540db8d23fbbddd0da8546302892df5"
 
   url "https://witt-software.com/downloads/networkradar/Network%20Radar.dmg"
-  appcast "https://www.witt-software.com/releasenotes/?app=networkradar"
+  appcast "https://www.witt-software.com/downloads/networkradar/appcast.xml"
   name "Network Radar"
   desc "Tool to scan and monitor the network"
   homepage "https://www.witt-software.com/networkradar"

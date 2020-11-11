@@ -1,6 +1,6 @@
 cask "x-swiftformat" do
   version "1.0.3"
-  sha256 "5045455fdef959afedbd38533a57d0facbe7a96023a2a73da2a607869eaad87d"
+  sha256 "0e15354a67c6a2c490e1910fe7ebc3b4cb6ad20aac65c0c5a056a53611927847"
 
   url "https://github.com/ruiaureliano/X-SwiftFormat/releases/download/#{version}/x-swiftformat_#{version}.zip"
   appcast "https://github.com/ruiaureliano/X-SwiftFormat/releases.atom"
