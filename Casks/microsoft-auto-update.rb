@@ -1,6 +1,6 @@
 cask "microsoft-auto-update" do
-  version "4.28.20101102"
-  sha256 "80171d842c59ba3b26a085dd3ab6e63e32102088078848c95aebecf4c91b0438"
+  version "4.29.20110804"
+  sha256 "7ede97d524ce7e7869a4033d25270057e670588886f7a0e02628cc7fcb4f7851"
 
   # officecdn-microsoft-com.akamaized.net/ was verified as official when first introduced to the cask
   url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_AutoUpdate_#{version}_Updater.pkg"
