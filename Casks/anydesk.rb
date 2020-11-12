@@ -1,12 +1,12 @@
 cask "anydesk" do
-  version "6.0.3"
-  sha256 "6f58174a530eef5bbf9d62d46dd4493e6928daf824aadecbc60e54cc37200ede"
+  version "6.1.0"
+  sha256 "f6459b38491f3a0bbdd01b366101391bbd8b5705c46f46879301e07014d9c38a"
 
   url "https://download.anydesk.com/anydesk.dmg"
   appcast "https://anydesk.com/en/downloads/mac-os"
   name "AnyDesk"
   desc "Allows connection to a computer remotely"
-  homepage "https://anydesk.com/remote-desktop"
+  homepage "https://anydesk.com/"
 
   app "AnyDesk.app"
 
