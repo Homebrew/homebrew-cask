@@ -10,4 +10,6 @@ cask "pomatez" do
   homepage "https://roldanjr.github.io/pomatez"
 
   app "Pomatez.app"
+
+  zap trash: "~/Library/Application Support/pomatez"
 end
