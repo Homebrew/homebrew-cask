@@ -1,6 +1,6 @@
 cask "yyets" do
-  version "3.2.9"
-  sha256 "ac58cf67ca429e69cc9985a2c394c0418198aadbc53c8e232c6c4cdf8ae36a81"
+  version "3.3.0"
+  sha256 "3908733cef7109b75246f25567cfaa1a9e49e5da41ad537938b98454b22c3a7e"
 
   url "http://appdown.rrys.tv/RRShare#{version}.dmg"
   appcast "http://app.rrys.tv/"
