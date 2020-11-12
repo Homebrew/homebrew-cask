@@ -7,6 +7,7 @@ cask "muzzle" do
   name "Muzzle"
   homepage "https://muzzleapp.com/"
 
+  auto_updates true
   depends_on macos: ">= :el_capitan"
 
   app "Muzzle.app"
