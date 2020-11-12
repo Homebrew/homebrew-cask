@@ -1,6 +1,3 @@
-# typed: false
-# frozen_string_literal: false
-
 cask "google-cloud-sdk" do
   version :latest # Must remain unversioned, else all installed gcloud components would be lost on upgrade
   sha256 :no_check
