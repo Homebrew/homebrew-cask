@@ -39,6 +39,6 @@ cask "google-cloud-sdk" do
 
       for fish users
         set -g -x "CLOUDSDK_PYTHON" "#{HOMEBREW_PREFIX}/opt/python@3.8/libexec/bin/python"
-        set -g fish_user_paths "#{staged_path}/#{token}/path.fish.inc" $fish_user_paths
+        source "#{staged_path}/#{token}/path.fish.inc"
   EOS
 end
