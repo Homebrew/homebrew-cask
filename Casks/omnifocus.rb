@@ -16,12 +16,12 @@ cask "omnifocus" do
     sha256 "b770b046c2c59f6e55f54d0ad822d5aa755a18aa201d333341de14ebbbcc6a85"
     url "https://downloads.omnigroup.com/software/MacOSX/10.13/OmniFocus-#{version}.dmg"
   else
-    version "3.9.2"
-    sha256 "f16a4cace7f31e7ac735ba1059e8dcef1b2e97faba9a732ade7e07357b937fdd"
+    version "3.10"
+    sha256 "0ecce5b2954fd2d89c6f4d06dd5c2df9be24d5bdcc38accafb7c45c2738c5876"
     url "https://downloads.omnigroup.com/software/MacOSX/10.14/OmniFocus-#{version}.dmg"
   end
 
-  appcast "https://update.omnigroup.com/appcast/com.omnigroup.OmniFocus#{version.major}"
+  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.omnigroup.com/download/latest/omnifocus/"
   name "OmniFocus"
   desc "Scheduling application focusing on organization"
   homepage "https://www.omnigroup.com/omnifocus/"
