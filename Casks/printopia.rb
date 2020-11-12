@@ -1,8 +1,8 @@
 cask "printopia" do
-  version "3.0.14"
-  sha256 "09aa54a70fb17ff459e5d5109d120ff8fb429a7a196c057cbdeea8897eb69850"
+  version "3.0.15"
+  sha256 "0528697b1f95010990517cd31be8bc40408c0e075c9dcc325ff53a2650ead11b"
 
-  url "https://www.decisivetactics.com/products/printopia/dl/Printopia_#{version}.zip"
+  url "https://download.decisivetactics.com/downloads/printopia/Printopia_#{version}.zip"
   appcast "https://www.decisivetactics.com/api/checkupdate?x-app_id=com.decisivetactics.printopia"
   name "Printopia"
   desc "Wireless printing to any printer"
