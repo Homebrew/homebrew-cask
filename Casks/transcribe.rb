@@ -1,5 +1,5 @@
 cask "transcribe" do
-  version "8.80.0"
+  version "8.80.1"
   sha256 "2c32b81ebe15115550c74f6d758facac05acbd20d1da16237e1fe3fc60b04215"
 
   url "https://www.seventhstring.com/xscribe/transcribe.dmg"
