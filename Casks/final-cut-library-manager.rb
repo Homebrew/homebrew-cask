@@ -1,6 +1,6 @@
 cask "final-cut-library-manager" do
-  version "3.71"
-  sha256 "201dffd8b2d1e60094e94b355213863995232c999963576377c8db816517110a"
+  version "3.80"
+  sha256 "6559de714cc8e226ddaff82f360002b491afafb70f2074176e8c0e7033f2accf"
 
   url "http://cdn.arcticwhiteness.com/finalcutlibrarymanager/download/zips/FinalCutLibraryManager_#{version}.zip"
   appcast "https://www.arcticwhiteness.com/finalcutlibrarymanager/download/appcast.xml"
