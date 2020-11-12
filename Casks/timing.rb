@@ -1,6 +1,6 @@
 cask "timing" do
-  version "2020.9"
-  sha256 "1273666aa2d5ee91eae0a4e0ab99c409813f3a680672c2d6dfe3faee7f3e6d88"
+  version "2020.10"
+  sha256 "7e61d08bcc9253ac4ce86c9f6ac127235f3929c0043ae9d5db73c04f00705a38"
 
   url "https://updates.timingapp.com/download/Timing-#{version}.dmg"
   appcast "https://timingapp.com/updates/timing2.xml"
