@@ -21,7 +21,7 @@ cask "omnifocus" do
     url "https://downloads.omnigroup.com/software/MacOSX/10.14/OmniFocus-#{version}.dmg"
   end
 
-  appcast "https://update.omnigroup.com/appcast/com.omnigroup.OmniFocus#{version.major}"
+  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.omnigroup.com/download/latest/omnifocus/"
   name "OmniFocus"
   desc "Scheduling application focusing on organization"
   homepage "https://www.omnigroup.com/omnifocus/"
