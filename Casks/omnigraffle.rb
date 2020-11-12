@@ -13,7 +13,7 @@ cask "omnigraffle" do
     url "https://downloads.omnigroup.com/software/MacOSX/10.14/OmniGraffle-#{version}.dmg"
   end
 
-  appcast "https://update.omnigroup.com/appcast/com.omnigroup.OmniGraffle#{version.major}"
+  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.omnigroup.com/download/latest/omnigraffle/"
   name "OmniGraffle"
   desc "Visual communication software"
   homepage "https://www.omnigroup.com/omnigraffle/"
