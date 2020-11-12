@@ -1,3 +1,6 @@
+# typed: false
+# frozen_string_literal: false
+
 cask "google-cloud-sdk" do
   version :latest # Must remain unversioned, else all installed gcloud components would be lost on upgrade
   sha256 :no_check
@@ -39,6 +42,6 @@ cask "google-cloud-sdk" do
 
       for fish users
         set -g -x "CLOUDSDK_PYTHON" "#{HOMEBREW_PREFIX}/opt/python@3.8/libexec/bin/python"
-        set -g fish_user_paths "#{staged_path}/#{token}/path.fish.inc" $fish_user_paths
+        source "#{staged_path}/#{token}/path.fish.inc"
   EOS
 end
