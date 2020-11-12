@@ -6,6 +6,7 @@ cask "pycharm-ce-with-anaconda-plugin" do
   appcast "https://data.services.jetbrains.com/products/releases?code=PCC&latest=true&type=release"
   name "Jetbrains PyCharm Community Edition with Anaconda plugin"
   name "PyCharm CE with Anaconda plugin"
+  desc "PyCharm IDE with Anaconda plugin"
   homepage "https://www.jetbrains.com/pycharm/promo/anaconda"
 
   auto_updates true
