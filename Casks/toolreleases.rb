@@ -1,6 +1,6 @@
 cask "toolreleases" do
-  version "1.3.5,31"
-  sha256 "e96bfc7314b3ec2efdb14aa3fca83d4dbcca530dbdeb054ae8f4416b34e66263"
+  version "1.3.6,35"
+  sha256 "e8f96c1f5232ade80fa036644549f353cbc44b771589992d5dde7830fc59a15d"
 
   url "https://github.com/DeveloperMaris/ToolReleases/releases/download/v#{version.before_comma}/ToolReleases_v#{version.before_comma}.b#{version.after_comma}.zip"
   appcast "https://github.com/DeveloperMaris/ToolReleases/releases.atom"
