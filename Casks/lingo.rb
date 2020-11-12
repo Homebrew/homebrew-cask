@@ -1,6 +1,6 @@
 cask "lingo" do
-  version "11.0,3081"
-  sha256 "a652c58e31476bc78b3149725102c29533516c5a6da139226d3dd93ec2ab9e18"
+  version "11.2,3106"
+  sha256 "cc59a69fdd888cb5fcad33bad9fab0a409ed67a9ecd9c7fa4187750937f5ab68"
 
   # rink.hockeyapp.net/api/2/apps/ was verified as official when first introduced to the cask
   url "https://rink.hockeyapp.net/api/2/apps/7d71478daf6447bda4094e216e97b0cf/app_versions/#{version.after_comma}?format=zip"
