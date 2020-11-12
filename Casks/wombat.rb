@@ -9,4 +9,8 @@ cask "wombat" do
   homepage "https://github.com/rogchap/wombat"
 
   app "Wombat.app"
+
+  zap trash: [
+    "~/Library/Application Support/Wombat",
+  ]
 end
