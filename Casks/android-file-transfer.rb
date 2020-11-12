@@ -4,6 +4,8 @@ cask "android-file-transfer" do
 
   # google.com/dl/androidjumper/ was verified as official when first introduced to the cask
   url "https://dl.google.com/dl/androidjumper/mtp/#{version.after_comma}/androidfiletransfer.dmg"
+  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://dl.google.com/dl/androidjumper/mtp/current/androidfiletransfer.dmg",
+          must_contain: version.after_comma
   name "Android File Transfer"
   desc "Transfer files from and to an Android smartphone"
   homepage "https://www.android.com/filetransfer/"
