@@ -5,6 +5,7 @@ cask "protonmail-bridge" do
   url "https://protonmail.com/download/Bridge-Installer.dmg"
   appcast "https://protonmail.com/download/current_version_darwin.json"
   name "ProtonMail Bridge"
+  desc "Bridges ProtonMail to email clients supporting IMAP and SMTP protocols"
   homepage "https://protonmail.com/bridge/"
 
   app "ProtonMail Bridge.app"
