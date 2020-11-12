@@ -1,6 +1,6 @@
 cask "lockrattler" do
-  version "4.27,2020.11"
-  sha256 "341ebbd4471d5d4ed8789a9e3881c9faa065bb9792a0ead55befea38ede12286"
+  version "4.28,2020.11"
+  sha256 "edaac8c8142346d798df573df7dc5eaba5c11b509c5fb21ad4805266b36b7035"
 
   # eclecticlightdotcom.files.wordpress.com/ was verified as official when first introduced to the cask
   url "https://eclecticlightdotcom.files.wordpress.com/#{version.after_comma.major}/#{version.after_comma.minor}/lockrattler#{version.before_comma.no_dots}.zip"
