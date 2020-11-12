@@ -5,7 +5,7 @@ cask "transcribe" do
   url "https://www.seventhstring.com/xscribe/transcribe.dmg"
   appcast "https://www.seventhstring.com/xscribe/history.html"
   name "Transcribe!"
-  desc "Transcribe recorded music"
+  desc "Transcribes recorded music"
   homepage "https://www.seventhstring.com/xscribe/overview.html"
 
   depends_on macos: ">= :yosemite"
