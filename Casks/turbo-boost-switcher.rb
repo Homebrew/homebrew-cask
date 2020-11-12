@@ -1,9 +1,9 @@
 cask "turbo-boost-switcher" do
-  version "2.9.1"
-  sha256 "4531450baa9ae28c73df08689d05e4c71e3e5cfbc86b5becdd6c095de3b9cdb7"
+  version "2.10.0"
+  sha256 "3907631151ca89b880edf9340822f595f24e7e17ff545c69b0d48f6686bfa41d"
 
   # turbo-boost-switcher.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://turbo-boost-switcher.s3.amazonaws.com/Turbo+Boost+Switcher_#{version}.zip"
+  url "https://turbo-boost-switcher.s3.amazonaws.com/Turbo_Boost_Switcher_v#{version}.dmg"
   appcast "https://www.rugarciap.com/turbo-boost-switcher-for-os-x-blog/"
   name "Turbo Boost Switcher"
   desc "Enable and disable the Intel CPU Turbo Boost feature"
