@@ -8,6 +8,8 @@ cask "protonmail-bridge" do
   desc "Bridges ProtonMail to email clients supporting IMAP and SMTP protocols"
   homepage "https://protonmail.com/bridge/"
 
+  auto_updates true
+
   app "ProtonMail Bridge.app"
 
   uninstall launchctl: "ProtonMail Bridge",
