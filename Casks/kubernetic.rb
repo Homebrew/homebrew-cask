@@ -1,6 +1,6 @@
 cask "kubernetic" do
-  version "2.13.0"
-  sha256 "c5e2fcb11f2ebb8bb1389ecf625b81a9ce8661d496fee5e86618cb6b5d819b04"
+  version "3.0.1"
+  sha256 "eda2675b820361b4843c72a630690972e5e9ab073b92f14266d696848bd91138"
 
   # kubernetic.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://kubernetic.s3.amazonaws.com/Kubernetic-#{version}.dmg"
