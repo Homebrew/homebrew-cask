@@ -1,6 +1,6 @@
 cask "camo-studio" do
-  version "1.1.1,112"
-  sha256 "b570b70ee6e544b81c60334fedd74c094dfe9bfa62d699676df95cdc84bb54a4"
+  version "1.1.2,117"
+  sha256 "0f9b97252ed4d8c82c31232023c965003da8042b4f850bd84bf61818dc2e8371"
 
   url "https://reincubate.com/res/labs/camo/Camo%20Studio%20#{version.before_comma}%20%28#{version.after_comma}%29%20%5BRelease%5D.app.zip"
   appcast "https://uds.reincubate.com/release-notes/camo/?format=sparkle"
