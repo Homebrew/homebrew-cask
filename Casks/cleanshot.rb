@@ -5,6 +5,7 @@ cask "cleanshot" do
   url "https://updates.getcleanshot.com/v#{version.major}/CleanShot-X-#{version}.dmg"
   appcast "https://updates.getcleanshot.com/v#{version.major}/appcast.xml"
   name "CleanShot"
+  desc "Screen capturing tool"
   homepage "https://getcleanshot.com/"
 
   auto_updates true
