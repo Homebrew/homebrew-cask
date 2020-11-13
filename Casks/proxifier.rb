@@ -2,7 +2,7 @@ cask "proxifier" do
   version "3.0"
   sha256 "662777a758001826f61c7987c1c9c0df65cb40d74991741a898157d744499e3a"
 
-  url "https://www.proxifier.com/download/ProxifierMac3.dmg"
+  url "https://www.proxifier.com/download/ProxifierMac#{version.major}.dmg"
   appcast "https://www.proxifier.com/changelog/mac.html",
           must_contain: version.major_minor
   name "Proxifier"
