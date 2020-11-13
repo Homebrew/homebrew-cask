@@ -5,6 +5,7 @@ cask "secretive" do
   url "https://github.com/maxgoedjen/secretive/releases/download/v#{version}/Secretive.zip"
   appcast "https://github.com/maxgoedjen/secretive/releases.atom"
   name "Secretive"
+  desc "Store SSH keys in the Secure Enclave"
   homepage "https://github.com/maxgoedjen/secretive"
 
   depends_on macos: ">= :big_sur"
