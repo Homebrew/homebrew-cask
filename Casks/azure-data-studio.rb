@@ -1,6 +1,6 @@
 cask "azure-data-studio" do
-  version "1.23.0,d296b6397e0acfddc57e9085e736e084969cdaeb"
-  sha256 "2d28d83a16aa64c0501f2187be9837ce919c1a5d3c1e407b338cd3394d905205"
+  version "1.24.0,eb3c0f5d9df86b9490606aab7fffaa253b0aca4d"
+  sha256 "5f435fac4997642b20b063a422c6d219073bc552ff4a1eb3fd4fa079f0a9589f"
 
   # sqlopsbuilds.azureedge.net/stable was verified as official when first introduced to the cask
   url "https://sqlopsbuilds.azureedge.net/stable/#{version.after_comma}/azuredatastudio-macos-#{version.before_comma}.zip"
