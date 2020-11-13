@@ -8,7 +8,7 @@ cask "muzzle" do
   homepage "https://muzzleapp.com/"
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :mojave"
 
   app "Muzzle.app"
 
