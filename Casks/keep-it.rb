@@ -9,7 +9,7 @@ cask "keep-it" do
   homepage "https://reinventedsoftware.com/keepit/"
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "Keep It.app"
 
