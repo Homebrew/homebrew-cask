@@ -7,6 +7,7 @@ cask "owasp-zap" do
   appcast "https://github.com/zaproxy/zaproxy/releases.atom"
   name "OWASP Zed Attack Proxy"
   name "ZAP"
+  desc "Free and open source web app scanner"
   homepage "https://www.zaproxy.org/"
 
   app "OWASP ZAP.app"
