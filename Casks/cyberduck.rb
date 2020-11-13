@@ -5,6 +5,7 @@ cask "cyberduck" do
   url "https://update.cyberduck.io/Cyberduck-#{version}.zip"
   appcast "https://version.cyberduck.io/changelog.rss"
   name "Cyberduck"
+  desc "Server and cloud storage browser"
   homepage "https://cyberduck.io/"
 
   auto_updates true
