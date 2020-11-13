@@ -1,6 +1,6 @@
 cask "klokki" do
-  version "1.3.2"
-  sha256 "230030fee250b9c06b1f9748d7ffcfb94feeaa8d9b82e1e878b08735d1c6d4df"
+  version "1.3.3"
+  sha256 "0eb51d1f5ba62da2d14bb67613f8454b4b592c1fa01e4e63e569756da1b57188"
 
   # storage.yandexcloud.net/klokki/ was verified as official when first introduced to the cask
   url "https://storage.yandexcloud.net/klokki/Klokki.dmg"
