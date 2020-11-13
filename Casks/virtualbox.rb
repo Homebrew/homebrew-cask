@@ -5,6 +5,7 @@ cask "virtualbox" do
   url "https://download.virtualbox.org/virtualbox/#{version.before_comma}/VirtualBox-#{version.before_comma}-#{version.after_comma}-OSX.dmg"
   appcast "https://download.virtualbox.org/virtualbox/LATEST.TXT"
   name "Oracle VirtualBox"
+  desc "Free and open-source hosted hypervisor for x86 virtualization"
   homepage "https://www.virtualbox.org/"
 
   conflicts_with cask: "virtualbox-beta"
