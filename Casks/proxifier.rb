@@ -1,10 +1,19 @@
 cask "proxifier" do
-  version "2.26.2"
-  sha256 "671c9e8bfb8619b8c39574bad38d3add7b460e491e99a6dfbace6dd3f7535e69"
+  if MacOS.version <= :catalina
+    version "2.26.2"
+    sha256 "671c9e8bfb8619b8c39574bad38d3add7b460e491e99a6dfbace6dd3f7535e69"
+    url "https://www.proxifier.com/download/ProxifierMac.dmg"
 
-  url "https://www.proxifier.com/download/ProxifierMac.dmg"
-  appcast "https://www.proxifier.com/changelog/mac.html",
-          must_contain: version.major_minor
+    appcast "https://www.proxifier.com/changelog/mac#{version.major}.html",
+            must_contain: version.major_minor
+  else
+    version "3.0.9"
+    sha256 "662777a758001826f61c7987c1c9c0df65cb40d74991741a898157d744499e3a"
+    url "https://www.proxifier.com/download/ProxifierMac#{version.major}.dmg"
+    appcast "https://www.proxifier.com/changelog/mac.html",
+            must_contain: version.major_minor
+  end
+
   name "Proxifier"
   homepage "https://www.proxifier.com/mac/"
 
