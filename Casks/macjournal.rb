@@ -1,6 +1,6 @@
 cask "macjournal" do
-  version "7.0.4"
-  sha256 "e5284f99961ebfbe3d19e39d6b2206c781d109a0b6806b1481004f06eb5ecb50"
+  version "7.1"
+  sha256 "b1052326234fa3199a15120f4339eafeab2391223410f48fbfea445e5b506964"
 
   url "https://danschimpf.com/macjournal/MacJournal_#{version}.zip"
   appcast "https://danschimpf.com/appcasts/MacJournal#{version.major}.appcast"
