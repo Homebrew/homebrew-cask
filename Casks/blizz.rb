@@ -1,4 +1,4 @@
-cask "teamviewermeeting" do
+cask "blizz" do
   version "15.12.6"
   sha256 "fba3fe74dcd2e32fc161a97920f050db3786e550f01359c3926d83dfbe38389b"
 
