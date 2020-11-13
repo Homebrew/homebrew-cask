@@ -1,6 +1,6 @@
 cask "lark" do
-  version "3.36.1,12e570"
-  sha256 "6d22499dc70ae28505b836266d1917e192710c3672a5daa0e4c848bc77e9eeaf"
+  version "3.36.2,65786b"
+  sha256 "113bace2bfa4e9eac965d66a02c739592ec7625719ef7340a3154b17518f599b"
 
   # sf16-va.larksuitecdn.com/obj/lark-artifact-storage/ was verified as official when first introduced to the cask
   url "https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/#{version.after_comma}/Lark-#{version.before_comma}.dmg"
