@@ -5,6 +5,7 @@ cask "teamviewermeeting" do
   url "https://dl.teamviewer.com/teamviewermeeting/installer/mac/#{version}/TeamViewerMeeting.dmg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://download.teamviewer.com/blizz/mac"
   name "TeamViewerMeeting"
+  desc "Cross-platform videoconferencing and communication software"
   homepage "https://www.teamviewer.com/meeting/"
 
   app "TeamViewerMeeting.app"
