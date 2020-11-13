@@ -1,4 +1,4 @@
-cask "coin" do
+cask "coin-wallet" do
   version "3.0.1"
   sha256 "ee0cee1c90b0431a059e49a8aabf678dc1243c833c4891f635043a76ab1a2489"
 
