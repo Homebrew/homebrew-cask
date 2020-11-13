@@ -1,6 +1,6 @@
 cask "use-engine" do
-  version "2.2.6"
-  sha256 "1be3987efedf45bdce3dfb183c677c0f229a3585920685094f6522a8967cce94"
+  version "2.2.6.1"
+  sha256 "165ac6af3ebcfbb78513390ccb4405e72b67962de0cc6a7bfc33a576ce4b144d"
 
   url "https://repository.use-together.com/stable/use-engine/macos/#{version.major}.x/#{version}/use-engine.dmg"
   name "USE Engine"
