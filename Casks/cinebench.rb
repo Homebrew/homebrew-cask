@@ -1,6 +1,6 @@
 cask "cinebench" do
-  version "R20,281795"
-  sha256 "c2ee9b2dab04cdd8fc1b1a03bb2303cdaf1495cbc2614cd2f3fa56cd8151e47e"
+  version "R23,330542"
+  sha256 "c8826647af0c7c8cc9bfa2533b254a37deb9852caeea1a47cbacec5e577cdda9"
 
   url "https://http.maxon.net/pub/cinebench/Cinebench#{version.before_comma}.dmg"
   name "Cinebench"
