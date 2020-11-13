@@ -3,7 +3,8 @@ cask "transmit" do
   sha256 "f3f5ac11c071a4d5e698d14b54a630ee444b0d108cb82276aaddd6c8b783aec2"
 
   url "https://www.panic.com/transmit/d/Transmit%20#{version}.zip"
-  appcast "https://library.panic.com/releasenotes/transmit#{version.major}/"
+  appcast "https://library.panic.com/releasenotes/transmit#{version.major}/",
+          must_contain: version.chomp(".0")
   name "Transmit"
   desc "File transfer application"
   homepage "https://panic.com/transmit/"
