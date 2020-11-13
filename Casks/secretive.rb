@@ -1,6 +1,6 @@
 cask "secretive" do
-  version "1.0.2"
-  sha256 "464ab05baaf14246476a04d05b439776ade06e2937477535a7ea68fa947f507f"
+  version "2.0.0"
+  sha256 "5d5b2f5073dcd6be48712f45d1c4214bc6ab170fe750a80da0562cdc92d84bc0"
 
   url "https://github.com/maxgoedjen/secretive/releases/download/v#{version}/Secretive.zip"
   appcast "https://github.com/maxgoedjen/secretive/releases.atom"
