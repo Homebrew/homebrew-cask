@@ -6,7 +6,7 @@ cask "pomatez" do
   url "https://github.com/roldanjr/pomatez/releases/download/v#{version}/Pomatez-v#{version}-mac.dmg"
   appcast "https://github.com/roldanjr/pomatez/releases.atom"
   name "Pomatez"
-  desc "Pomodoro Timer"
+  desc "Pomodoro timer"
   homepage "https://roldanjr.github.io/pomatez"
 
   app "Pomatez.app"
