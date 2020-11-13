@@ -5,6 +5,7 @@ cask "yed" do
   url "https://www.yworks.com/resources/yed/demo/yEd-#{version}_with-JRE14.dmg"
   appcast "https://www.yworks.com/products/yed/download#download"
   name "yWorks yEd"
+  desc "Create diagrams manually, or import external data for analysis"
   homepage "https://www.yworks.com/products/yed"
 
   app "yEd.app"
