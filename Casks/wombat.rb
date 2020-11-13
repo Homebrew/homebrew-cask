@@ -10,7 +10,5 @@ cask "wombat" do
 
   app "Wombat.app"
 
-  zap trash: [
-    "~/Library/Application Support/Wombat",
-  ]
+  zap trash: "~/Library/Application Support/Wombat"
 end
