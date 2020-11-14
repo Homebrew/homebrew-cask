@@ -11,6 +11,7 @@ cask "upic" do
   depends_on macos: ">= :sierra"
 
   app "uPic.app"
+  binary "#{appdir}/uPic.app/Contents/MacOS/uPic", target: "upic"
 
   zap trash: [
     "~/Library/Preferences/com.svend.uPic.plist",
