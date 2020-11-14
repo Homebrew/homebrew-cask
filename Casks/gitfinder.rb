@@ -1,9 +1,8 @@
 cask "gitfinder" do
-  version "1.5.3"
-  sha256 "3925f2a324e3ab570a9c85a9ebc7797620f4df38461d1707ee265c5f78c7c218"
+  version "1.6"
+  sha256 "539d6ceea58fcab0213917cb4809a9d7100239647e31842d8b4770bbedba7ca0"
 
-  # zigz.ag/GitFinder/ was verified as official when first introduced to the cask
-  url "https://zigz.ag/GitFinder/updates/GitFinder.dmg"
+  url "https://get.gitfinder.com/GitFinder#{version.dots_to_underscores}.dmg"
   appcast "https://zigz.ag/GitFinder/updates/stablecast.xml"
   name "GitFinder"
   homepage "https://gitfinder.com/"
