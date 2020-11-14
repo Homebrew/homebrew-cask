@@ -1,5 +1,5 @@
 cask "youdaodict" do
-  version "2.8.1"
+  version "2.8.3"
   sha256 "33b9f0c7aca780a454151d454bf99ab2b33f308bf6e98bfdd9cc0ea2a4d389ad"
 
   url "https://codown.youdao.com/cidian/download/MacDict.dmg"
