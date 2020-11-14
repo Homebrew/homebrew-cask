@@ -1,6 +1,6 @@
 cask "novabench" do
-  version "4.0.1"
-  sha256 "024eae6de4317de11bcae5e7211dfac02d4bc19eb9ff79ba9ca9bfe33196804b"
+  version "4.0.2"
+  sha256 "bf683fd7f8377617bfd956dc536a560324221e0a7f0bad8012d71ace4369a1e2"
 
   url "https://novabench.com/files/novabench.dmg"
   appcast "https://novabench.com/download#personal"
