@@ -6,7 +6,7 @@ cask "retroshare" do
   url "https://github.com/RetroShare/RetroShare/releases/download/v#{version}/Retroshare-#{version}.OSX-10.13+.dmg"
   appcast "https://github.com/RetroShare/RetroShare/releases.atom"
   name "RetroShare"
-  homepage "https://retroshare.sourceforge.io/"
+  homepage "https://retroshare.cc/"
 
   app "retroshare.app"
 end
