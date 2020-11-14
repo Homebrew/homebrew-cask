@@ -8,8 +8,23 @@ cask "eudic" do
   appcast "https://www.eudic.net/v4/en/app/download",
           must_contain: version.after_comma
   name "Eudic"
-  name "欧路词典"
+  desc "欧路词典"
   homepage "https://www.eudic.net/v4/en/app/eudic"
 
   app "Eudic.app"
+
+  uninstall quit: [
+    "com.eusoft.eudic",
+    "com.eusoft.eudic.LightPeek",
+  ]
+
+  zap trash: [
+    "~/Library/Caches/com.eusoft.eudic",
+    "~/Library/Caches/com.eusoft.eudic.LightPeek",
+    "~/Library/Application Scripts/com.eusoft.eudic.QuickLook",
+    "~/Library/Application Support/com.eusoft.eudic",
+    "~/Library/Eudb_en",
+    "~/Library/Preferences/com.eusoft.eudic.LightPeek.plist",
+    "~/Library/Preferences/com.eusoft.eudic.plist",
+  ]
 end
