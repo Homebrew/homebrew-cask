@@ -1,6 +1,6 @@
 cask "bettertouchtool" do
-  version "3.504-1642"
-  sha256 "1bef5d7e27214861bba24e1d24869ae627f76e32fdb71aaecac7bcb7398c580a"
+  version "3.505-1643"
+  sha256 "114c6952ed16b5339e87309a45216f8a07f17e5b9338772b0fc8ff533cd825b0"
 
   url "https://folivora.ai/releases/btt#{version}.zip"
   appcast "https://updates.folivora.ai/appcast_manual.xml"
