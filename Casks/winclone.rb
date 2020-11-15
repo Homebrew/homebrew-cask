@@ -9,7 +9,7 @@ cask "winclone" do
   desc "Boot Camp cloning and backup solution"
   homepage "https://twocanoes.com/products/mac/winclone"
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :catalina"
 
   pkg "Winclone.pkg"
 
