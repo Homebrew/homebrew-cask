@@ -1,3 +1,4 @@
+# typed: false
 cask "spotify" do
   version "10.5"
   sha256 :no_check
