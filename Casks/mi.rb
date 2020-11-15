@@ -5,7 +5,10 @@ cask "mi" do
   url "https://www.mimikaki.net/download/mi#{version}.dmg"
   appcast "https://www.mimikaki.net/download/appcast.xml"
   name "mi"
+  desc "Text editor"
   homepage "https://www.mimikaki.net/"
+
+  conflicts_with cask: "homebrew/cask-versions/mi"
 
   app "mi.app"
 
