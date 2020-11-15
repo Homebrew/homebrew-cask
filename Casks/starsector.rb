@@ -5,7 +5,7 @@ cask "starsector" do
   # s3.amazonaws.com/fractalsoftworks was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/fractalsoftworks/starsector/starsector_mac-#{version}.zip"
   name "Starsector"
-  desc "In-development open-world single-player space combat & trading rpg"
+  desc "Open-world single-player space combat & trading rpg"
   homepage "https://fractalsoftworks.com/"
 
   app "Starsector.app"
