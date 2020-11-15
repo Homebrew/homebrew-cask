@@ -8,5 +8,7 @@ cask "macjournal" do
   desc "Journaling and blogging software"
   homepage "https://danschimpf.com/"
 
+  depends_on macos: ">= :mojave"
+
   app "MacJournal.app"
 end
