@@ -13,12 +13,7 @@ cask "google-chrome" do
 
   app "Google Chrome.app"
 
-  uninstall launchctl: [
-    "com.google.keystone.agent",
-    "com.google.keystone.daemon",
-  ]
-
-  zap trash: [
+  zap trash:     [
     "/Library/Caches/com.google.SoftwareUpdate.*",
     "/Library/Google/Google Chrome Brand.plist",
     "/Library/Google/GoogleSoftwareUpdate",
@@ -41,10 +36,14 @@ cask "google-chrome" do
     "~/Library/Saved Application State/com.google.Chrome.savedState",
     "~/Library/WebKit/com.google.Chrome",
   ],
-      rmdir: [
+      rmdir:     [
         "/Library/Google",
         "~/Library/Application Support/Google",
         "~/Library/Caches/Google",
         "~/Library/Google",
+      ],
+      launchctl: [
+        "com.google.keystone.agent",
+        "com.google.keystone.daemon",
       ]
 end
