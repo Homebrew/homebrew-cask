@@ -8,7 +8,7 @@ cask "mi" do
   desc "Text editor"
   homepage "https://www.mimikaki.net/"
 
-  conflicts_with cask: "homebrew/cask-versions/mi"
+  conflicts_with cask: "homebrew/cask-versions/mi-beta"
 
   app "mi.app"
 
