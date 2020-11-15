@@ -11,7 +11,5 @@ cask "fldigi" do
   app "fldigi-#{version.before_comma}.app"
   app "flarq-#{version.after_comma}.app"
 
-  zap trash: [
-    "~/.fldigi",
-  ]
+  zap trash: "~/.fldigi"
 end
