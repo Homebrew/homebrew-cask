@@ -9,4 +9,8 @@ cask "flrig" do
   homepage "https://sourceforge.net/projects/fldigi/files/flrig/"
 
   app "flrig-#{version.before_comma}.app"
+
+  zap trash: [
+    "~/.flrig"
+  ]
 end
