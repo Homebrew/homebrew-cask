@@ -1,9 +1,9 @@
 cask "spotify" do
-  version :latest
+  version "10.5"
   sha256 :no_check
 
   # scdn.co/ was verified as official when first introduced to the cask
-  url "https://download.scdn.co/Spotify.dmg"
+  url "https://download.scdn.co/Spotify-0.8.5.dmg"
   name "Spotify"
   desc "Music streaming service"
   homepage "https://www.spotify.com/"
