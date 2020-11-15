@@ -8,7 +8,7 @@ cask "eudic" do
   appcast "https://www.eudic.net/v4/en/app/download",
           must_contain: version.after_comma
   name "Eudic"
-  desc "欧路词典"
+  name "欧路词典"
   homepage "https://www.eudic.net/v4/en/app/eudic"
 
   app "Eudic.app"
