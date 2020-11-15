@@ -5,7 +5,7 @@ cask "flrig" do
   url "https://downloads.sourceforge.net/fldigi/fldigi/flrig-#{version.before_comma}_x86_64.dmg"
   appcast "https://sourceforge.net/projects/fldigi/rss?path=/flrig"
   name "flrig"
-  desc "Ham radio rig control program cooperates with fldigi"
+  desc "Ham radio rig control"
   homepage "https://sourceforge.net/projects/fldigi/files/flrig/"
 
   app "flrig-#{version.before_comma}.app"
