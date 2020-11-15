@@ -11,6 +11,6 @@ cask "flrig" do
   app "flrig-#{version.before_comma}.app"
 
   zap trash: [
-    "~/.flrig"
+    "~/.flrig",
   ]
 end
