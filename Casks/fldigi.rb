@@ -1,6 +1,6 @@
 cask "fldigi" do
-  version "4.1.15,4.3.7"
-  sha256 "d4d6e158192c614ca1c0b940fe85847149cf278d2ff200202eff67c3f07f7088"
+  version "4.1.16,4.3.7"
+  sha256 "9aefd9935a335c796c6dd8c64430ae5599f86d74564b49f2d4c3944e364a502a"
 
   url "https://downloads.sourceforge.net/fldigi/fldigi/fldigi-#{version.before_comma}_x86_64.dmg"
   appcast "https://sourceforge.net/projects/fldigi/rss?path=/fldigi"
@@ -10,4 +10,6 @@ cask "fldigi" do
 
   app "fldigi-#{version.before_comma}.app"
   app "flarq-#{version.after_comma}.app"
+
+  zap trash: "~/.fldigi"
 end
