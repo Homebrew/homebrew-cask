@@ -11,7 +11,6 @@ cask "winx-hd-video-converter" do
   
   zap trash: [
     "~/Library/Preferences/com.winxdvd.hdvideoconverterformac.plist",
-    "~/Library/Caches/com.winxdvd.hdvideoconverterformac/"
+    "~/Library/Caches/com.winxdvd.hdvideoconverterformac/",
   ]
-  
 end
