@@ -5,7 +5,7 @@ cask "hyperbackupexplorer" do
   url "https://global.download.synology.com/download/Utility/HyperBackupExplorer/#{version}/Mac/x86_64/HyperBackupExplorer-#{version}-mac.dmg"
   appcast "https://www.synology.com/en-global/releaseNote/HyperBackupExplorer"
   name "HyperBackupExplorer"
-  homepage "https://www.synology.com/en-global/releaseNote/HyperBackupExplorer"
+  homepage "https://www.synology.com/en-us/dsm/feature/hyper_backup"
 
   app "HyperBackupExplorer.app"
 end
