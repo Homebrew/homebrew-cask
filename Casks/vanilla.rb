@@ -1,6 +1,6 @@
 cask "vanilla" do
-  version "1.2.2,40"
-  sha256 "6ed84c99dde08aa95ddc4cf4e68d5091a70212fc817b216f7793ece767e9c751"
+  version "2.0,46"
+  sha256 "1ef371f039dd099c13b9caf0b427fcb26fadc5cd52c01f2f5cc12860ee66ecc6"
 
   url "https://macrelease.matthewpalmer.net/distribution/appcasts/Vanilla-#{version.after_comma}.dmg"
   appcast "https://updates.devmate.com/net.matthewpalmer.Vanilla.xml"
