@@ -1,6 +1,3 @@
-# typed: false
-# frozen_string_literal: true
-
 cask "logdna-agent" do
   version "2.1.2"
   sha256 "daa76a854ba459c4a0b6400f326a6ae98f53f404bff9ed51a70e23ca08939416"
