@@ -1,5 +1,5 @@
 cask "openvanilla" do
-  version "1.6.1"
+  version "1.6.1,3273"
   sha256 "248c2a84f95f40ffea2fff71310814103ae70d87a829e136713ff801b39a29f2"
 
   # github.com/openvanilla/openvanilla/ was verified as official when first introduced to the cask
