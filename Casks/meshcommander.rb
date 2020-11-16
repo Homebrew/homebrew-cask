@@ -1,9 +1,9 @@
 cask "meshcommander" do
-  version "0.8.5"
-  sha256 "a161ab200bfa30e9550fcfcf9d8e19da867b5171a5a8260d36884b752b6eb69a"
+  version "0.88"
+  sha256 "97ba03d3f9c4eadc306efc619fa0196c7e9c97d240bff89cfd0e4da719c40fb5"
 
   # bintray.com/gomesjj/APPS/ was verified as official when first introduced to the cask
-  url "https://bintray.com/gomesjj/APPS/download_file?file_path=#{version.no_dots}%2FMeshCommander.dmg.zip"
+  url "https://bintray.com/gomesjj/APPS/download_file?file_path=#{version}%2FMeshCommander.dmg-#{version.no_dots}.zip"
   appcast "https://dl.bintray.com/gomesjj/APPS/",
           must_contain: version.no_dots
   name "MeshCommander"
