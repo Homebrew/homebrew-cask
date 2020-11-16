@@ -1,6 +1,6 @@
 cask "maccy" do
-  version "0.18.0"
-  sha256 "9c9c10ebee068ab6de965969cd24b552224ebbe6af889b94a2bc9642f81e1f1f"
+  version "0.18.1"
+  sha256 "71a7836f6a381ef34eeae8694cccae10c183a413159cc6810d90fad0ecd777a1"
 
   # github.com/p0deje/Maccy/ was verified as official when first introduced to the cask
   url "https://github.com/p0deje/Maccy/releases/download/#{version}/Maccy.app.zip"
