@@ -11,7 +11,7 @@ cask "hazel" do
 
   auto_updates true
 
-  prefpane "Install Hazel.app/Contents/Resources/Hazel.prefPane"
+  app "Hazel.app"
 
   uninstall quit: "com.noodlesoft.HazelHelper"
 
