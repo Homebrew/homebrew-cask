@@ -1,5 +1,5 @@
 cask "saoimageds9" do
-  # note: "9" is not a version number, but an intrinsic part of the product name
+  # NOTE: "9" is not a version number, but an intrinsic part of the product name
   version "8.1"
 
   if MacOS.version <= :high_sierra

@@ -1,5 +1,5 @@
 cask "neo4j" do
-  # note: "4" is not a version number, but an intrinsic part of the product name
+  # NOTE: "4" is not a version number, but an intrinsic part of the product name
   version "1.3.10"
   sha256 "9aa21a463ca7efc313f1465a388a069dce3e1e505a4fc7949e2bbca1e4088dab"
 

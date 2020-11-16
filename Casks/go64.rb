@@ -1,5 +1,5 @@
 cask "go64" do
-  # note: "64" is not a version number, but an intrinsic part of the product name
+  # NOTE: "64" is not a version number, but an intrinsic part of the product name
   version "1.1.1"
   sha256 "1eb0eb8766b531827a26743d4d0650fdba7a436707d6439bb96781bf29dbe3c5"
 
