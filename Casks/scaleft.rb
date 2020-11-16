@@ -1,6 +1,6 @@
 cask "scaleft" do
-  version "1.49.2"
-  sha256 "b67861f8193ab04a9e5116aff1bda707c8026aad24a191d7bd8c6c03b297144d"
+  version "1.50.1"
+  sha256 "5a140828947df5848923f209f387c9ee0749b15e51463899d406f2ef62be2df1"
 
   url "https://dist.scaleft.com/client-tools/mac/v#{version}/ScaleFT-#{version}.pkg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://dist.scaleft.com/client-tools/mac/latest/ScaleFT.pkg"
