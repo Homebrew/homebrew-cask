@@ -13,5 +13,9 @@ cask "qv2ray" do
 
   app "qv2ray.app"
 
-  zap trash: "~/Library/Preferences/qv2ray"
+  zap trash: [
+    "~/Library/Preferences/com.github.qv2ray.plist",
+    "~/Library/Preferences/qv2ray",
+    "~/Library/Saved Application State/com.github.qv2ray.savedState",
+  ]
 end
