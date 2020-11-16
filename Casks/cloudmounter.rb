@@ -1,6 +1,6 @@
 cask "cloudmounter" do
-  version "3.6.611"
-  sha256 "b9b90d9e634c63377b080f1b242c912213ad0f502f614951dcbe867d05fb010e"
+  version "3.7.637"
+  sha256 "d4566213701107251b4bba23302859b29c10c8d3432ee41ccbc298c38ee3b7fb"
 
   url "https://cdn.eltima.com/download/cloudmounter.dmg"
   appcast "https://cdn.eltima.com/download/cloudmounter-update/settings.xml",
