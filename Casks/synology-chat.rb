@@ -5,6 +5,7 @@ cask "synology-chat" do
   url "https://global.download.synology.com/download/Tools/ChatClient/#{version}/Mac/Installer/Chat-#{version}.dmg"
   appcast "https://www.synology.com/en-us/releaseNote/ChatClient"
   name "Synology Chat"
+  desc "Messaging service that runs on Synology NAS"
   homepage "https://www.synology.com/en-us/dsm/feature/chat"
 
   app "Synology Chat.app"
