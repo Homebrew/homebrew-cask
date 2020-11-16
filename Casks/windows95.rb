@@ -1,5 +1,5 @@
 cask "windows95" do
-  # note: "95" is not a version number, but an intrinsic part of the product name
+  # NOTE: "95" is not a version number, but an intrinsic part of the product name
   version "2.2.2"
   sha256 "70deb71aa540fceeddec8815f308710f9ca991bd78cf84d8512aa8035d781c2c"
 

@@ -1,5 +1,5 @@
 cask "perimeter81" do
-  # note: "81" is not a version number, but an intrinsic part of the product name
+  # NOTE: "81" is not a version number, but an intrinsic part of the product name
   version :latest
   sha256 :no_check
 

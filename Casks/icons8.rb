@@ -1,5 +1,5 @@
 cask "icons8" do
-  # note: "8" is not a version number, but an intrinsic part of the product name
+  # NOTE: "8" is not a version number, but an intrinsic part of the product name
   version "5.7.4"
   sha256 "35c0ed3421607a7a7591b15e3c305c6efd52db6f6d73bc0950b19a49007b4ae0"
 

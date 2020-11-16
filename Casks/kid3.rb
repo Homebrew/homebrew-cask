@@ -1,5 +1,5 @@
 cask "kid3" do
-  # note: "3" is not a version number, but an intrinsic part of the product name (ID3 tags)
+  # NOTE: "3" is not a version number, but an intrinsic part of the product name (ID3 tags)
   version "3.8.4"
   sha256 "18c893879bf20f376480b2062beb0ee7a0c7e2ad4663d11bffff994990568c4d"
 

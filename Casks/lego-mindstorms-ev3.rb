@@ -1,5 +1,5 @@
 cask "lego-mindstorms-ev3" do
-  # note: "3" is not a version number, but an intrinsic part of the product name
+  # NOTE: "3" is not a version number, but an intrinsic part of the product name
   version "1.4.4"
   sha256 "cb912667968e08604e755278d0e2f2fc69556349938cb36b708c5ecd8c74af29"
 

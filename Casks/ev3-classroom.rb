@@ -1,5 +1,5 @@
 cask "ev3-classroom" do
-  # note: "3" is not a version number, but an intrinsic part of the product name
+  # NOTE: "3" is not a version number, but an intrinsic part of the product name
   version "1.1.1"
   sha256 "3df3347be4912af6457afc1731328daecc8161a38ef09231b26cdcd9aa59c5ab"
 

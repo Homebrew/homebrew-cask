@@ -1,5 +1,5 @@
 cask "marathon2" do
-  # note: "2" is not a version number, but an intrinsic part of the product name
+  # NOTE: "2" is not a version number, but an intrinsic part of the product name
   version "20200904"
   sha256 "55d1e7b595089adc4fdaf455742f3b373e730bc22c24204bffa5a884f78a14c3"
 
