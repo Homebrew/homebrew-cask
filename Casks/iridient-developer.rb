@@ -9,5 +9,7 @@ cask "iridient-developer" do
   desc "Image processing application"
   homepage "https://www.iridientdigital.com/"
 
+  depends_on macos: ">= :mojave"
+
   app "Iridient Developer.app"
 end
