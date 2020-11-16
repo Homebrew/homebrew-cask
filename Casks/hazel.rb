@@ -9,11 +9,7 @@ cask "hazel" do
   desc "Automated organization"
   homepage "https://www.noodlesoft.com/"
 
-  auto_updates true
-
-  prefpane "Install Hazel.app/Contents/Resources/Hazel.prefPane"
-
-  uninstall quit: "com.noodlesoft.HazelHelper"
+  app "Hazel.app"
 
   zap trash: [
     "~/Library/Logs/Hazel",
