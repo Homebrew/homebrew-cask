@@ -1,6 +1,6 @@
 cask "electrocrud" do
-  version "2.7.1"
-  sha256 "8715c9acf7399c51f04e7345876074d269a828a32f2d07e6057a3d8d9a3c89a5"
+  version "2.7.2"
+  sha256 "b4435dd1c60dc7930bd68de1ce8c3cb5bc13ca11150a69d16352ce47c9c94c60"
 
   url "https://github.com/garrylachman/ElectroCRUD/releases/download/#{version}/ElectroCRUD-#{version}.dmg"
   appcast "https://github.com/garrylachman/ElectroCRUD/releases.atom"
