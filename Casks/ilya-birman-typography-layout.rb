@@ -3,8 +3,8 @@ cask "ilya-birman-typography-layout" do
   sha256 "b21c86951038a5940e3fbab1f2b4e17f477a143eece9117670dea6a439b348d3"
 
   url "https://ilyabirman.ru/projects/typography-layout/download/ilya-birman-typolayout-#{version}-mac.dmg"
-  name "Ilya Birman typography layout"
-  desc "Typography Keyboard Layout"
+  name "Ilya Birman Typography Layout"
+  desc "Typography keyboard layout"
   homepage "https://ilyabirman.ru/projects/typography-layout/"
 
   artifact \
