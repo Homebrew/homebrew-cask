@@ -10,8 +10,8 @@ cask "choosy" do
 
     prefpane "Choosy.prefPane"
   else
-    version "2.1"
-    sha256 "758da621d3a92358885333b767d64b024197a8147a339b1a0d14e938673452f9"
+    version "2.2"
+    sha256 "cb1f40df11ac1b52354f4b81367462d2646a6d023c64bafe5022fcec52f796cd"
 
     pkg "Choosy.pkg"
   end
