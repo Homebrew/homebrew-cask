@@ -1,6 +1,6 @@
 cask "vrew" do
-  version "0.6.2"
-  sha256 "766c9f98f2d073e4c619f2247d85d817cf6abcfd1f7bb34e89f804bda98bc00d"
+  version "0.6.3"
+  sha256 "2872602950b774d5bb23a5b6641d37f79d49659e8ffd40255f7dbdd33639f1fd"
 
   url "https://vrew-files.voyagerx.com/Vrew-#{version}.dmg"
   appcast "https://s3-ap-northeast-2.amazonaws.com/vrew-files.voyagerx.com/latest-mac.yml"
