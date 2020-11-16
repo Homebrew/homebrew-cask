@@ -10,6 +10,7 @@ cask "termius" do
   homepage "https://www.termius.com/"
 
   auto_updates true
+  depends_on macos: ">= :yosemite"
 
   app "Termius.app"
 
