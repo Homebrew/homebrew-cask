@@ -1,6 +1,6 @@
 cask "origami-studio" do
-  version "252227598"
-  sha256 "716b7d0d0596464bb5dd100e7d7bb687da0b38e4809d13548d32c229a765d82c"
+  version "257065621"
+  sha256 "c929f34248af7aee7b7a7a3a6e2803adb72f0be174633d1097831be557a5e513"
 
   # facebook.com/designtools/ was verified as official when first introduced to the cask
   url "https://facebook.com/designtools/origami/"
