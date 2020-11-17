@@ -11,4 +11,12 @@ cask "zotero" do
   auto_updates true
 
   app "Zotero.app"
+
+  zap trash: [
+    "~/Library/Application Support/Zotero",
+    "~/Library/Caches/Zotero",
+    "~/Library/Preferences/org.zotero.zotero.plist",
+    "~/Library/Saved Application State/org.zotero.zotero.savedState",
+    "~/Zotero",
+  ]
 end
