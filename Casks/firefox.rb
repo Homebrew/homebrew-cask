@@ -85,6 +85,10 @@ cask "firefox" do
     sha256 "f00b14b0dba9747f956206d484afe3c41edac021d9be660a5080422cdb247bc5"
     "ru"
   end
+  language "sv" do
+    sha256 "9ef8ee19d6426b7a7893cd4a83dec2d72c46fb99b8ad392696f66981d46cb546"
+    "sv-SE"
+  end
   language "tr" do
     sha256 "ddf0865b156cc0220cfa8a103d31654d852801d7c41509b3f5bbb96192d7882d"
     "tr"
