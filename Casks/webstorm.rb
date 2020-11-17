@@ -5,6 +5,7 @@ cask "webstorm" do
   url "https://download.jetbrains.com/webstorm/WebStorm-#{version.before_comma}.dmg"
   appcast "https://data.services.jetbrains.com/products/releases?code=WS&latest=true&type=release"
   name "WebStorm"
+  desc "JavaScript IDE"
   homepage "https://www.jetbrains.com/webstorm/"
 
   auto_updates true
