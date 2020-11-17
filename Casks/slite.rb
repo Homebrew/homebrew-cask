@@ -5,6 +5,7 @@ cask "slite" do
   url "https://download.slite.com/mac"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=https://download.slite.com/mac"
   name "Slite"
+  desc "Team communication and collaboration software"
   homepage "https://slite.com/"
 
   app "Slite.app"
