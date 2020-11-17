@@ -1,6 +1,6 @@
 cask "keypad-layout" do
-  version "1.7"
-  sha256 "8872f76cc433f0d57e73a5181a7d0f4821aaca9673271bda6e6dbced0b4dc3cc"
+  version "1.8"
+  sha256 "0cac66808d7334e815caa83851839c6b52c418842b4f3ea0d9ffa7f4f1737324"
 
   url "https://github.com/janten/keypad-layout/releases/download/#{version}/Keypad-Layout.zip"
   appcast "https://github.com/janten/keypad-layout/releases.atom"
