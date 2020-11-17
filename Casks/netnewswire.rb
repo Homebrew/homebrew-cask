@@ -13,6 +13,7 @@ cask "netnewswire" do
   depends_on macos: ">= :catalina"
 
   app "NetNewsWire.app"
+
   zap trash: [
     "~/Library/Application Scripts/com.ranchero.NetNewsWire-Evergreen.Subscribe-to-Feed",
     "~/Library/Application Support/NetNewsWire",
