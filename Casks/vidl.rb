@@ -4,7 +4,7 @@ cask "vidl" do
 
   url "https://omz-software.com/vidl/ViDL.zip"
   name "ViDL for Mac"
-  desc "ViDL is a free Mac app that allows you to easily download videos from YouTube and hundreds of other websites for offline viewing."
+  desc "GUI frontend for youtube-dl"
   homepage "https://omz-software.com/vidl/"
 
   app "ViDL.app"
