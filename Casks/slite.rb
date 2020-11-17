@@ -3,7 +3,7 @@ cask "slite" do
   sha256 "25ad8fea41ad4aa6b175111a9715dee0221102732bd87d085f6657b24dd8e1b2"
 
   url "https://download.slite.com/mac"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://download.slite.com/mac"
+  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=https://download.slite.com/mac"
   name "Slite"
   homepage "https://slite.com/"
 
