@@ -9,6 +9,9 @@ cask "termius" do
   desc "Cross-platform SSH client"
   homepage "https://www.termius.com/"
 
+  auto_updates true
+  depends_on macos: ">= :yosemite"
+
   app "Termius.app"
 
   zap trash: [
