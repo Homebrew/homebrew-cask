@@ -5,6 +5,7 @@ cask "bluetility" do
   url "https://github.com/jnross/Bluetility/releases/download/#{version}/Bluetility.app.zip"
   appcast "https://github.com/jnross/Bluetility/releases.atom"
   name "Bluetility"
+  desc "Bluetooth Low Energy browser"
   homepage "https://github.com/jnross/Bluetility"
 
   app "Bluetility.app"
