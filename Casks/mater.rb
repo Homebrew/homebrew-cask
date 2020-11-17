@@ -1,6 +1,6 @@
 cask "mater" do
-  version "1.0.6"
-  sha256 "37920a287f04a4e47b4ff3f0301f8d5825fed029dfaf2d04ffb65205de16c2dd"
+  version "1.0.7"
+  sha256 "4c62287a7eb4c95a709076f049be0c7e65f3f8c9324f5a8321fe67b7361f8c4b"
 
   url "https://github.com/jasonlong/mater/releases/download/v#{version}/Mater-darwin-x64.zip"
   appcast "https://github.com/jasonlong/mater/releases.atom"
