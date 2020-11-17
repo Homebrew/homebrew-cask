@@ -6,7 +6,7 @@ cask "openphone" do
   appcast "https://s3-us-west-2.amazonaws.com/download.openphone.co/latest-mac.yml"
   name "OpenPhone"
   desc "Business phone for professionals, teams, and companies"
-  homepage "https://www.openphone.co"
+  homepage "https://www.openphone.co/"
 
   app "OpenPhone.app"
 end
