@@ -1,6 +1,6 @@
 cask "franz" do
-  version "5.6.0"
-  sha256 "b8956aa576ffec8f537235ecf5d2bcb8ff02045c6d2253bb6845e18f7e4e8c93"
+  version "5.6.1"
+  sha256 "8889fbacd3686ad0c9d8c372080dcd1292d5e0bcba34eb2e569ebe8dbb5a1274"
 
   # github.com/meetfranz/franz/ was verified as official when first introduced to the cask
   url "https://github.com/meetfranz/franz/releases/download/v#{version}/franz-#{version}.dmg"
