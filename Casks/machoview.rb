@@ -5,6 +5,7 @@ cask "machoview" do
   url "https://downloads.sourceforge.net/machoview/MachOView-#{version}.dmg"
   appcast "https://sourceforge.net/projects/machoview/rss"
   name "MachOView"
+  desc "Visual Mach-O file browser"
   homepage "https://sourceforge.net/projects/machoview/"
 
   app "MachOView.app"

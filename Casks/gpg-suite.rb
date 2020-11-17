@@ -5,6 +5,7 @@ cask "gpg-suite" do
   url "https://releases.gpgtools.org/GPG_Suite-#{version}.dmg"
   appcast "https://gpgtools.org/releases/gka/appcast.xml"
   name "GPG Suite"
+  desc "Tools to protect your emails and files"
   homepage "https://gpgtools.org/"
 
   auto_updates true

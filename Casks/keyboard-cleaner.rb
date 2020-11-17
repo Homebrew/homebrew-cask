@@ -4,6 +4,7 @@ cask "keyboard-cleaner" do
 
   url "https://jan.prima.de/u/Keyboard-Cleaner-64bit.zip"
   name "Keyboard Cleaner"
+  desc "Desktop shield and keystroke interceptor"
   homepage "https://jan.prima.de/~jan/plok/archives/48-Keyboard-Cleaner.html"
 
   app "Keyboard Cleaner.app"

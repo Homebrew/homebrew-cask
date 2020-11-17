@@ -5,6 +5,7 @@ cask "muzzle" do
   url "https://muzzleapp.com/binaries/muzzle-#{version.after_comma}.zip"
   appcast "https://muzzleapp.com/api/1/appcast.xml"
   name "Muzzle"
+  desc "Silence embarrassing notifications while screensharing"
   homepage "https://muzzleapp.com/"
 
   auto_updates true

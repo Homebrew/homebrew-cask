@@ -6,6 +6,7 @@ cask "tableplus" do
   appcast "https://tableplus.com/osx/version.xml",
           must_contain: version.after_comma
   name "TablePlus"
+  desc "Native GUI tool for relational databases"
   homepage "https://tableplus.com/"
 
   auto_updates true

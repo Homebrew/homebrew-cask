@@ -7,6 +7,7 @@ cask "textmate" do
   appcast "https://api.textmate.org/releases/release?os=10.14.6",
           must_contain: version
   name "TextMate"
+  desc "General-purpose text editor"
   homepage "https://macromates.com/"
 
   auto_updates true
