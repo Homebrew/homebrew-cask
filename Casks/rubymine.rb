@@ -5,6 +5,7 @@ cask "rubymine" do
   url "https://download.jetbrains.com/ruby/RubyMine-#{version.before_comma}.dmg"
   appcast "https://data.services.jetbrains.com/products/releases?code=RM&latest=true&type=release"
   name "RubyMine"
+  desc "Ruby on Rails IDE"
   homepage "https://www.jetbrains.com/ruby/"
 
   auto_updates true

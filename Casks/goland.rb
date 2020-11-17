@@ -5,6 +5,7 @@ cask "goland" do
   url "https://download.jetbrains.com/go/goland-#{version.before_comma}.dmg"
   appcast "https://data.services.jetbrains.com/products/releases?code=GO&latest=true&type=release"
   name "Goland"
+  desc "Go (golang) IDE"
   homepage "https://www.jetbrains.com/go/"
 
   auto_updates true

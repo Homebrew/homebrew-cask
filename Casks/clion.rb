@@ -5,6 +5,7 @@ cask "clion" do
   url "https://download.jetbrains.com/cpp/CLion-#{version.before_comma}.dmg"
   appcast "https://data.services.jetbrains.com/products/releases?code=CL&latest=true&type=release"
   name "CLion"
+  desc "C and C++ IDE"
   homepage "https://www.jetbrains.com/clion/"
 
   auto_updates true

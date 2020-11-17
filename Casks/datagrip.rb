@@ -5,6 +5,7 @@ cask "datagrip" do
   url "https://download.jetbrains.com/datagrip/datagrip-#{version.before_comma}.dmg"
   appcast "https://data.services.jetbrains.com/products/releases?code=DG&latest=true&type=release"
   name "DataGrip"
+  desc "Databases & SQL IDE"
   homepage "https://www.jetbrains.com/datagrip/"
 
   auto_updates true
