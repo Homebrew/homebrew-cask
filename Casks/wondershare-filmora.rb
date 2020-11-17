@@ -1,6 +1,6 @@
 cask "wondershare-filmora" do
-  version "10.1.0"
-  sha256 "3d3ac682f5d7c9a491d3812ed5528f7c43cd18d33efe4a6efd865e3eb25da6fe"
+  version "10.1.1"
+  sha256 "777fd5b5f7fdb9579f4cbc9cd92c02ad0272cd320022bdc32d370c7599752c1d"
 
   url "https://download.wondershare.com/filmora-mac_full718.dmg"
   appcast "https://cbs.wondershare.com/go.php?m=upgrade_info&pid=718&version=#{version}"
