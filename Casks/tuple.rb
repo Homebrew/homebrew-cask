@@ -6,6 +6,7 @@ cask "tuple" do
   url "https://s3.us-east-2.amazonaws.com/tuple-releases/production/sparkle/tuple-#{version.before_comma}-#{version.after_comma}.zip"
   appcast "https://s3.us-east-2.amazonaws.com/tuple-releases/production/sparkle/appcast.xml"
   name "Tuple"
+  desc "Remote pair programming app"
   homepage "https://tuple.app/"
 
   auto_updates true

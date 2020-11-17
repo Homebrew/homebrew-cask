@@ -5,6 +5,7 @@ cask "ngrok" do
   # bin.equinox.io/ was verified as official when first introduced to the cask
   url "https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-darwin-amd64.zip"
   name "ngrok"
+  desc "Reverse proxy, secure introspectable tunnels to localhost"
   homepage "https://ngrok.com/"
 
   binary "ngrok"

@@ -5,6 +5,7 @@ cask "tomighty" do
   url "https://github.com/tomighty/tomighty-osx/releases/download/#{version}/Tomighty-#{version}.dmg"
   appcast "https://github.com/tomighty/tomighty-osx/releases.atom"
   name "Tomighty"
+  desc "Pomodoro desktop timer"
   homepage "https://github.com/tomighty/tomighty-osx"
 
   app "Tomighty.app"

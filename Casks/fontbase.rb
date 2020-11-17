@@ -5,6 +5,7 @@ cask "fontbase" do
   url "https://releases.fontba.se/mac/FontBase-#{version}.dmg"
   appcast "https://releases.fontba.se/mac/latest-mac.yml"
   name "FontBase"
+  desc "Font manager"
   homepage "https://fontba.se/"
 
   auto_updates true
