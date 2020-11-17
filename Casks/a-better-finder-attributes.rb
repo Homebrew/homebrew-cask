@@ -1,6 +1,6 @@
 cask "a-better-finder-attributes" do
-  version "7.03"
-  sha256 "5870cc332809ed5ee0fd8427162aae114990fc477b0d2da6d7a4a5b0785242dc"
+  version "7.04"
+  sha256 "de991536663d81069d2599a7adcd0e4fd1ed2228bf71b18e7f390f859b483f72"
 
   url "https://www.publicspace.net/download/signedABFA#{version.major}.zip"
   appcast "https://www.publicspace.net/app/signed_abfa#{version.major}.xml"
