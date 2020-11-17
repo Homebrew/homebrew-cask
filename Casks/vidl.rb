@@ -1,8 +1,9 @@
 cask "vidl" do
-  version :latest
-  sha256 :no_check
+  version "1.0.2"
+  sha256 "af79d4f190fc9370abbd7c92e61be18b7c7c7bdd6cea235bd5e6c133ea153b2b"
 
-  url "https://omz-software.com/vidl/ViDL.zip"
+  url "https://omz-software.com/vidl/ViDL#{version.no_dots}.zip"
+  appcast "https://ssl.webpack.de/omz-software.com/vidl/appcast.xml"
   name "ViDL for Mac"
   desc "GUI frontend for youtube-dl"
   homepage "https://omz-software.com/vidl/"
