@@ -1,5 +1,5 @@
 cask "native-access" do
-  version "1.13.0.133"
+  version "1.13.1.134"
   sha256 "d95ed68924adcf6c4d8cc624faf0bba02730145ec441a00102f922dc434331c5"
 
   url "https://native-instruments.com/fileadmin/downloads/Native_Access_Installer.dmg"
