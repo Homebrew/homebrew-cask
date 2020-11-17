@@ -5,7 +5,8 @@ cask "openphone" do
   url "https://download.openphone.co/OpenPhone-#{version}.dmg"
   appcast "https://s3-us-west-2.amazonaws.com/download.openphone.co/latest-mac.yml"
   name "OpenPhone"
-  homepage "https://www.openphone.co/desktop"
+  desc "Business phone for professionals, teams, and companies"
+  homepage "https://www.openphone.co"
 
   app "OpenPhone.app"
 end
