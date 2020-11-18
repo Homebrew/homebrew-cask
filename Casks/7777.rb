@@ -4,7 +4,7 @@ cask "7777" do
 
   url "https://releases.port7777.com/1.0.3/macos/7777"
   name "7777"
-  desc "Your remote AWS database on your local port 7777."
+  desc "Your remote AWS database on your local port 7777"
   homepage "https://port7777.com/"
 
   binary "7777"
