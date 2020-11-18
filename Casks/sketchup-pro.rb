@@ -1,52 +1,52 @@
 cask "sketchup-pro" do
-  version "20.2.171,2020.2"
+  version "21.0.338,2021.0"
 
   language "de" do
-    sha256 "834c0255ba4b0aa59f60e93d78245b6b02d05bcf1c99e9b86cae478d9a67bce8"
+    sha256 "640d2f4c47eb0f5b57e46bb6680814a111533939ca3974f3c746019b1b8f0424"
     "de"
   end
   language "en", default: true do
-    sha256 "834c0255ba4b0aa59f60e93d78245b6b02d05bcf1c99e9b86cae478d9a67bce8"
+    sha256 "640d2f4c47eb0f5b57e46bb6680814a111533939ca3974f3c746019b1b8f0424"
     "en"
   end
   language "es" do
-    sha256 "834c0255ba4b0aa59f60e93d78245b6b02d05bcf1c99e9b86cae478d9a67bce8"
+    sha256 "640d2f4c47eb0f5b57e46bb6680814a111533939ca3974f3c746019b1b8f0424"
     "es"
   end
   language "fr" do
-    sha256 "834c0255ba4b0aa59f60e93d78245b6b02d05bcf1c99e9b86cae478d9a67bce8"
+    sha256 "640d2f4c47eb0f5b57e46bb6680814a111533939ca3974f3c746019b1b8f0424"
     "fr"
   end
   language "it" do
-    sha256 "834c0255ba4b0aa59f60e93d78245b6b02d05bcf1c99e9b86cae478d9a67bce8"
+    sha256 "640d2f4c47eb0f5b57e46bb6680814a111533939ca3974f3c746019b1b8f0424"
     "it"
   end
   language "ja" do
-    sha256 "834c0255ba4b0aa59f60e93d78245b6b02d05bcf1c99e9b86cae478d9a67bce8"
+    sha256 "640d2f4c47eb0f5b57e46bb6680814a111533939ca3974f3c746019b1b8f0424"
     "ja"
   end
   language "ko" do
-    sha256 "834c0255ba4b0aa59f60e93d78245b6b02d05bcf1c99e9b86cae478d9a67bce8"
+    sha256 "640d2f4c47eb0f5b57e46bb6680814a111533939ca3974f3c746019b1b8f0424"
     "ko"
   end
   language "pt-BR" do
-    sha256 "834c0255ba4b0aa59f60e93d78245b6b02d05bcf1c99e9b86cae478d9a67bce8"
+    sha256 "640d2f4c47eb0f5b57e46bb6680814a111533939ca3974f3c746019b1b8f0424"
     "pt-BR"
   end
   language "ru" do
-    sha256 "834c0255ba4b0aa59f60e93d78245b6b02d05bcf1c99e9b86cae478d9a67bce8"
+    sha256 "640d2f4c47eb0f5b57e46bb6680814a111533939ca3974f3c746019b1b8f0424"
     "ru"
   end
   language "sv" do
-    sha256 "834c0255ba4b0aa59f60e93d78245b6b02d05bcf1c99e9b86cae478d9a67bce8"
+    sha256 "640d2f4c47eb0f5b57e46bb6680814a111533939ca3974f3c746019b1b8f0424"
     "sv"
   end
   language "zh-CN" do
-    sha256 "834c0255ba4b0aa59f60e93d78245b6b02d05bcf1c99e9b86cae478d9a67bce8"
+    sha256 "640d2f4c47eb0f5b57e46bb6680814a111533939ca3974f3c746019b1b8f0424"
     "zh-CN"
   end
   language "zh-TW" do
-    sha256 "834c0255ba4b0aa59f60e93d78245b6b02d05bcf1c99e9b86cae478d9a67bce8"
+    sha256 "640d2f4c47eb0f5b57e46bb6680814a111533939ca3974f3c746019b1b8f0424"
     "zh-TW"
   end
 
