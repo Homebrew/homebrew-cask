@@ -20,7 +20,7 @@ cask "gfortran" do
     # github.com/fxcoudert/gfortran-for-macOS/ was verified as official when first introduced to the cask
     url "https://github.com/fxcoudert/gfortran-for-macOS/releases/download/#{version}/gfortran-#{version}-Mojave.dmg"
     pkg "gfortran-#{version}-Mojave/gfortran.pkg"
-  else MacOS.version <= :catalina
+  else
     version "10.2"
     sha256 "b35fa8b6bf79a63a96398b36363ef6e301173175a53ba1832fccf358873dfdb7"
 
