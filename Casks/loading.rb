@@ -1,6 +1,6 @@
 cask "loading" do
-  version "1.2.4"
-  sha256 "fe741c2a4c64cce0aa795eace1fcb2fe08c5bf3333e097406f45b52aa6f8d86c"
+  version "1.2.6"
+  sha256 "78d7448c76b99fc31505e6cf1b5cb21c021a40fe66b73349de43be46d9880c24"
 
   url "https://bonzaiapps.com/loading/Loading.zip"
   appcast "https://bonzaiapps.com/loading/update.xml"
