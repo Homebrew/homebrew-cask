@@ -1,6 +1,6 @@
 cask "telegram" do
-  version "7.2.3,208484"
-  sha256 "b3b64025569dcc06ffcf678b4d18c621851ffc67b508e55958e0a18f02c65772"
+  version "7.2.3,208487"
+  sha256 "85bc627b73dd1a628b977cced5a12a99fbdc67e66c119fac15e4610af0f2fee0"
 
   url "https://osx.telegram.org/updates/Telegram-#{version.before_comma}.#{version.after_comma}.app.zip"
   appcast "https://osx.telegram.org/updates/versions.xml"
