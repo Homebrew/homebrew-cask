@@ -26,11 +26,12 @@ cask "gfortran" do
 
     # github.com/fxcoudert/gfortran-for-macOS/ was verified as official when first introduced to the cask
     url "https://github.com/fxcoudert/gfortran-for-macOS/releases/download/#{version}/gfortran-#{version}-Catalina.dmg"
-    pkg "gfortran-#{version}-Catalina/gfortran.pkg"
+    pkg "gfortran.pkg"
   end
 
   appcast "https://github.com/fxcoudert/gfortran-for-macOS/releases.atom"
   name "gfortran"
+  desc "GNU Fortran packages"
   homepage "https://gcc.gnu.org/wiki/GFortranBinaries"
 
   conflicts_with formula: "gcc"
