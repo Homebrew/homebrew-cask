@@ -10,11 +10,19 @@ cask "avast-secure-browser" do
 
   pkg "AvastSecureBrowserSetup.pkg"
 
-  uninstall_preflight do
-    avast_launch = Open3.capture2("launchctl", "list").first.split("\n")
-                        .map { |a| a.sub(/^.*\t/, "") }.select { |a| a.start_with?("com.avast.browser.") }
-  end
+  uninstall quit:    "com.avast.browser",
+            pkgutil: "com.avast.browser"
 
-  uninstall launchctl: avast_launch,
-            pkgutil:   "com.avast.browser"
+  zap trash: [
+    "~/Library/Application Support/AVAST Software/Browser",
+    "~/Library/Caches/AVAST Software/Browser",
+    "~/Library/Caches/com.avast.browser",
+    "~/Library/Preferences/com.avast.AvastSecureBrowser.plist",
+    "~/Library/Preferences/com.avast.browser.plist",
+    "~/Library/Saved Application State/com.avast.browser.savedState",
+  ],
+      rmdir: [
+        "~/Library/Application Support/AVAST Software",
+        "~/Library/Caches/AVAST Software",
+      ]
 end
