@@ -10,7 +10,7 @@ cask "glyphs" do
 
   auto_updates true
 
-  app "Glyphs #{version.major.app"
+  app "Glyphs #{version.major}.app"
 
   zap trash: [
     "~/Library/Application Support/Glyphs",
