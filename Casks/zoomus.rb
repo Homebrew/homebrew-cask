@@ -8,6 +8,8 @@ cask "zoomus" do
   name "Zoom.us"
   desc "Video communication and virtual meeting platform"
   homepage "https://www.zoom.us/"
+  
+  auto_updates true
 
   conflicts_with cask: "zoom-for-it-admins"
 
