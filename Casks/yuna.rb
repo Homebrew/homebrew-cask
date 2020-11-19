@@ -6,7 +6,7 @@ cask "yuna" do
   url "https://github.com/BeeeQueue/yuna/releases/download/v#{version}/Yuna-#{version}.dmg"
   appcast "https://github.com/BeeeQueue/yuna/releases.atom"
   name "Yuna"
-  desc "ツ An anime player that integrates with AniList, Simkl, Crunchyroll, and Hidive"
+  desc "Anime player and list manager"
   homepage "https://yuna.moe/"
 
   app "Yuna.app"
