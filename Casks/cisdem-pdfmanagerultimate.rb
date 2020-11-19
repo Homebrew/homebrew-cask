@@ -1,6 +1,6 @@
 cask "cisdem-pdfmanagerultimate" do
-  version "2.5.0"
-  sha256 "572ed99e8ea18474a0dfe7fd42e0fe704e40607f12a979ada704054fc81d05de"
+  version "3.2.0"
+  sha256 "81a1a9555c16256c58dd9092847a16506d470f57790b352280e67bef52471a71"
 
   url "https://www.cisdem.com/download/cisdem-pdfmanagerultimate.dmg"
   appcast "https://www.cisdem.com/pdf-manager-ultimate-mac/release-notes.html"
