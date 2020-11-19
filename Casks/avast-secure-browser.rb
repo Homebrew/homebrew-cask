@@ -10,6 +10,6 @@ cask "avast-secure-browser" do
 
   pkg "AvastSecureBrowserSetup.pkg"
 
-  uninstall delete:  "~/Library/LaunchAgents/com.avast.browser.*",
+  uninstall delete:  "/Library/LaunchAgents/com.avast.browser.*",
             pkgutil: "com.avast.browser"
 end
