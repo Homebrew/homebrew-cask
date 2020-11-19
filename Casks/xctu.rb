@@ -5,6 +5,7 @@ cask "xctu" do
   url "https://ftp1.digi.com/support/utilities/#{version}.zip"
   appcast "https://www.digi.com/support/includes/utilities.aspx?pid=3352"
   name "XCTU"
+  desc "Configuration Platform for XBee/RF Solutions"
   homepage "https://www.digi.com/products/embedded-systems/digi-xbee-tools/xctu"
 
   installer script: {
