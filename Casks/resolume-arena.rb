@@ -14,6 +14,7 @@ cask "resolume-arena" do
     "com.resolume.pkg.ResolumeDXV",
     "com.resolume.pkg.ResolumeQuickLook",
     "com.resolume.pkg.ResolumeAlley",
+    "com.resolume.pkg.ResolumeWireNodes",
     "com.resolume.pkg.ResolumeCommon",
   ],
             delete:    "/Applications/Resolume Arena #{version.major}",
