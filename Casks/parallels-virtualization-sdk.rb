@@ -4,7 +4,7 @@ cask "parallels-virtualization-sdk" do
 
   url "https://download.parallels.com/desktop/v#{version.major}/#{version}/ParallelsVirtualizationSDK-#{version}-mac.dmg"
   name "Parallels Virtualization SDK"
-  desc "Desktop virtualization software SDK"
+  desc "Desktop virtualization development kit"
   homepage "https://www.parallels.com/products/desktop/download/"
 
   pkg "Parallels Virtualization SDK.pkg"
