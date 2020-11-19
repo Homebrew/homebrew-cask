@@ -3,7 +3,7 @@ cask "rescuetime" do
   sha256 "a0e360b9b57e738ac05f8aaba39439c94e1e3ab4ad537083a3130cf32cae1b8c"
 
   url "https://www.rescuetime.com/installers/RescueTimeInstaller.pkg"
-  appcast "https://www.rescuetime.com/installers/appcast"
+  appcast "https://www.rescuetime.com/release-notes/mac"
   name "RescueTime"
   desc "Time optimising application"
   homepage "https://www.rescuetime.com/"
