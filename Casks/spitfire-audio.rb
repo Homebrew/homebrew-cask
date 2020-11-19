@@ -9,6 +9,8 @@ cask "spitfire-audio" do
   desc "Downloade manager for Spitfire audio libraries"
   homepage "https://www.spitfireaudio.com/info/library-manager/"
 
+  auto_updates true
+
   app "Spitfire Audio.app"
 
   uninstall delete: [
