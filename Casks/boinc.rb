@@ -1,14 +1,14 @@
 cask "boinc" do
-  version "7.16.11"
-  sha256 "b40881f7d32346b2b1cc2dc36c7006938fe999e04c1613a6f5a4acdfaa0b0a17"
+  version "7.16.12"
+  sha256 "72fa25fd0ea7a5816cffe2c46ee86b1bd0bac65d6d10c2ed02423a2b4cd81c90"
 
-  url "https://boinc.berkeley.edu/dl/boinc_#{version}_macOSX_x86_64.zip"
+  url "https://boinc.berkeley.edu/dl/boinc_#{version}_macOSX_universal.zip"
   appcast "https://www.macupdater.net/cgi-bin/extract_text/download_with_useragent.cgi?url=https://boinc.berkeley.edu/download.php&user_agent=Mac"
   name "Berkeley Open Infrastructure for Network Computing"
   name "BOINC"
   homepage "https://boinc.berkeley.edu/"
 
-  pkg "boinc_#{version}_macOSX_x86_64/BOINC Installer.app/Contents/Resources/BOINC.pkg"
+  pkg "boinc_#{version}_macOSX_universal/BOINC Installer.app/Contents/Resources/BOINC.pkg"
 
   uninstall pkgutil:   "edu.berkeley.boinc",
             launchctl: "edu.berkeley.boinc-sshelper"
