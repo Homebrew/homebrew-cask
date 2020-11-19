@@ -9,7 +9,6 @@ cask "zoomus" do
   desc "Video communication and virtual meeting platform"
   homepage "https://www.zoom.us/"
 
-  auto_updates true
   conflicts_with cask: "zoom-for-it-admins"
 
   pkg "Zoom.pkg"
