@@ -8,7 +8,7 @@ cask "boinc" do
   name "BOINC"
   homepage "https://boinc.berkeley.edu/"
 
-  pkg "boinc_#{version}_macOSX_x86_64/BOINC Installer.app/Contents/Resources/BOINC.pkg"
+  pkg "boinc_#{version}_macOSX_universal/BOINC Installer.app/Contents/Resources/BOINC.pkg"
 
   uninstall pkgutil:   "edu.berkeley.boinc",
             launchctl: "edu.berkeley.boinc-sshelper"
