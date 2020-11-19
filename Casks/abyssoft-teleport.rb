@@ -12,9 +12,6 @@ cask "abyssoft-teleport" do
 
   zap trash: [
     "~/Library/Caches/com.abyssoft.teleport",
-    "~/Library/Caches/com.abyssoft.teleport/Cache.db-shm",
-    "~/Library/Caches/com.abyssoft.teleport/Cache.db-wal",
-    "~/Library/Caches/com.abyssoft.teleport/Cache.db"
     "~/Library/Preferences/com.abyssoft.teleport.plist",
   ]
 end
