@@ -17,6 +17,5 @@ cask "zotero" do
     "~/Library/Caches/Zotero",
     "~/Library/Preferences/org.zotero.zotero.plist",
     "~/Library/Saved Application State/org.zotero.zotero.savedState",
-    "~/Zotero",
   ]
 end
