@@ -9,7 +9,6 @@ cask "zoom-for-it-admins" do
   desc "Video communication and virtual meeting platform"
   homepage "https://support.zoom.us/hc/en-us/articles/115001799006-Mass-Deployment-with-Preconfigured-Settings-for-Mac"
 
-  auto_updates true
   conflicts_with cask: "zoomus"
 
   pkg "ZoomInstallerIT.pkg"
