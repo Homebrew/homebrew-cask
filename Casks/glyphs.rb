@@ -1,8 +1,8 @@
 cask "glyphs" do
-  version "2.6.6,1350"
-  sha256 "43bd69590c12eee4cd1a3047542379c2eef48b27138027275bd182c57705b930"
+  version "3.0,3032"
+  sha256 "8945fe168ba3212bfb04e4271e61ba669c5d150e907a71f0c44010c5085eb103"
 
-  url "https://updates.glyphsapp.com/Glyphs#{version.major_minor_patch}-#{version.after_comma}.zip"
+  url "https://updates.glyphsapp.com/Glyphs#{version.before_comma}-#{version.after_comma}.zip"
   appcast "https://updates.glyphsapp.com/appcast#{version.major}.xml"
   name "Glyphs"
   desc "Font Editor"
