@@ -8,7 +8,7 @@ cask "pastebot" do
   desc "Workflow application to improve productivity"
   homepage "https://tapbots.com/pastebot/"
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :mojave"
 
   app "Pastebot.app"
 
