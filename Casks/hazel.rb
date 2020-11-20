@@ -9,6 +9,8 @@ cask "hazel" do
   desc "Automated organization"
   homepage "https://www.noodlesoft.com/"
 
+  auto_updates true
+
   app "Hazel.app"
 
   uninstall quit: "86Z3GCJ4MF.com.noodlesoft.HazelHelper"
