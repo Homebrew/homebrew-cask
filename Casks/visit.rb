@@ -19,12 +19,12 @@ cask "visit" do
     url "https://github.com/visit-dav/visit/releases/download/v#{version}/visit#{version}.darwin-x86_64-10_15.dmg"
   end
 
-  appcast "https://wci.llnl.gov/simulation/computer-codes/visit/executables"
+  appcast "https://github.com/visit-dav/visit/releases.atom"
   name "VisIt"
   desc "Visualization and data analysis for mesh-based scientific data"
   homepage "https://wci.llnl.gov/simulation/computer-codes/visit"
 
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :high_sierra"
 
   app "VisIt.app"
 end
