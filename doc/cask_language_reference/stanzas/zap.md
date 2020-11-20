@@ -2,10 +2,10 @@
 
 ## zap Stanza Purpose
 
-The `zap` stanza describes a more complete uninstallation of files associated with a Cask. The `zap` procedures will never be performed by default, but only if the user invokes the `zap` verb:
+The `zap` stanza describes a more complete uninstallation of files associated with a Cask. The `zap` procedures will never be performed by default, but only if the user uses `--zap` on `uninstall`:
 
 ```bash
-$ brew cask zap td-toolbelt             # also removes org.ruby-lang.installer
+$ brew uninstall --zap firefox
 ```
 
 `zap` stanzas may remove:
@@ -16,6 +16,12 @@ $ brew cask zap td-toolbelt             # also removes org.ruby-lang.installer
 `zap` stanzas should not remove:
 
 * Files created by the user directly.
+
+Appending `--force` to the command will allow you to perform these actions even if the Cask is no longer installed:
+
+```bash
+brew uninstall --zap --force firefox
+```
 
 ## zap Stanza Syntax
 
