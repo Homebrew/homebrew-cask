@@ -1,6 +1,6 @@
 cask "wombat" do
-  version "0.2.2"
-  sha256 "b48b1c101bfe1089c9d553ec82994c56c176f3cbf206ef397b2e2f7c4aaf5dda"
+  version "0.3.1"
+  sha256 "90ac4ced7f772df5c8a49d4d03ce96f83815a118f2423ccea263d1658f82611e"
 
   url "https://github.com/rogchap/wombat/releases/download/v#{version}/Wombat_v#{version}_Darwin_x86_64.dmg"
   appcast "https://github.com/rogchap/wombat/releases.atom"
