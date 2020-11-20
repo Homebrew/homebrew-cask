@@ -9,12 +9,14 @@ cask "dockmate" do
   desc "Window previews and controls"
   homepage "https://www.macenhance.com/dockmate"
 
+  depends_on macos: ">= :high_sierra"
+
   app "DockMate.app"
 
   zap trash: [
+    "~/Library/Application Support/com.macenhance.dockmate",
     "~/Library/Application Support/DockMate",
     "~/Library/Caches/com.macenhance.dockmate",
     "~/Library/Preferences/com.macenhance.dockmate.plist",
-    "~/Library/Application Support/com.macenhance.dockmate",
   ]
 end
