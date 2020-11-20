@@ -1,6 +1,6 @@
 cask "vidl" do
-  version "1.0.2"
-  sha256 "af79d4f190fc9370abbd7c92e61be18b7c7c7bdd6cea235bd5e6c133ea153b2b"
+  version "1.0.4"
+  sha256 "9cdb8bc8a03b49c78fa4aecc3d1e58a755a7c92462e88bf650a9f0ae7b6521f1"
 
   url "https://omz-software.com/vidl/ViDL#{version.no_dots}.zip"
   appcast "https://ssl.webpack.de/omz-software.com/vidl/appcast.xml"
