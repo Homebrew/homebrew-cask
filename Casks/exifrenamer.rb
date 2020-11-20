@@ -1,6 +1,6 @@
 cask "exifrenamer" do
-  version "2.3.3"
-  sha256 "f228163dbda67bea7745967688b3025c0bc6d31f1c77dd2d04909bf627e59e10"
+  version "2.4.0"
+  sha256 "b49a84bb74c02065561d55a38002d4db62495dcbead41ac4b528e5ead12ece2c"
 
   url "https://www.qdev.de/downloads/files/ExifRenamer.dmg"
   appcast "https://www.qdev.de/versions/ExifRenamer.txt"
