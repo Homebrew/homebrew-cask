@@ -5,12 +5,18 @@ cask "visit" do
 
     # github.com/visit-dav/visit/ was verified as official when first introduced to the cask
     url "https://github.com/visit-dav/visit/releases/download/v#{version}/visit#{version}.darwin-x86_64-10.13.dmg"
-  else
+  elsif MacOS.version <= :mojave
     version "3.1.4"
     sha256 "e8636d4920dfc155c3c5236f8cab9675214e090bdb00eb6bdcb96cee634c2bc9"
 
     # github.com/visit-dav/visit/ was verified as official when first introduced to the cask
     url "https://github.com/visit-dav/visit/releases/download/v#{version}/visit#{version}.darwin-x86_64-10_14.dmg"
+  else
+    version "3.1.4"
+    sha256 "a75da6c27f38dbd5d859562da5777e810c71b85d6b06df47cef585a282330b06"
+
+    # github.com/visit-dav/visit/ was verified as official when first introduced to the cask
+    url "https://github.com/visit-dav/visit/releases/download/v#{version}/visit#{version}.darwin-x86_64-10_15.dmg"
   end
 
   appcast "https://wci.llnl.gov/simulation/computer-codes/visit/executables"
