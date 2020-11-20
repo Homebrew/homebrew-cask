@@ -1,6 +1,6 @@
 cask "ringcentral-classic" do
-  version "20.4.10"
-  sha256 "41a072a9d5da4d0a6e9c8313f6f8dc09722d1819d6d8bc3a993607397909ca01"
+  version "20.4.20"
+  sha256 "1140709c2f35c04108eb497e00ea9c09af85877f1b2b5b5c339bf6f22e6f02f0"
 
   url "https://downloads.ringcentral.com/glip/rc/#{version}/mac/RingCentral%20Classic-#{version}.dmg"
   name "RingCentral Classic"
