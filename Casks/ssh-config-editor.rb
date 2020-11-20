@@ -8,6 +8,8 @@ cask "ssh-config-editor" do
   desc "Tool for managing the OpenSSH ssh client configuration file"
   homepage "https://www.hejki.org/ssheditor/"
 
+  depends_on macos: ">= :catalina"
+
   app "SSH Config Editor.app"
 
   zap trash: [
