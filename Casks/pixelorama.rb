@@ -6,7 +6,7 @@ cask "pixelorama" do
   url "https://github.com/Orama-Interactive/Pixelorama/releases/download/#{version}/Pixelorama.Mac.dmg"
   appcast "https://github.com/Orama-Interactive/Pixelorama/releases.atom"
   name "Pixelorama"
-  desc "Free & open-source 2D sprite editor, made with the Godot Engine"
+  desc "2D sprite editor made with the Godot Engine"
   homepage "https://orama-interactive.itch.io/pixelorama"
 
   app "Pixelorama.app"
