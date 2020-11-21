@@ -4,7 +4,7 @@ cask "chrome-remote-desktop-host" do
 
   url "https://dl.google.com/chrome-remote-desktop/chromeremotedesktop.dmg"
   name "Chrome Remote Desktop"
-  desc "Remotely access another computer through the Chrome browser"
+  desc "Remotely access another computer through the Google Chrome browser"
   homepage "https://chrome.google.com/webstore/detail/chrome-remote-desktop/inomeogfingihgjfjlpeplalcfajhgai"
 
   pkg "Chrome Remote Desktop Host.pkg"
