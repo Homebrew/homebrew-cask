@@ -1,10 +1,11 @@
 cask "zerotier-one" do
-  version "1.4.6"
-  sha256 "7adfa8a149e20b8649fff805f3af7b2f37b981219b31f7375c2cc3452f9f30a7"
+  version "1.6.0"
+  sha256 "8dd5377f3105f4a443b71ace3421c88c5b448227b4e69eff5d910d8da3ebc6f5"
 
   url "https://download.zerotier.com/dist/ZeroTier%20One.pkg"
   appcast "https://github.com/zerotier/ZeroTierOne/releases.atom"
   name "ZeroTier One"
+  desc "Mesh VPN client"
   homepage "https://www.zerotier.com/download.shtml"
 
   pkg "ZeroTier One.pkg"
