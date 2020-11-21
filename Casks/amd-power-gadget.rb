@@ -5,6 +5,7 @@ cask "amd-power-gadget" do
   url "https://github.com/trulyspinach/SMCAMDProcessor/releases/download/#{version}/AMD.Power.Gadget.app.zip"
   appcast "https://github.com/trulyspinach/SMCAMDProcessor/releases.atom"
   name "AMD Power Gadget"
+  desc "Power management, monitoring and VirtualSMC plugin for AMD processors"
   homepage "https://github.com/trulyspinach/SMCAMDProcessor"
 
   app "AMD Power Gadget.app"
