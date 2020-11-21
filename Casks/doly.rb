@@ -5,6 +5,7 @@ cask "doly" do
   url "http://doly.jp/download/doly-mac_#{version}.dmg"
   appcast "http://doly.jp/update_mac.html"
   name "Doly Ebook Reader"
+  desc "Ebook reader"
   homepage "http://doly.jp/"
 
   app "Doly.app"
