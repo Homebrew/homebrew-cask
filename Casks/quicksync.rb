@@ -6,7 +6,7 @@ cask "quicksync" do
   appcast "https://cms.gigaset.com/macsw/gqs/leopard/appcast.xml"
   name "QuickSync"
   desc "Syncing software for Gigaset products"
-  homepage "https://www.gigaset.com/hq_en/cms/home/support/support/downloads/quicksync/quicksync-for-mac.html"
+  homepage "https://www.gigaset.com/en_en/cms/start/service/support-detail/gigaset-quicksync-mac-version.html"
 
   app "QuickSync.app"
 end
