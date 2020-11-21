@@ -10,4 +10,6 @@ cask "pixelorama" do
   homepage "https://orama-interactive.itch.io/pixelorama"
 
   app "Pixelorama.app"
+
+  zap trash: "~/Library/Saved Application State/com.orama_interactive.pixelorama.savedState"
 end
