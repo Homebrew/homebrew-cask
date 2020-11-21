@@ -5,7 +5,7 @@ cask "google-chrome" do
   url "https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg"
   appcast "https://omahaproxy.appspot.com/history?os=mac;channel=stable"
   name "Google Chrome"
-  desc "Cross-platform web browser"
+  desc "Web browser"
   homepage "https://www.google.com/chrome/"
 
   auto_updates true
