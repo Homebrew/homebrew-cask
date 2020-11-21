@@ -1,6 +1,6 @@
 cask "wpsoffice" do
-  version "2.7.0,4476"
-  sha256 "df42bf0a41794da5a85b8a342e519e55671a594f6813511642200ca32d9bcac7"
+  version "3.0.0,4835"
+  sha256 "dabb7a2b789a7d942fafe463d46123679cec8379c609af4a81ff0d2d1cb7d293"
 
   # wdl1.pcfg.cache.wpscdn.com/ was verified as official when first introduced to the cask
   url "https://wdl1.pcfg.cache.wpscdn.com/wpsdl/macwpsoffice/download/#{version.before_comma}.#{version.after_comma}/WPSOffice_#{version.before_comma}(#{version.after_comma}).dmg"
