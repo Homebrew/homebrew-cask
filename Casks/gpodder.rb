@@ -10,4 +10,6 @@ cask "gpodder" do
   homepage "https://gpodder.github.io/"
 
   app "gPodder.app"
+
+  zap trash: "~/Library/Application Support/gPodder"
 end
