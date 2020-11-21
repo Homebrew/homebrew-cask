@@ -6,6 +6,7 @@ cask "chromedriver" do
   url "https://chromedriver.storage.googleapis.com/#{version}/chromedriver_mac64.zip"
   appcast "https://chromedriver.storage.googleapis.com/LATEST_RELEASE"
   name "ChromeDriver"
+  desc "Automated testing of webapps for Google Chrome"
   homepage "https://sites.google.com/a/chromium.org/chromedriver/home"
 
   conflicts_with cask: "homebrew/cask-versions/chromedriver-beta"
