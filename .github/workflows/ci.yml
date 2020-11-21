@@ -108,9 +108,9 @@ jobs:
         run: brew style '${{ matrix.cask.path || matrix.tap }}'
         if: always() && steps.gems.outcome == 'success' && !matrix.cask
 
-      - name: Run brew audit --cask${{ matrix.tap && ' --tap' }} ${{ matrix.cask.token || matrix.tap }}
+      - name: Run brew audit --cask${{ (matrix.cask && ' ') || ' --tap ' }}${{ matrix.cask.token || matrix.tap }}
         run: |
-          brew audit --cask ${{ join(matrix.audit_args, ' ') }}${{ matrix.tap && ' --tap' }} '${{ matrix.cask.path || matrix.tap }}'
+          brew audit --cask ${{ join(matrix.audit_args, ' ') }}${{ (matrix.cask && ' ') || ' --tap ' }}'${{ matrix.cask.path || matrix.tap }}'
         timeout-minutes: 30
         if: always() && steps.gems.outcome == 'success' && !matrix.skip_audit
 
