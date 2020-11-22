@@ -9,6 +9,7 @@ cask "cloudapp" do
   homepage "https://www.getcloudapp.com/"
 
   auto_updates true
+  depends_on macos: '>= :mojave'
 
   app "CloudApp.app"
 
