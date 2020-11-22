@@ -9,6 +9,7 @@ cask "lulu" do
   desc "Open-source firewall to block unknown outgoing connections"
   homepage "https://objective-see.com/products/lulu.html"
 
+  auto_updates true
   depends_on macos: ">= :catalina"
 
   app "LuLu.app"
