@@ -1,6 +1,6 @@
 cask "razorsql" do
-  version "9.2.4"
-  sha256 "90be974c8fca86dfd9f1dfb6415d2e06a862930afb9e5cef1cb26b8ebcc31d9f"
+  version "9.2.5"
+  sha256 "ee27ddfa7f515c1a85c19280091cfd2b3087db7e1012530c433d59cb38317b35"
 
   # s3.dualstack.us-east-1.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://s3.dualstack.us-east-1.amazonaws.com/downloads.razorsql.com/downloads/#{version.dots_to_underscores}/razorsql#{version.dots_to_underscores}.dmg"
