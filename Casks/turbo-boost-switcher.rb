@@ -9,7 +9,7 @@ cask "turbo-boost-switcher" do
   desc "Enable and disable the Intel CPU Turbo Boost feature"
   homepage "https://www.rugarciap.com/turbo-boost-switcher-for-os-x/"
 
-  # App renamed to remove "(English)" suffix
+  suite "tbswitcher_resources"
   app "Turbo Boost Switcher.app"
 
   uninstall quit: "rugarciap.com.Turbo-Boost-Switcher",
