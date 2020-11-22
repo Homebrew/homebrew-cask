@@ -1,5 +1,5 @@
 cask "lulu" do
-  version "2.0.0"
+  version :auto_updates
   sha256 "0a7b7c2422aeca0b1cb45ae525c3882635fd603887bbb55e06bea81bd9ed69a8"
 
   # bitbucket.org/objective-see/ was verified as official when first introduced to the cask
