@@ -8,6 +8,8 @@ cask "unity-hub" do
   desc "Management tool for Unity"
   homepage "https://unity3d.com/get-unity/download"
 
+  auto_updates true
+
   app "Unity Hub.app"
 
   uninstall quit: "com.unity3d.unityhub"
