@@ -3,7 +3,7 @@ cask "caramba-switcher" do
   sha256 :no_check
 
   # download.caramba.tech/apps/switcher/ was verified as official when first introduced to the cask
-  url "https://download.caramba.tech/apps/switcher/mac/CarambaSwitcherBeta.pkg"
+  url "https://cdn.caramba-switcher.com/files/CarambaSwitcherBeta.pkg"
   name "Caramba Switcher"
   desc "Keyboard switcher"
   homepage "https://caramba-switcher.com/"
