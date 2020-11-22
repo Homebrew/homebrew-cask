@@ -1,6 +1,6 @@
 cask "lyn" do
-  version "2.0"
-  sha256 "2706168da42f1302725140120eb00e9c66dfbc87ede7a7d35d2f60d00b2068d7"
+  version "2.0.1"
+  sha256 "8b293150b04470031587a2da1fab129a4caf34bd3d33acb09fac3a1cc7d9a7ff"
 
   url "https://www.lynapp.com/downloads/Lyn-#{version}.dmg"
   appcast "https://www.lynapp.com/lyn/update#{version.major}x.xml"
