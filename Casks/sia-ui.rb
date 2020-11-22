@@ -1,6 +1,6 @@
 cask "sia-ui" do
-  version "1.5.1"
-  sha256 "79d7faefa05e32d7b48fb4efac238b90a96020a537ac9e48211dcb47c76cd5e0"
+  version "1.5.3"
+  sha256 "22ccb8abaf5199e58cb79d556aee10598d25ba13076b3115720282cfcd787a93"
 
   url "https://sia.tech/releases/Sia-UI-v#{version}.dmg"
   name "Sia-UI"
