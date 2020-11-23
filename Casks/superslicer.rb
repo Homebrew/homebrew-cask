@@ -4,8 +4,8 @@ cask "superslicer" do
 
   url "https://github.com/supermerill/SuperSlicer/releases/download/#{version.before_comma}/SuperSlicer_#{version.before_comma}_macos_#{version.after_comma}.dmg"
   appcast "https://github.com/supermerill/SuperSlicer/releases.atom"
-  name "superslicer"
-  desc "Fork of prusaslicer focused on adding features"
+  name "SuperSlicer"
+  desc "Convert 3D models into G-code instructions or PNG layers"
   homepage "https://github.com/supermerill/SuperSlicer"
 
   app "superslicer.app"
