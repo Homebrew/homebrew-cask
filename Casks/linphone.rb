@@ -1,6 +1,6 @@
 cask "linphone" do
-  version "4.2.3"
-  sha256 "0e6d219262062d87fdceafcc085a339682c07c1e2cf3f4747148ad4fd57ca39e"
+  version "4.2.4"
+  sha256 "505b87393ad588542e74d32b0a6267725203009b383dc2f41a1dbab0949d9db2"
 
   url "https://www.linphone.org/releases/macosx/app/Linphone-#{version}-mac.dmg"
   appcast "https://www.linphone.org/releases/macosx/RELEASE"
