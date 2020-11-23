@@ -6,7 +6,7 @@ cask "jamulus" do
   url "https://downloads.sourceforge.net/llcon/Jamulus-#{version}-installer-mac.dmg"
   appcast "https://sourceforge.net/projects/llcon/rss"
   name "Jamulus"
-  homepage "https://llcon.sourceforge.io/"
+  homepage "https://jamulus.io/"
 
   depends_on macos: ">= :el_capitan"
 
