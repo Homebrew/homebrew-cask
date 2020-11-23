@@ -1,5 +1,5 @@
 cask "xld" do
-  version "20201123"
+  version "2020.11.23"
   sha256 "1ad1b38dac80694da805b154ed031b0df3d9019e719a9b6d1c4a9d4351a72b70"
 
   # sourceforge.net/xld/ was verified as official when first introduced to the cask
