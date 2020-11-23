@@ -7,7 +7,6 @@ cask "mathpix-snipping-tool" do
   desc "Scanner app for math and science"
   homepage "https://mathpix.com/"
 
-  auto_updates true
   depends_on macos: ">= :sierra"
 
   app "Mathpix Snipping Tool.app"
