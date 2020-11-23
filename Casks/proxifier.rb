@@ -7,8 +7,8 @@ cask "proxifier" do
     appcast "https://www.proxifier.com/changelog/mac#{version.major}.html",
             must_contain: version.major_minor
   else
-    version "3.1.1"
-    sha256 "1d6711ccd427054884704c94e34e554bd756ca2479ffa1a455cb1363b81251d6"
+    version "3.2.1"
+    sha256 "7e0d09eb626d9bd8001e6245566564d2081b859a7afa2b5ab922714d320f3f97"
     url "https://www.proxifier.com/download/ProxifierMac#{version.major}.dmg"
     appcast "https://www.proxifier.com/changelog/mac.html",
             must_contain: version.major_minor
