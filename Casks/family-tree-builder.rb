@@ -4,6 +4,7 @@ cask "family-tree-builder" do
 
   # mhcache-myheritage.netdna-ssl.com/FP/FamilyTreeBuilder/ was verified as official when first introduced to the cask
   url "https://mhcache-myheritage.netdna-ssl.com/FP/FamilyTreeBuilder/family_tree_builder_#{version.split(".").last}.dmg"
+  appcast "https://www.myheritage.com/page/family-tree-software"
   name "MyHeritage Family Tree Builder"
   desc "Family tree creator"
   homepage "https://www.myheritage.com/"
