@@ -4,7 +4,7 @@ cask "josm" do
 
   # github.com/grischard/josm was verified as official when first introduced to the cask
   url "https://github.com/grischard/josm/releases/download/#{version}-tested/JOSM-macOS-java15.zip"
-  appcast "https://josm.openstreetmap.de/"
+  appcast "https://github.com/grischard/josm/releases.atom"
   name "JOSM"
   desc "Extensible editor for OpenStreetMap"
   homepage "https://josm.openstreetmap.de/"
