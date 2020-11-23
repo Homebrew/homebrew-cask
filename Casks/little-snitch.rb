@@ -1,6 +1,6 @@
 cask "little-snitch" do
-  version "5.0.2"
-  sha256 "bc6bc6463f69267423276cb41338b72181c850d5a092393f23f8c256ccc0d2cf"
+  version "5.0.3"
+  sha256 "709ef660fe0f0ed7ffd20b19d4329cb41dc35063752571a911162d0a2114b911"
 
   url "https://www.obdev.at/downloads/littlesnitch/LittleSnitch-#{version}.dmg"
   appcast "https://sw-update.obdev.at/update-feeds/littlesnitch#{version.major}.plist"
