@@ -50,6 +50,13 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
+      - name: Check out debug Pull Request
+        run: |
+          pushd "$(brew --repo)"
+          gh pr checkout https://github.com/Homebrew/brew/pull/9309
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Clean up CI machine
         run: |
           if ! brew list --cask visual-studio &>/dev/null; then
