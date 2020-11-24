@@ -1,6 +1,6 @@
 cask "anka-virtualization" do
-  version "2.2.3.118"
-  sha256 "3f8937ea296ff16e87940b541e9b8ff67ffa23fe3f8d341c9bf5ff699598f776"
+  version "2.3.0.118.166"
+  sha256 "144776f0d68af861e01a2809a938f044fda88fed12d4fb3a00f036800544d04d"
 
   # d1efqjhnhbvc57.cloudfront.net/ was verified as official when first introduced to the cask
   url "https://d1efqjhnhbvc57.cloudfront.net/Anka-#{version}.pkg"
