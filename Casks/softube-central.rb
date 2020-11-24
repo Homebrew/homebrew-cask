@@ -1,4 +1,3 @@
-# typed: false
 cask "softube-central" do
   version "1.4.2"
   sha256 "163e9d50110d126d28a98743468c1e9e2d772adf8d6f87db6c1fa68efb0b3db5"
@@ -6,6 +5,7 @@ cask "softube-central" do
   # softubestorage.b-cdn.net/ was verified as official when first introduced to the cask
   url "https://softubestorage.b-cdn.net/softubecentral/Softube%20Central-#{version}.pkg"
   name "Softube Central"
+  desc "Installer for installation and license activation of Softube products"
   homepage "https://www.softube.com/softube-central/"
 
   auto_updates true
