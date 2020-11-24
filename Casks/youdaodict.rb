@@ -8,6 +8,8 @@ cask "youdaodict" do
   name "网易有道词典"
   homepage "https://cidian.youdao.com/index-mac.html"
 
+  depends_on macos: ">= :mojave"
+
   app "网易有道词典.app"
 
   zap trash: [
