@@ -9,6 +9,11 @@ cask "choosy" do
     sha256 "cb1f40df11ac1b52354f4b81367462d2646a6d023c64bafe5022fcec52f796cd"
 
     prefpane "Choosy.prefPane"
+  elsif MacOS.version <= :mojave
+    version "2.1"
+    sha256 "758da621d3a92358885333b767d64b024197a8147a339b1a0d14e938673452f9"
+
+    pkg "Choosy.pkg"
   else
     version "2.2"
     sha256 "baaaf7666e6f5412ef1310f6d26c660f59845ccf464079405f2aa0598fb85c43"
