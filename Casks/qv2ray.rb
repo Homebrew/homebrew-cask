@@ -11,7 +11,7 @@ cask "qv2ray" do
 
   depends_on macos: ">= :mojave"
 
-  app "Qv2ray.app"
+  app "qv2ray.app"
 
   zap trash: [
     "~/Library/Preferences/com.github.qv2ray.plist",
