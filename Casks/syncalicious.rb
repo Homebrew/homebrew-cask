@@ -8,8 +8,6 @@ cask "syncalicious" do
   desc "Backup and Synchronize preferences across multiple machines"
   homepage "https://github.com/zenangst/Syncalicious"
 
-  auto_updates false
-
   app "Syncalicious.app"
 
   uninstall quit: "com.zenangst.Syncalicious"
