@@ -5,6 +5,7 @@ cask "pym-player" do
   url "http://pym.uce.pl/download/pliki/PYMPlayer#{version.after_comma}.dmg"
   appcast "http://pym.uce.pl/pym-player/"
   name "PYM Player"
+  desc "Media player that automatically searches for subtitles"
   homepage "http://pym.uce.pl/pym-player/"
 
   app "PYM Player.app"
