@@ -1,5 +1,5 @@
 cask "daisydisk" do
-  version "4.12"
+  version "4.12.1"
   sha256 "c25a591a62d0597e6d18f716655cffb0b1d0beef01d29c8b63be7ff3eb64eaae"
 
   url "https://www.daisydiskapp.com/downloads/DaisyDisk.zip"
