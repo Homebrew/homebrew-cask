@@ -7,8 +7,6 @@ cask "adobe-creative-cloud" do
   desc "Collection of apps and services for photography, design, video, web, and UX"
   homepage "https://www.adobe.com/creativecloud.html"
 
-  auto_updates true
-
   installer script: {
     executable:   "#{staged_path}/Install.app/Contents/MacOS/Install",
     args:         ["--mode=silent"],
