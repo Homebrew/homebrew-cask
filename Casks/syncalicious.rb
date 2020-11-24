@@ -5,7 +5,7 @@ cask "syncalicious" do
   url "https://github.com/zenangst/Syncalicious/releases/download/#{version}/Syncalicious.zip"
   appcast "https://github.com/zenangst/Syncalicious/releases.atom"
   name "Syncalicious"
-  desc "Backup and Synchronize preferences across multiple machines"
+  desc "Backup and synchronize preferences across multiple machines"
   homepage "https://github.com/zenangst/Syncalicious"
 
   app "Syncalicious.app"
