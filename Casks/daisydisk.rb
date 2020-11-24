@@ -1,6 +1,6 @@
 cask "daisydisk" do
-  version "4.11"
-  sha256 "c1014689dd105494fba0b66a315fff21aa87758f383d02c79eef6e3b72cf1756"
+  version "4.12"
+  sha256 "d77ef3d0b96f46e61adcb827f51badb2a3199cdbcd6d774c8dfe9b4fc8fcddbe"
 
   url "https://www.daisydiskapp.com/downloads/DaisyDisk.zip"
   appcast "https://daisydiskapp.com/downloads/appcastReleaseNotes.php?appEdition=Standard&osVersion=10.15"
