@@ -5,6 +5,7 @@ cask "remember-the-milk" do
   url "https://www.rememberthemilk.com/download/mac/RememberTheMilk-#{version}-x64.zip"
   appcast "https://www.rememberthemilk.com/services/mac/"
   name "Remember The Milk"
+  desc "To-do app"
   homepage "https://www.rememberthemilk.com/"
 
   app "Remember The Milk.app"
