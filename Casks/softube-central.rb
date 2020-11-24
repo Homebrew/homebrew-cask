@@ -7,6 +7,8 @@ cask "softube-central" do
   name "Softube Central"
   homepage "https://www.softube.com/softube-central/"
 
+  auto_updates true
+
   depends_on cask: "ilok-license-manager"
 
   pkg "Softube Central-#{version}.pkg"
