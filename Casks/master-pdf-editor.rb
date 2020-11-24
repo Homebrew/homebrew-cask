@@ -5,6 +5,7 @@ cask "master-pdf-editor" do
   url "https://code-industry.net/public/MasterPDFEditor.dmg"
   appcast "https://code-industry.net/get-masterpdfeditor/"
   name "Master PDF Editor"
+  desc "PDF editor"
   homepage "https://code-industry.net/masterpdfeditor/"
 
   auto_updates true
