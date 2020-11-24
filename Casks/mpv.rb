@@ -10,7 +10,7 @@ cask "mpv" do
   homepage "https://mpv.io/"
 
   conflicts_with formula: "mpv"
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :sierra"
 
   app "mpv.app"
   binary "#{appdir}/mpv.app/Contents/MacOS/mpv"
