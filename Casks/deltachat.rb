@@ -1,6 +1,6 @@
 cask "deltachat" do
-  version "1.13.1"
-  sha256 "4d8caae65438917a9e4841155a131cd58a5e6bcd9787b8bb018165f2922d90a2"
+  version "1.14.0"
+  sha256 "5894ff5fb3b7938b945ead2afd4290f2a78fcd4e1b6899c4e46c0fe08d1b3f25"
 
   # github.com/deltachat/deltachat-desktop/ was verified as official when first introduced to the cask
   url "https://download.delta.chat/desktop/v#{version}/DeltaChat-#{version}.dmg"
