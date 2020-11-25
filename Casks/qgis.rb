@@ -1,5 +1,5 @@
 cask "qgis" do
-  version "3.16.0"
+  version "3.16.1"
   sha256 "d9ebc0394ab9ceabce1cec64244484eff14dad0873d60970c57bac3738e299b9"
 
   url "https://qgis.org/downloads/macos/qgis-macos-pr.dmg"
