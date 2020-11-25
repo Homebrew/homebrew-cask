@@ -2,7 +2,7 @@ cask "twitterrific" do
   version "5.4.5"
   sha256 "ca03e8b989a16cfb88cb86c776c42a7c88110ba1c9db5adf3b55fe15b85e3e57"
 
-  # iconfactory.com was verified as official when first introduced to the cask
+  # iconfactory.com/assets/software/phoenix/ was verified as official when first introduced to the cask
   url "https://iconfactory.com/assets/software/phoenix/Twitterrific-#{version}.zip"
   appcast "https://iconfactory.com/appcasts/Phoenix/appcast.xml"
   name "Twitterrific"
@@ -15,9 +15,7 @@ cask "twitterrific" do
 
   app "Phoenix.app"
 
-  uninstall quit: [
-    "com.iconfactory.Phoenix",
-  ]
+  uninstall quit: "com.iconfactory.Phoenix"
 
   zap trash: [
     "~/Library/Application Scripts/com.iconfactory.Phoenix",
