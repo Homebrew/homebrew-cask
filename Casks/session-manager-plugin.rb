@@ -6,6 +6,7 @@ cask "session-manager-plugin" do
   url "https://session-manager-downloads.s3.amazonaws.com/plugin/#{version}/mac/sessionmanager-bundle.zip"
   appcast "https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-working-with-install-plugin.html"
   name "Session Manager Plugin for the AWS CLI"
+  desc "Plugin for AWS CLI to start and end sessions that connect to managed instances"
   homepage "https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-working-with-install-plugin.html"
 
   binary "sessionmanager-bundle/bin/session-manager-plugin"
