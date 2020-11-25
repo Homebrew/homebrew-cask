@@ -1,6 +1,6 @@
 cask "teamspeak-client" do
-  version "3.5.5"
-  sha256 "f9788a7fb7052eb9df53c8e7841b8260207b42fc3adddedccc02c2ddce820829"
+  version "3.5.6"
+  sha256 "03c8e44256f2028917866924e496d4704de9e3298252f433fc53cfa37282770e"
 
   # files.teamspeak-services.com/releases/client/ was verified as official when first introduced to the cask
   url "https://files.teamspeak-services.com/releases/client/#{version}/TeamSpeak#{version.major}-Client-macosx-#{version}.dmg"
