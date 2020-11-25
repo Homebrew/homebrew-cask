@@ -8,7 +8,7 @@ cask "komet" do
   homepage "https://zgcoder.net/#komet"
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   app "Komet.app"
 
