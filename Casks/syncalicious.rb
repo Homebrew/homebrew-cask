@@ -8,6 +8,8 @@ cask "syncalicious" do
   desc "Backup and synchronize preferences across multiple machines"
   homepage "https://github.com/zenangst/Syncalicious"
 
+  depends_on macos: ">= :mojave"
+
   app "Syncalicious.app"
 
   uninstall quit: "com.zenangst.Syncalicious"
