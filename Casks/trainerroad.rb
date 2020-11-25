@@ -6,6 +6,7 @@ cask "trainerroad" do
   url "https://trainrdtrcmn01un1softw01.blob.core.windows.net/installers/mac/v001/Production/TrainerRoad.dmg"
   appcast "https://trainrdtrcmn01un1softw01.blob.core.windows.net/installers/mac/v001/Production/latest-mac.yml"
   name "TrainerRoad"
+  desc "Cycling training system"
   homepage "https://www.trainerroad.com/"
 
   app "TrainerRoad.app"
