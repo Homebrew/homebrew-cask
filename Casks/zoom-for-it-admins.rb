@@ -9,6 +9,9 @@ cask "zoom-for-it-admins" do
   desc "Video communication and virtual meeting platform"
   homepage "https://support.zoom.us/hc/en-us/articles/115001799006-Mass-Deployment-with-Preconfigured-Settings-for-Mac"
 
+  # Do not add `auto_updates`. While supporting an auto-update mechanism, this software is more inconvenient than most
+  # See https://github.com/Homebrew/homebrew-cask/pull/93083
+
   conflicts_with cask: "zoomus"
 
   pkg "ZoomInstallerIT.pkg"
