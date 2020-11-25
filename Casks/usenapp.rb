@@ -1,6 +1,6 @@
 cask "usenapp" do
-  version "0.92.4"
-  sha256 "64407fdb3e8f02fc1b94b37bf25e333d3d97b390484d96db7cc2a7030517adf0"
+  version "0.92.7"
+  sha256 "d1f92f01f125a5d63c60065d6fd15a5628c055a3eac9d89d1bc27f06cc851217"
 
   url "https://www.usenapp.com/download/Usenapp-#{version}.dmg"
   appcast "https://www.usenapp.com/download/appcast_unp1.xml"
