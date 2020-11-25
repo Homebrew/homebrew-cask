@@ -4,6 +4,7 @@ cask "stand" do
 
   # f001.backblazeb2.com/file/stand-app/ was verified as official when first introduced to the cask
   url "https://f001.backblazeb2.com/file/stand-app/#{version}/Stand.zip"
+  appcast "https://getstandapp.com/"
   name "Stand"
   desc "Reminds you to stand up once an hour"
   homepage "https://getstandapp.com/"
