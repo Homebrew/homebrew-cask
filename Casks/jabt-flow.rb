@@ -1,6 +1,6 @@
 cask "jabt-flow" do
-  version "1.9.2"
-  sha256 "377082822eaf7f076421125dd392c23e228391cdfbaf02ce3744869bdbc1f228"
+  version "1.10.0"
+  sha256 "b1b990aefc8528e17d112a0f00e1c5625b04f6a068020973f850f907e36ba9e5"
 
   # Download page is at https://createwithflow.com/releases/
   # createwithflow-updates.s3-us-west-2.amazonaws.com/ was verified as official when first introduced to the cask
