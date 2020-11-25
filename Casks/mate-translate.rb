@@ -1,6 +1,6 @@
 cask "mate-translate" do
   version "7.1.0"
-  sha256 "4751f8e8389776ae324f553fcf1222c76023dda5bcd888ecf042d5e2d49b3be6"
+  sha256 "506009f3fc50d3f264fdc0bd19af7228e8e9385df65aa57d2fe555cef71b4d01"
 
   # gikken.co/mate/ was verified as official when first introduced to the cask
   url "https://gikken.co/mate/MateTranslate.zip"
