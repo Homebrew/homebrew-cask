@@ -1,6 +1,6 @@
 cask "naver-whale" do
-  version "2.8.108.15"
-  sha256 "0e7330d46c163ce4229f5614e12974da488d4f0228ce4824eff074e7e265cf54"
+  version "2.8.109.22"
+  sha256 "2e3b26ba030b871f0078fe44521b338edbae31f28d9ad64d4398d2a89f653d90"
 
   # update.whale.naver.net/downloads/installers/ was verified as official when first introduced to the cask
   url "http://update.whale.naver.net/downloads/installers/NaverWhale.dmg"
