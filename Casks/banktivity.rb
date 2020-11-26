@@ -1,6 +1,6 @@
 cask "banktivity" do
-  version "8.0.4"
-  sha256 "82f161324511591bd521d33c08202c8555220ad914d3cbde3b7470e7d99bddf6"
+  version "8.0.5"
+  sha256 "c2ab4fd9124c921604e9f867828c5fab8fbc3e267ebec6e5ff79c1a8fbc07f41"
 
   # iggsoft.com/ was verified as official when first introduced to the cask
   url "https://www.iggsoft.com/banktivity/Banktivity#{version}.dmg"
