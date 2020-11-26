@@ -8,4 +8,5 @@ cask "isabelle" do
   homepage "https://www.cl.cam.ac.uk/research/hvg/Isabelle/"
 
   app "Isabelle#{version}.app"
+  binary "#{appdir}/Isabelle#{version}.app/Isabelle/bin/isabelle"
 end
