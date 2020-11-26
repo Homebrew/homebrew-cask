@@ -4,7 +4,6 @@ cask "qit" do
 
   url "http://cabeen.io/download/qit-latest-mac.zip"
   name "qit"
-  desc "visualization, exploration, and analysis of neuroimaging datasets"
+  desc "Visualization, exploration, and analysis of neuroimaging datasets"
   homepage "http://cabeen.io/qitwiki"
-  
 end
