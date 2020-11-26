@@ -9,7 +9,7 @@ cask "transcribe" do
   desc "Transcribes recorded music"
   homepage "https://www.seventhstring.com/xscribe/overview.html"
 
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :big_sur"
 
   app "Transcribe!.app"
 
