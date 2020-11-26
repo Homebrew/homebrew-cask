@@ -8,10 +8,18 @@ cask "megasync" do
   desc "Syncs files between computers and MEGA Cloud drives"
   homepage "https://mega.nz/sync"
 
+  auto_updates true
+
   app "MEGAsync.app"
 
+  uninstall launchctl:  "mega.mac.megaupdater",
+            login_item: "MEGAsync"
+
   zap trash: [
+    "~/Library/Application Scripts/mega.mac.MEGAShellExtFinder",
     "~/Library/Caches/mega.mac",
+    "~/Library/Containers/mega.mac.MEGAShellExtFinder",
+    "~/Library/LaunchAgents/mega.mac.megaupdater.plist",
     "~/Library/Preferences/mega.mac.plist",
   ]
 end
