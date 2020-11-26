@@ -1,6 +1,6 @@
 cask "screenflick" do
-  version "2.7.55"
-  sha256 "d046738727109f99eba8c4f164ae795dca18edd36f3a6d165ba402683c9cdd4c"
+  version "2.7.56"
+  sha256 "8884ff8119407753eb52c84816c66d2ba86c12d3cf81891a08c804f8024f5f30"
 
   url "https://store.araelium.com/screenflick/downloads/versions/Screenflick#{version}.zip"
   appcast "https://arweb-assets.s3.amazonaws.com/downloads/screenflick/updates.json"
