@@ -19,4 +19,8 @@ cask "caret" do
     "~/Library/Preferences/io.caret.plist",
     "~/Library/Saved Application State/io.caret.savedState",
   ]
+
+  caveats do
+    discontinued
+  end
 end
