@@ -2,7 +2,7 @@ cask "nota" do
   version "0.19.0"
   sha256 "8a886aff583d66b82bfbe1925f83376c30d5bb8fca5755f14c010f7944b8bea0"
 
-  # github.com/notaapp/ was verified as official when first introduced to the cask
+  # github.com/notaapp/releases/ was verified as official when first introduced to the cask
   url "https://github.com/notaapp/releases/releases/download/#{version}/Nota-#{version}-mac.zip"
   appcast "https://github.com/notaapp/releases/releases.atom"
   name "Nota"
