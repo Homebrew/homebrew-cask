@@ -1,6 +1,6 @@
 cask "metaimage" do
-  version "1.8.0"
-  sha256 "d8f62820f10d8fbd5a91fede00ba69efa21f572488372233662fe1a7a8495186"
+  version "1.9.2"
+  sha256 "71fba182914c10ffafe54bd7a0510c2eed80c479c613453d41b755b8ae5ea3ca"
 
   url "https://neededapps.com/appcasts/metaimage/versions/MI-#{version}.zip"
   appcast "https://neededapps.com/appcasts/metaimage/changelog.xml"
