@@ -5,7 +5,7 @@ cask "freesurfer" do
   url "https://surfer.nmr.mgh.harvard.edu/pub/dist/freesurfer/dev/freesurfer-darwin-macOS-dev.tar.gz"
   name "freesurfer"
   desc "Open source software suite for processing and analyzing brain MRI images"
-  homepage "https://surfer.nmr.mgh.harvard.edu"
+  homepage "https://surfer.nmr.mgh.harvard.edu/"
 
   suite "freesurfer"
 end
