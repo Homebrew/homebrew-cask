@@ -4,7 +4,7 @@ cask "naver-whale" do
 
   # update.whale.naver.net/downloads/installers/ was verified as official when first introduced to the cask
   url "http://update.whale.naver.net/downloads/installers/NaverWhale.dmg"
-  appcast "https://whale.naver.com/changelog/"
+  appcast "https://cv.whale.naver.com/version/latest_version"
   name "NAVER Whale"
   desc "Web browser made by Naver Co, Ltd"
   homepage "https://whale.naver.com/"
