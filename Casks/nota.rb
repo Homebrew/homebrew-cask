@@ -12,6 +12,7 @@ cask "nota" do
   auto_updates true
 
   app "Nota.app"
+  binary "#{appdir}/Nota.app/Contents/Resources/app.asar.unpacked/assets/nota.sh", target: "nota"
 
   zap trash: [
     "~/Library/Application Support/Nota",
