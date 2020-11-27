@@ -1,6 +1,6 @@
 cask "emclient" do
-  version "8.0.3494"
-  sha256 "ec85fdf7c1344fc92f9b04123cf27e466cdaf8297db32702903200b4152be21c"
+  version "8.0.3499"
+  sha256 "6d17aad9807babf34ebf336742b3aefb72547107bc69c1c3e0d38bf463d2ade8"
 
   url "https://cdn-dist.emclient.com/dist/v#{version}_Mac/setup.pkg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.emclient.com/dist/latest/setup.pkg"
