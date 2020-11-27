@@ -1,6 +1,6 @@
 cask "sqlpro-for-sqlite" do
-  version "2020.80"
-  sha256 "252470d4f128966f4c4675f1e4c41f68ef30ece751dc1f97d7eb7bddb29d487e"
+  version "2020.104"
+  sha256 "8b6cd01e570477833a006f02b8aae42b4ec37975c2ea2151d8e5d0fd0d54caf3"
 
   # d3fwkemdw8spx3.cloudfront.net/sqlite/ was verified as official when first introduced to the cask
   url "https://d3fwkemdw8spx3.cloudfront.net/sqlite/SQLProSQLite.#{version}.app.zip"
