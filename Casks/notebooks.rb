@@ -1,6 +1,6 @@
 cask "notebooks" do
-  version "2.2"
-  sha256 "2704b5bd6e15f53da472842edda34a2b3bc20f4452c74eea197d84277bd0963e"
+  version "2.3"
+  sha256 "615abf89d975f00421e7632ca6ec03171674984f77fd68c243b31b57199f0ab9"
 
   url "https://www.notebooksapp.com/Download/macOS/v#{version.major}/Notebooks.dmg"
   appcast "https://notebooksapp.com/Download/macOS/v#{version.major}/Notebooks#{version.major}Appcast.xml"
