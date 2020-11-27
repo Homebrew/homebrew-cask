@@ -6,4 +6,8 @@ cask "qit" do
   name "qit"
   desc "Visualization, exploration, and analysis of neuroimaging datasets"
   homepage "http://cabeen.io/qitwiki"
+
+  suite "qit-latest-mac"
+
+  uninstall delete: "#{appdir}/qit-latest-mac"
 end
