@@ -12,7 +12,7 @@ cask "zoom-for-it-admins" do
   # Do not add `auto_updates`. While supporting an auto-update mechanism, this software is more inconvenient than most
   # See https://github.com/Homebrew/homebrew-cask/pull/93083
 
-  conflicts_with cask: "zoomus"
+  conflicts_with cask: "zoom"
 
   pkg "ZoomInstallerIT.pkg"
 
