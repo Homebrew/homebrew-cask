@@ -1,6 +1,6 @@
 cask "iconizer" do
-  version "2020.11"
-  sha256 "400211fbbf0c587efb9c388346513fea52a9f0809e7acbe8f02abb877bb3058b"
+  version "2020.11.0"
+  sha256 "abaffdea473f4d3cd7d763fcb3846fbb752b87949e6ef7d273a95b6f5c5c1e06"
 
   # github.com/raphaelhanneken/iconizer/ was verified as official when first introduced to the cask
   url "https://github.com/raphaelhanneken/iconizer/releases/download/#{version}/Iconizer.dmg"
