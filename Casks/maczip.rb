@@ -1,14 +1,14 @@
-cask "ezip" do
-  version "1.9.1"
-  sha256 "76db10f768ed923a8e7b1aa492698d06533499455cbe18cbf1efa393a2918bcd"
+cask "maczip" do
+  version "2.0.1"
+  sha256 "acd1f3f61a93e227166c15e767fe5ae488c62786bd278ffd11fd251a79e14dad"
 
-  url "https://cdn.awehunt.com/ezip/release/eZip_V#{version}.dmg"
+  url "https://cdn.awehunt.com/ezip/release/MacZip_V#{version}.dmg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://ezip.awehunt.com/download?s=web"
-  name "ezip"
+  name "MacZip"
   desc "Utility to open, create and modify archive files"
   homepage "https://ezip.awehunt.com/"
 
-  app "eZip.app"
+  app "MacZip.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.jinghaoshe.ezip",
