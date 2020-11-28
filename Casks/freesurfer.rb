@@ -8,8 +8,7 @@ cask "freesurfer" do
   homepage "https://surfer.nmr.mgh.harvard.edu/"
 
   suite "freesurfer"
-  
   caveats do
-    free_license 'https://surfer.nmr.mgh.harvard.edu/registration.html'
+    free_license "https://surfer.nmr.mgh.harvard.edu/registration.html"
   end
 end
