@@ -1,6 +1,6 @@
 cask "mp3tag" do
   version "3.01"
-  sha256 "052a58e5eb590c248d02af27fffe50b7a0825f7e2bcea2eb2aac03e90be34d5f"
+  sha256 "410ead1f2005b73b48a141fffb5b07d93d791f7817ac1fe0673683daa9813ab3"
 
   url "https://download.mp3tag.de/mp3tagv#{version.no_dots}-macOS-Wine.zip"
   appcast "https://www.mp3tag.de/en/mac-osx.html"
