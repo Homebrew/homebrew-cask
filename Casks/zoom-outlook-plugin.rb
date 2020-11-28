@@ -1,9 +1,10 @@
-cask "zoomus-outlook-plugin" do
+cask "zoom-outlook-plugin" do
   version :latest
   sha256 :no_check
 
   url "https://zoom.us/client/latest/ZoomMacOutlookPlugin.pkg"
   name "Zoom.us Outlook Plugin"
+  desc "Outlook Plugin for Zoom.us"
   homepage "https://www.zoom.us/"
 
   depends_on macos: "<= :mojave"
