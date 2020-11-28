@@ -1,13 +1,12 @@
 cask "family-tree-builder" do
-  version "8.2.0.8516"
-  sha256 "babd0029c007932e0339a97e080608a06ffbc64f77c49879a2b8fd0a93f956c5"
+  version "8.2.0.8521"
+  sha256 "37d553af39747800a9f8b2bfd745ffae2ab521a5894364e377a8be496f36063e"
 
   # mhcache-myheritage.netdna-ssl.com/FP/FamilyTreeBuilder/ was verified as official when first introduced to the cask
   url "https://mhcache-myheritage.netdna-ssl.com/FP/FamilyTreeBuilder/family_tree_builder_#{version.split(".").last}.dmg"
-  appcast "https://www.myheritage.com/FP/FamilyTreeBuilder/appcast.xml"
   name "MyHeritage Family Tree Builder"
   desc "Family tree creator"
-  homepage "https://www.myheritage.com/"
+  homepage "https://www.myheritage.com/family-tree-builder"
 
   depends_on macos: "<= :catalina"
 
