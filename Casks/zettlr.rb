@@ -1,9 +1,9 @@
 cask "zettlr" do
-  version "1.7.5"
-  sha256 "013ba4ce24e5ebac28a5af98db4c9b5d0c011c2a74d3f7b2eb5f0e969bf7ea59"
+  version "1.8.0"
+  sha256 "534ea5ca5a9fe288ecf512aabf0363ba01739a2ab96bd54be70e2cd40e5afb00"
 
   # github.com/Zettlr/Zettlr/ was verified as official when first introduced to the cask
-  url "https://github.com/Zettlr/Zettlr/releases/download/v#{version}/Zettlr-#{version}.dmg"
+  url "https://github.com/Zettlr/Zettlr/releases/download/#{version}/Zettlr-#{version}.dmg"
   appcast "https://github.com/Zettlr/Zettlr/releases.atom"
   name "Zettlr"
   desc "Open-source markdown editor"
