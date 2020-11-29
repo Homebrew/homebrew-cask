@@ -15,8 +15,8 @@ cask "choosy" do
 
     pkg "Choosy.pkg"
   else
-    version "2.2"
-    sha256 "baaaf7666e6f5412ef1310f6d26c660f59845ccf464079405f2aa0598fb85c43"
+    version "2.2.1"
+    sha256 "71fe3c3c592d449063189a575a39b1f00735ee20cf1de94552896f5f8e93bf47"
 
     pkg "Choosy.pkg"
   end
