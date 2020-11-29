@@ -13,7 +13,6 @@ cask "napari" do
   container nested: "napari-#{version}.dmg"
 
   app "napari.app"
-  
-  zap trash: '~/.config/napari/'
 
+  zap trash: "~/.config/napari/"
 end
