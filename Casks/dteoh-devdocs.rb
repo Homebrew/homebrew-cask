@@ -7,7 +7,7 @@ cask "dteoh-devdocs" do
   name "DevDocs App"
   homepage "https://github.com/dteoh/devdocs-macos/"
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :big_sur"
 
   app "DevDocs.app"
 
