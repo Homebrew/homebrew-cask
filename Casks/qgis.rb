@@ -1,6 +1,6 @@
 cask "qgis" do
-  version "3.16.0"
-  sha256 "d9ebc0394ab9ceabce1cec64244484eff14dad0873d60970c57bac3738e299b9"
+  version "3.16.1"
+  sha256 "ba27ee03f4800478d41ac3235087246d9e7873eb8fce4e4b027eaf4e7fe37f35"
 
   url "https://qgis.org/downloads/macos/qgis-macos-pr.dmg"
   appcast "https://qgis.org/downloads/macos/qgis-macos-pr.sha256sum",
