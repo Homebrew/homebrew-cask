@@ -1,6 +1,6 @@
 cask "pdf-over" do
-  version :latest
-  sha256 :no_check
+  version '4.2.3'
+  sha256 'f8aee47f5cfe03ce3c5a1fda3f961a10aacba802650c855d8dc9bc33af16566d'
 
   url "https://webstart.buergerkarte.at/pdf-over/PDF-Over.dmg"
   name "PDF-Over"
