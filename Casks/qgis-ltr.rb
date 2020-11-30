@@ -3,7 +3,8 @@ cask "qgis-ltr" do
   sha256 "dcc63ad7beb08dde9bfe9ff702ca3fc9c70fc8ae34971a7d26659e96ed90f243"
 
   url "https://qgis.org/downloads/macos/qgis-macos-ltr.dmg"
-  appcast "https://qgis.org/downloads/macos/qgis-macos-ltr.sha256sum"
+  appcast "https://qgis.org/downloads/macos/qgis-macos-ltr.sha256sum",
+          must_contain: version.dots_to_underscores
   name "QGIS LTR"
   desc "Free and open source Geographic Information System"
   homepage "https://www.qgis.org/"
