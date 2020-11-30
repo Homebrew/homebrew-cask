@@ -1,10 +1,11 @@
 cask "microsoft-teams" do
-  version "1.3.00.28778"
-  sha256 "b9fe38e7ad313da3773f164358e99e8fbfa084cde8750b13b002777a14501be9"
+  version "1.3.00.30874"
+  sha256 "09209aeeb256f76ad587e308a63dface36dfa1ade736c6805e7768a9e678f398"
 
   url "https://statics.teams.microsoft.com/production-osx/#{version}/Teams_osx.pkg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://aka.ms/teamsmac"
   name "Microsoft Teams"
+  desc "Videoconferencing and team workspace software"
   homepage "https://teams.microsoft.com/downloads"
 
   auto_updates true
