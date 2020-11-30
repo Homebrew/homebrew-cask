@@ -13,14 +13,12 @@ cask "wowup" do
 
   app "WowUp.app"
 
-  uninstall quit: [
-    "WowUp",
-  ]
+  uninstall quit: "io.wowup.jliddev"
 
   zap trash: [
     "~/Library/Application Support/WowUp",
     "~/Library/Logs/WowUp",
     "~/Library/Preferences/io.wowup.jliddev.plist",
-    "~/Library/Saved\ Application\ State/io.wowup.jliddev.savedState/",
+    "~/Library/Saved Application State/io.wowup.jliddev.savedState/",
   ]
 end
