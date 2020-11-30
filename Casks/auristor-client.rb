@@ -13,6 +13,7 @@ cask "auristor-client" do
   end
 
   name "AuriStor File System Client"
+  desc "General purpose distributed file system"
   homepage "https://www.auristor.com/"
 
   # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.
