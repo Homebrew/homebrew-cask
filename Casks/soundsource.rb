@@ -12,4 +12,11 @@ cask "soundsource" do
   depends_on macos: ">= :high_sierra"
 
   app "SoundSource.app"
+
+  zap trash: [
+    "~/Library/Application Support/SoundSource",
+    "~/Library/Caches/com.rogueamoeba.soundsource",
+    "~/Library/Preferences/com.rogueamoeba.soundsource.plist",
+    "~/Library/WebKit/com.rogueamoeba.soundsource",
+  ]
 end
