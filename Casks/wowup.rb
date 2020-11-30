@@ -2,7 +2,7 @@ cask "wowup" do
   version "2.0.0"
   sha256 "8a21083adb1db39fe2bf6ff8b5bfcda367d553f7e1f1a8a659341f5d1683bb47"
 
-  # github.com/wowup/wowup was verified as official when first introduced to the cask
+  # github.com/wowup/wowup/ was verified as official when first introduced to the cask
   url "https://github.com/wowup/wowup/releases/download/v#{version}/wowup-#{version}-mac.zip"
   appcast "https://github.com/wowup/wowup/releases.atom"
   name "WowUp"
