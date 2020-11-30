@@ -8,6 +8,7 @@ cask "menubar-stats" do
   desc "System monitor with temperature & fans plugins"
   homepage "https://seense.com/menubarstats/"
 
+  auto_updates true
   depends_on macos: ">= :sierra"
 
   app "MenuBar Stats.app"
