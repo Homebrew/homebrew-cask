@@ -1,15 +1,15 @@
 cask "auristor-client" do
-  version "0.197.1"
+  version "0.204"
 
-  if MacOS.version <= :high_sierra
-    sha256 "21f74fa05f7601ad8e35e3a5e4b154dfae59347237fd07878f73b119dd78ff3d"
-    url "https://www.auristor.com/downloads/auristor/osx/macos-10.13/AuriStor-client-#{version}-HighSierra.dmg"
-  elsif MacOS.version <= :mojave
-    sha256 "442388eff95f5d251331a3af4caae939d6af81131a2ec867b982a2eb767a7f79"
-    url "https://www.auristor.com/downloads/auristor/osx/macos-10.14/Auristor-client-#{version}-Mojave.dmg"
-  else
-    sha256 "7b59e22c5f0b786dc30f64bc662e5a3a8b96f2a9af6d62d6bc27050481ac0c65"
+  if MacOS.version <= :mojave
+    sha256 "42f164514f6276003455eb3b104f5dfb5557403aeb979569a823dd3dc3e7ebd2"
+    url "https://www.auristor.com/downloads/auristor/osx/macos-10.14/AuriStor-client-#{version}-Mojave.dmg"
+  elsif MacOS.version <= :catalina
+    sha256 "08f8c5b96713c12127b798aa1154b02e5c29eadd931f3c483769322b35afd094"
     url "https://www.auristor.com/downloads/auristor/osx/macos-10.15/Auristor-client-#{version}-Catalina.dmg"
+  else
+    sha256 "c7d3f425e83afe20b35b913b278a3e149583764c0fbb9351e4e6da34053d4373"
+    url "https://www.auristor.com/downloads/auristor/osx/macos-11.0/Auristor-client-#{version}-BigSur.dmg"
   end
 
   name "AuriStor File System Client"
