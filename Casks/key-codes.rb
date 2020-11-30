@@ -1,6 +1,6 @@
 cask "key-codes" do
-  version "2.1"
-  sha256 "60ec4c0cef5e97943c91e4ed317434bcaddd4cdbce93368d8bca9db9d45c60e2"
+  version "2.2"
+  sha256 "3ebedb96f14da9a9d9691711c32cb1bb275bf8a3bd51fcbd59f4e0a0b12daf06"
 
   url "https://manytricks.com/download/keycodes"
   appcast "https://manytricks.com/keycodes/appcast"
