@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require "tap"
 require "utils/github"
 
 require_relative "ci_matrix"

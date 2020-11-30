@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "cask/cask_loader"
+
 require_relative "changed_files"
 
 module CiMatrix
