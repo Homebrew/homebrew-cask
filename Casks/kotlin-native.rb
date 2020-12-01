@@ -1,9 +1,9 @@
 cask "kotlin-native" do
-  version "1.4.0"
-  sha256 "476f920631b0ccb4b8e25456ef49356fb33d6e3960e9f2ec8def0aaa23284168"
+  version "1.4.20"
+  sha256 "5c4e838211ffe52d542fe559dbc55d2173a289dd91fd91294845fe7555478b9b"
 
   # github.com/JetBrains/kotlin/ was verified as official when first introduced to the cask
-  url "https://github.com/JetBrains/kotlin/releases/download/v#{version}/kotlin-native-macos-#{version.major_minor}.tar.gz"
+  url "https://github.com/JetBrains/kotlin/releases/download/v#{version}/kotlin-native-macos-#{version}.tar.gz"
   appcast "https://github.com/JetBrains/kotlin-native/releases.atom"
   name "Kotlin Native"
   homepage "https://kotlinlang.org/docs/reference/native-overview.html"
