@@ -1,6 +1,6 @@
 cask "boinc" do
-  version "7.16.13"
-  sha256 "a49c628e96493bf6e96d2358bdb098809ed495a5e16e2972c4f94922e84b699a"
+  version "7.16.14"
+  sha256 "9a0eabad4b6780f56543c5634bfcef46728bd77f95f3d5e46cc35a0b6bdbdce1"
 
   url "https://boinc.berkeley.edu/dl/boinc_#{version}_macOSX_universal.zip"
   appcast "https://www.macupdater.net/cgi-bin/extract_text/download_with_useragent.cgi?url=https://boinc.berkeley.edu/download.php&user_agent=Mac"
