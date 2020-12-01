@@ -16,9 +16,13 @@ cask "zoomus" do
     RENAME WARNING
 
     Due to prevalent user confusion, the zoomus cask (this one) will be renamed to zoom.
-    This cask will install zoom for you as a dependency, but you should rename zoomus to zoom in your own scripts.
+    In the meantime, zoomus will install zoom for you as a dependency, but you should update your scripts.
 
     We’re aware this solution is subpar. If you’d like to help us improve it,
     we accept PRs and need the equivalent of formula_renames.json for casks: https://docs.brew.sh/Rename-A-Formula
+
+    To migrate now, do:
+      brew uninstall zoomus
+      brew install zoom
   EOS
 end
