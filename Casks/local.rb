@@ -5,6 +5,7 @@ cask "local" do
   url "https://cdn.localwp.com/releases-stable/#{version.before_comma}+#{version.after_comma}/local-#{version.before_comma}-mac.dmg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://cdn.localwp.com/stable/latest/mac"
   name "Local"
+  desc "WordPress local development tool"
   homepage "https://localwp.com/"
 
   app "Local.app"
