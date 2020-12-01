@@ -4,6 +4,7 @@ cask "jqbx" do
 
   url "http://download.jqbx.fm/"
   name "JQBX"
+  desc "Listen to Spotify music in sync with others"
   homepage "https://www.jqbx.fm/"
 
   depends_on cask: "spotify"
