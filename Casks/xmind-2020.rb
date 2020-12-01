@@ -3,7 +3,7 @@ cask "xmind-2020" do
   sha256 "a41f8647ef655e19e4a8066746475be95fd13b501c9fa09cc81abadb1da29580"
 
   url "https://www.xmind.net/xmind/downloads/XMind-2020-for-macOS-#{version}.dmg"
-  appcast "https://www.xmind.net/xmind2020/release-notes/"
+  appcast "https://www.xmind.net/download/"
   name "Xmind 2020"
   desc "Full-featured mindmap software"
   homepage "https://www.xmind.net/xmind2020/"
