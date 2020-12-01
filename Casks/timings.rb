@@ -12,6 +12,6 @@ cask "timings" do
   zap trash: [
     "~/Library/Preferences/com.mediaatelier.Timings.plist",
     "~/Library/Application Support/Timings",
-    "~/Library/Caches/com.mediaatelier.timings",
+    "~/Library/Caches/com.mediaatelier.Timings",
   ]
 end
