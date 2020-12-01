@@ -1,6 +1,6 @@
 cask "gitfinder" do
-  version "1.6"
-  sha256 "539d6ceea58fcab0213917cb4809a9d7100239647e31842d8b4770bbedba7ca0"
+  version "1.6.1"
+  sha256 "2d5b43cce977c857ea601acb263696a3404a65f6b1f30ff72a87f4f2c1f2f631"
 
   url "https://get.gitfinder.com/GitFinder#{version.dots_to_underscores}.dmg"
   appcast "https://zigz.ag/GitFinder/updates/stablecast.xml"
