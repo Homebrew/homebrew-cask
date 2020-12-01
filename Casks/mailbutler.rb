@@ -1,6 +1,6 @@
 cask "mailbutler" do
-  version "2,3410-14492"
-  sha256 "1bc0018c9c8b3cbef7ae788490b19c02cdc6bb25cb4140274b949e031fb2566d"
+  version "2,3501-14654"
+  sha256 "03b2c1ec0919e065503cef59ed9e919f641f2f78a21d0e94a215eb3761b32844"
 
   url "https://downloads.mailbutler.io/sparkle/public/Mailbutler_#{version.after_comma}.zip"
   appcast "https://www.mailbutler.io/appcast#{version.major}.php"
