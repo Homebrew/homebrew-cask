@@ -1,6 +1,6 @@
 cask "chronicle" do
-  version "9.7.2"
-  sha256 "cc3bfd5ccea35b5ff63a12034d817e7df2d3adfd00ddfb42935f84f5f4fce343"
+  version "9.7.3"
+  sha256 "350b19ecc5fa48f51c3fb74b232f66f7c34107ad140d6346da8b7f6903ff14de"
 
   url "https://www.chronicleapp.com/static/downloads/chroniclepro.zip"
   appcast "https://chronicleapp.com/chronicle8.xml"
