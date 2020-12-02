@@ -15,8 +15,8 @@ cask "evernote" do
 
     url "https://cdn1.evernote.com/mac-smd/public/Evernote_RELEASE_#{version}.dmg"
   else
-    version "10.4.3-2071"
-    sha256 "e4d17adda2db2486d241ac7b82e1884d4c9254d176a03385c352e2fc82c0b9b7"
+    version "10.4.4-2096"
+    sha256 "d836d7f2c91feb27f323f9bd1c68f5e74bde605d6981583f75c2b6098ef958bc"
 
     url "https://cdn1.evernote.com/boron/mac/builds/Evernote-#{version}.dmg"
   end
