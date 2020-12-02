@@ -34,8 +34,8 @@ cask "amazon-music" do
   caveats <<~EOS
     If the app will not launch after installation, try
 
-      brew cask zap #{token}
-      brew cask install #{token}
+      brew uninstall --zap --cask #{token}
+      brew install --cask #{token}
 
     then re-launch the app.
   EOS

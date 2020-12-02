@@ -19,7 +19,7 @@ cask "rstudio" do
   caveats <<~EOS
     #{token} depends on R. The R Project provides official binaries:
 
-      brew cask install r
+      brew install --cask r
 
     Alternatively, the Homebrew-compiled version of R omits the GUI app:
 
