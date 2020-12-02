@@ -1,8 +1,9 @@
 cask "figma" do
-  version :latest
-  sha256 :no_check
+  version "90.4.0"
+  sha256 "2749f14a87583ffe29012d8232be5b408036ac5dcd2abbecffab3fa429af20e8"
 
-  url "https://desktop.figma.com/mac/Figma.zip"
+  url "https://desktop.figma.com/mac/Figma-#{version}.zip"
+  appcast "https://desktop.figma.com/mac/RELEASE.json"
   name "Figma"
   homepage "https://www.figma.com/"
 
