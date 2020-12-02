@@ -2,7 +2,7 @@ cask "snapmotion" do
   version "4.5.0"
   sha256 "b2e3f27e8a98f993a98e60b3885ba16d5c4c4e308bb9f83743fff6d8503700b5"
 
-  url "https://neededapps.com/appcasts/snapmotion/versions/SM-4.5.0.zip"
+  url "https://neededapps.com/appcasts/snapmotion/versions/SM-#{version}.zip"
   appcast "https://neededapps.com/appcasts/snapmotion/changelog.xml"
   name "SnapMotion"
   desc "Extract images from videos"
