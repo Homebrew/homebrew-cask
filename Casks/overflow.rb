@@ -14,7 +14,7 @@ cask "overflow" do
   app "Overflow #{version.major}.app"
 
   zap trash: [
-    "~/Library/Containers/com.stuntsoftware.Overflow3/Data/Library/Preferences/com.stuntsoftware.Overflow#{version.major}.plist",
-    "~/Library/Containers/com.stuntsoftware.Overflow3/Data/Library/Application Support/default.realm",
+    "~/Library/Containers/com.stuntsoftware.Overflow#{version.major}/Data/Library/Preferences/com.stuntsoftware.Overflow#{version.major}.plist",
+    "~/Library/Containers/com.stuntsoftware.Overflow#{version.major}/Data/Library/Application Support/default.realm",
   ]
 end
