@@ -1,9 +1,9 @@
 cask "sauerbraten" do
-  version "2013.01.26"
-  sha256 "c6807484fa0d2c42ac774b97f9b21e9eace720e4403abc11b0321b2645d3589d"
+  version "2020.11.29,2020.11.30"
+  sha256 "a4c633d40a4464a12ae67ebd7cd897be0d3f415c6617b446324f73f204b7ddd7"
 
   # sourceforge.net/sauerbraten/ was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/sauerbraten/sauerbraten_#{version.dots_to_underscores}_collect_edition_macosx.dmg"
+  url "https://downloads.sourceforge.net/sauerbraten/sauerbraten/#{version.before_comma.dots_to_underscores}/sauerbraten_#{version.after_comma.dots_to_underscores}_macos.dmg"
   appcast "https://sourceforge.net/projects/sauerbraten/rss",
           must_contain: version.dots_to_underscores
   name "Cube 2: Sauerbraten"
