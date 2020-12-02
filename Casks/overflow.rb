@@ -5,7 +5,8 @@ cask "overflow" do
   # stunt.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://stunt.s3.amazonaws.com/overflow_#{version}.zip"
   appcast "https://stuntsoftware.com/PHP/sparkle/overflow#{version.major}.php"
-  name "overflow"
+  name "Overflow"
+  desc "visual application launcher"
   homepage "https://stuntsoftware.com/overflow/"
 
   depends_on macos: ">= :high_sierra"
