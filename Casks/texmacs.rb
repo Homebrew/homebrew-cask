@@ -5,6 +5,7 @@ cask "texmacs" do
   url "http://www.texmacs.org/Download/ftp/tmftp/macos/TeXmacs-#{version}.dmg"
   appcast "http://ftp.texmacs.org/TeXmacs/appcast/macos.xml"
   name "GNU TeXmacs"
+  desc "Scientific editing platform"
   homepage "http://www.texmacs.org/"
 
   app "TeXmacs.app"
