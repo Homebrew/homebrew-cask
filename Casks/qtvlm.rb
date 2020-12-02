@@ -4,8 +4,9 @@ cask "qtvlm" do
 
   url "https://www.meltemus.com/index.php/en/download/send/3-mac-os/#{version.after_comma}-qtvlm-#{version.before_comma.dots_to_hyphens}"
   appcast "https://www.meltemus.com/index.php/en/download/category/3-mac-os",
-          must_contain: version.before_comma
+          must_contain: version.major_minor_patch
   name "qtvlm"
+  desc "Navigation and weather routing software"
   homepage "https://www.meltemus.com/index.php/en/"
 
   depends_on macos: ">= :sierra"
