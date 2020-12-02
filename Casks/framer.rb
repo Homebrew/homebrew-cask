@@ -1,6 +1,6 @@
 cask "framer" do
-  version "54543,1603715699"
-  sha256 "d689e4d50ead0a6f095dd7d4c98393286aa0b8aeb3d32382438752140944b755"
+  version "57017,1606907524"
+  sha256 "8fe579d6a722bea3c9c4bac59c587fe7471a74fa852569d11d9a3bd4dbd72a50"
 
   url "https://dl.framer.com/com.framer.desktop/#{version.before_comma}/#{version.after_comma}/FramerDesktop-#{version.before_comma}.zip"
   appcast "https://updates.framer.com/sparkle/com.framer.desktop"
