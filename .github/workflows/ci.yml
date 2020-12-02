@@ -104,15 +104,22 @@ jobs:
         id: gems
         run: brew install-bundler-gems
 
-      - name: Run brew style ${{ matrix.cask.token || matrix.tap }}
-        run: brew style '${{ matrix.cask.path || matrix.tap }}'
+      - name: Run brew style ${{ matrix.tap }}
+        run: brew style '${{ matrix.tap }}'
         if: always() && steps.gems.outcome == 'success' && !matrix.cask
 
+      - name: Run brew fetch --cask ${{ matrix.cask.token }}
+        id: fetch
+        run: |
+          brew fetch --cask --retry --force '${{ matrix.cask.path }}'
+        timeout-minutes: 30
+        if: always() && steps.gems.outcome == 'success' && matrix.cask
+
       - name: Run brew audit --cask${{ (matrix.cask && ' ') || ' --tap ' }}${{ matrix.cask.token || matrix.tap }}
+        id: audit
         run: |
           brew audit --cask ${{ join(matrix.audit_args, ' ') }}${{ (matrix.cask && ' ') || ' --tap ' }}'${{ matrix.cask.path || matrix.tap }}'
-        timeout-minutes: 30
-        if: always() && steps.gems.outcome == 'success' && !matrix.skip_audit
+        if: always() && steps.fetch.outcome == 'success' && !matrix.skip_audit
 
       - name: Gather cask information
         id: info
@@ -151,7 +158,7 @@ jobs:
             puts "::set-output name=formula_conflicts::#{JSON.generate(formula_conflicts)}"
             puts "::set-output name=formula_dependencies::#{JSON.generate(formula_dependencies)}"
           EOF
-        if: always() && steps.gems.outcome == 'success' && matrix.cask
+        if: always() && steps.fetch.outcome == 'success' && matrix.cask
 
       - name: Uninstall conflicting formulae
         run: |
