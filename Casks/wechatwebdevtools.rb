@@ -8,6 +8,8 @@ cask "wechatwebdevtools" do
   name "微信web开发者工具"
   homepage "https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html"
 
+  auto_updates true
+
   app "wechatwebdevtools.app"
 
   zap trash: [
