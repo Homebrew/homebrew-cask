@@ -6,7 +6,7 @@ cask "gramps" do
   url "https://github.com/gramps-project/gramps/releases/download/v#{version.before_comma}/Gramps-Intel-#{version.before_comma}-#{version.after_comma}.dmg"
   appcast "https://github.com/gramps-project/gramps/releases.atom"
   name "Gramps"
-  desc "Free Genealogy Software"
+  desc "Genealogy software"
   homepage "https://gramps-project.org/blog/"
 
   app "Gramps.app"
