@@ -5,8 +5,9 @@ cask "textadept" do
   url "https://github.com/orbitalquark/textadept/releases/download/textadept_#{version}/textadept_#{version}.macOS.zip"
   appcast "https://github.com/orbitalquark/textadept/releases.atom"
   name "Textadept"
+  desc "Cross-platform text editor"
   homepage "https://orbitalquark.github.io/textadept/"
 
-  app "textadept_#{version}.osx/Textadept.app"
-  binary "textadept_#{version}.osx/ta"
+  app "textadept_#{version}.macOS/Textadept.app"
+  binary "textadept_#{version}.macOS/ta"
 end
