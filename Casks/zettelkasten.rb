@@ -5,8 +5,13 @@ cask "zettelkasten" do
   # github.com/Zettelkasten-Team/Zettelkasten/ was verified as official when first introduced to the cask
   url "https://github.com/Zettelkasten-Team/Zettelkasten/releases/download/v#{version}/Zettelkasten_#{version}_Mac-Java8.zip"
   appcast "https://github.com/Zettelkasten-Team/Zettelkasten/releases.atom"
-  name "zettelkasten"
+  name "Zettelkasten"
+  desc "Note box according to Luhmann"
   homepage "http://zettelkasten.danielluedecke.de/"
 
   app "Zettelkasten.app"
+
+  caveats do
+    depends_on_java "8"
+  end
 end
