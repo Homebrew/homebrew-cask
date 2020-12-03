@@ -5,6 +5,7 @@ cask "appstudio" do
   # appstudio.us-east-1.linodeobjects.com/ was verified as official when first introduced to the cask
   url "https://appstudio.us-east-1.linodeobjects.com/AppStudio#{version.major}.dmg"
   name "NSB/AppStudio"
+  desc "Development environment"
   homepage "https://www.nsbasic.com/"
 
   app "AppStudio.app"
