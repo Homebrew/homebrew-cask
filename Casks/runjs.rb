@@ -9,5 +9,14 @@ cask "runjs" do
   desc "JavaScript playground that auto-evaluates as code is typed"
   homepage "https://projects.lukehaas.me/runjs/"
 
+  auto_updates true
+
   app "RunJS.app"
+
+  zap trash: [
+    "~/Library/Application Support/runjs",
+    "~/Library/Logs/RunJS",
+    "~/Library/Preferences/me.lukehaas.runjs.plist",
+    "~/Library/Saved Application State/me.lukehaas.runjs.savedState",
+  ]
 end
