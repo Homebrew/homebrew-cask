@@ -46,21 +46,21 @@ This will both uninstall the Cask and remove applications which were moved to `/
 ## Other Commands
 
 * `info` — displays information about the given Cask
-* `cask fetch` — downloads remote application files for the given Cask to the local cache (with `--force`, re-download even if already cached)
+* `fetch` — downloads remote application files for the given Cask to the local cache (with `--force`, re-download even if already cached)
 * `--cache` — displays the path to Homebrew's local cache
 * `doctor` — checks for configuration issues
 * `style` — checks Cask style using RuboCop
 * `home` — opens the homepage of the given Cask; or with no arguments, the Homebrew project page
-* `cask zap` — try to remove *all* files associated with a Cask (may include resources shared with other applications)
+* `uninstall --zap` — try to remove *all* files associated with a Cask (may include resources shared with other applications)
 * `outdated` — lists all outdated Casks
 * `upgrade` — updates all outdated Casks
 
 The following commands are for Cask authors:
 
-* `cask audit` — verifies installability of Casks
-* `cask cat` — dumps the given Cask to the standard output
-* `cask create` — creates a Cask and opens it in an editor
-* `cask edit` — edits the given Cask
+* `audit` — verifies installability of Casks
+* `cat` — dumps the given Cask to the standard output
+* `create --cask` — creates a Cask and opens it in an editor
+* `edit` — edits the given Cask
 
 The following aliases and abbreviations are provided for convenience:
 
