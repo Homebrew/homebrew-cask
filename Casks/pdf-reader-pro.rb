@@ -1,10 +1,11 @@
 cask "pdf-reader-pro" do
-  version :latest
-  sha256 :no_check
+  version "2.7.4.2"
+  sha256 "d12bd192a1839b28ec57b739f96b4035f98c72026b2648a4898a3d4c8147ce8e"
 
   url "https://www.pdfreaderpro.com/downloads/PDFReaderPro.dmg"
+  appcast "https://www.pdfreaderpro.com/downloads/pdfreaderprocast.xml"
   name "PDF Reader Pro"
-  desc "Read, annotate, edit pages, convert, create, OCR, fill forms and sign PDFs"
+  desc "Read, annotate, edit, convert, create, OCR, fill forms and sign PDFs"
   homepage "https://www.pdfreaderpro.com/"
 
   app "PDF Reader Pro.app"
