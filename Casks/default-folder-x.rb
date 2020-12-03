@@ -1,6 +1,6 @@
 cask "default-folder-x" do
   version "5.5.2"
-  sha256 "f650cf3aa6232d17d34e2884e17a3fdcacec6a7cf7f3eff8da88c4a3e4ce7b21"
+  sha256 "8b4dc81dffe43e8e586f87c94c965612797070b58dbfd1c53bd6e70beddde53b"
 
   url "https://www.stclairsoft.com/download/DefaultFolderX-#{version}.dmg"
   appcast "https://www.stclairsoft.com/cgi-bin/sparkle.cgi?DX5"
