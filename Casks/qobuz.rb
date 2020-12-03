@@ -1,6 +1,6 @@
 cask "qobuz" do
-  version "5.7.2-b022"
-  sha256 "bc80f0a1ee272ad7bba83460807591c1fa08ef2d6eb9cbd5f5659807c4098a1c"
+  version "5.7.2-b023"
+  sha256 "91cce599ad051b4b2bff07b7cd409ee0a5682d2e76d8c13edbbe430620f1bb05"
 
   url "https://desktop.qobuz.com/releases/darwin/x64/elCapitan_sierra/#{version}/Qobuz.dmg"
   name "Qobuz"
