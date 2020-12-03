@@ -7,28 +7,28 @@ For example:
 Instead of
 
 ```ruby
-version '1.2.3'
-url 'https://example.com/file-version-123.dmg'
+version "1.2.3"
+url "https://example.com/file-version-123.dmg"
 ```
 
 We can use
 
 ```ruby
-version '1.2.3'
+version "1.2.3"
 url "https://example.com/file-version-#{version.delete('.')}.dmg"
 ```
 
 We can also leverage the power of regular expressions. So instead of
 
 ```ruby
-version '1.2.3build4'
-url 'https://example.com/1.2.3/file-version-1.2.3build4.dmg'
+version "1.2.3build4"
+url "https://example.com/1.2.3/file-version-1.2.3build4.dmg"
 ```
 
 We can use
 
 ```ruby
-version '1.2.3build4'
+version "1.2.3build4"
 url "https://example.com/#{version.sub(%r{build\d+}, '')}/file-version-#{version}.dmg"
 ```
 
