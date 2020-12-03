@@ -34,22 +34,22 @@ The following methods may be called to generate standard warning messages:
 
 | method                             | description |
 | ---------------------------------- | ----------- |
-| `path_environment_variable 'path'` | users should make sure `path` is in their `$PATH` environment variable.
-| `zsh_path_helper 'path'`           | zsh users must take additional steps to make sure `path` is in their `$PATH` environment variable.
-| `depends_on_java 'version'`        | users should make sure they have the specified version of java installed. `version` can be exact (e.g. `6`), a minimum (e.g. `7+`), or omitted (when any version works).
+| `path_environment_variable "path"` | users should make sure `path` is in their `$PATH` environment variable.
+| `zsh_path_helper "path"`           | zsh users must take additional steps to make sure `path` is in their `$PATH` environment variable.
+| `depends_on_java "version"`        | users should make sure they have the specified version of java installed. `version` can be exact (e.g. `6`), a minimum (e.g. `7+`), or omitted (when any version works).
 | `logout`                           | users should log out and log back in to complete installation.
 | `reboot`                           | users should reboot to complete installation.
 | `files_in_usr_local`               | the Cask installs files to `/usr/local`, which may confuse Homebrew.
 | `discontinued`                     | all software development has been officially discontinued upstream.
-| `free_license 'web_page'`          | users may get an official license to use the software at `web_page`.
+| `free_license "web_page"`          | users may get an official license to use the software at `web_page`.
 | `kext`                             | users may need to enable their kexts in System Preferences → Security & Privacy → General.
 | `unsigned_accessibility`           | users will need to re-enable the app on each update in System Preferences → Security & Privacy → Privacy as it is unsigned.
-| `license 'web_page'`               | software has a usage license at `web_page`.
+| `license "web_page"`               | software has a usage license at `web_page`.
 
 Example:
 
 ```ruby
 caveats do
-  path_environment_variable '/usr/texbin'
+  path_environment_variable "/usr/texbin"
 end
 ```
