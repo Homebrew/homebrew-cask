@@ -2,7 +2,7 @@ First, check if the problem was with your download. Delete the downloaded file (
 
 If the problem persists, the cask must be outdated. It’ll likely need a new version, but it’s possible the version has remained the same (happens occasionally when the vendor updates the app in place).
 
-1. Go to the vendor’s website (`brew cask home {{cask_name}}`).
+1. Go to the vendor’s website (`brew home {{cask_name}}`).
 2. Find out what the latest version is. It may be expressed in the URL used to download it.
 3. Take a look at the cask’s version (`brew cask _stanza version {{cask_name}}`) and verify it is indeed outdated. If it is:
 
