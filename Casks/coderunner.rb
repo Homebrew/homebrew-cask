@@ -7,7 +7,7 @@ cask "coderunner" do
   name "CodeRunner"
   desc "Multi-language programming editor"
   homepage "https://coderunnerapp.com/"
-  
+
   auto_updates true
 
   app "CodeRunner.app"
