@@ -9,5 +9,5 @@ cask "dosbox-x" do
   desc "Fork of the DOSBox project"
   homepage "https://dosbox-x.com/"
 
-  app "dosbox-x/dosbox-x.app"
+  app "dosbox-x-macosx-x86_64-#{version.after_comma}/dosbox-x/dosbox-x.app"
 end
