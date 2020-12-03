@@ -10,8 +10,8 @@ Each of the following stanzas is required for every Cask.
 | `sha256`   | no                            | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`. Can be suppressed by using the special value `:no_check`.<br />See [Checksum Stanza Details](stanzas/sha256.md) for more information.
 | `url`      | no                            | URL to the `.dmg`/`.zip`/`.tgz`/`.tbz2` file that contains the application.<br />A [comment](stanzas/url.md#when-url-and-homepage-hostnames-differ-add-a-comment) should be added if the hostnames in the `url` and `homepage` stanzas differ. Block syntax should be used for URLs that change on every visit.<br />See [URL Stanza Details](stanzas/url.md) for more information.
 | `name`     | yes                           | String providing the full and proper name defined by the vendor.<br />See [Name Stanza Details](stanzas/name.md) for more information.
-| `desc`     | no                            | One-line description of the Cask. Shows when running `brew cask info`.<br />See [Desc Stanza Details](stanzas/desc.md) for more information.
-| `homepage` | no                            | Application homepage; used for the `brew cask home` command.
+| `desc`     | no                            | One-line description of the Cask. Shows when running `brew info`.<br />See [Desc Stanza Details](stanzas/desc.md) for more information.
+| `homepage` | no                            | Application homepage; used for the `brew home` command.
 
 ## At Least One Artifact Stanza Is Also Required
 
