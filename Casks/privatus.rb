@@ -3,7 +3,7 @@ cask "privatus" do
   sha256 "a43405c336bdb86845ed21ff11145802bf7337046cc6c3c1d7cad8687096f1b3"
 
   url "https://sweetpproductions.com/products/privatus#{version.major}/Privatus#{version.major}.dmg",
-      verified: "https://sweetpproductions.com/products/"
+      verified: "sweetpproductions.com/products/"
   appcast "https://sweetpproductions.com/products/privatus#{version.major}/appcast.xml"
   name "Privatus"
   desc "Automated online privacy protection"
