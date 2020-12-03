@@ -8,7 +8,7 @@
 #
 # detect Cask files which differ only by the placement of hyphens.
 #
-# merge entirely into "brew cask create" command
+# merge entirely into "brew create" command
 #
 
 ###
