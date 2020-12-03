@@ -168,7 +168,6 @@ It is important to note that, although `script:` in the above example does attem
 
 Arguments to `uninstall delete:` should use the following basic rules:
 
-* Only single quotes should be used, except when invoking [`#{version}` interpolation](https://github.com/Homebrew/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/version.md). `ENV["HOME"]` and other variables should not be interpolated in the value.
 * Basic tilde expansion is performed on paths, i.e., leading `~` is expanded to the home directory.
 * Paths must be absolute.
 * Glob expansion is performed using the [standard set of characters](https://en.wikipedia.org/wiki/Glob_(programming)).
