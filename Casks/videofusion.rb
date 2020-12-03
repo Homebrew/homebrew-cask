@@ -3,7 +3,7 @@ cask "videofusion" do
   sha256 "106328304796a77ddf2180af014e3834c695cef09226a0f412e811f635e66a25"
 
   url "https://lf3-faceucdn-tos.pstatp.com/obj/faceu-packages/Jianying_Pro_#{version.dots_to_underscores}.pkg",
-      verified: "https://lf3-faceucdn-tos.pstatp.com/obj/faceu-packages/"
+      verified: "lf3-faceucdn-tos.pstatp.com/obj/faceu-packages/"
   name "VideoFusion"
   name "剪映专业版"
   desc "Video editor"
