@@ -184,7 +184,7 @@ brew uninstall my-new-cask
 If everything looks good, you’ll also want to make sure your Cask passes audit with:
 
 ```bash
-brew audit my-new-cask --download
+brew audit --new-cask my-new-cask
 ```
 
 You should also check stylistic details with `brew style`:
