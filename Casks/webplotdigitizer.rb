@@ -5,6 +5,7 @@ cask "webplotdigitizer" do
   url "https://automeris.io/downloads/WebPlotDigitizer-#{version}-darwin-x64.zip"
   appcast "https://github.com/ankitrohatgi/WebPlotDigitizer/releases.atom"
   name "WebPlotDigitizer"
+  desc "Extract numerical data from plot images"
   homepage "https://automeris.io/WebPlotDigitizer/"
 
   app "WebPlotDigitizer-#{version}-darwin-x64/WebPlotDigitizer-#{version}.app"
