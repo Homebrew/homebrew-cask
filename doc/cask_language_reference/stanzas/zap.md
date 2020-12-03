@@ -11,7 +11,7 @@ $ brew uninstall --zap firefox
 `zap` stanzas may remove:
 
 * Preference files and caches stored within the user’s `~/Library` directory.
-* Shared resources such as application updaters. Since shared resources may be removed, other applications may be affected by `brew cask zap`. Understanding that is the responsibility of the end user.
+* Shared resources such as application updaters. Since shared resources may be removed, other applications may be affected by `brew uninstall --zap`. Understanding that is the responsibility of the end user.
 
 `zap` stanzas should not remove:
 
