@@ -1,6 +1,6 @@
 cask "zulip" do
-  version "5.4.3"
-  sha256 "68c253956f2be0e20ed73c538ffc9f71bab8c6e63c2eac51f53cecbcb0ba367e"
+  version "5.5.0"
+  sha256 "fd1d1ca0a42cc1d8fb096dbf3e7a3ad70f45e077dffcd82914dcc5de26716cd5"
 
   # github.com/zulip/zulip-desktop/ was verified as official when first introduced to the cask
   url "https://github.com/zulip/zulip-desktop/releases/download/v#{version}/Zulip-#{version}.dmg"
