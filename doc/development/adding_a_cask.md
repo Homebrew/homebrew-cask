@@ -19,8 +19,8 @@ cask "shuttle" do
   version "1.2.9"
   sha256 "0b80bf62922291da391098f979683e69cc7b65c4bdb986a431e3f1d9175fba20"
 
-  # github.com/fitztrev/shuttle/ was verified as official when first introduced to the cask
-  url "https://github.com/fitztrev/shuttle/releases/download/v#{version}/Shuttle.zip"
+  url "https://github.com/fitztrev/shuttle/releases/download/v#{version}/Shuttle.zip",
+      verified: "https://github.com/fitztrev/shuttle/"
   appcast "https://github.com/fitztrev/shuttle/releases.atom"
   name "Shuttle"
   desc "Simple shortcut menu"
@@ -76,7 +76,7 @@ end
 
 ### Generating a Token for the Cask
 
-The Cask **token** is the mnemonic string people will use to interact with the Cask via `brew cask install`, etc. The name of the Cask **file** is simply the token with the extension `.rb` appended.
+The Cask **token** is the mnemonic string people will use to interact with the Cask via `brew install`, etc. The name of the Cask **file** is simply the token with the extension `.rb` appended.
 
 The easiest way to generate a token for a Cask is to run this command:
 
@@ -92,12 +92,12 @@ $ "$(brew --repository)/Library/Taps/homebrew/homebrew-cask/developer/bin/genera
 
 If the `generate_cask_token` script does not work for you, see [Cask Token Details](#cask-token-details).
 
-### The `brew cask create` Command
+### The `brew create --cask` Command
 
-Once you know the token, create your Cask with the handy-dandy `brew cask create` command:
+Once you know the token, create your Cask with the handy-dandy `brew create --cask` command:
 
 ```bash
-$ brew cask create my-new-cask
+$ brew create --cask my-new-cask
 ```
 
 This will open `$EDITOR` with a template for your new Cask, to be stored in the file `my-new-cask.rb`. Running the `create` command above will get you a template that looks like this:
@@ -127,7 +127,7 @@ Fill in the following stanzas for your Cask:
 | `url`              | URL to the `.dmg`/`.zip`/`.tgz`/`.tbz2` file that contains the application.<br />A [comment](../cask_language_reference/stanzas/url.md#when-url-and-homepage-hostnames-differ-add-a-comment) must be added if the hostnames in the `url` and `homepage` stanzas differ. [Block syntax](../cask_language_reference/stanzas/url.md#using-a-block-to-defer-code-execution) is available for URLs that change on every visit
 | `name`             | the full and proper name defined by the vendor, and any useful alternate names (see [Name Stanza Details](../cask_language_reference/stanzas/name.md))
 | `desc`             | one-line description of the software (see [Desc Stanza Details](../cask_language_reference/stanzas/desc.md))
-| `homepage`         | application homepage; used for the `brew cask home` command
+| `homepage`         | application homepage; used for the `brew home` command
 | `app`              | relative path to an `.app` bundle that should be moved into the `/Applications` folder on installation (see [App Stanza Details](../cask_language_reference/stanzas/app.md))
 
 Other commonly-used stanzas are:
@@ -170,27 +170,27 @@ Give it a shot with:
 
 ```bash
 export HOMEBREW_NO_AUTO_UPDATE=1
-brew cask install my-new-cask
+brew install my-new-cask
 ```
 
-Did it install? If something went wrong, edit your Cask with `brew cask edit my-new-cask` to fix it.
+Did it install? If something went wrong, edit your Cask with `brew edit my-new-cask` to fix it.
 
 Test also if the uninstall works successfully:
 
 ```bash
-brew cask uninstall my-new-cask
+brew uninstall my-new-cask
 ```
 
 If everything looks good, you’ll also want to make sure your Cask passes audit with:
 
 ```bash
-brew cask audit my-new-cask --download
+brew audit --new-cask my-new-cask
 ```
 
-You should also check stylistic details with `brew cask style`:
+You should also check stylistic details with `brew style`:
 
 ```bash
-brew cask style --fix my-new-cask
+brew style --fix my-new-cask
 ```
 
 Keep in mind all of these checks will be made when you submit your PR, so by doing them in advance you’re saving everyone a lot of time and trouble.
