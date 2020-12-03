@@ -1,6 +1,6 @@
 cask "aqua-data-studio" do
-  version "20.6.0-4"
-  sha256 "53e70f183e924514ac27ab64f2c7508de1e510cdb74c1a13cbdc147f131bd535"
+  version "20.6.1-4"
+  sha256 "9d53a69bb8f9ae40db6970a1c498b91f8c057f0e91887f966f3f9ccdf6e2e520"
 
   url "http://downloads.aquafold.com/v#{version.major_minor}.0/osx/ads-osx-#{version}.tar.gz"
   appcast "https://www.aquafold.com/aquadatastudio_downloads"
