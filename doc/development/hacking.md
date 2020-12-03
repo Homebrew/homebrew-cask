@@ -13,8 +13,6 @@ Homebrew Cask is designed to work like a traditional Unix tool:
 
 ## Project Status
 
-Homebrew Cask is still young, and should be considered in alpha.
-
 We have good support for a variety of artifacts such as apps, pkgs, binaries, plugins, and [fonts](https://github.com/Homebrew/homebrew-cask-fonts/).
 
 ### Casks and Formulae
@@ -35,10 +33,10 @@ The Homebrew Cask core code is included in [Homebrew](https://github.com/Homebre
 
 ### Forcing a Specific Homebrew Cask Subcommand
 
-If you are developing a subcommand, you can force `brew cask` to dispatch a specific file by giving a fully-qualified path to the file containing the subcommand, like this:
+If you are developing a subcommand, you can force `brew` to dispatch a specific file by giving a fully-qualified path to the file containing the subcommand, like this:
 
 ```bash
-$ brew cask /usr/local/Homebrew/Library/Homebrew/cask/cmd/info.rb google-chrome
+$ brew /usr/local/Homebrew/Library/Homebrew/cask/cmd/info.rb google-chrome
 ```
 
 ### Forcing a Specific macOS Release
@@ -46,7 +44,7 @@ $ brew cask /usr/local/Homebrew/Library/Homebrew/cask/cmd/info.rb google-chrome
 The environment variable `$MACOS_VERSION` can be overridden at the command line for test purposes:
 
 ```bash
-$ MACOS_VERSION=10.9 brew cask info <cask>
+$ MACOS_VERSION=10.9 brew info <cask>
 ```
 
 ### Submitting Your Changes
