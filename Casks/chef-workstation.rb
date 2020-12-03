@@ -1,6 +1,6 @@
 cask "chef-workstation" do
-  version "20.11.180"
-  sha256 "87a262156a221c943f37d03e03e1044f04c936172fcc9043a017e0fd282daec3"
+  version "20.12.187"
+  sha256 "0cf2f7d0e15e70c66cc50f6361667e11316a585008e560a1effa1c47e94d7d87"
 
   url "https://packages.chef.io/files/stable/chef-workstation/#{version}/mac_os_x/10.15/chef-workstation-#{version}-1.dmg"
   appcast "https://omnitruck.chef.io/stable/chef-workstation/metadata?p=mac_os_x&pv=10.15&m=x86_64&v=latest"
