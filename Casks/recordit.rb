@@ -6,7 +6,7 @@ cask "recordit" do
       verified: "recordit-co.s3.amazonaws.com/"
   appcast "https://rink.hockeyapp.net/api/2/apps/5fcda0b48f1dcf0c938b289b9ab57790"
   name "RecordIt"
-  desc "Screencastign software"
+  desc "Screencasting software"
   homepage "https://recordit.co/"
 
   app "RecordIt.app"
