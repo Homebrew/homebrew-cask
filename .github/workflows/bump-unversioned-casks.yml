@@ -1,0 +1,89 @@
+name: Bump unversioned casks
+
+on:
+  push:
+    branches:
+      - debug-bump-unversioned-casks
+  schedule:
+    - cron: '*/15 * * * *'
+
+env:
+  HOMEBREW_DEVELOPER: 1
+  HOMEBREW_NO_AUTO_UPDATE: 1
+
+jobs:
+  bump-unversioned-casks:
+    if: startsWith(github.repository, 'Homebrew/')
+    runs-on: macos-latest
+    steps:
+      - name: Check if another run already exists
+        id: skip
+        uses: fkirc/skip-duplicate-actions@6c53680b94a85f32e367c7c17e2fb8cbcce56193
+        with:
+          github_token: ${{ github.token }}
+          cancel_others: false
+
+      - name: Cancel this build
+        uses: andymckay/cancel-action@8f8510d9dea52fcc8eb6ca10d6ce47fd5fc43cd8
+        if: fromJSON(steps.skip.outputs.should_skip)
+
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+        with:
+          test-bot: false
+
+      - name: Configure Git user
+        uses: Homebrew/actions/git-user-config@master
+        with:
+          username: BrewTestBot
+
+      # Workaround until the `cache` action uses the changes from
+      # https://github.com/actions/toolkit/pull/580.
+      - name: Unlink workspace
+        run: |
+          mv "${GITHUB_WORKSPACE}" "${GITHUB_WORKSPACE}-link"
+          mkdir "${GITHUB_WORKSPACE}"
+
+      - name: Cache Homebrew Gems
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.set-up-homebrew.outputs.gems-path }}
+          key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
+          restore-keys: ${{ runner.os }}-rubygems-
+
+      - name: Install Homebrew Gems
+        run: brew install-bundler-gems
+
+      - name: Generate cache ID
+        id: cache-id
+        run: |
+          echo "::set-output name=time::$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+
+      - name: Cache state
+        uses: actions/cache@v2
+        with:
+          path: ~/bump-unversioned-casks-state.json
+          key: bump-unversioned-casks-${{ steps.cache-id.outputs.time }}
+          restore-keys: bump-unversioned-casks-
+
+      # Workaround until the `cache` action uses the changes from
+      # https://github.com/actions/toolkit/pull/580.
+      - name: Re-link workspace
+        run: |
+          rmdir "${GITHUB_WORKSPACE}"
+          mv "${GITHUB_WORKSPACE}-link" "${GITHUB_WORKSPACE}"
+
+      - name: Run brew bump-unversioned-casks ${{ github.repository }}
+        run: |
+          brew bump-unversioned-casks --state-file ~/bump-unversioned-casks-state.json --limit 10 '${{ github.repository }}'
+        env:
+          HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+        timeout-minutes: 30
+
+      # Workaround until the `cache` action uses the changes from
+      # https://github.com/actions/toolkit/pull/580.
+      - name: Unlink workspace
+        run: |
+          rm "${GITHUB_WORKSPACE}"
+          mkdir "${GITHUB_WORKSPACE}"
