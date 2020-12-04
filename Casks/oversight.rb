@@ -3,7 +3,7 @@ cask "oversight" do
   sha256 "786eea6de3da8a15919159b51a7753ef7ecb26a0ed638725f7925fd0392a6fa9"
 
   url "https://bitbucket.org/objective-see/deploy/downloads/OverSight_#{version}.zip",
-      verified: "https://bitbucket.org/objective-see/deploy/downloads/"
+      verified: "bitbucket.org/objective-see/deploy/downloads/"
   appcast "https://objective-see.com/products/changelogs/OverSight.txt"
   name "OverSight"
   desc "Monitors computer mic and webcam"
