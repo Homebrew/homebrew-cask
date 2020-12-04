@@ -1,12 +1,12 @@
 cask "anka-virtualization" do
-  version "2.3.0.122"
-  sha256 "6bedb7c4519b28f8619f2e8a88270fe92ed4a575dbadf00c5009dbddec5cafc8"
+  version "2.3.1.124"
+  sha256 "48a25a9e5f64a4dd9aa0740b02d3d02a2cf338fc7c34ceba4ba2bb44142fe77e"
 
-  # d1efqjhnhbvc57.cloudfront.net/ was verified as official when first introduced to the cask
-  url "https://d1efqjhnhbvc57.cloudfront.net/Anka-#{version}.pkg"
+  url "https://d1efqjhnhbvc57.cloudfront.net/Anka-#{version}.pkg",
+      verified: "d1efqjhnhbvc57.cloudfront.net/"
   appcast "https://ankadocs.veertu.com/docs/release-notes/"
   name "Anka Virtualization"
-  desc "CLI tool for managing and creating macOS virtual machines"
+  desc "CLI tool for managing and creating virtual machines"
   homepage "https://veertu.com/"
 
   depends_on macos: ">= :yosemite"
