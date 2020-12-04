@@ -1,13 +1,12 @@
 cask "anka-build-cloud-controller-and-registry" do
   version "1.12.0-65cba643"
-  # https://github.com/Homebrew/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/sha256.md
   sha256 "dbd9cc5ca0559cf151db33a9bcb8963d32e964ecc4295d4abd51bdab76dc4634"
 
   url "https://d1efqjhnhbvc57.cloudfront.net/AnkaControllerRegistry-#{version}.pkg",
-      verified: "d1efqjhnhbvc57.cloudfront.net"
+      verified: "d1efqjhnhbvc57.cloudfront.net/"
   appcast "https://ankadocs.veertu.com/docs/release-notes/"
   name "Anka Build Cloud Controller & Registry"
-  desc "macOS virtual machine management GUI/API and registry"
+  desc "Virtual machine management GUI/API and registry"
   homepage "https://veertu.com/"
 
   depends_on macos: ">= :yosemite"
