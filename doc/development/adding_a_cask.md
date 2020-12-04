@@ -20,7 +20,7 @@ cask "shuttle" do
   sha256 "0b80bf62922291da391098f979683e69cc7b65c4bdb986a431e3f1d9175fba20"
 
   url "https://github.com/fitztrev/shuttle/releases/download/v#{version}/Shuttle.zip",
-      verified: "https://github.com/fitztrev/shuttle/"
+      verified: "github.com/fitztrev/shuttle/"
   appcast "https://github.com/fitztrev/shuttle/releases.atom"
   name "Shuttle"
   desc "Simple shortcut menu"
