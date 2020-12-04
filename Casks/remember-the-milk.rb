@@ -9,4 +9,13 @@ cask "remember-the-milk" do
   homepage "https://www.rememberthemilk.com/"
 
   app "Remember The Milk.app"
+
+  zap trash: [
+    "~/Library/Application Support/Remember The Milk",
+    "~/Library/Saved Application State/com.rememberthemilk.Deskmilk.savedState",
+    "~/Library/Preferences/com.rememberthemilk.Deskmilk.plist",
+    "~/Library/HTTPStorages/com.rememberthemilk.Deskmilk.binarycookies",
+    "~/Library/Caches/com.rememberthemilk.Deskmilk.ShipIt",
+    "~/Library/Caches/com.rememberthemilk.Deskmilk",
+  ]
 end
