@@ -1,6 +1,6 @@
 cask "stand" do
-  version "2.1"
-  sha256 "e7cc1237f50d9f6991ced65e598e02015174b98e69e90298bc42e4759bc40e4e"
+  version "2.1.1"
+  sha256 "5fce7d525ea7154d1df58b25d1902731f533a18656330593a7d3d2456fc1f314"
 
   # f001.backblazeb2.com/file/stand-app/ was verified as official when first introduced to the cask
   url "https://f001.backblazeb2.com/file/stand-app/#{version}/Stand.zip"
