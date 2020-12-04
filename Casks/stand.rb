@@ -1,10 +1,11 @@
 cask "stand" do
-  version "2.1"
-  sha256 "e7cc1237f50d9f6991ced65e598e02015174b98e69e90298bc42e4759bc40e4e"
+  version "2.1.1"
+  sha256 "5fce7d525ea7154d1df58b25d1902731f533a18656330593a7d3d2456fc1f314"
 
-  # f001.backblazeb2.com/file/stand-app/ was verified as official when first introduced to the cask
-  url "https://f001.backblazeb2.com/file/stand-app/#{version}/Stand.zip"
-  appcast "https://getstandapp.com/"
+  url "https://f001.backblazeb2.com/file/stand-app/#{version}/Stand.zip",
+      verified: "f001.backblazeb2.com/file/stand-app/"
+  appcast "https://getstandapp.com/",
+          must_contain: version.major_minor
   name "Stand"
   desc "Reminds you to stand up once an hour"
   homepage "https://getstandapp.com/"
@@ -13,12 +14,10 @@ cask "stand" do
 
   app "Stand.app"
 
-  uninstall quit: [
-    "com.reddavis.Stand",
-  ]
+  uninstall quit: "com.reddavis.Stand"
 
   zap trash: [
-    "~/Library/Preferences/com.reddavis.Stand.plist",
     "~/Library/Caches/com.reddavis.Stand",
+    "~/Library/Preferences/com.reddavis.Stand.plist",
   ]
 end
