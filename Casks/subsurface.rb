@@ -9,8 +9,9 @@ cask "subsurface" do
     url "https://subsurface-divelog.org/downloads/Subsurface-#{version}-10.15+11.0.dmg"
   end
 
-  appcast "https://subsurface-divelog.org/download/"
+  appcast "https://subsurface.github.io/download/"
   name "Subsurface"
+  desc "Open source divelog program"
   homepage "https://subsurface-divelog.org/"
 
   app "Subsurface.app"
