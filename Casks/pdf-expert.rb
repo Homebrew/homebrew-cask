@@ -10,6 +10,7 @@ cask "pdf-expert" do
   homepage "https://pdfexpert.com/"
 
   auto_updates true
+  conflicts_with cask: "pdf-expert-beta"
   depends_on macos: ">= :sierra"
 
   app "PDF Expert.app"
