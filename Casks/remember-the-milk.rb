@@ -12,10 +12,10 @@ cask "remember-the-milk" do
 
   zap trash: [
     "~/Library/Application Support/Remember The Milk",
-    "~/Library/Saved Application State/com.rememberthemilk.Deskmilk.savedState",
-    "~/Library/Preferences/com.rememberthemilk.Deskmilk.plist",
-    "~/Library/HTTPStorages/com.rememberthemilk.Deskmilk.binarycookies",
-    "~/Library/Caches/com.rememberthemilk.Deskmilk.ShipIt",
     "~/Library/Caches/com.rememberthemilk.Deskmilk",
+    "~/Library/Caches/com.rememberthemilk.Deskmilk.ShipIt",
+    "~/Library/HTTPStorages/com.rememberthemilk.Deskmilk.binarycookies",
+    "~/Library/Preferences/com.rememberthemilk.Deskmilk.plist",
+    "~/Library/Saved Application State/com.rememberthemilk.Deskmilk.savedState",
   ]
 end
