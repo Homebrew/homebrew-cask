@@ -1,6 +1,6 @@
 cask "gqrx" do
-  version "2.11.5"
-  sha256 "896cefcb2825840178b6dbfb894b01543b1c8225539e6969052133223a59ffee"
+  version "2.14.2"
+  sha256 "679143fb2860d8ddbb9e8d88c58477a5cca6064ca47392d87461da497b18f857"
 
   # github.com/csete/gqrx/ was verified as official when first introduced to the cask
   url "https://github.com/csete/gqrx/releases/download/v#{version.major_minor_patch}/Gqrx-#{version}.dmg"
