@@ -1,6 +1,6 @@
 cask "macbreakz" do
-  version "5.40"
-  sha256 "4c0aeb1368fe5dae8a17991e1397f3917e21d6601b7d837526af880f4077ce3b"
+  version "5.41"
+  sha256 "941d07cc1a6e0c134f01147a69456b771719ad106be8ecd65d488a2a9fc8ff5d"
 
   url "https://www.publicspace.net/download/MacBreakZ#{version.major}.dmg"
   appcast "https://www.publicspace.net/app/signed_mb#{version.major}.xml"
