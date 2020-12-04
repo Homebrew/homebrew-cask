@@ -8,6 +8,8 @@ cask "coderunner" do
   desc "Multi-language programming editor"
   homepage "https://coderunnerapp.com/"
 
+  auto_updates true
+
   app "CodeRunner.app"
 
   zap trash: [
