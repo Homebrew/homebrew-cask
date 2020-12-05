@@ -4,7 +4,7 @@ cask "raze" do
 
   url "https://github.com/coelckers/Raze/releases/download/#{version}_alpha/raze-macos-#{version}.zip"
   appcast "https://github.com/coelckers/Raze/releases.atom"
-  name "raze"
+  name "Raze"
   desc "Build engine port backed by GZDoom tech"
   homepage "https://github.com/coelckers/Raze"
 
