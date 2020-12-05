@@ -3,7 +3,7 @@ cask "tigervpn" do
   sha256 "9039576697a2d9b0524b116650de4e0942223374155be16e180433f8577c57c6"
 
   url "https://www.tigervpn.com/assets/apps/tigerVPN_MAC_v#{version}.dmg"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.tigervpn.com/apps/download?os=OS+X"
+  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.tigervpn.com/apps/download?os=OS%2BX"
   name "tigerVPN"
   homepage "https://www.tigervpn.com/"
 
