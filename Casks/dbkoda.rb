@@ -1,5 +1,5 @@
 cask "dbkoda" do
-  version :latest
+  version "1.1.0"
   sha256 :no_check
 
   # s3-us-west-1.amazonaws.com/uswest-nc.release.dbkoda/ was verified as official when first introduced to the cask
