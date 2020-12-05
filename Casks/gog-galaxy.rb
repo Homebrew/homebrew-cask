@@ -2,7 +2,7 @@ cask "gog-galaxy" do
   version "2.0.26.55"
   sha256 "455aac8d47e78d03cffe6805e340a22a2016ccf73e4bcabc334a31be1d8dc669"
 
-  url "https://content-system.gog.com/open_link/download?path=/open/galaxy/client/galaxy_client_#{version}.pkg"
+  url "https://cdn.gog.com/open/galaxy/client/galaxy_client_#{version}.pkg"
   appcast "https://www.macupdater.net/cgi-bin/extract_text/extract_text_split_easy.cgi?url=https://gog.com/galaxy&encoding=utf-8&user_agent=Macintosh"
   name "GOG Galaxy Client"
   desc "GOG gaming client"
