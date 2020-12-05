@@ -6,7 +6,7 @@ cask "unity-android-support-for-editor" do
       verified: "download.unity3d.com/download_unity/"
   appcast "https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json"
   name "Unity Android Build Support"
-  desc "Android taget support for Unity"
+  desc "Android target support for Unity"
   homepage "https://unity.com/products"
 
   depends_on cask: "unity"

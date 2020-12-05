@@ -6,7 +6,7 @@ cask "unity-windows-support-for-editor" do
       verified: "download.unity3d.com/download_unity/"
   appcast "https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json"
   name "Unity Windows (Mono) Build Support"
-  desc "Windows (Mono) taget support for Unity"
+  desc "Windows (Mono) target support for Unity"
   homepage "https://unity.com/products"
 
   depends_on cask: "unity"

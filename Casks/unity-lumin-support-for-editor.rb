@@ -6,7 +6,7 @@ cask "unity-lumin-support-for-editor" do
       verified: "download.unity3d.com/download_unity/"
   appcast "https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json"
   name "Unity Lumin Build Support"
-  desc "Lumin taget support for Unity"
+  desc "Lumin target support for Unity"
   homepage "https://unity.com/products"
 
   depends_on cask: "unity"
