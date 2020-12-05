@@ -1,5 +1,5 @@
 cask "jqbx" do
-  version :latest
+  version "0.9.190"
   sha256 :no_check
 
   url "http://download.jqbx.fm/"
