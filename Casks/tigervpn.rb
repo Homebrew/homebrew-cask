@@ -1,5 +1,5 @@
 cask "tigervpn" do
-  version :latest
+  version "3.5.3"
   sha256 :no_check
 
   url "https://www.tigervpn.com/apps/download?os=OS+X"
