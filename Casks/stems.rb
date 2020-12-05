@@ -6,7 +6,7 @@ cask "stems" do
       verified: "stems-releases.s3.us-east-1.amazonaws.com/"
   appcast "https://stems-releases.s3.amazonaws.com/latest-mac.yml"
   name "Stems"
-  desc "Split any audio file into individual tracks"
+  desc "Split an audio file into individual tracks"
   homepage "https://stems.app/"
 
   app "Stems.app"
