@@ -3,10 +3,10 @@ cask "stems" do
   sha256 "bf967bf26bfc85ff0588cdb7bfa492f6d457e295ab62068d30c22061038d5bf7"
 
   url "https://stems-releases.s3.us-east-1.amazonaws.com/Stems-#{version}.dmg",
-      verified: "stems-releases.s3.us-east-1.amazonaws.com"
+      verified: "stems-releases.s3.us-east-1.amazonaws.com/"
   appcast "https://stems-releases.s3.amazonaws.com/latest-mac.yml"
   name "Stems"
-  desc "Split any audio file into sounding tracks"
+  desc "Split any audio file into individual tracks"
   homepage "https://stems.app/"
 
   app "Stems.app"
