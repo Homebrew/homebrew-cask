@@ -1,6 +1,6 @@
 cask "unity-linux-il2cpp-support-for-editor" do
-  version "2020.1.15f1,97d0ae02d19d"
-  sha256 "11658cdc4bbd1098302fec6ceb0a4e0507ed3bc7dedc91df14f1db96e6cd8366"
+  version "2020.1.16f1,f483ad6465d6"
+  sha256 "883c3a77a534f15ccdad1cd3d7857717a446e241fc328768aeb9f84d411583f4"
 
   url "https://download.unity3d.com/download_unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Linux-IL2CPP-Support-for-Editor-#{version.before_comma}.pkg",
       verified: "download.unity3d.com/download_unity/"
