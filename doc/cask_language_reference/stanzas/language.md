@@ -10,7 +10,7 @@ language "zh", "CN" do
 end
 
 language "de" do
-  'de_DE'
+  "de_DE"
 end
 
 language "en-GB" do
