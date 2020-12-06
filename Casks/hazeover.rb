@@ -5,7 +5,7 @@ cask "hazeover" do
   url "https://hazeover.com/HazeOver.dmg"
   appcast "https://hazeover.com/updates.xml"
   name "HazeOver"
-  desc "Windows manager and desktop organizer app"
+  desc "Windows manager and desktop organizer"
   homepage "https://hazeover.com/"
 
   app "HazeOver.app"
