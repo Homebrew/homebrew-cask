@@ -1,5 +1,5 @@
 cask "gameranger" do
-  version :latest
+  version "1.0"
   sha256 :no_check
 
   url "https://gameranger.com/download/GameRanger.dmg"
