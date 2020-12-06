@@ -1,5 +1,5 @@
 cask "mailmaster" do
-  version :latest
+  version "2.14.9"
   sha256 :no_check
 
   # client.dl.126.net/macmail/dashi/ was verified as official when first introduced to the cask
