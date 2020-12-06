@@ -3,7 +3,7 @@ cask "arq" do
   sha256 "e7c078adde99521e375235d7682331e4520bfad96765a8377b6044ef265d5787"
 
   url "https://www.arqbackup.com/download/arqbackup/Arq#{version.major}.pkg"
-  appcast "https://www.arqbackup.com"
+  appcast "https://www.arqbackup.com/download/arqbackup/arq6_release_notes.html"
   name "Arq"
   desc "Multi-cloud backup application"
   homepage "https://www.arqbackup.com/"
