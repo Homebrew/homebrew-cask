@@ -1,5 +1,5 @@
 cask "twitch" do
-  version :latest
+  version "8.58.0"
   sha256 :no_check
 
   # desktop.twitchsvc.net/installer/ was verified as official when first introduced to the cask
