@@ -1,5 +1,5 @@
 cask "tofu" do
-  version :latest
+  version "2.0.1"
   sha256 :no_check
 
   url "https://amarsagoo.info/tofu/Tofu.dmg"
