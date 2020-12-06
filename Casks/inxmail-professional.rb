@@ -1,5 +1,5 @@
 cask "inxmail-professional" do
-  version :latest
+  version "1.2.21.170"
   sha256 :no_check
 
   # download.inxmail.com/ was verified as official when first introduced to the cask
