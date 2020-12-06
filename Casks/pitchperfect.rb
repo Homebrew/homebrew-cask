@@ -1,5 +1,5 @@
 cask "pitchperfect" do
-  version :latest
+  version "2.15"
   sha256 :no_check
 
   url "https://www.nch.com.au/tuner/pitchmaci.zip"
