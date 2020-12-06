@@ -6,7 +6,7 @@ cask "vipriser" do
   appcast "https://onflapp.github.io/blog/releases/vipriser/appcast.xml"
   name "VipRiser"
   desc "Produce a PDF from any application that can print"
-  homepage "https://onflapp.github.io/blog/pages/vipriser-pdf-ops/vipriser.html"
+  homepage "https://onflapp.github.io/blog/pages/VipRiser"
 
   app "VipRiser.app"
 
