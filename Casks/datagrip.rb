@@ -22,9 +22,9 @@ cask "datagrip" do
   end
 
   zap trash: [
-    "~/Library/Application Support/DataGrip#{version.major_minor}",
-    "~/Library/Caches/DataGrip#{version.major_minor}",
-    "~/Library/Logs/DataGrip#{version.major_minor}",
-    "~/Library/Preferences/DataGrip#{version.major_minor}",
+    "~/Library/Application Support/JetBrains/DataGrip#{version.major_minor}",
+    "~/Library/Caches/JetBrains/DataGrip#{version.major_minor}",
+    "~/Library/Logs/JetBrains/DataGrip#{version.major_minor}",
+    "~/Library/Saved Application State/com.jetbrains.datagrip.savedState",
   ]
 end

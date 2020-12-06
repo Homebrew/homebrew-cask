@@ -1,6 +1,6 @@
 cask "aria2d" do
-  version "1.3.5"
-  sha256 "9bb019fb9b19b878403767fd07423633a0daaeb1ed6ca807c64043b3b4f76ce1"
+  version "1.3.6"
+  sha256 "1840ce5b25571925cfec67635e3e48ce38306b856b509861f2ecfdfd0470cd7b"
 
   # githubusercontent.com/xjbeta/ was verified as official when first introduced to the cask
   url "https://raw.githubusercontent.com/xjbeta/AppUpdaterAppcasts/master/Aria2D/Aria2D%20#{version}.dmg"
