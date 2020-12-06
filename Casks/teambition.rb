@@ -1,5 +1,5 @@
 cask "teambition" do
-  version :latest
+  version "1.11"
   sha256 :no_check
 
   # dn-clients.teambition.net/ was verified as official when first introduced to the cask
