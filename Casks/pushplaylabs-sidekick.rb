@@ -13,6 +13,6 @@ cask "pushplaylabs-sidekick" do
     "~/Library/Preferences/com.pushplaylabs.sidekick.plist",
     "~/Library/Application Support/Sidekick",
     "~/Library/Caches/Sidekick",
-    "~/Library/Saved Application State/com.pushplaylabs.sidekick.savedState"
+    "~/Library/Saved Application State/com.pushplaylabs.sidekick.savedState",
   ]
 end
