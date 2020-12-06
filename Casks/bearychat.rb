@@ -1,5 +1,5 @@
 cask "bearychat" do
-  version :latest
+  version "3.0.0"
   sha256 :no_check
 
   url "https://static.bearychat.com/v2/BearyChat.dmg"
