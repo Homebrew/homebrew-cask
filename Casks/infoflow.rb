@@ -1,5 +1,5 @@
 cask "infoflow" do
-  version :latest
+  version "2.3.0.4,2020111810"
   sha256 :no_check
 
   # hi-static.cdn.bcebos.com/ was verified as official when first introduced to the cask
