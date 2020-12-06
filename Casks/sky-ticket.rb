@@ -1,5 +1,5 @@
 cask "sky-ticket" do
-  version :latest
+  version "8.2.0"
   sha256 :no_check
 
   # web.static.nowtv.com/watch/player/skyticket/ was verified as official when first introduced to the cask
