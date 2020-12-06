@@ -8,4 +8,11 @@ cask "pushplaylabs-sidekick" do
   homepage "https://www.meetsidekick.com/"
 
   app "Sidekick.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.pushplaylabs.sidekick.plist",
+    "~/Library/Application Support/Sidekick",
+    "~/Library/Caches/Sidekick",
+    "~/Library/Saved Application State/com.pushplaylabs.sidekick.savedState"
+  ]
 end
