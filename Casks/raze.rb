@@ -9,4 +9,14 @@ cask "raze" do
   homepage "https://github.com/coelckers/Raze"
 
   app "Raze.app"
+
+  zap trash: [
+    "~/Documents/Raze",
+    "~/Library/Application Support/Raze",
+    "~/Library/Preferences/raze.ini",
+    "~/Library/Preferences/org.drdteam.raze.plist",
+    "~/Library/Preferences/org.zdoom.raze.plist",
+    "~/Library/Saved Application State/org.drdteam.raze.savedState",
+    "~/Library/Saved Application State/org.zdoom.raze.savedState",
+  ]
 end
