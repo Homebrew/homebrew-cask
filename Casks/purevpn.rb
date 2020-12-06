@@ -1,5 +1,5 @@
 cask "purevpn" do
-  version :latest
+  version "7.2.1"
   sha256 :no_check
 
   # purevpn-dialer-assets.s3.amazonaws.com/ was verified as official when first introduced to the cask
