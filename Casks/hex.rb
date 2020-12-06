@@ -1,5 +1,5 @@
 cask "hex" do
-  version :latest
+  version "1.0,0"
   sha256 :no_check
 
   url "http://dl.hextcg.com/HexInstaller.dmg"
