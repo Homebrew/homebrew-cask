@@ -9,7 +9,7 @@ cask "transcribe" do
     url "https://www.seventhstring.com/xscribe/transcribe.dmg"
   end
 
-  appcast "https://www.seventhstring.com/xscribe/history.html",
+  appcast "https://www.seventhstring.com/xscribe/download_mac.html",
           must_contain: version.major_minor
   name "Transcribe!"
   desc "Transcribes recorded music"
