@@ -7,7 +7,7 @@ cask "snagit" do
   desc "Screen capture software"
   homepage "https://www.techsmith.com/screen-capture.html"
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   app "Snagit #{version.major}.app"
 end
