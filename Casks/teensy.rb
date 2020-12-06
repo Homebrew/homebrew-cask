@@ -1,5 +1,5 @@
 cask "teensy" do
-  version :latest
+  version "1.52"
   sha256 :no_check
 
   url "https://www.pjrc.com/teensy/teensy.dmg"
