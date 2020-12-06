@@ -4,7 +4,7 @@ cask "bookwright" do
 
   url "https://software.blurb.com/bookwright_v#{version.major}/#{version}/BookWright.dmg"
   name "BookWright"
-  desc "Software to design materials for print with blurb"
+  desc "Design materials for print with blurb"
   homepage "https://www.blurb.com/bookwright"
 
   app "BookWright.app"
