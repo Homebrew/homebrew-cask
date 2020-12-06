@@ -1,6 +1,6 @@
 cask "vipriser" do
-  version "3.4"
-  sha256 "5cdde06b61ab4a7f1866d956685544545ed4f13556b6fb19498c8d4d90f4bfb8"
+  version "3.5"
+  sha256 "b01c3d0643143f456ed55a245c81b83e2aca6f4d3882ebbfabd87c6517f091f1"
 
   url "https://onflapp.github.io/blog/releases/vipriser/VipRiser.zip"
   appcast "https://onflapp.github.io/blog/releases/vipriser/appcast.xml"
