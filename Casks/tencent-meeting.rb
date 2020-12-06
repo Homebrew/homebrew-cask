@@ -1,6 +1,6 @@
 cask "tencent-meeting" do
-  version "2.0.0.434,90f6eff0c7f3f5638599225c41ddba6b"
-  sha256 "86b17c09e1dd951fc4f5b75d653fffda140f4921428906d9c246c15a58b832e2"
+  version "2.4.0.449,b24d54ce3ffe7ebdde808978d1af5b9d"
+  sha256 "aab20ef8b7a121cff2c52af016104219ce993482ab7ce3ef5e07c612b0de985d"
 
   # qq.com was verified as official when first introduced to the cask
   url "https://updatecdn.meeting.qq.com/#{version.after_comma}/TencentMeeting_0300000000_#{version.before_comma}.publish.dmg"
