@@ -12,7 +12,9 @@ cask "caffeine" do
   app "Caffeine.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.lightheadsw.caffeine.sfl*",
-    "~/Library/Preferences/com.lightheadsw.Caffeine.plist",
+    "~/Library/Application Support/com.intelliscapesolutions.caffeine",
+    "~/Library/Preferences/com.intelliscapesolutions.caffeine.plist",
+    "~/Library/Caches/com.intelliscapesolutions.caffeine",
+    "~/Library/HTTPStorages/com.intelliscapesolutions.caffeine.binarycookies",
   ]
 end
