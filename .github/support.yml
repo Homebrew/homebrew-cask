@@ -7,9 +7,8 @@ supportLabel: "support request"
 supportComment: >
   We use the issue tracker exclusively for bug reports.
   However, this issue appears to be a support request. Please use our
-  [Discourse](https://discourse.brew.sh) or
-  [IRC channel](irc://irc.freenode.net/#machomebrew) to get help with
-  the project.
+  [GitHub Discussions](https://github.com/Homebrew/discussions/discussions)
+  to get help with the project.
 # Whether to close issues marked as support requests
 close: true
 # Whether to lock issues marked as support requests
