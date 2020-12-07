@@ -1,5 +1,5 @@
 cask "recovery-disk-assistant" do
-  version :latest
+  version "1.0,18"
   sha256 :no_check
 
   url "https://support.apple.com/downloads/DL1433/en_US/RecoveryDiskAssistant.dmg"
