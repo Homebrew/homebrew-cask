@@ -1,6 +1,6 @@
 cask "amadeus-pro" do
-  version "2.8.4"
-  sha256 "34d89cb521e7bccef39c02f07ec5dbf25d5255a5e93d563e4b774c79a5a5829e"
+  version "2.8.4,2525"
+  sha256 :no_check
 
   # s3.amazonaws.com/AmadeusPro2/ was verified as official when first introduced to the cask
   url "https://s3.amazonaws.com/AmadeusPro2/AmadeusPro.zip"
