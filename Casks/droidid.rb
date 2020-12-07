@@ -1,5 +1,5 @@
 cask "droidid" do
-  version :latest
+  version "1.4,7"
   sha256 :no_check
 
   url "https://www.suyashsrijan.com/droidid/download/DroidID.zip"
