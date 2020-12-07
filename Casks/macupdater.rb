@@ -5,6 +5,7 @@ cask "macupdater" do
   url "https://www.corecode.io/downloads/macupdater_#{version}.dmg"
   appcast "https://www.corecode.io/macupdater/macupdater.xml"
   name "MacUpdater"
+  desc "Track the latest updates of all applications installed automatically"
   homepage "https://www.corecode.io/macupdater/index.html"
 
   auto_updates true
