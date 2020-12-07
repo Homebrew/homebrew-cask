@@ -1,5 +1,5 @@
 cask "flotato" do
-  version :latest
+  version "32,1"
   sha256 :no_check
 
   # vendors.paddle.com/download/product/558359 was verified as official when first introduced to the cask
