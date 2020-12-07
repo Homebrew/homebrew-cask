@@ -1,5 +1,5 @@
 cask "gameshow" do
-  version :latest
+  version "4.5.1"
   sha256 :no_check
 
   url "http://gameshow.net/downloads/Gameshow.dmg"
