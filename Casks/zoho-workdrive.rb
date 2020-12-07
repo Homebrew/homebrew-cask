@@ -1,5 +1,5 @@
 cask "zoho-workdrive" do
-  version :latest
+  version "2.6.4"
   sha256 :no_check
 
   # files-accl.zohopublic.com/ was verified as official when first introduced to the cask
