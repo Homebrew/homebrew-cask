@@ -1,6 +1,6 @@
 cask "tap-forms" do
-  version "5.3.17"
-  sha256 "56f0ac7e0980d02b443eb84e0c0622c9cd38a3d49b54fb87a3ac99c062a7af4e"
+  version "5.3.17,1852"
+  sha256 :no_check
 
   # vendors.paddle.com/download/product/503174 was verified as official when first introduced to the cask. Developer uses paddle.com to process licences and payments for the software
   url "https://vendors.paddle.com/download/product/503174"
