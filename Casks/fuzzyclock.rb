@@ -1,5 +1,5 @@
 cask "fuzzyclock" do
-  version :latest
+  version "2.3.0,305"
   sha256 :no_check
 
   url "https://mschmidt.me/macOS/FuzzyClock.zip"
