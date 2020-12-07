@@ -1,5 +1,5 @@
 cask "keyboardcleantool" do
-  version :latest
+  version "3"
   sha256 :no_check
 
   url "https://folivora.ai/releases/KeyboardCleanTool.zip"
