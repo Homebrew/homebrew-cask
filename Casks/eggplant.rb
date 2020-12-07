@@ -4,7 +4,7 @@ cask "eggplant" do
 
   url "http://downloads.testplant.com/downloads/Eggplant/eggPlant.dmg"
   name "eggPlant Functional"
-  homepage "https://www.testplant.com/dlds/eggplant-functional/"
+  homepage "https://www.eggplantsoftware.com/eggplant-functional-downloads"
 
   app "eggPlant.app"
 end
