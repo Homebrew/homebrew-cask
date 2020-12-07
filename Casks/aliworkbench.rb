@@ -1,6 +1,6 @@
 cask "aliworkbench" do
-  version "9.04.02"
-  sha256 "61caabd57a079e04fd30d4b40702f48704a503c397759cffc22a5cb7d96b4e34"
+  version "9.04.02,6846"
+  sha256 :no_check
 
   # alimarket.taobao.com/ was verified as official when first introduced to the cask
   url "https://alimarket.taobao.com/markets/qnww/qianniu-download?wh_from=macos"
