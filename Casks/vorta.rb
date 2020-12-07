@@ -10,7 +10,6 @@ cask "vorta" do
 
   auto_updates true
   depends_on macos: ">= :mojave"
-  depends_on formula: "borgbackup"
 
   app "Vorta.app"
 
