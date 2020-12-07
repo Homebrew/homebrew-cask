@@ -1,6 +1,6 @@
 cask "apparency" do
-  version "1.1.1"
-  sha256 "eb8d159fa4254acd4652b596f442dc2f235f2b52b91c2edda6581f0b14bc41b3"
+  version "1.1.1,75"
+  sha256 :no_check
 
   url "https://mothersruin.com/software/downloads/Apparency.dmg"
   appcast "https://www.mothersruin.com/software/Apparency/data/ApparencyVersionInfo.plist"
