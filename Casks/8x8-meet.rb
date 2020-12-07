@@ -1,5 +1,5 @@
 cask "8x8-meet" do
-  version :latest
+  version "0.3.8.1"
   sha256 :no_check
 
   # vod-updates.8x8.com/ was verified as official when first introduced to the cask
