@@ -1,6 +1,6 @@
 cask "icollections" do
-  version "6.7.2,67212"
-  sha256 "11b7635b3365a2ae35b6c7c3809febab5e81ac2a021d9e3c14318c4f6019e77e"
+  version "6.7.2,67215"
+  sha256 :no_check
 
   url "https://naarakstudio.com/download/iCollections.dmg"
   appcast "https://naarakstudio.com/download/icollections/update.ver",
