@@ -3,7 +3,6 @@ cask "sharemouse" do
   sha256 :no_check
 
   url "https://www.sharemouse.com/ShareMouseSetup.dmg"
-  appcast "https://www.sharemouse.com/download/"
   name "ShareMouse"
   homepage "https://www.sharemouse.com/"
 
