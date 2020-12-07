@@ -14,7 +14,7 @@ cask "utm" do
   uninstall quit: "com.utmapp.UTM"
 
   zap trash: [
-    "~/Library/Saved Application State/com.utmapp.UTM.savedState",
     "~/Library/Preferences/com.utmapp.UTM.plist",
+    "~/Library/Saved Application State/com.utmapp.UTM.savedState",
   ]
 end
