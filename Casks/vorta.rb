@@ -16,7 +16,7 @@ cask "vorta" do
   zap trash: "~/Library/Application Support/Vorta"
 
   caveats <<~EOS
-    Also requires BorgBackup to run. If you don't need mount support, use the official formula:
+    #{token} requires BorgBackup to run. If you do not need mount support, use the official formula:
 
       brew install borgbackup
 
