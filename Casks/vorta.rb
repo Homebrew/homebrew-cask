@@ -18,11 +18,11 @@ cask "vorta" do
   caveats <<~EOS
     Also requires BorgBackup to run. If you don't need mount support, use the official formula:
 
-    $ brew install borgbackup
+      brew install borgbackup
 
     If you plan on mounting archives using macFUSE, consider using the Tap maintained by the Borg team:
 
-    $ brew install --cask osxfuse
-    $ brew install borgbackup/tap/borgbackup-fuse
+      brew install --cask osxfuse
+      brew install borgbackup/tap/borgbackup-fuse
   EOS
 end
