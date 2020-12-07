@@ -1,5 +1,5 @@
 cask "spideroak-share" do
-  version :latest
+  version "2.2.1,100"
   sha256 :no_check
 
   url "https://spideroak.com/release/share"
