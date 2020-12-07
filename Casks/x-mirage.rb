@@ -1,5 +1,5 @@
 cask "x-mirage" do
-  version :latest
+  version "3.0.1"
   sha256 :no_check
 
   url "http://dl.x-mirage.com/x-mirage.dmg"
