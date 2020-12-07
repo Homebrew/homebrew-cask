@@ -1,10 +1,11 @@
-cask "memory-clean" do
+cask "memory-clean-3" do
+  # NOTE: "3" is not a version number, but an intrinsic part of the product name
   version :latest
   sha256 :no_check
 
   url "https://fiplab.com/app-download/Memory_Clean_3.zip"
   name "Memory Clean 3"
-  desc "Memory Cleaning Utility"
+  desc "Memory cleaning utility"
   homepage "https://fiplab.com/apps/memory-clean-3-for-mac"
 
   app "Memory Clean 3.app"
@@ -16,10 +17,10 @@ cask "memory-clean" do
   ]
 
   zap trash: [
-    "~/Library/Caches/com.fiplab.memoryclean3",
+    "~/Library/Application Support/com.fiplab.memoryclean3",
     "~/Library/Application Support/Memory Clean 3",
+    "~/Library/Caches/com.fiplab.memoryclean3",
     "~/Library/Containers/com.fiplab.mc3loginhelper",
     "~/Library/Preferences/com.fiplab.memoryclean3.plist",
-    "~/Library/Application Support/com.fiplab.memoryclean3",
   ]
 end
