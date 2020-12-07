@@ -1,5 +1,5 @@
 cask "zoho-docs" do
-  version :latest
+  version "1.10.0"
   sha256 :no_check
 
   # files-accl.zohopublic.com/ was verified as official when first introduced to the cask
