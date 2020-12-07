@@ -1,5 +1,5 @@
 cask "timer" do
-  version :latest
+  version "9.0.3"
   sha256 :no_check
 
   url "https://www.apimac.com/download/Timer.zip"
