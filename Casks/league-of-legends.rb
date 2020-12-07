@@ -7,6 +7,8 @@ cask "league-of-legends" do
   name "League of Legends"
   homepage "https://eune.leagueoflegends.com/en/"
 
+  auto_updates true
+
   app "League of Legends.app"
 
   zap trash: [
