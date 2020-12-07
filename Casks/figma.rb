@@ -7,6 +7,8 @@ cask "figma" do
   name "Figma"
   homepage "https://www.figma.com/"
 
+  auto_updates true
+
   app "Figma.app"
 
   zap trash: [
