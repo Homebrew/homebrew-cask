@@ -1,5 +1,5 @@
 cask "league-of-legends" do
-  version :latest
+  version "1.0"
   sha256 :no_check
 
   # riotgamespatcher-a.akamaihd.net/ was verified as official when first introduced to the cask
