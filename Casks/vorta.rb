@@ -10,9 +10,19 @@ cask "vorta" do
 
   auto_updates true
   depends_on macos: ">= :mojave"
-  depends_on formula: "borgbackup"
 
   app "Vorta.app"
 
   zap trash: "~/Library/Application Support/Vorta"
+
+  caveats <<~EOS
+    #{token} requires BorgBackup to run. If you do not need mount support, use the official formula:
+
+      brew install borgbackup
+
+    If you plan on mounting archives using macFUSE, consider using the Tap maintained by the Borg team:
+
+      brew install --cask osxfuse
+      brew install borgbackup/tap/borgbackup-fuse
+  EOS
 end
