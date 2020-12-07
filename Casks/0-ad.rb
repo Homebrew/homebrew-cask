@@ -6,7 +6,7 @@ cask "0-ad" do
       verified: "releases.wildfiregames.com/"
   appcast "https://play0ad.com/download/mac/"
   name "0 A.D."
-  desc "Real Time Strategy game by Wildfire Games"
+  desc "Real-time strategy game"
   homepage "https://play0ad.com/"
 
   app "0 A.D.app"
