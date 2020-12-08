@@ -1,5 +1,5 @@
 cask "lelivrescolairefr" do
-  version :latest
+  version "2.1.2"
   sha256 :no_check
 
   # ci.lls.fr/build/latest/mac/ was verified as official when first introduced to the cask
