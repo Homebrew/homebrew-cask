@@ -1,5 +1,5 @@
 cask "sketchpacks" do
-  version :latest
+  version "0.6.2"
   sha256 :no_check
 
   # sketchpacks-releases.herokuapp.com/ was verified as official when first introduced to the cask
