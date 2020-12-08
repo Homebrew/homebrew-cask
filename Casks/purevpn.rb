@@ -9,5 +9,6 @@ cask "purevpn" do
 
   pkg "PureVPN.pkg"
 
-  uninstall pkgutil: "com.purevpn.mac.installer"
+  uninstall quit:    "com.purevpn.app.mac",
+            pkgutil: "com.purevpn.mac.installer"
 end
