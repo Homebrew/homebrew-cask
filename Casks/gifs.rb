@@ -1,5 +1,5 @@
 cask "gifs" do
-  version :latest
+  version "1.0.3"
   sha256 :no_check
 
   # raw.githubusercontent.com/orta/GIFs/ was verified as official when first introduced to the cask
