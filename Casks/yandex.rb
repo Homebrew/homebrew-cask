@@ -1,5 +1,5 @@
 cask "yandex" do
-  version :latest
+  version "20.11.0.918"
   sha256 :no_check
 
   # yandex.net/ was verified as official when first introduced to the cask
