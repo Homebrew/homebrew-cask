@@ -1,5 +1,5 @@
 cask "everweb" do
-  version :latest
+  version "3.4.2.3.2410"
   sha256 :no_check
 
   # ragesw.com/ was verified as official when first introduced to the cask
