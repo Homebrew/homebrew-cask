@@ -5,7 +5,7 @@ cask "canva" do
   url "https://desktop-release.canva-deploy.com/Canva-#{version}.dmg",
       verified: "desktop-release.canva-deploy.com"
   name "Canva"
-  desc "Your favorite design tool available as a desktop app for Mac"
+  desc "Your favorite design tool available as a desktop app"
   homepage "https://www.canva.com/"
 
   app "Canva.app"
