@@ -1,5 +1,5 @@
 cask "dialpad" do
-  version :latest
+  version "18.78.6"
   sha256 :no_check
 
   # storage.googleapis.com/dialpad_native/osx/ was verified as official when first introduced to the cask
