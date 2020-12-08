@@ -10,4 +10,10 @@ cask "spark-ar-studio" do
   homepage "https://sparkar.facebook.com/ar-studio/"
 
   app "Spark AR Studio.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.facebook.arstudio.skylight.plist",
+    "~/Library/Caches/com.facebook.arstudio.skylight",
+    "~/Library/Saved Application State/com.facebook.arstudio.skylight.savedState"
+  ]
 end
