@@ -1,6 +1,6 @@
 cask "deepl" do
   version "1.12.0,1120000"
-  sha256 "edb21b8e2df1e63d790e262c7da6719c0048c4c6ebc82998f93c00ec4ccf2a82"
+  sha256 :no_check
 
   url "https://appdownload.deepl.com/macos/DeepL.dmg"
   name "DeepL"
