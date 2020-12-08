@@ -1,5 +1,5 @@
 cask "anonymousvpn" do
-  version :latest
+  version "5.7.1"
   sha256 :no_check
 
   url "https://dl.anonymousvpn.org/AnonymousVPN.pkg"
