@@ -1,6 +1,6 @@
 cask "tyme" do
   version "2020.27,3094"
-  sha256 "82489869d0382d01cd5769415964655435c1ea4fc5ad174b3d50be077230ca36"
+  sha256 :no_check
 
   url "https://www.tyme-app.com/app/Tyme3.zip"
   name "Tyme 3"
