@@ -6,6 +6,7 @@ on:
       - debug-bump-unversioned-casks
   schedule:
     - cron: '*/15 * * * *'
+  workflow_dispatch:
 
 env:
   HOMEBREW_DEVELOPER: 1
