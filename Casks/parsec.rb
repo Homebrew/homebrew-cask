@@ -13,5 +13,6 @@ cask "parsec" do
     set_ownership "~/.parsec"
   end
 
-  uninstall pkgutil: "tv.parsec.www"
+  uninstall pkgutil: "tv.parsec.www",
+            quit:    "tv.parsec.www"
 end
