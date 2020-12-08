@@ -8,5 +8,7 @@ cask "pictogram" do
   desc "Customize and maintain app icons"
   homepage "https://pictogramapp.com/"
 
+  depends_on macos: ">= :big_sur"
+
   app "Pictogram.app"
 end
