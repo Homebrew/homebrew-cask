@@ -8,5 +8,6 @@ cask "anonymousvpn" do
 
   pkg "AnonymousVPN.pkg"
 
-  uninstall pkgutil: "org.anonymousvpn.pkg"
+  uninstall pkgutil:   "org.anonymousvpn.pkg",
+            launchctl: "org.AnonymousVPN.helper"
 end
