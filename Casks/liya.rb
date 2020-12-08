@@ -4,7 +4,10 @@ cask "liya" do
 
   url "https://cutedgesystems.com/downloads/Liya.zip"
   name "Liya"
+  desc "Access three database systems simultaneously from a single visual interface"
   homepage "https://cutedgesystems.com/software/liya/"
+
+  depends_on macos: ">= :catalina"
 
   app "Liya.app"
 end
