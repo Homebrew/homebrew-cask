@@ -6,6 +6,7 @@ on:
       - debug-bump-unversioned-casks
   schedule:
     - cron: '*/15 * * * *'
+  workflow_dispatch:
 
 env:
   HOMEBREW_DEVELOPER: 1
@@ -18,9 +19,8 @@ jobs:
     steps:
       - name: Check if another run already exists
         id: skip
-        uses: fkirc/skip-duplicate-actions@6c53680b94a85f32e367c7c17e2fb8cbcce56193
+        uses: fkirc/skip-duplicate-actions@0c0fd7dfd27f1de7871e98791077b9ae5f1d8757
         with:
-          github_token: ${{ github.token }}
           cancel_others: false
 
       - name: Cancel this build
