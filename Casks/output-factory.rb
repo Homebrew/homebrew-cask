@@ -9,7 +9,7 @@ cask "output-factory" do
 
   installer manual: "Output Factory Installer.app"
 
-  uninstall trash: "/Applications/Adobe Indesign */Plug-Ins/Zevrix/Output Factory.app",
+  uninstall trash: "/Applications/Adobe Indesign */Plug-Ins/Zevrix/Output Factory.app"
 
   zap trash: [
     "~/Library/Caches/com.zevrix.OutputFactory",
