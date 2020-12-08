@@ -1,5 +1,5 @@
 cask "capto" do
-  version :latest
+  version "1.2.22"
   sha256 :no_check
 
   # d3l6g06uqih57x.cloudfront.net/Captomac/ was verified as official when first introduced to the cask
