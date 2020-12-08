@@ -8,5 +8,7 @@ cask "radicle-upstream" do
   desc "Desktop client for Radicle"
   homepage "https://radicle.xyz/"
 
+  depends_on macos: ">= :mojave"
+
   app "Radicle Upstream.app"
 end
