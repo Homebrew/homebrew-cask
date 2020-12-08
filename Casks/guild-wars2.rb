@@ -1,6 +1,6 @@
 cask "guild-wars2" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
-  version :latest
+  version "1.0"
   sha256 :no_check
 
   # gw2cdn.s3.amazonaws.com/ was verified as official when first introduced to the cask
