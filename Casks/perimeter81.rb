@@ -1,6 +1,6 @@
 cask "perimeter81" do
   # NOTE: "81" is not a version number, but an intrinsic part of the product name
-  version "1.0"
+  version "5.3.4"
   sha256 :no_check
 
   url "https://static.perimeter81.com/apps/osx/Perimeter81.pkg"
