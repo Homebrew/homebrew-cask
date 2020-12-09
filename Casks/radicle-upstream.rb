@@ -11,4 +11,11 @@ cask "radicle-upstream" do
   depends_on macos: ">= :mojave"
 
   app "Radicle Upstream.app"
+
+  zap trash: [
+    "~/Library/Application Support/Radicle Upstream",
+    "~/Library/Application Support/xyz.radicle.radicle-upstream",
+    "~/Library/Preferences/xyz.radicle.radicle-upstream.plist",
+    "~/Library/Saved Application State/xyz.radicle.radicle-upstream.savedState",
+  ]
 end
