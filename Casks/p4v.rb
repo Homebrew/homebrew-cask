@@ -1,6 +1,6 @@
 cask "p4v" do
-  version "20.2,2028073"
-  sha256 "860baf3635aa49c7bd2fd3d1e562bc36d84afc65af9f08537ebd4b0afbe9930e"
+  version "20.3,2048092"
+  sha256 "6a27a27a26dc8c88cc66ffbe3d561ae99eff195bc0fb5ff16afd19f1d80cbd57"
 
   url "https://cdist2.perforce.com/perforce/r#{version.before_comma}/bin.macosx1015x86_64/P4V.dmg"
   appcast "https://www.perforce.com/perforce/doc.current/user/p4vnotes.txt"
