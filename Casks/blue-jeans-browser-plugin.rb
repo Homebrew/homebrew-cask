@@ -1,6 +1,6 @@
 cask "blue-jeans-browser-plugin" do
-  version "2.115.99.8"
-  sha256 "2a367b63a7d18b2249472179d10e8a51ed3b5c76241513e9397560ecc8065825"
+  version "2.135.54.8"
+  sha256 "e36f3c1fe6410ac22dd50fcdcc45e61e9cf7a0043662ee3c2521978ba9996a23"
 
   url "https://swdl.bluejeans.com/skinny/rbjnplugin_#{version}.pkg"
   name "Blue Jeans Browser Plug-in"

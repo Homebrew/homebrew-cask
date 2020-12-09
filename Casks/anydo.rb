@@ -1,5 +1,5 @@
 cask "anydo" do
-  version "4.2.122.8689"
+  version "4.2.123.8704"
   sha256 :no_check
 
   url "https://electron-app.any.do/Any.do.dmg"
