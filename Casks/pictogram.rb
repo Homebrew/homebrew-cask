@@ -11,4 +11,9 @@ cask "pictogram" do
   depends_on macos: ">= :big_sur"
 
   app "Pictogram.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.NeilSardesai.Pictogram",
+    "~/Library/Preferences/com.NeilSardesai.Pictogram.plist"
+  ]
 end
