@@ -7,6 +7,7 @@ cask "p4v" do
   name "Perforce Visual Client"
   name "P4Merge"
   name "P4V"
+  desc "Visual client for Helix Core"
   homepage "https://www.perforce.com/products/helix-core-apps/helix-visual-client-p4v"
 
   app "p4v.app"
