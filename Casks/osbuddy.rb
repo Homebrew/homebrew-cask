@@ -1,5 +1,5 @@
 cask "osbuddy" do
-  version :latest
+  version "1.0"
   sha256 :no_check
 
   url "http://cdn.rsbuddy.com/OSBuddy.dmg"

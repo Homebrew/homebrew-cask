@@ -1,6 +1,6 @@
 cask "tenor" do
-  version "2.0.5"
-  sha256 "017a57846ef84ca61268b33a20ec8cf16ac15fc1d520077b76bd498b58cd84fd"
+  version "2.0.5,21"
+  sha256 :no_check
 
   # media.tenor.co/mac/bin/ was verified as official when first introduced to the cask
   url "https://media.tenor.co/mac/bin/GIFforMac.dmg"

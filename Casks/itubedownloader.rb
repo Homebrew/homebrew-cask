@@ -1,5 +1,5 @@
 cask "itubedownloader" do
-  version "6.5.26,65026"
+  version "6.5.27,65027"
   sha256 :no_check
 
   # itubedownloader.s3.us-east-2.amazonaws.com/ was verified as official when first introduced to the cask

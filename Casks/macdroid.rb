@@ -1,6 +1,6 @@
 cask "macdroid" do
-  version "1.3"
-  sha256 "dd12769474dd8b45f33160bba7b6ae37c3323a5c0963d0e039658b7d206c796d"
+  version "1.3,110"
+  sha256 :no_check
 
   # cdn.electronic.us/products/macdroid/mac/download/ was verified as official when first introduced to the cask
   url "https://cdn.electronic.us/products/macdroid/mac/download/macdroid.dmg"
