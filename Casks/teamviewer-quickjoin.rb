@@ -1,5 +1,5 @@
 cask "teamviewer-quickjoin" do
-  version :latest
+  version "15.12.4,1"
   sha256 :no_check
 
   url "https://download.teamviewer.com/download/TeamViewerQJ.dmg"

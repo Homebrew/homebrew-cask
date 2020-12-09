@@ -1,6 +1,6 @@
 cask "commander-one" do
-  version "2.5.2"
-  sha256 "c4effe19cf19fb7f073cc5acf3f50363184acc5ac75b2a7106a0f3e9c554d87e"
+  version "2.5.2,3329"
+  sha256 :no_check
 
   # cdn.electronic.us/ was verified as official when first introduced to the cask
   url "https://cdn.electronic.us/products/commander/mac/download/commander.dmg"

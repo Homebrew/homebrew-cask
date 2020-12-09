@@ -1,5 +1,5 @@
 cask "helium" do
-  version :latest
+  version "1.0"
   sha256 :no_check
 
   # download.clockworkmod.com/carbon/ was verified as official when first introduced to the cask

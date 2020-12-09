@@ -1,5 +1,5 @@
 cask "ivolume" do
-  version :latest
+  version "3.9.0,2260"
   sha256 :no_check
 
   url "https://www.mani.de/download/ivolume/iVolume3Mac.dmg"

@@ -1,6 +1,6 @@
 cask "coqide" do
-  version "8.12.0"
-  sha256 "be5bf7b8009e0693f5da35437a901c58a924c12c9464c5be3ff1ed3ebe495697"
+  version "8.12.1"
+  sha256 "ea7a72413062d295bb315a2485a80e35643f624ffa18f1e2e0aa83e7faee3797"
 
   # github.com/coq/coq/ was verified as official when first introduced to the cask
   url "https://github.com/coq/coq/releases/download/V#{version.major_minor_patch}/coq-#{version}-installer-macos.dmg"
