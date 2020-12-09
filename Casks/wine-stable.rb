@@ -5,13 +5,14 @@ cask "wine-stable" do
   url "https://dl.winehq.org/wine-builds/macosx/pool/winehq-stable-#{version}.pkg"
   appcast "https://dl.winehq.org/wine-builds/macosx/download.html"
   name "WineHQ-stable"
+  desc "Compatibility layer to run Windows applications"
   homepage "https://wiki.winehq.org/MacOS"
 
-  conflicts_with cask:    [
+  conflicts_with cask: [
                    "wine-devel",
                    "wine-staging",
                  ]
-  depends_on x11: true
+  depends_on cask: xquartz
 
   pkg "winehq-stable-#{version}.pkg",
       choices: [
