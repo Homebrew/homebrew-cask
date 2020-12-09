@@ -1,5 +1,5 @@
 cask "globalmeet" do
-  version "6.33.1895"
+  version "6.33.1895.1895"
   sha256 :no_check
 
   url "https://convergencedesktop.globalmeet.com/installers/stable/GlobalMeet.dmg"

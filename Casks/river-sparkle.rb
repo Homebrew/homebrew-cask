@@ -1,6 +1,6 @@
 cask "river-sparkle" do
-  version "3.0.3"
-  sha256 "3759bb27718c1f05c8a90be837088b07417e4951a33d496efe2a2844e60610bc"
+  version "3.0.3,8354"
+  sha256 :no_check
 
   url "https://sparkleapp.com/update/Sparkle.zip"
   appcast "https://sparkleapp.com/update/appcast.php?lang=en"

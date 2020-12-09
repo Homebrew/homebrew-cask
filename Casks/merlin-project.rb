@@ -1,5 +1,5 @@
 cask "merlin-project" do
-  version "7.1.0,68221"
+  version "7.1.2,68244"
   sha256 :no_check
 
   url "https://www.projectwizards.net/downloads/MerlinProject.zip"

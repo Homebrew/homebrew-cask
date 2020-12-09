@@ -1,6 +1,6 @@
 cask "5kplayer" do
-  version "6.4.0"
-  sha256 "ac551160aaa7bdc78a734cf9bab1b36d1b68d596fe34ed33aa110da418534753"
+  version "6.4.0,6400"
+  sha256 :no_check
 
   url "https://www.5kplayer.com/download/5kplayer.dmg"
   appcast "https://www.5kplayer.com/upgrade/mac/updatecast.xml"

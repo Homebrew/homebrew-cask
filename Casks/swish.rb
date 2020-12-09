@@ -13,4 +13,11 @@ cask "swish" do
   depends_on macos: ">= :high_sierra"
 
   app "Swish.app"
+
+  zap trash: [
+    "~/Library/Application Support/Swish",
+    "~/Library/Caches/co.highlyopinionated.swish",
+    "~/Library/Cookies/co.highlyopinionated.swish.binarycookies",
+    "~/Library/Preferences/co.highlyopinionated.swish.plist",
+  ]
 end

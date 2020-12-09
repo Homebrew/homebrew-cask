@@ -1,5 +1,5 @@
 cask "jaikoz" do
-  version :latest
+  version "10.1.2"
   sha256 :no_check
 
   url "https://www.jthink.net/jaikoz/jsp/manualdownload/jaikoz-osx.dmg"
