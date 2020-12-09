@@ -40,8 +40,7 @@ cask "cocktail" do
     sha256 "df96f9922286ada0dd1673ac02c2ecadab244065f83352b20b6973000a5c5cdd"
 
     url "http://usa.maintain.se/Cocktail#{version.major}BSE.dmg"
-    appcast "http://www.maintain.se/cocktail/",
-            must_contain: version.major
+    appcast "http://www.maintain.se/cocktail/"
   end
 
   name "Cocktail"
