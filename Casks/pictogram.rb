@@ -14,6 +14,6 @@ cask "pictogram" do
 
   zap trash: [
     "~/Library/Application Support/com.NeilSardesai.Pictogram",
-    "~/Library/Preferences/com.NeilSardesai.Pictogram.plist"
+    "~/Library/Preferences/com.NeilSardesai.Pictogram.plist",
   ]
 end
