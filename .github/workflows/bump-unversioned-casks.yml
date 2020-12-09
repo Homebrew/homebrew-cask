@@ -21,6 +21,7 @@ jobs:
         id: skip
         uses: fkirc/skip-duplicate-actions@0c0fd7dfd27f1de7871e98791077b9ae5f1d8757
         with:
+          do_not_skip: '["workflow_dispatch"]'
           cancel_others: false
 
       - name: Cancel this build
