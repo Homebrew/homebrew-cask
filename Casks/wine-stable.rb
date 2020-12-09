@@ -9,9 +9,9 @@ cask "wine-stable" do
   homepage "https://wiki.winehq.org/MacOS"
 
   conflicts_with cask: [
-                   "wine-devel",
-                   "wine-staging",
-                 ]
+    "wine-devel",
+    "wine-staging",
+  ]
   depends_on cask: xquartz
 
   pkg "winehq-stable-#{version}.pkg",
