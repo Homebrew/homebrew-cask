@@ -1,6 +1,6 @@
 cask "tandem" do
-  version "1.5.1013"
-  sha256 "1503a4ae20026c13357ceeea45acf5b59b5f21a676f01b5e2e84cd54c8046b63"
+  version "1.5.1206"
+  sha256 "7e9d17e939fe46cdf66cb270ab9b7b2c8167227e945b053c3f66e304f3cfcadb"
 
   # download.todesktop.com/200527auaqaacsy/ was verified as official when first introduced to the cask
   url "https://download.todesktop.com/200527auaqaacsy/Tandem%20#{version}.dmg"

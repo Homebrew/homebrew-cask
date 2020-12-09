@@ -1,5 +1,5 @@
 cask "minecraft" do
-  version :latest
+  version "795,1"
   sha256 :no_check
 
   # mojang.com/ was verified as official when first introduced to the cask

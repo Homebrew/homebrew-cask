@@ -1,5 +1,5 @@
 cask "mounty" do
-  version :latest
+  version "1.10,14"
   sha256 :no_check
 
   url "https://mounty.app/releases/Mounty.dmg"
