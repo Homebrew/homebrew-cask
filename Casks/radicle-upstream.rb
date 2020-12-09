@@ -5,7 +5,7 @@ cask "radicle-upstream" do
   url "https://releases.radicle.xyz/radicle-upstream-#{version}.dmg"
   appcast "https://github.com/radicle-dev/radicle-upstream/releases.atom"
   name "Radicle Upstream"
-  desc "Desktop client for Radicle"
+  desc "Desktop client for Radicle, a p2p stack for code collaboration"
   homepage "https://radicle.xyz/"
 
   depends_on macos: ">= :mojave"
