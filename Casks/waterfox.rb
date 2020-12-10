@@ -1,4 +1,4 @@
-cask "waterfox-current" do
+cask "waterfox" do
   version "3.0.1,7820.11.27"
   sha256 "ec122142b75e678d2246e4ad273b5e54ce9f998b117312e203e5f7631cf503e0"
 
