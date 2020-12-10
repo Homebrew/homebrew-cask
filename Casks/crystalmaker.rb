@@ -4,7 +4,7 @@ cask "crystalmaker" do
 
   url "http://crystalmaker.com/downloads/crystalmaker_mac.zip"
   appcast "http://crystalmaker.com/crystalmaker/release-notes/mac/#{version.major}/index.html",
-          must_contain: version.before_comma
+          must_contain: version.before_comma.chomp(".0")
   name "CrystalMaker"
   desc "Visualize crystal and molecular structures"
   homepage "http://crystalmaker.com/index.html"
