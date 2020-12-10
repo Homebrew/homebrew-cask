@@ -1,6 +1,6 @@
 cask "get-backup-pro" do
-  version "3.6.0"
-  sha256 "58ca471d1afc2dba6622fe0c0308093b61f2e67c4da68cd083c121b0d4f9d932"
+  version "3.6.1"
+  sha256 "31a54c5acf2c5e56850790eb19fbd5833b4ee491ae5caeb08a48ba94e296bcc7"
 
   # belightsoft.s3.amazonaws.com/updates/ was verified as official when first introduced to the cask
   url "https://belightsoft.s3.amazonaws.com/updates/Get+Backup+Pro+#{version.major}.zip"
