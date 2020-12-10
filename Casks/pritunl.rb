@@ -5,6 +5,7 @@ cask "pritunl" do
   else
     version "1.2.2631.70"
     sha256 "11b50134633c1fbaa138f5181fd14c42d61461b5b74a9010326c6e0b04f863ba"
+  end
 
   url "https://github.com/pritunl/pritunl-client-electron/releases/download/#{version}/Pritunl.pkg.zip",
       verified: "github.com/pritunl/pritunl-client-electron/"
