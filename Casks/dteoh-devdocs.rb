@@ -1,6 +1,6 @@
 cask "dteoh-devdocs" do
-  version "0.6.0"
-  sha256 "f5ebe3cd775d9061b176b1e8e1e95eebbf4287245a4ae1ddaecbc9a5c0fa6da4"
+  version "0.6.1"
+  sha256 "74e69f1118f6db9494d844cef5fc3865b5e91cf133703f29fb3ac60bf446edbf"
 
   url "https://github.com/dteoh/devdocs-macos/releases/download/v#{version}/DevDocs.zip"
   appcast "https://github.com/dteoh/devdocs-macos/releases.atom"
