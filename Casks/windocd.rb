@@ -1,6 +1,6 @@
 cask "windocd" do
   version "1.8"
-  sha256 "758d7f0dcd99e8d6c0791a2e426dcb69dda9f19d966728d5af7aaeda315a44ca"
+  sha256 :no_check
 
   # download.moapp.software/ was verified as official when first introduced to the cask
   url "https://download.moapp.software/windOCD.zip"
