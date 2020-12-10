@@ -7,7 +7,7 @@ cask "webex-teams" do
   desc "Video communication and virtual meeting platform"
   homepage "https://www.webex.com/"
 
-  app "Webex Teams.app"
+  app "Webex.app"
 
   uninstall signal: [
     ["TERM", "Cisco-Systems.Spark"],
