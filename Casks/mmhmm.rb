@@ -8,7 +8,7 @@ cask "mmhmm" do
   desc "Virtual video presentation software"
   homepage "https://www.mmhmm.app/"
 
-  pkg "mmhmm.pkg"
+  app "mmhmm.app"
 
   uninstall pkgutil:   "app.mmhmm.app",
             quit:      "app.mmhmm.app",
