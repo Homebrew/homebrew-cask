@@ -1,5 +1,5 @@
 cask "tresorit" do
-  version "3.5.1967.1350,1967"
+  version :latest
   sha256 :no_check
 
   # installerstorage.blob.core.windows.net/ was verified as official when first introduced to the cask
