@@ -8,7 +8,7 @@ cask "dotnet-sdk" do
   end
 
   url "https://download.visualstudio.microsoft.com/download/pr/#{version.after_comma.before_colon}/#{version.after_colon}/dotnet-sdk-#{version.before_comma}-osx-x64.pkg"
-  appcast "https://www.microsoft.com/net/download/macos"
+  appcast "https://github.com/dotnet/core/releases.atom"
   name ".NET SDK"
   desc "Free, cross-platform, open-source developer platform"
   homepage "https://www.microsoft.com/net/core#macos"
