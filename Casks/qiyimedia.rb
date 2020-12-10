@@ -1,6 +1,6 @@
 cask "qiyimedia" do
   version "20201203,11.11.6"
-  sha256 "7819b9b0d9f14f012896324e32a2db1874c619c3c1de436ee4d541b21b132bbf"
+  sha256 :no_check
 
   url "https://mbdapp.iqiyi.com/j/ot/iQIYIMedia_271.dmg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://mbdapp.iqiyi.com/j/ot/iQIYIMedia_271.dmg",
