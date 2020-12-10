@@ -1,6 +1,6 @@
 cask "native-access" do
   version "1.13.1.134"
-  sha256 "a8bdba63def7b4a9ce79d2bc3f0bec68922672d294a21d9dfb6f8c43c5842214"
+  sha256 :no_check
 
   url "https://native-instruments.com/fileadmin/downloads/Native_Access_Installer.dmg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_sizeandmodified.cgi?url=https://native-instruments.com/fileadmin/downloads/Native_Access_Installer.dmg"
