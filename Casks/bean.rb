@@ -1,5 +1,5 @@
 cask "bean" do
-  version :latest
+  version "3.2.5"
   sha256 :no_check
 
   url "https://www.bean-osx.com/releases/Bean-Install.zip"

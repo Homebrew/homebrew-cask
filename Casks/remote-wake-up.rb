@@ -1,6 +1,6 @@
 cask "remote-wake-up" do
   version "1.4"
-  sha256 "6ae1597ae8d75730b9366cfd1fe935650b648c0c47e250fb45e8fa788484b956"
+  sha256 :no_check
 
   url "https://witt-software.com/downloads/remotewakeup/Remote%20Wake%20Up.dmg"
   appcast "https://www.witt-software.com/downloads/remotewakeup/appcast.xml"

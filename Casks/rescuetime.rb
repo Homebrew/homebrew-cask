@@ -1,6 +1,6 @@
 cask "rescuetime" do
   version "2.16.6.1"
-  sha256 "a0e360b9b57e738ac05f8aaba39439c94e1e3ab4ad537083a3130cf32cae1b8c"
+  sha256 :no_check
 
   url "https://www.rescuetime.com/installers/RescueTimeInstaller.pkg"
   appcast "https://www.rescuetime.com/release-notes/mac"

@@ -1,5 +1,5 @@
 cask "backblaze-downloader" do
-  version :latest
+  version "7.0.2.468"
   sha256 :no_check
 
   url "https://secure.backblaze.com/mac_restore_downloader"
