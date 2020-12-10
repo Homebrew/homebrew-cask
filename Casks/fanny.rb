@@ -9,7 +9,7 @@ cask "fanny" do
 
   depends_on macos: ">= :high_sierra"
 
-  app "FannyWidget-v#{version}/Fanny.app"
+  app "FannyWidget-v#{version.before_comma}/Fanny.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.fannywidget.today-extension",
