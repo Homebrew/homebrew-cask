@@ -1,6 +1,6 @@
 cask "ledger-live" do
   version "2.17.1"
-  sha256 "55d9fea34355cf036ddcf4e4151feab81da52a1386d5231888d1ee06cf2863c0"
+  sha256 "9fb128d57458c2ac80844f2c2f01d1c505d626abf4afde1a54b68ced13d09f08"
 
   # github.com/LedgerHQ/ledger-live-desktop/ was verified as official when first introduced to the cask
   url "https://github.com/LedgerHQ/ledger-live-desktop/releases/download/v#{version}/ledger-live-desktop-#{version}-mac.dmg"
