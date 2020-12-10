@@ -1,6 +1,6 @@
 cask "amazon-workdocs" do
   version "1.2.203.37"
-  sha256 "c97c669e2982009115e51602b7ad801b4801d0b44df9283c7492f6b1405fc5d0"
+  sha256 :no_check
 
   # d28gdqadgmua23.cloudfront.net/ was verified as official when first introduced to the cask
   url "https://d28gdqadgmua23.cloudfront.net/mac/Amazon%20WorkDocs.pkg"

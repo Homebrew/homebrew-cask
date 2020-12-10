@@ -1,8 +1,8 @@
 cask "qq" do
-  version "6.7.0.20123"
-  sha256 "c7580fd1d0603052ab9b8d6ab1936a17d35d9425557d492b85947457d1ffcb65"
+  version "6.7.1.20128"
+  sha256 "5c317f3dc1d0b3cb0d1ba29e00a81107c724240bbd4139d58fa69cd5d3012c3c"
 
-  url "https://dldir1.qq.com/qqfile/QQforMac/QQ_#{version}_Universal.dmg"
+  url "https://dldir1.qq.com/qqfile/QQforMac/QQ_#{version}.dmg"
   appcast "https://im.qq.com/proxy/domain/qzonestyle.gtimg.cn/qzone/qzactStatics/configSystem/data/1373/config1.js"
   name "QQ"
   desc "Instant messaging tool"

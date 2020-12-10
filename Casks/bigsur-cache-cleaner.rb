@@ -8,7 +8,7 @@ cask "bigsur-cache-cleaner" do
   desc "General purpose system maintenance tool"
   homepage "https://www.northernsoftworks.com/bigsurcachecleaner.html"
 
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :mojave"
 
   app "Big Sur Cache Cleaner.app"
 end

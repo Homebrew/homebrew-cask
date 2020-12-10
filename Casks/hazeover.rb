@@ -1,6 +1,6 @@
 cask "hazeover" do
   version "1.8.8,1035"
-  sha256 "f8b4ab870b510df042d4f22e4782a72aa34c8b4392fb9ec1a3ac45b6e28cc213"
+  sha256 :no_check
 
   url "https://hazeover.com/HazeOver.dmg"
   appcast "https://hazeover.com/updates.xml"
