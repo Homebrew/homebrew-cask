@@ -5,7 +5,7 @@ on:
     branches:
       - debug-bump-unversioned-casks
   schedule:
-    - cron: '*/20 * * * *'
+    - cron: '*/15 * * * *'
   workflow_dispatch:
 
 env:
@@ -22,6 +22,7 @@ jobs:
         uses: fkirc/skip-duplicate-actions@f05289cf5f432138afd3408d79ca931eb0df74c3
         with:
           cancel_others: false
+          concurrent_skipping: always
 
       - name: Cancel this build
         uses: andymckay/cancel-action@8f8510d9dea52fcc8eb6ca10d6ce47fd5fc43cd8
@@ -80,7 +81,7 @@ jobs:
         env:
           HOMEBREW_DEBUG: 1
           HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
-        timeout-minutes: 17
+        timeout-minutes: 15
 
       # Workaround until the `cache` action uses the changes from
       # https://github.com/actions/toolkit/pull/580.
