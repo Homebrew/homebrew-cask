@@ -7,5 +7,5 @@ cask "zeronet" do
   name "ZeroNet"
   homepage "https://zeronet.io/"
 
-  app "ZeroNet-mac-dist/ZeroNet.app"
+  app "ZeroNet-dist-mac/ZeroNet.app"
 end
