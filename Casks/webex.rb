@@ -1,13 +1,13 @@
-cask "webex-teams" do
-  version "40.11.0.17133"
+cask "webex" do
+  version :latest
   sha256 :no_check
 
-  url "https://binaries.webex.com/WebexTeamsDesktop-MACOS-Gold/WebexTeams.dmg"
-  name "Webex Teams"
+  url "https://binaries.webex.com/WebexTeamsDesktop-MACOS-Gold/Webex.dmg"
+  name "Webex"
   desc "Video communication and virtual meeting platform"
   homepage "https://www.webex.com/"
 
-  app "Webex Teams.app"
+  app "Webex.app"
 
   uninstall signal: [
     ["TERM", "Cisco-Systems.Spark"],
