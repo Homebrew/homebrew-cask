@@ -1,5 +1,5 @@
 cask "craft" do
-  version :latest
+  version "1.09,108"
   sha256 :no_check
 
   url "https://www.craft.do/builds/Craft.dmg"
