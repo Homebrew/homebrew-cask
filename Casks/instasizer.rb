@@ -1,5 +1,5 @@
 cask "instasizer" do
-  version "1.0"
+  version "1.0,8"
   sha256 :no_check
 
   url "http://www.tapgods.com/instasizer/Instasizer.zip"
