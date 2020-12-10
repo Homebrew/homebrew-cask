@@ -1,5 +1,5 @@
 cask "sejda-pdf" do
-  version "7.1.3"
+  version "7.1.5"
   sha256 "94ccff984e1a2f7a225b638e4ea9395b970b5785753534b5557c1fba874c0223"
 
   # sejda-cdn.com/ was verified as official when first introduced to the cask
