@@ -13,7 +13,9 @@ cask "radicle-upstream" do
   app "Radicle Upstream.app"
 
   zap trash: [
+    "~/.radicle",
     "~/Library/Application Support/Radicle Upstream",
+    "~/Library/Application Support/xyz.radicle.radicle",
     "~/Library/Application Support/xyz.radicle.radicle-upstream",
     "~/Library/Preferences/xyz.radicle.radicle-upstream.plist",
     "~/Library/Saved Application State/xyz.radicle.radicle-upstream.savedState",
