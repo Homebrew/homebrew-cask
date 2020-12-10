@@ -4,7 +4,7 @@ cask "dteoh-devdocs" do
 
   url "https://github.com/dteoh/devdocs-macos/releases/download/v#{version}/DevDocs.zip"
   appcast "https://github.com/dteoh/devdocs-macos/releases.atom"
-  name "DevDocs App"
+  name "DevDocs"
   desc "API documentation viewer"
   homepage "https://github.com/dteoh/devdocs-macos/"
 
