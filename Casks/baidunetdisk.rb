@@ -1,9 +1,9 @@
 cask "baidunetdisk" do
-  version "3.5.0"
-  sha256 "c7a6bdc0be688464dc3f95ec5fa87aebe109eeb2e646b01412242abfefb115e8"
+  version "3.5.3"
+  sha256 "d56453274b0fc1c8e7675c5c318a6cceb82e8c2ee26c5f951261e094b6a97cc3"
 
-  # baidupcs.com/issue/netdisk/MACguanjia/ was verified as official when first introduced to the cask
-  url "https://wppkg.baidupcs.com/issue/netdisk/MACguanjia/BaiduNetdisk_mac_#{version}.dmg"
+  url "https://wppkg.baidupcs.com/issue/netdisk/MACguanjia/BaiduNetdisk_mac_#{version}.dmg",
+      verified: "baidupcs.com/issue/netdisk/MACguanjia/"
   appcast "https://pan.baidu.com/disk/cmsdata?do=client"
   name "Baidu NetDisk"
   name "百度网盘"

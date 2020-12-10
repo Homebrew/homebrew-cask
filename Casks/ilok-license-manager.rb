@@ -1,6 +1,6 @@
 cask "ilok-license-manager" do
   version "5.3.2"
-  sha256 "2e2e84bdfe827230fb87ae49cc89c49ab8ba026cda01ed7b6cabae842307d983"
+  sha256 :no_check
 
   url "https://installers.ilok.com/iloklicensemanager/LicenseSupportInstallerMac.zip"
   appcast "https://updates.ilok.com/iloklicensemanager/LicenseSupportInstallerMacAppcast.xml"

@@ -5,7 +5,7 @@ cask "transcribe" do
     url "https://www.seventhstring.com/xscribe/downmac_old/transcribe#{version.no_dots}.dmg"
   else
     version "8.80.0"
-    sha256 "2c32b81ebe15115550c74f6d758facac05acbd20d1da16237e1fe3fc60b04215"
+    sha256 :no_check
     url "https://www.seventhstring.com/xscribe/transcribe.dmg"
   end
 
