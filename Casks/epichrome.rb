@@ -1,6 +1,6 @@
 cask "epichrome" do
-  version "2.3.19"
-  sha256 "bf13852cf154990d1e3d7d8f89595b31103f1fcc09e87d91fece44758a98c67d"
+  version "2.3.20"
+  sha256 "19e76750e7cc2b00b7c110615f0dc2ce63eb9d7e094931290a55834aa517c176"
 
   url "https://github.com/dmarmor/epichrome/releases/download/v#{version}/epichrome-#{version}.pkg"
   appcast "https://github.com/dmarmor/epichrome/releases.atom"

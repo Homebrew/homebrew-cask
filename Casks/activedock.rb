@@ -1,6 +1,6 @@
 cask "activedock" do
   version "2.63,2063"
-  sha256 "05987f06247ec52d1abd626c28cd74f93c0793e7e8702d12f8c8072a8aac026e"
+  sha256 :no_check
 
   # macplus-software.com/ was verified as official when first introduced to the cask
   url "https://macplus-software.com/downloads/ActiveDock.zip"

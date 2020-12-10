@@ -1,5 +1,5 @@
 cask "home-inventory" do
-  version "3.8.3"
+  version "3.8.3,20200501"
   sha256 :no_check
 
   url "https://binaryformations.com/homeinventory/HomeInventory.dmg"
