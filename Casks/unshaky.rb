@@ -8,6 +8,7 @@ cask "unshaky" do
   desc "Software fix for double key presses on Apple's butterfly keyboard"
   homepage "https://github.com/aahung/Unshaky"
 
+  auto_updates true
   depends_on macos: ">= :sierra"
 
   app "Unshaky.app"
