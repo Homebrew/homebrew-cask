@@ -5,7 +5,7 @@ on:
     branches:
       - debug-bump-unversioned-casks
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '*/20 * * * *'
   workflow_dispatch:
 
 env:
@@ -78,8 +78,9 @@ jobs:
         run: |
           brew bump-unversioned-casks --state-file ~/bump-unversioned-casks-state.json --limit 10 '${{ github.repository }}'
         env:
+          HOMEBREW_DEBUG: 1
           HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
-        timeout-minutes: 30
+        timeout-minutes: 17
 
       # Workaround until the `cache` action uses the changes from
       # https://github.com/actions/toolkit/pull/580.
