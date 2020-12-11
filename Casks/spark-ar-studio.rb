@@ -1,5 +1,5 @@
 cask "spark-ar-studio" do
-  version "102.0"
+  version "103.0"
   sha256 :no_check
 
   url "https://www.facebook.com/sparkarmacos/download/"
