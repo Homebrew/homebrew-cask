@@ -5,17 +5,16 @@ cask "aldente" do
   url "https://github.com/davidwernhart/AlDente/releases/download/#{version}/AlDente.app.zip"
   appcast "https://github.com/davidwernhart/AlDente/releases.atom"
   name "AlDente"
-  desc "Battery Management for Catalina"
+  desc "Battery management for Catalina"
   homepage "https://github.com/davidwernhart/AlDente"
 
-  depends_on macos: "== :catalina"
+  depends_on macos: :catalina
 
   app "AlDente.app"
 
-  uninstall quit: "com.davidwernhart.Helper"
-
-  zap trash: [
-    "/Library/LaunchDaemons/com.davidwernhart.Helper.plist",
-    "/Library/PrivilegedHelperTools/com.davidwernhart.Helper",
-  ]
+  uninstall quit:   "com.davidwernhart.Helper",
+            delete: [
+              "/Library/LaunchDaemons/com.davidwernhart.Helper.plist",
+              "/Library/PrivilegedHelperTools/com.davidwernhart.Helper",
+            ]
 end
