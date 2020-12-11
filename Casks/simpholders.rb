@@ -7,7 +7,7 @@ cask "simpholders" do
   name "SimPholders"
   homepage "https://simpholders.com/"
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :catalina"
 
   app "SimPholders.app"
 end
