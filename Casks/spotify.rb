@@ -8,6 +8,8 @@ cask "spotify" do
   desc "Music streaming service"
   homepage "https://www.spotify.com/"
 
+  auto_updates true
+
   app "Spotify.app"
 
   uninstall launchctl: "com.spotify.webhelper"
