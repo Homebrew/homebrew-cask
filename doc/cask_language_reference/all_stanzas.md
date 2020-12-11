@@ -6,7 +6,7 @@ Each of the following stanzas is required for every Cask.
 
 | name       | multiple occurrences allowed? | value                           |
 | ---------- |------------------------------ | ------------------------------- |
-| `version`  | no                            | Application version. <br />See [Version Stanza Details](stanzas/version.md) for more information.
+| `version`  | no                            | Application version.<br />See [Version Stanza Details](stanzas/version.md) for more information.
 | `sha256`   | no                            | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`. Can be suppressed by using the special value `:no_check`.<br />See [Checksum Stanza Details](stanzas/sha256.md) for more information.
 | `url`      | no                            | URL to the `.dmg`/`.zip`/`.tgz`/`.tbz2` file that contains the application.<br />A [comment](stanzas/url.md#when-url-and-homepage-hostnames-differ-add-a-comment) should be added if the hostnames in the `url` and `homepage` stanzas differ. Block syntax should be used for URLs that change on every visit.<br />See [URL Stanza Details](stanzas/url.md) for more information.
 | `name`     | yes                           | String providing the full and proper name defined by the vendor.<br />See [Name Stanza Details](stanzas/name.md) for more information.
