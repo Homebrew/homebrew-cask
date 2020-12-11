@@ -8,6 +8,8 @@ cask "mmhmm" do
   desc "Virtual video presentation software"
   homepage "https://www.mmhmm.app/"
 
+  depends_on macos: ">= :mojave"
+
   app "mmhmm.app"
 
   uninstall pkgutil:   "app.mmhmm.app",
