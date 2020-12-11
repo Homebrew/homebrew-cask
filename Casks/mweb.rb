@@ -1,5 +1,5 @@
 cask "mweb" do
-  version "3.4.3,589"
+  version "3.4.4,592"
   sha256 :no_check
 
   # dl.devmate.com/com.coderforart.MWeb3/ was verified as official when first introduced to the cask
