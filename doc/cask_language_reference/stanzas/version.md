@@ -37,7 +37,7 @@ url "https://example.com/#{version.sub(%r{build\d+}, '')}/file-version-#{version
 The special value `:latest` is used on casks which:
 
 1. Have a `url` without a version in it.
-2. Having a correct value to `vesion` is too difficult or impractical, even with our automated systems.
+2. Having a correct value to `version` is too difficult or impractical, even with our automated systems.
 
 Example: [spotify.rb](https://github.com/Homebrew/homebrew-cask/blob/f56e8ba057687690e26a6502623aa9476ff4ac0e/Casks/spotify.rb#L2)
 
