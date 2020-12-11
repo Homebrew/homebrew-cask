@@ -2,8 +2,7 @@ cask "colortester" do
   version "1.0"
   sha256 :no_check
 
-  url "http://www.alfasado.co.jp/download/ColorTester_Mac.zip",
-      verified: "alfasado.co.jp/"
+  url "https://alfasado.net/download/ColorTester_Mac.zip"
   name "ColorTester"
   homepage "https://alfasado.net/apps/colortester.html"
 
