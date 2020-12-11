@@ -1,4 +1,4 @@
-cask "xmind-2020" do
+cask "xmind-zen" do
   version "10.2.1-202007271856"
   sha256 "a41f8647ef655e19e4a8066746475be95fd13b501c9fa09cc81abadb1da29580"
 
@@ -15,5 +15,9 @@ cask "xmind-2020" do
 
   zap trash: "~/Library/Application Support/XMind ZEN"
 
-  caveat "Xmind Zen is now replaced by Xmind 2020.\n Full info: https://www.xmind.net/blog/en/xmind%3A-zen-is-now-xmind%3A-2020/"
+  caveat <<~EOS
+    Internally, Xmind Zen is now Xming 2020. See their announcement:
+
+      https://www.xmind.net/blog/en/xmind%3A-zen-is-now-xmind%3A-2020/
+  EOS
 end
