@@ -1,5 +1,5 @@
 cask "spotify" do
-  version "1.1.47.684.g136419d9"
+  version "1.1.48.625.g1c87c7f7"
   sha256 :no_check
 
   # scdn.co/ was verified as official when first introduced to the cask
