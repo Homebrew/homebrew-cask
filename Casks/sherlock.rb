@@ -1,6 +1,6 @@
 cask "sherlock" do
-  version "1.11.0"
-  sha256 "b95096c5a791532161b521d4d8e406805899f1a72e5f7c0e4144dff700c446a4"
+  version "1.12.0"
+  sha256 :no_check
 
   # dl.devmate.com/io.inspiredcode.Sherlock/ was verified as official when first introduced to the cask
   url "https://dl.devmate.com/io.inspiredcode.Sherlock/Sherlock.dmg"

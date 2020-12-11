@@ -15,6 +15,7 @@ cask "omniplan" do
   homepage "https://www.omnigroup.com/omniplan/"
 
   auto_updates true
+  conflicts_with cask: "homebrew/cask-versions/omniplan3"
   depends_on macos: ">= :high_sierra"
 
   app "OmniPlan.app"

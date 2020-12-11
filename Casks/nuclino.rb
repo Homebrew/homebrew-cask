@@ -1,5 +1,5 @@
 cask "nuclino" do
-  version :latest
+  version "1.4.0"
   sha256 :no_check
 
   # s3.eu-central-1.amazonaws.com/repository.nuclino.com/ was verified as official when first introduced to the cask

@@ -1,5 +1,5 @@
 cask "send-anywhere" do
-  version :latest
+  version "20.11.5"
   sha256 :no_check
 
   url "https://update.send-anywhere.com/osx_downloads/Send%20Anywhere.dmg"

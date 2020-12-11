@@ -1,5 +1,5 @@
 cask "google-photos-backup-and-sync" do
-  version :latest
+  version "3.53.3404.7585"
   sha256 :no_check
 
   url "https://dl.google.com/drive/InstallPhotosBackupAndSync.dmg"

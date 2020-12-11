@@ -1,5 +1,5 @@
 cask "snagit" do
-  version "2021.0.2"
+  version "2021.0.2,98010"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://download.techsmith.com/snagitmac/releases/Snagit.dmg"

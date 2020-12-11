@@ -1,5 +1,5 @@
 cask "itrash" do
-  version :latest
+  version "5.2.2"
   sha256 :no_check
 
   url "https://www.osxbytes.com/iTrash.dmg?forcedownload"

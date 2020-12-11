@@ -1,5 +1,5 @@
 cask "mylio" do
-  version :latest
+  version "3.13.7157"
   sha256 :no_check
 
   # myliodownloads.s3.amazonaws.com/ was verified as official when first introduced to the cask

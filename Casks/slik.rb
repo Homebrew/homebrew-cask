@@ -1,6 +1,6 @@
 cask "slik" do
-  version "2.1.1"
-  sha256 "e665c8cb375d9be485a433351b0b7f50c53524e2546b455d8963c278cec3b6ef"
+  version "2.1.1,5023"
+  sha256 :no_check
 
   url "https://apps.inspira.io/updates/slik.zip"
   appcast "https://apps.inspira.io/updates/slik-appcast.xml"

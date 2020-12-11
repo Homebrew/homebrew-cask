@@ -1,5 +1,5 @@
 cask "browserstacklocal" do
-  version :latest
+  version "2.3,1"
   sha256 :no_check
 
   url "https://www.browserstack.com/BrowserStackLocal.dmg"

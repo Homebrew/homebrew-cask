@@ -1,5 +1,5 @@
 cask "fontstand" do
-  version :latest
+  version "2.3.0,103"
   sha256 :no_check
 
   url "https://fontstand.com/application/download",

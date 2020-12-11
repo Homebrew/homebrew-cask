@@ -1,5 +1,5 @@
 cask "bigsur-cache-cleaner" do
-  version "16.0.1.0.0"
+  version "16.1.0.0.0"
   sha256 :no_check
 
   url "https://www.northernsoftworks.com/downloads/bscc.dmg"
@@ -8,7 +8,7 @@ cask "bigsur-cache-cleaner" do
   desc "General purpose system maintenance tool"
   homepage "https://www.northernsoftworks.com/bigsurcachecleaner.html"
 
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :mojave"
 
   app "Big Sur Cache Cleaner.app"
 end
