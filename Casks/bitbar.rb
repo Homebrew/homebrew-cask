@@ -8,6 +8,8 @@ cask "bitbar" do
   desc "Utility to display the output from any script or program in the menu bar"
   homepage "https://github.com/matryer/bitbar/"
 
+  depends_on macos: ">= :big_sur"
+
   app "BitBar.app"
 
   zap trash: [
