@@ -11,6 +11,8 @@ cask "messenger" do
   desc "Native desktop app for Messenger (formerly Facebook Messenger)"
   homepage "https://www.messenger.com/desktop"
 
+  auto_updates true
+
   app "Messenger.app"
 
   zap trash: [
