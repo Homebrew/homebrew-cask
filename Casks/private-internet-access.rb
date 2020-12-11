@@ -5,7 +5,7 @@ cask "private-internet-access" do
   url "https://installers.privateinternetaccess.com/download/pia-macos-#{version}.zip"
   appcast "https://www.privateinternetaccess.com/pages/download"
   name "Private Internet Access"
-  desc "VPN client application software. PIA subscription required."
+  desc "VPN client"
   homepage "https://www.privateinternetaccess.com/"
 
   auto_updates true
