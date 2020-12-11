@@ -1,6 +1,6 @@
 cask "visual-studio-code" do
-  version "1.51.1"
-  sha256 "1d118d1681b870c4dfd00007b2d4d96ec30112920b26377362d2f7c9676ff645"
+  version "1.52.0"
+  sha256 "0e9a5b0acc9893995578a11f99a1cbfe1d2627aff4549fb35b349a7f7ed8bf3d"
 
   url "https://update.code.visualstudio.com/#{version}/darwin/stable"
   appcast "https://update.code.visualstudio.com/api/update/darwin/stable/VERSION"
