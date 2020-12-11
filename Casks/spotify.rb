@@ -7,6 +7,8 @@ cask "spotify" do
   name "Spotify"
   desc "Music streaming service"
   homepage "https://www.spotify.com/"
+  
+  auto_updates true
 
   app "Spotify.app"
 
