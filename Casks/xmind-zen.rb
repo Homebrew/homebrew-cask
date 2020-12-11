@@ -16,7 +16,7 @@ cask "xmind-zen" do
   zap trash: "~/Library/Application Support/XMind ZEN"
 
   caveat <<~EOS
-    Internally, Xmind Zen is now Xming 2020. See their announcement:
+    Internally, Xmind Zen is now Xmind 2020. See their announcement:
 
       https://www.xmind.net/blog/en/xmind%3A-zen-is-now-xmind%3A-2020/
   EOS
