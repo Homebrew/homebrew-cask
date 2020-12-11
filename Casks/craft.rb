@@ -7,5 +7,7 @@ cask "craft" do
   desc "Document editor"
   homepage "https://craft.do/"
 
+  depends_on macos: ">= :catalina"
+
   app "Craft.app"
 end
