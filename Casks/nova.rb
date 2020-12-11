@@ -12,7 +12,7 @@ cask "nova" do
   depends_on macos: ">= :mojave"
 
   app "Nova.app"
-  binary "#{appdir}/Nova.app/Contents/SharedSupport/nova", target: "nova"
+  binary "#{appdir}/Nova.app/Contents/SharedSupport/nova"
 
   zap trash: "~/Library/Application Support/Nova"
 end
