@@ -1,38 +1,29 @@
-cask 'lulu' do
-  version '1.2.3'
-  sha256 '9c7bf4333af8dc7330614f2c9a389feac27334bc07f4b6039107b97eb476a3df'
+cask "lulu" do
+  version "2.0.0"
+  sha256 "0a7b7c2422aeca0b1cb45ae525c3882635fd603887bbb55e06bea81bd9ed69a8"
 
   # bitbucket.org/objective-see/ was verified as official when first introduced to the cask
-  url "https://bitbucket.org/objective-see/deploy/downloads/LuLu_#{version}.zip"
-  appcast 'https://objective-see.com/products/changelogs/LuLu.txt'
-  name 'LuLu'
-  homepage 'https://objective-see.com/products/lulu.html'
+  url "https://bitbucket.org/objective-see/deploy/downloads/LuLu_#{version}.dmg"
+  appcast "https://objective-see.com/products/changelogs/LuLu.txt"
+  name "LuLu"
+  desc "Open-source firewall to block unknown outgoing connections"
+  homepage "https://objective-see.com/products/lulu.html"
 
-  depends_on macos: '>= :sierra'
+  auto_updates true
+  depends_on macos: ">= :catalina"
 
-  installer script: {
-                      executable: "#{staged_path}/Lulu Installer.app/Contents/MacOS/LuLu Installer",
-                      args:       ['-install'],
-                      sudo:       true,
-                    }
+  app "LuLu.app"
 
   uninstall script: {
-                      executable: "#{staged_path}/Lulu Installer.app/Contents/MacOS/LuLu Installer",
-                      args:       ['-uninstall'],
-                      sudo:       true,
-                    }
+    executable: "#{appdir}/LuLu.app/Contents/Resources/LuLu Uninstaller.app/Contents/MacOS/LuLu Uninstaller",
+    args:       ["-uninstall"],
+    sudo:       true,
+  }
 
   zap trash: [
-               '~/Library/Caches/com.objective-see.lulu',
-               '~/Library/Caches/com.objective-see.lulu.helper',
-               '~/Library/Preferences/com.objective-see.lulu.plist',
-               '~/Library/Preferences/com.objective-see.lulu.helper.plist',
-               '/Library/LaunchDaemons/com.objective-see.lulu.plist',
-               '/Library/LaunchDaemons/com.objective-see.lulu.configHelper.plist',
-               '/Library/Logs/LuLu.log',
-             ]
-
-  caveats do
-    kext
-  end
+    "~/Library/Caches/com.objective-see.lulu",
+    "~/Library/Caches/com.objective-see.lulu.helper",
+    "~/Library/Preferences/com.objective-see.lulu.plist",
+    "~/Library/Preferences/com.objective-see.lulu.helper.plist",
+  ]
 end

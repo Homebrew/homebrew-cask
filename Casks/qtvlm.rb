@@ -1,16 +1,17 @@
-cask 'qtvlm' do
-  version '5.9.10,217'
-  sha256 'ed38ccd9565344ead60f46b59d4f1f4d4290e13a43f84eb730d31d8c1eca6523'
+cask "qtvlm" do
+  version "5.9.14.p1.3,270"
+  sha256 "f0035418df85822276ac803a363519d0524013a0d4cb8fb369683df64301e419"
 
-  url "https://www.meltemus.com/index.php/en/download/send/3-mac-os/#{version.after_comma}-qtvlm-#{version.before_comma.dots_to_hyphens}-2"
-  appcast 'https://www.meltemus.com/index.php/en/download/category/3-mac-os',
-          must_contain: version.before_comma
-  name 'qtvlm'
-  homepage 'https://www.meltemus.com/index.php/en/'
+  url "https://www.meltemus.com/index.php/en/download/send/3-mac-os/#{version.after_comma}-qtvlm-#{version.before_comma.dots_to_hyphens}"
+  appcast "https://www.meltemus.com/index.php/en/download/category/3-mac-os",
+          must_contain: version.major_minor_patch
+  name "qtvlm"
+  desc "Navigation and weather routing software"
+  homepage "https://www.meltemus.com/index.php/en/"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'qtVlm'
+  app "qtVlm"
 
-  zap trash: '~/Library/Saved Application State/com.meltemus.qtVlm.savedState'
+  zap trash: "~/Library/Saved Application State/com.meltemus.qtVlm.savedState"
 end

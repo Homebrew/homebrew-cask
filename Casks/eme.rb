@@ -1,13 +1,14 @@
-cask 'eme' do
-  version '0.15.0'
-  sha256 '4147bf3e896cba431d041aa203b19aa26df03f368d29ba97af8728acaac2429d'
+cask "eme" do
+  version "0.15.1"
+  sha256 "bae758c1dde501365cc774adeb2dd85418e0b0513df48a2ee66ba0b792cb02d5"
 
   url "https://github.com/egoist/eme/releases/download/v#{version}/EME-#{version}.dmg"
-  appcast 'https://github.com/egoist/eme/releases.atom'
-  name 'EME'
-  homepage 'https://github.com/egoist/eme'
+  appcast "https://github.com/egoist/eme/releases.atom"
+  name "EME"
+  desc "Markdown editor"
+  homepage "https://github.com/egoist/eme"
 
   auto_updates true
 
-  app 'EME.app'
+  app "EME.app"
 end

@@ -1,10 +1,11 @@
-cask 'mediahuman-audio-converter' do
-  version :latest
+cask "mediahuman-audio-converter" do
+  version "1.9.7"
   sha256 :no_check
 
-  url 'https://www.mediahuman.com/download/MHAudioConverter.dmg'
-  name 'MediaHuman Audio Converter'
-  homepage 'https://www.mediahuman.com/audio-converter/'
+  url "https://www.mediahuman.com/download/MHAudioConverter.dmg"
+  name "MediaHuman Audio Converter"
+  desc "Audio converter"
+  homepage "https://www.mediahuman.com/audio-converter/"
 
-  app 'MediaHuman Audio Converter.app'
+  app "MediaHuman Audio Converter.app"
 end

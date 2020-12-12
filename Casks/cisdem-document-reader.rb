@@ -1,11 +1,12 @@
-cask 'cisdem-document-reader' do
-  version '5.2.0'
-  sha256 'cd08ba974b7d468751268ccbc42ea00e94c0067a3f7f64d3ea73c2655f44e2de'
+cask "cisdem-document-reader" do
+  version "5.4.0"
+  sha256 :no_check
 
-  url 'http://download.cisdem.com/cisdem-documentreader.dmg'
-  appcast 'https://www.cisdem.com/document-reader-mac/release-notes.html'
-  name 'Cisdem Document Reader'
-  homepage 'https://www.cisdem.com/document-reader-mac.html'
+  url "https://download.cisdem.com/cisdem-documentreader.dmg"
+  appcast "https://www.cisdem.com/document-reader-mac/release-notes.html"
+  name "Cisdem Document Reader"
+  desc "Document reader to open and view Windows-based files"
+  homepage "https://www.cisdem.com/document-reader-mac.html"
 
-  app 'Cisdem Document Reader.app'
+  app "Cisdem Document Reader.app"
 end

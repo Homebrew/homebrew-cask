@@ -1,13 +1,13 @@
-cask 'milkman' do
-  version '4.5.0'
-  sha256 '2537bbc8f71cfaf4f209ffbf665ca9c605a61743fa7d8c241b843c0c72ac9a5b'
+cask "milkman" do
+  version "5.0.0"
+  sha256 "34ea00506072dbb625d20deb86b11c380006a1e01185266577a322ef024e05b8"
 
   url "https://github.com/warmuuh/milkman/releases/download/#{version}/milkman-dist-appbundle-macos64-bin.tgz"
-  appcast 'https://github.com/warmuuh/milkman/releases.atom'
-  name 'Milkman'
-  homepage 'https://github.com/warmuuh/milkman'
+  appcast "https://github.com/warmuuh/milkman/releases.atom"
+  name "Milkman"
+  homepage "https://github.com/warmuuh/milkman"
 
-  app 'Milkman.app'
+  app "Milkman.app"
 
-  zap trash: '~/Library/Application Support/Milkman'
+  zap trash: "~/Library/Application Support/Milkman"
 end

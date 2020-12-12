@@ -1,17 +1,20 @@
-cask 'ssh-config-editor' do
-  version '1.13.1,56'
-  sha256 '6305e3b0f4242e22bccc8f4776b3b0cebc5e7703e58125ac08b55f6468f666c0'
+cask "ssh-config-editor" do
+  version "2.1.1,72"
+  sha256 "d5f55802cde1531455a4f871e5c45b345418ef5b03b3c58074c6aee3779c6601"
 
-  url "https://hejki.org/download/ssheditor/SSHConfigEditor-#{version.after_comma}.zip"
-  appcast 'https://hejki.org/download/ssheditor/appcast.xml'
-  name 'SSH Config Editor'
-  homepage 'https://www.hejki.org/ssheditor/'
+  url "https://hejki.org/download/ssheditor/SSHConfigEditor-#{version.after_comma}.dmg"
+  appcast "https://hejki.org/download/ssheditor/appcast#{version.major}.xml"
+  name "SSH Config Editor"
+  desc "Tool for managing the OpenSSH ssh client configuration file"
+  homepage "https://www.hejki.org/ssheditor/"
 
-  app 'SSH Config Editor.app'
+  depends_on macos: ">= :catalina"
+
+  app "SSH Config Editor.app"
 
   zap trash: [
-               '~/Library/Application Support/SSH Config Editor',
-               '~/Library/Preferences/org.hejki.osx.sshce.plist',
-               '~/Library/Saved Application State/org.hejki.osx.sshce.savedState',
-             ]
+    "~/Library/Application Support/SSH Config Editor",
+    "~/Library/Preferences/org.hejki.osx.sshce.plist",
+    "~/Library/Saved Application State/org.hejki.osx.sshce.savedState",
+  ]
 end

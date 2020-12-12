@@ -1,18 +1,18 @@
-cask 'vallum' do
-  version '3.3.2'
-  sha256 'ed062cd0c8a268df37db6a71d7e8a15b12d3a3adff9af1ab52d6a4cb42300ce8'
+cask "vallum" do
+  version "3.3.4"
+  sha256 "3d47f43b104c65a5874bdae64995df3c2eee39d2fb640566325ae280d5ca7654"
 
   # github.com/TheMurusTeam/Vallum/ was verified as official when first introduced to the cask
   url "https://github.com/TheMurusTeam/Vallum/releases/download/v#{version}/vallum-#{version}.zip"
-  appcast 'https://github.com/TheMurusTeam/Vallum/releases.atom'
-  name 'Vallum'
-  homepage 'https://www.vallumfirewall.com/'
+  appcast "https://github.com/TheMurusTeam/Vallum/releases.atom"
+  name "Vallum"
+  homepage "https://www.vallumfirewall.com/"
 
-  pkg 'Vallum.pkg'
+  pkg "Vallum.pkg"
 
-  uninstall pkgutil:   'it.murus.afw.Vallum',
+  uninstall pkgutil:   "it.murus.afw.Vallum",
             launchctl: [
-                         'it.murus.afw.core',
-                         'it.murus.afw.helper',
-                       ]
+              "it.murus.afw.core",
+              "it.murus.afw.helper",
+            ]
 end

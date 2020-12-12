@@ -1,18 +1,19 @@
-cask 'folding-at-home' do
-  version '7.6.13'
-  sha256 'ee96f4f1b724db46f9a37f7d805095a16b24f1ef7e9b9a1615a56e94e4119a36'
+cask "folding-at-home" do
+  version "7.6.21"
+  sha256 "3a3b677bfe41ed267917b4d4f131576979d8347ffb52e57b2004b53c8ef9908f"
 
   url "https://download.foldingathome.org/releases/public/release/fah-installer/osx-10.11-64bit/v#{version.major_minor}/fah-installer_#{version}_x86_64.mpkg.zip"
-  appcast 'https://download.foldingathome.org/js/fah-downloads.js'
-  name 'Folding@home'
-  homepage 'https://foldingathome.org/'
+  appcast "https://download.foldingathome.org/releases/public/release/fah-installer/osx-10.11-64bit/v#{version.major_minor}/"
+  name "Folding@home"
+  desc "Graphical interface control for Folding"
+  homepage "https://foldingathome.org/"
 
   pkg "fah-installer_#{version}_x86_64.pkg"
 
-  uninstall pkgutil:   'org.foldingathome.*',
-            launchctl: 'org.foldingathome.fahclient',
+  uninstall pkgutil:   "org.foldingathome.*",
+            launchctl: "org.foldingathome.fahclient",
             quit:      [
-                         'org.foldingathome.fahviewer',
-                         'org.foldingathome.fahcontrol',
-                       ]
+              "org.foldingathome.fahviewer",
+              "org.foldingathome.fahcontrol",
+            ]
 end

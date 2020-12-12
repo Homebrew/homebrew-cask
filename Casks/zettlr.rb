@@ -1,19 +1,20 @@
-cask 'zettlr' do
-  version '1.7.1'
-  sha256 'c4e684f1cec9b240194bded0a2d6ab4eeaca5a84327d7c220b41eb5b1069bb8e'
+cask "zettlr" do
+  version "1.8.1"
+  sha256 "2b6c22c93cb73c9b650abb437e28c86a2a902f8a805f90bdefa67acfb4251b5e"
 
   # github.com/Zettlr/Zettlr/ was verified as official when first introduced to the cask
   url "https://github.com/Zettlr/Zettlr/releases/download/v#{version}/Zettlr-#{version}.dmg"
-  appcast 'https://github.com/Zettlr/Zettlr/releases.atom'
-  name 'Zettlr'
-  homepage 'https://www.zettlr.com/'
+  appcast "https://github.com/Zettlr/Zettlr/releases.atom"
+  name "Zettlr"
+  desc "Open-source markdown editor"
+  homepage "https://www.zettlr.com/"
 
-  app 'Zettlr.app'
+  app "Zettlr.app"
 
   zap trash: [
-               '~/Library/Application Support/zettlr',
-               '~/Library/Logs/Zettlr',
-               '~/Library/Preferences/com.zettlr.app.plist',
-               '~/Library/Saved Application State/com.zettlr.app.savedState',
-             ]
+    "~/Library/Application Support/zettlr",
+    "~/Library/Logs/Zettlr",
+    "~/Library/Preferences/com.zettlr.app.plist",
+    "~/Library/Saved Application State/com.zettlr.app.savedState",
+  ]
 end

@@ -1,21 +1,21 @@
-cask 'milanote' do
-  version '2.2.1'
-  sha256 'af56cbbc64a78b06347d22ec3c380fb441e1b3e2585fa5ab38d110e456cb23c0'
+cask "milanote" do
+  version "2.2.24"
+  sha256 "113228205b9af2f808d26a1d432449b6b07c022340f231d548c6004cdd01f3a2"
 
   # milanote-app-releases.s3.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://milanote-app-releases.s3.amazonaws.com/Milanote-#{version}.dmg"
-  appcast 'https://www.milanote.com/download-mac-app'
-  name 'Milanote'
-  homepage 'https://www.milanote.com/'
+  appcast "https://www.milanote.com/download-mac-app"
+  name "Milanote"
+  homepage "https://www.milanote.com/"
 
-  app 'Milanote.app'
+  app "Milanote.app"
 
   zap trash: [
-               '~/Library/Application Support/Milanote',
-               '~/Library/Caches/com.milanote.app',
-               '~/Library/Caches/com.milanote.app.ShipIt',
-               '~/Library/Library/Logs/Milanote',
-               '~/Library/Preferences/com.milanote.app.helper.plist',
-               '~/Library/Preferences/com.milanote.app.plist',
-             ]
+    "~/Library/Application Support/Milanote",
+    "~/Library/Caches/com.milanote.app",
+    "~/Library/Caches/com.milanote.app.ShipIt",
+    "~/Library/Library/Logs/Milanote",
+    "~/Library/Preferences/com.milanote.app.helper.plist",
+    "~/Library/Preferences/com.milanote.app.plist",
+  ]
 end

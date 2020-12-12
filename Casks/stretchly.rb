@@ -1,12 +1,13 @@
-cask 'stretchly' do
-  version '1.0.0'
-  sha256 'ba2123a394c424a7cf2e4e812937ac231c8c972c789c0857dd861ecf30ad3e6b'
+cask "stretchly" do
+  version "1.3.0"
+  sha256 "cae31b31a419ce49d45cb15b749d41ccd108c678a08d4c4fe0728b9bcbf029c5"
 
   # github.com/hovancik/stretchly/ was verified as official when first introduced to the cask
-  url "https://github.com/hovancik/stretchly/releases/download/v#{version}/stretchly-#{version}-mac.zip"
-  appcast 'https://github.com/hovancik/stretchly/releases.atom'
-  name 'stretchly'
-  homepage 'https://hovancik.net/stretchly/'
+  url "https://github.com/hovancik/stretchly/releases/download/v#{version}/stretchly-#{version}.dmg"
+  appcast "https://github.com/hovancik/stretchly/releases.atom"
+  name "Stretchly"
+  desc "Break time reminder app"
+  homepage "https://hovancik.net/stretchly/"
 
-  app 'stretchly.app'
+  app "Stretchly.app"
 end

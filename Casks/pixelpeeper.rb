@@ -1,10 +1,10 @@
-cask 'pixelpeeper' do
-  version :latest
+cask "pixelpeeper" do
+  version "1.0"
   sha256 :no_check
 
-  url 'https://www.irradiatedsoftware.com/download/PixelPeeper.zip'
-  name 'PixelPeeper'
-  homepage 'https://www.irradiatedsoftware.com/labs/'
+  url "https://www.irradiatedsoftware.com/download/PixelPeeper.zip"
+  name "PixelPeeper"
+  homepage "https://www.irradiatedsoftware.com/labs/"
 
-  app 'PixelPeeper.app'
+  app "PixelPeeper.app"
 end

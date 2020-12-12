@@ -1,25 +1,20 @@
-cask 'logisim-evolution' do
-  version '2.15.0'
-  sha256 '2d56d01a692e26dd2e5c19a6139ed66d9352fb4bc2c81171b2153b9099cfd91d'
+cask "logisim-evolution" do
+  version "3.3.0"
+  sha256 "55a9ed8069fd677b0caa9cccc39ce5f64be4d16293b4daddb8c54d2082f2a847"
 
-  url "https://github.com/reds-heig/logisim-evolution/releases/download/v#{version}/logisim-evolution.jar"
-  appcast 'https://github.com/reds-heig/logisim-evolution/releases.atom'
-  name 'Logisim Evolution'
-  homepage 'https://github.com/reds-heig/logisim-evolution'
+  url "https://github.com/reds-heig/logisim-evolution/releases/download/v#{version}/logisim-evolution-#{version}-all.jar"
+  appcast "https://github.com/reds-heig/logisim-evolution/releases.atom"
+  name "Logisim Evolution"
+  desc "Digital logic designer and simulator"
+  homepage "https://github.com/reds-heig/logisim-evolution"
 
   container type: :naked
 
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/logisim-evolution.wrapper.sh"
-  binary shimscript, target: 'logisim-evolution'
+  app "logisim-evolution-#{version}-all.jar", target: "logisim-evolution.jar"
 
-  preflight do
-    IO.write shimscript, <<~EOS
-      #!/bin/bash
-      cd "$(dirname "$(readlink -n "${0}")")" && \
-        java "${@}" -jar 'logisim-evolution.jar'
-    EOS
+  zap trash: "~/Library/Preferences/com.cburch.logisim.plist"
+
+  caveats do
+    depends_on_java "9+"
   end
-
-  zap trash: '~/Library/Preferences/com.cburch.logisim.plist'
 end

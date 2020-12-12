@@ -6,10 +6,10 @@ The `installer` stanza takes a series of key-value pairs, the first key of which
 
 ## installer manual:
 
-`installer manual:` takes a single string value, describing a GUI installer which must be run by the user at a later time. The path may be absolute, or relative to the Cask. Example (from [little-snitch.rb](https://github.com/Homebrew/homebrew-cask/blob/818047bf488be92923c8770ef3df8007a0db7704/Casks/little-snitch.rb#L10)):
+`installer manual:` takes a single string value, describing a GUI installer which must be run by the user at a later time. The path may be absolute, or relative to the Cask. Example (from [nutstore.rb](https://github.com/Homebrew/homebrew-cask/blob/249ec31048591308e63e50f79dae01d2f933cccf/Casks/nutstore.rb#L9)):
 
 ```ruby
-installer manual: 'Little Snitch Installer.app'
+installer manual: "Nutstore Installer.app"
 ```
 
 ## installer script:
@@ -29,7 +29,7 @@ The path may be absolute, or relative to the Cask. Example (from [ransomwhere.rb
 ```ruby
   installer script: {
                       executable: "#{staged_path}/RansomWhere.app/Contents/MacOS/RansomWhere",
-                      args:       ['-install'],
+                      args:       ["-install"],
                       sudo:       true,
                     }
 ```
@@ -37,5 +37,5 @@ The path may be absolute, or relative to the Cask. Example (from [ransomwhere.rb
 If the `installer script:` does not require any of the key-values it can point directly to the path of the install script. Example (from [amazon-drive.rb](https://github.com/Homebrew/homebrew-cask/blob/427c52acdc3ce0ab1e97950e6cee9896480d7353/Casks/amazon-drive.rb#L10)):
 
 ```ruby
-installer script: 'Amazon Drive Installer.app/Contents/MacOS/Amazon Drive Installer'
+installer script: "Amazon Drive Installer.app/Contents/MacOS/Amazon Drive Installer"
 ```

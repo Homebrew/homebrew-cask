@@ -1,11 +1,12 @@
-cask 'izip' do
-  version '3.7'
-  sha256 '7be4dbc10384072058e56164b3a58a5164127e556e4a343a3acc14fd6f8104ba'
+cask "izip" do
+  version "3.9"
+  sha256 :no_check
 
-  url 'https://www.izip.com/izip.dmg'
-  appcast 'https://www.izip.com/download'
-  name 'iZip'
-  homepage 'https://www.izip.com/'
+  url "https://www.izip.com/izip.dmg"
+  appcast "https://www.izip.com/download"
+  name "iZip"
+  desc "App to manage ZIP, ZIPX, RAR, TAR, 7ZIP and other compressed files"
+  homepage "https://www.izip.com/"
 
-  app 'iZip.app'
+  app "iZip.app"
 end

@@ -1,11 +1,12 @@
-cask 'iexplorer' do
-  version '4.3.8,172'
-  sha256 '919f12b8df70f1d64e4299402bd1881ac3a7b4b87e5494f16504b26d98931a65'
+cask "iexplorer" do
+  version "4.4.1,177"
+  sha256 "ce061a0cb650d672f0c8c953c2765c166d3bf0e5dc928de8a9bc45d72864f5a9"
 
   url "https://assets.macroplant.com/download/#{version.after_comma}/iExplorer-#{version.before_comma}.dmg"
   appcast "https://macroplant.com/iexplorer/mac/v#{version.major}/appcast"
-  name 'iExplorer'
-  homepage 'https://macroplant.com/iexplorer'
+  name "iExplorer"
+  desc "iOS device backup software and file manager"
+  homepage "https://macroplant.com/iexplorer"
 
-  app 'iExplorer.app'
+  app "iExplorer.app"
 end

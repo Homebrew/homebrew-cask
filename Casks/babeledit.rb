@@ -1,14 +1,14 @@
-cask 'babeledit' do
-  version '2.7.1'
-  sha256 '35cda2ef972422d651f47cf983de7a030f8f2c5f15d9d6c9e9067d3fad75fb7e'
+cask "babeledit" do
+  version "2.8.0"
+  sha256 "4bbd8612c10aa70eab9451b4b9c266b0f313d5e54b7b8768a8d778623e510e82"
 
   url "https://www.codeandweb.com/download/babeledit/#{version}/BabelEdit-#{version}.dmg"
-  appcast 'https://www.codeandweb.com/babeledit/download',
+  appcast "https://www.codeandweb.com/babeledit/download",
           must_contain: version
-  name 'BabelEdit'
-  homepage 'https://www.codeandweb.com/babeledit'
+  name "BabelEdit"
+  homepage "https://www.codeandweb.com/babeledit"
 
-  app 'BabelEdit.app'
+  app "BabelEdit.app"
 
-  zap trash: '~/Library/Preferences/de.code-and-web.BabelEdit.plist'
+  zap trash: "~/Library/Preferences/de.code-and-web.BabelEdit.plist"
 end

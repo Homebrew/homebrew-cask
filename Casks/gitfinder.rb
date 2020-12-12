@@ -1,24 +1,23 @@
-cask 'gitfinder' do
-  version '1.5'
-  sha256 'c6499d0461155947906c890d74c05c4a95f335b6c08c437f6dcca29d3ecaac8d'
+cask "gitfinder" do
+  version "1.6.1"
+  sha256 "2d5b43cce977c857ea601acb263696a3404a65f6b1f30ff72a87f4f2c1f2f631"
 
-  # zigz.ag/GitFinder/ was verified as official when first introduced to the cask
-  url 'https://zigz.ag/GitFinder/updates/GitFinder.dmg'
-  appcast 'https://zigz.ag/GitFinder/updates/stablecast.xml'
-  name 'GitFinder'
-  homepage 'https://gitfinder.com/'
+  url "https://get.gitfinder.com/GitFinder#{version.dots_to_underscores}.dmg"
+  appcast "https://zigz.ag/GitFinder/updates/stablecast.xml"
+  name "GitFinder"
+  homepage "https://gitfinder.com/"
 
-  app 'GitFinder.app'
+  app "GitFinder.app"
 
-  uninstall launchctl: 'ag.zigz.GitFinder.GitFinderLauncher',
+  uninstall launchctl: "ag.zigz.GitFinder.GitFinderLauncher",
             quit:      [
-                         'ag.zigz.GitFinder',
-                         'ag.zigz.GitFinder.GitFinderSync',
-                       ]
+              "ag.zigz.GitFinder",
+              "ag.zigz.GitFinder.GitFinderSync",
+            ]
 
   zap trash: [
-               '~/Library/Application Scripts/ag.zigz.GitFinder*',
-               '~/Library/Containers/ag.zigz.GitFinder*',
-               '~/Library/Group Containers/*.ag.zigz.GitFinder',
-             ]
+    "~/Library/Application Scripts/ag.zigz.GitFinder*",
+    "~/Library/Containers/ag.zigz.GitFinder*",
+    "~/Library/Group Containers/*.ag.zigz.GitFinder",
+  ]
 end

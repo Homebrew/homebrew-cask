@@ -1,12 +1,13 @@
-cask 'textadept' do
-  version '10.8'
-  sha256 '3c5fb990325f4af3ef443a97dad2409fb0986faf1e553b8f87f6d42dfb6fcc24'
+cask "textadept" do
+  version "11.0"
+  sha256 "60b7e3c5debfc396092e8a2b14ebb806ba6803ea9bc665e5ca9a625e3248cf92"
 
-  url "https://foicica.com/textadept/download/textadept_#{version}.osx.zip"
-  appcast 'https://foicica.com/textadept/feed'
-  name 'Textadept'
-  homepage 'https://foicica.com/textadept/'
+  url "https://github.com/orbitalquark/textadept/releases/download/textadept_#{version}/textadept_#{version}.macOS.zip"
+  appcast "https://github.com/orbitalquark/textadept/releases.atom"
+  name "Textadept"
+  desc "Cross-platform text editor"
+  homepage "https://orbitalquark.github.io/textadept/"
 
-  app "textadept_#{version}.osx/Textadept.app"
-  binary "textadept_#{version}.osx/ta"
+  app "textadept_#{version}.macOS/Textadept.app"
+  binary "textadept_#{version}.macOS/ta"
 end

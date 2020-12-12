@@ -1,9 +1,0 @@
-name: Homebrew Cask Automerge
-description: Merge cask version bump pull requests.
-author: Homebrew
-branding:
-  icon: git-pull-request
-  color: yellow
-runs:
-  using: docker
-  image: Dockerfile

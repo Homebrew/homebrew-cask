@@ -1,13 +1,13 @@
-cask 'navicat-data-modeler-essentials' do
-  version '3.0.11'
-  sha256 '3ec863e78d68ebc28f64fb65d0ed1f824f0bb8f2fd0b80b2ffe61a495b63a233'
+cask "navicat-data-modeler-essentials" do
+  version "3.0.14"
+  sha256 "d0e7bcce415607ce2a556e6292e9983b3dbf82a4891d1e7586c73c637739d66b"
 
-  url "http://download3.navicat.com/updater/modeler0#{version.major_minor.no_dots}_ess_mac_en.zip"
-  appcast 'https://updater.navicat.com/mac/navicat_updates.php?appName=Navicat%20Data%20Modeler%20Essentials'
-  name 'Navicat Data Modeler Essentials'
-  homepage 'https://www.navicat.com/en/products/navicat-data-modeler'
+  url "https://download3.navicat.com/updater/modeler0#{version.major_minor.no_dots}_ess_mac_en.zip"
+  appcast "https://updater.navicat.com/mac/navicat_updates.php?appName=Navicat%20Data%20Modeler%20Essentials"
+  name "Navicat Data Modeler Essentials"
+  homepage "https://www.navicat.com/en/products/navicat-data-modeler"
 
-  depends_on macos: '>= :yosemite'
+  depends_on macos: ">= :yosemite"
 
-  app 'Navicat Data Modeler Essentials.app'
+  app "Navicat Data Modeler Essentials.app"
 end

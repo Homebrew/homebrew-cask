@@ -1,14 +1,15 @@
-cask 'chromedriver' do
-  version '84.0.4147.30'
-  sha256 '1bed996247f5f93eed28110927a10b45f01a7deeda4ab1b1acfd6bb66784acc5'
+cask "chromedriver" do
+  version "87.0.4280.20"
+  sha256 "99e98317a5f883d53973a044778f81abe71b42c570fb35f75786f86ea617bd1a"
 
   # chromedriver.storage.googleapis.com/ was verified as official when first introduced to the cask
   url "https://chromedriver.storage.googleapis.com/#{version}/chromedriver_mac64.zip"
-  appcast 'https://chromedriver.storage.googleapis.com/LATEST_RELEASE'
-  name 'ChromeDriver'
-  homepage 'https://sites.google.com/a/chromium.org/chromedriver/home'
+  appcast "https://chromedriver.storage.googleapis.com/LATEST_RELEASE"
+  name "ChromeDriver"
+  desc "Automated testing of webapps for Google Chrome"
+  homepage "https://sites.google.com/a/chromium.org/chromedriver/home"
 
-  conflicts_with cask: 'chromedriver-beta'
+  conflicts_with cask: "homebrew/cask-versions/chromedriver-beta"
 
-  binary 'chromedriver'
+  binary "chromedriver"
 end

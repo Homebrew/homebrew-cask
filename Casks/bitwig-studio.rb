@@ -1,17 +1,17 @@
-cask 'bitwig-studio' do
-  version '3.2.6'
-  sha256 'f3f24088a21fb9815a18f0256ded2aa8231b2b37a55cd13eb7913277ef442a8e'
+cask "bitwig-studio" do
+  version "3.3"
+  sha256 "d3a70da04f617f0cbff3544959f1a9fb9646bf24e611733200999f88845db37c"
 
   url "https://downloads.bitwig.com/stable/#{version}/Bitwig%20Studio%20#{version}.dmg"
-  appcast 'https://www.bitwig.com/en/download.html'
-  name 'Bitwig Studio'
-  homepage 'https://www.bitwig.com/'
+  appcast "https://www.bitwig.com/en/download.html"
+  name "Bitwig Studio"
+  homepage "https://www.bitwig.com/"
 
-  app 'Bitwig Studio.app'
+  app "Bitwig Studio.app"
 
   zap trash: [
-               '~/Library/Application Support/Bitwig',
-               '~/Library/Caches/Bitwig',
-               '~/Library/Logs/Bitwig',
-             ]
+    "~/Library/Application Support/Bitwig",
+    "~/Library/Caches/Bitwig",
+    "~/Library/Logs/Bitwig",
+  ]
 end

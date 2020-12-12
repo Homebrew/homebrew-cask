@@ -1,11 +1,12 @@
-cask 'symboliclinker' do
-  version '2.1.1'
-  sha256 '58ed5a7992686f75981e4fe79678a9b9350267c487dd9cb4dc875ab6c87cfe08'
+cask "symboliclinker" do
+  version "2.2"
+  sha256 "80257a720531d448c6034e74a494e68e82f293af14ef56edbb7379f658542e84"
 
   url "https://github.com/nickzman/symboliclinker/releases/download/v#{version}/SymbolicLinker#{version}.dmg"
-  appcast 'https://github.com/nickzman/symboliclinker/releases.atom'
-  name 'SymbolicLinker'
-  homepage 'https://github.com/nickzman/symboliclinker'
+  appcast "https://github.com/nickzman/symboliclinker/releases.atom"
+  name "SymbolicLinker"
+  desc "Service that allows users to make symbolic links in the Finder"
+  homepage "https://github.com/nickzman/symboliclinker"
 
-  service 'SymbolicLinker.service'
+  service "SymbolicLinker.service"
 end

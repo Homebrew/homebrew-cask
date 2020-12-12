@@ -1,10 +1,10 @@
-cask 'smallpdf' do
-  version :latest
+cask "smallpdf" do
+  version "1.24.2"
   sha256 :no_check
 
-  url 'https://download.smallpdf.com/desktop/mac/Smallpdf.dmg'
-  name 'Smallpdf'
-  homepage 'https://smallpdf.com/pdf-reader'
+  url "https://download.smallpdf.com/desktop/mac/Smallpdf.dmg"
+  name "Smallpdf"
+  homepage "https://smallpdf.com/pdf-reader"
 
-  app 'Smallpdf.app'
+  app "Smallpdf.app"
 end

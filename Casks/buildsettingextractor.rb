@@ -1,13 +1,13 @@
-cask 'buildsettingextractor' do
-  version '1.4'
-  sha256 'd13fe380c21ca3231f62bc1f148be0690bf70f27971d5baae9fa6ccdb11b114c'
+cask "buildsettingextractor" do
+  version "1.4.2"
+  sha256 "0ec12a9897178d643120d48403bc6b946fef3ea690c25eaa54d40fb57ab49e6c"
 
   url "https://github.com/dempseyatgithub/BuildSettingExtractor/releases/download/v#{version}/BuildSettingExtractor_#{version}.dmg"
-  appcast 'https://github.com/dempseyatgithub/BuildSettingExtractor/releases.atom'
-  name 'BuildSettingExtractor'
-  homepage 'https://github.com/dempseyatgithub/BuildSettingExtractor'
+  appcast "https://github.com/dempseyatgithub/BuildSettingExtractor/releases.atom"
+  name "BuildSettingExtractor"
+  homepage "https://github.com/dempseyatgithub/BuildSettingExtractor"
 
-  depends_on macos: '>= :mojave'
+  depends_on macos: ">= :mojave"
 
-  app 'BuildSettingExtractor.app'
+  app "BuildSettingExtractor.app"
 end

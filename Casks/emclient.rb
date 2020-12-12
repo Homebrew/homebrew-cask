@@ -1,23 +1,24 @@
-cask 'emclient' do
-  version '7.2.37965'
-  sha256 '3d8e9f7714143adacfcc8256c45beebaae58256a813eb56f46cf3d44d772103f'
+cask "emclient" do
+  version "8.0.3494"
+  sha256 "ec85fdf7c1344fc92f9b04123cf27e466cdaf8297db32702903200b4152be21c"
 
   url "https://cdn-dist.emclient.com/dist/v#{version}_Mac/setup.pkg"
-  appcast 'https://www.emclient.com/release-history?os=mac'
-  name 'eM Client'
-  homepage 'https://www.emclient.com/'
+  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.emclient.com/dist/latest/setup.pkg"
+  name "eM Client"
+  desc "Email client"
+  homepage "https://www.emclient.com/"
 
   auto_updates true
 
-  pkg 'setup.pkg'
+  pkg "setup.pkg"
 
-  uninstall pkgutil: 'com.emclient.mail.client.pkg'
+  uninstall pkgutil: "com.emclient.mail.client.pkg"
 
   zap trash: [
-               '~/Library/Caches/com.emclient.mail.client',
-               '~/Library/Preferences/com.emclient.mail.client.plist',
-               '~/Library/Preferences/com.emclient.mail.repair.plist',
-               '~/Library/Preferences/com.emclient.mail.shared.plist',
-               '~/Library/Saved Application State/com.emclient.mail.client.savedState',
-             ]
+    "~/Library/Caches/com.emclient.mail.client",
+    "~/Library/Preferences/com.emclient.mail.client.plist",
+    "~/Library/Preferences/com.emclient.mail.repair.plist",
+    "~/Library/Preferences/com.emclient.mail.shared.plist",
+    "~/Library/Saved Application State/com.emclient.mail.client.savedState",
+  ]
 end

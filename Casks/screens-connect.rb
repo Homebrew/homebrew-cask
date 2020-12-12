@@ -1,32 +1,32 @@
-cask 'screens-connect' do
-  version '4.9.2,20577:1572284765'
-  sha256 '008d543ff93fbe393cae9f55529fcd5e9ffeb241ac0f67eb7f4e1fc70a6d69e5'
+cask "screens-connect" do
+  version "4.9.5,21585"
+  sha256 "3cc7f6a4b51b42c98c387d54d2c62dbc408e5534f57117b48dc642ffd5e91351"
 
-  # dl.devmate.com/com.edovia.Screens-Connect/ was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.edovia.Screens-Connect/#{version.after_comma.before_colon}/#{version.after_colon}/ScreensConnect-#{version.after_comma.before_colon}.zip"
-  appcast 'https://updates.devmate.com/com.edovia.Screens-Connect.xml'
-  name 'Screens Connect'
-  homepage 'https://screensconnect.com/en/'
+  url "https://updates.edovia.com/com.edovia.screens.connect.mac/ScreensConnect_#{version.before_comma}b#{version.after_comma}.zip"
+  appcast "https://updates.edovia.com/com.edovia.screens.connect.mac/appcast.xml"
+  name "Screens Connect"
+  desc "Remote desktop software"
+  homepage "https://edovia.com/en/screens-connect/"
 
-  depends_on macos: '>= :el_capitan'
+  depends_on macos: ">= :el_capitan"
 
-  app 'Screens Connect.app'
+  app "Screens Connect.app"
 
   # Uninstall script can fail when trying to remove legacy PKGIDS
   # Original discussion: https://github.com/Homebrew/homebrew-cask/pull/8833
-  uninstall quit:      'com.edovia.Screens-Connect',
+  uninstall quit:      "com.edovia.Screens-Connect",
             launchctl: [
-                         'com.edovia.Screens-Connect.launcher',
-                         'com.edovia.screens.connect',
-                       ],
+              "com.edovia.Screens-Connect.launcher",
+              "com.edovia.screens.connect",
+            ],
             script:    {
-                         executable:   "#{appdir}/Screens Connect.app/Contents/Resources/sc-uninstaller.tool",
-                         must_succeed: false,
-                         sudo:         true,
-                       }
+              executable:   "#{appdir}/Screens Connect.app/Contents/Resources/sc-uninstaller.tool",
+              must_succeed: false,
+              sudo:         true,
+            }
 
   zap trash: [
-               '~/Library/Preferences/com.edovia.Screens-Connect.plist',
-               '~/Library/Preferences/com.edovia.ScreensConnect.Shared.plist',
-             ]
+    "~/Library/Preferences/com.edovia.Screens-Connect.plist",
+    "~/Library/Preferences/com.edovia.ScreensConnect.Shared.plist",
+  ]
 end

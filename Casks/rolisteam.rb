@@ -1,12 +1,12 @@
-cask 'rolisteam' do
-  version '1.9.2'
-  sha256 'eeb87c5cefc383845303edad44ea8b08ff808cb9e8ab80804a1172bbf1947a2d'
+cask "rolisteam" do
+  version "1.9.3"
+  sha256 "473c2f26e6a7d3892088f0b9da1b563d86aba1eaa1dd223a79ef1d8c27f18160"
 
   # downloads.sourceforge.net/rolisteam/ was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/rolisteam/rolisteam_v#{version}_MacOs.dmg"
-  appcast 'https://sourceforge.net/projects/rolisteam/rss'
-  name 'Rolisteam'
-  homepage 'https://rolisteam.org/'
+  appcast "https://sourceforge.net/projects/rolisteam/rss"
+  name "Rolisteam"
+  homepage "https://rolisteam.org/"
 
-  app 'rolisteam.app'
+  app "rolisteam.app"
 end

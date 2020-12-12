@@ -1,11 +1,14 @@
-cask 'purevpn' do
-  version :latest
+cask "purevpn" do
+  version "1.6.2"
   sha256 :no_check
 
-  # purevpn-dialer-assets.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url 'https://purevpn-dialer-assets.s3.amazonaws.com/mac/app/purevpn_setup.dmg'
-  name 'PureVPN'
-  homepage 'https://www.purevpn.com/'
+  url "https://purevpn-dialer-assets.s3.amazonaws.com/mac-2.0/packages/Production/PureVPN.pkg",
+      verified: "purevpn-dialer-assets.s3.amazonaws.com/"
+  name "PureVPN"
+  homepage "https://www.purevpn.com/"
 
-  app 'PureVPN.app'
+  pkg "PureVPN.pkg"
+
+  uninstall quit:    "com.purevpn.app.mac",
+            pkgutil: "com.purevpn.mac.installer"
 end

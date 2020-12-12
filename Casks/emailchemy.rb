@@ -1,11 +1,11 @@
-cask 'emailchemy' do
-  version :latest
+cask "emailchemy" do
+  version "14.4"
   sha256 :no_check
 
-  # wksdownload.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url 'https://wksdownload.s3.amazonaws.com/Emailchemy-Mac.dmg'
-  name 'Emailchemy'
-  homepage 'https://weirdkid.com/emailchemy/'
+  # s3.amazonaws.com/wksdownload/ was verified as official when first introduced to the cask
+  url "https://s3.amazonaws.com/wksdownload/emailchemy/Emailchemy-Mac.dmg"
+  name "Emailchemy"
+  homepage "https://weirdkid.com/emailchemy/"
 
-  app 'Emailchemy.app'
+  app "Emailchemy.app"
 end

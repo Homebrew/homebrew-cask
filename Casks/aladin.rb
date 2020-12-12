@@ -1,10 +1,10 @@
-cask 'aladin' do
+cask "aladin" do
   version :latest
   sha256 :no_check
 
-  url 'https://aladin.u-strasbg.fr/java/download/Aladin.dmg'
-  name 'Aladin Desktop'
-  homepage 'https://aladin.u-strasbg.fr/AladinDesktop/'
+  url "https://aladin.u-strasbg.fr/java/download/Aladin.dmg"
+  name "Aladin Desktop"
+  homepage "https://aladin.u-strasbg.fr/AladinDesktop/"
 
-  app 'Aladin.app'
+  app "Aladin.app"
 end

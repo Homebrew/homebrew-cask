@@ -11,18 +11,13 @@
 
 ## Updating a Cask
 
-Notice an application that's out-of-date in Homebrew Cask? In most cases, it's very simple to update it. We have a [script](https://github.com/vitorgalvao/tiny-scripts/blob/master/cask-repair) that will ask for the new version number, and take care of updating the Cask file and submitting a pull request to us:
+Notice an application that's out-of-date in Homebrew Cask? In most cases, it's very simple to update it. We have a command that will accept a new version number and take care of updating the Cask file and submitting a pull request to us:
 
 ```bash
-# install and setup script - only needed once
-brew install vitorgalvao/tiny-scripts/cask-repair
-cask-repair --help
-
-# use to update <outdated_cask>
-cask-repair <outdated_cask>
+brew bump-cask-pr --version <new_version> <outdated_cask>
 ```
 
-If there is a more complicated change, or there is a case where `cask-repair` fails (for example, where a Cask uses a [`url do` block](https://github.com/Homebrew/homebrew-cask-versions/blob/2bf0f13dd49d263ebec0ca56e58ad8458633f789/Casks/vlc-nightly.rb#L5L10) or the [`language` stanza](https://github.com/Homebrew/homebrew-cask/blob/306b8fbd9502036f1ca742f70c569d8677b62403/Casks/firefox.rb#L4L74)), you can also follow the steps in [Adding a Cask](doc/development/adding_a_cask.md) to do the same thing manually. Remember to update the `version` and `sha256` values.
+If you want more control over the PR or are looking for our old tool, install [`cask-repair`](https://github.com/vitorgalvao/tiny-scripts/blob/master/cask-repair) (`brew install vitorgalvao/tiny-scripts/cask-repair`). You can also follow the steps in [Adding a Cask](doc/development/adding_a_cask.md) for more complicated changes.
 
 
 ## Getting Set Up To Contribute
@@ -55,11 +50,11 @@ With a bit of work, you can create a Cask for it. The document [Adding A Cask](d
 
 Some style guidelines:
 
-* All Casks and code should be indented using two spaces (never tabs). When `brew cask style` contradicts this, `style` must be followed.
+* All Casks and code should be indented using two spaces (never tabs). When `brew style` contradicts this, `style` must be followed.
 * There should not be any extraneous comments - the only comments that should be used are the ones explicitly defined in the [Cask Language Reference](doc/cask_language_reference).
 * The stanza order and position of newlines is important to make things easier (See [Stanza order](doc/cask_language_reference/#stanza-order)).
 * Use string manipulations to improve the maintainability of your Cask (See [`version` methods](doc/cask_language_reference/stanzas/version.md#version-methods)).
-* Test your cask using `brew cask audit/style` (See [testing](doc/development/adding_a_cask.md#testing-your-new-cask)).
+* Test your cask using `brew audit/style` (See [testing](doc/development/adding_a_cask.md#testing-your-new-cask)).
 * Make one Pull Request per Cask change.
 * Do not squash commits after updating a Pull Request.
 * Use descriptive commit messages - mention app name and version (ie. `Upgrade Transmission.app to v2.82`).

@@ -1,19 +1,23 @@
-cask 'sunloginclient' do
-  version '10.2.0.28522'
-  sha256 '3b854bff658cf6c514ff007dbb73c61b48187d32b353ff637ed9b25fff7dd78e'
+cask "sunloginclient" do
+  version "10.5.0.31882"
+  sha256 "760fde445f0e7755b584c8f3f9ed84b7fbabcceed9b383de07e10172186d3ea8"
 
-  url "http://dl-cdn.oray.com/sunlogin/mac/SunloginClient_#{version}.dmg"
-  name 'Sunlogin X'
-  name '向日葵 X'
-  homepage 'https://sunlogin.oray.com/'
+  url "https://dl-cdn.oray.com/sunlogin/mac/SunloginClient_#{version}.dmg"
+  name "Sunlogin X"
+  name "向日葵 X"
+  desc "Remote desktop control and monitoring tool"
+  homepage "https://sunlogin.oray.com/"
 
-  pkg 'SunloginClient.pkg'
+  pkg "SunloginClient.pkg"
 
-  uninstall quit:      'com.oray.sunlogin.macclient',
-            pkgutil:   'com.mygreatcompany.pkg.SunloginClient',
+  uninstall quit:      "com.oray.sunlogin.macclient",
+            pkgutil:   "com.oray.sunlogin.client",
             launchctl: [
-                         'com.oray.sunlogin.desktopagent',
-                         'com.oray.sunlogin.helper',
-                         'com.oray.sunlogin.service',
-                       ]
+              "com.oray.sunlogin",
+              "com.oray.sunlogin.agent",
+              "com.oray.sunlogin.desktopagent",
+              "com.oray.sunlogin.helper",
+              "com.oray.sunlogin.service",
+              "com.oray.sunlogin.startup",
+            ]
 end

@@ -1,0 +1,26 @@
+name: Sync labels.
+
+on: label
+
+jobs:
+  sync-labels:
+    if: github.repository == 'Homebrew/homebrew-cask'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: Event Data
+        run: |
+          echo '${{ toJSON(github.event) }}'
+
+      - name: Sync Labels
+        run: |
+          gem install --user-install octokit
+          ./.github/actions/sync/labels.rb '${{ github.repository }}' \
+            Homebrew/homebrew-cask-drivers \
+            Homebrew/homebrew-cask-fonts \
+            Homebrew/homebrew-cask-versions
+        env:
+          GITHUB_TOKEN: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}

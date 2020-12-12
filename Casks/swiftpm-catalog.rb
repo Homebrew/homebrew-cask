@@ -1,13 +1,13 @@
-cask 'swiftpm-catalog' do
-  version '1.0.3-14'
-  sha256 '5cdb2639fa3ac906312b2b6004f4fab9acfcab9c62edb2a260565f7bde0cee21'
+cask "swiftpm-catalog" do
+  version "1.1.4-v22"
+  sha256 "b1434d32eca36c664a5b75e5f8601f0a53e02d86eec9b25f25b475618aa5c9e9"
 
-  url "https://zeezide.com/download/SwiftPM%20Catalog.app-#{version}.zip"
-  appcast 'https://zeezide.com/en/products/swiftpmcatalog/'
-  name 'SwiftPM Catalog'
-  homepage 'https://zeezide.com/en/products/swiftpmcatalog/'
+  url "https://zeezide.com/en/products/swiftpmcatalog/archives/SwiftPM%20Catalog.app-#{version}.zip"
+  appcast "https://zeezide.com/en/products/swiftpmcatalog/"
+  name "SwiftPM Catalog"
+  homepage "https://zeezide.com/en/products/swiftpmcatalog/"
 
-  depends_on macos: '>= :mojave'
+  depends_on macos: ">= :mojave"
 
-  app 'SwiftPM Catalog.app'
+  app "SwiftPM Catalog.app"
 end

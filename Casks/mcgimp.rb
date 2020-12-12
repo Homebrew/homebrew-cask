@@ -1,10 +1,13 @@
-cask 'mcgimp' do
-  version '2.10.18'
-  sha256 'fe79023d1ca11b645c5053ae776ea27f903b799c57f05ac4cc9ae56521972631'
+cask "mcgimp" do
+  version "2.10.22"
+  sha256 "87503501f4af1931296fe199f88afcdb4645dd0bbe4e4ddba4d0060f7417d00c"
 
   url "https://www.partha.com/downloads/GIMP/McGimp-#{version}.app.zip"
-  name 'McGimp'
-  homepage 'https://www.partha.com/'
+  name "McGimp"
+  desc "Recompiled GIMP installation"
+  homepage "https://www.partha.com/"
+
+  depends_on macos: ">= :sierra"
 
   app "McGimp-#{version}.app"
 end

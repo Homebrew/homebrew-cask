@@ -1,12 +1,12 @@
-cask 'xaos' do
-  version '4.1'
-  sha256 'adc6ece52c1df78d5c2ca8c3409a89ef0c0ca3fc222e8c693fb5c2b658c8a934'
+cask "xaos" do
+  version "4.2"
+  sha256 "80b01d8cd10b6cd6d567058acaf9430398e5608f5e179048a4167ecc57b3bd90"
 
   # github.com/xaos-project/XaoS/ was verified as official when first introduced to the cask
   url "https://github.com/xaos-project/XaoS/releases/download/release-#{version}/XaoS-#{version}.dmg"
-  appcast 'https://github.com/xaos-project/XaoS/releases.atom'
-  name 'GNU XaoS'
-  homepage 'https://xaos-project.github.io/'
+  appcast "https://github.com/xaos-project/XaoS/releases.atom"
+  name "GNU XaoS"
+  homepage "https://xaos-project.github.io/"
 
-  app 'XaoS.app'
+  app "XaoS.app"
 end

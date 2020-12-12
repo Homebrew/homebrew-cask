@@ -1,11 +1,12 @@
-cask 'taskade' do
-  version '3.1.1'
-  sha256 '2ef44ffc26d16a3f35fbf742f6add8a97b17ba1e0700dd24fc316d5307c6b2a9'
+cask "taskade" do
+  version "3.3.0"
+  sha256 "c99a2e45fb0a2f36156b86e5cf2670da11d9084ba394c2bc1aed337f35bf43b4"
 
-  url "https://apps.taskade.com/updates/Taskade-#{version}-mac.zip"
-  appcast 'https://www.taskade.com/downloads'
-  name 'Taskade'
-  homepage 'https://www.taskade.com/'
+  url "https://apps.taskade.com/updates/Taskade-#{version}.dmg"
+  appcast "https://www.taskade.com/downloads"
+  name "Taskade"
+  desc "Task manager for teams"
+  homepage "https://www.taskade.com/"
 
-  app 'Taskade.app'
+  app "Taskade.app"
 end

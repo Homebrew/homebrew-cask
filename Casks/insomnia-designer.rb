@@ -1,23 +1,24 @@
-cask 'insomnia-designer' do
-  version '2020.3.3'
-  sha256 '2bc0b19dda57ac4299a14c0e8e887c573415a1fa590be6bea93da5ed3c7af435'
+cask "insomnia-designer" do
+  version "2020.5.2"
+  sha256 "a9cf020f15e8903656ade25508e8b8af172561ee84776c05a8b36713866d3371"
 
   # github.com/Kong/insomnia/ was verified as official when first introduced to the cask
   url "https://github.com/Kong/insomnia/releases/download/designer%40#{version}/Insomnia.Designer-#{version}.dmg"
-  appcast 'https://api.insomnia.rest/changelog.json?app=com.insomnia.designer'
-  name 'Insomnia Designer'
-  homepage 'https://insomnia.rest/'
+  appcast "https://api.insomnia.rest/changelog.json?app=com.insomnia.designer"
+  name "Insomnia Designer"
+  desc "API design platform for GraphQL and REST"
+  homepage "https://insomnia.rest/"
 
   auto_updates true
 
-  app 'Insomnia Designer.app'
+  app "Insomnia Designer.app"
 
   zap trash: [
-               '~/Library/Application Support/Insomnia Designer',
-               '~/Library/Caches/com.insomnia.designer',
-               '~/Library/Caches/com.insomnia.designer.ShipIt',
-               '~/Library/Logs/Insomnia Designer',
-               '~/Library/Preferences/com.insomnia.designer.plist',
-               '~/Library/Saved Application State/com.insomnia.designer.savedState',
-             ]
+    "~/Library/Application Support/Insomnia Designer",
+    "~/Library/Caches/com.insomnia.designer",
+    "~/Library/Caches/com.insomnia.designer.ShipIt",
+    "~/Library/Logs/Insomnia Designer",
+    "~/Library/Preferences/com.insomnia.designer.plist",
+    "~/Library/Saved Application State/com.insomnia.designer.savedState",
+  ]
 end

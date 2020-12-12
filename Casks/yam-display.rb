@@ -1,16 +1,16 @@
-cask 'yam-display' do
-  version '1.8.4'
-  sha256 'b3ba345681f9f6bf7ab153ff2eafc9a3578f9d3b31060bdbcb921e6c2c7c492a'
+cask "yam-display" do
+  version "1.8.8"
+  sha256 "9d7ea3042119dbbc83d1a243e4fb4c3f2795678d4a5fe51fd67f4987e6ccb859"
 
   url "https://www.yamdisplay.com/app/YamDisplay#{version}.zip"
-  appcast 'https://www.yamdisplay.com/app/appcast.xml'
-  name 'Yam Display'
-  homepage 'https://www.yamdisplay.com/'
+  appcast "https://www.yamdisplay.com/app/appcast.xml"
+  name "Yam Display"
+  homepage "https://www.yamdisplay.com/"
 
-  app 'Yam Display.app'
+  app "Yam Display.app"
 
   zap trash: [
-               '~/Library/Caches/com.yamstu.yamdisplaymac',
-               '~/Library/Preferences/com.yamstu.yamdisplaymac.plist',
-             ]
+    "~/Library/Caches/com.yamstu.yamdisplaymac",
+    "~/Library/Preferences/com.yamstu.yamdisplaymac.plist",
+  ]
 end

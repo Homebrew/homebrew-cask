@@ -1,17 +1,17 @@
-cask 'gameshow' do
-  version :latest
+cask "gameshow" do
+  version "4.5.1"
   sha256 :no_check
 
-  url 'http://gameshow.net/downloads/Gameshow.dmg'
-  name 'Gameshow'
-  homepage 'http://gameshow.net/'
+  url "http://gameshow.net/downloads/Gameshow.dmg"
+  name "Gameshow"
+  homepage "http://gameshow.net/"
 
-  app 'Gameshow.app'
+  app "Gameshow.app"
 
   zap trash: [
-               '~/Library/Preferences/GameShow',
-               '~/Library/Application Support/Gameshow',
-             ]
+    "~/Library/Preferences/GameShow",
+    "~/Library/Application Support/Gameshow",
+  ]
 
   caveats do
     discontinued

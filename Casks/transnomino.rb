@@ -1,13 +1,14 @@
-cask 'transnomino' do
-  version '4.0'
-  sha256 'f19444fec6076fa4165d79a4c931ee023651502426df4beb46ff5994c6958426'
+cask "transnomino" do
+  version "5.3.0"
+  sha256 "01f408e71385d22cab762fddee6e8f4fe7f116d05e589550c6f6129a82dc982f"
 
   url "https://transnomino.bastiaanverreijt.com/download/Transnomino-#{version}.dmg"
-  appcast 'https://transnomino.bastiaanverreijt.com/'
-  name 'Transnomino'
-  homepage 'https://transnomino.bastiaanverreijt.com/'
+  appcast "https://transnomino.bastiaanverreijt.com/"
+  name "Transnomino"
+  desc "Batch rename utility"
+  homepage "https://transnomino.bastiaanverreijt.com/"
 
   auto_updates true
 
-  app 'Transnomino.app'
+  app "Transnomino.app"
 end

@@ -1,17 +1,18 @@
-cask 'responsively' do
-  version '0.8.0'
-  sha256 '767b1789a0e8ad9d740817d37eeaa3c8c29426b5d3031cb9b1ab87012f728108'
+cask "responsively" do
+  version "0.15.0"
+  sha256 "db01fb5e333056fe6cf4945d677b57190e82f6e26d4524277ef06c3df333f135"
 
-  # github.com/manojVivek/responsively-app/ was verified as official when first introduced to the cask
-  url "https://github.com/manojVivek/responsively-app/releases/download/v#{version}/ResponsivelyApp-#{version}.dmg"
-  appcast 'https://github.com/manojVivek/responsively-app/releases.atom'
-  name 'Responsively'
-  homepage 'https://manojvivek.github.io/responsively-app/'
+  # github.com/responsively-org/responsively-app/ was verified as official when first introduced to the cask
+  url "https://github.com/responsively-org/responsively-app/releases/download/v#{version}/ResponsivelyApp-#{version}.dmg"
+  appcast "https://github.com/responsively-org/responsively-app/releases.atom"
+  name "Responsively"
+  desc "Modified browser that helps in responsive web development"
+  homepage "https://responsively.app/"
 
-  app 'ResponsivelyApp.app'
+  app "ResponsivelyApp.app"
 
   zap trash: [
-               '~/Library/Application Support/ResponsivelyApp',
-               '~/Library/Preferences/app.responsively.plist',
-             ]
+    "~/Library/Application Support/ResponsivelyApp",
+    "~/Library/Preferences/app.responsively.plist",
+  ]
 end

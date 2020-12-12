@@ -1,13 +1,13 @@
-cask 'mcreator' do
-  version '2020.3'
-  sha256 'd3c4b39886ae70f10592502c02834b5ddfcadc4c52c4eb062cff24fa404c691a'
+cask "mcreator" do
+  version "2020.5"
+  sha256 "370b1669fb8a9a596c47cb23d315a2b7241b22bb46482e4deba00a5c61ea3a44"
 
   url "https://mcreator.net/repository/#{version.dots_to_hyphens}/MCreator%20#{version}%20Mac%2064bit.dmg"
-  appcast 'https://mcreator.net/changelog'
-  name 'MCreator'
-  homepage 'https://mcreator.net/'
+  appcast "https://mcreator.net/download"
+  name "MCreator"
+  homepage "https://mcreator.net/"
 
-  app 'MCreator.app'
+  app "MCreator.app"
 
-  zap trash: '~/.mcreator'
+  zap trash: "~/.mcreator"
 end

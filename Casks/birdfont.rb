@@ -1,21 +1,22 @@
-cask 'birdfont' do
-  if MacOS.version <= :el_capitan
-    version '2.19.4'
-    sha256 '013d9c42c2252b57079453bd27e4c18dbbc09eda55563ff1516fd079c0499f76'
-  elsif MacOS.version <= :mojave
-    version '4.3.0'
-    sha256 'cc0055ab21b127c50acca9aa14475f9dbff299ce4c4908a7e6246657f2729f62'
+cask "birdfont" do
+  if MacOS.version <= :mojave
+    version "4.8.1"
+    sha256 "a970a24b48aeff5a93152ef46c6258920ab6884ca4192444aaf2cfcd894d6376"
+  elsif MacOS.version <= :catalina
+    version "4.8.0"
+    sha256 "d70ae1028772233f26a52075a0104328394114f7c2e2bc257ec4dede818f94df"
   else
-    version '4.3.1'
-    sha256 '092eebc6ce12dd6efddc0e6d47844d913211360b51d4c19758e7e646096742f7'
+    version "4.8.7"
+    sha256 "97113180a24c72a340fce0911d456ebc75be1cf7f35d55dc9ba21655320d9166"
   end
 
   url "https://birdfont.org/download/birdfont-#{version}-free.dmg"
-  appcast 'https://birdfont.org/purchase.php'
-  name 'BirdFont'
-  homepage 'https://birdfont.org/'
+  appcast "https://birdfont.org/purchase.php"
+  name "BirdFont"
+  desc "Free font editor"
+  homepage "https://birdfont.org/"
 
-  depends_on macos: '>= :el_capitan'
+  depends_on macos: ">= :el_capitan"
 
-  app 'BirdFontNonCommercial.app'
+  app "BirdFontNonCommercial.app"
 end

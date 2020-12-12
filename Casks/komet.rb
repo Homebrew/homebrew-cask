@@ -1,19 +1,19 @@
-cask 'komet' do
-  version '0.9.1'
-  sha256 '995d83abf9d30bbf27c0b41bdbcf1e09ec84d020cf9024b5ff15209393b43680'
+cask "komet" do
+  version "1.0"
+  sha256 "081ab6dd43b9ca53da2b85e1b0ef4904f2d243a78a4e1709e2bd04126c0ea196"
 
-  url "https://zgcoder.net/software/komet/komet_#{version}.zip"
-  appcast 'https://zgcoder.net/software/komet/appcast.xml'
-  name 'Komet'
-  homepage 'https://zgcoder.net/#komet'
+  url "https://zgcoder.net/software/komet/Komet_#{version}.zip"
+  appcast "https://zgcoder.net/software/komet/appcast.xml"
+  name "Komet"
+  homepage "https://zgcoder.net/#komet"
 
   auto_updates true
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :mojave"
 
-  app 'Komet.app'
+  app "Komet.app"
 
   zap trash: [
-               '~/Library/Preferences/org.zgcoder.Komet.plist',
-               '~/Library/Caches/org.zgcoder.Komet',
-             ]
+    "~/Library/Preferences/org.zgcoder.Komet.plist",
+    "~/Library/Caches/org.zgcoder.Komet",
+  ]
 end

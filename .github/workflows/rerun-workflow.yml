@@ -1,0 +1,38 @@
+name: Re-run Workflow
+
+on:
+  workflow_run:
+    workflows:
+      - CI
+    types:
+      - completed
+  pull_request_target:
+    types:
+      - closed
+      - labeled
+      - unlabeled
+  schedule:
+    - cron: '0 */3 * * *' # every 3 hours
+
+jobs:
+  rerun-workflow:
+    if: >
+      startsWith(github.repository, 'Homebrew/') && 
+      (
+        github.event.label.name == 'ci-requeue' ||
+        github.event.label.name == 'ci-retry' ||
+        github.event.label.name == 'ci-skip-appcast' ||
+        github.event.label.name == 'ci-skip-install' ||
+        github.event.label.name == 'ci-syntax-only' ||
+        !github.event.label.name
+      )
+    runs-on: ubuntu-latest
+    steps:
+      - name: Re-run CI workflow
+        uses: reitermarkus/rerun-workflow@e2647e8885422412d5acbd61f9add5b1e77ad3ab
+        with:
+          token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+          once-label: ci-requeue
+          continuous-label: ci-retry
+          trigger-labels: ci-skip-appcast,ci-skip-install,ci-syntax-only
+          workflow: ci.yml

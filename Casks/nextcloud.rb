@@ -1,21 +1,37 @@
-cask 'nextcloud' do
+cask "nextcloud" do
   if MacOS.version <= :el_capitan
-    version '2.6.5.20200710-legacy'
-    sha256 '4c67e50361dd5596fb884002d1ed907fe109d607fba2cabe07e505addd164519'
+    version "2.6.5.20200710-legacy"
+    sha256 "4c67e50361dd5596fb884002d1ed907fe109d607fba2cabe07e505addd164519"
+
+    # github.com/nextcloud/desktop/ was verified as official when first introduced to the cask
+    url "https://github.com/nextcloud/desktop/releases/download/v#{version.major_minor_patch}/Nextcloud-#{version}.pkg"
   else
-    version '2.6.5.20200710'
-    sha256 '6fce78bd01ee9e5a1b9521a45eda5d713b3a2681fd2f5b6d6a9326ff9b5b94fd'
+    version "3.0.3"
+    sha256 "272e968cc5f08fab30b58677eadbc7fbd9d28c68d09daadc1869eba90f83d512"
+
+    # github.com/nextcloud/desktop/ was verified as official when first introduced to the cask
+    url "https://github.com/nextcloud/desktop/releases/download/v#{version}/Nextcloud-#{version}.pkg"
   end
 
-  url "https://download.nextcloud.com/desktop/releases/Mac/Installer/Nextcloud-#{version}.pkg"
-  appcast 'https://download.nextcloud.com/desktop/releases/Mac/Installer/'
-  name 'Nextcloud'
-  homepage 'https://nextcloud.com/'
+  appcast "https://github.com/nextcloud/desktop/releases.atom"
+  name "Nextcloud"
+  desc "Desktop sync client for Nextcloud software products"
+  homepage "https://nextcloud.com/"
 
-  depends_on macos: '>= :yosemite'
+  depends_on macos: ">= :yosemite"
 
   pkg "Nextcloud-#{version}.pkg"
   binary "#{appdir}/nextcloud.app/Contents/MacOS/nextcloudcmd"
 
-  uninstall pkgutil: 'com.nextcloud.desktopclient'
+  uninstall pkgutil: "com.nextcloud.desktopclient"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.nextcloud.desktopclient.FinderSyncExt",
+    "~/Library/Application Support/Nextcloud",
+    "~/Library/Caches/Nextcloud",
+    "~/Library/Containers/com.nextcloud.desktopclient.FinderSyncExt",
+    "~/Library/Group Containers/com.nextcloud.desktopclient",
+    "~/Library/Preferences/com.nextcloud.desktopclient.plist",
+    "~/Library/Preferences/Nextcloud",
+  ]
 end

@@ -1,18 +1,19 @@
-cask 'pastebot' do
-  version '2.3.0'
-  sha256 '4e5f981d49da996cc4fb9ee04e443f20f4b1fb5012c742545f120f2ba8c2bc30'
+cask "pastebot" do
+  version "2.4"
+  sha256 "da7b93ca13110fcc4f2adc267c287a62692d25c7a4b09f14e849c5283bb898af"
 
   # tapbots.net/ was verified as official when first introduced to the cask
   url "https://tapbots.net/pastebot#{version.major}/Pastebot.dmg"
-  name 'Pastebot'
-  homepage 'https://tapbots.com/pastebot/'
+  name "Pastebot"
+  desc "Workflow application to improve productivity"
+  homepage "https://tapbots.com/pastebot/"
 
-  depends_on macos: '>= :high_sierra'
+  depends_on macos: ">= :mojave"
 
-  app 'Pastebot.app'
+  app "Pastebot.app"
 
   zap delete: [
-                "~/Library/Containers/com.tapbots.Pastebot#{version.major}Mac",
-                "~/Library/Preferences/com.tapbots.Pastebot#{version.major}Mac.plist",
-              ]
+    "~/Library/Containers/com.tapbots.Pastebot#{version.major}Mac",
+    "~/Library/Preferences/com.tapbots.Pastebot#{version.major}Mac.plist",
+  ]
 end

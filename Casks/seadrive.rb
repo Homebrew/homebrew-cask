@@ -1,12 +1,13 @@
-cask 'seadrive' do
-  version '2.0.4'
-  sha256 '51e6b7588a2c3d1a3b8141890edf3ae4ae237b1162eeee7f7becff66a6aac6da'
+cask "seadrive" do
+  version "2.0.9"
+  sha256 "8c0de67f4244e8a2da0159606e9d347bf2932d42e23b5be24f1a3cd9106a071a"
 
   # download.seadrive.org/ was verified as official when first introduced to the cask
   url "https://download.seadrive.org/seadrive-#{version}.dmg"
-  appcast 'https://www.seafile.com/en/download/'
-  name 'Seadrive'
-  homepage 'https://www.seafile.com/en/home/'
+  appcast "https://www.seafile.com/en/download/"
+  name "Seadrive"
+  desc "Manual for Seafile server"
+  homepage "https://www.seafile.com/en/home/"
 
-  app 'Seadrive.app'
+  app "Seadrive.app"
 end

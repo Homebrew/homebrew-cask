@@ -1,21 +1,22 @@
-cask 'sonic-visualiser' do
-  version '4.1,2719'
-  sha256 '31d0fe9bb3403de07136411bb7f82c1ebd6cc6fab04bc2756048226e5ca20500'
+cask "sonic-visualiser" do
+  version "4.2"
+  sha256 "2eedac658572e570366f6658850a7830e3c56e8be4ccb2de63cd88a8948468d8"
 
-  # code.soundsoftware.ac.uk/ was verified as official when first introduced to the cask
-  url "https://code.soundsoftware.ac.uk/attachments/download/#{version.after_comma}/Sonic%20Visualiser-#{version.before_comma}.dmg"
-  appcast 'https://code.soundsoftware.ac.uk/projects/sonic-visualiser/repository/raw/CHANGELOG'
-  name 'Sonic Visualiser'
-  homepage 'https://www.sonicvisualiser.org/'
+  # bintray.com/sonic-visualiser was verified as official when first introduced to the cask
+  url "https://bintray.com/sonic-visualiser/sonic-visualiser/download_file?file_path=Sonic+Visualiser-#{version}.dmg"
+  appcast "https://code.soundsoftware.ac.uk/projects/sonic-visualiser/repository/raw/CHANGELOG"
+  name "Sonic Visualiser"
+  desc "Visualisation, analysis, and annotation of music audio recordings"
+  homepage "https://www.sonicvisualiser.org/"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'Sonic Visualiser.app'
+  app "Sonic Visualiser.app"
 
   zap trash: [
-               '~/Library/Saved Application State/org.sonicvisualiser.SonicVisualiser.savedState',
-               '~/Library/Preferences/org.sonicvisualiser.Sonic Visualiser.plist',
-               '~/Library/Preferences/org.sonicvisualiser.SonicVisualiser.plist',
-               '~/Library/Application Support/sonic-visualiser/',
-             ]
+    "~/Library/Saved Application State/org.sonicvisualiser.SonicVisualiser.savedState",
+    "~/Library/Preferences/org.sonicvisualiser.Sonic Visualiser.plist",
+    "~/Library/Preferences/org.sonicvisualiser.SonicVisualiser.plist",
+    "~/Library/Application Support/sonic-visualiser/",
+  ]
 end

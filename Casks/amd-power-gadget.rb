@@ -1,11 +1,12 @@
-cask 'amd-power-gadget' do
-  version '0.6.4'
-  sha256 '51ad04b1e8407f65cde123d8c5a7cf1b3dfaf560e17ec8e9f50f4652251d7ab8'
+cask "amd-power-gadget" do
+  version "0.6.6"
+  sha256 "2a09858baf24ea757fada5243c20c94bfc92054b6ba8dd04e0e77c423915fe96"
 
   url "https://github.com/trulyspinach/SMCAMDProcessor/releases/download/#{version}/AMD.Power.Gadget.app.zip"
-  appcast 'https://github.com/trulyspinach/SMCAMDProcessor/releases.atom'
-  name 'AMD Power Gadget'
-  homepage 'https://github.com/trulyspinach/SMCAMDProcessor'
+  appcast "https://github.com/trulyspinach/SMCAMDProcessor/releases.atom"
+  name "AMD Power Gadget"
+  desc "Power management, monitoring and VirtualSMC plugin for AMD processors"
+  homepage "https://github.com/trulyspinach/SMCAMDProcessor"
 
-  app 'AMD Power Gadget.app'
+  app "AMD Power Gadget.app"
 end

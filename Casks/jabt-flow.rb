@@ -1,15 +1,15 @@
-cask 'jabt-flow' do
-  version '1.8.6'
-  sha256 '1ff9593b6ecd5c9cebaf9041e7302b6891c4911a52006741c663eb61903352e9'
+cask "jabt-flow" do
+  version "1.10.0"
+  sha256 "b1b990aefc8528e17d112a0f00e1c5625b04f6a068020973f850f907e36ba9e5"
 
   # Download page is at https://createwithflow.com/releases/
   # createwithflow-updates.s3-us-west-2.amazonaws.com/ was verified as official when first introduced to the cask
   url "https://createwithflow-updates.s3-us-west-2.amazonaws.com/Flow#{version.no_dots}_.zip"
-  appcast 'https://createwithflow-updates.s3-us-west-2.amazonaws.com/appcast.xml'
-  name 'Flow'
-  homepage 'https://createwithflow.com/'
+  appcast "https://createwithflow-updates.s3-us-west-2.amazonaws.com/appcast.xml"
+  name "Flow"
+  homepage "https://createwithflow.com/"
 
   auto_updates true
 
-  app 'Flow.app'
+  app "Flow.app"
 end

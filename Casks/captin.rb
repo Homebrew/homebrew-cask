@@ -1,19 +1,19 @@
-cask 'captin' do
-  version '1.1.0,119:1585846526'
-  sha256 '79e75a8a3b6b6d576b9f06564bca033d7f2fe6b456484d15043a08511b495491'
+cask "captin" do
+  version "1.1.1,129:1607066962"
+  sha256 "47d82111549f7751263411bd6b3af6ad31b343de5d254d74562e57d3df6f1efe"
 
   # dl.devmate.com/com.100hps.captin/ was verified as official when first introduced to the cask
   url "https://dl.devmate.com/com.100hps.captin/#{version.after_comma.before_colon}/#{version.after_colon}/Captin-#{version.after_comma.before_colon}.dmg"
-  appcast 'https://updates.devmate.com/com.100hps.captin.xml'
-  name 'Captin'
-  homepage 'http://captin.strikingly.com/'
+  appcast "https://updates.devmate.com/com.100hps.captin.xml"
+  name "Captin"
+  homepage "http://captin.strikingly.com/"
 
-  app 'Captin.app'
+  app "Captin.app"
 
-  uninstall quit: 'com.100hps.captin'
+  uninstall quit: "com.100hps.captin"
 
   zap trash: [
-               '~/Library/Caches/com.100hps.captin',
-               '~/Library/Preferences/com.100hps.captin.plist',
-             ]
+    "~/Library/Caches/com.100hps.captin",
+    "~/Library/Preferences/com.100hps.captin.plist",
+  ]
 end

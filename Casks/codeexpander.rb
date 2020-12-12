@@ -1,12 +1,12 @@
-cask 'codeexpander' do
-  version '3.5.0'
-  sha256 '835032d575715f57f1949156d2a7a441165ae17c398c45f30d6d58179faa3f02'
+cask "codeexpander" do
+  version "3.5.4"
+  sha256 "8f62f78502da7196e3505f7db195d4fe0f1272629a098e8fa9cbb45fdb18dc80"
 
   url "https://github.com/oncework/codeexpander/releases/download/#{version.major_minor}.x/CodeExpander-#{version}.dmg"
-  appcast 'https://github.com/oncework/codeexpander/releases.atom',
+  appcast "https://github.com/oncework/codeexpander/releases.atom",
           must_contain: version.major_minor
-  name 'CodeExpander'
-  homepage 'https://github.com/oncework/codeexpander'
+  name "CodeExpander"
+  homepage "https://github.com/oncework/codeexpander"
 
-  app 'CodeExpander.app'
+  app "CodeExpander.app"
 end

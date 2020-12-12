@@ -1,19 +1,22 @@
-cask 'strawberry' do
-  version '0.6.13'
-  sha256 'cdf2d8cfc6189f9d20d83c51d880779bb71841787f31ec351f8a899029bd348c'
+cask "strawberry" do
+  version "0.8.4"
+  sha256 "23982f1f8b94cb2abf3d8d9e277abd0a0580ea3fa5673c0632970192ecea7bf9"
 
   # github.com/strawberrymusicplayer/strawberry/ was verified as official when first introduced to the cask
   url "https://github.com/strawberrymusicplayer/strawberry/releases/download/#{version}/strawberry-#{version}.dmg"
-  appcast 'https://github.com/strawberrymusicplayer/strawberry/releases.atom'
-  name 'Strawberry'
-  homepage 'https://www.strawberrymusicplayer.org/'
+  appcast "https://github.com/strawberrymusicplayer/strawberry/releases.atom"
+  name "Strawberry"
+  desc "Music player and music collection organizer"
+  homepage "https://www.strawberrymusicplayer.org/"
 
-  app 'strawberry.app'
+  depends_on macos: ">= :catalina"
+
+  app "strawberry.app"
 
   zap trash: [
-               '~/Library/Application Support/Strawberry',
-               '~/Library/Caches/Strawberry',
-               '~/Library/Preferences/org.strawberrymusicplayer.Strawberry.plist',
-               '~/Library/Saved Application State/org.strawberrymusicplayer.strawberry.savedState',
-             ]
+    "~/Library/Application Support/Strawberry",
+    "~/Library/Caches/Strawberry",
+    "~/Library/Preferences/org.strawberrymusicplayer.Strawberry.plist",
+    "~/Library/Saved Application State/org.strawberrymusicplayer.strawberry.savedState",
+  ]
 end

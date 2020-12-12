@@ -1,14 +1,15 @@
-cask 'rapidweaver' do
-  version '8.6.2,20836'
-  sha256 'fb138240beaa0f0f27f4ba2314db8eadc36d168585b8ec366928fb9ed2cdad0b'
+cask "rapidweaver" do
+  version "8.7,20860"
+  sha256 "ade685d615339c208331a54e7354335178f0e54299eb424310c9a1a4ba65e0aa"
 
   # github.com/realmacsoftware/ was verified as official when first introduced to the cask
   url "https://github.com/realmacsoftware/RapidWeaver#{version.major}-releases/releases/download/#{version.before_comma}-%28#{version.after_comma}%29/RapidWeaver#{version.major}.zip"
   appcast "https://github.com/realmacsoftware/RapidWeaver#{version.major}-releases/releases.atom"
-  name 'RapidWeaver'
-  homepage 'https://www.realmacsoftware.com/rapidweaver/'
+  name "RapidWeaver"
+  desc "Web design software"
+  homepage "https://www.realmacsoftware.com/rapidweaver/"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
   app "RapidWeaver #{version.major}.app"
 end

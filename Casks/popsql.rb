@@ -1,10 +1,10 @@
-cask 'popsql' do
-  version :latest
+cask "popsql" do
+  version "1.0.32"
   sha256 :no_check
 
-  url 'https://get.popsql.io/download/mac'
-  name 'PopSQL'
-  homepage 'https://popsql.io/'
+  url "https://get.popsql.io/download/mac"
+  name "PopSQL"
+  homepage "https://popsql.io/"
 
-  app 'PopSQL.app'
+  app "PopSQL.app"
 end

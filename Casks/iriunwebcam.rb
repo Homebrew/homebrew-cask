@@ -1,16 +1,16 @@
-cask 'iriunwebcam' do
-  version '2.3.3'
-  sha256 '6bc44b7f054042ade322de0d4aa4628d2112509ce3c87307294def474a9c871c'
+cask "iriunwebcam" do
+  version "2.4.2"
+  sha256 "047a0568dc3f96ffac7dedd520bab6f71da153a7409561cc87c6872167a589eb"
 
   # 1758658189.rsc.cdn77.org/ was verified as official when first introduced to the cask
   url "https://1758658189.rsc.cdn77.org/IriunWebcam-#{version}.pkg"
-  appcast 'https://iriun.com/'
-  name 'Iriun'
-  homepage 'https://iriun.com/'
+  appcast "https://iriun.com/"
+  name "Iriun"
+  homepage "https://iriun.com/"
 
   pkg "IriunWebcam-#{version}.pkg"
 
-  uninstall quit:      'com.iriun.webcam',
-            pkgutil:   'com.iriun.*',
-            launchctl: 'com.iriun.cmio.DPA.camera'
+  uninstall quit:      "com.iriun.webcam",
+            pkgutil:   "com.iriun.*",
+            launchctl: "com.iriun.cmio.DPA.camera"
 end

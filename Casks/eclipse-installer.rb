@@ -1,12 +1,12 @@
-cask 'eclipse-installer' do
-  version '4.16.0,2020-06:R'
-  sha256 '523ba12b8499397f991f249ba981a531420ce132a96cd16f386a6222555290e0'
+cask "eclipse-installer" do
+  version "4.17.0,2020-09:R"
+  sha256 "0e87c072c2c5c203a21ca5a14899aa28ce9c3331b60157083a85ea17e12509bb"
 
   url "https://eclipse.org/downloads/download.php?file=/oomph/epp/#{version.after_comma.before_colon}/#{version.after_colon}/eclipse-inst-mac64.tar.gz&r=1"
-  name 'Eclipse Installer'
-  homepage 'https://eclipse.org/'
+  name "Eclipse Installer"
+  homepage "https://eclipse.org/"
 
-  app 'Eclipse Installer.app'
+  app "Eclipse Installer.app"
 
   caveats do
     depends_on_java

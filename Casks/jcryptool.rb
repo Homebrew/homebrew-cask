@@ -1,16 +1,18 @@
-cask 'jcryptool' do
-  version '0.9.10'
-  sha256 '8c6e6b3fe803f40e7c5e9a910a47e6c3c5f0f5a8884932dd253e63f8b83194af'
+cask "jcryptool" do
+  version "1.0.1"
+  sha256 "6e63d68b2d2fd4600368f6e325bfeb6b3fae56397c54d119f67accf41cc8268c"
 
-  url "https://www.cryptool.org/jctdownload/Builds/downloads/stable/jcryptool-#{version}-macosx.cocoa.x86_64.tar.gz"
-  appcast 'https://www.cryptool.org/en/jct-downloads',
-          must_contain: version.major_minor
-  name 'JCrypTool'
-  homepage 'https://www.cryptool.org/en/jcryptool'
+  # github.com/jcryptool/core/ was verified as official when first introduced to the cask
+  url "https://github.com/jcryptool/core/releases/download/#{version}/JCrypTool-#{version}-macOS-64bit.tar.gz"
+  appcast "https://github.com/jcryptool/core/releases.atom",
+          must_contain: version.after_comma
+  name "JCrypTool"
+  desc "Apply and analyze cryptographic algorithms"
+  homepage "https://www.cryptool.org/en/jct/downloads"
 
-  app 'jcryptool.app'
+  app "JCrypTool.app"
 
   caveats do
-    depends_on_java('8')
+    depends_on_java("11")
   end
 end

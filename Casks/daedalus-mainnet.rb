@@ -1,21 +1,24 @@
-cask 'daedalus-mainnet' do
-  version '1.1.0,12849'
-  sha256 '73c69357b568438b37c83a77eb9e5f79f683255de4d49bc9d0f84a3b4183ab34'
+cask "daedalus-mainnet" do
+  version "3.0.0,15592"
+  sha256 "12756c615d3447eb6558a5d33d1b508eb8ec86fae2c57a2d238b9aad674dbde4"
 
-  # update-cardano-mainnet.iohk.io/ was verified as official when first introduced to the cask
-  url "https://update-cardano-mainnet.iohk.io/daedalus-#{version.before_comma}-mainnet-#{version.after_comma}.pkg"
-  name 'Daedalus Mainnet'
-  homepage 'https://daedaluswallet.io/'
+  url "https://update-cardano-mainnet.iohk.io/daedalus-#{version.before_comma}-mainnet-#{version.after_comma}.pkg",
+      verified: "update-cardano-mainnet.iohk.io/"
+  appcast "https://update-cardano-mainnet.iohk.io/daedalus-latest-version.json"
+  name "Daedalus Mainnet"
+  desc "Cryptocurrency wallet for ada on the Cardano blockchain"
+  homepage "https://daedaluswallet.io/"
 
-  depends_on macos: '>= :high_sierra'
+  auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   pkg "daedalus-#{version.before_comma}-mainnet-#{version.after_comma}.pkg"
 
-  uninstall pkgutil: 'org.Daedalusmainnet.pkg'
+  uninstall pkgutil: "org.Daedalusmainnet.pkg"
 
   zap trash: [
-               '~/Library/Application Support/Daedalus Mainnet',
-               '~/Library/Preferences/com.electron.daedalus-mainnet.plist',
-               '~/Library/Saved Application State/com.electron.daedalus-mainnet.savedState',
-             ]
+    "~/Library/Application Support/Daedalus Mainnet",
+    "~/Library/Preferences/com.electron.daedalus-mainnet.plist",
+    "~/Library/Saved Application State/com.electron.daedalus-mainnet.savedState",
+  ]
 end

@@ -1,20 +1,23 @@
-cask 'protonmail-bridge' do
-  version '1.2.7'
-  sha256 '85d45e608e0ad8f7d9aba18d58546a958f970f8c564699bdff6aceb554a2f2f7'
+cask "protonmail-bridge" do
+  version "1.5.2"
+  sha256 :no_check
 
-  url 'https://protonmail.com/download/Bridge-Installer.dmg'
-  appcast 'https://protonmail.com/download/current_version_darwin.json'
-  name 'ProtonMail Bridge'
-  homepage 'https://protonmail.com/bridge/'
+  url "https://protonmail.com/download/Bridge-Installer.dmg"
+  appcast "https://protonmail.com/download/current_version_darwin.json"
+  name "ProtonMail Bridge"
+  desc "Bridges ProtonMail to email clients supporting IMAP and SMTP protocols"
+  homepage "https://protonmail.com/bridge/"
 
-  app 'ProtonMail Bridge.app'
+  auto_updates true
 
-  uninstall launchctl: 'ProtonMail Bridge',
-            quit:      'com.protonmail.bridge'
+  app "ProtonMail Bridge.app"
+
+  uninstall launchctl: "ProtonMail Bridge",
+            quit:      "com.protonmail.bridge"
 
   zap trash: [
-               '~/Library/Application Support/protonmail',
-               '~/Library/Caches/protonmail',
-               '~/Library/Caches/ProtonMail Bridge',
-             ]
+    "~/Library/Application Support/protonmail",
+    "~/Library/Caches/protonmail",
+    "~/Library/Caches/ProtonMail Bridge",
+  ]
 end

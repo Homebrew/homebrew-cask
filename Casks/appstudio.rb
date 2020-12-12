@@ -1,11 +1,13 @@
-cask 'appstudio' do
-  version :latest
-  sha256 :no_check
+cask "appstudio" do
+  version "8.4.2.0"
+  sha256 "f6500de4c4d34625b4892397070d4f752a407ab213b8282554140742024f2719"
 
-  # dl.dropboxusercontent.com/s/ojbaoqbg6ffneyl/ was verified as official when first introduced to the cask
-  url 'https://dl.dropboxusercontent.com/s/ojbaoqbg6ffneyl/AppStudio.dmg'
-  name 'NSB/AppStudio'
-  homepage 'https://www.nsbasic.com/'
+  # appstudio.us-east-1.linodeobjects.com/ was verified as official when first introduced to the cask
+  url "https://appstudio.us-east-1.linodeobjects.com/AppStudio#{version.major}.dmg"
+  appcast "https://www.nsbasic.com/app/version.json"
+  name "NSB/AppStudio"
+  desc "Development environment"
+  homepage "https://www.nsbasic.com/"
 
-  app 'AppStudio.app'
+  app "AppStudio.app"
 end

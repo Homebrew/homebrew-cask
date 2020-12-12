@@ -1,14 +1,15 @@
-cask 'power-manager' do
-  version '5.4.8'
-  sha256 '064f7172480c7b616331e7cdf374cc677be21336fd4d8c5dc7c16c5e4149fa3d'
+cask "power-manager" do
+  version "5.5.2"
+  sha256 "9184adaf556c3674dfc2e445c2d02c62b3d63698fe78667cfb912a60dc6b842c"
 
   url "https://www.dssw.co.uk/powermanager/dsswpowermanager-#{version.no_dots}.dmg"
-  appcast 'https://version.dssw.co.uk/powermanager/'
-  name 'Power Manager'
-  homepage 'https://dssw.co.uk/powermanager/'
+  appcast "https://version.dssw.co.uk/powermanager/"
+  name "Power Manager"
+  desc "Utility to automate tasks and improve power management"
+  homepage "https://dssw.co.uk/powermanager/"
 
   auto_updates true
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'Power Manager.app'
+  app "Power Manager.app"
 end

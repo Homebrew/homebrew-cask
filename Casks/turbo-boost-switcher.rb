@@ -1,18 +1,19 @@
-cask 'turbo-boost-switcher' do
-  version '2.9.1'
-  sha256 '4531450baa9ae28c73df08689d05e4c71e3e5cfbc86b5becdd6c095de3b9cdb7'
+cask "turbo-boost-switcher" do
+  version "2.10.1"
+  sha256 "a1647590b9458bf27adc3749438a98e317fc137960329cf935f91c34753f0fa8"
 
   # turbo-boost-switcher.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://turbo-boost-switcher.s3.amazonaws.com/Turbo+Boost+Switcher_#{version}.zip"
-  appcast 'https://www.rugarciap.com/turbo-boost-switcher-for-os-x/'
-  name 'Turbo Boost Switcher'
-  homepage 'https://www.rugarciap.com/turbo-boost-switcher-for-os-x/'
+  url "https://turbo-boost-switcher.s3.amazonaws.com/Turbo_Boost_Switcher_v#{version}.dmg"
+  appcast "https://www.rugarciap.com/turbo-boost-switcher-for-os-x-blog/"
+  name "Turbo Boost Switcher"
+  desc "Enable and disable the Intel CPU Turbo Boost feature"
+  homepage "https://www.rugarciap.com/turbo-boost-switcher-for-os-x/"
 
-  # App renamed to remove "(English)" suffix
-  app 'Turbo Boost Switcher.app'
+  suite "tbswitcher_resources"
+  app "Turbo Boost Switcher.app"
 
-  uninstall quit: 'rugarciap.com.Turbo-Boost-Switcher',
-            kext: 'com.rugarciap.DisableTurboBoost'
+  uninstall quit: "rugarciap.com.Turbo-Boost-Switcher",
+            kext: "com.rugarciap.DisableTurboBoost"
 
-  zap trash: '~/Library/Preferences/rugarciap.com.Turbo-Boost-Switcher.plist'
+  zap trash: "~/Library/Preferences/rugarciap.com.Turbo-Boost-Switcher.plist"
 end
