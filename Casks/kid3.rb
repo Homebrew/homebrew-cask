@@ -3,8 +3,8 @@ cask "kid3" do
   version "3.8.4"
   sha256 "18c893879bf20f376480b2062beb0ee7a0c7e2ad4663d11bffff994990568c4d"
 
-  # downloads.sourceforge.net/kid3/ was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/kid3/kid3-#{version}-Darwin.dmg"
+  url "https://downloads.sourceforge.net/kid3/kid3-#{version}-Darwin.dmg",
+      verified: "downloads.sourceforge.net/kid3/"
   appcast "https://sourceforge.net/p/kid3/news/feed.rss"
   name "Kid3"
   desc "Audio tagger focusing on efficiency"
