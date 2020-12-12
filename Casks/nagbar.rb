@@ -2,8 +2,8 @@ cask "nagbar" do
   version "1.3.7"
   sha256 "9a4b256250d4527423efd16e90cc7d087bc6ca9306bdc5267a6441194e73a44b"
 
-  # github.com/volendavidov/NagBar/ was verified as official when first introduced to the cask
-  url "https://github.com/volendavidov/NagBar/releases/download/#{version}/NagBar.zip"
+  url "https://github.com/volendavidov/NagBar/releases/download/#{version}/NagBar.zip",
+      verified: "github.com/volendavidov/NagBar/"
   appcast "https://github.com/volendavidov/NagBar/releases.atom"
   name "NagBar"
   desc "Status bar monitor for Nagios, Icinga/2 and Thruk"
