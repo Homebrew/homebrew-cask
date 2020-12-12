@@ -7,8 +7,8 @@ cask "barxtemp" do
     sha256 "232286bc63a136ceca759addb6108a5b66d2b18d1db1df728c80296ec5847c65"
   end
 
-  # github.com/Gabriele91/barXtemp/ was verified as official when first introduced to the cask
-  url "https://github.com/Gabriele91/barXtemp/releases/download/#{version}/barXtemp.app.zip"
+  url "https://github.com/Gabriele91/barXtemp/releases/download/#{version}/barXtemp.app.zip",
+      verified: "github.com/Gabriele91/barXtemp/"
   appcast "https://github.com/Gabriele91/barXtemp/releases.atom"
   name "barXtemp"
   desc "Simple app to get the computer temperature"
