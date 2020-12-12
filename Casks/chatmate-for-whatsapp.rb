@@ -2,8 +2,8 @@ cask "chatmate-for-whatsapp" do
   version "4.3.1,482:1537891987"
   sha256 "af6b75282d8b0c0782246f771a4718675616cbdc6b62682a9e055641ab1e5ac7"
 
-  # dl.devmate.com/net.coldx.mac.WhatsApp/ was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/net.coldx.mac.WhatsApp/#{version.after_comma.before_colon}/#{version.after_colon}/ChatMateforWhatsApp-#{version.after_comma.before_colon}.zip"
+  url "https://dl.devmate.com/net.coldx.mac.WhatsApp/#{version.after_comma.before_colon}/#{version.after_colon}/ChatMateforWhatsApp-#{version.after_comma.before_colon}.zip",
+      verified: "dl.devmate.com/net.coldx.mac.WhatsApp/"
   appcast "https://updates.devmate.com/net.coldx.mac.WhatsApp.xml"
   name "ChatMate for WhatsApp"
   desc "Extension app WhatsApp"
