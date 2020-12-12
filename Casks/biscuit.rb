@@ -2,8 +2,8 @@ cask "biscuit" do
   version "1.2.13"
   sha256 "659925e7b7cd4ba185b2b3e24f75d514cdbd7d8dccb48affc64c3bd053616bb6"
 
-  # github.com/agata/dl.biscuit/ was verified as official when first introduced to the cask
-  url "https://github.com/agata/dl.biscuit/releases/download/v#{version}/Biscuit-#{version}.dmg"
+  url "https://github.com/agata/dl.biscuit/releases/download/v#{version}/Biscuit-#{version}.dmg",
+      verified: "github.com/agata/dl.biscuit/"
   appcast "https://github.com/agata/dl.biscuit/releases.atom"
   name "Biscuit"
   desc "Browser to organize apps"
