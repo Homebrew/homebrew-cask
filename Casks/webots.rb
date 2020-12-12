@@ -2,8 +2,8 @@ cask "webots" do
   version "R2020b-rev1"
   sha256 "b131e2e98193a7977633d415bba2ca854cb16a7b95b32a853aa8588f69592c03"
 
-  # github.com/cyberbotics/webots was verified as official when first introduced to the cask
-  url "https://github.com/cyberbotics/webots/releases/download/#{version}/webots-#{version}.dmg"
+  url "https://github.com/cyberbotics/webots/releases/download/#{version}/webots-#{version}.dmg",
+      verified: "github.com/cyberbotics/webots/"
   appcast "https://github.com/cyberbotics/webots/releases.atom"
   name "Cyberbotics Webots Robot Simulator"
   name "Webots"
