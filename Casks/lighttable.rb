@@ -2,8 +2,8 @@ cask "lighttable" do
   version "0.8.1"
   sha256 "423e9caf6db4dfe26a0167ea6ba998d747f233e2cd9cd97b7fee027c5c0c3992"
 
-  # github.com/LightTable/LightTable/ was verified as official when first introduced to the cask
-  url "https://github.com/LightTable/LightTable/releases/download/#{version}/lighttable-#{version}-mac.tar.gz"
+  url "https://github.com/LightTable/LightTable/releases/download/#{version}/lighttable-#{version}-mac.tar.gz",
+      verified: "github.com/LightTable/LightTable/"
   appcast "https://github.com/LightTable/LightTable/releases.atom"
   name "Light Table"
   desc "IDE"
