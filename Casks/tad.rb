@@ -2,8 +2,8 @@ cask "tad" do
   version "0.9.0"
   sha256 "55cd0d6557418ba4e072ad4fbcb1619f0df05842c6567ed4cbee37aa3c1d6f9b"
 
-  # github.com/antonycourtney/tad/ was verified as official when first introduced to the cask
-  url "https://github.com/antonycourtney/tad/releases/download/v#{version}/Tad-#{version}.dmg"
+  url "https://github.com/antonycourtney/tad/releases/download/v#{version}/Tad-#{version}.dmg",
+      verified: "github.com/antonycourtney/tad/"
   appcast "https://github.com/antonycourtney/tad/releases.atom"
   name "Tad"
   desc "Desktop application for viewing and analyzing tabular data"
