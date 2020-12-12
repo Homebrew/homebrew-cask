@@ -6,6 +6,7 @@ cask "google-backup-and-sync" do
   name "Google Backup and Sync"
   homepage "https://www.google.com/drive/download/"
 
+  auto_updates true
   conflicts_with cask: "google-photos-backup-and-sync"
 
   app "Backup and Sync.app"
