@@ -2,8 +2,8 @@ cask "cerebro" do
   version "0.3.2"
   sha256 "a4df90aca836d6110ac65cd5c1427fb9121f93bdd36ed8527816befbda3dc833"
 
-  # github.com/KELiON/cerebro/ was verified as official when first introduced to the cask
-  url "https://github.com/KELiON/cerebro/releases/download/v#{version}/cerebro-#{version}.dmg"
+  url "https://github.com/KELiON/cerebro/releases/download/v#{version}/cerebro-#{version}.dmg",
+      verified: "github.com/KELiON/cerebro/"
   appcast "https://github.com/KELiON/cerebro/releases.atom"
   name "Cerebro"
   desc "Open-source productivity booster with a brain"
