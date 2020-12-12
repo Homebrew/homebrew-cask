@@ -2,8 +2,8 @@ cask "ipe" do
   version "7.2.21"
   sha256 "41601c87a8cf3d21c847a84ccfaab53be0c2df17872cc512e13c08f14955cf58"
 
-  # bintray.com/otfried/ was verified as official when first introduced to the cask
-  url "https://dl.bintray.com/otfried/generic/ipe/#{version.major_minor}/ipe-#{version}-mac.dmg"
+  url "https://dl.bintray.com/otfried/generic/ipe/#{version.major_minor}/ipe-#{version}-mac.dmg",
+      verified: "bintray.com/otfried/"
   appcast "http://ipe.otfried.org/"
   name "Ipe"
   desc "Drawing editor for creating figures in PDF format"
