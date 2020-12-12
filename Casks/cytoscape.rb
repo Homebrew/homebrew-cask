@@ -2,8 +2,8 @@ cask "cytoscape" do
   version "3.8.2"
   sha256 "3597f06c835285b017c29778cdc9e5ba2279475a0c78d60e82fbda6f0c53624e"
 
-  # github.com/cytoscape/cytoscape/ was verified as official when first introduced to the cask
-  url "https://github.com/cytoscape/cytoscape/releases/download/#{version}/Cytoscape_#{version.dots_to_underscores}_macos.dmg"
+  url "https://github.com/cytoscape/cytoscape/releases/download/#{version}/Cytoscape_#{version.dots_to_underscores}_macos.dmg",
+      verified: "github.com/cytoscape/cytoscape/"
   appcast "https://github.com/cytoscape/cytoscape/releases.atom"
   name "Cytoscape"
   desc "Open-source platform for network analysis and visualization"
