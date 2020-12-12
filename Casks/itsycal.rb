@@ -12,8 +12,8 @@ cask "itsycal" do
     appcast "https://itsycal.s3.amazonaws.com/itsycal.xml"
   end
 
-  # itsycal.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://itsycal.s3.amazonaws.com/Itsycal-#{version}.zip"
+  url "https://itsycal.s3.amazonaws.com/Itsycal-#{version}.zip",
+      verified: "itsycal.s3.amazonaws.com/"
   name "Itsycal"
   desc "Menu bar calendar"
   homepage "https://www.mowglii.com/itsycal/"
