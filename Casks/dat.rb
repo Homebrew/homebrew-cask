@@ -2,8 +2,8 @@ cask "dat" do
   version "3.0.1"
   sha256 "f6c89150f72568c2de1f42653bca0fa356cbb24704f31f1ef5e11f75b0095866"
 
-  # github.com/dat-land/dat-desktop/ was verified as official when first introduced to the cask
-  url "https://github.com/dat-land/dat-desktop/releases/download/v#{version}/dat-desktop-#{version}-mac.zip"
+  url "https://github.com/dat-land/dat-desktop/releases/download/v#{version}/dat-desktop-#{version}-mac.zip",
+      verified: "github.com/dat-land/dat-desktop/"
   appcast "https://github.com/dat-land/dat-desktop/releases.atom"
   name "Dat Desktop"
   desc "Peer to peer data sharing app built for humans"
