@@ -2,8 +2,8 @@ cask "postico" do
   version "1.5.16"
   sha256 "23c79a6ddcb4a7fcb5a2ebba8a482aefb80dfaa6d421c037735573fac2abe5b1"
 
-  # eggerapps-downloads.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://eggerapps-downloads.s3.amazonaws.com/postico-#{version}.zip"
+  url "https://eggerapps-downloads.s3.amazonaws.com/postico-#{version}.zip",
+      verified: "eggerapps-downloads.s3.amazonaws.com/"
   appcast "https://eggerapps.at/postico/docs/?file=changelist.html"
   name "Postico"
   desc "GUI client for PostgreSQL databases"
