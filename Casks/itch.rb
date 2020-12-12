@@ -2,8 +2,8 @@ cask "itch" do
   version "1.18.0"
   sha256 "cfc76d52483d3e649026f29ddb6f136207964ea54eee996ee62a7a4e17326e05"
 
-  # broth.itch.ovh/ was verified as official when first introduced to the cask
-  url "https://broth.itch.ovh/itch-setup/darwin-amd64/#{version}/archive/default"
+  url "https://broth.itch.ovh/itch-setup/darwin-amd64/#{version}/archive/default",
+      verified: "broth.itch.ovh/"
   appcast "https://github.com/itchio/itch-setup/releases.atom"
   name "itch.io"
   homepage "https://itch.io/app"
