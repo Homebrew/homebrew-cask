@@ -8,6 +8,8 @@ cask "google-backup-and-sync" do
 
   conflicts_with cask: "google-photos-backup-and-sync"
 
+  auto_updates true
+  
   app "Backup and Sync.app"
 
   uninstall quit: "com.google.GoogleDrive"
