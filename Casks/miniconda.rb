@@ -2,8 +2,8 @@ cask "miniconda" do
   version "py38_4.8.3"
   sha256 "9b9a353fadab6aa82ac0337c367c23ef842f97868dcbb2ff25ec3aa463afc871"
 
-  # repo.anaconda.com/miniconda/ was verified as official when first introduced to the cask
-  url "https://repo.anaconda.com/miniconda/Miniconda3-#{version}-MacOSX-x86_64.sh"
+  url "https://repo.anaconda.com/miniconda/Miniconda3-#{version}-MacOSX-x86_64.sh",
+      verified: "repo.anaconda.com/miniconda/"
   name "Continuum Analytics Miniconda"
   homepage "https://conda.io/miniconda.html"
 
