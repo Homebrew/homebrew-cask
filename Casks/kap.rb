@@ -2,8 +2,8 @@ cask "kap" do
   version "3.3.2"
   sha256 "327705cc7128f0f67bb07900fdf3a78d8cc82a608f041aab2dbdcfda4e0b7c45"
 
-  # github.com/wulkano/kap/ was verified as official when first introduced to the cask
-  url "https://github.com/wulkano/kap/releases/download/v#{version.major_minor_patch}/Kap-#{version}.dmg"
+  url "https://github.com/wulkano/kap/releases/download/v#{version.major_minor_patch}/Kap-#{version}.dmg",
+      verified: "github.com/wulkano/kap/"
   appcast "https://github.com/wulkano/kap/releases.atom"
   name "Kap"
   desc "Open-source screen recorder built with web technology"
