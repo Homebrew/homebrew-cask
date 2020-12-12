@@ -1,6 +1,6 @@
 cask "azure-data-studio" do
-  version "1.25.0,8c6bd8c857592c14afbb589a7d307baec1f5b5ed"
-  sha256 "87777adcd5adb1846751e266df18bc05ea1609faacb2b9cf3a5add427435698c"
+  version "1.25.1,e7eacc32c0d20bd4da843320c3bfac231b308c98"
+  sha256 "3a08f492a015da13513db42fd8d32173034740959bed48879c3823f072de78d2"
 
   url "https://sqlopsbuilds.azureedge.net/stable/#{version.after_comma}/azuredatastudio-macos-#{version.before_comma}.zip",
       verified: "sqlopsbuilds.azureedge.net/stable/"
