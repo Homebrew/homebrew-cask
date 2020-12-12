@@ -2,8 +2,8 @@ cask "clipy" do
   version "1.2.1"
   sha256 "dfbb66ce3135fbaa2d64eaeea99a63e63485e322c9746045a1098b1696a1ecd5"
 
-  # github.com/Clipy/Clipy/ was verified as official when first introduced to the cask
-  url "https://github.com/Clipy/Clipy/releases/download/#{version}/Clipy_#{version}.dmg"
+  url "https://github.com/Clipy/Clipy/releases/download/#{version}/Clipy_#{version}.dmg",
+      verified: "github.com/Clipy/Clipy/"
   appcast "https://github.com/Clipy/Clipy/releases.atom"
   name "Clipy"
   desc "Clipboard extension app"
