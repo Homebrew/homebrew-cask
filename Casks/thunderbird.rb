@@ -66,8 +66,8 @@ cask "thunderbird" do
     "zh-CN"
   end
 
-  # ftp.mozilla.org was verified as official when first introduced to the cask
-  url "https://ftp.mozilla.org/pub/thunderbird/releases/#{version}/mac/#{language}/Thunderbird%20#{version}.dmg"
+  url "https://ftp.mozilla.org/pub/thunderbird/releases/#{version}/mac/#{language}/Thunderbird%20#{version}.dmg",
+      verified: "ftp.mozilla.org/"
   appcast "https://www.thunderbird.net/en-US/thunderbird/releases/"
   name "Mozilla Thunderbird"
   desc "Customizable email client"
