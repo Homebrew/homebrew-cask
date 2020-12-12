@@ -2,8 +2,8 @@ cask "headset" do
   version "3.2.1"
   sha256 "288e4fd75ed3b5b450b187cc14b207f612c6dc3cbaba05099420b3a2cbf31307"
 
-  # github.com/headsetapp/headset-electron/ was verified as official when first introduced to the cask
-  url "https://github.com/headsetapp/headset-electron/releases/download/v#{version}/Headset-#{version}.dmg"
+  url "https://github.com/headsetapp/headset-electron/releases/download/v#{version}/Headset-#{version}.dmg",
+      verified: "github.com/headsetapp/headset-electron/"
   appcast "https://github.com/headsetapp/headset-electron/releases.atom"
   name "Headset"
   desc "Music player powered by YouTube and Reddit"
