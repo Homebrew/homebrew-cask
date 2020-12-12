@@ -11,7 +11,15 @@ cask "upic" do
   depends_on macos: ">= :sierra"
 
   app "uPic.app"
-  binary "#{appdir}/uPic.app/Contents/MacOS/uPic", target: "upic"
+  shimscript = "#{staged_path}/upic.wrapper.sh"
+  binary shimscript, target: "upic"
+
+  preflight do
+    IO.write shimscript, <<~EOS
+      #!/bin/bash
+      '#{appdir}/uPic.app/Contents/MacOS/uPic' "$@"
+    EOS
+  end
 
   zap trash: [
     "~/Library/Preferences/com.svend.uPic.plist",
