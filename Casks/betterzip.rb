@@ -2,8 +2,8 @@ cask "betterzip" do
   version "5.0.3"
   sha256 "061b4171fe9ccf6a291cb47ceadbd3fd8b10a818105e11d1e1dfd9b689ecadfb"
 
-  # macitbetter.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://macitbetter.s3.amazonaws.com/BetterZip-#{version}.zip"
+  url "https://macitbetter.s3.amazonaws.com/BetterZip-#{version}.zip",
+      verified: "macitbetter.s3.amazonaws.com/"
   appcast "https://macitbetter.com/BetterZip#{version.major}.rss"
   name "BetterZip"
   desc "Utility to create and modify archives"
