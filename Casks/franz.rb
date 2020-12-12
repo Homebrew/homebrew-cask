@@ -2,8 +2,8 @@ cask "franz" do
   version "5.6.1"
   sha256 "8889fbacd3686ad0c9d8c372080dcd1292d5e0bcba34eb2e569ebe8dbb5a1274"
 
-  # github.com/meetfranz/franz/ was verified as official when first introduced to the cask
-  url "https://github.com/meetfranz/franz/releases/download/v#{version}/franz-#{version}.dmg"
+  url "https://github.com/meetfranz/franz/releases/download/v#{version}/franz-#{version}.dmg",
+      verified: "github.com/meetfranz/franz/"
   appcast "https://github.com/meetfranz/franz/releases.atom"
   name "Franz"
   desc "Messaging app for WhatsApp, Facebook Messenger, Slack, Telegram and more"
