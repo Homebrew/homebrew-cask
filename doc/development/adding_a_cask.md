@@ -138,7 +138,7 @@ Other commonly-used stanzas are:
 | `pkg`              | relative path to a `.pkg` file containing the distribution (see [Pkg Stanza Details](../cask_language_reference/stanzas/pkg.md))
 | `caveats`          | a string or Ruby block providing the user with Cask-specific information at install time (see [Caveats Stanza Details](../cask_language_reference/stanzas/caveats.md))
 | `uninstall`        | procedures to uninstall a Cask. Optional unless the `pkg` stanza is used. (see [Uninstall Stanza Details](../cask_language_reference/stanzas/uninstall.md))
-| `zap`        		 | additional procedures for a more complete uninstall, including user files and shared resources (see [Zap Stanza Details](../cask_language_reference/stanzas/zap.md))
+| `zap`        		 | additional procedures for a more complete uninstall, including configuration files and shared resources (see [Zap Stanza Details](../cask_language_reference/stanzas/zap.md))
 
 Additional `artifact` stanzas you might need for special use-cases can be found [here](../cask_language_reference/all_stanzas.md#at-least-one-artifact-stanza-is-also-required). Even more special-use stanzas are listed at [Optional Stanzas](../cask_language_reference/all_stanzas.md#optional-stanzas).
 
