@@ -1,6 +1,6 @@
 cask "anki" do
-  version "2.1.36"
-  sha256 "35622e702bcbf658b633052091e9e00d0fb095881def1a007a2923586a8bd1c4"
+  version "2.1.37"
+  sha256 "302774643c935093da3bdb1fce055172c34d82ee29cb1211f0bb70cd97612ab8"
 
   url "https://github.com/ankitects/anki/releases/download/#{version}/anki-#{version}-mac.dmg",
       verified: "github.com/ankitects/anki/"
