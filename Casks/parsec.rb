@@ -2,8 +2,8 @@ cask "parsec" do
   version "2.0.0"
   sha256 :no_check
 
-  # s3.dualstack.us-east-1.amazonaws.com/parsec-build/ was verified as official when first introduced to the cask
-  url "https://s3.dualstack.us-east-1.amazonaws.com/parsec-build/package/parsec-macos.pkg"
+  url "https://s3.dualstack.us-east-1.amazonaws.com/parsec-build/package/parsec-macos.pkg",
+      verified: "s3.dualstack.us-east-1.amazonaws.com/parsec-build/"
   name "Parsec"
   homepage "https://parsecgaming.com/"
 
