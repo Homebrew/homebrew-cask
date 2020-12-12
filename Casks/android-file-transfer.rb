@@ -2,8 +2,8 @@ cask "android-file-transfer" do
   version "1.0.12,5071136"
   sha256 "b9249399a351e8146358ff1ddb546c68a63134b780be795ae64e0a4c2258bc61"
 
-  # google.com/dl/androidjumper/ was verified as official when first introduced to the cask
-  url "https://dl.google.com/dl/androidjumper/mtp/#{version.after_comma}/androidfiletransfer.dmg"
+  url "https://dl.google.com/dl/androidjumper/mtp/#{version.after_comma}/androidfiletransfer.dmg",
+      verified: "google.com/dl/androidjumper/"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://dl.google.com/dl/androidjumper/mtp/current/androidfiletransfer.dmg",
           must_contain: version.after_comma
   name "Android File Transfer"
