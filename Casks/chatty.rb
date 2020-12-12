@@ -2,8 +2,8 @@ cask "chatty" do
   version "0.13.1"
   sha256 "b92910ad1e7df29fcd7e5d8f61a47efc641767c8bdf1828f4f18e7a0b79413d3"
 
-  # github.com/chatty/chatty/ was verified as official when first introduced to the cask
-  url "https://github.com/chatty/chatty/releases/download/v#{version}/Chatty_#{version}.zip"
+  url "https://github.com/chatty/chatty/releases/download/v#{version}/Chatty_#{version}.zip",
+      verified: "github.com/chatty/chatty/"
   appcast "https://github.com/chatty/chatty/releases.atom"
   name "Chatty"
   homepage "https://chatty.github.io/"
