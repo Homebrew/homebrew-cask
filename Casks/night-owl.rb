@@ -2,8 +2,8 @@ cask "night-owl" do
   version "2.92"
   sha256 :no_check
 
-  # aki-null.net/ was verified as official when first introduced to the cask
-  url "https://aki-null.net/yf/NightOwl.zip"
+  url "https://aki-null.net/yf/NightOwl.zip",
+      verified: "aki-null.net/"
   appcast "https://sites.google.com/site/yorufukurou/distribution/appcast.xml"
   name "NightOwl"
   name "YoruFukurou"
