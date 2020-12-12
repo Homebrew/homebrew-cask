@@ -2,8 +2,8 @@ cask "lincastor" do
   version "2.4"
   sha256 :no_check
 
-  # onflapp.github.io/blog/releases/ was verified as official when first introduced to the cask
-  url "https://onflapp.github.io/blog/releases/lincastor/LinCastor.zip"
+  url "https://onflapp.github.io/blog/releases/lincastor/LinCastor.zip",
+      verified: "onflapp.github.io/blog/releases/"
   appcast "https://onflapp.github.io/blog/releases/lincastor/appcast.xml"
   name "LinCastor"
   desc "Blog Site"
