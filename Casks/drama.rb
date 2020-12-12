@@ -2,8 +2,8 @@ cask "drama" do
   version "2.1.1,43"
   sha256 :no_check
 
-  # pixelcut.com/drama/ was verified as official when first introduced to the cask
-  url "https://www.pixelcut.com/drama/drama.zip"
+  url "https://www.pixelcut.com/drama/drama.zip",
+      verified: "pixelcut.com/drama/"
   appcast "https://www.pixelcut.com/drama/appcast.xml"
   name "Drama"
   homepage "https://www.drama.app/"
