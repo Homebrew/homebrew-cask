@@ -2,8 +2,8 @@ cask "minecraft" do
   version "795,1"
   sha256 :no_check
 
-  # mojang.com/ was verified as official when first introduced to the cask
-  url "https://launcher.mojang.com/download/Minecraft.dmg"
+  url "https://launcher.mojang.com/download/Minecraft.dmg",
+      verified: "mojang.com/"
   name "Minecraft"
   homepage "https://minecraft.net/"
 
