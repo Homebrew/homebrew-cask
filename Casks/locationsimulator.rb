@@ -14,7 +14,7 @@ cask "locationsimulator" do
   app "LocationSimulator.app"
 
   zap trash: [
-    "~/Library/Application Support\LocationSimulator",
+    "~/Library/Application Support/LocationSimulator",
     "~/Library/Preferences/com.schlaubi.LocationSimulator.plist",
   ]
 end
