@@ -2,8 +2,8 @@ cask "kotlin-native" do
   version "1.4.21"
   sha256 "e7a13b3138e2769a1ab0b9eb8187b56f8874380cdd96479702f1063ce7de69ca"
 
-  # github.com/JetBrains/kotlin/ was verified as official when first introduced to the cask
-  url "https://github.com/JetBrains/kotlin/releases/download/v#{version}/kotlin-native-macos-#{version}.tar.gz"
+  url "https://github.com/JetBrains/kotlin/releases/download/v#{version}/kotlin-native-macos-#{version}.tar.gz",
+      verified: "github.com/JetBrains/kotlin/"
   appcast "https://github.com/JetBrains/kotlin-native/releases.atom"
   name "Kotlin Native"
   desc "LLVM backend for Kotlin"

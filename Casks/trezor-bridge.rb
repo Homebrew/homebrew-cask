@@ -2,8 +2,8 @@ cask "trezor-bridge" do
   version "2.0.30"
   sha256 "1732f13d6408eec23aa2a255717ed7646678e5150c4814fc0b423d2bc29c6920"
 
-  # github.com/trezor/webwallet-data/ was verified as official when first introduced to the cask
-  url "https://github.com/trezor/webwallet-data/raw/master/bridge/#{version}/trezor-bridge-#{version}.pkg"
+  url "https://github.com/trezor/webwallet-data/raw/master/bridge/#{version}/trezor-bridge-#{version}.pkg",
+      verified: "github.com/trezor/webwallet-data/"
   appcast "https://github.com/trezor/webwallet-data/tree/master/bridge"
   name "TREZOR Bridge"
   desc "Facilitates communication between the Trezor device and supported browsers"

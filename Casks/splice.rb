@@ -2,8 +2,8 @@ cask "splice" do
   version "3.6.5"
   sha256 :no_check
 
-  # splicedesktop.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://splicedesktop.s3.amazonaws.com/darwin/stable/Splice.app.zip"
+  url "https://splicedesktop.s3.amazonaws.com/darwin/stable/Splice.app.zip",
+      verified: "splicedesktop.s3.amazonaws.com/"
   appcast "https://api.splice.com/v2/desktop/darwin/stable/latest?v=0.0.0"
   name "Splice"
   desc "Cloud-based music creation and collaboration platform"

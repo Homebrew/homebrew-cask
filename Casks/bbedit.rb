@@ -9,8 +9,8 @@ cask "bbedit" do
     version "13.5.2"
     sha256 "83fd2877628c8635c9ba408128ef1572668b34992e4b8eb530805bad6c81ce29"
   end
-  # s3.amazonaws.com/BBSW-download/ was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/BBSW-download/BBEdit_#{version}.dmg"
+  url "https://s3.amazonaws.com/BBSW-download/BBEdit_#{version}.dmg",
+      verified: "s3.amazonaws.com/BBSW-download/"
   appcast "https://versioncheck.barebones.com/BBEdit.xml"
   name "BBEdit"
   desc "Text, code, and markup editor"

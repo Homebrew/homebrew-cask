@@ -106,8 +106,8 @@ cask "firefox" do
     "zh-CN"
   end
 
-  # download-installer.cdn.mozilla.net/pub/firefox/releases/ was verified as official when first introduced to the cask
-  url "https://download-installer.cdn.mozilla.net/pub/firefox/releases/#{version}/mac/#{language}/Firefox%20#{version}.dmg"
+  url "https://download-installer.cdn.mozilla.net/pub/firefox/releases/#{version}/mac/#{language}/Firefox%20#{version}.dmg",
+      verified: "download-installer.cdn.mozilla.net/pub/firefox/releases/"
   appcast "https://www.macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://download.mozilla.org/%3Fproduct=firefox-latest-ssl%26os=osx"
   name "Mozilla Firefox"
   desc "Web browser"

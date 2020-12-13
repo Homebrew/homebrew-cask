@@ -10,8 +10,8 @@ cask "texpad" do
     sha256 "2e05ff385d35748a2ec69c1fa747187e2597d3461501cb63edfc5c503c3ceea5"
   end
 
-  # download.texpadapp.com/ was verified as official when first introduced to the cask
-  url "https://download.texpadapp.com/apps/osx/updates/Texpad_#{version.before_comma.dots_to_underscores}__#{version.after_comma.before_colon}__#{version.after_colon}.dmg"
+  url "https://download.texpadapp.com/apps/osx/updates/Texpad_#{version.before_comma.dots_to_underscores}__#{version.after_comma.before_colon}__#{version.after_colon}.dmg",
+      verified: "download.texpadapp.com/"
   appcast "https://www.texpad.com/static-collected/upgrades/texpadappcast.xml"
   name "Texpad"
   desc "LaTeX editor"

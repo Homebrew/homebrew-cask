@@ -2,8 +2,8 @@ cask "teambition" do
   version "1.11"
   sha256 :no_check
 
-  # dn-clients.teambition.net/ was verified as official when first introduced to the cask
-  url "https://dn-clients.teambition.net/Teambition-latest-darwin.dmg"
+  url "https://dn-clients.teambition.net/Teambition-latest-darwin.dmg",
+      verified: "dn-clients.teambition.net/"
   name "Teambition"
   homepage "https://www.teambition.com/"
 

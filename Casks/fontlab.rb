@@ -2,8 +2,8 @@ cask "fontlab" do
   version "7.2.0.7644"
   sha256 "26d3f9f2d300edf4973d27ac56006fd600195452e2995770f6157fa9f0620be8"
 
-  # fontlab.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://fontlab.s3.amazonaws.com/fontlab-#{version.major}/#{version.split(".").last}/FontLab-#{version.major}-Mac-Install-#{version.split(".").last}.dmg"
+  url "https://fontlab.s3.amazonaws.com/fontlab-#{version.major}/#{version.split(".").last}/FontLab-#{version.major}-Mac-Install-#{version.split(".").last}.dmg",
+      verified: "fontlab.s3.amazonaws.com/"
   appcast "https://download.fontlab.com/fontlab-#{version.major}/appcast-mac.xml"
   name "Fontlab"
   desc "Professional font editor"

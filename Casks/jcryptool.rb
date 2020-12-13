@@ -2,8 +2,8 @@ cask "jcryptool" do
   version "1.0.1"
   sha256 "6e63d68b2d2fd4600368f6e325bfeb6b3fae56397c54d119f67accf41cc8268c"
 
-  # github.com/jcryptool/core/ was verified as official when first introduced to the cask
-  url "https://github.com/jcryptool/core/releases/download/#{version}/JCrypTool-#{version}-macOS-64bit.tar.gz"
+  url "https://github.com/jcryptool/core/releases/download/#{version}/JCrypTool-#{version}-macOS-64bit.tar.gz",
+      verified: "github.com/jcryptool/core/"
   appcast "https://github.com/jcryptool/core/releases.atom",
           must_contain: version.after_comma
   name "JCrypTool"

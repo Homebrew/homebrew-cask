@@ -3,29 +3,29 @@ cask "gfortran" do
     version "6.1"
     sha256 "eb817bce64bf9032595e09166bdaaf740c83bf7258f900b79cd6786437bacbf4"
 
-    # github.com/fxcoudert/gfortran-for-macOS/ was verified as official when first introduced to the cask
-    url "https://github.com/fxcoudert/gfortran-for-macOS/releases/download/#{version}/gfortran-#{version}-ElCapitan.dmg"
+    url "https://github.com/fxcoudert/gfortran-for-macOS/releases/download/#{version}/gfortran-#{version}-ElCapitan.dmg",
+        verified: "github.com/fxcoudert/gfortran-for-macOS/"
     pkg "gfortran-#{version}-ElCapitan/gfortran.pkg"
   elsif MacOS.version <= :high_sierra
     version "6.3"
     sha256 "38b81bc878dba41cfdbb0c335aec5a97554a5d1766fb3e3ca6be7da0df9e8e09"
 
-    # github.com/fxcoudert/gfortran-for-macOS/ was verified as official when first introduced to the cask
-    url "https://github.com/fxcoudert/gfortran-for-macOS/releases/download/#{version}/gfortran-#{version}-Sierra.dmg"
+    url "https://github.com/fxcoudert/gfortran-for-macOS/releases/download/#{version}/gfortran-#{version}-Sierra.dmg",
+        verified: "github.com/fxcoudert/gfortran-for-macOS/"
     pkg "gfortran-#{version}-Sierra/gfortran.pkg"
   elsif MacOS.version <= :mojave
     version "8.2"
     sha256 "81d379231ba5671a5ef1b7832531f53be5a1c651701a61d87e1d877c4f06d369"
 
-    # github.com/fxcoudert/gfortran-for-macOS/ was verified as official when first introduced to the cask
-    url "https://github.com/fxcoudert/gfortran-for-macOS/releases/download/#{version}/gfortran-#{version}-Mojave.dmg"
+    url "https://github.com/fxcoudert/gfortran-for-macOS/releases/download/#{version}/gfortran-#{version}-Mojave.dmg",
+        verified: "github.com/fxcoudert/gfortran-for-macOS/"
     pkg "gfortran-#{version}-Mojave/gfortran.pkg"
   else
     version "10.2"
     sha256 "b35fa8b6bf79a63a96398b36363ef6e301173175a53ba1832fccf358873dfdb7"
 
-    # github.com/fxcoudert/gfortran-for-macOS/ was verified as official when first introduced to the cask
-    url "https://github.com/fxcoudert/gfortran-for-macOS/releases/download/#{version}/gfortran-#{version}-Catalina.dmg"
+    url "https://github.com/fxcoudert/gfortran-for-macOS/releases/download/#{version}/gfortran-#{version}-Catalina.dmg",
+        verified: "github.com/fxcoudert/gfortran-for-macOS/"
     pkg "gfortran.pkg"
   end
 

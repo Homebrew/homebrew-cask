@@ -1,9 +1,9 @@
 cask "zoom-for-it-admins" do
-  version "5.4.59296.1207"
-  sha256 "69827a52c54b24ed926c9d844129a905cd8f856c7cbffe41a74b512ce096f170"
+  version "5.4.59301.1211"
+  sha256 "e42377b64dad0c0230f41172d722dc31d87bad430e7b7da9ff4e1f8c37c4bfc8"
 
-  # d11yldzmag5yn.cloudfront.net/ was verified as official when first introduced to the cask
-  url "https://d11yldzmag5yn.cloudfront.net/prod/#{version}/ZoomInstallerIT.pkg"
+  url "https://d11yldzmag5yn.cloudfront.net/prod/#{version}/ZoomInstallerIT.pkg",
+      verified: "d11yldzmag5yn.cloudfront.net/"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://zoom.us/client/latest/Zoom.pkg"
   name "Zoom for IT Admins"
   desc "Video communication and virtual meeting platform"

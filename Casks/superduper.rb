@@ -2,8 +2,8 @@ cask "superduper" do
   version "3.3.1,121"
   sha256 :no_check
 
-  # shirtpocket.s3.amazonaws.com/SuperDuper/ was verified as official when first introduced to the cask
-  url "https://shirtpocket.s3.amazonaws.com/SuperDuper/SuperDuper!.dmg"
+  url "https://shirtpocket.s3.amazonaws.com/SuperDuper/SuperDuper!.dmg",
+      verified: "shirtpocket.s3.amazonaws.com/SuperDuper/"
   appcast "https://versioncheck.blacey.com/superduper/version.xml?VSN=100",
           must_contain: version.after_comma
   name "SuperDuper!"

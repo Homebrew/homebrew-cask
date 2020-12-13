@@ -2,8 +2,8 @@ cask "graphicconverter" do
   version "11.3.2,4637"
   sha256 "ae6a862519cca60bcc82c7426a4aae2bcdfc2f2ba1fd7f971ceaab8292ee103b"
 
-  # lemkesoft.info/ was verified as official when first introduced to the cask
-  url "https://www.lemkesoft.info/files/graphicconverter/gc#{version.major}_build#{version.after_comma}.zip"
+  url "https://www.lemkesoft.info/files/graphicconverter/gc#{version.major}_build#{version.after_comma}.zip",
+      verified: "lemkesoft.info/"
   appcast "https://www.lemkesoft.info/sparkle/graphicconverter/graphicconverter#{version.major}.xml"
   name "GraphicConverter"
   desc "For browsing, enhancing and converting images"

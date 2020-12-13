@@ -2,8 +2,8 @@ cask "foldingtext" do
   version "2.2,770"
   sha256 :no_check
 
-  # foldingtext.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://foldingtext.s3.amazonaws.com/FoldingText.dmg"
+  url "https://foldingtext.s3.amazonaws.com/FoldingText.dmg",
+      verified: "foldingtext.s3.amazonaws.com/"
   appcast "https://foldingtext.s3.amazonaws.com/FoldingText.rss"
   name "FoldingText"
   homepage "https://www.foldingtext.com/"

@@ -2,8 +2,8 @@ cask "autofirma" do
   version "1.6.5"
   sha256 :no_check
 
-  # estaticos.redsara.es/comunes/autofirma/ was verified as official when first introduced to the cask
-  url "https://estaticos.redsara.es/comunes/autofirma/currentversion/AutoFirma_Mac.zip"
+  url "https://estaticos.redsara.es/comunes/autofirma/currentversion/AutoFirma_Mac.zip",
+      verified: "estaticos.redsara.es/comunes/autofirma/"
   name "AutoFirma"
   homepage "https://firmaelectronica.gob.es/Home/Descargas.htm"
 

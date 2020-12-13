@@ -2,8 +2,8 @@ cask "macdroid" do
   version "1.3,110"
   sha256 :no_check
 
-  # cdn.electronic.us/products/macdroid/mac/download/ was verified as official when first introduced to the cask
-  url "https://cdn.electronic.us/products/macdroid/mac/download/macdroid.dmg"
+  url "https://cdn.electronic.us/products/macdroid/mac/download/macdroid.dmg",
+      verified: "cdn.electronic.us/products/macdroid/mac/download/"
   appcast "https://cdn.electronic.us/products/macdroid/mac/update/settings.xml"
   name "MacDroid"
   desc "Connect to your Android devices"

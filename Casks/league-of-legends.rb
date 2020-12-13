@@ -2,8 +2,8 @@ cask "league-of-legends" do
   version "1.0"
   sha256 :no_check
 
-  # riotgamespatcher-a.akamaihd.net/ was verified as official when first introduced to the cask
-  url "https://riotgamespatcher-a.akamaihd.net/releases/Maclive/installer/deploy/League%20of%20Legends%20installer%20NA.dmg"
+  url "https://riotgamespatcher-a.akamaihd.net/releases/Maclive/installer/deploy/League%20of%20Legends%20installer%20NA.dmg",
+      verified: "riotgamespatcher-a.akamaihd.net/"
   name "League of Legends"
   homepage "https://eune.leagueoflegends.com/en/"
 

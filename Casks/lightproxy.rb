@@ -2,8 +2,8 @@ cask "lightproxy" do
   version "1.1.40"
   sha256 "601c3dc7795e33a0007fe70ffd0a2acbf92f0197537e854d988fb86f023e3202"
 
-  # github.com/alibaba/lightproxy/ was verified as official when first introduced to the cask
-  url "https://github.com/alibaba/lightproxy/releases/download/v#{version}/LightProxy-#{version}.dmg"
+  url "https://github.com/alibaba/lightproxy/releases/download/v#{version}/LightProxy-#{version}.dmg",
+      verified: "github.com/alibaba/lightproxy/"
   appcast "https://github.com/alibaba/lightproxy/releases.atom"
   name "LightProxy"
   desc "Proxy & Debug tools based on whistle with Chrome Devtools UI"

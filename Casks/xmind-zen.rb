@@ -4,11 +4,20 @@ cask "xmind-zen" do
 
   url "https://www.xmind.net/xmind/downloads/XMind-2020-for-macOS-#{version}.dmg"
   appcast "https://www.xmind.net/download/"
-  name "XMind"
-  desc "Brainstorming and mind mapping app"
-  homepage "https://www.xmind.net/zen/"
+  name "Xmind 2020"
+  desc "Mindmap and brainstorming app"
+  homepage "https://www.xmind.net/xmind2020/"
+
+  auto_updates true
+  conflicts_with cask: "xmind"
 
   app "XMind.app"
 
   zap trash: "~/Library/Application Support/XMind ZEN"
+
+  caveat <<~EOS
+    Internally, Xmind Zen is now Xmind 2020. See their announcement:
+
+      https://www.xmind.net/blog/en/xmind%3A-zen-is-now-xmind%3A-2020/
+  EOS
 end

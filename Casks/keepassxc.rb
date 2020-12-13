@@ -2,8 +2,8 @@ cask "keepassxc" do
   version "2.6.2-2"
   sha256 "611b940952d5d51c2865d35e6916954a4ff3454bc8ae4dcc7abed0a4cda7d90d"
 
-  # github.com/keepassxreboot/keepassxc/ was verified as official when first introduced to the cask
-  url "https://github.com/keepassxreboot/keepassxc/releases/download/#{version.sub(/-\d+\z/, "")}/KeePassXC-#{version}.dmg"
+  url "https://github.com/keepassxreboot/keepassxc/releases/download/#{version.sub(/-\d+\z/, "")}/KeePassXC-#{version}.dmg",
+      verified: "github.com/keepassxreboot/keepassxc/"
   appcast "https://github.com/keepassxreboot/keepassxc/releases.atom"
   name "KeePassXC"
   desc "Password manager app"
