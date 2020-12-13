@@ -6,6 +6,7 @@ cask "dcommander" do
   appcast "https://www.macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=https://devstorm-apps.com/dc/download.php",
           must_contain: version.after_comma
   name "DCommander"
+  desc "Two-pane file manager"
   homepage "https://devstorm-apps.com/dc/"
 
   app "DCommander.app"
