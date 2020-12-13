@@ -1,0 +1,119 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+ENV["PATH"] = ENV["HOMEBREW_PATH"] if ENV["HOMEBREW_PATH"]
+
+# casks = Cask::Cask.to_a
+#
+# casks.each do |cask|
+#   url = cask.url
+#   next if url.unversioned? || url.from_block?
+#   next if url.to_s.include?("github.com")
+#   next if cask.livecheckable?
+#
+#   version = cask.version
+#   raw_url = url.send(:raw_interpolated_url)
+#
+#   simple_version_interpolation = raw_url.gsub("\#{version}", "").exclude?('#{')
+#   next unless simple_version_interpolation
+#
+#
+#   version_regex = version.gsub(/\d+/, '\d+').gsub(".", '\.')
+#                          .gsub(/\\d\+(?:\\\.\\d\+)+/, '\d+(?:\.\d+)*')
+#                          .gsub(/\\d\+(?:-\\d\+)+/, '\d+(?:-\d+)*')
+#
+#   front, _, rest = raw_url.rpartition("\#{version}")
+#   front = front.rpartition("/").last
+#   regex = "%r{href=.*?/#{Regexp.escape(front)}(#{version_regex})#{Regexp.escape(rest)}}i".sub("v(", "v?(")
+#
+#   path = cask.sourcefile_path
+#
+#   lines = path.read.lines
+#
+#   lines = lines.reject { |line| line.include?("appcast") || line.include?("must_contain") }
+#
+#   homepage_line = lines.index { |line| line.include?("homepage") }
+#
+#   url = (cask.appcast&.to_s || :homepage).inspect
+#
+#   lines.insert (homepage_line + 1), <<~EOF
+#
+#     livecheck do
+#       url #{url}
+#       strategy :page_match
+#       regex(#{regex})
+#     end
+#   EOF
+#
+#   path.atomic_write lines.join
+# end
+#
+# exit
+
+source_branch = "livecheck"
+
+changed_files = `git diff-tree --no-commit-id --name-only -r HEAD`.lines.map(&:chomp)
+paths = `git grep --files-with-matches ':github_latest' livecheck --`.lines.map do |line|
+  line.chomp.split(":", 2).last
+end
+paths = `git diff --name-only -G 'appcast' #{source_branch} HEAD^ -- Casks`.lines.map(&:chomp)
+
+paths.each do |path|
+  puts path
+
+  next unless changed_files.include?(path)
+
+  token = File.basename(path, ".rb")
+
+  branch = "livecheck-#{token}"
+
+  # Check if branch exists.
+  `git show-ref #{branch}`
+  next if $CHILD_STATUS.success?
+
+  safe_system "git", "switch", "-c", branch, "master"
+
+  begin
+    safe_system "git", "restore", "-s", source_branch, "--", path
+
+    editor_open = false
+
+    begin
+      safe_system HOMEBREW_BREW_FILE, "style", "--fix", "./#{path}"
+      safe_system HOMEBREW_BREW_FILE, "livecheck", "--cask", "./#{path}"
+      safe_system HOMEBREW_BREW_FILE, "audit", "--cask", "--online", "./#{path}"
+    rescue
+      safe_system HOMEBREW_BREW_FILE, "edit", "--cask", "./#{path}" unless editor_open
+      editor_open ||= true
+      sleep 5
+      retry
+    end
+
+    safe_system "git", "add", "--", path
+    safe_system "git", "commit", "-m", "#{token}: add livecheck"
+
+    safe_system "git", "push", "--force", "--set-upstream", "reitermarkus"
+
+    sleep 5
+
+    system_command! "gh", args: ["pr", "create", "--title", "#{token}: add livecheck", "--body", "This pull request was created automatically.", "--repo", "Homebrew/homebrew-cask", "--head", "reitermarkus:#{branch}"],
+                          env:  { "GITHUB_TOKEN" => ENV["HOMEBREW_GITHUB_API_TOKEN"], "PATH" => ENV["HOMEBREW_PATH"] }
+  rescue => e
+    onoe e
+    safe_system "git", "switch", "--discard-changes", source_branch
+    safe_system "git", "branch", "-D", branch
+  ensure
+    safe_system "git", "switch", "--discard-changes", source_branch
+  end
+end
+
+exit
+
+uncommitted_casks = `git ls-files --modified Casks`.lines.map { |l| "./#{l.chomp}" }
+committed_casks = `git diff-tree --no-commit-id --name-only -r HEAD Casks`.lines.map { |l| "./#{l.chomp}" }
+
+casks = uncommitted_casks + committed_casks
+
+# system "brew", "audit", "--cask", "--online", *casks
+
+exec "brew", "livecheck", "--cask", *ARGV, *uncommitted_casks, *committed_casks
