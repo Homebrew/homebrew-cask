@@ -19,12 +19,12 @@ cask "eudic" do
   ]
 
   zap trash: [
-    "~/Library/Eudb_en",
+    "~/Library/Application Scripts/com.eusoft.eudic.QuickLook",
+    "~/Library/Application Support/com.eusoft.eudic",
     "~/Library/Caches/com.eusoft.eudic",
     "~/Library/Caches/com.eusoft.eudic.LightPeek",
+    "~/Library/Eudb_en",
     "~/Library/Preferences/com.eusoft.eudic.plist",
-    "~/Library/Application Support/com.eusoft.eudic",
     "~/Library/Preferences/com.eusoft.eudic.LightPeek.plist",
-    "~/Library/Application Scripts/com.eusoft.eudic.QuickLook",
   ]
 end
