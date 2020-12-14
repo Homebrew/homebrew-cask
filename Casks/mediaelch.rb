@@ -1,8 +1,8 @@
 cask "mediaelch" do
-  version "2.6.6"
-  sha256 "624f2d640838c535d618ad0aa2621d354f5248047ff1e2c65e1d4fa3f3294ad4"
+  version "2.8.0,2020-12-13:d69831f1"
+  sha256 "fbda864a3d7af7779920f5b876972b82578a4c4203cdf268498328b594a05947"
 
-  url "https://github.com/Komet/MediaElch/releases/download/v#{version}/MediaElch_#{version}_macOS.dmg",
+  url "https://github.com/Komet/MediaElch/releases/download/v#{version.before_comma}/MediaElch_macOS_#{version.before_comma}_#{version.after_comma.before_colon}_git-#{version.after_colon}.dmg",
       verified: "github.com/Komet/MediaElch/"
   appcast "https://github.com/Komet/MediaElch/releases.atom"
   name "MediaElch"
