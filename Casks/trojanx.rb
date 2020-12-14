@@ -5,7 +5,7 @@ cask "trojanx" do
   url "https://github.com/JimLee1996/TrojanX/releases/download/#{version}/TrojanX.app.zip"
   appcast "https://github.com/JimLee1996/TrojanX/releases.atom"
   name "TrojanX"
-  desc "Unidentifiable mechanism to bypass GFW"
+  desc "Mechanism to bypass the Great Firewall"
   homepage "https://github.com/JimLee1996/TrojanX"
 
   app "TrojanX.app"
