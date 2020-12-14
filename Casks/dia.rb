@@ -8,7 +8,7 @@ cask "dia" do
   name "Dia"
   homepage "http://dia-installer.de/"
 
-  depends_on x11: true
+  depends_on cask: "xquartz"
 
   app "Dia.app"
 end
