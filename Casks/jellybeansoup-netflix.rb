@@ -1,10 +1,9 @@
-cask "netflix" do
+cask "jellybeansoup-netflix" do
   version "1.0.4"
   sha256 "f9da1b57012e5e14777e6226d7a0009d5fe877713f3f889cfb72b438d6251e76"
 
-  url "https://jellystyle-d5a.kxcdn.com/macos/netflix/Netflix.v1.0.4.zip",
-      verified: "jellystyle-d5a.kxcdn.com"
-  appcast "https://jellystyle.com/resources/macos/netflix.xml"
+  url "https://github.com/jellybeansoup/macos-netflix/releases/download/v#{version}/Netflix.v#{version}.zip",
+  appcast "https://github.com/jellybeansoup/macos-netflix/releases.atom"
   name "JellyStyle Netflix"
   desc "Third-party app to view Netflix outside the browser"
   homepage "https://github.com/jellybeansoup/macos-netflix"
