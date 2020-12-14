@@ -1,5 +1,5 @@
 cask "axure-rp" do
-  version "9.0.0.3722"
+  version "9.0.0.3723"
   sha256 :no_check
 
   url "https://axure.cachefly.net/AxureRP-Setup.dmg",
