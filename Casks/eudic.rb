@@ -3,7 +3,7 @@ cask "eudic" do
   sha256 "7b381dca81eac835fb8972e15eb4895ba8aaccdb48aaa2b920f77c51b4532174"
 
   url "https://static.frdic.com/pkg/eudicmac.dmg?v=#{version.after_comma}",
-      verified: "static.frdic.com/",
+      verified:   "static.frdic.com/",
       user_agent: :fake
   appcast "https://www.eudic.net/v4/en/app/download",
           must_contain: version.after_comma
