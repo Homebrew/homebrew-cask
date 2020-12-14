@@ -13,6 +13,7 @@ cask "obs" do
   app "OBS.app"
 
   zap trash: [
+    "/Library/CoreMediaIO/Plug-Ins/DAL/obs-mac-virtualcam.plugin",
     "~/Library/Application Support/obs-studio",
     "~/Library/Preferences/com.obsproject.obs-studio.plist",
     "~/Library/Saved Application State/com.obsproject.obs-studio.savedState",
