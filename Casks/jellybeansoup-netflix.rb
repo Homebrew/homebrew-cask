@@ -4,8 +4,8 @@ cask "jellybeansoup-netflix" do
 
   url "https://github.com/jellybeansoup/macos-netflix/releases/download/v#{version}/Netflix.v#{version}.zip",
   appcast "https://github.com/jellybeansoup/macos-netflix/releases.atom"
-  name "JellyStyle Netflix"
-  desc "Third-party app to view Netflix outside the browser"
+  name "Netflix"
+  desc "Third-party app to use Netflix outside the browser"
   homepage "https://github.com/jellybeansoup/macos-netflix"
 
   app "Netflix.app"
