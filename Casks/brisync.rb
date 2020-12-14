@@ -1,6 +1,6 @@
 cask "brisync" do
-  version "1.2.0"
-  sha256 "859f937786b1f1275c18bfdd10693112b982aa1b974256d458e95e4aed8ef268"
+  version "1.3.0"
+  sha256 "1814675b1114bcd48a96e39936d725b983b85d487a731a05c3e215d09fb28798"
 
   url "https://github.com/czarny/Brisync/releases/download/v#{version}/Brisync.zip"
   appcast "https://github.com/czarny/Brisync/releases.atom"
