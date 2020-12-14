@@ -8,7 +8,7 @@ cask "brl-cad-mged" do
   name "BRL-CAD"
   homepage "https://brlcad.org/"
 
-  depends_on x11: true
+  depends_on cask: "xquartz"
 
   app "BRL-CAD : MGED #{version}.app"
 end
