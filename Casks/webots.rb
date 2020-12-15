@@ -1,6 +1,6 @@
 cask "webots" do
-  version "R2020b-rev1"
-  sha256 "b131e2e98193a7977633d415bba2ca854cb16a7b95b32a853aa8588f69592c03"
+  version "R2021a"
+  sha256 "94ba34a3e1393e117a50c3864253f3e108f144cde30b334eee02e331036a3d36"
 
   url "https://github.com/cyberbotics/webots/releases/download/#{version}/webots-#{version}.dmg",
       verified: "github.com/cyberbotics/webots/"
