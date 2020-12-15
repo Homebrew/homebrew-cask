@@ -1,6 +1,6 @@
 cask "dbschema" do
   version "8.3.4"
-  sha256 :no_check # required as upstream package is updated in-place
+  sha256 :no_check
 
   url "https://www.dbschema.com/download/DbSchema_macos_#{version.dots_to_underscores}.tgz"
   appcast "https://www.dbschema.com/download.html"
