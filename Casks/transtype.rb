@@ -1,6 +1,6 @@
 cask "transtype" do
   version "4,5099"
-  sha256 :no_check # required as upstream package is updated in-place
+  sha256 :no_check
 
   url "https://fontlab.s3.amazonaws.com/transtype-4/5099/TR4MacFull-#{version.after_comma}.dmg",
       verified: "fontlab.s3.amazonaws.com/"
