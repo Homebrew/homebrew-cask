@@ -1,6 +1,6 @@
 cask "monero-wallet" do
-  version "0.17.1.6"
-  sha256 "dd3e909c2b2d61f6158def93ec544897ea5cd4c22fa9a8a8398a6c511ba5ec47"
+  version "0.17.1.7"
+  sha256 "1664860f4fae066695a74c04b55caa6421a8a10df5bbeb554c2e6dea89336710"
 
   url "https://downloads.getmonero.org/gui/monero-gui-mac-x64-v#{version}.dmg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://downloads.getmonero.org/gui/mac64"
