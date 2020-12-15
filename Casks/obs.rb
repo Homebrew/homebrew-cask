@@ -1,6 +1,6 @@
 cask "obs" do
-  version "26.0.2"
-  sha256 "66855df67a829c8bf1b5e5f7321556e7f9e338f8a95e51ca6afcee349d206ac2"
+  version "26.1"
+  sha256 "f3713d629e1c9cda98b630fd11bfd25dbd4d0ba4fcf5fe85a2978da616981472"
 
   url "https://cdn-fastly.obsproject.com/downloads/obs-mac-#{version}.dmg"
   appcast "https://github.com/obsproject/obs-studio/releases.atom"
