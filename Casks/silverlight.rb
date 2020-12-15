@@ -2,7 +2,7 @@ cask "silverlight" do
   version "5.1.50901.0"
   sha256 "f53057921b1a3bc62a717c32a3970eac67fd8c424456cfdcdf0b28d3e27a796c"
 
-  url "https://download.microsoft.com/download/0/3/E/03EB1393-4F4E-4191-8364-C641FAB20344/#{vesion.patch}.00/Silverlight.dmg"
+  url "https://download.microsoft.com/download/0/3/E/03EB1393-4F4E-4191-8364-C641FAB20344/#{version.patch}.00/Silverlight.dmg"
   name "Silverlight"
   homepage "https://www.microsoft.com/silverlight/"
 
