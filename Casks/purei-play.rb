@@ -1,5 +1,5 @@
 cask "purei-play" do
-  version "0.35-26-gb28106c0"
+  version "0.35-28-gefa45471"
   sha256 :no_check
 
   url "https://purei.org/download_latest.php?platform=macos"
