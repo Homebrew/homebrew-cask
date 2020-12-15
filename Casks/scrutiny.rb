@@ -1,5 +1,5 @@
 cask "scrutiny" do
-  version "9.14.2"
+  version "9.14.3"
   sha256 :no_check
 
   url "https://peacockmedia.software/mac/scrutiny/scrutiny.dmg"
