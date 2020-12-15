@@ -1,6 +1,6 @@
 cask "free-download-manager" do
   version "6.12.1"
-  sha256 :no_check # required as upstream package is updated in-place
+  sha256 :no_check
 
   url "https://dn3.freedownloadmanager.org/#{version.major}/latest/fdm.dmg"
   appcast "https://www.freedownloadmanager.org/download-fdm-for-mac.htm"
