@@ -1,6 +1,6 @@
 cask "pitch" do
-  version "1.8.3"
-  sha256 "713126033907e0ced246a6ee5a181fac483fb09d7e8c37218e61d1c9311fd6bd"
+  version "1.9.1"
+  sha256 "1cd4916f2ed8ac210daa4557b645f3cd78f97aa72634d66283fdd3f21d269d19"
 
   url "https://desktop-app-builds.pitch.com/Pitch-#{version}.dmg"
   appcast "https://desktop-app-builds.pitch.com/latest-mac.yml"
