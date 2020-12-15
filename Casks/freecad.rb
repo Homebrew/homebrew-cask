@@ -1,6 +1,6 @@
 cask "freecad" do
   version "0.18.4,16146"
-  sha256 :no_check # required as upstream package is updated in-place
+  sha256 :no_check
 
   url "https://github.com/FreeCAD/FreeCAD/releases/download/#{version.before_comma}/FreeCAD_#{version.major_minor}-#{version.after_comma}-rev1-OSX-x86_64-conda-Qt5-Py3.dmg",
       verified: "github.com/FreeCAD/FreeCAD/"
