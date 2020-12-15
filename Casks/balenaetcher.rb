@@ -9,8 +9,6 @@ cask "balenaetcher" do
   desc "Tool to flash OS images to SD cards & USB drives"
   homepage "https://balena.io/etcher"
 
-  auto_updates true
-
   app "balenaEtcher.app"
 
   uninstall quit: [
