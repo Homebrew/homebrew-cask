@@ -14,9 +14,12 @@ cask "onyx" do
   elsif MacOS.version <= :mojave
     version "3.6.8"
     sha256 "d27529bc497b03c2486fcb8f0d3bfbb4e4a30d4abe25eddcd059ab47aaea6672"
-  else
+  elsif MacOS.version <= :catalina
     version "3.8.7"
     sha256 "0dd8119ad3441c5130ca584ac90ad450c272aab8b577925561a2536da48d2d54"
+  else
+    version "3.9.1"
+    sha256 "988ab6ea90849d5ca135e4e87129b7e9be11b9650335d54bfb5b2d7e60da5f51"
   end
 
   url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete(".")}/OnyX.dmg"
@@ -33,6 +36,7 @@ cask "onyx" do
     :high_sierra,
     :mojave,
     :catalina,
+    :big_sur,
   ]
 
   app "OnyX.app"
