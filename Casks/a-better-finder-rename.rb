@@ -1,6 +1,6 @@
 cask "a-better-finder-rename" do
   version "11.26"
-  sha256 :no_check # required as upstream package is updated in-place
+  sha256 :no_check
 
   url "https://www.publicspace.net/download/ABFRX#{version.major}.dmg"
   appcast "https://www.publicspace.net/app/signed_abfr#{version.major}.xml"
