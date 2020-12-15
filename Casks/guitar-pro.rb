@@ -1,6 +1,6 @@
 cask "guitar-pro" do
   version "7.5"
-  sha256 :no_check # required as upstream package is updated in-place
+  sha256 :no_check
 
   url "https://alt-downloads.guitar-pro.com/gp7/stable/guitar-pro-#{version.major}-setup.pkg"
   appcast "https://www.guitar-pro.com/en/index.php?pg=download"
