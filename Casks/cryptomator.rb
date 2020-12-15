@@ -1,6 +1,6 @@
 cask "cryptomator" do
-  version "1.5.10"
-  sha256 "5451eef98ce9c2e0e13a477e9185878fde216c588c2ae807f1140676ea07eccd"
+  version "1.5.11"
+  sha256 "3570ae02917c91fc0d2a0a2a42a41aa5b0dcf00ae91e481a6d9ded4ee24ebf6f"
 
   url "https://dl.bintray.com/cryptomator/cryptomator/#{version}/Cryptomator-#{version}.dmg",
       verified: "dl.bintray.com/cryptomator/cryptomator/"
