@@ -4,7 +4,7 @@ cask "curiosity" do
 
   url "https://github.com/Dimillian/RedditOS/releases/download/#{version}/Curiosity.app.zip"
   appcast "https://github.com/Dimillian/RedditOS/releases.atom"
-  name "RedditOS"
+  name "Curiosity"
   desc "SwiftUI Reddit client"
   homepage "https://github.com/Dimillian/RedditOS"
 
