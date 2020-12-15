@@ -1,5 +1,5 @@
 cask "raindropio" do
-  version "5.2.46"
+  version "5.2.48"
   sha256 :no_check
 
   url "https://raindrop.io/releases/mac/Raindrop.dmg"
