@@ -10,5 +10,5 @@ cask "aural" do
 
   app "Aural.app"
 
-  zap trash: "~/Library/Preferences/anon.Aural.plist",
+  zap trash: "~/Library/Preferences/anon.Aural.plist"
 end
