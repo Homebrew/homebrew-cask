@@ -1,6 +1,6 @@
 cask "endnote" do
   version "9"
-  sha256 :no_check # required as upstream package is updated in-place
+  sha256 :no_check
 
   url "https://download.endnote.com/downloads/X#{version}/EndNoteX#{version}Installer.dmg"
   name "EndNote"
