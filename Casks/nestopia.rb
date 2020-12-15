@@ -3,8 +3,7 @@ cask "nestopia" do
   sha256 :no_check
 
   url "https://www.bannister.org/cgi-bin/download.cgi?nestopia"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?user_agent=Macintosh&url=https://www.bannister.org/cgi-bin/download.cgi%3Fnestopia",
-          must_contain: version.no_dots
+  appcast "https://www.bannister.org/software/nestopia.htm"
   name "Nestopia"
   homepage "https://www.bannister.org/software/nestopia.htm"
 
