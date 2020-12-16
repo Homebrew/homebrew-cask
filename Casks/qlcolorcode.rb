@@ -8,15 +8,9 @@ cask "qlcolorcode" do
   desc "QuickLook plug-in that renders source code with syntax highlighting"
   homepage "https://github.com/anthonygelibert/QLColorCode"
 
-  depends_on formula: "highlight"
   depends_on macos: ">= :catalina"
 
   qlplugin "QLColorCode.qlgenerator"
-
-  postflight do
-    system_command "/usr/bin/defaults",
-                   args: ["delete", "org.n8gray.QLColorCode", "pathHL"]
-  end
 
   zap trash: "~/Library/Preferences/org.n8gray.QLColorCode.plist"
 end
