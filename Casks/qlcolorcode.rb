@@ -1,6 +1,6 @@
 cask "qlcolorcode" do
-  version "4.0.0"
-  sha256 "99f74e6cef85d651a5f189d2ee70ae88f9a75b95cac7a62e4c99f759ae8e2620"
+  version "4.0.1"
+  sha256 "51c348fa3901a4eef0f260be8c5156b236ab8bbd0f7b30062004a41d76099da7"
 
   url "https://github.com/anthonygelibert/QLColorCode/releases/download/release-#{version}/QLColorCode.qlgenerator.zip"
   appcast "https://github.com/anthonygelibert/QLColorCode/releases.atom"
@@ -15,7 +15,7 @@ cask "qlcolorcode" do
 
   postflight do
     system_command "/usr/bin/defaults",
-                   args: ["write", "org.n8gray.QLColorCode", "pathHL", "#{HOMEBREW_PREFIX}/bin/highlight"]
+                   args: ["delete", "org.n8gray.QLColorCode", "pathHL"]
   end
 
   zap trash: "~/Library/Preferences/org.n8gray.QLColorCode.plist"
