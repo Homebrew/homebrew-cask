@@ -8,6 +8,6 @@ cask "electorrent" do
   homepage "https://github.com/tympanix/Electorrent"
   
   auto_updates true
-
+  
   app "Electorrent.app"
 end
