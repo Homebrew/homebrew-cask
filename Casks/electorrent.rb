@@ -6,6 +6,8 @@ cask "electorrent" do
   appcast "https://github.com/tympanix/Electorrent/releases.atom"
   name "Electorrent"
   homepage "https://github.com/tympanix/Electorrent"
+  
+  auto_updates true
 
   app "Electorrent.app"
 end
