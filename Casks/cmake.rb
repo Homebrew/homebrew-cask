@@ -1,6 +1,6 @@
 cask "cmake" do
   version "3.19.2"
-  sha256 "73a95fe82b85caf2058d697260750ef1ca7b106c8fb76134e841965db6ff2b26"
+  sha256 "df15a1836107b44623720e2766970216588e670f11f83fa2bc6d25885e6ac96f"
 
   url "https://cmake.org/files/LatestRelease/cmake-#{version}-macos-universal.dmg"
   appcast "https://cmake.org/files/LatestRelease/"
