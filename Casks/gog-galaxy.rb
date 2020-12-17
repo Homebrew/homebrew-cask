@@ -1,6 +1,6 @@
 cask "gog-galaxy" do
-  version "2.0.30.13"
-  sha256 "ca7679eb271379d078f343d120500804af9c5020a1160fdeb2f61e1445680c18"
+  version "2.0.33.23"
+  sha256 "120fd759c6f3e64ad9a213fea3371bba91bc50750762ad7c808feea8b30ad241"
 
   url "https://cdn.gog.com/open/galaxy/client/galaxy_client_#{version}.pkg"
   appcast "https://www.macupdater.net/cgi-bin/extract_text/extract_text_split_easy.cgi?url=https://gog.com/galaxy&encoding=utf-8&user_agent=Macintosh"
