@@ -1,5 +1,5 @@
 cask "native-access" do
-  version "1.13.1.134"
+  version "1.13.2.135"
   sha256 :no_check
 
   url "https://native-instruments.com/fileadmin/downloads/Native_Access_Installer.dmg"
