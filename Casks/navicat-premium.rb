@@ -3,7 +3,7 @@ cask "navicat-premium" do
 
   language "zh-CN" do
     sha256 "b445b658654e2fa32e788f8175c7bdf4da87be97033b61eae7664a4deff9a9dc"
-    url "http://download.navicat.com.cn/download/navicat#{version.major_minor.no_dots}_premium_cs.dmg"
+    url "https://download.navicat.com.cn/download/navicat#{version.major_minor.no_dots}_premium_cs.dmg"
     homepage "https://www.navicat.com.cn/products/navicat-premium"
   end
   language "en", default: true do
