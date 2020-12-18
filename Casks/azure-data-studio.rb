@@ -6,6 +6,7 @@ cask "azure-data-studio" do
       verified: "sqlopsbuilds.azureedge.net/stable/"
   appcast "https://github.com/Microsoft/azuredatastudio/releases.atom"
   name "Azure Data Studio"
+  desc "Data management tool that enables working with SQL Server"
   homepage "https://docs.microsoft.com/en-us/sql/azure-data-studio/"
 
   auto_updates true
