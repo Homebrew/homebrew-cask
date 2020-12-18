@@ -1,6 +1,6 @@
 cask "cookie" do
-  version "6.1.6"
-  sha256 "72e2db63ae4a8bde9dd4985432d717c8327f0a269cbc589141df1c36578fd235"
+  version "6.3.1"
+  sha256 :no_check
 
   url "https://sweetpproductions.com/products/cookieapp/Cookie.dmg"
   appcast "https://sweetpproductions.com/products/cookieapp/appcast.xml"

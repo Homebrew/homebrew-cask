@@ -1,9 +1,9 @@
 cask "debookee" do
-  version "7.5.1"
-  sha256 "555bd10aef360912216b7cb39d121c6b53a0a23bd1ed65bd99a8f6e76c840eb6"
+  version "7.5.2,3037"
+  sha256 :no_check
 
-  # iwaxx.com/debookee/ was verified as official when first introduced to the cask
-  url "https://www.iwaxx.com/debookee/debookee.zip"
+  url "https://www.iwaxx.com/debookee/debookee.zip",
+      verified: "iwaxx.com/debookee/"
   appcast "https://www.iwaxx.com/debookee/appcast.php"
   name "Debookee"
   desc "Network traffic analyzer"

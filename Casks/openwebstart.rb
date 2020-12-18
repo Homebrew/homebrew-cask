@@ -1,9 +1,9 @@
 cask "openwebstart" do
-  version "1.2.2"
-  sha256 "6ffeb7746f0bd35bb1e2f3486b079c0c0a8836de1f65babc5669381246617388"
+  version "1.3.1"
+  sha256 "ca0b9f5f6cf98152c26f17c726c3456ac684aba42378a1e1beec59dcfeb98ed5"
 
-  # github.com/karakun/OpenWebStart/ was verified as official when first introduced to the cask
-  url "https://github.com/karakun/OpenWebStart/releases/download/v#{version}/OpenWebStart_macos_#{version.dots_to_underscores}.dmg"
+  url "https://github.com/karakun/OpenWebStart/releases/download/v#{version}/OpenWebStart_macos_#{version.dots_to_underscores}.dmg",
+      verified: "github.com/karakun/OpenWebStart/"
   appcast "https://github.com/karakun/OpenWebStart/releases.atom"
   name "OpenWebStart"
   desc "Tool to run Java Web Start-based applications after the release of Java 11"

@@ -1,9 +1,9 @@
 cask "tiled" do
-  version "1.4.2"
-  sha256 "7ae7d8816e88f2bbc0e6afac51b47b6beb41399d3e0e17ace3cfca3b9de16691"
+  version "1.4.3"
+  sha256 "a7d30d6e9fcdacdd49262dceb041c2a5dd975f177ab8d68b29832714414872de"
 
-  # github.com/bjorn/tiled/ was verified as official when first introduced to the cask
-  url "https://github.com/bjorn/tiled/releases/download/v#{version}/Tiled-#{version}-macos.zip"
+  url "https://github.com/bjorn/tiled/releases/download/v#{version}/Tiled-#{version}-macos.zip",
+      verified: "github.com/bjorn/tiled/"
   appcast "https://github.com/bjorn/tiled/releases.atom"
   name "Tiled"
   desc "Flexible level editor"

@@ -1,8 +1,8 @@
 cask "cmake" do
-  version "3.18.4"
-  sha256 "4002a65daa60a47ee7fd6e8bc5ae321a346071d17a83e270d012fdbd29ee9e76"
+  version "3.19.2"
+  sha256 "df15a1836107b44623720e2766970216588e670f11f83fa2bc6d25885e6ac96f"
 
-  url "https://www.cmake.org/files/v#{version.major_minor}/cmake-#{version}-Darwin-x86_64.dmg"
+  url "https://cmake.org/files/LatestRelease/cmake-#{version}-macos-universal.dmg"
   appcast "https://cmake.org/files/LatestRelease/"
   name "CMake"
   homepage "https://cmake.org/"

@@ -1,5 +1,5 @@
 cask "anytrans-for-android" do
-  version :latest
+  version "7.3.0"
   sha256 :no_check
 
   url "https://dl.imobie.com/anytrans-for-android.zip"

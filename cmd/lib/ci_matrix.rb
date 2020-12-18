@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "cask/cask_loader"
+
 require_relative "changed_files"
 
 module CiMatrix
@@ -39,7 +41,7 @@ module CiMatrix
         "--appcast"
       end
 
-      audit_args = ["--download", appcast_arg, "--online"]
+      audit_args = [appcast_arg, "--online"]
 
       audit_args << "--new-cask" if changed_files[:added_files].include?(path)
 

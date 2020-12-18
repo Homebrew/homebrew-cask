@@ -1,6 +1,6 @@
 cask "panoply" do
-  version "4.11.6"
-  sha256 "5ab864dcacc582161a34eca6b0f8b36ad54cc9ceb2dd0cd1c5ef393065e96d5a"
+  version "4.12.1"
+  sha256 "6e56a17bb0181181432f3575dc56a053ee795053f991c6222eb7208ed10b5c8b"
 
   url "https://www.giss.nasa.gov/tools/panoply/download/PanoplyMacOS-#{version}.dmg"
   appcast "https://www.giss.nasa.gov/tools/panoply/download/"

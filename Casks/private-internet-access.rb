@@ -1,10 +1,11 @@
 cask "private-internet-access" do
-  version "2.4-05574"
-  sha256 "95b25fc93b6fccd70f8d216641f59047d1d9f7e846a56148c7ca2e05eccec525"
+  version "2.6.1-05824"
+  sha256 "681f64f54fe852441ca2a96ffb250ec27e2064cbc40f34a1a9b108ca73a92c4a"
 
   url "https://installers.privateinternetaccess.com/download/pia-macos-#{version}.zip"
   appcast "https://www.privateinternetaccess.com/pages/download"
   name "Private Internet Access"
+  desc "VPN client"
   homepage "https://www.privateinternetaccess.com/"
 
   auto_updates true

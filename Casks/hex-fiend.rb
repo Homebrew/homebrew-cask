@@ -1,9 +1,9 @@
 cask "hex-fiend" do
-  version "2.13.1"
-  sha256 "8434067ac0c41d68346e8abea807bff0cc3eba61619ef39ad8f437407848cf98"
+  version "2.14.0"
+  sha256 "5ddb0f43e014fe6963f0a60776ab3fccac2da3e973be252ebddd664ca1954a7f"
 
-  # github.com/ridiculousfish/HexFiend/ was verified as official when first introduced to the cask
-  url "https://github.com/ridiculousfish/HexFiend/releases/download/v#{version}/Hex_Fiend_#{version}.dmg"
+  url "https://github.com/ridiculousfish/HexFiend/releases/download/v#{version}/Hex_Fiend_#{version.major_minor}.dmg",
+      verified: "github.com/ridiculousfish/HexFiend/"
   appcast "https://github.com/ridiculousfish/HexFiend/releases.atom"
   name "Hex Fiend"
   desc "Hex editor focussing on speed"

@@ -2,8 +2,8 @@ cask "triplecheese" do
   version "1.2.1,3899"
   sha256 "8a73cc611d6065ff11a43e237ff074c9b6eff591a46997362219fe6ac4bcd663"
 
-  # uhedownloads-heckmannaudiogmb.netdna-ssl.com/ was verified as official when first introduced to the cask
-  url "https://uhedownloads-heckmannaudiogmb.netdna-ssl.com/releases/TripleCheese_#{version.before_comma.no_dots}_#{version.after_comma}_Mac.zip"
+  url "https://uhedownloads-heckmannaudiogmb.netdna-ssl.com/releases/TripleCheese_#{version.before_comma.no_dots}_#{version.after_comma}_Mac.zip",
+      verified: "uhedownloads-heckmannaudiogmb.netdna-ssl.com/"
   appcast "https://u-he.com/products/triplecheese/releasenotes.html"
   name "Triple Cheese"
   desc "Luscious and cheesy synthesizer"

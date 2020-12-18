@@ -1,6 +1,6 @@
 cask "intellij-idea-ce" do
-  version "2020.2.3,202.7660.26"
-  sha256 "190e935782cbaf5aa3525895deacd8d917409fec16d8ddff6e65f02ff9188f19"
+  version "2020.3,203.5981.155"
+  sha256 "e73fe982ea3a85ffb5c884ec2945a28ca7b0e707133139ef932541b06bf0d325"
 
   url "https://download.jetbrains.com/idea/ideaIC-#{version.before_comma}.dmg"
   appcast "https://data.services.jetbrains.com/products/releases?code=IIC&latest=true&type=release"
@@ -10,6 +10,7 @@ cask "intellij-idea-ce" do
   homepage "https://www.jetbrains.com/idea/"
 
   auto_updates true
+  conflicts_with cask: "homebrew/cask-versions/intellij-idea-ce19"
 
   app "IntelliJ IDEA CE.app"
 

@@ -1,9 +1,9 @@
 cask "brave-browser" do
-  version "86.1.15.75,115.75"
-  sha256 "f4d8da37f4ccf1fafc4f92d4433ac9b0520ab5945e12ad474db99a7f49a7bd32"
+  version "87.1.17.73,117.73"
+  sha256 "38d740e902762e2921a936e7b8f98ac4bb32c2196747e7d1a9088ec599fd6ff8"
 
-  # updates-cdn.bravesoftware.com/sparkle/Brave-Browser/ was verified as official when first introduced to the cask
-  url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Browser/stable/#{version.after_comma}/Brave-Browser.dmg"
+  url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Browser/stable/#{version.after_comma}/Brave-Browser.dmg",
+      verified: "updates-cdn.bravesoftware.com/sparkle/Brave-Browser/"
   appcast "https://updates.bravesoftware.com/sparkle/Brave-Browser/stable/appcast.xml"
   name "Brave"
   desc "Web browser focusing on privacy"

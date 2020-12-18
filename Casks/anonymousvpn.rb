@@ -1,5 +1,5 @@
 cask "anonymousvpn" do
-  version :latest
+  version "2.0.1.14"
   sha256 :no_check
 
   url "https://dl.anonymousvpn.org/AnonymousVPN.pkg"
@@ -8,5 +8,9 @@ cask "anonymousvpn" do
 
   pkg "AnonymousVPN.pkg"
 
-  uninstall pkgutil: "org.anonymousvpn.pkg"
+  uninstall pkgutil:   "org.anonymousvpn.pkg",
+            launchctl: [
+              "org.AnonymousVPN.helper",
+              "org.strongswan.charon-xpc",
+            ]
 end

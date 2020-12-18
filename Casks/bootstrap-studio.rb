@@ -1,6 +1,6 @@
 cask "bootstrap-studio" do
-  version "5.4.1"
-  sha256 "e8f739434a483063fcd5270b7ec7f59bbaacbfd4e8f9be6fcd633255f6bbd0b3"
+  version "5.5.1"
+  sha256 "d8a559d884cdf5e26513e5e1ac38f201572326f8b320ea2702c27cb68e1657f5"
 
   url "https://bootstrapstudio.io/releases/desktop/#{version}/Bootstrap%20Studio.dmg"
   appcast "https://bootstrapstudio.io/pages/releases"

@@ -1,9 +1,9 @@
 cask "tower" do
-  version "5.2,247:6ea4a46a"
-  sha256 "541bcfad0b671fd0289dcfe2dcff6f906100caf0bae581528da248b6fcb26a47"
+  version "6.1,258:9c97138e"
+  sha256 "55e9e9ecab7f9315dc0b367ddb61e444ed88eb20f0f133de0d2c0b13e5b848ad"
 
-  # fournova-app-updates.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://fournova-app-updates.s3.amazonaws.com/apps/tower3-mac/#{version.after_comma.before_colon}-#{version.after_colon}/Tower-#{version.before_comma}-#{version.after_comma.before_colon}.zip"
+  url "https://fournova-app-updates.s3.amazonaws.com/apps/tower3-mac/#{version.after_comma.before_colon}-#{version.after_colon}/Tower-#{version.before_comma}-#{version.after_comma.before_colon}.zip",
+      verified: "fournova-app-updates.s3.amazonaws.com/"
   appcast "https://updates.fournova.com/updates/tower3-mac/stable"
   name "Tower"
   desc "Git client focusing on power and productivity"

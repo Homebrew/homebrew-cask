@@ -1,9 +1,9 @@
 cask "sidequest" do
-  version "0.10.17"
-  sha256 "2ff5f23083af9084c2072c52aa11b2a3634eddd0b7da943363bc793be47d45ab"
+  version "0.10.18"
+  sha256 "a04aac781b7426234a5891f93e4fdf141a7d1fe9e6f2253572b0601f1d8e356a"
 
-  # github.com/SideQuestVR/SideQuest/ was verified as official when first introduced to the cask
-  url "https://github.com/SideQuestVR/SideQuest/releases/download/v#{version}/SideQuest-#{version}.dmg"
+  url "https://github.com/SideQuestVR/SideQuest/releases/download/v#{version}/SideQuest-#{version}.dmg",
+      verified: "github.com/SideQuestVR/SideQuest/"
   appcast "https://github.com/SideQuestVR/SideQuest/releases.atom"
   name "SideQuest"
   desc "Virtual reality content platform"

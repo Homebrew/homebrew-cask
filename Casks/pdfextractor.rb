@@ -1,6 +1,6 @@
 cask "pdfextractor" do
-  version "1.1.4"
-  sha256 "5525e08dfca77728ae4b75eb3f5fd48d579d6f9a527eec743eeb2eaf313d0948"
+  version "1.1.4,10104"
+  sha256 :no_check
 
   url "https://pdfextractor-app.com/PDFExtractor.dmg"
   appcast "https://pdfextractor-app.com/releases.php"

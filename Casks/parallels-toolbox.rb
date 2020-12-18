@@ -1,6 +1,6 @@
 cask "parallels-toolbox" do
-  version "4.0.1-3447"
-  sha256 "0b3845c2ecb73f184819142bb919fb236beaf600a256bffd7837f1ab3607e24c"
+  version "4.1.0-3674"
+  sha256 "de16ca5e2feaa462dc4b0ebf97b8879be2472f864e337bcd9572994c8ebeb0ee"
 
   url "https://download.parallels.com/toolbox/v#{version.major}/#{version}/ParallelsToolbox-#{version}.dmg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.parallels.com/directdownload/toolbox/"

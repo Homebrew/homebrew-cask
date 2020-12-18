@@ -3,14 +3,14 @@ cask "nextcloud" do
     version "2.6.5.20200710-legacy"
     sha256 "4c67e50361dd5596fb884002d1ed907fe109d607fba2cabe07e505addd164519"
 
-    # github.com/nextcloud/desktop/ was verified as official when first introduced to the cask
-    url "https://github.com/nextcloud/desktop/releases/download/v#{version.major_minor_patch}/Nextcloud-#{version}.pkg"
+    url "https://github.com/nextcloud/desktop/releases/download/v#{version.major_minor_patch}/Nextcloud-#{version}.pkg",
+        verified: "github.com/nextcloud/desktop/"
   else
-    version "3.0.2"
-    sha256 "69103a648bf59220a1dd09030ea2e7ba39fdf910ac456769701eadaea27682fb"
+    version "3.1.0"
+    sha256 "32df4c295328fb145ed44bd07c65da667331947a8e3eff60c22bed5b85f234ed"
 
-    # github.com/nextcloud/desktop/ was verified as official when first introduced to the cask
-    url "https://github.com/nextcloud/desktop/releases/download/v#{version}/Nextcloud-#{version}.pkg"
+    url "https://github.com/nextcloud/desktop/releases/download/v#{version}/Nextcloud-#{version}.pkg",
+        verified: "github.com/nextcloud/desktop/"
   end
 
   appcast "https://github.com/nextcloud/desktop/releases.atom"

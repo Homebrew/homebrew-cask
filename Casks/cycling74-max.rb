@@ -1,9 +1,9 @@
 cask "cycling74-max" do
-  version "8.1.7_201013"
-  sha256 "ef1d48a14baedffeef3a8be2b5b7cc0aa5c94f2bc83c7475389ca6e411b5cc52"
+  version "8.1.8_201027"
+  sha256 "dff0739068c198fb9b34f8bca1c959422ed640882b282c6ef7b3d59e5391240e"
 
-  # akiaj5esl75o5wbdcv2a-maxmspjitter.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://akiaj5esl75o5wbdcv2a-maxmspjitter.s3.amazonaws.com/Max#{version.no_dots}.dmg"
+  url "https://akiaj5esl75o5wbdcv2a-maxmspjitter.s3.amazonaws.com/Max#{version.no_dots}.dmg",
+      verified: "akiaj5esl75o5wbdcv2a-maxmspjitter.s3.amazonaws.com/"
   appcast "https://auth.cycling74.com/maxversion"
   name "Cycling ‘74 Max"
   name "Ableton Max for Live"

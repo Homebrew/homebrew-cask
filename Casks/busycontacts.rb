@@ -1,9 +1,10 @@
 cask "busycontacts" do
-  version "1.4.10,141003"
-  sha256 "3e2b8bf06207282400eb39f9c8554ee2e10c8f178b87bb7e8816f32084fdd8df"
+  version "1.4.11-2020-11-15-03-25"
+  sha256 "e2d23240e43f1645a4cb309cc72ca944d9294d5e9407e907dadb637cf01dc05e"
 
-  url "https://www.busymac.com/download/BusyContacts.zip"
-  appcast "https://www.busymac.com/busycontacts/news.plist"
+  url "https://7e968b6ce8a839f034d9-23cfb9eddcb7b94cb43ba95f95a76900.ssl.cf1.rackcdn.com/bct-#{version}.zip",
+      verified: "7e968b6ce8a839f034d9-23cfb9eddcb7b94cb43ba95f95a76900.ssl.cf1.rackcdn.com/"
+  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.busymac.com/download/BusyContacts.zip"
   name "BusyContacts"
   desc "Contact manager focusing on efficiency"
   homepage "https://www.busymac.com/busycontacts/index.html"

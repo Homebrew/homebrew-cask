@@ -19,8 +19,8 @@ cask "shuttle" do
   version "1.2.9"
   sha256 "0b80bf62922291da391098f979683e69cc7b65c4bdb986a431e3f1d9175fba20"
 
-  # github.com/fitztrev/shuttle/ was verified as official when first introduced to the cask
-  url "https://github.com/fitztrev/shuttle/releases/download/v#{version}/Shuttle.zip"
+  url "https://github.com/fitztrev/shuttle/releases/download/v#{version}/Shuttle.zip",
+      verified: "github.com/fitztrev/shuttle/"
   appcast "https://github.com/fitztrev/shuttle/releases.atom"
   name "Shuttle"
   desc "Simple shortcut menu"
@@ -32,11 +32,11 @@ cask "shuttle" do
 end
 ```
 
-And here is one for `advancedcolors`. Note that it has an unversioned download (the download `url` does not contain the version number, unlike the example above). It also suppresses the checksum with `sha256 :no_check` (necessary since the checksum will change when a new distribution is made available). This combination of `version :latest` and `sha256 :no_check` is currently the preferred mechanism when a versioned download URL is not available and the cask does not have an `appcast`.
+And here is one for `advancedcolors`. Note that it has an unversioned download (the download `url` does not contain the version number, unlike the example above). It also suppresses the checksum with `sha256 :no_check`, which is necessary because the checksum will change on the same `url` when a new distribution is made available.
 
 ```ruby
 cask "advancedcolors" do
-  version :latest
+  version "1.0.0"
   sha256 :no_check
 
   url "https://advancedcolors.com/AdvancedColors.zip"
@@ -76,7 +76,7 @@ end
 
 ### Generating a Token for the Cask
 
-The Cask **token** is the mnemonic string people will use to interact with the Cask via `brew cask install`, etc. The name of the Cask **file** is simply the token with the extension `.rb` appended.
+The Cask **token** is the mnemonic string people will use to interact with the Cask via `brew install`, etc. The name of the Cask **file** is simply the token with the extension `.rb` appended.
 
 The easiest way to generate a token for a Cask is to run this command:
 
@@ -92,12 +92,12 @@ $ "$(brew --repository)/Library/Taps/homebrew/homebrew-cask/developer/bin/genera
 
 If the `generate_cask_token` script does not work for you, see [Cask Token Details](#cask-token-details).
 
-### The `brew cask create` Command
+### The `brew create --cask` Command
 
-Once you know the token, create your Cask with the handy-dandy `brew cask create` command:
+Once you know the token, create your Cask with the handy-dandy `brew create --cask` command:
 
 ```bash
-$ brew cask create my-new-cask
+$ brew create --cask download-url --set-name my-new-cask
 ```
 
 This will open `$EDITOR` with a template for your new Cask, to be stored in the file `my-new-cask.rb`. Running the `create` command above will get you a template that looks like this:
@@ -107,7 +107,7 @@ cask "my-new-cask" do
   version ""
   sha256 ""
 
-  url "https://"
+  url "download-url"
   name ""
   desc ""
   homepage ""
@@ -122,12 +122,12 @@ Fill in the following stanzas for your Cask:
 
 | name               | value       |
 | ------------------ | ----------- |
-| `version`          | application version; give the value `:latest` if only an unversioned download is available
+| `version`          | application version
 | `sha256`           | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`. Can be suppressed by using the special value `:no_check`. (see [sha256](../cask_language_reference/stanzas/sha256.md))
 | `url`              | URL to the `.dmg`/`.zip`/`.tgz`/`.tbz2` file that contains the application.<br />A [comment](../cask_language_reference/stanzas/url.md#when-url-and-homepage-hostnames-differ-add-a-comment) must be added if the hostnames in the `url` and `homepage` stanzas differ. [Block syntax](../cask_language_reference/stanzas/url.md#using-a-block-to-defer-code-execution) is available for URLs that change on every visit
 | `name`             | the full and proper name defined by the vendor, and any useful alternate names (see [Name Stanza Details](../cask_language_reference/stanzas/name.md))
 | `desc`             | one-line description of the software (see [Desc Stanza Details](../cask_language_reference/stanzas/desc.md))
-| `homepage`         | application homepage; used for the `brew cask home` command
+| `homepage`         | application homepage; used for the `brew home` command
 | `app`              | relative path to an `.app` bundle that should be moved into the `/Applications` folder on installation (see [App Stanza Details](../cask_language_reference/stanzas/app.md))
 
 Other commonly-used stanzas are:
@@ -138,6 +138,7 @@ Other commonly-used stanzas are:
 | `pkg`              | relative path to a `.pkg` file containing the distribution (see [Pkg Stanza Details](../cask_language_reference/stanzas/pkg.md))
 | `caveats`          | a string or Ruby block providing the user with Cask-specific information at install time (see [Caveats Stanza Details](../cask_language_reference/stanzas/caveats.md))
 | `uninstall`        | procedures to uninstall a Cask. Optional unless the `pkg` stanza is used. (see [Uninstall Stanza Details](../cask_language_reference/stanzas/uninstall.md))
+| `zap`        		 | additional procedures for a more complete uninstall, including configuration files and shared resources (see [Zap Stanza Details](../cask_language_reference/stanzas/zap.md))
 
 Additional `artifact` stanzas you might need for special use-cases can be found [here](../cask_language_reference/all_stanzas.md#at-least-one-artifact-stanza-is-also-required). Even more special-use stanzas are listed at [Optional Stanzas](../cask_language_reference/all_stanzas.md#optional-stanzas).
 
@@ -170,27 +171,27 @@ Give it a shot with:
 
 ```bash
 export HOMEBREW_NO_AUTO_UPDATE=1
-brew cask install my-new-cask
+brew install my-new-cask
 ```
 
-Did it install? If something went wrong, edit your Cask with `brew cask edit my-new-cask` to fix it.
+Did it install? If something went wrong, edit your Cask with `brew edit my-new-cask` to fix it.
 
 Test also if the uninstall works successfully:
 
 ```bash
-brew cask uninstall my-new-cask
+brew uninstall my-new-cask
 ```
 
 If everything looks good, you’ll also want to make sure your Cask passes audit with:
 
 ```bash
-brew cask audit my-new-cask --download
+brew audit --new-cask my-new-cask
 ```
 
-You should also check stylistic details with `brew cask style`:
+You should also check stylistic details with `brew style`:
 
 ```bash
-brew cask style --fix my-new-cask
+brew style --fix my-new-cask
 ```
 
 Keep in mind all of these checks will be made when you submit your PR, so by doing them in advance you’re saving everyone a lot of time and trouble.
@@ -309,7 +310,7 @@ See [a note about git commit messages](https://tbaggery.com/2008/04/19/a-note-ab
 
 The first line of a commit message becomes the **title** of a pull request on GitHub, like the subject line of an email. Including the key info in the first line will help us respond faster to your pull.
 
-For Cask commits in the Homebrew Cask project, we like to include the Application name, version number (or `:latest`), and purpose of the commit in the first line.
+For Cask commits in the Homebrew Cask project, we like to include the Application name, version number, and purpose of the commit in the first line.
 
 Examples of good, clear commit summaries:
 

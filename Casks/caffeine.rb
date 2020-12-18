@@ -2,8 +2,8 @@ cask "caffeine" do
   version "1.1.3"
   sha256 "240e5ab832a25ed0af43aeffd1d66dc663dfea7c2525d918c214d6107981a03b"
 
-  # github.com/IntelliScape/caffeine/releases was verified as official when first introduced to the cask
-  url "https://github.com/IntelliScape/caffeine/releases/download/#{version}/Caffeine.dmg"
+  url "https://github.com/IntelliScape/caffeine/releases/download/#{version}/Caffeine.dmg",
+      verified: "github.com/IntelliScape/caffeine/"
   appcast "https://github.com/IntelliScape/caffeine/releases.atom"
   name "Caffeine"
   desc "Utility that prevents the system from going to sleep"
@@ -12,7 +12,9 @@ cask "caffeine" do
   app "Caffeine.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.lightheadsw.caffeine.sfl*",
-    "~/Library/Preferences/com.lightheadsw.Caffeine.plist",
+    "~/Library/Application Support/com.intelliscapesolutions.caffeine",
+    "~/Library/Preferences/com.intelliscapesolutions.caffeine.plist",
+    "~/Library/Caches/com.intelliscapesolutions.caffeine",
+    "~/Library/HTTPStorages/com.intelliscapesolutions.caffeine.binarycookies",
   ]
 end

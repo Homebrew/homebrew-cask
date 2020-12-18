@@ -1,11 +1,12 @@
 cask "tuple" do
-  version "0.80.0,2020-10-15-36cb876f"
-  sha256 "ab12b44664faee8d670fd454d1c80c05a53dfbdae1fe09e8282cdd61f87f9012"
+  version "0.82.0-2020,12-14-83be3274"
+  sha256 "6983f1a4df1bf8dc277e85fe463005902da682a579a27cdf21a1a872aa98cb23"
 
-  # s3.us-east-2.amazonaws.com/tuple-releases/ was verified as official when first introduced to the cask
-  url "https://s3.us-east-2.amazonaws.com/tuple-releases/production/sparkle/tuple-#{version.before_comma}-#{version.after_comma}.zip"
+  url "https://s3.us-east-2.amazonaws.com/tuple-releases/production/sparkle/tuple-#{version.before_comma}-#{version.after_comma}.zip",
+      verified: "s3.us-east-2.amazonaws.com/tuple-releases/"
   appcast "https://s3.us-east-2.amazonaws.com/tuple-releases/production/sparkle/appcast.xml"
   name "Tuple"
+  desc "Remote pair programming app"
   homepage "https://tuple.app/"
 
   auto_updates true

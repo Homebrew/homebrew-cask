@@ -1,8 +1,8 @@
 cask "disk-drill" do
-  version "4.0.123"
-  sha256 "f0c162a959885be6bb8423f1343e18c571193f43fcb536f65adc77b5941e9761"
+  version "4.1.206"
+  sha256 "b3e8da04d756147ced34ffda0417e90fce290df65494fe3b5371ac0258abf0e6"
 
-  url "https://www.cleverfiles.com/releases/DiskDrill_#{version}.zip"
+  url "https://www.cleverfiles.com/releases/DiskDrill_#{version}.dmg"
   appcast "https://www.cleverfiles.com/releases/auto-update/dd2-newestr.xml"
   name "Disk Drill"
   desc "Data recovery software"

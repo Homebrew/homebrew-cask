@@ -1,9 +1,9 @@
 cask "windocd" do
-  version "1.7.4"
-  sha256 "72d5b9fd9b2e20245dbe7c1fb60d41982c725485901e002676ba00945ce91b2e"
+  version "1.8"
+  sha256 :no_check
 
-  # download.moapp.software/ was verified as official when first introduced to the cask
-  url "https://download.moapp.software/windOCD.zip"
+  url "https://download.moapp.software/windOCD.zip",
+      verified: "download.moapp.software/"
   appcast "https://sparkle.moapp.software/windocd.xml"
   name "windOCD"
   homepage "https://windocd.myownapp.com/"

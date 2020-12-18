@@ -1,6 +1,6 @@
 cask "4k-stogram" do
-  version "3.1.0.3300"
-  sha256 "bb6c4b2be2ee8b894a0310871ec9d07fd1b665e3551fa38ff5fb13359029b919"
+  version "3.2.2.3440"
+  sha256 "44a30064d1601d254a166c04d92a00de912d14827b4418e396179f9838f40cde"
 
   url "https://dl.4kdownload.com/app/4kstogram_#{version.major_minor_patch}.dmg"
   appcast "https://www.4kdownload.com/download"

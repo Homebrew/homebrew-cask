@@ -39,23 +39,24 @@ The available values for macOS releases are:
 | `:high_sierra`     | `10.13`
 | `:mojave`          | `10.14`
 | `:catalina`        | `10.15`
+| `:big_sur`         | `11.0`
 
 Only major releases are covered (version numbers containing a single dot). The symbol form is used for readability. The following are all valid ways to enumerate the exact macOS release requirements for a Cask:
 
 ```ruby
-depends_on macos: :catalina
+depends_on macos: :big_sur
 depends_on macos: [
-  :mojave,
   :catalina,
+  :big_sur,
 ]
 ```
 
 ### Setting a Minimum macOS Release
 
-`depends_on macos:` can also accept a string starting with a comparison operator such as `>=`, followed by an macOS release in the form above. The following is a valid expression meaning “at least macOS Catalina (10.15)”:
+`depends_on macos:` can also accept a string starting with a comparison operator such as `>=`, followed by an macOS release in the form above. The following is a valid expression meaning “at least macOS Big Sur (11.0)”:
 
 ```ruby
-depends_on macos: ">= :catalina"
+depends_on macos: ">= :big_sur"
 ```
 
 A comparison expression cannot be combined with any other form of `depends_on macos:`.
@@ -89,5 +90,4 @@ Since as of now all the macOS versions we support only run on 64-bit Intel, `dep
 | `cask:`    | a Cask token
 | `macos:`   | a symbol, string, array, or comparison expression defining macOS release requirements
 | `arch:`    | a symbol or array defining hardware requirements
-| `x11:`     | a Boolean indicating a dependency on X11
 | `java:`    | *stub - not yet functional*

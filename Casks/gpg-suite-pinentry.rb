@@ -1,6 +1,6 @@
 cask "gpg-suite-pinentry" do
-  version "2020.1"
-  sha256 "43d7becb7faaeafcffaf6a2723cea7ea004265a79e2df9a1a9687916a694a131"
+  version "2020.2"
+  sha256 "e2ede6b317d53d1e321342a6f7dd5ab6b123a4900aa8f1eab89b29051a2a4742"
 
   url "https://releases.gpgtools.org/GPG_Suite-#{version}.dmg"
   appcast "https://gpgtools.org/releases/gka/appcast.xml"
@@ -99,9 +99,14 @@ cask "gpg-suite-pinentry" do
         },
       ]
 
-  uninstall pkgutil: "org.gpgtools.pinentry.*",
-            quit:    "org.gpgtools.pinentry-mac",
-            delete:  "/usr/local/MacGPG2"
+  uninstall pkgutil:   [
+    "org.gpgtools.pinentry.*",
+    "org.gpgtools.checkprivatekey.pkg",
+    "org.gpgtools.updater.pkg",
+  ],
+            launchctl: "org.gpgtools.updater",
+            quit:      "org.gpgtools.pinentry-mac",
+            delete:    "/usr/local/MacGPG2"
 
   zap trash: "~/Library/Preferences/org.gpgtools.common.plist"
 

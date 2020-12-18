@@ -5,6 +5,7 @@ cask "haptickey" do
   url "https://github.com/niw/HapticKey/releases/download/#{version}/HapticKey.app.zip"
   appcast "https://github.com/niw/HapticKey/releases.atom"
   name "HapticKey"
+  desc "Trigger haptic feedback when tapping Touch Bar"
   homepage "https://github.com/niw/HapticKey"
 
   depends_on macos: ">= :sierra"

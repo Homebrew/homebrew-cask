@@ -1,9 +1,9 @@
 cask "microsoft-excel" do
-  version "16.42.20101102"
-  sha256 "2235e4fe0741ce013777e2b6811ad9eff738f9a724860fba0dfd31976bf96e62"
+  version "16.44.20121301"
+  sha256 "b9c86c0c3dcb69922b7c2446780c44e308165ddde4fc053c8029a371099cb1ba"
 
-  # officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/ was verified as official when first introduced to the cask
-  url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Excel_#{version}_Installer.pkg"
+  url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Excel_#{version}_Installer.pkg",
+      verified: "officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/"
   appcast "https://docs.microsoft.com/en-us/officeupdates/update-history-office-for-mac"
   name "Microsoft Excel"
   homepage "https://products.office.com/en-US/excel"

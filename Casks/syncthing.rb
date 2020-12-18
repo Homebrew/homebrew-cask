@@ -1,9 +1,9 @@
 cask "syncthing" do
-  version "1.9.0-1"
-  sha256 "9af220fe0e817577da0996fc25187449d487a1b265eda74d40f045ebb50a5876"
+  version "1.12.0-1"
+  sha256 "f5e50107998296d8c73d0d8c9830cb0430553486a9d90f4e3aea5a73303cb6c3"
 
-  # github.com/syncthing/syncthing-macos/ was verified as official when first introduced to the cask
-  url "https://github.com/syncthing/syncthing-macos/releases/download/v#{version}/Syncthing-#{version}.dmg"
+  url "https://github.com/syncthing/syncthing-macos/releases/download/v#{version}/Syncthing-#{version}.dmg",
+      verified: "github.com/syncthing/syncthing-macos/"
   appcast "https://github.com/syncthing/syncthing-macos/releases.atom"
   name "Syncthing"
   desc "Real time file synchronization software"

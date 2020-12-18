@@ -1,9 +1,9 @@
 cask "musicbrainz-picard" do
-  version "2.4.4"
-  sha256 "21e1a9f94748667e7e4e1a5c08be71b164b8dcfaae2e874916754e650b9bb934"
+  version "2.5.4"
+  sha256 "f7d58a8af18ee9bb1aaff0a7553ea8e2327ebeee4e41e00f1b17ebace7384748"
 
-  # musicbrainz.osuosl.org/pub/ was verified as official when first introduced to the cask
-  url "https://musicbrainz.osuosl.org/pub/musicbrainz/picard/MusicBrainz-Picard-#{version}.dmg"
+  url "https://musicbrainz.osuosl.org/pub/musicbrainz/picard/MusicBrainz-Picard-#{version}.dmg",
+      verified: "musicbrainz.osuosl.org/pub/"
   appcast "https://picard.musicbrainz.org/downloads/"
   name "MusicBrainz Picard"
   desc "Cross-platform music tagger"

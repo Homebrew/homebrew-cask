@@ -1,6 +1,6 @@
 cask "mutify" do
-  version "1.1.1"
-  sha256 "761c6cba9f6db885cbc01f82ae2b539be5137adbb75384151ff6d091f3fdae8b"
+  version "1.1.1,8"
+  sha256 :no_check
 
   url "https://storage.mutify.app/data/Mutify.dmg"
   name "Mutify"

@@ -1,6 +1,6 @@
 cask "minitube" do
-  version "3.6.4"
-  sha256 "86efcb6a9d05e0bf669cec894e4b27fda1d6f21824f276e10dc1b2964b9c85db"
+  version "3.6.7"
+  sha256 :no_check
 
   url "https://flavio.tordini.org/files/minitube/minitube.dmg"
   appcast "https://flavio.tordini.org/minitube-ws/appcast.xml"

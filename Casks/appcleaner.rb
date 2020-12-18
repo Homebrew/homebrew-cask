@@ -10,6 +10,7 @@ cask "appcleaner" do
 
   url "https://www.freemacsoft.net/downloads/AppCleaner_#{version}.zip"
   name "FreeMacSoft AppCleaner"
+  desc "Application uninstaller"
   homepage "https://freemacsoft.net/appcleaner/"
 
   auto_updates true

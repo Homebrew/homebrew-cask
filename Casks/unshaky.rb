@@ -1,6 +1,6 @@
 cask "unshaky" do
-  version "0.6.0"
-  sha256 "cb5d6be42e971863cce06462798000a2672aaff0987b9ef025bdf15172a330db"
+  version "0.7.0"
+  sha256 "722fdd718fe47e58f1ea9c60fbcaf81cb4bbd6173b9cf7a8c4a6425a977a9fd9"
 
   url "https://github.com/aahung/Unshaky/releases/download/v#{version}/Unshaky_v#{version}.zip"
   appcast "https://github.com/aahung/Unshaky/releases.atom"
@@ -8,6 +8,7 @@ cask "unshaky" do
   desc "Software fix for double key presses on Apple's butterfly keyboard"
   homepage "https://github.com/aahung/Unshaky"
 
+  auto_updates true
   depends_on macos: ">= :sierra"
 
   app "Unshaky.app"

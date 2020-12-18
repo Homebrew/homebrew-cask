@@ -1,9 +1,10 @@
 cask "raindropio" do
-  version :latest
+  version "5.2.48"
   sha256 :no_check
 
   url "https://raindrop.io/releases/mac/Raindrop.dmg"
   name "Raindrop.io"
+  desc "All-in-one bookmark manager"
   homepage "https://raindrop.io/"
 
   app "Raindrop.io.app"

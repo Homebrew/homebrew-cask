@@ -1,13 +1,16 @@
 cask "termius" do
-  version "7.0.0"
-  sha256 "0b206aefa99b902d9226153a42cf721ccf8f90b9f9f831734473eab77ad9845a"
+  version "7.2.1"
+  sha256 :no_check
 
-  # s3.amazonaws.com/termius.desktop.autoupdate/mac/ was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/termius.desktop.autoupdate/mac/Termius.dmg"
+  url "https://s3.amazonaws.com/termius.desktop.autoupdate/mac/Termius.dmg",
+      verified: "s3.amazonaws.com/termius.desktop.autoupdate/mac/"
   appcast "https://s3.amazonaws.com/termius.desktop.autoupdate/mac/latest-mac.yml"
   name "Termius"
   desc "Cross-platform SSH client"
   homepage "https://www.termius.com/"
+
+  auto_updates true
+  depends_on macos: ">= :yosemite"
 
   app "Termius.app"
 

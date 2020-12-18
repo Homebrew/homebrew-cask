@@ -5,6 +5,7 @@ cask "noto" do
   url "https://www.brunophilipe.com/software/noto/releases/noto-#{version}.dmg"
   appcast "https://www.brunophilipe.com/software/noto/updates/appcast.xml"
   name "Noto"
+  desc "Simple plain text editor"
   homepage "https://www.brunophilipe.com/software/noto/"
 
   depends_on macos: ">= :sierra"

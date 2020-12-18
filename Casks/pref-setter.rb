@@ -1,6 +1,6 @@
 cask "pref-setter" do
   version "2.0"
-  sha256 "13e46309009eaccc0c75e4d13536cb810634ba57ad185db839b6724b35d900ce"
+  sha256 :no_check
 
   url "http://www.nightproductions.net/downloads/prefsetter.zip"
   appcast "http://www.nightproductions.net/feeds/prefsetter.xml"

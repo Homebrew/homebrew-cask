@@ -1,6 +1,6 @@
 cask "bot-framework-emulator" do
-  version "4.10.0"
-  sha256 "76e2add547f1e4a5501fb21ccdec6a5602080acfe30c540730f6af3a3f0ebed5"
+  version "4.11.0"
+  sha256 "9e43309994b35d26ec4b959f7ec34565e45692198825f4176dc1b4b188a21dcd"
 
   url "https://github.com/Microsoft/BotFramework-Emulator/releases/download/v#{version}/botframework-emulator-#{version}-mac.zip"
   appcast "https://github.com/Microsoft/BotFramework-Emulator/releases.atom"

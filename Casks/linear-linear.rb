@@ -8,6 +8,8 @@ cask "linear-linear" do
   desc "App to manage software development and track bugs"
   homepage "https://linear.app/"
 
+  auto_updates true
+
   app "Linear.app"
 
   zap trash: [

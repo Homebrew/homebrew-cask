@@ -1,10 +1,11 @@
 cask "cljstyle" do
-  version "0.13.0"
-  sha256 "f2c29e27f15a1bf30d86ee8850be778466fc201cffc2c29745c149ef4beafedd"
+  version "0.14.0"
+  sha256 "6708578e7bae6a52ec1603a11ea302ed17c09d8b39bc20b19ff4dff9627d718a"
 
   url "https://github.com/greglook/cljstyle/releases/download/#{version}/cljstyle_#{version}_macos.tar.gz"
   appcast "https://github.com/greglook/cljstyle/releases.atom"
   name "cljstyle"
+  desc "Tool for formatting Clojure code"
   homepage "https://github.com/greglook/cljstyle"
 
   binary "cljstyle"

@@ -1,6 +1,6 @@
 cask "phpstorm" do
-  version "2020.2.3,202.7660.42"
-  sha256 "f23883ba6a7caaba6bd706357668fbbb249bf9f67ddf3b9158b484ea07a378c6"
+  version "2020.3,203.5981.175"
+  sha256 "d365d0dfb5173996a060e12f4806d5f86343072b13d879631d3530ead629050a"
 
   url "https://download.jetbrains.com/webide/PhpStorm-#{version.before_comma}.dmg"
   appcast "https://data.services.jetbrains.com/products/releases?code=PS&latest=true&type=release"

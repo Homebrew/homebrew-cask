@@ -1,5 +1,5 @@
 cask "kdiff3" do
-  # note: "3" is not a version number, but an intrinsic part of the product name
+  # NOTE: "3" is not a version number, but an intrinsic part of the product name
   version "1.8.4"
   sha256 "50131b4c4447f2ad446971f11515baa47b72ce61a551d69218996b313046f31f"
 

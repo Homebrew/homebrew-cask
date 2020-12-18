@@ -1,6 +1,6 @@
 cask "adobe-acrobat-reader" do
-  version "20.012.20048"
-  sha256 "46940bf8f3241642a2d2bea304c24f3aff29e8ed8150ce259c90c5fe56412128"
+  version "20.013.20074"
+  sha256 "898c355164dded96d9da19a250700f3636e52051cddce63d673b7063ecf1f538"
 
   url "https://ardownload2.adobe.com/pub/adobe/reader/mac/AcrobatDC/#{version.no_dots}/AcroRdrDC_#{version.no_dots}_MUI.dmg"
   appcast "https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/index.html"
@@ -34,6 +34,7 @@ cask "adobe-acrobat-reader" do
     "~/Library/Preferences/com.adobe.AdobeRdrCEFHelper.plist",
     "~/Library/Preferences/com.adobe.crashreporter.plist",
     "~/Library/Caches/com.adobe.Reader",
+    "~/Library/HTTPStorages/com.adobe.Reader.binarycookies",
     "/Library/Preferences/com.adobe.reader.DC.WebResource.plist",
   ]
 end

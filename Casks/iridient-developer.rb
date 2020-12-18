@@ -1,13 +1,15 @@
 cask "iridient-developer" do
-  version "3.4.0"
-  sha256 "3eafbea911ea8e69f5910ff49f122843855cebb57f1ef5c8e301bedb01f8c3d2"
+  version "3.5.1"
+  sha256 "c26d6afebe114c0fa121b256b19290d9b62b37ffe315c8c8e082a5a7bf58de0f"
 
-  url "https://www.iridientdigital.com/downloads/IridientDeveloper_#{version.no_dots}.dmg"
+  url "https://www.iridientdigital.com/downloads/IridientDeveloper_#{version.no_dots}_Universal.dmg"
   appcast "https://www.iridientdigital.com/products/rawdeveloper_history.html",
           must_contain: version.major_minor
   name "Iridient Developer"
   desc "Image processing application"
   homepage "https://www.iridientdigital.com/"
+
+  depends_on macos: ">= :mojave"
 
   app "Iridient Developer.app"
 end

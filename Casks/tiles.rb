@@ -9,6 +9,9 @@ cask "tiles" do
   desc "Window manager"
   homepage "https://www.sempliva.com/tiles/"
 
+  auto_updates true
+  depends_on macos: ">= :el_capitan"
+
   app "Tiles.app"
 
   uninstall launchctl: "com.sempliva.TilesHelper",

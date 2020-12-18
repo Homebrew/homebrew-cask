@@ -1,9 +1,9 @@
 cask "amazon-music" do
-  version "7.13.1.2217,22171013_18a5dcb8ebe568df4a266e9158c88c85"
-  sha256 "5a0df9ff56fcf3907351ed958dc413df75704bc7ea5044f7fd39bdac065d0df7"
+  version "8.1.0.2232,22321202_934ab0c687037a8f0f8d3b22b0883662"
+  sha256 "1effafe77ed1d8cb96fb618f2862f3ec6cc0640c942347166839b7ada8604cea"
 
-  # morpho-releases.s3-us-west-2.amazonaws.com/mac/ was verified as official when first introduced to the cask
-  url "https://morpho-releases.s3-us-west-2.amazonaws.com/mac/#{version.after_comma}/AmazonMusicInstaller.dmg"
+  url "https://morpho-releases.s3-us-west-2.amazonaws.com/mac/#{version.after_comma}/AmazonMusicInstaller.dmg",
+      verified: "morpho-releases.s3-us-west-2.amazonaws.com/mac/"
   appcast "https://www.amazon.com/gp/dmusic/desktop/downloadPlayer",
           must_contain: version.after_comma
   name "Amazon Music"
@@ -34,8 +34,8 @@ cask "amazon-music" do
   caveats <<~EOS
     If the app will not launch after installation, try
 
-      brew cask zap #{token}
-      brew cask install #{token}
+      brew uninstall --zap --cask #{token}
+      brew install --cask #{token}
 
     then re-launch the app.
   EOS

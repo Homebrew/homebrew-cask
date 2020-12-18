@@ -1,9 +1,9 @@
 cask "microsoft-office" do
-  version "16.42.20101102"
-  sha256 "5fa1084bd240bf10faaf94d908492939807ead8e014582dcb2ade7ecc484276b"
+  version "16.44.20121301"
+  sha256 "da1848641fcb8496715d1153ac5398f0cd7303324bb72e6dc568f373f2e4bb34"
 
-  # officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/ was verified as official when first introduced to the cask
-  url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Office_#{version}_Installer.pkg"
+  url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Office_#{version}_Installer.pkg",
+      verified: "officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/"
   name "Microsoft Office"
   homepage "https://products.office.com/mac/microsoft-office-for-mac/"
 

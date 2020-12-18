@@ -1,6 +1,6 @@
 cask "transnomino" do
-  version "5.2.1"
-  sha256 "9dfaed1b36ecc2013c985e4ddaad79c587a8c7eabc3f71c46bdce519d26d7310"
+  version "5.3.1"
+  sha256 "3c5619a494726515b4b276a7f7f8675ec7db9312b780bbeac5eecfb254affdc4"
 
   url "https://transnomino.bastiaanverreijt.com/download/Transnomino-#{version}.dmg"
   appcast "https://transnomino.bastiaanverreijt.com/"

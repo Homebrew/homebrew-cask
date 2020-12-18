@@ -1,6 +1,6 @@
 cask "backuploupe" do
-  version "3.0.6"
-  sha256 "0772aa299bf0f5f14a169696b5c651b426836ad80efefd90e63a0ceb8faafb2f"
+  version "3.2.3"
+  sha256 "2e36ae70078e36ddd0db400ba87eb70650ae862f8c7f1c94aecdbdc9c75a3b92"
 
   url "https://www.soma-zone.com/download/files/BackupLoupe-#{version}.tar.bz2"
   appcast "https://www.soma-zone.com/BackupLoupe/a/appcast-update-#{version.major}.xml"

@@ -1,6 +1,6 @@
 cask "numi" do
-  version "3.28.668"
-  sha256 "4daf9adde47117891559a31360aae6262fcdb9e0a092658ec4471aa4aafbc634"
+  version "3.29.680"
+  sha256 "1e54fd0dd314d9518962079d56d770c7a35f31c8f709bd3bb40eb13e46bc526b"
 
   url "https://s3.numi.app/updates/#{version}/Numi.dmg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://s1.numi.app/download"

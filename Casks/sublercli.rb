@@ -4,6 +4,7 @@ cask "sublercli" do
 
   url "https://bitbucket.org/galad87/sublercli/downloads/SublerCLI-#{version}.zip"
   name "SublerCLI"
+  desc "Command-line version of Subler"
   homepage "https://bitbucket.org/galad87/sublercli/"
 
   binary "SublerCLI"

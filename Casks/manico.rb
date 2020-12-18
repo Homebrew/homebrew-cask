@@ -1,6 +1,6 @@
 cask "manico" do
-  version "2.7.3,388"
-  sha256 "2a8863cfc6af313e3c79875fc3bff7bbf20813f13c25101b45963a2a436b0d98"
+  version "2.8.1,393"
+  sha256 "e83213c293baff826ca7624b3a130bf99ad5b05650364ba258266bc28645708c"
 
   url "https://manico.im/api/release_manager/downloads/im.manico.Manico/#{version.after_comma}.zip"
   appcast "https://manico.im/api/release_manager/im.manico.Manico.xml"

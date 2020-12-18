@@ -1,9 +1,9 @@
 cask "postgres" do
-  version "2.4"
-  sha256 "fccb02e04d5001d57cd06beab12a8c9b93e97c1f9ff52232ae8bb9474084b31e"
+  version "2.4.1"
+  sha256 "c09c182ce8bbba0c374f216040f90e47ccd40ea5b9349c292691ba5f8de2f3e6"
 
-  # github.com/PostgresApp/PostgresApp/ was verified as official when first introduced to the cask
-  url "https://github.com/PostgresApp/PostgresApp/releases/download/v#{version}/Postgres-#{version}-9.5-9.6-10-11-12-13.dmg"
+  url "https://github.com/PostgresApp/PostgresApp/releases/download/v#{version}/Postgres-#{version}-9.5-9.6-10-11-12-13.dmg",
+      verified: "github.com/PostgresApp/PostgresApp/"
   appcast "https://github.com/PostgresApp/PostgresApp/releases.atom"
   name "Postgres"
   homepage "https://postgresapp.com/"

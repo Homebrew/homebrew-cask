@@ -26,7 +26,7 @@ jobs:
       - name: Post Pull Request Review
         uses: Homebrew/actions/post-review@master
         with:
-          token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+          token: ${{ (github.event.pull_request.user.login == 'BrewTestBot' && secrets.GITHUB_TOKEN) || secrets.HOMEBREW_GITHUB_API_TOKEN }}
           event: ${{ steps.review.outputs.event }}
           body: |
             ${{ steps.review.outputs.message }}

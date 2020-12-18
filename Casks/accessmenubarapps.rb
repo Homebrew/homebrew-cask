@@ -5,6 +5,7 @@ cask "accessmenubarapps" do
   url "https://www.ortisoft.de/resources/AccessMenuBarApps#{version}.zip"
   appcast "https://www.ortisoft.de/accessmenubarapps/profileInfo.php"
   name "AccessMenuBarApps"
+  desc "Instant access for menubar apps"
   homepage "https://www.ortisoft.de/accessmenubarapps/"
 
   app "AccessMenuBarApps#{version}/AccessMenuBarApps.app"

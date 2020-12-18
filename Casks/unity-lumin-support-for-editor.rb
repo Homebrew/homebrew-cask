@@ -1,12 +1,12 @@
 cask "unity-lumin-support-for-editor" do
-  version "2020.1.9f1,145f5172610f"
-  sha256 "4f599f3345f8e211e15a060daf8185c28c9f93a9435bbe96c2d7c74e12ef4715"
+  version "2020.1.17f1,9957aee8edc2"
+  sha256 "e326abccca5d42540b3c322acd1f0a5152d4c42fca9c0ad8abcc5b2b8e84953e"
 
-  # download.unity3d.com/download_unity/ was verified as official when first introduced to the cask
-  url "https://download.unity3d.com/download_unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Lumin-Support-for-Editor-#{version.before_comma}.pkg"
+  url "https://download.unity3d.com/download_unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Lumin-Support-for-Editor-#{version.before_comma}.pkg",
+      verified: "download.unity3d.com/download_unity/"
   appcast "https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json"
   name "Unity Lumin Build Support"
-  desc "Lumin taget support for Unity"
+  desc "Lumin target support for Unity"
   homepage "https://unity.com/products"
 
   depends_on cask: "unity"

@@ -1,9 +1,9 @@
 cask "gitup" do
-  version "1.1.3"
-  sha256 "c9e885a010d30ac9a2fae05475f4be68b722585ba64fb486ae8bde08c1cb7620"
+  version "1.1.3,1036"
+  sha256 :no_check
 
-  # gitup-builds.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://gitup-builds.s3.amazonaws.com/stable/GitUp.zip"
+  url "https://gitup-builds.s3.amazonaws.com/stable/GitUp.zip",
+      verified: "gitup-builds.s3.amazonaws.com/"
   appcast "https://github.com/git-up/GitUp/releases.atom"
   name "GitUp"
   desc "Git interface focused on visual interaction"

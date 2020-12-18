@@ -1,6 +1,6 @@
 cask "unity-hub" do
-  version "2.4.1"
-  sha256 "1981eba594a1b7693d610f7e388d02d83efcf597053e44b5a9c5b409c7364a83"
+  version "2.4.2"
+  sha256 :no_check
 
   url "https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.dmg"
   appcast "https://public-cdn.cloud.unity3d.com/hub/prod/latest-mac.yml"
@@ -8,13 +8,15 @@ cask "unity-hub" do
   desc "Management tool for Unity"
   homepage "https://unity3d.com/get-unity/download"
 
+  auto_updates true
+
   app "Unity Hub.app"
 
-  uninstall quit:  "com.unity3d.unityhub",
-            rmdir: "/Applications/Unity/Hub"
+  uninstall quit: "com.unity3d.unityhub"
 
   zap trash: [
     "~/Library/Preferences/com.unity3d.unityhub.plist",
     "~/Library/Preferences/com.unity3d.unityhub.helper.plist",
-  ]
+  ],
+      rmdir: "/Applications/Unity/Hub"
 end

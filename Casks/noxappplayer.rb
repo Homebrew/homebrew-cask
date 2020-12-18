@@ -1,6 +1,6 @@
 cask "noxappplayer" do
-  version "3.8.1.0,20201014:0ea933d044244d13ab6472611973b163"
-  sha256 "b0ae0e2a42918d35b4664dc0b8e7e2d2ce502f31958888915c4fc6795db165bd"
+  version "3.8.5.1,20201127:6c7e32816b1449b494b980af6c0c3542"
+  sha256 "148ab01bf7d94bedfa20b701e07a965ca02d2b7d9e60fb5879db64f0bdc79f02"
 
   url "https://res06.bignox.com/full/#{version.after_comma.before_colon}/#{version.after_colon}.dmg?filename=NoxInstaller_#{version.before_comma}_en.dmg"
   appcast "https://www.macupdater.net/cgi-bin/check_urls/check_url_redirect_curl.cgi?url=https://www.bignox.com/en/download/fullPackage/mac_fullzip"

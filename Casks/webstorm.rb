@@ -1,10 +1,11 @@
 cask "webstorm" do
-  version "2020.2.3,202.7660.23"
-  sha256 "a30a665aa9ebb79c77d67ddf57445ff114336807944067bacf2a936459899de5"
+  version "2020.3,203.5981.135"
+  sha256 "6365de397ecc2a8ecfd6421c3dec1d1da0d3a7bc68b3ede5bef4a1c608fe3af5"
 
   url "https://download.jetbrains.com/webstorm/WebStorm-#{version.before_comma}.dmg"
   appcast "https://data.services.jetbrains.com/products/releases?code=WS&latest=true&type=release"
   name "WebStorm"
+  desc "JavaScript IDE"
   homepage "https://www.jetbrains.com/webstorm/"
 
   auto_updates true

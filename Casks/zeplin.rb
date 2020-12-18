@@ -1,10 +1,11 @@
 cask "zeplin" do
-  version "3.10,1016"
-  sha256 "9ffc3e4ad1012d254b8b500ccf2359b70f82d04ba71080f4ccb0de59cf0afb20"
+  version "3.12,1061"
+  sha256 :no_check
 
   url "https://api.zeplin.io/urls/download-mac"
-  appcast "https://rink.hockeyapp.net/api/2/apps/8926efffe734b6d303d09f41d90c34fc"
+  appcast "https://api.appcenter.ms/v0.1/public/sparkle/apps/8926efff-e734-b6d3-03d0-9f41d90c34fc"
   name "Zeplin"
+  desc "Share, organize and collaborate on designs"
   homepage "https://zeplin.io/"
 
   auto_updates true
