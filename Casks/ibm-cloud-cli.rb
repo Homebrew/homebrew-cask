@@ -4,8 +4,8 @@ cask "ibm-cloud-cli" do
 
   url "https://download.clis.cloud.ibm.com/ibm-cloud-cli/#{version}/IBM_Cloud_CLI_#{version}.pkg"
   appcast "https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases.atom"
-  name "IBM-Cloud-CLI"
-  desc "IBM Cloud command-line interface"
+  name "IBM Cloud CLI"
+  desc "Command-line API client"
   homepage "https://cloud.ibm.com/docs/cli/index.html"
 
   depends_on cask: "docker"
