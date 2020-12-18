@@ -1,6 +1,6 @@
 cask "odrive" do
-  version "6902"
-  sha256 "075dd2186b1cdaf4fe3ab70d610d59ba8b259350de06b1ede80e34ae564bc11f"
+  version "6918"
+  sha256 "9107f7634ac70cf017c889738b5bd8e3ac937bd991d5999119832d57407f0c22"
 
   # downloads can be found at https://www.odrive.com/downloaddesktop
   url "https://d3huse1s6vwzq6.cloudfront.net/odrivesync.#{version}.pkg",
