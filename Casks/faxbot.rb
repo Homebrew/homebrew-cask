@@ -1,5 +1,5 @@
 cask "faxbot" do
-  version "2.5.1"
+  version "2.5.1,180129.1"
   sha256 :no_check
 
   url "https://www.hosy.de/faxer/Faxer.zip"
