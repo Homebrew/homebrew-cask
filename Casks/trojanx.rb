@@ -12,7 +12,7 @@ cask "trojanx" do
 
   app "TrojanX.app"
 
-  ununstall delete: "/Library/Application Support/TrojanX"
+  uninstall delete: "/Library/Application Support/TrojanX"
 
   zap trash: [
     "~/Library/Application Support/TrojanX",
