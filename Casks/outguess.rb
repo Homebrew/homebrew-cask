@@ -1,5 +1,5 @@
 cask "outguess" do
-  version :latest
+  version "1.1.6"
   sha256 :no_check
 
   url "https://www.rbcafe.com/download/outguess.zip",

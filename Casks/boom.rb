@@ -1,10 +1,10 @@
 cask "boom" do
-  version "1.6.9,1575451705"
-  sha256 "444b5513c92eb0975494509908786a31f087a0af0e58fa5f312a156318be22f8"
+  version "1.6.12"
+  sha256 :no_check
 
-  # devmate.com/com.globaldelight.Boom2/ was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.globaldelight.Boom2/#{version.before_comma}/#{version.after_comma}/Boom2-#{version.before_comma}.dmg"
-  appcast "https://updates.devmate.com/com.globaldelight.Boom2.xml"
+  url "https://d13nae1tw8tdnq.cloudfront.net/Boom2mac/webstore/Boom2.dmg",
+      verified: "d13nae1tw8tdnq.cloudfront.net/Boom2mac/"
+  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_lastmodified.cgi?url=https://d13nae1tw8tdnq.cloudfront.net/Boom2mac/webstore/Boom2.dmg"
   name "Boom"
   desc "Transforms audio input"
   homepage "https://www.globaldelight.com/boom"
@@ -14,10 +14,7 @@ cask "boom" do
   app "Boom 2.app"
 
   uninstall kext:      "com.globaldelight.driver.Boom2Device",
-            launchctl: [
-              "com.globaldelight.Boom2.*",
-              "com.globaldelight.Boom2Daemon",
-            ],
+            launchctl: "com.globaldelight.Boom2Daemon",
             signal:    ["TERM", "com.globaldelight.Boom2"]
 
   zap trash: [

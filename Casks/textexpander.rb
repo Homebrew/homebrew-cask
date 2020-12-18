@@ -1,9 +1,9 @@
 cask "textexpander" do
-  version "6.5.5"
-  sha256 "ff6b054397d1065da36789b9d84c8a76a89960488233127ac8cfdf2bbdd5dd9d"
+  version "6.8.1,681.3"
+  sha256 "16ababb5a67577b5eabc134de09426134f534c9219dfd0e77b8c61b508bff2b0"
 
-  # cdn.textexpander.com/mac/ was verified as official when first introduced to the cask
-  url "https://cdn.textexpander.com/mac/TextExpander_#{version}.zip"
+  url "https://cdn.textexpander.com/mac/#{version.after_comma}/TextExpander_#{version.before_comma}.zip",
+      verified: "cdn.textexpander.com/mac/"
   appcast "https://smilesoftware.com/appcast/TextExpander#{version.major}.xml"
   name "TextExpander"
   desc "Inserts pre-made snippets of text anywhere"

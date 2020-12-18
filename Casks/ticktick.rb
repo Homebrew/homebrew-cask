@@ -1,9 +1,9 @@
 cask "ticktick" do
-  version "3.7.11,153"
-  sha256 "15fa9b622fcb2899d1ff140f47ba34ab7ce3dc45f0ec65a5199f1becf5b045a3"
+  version "3.7.55,166"
+  sha256 "c8ee507e5fe3c04d195c236be7ac6052f134adb9246ee7eb2496663396ccd383"
 
-  # appest-public.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://appest-public.s3.amazonaws.com/download/mac/TickTick_#{version.before_comma}_#{version.after_comma}.dmg"
+  url "https://appest-public.s3.amazonaws.com/download/mac/TickTick_#{version.before_comma}_#{version.after_comma}.dmg",
+      verified: "appest-public.s3.amazonaws.com/"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.ticktick.com/static/getApp/download?type=mac"
   name "TickTick"
   desc "To-do & task list manager"

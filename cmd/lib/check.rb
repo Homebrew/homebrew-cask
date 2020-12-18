@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "forwardable"
 
 module Check
@@ -76,7 +78,9 @@ module Check
     CHECKS.transform_values(&:call)
   end
 
-  def self.errors(before, after)
+  def self.errors(before, after, cask:)
+    uninstall_directives = cask.artifacts.find { |a| a.instance_of?(Cask::Artifact::Uninstall) }&.directives || {}
+
     diff = {}
 
     CHECKS.each_key do |name|
@@ -125,13 +129,13 @@ module Check
                         .added
                         .reject { |id| id.match?(/\.\d+\Z/) }
 
-    if running_apps.any?
+    if (running_apps - Array(uninstall_directives[:quit])).any?
       message = "Some applications are still running, add them to #{Formatter.identifier("uninstall quit:")}\n"
       message += running_apps.join("\n")
       errors << message
     end
 
-    if loaded_launchjobs.any?
+    if (loaded_launchjobs - Array(uninstall_directives[:launchctl])).any?
       message = "Some launch jobs were not unloaded, add them to #{Formatter.identifier("uninstall launchctl:")}\n"
       message += loaded_launchjobs.join("\n")
       errors << message

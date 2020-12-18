@@ -8,8 +8,8 @@ cask "max" do
 
     app "Max-#{version}/Max.app"
   else
-    version "0.9.2b2"
-    sha256 "f8f6c60bb79d186de7907500459f4391025bd77f5e2fad4e240cae34aaa027cd"
+    version "0.9.2b4"
+    sha256 "4d3d96f2e3fc2f52fc3c7cbeb260be749975665e38f643089d2e3fdb58b8f82b"
 
     url "https://files.sbooth.org/Max-#{version}.dmg"
 

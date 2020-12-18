@@ -1,5 +1,5 @@
 cask "pages-data-merge" do
-  version :latest
+  version "1.8"
   sha256 :no_check
 
   url "https://iworkautomation.com/pages/PagesDataMergeAppMojave.zip",

@@ -1,5 +1,5 @@
 cask "macclean" do
-  version :latest
+  version "3.6.0"
   sha256 :no_check
 
   url "https://dl.imobie.com/macclean-mac.dmg"

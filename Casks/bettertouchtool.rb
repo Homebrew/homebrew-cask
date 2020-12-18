@@ -1,9 +1,9 @@
 cask "bettertouchtool" do
-  version "3.402-1633"
-  sha256 "578f2e62805ae21e880c60e13ec455ec6057745edaff14214eb5c6eac5cf7705"
+  version "3.506-1644"
+  sha256 "97a9b11874ff60cb407b069f95b4feefd1aec7b574ffa5ad17ed555af7bd47e2"
 
-  url "https://folivora.ai/releases/BetterTouchTool.zip"
-  appcast "https://www.corecode.io/macupdater/appcasts/bettertouchtool.txt"
+  url "https://folivora.ai/releases/btt#{version}.zip"
+  appcast "https://updates.folivora.ai/appcast_manual.xml"
   name "BetterTouchTool"
   desc "Tool to customize input devices and automate computer systems"
   homepage "https://folivora.ai/"

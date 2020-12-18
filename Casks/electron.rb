@@ -1,9 +1,9 @@
 cask "electron" do
-  version "10.1.1"
-  sha256 "5b6814ae1064cc337efcdb2ad01ab9daa003a6a1d6e05d79288ede0a3665b991"
+  version "11.1.0"
+  sha256 "827b0b3e562535de25d3e4d2c4d7529338efae9197e8cf6702dda786b5870bd0"
 
-  # github.com/electron/electron/ was verified as official when first introduced to the cask
-  url "https://github.com/electron/electron/releases/download/v#{version}/electron-v#{version}-darwin-x64.zip"
+  url "https://github.com/electron/electron/releases/download/v#{version}/electron-v#{version}-darwin-x64.zip",
+      verified: "github.com/electron/electron/"
   appcast "https://www.electronjs.org/releases/stable"
   name "Electron"
   desc "Build cross-platform desktop apps with JavaScript, HTML, and CSS"

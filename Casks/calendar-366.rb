@@ -1,6 +1,6 @@
 cask "calendar-366" do
-  version "2.8.8"
-  sha256 "5c910204558c2a8703e070e7f741bbce0115003005484a82e7706fae9b0515ec"
+  version "2.9.3"
+  sha256 "063ce5cf449f84a6165f230ee4c56106be823b816ca6475efa1566e1329440a9"
 
   url "https://nspektor.com/downloads/Calendar366_v#{version}.dmg"
   appcast "https://nspektor.com/downloads/Calendar366IIAsset.xml"

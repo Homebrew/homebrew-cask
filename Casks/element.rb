@@ -1,9 +1,9 @@
 cask "element" do
-  version "1.7.5"
-  sha256 "987c78645c90927abe13315761184472645e186854145417685f288c2a3eab36"
+  version "1.7.15"
+  sha256 "28fb6d258de7911f2c023e753416785e4e7d7f10e107f0f52444cf9969cd14bc"
 
-  # packages.riot.im/desktop was verified as official when first introduced to the cask
-  url "https://packages.riot.im/desktop/install/macos/Element-#{version}.dmg"
+  url "https://packages.riot.im/desktop/install/macos/Element-#{version}.dmg",
+      verified: "packages.riot.im/desktop/"
   appcast "https://github.com/vector-im/riot-desktop/releases.atom"
   name "Element (Riot)"
   desc "Matrix collaboration client"

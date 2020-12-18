@@ -1,6 +1,6 @@
 cask "upic" do
-  version "0.20.0"
-  sha256 "3bbd69d7ac8c4b6f45be37e8fef19137506b45cc8354a89db27f6d7fdcddc28c"
+  version "0.21.1"
+  sha256 "1152e2f3995cc33d16d764348618a70a9fb067f2b17f548a813646809aa1154c"
 
   url "https://github.com/gee1k/uPic/releases/download/v#{version}/uPic.zip"
   appcast "https://github.com/gee1k/uPic/releases.atom"
@@ -11,6 +11,15 @@ cask "upic" do
   depends_on macos: ">= :sierra"
 
   app "uPic.app"
+  shimscript = "#{staged_path}/upic.wrapper.sh"
+  binary shimscript, target: "upic"
+
+  preflight do
+    IO.write shimscript, <<~EOS
+      #!/bin/bash
+      '#{appdir}/uPic.app/Contents/MacOS/uPic' "$@"
+    EOS
+  end
 
   zap trash: [
     "~/Library/Preferences/com.svend.uPic.plist",

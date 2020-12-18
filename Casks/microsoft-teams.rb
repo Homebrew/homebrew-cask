@@ -1,6 +1,6 @@
 cask "microsoft-teams" do
-  version "1.3.00.18164"
-  sha256 "21f27481463507c20cbd7a9d4fc8b6f1f2ef3e6a865a5df27e6a3566d5d98386"
+  version "1.3.00.28778"
+  sha256 "b9fe38e7ad313da3773f164358e99e8fbfa084cde8750b13b002777a14501be9"
 
   url "https://statics.teams.microsoft.com/production-osx/#{version}/Teams_osx.pkg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://aka.ms/teamsmac"

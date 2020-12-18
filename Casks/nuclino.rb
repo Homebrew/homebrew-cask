@@ -1,9 +1,9 @@
 cask "nuclino" do
-  version :latest
+  version "1.4.0"
   sha256 :no_check
 
-  # s3.eu-central-1.amazonaws.com/repository.nuclino.com/ was verified as official when first introduced to the cask
-  url "https://s3.eu-central-1.amazonaws.com/repository.nuclino.com/downloads/Nuclino.dmg"
+  url "https://s3.eu-central-1.amazonaws.com/repository.nuclino.com/downloads/Nuclino.dmg",
+      verified: "s3.eu-central-1.amazonaws.com/repository.nuclino.com/"
   name "Nuclino"
   homepage "https://www.nuclino.com/"
 

@@ -1,9 +1,9 @@
 cask "downie" do
-  version "4.1.4,4155"
-  sha256 "916e9f7ec282bb865885567762545f1c6f0bf4ab82b10601a4c84e991662bdf9"
+  version "4.1.11,4185"
+  sha256 "641335c07551b6f8352eff2485c87055c59c8c6b48d6acb2e64c47f1159a7320"
 
-  # charliemonroesoftware.com/ was verified as official when first introduced to the cask
-  url "https://charliemonroesoftware.com/trial/downie/v#{version.major}/Downie_#{version.major}_#{version.after_comma}.dmg"
+  url "https://charliemonroesoftware.com/trial/downie/v#{version.major}/Downie_#{version.major}_#{version.after_comma}.dmg",
+      verified: "charliemonroesoftware.com/"
   appcast "https://charliemonroesoftware.com/trial/downie/v#{version.major}/updates.xml"
   name "Downie"
   desc "Downloads videos from different websites"

@@ -1,5 +1,5 @@
 cask "joinme" do
-  version :latest
+  version "3.22.0.14903"
   sha256 :no_check
 
   url "https://secure.join.me/Download.aspx?installer=mac&webdownload=true"

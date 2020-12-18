@@ -2,7 +2,7 @@ First, let's tackle a common problem: do you have a `.curlrc` file? Check with `
 
 If, however, you do not have a `.curlrc` or removing it did not work, let’s see if the issue is upstream:
 
-1. Go to the vendor’s website (`brew cask home {{cask_name}}`).
+1. Go to the vendor’s website (`brew home {{cask_name}}`).
 2. Find the download link for the app and click on it.
 
 #### If the download works

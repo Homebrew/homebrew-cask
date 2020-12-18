@@ -1,5 +1,5 @@
 cask "pins" do
-  version :latest
+  version "2.1.4"
   sha256 :no_check
 
   url "http://pinsapp.com/download/Pins.dmg"

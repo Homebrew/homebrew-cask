@@ -5,6 +5,7 @@ cask "pacifist" do
   url "https://www.charlessoft.com/pacifist_download/Pacifist_#{version}.dmg"
   appcast "https://www.charlessoft.com/cgi-bin/pacifist_sparkle.cgi"
   name "Pacifist"
+  desc "Extract files and folders from package files, disk images, and archives"
   homepage "https://www.charlessoft.com/"
 
   auto_updates true

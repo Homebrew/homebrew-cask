@@ -5,7 +5,9 @@ cask "isabelle" do
   url "https://www.cl.cam.ac.uk/research/hvg/Isabelle/dist/Isabelle#{version}_macos.tar.gz"
   appcast "https://mirror.cse.unsw.edu.au/pub/isabelle/dist/"
   name "Isabelle"
+  desc "Generic proof assistant"
   homepage "https://www.cl.cam.ac.uk/research/hvg/Isabelle/"
 
   app "Isabelle#{version}.app"
+  binary "#{appdir}/Isabelle#{version}.app/Isabelle/bin/isabelle"
 end

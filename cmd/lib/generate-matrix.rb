@@ -1,5 +1,6 @@
-# frozen_string_literal: false
+# frozen_string_literal: true
 
+require "tap"
 require "utils/github"
 
 require_relative "ci_matrix"
@@ -13,6 +14,7 @@ tap = Tap.from_path(Dir.pwd)
 
 syntax_job = {
   name: "syntax",
+  tap:  tap.name,
 }
 
 matrix = [syntax_job]

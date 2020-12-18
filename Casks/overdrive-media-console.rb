@@ -1,9 +1,11 @@
 cask "overdrive-media-console" do
   version "1.2"
-  sha256 "6e04ac61337647aa86c67d04d62552a0c0a31a3104bf4856aa726e8317272be9"
+  sha256 :no_check
 
-  url "https://app.overdrive.com/downloads/ODMediaConsoleSetup.dmg"
+  url "http://static.od-cdn.com/ODMediaConsoleSetup.dmg",
+      verified: "static.od-cdn.com/"
   name "OverDrive Media Console"
+  desc "Get eBooks, audiobooks, and videos from your local library"
   homepage "https://www.overdrive.com/"
 
   pkg "OverDrive-Mac-Installer-Version-#{version}.pkg"

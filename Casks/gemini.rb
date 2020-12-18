@@ -1,9 +1,9 @@
 cask "gemini" do
-  version "2.6.8,346:1599490080"
-  sha256 "fa3d40711fa099134274cf76a8881db39d5493e2925bacb54bb8fe1cd8fcdc74"
+  version "2.7.2,358:1606230495"
+  sha256 "3ffc8ba30913c2d987533905dec6dc1f5580f48637d38bc5aad0b71e23317150"
 
-  # dl.devmate.com/com.macpaw.site.Gemini was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.macpaw.site.Gemini#{version.major}/#{version.after_comma.before_colon}/#{version.after_colon}/Gemini#{version.major}-#{version.after_comma.before_colon}.zip"
+  url "https://dl.devmate.com/com.macpaw.site.Gemini#{version.major}/#{version.after_comma.before_colon}/#{version.after_colon}/Gemini#{version.major}-#{version.after_comma.before_colon}.zip",
+      verified: "dl.devmate.com/com.macpaw.site.Gemini"
   appcast "https://updates.devmate.com/com.macpaw.site.Gemini#{version.major}.xml"
   name "Gemini"
   desc "Disk space cleaner that finds and deletes duplicated and similar files"

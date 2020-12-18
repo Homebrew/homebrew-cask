@@ -1,5 +1,5 @@
 cask "flixtools" do
-  version :latest
+  version "3.0.0.3.624"
   sha256 :no_check
 
   url "https://www.flixtools.com/download/FlixTools.dmg"

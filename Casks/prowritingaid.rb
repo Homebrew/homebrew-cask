@@ -1,10 +1,11 @@
 cask "prowritingaid" do
-  version "2.0.46"
-  sha256 "c6430ef93c66f0f9d539802b722325448375687ffa0eba96fafc690ef3d14e9a"
+  version "2.0.48"
+  sha256 "f9bae3c805d9261622b85372af0167579302ea9746d628653154b601dbfc43ef"
 
   url "https://cdn.prowritingaid.com/prowritingaid-desktop/desktop_#{version.dots_to_underscores}/ProWritingAid.dmg"
-  appcast "https://prowritingaid.com/en/App/DesktopHistory"
+  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_sizeandmodified.cgi?url=https://cdn.prowritingaid.com/prowritingaid-desktop/ProWritingAid.dmg"
   name "ProWritingAid"
+  desc "Grammar checker, style editor, and writing mentor"
   homepage "https://prowritingaid.com/"
 
   app "ProWritingAid.app"

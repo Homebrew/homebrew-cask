@@ -1,9 +1,9 @@
 cask "batteries" do
-  version "2.0.1"
-  sha256 "9b4ec9875d6977392c182a9032ebead5857713bf9f78f7e78df29a7d8c592c1f"
+  version "2.0.4"
+  sha256 "1d1cb8df965452fed221eccdd872e93c87bc6105518108daa379361dacb2d921"
 
-  # github.com/ronyfadel/BatteriesReleases was verified as official when first introduced to the cask
-  url "https://github.com/ronyfadel/BatteriesReleases/releases/download/v#{version}/Batteries.dmg"
+  url "https://github.com/ronyfadel/BatteriesReleases/releases/download/v#{version}/Batteries.dmg",
+      verified: "github.com/ronyfadel/BatteriesReleases/"
   appcast "https://github.com/ronyfadel/BatteriesReleases/releases.atom"
   name "Batteries"
   homepage "https://www.fadel.io/batteries/"

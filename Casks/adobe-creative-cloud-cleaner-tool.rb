@@ -1,9 +1,10 @@
 cask "adobe-creative-cloud-cleaner-tool" do
-  version :latest
+  version "4.3.0.146"
   sha256 :no_check
 
   url "https://swupmf.adobe.com/webfeed/CleanerTool/mac/AdobeCreativeCloudCleanerTool.dmg"
   name "Adobe Creative Cloud Cleaner Tool"
+  desc "Utility to clean up corrupted installations of Adobe software"
   homepage "https://helpx.adobe.com/creative-cloud/kb/cc-cleaner-tool-installation-problems.html"
 
   app "Adobe Creative Cloud Cleaner Tool.app"

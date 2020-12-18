@@ -1,9 +1,9 @@
 cask "microsoft-edge" do
-  version "85.0.564.51"
-  sha256 "767f46af5591b26ee8e8e73e7b713b90d8a3b1b41e02f27375674f6bc614df9d"
+  version "87.0.664.66"
+  sha256 "0c06151af2de63e4357c12ae5c8d57e0a38ff2883c1a876bf98ff75fd3cd5470"
 
-  # officecdn-microsoft-com.akamaized.net/ was verified as official when first introduced to the cask
-  url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/MicrosoftEdge-#{version}.pkg"
+  url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/MicrosoftEdge-#{version}.pkg",
+      verified: "officecdn-microsoft-com.akamaized.net/"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://go.microsoft.com/fwlink/?linkid=2069148"
   name "Microsoft Edge"
   desc "Multi-platform web browser"

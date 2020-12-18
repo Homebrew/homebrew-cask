@@ -1,9 +1,9 @@
 cask "weakauras-companion" do
-  version "3.0.4"
-  sha256 "6df3e7c98ad86c80fdd1b6638e87e5df28edcc8078d4aa41f0411129d77e18bb"
+  version "3.1.1"
+  sha256 "200e82ee46305625b7ce904be8536f5f74755a838f695ed5fef0f06cfe6d2c12"
 
-  # github.com/WeakAuras/WeakAuras-Companion was verified as official when first introduced to the cask
-  url "https://github.com/WeakAuras/WeakAuras-Companion/releases/download/v#{version}/WeakAuras-Companion-#{version}.dmg"
+  url "https://github.com/WeakAuras/WeakAuras-Companion/releases/download/v#{version}/WeakAuras-Companion-#{version}.dmg",
+      verified: "github.com/WeakAuras/WeakAuras-Companion/"
   appcast "https://github.com/WeakAuras/WeakAuras-Companion/releases.atom"
   name "WeakAuras Companion"
   homepage "https://weakauras.wtf/"

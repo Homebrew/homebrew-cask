@@ -1,6 +1,6 @@
 cask "mplabx-ide" do
-  version "5.40"
-  sha256 "00f582ff074845260c7d2474c92a99b0f0f1cb4e16a7e6d173c5cabd27da0fa3"
+  version "5.45"
+  sha256 "6a0422ff70cd3232f27267baf7a7b41b7a82e42103cf2ec98f2e83d4d45d358f"
 
   url "https://ww1.microchip.com/downloads/en/DeviceDoc/MPLABX-v#{version}-osx-installer.dmg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.microchip.com/mplabx-ide-osx-installer"

@@ -1,10 +1,11 @@
 cask "cyberduck" do
-  version "7.6.0.33437"
-  sha256 "a5a01bc8b4ccec0fe62b06db62b1910fa586357c5ff7a5fdcfa93424db726729"
+  version "7.7.2.33862"
+  sha256 "3becbea9d43261e8b8ddc139164c5744bb5535602bf994d400aedf8767fc1f44"
 
   url "https://update.cyberduck.io/Cyberduck-#{version}.zip"
   appcast "https://version.cyberduck.io/changelog.rss"
   name "Cyberduck"
+  desc "Server and cloud storage browser"
   homepage "https://cyberduck.io/"
 
   auto_updates true

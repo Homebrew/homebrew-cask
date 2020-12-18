@@ -1,6 +1,6 @@
 cask "sessionrestore" do
-  version "2.2"
-  sha256 "c4f80e173e4016a6113deefe4acf9607e807d7ccf8b065e8bc0bd89b1ccde42a"
+  version "2.3"
+  sha256 :no_check
 
   url "https://sweetpproductions.com/products/sessionrestore/SessionRestore.dmg"
   appcast "https://sweetpproductions.com/products/sessionrestore/appcast.xml"

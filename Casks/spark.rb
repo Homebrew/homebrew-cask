@@ -1,5 +1,5 @@
 cask "spark" do
-  version :latest
+  version "3.3.2,501"
   sha256 :no_check
 
   url "https://www.shadowlab.org/softwares/Spark/Spark.zip"

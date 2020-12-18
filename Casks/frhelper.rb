@@ -1,9 +1,9 @@
 cask "frhelper" do
-  version "3.9.9,2020-08-08"
-  sha256 "7c464b7a7d77cb82c07629b6cc51898b70517d3ad25cc39b57ad6d185ff0bd3a"
+  version "4.0.1,2020-11-14"
+  sha256 "adba3d685a5e11afcc9ed0eacbb36feaddac0a6c42a3c1dafc2096b00f9081dd"
 
-  # static.frdic.com/ was verified as official when first introduced to the cask
   url "https://static.frdic.com/pkg/fhmac.dmg?v=#{version.after_comma}",
+      verified:   "static.frdic.com/",
       user_agent: :fake
   appcast "https://www.eudic.net/v4/fr/app/download",
           must_contain: version.after_comma

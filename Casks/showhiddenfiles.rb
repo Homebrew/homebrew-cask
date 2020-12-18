@@ -1,5 +1,5 @@
 cask "showhiddenfiles" do
-  version :latest
+  version "2.0.6,62"
   sha256 :no_check
 
   url "https://gotoes.org/sales/ShowHiddenFilesMacOSX/ShowAllFiles.app.zip"

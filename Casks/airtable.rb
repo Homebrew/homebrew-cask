@@ -5,6 +5,7 @@ cask "airtable" do
   url "https://static.airtable.com/download/macos/Airtable-#{version}.dmg"
   appcast "https://airtable.com/mac"
   name "Airtable"
+  desc "Spreadsheet-database hybrid cloud collaboration"
   homepage "https://airtable.com/"
 
   auto_updates true

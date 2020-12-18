@@ -3,12 +3,12 @@ cask "coteditor" do
     version "3.2.8"
     sha256 "73dd20d27b75c7b0c46242a465adb3df5b5f0b901f42c5a9a85777a57c4a17d6"
   else
-    version "3.9.6"
-    sha256 "1f7219e3849d584b8a775ef999befb4b3f31f87c49043c5e44ed00f88bc8e154"
+    version "4.0.1"
+    sha256 "879fa6ef8199c10c8b42b6adaa4a528b41295b97457c7e06fd1a412f65f0ffb9"
   end
 
-  # github.com/coteditor/CotEditor/ was verified as official when first introduced to the cask
-  url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
+  url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg",
+      verified: "github.com/coteditor/CotEditor/"
   appcast "https://github.com/coteditor/CotEditor/releases.atom"
   name "CotEditor"
   desc "Plain-text editor for web pages, program source codes and more"

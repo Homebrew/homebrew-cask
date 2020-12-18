@@ -16,6 +16,7 @@ on:
       - submitted
   pull_request_target:
     types:
+      - unlabeled
       - ready_for_review
   workflow_dispatch:
     inputs:
@@ -35,10 +36,11 @@ jobs:
       )
     runs-on: ubuntu-latest
     steps:
-      - uses: reitermarkus/automerge@a3335f47360dda76f19a473df3522cf773c64627
+      - uses: reitermarkus/automerge@29daf0958167ca86edcc536a3f0cb5cae056c11f
         with:
           token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
           merge-method: squash
-          do-not-merge-labels: 'do not merge'
+          squash-title: true
+          do-not-merge-labels: 'do not merge,awaiting maintainer feedback,awaiting user reply'
           pull-request: ${{ github.event.inputs.pull-request }}
           dry-run: ${{ github.ref == 'refs/heads/debug-automerge' }}

@@ -1,9 +1,9 @@
 cask "gpg-suite-no-mail" do
-  version "2020.1"
-  sha256 "43d7becb7faaeafcffaf6a2723cea7ea004265a79e2df9a1a9687916a694a131"
+  version "2020.2"
+  sha256 "e2ede6b317d53d1e321342a6f7dd5ab6b123a4900aa8f1eab89b29051a2a4742"
 
   url "https://releases.gpgtools.org/GPG_Suite-#{version}.dmg"
-  appcast "https://gpgtools.org/releases/gka/appcast.xml"
+  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://gpgtools.org/download"
   name "GPG Suite (without GPG Mail)"
   homepage "https://gpgtools.org/"
 

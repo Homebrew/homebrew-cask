@@ -1,10 +1,10 @@
 cask "tap-forms" do
-  version "5.3.13"
-  sha256 "0cea6bdad0da07aa75875f80df53afe02aa51ca217e0e8e14322bfa7574e430e"
+  version "5.3.17,1852"
+  sha256 :no_check
 
-  # vendors.paddle.com/download/product/503174 was verified as official when first introduced to the cask. Developer uses paddle.com to process licences and payments for the software
-  url "https://vendors.paddle.com/download/product/503174"
-  appcast "https://www.tapforms.com/app/tf-mac-#{version.major}.1-sparkle-appcast.xml"
+  url "https://vendors.paddle.com/download/product/503174",
+      verified: "vendors.paddle.com/download/product/503174"
+  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://vendors.paddle.com/download/product/503174"
   name "Tap Forms 5"
   desc "Helps to organize important files in one place"
   homepage "https://www.tapforms.com/"

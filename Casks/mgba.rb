@@ -1,9 +1,9 @@
 cask "mgba" do
-  version "0.8.3"
-  sha256 "6c07914829884f70ad3feb59f5cc70320553f0b2ae9bc4944f6e890cc169632d"
+  version "0.8.4"
+  sha256 "9d0389f20ab60d125ca45de6ae59ce6b88e0c3613b19b3c0e8f440b2e7afc138"
 
-  # github.com/mgba-emu/mgba/ was verified as official when first introduced to the cask
-  url "https://github.com/mgba-emu/mgba/releases/download/#{version}/mGBA-#{version}-osx.tar.xz"
+  url "https://github.com/mgba-emu/mgba/releases/download/#{version}/mGBA-#{version}-osx.tar.xz",
+      verified: "github.com/mgba-emu/mgba/"
   appcast "https://github.com/mgba-emu/mgba/releases.atom"
   name "mGBA"
   desc "Game Boy Advance emulator"

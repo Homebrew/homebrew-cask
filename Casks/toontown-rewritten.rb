@@ -1,6 +1,6 @@
 cask "toontown-rewritten" do
-  version "1.2.4"
-  sha256 "56cd2178be0ea7a1c49ba688c9da2d1f0b1644cd41f1343d15e6e770576beba4"
+  version "1.2.5"
+  sha256 "ed7bd2c60e582cd2a6d51d6188a78d371fe05772e63447cdcf0ca3afa5f4fefb"
 
   url "https://cdn.toontownrewritten.com/launcher/mac/updates/#{version}/ttr_launcher_#{version}.zip"
   appcast "https://www.toontownrewritten.com/play"

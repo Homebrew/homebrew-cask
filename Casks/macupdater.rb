@@ -1,10 +1,11 @@
 cask "macupdater" do
-  version "1.5.7"
-  sha256 "75c397c25e21183841827451c1a40d20e93e067daeab47a21e49bf3c11d2a97b"
+  version "1.5.9"
+  sha256 "c0b745f8d35c9839f31c5a53d68c936511d96ff33cca01911b79afb64818ba36"
 
   url "https://www.corecode.io/downloads/macupdater_#{version}.dmg"
   appcast "https://www.corecode.io/macupdater/macupdater.xml"
   name "MacUpdater"
+  desc "Track the latest updates of all applications installed automatically"
   homepage "https://www.corecode.io/macupdater/index.html"
 
   auto_updates true

@@ -1,6 +1,6 @@
 cask "launchbar" do
-  version "6.13"
-  sha256 "18b3b10f976279afd267920b4cdb5ab47722e548dc10006411f24f464f796bf1"
+  version "6.13.1"
+  sha256 "91c0423cdc0cb7a618357e2c9df7c05844ea077f9908640288af0e7eeacf384e"
 
   url "https://www.obdev.at/downloads/launchbar/LaunchBar-#{version}.dmg"
   appcast "https://sw-update.obdev.at/update-feeds/launchbar-#{version.major}.plist"

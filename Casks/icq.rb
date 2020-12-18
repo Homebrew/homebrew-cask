@@ -1,9 +1,9 @@
 cask "icq" do
-  version "3.0.28888"
-  sha256 "d4df48dd83c5b632dbb479ea06fb5ed7e0bf20a0186b4359cc792886da00cfe1"
+  version "3.0.30469"
+  sha256 "603e6ba7448055fbb338529ab4cd080fdad9ac3265f8edd23678ad67cc5cf83a"
 
-  # icq-www.hb.bizmrg.com/ was verified as official when first introduced to the cask
-  url "https://icq-www.hb.bizmrg.com/mac/x64/#{version}/icq.dmg"
+  url "https://icq-www.hb.bizmrg.com/mac/x64/#{version}/icq.dmg",
+      verified: "icq-www.hb.bizmrg.com/"
   appcast "https://icq-www.hb.bizmrg.com/mac/x64/#{version}/version.xml"
   name "ICQ"
   desc "Messenger application"

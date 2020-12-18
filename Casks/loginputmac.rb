@@ -1,9 +1,9 @@
 cask "loginputmac" do
-  version "2.3.7"
-  sha256 "a64bb6c4c608e5a87c37eb7345e1ddbcade52634c7eae24c9b49b5a385b58578"
+  version "2.4.1"
+  sha256 "e1aab3f3d9edeab525ea7e60ecfeddfeab5ba666fac4a7caf1c4ad13351125d9"
 
-  # loginput-mac2.content-delivery.top/ was verified as official when first introduced to the cask
-  url "https://loginput-mac2.content-delivery.top/loginputmac#{version.major}_latest.pkg"
+  url "https://loginput-mac2.content-delivery.top/loginputmac#{version.major}_latest.pkg",
+      verified: "loginput-mac2.content-delivery.top/"
   appcast "https://im.logcg.com/appcast#{version.major}.xml"
   name "LoginputMac"
   homepage "https://im.logcg.com/loginputmac#{version.major}"

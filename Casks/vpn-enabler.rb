@@ -8,8 +8,8 @@ cask "vpn-enabler" do
     sha256 "50e22bcc2e341adff7fc625714c251ac0ac889cfb55983e026cff8478ebd3793"
     url "https://cutedgesystems.com/downloads/VPNEnablerForSierra.zip"
   else
-    version "5.2"
-    sha256 "6c01122328280859007eb1f21cd6878600037a966612fc2c3cb0f7192c035175"
+    version "5.2,1"
+    sha256 :no_check
     url "https://cutedgesystems.com/downloads/VPNEnablerForHighSierra.zip"
   end
 

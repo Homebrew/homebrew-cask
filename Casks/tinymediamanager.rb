@@ -1,6 +1,6 @@
 cask "tinymediamanager" do
-  version "3.1.8"
-  sha256 "650a43fc41fd188eb336760d0038ef9fa8efdaeb5e618e00a4aeebb21a24e68d"
+  version "4.0.6"
+  sha256 "75aaaa6d1e8a08195d6c56b361fbaa934d053f68a290bc88f1445f838a07fd9a"
 
   url "https://release.tinymediamanager.org/v#{version.major}/dist/tmm_#{version}_mac.zip"
   appcast "https://release.tinymediamanager.org/"

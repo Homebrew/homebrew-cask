@@ -1,9 +1,9 @@
 cask "cellprofiler" do
-  version "4.0.3"
-  sha256 "33a3165517cfe42aed60864875e22bed1d781ee9ffdd5d848b1ccaa8abcd2631"
+  version "4.0.7"
+  sha256 "60e489ff335fd3484f8b4fa24b2859aa86289b4f9b82628e687f86f55a000d8a"
 
-  # cellprofiler-releases.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://cellprofiler-releases.s3.amazonaws.com/CellProfiler-macOS-#{version}.zip"
+  url "https://cellprofiler-releases.s3.amazonaws.com/CellProfiler-macOS-#{version}.zip",
+      verified: "cellprofiler-releases.s3.amazonaws.com/"
   appcast "https://github.com/CellProfiler/CellProfiler/releases.atom"
   name "CellProfiler"
   desc "Open-source application for biological image analysis"

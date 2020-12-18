@@ -5,6 +5,7 @@ cask "touchosc-bridge" do
   url "https://hexler.net/pub/touchosc/touchosc-bridge-#{version}-macos.zip"
   appcast "https://hexler.net/software/touchosc"
   name "TouchOSC Bridge"
+  desc "Modular touch control surface bridge for OSC & MIDI"
   homepage "https://hexler.net/software/touchosc"
 
   app "TouchOSC Bridge.app"

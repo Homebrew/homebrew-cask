@@ -1,9 +1,9 @@
 cask "syncplay" do
-  version "1.6.5"
-  sha256 "d595e5e781618a99b89d03142a748bacd03bee08b75eef4788b6a966751d9f7a"
+  version "1.6.7"
+  sha256 "616e6213b8d67cf2ed7a65b40afa27ff8e128a06f31bc687fe54634a8810fc2d"
 
-  # github.com/Syncplay/syncplay/ was verified as official when first introduced to the cask
-  url "https://github.com/Syncplay/syncplay/releases/download/v#{version}/Syncplay_#{version}.dmg"
+  url "https://github.com/Syncplay/syncplay/releases/download/v#{version}/Syncplay_#{version}.dmg",
+      verified: "github.com/Syncplay/syncplay/"
   appcast "https://github.com/Syncplay/syncplay/releases.atom"
   name "Syncplay"
   homepage "https://syncplay.pl/"

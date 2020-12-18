@@ -1,10 +1,11 @@
 cask "tongbu" do
-  version "3.0.9.0"
-  sha256 "32a2309a115d9d017ea0657e5b9a5c69be9d49000ec1a6a3e74890ad9e89c555"
+  version "3.1.3.0"
+  sha256 "5cb5594de7d60c5d02d9d59b3833abb7726378617421a895cc2f49d9baa2adf0"
 
-  url "http://qd.tongbu.com/qd/tbzsqd/zsmac_#{version}/Tongbu_mac_#{version}.dmg"
+  url "https://qd.tongbu.com/qd/tbzsqd/zsmac_#{version}/%E5%90%8C%E6%AD%A5%E5%8A%A9%E6%89%8B_mac_v#{version}_empty.dmg"
   appcast "https://zs.tongbu.com/mac/"
   name "Tongbu"
+  desc "Mobile phone management tool"
   homepage "https://zs.tongbu.com/mac/"
 
   app "Tongbu.app"

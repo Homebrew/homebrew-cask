@@ -1,9 +1,9 @@
 cask "dashcam-viewer" do
-  version "3.5.2"
-  sha256 "10185deb860485661feb3e9b12dcabca31507f89d3e0a659d4f9a334d0fb1777"
+  version "3.6.1"
+  sha256 "ac77ef84ea30ff0294b855cfe1f74baf0d82488166552cfd1b55b48c3b3ca7f3"
 
-  # filedn.com/l2s8TAtm4VASBX72ds0zYD8/dcv/ was verified as official when first introduced to the cask
-  url "https://filedn.com/l2s8TAtm4VASBX72ds0zYD8/dcv/Dashcam_Viewer_v#{version}.dmg"
+  url "https://filedn.com/l2s8TAtm4VASBX72ds0zYD8/dcv/Dashcam_Viewer_v#{version}.dmg",
+      verified: "filedn.com/l2s8TAtm4VASBX72ds0zYD8/dcv/"
   appcast "https://dashcamviewer.com/"
   name "Dashcam Viewer"
   name "Dashcam Viewer by Earthshine Software"

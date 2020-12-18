@@ -1,10 +1,11 @@
 cask "ubersicht" do
-  version "1.5.62"
-  sha256 "b2c35433f0b091cdd7b898bcacd91869efa92b6833b49271953c53e6ad600c0c"
+  version "1.6.66"
+  sha256 "d02eaec51c725053906c14a2d0a34cef3b98674b87bdd1118d0318cd07ab6a13"
 
   url "https://tracesof.net/uebersicht/releases/Uebersicht-#{version}.app.zip"
   appcast "https://tracesof.net/uebersicht/updates.xml.rss"
   name "Übersicht"
+  desc "Run commands and display their output on the desktop"
   homepage "https://tracesof.net/uebersicht/"
 
   auto_updates true

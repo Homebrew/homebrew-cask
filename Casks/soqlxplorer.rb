@@ -5,6 +5,7 @@ cask "soqlxplorer" do
   url "https://www.pocketsoap.com/osx/soqlx/SoqlXplorer_v#{version}.zip"
   appcast "https://www.pocketsoap.com/osx/soqlx/appcast.xml"
   name "SoqlXplorer"
+  desc "Desktop client for Salesforce.com platform"
   homepage "https://www.pocketsoap.com/osx/soqlx/"
 
   depends_on macos: ">= :high_sierra"

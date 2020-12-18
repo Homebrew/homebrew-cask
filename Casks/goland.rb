@@ -1,10 +1,11 @@
 cask "goland" do
-  version "2020.2.2,202.6948.9"
-  sha256 "3af4660ef22f805008e6773ac25f9edbc17c2014af18019b7374afbed63d4744"
+  version "2020.3,203.5981.98"
+  sha256 "bbd73cadabb7bb16b04f0a539c5a9093126c38b427615d48e8dab25ae1a32f45"
 
   url "https://download.jetbrains.com/go/goland-#{version.before_comma}.dmg"
   appcast "https://data.services.jetbrains.com/products/releases?code=GO&latest=true&type=release"
   name "Goland"
+  desc "Go (golang) IDE"
   homepage "https://www.jetbrains.com/go/"
 
   auto_updates true

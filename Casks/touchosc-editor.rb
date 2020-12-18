@@ -5,6 +5,7 @@ cask "touchosc-editor" do
   url "https://hexler.net/pub/touchosc/touchosc-editor-#{version}-macos.zip"
   appcast "https://hexler.net/software/touchosc"
   name "TouchOSC Editor"
+  desc "Modular touch control surface editor for OSC & MIDI"
   homepage "https://hexler.net/software/touchosc"
 
   app "touchosc-editor-#{version}-macos/TouchOSC Editor.app"

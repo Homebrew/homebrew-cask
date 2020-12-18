@@ -1,6 +1,6 @@
 cask "intellij-idea-ce" do
-  version "2020.2.1,202.6948.69"
-  sha256 "72d545c61100f091475d4b232024f17a722f5557f349529f53632324a4cd0755"
+  version "2020.3,203.5981.155"
+  sha256 "e73fe982ea3a85ffb5c884ec2945a28ca7b0e707133139ef932541b06bf0d325"
 
   url "https://download.jetbrains.com/idea/ideaIC-#{version.before_comma}.dmg"
   appcast "https://data.services.jetbrains.com/products/releases?code=IIC&latest=true&type=release"
@@ -10,6 +10,7 @@ cask "intellij-idea-ce" do
   homepage "https://www.jetbrains.com/idea/"
 
   auto_updates true
+  conflicts_with cask: "homebrew/cask-versions/intellij-idea-ce19"
 
   app "IntelliJ IDEA CE.app"
 
@@ -23,10 +24,9 @@ cask "intellij-idea-ce" do
   end
 
   zap trash: [
-    "~/Library/Application Support/IdeaIC#{version.major_minor}",
-    "~/Library/Caches/IdeaIC#{version.major_minor}",
-    "~/Library/Logs/IdeaIC#{version.major_minor}",
-    "~/Library/Preferences/IdeaIC#{version.major_minor}",
+    "~/Library/Application Support/JetBrains/IdeaIC#{version.major_minor}",
+    "~/Library/Caches/JetBrains/IdeaIC#{version.major_minor}",
+    "~/Library/Logs/JetBrains/IdeaIC#{version.major_minor}",
     "~/Library/Preferences/com.jetbrains.intellij.ce.plist",
     "~/Library/Saved Application State/com.jetbrains.intellij.ce.savedState",
   ]

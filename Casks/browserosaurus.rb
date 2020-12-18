@@ -1,9 +1,9 @@
 cask "browserosaurus" do
-  version "12.0.2"
-  sha256 "286825e307c0cff5a7dffac4b673cd8fd89a010a47510b05c026c5623d9b9303"
+  version "12.3.1"
+  sha256 "1dadf4c75c76fc98be7522b062ba26cd77487b5fd8ac2e2acd66c3193ee114da"
 
-  # github.com/will-stone/browserosaurus/ was verified as official when first introduced to the cask
-  url "https://github.com/will-stone/browserosaurus/releases/download/v#{version}/Browserosaurus-#{version}.dmg"
+  url "https://github.com/will-stone/browserosaurus/releases/download/v#{version}/Browserosaurus-#{version}.dmg",
+      verified: "github.com/will-stone/browserosaurus/"
   appcast "https://github.com/will-stone/browserosaurus/releases.atom"
   name "Browserosaurus"
   desc "Open-source browser prompter"

@@ -1,11 +1,12 @@
 cask "pycharm-ce-with-anaconda-plugin" do
-  version "2020.2.1"
-  sha256 "00c9c89a57599a7ef5bbfad4094d585976786c03e9b302e65990804099969d97"
+  version "2020.3,203.5981.165"
+  sha256 "4f1ba23f4e7faa445a268940df3f16c84709cf202c4c7161a67cebb42eea859c"
 
-  url "https://download.jetbrains.com/python/pycharm-community-anaconda-#{version}.dmg"
+  url "https://download.jetbrains.com/python/pycharm-community-anaconda-#{version.before_comma}.dmg"
   appcast "https://data.services.jetbrains.com/products/releases?code=PCC&latest=true&type=release"
   name "Jetbrains PyCharm Community Edition with Anaconda plugin"
   name "PyCharm CE with Anaconda plugin"
+  desc "PyCharm IDE with Anaconda plugin"
   homepage "https://www.jetbrains.com/pycharm/promo/anaconda"
 
   auto_updates true

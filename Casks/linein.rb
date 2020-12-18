@@ -7,6 +7,8 @@ cask "linein" do
   name "LineIn"
   homepage "https://www.rogueamoeba.com/freebies/"
 
+  depends_on macos: "<= :mojave"
+
   app "LineIn.app"
 
   caveats do

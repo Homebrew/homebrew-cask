@@ -1,10 +1,11 @@
 cask "sequel-ace" do
-  version "2.1.7"
-  sha256 "bfbf7d55a0c2b518e9346599361aa5702c95b6a1776fa626101284d621b54e2a"
+  version "3.0.1,3008"
+  sha256 "a8cf58515239c104d932f8105b54e29151278de875dc2bf9b157c7d21c232007"
 
-  url "https://github.com/Sequel-Ace/Sequel-Ace/releases/download/#{version}/Sequel-Ace-#{version}-release.zip"
+  url "https://github.com/Sequel-Ace/Sequel-Ace/releases/download/production/#{version.before_comma}-#{version.after_comma}/Sequel-Ace-#{version.before_comma}.zip"
   appcast "https://github.com/Sequel-Ace/Sequel-Ace/releases.atom"
   name "Sequel Ace"
+  desc "MySQL/MariaDB database management"
   homepage "https://github.com/Sequel-Ace/Sequel-Ace"
 
   app "Sequel Ace.app"

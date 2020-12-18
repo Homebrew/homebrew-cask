@@ -2,8 +2,8 @@ cask "steamcmd" do
   version :latest
   sha256 :no_check
 
-  # steamcdn-a.akamaihd.net/ was verified as official when first introduced to the cask
-  url "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_osx.tar.gz"
+  url "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_osx.tar.gz",
+      verified: "steamcdn-a.akamaihd.net/"
   name "SteamCMD"
   homepage "https://developer.valvesoftware.com/wiki/SteamCMD"
 

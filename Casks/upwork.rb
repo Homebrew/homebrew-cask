@@ -1,6 +1,6 @@
 cask "upwork" do
-  version "5.4.5.1,941af939eff74e21"
-  sha256 "5e556e4cdf8512491cc850ee5127d9e715cb6f1056f4802bf2093dad918d679f"
+  version "5.4.9.6,2565cdd0547940a2"
+  sha256 "6548f23af1006de6172c319d57eb458121b8b838e96079beeefde6e6a5eff788"
 
   url "https://updates-desktopapp.upwork.com/binaries/v#{version.before_comma.dots_to_underscores}_#{version.after_comma}/Upwork.dmg"
   appcast "https://www.macupdater.net/cgi-bin/extract_text/extract_text_split_easy.cgi?url=https://updates-desktopapp.upwork.com/binaries/versions-mac.json&splitter_1=Beta&index_1=0"

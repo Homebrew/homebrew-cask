@@ -1,6 +1,6 @@
 cask "katalon-studio" do
-  version "7.6.6"
-  sha256 "c98118026fc202ba1a67a3d16d1d498663e52496772f73f12663c9f1688545d9"
+  version "7.8.1"
+  sha256 "cb6bfdab8cd6a8b4a17292f6f3d03db8a5e94cd6bf80e66a6d47d57b90c46308"
 
   url "https://download.katalon.com/#{version}/Katalon%20Studio.dmg"
   appcast "https://github.com/katalon-studio/katalon-studio/releases.atom"

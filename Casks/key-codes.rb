@@ -1,6 +1,6 @@
 cask "key-codes" do
-  version "2.1"
-  sha256 "60ec4c0cef5e97943c91e4ed317434bcaddd4cdbce93368d8bca9db9d45c60e2"
+  version "2.2,2026"
+  sha256 :no_check
 
   url "https://manytricks.com/download/keycodes"
   appcast "https://manytricks.com/keycodes/appcast"

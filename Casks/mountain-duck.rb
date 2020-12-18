@@ -1,6 +1,6 @@
 cask "mountain-duck" do
-  version "4.2.0.17056"
-  sha256 "13e432b42db35c2a7955b17450f45bc3852dd6c23350342d66c2bb607ec9a46c"
+  version "4.3.3.17396"
+  sha256 "1a48d0f8ac6c5c3c34b86076df4b84ddaec670b7bab54a68cd7c3eb482087771"
 
   url "https://dist.mountainduck.io/Mountain%20Duck-#{version}.zip"
   appcast "https://version.mountainduck.io/#{version.major}/macos/changelog.rss"
@@ -17,5 +17,6 @@ cask "mountain-duck" do
     "~/Library/Containers/io.mountainduck.findersync",
     "~/Library/Group Containers/G69SCX94XU.duck",
     "~/Library/Preferences/io.mountainduck.plist",
+    "~/Library/Preferences/G69SCX94XU.duck.plist",
   ]
 end

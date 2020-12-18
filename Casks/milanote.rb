@@ -1,9 +1,9 @@
 cask "milanote" do
-  version "2.2.11"
-  sha256 "c9281de80b976f9d33bcba14508c3501a9dd210a0351137d4be0b7bcb3f9e2ec"
+  version "2.2.24"
+  sha256 "113228205b9af2f808d26a1d432449b6b07c022340f231d548c6004cdd01f3a2"
 
-  # milanote-app-releases.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://milanote-app-releases.s3.amazonaws.com/Milanote-#{version}.dmg"
+  url "https://milanote-app-releases.s3.amazonaws.com/Milanote-#{version}.dmg",
+      verified: "milanote-app-releases.s3.amazonaws.com/"
   appcast "https://www.milanote.com/download-mac-app"
   name "Milanote"
   homepage "https://www.milanote.com/"

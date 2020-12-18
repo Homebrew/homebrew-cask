@@ -1,9 +1,9 @@
 cask "nordvpn-teams" do
-  version "1.5.0"
-  sha256 "3a82fbe8bddbb6c0e144a38000b90d4020a83ff578205e356f86c53f63580811"
+  version "1.7.1,1276"
+  sha256 :no_check
 
-  # downloads.nordteams.com/ was verified as official when first introduced to the cask
-  url "https://downloads.nordteams.com/mac/latest/NordVPNTeams.pkg"
+  url "https://downloads.nordteams.com/mac/latest/NordVPNTeams.pkg",
+      verified: "downloads.nordteams.com/"
   appcast "https://downloads.nordteams.com/mac/update.xml"
   name "NordVPN Teams"
   desc "Security software for business"
@@ -14,7 +14,7 @@ cask "nordvpn-teams" do
   pkg "NordVPNTeams.pkg"
 
   uninstall quit:      "com.nordvpn.macos.teams.NordVPNTeamsLauncher",
-            launchctl: "com.nordvpn.macos.teams.21696",
+            launchctl: "com.nordvpn.macos.teams.helper",
             delete:    "/Library/PrivilegedHelperTools/com.nordvpn.osx.helper",
             pkgutil:   "com.nordvpn.macos.teams"
 

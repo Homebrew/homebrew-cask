@@ -1,6 +1,6 @@
 cask "8bitdo-ultimate-software" do
-  version "1.3.0"
-  sha256 "634f9c911715efbf25f42a0c8b398c82a1ac613877e268c61616ea6fd8951848"
+  version "1.3.4"
+  sha256 "4f20ae0b3ad750022bfaec77693a322a90864f391b963d55684da60788b458cb"
 
   url "http://tools.8bitdo.com/8BitdoUltimateSoftware/8BitDoUltimateSoftwareV#{version}.zip"
   appcast "http://tools.8bitdo.com/8BitdoUltimateSoftware/appcast.xml"

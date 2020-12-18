@@ -1,9 +1,9 @@
 cask "tunnelbear" do
-  version "3.9.10"
-  sha256 "df58613d85472b34fd2f23af56b84e870520495073371b979867fd044451dc43"
+  version "4.0.3"
+  sha256 "c0390b62ee712fd43fa2eb75db0c117c02faa4e3e7f2b59b580ea9ba135cf0a2"
 
-  # tunnelbear.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://tunnelbear.s3.amazonaws.com/downloads/mac/TunnelBear-#{version}.zip"
+  url "https://tunnelbear.s3.amazonaws.com/downloads/mac/TunnelBear-#{version}.zip",
+      verified: "tunnelbear.s3.amazonaws.com/"
   appcast "https://tunnelbear.s3.amazonaws.com/downloads/mac/appcast.xml"
   name "TunnelBear"
   desc "VPN client for secure internet access and private browsing"
@@ -12,7 +12,8 @@ cask "tunnelbear" do
   app "TunnelBear.app"
 
   uninstall quit:      "com.tunnelbear.mac.TunnelBear",
-            launchctl: "com.tunnelbear.mac.tbeard"
+            launchctl: "com.tunnelbear.mac.tbeard",
+            delete:    "/Library/PrivilegedHelperTools/com.tunnelbear.mac.tbeard"
 
   zap trash: [
     "~/Library/Preferences/com.tunnelbear.mac.TunnelBear.plist",

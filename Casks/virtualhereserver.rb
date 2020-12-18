@@ -1,5 +1,5 @@
 cask "virtualhereserver" do
-  version :latest
+  version "4.2.0"
   sha256 :no_check
 
   url "https://www.virtualhere.com/sites/default/files/usbserver/VirtualHereServer.dmg"

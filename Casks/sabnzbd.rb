@@ -1,9 +1,9 @@
 cask "sabnzbd" do
-  version "3.0.2"
-  sha256 "bc6dd19f888b6f3d28c9669c187be67d8efef2b0cc7685e18e1190830eb6bcc1"
+  version "3.1.1"
+  sha256 "1ebfd4e8359155c646238e5dcf2ee0f2a1efbbc8fab9b6e1af93b9584f61c02d"
 
-  # github.com/sabnzbd/sabnzbd/ was verified as official when first introduced to the cask
-  url "https://github.com/sabnzbd/sabnzbd/releases/download/#{version}/SABnzbd-#{version}-osx.dmg"
+  url "https://github.com/sabnzbd/sabnzbd/releases/download/#{version}/SABnzbd-#{version}-osx.dmg",
+      verified: "github.com/sabnzbd/sabnzbd/"
   appcast "https://github.com/sabnzbd/sabnzbd/releases.atom"
   name "SABnzbd"
   homepage "https://sabnzbd.org/"

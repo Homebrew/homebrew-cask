@@ -1,12 +1,13 @@
 cask "bricklink-studio" do
-  version "2.1.5_10"
-  sha256 "f5d36786aab7590f1415e15682047025718787027797e56d54d206b510345b27"
+  version "2.1.10_7"
+  sha256 "b24f645ef5a6f16150fdd98735cd315beaf605b53d64920563abfb6938d1bc3b"
 
-  # blstudio.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://blstudio.s3.amazonaws.com/Studio#{version.major}.0/Archive/#{version}/Studio+#{version.major}.0.pkg"
-  appcast "https://bricklink.com/v3/studio/download.page"
+  url "https://blstudio.s3.amazonaws.com/Studio#{version.major}.0/Archive/#{version}/Studio+#{version.major}.0.pkg",
+      verified: "blstudio.s3.amazonaws.com/"
+  appcast "https://www.bricklink.com/v3/studio/download.page"
   name "Studio"
-  homepage "https://bricklink.com/v3/studio/download.page"
+  desc "Build, render, and create LEGO instructions"
+  homepage "https://www.bricklink.com/v3/studio/download.page"
 
   auto_updates true
 

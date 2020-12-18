@@ -1,6 +1,6 @@
 cask "iphoto-library-manager" do
-  version "4.2.7"
-  sha256 "19befc6553638687f27883e822d7ecb780f31ad358bd3057c2079de4f12edea9"
+  version "4.2.7,954"
+  sha256 :no_check
 
   url "https://www.fatcatsoftware.com/iplm/iPhotoLibraryManager.zip"
   appcast "https://www.fatcatsoftware.com/iplm/iplm#{version.major}_appcast.xml"

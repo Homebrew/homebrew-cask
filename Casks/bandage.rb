@@ -2,8 +2,8 @@ cask "bandage" do
   version "0.8.1"
   sha256 "13e90e5824b61bd4abe62afa8785a28627714bf7a3d4dad3edb4b8f9854d3b6d"
 
-  # github.com/rrwick/Bandage/ was verified as official when first introduced to the cask
-  url "https://github.com/rrwick/Bandage/releases/download/v#{version}/Bandage_Mac_v#{version.dots_to_underscores}.zip"
+  url "https://github.com/rrwick/Bandage/releases/download/v#{version}/Bandage_Mac_v#{version.dots_to_underscores}.zip",
+      verified: "github.com/rrwick/Bandage/"
   appcast "https://github.com/rrwick/Bandage/releases.atom"
   name "Bandage"
   desc "Bioinformatics Application for Navigating De novo Assembly Graphs"

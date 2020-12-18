@@ -1,6 +1,6 @@
 cask "crossover" do
-  version "19.0.2"
-  sha256 "7f6ed1183ebc5536f3fd0e52b76368265140e36936c62e2c525d8044f36961ee"
+  version "20.0.2"
+  sha256 "3bdae0c3647266f6b40d2e5db7862d1054ff940d80c6306d3be3d0b7153ed689"
 
   url "https://media.codeweavers.com/pub/crossover/cxmac/demo/crossover-#{version}.zip"
   appcast "https://www.codeweavers.com/xml/versions/cxmac.xml"

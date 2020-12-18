@@ -1,11 +1,12 @@
 cask "azure-data-studio" do
-  version "1.21.0,2413919f186f780f0193d047da3d90bb3c1e9bf6"
-  sha256 "dedc082fd34ffe1c1bb9ddd7a830aeb08df63138935b8f947e9af6774cfe24af"
+  version "1.25.1,e7eacc32c0d20bd4da843320c3bfac231b308c98"
+  sha256 "3a08f492a015da13513db42fd8d32173034740959bed48879c3823f072de78d2"
 
-  # sqlopsbuilds.azureedge.net/stable was verified as official when first introduced to the cask
-  url "https://sqlopsbuilds.azureedge.net/stable/#{version.after_comma}/azuredatastudio-macos-#{version.before_comma}.zip"
+  url "https://sqlopsbuilds.azureedge.net/stable/#{version.after_comma}/azuredatastudio-macos-#{version.before_comma}.zip",
+      verified: "sqlopsbuilds.azureedge.net/stable/"
   appcast "https://github.com/Microsoft/azuredatastudio/releases.atom"
   name "Azure Data Studio"
+  desc "Data management tool that enables working with SQL Server"
   homepage "https://docs.microsoft.com/en-us/sql/azure-data-studio/"
 
   auto_updates true

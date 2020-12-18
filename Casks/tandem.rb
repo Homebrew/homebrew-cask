@@ -1,12 +1,26 @@
 cask "tandem" do
-  version "1.5.15"
-  sha256 "468d81344ab0cefbc9ad6395bd423964c6881cc5ea10339ce2c1733b9edafa92"
+  version "1.5.1216"
+  sha256 "84d816a9ed2d2b59e49eaaba74b5ddc4825273e93d4db3482f09d32426dcc28c"
 
-  # wisp-app.s3-accelerate.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://wisp-app.s3-accelerate.amazonaws.com/Tandem-#{version}-mac.zip"
-  appcast "https://wisp-app.s3-accelerate.amazonaws.com/latest-mac.yml"
+  url "https://download.todesktop.com/200527auaqaacsy/Tandem%20#{version}.dmg",
+      verified: "download.todesktop.com/200527auaqaacsy/"
+  appcast "https://download.todesktop.com/200527auaqaacsy/latest-mac.yml"
   name "Tandem"
+  desc "Virtual office for remote teams"
   homepage "https://tandem.chat/"
 
+  auto_updates true
+
   app "Tandem.app"
+
+  zap trash: [
+    "~/Library/Application Support/Caches/tandem-updater",
+    "~/Library/Application Support/Tandem",
+    "~/Library/Caches/tandem.app",
+    "~/Library/Caches/tandem.app.ShipIt",
+    "~/Library/Logs/Tandem",
+    "~/Library/Preferences/ByHost/tandem.app.ShipIt.*.plist",
+    "~/Library/Preferences/tandem.app.plist",
+    "~/Library/Saved Application State/tandem.app.savedState",
+  ]
 end

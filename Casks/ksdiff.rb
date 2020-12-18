@@ -2,9 +2,9 @@ cask "ksdiff" do
   version "2.2.0,122"
   sha256 "cf32401d631e61cbbc3dc9947626174b45e8317a6cac39380067e7017e8d4c87"
 
-  url "https://cdn.kaleidoscopeapp.com/releases/ksdiff-#{version.after_comma}-#{version.before_comma}.zip"
+  url "https://updates.kaleidoscope.app/v2/prod/ksdiff-#{version.after_comma}-#{version.before_comma}.zip"
   name "ksdiff"
-  homepage "https://www.kaleidoscopeapp.com/ksdiff2"
+  homepage "https://kaleidoscope.app/ksdiff2"
 
   conflicts_with cask: "kaleidoscope"
 

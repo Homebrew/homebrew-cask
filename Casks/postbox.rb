@@ -1,9 +1,9 @@
 cask "postbox" do
-  version "7.0.29"
-  sha256 "dba910a7e35a17026ca2d52562c5694e64284de2826b3522171b1afe22c4a0db"
+  version "7.0.42"
+  sha256 "80eb12534563d5a6379573d5e80cc35cc2e7d259e073a536f001816a6d92055b"
 
-  # d3nx85trn0lqsg.cloudfront.net/mac/ was verified as official when first introduced to the cask
-  url "https://d3nx85trn0lqsg.cloudfront.net/mac/postbox-#{version}-mac64.dmg"
+  url "https://d3nx85trn0lqsg.cloudfront.net/mac/postbox-#{version}-mac64.dmg",
+      verified: "d3nx85trn0lqsg.cloudfront.net/mac/"
   appcast "https://www.postbox-inc.com/download/success-mac"
   name "Postbox"
   desc "Email client focusing on privacy protection"

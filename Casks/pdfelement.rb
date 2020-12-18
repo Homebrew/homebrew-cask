@@ -1,6 +1,6 @@
 cask "pdfelement" do
-  version "7.6.6"
-  sha256 "8ab259e7c7aef2f291b4d1c04b064fd1fdd663542227ac19cb5619c47ff23b6e"
+  version "7.6.7,3180"
+  sha256 :no_check
 
   url "https://download.wondershare.com/cbs_down/mac-pdfelement_full5237.dmg"
   appcast "https://cbs.wondershare.com/go.php?m=upgrade_info&pid=5237"

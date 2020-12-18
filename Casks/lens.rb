@@ -1,9 +1,9 @@
 cask "lens" do
-  version "3.5.3"
-  sha256 "821478667fef53831f782365c731332909dbe33fa73e326722d21157f49e301d"
+  version "4.0.3"
+  sha256 "9efac90573fb9f114ee46b6288be58f5f6b3c256e49e36a4e3cc01a163a0d2ea"
 
-  # github.com/lensapp/lens/ was verified as official when first introduced to the cask
-  url "https://github.com/lensapp/lens/releases/download/v#{version}/Lens-#{version}.dmg"
+  url "https://github.com/lensapp/lens/releases/download/v#{version}/Lens-#{version}.dmg",
+      verified: "github.com/lensapp/lens/"
   appcast "https://github.com/lensapp/lens/releases.atom"
   name "Lens"
   desc "Kubernetes IDE"

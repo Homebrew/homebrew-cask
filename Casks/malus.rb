@@ -1,10 +1,12 @@
 cask "malus" do
-  version "1.2.1"
-  sha256 "5c01bd728530f0ac4981c663ad0c860f8e3e376262ba57e55f7dcef082cfcbe3"
+  version "1.6.0,160"
+  sha256 "85a86088ed17617d3a9917e31c25e4b601ef0e83cf5d662a01436ccef207841b"
 
-  url "https://download.getmalus.com/uploads/malus_mac_#{version.dots_to_underscores}.dmg"
+  url "https://malus.s3cdn.net/uploads/mac_malus_#{version.before_comma.dots_to_underscores}.dmg",
+      verified: "malus.s3cdn.net/"
   appcast "https://api.getmalus.com/api/checkDesktopUpdate?type=mac"
   name "Malus"
+  desc "Proxy to help accessing various online media resources/services"
   homepage "https://getmalus.com/"
 
   auto_updates true
@@ -12,8 +14,9 @@ cask "malus" do
 
   app "Malus.app"
 
+  uninstall rmdir: "/Library/Application Support/Malus"
+
   zap trash: [
-    "/Library/Application Support/Malus",
     "~/Library/Application Support/Malus",
     "~/Library/Application Support/com.getmalus.malus",
     "~/Library/Logs/com.getmalus.malus",

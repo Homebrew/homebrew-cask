@@ -5,6 +5,7 @@ cask "pine" do
   url "https://github.com/lukakerr/pine/releases/download/#{version}/Pine-#{version}.zip"
   appcast "https://github.com/lukakerr/pine/releases.atom"
   name "Pine"
+  desc "Native markdown editor"
   homepage "https://github.com/lukakerr/pine"
 
   depends_on macos: ">= :sierra"

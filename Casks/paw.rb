@@ -1,6 +1,6 @@
 cask "paw" do
-  version "3.1.10"
-  sha256 "bbf45359fd48bd4700d834ce9155ee679f88a450e2b857fc879247d4689d877d"
+  version "3.2"
+  sha256 "d2ecc62da75260de539bc6ae3c14ebebfbc5e194ea2f385f6f48372d5eead4b1"
 
   url "https://cdn-builds.paw.cloud/paw/Paw-#{version}.zip"
   appcast "https://paw.cloud/api/v2/updates/appcast"

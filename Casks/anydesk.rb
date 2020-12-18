@@ -1,12 +1,17 @@
 cask "anydesk" do
-  version "6.0.1"
-  sha256 "bcdd0f8c3a42b291f23aac43e3309a5a6b8d5016d7c220e8d306ab40b802eb02"
+  version "6.1.0"
+  sha256 :no_check
 
   url "https://download.anydesk.com/anydesk.dmg"
   appcast "https://anydesk.com/en/downloads/mac-os"
   name "AnyDesk"
   desc "Allows connection to a computer remotely"
-  homepage "https://anydesk.com/remote-desktop"
+  homepage "https://anydesk.com/"
 
   app "AnyDesk.app"
+
+  zap trash: [
+    "~/.anydesk",
+    "~/Library/Preferences/com.philandro.anydesk.plist",
+  ]
 end

@@ -1,5 +1,5 @@
 cask "popsql" do
-  version :latest
+  version "1.0.33"
   sha256 :no_check
 
   url "https://get.popsql.io/download/mac"
