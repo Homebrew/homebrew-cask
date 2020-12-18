@@ -8,7 +8,8 @@ cask "freedome" do
 
   pkg "Freedome.pkg"
 
-  uninstall pkgutil:   "com.f-secure.freedome*",
+  uninstall quit: "com.fsecure.freedome.osx",
+            pkgutil:   "com.f-secure.freedome*",
             launchctl: [
               "com.f-secure.freedome.gui",
               "com.f-secure.freedome.uninstall",
