@@ -6,6 +6,7 @@ cask "setapp" do
       verified: "devmate.com/com.setapp.InstallSetapp/"
   appcast "https://updates.devmate.com/com.setapp.InstallSetapp.xml"
   name "Setapp"
+  desc "Collection of apps available by subscription"
   homepage "https://setapp.com/"
 
   auto_updates true
