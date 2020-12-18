@@ -1,6 +1,6 @@
 cask "boost-note" do
-  version "0.11.5"
-  sha256 "ac35f0da94a74309c9f74b769350f9a130e8a6c41253000e7693955701712f64"
+  version "0.11.6"
+  sha256 "224df26e306b8c4594a40255fc5e01eeaa9a8fdd1df916eac0ef0cc9d4eb19bf"
 
   url "https://github.com/BoostIO/BoostNote.next/releases/download/v#{version}/boost-note-mac.dmg",
       verified: "github.com/BoostIO/BoostNote.next/"
