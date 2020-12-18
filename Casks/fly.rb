@@ -5,7 +5,7 @@ cask "fly" do
   url "https://github.com/concourse/concourse/releases/download/v#{version}/fly-#{version}-darwin-amd64.tgz"
   appcast "https://github.com/concourse/concourse/releases.atom"
   name "fly"
-  desc "fly is the official CLI tool for Concourse CI"
+  desc "Official CLI tool for Concourse CI"
   homepage "https://github.com/concourse/concourse"
 
   binary "fly"
