@@ -9,11 +9,5 @@ cask "shearwater-cloud" do
 
   app "Shearwater Cloud.app"
 
-  zap trash: [
-    "~/Library/Containers/unity.Shearwater-Research.Shearwater",
-  ]
-
-  caveats <<~EOS
-    Zapping this cask will erase all dive logs that weren't manually exported to an external location.
-  EOS
+  zap trash: "~/Library/Containers/unity.Shearwater-Research.Shearwater"
 end
