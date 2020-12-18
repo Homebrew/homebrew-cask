@@ -8,11 +8,14 @@ cask "trojanx" do
   desc "Mechanism to bypass the Great Firewall"
   homepage "https://github.com/JimLee1996/TrojanX"
 
+  depends_on macos: ">= :el_capitan"
+
   app "TrojanX.app"
 
+  ununstall delete: "/Library/Application Support/TrojanX"
+
   zap trash: [
-    "~/Library/Preferences/TrojanX.plist",
-    "/Library/Application Support/TrojanX",
     "~/Library/Application Support/TrojanX",
+    "~/Library/Preferences/TrojanX.plist",
   ]
 end
