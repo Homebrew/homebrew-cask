@@ -2,8 +2,8 @@ cask "bibdesk" do
   version "1.7.9"
   sha256 "feb0a9556f1b748f5f78d17056c30ed0a1a4266bb02c59a35db939c1e2b349d3"
 
-  # downloads.sourceforge.net/bibdesk/ was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/bibdesk/BibDesk/BibDesk-#{version}/BibDesk-#{version}.dmg"
+  url "https://downloads.sourceforge.net/bibdesk/BibDesk/BibDesk-#{version}/BibDesk-#{version}.dmg",
+      verified: "downloads.sourceforge.net/bibdesk/"
   appcast "https://bibdesk.sourceforge.io/bibdesk.xml"
   name "BibDesk"
   desc "Edit and manage bibliographies"

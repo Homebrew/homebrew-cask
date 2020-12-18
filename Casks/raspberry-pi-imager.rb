@@ -1,6 +1,6 @@
 cask "raspberry-pi-imager" do
-  version "1.4"
-  sha256 "85b337e9ccbec6dd39b0ddbf4b9b4cb1f39fb90f6923a3fea694b2300e936538"
+  version "1.5"
+  sha256 "080a6ce49f9c899d57515907cc8020efa9b06ef986ea6e916c065f76879be0ef"
 
   url "https://downloads.raspberrypi.org/imager/imager_#{version}.dmg"
   appcast "https://github.com/raspberrypi/rpi-imager/releases.atom"

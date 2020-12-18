@@ -2,8 +2,8 @@ cask "vox" do
   version "3399.9,1606236929"
   sha256 "1ce5db5bb1865206c95704df606f61675eb57f2cac57b02524a073271b63ac6f"
 
-  # devmate.com/com.coppertino.Vox/ was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.coppertino.Vox/#{version.before_comma}/#{version.after_comma}/Vox-#{version.before_comma}.zip"
+  url "https://dl.devmate.com/com.coppertino.Vox/#{version.before_comma}/#{version.after_comma}/Vox-#{version.before_comma}.zip",
+      verified: "devmate.com/com.coppertino.Vox/"
   appcast "https://updates.devmate.com/com.coppertino.Vox.xml"
   name "VOX"
   desc "Music player for high resoluion (Hi-Res) music through the external sources"

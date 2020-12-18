@@ -1,5 +1,5 @@
 cask "install-disk-creator" do
-  version :latest
+  version "1.5"
   sha256 :no_check
 
   url "https://macdaddy.io/InstallDiskCreator.zip"

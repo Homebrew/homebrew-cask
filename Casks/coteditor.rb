@@ -7,8 +7,8 @@ cask "coteditor" do
     sha256 "879fa6ef8199c10c8b42b6adaa4a528b41295b97457c7e06fd1a412f65f0ffb9"
   end
 
-  # github.com/coteditor/CotEditor/ was verified as official when first introduced to the cask
-  url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
+  url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg",
+      verified: "github.com/coteditor/CotEditor/"
   appcast "https://github.com/coteditor/CotEditor/releases.atom"
   name "CotEditor"
   desc "Plain-text editor for web pages, program source codes and more"

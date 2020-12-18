@@ -90,5 +90,4 @@ Since as of now all the macOS versions we support only run on 64-bit Intel, `dep
 | `cask:`    | a Cask token
 | `macos:`   | a symbol, string, array, or comparison expression defining macOS release requirements
 | `arch:`    | a symbol or array defining hardware requirements
-| `x11:`     | a Boolean indicating a dependency on X11
 | `java:`    | *stub - not yet functional*

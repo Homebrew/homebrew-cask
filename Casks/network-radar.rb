@@ -1,6 +1,6 @@
 cask "network-radar" do
   version "2.10"
-  sha256 "566f9049d68e7287a5a2dc1da0ff04bca540db8d23fbbddd0da8546302892df5"
+  sha256 :no_check
 
   url "https://witt-software.com/downloads/networkradar/Network%20Radar.dmg"
   appcast "https://www.witt-software.com/downloads/networkradar/appcast.xml"

@@ -1,6 +1,6 @@
 cask "eaccess" do
   version "1.13.3"
-  sha256 "b496682ccaa4b90bdb7a9ae81b631e714235f81481d985c3c752c313dc7d7058"
+  sha256 :no_check
 
   url "https://glutz.com/service/downloads/?dwnldid=97899"
   appcast "https://glutz.com/service/downloads/soft-und-firmware/"

@@ -2,8 +2,8 @@ cask "box-drive" do
   version :latest
   sha256 :no_check
 
-  # e3.boxcdn.net/ was verified as official when first introduced to the cask
-  url "https://e3.boxcdn.net/box-installers/desktop/releases/mac/Box.pkg"
+  url "https://e3.boxcdn.net/box-installers/desktop/releases/mac/Box.pkg",
+      verified: "e3.boxcdn.net/"
   name "Box Drive"
   desc "Client for the Box cloud storage service"
   homepage "https://www.box.com/drive"

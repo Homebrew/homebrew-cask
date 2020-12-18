@@ -1,6 +1,6 @@
 cask "cleanshot" do
-  version "3.4.4"
-  sha256 "e7d6b3b59ae8d2a9bc29adff740ffd7701157293f9ef0b7bf8dd9ba364cf5940"
+  version "3.4.5"
+  sha256 "1221c0d35b5b40f17969b95836c956418e583ee357d1c039637c05a88b68e75c"
 
   url "https://updates.getcleanshot.com/v#{version.major}/CleanShot-X-#{version}.dmg"
   appcast "https://updates.getcleanshot.com/v#{version.major}/appcast.xml"

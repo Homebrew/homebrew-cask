@@ -1,5 +1,5 @@
 cask "deathtodsstore" do
-  version :latest
+  version "1.0.5"
   sha256 :no_check
 
   url "https://www.aorensoftware.com/Downloads/Files/DeathToDSStore.zip"

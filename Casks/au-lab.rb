@@ -1,5 +1,5 @@
 cask "au-lab" do
-  version :latest
+  version "2.3"
   sha256 :no_check
 
   url "https://images.apple.com/itunes/mastered-for-itunes/docs/au_lab.zip"

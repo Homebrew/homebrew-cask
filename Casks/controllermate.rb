@@ -10,8 +10,8 @@ cask "controllermate" do
     sha256 "dd95d0b2abd6c23148092c96593fb303befc374c6a912afad57efb48b0a1e04b"
   end
 
-  # orderedbytes.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://orderedbytes.s3.amazonaws.com/ControllerMate#{version.no_dots}.zip"
+  url "https://orderedbytes.s3.amazonaws.com/ControllerMate#{version.no_dots}.zip",
+      verified: "orderedbytes.s3.amazonaws.com/"
   appcast "https://www.orderedbytes.com/sparkle/appcast_cm460.xml"
   name "ControllerMate"
   homepage "https://www.orderedbytes.com/controllermate/"

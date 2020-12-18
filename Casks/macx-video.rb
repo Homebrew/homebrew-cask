@@ -1,6 +1,6 @@
 cask "macx-video" do
-  version "1.5"
-  sha256 "010b331fe12b6176c2a5591637ab8877a1a64d86236520ac886f97a93b971569"
+  version "1.5,20180622"
+  sha256 :no_check
 
   url "https://www.videoproc.com/download/macxvideo.dmg"
   appcast "https://www.videoproc.com/macxvideo/"

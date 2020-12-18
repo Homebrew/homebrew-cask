@@ -1,5 +1,5 @@
 cask "touch-bar-pong" do
-  version :latest
+  version "1.3"
   sha256 :no_check
 
   url "https://github.com/ferdinandl007/TouchBarPong/archive/master.zip"

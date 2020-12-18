@@ -3,8 +3,8 @@ cask "blockblock" do
     version "0.9.9.4"
     sha256 "6ab3a8224e8bc77b9abe8d41492c161454c6b0266e60e61b06931fed4b431282"
 
-    # bitbucket.org/objective-see/ was verified as official when first introduced to the cask
-    url "https://bitbucket.org/objective-see/deploy/downloads/BlockBlock_#{version}.zip"
+    url "https://bitbucket.org/objective-see/deploy/downloads/BlockBlock_#{version}.zip",
+        verified: "bitbucket.org/objective-see/"
 
     installer script: {
       executable: "#{staged_path}/BlockBlock Installer.app/Contents/MacOS/BlockBlock",
@@ -21,8 +21,8 @@ cask "blockblock" do
     version "1.1.0"
     sha256 "a5260a993c2f713f3f101b8728ad7b1636336c28f325f70cbc4445f6c0c1f420"
 
-    # bitbucket.org/objective-see/ was verified as official when first introduced to the cask
-    url "https://bitbucket.org/objective-see/deploy/downloads/BlockBlock_#{version}.zip"
+    url "https://bitbucket.org/objective-see/deploy/downloads/BlockBlock_#{version}.zip",
+        verified: "bitbucket.org/objective-see/"
 
     installer script: {
       executable: "#{staged_path}/BlockBlock Installer.app/Contents/MacOS/BlockBlock Installer",

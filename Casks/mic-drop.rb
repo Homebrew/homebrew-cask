@@ -1,6 +1,6 @@
 cask "mic-drop" do
-  version "1.3.1"
-  sha256 "22ea299727325830b71b2316e8421f092323403301e4ab632174b66989c56409"
+  version "1.3.4"
+  sha256 "50cdf68234bb9833a2a6db011954f0b5a86c47fca52a19f6e823debac5372bef"
 
   url "https://getmicdrop.com/downloads/Mic%20Drop%20#{version}.zip"
   appcast "https://getmicdrop.com/downloads/appcast.xml"

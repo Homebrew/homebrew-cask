@@ -1,9 +1,9 @@
 cask "raven-reader" do
-  version "1.0.14"
-  sha256 "6bbeca4f1f41db9b12a56c1dd9bc0b03b7cf6ffc13c71e76aa6ee000b59dacb7"
+  version "1.0.15"
+  sha256 "e1175d7b11511f699e6da1556c5bcf0a87c795e6fa356bb2d5d7eb67ec68356f"
 
-  # download.helloefficiency.com/ravenreader/ was verified as official when first introduced to the cask
-  url "https://download.helloefficiency.com/ravenreader/Raven%20Reader-#{version}.dmg"
+  url "https://download.helloefficiency.com/ravenreader/Raven%20Reader-#{version}.dmg",
+      verified: "download.helloefficiency.com/ravenreader/"
   appcast "https://ridereceiptspro.sfo2.digitaloceanspaces.com/ravenreader/latest-mac.yml"
   name "Raven Reader"
   desc "News reader with flexible settings"

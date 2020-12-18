@@ -1,6 +1,6 @@
 cask "youdaodict" do
-  version "2.8.3"
-  sha256 "6bd166fd28ffe4a3d8237be4fbdc4cb1b4dad1f308a4d122112fee3cd58ee53b"
+  version "2.8.3,189"
+  sha256 :no_check
 
   url "https://codown.youdao.com/cidian/download/MacDict.dmg"
   appcast "https://cidian.youdao.com/index-mac.html"

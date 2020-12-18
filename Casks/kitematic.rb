@@ -2,8 +2,8 @@ cask "kitematic" do
   version "0.17.13"
   sha256 "d2e3dba17680eec4789851fba376bb573799f448eea7beb2d7aa990f24feb402"
 
-  # github.com/docker/kitematic/ was verified as official when first introduced to the cask
-  url "https://github.com/docker/kitematic/releases/download/v#{version}/Kitematic-#{version}-Mac.zip"
+  url "https://github.com/docker/kitematic/releases/download/v#{version}/Kitematic-#{version}-Mac.zip",
+      verified: "github.com/docker/kitematic/"
   appcast "https://github.com/docker/kitematic/releases.atom"
   name "Kitematic"
   desc "Visual user interface for Docker Container management"

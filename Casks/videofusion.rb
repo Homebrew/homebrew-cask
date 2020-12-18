@@ -9,6 +9,8 @@ cask "videofusion" do
   desc "Video editor"
   homepage "https://lv.ulikecam.com/"
 
+  depends_on macos: ">= :mojave"
+
   pkg "Jianying_Pro_#{version.dots_to_underscores}.pkg"
 
   uninstall pkgutil: [

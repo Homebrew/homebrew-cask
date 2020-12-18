@@ -1,5 +1,5 @@
 cask "nifty" do
-  version :latest
+  version "3.29.1"
   sha256 :no_check
 
   url "https://niftypm.com/apps/Nifty.dmg"

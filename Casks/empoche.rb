@@ -2,8 +2,8 @@ cask "empoche" do
   version "0.4.5"
   sha256 "8a4c57928da42a3ed60b1e0648b24614f84ecc582f3b9c9ee04cd5323e58ea4f"
 
-  # empoche-desktop.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://empoche-desktop.s3.amazonaws.com/Empoche-#{version}-mac.zip"
+  url "https://empoche-desktop.s3.amazonaws.com/Empoche-#{version}-mac.zip",
+      verified: "empoche-desktop.s3.amazonaws.com/"
   appcast "https://empoche-desktop.s3.amazonaws.com/latest-mac.yml"
   name "Empoche"
   homepage "https://empoche.com/"

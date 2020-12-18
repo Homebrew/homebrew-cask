@@ -10,6 +10,7 @@ cask "intellij-idea-ce" do
   homepage "https://www.jetbrains.com/idea/"
 
   auto_updates true
+  conflicts_with cask: "homebrew/cask-versions/intellij-idea-ce19"
 
   app "IntelliJ IDEA CE.app"
 

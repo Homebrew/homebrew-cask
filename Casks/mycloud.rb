@@ -2,8 +2,8 @@ cask "mycloud" do
   version :latest
   sha256 :no_check
 
-  # desktop-client-installer-server-mac.prod.mdl.swisscom.ch/ was verified as official when first introduced to the cask
-  url "https://desktop-client-installer-server-mac.prod.mdl.swisscom.ch/myCloud%20Desktop%20installer.pkg"
+  url "https://desktop-client-installer-server-mac.prod.mdl.swisscom.ch/myCloud%20Desktop%20installer.pkg",
+      verified: "desktop-client-installer-server-mac.prod.mdl.swisscom.ch/"
   name "Swisscom myCloud Desktop"
   desc "Swiss cloud storage desktop app"
   homepage "https://desktop.mycloud.ch/"

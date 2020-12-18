@@ -1,11 +1,12 @@
 cask "google-backup-and-sync" do
-  version :latest
+  version "3.53.3404.7585"
   sha256 :no_check
 
   url "https://dl.google.com/drive/InstallBackupAndSync.dmg"
   name "Google Backup and Sync"
   homepage "https://www.google.com/drive/download/"
 
+  auto_updates true
   conflicts_with cask: "google-photos-backup-and-sync"
 
   app "Backup and Sync.app"

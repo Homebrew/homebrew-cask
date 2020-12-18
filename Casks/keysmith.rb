@@ -1,6 +1,6 @@
 cask "keysmith" do
-  version "1.6.0"
-  sha256 "afe0a83ff58bd61f00e28f0c0b1d337ad7050ca50133c934888c643beca416df"
+  version "1.8.1"
+  sha256 "ed99df06e5814b43ea9760527afbf45c69ca88a947fd2b6b5b81fc41ef73a4ad"
 
   url "https://keysmith.app/versions/Keysmith-#{version}.dmg"
   appcast "https://www.keysmith.app/versions/appcast.xml"

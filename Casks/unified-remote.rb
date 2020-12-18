@@ -1,5 +1,5 @@
 cask "unified-remote" do
-  version :latest
+  version "1.0"
   sha256 :no_check
 
   url "https://www.unifiedremote.com/download/mac"

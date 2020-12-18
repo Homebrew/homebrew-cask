@@ -1,5 +1,5 @@
 cask "smallpdf" do
-  version :latest
+  version "1.24.2"
   sha256 :no_check
 
   url "https://download.smallpdf.com/desktop/mac/Smallpdf.dmg"

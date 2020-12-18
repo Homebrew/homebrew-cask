@@ -1,6 +1,6 @@
 cask "cashnotify" do
   version "3.3.2"
-  sha256 "7b255a80775d4c5dc3baba55c3039bbaf139f105617e0ab28f64de74e6baf7cb"
+  sha256 :no_check
 
   url "https://download.cashnotify.com/download/mac/"
   appcast "https://github.com/BaguetteEngineering/download.cashnotify.com/releases.atom"

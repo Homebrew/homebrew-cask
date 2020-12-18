@@ -1,6 +1,6 @@
 cask "shortcutdetective" do
   version "1.0"
-  sha256 "4b8ef6319baa51369dad48fe03973e1135a96e5b62c0a7c7b55cd2daabe38065"
+  sha256 :no_check
 
   url "https://www.irradiatedsoftware.com/downloads/ShortcutDetective.zip"
   name "ShortcutDetective"
