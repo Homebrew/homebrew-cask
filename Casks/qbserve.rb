@@ -3,7 +3,7 @@ cask "qbserve" do
   sha256 "734ec7d59ba054b2e1cfbf32ca90ea9a7f4dd442fc7a5cd10a2afaa8426b4262"
 
   url "https://qotoqot.com/qbserve/app/Qbserve-#{version}.zip"
-  appcast "https://qotoqot.com/qbserve/app/appcast.xml"
+  appcast "https://qotoqot.com/qbserve/"
   name "Qbserve"
   homepage "https://qotoqot.com/qbserve/"
 
