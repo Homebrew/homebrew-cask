@@ -8,5 +8,10 @@ cask "cold-turkey-blocker" do
 
   pkg "Cold_Turkey_Mac_Installer.pkg"
 
-  uninstall pkgutil: "com.getcoldturkey.coldTurkeyBlocker.ColdTurkeyBlocker.pkg"
+  uninstall pkgutil: [
+    "com.getcoldturkey.coldturkeyblocker",
+    "com.getcoldturkey.blocker-chrome-ext",
+    "com.getcoldturkey.blocker-edge-ext",
+    "com.getcoldturkey.blocker-firefox-ext",
+  ]
 end
