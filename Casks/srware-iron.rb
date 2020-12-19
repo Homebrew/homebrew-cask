@@ -1,5 +1,5 @@
 cask "srware-iron" do
-  version "84.0.4300.0"
+  version "84.0.4300.0,4300.0"
   sha256 :no_check
 
   url "https://www.srware.net/downloads/iron-mac64.zip"
