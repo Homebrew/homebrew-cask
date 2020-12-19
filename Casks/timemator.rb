@@ -1,5 +1,5 @@
 cask "timemator" do
-  version "2.7.2,113"
+  version "2.7.3,114"
   sha256 :no_check
 
   url "https://catforce-timemator.s3.amazonaws.com/releases/Timemator.dmg",

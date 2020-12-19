@@ -12,8 +12,8 @@ cask "bartender" do
         referer: "https://www.macbartender.com"
     appcast "https://www.macbartender.com/B2/updates/AppcastB#{version.major}.xml"
   else
-    version "4.0.32"
-    sha256 "b659ed514788b220b28d07bf9800fe40bc0c8b2bbabc11522f07104df298f578"
+    version "4.0.33"
+    sha256 "e925ce83b51de097cae34a2c578eecc4d3a37982a6314e43e24cb26194c7ccc1"
     url "https://macbartender.com/B2/updates/B4Latest/Bartender%20#{version.major}.dmg",
         referer: "https://www.macbartender.com"
     appcast "https://www.macbartender.com/B2/updates/AppcastB#{version.major}.xml"

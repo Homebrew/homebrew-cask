@@ -1,5 +1,5 @@
 cask "dialpad" do
-  version "18.80.4"
+  version "18.81.9"
   sha256 :no_check
 
   url "https://storage.googleapis.com/dialpad_native/osx/Dialpad.dmg",
