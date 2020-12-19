@@ -1,5 +1,5 @@
 cask "pref-setter" do
-  version "2.0"
+  version "197"
   sha256 :no_check
 
   url "http://www.nightproductions.net/downloads/prefsetter.zip"
