@@ -1,5 +1,5 @@
 cask "puush" do
-  version "r66"
+  version "r66,66"
   sha256 :no_check
 
   url "https://puush.me/dl/puush.zip"
