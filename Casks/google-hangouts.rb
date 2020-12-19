@@ -1,5 +1,5 @@
 cask "google-hangouts" do
-  version :latest
+  version "5.41.3.0"
   sha256 :no_check
 
   url "https://dl.google.com/googletalk/googletalkplugin/GoogleVoiceAndVideoSetup.dmg"
