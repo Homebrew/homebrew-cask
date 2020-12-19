@@ -1,5 +1,5 @@
 cask "eset-cyber-security-pro" do
-  version "6.10.460.1"
+  version "6.10.460"
   sha256 :no_check
 
   url "https://download.eset.com/com/eset/apps/home/ess/mac/latest/eset_cybersecurity_pro_en.dmg"
