@@ -1,5 +1,5 @@
 cask "after-dark-classic" do
-  version :latest
+  version "1.0"
   sha256 :no_check
 
   url "https://www.infinisys.co.jp/archive/online/online_afterdarkclassicset_e.dmg.gz"
