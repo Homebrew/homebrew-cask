@@ -1,5 +1,5 @@
 cask "vip-access" do
-  version :latest
+  version "1.0.7"
   sha256 :no_check
 
   url "https://com-symantec-vip-us-east-2-prd-idcenter-downloads-v2.s3.amazonaws.com/VIPAccessSecurityCode.dmg",
