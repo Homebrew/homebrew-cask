@@ -1,5 +1,5 @@
 cask "cloudflare-warp" do
-  version :latest
+  version "1.2.1413,20201006.7"
   sha256 :no_check
 
   url "https://1.1.1.1/Cloudflare%20WARP.zip"
@@ -9,9 +9,10 @@ cask "cloudflare-warp" do
 
   pkg "Cloudflare_WARP.pkg"
 
-  uninstall script: {
-    executable: "/Applications/Cloudflare WARP.app/Contents/Resources/uninstall.sh",
-    input:      ["Y\n"],
-    sudo:       true,
-  }
+  uninstall launchctl: "com.cloudflare.1dot1dot1dot1.macos.loginlauncherapp",
+            script:    {
+              executable: "/Applications/Cloudflare WARP.app/Contents/Resources/uninstall.sh",
+              input:      ["Y\n"],
+              sudo:       true,
+            }
 end
