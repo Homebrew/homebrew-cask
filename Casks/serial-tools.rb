@@ -1,5 +1,5 @@
 cask "serial-tools" do
-  version :latest
+  version "0.6"
   sha256 :no_check
 
   url "https://www.w7ay.net/site/Downloads/Serial%20Tools/Serial%20Tools%20app.dmg"
