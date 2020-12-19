@@ -1,5 +1,5 @@
 cask "monity-helper" do
-  version :latest
+  version "1.2.5,50"
   sha256 :no_check
 
   url "https://www.monityapp.com/download/MonityHelper.pkg"
