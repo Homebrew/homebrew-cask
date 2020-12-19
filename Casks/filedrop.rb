@@ -1,5 +1,5 @@
 cask "filedrop" do
-  version :latest
+  version "1.1.5"
   sha256 :no_check
 
   url "https://commondatastorage.googleapis.com/filedropme/Filedrop.dmg",
