@@ -1,5 +1,5 @@
 cask "kindle-comic-creator" do
-  version :latest
+  version "1.160"
   sha256 :no_check
 
   url "https://kc2.s3.amazonaws.com/KindleComicCreatorInstall.dmg",
