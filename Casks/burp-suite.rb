@@ -1,6 +1,6 @@
 cask "burp-suite" do
-  version "2020.11.3"
-  sha256 "b154a0e4723551bd0f0e1580b78e94f0ff2fb1b8fefbe786a013e7aaac425c8a"
+  version "2020.12.1"
+  sha256 "e84e694d56dcce7b7b350164e9238dbaa4b1065d83734ff4e3d4c9790bb65fd4"
 
   url "https://portswigger.net/burp/releases/download?product=community&version=#{version}&type=MacOsx"
   appcast "https://portswigger.net/burp/releases?initialTab=community"
