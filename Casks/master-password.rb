@@ -1,5 +1,5 @@
 cask "master-password" do
-  version "2.5.2"
+  version "2.5.2,22222222222222.5.2"
   sha256 :no_check
 
   url "http://www.masterpasswordapp.com/masterpassword-mac.zip"
