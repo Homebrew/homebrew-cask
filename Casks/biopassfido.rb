@@ -1,5 +1,5 @@
 cask "biopassfido" do
-  version :latest
+  version "2.1.0"
   sha256 :no_check
 
   url "https://www.ftsafe.com/download/webdownload/BioPass_FIDO2_Manager_for_Mac.dmg"
