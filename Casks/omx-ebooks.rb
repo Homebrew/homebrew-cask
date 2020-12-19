@@ -1,5 +1,5 @@
 cask "omx-ebooks" do
-  version :latest
+  version "3.0,26"
   sha256 :no_check
 
   url "https://hello.officemax.com.au/ebooks/clkn/https/www.officemaxschools.com.au/ebooks/OMX_eBooks.pkg"
