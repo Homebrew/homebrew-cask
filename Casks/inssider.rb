@@ -1,6 +1,6 @@
 cask "inssider" do
-  version "0.0.2.14,5"
-  sha256 "8d995306facb7d1341a54521a7cd8e76290ff44763fa00a7dfca85932f82a524"
+  version "0.0.4.5,5"
+  sha256 "aae290a9e1c35db4b923ff6cf64332b1825ab82a848761e10debdddf3e3f9cfa"
 
   url "https://metageek-desktop.nyc3.digitaloceanspaces.com/Installers/Mac/inSSIDer-#{version.after_comma}/inSSIDer.dmg",
       verified: "nyc3.digitaloceanspaces.com/Installers/Mac/"
