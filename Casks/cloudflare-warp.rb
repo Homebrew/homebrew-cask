@@ -15,5 +15,4 @@ cask "cloudflare-warp" do
               input:      ["Y\n"],
               sudo:       true,
             }
-         
 end
