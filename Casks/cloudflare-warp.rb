@@ -1,5 +1,5 @@
 cask "cloudflare-warp" do
-  version :latest
+  version "1.2.1413,20201006.7"
   sha256 :no_check
 
   url "https://1.1.1.1/Cloudflare%20WARP.zip"
