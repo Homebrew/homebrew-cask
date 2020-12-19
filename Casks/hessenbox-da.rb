@@ -1,5 +1,5 @@
 cask "hessenbox-da" do
-  version "11.5.625"
+  version "11.5.625,1.0"
   sha256 :no_check
 
   url "https://hessenbox.tu-darmstadt.de/client_deployment/HESSENBOX_DA_Latest_Mac.dmg"
