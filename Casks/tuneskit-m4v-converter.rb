@@ -1,5 +1,5 @@
 cask "tuneskit-m4v-converter" do
-  version "5.1.0"
+  version "5.1.0.25"
   sha256 :no_check
 
   url "https://www.tuneskit.com/TunesKitforMac.dmg"
