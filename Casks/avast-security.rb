@@ -1,5 +1,5 @@
 cask "avast-security" do
-  version :latest
+  version "4.0,2.0"
   sha256 :no_check
 
   url "http://download.ff.avast.com/mac/avast_security_online.dmg"
