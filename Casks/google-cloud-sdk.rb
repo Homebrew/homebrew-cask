@@ -7,6 +7,8 @@ cask "google-cloud-sdk" do
   desc "Set of tools to manage resources and applications hosted on Google Cloud"
   homepage "https://cloud.google.com/sdk/"
 
+  depends_on formula: "python@3.9"
+
   stage_only true
 
   postflight do
