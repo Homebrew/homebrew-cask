@@ -8,5 +8,8 @@ cask "google-hangouts" do
 
   pkg "Google Voice and Video.pkg"
 
-  uninstall pkgutil: "com.google.pkg.GoogleVoiceAndVideo"
+  uninstall pkgutil: [
+    "com.google.pkg.GoogleVoiceAndVideo",
+    "com.google.pkg.Keystone",
+  ]
 end
