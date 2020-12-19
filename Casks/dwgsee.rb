@@ -1,5 +1,5 @@
 cask "dwgsee" do
-  version :latest
+  version "1.0.1"
   sha256 :no_check
 
   url "https://www.dwgsee.com/download/dwgseemac.dmg"
