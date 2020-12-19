@@ -1,5 +1,5 @@
 cask "fiji" do
-  version :latest
+  version "1.0"
   sha256 :no_check
 
   url "https://downloads.imagej.net/fiji/latest/fiji-macosx.zip",
