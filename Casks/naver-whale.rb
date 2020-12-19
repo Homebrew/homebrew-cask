@@ -1,5 +1,5 @@
 cask "naver-whale" do
-  version "2.8.108.15"
+  version "2.8.108.15,108.15"
   sha256 :no_check
 
   url "http://update.whale.naver.net/downloads/installers/NaverWhale.dmg",
