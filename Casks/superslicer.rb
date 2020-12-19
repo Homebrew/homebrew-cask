@@ -9,4 +9,6 @@ cask "superslicer" do
   homepage "https://github.com/supermerill/SuperSlicer"
 
   app "superslicer.app"
+  zap trash: [
+              '~/Library/Application Support/SuperSlicer'
 end
