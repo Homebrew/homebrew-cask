@@ -1,5 +1,5 @@
 cask "sleipnir" do
-  version "4.6.6"
+  version "4.6.6,4.6.6004"
   sha256 :no_check
 
   url "https://www.fenrir-inc.com/services/download.php?file=Sleipnir.dmg"
