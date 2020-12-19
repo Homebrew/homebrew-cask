@@ -1,5 +1,5 @@
 cask "zoolz" do
-  version :latest
+  version "2.2.3.200"
   sha256 :no_check
 
   url "https://downloads.zoolz.com/zoolz2/Zoolz.pkg"
