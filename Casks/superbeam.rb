@@ -1,5 +1,5 @@
 cask "superbeam" do
-  version "1.0.0"
+  version "1.0.0,10.2"
   sha256 :no_check
 
   url "https://superbe.am/download/5163"
