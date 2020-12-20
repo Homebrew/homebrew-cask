@@ -8,6 +8,7 @@ cask "monodraw" do
   desc "Tool to create text-based art"
   homepage "https://monodraw.helftone.com/"
 
+  auto_updates true
   depends_on macos: ">= :mojave"
 
   app "Monodraw.app"
