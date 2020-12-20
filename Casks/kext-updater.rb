@@ -1,5 +1,5 @@
 cask "kext-updater" do
-  version "3.7.9,379"
+  version "3.8.0,380"
   sha256 :no_check
 
   url "https://update.kextupdater.de/kextupdater/kextupdaterng.zip"
