@@ -1,6 +1,6 @@
 cask "abyssoft-teleport" do
-  version "1.2.3"
-  sha256 "79ae0398a3d1b20f2e09d721fa783fecf7fdfbc9606b0c9797aed0a3ec455bb1"
+  version "1.3.0"
+  sha256 "9f521405191124b1ae27c9016a17d73a1f683082d57641691ca551101b156731"
 
   url "https://github.com/abyssoft/teleport/releases/download/v#{version}/teleport-v#{version}.zip"
   appcast "https://github.com/abyssoft/teleport/releases.atom"
