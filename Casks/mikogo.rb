@@ -1,5 +1,5 @@
 cask "mikogo" do
-  version :latest
+  version "5.4.1"
   sha256 :no_check
 
   url "https://download.mikogo4.com/Mikogo-installer.signed.pkg",
