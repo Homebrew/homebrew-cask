@@ -18,6 +18,7 @@ cask "chrome-remote-desktop-host" do
               "com.google.pkg.ChromeRemoteDesktopHost",
               "com.google.pkg.ChromeRemoteDesktopHostService",
               "com.google.pkg.ChromeRemoteDesktopHostUninstaller",
+              "com.google.pkg.Keystone",
             ]
 
   caveats do
