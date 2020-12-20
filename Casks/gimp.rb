@@ -9,6 +9,8 @@ cask "gimp" do
   desc "Free and open-source image editor"
   homepage "https://www.gimp.org/"
 
+  auto_updates true
+
   app "GIMP-#{version.major_minor}.app"
   binary "#{appdir}/GIMP-#{version.major_minor}.app/Contents/MacOS/gimp"
 
