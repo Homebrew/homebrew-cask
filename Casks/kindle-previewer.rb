@@ -9,5 +9,6 @@ cask "kindle-previewer" do
 
   pkg "KindlePreviewerInstaller.pkg"
 
-  uninstall pkgutil: "Amazon.Kindle.Previewer.pkg"
+  uninstall launchctl: "com.amazon.KindlePreviewerUpdater",
+            pkgutil:   "Amazon.Kindle.Previewer.pkg"
 end
