@@ -16,7 +16,8 @@ cask "google-cloud-sdk" do
                    args: [
                      "--usage-reporting", "false", "--bash-completion", "false", "--path-update", "false",
                      "--rc-path", "false", "--quiet"
-                   ]
+                   ],
+                   env: { "CLOUDSDK_PYTHON" => Formula["python"].opt_bin/"python" }
   end
 
   # Not actually necessary, since it would be deleted anyway.
