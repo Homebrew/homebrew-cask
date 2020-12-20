@@ -7,6 +7,8 @@ cask "cloudflare-warp" do
   desc "Free app that makes your Internet safer"
   homepage "https://1.1.1.1/"
 
+  auto_updates true
+
   pkg "Cloudflare_WARP.pkg"
 
   uninstall launchctl: "com.cloudflare.1dot1dot1dot1.macos.loginlauncherapp",
