@@ -7,6 +7,8 @@ cask "raindropio" do
   desc "All-in-one bookmark manager"
   homepage "https://raindrop.io/"
 
+  auto_updates true
+
   app "Raindrop.io.app"
 
   zap trash: [
