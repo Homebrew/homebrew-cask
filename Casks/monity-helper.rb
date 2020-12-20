@@ -13,5 +13,6 @@ cask "monity-helper" do
     "com.Monity.Helper.monityHelper.MonityHelper.pkg",
     "com.Monity.Helper.monityHelper.postflight.pkg",
     "com.Monity.Helper.monityHelper.preflight.pkg",
-  ]
+  ],
+           quit: "com.Monity.Helper"
 end
