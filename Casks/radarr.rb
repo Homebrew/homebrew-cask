@@ -9,7 +9,7 @@ cask "radarr" do
   desc "Fork of Sonarr to work with movies à la Couchpotato"
   homepage "https://radarr.video/"
 
-  depends_on formula: "mono"
+  depends_on macos: ">= :high_sierra"
 
   app "Radarr.app"
 
