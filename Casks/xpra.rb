@@ -1,5 +1,5 @@
 cask "xpra" do
-  version "4.0.5,27999.0"
+  version "4.1,26987.0"
   sha256 :no_check
 
   url "https://www.xpra.org/dists/osx/x86_64/Xpra-x86_64.pkg"
