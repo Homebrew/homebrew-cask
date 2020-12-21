@@ -10,5 +10,5 @@ cask "timemachineeditor" do
   pkg "TimeMachineEditor.pkg"
 
   uninstall launchctl: "com.tclementdev.timemachineeditor.scheduler",
-            pkgutil: "com.tclementdev.pkg.timemachineeditor"
+            pkgutil:   "com.tclementdev.pkg.timemachineeditor"
 end
