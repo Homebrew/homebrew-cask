@@ -3,10 +3,14 @@ cask "big-mean-folder-machine" do
   sha256 :no_check
 
   url "https://www.publicspace.net/download/BMFM.dmg"
-  appcast "https://www.publicspace.net/app/bmfm#{version.major}.xml"
   name "Big Mean Folder Machine"
   desc "File/folder management utility"
   homepage "https://www.publicspace.net/BigMeanFolderMachine/"
+
+  livecheck do
+    url "https://www.publicspace.net/app/bmfm#{version.major}.xml"
+    strategy :sparkle
+  end
 
   app "Big Mean Folder Machine #{version.major}.app"
 end
