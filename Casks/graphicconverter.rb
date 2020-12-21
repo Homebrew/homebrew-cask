@@ -4,10 +4,14 @@ cask "graphicconverter" do
 
   url "https://www.lemkesoft.info/files/graphicconverter/gc#{version.major}_build#{version.after_comma}.zip",
       verified: "lemkesoft.info/"
-  appcast "https://www.lemkesoft.info/sparkle/graphicconverter/graphicconverter#{version.major}.xml"
   name "GraphicConverter"
   desc "For browsing, enhancing and converting images"
   homepage "https://www.lemkesoft.de/en/products/graphicconverter/"
+
+  livecheck do
+    url "https://www.lemkesoft.info/sparkle/graphicconverter/graphicconverter#{version.major}.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 
