@@ -8,12 +8,20 @@ cask "avast-security" do
 
   pkg "Avast Security.pkg"
 
-  uninstall script:  {
+  uninstall script:    {
     executable:   "/Applications/Avast.app/Contents/Backend/hub/uninstall.sh",
     must_succeed: false, # A non-0 exit code may be given even if the uninstall succeeds (https://github.com/Homebrew/homebrew-cask/issues/21740#issuecomment-224094946).
     sudo:         true,
   },
-            pkgutil: "com.avast.AAFM"
+            launchctl: [
+              "com.avast.hub",
+              "com.avast.hub.schedule",
+              "com.avast.hub.xpc",
+            ],
+            pkgutil:   [
+              "com.avast.AAFM",
+              "com.avast.pkg.hub",
+            ]
 
   zap trash: [
     "~/Library/Preferences/com.avast.avast!.plist",
