@@ -4,9 +4,13 @@ cask "bee" do
 
   url "https://bee-app.s3.amazonaws.com/public/Bee-#{version.after_comma}-#{version.before_comma}.zip",
       verified: "bee-app.s3.amazonaws.com/"
-  appcast "https://s3.amazonaws.com/www.neat.io/bee/appcast.xml"
   name "Bee"
   homepage "https://www.neat.io/bee/"
+
+  livecheck do
+    url "https://s3.amazonaws.com/www.neat.io/bee/appcast.xml"
+    strategy :sparkle
+  end
 
   app "Bee.app"
 
