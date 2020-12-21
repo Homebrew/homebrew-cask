@@ -3,9 +3,13 @@ cask "delayedlauncher" do
   sha256 :no_check
 
   url "https://www.taoeffect.com/delayedlauncher/DelayedLauncher.zip"
-  appcast "https://www.taoeffect.com/delayedlauncher/appcast.xml"
   name "DelayedLauncher"
   homepage "https://www.taoeffect.com/blog/2010/03/delayedlauncher-2-0/"
+
+  livecheck do
+    url "https://www.taoeffect.com/delayedlauncher/appcast.xml"
+    strategy :sparkle
+  end
 
   app "DelayedLauncher.app"
 end
