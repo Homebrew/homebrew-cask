@@ -1,5 +1,5 @@
 cask "alinof-timer" do
-  version "4.0.0"
+  version "5.2"
   sha256 :no_check
 
   url "https://www.alinofsoftware.ch/resources/AlinofTimer.pkg"
