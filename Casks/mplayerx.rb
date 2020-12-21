@@ -4,10 +4,14 @@ cask "mplayerx" do
 
   url "https://github.com/niltsh/MPlayerX-Deploy/releases/download/#{version.before_comma}/MPlayerX-#{version.before_comma}-#{version.after_comma}.zip",
       verified: "github.com/niltsh/MPlayerX-Deploy/"
-  appcast "https://raw.githubusercontent.com/niltsh/MPlayerX-Deploy/master/appcast.xml"
   name "MPlayerX"
   desc "Media player"
   homepage "http://mplayerx.org/"
+
+  livecheck do
+    url "https://raw.githubusercontent.com/niltsh/MPlayerX-Deploy/master/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 
