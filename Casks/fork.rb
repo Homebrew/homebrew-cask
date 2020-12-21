@@ -4,10 +4,14 @@ cask "fork" do
 
   url "https://forkapp.ams3.cdn.digitaloceanspaces.com/mac/Fork-#{version}.dmg",
       verified: "forkapp.ams3.cdn.digitaloceanspaces.com/mac/"
-  appcast "https://git-fork.com/update/feed.xml"
   name "Fork"
   desc "GIT client"
   homepage "https://git-fork.com/"
+
+  livecheck do
+    url "https://git-fork.com/update/feed.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 
