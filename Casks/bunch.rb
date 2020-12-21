@@ -3,9 +3,13 @@ cask "bunch" do
   sha256 "88bfb768ac81f894b7c38535c6848fc8fa1078b2a8623ee65b3582745a153c0d"
 
   url "https://cdn3.brettterpstra.com/updates/bunch/Bunch#{version.before_comma}#{version.after_comma}.dmg"
-  appcast "https://brettterpstra.com/updates/bunch/appcast.xml"
   name "Bunch"
   homepage "https://brettterpstra.com/projects/bunch/"
+
+  livecheck do
+    url "https://brettterpstra.com/updates/bunch/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 
