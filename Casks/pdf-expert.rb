@@ -4,10 +4,14 @@ cask "pdf-expert" do
 
   url "https://d1ke680phyeohy.cloudfront.net/versions/#{version.after_comma}/PDFExpert.dmg",
       verified: "d1ke680phyeohy.cloudfront.net/versions/"
-  appcast "https://d1ke680phyeohy.cloudfront.net/release/appcast.xml"
   name "PDF Expert"
   desc "PDF reader, editor and annotator"
   homepage "https://pdfexpert.com/"
+
+  livecheck do
+    url "https://d1ke680phyeohy.cloudfront.net/release/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   conflicts_with cask: "homebrew/cask-versions/pdf-expert-beta"
