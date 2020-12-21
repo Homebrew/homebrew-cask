@@ -4,9 +4,15 @@ cask "focused" do
 
   url "https://dl.devmate.com/com.71squared.focused/#{version.after_comma.before_colon}/#{version.after_colon}/Focused-#{version.after_comma.before_colon}.zip",
       verified: "devmate.com/com.71squared.focused/"
-  appcast "https://updates.devmate.com/com.71squared.focused.xml"
   name "Focused"
   homepage "https://codebots.co.uk/"
+
+  livecheck do
+    url "https://updates.devmate.com/com.71squared.focused.xml"
+    strategy :sparkle do |item|
+      "#{item.short_version},#{item.version}:#{item.url[%r{/(\d+)/Focused-\d+\.zip}, 1]}"
+    end
+  end
 
   app "Focused.app"
 end
