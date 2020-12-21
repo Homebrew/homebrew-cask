@@ -12,9 +12,13 @@ cask "controllermate" do
 
   url "https://orderedbytes.s3.amazonaws.com/ControllerMate#{version.no_dots}.zip",
       verified: "orderedbytes.s3.amazonaws.com/"
-  appcast "https://www.orderedbytes.com/sparkle/appcast_cm460.xml"
   name "ControllerMate"
   homepage "https://www.orderedbytes.com/controllermate/"
+
+  livecheck do
+    url "https://www.orderedbytes.com/sparkle/appcast_cm460.xml"
+    strategy :sparkle
+  end
 
   pkg "#temp#/ControllerMate.sparkle_interactive.pkg"
 
