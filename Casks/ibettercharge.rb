@@ -4,10 +4,16 @@ cask "ibettercharge" do
 
   url "https://dl.devmate.com/com.softorino.iBetterCharge/#{version.before_comma}/#{version.after_comma}/iBetterCharge-#{version.before_comma}.zip",
       verified: "devmate.com/com.softorino.iBetterCharge/"
-  appcast "https://updates.devmate.com/com.softorino.iBetterCharge.xml"
   name "iBetterCharge"
   desc "Battery level monitoring software"
   homepage "https://softorino.com/ibettercharge/"
+
+  livecheck do
+    url "https://updates.devmate.com/com.softorino.iBetterCharge.xml"
+    strategy :sparkle do |item|
+      "#{item.short_version},#{item.url[%r{/(\d+)/iBetterCharge-(?:\d+(?:\.\d+)*)\.zip}, 1]}"
+    end
+  end
 
   app "iBetterCharge.app"
 end
