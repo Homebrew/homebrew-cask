@@ -3,9 +3,13 @@ cask "adventure" do
   sha256 :no_check
 
   url "https://www.lobotomo.com/products/downloads/Adventure.dmg"
-  appcast "https://www.lobotomo.com/products/Adventure/appcast.xml"
   name "Adventure"
   homepage "https://www.lobotomo.com/products/Adventure/"
+
+  livecheck do
+    url "https://www.lobotomo.com/products/Adventure/appcast.xml"
+    strategy :sparkle
+  end
 
   app "Adventure.app"
 end
