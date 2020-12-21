@@ -11,7 +11,7 @@ cask "dingtalk" do
   livecheck do
     url "https://im.dingtalk.com/manifest/appcast_en.xml"
     strategy :sparkle do |item|
-      item.url[/DingTalk_v(\d(?:\.\d+)*).dmg/, 1]
+      item.url[/DingTalk_v(\d(?:\.\d+)*)\.dmg/, 1]
     end
   end
 
