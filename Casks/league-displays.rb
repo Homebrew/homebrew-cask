@@ -4,9 +4,13 @@ cask "league-displays" do
 
   url "https://screensaver.riotgames.com/v2/installer/latest/LeagueDisplays-#{version}.dmg",
       verified: "screensaver.riotgames.com/"
-  appcast "http://screensavers.riotgames.com/v2/installer/latest/appcast-mac.xml"
   name "League Displays"
   homepage "https://leagueoflegends.com/en/featured/league-displays"
+
+  livecheck do
+    url "http://screensavers.riotgames.com/v2/installer/latest/appcast-mac.xml"
+    strategy :sparkle
+  end
 
   app "LeagueDisplays.app"
 
