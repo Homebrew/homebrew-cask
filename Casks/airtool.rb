@@ -11,7 +11,7 @@ cask "airtool" do
     strategy :sparkle
   end
 
-  pkg "Airtool_#{version}.pkg"
+  pkg "Airtool_#{version.before_comma}.pkg"
 
   uninstall_preflight do
     set_ownership "/Library/Application Support/Airtool"
