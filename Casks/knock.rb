@@ -4,9 +4,13 @@ cask "knock" do
 
   url "https://knock-updates.s3.amazonaws.com/Knock.zip",
       verified: "knock-updates.s3.amazonaws.com/"
-  appcast "https://knock-updates.s3.amazonaws.com/Knock.xml"
   name "Knock"
   homepage "http://www.knocktounlock.com/"
+
+  livecheck do
+    url "https://knock-updates.s3.amazonaws.com/Knock.xml"
+    strategy :sparkle
+  end
 
   app "Knock.app"
 
