@@ -2,7 +2,7 @@ cask "cloudflare-warp" do
   version "1.2.1989,20201119.2"
   sha256 :no_check
 
-  url "https://1.1.1.1/Cloudflare%20WARP.zip"
+  url "https://1.1.1.1/Cloudflare_WARP.zip"
   name "Cloudflare WARP"
   desc "Free app that makes your Internet safer"
   homepage "https://1.1.1.1/"
