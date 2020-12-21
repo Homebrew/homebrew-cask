@@ -4,7 +4,7 @@ cask "dwgsee" do
 
   url "https://www.dwgsee.com/download/dwgseemac.dmg"
   name "DWGSee"
-  homepage "https://dwgsee.com/"
+  homepage "https://www.dwgsee.com/"
 
   app "DWGSee.app"
 end
