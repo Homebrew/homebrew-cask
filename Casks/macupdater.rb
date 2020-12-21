@@ -1,12 +1,16 @@
 cask "macupdater" do
-  version "1.5.9"
+  version "1.5.9,8735"
   sha256 "c0b745f8d35c9839f31c5a53d68c936511d96ff33cca01911b79afb64818ba36"
 
-  url "https://www.corecode.io/downloads/macupdater_#{version}.dmg"
-  appcast "https://www.corecode.io/macupdater/macupdater.xml"
+  url "https://www.corecode.io/downloads/macupdater_#{version.before_comma}.dmg"
   name "MacUpdater"
   desc "Track the latest updates of all applications installed automatically"
   homepage "https://www.corecode.io/macupdater/index.html"
+
+  livecheck do
+    url "https://www.corecode.io/macupdater/macupdater.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 
