@@ -15,8 +15,5 @@ cask "amazon-workdocs" do
     end
   end
 
-  pkg "Amazon WorkDocs.app"
-
-  uninstall signal:  ["TERM", "com.amazon.AmazonWorkDocs"],
-            pkgutil: "com.amazon.aws.AmazonWorkDocs"
+  app "Amazon WorkDocs.app"
 end
