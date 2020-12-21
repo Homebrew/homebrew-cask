@@ -4,9 +4,13 @@ cask "mqttfx" do
 
   url "https://www.jensd.de/apps/mqttfx/#{version}/mqttfx-#{version}-macos.dmg",
       verified: "jensd.de/apps/mqttfx/"
-  appcast "https://www.jensd.de/apps/mqttfx/appcast.xml"
   name "MQTT.fx"
   homepage "http://www.mqttfx.org/"
+
+  livecheck do
+    url "https://www.jensd.de/apps/mqttfx/appcast.xml"
+    strategy :sparkle
+  end
 
   installer script: {
     executable: "MQTT.fx Installer.app/Contents/MacOS/JavaApplicationStub",
