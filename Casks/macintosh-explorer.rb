@@ -1,5 +1,5 @@
 cask "macintosh-explorer" do
-  version "5.1"
+  version "5.1,4.5.3.0"
   sha256 :no_check
 
   url "https://www.ragesw.com/downloads/ragesw/mac_explorer_alt.dmg"

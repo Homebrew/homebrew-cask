@@ -9,6 +9,8 @@ cask "gqrx" do
   desc "Software-defined radio receiver powered by GNU Radio and Qt"
   homepage "https://gqrx.dk/"
 
+  depends_on macos: ">= :catalina"
+
   app "Gqrx.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/gqrx.wrapper.sh"

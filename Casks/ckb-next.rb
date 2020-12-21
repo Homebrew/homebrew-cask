@@ -1,6 +1,6 @@
 cask "ckb-next" do
-  version "0.4.2"
-  sha256 "2cb5cde9ed4514e85ec492af84c60692fe2f91495d788678a723396b083bbb52"
+  version "0.4.3"
+  sha256 "1f76332b8a2e7f03497ae91423170a1b4c65bc108594ae5b24349b5daad692bc"
 
   url "https://github.com/ckb-next/ckb-next/releases/download/v#{version}/ckb-next_v#{version}.dmg"
   appcast "https://github.com/ckb-next/ckb-next/releases.atom"

@@ -1,5 +1,5 @@
 cask "aviatrix-vpn-client" do
-  version "2.12.10"
+  version "2.12.10,0.0.0"
   sha256 :no_check
 
   url "https://aviatrix-download.s3.amazonaws.com/AviatrixVPNClient/AVPNC_mac.pkg",

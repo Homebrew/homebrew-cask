@@ -1,5 +1,5 @@
 cask "bfxr" do
-  version :latest
+  version "1.5.1"
   sha256 :no_check
 
   url "https://ded.bfxr.net/~locus/bfxr_update/Bfxr_MAC.zip"

@@ -1,5 +1,5 @@
 cask "startninja" do
-  version :latest
+  version "1.0.1"
   sha256 :no_check
 
   url "https://dl2.macupdate.com/prod/StartNinjaInstaller.dmg",

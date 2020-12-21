@@ -1,6 +1,6 @@
 cask "xit" do
-  version "1.0b14"
-  sha256 "cfd3a0450e55d9e478ef392aa11c42c509a2dafc41ede41356b6579e953df830"
+  version "1.0b15"
+  sha256 "92003bfb419c462f832ff143721cbc416017ebf53abe44276180e4f4b8a6c4fb"
 
   url "https://github.com/Uncommon/Xit/releases/download/#{version}/Xit.zip"
   appcast "https://github.com/Uncommon/Xit/releases.atom"

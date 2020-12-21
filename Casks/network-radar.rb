@@ -1,5 +1,5 @@
 cask "network-radar" do
-  version "2.10"
+  version "2.10,290b"
   sha256 :no_check
 
   url "https://witt-software.com/downloads/networkradar/Network%20Radar.dmg"

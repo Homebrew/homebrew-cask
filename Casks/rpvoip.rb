@@ -1,5 +1,5 @@
 cask "rpvoip" do
-  version :latest
+  version "5.19.06.044"
   sha256 :no_check
 
   url "https://shop.west.com/downloads/rpvoip_mac.pkg"

@@ -1,5 +1,5 @@
 cask "continuity-activation-tool" do
-  version "2"
+  version "2.0"
   sha256 :no_check
 
   url "https://github.com/dokterdok/Continuity-Activation-Tool/archive/master.zip"
