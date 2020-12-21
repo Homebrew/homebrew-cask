@@ -10,7 +10,6 @@ cask "focused" do
   livecheck do
     url "https://updates.devmate.com/com.71squared.focused.xml"
     strategy :sparkle do |item|
-      p
       "#{item.short_version},#{item.version}:#{item.url[%r{/(\d+)/Focused-\d+\.zip}, 1]}"
     end
   end
