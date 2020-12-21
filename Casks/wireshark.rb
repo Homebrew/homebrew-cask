@@ -58,6 +58,7 @@ cask "wireshark" do
     "~/Library/Cookies/org.wireshark.Wireshark.binarycookies",
     "~/Library/Preferences/org.wireshark.Wireshark.plist",
     "~/Library/Saved Application State/org.wireshark.Wireshark.savedState",
+    "~/Library/HTTPStorages/org.wireshark.Wireshark.binarycookies",
     "~/.config/wireshark",
   ]
 end
