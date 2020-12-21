@@ -4,9 +4,13 @@ cask "domainbrain" do
 
   url "https://joeworkman_downloads.s3.amazonaws.com/DomainBrain.zip",
       verified: "joeworkman_downloads.s3.amazonaws.com/"
-  appcast "https://domainbrainapp.com/appcast_v#{version.major}.xml"
   name "DomainBrain"
   homepage "https://domainbrainapp.com/"
+
+  livecheck do
+    url "https://domainbrainapp.com/appcast_v#{version.major}.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 
