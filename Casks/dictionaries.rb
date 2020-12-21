@@ -4,9 +4,15 @@ cask "dictionaries" do
 
   url "https://dl.devmate.com/io.dictionaries.Dictionaries/#{version.after_comma.before_colon}/#{version.after_colon}/Dictionaries-#{version.after_comma.before_colon}.zip",
       verified: "dl.devmate.com/io.dictionaries.Dictionaries/"
-  appcast "https://updates.devmate.com/io.dictionaries.Dictionaries.xml"
   name "Dictionaries"
   homepage "https://dictionaries.io/"
+
+  livecheck do
+    url "https://updates.devmate.com/io.dictionaries.Dictionaries.xml"
+    strategy :sparkle do |item|
+      "#{item.short_version},#{item.version}:#{item.url[%r{/(\d+)/Dictionaries-\d+\.zip}, 1]}"
+    end
+  end
 
   app "Dictionaries.app"
 end
