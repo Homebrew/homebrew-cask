@@ -3,9 +3,13 @@ cask "app-cleaner" do
   sha256 :no_check
 
   url "https://nektony.com/download/app-cleaner-uninstaller/app-cleaner-uninstaller.dmg"
-  appcast "https://nektony.com/pro-support/app-cleaner/update/update.xml"
   name "Nektony App Cleaner & Uninstaller"
   homepage "https://nektony.com/mac-app-cleaner"
+
+  livecheck do
+    url "https://nektony.com/pro-support/app-cleaner/update/update.xml"
+    strategy :sparkle
+  end
 
   app "App Cleaner #{version.major}.app"
 
