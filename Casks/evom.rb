@@ -3,9 +3,13 @@ cask "evom" do
   sha256 :no_check
 
   url "http://files.thelittleappfactory.com/evom/Evom.zip"
-  appcast "http://files.thelittleappfactory.com/evom/appcast.xml"
   name "Evom"
   homepage "http://thelittleappfactory.com/evom/"
+
+  livecheck do
+    url "http://files.thelittleappfactory.com/evom/appcast.xml"
+    strategy :sparkle
+  end
 
   app "Evom.app"
 end
