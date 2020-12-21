@@ -3,11 +3,15 @@ cask "gitx" do
   sha256 :no_check
 
   url "http://frim.frim.nl/GitXStable.app.zip"
-  appcast "http://gitx.frim.nl/Downloads/appcast.xml"
   name "GitX"
   homepage "http://gitx.frim.nl/"
 
-  conflicts_with cask: ["laullon-gitx", "rowanj-gitx"]
+  livecheck do
+    url "http://gitx.frim.nl/Downloads/appcast.xml"
+    strategy :sparkle
+  end
+
+  conflicts_with cask: "rowanj-gitx"
 
   app "GitX.app"
   binary "#{appdir}/GitX.app/Contents/Resources/gitx"
