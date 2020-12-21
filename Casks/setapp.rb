@@ -1,6 +1,6 @@
 cask "setapp" do
-  version "2.7.14,1607686103"
-  sha256 "2435ab1dc844b1664bc15ee2c47b0e7a668577abfc9f0e5246a995e0e14961de"
+  version "2.7.15,1608219081"
+  sha256 "b5ab580ef30d48b0f981f1fdf57a91028598f8b9b0c7b2e31ae3e8692f848080"
 
   url "https://dl.devmate.com/com.setapp.InstallSetapp/#{version.before_comma}/#{version.after_comma}/InstallSetapp-#{version.before_comma}.zip",
       verified: "devmate.com/com.setapp.InstallSetapp/"
