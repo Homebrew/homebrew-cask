@@ -4,10 +4,14 @@ cask "downie" do
 
   url "https://charliemonroesoftware.com/trial/downie/v#{version.major}/Downie_#{version.major}_#{version.after_comma}.dmg",
       verified: "charliemonroesoftware.com/"
-  appcast "https://charliemonroesoftware.com/trial/downie/v#{version.major}/updates.xml"
   name "Downie"
   desc "Downloads videos from different websites"
   homepage "https://software.charliemonroe.net/downie.php"
+
+  livecheck do
+    url "https://charliemonroesoftware.com/trial/downie/v#{version.major}/updates.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :el_capitan"
