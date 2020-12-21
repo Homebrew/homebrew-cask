@@ -3,8 +3,8 @@ cask "docker" do
     version "18.06.1-ce-mac73,26764"
     sha256 "3429eac38cf0d198039ad6e1adce0016f642cdb914a34c67ce40f069cdb047a5"
   else
-    version "3.0.2,50996"
-    sha256 "977723187d02f9c322f7b271011bfe29f4de3bca8bb3f533e292ed110e06a268"
+    version "3.0.3,51017"
+    sha256 "d63c7cc6d4fcbc1ef1fb113c7a594d90f4f44a2da2d1c7f3ed8d1553c5bc1bad"
   end
 
   url "https://desktop.docker.com/mac/stable/#{version.after_comma}/Docker.dmg"
