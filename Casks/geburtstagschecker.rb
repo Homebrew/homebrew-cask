@@ -3,9 +3,13 @@ cask "geburtstagschecker" do
   sha256 :no_check
 
   url "https://earthlingsoft.net/GeburtstagsChecker/GeburtstagsChecker.zip"
-  appcast "https://earthlingsoft.net/GeburtstagsChecker/appcast.xml"
   name "GeburtstagsChecker"
   homepage "https://earthlingsoft.net/GeburtstagsChecker/"
+
+  livecheck do
+    url "https://earthlingsoft.net/GeburtstagsChecker/appcast.xml"
+    strategy :sparkle
+  end
 
   app "GeburtstagsChecker #{version.before_comma} (#{version.after_comma})/GeburtstagsChecker.app"
 
