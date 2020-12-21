@@ -1,12 +1,16 @@
 cask "skitch" do
-  version "2.9"
+  version "2.9,265157"
   sha256 "8757600d471ed0cac2cc4242c44f1a3c6f1fffe934037845d23392fc5eb81712"
 
-  url "https://cdn1.evernote.com/skitch/mac/release/Skitch-#{version}.zip"
-  appcast "https://evernote.s3.amazonaws.com/skitch/mac/release/skitch-appcast.xml"
+  url "https://cdn1.evernote.com/skitch/mac/release/Skitch-#{version.before_comma}.zip"
   name "Skitch"
   desc "Screen capture tool with mark up and sharing features"
   homepage "https://evernote.com/products/skitch"
+
+  livecheck do
+    url "https://evernote.s3.amazonaws.com/skitch/mac/release/skitch-appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 
