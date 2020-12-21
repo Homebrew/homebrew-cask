@@ -4,9 +4,15 @@ cask "haptic-touch-bar" do
 
   url "https://dl.devmate.com/com.bopsoft.HapticTouchBar/#{version.before_comma.no_dots}/#{version.after_comma}/HapticTouchBar-#{version.before_comma.no_dots}.zip",
       verified: "dl.devmate.com/com.bopsoft.HapticTouchBar/"
-  appcast "https://updates.devmate.com/com.bopsoft.HapticTouchBar.xml"
   name "Haptic Touch Bar"
   homepage "https://www.haptictouchbar.com/"
+
+  livecheck do
+    url "https://updates.devmate.com/com.bopsoft.HapticTouchBar.xml"
+    strategy :sparkle do |item|
+      "#{item.short_version},#{item.url[%r{/(\d+)/HapticTouchBar-\d+\.zip}, 1]}"
+    end
+  end
 
   depends_on macos: ">= :sierra"
 
