@@ -11,7 +11,7 @@ cask "gitx" do
     strategy :sparkle
   end
 
-  conflicts_with cask: ["laullon-gitx", "rowanj-gitx"]
+  conflicts_with cask: "rowanj-gitx"
 
   app "GitX.app"
   binary "#{appdir}/GitX.app/Contents/Resources/gitx"
