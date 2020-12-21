@@ -4,10 +4,14 @@ cask "invisiblix" do
 
   url "https://downloads.sourceforge.net/invisiblix/invisibliX-#{version}.zip",
       verified: "sourceforge.net/invisiblix/"
-  appcast "https://invisiblix.read-write.fr/appcast.xml"
   name "invisibliX"
   desc "Allows viewing and manipulation of hidden files in Finder"
   homepage "https://invisiblix.read-write.fr/"
+
+  livecheck do
+    url "https://invisiblix.read-write.fr/appcast.xml"
+    strategy :sparkle
+  end
 
   app "invisibliX.app"
 end
