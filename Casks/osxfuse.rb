@@ -1,28 +1,24 @@
-cask "osxfuse" do
-  version "3.11.2"
-  sha256 "0f9fd021810063ded2f9a40347e11961369238af27615842063831568a0860ce"
+cask "macfuse" do
+  version "4.0.4"
+  sha256 "3e1b52a78ba6530cba2fb34a64c1da2ef969e03aeb2a58ae622cb0f09772d450"
 
-  url "https://github.com/osxfuse/osxfuse/releases/download/osxfuse-#{version}/osxfuse-#{version}.dmg",
+  url "https://github.com/osxfuse/osxfuse/releases/download/macfuse-#{version}/macfuse-#{version}.dmg",
       verified: "github.com/osxfuse/"
   appcast "https://github.com/osxfuse/osxfuse/releases.atom"
-  name "OSXFUSE"
+  name "macFUSE"
   desc "File system integration"
   homepage "https://osxfuse.github.io/"
 
-  pkg "Extras/FUSE for macOS #{version}.pkg"
+  pkg "Extras/macFUSE #{version}.pkg"
 
   postflight do
     set_ownership ["/usr/local/include", "/usr/local/lib"]
   end
 
   uninstall pkgutil: [
-    "com.github.osxfuse.pkg.Core",
-    "com.github.osxfuse.pkg.MacFUSE",
-    "com.github.osxfuse.pkg.PrefPane",
+    "io.macfuse.installer.components.core",
+    "io.macfuse.installer.components.preferencepane",
   ],
-            kext:    "com.github.osxfuse.filesystems.osxfuse"
-
-  zap trash: "~/Library/Caches/com.github.osxfuse.OSXFUSEPrefPane"
 
   caveats do
     reboot
