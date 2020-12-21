@@ -3,10 +3,14 @@ cask "codekit" do
   sha256 "9d12b68ddd2d8b2bdd0efc75079834bb4e2213380d3db53b66996520210710a5"
 
   url "https://codekitapp.com/binaries/codekit-#{version.after_comma}.zip"
-  appcast "https://codekitapp.com/api/#{version.major}/appcast.xml"
   name "CodeKit"
   desc "App for building websites"
   homepage "https://codekitapp.com/"
+
+  livecheck do
+    url "https://codekitapp.com/api/#{version.major}/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 
