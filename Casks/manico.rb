@@ -3,10 +3,14 @@ cask "manico" do
   sha256 "e83213c293baff826ca7624b3a130bf99ad5b05650364ba258266bc28645708c"
 
   url "https://manico.im/api/release_manager/downloads/im.manico.Manico/#{version.after_comma}.zip"
-  appcast "https://manico.im/api/release_manager/im.manico.Manico.xml"
   name "Manico"
   desc "App Launcher & Switcher"
   homepage "https://manico.im/"
+
+  livecheck do
+    url "https://manico.im/api/release_manager/im.manico.Manico.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :sierra"
 
