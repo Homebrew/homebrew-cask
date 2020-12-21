@@ -7,12 +7,16 @@ cask "funter" do
     version "5.1,209"
     sha256 :no_check
     url "https://nektony.com/download/funter/Funter.dmg"
-    appcast "https://nektony.com/pro-support/funter/update/update.xml"
   end
 
   name "Funter"
   desc "Shows hidden files and folders and switches their visibility in Finder"
   homepage "https://nektony.com/products/funter"
+
+  livecheck do
+    url "https://nektony.com/pro-support/funter/update/update.xml"
+    strategy :sparkle
+  end
 
   app "Funter #{version.major}.app"
 end
