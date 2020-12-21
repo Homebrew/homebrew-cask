@@ -4,9 +4,13 @@ cask "kite" do
 
   url "https://draqv87tt43s0.cloudfront.net/mac/#{version}/Kite.dmg",
       verified: "draqv87tt43s0.cloudfront.net/"
-  appcast "https://release.kite.com/appcast.xml"
   name "Kite"
   homepage "https://kite.com/"
+
+  livecheck do
+    url "https://release.kite.com/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 
