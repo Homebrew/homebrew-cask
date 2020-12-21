@@ -1,6 +1,6 @@
 cask "lark" do
-  version "3.38.2,fa1c84"
-  sha256 "6a4b210f2a82413eb283753859498e85be3abc214f22fdab3dff6e4afc990401"
+  version "3.39.2,b72743"
+  sha256 "68604ac99d570287dcfd12fa713fe983692b2fd15ee2d8feb9725105816d7e65"
 
   url "https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/#{version.after_comma}/Lark-#{version.before_comma}.dmg",
       verified: "sf16-va.larksuitecdn.com/obj/lark-artifact-storage/"
