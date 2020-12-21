@@ -4,9 +4,13 @@ cask "drama" do
 
   url "https://www.pixelcut.com/drama/drama.zip",
       verified: "pixelcut.com/drama/"
-  appcast "https://www.pixelcut.com/drama/appcast.xml"
   name "Drama"
   homepage "https://www.drama.app/"
+
+  livecheck do
+    url "https://www.pixelcut.com/drama/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :high_sierra"
