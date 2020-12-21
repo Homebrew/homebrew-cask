@@ -4,10 +4,15 @@ cask "coconutbattery" do
     sha256 "8e289fb4a75cb117fc1d7861020c9ab2384b09dfd18f066c7fadfc9d42c3ac56"
     url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version}.zip"
   else
-    version "3.9.4,e34967c4"
-    sha256 "f0849da86b9e0c2ca7c594b80dc0f268b1e38463b9097aa85b83780e547620b8"
+    version "3.9.4,756fedb9"
+    sha256 "dc5550b43852c4319fcd5205708165a4e23894bc3a0214b0880158045e983cef"
     url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version.before_comma.no_dots}_#{version.after_comma}.zip"
-    appcast "https://coconut-flavour.com/updates/coconutBattery.xml"
+    livecheck do
+      url "https://coconut-flavour.com/updates/coconutBattery.xml"
+      strategy :sparkle do |item|
+        "#{item.version},#{item.url[/_(?:\d+)_(.*?)\./, 1]}"
+      end
+    end
   end
 
   name "coconutBattery"
