@@ -15,11 +15,8 @@ cask "background-music" do
 
   pkg "BackgroundMusic-#{version}.pkg"
 
-  uninstall quit:      "com.bearisdriving.BGM.App",
-            script:    {
-              executable: "/Applications/Background Music.app/Contents/Resources/_uninstall-non-interactive.sh",
-              sudo:       true,
-            },
-            launchctl: "com.bearisdriving.BGM.XPCHelper",
-            pkgutil:   "com.bearisdriving.BGM"
+  uninstall script: {
+    executable: "/Applications/Background Music.app/Contents/Resources/_uninstall-non-interactive.sh",
+    sudo:       true,
+  }
 end
