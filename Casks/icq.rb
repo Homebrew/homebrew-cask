@@ -4,10 +4,14 @@ cask "icq" do
 
   url "https://icq-www.hb.bizmrg.com/mac/x64/#{version}/icq.dmg",
       verified: "icq-www.hb.bizmrg.com/"
-  appcast "https://icq-www.hb.bizmrg.com/mac/x64/#{version}/version.xml"
   name "ICQ"
   desc "Messenger application"
   homepage "https://icq.com/desktop"
+
+  livecheck do
+    url "https://icq-www.hb.bizmrg.com/mac/x64/#{version}/version.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 
