@@ -4,10 +4,14 @@ cask "hazel" do
 
   url "https://s3.amazonaws.com/Noodlesoft/Hazel-#{version}.dmg",
       verified: "s3.amazonaws.com/Noodlesoft/"
-  appcast "https://www.noodlesoft.com/Products/Hazel/generate-appcast.php"
   name "Hazel"
   desc "Automated organization"
   homepage "https://www.noodlesoft.com/"
+
+  livecheck do
+    url "https://www.noodlesoft.com/Products/Hazel/generate-appcast.php"
+    strategy :sparkle
+  end
 
   auto_updates true
 
