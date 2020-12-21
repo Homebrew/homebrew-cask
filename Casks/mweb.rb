@@ -11,7 +11,7 @@ cask "mweb" do
   livecheck do
     url "https://updates.devmate.com/com.coderforart.MWeb3.xml"
     strategy :sparkle do |item|
-      "#{item.short_version},#{item.url[%r{/(\d+)/MWeb}, 1]}"
+      "#{item.short_version},#{item.url[%r{/(\d+)/MWeb}i, 1]}"
     end
   end
 
