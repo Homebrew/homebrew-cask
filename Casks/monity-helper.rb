@@ -8,11 +8,12 @@ cask "monity-helper" do
 
   pkg "MonityHelper.pkg"
 
-  uninstall pkgutil: [
-    "com.Monity.Helper.monityHelper.com.Monity.Helper.pkg",
-    "com.Monity.Helper.monityHelper.MonityHelper.pkg",
-    "com.Monity.Helper.monityHelper.postflight.pkg",
-    "com.Monity.Helper.monityHelper.preflight.pkg",
-  ],
-           quit: "com.Monity.Helper"
+  uninstall quit:      "com.Monity.Helper",
+            launchctl: "com.Monity.Helper",
+            pkgutil:   [
+              "com.Monity.Helper.monityHelper.com.Monity.Helper.pkg",
+              "com.Monity.Helper.monityHelper.MonityHelper.pkg",
+              "com.Monity.Helper.monityHelper.postflight.pkg",
+              "com.Monity.Helper.monityHelper.preflight.pkg",
+            ]
 end
