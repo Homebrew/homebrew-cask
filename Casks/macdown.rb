@@ -1,13 +1,17 @@
 cask "macdown" do
-  version "0.7.2"
-  sha256 "271f11eb64c19fccee2615e092067cdecc29adf0c2ed0703dae9acda8fa0a672"
+  version "0.7.3,1008.4"
+  sha256 "57a0568354ee7af694e825f19f9f03b9844c6301c70ea04fb324b6efdf7fdcd0"
 
-  url "https://github.com/MacDownApp/macdown/releases/download/v#{version}/MacDown.app.zip",
+  url "https://github.com/MacDownApp/macdown/releases/download/v#{version.before_comma}/MacDown.app.zip",
       verified: "github.com/MacDownApp/macdown/"
-  appcast "https://macdown.uranusjr.com/sparkle/macdown/stable/appcast.xml"
   name "MacDown"
   desc "Open-source Markdown editor"
   homepage "https://macdown.uranusjr.com/"
+
+  livecheck do
+    url "https://macdown.uranusjr.com/sparkle/macdown/stable/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 
