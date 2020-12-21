@@ -4,10 +4,14 @@ cask "nordvpn-teams" do
 
   url "https://downloads.nordteams.com/mac/latest/NordVPNTeams.pkg",
       verified: "downloads.nordteams.com/"
-  appcast "https://downloads.nordteams.com/mac/update.xml"
   name "NordVPN Teams"
   desc "Security software for business"
   homepage "https://nordvpnteams.com/"
+
+  livecheck do
+    url "https://downloads.nordteams.com/mac/update.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 
