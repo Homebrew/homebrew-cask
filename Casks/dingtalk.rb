@@ -3,11 +3,17 @@ cask "dingtalk" do
   sha256 "97553c452a624148232017ec2812c863c7a2178bfd3008c57fc54a840d243504"
 
   url "https://dtapp-pub.dingtalk.com/dingtalk-desktop/mac_dmg/Release/DingTalk_v#{version}.dmg"
-  appcast "https://im.dingtalk.com/manifest/appcast_en.xml"
   name "DingTalk"
   name "钉钉"
   desc "Teamwork app by Alibaba Group"
   homepage "https://www.dingtalk.com/"
+
+  livecheck do
+    url "https://im.dingtalk.com/manifest/appcast_en.xml"
+    strategy :sparkle do |item|
+      item.url[/DingTalk_v(\d(?:\.\d+)*)\.dmg/, 1]
+    end
+  end
 
   auto_updates true
 
