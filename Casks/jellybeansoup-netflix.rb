@@ -1,6 +1,6 @@
 cask "jellybeansoup-netflix" do
-  version "1.0.4"
-  sha256 "f9da1b57012e5e14777e6226d7a0009d5fe877713f3f889cfb72b438d6251e76"
+  version "1.0.5"
+  sha256 "6e62f4e8a5883f139a7259464e33039e7cd5c6040caf9dbb27d85f890b576c40"
 
   url "https://github.com/jellybeansoup/macos-netflix/releases/download/v#{version}/Netflix.v#{version}.zip"
   appcast "https://github.com/jellybeansoup/macos-netflix/releases.atom"
