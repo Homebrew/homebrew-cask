@@ -4,9 +4,13 @@ cask "metabase" do
 
   url "https://s3.amazonaws.com/downloads.metabase.com/v#{version}/Metabase.zip",
       verified: "s3.amazonaws.com/downloads.metabase.com/"
-  appcast "https://s3.amazonaws.com/downloads.metabase.com/appcast.xml"
   name "Metabase"
   homepage "https://www.metabase.com/"
+
+  livecheck do
+    url "https://s3.amazonaws.com/downloads.metabase.com/appcast.xml"
+    strategy :sparkle
+  end
 
   app "Metabase.app"
 end
