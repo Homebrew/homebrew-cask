@@ -3,9 +3,13 @@ cask "8bitdo-ultimate-software" do
   sha256 "4f20ae0b3ad750022bfaec77693a322a90864f391b963d55684da60788b458cb"
 
   url "http://tools.8bitdo.com/8BitdoUltimateSoftware/8BitDoUltimateSoftwareV#{version}.zip"
-  appcast "http://tools.8bitdo.com/8BitdoUltimateSoftware/appcast.xml"
   name "8BitDo Ultimate Software"
   homepage "https://support.8bitdo.com/ultimate-software.html"
+
+  livecheck do
+    url "http://tools.8bitdo.com/8BitdoUltimateSoftware/appcast.xml"
+    strategy :sparkle
+  end
 
   app "8BitDo Ultimate Software.app"
 
