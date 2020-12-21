@@ -10,9 +10,9 @@ cask "cold-turkey-blocker" do
 
   uninstall launchctl: "launchkeep.cold-turkey",
             pkgutil:   [
-    "com.getcoldturkey.coldturkeyblocker",
-    "com.getcoldturkey.blocker-chrome-ext",
-    "com.getcoldturkey.blocker-edge-ext",
-    "com.getcoldturkey.blocker-firefox-ext",
-  ]
+              "com.getcoldturkey.coldturkeyblocker",
+              "com.getcoldturkey.blocker-chrome-ext",
+              "com.getcoldturkey.blocker-edge-ext",
+              "com.getcoldturkey.blocker-firefox-ext",
+            ]
 end
