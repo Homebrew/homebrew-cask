@@ -18,7 +18,7 @@ cask "macfuse" do
   uninstall pkgutil: [
     "io.macfuse.installer.components.core",
     "io.macfuse.installer.components.preferencepane",
-  ],
+  ]
 
   caveats do
     reboot
