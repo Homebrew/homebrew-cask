@@ -6,7 +6,7 @@ cask "macmediakeyforwarder" do
       verified: "github.com/milgra/macmediakeyforwarder/"
   appcast "https://github.com/milgra/macmediakeyforwarder/releases"
   name "Mac Media Key Forwarder"
-  homepage "http://milgra.com/index.html"
+  homepage "http://milgra.com/"
 
   depends_on macos: ">= :sierra"
 
