@@ -3,9 +3,13 @@ cask "bookmacster" do
   sha256 :no_check
 
   url "https://sheepsystems.com/bookmacster/BookMacster.zip"
-  appcast "https://sheepsystems.com/bookmacster/appcast.xml"
   name "BookMacster"
   homepage "https://sheepsystems.com/products/bookmacster.html"
+
+  livecheck do
+    url "https://sheepsystems.com/bookmacster/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :yosemite"
