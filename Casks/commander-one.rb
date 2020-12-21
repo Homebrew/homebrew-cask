@@ -4,10 +4,14 @@ cask "commander-one" do
 
   url "https://cdn.electronic.us/products/commander/mac/download/commander.dmg",
       verified: "cdn.electronic.us/"
-  appcast "https://cdn.electronic.us/products/commander/mac/update/settings.xml"
   name "Commander One"
   desc "Two-panel file manager"
   homepage "https://mac.eltima.com/file-manager.html"
+
+  livecheck do
+    url "https://cdn.electronic.us/products/commander/mac/update/settings.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :yosemite"
 
