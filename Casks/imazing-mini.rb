@@ -4,9 +4,15 @@ cask "imazing-mini" do
 
   url "https://dl.devmate.com/com.DigiDNA.iMazing2Mac.Mini/#{version.after_comma.before_colon}/#{version.after_colon}/iMazingMini2forMac-#{version.after_comma.before_colon}.dmg",
       verified: "dl.devmate.com/com.DigiDNA.iMazing2Mac.Mini/"
-  appcast "https://updates.devmate.com/com.DigiDNA.iMazing#{version.major}Mac.Mini.xml"
   name "iMazing Mini"
   homepage "https://imazing.com/backup-iphone-ipad"
+
+  livecheck do
+    url "https://updates.devmate.com/com.DigiDNA.iMazing#{version.major}Mac.Mini.xml"
+    strategy :sparkle do |item|
+      "#{item.short_version},#{item.version}:#{item.url[%r{/(\d+)/iMazingMini\d+forMac-\d+\.dmg}, 1]}"
+    end
+  end
 
   conflicts_with cask: "imazing"
 
