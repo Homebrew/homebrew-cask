@@ -1,12 +1,16 @@
 cask "hermes" do
-  version "1.3.1"
+  version "1.3.1,2058"
   sha256 "f7c2949e4a44a9183eb6c937b250052867a0373f9de7a8ecbd63853d7df88dbd"
 
-  url "https://github.com/HermesApp/Hermes/releases/download/v#{version}/Hermes-#{version}.zip",
+  url "https://github.com/HermesApp/Hermes/releases/download/v#{version.before_comma}/Hermes-#{version.before_comma}.zip",
       verified: "github.com/HermesApp/Hermes/"
-  appcast "https://raw.githubusercontent.com/HermesApp/HermesApp.github.io/master/versions.xml"
   name "Hermes"
   homepage "https://hermesapp.org/"
+
+  livecheck do
+    url "https://raw.githubusercontent.com/HermesApp/HermesApp.github.io/master/versions.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 
