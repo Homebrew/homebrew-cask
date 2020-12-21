@@ -3,9 +3,13 @@ cask "mountain" do
   sha256 :no_check
 
   url "https://appgineers.de/mountain/files/Mountain.zip"
-  appcast "https://appgineers.de/mountain/files/mountaincast.xml"
   name "Mountain"
   homepage "https://appgineers.de/mountain/"
+
+  livecheck do
+    url "https://appgineers.de/mountain/files/mountaincast.xml"
+    strategy :sparkle
+  end
 
   app "Mountain.app"
 end
