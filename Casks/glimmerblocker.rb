@@ -15,6 +15,7 @@ cask "glimmerblocker" do
 
   uninstall pkgutil:   "org.glimmerblocker.pkg",
             launchctl: [
+              "org.glimmerblocker.installer",
               "org.glimmerblocker.proxy",
               "org.glimmerblocker.updater",
             ],
