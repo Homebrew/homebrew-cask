@@ -8,18 +8,17 @@ cask "itsycal" do
   else
     version "0.12.5,2043"
     sha256 "f1cc5d6afc8e0b38ba436eeeb404d6e32f2f109658624d99363de8c32facff25"
-    appcast "https://itsycal.s3.amazonaws.com/itsycal.xml"
+  end
 
-    url "https://itsycal.s3.amazonaws.com/Itsycal-#{version.before_comma}.zip",
-        verified: "itsycal.s3.amazonaws.com/"
-    name "Itsycal"
-    desc "Menu bar calendar"
-    homepage "https://www.mowglii.com/itsycal/"
+  url "https://itsycal.s3.amazonaws.com/Itsycal-#{version.before_comma}.zip",
+      verified: "itsycal.s3.amazonaws.com/"
+  name "Itsycal"
+  desc "Menu bar calendar"
+  homepage "https://www.mowglii.com/itsycal/"
 
-    livecheck do
-      url "https://itsycal.s3.amazonaws.com/itsycal.xml"
-      strategy :sparkle
-    end
+  livecheck do
+    url "https://itsycal.s3.amazonaws.com/itsycal.xml"
+    strategy :sparkle
   end
 
   auto_updates true
