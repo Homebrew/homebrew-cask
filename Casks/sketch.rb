@@ -1,12 +1,16 @@
 cask "sketch" do
-  version "70.3-109109"
+  version "70.3,109109"
   sha256 "9a296b8befd7e373efbc4ecc3dcacf4eb04ef798db556bd660c40f2973f01a50"
 
-  url "https://download.sketchapp.com/sketch-#{version}.zip"
-  appcast "https://download.sketchapp.com/sketch-versions.xml"
+  url "https://download.sketchapp.com/sketch-#{version.before_comma}-#{version.after_comma}.zip"
   name "Sketch"
   desc "Digital design and prototyping platform"
   homepage "https://www.sketchapp.com/"
+
+  livecheck do
+    url "https://download.sketchapp.com/sketch-versions.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :mojave"
