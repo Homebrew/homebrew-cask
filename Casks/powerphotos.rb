@@ -21,10 +21,14 @@ cask "powerphotos" do
     url "https://www.fatcatsoftware.com/powerphotos/PowerPhotos.zip"
   end
 
-  appcast "https://www.fatcatsoftware.com/powerphotos/powerphotos_appcast.xml"
   name "PowerPhotos"
   desc "Tool to organize photo libraries"
   homepage "https://www.fatcatsoftware.com/powerphotos/"
+
+  livecheck do
+    url "https://www.fatcatsoftware.com/powerphotos/powerphotos_appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :yosemite"
