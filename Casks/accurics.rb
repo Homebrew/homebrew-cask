@@ -1,6 +1,6 @@
 cask "accurics" do
-  version "1.0.11"
-  sha256 "953ac9f9d029782c7208bed4e19429e30bcd233b70d0f7dfa01cbd273bc5e848"
+  version "1.0.12"
+  sha256 "35927c463f404e743c686cf042aafd2b59d3ac41dccc96055dafd996e3cc8438"
 
   url "https://downloads.accurics.com/cli/#{version}/accurics-cli.dmg"
   appcast "https://downloads.accurics.com/cli/#{version}/accurics-cli.yml",
