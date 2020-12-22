@@ -15,10 +15,16 @@ cask "texpad" do
 
   url "https://download.texpadapp.com/apps/osx/updates/Texpad_#{version.before_comma.dots_to_underscores}__#{version.after_comma.before_colon}__#{version.after_colon}.dmg",
       verified: "download.texpadapp.com/"
-  appcast "https://www.texpad.com/static-collected/upgrades/texpadappcast.xml"
   name "Texpad"
   desc "LaTeX editor"
   homepage "https://www.texpad.com/mac"
+
+  livecheck do
+    url "https://www.texpad.com/static-collected/upgrades/texpadappcast.xml"
+    strategy :sparkle do |item|
+      "#{item.short_version},#{item.version}:#{item.url[/_([^_]+)\.dmg/i, 1]}"
+    end
+  end
 
   auto_updates true
 
