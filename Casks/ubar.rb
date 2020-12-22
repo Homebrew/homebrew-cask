@@ -1,12 +1,16 @@
 cask "ubar" do
-  version "4.1.6"
+  version "4.1.6,416"
   sha256 "732a0c72234aaf11dadb507232e98bf782f0a3e73afdeeeee13f849ebac1417a"
 
-  url "https://www.brawersoftware.com/downloads/ubar/ubar#{version.no_dots}.zip"
-  appcast "https://brawersoftware.com/appcasts/feeds/ubar/ubar#{version.major}.xml"
+  url "https://www.brawersoftware.com/downloads/ubar/ubar#{version.after_comma}.zip"
   name "uBar"
   desc "Window manager and productivity tool"
   homepage "https://brawersoftware.com/products/ubar"
+
+  livecheck do
+    url "https://brawersoftware.com/appcasts/feeds/ubar/ubar#{version.major}.xml"
+    strategy :sparkle
+  end
 
   app "uBar.app"
 
