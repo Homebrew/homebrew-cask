@@ -5,7 +5,10 @@ cask "epubquicklook" do
   url "https://github.com/jaketmp/ePub-quicklook/releases/download/v#{version}/epub.qlgenerator.zip"
   appcast "https://github.com/jaketmp/ePub-quicklook/releases.atom"
   name "EPUB QuickLook"
+  desc "QuickLook generator and Spotlight importer"
   homepage "https://github.com/jaketmp/ePub-quicklook"
+
+  depends_on macos: "<= :mojave"
 
   qlplugin "epub.qlgenerator"
 end
