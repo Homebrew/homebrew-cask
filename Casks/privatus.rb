@@ -4,10 +4,14 @@ cask "privatus" do
 
   url "https://sweetpproductions.com/products/privatus#{version.major}/Privatus#{version.major}.dmg",
       verified: "sweetpproductions.com/products/"
-  appcast "https://sweetpproductions.com/products/privatus#{version.major}/appcast.xml"
   name "Privatus"
   desc "Automated online privacy protection"
   homepage "https://privatusapp.com/"
+
+  livecheck do
+    url "https://sweetpproductions.com/products/privatus#{version.major}/appcast.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :mojave"
 
