@@ -6,7 +6,7 @@ cask "simple-comic" do
       verified: "https://github.com/MaddTheSane/Simple-Comic"
   appcast "https://github.com/MaddTheSane/Simple-Comic/releases.atom"
   name "Simple Comic"
-  desc "Streamlined comic viewer for macOS"
+  desc "Streamlined comic viewer"
   homepage "https://github.com/MaddTheSane/Simple-Comic"
 
   app "Simple Comic.app"
