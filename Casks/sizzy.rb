@@ -1,5 +1,5 @@
 cask "sizzy" do
-  version "46.0.0"
+  version "46.0.0.20201221.2"
   sha256 :no_check
 
   url "https://sizzy.co/get-app"
