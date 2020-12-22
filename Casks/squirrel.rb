@@ -4,9 +4,13 @@ cask "squirrel" do
 
   url "https://dl.bintray.com/rime/squirrel/Squirrel-#{version}.zip",
       verified: "dl.bintray.com/rime/squirrel/"
-  appcast "https://rime.im/release/squirrel/appcast.xml"
   name "Squirrel"
   homepage "https://rime.im/"
+
+  livecheck do
+    url "https://rime.im/release/squirrel/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 
