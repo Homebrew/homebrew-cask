@@ -3,10 +3,14 @@ cask "remote-wake-up" do
   sha256 :no_check
 
   url "https://witt-software.com/downloads/remotewakeup/Remote%20Wake%20Up.dmg"
-  appcast "https://www.witt-software.com/downloads/remotewakeup/appcast.xml"
   name "Remote Wake Up"
   desc "Wake up devices with a click of a button"
   homepage "https://www.witt-software.com/remotewakeup/"
+
+  livecheck do
+    url "https://www.witt-software.com/downloads/remotewakeup/appcast.xml"
+    strategy :sparkle
+  end
 
   app "Remote Wake Up.app"
 
