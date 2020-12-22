@@ -3,10 +3,14 @@ cask "pdf-reader-pro" do
   sha256 :no_check
 
   url "https://www.pdfreaderpro.com/downloads/PDFReaderPro.dmg"
-  appcast "https://www.pdfreaderpro.com/downloads/pdfreaderprocast.xml"
   name "PDF Reader Pro"
   desc "Read, annotate, edit, convert, create, OCR, fill forms and sign PDFs"
   homepage "https://www.pdfreaderpro.com/"
+
+  livecheck do
+    url "https://www.pdfreaderpro.com/downloads/pdfreaderprocast.xml"
+    strategy :sparkle
+  end
 
   app "PDF Reader Pro.app"
 
