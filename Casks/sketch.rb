@@ -22,5 +22,7 @@ cask "sketch" do
     "~/Library/Preferences/com.bohemiancoding.sketch3.LSSharedFileList.plist",
     "~/Library/Preferences/com.bohemiancoding.sketch3.plist",
     "~/Library/Cookies/com.bohemiancoding.sketch3.binarycookies",
+    "~/Library/HTTPStorages/com.bohemiancoding.sketch3.binarycookies",
+    "~/Library/Saved Application State/com.bohemiancoding.sketch3.savedState",
   ]
 end
