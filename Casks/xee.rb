@@ -11,7 +11,7 @@ cask "xee" do
   livecheck do
     url "https://updates.devmate.com/cx.c3.Xee3.xml"
     strategy :sparkle do |item|
-      "#{item.short_version},#{item.version}:#{item.url[%r{/([^/]+)/[^/]+\.zip}, 1]}"
+      "#{item.short_version},#{item.version}:#{item.url[%r{/([^/]+)/[^/]+\.zip}i, 1]}"
     end
   end
 
