@@ -4,10 +4,14 @@ cask "swift-publisher" do
 
   url "https://belightsoft.s3.amazonaws.com/SwiftPublisher.dmg",
       verified: "belightsoft.s3.amazonaws.com/"
-  appcast "https://www.belightsoft.com/download/updates/appcast_SwiftPublisher#{version.major}.xml"
   name "Swift Publisher"
   desc "Page layout and desktop publishing application"
   homepage "https://www.belightsoft.com/swift-publisher/"
+
+  livecheck do
+    url "https://www.belightsoft.com/download/updates/appcast_SwiftPublisher#{version.major}.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :sierra"
 
