@@ -15,6 +15,7 @@
   "fastlane": "homebrew/core",
   "fpc": "homebrew/core",
   "gedit": "homebrew/core",
+  "gfortran": "homebrew/core",
   "ghc": "homebrew/core",
   "go": "homebrew/core",
   "graphviz": "homebrew/core",
