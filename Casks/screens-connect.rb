@@ -3,10 +3,14 @@ cask "screens-connect" do
   sha256 "56acf50f8a67c40791959b240e29584b1c8e32eac5e7bb368a4c16eac7678068"
 
   url "https://updates.edovia.com/com.edovia.screens.connect.mac/ScreensConnect_#{version.before_comma}b#{version.after_comma}.zip"
-  appcast "https://updates.edovia.com/com.edovia.screens.connect.mac/appcast.xml"
   name "Screens Connect"
   desc "Remote desktop software"
   homepage "https://edovia.com/en/screens-connect/"
+
+  livecheck do
+    url "https://updates.edovia.com/com.edovia.screens.connect.mac/appcast.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :el_capitan"
 
