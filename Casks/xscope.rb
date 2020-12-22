@@ -4,10 +4,14 @@ cask "xscope" do
 
   url "https://downloads.iconfactory.com/xscope/xScope-#{version.before_comma}+#{version.after_comma}.zip",
       verified: "downloads.iconfactory.com/"
-  appcast "https://iconfactory.com/appcasts/xScope/appcast.xml"
   name "xScope"
   desc "Tools for measuring, inspecting & testing on-screen graphics and layouts"
   homepage "https://xscopeapp.com/"
+
+  livecheck do
+    url "https://iconfactory.com/appcasts/xScope/appcast.xml"
+    strategy :sparkle
+  end
 
   app "xScope.app"
 
