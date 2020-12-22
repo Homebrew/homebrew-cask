@@ -10,5 +10,5 @@ cask "superslicer" do
 
   app "superslicer.app"
 
-  zap trash: '~/Library/Application Support/SuperSlicer'
+  zap trash: "~/Library/Application Support/SuperSlicer"
 end
