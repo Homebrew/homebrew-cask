@@ -4,10 +4,14 @@ cask "vsee" do
 
   url "https://d2q5hugz2rti4w.cloudfront.net/mac/#{version.after_comma}/vseemac.dmg",
       verified: "d2q5hugz2rti4w.cloudfront.net/"
-  appcast "https://client.vsee.com/mac/appcast.xml"
   name "VSee"
   desc "Group video calls, screen sharing and instant messaging"
   homepage "https://vsee.com/"
+
+  livecheck do
+    url "https://client.vsee.com/mac/appcast.xml"
+    strategy :sparkle
+  end
 
   app "VSee.app"
 
