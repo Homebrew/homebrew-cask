@@ -3,9 +3,13 @@ cask "optimage" do
   sha256 :no_check
 
   url "https://optimage.app/download/optimage-mac.zip"
-  appcast "https://optimage.app/appcast.xml"
   name "Optimage"
   homepage "https://optimage.app/"
+
+  livecheck do
+    url "https://optimage.app/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 
