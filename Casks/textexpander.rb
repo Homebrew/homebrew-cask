@@ -4,10 +4,14 @@ cask "textexpander" do
 
   url "https://cdn.textexpander.com/mac/#{version.after_comma}/TextExpander_#{version.before_comma}.zip",
       verified: "cdn.textexpander.com/mac/"
-  appcast "https://smilesoftware.com/appcast/TextExpander#{version.major}.xml"
   name "TextExpander"
   desc "Inserts pre-made snippets of text anywhere"
   homepage "https://smilesoftware.com/TextExpander"
+
+  livecheck do
+    url "https://smilesoftware.com/appcast/TextExpander#{version.major}.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"
