@@ -4,9 +4,13 @@ cask "strongvpn" do
 
   url "https://static.colomovers.com/mac/StrongVPN.dmg",
       verified: "static.colomovers.com/"
-  appcast "https://static.colomovers.com/mac/updates.xml"
   name "StrongVPN"
   homepage "https://strongvpn.com/vpn-apps/macos/"
+
+  livecheck do
+    url "https://static.colomovers.com/mac/updates.xml"
+    strategy :sparkle
+  end
 
   app "StrongVPN.app"
 end
