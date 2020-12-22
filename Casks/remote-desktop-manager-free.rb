@@ -4,9 +4,13 @@ cask "remote-desktop-manager-free" do
 
   url "https://cdn.devolutions.net/download/Mac/Devolutions.RemoteDesktopManager.Free.Mac.#{version}.dmg",
       verified: "devolutions.net/"
-  appcast "https://cdn.devolutions.net/download/Mac/RemoteDesktopManagerFree.xml"
   name "Remote Desktop Manager Free"
   homepage "https://mac.remotedesktopmanager.com/"
+
+  livecheck do
+    url "https://cdn.devolutions.net/download/Mac/RemoteDesktopManagerFree.xml"
+    strategy :sparkle
+  end
 
   app "Remote Desktop Manager Free.app"
 
