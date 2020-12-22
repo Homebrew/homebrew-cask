@@ -8,7 +8,7 @@ cask "texmacs" do
   homepage "https://www.texmacs.org/"
 
   livecheck do
-    url "https://ftp.texmacs.org/TeXmacs/appcast/macos.xml"
+    url "http://ftp.texmacs.org/TeXmacs/appcast/macos.xml"
     strategy :sparkle
   end
 
