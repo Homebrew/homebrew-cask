@@ -4,10 +4,16 @@ cask "xee" do
 
   url "https://dl.devmate.com/cx.c3.Xee3/#{version.after_comma.before_colon}/#{version.after_colon}/Xee-#{version.after_comma.before_colon}.zip",
       verified: "devmate.com/cx.c3.Xee3/"
-  appcast "https://updates.devmate.com/cx.c3.Xee3.xml"
   name "Xee³"
   desc "Image viewer and file browser"
   homepage "https://theunarchiver.com/xee"
+
+  livecheck do
+    url "https://updates.devmate.com/cx.c3.Xee3.xml"
+    strategy :sparkle do |item|
+      "#{item.short_version},#{item.version}:#{item.url[%r{/([^/]+)/[^/]+\.zip}i, 1]}"
+    end
+  end
 
   auto_updates true
 
