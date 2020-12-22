@@ -10,7 +10,7 @@ cask "vu" do
   livecheck do
     url "https://updates.devmate.com/com.boriskarulin.vu.xml"
     strategy :sparkle do |item|
-      match = item.url.match(%r{/(\d+)/vu-(\d+(?:\.\d+)*)\.dmg})
+      match = item.url.match(%r{/(\d+)/vu-(\d+(?:\.\d+)*)\.dmg}i)
       "#{item.short_version},#{item.version}:#{match[1]}"
     end
   end
