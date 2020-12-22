@@ -1,11 +1,15 @@
 cask "pref-setter" do
-  version "197"
+  version "2.0,197"
   sha256 :no_check
 
   url "http://www.nightproductions.net/downloads/prefsetter.zip"
-  appcast "http://www.nightproductions.net/feeds/prefsetter.xml"
   name "Pref Setter"
   homepage "http://www.nightproductions.net/prefsetter.html"
+
+  livecheck do
+    url "http://www.nightproductions.net/feeds/prefsetter.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: "<= :mojave"
 
