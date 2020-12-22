@@ -9,7 +9,7 @@ cask "zenmate-vpn" do
   livecheck do
     url "https://download.zenmate.com/mac/zenmate.xml"
     strategy :sparkle do |item|
-      item.url[%r{/zm_(\d+(?:\.\d+)*)\.dmg}, 1]
+      item.url[%r{/zm_(\d+(?:\.\d+)*)\.dmg}i, 1]
     end
   end
 
