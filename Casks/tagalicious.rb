@@ -3,9 +3,13 @@ cask "tagalicious" do
   sha256 :no_check
 
   url "http://files.thelittleappfactory.com/tagalicious/Tagalicious.zip"
-  appcast "http://files.thelittleappfactory.com/tagalicious/appcast.xml"
   name "Tagalicious"
   homepage "http://thelittleappfactory.com/tagalicious/"
+
+  livecheck do
+    url "http://files.thelittleappfactory.com/tagalicious/appcast.xml"
+    strategy :sparkle
+  end
 
   app "Tagalicious.app"
 end
