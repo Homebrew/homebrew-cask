@@ -4,10 +4,14 @@ cask "reggy" do
 
   url "https://github.com/downloads/samsouder/reggy/Reggy_v#{version}.tbz",
       verified: "github.com/downloads/samsouder/reggy/"
-  appcast "http://reggyapp.com/appcast.xml"
   name "Reggy"
   desc "Interactive regular expression validator and tester"
   homepage "http://reggyapp.com/"
+
+  livecheck do
+    url "http://reggyapp.com/appcast.xml"
+    strategy :sparkle
+  end
 
   app "Reggy.app"
 end
