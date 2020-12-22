@@ -4,10 +4,14 @@ cask "subler" do
 
   url "https://bitbucket.org/galad87/subler/downloads/Subler-#{version}.zip",
       verified: "bitbucket.org/galad87/subler/"
-  appcast "https://subler.org/appcast/appcast.xml"
   name "Subler"
   desc "Mux and tag mp4 files"
   homepage "https://subler.org/"
+
+  livecheck do
+    url "https://subler.org/appcast/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 
