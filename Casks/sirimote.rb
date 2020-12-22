@@ -3,9 +3,13 @@ cask "sirimote" do
   sha256 :no_check
 
   url "https://eternalstorms.at/sirimote/SiriMote.zip"
-  appcast "https://eternalstorms.at/sirimote/updatefeed.xml"
   name "SiriMote"
   homepage "https://eternalstorms.at/sirimote"
+
+  livecheck do
+    url "https://eternalstorms.at/sirimote/updatefeed.xml"
+    strategy :sparkle
+  end
 
   app "SiriMote.app"
 end
