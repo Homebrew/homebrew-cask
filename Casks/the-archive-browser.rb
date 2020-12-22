@@ -10,7 +10,7 @@ cask "the-archive-browser" do
   livecheck do
     url "https://updates.devmate.com/cx.c3.thearchivebrowser.xml"
     strategy :sparkle do |item|
-      "#{item.short_version},#{item.version}:#{item.url[%r{/(\d+)/TheArchiveBrowser-\d+\.zip}, 1]}"
+      "#{item.short_version},#{item.version}:#{item.url[%r{/(\d+)/TheArchiveBrowser-\d+\.zip}i, 1]}"
     end
   end
 
