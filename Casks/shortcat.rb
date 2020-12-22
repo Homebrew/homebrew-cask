@@ -1,11 +1,15 @@
 cask "shortcat" do
-  version "0.7.11"
+  version "0.7.11,91"
   sha256 "bb62fcb6c644c1ccca356d0ac1ede1b29ebbc1cebe5809e186b3ba295ed51b07"
 
-  url "https://files.shortcatapp.com/v#{version}/Shortcat.zip"
-  appcast "https://shortcatapp.com/updates/appcast.xml"
+  url "https://files.shortcatapp.com/v#{version.before_comma}/Shortcat.zip"
   name "Sproutcube Shortcat"
   homepage "https://shortcatapp.com/"
+
+  livecheck do
+    url "https://shortcatapp.com/updates/appcast.xml"
+    strategy :sparkle
+  end
 
   app "Shortcat.app"
 
