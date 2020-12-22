@@ -10,7 +10,7 @@ cask "xiami" do
   livecheck do
     url "https://g.alicdn.com/music/desktop-app/XiamiMac.xml"
     strategy :sparkle do |item|
-      match = item.url.match(%r{/([^/]+)/([^/]+)\.zip})
+      match = item.url.match(%r{/([^/]+)/([^/]+)\.zip}i)
       "#{item.short_version},#{item.version},#{match[1]}:#{match[2]}"
     end
   end
