@@ -4,10 +4,14 @@ cask "slate" do
 
   url "http://slate.ninjamonkeysoftware.com/Slate.dmg",
       verified: "slate.ninjamonkeysoftware.com/"
-  appcast "https://www.ninjamonkeysoftware.com/slate/appcast.xml"
   name "Slate"
   desc "Window management application (replacement for Divvy/SizeUp/ShiftIt)"
   homepage "https://github.com/jigish/slate"
+
+  livecheck do
+    url "https://www.ninjamonkeysoftware.com/slate/appcast.xml"
+    strategy :sparkle
+  end
 
   app "Slate.app"
 
