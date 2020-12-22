@@ -10,7 +10,7 @@ cask "textual" do
   livecheck do
     url "https://textual-updates-backend.codeux.com/sparkle/feeds/v7/feed-one.xml"
     strategy :sparkle do |item|
-      "#{item.short_version},#{item.version}:#{item.url[/Textual-(.*?)\.zip/, 1]}"
+      "#{item.short_version},#{item.version}:#{item.url[/Textual-(.*?)\.zip/i, 1]}"
     end
   end
 
