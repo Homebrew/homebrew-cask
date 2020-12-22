@@ -4,9 +4,13 @@ cask "wavebox" do
 
   url "https://download.wavebox.app/core/mac/Install%20Wavebox%20#{version}.dmg",
       verified: "download.wavebox.app/"
-  appcast "https://download.wavebox.app/core/mac/appcast.xml"
   name "Wavebox"
   homepage "https://wavebox.io/"
+
+  livecheck do
+    url "https://download.wavebox.app/core/mac/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 
