@@ -10,7 +10,7 @@ cask "qblocker" do
   livecheck do
     url "https://updates.devmate.com/uk.co.wearecocoon.QBlocker.xml"
     strategy :sparkle do |item|
-      id = item.url[%r{/(\d+)/QBlocker-\d+.zip}, 1]
+      id = item.url[%r{/(\d+)/QBlocker-\d+\.zip}i, 1]
       "#{item.short_version},#{item.version}:#{id}"
     end
   end
