@@ -4,10 +4,14 @@ cask "wallpaper-wizard" do
 
   url "https://dl.devmate.com/com.macpaw.WallWiz-site/WallpaperWizard-#{version.major}.dmg",
       verified: "dl.devmate.com/com.macpaw.WallWiz-site/"
-  appcast "https://updates.devmate.com/com.macpaw.WallWiz-site.xml"
   name "Wallpaper Wizard"
   desc "Adjustable wallpaper application"
   homepage "https://wallwiz.com/"
+
+  livecheck do
+    url "https://updates.devmate.com/com.macpaw.WallWiz-site.xml"
+    strategy :sparkle
+  end
 
   app "Wallpaper Wizard.app"
 
