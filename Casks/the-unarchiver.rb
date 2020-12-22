@@ -11,7 +11,7 @@ cask "the-unarchiver" do
   livecheck do
     url "https://updates.devmate.com/com.macpaw.site.theunarchiver.xml"
     strategy :sparkle do |item|
-      "#{item.short_version},#{item.version}:#{item.url[%r{/(\d+)/TheUnarchiver-\d+\.zip}, 1]}"
+      "#{item.short_version},#{item.version}:#{item.url[%r{/(\d+)/TheUnarchiver-\d+\.zip}i, 1]}"
     end
   end
 
