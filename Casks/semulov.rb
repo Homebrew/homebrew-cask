@@ -3,9 +3,13 @@ cask "semulov" do
   sha256 :no_check
 
   url "https://www.kainjow.com/downloads/Semulov.zip"
-  appcast "https://kainjow.com/updates/semulov.xml"
   name "Semulov"
   homepage "https://www.kainjow.com/"
+
+  livecheck do
+    url "https://kainjow.com/updates/semulov.xml"
+    strategy :sparkle
+  end
 
   app "Semulov.app"
 end
