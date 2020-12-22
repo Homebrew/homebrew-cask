@@ -3,9 +3,13 @@ cask "zappy" do
   sha256 :no_check
 
   url "https://zappy.zapier.com/releases/zappy-latest.dmg"
-  appcast "https://zappy.zapier.com/releases/appcast.xml"
   name "Zappy"
   homepage "https://zapier.com/zappy"
+
+  livecheck do
+    url "https://zappy.zapier.com/releases/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 
