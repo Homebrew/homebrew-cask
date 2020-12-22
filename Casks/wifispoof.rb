@@ -4,9 +4,13 @@ cask "wifispoof" do
 
   url "https://sweetpproductions.com/products/wifispoof#{version.major}/WiFiSpoof#{version.major}.dmg",
       verified: "sweetpproductions.com/products/"
-  appcast "https://sweetpproductions.com/products/wifispoof#{version.major}/appcast.xml"
   name "WiFiSpoof"
   homepage "https://wifispoof.com/"
+
+  livecheck do
+    url "https://sweetpproductions.com/products/wifispoof#{version.major}/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 
