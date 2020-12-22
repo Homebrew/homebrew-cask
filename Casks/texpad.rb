@@ -22,7 +22,7 @@ cask "texpad" do
   livecheck do
     url "https://www.texpad.com/static-collected/upgrades/texpadappcast.xml"
     strategy :sparkle do |item|
-      "#{item.short_version},#{item.version}:#{item.url[/_([^_]+)\.dmg/, 1]}"
+      "#{item.short_version},#{item.version}:#{item.url[/_([^_]+)\.dmg/i, 1]}"
     end
   end
 
