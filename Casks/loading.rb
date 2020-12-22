@@ -3,9 +3,13 @@ cask "loading" do
   sha256 :no_check
 
   url "https://bonzaiapps.com/loading/Loading.zip"
-  appcast "https://bonzaiapps.com/loading/update.xml"
   name "Loading"
   homepage "https://bonzaiapps.com/loading/"
+
+  livecheck do
+    url "https://bonzaiapps.com/loading/update.xml"
+    strategy :sparkle
+  end
 
   app "Loading.app"
 end
