@@ -3,9 +3,13 @@ cask "sleipnir" do
   sha256 :no_check
 
   url "https://www.fenrir-inc.com/services/download.php?file=Sleipnir.dmg"
-  appcast "https://update.fenrir.co.jp/smartupdate/mac/sleipnir/appcast.xml"
   name "Sleipnir"
   homepage "https://www.fenrir-inc.com/jp/sleipnir/"
+
+  livecheck do
+    url "https://update.fenrir.co.jp/smartupdate/mac/sleipnir/appcast.xml"
+    strategy :sparkle
+  end
 
   app "Sleipnir.app"
 end
