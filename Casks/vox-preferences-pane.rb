@@ -4,9 +4,13 @@ cask "vox-preferences-pane" do
 
   url "https://dl.devmate.com/com.coppertino.VoxPrefs/VoxPrefs.dmg",
       verified: "devmate.com/com.coppertino.VoxPrefs/"
-  appcast "http://updateinfo.devmate.com/com.coppertino.VoxPrefs/updates.xml"
   name "VOX Preferences"
   homepage "https://vox.rocks/mac-music-player/control-extension-download"
+
+  livecheck do
+    url "http://updateinfo.devmate.com/com.coppertino.VoxPrefs/updates.xml"
+    strategy :sparkle
+  end
 
   prefpane "Vox Preferences.prefPane"
 end
