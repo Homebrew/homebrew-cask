@@ -11,7 +11,7 @@ cask "vox" do
   livecheck do
     url "https://updates.devmate.com/com.coppertino.Vox.xml"
     strategy :sparkle do |item|
-      "#{item.short_version},#{item.version}:#{item.url[%r{/(\d+)/[^/]+\.zip}, 1]}"
+      "#{item.short_version},#{item.version}:#{item.url[%r{/(\d+)/[^/]+\.zip}i, 1]}"
     end
   end
 
