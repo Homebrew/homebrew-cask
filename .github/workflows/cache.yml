@@ -2,8 +2,8 @@ name: Cache
 
 on:
   push:
-    branches:
-      - debug-cache
+    paths:
+      - .github/workflows/cache.yml
   schedule:
     - cron: '0 */6 * * *' # every 6 hours
 
@@ -22,7 +22,7 @@ jobs:
     strategy:
       matrix:
         os:
-          - macos-latest
+          - macos-11.0
           - ubuntu-latest
     runs-on: ${{ matrix.os }}
     steps:
