@@ -3,10 +3,14 @@ cask "screens" do
   sha256 "fcad2d076ab2415c10890813429ed962cf5669f4a3dc099b72f81c1ad8c3c10c"
 
   url "https://updates.edovia.com/com.edovia.screens#{version.major}.mac/Screens_#{version.before_comma}b#{version.after_comma}.zip"
-  appcast "https://updates.edovia.com/com.edovia.screens#{version.major}.mac/appcast.xml"
   name "Screens"
   desc "Remote access software focusing on usability"
   homepage "https://edovia.com/screens-mac/"
+
+  livecheck do
+    url "https://updates.edovia.com/com.edovia.screens#{version.major}.mac/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"
