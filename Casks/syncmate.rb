@@ -4,10 +4,14 @@ cask "syncmate" do
 
   url "https://cdn.electronic.us/products/syncmate/mac/update/SyncMate_#{version}.zip",
       verified: "cdn.electronic.us/products/syncmate/"
-  appcast "https://cdn.eltima.com/download/syncmate-update/syncmate6.xml"
   name "SyncMate"
   desc "All-in-one sync tool"
   homepage "https://mac.eltima.com/sync-mac.html"
+
+  livecheck do
+    url "https://cdn.eltima.com/download/syncmate-update/syncmate6.xml"
+    strategy :sparkle
+  end
 
   app "SyncMate.app"
 end
