@@ -3,9 +3,13 @@ cask "xmplify" do
   sha256 "676a656e158fd66cfd483923cef486ddde1f938141590a2c73500088ca5af91f"
 
   url "http://xmplifyapp.com/releases/Xmplify-#{version}.dmg"
-  appcast "http://xmplifyapp.com/appcast.xml"
   name "Xmplify"
   homepage "http://xmplifyapp.com/"
+
+  livecheck do
+    url "http://xmplifyapp.com/appcast.xml"
+    strategy :sparkle
+  end
 
   app "Xmplify.app"
 
