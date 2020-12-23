@@ -1,5 +1,5 @@
 cask "kindle-previewer" do
-  version "3.48"
+  version "3.49"
   sha256 :no_check
 
   url "https://kindlepreviewer3.s3.amazonaws.com/KindlePreviewerInstaller.pkg",
