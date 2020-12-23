@@ -4,7 +4,7 @@ After running `brew upgrade`, you may notice some casks you think should be upgr
 
 As you’re likely aware, a lot of macOS software can upgrade itself:
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Sparkle_Test_App_Software_Update.png" width="50%">
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Sparkle_Test_App_Software_Update.png" width="532" alt="Sparkle update window">
 
 That could cause conflicts when used in tandem with Homebrew Cask’s `upgrade` mechanism.
 
