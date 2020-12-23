@@ -11,11 +11,15 @@ cask "gobdokumente" do
         verified: "download.moapp.software/"
   end
 
-  appcast "https://sparkle.moapp.software/gobdokumente.xml"
   name "GoBDokumente"
   name "GoBDocuments"
   desc "Document management system"
   homepage "https://gobdokumente.de/"
+
+  livecheck do
+    url "https://sparkle.moapp.software/gobdokumente.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :el_capitan"
 
