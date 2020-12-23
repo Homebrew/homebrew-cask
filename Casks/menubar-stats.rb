@@ -1,5 +1,5 @@
 cask "menubar-stats" do
-  version "3.6,20201129"
+  version "3.6.1,20201217"
   sha256 :no_check
 
   url "https://seense.com/menubarstats/updateapp/mbs.zip"
