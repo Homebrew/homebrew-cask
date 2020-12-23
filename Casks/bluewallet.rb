@@ -9,5 +9,11 @@ cask "bluewallet" do
   desc "Bitcoin wallet and Lightning wallet"
   homepage "https://bluewallet.io/"
 
+  zap trash: [
+    "~/Library/Application Scripts/io.bluewallet.bluewallet",
+    "~/Library/Containers/io.bluewallet.bluewallet",
+    "~/Library/Group Containers/group.io.bluewallet.bluewallet",
+  ]
+  
   app "BlueWallet.app"
 end
