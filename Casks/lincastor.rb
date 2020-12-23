@@ -4,7 +4,7 @@ cask "lincastor" do
 
   url "https://onflapp.github.io/blog/releases/lincastor/LinCastor.zip"
   name "LinCastor"
-  desc "Blog Site"
+  desc "Choose a web browser when opening a link"
   homepage "https://onflapp.github.io/blog/pages/LinCastorBrowser.html"
 
   livecheck do
