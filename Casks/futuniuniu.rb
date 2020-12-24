@@ -7,7 +7,7 @@ cask "futuniuniu" do
   name "FutuNiuniu"
   name "富途牛牛"
   desc "Trading application"
-  homepage "https://www.futunn.com"
+  homepage "https://www.futunn.com/"
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "FutuNiuniu.app", target: "Futubull.app"
