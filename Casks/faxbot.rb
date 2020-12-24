@@ -10,7 +10,7 @@ cask "faxbot" do
   livecheck do
     url "https://www.hosy.de/faxer/version.xml"
     strategy :sparkle do |item|
-      "#{item.title[/Version (\d+(?:\.\d+)*)/, 1]},#{item.version}"
+      "#{item.title[/Version (\d+(?:\.\d+)*)/i, 1]},#{item.version}"
     end
   end
 
