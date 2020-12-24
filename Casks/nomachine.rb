@@ -18,5 +18,10 @@ cask "nomachine" do
               "com.nomachine.nxserver",
               "com.nomachine.server",
               "com.nomachine.uninstall",
+            ],
+            kext:      [
+              "com.highpoint-tech.kext.HighPointRR",
+              "com.highpoint-tech.kext.HighPointIOP",
+              "com.softraid.driver.SoftRAID",
             ]
 end
