@@ -10,7 +10,7 @@ cask "imazing-mini" do
   livecheck do
     url "https://updates.devmate.com/com.DigiDNA.iMazing#{version.major}Mac.Mini.xml"
     strategy :sparkle do |item|
-      "#{item.short_version},#{item.version}:#{item.url[%r{/(\d+)/iMazingMini\d+forMac-\d+\.dmg}, 1]}"
+      "#{item.short_version},#{item.version}:#{item.url[%r{/(\d+)/iMazingMini\d+forMac-\d+\.dmg}i, 1]}"
     end
   end
 
