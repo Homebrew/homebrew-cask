@@ -8,5 +8,5 @@ cask "mediathekview" do
   desc "Manages online multimedia libs of German, Austrian and Swiss public broadcasters"
   homepage "https://mediathekview.de/"
 
-  suite "MediathekView"
+  app "MediathekView.app"
 end
