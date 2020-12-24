@@ -1,8 +1,8 @@
 cask "mweb" do
   version "3.4.4,1607678309"
-  sha256 :no_check
+  sha256 "8ee686c3a54301a8809afbf6f38ea97cecdd805e8dd00a5e67d55f314304b942"
 
-  url "https://dl.devmate.com/com.coderforart.MWeb#{version.major}/#{version.before_comma}/#{version.after_comma}/MWeb#{version.major}-ProMarkdownwriting,notetakingandstaticbloggeneratorApp-#{version.before_comma}.zip",
+  url "https://dl.devmate.com/com.coderforart.MWeb#{version.major}/#{version.before_comma}/#{version.after_comma}/MWeb#{version.major}-ProMarkdownwriting,notetakingandstaticbloggeneratorApp-#{version.before_comma}.dmg",
       verified: "dl.devmate.com/com.coderforart.MWeb#{version.major}/"
   name "MWeb"
   desc "Markdown writing, note taking, and static blog generator app"
