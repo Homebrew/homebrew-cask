@@ -15,7 +15,6 @@ cask "chrome-remote-desktop-host" do
     sudo:       true,
   },
             pkgutil: [
-              "com.google.pkg.Keystone",
               "com.google.pkg.ChromeRemoteDesktopHost",
               "com.google.pkg.ChromeRemoteDesktopHostService",
               "com.google.pkg.ChromeRemoteDesktopHostUninstaller",
