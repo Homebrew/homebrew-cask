@@ -10,7 +10,7 @@ cask "dictionaries" do
   livecheck do
     url "https://updates.devmate.com/io.dictionaries.Dictionaries.xml"
     strategy :sparkle do |item|
-      "#{item.short_version},#{item.version}:#{item.url[%r{/(\d+)/Dictionaries-\d+\.zip}, 1]}"
+      "#{item.short_version},#{item.version}:#{item.url[%r{/(\d+)/Dictionaries-\d+\.zip}i, 1]}"
     end
   end
 
