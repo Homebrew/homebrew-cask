@@ -10,7 +10,7 @@ cask "bestres" do
   livecheck do
     url "https://updates.devmate.com/com.icyberon.BestRes.xml"
     strategy :sparkle do |item|
-      "#{item.short_version},#{item.version}:#{item.url[%r{/(\d+)/BestRes-\d+\.zip}, 1]}"
+      "#{item.short_version},#{item.version}:#{item.url[%r{/(\d+)/BestRes-\d+\.zip}i, 1]}"
     end
   end
 
