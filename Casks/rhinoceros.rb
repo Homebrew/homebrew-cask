@@ -4,9 +4,13 @@ cask "rhinoceros" do
 
   url "https://files.mcneel.com/rhino/#{version.major}/mac/releases/rhino_#{version}.dmg",
       verified: "mcneel.com/"
-  appcast "https://files.mcneel.com/rhino/#{version.major}/mac/updates/commercialUpdates.xml"
   name "Rhinoceros"
   homepage "https://www.rhino3d.com/"
+
+  livecheck do
+    url "https://files.mcneel.com/rhino/#{version.major}/mac/updates/commercialUpdates.xml"
+    strategy :sparkle, &:version
+  end
 
   auto_updates true
 
