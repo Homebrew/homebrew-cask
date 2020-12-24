@@ -1,5 +1,5 @@
 cask "purevpn" do
-  version "3.0.11,626"
+  version "3.0.17,702"
   sha256 :no_check
 
   url "https://purevpn-dialer-assets.s3.amazonaws.com/mac-2.0/packages/Production/PureVPN.pkg",
