@@ -10,7 +10,7 @@ cask "jitsi" do
   livecheck do
     url "https://download.jitsi.org/jitsi/macosx/sparkle/updates.xml"
     strategy :sparkle do |item|
-      item.url[/-(\d+(?:\.\d+)*)\.dmg/, 1]
+      item.url[/-(\d+(?:\.\d+)*)\.dmg/i, 1]
     end
   end
 
