@@ -10,7 +10,7 @@ cask "haptic-touch-bar" do
   livecheck do
     url "https://updates.devmate.com/com.bopsoft.HapticTouchBar.xml"
     strategy :sparkle do |item|
-      "#{item.short_version},#{item.url[%r{/(\d+)/HapticTouchBar-\d+\.zip}, 1]}"
+      "#{item.short_version},#{item.url[%r{/(\d+)/HapticTouchBar-\d+\.zip}i, 1]}"
     end
   end
 
