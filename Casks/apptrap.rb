@@ -9,7 +9,7 @@ cask "apptrap" do
   livecheck do
     url "http://onnati.net/apptrap/ReleaseNotes.xml"
     strategy :sparkle do |item|
-      item.url[/AppTrap(\d+(?:-\d+)*)\.zip/, 1].tr("-", ".")
+      item.url[/AppTrap(\d+(?:-\d+)*)\.zip/i, 1].tr("-", ".")
     end
   end
 
