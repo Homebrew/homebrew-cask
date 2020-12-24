@@ -11,7 +11,7 @@ cask "ibettercharge" do
   livecheck do
     url "https://updates.devmate.com/com.softorino.iBetterCharge.xml"
     strategy :sparkle do |item|
-      "#{item.short_version},#{item.url[%r{/(\d+)/iBetterCharge-(?:\d+(?:\.\d+)*)\.zip}, 1]}"
+      "#{item.short_version},#{item.url[%r{/(\d+)/iBetterCharge-(?:\d+(?:\.\d+)*)\.zip}i, 1]}"
     end
   end
 
