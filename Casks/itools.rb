@@ -4,9 +4,13 @@ cask "itools" do
 
   url "http://dl2.itools.hk/dl/iTools64_#{version}.dmg",
       verified: "dl2.itools.hk/dl/"
-  appcast "http://dl2.itools.hk/update/iTools64ForMacCast.xml"
   name "iTools"
   homepage "https://pro.itools.cn/mac/english"
+
+  livecheck do
+    url "http://dl2.itools.hk/update/iTools64ForMacCast.xml"
+    strategy :sparkle
+  end
 
   app "iTools.app"
 end
