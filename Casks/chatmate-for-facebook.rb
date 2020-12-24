@@ -10,7 +10,7 @@ cask "chatmate-for-facebook" do
   livecheck do
     url "https://updates.devmate.com/net.coldx.mac.Facebook.xml"
     strategy :sparkle do |item|
-      "#{item.short_version},#{item.version}:#{item.url[%r{/(\d+)/ChatMateforFacebook-\d+\.zip}, 1]}"
+      "#{item.short_version},#{item.version}:#{item.url[%r{/(\d+)/ChatMateforFacebook-\d+\.zip}i, 1]}"
     end
   end
 
