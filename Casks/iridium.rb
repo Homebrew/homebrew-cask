@@ -1,8 +1,8 @@
 cask "iridium" do
-  version "2020.04.81.0"
-  sha256 "d7295ffde57bb18057fd61f8458c01a16a062658448a96c87db5ec75ed1977eb"
+  version "2020.11"
+  sha256 "7107a639d78ca1d44313d1b54fe52d3df0e39ea782da52c3d9d528b2e8281ca5"
 
-  url "https://downloads.iridiumbrowser.de/macos/#{version.major_minor}-0/iridiumbrowser-#{version}.dmg"
+  url "https://downloads.iridiumbrowser.de/macos/#{version}-0/iridium-browser_#{version}-0_macos.dmg"
   appcast "https://iridiumbrowser.de/downloads/macos"
   name "Iridium Browser"
   desc "Web browser focusing on security and privacy"
