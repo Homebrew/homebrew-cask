@@ -5,6 +5,7 @@ cask "gloomhaven-helper" do
   url "https://esotericsoftware.com/files/ghh/GloomhavenHelper-#{version}.zip"
   appcast "https://esotericsoftware.com/gloomhaven-helper"
   name "Gloomhaven Helper"
+  desc "Officially licensed companion application for playing the Gloomhaven board game"
   homepage "https://esotericsoftware.com/gloomhaven-helper"
 
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
