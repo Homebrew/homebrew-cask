@@ -9,7 +9,7 @@ cask "multipass" do
 
   depends_on macos: ">= :sierra"
 
-  pkg "multipass-#{version} mac-Darwin.pkg"
+  pkg "multipass-#{version}+mac-Darwin.pkg"
 
   uninstall launchctl: "com.canonical.multipassd",
             pkgutil:   "com.canonical.multipass.*",
