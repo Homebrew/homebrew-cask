@@ -4,7 +4,7 @@ cask "epoccam" do
 
   url "https://edge.elgato.com/egc/macos/epoccam/EpocCam%20Installer_#{version.major}_#{version.minor}.pkg"
   name "EpocCam"
-  desc "Turn Your Phone into a Webcam"
+  desc "Turn your phone into a webcam"
   homepage "https://www.elgato.com/epoccam"
 
   pkg "EpocCam Installer_#{version.major}_#{version.minor}.pkg"
