@@ -9,7 +9,7 @@ cask "messenger-unofficial" do
   livecheck do
     url "https://fbmacmessenger.rsms.me/changelog.xml"
     strategy :sparkle do |item|
-      "#{item.version},#{item.url[/.*-(.*?)\.zip/, 1]}"
+      "#{item.version},#{item.url[/.*-(.*?)\.zip/i, 1]}"
     end
   end
 
