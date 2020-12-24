@@ -11,7 +11,7 @@ cask "dropshare" do
   livecheck do
     url "https://dropshare.app/sparkle/Dropshare#{version.major}.xml"
     strategy :sparkle do |item|
-      "#{item.title[/(\d+(?:\.\d+)*)/, 1]},#{item.version}"
+      "#{item.title[/(\d+(?:\.\d+)*)/i, 1]},#{item.version}"
     end
   end
 
