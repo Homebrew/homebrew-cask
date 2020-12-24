@@ -5,6 +5,7 @@ cask "multipass" do
   url "https://github.com/CanonicalLtd/multipass/releases/download/v#{version}/multipass-#{version}+mac-Darwin.pkg"
   appcast "https://github.com/CanonicalLtd/multipass/releases.atom"
   name "Multipass"
+  desc "Multipass orchestrates virtual Ubuntu instances"
   homepage "https://github.com/CanonicalLtd/multipass/"
 
   depends_on macos: ">= :sierra"
