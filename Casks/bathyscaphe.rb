@@ -10,7 +10,7 @@ cask "bathyscaphe" do
   livecheck do
     url "https://bathyscaphe.bitbucket.io/appcast.xml"
     strategy :sparkle do |item|
-      match = item.url.match(%r{/BathyScaphe-(\d+)-v(\d+)\.dmg})
+      match = item.url.match(%r{/BathyScaphe-(\d+)-v(\d+)\.dmg}i)
       major_minor = item.short_version
       "#{major_minor}.#{match[1].delete_prefix(major_minor.delete("."))},#{match[2]}"
     end
