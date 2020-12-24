@@ -1,6 +1,6 @@
 cask "bitrix24" do
   # NOTE: "24" is not a version number, but an intrinsic part of the product name
-  version "10.0.95.51"
+  version "11.0.20.53"
   sha256 :no_check
 
   url "https://dl.bitrix24.com/b24/bitrix24_desktop.dmg"
