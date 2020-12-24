@@ -1,4 +1,3 @@
-# typed: false
 cask "multipass" do
   version "1.5.0"
   sha256 "1085217279fbb55f3a2c528deaba7c19b60073ae715c39dc83273262fea1a117"
