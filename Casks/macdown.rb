@@ -4,10 +4,20 @@ cask "macdown" do
 
   url "https://github.com/MacDownApp/macdown/releases/download/v#{version}/MacDown.app.zip",
       verified: "github.com/MacDownApp/macdown/"
-  appcast "https://macdown.uranusjr.com/sparkle/macdown/stable/appcast.xml"
   name "MacDown"
   desc "Open-source Markdown editor"
   homepage "https://macdown.uranusjr.com/"
+
+  livecheck do
+    url "https://macdown.uranusjr.com/sparkle/macdown/stable/appcast.xml"
+    strategy :sparkle do |item|
+      # 0.7.3 has a known issue, so wait for the next version.
+      # See https://github.com/MacDownApp/macdown/issues/1173.
+      next version if item.short_version == "0.7.3"
+
+      item.short_version
+    end
+  end
 
   auto_updates true
 
