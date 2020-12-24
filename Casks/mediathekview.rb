@@ -1,11 +1,12 @@
 cask "mediathekview" do
-  version "13.6.0"
-  sha256 "76a4600190df7ff145f3cf97747f376d9f45318b083a83dbd099b7522b6749f4"
+  version "13.7.0"
+  sha256 "fe20d561665841660af30d331a420325c4dbc809dec5c3c305b3f35f7dd1b36a"
 
   url "https://download.mediathekview.de/stabil/MediathekView-#{version}-mac.dmg"
   appcast "https://mediathekview.de/changelog/index.xml"
   name "MediathekView"
+  desc "Manages online multimedia libs of German, Austrian and Swiss public broadcasters"
   homepage "https://mediathekview.de/"
 
-  suite "MediathekView"
+  app "MediathekView.app"
 end
