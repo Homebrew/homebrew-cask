@@ -10,7 +10,7 @@ cask "captin" do
   livecheck do
     url "https://updates.devmate.com/com.100hps.captin.xml"
     strategy :sparkle do |item|
-      "#{item.short_version},#{item.version}:#{item.url[%r{/(\d+)/Captin-\d+\.dmg}, 1]}"
+      "#{item.short_version},#{item.version}:#{item.url[%r{/(\d+)/Captin-\d+\.dmg}i, 1]}"
     end
   end
 
