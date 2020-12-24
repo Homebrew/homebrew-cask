@@ -11,5 +11,5 @@ cask "smultron" do
 
   app "Smultron.app"
 
-  zap trash: "~/Library/Containers/com.peterborgapps.Smultron12"
+  zap trash: "~/Library/Containers/com.peterborgapps.Smultron#{version.before_comma.major}"
 end
