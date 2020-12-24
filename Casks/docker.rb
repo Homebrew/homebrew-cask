@@ -8,12 +8,16 @@ cask "docker" do
   end
 
   url "https://desktop.docker.com/mac/stable/#{version.after_comma}/Docker.dmg"
-  appcast "https://desktop.docker.com/mac/stable/appcast.xml"
   name "Docker Desktop"
   name "Docker Community Edition"
   name "Docker CE"
   desc "App to build and share containerized applications and microservices"
   homepage "https://www.docker.com/products/docker-desktop"
+
+  livecheck do
+    url "https://desktop.docker.com/mac/stable/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 
