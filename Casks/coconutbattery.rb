@@ -2,15 +2,18 @@ cask "coconutbattery" do
   if MacOS.version <= :yosemite
     version "3.6.4"
     sha256 "8e289fb4a75cb117fc1d7861020c9ab2384b09dfd18f066c7fadfc9d42c3ac56"
+
     url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version}.zip"
   else
-    version "3.9.4,756fedb9"
-    sha256 "dc5550b43852c4319fcd5205708165a4e23894bc3a0214b0880158045e983cef"
+    version "3.9.4,53c28f06"
+    sha256 "3ddb9622692d94d089c1960298fcba07eec14a08ac5ea8633300393c5f08eded"
+
     url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version.before_comma.no_dots}_#{version.after_comma}.zip"
+
     livecheck do
       url "https://coconut-flavour.com/updates/coconutBattery.xml"
       strategy :sparkle do |item|
-        "#{item.version},#{item.url[/_(?:\d+)_(.*?)\./, 1]}"
+        "#{item.version},#{item.url[/_(?:\d+)_(.*?)\./i, 1]}"
       end
     end
   end
