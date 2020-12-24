@@ -14,6 +14,7 @@ cask "macdown" do
       # 0.7.3 has a known issue, so wait for the next version.
       # See https://github.com/MacDownApp/macdown/issues/1173.
       next version if item.short_version == "0.7.3"
+
       item.short_version
     end
   end
