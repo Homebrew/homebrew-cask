@@ -3,9 +3,13 @@ cask "mplab-xc16" do
   sha256 "d02ebe6ae6daa430827148c51eb0d667cdaf1e58ff7d3302c6b9c57a8efed7e8"
 
   url "https://ww1.microchip.com/downloads/en/DeviceDoc/xc16-v#{version}-full-install-osx64-installer.dmg"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.microchip.com/mplabxc16osx"
   name "MPLab XC16 Compiler"
   homepage "https://www.microchip.com/mplab/compilers"
+
+  livecheck do
+    url "https://www.microchip.com/mplabxc16osx"
+    strategy :header_match
+  end
 
   installer script: {
     executable: "xc16-v#{version}-osx-installer.app/Contents/MacOS/installbuilder.sh",
