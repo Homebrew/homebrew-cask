@@ -16,6 +16,10 @@ cask "odrive" do
 
   pkg "odrivesync.#{version}.pkg"
 
-  uninstall quit:    "com.oxygencloud.odrive",
+  uninstall quit:    [
+    "com.oxygencloud.odrive",
+    "application.com.apple.installer.1152921500312163482",
+    "application.com.apple.systemevents.1152921500312199658",
+  ],
             pkgutil: "com.oxygen.odrive.*"
 end
