@@ -4,9 +4,13 @@ cask "flic" do
 
   url "https://misc-scl-cdn.s3.amazonaws.com/Flic.#{version}.zip",
       verified: "misc-scl-cdn.s3.amazonaws.com/"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://flic.io/mac-app/download"
   name "Flic"
   homepage "https://flic.io/mac-app"
+
+  livecheck do
+    url "https://flic.io/mac-app/download"
+    strategy :header_match
+  end
 
   app "Flic.app"
 end
