@@ -9,10 +9,14 @@ cask "omnioutliner" do
     url "https://downloads.omnigroup.com/software/MacOSX/10.14/OmniOutliner-#{version}.dmg"
   end
 
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.omnigroup.com/download/latest/omnioutliner/"
   name "OmniOutliner"
   desc "Note taking applciation and information organizer"
   homepage "https://www.omnigroup.com/omnioutliner/"
+
+  livecheck do
+    url "https://www.omnigroup.com/download/latest/omnioutliner/"
+    strategy :header_match
+  end
 
   app "OmniOutliner.app"
 end
