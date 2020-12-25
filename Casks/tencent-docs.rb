@@ -5,14 +5,12 @@ cask "tencent-docs" do
   url "https://down.qq.com/qqweb/mac_docs/MacTencentDocs.dmg"
   name "Tencent Docs"
   name "腾讯文档"
-  desc "支持多人在线编辑Word、Excel和PPT文档"
+  desc "Online editior for Word, Excel and PPT documents"
   homepage "https://docs.qq.com/"
 
   auto_updates true
 
   app "腾讯文档.app"
 
-  zap trash: [
-    "~/Library/Preferences/com.tencent.mac.tdappdesktop.plist",
-  ]
+  zap trash: "~/Library/Preferences/com.tencent.mac.tdappdesktop.plist"
 end
