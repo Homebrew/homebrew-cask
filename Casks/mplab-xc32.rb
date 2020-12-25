@@ -3,9 +3,13 @@ cask "mplab-xc32" do
   sha256 "fae3adcc4f31b2500e020d0bb9576cf2cbfd38c0bd6388b77893a58786f549f4"
 
   url "https://ww1.microchip.com/downloads/en/DeviceDoc/xc32-v#{version}-full-install-osx-installer.dmg"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.microchip.com/mplabxc32osx"
   name "MPLab XC32 Compiler"
   homepage "https://www.microchip.com/mplab/compilers"
+
+  livecheck do
+    url "https://www.microchip.com/mplabxc32osx"
+    strategy :header_match
+  end
 
   installer script: {
     executable: "xc32-v#{version}-osx-installer.app/Contents/MacOS/installbuilder.sh",
