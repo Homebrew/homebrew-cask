@@ -3,7 +3,7 @@ cask "circuitjs1" do
   version "9.3.2"
   sha256 :no_check
 
-  url "https://www.falstad.com/circuit/offline/CircuitJS#{version}-mac.dmg"
+  url "https://www.falstad.com/circuit/offline/CircuitJS1-mac.dmg"
   name "Falstad CircuitJS"
   desc "Electronic circuit simulator"
   homepage "https://www.falstad.com/circuit/"
