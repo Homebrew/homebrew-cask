@@ -4,10 +4,14 @@ cask "foxmail" do
 
   url "https://dldir1.qq.com/foxmail/MacFoxmail/Foxmail_for_Mac_#{version}.dmg",
       verified: "dldir1.qq.com/foxmail/MacFoxmail/"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.foxmail.com/mac/download"
   name "Foxmail"
   desc "Email client"
   homepage "https://www.foxmail.com/"
+
+  livecheck do
+    url "https://www.foxmail.com/mac/download"
+    strategy :header_match
+  end
 
   app "Foxmail.app"
 end
