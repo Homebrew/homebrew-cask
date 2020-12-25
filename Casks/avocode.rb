@@ -3,9 +3,13 @@ cask "avocode" do
   sha256 "ff16dc00acf9507a1f0d420a547d32a3abc3026aada14f356641e9d52aef2e81"
 
   url "https://media.avocode.com/download/avocode-app/#{version}/Avocode-#{version}-mac.zip"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://manager.avocode.com/download/avocode-app/mac-dmg/"
   name "Avocode"
   homepage "https://avocode.com/"
+
+  livecheck do
+    url "https://manager.avocode.com/download/avocode-app/mac-dmg/"
+    strategy :header_match
+  end
 
   auto_updates true
 
