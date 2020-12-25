@@ -4,9 +4,13 @@ cask "marvin" do
 
   url "https://amazingmarvin.s3.amazonaws.com/Marvin-#{version}.dmg",
       verified: "amazingmarvin.s3.amazonaws.com/"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=http://amazingmarvin.s3-website-us-east-1.amazonaws.com/Marvin.dmg"
   name "Amazing Marvin"
   homepage "https://www.amazingmarvin.com/"
+
+  livecheck do
+    url "http://amazingmarvin.s3-website-us-east-1.amazonaws.com/Marvin.dmg"
+    strategy :header_match
+  end
 
   app "Marvin.app"
 end
