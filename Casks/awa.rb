@@ -4,9 +4,13 @@ cask "awa" do
 
   url "https://download-d.awa.io/mac/stable/AWASetup-v#{version}.dmg",
       verified: "download-d.awa.io/mac/stable/"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://pd.awa.io/mac/stable/latest"
   name "AWA"
   homepage "https://awa.fm/"
+
+  livecheck do
+    url "https://pd.awa.io/mac/stable/latest"
+    strategy :header_match
+  end
 
   auto_updates true
 
