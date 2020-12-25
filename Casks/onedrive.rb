@@ -4,10 +4,14 @@ cask "onedrive" do
 
   url "https://oneclient.sfx.ms/Mac/Direct/#{version}/OneDrive.pkg",
       verified: "oneclient.sfx.ms/Mac/Direct/"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://go.microsoft.com/fwlink/?linkid=823060"
   name "OneDrive"
   desc "Cloud storage client"
   homepage "https://onedrive.live.com/"
+
+  livecheck do
+    url "https://go.microsoft.com/fwlink/?linkid=823060"
+    strategy :header_match
+  end
 
   auto_updates true
   conflicts_with cask: "microsoft-office"
