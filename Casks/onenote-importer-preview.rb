@@ -4,9 +4,13 @@ cask "onenote-importer-preview" do
 
   url "https://download.microsoft.com/download/3/9/C/39CE3624-6D17-495F-B421-D86FC96A23D9/OneNote%20Importer%20(Preview)-#{version}.pkg",
       verified: "download.microsoft.com/"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://aka.ms/downloadonenoteimportermac"
   name "OneNote Importer (Preview)"
   homepage "https://www.onenote.com/import-evernote-to-onenote"
+
+  livecheck do
+    url "https://aka.ms/downloadonenoteimportermac"
+    strategy :header_match
+  end
 
   depends_on macos: ">= :el_capitan"
 
