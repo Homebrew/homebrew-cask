@@ -4,9 +4,13 @@ cask "cctalk" do
 
   url "https://cc.hjfile.cn/cc/CCtalk.#{version}/8/1/103/CCtalk.#{version}.dmg",
       verified: "cc.hjfile.cn/"
-  appcast "https://www.macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=https://www.cctalk.com/webapi/basic/v1.1/version/down%3Fapptype=1%26terminalType=8%26versionType=103"
   name "CCtalk"
   homepage "https://www.cctalk.com/download/"
+
+  livecheck do
+    url "https://www.cctalk.com/webapi/basic/v1.1/version/down?apptype=1&terminalType=8&versionType=103"
+    strategy :header_match
+  end
 
   depends_on macos: ">= :yosemite"
 
