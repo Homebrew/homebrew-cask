@@ -3,9 +3,13 @@ cask "mplab-xc8" do
   sha256 "8e7b6dc163cc65df92598cec77129b7e762f8d0f835424a44157e16780dade0f"
 
   url "https://ww1.microchip.com/downloads/en/DeviceDoc/xc8-v#{version}-full-install-macos-x64-installer.dmg"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.microchip.com/mplabxc8osx"
   name "MPLab XC8 Compiler"
   homepage "https://www.microchip.com/mplab/compilers"
+
+  livecheck do
+    url "https://www.microchip.com/mplabxc8osx"
+    strategy :header_match
+  end
 
   installer script: {
     executable: "xc8-v#{version}-full-install-macos-x64-installer.app/Contents/MacOS/installbuilder.sh",
