@@ -4,11 +4,16 @@ cask "duet" do
 
   url "https://duet.nyc3.cdn.digitaloceanspaces.com/Mac/#{version.major_minor.dots_to_underscores}/duet-#{version.dots_to_hyphens}.zip",
       verified: "duet.nyc3.cdn.digitaloceanspaces.com/Mac/"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://updates.duetdisplay.com/latestMac",
-          must_contain: version.dots_to_hyphens
   name "Duet"
   desc "Tool for using an iPad as a second display"
   homepage "https://www.duetdisplay.com/"
+
+  livecheck do
+    url "https://updates.duetdisplay.com/latestMac"
+    strategy :header_match do |headers|
+      headers["location"][/-(\d+(?:-\d+)*)\.zip/i, 1].tr("-", ".")
+    end
+  end
 
   auto_updates true
 
