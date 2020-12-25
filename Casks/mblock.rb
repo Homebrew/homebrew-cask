@@ -1,6 +1,6 @@
 cask "mblock" do
-  version "5.2.0"
-  sha256 "8a90d4e341b73adff1ff6db704426b6c343e5d2786f8183f5c52ec0240103abf"
+  version "5.3.0"
+  sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
 
   url "https://dl.makeblock.com/mblock#{version.major}/darwin/V#{version}.pkg",
       verified: "dl.makeblock.com/"
