@@ -10,5 +10,8 @@ cask "mblock" do
 
   pkg "V#{version}.pkg"
 
-  uninstall pkgutil: "com.makeblock.pkg.mblock"
+  uninstall pkgutil: [
+    "cc.mblock",
+    "com.makeblock.pkg.mblock",
+  ]
 end
