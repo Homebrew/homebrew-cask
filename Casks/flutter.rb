@@ -9,7 +9,6 @@ cask "flutter" do
   homepage "https://flutter.dev/"
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   binary "flutter/bin/dart"
   binary "flutter/bin/flutter"
