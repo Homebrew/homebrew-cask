@@ -4,10 +4,14 @@ cask "airdroid" do
 
   url "https://s3.amazonaws.com/dl.airdroid.com/AirDroid_Desktop_Client_#{version}.dmg",
       verified: "s3.amazonaws.com/dl.airdroid.com/"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://srv3.airdroid.com/p20/web/getbinaryredirect?type=dmg&channel=&version="
   name "AirDroid"
   desc "Cross-platform mobile device management suite"
   homepage "https://www.airdroid.com/"
+
+  livecheck do
+    url "https://srv3.airdroid.com/p20/web/getbinaryredirect?type=dmg&channel=&version="
+    strategy :header_match
+  end
 
   app "AirDroid.app"
 end
