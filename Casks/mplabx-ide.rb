@@ -3,9 +3,13 @@ cask "mplabx-ide" do
   sha256 "6a0422ff70cd3232f27267baf7a7b41b7a82e42103cf2ec98f2e83d4d45d358f"
 
   url "https://ww1.microchip.com/downloads/en/DeviceDoc/MPLABX-v#{version}-osx-installer.dmg"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.microchip.com/mplabx-ide-osx-installer"
   name "MPLab X IDE"
   homepage "https://www.microchip.com/mplab/mplab-x-ide"
+
+  livecheck do
+    url "https://www.microchip.com/mplabx-ide-osx-installer"
+    strategy :header_match
+  end
 
   app "mplab_ide.app", target: "microchip/mplab_ide.app"
   app "mplab_ipe.app", target: "microchip/mplab_ipe.app"
