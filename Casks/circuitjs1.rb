@@ -9,4 +9,9 @@ cask "circuitjs1" do
   homepage "https://www.falstad.com/circuit/"
 
   app "CircuitJS1.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.falstad.CircuitJS1.plist",
+    "~/Library/Saved Application State/com.falstad.CircuitJS1.savedState",
+  ]
 end
