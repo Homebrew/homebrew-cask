@@ -18,8 +18,7 @@ cask "emclient" do
 
   pkg "setup.pkg"
 
-  uninstall quit:    "application.com.apple.Safari.12886706636",
-            pkgutil: "com.emclient.mail.client.pkg"
+  uninstall pkgutil: "com.emclient.mail.client.pkg"
 
   zap trash: [
     "~/Library/Caches/com.emclient.mail.client",
