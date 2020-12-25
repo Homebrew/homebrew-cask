@@ -4,9 +4,13 @@ cask "mockuuups-studio" do
 
   url "https://binaries.mockuuups.com/Mockuuups%20Studio-#{version}-mac.zip",
       verified: "mockuuups.com/"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://mockuuups.studio/download/mac/"
   name "Mockuuups Studio"
   homepage "https://mockuuups.studio/"
+
+  livecheck do
+    url "https://mockuuups.studio/download/mac/"
+    strategy :header_match
+  end
 
   app "Mockuuups Studio.app"
 
