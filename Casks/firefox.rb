@@ -108,10 +108,14 @@ cask "firefox" do
 
   url "https://download-installer.cdn.mozilla.net/pub/firefox/releases/#{version}/mac/#{language}/Firefox%20#{version}.dmg",
       verified: "download-installer.cdn.mozilla.net/pub/firefox/releases/"
-  appcast "https://www.macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://download.mozilla.org/%3Fproduct=firefox-latest-ssl%26os=osx"
   name "Mozilla Firefox"
   desc "Web browser"
   homepage "https://www.mozilla.org/firefox/"
+
+  livecheck do
+    url "https://download.mozilla.org/?product=firefox-latest-ssl&os=osx"
+    strategy :header_match
+  end
 
   auto_updates true
   conflicts_with cask: [
