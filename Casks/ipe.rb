@@ -1,6 +1,6 @@
 cask "ipe" do
-  version "7.2.22"
-  sha256 "d73f18fc36c057848edaf3965bd4a1030e4ff677a62a70858eacf25e42ea275d"
+  version "7.2.23"
+  sha256 "2b8eb718a962fd3ccbbc43c64fc31e78d4eb4fe5da41df10ac693b0e98368bc4"
 
   url "https://dl.bintray.com/otfried/generic/ipe/#{version.major_minor}/ipe-#{version}-mac.dmg",
       verified: "bintray.com/otfried/"
