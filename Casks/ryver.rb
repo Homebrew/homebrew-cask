@@ -4,9 +4,13 @@ cask "ryver" do
 
   url "https://d3vkb1nw20iqfq.cloudfront.net/mac/Ryver-#{version}.dmg",
       verified: "d3vkb1nw20iqfq.cloudfront.net/"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://ryver.com/download/mac/stable"
   name "Ryver"
   homepage "https://ryver.com/"
+
+  livecheck do
+    url "https://ryver.com/download/mac/stable"
+    strategy :header_match
+  end
 
   app "Ryver.app"
 end
