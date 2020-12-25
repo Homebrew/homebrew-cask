@@ -4,10 +4,14 @@ cask "kindle" do
 
   url "https://kindleformac.s3.amazonaws.com/#{version.patch}/KindleForMac-#{version}.dmg",
       verified: "kindleformac.s3.amazonaws.com/"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.amazon.com/kindlemacdownload/ref=klp_hz_mac"
   name "Kindle for Mac"
   desc "Interface for reading and syncing eBooks"
   homepage "https://www.amazon.com/gp/digital/fiona/kcp-landing-page"
+
+  livecheck do
+    url "https://www.amazon.com/kindlemacdownload/ref=klp_hz_mac"
+    strategy :header_match
+  end
 
   app "Kindle.app"
 
