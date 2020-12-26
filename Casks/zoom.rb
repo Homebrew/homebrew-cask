@@ -4,10 +4,14 @@ cask "zoom" do
 
   url "https://d11yldzmag5yn.cloudfront.net/prod/#{version}/Zoom.pkg",
       verified: "d11yldzmag5yn.cloudfront.net/"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://zoom.us/client/latest/Zoom.pkg"
   name "Zoom.us"
   desc "Video communication and virtual meeting platform"
   homepage "https://www.zoom.us/"
+
+  livecheck do
+    url "https://zoom.us/client/latest/Zoom.pkg"
+    strategy :header_match
+  end
 
   # Do not add `auto_updates`. While supporting an auto-update mechanism, this software is more inconvenient than most
   # See https://github.com/Homebrew/homebrew-cask/pull/93083
