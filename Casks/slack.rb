@@ -4,10 +4,14 @@ cask "slack" do
 
   url "https://downloads.slack-edge.com/releases/macos/#{version}/prod/x64/Slack-#{version}-macOS.dmg",
       verified: "downloads.slack-edge.com/"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://slack.com/ssb/download-osx"
   name "Slack"
   desc "Team communication and collaboration software"
   homepage "https://slack.com/"
+
+  livecheck do
+    url "https://slack.com/ssb/download-osx"
+    strategy :header_match
+  end
 
   auto_updates true
   conflicts_with cask: "homebrew/cask-versions/slack-beta"
