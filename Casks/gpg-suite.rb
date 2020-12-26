@@ -30,7 +30,7 @@ cask "gpg-suite" do
   },
             pkgutil:   "org.gpgtools.*",
             quit:      [
-              "application.org.gpgtools.gpgmail.upgrader.*",
+              "application.org.gpgtools.gpgmail.upgrader.12890015277",
               "com.apple.mail",
               "org.gpgtools.gpgkeychainaccess",
               "org.gpgtools.gpgkeychain",
