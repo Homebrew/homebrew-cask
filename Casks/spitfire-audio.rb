@@ -4,10 +4,17 @@ cask "spitfire-audio" do
 
   url "https://d1t3zg51rvnesz.cloudfront.net/p/files/lm/#{version.after_comma}/mac/SpitfireAudio-Mac-#{version.before_comma}.dmg",
       verified: "d1t3zg51rvnesz.cloudfront.net/"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.spitfireaudio.com/library-manager/download/mac/"
   name "Spitfire Audio"
   desc "Downloade manager for Spitfire audio libraries"
   homepage "https://www.spitfireaudio.com/info/library-manager/"
+
+  livecheck do
+    url "https://www.spitfireaudio.com/library-manager/download/mac/"
+    strategy :header_match do |headers|
+      match = headers["location"].match(%r{/(\d+)/.*-(\d+(?:\.\d+)*)\.dmg}i)
+      "#{match[2]},#{match[1]}"
+    end
+  end
 
   auto_updates true
 
