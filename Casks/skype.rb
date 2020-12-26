@@ -4,10 +4,14 @@ cask "skype" do
 
   url "https://endpoint920510.azureedge.net/s4l/s4l/download/mac/Skype-#{version}.dmg",
       verified: "endpoint920510.azureedge.net/s4l/s4l/download/mac/"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://go.skype.com/mac.download"
   name "Skype"
   desc "Video chat, voice call and instant messaging application"
   homepage "https://www.skype.com/"
+
+  livecheck do
+    url "https://go.skype.com/mac.download"
+    strategy :header_match
+  end
 
   auto_updates true
 
