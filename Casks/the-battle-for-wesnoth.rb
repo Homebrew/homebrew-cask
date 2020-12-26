@@ -4,9 +4,13 @@ cask "the-battle-for-wesnoth" do
 
   url "https://downloads.sourceforge.net/wesnoth/Wesnoth_#{version}.dmg",
       verified: "sourceforge.net/wesnoth/"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://sourceforge.net/projects/wesnoth/files/latest/download&user_agent=Intel%20Mac%20OS%20X"
   name "The Battle for Wesnoth"
   homepage "https://wesnoth.org/"
+
+  livecheck do
+    url "https://sourceforge.net/projects/wesnoth/files/latest/download&user_agent=Intel%20Mac%20OS%20X"
+    strategy :header_match
+  end
 
   app "The Battle for Wesnoth.app"
 end
