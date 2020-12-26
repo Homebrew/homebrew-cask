@@ -1,4 +1,4 @@
-cask "okta-advanced-server-access-client" do
+cask "okta-advanced-server-access" do
   version "1.50.4"
   sha256 "76f2126da3f2e889db6148704f0d73c9529e3fa34bb7e08c1622c5a9f6ea60f7"
 
