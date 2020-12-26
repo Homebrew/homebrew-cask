@@ -4,9 +4,13 @@ cask "timely" do
 
   url "https://github.com/Timely/desktop-releases/releases/download/darwin-x64-prod-#{version}/Timely-#{version}.dmg",
       verified: "github.com/Timely/"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://app.timelyapp.com/download/mac"
   name "Timely"
   homepage "https://timelyapp.com/"
+
+  livecheck do
+    url "https://app.timelyapp.com/download/mac"
+    strategy :header_match
+  end
 
   app "Timely.app"
 end
