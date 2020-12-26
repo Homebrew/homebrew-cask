@@ -3,10 +3,14 @@ cask "gpg-suite" do
   sha256 "e2ede6b317d53d1e321342a6f7dd5ab6b123a4900aa8f1eab89b29051a2a4742"
 
   url "https://releases.gpgtools.org/GPG_Suite-#{version}.dmg"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://gpgtools.org/download"
   name "GPG Suite"
   desc "Tools to protect your emails and files"
   homepage "https://gpgtools.org/"
+
+  livecheck do
+    url "https://gpgtools.org/download"
+    strategy :header_match
+  end
 
   auto_updates true
   conflicts_with cask: "gpg-suite-nightly"
@@ -29,6 +33,7 @@ cask "gpg-suite" do
               "com.apple.mail",
               "org.gpgtools.gpgkeychainaccess",
               "org.gpgtools.gpgkeychain",
+              "org.gpgtools.gpgmail.upgrader",
               "org.gpgtools.gpgservices",
               # TODO: add "killall -kill gpg-agent"
             ],
