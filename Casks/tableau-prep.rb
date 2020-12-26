@@ -3,10 +3,15 @@ cask "tableau-prep" do
   sha256 "be9a0483d9438d4b09972c3b30bc400ad7bc86a4efedf91cec6423a4dc03a023"
 
   url "https://downloads.tableau.com/esdalt/tableau_prep/#{version}/TableauPrep-#{version.dots_to_hyphens}.dmg"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.tableau.com/downloads/prep/mac",
-          must_contain: version.dots_to_hyphens
   name "Tableau Prep"
   homepage "https://www.tableau.com/support/releases/prep"
+
+  livecheck do
+    url "https://www.tableau.com/downloads/prep/mac"
+    strategy :header_match do |headers|
+      headers["location"][/-(\d+-\d+-\d+)\.dmg/i, 1].tr("-", ".")
+    end
+  end
 
   depends_on macos: ">= :el_capitan"
 
