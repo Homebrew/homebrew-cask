@@ -4,9 +4,13 @@ cask "softraid" do
 
   url "https://download.owcdigital.com/softraid/mac/#{version.major}/softraid/SoftRAID%20#{version}.dmg",
       verified: "download.owcdigital.com/softraid/"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://download.owcdigital.com/softraid5/mac"
   name "SoftRAID"
   homepage "https://www.softraid.com/"
+
+  livecheck do
+    url "https://download.owcdigital.com/softraid5/mac"
+    strategy :header_match
+  end
 
   app "SoftRAID #{version}/SoftRAID #{version}.app"
 end
