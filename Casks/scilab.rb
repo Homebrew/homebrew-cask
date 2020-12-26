@@ -16,7 +16,7 @@ cask "scilab" do
   depends_on macos: ">= :high_sierra"
 
   app "scilab-branch-#{version.major_minor}.app"
-  binary "#{appdir}/Scilab-branch-#{version.major_minor}.app/Contents/MacOS/bin/scilab"
+  binary "#{appdir}/Scilab-branch-#{version.major_minor}.app/Contents/bin/scilab"
   binary "#{appdir}/Scilab-branch-#{version.major_minor}.app/Contents/bin/scilab-cli"
 
   caveats do
