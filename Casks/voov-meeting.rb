@@ -4,11 +4,18 @@ cask "voov-meeting" do
 
   url "https://down.qq.com/download/VooVMeeting_#{version.after_comma}_#{version.before_comma}.publish.dmg",
       verified: "down.qq.com/download/"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://voovmeeting.com/download/darwin"
   name "VooV Meeting"
   name "Tencent Meeting International Version"
   desc "Cross-border video conferencing software"
   homepage "https://voovmeeting.com/"
+
+  livecheck do
+    url "https://voovmeeting.com/download/darwin"
+    strategy :header_match do |headers|
+      match = headers["location"].match(/_(\d+)_(\d+(?:\.\d+)*)\.publish\.dmg/)
+      "#{match[2]},#{match[1]}"
+    end
+  end
 
   app "VooV Meeting.app"
 
