@@ -123,7 +123,7 @@ module Check
     running_apps = diff[:loaded_launchjobs]
                    .added
                    .select { |id| id.match?(/\.\d+\Z/) }
-                   .map { |id| id.sub(/\.\d+\Z/, "") }
+                   .map { |id| id.sub(/\A(?:application\.)?(.*?)(?:\.\d+){0,2}\Z/, '\1') }
 
     loaded_launchjobs = diff[:loaded_launchjobs]
                         .added
