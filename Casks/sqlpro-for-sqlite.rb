@@ -4,10 +4,14 @@ cask "sqlpro-for-sqlite" do
 
   url "https://d3fwkemdw8spx3.cloudfront.net/sqlite/SQLProSQLite.#{version}.app.zip",
       verified: "d3fwkemdw8spx3.cloudfront.net/sqlite/"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.sqlitepro.com/download.php"
   name "SQLPro for SQLite"
   desc "Advanced sqlite editor"
   homepage "https://www.sqlitepro.com/"
+
+  livecheck do
+    url "https://www.sqlitepro.com/download.php"
+    strategy :header_match
+  end
 
   app "SQLPro for SQLite.app"
 
