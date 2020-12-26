@@ -17,5 +17,6 @@ cask "trojanx" do
   zap trash: [
     "~/Library/Application Support/TrojanX",
     "~/Library/Preferences/TrojanX.plist",
+    "~/.TrojanX",
   ]
 end
