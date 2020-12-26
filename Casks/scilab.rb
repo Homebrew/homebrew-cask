@@ -17,7 +17,7 @@ cask "scilab" do
 
   app "scilab-branch-#{version.major_minor}.app"
   binary "#{appdir}/Scilab-branch-#{version.major_minor}.app/Contents/MacOS/bin/scilab"
-  binary "#{appdir}/Scilab-branch-#{version.major_minor}.app/Contents/MacOS/bin/scilab-cli"
+  binary "#{appdir}/Scilab-branch-#{version.major_minor}.app/Contents/bin/scilab-cli"
 
   caveats do
     depends_on_java "8"
