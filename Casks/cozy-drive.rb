@@ -4,9 +4,13 @@ cask "cozy-drive" do
 
   url "https://nuts.cozycloud.cc/download/channel/stable/CozyDrive-#{version}.dmg",
       verified: "nuts.cozycloud.cc/"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=https://nuts.cozycloud.cc/download/channel/stable/osx"
   name "Cozy Drive"
   homepage "https://cozy.io/"
+
+  livecheck do
+    url "https://nuts.cozycloud.cc/download/channel/stable/osx"
+    strategy :header_match
+  end
 
   app "Cozy Drive.app"
 end
