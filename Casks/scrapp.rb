@@ -4,10 +4,14 @@ cask "scrapp" do
 
   url "https://scrap.blob.core.windows.net/download/#{version}/Scrapp.zip",
       verified: "scrap.blob.core.windows.net/"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://scrapp.me/download/mac"
   name "Scrapp"
   desc "Screenshot tool with cloud storage"
   homepage "https://scrapp.me/"
+
+  livecheck do
+    url "https://scrapp.me/download/mac"
+    strategy :header_match
+  end
 
   app "Scrapp.app"
 
