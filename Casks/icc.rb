@@ -1,14 +1,22 @@
 cask "icc" do
-  version "1.0,r7611"
-  sha256 "c08ac8670865889adb0df409afe6ae384d20fa2981115f299dcd79d0dab99401"
+  version "1.0,7648"
+  sha256 "d512be0aaa6e7189f863b0b80bb4e8cc0fdf86c42bbdec13b8cd3e09218931dd"
 
-  url "http://download.chessclub.com/desktop/mac/ICCforMac.#{version.after_comma}.pkg"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=http://download.chessclub.com/desktop/mac/ICCforMac.latest.pkg",
-          must_contain: version.after_comma
-  name "ICC for Mac"
-  homepage "https://www.chessclub.com/download-software/icc-for-mac"
+  url "https://s3-us-west-2.amazonaws.com/download.chessclub.com/desktop/mac/ICCforMac.r#{version.after_comma}.pkg",
+      verified: "s3-us-west-2.amazonaws.com/download.chessclub.com/"
+  name "International Chess Club"
+  desc "Chess club client"
+  homepage "https://www.chessclub.com/"
 
-  pkg "ICCforMac.#{version.after_comma}.pkg"
+  livecheck do
+    url "https://www.chessclub.com/software-download/icc-for-mac"
+    strategy :page_match do |page|
+      match = page.match(/>\s*(\d+(?:\.\d+)*)\s*r(\d+)\s*/i)
+      "#{match[1]},#{match[2]}"
+    end
+  end
+
+  pkg "ICCforMac.r#{version.after_comma}.pkg"
 
   uninstall pkgutil: "com.chessclub.*"
 
