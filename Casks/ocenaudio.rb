@@ -10,10 +10,14 @@ cask "ocenaudio" do
 
     url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_mojave.dmg"
   end
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=https://www.ocenaudio.com/downloads/index.php/ocenaudio_mojave.dmg"
   name "ocenaudio"
   desc "Audio editor"
   homepage "https://www.ocenaudio.com/en"
+
+  livecheck do
+    url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_mojave.dmg"
+    strategy :header_match
+  end
 
   depends_on macos: ">= :sierra"
 
