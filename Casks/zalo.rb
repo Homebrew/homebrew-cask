@@ -4,9 +4,13 @@ cask "zalo" do
 
   url "https://res-zaloapp-aka.zdn.vn/mac/ZaloSetup-#{version}.dmg#",
       verified: "res-zaloapp-aka.zdn.vn/mac/"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?user_agent=Macintosh&url=https://zalo.me/download/zalo-pc"
   name "Zalo"
   homepage "https://zalo.me/"
+
+  livecheck do
+    url "https://zalo.me/download/zalo-pc"
+    strategy :header_match
+  end
 
   app "Zalo.app"
 
