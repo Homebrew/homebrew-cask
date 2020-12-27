@@ -22,7 +22,7 @@ cask "basictex" do
   ]
   depends_on macos: ">= :high_sierra"
 
-  pkg "mactex-basictex-#{version.no_dots}.pkg"
+  pkg "mactex-basictex-#{version.no_hyphens}.pkg"
 
   uninstall pkgutil: "org.tug.mactex.basictex#{version.major}",
             delete:  [
