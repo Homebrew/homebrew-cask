@@ -1,5 +1,5 @@
 cask "smooze" do
-  version "1.9.10,450"
+  version "1.9.11,460"
   sha256 :no_check
 
   url "https://smooze.co/updates/Smooze.dmg"
