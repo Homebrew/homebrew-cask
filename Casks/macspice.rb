@@ -10,6 +10,8 @@ cask "macspice" do
     url "https://www.macspice.com/AppCast-v2.xml"
     strategy :sparkle
   end
+
+  app "MacSpice.app"
   
   zap trash: [
     "~/Documents/MacSpice",
@@ -17,6 +19,4 @@ cask "macspice" do
     "~/Library/Preferences/uk.co.cdhw.MacSpice.plist",
     "~/Library/Saved Application State/uk.co.cdhw.MacSpice.savedState",
   ]
-  
-  app "MacSpice.app"
 end
