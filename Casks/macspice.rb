@@ -12,7 +12,7 @@ cask "macspice" do
   end
 
   app "MacSpice.app"
-  
+
   zap trash: [
     "~/Documents/MacSpice",
     "~/Library/Application Support/MacSpice",
