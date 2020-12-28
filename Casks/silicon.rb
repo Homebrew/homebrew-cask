@@ -1,4 +1,4 @@
-cask "digidna-silicon" do
+cask "silicon" do
   version "1.0.3"
   sha256 "4f6cf3f6b6cf0b8f067995a292538f122278226fa067427bf184b179076cbf79"
 
