@@ -50,6 +50,7 @@ cask "virtualbox" do
             delete:  "/usr/local/bin/vboximg-mount"
 
   zap trash: [
+    "/Library/LaunchDaemons/org.virtualbox.startup.plist",
     "/Library/Application Support/VirtualBox",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.virtualbox.app.virtualbox.sfl*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.virtualbox.app.virtualboxvm.sfl*",
