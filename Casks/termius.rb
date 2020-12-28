@@ -1,5 +1,5 @@
 cask "termius" do
-  version "7.2.1"
+  version "7.3.2"
   sha256 :no_check
 
   url "https://s3.amazonaws.com/termius.desktop.autoupdate/mac/Termius.dmg",
