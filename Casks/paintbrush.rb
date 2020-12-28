@@ -22,5 +22,7 @@ cask "paintbrush" do
     "~/Library/Preferences/com.soggywaffles.Paintbrush.LSSharedFileList.plist",
     "~/Library/Preferences/com.soggywaffles.Paintbrush.plist",
     "~/Library/Caches/com.soggywaffles.Paintbrush",
+    "~/Library/Application Scripts/com.soggywaffles.paintbrush",
+    "~/Library/Containers/com.soggywaffles.paintbrush",
   ]
 end
