@@ -1,5 +1,5 @@
 cask "snagit" do
-  version "2021.1.0,98011"
+  version "2021.1.0,98022"
   sha256 :no_check
 
   url "https://download.techsmith.com/snagitmac/releases/Snagit.dmg"
