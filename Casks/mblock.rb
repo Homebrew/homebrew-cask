@@ -4,7 +4,7 @@ cask "mblock" do
 
   url "https://dl.makeblock.com/mblock#{version.major}/darwin/V#{version}.pkg",
       verified: "dl.makeblock.com/"
-  appcast "https://www.mblock.cc/releaselogs-mblock5/"
+  appcast "https://mblock.makeblock.com/en-us/download/"
   name "mBlock"
   homepage "https://www.mblock.cc/"
 
