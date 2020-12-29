@@ -4,10 +4,14 @@ cask "sqlpro-for-postgres" do
 
   url "https://d3fwkemdw8spx3.cloudfront.net/postgres/SQLProPostgres.#{version}.app.zip",
       verified: "d3fwkemdw8spx3.cloudfront.net/postgres/"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?user_agent=Macintosh&url=https://www.macpostgresclient.com/download.php"
   name "SQLPro for Postgres"
   desc "Lightweight PostgresSQL database client"
   homepage "https://www.macpostgresclient.com/SQLProPostgres"
+
+  livecheck do
+    url "https://www.macpostgresclient.com/download.php"
+    strategy :header_match
+  end
 
   app "SQLPro for Postgres.app"
 

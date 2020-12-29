@@ -4,11 +4,15 @@ cask "night-owl" do
 
   url "https://aki-null.net/yf/NightOwl.zip",
       verified: "aki-null.net/"
-  appcast "https://sites.google.com/site/yorufukurou/distribution/appcast.xml"
   name "NightOwl"
   name "YoruFukurou"
   desc "Twitter client app"
   homepage "https://sites.google.com/site/yorufukurou/home-en"
+
+  livecheck do
+    url "https://sites.google.com/site/yorufukurou/distribution/appcast.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :mojave"
 

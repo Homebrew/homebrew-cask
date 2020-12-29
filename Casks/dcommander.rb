@@ -1,13 +1,18 @@
 cask "dcommander" do
-  version "3.8.9,3891"
+  version "3.8.9.1"
   sha256 :no_check
 
   url "https://devstorm-apps.com/dc/download.php"
-  appcast "https://www.macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=https://devstorm-apps.com/dc/download.php",
-          must_contain: version.after_comma
   name "DCommander"
   desc "Two-pane file manager"
   homepage "https://devstorm-apps.com/dc/"
+
+  livecheck do
+    url "https://devstorm-apps.com/dc/download.php"
+    strategy :header_match do |headers|
+      headers["content-disposition"][/DCommander-(\d+)\.dmg/i, 1].split("", 4).join(".")
+    end
+  end
 
   app "DCommander.app"
 

@@ -24,10 +24,14 @@ cask "karabiner-elements" do
     pkg "Karabiner-Elements.pkg"
   end
 
-  appcast "https://pqrs.org/osx/karabiner/files/karabiner-elements-appcast.xml"
   name "Karabiner Elements"
   desc "Keyboard customizer"
   homepage "https://pqrs.org/osx/karabiner/"
+
+  livecheck do
+    url "https://pqrs.org/osx/karabiner/files/karabiner-elements-appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :el_capitan"

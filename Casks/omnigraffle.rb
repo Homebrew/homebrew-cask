@@ -13,10 +13,14 @@ cask "omnigraffle" do
     url "https://downloads.omnigroup.com/software/MacOSX/10.14/OmniGraffle-#{version}.dmg"
   end
 
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.omnigroup.com/download/latest/omnigraffle/"
   name "OmniGraffle"
   desc "Visual communication software"
   homepage "https://www.omnigroup.com/omnigraffle/"
+
+  livecheck do
+    url "https://www.omnigroup.com/download/latest/omnigraffle/"
+    strategy :header_match
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"

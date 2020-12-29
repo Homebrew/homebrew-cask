@@ -1,8 +1,8 @@
 cask "session" do
-  version "1.4.1"
-  sha256 "88a4c6eb5bfaf634ccbc5b167075b223693fbdd6583418a51377aaefa7a6cf17"
+  version "1.4.4"
+  sha256 "af40febaaaabc3a5b67f4b8db4c32293cc63ba2d73a56e878ee81a800c183fbe"
 
-  url "https://github.com/loki-project/session-desktop/releases/download/v#{version}/session-messenger-desktop-mac-#{version}.dmg",
+  url "https://github.com/loki-project/session-desktop/releases/download/v#{version}/session-desktop-mac-#{version}.dmg",
       verified: "github.com/loki-project/session-desktop/"
   appcast "https://github.com/loki-project/session-desktop/releases.atom"
   name "Session"

@@ -4,9 +4,13 @@ cask "windocd" do
 
   url "https://download.moapp.software/windOCD.zip",
       verified: "download.moapp.software/"
-  appcast "https://sparkle.moapp.software/windocd.xml"
   name "windOCD"
   homepage "https://windocd.myownapp.com/"
+
+  livecheck do
+    url "https://sparkle.moapp.software/windocd.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :mojave"
 

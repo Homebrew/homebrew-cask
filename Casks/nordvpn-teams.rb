@@ -1,13 +1,17 @@
 cask "nordvpn-teams" do
-  version "1.7.0"
+  version "1.7.1,1276"
   sha256 :no_check
 
   url "https://downloads.nordteams.com/mac/latest/NordVPNTeams.pkg",
       verified: "downloads.nordteams.com/"
-  appcast "https://downloads.nordteams.com/mac/update.xml"
   name "NordVPN Teams"
   desc "Security software for business"
   homepage "https://nordvpnteams.com/"
+
+  livecheck do
+    url "https://downloads.nordteams.com/mac/update.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 

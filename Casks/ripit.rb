@@ -3,10 +3,14 @@ cask "ripit" do
   sha256 :no_check
 
   url "http://files.thelittleappfactory.com/ripit/RipIt.zip"
-  appcast "http://files.thelittleappfactory.com/ripit/appcast.xml"
   name "RipIt"
   desc "DVD ripper"
   homepage "http://thelittleappfactory.com/ripit/"
+
+  livecheck do
+    url "http://files.thelittleappfactory.com/ripit/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 

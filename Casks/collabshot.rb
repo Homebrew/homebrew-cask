@@ -4,9 +4,13 @@ cask "collabshot" do
 
   url "https://collabshot.s3.amazonaws.com/desktop/builds/mac/Collabshot_#{version}.dmg",
       verified: "collabshot.s3.amazonaws.com/"
-  appcast "https://www.macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://api.collabshot.com/desktop/latest/mac"
   name "Collabshot"
   homepage "https://www.collabshot.com/"
+
+  livecheck do
+    url "https://api.collabshot.com/desktop/latest/mac"
+    strategy :header_match
+  end
 
   app "Collabshot.app"
 end

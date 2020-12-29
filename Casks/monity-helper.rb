@@ -1,5 +1,5 @@
 cask "monity-helper" do
-  version :latest
+  version "1.2.5,50"
   sha256 :no_check
 
   url "https://www.monityapp.com/download/MonityHelper.pkg"
@@ -8,10 +8,12 @@ cask "monity-helper" do
 
   pkg "MonityHelper.pkg"
 
-  uninstall pkgutil: [
-    "com.Monity.Helper.monityHelper.com.Monity.Helper.pkg",
-    "com.Monity.Helper.monityHelper.MonityHelper.pkg",
-    "com.Monity.Helper.monityHelper.postflight.pkg",
-    "com.Monity.Helper.monityHelper.preflight.pkg",
-  ]
+  uninstall quit:      "com.Monity.Helper",
+            launchctl: "com.Monity.Helper",
+            pkgutil:   [
+              "com.Monity.Helper.monityHelper.com.Monity.Helper.pkg",
+              "com.Monity.Helper.monityHelper.MonityHelper.pkg",
+              "com.Monity.Helper.monityHelper.postflight.pkg",
+              "com.Monity.Helper.monityHelper.preflight.pkg",
+            ]
 end

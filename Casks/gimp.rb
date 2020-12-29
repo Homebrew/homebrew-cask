@@ -1,6 +1,6 @@
 cask "gimp" do
-  version "2.10.14"
-  sha256 "60631e39a1042c38cc281bc3213a76be109fb909b9671fb03c55cf5cf31ea632"
+  version "2.10.22"
+  sha256 "8e3b2bf8ad9c095324c1c7df2e03aaa3e1edf432efbda67baad5dbb780a95280"
 
   url "https://download.gimp.org/pub/gimp/v#{version.major_minor}/osx/gimp-#{version}-x86_64.dmg"
   appcast "https://download.gimp.org/pub/gimp/v#{version.major_minor}/osx/"
@@ -8,6 +8,8 @@ cask "gimp" do
   name "GNU Image Manipulation Program"
   desc "Free and open-source image editor"
   homepage "https://www.gimp.org/"
+
+  auto_updates true
 
   app "GIMP-#{version.major_minor}.app"
   binary "#{appdir}/GIMP-#{version.major_minor}.app/Contents/MacOS/gimp"

@@ -3,10 +3,14 @@ cask "abstract" do
   sha256 "9ae4360c6aef1463d5c7908298037b96cb12622b0ef6a7f776e7f02123a77937"
 
   url "https://downloads.goabstract.com/mac/Abstract-#{version}.zip"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://api.goabstract.com/releases/latest/download"
   name "Abstract"
   desc "Collaborative design tool with support for Sketch files"
   homepage "https://www.goabstract.com/"
+
+  livecheck do
+    url "https://api.goabstract.com/releases/latest/download"
+    strategy :header_match
+  end
 
   auto_updates true
 

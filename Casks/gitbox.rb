@@ -4,9 +4,13 @@ cask "gitbox" do
 
   url "https://d1oa71y4zxyi0a.cloudfront.net/gitbox-#{version}-ml.zip",
       verified: "d1oa71y4zxyi0a.cloudfront.net/"
-  appcast "http://gitboxapp.com/updates.xml"
   name "Gitbox"
   homepage "http://gitboxapp.com/"
+
+  livecheck do
+    url "http://gitboxapp.com/updates.xml"
+    strategy :sparkle
+  end
 
   app "Gitbox.app"
 

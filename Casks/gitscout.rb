@@ -1,5 +1,5 @@
 cask "gitscout" do
-  version "1.0.0-rc.3"
+  version "1.0.0-rc.3,1c55c97"
   sha256 :no_check
 
   url "https://gitscout.com/marshmallows"

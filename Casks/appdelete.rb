@@ -3,10 +3,14 @@ cask "appdelete" do
   sha256 :no_check
 
   url "https://www.reggieashworth.com/downloads/AppDelete.dmg"
-  appcast "https://www.reggieashworth.com/AD#{version.major}Appcast.xml"
   name "AppDelete"
   desc "App uninstaller"
   homepage "https://www.reggieashworth.com/appdelete.html"
+
+  livecheck do
+    url "https://www.reggieashworth.com/AD#{version.major}Appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 

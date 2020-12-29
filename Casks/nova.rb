@@ -14,5 +14,14 @@ cask "nova" do
   app "Nova.app"
   binary "#{appdir}/Nova.app/Contents/SharedSupport/nova"
 
-  zap trash: "~/Library/Application Support/Nova"
+  zap trash: [
+    "~/Library/Application Scripts/com.panic.Nova.NovaQuickLookPreview",
+    "~/Library/Application Scripts/com.panic.Nova.NovaQuickLookThumbnail",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.panic.nova.sfl2",
+    "~/Library/Caches/com.panic.Nova",
+    "~/Library/Containers/com.panic.Nova.NovaQuickLookPreview",
+    "~/Library/Containers/com.panic.Nova.NovaQuickLookThumbnail",
+    "~/Library/Preferences/com.panic.Nova.plist",
+    "~/Library/WebKit/com.panic.Nova",
+  ]
 end

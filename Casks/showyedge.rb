@@ -4,10 +4,14 @@ cask "showyedge" do
 
   url "https://github.com/pqrs-org/ShowyEdge/releases/download/v#{version}/ShowyEdge-#{version}.dmg",
       verified: "github.com/pqrs-org/ShowyEdge/"
-  appcast "https://appcast.pqrs.org/showyedge-appcast.xml"
   name "ShowyEdge"
   desc "Visible indicator of the current input source"
   homepage "https://pqrs.org/osx/ShowyEdge/"
+
+  livecheck do
+    url "https://appcast.pqrs.org/showyedge-appcast.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :catalina"
 

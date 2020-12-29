@@ -4,9 +4,13 @@ cask "midikeys" do
 
   url "https://github.com/flit/MidiKeys/releases/download/v#{version}/MidiKeys_#{version.major_minor}.zip",
       verified: "github.com/flit/MidiKeys/"
-  appcast "https://immosw.com/versions/midikeys/appcast.xml"
   name "MidiKeys"
   homepage "https://www.manyetas.com/creed/midikeys.html"
+
+  livecheck do
+    url "https://immosw.com/versions/midikeys/appcast.xml"
+    strategy :sparkle
+  end
 
   app "MidiKeys.app"
 end

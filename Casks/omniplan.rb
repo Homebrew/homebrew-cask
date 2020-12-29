@@ -9,10 +9,14 @@ cask "omniplan" do
     url "https://downloads.omnigroup.com/software/MacOSX/10.14/OmniPlan-#{version}.dmg"
   end
 
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.omnigroup.com/download/latest/omniplan/"
   name "OmniPlan"
   desc "Project planning and management software"
   homepage "https://www.omnigroup.com/omniplan/"
+
+  livecheck do
+    url "https://www.omnigroup.com/download/latest/omniplan/"
+    strategy :header_match
+  end
 
   auto_updates true
   conflicts_with cask: "homebrew/cask-versions/omniplan3"

@@ -3,10 +3,14 @@ cask "hazeover" do
   sha256 :no_check
 
   url "https://hazeover.com/HazeOver.dmg"
-  appcast "https://hazeover.com/updates.xml"
   name "HazeOver"
   desc "Windows manager and desktop organizer"
   homepage "https://hazeover.com/"
+
+  livecheck do
+    url "https://hazeover.com/updates.xml"
+    strategy :sparkle
+  end
 
   app "HazeOver.app"
 

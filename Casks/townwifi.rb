@@ -4,9 +4,13 @@ cask "townwifi" do
 
   url "https://storage.googleapis.com/townwifi-downloads/mac/update/TownWifi_UD_#{version.after_comma}.dmg",
       verified: "storage.googleapis.com/townwifi-downloads/"
-  appcast "https://storage.googleapis.com/townwifi-downloads/mac/update/appcast.xml"
   name "TownWiFi"
   homepage "https://townwifi.jp/"
+
+  livecheck do
+    url "https://storage.googleapis.com/townwifi-downloads/mac/update/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 

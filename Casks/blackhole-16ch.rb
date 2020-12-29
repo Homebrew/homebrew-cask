@@ -10,5 +10,20 @@ cask "blackhole-16ch" do
 
   pkg "BlackHole16ch.v#{version}.pkg"
 
-  uninstall pkgutil: "audio.existential.BlackHole"
+  uninstall_postflight do
+    system_command "/bin/launchctl",
+                   args:         [
+                     "kickstart",
+                     "-kp",
+                     "system/com.apple.audio.coreaudiod",
+                   ],
+                   sudo:         true,
+                   must_succeed: true
+  end
+
+  uninstall quit:    [
+    "com.apple.audio.AudioMIDISetup",
+    "com.apple.systempreferences",
+  ],
+            pkgutil: "audio.existential.BlackHole"
 end
