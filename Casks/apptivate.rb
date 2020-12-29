@@ -1,5 +1,5 @@
 cask "apptivate" do
-  version "2.2,14"
+  version "2.2.1,15"
   sha256 :no_check
 
   url "http://www.apptivateapp.com/resources/Apptivate.app.zip"
