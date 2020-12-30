@@ -28,5 +28,8 @@ cask "dash" do
     "~/Library/Cookies/com.kapeli.dashdoc.binarycookies",
     "~/Library/Logs/Dash",
     "~/Library/Preferences/com.kapeli.dashdoc.plist",
+    "~/Library/WebKit/com.kapeli.dashdoc",
+    "~/Library/Saved Application State/com.kapeli.dashdoc.savedState",
+    "~/Library/HTTPStorages/com.kapeli.dashdoc.binarycookies",
   ]
 end
