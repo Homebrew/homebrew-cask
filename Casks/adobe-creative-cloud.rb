@@ -22,7 +22,7 @@ cask "adobe-creative-cloud" do
 
   uninstall_postflight do
     stdout, * = system_command "/bin/launchctl", args: ["print", "gui/#{Process.uid}"]
-    ccx_processes = stdout.lines.grep(/com\.adobe\.CCXProcess\.\d{5}/) { $& }.uniq
+    ccx_processes = stdout.lines.grep(/com\.adobe\.CCXProcess\.\d{5}/) { Regexp.last_match(0) }.uniq
     ccx_processes.each { |id| system "/bin/launchctl", "bootout", "gui/#{Process.uid}/#{id}" }
   end
 
