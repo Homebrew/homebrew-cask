@@ -3,7 +3,8 @@ cask "operator" do
   sha256 :no_check
 
   url "https://download.prelude.org/latest?platform=darwin&variant=zip"
-  appcast "https://s3.amazonaws.com/operator.versions/dist/latest-mac.yml"
+  appcast "https://s3.amazonaws.com/operator.versions/dist/latest-mac.yml",
+          must_contain: version.major_minor_patch
   name "Operator"
   desc "Prelude Operator is a desktop adversary emulation platform"
   homepage "https://www.prelude.org/"
