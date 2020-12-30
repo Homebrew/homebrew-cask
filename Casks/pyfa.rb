@@ -9,4 +9,10 @@ cask "pyfa" do
   homepage "https://github.com/pyfa-org/Pyfa"
 
   app "pyfa.app"
+
+  zap trash: [
+    "~/Library/Caches/org.pyfaorg.pyfa",
+    "~/Library/Preferences/org.pyfaorg.pyfa.plist",
+    "~/Library/Saved Application State/org.pyfaorg.pyfa.savedState",
+  ]
 end
