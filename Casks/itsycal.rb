@@ -6,8 +6,8 @@ cask "itsycal" do
     version "0.11.17"
     sha256 "fda1ba5611deaf4d5b834118b3af37ea9c5d08d1f8c813d04e7dd0552a270e11"
   else
-    version "0.12.5,2043"
-    sha256 "f1cc5d6afc8e0b38ba436eeeb404d6e32f2f109658624d99363de8c32facff25"
+    version "0.12.6,2052"
+    sha256 "ff9f219d67813dcc27b85c1fefa934725bf857f4c77a52ecde15739ba2d39fb6"
   end
 
   url "https://itsycal.s3.amazonaws.com/Itsycal-#{version.before_comma}.zip",
