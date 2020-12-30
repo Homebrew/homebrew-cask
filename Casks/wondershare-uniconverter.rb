@@ -1,5 +1,5 @@
 cask "wondershare-uniconverter" do
-  version "12.5.2.6"
+  version "12.5.3.11"
   sha256 :no_check
 
   url "https://download.wondershare.com/cbs_down/video-converter-ultimate-mac_full735.dmg"
