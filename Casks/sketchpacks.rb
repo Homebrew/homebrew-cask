@@ -1,5 +1,5 @@
 cask "sketchpacks" do
-  version :latest
+  version "0.6.2"
   sha256 :no_check
 
   url "https://sketchpacks-releases.herokuapp.com/download/osx",
