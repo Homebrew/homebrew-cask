@@ -8,4 +8,11 @@ cask "skybox" do
   homepage "https://skybox.xyz/"
 
   app "SKYBOX.app"
+
+  zap trash: [
+    "~/Library/Application Support/SKYBOX",
+    "~/Library/Logs/SKYBOX",
+    "~/Library/Preferences/xyz.skybox.server.mac.plist",
+    "~/Library/Saved Application State/xyz.skybox.server.mac.savedState",
+  ]
 end
