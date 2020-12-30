@@ -12,4 +12,10 @@ cask "macspice" do
   end
 
   app "MacSpice.app"
+
+  zap trash: [
+    "~/Library/Application Support/MacSpice",
+    "~/Library/Preferences/uk.co.cdhw.MacSpice.plist",
+    "~/Library/Saved Application State/uk.co.cdhw.MacSpice.savedState",
+  ]
 end
