@@ -5,6 +5,7 @@ cask "doomsday-engine" do
   url "https://files.dengine.net/archive/doomsday_#{version}_x86_64.dmg"
   appcast "http://api.dengine.net/1/builds/feed"
   name "Doomsday Engine"
+  desc "Enhanced source port of Doom, Heretic, and Hexen"
   homepage "https://dengine.net/"
 
   app "Doomsday.app"
