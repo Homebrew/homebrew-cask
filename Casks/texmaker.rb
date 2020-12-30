@@ -11,7 +11,7 @@ cask "texmaker" do
   app "texmaker.app"
 
   zap trash: [
-  "~/Library/Preferences/texmaker.plist",
-  "~/Library/Saved Application State/texmaker.savedState",
-]
+    "~/Library/Preferences/texmaker.plist",
+    "~/Library/Saved Application State/texmaker.savedState",
+  ]
 end
