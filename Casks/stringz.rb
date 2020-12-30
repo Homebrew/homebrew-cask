@@ -9,4 +9,10 @@ cask "stringz" do
   homepage "https://github.com/mohakapt/Stringz"
 
   app "Stringz.app"
+
+  zap trash: [
+    "~/Library/Application\ Support/dev.stringz.stringz",
+    "~/Library/Caches/dev.stringz.stringz",
+    "~/Library/Preferences/dev.stringz.stringz.plist",
+  ]
 end
