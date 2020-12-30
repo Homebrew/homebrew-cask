@@ -1,5 +1,5 @@
 cask "operator" do
-  version "0.9.9"
+  version "0.9.9.53"
   sha256 :no_check
 
   url "https://download.prelude.org/latest?platform=darwin&variant=zip"
