@@ -11,7 +11,7 @@ cask "stringz" do
   app "Stringz.app"
 
   zap trash: [
-    "~/Library/Application\ Support/dev.stringz.stringz",
+    "~/Library/Application Support/dev.stringz.stringz",
     "~/Library/Caches/dev.stringz.stringz",
     "~/Library/Preferences/dev.stringz.stringz.plist",
   ]
