@@ -11,6 +11,7 @@ cask "wechat" do
   desc "Free messaging and calling application"
   homepage "https://mac.weixin.qq.com/"
 
+  auto_updates true
   depends_on macos: ">= :yosemite"
 
   app "WeChat.app"
