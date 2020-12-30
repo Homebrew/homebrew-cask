@@ -73,6 +73,10 @@ jobs:
             echo '::warning::Removing `cocoapods` symlink is no longer necessary.'
           fi
 
+          if ! rm /usr/local/bin/conda; then
+            echo '::warning::Removing `conda` symlink is no longer necessary.'
+          fi
+
           if brew tap-info adoptopenjdk/openjdk; then
             brew untap adoptopenjdk/openjdk
           else
