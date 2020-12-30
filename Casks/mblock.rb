@@ -1,14 +1,17 @@
 cask "mblock" do
-  version "5.2.0"
-  sha256 "8a90d4e341b73adff1ff6db704426b6c343e5d2786f8183f5c52ec0240103abf"
+  version "5.3.0"
+  sha256 "c90258346b41ff399484552fccd6a836af0cae31a113ba97063c8260b02b436d"
 
   url "https://dl.makeblock.com/mblock#{version.major}/darwin/V#{version}.pkg",
       verified: "dl.makeblock.com/"
-  appcast "https://www.mblock.cc/releaselogs-mblock5/"
+  appcast "https://mblock.makeblock.com/en-us/download/"
   name "mBlock"
   homepage "https://www.mblock.cc/"
 
   pkg "V#{version}.pkg"
 
-  uninstall pkgutil: "com.makeblock.pkg.mblock"
+  uninstall pkgutil: [
+    "cc.mblock",
+    "com.makeblock.pkg.mblock",
+  ]
 end
