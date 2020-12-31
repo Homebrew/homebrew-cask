@@ -6,6 +6,7 @@ cask "hey" do
       verified: "hey-desktop.s3.amazonaws.com/"
   appcast "https://hey-desktop.s3.amazonaws.com/latest-mac.yml"
   name "HEY"
+  desc "Email's new heyday"
   homepage "https://hey.com/"
 
   auto_updates true
