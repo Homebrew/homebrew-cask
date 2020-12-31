@@ -1,11 +1,15 @@
 cask "cmake" do
-  version "3.19.2"
-  sha256 "df15a1836107b44623720e2766970216588e670f11f83fa2bc6d25885e6ac96f"
+  version "3.19.1"
+  sha256 "86badd442edd749231cc1d890dd7980b67edeadc01e9b0774ec949f1f0613ef0"
 
-  url "https://cmake.org/files/LatestRelease/cmake-#{version}-macos-universal.dmg"
-  appcast "https://cmake.org/files/LatestRelease/"
+  url "https://www.cmake.org/files/v#{version.major_minor}/cmake-#{version}-Darwin-x86_64.dmg"
   name "CMake"
   homepage "https://cmake.org/"
+
+  livecheck do
+    url "https://cmake.org/files/LatestRelease/"
+    regex(/href=.*?cmake[._-]v?(\d+(?:\.\d+)+)-Darwin-x86_64\.dmg/i)
+  end
 
   conflicts_with formula: "cmake"
 
