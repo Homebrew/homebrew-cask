@@ -3,7 +3,7 @@ cask "doomsday-engine" do
   sha256 "83b5d3f13e97119ca347a4f463adbb4a96a4b10f5f4f8367da2856ad18305be5"
 
   url "https://files.dengine.net/archive/doomsday_#{version}_x86_64.dmg"
-  appcast "http://api.dengine.net/1/builds/feed",
+  appcast "http://api.dengine.net/1/builds?latest_for=mac10_10-x86_64&type=stable",
           must_contain: version.major_minor
   name "Doomsday Engine"
   desc "Enhanced source port of Doom, Heretic, and Hexen"
