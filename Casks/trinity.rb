@@ -2,8 +2,8 @@ cask "trinity" do
   version "1.6.1"
   sha256 "1f4c7b31889899472b220a5e986d183efba04e129643ca9e75405fd1e241050e"
 
-  # github.com/iotaledger/trinity-wallet/ was verified as official when first introduced to the cask
-  url "https://github.com/iotaledger/trinity-wallet/releases/download/desktop-#{version}/trinity-desktop-#{version}.dmg"
+  url "https://github.com/iotaledger/trinity-wallet/releases/download/desktop-#{version}/trinity-desktop-#{version}.dmg",
+      verified: "github.com/iotaledger/trinity-wallet/"
   appcast "https://github.com/iotaledger/trinity-wallet/releases.atom"
   name "IOTA Trinity Wallet"
   homepage "https://trinity.iota.org/"

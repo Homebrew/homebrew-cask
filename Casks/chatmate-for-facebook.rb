@@ -2,11 +2,17 @@ cask "chatmate-for-facebook" do
   version "4.3.1,482:1537946763"
   sha256 "7e658246e0ac4c35c36de5f730f5f2fca6c644f25cb134d165167e38c4b7771e"
 
-  # dl.devmate.com/net.coldx.mac.Facebook/ was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/net.coldx.mac.Facebook/#{version.after_comma.before_colon}/#{version.after_colon}/ChatMateforFacebook-#{version.after_comma.before_colon}.zip"
-  appcast "https://updates.devmate.com/net.coldx.mac.Facebook.xml"
+  url "https://dl.devmate.com/net.coldx.mac.Facebook/#{version.after_comma.before_colon}/#{version.after_colon}/ChatMateforFacebook-#{version.after_comma.before_colon}.zip",
+      verified: "dl.devmate.com/net.coldx.mac.Facebook/"
   name "ChatMate for Facebook"
   homepage "https://chatmate.io/mac/facebook/"
+
+  livecheck do
+    url "https://updates.devmate.com/net.coldx.mac.Facebook.xml"
+    strategy :sparkle do |item|
+      "#{item.short_version},#{item.version}:#{item.url[%r{/(\d+)/ChatMateforFacebook-\d+\.zip}i, 1]}"
+    end
+  end
 
   depends_on macos: ">= :sierra"
 

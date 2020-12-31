@@ -1,6 +1,6 @@
 cask "unlox" do
   version "3.0.4.2"
-  sha256 "3e7b817066e47a694ef405734c63cfafb720c6b16274b3127704b4a8206011e4"
+  sha256 :no_check
 
   url "https://unlox.it/download/"
   appcast "https://unlox.it/download/update.php"

@@ -27,4 +27,15 @@ brew uninstall --zap --force firefox
 
 The form of `zap` stanza follows the [`uninstall` stanza](uninstall.md). All of the same directives are available. The `trash:` key is preferred over `delete:`.
 
-Example: [dropbox.rb](https://github.com/Homebrew/homebrew-cask/blob/fa4d9da31b557cba0fb9f983b7ea9e75af1a5f9e/Casks/dropbox.rb#L21-L43)
+Example: [dropbox.rb](https://github.com/Homebrew/homebrew-cask/blob/31cd96cc0e00dab1bff74d622e32d816bafd1f6f/Casks/dropbox.rb#L17-L35)
+
+## zap Creation
+
+The simplest method is to use [@nrlquaker's CreateZap](https://github.com/nrlquaker/homebrew-createzap), which can automatically generate the stanza. In a few instances it may fail to pick up anything and manual creation may be required.
+
+Manual creation can be facilitated with:
+
+* Some of the developer tools are already available in Homebrew Cask.
+* `sudo find / -iname "*{{search item}}*"`
+* An uninstaller tool such as [AppCleaner](https://github.com/Homebrew/homebrew-cask/blob/master/Casks/appcleaner.rb).
+* Inspecting the usual suspects, i.e. `/Library/{'Application Support',LaunchAgents,LaunchDaemons,Frameworks,Logs,Preferences,PrivilegedHelperTools}` and `~/Library/{'Application Support',Caches,Containers,LaunchAgents,Logs,Preferences,'Saved Application State'}`.

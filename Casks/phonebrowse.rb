@@ -1,5 +1,5 @@
 cask "phonebrowse" do
-  version :latest
+  version "3.2.0"
   sha256 :no_check
 
   url "https://dl.imobie.com/phonebrowse-mac.dmg"

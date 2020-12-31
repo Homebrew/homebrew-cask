@@ -1,6 +1,6 @@
 cask "datweatherdoe" do
-  version "1.3.1"
-  sha256 "8c7381955d8d6e92d190b2c57c82336f5fd2db07e33d8b7f8b5d77dd8508a2d9"
+  version "1.4.1"
+  sha256 "69f3f66313922aed24daa100288332af9e1fa34f4bb6aae05811f6075a837f2a"
 
   url "https://github.com/inderdhir/DatWeatherDoe/releases/download/#{version}/DatWeatherDoe-#{version}.dmg"
   appcast "https://github.com/inderdhir/DatWeatherDoe/releases.atom"

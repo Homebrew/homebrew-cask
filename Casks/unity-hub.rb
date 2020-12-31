@@ -1,6 +1,6 @@
 cask "unity-hub" do
   version "2.4.2"
-  sha256 "6bd6df1a9a224e2424940a744ee457e9f5e9e2a618dd0d57ab39deb50dc16a7f"
+  sha256 :no_check
 
   url "https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.dmg"
   appcast "https://public-cdn.cloud.unity3d.com/hub/prod/latest-mac.yml"

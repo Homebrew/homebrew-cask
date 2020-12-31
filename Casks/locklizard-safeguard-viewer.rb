@@ -1,6 +1,6 @@
 cask "locklizard-safeguard-viewer" do
   version "2.5.81"
-  sha256 "d77a65e7f19aae939c5bbe2eb0db4ac7e678d6aa9dde6a9fdfd55964673bd08c"
+  sha256 :no_check
 
   url "https://downloads.locklizard.com/PDCViewerSetupOSX.zip"
   appcast "https://www.locklizard.com/download_pdf_viewers/#mac-viewer"

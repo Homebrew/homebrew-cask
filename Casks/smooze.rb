@@ -1,11 +1,15 @@
 cask "smooze" do
-  version "1.9.9"
-  sha256 "59030cba19b2e4822f48b89e10aaef8d54ccbdd498b58e5a415a0bcc758651bf"
+  version "1.9.11,460"
+  sha256 :no_check
 
   url "https://smooze.co/updates/Smooze.dmg"
-  appcast "https://smooze.co/updates/update.xml"
   name "Smooze"
   homepage "https://smooze.co/"
+
+  livecheck do
+    url "https://smooze.co/updates/update.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"

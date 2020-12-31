@@ -1,13 +1,17 @@
 cask "nordvpn" do
-  version "5.11.0"
-  sha256 "8bacd3708ca26675ef754a1e4bc6e9e246dd2f76e1e641e8a41546082f2c4219"
+  version "6.0.0,152"
+  sha256 "70ddab7b4ce858a7429f785ed5895d0bcca05a408acb1ccde4224751208bb0ce"
 
-  # downloads.nordcdn.com/ was verified as official when first introduced to the cask
-  url "https://downloads.nordcdn.com/apps/macos/generic/NordVPN-OpenVPN/#{version}/NordVPN.pkg"
-  appcast "https://downloads.nordcdn.com/apps/macos/generic/NordVPN-OpenVPN/latest/update_pkg.xml"
+  url "https://downloads.nordcdn.com/apps/macos/generic/NordVPN-OpenVPN/#{version.before_comma}/NordVPN.pkg",
+      verified: "downloads.nordcdn.com/"
   name "NordVPN"
   desc "VPN client for secure internet access and private browsing"
   homepage "https://nordvpn.com/"
+
+  livecheck do
+    url "https://downloads.nordcdn.com/apps/macos/generic/NordVPN-OpenVPN/latest/update_pkg.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 

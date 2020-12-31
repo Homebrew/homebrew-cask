@@ -1,6 +1,6 @@
 cask "losslesscut" do
-  version "3.27.0"
-  sha256 "6e21094c7800d6d3926b3f4b1a08807668dc4b5c98cec898bc790771a0b4275a"
+  version "3.30.0"
+  sha256 "978b7fb311b8a31c68760a1884970bc8da6200ebd7cde261928d37b37835f0fc"
 
   url "https://github.com/mifi/lossless-cut/releases/download/v#{version}/LosslessCut-mac.dmg"
   appcast "https://github.com/mifi/lossless-cut/releases.atom"

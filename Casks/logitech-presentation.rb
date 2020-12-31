@@ -1,9 +1,9 @@
 cask "logitech-presentation" do
-  version "1.60.92"
-  sha256 "49c48a8c8c7f677c96dedfa2d98d1ff4667b534565d087f70fd3d1a1b12cb66f"
+  version "1.62.2"
+  sha256 "ca08be8c52cd40251c4a39bf2536b962aabb26ba7df26729cfc44c3abcacf9cd"
 
-  # download01.logi.com/web/ftp/pub/techsupport/presentation/ was verified as official when first introduced to the cask
-  url "https://download01.logi.com/web/ftp/pub/techsupport/presentation/LogiPresentation_#{version.major_minor_patch}.dmg"
+  url "https://download01.logi.com/web/ftp/pub/techsupport/presentation/LogiPresentation_#{version.major_minor_patch}.dmg",
+      verified: "download01.logi.com/web/ftp/pub/techsupport/presentation/"
   name "Logitech Presentation"
   homepage "https://support.logitech.com/en_au/product/spotlight-presentation-remote"
 

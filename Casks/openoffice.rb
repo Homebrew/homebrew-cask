@@ -30,8 +30,8 @@ cask "openoffice" do
     "ru"
   end
 
-  # sourceforge.net/openofficeorg.mirror/ was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/openofficeorg.mirror/Apache_OpenOffice_#{version}_MacOS_x86-64_install_#{language}.dmg"
+  url "https://downloads.sourceforge.net/openofficeorg.mirror/Apache_OpenOffice_#{version}_MacOS_x86-64_install_#{language}.dmg",
+      verified: "sourceforge.net/openofficeorg.mirror/"
   appcast "https://www.openoffice.org/download/index.html"
   name "Apache OpenOffice"
   desc "Free and open-source productivity suite"

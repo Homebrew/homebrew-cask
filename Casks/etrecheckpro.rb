@@ -1,5 +1,5 @@
 cask "etrecheckpro" do
-  version :latest
+  version "6.3.6,6D029"
   sha256 :no_check
 
   url "https://cdn.etrecheck.com/EtreCheckPro.zip"

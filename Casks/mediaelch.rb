@@ -1,9 +1,9 @@
 cask "mediaelch" do
-  version "2.6.6"
-  sha256 "624f2d640838c535d618ad0aa2621d354f5248047ff1e2c65e1d4fa3f3294ad4"
+  version "2.8.2,2020-12-20:8ee88442"
+  sha256 "5be79bead84671b487e35de41ea69b4d1a98696565d7d246f6bc11e4def53833"
 
-  # github.com/Komet/MediaElch/ was verified as official when first introduced to the cask
-  url "https://github.com/Komet/MediaElch/releases/download/v#{version}/MediaElch_#{version}_macOS.dmg"
+  url "https://github.com/Komet/MediaElch/releases/download/v#{version.before_comma}/MediaElch_macOS_#{version.before_comma}_#{version.after_comma.before_colon}_git-#{version.after_colon}.dmg",
+      verified: "github.com/Komet/MediaElch/"
   appcast "https://github.com/Komet/MediaElch/releases.atom"
   name "MediaElch"
   desc "Media Manager for Kodi"

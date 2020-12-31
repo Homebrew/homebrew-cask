@@ -1,12 +1,16 @@
 cask "kite" do
-  version "0.20201119.0"
-  sha256 "edce06e35a1eadafe5799984ef7f3901f8e98c005a36a74d58e57eeb39e26f6a"
+  version "0.20201221.0"
+  sha256 "5193460f47ef26c5d5d825890bf14d16c6fea9b4e1ddf8b9b272712e6b50d2e7"
 
-  # draqv87tt43s0.cloudfront.net/ was verified as official when first introduced to the cask
-  url "https://draqv87tt43s0.cloudfront.net/mac/#{version}/Kite.dmg"
-  appcast "https://release.kite.com/appcast.xml"
+  url "https://draqv87tt43s0.cloudfront.net/mac/#{version}/Kite.dmg",
+      verified: "draqv87tt43s0.cloudfront.net/"
   name "Kite"
   homepage "https://kite.com/"
+
+  livecheck do
+    url "https://release.kite.com/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 

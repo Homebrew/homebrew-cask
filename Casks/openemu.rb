@@ -6,12 +6,12 @@ cask "openemu" do
     version "2.0.9.1"
     sha256 "c6036374104e8cefee1be12fe941418e893a7f60a1b2ddaae37e477b94873790"
   else
-    version "2.2.1"
-    sha256 "6ca94d3d6264464b5088aaabb551dfe5415cb217fa1e6b257ac9b93772c39de6"
+    version "2.3"
+    sha256 "13e751eac0e107b5e8a00dd803de7889630eaa797dd08f976842aeff3d6d8e2c"
   end
 
-  # github.com/OpenEmu/OpenEmu/ was verified as official when first introduced to the cask
-  url "https://github.com/OpenEmu/OpenEmu/releases/download/v#{version}/OpenEmu_#{version}.zip"
+  url "https://github.com/OpenEmu/OpenEmu/releases/download/v#{version}/OpenEmu_#{version}.zip",
+      verified: "github.com/OpenEmu/OpenEmu/"
   appcast "https://github.com/OpenEmu/OpenEmu/releases.atom"
   name "OpenEmu"
   desc "Retro video game emulation"

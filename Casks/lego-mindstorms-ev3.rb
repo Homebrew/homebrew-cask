@@ -3,11 +3,15 @@ cask "lego-mindstorms-ev3" do
   version "1.4.4"
   sha256 "cb912667968e08604e755278d0e2f2fc69556349938cb36b708c5ecd8c74af29"
 
-  # le-www-live-s.legocdn.com/downloads/LMS-EV3/ was verified as official when first introduced to the cask
-  url "https://le-www-live-s.legocdn.com/downloads/LMS-EV3/LMS-EV3_Full-setup_#{version}_en-us_osx.dmg"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://go.api.education.lego.com/v1/lms-ev3_en-us_osx"
+  url "https://le-www-live-s.legocdn.com/downloads/LMS-EV3/LMS-EV3_Full-setup_#{version}_en-us_osx.dmg",
+      verified: "le-www-live-s.legocdn.com/downloads/LMS-EV3/"
   name "Lego Mindstorms EV3 Home Edition"
   homepage "https://www.lego.com/en-us/mindstorms"
+
+  livecheck do
+    url "https://go.api.education.lego.com/v1/lms-ev3_en-us_osx"
+    strategy :header_match
+  end
 
   pkg "LEGO MINDSTORMS EV3 Home Edition.pkg"
 

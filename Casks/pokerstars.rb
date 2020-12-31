@@ -3,31 +3,50 @@ cask "pokerstars" do
   sha256 :no_check
 
   language "US", default: true do
-    [".net", ".net", ".net"]
+    url "https://www.pokerstars.net/PokerStars.net.app.zip"
+    homepage "https://www.pokerstars.net/"
+
+    ".net"
   end
   language "DK" do
-    [".dk", ".net", ".net"]
+    url "https://www.pokerstars.net/PokerStars.net.app.zip",
+        verified: "pokerstars.net/"
+    homepage "https://www.pokerstars.dk/"
+
+    ".net"
   end
   language "GR" do
-    [".gr", ".net", ".net"]
+    url "https://www.pokerstars.net/PokerStars.net.app.zip",
+        verified: "pokerstars.net/"
+    homepage "https://www.pokerstars.gr/"
+
+    ".net"
   end
   language "IT" do
-    [".it", ".net", ".net"]
+    url "https://www.pokerstars.net/PokerStars.net.app.zip",
+        verified: "pokerstars.net/"
+    homepage "https://www.pokerstars.it/"
+
+    ".net"
   end
   language "GB" do
-    [".uk", "UK", ".uk"]
+    url "https://www.pokerstars.uk/PokerStarsUK.app.zip"
+    homepage "https://www.pokerstars.uk/"
+
+    "UK"
   end
   language "PT" do
-    [".pt", "PT", ".pt"]
+    url "https://www.pokerstars.pt/PokerStarsPT.app.zip"
+    homepage "https://www.pokerstars.pt/"
+
+    "PT"
   end
 
-  url "https://www.pokerstars#{language[2]}/PokerStars#{language[1]}.app.zip"
   name "PokerStars"
-  homepage "https://www.pokerstars#{language[0]}/"
 
-  container nested: "PokerStars#{language[1]}/PokerStars#{language[1]}.dmg"
+  container nested: "PokerStars#{language}/PokerStars#{language}.dmg"
 
-  app "PokerStars#{language[1]}.app"
+  app "PokerStars#{language}.app"
 
   zap trash: [
     "~/Library/Preferences/com.pokerstars#{language[1]}.user.ini",

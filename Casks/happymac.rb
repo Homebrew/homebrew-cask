@@ -1,9 +1,9 @@
 cask "happymac" do
-  version :latest
+  version "0.1.0"
   sha256 :no_check
 
-  # chrislaffra.com/ was verified as official when first introduced to the cask
-  url "https://chrislaffra.com/happymac/happymac.dmg"
+  url "https://chrislaffra.com/happymac/happymac.dmg",
+      verified: "chrislaffra.com/"
   name "HappyMac"
   desc "Watches, suspends and resumes background processes that slow down your system"
   homepage "https://www.happymac.app/"

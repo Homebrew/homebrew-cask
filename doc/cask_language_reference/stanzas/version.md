@@ -1,6 +1,6 @@
 # version
 
-`version`, while related to the app’s own versioning, doesn’t have to follow it exactly. It is common to change it slightly so it can be [interpolated](https://en.wikipedia.org/wiki/String_interpolation#Ruby) in other stanzas, usually in `url` to create a Cask that only needs `version` and `sha256` changes when updated. This can be taken further, when needed, with [ruby String methods](https://ruby-doc.org/core/String.html).
+`version`, while related to the app’s own versioning, doesn’t have to follow it exactly. It is common to change it slightly so it can be [interpolated](https://en.wikipedia.org/wiki/String_interpolation#Ruby_/_Crystal) in other stanzas, usually in `url` to create a Cask that only needs `version` and `sha256` changes when updated. This can be taken further, when needed, with [ruby String methods](https://ruby-doc.org/core/String.html).
 
 For example:
 
@@ -31,6 +31,15 @@ We can use
 version "1.2.3build4"
 url "https://example.com/#{version.sub(%r{build\d+}, '')}/file-version-#{version}.dmg"
 ```
+
+## version :latest
+
+The special value `:latest` is used on casks which:
+
+1. `url` doesn’t contain a version.
+2. Having a correct value to `version` is too difficult or impractical, even with our automated systems.
+
+Example: [spotify.rb](https://github.com/Homebrew/homebrew-cask/blob/f56e8ba057687690e26a6502623aa9476ff4ac0e/Casks/spotify.rb#L2)
 
 ## version methods
 

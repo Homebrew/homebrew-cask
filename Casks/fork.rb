@@ -1,13 +1,17 @@
 cask "fork" do
-  version "2.1"
-  sha256 "3204b14519b3a8f9e5448845d6d25a70cf78472a71e64a1eca575e1d9a1d6691"
+  version "2.2"
+  sha256 "ab40ce87d06b3a156169a59a1146d31fcbd63c01acb6862652b08b0c89fb7d0f"
 
-  # forkapp.ams3.cdn.digitaloceanspaces.com/mac/ was verified as official when first introduced to the cask
-  url "https://forkapp.ams3.cdn.digitaloceanspaces.com/mac/Fork-#{version}.dmg"
-  appcast "https://git-fork.com/update/feed.xml"
+  url "https://forkapp.ams3.cdn.digitaloceanspaces.com/mac/Fork-#{version}.dmg",
+      verified: "forkapp.ams3.cdn.digitaloceanspaces.com/mac/"
   name "Fork"
   desc "GIT client"
   homepage "https://git-fork.com/"
+
+  livecheck do
+    url "https://git-fork.com/update/feed.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 

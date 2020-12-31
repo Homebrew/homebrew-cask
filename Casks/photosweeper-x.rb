@@ -1,12 +1,16 @@
 cask "photosweeper-x" do
-  version "3.9.1"
-  sha256 "b24845e310d9b00a5630947da61a5a46c62766a7e4e5a0acf8b88fc49f3844de"
+  version "3.9.3,3930"
+  sha256 :no_check
 
   url "https://overmacs.com/downloads/PhotoSweeper_X.dmg"
-  appcast "https://overmacs.com/feeds/photosweeper_update.xml"
   name "PhotoSweeper X"
   desc "Tool to eliminate similar or duplicate photos"
   homepage "https://overmacs.com/"
+
+  livecheck do
+    url "https://overmacs.com/feeds/photosweeper_update.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :sierra"
 

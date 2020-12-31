@@ -1,6 +1,6 @@
 cask "back-in-time" do
-  version "5.1.3"
-  sha256 "866bcdb214dd3d4d51a9ca89f12a6ce42e3fd506984c067a9f3b243922afe976"
+  version "5.1.5"
+  sha256 "bb40f56be8b7ba4d69cae140ff9fdd365609543e73fb52812b1cb3163c580a3e"
 
   url "https://www.tri-edre.com/pub/files/backintime#{version.major}.dmg"
   appcast "https://www.tri-edre.com/news/backintimeen.html"

@@ -1,13 +1,19 @@
 cask "vox" do
-  version "3399.9,1606236929"
-  sha256 "1ce5db5bb1865206c95704df606f61675eb57f2cac57b02524a073271b63ac6f"
+  version "3.3.19,3399.11:1608574055"
+  sha256 "515b76c58132f1eb2383340e6605cefa00e2ad68977de3e89a5dac733ae768da"
 
-  # devmate.com/com.coppertino.Vox/ was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.coppertino.Vox/#{version.before_comma}/#{version.after_comma}/Vox-#{version.before_comma}.zip"
-  appcast "https://updates.devmate.com/com.coppertino.Vox.xml"
+  url "https://dl.devmate.com/com.coppertino.Vox/#{version.after_comma.before_colon}/#{version.after_colon}/Vox-#{version.after_comma.before_colon}.zip",
+      verified: "devmate.com/com.coppertino.Vox/"
   name "VOX"
   desc "Music player for high resoluion (Hi-Res) music through the external sources"
   homepage "https://vox.rocks/mac-music-player"
+
+  livecheck do
+    url "https://updates.devmate.com/com.coppertino.Vox.xml"
+    strategy :sparkle do |item|
+      "#{item.short_version},#{item.version}:#{item.url[%r{/(\d+)/[^/]+\.zip}i, 1]}"
+    end
+  end
 
   auto_updates true
 

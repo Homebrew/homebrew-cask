@@ -1,6 +1,6 @@
 cask "zeitgeist" do
-  version "2.0.1"
-  sha256 "96aa56490747b12b51e8c28e6243f75b2150b1b8d3ac26572c35c4a6793e9c6f"
+  version "2.1.2"
+  sha256 "bbacae4f8f6e14d348e4cf7d5f3ee2d41b4cb82d7473715b6f758539c81c39fa"
 
   url "https://github.com/daneden/zeitgeist/releases/download/v#{version}/Zeitgeist.app.zip",
       verified: "github.com/daneden/zeitgeist/"

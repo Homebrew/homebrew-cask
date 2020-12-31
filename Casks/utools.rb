@@ -1,9 +1,9 @@
 cask "utools" do
-  version "1.3.4"
-  sha256 "fb185fa159bff72f73da3b3260602724a0b5a2a214d9c49147795680eddadfe3"
+  version "1.3.5"
+  sha256 "49a085440c9a38faabfb17b148f530ab8abf7f946599681d3523f2f94d07cc5d"
 
-  # res.u-tools.cn/ was verified as official when first introduced to the cask
-  url "https://res.u-tools.cn/currentversion/uTools-#{version}.dmg"
+  url "https://res.u-tools.cn/currentversion/uTools-#{version}.dmg",
+      verified: "res.u-tools.cn/"
   appcast "https://res.u-tools.cn/currentversion/public-mac.yml"
   name "uTools"
   homepage "https://u.tools/index.html"

@@ -1,5 +1,5 @@
 cask "remote-buddy" do
-  version :latest
+  version "1.33.1"
   sha256 :no_check
 
   url "https://www.iospirit.com/static/objectfiles/file/101/RemoteBuddy.dmg"

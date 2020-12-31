@@ -1,9 +1,9 @@
 cask "hstracker" do
-  version "1.7.6"
-  sha256 "b7bae557537cbd1ae31c32e3e956a8326e97bb37dde03f5646e77eba48c62006"
+  version "1.7.8"
+  sha256 "152b199825c7049435a51421d0871507cfa30507316db37aa31c2be1639e427a"
 
-  # github.com/HearthSim/HSTracker/ was verified as official when first introduced to the cask
-  url "https://github.com/HearthSim/HSTracker/releases/download/#{version}/HSTracker.app.zip"
+  url "https://github.com/HearthSim/HSTracker/releases/download/#{version}/HSTracker.app.zip",
+      verified: "github.com/HearthSim/HSTracker/"
   appcast "https://github.com/HearthSim/HSTracker/releases.atom"
   name "Hearthstone Deck Tracker"
   desc "Deck tracker and deck manager for Hearthstone"

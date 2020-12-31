@@ -1,9 +1,9 @@
 cask "flightgear" do
-  version "2020.3.4"
-  sha256 "cf70d77966956f218a477753e559f4111f05f2b0648822f38f30e6241810d0a2"
+  version "2020.3.5"
+  sha256 "aecdfe86d16b8b41c1f2faf730072c6925c481b3a7d07b079d88ac5499766926"
 
-  # sourceforge.net/flightgear/ was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/flightgear/FlightGear-#{version}.dmg"
+  url "https://downloads.sourceforge.net/flightgear/FlightGear-#{version}.dmg",
+      verified: "sourceforge.net/flightgear/"
   appcast "https://sourceforge.net/projects/flightgear/rss"
   name "FlightGear"
   homepage "https://www.flightgear.org/"

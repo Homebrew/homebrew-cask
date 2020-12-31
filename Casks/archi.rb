@@ -1,8 +1,8 @@
 cask "archi" do
-  version "4.7.1"
-  sha256 "19fa57ef812949963e1af5cc2516fc5f544f6e86dd69bd5608794e11935ee07d"
+  version "4.8.0"
+  sha256 "dab1df62d8b99f1aabdf85e993d9ce995003d48df32afb3aaa8e229152780e53"
 
-  url "https://www.archimatetool.com/downloads/archi/Archi-Mac-#{version}.zip"
+  url "https://www.archimatetool.com/downloads/a#{version.no_dots}/Archi-Mac-#{version}.zip"
   appcast "https://github.com/archimatetool/archi/releases.atom"
   name "Archi"
   desc "Toolkit for the ArchiMate modelling language"

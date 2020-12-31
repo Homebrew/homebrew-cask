@@ -3,10 +3,14 @@ cask "ssh-config-editor" do
   sha256 "d5f55802cde1531455a4f871e5c45b345418ef5b03b3c58074c6aee3779c6601"
 
   url "https://hejki.org/download/ssheditor/SSHConfigEditor-#{version.after_comma}.dmg"
-  appcast "https://hejki.org/download/ssheditor/appcast#{version.major}.xml"
   name "SSH Config Editor"
   desc "Tool for managing the OpenSSH ssh client configuration file"
   homepage "https://www.hejki.org/ssheditor/"
+
+  livecheck do
+    url "https://hejki.org/download/ssheditor/appcast#{version.major}.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :catalina"
 

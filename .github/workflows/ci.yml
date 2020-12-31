@@ -33,7 +33,7 @@ jobs:
   test:
     name: ${{ matrix.name }}
     needs: generate-matrix
-    runs-on: macos-latest
+    runs-on: macos-11.0
     strategy:
       matrix:
         include: ${{ fromJson(needs.generate-matrix.outputs.matrix) }}
@@ -71,6 +71,10 @@ jobs:
 
           if ! rm /usr/local/bin/pod; then
             echo '::warning::Removing `cocoapods` symlink is no longer necessary.'
+          fi
+
+          if ! rm /usr/local/bin/conda; then
+            echo '::warning::Removing `conda` symlink is no longer necessary.'
           fi
 
           if brew tap-info adoptopenjdk/openjdk; then

@@ -1,13 +1,19 @@
 cask "geektool" do
-  version "331.014,1470733752"
+  version "3.3.1,331.014:1470733752"
   sha256 "73cbb2361601048c7f4d05a6717e53e83b088d49ac75309b2f8e4dccc17df63c"
 
-  # dl.devmate.com/org.tynsoe.GeekTool/ was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/org.tynsoe.GeekTool/#{version.before_comma}/#{version.after_comma}/GeekTool-#{version.before_comma}.zip"
-  appcast "https://updates.devmate.com/org.tynsoe.GeekTool.xml"
+  url "https://dl.devmate.com/org.tynsoe.GeekTool/#{version.after_comma.before_colon}/#{version.after_colon}/GeekTool-#{version.after_comma.before_colon}.zip",
+      verified: "dl.devmate.com/org.tynsoe.GeekTool/"
   name "GeekTool"
   desc "Desktop customization tool"
-  homepage "https://www.tynsoe.org/v2/geektool/"
+  homepage "https://www.tynsoe.org/geektool/"
+
+  livecheck do
+    url "https://updates.devmate.com/org.tynsoe.GeekTool.xml"
+    strategy :sparkle do |item|
+      "#{item.short_version},#{item.version}:#{item.url[%r{/(\d+)/GeekTool-(?:\d+(?:\.\d+)*)\.zip}, 1]}"
+    end
+  end
 
   app "GeekTool.app"
 

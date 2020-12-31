@@ -2,8 +2,8 @@ cask "subsync" do
   version "0.16.0"
   sha256 "0483b43faf4a1645d0763bba7b3a229e43d0ef870be18e43f3bc76f60cfb9fc5"
 
-  # github.com/sc0ty/subsync was verified as official when first introduced to the cask
-  url "https://github.com/sc0ty/subsync/releases/download/#{version.major_minor}/subsync-#{version}-mac-x86_64.dmg"
+  url "https://github.com/sc0ty/subsync/releases/download/#{version.major_minor}/subsync-#{version}-mac-x86_64.dmg",
+      verified: "github.com/sc0ty/subsync/"
   appcast "https://github.com/sc0ty/subsync/releases.atom"
   name "subsync"
   desc "Subtitle speech synchronizer"

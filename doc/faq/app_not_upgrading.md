@@ -4,7 +4,7 @@ After running `brew upgrade`, you may notice some casks you think should be upgr
 
 As you’re likely aware, a lot of macOS software can upgrade itself:
 
-![](https://upload.wikimedia.org/wikipedia/commons/c/c0/Sparkle_Test_App_Software_Update.png)
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Sparkle_Test_App_Software_Update.png" width="532" alt="Sparkle update window">
 
 That could cause conflicts when used in tandem with Homebrew Cask’s `upgrade` mechanism.
 
@@ -17,7 +17,7 @@ There are a few ideas to fix this problem:
 
 So we let software be. Installing it with Homebrew Cask should make it behave the same as if you had installed it manually. But we also want to support software that does not auto-upgrade, so we add [`auto_updates true`](https://github.com/Homebrew/homebrew-cask/blob/62c0495b254845a481dacac6ea7c8005e27a3fb0/Casks/alfred.rb#L10) to casks of software that can do it, which excludes them from `brew upgrade`.
 
-Casks who use [`version :latest`](https://github.com/Homebrew/homebrew-cask/blob/4184d50d2d7fa4afb62e6c7eb6761ae5ac417c88/Casks/servo.rb#L2) are also excluded, because we have no way to track the version they’re in. It helps to ask the developers of such software to provide versioned releases (i.e. have the version in the path of the download `url`).
+Casks which use [`version :latest`](https://github.com/Homebrew/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/version.md#version-latest) are also excluded, because we have no way to track the version they’re in. It helps to ask the developers of such software to provide versioned releases (i.e. have the version in the path of the download `url`).
 
 If you still want to force software to be upgraded via Homebrew Cask, you can:
 

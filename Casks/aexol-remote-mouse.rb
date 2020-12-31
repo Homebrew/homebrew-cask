@@ -1,5 +1,5 @@
 cask "aexol-remote-mouse" do
-  version :latest
+  version "1.3,5"
   sha256 :no_check
 
   url "https://remotemouse.aexol.com/rmt.dmg"

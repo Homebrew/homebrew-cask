@@ -1,5 +1,5 @@
 cask "opera-neon" do
-  version :latest
+  version "1.0.2531.0,2531.0"
   sha256 :no_check
 
   url "https://get.geo.opera.com/.private/OperaNeon.dmg"

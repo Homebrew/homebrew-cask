@@ -1,12 +1,19 @@
 cask "qblocker" do
-  version "20,1464612307"
+  version "1.2,20:1464612307"
   sha256 "fb0202894271c3b63a6cffb6fa72d5d27065a0698a3b8a8038e18b7c43872385"
 
-  # devmate.com/uk.co.wearecocoon.QBlocker/ was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/uk.co.wearecocoon.QBlocker/#{version.before_comma}/#{version.after_comma}/QBlocker-#{version.before_comma}.zip"
-  appcast "https://updates.devmate.com/uk.co.wearecocoon.QBlocker.xml"
+  url "https://dl.devmate.com/uk.co.wearecocoon.QBlocker/#{version.after_comma.before_colon}/#{version.after_colon}/QBlocker-#{version.after_comma.before_colon}.zip",
+      verified: "devmate.com/uk.co.wearecocoon.QBlocker/"
   name "QBlocker"
   homepage "https://qblocker.com/"
+
+  livecheck do
+    url "https://updates.devmate.com/uk.co.wearecocoon.QBlocker.xml"
+    strategy :sparkle do |item|
+      id = item.url[%r{/(\d+)/QBlocker-\d+\.zip}i, 1]
+      "#{item.short_version},#{item.version}:#{id}"
+    end
+  end
 
   app "QBlocker.app"
 

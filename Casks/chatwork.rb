@@ -1,5 +1,5 @@
 cask "chatwork" do
-  version :latest
+  version "2.6.3.964"
   sha256 :no_check
 
   url "https://desktop-app.chatwork.com/installer/ChatWork.dmg"

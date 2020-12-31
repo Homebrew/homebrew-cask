@@ -10,8 +10,8 @@ cask "macpilot" do
 
     url "https://www.koingosw.com/products/macpilot/download/old/macpilot_#{version.no_dots}_intel_for_1015.dmg"
   else
-    version "12.0.1"
-    sha256 "dbcc20745f4974b109f700930b83507129c968e8a1c9993df73b909b46154e0e"
+    version "12.0.7"
+    sha256 :no_check
 
     url "https://www.koingosw.com/products/macpilot/download/macpilot.dmg"
     appcast "https://www.koingosw.com/postback/versioncheck.php?appname=macpilot&type=sparkle"

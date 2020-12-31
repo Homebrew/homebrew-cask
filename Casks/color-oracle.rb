@@ -1,5 +1,5 @@
 cask "color-oracle" do
-  version :latest
+  version "1.3.0"
   sha256 :no_check
 
   url "https://colororacle.org/ColorOracleMac.zip"

@@ -1,9 +1,9 @@
 cask "keeweb" do
-  version "1.16.0"
-  sha256 "bf269d23a99345de977092a8226e4716e49628bad769b7a44f2dfe371f06d360"
+  version "1.16.5"
+  sha256 "d36cbc329f41c8e4192ff5297fd0f2fece04e5b5a22f12102bf8e887d9943733"
 
-  # github.com/keeweb/keeweb/ was verified as official when first introduced to the cask
-  url "https://github.com/keeweb/keeweb/releases/download/v#{version}/KeeWeb-#{version}.mac.dmg"
+  url "https://github.com/keeweb/keeweb/releases/download/v#{version}/KeeWeb-#{version}.mac.x64.dmg",
+      verified: "github.com/keeweb/keeweb/"
   appcast "https://github.com/keeweb/keeweb/releases.atom"
   name "KeeWeb"
   desc "Free cross-platform password manager compatible with KeePass"

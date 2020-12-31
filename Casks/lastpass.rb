@@ -1,12 +1,16 @@
 cask "lastpass" do
-  version "4.60.0"
-  sha256 "7fc8feb33df09130562c195b397d6461e90c985ea1a0f327d0d4eb384df6bcc3"
+  version "4.60.0,1121"
+  sha256 :no_check
 
   url "https://download.cloud.lastpass.com/mac/LastPass.dmg"
-  appcast "https://download.cloud.lastpass.com/mac/AppCast.xml"
   name "LastPass"
   desc "Cross-platform password manager"
   homepage "https://www.lastpass.com/"
+
+  livecheck do
+    url "https://download.cloud.lastpass.com/mac/AppCast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"

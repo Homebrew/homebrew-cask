@@ -1,9 +1,9 @@
 cask "tandem" do
-  version "1.5.1013"
-  sha256 "1503a4ae20026c13357ceeea45acf5b59b5f21a676f01b5e2e84cd54c8046b63"
+  version "1.5.1216"
+  sha256 "84d816a9ed2d2b59e49eaaba74b5ddc4825273e93d4db3482f09d32426dcc28c"
 
-  # download.todesktop.com/200527auaqaacsy/ was verified as official when first introduced to the cask
-  url "https://download.todesktop.com/200527auaqaacsy/Tandem%20#{version}.dmg"
+  url "https://download.todesktop.com/200527auaqaacsy/Tandem%20#{version}.dmg",
+      verified: "download.todesktop.com/200527auaqaacsy/"
   appcast "https://download.todesktop.com/200527auaqaacsy/latest-mac.yml"
   name "Tandem"
   desc "Virtual office for remote teams"

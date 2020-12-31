@@ -1,9 +1,9 @@
 cask "xdm" do
   version "7.2.7"
-  sha256 "b28d3aac96fe9a2ce161bdd4462fe270eac3dd3ce91828f0e308b9d77aa811b4"
+  sha256 :no_check
 
-  # downloads.sourceforge.net/xdman/ was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/xdman/xdm-setup.dmg"
+  url "https://downloads.sourceforge.net/xdman/xdm-setup.dmg",
+      verified: "downloads.sourceforge.net/xdman/"
   appcast "https://sourceforge.net/projects/xdman/rss"
   name "Xtreme Download Manager"
   homepage "https://xdman.sourceforge.io/"

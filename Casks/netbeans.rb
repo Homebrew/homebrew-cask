@@ -1,6 +1,6 @@
 cask "netbeans" do
-  version "12.1"
-  sha256 "0676fb3c1f7e1af99c8f3d4016799635f3dfcf578d998320b8408fa3a69ab823"
+  version "12.2"
+  sha256 "25ef01af76e8730e394faae205fcd47fa7d084703322c008c0245f2bf0713ff6"
 
   url "https://www-eu.apache.org/dist/netbeans/netbeans/#{version}/Apache-NetBeans-#{version}-bin-macosx.dmg"
   appcast "https://www-eu.apache.org/dist/netbeans/netbeans/"

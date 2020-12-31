@@ -1,13 +1,17 @@
 cask "detectx-swift" do
   version "1.0971"
-  sha256 "6449316b55de59cacc738df72e13c93a3c6fad4520db49cb16753037e45ecd0d"
+  sha256 :no_check
 
-  # s3.amazonaws.com/sqwarq.com/ was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/sqwarq.com/PublicZips/DetectX_Swift.dmg"
-  appcast "https://s3.amazonaws.com/sqwarq.com/AppCasts/dtxswift.xml"
+  url "https://s3.amazonaws.com/sqwarq.com/PublicZips/DetectX_Swift.dmg",
+      verified: "s3.amazonaws.com/sqwarq.com/"
   name "DetectX Swift"
   desc "Searching and troubleshooting tool"
   homepage "https://sqwarq.com/detectx/"
+
+  livecheck do
+    url "https://s3.amazonaws.com/sqwarq.com/AppCasts/dtxswift.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :el_capitan"

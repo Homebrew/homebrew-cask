@@ -5,6 +5,7 @@ cask "osquery" do
   url "https://pkg.osquery.io/darwin/osquery-#{version}.pkg"
   appcast "https://github.com/osquery/osquery/releases.atom"
   name "osquery"
+  desc "SQL powered operating system instrumentation and analytics"
   homepage "https://osquery.io/"
 
   pkg "osquery-#{version}.pkg"

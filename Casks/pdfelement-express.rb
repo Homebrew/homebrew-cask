@@ -1,6 +1,6 @@
 cask "pdfelement-express" do
-  version "1.2.1"
-  sha256 "dd60c96c53725e1165a951b5b8c6c82acfbf7d47b91f2ab06ed662326df7eb34"
+  version "1.2.1,1441"
+  sha256 :no_check
 
   url "https://download.wondershare.com/cbs_down/mac-pdfelement-express_full4133.dmg"
   appcast "https://cbs.wondershare.com/go.php?m=upgrade_info&pid=4133"

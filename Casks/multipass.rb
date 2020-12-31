@@ -5,11 +5,12 @@ cask "multipass" do
   url "https://github.com/CanonicalLtd/multipass/releases/download/v#{version}/multipass-#{version}+mac-Darwin.pkg"
   appcast "https://github.com/CanonicalLtd/multipass/releases.atom"
   name "Multipass"
+  desc "Orchestrates virtual Ubuntu instances"
   homepage "https://github.com/CanonicalLtd/multipass/"
 
   depends_on macos: ">= :sierra"
 
-  pkg "multipass-#{version} mac-Darwin.pkg"
+  pkg "multipass-#{version}+mac-Darwin.pkg"
 
   uninstall launchctl: "com.canonical.multipassd",
             pkgutil:   "com.canonical.multipass.*",
