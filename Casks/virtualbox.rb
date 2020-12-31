@@ -11,7 +11,7 @@ cask "virtualbox" do
   livecheck do
     url "https://download.virtualbox.org/virtualbox/LATEST.TXT"
     strategy :page_match
-    regex(/\d+\.\d+\.\d+/)
+    regex(/(\d+(?:\.\d+)*)/)
   end
 
   conflicts_with cask: "virtualbox-beta"
