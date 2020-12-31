@@ -1,6 +1,6 @@
 cask "tuxera-ntfs" do
-  version "2019"
-  sha256 "ac655a302afbbe2022ec9c2af3df65e8bcd1bb66a783770025f78f3595a2798f"
+  version "2020"
+  sha256 "0e756174739ac788209ca7cadde7654f5bd1ff85737d7ef15ff79be066aee1aa"
 
   url "https://tuxera.com/mac/tuxerantfs_#{version}.dmg"
   appcast "https://ntfsformac.tuxera.com/",
