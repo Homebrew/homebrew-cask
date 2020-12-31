@@ -1,6 +1,6 @@
 cask "manycam" do
-  version "7.5.0.7"
-  sha256 "67a5b485ab128e82717b62c8e0ec5898096979d1042567439ea3b4a6cfd10314"
+  version "7.8.0.17"
+  sha256 "d0ced7328223277282e0f2afe791e03106800622bd232fa4dae63d8bf80cdf77"
 
   # download3.manycams.com was verified as official when first introduced to the cask
   url "https://download3.manycams.com/ManyCam.dmg"
