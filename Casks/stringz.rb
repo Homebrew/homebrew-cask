@@ -5,7 +5,7 @@ cask "stringz" do
   url "https://github.com/mohakapt/Stringz/releases/download/v#{version}/Stringz-#{version}.dmg"
   appcast "https://github.com/mohakapt/Stringz/releases.atom"
   name "Stringz"
-  desc "Lightweight yet powerful editor"
+  desc "Editor for localizable files"
   homepage "https://github.com/mohakapt/Stringz"
 
   app "Stringz.app"
