@@ -22,10 +22,10 @@ cask "intellij-idea" do
 
   zap trash: [
     "~/Library/Preferences/com.jetbrains.intellij.plist",
-    "~/Library/Caches/IntelliJIdea#{version.major_minor}",
-    "~/Library/Logs/IntelliJIdea#{version.major_minor}",
-    "~/Library/Application Support/IntelliJIdea#{version.major_minor}",
-    "~/Library/Preferences/IntelliJIdea#{version.major_minor}",
+    "~/Library/Caches/JetBrains/IntelliJIdea#{version.major_minor}",
+    "~/Library/Logs/JetBrains/IntelliJIdea#{version.major_minor}",
+    "~/Library/Application Support/JetBrains/IntelliJIdea#{version.major_minor}",
+    "~/Library/Preferences/jetbrains.idea.*.plist",
     "~/Library/Saved Application State/com.jetbrains.intellij.savedState",
   ]
 end
