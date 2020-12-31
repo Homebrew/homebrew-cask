@@ -8,6 +8,12 @@ cask "virtualbox" do
   desc "Free and open-source hosted hypervisor for x86 virtualization"
   homepage "https://www.virtualbox.org/"
 
+  livecheck do
+    url "https://download.virtualbox.org/virtualbox/LATEST.TXT"
+    strategy :page_match
+    regex(/\d+\.\d+\.\d+/)
+  end
+
   conflicts_with cask: "virtualbox-beta"
 
   pkg "VirtualBox.pkg",
