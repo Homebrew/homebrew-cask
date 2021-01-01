@@ -3,9 +3,13 @@ cask "nestopia" do
   sha256 :no_check
 
   url "https://www.bannister.org/cgi-bin/download.cgi?nestopia"
-  appcast "https://www.bannister.org/software/nestopia.htm"
   name "Nestopia"
   homepage "https://www.bannister.org/software/nestopia.htm"
+
+  livecheck do
+    url :homepage
+    regex(/>\s*?Nestopia\s+?v?(\d+(?:\.\d+)+)\s*?</i)
+  end
 
   depends_on macos: ">= :el_capitan"
 
