@@ -15,7 +15,7 @@ cask "videofusion" do
 
   uninstall pkgutil: [
     "com.lemon.lvpro",
-    "com.mygreatcompany.pkg.LVPro",
+    "com.mygreatcompany.pkg.lvpro",
   ]
 
   zap trash: [
