@@ -11,10 +11,14 @@ cask "bbedit" do
   end
   url "https://s3.amazonaws.com/BBSW-download/BBEdit_#{version}.dmg",
       verified: "s3.amazonaws.com/BBSW-download/"
-  appcast "https://versioncheck.barebones.com/BBEdit.xml"
   name "BBEdit"
   desc "Text, code, and markup editor"
   homepage "https://www.barebones.com/products/bbedit/"
+
+  livecheck do
+    url "http://versioncheck.barebones.com/BBEdit.xml"
+    regex(/BBEdit[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+  end
 
   auto_updates true
   depends_on macos: ">= :el_capitan"
