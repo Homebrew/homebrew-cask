@@ -3,9 +3,13 @@ cask "cmake" do
   sha256 "df15a1836107b44623720e2766970216588e670f11f83fa2bc6d25885e6ac96f"
 
   url "https://cmake.org/files/LatestRelease/cmake-#{version}-macos-universal.dmg"
-  appcast "https://cmake.org/files/LatestRelease/"
   name "CMake"
   homepage "https://cmake.org/"
+
+  livecheck do
+    url "https://cmake.org/files/LatestRelease/"
+    regex(/href=.*?cmake[._-]v?(\d+(?:\.\d+)+)-macos-universal\.dmg/i)
+  end
 
   conflicts_with formula: "cmake"
 
