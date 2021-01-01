@@ -4,10 +4,14 @@ cask "discord" do
 
   url "https://cdn.discordapp.com/apps/osx/#{version}/Discord.dmg",
       verified: "cdn.discordapp.com/"
-  appcast "https://discord.com/api/stable/updates?platform=osx"
   name "Discord"
   desc "Voice and text chat software"
   homepage "https://discord.com/"
+
+  livecheck do
+    url "https://discord.com/api/stable/updates?platform=osx"
+    regex(/"name"\s*:\s*"([^"]+)"/i)
+  end
 
   auto_updates true
 
