@@ -8,4 +8,9 @@ cask "giteye" do
   homepage "https://www.collab.net/products/giteye"
 
   app "GitEye.app"
+
+  zap trash: [
+    "~/Library/Preferences/GitEye.plist",
+    "~/Library/Saved Application State/GitEye.savedState",
+  ]
 end
