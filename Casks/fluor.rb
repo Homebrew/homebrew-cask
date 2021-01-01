@@ -8,6 +8,11 @@ cask "fluor" do
   name "Fluor"
   homepage "https://fluorapp.net/"
 
+  livecheck do
+    url :homepage
+    regex(/href=.*?Fluor(?:%20|[._-])v?(\d+(?:\.\d+)+)\.dmg/i)
+  end
+
   auto_updates true
   depends_on macos: ">= :sierra"
 
