@@ -9,9 +9,13 @@ cask "araxis-merge" do
     url "https://www.araxis.com/download/Merge#{version}-macOS.dmg"
   end
 
-  appcast "https://www.araxis.com/news-feed.atom"
   name "Araxis Merge"
   homepage "https://www.araxis.com/merge/"
+
+  livecheck do
+    url "https://www.araxis.com/merge/download.en"
+    regex(/href=.*?Merge[._-]?v?(\d+(?:\.\d+)+)-macOS\.dmg/i)
+  end
 
   app "Araxis Merge.app"
   binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxisgitdiff"
