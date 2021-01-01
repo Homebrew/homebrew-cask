@@ -1,5 +1,5 @@
 cask "yep" do
-  version "4.0.2,402.100"
+  version "4.0.4,404.101"
   sha256 :no_check
 
   url "https://www.ironicsoftware.com/downloads/Yep.zip"
