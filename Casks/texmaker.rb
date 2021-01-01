@@ -9,4 +9,9 @@ cask "texmaker" do
   homepage "https://www.xm1math.net/texmaker/"
 
   app "texmaker.app"
+
+  zap trash: [
+    "~/Library/Preferences/texmaker.plist",
+    "~/Library/Saved Application State/texmaker.savedState",
+  ]
 end
