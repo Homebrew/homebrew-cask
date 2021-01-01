@@ -8,7 +8,7 @@ cask "superslicer" do
   desc "Convert 3D models into G-code instructions or PNG layers"
   homepage "https://github.com/supermerill/SuperSlicer"
 
-  app "superslicer.app"
+  app "SuperSlicer.app"
 
   zap trash: "~/Library/Application Support/SuperSlicer"
 end
