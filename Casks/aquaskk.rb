@@ -1,6 +1,6 @@
 cask "aquaskk" do
-  version "4.7.2"
-  sha256 "3ffa4b0ebce4db6684ee1be1c3dd1247fcdc94cd10402c04f0e1baf3aabd5fab"
+  version "4.7.3"
+  sha256 "bf3300ceb8f5fd2433e244de0f43f1962073b5048f1536ef58e617f7c4785abd"
 
   url "https://github.com/codefirst/aquaskk/releases/download/#{version}/AquaSKK-#{version}.pkg"
   appcast "https://github.com/codefirst/aquaskk/releases.atom"
