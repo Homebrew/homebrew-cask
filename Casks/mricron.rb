@@ -11,4 +11,3 @@ cask "mricron" do
   binary "#{appdir}/MRIcron.app/Contents/Resources/bet"
   binary "#{appdir}/MRIcron.app/Contents/Resources/dcm2niix"
 end
-  
