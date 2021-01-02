@@ -1,11 +1,11 @@
 cask "eudic" do
-  version "4.0.1,2020-11-14"
-  sha256 "7b381dca81eac835fb8972e15eb4895ba8aaccdb48aaa2b920f77c51b4532174"
+  version "4.0.2,1051"
+  sha256 "ca8a9de73f9d856ed7bf67e9576a597dc29710b28d195358d4164467f221ca15"
 
   url "https://static.frdic.com/pkg/eudicmac.dmg?v=#{version.after_comma}",
       verified:   "static.frdic.com/",
       user_agent: :fake
-  appcast "https://www.eudic.net/v4/en/app/download",
+  appcast "https://www.eudic.net/update/eudic_mac.xml",
           must_contain: version.after_comma
   name "Eudic"
   name "欧路词典"
@@ -26,5 +26,6 @@ cask "eudic" do
     "~/Library/Eudb_en",
     "~/Library/Preferences/com.eusoft.eudic.plist",
     "~/Library/Preferences/com.eusoft.eudic.LightPeek.plist",
+    "~/Library/Preferences/group.com.eusoft.eudic.plist",
   ]
 end
