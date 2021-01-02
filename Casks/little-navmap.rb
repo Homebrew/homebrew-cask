@@ -5,11 +5,11 @@ cask "little-navmap" do
   url "https://github.com/albar965/littlenavmap/releases/download/v#{version}/LittleNavmap-macOS-#{version}.zip", verified: "github.com/albar965/littlenavmap/"
   appcast "https://github.com/albar965/littlenavmap/releases.atom"
   name "Little Navmap"
-  desc "Flight planning & navigation and airport search & information system"
+  desc "Flight planning and navigation and airport search and information system"
   homepage "https://albar965.github.io/littlenavmap.html"
 
   app "Little Navmap.app"
   app "Little Navconnect.app"
 
-  caveats "You'll be able to find the X-Plane plugin at #{staged_path} after installation."
+  caveats "The X-Plane plugin will be at #{staged_path} after installation."
 end
