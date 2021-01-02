@@ -21,9 +21,6 @@ cask "blackhole-16ch" do
                    must_succeed: true
   end
 
-  uninstall quit:    [
-    "com.apple.audio.AudioMIDISetup",
-    "com.apple.systempreferences",
-  ],
+  uninstall quit:    "com.apple.audio.AudioMIDISetup",
             pkgutil: "audio.existential.BlackHole"
 end
