@@ -6,6 +6,7 @@ cask "printrun" do
   appcast "https://github.com/kliment/Printrun/releases.atom"
   name "Printrun"
   homepage "https://github.com/kliment/Printrun"
+  caveats "You MUST run 'chmod a+x /Applications/pronterface.app/Contents/MacOS/pronterface' in shell after install."
 
   app "pronterface.app"
 end
