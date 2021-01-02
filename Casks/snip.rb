@@ -18,8 +18,6 @@ cask "snip" do
 
   uninstall quit:    [
     "com.tencent.snip",
-    "com.apple.systemevents",
-    "com.apple.systempreferences",
   ],
             pkgutil: "com.tencent.snip.Snip.pkg"
 end
