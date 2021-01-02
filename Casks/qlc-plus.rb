@@ -9,7 +9,5 @@ cask "qlc-plus" do
 
   app "QLC+.app"
 
-  zap trash: [
-    "~/Library/Application Support/QLC+",
-  ]
+  zap trash: "~/Library/Application Support/QLC+"
 end
