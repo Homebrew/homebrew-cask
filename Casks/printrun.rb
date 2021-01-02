@@ -7,5 +7,5 @@ cask "printrun" do
   name "Printrun"
   homepage "https://github.com/kliment/Printrun"
 
-  app "Printrun-#{version}-macos/pronterface.app"
+  app "pronterface.app"
 end
