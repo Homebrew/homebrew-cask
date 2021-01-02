@@ -1,5 +1,5 @@
 cask "steam" do
-  version "2.0"
+  version :latest
   sha256 :no_check
 
   url "https://steamcdn-a.akamaihd.net/client/installer/steam.dmg",
@@ -7,6 +7,8 @@ cask "steam" do
   name "Steam"
   desc "Video game digital distribution service"
   homepage "https://store.steampowered.com/about/"
+
+  auto_updates true
 
   app "Steam.app"
 
