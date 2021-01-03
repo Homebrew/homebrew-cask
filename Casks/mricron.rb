@@ -1,5 +1,5 @@
 cask "mricron" do
-  version "v1.0.20201102"
+  version "1.0.20201102"
   sha256 :no_check
 
   url "https://www.nitrc.org/frs/download.php/12005/MRIcron_macOS_Universal_X86_ARM.dmg?i_agree=1&download_now=1"
