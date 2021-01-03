@@ -1,6 +1,6 @@
 cask "miniconda" do
-  version "py38_4.8.3"
-  sha256 "9b9a353fadab6aa82ac0337c367c23ef842f97868dcbb2ff25ec3aa463afc871"
+  version "py38_4.9.2"
+  sha256 "a9ea0afba55b5d872e01323d495b649eac8ff4ce2ea098fb4c357b6139fe6478"
 
   url "https://repo.anaconda.com/miniconda/Miniconda3-#{version}-MacOSX-x86_64.sh",
       verified: "repo.anaconda.com/miniconda/"

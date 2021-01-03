@@ -18,9 +18,11 @@ cask "paintbrush" do
   app "Paintbrush.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.soggywaffles.Paintbrush",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.soggywaffles.paintbrush.sfl*",
+    "~/Library/Caches/com.soggywaffles.Paintbrush",
+    "~/Library/Containers/com.soggywaffles.Paintbrush",
     "~/Library/Preferences/com.soggywaffles.Paintbrush.LSSharedFileList.plist",
     "~/Library/Preferences/com.soggywaffles.Paintbrush.plist",
-    "~/Library/Caches/com.soggywaffles.Paintbrush",
   ]
 end

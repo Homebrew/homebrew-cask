@@ -8,6 +8,11 @@ cask "zenmap" do
   desc "Multi-platform graphical interface for official Nmap Security Scanner"
   homepage "https://nmap.org/zenmap/"
 
+  livecheck do
+    url "https://nmap.org/dist/"
+    regex(/href=.*?nmap[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+  end
+
   depends_on formula: "nmap"
 
   pkg "nmap-#{version}.mpkg",

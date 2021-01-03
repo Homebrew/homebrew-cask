@@ -9,4 +9,6 @@ cask "hotswitch" do
   homepage "https://oniatsu.github.io/HotSwitch/"
 
   app "HotSwitch.app"
+
+  zap trash: "~/Library/Preferences/com.oniatsu.HotSwitch.plist"
 end

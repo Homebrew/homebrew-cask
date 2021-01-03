@@ -15,4 +15,11 @@ cask "popclip" do
   depends_on macos: ">= :sierra"
 
   app "PopClip.app"
+
+  zap trash: [
+    "~/Library/Application Support/PopClip",
+    "~/Library/Application Support/com.pilotmoon.popclip",
+    "~/Library/Caches/com.pilotmoon.popclip",
+    "~/Library/Preferences/com.pilotmoon.popclip.plist",
+  ]
 end

@@ -3,10 +3,14 @@ cask "daisydisk" do
   sha256 :no_check
 
   url "https://www.daisydiskapp.com/downloads/DaisyDisk.zip"
-  appcast "https://daisydiskapp.com/downloads/appcastReleaseNotes.php?appEdition=Standard&osVersion=10.15"
   name "DaisyDisk"
   desc "Disk space visualizer"
   homepage "https://daisydiskapp.com/"
+
+  livecheck do
+    url "https://daisydiskapp.com/downloads/appcastReleaseNotes.php?appEdition=Standard&osVersion=10.15"
+    regex(/>\s*?Version\s+?v?(\d+(?:\.\d+)+)\s*?</)
+  end
 
   auto_updates true
 

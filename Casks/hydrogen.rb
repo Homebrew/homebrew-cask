@@ -12,4 +12,6 @@ cask "hydrogen" do
   depends_on macos: ">= :sierra"
 
   app "hydrogen.app"
+
+  zap trash: "~/Library/Application Support/Hydrogen"
 end

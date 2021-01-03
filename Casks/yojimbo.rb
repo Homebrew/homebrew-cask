@@ -4,9 +4,13 @@ cask "yojimbo" do
 
   url "https://s3.amazonaws.com/BBSW-download/Yojimbo_#{version}.dmg",
       verified: "s3.amazonaws.com/BBSW-download/"
-  appcast "https://versioncheck.barebones.com/Yojimbo.xml"
   name "Yojimbo"
   homepage "https://www.barebones.com/products/yojimbo/"
+
+  livecheck do
+    url "https://versioncheck.barebones.com/Yojimbo.xml"
+    regex(/Yojimbo[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+  end
 
   app "Yojimbo.app"
 end
