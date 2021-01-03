@@ -1,5 +1,5 @@
 cask "xld" do
-  version "20210101,153.1"
+  version "20210101"
   sha256 "2fa9aa8035fc2713fe410fb835b0df9eeaae91593e550265b4226f836009d009"
 
   url "https://downloads.sourceforge.net/xld/xld-#{version.before_comma}.dmg",
