@@ -5,7 +5,7 @@ cask "printrun" do
   url "https://github.com/kliment/Printrun/releases/download/printrun-#{version}/Printrun-#{version}-macos.zip"
   appcast "https://github.com/kliment/Printrun/releases.atom"
   name "Printrun"
-  desc "It have stable version (1.6.0,18Nov2017), but it cannot run in catalina."
+  desc "It have stable version (1.6.0,18Nov2017), but it cannot run in catalina"
   homepage "https://github.com/kliment/Printrun"
 
   app "pronterface.app"
