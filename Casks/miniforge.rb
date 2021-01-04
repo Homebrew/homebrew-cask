@@ -3,7 +3,9 @@ cask "miniforge" do
   sha256 "a33aca4dd6686b1dba790b224c9e686d7e08c86e6074379194f3bde478d883ed"
 
   url "https://github.com/conda-forge/miniforge/releases/download/#{version}/Miniforge3-#{version}-MacOSX-x86_64.sh"
+  appcast "https://github.com/conda-forge/miniforge/releases.atom"
   name "miniforge"
+  desc "Minimal installer for conda specific to conda-forge"
   homepage "https://github.com/conda-forge/miniforge"
 
   auto_updates true
