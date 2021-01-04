@@ -1,11 +1,12 @@
 cask "gfxutil" do
   version "1.80b"
-  sha256 "78e4cc27854184a6f87296d10c88983aa4c04221bcc8e86105b06ce4f6bbe83c"
+  sha256 "2aecb08afc46ebb5507a8003bf034c1422d70adf46508affc45bd232695374d9"
 
   url "https://github.com/acidanthera/gfxutil/releases/download/#{version}/gfxutil-#{version}-RELEASE.zip"
   appcast "https://github.com/acidanthera/gfxutil/releases.atom"
   name "gfxutil"
+  desc "Tool to work with Device Properties commonly found in Apple firmwares"
   homepage "https://github.com/acidanthera/gfxutil/"
 
-  binary "bin/gfxutil"
+  binary "gfxutil"
 end
