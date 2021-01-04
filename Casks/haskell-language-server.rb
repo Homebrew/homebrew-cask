@@ -18,5 +18,8 @@ cask "haskell-language-server" do
   binary "haskell-language-server-8.10.2"
   binary "haskell-language-server-8.10.3"
 
-  caveats "You need to provide GHC/stack/cabal yourself."
+  caveats <<-EOS
+   You need to provide GHC/stack/cabal yourself, depending on your needs
+   (see https://github.com/haskell/haskell-language-server#prerequisites).
+  EOS
 end
