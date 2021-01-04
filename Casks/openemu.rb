@@ -6,8 +6,8 @@ cask "openemu" do
     version "2.0.9.1"
     sha256 "c6036374104e8cefee1be12fe941418e893a7f60a1b2ddaae37e477b94873790"
   else
-    version "2.3"
-    sha256 "13e751eac0e107b5e8a00dd803de7889630eaa797dd08f976842aeff3d6d8e2c"
+    version "2.3.1"
+    sha256 "79286164c9dca4dc9579845b1f3143ac9871f41f7b7cb7c5306fd5d382dd1eba"
   end
 
   url "https://github.com/OpenEmu/OpenEmu/releases/download/v#{version}/OpenEmu_#{version}.zip",
