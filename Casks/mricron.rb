@@ -10,6 +10,6 @@ cask "mricron" do
   app "MRIcron.app"
   binary "#{appdir}/MRIcron.app/Contents/Resources/bet"
   binary "#{appdir}/MRIcron.app/Contents/Resources/dcm2niix"
-  
+
   zap trash: "~/Library/Saved Application State/com.mricro.MRIcron.savedState"
 end
