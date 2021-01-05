@@ -5,7 +5,7 @@ cask "wavebox" do
   url "https://download.wavebox.app/stable/mac/Install%20Wavebox%20#{version}.dmg",
       verified: "download.wavebox.app/"
   name "Wavebox"
-  desc "Powerful productivity browser like no other"
+  desc "Web browser"
   homepage "https://wavebox.io/"
 
   livecheck do
