@@ -4,6 +4,7 @@ cask "google-hangouts" do
 
   url "https://dl.google.com/googletalk/googletalkplugin/GoogleVoiceAndVideoSetup.dmg"
   name "Google Hangouts"
+  desc "Google Video Support Plugin for Internet Explorer 11"
   homepage "https://www.google.com/tools/dlpage/hangoutplugin"
 
   pkg "Google Voice and Video.pkg"
