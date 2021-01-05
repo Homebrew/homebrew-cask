@@ -8,7 +8,7 @@ cask "macupdater" do
   homepage "https://www.corecode.io/macupdater/index.html"
 
   livecheck do
-    url "https://www.corecode.io/macupdater/macupdater.xml"
+    url "https://www.corecode.io/macupdater/macupdater2.xml"
     strategy :sparkle
   end
 
