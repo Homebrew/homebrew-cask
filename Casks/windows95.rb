@@ -1,7 +1,7 @@
 cask "windows95" do
   # NOTE: "95" is not a version number, but an intrinsic part of the product name
-  version "2.2.2"
-  sha256 "70deb71aa540fceeddec8815f308710f9ca991bd78cf84d8512aa8035d781c2c"
+  version "2.3.0"
+  sha256 "dc89096e83b8e494390715e502701f3f35d4b19c45635e8eab9ac8036169b904"
 
   url "https://github.com/felixrieseberg/windows95/releases/download/v#{version}/windows95-darwin-x64-#{version}.zip"
   appcast "https://github.com/felixrieseberg/windows95/releases.atom"
