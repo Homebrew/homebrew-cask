@@ -11,7 +11,7 @@ cask "unclack" do
 
   zap trash: [
     "~/Library/Application Scripts/dev.ajkueterman.unclack-LaunchAtLoginHelper",
-    "~/Library/Preferences/dev.ajkueterman.unclack.plist",
     "~/Library/Containers/dev.ajkueterman.unclack-LaunchAtLoginHelper",
+    "~/Library/Preferences/dev.ajkueterman.unclack.plist",
   ]
 end
