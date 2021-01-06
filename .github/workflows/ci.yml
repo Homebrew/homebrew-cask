@@ -33,7 +33,7 @@ jobs:
   test:
     name: ${{ matrix.name }}
     needs: generate-matrix
-    runs-on: macos-11.0
+    runs-on: ${{ matrix.runner }}
     strategy:
       matrix:
         include: ${{ fromJson(needs.generate-matrix.outputs.matrix) }}
@@ -77,11 +77,10 @@ jobs:
             echo '::warning::Removing `conda` symlink is no longer necessary.'
           fi
 
-          if brew tap-info adoptopenjdk/openjdk; then
-            brew untap adoptopenjdk/openjdk
-          else
+          if ! brew untap adoptopenjdk/openjdk; then
             echo '::warning::Untapping adoptopenjdk/openjdk is no longer necessary.'
           fi
+        if: runner.os == 'macOS'
 
       # Workaround until the `cache` action uses the changes from
       # https://github.com/actions/toolkit/pull/580.
