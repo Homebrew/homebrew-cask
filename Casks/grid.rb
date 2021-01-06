@@ -17,9 +17,9 @@ cask "grid" do
             launchctl: "app.macgrid.GridLaunchAtLogin"
 
   zap trash: [
-    "~/Library/Caches/app.macgrid.Grid",
     "~/Library/Application Support/Grid",
-    "~/Library/Preferences/app.macgrid.Grid.plist",
+    "~/Library/Caches/app.macgrid.Grid",
     "~/Library/Containers/app.macgrid.GridLaunchAtLogin",
+    "~/Library/Preferences/app.macgrid.Grid.plist",
   ]
 end
