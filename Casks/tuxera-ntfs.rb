@@ -8,7 +8,7 @@ cask "tuxera-ntfs" do
   name "Tuxera NTFS"
   desc "File system and storage management software"
   homepage "https://ntfsformac.tuxera.com/"
-  
+
   auto_updates true
 
   pkg ".packages/Flat/Install Tuxera NTFS.mpkg"
