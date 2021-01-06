@@ -16,9 +16,9 @@ cask "spaceman" do
   uninstall quit: "dev.jaysce.Spaceman"
 
   zap trash: [
-    "~/Library/Caches/dev.jaysce.Spaceman",
-    "~/Library/Preferences/dev.jaysce.Spaceman.plist",
-    "~/Library/Containers/dev.jaysce.Spaceman-LaunchAtLoginHelper",
     "~/Library/Application Scripts/dev.jaysce.Spaceman-LaunchAtLoginHelper",
+    "~/Library/Caches/dev.jaysce.Spaceman",
+    "~/Library/Containers/dev.jaysce.Spaceman-LaunchAtLoginHelper",
+    "~/Library/Preferences/dev.jaysce.Spaceman.plist",
   ]
 end
