@@ -6,7 +6,7 @@ cask "atemosc" do
       verified: "github.com/SteffeyDev/atemOSC/"
   appcast "https://github.com/SteffeyDev/atemOSC/releases.atom"
   name "atemOSC"
-  desc "Control ATEM video switchers with OSC"
+  desc "Control BMD ATEM video switchers with OSC"
   homepage "http://www.atemosc.com/"
 
   app "atemOSC.app"
