@@ -6,12 +6,13 @@ cask "openmtp" do
       verified: "github.com/ganeshrvel/openmtp/"
   appcast "https://github.com/ganeshrvel/openmtp/releases.atom"
   name "OpenMTP"
-  homepage "https://ganeshrvel.github.io/openmtp"
+  homepage "https://openmtp.ganeshrvel.com/"
 
   app "OpenMTP.app"
 
   zap trash: [
     "~/.io.ganeshrvel",
+    "~/Library/Application Support/io.ganeshrvel.openmtp",
     "~/Library/Application Support/OpenMTP",
     "~/Library/Preferences/io.ganeshrvel.openmtp.plist",
   ]
