@@ -12,8 +12,8 @@ cask "openmtp" do
 
   zap trash: [
     "~/.io.ganeshrvel",
+    "~/Library/Application Support/io.ganeshrvel.openmtp",
     "~/Library/Application Support/OpenMTP",
     "~/Library/Preferences/io.ganeshrvel.openmtp.plist",
-    "~/Library/Application Support/io.ganeshrvel.openmtp",
   ]
 end
