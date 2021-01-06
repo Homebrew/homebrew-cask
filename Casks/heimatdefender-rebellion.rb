@@ -11,9 +11,8 @@ cask "heimatdefender-rebellion" do
 
   zap trash: [
     "~/Library/Application Support/com.moremountains.corgiengine",
-    "/private/var/folders/*/*/C/com.moremountains.corgiengine",
+    "~/Library/Logs/Ein Prozent e.V_/HeimatDefender",
     "~/Library/Preferences/com.moremountains.corgiengine.plist",
     "~/Library/Saved Application State/com.moremountains.corgiengine.savedState",
-    "~/Library/Logs/Ein Prozent e.V_/HeimatDefender",
   ]
 end
