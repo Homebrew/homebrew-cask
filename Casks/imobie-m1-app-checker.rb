@@ -10,8 +10,8 @@ cask "imobie-m1-app-checker" do
   app "iMobie M1 App Checker.app"
 
   zap trash: [
+    "~/Library/Application Support/com.iMobie.iMobie-M1-App-Checker",
     "~/Library/Caches/com.iMobie.iMobie-M1-App-Checker",
     "~/Library/Preferences/com.iMobie.iMobie-M1-App-Checker.plist",
-    "~/Library/Application Support/com.iMobie.iMobie-M1-App-Checker",
   ]
 end
