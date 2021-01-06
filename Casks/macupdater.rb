@@ -4,7 +4,7 @@ cask "macupdater" do
 
   url "https://www.corecode.io/downloads/macupdater_#{version.before_comma}.dmg"
   name "MacUpdater"
-  desc "Track the latest updates of all applications installed automatically"
+  desc "Track and update to the latest versions of installed software"
   homepage "https://www.corecode.io/macupdater/index.html"
 
   livecheck do
