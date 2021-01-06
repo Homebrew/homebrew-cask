@@ -4,10 +4,14 @@ cask "chromium" do
 
   url "https://commondatastorage.googleapis.com/chromium-browser-snapshots/Mac/#{version}/chrome-mac.zip",
       verified: "commondatastorage.googleapis.com/chromium-browser-snapshots/Mac/"
-  appcast "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac%2FLAST_CHANGE?alt=media"
   name "Chromium"
   desc "Free and open-source web browser"
   homepage "https://www.chromium.org/Home"
+
+  livecheck do
+    url "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac%2FLAST_CHANGE?alt=media"
+    regex(/v?(\d+(?:\.\d+)*)/i)
+  end
 
   conflicts_with cask: [
     "eloston-chromium",
