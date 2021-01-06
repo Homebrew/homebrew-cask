@@ -15,11 +15,7 @@ cask "kindle" do
 
   app "Kindle.app"
 
-  uninstall delete: [
-    "/Library/Logs/DiagnosticReports/Kindle_*.diag",
-    "/private/var/db/receipts/com.amazon.Kindle.bom",
-    "/private/var/db/receipts/com.amazon.Kindle.plist",
-  ]
+  uninstall delete: "/Library/Logs/DiagnosticReports/Kindle_*.diag"
 
   zap trash: [
     "~/Library/Application Support/Kindle",
