@@ -1,11 +1,11 @@
 cask "rq" do
-  version "0.10.4"
-  sha256 "cae9ee8589dfb4fd0ab13ac7991d372fc2531f7c69374257b943dc2e096b750a"
+  version "1.0.2"
+  sha256 "49f732b2aabf4eaff231e425edf710ca34e6bf730cff9a71adf79d11e630f883"
 
-  url "https://github.com/dflemstr/rq/releases/download/v#{version}/record-query-v#{version}-x86_64-apple-darwin.tar.gz"
+  url "https://github.com/dflemstr/rq/releases/download/v#{version}/rq-v#{version}-x86_64-apple-darwin.tar.gz"
   appcast "https://github.com/dflemstr/rq/releases.atom"
   name "rq"
   homepage "https://github.com/dflemstr/rq"
 
-  binary "x86_64-apple-darwin/rq"
+  binary "rq"
 end
