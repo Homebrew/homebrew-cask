@@ -3,7 +3,6 @@ cask "virtualbox-extension-pack" do
   sha256 "9802482b77b95a954cb5111793da10d009009a4e9a9c4eaa4bd1ae5dafe9db46"
 
   url "https://download.virtualbox.org/virtualbox/#{version}/Oracle_VM_VirtualBox_Extension_Pack-#{version}.vbox-extpack"
-  appcast "https://download.virtualbox.org/virtualbox/LATEST.TXT"
   name "Oracle VirtualBox Extension Pack"
   desc "AMD64/Intel64 and x86 virtualization"
   homepage "https://www.virtualbox.org/"
