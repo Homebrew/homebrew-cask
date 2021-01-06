@@ -1,5 +1,5 @@
 cask "vienna" do
-  version "3.7.0"
+  version "3.7.0,7429"
   sha256 "a896d241622aac516ca26064d972d20be1324dc32c1f6c22a24703e8a6561ea0"
 
   url "https://dl.bintray.com/viennarss/vienna-rss/Vienna#{version.before_comma}.tar.gz",
