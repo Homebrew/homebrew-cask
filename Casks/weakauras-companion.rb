@@ -4,9 +4,13 @@ cask "weakauras-companion" do
 
   url "https://github.com/WeakAuras/WeakAuras-Companion/releases/download/v#{version}/WeakAuras-Companion-#{version}.dmg",
       verified: "github.com/WeakAuras/WeakAuras-Companion/"
-  appcast "https://github.com/WeakAuras/WeakAuras-Companion/releases.atom"
   name "WeakAuras Companion"
   homepage "https://weakauras.wtf/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "WeakAuras Companion.app"
 end
