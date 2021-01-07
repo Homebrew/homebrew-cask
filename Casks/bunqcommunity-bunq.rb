@@ -4,9 +4,13 @@ cask "bunqcommunity-bunq" do
 
   url "https://github.com/bunqCommunity/bunqDesktop/releases/download/#{version}/bunqDesktop-#{version}.dmg",
       verified: "github.com/bunqCommunity/bunqDesktop/"
-  appcast "https://github.com/bunqCommunity/bunqDesktop/releases.atom"
   name "bunqDesktop"
   homepage "https://bunqdesk.top/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "bunqDesktop.app"
 end
