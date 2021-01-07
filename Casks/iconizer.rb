@@ -4,9 +4,13 @@ cask "iconizer" do
 
   url "https://github.com/raphaelhanneken/iconizer/releases/download/#{version}/Iconizer.dmg",
       verified: "github.com/raphaelhanneken/iconizer/"
-  appcast "https://github.com/raphaelhanneken/iconizer/releases.atom"
   name "Iconizer"
   homepage "https://raphaelhanneken.github.io/iconizer/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   auto_updates true
 
