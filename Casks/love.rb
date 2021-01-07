@@ -4,9 +4,13 @@ cask "love" do
 
   url "https://github.com/love2d/love/releases/download/#{version}/love-#{version}-macos.zip",
       verified: "github.com/love2d/love/"
-  appcast "https://github.com/love2d/love/releases.atom"
   name "LÖVE"
   homepage "https://love2d.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "love.app"
   binary "#{appdir}/love.app/Contents/MacOS/love"
