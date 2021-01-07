@@ -3,9 +3,13 @@ cask "opensc" do
   sha256 "fd456cd3920bead10d9f1845623408eb16c6b0f934f960d52d5850f0ee205eab"
 
   url "https://github.com/OpenSC/OpenSC/releases/download/#{version}/OpenSC-#{version}.dmg"
-  appcast "https://github.com/OpenSC/OpenSC/releases.atom"
   name "OpenSC"
   homepage "https://github.com/OpenSC/OpenSC/wiki"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   pkg "OpenSC #{version}.pkg"
 
