@@ -23,7 +23,7 @@ cask "mactex-no-gui" do
   depends_on formula: "ghostscript"
   depends_on macos: ">= :high_sierra"
 
-  pkg "mactex-#{version.no_dots}.pkg",
+  pkg "mactex-#{version.no_hyphens}.pkg",
       choices: [
         {
           # Ghostscript
@@ -39,21 +39,21 @@ cask "mactex-no-gui" do
         },
         {
           # GUI Applications
-          "choiceIdentifier" => "org.tug.mactex.gui#{version.major}",
+          "choiceIdentifier" => "org.tug.mactex.gui#{version.split("-").first}",
           "choiceAttribute"  => "selected",
           "attributeSetting" => 0,
         },
         {
           # TeXLive
-          "choiceIdentifier" => "org.tug.mactex.texlive#{version.major}",
+          "choiceIdentifier" => "org.tug.mactex.texlive#{version.split("-").first}",
           "choiceAttribute"  => "selected",
           "attributeSetting" => 1,
         },
       ]
 
-  uninstall pkgutil: "org.tug.mactex.texlive#{version.major}",
+  uninstall pkgutil: "org.tug.mactex.texlive#{version.split("-").first}",
             delete:  [
-              "/usr/local/texlive/#{version.major}",
+              "/usr/local/texlive/#{version.split("-").first}",
               "/Library/TeX",
               "/etc/paths.d/TeX",
               "/etc/manpaths.d/TeX",
@@ -61,7 +61,7 @@ cask "mactex-no-gui" do
 
   zap trash: [
     "/usr/local/texlive/texmf-local",
-    "~/Library/texlive/#{version.major}",
+    "~/Library/texlive/#{version.split("-").first}",
   ],
       rmdir: [
         "/usr/local/texlive",
