@@ -4,10 +4,14 @@ cask "shotcut" do
 
   url "https://github.com/mltframework/shotcut/releases/download/v#{version}/shotcut-macos-signed-#{version.no_dots}.dmg",
       verified: "github.com/mltframework/shotcut/"
-  appcast "https://github.com/mltframework/shotcut/releases.atom"
   name "Shotcut"
   desc "Cross-platform and open-source video editor"
   homepage "https://www.shotcut.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Shotcut.app"
 end
