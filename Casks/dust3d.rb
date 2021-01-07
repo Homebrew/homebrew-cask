@@ -4,9 +4,13 @@ cask "dust3d" do
 
   url "https://github.com/huxingyi/dust3d/releases/download/#{version}/dust3d-#{version}.dmg",
       verified: "github.com/huxingyi/dust3d/"
-  appcast "https://github.com/huxingyi/dust3d/releases.atom"
   name "Dust3D"
   homepage "https://dust3d.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "dust3d-#{version}.app"
 end
