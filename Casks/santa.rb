@@ -3,9 +3,13 @@ cask "santa" do
   sha256 "eff538cda801983a7c1af170c43c6e2fd9a31c51b7c4857d31df6f9bb7c671a0"
 
   url "https://github.com/google/santa/releases/download/#{version}/santa-#{version}.dmg"
-  appcast "https://github.com/google/santa/releases.atom"
   name "Santa"
   homepage "https://github.com/google/santa"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   pkg "santa-#{version}.pkg"
 
