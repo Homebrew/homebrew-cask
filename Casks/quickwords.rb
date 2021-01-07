@@ -4,9 +4,13 @@ cask "quickwords" do
 
   url "https://github.com/quickwords/quickwords/releases/download/v#{version}/Quickwords-Mac.dmg",
       verified: "github.com/quickwords/quickwords/"
-  appcast "https://github.com/quickwords/quickwords/releases.atom"
   name "Quickwords"
   homepage "https://quickwords.co/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Quickwords.app"
 end
