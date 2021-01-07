@@ -4,9 +4,13 @@ cask "kaku" do
 
   url "https://github.com/EragonJ/Kaku/releases/download/#{version}/Kaku-#{version}.dmg",
       verified: "github.com/EragonJ/Kaku/"
-  appcast "https://github.com/EragonJ/Kaku/releases.atom"
   name "Kaku"
   homepage "https://kaku.rocks/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Kaku.app"
 end
