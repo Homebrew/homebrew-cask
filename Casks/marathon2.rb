@@ -5,10 +5,14 @@ cask "marathon2" do
 
   url "https://github.com/Aleph-One-Marathon/alephone/releases/download/release-#{version}/Marathon2-#{version}-Mac.dmg",
       verified: "github.com/Aleph-One-Marathon/alephone/"
-  appcast "https://github.com/Aleph-One-Marathon/alephone/releases.atom"
   name "Marathon 2"
   desc "First-person shooter, second in a trilogy"
   homepage "https://alephone.lhowon.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Marathon 2.app"
 end
