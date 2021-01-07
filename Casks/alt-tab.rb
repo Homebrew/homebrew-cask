@@ -3,10 +3,14 @@ cask "alt-tab" do
   sha256 "b7006f013e8e52c448edd44d7bc2ac9d9de41b7448bde62d38a98a7f4ab86aca"
 
   url "https://github.com/lwouis/alt-tab-macos/releases/download/v#{version}/AltTab-#{version}.zip"
-  appcast "https://github.com/lwouis/alt-tab-macos/releases.atom"
   name "alt-tab"
   desc "Utility to set up alt-tap to switch between windows"
   homepage "https://github.com/lwouis/alt-tab-macos"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"
