@@ -4,10 +4,15 @@ cask "vnote" do
 
   url "https://github.com/tamlok/vnote/releases/download/v#{version}/VNote-#{version}-x64.dmg",
       verified: "github.com/tamlok/vnote/"
-  appcast "https://github.com/tamlok/vnote/releases.atom"
   name "VNote"
   desc "Note-taking application that knows programmers and Markdown better"
   homepage "https://tamlok.github.io/vnote/"
+
+  livecheck do
+    url "https://github.com/vnotex/vnote/releases"
+    strategy :page_match
+    regex(%r{href=.*?/VNote-(?:mac-x64)?v?(\d+(?:\.\d+)*)(?:-x64)?\.(?:dmg|zip)}i)
+  end
 
   app "VNote.app"
 end
