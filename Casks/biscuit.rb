@@ -4,10 +4,14 @@ cask "biscuit" do
 
   url "https://github.com/agata/dl.biscuit/releases/download/v#{version}/Biscuit-#{version}.dmg",
       verified: "github.com/agata/dl.biscuit/"
-  appcast "https://github.com/agata/dl.biscuit/releases.atom"
   name "Biscuit"
   desc "Browser to organize apps"
   homepage "https://eatbiscuit.com/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   auto_updates true
 
