@@ -11,7 +11,6 @@ cask "weka" do
     url "https://waikato.github.io/weka-wiki/downloading_weka/"
     strategy :page_match do |page|
       page[%r{href=.*?/weka-(\d+(?:-\d+)*)-azul-zulu-osx\.dmg}i, 1].tr("-", ".")
-      # page
     end
   end
 
