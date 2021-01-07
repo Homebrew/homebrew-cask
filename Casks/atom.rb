@@ -4,10 +4,14 @@ cask "atom" do
 
   url "https://github.com/atom/atom/releases/download/v#{version}/atom-mac.zip",
       verified: "github.com/atom/atom/"
-  appcast "https://github.com/atom/atom/releases.atom"
   name "Github Atom"
   desc "Cross-platform text editor"
   homepage "https://atom.io/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
 
