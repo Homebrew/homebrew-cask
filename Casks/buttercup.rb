@@ -4,10 +4,14 @@ cask "buttercup" do
 
   url "https://github.com/buttercup/buttercup-desktop/releases/download/v#{version}/Buttercup-#{version}.dmg",
       verified: "github.com/buttercup/buttercup-desktop/"
-  appcast "https://github.com/buttercup/buttercup-desktop/releases.atom"
   name "Buttercup"
   desc "Javascript Secrets Vault - Multi-Platform Desktop Application"
   homepage "https://buttercup.pw/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Buttercup.app"
 end
