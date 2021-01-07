@@ -4,10 +4,14 @@ cask "open-ecard" do
 
   url "https://github.com/ecsec/open-ecard/releases/download/#{version}/Open-eCard-App-#{version}.dmg",
       verified: "github.com/ecsec/open-ecard/"
-  appcast "https://github.com/ecsec/open-ecard/releases.atom"
   name "Open eCard"
   desc "Client side implementation of the eCard-API-Framework (BSI TR-03112)"
   homepage "https://www.openecard.org/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Open-eCard-App.app"
 
