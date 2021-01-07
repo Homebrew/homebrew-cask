@@ -4,7 +4,7 @@ cask "x-moto" do
 
   url "https://github.com/xmoto/xmoto/releases/download/#{version}/xmoto-#{version}.dmg",
       verified: "github.com/xmoto/xmoto/"
-  name "XMoto"
+  name "X-Moto"
   homepage "https://xmoto.tuxfamily.org/"
 
   livecheck do
