@@ -4,10 +4,14 @@ cask "whoozle-android-file-transfer" do
 
   url "https://github.com/whoozle/android-file-transfer-linux/releases/download/v#{version}/AndroidFileTransferForLinux.dmg",
       verified: "github.com/whoozle/android-file-transfer-linux/"
-  appcast "https://github.com/whoozle/android-file-transfer-linux/releases.atom"
   name "Android File Transfer"
   desc "Android File Transfer for Linux"
   homepage "https://whoozle.github.io/android-file-transfer-linux/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   conflicts_with cask: "whoozle-android-file-transfer-nightly"
 
