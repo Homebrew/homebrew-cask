@@ -4,9 +4,13 @@ cask "powder-player" do
 
   url "https://github.com/jaruba/PowderPlayer/releases/download/v#{version}/PowderPlayer_v#{version}.dmg",
       verified: "github.com/jaruba/PowderPlayer/"
-  appcast "https://github.com/jaruba/PowderPlayer/releases.atom"
   name "Powder Player"
   homepage "https://powder.media/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Powder Player.app"
 end
