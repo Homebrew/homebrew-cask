@@ -3,10 +3,14 @@ cask "quail" do
   sha256 "4c4f31ae51f2ae30d5a25eaed006409bfcefbb9c16b3770c1023483bc3457081"
 
   url "https://github.com/1000ch/quail/releases/download/v#{version}/Quail-#{version}.dmg"
-  appcast "https://github.com/1000ch/quail/releases.atom"
   name "Quail"
   desc "Unofficial but officially accepted esa app"
   homepage "https://github.com/1000ch/quail"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Quail.app"
 
