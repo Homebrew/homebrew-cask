@@ -4,10 +4,14 @@ cask "tiled" do
 
   url "https://github.com/bjorn/tiled/releases/download/v#{version}/Tiled-#{version}-macos.zip",
       verified: "github.com/bjorn/tiled/"
-  appcast "https://github.com/bjorn/tiled/releases.atom"
   name "Tiled"
   desc "Flexible level editor"
   homepage "https://www.mapeditor.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on macos: ">= :sierra"
 
