@@ -3,10 +3,14 @@ cask "overkill" do
   sha256 "e088b8a99ef76cffa56ec82b2f36e1461b974944de3d24996a43f503eb6c7606"
 
   url "https://github.com/KrauseFx/overkill-for-mac/releases/download/#{version}/Overkill.zip"
-  appcast "https://github.com/KrauseFx/overkill-for-mac/releases.atom"
   name "Overkill"
   desc "Stop iTunes from opening when you connect your iPhone"
   homepage "https://github.com/KrauseFx/overkill-for-mac"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on macos: ">= :sierra"
 
