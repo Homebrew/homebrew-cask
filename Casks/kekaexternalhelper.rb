@@ -7,6 +7,7 @@ cask "kekaexternalhelper" do
   desc "Helper application for the Keka file archiver"
   homepage "https://github.com/aonez/Keka/wiki/Default-application"
 
+  # Not all releases contain the external helper, so we have to check all of them.
   livecheck do
     url "https://github.com/aonez/Keka/releases"
     strategy :page_match do |page|
