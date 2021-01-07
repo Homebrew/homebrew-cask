@@ -4,10 +4,18 @@ cask "home-assistant" do
 
   url "https://github.com/home-assistant/iOS/releases/download/release%2F#{version.before_comma}%2F#{version.after_comma}/home-assistant-mac.zip",
       verified: "github.com/home-assistant/iOS/"
-  appcast "https://github.com/home-assistant/iOS/releases.atom"
   name "Home Assistant"
   desc "Companion app for Home Assistant home automation software"
   homepage "https://companion.home-assistant.io/"
+
+  livecheck do
+    url :url
+    strategy :git do |tags|
+      tags.map { |tag|
+        match = tag.match(%r{^release/(\d+(?:\.\d+)*)/(\d+)$})
+        "#{match[1]},#{match[2]}" if match
+    end
+  end
 
   depends_on macos: ">= :catalina"
 
