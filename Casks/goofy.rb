@@ -4,10 +4,14 @@ cask "goofy" do
 
   url "https://github.com/danielbuechele/goofy/releases/download/v#{version}/Goofy-#{version}.dmg",
       verified: "github.com/danielbuechele/goofy/"
-  appcast "https://github.com/danielbuechele/goofy/releases.atom"
   name "Goofy"
   desc "Desktop client for Facebook Messenger"
   homepage "https://www.goofyapp.com/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Goofy.app"
 
