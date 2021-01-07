@@ -3,9 +3,14 @@ cask "xamarin-mac" do
   sha256 "cd528ba6226763768b741584f5ff6495e361f092dfa56306b4169162eb32b5c1"
 
   url "https://dl.xamarin.com/XamarinforMac/Mac/xamarin.mac-#{version}.pkg"
-  appcast "https://github.com/xamarin/xamarin-macios/releases.atom"
   name "Xamarin Mac"
   homepage "https://www.xamarin.com/platform"
+
+  livecheck do
+    url "https://github.com/xamarin/xamarin-macios/releases"
+    strategy :page_match
+    regex(%r{href=.*?/tag/xamarin-mac-(\d+(?:\.\d+)*)}i)
+  end
 
   depends_on cask: "homebrew/cask-versions/mono-mdk-for-visual-studio"
 
