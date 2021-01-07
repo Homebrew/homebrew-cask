@@ -8,9 +8,9 @@ cask "trinity" do
   homepage "https://trinity.iota.org/"
 
   livecheck do
-    url "https://github.com/iotaledger/trinity-wallet/releases"
-    strategy :page_match
-    regex(%r{href=.*?/trinity-desktop-(\d+(?:\.\d+)*)\.dmg}i)
+    url :url
+    strategy :git
+    regex(/^desktop-(\d+(?:\.\d+)*)/i)
   end
 
   app "Trinity.app"
