@@ -4,10 +4,14 @@ cask "proxyman" do
 
   url "https://github.com/ProxymanApp/Proxyman/releases/download/#{version}/Proxyman_#{version}.dmg",
       verified: "github.com/ProxymanApp/Proxyman/"
-  appcast "https://github.com/ProxymanApp/Proxyman/releases.atom"
   name "Proxyman"
   desc "Modern and intuitive HTTP Debugging Proxy app"
   homepage "https://proxyman.io/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   auto_updates true
 
