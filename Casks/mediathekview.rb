@@ -8,5 +8,11 @@ cask "mediathekview" do
   desc "Manages online multimedia libs of German, Austrian and Swiss public broadcasters"
   homepage "https://mediathekview.de/"
 
+  livecheck do
+    url "https://download.mediathekview.de/stabil/"
+    strategy :page_match
+    regex(%r{href=.*?/MediathekView-(\d+(?:\.\d+)*)-mac\.dmg}i)
+  end
+
   app "MediathekView.app"
 end
