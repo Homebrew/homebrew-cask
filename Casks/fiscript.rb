@@ -3,9 +3,13 @@ cask "fiscript" do
   sha256 "a622526479338a151c42f57b04717902555b33aad06abba249c8a4bb0554a0ed"
 
   url "https://github.com/Mortennn/FiScript/releases/download/v#{version}/FiScript.zip"
-  appcast "https://github.com/Mortennn/FiScript/releases.atom"
   name "FiScript"
   homepage "https://github.com/Mortennn/FiScript"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on macos: ">= :sierra"
 
