@@ -3,9 +3,13 @@ cask "outset" do
   sha256 "bfc3921e91fab1b9ff915c2935162b930ab0035a1336932e085f46bcf95bb752"
 
   url "https://github.com/chilcote/outset/releases/download/v#{version}/outset-#{version}.pkg"
-  appcast "https://github.com/chilcote/outset/releases.atom"
   name "outset"
   homepage "https://github.com/chilcote/outset"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   pkg "outset-#{version}.pkg"
 
