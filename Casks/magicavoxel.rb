@@ -4,10 +4,13 @@ cask "magicavoxel" do
 
   url "https://github.com/ephtracy/ephtracy.github.io/releases/download/#{version.major_minor_patch}/MagicaVoxel-#{version}-alpha-macos.zip",
       verified: "github.com/ephtracy/ephtracy.github.io/"
-  appcast "https://github.com/ephtracy/ephtracy.github.io/releases.atom",
-          must_contain: version.major_minor_patch
   name "MagicaVoxel"
   homepage "https://ephtracy.github.io/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   suite staged_path, target: "MagicaVoxel"
 
