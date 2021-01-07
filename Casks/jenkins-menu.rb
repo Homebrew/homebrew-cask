@@ -8,4 +8,9 @@ cask "jenkins-menu" do
   homepage "https://github.com/qvacua/jenkins-menu/"
 
   app "Jenkins Menu.app"
+
+  zap trash: [
+    "~/Library/Caches/com.qvacua.Jenkins-Menu",
+    "~/Library/Preferences/com.qvacua.Jenkins-Menu.plist",
+  ]
 end
