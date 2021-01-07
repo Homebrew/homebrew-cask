@@ -4,9 +4,13 @@ cask "dictater" do
 
   url "https://github.com/Nosrac/Dictater/releases/download/#{version}/Dictater.zip",
       verified: "github.com/Nosrac/Dictater/"
-  appcast "https://github.com/Nosrac/Dictater/releases.atom"
   name "Dictater"
   homepage "https://nosrac.github.io/Dictater/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Dictater.app"
 end
