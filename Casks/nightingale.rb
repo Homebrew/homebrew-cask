@@ -4,10 +4,17 @@ cask "nightingale" do
 
   url "https://github.com/nightingale-media-player/nightingale-hacking/releases/download/nightingale-#{version.before_comma}/Nightingale_#{version.before_comma}-#{version.after_comma}_macosx-i686.dmg",
       verified: "github.com/nightingale-media-player/nightingale-hacking/"
-  appcast "https://github.com/nightingale-media-player/nightingale-hacking/releases.atom"
   name "Nightingale"
-  desc "Working tree for the community fork of Songbird, Nightingale"
+  desc "Working tree for the community fork of Songbird"
   homepage "https://getnightingale.com/"
+
+  livecheck do
+    url "https://github.com/nightingale-media-player/nightingale-hacking/releases/latest"
+    strategy :page_match do |page|
+      match = page.match(%r{href=.*?/Nightingale_(\d+(?:\.\d+)*)-(\d+)_macosx-i686\.dmg}i)
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
   app "Nightingale.app"
 end
