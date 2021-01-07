@@ -4,10 +4,14 @@ cask "dbglass" do
 
   url "https://github.com/web-pal/DBGlass/releases/download/v#{version}/MAC_OS-X.zip",
       verified: "github.com/web-pal/DBGlass/"
-  appcast "https://github.com/web-pal/dbglass/releases.atom"
   name "DBGlass"
   desc "PostgreSQL client built with Electron"
   homepage "http://dbglass.web-pal.com/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "DBGlass-darwin-x64/DBGlass.app"
 end
