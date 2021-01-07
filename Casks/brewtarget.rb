@@ -4,9 +4,13 @@ cask "brewtarget" do
 
   url "https://launchpad.net/brewtarget/trunk/#{version}/+download/Brewtarget-#{version}.dmg",
       verified: "launchpad.net/brewtarget/"
-  appcast "https://github.com/Brewtarget/brewtarget/releases.atom"
   name "brewtarget"
   homepage "http://www.brewtarget.org/"
+
+  livecheck do
+    url "https://github.com/Brewtarget/brewtarget/releases"
+    strategy :git
+  end
 
   app "brewtarget.app"
 end
