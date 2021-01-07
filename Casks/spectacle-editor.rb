@@ -4,10 +4,14 @@ cask "spectacle-editor" do
 
   url "https://github.com/FormidableLabs/spectacle-editor/releases/download/v#{version}/Spectacle.Editor-#{version}.dmg",
       verified: "github.com/FormidableLabs/spectacle-editor/"
-  appcast "https://github.com/FormidableLabs/spectacle-editor/releases.atom"
   name "Spectacle Editor"
   desc "Drag and drop Spectacle editor"
   homepage "https://formidable.com/open-source/spectacle-editor/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Spectacle Editor.app"
 
