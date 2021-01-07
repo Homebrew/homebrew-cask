@@ -4,10 +4,14 @@ cask "metaz" do
 
   url "https://github.com/griff/metaz/releases/download/v#{version}/MetaZ-#{version}.zip",
       verified: "github.com/griff/metaz/"
-  appcast "https://github.com/griff/metaz/releases.atom"
   name "MetaZ"
   desc "Mp4 meta-data editor"
   homepage "https://griff.github.io/metaz/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "MetaZ.app"
 end
