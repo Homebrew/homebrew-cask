@@ -4,9 +4,13 @@ cask "qlstephen" do
 
   url "https://github.com/whomwah/qlstephen/releases/download/#{version}/QLStephen.qlgenerator.#{version}.zip",
       verified: "github.com/whomwah/qlstephen/"
-  appcast "https://github.com/whomwah/qlstephen/releases.atom"
   name "QLStephen"
   homepage "https://whomwah.github.io/qlstephen/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   qlplugin "QLStephen.qlgenerator"
 end
