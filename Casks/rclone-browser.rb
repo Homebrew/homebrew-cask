@@ -4,9 +4,13 @@ cask "rclone-browser" do
 
   url "https://github.com/mmozeiko/RcloneBrowser/releases/download/#{version.before_comma}/rclone-browser-#{version.before_comma}-#{version.after_comma}-macOS.zip",
       verified: "github.com/mmozeiko/RcloneBrowser/"
-  appcast "https://github.com/mmozeiko/RcloneBrowser/releases.atom"
   name "Rclone Browser"
   homepage "https://mmozeiko.github.io/RcloneBrowser/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on formula: "rclone"
 
