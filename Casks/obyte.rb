@@ -4,10 +4,14 @@ cask "obyte" do
 
   url "https://github.com/byteball/obyte-gui-wallet/releases/download/v#{version}/Obyte-osx64.dmg",
       verified: "github.com/byteball/obyte-gui-wallet/"
-  appcast "https://github.com/byteball/obyte-gui-wallet/releases.atom"
   name "Obyte"
   desc "Smart payments made simple"
   homepage "https://obyte.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Obyte.app"
 
