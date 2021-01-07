@@ -4,9 +4,13 @@ cask "visualvm" do
 
   url "https://github.com/oracle/visualvm/releases/download/#{version}/VisualVM_#{version.no_dots}.dmg",
       verified: "github.com/oracle/visualvm/"
-  appcast "https://github.com/oracle/visualvm/releases.atom"
   name "VisualVM"
   homepage "https://visualvm.github.io/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "VisualVM.app"
 
