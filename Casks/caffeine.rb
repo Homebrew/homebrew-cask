@@ -4,10 +4,14 @@ cask "caffeine" do
 
   url "https://github.com/IntelliScape/caffeine/releases/download/#{version}/Caffeine.dmg",
       verified: "github.com/IntelliScape/caffeine/"
-  appcast "https://github.com/IntelliScape/caffeine/releases.atom"
   name "Caffeine"
   desc "Utility that prevents the system from going to sleep"
   homepage "https://intelliscapesolutions.com/apps/caffeine"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Caffeine.app"
 
