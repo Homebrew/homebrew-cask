@@ -4,9 +4,13 @@ cask "catch" do
 
   url "https://github.com/mipstian/catch/releases/download/#{version}/Catch-#{version}.zip",
       verified: "github.com/mipstian/catch/"
-  appcast "https://github.com/mipstian/catch/releases.atom"
   name "Catch"
   homepage "https://www.giorgiocalderolla.com/index.html#catch"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Catch.app"
 end
