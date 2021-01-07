@@ -4,9 +4,13 @@ cask "autumn" do
 
   url "https://github.com/apandhi/Autumn/releases/download/#{version}/Build.zip",
       verified: "github.com/apandhi/Autumn/"
-  appcast "https://github.com/apandhi/Autumn/releases.atom"
   name "Autumn"
   homepage "https://apandhi.github.io/Autumn/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on macos: ">= :high_sierra"
 
