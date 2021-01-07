@@ -4,10 +4,14 @@ cask "klokki" do
 
   url "https://storage.yandexcloud.net/klokki/Klokki.dmg",
       verified: "storage.yandexcloud.net/klokki/"
-  appcast "https://storage.yandexcloud.net/klokki/appcast.xml"
   name "Klokki"
   desc "Automatic time-tracking solution or freelancers and makers"
   homepage "https://klokki.com/"
+
+  livecheck do
+    url "https://storage.yandexcloud.net/klokki/appcast.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :mojave"
 

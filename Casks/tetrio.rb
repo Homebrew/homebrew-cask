@@ -1,5 +1,5 @@
 cask "tetrio" do
-  version "4.0.0"
+  version "7.0.0"
   sha256 :no_check
 
   url "https://tetr.io/about/desktop/builds/TETR.IO%20Setup.dmg"

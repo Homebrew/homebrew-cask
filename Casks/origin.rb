@@ -1,6 +1,6 @@
 cask "origin" do
-  version "10.5.85.44831"
-  sha256 "3035684da0da3b70e0b8ba71589ddb2c16f5e443982ce1964b53a7b4846fa5ed"
+  version "10.5.90.45798"
+  sha256 "c6dce12ab3c58bdeac9d1c805e38640f706563199339d5c9fd2b4e911d7d0453"
 
   url "https://origin-a.akamaihd.net/Origin-Client-Download/origin/mac/live/OriginUpdate_#{version.dots_to_underscores}.zip",
       verified: "origin-a.akamaihd.net/"

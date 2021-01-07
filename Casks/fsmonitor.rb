@@ -4,9 +4,13 @@ cask "fsmonitor" do
 
   url "https://tristan-software.ch/FSMonitor/Archives/FSMonitor_#{version.before_comma}(#{version.after_comma}).zip",
       verified: "tristan-software.ch/FSMonitor/"
-  appcast "https://fsmonitor.com/FSMonitor/Archives/appcast2.xml"
   name "FSMonitor"
   homepage "https://fsmonitor.com/"
+
+  livecheck do
+    url "https://fsmonitor.com/FSMonitor/Archives/appcast2.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 

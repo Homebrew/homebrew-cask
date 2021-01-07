@@ -6,15 +6,19 @@ cask "bbedit" do
     version "12.6.7"
     sha256 "d0647c864268b187343bd95bfcf490d6a2388579b1f8fce64a289c65341b1144"
   else
-    version "13.5.3"
-    sha256 "67d5854eb38fe78c0b1171ca83fdba0e05427ad9c8bd0d450aafe46e85e41138"
+    version "13.5.4"
+    sha256 "b55359e27937390f9b4a028b180c140e24fdf8077d1caa9f9d3440fdfeacf411"
   end
   url "https://s3.amazonaws.com/BBSW-download/BBEdit_#{version}.dmg",
       verified: "s3.amazonaws.com/BBSW-download/"
-  appcast "https://versioncheck.barebones.com/BBEdit.xml"
   name "BBEdit"
   desc "Text, code, and markup editor"
   homepage "https://www.barebones.com/products/bbedit/"
+
+  livecheck do
+    url "http://versioncheck.barebones.com/BBEdit.xml"
+    regex(/BBEdit[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+  end
 
   auto_updates true
   depends_on macos: ">= :el_capitan"

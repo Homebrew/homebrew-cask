@@ -1,6 +1,6 @@
 cask "pycharm" do
-  version "2020.3,203.5981.165"
-  sha256 "6b3f1f716657c13bfd87fc9850ef63873ca0bf3ce21a81eadab95c6592c27be5"
+  version "2020.3.2,203.6682.179"
+  sha256 "f97163c33005f684b33c0a0b14ea95aa4a44ac28722c15a69bcaa919748cacad"
 
   url "https://download.jetbrains.com/python/pycharm-professional-#{version.before_comma}.dmg"
   appcast "https://data.services.jetbrains.com/products/releases?code=PCP&latest=true&type=release"

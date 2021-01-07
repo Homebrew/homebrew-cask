@@ -1,6 +1,6 @@
 cask "memory-clean-3" do
   # NOTE: "3" is not a version number, but an intrinsic part of the product name
-  version "1.0.20"
+  version "1.0.20,10.20"
   sha256 :no_check
 
   url "https://fiplab.com/app-download/Memory_Clean_3.zip"

@@ -1,12 +1,16 @@
 cask "keysmith" do
-  version "1.7.0"
-  sha256 "8eb6ffd284b50e42e248571c6192079418abb1ec8373d30c64056c63aa75db4c"
+  version "1.9.1,77"
+  sha256 "91fc01ed9dc8d5ab777f49ade10d5bdc5b44f57b7fd5a14cbd01ad8e7aaac88d"
 
-  url "https://keysmith.app/versions/Keysmith-#{version}.dmg"
-  appcast "https://www.keysmith.app/versions/appcast.xml"
+  url "https://keysmith.app/versions/Keysmith-#{version.before_comma}.dmg"
   name "Keysmith"
   desc "Create custom keyboard shortcuts for anything"
   homepage "https://www.keysmith.app/"
+
+  livecheck do
+    url "https://www.keysmith.app/versions/appcast.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :catalina"
 

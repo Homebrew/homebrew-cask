@@ -1,5 +1,5 @@
 cask "aio-creator-neo" do
-  version :latest
+  version "2.9.3"
   sha256 :no_check
 
   url "https://s3-eu-west-1.amazonaws.com/mediola-download/creator_neo/release/aioCreatorNeoInstaller.dmg",

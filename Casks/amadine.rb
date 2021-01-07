@@ -4,10 +4,14 @@ cask "amadine" do
 
   url "https://belightsoft.s3.amazonaws.com/Amadine.dmg",
       verified: "belightsoft.s3.amazonaws.com/"
-  appcast "https://www.belightsoft.com/download/updates/appcast_Amadine.xml"
   name "Amadine"
   desc "Vector graphic and illustration software"
   homepage "https://amadine.com/"
+
+  livecheck do
+    url "https://www.belightsoft.com/download/updates/appcast_Amadine.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :sierra"
 

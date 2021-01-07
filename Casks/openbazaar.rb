@@ -1,6 +1,6 @@
 cask "openbazaar" do
-  version "2.4.9"
-  sha256 "ecd5a1bfda868db89c7ec403a2506441a359f762bafd11846fad39c68bf3fb5b"
+  version "2.4.10"
+  sha256 "ba5632071b75ce80c7b1151d0a2e6775d3576e67ea77e36455895e56dc805cad"
 
   url "https://github.com/OpenBazaar/openbazaar-desktop/releases/download/v#{version}/OpenBazaar#{version.major}-#{version}.dmg",
       verified: "github.com/OpenBazaar/openbazaar-desktop/"

@@ -1,12 +1,16 @@
 cask "cookie" do
-  version "6.3"
+  version "6.3.3"
   sha256 :no_check
 
   url "https://sweetpproductions.com/products/cookieapp/Cookie.dmg"
-  appcast "https://sweetpproductions.com/products/cookieapp/appcast.xml"
   name "Cookie"
   desc "Protection from tracking and online profiling"
   homepage "https://sweetpproductions.com/"
+
+  livecheck do
+    url "https://sweetpproductions.com/products/cookieapp/appcast.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :mojave"
 

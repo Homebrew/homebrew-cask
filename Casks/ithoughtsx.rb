@@ -4,9 +4,13 @@ cask "ithoughtsx" do
 
   url "https://ithoughtsx.s3.amazonaws.com/iThoughtsX_#{version.dots_to_underscores}.zip",
       verified: "ithoughtsx.s3.amazonaws.com/"
-  appcast "https://ithoughtsx.s3.amazonaws.com/ithoughtsx.xml"
   name "iThoughtsX"
   homepage "https://www.toketaware.com/ithoughts-osx"
+
+  livecheck do
+    url "https://ithoughtsx.s3.amazonaws.com/ithoughtsx.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :el_capitan"

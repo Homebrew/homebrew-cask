@@ -1,13 +1,20 @@
 cask "busycal" do
-  version "3.11.1-2020-11-15-05-54"
-  sha256 "ae039923ed462308264376ab69bedbcbe1dfe5d860799f494d9a4dfc0737e891"
+  version "3.12.2,2021-01-06-02-25"
+  sha256 "f87f4d81266d05fceb5813a13a4034b7cca13bc60103634bc29c25badbd4258f"
 
-  url "https://7e968b6ce8a839f034d9-23cfb9eddcb7b94cb43ba95f95a76900.ssl.cf1.rackcdn.com/bcl-#{version}.zip",
+  url "https://7e968b6ce8a839f034d9-23cfb9eddcb7b94cb43ba95f95a76900.ssl.cf1.rackcdn.com/bcl-#{version.before_comma}-#{version.after_comma}.zip",
       verified: "7e968b6ce8a839f034d9-23cfb9eddcb7b94cb43ba95f95a76900.ssl.cf1.rackcdn.com/"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.busymac.com/download/BusyCal.zip"
   name "BusyCal"
   desc "Calendar software focusing on flexibility and reliability"
   homepage "https://busymac.com/busycal/index.html"
+
+  livecheck do
+    url "https://www.busymac.com/download/BusyCal.zip"
+    strategy :header_match do |headers|
+      match = headers["location"].match(/bcl-(\d+(?:\.\d+)*)-(.*?)\.zip/)
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
   auto_updates true
   depends_on macos: ">= :el_capitan"

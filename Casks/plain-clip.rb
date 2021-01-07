@@ -1,5 +1,5 @@
 cask "plain-clip" do
-  version :latest
+  version "2.5.2"
   sha256 :no_check
 
   url "https://www.bluem.net/files/Plain-Clip.dmg"

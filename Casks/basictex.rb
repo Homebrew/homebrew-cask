@@ -8,6 +8,14 @@ cask "basictex" do
   desc "Compact TeX distribution as alternative to the full TeX Live / MacTeX"
   homepage "https://www.tug.org/mactex/morepackages.html"
 
+  livecheck do
+    url "http://mirror.ctan.org/systems/mac/mactex/"
+    strategy :page_match do |page|
+      match = page.match(/href=.*?mactex-basictex-(\d{4})(\d{2})(\d{2})\.pkg/)
+      "#{match[1]}.#{match[2]}#{match[3]}"
+    end
+  end
+
   conflicts_with cask: [
     "mactex-no-gui",
     "mactex",

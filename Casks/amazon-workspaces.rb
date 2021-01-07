@@ -4,9 +4,13 @@ cask "amazon-workspaces" do
 
   url "https://workspaces-client-updates.s3.amazonaws.com/prod/iad/osx/WorkSpaces.pkg",
       verified: "workspaces-client-updates.s3.amazonaws.com/"
-  appcast "https://d2td7dqidlhjx7.cloudfront.net/prod/iad/osx/WorkSpacesAppCast_macOS_20171023.xml"
   name "Amazon Workspaces"
   homepage "https://clients.amazonworkspaces.com/"
+
+  livecheck do
+    url "https://d2td7dqidlhjx7.cloudfront.net/prod/iad/osx/WorkSpacesAppCast_macOS_20171023.xml"
+    strategy :sparkle
+  end
 
   pkg "WorkSpaces.pkg"
 

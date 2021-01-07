@@ -4,10 +4,14 @@ cask "scapple" do
 
   url "https://scrivener.s3.amazonaws.com/Scapple.dmg",
       verified: "scrivener.s3.amazonaws.com/"
-  appcast "https://www.literatureandlatte.com/downloads/scapple/scapple.xml"
   name "Scapple"
   desc "Notepad software"
   homepage "https://www.literatureandlatte.com/scapple.php"
+
+  livecheck do
+    url "https://www.literatureandlatte.com/downloads/scapple/scapple.xml"
+    strategy :sparkle
+  end
 
   app "Scapple.app"
 end

@@ -4,9 +4,13 @@ cask "teamspeak-client" do
 
   url "https://files.teamspeak-services.com/releases/client/#{version}/TeamSpeak#{version.major}-Client-macosx-#{version}.dmg",
       verified: "files.teamspeak-services.com/releases/client/"
-  appcast "https://versions.teamspeak.com/ts3-client-2"
   name "TeamSpeak Client"
   homepage "https://www.teamspeak.com/"
+
+  livecheck do
+    url "https://versions.teamspeak.com/ts3-client-2"
+    regex(/stable.*?v?(\d+(?:\.\d+)+)/i)
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"

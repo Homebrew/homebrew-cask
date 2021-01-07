@@ -8,6 +8,11 @@ cask "powershell" do
   desc "Command-line shell and scripting language"
   homepage "https://github.com/PowerShell/PowerShell"
 
+  livecheck do
+    url :homepage
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :high_sierra"
 
   pkg "powershell-#{version}-osx-x64.pkg"

@@ -4,9 +4,13 @@ cask "thumbsup" do
 
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/freeware/thumbsup/#{version}/ThumbsUp.app.zip",
       verified: "s3.amazonaws.com/DTWebsiteSupport/"
-  appcast "https://www.macupdater.net/cgi-bin/extract_text/extract_text_split_easy.cgi?url=https://www.devontechnologies.com/support/download&splitter_1=ThumbsUp&index_1=1&splitter_2=disabled&index_2=0"
   name "ThumbsUp"
   homepage "https://www.devontechnologies.com/apps/freeware"
+
+  livecheck do
+    url :homepage
+    regex(%r{href=.*?/thumbsup/v?(\d+(?:\.\d+)+)/ThumbsUp\.app\.zip}i)
+  end
 
   app "ThumbsUp.app"
 end
