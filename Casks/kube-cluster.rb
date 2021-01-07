@@ -3,9 +3,13 @@ cask "kube-cluster" do
   sha256 "a19384f36a215af485f6ca2761091feaf7b6e3825a4f19845bd627c82c4d4083"
 
   url "https://github.com/TheNewNormal/kube-cluster-osx/releases/download/v#{version}/Kube-Cluster_v#{version}.dmg"
-  appcast "https://github.com/TheNewNormal/kube-cluster-osx/releases.atom"
   name "Kube-Cluster"
   homepage "https://github.com/TheNewNormal/kube-cluster-osx"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Kube-Cluster.app"
 
