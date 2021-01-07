@@ -4,10 +4,14 @@ cask "cumulus" do
 
   url "https://github.com/gillesdemey/Cumulus/releases/download/v#{version}/Cumulus-#{version}.dmg",
       verified: "github.com/gillesdemey/Cumulus/"
-  appcast "https://github.com/gillesdemey/Cumulus/releases.atom"
   name "Cumulus"
   desc "SoundCloud player that lives in the menu bar"
   homepage "https://gillesdemey.github.io/Cumulus/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Cumulus.app"
 
