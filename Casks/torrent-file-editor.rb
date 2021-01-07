@@ -4,9 +4,13 @@ cask "torrent-file-editor" do
 
   url "https://github.com/torrent-file-editor/torrent-file-editor/releases/download/v#{version}/torrent-file-editor-#{version}.dmg",
       verified: "github.com/torrent-file-editor/torrent-file-editor/"
-  appcast "https://github.com/torrent-file-editor/torrent-file-editor/releases.atom"
   name "Torrent File Editor"
   homepage "https://torrent-file-editor.github.io/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on macos: ">= :sierra"
 
