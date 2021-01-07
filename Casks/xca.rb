@@ -4,10 +4,15 @@ cask "xca" do
 
   url "https://github.com/chris2511/xca/releases/download/RELEASE.#{version}/xca-#{version}.dmg",
       verified: "github.com/chris2511/xca/"
-  appcast "https://github.com/chris2511/xca/releases.atom"
   name "XCA"
   desc "X Certificate and Key management"
   homepage "https://hohnstaedt.de/xca/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+    regex(%r{href=.*?/xca-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   app "xca.app"
 end
