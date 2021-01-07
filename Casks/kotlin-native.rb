@@ -4,10 +4,14 @@ cask "kotlin-native" do
 
   url "https://github.com/JetBrains/kotlin/releases/download/v#{version}/kotlin-native-macos-#{version}.tar.gz",
       verified: "github.com/JetBrains/kotlin/"
-  appcast "https://github.com/JetBrains/kotlin-native/releases.atom"
   name "Kotlin Native"
   desc "LLVM backend for Kotlin"
   homepage "https://kotlinlang.org/docs/reference/native-overview.html"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   conflicts_with formula: "kotlin"
 
