@@ -4,9 +4,13 @@ cask "fantasy-map-generator" do
 
   url "https://github.com/Azgaar/Fantasy-Map-Generator/releases/download/v#{version}/FMG-macos-x64.dmg",
       verified: "github.com/Azgaar/Fantasy-Map-Generator/"
-  appcast "https://github.com/Azgaar/Fantasy-Map-Generator/releases.atom"
   name "Azgaar's Fantasy Map Generator"
   homepage "https://azgaar.github.io/Fantasy-Map-Generator"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Azgaar's Fantasy Map Generator.app"
 end
