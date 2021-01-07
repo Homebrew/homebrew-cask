@@ -4,10 +4,14 @@ cask "wowup" do
 
   url "https://github.com/WowUp/WowUp/releases/download/v#{version}/WowUp-#{version}.dmg",
       verified: "github.com/WowUp/WowUp/"
-  appcast "https://github.com/WowUp/WowUp/releases.atom"
   name "WowUp"
   desc "World of Warcraft addon manager"
   homepage "https://wowup.io/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
 
