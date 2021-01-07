@@ -4,10 +4,14 @@ cask "electron-fiddle" do
 
   url "https://github.com/electron/fiddle/releases/download/v#{version}/Electron.Fiddle-darwin-x64-#{version}.zip",
       verified: "github.com/electron/fiddle/"
-  appcast "https://github.com/electron/fiddle/releases.atom"
   name "Electron Fiddle"
   desc "Easiest way to get started with Electron"
   homepage "https://electron.atom.io/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Electron Fiddle.app"
 
