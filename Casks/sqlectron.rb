@@ -4,9 +4,13 @@ cask "sqlectron" do
 
   url "https://github.com/sqlectron/sqlectron-gui/releases/download/v#{version}/Sqlectron-#{version}-mac.zip",
       verified: "github.com/sqlectron/sqlectron-gui/"
-  appcast "https://github.com/sqlectron/sqlectron-gui/releases.atom"
   name "Sqlectron"
   homepage "https://sqlectron.github.io/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "sqlectron.app"
 
