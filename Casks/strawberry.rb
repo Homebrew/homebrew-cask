@@ -4,10 +4,14 @@ cask "strawberry" do
 
   url "https://github.com/strawberrymusicplayer/strawberry/releases/download/#{version}/strawberry-#{version}.dmg",
       verified: "github.com/strawberrymusicplayer/strawberry/"
-  appcast "https://github.com/strawberrymusicplayer/strawberry/releases.atom"
   name "Strawberry"
   desc "Music player and music collection organizer"
   homepage "https://www.strawberrymusicplayer.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on macos: ">= :catalina"
 
