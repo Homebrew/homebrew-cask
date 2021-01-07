@@ -1,11 +1,15 @@
 cask "fanny" do
-  version "2.3.0,1"
+  version "2.3.0"
   sha256 :no_check
 
   url "https://fannywidget.com/FannyWidget.zip"
-  appcast "https://github.com/DanielStormApps/Fanny/releases.atom"
   name "FannyWidget"
   homepage "https://fannywidget.com/"
+
+  livecheck do
+    url "https://github.com/DanielStormApps/Fanny/releases"
+    strategy :git
+  end
 
   depends_on macos: ">= :high_sierra"
 
