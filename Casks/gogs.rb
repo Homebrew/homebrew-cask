@@ -4,9 +4,13 @@ cask "gogs" do
 
   url "https://github.com/gogs/gogs/releases/download/v#{version}/darwin_amd64.zip",
       verified: "github.com/gogs/gogs/"
-  appcast "https://github.com/gogs/gogs/releases.atom"
   name "Go Git Service"
   homepage "https://gogs.io/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/gogs.wrapper.sh"
