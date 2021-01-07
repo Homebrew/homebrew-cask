@@ -4,9 +4,13 @@ cask "raiderio" do
 
   url "https://github.com/RaiderIO/raiderio-client-builds/releases/download/v#{version}/RaiderIO_Client.dmg",
       verified: "github.com/RaiderIO/raiderio-client-builds/"
-  appcast "https://github.com/RaiderIO/raiderio-client-builds/releases.atom"
   name "RaiderIO Client"
   homepage "https://raider.io/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "RaiderIO.app"
 end
