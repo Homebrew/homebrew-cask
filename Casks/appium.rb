@@ -4,9 +4,13 @@ cask "appium" do
 
   url "https://github.com/appium/appium-desktop/releases/download/v#{version}/Appium-mac-#{version}.dmg",
       verified: "github.com/appium/appium-desktop/"
-  appcast "https://github.com/appium/appium-desktop/releases.atom"
   name "Appium Desktop"
   homepage "https://appium.io/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Appium.app"
 
