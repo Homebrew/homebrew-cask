@@ -3,10 +3,14 @@ cask "ao" do
   sha256 "c69522f78e82476540637fd3a2ab0c9de1e911530a1eb88c9cf757e933debe0e"
 
   url "https://github.com/klaussinani/ao/releases/download/v#{version}/Ao-#{version}.dmg"
-  appcast "https://github.com/klaussinani/ao/releases.atom"
   name "Ao"
   desc "Elegant Microsoft To-Do desktop app"
   homepage "https://github.com/klaussinani/ao"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Ao.app"
 end
