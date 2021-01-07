@@ -4,10 +4,14 @@ cask "texstudio" do
 
   url "https://github.com/texstudio-org/texstudio/releases/download/#{version}/texstudio-#{version}-osx.dmg",
       verified: "github.com/texstudio-org/texstudio/"
-  appcast "https://github.com/texstudio-org/texstudio/releases.atom"
   name "TeXstudio"
   desc "LaTeX editor"
   homepage "https://texstudio.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on macos: ">= :sierra"
 
