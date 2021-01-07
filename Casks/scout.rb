@@ -4,10 +4,14 @@ cask "scout" do
 
   url "https://github.com/scout-app/scout-app/releases/download/v#{version}/OSX_Scout-App_#{version}.zip",
       verified: "github.com/scout-app/scout-app/"
-  appcast "https://github.com/scout-app/scout-app/releases.atom"
   name "Scout-App"
   desc "Simple Sass processor"
   homepage "https://scout-app.io/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Scout-App.app"
 end
