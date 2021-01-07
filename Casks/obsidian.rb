@@ -4,10 +4,14 @@ cask "obsidian" do
 
   url "https://github.com/obsidianmd/obsidian-releases/releases/download/v#{version}/Obsidian-#{version}.dmg",
       verified: "github.com/obsidianmd/"
-  appcast "https://github.com/obsidianmd/obsidian-releases/releases.atom"
   name "Obsidian"
   desc "Knowledge base that works on top of a local folder of plain text Markdown files"
   homepage "https://obsidian.md/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Obsidian.app"
 
