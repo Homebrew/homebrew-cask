@@ -4,9 +4,13 @@ cask "iota-wallet" do
 
   url "https://github.com/iotaledger/wallet/releases/download/v#{version}/IOTA.Wallet-#{version}.dmg",
       verified: "github.com/iotaledger/wallet/"
-  appcast "https://github.com/iotaledger/wallet/releases.atom"
   name "IOTA Wallet"
   homepage "https://iota.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "IOTA Wallet.app"
 
