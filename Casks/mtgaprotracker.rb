@@ -4,10 +4,14 @@ cask "mtgaprotracker" do
 
   url "https://github.com/Razviar/mtgap/releases/download/v#{version}/mtgaprotracker.dmg",
       verified: "github.com/Razviar/mtgap/"
-  appcast "https://github.com/Razviar/mtgap/releases.atom"
   name "MTGA Pro Tracker"
   desc "Advanced Magic: The Gathering Arena tracking tool"
   homepage "https://mtgarena.pro/mtga-pro-tracker/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "mtgaprotracker.app"
 end
