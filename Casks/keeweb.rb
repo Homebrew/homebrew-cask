@@ -4,10 +4,14 @@ cask "keeweb" do
 
   url "https://github.com/keeweb/keeweb/releases/download/v#{version}/KeeWeb-#{version}.mac.x64.dmg",
       verified: "github.com/keeweb/keeweb/"
-  appcast "https://github.com/keeweb/keeweb/releases.atom"
   name "KeeWeb"
   desc "Free cross-platform password manager compatible with KeePass"
   homepage "https://keeweb.info/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   auto_updates true
 
