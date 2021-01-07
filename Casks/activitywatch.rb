@@ -4,10 +4,14 @@ cask "activitywatch" do
 
   url "https://github.com/ActivityWatch/activitywatch/releases/download/v#{version}/activitywatch-v#{version}-macos-x86_64.dmg",
       verified: "github.com/ActivityWatch/activitywatch/"
-  appcast "https://github.com/ActivityWatch/activitywatch/releases.atom"
   name "ActivityWatch"
   desc "Cross-platform time tracking app"
   homepage "https://activitywatch.net/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "ActivityWatch.app"
 
