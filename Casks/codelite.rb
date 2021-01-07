@@ -3,11 +3,14 @@ cask "codelite" do
   sha256 :no_check
 
   url "https://downloads.codelite.org/downloads.php?osx"
-  appcast "https://github.com/eranif/codelite/releases.atom",
-          must_contain: version.chomp(".0")
   name "CodeLite"
   desc "Cross-platform IDE for C, C++, PHP and Node.js"
   homepage "https://codelite.org/"
+
+  livecheck do
+    url "https://github.com/eranif/codelite/releases"
+    strategy :git
+  end
 
   app "codelite.app"
 
