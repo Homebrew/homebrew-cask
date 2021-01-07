@@ -12,4 +12,10 @@ cask "workflowy" do
   auto_updates true
 
   app "WorkFlowy.app"
+
+  zap trash: [
+    "~/Library/Application Support/WorkFlowy",
+    "~/Library/Preferences/com.workflowy.desktop.plist",
+    "~/Library/Saved Application State/com.workflowy.desktop.savedState",
+  ]
 end
