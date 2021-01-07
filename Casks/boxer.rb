@@ -4,10 +4,14 @@ cask "boxer" do
 
   url "https://github.com/alunbestor/Boxer/releases/download/v#{version}/boxer-#{version}.zip",
       verified: "github.com/alunbestor/Boxer/"
-  appcast "https://github.com/alunbestor/Boxer/releases.atom"
   name "Boxer"
   desc "DOS game emulator"
   homepage "http://boxerapp.com/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   auto_updates true
   depends_on macos: "<= :mojave"
