@@ -4,10 +4,14 @@ cask "shuttle" do
 
   url "https://github.com/fitztrev/shuttle/releases/download/v#{version}/Shuttle.zip",
       verified: "github.com/fitztrev/shuttle/"
-  appcast "https://github.com/fitztrev/shuttle/releases.atom"
   name "Shuttle"
   desc "Simple shortcut menu"
   homepage "https://fitztrev.github.io/shuttle/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Shuttle.app"
 
