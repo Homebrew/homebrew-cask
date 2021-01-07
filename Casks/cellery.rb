@@ -4,9 +4,13 @@ cask "cellery" do
 
   url "https://github.com/wso2-cellery/sdk/releases/download/v#{version}/cellery-macos-installer-x64-#{version}.pkg",
       verified: "github.com/wso2-cellery/sdk/"
-  appcast "github.com/wso2-cellery/sdk/releases.atom"
   name "Cellery"
   homepage "https://wso2-cellery.github.io/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on cask: "osxfuse"
   depends_on formula: "python"
