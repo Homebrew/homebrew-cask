@@ -13,10 +13,14 @@ cask "nextcloud" do
         verified: "github.com/nextcloud/desktop/"
   end
 
-  appcast "https://github.com/nextcloud/desktop/releases.atom"
   name "Nextcloud"
   desc "Desktop sync client for Nextcloud software products"
   homepage "https://nextcloud.com/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on macos: ">= :yosemite"
 
