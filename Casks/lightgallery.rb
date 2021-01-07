@@ -4,9 +4,13 @@ cask "lightgallery" do
 
   url "https://github.com/sachinchoolur/lightgallery-desktop/releases/download/#{version}/lightgallery_#{version}.dmg-mac.zip",
       verified: "github.com/sachinchoolur/lightgallery-desktop/"
-  appcast "https://github.com/sachinchoolur/lightgallery-desktop/releases.atom"
   name "lightgallery"
   homepage "https://sachinchoolur.github.io/lightgallery-desktop/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "lightgallery.app"
 
