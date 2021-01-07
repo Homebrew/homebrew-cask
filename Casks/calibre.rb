@@ -8,12 +8,16 @@ cask "calibre" do
     sha256 "90aeeae6cc927c233bd2057e706105ccb40fe0013c5ea8b57a813f038ab362a0"
     url "https://github.com/kovidgoyal/calibre/releases/download/v#{version}/calibre-#{version}.dmg",
         verified: "github.com/kovidgoyal/calibre/"
-    appcast "https://github.com/kovidgoyal/calibre/releases.atom"
   end
 
   name "calibre"
   desc "E-books management software"
   homepage "https://calibre-ebook.com/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   conflicts_with cask: "homebrew/cask-versions/calibre4"
 
