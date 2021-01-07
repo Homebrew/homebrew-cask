@@ -4,10 +4,14 @@ cask "marathon-infinity" do
 
   url "https://github.com/Aleph-One-Marathon/alephone/releases/download/release-#{version}/MarathonInfinity-#{version}-Mac.dmg",
       verified: "github.com/Aleph-One-Marathon/alephone/"
-  appcast "https://github.com/Aleph-One-Marathon/alephone/releases.atom"
   name "Marathon Infinity"
   desc "First-person shooter, third in a trilogy"
   homepage "https://alephone.lhowon.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Marathon Infinity.app"
 end
