@@ -4,9 +4,13 @@ cask "qnapi" do
 
   url "https://github.com/QNapi/qnapi/releases/download/#{version}/QNapi-#{version}.dmg",
       verified: "github.com/QNapi/qnapi/"
-  appcast "https://github.com/QNapi/qnapi/releases.atom"
   name "QNapi"
   homepage "https://qnapi.github.io/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "QNapi.app"
 end
