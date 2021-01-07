@@ -4,9 +4,13 @@ cask "mark-text" do
 
   url "https://github.com/marktext/marktext/releases/download/v#{version}/marktext.dmg",
       verified: "github.com/marktext/marktext/"
-  appcast "https://github.com/marktext/marktext/releases.atom"
   name "Mark Text"
   homepage "https://marktext.app/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Mark Text.app"
 
