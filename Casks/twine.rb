@@ -4,10 +4,14 @@ cask "twine" do
 
   url "https://github.com/klembot/twinejs/releases/download/#{version}/twine_#{version}_macos.dmg",
       verified: "github.com/klembot/twinejs/"
-  appcast "https://github.com/klembot/twinejs/releases.atom"
   name "Twine"
   desc "Tool for telling interactive, nonlinear stories"
   homepage "https://twinery.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Twine.app"
 end
