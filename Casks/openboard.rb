@@ -4,9 +4,13 @@ cask "openboard" do
 
   url "https://github.com/OpenBoard-org/OpenBoard/releases/download/v#{version}/OpenBoard-#{version}-signed.dmg",
       verified: "github.com/OpenBoard-org/OpenBoard/"
-  appcast "https://github.com/OpenBoard-org/OpenBoard/releases.atom"
   name "OpenBoard"
   homepage "https://openboard.ch/index.en.html"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "OpenBoard.app"
 
