@@ -4,10 +4,14 @@ cask "raven" do
 
   url "https://github.com/robotlolita/raven/releases/download/v#{version}/Raven-osx.zip",
       verified: "github.com/robotlolita/raven/"
-  appcast "https://github.com/robotlolita/raven/releases.atom"
   name "Raven"
   desc "Minimal, distraction-free text editor"
   homepage "https://robotlolita.me/raven/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Raven.app"
 end
