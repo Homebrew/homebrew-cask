@@ -4,10 +4,14 @@ cask "nota" do
 
   url "https://github.com/notaapp/releases/releases/download/#{version}/Nota-#{version}-mac.zip",
       verified: "github.com/notaapp/releases/"
-  appcast "https://github.com/notaapp/releases/releases.atom"
   name "Nota"
   desc "Markdown files editor"
   homepage "https://nota.md/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   auto_updates true
 
