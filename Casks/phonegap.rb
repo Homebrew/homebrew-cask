@@ -4,9 +4,13 @@ cask "phonegap" do
 
   url "https://github.com/phonegap/phonegap-app-desktop/releases/download/#{version}/PhoneGapDesktop.dmg",
       verified: "github.com/phonegap/phonegap-app-desktop/"
-  appcast "https://github.com/phonegap/phonegap-app-desktop/releases.atom"
   name "PhoneGap"
   homepage "https://phonegap.com/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "PhoneGap.app"
 end
