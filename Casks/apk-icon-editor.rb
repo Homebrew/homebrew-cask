@@ -4,10 +4,14 @@ cask "apk-icon-editor" do
 
   url "https://github.com/kefir500/apk-icon-editor/releases/download/v#{version}/apk-icon-editor_#{version}.dmg",
       verified: "github.com/kefir500/apk-icon-editor/"
-  appcast "https://github.com/kefir500/apk-icon-editor/releases.atom"
   name "APK Icon Editor"
   desc "Editor for changing APK icons, name, version and other data"
   homepage "https://kefir500.github.io/apk-icon-editor/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "APK Icon Editor.app"
 end
