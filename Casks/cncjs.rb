@@ -4,9 +4,13 @@ cask "cncjs" do
 
   url "https://github.com/cncjs/cncjs/releases/download/v#{version}/cncjs-app-#{version}-mac-x64.dmg",
       verified: "github.com/cncjs/cncjs/"
-  appcast "https://github.com/cncjs/cncjs/releases.atom"
   name "CNSjs"
   homepage "https://cnc.js.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "CNCjs.app"
 end
