@@ -3,10 +3,14 @@ cask "ckb-next" do
   sha256 "1f76332b8a2e7f03497ae91423170a1b4c65bc108594ae5b24349b5daad692bc"
 
   url "https://github.com/ckb-next/ckb-next/releases/download/v#{version}/ckb-next_v#{version}.dmg"
-  appcast "https://github.com/ckb-next/ckb-next/releases.atom"
   name "ckb-next"
   desc "RGB driver"
   homepage "https://github.com/ckb-next/ckb-next"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on macos: ">= :sierra"
 
