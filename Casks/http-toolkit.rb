@@ -4,9 +4,13 @@ cask "http-toolkit" do
 
   url "https://github.com/httptoolkit/httptoolkit-desktop/releases/download/v#{version}/HTTP.Toolkit.dmg",
       verified: "github.com/httptoolkit/httptoolkit-desktop/"
-  appcast "https://github.com/httptoolkit/httptoolkit-desktop/releases.atom"
   name "HTTP Toolkit"
   homepage "https://httptoolkit.tech/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "HTTP Toolkit.app"
 
