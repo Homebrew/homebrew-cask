@@ -4,10 +4,14 @@ cask "omnidb" do
 
   url "https://github.com/OmniDB/OmniDB/releases/download/#{version}/omnidb-app_#{version}-mac.dmg",
       verified: "github.com/OmniDB/OmniDB/"
-  appcast "https://github.com/OmniDB/OmniDB/releases.atom"
   name "OmniDB"
   desc "Web tool for database management"
   homepage "https://omnidb.org/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "OmniDB.app"
 end
