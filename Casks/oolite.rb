@@ -4,9 +4,13 @@ cask "oolite" do
 
   url "https://github.com/OoliteProject/oolite/releases/download/#{version}/Oolite-#{version}.zip",
       verified: "github.com/OoliteProject/oolite/"
-  appcast "https://github.com/OoliteProject/oolite/releases.atom"
   name "oolite"
   homepage "http://www.oolite.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Oolite.app"
 end
