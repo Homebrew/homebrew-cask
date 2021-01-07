@@ -9,9 +9,8 @@ cask "bootxchanger" do
   homepage "https://namedfork.net/bootxchanger/"
 
   livecheck do
-    url "https://github.com/zydeco/bootxchanger/releases"
-    strategy :page_match
-    regex(%r{href=.*?/bootxchanger_(\d+(?:\.\d+)*)\.dmg}i)
+    url :url
+    strategy :git
   end
 
   app "BootXChanger.app"
