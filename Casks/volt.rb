@@ -4,9 +4,13 @@ cask "volt" do
 
   url "https://github.com/voltapp/volt/releases/download/#{version}/Volt.dmg",
       verified: "github.com/voltapp/volt/"
-  appcast "https://github.com/voltapp/volt/releases.atom"
   name "Volt"
   homepage "https://volt-app.com/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Volt.app"
 end
