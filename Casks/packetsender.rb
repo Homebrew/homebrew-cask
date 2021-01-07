@@ -11,19 +11,19 @@ cask "packetsender" do
 
     url "https://github.com/dannagle/PacketSender/releases/download/v#{version.before_comma}/PacketSender_BigSur_v#{version.after_comma}.dmg",
         verified: "github.com/dannagle/PacketSender/"
+
+    livecheck do
+      url "https://github.com/dannagle/PacketSender/releases/latest"
+      strategy :page_match do |page|
+        match = page.match(%r{href=.*?/v?(\d+(?:\.\d+)*)/PacketSender_BigSur_v?(\d+(?:\.\d+)*)\.dmg}i)
+        "#{match[1]},#{match[2]}"
+      end
+    end
   end
 
   name "Packet Sender"
   desc "Network utility for sending / receiving TCP, UDP, SSL"
   homepage "https://packetsender.com/"
-
-  livecheck do
-    url "https://github.com/dannagle/PacketSender/releases/latest"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/v?(\d+(?:\.\d+)*)/PacketSender_BigSur_v?(\d+(?:\.\d+)*)\.dmg}i)
-      "#{match[1]},#{match[2]}"
-    end
-  end
 
   depends_on macos: ">= :sierra"
 
