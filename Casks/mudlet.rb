@@ -3,10 +3,14 @@ cask "mudlet" do
   sha256 "b2beba2bce9dc7c3bd47bd24925155ab279ecaf1a3c10bd2370d524fd3100a15"
 
   url "https://www.mudlet.org/wp-content/files/Mudlet-#{version}.dmg"
-  appcast "https://github.com/Mudlet/Mudlet/releases.atom"
   name "Mudlet"
   desc "Cross-platform and open-source MUD client with scripting in Lua"
   homepage "https://www.mudlet.org/"
+
+  livecheck do
+    url "https://github.com/Mudlet/Mudlet/releases"
+    strategy :git
+  end
 
   depends_on macos: ">= :high_sierra"
 
