@@ -4,9 +4,13 @@ cask "jabref" do
 
   url "https://github.com/JabRef/jabref/releases/download/v#{version}/JabRef-#{version}.dmg",
       verified: "github.com/JabRef/jabref/"
-  appcast "https://github.com/JabRef/jabref/releases.atom"
   name "JabRef"
   homepage "https://www.jabref.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "JabRef.app"
 end
