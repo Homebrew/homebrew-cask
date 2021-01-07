@@ -4,9 +4,13 @@ cask "eloston-chromium" do
 
   url "https://github.com/kramred/ungoogled-chromium-macos/releases/download/#{version}/ungoogled-chromium_#{version}_macos.dmg",
       verified: "github.com/kramred/ungoogled-chromium-macos/"
-  appcast "https://github.com/kramred/ungoogled-chromium-macos/releases.atom"
   name "Ungoogled Chromium"
   homepage "https://ungoogled-software.github.io/ungoogled-chromium-binaries/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   conflicts_with cask: [
     "chromium",
