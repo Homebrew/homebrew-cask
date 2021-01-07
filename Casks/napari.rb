@@ -4,10 +4,14 @@ cask "napari" do
 
   url "https://github.com/napari/napari/releases/download/v#{version}/napari-#{version}-macOS.zip",
       verified: "github.com/napari/napari/"
-  appcast "https://github.com/napari/napari/releases.atom"
   name "napari"
   desc "Multi-dimensional image viewer for Python"
   homepage "https://napari.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on macos: "<= :catalina"
   container nested: "napari-#{version}.dmg"
