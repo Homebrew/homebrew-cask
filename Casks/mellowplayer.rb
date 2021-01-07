@@ -4,10 +4,14 @@ cask "mellowplayer" do
 
   url "https://github.com/ColinDuquesnoy/MellowPlayer/releases/download/#{version}/MellowPlayer.dmg",
       verified: "github.com/ColinDuquesnoy/MellowPlayer/"
-  appcast "https://github.com/ColinDuquesnoy/MellowPlayer/releases.atom"
   name "MellowPlayer"
   desc "Moved to gitlab"
   homepage "https://colinduquesnoy.github.io/MellowPlayer/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "MellowPlayer.app"
 
