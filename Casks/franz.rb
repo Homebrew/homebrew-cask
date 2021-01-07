@@ -4,10 +4,14 @@ cask "franz" do
 
   url "https://github.com/meetfranz/franz/releases/download/v#{version}/franz-#{version}.dmg",
       verified: "github.com/meetfranz/franz/"
-  appcast "https://github.com/meetfranz/franz/releases.atom"
   name "Franz"
   desc "Messaging app for WhatsApp, Facebook Messenger, Slack, Telegram and more"
   homepage "https://meetfranz.com/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   auto_updates true
 
