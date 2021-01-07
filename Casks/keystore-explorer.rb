@@ -4,9 +4,13 @@ cask "keystore-explorer" do
 
   url "https://github.com/kaikramer/keystore-explorer/releases/download/v#{version}/kse-#{version.no_dots}.dmg",
       verified: "github.com/kaikramer/keystore-explorer/"
-  appcast "https://github.com/kaikramer/keystore-explorer/releases.atom"
   name "KeyStore Explorer"
   homepage "https://keystore-explorer.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "KeyStore Explorer.app"
 end
