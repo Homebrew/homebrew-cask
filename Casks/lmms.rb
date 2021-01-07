@@ -4,10 +4,14 @@ cask "lmms" do
 
   url "https://github.com/LMMS/lmms/releases/download/v#{version}/lmms-#{version}-mac10.13.dmg",
       verified: "github.com/LMMS/lmms/"
-  appcast "https://github.com/LMMS/lmms/releases.atom"
   name "LMMS"
   desc "Cross-platform music production software"
   homepage "https://lmms.io/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   depends_on macos: ">= :high_sierra"
 
