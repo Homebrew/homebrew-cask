@@ -4,10 +4,14 @@ cask "cubicsdr" do
 
   url "https://github.com/cjcliffe/CubicSDR/releases/download/#{version}/CubicSDR-#{version}-Darwin.dmg",
       verified: "github.com/cjcliffe/CubicSDR/"
-  appcast "https://github.com/cjcliffe/CubicSDR/releases.atom"
   name "CubicSDR"
   desc "Cross-Platform Software-Defined Radio Application"
   homepage "https://cubicsdr.com/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "CubicSDR.app"
 end
