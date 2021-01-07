@@ -4,10 +4,14 @@ cask "dbeaver-community" do
 
   url "https://github.com/dbeaver/dbeaver/releases/download/#{version}/dbeaver-ce-#{version}-macos.dmg",
       verified: "github.com/dbeaver/dbeaver/"
-  appcast "https://github.com/dbeaver/dbeaver/releases.atom"
   name "DBeaver Community Edition"
   desc "Free universal database tool and SQL client"
   homepage "https://dbeaver.io/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "DBeaver.app"
 
