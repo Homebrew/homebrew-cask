@@ -4,11 +4,15 @@ cask "eddie" do
 
   url "https://eddie.website/download/?platform=macos&arch=x64&ui=ui&format=disk.dmg&version=#{version}",
       verified: "eddie.website/"
-  appcast "https://github.com/AirVPN/Eddie/releases.atom"
   name "Air VPN"
   name "Eddie"
   desc "OpenVPN UI"
   homepage "https://airvpn.org/macos/"
+
+  livecheck do
+    url "https://github.com/AirVPN/Eddie/releases"
+    strategy :git
+  end
 
   app "Eddie.app"
 
