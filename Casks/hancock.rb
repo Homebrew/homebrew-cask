@@ -3,9 +3,13 @@ cask "hancock" do
   sha256 "1e2334f6da60b6adf9654aa340d90d7cc5d26ed6622752f127f625fe88af4232"
 
   url "https://github.com/JeremyAgost/Hancock/releases/download/v#{version}/Hancock.#{version}.dmg"
-  appcast "https://github.com/JeremyAgost/Hancock/releases.atom"
   name "Hancock"
   homepage "https://github.com/JeremyAgost/Hancock"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Hancock.app"
 end
