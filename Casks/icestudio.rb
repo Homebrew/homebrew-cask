@@ -4,9 +4,13 @@ cask "icestudio" do
 
   url "https://github.com/FPGAwars/icestudio/releases/download/v#{version}/icestudio-#{version}-osx64.dmg",
       verified: "github.com/FPGAwars/icestudio/"
-  appcast "https://github.com/FPGAwars/icestudio/releases.atom"
   name "icestudio"
   homepage "https://icestudio.io/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "icestudio.app"
 end
