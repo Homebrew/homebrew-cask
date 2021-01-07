@@ -4,10 +4,14 @@ cask "cerebro" do
 
   url "https://github.com/KELiON/cerebro/releases/download/v#{version}/cerebro-#{version}.dmg",
       verified: "github.com/KELiON/cerebro/"
-  appcast "https://github.com/KELiON/cerebro/releases.atom"
   name "Cerebro"
   desc "Open-source productivity booster with a brain"
   homepage "https://cerebroapp.com/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Cerebro.app"
 
