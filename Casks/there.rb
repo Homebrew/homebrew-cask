@@ -4,10 +4,14 @@ cask "there" do
 
   url "https://github.com/therehq/there-desktop/releases/download/v#{version}/There-#{version}-mac.zip",
       verified: "github.com/therehq/there-desktop/"
-  appcast "https://github.com/therehq/there-desktop/releases.atom"
   name "There"
   desc "Tool to display the local times of people in a team"
   homepage "https://there.pm/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "There.app"
 
