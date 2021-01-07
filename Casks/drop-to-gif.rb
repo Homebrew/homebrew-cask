@@ -4,10 +4,14 @@ cask "drop-to-gif" do
 
   url "https://github.com/mortenjust/droptogif/releases/download/#{version}/Drop.to.GIF#{version.no_dots}.zip",
       verified: "github.com/mortenjust/droptogif/"
-  appcast "https://github.com/mortenjust/droptogif/releases.atom"
   name "Drop to GIF"
   desc "Zero-click animated Gifs"
   homepage "https://mortenjust.github.io/droptogif/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Drop to GIF.app"
 end
