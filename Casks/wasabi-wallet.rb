@@ -4,10 +4,14 @@ cask "wasabi-wallet" do
 
   url "https://github.com/zkSNACKs/WalletWasabi/releases/download/v#{version}/Wasabi-#{version}.dmg",
       verified: "github.com/zkSNACKs/WalletWasabi/"
-  appcast "https://github.com/zkSNACKs/WalletWasabi/releases.atom"
   name "Wasabi Wallet"
   desc "Open-source, non-custodial, privacy focused Bitcoin wallet"
   homepage "https://www.wasabiwallet.io/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on macos: ">= :sierra"
 
