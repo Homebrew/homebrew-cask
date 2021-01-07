@@ -4,10 +4,14 @@ cask "igdm" do
 
   url "https://github.com/ifedapoolarewaju/igdm/releases/download/v#{version}/IGdm-#{version}.dmg",
       verified: "github.com/ifedapoolarewaju/igdm/"
-  appcast "https://github.com/ifedapoolarewaju/igdm/releases.atom"
   name "IG:dm"
   desc "Desktop application for Instagram DMs"
   homepage "https://igdm.me/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "IGdm.app"
 
