@@ -4,10 +4,14 @@ cask "gephi" do
 
   url "https://github.com/gephi/gephi/releases/download/v#{version}/gephi-#{version}-macos.dmg",
       verified: "github.com/gephi/gephi/"
-  appcast "https://github.com/gephi/gephi/releases.atom"
   name "Gephi"
   desc "Utility to visualize and explore GraphViz graphs"
   homepage "https://gephi.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Gephi.app"
 end
