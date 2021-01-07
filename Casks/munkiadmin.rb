@@ -4,12 +4,13 @@ cask "munkiadmin" do
 
   url "https://github.com/hjuutilainen/munkiadmin/releases/download/v#{version.major_minor_patch}/MunkiAdmin-#{version.major_minor_patch}.dmg",
       verified: "github.com/hjuutilainen/munkiadmin/"
-  name "MunkiAdmin"
-  desc "macOS app for managing Munki repositories"
-  homepage "https://hjuutilainen.github.io/munkiadmin/"
-
   appcast "https://github.com/hjuutilainen/munkiadmin/releases.atom",
           must_contain: version.major_minor_patch
+  name "MunkiAdmin"
+  desc "Tool to manage Munki repositories"
+  homepage "https://hjuutilainen.github.io/munkiadmin/"
+
+  license "MIT"
 
   app "MunkiAdmin.app"
 end
