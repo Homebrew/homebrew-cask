@@ -4,11 +4,15 @@ cask "go-server" do
 
   url "https://download.gocd.io/binaries/#{version}/osx/go-server-#{version}-osx.zip",
       verified: "download.gocd.io/binaries/"
-  appcast "https://github.com/gocd/gocd/releases.atom"
   name "Go Server"
   name "GoCD Server"
   desc "Server for the Go Continuous Delivery platform"
   homepage "https://www.gocd.org/"
+
+  livecheck do
+    url "https://github.com/gocd/gocd/releases"
+    strategy :git
+  end
 
   app "Go Server.app"
 end
