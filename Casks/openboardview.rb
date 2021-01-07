@@ -4,9 +4,13 @@ cask "openboardview" do
 
   url "https://github.com/OpenBoardView/OpenBoardView/releases/download/#{version}/OpenBoardView-#{version}-Darwin.dmg",
       verified: "github.com/OpenBoardView/OpenBoardView/"
-  appcast "https://github.com/OpenBoardView/OpenBoardView/releases.atom"
   name "OpenBoardView"
   homepage "https://openboardview.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "openboardview.app"
 end
