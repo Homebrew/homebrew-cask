@@ -4,10 +4,14 @@ cask "timestamp" do
 
   url "https://github.com/mzdr/timestamp/releases/download/#{version}/Timestamp-#{version}-mac.zip",
       verified: "github.com/mzdr/timestamp/"
-  appcast "https://github.com/mzdr/timestamp/releases.atom"
   name "Timestamp"
   desc "Improved clock for the menu bar"
   homepage "https://mzdr.github.io/timestamp/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Timestamp.app"
 end
