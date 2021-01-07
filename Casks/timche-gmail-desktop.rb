@@ -3,10 +3,14 @@ cask "timche-gmail-desktop" do
   sha256 "83834a29ff751dd4887e53270385dd36c5e24a316141851d9b5ad4fcb5cec443"
 
   url "https://github.com/timche/gmail-desktop/releases/download/v#{version}/gmail-desktop-#{version}-mac.dmg"
-  appcast "https://github.com/timche/gmail-desktop/releases.atom"
   name "Gmail Desktop"
   desc "Gmail client"
   homepage "https://github.com/timche/gmail-desktop"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Gmail Desktop.app"
 
