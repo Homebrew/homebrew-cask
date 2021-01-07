@@ -4,10 +4,14 @@ cask "trolcommander" do
 
   url "https://github.com/trol73/mucommander/releases/download/v#{version}/trolcommander-#{version.dots_to_underscores}.app.tar.gz?raw=true",
       verified: "github.com/trol73/mucommander/"
-  appcast "https://github.com/trol73/mucommander/releases.atom"
   name "trolCommander"
   desc "Fork of the muCommander file manager"
   homepage "https://trolsoft.ru/en/soft/trolcommander"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "trolCommander.app"
 end
