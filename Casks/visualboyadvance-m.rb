@@ -4,9 +4,13 @@ cask "visualboyadvance-m" do
 
   url "https://github.com/visualboyadvance-m/visualboyadvance-m/releases/download/v#{version}/visualboyadvance-m-Mac-64bit.zip",
       verified: "github.com/visualboyadvance-m/visualboyadvance-m/"
-  appcast "https://github.com/visualboyadvance-m/visualboyadvance-m/releases.atom"
   name "Visual Boy Advance - M"
   homepage "https://vba-m.com/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "visualboyadvance-m.app"
 
