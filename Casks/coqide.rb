@@ -4,9 +4,13 @@ cask "coqide" do
 
   url "https://github.com/coq/coq/releases/download/V#{version.major_minor_patch}/coq-#{version}-installer-macos.dmg",
       verified: "github.com/coq/coq/"
-  appcast "https://github.com/coq/coq/releases.atom"
   name "Coq"
   homepage "https://coq.inria.fr/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   depends_on macos: ">= :sierra"
 
