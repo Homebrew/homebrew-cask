@@ -4,10 +4,14 @@ cask "pliim" do
 
   url "https://github.com/zehfernandes/pliim/releases/download/v#{version}/Pliim.app.zip",
       verified: "github.com/zehfernandes/pliim/"
-  appcast "https://github.com/zehfernandes/pliim/releases.atom"
   name "Pliim"
   desc "One click and be ready to go up on stage and shine!"
   homepage "https://zehfernandes.github.io/pliim/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Pliim.app"
 end
