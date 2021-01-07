@@ -4,9 +4,13 @@ cask "cemu" do
 
   url "https://github.com/CE-Programming/CEmu/releases/download/v#{version}/macOS_CEmu.dmg",
       verified: "github.com/CE-Programming/CEmu/"
-  appcast "https://github.com/CE-Programming/CEmu/releases.atom"
   name "CEmu"
   homepage "https://ce-programming.github.io/CEmu/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "CEmu.app"
 end
