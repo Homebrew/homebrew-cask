@@ -4,9 +4,13 @@ cask "itch" do
 
   url "https://broth.itch.ovh/itch-setup/darwin-amd64/#{version}/archive/default",
       verified: "broth.itch.ovh/"
-  appcast "https://github.com/itchio/itch-setup/releases.atom"
   name "itch.io"
   homepage "https://itch.io/app"
+
+  livecheck do
+    url "https://github.com/itchio/itch-setup/releases"
+    strategy :git
+  end
 
   installer script: "itch-setup"
 
