@@ -4,11 +4,15 @@ cask "pencil2d" do
 
   url "https://github.com/pencil2d/pencil/releases/download/v#{version}/pencil2d-mac-#{version}.zip",
       verified: "github.com/pencil2d/pencil/"
-  appcast "https://github.com/pencil2d/pencil/releases.atom"
   name "Pencil2D"
   name "Pencil2D Animation"
   desc "Open-source tool to make 2D hand-drawn animations"
   homepage "https://www.pencil2d.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on macos: ">= :sierra"
 
