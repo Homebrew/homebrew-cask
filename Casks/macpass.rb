@@ -4,10 +4,14 @@ cask "macpass" do
 
   url "https://github.com/MacPass/MacPass/releases/download/#{version}/MacPass-#{version}.zip",
       verified: "github.com/MacPass/MacPass/"
-  appcast "https://github.com/MacPass/MacPass/releases.atom"
   name "MacPass"
   desc "Open-source, KeePass-client and password manager"
   homepage "https://macpass.github.io/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   auto_updates true
   depends_on macos: ">= :yosemite"
