@@ -4,10 +4,14 @@ cask "terminus" do
 
   url "https://github.com/Eugeny/terminus/releases/download/v#{version}/terminus-#{version}-macos.zip",
       verified: "github.com/Eugeny/terminus/"
-  appcast "https://github.com/Eugeny/terminus/releases.atom"
   name "Terminus"
   desc "Terminal for a more modern age"
   homepage "https://eugeny.github.io/terminus/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Terminus.app"
 
