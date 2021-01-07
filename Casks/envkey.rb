@@ -4,10 +4,15 @@ cask "envkey" do
 
   url "https://github.com/envkey/envkey-app/releases/download/darwin-x64-prod-v#{version}/EnvKey-#{version}-mac.zip",
       verified: "github.com/envkey/envkey-app/"
-  appcast "https://github.com/envkey/envkey-app/releases.atom"
   name "EnvKey"
   desc "Secure, human-friendly, cross-platform secrets and config"
   homepage "https://www.envkey.com/"
+
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^darwin-x64-prod-v(\d+(?:\.\d+)*)$/i)
+  end
 
   app "EnvKey.app"
 end
