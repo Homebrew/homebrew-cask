@@ -9,9 +9,9 @@ cask "aquamacs" do
   homepage "https://aquamacs.org/"
 
   livecheck do
-    url "https://github.com/davidswelt/aquamacs-emacs/releases"
-    strategy :page_match
-    regex(%r{href=.*?/Aquamacs-Emacs-(\d+(?:\.\d+)*)\.dmg}i)
+    url :url
+    strategy :git
+    regex(/^Aquamacs-(\d+(?:\.\d+)*)$/i)
   end
 
   app "Aquamacs.app"
