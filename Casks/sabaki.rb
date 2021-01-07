@@ -4,9 +4,13 @@ cask "sabaki" do
 
   url "https://github.com/SabakiHQ/Sabaki/releases/download/v#{version}/sabaki-v#{version}-mac-x64.7z",
       verified: "github.com/SabakiHQ/Sabaki/"
-  appcast "https://github.com/SabakiHQ/Sabaki/releases.atom"
   name "Sabaki"
   homepage "https://sabaki.yichuanshen.de/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Sabaki.app"
 end
