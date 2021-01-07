@@ -4,9 +4,13 @@ cask "openvanilla" do
 
   url "https://github.com/openvanilla/openvanilla/releases/download/#{version.before_comma}/OpenVanilla-Installer-Mac-#{version.before_comma}.zip",
       verified: "github.com/openvanilla/openvanilla/"
-  appcast "https://github.com/openvanilla/openvanilla/releases.atom"
   name "OpenVanilla"
   homepage "https://openvanilla.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   container nested: "OpenVanillaInstaller.app/Contents/Resources/NotarizedArchives/OpenVanilla-r#{version.after_comma}.zip"
 
