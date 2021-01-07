@@ -3,9 +3,13 @@ cask "octomouse" do
   sha256 "b47639b8b4504834caee65a61c0cbe3a42e798cf4901472241f9ce3ab72793e9"
 
   url "https://github.com/KonsomeJona/OctoMouse/releases/download/v#{version}/OctoMouse.app.zip"
-  appcast "https://github.com/KonsomeJona/OctoMouse/releases.atom"
   name "OctoMouse"
   homepage "https://github.com/KonsomeJona/OctoMouse"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "OctoMouse.app"
 end
