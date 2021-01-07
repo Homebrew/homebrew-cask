@@ -4,10 +4,14 @@ cask "lektor" do
 
   url "https://github.com/lektor/lektor/releases/download/#{version}/Lektor-#{version}.dmg",
       verified: "github.com/lektor/lektor/"
-  appcast "https://github.com/lektor/lektor/releases.atom"
   name "Lektor"
   desc "Static file content management system"
   homepage "https://www.getlektor.com/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Lektor.app"
 end
