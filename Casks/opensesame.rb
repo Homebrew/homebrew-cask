@@ -4,10 +4,14 @@ cask "opensesame" do
 
   url "https://github.com/smathot/OpenSesame/releases/download/release%2F#{version}/opensesame_#{version}-py37-macos-2.dmg",
       verified: "github.com/smathot/OpenSesame/"
-  appcast "https://github.com/smathot/OpenSesame/releases.atom"
   name "OpenSesame"
   desc "Graphical experiment builder for the social sciences"
   homepage "https://osdoc.cogsci.nl/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "opensesame.app"
 end
