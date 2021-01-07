@@ -4,10 +4,15 @@ cask "jeromelebel-mongohub" do
 
   url "https://mongohub.s3.amazonaws.com/MongoHub.zip",
       verified: "mongohub.s3.amazonaws.com/"
-  appcast "https://github.com/jeromelebel/MongoHub-Mac/releases.atom"
   name "MongoHub"
   desc "Native MongoDB client"
   homepage "https://github.com/jeromelebel/MongoHub-Mac"
+
+  livecheck do
+    url :homepage
+    strategy :git
+    regex(/^(\d+(?:\.\d+)*)$/i)
+  end
 
   app "MongoHub.app"
 end
