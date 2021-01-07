@@ -3,11 +3,15 @@ cask "pppc-utility" do
   sha256 "95353ed47703578061e8a0ff5b168b467632fee1d0e01ee3851147279d0fc40e"
 
   url "https://github.com/jamf/PPPC-Utility/releases/download/#{version}/PPPC-Utility.zip"
-  appcast "https://github.com/jamf/PPPC-Utility/releases.atom"
   name "PPPC Utility"
   name "Privacy Preferences Policy Control Utility"
   desc "Create configuration profiles containing a PPPC payload"
   homepage "https://github.com/jamf/PPPC-Utility"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on macos: ">= :catalina"
 
