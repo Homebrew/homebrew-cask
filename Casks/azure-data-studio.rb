@@ -4,10 +4,17 @@ cask "azure-data-studio" do
 
   url "https://sqlopsbuilds.azureedge.net/stable/#{version.after_comma}/azuredatastudio-macos-#{version.before_comma}.zip",
       verified: "sqlopsbuilds.azureedge.net/stable/"
-  appcast "https://github.com/Microsoft/azuredatastudio/releases.atom"
   name "Azure Data Studio"
   desc "Data management tool that enables working with SQL Server"
   homepage "https://docs.microsoft.com/en-us/sql/azure-data-studio/"
+
+  livecheck do
+    url "https://go.microsoft.com/fwlink/?linkid=2151311"
+    strategy :header_match do |headers|
+      match = headers["location"].match(%r{/([^/]+)/azuredatastudio-macos-(\d+(?:\.\d+)*)\.zip}i)
+      "#{match[2]},#{match[1]}"
+    end
+  end
 
   auto_updates true
 
