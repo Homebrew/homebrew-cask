@@ -4,9 +4,13 @@ cask "doteditor" do
 
   url "https://github.com/vincenthEE/DotEditor/releases/download/v#{version}/DotEditor.#{version}.dmg",
       verified: "github.com/vincenthEE/DotEditor/"
-  appcast "https://github.com/vincenthEE/DotEditor/releases.atom"
   name "DotEditor"
   homepage "https://vincenthee.github.io/DotEditor/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on formula: "graphviz"
 
