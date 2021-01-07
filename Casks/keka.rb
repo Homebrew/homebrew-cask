@@ -4,10 +4,14 @@ cask "keka" do
 
   url "https://github.com/aonez/Keka/releases/download/v#{version}/Keka-#{version}.dmg",
       verified: "github.com/aonez/Keka/"
-  appcast "https://github.com/aonez/Keka/releases.atom"
   name "Keka"
   desc "File archiver"
   homepage "https://www.keka.io/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   auto_updates true
   conflicts_with cask: "keka-beta"
