@@ -4,9 +4,13 @@ cask "disk-arbitrator" do
 
   url "https://github.com/aburgh/Disk-Arbitrator/releases/download/v#{version}/Disk.Arbitrator-#{version.major_minor}.dmg",
       verified: "kainjow.com/"
-  appcast "https://github.com/aburgh/Disk-Arbitrator/releases.atom"
   name "Disk Arbitrator"
   homepage "https://github.com/aburgh/Disk-Arbitrator"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Disk Arbitrator.app"
 
