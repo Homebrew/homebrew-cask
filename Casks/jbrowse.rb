@@ -4,10 +4,14 @@ cask "jbrowse" do
 
   url "https://github.com/GMOD/jbrowse/releases/download/#{version}-release/JBrowse-#{version}-desktop-darwin-x64.zip",
       verified: "github.com/GMOD/jbrowse/"
-  appcast "https://github.com/GMOD/jbrowse/releases.atom"
   name "jbrowse"
   desc "Genome browser"
   homepage "https://jbrowse.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "JBrowse-#{version}-desktop-darwin-x64/JBrowse-#{version}-desktop.app"
 end
