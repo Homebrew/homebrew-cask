@@ -11,9 +11,10 @@ cask "home-assistant" do
   livecheck do
     url :url
     strategy :git do |tags|
-      tags.map { |tag|
+      tags.map do |tag|
         match = tag.match(%r{^release/(\d+(?:\.\d+)*)/(\d+)$})
         "#{match[1]},#{match[2]}" if match
+      end
     end
   end
 

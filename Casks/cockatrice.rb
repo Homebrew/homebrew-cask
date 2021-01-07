@@ -20,8 +20,10 @@ cask "cockatrice" do
   livecheck do
     url "https://github.com/Cockatrice/Cockatrice/releases/latest"
     strategy :page_match do |page|
-      match = page.match(%r{href=.*?/(\d+(?:-\d+)*)-Release-(\d+(?:\.\d+)*)/Cockatrice-([^/]+)-(?:\d+(?:\.\d+)*)-macos(?:\d+(?:\.\d+)*)\.zip}i)
-      "#{match[2]},#{match[1]}:#{match[3]}"
+      match = page.match(
+        %r{href=.*?/(\d+(?:-\d+)*)-Release-[^/]+/Cockatrice-([^/]+)-(\d+(?:\.\d+)*)-macos(?:\d+(?:\.\d+)*)\.zip}i,
+      )
+      "#{match[3]},#{match[1]}:#{match[2]}"
     end
   end
 

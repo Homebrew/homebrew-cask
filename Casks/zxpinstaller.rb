@@ -4,10 +4,14 @@ cask "zxpinstaller" do
 
   url "https://github.com/guideguide/ZXPInstaller/releases/download/#{version}/ZXPInstaller.dmg",
       verified: "github.com/guideguide/ZXPInstaller/"
-  appcast "https://github.com/guideguide/ZXPInstaller/releases.atom"
   name "ZXPInstaller"
   desc "Adobe extensions installer"
   homepage "https://zxpinstaller.com/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "ZXPInstaller.app"
 
