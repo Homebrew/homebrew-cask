@@ -4,9 +4,13 @@ cask "superproductivity" do
 
   url "https://github.com/johannesjo/super-productivity/releases/download/v#{version}/superProductivity-#{version}-mac.zip",
       verified: "github.com/johannesjo/super-productivity/"
-  appcast "https://github.com/johannesjo/super-productivity/releases.atom"
   name "Super Productivity"
   homepage "https://super-productivity.com/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "superProductivity.app"
 end
