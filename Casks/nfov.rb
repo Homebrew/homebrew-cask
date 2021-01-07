@@ -3,10 +3,14 @@ cask "nfov" do
   sha256 "a23ef50f243453cec012a2f2a754fb44b3c5e997a0703feabda53235274c1e69"
 
   url "https://github.com/nrlquaker/nfov/releases/download/v#{version}/nfov-darwin-x64-#{version}.zip"
-  appcast "https://github.com/nrlquaker/nfov/releases.atom"
   name "nfov"
   desc "ASCII / ANSI art viewer"
   homepage "https://github.com/nrlquaker/nfov"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "nfov.app"
 
