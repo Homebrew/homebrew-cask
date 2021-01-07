@@ -4,10 +4,14 @@ cask "macs-fan-control" do
 
   url "https://github.com/crystalidea/macs-fan-control/releases/download/v#{version}/macsfancontrol.zip",
       verified: "github.com/crystalidea/macs-fan-control/"
-  appcast "https://github.com/crystalidea/macs-fan-control/releases.atom"
   name "Macs Fan Control"
   desc "Controls and monitors all fans on Apple computers"
   homepage "https://www.crystalidea.com/macs-fan-control"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"
