@@ -4,9 +4,13 @@ cask "colour-contrast-analyser" do
 
   url "https://github.com/ThePacielloGroup/CCAe/releases/download/v#{version}/CCA-#{version}.dmg",
       verified: "github.com/ThePacielloGroup/CCAe/"
-  appcast "https://github.com/ThePacielloGroup/CCAe/releases.atom"
   name "Colour Contrast Analyser (CCA)"
   homepage "https://developer.paciellogroup.com/resources/contrastanalyser/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Colour Contrast Analyser (CCA).app"
 end
