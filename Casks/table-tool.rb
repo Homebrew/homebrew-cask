@@ -3,10 +3,14 @@ cask "table-tool" do
   sha256 "e405f5aff5b74a8bb57f9e7dbc483a47d9c7d3d2ef095728d04e030e84017de1"
 
   url "https://github.com/jakob/TableTool/releases/download/v#{version}/tabletool-#{version}.zip"
-  appcast "https://github.com/jakob/TableTool/releases.atom"
   name "Table Tool"
   desc "CSV file editor"
   homepage "https://github.com/jakob/TableTool"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Table Tool.app"
 
