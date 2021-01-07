@@ -4,10 +4,14 @@ cask "nuclear" do
 
   url "https://github.com/nukeop/nuclear/releases/download/v#{version}/nuclear-v#{version}.dmg",
       verified: "github.com/nukeop/nuclear/"
-  appcast "https://github.com/nukeop/nuclear/releases.atom"
   name "Nuclear"
   desc "Streaming music player"
   homepage "https://nuclear.js.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "nuclear.app"
 
