@@ -16,9 +16,13 @@ cask "touch-bar-simulator" do
     url "https://github.com/sindresorhus/touch-bar-simulator/releases/download/v#{version}/Touch.Bar.Simulator.#{version}.dmg"
   end
 
-  appcast "https://github.com/sindresorhus/touch-bar-simulator/releases.atom"
   name "Touch Bar Simulator"
   homepage "https://github.com/sindresorhus/touch-bar-simulator"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on macos: ">= :sierra"
 
