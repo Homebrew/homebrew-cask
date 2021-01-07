@@ -5,6 +5,12 @@ cask "packetsender" do
 
     url "https://github.com/dannagle/PacketSender/releases/download/v#{version}/PacketSender_v#{version}.dmg",
         verified: "github.com/dannagle/PacketSender/"
+
+    livecheck do
+      url "https://github.com/dannagle/PacketSender/releases/latest"
+      strategy :page_match
+      regex(%r{href=.*?/PacketSender_v?(\d+(?:\.\d+)*)\.dmg}i)
+    end
   else
     version "7.0.5,7.1.0"
     sha256 "a2ab110a5d498389de5b0fd73ca7a63349f1b79235f4acda1da7c2e5322f0d7f"
