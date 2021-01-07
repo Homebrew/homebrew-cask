@@ -4,10 +4,14 @@ cask "jumpcut" do
 
   url "https://github.com/snark/jumpcut/releases/download/v#{version}/Jumpcut-#{version}.tar.bz2",
       verified: "github.com/snark/jumpcut/"
-  appcast "https://github.com/snark/jumpcut/releases.atom"
   name "Jumpcut"
   desc "Clipboard manager"
   homepage "https://snark.github.io/jumpcut/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on macos: ">= :el_capitan"
 
