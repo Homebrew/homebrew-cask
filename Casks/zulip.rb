@@ -4,10 +4,14 @@ cask "zulip" do
 
   url "https://github.com/zulip/zulip-desktop/releases/download/v#{version}/Zulip-#{version}.dmg",
       verified: "github.com/zulip/zulip-desktop/"
-  appcast "https://github.com/zulip/zulip-desktop/releases.atom"
   name "Zulip"
   desc "Desktop client for the Zulip open source team chat platform"
   homepage "https://zulipchat.com/apps/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   auto_updates true
 
