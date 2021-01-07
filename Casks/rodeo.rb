@@ -4,10 +4,14 @@ cask "rodeo" do
 
   url "https://github.com/yhat/rodeo/releases/download/v#{version}/Rodeo-#{version}.dmg",
       verified: "github.com/yhat/rodeo/"
-  appcast "https://github.com/yhat/rodeo/releases.atom"
   name "Rodeo"
   desc "Data science IDE for Python"
   homepage "https://rodeo.yhat.com/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Rodeo.app"
 end
