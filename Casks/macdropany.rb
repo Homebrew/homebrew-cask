@@ -7,6 +7,7 @@ cask "macdropany" do
   desc "Syncs any local folder with the cloud"
   homepage "https://github.com/sebthedev/MacDropAny"
 
+  # We need to check all releases, sine currently the latest release is a beta version.
   livecheck do
     url "https://github.com/sebthedev/MacDropAny/releases"
     strategy :page_match
