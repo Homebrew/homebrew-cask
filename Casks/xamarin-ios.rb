@@ -3,9 +3,14 @@ cask "xamarin-ios" do
   sha256 "1ed1eb8a0054d240298bb348f0373ced4ecd053f2dbb2b4998a2e5f40e4f7e47"
 
   url "https://dl.xamarin.com/MonoTouch/Mac/xamarin.ios-#{version}.pkg"
-  appcast "https://github.com/xamarin/xamarin-macios/releases.atom"
   name "Xamarin.iOS"
   homepage "https://www.xamarin.com/platform"
+
+  livecheck do
+    url "https://github.com/xamarin/xamarin-macios/releases"
+    strategy :page_match
+    regex(%r{href=.*?/tag/xamarin-ios-(\d+(?:\.\d+)*)}i)
+  end
 
   pkg "xamarin.ios-#{version}.pkg"
 
