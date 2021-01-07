@@ -4,10 +4,14 @@ cask "freenettray" do
 
   url "https://github.com/freenet/mactray/releases/download/v#{version}/FreenetTray_#{version}.zip",
       verified: "github.com/freenet/mactray/"
-  appcast "https://github.com/freenet/mactray/releases.atom"
   name "Freenet"
   desc "Menu bar application to control Freenet"
   homepage "https://freenetproject.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "FreenetTray.app"
 
