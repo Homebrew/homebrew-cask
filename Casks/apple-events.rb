@@ -3,10 +3,14 @@ cask "apple-events" do
   sha256 "00dee705888f2e7f8f036afe06bafb7d70042bd1eaa1bdf93146fddb63bc8e76"
 
   url "https://github.com/insidegui/AppleEvents/releases/download/#{version}/AppleEvents_v#{version}.zip"
-  appcast "https://github.com/insidegui/AppleEvents/releases.atom"
   name "Apple Events"
   desc "Unofficial Apple Events app"
   homepage "https://github.com/insidegui/AppleEvents"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   auto_updates true
 
