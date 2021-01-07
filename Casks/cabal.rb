@@ -4,10 +4,14 @@ cask "cabal" do
 
   url "https://github.com/cabal-club/cabal-desktop/releases/download/v#{version}/cabal-desktop-#{version}-mac.dmg",
       verified: "github.com/cabal-club/cabal-desktop/"
-  appcast "https://github.com/cabal-club/cabal-desktop/releases.atom"
   name "Cabal"
   desc "Desktop client for the chat platform Cabal"
   homepage "https://cabal.chat/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Cabal.app"
 end
