@@ -9,10 +9,14 @@ cask "barxtemp" do
 
   url "https://github.com/Gabriele91/barXtemp/releases/download/#{version}/barXtemp.app.zip",
       verified: "github.com/Gabriele91/barXtemp/"
-  appcast "https://github.com/Gabriele91/barXtemp/releases.atom"
   name "barXtemp"
   desc "Simple app to get the computer temperature"
   homepage "https://gabriele91.github.io/barXtemp/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on macos: ">= :yosemite"
 
