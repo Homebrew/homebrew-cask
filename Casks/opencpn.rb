@@ -4,10 +4,17 @@ cask "opencpn" do
 
   url "https://download-opencpn.netdna-ssl.com/#{version.before_comma}/OpenCPN_#{version.before_comma}+#{version.after_comma}.pkg",
       verified: "download-opencpn.netdna-ssl.com/"
-  appcast "https://github.com/OpenCPN/OpenCPN/releases.atom"
   name "OpenCPN"
   desc "Full-featured and concise ChartPlotter/Navigator"
   homepage "https://www.opencpn.org/"
+
+  livecheck do
+    url "https://github.com/OpenCPN/OpenCPN/releases/latest"
+    strategy :page_match do |page|
+      match = page.match(%r{href=.*?/OpenCPN_(\d+(?:\.\d+)*)\+(.*?)\.pkg}i)
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
   pkg "OpenCPN_#{version.before_comma} #{version.after_comma}.pkg"
 
