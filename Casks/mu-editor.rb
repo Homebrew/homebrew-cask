@@ -4,10 +4,14 @@ cask "mu-editor" do
 
   url "https://github.com/mu-editor/mu/releases/download/#{version}/mu-editor.dmg",
       verified: "github.com/mu-editor/mu/"
-  appcast "https://github.com/mu-editor/mu/releases.atom"
   name "Mu"
   desc "Small, simple editor for beginner Python programmers"
   homepage "https://codewith.mu/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "mu-editor.app"
 end
