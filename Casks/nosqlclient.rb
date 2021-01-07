@@ -4,9 +4,13 @@ cask "nosqlclient" do
 
   url "https://github.com/nosqlclient/nosqlclient/releases/download/#{version}/osx-portable.zip",
       verified: "github.com/nosqlclient/nosqlclient/"
-  appcast "https://github.com/nosqlclient/nosqlclient/releases.atom"
   name "Nosqlclient"
   homepage "https://www.nosqlclient.com/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Nosqlclient-darwin-x64/Nosqlclient.app"
 
