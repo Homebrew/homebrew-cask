@@ -4,10 +4,14 @@ cask "opentoonz" do
 
   url "https://github.com/opentoonz/opentoonz/releases/download/v#{version}/OpenToonz.pkg",
       verified: "github.com/opentoonz/opentoonz/"
-  appcast "https://github.com/opentoonz/opentoonz/releases.atom"
   name "OpenToonz"
   desc "Open-source full-featured 2D animation creation software"
   homepage "https://opentoonz.github.io/e/index.html"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   pkg "OpenToonz.pkg"
 
