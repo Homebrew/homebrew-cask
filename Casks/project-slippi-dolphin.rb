@@ -4,9 +4,13 @@ cask "project-slippi-dolphin" do
 
   url "https://github.com/project-slippi/Ishiiruka/releases/download/v#{version}/FM-Slippi-#{version}-Mac.zip",
       verified: "github.com/project-slippi/Ishiiruka/"
-  appcast "https://github.com/project-slippi/Ishiiruka/releases.atom"
   name "Slippi"
   homepage "https://slippi.gg/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Dolphin.app"
 
