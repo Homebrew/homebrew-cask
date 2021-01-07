@@ -4,10 +4,14 @@ cask "todometer" do
 
   url "https://github.com/cassidoo/todometer/releases/download/v#{version}/todometer.for.mac.zip",
       verified: "github.com/cassidoo/todometer/"
-  appcast "https://github.com/cassidoo/todometer/releases.atom"
   name "todometer"
   desc "Meter-based to-do list"
   homepage "https://cassidoo.github.io/todometer/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "mac/todometer.app"
 end
