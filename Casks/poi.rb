@@ -4,10 +4,14 @@ cask "poi" do
 
   url "https://github.com/poooi/poi/releases/download/v#{version}/poi-#{version}.dmg",
       verified: "github.com/poooi/poi/"
-  appcast "https://github.com/poooi/poi/releases.atom"
   name "poi"
   desc "Scalable KanColle browser and tool"
   homepage "https://poi.io/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "poi.app"
 
