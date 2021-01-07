@@ -3,10 +3,20 @@ cask "sequel-ace" do
   sha256 "9690aa9a267b6c6141ae323a0946ff41f864b6c75a1435853b50b7418599553f"
 
   url "https://github.com/Sequel-Ace/Sequel-Ace/releases/download/production/#{version.before_comma}-#{version.after_comma}/Sequel-Ace-#{version.before_comma}.zip"
-  appcast "https://github.com/Sequel-Ace/Sequel-Ace/releases.atom"
   name "Sequel Ace"
   desc "MySQL/MariaDB database management"
   homepage "https://github.com/Sequel-Ace/Sequel-Ace"
+
+  livecheck do
+    url :url
+    strategy :git do |tags|
+      p tags
+      tags.map do |tag|
+        match = tag.match(%r{^production/(\d+(?:\.\d+)*)-(\d+)$}i)
+        "#{match[1]},#{match[2]}" if match
+      end.compact
+    end
+  end
 
   app "Sequel Ace.app"
 
