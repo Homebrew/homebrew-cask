@@ -8,5 +8,5 @@ cask "drivedx" do
   desc "Drive health diagnostic & monitoring tool"
   homepage "https://binaryfruit.com/drivedx"
 
-  app "DriveDX.app"
+  app "DriveDx.app"
 end

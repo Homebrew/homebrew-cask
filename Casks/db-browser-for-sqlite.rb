@@ -4,10 +4,15 @@ cask "db-browser-for-sqlite" do
 
   url "https://github.com/sqlitebrowser/sqlitebrowser/releases/download/v#{version}/DB.Browser.for.SQLite-#{version}-v2.dmg",
       verified: "github.com/sqlitebrowser/sqlitebrowser/"
-  appcast "https://github.com/sqlitebrowser/sqlitebrowser/releases.atom"
   name "DB Browser for SQLite"
-  desc "Database browser for SQLite (DB4S) project"
+  desc "Browser for SQLite databases"
   homepage "https://sqlitebrowser.org/"
+
+  livecheck do
+    url "https://github.com/sqlitebrowser/sqlitebrowser/releases"
+    strategy :page_match
+    regex(%r{href=.*?/DB\.Browser\.for\.SQLite-(\d+(?:\.\d+)*)(?:-v\d+)?\.dmg}i)
+  end
 
   app "DB Browser for SQLite.app"
 

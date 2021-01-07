@@ -8,7 +8,7 @@ cask "scroll-reverser" do
   homepage "https://pilotmoon.com/scrollreverser/"
 
   livecheck do
-    url "https://softwareupdate.pilotmoon.com/update/scrollreverser/appcast.xml"
+    url "https://pilotmoon.com/appcast/sr.xml"
     strategy :sparkle
   end
 
