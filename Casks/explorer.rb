@@ -3,10 +3,14 @@ cask "explorer" do
   sha256 "fcf3ec43ab2dff7f9e734192d3d327eebce80240007c4848b433f5d0f6ae8605"
 
   url "https://github.com/jfbouzereau/explorer/releases/download/#{version}/Explorer-darwin-x64.zip"
-  appcast "https://github.com/jfbouzereau/explorer/releases.atom"
   name "Explorer"
   desc "Data Explorer"
   homepage "https://github.com/jfbouzereau/explorer"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Explorer-darwin-x64.app"
 end
