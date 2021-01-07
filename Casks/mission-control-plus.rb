@@ -4,9 +4,13 @@ cask "mission-control-plus" do
 
   url "https://github.com/ronyfadel/MissionControlPlusReleases/releases/download/#{version}/Mission.Control.Plus.tgz",
       verified: "github.com/ronyfadel/MissionControlPlusReleases/"
-  appcast "https://github.com/ronyfadel/MissionControlPlusReleases/releases.atom"
   name "Mission Control Plus"
   homepage "https://fadel.io/MissionControlPlus"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on macos: ">= :high_sierra"
 
