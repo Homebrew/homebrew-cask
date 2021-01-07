@@ -1,8 +1,8 @@
 cask "mactex-no-gui" do
-  version "2020-04-07"
+  version "2020.0407"
   sha256 "a33af89de36c7c84a76050c9704d50d23892e9c2070f04f6a53e1c6d5a332f67"
 
-  url "http://mirror.ctan.org/systems/mac/mactex/mactex-#{version.no_hyphens}.pkg",
+  url "http://mirror.ctan.org/systems/mac/mactex/mactex-#{version.no_dots}.pkg",
       verified: "mirror.ctan.org/systems/mac/mactex/"
   name "MacTeX"
   desc "Full TeX Live distribution without GUI applications"
@@ -12,7 +12,7 @@ cask "mactex-no-gui" do
     url "http://mirror.ctan.org/systems/mac/mactex/"
     strategy :page_match do |page|
       match = page.match(/href=.*?mactex-(\d{4})(\d{2})(\d{2})\.pkg/)
-      "#{match[1]}-#{match[2]}-#{match[3]}"
+      "#{match[1]}.#{match[2]}#{match[3]}"
     end
   end
 
@@ -23,7 +23,7 @@ cask "mactex-no-gui" do
   depends_on formula: "ghostscript"
   depends_on macos: ">= :high_sierra"
 
-  pkg "mactex-#{version.no_hyphens}.pkg",
+  pkg "mactex-#{version.no_dots}.pkg",
       choices: [
         {
           # Ghostscript
@@ -39,21 +39,21 @@ cask "mactex-no-gui" do
         },
         {
           # GUI Applications
-          "choiceIdentifier" => "org.tug.mactex.gui#{version.split("-").first}",
+          "choiceIdentifier" => "org.tug.mactex.gui#{version.major}",
           "choiceAttribute"  => "selected",
           "attributeSetting" => 0,
         },
         {
           # TeXLive
-          "choiceIdentifier" => "org.tug.mactex.texlive#{version.split("-").first}",
+          "choiceIdentifier" => "org.tug.mactex.texlive#{version.major}",
           "choiceAttribute"  => "selected",
           "attributeSetting" => 1,
         },
       ]
 
-  uninstall pkgutil: "org.tug.mactex.texlive#{version.split("-").first}",
+  uninstall pkgutil: "org.tug.mactex.texlive#{version.major}",
             delete:  [
-              "/usr/local/texlive/#{version.split("-").first}",
+              "/usr/local/texlive/#{version.major}",
               "/Library/TeX",
               "/etc/paths.d/TeX",
               "/etc/manpaths.d/TeX",
@@ -61,7 +61,7 @@ cask "mactex-no-gui" do
 
   zap trash: [
     "/usr/local/texlive/texmf-local",
-    "~/Library/texlive/#{version.split("-").first}",
+    "~/Library/texlive/#{version.major}",
   ],
       rmdir: [
         "/usr/local/texlive",
