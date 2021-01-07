@@ -4,10 +4,14 @@ cask "rotki" do
 
   url "https://github.com/rotki/rotki/releases/download/v#{version}/rotki-darwin-v#{version}.dmg",
       verified: "github.com/rotki/rotki/"
-  appcast "https://github.com/rotki/rotki/releases.atom"
   name "Rotki"
   desc "Portfolio tracking and accounting tool"
   homepage "https://rotki.com/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "rotki.app"
 end
