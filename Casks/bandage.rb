@@ -4,10 +4,14 @@ cask "bandage" do
 
   url "https://github.com/rrwick/Bandage/releases/download/v#{version}/Bandage_Mac_v#{version.dots_to_underscores}.zip",
       verified: "github.com/rrwick/Bandage/"
-  appcast "https://github.com/rrwick/Bandage/releases.atom"
   name "Bandage"
   desc "Bioinformatics Application for Navigating De novo Assembly Graphs"
   homepage "https://rrwick.github.io/Bandage/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Bandage.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
