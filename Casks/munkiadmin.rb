@@ -10,7 +10,5 @@ cask "munkiadmin" do
   desc "Tool to manage Munki repositories"
   homepage "https://hjuutilainen.github.io/munkiadmin/"
 
-  license "MIT"
-
   app "MunkiAdmin.app"
 end
