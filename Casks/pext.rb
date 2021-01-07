@@ -4,10 +4,14 @@ cask "pext" do
 
   url "https://github.com/Pext/Pext/releases/download/v#{version}/Pext-#{version}.dmg",
       verified: "github.com/Pext/Pext/"
-  appcast "https://github.com/Pext/Pext/releases.atom"
   name "Pext"
   desc "Python-based extendable tool"
   homepage "https://pext.io/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Pext.app"
 end
