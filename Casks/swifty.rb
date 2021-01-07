@@ -4,10 +4,14 @@ cask "swifty" do
 
   url "https://github.com/swiftyapp/swifty/releases/download/v#{version}/Swifty-#{version}.dmg",
       verified: "github.com/swiftyapp/swifty/"
-  appcast "https://github.com/swiftyapp/swifty/releases.atom"
   name "Swifty"
   desc "Offline password manager tool"
   homepage "https://getswifty.pro/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   auto_updates true
 
