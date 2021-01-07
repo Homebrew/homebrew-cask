@@ -4,9 +4,13 @@ cask "openshot-video-editor" do
 
   url "https://github.com/OpenShot/openshot-qt/releases/download/v#{version}/OpenShot-v#{version}-x86_64.dmg",
       verified: "github.com/OpenShot/openshot-qt/"
-  appcast "https://github.com/OpenShot/openshot-qt/releases.atom"
   name "OpenShot Video Editor"
   homepage "https://openshot.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "OpenShot Video Editor.app"
 end
