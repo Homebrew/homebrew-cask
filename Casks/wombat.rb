@@ -3,10 +3,14 @@ cask "wombat" do
   sha256 "d583805f6a49e599626f868f17e6946a38d050fbb1d866e00bc17d2eb8c4b281"
 
   url "https://github.com/rogchap/wombat/releases/download/v#{version}/Wombat_v#{version}_Darwin_x86_64.dmg"
-  appcast "https://github.com/rogchap/wombat/releases.atom"
   name "Wombat"
   desc "Cross platform gRPC client"
   homepage "https://github.com/rogchap/wombat"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Wombat.app"
 
