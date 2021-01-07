@@ -4,10 +4,14 @@ cask "mos" do
 
   url "https://github.com/Caldis/Mos/releases/download/#{version}/Mos.Versions.#{version}.dmg",
       verified: "github.com/Caldis/Mos/"
-  appcast "https://github.com/Caldis/Mos/releases.atom"
   name "Mos"
   desc "Smooths scrolling and set mouse scroll directions independently"
   homepage "https://mos.caldis.me/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Mos.app"
 
