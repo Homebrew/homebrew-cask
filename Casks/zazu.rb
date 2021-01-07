@@ -4,10 +4,14 @@ cask "zazu" do
 
   url "https://github.com/tinytacoteam/zazu/releases/download/v#{version}/Zazu-#{version}.dmg",
       verified: "github.com/"
-  appcast "https://github.com/tinytacoteam/zazu/releases.atom"
   name "Zazu"
   desc "Extensible and open-source launcher for hackers, creators and dabblers"
   homepage "https://zazuapp.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Zazu.app"
 
