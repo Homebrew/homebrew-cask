@@ -4,9 +4,13 @@ cask "syncplay" do
 
   url "https://github.com/Syncplay/syncplay/releases/download/v#{version}/Syncplay_#{version}.dmg",
       verified: "github.com/Syncplay/syncplay/"
-  appcast "https://github.com/Syncplay/syncplay/releases.atom"
   name "Syncplay"
   homepage "https://syncplay.pl/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on macos: ">= :sierra"
 
