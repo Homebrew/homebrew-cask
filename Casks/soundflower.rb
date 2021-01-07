@@ -3,9 +3,13 @@ cask "soundflower" do
   sha256 "6b5e56d53238cf0f9075886aa40580634fc9d23368239f22eccebfd97c9f8e34"
 
   url "https://github.com/mattingalls/Soundflower/releases/download/#{version}/Soundflower-#{version}.dmg"
-  appcast "https://github.com/mattingalls/Soundflower/releases.atom"
   name "Soundflower"
   homepage "https://github.com/mattingalls/Soundflower"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   pkg "Soundflower.pkg"
 
