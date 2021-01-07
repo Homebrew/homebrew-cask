@@ -3,10 +3,14 @@ cask "upterm" do
   sha256 "5394926add794e486172c72ef0dc04c225a481d2970f968522c0436ef42677ee"
 
   url "https://github.com/railsware/upterm/releases/download/v#{version}/upterm-#{version}-macOS.dmg"
-  appcast "https://github.com/railsware/upterm/releases.atom"
   name "Upterm"
   desc "Terminal emulator for the 21st century"
   homepage "https://github.com/railsware/upterm"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Upterm.app"
 
