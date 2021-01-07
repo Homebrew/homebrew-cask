@@ -3,10 +3,14 @@ cask "zerotier-one" do
   sha256 :no_check
 
   url "https://download.zerotier.com/dist/ZeroTier%20One.pkg"
-  appcast "https://github.com/zerotier/ZeroTierOne/releases.atom"
   name "ZeroTier One"
   desc "Mesh VPN client"
   homepage "https://www.zerotier.com/download.shtml"
+
+  livecheck do
+    url "https://github.com/zerotier/ZeroTierOne/releases"
+    strategy :github_latest
+  end
 
   pkg "ZeroTier One.pkg"
 
