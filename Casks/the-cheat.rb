@@ -4,10 +4,14 @@ cask "the-cheat" do
 
   url "https://chazmcgarvey.github.io/thecheat/thecheat-#{version}.dmg",
       verified: "chazmcgarvey.github.io/thecheat/"
-  appcast "https://github.com/chazmcgarvey/thecheat/releases.atom"
   name "The Cheat"
   desc "Game trainer"
   homepage "https://github.com/chazmcgarvey/thecheat"
+
+  livecheck do
+    url "https://github.com/chazmcgarvey/thecheat/releases"
+    strategy :git
+  end
 
   app "The Cheat.app"
 end
