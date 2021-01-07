@@ -3,9 +3,13 @@ cask "bitcoin-core" do
   sha256 "c378d4e21109f09e8829f3591e015c66632dff2925a60b64d259be05a334c30b"
 
   url "https://bitcoincore.org/bin/bitcoin-core-#{version}/bitcoin-#{version}-osx.dmg"
-  appcast "https://github.com/bitcoin/bitcoin/releases.atom"
   name "Bitcoin Core"
   homepage "https://bitcoincore.org/"
+
+  livecheck do
+    url "https://github.com/bitcoin/bitcoin/releases"
+    strategy :github_latest
+  end
 
   conflicts_with cask: "bitcoin-xt"
 
