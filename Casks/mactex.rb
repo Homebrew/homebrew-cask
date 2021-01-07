@@ -4,11 +4,17 @@ cask "mactex" do
 
   url "http://mirror.ctan.org/systems/mac/mactex/mactex-#{version.no_dots}.pkg",
       verified: "mirror.ctan.org/systems/mac/mactex/"
-  appcast "https://www.tug.org/mactex/downloading.html",
-          must_contain: version.major
   name "MacTeX"
   desc "Full TeX Live distribution with GUI applications"
   homepage "https://www.tug.org/mactex/"
+
+  livecheck do
+    url "http://mirror.ctan.org/systems/mac/mactex/"
+    strategy :page_match do |page|
+      match = page.match(/href=.*?mactex-(\d{4})(\d{2})(\d{2})\.pkg/)
+      "#{match[1]}.#{match[2]}#{match[3]}"
+    end
+  end
 
   conflicts_with cask: [
     "basictex",
