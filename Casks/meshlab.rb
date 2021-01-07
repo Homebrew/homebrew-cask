@@ -4,10 +4,15 @@ cask "meshlab" do
 
   url "https://github.com/cnr-isti-vclab/meshlab/releases/download/Meshlab-#{version}/MeshLab#{version}-macos.dmg",
       verified: "github.com/cnr-isti-vclab/meshlab/"
-  appcast "https://github.com/cnr-isti-vclab/meshlab/releases.atom"
   name "MeshLab"
   desc "Open-source mesh processing system"
   homepage "https://www.meshlab.net/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+    regex(%r{href=.*?/MeshLab(\d+(?:\.\d+)*)-macos\.dmg}i)
+  end
 
   app "meshlab.app"
 
