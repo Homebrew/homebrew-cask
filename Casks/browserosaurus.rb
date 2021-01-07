@@ -4,10 +4,14 @@ cask "browserosaurus" do
 
   url "https://github.com/will-stone/browserosaurus/releases/download/v#{version}/Browserosaurus-darwin-x64-#{version}.zip",
       verified: "github.com/will-stone/browserosaurus/"
-  appcast "https://github.com/will-stone/browserosaurus/releases.atom"
   name "Browserosaurus"
   desc "Open-source browser prompter"
   homepage "https://wstone.io/browserosaurus/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   auto_updates true
 
