@@ -3,9 +3,13 @@ cask "swiftformat-for-xcode" do
   sha256 "7e57c26e174f8b8cf960eea436c93e38fc432a8f7730f47338681b2f40af1775"
 
   url "https://github.com/nicklockwood/SwiftFormat/archive/#{version}.zip"
-  appcast "https://github.com/nicklockwood/SwiftFormat/releases.atom"
   name "SwiftFormat for Xcode"
   homepage "https://github.com/nicklockwood/SwiftFormat"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on macos: ">= :sierra"
 
