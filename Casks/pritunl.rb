@@ -9,10 +9,14 @@ cask "pritunl" do
 
   url "https://github.com/pritunl/pritunl-client-electron/releases/download/#{version}/Pritunl.pkg.zip",
       verified: "github.com/pritunl/pritunl-client-electron/"
-  appcast "https://github.com/pritunl/pritunl-client-electron/releases.atom"
   name "Pritunl"
   desc "OpenVPN client"
   homepage "https://client.pritunl.com/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   pkg "Pritunl.pkg"
 
