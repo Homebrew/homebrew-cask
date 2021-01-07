@@ -10,9 +10,8 @@ cask "mplayer-osx-extended" do
 
   livecheck do
     url :url
-    strategy :git do |tags|
-      tags.map { |tag| tag[/^rev(\d+(?:\.\d+)*)$/, 1] }.compact
-    end
+    strategy :git
+    regex(/^rev(\d+(?:\.\d+)*)$/i)
   end
 
   app "MPlayer OSX Extended.app"
