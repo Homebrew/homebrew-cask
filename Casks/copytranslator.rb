@@ -4,10 +4,14 @@ cask "copytranslator" do
 
   url "https://github.com/CopyTranslator/CopyTranslator/releases/download/v#{version}/copytranslator-#{version}.dmg",
       verified: "github.com/CopyTranslator/CopyTranslator/"
-  appcast "https://github.com/CopyTranslator/CopyTranslator/releases.atom"
   name "CopyTranslator"
   desc "Tool that translates text in real-time while copying"
   homepage "https://copytranslator.github.io/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   depends_on macos: ">= :sierra"
 
