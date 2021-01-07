@@ -8,9 +8,8 @@ cask "gargoyle" do
   homepage "https://github.com/garglk/garglk"
 
   livecheck do
-    url "https://github.com/garglk/garglk/releases"
-    strategy :page_match
-    regex(%r{href=.*?/gargoyle-(\d+(?:\.\d+)*)-mac-nota\.dmg}i)
+    url :url
+    strategy :git
   end
 
   app "Gargoyle.app"
