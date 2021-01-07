@@ -4,9 +4,13 @@ cask "ios-app-signer" do
 
   url "https://github.com/DanTheMan827/ios-app-signer/releases/download/#{version}/iOS.App.Signer.app.zip",
       verified: "github.com/DanTheMan827/ios-app-signer/"
-  appcast "https://github.com/DanTheMan827/ios-app-signer/releases.atom"
   name "iOS App Signer"
   homepage "https://dantheman827.github.io/ios-app-signer/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "iOS App Signer.app"
 
