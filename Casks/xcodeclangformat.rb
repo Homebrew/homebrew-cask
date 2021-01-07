@@ -3,10 +3,14 @@ cask "xcodeclangformat" do
   sha256 "efc9e926db308977d9ad1ce39925b5c3270eb05aec97a4ae988250d31619d97c"
 
   url "https://github.com/mapbox/XcodeClangFormat/releases/download/v#{version}/XcodeClangFormat.zip"
-  appcast "https://github.com/mapbox/XcodeClangFormat/releases.atom"
   name "XcodeClangFormat"
   desc "Format code in Xcode with clang-format"
   homepage "https://github.com/mapbox/XcodeClangFormat"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "XcodeClangFormat.app"
 
