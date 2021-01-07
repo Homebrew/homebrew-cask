@@ -15,7 +15,7 @@ cask "tenable-nessus-agent" do
     end
   end
 
-  pkg "Install Nessus Agent.pkg"
+  pkg "Install Nessus.pkg"
 
   uninstall pkgutil:   "com.tenablesecurity.NessusAgent.Preferences",
             delete:    [
