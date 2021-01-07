@@ -3,9 +3,13 @@ cask "quicklook-pat" do
   sha256 "41d6d9ffb042490c93d661b95c392a341ecde42f40de6988ae944c64808aac28"
 
   url "https://github.com/pixelrowdies/quicklook-pat/releases/download/#{version}/PatternQuickLook.pkg"
-  appcast "https://github.com/pixelrowdies/quicklook-pat/releases.atom"
   name "Adobe Photoshop Patterns Quicklook Plugin"
   homepage "https://github.com/pixelrowdies/quicklook-pat"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   pkg "PatternQuickLook.pkg"
 
