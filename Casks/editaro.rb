@@ -4,9 +4,13 @@ cask "editaro" do
 
   url "https://github.com/kkosuge/editaro/releases/download/#{version}/Editaro-#{version}-mac.zip",
       verified: "github.com/kkosuge/editaro/"
-  appcast "https://github.com/kkosuge/editaro/releases.atom"
   name "Editaro"
   homepage "https://editaro.com/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Editaro.app"
 
