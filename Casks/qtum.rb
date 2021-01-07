@@ -4,10 +4,15 @@ cask "qtum" do
 
   url "https://github.com/qtumproject/qtum/releases/download/mainnet-ignition-v#{version.major_minor_patch}/qtum-#{version}-osx-unsigned.dmg",
       verified: "github.com/qtumproject/qtum/"
-  appcast "https://github.com/qtumproject/qtum/releases.atom"
   name "Qtum"
   desc "Cryptocurrency wallet"
   homepage "https://qtum.org/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+    regex(%r{href=.*?/qtum-(\d+(?:\.\d+)*)-osx-unsigned\.dmg}i)
+  end
 
   app "Qtum-Qt.app"
 end
