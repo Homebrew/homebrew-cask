@@ -4,9 +4,13 @@ cask "webcamoid" do
 
   url "https://github.com/webcamoid/webcamoid/releases/download/#{version}/webcamoid-portable-#{version}-x86_64.dmg",
       verified: "github.com/webcamoid/webcamoid/"
-  appcast "https://github.com/webcamoid/webcamoid/releases.atom"
   name "Webcamoid"
   homepage "https://webcamoid.github.io/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "webcamoid.app"
 
