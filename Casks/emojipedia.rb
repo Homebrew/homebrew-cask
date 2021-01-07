@@ -3,9 +3,13 @@ cask "emojipedia" do
   sha256 "32c2e398cac48a9fbd05e45b1a11b791c539bb09aa964c54ec066e2a6aa1f047"
 
   url "https://github.com/gingerbeardman/Emojipedia/releases/download/#{version}/Emojipedia.dictionary.zip"
-  appcast "https://github.com/gingerbeardman/Emojipedia/releases.atom"
   name "Emojipedia"
   homepage "https://github.com/gingerbeardman/Emojipedia"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   dictionary "Emojipedia.dictionary"
 end
