@@ -4,10 +4,15 @@ cask "veusz" do
 
   url "https://github.com/veusz/veusz/releases/download/veusz-#{version}/veusz-#{version}-AppleOSX.dmg",
       verified: "github.com/veusz/veusz/"
-  appcast "https://github.com/veusz/veusz/releases.atom"
   name "Veusz"
   desc "Scientific plotting application"
   homepage "https://veusz.github.io/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+    regex(%r{href=.*?/veusz-(\d+(?:\.\d+)*)-AppleOSX\.dmg}i)
+  end
 
   app "Veusz.app"
 end
