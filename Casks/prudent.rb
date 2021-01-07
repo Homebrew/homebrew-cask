@@ -4,10 +4,13 @@ cask "prudent" do
 
   url "https://github.com/PrudentMe/main/releases/download/#{version.after_comma}/Prudent.zip",
       verified: "github.com/PrudentMe/main/"
-  appcast "https://github.com/PrudentMe/main/releases.atom",
-          must_contain: version.after_comma
   name "Prudent"
   homepage "https://prudent.me/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Prudent.app"
 end
