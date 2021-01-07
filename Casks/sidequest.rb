@@ -4,10 +4,14 @@ cask "sidequest" do
 
   url "https://github.com/SideQuestVR/SideQuest/releases/download/v#{version}/SideQuest-#{version}.dmg",
       verified: "github.com/SideQuestVR/SideQuest/"
-  appcast "https://github.com/SideQuestVR/SideQuest/releases.atom"
   name "SideQuest"
   desc "Virtual reality content platform"
   homepage "https://sidequestvr.com/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on macos: ">= :sierra"
 
