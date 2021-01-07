@@ -4,10 +4,14 @@ cask "maccy" do
 
   url "https://github.com/p0deje/Maccy/releases/download/#{version}/Maccy.app.zip",
       verified: "github.com/p0deje/Maccy/"
-  appcast "https://github.com/p0deje/Maccy/releases.atom"
   name "Maccy"
   desc "Clipboard manager"
   homepage "https://maccy.app/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   auto_updates true
   depends_on macos: ">= :mojave"
