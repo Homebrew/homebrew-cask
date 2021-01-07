@@ -9,9 +9,8 @@ cask "turtl" do
 
   livecheck do
     url :url
-    strategy :git do |tags|
-      tags.map { |tag| tag[/^v?(\d+(?:\.\d+)*.*)$/i, 1] }.compact
-    end
+    strategy :git
+    regex(/^v?(\d+(?:\.\d+)*.*)$/i)
   end
 
   app "Turtl.app"
