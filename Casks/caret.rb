@@ -4,9 +4,13 @@ cask "caret" do
 
   url "https://github.com/careteditor/issues/releases/download/#{version}/Caret.dmg",
       verified: "github.com/careteditor/issues/"
-  appcast "https://github.com/careteditor/issues/releases.atom"
   name "Caret"
   homepage "https://caret.io/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Caret.app"
 
