@@ -4,10 +4,14 @@ cask "clipy" do
 
   url "https://github.com/Clipy/Clipy/releases/download/#{version}/Clipy_#{version}.dmg",
       verified: "github.com/Clipy/Clipy/"
-  appcast "https://github.com/Clipy/Clipy/releases.atom"
   name "Clipy"
   desc "Clipboard extension app"
   homepage "https://clipy-app.com/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on macos: ">= :yosemite"
 
