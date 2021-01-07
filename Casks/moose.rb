@@ -4,9 +4,13 @@ cask "moose" do
 
   url "https://github.com/ritz078/moose/releases/download/v#{version}/moose-#{version}-mac.zip",
       verified: "github.com/ritz078/moose/"
-  appcast "https://github.com/ritz078/moose/releases.atom"
   name "moose"
   homepage "https://getmoose.in/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "moose.app"
 
