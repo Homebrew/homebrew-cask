@@ -4,10 +4,14 @@ cask "runjs" do
 
   url "https://github.com/lukehaas/runjs/releases/download/v#{version}/RunJS-#{version}.dmg",
       verified: "github.com/lukehaas/runjs/"
-  appcast "https://github.com/lukehaas/runjs/releases.atom"
   name "RunJS"
   desc "JavaScript playground that auto-evaluates as code is typed"
   homepage "https://projects.lukehaas.me/runjs/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   auto_updates true
 
