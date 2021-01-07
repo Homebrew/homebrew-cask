@@ -4,9 +4,13 @@ cask "docker-toolbox" do
 
   url "https://github.com/docker/toolbox/releases/download/v#{version}/DockerToolbox-#{version}.pkg",
       verified: "github.com/docker/toolbox/"
-  appcast "https://github.com/docker/toolbox/releases.atom"
   name "Docker Toolbox"
   homepage "https://www.docker.com/products/docker-toolbox"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on cask: "virtualbox"
 
