@@ -4,10 +4,14 @@ cask "zettlr" do
 
   url "https://github.com/Zettlr/Zettlr/releases/download/v#{version}/Zettlr-#{version}.dmg",
       verified: "github.com/Zettlr/Zettlr/"
-  appcast "https://github.com/Zettlr/Zettlr/releases.atom"
   name "Zettlr"
   desc "Open-source markdown editor"
   homepage "https://www.zettlr.com/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Zettlr.app"
 
