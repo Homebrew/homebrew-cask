@@ -4,10 +4,14 @@ cask "subsync" do
 
   url "https://github.com/sc0ty/subsync/releases/download/#{version.major_minor}/subsync-#{version}-mac-x86_64.dmg",
       verified: "github.com/sc0ty/subsync/"
-  appcast "https://github.com/sc0ty/subsync/releases.atom"
   name "subsync"
   desc "Subtitle speech synchronizer"
   homepage "https://subsync.online/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "subsync.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
