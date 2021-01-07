@@ -8,10 +8,14 @@ cask "secretive" do
   end
 
   url "https://github.com/maxgoedjen/secretive/releases/download/v#{version}/Secretive.zip"
-  appcast "https://github.com/maxgoedjen/secretive/releases.atom"
   name "Secretive"
   desc "Store SSH keys in the Secure Enclave"
   homepage "https://github.com/maxgoedjen/secretive"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on macos: ">= :catalina"
 
