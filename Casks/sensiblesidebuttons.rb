@@ -4,9 +4,13 @@ cask "sensiblesidebuttons" do
 
   url "https://github.com/archagon/sensible-side-buttons/releases/download/#{version}/SensibleSideButtons-#{version}.dmg",
       verified: "github.com/archagon/sensible-side-buttons/"
-  appcast "https://github.com/archagon/sensible-side-buttons/releases.atom"
   name "Sensible Side Buttons"
   homepage "https://sensible-side-buttons.archagon.net/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "SensibleSideButtons.app"
 end
