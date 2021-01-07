@@ -4,9 +4,13 @@ cask "ha-menu" do
 
   url "https://github.com/codechimp-org/ha-menu/releases/download/#{version}/HA.Menu.zip",
       verified: "github.com/codechimp-org/ha-menu/"
-  appcast "https://github.com/codechimp-org/ha-menu/releases.atom"
   name "HA Menu"
   homepage "https://hamenu.codechimp.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "HA Menu.app"
 end
