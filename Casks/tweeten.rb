@@ -4,10 +4,14 @@ cask "tweeten" do
 
   url "https://github.com/MehediH/Tweeten/releases/download/v#{version}/tweeten-darwin-x64.zip",
       verified: "github.com/MehediH/Tweeten/"
-  appcast "https://github.com/MehediH/Tweeten/releases.atom"
   name "Tweeten"
   desc "Twitter client"
   homepage "https://tweetenapp.com/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Tweeten.app"
 
