@@ -18,7 +18,7 @@ cask "opensc" do
               "org.opensc-project.startup",
             ],
             launchctl: [
-              "opensc-notify",
-              "pkcs11-register",
+              "org.opensc-project.mac.opensc-notify",
+              "org.opensc-project.mac.pkcs11-register",
             ]
 end
