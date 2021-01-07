@@ -3,11 +3,15 @@ cask "ethereum-wallet" do
   sha256 "df52a7ad6519aa92d17a743d0cb3bcf3080c2c72e31b1a58fbfa4581069dc4c8"
 
   url "https://github.com/ethereum/mist/releases/download/v#{version}/Ethereum-Wallet-macosx-#{version.dots_to_hyphens}.dmg"
-  appcast "https://github.com/ethereum/mist/releases.atom"
   name "Ethereum Wallet"
   name "Mist"
   desc "Browser for Ðapps on the Ethereum network"
   homepage "https://github.com/ethereum/mist"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Ethereum Wallet.app"
 
