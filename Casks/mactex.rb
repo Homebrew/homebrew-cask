@@ -23,7 +23,7 @@ cask "mactex" do
   depends_on formula: "ghostscript"
   depends_on macos: ">= :high_sierra"
 
-  pkg "mactex-#{version.no_dots}.pkg",
+  pkg "mactex-#{version.no_hyphens}.pkg",
       choices: [
         {
           # Ghostscript
@@ -39,24 +39,24 @@ cask "mactex" do
         },
         {
           # GUI Applications
-          "choiceIdentifier" => "org.tug.mactex.gui#{version.major}",
+          "choiceIdentifier" => "org.tug.mactex.gui#{version.split("-").first}",
           "choiceAttribute"  => "selected",
           "attributeSetting" => 1,
         },
         {
           # TeXLive
-          "choiceIdentifier" => "org.tug.mactex.texlive#{version.major}",
+          "choiceIdentifier" => "org.tug.mactex.texlive#{version.split("-").first}",
           "choiceAttribute"  => "selected",
           "attributeSetting" => 1,
         },
       ]
 
   uninstall pkgutil: [
-    "org.tug.mactex.gui#{version.major}",
-    "org.tug.mactex.texlive#{version.major}",
+    "org.tug.mactex.gui#{version.split("-").first}",
+    "org.tug.mactex.texlive#{version.split("-").first}",
   ],
             delete:  [
-              "/usr/local/texlive/#{version.major}",
+              "/usr/local/texlive/#{version.split("-").first}",
               "/Applications/TeX",
               "/Library/TeX",
               "/etc/paths.d/TeX",
@@ -65,7 +65,7 @@ cask "mactex" do
 
   zap trash: [
     "/usr/local/texlive/texmf-local",
-    "~/Library/texlive/#{version.major}",
+    "~/Library/texlive/#{version.split("-").first}",
     # TexShop:
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/texshop.sfl*",
     "~/Library/Application Support/TeXShop",
