@@ -3,9 +3,13 @@ cask "bot-framework-emulator" do
   sha256 "9e43309994b35d26ec4b959f7ec34565e45692198825f4176dc1b4b188a21dcd"
 
   url "https://github.com/Microsoft/BotFramework-Emulator/releases/download/v#{version}/botframework-emulator-#{version}-mac.zip"
-  appcast "https://github.com/Microsoft/BotFramework-Emulator/releases.atom"
   name "Microsoft Bot Framework Emulator"
   homepage "https://github.com/Microsoft/BotFramework-Emulator"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   auto_updates true
 
