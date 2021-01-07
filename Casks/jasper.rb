@@ -4,10 +4,14 @@ cask "jasper" do
 
   url "https://github.com/jasperapp/jasper/releases/download/v#{version}/jasper_v#{version}_mac.zip",
       verified: "github.com/jasperapp/jasper/"
-  appcast "https://github.com/jasperapp/jasper/releases.atom"
   name "Jasper"
   desc "Issue reader for GitHub"
   homepage "https://jasperapp.io/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Jasper.app"
 
