@@ -4,9 +4,13 @@ cask "code-notes" do
 
   url "https://github.com/lauthieb/code-notes/releases/download/#{version}/code-notes-#{version}.dmg",
       verified: "github.com/lauthieb/code-notes/"
-  appcast "https://github.com/lauthieb/code-notes/releases.atom"
   name "Code Notes"
   homepage "https://lauthieb.github.io/code-notes/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Code Notes.app"
 end
