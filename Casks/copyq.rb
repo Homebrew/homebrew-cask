@@ -4,10 +4,14 @@ cask "copyq" do
 
   url "https://github.com/hluk/CopyQ/releases/download/v#{version}/CopyQ.dmg",
       verified: "github.com/hluk/CopyQ/"
-  appcast "https://github.com/hluk/CopyQ/releases.atom"
   name "CopyQ"
   desc "Clipboard manager with advanced features"
   homepage "https://hluk.github.io/CopyQ/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "CopyQ.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
