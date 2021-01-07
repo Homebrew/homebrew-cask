@@ -4,9 +4,13 @@ cask "socket-io-tester" do
 
   url "https://github.com/AppSaloon/socket.io-tester/releases/download/v#{version}/socket-io-tester-darwin-x64.zip",
       verified: "github.com/AppSaloon/socket.io-tester/"
-  appcast "https://github.com/AppSaloon/socket.io-tester/releases.atom"
   name "socket-io-tester.app"
   homepage "https://appsaloon.github.io/socket.io-tester/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "socket-io-tester-darwin-x64/socket-io-tester.app"
 end
