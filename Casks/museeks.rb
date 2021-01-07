@@ -4,10 +4,14 @@ cask "museeks" do
 
   url "https://github.com/martpie/museeks/releases/download/#{version}/museeks.dmg",
       verified: "github.com/martpie/museeks/"
-  appcast "https://github.com/martpie/museeks/releases.atom"
   name "Museeks"
   desc "Simple, clean and cross-platform music player"
   homepage "https://museeks.io/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Museeks.app"
 
