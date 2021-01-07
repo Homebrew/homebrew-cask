@@ -4,10 +4,15 @@ cask "mockplus" do
 
   url "https://mockplus-static.s3.amazonaws.com/software/macos/Mockplus_v#{version}_auto.dmg",
       verified: "mockplus-static.s3.amazonaws.com/"
-  appcast "https://www.macupdater.net/cgi-bin/extract_text/extract_text_split_easy.cgi?url=https://www.mockplus.com/download/mockplus-rp&encoding=utf8&user_agent=Macintosh"
   name "Mockplus"
   name "摩客"
   homepage "https://www.mockplus.com/"
+
+  livecheck do
+    url "https://www.mockplus.com/download/mockplus-rp"
+    # Needs macOS user agent.
+    regex(%r{href=.*?/MockplusClassic_v?(\d+(?:\.\d+)*)_auto\.dmg}i)
+  end
 
   app "Mockplus Classic.app"
 end
