@@ -4,9 +4,13 @@ cask "rssowl" do
 
   url "https://github.com/rssowl/RSSOwl/releases/download/#{version}/RSSOwl.#{version}.dmg",
       verified: "github.com/rssowl/RSSOwl/"
-  appcast "https://github.com/rssowl/RSSOwl/releases.atom"
   name "RSSOwl"
   homepage "https://www.rssowl.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "RSSOwl.app"
 end
