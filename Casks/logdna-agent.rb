@@ -4,10 +4,14 @@ cask "logdna-agent" do
 
   url "https://github.com/logdna/logdna-agent/releases/download/#{version}/logdna-agent-#{version}.pkg",
       verified: "github.com/logdna/logdna-agent/"
-  appcast "https://github.com/logdna/logdna-agent/releases.atom"
   name "LogDNA Agent"
   desc "Agent streams from log files to your LogDNA account"
   homepage "https://logdna.com/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   pkg "logdna-agent-#{version}.pkg"
 
