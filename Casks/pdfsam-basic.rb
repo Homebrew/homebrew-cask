@@ -4,10 +4,14 @@ cask "pdfsam-basic" do
 
   url "https://github.com/torakiki/pdfsam/releases/download/v#{version}/PDFsam-#{version}.dmg",
       verified: "github.com/torakiki/pdfsam/"
-  appcast "https://github.com/torakiki/pdfsam/releases.atom"
   name "PDFsam Basic"
   desc "Extractas pages, splits, merges, mixes and rotates PDF files"
   homepage "https://pdfsam.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "PDFsam Basic.app"
 
