@@ -4,10 +4,14 @@ cask "dash-dash" do
 
   url "https://github.com/dashpay/dash/releases/download/v#{version}/dashcore-#{version}-osx.dmg",
       verified: "github.com/dashpay/dash/"
-  appcast "https://github.com/dashpay/dash/releases.atom"
   name "Dash"
   desc "Dash - Reinventing Cryptocurrency"
   homepage "https://www.dash.org/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Dash-Qt.app"
 
