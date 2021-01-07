@@ -4,12 +4,16 @@ cask "oryoki" do
 
   url "https://github.com/thmsbfft/oryoki/releases/download/#{version}/Oryoki-#{version}.zip",
       verified: "github.com/thmsbfft/oryoki/"
-  appcast "https://github.com/thmsbfft/oryoki/releases.atom"
   name "Oryoki"
   name "Ōryōki"
   name "応量器"
   desc "Experimental web browser with a thin interface"
   homepage "http://oryoki.io/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on macos: ">= :el_capitan"
 
