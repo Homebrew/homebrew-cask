@@ -4,9 +4,13 @@ cask "pyzo" do
 
   url "https://github.com/pyzo/pyzo/releases/download/v#{version}/pyzo-#{version}-macos.dmg",
       verified: "github.com/pyzo/pyzo/"
-  appcast "https://github.com/pyzo/pyzo/releases.atom"
   name "Pyzo"
   homepage "https://pyzo.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "pyzo.app"
 
