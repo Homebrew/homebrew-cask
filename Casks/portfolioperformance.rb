@@ -13,10 +13,14 @@ cask "portfolioperformance" do
         verified: "github.com/buchen/portfolio/"
   end
 
-  appcast "https://github.com/buchen/portfolio/releases.atom"
   name "Portfolio Performance"
   desc "Calculate the overall performance of an investment portfolio"
   homepage "https://www.portfolio-performance.info/en/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
 
