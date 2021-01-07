@@ -4,10 +4,14 @@ cask "menumeters" do
 
   url "https://github.com/yujitach/MenuMeters/releases/download/#{version}/MenuMeters_#{version}.zip",
       verified: "github.com/yujitach/MenuMeters/"
-  appcast "https://github.com/yujitach/MenuMeters/releases.atom"
   name "MenuMeters for El Capitan (and later)"
   desc "Set of CPU, memory, disk, and network monitoring tools"
   homepage "https://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   auto_updates true
   depends_on macos: ">= :el_capitan"
