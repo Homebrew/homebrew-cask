@@ -4,10 +4,14 @@ cask "freac" do
 
   url "https://github.com/enzo1982/freac/releases/download/v#{version.delete("a")}/freac-#{version}-macosx.dmg",
       verified: "github.com/enzo1982/freac/"
-  appcast "https://github.com/enzo1982/freac/releases.atom"
   name "fre:ac"
   desc "Audio converter and CD ripper"
   homepage "https://www.freac.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "freac.app"
 
