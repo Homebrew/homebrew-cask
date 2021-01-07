@@ -4,10 +4,14 @@ cask "nulloy" do
 
   url "https://github.com/nulloy/nulloy/releases/download/#{version}/Nulloy-#{version}-x86_64.dmg",
       verified: "github.com/nulloy/nulloy/"
-  appcast "https://github.com/nulloy/nulloy/releases.atom"
   name "Nulloy"
   desc "Music player"
   homepage "https://nulloy.com/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Nulloy.app"
 
