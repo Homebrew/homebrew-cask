@@ -4,10 +4,14 @@ cask "endless-sky" do
 
   url "https://github.com/endless-sky/endless-sky/releases/download/v#{version}/endless-sky-macos-#{version}.dmg",
       verified: "github.com/endless-sky/endless-sky/"
-  appcast "https://github.com/endless-sky/endless-sky/releases.atom"
   name "Endless Sky"
   desc "Space exploration, trading, and combat game"
   homepage "https://endless-sky.github.io/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Endless Sky.app"
 end
