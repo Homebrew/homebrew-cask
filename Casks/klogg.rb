@@ -8,8 +8,8 @@ cask "klogg" do
   homepage "https://github.com/variar/klogg"
 
   livecheck do
-    url "https://github.com/variar/klogg/releases/latest"
-    strategy :page_match
+    url :url
+    strategy :github_latest
     regex(%r{href=.*?/klogg-(\d+(?:\.\d+)*)-OSX\.dmg}i)
   end
 
