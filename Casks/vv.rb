@@ -3,10 +3,14 @@ cask "vv" do
   sha256 "8c1cc261f1dc5294530b20251ff67b24d4b93513542f6db9f5792a594f31cb97"
 
   url "https://github.com/vv-vim/vv/releases/download/v#{version}/VV-#{version}.dmg"
-  appcast "https://github.com/vv-vim/vv/releases.atom"
   name "VV"
   desc "Neovim client"
   homepage "https://github.com/vv-vim/vv"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on formula: "neovim"
 
