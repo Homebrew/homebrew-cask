@@ -3,10 +3,14 @@ cask "snwe" do
   sha256 "3c1acf6a0047fe81de26ed64d5e892827b1c6e11a5bcd815c58a17427072f6fe"
 
   url "https://github.com/blahsd/snwe/releases/download/v#{version}/snwe.app.zip"
-  appcast "https://github.com/blahsd/snwe/releases.atom"
   name "snwe"
   desc "Extensible, customisable, menu bar replacement"
   homepage "https://github.com/blahsd/snwe"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "snwe.app"
 end
