@@ -4,9 +4,13 @@ cask "soundcleod" do
 
   url "https://github.com/salomvary/soundcleod/releases/download/v#{version}/SoundCleod-#{version}.dmg",
       verified: "github.com/salomvary/soundcleod/"
-  appcast "https://github.com/salomvary/soundcleod/releases.atom"
   name "SoundCleod"
   homepage "https://soundcleod.com/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "SoundCleod.app"
 end
