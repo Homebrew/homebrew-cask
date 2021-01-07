@@ -4,10 +4,14 @@ cask "exifcleaner" do
 
   url "https://github.com/szTheory/exifcleaner/releases/download/v#{version}/ExifCleaner-#{version}.dmg",
       verified: "github.com/szTheory/exifcleaner/"
-  appcast "https://github.com/szTheory/exifcleaner/releases.atom"
   name "ExifCleaner"
   desc "Metadata cleaner"
   homepage "https://exifcleaner.com/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "ExifCleaner.app"
 
