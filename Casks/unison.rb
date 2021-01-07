@@ -13,10 +13,14 @@ cask "unison" do
         verified: "github.com/bcpierce00/unison/"
   end
 
-  appcast "https://github.com/bcpierce00/unison/releases.atom"
   name "Unison"
   desc "File synchronizer"
   homepage "https://www.cis.upenn.edu/~bcpierce/unison/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   conflicts_with formula: "unison"
 
