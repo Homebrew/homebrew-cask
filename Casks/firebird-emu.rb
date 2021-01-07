@@ -3,9 +3,13 @@ cask "firebird-emu" do
   sha256 "966e80c73e8be46bb3c370c781d0480abd50dbefea864a4c0acf4b6a83b62d0f"
 
   url "https://github.com/nspire-emus/firebird/releases/download/v#{version}/firebird-macOS.dmg"
-  appcast "https://github.com/nspire-emus/firebird/releases.atom"
   name "firebird"
   homepage "https://github.com/nspire-emus/firebird"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "firebird-emu.app"
 end
