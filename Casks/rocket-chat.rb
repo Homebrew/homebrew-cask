@@ -4,10 +4,14 @@ cask "rocket-chat" do
 
   url "https://github.com/RocketChat/Rocket.Chat.Electron/releases/download/#{version}/rocketchat-#{version}.dmg",
       verified: "github.com/RocketChat/Rocket.Chat.Electron/"
-  appcast "https://github.com/RocketChat/Rocket.Chat.Electron/releases.atom"
   name "Rocket.Chat"
   desc "Official desktop client for Rocket.Chat"
   homepage "https://rocket.chat/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   auto_updates true
 
