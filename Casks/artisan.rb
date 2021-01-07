@@ -4,10 +4,14 @@ cask "artisan" do
 
   url "https://github.com/artisan-roaster-scope/artisan/releases/download/v#{version}/artisan-mac-#{version}.dmg",
       verified: "github.com/artisan-roaster-scope/artisan/"
-  appcast "https://github.com/artisan-roaster-scope/artisan/releases.atom"
   name "Artisan"
   desc "Visual scope for coffee roasters"
   homepage "https://artisan-scope.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on macos: ">= :high_sierra"
 
