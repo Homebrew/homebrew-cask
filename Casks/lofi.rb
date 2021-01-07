@@ -4,10 +4,14 @@ cask "lofi" do
 
   url "https://github.com/dvx/lofi/releases/download/#{version}/lofi-#{version}.dmg",
       verified: "github.com/dvx/lofi/"
-  appcast "https://github.com/dvx/lofi/releases.atom"
   name "Lofi"
   desc "Mini Spotify player with WebGL visualizations"
   homepage "https://www.lofi.rocks/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Lofi.app"
 
