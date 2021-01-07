@@ -4,11 +4,15 @@ cask "utox" do
 
   url "https://github.com/uTox/uTox/releases/download/v#{version}/uTox.#{version}.dmg",
       verified: "github.com/uTox/uTox/"
-  appcast "https://github.com/uTox/uTox/releases.atom"
   name "uTox"
   name "µTox"
   desc "Tox client"
   homepage "https://www.tox.chat/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "uTox.app"
 end
