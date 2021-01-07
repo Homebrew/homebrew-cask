@@ -3,9 +3,13 @@ cask "webrecorder-player" do
   sha256 "c7ecc7b19c31814a15a1dc5bff41ac899b239877d5968b057b0946b250aedd3a"
 
   url "https://github.com/webrecorder/webrecorder-player/releases/download/v#{version}/webrecorder-player-#{version}.dmg"
-  appcast "https://github.com/webrecorder/webrecorder-player/releases.atom"
   name "Webrecorder Player"
   homepage "https://github.com/webrecorder/webrecorder-player/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Webrecorder Player.app"
 
