@@ -4,9 +4,14 @@ cask "wkhtmltopdf" do
 
   url "https://github.com/wkhtmltopdf/packaging/releases/download/#{version}/wkhtmltox-#{version}.macos-cocoa.pkg",
       verified: "github.com/wkhtmltopdf/packaging/"
-  appcast "https://github.com/wkhtmltopdf/packaging/releases.atom"
   name "wkhtmltopdf"
   homepage "https://wkhtmltopdf.org/"
+
+  livecheck do
+    url "https://github.com/wkhtmltopdf/packaging/releases"
+    strategy :page_match
+    regex(/href=.*?wkhtmltox-(\d+(?:\.\d+)*-\d+)\.macos-cocoa\.pkg/i)
+  end
 
   pkg "wkhtmltox-#{version}.macos-cocoa.pkg"
 
