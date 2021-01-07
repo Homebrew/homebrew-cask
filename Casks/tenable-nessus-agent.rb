@@ -1,12 +1,19 @@
 cask "tenable-nessus-agent" do
-  version "8.2.1,12043"
-  sha256 "ac2853fab3c17ad3a39d323355cbe665d16371c4e36ac559adbc2bc2ac5f3065"
+  version "8.13.1,12203"
+  sha256 "9c3e7e0360c0cfeeba4a49108369dd626cb76269bca4d00eb5179f63a0c7d93b"
 
-  url "https://www.tenable.com/downloads/api/v1/public/pages/nessus-agents/downloads/#{version.after_comma}/download?i_agree_to_tenable_license_agreement=true"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=https://www.tenable.com/downloads/api/v1/public/pages/nessus-agents/downloads/#{version.after_comma}/download?i_agree_to_tenable_license_agreement=true"
+  url "https://www.tenable.com/downloads/api/v1/public/pages/nessus/downloads/#{version.after_comma}/download?i_agree_to_tenable_license_agreement=true"
   name "Tenable Nessus Agent"
   desc "Agent for Nessus vulnerability scanner"
   homepage "https://www.tenable.com/"
+
+  livecheck do
+    url "https://www.tenable.com/downloads/nessus?loginAttempted=true"
+    strategy :page_match do |page|
+      match = page.match(/"id":(\d+),"file":"Nessus-(\d+(?:\.\d+)*).dmg"/)
+      "#{match[2]},#{match[1]}"
+    end
+  end
 
   pkg "Install Nessus Agent.pkg"
 
