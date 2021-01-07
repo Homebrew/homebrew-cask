@@ -8,9 +8,9 @@ cask "picgo" do
   homepage "https://github.com/Molunerfinn/PicGo"
 
   livecheck do
-    url "https://github.com/Molunerfinn/PicGo/releases"
-    strategy :page_match
-    regex(%r{href=.*?/v?(\d+(?:\.\d+)*)/PicGo-(?:\d+(?:\.\d+)*)\.dmg}i)
+    url :url
+    strategy :git
+    regex(/^v?(\d+(?:\.\d+)*)$/i)
   end
 
   app "PicGo.app"
