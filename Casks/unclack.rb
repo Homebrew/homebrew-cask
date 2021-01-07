@@ -4,7 +4,7 @@ cask "unclack" do
 
   url "https://unclack.app/app/Unclack.dmg"
   name "Unclack"
-  desc "Is the small but mighty Mac utility that mutes your keyboard while you type"
+  desc "Mutes your keyboard while you type"
   homepage "https://unclack.app/"
 
   app "Unclack.app"
