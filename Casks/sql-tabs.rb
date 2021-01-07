@@ -4,9 +4,13 @@ cask "sql-tabs" do
 
   url "https://github.com/sasha-alias/sqltabs/releases/download/v#{version}/SQL-Tabs-#{version}.dmg",
       verified: "github.com/sasha-alias/sqltabs/"
-  appcast "https://github.com/sasha-alias/sqltabs/releases.atom"
   name "SQL Tabs"
   homepage "https://www.sqltabs.com/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "SQL Tabs.app"
 
