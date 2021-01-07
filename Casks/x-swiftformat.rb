@@ -3,9 +3,13 @@ cask "x-swiftformat" do
   sha256 "3a0826887bb3df7012c118e82b785af2a7ccb028180db5e0086b112fe3f56984"
 
   url "https://github.com/ruiaureliano/X-SwiftFormat/releases/download/#{version}/x-swiftformat_#{version}.zip"
-  appcast "https://github.com/ruiaureliano/X-SwiftFormat/releases.atom"
   name "X-SwiftFormat"
   homepage "https://github.com/ruiaureliano/X-SwiftFormat"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on macos: ">= :catalina"
 
