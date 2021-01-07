@@ -4,10 +4,14 @@ cask "stretchly" do
 
   url "https://github.com/hovancik/stretchly/releases/download/v#{version}/stretchly-#{version}.dmg",
       verified: "github.com/hovancik/stretchly/"
-  appcast "https://github.com/hovancik/stretchly/releases.atom"
   name "Stretchly"
   desc "Break time reminder app"
   homepage "https://hovancik.net/stretchly/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Stretchly.app"
 end
