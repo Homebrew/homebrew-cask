@@ -4,10 +4,14 @@ cask "mullvadvpn" do
 
   url "https://github.com/mullvad/mullvadvpn-app/releases/download/#{version}/MullvadVPN-#{version}.pkg",
       verified: "github.com/mullvad/mullvadvpn-app/"
-  appcast "https://github.com/mullvad/mullvadvpn-app/releases.atom"
   name "Mullvad VPN"
   desc "VPN client"
   homepage "https://mullvad.net/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   conflicts_with cask: "mullvadvpn-beta"
 
