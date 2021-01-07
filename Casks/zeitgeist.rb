@@ -4,10 +4,14 @@ cask "zeitgeist" do
 
   url "https://github.com/daneden/zeitgeist/releases/download/v#{version}/Zeitgeist.app.zip",
       verified: "github.com/daneden/zeitgeist/"
-  appcast "https://github.com/daneden/zeitgeist/releases.atom"
   name "Zeitgeist"
   desc "Keep an eye on your Vercel deployments"
   homepage "https://zeitgeist.daneden.me/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on macos: ">= :big_sur"
 
