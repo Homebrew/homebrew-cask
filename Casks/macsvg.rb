@@ -4,9 +4,13 @@ cask "macsvg" do
 
   url "https://github.com/dsward2/macSVG/releases/download/v#{version}/macSVG-v#{version}.zip",
       verified: "github.com/dsward2/macSVG/"
-  appcast "https://github.com/dsward2/macSVG/releases.atom"
   name "macSVG"
   homepage "https://macsvg.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on macos: ">= :mojave"
 
