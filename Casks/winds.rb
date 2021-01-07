@@ -4,10 +4,14 @@ cask "winds" do
 
   url "https://s3.amazonaws.com/winds-2.0-releases/releases/Winds-#{version}.dmg",
       verified: "s3.amazonaws.com/"
-  appcast "https://github.com/GetStream/Winds/releases.atom"
   name "Winds"
   desc "Open-source RSS & podcast app powered by Getstream.io"
   homepage "https://getstream.io/winds/"
+
+  livecheck do
+    url "https://github.com/GetStream/Winds/releases"
+    strategy :git
+  end
 
   app "Winds.app"
 
