@@ -7,9 +7,11 @@ cask "gargoyle" do
   desc "Cross-platform IO layer for an interactive fiction player"
   homepage "https://github.com/garglk/garglk"
 
+  # We need to check all releases, since the latest release currently only contains binaries for Windows.
   livecheck do
-    url :url
-    strategy :git
+    url "https://github.com/garglk/garglk/releases"
+     strategy :page_match
+     regex(%r{href=.*?/gargoyle-(\d+(?:\.\d+)*)-mac-nota\.dmg}i)
   end
 
   app "Gargoyle.app"
