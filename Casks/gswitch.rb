@@ -4,9 +4,13 @@ cask "gswitch" do
 
   url "https://github.com/CodySchrank/gSwitch/releases/download/#{version}/gSwitch.zip",
       verified: "github.com/CodySchrank/gSwitch/"
-  appcast "https://github.com/CodySchrank/gSwitch/releases.atom"
   name "gSwitch"
   homepage "https://codyschrank.github.io/gSwitch/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on macos: ">= :sierra"
 
