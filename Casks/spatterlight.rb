@@ -4,10 +4,14 @@ cask "spatterlight" do
 
   url "https://github.com/angstsmurf/spatterlight/releases/download/v#{version}/Spatterlight_Catalina.zip",
       verified: "github.com/angstsmurf/spatterlight/"
-  appcast "https://github.com/angstsmurf/spatterlight/releases.atom"
   name "Spatterlight"
   desc "Play most kinds of interactive fiction game files"
   homepage "http://ccxvii.net/spatterlight/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on macos: ">= :catalina"
 
