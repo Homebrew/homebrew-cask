@@ -1,5 +1,5 @@
 cask "virtualbox" do
-  version "6.1.16,140961"
+  version "6.1.16"
   sha256 "d7df0f05d9a9e7cba50ea01da264ac20948b1c9c0e0cccd2d628085c9f434d45"
 
   url "https://download.virtualbox.org/virtualbox/#{version.before_comma}/VirtualBox-#{version.before_comma}-#{version.after_comma}-OSX.dmg"
