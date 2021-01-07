@@ -4,10 +4,15 @@ cask "bootxchanger" do
 
   url "https://github.com/zydeco/bootxchanger/releases/download/v#{version}/bootxchanger_#{version}.dmg",
       verified: "github.com/zydeco/bootxchanger/"
-  appcast "https://github.com/zydeco/bootxchanger/releases.atom"
   name "BootXChanger"
   desc "Utility to change the boot logo on old Macs"
   homepage "https://namedfork.net/bootxchanger/"
+
+  livecheck do
+    url "https://github.com/zydeco/bootxchanger/releases"
+    strategy :page_match
+    regex(%r{href=.*?/bootxchanger_(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   app "BootXChanger.app"
 end
