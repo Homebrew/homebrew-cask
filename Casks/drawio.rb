@@ -4,9 +4,13 @@ cask "drawio" do
 
   url "https://github.com/jgraph/drawio-desktop/releases/download/v#{version}/draw.io-#{version}.dmg",
       verified: "github.com/jgraph/drawio-desktop/"
-  appcast "https://github.com/jgraph/drawio-desktop/releases.atom"
   name "draw.io Desktop"
   homepage "https://www.draw.io/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "draw.io.app"
 
