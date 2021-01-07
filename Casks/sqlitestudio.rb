@@ -4,10 +4,14 @@ cask "sqlitestudio" do
 
   url "https://github.com/pawelsalawa/sqlitestudio/releases/download/#{version}/SQLiteStudio-#{version}.dmg",
       verified: "github.com/pawelsalawa/sqlitestudio/releases/download/"
-  appcast "https://github.com/pawelsalawa/sqlitestudio/releases.atom"
   name "SQLiteStudio"
   desc "Create, edit, browse SQLite databases"
   homepage "https://sqlitestudio.pl/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   auto_updates true
 
