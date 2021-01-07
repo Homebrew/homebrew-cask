@@ -8,7 +8,7 @@ cask "redisinsight" do
   name "RedisInsight"
   homepage "https://www.redislabs.com/redisinsight/"
 
-  app "redisinsight.app"
+  app "RedisInsight.app"
 
   zap trash: "~/Library/Saved Application State/com.redislabs.redisinsight.savedState"
 end
