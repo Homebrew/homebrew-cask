@@ -4,10 +4,14 @@ cask "ganache" do
 
   url "https://github.com/trufflesuite/ganache/releases/download/v#{version}/Ganache-#{version}-mac.dmg",
       verified: "github.com/trufflesuite/ganache/"
-  appcast "https://github.com/trufflesuite/ganache/releases.atom"
   name "Ganache"
   desc "Personal blockchain for Ethereum development"
   homepage "https://truffleframework.com/ganache/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Ganache.app"
 end
