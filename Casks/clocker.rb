@@ -4,11 +4,18 @@ cask "clocker" do
 
   url "https://github.com/n0shake/Clocker/files/#{version.after_comma}/Clocker.app.zip",
       verified: "github.com/n0shake/Clocker/"
-  appcast "https://github.com/n0shake/Clocker/releases.atom",
-          must_contain: version.before_comma
   name "Clocker"
   desc "Track timezones from your menubar"
   homepage "https://abhishekbanthia.com/clocker"
+
+  livecheck do
+    url "https://github.com/n0shake/Clocker/releases/latest"
+    strategy :page_match do |page|
+      v = page[%r{href=.*?/tag/(\d+(?:\.\d+)*)}i, 1]
+      id = page[%r{href=.*?/(\d+)/Clocker\.app\.zip}i, 1]
+      "#{v},#{id}"
+    end
+  end
 
   app "Clocker.app"
 
