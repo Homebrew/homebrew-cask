@@ -4,10 +4,14 @@ cask "netnewswire" do
 
   url "https://github.com/brentsimmons/NetNewsWire/releases/download/mac-#{version}/NetNewsWire#{version}.zip",
       verified: "github.com/brentsimmons/NetNewsWire/"
-  appcast "https://github.com/brentsimmons/NetNewsWire/releases.atom"
   name "NetNewsWire"
   desc "Free and open-source RSS reader"
   homepage "https://ranchero.com/netnewswire/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   auto_updates true
   depends_on macos: ">= :catalina"
