@@ -4,10 +4,14 @@ cask "loaf" do
 
   url "https://github.com/philipardeljan/getloaf/releases/download/v#{version}/loaf.dmg",
       verified: "github.com/philipardeljan/getloaf/"
-  appcast "https://github.com/philipardeljan/getmotion/releases.atom"
   name "Loaf"
   desc "Animated icon library"
   homepage "https://www.getmotion.io/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Loaf.app"
 
