@@ -4,9 +4,13 @@ cask "dockstation" do
 
   url "https://github.com/DockStation/dockstation/releases/download/v#{version}/dockstation-#{version}.dmg",
       verified: "github.com/DockStation/dockstation/"
-  appcast "https://github.com/DockStation/dockstation/releases.atom"
   name "DockStation"
   homepage "https://dockstation.io/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   depends_on macos: ">= :el_capitan"
 
