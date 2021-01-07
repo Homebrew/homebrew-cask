@@ -4,10 +4,14 @@ cask "drawbot" do
 
   url "https://github.com/typemytype/drawbot/releases/download/#{version}/DrawBot.dmg",
       verified: "github.com/typemytype/drawbot/"
-  appcast "https://github.com/typemytype/drawbot/releases.atom"
   name "DrawBot"
   desc "Write Python scripts to generate two-dimensional graphics"
   homepage "https://www.drawbot.com/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "DrawBot.app"
 end
