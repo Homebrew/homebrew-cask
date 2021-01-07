@@ -4,10 +4,17 @@ cask "robo-3t" do
 
   url "https://download.studio3t.com/robomongo/mac/robo3t-#{version.before_comma}-darwin-x86_64-#{version.after_comma}.dmg",
       verified: "download.studio3t.com/"
-  appcast "https://github.com/Studio3T/robomongo/releases.atom"
   name "Robo 3T (formerly Robomongo)"
-  desc "MongoDB management tool (formerly Robomongo)"
+  desc "MongoDB management tool"
   homepage "https://robomongo.org/"
+
+  livecheck do
+    url "https://github.com/Studio3T/robomongo/releases/latest"
+    strategy :page_match do |page|
+      match = page.match(%r{href=.*?/robo3t-(\d+(?:\.\d+)*)-darwin-x86_64-([^/]+)\.dmg}i)
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
   app "Robo 3T.app"
 
