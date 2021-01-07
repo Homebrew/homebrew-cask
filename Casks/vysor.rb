@@ -4,9 +4,13 @@ cask "vysor" do
 
   url "https://github.com/koush/vysor.io/releases/download/v#{version}/Vysor-mac-#{version}.zip",
       verified: "github.com/koush/vysor.io/"
-  appcast "https://github.com/koush/vysor.io/releases.atom"
   name "Vysor"
   homepage "https://www.vysor.io/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Vysor.app"
 
