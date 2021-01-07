@@ -3,10 +3,14 @@ cask "logisim-evolution" do
   sha256 "21b23b27b10460763c76ae63b34cfde5abf77c0900683aaee248267475e9879e"
 
   url "https://github.com/reds-heig/logisim-evolution/releases/download/v#{version}/logisim-evolution-#{version}-all.jar"
-  appcast "https://github.com/reds-heig/logisim-evolution/releases.atom"
   name "Logisim Evolution"
   desc "Digital logic designer and simulator"
   homepage "https://github.com/reds-heig/logisim-evolution"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   container type: :naked
 
