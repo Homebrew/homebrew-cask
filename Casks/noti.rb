@@ -4,10 +4,14 @@ cask "noti" do
 
   url "https://github.com/jariz/Noti/releases/download/#{version}/Noti.dmg",
       verified: "github.com/jariz/Noti/"
-  appcast "https://github.com/jariz/Noti/releases.atom"
   name "Noti"
   desc "Utility to show notifications from an Android device"
   homepage "https://noti.center/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   auto_updates true
 
