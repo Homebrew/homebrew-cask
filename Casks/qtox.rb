@@ -4,9 +4,13 @@ cask "qtox" do
 
   url "https://github.com/qTox/qTox/releases/download/v#{version}/qTox.dmg",
       verified: "github.com/qTox/qTox/"
-  appcast "https://github.com/qTox/qTox/releases.atom"
   name "qTox"
   homepage "https://qtox.github.io/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "qTox.app"
 end
