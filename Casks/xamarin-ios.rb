@@ -7,7 +7,7 @@ cask "xamarin-ios" do
   homepage "https://www.xamarin.com/platform"
 
   livecheck do
-    url "https://software.xamarin.com/Service/Updates?v=2&pv4569c276-1397-4adb-9485-82a7696df22e=2140900027"
+    url "https://software.xamarin.com/Service/Updates?v=2&pv4569c276-1397-4adb-9485-82a7696df22e=0"
     strategy :page_match
     regex(%r{/xamarin\.ios-(\d+(?:\.\d+)*)\.pkg}i)
   end
