@@ -5,8 +5,17 @@ cask "oss-browser" do
   url "https://oss-attachment.cn-hangzhou.oss.aliyun-inc.com/oss-browser/#{version}/oss-browser-darwin-x64.zip",
       verified: "oss-attachment.cn-hangzhou.oss.aliyun-inc.com"
   name "oss-browser"
-  desc "Graphical management tool developed by Alibaba Cloud"
+  desc "Graphical management tool for OSS(Object Storage Service) developed by Alibaba Cloud"
   homepage "https://github.com/aliyun/oss-browser/"
 
   app "oss-browser-darwin-x64/oss-browser.app"
+  
+  zap trash: [
+    "~/Library/Application Support/oss-browser",
+    "~/Library/Logs/oss-browser",
+    "~/Library/Preferences/com.electron.oss-browser.helper.plist",
+    "~/Library/Preferences/com.electron.oss-browser.plist",
+    "~/Library/Saved Application State/com.electron.oss-browser.savedState",
+    "~/.oss-browser",
+  ]
 end
