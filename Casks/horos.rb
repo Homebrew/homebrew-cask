@@ -11,10 +11,15 @@ cask "horos" do
   end
 
   url "https://horosproject.org/horos-content/Horos#{version}.dmg"
-  appcast "https://github.com/horosproject/horos/releases.atom"
   name "Horos – Free, open medical image viewer"
   desc "Medical image viewer"
   homepage "https://horosproject.org/"
+
+  livecheck do
+    url "https://horosproject.org/horos-content/"
+    strategy :page_match
+    regex(/href=.*?Horos(\d+(?:.\d+)*)\.dmg/i)
+  end
 
   app "Horos.app"
 end
