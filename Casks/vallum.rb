@@ -8,9 +8,9 @@ cask "vallum" do
   homepage "https://www.vallumfirewall.com/"
 
   livecheck do
-    url "https://github.com/TheMurusTeam/Vallum/releases"
-    strategy :page_match
-    regex(%r{href=.*?/tag/v(\d+(?:\.\d+)*)["' ]})
+    url :url
+    strategy :git
+    regex(/^v?(\d+(?:\.\d+)*)$/i)
   end
 
   pkg "Vallum.pkg"
