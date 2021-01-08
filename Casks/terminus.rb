@@ -1,9 +1,16 @@
 cask "terminus" do
-  version "1.0.122"
-  sha256 "3250680cf9a059ef7535278326cc5937f3d0eff56df700054411ee7e1bc7cdc5"
+  version "1.0.125"
 
-  url "https://github.com/Eugeny/terminus/releases/download/v#{version}/terminus-#{version}-macos.zip",
-      verified: "github.com/Eugeny/terminus/"
+  if Hardware::CPU.arm?
+    sha256 "188bc5de667c673186dabfc714db3a20cfe071094c83205aeb094acbc174fd9d"
+    url "https://github.com/Eugeny/terminus/releases/download/v#{version}/terminus-#{version}-macos-arm64.zip",
+        verified: "github.com/Eugeny/terminus/"
+  else
+    sha256 "c00a68942c786e747f3474339685284ebc86463b369eb0af33d4a6962e4abff2"
+    url "https://github.com/Eugeny/terminus/releases/download/v#{version}/terminus-#{version}-macos-x86_64.zip",
+        verified: "github.com/Eugeny/terminus/"
+  end
+
   appcast "https://github.com/Eugeny/terminus/releases.atom"
   name "Terminus"
   desc "Terminal for a more modern age"
