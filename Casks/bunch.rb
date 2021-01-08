@@ -1,6 +1,6 @@
 cask "bunch" do
-  version "1.2.8,48"
-  sha256 "88bfb768ac81f894b7c38535c6848fc8fa1078b2a8623ee65b3582745a153c0d"
+  version "1.3.0,51"
+  sha256 "d8ab5bda171d5cceaff6b80336b9fe8c708fca68d779075c4ad6f7235dfecb1c"
 
   url "https://cdn3.brettterpstra.com/updates/bunch/Bunch#{version.before_comma}#{version.after_comma}.dmg"
   name "Bunch"
