@@ -12,6 +12,8 @@ cask "colorwell" do
     strategy :sparkle
   end
 
+  auto_updates true
+
   app "ColorWell.app"
 
   zap trash: [
