@@ -5,7 +5,7 @@ cask "mbed-studio" do
   url "https://studio.mbed.com/installers/latest/mac/MbedStudio.pkg"
   name "Mbed Studio"
   homepage "https://os.mbed.com/studio/"
-  
+
   livecheck do
     url :url
     strategy :header_match
