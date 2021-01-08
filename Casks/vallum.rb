@@ -4,9 +4,14 @@ cask "vallum" do
 
   url "https://github.com/TheMurusTeam/Vallum/releases/download/v#{version}/vallum-#{version}.zip",
       verified: "github.com/TheMurusTeam/Vallum/"
-  appcast "https://github.com/TheMurusTeam/Vallum/releases.atom"
   name "Vallum"
   homepage "https://www.vallumfirewall.com/"
+
+  livecheck do
+    url "https://github.com/TheMurusTeam/Vallum/releases"
+    strategy :page_match
+    regex(%r{href=.*?/tag/v(\d+(?:\.\d+)*)["' ]})
+  end
 
   pkg "Vallum.pkg"
 
