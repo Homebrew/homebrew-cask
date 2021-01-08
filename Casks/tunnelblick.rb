@@ -7,6 +7,7 @@ cask "tunnelblick" do
   name "Tunnelblick"
   homepage "https://www.tunnelblick.net/"
 
+  # We need to check all releases since the current latest release is a beta version.
   livecheck do
     url "https://github.com/Tunnelblick/Tunnelblick/releases"
     strategy :page_match do |page|
