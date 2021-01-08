@@ -10,7 +10,7 @@ cask "webplotdigitizer" do
   livecheck do
     url "https://automeris.io/WebPlotDigitizer/download.html"
     strategy :page_match
-    regex(%r{/WebPlotDigitizer-(\d+(?:\.\d+)*)-darwin-x64\.zip}i)
+    regex(%r{href=.*?/WebPlotDigitizer-(\d+(?:\.\d+)*)-darwin-x64\.zip}i)
   end
 
   app "WebPlotDigitizer-#{version}-darwin-x64/WebPlotDigitizer-#{version}.app"
