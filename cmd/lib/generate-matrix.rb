@@ -16,7 +16,7 @@ end
 
 tap = Tap.from_path(Dir.pwd)
 
-runner = CiMatrix.random_runner
+runner = CiMatrix.random_runner[:name]
 syntax_job = {
   name:   "syntax",
   tap:    tap.name,
