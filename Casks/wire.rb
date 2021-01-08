@@ -4,10 +4,15 @@ cask "wire" do
 
   url "https://github.com/wireapp/wire-desktop/releases/download/macos%2F#{version}/Wire.pkg",
       verified: "github.com/wireapp/wire-desktop/"
-  appcast "https://github.com/wireapp/wire-desktop/releases.atom"
   name "Wire"
   desc "Collaboration platform focusing on security"
   homepage "https://wire.com/"
+
+  livecheck do
+    url "https://github.com/wireapp/wire-desktop/releases"
+    strategy :page_match
+    regex(%r{href=.*?/macos%2F(\d+(?:\.\d+)*)/Wire\.pkg}i)
+  end
 
   pkg "Wire.pkg"
 
