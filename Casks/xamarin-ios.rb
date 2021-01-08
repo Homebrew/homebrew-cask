@@ -1,11 +1,16 @@
 cask "xamarin-ios" do
-  version "14.6.0.15"
-  sha256 "1ed1eb8a0054d240298bb348f0373ced4ecd053f2dbb2b4998a2e5f40e4f7e47"
+  version "14.9.0.27"
+  sha256 "3143fde70555ba33db7e082a0426e29ee7f317cbdf5c4b22ca647f3669aa01ec"
 
   url "https://dl.xamarin.com/MonoTouch/Mac/xamarin.ios-#{version}.pkg"
-  appcast "https://github.com/xamarin/xamarin-macios/releases.atom"
   name "Xamarin.iOS"
   homepage "https://www.xamarin.com/platform"
+
+  livecheck do
+    url "https://github.com/xamarin/xamarin-macios"
+    strategy :git
+    regex(/^xamarin-ios-(\d+(?:\.\d+)*)$/i)
+  end
 
   pkg "xamarin.ios-#{version}.pkg"
 
