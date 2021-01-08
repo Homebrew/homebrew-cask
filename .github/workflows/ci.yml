@@ -80,6 +80,8 @@ jobs:
           if ! brew untap adoptopenjdk/openjdk; then
             echo '::warning::Untapping adoptopenjdk/openjdk is no longer necessary.'
           fi
+
+          brew unlink python && brew link --overwrite python
         if: runner.os == 'macOS'
 
       # Workaround until the `cache` action uses the changes from
