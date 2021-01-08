@@ -8,6 +8,7 @@ cask "miniconda" do
   homepage "https://conda.io/miniconda.html"
 
   auto_updates true
+  conflicts_with cask: "miniforge"
   container type: :naked
 
   installer script: {
