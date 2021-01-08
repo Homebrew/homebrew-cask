@@ -7,10 +7,11 @@ cask "wkhtmltopdf" do
   name "wkhtmltopdf"
   homepage "https://wkhtmltopdf.org/"
 
+  # We need to check all releases since not all releases are for macOS.
   livecheck do
-    url :url
-    strategy :git
-    regex(/^(\d+(?:\.\d+)*-\d+)$/i)
+    url "https://github.com/wkhtmltopdf/packaging/releases"
+    strategy :page_match
+    regex(/href=.*?wkhtmltox-(\d+(?:\.\d+)*-\d+)\.macos-cocoa\.pkg/i)
   end
 
   pkg "wkhtmltox-#{version}.macos-cocoa.pkg"
