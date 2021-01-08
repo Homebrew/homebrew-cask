@@ -1,6 +1,6 @@
 cask "alacritty" do
-  version "0.6.0"
-  sha256 "2a5bf551494bc345d2dfb55ae6cd1a340d1f2b2f0b263fcc3284d11c76a59306"
+  version "0.7.0"
+  sha256 "b4337889193332c33d00d5f1e8c744ee9d17cd178f84eae7df86067eac7ddf9a"
 
   url "https://github.com/alacritty/alacritty/releases/download/v#{version}/Alacritty-v#{version}.dmg"
   appcast "https://github.com/alacritty/alacritty/releases.atom"
