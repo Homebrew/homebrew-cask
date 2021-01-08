@@ -1,6 +1,6 @@
 cask "breaktimer" do
-  version "0.7.7"
-  sha256 "01fb90a307e2ffb59bb38c683032856aeeff8b5b8b7b0923d4ee307bb34cf2dd"
+  version "0.8.1"
+  sha256 "6d07ee678a178c056f57d4c64b42490f908a9774be372845d34e80e554568c6e"
 
   url "https://github.com/tom-james-watson/breaktimer-app/releases/download/v#{version}/BreakTimer.dmg",
       verified: "github.com/tom-james-watson/breaktimer-app/"
