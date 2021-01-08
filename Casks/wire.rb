@@ -8,6 +8,7 @@ cask "wire" do
   desc "Collaboration platform focusing on security"
   homepage "https://wire.com/"
 
+  # We need to check all releases since not all releases are for macOS.
   livecheck do
     url "https://github.com/wireapp/wire-desktop/releases"
     strategy :page_match
