@@ -10,4 +10,11 @@ cask "munkiadmin" do
   homepage "https://hjuutilainen.github.io/munkiadmin/"
 
   app "MunkiAdmin.app"
+
+  zap trash: [
+    "~/Library/Application Support/MunkiAdmin",
+    "~/Library/Caches/com.hjuutilainen.MunkiAdmin",
+    "~/Library/Logs/MunkiAdmin",
+    "~/Library/Preferences/com.hjuutilainen.MunkiAdmin.plist",
+  ]
 end
