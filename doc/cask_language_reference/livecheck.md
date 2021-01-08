@@ -4,13 +4,34 @@ The `livecheck` stanza is used to automatically fetch the latest version of a ca
 
 Every `livecheck` block must contain a `url`, which can either be a string or a symbol pointing to other URLs in the cask (`:url` or `:homepage`).
 
-Additionally, a `livecheck` should specify which strategy should be used to extract the version:
+Additionally, a `livecheck` should specify which `strategy` should be used to extract the version:
 
 | `strategy`      | Description |
 |-----------------|-----------|
-| `:header_match` | extract version from HTTP headers, e.g. `Location` or `Content-Disposition` |
-| `:page_match`   | extract version from page contents                                          |
-| `:sparkle`      | extract version from Sparkle appcast contents                               |
+| `:header_match` | extract version from HTTP headers (e.g. `Location` or `Content-Disposition`) |
+| `:page_match`   | extract version from page contents                                           |
+| `:sparkle`      | extract version from Sparkle appcast contents                                |
+
+Here is a basic example, extracting a simple version from a page:
+
+```ruby
+livecheck do
+  url "https://example.org/my-app/download"
+  strategy :page_match
+  regex(%r{href=.*?/MyApp-(\d+(?:\.\d+)*)\.zip}i)
+end
+```
+
+If the download URL is present on the homepage, we can use a symbol instead of a string:
+
+```ruby
+livecheck do
+  url :homepage
+  strategy :page_match
+  regex(%r{href=.*?/MyApp-(\d+(?:\.\d+)*)\.zip}i)
+end
+```
+
 
 The `header_match` strategy will try parsing a version from the filename (in the `Content-Disposition` header) and the final URL (in the `Location` header). If that doesn't work, a `regex` can be specified, e.g.:
 
