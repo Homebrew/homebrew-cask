@@ -8,8 +8,8 @@ module CiMatrix
   MAX_JOBS = 256
 
   RUNNERS = {
-    "macos-10.15" => 0.9,
-    "macos-11.0"  => 0.1,
+    { symbol: :catalina, name: "macos-10.15" } => 0.9,
+    { symbol: :big_sur,  name: "macos-11.0" }  => 0.1,
   }.freeze
 
   def self.random_runner
@@ -19,7 +19,8 @@ module CiMatrix
   def self.runners(path)
     cask_content = path.read
 
-    if cask_content.match?(/\bMacOS\s*\.version\b/m)
+    if cask_content.match?(/\bMacOS\s*\.version\b/m) &&
+       RUNNERS.keys.none? { cask_content.include?(runner[:symbol].inspect) }
       # If the cask depends on `MacOS.version`, test it on every possible macOS version.
       RUNNERS.keys
     else
@@ -78,7 +79,7 @@ module CiMatrix
           },
           audit_args:   audit_args,
           skip_install: labels.include?("ci-skip-install"),
-          runner:       runner,
+          runner:       runner[:name],
         }
       end
     end
