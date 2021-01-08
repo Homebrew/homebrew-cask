@@ -9,5 +9,13 @@ cask "dosbox-x" do
   desc "Fork of the DOSBox project"
   homepage "https://dosbox-x.com/"
 
+  livecheck do
+    url "https://github.com/joncampbell123/dosbox-x/releases/latest"
+    strategy :page_match do |page|
+      match = page.match(%r{href=.*?/dosbox-x-v?(\d+(?:\.\d+)*)/dosbox-x-macosx-x86_64-([^/]+)\.zip}i)
+      "#{match[1]},#{match[2]}"
+    end
+  end
+
   app "dosbox-x/dosbox-x.app"
 end
