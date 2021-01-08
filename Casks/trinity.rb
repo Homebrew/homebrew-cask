@@ -10,7 +10,7 @@ cask "trinity" do
   livecheck do
     url :url
     strategy :git
-    regex(/^desktop-(\d+(?:\.\d+)*)/i)
+    regex(/^desktop-(\d+(?:\.\d+)*)$/i)
   end
 
   app "Trinity.app"
