@@ -10,8 +10,8 @@ cask "gargoyle" do
   # We need to check all releases, since the latest release currently only contains binaries for Windows.
   livecheck do
     url "https://github.com/garglk/garglk/releases"
-     strategy :page_match
-     regex(%r{href=.*?/gargoyle-(\d+(?:\.\d+)*)-mac-nota\.dmg}i)
+    strategy :page_match
+    regex(%r{href=.*?/gargoyle-(\d+(?:\.\d+)*)-mac-nota\.dmg}i)
   end
 
   app "Gargoyle.app"
