@@ -71,7 +71,7 @@ module CiMatrix
 
       runners(path).map do |runner|
         {
-          name:         "test #{cask_token} (#{runner})",
+          name:         "test #{cask_token} (#{runner[:name]})",
           tap:          tap.name,
           cask:         {
             token: cask_token,
