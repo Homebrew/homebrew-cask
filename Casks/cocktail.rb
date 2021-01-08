@@ -30,8 +30,8 @@ cask "cocktail" do
     url "https://www.maintain.se/downloads/sparkle/mojave/Cocktail_#{version}.zip"
     appcast "https://www.maintain.se/downloads/sparkle/mojave/mojave.xml"
   elsif MacOS.version <= :catalina
-    version "13.2.5"
-    sha256 "673d50145c63ffef48d3b881c7274e89fb6063058a6e7d0d7e7b29378424d852"
+    version "13.2.6"
+    sha256 "9b59655ef2511218e16736679b0eadde43f9b1a90e7162ffef2e284ca71d149b"
 
     url "https://www.maintain.se/downloads/sparkle/catalina/Cocktail_#{version}.zip"
     appcast "https://www.maintain.se/downloads/sparkle/catalina/catalina.xml"
