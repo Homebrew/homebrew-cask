@@ -20,10 +20,6 @@ cask "duplicati" do
 
   app "Duplicati.app"
 
-  uninstall_preflight do
-    set_permissions "#{appdir}/Duplicati.app", "0777"
-  end
-
   zap trash: [
     "~/Library/Application Support/Duplicati",
     "~/.config/Duplicati",
