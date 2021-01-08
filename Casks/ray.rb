@@ -9,4 +9,10 @@ cask "ray" do
   homepage "https://myray.app/"
 
   app "Ray.app"
+
+  zap trash: [
+    "~/Library/Application Support/Ray",
+    "~/Library/Preferences/be.spatie.ray.plist",
+    "~/Library/Ray",
+  ]
 end
