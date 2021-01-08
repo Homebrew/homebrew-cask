@@ -7,4 +7,6 @@ cask "vlc-webplugin" do
   homepage "https://www.videolan.org/vlc/download-macosx.html"
 
   internet_plugin "VLC Plugin.plugin"
+
+  zap trash: "~/Library/Internet Plug-Ins/VLC Plugin.plugin"
 end
