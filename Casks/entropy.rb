@@ -9,4 +9,10 @@ cask "entropy" do
   homepage "http://www.eigenlogik.com/entropy/"
 
   app "Entropy.app"
+
+  zap trash: [
+    "~/Library/Application Support/Entropy",
+    "~/Library/Preferences/com.eigenlogik.Entropy.plist",
+    "~/Library/Saved Application State/com.eigenlogik.Entropy.savedState",
+  ]
 end
