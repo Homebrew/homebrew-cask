@@ -4,9 +4,16 @@ cask "xlink-kai" do
 
   url "https://github.com/Team-XLink/releases/releases/download/v#{version.before_comma}/XLinkKai-#{version.before_comma}-#{version.after_comma}-macOS.dmg",
       verified: "github.com/Team-XLink/releases/"
-  appcast "https://github.com/Team-XLink/releases/releases.atom"
   name "XLink Kai"
   homepage "https://www.teamxlink.co.uk/"
+
+  livecheck do
+    url "https://github.com/Team-XLink/releases/releases/latest"
+    strategy :page_match do |page|
+      match = page.match(%r{href=.*?/XLinkKai-(\d+(?:\.\d+)*)-(\d+)-macOS\.dmg}i)
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
   depends_on cask: "wireshark-chmodbpf"
 
