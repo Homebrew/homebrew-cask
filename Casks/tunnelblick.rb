@@ -4,9 +4,17 @@ cask "tunnelblick" do
 
   url "https://github.com/Tunnelblick/Tunnelblick/releases/download/v#{version.before_comma}/Tunnelblick_#{version.before_comma}_build_#{version.after_comma}.dmg",
       verified: "github.com/Tunnelblick/Tunnelblick/"
-  appcast "https://github.com/Tunnelblick/Tunnelblick/releases.atom"
   name "Tunnelblick"
   homepage "https://www.tunnelblick.net/"
+
+  # We need to check all releases since the current latest release is a beta version.
+  livecheck do
+    url "https://github.com/Tunnelblick/Tunnelblick/releases"
+    strategy :page_match do |page|
+      match = page.match(%r{href=.*?/Tunnelblick_(\d+(?:\.\d+)*[a-z]?)_build_(\d+)\.dmg}i)
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
   auto_updates true
 
