@@ -1,5 +1,5 @@
 cask "mbed-studio" do
-  version "1.3.1.3"
+  version "1.3.1"
   sha256 :no_check
 
   url "https://studio.mbed.com/installers/latest/mac/MbedStudio.pkg"
@@ -11,7 +11,7 @@ cask "mbed-studio" do
     strategy :header_match
   end
 
-  pkg "MbedStudio-#{version.major_minor_patch}.pkg"
+  pkg "MbedStudio-#{version}.pkg"
 
   uninstall pkgutil: "com.arm.mbed.studio"
 
