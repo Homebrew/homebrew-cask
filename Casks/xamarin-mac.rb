@@ -7,7 +7,7 @@ cask "xamarin-mac" do
   homepage "https://www.xamarin.com/platform"
 
   livecheck do
-    url "https://software.xamarin.com/Service/Updates?v=2&pv0ab364ff-c0e9-43a8-8747-3afb02dc7731=2070300027"
+    url "https://software.xamarin.com/Service/Updates?v=2&pv0ab364ff-c0e9-43a8-8747-3afb02dc7731=0"
     strategy :page_match
     regex(%r{/xamarin\.mac-(\d+(?:\.\d+)*)\.pkg}i)
   end
