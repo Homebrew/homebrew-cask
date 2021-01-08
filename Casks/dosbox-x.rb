@@ -4,7 +4,6 @@ cask "dosbox-x" do
 
   url "https://github.com/joncampbell123/dosbox-x/releases/download/dosbox-x-v#{version.before_comma}/dosbox-x-macosx-x86_64-#{version.after_comma}.zip",
       verified: "github.com/joncampbell123/dosbox-x/"
-  appcast "https://github.com/joncampbell123/dosbox-x/releases.atom"
   name "DOSBox-X"
   desc "Fork of the DOSBox project"
   homepage "https://dosbox-x.com/"

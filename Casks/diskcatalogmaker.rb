@@ -1,5 +1,5 @@
 cask "diskcatalogmaker" do
-  version "8.3.0"
+  version "8.3.1"
   sha256 :no_check
 
   url "https://download.diskcatalogmaker.com/zip/DiskCatalogMaker.zip"

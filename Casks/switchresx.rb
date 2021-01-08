@@ -1,6 +1,6 @@
 cask "switchresx" do
   version "4.10.1"
-  sha256 "33b2bec0623f1edd83e32efa2ac1980f9d677211abdfd8a3d62289eb29abf20a"
+  sha256 "637ab376d4144fc12fed7f36affe9ea43a0c5ef0742051df92cdcc61a51577ff"
 
   url "https://www.madrau.com/data/switchresx/SwitchResX#{version.major}.zip"
   appcast "https://www.madrau.com/SRXCurrentVersion#{version.major}"
@@ -8,7 +8,7 @@ cask "switchresx" do
   desc "Controls screen display settings"
   homepage "https://www.madrau.com/"
 
-  prefpane "SwitchResX.app/Contents/Resources/SwitchResX.prefPane"
+  prefpane "SwitchResX Installer.app/Contents/Resources/SwitchResX.prefPane"
 
   uninstall quit:   [
     "fr.madrau.switchresx.app",

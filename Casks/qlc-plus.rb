@@ -8,4 +8,6 @@ cask "qlc-plus" do
   homepage "https://qlcplus.org/"
 
   app "QLC+.app"
+
+  zap trash: "~/Library/Application Support/QLC+"
 end

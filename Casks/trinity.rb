@@ -4,9 +4,14 @@ cask "trinity" do
 
   url "https://github.com/iotaledger/trinity-wallet/releases/download/desktop-#{version}/trinity-desktop-#{version}.dmg",
       verified: "github.com/iotaledger/trinity-wallet/"
-  appcast "https://github.com/iotaledger/trinity-wallet/releases.atom"
   name "IOTA Trinity Wallet"
   homepage "https://trinity.iota.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^desktop-(\d+(?:\.\d+)*)$/i)
+  end
 
   app "Trinity.app"
 

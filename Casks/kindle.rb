@@ -15,10 +15,14 @@ cask "kindle" do
 
   app "Kindle.app"
 
+  uninstall delete: "/Library/Logs/DiagnosticReports/Kindle_*.diag"
+
   zap trash: [
+    "~/Library/Application Support/Kindle",
+    "~/Library/Caches/com.amazon.Kindle",
+    "~/Library/Caches/com.amazon.Kindle-Crash-Reporter",
+    "~/Library/HTTPStorages/com.amazon.Kindle.binarycookies",
     "~/Library/Preferences/com.amazon.Kindle.plist",
-    "~/Library/Application Support/Kindle/",
-    "~/Library/Saved Application State/com.amazon.Kindle.savedState/",
-    "~/Library/Caches/com.amazon.Kindle-Crash-Reporter/",
+    "~/Library/Saved Application State/com.amazon.Kindle.savedState",
   ]
 end

@@ -1,13 +1,21 @@
 cask "meld" do
-  version "3.21.0-r3,osx-19"
+  version "3.21.0-r3,19"
   sha256 "50a4a45b3b7f44910c1a4c782c044579bc9dd09432c5e0a965dbeb973bbc767e"
 
-  url "https://github.com/yousseb/meld/releases/download/#{version.after_comma}/meldmerge.dmg",
+  url "https://github.com/yousseb/meld/releases/download/osx-#{version.after_comma}/meldmerge.dmg",
       verified: "github.com/yousseb/meld/"
-  appcast "https://github.com/yousseb/meld/releases.atom"
   name "Meld for OSX"
   desc "Visual diff and merge tool"
   homepage "https://yousseb.github.io/meld/"
+
+  livecheck do
+    url "https://github.com/yousseb/meld/releases/latest"
+    strategy :page_match do |page|
+      match = page.match(/Release\s+\(?(\d+(?:\.\d+)*)\.osx(\d+)\)?/i)
+      tag = page[%r{href=.*?/osx-(\d+)/meldmerge\.dmg}i, 1]
+      "#{match[1]}-r#{match[2]},#{tag}"
+    end
+  end
 
   depends_on macos: ">= :high_sierra"
 
