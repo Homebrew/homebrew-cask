@@ -11,9 +11,17 @@ cask "fritzing" do
         verified: "github.com/fritzing/fritzing-app/"
   end
 
-  appcast "https://github.com/fritzing/fritzing-app/releases.atom"
   name "Fritzing"
   homepage "https://fritzing.org/home/"
+
+  livecheck do
+    url "https://github.com/fritzing/fritzing-app/releases/latest"
+    strategy :page_match do |page|
+      v = page[/Fritzing\s+(\d+(?:\.\d+)*)/i, 1]
+      match = page.match(%r{/fritzing-([^/]*?)-master-(\d+)\.[^.]+\.(?:\d+(?:\.\d+)*)\.dmg}i)
+      "#{v},#{match[1]}:#{match[2]}"
+    end
+  end
 
   app "Fritzing.app"
 end
