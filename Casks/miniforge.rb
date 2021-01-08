@@ -9,6 +9,7 @@ cask "miniforge" do
   homepage "https://github.com/conda-forge/miniforge"
 
   auto_updates true
+  conflicts_with cask: "miniconda"
   container type: :naked
 
   installer script: {
