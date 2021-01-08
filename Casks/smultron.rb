@@ -1,6 +1,6 @@
 cask "smultron" do
   version "12.2.5,12250"
-  sha256 "4fd4a60746bf49bab5aeff124ff36e5506e71dd3ab768d72cdcd817bb0147c6e"
+  sha256 :no_check
 
   url "https://www.peterborgapps.com/downloads/Smultron#{version.before_comma.major}.zip"
   name "Smultron"
