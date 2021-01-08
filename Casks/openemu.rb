@@ -29,6 +29,7 @@ cask "openemu" do
     "~/Library/Caches/OpenEmu",
     "~/Library/Caches/org.openemu.OpenEmu",
     "~/Library/Cookies/org.openemu.OpenEmu.binarycookies",
+    "~/Library/HTTPStorages/org.openemu.OpenEmu.binarycookies",
     "~/Library/Preferences/org.openemu.Atari800.plist",
     "~/Library/Preferences/org.openemu.Bliss.plist",
     "~/Library/Preferences/org.openemu.CrabEmu.plist",
