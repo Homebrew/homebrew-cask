@@ -7,6 +7,7 @@ cask "smultron" do
   desc "General-purpose text editor"
   homepage "https://www.peterborgapps.com/smultron/"
 
+  auto_updates true
   depends_on macos: ">= :mojave"
 
   app "Smultron.app"
