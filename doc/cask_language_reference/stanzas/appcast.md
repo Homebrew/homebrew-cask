@@ -2,6 +2,8 @@
 
 The value of the `appcast` stanza is a string, holding the URL for an appcast which provides information on future updates.
 
+Note: The [`livecheck` stanza](livecheck.md) should be preferred in most cases, as it allows casks to be updated automatically.
+
 The main casks repo only accepts submissions for stable versions of software (and [documented exceptions](https://github.com/Homebrew/homebrew-cask/blob/master/doc/development/adding_a_cask.md#but-there-is-no-stable-version)), but it still gets pull requests for unstable versions. By checking the submitted `version` against the contents of an appcast, we can better detect these invalid cases.
 
 Example: [`atom.rb`](https://github.com/Homebrew/homebrew-cask/blob/645dbb8228ec2f1f217ed1431e188687aac13ca5/Casks/atom.rb#L7)
