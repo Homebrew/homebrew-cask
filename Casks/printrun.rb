@@ -8,6 +8,14 @@ cask "printrun" do
   desc "Python 3d printing host software"
   homepage "https://github.com/kliment/Printrun"
 
+  livecheck do
+    url "https://github.com/kliment/Printrun/releases/latest"
+    strategy :page_match do |page|
+      match = page.match(%r{href=.*?/printrun-(\d+(?:\.\d+)*)/Printrun-Mac-(.*?)\.zip}i)
+      "#{match[1]},#{match[2]}"
+    end
+  end
+
   app "Printrun-#{version}-macos/pronterface.app"
 
   caveats "You MUST run 'chmod a+x /Applications/pronterface.app/Contents/MacOS/pronterface' in shell after install."
