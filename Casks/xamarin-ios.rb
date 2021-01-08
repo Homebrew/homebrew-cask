@@ -1,15 +1,15 @@
 cask "xamarin-ios" do
-  version "14.9.0.27"
-  sha256 "3143fde70555ba33db7e082a0426e29ee7f317cbdf5c4b22ca647f3669aa01ec"
+  version "14.6.0.15"
+  sha256 "1ed1eb8a0054d240298bb348f0373ced4ecd053f2dbb2b4998a2e5f40e4f7e47"
 
   url "https://dl.xamarin.com/MonoTouch/Mac/xamarin.ios-#{version}.pkg"
   name "Xamarin.iOS"
   homepage "https://www.xamarin.com/platform"
 
   livecheck do
-    url "https://github.com/xamarin/xamarin-macios"
-    strategy :git
-    regex(/^xamarin-ios-(\d+(?:\.\d+)*)$/i)
+    url "https://software.xamarin.com/Service/Updates?v=2&pv4569c276-1397-4adb-9485-82a7696df22e=2140900027"
+    strategy :page_match
+    regex(%r{/xamarin\.ios-(\d+(?:\.\d+)*)\.pkg}i)
   end
 
   pkg "xamarin.ios-#{version}.pkg"
