@@ -4,10 +4,17 @@ cask "mediaelch" do
 
   url "https://github.com/Komet/MediaElch/releases/download/v#{version.before_comma}/MediaElch_macOS_#{version.before_comma}_#{version.after_comma.before_colon}_git-#{version.after_colon}.dmg",
       verified: "github.com/Komet/MediaElch/"
-  appcast "https://github.com/Komet/MediaElch/releases.atom"
   name "MediaElch"
   desc "Media Manager for Kodi"
   homepage "https://www.kvibes.de/en/mediaelch/"
+
+  livecheck do
+    url "https://github.com/Komet/MediaElch/releases/latest"
+    strategy :page_match do |page|
+      match = page.match(%r{href=.*?/MediaElch_macOS_(\d+(?:\.\d+)*)_(\d+(?:-\d+)*)_git-([^/]*?)\.dmg}i)
+      "#{match[1]},#{match[2]}:#{match[3]}"
+    end
+  end
 
   depends_on macos: ">= :sierra"
 
