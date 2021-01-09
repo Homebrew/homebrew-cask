@@ -10,8 +10,8 @@ cask "veusz" do
 
   livecheck do
     url :url
-    strategy :github_latest
-    regex(%r{href=.*?/veusz-(\d+(?:\.\d+)*)-AppleOSX\.dmg}i)
+    strategy :git
+    regex(/^veusz-(\d+(?:\.\d+)*)$/i)
   end
 
   app "Veusz.app"
