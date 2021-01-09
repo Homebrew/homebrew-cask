@@ -4,9 +4,14 @@ cask "godot-mono" do
 
   url "https://downloads.tuxfamily.org/godotengine/#{version}/mono/Godot_v#{version}-stable_mono_osx.64.zip",
       verified: "downloads.tuxfamily.org/godotengine/"
-  appcast "https://github.com/godotengine/godot/releases.atom"
   name "Godot Engine"
   homepage "https://godotengine.org/"
+
+  livecheck do
+    url "https://github.com/godotengine/godot/releases"
+    strategy :git
+    regex(/^(\d+(?:\.\d+)*)-stable$/)
+  end
 
   depends_on formula: "mono"
 
