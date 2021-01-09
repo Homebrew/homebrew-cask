@@ -7,5 +7,7 @@ cask "opencore-configurator" do
   name "OpenCore Configurator"
   homepage "https://mackie100projects.altervista.org/opencore-configurator/"
 
+  auto_updates true
+
   app "OpenCore Configurator.app"
 end
