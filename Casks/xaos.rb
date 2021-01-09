@@ -10,7 +10,7 @@ cask "xaos" do
   livecheck do
     url :url
     strategy :github_latest
-    regex(%r{href=.*?/XaoS-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(/^release-(\d+(?:\.\d+)*)$/i)
   end
 
   app "XaoS.app"
