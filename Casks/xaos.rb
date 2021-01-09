@@ -9,7 +9,7 @@ cask "xaos" do
 
   livecheck do
     url :url
-    strategy :github_latest
+    strategy :git
     regex(/^release-(\d+(?:\.\d+)*)$/i)
   end
 
