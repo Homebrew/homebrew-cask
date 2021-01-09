@@ -11,7 +11,7 @@ cask "couchpotato" do
   livecheck do
     url :url
     strategy :git
-    regex(/^build%2F(\d+(?:\.\d+)*)$/i)
+    regex(%r{^build/(\d+(?:\.\d+)*)$}i)
   end
 
   app "CouchPotato.app"
