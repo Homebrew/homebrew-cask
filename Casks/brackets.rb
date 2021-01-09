@@ -10,8 +10,8 @@ cask "brackets" do
 
   livecheck do
     url :url
-    strategy :github_latest
-    regex(%r{href=.*?/Brackets\.Release\.(\d+(?:\.\d+)*)\.dmg}i)
+    strategy :git
+    regex(%r{^release-(\d+(?:\.\d+)*)$}i)
   end
 
   app "Brackets.app"
