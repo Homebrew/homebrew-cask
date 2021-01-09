@@ -11,7 +11,7 @@ cask "unetbootin" do
   livecheck do
     url :url
     strategy :github_latest
-    regex(%r{href=.*?/unetbootin-mac-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(/^(\d+(?:\.\d+)*)$/i)
   end
 
   app "unetbootin.app"
