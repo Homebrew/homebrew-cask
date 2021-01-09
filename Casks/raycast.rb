@@ -8,4 +8,9 @@ cask "raycast" do
   homepage "https://raycast.app/"
 
   app "Raycast.app"
+
+  zap trash: [
+              "/Users/matt/Library/Caches/com.raycast.macos",
+              '/Users/matt/Library/Application\ Support/com.raycast.macos',
+            ]
 end
