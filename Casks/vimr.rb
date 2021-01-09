@@ -10,8 +10,8 @@ cask "vimr" do
 
   livecheck do
     url :url
-    strategy :github_latest
-    regex(%r{href=.*?/VimR-v?(\d+(?:\.\d+)*-\d+)\.t}i)
+    strategy :git
+    regex(/v?(\d+(?:\.\d+)*-\d+)/i)
   end
 
   auto_updates true
