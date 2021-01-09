@@ -10,7 +10,7 @@ cask "time-to-leave" do
   livecheck do
     url :url
     strategy :github_latest
-    regex(%r{href=.*?/v?\.?(\d+(?:\.\d+)*)/time-to-leave\.dmg}i)
+    regex(/^v?\.?(\d+(?:\.\d+)*)$/i)
   end
 
   app "Time To Leave.app"
