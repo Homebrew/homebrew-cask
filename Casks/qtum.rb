@@ -10,8 +10,8 @@ cask "qtum" do
 
   livecheck do
     url :url
-    strategy :git
-    regex(/^mainnet-ignition-v(\d+(?:\.\d+)*)$/i)
+    strategy :github_latest
+    regex(%r{href=.*?/qtum-(\d+(?:\.\d+)*)-osx-unsigned\.dmg}i)
   end
 
   app "Qtum-Qt.app"
