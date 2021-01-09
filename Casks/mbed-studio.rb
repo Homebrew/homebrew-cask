@@ -14,7 +14,7 @@ cask "mbed-studio" do
   pkg "MbedStudio.pkg"
 
   preflight do
-    Pathname.glob("#{staged_path}/MbedStudio-*.pkg").first.rename("#{staged_path}/MbedStudio.pkg")
+    Pathname.new(staged_path).glob("MbedStudio-*.pkg").first.rename("#{staged_path}/MbedStudio.pkg")
   end
 
   uninstall pkgutil: "com.arm.mbed.studio"
