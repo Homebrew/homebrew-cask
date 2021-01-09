@@ -10,8 +10,8 @@ cask "couchpotato" do
 
   livecheck do
     url :url
-    strategy :github_latest
-    regex(%r{href=.*?/CouchPotato-(\d+(?:\.\d+)*).*?\.zip["' >]}i)
+    strategy :git
+    regex(/^build%2F(\d+(?:\.\d+)*)$/i)
   end
 
   app "CouchPotato.app"
