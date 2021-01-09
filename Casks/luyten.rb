@@ -4,10 +4,15 @@ cask "luyten" do
 
   url "https://github.com/deathmarine/Luyten/releases/download/v#{version}_Rebuilt_with_Latest_depenencies/luyten-OSX-#{version}.zip",
       verified: "github.com/deathmarine/Luyten/"
-  appcast "https://github.com/deathmarine/Luyten/releases.atom"
   name "Luyten"
   desc "Open-source Java decompiler GUI for Procyon"
   homepage "https://deathmarine.github.io/Luyten/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+    regex(%r{href=.*?/luyten-OSX-(\d+(?:\.\d+)*)\.zip}i)
+  end
 
   app "Luyten.app"
 end
