@@ -10,8 +10,8 @@ cask "xca" do
 
   livecheck do
     url :url
-    strategy :github_latest
-    regex(%r{href=.*?/xca-(\d+(?:\.\d+)*)\.dmg}i)
+    strategy :git
+    regex(/^RELEASE\.(\d+(?:\.\d+)*)$/i)
   end
 
   app "xca.app"
