@@ -1,6 +1,6 @@
 cask "texmacs" do
-  version "1.99.17"
-  sha256 "8b525fea84a4afe93a9c651caf34e4cbca2f2f9d596b060f6f95fa85683a33d8"
+  version "1.99.18"
+  sha256 "8e1bd0470fa6ea824cf077df1d08567f1fe05a207c94b00fac3bbbafeacf0403"
 
   url "https://ftp.texmacs.org/TeXmacs/tmftp/macos/TeXmacs-#{version}.dmg"
   name "GNU TeXmacs"
@@ -8,7 +8,7 @@ cask "texmacs" do
   homepage "https://www.texmacs.org/"
 
   livecheck do
-    url "https://ftp.texmacs.org/TeXmacs/appcast/macos.xml"
+    url "http://ftp.texmacs.org/TeXmacs/appcast/macos.xml"
     strategy :sparkle
   end
 
