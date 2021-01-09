@@ -4,6 +4,7 @@ cask "visual-paradigm" do
 
   url "https://eu8.dl.visual-paradigm.com/visual-paradigm/vp#{version.before_comma}/#{version.after_comma}/Visual_Paradigm_#{version.before_comma.dots_to_underscores}_#{version.after_comma}_OSX_WithJRE.dmg"
   name "Visual Paradigm"
+  desc "UML CASE Tool supporting UML 2, SysML and Business Process Modeling Notation"
   homepage "https://www.visual-paradigm.com/"
 
   livecheck do
