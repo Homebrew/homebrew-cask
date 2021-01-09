@@ -4,9 +4,14 @@ cask "xaos" do
 
   url "https://github.com/xaos-project/XaoS/releases/download/release-#{version}/XaoS-#{version}.dmg",
       verified: "github.com/xaos-project/XaoS/"
-  appcast "https://github.com/xaos-project/XaoS/releases.atom"
   name "GNU XaoS"
   homepage "https://xaos-project.github.io/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+    regex(%r{href=.*?/XaoS-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   app "XaoS.app"
 end
