@@ -4,6 +4,7 @@ cask "visual-paradigm-ce" do
 
   url "https://www.visual-paradigm.com/downloads/vpce/Visual_Paradigm_CE_#{version.before_comma.dots_to_underscores}_#{version.after_comma}_OSX_WithJRE.dmg"
   name "Visual Paradigm Community Edition"
+  desc "All-in-one UML, SysML, BPMN Modeling Platform for Agile"
   homepage "https://www.visual-paradigm.com/"
 
   livecheck do
