@@ -4,10 +4,15 @@ cask "ricochet" do
 
   url "https://github.com/ricochet-im/ricochet/releases/download/v#{version.major_minor_patch}/ricochet-#{version}-macos.dmg",
       verified: "github.com/ricochet-im/"
-  appcast "https://github.com/ricochet-im/ricochet/releases.atom"
   name "Ricochet"
   desc "Anonymous peer-to-peer instant messaging"
   homepage "https://ricochet.im/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+    regex(%r{/ricochet-(\d+(?:\.\d+)*)-macos\.dmg}i)
+  end
 
   app "Ricochet.app"
 end
