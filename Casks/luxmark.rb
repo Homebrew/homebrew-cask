@@ -10,7 +10,7 @@ cask "luxmark" do
 
   livecheck do
     url :url
-    strategy :github_latest
+    strategy :git
     regex(/^luxmark_v?(\d+(?:\.\d+)*)$/i)
   end
 
