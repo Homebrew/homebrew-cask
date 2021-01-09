@@ -9,8 +9,8 @@ cask "xit" do
 
   livecheck do
     url :url
-    strategy :github_latest
-    regex(%r{href=.*?/v?(\d+(?:\.\d+)*(?:b\d+)?)/Xit\.zip}i)
+    strategy :git
+    regex(/^v?(\d+(?:\.\d+)*(?:b\d+)?)$/i)
   end
 
   depends_on macos: ">= :mojave"
