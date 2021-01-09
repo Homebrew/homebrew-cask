@@ -10,4 +10,9 @@ cask "opencore-configurator" do
   auto_updates true
 
   app "OpenCore Configurator.app"
+
+  zap trash: [
+    "~/Library/Caches/org.altervista.mackie100projects.OpenCore-Configurator",
+    "~/Library/Preferences/org.altervista.mackie100projects.OpenCore-Configurator.plist",
+  ]
 end
