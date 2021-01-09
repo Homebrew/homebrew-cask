@@ -4,10 +4,15 @@ cask "exist-db" do
 
   url "https://bintray.com/artifact/download/existdb/releases/eXist-db-#{version}.dmg",
       verified: "bintray.com/artifact/download/existdb/"
-  appcast "https://github.com/eXist-db/exist/releases.atom"
   name "eXist-db"
   desc "Native XML database and application platform"
   homepage "https://exist-db.org/exist/apps/homepage/index.html"
+
+  livecheck do
+    url "https://github.com/eXist-db/exist"
+    strategy :git
+    regex(/^eXist-(\d+(?:\.\d+)*)$/i)
+  end
 
   app "eXist-db.app"
 
