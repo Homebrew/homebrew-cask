@@ -9,8 +9,8 @@ cask "freetube" do
 
   livecheck do
     url :url
-    strategy :github_latest
-    regex(%r{href=.*?/freetube-(\d+(?:\.\d+)*)-mac\.dmg}i)
+    strategy :git
+    regex(/^v?(\d+(?:\.\d+)*)/i)
   end
 
   app "FreeTube.app"
