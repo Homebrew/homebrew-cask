@@ -4,10 +4,15 @@ cask "brackets" do
 
   url "https://github.com/adobe/brackets/releases/download/release-#{version}/Brackets.Release.#{version}.dmg",
       verified: "github.com/adobe/brackets/"
-  appcast "https://github.com/adobe/brackets/releases.atom"
   name "Brackets"
   desc "Open-source code editor for web-developement"
   homepage "http://brackets.io/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+    regex(%r{href=.*?/Brackets\.Release\.(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   app "Brackets.app"
 
