@@ -4,10 +4,15 @@ cask "unetbootin" do
 
   url "https://github.com/unetbootin/unetbootin/releases/download/#{version}/unetbootin-mac-#{version}.dmg",
       verified: "github.com/unetbootin/unetbootin/"
-  appcast "https://github.com/unetbootin/unetbootin/releases.atom"
   name "UNetbootin"
   desc "Tool to install Linux/BSD distributions to a partition or USB drive"
   homepage "https://unetbootin.github.io/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+    regex(%r{href=.*?/unetbootin-mac-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   app "unetbootin.app"
 
