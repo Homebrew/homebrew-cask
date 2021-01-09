@@ -4,10 +4,15 @@ cask "couchpotato" do
 
   url "https://github.com/CouchPotato/CouchPotatoServer/releases/download/build%2F#{version}/CouchPotato-#{version}.macosx-10_6-intel.zip",
       verified: "github.com/CouchPotato/CouchPotatoServer/"
-  appcast "https://github.com/CouchPotato/CouchPotatoServer/releases.atom"
   name "CouchPotato"
   desc "Automatic Movie Downloading via NZBs & Torrents"
   homepage "https://couchpota.to/"
+
+  livecheck do
+    url :url
+    strategy :git
+    regex(%r{^build/(\d+(?:\.\d+)*)$}i)
+  end
 
   app "CouchPotato.app"
 
