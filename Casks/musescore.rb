@@ -4,11 +4,15 @@ cask "musescore" do
 
   url "https://github.com/musescore/MuseScore/releases/download/v#{version.major_minor_patch}/MuseScore-#{version}.dmg",
       verified: "github.com/musescore/MuseScore/"
-  appcast "https://github.com/musescore/MuseScore/releases.atom",
-          must_contain: version.major_minor_patch
   name "MuseScore"
   desc "Open-source music notation software"
   homepage "https://musescore.org/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+    regex(%r{href=.*?/MuseScore-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   depends_on macos: ">= :yosemite"
 
