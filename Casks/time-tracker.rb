@@ -8,8 +8,8 @@ cask "time-tracker" do
 
   livecheck do
     url :url
-    strategy :github_latest
-    regex(%r{href=.*?/Time\.Tracker-(\d+(?:\.\d+)*)-bin\.zip}i)
+    strategy :git
+    regex(/^v?(\d+(?:\.\d+)*)-binary$/i)
   end
 
   app "Time Tracker.app"
