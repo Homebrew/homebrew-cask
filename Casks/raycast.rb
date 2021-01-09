@@ -10,7 +10,7 @@ cask "raycast" do
   app "Raycast.app"
 
   zap trash: [
-    "/Users/matt/Library/Caches/com.raycast.macos",
-    '/Users/matt/Library/Application\ Support/com.raycast.macos',
+    "~/Library/Application Support/com.raycast.macos",
+    "~/Library/Caches/com.raycast.macos",
   ]
 end
