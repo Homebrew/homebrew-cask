@@ -1,6 +1,6 @@
 cask "macintoshjs" do
-  version "1.0.6"
-  sha256 "f1cf7e80c17f1ade18dcfde10d291d70f9e1c86762f42c1004dc7caa3717c2d0"
+  version "1.1.0"
+  sha256 "4ca41517f15c594e718da622074a2160754cb8f1293cb1fad908f6d0ae585384"
 
   url "https://github.com/felixrieseberg/macintosh.js/releases/download/v#{version}/macintosh.js-darwin-x64-#{version}.zip"
   appcast "https://github.com/felixrieseberg/macintosh.js/releases.atom"
