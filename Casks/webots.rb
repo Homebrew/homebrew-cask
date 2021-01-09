@@ -4,11 +4,16 @@ cask "webots" do
 
   url "https://github.com/cyberbotics/webots/releases/download/#{version}/webots-#{version}.dmg",
       verified: "github.com/cyberbotics/webots/"
-  appcast "https://github.com/cyberbotics/webots/releases.atom"
   name "Cyberbotics Webots Robot Simulator"
   name "Webots"
   desc "Open source desktop application used to simulate robots"
   homepage "https://www.cyberbotics.com/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+    regex(%r{href=.*?/webots-(R\d+[a-z]+)\.dmg}i)
+  end
 
   auto_updates true
   depends_on macos: ">= :mojave"
