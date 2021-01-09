@@ -9,7 +9,7 @@ cask "time-to-leave" do
 
   livecheck do
     url :url
-    strategy :github_latest
+    strategy :git
     regex(/^v?\.?(\d+(?:\.\d+)*)$/i)
   end
 
