@@ -10,8 +10,8 @@ cask "meshlab" do
 
   livecheck do
     url :url
-    strategy :github_latest
-    regex(%r{href=.*?/MeshLab(\d+(?:\.\d+)*)-macos\.dmg}i)
+    strategy :git
+    regex(/^Meshlab-(\d+(?:\.\d+)*)$/i)
   end
 
   app "meshlab.app"
