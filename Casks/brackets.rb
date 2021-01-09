@@ -11,7 +11,7 @@ cask "brackets" do
   livecheck do
     url :url
     strategy :git
-    regex(%r{^release-(\d+(?:\.\d+)*)$}i)
+    regex(/^release-(\d+(?:\.\d+)*)$/i)
   end
 
   app "Brackets.app"
