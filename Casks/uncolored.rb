@@ -10,8 +10,8 @@ cask "uncolored" do
 
   livecheck do
     url :url
-    strategy :github_latest
-    regex(%r{href=.*?/Uncolored-v?\.?(\d+(?:\.\d+)*)-osx-x64\.dmg}i)
+    strategy :git
+    regex(/^v?\.?(\d+(?:\.\d+)*)$/i)
   end
 
   app "Uncolored.app"
