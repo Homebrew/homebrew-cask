@@ -4,9 +4,14 @@ cask "godot" do
 
   url "https://downloads.tuxfamily.org/godotengine/#{version}/Godot_v#{version}-stable_osx.64.zip",
       verified: "downloads.tuxfamily.org/godotengine/"
-  appcast "https://github.com/godotengine/godot/releases.atom"
   name "Godot Engine"
   homepage "https://godotengine.org/"
+
+  livecheck do
+    url "https://github.com/godotengine/godot/releases"
+    strategy :git
+    regex(/^(\d+(?:\.\d+)*)-stable$/)
+  end
 
   app "Godot.app"
 end
