@@ -4,10 +4,15 @@ cask "uncolored" do
 
   url "https://github.com/n457/Uncolored/releases/download/v.#{version}/Uncolored-v.#{version}-osx-x64.dmg",
       verified: "github.com/n457/Uncolored/"
-  appcast "https://github.com/n457/Uncolored/releases.atom"
   name "(Un)colored"
   desc "Rich text (HTML & Markdown) editor that saves documents with themes"
   homepage "https://n457.github.io/Uncolored/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+    regex(%r{href=.*?/Uncolored-v?\.?(\d+(?:\.\d+)*)-osx-x64\.dmg}i)
+  end
 
   app "Uncolored.app"
 end
