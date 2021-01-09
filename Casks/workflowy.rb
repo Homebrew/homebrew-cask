@@ -10,8 +10,8 @@ cask "workflowy" do
 
   livecheck do
     url :url
-    strategy :github_latest
-    regex(%r{href=.*?/v?(\d+(?:\.\d+)*-\d+)/WorkFlowy\.zip}i)
+    strategy :git
+    regex(/^v?(\d+(?:\.\d+)*-\d+)$/i)
   end
 
   auto_updates true
