@@ -10,7 +10,7 @@ cask "unetbootin" do
 
   livecheck do
     url :url
-    strategy :github_latest
+    strategy :git
     regex(/^(\d+(?:\.\d+)*)$/i)
   end
 
