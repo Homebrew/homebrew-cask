@@ -8,8 +8,8 @@ cask "subtitle-master" do
 
   livecheck do
     url :url
-    strategy :github_latest
-    regex(%r{href=.*?/Subtitle\.Master-osx-v?(\d+(?:\.\d+)*)-SNAPSHOT\.zip}i)
+    strategy :git
+    regex(/^v?(\d+(?:\.\d+)*)-SNAPSHOT$/i)
   end
 
   app "Subtitle Master.app"
