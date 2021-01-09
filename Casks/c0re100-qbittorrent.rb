@@ -8,8 +8,8 @@ cask "c0re100-qbittorrent" do
 
   livecheck do
     url :url
-    strategy :github_latest
-    regex(%r{href=.*?/qBittorrent-(\d+(?:\.\d+)*)\.dmg}i)
+    strategy :git
+    regex(/^release-(\d+(?:\.\d+)*)$/i)
   end
 
   depends_on macos: ">= :sierra"
