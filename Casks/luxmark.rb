@@ -11,7 +11,7 @@ cask "luxmark" do
   livecheck do
     url :url
     strategy :github_latest
-    regex(%r{href=.*?/luxmark-macos64-v?(\d+(?:\.\d+)*)\.zip}i)
+    regex(/^luxmark_v?(\d+(?:\.\d+)*)$/i)
   end
 
   app "LuxMark.app"
