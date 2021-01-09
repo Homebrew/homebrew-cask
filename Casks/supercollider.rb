@@ -4,9 +4,14 @@ cask "supercollider" do
 
   url "https://github.com/supercollider/supercollider/releases/download/Version-#{version}/SuperCollider-#{version}-macOS-signed.zip",
       verified: "github.com/supercollider/supercollider/"
-  appcast "https://github.com/supercollider/supercollider/releases.atom"
   name "SuperCollider"
   homepage "https://supercollider.github.io/"
+
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^Version-(\d+(?:\.\d+)*)$/i)
+  end
 
   app "SuperCollider/SuperCollider.app"
 end
