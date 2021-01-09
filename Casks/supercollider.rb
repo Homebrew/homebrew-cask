@@ -10,7 +10,7 @@ cask "supercollider" do
   livecheck do
     url :url
     strategy :github_latest
-    regex(%r{href=.*?/SuperCollider-(\d+(?:\.\d+)*)-macOS-signed\.zip}i)
+    regex(/^Version-(\d+(?:\.\d+)*)$/i)
   end
 
   app "SuperCollider/SuperCollider.app"
