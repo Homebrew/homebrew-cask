@@ -4,10 +4,15 @@ cask "luxmark" do
 
   url "https://github.com/LuxCoreRender/LuxMark/releases/download/luxmark_v#{version}/luxmark-macos64-v#{version}.zip",
       verified: "github.com/LuxCoreRender/LuxMark/"
-  appcast "https://github.com/LuxCoreRender/LuxMark/releases.atom"
   name "LuxMark"
   desc "OpenCL benchmark"
   homepage "http://www.luxmark.info/"
+
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^luxmark_v?(\d+(?:\.\d+)*)$/i)
+  end
 
   app "LuxMark.app"
 end
