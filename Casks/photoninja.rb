@@ -4,10 +4,15 @@ cask "photoninja" do
 
   url "https://picturecode.cachefly.net/photoninja/downloads/Install_PhotoNinja_#{version}.dmg",
       verified: "picturecode.cachefly.net/"
-  appcast "https://www.picturecode.com/download.php"
   name "Photo Ninja"
   desc "Professional RAW converter"
   homepage "https://www.picturecode.com/index.php"
+
+  livecheck do
+    url "https://www.picturecode.com/download.php"
+    strategy :page_match
+    regex(%r{href=.*?/Install_PhotoNinja_(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   app "PhotoNinja_#{version}.app"
 end
