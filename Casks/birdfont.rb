@@ -8,18 +8,18 @@ cask "birdfont" do
   else
     version "4.8.11"
     sha256 "2289fefc1ba248ed680d8448d433aa1a65ec7bfa9f26b4056652bcebfff846d0"
+
+    livecheck do
+      url "https://birdfont.org/purchase.php"
+      strategy :page_match
+      regex(%r{href=.*?/birdfont-(\d+(?:\.\d+)*)-free\.dmg}i)
+    end
   end
 
   url "https://birdfont.org/download/birdfont-#{version}-free.dmg"
   name "BirdFont"
   desc "Free font editor"
   homepage "https://birdfont.org/"
-
-  livecheck do
-    url "https://birdfont.org/purchase.php"
-    strategy :page_match
-    regex(%r{href=.*?/birdfont-(\d+(?:\.\d+)*)-free\.dmg}i)
-  end
 
   depends_on macos: ">= :el_capitan"
 
