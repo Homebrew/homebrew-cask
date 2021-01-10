@@ -1,5 +1,5 @@
 cask "bookmacster" do
-  version "2.10.31"
+  version "2.11.1"
   sha256 :no_check
 
   url "https://sheepsystems.com/bookmacster/BookMacster.zip"
