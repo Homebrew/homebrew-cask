@@ -4,9 +4,14 @@ cask "firecamp" do
 
   url "https://firecamp.ams3.digitaloceanspaces.com/versions/mac/Firecamp-#{version}.dmg",
       verified: "firecamp.ams3.digitaloceanspaces.com/"
-  appcast "https://firecamp.io/downloads/"
   name "Firecamp"
   homepage "https://firecamp.io/"
+
+  livecheck do
+    url "https://firecamp.io/downloads/"
+    strategy :page_match
+    regex(%r{href=.*?/Firecamp-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   app "Firecamp.app"
 end
