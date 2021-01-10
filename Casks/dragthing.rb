@@ -4,10 +4,15 @@ cask "dragthing" do
 
   url "https://tlasystems.s3.amazonaws.com/DragThing-#{version}.dmg",
       verified: "tlasystems.s3.amazonaws.com/"
-  appcast "https://www.dragthing.com/english/download.html"
   name "DragThing"
   desc "Desktop organizer"
   homepage "https://www.dragthing.com/"
+
+  livecheck do
+    url "https://www.dragthing.com/english/download.html"
+    strategy :page_match
+    regex(%r{href=.*?/DragThing-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   app "DragThing.app"
 end
