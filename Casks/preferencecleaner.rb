@@ -7,7 +7,7 @@ cask "preferencecleaner" do
   homepage "https://www.echomist.co.uk/software/PreferenceCleaner.php"
 
   livecheck do
-    url "https://www.echomist.co.uk/software/PreferenceCleaner.php"
+    url :homepage
     strategy :page_match
     regex(%r{href=.*?/PreferenceCleaner_(\d+(?:\.\d+)*)\.dmg}i)
   end
