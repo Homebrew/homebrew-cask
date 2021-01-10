@@ -3,10 +3,15 @@ cask "airtable" do
   sha256 "0acee1683f4b8a444661803bea61d305d4c0f0f71668fc730ff4e2d33c296795"
 
   url "https://static.airtable.com/download/macos/Airtable-#{version}.dmg"
-  appcast "https://airtable.com/mac"
   name "Airtable"
   desc "Spreadsheet-database hybrid cloud collaboration"
   homepage "https://airtable.com/"
+
+  livecheck do
+    url "https://airtable.com/mac"
+    strategy :page_match
+    regex(%r{href=.*?/Airtable-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   auto_updates true
 
