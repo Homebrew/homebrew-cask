@@ -4,9 +4,14 @@ cask "dremel-slicer" do
 
   url "https://dremel3d.blob.core.windows.net/dremel3dslicer/#{version}/Dremel3DSlicer-#{version}-mac.zip",
       verified: "dremel3d.blob.core.windows.net/"
-  appcast "https://digilab.dremel.com/3D-software"
   name "Dremel DigiLab 3D Slicer"
   homepage "https://digilab.dremel.com/3D-software"
+
+  livecheck do
+    url "https://digilab.dremel.com/3D-software"
+    strategy :page_match
+    regex(%r{href=.*?/Dremel3DSlicer-(\d+(?:\.\d+)*)-mac\.zip}i)
+  end
 
   app "Dremel3DSlicer-#{version}-mac/Dremel DigiLab 3D Slicer.app"
 end
