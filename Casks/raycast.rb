@@ -12,5 +12,6 @@ cask "raycast" do
   zap trash: [
     "~/Library/Application Support/com.raycast.macos",
     "~/Library/Caches/com.raycast.macos",
+    "~/Library/Preferences/com.raycast.macos.plist",
   ]
 end
