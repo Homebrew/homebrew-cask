@@ -6,6 +6,12 @@ cask "qobuz" do
   name "Qobuz"
   homepage "https://www.qobuz.com/applications"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/(\d+(?:\.\d+)*-b\d+)/Qobuz\.dmg}i)
+  end
+
   auto_updates true
 
   app "Qobuz.app"
