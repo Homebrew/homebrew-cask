@@ -8,7 +8,7 @@ cask "qqplayer" do
   homepage "https://player.qq.com/"
 
   livecheck do
-    url "https://player.qq.com/"
+    url :homepage
     strategy :page_match
     regex(%r{href=.*?/QQPlayer(\d+(?:\.\d+)*)\.dmg}i)
   end
