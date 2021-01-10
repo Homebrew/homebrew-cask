@@ -4,9 +4,14 @@ cask "focus-booster" do
 
   url "https://dcwy7j973b6zk.cloudfront.net/downloads/stable/focusbooster#{version}.dmg",
       verified: "dcwy7j973b6zk.cloudfront.net/downloads/stable/"
-  appcast "https://www.focusboosterapp.com/download"
   name "Focus Booster"
   homepage "https://www.focusboosterapp.com/"
+
+  livecheck do
+    url "https://www.focusboosterapp.com/download"
+    strategy :page_match
+    regex(%r{href=.*?/focusbooster(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   app "focus booster.app"
 end
