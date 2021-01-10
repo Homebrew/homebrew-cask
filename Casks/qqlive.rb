@@ -7,6 +7,7 @@ cask "qqlive" do
   name "QQLive"
   name "TencentVideo"
   name "腾讯视频"
+  desc "Tencent video streaming and sharing platform"
   homepage "https://v.qq.com/download.html#mac"
 
   auto_updates true
