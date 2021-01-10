@@ -7,7 +7,7 @@ cask "quickboot" do
   homepage "https://buttered-cat.com/product/quickboot/"
 
   livecheck do
-    url "https://buttered-cat.com/product/quickboot/"
+    url :homepage
     strategy :page_match
     regex(%r{href=.*?/QuickBoot-(\d+(?:\.\d+)*-\d+)\.zip}i)
   end
