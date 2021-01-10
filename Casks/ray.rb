@@ -1,6 +1,6 @@
 cask "ray" do
-  version "1.0.1"
-  sha256 "316fbfc6c012d4f965a04b859731f0bdde5575e010034fdfac3a296c70cc7509"
+  version "1.0.7"
+  sha256 "359007ee68c4c6fe7b2814acd808958a3bd59db4f15c9c1f353380d4e764d55d"
 
   url "https://ray-app.s3.eu-west-1.amazonaws.com/Ray-#{version}.dmg",
       verified: "ray-app.s3.eu-west-1.amazonaws.com/"

@@ -128,6 +128,8 @@ name
 desc
 homepage
 
+livecheck
+
 auto_updates
 conflicts_with
 depends_on

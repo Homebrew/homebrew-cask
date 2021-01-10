@@ -4,10 +4,15 @@ cask "gzdoom" do
 
   url "https://github.com/coelckers/gzdoom/releases/download/g#{version}/gzdoom-#{version.dots_to_hyphens}-macOS.dmg",
       verified: "github.com/coelckers/gzdoom/"
-  appcast "https://github.com/coelckers/gzdoom/releases.atom"
   name "gzdoom"
   desc "Adds an OpenGL renderer to the ZDoom source port"
   homepage "https://zdoom.org/index"
+
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^g(\d+(?:\.\d+)*)$/)
+  end
 
   app "GZDoom.app"
 end
