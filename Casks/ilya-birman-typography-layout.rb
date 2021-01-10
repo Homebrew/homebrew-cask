@@ -7,6 +7,12 @@ cask "ilya-birman-typography-layout" do
   desc "Typography keyboard layout"
   homepage "https://ilyabirman.ru/projects/typography-layout/"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/ilya-birman-typolayout-(\d+(?:\.\d+)*)-mac\.dmg}i)
+  end
+
   artifact \
     "Install Ilya Birman Typography Layout.app/Contents/Resources/Layout/Ilya Birman Typography Layout.bundle",
     target: Pathname.new(File.expand_path("~")).join("Library/Keyboard Layouts/Ilya Birman Typography Layout.bundle")
