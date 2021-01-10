@@ -9,9 +9,14 @@ cask "qcad" do
     url "https://www.qcad.org/archives/qcad/qcad-#{version}-trial-macos-10.14-10.15.dmg"
   end
 
-  appcast "https://www.qcad.org/en/download"
   name "QCAD"
   homepage "https://www.qcad.org/"
+
+  livecheck do
+    url "https://www.qcad.org/en/download"
+    strategy :page_match
+    regex(%r{href=.*?/qcad-(\d+(?:\.\d+)*)-trial-macos-10\.14-10\.15\.dmg}i)
+  end
 
   app "QCAD.app"
 end
