@@ -4,10 +4,15 @@ cask "postbox" do
 
   url "https://d3nx85trn0lqsg.cloudfront.net/mac/postbox-#{version}-mac64.dmg",
       verified: "d3nx85trn0lqsg.cloudfront.net/mac/"
-  appcast "https://www.postbox-inc.com/download/success-mac"
   name "Postbox"
   desc "Email client focusing on privacy protection"
   homepage "https://www.postbox-inc.com/"
+
+  livecheck do
+    url "https://www.postbox-inc.com/download/success-mac"
+    strategy :page_match
+    regex(%r{href=.*?/postbox-(\d+(?:\.\d+)*)-mac64\.dmg}i)
+  end
 
   auto_updates true
   depends_on macos: ">= :high_sierra"
