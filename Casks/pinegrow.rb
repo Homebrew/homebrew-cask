@@ -7,7 +7,7 @@ cask "pinegrow" do
   homepage "https://pinegrow.com/"
 
   livecheck do
-    url "https://pinegrow.com/"
+    url :homepage
     strategy :page_match
     regex(%r{href=.*?/PinegrowMac\.(\d+(?:\.\d+)*)\.dmg}i)
   end
