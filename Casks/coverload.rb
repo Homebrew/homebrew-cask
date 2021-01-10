@@ -7,5 +7,11 @@ cask "coverload" do
   name "CoverLoad"
   homepage "https://coverloadapp.com/"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/CoverLoad-(\d+(?:\.\d+)*-\d+)\.zip}i)
+  end
+
   app "CoverLoad.app"
 end
