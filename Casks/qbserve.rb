@@ -7,7 +7,7 @@ cask "qbserve" do
   homepage "https://qotoqot.com/qbserve/"
 
   livecheck do
-    url "https://qotoqot.com/qbserve/"
+    url :homepage
     strategy :page_match
     regex(%r{href=.*?/Qbserve-(\d+(?:\.\d+)*)\.zip}i)
   end
