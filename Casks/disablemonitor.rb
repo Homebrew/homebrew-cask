@@ -9,4 +9,9 @@ cask "disablemonitor" do
   homepage "https://github.com/Eun/DisableMonitor"
 
   app "DisableMonitor.app"
+
+  zap trash: [
+    "~/Library/Caches/eun.DisableMonitor",
+    "~/Library/Preferences/eun.DisableMonitor.plist",
+  ]
 end
