@@ -7,7 +7,7 @@ cask "rosaimagewriter" do
   homepage "http://wiki.rosalab.ru/en/index.php/ROSA_ImageWriter"
 
   livecheck do
-    url "http://wiki.rosalab.ru/en/index.php/ROSA_ImageWriter"
+    url :homepage
     strategy :page_match
     regex(%r{href=.*?/RosaImageWriter-(\d+(?:\.\d+)*)-osx\.dmg}i)
   end
