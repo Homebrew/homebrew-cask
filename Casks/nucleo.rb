@@ -4,9 +4,14 @@ cask "nucleo" do
 
   url "https://nucleo-app-releases.s3.amazonaws.com/mac/Nucleo_#{version}.zip",
       verified: "nucleo-app-releases.s3.amazonaws.com/"
-  appcast "https://nucleoapp.com/updates"
   name "Nucleo"
   homepage "https://nucleoapp.com/"
+
+  livecheck do
+    url "https://nucleoapp.com/updates"
+    strategy :page_match
+    regex(%r{href=.*?/Nucleo_(\d+(?:\.\d+)*)\.zip}i)
+  end
 
   app "Nucleo.app"
 end
