@@ -8,7 +8,7 @@ cask "progressive-downloader" do
   homepage "https://www.macpsd.net/"
 
   livecheck do
-    url "https://www.macpsd.net/"
+    url :homepage
     strategy :page_match
     regex(%r{href=.*?/(\d+(?:\.\d+)*)/PSD\.dmg}i)
   end
