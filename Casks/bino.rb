@@ -10,7 +10,7 @@ cask "bino" do
   livecheck do
     url "http://devernay.free.fr/hacks/bino/"
     strategy :page_match
-    regex(%r{href=.*?Bino-(\d+(?:\.\d+)*)-OSX-Mavericks-GPL\.zip}i)
+    regex(/href=.*?Bino-(\d+(?:\.\d+)*)-OSX-Mavericks-GPL\.zip/i)
   end
 
   app "Bino.app"
