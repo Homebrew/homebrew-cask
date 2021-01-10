@@ -10,7 +10,7 @@ cask "qqlive" do
   homepage "https://v.qq.com/download.html#mac"
 
   livecheck do
-    url "https://v.qq.com/biu/download#Mac"
+    url :homepage
     strategy :page_match
     regex(%r{href=.*?/TencentVideo_V(\d+(?:\.\d+)*)\.dmg}i)
   end
