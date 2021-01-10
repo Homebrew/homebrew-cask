@@ -7,6 +7,12 @@ cask "panic-unison" do
   desc "App to access Usenet Newsgroups"
   homepage "https://panic.com/blog/the-future-of-unison/"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/Unison%20(\d+(?:\.\d+)*)\.zip}i)
+  end
+
   app "Unison.app"
 
   caveats do
