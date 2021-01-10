@@ -24,5 +24,6 @@ cask "geekbench" do
   zap trash: [
     "~/Library/Caches/com.primatelabs.Geekbench#{version.major}",
     "~/Library/Preferences/com.primatelabs.Geekbench#{version.major}.plist",
+    "~/Library/Saved Application State/com.primeatelabs.Geekbench#{version.major}.savedState",
   ]
 end
