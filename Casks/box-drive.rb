@@ -9,7 +9,6 @@ cask "box-drive" do
   homepage "https://www.box.com/drive"
 
   auto_updates true
-
   conflicts_with cask: "box-sync"
 
   pkg "Box.pkg"
