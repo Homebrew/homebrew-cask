@@ -1,6 +1,6 @@
 cask "desktoppr" do
-  version "0.3"
-  sha256 "9a2ef033fd05b3b559af91f8401897ab6311f1a79d71581502c2fa0e9c52e664"
+  version "0.4"
+  sha256 "d4da2ee76007c89ba416930c674b30c77adefba7627b4fc643d3856c93d619ee"
 
   url "https://github.com/scriptingosx/desktoppr/releases/download/v#{version}/desktoppr-#{version}.pkg"
   appcast "https://github.com/scriptingosx/desktoppr/releases.atom"
