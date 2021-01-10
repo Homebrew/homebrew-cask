@@ -8,7 +8,7 @@ cask "prismatik" do
   homepage "https://lightpack.tv/pages/downloads"
 
   livecheck do
-    url "https://lightpack.tv/pages/downloads"
+    url :homepage
     strategy :page_match
     regex(%r{href=.*?/Prismatik_(\d+(?:\.\d+)*)_signed\.dmg}i)
   end
