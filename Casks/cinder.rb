@@ -1,6 +1,6 @@
 cask "cinder" do
-  version "0.9.1"
-  sha256 "41e85a595b17181ef46309d44fb5790de93ddf4a7abb5c7261b5a3ba87563337"
+  version "0.9.2"
+  sha256 "b7576cc0259380d2730258f54021dfc2482f00413c005593e566eadf145e2381"
 
   url "https://libcinder.org/static/releases/cinder_#{version}_mac.zip"
   appcast "https://github.com/cinder/cinder/releases.atom"
