@@ -8,5 +8,11 @@ cask "handylock" do
   desc "Desktop software for Harmony devices"
   homepage "http://www.netputing.com/applications/handylock/"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/handyLock\+v?(\d+(?:\.\d+)*)\.zip}i)
+  end
+
   app "handyLock.app"
 end
