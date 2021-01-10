@@ -4,9 +4,14 @@ cask "datovka" do
 
   url "https://secure.nic.cz/files/datove_schranky/#{version}/datovka-#{version}-64bit-macos10.12.dmg",
       verified: "secure.nic.cz/files/datove_schranky/"
-  appcast "https://www.datovka.cz/cs/pages/instalace.html"
   name "Datovka"
   homepage "https://www.datovka.cz/"
+
+  livecheck do
+    url "https://www.datovka.cz/cs/pages/instalace.html"
+    strategy :page_match
+    regex(%r{href=.*?/datovka-(\d+(?:\.\d+)*)-64bit-macos10\.12\.dmg}i)
+  end
 
   app "datovka.app"
 end
