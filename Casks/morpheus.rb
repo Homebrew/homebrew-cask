@@ -4,10 +4,15 @@ cask "morpheus" do
 
   url "https://imc.zih.tu-dresden.de/morpheus/packages/mac/Morpheus_#{version}.dmg",
       verified: "imc.zih.tu-dresden.de/morpheus/packages/mac/"
-  appcast "https://morpheus.gitlab.io/download/"
   name "Morpheus"
   desc "Modelling environment for multi-cellular systems biology"
   homepage "https://morpheus.gitlab.io/"
+
+  livecheck do
+    url "https://morpheus.gitlab.io/download/"
+    strategy :page_match
+    regex(%r{href=.*?/Morpheus_(\d+(?:\.\d+)*\.b\d+)\.dmg}i)
+  end
 
   conflicts_with cask: "homebrew/cask-versions/morpheus-beta"
 
