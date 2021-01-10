@@ -4,10 +4,15 @@ cask "nally" do
 
   url "https://yllan.github.io/nally/download/Nally-#{version}.app.zip",
       verified: "yllan.github.io/nally/"
-  appcast "https://yllan.org/app/Nally/"
   name "Nally"
   desc "Beautiful telnet/ssh client optimized for Mandarin BBS"
   homepage "https://yllan.org/app/Nally/"
+
+  livecheck do
+    url "https://yllan.org/app/Nally/"
+    strategy :page_match
+    regex(%r{href=.*?/Nally-(\d+(?:\.\d+)*)\.app\.zip}i)
+  end
 
   app "Nally.app"
 end
