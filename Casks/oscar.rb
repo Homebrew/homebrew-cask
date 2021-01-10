@@ -4,9 +4,14 @@ cask "oscar" do
 
   url "https://www.apneaboard.com/OSCAR/OSCAR-#{version}.dmg",
       verified: "apneaboard.com/OSCAR/"
-  appcast "https://www.sleepfiles.com/OSCAR/"
   name "OSCAR"
   homepage "https://www.sleepfiles.com/OSCAR/"
+
+  livecheck do
+    url "https://www.sleepfiles.com/OSCAR/"
+    strategy :page_match
+    regex(%r{href=.*?/OSCAR-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   app "OSCAR.app"
 end
