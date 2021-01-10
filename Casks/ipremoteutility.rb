@@ -7,7 +7,7 @@ cask "ipremoteutility" do
   homepage "https://www.flandersscientific.com/ip-remote/"
 
   livecheck do
-    url "https://flandersscientific.com/ip-remote/"
+    url :homepage
     strategy :page_match
     regex(%r{href=.*?/IPRemoteUtility-(\d+(?:\.\d+)*)-macOSX\.zip}i)
   end
