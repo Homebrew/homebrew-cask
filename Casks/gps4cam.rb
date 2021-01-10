@@ -4,9 +4,14 @@ cask "gps4cam" do
 
   url "http://diguet.fr/gps4cam_EN/gps4cam/Download_files/gps4cam_V#{version}.dmg",
       verified: "diguet.fr/gps4cam_EN/gps4cam/"
-  appcast "http://gps4cam.com/"
   name "gps4cam"
   homepage "http://gps4cam.com/"
+
+  livecheck do
+    url "http://gps4cam.com/"
+    strategy :page_match
+    regex(%r{href=.*?/gps4cam_V(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   app "gps4cam.app"
 end
