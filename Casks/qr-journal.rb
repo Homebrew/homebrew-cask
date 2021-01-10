@@ -8,7 +8,7 @@ cask "qr-journal" do
   homepage "https://www.joshjacob.com/mac-development/qrjournal.php"
 
   livecheck do
-    url "https://www.joshjacob.com/mac-development/qrjournal.php"
+    url :homepage
     strategy :page_match
     regex(%r{href=.*?/QRJournal(\d+(?:\.\d+)*)\.dmg}i)
   end
