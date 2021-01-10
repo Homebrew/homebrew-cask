@@ -7,7 +7,7 @@ cask "presentation" do
   homepage "http://iihm.imag.fr/blanch/software/osx-presentation/"
 
   livecheck do
-    url "http://iihm.imag.fr/blanch/software/osx-presentation/"
+    url :homepage
     strategy :page_match
     regex(%r{href=.*?/osx-presentation-(\d+(?:\.\d+)*)\.pkg}i)
   end
