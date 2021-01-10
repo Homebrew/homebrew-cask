@@ -3,9 +3,14 @@ cask "doxygen" do
   sha256 "df9c647f2d9cad1cd271f00a7662400b3f73e4569abfa231e350b5daaa97fe67"
 
   url "https://doxygen.nl/files/Doxygen-#{version}.dmg"
-  appcast "https://www.doxygen.nl/download.html"
   name "Doxygen"
   homepage "https://www.doxygen.nl/"
+
+  livecheck do
+    url "https://www.doxygen.nl/download.html"
+    strategy :page_match
+    regex(%r{href=.*?/Doxygen-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   app "Doxygen.app"
 end
