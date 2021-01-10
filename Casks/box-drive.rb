@@ -8,6 +8,7 @@ cask "box-drive" do
   desc "Client for the Box cloud storage service"
   homepage "https://www.box.com/drive"
 
+  auto_updates true
   conflicts_with cask: "box-sync"
 
   pkg "Box.pkg"
