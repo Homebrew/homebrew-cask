@@ -3,9 +3,14 @@ cask "ivpn" do
   sha256 "b955b230977d64b45cb81b6f4a31b8f42dbc864b98bc91202f46a495c89b3d21"
 
   url "https://cdn.ivpn.net/releases/osx/IVPN-#{version}.dmg"
-  appcast "https://www.ivpn.net/setup/mac-changelog.html"
   name "IVPN"
   homepage "https://www.ivpn.net/apps-macos"
+
+  livecheck do
+    url "https://www.ivpn.net/setup/mac-changelog.html"
+    strategy :page_match
+    regex(%r{href=.*?/IVPN-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   auto_updates true
 
