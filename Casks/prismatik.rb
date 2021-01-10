@@ -4,9 +4,14 @@ cask "prismatik" do
 
   url "https://woodenshark.com/4lightpack/Prismatik_#{version}_signed.dmg",
       verified: "woodenshark.com/4lightpack/"
-  appcast "https://lightpack.tv/pages/downloads"
   name "Prismatik"
   homepage "https://lightpack.tv/pages/downloads"
+
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/Prismatik_(\d+(?:\.\d+)*)_signed\.dmg}i)
+  end
 
   app "Prismatik.app"
 end
