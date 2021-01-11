@@ -7,6 +7,12 @@ cask "vb-cable" do
   desc "Virtual audio cable for routing audio from one application to another"
   homepage "https://www.vb-audio.com/Cable/index.htm"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/VBCable_MACDriver_Pack(\d+)\.dmg}i)
+  end
+
   pkg "vb-cable-installer.pkg"
 
   uninstall launchctl: "com.vbaudio.vbcableagent",
