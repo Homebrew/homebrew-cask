@@ -9,6 +9,8 @@ cask "canva" do
   desc "Design tool"
   homepage "https://www.canva.com/"
 
+  auto_updates true
+
   app "Canva.app"
 
   zap trash: [
