@@ -9,6 +9,11 @@ cask "telegram-desktop" do
   desc "Desktop client for Telegram messenger"
   homepage "https://desktop.telegram.org/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
   conflicts_with cask: "homebrew/cask-versions/telegram-desktop-dev"
 
