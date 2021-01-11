@@ -7,5 +7,11 @@ cask "space-saver" do
   desc "Delete local Time Machine backups"
   homepage "https://www.mariogt.com/space-saver.html"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{Download Space Saver \(ver (\d+(?:\.\d+)*)\)}i)
+  end
+
   app "Space Saver.app"
 end
