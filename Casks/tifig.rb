@@ -4,9 +4,14 @@ cask "tifig" do
 
   url "https://tifig-downloads.s3.amazonaws.com/tifig-#{version}-macosx.cocoa.x86_64.tar.gz",
       verified: "tifig-downloads.s3.amazonaws.com/"
-  appcast "https://www.tifig.net/download/"
   name "Tifig"
   homepage "https://www.tifig.net/"
+
+  livecheck do
+    url "https://www.tifig.net/download/"
+    strategy :page_match
+    regex(%r{href=.*?/tifig-(\d+(?:\.\d+)*-\d+)-macosx\.cocoa\.x86_64\.tar\.gz}i)
+  end
 
   app "Tifig.app"
 end
