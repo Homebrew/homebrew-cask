@@ -7,7 +7,7 @@ cask "xrg" do
   homepage "https://gauchosoft.com/Products/XRG/"
 
   livecheck do
-    url "https://gauchosoft.com/Products/XRG/"
+    url :homepage
     strategy :page_match
     regex(%r{href=.*?/XRG-release-(\d+(?:\.\d+)*)\.zip}i)
   end
