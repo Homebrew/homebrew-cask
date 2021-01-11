@@ -8,7 +8,7 @@ cask "touchosc-bridge" do
   homepage "https://hexler.net/software/touchosc"
 
   livecheck do
-    url "https://hexler.net/software/touchosc"
+    url :homepage
     strategy :page_match
     regex(%r{href=.*?/touchosc-bridge-(\d+(?:\.\d+)*)-macos\.zip}i)
   end
