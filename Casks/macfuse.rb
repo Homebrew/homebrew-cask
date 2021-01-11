@@ -3,7 +3,7 @@ cask "macfuse" do
   sha256 "6365d10c9e388ac7a91fe1e65d54694faad69149f421125eaddfff07d48763ea"
 
   url "https://github.com/osxfuse/osxfuse/releases/download/macfuse-#{version}/macfuse-#{version}.dmg",
-      verified: "github.com/osxfuse/"
+      verified: "github.com/osxfuse/osxfuse/"
   appcast "https://github.com/osxfuse/osxfuse/releases.atom"
   name "macFUSE"
   desc "File system integration"
