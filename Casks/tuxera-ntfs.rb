@@ -8,7 +8,7 @@ cask "tuxera-ntfs" do
   homepage "https://ntfsformac.tuxera.com/"
 
   livecheck do
-    url "https://ntfsformac.tuxera.com/"
+    url :homepage
     strategy :page_match
     regex(%r{href=.*?/tuxerantfs_(\d+)\.dmg}i)
   end
