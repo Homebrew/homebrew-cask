@@ -7,7 +7,7 @@ cask "tn3270-x" do
   homepage "https://www.brown.edu/cis/tn3270/index.html"
 
   livecheck do
-    url "https://www.brown.edu/cis/tn3270/index.html"
+    url :homepage
     strategy :page_match
     regex(%r{href=.*?/tn3270_X_(\d+(?:\.\d+)*)\.dmg}i)
   end
