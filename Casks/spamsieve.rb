@@ -8,7 +8,7 @@ cask "spamsieve" do
   homepage "https://c-command.com/spamsieve/"
 
   livecheck do
-    url "https://c-command.com/spamsieve/"
+    url :homepage
     strategy :page_match
     regex(%r{href=.*?/SpamSieve-(\d+(?:\.\d+)*)\.dmg}i)
   end
