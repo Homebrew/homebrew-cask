@@ -7,7 +7,7 @@ cask "wakeonlan" do
   homepage "https://www.readpixel.com/wakeonlan/"
 
   livecheck do
-    url "https://www.readpixel.com/wakeonlan/"
+    url :homepage
     strategy :page_match
     regex(%r{href=.*?/WakeOnLan(\d+(?:\.\d+)*)\.zip}i)
   end
