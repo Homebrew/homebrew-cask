@@ -7,6 +7,12 @@ cask "smlnj" do
   name "Standard ML of New Jersey"
   homepage "https://www.smlnj.org/"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/smlnj-amd64-(\d+(?:\.\d+)*)\.pkg}i)
+  end
+
   pkg "smlnj-amd64-#{version}.pkg"
 
   uninstall pkgutil: "org.smlnj.amd64.pkg"
