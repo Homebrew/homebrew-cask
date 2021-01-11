@@ -4,7 +4,7 @@ cask "space-saver" do
 
   url "https://www.mariogt.com/appsChest/SpaceSaver#{version.dots_to_hyphens}.zip"
   name "Space Saver"
-  desc "Lets you  delete the local Time Machine Backups"
+  desc "Delete local Time Machine backups"
   homepage "https://www.mariogt.com/space-saver.html"
 
   app "Space Saver.app"
