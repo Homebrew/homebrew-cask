@@ -6,5 +6,11 @@ cask "squadanimatorsoccer" do
   name "SquadAnimator Soccer"
   homepage "https://www.squadanimator.com/"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/SquadAnimatorSoccerOSX-(\d+(?:\.\d+)*)\.zip}i)
+  end
+
   app "SquadAnimatorSoccer-#{version}.app"
 end
