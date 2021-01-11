@@ -4,9 +4,14 @@ cask "supertuxkart" do
 
   url "https://downloads.sourceforge.net/supertuxkart/SuperTuxKart-#{version}-mac.zip",
       verified: "sourceforge.net/supertuxkart/"
-  appcast "https://supertuxkart.net/Download"
   name "SuperTuxKart"
   homepage "https://supertuxkart.net/Main_Page"
+
+  livecheck do
+    url "https://supertuxkart.net/Download"
+    strategy :page_match
+    regex(%r{href=.*?/SuperTuxKart-(\d+(?:\.\d+)*)-mac\.zip}i)
+  end
 
   app "SuperTuxKart.app"
 end
