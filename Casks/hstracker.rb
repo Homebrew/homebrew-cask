@@ -4,7 +4,6 @@ cask "hstracker" do
 
   url "https://github.com/HearthSim/HSTracker/releases/download/#{version}/HSTracker.app.zip",
       verified: "github.com/HearthSim/HSTracker/"
-  appcast "https://github.com/HearthSim/HSTracker/releases.atom"
   name "Hearthstone Deck Tracker"
   desc "Deck tracker and deck manager for Hearthstone"
   homepage "https://hsdecktracker.net/"
