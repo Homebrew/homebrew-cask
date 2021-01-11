@@ -18,11 +18,7 @@ cask "slack" do
   homepage "https://slack.com/"
 
   livecheck do
-    if Hardware::CPU.intel?
-      url "https://slack.com/ssb/download-osx"
-    else
-      url "https://slack.com/ssb/download-osx-silicon"
-    end
+    url "https://slack.com/ssb/download-osx"
     strategy :header_match
   end
 
