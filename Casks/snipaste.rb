@@ -5,7 +5,7 @@ cask "snipaste" do
   url "https://bitbucket.org/liule/snipaste/downloads/Snipaste-#{version}.dmg",
       verified: "bitbucket.org/liule/snipaste/"
   name "Snipaste"
-  desc "Tool for snip or pin the screenshot"
+  desc "Snip or pin screenshots"
   homepage "https://www.snipaste.com/"
 
   livecheck do
