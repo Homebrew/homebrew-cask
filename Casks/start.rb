@@ -5,7 +5,7 @@ cask "start" do
   url "https://imgcdn.start.qq.com/cdn/mac.client/installer/START-Installer-#{version}.dmg?"
   name "START"
   name "腾讯云游戏"
-  desc "Tencent Cloud Gaming Platform"
+  desc "Tencent cloud gaming platform"
   homepage "https://start.qq.com/"
 
   auto_updates true
