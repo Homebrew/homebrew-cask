@@ -1,8 +1,8 @@
 cask "burn" do
-  version "2.7.10"
-  sha256 "2cffd7b897a906d1aac1cbb6b876b3cb52a403a5d340e620cb9bbfd02242680d"
+  version "3.0.3"
+  sha256 "90350b61f769b3022aa649d2a80572bada707cb951fc43d0d499e66cb26e1cc4"
 
-  url "https://downloads.sourceforge.net/burn-osx/Burn/#{version}/burn-#{version}.zip",
+  url "https://downloads.sourceforge.net/burn-osx/Burn/#{version}/Burn-#{version}.zip",
       verified: "downloads.sourceforge.net/burn-osx/"
   appcast "https://sourceforge.net/projects/burn-osx/rss?path=/Burn"
   name "Burn"
