@@ -4,10 +4,14 @@ cask "hammerspoon" do
 
   url "https://github.com/Hammerspoon/hammerspoon/releases/download/#{version}/Hammerspoon-#{version}.zip",
       verified: "github.com/Hammerspoon/hammerspoon/"
-  appcast "https://github.com/Hammerspoon/hammerspoon/releases.atom"
   name "Hammerspoon"
   desc "Desktop automation application"
   homepage "https://www.hammerspoon.org/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
 
