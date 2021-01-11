@@ -7,6 +7,12 @@ cask "widelands" do
   name "Widelands"
   homepage "https://www.widelands.org/"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/widelands_10\.9_build-(\d+)\.dmg}i)
+  end
+
   app "Widelands.app"
 
   zap trash: "~/.widelands"
