@@ -8,7 +8,7 @@ cask "transnomino" do
   homepage "https://transnomino.bastiaanverreijt.com/"
 
   livecheck do
-    url "https://transnomino.bastiaanverreijt.com/"
+    url :homepage
     strategy :page_match
     regex(%r{href=.*?/Transnomino-(\d+(?:\.\d+)*)\.dmg}i)
   end
