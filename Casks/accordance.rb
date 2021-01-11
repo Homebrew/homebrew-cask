@@ -4,7 +4,7 @@ cask "accordance" do
 
   url "https://accordancefiles1.com/products/Accordance_#{version}.dmg",
       verified: "accordancefiles1.com/"
-  appcast "https://accordancefiles1.com/xml/appcast_13.xml"
+  appcast "https://accordancefiles1.com/xml/appcast_#{version.major}.xml"
   name "Accordance Bible Software"
   desc "Bible study software"
   homepage "https://www.accordancebible.com/"
