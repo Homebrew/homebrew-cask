@@ -9,5 +9,5 @@ cask "burn" do
   desc "CD burning application"
   homepage "https://burn-osx.sourceforge.io/"
 
-  app "Burn/Burn.app"
+  app "Burn.localized/Burn.app"
 end
