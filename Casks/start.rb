@@ -6,7 +6,7 @@ cask "start" do
   name "START"
   name "腾讯云游戏"
   desc "Tencent Cloud Gaming Platform"
-  homepage "https://start.qq.com"
+  homepage "https://start.qq.com/"
 
   auto_updates true
   depends_on macos: ">= :sierra"
