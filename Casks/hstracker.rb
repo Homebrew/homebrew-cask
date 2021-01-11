@@ -9,6 +9,11 @@ cask "hstracker" do
   desc "Deck tracker and deck manager for Hearthstone"
   homepage "https://hsdecktracker.net/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "HSTracker.app"
 
   zap trash: [
