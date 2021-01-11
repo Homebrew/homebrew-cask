@@ -3,9 +3,14 @@ cask "udig" do
   sha256 "b01e08bc9067a5d584c223293ba2d536a14487327fc73866836f67089545a99a"
 
   url "http://udig.refractions.net/files/downloads/udig-#{version}.macosx.cocoa.x86_64.dmg"
-  appcast "http://udig.refractions.net/download/"
   name "uDig"
   homepage "http://udig.refractions.net/"
+
+  livecheck do
+    url "http://udig.refractions.net/download/"
+    strategy :page_match
+    regex(%r{href=.*?/udig-(\d+(?:\.\d+)*)\.macosx\.cocoa\.x86_64\.dmg}i)
+  end
 
   suite "udig"
 
