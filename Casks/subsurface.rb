@@ -9,10 +9,15 @@ cask "subsurface" do
     url "https://subsurface-divelog.org/downloads/Subsurface-#{version}-10.15+11.0.dmg"
   end
 
-  appcast "https://subsurface.github.io/download/"
   name "Subsurface"
   desc "Open source divelog program"
   homepage "https://subsurface-divelog.org/"
+
+  livecheck do
+    url "https://subsurface.github.io/download/"
+    strategy :page_match
+    regex(%r{href=.*?/Subsurface-(\d+(?:\.\d+)*)-10\.15\+11\.0\.dmg}i)
+  end
 
   app "Subsurface.app"
 end
