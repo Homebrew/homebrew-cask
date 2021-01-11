@@ -8,7 +8,7 @@ cask "tnefs-enough" do
   homepage "https://www.joshjacob.com/mac-development/tnef.php"
 
   livecheck do
-    url "https://www.joshjacob.com/mac-development/tnef.php"
+    url :homepage
     strategy :page_match
     regex(%r{href=.*?/TNEF(\d+(?:\.\d+)*)\.dmg}i)
   end
