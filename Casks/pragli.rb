@@ -10,4 +10,11 @@ cask "pragli" do
   homepage "https://pragli.com/"
 
   app "Pragli.app"
+
+  zap trash: [
+    "~/Library/Application Support/Pragli",
+    "~/Library/Logs/Pragli",
+    "~/Library/Preferences/pragli.com.plist",
+    "~/Library/Saved Application State/pragli.com.savedState",
+  ]
 end
