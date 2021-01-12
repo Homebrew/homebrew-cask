@@ -1,6 +1,6 @@
 cask "videofusion" do
-  version "1.0.2.0"
-  sha256 "5e743f3cc0c8c66c03811e576f19642ca0a0d4423e71a9ad8a6365a8cc3986fb"
+  version "1.0.3.0"
+  sha256 "94227bfaed6b53ecf851c7f550287658ce6fc65997e3b487b2316c09be3f46b8"
 
   url "https://lf3-faceucdn-tos.pstatp.com/obj/faceu-packages/Jianying_Pro_#{version.dots_to_underscores}.pkg",
       verified: "lf3-faceucdn-tos.pstatp.com/obj/faceu-packages/"
