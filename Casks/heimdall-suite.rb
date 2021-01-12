@@ -25,6 +25,6 @@ cask "heimdall-suite" do
   ]
 
   caveats do
-    reboot
+    kext
   end
 end
