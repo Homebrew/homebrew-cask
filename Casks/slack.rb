@@ -7,7 +7,7 @@ cask "slack" do
     url "https://downloads.slack-edge.com/releases/macos/#{version}/prod/x64/Slack-#{version}-macOS.dmg",
         verified: "downloads.slack-edge.com/"
   else
-    sha256 "d4f0fac98143c3f2db1a6883f3221c65deab704b9a13543de8fc5bf771b6c8ae"
+    sha256 "fc1b5c1968d57b9388863c2314450fe8d761e2052ae8d367a0e85b3fc9370604"
 
     url "https://downloads.slack-edge.com/releases/macos/#{version}/prod/arm64/Slack-#{version}-macOS.dmg",
         verified: "downloads.slack-edge.com/"
