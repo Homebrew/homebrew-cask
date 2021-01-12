@@ -1,6 +1,6 @@
 cask "tla-plus-toolbox" do
-  version "1.7.0"
-  sha256 "66ee35f952fd80239cbf3c7e869bd0315234165677efc2a0f00d2a00ac1c6512"
+  version "1.7.1"
+  sha256 "78e7d0ecbcba63ef7f13f9f315bfb0365a4f1d952caaa11a0a6f86a1bae5ac99"
 
   url "https://github.com/tlaplus/tlaplus/releases/download/v#{version}/TLAToolbox-#{version}-macosx.cocoa.x86_64.zip",
       verified: "github.com/tlaplus/tlaplus/"
