@@ -52,12 +52,10 @@ cask "sketchup-pro" do
 
   # downloads can be found at https://sketchup.com/download/all
   url "https://www.sketchup.com/sketchup/SketchUpPro-#{language}-dmg"
-  appcast "https://help.sketchup.com/en/release-notes-0"
+  appcast "https://help.sketchup.com/en/release-notes"
   name "SketchUp"
   desc "3D visualization software"
   homepage "https://www.sketchup.com/"
 
-  installer manual: "Double-Click to Install Sketchup.app"
-
-  uninstall delete: "/Applications/SketchUp #{version.after_comma}"
+  suite "SketchUp #{version.after_comma.major}"
 end
