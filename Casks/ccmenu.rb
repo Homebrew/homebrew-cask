@@ -1,6 +1,6 @@
 cask "ccmenu" do
-  version "14.0"
-  sha256 "6e8c88c0de1db8206274109011db37b7ce53d63fdbed11de0057f967d7959976"
+  version "15.0d1"
+  sha256 "39e127b79392a3476adda15ee72c47d0512f42e2b185eebd0ac91eff7081a1ee"
 
   url "https://github.com/erikdoe/ccmenu/releases/download/v#{version}/CCMenu.app.zip",
       verified: "github.com/erikdoe/ccmenu/"
