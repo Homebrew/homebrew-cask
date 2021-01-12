@@ -10,7 +10,7 @@ cask "space-saver" do
   livecheck do
     url :homepage
     strategy :page_match
-    regex(%r{Download Space Saver \(ver (\d+(?:\.\d+)*)\)}i)
+    regex(/Download Space Saver \(ver (\d+(?:\.\d+)*)\)/i)
   end
 
   app "Space Saver.app"
