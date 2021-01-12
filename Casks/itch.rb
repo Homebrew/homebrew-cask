@@ -1,6 +1,6 @@
 cask "itch" do
-  version "1.18.0"
-  sha256 "cfc76d52483d3e649026f29ddb6f136207964ea54eee996ee62a7a4e17326e05"
+  version "1.24.0"
+  sha256 "21fce1377d66a3bcb84c0e8be6d9f16a7149e52980690c8fc5e8663074d4d32e"
 
   url "https://broth.itch.ovh/itch-setup/darwin-amd64/#{version}/archive/default",
       verified: "broth.itch.ovh/"
