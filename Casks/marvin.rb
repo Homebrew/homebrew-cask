@@ -13,4 +13,10 @@ cask "marvin" do
   end
 
   app "Marvin.app"
+
+  zap trash: [
+    "~/Library/Application Support/Marvin",
+    "~/Library/Logs/Marvin",
+    "~/Library/Preferences/com.amazingmarvin.marvindesktop.plist",
+  ]
 end
