@@ -17,8 +17,8 @@ cask "keysmith" do
   app "Keysmith.app"
 
   zap trash: [
-    "~/Library/Keysmith",
     "~/Library/Caches/app.keysmith.Keysmith",
+    "~/Library/Keysmith",
     "~/Library/Preferences/app.keysmith.Keysmith.plist",
   ]
 end
