@@ -1,6 +1,6 @@
 cask "convert3dgui" do
-  version "1.0.0"
-  sha256 "f90fc3732578e9c9378e6d9340611ab93955f8ee182af1a59edac55f8df4b728"
+  version "1.1.0"
+  sha256 "db5b43ab64f8a24c786b61e3eaeaee41620e814f36514afe904559b91ca6b65b"
 
   url "https://downloads.sourceforge.net/c3d/c3d-#{version}-MacOS-x86_64.dmg"
   appcast "https://sourceforge.net/projects/c3d/rss?path=/c3d/#{version}"
