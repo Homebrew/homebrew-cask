@@ -10,4 +10,14 @@ cask "tropy" do
   homepage "https://tropy.org/"
 
   app "Tropy.app"
+
+  zap trash: [
+    "~/Library/Application Support/Tropy",
+    "~/Library/Caches/Tropy",
+    "~/Library/Caches/org.tropy.tropy",
+    "~/Library/Caches/org.tropy.tropy.ShipIt",
+    "~/Library/Logs/Tropy",
+    "~/Library/Preferences/org.tropy.tropy.plist",
+    "~/Library/Saved Application State/org.tropy.tropy.savedState",
+  ]
 end
