@@ -1,6 +1,6 @@
 cask "tencent-meeting" do
-  version "2.4.0.449,b24d54ce3ffe7ebdde808978d1af5b9d"
-  sha256 "aab20ef8b7a121cff2c52af016104219ce993482ab7ce3ef5e07c612b0de985d"
+  version "2.6.0.498,8879f4061090bb94c3c2c07c79c0446d"
+  sha256 "889037986756dc354ad3f77d77082be649ebcea7765828f6187c54fe0feee11b"
 
   url "https://updatecdn.meeting.qq.com/#{version.after_comma}/TencentMeeting_0300000000_#{version.before_comma}.publish.dmg",
       verified: "qq.com/"
