@@ -10,7 +10,8 @@ cask "hammerspoon" do
 
   livecheck do
     url :url
-    strategy :github_latest
+    strategy :git
+    regex(/^(\d+(?:\.\d+)*)$/)
   end
 
   auto_updates true
