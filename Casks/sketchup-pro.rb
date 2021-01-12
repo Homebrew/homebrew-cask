@@ -52,7 +52,8 @@ cask "sketchup-pro" do
 
   # downloads can be found at https://sketchup.com/download/all
   url "https://www.sketchup.com/sketchup/SketchUpPro-#{language}-dmg"
-  appcast "https://help.sketchup.com/en/release-notes"
+  appcast "https://help.sketchup.com/en/release-notes",
+          must_contain: version.after_comma.major_minor
   name "SketchUp"
   desc "3D visualization software"
   homepage "https://www.sketchup.com/"
