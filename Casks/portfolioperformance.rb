@@ -1,8 +1,8 @@
 cask "portfolioperformance" do
-  version "0.49.4"
+  version "0.50.0"
 
   if MacOS.version <= :catalina
-    sha256 "22f8e8c18a755b9a2ae06a22b3a8b30e3fe1cd14b41cbcdd4119bf45e6cc5225"
+    sha256 "bbaf1feb4de2a92523495b0b7e7537016087f3051015aa646fe033eb95083b8b"
 
     url "https://github.com/buchen/portfolio/releases/download/#{version}/PortfolioPerformance-#{version}.dmg",
         verified: "github.com/buchen/portfolio/"
