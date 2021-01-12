@@ -58,4 +58,15 @@ cask "sketchup-pro" do
   homepage "https://www.sketchup.com/"
 
   suite "SketchUp #{version.after_comma.major}"
+
+  zap trash: [
+    "~/Library/Application Support/SketchUp #{version.after_comma.major}",
+    "~/Library/Preferences/com.sketchup.LayOut.#{version.after_comma.major}.plist",
+    "~/Library/Preferences/com.sketchup.SketchUp.#{version.after_comma.major}.plist",
+    "~/Library/Preferences/com.sketchup.StyleBuilder.#{version.after_comma.major}.plist",
+    "~/Library/Preferences/Trimble.SketchUp-Helper.plist",
+    "~/Library/Caches/com.sketchup.LayOut.#{version.after_comma.major}",
+    "~/Library/Caches/com.sketchup.SketchUp.#{version.after_comma.major}",
+    "~/Library/Caches/com.sketchup.StyleBuilder.#{version.after_comma.major}",
+  ]
 end
