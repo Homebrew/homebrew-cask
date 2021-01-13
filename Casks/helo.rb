@@ -15,9 +15,9 @@ cask "helo" do
   app "HELO.app"
 
   zap trash: [
-               "~/Library/Application Support/HELO",
-               "~/Library/Logs/HELO",
-               "~/Library/Preferences/de.beyondco.helo.plist",
-               "~/Library/Saved Application State/de.beyondco.helo.savedState",
-             ]
+    "~/Library/Application Support/HELO",
+    "~/Library/Logs/HELO",
+    "~/Library/Preferences/de.beyondco.helo.plist",
+    "~/Library/Saved Application State/de.beyondco.helo.savedState",
+  ]
 end
