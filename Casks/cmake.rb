@@ -4,6 +4,7 @@ cask "cmake" do
 
   url "https://cmake.org/files/LatestRelease/cmake-#{version}-macos-universal.dmg"
   name "CMake"
+  desc "Cross-platform make"
   homepage "https://cmake.org/"
 
   livecheck do
