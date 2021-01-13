@@ -1,17 +1,17 @@
 cask "securesafe" do
-  version "2.8.0"
-  sha256 "1e193ae806896b304fc4ce4c62e1bb3b0c3db07650924f94b7baed7803f5e372"
+  version "2.9.1"
+  sha256 "ba2f8c5efa5489b2f6c60b6fd913de6de05388818ff24d3e330ca266d6f33bdf"
 
-  url "https://www.dswiss.com/userdata/downloads/securesafe-#{version}.pkg",
+  url "https://www.dswiss.com/userdata/downloads/SecureSafe_#{version}.pkg",
       verified: "dswiss.com/userdata/downloads/"
   appcast "https://www.securesafe.com/en/downloads/"
   name "SecureSafe"
-  desc "Secure online storage"
+  desc "Highly secure online storage with password manager"
   homepage "https://www.securesafe.com/"
 
   depends_on macos: ">= :sierra"
 
-  pkg "SecureSafe-#{version}.pkg"
+  pkg "SecureSafe_#{version}.pkg"
 
   uninstall pkgutil: [
     "com.dswiss.securesafe.pkg.sync",
