@@ -9,7 +9,7 @@ cask "tinkerwell" do
   livecheck do
     url "https://download.tinkerwell.app/tinkerwell/latest-mac.yml"
     strategy :page_match
-    regex(/^version: (.+)/i)
+    regex(/version:\s*(\d+(?:\.\d+)*)/i)
   end
 
   auto_updates true
