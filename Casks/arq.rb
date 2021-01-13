@@ -21,6 +21,7 @@ cask "arq" do
 
   zap trash: [
     "/Library/Application Support/ArqAgentAPFS",
-    "/Library/Application Support/ArqAgent"
+    "/Library/Application Support/ArqAgent",
+    "~/Library/Application Support/Arq 6",
   ]
 end
