@@ -1,9 +1,18 @@
 cask "zoom" do
   version "5.4.59931.0110"
-  sha256 "56ee2b60afbe3a949913843263871df26e080b2475b304185a0817d434c971f2"
 
-  url "https://d11yldzmag5yn.cloudfront.net/prod/#{version}/Zoom.pkg",
-      verified: "d11yldzmag5yn.cloudfront.net/"
+  if Hardware::CPU.intel?
+    sha256 "56ee2b60afbe3a949913843263871df26e080b2475b304185a0817d434c971f2"
+
+    url "https://d11yldzmag5yn.cloudfront.net/prod/#{version}/Zoom.pkg",
+        verified: "d11yldzmag5yn.cloudfront.net/"
+  else
+    sha256 "a9cfb7eb44476068771be9d699984e27fe4fccc8c6df53c16082a695e11d3036"
+
+    url "https://d11yldzmag5yn.cloudfront.net/prod/#{version}/arm64/Zoom.pkg",
+        verified: "d11yldzmag5yn.cloudfront.net/"
+  end
+
   name "Zoom.us"
   desc "Video communication and virtual meeting platform"
   homepage "https://www.zoom.us/"
