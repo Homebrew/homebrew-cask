@@ -1,9 +1,10 @@
 cask "deadbeef" do
-  version :latest
+  version "1.0,fd1a0f9"
   sha256 :no_check
 
   url "https://downloads.sourceforge.net/deadbeef/travis/osx/master/deadbeef-devel-osx-x86_64.zip",
       verified: "downloads.sourceforge.net/deadbeef/"
+  appcast "https://sourceforge.net/projects/deadbeef/rss?path=/travis/osx/master"
   name "DeaDBeeF"
   desc "Modular audio player"
   homepage "https://deadbeef.sourceforge.io/"
