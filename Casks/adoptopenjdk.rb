@@ -8,14 +8,12 @@ cask "adoptopenjdk" do
   name "AdoptOpenJDK Java Development Kit"
   homepage "https://adoptopenjdk.net/"
 
-  major_version = version.major
   livecheck do
-    url "https://github.com/AdoptOpenJDK/openjdk#{major_version}-binaries.git"
-    regex(/^jdk-(\d+(?:\.\d)*)\+(\d+(?:\.\d)*)$/i)
-    strategy :git do |tags, regex|
+    url "https://github.com/AdoptOpenJDK/openjdk#{version.major}-binaries.git"
+    strategy :git do |tags|
       tags.map do |tag|
-        match = tag.match(regex)
-        "#{match[1]},#{match[2]}" if match.present?
+        match = tag[/^jdk-(\d+(?:\.\d)*)\+(\d+(?:\.\d)*)$/i, 1]
+        "#{match[1]},#{match[2]}" if match
       end.compact
     end
   end
