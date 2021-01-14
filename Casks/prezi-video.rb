@@ -11,11 +11,11 @@ cask "prezi-video" do
 
   uninstall quit:      "com.prezi.PreziCast",
             launchctl: "com.prezi.prezivideo.vcam.assistant",
-            pkgutil: [
+            pkgutil:   [
               "com.prezi.PreziCast",
               "com.prezi.prezivideo.vcam.plugin",
             ],
-            delete: [
+            delete:    [
               "/Applications/Prezi Video.app",
               "/Library/CoreMediaIO/Plug-Ins/DAL/PreziAR.plugin",
             ]
