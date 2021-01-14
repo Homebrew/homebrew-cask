@@ -11,7 +11,7 @@ cask "keepassxc" do
   livecheck do
     url "https://github.com/keepassxreboot/keepassxc/releases/latest"
     strategy :page_match
-    regex(%r{href=.*?/KeePassXC-(\d+(?:.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/KeePassXC-(\d+(?:\.\d+)*)\.dmg}i)
   end
 
   conflicts_with cask: "homebrew/cask-versions/keepassxc-beta"
