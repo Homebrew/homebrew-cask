@@ -8,6 +8,18 @@ cask "adoptopenjdk" do
   name "AdoptOpenJDK Java Development Kit"
   homepage "https://adoptopenjdk.net/"
 
+  major_version = version.major
+  livecheck do
+    url "https://github.com/AdoptOpenJDK/openjdk#{major_version}-binaries.git"
+    regex(/^jdk-(\d+(?:\.\d)*)\+(\d+(?:\.\d)*)$/i)
+    strategy :git do |tags, regex|
+      tags.map do |tag|
+        match = tag.match(regex)
+        "#{match[1]},#{match[2]}" if match.present?
+      end.compact
+    end
+  end
+
   pkg "OpenJDK#{version.major}U-jdk_x64_mac_hotspot_#{version.before_comma}_#{version.after_comma.major}.pkg"
 
   uninstall pkgutil: "net.adoptopenjdk.#{version.major}.jdk"
