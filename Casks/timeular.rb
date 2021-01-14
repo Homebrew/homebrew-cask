@@ -6,7 +6,7 @@ cask "timeular" do
       verified: "timeular-desktop-packages.s3.amazonaws.com/"
   appcast "https://timeular-desktop-packages.s3.amazonaws.com/mac/production/latest-mac.yml"
   name "Timeular"
-  desc "Time tracking application"
+  desc "Time tracking aided by a physical device"
   homepage "https://timeular.com/"
 
   auto_updates true
