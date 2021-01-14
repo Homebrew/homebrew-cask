@@ -4,10 +4,15 @@ cask "portfolioperformance" do
 
   url "https://github.com/buchen/portfolio/releases/download/#{version}/PortfolioPerformance-#{version}.dmg",
       verified: "github.com/buchen/portfolio/"
-  appcast "https://github.com/buchen/portfolio/releases.atom"
   name "Portfolio Performance"
   desc "Calculate the overall performance of an investment portfolio"
   homepage "https://www.portfolio-performance.info/en/"
+
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^(\d+(?:\.\d+)*)$/)
+  end
 
   auto_updates true
 
