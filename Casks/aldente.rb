@@ -10,7 +10,9 @@ cask "aldente" do
 
   app "AlDente.app"
 
-  uninstall quit: "com.davidwernhart.Helper", delete: "/Library/PrivilegedHelperTools/com.davidwernhart.Helper"
-
-  zap trash: "/Library/LaunchDaemons/com.davidwernhart.Helper.plist"
+  uninstall quit:   "com.davidwernhart.Helper", 
+            delete: [
+              "/Library/LaunchDaemons/com.davidwernhart.Helper.plist",
+              "/Library/PrivilegedHelperTools/com.davidwernhart.Helper",
+            ]
 end
