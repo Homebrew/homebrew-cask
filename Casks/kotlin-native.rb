@@ -1,13 +1,18 @@
 cask "kotlin-native" do
   version "1.4.21"
-  sha256 "e7a13b3138e2769a1ab0b9eb8187b56f8874380cdd96479702f1063ce7de69ca"
+  sha256 "f3a65ea070cbfca89497a14340f1530d1ec37875efc8be9a972b6a7aefde29c0"
 
-  url "https://github.com/JetBrains/kotlin/releases/download/v#{version}/kotlin-native-macos-#{version}.tar.gz",
+  url "https://github.com/JetBrains/kotlin/releases/download/v#{version}/kotlin-native-prebuilt-macos-#{version}.tar.gz",
       verified: "github.com/JetBrains/kotlin/"
   appcast "https://github.com/JetBrains/kotlin-native/releases.atom"
   name "Kotlin Native"
   desc "LLVM backend for Kotlin"
   homepage "https://kotlinlang.org/docs/reference/native-overview.html"
+
+  livecheck do
+     url :url
+     strategy :github_latest
+   end
 
   conflicts_with formula: "kotlin"
 
