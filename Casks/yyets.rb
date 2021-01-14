@@ -3,10 +3,15 @@ cask "yyets" do
   sha256 "6183e197016f3d95fc93079e87ed3656fe15c81176fe252537332258ac5430b1"
 
   url "http://appdown.rrys.tv/RRShare#{version}.dmg"
-  appcast "http://app.rrys.tv/"
   name "YYeTs"
   name "人人影视"
   homepage "http://app.rrys.tv/"
+
+  livecheck do
+    url "http://app.rrys.tv/"
+    strategy :page_match
+    regex(%r{href=.*?/RRShare(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   app "人人影视.app"
 
