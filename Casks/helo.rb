@@ -5,6 +5,7 @@ cask "helo" do
   url "https://helo.fra1.digitaloceanspaces.com/helo/HELO-#{version}.dmg",
       verified: "helo.fra1.digitaloceanspaces.com"
   name "HELO"
+  desc "Swiss-army-knife of email testing and debugging"
   homepage "https://usehelo.com/"
 
   livecheck do
