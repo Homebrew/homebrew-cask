@@ -9,8 +9,14 @@ cask "prezi-video" do
 
   pkg "Install Prezi Video.pkg"
 
-  uninstall script: {
-    executable: "#{staged_path}/Uninstall Prezi Video.app/Contents/MacOS/Uninstall",
-    sudo:       true,
-  }
+  uninstall quit:      "com.prezi.PreziCast",
+            launchctl: "com.prezi.prezivideo.vcam.assistant",
+            pkgutil: [
+              "com.prezi.PreziCast",
+              "com.prezi.prezivideo.vcam.plugin",
+            ],
+            delete: [
+              "/Applications/Prezi Video.app",
+              "/Library/CoreMediaIO/Plug-Ins/DAL/PreziAR.plugin",
+            ]
 end
