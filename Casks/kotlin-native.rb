@@ -10,9 +10,9 @@ cask "kotlin-native" do
   homepage "https://kotlinlang.org/docs/reference/native-overview.html"
 
   livecheck do
-     url :url
-     strategy :github_latest
-   end
+    url :url
+    strategy :github_latest
+  end
 
   conflicts_with formula: "kotlin"
 
