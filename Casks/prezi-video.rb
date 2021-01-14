@@ -1,0 +1,16 @@
+cask "prezi-video" do
+  version "1.13.0"
+  sha256 "477a3d199b1f108e3e1e394a93787fde89f499dea273937c0c1f5fd410b66410"
+
+  url "https://desktopassets.prezi.com/mac/prezi-video/releases/Prezi_Video_#{version}.dmg"
+  name "Prezi Video"
+  desc "Lets you interact with your content live as you stream or record"
+  homepage "https://prezi.com/video/"
+
+  pkg "Install Prezi Video.pkg"
+
+  uninstall script: {
+    executable: "#{staged_path}/Uninstall Prezi Video.app/Contents/MacOS/Uninstall",
+    sudo:       true,
+  }
+end
