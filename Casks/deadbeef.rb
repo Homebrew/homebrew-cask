@@ -4,7 +4,6 @@ cask "deadbeef" do
 
   url "https://downloads.sourceforge.net/deadbeef/travis/osx/master/deadbeef-devel-osx-x86_64.zip",
       verified: "downloads.sourceforge.net/deadbeef/"
-  appcast "https://sourceforge.net/projects/deadbeef/rss?path=/travis/osx/master"
   name "DeaDBeeF"
   desc "Modular audio player"
   homepage "https://deadbeef.sourceforge.io/"
