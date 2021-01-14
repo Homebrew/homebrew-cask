@@ -1,6 +1,3 @@
-# typed: false
-# frozen_string_literal: true
-
 cask "musescore" do
   version "3.6.0.485472625"
   sha256 "cbf9bd5b33b564719788d1c3618e492afad035027ac31dbfc47a83d054e1644f"
