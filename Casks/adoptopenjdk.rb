@@ -8,7 +8,7 @@ cask "adoptopenjdk" do
   name "AdoptOpenJDK Java Development Kit"
   homepage "https://adoptopenjdk.net/"
 
-  pkg "OpenJDK#{version.major}U-jdk_x64_mac_hotspot_#{version.before_comma}_#{version.after_comma}.pkg"
+  pkg "OpenJDK#{version.major}U-jdk_x64_mac_hotspot_#{version.before_comma}_#{version.after_comma.major}.pkg"
 
   uninstall pkgutil: "net.adoptopenjdk.#{version.major}.jdk"
 
