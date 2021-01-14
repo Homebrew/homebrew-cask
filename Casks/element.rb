@@ -5,7 +5,7 @@ cask "element" do
   url "https://packages.riot.im/desktop/install/macos/Element-#{version}.dmg",
       verified: "packages.riot.im/desktop/"
   appcast "https://github.com/vector-im/riot-desktop/releases.atom"
-  name "Element (Riot)"
+  name "Element"
   desc "Matrix collaboration client"
   homepage "https://element.io/get-started"
 
@@ -14,7 +14,6 @@ cask "element" do
   app "Element.app"
 
   zap trash: [
-    "~/Library/Application Support/Element (Riot)",
     "~/Library/Application Support/Element",
     "~/Library/Application Support/Riot",
     "~/Library/Caches/im.riot.app",
