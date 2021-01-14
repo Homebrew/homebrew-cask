@@ -4,10 +4,16 @@ cask "abricotine" do
 
   url "https://github.com/brrd/Abricotine/releases/download/#{version}/Abricotine-#{version}-osx-x64.zip",
       verified: "github.com/brrd/Abricotine/"
-  appcast "https://github.com/brrd/Abricotine/releases.atom"
   name "abricotine"
   desc "Markdown editor with inline preview"
   homepage "https://abricotine.brrd.fr/"
+
+  # We need to check all releases since not all releases are for macOS.
+  livecheck do
+    url "https://github.com/brrd/Abricotine/releases"
+    strategy :page_match
+    regex(%r{href=.*?/Abricotine-(\d+(?:\.\d+)*)-osx-x64\.zip}i)
+  end
 
   app "Abricotine-darwin-x64/Abricotine.app"
 
