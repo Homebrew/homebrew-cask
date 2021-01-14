@@ -1,9 +1,10 @@
 cask "cmake" do
-  version "3.19.2"
-  sha256 "df15a1836107b44623720e2766970216588e670f11f83fa2bc6d25885e6ac96f"
+  version "3.19.3"
+  sha256 "30387d43d3c1410c6b5522c50b3cf36117e5ccb4d9dfd49ee0beca0df2650479"
 
   url "https://cmake.org/files/LatestRelease/cmake-#{version}-macos-universal.dmg"
   name "CMake"
+  desc "Cross-platform make"
   homepage "https://cmake.org/"
 
   livecheck do
