@@ -4,7 +4,7 @@ cask "macstroke" do
 
   url "https://github.com/mtjo/MacStroke/releases/download/#{version}/MacStroke.zip"
   name "MacStroke"
-  desc "Configurable global mouse gesture for macOS. macOSÉÏÒ»¿î¸ß¶È¿ÉÅäÖÃµÄÈ«¾ÖÊó±êÊÖÊÆÈí¼ş¡£"
+  desc "Configurable global mouse gesture. ä¸€æ¬¾é«˜åº¦å¯é…ç½®çš„å…¨å±€é¼ æ ‡æ‰‹åŠ¿è½¯ä»¶ã€‚"
   homepage "https://github.com/mtjo/MacStroke"
   appcast "https://github.com/mtjo/MacStroke/blob/release/AppCast.xml"
 
