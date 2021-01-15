@@ -18,7 +18,10 @@ cask "ptpwebcam" do
     "org.ptpwebcam.pkg.PTPWebcam",
     "org.ptpwebcam.pkg.RemoveEOSWebcam",
   ],
-            launchctl: "org.ptpwebcam.PtpWebcamAgent",
+            launchctl: [
+              "org.ptpwebcam.PtpWebcamAgent",
+              "org.ptpwebcam.PtpWebcamAssistant",
+            ]
             delete:    [
               "/Library/CoreMediaIO/Plug-ins/DAL/PTPWebcamDALPlugin.plugin",
               "/Library/LaunchDaemons/org.ptpwebcam.PtpWebcamAssistant.plist",
