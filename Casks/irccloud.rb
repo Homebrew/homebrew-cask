@@ -5,7 +5,7 @@ cask "irccloud" do
   url "https://github.com/irccloud/irccloud-desktop/releases/download/v#{version}/IRCCloud-#{version}-universal.dmg"
   appcast "https://github.com/irccloud/irccloud-desktop/releases.atom"
   name "IRCCloud Desktop"
-  desc "Wrapper of the  website in a native window"
+  desc "IRC client"
   homepage "https://github.com/irccloud/irccloud-desktop"
 
   app "IRCCloud.app"
