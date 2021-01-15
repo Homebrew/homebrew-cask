@@ -3,7 +3,7 @@ cask "ptpwebcam" do
   sha256 "6d77dbb9d6052397f953b49e4a218cb809ec864a9cf3dfc83318f788c71e88c4"
 
   url "https://github.com/dognotdog/ptpwebcam/releases/download/v#{version}/PTP_Webcam-v#{version}.pkg",
-  	  verified: "https://github.com/dognotdog/ptpwebcam"
+      verified: "https://github.com/dognotdog/ptpwebcam"
   appcast "https://github.com/dognotdog/ptpwebcam/releases.atom"
   name "ptpwebcam"
   desc "DSLR live view video plugin"
