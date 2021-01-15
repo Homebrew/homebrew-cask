@@ -28,7 +28,7 @@ cask "evernote" do
   livecheck do
     url "https://evernote.s3.amazonaws.com/boron/mac/public/latest-mac.yml"
     strategy :page_match do |page|
-      match = page.match(/(\d+(?:\.\d+)*)-(\d+)\.zip/)
+      match = page.match(/(\d+(?:\.\d+)*)-mac-ddl-ga-(\d+)\.zip/)
       "#{match[1]},#{match[2]}"
     end
   end
