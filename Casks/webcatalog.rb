@@ -1,6 +1,6 @@
 cask "webcatalog" do
-  version "27.5.1"
-  sha256 "80a45ee87dc09e8cbad1a185041fbaadfb479e4144ca75b4648bc8c4a2431007"
+  version "27.5.2"
+  sha256 "80fc4224de7d86b8251cbb31c055a5e89f08ef38bd71ae51bd9257d8458fdea2"
 
   url "https://github.com/webcatalog/webcatalog-app/releases/download/v#{version}/WebCatalog-#{version}.dmg",
       verified: "github.com/webcatalog/webcatalog-app/"
