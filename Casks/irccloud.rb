@@ -9,4 +9,13 @@ cask "irccloud" do
   homepage "https://github.com/irccloud/irccloud-desktop"
 
   app "IRCCloud.app"
+
+  zap trash: [
+    "~/Library/Application Support/IRCCloud",
+    "~/Library/Caches/com.irccloud.desktop",
+    "~/Library/Caches/com.irccloud.desktop.ShipIt",
+    "~/Library/Logs/IRCCloud",
+    "~/Library/Preferences/com.irccloud.desktop.plist",
+    "~/Library/Saved Application State/com.irccloud.desktop.savedState",
+  ]
 end
