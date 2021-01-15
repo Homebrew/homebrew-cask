@@ -21,7 +21,7 @@ cask "ptpwebcam" do
             launchctl: [
               "org.ptpwebcam.PtpWebcamAgent",
               "org.ptpwebcam.PtpWebcamAssistant",
-            ]
+            ],
             delete:    [
               "/Library/CoreMediaIO/Plug-ins/DAL/PTPWebcamDALPlugin.plugin",
               "/Library/LaunchDaemons/org.ptpwebcam.PtpWebcamAssistant.plist",
