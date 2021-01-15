@@ -4,24 +4,23 @@ cask "ptpwebcam" do
 
   url "https://github.com/dognotdog/ptpwebcam/releases/download/v#{version}/PTP_Webcam-v#{version}.pkg",
   	  verified: "https://github.com/dognotdog/ptpwebcam"
-  appcast 'https://github.com/dognotdog/ptpwebcam/releases.atom'
-
+  appcast "https://github.com/dognotdog/ptpwebcam/releases.atom"
   name "ptpwebcam"
-  desc "DSLR Live View Video Plugin"
+  desc "DSLR live view video plugin"
   homepage "https://ptpwebcam.org/"
 
   pkg "PTP_Webcam-v#{version}.pkg"
-  
+
   uninstall pkgutil:   [
-    "org.ptpwebcam.pkg.PTPWebcam",
     "org.ptpwebcam.pkg.EnableChrome",
     "org.ptpwebcam.pkg.EnableSkype",
     "org.ptpwebcam.pkg.EnableZoom",
+    "org.ptpwebcam.pkg.PTPWebcam",
     "org.ptpwebcam.pkg.RemoveEOSWebcam",
   ],
-  launchctl: "org.ptpwebcam.PtpWebcamAgent",
-  trash:   [
-    "/Library/CoreMediaIO/Plug-ins/DAL/PTPWebcamDALPlugin.plugin",
-    "/Library/LaunchDaemons/org.ptpwebcam.PtpWebcamAssistant.plist",
-  ]
+            launchctl: "org.ptpwebcam.PtpWebcamAgent",
+            delete:    [
+              "/Library/CoreMediaIO/Plug-ins/DAL/PTPWebcamDALPlugin.plugin",
+              "/Library/LaunchDaemons/org.ptpwebcam.PtpWebcamAssistant.plist",
+            ]
 end
