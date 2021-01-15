@@ -1,0 +1,11 @@
+cask "molten-vk" do
+  version "1.2.162.1"
+  sha256 "2781c334997598c2828d8a3368aef7b7c94a25204c90d5503396e40c7a03fd5c"
+
+  url "https://vulkan.lunarg.com/sdk/home#sdk/downloadConfirm/#{version}/mac/vulkansdk-macos-#{version}.dmg"
+  name "molten-vk"
+  desc "Implementation of the Vulkan graphics and compute API on top of Metal"
+  homepage "https://vulkan.lunarg.com/sdk/home"
+
+  app ""
+end
