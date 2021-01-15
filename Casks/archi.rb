@@ -1,8 +1,8 @@
 cask "archi" do
   version "4.8.0"
-  sha256 "b18580e675017325cbf4b772e62fe97f84b59df1f7be8a253f99e89e2b6638b3"
+  sha256 :no_check
 
-  url "https://www.archimatetool.com/downloads/a#{version.no_dots}/Archi-Mac-#{version}.zip"
+  url "https://www.archimatetool.com/downloads/archi480/Archi-Mac-4.8.0.zip"
   name "Archi"
   desc "Toolkit for the ArchiMate modelling language"
   homepage "https://www.archimatetool.com/"
