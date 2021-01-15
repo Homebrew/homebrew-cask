@@ -1,6 +1,6 @@
 cask "lyricsx" do
-  version "1.5.6,2322"
-  sha256 "a23c6098bde8a57c3cbc32fdff499a7615ff5b9dcbc84f4e122add13552731b1"
+  version "1.6.0,2334"
+  sha256 "2af8492bb1da0916151caa649fdfcf71091de950d1418f5b0e91dd8382b6f2f8"
 
   url "https://github.com/ddddxxx/LyricsX/releases/download/v#{version.before_comma}/LyricsX_#{version.before_comma}+#{version.after_comma}.zip"
   name "LyricsX"
