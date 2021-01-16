@@ -2,6 +2,7 @@
 /.bundle/
 /bin/
 /vendor/
+/venv/
 /.idea/
 *.iml
 
@@ -10,4 +11,3 @@
 .DS_Store
 .ruby-version
 coverage
-/venv
