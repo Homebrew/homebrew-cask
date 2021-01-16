@@ -1,6 +1,6 @@
 cask "printopia" do
-  version "3.0.15"
-  sha256 "0528697b1f95010990517cd31be8bc40408c0e075c9dcc325ff53a2650ead11b"
+  version "3.0.16"
+  sha256 "871ffce73c734c9c82a6b1fa341d231b0cdef51d5c1b8f1415dfe0414aaf8130"
 
   url "https://download.decisivetactics.com/downloads/printopia/Printopia_#{version}.zip"
   appcast "https://www.decisivetactics.com/api/checkupdate?x-app_id=com.decisivetactics.printopia"
