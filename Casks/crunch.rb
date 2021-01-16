@@ -9,4 +9,9 @@ cask "crunch" do
   homepage "https://github.com/chrissimpkins/Crunch"
 
   app "Crunch.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.csimpkins.Crunch.plist",
+    "~/Library/Saved Application State/com.csimpkins.Crunch.savedState",
+  ]
 end
