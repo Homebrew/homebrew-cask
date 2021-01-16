@@ -4,10 +4,15 @@ cask "ptpwebcam" do
 
   url "https://github.com/dognotdog/ptpwebcam/releases/download/v#{version}/PTP_Webcam-v#{version}.pkg",
       verified: "https://github.com/dognotdog/ptpwebcam"
-  appcast "https://github.com/dognotdog/ptpwebcam/releases.atom"
   name "ptpwebcam"
   desc "DSLR live view video plugin"
   homepage "https://ptpwebcam.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^v(\d+(?:\.\d+)*)$/)
+  end
 
   pkg "PTP_Webcam-v#{version}.pkg"
 
