@@ -4,10 +4,15 @@ cask "ipe" do
 
   url "https://dl.bintray.com/otfried/generic/ipe/#{version.major_minor}/ipe-#{version}-mac.dmg",
       verified: "bintray.com/otfried/"
-  appcast "http://ipe.otfried.org/"
   name "Ipe"
   desc "Drawing editor for creating figures in PDF format"
   homepage "http://ipe.otfried.org/"
+
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/ipe-(\d+(?:\.\d+)*)-mac\.dmg}i)
+  end
 
   depends_on macos: ">= :yosemite"
 
