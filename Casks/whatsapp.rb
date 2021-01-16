@@ -8,7 +8,7 @@ cask "whatsapp" do
   homepage "https://www.whatsapp.com/"
 
   livecheck do
-    url "https://web.whatsapp.com/desktop/mac/releases?platform=darwin&arch=x64"
+    url "https://web.whatsapp.com/desktop/mac/releases"
     strategy :page_match
     regex(/release-(\d+(?:\.\d+)*)\.zip/i)
   end
