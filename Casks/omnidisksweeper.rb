@@ -17,10 +17,15 @@ cask "omnidisksweeper" do
     url "https://downloads.omnigroup.com/software/MacOSX/10.14/OmniDiskSweeper-#{version}.dmg"
   end
 
-  appcast "https://update.omnigroup.com/appcast/com.omnigroup.OmniDiskSweeper"
   name "OmniDiskSweeper"
   desc "Finds large, unwanted files and deletes them"
   homepage "https://www.omnigroup.com/more/"
+
+  livecheck do
+    url "https://update.omnigroup.com/appcast/com.omnigroup.OmniDiskSweeper"
+    strategy :page_match
+    regex(/OmniDiskSweeper-(\d+(?:\.\d+)*)\.dmg/i)
+  end
 
   auto_updates true
 
