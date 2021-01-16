@@ -1,6 +1,6 @@
 cask "launchcontrol" do
-  version "1.51.1,1457"
-  sha256 "1dacd36da7b4351721499225fbd2585a925a9140bad6cf50aa447de929f24c13"
+  version "1.51.2,1470"
+  sha256 "4a8f1e5e3710f6238b0afc5a8830ad4af3033e8f174bef33414ffa5336b3f80b"
 
   url "https://www.soma-zone.com/download/files/LaunchControl-#{version.before_comma}.tar.bz2"
   name "LaunchControl"
