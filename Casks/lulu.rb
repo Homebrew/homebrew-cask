@@ -1,6 +1,6 @@
 cask "lulu" do
-  version "2.1.0"
-  sha256 "f57cbe4d5ab6b034155c6de8d2cb514f35ffb75161b867be4c80cecad77814a3"
+  version "2.2.0"
+  sha256 "f8277793429059102c9e892ed31ef8f705a4d2316fb5c5deba7309d3e36202a3"
 
   url "https://bitbucket.org/objective-see/deploy/downloads/LuLu_#{version}.dmg",
       verified: "bitbucket.org/objective-see/"
