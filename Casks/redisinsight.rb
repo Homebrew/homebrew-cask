@@ -8,7 +8,7 @@ cask "redisinsight" do
 
   livecheck do
     url "https://d3fyopse48vfpi.cloudfront.net/latest/redisinsight-mac.dmg"
-    strategy :page_match
+    strategy :header_match
   end
 
   app "RedisInsight.app"
