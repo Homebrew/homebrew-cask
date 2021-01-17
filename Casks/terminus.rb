@@ -3,10 +3,12 @@ cask "terminus" do
 
   if Hardware::CPU.intel?
     sha256 "424684c14b4646382124b7a4facd69658047ed56d81aa12efb39452739df873b"
+
     url "https://github.com/Eugeny/terminus/releases/download/v#{version}/terminus-#{version}-macos-x86_64.zip",
         verified: "github.com/Eugeny/terminus/"
   else
     sha256 "61a20d0d2ead742435d1c603aedd1d09d5bf3bfc52c142b2e9d91ecf890877f7"
+
     url "https://github.com/Eugeny/terminus/releases/download/v#{version}/terminus-#{version}-macos-arm64.zip",
         verified: "github.com/Eugeny/terminus/"
   end
