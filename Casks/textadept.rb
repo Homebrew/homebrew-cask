@@ -4,10 +4,15 @@ cask "textadept" do
 
   url "https://github.com/orbitalquark/textadept/releases/download/textadept_#{version}/textadept_#{version}.macOS.zip",
       verified: "github.com/orbitalquark/textadept/"
-  appcast "https://github.com/orbitalquark/textadept/releases.atom"
   name "Textadept"
   desc "Cross-platform text editor"
   homepage "https://orbitalquark.github.io/textadept/"
+
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^textadept_(\d+(?:\.\d+)*)$/i)
+  end
 
   app "textadept_#{version}.macOS/Textadept.app"
   binary "textadept_#{version}.macOS/ta"

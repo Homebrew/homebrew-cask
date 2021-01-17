@@ -4,10 +4,15 @@ cask "veracrypt" do
 
   url "https://launchpad.net/veracrypt/trunk/#{version.downcase}/+download/VeraCrypt_#{version}.dmg",
       verified: "launchpad.net/veracrypt/trunk/"
-  appcast "https://github.com/veracrypt/VeraCrypt/releases.atom"
   name "VeraCrypt"
   desc "Disk encryption software focusing on security based on TrueCrypt"
   homepage "https://www.veracrypt.fr/"
+
+  livecheck do
+    url "https://github.com/veracrypt/VeraCrypt/releases"
+    strategy :github_latest
+    regex(%r{href=.*?/VeraCrypt_(\d+(?:\.\d+)*[^/]*?)\.dmg}i)
+  end
 
   depends_on cask: "osxfuse"
 

@@ -4,9 +4,14 @@ cask "exactscan" do
 
   url "https://dl.exactcode.com/exactscan/ExactScan-#{version}.dmg",
       verified: "dl.exactcode.com/"
-  appcast "https://exactscan.com/download.html"
   name "ExactScan"
   homepage "https://exactscan.com/index.html"
+
+  livecheck do
+    url "https://exactscan.com/download.html"
+    strategy :page_match
+    regex(%r{href=.*?/ExactScan-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   app "ExactScan.app"
 end

@@ -4,11 +4,15 @@ cask "pd-l2ork" do
 
   url "https://github.com/agraef/purr-data/releases/download/#{version}/osx_10.11-x86_64-dmg.zip",
       verified: "github.com/agraef/purr-data/"
-  appcast "https://github.com/agraef/purr-data/releases.atom"
   name "Pd-l2ork"
   name "Purr Data"
-  desc "Purr Data - Jonathan Wilkes' cross-platform Pd-l2ork version"
   homepage "https://agraef.github.io/purr-data/"
+
+  livecheck do
+    url :url
+    strategy :git
+    regex(/(\d+(?:\.\d+)*-rev.[0-9a-f]+)/i)
+  end
 
   app "Pd-l2ork.app"
   binary "#{appdir}/Pd-l2ork.app/Contents/Resources/app.nw/pd-l2ork"

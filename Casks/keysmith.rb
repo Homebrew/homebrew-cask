@@ -15,4 +15,10 @@ cask "keysmith" do
   depends_on macos: ">= :catalina"
 
   app "Keysmith.app"
+
+  zap trash: [
+    "~/Library/Caches/app.keysmith.Keysmith",
+    "~/Library/Keysmith",
+    "~/Library/Preferences/app.keysmith.Keysmith.plist",
+  ]
 end

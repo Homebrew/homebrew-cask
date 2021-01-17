@@ -42,9 +42,11 @@ cask "parallels" do
 
   zap trash: [
     "~/.parallels_settings",
+    "~/Library/Application Scripts/com.parallels.desktop*",
     "~/Library/Caches/com.apple.helpd/Generated/com.parallels.desktop.console.help*",
     "~/Library/Caches/com.parallels.desktop.console",
     "~/Library/Caches/Parallels Software/Parallels Desktop",
+    "~/Library/Containers/com.parallels.desktop*",
     "~/Library/Logs/parallels.log",
     "~/Library/Parallels/Parallels Desktop",
     "~/Library/Preferences/com.parallels.desktop.console.LSSharedFileList.plist",

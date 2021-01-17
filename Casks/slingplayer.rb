@@ -4,10 +4,15 @@ cask "slingplayer" do
 
   url "http://download.slingmedia.com/SlingplayerDesktop/Mac/#{version}/SlingplayerDesktop-#{version}.dmg",
       verified: "slingmedia.com/"
-  appcast "https://www.slingbox.com/Products/SlingplayerApps.aspx"
   name "Slingplayer Desktop"
   desc "Desktop application for Sling products"
   homepage "https://www.slingbox.com/"
+
+  livecheck do
+    url "https://www.slingbox.com/Products/SlingplayerApps.aspx"
+    strategy :page_match
+    regex(%r{href=.*?/SlingplayerDesktop-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   app "Slingplayer Desktop.app"
 end

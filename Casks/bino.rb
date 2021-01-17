@@ -4,9 +4,14 @@ cask "bino" do
 
   url "http://devernay.free.fr/hacks/bino/Bino-#{version}-OSX-Mavericks-GPL.zip",
       verified: "devernay.free.fr/hacks/bino/"
-  appcast "http://devernay.free.fr/hacks/bino/"
   name "Bino"
   homepage "https://bino3d.org/"
+
+  livecheck do
+    url "http://devernay.free.fr/hacks/bino/"
+    strategy :page_match
+    regex(/href=.*?Bino-(\d+(?:\.\d+)*)-OSX-Mavericks-GPL\.zip/i)
+  end
 
   app "Bino.app"
 end

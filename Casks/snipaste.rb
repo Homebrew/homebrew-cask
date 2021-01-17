@@ -4,9 +4,14 @@ cask "snipaste" do
 
   url "https://bitbucket.org/liule/snipaste/downloads/Snipaste-#{version}.dmg",
       verified: "bitbucket.org/liule/snipaste/"
-  appcast "https://www.snipaste.com/download.html"
   name "Snipaste"
+  desc "Snip or pin screenshots"
   homepage "https://www.snipaste.com/"
+
+  livecheck do
+    url "https://www.snipaste.com/all_versions"
+    regex(/"mac_version"\s*:\s*"v?(.*?)"/i)
+  end
 
   auto_updates true
 

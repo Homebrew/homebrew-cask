@@ -1,12 +1,17 @@
 cask "megasync" do
-  version "4.3.8"
+  version "4.3.8.0"
   sha256 :no_check
 
   url "https://mega.nz/MEGAsyncSetup.dmg"
-  appcast "https://github.com/meganz/MEGAsync/releases.atom"
   name "MEGAsync"
   desc "Syncs files between computers and MEGA Cloud drives"
   homepage "https://mega.nz/sync"
+
+  livecheck do
+    url "https://github.com/meganz/MEGAsync/releases"
+    strategy :page_match
+    regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)*)_OSX}i)
+  end
 
   auto_updates true
 

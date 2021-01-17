@@ -4,9 +4,14 @@ cask "simplesynth" do
 
   url "https://notahat.s3.amazonaws.com/SimpleSynth-#{version}.zip",
       verified: "notahat.s3.amazonaws.com/"
-  appcast "https://notahat.com/simplesynth/"
   name "SimpleSynth"
   homepage "https://notahat.com/simplesynth/"
+
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/SimpleSynth-(\d+(?:\.\d+)*)\.zip}i)
+  end
 
   app "SimpleSynth.app"
 end

@@ -1,5 +1,5 @@
 cask "sensei" do
-  version "1.3.3,76"
+  version "1.3.4,77"
   sha256 :no_check
 
   url "https://cindori.s3.amazonaws.com/Sensei.dmg",

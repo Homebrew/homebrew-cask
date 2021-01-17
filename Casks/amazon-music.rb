@@ -27,8 +27,12 @@ cask "amazon-music" do
             ]
 
   zap trash: [
-    "~/Library/Preferences/com.amazon.music.plist",
     "~/Library/Application Support/Amazon Music",
+    "~/Library/LaunchAgents/com.amazon.music.plist",
+    "~/Library/LaunchAgents/com.amazon.music.startup.plist",
+    "~/Library/Preferences/com.amazon.music-renderer.plist",
+    "~/Library/Preferences/com.amazon.music.plist",
+    "~/Library/Saved Application State/com.amazon.music.savedState",
   ]
 
   caveats <<~EOS

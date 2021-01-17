@@ -3,10 +3,14 @@ cask "vlc" do
   sha256 "021212d2f6e6701ec3b254d56dfa5c5f848c9c02813c5750c6944a8458de8fb5"
 
   url "https://get.videolan.org/vlc/#{version}/macosx/vlc-#{version}.dmg"
-  appcast "https://www.videolan.org/vlc/download-macosx.html"
   name "VLC media player"
   desc "Open-source cross-platform multimedia player"
   homepage "https://www.videolan.org/vlc/"
+
+  livecheck do
+    url "https://update.videolan.org/vlc/sparkle/vlc-intel64.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   conflicts_with cask: "homebrew/cask-versions/vlc-nightly"
