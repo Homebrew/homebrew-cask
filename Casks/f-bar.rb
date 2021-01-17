@@ -8,7 +8,7 @@ cask "f-bar" do
   end
 
   url "https://apps.eastwest.se/fbar/updates/F-Bar_#{version}.zip",
-      verified: "apps.eastwest.se/",
+      verified:   "apps.eastwest.se/",
       user_agent: :fake
   name "F-Bar"
   desc "Manage your Laravel Forge servers from your menubar"
