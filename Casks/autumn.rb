@@ -11,4 +11,10 @@ cask "autumn" do
   depends_on macos: ">= :high_sierra"
 
   app "Autumn.app"
+
+  zap trash: [
+    "~/Library/Caches/com.sephware.autumn",
+    "~/Library/Preferences/com.sephware.autumn.plist",
+    "~/Library/WebKit/com.sephware.autumn",
+  ]
 end
