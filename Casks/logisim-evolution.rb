@@ -1,6 +1,6 @@
 cask "logisim-evolution" do
-  version "3.4.0"
-  sha256 "21b23b27b10460763c76ae63b34cfde5abf77c0900683aaee248267475e9879e"
+  version "3.4.1"
+  sha256 "1b72dd3397290b7be95f886b933bd37a2d9182b8d33247fa5f059d0867e8111c"
 
   url "https://github.com/reds-heig/logisim-evolution/releases/download/v#{version}/logisim-evolution-#{version}-all.jar"
   appcast "https://github.com/reds-heig/logisim-evolution/releases.atom"
