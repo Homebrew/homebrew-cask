@@ -11,7 +11,7 @@ cask "f-bar" do
       verified:   "apps.eastwest.se/",
       user_agent: :fake
   name "F-Bar"
-  desc "Manage your Laravel Forge servers from your menubar"
+  desc "Manage Laravel Forge servers from the menubar"
   homepage "https://laravel-forge-menubar.com/"
 
   auto_updates true
