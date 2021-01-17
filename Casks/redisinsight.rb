@@ -7,7 +7,7 @@ cask "redisinsight" do
   homepage "https://www.redislabs.com/redisinsight/"
 
   livecheck do
-    url "https://d3fyopse48vfpi.cloudfront.net/latest/redisinsight-mac.dmg"
+    url "https://downloads.redisinsight.redislabs.com/latest/redisinsight-mac.dmg"
     strategy :header_match
   end
 
