@@ -1,6 +1,6 @@
 cask "inkscape" do
-  version "1.0.1"
-  sha256 "52597712673dedf56d2c084e26d906fd376a382a792d1ac2315a9de697a66dd6"
+  version "1.0.2"
+  sha256 "2e8eb5f8aa8a974b4621151e17af8b9106363518a5834c54da6a2649a5191b81"
 
   url "https://media.inkscape.org/dl/resources/file/Inkscape-#{version}.dmg"
   name "Inkscape"
