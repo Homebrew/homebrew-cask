@@ -1,12 +1,12 @@
 cask "qlmarkdown" do
-  version "1.3.6"
-  sha256 "810853c000dd5c3e18978070abb7f595ad52ddfa568fccb428d28b513d1810ab"
+  version "1.0b16"
+  sha256 "ade60fd3fbb6276f6175c0ab8965e124cac6501868caadc12082b56321dfe4d9"
 
-  url "https://github.com/toland/qlmarkdown/releases/download/v#{version}/QLMarkdown.qlgenerator.zip"
-  appcast "https://github.com/toland/qlmarkdown/releases.atom"
+  url "https://github.com/sbarex/QLMarkdown/releases/download/#{version}/QLMarkdown.zip"
+  appcast "https://github.com/sbarex/QLMarkdown/releases.atom"
   name "QLMarkdown"
-  desc "QuickLook generator for Markdown files"
-  homepage "https://github.com/toland/qlmarkdown"
+  desc "Quick Look extension to preview Markdown files"
+  homepage "https://github.com/sbarex/QLMarkdown"
 
-  qlplugin "QLMarkdown.qlgenerator"
+  app  "QLMarkdown.app"
 end
