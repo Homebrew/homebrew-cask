@@ -5,7 +5,7 @@ cask "timecamp" do
   url "https://timecamp.s3.amazonaws.com/downloadsoft/#{version}/TimeCampSetup_macOS.dmg",
       verified: "timecamp.s3.amazonaws.com/"
   name "TimeCamp"
-  desc "Client application for TimeCamp software. Track time, change tasks, optionally sync computer activities."
+  desc "Client application for TimeCamp software - track time and change tasks"
   homepage "https://www.timecamp.com/"
 
   app "TimeCamp.app"
