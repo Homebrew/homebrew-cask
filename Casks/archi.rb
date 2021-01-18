@@ -8,8 +8,8 @@ cask "archi" do
   homepage "https://www.archimatetool.com/"
 
   livecheck do
-    url "https://www.archimatetool.com/download/"
-    regex(/id=["']?download["']?[^>]*data-version=["']?(\d+(?:\.\d+)*)["']?/i)
+    url "https://github.com/archimatetool/archi.git"
+    regex(/^release[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
   app "Archi/Archi.app"
