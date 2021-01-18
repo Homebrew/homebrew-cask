@@ -8,6 +8,12 @@ cask "timecamp" do
   desc "Client application for TimeCamp software - track time and change tasks"
   homepage "https://www.timecamp.com/"
 
+  livecheck do
+    url "https://app.timecamp.com/downloader/currentDesktopAppVersion/"
+    strategy :page_match
+    regex(%r{"1.x": "(\d+(?:\.\d+)*)"}i)
+  end
+
   app "TimeCamp.app"
 
   zap rmdir: "~/Library/Application Support/TimeCamp"
