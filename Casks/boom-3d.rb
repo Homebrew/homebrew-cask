@@ -26,4 +26,3 @@ cask "boom-3d" do
     "~/Library/Preferences/com.globaldelight.Boom3DHelper.plist",
   ]
 end
-
