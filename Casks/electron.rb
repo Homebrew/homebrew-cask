@@ -6,7 +6,7 @@ cask "electron" do
       verified: "github.com/electron/electron/"
   appcast "https://www.electronjs.org/releases/stable"
   name "Electron"
-  desc "Build cross-platform desktop apps with JavaScript, HTML, and CSS"
+  desc "Build desktop apps with JavaScript, HTML, and CSS"
   homepage "https://electronjs.org/"
 
   app "Electron.app"
