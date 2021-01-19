@@ -8,6 +8,11 @@ cask "the-unofficial-homestuck-collection" do
   desc "Offline viewer for the webcomic Homestuck"
   homepage "https://bambosh.github.io/unofficial-homestuck-collection/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "The Unofficial Homestuck Collection.app"
 
   zap trash: [
