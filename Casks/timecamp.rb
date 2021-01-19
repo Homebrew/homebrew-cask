@@ -11,7 +11,7 @@ cask "timecamp" do
   livecheck do
     url "https://app.timecamp.com/downloader/currentDesktopAppVersion/"
     strategy :page_match
-    regex(/"1.x": "(\d+(?:\.\d+)*)"/i)
+    regex(/"1.x":"(\d+(?:\.\d+)*)/i)
   end
 
   app "TimeCamp.app"
