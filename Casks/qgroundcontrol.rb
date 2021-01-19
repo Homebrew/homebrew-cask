@@ -5,7 +5,7 @@ cask "qgroundcontrol" do
   url "https://qgroundcontrol.s3.amazonaws.com/latest/QGroundControl.dmg",
       verified: "qgroundcontrol.s3.amazonaws.com/latest/"
   name "QGroundControl"
-  desc "Cross-platform ground control station for drones"
+  desc "Ground control station for drones"
   homepage "http://qgroundcontrol.com/"
 
   app "qgroundcontrol.app"
