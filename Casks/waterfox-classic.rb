@@ -5,7 +5,7 @@ cask "waterfox-classic" do
   url "https://cdn.waterfox.net/releases/osx64/installer/Waterfox%20Classic%20#{version.before_comma}%20Setup.dmg"
   appcast "https://www.waterfox.net/releases/"
   name "Waterfox Classic"
-  desc "Cross-platform web browser"
+  desc "Web browser"
   homepage "https://www.waterfox.net/"
 
   app "Waterfox Classic.app"
