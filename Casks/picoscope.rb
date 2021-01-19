@@ -4,7 +4,7 @@ cask "picoscope" do
 
   url "https://www.picotech.com/download/software/sr/PicoScope-#{version}.pkg"
   name "PicoScope"
-  desc "Test & Measurement oscilloscope software for PicoScope oscilloscops"
+  desc "Test and measurement oscilloscope software for PicoScope oscilloscops"
   homepage "https://www.picotech.com/"
 
   pkg "PicoScope-#{version}.pkg"
