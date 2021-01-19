@@ -6,7 +6,7 @@ cask "keeweb" do
       verified: "github.com/keeweb/keeweb/"
   appcast "https://github.com/keeweb/keeweb/releases.atom"
   name "KeeWeb"
-  desc "Free cross-platform password manager compatible with KeePass"
+  desc "Password manager compatible with KeePass"
   homepage "https://keeweb.info/"
 
   auto_updates true
