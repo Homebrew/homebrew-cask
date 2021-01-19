@@ -6,7 +6,7 @@ cask "sourcetrail" do
       verified: "github.com/CoatiSoftware/Sourcetrail/"
   appcast "https://github.com/CoatiSoftware/Sourcetrail/releases.atom"
   name "Sourcetrail"
-  desc "Free and open-source cross-platform source explorer"
+  desc "Code source explorer"
   homepage "https://www.sourcetrail.com/"
 
   app "Sourcetrail.app"
