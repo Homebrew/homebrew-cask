@@ -6,7 +6,7 @@ cask "mqttx" do
       verified: "github.com/emqx/MQTTX/"
   appcast "https://github.com/emqx/MQTTX/releases.atom"
   name "MQTTX"
-  desc "Cross-platform MQTT 5.0 Client"
+  desc "MQTT 5.0 Client"
   homepage "https://mqttx.app/"
 
   app "MQTTX.app"
