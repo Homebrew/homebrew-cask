@@ -4,7 +4,7 @@ cask "dropdmg" do
 
   url "https://c-command.com/downloads/DropDMG-#{version}.dmg"
   name "DropDMG"
-  desc "Tool to create system disk images and cross-platform archives"
+  desc "Create DMGs and other archives"
   homepage "https://c-command.com/dropdmg/"
 
   livecheck do
