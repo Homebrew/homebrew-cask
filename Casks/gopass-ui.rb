@@ -5,7 +5,7 @@ cask "gopass-ui" do
   url "https://github.com/codecentric/gopass-ui/releases/download/v#{version}/Gopass.UI-#{version}.dmg"
   appcast "https://github.com/codecentric/gopass-ui/releases.atom"
   name "Gopass UI"
-  desc "Cross-platform password manager for teams"
+  desc "Password manager for teams"
   homepage "https://github.com/codecentric/gopass-ui"
 
   app "Gopass UI.app"
