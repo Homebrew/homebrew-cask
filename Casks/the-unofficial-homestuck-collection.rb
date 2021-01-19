@@ -4,7 +4,6 @@ cask "the-unofficial-homestuck-collection" do
 
   url "https://github.com/Bambosh/unofficial-homestuck-collection/releases/download/V#{version}/The.Unofficial.Homestuck.Collection-#{version}.dmg",
       verified: "github.com/Bambosh/unofficial-homestuck-collection/"
-  appcast "https://github.com/Bambosh/unofficial-homestuck-collection/releases.atom"
   name "The Unofficial Homestuck Collection"
   desc "Offline viewer for the webcomic Homestuck"
   homepage "https://bambosh.github.io/unofficial-homestuck-collection/"
