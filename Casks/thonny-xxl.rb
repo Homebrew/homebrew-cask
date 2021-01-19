@@ -1,6 +1,6 @@
 cask "thonny-xxl" do
-  version "3.3.1"
-  sha256 "a5c864603e825751ff53240fe140567a4c74d6d64a93cae25eda39fed47055d3"
+  version "3.3.2"
+  sha256 "6b9c24c782dd2d00fe72ec7c9397f01b52e8dfd51237382d6714f19acb8adb55"
 
   url "https://github.com/thonny/thonny/releases/download/v#{version}/thonny-xxl-#{version}.pkg",
       verified: "github.com/thonny/thonny/"
