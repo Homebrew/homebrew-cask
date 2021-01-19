@@ -1,5 +1,5 @@
 cask "master-pdf-editor" do
-  version "5.6.80"
+  version "5.7.08"
   sha256 :no_check
 
   url "https://code-industry.net/public/MasterPDFEditor.dmg"
