@@ -12,4 +12,8 @@ cask "tagalicious" do
   end
 
   app "Tagalicious.app"
+
+  caveats do
+    discontinued
+  end
 end
