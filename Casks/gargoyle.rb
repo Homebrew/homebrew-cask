@@ -4,7 +4,7 @@ cask "gargoyle" do
 
   url "https://github.com/garglk/garglk/releases/download/#{version}/gargoyle-#{version}-mac-nota.dmg"
   name "Gargoyle"
-  desc "Cross-platform IO layer for an interactive fiction player"
+  desc "IO layer for interactive fiction players"
   homepage "https://github.com/garglk/garglk"
 
   # We need to check all releases since not all releases are for macOS.
