@@ -8,5 +8,5 @@ cask "qlmarkdown" do
   desc "Quick Look extension to preview Markdown files"
   homepage "https://github.com/sbarex/QLMarkdown"
 
-  app  "QLMarkdown.app"
+  app "QLMarkdown.app"
 end
