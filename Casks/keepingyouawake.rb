@@ -4,10 +4,15 @@ cask "keepingyouawake" do
 
   url "https://github.com/newmarcel/KeepingYouAwake/releases/download/#{version}/KeepingYouAwake-#{version}.zip",
       verified: "github.com/newmarcel/KeepingYouAwake/"
-  appcast "https://github.com/newmarcel/KeepingYouAwake/releases.atom"
   name "KeepingYouAwake"
   desc "Tool to prevent the system from going into sleep mode"
   homepage "https://keepingyouawake.app/"
+
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^v?(\d+(?:\.\d+)*)$/)
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"
