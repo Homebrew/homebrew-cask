@@ -6,7 +6,7 @@ cask "libreoffice" do
       verified: "documentfoundation.org/"
   appcast "https://download.documentfoundation.org/libreoffice/stable/"
   name "LibreOffice"
-  desc "Free cross-platform office suite"
+  desc "Office suite"
   homepage "https://www.libreoffice.org/"
 
   conflicts_with cask: "homebrew/cask-versions/libreoffice-still"
