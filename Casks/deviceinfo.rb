@@ -4,7 +4,7 @@ cask "deviceinfo" do
 
   url "https://corenion.github.io/DeviceInfo/#{version}/DeviceInfo_mac.zip"
   name "DeviceInfo"
-  desc "Cross-platform apps that display device information"
+  desc "Display device information"
   homepage "https://corenion.github.io/DeviceInfo/"
 
   depends_on macos: ">= :sierra"
