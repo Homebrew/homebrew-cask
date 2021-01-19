@@ -5,7 +5,7 @@ cask "textadept" do
   url "https://github.com/orbitalquark/textadept/releases/download/textadept_#{version}/textadept_#{version}.macOS.zip",
       verified: "github.com/orbitalquark/textadept/"
   name "Textadept"
-  desc "Cross-platform text editor"
+  desc "Text editor"
   homepage "https://orbitalquark.github.io/textadept/"
 
   livecheck do
