@@ -5,7 +5,7 @@ cask "musicbrainz-picard" do
   url "https://musicbrainz.osuosl.org/pub/musicbrainz/picard/MusicBrainz-Picard-#{version}.dmg",
       verified: "musicbrainz.osuosl.org/pub/"
   name "MusicBrainz Picard"
-  desc "Cross-platform music tagger"
+  desc "Music tagger"
   homepage "https://picard.musicbrainz.org/"
 
   livecheck do
