@@ -11,7 +11,6 @@ cask "jpki" do
 
   pkg "JPKIInstall.pkg"
 
-  uninstall pkgutil: [
-    "jp.go.jpki",
-  ]
+  uninstall pkgutil: "jp.go.jpki",
+            quit:    "jp.go.jpki.JPKIUpdateReminderSetting"
 end
