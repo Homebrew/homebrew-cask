@@ -5,7 +5,7 @@ cask "kitty" do
   url "https://github.com/kovidgoyal/kitty/releases/download/v#{version}/kitty-#{version}.dmg"
   appcast "https://github.com/kovidgoyal/kitty/releases.atom"
   name "kitty"
-  desc "Cross-platform, fast, feature full, GPU based terminal emulator"
+  desc "GPU-based terminal emulator"
   homepage "https://github.com/kovidgoyal/kitty"
 
   depends_on macos: ">= :sierra"
