@@ -5,7 +5,7 @@ cask "rawtherapee" do
   url "https://www.rawtherapee.com/shared/builds/mac/RawTherapee_#{version}.dmg"
   appcast "https://github.com/Beep6581/RawTherapee/releases.atom"
   name "RawTherapee"
-  desc "Cross-platform raw photo processing program"
+  desc "RAW photo processer"
   homepage "https://rawtherapee.com/"
 
   app "RawTherapee.app"
