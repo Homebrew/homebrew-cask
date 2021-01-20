@@ -5,7 +5,7 @@ cask "airdroid" do
   url "https://s3.amazonaws.com/dl.airdroid.com/AirDroid_Desktop_Client_#{version}.dmg",
       verified: "s3.amazonaws.com/dl.airdroid.com/"
   name "AirDroid"
-  desc "Cross-platform mobile device management suite"
+  desc "Mobile device management suite"
   homepage "https://www.airdroid.com/"
 
   livecheck do
