@@ -1,8 +1,8 @@
 cask "virtualbox" do
   version "6.1.16,140961"
-  sha256 "d7df0f05d9a9e7cba50ea01da264ac20948b1c9c0e0cccd2d628085c9f434d45"
+  sha256 :no_check
 
-  url "https://download.virtualbox.org/virtualbox/#{version.before_comma}/VirtualBox-#{version.before_comma}-#{version.after_comma}-OSX.dmg"
+  url "https://download.virtualbox.org/virtualbox/6.1.18/VirtualBox-6.1.18-142142-OSX.dmg"
   name "Oracle VirtualBox"
   desc "Free and open-source hosted hypervisor for x86 virtualization"
   homepage "https://www.virtualbox.org/"
