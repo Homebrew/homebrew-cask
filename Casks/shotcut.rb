@@ -6,7 +6,7 @@ cask "shotcut" do
       verified: "github.com/mltframework/shotcut/"
   appcast "https://github.com/mltframework/shotcut/releases.atom"
   name "Shotcut"
-  desc "Cross-platform and open-source video editor"
+  desc "Video editor"
   homepage "https://www.shotcut.org/"
 
   app "Shotcut.app"
