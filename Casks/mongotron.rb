@@ -6,7 +6,7 @@ cask "mongotron" do
       verified: "github.com/officert/mongotron/"
   appcast "https://github.com/officert/mongotron/releases.atom"
   name "Mongotron"
-  desc "Cross-platform Mongo DB management"
+  desc "Mongo DB management"
   homepage "http://mongotron.io/"
 
   app "Mongotron-darwin-x64/Mongotron.app"
