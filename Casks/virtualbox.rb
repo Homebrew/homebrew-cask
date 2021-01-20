@@ -15,7 +15,7 @@ cask "virtualbox" do
     end
   end
 
-  conflicts_with cask: "virtualbox-beta"
+  conflicts_with cask: "homebrew/cask-versions/virtualbox-beta"
 
   pkg "VirtualBox.pkg",
       choices: [
