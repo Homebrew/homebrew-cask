@@ -4,7 +4,7 @@ cask "lastpass" do
 
   url "https://download.cloud.lastpass.com/mac/LastPass.dmg"
   name "LastPass"
-  desc "Cross-platform password manager"
+  desc "Password manager"
   homepage "https://www.lastpass.com/"
 
   livecheck do
