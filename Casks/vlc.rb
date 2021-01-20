@@ -22,7 +22,7 @@ cask "vlc" do
   end
 
   name "VLC media player"
-  desc "Open-source cross-platform multimedia player"
+  desc "Multimedia player"
   homepage "https://www.videolan.org/vlc/"
 
   auto_updates true
