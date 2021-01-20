@@ -9,8 +9,6 @@ cask "clementine" do
   desc "Music player and library organizer"
   homepage "https://www.clementine-player.org/"
 
-  conflicts_with cask: "clementine-rc"
-
   app "clementine.app"
 
   zap trash: [
