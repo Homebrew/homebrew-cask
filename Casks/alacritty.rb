@@ -5,7 +5,7 @@ cask "alacritty" do
   url "https://github.com/alacritty/alacritty/releases/download/v#{version}/Alacritty-v#{version}.dmg"
   appcast "https://github.com/alacritty/alacritty/releases.atom"
   name "Alacritty"
-  desc "Cross-platform, GPU-accelerated terminal emulator"
+  desc "GPU-accelerated terminal emulator"
   homepage "https://github.com/alacritty/alacritty/"
 
   app "Alacritty.app"
