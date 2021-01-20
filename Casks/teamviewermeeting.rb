@@ -4,7 +4,7 @@ cask "teamviewermeeting" do
 
   url "https://dl.teamviewer.com/teamviewermeeting/installer/mac/#{version}/TeamViewerMeeting.dmg"
   name "TeamViewerMeeting"
-  desc "Cross-platform videoconferencing and communication software"
+  desc "Videoconferencing and communication software"
   homepage "https://www.teamviewer.com/meeting/"
 
   livecheck do
