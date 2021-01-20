@@ -1,12 +1,12 @@
 cask "nheko" do
-  version "0.7.2"
-  sha256 "33ac688edf3af5aa360e48135fda08238e742d3d12fe518a392e470eb8acb40e"
+  version "0.8.0"
+  sha256 "40f120620ed3495ab42fb2fc490ac8737e5b41320017568710650c5ac03e100a"
 
   url "https://github.com/Nheko-Reborn/nheko/releases/download/v#{version}/nheko-v#{version}.dmg",
       verified: "github.com/Nheko-Reborn/nheko/"
   appcast "https://github.com/Nheko-Reborn/nheko/releases.atom"
   name "Nheko"
-  desc "No longer maintained - Desktop client for the Matrix protocol"
+  desc "Desktop client for the Matrix protocol"
   homepage "https://nheko-reborn.github.io/"
 
   app "Nheko.app"
