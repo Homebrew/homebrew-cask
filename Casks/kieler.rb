@@ -14,8 +14,8 @@ cask "kieler" do
   end
 
   zap trash: [
+    "~/Library/Caches/de.cau.cs.kieler.product",
     "~/Library/Preferences/de.cau.cs.kieler.product.plist",
     "~/Library/Saved Application State/de.cau.cs.kieler.product.savedState",
-    "~/Library/Caches/de.cau.cs.kieler.product",
   ]
 end
