@@ -14,7 +14,7 @@ cask "cockatrice" do
   end
 
   name "Cockatrice"
-  desc "Cross-platform virtual tabletop for multiplayer card games"
+  desc "Virtual tabletop for multiplayer card games"
   homepage "https://cockatrice.github.io/"
 
   livecheck do
