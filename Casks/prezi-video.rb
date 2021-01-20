@@ -19,4 +19,10 @@ cask "prezi-video" do
               "/Applications/Prezi Video.app",
               "/Library/CoreMediaIO/Plug-Ins/DAL/PreziAR.plugin",
             ]
+
+  zap trash: [
+    "~/Library/Application Support/com.prezi.PreziCast",
+    "~/Library/Preferences/com.prezi.PreziCast.plist",
+    "~/Library/Preferences/com.prezi.PreziVideo.vcam",
+  ]
 end
