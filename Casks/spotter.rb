@@ -11,4 +11,12 @@ cask "spotter" do
   depends_on macos: ">= :big_sur"
 
   app "spotter.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/org.reactjs.native.spotter",
+    "~/Library/Application Support/org.reactjs.native.spotter",
+    "~/Library/Caches/org.reactjs.native.spotter",
+    "~/Library/Containers/org.reactjs.native.spotter",
+    "~/Library/Preferences/org.reactjs.native.spotter.plist",
+  ]
 end
