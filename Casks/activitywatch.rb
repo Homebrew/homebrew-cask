@@ -6,7 +6,7 @@ cask "activitywatch" do
       verified: "github.com/ActivityWatch/activitywatch/"
   appcast "https://github.com/ActivityWatch/activitywatch/releases.atom"
   name "ActivityWatch"
-  desc "Cross-platform time tracking app"
+  desc "Time tracker"
   homepage "https://activitywatch.net/"
 
   app "ActivityWatch.app"
