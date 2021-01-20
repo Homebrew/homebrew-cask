@@ -4,7 +4,7 @@ cask "brook" do
 
   url "https://github.com/txthinking/brook/releases/download/v#{version}/Brook.dmg"
   name "Brook"
-  desc "Cross-platform proxy/vpn software"
+  desc "Proxy/VPN client"
   homepage "https://github.com/txthinking/brook"
 
   livecheck do
