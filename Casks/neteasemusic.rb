@@ -2,7 +2,7 @@ cask "neteasemusic" do
   version "2.3.3,840"
   sha256 "91eb3372e60bd299aee8a924eb0273570f610eeb1227ea26d9a4bb5b5621c609"
 
-  url "https://d1.music.126.net/dmusic/NeteaseMusic#{version.before_comma}_#{version.after_comma}_web.dmg",
+  url "https://d1.music.126.net/dmusic/NeteaseMusic_#{version.before_comma}_#{version.after_comma}_web.dmg",
       verified:   "d1.music.126.net/",
       user_agent: :fake
   name "NetEase cloud music"
@@ -22,6 +22,7 @@ cask "neteasemusic" do
   uninstall quit: "com.netease.163music"
 
   zap trash: [
+    "~/Library/Application Support/com.netease.163music",
     "~/Library/Caches/com.netease.163music",
     "~/Library/Containers/com.netease.163music",
     "~/Library/Cookies/com.netease.163music.binarycookies",
