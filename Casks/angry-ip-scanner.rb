@@ -6,7 +6,7 @@ cask "angry-ip-scanner" do
       verified: "github.com/angryip/ipscan/"
   appcast "https://github.com/angryip/ipscan/releases.atom"
   name "Angry IP Scanner"
-  desc "Open-source, cross-platform network scanner"
+  desc "Network scanner"
   homepage "https://angryip.org/"
 
   app "Angry IP Scanner.app"
