@@ -6,7 +6,7 @@ cask "atom" do
       verified: "github.com/atom/atom/"
   appcast "https://github.com/atom/atom/releases.atom"
   name "Github Atom"
-  desc "Cross-platform text editor"
+  desc "Text editor"
   homepage "https://atom.io/"
 
   auto_updates true
