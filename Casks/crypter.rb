@@ -5,7 +5,7 @@ cask "crypter" do
   url "https://github.com/HR/Crypter/releases/download/v#{version}/Crypter-#{version}.dmg"
   appcast "https://github.com/HR/Crypter/releases.atom"
   name "Crypter"
-  desc "Innovative, convenient and secure cross-platform encryption app"
+  desc "Encryption software"
   homepage "https://github.com/HR/Crypter"
 
   app "Crypter.app"
