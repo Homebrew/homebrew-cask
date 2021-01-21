@@ -15,9 +15,6 @@ cask "folding-at-home" do
             quit:      [
               "org.foldingathome.fahviewer",
               "org.foldingathome.fahcontrol",
-            ]
-
-  zap trash: [
-    "/Library/Application Support/FAHClient",
-  ]
+            ],
+            rmdir:     "/Library/Application Support/FAHClient"
 end
