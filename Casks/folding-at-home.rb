@@ -17,4 +17,8 @@ cask "folding-at-home" do
               "org.foldingathome.fahcontrol",
             ],
             rmdir:     "/Library/Application Support/FAHClient"
+
+  zap trash: [
+    "/Library/Application Support/FAHClient",
+  ]
 end
