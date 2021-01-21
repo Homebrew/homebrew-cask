@@ -1,5 +1,5 @@
 cask "tuxera-ntfs" do
-  version "2020"
+  version "2020.1"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://tuxera.com/mac/tuxerantfs_#{version}.dmg"
@@ -10,7 +10,7 @@ cask "tuxera-ntfs" do
   livecheck do
     url :homepage
     strategy :page_match
-    regex(%r{href=.*?/tuxerantfs_(\d+)\.dmg}i)
+    regex(/href=.*?tuxerantfs_(\d+(?:\.\d+))\.dmg/i)
   end
 
   auto_updates true
