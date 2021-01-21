@@ -12,7 +12,7 @@ cask "expressvpn" do
     strategy :header_match
   end
 
-  auto_updates true
+  auto_updates false
 
   pkg "expressvpn_mac_#{version}_release.pkg"
 
