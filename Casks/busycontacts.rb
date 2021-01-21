@@ -1,6 +1,6 @@
 cask "busycontacts" do
-  version "1.5.1,2021-01-09-18-07"
-  sha256 "d238877ca8a7590f797f9cd6e3f1968617996ef8f0bfb9fd00196dc6544af70d"
+  version "1.5.1,2021-01-21-02-27"
+  sha256 "30bac39b65d2513dd3875ebb9e52e80c498b088ceaf666c65b2face124e81a95"
 
   url "https://7e968b6ce8a839f034d9-23cfb9eddcb7b94cb43ba95f95a76900.ssl.cf1.rackcdn.com/bct-#{version.before_comma}-#{version.after_comma}.zip",
       verified: "7e968b6ce8a839f034d9-23cfb9eddcb7b94cb43ba95f95a76900.ssl.cf1.rackcdn.com/"
