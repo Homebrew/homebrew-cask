@@ -10,7 +10,7 @@ cask "tuxera-ntfs" do
   livecheck do
     url :homepage
     strategy :page_match
-    regex(%r{href=.*?/tuxerantfs_(\d+)\.dmg}i)
+    regex(/href=.*?tuxerantfs_(\d+(?:\.\d+))\.dmg/i)
   end
 
   auto_updates true
