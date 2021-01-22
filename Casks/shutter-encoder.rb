@@ -9,6 +9,4 @@ cask "shutter-encoder" do
   homepage "https://www.shutterencoder.com/"
 
   app "Shutter Encoder.app"
-
-  uninstall delete: "/Applications/Shutter Encoder.app"
 end
