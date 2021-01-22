@@ -10,7 +10,8 @@ cask "fly" do
 
   binary "fly"
 
-  postflight do
-    Quarantine.release!(download_path: "$(brew --prefix)/bin/fly") if Quarantine.available?
+  preflight do
+    system_command "xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{staged_path}/fly"]
   end
 end
