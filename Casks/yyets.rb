@@ -8,7 +8,7 @@ cask "yyets" do
   homepage "http://app.rrys.tv/"
 
   livecheck do
-    url "http://app.rrys.tv/"
+    url :homepage
     strategy :page_match
     regex(%r{href=.*?/RRShare(\d+(?:\.\d+)*)\.dmg}i)
   end
