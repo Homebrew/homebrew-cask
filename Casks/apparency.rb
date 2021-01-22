@@ -10,9 +10,9 @@ cask "apparency" do
   livecheck do
     url "https://www.mothersruin.com/software/Apparency/data/ApparencyVersionInfo.plist"
     strategy :page_match do |page|
-      v = page.match(/<string>(\d+(?:\.\d+)*)/i)
-      id = page.match(/<string>(\d{2,})/i)
-      "#{v[1]},#{id[1]}"
+      svs = page.match(/<string>(\d+(?:\.\d+)*)/i)
+      bv = page.match(/<string>(\d{2,})/i)
+      "#{svs[1]},#{bv[1]}"
     end
   end
 
