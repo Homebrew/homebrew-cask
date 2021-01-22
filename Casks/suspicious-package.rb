@@ -10,9 +10,9 @@ cask "suspicious-package" do
   livecheck do
     url "https://www.mothersruin.com/software/SuspiciousPackage/data/SuspiciousPackageVersionInfo.plist"
     strategy :page_match do |page|
-      v = page.match(/CFBundleShortVersionString.*?\n.*?(\d+(?:\.\d+)*)/i)
-      id = page.match(/CFBundleVersion.*?\n.*?(\d+(?:\.\d+)*)/i)
-      "#{v[1]},#{id[1]}"
+      svs = page.match(/CFBundleShortVersionString.*?\n.*?(\d+(?:\.\d+)*)/i)
+      bv = page.match(/CFBundleVersion.*?\n.*?(\d+(?:\.\d+)*)/i)
+      "#{svs[1]},#{bv[1]}"
     end
   end
 
