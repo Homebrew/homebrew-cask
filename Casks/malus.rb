@@ -1,8 +1,9 @@
 cask "malus" do
-  version "1.7.1,171"
-  sha256 "377d7a40f9b2af2eef82c08d7826d0673a2c0ad7e6a01300e0c2c60bf9fbdf29"
+  version "1.7.2,172"
+  sha256 "77c5f0a10e549760c7f2f19d254bcefb439b9107037cb8bc79b279f1068c0dbe"
 
-  url "https://download.getmalus.com/uploads/Malus_#{version.before_comma.dots_to_underscores}.dmg"
+  url "https://malus.s3cdn.net/uploads/Malus_#{version.before_comma.dots_to_underscores}.dmg",
+      verified: "malus.s3cdn.net/"
   appcast "https://api.getmalus.com/api/checkDesktopUpdate?type=mac"
   name "Malus"
   desc "Proxy to help accessing various online media resources/services"
