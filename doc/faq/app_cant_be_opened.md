@@ -15,3 +15,5 @@ If you are sure you want to trust the app, you can disable protection for that a
 Finally, click the `Open` button if you want macOS to permanently allow the app to run on this Mac. **Don’t do this unless you’re sure you trust the app.**
 
 <img src="https://i.imgur.com/xppa4Qv.png" width="532" alt="Gatekeeper message">
+
+Alternatively, you may provide the [`--no-quarantine` flag](https://github.com/Homebrew/homebrew-cask/blob/master/USAGE.md#options) at install time to not add this feature to a specific app.
