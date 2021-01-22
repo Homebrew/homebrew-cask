@@ -5,7 +5,7 @@ cask "sharemouse" do
   url "https://www.sharemouse.com/ShareMouseSetup.dmg"
   appcast "https://www.sharemouse.com/download/"
   name "ShareMouse"
-  desc "Share mouse and keyboard between computers"
+  desc "Share peripherals between computers"
   homepage "https://www.sharemouse.com/"
 
   app "ShareMouse.app"
