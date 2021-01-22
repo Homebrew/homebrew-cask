@@ -10,7 +10,7 @@ cask "anydo" do
   livecheck do
     url "https://electron-app.any.do/latest-mac.yml"
     strategy :page_match
-    regex(/version: (.*)/i)
+    regex(/version: (\d+(?:\.\d+)*)/i)
   end
 
   depends_on macos: ">= :catalina"
