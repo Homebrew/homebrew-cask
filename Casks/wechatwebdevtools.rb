@@ -16,6 +16,7 @@ cask "wechatwebdevtools" do
     "~/Library/Application Support/微信web开发者工具",
     "~/Library/Caches/微信web开发者工具",
     "~/Library/Preferences/com.tencent.wechat.devtools.plist",
+    "~/Library/Preferences/com.tencent.webplusdevtools.plist",
     "~/Library/Saved Application State/com.tencent.wechat.devtools.savedState",
   ]
 end
