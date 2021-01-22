@@ -9,10 +9,6 @@ cask "kieler" do
 
   app "kieler.app"
 
-  postflight do
-    Quarantine.release!(download_path: "#{appdir}/kieler.app") if Quarantine.available?
-  end
-
   zap trash: [
     "~/Library/Caches/de.cau.cs.kieler.product",
     "~/Library/Preferences/de.cau.cs.kieler.product.plist",
