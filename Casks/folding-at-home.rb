@@ -18,7 +18,5 @@ cask "folding-at-home" do
             ],
             rmdir:     "/Library/Application Support/FAHClient"
 
-  zap trash: [
-    "/Library/Application Support/FAHClient",
-  ]
+  zap trash: "/Library/Application Support/FAHClient"
 end
