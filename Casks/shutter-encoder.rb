@@ -5,7 +5,10 @@ cask "shutter-encoder" do
   url "https://www.shutterencoder.com/Shutter%20Encoder%20(MAC%20Version%20#{version}).zip"
   appcast "https://www.shutterencoder.com/changelog.txt"
   name "Shutter Encoder"
+  desc "Video, audio and image converter"
   homepage "https://www.shutterencoder.com/"
 
   app "Shutter Encoder.app"
+
+  uninstall delete: "/Applications/Shutter Encoder.app"
 end
