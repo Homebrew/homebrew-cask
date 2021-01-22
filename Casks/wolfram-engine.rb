@@ -3,7 +3,7 @@ cask "wolfram-engine" do
   sha256 "5b3e10720b2e0a87cfb8732393c893a7b2efaad172ce50a35ef348603f0a010c"
 
   url "https://files.wolframcdn.com/packages/Homebrew/#{version}.0/WolframEngine_#{version}_MAC.dmg",
-    verified: "files.wolframcdn.com/packages/"
+      verified: "files.wolframcdn.com/packages/"
   name "Wolfram Engine"
   desc "Evaluator for the Wolfram Language"
   homepage "https://www.wolfram.com/engine/"
@@ -14,7 +14,7 @@ cask "wolfram-engine" do
 
   zap trash: [
     "~/Library/WolframEngine",
-    "~/Library/Caches/Wolfram"
+    "~/Library/Caches/Wolfram",
   ]
 
   caveats do
