@@ -10,8 +10,8 @@ cask "fly" do
 
   binary "fly"
 
-  postflight do
+  preflight do
     system_command "xattr",
-                   args: ["-dr", "com.apple.quarantine", "$(brew --prefix)/bin/fly"]
+                   args: ["-dr", "com.apple.quarantine", "#{staged_path}/fly"]
   end
 end
