@@ -9,4 +9,8 @@ cask "shutter-encoder" do
   homepage "https://www.shutterencoder.com/"
 
   app "Shutter Encoder.app"
+
+  uninstall_preflight do
+    set_ownership "#{appdir}/Shutter Encoder.app"
+  end
 end
