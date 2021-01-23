@@ -14,4 +14,13 @@ cask "kieler" do
     "~/Library/Preferences/de.cau.cs.kieler.product.plist",
     "~/Library/Saved Application State/de.cau.cs.kieler.product.savedState",
   ]
+
+  caveats <<~EOS
+    According to the vendor (https://rtsys.informatik.uni-kiel.de/confluence/display/KIELER/Downloads#Downloads-StandaloneApplications),
+    the quarantine attribute breaks the app and needs to be removed. To do so, install this cask with:
+
+      brew install --cask --no-quarantine #{token}
+
+    WARNING: quarantining is a macOS security feature and you disable it at your own risk!
+  EOS
 end
