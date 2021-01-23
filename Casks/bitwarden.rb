@@ -1,6 +1,6 @@
 cask "bitwarden" do
-  version "1.23.1"
-  sha256 "db0cf486b5264a55f3883c721c5d29b5ad2bddbee8b89c6ee080acba4545686c"
+  version "1.24.1"
+  sha256 "94683363fbc0166be17740727e72589033268723e9989a7e935b7758fce8e141"
 
   url "https://github.com/bitwarden/desktop/releases/download/v#{version}/Bitwarden-#{version}-mac.zip",
       verified: "github.com/bitwarden/desktop/"
