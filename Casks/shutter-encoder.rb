@@ -11,6 +11,6 @@ cask "shutter-encoder" do
   app "Shutter Encoder.app"
 
   uninstall_preflight do
-    set_permissions "#{appdir}/Shutter Encoder.app", "0777"
+    set_permissions "#{appdir}/Shutter Encoder.app", "0755"
   end
 end
