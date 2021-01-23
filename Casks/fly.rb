@@ -9,9 +9,4 @@ cask "fly" do
   homepage "https://github.com/concourse/concourse"
 
   binary "fly"
-
-  preflight do
-    system_command "xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{staged_path}/fly"]
-  end
 end
