@@ -3,10 +3,14 @@ cask "stats" do
   sha256 "a11f8cae5f43a912d5243a54cd24734acc2ca7e117eaea740b4b6e0ab4f8de99"
 
   url "https://github.com/exelban/stats/releases/download/v#{version}/Stats.dmg"
-  appcast "https://github.com/exelban/stats/releases.atom"
   name "Stats"
   desc "System monitor for the menu bar"
   homepage "https://github.com/exelban/stats"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
   depends_on macos: ">= :mojave"
