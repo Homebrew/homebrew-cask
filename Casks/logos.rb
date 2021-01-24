@@ -11,7 +11,7 @@ cask "logos" do
   livecheck do
     url "https://clientservices.logos.com/update/v1/feed/logos#{version.major}-mac/stable.xml"
     strategy :page_match
-    regex(%r{<logos:version>(\d+(?:\.\d+)*)</logos:version>}i)
+    regex(%r{<logos:version[^>]*>(\d+(?:\.\d+)*)</logos:version>}i)
   end
 
   auto_updates true
