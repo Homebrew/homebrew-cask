@@ -1,6 +1,6 @@
 cask "eiskaltdcpp" do
-  version "2.4.0"
-  sha256 "fdb729eba827efe95f6a56b28f09d908f0c0173a92370bed1777bf92071c8762"
+  version "2.4.1"
+  sha256 "7a110fb067a6d657a8ac388253326fd8568742b59055a4822a3405a29c908358"
 
   url "https://downloads.sourceforge.net/eiskaltdcpp/EiskaltDC++-#{version}-x86_64.dmg"
   appcast "https://sourceforge.net/projects/eiskaltdcpp/rss"
