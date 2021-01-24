@@ -9,4 +9,10 @@ cask "pokemon-trading-card-game-online" do
   homepage "https://www.pokemon.com/us/pokemon-tcg/play-online/"
 
   app "Pokemon Trading Card Game Online.app"
+
+  zap trash: [
+    "~/Library/Application Support/unity.The Pokémon Company International.Pokemon Trading Card Game Online",
+    "~/Library/Preferences/unity.The Pokémon Company International.Pokemon Trading Card Game Online.plist",
+    "~/Library/Caches/com.plausiblelabs.crashreporter.data/unity.The Pokémon Company International.Pokemon Trading Card Game Online",
+  ]
 end
