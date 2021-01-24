@@ -1,8 +1,8 @@
 cask "arq" do
-  version "6.2.68"
-  sha256 "e7c078adde99521e375235d7682331e4520bfad96765a8377b6044ef265d5787"
+  version "6.2.76"
+  sha256 "73cc1fd74b8b6dafaa33f37dcaf9dca7a50679a2ae4504d7b6d9dae72ab54527"
 
-  url "https://www.arqbackup.com/download/arqbackup/Arq#{version.major}.pkg"
+  url "https://www.arqbackup.com/download/arqbackup/Arq#{version}.pkg"
   appcast "https://www.arqbackup.com/download/arqbackup/arq#{version.major}_release_notes.html"
   name "Arq"
   desc "Multi-cloud backup application"
@@ -10,7 +10,7 @@ cask "arq" do
 
   auto_updates true
 
-  pkg "Arq#{version.major}.pkg"
+  pkg "Arq#{version}.pkg"
 
   uninstall pkgutil:   "com.haystacksoftware.Arq",
             quit:      "com.haystacksoftware.Arq",
