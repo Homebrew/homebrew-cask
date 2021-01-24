@@ -9,7 +9,7 @@ cask "mat" do
 
   livecheck do
     url "https://www.eclipse.org/mat/downloads.php"
-    regex(/href=.*?MemoryAnalyzer-(\d+\.\d+\.\d+\.\d{8}).+\.zip/i)
+    regex(/href=.*?MemoryAnalyzer-(\d+(?:\.\d+)*).*?\.zip/i)
   end
 
   app "mat.app"
