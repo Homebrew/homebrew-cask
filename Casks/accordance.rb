@@ -9,6 +9,13 @@ cask "accordance" do
   desc "Bible study software"
   homepage "https://www.accordancebible.com/"
 
+  livecheck do
+    url "https://accordancefiles1.com/xml/appcast_#{version.major}.xml"
+    strategy :sparkle
+  end
+
+  auto_updates true
+
   app "Accordance.app"
 
   uninstall quit: "com.OakTree.Accordance"
