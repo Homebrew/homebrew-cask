@@ -4,9 +4,17 @@ cask "logos" do
 
   url "https://downloads.logoscdn.com/LBS#{version.major}/Installer/#{version}/LogosMac.dmg",
       verified: "downloads.logoscdn.com/"
-  appcast "https://clientservices.logos.com/update/v1/feed/logos#{version.major}-mac/stable.xml"
   name "Logos Bible Software"
+  desc "Bible study software from Faithlife"
   homepage "https://www.logos.com/"
+
+  livecheck do
+    url "https://clientservices.logos.com/update/v1/feed/logos#{version.major}-mac/stable.xml"
+    strategy :page_match
+    regex(%r{<logos:version\>(\d+(?:\.\d+\.\d+\.\d+)*)</logos:version\>}i)
+  end
+
+  auto_updates true
 
   depends_on macos: ">= :mojave"
 
