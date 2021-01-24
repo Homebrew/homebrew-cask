@@ -1,7 +1,7 @@
 # typed: false
 cask "safenet-authentication-client" do
   version "10.2.109.0"
-  sha256 "d0c316379c03e17a35a53e81df641b85b38b5cf7b7a8f6b5f11789a0819f943a"
+  sha256 :no_check
 
   url "https://www.globalsign.com/en/safenet-drivers/USB/10.2/Safenet_10.2_Post_GA_R3.zip",
       verified: "www.globalsign.com/en/safenet-drivers/"
