@@ -4,9 +4,18 @@ cask "adoptopenjdk" do
 
   url "https://github.com/AdoptOpenJDK/openjdk#{version.major}-binaries/releases/download/jdk-#{version.before_comma}%2B#{version.after_comma}/OpenJDK#{version.major}U-jdk_x64_mac_hotspot_#{version.before_comma}_#{version.after_comma.major}.pkg",
       verified: "github.com/AdoptOpenJDK/"
-  appcast "https://github.com/AdoptOpenJDK/openjdk#{version.major}-binaries/releases/latest"
   name "AdoptOpenJDK Java Development Kit"
   homepage "https://adoptopenjdk.net/"
+
+  livecheck do
+    url :url
+    strategy :git do |tags|
+      tags.map do |tag|
+        match = tag.match(/^jdk-(\d+(?:\.\d)*)\+(\d+(?:\.\d)*)$/i)
+        "#{match[1]},#{match[2]}" if match
+      end.compact
+    end
+  end
 
   pkg "OpenJDK#{version.major}U-jdk_x64_mac_hotspot_#{version.before_comma}_#{version.after_comma.major}.pkg"
 
