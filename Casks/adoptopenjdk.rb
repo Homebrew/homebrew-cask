@@ -11,7 +11,7 @@ cask "adoptopenjdk" do
     url :url
     strategy :git do |tags|
       tags.map do |tag|
-        match = tag.match(/^jdk-(\d+(?:\.\d)*)\+(\d+(?:\.\d)*)$/i)
+        match = tag.match(/^jdk-(\d+(?:\.\d+)*)\+(\d+(?:\.\d+)*)$/i)
         "#{match[1]},#{match[2]}" if match
       end.compact
     end
