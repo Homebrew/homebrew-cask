@@ -15,7 +15,5 @@ cask "brewlet" do
 
   app "Brewlet.app"
 
-  zap trash: [
-    "~/Library/Preferences/zzada.Brewlet.plist",
-  ]
+  zap trash: "~/Library/Preferences/zzada.Brewlet.plist"
 end
