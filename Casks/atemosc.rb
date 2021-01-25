@@ -6,7 +6,7 @@ cask "atemosc" do
       verified: "github.com/SteffeyDev/atemOSC/"
   name "atemOSC"
   desc "Control BMD ATEM video switchers with OSC"
-  homepage "http://www.atemosc.com/"
+  homepage "https://www.atemosc.com/"
 
   livecheck do
     url :url
