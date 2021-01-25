@@ -7,6 +7,11 @@ cask "aegisub" do
   desc "Create and modify subtitles"
   homepage "https://github.com/Aegisub/Aegisub"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Aegisub.app"
 
   uninstall quit: "com.aegisub.aegisub"
