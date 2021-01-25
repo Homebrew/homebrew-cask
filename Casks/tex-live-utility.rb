@@ -1,6 +1,6 @@
 cask "tex-live-utility" do
-  version "1.40"
-  sha256 "631fc032db56fd51edc8d2c39aa8619f4cd8a6d128762665c181b3f6834bb8e9"
+  version "1.41"
+  sha256 "a4cad390cfb20f767fc8eb3a9cd288c981f3a51db8cd0fa328740b95580e767b"
 
   url "https://github.com/amaxwell/tlutility/releases/download/#{version}/TeX.Live.Utility.app-#{version}.dmg"
   appcast "https://github.com/amaxwell/tlutility/releases.atom"

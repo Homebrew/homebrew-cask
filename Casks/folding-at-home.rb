@@ -16,4 +16,6 @@ cask "folding-at-home" do
               "org.foldingathome.fahviewer",
               "org.foldingathome.fahcontrol",
             ]
+
+  zap trash: "/Library/Application Support/FAHClient"
 end

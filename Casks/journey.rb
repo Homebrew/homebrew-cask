@@ -1,6 +1,6 @@
 cask "journey" do
-  version "2.14.3"
-  sha256 "aa3de8061bb169765c44fd256b0885c807ccebb771ba045b59eaf04815231583"
+  version "2.14.6"
+  sha256 "19da0e4da7983f54c1dabd7bc8bfb03ff8d783ad02a4fb9701b4f2891450e44a"
 
   url "https://github.com/2-App-Studio/journey-releases/releases/download/v#{version}/Journey-darwin-#{version}.zip",
       verified: "github.com/2-App-Studio/journey-releases/"

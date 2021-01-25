@@ -5,7 +5,7 @@ cask "flying-carpet" do
   url "https://github.com/spieglt/FlyingCarpet/releases/download/#{version}/Flying.Carpet.Mac.zip"
   appcast "https://github.com/spieglt/flyingcarpet/releases.atom"
   name "Flying Carpet"
-  desc "Cross-platform file transfer over ad-hoc wifi"
+  desc "File transfer over ad-hoc wifi"
   homepage "https://github.com/spieglt/flyingcarpet"
 
   app "Flying Carpet.app"

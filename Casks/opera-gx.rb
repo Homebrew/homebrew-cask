@@ -5,7 +5,7 @@ cask "opera-gx" do
   url "https://get.geo.opera.com/pub/opera_gx/#{version}/mac/Opera_GX_#{version}_Setup.dmg"
   appcast "https://ftp.opera.com/pub/opera_gx/"
   name "Opera GX"
-  desc "Cross-platform web browser that compliments gaming"
+  desc "Alternate version of the Opera web browser to complement gaming"
   homepage "https://www.opera.com/gx"
 
   auto_updates true

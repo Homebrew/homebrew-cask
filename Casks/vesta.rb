@@ -1,6 +1,6 @@
 cask "vesta" do
-  version "3.5.6"
-  sha256 "dc3920140c9860137b4094b3cb638a5553fcc23db99bb07d73e8da9806339949"
+  version "3.5.7"
+  sha256 "5e7110f4c09a426fd6abc0db2b6ef1fc8288e8d4ffa393a22338d93c10d792ef"
 
   url "https://jp-minerals.org/vesta/archives/#{version}/VESTA.dmg"
   appcast "https://jp-minerals.org/vesta/en/changes.html"

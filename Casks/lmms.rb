@@ -6,7 +6,7 @@ cask "lmms" do
       verified: "github.com/LMMS/lmms/"
   appcast "https://github.com/LMMS/lmms/releases.atom"
   name "LMMS"
-  desc "Cross-platform music production software"
+  desc "Music production software"
   homepage "https://lmms.io/"
 
   depends_on macos: ">= :high_sierra"

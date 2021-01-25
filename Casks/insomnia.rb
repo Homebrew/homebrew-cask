@@ -6,7 +6,7 @@ cask "insomnia" do
       verified: "github.com/Kong/insomnia/"
   appcast "https://api.insomnia.rest/changelog.json?app=com.insomnia.app"
   name "Insomnia"
-  desc "Cross-platform HTTP and GraphQL Client"
+  desc "HTTP and GraphQL Client"
   homepage "https://insomnia.rest/"
 
   auto_updates true

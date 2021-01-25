@@ -6,7 +6,7 @@ cask "termius" do
       verified: "s3.amazonaws.com/termius.desktop.autoupdate/mac/"
   appcast "https://s3.amazonaws.com/termius.desktop.autoupdate/mac/latest-mac.yml"
   name "Termius"
-  desc "Cross-platform SSH client"
+  desc "SSH client"
   homepage "https://www.termius.com/"
 
   auto_updates true
