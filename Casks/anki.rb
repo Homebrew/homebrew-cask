@@ -4,7 +4,6 @@ cask "anki" do
 
   url "https://github.com/ankitects/anki/releases/download/#{version}/anki-#{version}-mac.dmg",
       verified: "github.com/ankitects/anki/"
-  appcast "https://github.com/ankitects/anki/releases.atom"
   name "Anki"
   desc "Memory training application"
   homepage "https://apps.ankiweb.net/"
