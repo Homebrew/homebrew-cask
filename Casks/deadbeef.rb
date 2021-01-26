@@ -1,10 +1,10 @@
 cask "deadbeef" do
-  version "1.8.5-beta2"
-  sha256 "d6ad1718a8bb8ec2ccb75d657df287dcda134a3a91650430c9f8fd3615467e90"
+  version "1.8.6-rc1"
+  sha256 "65f98d1f9a3d6c558712b52abaeaba9092268d88cdf570b8453ba292fba24913"
 
-  url "https://downloads.sourceforge.net/deadbeef/travis/osx/master/deadbeef-#{version}-osx-x86_64.zip",
+  url "https://downloads.sourceforge.net/deadbeef/travis/osx/#{version.major_minor}/deadbeef-#{version}-osx-x86_64.zip",
       verified: "downloads.sourceforge.net/deadbeef/"
-  appcast "https://sourceforge.net/projects/deadbeef/rss?path=/travis/osx/master"
+  appcast "https://sourceforge.net/projects/deadbeef/rss?path=/travis/osx/#{version.major_minor}"
   name "DeaDBeeF"
   desc "Modular audio player"
   homepage "https://deadbeef.sourceforge.io/"
