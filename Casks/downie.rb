@@ -17,4 +17,10 @@ cask "downie" do
   depends_on macos: ">= :el_capitan"
 
   app "Downie #{version.major}.app"
+
+  zap trash: [
+    "~/Library/Caches/com.charliemonroe.Downie-4",
+    "~/Library/Containers/com.charliemonroe.Downie-4",
+    "~/Library/Preferences/com.charliemonroe.Downie-4.plist",
+  ]
 end
