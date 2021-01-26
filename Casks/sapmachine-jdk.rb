@@ -1,6 +1,6 @@
 cask "sapmachine-jdk" do
-  version "15.0.1"
-  sha256 "dd95938bdf230c052e13819e6ddfd228001abc4fec3afbd82b007b6fe0df7d23"
+  version "15.0.2"
+  sha256 "35fd651595cac2588de08a943e8bb61ee2dd10146f4b459511ae577e9c3fa42c"
 
   url "https://github.com/SAP/SapMachine/releases/download/sapmachine-#{version}/sapmachine-jdk-#{version}_osx-x64_bin.dmg",
       verified: "github.com/SAP/SapMachine/"
