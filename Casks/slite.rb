@@ -1,5 +1,5 @@
 cask "slite" do
-  version "1.2.3"
+  version "1.2.4"
   sha256 :no_check
 
   url "https://download.slite.com/mac"
