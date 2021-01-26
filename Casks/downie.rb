@@ -22,5 +22,6 @@ cask "downie" do
     "~/Library/Caches/com.charliemonroe.Downie-4",
     "~/Library/Containers/com.charliemonroe.Downie-4",
     "~/Library/Preferences/com.charliemonroe.Downie-4.plist",
+    "~/Library/Containers/com.charliemonroe.Downie-4-Downie-Extension",
   ]
 end
