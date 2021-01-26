@@ -1,8 +1,16 @@
 cask "visual-studio-code" do
-  version "1.52.1"
-  sha256 "99c8c559971862eb8532b30507d1930b939a17b2e067bcdf9e9f16264a6deae1"
+  version "1.53.0"
 
-  url "https://update.code.visualstudio.com/#{version}/darwin/stable"
+  if Hardware::CPU.intel?
+    sha256 ""
+
+    url "https://update.code.visualstudio.com/#{version}/darwin/stable"
+  else
+    sha256 ""
+
+    url "https://update.code.visualstudio.com/#{version}/darwin-arm64/stable"
+  end
+
   name "Microsoft Visual Studio Code"
   name "VS Code"
   desc "Open-source code editor"
