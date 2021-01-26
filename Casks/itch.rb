@@ -5,9 +5,8 @@ cask "itch" do
   url "https://broth.itch.ovh/install-itch/darwin-amd64/LATEST/archive/default",
       verified: "broth.itch.ovh/"
   name "itch.io"
+  desc "Game client for itch.io"
   homepage "https://itch.io/app"
-
-  auto_updates true
 
   installer script: "Install itch.app/Contents/MacOS/itch-setup"
 
