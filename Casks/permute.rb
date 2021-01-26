@@ -16,4 +16,9 @@ cask "permute" do
   depends_on macos: ">= :el_capitan"
 
   app "Permute #{version.major}.app"
+
+  zap trash: [
+    "~/Library/Containers/com.charliemonroe.Permute-3",
+    "~/Library/Preferences/com.charliemonroe.Permute-3.plist",
+  ]
 end
