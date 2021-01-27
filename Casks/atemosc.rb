@@ -4,10 +4,14 @@ cask "atemosc" do
 
   url "https://github.com/SteffeyDev/atemOSC/releases/download/v#{version}/atemOSC_#{version}.dmg",
       verified: "github.com/SteffeyDev/atemOSC/"
-  appcast "https://github.com/SteffeyDev/atemOSC/releases.atom"
   name "atemOSC"
   desc "Control BMD ATEM video switchers with OSC"
-  homepage "http://www.atemosc.com/"
+  homepage "https://www.atemosc.com/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "atemOSC.app"
 
