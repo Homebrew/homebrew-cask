@@ -6,6 +6,7 @@ cask "tastyworks" do
   appcast "https://tastyworks.freshdesk.com/support/solutions/articles/43000435186-recent-release-notes",
           must_contain: version.major_minor
   name "tastyworks"
+  desc "Desktop trading platform for the tastyworks brokerage"
   homepage "https://tastyworks.com/"
 
   auto_updates true
