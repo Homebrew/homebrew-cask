@@ -16,7 +16,7 @@ cask "background-music" do
   pkg "BackgroundMusic-#{version}.pkg"
 
   uninstall script: {
-    executable: "/Applications/Background Music.app/Contents/Resources/_uninstall-non-interactive.sh",
+    executable: "/Applications/Background Music.app/Contents/Resources/uninstall.sh",
     sudo:       true,
   }
 end
