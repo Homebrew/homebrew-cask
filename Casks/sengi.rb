@@ -4,7 +4,7 @@ cask "sengi" do
 
   url "https://github.com/NicolasConstant/sengi/releases/download/#{version}/Sengi-#{version}-mac.dmg"
   name "Sengi"
-  desc "Mastodon & Pleroma Multi-account Desktop Client"
+  desc "Mastodon and Pleroma desktop client"
   homepage "https://github.com/NicolasConstant/sengi"
 
   livecheck do
@@ -16,7 +16,7 @@ cask "sengi" do
   app "Sengi.app"
 
   zap trash: [
-    "~/Library/Application\ Support/sengi",
+    "~/Library/Application Support/sengi",
     "~/Library/Preferences/org.sengi.desktop.plist",
     "~/Library/Saved Application State/org.sengi.desktop.savedState",
   ]
