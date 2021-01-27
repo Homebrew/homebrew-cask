@@ -4,9 +4,13 @@ cask "backlog" do
 
   url "https://github.com/czytelny/backlog/releases/download/v#{version}/Backlog-darwin-x64.zip",
       verified: "github.com/czytelny/backlog/"
-  appcast "https://github.com/czytelny/backlog/releases.atom"
   name "Backlog"
   homepage "http://www.backlog.cloud/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Backlog-darwin-x64/Backlog.app"
 
