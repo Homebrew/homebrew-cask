@@ -7,6 +7,12 @@ cask "xmind-zen" do
   desc "Mindmap and brainstorming app"
   homepage "https://www.xmind.net/xmind2020/"
 
+  livecheck do
+    url "https://www.xmind.net/zen/download/mac/"
+    strategy :header_match
+    regex(/macOS-(\d+(?:\.\d+)*-\d+(?:\.\d+)*).dmg$/)
+  end
+
   auto_updates true
   conflicts_with cask: "xmind"
 
