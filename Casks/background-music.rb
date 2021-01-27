@@ -15,7 +15,7 @@ cask "background-music" do
 
   pkg "BackgroundMusic-#{version}.pkg"
 
-  uninstall quit:      "com.bearisdriving.BGM.App",
+  uninstall signal:    ["TERM", "com.bearisdriving.BGM.App"],
             launchctl: "com.bearisdriving.BGM.XPCHelper",
             pkgutil:   "com.bearisdriving.BGM",
             script:    {
