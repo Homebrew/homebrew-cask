@@ -15,8 +15,5 @@ cask "background-music" do
 
   pkg "BackgroundMusic-#{version}.pkg"
 
-  uninstall script: {
-    executable: "/Applications/Background Music.app/Contents/Resources/uninstall.sh",
-    sudo:       true,
-  }
+  uninstall pkgutil: "com.bearisdriving.BGM"
 end
