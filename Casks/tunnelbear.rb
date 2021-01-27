@@ -1,6 +1,6 @@
 cask "tunnelbear" do
-  version "4.0.4,1608325762"
-  sha256 "9ca595d5f202eb882c746fc8123f50530325774b869e1d44c8ba634f9d3defe9"
+  version "4.1.2,1610998465"
+  sha256 "8329a8ed22287ea01222393c34b7d4bf93147b9d1d14be260327028577b27fa3"
 
   url "https://tunnelbear.s3.amazonaws.com/downloads/mac/TunnelBear-#{version.before_comma}.zip",
       verified: "tunnelbear.s3.amazonaws.com/"
