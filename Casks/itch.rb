@@ -1,5 +1,5 @@
 cask "itch" do
-  version :latest
+  version "25.4.1"
   sha256 :no_check
 
   url "https://broth.itch.ovh/install-itch/darwin-amd64/LATEST/archive/default",
@@ -7,6 +7,13 @@ cask "itch" do
   name "itch.io"
   desc "Game client for itch.io"
   homepage "https://itch.io/app"
+
+  livecheck do
+    url "https://github.com/itchio/itch/releases"
+    strategy :github_latest
+  end
+
+  auto_updates true
 
   installer script: "Install itch.app/Contents/MacOS/itch-setup"
 
