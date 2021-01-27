@@ -1,6 +1,3 @@
-# typed: false
-# frozen_string_literal: true
-
 cask "osquery" do
   version "4.6.0"
   sha256 "c037742f9f7e416955c0a38cf450e00989fad07f34aef60aba8d3a923502177c"
