@@ -4,10 +4,14 @@ cask "beekeeper-studio" do
 
   url "https://github.com/beekeeper-studio/beekeeper-studio/releases/download/v#{version}/Beekeeper-Studio-#{version}.dmg",
       verified: "github.com/beekeeper-studio/beekeeper-studio/"
-  appcast "https://github.com/beekeeper-studio/beekeeper-studio/releases.atom"
   name "Beekeeper Studio"
   desc "Cross platform SQL editor and database management app"
   homepage "https://www.beekeeperstudio.io/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
 
