@@ -18,7 +18,7 @@ cask "permute" do
   app "Permute #{version.major}.app"
 
   zap trash: [
-    "~/Library/Containers/com.charliemonroe.Permute-3",
-    "~/Library/Preferences/com.charliemonroe.Permute-3.plist",
+    "~/Library/Containers/com.charliemonroe.Permute-#{version.major}",
+    "~/Library/Preferences/com.charliemonroe.Permute-#{version.major}.plist",
   ]
 end
