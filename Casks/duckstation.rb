@@ -4,7 +4,7 @@ cask "duckstation" do
 
   url "https://github.com/stenzek/duckstation/releases/download/latest/duckstation-mac-release.zip"
   name "DuckStation"
-  desc "PlayStation 1, aka. PSX Emulator"
+  desc "PlayStation 1 emulator"
   homepage "https://github.com/stenzek/duckstation"
 
   app "DuckStation.app"
