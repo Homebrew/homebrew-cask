@@ -4,10 +4,14 @@ cask "thorium" do
 
   url "https://github.com/edrlab/thorium-reader/releases/download/v#{version}/Thorium-#{version}.dmg",
       verified: "github.com/edrlab/thorium-reader/"
-  appcast "https://github.com/edrlab/thorium-reader/releases.atom"
   name "Thorium Reader"
   desc "Epub reader"
   homepage "https://www.edrlab.org/software/thorium-reader/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Thorium.app"
 
