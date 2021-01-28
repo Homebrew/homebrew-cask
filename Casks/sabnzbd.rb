@@ -4,9 +4,13 @@ cask "sabnzbd" do
 
   url "https://github.com/sabnzbd/sabnzbd/releases/download/#{version}/SABnzbd-#{version}-osx.dmg",
       verified: "github.com/sabnzbd/sabnzbd/"
-  appcast "https://github.com/sabnzbd/sabnzbd/releases.atom"
   name "SABnzbd"
   homepage "https://sabnzbd.org/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   depends_on macos: ">= :yosemite"
 
