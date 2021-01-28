@@ -4,9 +4,13 @@ cask "controlplane" do
 
   url "https://github.com/dustinrue/ControlPlane/releases/download/#{version}/ControlPlane-#{version}.dmg",
       verified: "github.com/dustinrue/ControlPlane/"
-  appcast "https://github.com/dustinrue/ControlPlane/releases.atom"
   name "ControlPlane"
   homepage "https://www.controlplaneapp.com/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "ControlPlane.app"
 
