@@ -4,10 +4,14 @@ cask "bitwarden" do
 
   url "https://github.com/bitwarden/desktop/releases/download/v#{version}/Bitwarden-#{version}-mac.zip",
       verified: "github.com/bitwarden/desktop/"
-  appcast "https://github.com/bitwarden/desktop/releases.atom"
   name "Bitwarden"
   desc "Desktop password and login vault"
   homepage "https://bitwarden.com/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
 
