@@ -4,10 +4,14 @@ cask "nzbget" do
 
   url "https://github.com/nzbget/nzbget/releases/download/v#{version}/nzbget-#{version}-bin-macos.zip",
       verified: "github.com/nzbget/nzbget/"
-  appcast "https://github.com/nzbget/nzbget/releases.atom"
   name "NZBGet"
   desc "Usenet downloader focusing on efficiency"
   homepage "https://nzbget.net/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "NZBGet.app"
 
