@@ -1,14 +1,18 @@
 cask "ibm-aspera-connect" do
-  version "3.10.1.181943"
-  sha256 "aff234db6ce414044a7932926137a8f451dd6bcc026c1b5f067283d43e1d18c7"
+  version "3.11.1.58"
+  sha256 "bbbd2707681939af5237d718fc07b61f1a5feca9ff3a3f056b8b27c72acb4b7e"
 
-  url "https://d3gcli72yxqn2z.cloudfront.net/connect_#{version.dots_to_underscores}_ga/v4/bin/IBMAsperaConnectInstallerOneClick-#{version}.dmg",
+  url "https://d3gcli72yxqn2z.cloudfront.net/connect_latest/v4/bin/IBMAsperaConnectInstallerOneClick-#{version}.dmg",
       verified: "d3gcli72yxqn2z.cloudfront.net/"
-  appcast "https://www.ibm.com/aspera/connect/",
-          must_contain: version.dots_to_underscores
   name "IBM Aspera Connect"
   desc "Facilitate uploads and downloads with an Aspera transfer server"
   homepage "https://www.ibm.com/aspera/connect/"
+
+  livecheck do
+    url "https://d3gcli72yxqn2z.cloudfront.net/connect_latest/v4/connectversions.min.js"
+    strategy :page_match
+    regex(/(\d+(?:\.\d+)*)\.dmg/)
+  end
 
   installer manual: "IBM Aspera Connect Installer.app"
 
