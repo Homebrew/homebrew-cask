@@ -4,10 +4,14 @@ cask "session" do
 
   url "https://github.com/loki-project/session-desktop/releases/download/v#{version}/session-desktop-mac-#{version}.dmg",
       verified: "github.com/loki-project/session-desktop/"
-  appcast "https://github.com/loki-project/session-desktop/releases.atom"
   name "Session"
   desc "Onion routing based messenger"
   homepage "https://getsession.org/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Session.app"
 
