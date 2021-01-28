@@ -4,10 +4,14 @@ cask "zettelkasten" do
 
   url "https://github.com/Zettelkasten-Team/Zettelkasten/releases/download/v#{version}/Zettelkasten_#{version}_Mac-Java8.zip",
       verified: "github.com/Zettelkasten-Team/Zettelkasten/"
-  appcast "https://github.com/Zettelkasten-Team/Zettelkasten/releases.atom"
   name "Zettelkasten"
   desc "Note box according to Luhmann"
   homepage "http://zettelkasten.danielluedecke.de/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Zettelkasten.app"
 
