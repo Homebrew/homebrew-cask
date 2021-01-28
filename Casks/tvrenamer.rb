@@ -4,10 +4,14 @@ cask "tvrenamer" do
 
   url "https://github.com/tvrenamer/tvrenamer/releases/download/v#{version}/TVRenamer-#{version}-osx64.zip",
       verified: "github.com/tvrenamer/tvrenamer/"
-  appcast "https://github.com/tvrenamer/tvrenamer/releases.atom"
   name "TVRenamer"
   desc "Utility to rename TV episodes from TV listings"
   homepage "http://tvrenamer.org/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "TVRenamer-#{version}.app"
 
