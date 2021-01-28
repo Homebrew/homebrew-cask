@@ -4,9 +4,13 @@ cask "mcedit" do
 
   url "https://github.com/Podshot/MCEdit-Unified/releases/download/#{version}/MCEdit.v#{version}.OSX.64bit.zip",
       verified: "github.com/Podshot/MCEdit-Unified/"
-  appcast "https://github.com/Podshot/MCEdit-Unified/releases.atom"
   name "MCEdit-Unified"
   homepage "https://www.mcedit-unified.net/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "mcedit.app"
 end
