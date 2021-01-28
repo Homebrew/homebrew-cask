@@ -4,13 +4,17 @@ cask "hex-fiend" do
 
   url "https://github.com/ridiculousfish/HexFiend/releases/download/v#{version}/Hex_Fiend_#{version.major_minor}.dmg",
       verified: "github.com/ridiculousfish/HexFiend/"
-  appcast "https://github.com/ridiculousfish/HexFiend/releases.atom"
   name "Hex Fiend"
   desc "Hex editor focussing on speed"
   homepage "https://ridiculousfish.com/hexfiend/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
-  conflicts_with cask: "hex-fiend-beta"
+  conflicts_with cask: "homebrew/cask-versions/hex-fiend-beta"
 
   app "Hex Fiend.app"
   binary "#{appdir}/Hex Fiend.app/Contents/Resources/hexf"
