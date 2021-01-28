@@ -4,10 +4,14 @@ cask "tropy" do
 
   url "https://github.com/tropy/tropy/releases/download/#{version}/tropy-#{version}.dmg",
       verified: "github.com/tropy/tropy/"
-  appcast "https://github.com/tropy/tropy/releases.atom"
   name "Tropy"
   desc "Research photo management"
   homepage "https://tropy.org/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Tropy.app"
 
