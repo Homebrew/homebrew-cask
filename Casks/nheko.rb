@@ -4,10 +4,14 @@ cask "nheko" do
 
   url "https://github.com/Nheko-Reborn/nheko/releases/download/v#{version}/nheko-v#{version}.dmg",
       verified: "github.com/Nheko-Reborn/nheko/"
-  appcast "https://github.com/Nheko-Reborn/nheko/releases.atom"
   name "Nheko"
   desc "Desktop client for the Matrix protocol"
   homepage "https://nheko-reborn.github.io/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Nheko.app"
 end
