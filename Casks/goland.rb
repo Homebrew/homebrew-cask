@@ -10,8 +10,8 @@ cask "goland" do
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=GO&latest=true&type=release"
     strategy :page_match do |page|
-      version = page.match(/"version":"(\d+\.\d+\.\d+)"/i)
-      build = page.match(/"build":"(\d+\.\d+\.\d+)"/i)
+      version = page.match(/"version":"(\d+(?:\.\d+)*)/i)
+      build = page.match(/"build":"(\d+(?:\.\d+)*)/i)
       "#{version[1]},#{build[1]}"
     end
   end
