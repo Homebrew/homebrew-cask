@@ -4,11 +4,14 @@ cask "textmate" do
 
   url "https://github.com/textmate/textmate/releases/download/v#{version}/TextMate_#{version}.tbz",
       verified: "github.com/textmate/textmate/"
-  appcast "https://api.textmate.org/releases/release?os=10.14.6",
-          must_contain: version
   name "TextMate"
   desc "General-purpose text editor"
   homepage "https://macromates.com/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"
