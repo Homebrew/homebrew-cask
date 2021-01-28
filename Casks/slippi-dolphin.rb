@@ -1,4 +1,4 @@
-cask "project-slippi-dolphin" do
+cask "slippi-dolphin" do
   version "2.2.5"
   sha256 "1106626ec4531b5cc3906a91f6f72605cad63eebed47fa1b348a53698c5492d5"
 
