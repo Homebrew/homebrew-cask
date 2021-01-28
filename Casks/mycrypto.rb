@@ -4,9 +4,13 @@ cask "mycrypto" do
 
   url "https://github.com/MyCryptoHQ/MyCrypto/releases/download/#{version}/mac_#{version}_MyCrypto.dmg",
       verified: "github.com/MyCryptoHQ/MyCrypto/"
-  appcast "https://github.com/MyCryptoHQ/MyCrypto/releases.atom"
   name "MyCrypto"
   homepage "https://mycrypto.com/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "MyCrypto.app"
 end
