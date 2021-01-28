@@ -4,10 +4,14 @@ cask "sourcetrail" do
 
   url "https://github.com/CoatiSoftware/Sourcetrail/releases/download/#{version}/Sourcetrail_#{version.dots_to_underscores}_macOS_64bit.dmg",
       verified: "github.com/CoatiSoftware/Sourcetrail/"
-  appcast "https://github.com/CoatiSoftware/Sourcetrail/releases.atom"
   name "Sourcetrail"
   desc "Code source explorer"
   homepage "https://www.sourcetrail.com/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Sourcetrail.app"
 end
