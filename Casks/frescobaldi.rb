@@ -4,10 +4,14 @@ cask "frescobaldi" do
 
   url "https://github.com/frescobaldi/frescobaldi/releases/download/v#{version}/Frescobaldi-#{version}-x86_64.dmg",
       verified: "github.com/frescobaldi/frescobaldi/"
-  appcast "https://github.com/frescobaldi/frescobaldi/releases.atom"
   name "Frescobaldi"
   desc "LilyPond Editor"
   homepage "https://frescobaldi.org/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Frescobaldi.app"
 
