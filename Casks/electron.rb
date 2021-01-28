@@ -4,10 +4,14 @@ cask "electron" do
 
   url "https://github.com/electron/electron/releases/download/v#{version}/electron-v#{version}-darwin-x64.zip",
       verified: "github.com/electron/electron/"
-  appcast "https://www.electronjs.org/releases/stable"
   name "Electron"
   desc "Build desktop apps with JavaScript, HTML, and CSS"
   homepage "https://electronjs.org/"
+
+  livecheck do
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
 
   app "Electron.app"
 
