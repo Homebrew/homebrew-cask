@@ -4,10 +4,14 @@ cask "cellprofiler" do
 
   url "https://cellprofiler-releases.s3.amazonaws.com/CellProfiler-macOS-#{version}.zip",
       verified: "cellprofiler-releases.s3.amazonaws.com/"
-  appcast "https://github.com/CellProfiler/CellProfiler/releases.atom"
   name "CellProfiler"
   desc "Open-source application for biological image analysis"
   homepage "https://cellprofiler.org/"
+
+  livecheck do
+    url "https://github.com/CellProfiler/CellProfiler"
+    strategy :github_latest
+  end
 
   app "CellProfiler.app"
 end
