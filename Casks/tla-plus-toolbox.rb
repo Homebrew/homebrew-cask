@@ -4,10 +4,14 @@ cask "tla-plus-toolbox" do
 
   url "https://github.com/tlaplus/tlaplus/releases/download/v#{version}/TLAToolbox-#{version}-macosx.cocoa.x86_64.zip",
       verified: "github.com/tlaplus/tlaplus/"
-  appcast "https://github.com/tlaplus/tlaplus/releases.atom"
   name "TLA+ Toolbox"
   desc "IDE for TLA+"
   homepage "https://lamport.azurewebsites.net/tla/toolbox.html"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   conflicts_with cask: "homebrew/cask-versions/tla-plus-toolbox-nightly"
 
