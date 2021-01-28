@@ -1,6 +1,6 @@
 cask "repoz" do
-  version "5.4"
-  sha256 "2c482bab34fb0969080db5d0a7d008aa9a2271cbebba915ac3e8c7e8847bf160"
+  version "5.5"
+  sha256 "16bb83cad7f6a889cce9b6a4fa733e055469c7c918f7809cf87dbaebf862384f"
 
   url "https://github.com/awaescher/RepoZ/releases/download/v#{version}/RepoZ.#{version}.pkg"
   appcast "https://github.com/awaescher/RepoZ/releases.atom"
