@@ -4,10 +4,14 @@ cask "radarr" do
 
   url "https://github.com/Radarr/Radarr/releases/download/v#{version}/Radarr.master.#{version}.osx-app-core-x64.zip",
       verified: "github.com/Radarr/Radarr/"
-  appcast "https://github.com/Radarr/Radarr/releases.atom"
   name "Radarr"
   desc "Fork of Sonarr to work with movies à la Couchpotato"
   homepage "https://radarr.video/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   depends_on macos: ">= :high_sierra"
 
