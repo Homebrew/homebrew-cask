@@ -4,10 +4,14 @@ cask "deltachat" do
 
   url "https://download.delta.chat/desktop/v#{version}/DeltaChat-#{version}.dmg",
       verified: "github.com/deltachat/deltachat-desktop/"
-  appcast "https://github.com/deltachat/deltachat-desktop/releases.atom"
   name "DeltaChat"
   desc "Chat via the e-mail server network"
   homepage "https://delta.chat/"
+
+  livecheck do
+    url "https://github.com/deltachat/deltachat-desktop"
+    strategy :github_latest
+  end
 
   app "DeltaChat.app"
 
