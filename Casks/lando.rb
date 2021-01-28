@@ -4,9 +4,13 @@ cask "lando" do
 
   url "https://github.com/lando/lando/releases/download/v#{version}/lando-v#{version}.dmg",
       verified: "github.com/lando/lando/"
-  appcast "https://github.com/lando/lando/releases.atom"
   name "Lando"
   homepage "https://docs.lando.dev/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   depends_on cask: "docker"
 
