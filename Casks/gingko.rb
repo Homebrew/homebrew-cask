@@ -4,10 +4,14 @@ cask "gingko" do
 
   url "https://github.com/gingko/client/releases/download/v#{version}/Gingko-#{version}-mac.zip",
       verified: "github.com/gingko/client/"
-  appcast "https://github.com/gingko/client/releases.atom"
   name "Gingko"
   desc "Word processor that shows structure and content"
   homepage "https://gingko.io/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Gingko.app"
 
