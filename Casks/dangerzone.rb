@@ -4,10 +4,14 @@ cask "dangerzone" do
 
   url "https://github.com/firstlookmedia/dangerzone/releases/download/v#{version}/Dangerzone.#{version}.dmg",
       verified: "github.com/firstlookmedia/dangerzone/"
-  appcast "https://github.com/firstlookmedia/dangerzone/releases.atom"
   name "Dangerzone"
   desc "Convert potentially dangerous PDFs or Office documents into safe PDFs"
   homepage "https://dangerzone.rocks/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Dangerzone.app"
 end
