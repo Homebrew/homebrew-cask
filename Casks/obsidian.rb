@@ -9,6 +9,8 @@ cask "obsidian" do
   desc "Knowledge base that works on top of a local folder of plain text Markdown files"
   homepage "https://obsidian.md/"
 
+  auto_updates true
+
   app "Obsidian.app"
 
   zap trash: [
