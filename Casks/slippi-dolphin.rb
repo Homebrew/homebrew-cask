@@ -6,6 +6,7 @@ cask "slippi-dolphin" do
       verified: "github.com/project-slippi/Ishiiruka/"
   appcast "https://github.com/project-slippi/Ishiiruka/releases.atom"
   name "Slippi"
+  desc "Dolphin fork with Slippi support"
   homepage "https://slippi.gg/"
 
   app "Slippi Dolphin.app"
