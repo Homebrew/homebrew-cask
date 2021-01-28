@@ -9,8 +9,8 @@ cask "electron" do
   homepage "https://electronjs.org/"
 
   livecheck do
-    url "https://www.electronjs.org/releases/stable"
-    regex %r{href=.*/tag/v?(\d+(?:\.\d+)+)["' >]}i
+    url :url
+    regex /^v?(\d+(?:\.\d+)+)$/i
   end
 
   app "Electron.app"
