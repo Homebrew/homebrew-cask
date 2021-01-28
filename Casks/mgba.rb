@@ -4,10 +4,14 @@ cask "mgba" do
 
   url "https://github.com/mgba-emu/mgba/releases/download/#{version}/mGBA-#{version}-osx.tar.xz",
       verified: "github.com/mgba-emu/mgba/"
-  appcast "https://github.com/mgba-emu/mgba/releases.atom"
   name "mGBA"
   desc "Game Boy Advance emulator"
   homepage "https://mgba.io/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "mGBA-#{version}-osx/Applications/mGBA.app"
 
