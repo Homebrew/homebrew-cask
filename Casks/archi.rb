@@ -1,6 +1,6 @@
 cask "archi" do
-  version "4.8.0"
-  sha256 "b18580e675017325cbf4b772e62fe97f84b59df1f7be8a253f99e89e2b6638b3"
+  version "4.8.1"
+  sha256 "4f31089ce448f78e3f66b7f80075783f4907bd1afe35362f560dcdb7137e262c"
 
   url "https://www.archimatetool.com/downloads/anusol#{version.no_dots}/Archi-Mac-#{version}.zip"
   name "Archi"
