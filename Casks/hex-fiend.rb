@@ -14,7 +14,7 @@ cask "hex-fiend" do
   end
 
   auto_updates true
-  conflicts_with cask: "hex-fiend-beta"
+  conflicts_with cask: "homebrew/cask-versions/hex-fiend-beta"
 
   app "Hex Fiend.app"
   binary "#{appdir}/Hex Fiend.app/Contents/Resources/hexf"
