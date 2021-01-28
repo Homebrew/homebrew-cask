@@ -4,9 +4,13 @@ cask "tbe" do
 
   url "https://github.com/the-butterfly-effect/tbe/releases/download/v#{version}/the-butterfly-effect.org-c98676323e380704a1f9b41a8337bc362b88f779-OSX.zip",
       verified: "github.com/the-butterfly-effect/tbe/"
-  appcast "https://github.com/the-butterfly-effect/tbe/releases.atom"
   name "The Butterfly Effect"
   homepage "http://the-butterfly-effect.org/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "tbe.app"
 
