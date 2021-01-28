@@ -4,10 +4,14 @@ cask "gpodder" do
 
   url "https://github.com/gpodder/gpodder/releases/download/#{version}/macOS-gPodder-#{version}.zip",
       verified: "github.com/gpodder/gpodder/"
-  appcast "https://github.com/gpodder/gpodder/releases.atom"
   name "gPodder"
   desc "Podcast client"
   homepage "https://gpodder.github.io/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "gPodder.app"
 
