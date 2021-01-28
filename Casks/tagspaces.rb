@@ -4,10 +4,14 @@ cask "tagspaces" do
 
   url "https://github.com/tagspaces/tagspaces/releases/download/v#{version}/tagspaces-mac-#{version}.zip",
       verified: "github.com/tagspaces/tagspaces/"
-  appcast "https://github.com/tagspaces/tagspaces/releases.atom"
   name "TagSpaces"
   desc "Offline, open-source, document manager with tagging support"
   homepage "https://www.tagspaces.org/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "TagSpaces.app"
 end
