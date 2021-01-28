@@ -11,11 +11,16 @@ cask "intellij-idea-ce" do
     url "https://download.jetbrains.com/idea/ideaIC-#{version}-aarch64.dmg"
   end
 
-  appcast "https://data.services.jetbrains.com/products/releases?code=IIC&latest=true&type=release"
   name "IntelliJ IDEA Community Edition"
   name "IntelliJ IDEA CE"
   desc "IDE for Java development - community edition"
   homepage "https://www.jetbrains.com/idea/"
+
+  livecheck do
+    url "https://data.services.jetbrains.com/products/releases?code=IIC&latest=true&type=release"
+    strategy :page_match
+    regex(%r{/ideaIC-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   auto_updates true
   conflicts_with cask: "homebrew/cask-versions/intellij-idea-ce19"
