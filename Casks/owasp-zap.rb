@@ -4,11 +4,15 @@ cask "owasp-zap" do
 
   url "https://github.com/zaproxy/zaproxy/releases/download/v#{version}/ZAP_#{version}.dmg",
       verified: "github.com/zaproxy/zaproxy/"
-  appcast "https://github.com/zaproxy/zaproxy/releases.atom"
   name "OWASP Zed Attack Proxy"
   name "ZAP"
   desc "Free and open source web app scanner"
   homepage "https://www.zaproxy.org/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "OWASP ZAP.app"
 
