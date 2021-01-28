@@ -4,11 +4,14 @@ cask "jcryptool" do
 
   url "https://github.com/jcryptool/core/releases/download/#{version}/JCrypTool-#{version}-macOS-64bit.tar.gz",
       verified: "github.com/jcryptool/core/"
-  appcast "https://github.com/jcryptool/core/releases.atom",
-          must_contain: version.after_comma
   name "JCrypTool"
   desc "Apply and analyze cryptographic algorithms"
   homepage "https://www.cryptool.org/en/jct/downloads"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "JCrypTool.app"
 
