@@ -4,10 +4,14 @@ cask "lidarr" do
 
   url "https://github.com/lidarr/Lidarr/releases/download/v#{version}/Lidarr.master.#{version}.osx-app.zip",
       verified: "github.com/lidarr/Lidarr/"
-  appcast "https://github.com/lidarr/Lidarr/releases.atom"
   name "Lidarr"
   desc "Looks and smells like Sonarr but made for music"
   homepage "https://lidarr.audio/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Lidarr.app"
 end
