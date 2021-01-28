@@ -3,10 +3,14 @@ cask "spaceradar" do
   sha256 "af9fdbaf96658cb990f45a76183ca1ce91184d5a91e78676aa57095c9906a06d"
 
   url "https://github.com/zz85/space-radar/releases/download/v#{version}/SpaceRadar-darwin-x64.zip"
-  appcast "https://github.com/zz85/space-radar/releases.atom"
   name "SpaceRadar"
   desc "Disk And Memory Space Visualization App built with Electron & d3.js"
   homepage "https://github.com/zz85/space-radar"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "SpaceRadar.app"
 
