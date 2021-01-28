@@ -4,10 +4,14 @@ cask "thedesk" do
 
   url "https://github.com/cutls/TheDesk/releases/download/v#{version}/TheDesk-#{version}.dmg",
       verified: "github.com/cutls/TheDesk/"
-  appcast "https://github.com/cutls/TheDesk/releases.atom"
   name "TheDesk"
   desc "Mastodon/Misskey Client for PC"
   homepage "https://thedesk.top/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "TheDesk.app"
 end
