@@ -4,10 +4,14 @@ cask "nano" do
 
   url "https://github.com/nanocurrency/nano-node/releases/download/V#{version}/nano-node-V#{version}-Darwin.dmg",
       verified: "github.com/nanocurrency/nano-node/"
-  appcast "https://github.com/nanocurrency/nano-node/releases.atom"
   name "Nano"
   desc "Local node for the Nano cryptocurrency"
   homepage "https://nano.org/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   depends_on macos: ">= :sierra"
 
