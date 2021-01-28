@@ -4,10 +4,14 @@ cask "ccmenu" do
 
   url "https://github.com/erikdoe/ccmenu/releases/download/v#{version}/CCMenu.app.zip",
       verified: "github.com/erikdoe/ccmenu/"
-  appcast "https://github.com/erikdoe/ccmenu/releases.atom"
   name "CCMenu"
   desc "Application to monitor continuous integration servers"
   homepage "https://ccmenu.org/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "CCMenu.app"
 end
