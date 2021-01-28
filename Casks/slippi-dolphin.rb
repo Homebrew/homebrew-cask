@@ -6,7 +6,7 @@ cask "slippi-dolphin" do
       verified: "github.com/project-slippi/Ishiiruka/"
   appcast "https://github.com/project-slippi/Ishiiruka/releases.atom"
   name "Slippi"
-  desc "Fork of the Dolphin GameCube  and Wii emulator with netplay support via Slippi"
+  desc "Fork of the Dolphin GameCube and Wii emulator with netplay support via Slippi"
   homepage "https://slippi.gg/"
 
   app "Slippi Dolphin.app"
