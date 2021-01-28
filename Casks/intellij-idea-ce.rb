@@ -19,7 +19,7 @@ cask "intellij-idea-ce" do
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=IIC&latest=true&type=release"
     strategy :page_match
-    regex(%r{/ideaIC-(\d+(?:\.\d+)*)\.dmg"}i)
+    regex(%r{/ideaIC-(\d+(?:\.\d+)*)\.dmg}i)
   end
 
   auto_updates true
