@@ -4,9 +4,13 @@ cask "postgres" do
 
   url "https://github.com/PostgresApp/PostgresApp/releases/download/v#{version}/Postgres-#{version}-9.5-9.6-10-11-12-13.dmg",
       verified: "github.com/PostgresApp/PostgresApp/"
-  appcast "https://github.com/PostgresApp/PostgresApp/releases.atom"
   name "Postgres"
   homepage "https://postgresapp.com/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"
