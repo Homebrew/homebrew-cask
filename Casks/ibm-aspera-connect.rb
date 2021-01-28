@@ -1,8 +1,8 @@
 cask "ibm-aspera-connect" do
   version "3.11.1.58"
-  sha256 "3d6ab32e4fef3a4f371ae5d40e3eb46472b7e13f3739ab96db618e0b341e57a3"
+  sha256 "bbbd2707681939af5237d718fc07b61f1a5feca9ff3a3f056b8b27c72acb4b7e"
 
-  url "https://d3gcli72yxqn2z.cloudfront.net/connect_#{version.dots_to_underscores}_ga/v4/bin/IBMAsperaConnectInstallerOneClick-#{version}.dmg",
+  url "https://d3gcli72yxqn2z.cloudfront.net/connect_latest/v4/bin/IBMAsperaConnectInstallerOneClick-#{version}.dmg",
       verified: "d3gcli72yxqn2z.cloudfront.net/"
   name "IBM Aspera Connect"
   desc "Facilitate uploads and downloads with an Aspera transfer server"
