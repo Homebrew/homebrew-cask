@@ -4,10 +4,14 @@ cask "plover" do
 
   url "https://github.com/openstenoproject/plover/releases/download/v#{version}/plover-#{version}-py2-mac.dmg",
       verified: "github.com/openstenoproject/plover/"
-  appcast "https://github.com/openstenoproject/plover/releases.atom"
   name "Plover"
   desc "Open-source stenotype engine"
   homepage "https://www.openstenoproject.org/plover/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Plover.app"
 
