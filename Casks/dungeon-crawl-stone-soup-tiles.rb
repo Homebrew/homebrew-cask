@@ -4,10 +4,14 @@ cask "dungeon-crawl-stone-soup-tiles" do
 
   url "https://github.com/crawl/crawl/releases/download/#{version}/dcss-#{version}-macos-tiles.zip",
       verified: "github.com/crawl/crawl/releases/"
-  appcast "https://github.com/crawl/crawl/releases.atom"
   name "Dungeon Crawl Stone Soup"
   desc "Game of dungeon exploration, combat and magic"
   homepage "https://crawl.develz.org/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Dungeon Crawl Stone Soup - Tiles.app"
 end
