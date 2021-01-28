@@ -7,7 +7,11 @@ cask "rar" do
   desc "Archive manager for data compression and backups"
   homepage "https://www.rarlab.com/"
 
-  conflicts_with formula: "unrar"
+  livecheck do
+    url "https://www.rarlab.com/download.htm"
+    strategy :page_match
+    regex(%r{href=.*?/rarosx-(\d+(:?\.\d+)*)\.tar\.gz}i)
+  end
 
   binary "rar/rar"
   binary "rar/unrar"
