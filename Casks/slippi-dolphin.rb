@@ -12,7 +12,7 @@ cask "slippi-dolphin" do
 
   zap trash: [
     "~/Library/Application Support/Slippi Dolphin",
-    "~/Library/Preferences/org.project-slippi.dolphin.plist",
+    "~/Library/Preferences/com.project-slippi.dolphin.plist",
     "~/Slippi",
   ]
 end
