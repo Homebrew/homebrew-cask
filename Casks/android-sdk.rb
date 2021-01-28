@@ -8,6 +8,11 @@ cask "android-sdk" do
   homepage "https://developer.android.com/studio/releases/sdk-tools"
 
   binary "#{staged_path}/tools/android"
+  binary "#{staged_path}/tools/emulator"
+  binary "#{staged_path}/tools/emulator-check"
+  binary "#{staged_path}/tools/mksdcard"
+  binary "#{staged_path}/tools/monitor"
+  binary "#{staged_path}/tools/bin/apkanalyzer"
   binary "#{staged_path}/tools/bin/archquery"
   binary "#{staged_path}/tools/bin/avdmanager"
   binary "#{staged_path}/tools/bin/jobb"
@@ -16,10 +21,6 @@ cask "android-sdk" do
   binary "#{staged_path}/tools/bin/screenshot2"
   binary "#{staged_path}/tools/bin/sdkmanager"
   binary "#{staged_path}/tools/bin/uiautomatorviewer"
-  binary "#{staged_path}/tools/emulator"
-  binary "#{staged_path}/tools/emulator-check"
-  binary "#{staged_path}/tools/mksdcard"
-  binary "#{staged_path}/tools/monitor"
 
   postflight do
     FileUtils.ln_sf(staged_path.to_s, "#{HOMEBREW_PREFIX}/share/android-sdk")
