@@ -4,10 +4,14 @@ cask "joplin" do
 
   url "https://github.com/laurent22/joplin/releases/download/v#{version}/Joplin-#{version}.dmg",
       verified: "github.com/laurent22/joplin/"
-  appcast "https://github.com/laurent22/joplin/releases.atom"
   name "Joplin"
   desc "Note taking and to-do application with synchronization capabilities"
   homepage "https://joplin.cozic.net/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Joplin.app"
 
