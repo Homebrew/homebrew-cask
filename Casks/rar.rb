@@ -13,8 +13,6 @@ cask "rar" do
     regex(%r{href=.*?/rarosx-(\d+(:?\.\d+)*)\.tar\.gz}i)
   end
 
-  conflicts_with formula: "unrar"
-
   binary "rar/rar"
   binary "rar/unrar"
   artifact "rar/default.sfx", target: "#{HOMEBREW_PREFIX}/lib/default.sfx"
