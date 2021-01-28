@@ -4,9 +4,13 @@ cask "retroshare" do
 
   url "https://github.com/RetroShare/RetroShare/releases/download/v#{version}/Retroshare-#{version}.OSX-10.13+.dmg",
       verified: "github.com/RetroShare/RetroShare/"
-  appcast "https://github.com/RetroShare/RetroShare/releases.atom"
   name "RetroShare"
   homepage "https://retroshare.cc/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "retroshare.app"
 end
