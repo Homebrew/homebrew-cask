@@ -4,9 +4,13 @@ cask "emby-server" do
 
   url "https://github.com/MediaBrowser/Emby.Releases/releases/download/#{version}/embyserver-osx-x64-#{version}.zip",
       verified: "github.com/MediaBrowser/Emby.Releases/"
-  appcast "https://github.com/MediaBrowser/Emby.Releases/releases.atom"
   name "Emby Server"
   homepage "https://emby.media/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   depends_on macos: ">= :high_sierra"
 
