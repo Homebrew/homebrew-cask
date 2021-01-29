@@ -15,7 +15,7 @@ cask "pycharm" do
       "#{version[1]},#{build[1]}"
     end
   end
-  
+
   auto_updates true
 
   app "PyCharm.app"

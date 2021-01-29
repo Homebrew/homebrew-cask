@@ -3,11 +3,19 @@ cask "pycharm-ce-with-anaconda-plugin" do
   sha256 "978819647422f10a58761f9fc93f2a302f497da3e966c8a6b9e4a113558daf32"
 
   url "https://download.jetbrains.com/python/pycharm-community-anaconda-#{version.before_comma}.dmg"
-  appcast "https://data.services.jetbrains.com/products/releases?code=PCC&latest=true&type=release"
   name "Jetbrains PyCharm Community Edition with Anaconda plugin"
   name "PyCharm CE with Anaconda plugin"
   desc "PyCharm IDE with Anaconda plugin"
   homepage "https://www.jetbrains.com/pycharm/promo/anaconda"
+
+  livecheck do
+    url "https://data.services.jetbrains.com/products/releases?code=PCC&latest=true&type=release"
+    strategy :page_match do |page|
+      version = page.match(/"version":"(\d+(?:\.\d+)*)/i)
+      build = page.match(/"build":"(\d+(?:\.\d+)*)/i)
+      "#{version[1]},#{build[1]}"
+    end
+  end
 
   auto_updates true
 
