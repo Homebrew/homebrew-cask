@@ -8,7 +8,7 @@ cask "folding-at-home" do
   desc "Graphical interface control for Folding"
   homepage "https://foldingathome.org/"
 
-  pkg "fah-installer_#{version}_x86_64.pkg"
+  pkg "fah-installer_#{version}_x86_64-b.pkg"
 
   uninstall pkgutil:   "org.foldingathome.*",
             launchctl: "org.foldingathome.fahclient",
