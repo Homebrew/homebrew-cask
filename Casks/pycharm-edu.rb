@@ -1,6 +1,6 @@
 cask "pycharm-edu" do
-  version "2020.3,203.5981.182"
-  sha256 "10d1402b7f2a34c973fb4909086eaeb8ae2dc6e3e1844fd2421b70313f33fd74"
+  version "2020.3.1,203.6682.209"
+  sha256 "ef860aadd9f164564c3a09e20308e818ad61e9ed8370aba8513bde185d1e3c2a"
 
   url "https://download.jetbrains.com/python/pycharm-edu-#{version.before_comma}.dmg"
   appcast "https://data.services.jetbrains.com/products/releases?code=PCE&latest=true&type=release"
