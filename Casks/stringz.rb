@@ -1,6 +1,6 @@
 cask "stringz" do
-  version "0.6.3"
-  sha256 "dd01a242252d137a8d6f1b45c679b6bde8a61f622b86ef4a0e27f3a8cbaab249"
+  version "0.6.4"
+  sha256 "eced44beb83453e17b83d9bdf162c916967f45d3f76a2d452ce6fe7a01e3e42e"
 
   url "https://github.com/mohakapt/Stringz/releases/download/v#{version}/Stringz-#{version}.dmg"
   appcast "https://github.com/mohakapt/Stringz/releases.atom"
