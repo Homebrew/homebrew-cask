@@ -9,4 +9,10 @@ cask "sharemouse" do
   homepage "https://www.sharemouse.com/"
 
   app "ShareMouse.app"
+
+  zap trash: [
+    "/Users/Shared/ShareMouse",
+    "~/Library/Caches/com.bartelsmedia.ShareMouse",
+    "~/Library/Preferences/com.bartelsmedia.ShareMouse.plist",
+  ]
 end
