@@ -1,6 +1,6 @@
 cask "lx-music" do
-  version "1.6.1"
-  sha256 "f02a21abef01bd435b73b23ff5ea438691acb4e3ab6845ae16970a10c30893d7"
+  version "1.7.1"
+  sha256 "77e18ab33a152ba56891a019ea154f06dce8f1f8a4194cb3a1cb7fcf8feaeea5"
 
   url "https://github.com/lyswhut/lx-music-desktop/releases/download/v#{version}/lx-music-desktop-#{version}.dmg"
   appcast "https://github.com/lyswhut/lx-music-desktop/releases.atom"
