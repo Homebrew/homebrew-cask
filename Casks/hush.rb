@@ -8,5 +8,7 @@ cask "hush" do
   desc "Safari content blocker focused on cookie and privacy notices"
   homepage "https://oblador.github.io/hush"
 
+  depends_on macos: ">= :big_sur"
+
   app "Hush.app"
 end
