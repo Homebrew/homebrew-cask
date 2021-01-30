@@ -14,7 +14,10 @@ cask "ray" do
 
   zap trash: [
     "~/Library/Application Support/Ray",
+    "~/Library/Caches/be.spatie.ray",
+    "~/Library/Caches/be.spatie.ray.ShipIt",
+    "~/Library/Logs/Ray",
     "~/Library/Preferences/be.spatie.ray.plist",
-    "~/Library/Ray",
+    "~/Library/Saved Application State/be.spatie.ray.savedState",
   ]
 end
