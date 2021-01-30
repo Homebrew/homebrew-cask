@@ -1,6 +1,6 @@
 cask "emclient" do
-  version "8.1.1015"
-  sha256 "995e512fb62065a44753ead6f3427dda6b43d03dd3da2182f837a724efe856da"
+  version "8.1.1054"
+  sha256 "79712357c650ea33621422c2839979718c591b69f889631295ebb0ffb50c981a"
 
   url "https://cdn-dist.emclient.com/dist/v#{version}_Mac/setup.pkg"
   name "eM Client"
