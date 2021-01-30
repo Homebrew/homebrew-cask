@@ -3,7 +3,6 @@ cask "nodal" do
   sha256 :no_check
 
   url "https://nodalmusic.com/downloads/Nodal-#{version}.dmg"
-
   name "Nodal"
   desc "Make generative music"
   homepage "https://nodalmusic.com/"
