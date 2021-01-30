@@ -10,7 +10,7 @@ cask "plex-media-server" do
   livecheck do
     url "https://plex.tv/api/downloads/5.json"
     strategy :page_match
-    regex(%r{href=.*?/PlexMediaServer-(\d+\.\d+\.\d+\.\d+-[0-9abcdef]+)-x86_64\.zip}i)
+    regex(%r{href=.*?/PlexMediaServer-(\d+(?:\.\d+)*-[\da-f]+)-x86_64\.zip}i)
   end
 
   auto_updates true
