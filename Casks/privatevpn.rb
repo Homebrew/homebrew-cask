@@ -1,5 +1,5 @@
 cask "privatevpn" do
-  version "3.1,115"
+  version "3.2.1,126"
   sha256 :no_check
 
   url "https://privatevpn.com/client/PrivateVPN.dmg"
