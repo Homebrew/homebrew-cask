@@ -4,9 +4,14 @@ cask "brewtarget" do
 
   url "https://launchpad.net/brewtarget/trunk/#{version}/+download/Brewtarget-#{version}.dmg",
       verified: "launchpad.net/brewtarget/"
-  appcast "https://github.com/Brewtarget/brewtarget/releases.atom"
   name "brewtarget"
   homepage "http://www.brewtarget.org/"
+
+  livecheck do
+    url "https://launchpad.net/brewtarget/trunk/"
+    strategy :page_match
+    regex(%r{href=.*?/Brewtarget[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+  end
 
   app "brewtarget.app"
 end
