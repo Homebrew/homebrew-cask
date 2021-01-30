@@ -8,6 +8,8 @@ cask "ray" do
   desc "Debug with Ray to fix problems faster"
   homepage "https://myray.app/"
 
+  auto_updates true
+
   app "Ray.app"
 
   zap trash: [
