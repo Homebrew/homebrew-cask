@@ -4,6 +4,7 @@ cask "xonotic" do
 
   url "https://dl.xonotic.org/xonotic-#{version}.zip"
   name "Xonotic"
+  desc "Quake-inspired arena-style first person shooter game"
   homepage "https://www.xonotic.org/"
 
   livecheck do
@@ -13,4 +14,10 @@ cask "xonotic" do
   end
 
   suite "Xonotic"
+
+  zap trash: "~/Library/Application Support/xonotic"
+
+  caveats "This version has not been updated since April 2017. "\
+    "Run '/Applications/Xonotic/misc/tools/rsync-updater/update-to-autobuild.sh' "\
+    "after install for the latest release with improved performance and compatibility."
 end
