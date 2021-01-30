@@ -4,9 +4,13 @@ cask "brain-workshop" do
 
   url "https://downloads.sourceforge.net/brainworkshop/brainworkshop/Brain%20Workshop%20#{version.major_minor}/brainworkshop-#{version}-MacOSX.zip",
       verified: "downloads.sourceforge.net/brainworkshop/"
-  appcast "https://sourceforge.net/projects/brainworkshop/rss?path=/brainworkshop"
   name "Brain Workshop"
   homepage "https://brainworkshop.sourceforge.io/"
+
+  livecheck do
+    url :url
+    regex(%r{url=.*?/brainworkshop[._-]v?(\d+(?:\.\d+)+)-MacOSX\.zip}i)
+  end
 
   app "Brain Workshop.app"
 end
