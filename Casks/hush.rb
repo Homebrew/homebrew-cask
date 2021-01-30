@@ -4,7 +4,6 @@ cask "hush" do
 
   url "https://github.com/oblador/hush/releases/download/v#{version}/Hush.dmg",
       verified: "github.com/oblador/hush/"
-  appcast "https://github.com/oblador/hush/releases.atom"
   name "Hush"
   desc "Safari content blocker focused on cookie and privacy notices"
   homepage "https://oblador.github.io/hush"
