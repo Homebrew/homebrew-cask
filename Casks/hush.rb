@@ -6,7 +6,7 @@ cask "hush" do
       verified: "github.com/oblador/hush/"
   appcast "https://github.com/oblador/hush/releases.atom"
   name "Hush"
-  desc "Noiseless Browsing – Content Blocker for Safari"
+  desc "Safari content blocker focused on cookie and privacy notices"
   homepage "https://oblador.github.io/hush"
 
   app "Hush.app"
