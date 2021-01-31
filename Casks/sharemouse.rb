@@ -1,5 +1,5 @@
 cask "sharemouse" do
-  version "5.0.46"
+  version "5.0.47"
   sha256 :no_check
 
   url "https://www.sharemouse.com/ShareMouseSetup.dmg"
@@ -9,4 +9,10 @@ cask "sharemouse" do
   homepage "https://www.sharemouse.com/"
 
   app "ShareMouse.app"
+
+  zap trash: [
+    "/Users/Shared/ShareMouse",
+    "~/Library/Caches/com.bartelsmedia.ShareMouse",
+    "~/Library/Preferences/com.bartelsmedia.ShareMouse.plist",
+  ]
 end
