@@ -10,10 +10,11 @@ cask "pokerstars" do
 
   app "PokerStars.net.app"
 
-  uninstall quit: [
+  uninstall quit:   [
     "com.pokerstars.PokerStars.net",
     "com.pokerstars.PokerStarsBrowse",
-  ]
+  ],
+            delete: "#{appdir}/PokerStars.net.app"
 
   zap trash: [
     "~/Library/Preferences/com.pokerstars.NetworkStatus.plist",
