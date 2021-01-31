@@ -4,9 +4,15 @@ cask "brewtarget" do
 
   url "https://launchpad.net/brewtarget/trunk/#{version}/+download/Brewtarget-#{version}.dmg",
       verified: "launchpad.net/brewtarget/"
-  appcast "https://github.com/Brewtarget/brewtarget/releases.atom"
   name "brewtarget"
   homepage "http://www.brewtarget.org/"
+
+  # We need to check all releases since not all releases are for macOS.
+  livecheck do
+    url "https://github.com/Brewtarget/brewtarget/releases"
+    strategy :page_match
+    regex(%r{href=.*?/Brewtarget[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+  end
 
   app "brewtarget.app"
 end
