@@ -1,8 +1,12 @@
 cask "superhuman" do
-  version "8.0.7"
+  version "11.0.13"
   sha256 :no_check
 
-  url "https://download.superhuman.com/Superhuman.dmg"
+  if Hardware::CPU.intel?
+    url "https://download.superhuman.com/Superhuman.dmg"
+  else
+    url "https://download.superhuman.com/Superhuman-arm64.dmg"
+  end
   name "Superhuman"
   homepage "https://superhuman.com/"
 
