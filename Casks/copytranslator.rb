@@ -4,10 +4,16 @@ cask "copytranslator" do
 
   url "https://github.com/CopyTranslator/CopyTranslator/releases/download/v#{version}/copytranslator-#{version}.dmg",
       verified: "github.com/CopyTranslator/CopyTranslator/"
-  appcast "https://github.com/CopyTranslator/CopyTranslator/releases.atom"
   name "CopyTranslator"
   desc "Tool that translates text in real-time while copying"
   homepage "https://copytranslator.github.io/"
+
+  # We need to check all releases since not all releases are for macOS.
+  livecheck do
+    url "https://github.com/CopyTranslator/CopyTranslator/releases"
+    strategy :page_match
+    regex(%r{href=.*?/copytranslator[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+  end
 
   depends_on macos: ">= :sierra"
 
