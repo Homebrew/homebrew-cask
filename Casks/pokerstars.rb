@@ -3,8 +3,8 @@ cask "pokerstars" do
   sha256 :no_check
 
   url "https://download.pokerstars.net/client/download/"
-  homepage "https://www.pokerstars.net/"
   name "PokerStars"
+  homepage "https://www.pokerstars.net/"
 
   container nested: "PokerStars.net/PokerStars.net.dmg"
 
