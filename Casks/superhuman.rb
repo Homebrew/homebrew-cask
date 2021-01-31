@@ -8,7 +8,7 @@ cask "superhuman" do
   else
     url "https://download.superhuman.com/Superhuman-arm64.dmg"
   end
-  desc "Festest email experience ever made"
+  desc "Email client"
   homepage "https://superhuman.com/"
 
   app "Superhuman.app"
