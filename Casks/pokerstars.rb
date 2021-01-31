@@ -2,13 +2,8 @@ cask "pokerstars" do
   version :latest
   sha256 :no_check
 
-  language "US", default: true do
-    url "https://download.pokerstars.net/client/download/"
-    homepage "https://www.pokerstars.net/"
-
-    ".net"
-  end
-
+  url "https://download.pokerstars.net/client/download/"
+  homepage "https://www.pokerstars.net/"
   name "PokerStars"
 
   container nested: "PokerStars.net/PokerStars.net.dmg"
