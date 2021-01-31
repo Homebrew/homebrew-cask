@@ -1,6 +1,6 @@
 cask "flux" do
-  version "40.1"
-  sha256 "1844305519b450cfe3c5475e99f6c06fb2eea51e65c1b0ee25f6671a49fff75d"
+  version "41.1"
+  sha256 "2b2bea6fa4864362c0893df5202ba33d9f3f5239613599eadfbfee2d1bf32aa0"
 
   url "https://justgetflux.com/mac/Flux#{version}.zip"
   name "f.lux"
