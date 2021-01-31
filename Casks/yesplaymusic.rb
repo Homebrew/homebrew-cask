@@ -9,4 +9,10 @@ cask "yesplaymusic" do
   homepage "https://github.com/qier222/YesPlayMusic"
 
   app "YesPlayMusic.app"
+
+  zap trash: [
+    "~/Library/Application Support/YesPlayMusic",
+    "~/Library/Preferences/com.electron.yesplaymusic.plist",
+    "~/Library/Saved Application State/com.electron.yesplaymusic.savedState",
+  ]
 end
