@@ -3,11 +3,19 @@ cask "pycharm-ce" do
   sha256 "5c9fb106f823855f1a2e5ad412a955b3a7d7629d7f53998d04fdbd96a6a3ebec"
 
   url "https://download.jetbrains.com/python/pycharm-community-#{version.before_comma}.dmg"
-  appcast "https://data.services.jetbrains.com/products/releases?code=PCC&latest=true&type=release"
   name "Jetbrains PyCharm Community Edition"
   name "PyCharm CE"
   desc "Free and open-source IDE for Python programming - Community Edition"
   homepage "https://www.jetbrains.com/pycharm/"
+
+  livecheck do
+    url "https://data.services.jetbrains.com/products/releases?code=PCC&latest=true&type=release"
+    strategy :page_match do |page|
+      version = page.match(/"version":"(\d+(?:\.\d+)*)/i)
+      build = page.match(/"build":"(\d+(?:\.\d+)*)/i)
+      "#{version[1]},#{build[1]}"
+    end
+  end
 
   auto_updates true
 
