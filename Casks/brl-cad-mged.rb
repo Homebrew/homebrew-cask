@@ -4,9 +4,14 @@ cask "brl-cad-mged" do
 
   url "https://downloads.sourceforge.net/brlcad/BRL-CAD%20for%20Mac%20OS%20X/#{version}/BRL-CAD%20#{version}.dmg",
       verified: "downloads.sourceforge.net/brlcad/"
-  appcast "https://sourceforge.net/projects/brlcad/rss?path=/BRL-CAD%20for%20Mac%20OS%20X"
   name "BRL-CAD"
   homepage "https://brlcad.org/"
+
+  livecheck do
+    url "https://sourceforge.net/projects/brlcad/rss?path=/BRL-CAD%20for%20Mac%20OS%20X"
+    strategy :page_match
+    regex(%r{url=.*?/BRL-CAD(?:[._-]|%20)v?(\d+(?:\.\d+)+)\.dmg}i)
+  end
 
   depends_on cask: "xquartz"
 
