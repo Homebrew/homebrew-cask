@@ -2,55 +2,25 @@ cask "pokerstars" do
   version :latest
   sha256 :no_check
 
-  language "US", default: true do
-    url "https://www.pokerstars.net/PokerStars.net.app.zip"
-    homepage "https://www.pokerstars.net/"
-
-    ".net"
-  end
-  language "DK" do
-    url "https://www.pokerstars.net/PokerStars.net.app.zip",
-        verified: "pokerstars.net/"
-    homepage "https://www.pokerstars.dk/"
-
-    ".net"
-  end
-  language "GR" do
-    url "https://www.pokerstars.net/PokerStars.net.app.zip",
-        verified: "pokerstars.net/"
-    homepage "https://www.pokerstars.gr/"
-
-    ".net"
-  end
-  language "IT" do
-    url "https://www.pokerstars.net/PokerStars.net.app.zip",
-        verified: "pokerstars.net/"
-    homepage "https://www.pokerstars.it/"
-
-    ".net"
-  end
-  language "GB" do
-    url "https://www.pokerstars.uk/PokerStarsUK.app.zip"
-    homepage "https://www.pokerstars.uk/"
-
-    "UK"
-  end
-  language "PT" do
-    url "https://www.pokerstars.pt/PokerStarsPT.app.zip"
-    homepage "https://www.pokerstars.pt/"
-
-    "PT"
-  end
-
+  url "https://download.pokerstars.net/client/download/"
   name "PokerStars"
+  homepage "https://www.pokerstars.net/"
 
-  container nested: "PokerStars#{language}/PokerStars#{language}.dmg"
+  container nested: "PokerStars.net/PokerStars.net.dmg"
 
-  app "PokerStars#{language}.app"
+  app "PokerStars.net.app"
+
+  uninstall quit:   [
+    "com.pokerstars.PokerStars.net",
+    "com.pokerstars.PokerStarsBrowse",
+  ],
+            delete: "#{appdir}/PokerStars.net.app"
 
   zap trash: [
-    "~/Library/Preferences/com.pokerstars#{language[1]}.user.ini",
-    "~/Library/Preferences/com.pokerstars.PokerStars#{language[1]}.plist",
-    "~/Library/Application Support/PokerStars#{language[1]}",
+    "~/Library/Preferences/com.pokerstars.NetworkStatus.plist",
+    "~/Library/Preferences/com.pokerstars.PokerStars.net.plist",
+    "~/Library/Preferences/com.pokerstars.PokerStarsBrowse.plist",
+    "~/Library/Preferences/com.pokerstars.net.user.ini",
+    "~/Library/Application Support/PokerStars.net",
   ]
 end
