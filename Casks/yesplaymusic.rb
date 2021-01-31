@@ -1,6 +1,6 @@
 cask "yesplaymusic" do
-  version "0.3.2"
-  sha256 "7b3a2475ad5cdecd4641c6552c864e5cfc3ad7af2d7d36e21917c7e3ada596f9"
+  version "0.3.3"
+  sha256 "19f14abf0c2d8bea740a88473c77a3c25601361df4500b97a39bd6afcea2d05c"
 
   url "https://github.com/qier222/YesPlayMusic/releases/download/v#{version}/YesPlayMusic-#{version}-mac.zip"
   appcast "https://github.com/qier222/YesPlayMusic/releases.atom"
