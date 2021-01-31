@@ -14,8 +14,7 @@ cask "vine-server" do
   binary "#{appdir}/Vine Server.app/Contents/MacOS/storepasswd"
   binary "#{appdir}/Vine Server.app/Contents/MacOS/Vine Server"
 
-  zap trash: [
-    "~/Library/Preferences/de.uni-mannheim.VineServer.plist",
-    "/Library/Application Support/VineServer",
-  ]
+  uninstall delete: "/Library/Application Support/VineServer"
+
+  zap trash: "~/Library/Preferences/de.uni-mannheim.VineServer.plist"
 end
