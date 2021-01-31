@@ -1,6 +1,6 @@
 cask "stoplight-studio" do
-  version "2.2.0,5343.git-ab43444"
-  sha256 "c5a8c8e3465a35f8a6f5bc9642674002686256609c825c46c7213a637cffe28c"
+  version "2.2.0,5379.git-75c5189"
+  sha256 "829b41a2d24329837b3bc9335d7dd01c403ce6f871a2c71aadc0fa126f071317"
 
   url "https://github.com/stoplightio/studio/releases/download/v#{version.before_comma}-stable.#{version.after_comma}/stoplight-studio-mac.dmg",
       verified: "github.com/stoplightio/studio/"
