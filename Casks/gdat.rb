@@ -10,10 +10,8 @@ cask "gdat" do
   livecheck do
     url "https://sites.google.com/view/genealogical-dna-analysis-tool/home/download"
     strategy :page_match
-    regex(/Genealogical DNA Analysis Tool (\d{4}r\d{2})/i)
+    regex(/Genealogical DNA Analysis Tool (\d+(?:.\d+)+)/i)
   end
-
-  depends_on arch: :intel
 
   app "OS X 64 bit/Genealogical DNA Analysis Tool.app"
 end
