@@ -7,6 +7,11 @@ cask "vine-server" do
   desc "VNC server"
   homepage "https://github.com/stweil/OSXvnc/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :sierra"
 
   app "Vine Server.app"
