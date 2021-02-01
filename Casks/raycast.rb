@@ -7,6 +7,8 @@ cask "raycast" do
   desc "Control your tools with a few keystrokes"
   homepage "https://raycast.app/"
 
+  auto_updates true
+
   app "Raycast.app"
 
   zap trash: [
