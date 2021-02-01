@@ -10,6 +10,7 @@ cask "vine-server" do
   livecheck do
     url :url
     strategy :github_latest
+    regex(%r{href=.*?/VineServer-(\d+(?:\.\d+)*)\.dmg}i)
   end
 
   depends_on macos: ">= :sierra"
