@@ -7,6 +7,12 @@ cask "mathinspector" do
   desc "Visual programing environment for scientific computing with python"
   homepage "https://mathinspector.com/"
 
+  livecheck do
+    url "https://mathinspector.com/download.html"
+    strategy :page_match
+    regex(/mathinspector_(\d+(?:\.\d+)*)\.dmg/i)
+  end
+
   app "mathinspector.app"
 
   zap trash: "~/Library/Saved Application State/com.math.inspector.savedState"
