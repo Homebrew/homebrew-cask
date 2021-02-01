@@ -7,6 +7,12 @@ cask "vine-server" do
   desc "VNC server"
   homepage "https://github.com/stweil/OSXvnc/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+    regex(%r{href=.*?/VineServer-(\d+(?:\.\d+)*)\.dmg}i)
+  end
+
   depends_on macos: ">= :sierra"
 
   app "Vine Server.app"
