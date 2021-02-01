@@ -8,4 +8,12 @@ cask "decloner" do
   homepage "https://www.pixelespressoapps.com/decloner/"
 
   app "Decloner.app"
+
+  zap trash: [
+    "~/Library/Application Support/Decloner",
+    "~/Library/Application Support/com.pixelespresso.Decloner",
+    "~/Library/Caches/com.pixelespresso.Decloner",
+    "~/Library/Preferences/com.pixelespresso.Decloner.plist",
+    "~/Library/Saved Application State/com.pixelespresso.Decloner.savedState",
+  ]
 end
