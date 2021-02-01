@@ -10,6 +10,7 @@ cask "insomnia-designer" do
 
   livecheck do
     url :url
+    strategy :github_latest
     regex(/^designer@?(\d+(?:\.\d+)+)$/i)
   end
 
