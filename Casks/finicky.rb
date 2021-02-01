@@ -1,6 +1,6 @@
 cask "finicky" do
-  version "3.3.0"
-  sha256 "e8c82b5dab52ac21375306049814d1c2fad221e6161c85db63619b22a89b0892"
+  version "3.3.1"
+  sha256 "51156740a447bbedf5a2e20e7582b0747ac6e5811230bda324dfa6961d98d6f2"
 
   url "https://github.com/johnste/finicky/releases/download/v#{version}/Finicky.zip"
   name "Finicky"
