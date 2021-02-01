@@ -4,6 +4,7 @@ cask "ringcentral-phone" do
 
   url "https://downloads.ringcentral.com/sp/RingCentral-Phone-#{version}.dmg"
   name "RingCentral Phone"
+  desc "Phone system manager"
   homepage "https://www.ringcentral.com/apps/rc-phone"
 
   livecheck do
