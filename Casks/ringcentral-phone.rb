@@ -13,4 +13,9 @@ cask "ringcentral-phone" do
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "RingCentral for Mac.app", target: "RingCentral Phone.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.ringcentral.RingCentral Phone.plist",
+    "~/Library/Saved Application State/com.ringcentral.ringcentralformac.savedState",
+  ]
 end
