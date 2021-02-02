@@ -15,12 +15,13 @@ cask "crossover" do
   app "CrossOver.app"
 
   zap trash: [
-    "~/Library/Caches/com.apple.helpd/Generated/CrossOver Help*",
-    "~/Library/Caches/Cleanup At Startup/CrossOver CD Helper.app",
-    "~/Library/Caches/com.codeweavers.CrossOver",
-    "~/Library/Saved Application State/com.codeweavers.CrossOverHelper*",
-    "~/Library/Logs/CrossOver",
-    "~/Library/Preferences/com.codeweavers.*",
     "~/Library/Application Support/CrossOver",
+    "~/Library/Caches/Cleanup At Startup/CrossOver CD Helper.app",
+    "~/Library/Caches/com.apple.helpd/Generated/CrossOver Help*",
+    "~/Library/Caches/com.codeweavers.CrossOver",
+    "~/Library/HTTPStorages/com.codeweavers.CrossOver.binarycookies",
+    "~/Library/Logs/CrossOver",
+    "~/Library/Saved Application State/com.codeweavers.CrossOverHelper*",
+    "~/Library/Preferences/com.codeweavers.*",
   ]
 end
