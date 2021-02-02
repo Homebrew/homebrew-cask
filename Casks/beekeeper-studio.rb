@@ -1,6 +1,3 @@
-# typed: false
-# frozen_string_literal: true
-
 cask "beekeeper-studio" do
   version "1.9.2"
   sha256 "15d0ed0cc63c1485e4bf565fe70d2e46adcd98cc82b6ffc08daf709dababa387"
