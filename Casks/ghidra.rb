@@ -6,7 +6,7 @@ cask "ghidra" do
   name "Ghidra"
   homepage "https://www.ghidra-sre.org/"
 
-  conflicts_with cask: "ghidra-beta"
+  conflicts_with cask: "homebrew/cask-versions/ghidra-beta"
 
   binary "ghidra_#{version.before_comma}_PUBLIC/ghidraRun"
 
