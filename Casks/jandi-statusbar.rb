@@ -8,5 +8,10 @@ cask "jandi-statusbar" do
     homepage "https://github.com/techinpark/Jandi"
   
     app "jandi.app"
+
+    zap trash: [
+        "~/Library/Caches/com.tmsae.jandi",
+        "~/Library/Preferences/com.tmsae.jandi.plist",
+    ]
   end
   
