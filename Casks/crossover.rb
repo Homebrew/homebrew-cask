@@ -22,5 +22,6 @@ cask "crossover" do
     "~/Library/Logs/CrossOver",
     "~/Library/Preferences/com.codeweavers.*",
     "~/Library/Application Support/CrossOver",
+    "~/Library/HTTPStorages/com.codeweavers.CrossOver.binarycookies",
   ]
 end
