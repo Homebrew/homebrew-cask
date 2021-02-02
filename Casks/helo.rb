@@ -13,6 +13,8 @@ cask "helo" do
     strategy :header_match
   end
 
+  auto_updates true
+
   app "HELO.app"
 
   zap trash: [
