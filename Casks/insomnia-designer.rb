@@ -4,10 +4,14 @@ cask "insomnia-designer" do
 
   url "https://github.com/Kong/insomnia/releases/download/designer%40#{version}/Insomnia.Designer-#{version}.dmg",
       verified: "github.com/Kong/insomnia/"
-  appcast "https://api.insomnia.rest/changelog.json?app=com.insomnia.designer"
   name "Insomnia Designer"
   desc "API design platform for GraphQL and REST"
   homepage "https://insomnia.rest/"
+
+  livecheck do
+    url :url
+    regex(/^designer@?(\d+(?:\.\d+)+)$/i)
+  end
 
   auto_updates true
 
