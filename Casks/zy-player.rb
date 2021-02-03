@@ -4,7 +4,7 @@ cask "zy-player" do
 
   url "https://github.com/Hunlongyu/ZY-Player/releases/download/v#{version}/ZY-Player-#{version}.dmg"
   name "ZY Player"
-  desc "跨平台桌面端视频资源播放器"
+  desc "Video resource player"
   homepage "https://github.com/Hunlongyu/ZY-Player"
 
   livecheck do
