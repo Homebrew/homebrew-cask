@@ -4,10 +4,11 @@ cask "prey" do
 
   url "https://downloads.preyproject.com/prey-client-releases/node-client/#{version}/prey-mac-#{version}-x64.pkg"
   name "Prey"
+  desc "Anti-theft, data security, and management platform"
   homepage "https://www.preyproject.com/"
 
   livecheck do
-    url :url
+    url "https://github.com/prey/prey-node-client"
     strategy :github_latest
   end
 
