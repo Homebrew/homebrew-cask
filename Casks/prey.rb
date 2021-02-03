@@ -18,8 +18,8 @@ cask "prey" do
             launchctl: "com.prey.agent"
 
   caveats <<~EOS
-    Prey requires your Setup API Key, found on your About page on the
-    Setup API Key section, to complete installation, as explained here:
+    Installing Prey requires your Setup API Key, found on your 
+    About page on the Setup API Key section, as explained here:
 
       https://help.preyproject.com/article/316-unattended-install-for-macos
 
