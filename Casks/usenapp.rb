@@ -1,6 +1,6 @@
 cask "usenapp" do
-  version "0.99.1,299"
-  sha256 "f82fc60365ec30e3845c873b5a4fba86989fe4b1b065952164c53e7978f89b56"
+  version "0.99.2,300"
+  sha256 "9bf6bf250c0ebe214888647cb2dc4a596ab4909870ea94578528dccedbc2cd21"
 
   url "https://www.usenapp.com/download/Usenapp-#{version.before_comma}.dmg"
   name "Usenapp"
