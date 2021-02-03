@@ -11,10 +11,14 @@ cask "keeweb" do
         verified: "github.com/keeweb/keeweb/"
   end
 
-  appcast "https://github.com/keeweb/keeweb/releases.atom"
   name "KeeWeb"
   desc "Password manager compatible with KeePass"
   homepage "https://keeweb.info/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
 
