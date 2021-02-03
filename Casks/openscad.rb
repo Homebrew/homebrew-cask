@@ -1,6 +1,6 @@
 cask "openscad" do
-  version "2019.05"
-  sha256 "df6f6f3d34ac0d07f533ec4ccf59082189fb37c0276c1b8df651291e2509420e"
+  version "2021.01"
+  sha256 "54d169cab899ff0647407c42d378d3fc4611c62a85b463446cdf21c3463afae7"
 
   url "https://files.openscad.org/OpenSCAD-#{version}.dmg"
   name "OpenSCAD"
