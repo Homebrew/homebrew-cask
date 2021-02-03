@@ -15,3 +15,16 @@ cask "pathephone" do
 
   app "Pathephone.app"
 end
+
+auto_updates true
+
+app "Pathephone.App"
+
+zap trash: [
+  "~/Library/Logs/Pathephone
+  "~/Library/Preferences/space.metabin.pathephone.helper.plist
+  "~/Library/Preferences/space.metabin.pathephone.plist
+  "~/Library/Saved Application State/space.metabin.pathephone.savedState
+  "~/Library/Application Support/Pathephone
+]
+end
