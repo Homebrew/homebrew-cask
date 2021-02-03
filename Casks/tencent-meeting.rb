@@ -1,9 +1,15 @@
 cask "tencent-meeting" do
-  version "2.6.0.498,8879f4061090bb94c3c2c07c79c0446d"
-  sha256 "889037986756dc354ad3f77d77082be649ebcea7765828f6187c54fe0feee11b"
+  version "2.7.5.434"
 
-  url "https://updatecdn.meeting.qq.com/#{version.after_comma}/TencentMeeting_0300000000_#{version.before_comma}.publish.dmg",
+  if Hardware::CPU.intel?
+    sha256 "f072dafd53fd816acc95542dae0f750727704532b81b7afc5861e0cb9df75d71"
+    url "https://updatecdn.meeting.qq.com/727e439f79327c7c63677a9097353d3d/TencentMeeting_0300000000_#{version}.publish.x86_64.dmg",
       verified: "qq.com/"
+  else
+    sha256 "7e5c56185e9f29c3b6db10283101118e1d02b3d87178e45d90d9a0a27b6dc9fa"
+    url "https://updatecdn.meeting.qq.com/2a4a7de84f9518b5ba69df232eb7a1d0/TencentMeeting_0300000000_#{version}.publish.arm64.dmg",
+      verified: "qq.com/"
+  end
   name "Tencent Meeting"
   name "腾讯会议"
   desc "Cloud video conferencing"
