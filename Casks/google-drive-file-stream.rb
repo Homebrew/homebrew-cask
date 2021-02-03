@@ -14,6 +14,7 @@ cask "google-drive-file-stream" do
             quit:       "com.google.drivefs",
             pkgutil:    [
               "com.google.drivefs",
+              "com.google.drivefs.filesystems.dfsfuse.x86_64",
               "com.google.drivefs.shortcuts",
               "com.google.pkg.Keystone",
             ],
