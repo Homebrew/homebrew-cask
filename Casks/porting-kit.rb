@@ -1,6 +1,6 @@
 cask "porting-kit" do
-  version "3.0.58"
-  sha256 "abbee91f41e03e414fc1325b7e21f7998d76c39527e4329eaa3bb4a8e85fb6ac"
+  version "3.0.60"
+  sha256 "7c6fd060d90e76c2a8c2272d49f92ef99600c65ed9b7c71617f9e96256a76637"
 
   url "https://portingkit.com/kit/Porting%20Kit%20#{version}.zip"
   name "Porting Kit"
