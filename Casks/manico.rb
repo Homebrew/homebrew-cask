@@ -1,6 +1,6 @@
 cask "manico" do
-  version "2.9,405"
-  sha256 "df892cf2cf2a883ff3e3ffd0058b552715f4cc9d58aa29f68e55ae2f92c4b241"
+  version "2.9.1,407"
+  sha256 "1a930be0e16cc9965be7ff7bf5886967066c2d63e714f3b09b35997d84b18ab4"
 
   url "https://manico.im/api/release_manager/downloads/im.manico.Manico/#{version.after_comma}.zip"
   name "Manico"
