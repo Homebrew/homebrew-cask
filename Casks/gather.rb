@@ -9,11 +9,7 @@ cask "gather" do
   desc "Virtual video-calling space"
   homepage "https://gather.town/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-    regex(%r{href=.*?/Gather-(\d+(?:\.\d+)*)-mac\.zip}i)
-  end
-
   app "Gather.app"
+
+  zap trash: "~/Library/Application Support/Gather"
 end
