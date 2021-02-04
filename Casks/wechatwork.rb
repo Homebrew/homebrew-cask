@@ -5,6 +5,7 @@ cask "wechatwork" do
   url "https://dldir1.qq.com/wework/work_weixin/WeCom_#{version}.dmg"
   name "WeChat Work"
   name "企业微信"
+  desc "Business communication and office collaboration tool"
   homepage "https://work.weixin.qq.com/"
 
   livecheck do
