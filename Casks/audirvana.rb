@@ -1,6 +1,6 @@
 cask "audirvana" do
-  version "3.5.43,3573"
-  sha256 "d4ecff4fd5ea8fa501abd530475fdf300212a73a5a59ff874e0dd43c99002a15"
+  version "3.5.44,3574"
+  sha256 "cfe591cc1c746ebaa53ac7fb4f3d9cdb9eb352b5b6b6e4ce69145c32ffa32ef9"
 
   url "https://audirvana.com/delivery/Audirvana_#{version.before_comma}.dmg"
   name "Audirvana"
