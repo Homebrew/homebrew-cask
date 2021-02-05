@@ -1,15 +1,22 @@
 cask "visual-studio-code" do
   version "1.53.0"
-  sha256 "7fd5bd1c81a4c08e2094e3cb87fb689d15210f461d630d27b33ebe132ce94c36"
 
-  url "https://update.code.visualstudio.com/#{version}/darwin/stable"
+  if Hardware::CPU.intel?
+    platform="darwin"
+    sha256 "7fd5bd1c81a4c08e2094e3cb87fb689d15210f461d630d27b33ebe132ce94c36"
+  else
+    platform="darwin-arm64"
+    sha256 "0ee4c1999de720334cb766fbd7ee77ff9e61a8f9f1873ca68426674b0d107e3e"
+  end
+
+  url "https://update.code.visualstudio.com/#{version}/#{platform}/stable"
   name "Microsoft Visual Studio Code"
   name "VS Code"
   desc "Open-source code editor"
   homepage "https://code.visualstudio.com/"
 
   livecheck do
-    url "https://update.code.visualstudio.com/api/update/darwin/stable/VERSION"
+    url "https://update.code.visualstudio.com/api/update/#{platform}/stable/VERSION"
     strategy :page_match
     regex(/"productVersion"\s*:\s*"(\d+(:?\.\d+)*)"/)
   end
