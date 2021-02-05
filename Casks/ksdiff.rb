@@ -1,14 +1,14 @@
 cask "ksdiff" do
-  version "2.2.0,122"
-  sha256 "cf32401d631e61cbbc3dc9947626174b45e8317a6cac39380067e7017e8d4c87"
+  version "2.3.6,123-jan-18-2021"
+  sha256 "6693effaf5132190229877db7cec00a9d16f2f1ecfe755c81cfe8c4a2c748b38"
 
-  url "https://updates.kaleidoscope.app/v2/prod/ksdiff-#{version.after_comma}-#{version.before_comma}.zip"
+  url "https://updates.kaleidoscope.app/v2/prod/ksdiff-#{version.before_comma}-build-#{version.after_comma}.zip"
   name "ksdiff"
   homepage "https://kaleidoscope.app/ksdiff2"
 
   conflicts_with cask: "kaleidoscope"
 
-  pkg "ksdiff-#{version.after_comma}/Install ksdiff.pkg"
+  pkg "ksdiff-#{version.before_comma}/Install ksdiff.pkg"
 
   uninstall pkgutil: "com.blackpixel.kaleidoscope.ksdiff.installer.pkg"
 
