@@ -6,7 +6,7 @@ cask "image2icon" do
       verified: "sf-applications.s3.amazonaws.com/Image2Icon/"
   name "Image2Icon"
   desc "Icon creator and file and folder customizer"
-  homepage "http://www.img2icnsapp.com/"
+  homepage "https://www.img2icnsapp.com/"
 
   livecheck do
     url "http://apps.shinynode.com/apps/image2icon_appcast.xml"
