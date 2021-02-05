@@ -14,7 +14,7 @@ cask "veracrypt" do
     regex(%r{href=.*?/VeraCrypt_(\d+(?:\.\d+)*[^/]*?)\.dmg}i)
   end
 
-  depends_on cask: "osxfuse"
+  depends_on cask: "macfuse"
 
   pkg "VeraCrypt_Installer.pkg"
 
