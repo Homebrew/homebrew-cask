@@ -10,10 +10,9 @@ cask "ngrok" do
 
   binary "ngrok"
 
-  zap trash: "~/.ngrok2"
-
-
   postflight do
     FileUtils.chmod 0755, Dir.glob("#{staged_path}/ngrok")
   end
+
+  zap trash: "~/.ngrok2"
 end
