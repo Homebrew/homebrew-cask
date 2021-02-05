@@ -4,7 +4,6 @@ cask "gather" do
 
   url "https://github.com/gathertown/gather-town-desktop-releases/releases/download/v#{version}/Gather-#{version}-mac.zip",
       verified: "github.com/gathertown/gather-town-desktop-releases"
-  name "Gather"
   name "Gather Town"
   desc "Virtual video-calling space"
   homepage "https://gather.town/"
