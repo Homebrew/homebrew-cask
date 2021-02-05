@@ -1,3 +1,6 @@
+# typed: false
+# frozen_string_literal: true
+
 cask "google-drive-file-stream" do
   version "44.0.14"
   sha256 :no_check
@@ -34,7 +37,6 @@ cask "google-drive-file-stream" do
 
   caveats <<~EOS
     Although #{token} may be installed alongside Google Backup and Sync, you should not use the same account with both.
-
-      https://support.google.com/a/answer/7496409#allowboth
+    https://support.google.com/a/answer/7496409#allowboth
   EOS
 end
