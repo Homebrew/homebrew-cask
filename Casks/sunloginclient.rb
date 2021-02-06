@@ -12,5 +12,13 @@ cask "sunloginclient" do
 
   uninstall quit:      "com.oray.sunlogin.macclient",
             pkgutil:   "com.oray.sunlogin.macclient",
-            launchctl: "com.oray.sunlogin ()"
+            launchctl: [
+              "com.oray.sunlogin ()",
+              "com.oray.sunlogin.agent",
+              "com.oray.sunlogin.desktopagent",
+              "com.oray.sunlogin.helper",
+              "com.oray.sunlogin.service",
+              "com.oray.sunlogin.startup",
+            ]
+  
 end
