@@ -9,7 +9,7 @@ cask "darktable" do
   desc "Photography workflow application and raw developer"
   homepage "https://www.darktable.org/"
 
-  conflicts_with cask: "darktable-dev"
+  conflicts_with cask: "homebrew/cask-versions/darktable-dev"
 
   app "darktable.app"
 end
