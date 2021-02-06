@@ -1,6 +1,6 @@
 cask "clion" do
   version "2020.3.2"
-  
+
   if Hardware::CPU.intel?
     sha256 "0a1f6447442a07f60094f9c96fd06141556daacea47c77beef8c2630e8eebc8b"
     url "https://download.jetbrains.com/cpp/CLion-#{version}.dmg"
