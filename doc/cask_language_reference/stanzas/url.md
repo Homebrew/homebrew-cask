@@ -116,4 +116,11 @@ Example for using the block syntax: [vlc-nightly.rb](https://github.com/Homebrew
 
 In rare cases, you might need to set URL parameters like `cookies` or `referer` while also using the block syntax.
 
-This is possible by returning a two-element array as a block result. The first element of the array must be the download URL; the second element must be a `Hash` containing the parameters.
+This is possible by passing the options as part of the initial block syntax.
+
+
+```rb
+url referer: "https://example.com", using: MyDownloadStrategy do
+  ...
+end
+```
