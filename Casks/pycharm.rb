@@ -1,8 +1,14 @@
 cask "pycharm" do
   version "2020.3.3,203.7148.72"
-  sha256 "ba71601c02316a9cbffbcbdbabee79d9a8b7d90f29a96fcc6c3445e4043b4b33"
 
-  url "https://download.jetbrains.com/python/pycharm-professional-#{version.before_comma}.dmg"
+  if Hardware::CPU.intel?
+    sha256 "ba71601c02316a9cbffbcbdbabee79d9a8b7d90f29a96fcc6c3445e4043b4b33"
+    url "https://download.jetbrains.com/python/pycharm-professional-#{version.before_comma}.dmg"
+  else
+    sha256 "57153ae5274931dd8521f5dc513967d92654a3b32d47dd2dd56c38d9da060aa0"
+    url "https://download.jetbrains.com/python/pycharm-professional-#{version.before_comma}-aarch64.dmg"
+  end
+  
   name "PyCharm"
   desc "IDE for professional Python development"
   homepage "https://www.jetbrains.com/pycharm/"
