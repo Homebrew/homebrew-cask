@@ -1,5 +1,5 @@
 cask "google-drive-file-stream" do
-  version "44.0.14"
+  version "44.0.14.1" # So it triggers an update for users of the cask
   sha256 :no_check
 
   url "https://dl.google.com/drive-file-stream/GoogleDriveFileStream.dmg"
@@ -7,34 +7,23 @@ cask "google-drive-file-stream" do
   homepage "https://www.google.com/drive/"
 
   depends_on macos: ">= :el_capitan"
+  stage_only true
 
-  pkg "GoogleDriveFileStream.pkg"
-
-  uninstall login_item: "Google Drive File Stream",
-            quit:       "com.google.drivefs",
-            pkgutil:    [
-              "com.google.drivefs",
-              "com.google.drivefs.shortcuts",
-              "com.google.pkg.Keystone",
-            ],
-            launchctl:  [
-              "com.google.keystone.agent",
-              "com.google.keystone.system.agent",
-              "com.google.keystone.daemon",
-              "com.google.keystone.xpcservice",
-              "com.google.keystone.system.xpcservice",
-            ]
-
-  zap trash: [
-    "~/Library/Application Support/Google/DriveFS",
-    "~/Library/Caches/com.google.drivefs",
-    "~/Library/Preferences/Google Drive File Stream Helper.plist",
-    "~/Library/Preferences/com.google.drivefs.plist",
-  ]
+  postflight do
+    system_commad "brew",
+      args: ["install", "google-drive"]
+    system_commad "brew",
+      args: ["uninstall", "google-drive-file-stream"]
+  end
 
   caveats <<~EOS
-    Although #{token} may be installed alongside Google Backup and Sync, you should not use the same account with both.
+    RENAME WARNING
 
-      https://support.google.com/a/answer/7496409#allowboth
+    Google Drive File Stream has been renamed to Google Drive.
+
+    `#{cask}` has been renamed `google-drive`. We will uninstall the former and install the latter. but you should update your scripts. `#{cask}` will be deleted on August 1, 2021.
+
+    We’re aware this solution is subpar. If you’d like to help us improve it,
+    we accept PRs and need the equivalent of formula_renames.json for casks: https://docs.brew.sh/Rename-A-Formula
   EOS
 end
