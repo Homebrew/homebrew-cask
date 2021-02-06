@@ -20,5 +20,4 @@ cask "sunloginclient" do
               "com.oray.sunlogin.service",
               "com.oray.sunlogin.startup",
             ]
-  
 end
