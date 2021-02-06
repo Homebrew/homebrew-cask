@@ -1,8 +1,14 @@
 cask "goland" do
   version "2020.3.2,203.7148.71"
-  sha256 "e9dfe06fb38eb29e320985cc179ce7c1995a5c10fe0bff3eca8d40456e277503"
 
-  url "https://download.jetbrains.com/go/goland-#{version.before_comma}.dmg"
+  if Hardware::CPU.intel?
+    sha256 "e9dfe06fb38eb29e320985cc179ce7c1995a5c10fe0bff3eca8d40456e277503"
+    url "https://download.jetbrains.com/go/goland-#{version.before_comma}.dmg"
+  else
+    sha256 "be94ba11b60689446e75d6372cc9aec555ae21e1037239b09240ec8031dc6262"
+    url "https://download.jetbrains.com/go/goland-#{version.before_comma}-aarch64.dmg"
+  end
+
   name "Goland"
   desc "Go (golang) IDE"
   homepage "https://www.jetbrains.com/go/"
