@@ -1,6 +1,6 @@
 cask "pycharm-ce" do
   version "2020.3.3,203.7148.72"
-  
+
   if Hardware::CPU.intel?
     sha256 "5c9fb106f823855f1a2e5ad412a955b3a7d7629d7f53998d04fdbd96a6a3ebec"
     url "https://download.jetbrains.com/python/pycharm-community-#{version.before_comma}.dmg"
