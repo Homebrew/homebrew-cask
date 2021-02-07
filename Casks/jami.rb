@@ -12,4 +12,8 @@ cask "jami" do
   auto_updates true
 
   app "Jami.app"
+
+  zap trash: [
+    "~/Library/Application Support/jami",
+  ]
 end
