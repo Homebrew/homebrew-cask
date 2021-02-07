@@ -7,7 +7,7 @@ cask "runjs" do
   appcast "https://github.com/lukehaas/runjs/releases.atom"
   name "RunJS"
   desc "JavaScript playground that auto-evaluates as code is typed"
-  homepage "https://projects.lukehaas.me/runjs/"
+  homepage "https://runjs.app/"
 
   auto_updates true
 
