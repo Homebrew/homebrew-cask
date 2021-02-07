@@ -8,7 +8,7 @@ cask "google-drive-file-stream" do
 
   depends_on macos: ">= :el_capitan"
 
-  pkg "GoogleDriveFileStream.pkg"
+  pkg "GoogleDrive.pkg"
 
   uninstall login_item: "Google Drive File Stream",
             quit:       "com.google.drivefs",
