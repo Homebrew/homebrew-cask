@@ -7,6 +7,7 @@ cask "google-drive-file-stream" do
   homepage "https://www.google.com/drive/"
 
   depends_on macos: ">= :el_capitan"
+
   stage_only true
 
   postflight do
