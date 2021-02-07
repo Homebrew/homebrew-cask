@@ -1,4 +1,4 @@
-cask "google-drive-file-stream" do
+cask "google-drive" do
   version "44.0.14"
   sha256 :no_check
 
@@ -10,7 +10,7 @@ cask "google-drive-file-stream" do
 
   pkg "GoogleDrive.pkg"
 
-  uninstall login_item: "Google Drive File Stream",
+  uninstall login_item: "Google Drive",
             quit:       "com.google.drivefs",
             pkgutil:    [
               "com.google.drivefs",
