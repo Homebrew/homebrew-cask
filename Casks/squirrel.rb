@@ -5,7 +5,7 @@ cask "squirrel" do
   url "https://dl.bintray.com/rime/squirrel/Squirrel-#{version}.zip",
       verified: "dl.bintray.com/rime/squirrel/"
   name "Squirrel"
-  desc "【鼠鬚管】輸入法"
+  desc "Rime input method engine"
   homepage "https://rime.im/"
 
   livecheck do
