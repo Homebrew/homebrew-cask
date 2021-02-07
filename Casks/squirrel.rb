@@ -1,10 +1,11 @@
 cask "squirrel" do
-  version "0.14.0"
-  sha256 "e7bc74ed1f0447a48b8c86f3685d8c6d0640d39895e6e4550488beeb4f870926"
+  version "0.15.0"
+  sha256 "4d06eeb3dc22b64827a0859f0267255afb9f60d59b7b506fb28ff4dd9aea7644"
 
   url "https://dl.bintray.com/rime/squirrel/Squirrel-#{version}.zip",
       verified: "dl.bintray.com/rime/squirrel/"
   name "Squirrel"
+  desc "Rime input method engine"
   homepage "https://rime.im/"
 
   livecheck do
