@@ -4,6 +4,7 @@ cask "google-drive-file-stream" do
 
   url "https://dl.google.com/drive-file-stream/GoogleDriveFileStream.dmg"
   name "Google Drive File Stream"
+  desc "Easy and secure access to all of your content"
   homepage "https://www.google.com/drive/"
 
   depends_on macos: ">= :el_capitan"
