@@ -4,6 +4,7 @@ cask "google-drive" do
 
   url "https://dl.google.com/drive-file-stream/GoogleDriveFileStream.dmg"
   name "Google Drive"
+  desc "Client for the Google Drive storage service"
   homepage "https://www.google.com/drive/"
 
   depends_on macos: ">= :el_capitan"
