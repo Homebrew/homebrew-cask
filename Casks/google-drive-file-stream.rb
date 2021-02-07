@@ -10,9 +10,9 @@ cask "google-drive-file-stream" do
   stage_only true
 
   postflight do
-    system_commad "brew",
+    system_command HOMEBREW_BREW_FILE,
       args: ["install", "google-drive"]
-    system_commad "brew",
+    system_command HOMEBREW_BREW_FILE,
       args: ["uninstall", "google-drive-file-stream"]
   end
 
