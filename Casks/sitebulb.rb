@@ -1,6 +1,6 @@
 cask "sitebulb" do
-  version "4.6.2"
-  sha256 "a66dd8116b526e369eaa1efaefc43a81795a4e7094f65b6ab035811efe43b83a"
+  version "4.7"
+  sha256 "89bc60cdad194a911051cd6adc784ce6820c537d8b49ced788173135dc681132"
 
   url "https://downloads.sitebulb.com/#{version}/macOS/Sitebulb.dmg"
   name "Sitebulb"
