@@ -3,8 +3,8 @@ cask "parsify" do
   sha256 "566f9e5332158f8339550d6eb29cad7fd6ad5b8a06b860908f9c24c304bffcac"
 
   url "https://github.com/parsify-dev/desktop/releases/download/v#{version}/Parsify.Desktop-#{version}.dmg",
-      verified: "github.com/parsify-dev"
-  name "Parsify Desktop"
+      verified: "github.com/parsify-dev/desktop/"
+  name "Parsify"
   desc "Extensible calculator with unit and currency conversions"
   homepage "https://parsify.app/"
 
