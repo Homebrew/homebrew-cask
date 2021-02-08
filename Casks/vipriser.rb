@@ -1,5 +1,5 @@
 cask "vipriser" do
-  version "3.6"
+  version "3.7"
   sha256 :no_check
 
   url "https://onflapp.github.io/blog/releases/vipriser/VipRiser.zip"
