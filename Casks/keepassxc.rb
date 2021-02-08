@@ -6,9 +6,9 @@ cask "keepassxc" do
         verified: "github.com/keepassxreboot/keepassxc/"
     sha256 "639fdfe0379dc3f00f1bd6a72c974cfddae0d4c8ddb66f7297d0b01b1a582ede"
   else
-    url "https://github.com/keepassxreboot/keepassxc/releases/download/#{version}/KeePassXC-#{version}-arm64.dmg",
+    url "https://github.com/keepassxreboot/keepassxc/releases/download/#{version}/KeePassXC-#{version}-2-arm64.dmg",
         verified: "github.com/keepassxreboot/keepassxc/"
-    sha256 "16dcdfae65ad8887b4d9cd86bf56bc7df2dca3e3fedf91b07b42a0f6e1465c48"
+    sha256 "49c28e3f6341710b24d4415186ec0a52f6c0af5e72c0fc7548ddd7999d2eaa4d"
   end
 
   name "KeePassXC"
