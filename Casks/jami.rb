@@ -7,6 +7,7 @@ cask "jami" do
           must_contain: version.no_dots
   name "Jami"
   name "Savoir-faire Linux Ring"
+  desc "Secure decentralised instant messenger (Jami protocol) and softphone (SIP/VoIP telephony client)"
   homepage "https://jami.net/"
 
   auto_updates true
