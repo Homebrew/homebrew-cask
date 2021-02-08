@@ -16,6 +16,7 @@ cask "google-drive-file-stream" do
                    args: ["install", "google-drive"]
     system_command HOMEBREW_BREW_FILE,
                    args: ["uninstall", "google-drive-file-stream"]
+    FileUtils.rm_r(staged_path.to_s)
   end
 
   caveats <<~EOS
