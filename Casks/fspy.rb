@@ -6,7 +6,7 @@ cask "fspy" do
       verified: "github.com/stuffmatic/fSpy"
   appcast "https://github.com/stuffmatic/fSpy/releases.atom"
   name "fSpy"
-  desc "Open source still image camera matching"
+  desc "Still image camera matching"
   homepage "https://fspy.io/"
 
   def caveats
