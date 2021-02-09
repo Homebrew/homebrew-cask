@@ -2,7 +2,7 @@ cask "google-drive" do
   version "44.0.14"
   sha256 :no_check
 
-  url "https://dl.google.com/drive-file-stream/GoogleDriveFileStream.dmg"
+  url "https://dl.google.com/drive-file-stream/GoogleDrive.dmg"
   name "Google Drive"
   desc "Client for the Google Drive storage service"
   homepage "https://www.google.com/drive/"
