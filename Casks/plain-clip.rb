@@ -6,5 +6,5 @@ cask "plain-clip" do
   name "Plain Clip"
   homepage "https://www.bluem.net/en/mac/plain-clip/"
 
-  app "Plain Clip.app"
+  app "Plain Clip/Plain Clip.app"
 end
