@@ -19,7 +19,11 @@ cask "iterm2" do
   end
 
   auto_updates true
-  conflicts_with cask: "iterm2-beta"
+  conflicts_with cask: [
+    "homebrew/cask-versions/iterm2-beta",
+    "homebrew/cask-versions/iterm2-legacy",
+    "homebrew/cask-versions/iterm2-nightly",
+  ]
   depends_on macos: ">= :sierra"
 
   app "iTerm.app"
