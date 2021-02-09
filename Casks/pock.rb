@@ -1,6 +1,6 @@
 cask "pock" do
-  version "0.8.0-10"
-  sha256 "a34b531f174f841cb56a4d3c5507b46604577fe51159b3e0bdc2ba12846f57f2"
+  version "0.8.1-5"
+  sha256 "f3b301e06c5b54159607e5b6813ed8f7a8a90908de2a1782986825e623203b37"
 
   url "https://pock.dev/download.php?file=pock_#{version.dots_to_underscores.gsub(/-/, "__")}.zip&nw=1"
   name "Pock"
