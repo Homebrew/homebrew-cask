@@ -7,26 +7,21 @@ cask "google-drive-file-stream" do
   desc "Client for the Google Drive storage service"
   homepage "https://www.google.com/drive/"
 
-  depends_on macos: ">= :el_capitan"
+  depends_on cask: "google-drive"
 
   stage_only true
-
-  postflight do
-    system_command HOMEBREW_BREW_FILE,
-                   args: ["install", "google-drive"]
-    system_command HOMEBREW_BREW_FILE,
-                   args: ["uninstall", "google-drive-file-stream"]
-    FileUtils.rm_r(staged_path.to_s)
-  end
 
   caveats <<~EOS
     RENAME WARNING
 
-    Google Drive File Stream has been renamed to Google Drive.
-
-    `#{cask}` has been renamed `google-drive`. We will uninstall the former and install the latter. but you should update your scripts. `#{cask}` will be deleted on August 1, 2021.
+    `#{cask}` will be renamed `google-drive`.
+    In the meantime, `#{cask}` will install `google-drive` for you as a dependency, but you should update your scripts.
 
     We’re aware this solution is subpar. If you’d like to help us improve it,
     we accept PRs and need the equivalent of formula_renames.json for casks: https://docs.brew.sh/Rename-A-Formula
+
+    To migrate now, do:
+      brew uninstall #{cask}
+      brew install google-drive
   EOS
 end
