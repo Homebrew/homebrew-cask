@@ -1,6 +1,6 @@
 cask "hookshot" do
-  version "1.17,33"
-  sha256 "fa0745abe94e433e0695c29462b40cfc18faf553e9f677b688eed565d55ce3a7"
+  version "1.17.1,34"
+  sha256 "de6ffa9563ee5b664ff01c1bd131d90466a6cc18d83529eab36810f3cca930d1"
 
   url "https://hookshot.app/downloads/Hookshot#{version.before_comma}.dmg"
   name "Hookshot"

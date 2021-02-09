@@ -1,6 +1,6 @@
 cask "browserosaurus" do
-  version "13.1.0"
-  sha256 "cd334fcadf32ceb45f8d2cb3aba9bc536a9b58e2269c4ba887671684d320793a"
+  version "13.1.1"
+  sha256 "077cd613e79da87e868bfb30cf364f959525cb8ecb2b8c101e3d03974a5589dc"
 
   url "https://github.com/will-stone/browserosaurus/releases/download/v#{version}/Browserosaurus-darwin-x64-#{version}.zip",
       verified: "github.com/will-stone/browserosaurus/"

@@ -1,6 +1,6 @@
 cask "privatus" do
-  version "6.3.3"
-  sha256 "8b1c5cd1e256a1a86d9e93f52d964a057485c59141225a07f0838890a3a3f7e9"
+  version "6.3.4"
+  sha256 "06ed23d7aa7771e6643abc7bfbed53525c0cfb19588921e0b52ac02dd2c88b92"
 
   url "https://sweetpproductions.com/products/privatus#{version.major}/Privatus#{version.major}.dmg",
       verified: "sweetpproductions.com/products/"

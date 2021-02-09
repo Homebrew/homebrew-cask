@@ -1,6 +1,6 @@
 cask "helo" do
-  version "1.3.0"
-  sha256 "728d52ca3efee4cb94a0499a887c991028b29527ae8e6c007ffeb11e0fc381af"
+  version "1.3.2"
+  sha256 "6e51c532e2340d1d432e498ff1dd908afbe1e2978cb6cea6086b8dea5a746f9c"
 
   url "https://helo.fra1.digitaloceanspaces.com/helo/HELO-#{version}.dmg",
       verified: "helo.fra1.digitaloceanspaces.com"
@@ -12,6 +12,8 @@ cask "helo" do
     url "https://usehelo.com/download/latest/mac"
     strategy :header_match
   end
+
+  auto_updates true
 
   app "HELO.app"
 

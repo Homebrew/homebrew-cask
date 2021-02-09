@@ -19,4 +19,6 @@ cask "avidemux" do
   homepage "https://www.avidemux.org/"
 
   app "Avidemux_#{version}.app"
+  binary "#{appdir}/Avidemux_#{version}.app/Contents/MacOS/avidemux_cli", target: "avidemux"
+  binary "#{appdir}/Avidemux_#{version}.app/Contents/MacOS/avidemux_jobs"
 end

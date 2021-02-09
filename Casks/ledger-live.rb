@@ -4,9 +4,13 @@ cask "ledger-live" do
 
   url "https://github.com/LedgerHQ/ledger-live-desktop/releases/download/v#{version}/ledger-live-desktop-#{version}-mac.dmg",
       verified: "github.com/LedgerHQ/ledger-live-desktop/"
-  appcast "https://github.com/LedgerHQ/ledger-live-desktop/releases.atom"
   name "Ledger Live"
   homepage "https://www.ledgerwallet.com/live"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
 

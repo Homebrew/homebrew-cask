@@ -4,10 +4,14 @@ cask "fsnotes" do
 
   url "https://github.com/glushchenko/fsnotes/releases/download/#{version}/FSNotes_#{version}.zip",
       verified: "github.com/glushchenko/fsnotes/"
-  appcast "https://github.com/glushchenko/fsnotes/releases.atom"
   name "FSNotes"
   desc "Notes manager"
   homepage "https://fsnot.es/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "FSNotes.app"
 

@@ -1,6 +1,6 @@
 cask "min" do
-  version "1.17.3"
-  sha256 "3de80144ca75dca1f64a6ab06023c5d5459fa7cf0d2b4fd584ceff9afbdf8a9c"
+  version "1.18.0"
+  sha256 "34078bba39e679bf12c0a9a00ba7cc029bdccba0ff1a7f9ec23ba3ede235c12d"
 
   url "https://github.com/minbrowser/min/releases/download/v#{version}/Min-v#{version}-darwin-x64.zip",
       verified: "github.com/minbrowser/min/"

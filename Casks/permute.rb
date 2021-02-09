@@ -1,6 +1,6 @@
 cask "permute" do
-  version "3.5.14,2333"
-  sha256 "9883345263efa13681cb0488125d77e801a7e681704f565d5ea70d5a2eee0b97"
+  version "3.5.15,2336"
+  sha256 "d4350035c6e910c21fdf9145813bd1ead2a4f3c5138caf2dbfd5d15d99e4b8cd"
 
   url "https://trial.charliemonroe.net/permute/v#{version.major}/Permute_#{version.major}_#{version.after_comma}.dmg"
   name "Permute"
@@ -16,4 +16,9 @@ cask "permute" do
   depends_on macos: ">= :el_capitan"
 
   app "Permute #{version.major}.app"
+
+  zap trash: [
+    "~/Library/Containers/com.charliemonroe.Permute-#{version.major}",
+    "~/Library/Preferences/com.charliemonroe.Permute-#{version.major}.plist",
+  ]
 end

@@ -1,8 +1,14 @@
 cask "datagrip" do
-  version "2020.3.1,203.6682.134"
-  sha256 "9a0b4f28e87fcb706086807dfb33adbcff573941a77fefa96143b7726d45d83e"
+  version "2020.3.2"
 
-  url "https://download.jetbrains.com/datagrip/datagrip-#{version.before_comma}.dmg"
+  if Hardware::CPU.intel?
+    sha256 "dbdc49e06cf2d120e55eecaa0cb6d5588a9ca73b0efd4607d6c2ad4fc8a36d0b"
+    url "https://download.jetbrains.com/datagrip/datagrip-#{version}.dmg"
+  else
+    sha256 "95d28b0a0faa9a6e131bfef9bfe321bdf028be7624345e3416c0f26ef7a95f96"
+    url "https://download.jetbrains.com/datagrip/datagrip-#{version}-aarch64.dmg"
+  end
+
   appcast "https://data.services.jetbrains.com/products/releases?code=DG&latest=true&type=release"
   name "DataGrip"
   desc "Databases & SQL IDE"

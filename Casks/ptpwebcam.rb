@@ -1,6 +1,6 @@
 cask "ptpwebcam" do
-  version "1.2.6"
-  sha256 "6d77dbb9d6052397f953b49e4a218cb809ec864a9cf3dfc83318f788c71e88c4"
+  version "1.3.0"
+  sha256 "3645fcfc2f8a6adc510c13399b44bac2d9e20dc9a2b50de6b4c441d9a769ec61"
 
   url "https://github.com/dognotdog/ptpwebcam/releases/download/v#{version}/PTP_Webcam-v#{version}.pkg",
       verified: "https://github.com/dognotdog/ptpwebcam"
@@ -19,6 +19,7 @@ cask "ptpwebcam" do
   uninstall pkgutil:   [
     "org.ptpwebcam.pkg.EnableChrome",
     "org.ptpwebcam.pkg.EnableSkype",
+    "org.ptpwebcam.pkg.EnableTeams",
     "org.ptpwebcam.pkg.EnableZoom",
     "org.ptpwebcam.pkg.PTPWebcam",
     "org.ptpwebcam.pkg.RemoveEOSWebcam",

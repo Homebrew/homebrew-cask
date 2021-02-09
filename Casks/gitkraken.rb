@@ -2,8 +2,7 @@ cask "gitkraken" do
   version "7.5.0"
   sha256 :no_check
 
-  url "https://release.gitkraken.com/darwin/installGitKraken.dmg",
-      verified: "release.axocdn.com/darwin/"
+  url "https://release.gitkraken.com/darwin/installGitKraken.dmg"
   appcast "https://www.gitkraken.com/download"
   name "GitKraken"
   desc "Git client focusing on productivity"

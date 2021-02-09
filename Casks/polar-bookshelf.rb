@@ -4,10 +4,14 @@ cask "polar-bookshelf" do
 
   url "https://github.com/burtonator/polar-bookshelf/releases/download/v#{version}/Polar-#{version}.dmg",
       verified: "github.com/burtonator/polar-bookshelf/"
-  appcast "https://github.com/burtonator/polar-bookshelf/releases.atom"
   name "Polar Bookshelf"
   desc "Integrated reading environment"
   homepage "https://getpolarized.io/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Polar.app"
 end

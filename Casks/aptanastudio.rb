@@ -4,9 +4,13 @@ cask "aptanastudio" do
 
   url "https://github.com/aptana/studio3/releases/download/#{version}/Aptana_Studio_#{version.major}.dmg",
       verified: "github.com/aptana/studio3/"
-  appcast "https://github.com/aptana/studio#{version.major}/releases.atom"
   name "Aptana Studio"
   homepage "http://www.aptana.com/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "AptanaStudio.app"
 end

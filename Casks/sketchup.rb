@@ -3,8 +3,7 @@ cask "sketchup" do
   sha256 "a534d77d1ea9622b19463258abf21768cb8bb8126734bd40329dd4088b04d79f"
 
   # downloads can be found at https://www.sketchup.com/download/all
-  url "https://www.sketchup.com/sketchup/#{version.before_comma}/en/sketchupmake-#{version.before_comma}-#{version.after_comma}-en-dmg",
-      verified: "dl.trimble.com/sketchup/"
+  url "https://www.sketchup.com/sketchup/#{version.before_comma}/en/sketchupmake-#{version.before_comma}-#{version.after_comma}-en-dmg"
   name "SketchUp"
   homepage "https://www.sketchup.com/"
 
