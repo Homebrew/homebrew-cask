@@ -11,6 +11,8 @@ cask "google-drive-file-stream" do
 
   stage_only true
 
+  uninstall login_item: "Google Drive File Stream"
+
   caveats <<~EOS
     RENAME WARNING
 
