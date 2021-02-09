@@ -8,6 +8,8 @@ cask "qqmusic" do
   desc "Chinese music streaming application"
   homepage "https://y.qq.com/"
 
+  auto_updates true
+
   app "QQMusic.app"
 
   uninstall quit: "com.tencent.QQMusicMac"
