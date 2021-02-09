@@ -1,5 +1,5 @@
 cask "google-drive-file-stream" do
-  version "44.0.14.1" # So it triggers an update for users of the cask
+  version "44.0.14.1" # So it triggers an upgrade for users of the cask
   sha256 :no_check
 
   url "https://dl.google.com/drive-file-stream/GoogleDriveFileStream.dmg"
