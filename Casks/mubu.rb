@@ -8,6 +8,12 @@ cask "mubu" do
   desc "Outline note taking and management app"
   homepage "https://mubu.com/"
 
+  livecheck do
+    url "https://mubu.com/apps"
+    strategy :page_match
+    regex(/Mubu-(\d+(?:\.\d+)*)\.dmg/i)
+  end
+
   app "幕布.app"
 
   zap trash: [
