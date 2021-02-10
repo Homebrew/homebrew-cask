@@ -14,8 +14,9 @@ cask "iterm2" do
   homepage "https://www.iterm2.com/"
 
   livecheck do
-    url "https://iterm2.com/appcasts/final_modern.xml"
-    strategy :sparkle
+    url "https://iterm2.com/appcasts/full_changes.txt"
+    strategy :page_match
+    regex(/(\d+(?:\.\d+)*)/i)
   end
 
   auto_updates true
