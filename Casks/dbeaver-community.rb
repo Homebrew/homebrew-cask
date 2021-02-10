@@ -3,10 +3,14 @@ cask "dbeaver-community" do
   sha256 "47ee7dd81a5fa710e2b497026bd2df114e69320aa9c125e6cbd8a0931cc385d4"
 
   url "https://dbeaver.io/files/#{version}/dbeaver-ce-#{version}-macos.dmg"
-  appcast "https://github.com/dbeaver/dbeaver/releases.atom"
   name "DBeaver Community Edition"
   desc "Free universal database tool and SQL client"
   homepage "https://dbeaver.io/"
+
+  livecheck do
+    url "https://github.com/dbeaver/dbeaver"
+    strategy :github_latest
+  end
 
   app "DBeaver.app"
 
