@@ -4,7 +4,7 @@ cask "thingsmacsandboxhelper" do
 
   url "https://culturedcode.cachefly.net/things/thingssandboxhelper/#{version}/ThingsHelper.zip",
       verified: "culturedcode.cachefly.net/"
-  name "ThingsMacSandboxHelper"
+  name "Things Helper"
   desc "Helper application for Things"
   homepage "https://culturedcode.com/things/mac/help/things-sandboxing-helper-things#{version.major}/"
 
