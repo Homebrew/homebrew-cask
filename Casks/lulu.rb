@@ -1,13 +1,17 @@
 cask "lulu" do
-  version "2.2.0"
-  sha256 "f8277793429059102c9e892ed31ef8f705a4d2316fb5c5deba7309d3e36202a3"
+  version "2.3.0"
+  sha256 "d342f843b7a6b52cc1bb5784f730b5b8bd9dd4b5635fe2b70aba8ef5e55ad6c0"
 
-  url "https://bitbucket.org/objective-see/deploy/downloads/LuLu_#{version}.dmg",
-      verified: "bitbucket.org/objective-see/"
-  appcast "https://objective-see.com/products/changelogs/LuLu.txt"
+  url "https://github.com/objective-see/LuLu/releases/download/v#{version}/LuLu_#{version}.dmg",
+      verified: "github.com/objective-see/LuLu/"
   name "LuLu"
   desc "Open-source firewall to block unknown outgoing connections"
   homepage "https://objective-see.com/products/lulu.html"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
   depends_on macos: ">= :catalina"
