@@ -1,5 +1,5 @@
 cask "hazeover" do
-  version "1.8.8,1035"
+  version "1.8.9,1050"
   sha256 :no_check
 
   url "https://hazeover.com/HazeOver.dmg"
