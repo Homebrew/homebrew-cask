@@ -26,8 +26,8 @@ cask "seamonkey" do
     "ru"
   end
 
-  # mozilla.org/pub/seamonkey/releases/ was verified as official when first introduced to the cask
-  url "https://archive.mozilla.org/pub/seamonkey/releases/#{version}/mac/#{language}/seamonkey-#{version}.#{language}.mac.dmg"
+  url "https://archive.mozilla.org/pub/seamonkey/releases/#{version}/mac/#{language}/seamonkey-#{version}.#{language}.mac.dmg",
+      verified: "mozilla.org/pub/seamonkey/releases/"
   appcast "https://www.seamonkey-project.org/releases/"
   name "SeaMonkey"
   desc "Development of SeaMonkey Internet Application Suite"

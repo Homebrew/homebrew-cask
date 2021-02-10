@@ -2,8 +2,8 @@ cask "turbovnc-viewer" do
   version "2.2.5"
   sha256 "912277534d5df0e648c19b27e9c3a23380a71a9d6ad5cef2fb87f3e65a77185a"
 
-  # sourceforge.net/turbovnc/ was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/turbovnc/#{version}/TurboVNC-#{version}.dmg"
+  url "https://downloads.sourceforge.net/turbovnc/#{version}/TurboVNC-#{version}.dmg",
+      verified: "sourceforge.net/turbovnc/"
   appcast "https://sourceforge.net/projects/turbovnc/rss"
   name "TurboVNC"
   homepage "https://www.turbovnc.org/"

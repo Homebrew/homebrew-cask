@@ -3,9 +3,13 @@ cask "sysex-librarian" do
   sha256 "dbb1d9cb1c79cb873cb768c775a441b0da866f356cc18d697e33fc300f6b789a"
 
   url "https://www.snoize.com/SysExLibrarian/SysExLibrarian_#{version.dots_to_underscores}.zip"
-  appcast "https://www.snoize.com/SysExLibrarian/SysExLibrarian.xml"
   name "SysEx Librarian"
   homepage "https://www.snoize.com/SysExLibrarian/"
+
+  livecheck do
+    url "https://www.snoize.com/SysExLibrarian/SysExLibrarian.xml"
+    strategy :sparkle
+  end
 
   app "SysEx Librarian.app"
 

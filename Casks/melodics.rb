@@ -1,11 +1,15 @@
 cask "melodics" do
-  version "2.1.5387"
-  sha256 "6e1b3decfbf90fb1651e7ed3d4ff8763bd5e7a2436fab8535aa2574de530b4b2"
+  version "2.1.5641"
+  sha256 "b59942835ea96a68c71f531f75dbfd970f5f0fe384e1bac36561f356098049bd"
 
   url "https://web-cdn.melodics.com/download/MelodicsV#{version.major}.dmg"
-  appcast "https://web-cdn.melodics.com/download/osxupdatescastv#{version.major}.xml"
   name "Melodics"
   homepage "https://melodics.com/"
+
+  livecheck do
+    url "https://web-cdn.melodics.com/download/osxupdatescastv#{version.major}.xml"
+    strategy :sparkle
+  end
 
   app "Melodics.app"
 end

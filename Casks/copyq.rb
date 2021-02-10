@@ -2,8 +2,8 @@ cask "copyq" do
   version "3.13.0"
   sha256 "07c12f91649d512616d9eef9a9492d7041f31620a4fbeeae1baae0d5b73c3461"
 
-  # github.com/hluk/CopyQ/ was verified as official when first introduced to the cask
-  url "https://github.com/hluk/CopyQ/releases/download/v#{version}/CopyQ.dmg"
+  url "https://github.com/hluk/CopyQ/releases/download/v#{version}/CopyQ.dmg",
+      verified: "github.com/hluk/CopyQ/"
   appcast "https://github.com/hluk/CopyQ/releases.atom"
   name "CopyQ"
   desc "Clipboard manager with advanced features"

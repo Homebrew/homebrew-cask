@@ -2,8 +2,8 @@ cask "ballast" do
   version "1.2.1"
   sha256 "947c0c417ddf0fa0abcdb4d8e9b49f9e26bf17bd3590261f0d8ca1acabe8cf97"
 
-  # github.com/jamsinclair/ballast/ was verified as official when first introduced to the cask
-  url "https://github.com/jamsinclair/ballast/releases/download/v#{version}/ballast-v#{version}.zip"
+  url "https://github.com/jamsinclair/ballast/releases/download/v#{version}/ballast-v#{version}.zip",
+      verified: "github.com/jamsinclair/ballast/"
   appcast "https://github.com/jamsinclair/ballast/releases.atom"
   name "ballast"
   desc "Status Bar app to keep the audio balance from drifting"

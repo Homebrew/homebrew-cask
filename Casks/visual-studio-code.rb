@@ -1,13 +1,18 @@
 cask "visual-studio-code" do
-  version "1.51.1"
-  sha256 "1d118d1681b870c4dfd00007b2d4d96ec30112920b26377362d2f7c9676ff645"
+  version "1.53.1"
+  sha256 "cce23e760b7103d3e5e2d8ef488f8cf6b1f1e31aa42f68b0bcde66327db12cb2"
 
   url "https://update.code.visualstudio.com/#{version}/darwin/stable"
-  appcast "https://update.code.visualstudio.com/api/update/darwin/stable/VERSION"
   name "Microsoft Visual Studio Code"
   name "VS Code"
   desc "Open-source code editor"
   homepage "https://code.visualstudio.com/"
+
+  livecheck do
+    url "https://update.code.visualstudio.com/api/update/darwin/stable/VERSION"
+    strategy :page_match
+    regex(/"productVersion"\s*:\s*"(\d+(:?\.\d+)*)"/)
+  end
 
   auto_updates true
 

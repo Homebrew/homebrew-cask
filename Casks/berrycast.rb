@@ -1,9 +1,9 @@
 cask "berrycast" do
-  version "0.30.0,858b5929-15c3-5a2d-aac7-a8b168dddc50"
-  sha256 "6fe0f1e637bb5ffc29c3826480341a40b42ab3c4c316ec3092e6f5f91ae93aaf"
+  version "0.31.3"
+  sha256 "cd95f2c84defd0067aacb56a4e4300ce310690d039728de39cb4622e983d9069"
 
-  url "https://media.berrycast.app/desktop-installer/Berrycast-#{version.before_comma}-latest.dmg?display-file-name=Berrycast-#{version.before_comma}-latest_#{version.after_comma}.dmg",
-      verified: "media.berrycast.app"
+  url "https://media.berrycast.app/desktop-installer/Berrycast-#{version}-latest.dmg",
+      verified: "media.berrycast.app/"
   appcast "https://media.berrycast.app/desktop-installer/v2/latest-mac.yml"
   name "Berrycast"
   desc "Screen recorder"

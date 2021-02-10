@@ -1,12 +1,19 @@
 cask "local" do
-  version "5.9.4,5115"
-  sha256 "6da9743756370ef9f754fd939684ae37468693ba48901c2d6889bccf3dab67af"
+  version "5.9.8,5191"
+  sha256 "eae46d61925a2256e8fe1c52e3f8581d249d237a9267018e2987173ba86742be"
 
   url "https://cdn.localwp.com/releases-stable/#{version.before_comma}+#{version.after_comma}/local-#{version.before_comma}-mac.dmg"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://cdn.localwp.com/stable/latest/mac"
   name "Local"
   desc "WordPress local development tool"
   homepage "https://localwp.com/"
+
+  livecheck do
+    url "https://cdn.localwp.com/stable/latest/mac"
+    strategy :header_match do |headers|
+      match = headers["location"].match(%r{/(\d+(?:\.\d+)*)\+(\d+)/})
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
   app "Local.app"
 

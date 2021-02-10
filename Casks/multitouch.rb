@@ -1,11 +1,15 @@
 cask "multitouch" do
-  version "1.20.2"
-  sha256 "ddebd91164124170d4e403607e8b3ff81c215df2e4c09cc4570cbc12f21c9e3f"
+  version "1.23,126"
+  sha256 "05e22af57131f2aea086f0e5e92d7fee70c0eaceb4f1e9b770af470cfbdc784a"
 
-  url "https://multitouch.app/downloads/multitouch#{version}.dmg"
-  appcast "https://www.multitouch.app/downloads/updates.xml"
+  url "https://multitouch.app/downloads/multitouch#{version.before_comma}.dmg"
   name "Multitouch"
   homepage "https://multitouch.app/"
+
+  livecheck do
+    url "https://www.multitouch.app/downloads/updates.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"

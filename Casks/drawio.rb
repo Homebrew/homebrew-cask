@@ -1,11 +1,12 @@
 cask "drawio" do
-  version "13.9.9"
-  sha256 "04d3134e963444e33cd3a8bb339bd1f0a049228fb78ae5722adcb62b610ff7ac"
+  version "14.1.8"
+  sha256 "440760565c725659918ba4d7dd82939930d3b4e8f372abe1cc008e352b1da4d1"
 
-  # github.com/jgraph/drawio-desktop/ was verified as official when first introduced to the cask
-  url "https://github.com/jgraph/drawio-desktop/releases/download/v#{version}/draw.io-#{version}.dmg"
+  url "https://github.com/jgraph/drawio-desktop/releases/download/v#{version}/draw.io-#{version}.dmg",
+      verified: "github.com/jgraph/drawio-desktop/"
   appcast "https://github.com/jgraph/drawio-desktop/releases.atom"
   name "draw.io Desktop"
+  desc "Draw.io is free online diagram software"
   homepage "https://www.draw.io/"
 
   app "draw.io.app"

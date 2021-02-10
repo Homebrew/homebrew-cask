@@ -1,8 +1,8 @@
 cask "vscodium" do
-  version "1.51.1"
-  sha256 "730ededf174ebced2a90bddbd87862c2a06869783853ad956af72c85f5b57e70"
+  version "1.53.1"
+  sha256 "f2a94e798abef5b66a74f1771d80d02b645dab721c32bd2a4bcbfcbd333e4881"
 
-  url "https://github.com/VSCodium/vscodium/releases/download/#{version}/VSCodium.#{version}.dmg"
+  url "https://github.com/VSCodium/vscodium/releases/download/#{version}/VSCodium.x64.#{version}.dmg"
   appcast "https://github.com/VSCodium/vscodium/releases.atom"
   name "VSCodium"
   desc "Binary releases of VS Code without MS branding/telemetry/licensing"

@@ -2,8 +2,8 @@ cask "overflow" do
   version "3.2.1"
   sha256 "61c40e5d497a0f0e26dfb4062fbb958cbb9a0ea7895a7fcff64edca3e265f034"
 
-  # stunt.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://stunt.s3.amazonaws.com/overflow_#{version}.zip"
+  url "https://stunt.s3.amazonaws.com/overflow_#{version}.zip",
+      verified: "stunt.s3.amazonaws.com/"
   appcast "https://stuntsoftware.com/PHP/sparkle/overflow#{version.major}.php"
   name "Overflow"
   desc "Visual application launcher"

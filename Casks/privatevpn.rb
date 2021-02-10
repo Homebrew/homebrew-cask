@@ -1,11 +1,15 @@
 cask "privatevpn" do
-  version "3.1,115"
+  version "3.2.1,126"
   sha256 :no_check
 
   url "https://privatevpn.com/client/PrivateVPN.dmg"
-  appcast "https://xu515.pvdatanet.com/v3/mac/appcast.xml"
   name "PrivateVPN"
   homepage "https://privatevpn.com/"
+
+  livecheck do
+    url "https://xu515.pvdatanet.com/v3/mac/appcast.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :el_capitan"
 

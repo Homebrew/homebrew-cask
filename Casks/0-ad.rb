@@ -4,10 +4,14 @@ cask "0-ad" do
 
   url "https://releases.wildfiregames.com/0ad-#{version}-osx64.dmg",
       verified: "releases.wildfiregames.com/"
-  appcast "https://play0ad.com/download/mac/"
   name "0 A.D."
   desc "Real-time strategy game"
   homepage "https://play0ad.com/"
+
+  livecheck do
+    url "https://play0ad.com/download/mac/"
+    regex(/href=.*?0ad[._-]v?(.*?)-osx64\.dmg/i)
+  end
 
   app "0 A.D.app"
 end

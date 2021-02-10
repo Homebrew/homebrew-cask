@@ -1,12 +1,16 @@
 cask "metaimage" do
-  version "1.9.2"
-  sha256 "71fba182914c10ffafe54bd7a0510c2eed80c479c613453d41b755b8ae5ea3ca"
+  version "1.9.8,6091"
+  sha256 "12f5f575f679083706547c8adfd12c141c680a948313f3e47fd011842bf012d2"
 
-  url "https://neededapps.com/appcasts/metaimage/versions/MI-#{version}.zip"
-  appcast "https://neededapps.com/appcasts/metaimage/changelog.xml"
+  url "https://neededapps.com/appcasts/metaimage/versions/MI-#{version.before_comma}.zip"
   name "MetaImage"
   desc "Editor to read, write and edit images metadata"
   homepage "https://neededapps.com/metaimage/"
+
+  livecheck do
+    url "https://neededapps.com/appcasts/metaimage/changelog.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :high_sierra"
 

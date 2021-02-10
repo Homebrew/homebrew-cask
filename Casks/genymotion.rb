@@ -5,7 +5,7 @@ cask "genymotion" do
   url "https://dl.genymotion.com/releases/genymotion-#{version}/genymotion-#{version}.dmg"
   appcast "https://www.genymotion.com/product-release-note/desktop/"
   name "Genymotion"
-  desc "Cross-platform Android emulator"
+  desc "Android emulator"
   homepage "https://www.genymotion.com/"
 
   depends_on cask: "virtualbox"

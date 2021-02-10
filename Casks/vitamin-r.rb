@@ -8,9 +8,13 @@ cask "vitamin-r" do
   end
 
   url "https://www.publicspace.net/download/signedVitamin#{version.major}.zip"
-  appcast "https://www.publicspace.net/app/vitamin#{version.major}.xml"
   name "Vitamin-R"
   homepage "https://www.publicspace.net/Vitamin-R/"
+
+  livecheck do
+    url "https://www.publicspace.net/app/vitamin#{version.major}.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 

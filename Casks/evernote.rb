@@ -15,16 +15,23 @@ cask "evernote" do
 
     url "https://cdn1.evernote.com/mac-smd/public/Evernote_RELEASE_#{version}.dmg"
   else
-    version "10.4.4-2096"
-    sha256 "d836d7f2c91feb27f323f9bd1c68f5e74bde605d6981583f75c2b6098ef958bc"
+    version "10.7.6,2321"
+    sha256 "7ff1dac02e20e0f682f5d5537b20bdd7ec69ca21f7edd7fbd11932e9359778fa"
 
-    url "https://cdn1.evernote.com/boron/mac/builds/Evernote-#{version}.dmg"
+    url "https://cdn1.evernote.com/boron/mac/builds/Evernote-#{version.before_comma}-mac-ddl-ga-#{version.after_comma}.dmg"
   end
 
-  appcast "https://evernote.s3.amazonaws.com/boron/mac/public/latest-mac.yml"
   name "Evernote"
   desc "App for note taking, organizing, task lists, and archiving"
   homepage "https://evernote.com/"
+
+  livecheck do
+    url "https://evernote.s3.amazonaws.com/boron/mac/public/latest-mac.yml"
+    strategy :page_match do |page|
+      match = page.match(/(\d+(?:\.\d+)*)-mac-ddl-ga-(\d+)\.zip/)
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
   auto_updates true
 

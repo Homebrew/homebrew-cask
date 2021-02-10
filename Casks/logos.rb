@@ -1,13 +1,20 @@
 cask "logos" do
-  version "9.0.0.0181"
-  sha256 "70b4f968ab3b9148492457b0f8926afc2b2345153aca35c9ba9ceb5e6bdb574d"
+  version "9.2.0.0014"
+  sha256 "591d60bbb05a15ccb4284f7d68787ec4c1cb65449e160c1388b7872fdf819fc5"
 
-  # downloads.logoscdn.com/ was verified as official when first introduced to the cask
-  url "https://downloads.logoscdn.com/LBS#{version.major}/Installer/#{version}/LogosMac.dmg"
-  appcast "https://clientservices.logos.com/update/v1/feed/logos#{version.major}-mac/stable.xml"
-  name "Logos Bible Software"
+  url "https://downloads.logoscdn.com/LBS#{version.major}/Installer/#{version}/LogosMac.dmg",
+      verified: "downloads.logoscdn.com/"
+  name "Logos"
+  desc "Bible study software"
   homepage "https://www.logos.com/"
 
+  livecheck do
+    url "https://clientservices.logos.com/update/v1/feed/logos#{version.major}-mac/stable.xml"
+    strategy :page_match
+    regex(%r{<logos:version[^>]*>(\d+(?:\.\d+)*)</logos:version>}i)
+  end
+
+  auto_updates true
   depends_on macos: ">= :mojave"
 
   app "Logos.app"

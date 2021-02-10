@@ -2,8 +2,8 @@ cask "transmission" do
   version "3.00"
   sha256 "f9984b6ba51a02bb8f880c538b28e2c7d6a3b7a22257a166cc3e1d55a133ab34"
 
-  # github.com/transmission/transmission/releases/ was verified as official when first introduced to the cask
-  url "https://github.com/transmission/transmission/releases/download/#{version}/Transmission-#{version}.dmg"
+  url "https://github.com/transmission/transmission/releases/download/#{version}/Transmission-#{version}.dmg",
+      verified: "github.com/transmission/transmission/releases/"
   appcast "https://github.com/transmission/transmission/releases.atom"
   name "Transmission"
   desc "Open-source BitTorrent client"

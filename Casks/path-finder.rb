@@ -1,12 +1,16 @@
 cask "path-finder" do
-  version "9.4"
-  sha256 "3a577025c00384880636085b00c401b200aab23491c03b35417e960d06930c7d"
+  version "10.0.2,2086"
+  sha256 "15746dc6b3d4a10084fcb67c545b09f265dbd8eee92736a1c2123f6404c7906b"
 
   url "https://get.cocoatech.com/PF#{version.major}.dmg"
-  appcast "https://get.cocoatech.com/releasecast.xml"
   name "Path Finder"
   desc "File manager"
   homepage "https://cocoatech.com/"
+
+  livecheck do
+    url "https://get.cocoatech.com/releasecast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 

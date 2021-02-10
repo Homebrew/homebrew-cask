@@ -28,12 +28,13 @@ jobs:
       - name: Generate CI matrix
         id: generate-matrix
         run: |
+          brew tap homebrew/cask
           brew ruby -- "$(brew --repository homebrew/cask)/cmd/lib/generate-matrix.rb" "${{ github.event.pull_request.url }}"
 
   test:
     name: ${{ matrix.name }}
     needs: generate-matrix
-    runs-on: macos-latest
+    runs-on: ${{ matrix.runner }}
     strategy:
       matrix:
         include: ${{ fromJson(needs.generate-matrix.outputs.matrix) }}
@@ -73,11 +74,16 @@ jobs:
             echo '::warning::Removing `cocoapods` symlink is no longer necessary.'
           fi
 
-          if brew tap-info adoptopenjdk/openjdk; then
-            brew untap adoptopenjdk/openjdk
-          else
+          if ! rm /usr/local/bin/conda; then
+            echo '::warning::Removing `conda` symlink is no longer necessary.'
+          fi
+
+          if ! brew untap adoptopenjdk/openjdk; then
             echo '::warning::Untapping adoptopenjdk/openjdk is no longer necessary.'
           fi
+
+          brew unlink python && brew link --overwrite python
+        if: runner.os == 'macOS'
 
       # Workaround until the `cache` action uses the changes from
       # https://github.com/actions/toolkit/pull/580.
@@ -87,7 +93,7 @@ jobs:
           mkdir "${GITHUB_WORKSPACE}"
 
       - name: Cache Homebrew Gems
-        uses: actions/cache@v2
+        uses: actions/cache@v2.1.4
         with:
           path: ${{ steps.set-up-homebrew.outputs.gems-path }}
           key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}

@@ -1,11 +1,16 @@
 cask "qbserve" do
-  version "1.86"
-  sha256 "734ec7d59ba054b2e1cfbf32ca90ea9a7f4dd442fc7a5cd10a2afaa8426b4262"
+  version "1.87"
+  sha256 "0ff31699fd05048ff8cdee780db9ac5080dee86279e866b15f24805207ebc365"
 
   url "https://qotoqot.com/qbserve/app/Qbserve-#{version}.zip"
-  appcast "https://qotoqot.com/qbserve/app/appcast.xml"
   name "Qbserve"
   homepage "https://qotoqot.com/qbserve/"
+
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/Qbserve-(\d+(?:\.\d+)*)\.zip}i)
+  end
 
   auto_updates true
   depends_on macos: ">= :yosemite"

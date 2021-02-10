@@ -3,9 +3,13 @@ cask "slik" do
   sha256 :no_check
 
   url "https://apps.inspira.io/updates/slik.zip"
-  appcast "https://apps.inspira.io/updates/slik-appcast.xml"
   name "Slik"
   homepage "https://apps.inspira.io/slik/"
+
+  livecheck do
+    url "https://apps.inspira.io/updates/slik-appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :el_capitan"

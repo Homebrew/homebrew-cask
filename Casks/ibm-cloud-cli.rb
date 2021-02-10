@@ -1,11 +1,11 @@
 cask "ibm-cloud-cli" do
-  version "1.2.3"
-  sha256 "bb83ef2f6238999b24cde3123d41037f91c015e92969aa49ef78cb330cec1627"
+  version "1.3.0"
+  sha256 "5ab4cee0c40d59b97373f4f9734da532419dc0e8c6a1e0c3d74382226e3a8a32"
 
-  url "https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/#{version}/IBM_Cloud_CLI_#{version}.pkg"
+  url "https://download.clis.cloud.ibm.com/ibm-cloud-cli/#{version}/IBM_Cloud_CLI_#{version}.pkg"
   appcast "https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases.atom"
-  name "Bluemix-CLI"
-  desc "IBM Cloud command-line interface"
+  name "IBM Cloud CLI"
+  desc "Command-line API client"
   homepage "https://cloud.ibm.com/docs/cli/index.html"
 
   depends_on cask: "docker"

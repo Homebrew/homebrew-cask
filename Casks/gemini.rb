@@ -1,13 +1,19 @@
 cask "gemini" do
-  version "2.7.2,358:1606230495"
-  sha256 "3ffc8ba30913c2d987533905dec6dc1f5580f48637d38bc5aad0b71e23317150"
+  version "2.8.3,372:1612524856"
+  sha256 "c10ced442fe907cd890fab9d6f1fb93196f9122bcd14d3f2bef2fdd4f78d93fb"
 
-  # dl.devmate.com/com.macpaw.site.Gemini was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.macpaw.site.Gemini#{version.major}/#{version.after_comma.before_colon}/#{version.after_colon}/Gemini#{version.major}-#{version.after_comma.before_colon}.zip"
-  appcast "https://updates.devmate.com/com.macpaw.site.Gemini#{version.major}.xml"
+  url "https://dl.devmate.com/com.macpaw.site.Gemini#{version.major}/#{version.after_comma.before_colon}/#{version.after_colon}/Gemini#{version.major}-#{version.after_comma.before_colon}.zip",
+      verified: "dl.devmate.com/com.macpaw.site.Gemini"
   name "Gemini"
   desc "Disk space cleaner that finds and deletes duplicated and similar files"
   homepage "https://macpaw.com/gemini"
+
+  livecheck do
+    url "https://updates.devmate.com/com.macpaw.site.Gemini#{version.major}.xml"
+    strategy :sparkle do |item|
+      "#{item.short_version},#{item.version}:#{item.url[%r{/(\d+)/Gemini.*?\.zip}i, 1]}"
+    end
+  end
 
   app "Gemini #{version.major}.app"
 

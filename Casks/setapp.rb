@@ -1,11 +1,12 @@
 cask "setapp" do
-  version "2.5.7,1586177549"
-  sha256 "c4ee02059b5a239631f5b935f2b6c72b3711309138ae4c8dba4421acbed51fdc"
+  version "2.7.15,1608219081"
+  sha256 "b5ab580ef30d48b0f981f1fdf57a91028598f8b9b0c7b2e31ae3e8692f848080"
 
-  # devmate.com/com.setapp.InstallSetapp/ was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.setapp.InstallSetapp/#{version.before_comma}/#{version.after_comma}/InstallSetapp-#{version.before_comma}.zip"
+  url "https://dl.devmate.com/com.setapp.InstallSetapp/#{version.before_comma}/#{version.after_comma}/InstallSetapp-#{version.before_comma}.zip",
+      verified: "devmate.com/com.setapp.InstallSetapp/"
   appcast "https://updates.devmate.com/com.setapp.InstallSetapp.xml"
   name "Setapp"
+  desc "Collection of apps available by subscription"
   homepage "https://setapp.com/"
 
   auto_updates true

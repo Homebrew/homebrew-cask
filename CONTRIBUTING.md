@@ -17,7 +17,7 @@ Notice an application that's out-of-date in Homebrew Cask? In most cases, it's v
 brew bump-cask-pr --version <new_version> <outdated_cask>
 ```
 
-If you want more control over the PR or are looking for our old tool, install [`cask-repair`](https://github.com/vitorgalvao/tiny-scripts/blob/master/cask-repair) (`brew install vitorgalvao/tiny-scripts/cask-repair`). You can also follow the steps in [Adding a Cask](doc/development/adding_a_cask.md) for more complicated changes.
+You can also follow the steps in [Adding a Cask](doc/development/adding_a_cask.md) for more complicated changes.
 
 
 ## Getting Set Up To Contribute

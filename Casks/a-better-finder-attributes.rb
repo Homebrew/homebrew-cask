@@ -1,12 +1,16 @@
 cask "a-better-finder-attributes" do
-  version "7.05"
-  sha256 "8887aa386b6154dc2f1f066752cecc543df1a28daef85620376baa94eff0949d"
+  version "7.08"
+  sha256 "85029bb3fc3439389960f0296c19b50f158dae2cfcceb71e7cb58fecc418f3de"
 
   url "https://www.publicspace.net/download/signedABFA#{version.major}.zip"
-  appcast "https://www.publicspace.net/app/signed_abfa#{version.major}.xml"
   name "A Better Finder Attributes"
   desc "File and photo tweaking tool"
   homepage "https://www.publicspace.net/ABetterFinderAttributes/"
+
+  livecheck do
+    url "https://www.publicspace.net/app/signed_abfa#{version.major}.xml"
+    strategy :sparkle
+  end
 
   app "A Better Finder Attributes #{version.major}.app"
 

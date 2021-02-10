@@ -1,9 +1,9 @@
 cask "kicad" do
-  version "5.1.8-0"
-  sha256 "a8edcae34a19afbec3c8b7ec4e38ada4d19c0c6a73a94d2f2f4e8f5b48278bbd"
+  version "5.1.9-0"
+  sha256 "a66d45e68b2411a09971c60697744ef8d8bf6e1afe10c8026126212bb7d1ce7a"
 
-  # kicad-downloads.s3.cern.ch/ was verified as official when first introduced to the cask
-  url "https://kicad-downloads.s3.cern.ch/osx/stable/kicad-unified-#{version}-10_14.dmg"
+  url "https://kicad-downloads.s3.cern.ch/osx/stable/kicad-unified-#{version}-10_14.dmg",
+      verified: "kicad-downloads.s3.cern.ch/"
   appcast "https://kicad-downloads.s3.cern.ch/?delimiter=/&prefix=osx/stable/"
   name "KiCad"
   desc "Electronics design automation suite"

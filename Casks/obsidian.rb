@@ -1,13 +1,19 @@
 cask "obsidian" do
-  version "0.9.20"
-  sha256 "6b2d7cc27498cfee378636484135ee033205a053d44cd1b6e1867387f14f06f9"
+  version "0.10.13"
+  sha256 "940e05d6fd0a6b6360e6d82acc6005663355f97d21a654a1cc043355f105db1f"
 
-  # github.com/obsidianmd/ was verified as official when first introduced to the cask
-  url "https://github.com/obsidianmd/obsidian-releases/releases/download/v#{version}/Obsidian-#{version}.dmg"
-  appcast "https://github.com/obsidianmd/obsidian-releases/releases.atom"
+  url "https://github.com/obsidianmd/obsidian-releases/releases/download/v#{version}/Obsidian-#{version}-universal.dmg",
+      verified: "github.com/obsidianmd/"
   name "Obsidian"
   desc "Knowledge base that works on top of a local folder of plain text Markdown files"
   homepage "https://obsidian.md/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  auto_updates true
 
   app "Obsidian.app"
 

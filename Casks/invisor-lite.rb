@@ -1,11 +1,15 @@
 cask "invisor-lite" do
-  version "3.14"
-  sha256 "fcfb2d2bfd1144dd877f60ff5de51f1631f90a0affcd5da83a510f7661cb28cd"
+  version "3.15.1,940.210121"
+  sha256 "208eeb370966fd07a16a45d39fe93683692999032f9b89cab0723d58ed25cdf1"
 
-  url "https://www.invisorapp.com/download/InvisorLite-#{version}.dmg"
-  appcast "https://www.invisorapp.com/appcast_lite.xml"
+  url "https://www.invisorapp.com/download/InvisorLite-#{version.before_comma}.dmg"
   name "Invisor Lite"
   homepage "https://www.invisorapp.com/"
+
+  livecheck do
+    url "https://www.invisorapp.com/appcast_lite.xml"
+    strategy :sparkle
+  end
 
   app "Invisor Lite.app"
 end

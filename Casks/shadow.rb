@@ -1,5 +1,5 @@
 cask "shadow" do
-  version "3.6.5,0"
+  version "5.0.809.6322"
   sha256 :no_check
 
   url "https://update.shadow.tech/launcher/prod/mac/Shadow.dmg"

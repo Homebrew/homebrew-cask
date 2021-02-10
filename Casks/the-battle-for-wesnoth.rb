@@ -1,12 +1,16 @@
 cask "the-battle-for-wesnoth" do
-  version "1.14.14"
-  sha256 "18473fb639d3ca918c7789e38c6b3c4dc2ab16ceb1957494a33b1c6ea4b4c83b"
+  version "1.14.15"
+  sha256 "8b2476422ca3da0c1e26e93355fca5d655177ca041123e358ccec1194deba51e"
 
-  # sourceforge.net/wesnoth/ was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/wesnoth/Wesnoth_#{version}.dmg"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://sourceforge.net/projects/wesnoth/files/latest/download&user_agent=Intel%20Mac%20OS%20X"
+  url "https://downloads.sourceforge.net/wesnoth/Wesnoth_#{version}.dmg",
+      verified: "sourceforge.net/wesnoth/"
   name "The Battle for Wesnoth"
   homepage "https://wesnoth.org/"
+
+  livecheck do
+    url "https://sourceforge.net/projects/wesnoth/files/latest/download&user_agent=Intel%20Mac%20OS%20X"
+    strategy :header_match
+  end
 
   app "The Battle for Wesnoth.app"
 end

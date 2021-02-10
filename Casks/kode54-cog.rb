@@ -1,12 +1,18 @@
 cask "kode54-cog" do
-  version "1309,b375f06fa"
-  sha256 "45967113c8bd1f99d0832093ec3004007c2f35250b5c10588c4b64fdbf661690"
+  version "1383,583b8f3cb"
+  sha256 "3d1d7f0e64f6397be8e8d8a342de05cfaa83cab849c545482856cbbe1baa0cae"
 
-  # losno.co/cog/ was verified as official when first introduced to the cask
-  url "https://f.losno.co/cog/Cog-#{version.after_comma}.zip"
-  appcast "https://balde.losno.co/cog/mercury.xml"
+  url "https://f.losno.co/cog/Cog-#{version.after_comma}.zip",
+      verified: "losno.co/cog/"
   name "Cog"
   homepage "https://kode54.net/cog/"
+
+  livecheck do
+    url "https://balde.losno.co/cog/mercury.xml"
+    strategy :sparkle do |item|
+      item.version.split("-g", 2).join(",")
+    end
+  end
 
   auto_updates true
 

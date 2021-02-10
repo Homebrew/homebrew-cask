@@ -1,9 +1,9 @@
 cask "xampp" do
-  version "7.4.1,0"
-  sha256 "4b0b6829f2b1152193b02e379e6fac8eeb208afb1de6b80b0387f01b61c98cef"
+  version "7.4.14,0"
+  sha256 "3e2693e3920e1e67545d42c726e6bba883fe2ec550e9c5a6fa1ceb0fc0118a73"
 
-  # downloadsapachefriends.global.ssl.fastly.net/xampp-files/ was verified as official when first introduced to the cask
-  url "https://downloadsapachefriends.global.ssl.fastly.net/xampp-files/#{version.before_comma}/xampp-osx-#{version.before_comma}-#{version.after_comma}-installer.dmg"
+  url "https://downloadsapachefriends.global.ssl.fastly.net/xampp-files/#{version.before_comma}/xampp-osx-#{version.before_comma}-#{version.after_comma}-installer.dmg",
+      verified: "downloadsapachefriends.global.ssl.fastly.net/xampp-files/"
   name "XAMPP"
   homepage "https://www.apachefriends.org/index.html"
 

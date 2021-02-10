@@ -2,11 +2,16 @@ name: Bump unversioned casks
 
 on:
   push:
-    branches:
-      - debug-bump-unversioned-casks
+    paths:
+      - .github/workflows/bump-unversioned-casks.yml
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '*/30 * * * *'
   workflow_dispatch:
+    inputs:
+      clear_cache:
+        description: Clear cache
+        required: false
+        default: false
 
 env:
   HOMEBREW_DEVELOPER: 1
@@ -15,13 +20,14 @@ env:
 jobs:
   bump-unversioned-casks:
     if: startsWith(github.repository, 'Homebrew/')
-    runs-on: macos-latest
+    runs-on: macos-11.0
     steps:
       - name: Check if another run already exists
         id: skip
-        uses: fkirc/skip-duplicate-actions@0c0fd7dfd27f1de7871e98791077b9ae5f1d8757
+        uses: fkirc/skip-duplicate-actions@ea548f2a2a08c55dcb111418ca62181f7887e297
         with:
           cancel_others: false
+          concurrent_skipping: always
 
       - name: Cancel this build
         uses: andymckay/cancel-action@8f8510d9dea52fcc8eb6ca10d6ce47fd5fc43cd8
@@ -46,7 +52,7 @@ jobs:
           mkdir "${GITHUB_WORKSPACE}"
 
       - name: Cache Homebrew Gems
-        uses: actions/cache@v2
+        uses: actions/cache@v2.1.4
         with:
           path: ${{ steps.set-up-homebrew.outputs.gems-path }}
           key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
@@ -61,11 +67,16 @@ jobs:
           echo "::set-output name=time::$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
 
       - name: Cache state
-        uses: actions/cache@v2
+        uses: actions/cache@v2.1.4
         with:
           path: ~/bump-unversioned-casks-state.json
           key: bump-unversioned-casks-${{ steps.cache-id.outputs.time }}
           restore-keys: bump-unversioned-casks-
+
+      - name: Clear cache
+        if: github.event.inputs.clear_cache == 'true'
+        run: |
+          rm -f ~/bump-unversioned-casks-state.json
 
       # Workaround until the `cache` action uses the changes from
       # https://github.com/actions/toolkit/pull/580.
@@ -76,10 +87,11 @@ jobs:
 
       - name: Run brew bump-unversioned-casks ${{ github.repository }}
         run: |
-          brew bump-unversioned-casks --state-file ~/bump-unversioned-casks-state.json --limit 10 '${{ github.repository }}'
+          brew bump-unversioned-casks --state-file ~/bump-unversioned-casks-state.json --limit 15 '${{ github.repository }}'
         env:
+          HOMEBREW_DEBUG: 1
           HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
-        timeout-minutes: 30
+        timeout-minutes: 20
 
       # Workaround until the `cache` action uses the changes from
       # https://github.com/actions/toolkit/pull/580.

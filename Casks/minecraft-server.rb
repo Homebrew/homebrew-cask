@@ -1,9 +1,9 @@
 cask "minecraft-server" do
-  version "1.16.3,f02f4473dbf152c23d7d484952121db0b36698cb"
-  sha256 "32e450e74c081aec06dcfbadfa5ba9aa1c7f370bd869e658caec0c3004f7ad5b"
+  version "1.16.5,1b557e7b033b583cd9f66746b7a9ab1ec1673ced"
+  sha256 "58f329c7d2696526f948470aa6fd0b45545039b64cb75015e64c12194b373da6"
 
-  # launcher.mojang.com/ was verified as official when first introduced to the cask
-  url "https://launcher.mojang.com/v#{version.major}/objects/#{version.after_comma}/server.jar"
+  url "https://launcher.mojang.com/v#{version.major}/objects/#{version.after_comma}/server.jar",
+      verified: "launcher.mojang.com/"
   appcast "https://minecraft.net/en-us/download/server/"
   name "Minecraft Server"
   homepage "https://minecraft.net/"

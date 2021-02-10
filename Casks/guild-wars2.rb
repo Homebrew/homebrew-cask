@@ -3,8 +3,8 @@ cask "guild-wars2" do
   version "1.0"
   sha256 :no_check
 
-  # gw2cdn.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://gw2cdn.s3.amazonaws.com/client/branches/Gw2Setup-64.dmg"
+  url "https://gw2cdn.s3.amazonaws.com/client/branches/Gw2Setup-64.dmg",
+      verified: "gw2cdn.s3.amazonaws.com/"
   name "Guild Wars 2"
   homepage "https://www.guildwars2.com/"
 

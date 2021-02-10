@@ -1,12 +1,16 @@
 cask "glyphs" do
-  version "3.0.2,3042"
-  sha256 "af25eb5964ed61c8872cba2189688fc85c7f407aa9a97f9d9115c99113364852"
+  version "3.0.3,3061"
+  sha256 "ce9cbef777945a3056b6d5a65624174369db78d103a884b5856df2cd11c6d655"
 
   url "https://updates.glyphsapp.com/Glyphs#{version.before_comma}-#{version.after_comma}.zip"
-  appcast "https://updates.glyphsapp.com/appcast#{version.major}.xml"
   name "Glyphs"
   desc "Font Editor"
   homepage "https://glyphsapp.com/"
+
+  livecheck do
+    url "https://updates.glyphsapp.com/appcast#{version.major}.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 

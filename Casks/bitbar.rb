@@ -1,8 +1,8 @@
 cask "bitbar" do
-  version "1.9.2"
-  sha256 "9e317d58143f544ab3b2b35e4d0ef2f11b9578fe6872cec1415da961acb1aee4"
+  version "1.10.1"
+  sha256 "8a7013dca92715ba80cccef98b84dd1bc8d0b4c4b603f732e006eb204bab43fa"
 
-  url "https://github.com/matryer/bitbar/releases/download/v#{version}/BitBar-v#{version}.zip"
+  url "https://github.com/matryer/bitbar/releases/download/v#{version}/BitBar.app.zip"
   appcast "https://github.com/matryer/bitbar/releases.atom"
   name "BitBar"
   desc "Utility to display the output from any script or program in the menu bar"

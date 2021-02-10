@@ -1,12 +1,16 @@
 cask "vivaldi" do
-  version "3.5.2115.73"
-  sha256 "fcfba27cddc6e87be6395603d5a5744b670c7e4f65a7b6cca32b845c08e977ce"
+  version "3.6.2165.36"
+  sha256 "f2f37f6f4cbb6e0a03493865d8e0268558d04e3a4502453b9714814f316b7d16"
 
   url "https://downloads.vivaldi.com/stable/Vivaldi.#{version}.dmg"
-  appcast "https://update.vivaldi.com/update/1.0/public/mac/appcast.xml"
   name "Vivaldi"
   desc "Web browser focusing on customization and control"
   homepage "https://vivaldi.com/"
+
+  livecheck do
+    url "https://update.vivaldi.com/update/1.0/public/mac/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 

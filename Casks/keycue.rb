@@ -4,11 +4,14 @@ cask "keycue" do
 
   url "https://www.ergonis.com/downloads/products/keycue/KeyCue#{version.no_dots}-Install.dmg",
       user_agent: :fake
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.ergonis.com/downloads/keycue-install.dmg",
-          must_contain: version.no_dots
   name "KeyCue"
   desc "Finds, learns and remembers keyboard shortcuts"
   homepage "https://www.ergonis.com/products/keycue/"
+
+  livecheck do
+    url "https://www.ergonis.com/products/keycue/history.html"
+    regex(/<h\d>\s*?KeyCue\s+?v?(\d+(?:\.\d+)+)/i)
+  end
 
   app "KeyCue.app"
 

@@ -1,9 +1,9 @@
 cask "spatterlight" do
-  version "0.5.5"
-  sha256 "0893a6cc4f2403334df53c8e01588db57aec08296b03202b31424ee0af3100a7"
+  version "0.7.5"
+  sha256 "a0149b53856759533c50780dc891c4965c82f97a2ad34d246c4d5f24a04e1523"
 
-  # github.com/angstsmurf/spatterlight/ was verified as official when first introduced to the cask
-  url "https://github.com/angstsmurf/spatterlight/releases/download/v#{version}/Spatterlight_Catalina.zip"
+  url "https://github.com/angstsmurf/spatterlight/releases/download/v#{version}/Spatterlight.zip",
+      verified: "github.com/angstsmurf/spatterlight/"
   appcast "https://github.com/angstsmurf/spatterlight/releases.atom"
   name "Spatterlight"
   desc "Play most kinds of interactive fiction game files"

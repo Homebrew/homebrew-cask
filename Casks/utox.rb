@@ -2,8 +2,8 @@ cask "utox" do
   version "0.17.0"
   sha256 "4ca786a57fdd8f50f210f7ff58c1e7bfd5b9d0575af3d24a7536c1817c8d0232"
 
-  # github.com/uTox/uTox/ was verified as official when first introduced to the cask
-  url "https://github.com/uTox/uTox/releases/download/v#{version}/uTox.#{version}.dmg"
+  url "https://github.com/uTox/uTox/releases/download/v#{version}/uTox.#{version}.dmg",
+      verified: "github.com/uTox/uTox/"
   appcast "https://github.com/uTox/uTox/releases.atom"
   name "uTox"
   name "µTox"
