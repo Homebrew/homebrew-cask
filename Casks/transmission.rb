@@ -4,10 +4,14 @@ cask "transmission" do
 
   url "https://github.com/transmission/transmission/releases/download/#{version}/Transmission-#{version}.dmg",
       verified: "github.com/transmission/transmission/releases/"
-  appcast "https://github.com/transmission/transmission/releases.atom"
   name "Transmission"
   desc "Open-source BitTorrent client"
   homepage "https://transmissionbt.com/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
   conflicts_with cask: "homebrew/cask-versions/transmission-nightly"
