@@ -11,7 +11,7 @@ cask "ngrok" do
   binary "ngrok"
 
   postflight do
-    FileUtils.chmod 0755, Dir.glob("#{staged_path}/ngrok")
+    set_permissions Dir.glob("#{staged_path}/ngrok"), '0755'
   end
 
   zap trash: "~/.ngrok2"
