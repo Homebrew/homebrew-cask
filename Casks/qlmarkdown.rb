@@ -9,4 +9,10 @@ cask "qlmarkdown" do
   homepage "https://github.com/toland/qlmarkdown"
 
   qlplugin "QLMarkdown.qlgenerator"
+
+  postflight do
+    system_command "xattr",
+                   args: ["-cr", File.join(ENV["HOME"], "Library/QuickLook/QLMarkdown.qlgenerator")],
+                   sudo: false
+  end
 end
