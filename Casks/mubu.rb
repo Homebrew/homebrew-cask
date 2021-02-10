@@ -9,4 +9,10 @@ cask "mubu" do
   homepage "https://mubu.com/"
 
   app "幕布.app"
+
+  zap trash: [
+    "~/Library/Application Support/幕布",
+    "~/Library/Preferences/com.mubu.desktop.plist",
+    "~/Library/Saved Application State/com.mubu.desktop.savedState",
+  ]
 end
