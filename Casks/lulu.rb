@@ -4,10 +4,14 @@ cask "lulu" do
 
   url "https://github.com/objective-see/LuLu/releases/download/v#{version}/LuLu_#{version}.dmg",
       verified: "github.com/objective-see/LuLu/"
-  appcast "https://objective-see.com/products/changelogs/LuLu.txt"
   name "LuLu"
   desc "Open-source firewall to block unknown outgoing connections"
   homepage "https://objective-see.com/products/lulu.html"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
   depends_on macos: ">= :catalina"
