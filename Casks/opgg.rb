@@ -1,12 +1,18 @@
 cask "opgg" do
-  version "0.1.46"
-  sha256 "d79567efd7e62e14ee4bb5f1da94a166ab779d1467807ca356f4cbb63945e6b9"
+  version "0.1.56"
+  sha256 "66443deabfa15a783c95cf16887d0f5ac18f6389914c9cdbed2a5a01b9b7f26c"
 
   url "https://opgg-desktop-patch.akamaized.net/OP.GG-#{version}.dmg",
       verified: "opgg-desktop-patch.akamaized.net/"
-  name "OP.GG fpr Desktop"
-  desc "OP.GG provides stats on games like LoL, Overwatch and PUBG"
-  homepage "https//na.op.gg/desktop/"
+  name "OP.GG Desktop"
+  desc "Game records and champion analysis"
+  homepage "https://op.gg/desktop/"
+
+  livecheck do
+    url "https://desktop-app-update.s3.amazonaws.com/latest-mac.yml"
+    strategy :page_match
+    regex(/OP\.GG-(\d+(?:\.\d+)*)\.dmg/i)
+  end
 
   app "OP.GG.app"
 end
