@@ -1,8 +1,8 @@
 cask "osxfuse" do
-  version "3.11.2"
-  sha256 "0f9fd021810063ded2f9a40347e11961369238af27615842063831568a0860ce"
+  version "4.0.5"
+  sha256 "6365d10c9e388ac7a91fe1e65d54694faad69149f421125eaddfff07d48763ea"
 
-  url "https://github.com/osxfuse/osxfuse/releases/download/osxfuse-#{version}/osxfuse-#{version}.dmg",
+  url "https://github.com/osxfuse/osxfuse/releases/download/macfuse-#{version}/macfuse-#{version}.dmg",
       verified: "github.com/osxfuse/"
   appcast "https://github.com/osxfuse/osxfuse/releases.atom"
   name "OSXFUSE"
