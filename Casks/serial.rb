@@ -9,6 +9,6 @@ cask "serial" do
   homepage "https://www.decisivetactics.com/products/serial/"
 
   auto_updates true
-  
+
   app "Serial.app"
 end
