@@ -9,7 +9,5 @@ cask "webull" do
 
   app "Webull Desktop.app"
 
-  zap trash: [
-    "~/Library/Application Support/Webull Desktop",
-  ]
+  zap trash: "~/Library/Application Support/Webull Desktop"
 end
