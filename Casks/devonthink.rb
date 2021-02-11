@@ -1,6 +1,6 @@
 cask "devonthink" do
-  version "3.6.1"
-  sha256 "4dd1a9b48db0008a0ff0552f55a6804f72baee68dda524317400b04e6a4e769c"
+  version "3.6.2"
+  sha256 "9ede0c4b276d490cec4e15d77edb816f7723f2bc799f121b92957db1c61224ca"
 
   url "https://download.devontechnologies.com/download/devonthink/#{version}/DEVONthink_#{version.major}.app.zip"
   appcast "https://api.devontechnologies.com/1/apps/sparkle/sparkle.php?id=300900000"
