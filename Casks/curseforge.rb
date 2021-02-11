@@ -11,6 +11,7 @@ cask "curseforge" do
   livecheck do
     url :url
     strategy :github_latest
+    regex(%r{href=.*?/CurseForge-(\d+(?:\.\d+).*)\.dmg}i)
   end
 
   app "CurseForge.app"
