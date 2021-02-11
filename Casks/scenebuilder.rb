@@ -7,13 +7,13 @@ cask "scenebuilder" do
   desc "Drag & drop GUI designer for JavaFX"
   homepage "https://gluonhq.com/products/scene-builder/"
 
-  depends_on macos: ">= :high_sierra"
-
-  app "SceneBuilder.app"
-
   livecheck do
     url :homepage
     strategy :page_match
     regex(%r{href=.*?/SceneBuilder-(\d+(?:\.\d+)*)\.dmg}i)
   end
+
+  depends_on macos: ">= :high_sierra"
+
+  app "SceneBuilder.app"
 end
