@@ -20,4 +20,15 @@ cask "audiogridder-plugin" do
     "com.e47.pkg.vst",
     "com.e47.pkg.vst3",
   ]
+
+  zap trash: [
+    "~/.audiogridder/audiogridderplugin.cfg",
+    "~/.audiogridder/audiogridder.winpos",
+    "~/Library/Logs/AudioGridder/Fx",
+    "~/Library/Logs/AudioGridder/Instrument",
+    "~/Library/Logs/AudioGridder/Midi",
+  ], rmdir: [
+    "~/Library/Logs/AudioGridder",
+    "~/.audiogridder",
+  ]
 end

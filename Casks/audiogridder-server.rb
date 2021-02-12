@@ -16,4 +16,16 @@ cask "audiogridder-server" do
   homepage "https://audiogridder.com/"
 
   uninstall pkgutil: "com.e47.pkg.server"
+
+  zap trash: [
+    "~/.audiogridder/audiogridderserver.cfg",
+    "~/.audiogridder/audiogridderserver.cache",
+    "~/.audiogridder/audiogridder.winpos",
+    "~/Library/Logs/AudioGridder/Master",
+    "~/Library/Logs/AudioGridder/Server",
+    "~/Library/Logs/AudioGridder/Scan",
+  ], rmdir: [
+    "~/Library/Logs/AudioGridder",
+    "~/.audiogridder",
+  ]
 end
