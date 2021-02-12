@@ -1,6 +1,6 @@
 cask "proclaim" do
-  version "3.1.0.0038,311.0.38"
-  sha256 "0feb92de7f0de447d97e822cd7f60154f8c56c0260c2ed89302e54532cdbb76d"
+  version "3.1.0.0039,311.0.39"
+  sha256 "95c8dace8b525ae5b6c766e3802d7163cd56848fa66bd5c9c9df73f795c448cc"
 
   url "https://downloads.logoscdn.com/Proclaim/Installer/#{version.before_comma}/Proclaim.dmg",
       verified: "logoscdn.com/Proclaim/"
