@@ -11,7 +11,7 @@ cask "forticlient-vpn" do
   installer manual: "FortiClientUpdate.app"
 
   uninstall script: {
-    executable: "/Applications/FortiClientUninstaller.app/Contents/Resources/uninstall_helper",
+    executable: "/Applications/FortiClientUninstaller.app/Contents/MacOS/Uninstall",
     sudo:       true,
   }
 
