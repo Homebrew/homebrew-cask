@@ -1,5 +1,5 @@
 cask "command-tab-plus" do
-  version "1.124,374"
+  version "1.130,380"
   sha256 :no_check
 
   url "https://noteifyapp.com/download/Command-Tab%20Plus.dmg"
