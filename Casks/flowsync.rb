@@ -4,10 +4,15 @@ cask "flowsync" do
 
   url "https://dngo5v6w7xama.cloudfront.net/connect/download/FlowSync_#{version}.pkg",
       verified: "dngo5v6w7xama.cloudfront.net/"
-  appcast "https://flow.polar.com/start"
   name "Polar FlowSync Software"
   desc "Syncing software for Polar Flow products"
   homepage "https://support.polar.com/uk-en/support/flowsync"
+
+  livecheck do
+    url "https://flow.polar.com/start"
+    strategy :page_match
+    regex(%r{href=.*?/FlowSync_(\d+(?:\.\d+)*)\.pkg}i)
+  end
 
   pkg "FlowSync_#{version}.pkg"
 

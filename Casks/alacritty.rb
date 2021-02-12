@@ -1,12 +1,16 @@
 cask "alacritty" do
-  version "0.7.0"
-  sha256 "b4337889193332c33d00d5f1e8c744ee9d17cd178f84eae7df86067eac7ddf9a"
+  version "0.7.1"
+  sha256 "40c9390b9067c25ff2882b41e8526df43466a3a48210b0f3188a9b87789f2541"
 
   url "https://github.com/alacritty/alacritty/releases/download/v#{version}/Alacritty-v#{version}.dmg"
-  appcast "https://github.com/alacritty/alacritty/releases.atom"
   name "Alacritty"
-  desc "Cross-platform, GPU-accelerated terminal emulator"
+  desc "GPU-accelerated terminal emulator"
   homepage "https://github.com/alacritty/alacritty/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Alacritty.app"
   binary "#{appdir}/Alacritty.app/Contents/MacOS/alacritty"

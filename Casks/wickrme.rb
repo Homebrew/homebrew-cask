@@ -1,6 +1,6 @@
 cask "wickrme" do
-  version "5.68.7"
-  sha256 "f84d7dff662a51f373a36970f39aa6bc2d02fd654ffa3d53bc246fd7d2d1a3d1"
+  version "5.70.4"
+  sha256 "4a86b4e563e83fc9ba47f4dd5f00b575443fb682b75244ce97151ad44ca4fa6e"
 
   url "https://s3.amazonaws.com/static.wickr.com/downloads/mac/me/WickrMe-#{version}.dmg",
       verified: "s3.amazonaws.com/static.wickr.com/"

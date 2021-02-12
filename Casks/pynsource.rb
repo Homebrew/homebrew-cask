@@ -4,9 +4,14 @@ cask "pynsource" do
 
   url "https://github.com/abulka/pynsource/releases/download/version-#{version}/pynsource-#{version}-macosx.zip",
       verified: "github.com/abulka/pynsource/"
-  appcast "https://github.com/abulka/pynsource/releases.atom"
   name "Pynsource"
   homepage "https://www.pynsource.com/"
+
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^version-(\d+(?:\.\d+)*)$/)
+  end
 
   app "pynsource.app"
 

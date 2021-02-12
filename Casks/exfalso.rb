@@ -4,10 +4,15 @@ cask "exfalso" do
 
   url "https://github.com/quodlibet/quodlibet/releases/download/release-#{version}/ExFalso-#{version}.dmg",
       verified: "github.com/quodlibet/quodlibet/"
-  appcast "https://github.com/quodlibet/quodlibet/releases.atom"
   name "Ex Falso"
   desc "Music tag editor"
   homepage "https://quodlibet.readthedocs.io/"
+
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^release-(\d+(?:\.\d+)*)$/i)
+  end
 
   app "ExFalso.app"
 

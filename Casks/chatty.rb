@@ -4,9 +4,14 @@ cask "chatty" do
 
   url "https://github.com/chatty/chatty/releases/download/v#{version}/Chatty_#{version}.zip",
       verified: "github.com/chatty/chatty/"
-  appcast "https://github.com/chatty/chatty/releases.atom"
   name "Chatty"
+  desc "Twitch chat client"
   homepage "https://chatty.github.io/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   suite "Chatty"
 

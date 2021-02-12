@@ -1,5 +1,5 @@
 cask "wechat" do
-  version "2.6.1,16823"
+  version "2.6.1,16853"
   sha256 :no_check
 
   url "https://dldir1.qq.com/weixin/mac/WeChatMac.dmg"
@@ -12,7 +12,7 @@ cask "wechat" do
   homepage "https://mac.weixin.qq.com/"
 
   auto_updates true
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :el_capitan"
 
   app "WeChat.app"
 

@@ -1,6 +1,6 @@
 cask "ximalaya" do
-  version "1.6.0,1606198892"
-  sha256 "41cea2841cb52eb8c682abfbe42f8fe37b404489dad3b4a519dda2022e61e991"
+  version "1.7.2,1612260136"
+  sha256 "071cfbfd048f580114932bd2d62fab54bf67236190887e91c95e0a8204bda302"
 
   url "https://s1.xmcdn.com/yx/ximalaya-pc-client/#{version.before_comma}/download/Ximalaya-#{version.before_comma}_#{version.after_comma}.dmg",
       verified: "s1.xmcdn.com/"

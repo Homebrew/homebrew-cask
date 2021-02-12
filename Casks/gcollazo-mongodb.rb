@@ -4,10 +4,15 @@ cask "gcollazo-mongodb" do
 
   url "https://github.com/gcollazo/mongodbapp/releases/download/#{version}/MongoDB.zip",
       verified: "github.com/gcollazo/mongodbapp/"
-  appcast "https://github.com/gcollazo/mongodbapp/releases.atom"
   name "MongoDB"
   desc "App wrapper for MongoDB"
   homepage "https://elweb.co/mongodb-app/"
+
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^v?(\d+(?:\.\d+)*-build\.\d+)$/i)
+  end
 
   app "MongoDB.app"
 

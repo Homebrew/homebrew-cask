@@ -1,6 +1,6 @@
 cask "physicseditor" do
-  version "1.8.5"
-  sha256 "4ec8bbd008504c581d2838059584878693d0c5d462d11d8b71afa65ce70fa35e"
+  version "1.8.6"
+  sha256 "a29747ef56a37578f17b08b6eaa2e36a1311464b0a5bd3d6bc5087ac96fead7a"
 
   url "https://www.codeandweb.com/download/physicseditor/#{version}/PhysicsEditor-#{version}-uni.dmg"
   name "PhysicsEditor"

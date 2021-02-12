@@ -3,10 +3,15 @@ cask "little-snitch" do
   sha256 "c329e41af7220cdfe12d821247efefba36f9cb89f04634c806d9c7c52eee112d"
 
   url "https://www.obdev.at/downloads/littlesnitch/LittleSnitch-#{version}.dmg"
-  appcast "https://sw-update.obdev.at/update-feeds/littlesnitch#{version.major}.plist"
   name "Little Snitch"
   desc "Host-based application firewall"
   homepage "https://www.obdev.at/products/littlesnitch/index.html"
+
+  livecheck do
+    url "https://www.obdev.at/products/littlesnitch/download.html"
+    strategy :page_match
+    regex(%r{href=.*?/LittleSnitch-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   auto_updates true
   depends_on macos: ">= :big_sur"

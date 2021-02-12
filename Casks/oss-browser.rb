@@ -8,6 +8,12 @@ cask "oss-browser" do
   desc "Graphical management tool for OSS (Object Storage Service)"
   homepage "https://github.com/aliyun/oss-browser/"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/(\d+(?:\.\d+)*)/oss-browser-darwin-x64\.zip}i)
+  end
+
   app "oss-browser-darwin-x64/oss-browser.app"
 
   zap trash: [

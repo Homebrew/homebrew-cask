@@ -4,10 +4,15 @@ cask "vimr" do
 
   url "https://github.com/qvacua/vimr/releases/download/v#{version}/VimR-v#{version}.tar.bz2",
       verified: "github.com/qvacua/vimr/"
-  appcast "https://github.com/qvacua/vimr/releases.atom"
   name "VimR"
   desc "GUI for the Neovim text editor"
   homepage "http://vimr.org/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+    regex(%r{href=.*?/VimR-v?(\d+(?:\.\d+)*-\d+)\.t}i)
+  end
 
   auto_updates true
   depends_on macos: ">= :high_sierra"

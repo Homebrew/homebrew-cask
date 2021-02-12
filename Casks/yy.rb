@@ -4,9 +4,14 @@ cask "yy" do
 
   url "https://yydl.duowan.com/mac/YY/#{version}/YY-#{version}.dmg",
       verified: "yydl.duowan.com/mac/YY/"
-  appcast "https://www.yy.com/index/t/download"
   name "YY"
   homepage "https://www.yy.com/"
+
+  livecheck do
+    url "https://www.yy.com/index/t/download"
+    strategy :page_match
+    regex(%r{href=.*?/YY-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   app "YY.app"
 end

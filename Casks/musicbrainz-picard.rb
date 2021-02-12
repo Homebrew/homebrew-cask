@@ -4,10 +4,15 @@ cask "musicbrainz-picard" do
 
   url "https://musicbrainz.osuosl.org/pub/musicbrainz/picard/MusicBrainz-Picard-#{version}.dmg",
       verified: "musicbrainz.osuosl.org/pub/"
-  appcast "https://picard.musicbrainz.org/downloads/"
   name "MusicBrainz Picard"
-  desc "Cross-platform music tagger"
+  desc "Music tagger"
   homepage "https://picard.musicbrainz.org/"
+
+  livecheck do
+    url "https://picard.musicbrainz.org/downloads/"
+    strategy :page_match
+    regex(%r{href=.*?/MusicBrainz-Picard-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   depends_on macos: ">= :sierra"
 

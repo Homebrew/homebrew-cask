@@ -1,16 +1,29 @@
 cask "vlc" do
-  version "3.0.11.1"
-  sha256 "021212d2f6e6701ec3b254d56dfa5c5f848c9c02813c5750c6944a8458de8fb5"
+  if Hardware::CPU.intel?
+    version "3.0.12"
+    sha256 "9b8b5a78ee0d7448e840680df34c1417f7c8c87161127c2d150794b2449be5d1"
 
-  url "https://get.videolan.org/vlc/#{version}/macosx/vlc-#{version}.dmg"
-  name "VLC media player"
-  desc "Open-source cross-platform multimedia player"
-  homepage "https://www.videolan.org/vlc/"
+    url "https://get.videolan.org/vlc/#{version}/macosx/vlc-#{version}-intel64.dmg"
 
-  livecheck do
-    url "https://update.videolan.org/vlc/sparkle/vlc-intel64.xml"
-    strategy :sparkle
+    livecheck do
+      url "https://update.videolan.org/vlc/sparkle/vlc-intel64.xml"
+      strategy :sparkle
+    end
+  else
+    version "3.0.12.1"
+    sha256 "5a5572c3a0bcf5c7a286dee0fbc027899a916a1c3fea919492894ae714789efa"
+
+    url "https://get.videolan.org/vlc/#{version}/macosx/vlc-#{version}-arm64.dmg"
+
+    livecheck do
+      url "https://update.videolan.org/vlc/sparkle/vlc-arm64.xml"
+      strategy :sparkle
+    end
   end
+
+  name "VLC media player"
+  desc "Multimedia player"
+  homepage "https://www.videolan.org/vlc/"
 
   auto_updates true
   conflicts_with cask: "homebrew/cask-versions/vlc-nightly"

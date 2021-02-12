@@ -4,10 +4,15 @@ cask "electric-sheep" do
 
   url "https://d100rc88eim93q.cloudfront.net/electricsheep-#{version}.dmg",
       verified: "d100rc88eim93q.cloudfront.net/"
-  appcast "https://electricsheep.org/#/download"
   name "Electric Sheep"
   desc "Collaborative abstract artwork software"
   homepage "https://gold.electricsheep.org/"
+
+  livecheck do
+    url "https://electricsheep.org/#/download"
+    strategy :page_match
+    regex(%r{href=.*?/electricsheep-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   pkg "Electric Sheep.pkg"
 

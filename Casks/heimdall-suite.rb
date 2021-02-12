@@ -4,9 +4,14 @@ cask "heimdall-suite" do
 
   url "https://bitbucket.org/benjamin_dobell/heimdall/downloads/heimdall-suite-#{version}-mac.dmg",
       verified: "bitbucket.org/benjamin_dobell/heimdall/"
-  appcast "https://glassechidna.com.au/heimdall/#downloads"
   name "Heimdall Suite"
   homepage "https://glassechidna.com.au/heimdall/"
+
+  livecheck do
+    url "https://glassechidna.com.au/heimdall/#downloads"
+    strategy :page_match
+    regex(%r{href=.*?/heimdall-suite-(\d+(?:\.\d+)*)-mac\.dmg}i)
+  end
 
   pkg "Heimdall Suite #{version}.pkg"
 
@@ -20,6 +25,6 @@ cask "heimdall-suite" do
   ]
 
   caveats do
-    reboot
+    kext
   end
 end

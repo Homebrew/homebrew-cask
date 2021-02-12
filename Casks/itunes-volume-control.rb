@@ -4,9 +4,14 @@ cask "itunes-volume-control" do
 
   url "http://quantum-technologies.iap.uni-bonn.de/alberti/iTunesVolumeControl/iTunesVolumeControl-v#{version}.zip",
       verified: "uni-bonn.de/alberti/iTunesVolumeControl/"
-  appcast "https://github.com/alberti42/iTunes-Volume-Control#versions"
   name "iTunes Volume Control"
   homepage "https://github.com/alberti42/iTunes-Volume-Control"
+
+  livecheck do
+    url "https://github.com/alberti42/iTunes-Volume-Control#versions"
+    strategy :page_match
+    regex(%r{href=.*?/iTunesVolumeControl-v?(\d+(?:\.\d+)*)\.zip}i)
+  end
 
   auto_updates true
   depends_on macos: ">= :mojave"

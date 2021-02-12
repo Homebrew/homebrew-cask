@@ -1,6 +1,6 @@
 cask "twine" do
-  version "2.3.10"
-  sha256 "411d4e8621a39d3dd16858f497908d473755d207a495b28c277153d3842f8d5f"
+  version "2.3.12"
+  sha256 "0cd745968ba7db2c4119396022ede038e60a1f237dd9380168ef20f42a637ce4"
 
   url "https://github.com/klembot/twinejs/releases/download/#{version}/twine_#{version}_macos.dmg",
       verified: "github.com/klembot/twinejs/"

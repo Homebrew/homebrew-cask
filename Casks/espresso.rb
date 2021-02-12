@@ -4,10 +4,15 @@ cask "espresso" do
 
   url "https://downloads.kangacode.com/Espresso/Espresso_#{version}.zip",
       verified: "downloads.kangacode.com/"
-  appcast "https://espressoapp.com/updates/"
   name "Espresso"
   desc "Website editor focusing on flair and efficiency"
   homepage "https://espressoapp.com/"
+
+  livecheck do
+    url "https://espressoapp.com/updates/"
+    strategy :page_match
+    regex(%r{href=.*?/Espresso_(\d+(?:\.\d+)*)\.zip}i)
+  end
 
   depends_on macos: ">= :sierra"
 

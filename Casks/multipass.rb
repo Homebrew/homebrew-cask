@@ -1,12 +1,16 @@
 cask "multipass" do
-  version "1.5.0"
-  sha256 "1085217279fbb55f3a2c528deaba7c19b60073ae715c39dc83273262fea1a117"
+  version "1.6.1"
+  sha256 "93db0b5199a1fc1f100bb34618ec2384ffa6b094aa118313591f97c6b57f3b2e"
 
   url "https://github.com/CanonicalLtd/multipass/releases/download/v#{version}/multipass-#{version}+mac-Darwin.pkg"
-  appcast "https://github.com/CanonicalLtd/multipass/releases.atom"
   name "Multipass"
   desc "Orchestrates virtual Ubuntu instances"
   homepage "https://github.com/CanonicalLtd/multipass/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   depends_on macos: ">= :sierra"
 

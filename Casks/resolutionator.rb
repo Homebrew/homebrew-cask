@@ -1,6 +1,6 @@
 cask "resolutionator" do
-  version "2.0.0"
-  sha256 "d3c9b2bd7fba21c6d9347f437b7cd1e3c8bf1079c6bf18ad2d6f095a2755e50b"
+  version "2.0.1"
+  sha256 "7200f76f043426cf5d03e83465265b1b5ad1906b08b224373b642f978fe61991"
 
   url "https://manytricks.com/download/_do_not_hotlink_/resolutionator#{version.no_dots}.dmg"
   appcast "https://manytricks.com/resolutionator/releasenotes/?rref=appcast",

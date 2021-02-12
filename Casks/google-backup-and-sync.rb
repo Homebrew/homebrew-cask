@@ -1,5 +1,5 @@
 cask "google-backup-and-sync" do
-  version "3.53.3471.0626"
+  version "3.54.3529.0458"
   sha256 :no_check
 
   url "https://dl.google.com/drive/InstallBackupAndSync.dmg"

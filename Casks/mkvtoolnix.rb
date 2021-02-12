@@ -1,12 +1,17 @@
 cask "mkvtoolnix" do
-  version "52.0.0"
-  sha256 "7041a40ef988c9a3a878d7561e574d9ed74500c01a2585d0953b405b65971bf1"
+  version "53.0.0"
+  sha256 "bb6d0ba4e0052b2831de0ae29ef3d0d4c7b4d0933b258455c248c1a1c5f913a0"
 
   url "https://mkvtoolnix.download/macos/MKVToolNix-#{version}.dmg"
-  appcast "https://mkvtoolnix.download/macos/"
   name "MKVToolNix"
   desc "Set of tools to create, alter and inspect Matroska files (MKV)"
   homepage "https://mkvtoolnix.download/"
+
+  livecheck do
+    url "https://mkvtoolnix.download/macos/"
+    strategy :page_match
+    regex(%r{href=.*?/MKVToolNix-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   conflicts_with formula: "mkvtoolnix"
   depends_on macos: ">= :mojave"

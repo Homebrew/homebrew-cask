@@ -4,9 +4,13 @@ cask "openmtp" do
 
   url "https://github.com/ganeshrvel/openmtp/releases/download/v#{version}/OpenMTP-#{version}-mac.zip",
       verified: "github.com/ganeshrvel/openmtp/"
-  appcast "https://github.com/ganeshrvel/openmtp/releases.atom"
   name "OpenMTP"
   homepage "https://openmtp.ganeshrvel.com/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "OpenMTP.app"
 

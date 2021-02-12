@@ -1,15 +1,15 @@
 cask "latest" do
-  version "0.7.1"
+  version "0.7.3"
   sha256 :no_check
 
-  url "https://max.codes/latest/Latest.zip"
+  url "https://max.codes/latest/download"
   appcast "https://max.codes/latest/update.xml"
   name "Latest"
   desc "Utility that shows the latest app updates"
   homepage "https://max.codes/latest"
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "Latest.app"
 

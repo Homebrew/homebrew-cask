@@ -4,10 +4,14 @@ cask "dat" do
 
   url "https://github.com/dat-land/dat-desktop/releases/download/v#{version}/dat-desktop-#{version}-mac.zip",
       verified: "github.com/dat-land/dat-desktop/"
-  appcast "https://github.com/dat-land/dat-desktop/releases.atom"
   name "Dat Desktop"
   desc "Peer to peer data sharing app built for humans"
   homepage "https://datproject.org/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Dat Desktop.app"
 

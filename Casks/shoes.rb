@@ -4,9 +4,14 @@ cask "shoes" do
 
   url "https://shoes.mvmanila.com/public/shoes/shoes-#{version}-osx-10.10.tgz",
       verified: "shoes.mvmanila.com/public/shoes/"
-  appcast "http://shoesrb.com/downloads/"
   name "Shoes"
   homepage "http://shoesrb.com/"
+
+  livecheck do
+    url "http://shoesrb.com/downloads/"
+    strategy :page_match
+    regex(%r{href=.*?/shoes-(\d+(?:\.\d+)*)-osx-10\.10\.tgz}i)
+  end
 
   depends_on macos: ">= :yosemite"
 

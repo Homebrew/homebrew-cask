@@ -1,9 +1,10 @@
 cask "cmake" do
-  version "3.19.2"
-  sha256 "df15a1836107b44623720e2766970216588e670f11f83fa2bc6d25885e6ac96f"
+  version "3.19.4"
+  sha256 "89989707d2227fed3139dfb98dea234d8910b232f5b6b83c8bdf02bd746ec565"
 
   url "https://cmake.org/files/LatestRelease/cmake-#{version}-macos-universal.dmg"
   name "CMake"
+  desc "Family of tools to build, test and package software"
   homepage "https://cmake.org/"
 
   livecheck do

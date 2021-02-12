@@ -5,7 +5,7 @@ cask "texmaker" do
   url "https://www.xm1math.net/texmaker/assets/files/texmaker-#{version}.dmg"
   appcast "https://www.xm1math.net/texmaker/assets/files/"
   name "Texmaker"
-  desc "Free, modern and cross-platform LaTeX editor"
+  desc "LaTeX editor"
   homepage "https://www.xm1math.net/texmaker/"
 
   app "texmaker.app"

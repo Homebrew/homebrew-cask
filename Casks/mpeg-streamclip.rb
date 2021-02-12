@@ -4,10 +4,15 @@ cask "mpeg-streamclip" do
 
   url "http://www.alfanet.it/squared5/MPEG_Streamclip_#{version}.dmg",
       verified: "alfanet.it/squared5/"
-  appcast "http://www.squared5.com/svideo/mpeg-streamclip-mac.html"
   name "MPEG Streamclip"
   desc "Video converter, player, and editor"
   homepage "http://www.squared5.com/"
+
+  livecheck do
+    url "http://www.squared5.com/svideo/mpeg-streamclip-mac.html"
+    strategy :page_match
+    regex(%r{href=.*?/MPEG_Streamclip_(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   depends_on macos: "<= :mojave"
 

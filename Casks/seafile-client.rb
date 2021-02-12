@@ -1,12 +1,17 @@
 cask "seafile-client" do
-  version "7.0.10"
-  sha256 "f56c3f9d9aa3295e74ee9c08fe852f489188b14065af43f8d1f35aa9f0f53d36"
+  version "8.0.0"
+  sha256 "3c0b810457bf337b0dad9e6ed3169a6b03a1e3a94faa771d1b307f6bcb42a614"
 
   url "https://download.seadrive.org/seafile-client-#{version}.dmg",
       verified: "seadrive.org/"
-  appcast "https://www.seafile.com/en/download/"
   name "Seafile Client"
   homepage "https://www.seafile.com/"
+
+  livecheck do
+    url "https://www.seafile.com/en/download/"
+    strategy :page_match
+    regex(%r{href=.*?/seafile-client-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   app "Seafile Client.app"
 end

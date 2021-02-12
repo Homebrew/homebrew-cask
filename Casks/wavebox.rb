@@ -1,6 +1,6 @@
 cask "wavebox" do
-  version "10.0.389.2"
-  sha256 "3168af8abe08cc6e02dbed093118d7c2743eea0b33367b33c3df57af0306a82b"
+  version "10.0.412.2"
+  sha256 "d1a0e58506cc82b578ab4cfa91eabd5505b05eb77c74422733bb37a4a507ab50"
 
   url "https://download.wavebox.app/stable/mac/Install%20Wavebox%20#{version}.dmg",
       verified: "download.wavebox.app/"

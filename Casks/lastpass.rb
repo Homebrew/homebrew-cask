@@ -1,10 +1,10 @@
 cask "lastpass" do
-  version "4.60.0,1121"
+  version "4.64.0,1133"
   sha256 :no_check
 
   url "https://download.cloud.lastpass.com/mac/LastPass.dmg"
   name "LastPass"
-  desc "Cross-platform password manager"
+  desc "Password manager"
   homepage "https://www.lastpass.com/"
 
   livecheck do

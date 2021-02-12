@@ -12,4 +12,6 @@ cask "boxy-suite" do
   app "Boxy for Calendar.app"
   app "Boxy for Keep.app"
   app "Boxy for Contacts.app"
+
+  zap trash: "~/Library/Caches/co.boxyapp.gmail*"
 end

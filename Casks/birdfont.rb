@@ -6,12 +6,17 @@ cask "birdfont" do
     version "4.8.10"
     sha256 "067755cd2e02a70997aac3cb29a49ab2ec1c304c30d89f58b96add0df7802c88"
   else
-    version "4.8.11"
-    sha256 "067755cd2e02a70997aac3cb29a49ab2ec1c304c30d89f58b96add0df7802c88"
+    version "4.9.7"
+    sha256 "e4fa3b56554c803e9036d3122f8d6c2d2e057dfbe731ca269134c2c2d85d2458"
+
+    livecheck do
+      url "https://birdfont.org/purchase.php"
+      strategy :page_match
+      regex(%r{href=.*?/birdfont-(\d+(?:\.\d+)*)-free\.dmg}i)
+    end
   end
 
   url "https://birdfont.org/download/birdfont-#{version}-free.dmg"
-  appcast "https://birdfont.org/purchase.php"
   name "BirdFont"
   desc "Free font editor"
   homepage "https://birdfont.org/"

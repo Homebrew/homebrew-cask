@@ -13,10 +13,19 @@ cask "cockatrice" do
         verified: "github.com/Cockatrice/Cockatrice/"
   end
 
-  appcast "https://github.com/Cockatrice/Cockatrice/releases.atom"
   name "Cockatrice"
-  desc "Cross-platform virtual tabletop for multiplayer card games"
+  desc "Virtual tabletop for multiplayer card games"
   homepage "https://cockatrice.github.io/"
+
+  livecheck do
+    url "https://github.com/Cockatrice/Cockatrice/releases/latest"
+    strategy :page_match do |page|
+      match = page.match(
+        %r{href=.*?/(\d+(?:-\d+)*)-Release-(\d+(?:\.\d+)*)/Cockatrice-([^/]+)-\2-macos(?:\d+(?:\.\d+)*)\.zip}i,
+      )
+      "#{match[2]},#{match[1]}:#{match[3]}"
+    end
+  end
 
   depends_on macos: ">= :high_sierra"
 

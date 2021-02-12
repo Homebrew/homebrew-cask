@@ -1,19 +1,23 @@
 cask "keepassxc" do
-  version "2.6.2,2"
-  sha256 "611b940952d5d51c2865d35e6916954a4ff3454bc8ae4dcc7abed0a4cda7d90d"
+  version "2.6.4"
 
-  url "https://github.com/keepassxreboot/keepassxc/releases/download/#{version.before_comma}/KeePassXC-#{version.before_comma}-#{version.after_comma}.dmg",
-      verified: "github.com/keepassxreboot/keepassxc/"
+  if Hardware::CPU.intel?
+    url "https://github.com/keepassxreboot/keepassxc/releases/download/#{version}/KeePassXC-#{version}-x86_64.dmg",
+        verified: "github.com/keepassxreboot/keepassxc/"
+    sha256 "639fdfe0379dc3f00f1bd6a72c974cfddae0d4c8ddb66f7297d0b01b1a582ede"
+  else
+    url "https://github.com/keepassxreboot/keepassxc/releases/download/#{version}/KeePassXC-#{version}-2-arm64.dmg",
+        verified: "github.com/keepassxreboot/keepassxc/"
+    sha256 "49c28e3f6341710b24d4415186ec0a52f6c0af5e72c0fc7548ddd7999d2eaa4d"
+  end
+
   name "KeePassXC"
   desc "Password manager app"
   homepage "https://keepassxc.org/"
 
   livecheck do
-    url "https://github.com/keepassxreboot/keepassxc/releases/latest"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/KeePassXC-(\d+(?:.\d+)*)-(\d+)\.dmg}i)
-      "#{match[1]},#{match[2]}"
-    end
+    url :url
+    strategy :github_latest
   end
 
   conflicts_with cask: "homebrew/cask-versions/keepassxc-beta"

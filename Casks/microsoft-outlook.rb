@@ -1,12 +1,12 @@
 cask "microsoft-outlook" do
-  version "16.44.20121301"
-  sha256 "ba31ea16920e363bb1aad2924e9a8c27214c9d78aaae60d6b24321c1d4da580c"
+  version "16.45.21011103"
+  sha256 "d9c5802d2d7e0d06daa2850dab4e3bbf4a148054595f2fd1984e0eac7d5511fe"
 
   url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Outlook_#{version}_Installer.pkg",
       verified: "officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/"
   appcast "https://docs.microsoft.com/en-us/officeupdates/update-history-office-for-mac"
   name "Microsoft Outlook"
-  desc "Cross-platform industry standard email client"
+  desc "Email client"
   homepage "https://products.office.com/en-us/outlook/email-and-calendar-software-microsoft-outlook"
 
   auto_updates true
