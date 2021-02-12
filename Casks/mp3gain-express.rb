@@ -1,6 +1,6 @@
 cask "mp3gain-express" do
-  version "2.4.1"
-  sha256 "686158f1ed158763584966c732695cb625cc8ad6a4ac613cdf5ae914324bf65e"
+  version "2.5"
+  sha256 "4fe8ffc0b46f4076424fa845889045fc1f54b75cca0dafd42a6b72b083e7436b"
 
   url "https://projects.sappharad.com/mp3gain/mp3gain_mac#{version.chomp(".0").no_dots}.zip"
   name "MP3Gain Express"
