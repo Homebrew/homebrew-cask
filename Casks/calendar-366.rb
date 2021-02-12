@@ -1,6 +1,6 @@
 cask "calendar-366" do
-  version "2.9.4,3371"
-  sha256 "b0ebaf916314db665e53bc8bd2e25e531975e600040bab9488b376621eac9237"
+  version "2.9.5,3373"
+  sha256 "e08d116dda202c065b3389a1e4d68802e4dee2a366a556ca989692a2ce35ef99"
 
   url "https://nspektor.com/downloads/Calendar366_v#{version.before_comma}.dmg"
   name "Calendar 366 II"
