@@ -1,6 +1,6 @@
 cask "vsee" do
-  version "4.9.4,42602"
-  sha256 "40fcd64af62c850c0e697310672282cc4a349461a8f9a6c25320eb1f2e5869d6"
+  version "4.10.0,42763"
+  sha256 "ed9e0e140644a9f788ecb6849e99c38ac3635849bcb0db9bd5dfc177bfb47d00"
 
   url "https://d2q5hugz2rti4w.cloudfront.net/mac/#{version.after_comma}/vseemac.dmg",
       verified: "d2q5hugz2rti4w.cloudfront.net/"
