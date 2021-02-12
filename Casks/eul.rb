@@ -1,6 +1,6 @@
 cask "eul" do
-  version "1.5.11"
-  sha256 "dcb120d575f9813baf0c51e41e12f4737dd5159828cab584cdea3ba6b9d741e4"
+  version "1.5.12"
+  sha256 "4bd0740145f1020aed3c09adcbb1abe919fabe056136572db68e2c52de234236"
 
   url "https://github.com/gao-sun/eul/releases/download/v#{version}/eul.app.zip"
   appcast "https://github.com/gao-sun/eul/releases.atom"
