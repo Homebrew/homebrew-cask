@@ -1,6 +1,6 @@
 cask "mtgaprotracker" do
-  version "2.1.14"
-  sha256 "00ebd55ef18f92a44760ccff3548aa145d4152027a66cb06b0ff9bf55fbc8653"
+  version "2.1.15"
+  sha256 "c8706a02ecbf3b66d5de3e757a57fcbdaeb7277852a2e955b879ca03b4495449"
 
   url "https://github.com/Razviar/mtgap/releases/download/v#{version}/mtgaprotracker.dmg",
       verified: "github.com/Razviar/mtgap/"
