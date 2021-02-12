@@ -23,7 +23,7 @@ cask "maintenance" do
   end
 
   url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete(".")}/Maintenance.dmg"
-  appcast "https://www.titanium-software.fr/en/release_maintenance.html"
+  appcast "https://www.titanium-software.fr/en/maintenance.html"
   name "Maintenance"
   desc "Operating system maintenance and cleaning utility"
   homepage "https://www.titanium-software.fr/en/maintenance.html"
