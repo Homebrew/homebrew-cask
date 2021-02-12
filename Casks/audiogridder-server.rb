@@ -15,7 +15,5 @@ cask "audiogridder-server" do
   desc "VST2/VST3/AU DSP Server"
   homepage "https://audiogridder.com/"
 
-  uninstall pkgutil: [
-    "com.e47.pkg.server",
-  ]
+  uninstall pkgutil: "com.e47.pkg.server"
 end
