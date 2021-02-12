@@ -15,4 +15,7 @@ cask "opgg" do
   end
 
   app "OP.GG.app"
+
+  zap trash: "~/Library/Application Support/opgg-electron-app"
+  
 end
