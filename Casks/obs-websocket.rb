@@ -1,6 +1,6 @@
 cask "obs-websocket" do
-  version "4.8.0"
-  sha256 "8147a14fd8a6b17a9ea1921d3ab743cc4aac430dcc893d0cdb466ae428a28ef6"
+  version "4.9.0"
+  sha256 "df14cb49e179d9f6a52459cd12539fd4c2945e516c9877bcd9538472a7f714eb"
 
   url "https://github.com/Palakis/obs-websocket/releases/download/#{version}/obs-websocket-#{version}-macOS.pkg"
   appcast "https://github.com/Palakis/obs-websocket/releases.atom"
