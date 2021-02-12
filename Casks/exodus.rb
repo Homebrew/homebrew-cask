@@ -5,7 +5,7 @@ cask "exodus" do
   url "https://downloads.exodus.com/releases/exodus-macos-#{version}.dmg"
   appcast "https://www.exodus.com/releases/"
   name "Exodus"
-  desc "Desktop wallet supporting 100+ cryptocurrency assets"
+  desc "Desktop wallet for cryptocurrency assets"
   homepage "https://www.exodus.com/"
 
   auto_updates true
