@@ -27,8 +27,9 @@ cask "audiogridder-plugin" do
     "~/Library/Logs/AudioGridder/Fx",
     "~/Library/Logs/AudioGridder/Instrument",
     "~/Library/Logs/AudioGridder/Midi",
-  ], rmdir: [
-    "~/Library/Logs/AudioGridder",
-    "~/.audiogridder",
-  ]
+  ],
+      rmdir: [
+        "~/.audiogridder",
+        "~/Library/Logs/AudioGridder",
+      ]
 end
