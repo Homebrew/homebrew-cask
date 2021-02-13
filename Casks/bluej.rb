@@ -5,8 +5,8 @@ cask "bluej" do
   url "https://www.bluej.org/download/files/BlueJ-mac-#{version.no_dots}.zip"
   appcast "https://www.bluej.org"
   name "BlueJ"
-  desc "Free Java Development Environment designed for begginers"
+  desc "Java Development Environment designed for begginers"
   homepage "https://www.bluej.org/"
 
-  app "BlueJ #{version.sub(/[a-z]$/, "")}/BlueJ.app"
+  app "BlueJ #{version}/BlueJ.app"
 end
