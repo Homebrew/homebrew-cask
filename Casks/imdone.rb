@@ -7,6 +7,12 @@ cask "imdone" do
   desc "Kanban board that works on plain text markdown files or code"
   homepage "https://imdone.io/"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(/imdone-(\d+(?:\.\d+)*)\.dmg/i)
+  end
+
   app "imdone.app"
 
   zap trash: [
