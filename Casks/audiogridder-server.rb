@@ -24,8 +24,9 @@ cask "audiogridder-server" do
     "~/Library/Logs/AudioGridder/Master",
     "~/Library/Logs/AudioGridder/Server",
     "~/Library/Logs/AudioGridder/Scan",
-  ], rmdir: [
-    "~/Library/Logs/AudioGridder",
-    "~/.audiogridder",
-  ]
+  ],
+      rmdir: [
+        "~/.audiogridder",
+        "~/Library/Logs/AudioGridder",
+      ]
 end
