@@ -11,7 +11,6 @@ cask "multi" do
   app "Multi.app"
 
   zap trash: [
-    "/Applications/Multi",
     "~/Library/Caches/llc.gumbs.multi.*",
     "~/Library/Caches/llc.gumbs.multi",
     "~/Library/Preferences/llc.gumbs.multi.*.plist",
