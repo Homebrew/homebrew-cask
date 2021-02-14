@@ -1,5 +1,5 @@
 cask "steam" do
-  version "2021-02-05"
+  version "2021-02-12"
   sha256 :no_check
 
   url "https://steamcdn-a.akamaihd.net/client/installer/steam.dmg",
