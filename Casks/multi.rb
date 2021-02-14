@@ -9,4 +9,12 @@ cask "multi" do
   homepage "https://github.com/hkgumbs/multi"
 
   app "Multi.app"
+
+  zap trash: [
+    "/Applications/Multi",
+    "~/Library/Caches/llc.gumbs.multi.*",
+    "~/Library/Caches/llc.gumbs.multi",
+    "~/Library/Preferences/llc.gumbs.multi.*.plist",
+    "~/Library/Saved Application State/llc.gumbs.multi.savedState",
+  ]
 end
