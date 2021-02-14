@@ -1,10 +1,19 @@
 cask "racket" do
-  version "7.9"
-  sha256 "e6bd723728c2a84e0604daaf60d98146df379404132dac832a4e9d3b10399d7d"
+  version "8.0"
 
-  url "https://mirror.racket-lang.org/installers/#{version}/racket-#{version}-x86_64-macosx.dmg"
+  if Hardware::CPU.intel?
+    sha256 "42195d6fcc3ea6b3df91b860d2593511e6ce5f9173cfc391fb37fc67767592a9"
+
+    url "https://mirror.racket-lang.org/installers/#{version}/racket-#{version}-x86_64-macosx-cs.dmg"
+  else
+    sha256 "3f1eb3c2965e2d19f0a7301049f397e3117197280f087a7bd2497bb077aadd5d"
+
+    url "https://mirror.racket-lang.org/installers/#{version}/racket-#{version}-aarch64-macosx-cs.dmg"
+  end
+
   appcast "https://download.racket-lang.org/all-versions.html"
   name "Racket"
+  desc "Modern programming language in the Lisp/Scheme family"
   homepage "https://racket-lang.org/"
 
   conflicts_with cask: "racket-cs"
