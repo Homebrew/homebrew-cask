@@ -7,7 +7,7 @@ cask "netxms-console" do
   name "NetXMS Management Console"
   homepage "https://netxms.org/"
 
-  app "NetXMS Console.app"
+  app "NetXMS Console (#{version}).app"
 
   zap trash: "~/.nxmc"
 end
