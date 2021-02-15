@@ -5,7 +5,7 @@ cask "bleunlock" do
   url "https://github.com/ts1/BLEUnlock/releases/download/#{version}/BLEUnlock-#{version}.zip"
   appcast "https://github.com/fitztrev/shuttle/releases.atom"
   name "BLEUnlock"
-  desc "Lock and unlock your Mac with an iPhone, Apple Watch, or another bluetooth low energy device"
+  desc "Lock and unlock a computer with a bluetooth low energy device"
   homepage "https://github.com/ts1/BLEUnlock"
 
   app "BLEUnlock.app"
