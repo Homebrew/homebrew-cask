@@ -4,6 +4,7 @@ cask "doxie" do
 
   url "https://download.getdoxie.com/Doxie-#{version}.dmg"
   name "Doxie"
+  desc "Companion app for scanner hardware"
   homepage "https://www.getdoxie.com/"
 
   livecheck do
