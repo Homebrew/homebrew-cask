@@ -1,5 +1,5 @@
 cask "ringcentral" do
-  version "20.4.31.2789"
+  version "21.1.10.2889"
   sha256 :no_check
 
   url "https://app.ringcentral.com/downloads/RingCentral.pkg"
