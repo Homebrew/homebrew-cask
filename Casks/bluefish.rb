@@ -6,6 +6,7 @@ cask "bluefish" do
       verified: "bennewitz.com/"
   appcast "https://www.bennewitz.com/bluefish/stable/binaries/macosx/"
   name "Bluefish"
+  desc "Open source code editor"
   homepage "http://bluefish.openoffice.nl/index.html"
 
   app "Bluefish.app"
