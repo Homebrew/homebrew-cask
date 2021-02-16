@@ -9,4 +9,9 @@ cask "xournal-plus-plus" do
   homepage "https://github.com/xournalpp/xournalpp"
 
   app "Xournal++.app"
+
+  zap trash: [
+    "~/Library/Saved Application State/com.github.xournalpp.savedState",
+    "~/.xournalpp",
+  ]
 end
