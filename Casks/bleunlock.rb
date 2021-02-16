@@ -9,4 +9,10 @@ cask "bleunlock" do
   homepage "https://github.com/ts1/BLEUnlock"
 
   app "BLEUnlock.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/jp.sone.BLEUnlock",
+    "~/Library/Caches/jp.sone.BLEUnlock",
+    "~/Library/Preferences/jp.sone.BLEUnlock.plist",
+  ]
 end
