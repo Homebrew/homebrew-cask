@@ -11,4 +11,10 @@ cask "fawkes" do
   homepage "https://sandlab.cs.uchicago.edu/fawkes/"
 
   app "Fawkes.app"
+
+  zap trash: [
+    "~/Library/Preferences/Fawkes.plist",
+    "~/Library/Saved Application State/Fawkes.savedState",
+    "~/.fawkes",
+  ]
 end
