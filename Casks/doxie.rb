@@ -8,8 +8,9 @@ cask "doxie" do
   homepage "https://www.getdoxie.com/"
 
   livecheck do
-    url "https://r.getdoxie.com/app/sparkle/doxie-macos.xml"
-    strategy :sparkle
+    url "https://r.getdoxie.com/app/doxie/release-notes-latest.html"
+    strategy :page_match
+    regex(/Doxie.(\d+(?:\.\d+)*)/i)
   end
 
   app "Doxie.app"
