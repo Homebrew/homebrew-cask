@@ -1,6 +1,6 @@
 cask "atemosc" do
-  version "3.1.6"
-  sha256 "d4487e5d81da790a05ad3c0f3198792c8cfc88092352dc3bef0120c5078e69c5"
+  version "4.0.0"
+  sha256 "e65f90a16517d2f30bdfa8563443a9f392a87b71bbc1e644c466d39cb6afbd97"
 
   url "https://github.com/SteffeyDev/atemOSC/releases/download/v#{version}/atemOSC_#{version}.dmg",
       verified: "github.com/SteffeyDev/atemOSC/"
