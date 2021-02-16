@@ -2,8 +2,7 @@ cask "fawkes" do
   version "0.3.1"
   sha256 "7101ecb08e9ce319c66f1e6dae25443a3175917eaa48feeaf17b1864f91ab6f8"
 
-  url "https://mirror.cs.uchicago.edu/fawkes/files/#{version.major_minor}/Fawkes-#{version}.dmg",
-      verified: "mirror.cs.uchicago.edu/fawkes/"
+  url "https://mirror.cs.uchicago.edu/fawkes/files/#{version.major_minor}/Fawkes-#{version}.dmg"
   appcast "https://github.com/Shawn-Shan/fawkes/releases.atom",
           must_contain: version.major_minor
   name "Fawkes"
