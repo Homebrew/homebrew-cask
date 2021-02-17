@@ -1,6 +1,6 @@
 cask "angry-ip-scanner" do
-  version "3.7.5"
-  sha256 "a7c7396da9d14ba531ea5c09d8920ad52eb2300b2d48ed368413cb77c5035ce4"
+  version "3.7.6"
+  sha256 "16cee34ed7af7175f622197c764fd0c69399bc6dc8b7d891ac76266d077c5415"
 
   url "https://github.com/angryip/ipscan/releases/download/#{version}/ipscan-mac-#{version}.zip",
       verified: "github.com/angryip/ipscan/"
