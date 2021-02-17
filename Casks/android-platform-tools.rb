@@ -6,7 +6,7 @@ cask "android-platform-tools" do
       verified: "google.com/android/repository/"
   name "Android SDK Platform-Tools"
   desc "Android SDK component"
-  homepage "https://developer.android.com/studio/releases/platform-tools.html"
+  homepage "https://developer.android.com/studio/releases/platform-tools"
 
   livecheck do
     url "https://dl.google.com/android/repository/platform-tools-latest-darwin.zip"
