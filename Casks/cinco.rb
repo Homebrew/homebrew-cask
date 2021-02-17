@@ -8,8 +8,7 @@ cask "cinco" do
   desc "Generator-driven Eclipse IDE for domain-specific graphical modeling tools"
   homepage "https://cinco.scce.info/"
 
-  # Renamed for consistency: App name in the Finder is different from its branding
-  app "cinco-#{version}.app", target: "Cinco.app"
+  app "cinco-#{version}.app"
 
   uninstall quit: "de.jabc.cinco.meta.product.product"
 
@@ -18,7 +17,6 @@ cask "cinco" do
     "~/Library/Saved Application State/de.jabc.cinco.meta.product.product.savedState",
   ]
 
-  caveats "Gatekeeper:\n  To launch Cinco for the first time, right click it in Finder and choose\n  \"Open\"."
   caveats do
     license "https://www.eclipse.org/legal/epl-v10.html"
     depends_on_java "8"
