@@ -4,7 +4,7 @@ cask "ksdiff" do
 
   url "https://updates.kaleidoscope.app/v2/prod/ksdiff-#{version.before_comma}-#{version.after_comma}.zip"
   name "ksdiff"
-  desc "Command-line tool for App Store version Kaleidoscope"
+  desc "Command-line tool for the App Store version of Kaleidoscope"
   homepage "https://kaleidoscope.app/ksdiff2"
 
   conflicts_with cask: "kaleidoscope"

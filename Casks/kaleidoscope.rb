@@ -5,7 +5,7 @@ cask "kaleidoscope" do
   url "https://updates.kaleidoscope.app/v2/prod/Kaleidoscope-#{version.before_comma}-#{version.after_comma}.app.zip"
   appcast "https://updates.kaleidoscope.app/v2/prod/appcast"
   name "Kaleidoscope"
-  desc "Spots and merge differences in text and image files or folders"
+  desc "Spot and merge differences in text and image files or folders"
   homepage "https://www.kaleidoscope.app/"
 
   auto_updates true
