@@ -1,5 +1,5 @@
 cask "amazon-workspaces" do
-  version "3.1.2.1599"
+  version "3.1.3.1649"
   sha256 :no_check
 
   url "https://workspaces-client-updates.s3.amazonaws.com/prod/iad/osx/WorkSpaces.pkg",
