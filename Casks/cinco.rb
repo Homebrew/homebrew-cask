@@ -18,7 +18,7 @@ cask "cinco" do
     "~/Library/Saved Application State/de.jabc.cinco.meta.product.product.savedState",
   ]
 
-  caveats "Gatekeeper:\n  To launch #{name} for the first time, right click it in Finder and choose\n  \"Open\"."
+  caveats "Gatekeeper:\n  To launch Cinco for the first time, right click it in Finder and choose\n  \"Open\"."
   caveats do
     license "https://www.eclipse.org/legal/epl-v10.html"
     depends_on_java "8"
