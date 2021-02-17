@@ -8,6 +8,14 @@ cask "android-platform-tools" do
   desc "Android SDK component"
   homepage "https://developer.android.com/studio/releases/platform-tools.html"
 
+  livecheck do
+    url "https://dl.google.com/android/repository/platform-tools-latest-darwin.zip"
+    strategy :header_match do |headers|
+      match = headers["location"].match(%r{/([0-9a-f]{40,}).platform-tools_r([.0-9]+)-darwin})
+      "#{match[2]},#{match[1]}"
+    end
+  end
+
   binary "#{staged_path}/platform-tools/adb"
   binary "#{staged_path}/platform-tools/dmtracedump"
   binary "#{staged_path}/platform-tools/e2fsdroid"
