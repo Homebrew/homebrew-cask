@@ -1,6 +1,6 @@
 cask "beamer" do
-  version "3.4,34000"
-  sha256 "3076376d6615a74ac71f07d15805798d7d15056cf77f4501fbf6c4e5806928df"
+  version "3.5,35001"
+  sha256 "8f8d72ab99fd47c7b9df1acd51c6fcc8b6ebb8c574587e8e1fc6cdc5868ba21c"
 
   url "https://beamer-app.com/resources/downloads/Beamer-#{version.before_comma}.zip"
   name "Beamer"
