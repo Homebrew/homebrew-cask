@@ -1,6 +1,6 @@
 cask "mochi" do
-  version "1.8.3"
-  sha256 "c387280bd70ce7e9ed50ac5713d4b3f30420c2a4b3db126c64be5fe49175bdf1"
+  version "1.9.0"
+  sha256 "58b5efd9ccf2bacb7a70795d4277be9bce05707434e6a55bc32b829895ddcb3e"
 
   url "https://mochi.cards/releases/Mochi-#{version}.dmg"
   name "Mochi"
