@@ -1,6 +1,6 @@
 cask "pencil2d" do
-  version "0.6.5"
-  sha256 "b69c73f3c0dd6b1724344609bf756467a145c9fb29395768dee83bc3bfbc0a4e"
+  version "0.6.6"
+  sha256 "9c3aad2adc3aee1234ddb1229f80562843b46ff167eb3ba12acf76846d96edda"
 
   url "https://github.com/pencil2d/pencil/releases/download/v#{version}/pencil2d-mac-#{version}.zip",
       verified: "github.com/pencil2d/pencil/"
