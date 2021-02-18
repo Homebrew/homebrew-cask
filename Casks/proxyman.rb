@@ -1,6 +1,6 @@
 cask "proxyman" do
-  version "2.17.0"
-  sha256 "36cc31d977d96387d479dc5c502a7cd4a4670dd41193dbd580c52859c2959504"
+  version "2.18.0"
+  sha256 "1b89a145fb6a603d4f145b1358616b7dcdc5ce0b992aa28943b74a0bdb33d6cc"
 
   url "https://github.com/ProxymanApp/Proxyman/releases/download/#{version}/Proxyman_#{version}.dmg",
       verified: "github.com/ProxymanApp/Proxyman/"
@@ -12,7 +12,6 @@ cask "proxyman" do
   auto_updates true
 
   app "Proxyman.app"
-
   uninstall_postflight do
     stdout, * = system_command "/usr/bin/security",
                                args: ["find-certificate", "-a", "-c", "Proxyman", "-Z"],
