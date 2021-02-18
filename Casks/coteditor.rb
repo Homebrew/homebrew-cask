@@ -15,10 +15,14 @@ cask "coteditor" do
 
   url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg",
       verified: "github.com/coteditor/CotEditor/"
-  appcast "https://github.com/coteditor/CotEditor/releases.atom"
   name "CotEditor"
   desc "Plain-text editor for web pages, program source codes and more"
   homepage "https://coteditor.com/"
+  
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
 
