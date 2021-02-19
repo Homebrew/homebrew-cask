@@ -1,8 +1,8 @@
 cask "textbuddy" do
   version "1.0.2"
-  sha256 "db5d71aa4ae383687561f8a77667f60a855b954fb1a1983ff27dbac3d5c22140"
+  sha256 :no_check
 
-  url "https://download.clickontyler.com/textbuddy/textbuddy_#{version.major_minor.no_dots}.zip"
+  url "https://textbuddy.app/download-v1/"
   name "TextBuddy"
   desc "Convert, filter, sort, and transform text"
   homepage "https://textbuddy.app/"
@@ -10,7 +10,7 @@ cask "textbuddy" do
   livecheck do
     url "https://shine.clickontyler.com/appcast.php?id=58"
     strategy :page_match
-    regex(/TextBuddy.(\d+(?:\.\d+)*)/i)
+    regex(/TextBuddy\s(\d+(?:\.\d+)*)/i)
   end
 
   auto_updates true
