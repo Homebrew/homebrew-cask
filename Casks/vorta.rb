@@ -1,6 +1,6 @@
 cask "vorta" do
-  version "0.7.2"
-  sha256 "d94b0caad7247a7f501513145fb2b11f36be967db6f88c5355fb0a1f993246a7"
+  version "0.7.3"
+  sha256 "8c4d0e40ed902f0df3da6caadde25add9d3b40068002ae87df63694f2afe106c"
 
   url "https://github.com/borgbase/vorta/releases/download/v#{version}/vorta-#{version}.dmg"
   appcast "https://github.com/borgbase/vorta/releases.atom"
@@ -22,7 +22,7 @@ cask "vorta" do
 
     If you plan on mounting archives using macFUSE, consider using the Tap maintained by the Borg team:
 
-      brew install --cask osxfuse
+      brew install --cask macfuse
       brew install borgbackup/tap/borgbackup-fuse
   EOS
 end
