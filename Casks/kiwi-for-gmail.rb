@@ -8,4 +8,17 @@ cask "kiwi-for-gmail" do
   homepage "https://www.kiwiforgmail.com/"
 
   app "Kiwi for Gmail.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.zive.kiwi",
+    "~/Library/Application Scripts/com.zive.kiwi.loginhelper",
+    "~/Library/Application Scripts/com.zive.kiwi.share",
+    "~/Library/Application Support/Kiwi for Gmail",
+    "~/Library/Containers/com.zive.kiwi",
+    "~/Library/Containers/com.zive.kiwi.loginhelper",
+    "~/Library/Containers/com.zive.kiwi.share",
+    "~/Library/Group Containers/ND86S98S6P.com.zive.kiwi",
+    "~/Library/Preferences/com.zive.kiwi.plist",
+    "~/Library/Saved Application State/com.zive.kiwi.savedState",
+  ]
 end
