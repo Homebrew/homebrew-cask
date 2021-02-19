@@ -14,4 +14,9 @@ cask "redream" do
   end
 
   app "redream.app"
+  
+  zap trash: [
+    "~/Library/Application Support/redream",
+    "~/Library/Saved Application State/io.recompiled.redream.savedState",
+  ]
 end
