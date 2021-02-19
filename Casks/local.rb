@@ -20,8 +20,7 @@ cask "local" do
   zap trash: [
     "~/Library/Application Support/Local",
     "~/Library/Logs/local-lightning.log",
-    "~/Library/Preferences/com.getflywheel.local.plist",
-    "~/Library/Preferences/com.getflywheel.local.helper.plist",
-    "~/Library/Saved Application State/com.getflywheel.local.savedState",
+    "~/Library/Preferences/com.getflywheel.lightning.local.plist",
+    "~/Library/Saved Application State/com.getflywheel.lightning.local.savedState",
   ]
 end
