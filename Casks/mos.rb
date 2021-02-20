@@ -1,6 +1,6 @@
 cask "mos" do
   version "3.3.1"
-  sha256 "718e6652b772ddaa73945d9b5170cade170b5810f12256e84e258997332164bd"
+  sha256 "9bbe5c44a4dae57ea6495adce56eb55fb5a7dcf81d8f7b0b6489ddf78f02cc9d"
 
   url "https://github.com/Caldis/Mos/releases/download/#{version}/Mos.Versions.#{version}.dmg",
       verified: "github.com/Caldis/Mos/"
