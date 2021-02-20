@@ -5,7 +5,7 @@ cask "spritesheeter" do
   url "https://github.com/larsenv/SpriteSheeter/releases/download/v#{version}/SpriteSheeter.zip",
       verified: "github.com/larsenv/SpriteSheeter/"
   name "SpriteSheeter"
-  desc "A GUI program for creating sprite sheets"
+  desc "GUI program for creating sprite sheets"
   homepage "https://www.vg-resource.com/thread-29374.html"
 
   app "SpriteSheeter.app"
