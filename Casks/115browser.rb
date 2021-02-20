@@ -6,6 +6,7 @@ cask "115browser" do
   appcast "https://appversion.115.com/1/web/1.0/api/chrome?callback=get_version"
   name "115Browser"
   name "115浏览器"
+  desc "Web browser"
   homepage "https://pc.115.com/"
 
   app "115Browser.app"
