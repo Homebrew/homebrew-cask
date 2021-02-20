@@ -2,7 +2,8 @@ cask "spritesheeter" do
   version "1.2"
   sha256 "477ab9cb389b685b6ec660f5f33a5a300f825d890994e64e039124c51d8396cc"
 
-  url "https://github.com/meh2481/SpriteSheeter/releases/download/v#{version}/SpriteSheeter_#{version}_Mac.zip"
+  url "https://github.com/meh2481/SpriteSheeter/releases/download/v#{version}/SpriteSheeter_#{version}_Mac.zip",
+      verified: "github.com/meh2481/SpriteSheeter/"
   name "SpriteSheeter"
   desc "GUI program for creating sprite sheets"
   homepage "https://www.vg-resource.com/thread-29374.html"
