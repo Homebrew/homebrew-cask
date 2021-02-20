@@ -9,6 +9,12 @@ cask "115browser" do
   desc "Web browser"
   homepage "https://pc.115.com/"
 
+  livecheck do
+    url "https://appversion.115.com/1/web/1.0/api/chrome?callback=get_version"
+    strategy :page_match
+    regex(/115pc_(\d+(\.\d+)*).dmg/i)
+  end
+
   app "115Browser.app"
 
   zap trash: [
