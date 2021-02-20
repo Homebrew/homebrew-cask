@@ -1,6 +1,6 @@
 cask "balsamiq-wireframes" do
-  version "4.1.8"
-  sha256 "46eb55d3be1b639fc857ec534ac273727908c6e764770a9ca6f9df93596f7774"
+  version "4.2.2"
+  sha256 "29767a3b0a631bc6fd2cc93e836eea46e2293f8e600c581c1d0f4a207df03144"
 
   url "https://builds.balsamiq.com/bwd/Balsamiq%20Wireframes%20#{version}.dmg"
   appcast "https://builds.balsamiq.com/bwd/mac.jsonp"
