@@ -1,6 +1,6 @@
 cask "mqttx" do
-  version "1.5.1"
-  sha256 "cb55ba6632dfda7514fd5fd87f17c7fb21252a3961f55368370f418dddd9e9b2"
+  version "1.5.2"
+  sha256 "313e9d9fb4f6bc8b9f92676add0b8c439d199854849963e7083281d15493dc6c"
 
   url "https://github.com/emqx/MQTTX/releases/download/v#{version}/MQTTX-#{version}-mac.zip",
       verified: "github.com/emqx/MQTTX/"
