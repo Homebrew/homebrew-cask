@@ -15,4 +15,6 @@ cask "parsec" do
 
   uninstall pkgutil: "tv.parsec.www",
             quit:    "tv.parsec.www"
+
+  zap trash: "~/.parsec"
 end
