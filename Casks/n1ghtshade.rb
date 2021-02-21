@@ -11,13 +11,13 @@ cask "n1ghtshade" do
   app "n1ghtshade.app"
   
   depends_on formula: [
-    "libimobiledevice"
-    "libirecovery"
-    "libplist"
-    "libusb"
-    "libusbmuxd"
-    "libzip"
-    "openssl"
+    "libimobiledevice",
+    "libirecovery",
+    "libplist",
+    "libusb",
+    "libusbmuxd",
+    "libzip",
+    "openssl",
   ]
   
   zap trash: '~/Library/Application Support/n1ghtshade'
