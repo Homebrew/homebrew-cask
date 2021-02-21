@@ -9,4 +9,16 @@ cask "n1ghtshade" do
   homepage "https://github.com/synackuk/n1ghtshade"
 
   app "n1ghtshade.app"
+  
+  depends_on formula: [
+    "libimobiledevice"
+    "libirecovery"
+    "libplist"
+    "libusb"
+    "libusbmuxd"
+    "libzip"
+    "openssl"
+  ]
+  
+  zap trash: '~/Library/Application Support/n1ghtshade'
 end
