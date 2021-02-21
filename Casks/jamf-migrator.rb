@@ -1,5 +1,5 @@
 cask "jamf-migrator" do
-  version "5.6.0"
+  version "5.6.2"
   sha256 :no_check
 
   url "https://github.com/jamf/JamfMigrator/releases/download/current/jamf-migrator.zip"
