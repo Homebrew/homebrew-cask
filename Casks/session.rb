@@ -1,6 +1,6 @@
 cask "session" do
-  version "1.4.8"
-  sha256 "a273ba19ba078a95f04d3ec1cfd10a956edf5987ce59f0f1dcaf941d19a530ce"
+  version "1.4.9"
+  sha256 "c35517678d92f544f7342386e3ca5067e51c3c766a3d029f0fcd3bd543ca6970"
 
   url "https://github.com/loki-project/session-desktop/releases/download/v#{version}/session-desktop-mac-#{version}.dmg",
       verified: "github.com/loki-project/session-desktop/"
