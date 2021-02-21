@@ -5,6 +5,7 @@ cask "gitfiend" do
   url "https://gitfiend.com/resources/GitFiend-#{version}.dmg"
   appcast "https://gitfiend.com/app-info"
   name "GitFiend"
+  desc "Git client designed for humans"
   homepage "https://gitfiend.com/"
 
   auto_updates true
