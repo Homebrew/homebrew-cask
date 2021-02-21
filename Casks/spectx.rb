@@ -1,6 +1,6 @@
 cask "spectx" do
-  version "1.4.69"
-  sha256 "eef2b25d18ac79b97d3044b3dcd980428542aeff6236aa6557e2bbb373ba7f51"
+  version "1.4.70"
+  sha256 "cf827926c331cf095b628b55a13cf0ab26c6a06f926ea7a131bd63d02c9667e9"
 
   url "https://download.spectx.com/versions/#{version}/SpectXDesktop-v#{version}.dmg"
   name "SpectX Desktop"
