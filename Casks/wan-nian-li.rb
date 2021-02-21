@@ -1,6 +1,6 @@
 cask "wan-nian-li" do
-  version "2019-12-06"
-  sha256 "702298f34ca2576a02388a4103fc0e09a4aae753df21ca2e012f6f87497db6e9"
+  version :latest
+  sha256 :no_check
 
   url "https://calendar.zfdang.com/WanNianLi.app.zip",
       verified: "calendar.zfdang.com"
