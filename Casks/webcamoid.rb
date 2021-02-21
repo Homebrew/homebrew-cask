@@ -1,6 +1,6 @@
 cask "webcamoid" do
-  version "8.7.1"
-  sha256 "70f4af7be8d9b012196dddbceb88c87026d63c2b87caaf275eb1a09d107a4c52"
+  version "8.8.0"
+  sha256 "dccaf3395494f4a0424c73c3df66f12367ca4cd396d70de39bb767542c28c26f"
 
   url "https://github.com/webcamoid/webcamoid/releases/download/#{version}/webcamoid-portable-#{version}-x86_64.dmg",
       verified: "github.com/webcamoid/webcamoid/"
