@@ -1,3 +1,6 @@
+# typed: false
+# frozen_string_literal: true
+
 cask "gimp" do
   version "2.10.22,-3"
   sha256 "844dc06731cbd8ccaa6ffd4e0c74ad49ed1ecb6ae65db71988102acb6c219d56"
