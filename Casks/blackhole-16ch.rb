@@ -1,6 +1,6 @@
 cask "blackhole-16ch" do
   version "0.2.9"
-  sha256 "52f56f39e8084ac6c581572a29f8248d8422dd328b395b2486d0889ccbb4c6c7"
+  sha256 "cb9d0488bcf403b028ada911c80fd43699b43227989ebc6b23dc4500adbfa0c2"
 
   url "https://existential.audio/downloads/BlackHole16ch.v#{version}.pkg"
   name "BlackHole 16ch"
