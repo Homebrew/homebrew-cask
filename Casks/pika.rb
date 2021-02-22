@@ -4,9 +4,8 @@ cask "pika" do
 
   url "https://github.com/superhighfives/pika/releases/download/#{version}/Pika-#{version}.dmg",
       verified: "github.com/superhighfives/pika"
-  appcast "https://github.com/superhighfives/pika/releases.atom"
   name "Pika"
-  desc "Open-source native colour picker app"
+  desc "Colour picker for colours onscreen"
   homepage "https://superhighfives.com/pika"
 
   app "Pika.app"
