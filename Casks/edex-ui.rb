@@ -8,4 +8,10 @@ cask "edex-ui" do
   homepage "https://github.com/GitSquared/edex-ui"
 
   app "eDEX-UI.app"
+
+  zap trash: [
+    "~/Library/Application Support/eDEX-UI",
+    "~/Library/Saved Application State/com.edex.ui.savedState",
+    "~/Library/Preferences/com.edex.ui.plist",
+  ]
 end
