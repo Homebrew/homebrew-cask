@@ -200,64 +200,7 @@ If your application and Homebrew Cask do not work well together, feel free to [f
 
 ## Finding a Home For Your Cask
 
-We maintain separate Taps for different types of binaries. Our nomenclature is:
-
-+ **Stable**: The latest version provided by the developer defined by them as such.
-+ **Beta, Development, Unstable**: Subsequent versions to **stable**, yet incomplete and under development, aiming to eventually become the new **stable**. Also includes alternate versions specifically targeted at developers.
-+ **Nightly**: Constantly up-to-date versions of the current development state.
-+ **Legacy**: Any **stable** version that is not the most recent.
-+ **Regional, Localized**: Any version that isn’t the US English one, when that exists.
-+ **Trial**: Date-limited version that stops working entirely after it expires, requiring payment to lift the limitation.
-+ **Freemium**: Gratis version that works indefinitely but with limitations that can be removed by paying.
-+ **Fork**: An alternate version of an existing project, with a based-on but modified source and binary.
-+ **Unofficial**: An *allegedly* unmodified compiled binary, by a third-party, of a binary that has no existing build by the owner of the source code.
-+ **Vendorless**: A binary distributed without an official website, like a forum posting.
-+ **Walled**: When the download URL is both behind a login/registration form and from a host that differs from the homepage.
-+ **Font**: Data file containing a set of glyphs, characters, or symbols, that changes typed text.
-+ **Driver**: Software to make a hardware peripheral recognisable and usable by the system. If the software is useless without the peripheral, it’s considered a driver.
-
-### Stable Versions
-
-Stable versions live in the main repository at [Homebrew/homebrew-cask](https://github.com/Homebrew/homebrew-cask). They should run on the latest release of macOS or the previous point release (High Sierra and Mojave as of late 2018).
-
-### But There Is No Stable Version!
-
-When an App is only available as beta, development, or unstable versions, or in cases where such a version is the general standard, then said version can go into the main repo.
-
-### Beta, Unstable, Development, Nightly, or Legacy
-
-When an App has a main stable version, alternative versions should be submitted to [Homebrew/homebrew-cask-versions](https://github.com/Homebrew/homebrew-cask-versions).
-
-### Regional and Localized
-
-When an App exists in more than one language or has different regional editions, [the `language` stanza should be used to switch between languages or regions](../../doc/cask_language_reference/stanzas/language.md).
-
-### Trial and Freemium Versions
-
-Before submitting a trial, make sure it can be made into a full working version without the need to be redownloaded. If an App provides a trial but the only way to buy the full version is via the Mac App Store, it does not belong in any of the official repos. Freemium versions are fine.
-
-### Forks and Apps with Conflicting Names
-
-Forks must have the vendor’s name as a prefix on the Cask’s file name and token. If the original software is discontinued, forks still need to follow this rule so as to not be surprising to the user. There are two exceptions which allow the fork to replace the main cask:
-
-* The original discontinued software recommends that fork.
-* The fork is so overwhelmingly popular that it surpasses the original and is now the de facto project when people think of the name.
-
-For unrelated Apps that share a name, the most popular one (usually the one already present) stays unprefixed. Since this can be subjective, if you disagree with a decision, open an issue and make your case to the maintainers.
-
-### Unofficial, Vendorless, and Walled Builds
-
-We do not accept these casks since they offer a higher-than-normal security risk.
-
-### Fonts
-
-Font Casks live in the [Homebrew/homebrew-cask-fonts](https://github.com/Homebrew/homebrew-cask-fonts) repository. See the font repo [CONTRIBUTING.md](../../../../../homebrew-cask-fonts/blob/master/CONTRIBUTING.md)
-for details.
-
-### Drivers
-
-Driver Casks live in the [Homebrew/homebrew-cask-drivers](https://github.com/Homebrew/homebrew-cask-drivers) repository. See the drivers repo [CONTRIBUTING.md](../../../../../homebrew-cask-drivers/blob/master/CONTRIBUTING.md)
-for details.
+See the [Acceptable Casks documentation](https://github.com/Homebrew/brew/blob/master/docs/Acceptable-Casks.md#finding-a-home-for-your-cask).
 
 ## Submitting Your Changes
 
