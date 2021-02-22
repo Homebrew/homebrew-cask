@@ -5,6 +5,7 @@ cask "camo-studio" do
   url "https://reincubate.com/res/labs/camo/Camo%20Studio%20#{version.before_comma}%20%28#{version.after_comma}%29%20%5BRelease%5D.app.zip"
   appcast "https://uds.reincubate.com/release-notes/camo/?format=sparkle"
   name "Camo Studio"
+  desc "Use your phone as a pro webcam to look amazing on video calls"
   homepage "https://reincubate.com/camo/"
 
   auto_updates true
