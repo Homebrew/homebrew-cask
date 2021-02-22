@@ -9,8 +9,9 @@ cask "azure-data-studio" do
   homepage "https://docs.microsoft.com/en-us/sql/azure-data-studio/"
 
   livecheck do
-    url "https://github.com/Microsoft/azuredatastudio/releases"
-    strategy :github_latest
+    url "https://azuredatastudio-update.azurewebsites.net/api/update/darwin/stable/VERSION"
+    strategy :page_match
+    regex(/"productVersion"\s*:\s*"(\d+(:?\.\d+)*)"/)
   end
 
   auto_updates true
