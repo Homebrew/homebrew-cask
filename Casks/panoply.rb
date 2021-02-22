@@ -5,6 +5,7 @@ cask "panoply" do
   url "https://www.giss.nasa.gov/tools/panoply/download/PanoplyMacOS-#{version}.dmg"
   appcast "https://www.giss.nasa.gov/tools/panoply/download/"
   name "Panoply netCDF, HDF and GRIB Data Viewer"
+  desc "Panoply plots geo-referenced and other arrays from netCDF, HDF, GRIB, and other datasets."
   homepage "https://www.giss.nasa.gov/tools/panoply/"
 
   app "Panoply.app"
