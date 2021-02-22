@@ -15,6 +15,18 @@ cask "camo-studio" do
   auto_updates true
 
   app "Camo Studio.app"
+  installer script: {
+    executable:   "#{staged_path}/Camo Studio.app/Contents/MacOS/Camo Studio",
+    args:         ["-install"],
+    sudo:         true,
+    must_succeed: false,
+  }
 
-  uninstall delete: "/Library/CoreMediaIO/Plug-Ins/DAL/ReincubateCamoDAL.plugin"
+  uninstall quit:   "com.reincubate.macos.cam",
+            script: {
+              executable:   "/Applications/Camo Studio.app/Contents/MacOS/Camo Studio",
+              args:         ["-uninstall"],
+              sudo:         true,
+              must_succeed: false, # necessary for now as sometimes will exit(9) even on success
+            }
 end
