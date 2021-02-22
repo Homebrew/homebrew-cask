@@ -18,9 +18,11 @@ cask "pock" do
   app "Pock.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.pigigaldi.pock.QLPockWidget",
     "~/Library/Application Support/Pock",
     "~/Library/Application Support/com.pigigaldi.pock",
     "~/Library/Caches/com.pigigaldi.pock",
+    "~/Library/Containers/com.pigigaldi.pock.QLPockWidget",
     "~/Library/Preferences/com.pigigaldi.pock.plist",
   ]
 end

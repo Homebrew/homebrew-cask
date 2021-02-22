@@ -33,6 +33,7 @@ cask "iterm2" do
     "~/Library/Application Support/iTerm2",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.googlecode.iterm2.sfl*",
     "~/Library/Caches/com.googlecode.iterm2",
+    "~/Library/Cookies/com.googlecode.iterm2.binarycookies",
     "~/Library/Preferences/com.googlecode.iterm2.plist",
     "~/Library/Saved Application State/com.googlecode.iterm2.savedState",
   ]
