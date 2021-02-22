@@ -1,0 +1,23 @@
+cask "infinity" do
+  version "1.0.0"
+  sha256 :no_check
+
+  url "https://startinfinity.com/downloads/Infinity_macOS.dmg"
+  name "Infinity"
+  desc "Customizable Work Management Platform"
+  homepage "https://startinfinity.com/"
+
+  depends_on macos: ">= :yosemite"
+
+  app "Infinity.app"
+
+  uninstall quit: [
+    "com.electron.infinity",
+  ]
+
+  zap trash: [
+    "~/Library/Application Support/Infinity",
+    "~/Library/Preferences/com.electron.infinity.plist",
+    "~/Library/Saved Application State/com.electron.infinity.savedState",
+  ]
+end
