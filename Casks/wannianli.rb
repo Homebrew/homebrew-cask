@@ -4,7 +4,7 @@ cask "wannianli" do
 
   url "https://github.com/zfdang/chinese-lunar-calendar-for-mac/releases/download/#{version}/WanNianLi.app-v#{version.no_hyphens}.zip"
   name "WanNianLi"
-  desc "Chinese Lunar Calendar Status Bar Widget"
+  desc "Chinese lunar calendar on the menu bar"
   homepage "https://github.com/zfdang/chinese-lunar-calendar-for-mac/"
 
   depends_on macos: ">= :el_capitan"
