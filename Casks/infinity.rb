@@ -4,10 +4,16 @@ cask "infinity" do
 
   url "https://startinfinity.com/downloads/Infinity_macOS.dmg"
   name "Infinity"
-  desc "Organize everything in one place"
+  desc "Customizable Work Management Platform"
   homepage "https://startinfinity.com/"
 
+  depends_on macos: ">= :yosemite"
+
   app "Infinity.app"
+
+  uninstall quit: [
+    "com.electron.infinity",
+  ]
 
   zap trash: [
     "~/Library/Application Support/Infinity",
