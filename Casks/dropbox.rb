@@ -10,7 +10,6 @@ cask "dropbox" do
   livecheck do
     url :url
     strategy :header_match
-    regex(/Dropbox%20(\d+(?:\.\d+)*)\.dmg/i)
   end
 
   auto_updates true
