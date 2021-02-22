@@ -7,11 +7,6 @@ cask "nault" do
   desc "Wallet for the Nano cryptocurrency with support for hardware wallets"
   homepage "https://github.com/Nault/Nault"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   app "Nault.app"
 
   zap trash: [
