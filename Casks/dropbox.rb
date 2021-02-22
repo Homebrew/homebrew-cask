@@ -7,6 +7,11 @@ cask "dropbox" do
   desc "Client for the Dropbox cloud storage service"
   homepage "https://www.dropbox.com/"
 
+  livecheck do
+    url :url
+    strategy :header_match
+  end
+
   auto_updates true
   conflicts_with cask: "homebrew/cask-versions/dropbox-beta"
 
