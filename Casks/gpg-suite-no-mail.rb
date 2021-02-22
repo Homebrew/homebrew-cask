@@ -4,6 +4,7 @@ cask "gpg-suite-no-mail" do
 
   url "https://releases.gpgtools.org/GPG_Suite-#{version}.dmg"
   name "GPG Suite (without GPG Mail)"
+  desc "Tools to protect your files"
   homepage "https://gpgtools.org/"
 
   livecheck do
