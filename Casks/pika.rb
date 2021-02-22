@@ -9,4 +9,10 @@ cask "pika" do
   homepage "https://superhighfives.com/pika"
 
   app "Pika.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.superhighfives.Pika-LaunchAtLoginHelper",
+    "~/Library/Containers/com.superhighfives.Pika-LaunchAtLoginHelper",
+    "~/Library/Preferences/com.superhighfives.Pika.plist",
+  ]
 end
