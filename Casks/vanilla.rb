@@ -11,4 +11,9 @@ cask "vanilla" do
   depends_on macos: ">= :sierra"
 
   app "Vanilla.app"
+
+  zap trash: [
+    "~/Library/Application Support/Vanilla",
+    "~/Library/Preferences/net.matthewpalmer.Vanilla.plist",
+  ]
 end
