@@ -4,7 +4,7 @@ cask "infinity" do
 
   url "https://startinfinity.com/downloads/Infinity_macOS.dmg"
   name "Infinity"
-  desc "Customizable Work Management Platform"
+  desc "Customizable work management platform"
   homepage "https://startinfinity.com/"
 
   depends_on macos: ">= :yosemite"
