@@ -10,7 +10,7 @@ cask "miniforge" do
       args:       ["-b", "-p", "#{caskroom_path}/base"],
     }
   else
-    sha256 "c73d84a842a0b56ee546e6d180515ed660394eb22ce61864f88bc3ddd0b034c7"
+    sha256 "6778b36e1a4f79fc28609019eb00719e5b4253fd4dc8dfd24d17882d378aea5a"
     url "https://github.com/conda-forge/miniforge/releases/download/#{version}/Miniforge3-#{version}-MacOSX-arm64.sh"
 
     installer script: {
