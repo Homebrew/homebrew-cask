@@ -10,7 +10,7 @@ cask "outline-manager" do
   homepage "https://www.getoutline.org/"
 
   app "Outline Manager.app"
-  
+
   zap trash: [
     "~/Library/Application Support/Outline Manager",
     "~/Library/Preferences/com.electron.outline-manager.plist",
