@@ -11,7 +11,7 @@ cask "figmadaemon" do
     strategy :sparkle
   end
 
- pkg "FigmaInstaller.pkg"
+  pkg "FigmaInstaller.pkg"
 
   zap trash: [
     "~/Library/Preferences/com.figma.FigmaDaemon.plist",
