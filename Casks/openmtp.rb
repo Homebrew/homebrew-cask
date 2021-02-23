@@ -1,6 +1,6 @@
 cask "openmtp" do
-  version "3.1.0"
-  sha256 "d2fa00c7f76ec35892c28e50b52c72c99acd6be02d72f7b2eb0a18022a3c6900"
+  version "3.1.5"
+  sha256 "a5b36531c586659ec3b0869c5a5f586b4cc12ddcd5b17dbaed49800721c02bf9"
 
   url "https://github.com/ganeshrvel/openmtp/releases/download/v#{version}/OpenMTP-#{version}-mac.zip",
       verified: "github.com/ganeshrvel/openmtp/"
