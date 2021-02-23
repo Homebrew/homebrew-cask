@@ -4,7 +4,7 @@ cask "camo-studio" do
 
   url "https://reincubate.com/res/labs/camo/Camo%20Studio%20#{version.before_comma}%20%28#{version.after_comma}%29%20%5BRelease%5D.app.zip"
   name "Camo Studio"
-  desc "Use your phone as a high-quality webcam with advanced controls, custom watermarks, Portrait mode, and more."
+  desc "Use your phone as a high-quality webcam with image tuning controls"
   homepage "https://reincubate.com/camo/"
 
   livecheck do
