@@ -10,8 +10,8 @@ cask "onionshare" do
   livecheck do
     url "https://onionshare.org/latest-version.txt"
     strategy :page_match do |page|
-      match = page.match(%r{(.*)}i)
-      "#{match[1]}"
+      match = page.match(/(.*)/i)
+      (match[1]).to_s
     end
   end
 
