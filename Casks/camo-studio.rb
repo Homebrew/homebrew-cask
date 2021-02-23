@@ -4,7 +4,7 @@ cask "camo-studio" do
 
   url "https://reincubate.com/res/labs/camo/Camo%20Studio%20#{version.before_comma}%20%28#{version.after_comma}%29%20%5BRelease%5D.app.zip"
   name "Camo Studio"
-  desc "Use your phone as a pro webcam to look amazing on video calls"
+  desc "Use your phone as a high-quality webcam with advanced controls, custom watermarks, Portrait mode, and more."
   homepage "https://reincubate.com/camo/"
 
   livecheck do
@@ -27,6 +27,6 @@ cask "camo-studio" do
               executable:   "/Applications/Camo Studio.app/Contents/MacOS/Camo Studio",
               args:         ["-uninstall"],
               sudo:         true,
-              must_succeed: false, # necessary for now as sometimes will exit(9) even on success
+              must_succeed: false, # necessary for now (see https://github.com/Homebrew/homebrew-cask/pull/100248)
             }
 end
