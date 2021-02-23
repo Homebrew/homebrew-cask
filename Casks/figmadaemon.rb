@@ -13,6 +13,8 @@ cask "figmadaemon" do
 
   pkg "FigmaInstaller.pkg"
 
+  uninstall launchctl: "com.figma.daemon"
+
   zap trash: [
     "~/Library/Preferences/com.figma.FigmaDaemon.plist",
     "~/Library/Caches/com.figma.FigmaDaemon",
