@@ -26,5 +26,5 @@ cask "blackhole-2ch" do
   end
 
   uninstall quit:    "com.apple.audio.AudioMIDISetup",
-            pkgutil: "audio.existential.BlackHole2ch"
+            pkgutil: "audio.existential.BlackHole"
 end
