@@ -8,7 +8,7 @@ cask "n1ghtshade" do
   desc "Permits the downgrade/jailbreak of 32-bit iOS devices"
   homepage "https://github.com/synackuk/n1ghtshade"
 
-  depends_on formula: [
+  depends_on formula: %w[
     "libimobiledevice",
     "libirecovery",
     "libplist",
