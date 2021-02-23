@@ -9,13 +9,13 @@ cask "n1ghtshade" do
   homepage "https://github.com/synackuk/n1ghtshade"
 
   depends_on formula: %w[
-    "libimobiledevice",
-    "libirecovery",
-    "libplist",
-    "libusb",
-    "libusbmuxd",
-    "libzip",
-    "openssl",
+    libimobiledevice
+    libirecovery
+    libplist
+    libusb
+    libusbmuxd
+    libzip
+    openssl
   ]
 
   app "n1ghtshade.app"
