@@ -1,5 +1,5 @@
 cask "zerotier-one" do
-  version "1.0,15"
+  version "1.6.4"
   sha256 :no_check
 
   url "https://download.zerotier.com/dist/ZeroTier%20One.pkg"
