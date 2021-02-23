@@ -9,4 +9,9 @@ cask "retro-virtual-machine" do
   homepage "https://www.retrovirtualmachine.org/en/"
 
   app "Retro Virtual Machine #{version.major}.app"
+
+  zap trash: [
+    "~/Library/Application Support/Retro Virtual Machine v2.x",
+    "~/Library/Preferences/com.madeinalacant.RetroVirtualMachine2.plist",
+  ]
 end
