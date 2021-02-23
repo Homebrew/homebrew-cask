@@ -17,4 +17,14 @@ cask "loopback" do
   depends_on macos: ">= :sierra"
 
   app "Loopback.app"
+
+  zap trash: [
+    "~/Library/Application Support/Loopback",
+    "~/Library/Caches/com.rogueamoeba.Loopback",
+    "~/Library/Caches/com.rogueamoeba.loopbackd",
+    "~/Library/LaunchAgents/com.rogueamoeba.loopbackd.plist",
+    "~/Library/Preferences/com.rogueamoeba.Loopback.plist",
+    "~/Library/Preferences/com.rogueamoeba.loopbackd.plist",
+    "~/Library/WebKit/com.rogueamoeba.Loopback",
+  ]
 end
