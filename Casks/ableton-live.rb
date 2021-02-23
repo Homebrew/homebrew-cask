@@ -1,6 +1,6 @@
 cask "ableton-live" do
-  version "10.1.30"
-  sha256 "4b3f6d3a74252f6a7e30871e56b43b7879c3e496e73a7b41d3de46b0d5a41e82"
+  version "11.0"
+  sha256 "ca7f0e0e0009ed450b8e6c23e16ef9f82461cf0dacac75cf076dbbef174e3aed"
 
   url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_trial_#{version}_64.dmg"
   appcast "https://www.ableton.com/en/release-notes/live-#{version.major}/"
@@ -9,7 +9,7 @@ cask "ableton-live" do
   homepage "https://www.ableton.com/en/live/"
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :high_sierra"
 
   app "Ableton Live #{version.major} Trial.app"
 
