@@ -1,17 +1,12 @@
 cask "onionshare" do
-  version "2.3"
-  sha256 "c5618e613d98cd95443156ed73416f4ddddcd37c824adb4b8301e23a4f16bfd3"
+  version "2.3.1"
+  sha256 "5de2cb81c87a13bc27cd71061c8c1a1f5dde25efe3e1f6b4ddb02ca0a343323f"
 
-  url "https://onionshare.org/dist/#{version}/OnionShare-#{version}.pkg"
+  url "https://onionshare.org/dist/#{version}/OnionShare-#{version}.dmg"
   appcast "https://github.com/micahflee/onionshare/releases.atom"
   name "OnionShare"
-  desc "Securely and anonymously send and receive files"
+  desc "Securely and anonymously share files, host websites, and chat with friends"
   homepage "https://onionshare.org/"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 
   app "OnionShare.app"
 end
