@@ -8,8 +8,6 @@ cask "n1ghtshade" do
   desc "Permits the downgrade/jailbreak of 32-bit iOS devices"
   homepage "https://github.com/synackuk/n1ghtshade"
 
-  app "n1ghtshade.app"
-  
   depends_on formula: [
     "libimobiledevice",
     "libirecovery",
@@ -19,6 +17,8 @@ cask "n1ghtshade" do
     "libzip",
     "openssl",
   ]
-  
-  zap trash: '~/Library/Application Support/n1ghtshade'
+
+  app "n1ghtshade.app"
+
+  zap trash: "~/Library/Application Support/n1ghtshade"
 end
