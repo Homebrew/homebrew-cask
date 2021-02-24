@@ -7,7 +7,7 @@ cask "mono-mdk" do
   name "Mono"
   homepage "https://www.mono-project.com/"
 
-  conflicts_with cask: "mono-mdk-for-visual-studio"
+  conflicts_with cask: "homebrew/cask-versions/mono-mdk-for-visual-studio"
 
   pkg "MonoFramework-MDK-#{version}.macos10.xamarin.universal.pkg"
 
