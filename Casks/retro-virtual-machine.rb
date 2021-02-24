@@ -11,7 +11,7 @@ cask "retro-virtual-machine" do
   app "Retro Virtual Machine #{version.major}.app"
 
   zap trash: [
-    "~/Library/Application Support/Retro Virtual Machine v2.x",
-    "~/Library/Preferences/com.madeinalacant.RetroVirtualMachine2.plist",
+    "~/Library/Application Support/Retro Virtual Machine v#{version.major}.x",
+    "~/Library/Preferences/com.madeinalacant.RetroVirtualMachine#{version.major}.plist",
   ]
 end
