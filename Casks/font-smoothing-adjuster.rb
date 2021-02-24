@@ -17,8 +17,8 @@ cask "font-smoothing-adjuster" do
   app "Font Smoothing Adjuster.app"
 
   zap trash: [
-    "~/Library/Preferences/com.bouncetechnologies.Font-Smoothing-Adjuster.plist",
     "~/Library/Application Support/com.bouncetechnologies.Font-Smoothing-Adjuster",
+    "~/Library/Preferences/com.bouncetechnologies.Font-Smoothing-Adjuster.plist",
     "~/Library/Saved Application State/com.bouncetechnologies.Font-Smoothing-Adjuster.savedState",
   ]
 end
