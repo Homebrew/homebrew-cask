@@ -4,8 +4,8 @@ cask "atomic-wallet" do
 
   url "https://get.atomicwallet.io/download/atomicwallet.dmg"
   name "Atomic Wallet"
-  desc "Manage your Bitcoin, Ethereum, XRP, Litecoin, XLM, and over 300 other coins and tokens."
-  homepage "https://atomicwallet.io"
+  desc "Manage Bitcoin, Ethereum, XRP, Litecoin, XLM and over 300 other coins and tokens"
+  homepage "https://atomicwallet.io/"
 
   app "Atomic Wallet.app"
 end
