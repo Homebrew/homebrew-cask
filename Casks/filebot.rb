@@ -1,6 +1,6 @@
 cask "filebot" do
   version "4.9.3"
-  sha256 "2c808fe67a63f23c70d110549f0f699546f46d2fa2d2e1b3ba959ac784413112"
+  sha256 "2c13319a87843c2a2627554d2d4227dcbdcbc51c1fe0f89a49393f405e131022"
 
   url "https://get.filebot.net/filebot/FileBot_#{version}/FileBot_#{version}.app.tar.xz"
   name "FileBot"
