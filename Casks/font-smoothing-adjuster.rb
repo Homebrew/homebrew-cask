@@ -4,10 +4,15 @@ cask "font-smoothing-adjuster" do
 
   url "https://font-smoothing-adjuster-updates.s3.eu-west-2.amazonaws.com/Font+Smoothing+Adjuster+#{version}.dmg",
       verified: "font-smoothing-adjuster-updates.s3.eu-west-2.amazonaws.com"
-  appcast "https://font-smoothing-adjuster-updates.s3.eu-west-2.amazonaws.com/appcast.xml"
   name "Font Smoothing Adjuster"
   desc "Re-enable the font smoothing controls"
   homepage "https://www.fontsmoothingadjuster.com/"
+
+  livecheck do
+    url "https://font-smoothing-adjuster-updates.s3.eu-west-2.amazonaws.com/appcast.xml"
+    strategy :page_match
+    regex(/Font%20Smoothing%20Adjuster%20(\d+(?:\.\d+)*)\.dmg/i)
+  end
 
   app "Font Smoothing Adjuster.app"
 
