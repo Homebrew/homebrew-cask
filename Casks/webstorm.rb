@@ -1,5 +1,4 @@
 cask "webstorm" do
-
   version "2020.3.2,203.7148.54"
 
   if Hardware::CPU.intel?
