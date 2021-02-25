@@ -5,7 +5,7 @@ cask "gitimoji" do
   url "https://github.com/lovetodream/gitimoji/releases/download/v#{version}/gitimoji.app.zip",
       verified: "https://github.com/"
   name "gitimoji"
-  desc "Gitmoji on your Mac"
+  desc "Gitmoji on your computer"
   homepage "https://timozacherl.com/apps/#/gitimoji"
 
   auto_updates false
