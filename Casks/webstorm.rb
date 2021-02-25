@@ -1,5 +1,5 @@
 cask "webstorm" do
-  
+
   version "2020.3.2,203.7148.54"
 
   if Hardware::CPU.intel?
@@ -9,7 +9,7 @@ cask "webstorm" do
     url "https://download.jetbrains.com/webstorm/WebStorm-#{version.before_comma}-aarch64.dmg"
     sha256 "4aa7a24e4a32c83b3d187c39d4e357ba59194f32baca6c66842c65ff1ce1fd0b"
   end
-  
+
   appcast "https://data.services.jetbrains.com/products/releases?code=WS&latest=true&type=release"
   name "WebStorm"
   desc "JavaScript IDE"
