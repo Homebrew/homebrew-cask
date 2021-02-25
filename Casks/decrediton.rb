@@ -6,7 +6,7 @@ cask "decrediton" do
   appcast "https://github.com/decred/decred-binaries/releases.atom"
   name "Decrediton"
   desc "Cross-platform GUI for decred written in node.js using Electron"
-  homepage "https://github.com/decred/decrediton"  
+  homepage "https://github.com/decred/decrediton"
 
   app "decrediton.app"
 end
