@@ -14,7 +14,7 @@ cask "rhinoceros" do
 
   auto_updates true
 
-  app "Rhinoceros.app"
+  app "Rhino #{version.major}.app"
 
   zap trash: [
     "~/Library/Preferences/com.mcneel.rhinoceros.plist",
