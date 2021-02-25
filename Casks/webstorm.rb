@@ -1,7 +1,7 @@
 cask "webstorm" do
   
-  version "2020.3.2,203.7148.54"  
-  
+  version "2020.3.2,203.7148.54"
+
   if Hardware::CPU.intel?
     url "https://download.jetbrains.com/webstorm/WebStorm-#{version.before_comma}.dmg"
     sha256 "2db0636018b8ab450e5f4fcd09c92115d422b150884dc0fdf4968efd8113d417"
