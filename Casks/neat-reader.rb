@@ -9,4 +9,11 @@ cask "neat-reader" do
   homepage "https://www.neat-reader.com/"
 
   app "NeatReader.app"
+
+  zap trash: [
+    "~/Library/Application Support/NeatReader",
+    "~/Library/Logs/NeatReader",
+    "~/Library/Preferences/com.reader.neat.plist",
+    "~/Library/Saved Application State/com.reader.neat.savedState",
+  ]
 end
