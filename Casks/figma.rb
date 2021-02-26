@@ -1,6 +1,6 @@
 cask "figma" do
-  version "93.4.0"
-  sha256 "85945f720ccfb93da3e0118a1605b5cfe7af1044e1cd6cff028914d26f978e25"
+  version "95.7.0"
+  sha256 "97ac619f54f30edfecbd876d4185927191cd16b1e4de64b577ba945c64bcce41"
 
   url "https://desktop.figma.com/mac/Figma-#{version}.zip"
   appcast "https://desktop.figma.com/mac/RELEASE.json"
