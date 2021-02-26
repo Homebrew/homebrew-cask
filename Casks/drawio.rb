@@ -1,5 +1,4 @@
 cask "drawio" do
-  
   if Hardware::CPU.intel?
     version "14.4.3"
     sha256 "ac050acca9c455dddea4e9221bef22bb8a838107ee39a43ac6f673df8799dcdb"
