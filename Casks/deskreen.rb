@@ -1,6 +1,6 @@
 cask "deskreen" do
-  version "1.0.8"
-  sha256 "83bc1e418fac9a9fbe2585807dc11f62e68a2242d3f68499b20f146a0791d3bf"
+  version "1.0.10"
+  sha256 "25373f4019a330701d08b595aa64d48732c724736343494ee8b3e7c079186a2b"
 
   url "https://github.com/pavlobu/deskreen/releases/download/v#{version}/Deskreen-#{version}.dmg",
       verified: "https://github.com/pavlobu/deskreen/"
