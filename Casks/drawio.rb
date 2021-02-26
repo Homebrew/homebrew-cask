@@ -1,6 +1,6 @@
 cask "drawio" do
   version "14.4.3"
-  
+
   if Hardware::CPU.intel?
     sha256 "ac050acca9c455dddea4e9221bef22bb8a838107ee39a43ac6f673df8799dcdb"
     url "https://github.com/jgraph/drawio-desktop/releases/download/v#{version}/draw.io-#{version}.dmg",
@@ -10,7 +10,7 @@ cask "drawio" do
     url "https://github.com/jgraph/drawio-desktop/releases/download/v#{version}/draw.io-arm64-#{version}.dmg",
         verified: "github.com/jgraph/drawio-desktop/"
   end
-  
+
   appcast "https://github.com/jgraph/drawio-desktop/releases.atom"
   name "draw.io Desktop"
   desc "Draw.io is free online diagram software"
