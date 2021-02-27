@@ -10,4 +10,12 @@ cask "nuage" do
   depends_on macos: ">= :big_sur"
 
   app "Nuage.app"
+
+  zap trash: [
+    "~/Library/Application Support/CrashReporter/Nuage*.plist",
+    "~/Library/Caches/ch.laurinbrandner.nuage",
+    "~/Library/Containers/ch.laurinbrandner.nuage",
+    "~/Library/Logs/DiagnosticReports/Nuage*.crash",
+    "~/Preferences/ch.laurinbrandner.nuage.plist",
+  ]
 end
