@@ -1,5 +1,5 @@
 cask "teamviewer" do
-  version "15.14.5"
+  version "15.15.5"
   sha256 :no_check
 
   url "https://download.teamviewer.com/download/TeamViewer.dmg"
@@ -11,7 +11,7 @@ cask "teamviewer" do
   auto_updates true
   conflicts_with cask: "teamviewer-host"
 
-  pkg "Install TeamViewer.pkg"
+  pkg "Install TeamViewer.app/Contents/Resources/Install TeamViewer.pkg"
 
   uninstall delete:    [
     "#{staged_path}/#{token}", # This Cask should be uninstalled manually.
