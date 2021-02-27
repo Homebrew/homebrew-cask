@@ -9,6 +9,11 @@ cask "drivethrurpg" do
   desc "Sync DriveThruRPG libraries to compatible devices"
   homepage "https://www.drivethrurpg.com/library_client.php"
 
+  livecheck do
+    url "https://www.drivethrurpg.com/library_client.php?os=Macintosh"
+    regex(/<b>Mac Client Version (.*)<\/b>/i)
+  end
+
   depends_on macos: ">= :high_sierra"
 
   app "DriveThruRPG.app"
