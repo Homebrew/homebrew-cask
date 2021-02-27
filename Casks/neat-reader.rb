@@ -8,6 +8,12 @@ cask "neat-reader" do
   desc "Read, annotate and manage ePub books"
   homepage "https://www.neat-reader.com/"
 
+  livecheck do
+    url "https://www.neat-reader.cn/downloads/mac"
+    strategy :page_match
+    regex(/NeatReader-(\d+(?:\.\d+)*)\.dmg/i)
+  end
+
   app "NeatReader.app"
 
   zap trash: [
