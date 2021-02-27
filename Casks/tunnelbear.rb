@@ -13,6 +13,8 @@ cask "tunnelbear" do
     strategy :sparkle
   end
 
+  auto_updates true
+
   app "TunnelBear.app"
 
   uninstall quit:      "com.tunnelbear.mac.TunnelBear",
@@ -20,16 +22,18 @@ cask "tunnelbear" do
             delete:    "/Library/PrivilegedHelperTools/com.tunnelbear.mac.tbeard"
 
   zap trash: [
-    "~/Library/Preferences/com.tunnelbear.mac.TunnelBear.plist",
-    "~/Library/Caches/com.tunnelbear.mac.TunnelBear",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tunnelbear.mac.tunnelbear.sfl*",
     "~/Library/Application Support/com.tunnelbear.mac.TunnelBear",
     "~/Library/Application Support/TunnelBear",
     "~/Library/Caches/com.crashlytics.data/com.tunnelbear.mac.TunnelBear",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.tunnelbear.mac.TunnelBear",
+    "~/Library/Caches/com.tunnelbear.mac.TunnelBear",
     "~/Library/Caches/io.fabric.sdk.mac.data/com.tunnelbear.mac.TunnelBear",
     "~/Library/Cookies/com.tunnelbear.mac.TunnelBear.binarycookies",
     "~/Library/LaunchAgents/com.tunnelbear.mac.tbeara.plist",
     "~/Library/Logs/TunnelBear",
+    "~/Library/Preferences/com.tunnelbear.mac.TunnelBear.plist",
+    "~/Library/Preferences/group.com.tunnelbear.main.DataContainer.plist",
+    "~/Library/WebKit/com.tunnelbear.mac.TunnelBear",
   ]
 end
