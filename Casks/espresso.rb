@@ -1,6 +1,6 @@
 cask "espresso" do
-  version "5.4.1"
-  sha256 "c28b93b6728869d47d2c277839079c1a1bbd88497d9ae0649800a50f51776072"
+  version "5.6.1"
+  sha256 "f9f044493de83b0d4aebe3ecc9f3b28322563434fbb474739417540728c09bca"
 
   url "https://downloads.kangacode.com/Espresso/Espresso_#{version}.zip",
       verified: "downloads.kangacode.com/"
@@ -14,7 +14,7 @@ cask "espresso" do
     regex(%r{href=.*?/Espresso_(\d+(?:\.\d+)*)\.zip}i)
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "Espresso.app"
 end
