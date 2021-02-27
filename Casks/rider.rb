@@ -5,7 +5,7 @@ cask "rider" do
   url "https://download.jetbrains.com/rider/JetBrains.Rider-#{version.before_comma}.dmg"
   appcast "https://data.services.jetbrains.com/products/releases?code=RD&latest=true&type=release"
   name "Jetbrains Rider"
-  desc "Cross-Platform .NET IDE from JetBrains"
+  desc "Cross-Platform .NET IDE"
   homepage "https://www.jetbrains.com/rider/"
 
   auto_updates true
