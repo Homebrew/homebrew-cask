@@ -1,4 +1,4 @@
-cask "rhinoceros" do
+cask "rhino" do
   version "7.3.21053.23032"
   sha256 "b37fb6e9765fcb9e8d215eaad019b6bfb572aef7a6301d5dc876adc84e90e335"
 
