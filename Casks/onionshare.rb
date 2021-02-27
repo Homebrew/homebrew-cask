@@ -9,10 +9,7 @@ cask "onionshare" do
 
   livecheck do
     url "https://onionshare.org/latest-version.txt"
-    strategy :page_match do |page|
-      match = page.match(/(.*)/i)
-      (match[1]).to_s
-    end
+    regex(/(\d+(?:\.\d+)*)/)
   end
 
   app "OnionShare.app"
