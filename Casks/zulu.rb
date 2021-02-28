@@ -20,7 +20,7 @@ cask "zulu" do
     url "https://api.azul.com/zulu/download/community/v1.0/bundles/latest/?jdk_version=#{version.major}&ext=dmg&os=macos"
     strategy :page_match do |page|
       match = page.match(%r{url"\s*:\s*"https:.*?/zulu(\d+(?:\.\d+)*-.*?)-jdk(\d+(?:\.\d+)*)-macos}i)
-      "#{match[1]},#{match[0]}"
+      "#{match[2]},#{match[1]}"
     end
   end
 
