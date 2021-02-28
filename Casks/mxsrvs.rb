@@ -5,7 +5,7 @@ cask "mxsrvs" do
   url "https://api.moeclub.org/GoogleDrive/1dAv4vjbNSVgy2cuaICP2QDq-iXex0JJD/MxSrvs_#{version}.dmg",
       verified: "api.moeclub.org/GoogleDrive/"
   name "MxSrvs"
-  desc "Free ANMP(Apache, Nginx, MySQL, PHP) ingintegrated development environment"
+  desc "ANMP (Apache, Nginx, MySQL, PHP) ingintegrated development environment"
   homepage "http://www.xsrvs.com/"
 
   pkg "MxSrvs-#{version}.pkg"
