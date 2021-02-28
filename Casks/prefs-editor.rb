@@ -13,6 +13,7 @@ cask "prefs-editor" do
   end
 
   auto_updates true
+
   app "Prefs Editor.app"
 
   zap trash: [
