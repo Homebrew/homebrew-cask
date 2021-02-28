@@ -4,10 +4,14 @@ cask "drivethrurpg" do
 
   url "https://dtrpg-library-app.s3.us-east-2.amazonaws.com/DriveThruRPG.dmg",
       verified: "dtrpg-library-app.s3.us-east-2.amazonaws.com/"
-  appcast "https://www.drivethrurpg.com/library_client.php?os=Macintosh"
   name "DriveThruRPG Library App"
   desc "Sync DriveThruRPG libraries to compatible devices"
   homepage "https://www.drivethrurpg.com/library_client.php"
+
+  livecheck do
+    url "https://www.drivethrurpg.com/library_client.php?os=Macintosh"
+    regex(%r{href=.*?/DriveThruRPG_v?(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   depends_on macos: ">= :high_sierra"
 
