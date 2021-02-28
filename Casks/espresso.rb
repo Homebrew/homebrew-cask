@@ -11,7 +11,7 @@ cask "espresso" do
   livecheck do
     url "https://espressoapp.com/updates/"
     strategy :page_match
-    regex(%r{href=.*?/Espresso_(\d+(?:\.\d+)*)\.zip}i)
+    regex(/data-title="(\d+(?:\.\d+)*)"/i)
   end
 
   depends_on macos: ">= :high_sierra"
