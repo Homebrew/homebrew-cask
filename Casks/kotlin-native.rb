@@ -1,8 +1,8 @@
 cask "kotlin-native" do
-  version "1.4.30"
-  sha256 "bf2c7b6246ad5f0d793c579e8ca075b79640a7dd96351857f882a01c830d35cf"
+  version "1.4.31"
+  sha256 "0e351756b382096204d61456f855480ce6b65ac53897c4bfa78a287895f37e32"
 
-  url "https://github.com/JetBrains/kotlin/releases/download/v#{version}/kotlin-native-prebuilt-macos-#{version}.tar.gz",
+  url "https://github.com/JetBrains/kotlin/releases/download/v#{version}/kotlin-native-macos-#{version}.tar.gz",
       verified: "github.com/JetBrains/kotlin/"
   name "Kotlin Native"
   desc "LLVM backend for Kotlin"
@@ -16,15 +16,15 @@ cask "kotlin-native" do
 
   conflicts_with formula: "kotlin"
 
-  binary "kotlin-native-prebuilt-macos-#{version}/bin/cinterop"
-  binary "kotlin-native-prebuilt-macos-#{version}/bin/generate-platform"
-  binary "kotlin-native-prebuilt-macos-#{version}/bin/jsinterop"
-  binary "kotlin-native-prebuilt-macos-#{version}/bin/klib"
-  binary "kotlin-native-prebuilt-macos-#{version}/bin/konan-lldb"
-  binary "kotlin-native-prebuilt-macos-#{version}/bin/konanc"
-  binary "kotlin-native-prebuilt-macos-#{version}/bin/kotlinc"
-  binary "kotlin-native-prebuilt-macos-#{version}/bin/kotlinc-native"
-  binary "kotlin-native-prebuilt-macos-#{version}/bin/run_konan"
+  binary "kotlin-native-macos-#{version}/bin/cinterop"
+  binary "kotlin-native-macos-#{version}/bin/generate-platform"
+  binary "kotlin-native-macos-#{version}/bin/jsinterop"
+  binary "kotlin-native-macos-#{version}/bin/klib"
+  binary "kotlin-native-macos-#{version}/bin/konan-lldb"
+  binary "kotlin-native-macos-#{version}/bin/konanc"
+  binary "kotlin-native-macos-#{version}/bin/kotlinc"
+  binary "kotlin-native-macos-#{version}/bin/kotlinc-native"
+  binary "kotlin-native-macos-#{version}/bin/run_konan"
 
   caveats do
     depends_on_java "6+"
