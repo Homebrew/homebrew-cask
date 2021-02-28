@@ -1,5 +1,5 @@
 cask "drivethrurpg" do
-  version "3.0.0.7"
+  version "3.0.1.3"
   sha256 :no_check
 
   url "https://dtrpg-library-app.s3.us-east-2.amazonaws.com/DriveThruRPG.dmg",
