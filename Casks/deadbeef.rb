@@ -1,6 +1,6 @@
 cask "deadbeef" do
-  version "1.8.6-rc1"
-  sha256 "65f98d1f9a3d6c558712b52abaeaba9092268d88cdf570b8453ba292fba24913"
+  version "1.8.7-rc2"
+  sha256 "a3e47db1b24c682a7e303d763d2e7da7bc514cf7ba5c335fe6427c77e3549aac"
 
   url "https://downloads.sourceforge.net/deadbeef/travis/osx/#{version.major_minor}/deadbeef-#{version}-osx-x86_64.zip",
       verified: "downloads.sourceforge.net/deadbeef/"
