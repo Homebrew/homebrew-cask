@@ -8,4 +8,8 @@ cask "atomic-wallet" do
   homepage "https://atomicwallet.io/"
 
   app "Atomic Wallet.app"
+
+  zap trash: [
+    "~/Library/Application Support/atomic",
+  ]
 end
