@@ -9,4 +9,9 @@ cask "banksiagui" do
   homepage "https://banksiagui.com/"
 
   app "BanksiaGui.app"
+
+  zap trash: [
+    "~/Library/Preferences/softgaroo.banksia.plist",
+    "~/Library/Saved Application State/softgaroo.banksia.savedState",
+  ]
 end
