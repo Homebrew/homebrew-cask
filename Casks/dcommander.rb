@@ -1,5 +1,5 @@
 cask "dcommander" do
-  version "3.8.9.1"
+  version "3.9.0"
   sha256 :no_check
 
   url "https://devstorm-apps.com/dc/download.php"
