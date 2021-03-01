@@ -1,6 +1,6 @@
 cask "xmind-zen" do
-  version "10.3.0-202012160502"
-  sha256 "f13405f9e0496de93cfa01c1e48576e34ab47dd43a7875fe2572f565d7a8b928"
+  version "10.3.1-202101070049"
+  sha256 "44147f844524fd1dd9fcbfda322cd7877325c1a791aac491e583ce6d9e62f330"
 
   url "https://www.xmind.net/xmind/downloads/XMind-2020-for-macOS-#{version}.dmg"
   appcast "https://www.xmind.net/download/"
