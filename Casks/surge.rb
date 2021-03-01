@@ -2,7 +2,7 @@ cask "surge" do
   version "4.0.5-1262-db70f680cd0f15236c8415ec7b804c3a"
   sha256 "3773f0468cabb0dc58823a968fb438196b256bc459803053957c8fe45a7ee310"
 
-  url "https://www.nssurge.com/mac/v#{version.major}/Surge-#{version}.zip"
+  url "https://dl.nssurge.com/mac/v#{version.major}/Surge-#{version}.zip"
   appcast "https://www.nssurge.com/mac/v#{version.major}/appcast-signed.xml"
   name "Surge"
   desc "Network toolbox"
