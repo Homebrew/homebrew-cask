@@ -7,7 +7,7 @@ cask "airtool" do
   homepage "https://www.intuitibits.com/products/airtool/"
 
   livecheck do
-    url "https://www.intuitibits.com/appcasts/com.intuitibits.airtool2cast.xml"
+    url "https://www.intuitibits.com/appcasts/com.intuitibits.airtool#{version.major}cast.xml"
     strategy :sparkle
   end
 
@@ -16,14 +16,14 @@ cask "airtool" do
   pkg "Airtool_#{version.before_comma}.pkg"
 
   uninstall_preflight do
-    set_ownership "/Library/Application Support/Airtool 2"
+    set_ownership "/Library/Application Support/Airtool #{version.major}"
   end
 
   uninstall pkgutil:    [
     "com.intuitibits.airtool-helper.pkg",
-    "com.intuitibits.airtool2.pkg",
+    "com.intuitibits.airtool#{version.major}.pkg",
   ],
-            launchctl:  "com.intuitibits.airtool2.airtool-bpf",
+            launchctl:  "com.intuitibits.airtool#{version.major}.airtool-bpf",
             login_item: "Airtool",
-            delete:     "/Library/Application Support/Airtool 2"
+            delete:     "/Library/Application Support/Airtool #{version.major}"
 end
