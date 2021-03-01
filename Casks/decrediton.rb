@@ -5,7 +5,7 @@ cask "decrediton" do
   url "https://github.com/decred/decred-binaries/releases/download/v#{version}/decrediton-v#{version}.dmg"
   appcast "https://github.com/decred/decred-binaries/releases.atom"
   name "Decrediton"
-  desc "Cross-platform GUI for decred written in node.js using Electron"
+  desc "Wallet GUI for decred autonomous digital currency"
   homepage "https://github.com/decred/decrediton"
 
   app "decrediton.app"
