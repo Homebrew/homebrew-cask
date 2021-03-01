@@ -1,6 +1,6 @@
 cask "lumen" do
-  version "1.2.1"
-  sha256 "7cce777641580c53b1b3dea9a90ba361e15f2cc9fce99bc9a6e66770596b4f5a"
+  version "1.2.2"
+  sha256 "608321c996b736b931b9048c85268bc95ec96ebeb40d329cd73656daac4cb440"
 
   url "https://github.com/anishathalye/lumen/releases/download/v#{version}/Lumen.zip"
   appcast "https://github.com/anishathalye/lumen/releases.atom"

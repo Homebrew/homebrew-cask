@@ -1,6 +1,6 @@
 cask "sublercli" do
-  version "0.32"
-  sha256 "e5e99fb67944acffff9df5c6bf0a66805a7c696fb41df8a81fbfaf0068ce4c26"
+  version "1.5.1"
+  sha256 "30776e73cc51b858b1ff3efa7b4d4eae78832986b9147de2de6effada7e9ef14"
 
   url "https://bitbucket.org/galad87/sublercli/downloads/SublerCLI-#{version}.zip"
   name "SublerCLI"

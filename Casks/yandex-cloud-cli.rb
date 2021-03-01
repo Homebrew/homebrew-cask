@@ -2,8 +2,8 @@ cask "yandex-cloud-cli" do
   version :latest
   sha256 :no_check
 
-  # yandexcloud.net/yandexcloud-yc/ was verified as official when first introduced to the cask
-  url "https://storage.yandexcloud.net/yandexcloud-yc/install.sh"
+  url "https://storage.yandexcloud.net/yandexcloud-yc/install.sh",
+      verified: "yandexcloud.net/yandexcloud-yc/"
   name "Yandex Cloud CLI"
   homepage "https://cloud.yandex.com/docs/cli/"
 

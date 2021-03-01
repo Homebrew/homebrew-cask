@@ -1,9 +1,9 @@
 cask "bonitastudiocommunity" do
-  version "7.11.4"
-  sha256 "d6c5058ac110c462932819f2330cdcb64a3812cae56ba10527d760ed735313d2"
+  version "2021.1"
+  sha256 "46e42b4c902922c103fdc465f8595115640b4a8a611ed506f9f2e978794a2308"
 
-  # github.com/bonitasoft/bonita-platform-releases was verified as official when first introduced to the cask
-  url "https://github.com/bonitasoft/bonita-platform-releases/releases/download/#{version}/BonitaStudioCommunity-#{version}-x86_64.dmg"
+  url "https://github.com/bonitasoft/bonita-platform-releases/releases/download/#{version}/BonitaStudioCommunity-#{version}-x86_64.dmg",
+      verified: "github.com/bonitasoft/bonita-platform-releases/"
   appcast "https://www.bonitasoft.com/downloads",
           must_contain: version.major_minor
   name "Bonita Studio Community Edition"

@@ -1,13 +1,20 @@
 cask "mmhmm" do
-  version "2.13.4,1"
-  sha256 :no_check
+  version "1.2.0,1614237000"
+  sha256 "6396c80feda382a5b2a43290e59f767782a1a0598de0bf201712ecbf0cfc841b"
 
-  url "https://updates.mmhmm.app/mac/mmhmm.pkg"
+  url "https://updates.mmhmm.app/mac/production/mmhmm_#{version.before_comma}.zip"
   name "mmhmm"
   desc "Virtual video presentation software"
   homepage "https://www.mmhmm.app/"
 
-  pkg "mmhmm.pkg"
+  livecheck do
+    url "https://updates.mmhmm.app/mac/production/sparkle.xml"
+    strategy :sparkle
+  end
+
+  depends_on macos: ">= :mojave"
+
+  app "mmhmm.app"
 
   uninstall pkgutil:   "app.mmhmm.app",
             quit:      "app.mmhmm.app",

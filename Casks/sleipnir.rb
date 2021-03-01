@@ -1,11 +1,15 @@
 cask "sleipnir" do
-  version "4.6.6"
-  sha256 "fe2906b890886e757207340ea3ede318a255f7ca9a0f4d5f6bac7c8ac87d2330"
+  version "4.6.6,4.6.6004"
+  sha256 :no_check
 
   url "https://www.fenrir-inc.com/services/download.php?file=Sleipnir.dmg"
-  appcast "https://update.fenrir.co.jp/smartupdate/mac/sleipnir/appcast.xml"
   name "Sleipnir"
   homepage "https://www.fenrir-inc.com/jp/sleipnir/"
+
+  livecheck do
+    url "https://update.fenrir.co.jp/smartupdate/mac/sleipnir/appcast.xml"
+    strategy :sparkle
+  end
 
   app "Sleipnir.app"
 end

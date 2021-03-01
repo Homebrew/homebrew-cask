@@ -1,6 +1,6 @@
 cask "ksnip" do
-  version "1.7.3"
-  sha256 "df78187476c7d26e7551785d34b4050a51cdcfa2f781d1ce60f44b24702ba91f"
+  version "1.8.1"
+  sha256 "5900023835668cac169ddc9ec5cea8aca44ecc4611dbca068e04a6d879feccf5"
 
   url "https://github.com/ksnip/ksnip/releases/download/v#{version}/ksnip-#{version}.dmg"
   appcast "https://github.com/ksnip/ksnip/releases.atom"

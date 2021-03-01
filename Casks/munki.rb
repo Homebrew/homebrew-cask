@@ -1,13 +1,17 @@
 cask "munki" do
-  version "5.0.1.4059"
-  sha256 "2f638ee7aebdee58ddc721c8203a12e16f6bdc49e94c31514d581c5961c78c5e"
+  version "5.2.2.4287"
+  sha256 "b03611a201134b1e2fc3c630eed0e1ae2472579ee4a30ede75ffef18ec7e879c"
 
-  # github.com/munki/munki/ was verified as official when first introduced to the cask
-  url "https://github.com/munki/munki/releases/download/v#{version.major_minor_patch}/munkitools-#{version}.pkg"
-  appcast "https://github.com/munki/munki/releases.atom",
-          must_contain: version.major_minor_patch
+  url "https://github.com/munki/munki/releases/download/v#{version.major_minor_patch}/munkitools-#{version}.pkg",
+      verified: "github.com/munki/munki/"
   name "Munki"
   homepage "https://www.munki.org/munki/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+    regex(%r{href=.*?/munkitools-(\d+(?:\.\d+)*)\.pkg}i)
+  end
 
   pkg "munkitools-#{version}.pkg"
 

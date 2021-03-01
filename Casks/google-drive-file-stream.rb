@@ -1,40 +1,29 @@
 cask "google-drive-file-stream" do
-  version :latest
+  version "44.0.14.1" # So it triggers an upgrade for users of the cask
   sha256 :no_check
 
-  url "https://dl.google.com/drive-file-stream/GoogleDriveFileStream.dmg"
+  url "https://dl.google.com/drive-file-stream/GoogleDrive.dmg"
   name "Google Drive File Stream"
+  desc "Client for the Google Drive storage service"
   homepage "https://www.google.com/drive/"
 
-  depends_on macos: ">= :el_capitan"
+  depends_on cask: "google-drive"
 
-  pkg "GoogleDriveFileStream.pkg"
+  stage_only true
 
-  uninstall login_item: "Google Drive File Stream",
-            quit:       "com.google.drivefs",
-            pkgutil:    [
-              "com.google.drivefs",
-              "com.google.drivefs.shortcuts",
-              "com.google.pkg.Keystone",
-            ],
-            launchctl:  [
-              "com.google.keystone.agent",
-              "com.google.keystone.system.agent",
-              "com.google.keystone.daemon",
-              "com.google.keystone.xpcservice",
-              "com.google.keystone.system.xpcservice",
-            ]
-
-  zap trash: [
-    "~/Library/Application Support/Google/DriveFS",
-    "~/Library/Caches/com.google.drivefs",
-    "~/Library/Preferences/Google Drive File Stream Helper.plist",
-    "~/Library/Preferences/com.google.drivefs.plist",
-  ]
+  uninstall login_item: "Google Drive File Stream"
 
   caveats <<~EOS
-    Although #{token} may be installed alongside Google Backup and Sync, you should not use the same account with both.
+    RENAME WARNING
 
-      https://support.google.com/a/answer/7496409#allowboth
+    `#{cask}` will be renamed `google-drive`.
+    In the meantime, `#{cask}` will install `google-drive` for you as a dependency, but you should update your scripts.
+
+    We’re aware this solution is subpar. If you’d like to help us improve it,
+    we accept PRs and need the equivalent of formula_renames.json for casks: https://docs.brew.sh/Rename-A-Formula
+
+    To migrate now, do:
+      brew uninstall #{cask}
+      brew install google-drive
   EOS
 end

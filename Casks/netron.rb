@@ -1,12 +1,17 @@
 cask "netron" do
-  version "4.6.5"
-  sha256 "2a1886cc8b5ae1e8a76ba022edf0b9ae77d1e3836a368e83aef7328c26f06621"
+  version "4.8.0"
+  sha256 "3c600da16baa1ae98dfe892a3a651fbe3969f2d141b357d5aaa402ab291403ca"
 
   url "https://github.com/lutzroeder/netron/releases/download/v#{version}/Netron-#{version}-mac.zip"
-  appcast "https://github.com/lutzroeder/netron/releases.atom"
   name "Netron"
   desc "Visualizer for neural network, deep learning, and machine learning models"
   homepage "https://github.com/lutzroeder/netron"
+
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^v(\d+(?:\.\d+)*)$/)
+  end
 
   auto_updates true
 

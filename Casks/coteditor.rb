@@ -2,14 +2,19 @@ cask "coteditor" do
   if MacOS.version <= :yosemite
     version "3.2.8"
     sha256 "73dd20d27b75c7b0c46242a465adb3df5b5f0b901f42c5a9a85777a57c4a17d6"
+  elsif MacOS.version <= :el_capitan
+    version "3.5.4"
+    sha256 "0b2cbf38cc531268e3691f307445e05ae5da64b48ceaf86c4d16b993c9be3e9f"
+  elsif MacOS.version <= :mojave
+    version "3.9.7"
+    sha256 "be34d4f800e73cc8363d8b83e1b257a06176dc85d345d680149b108f51686cf2"
   else
     version "4.0.1"
     sha256 "879fa6ef8199c10c8b42b6adaa4a528b41295b97457c7e06fd1a412f65f0ffb9"
   end
 
-  # github.com/coteditor/CotEditor/ was verified as official when first introduced to the cask
-  url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
-  appcast "https://github.com/coteditor/CotEditor/releases.atom"
+  url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg",
+      verified: "github.com/coteditor/CotEditor/"
   name "CotEditor"
   desc "Plain-text editor for web pages, program source codes and more"
   homepage "https://coteditor.com/"

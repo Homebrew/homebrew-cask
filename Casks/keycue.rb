@@ -1,14 +1,17 @@
 cask "keycue" do
-  version "9.8"
-  sha256 "b430daa5f4922007c233541818fe75a31d0c2cc34a538ded95726f93530a3b85"
+  version "9.9"
+  sha256 "86c2d48a659046d1c5934b386d0f5c7e75b68d0a2a65e73a3a4705543be261ad"
 
   url "https://www.ergonis.com/downloads/products/keycue/KeyCue#{version.no_dots}-Install.dmg",
       user_agent: :fake
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.ergonis.com/downloads/keycue-install.dmg",
-          must_contain: version.no_dots
   name "KeyCue"
   desc "Finds, learns and remembers keyboard shortcuts"
   homepage "https://www.ergonis.com/products/keycue/"
+
+  livecheck do
+    url "https://www.ergonis.com/products/keycue/history.html"
+    regex(/<h\d>\s*?KeyCue\s+?v?(\d+(?:\.\d+)+)/i)
+  end
 
   app "KeyCue.app"
 

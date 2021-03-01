@@ -2,7 +2,6 @@ cask "disk-arbitrator" do
   version "0.8.0"
   sha256 "4dd2467c4a3a896ae0267087fe11df7bfc9d98c9f1bc049f401b58a59fca8533"
 
-  # kainjow.com/ was verified as official when first introduced to the cask
   url "https://github.com/aburgh/Disk-Arbitrator/releases/download/v#{version}/Disk.Arbitrator-#{version.major_minor}.dmg"
   appcast "https://github.com/aburgh/Disk-Arbitrator/releases.atom"
   name "Disk Arbitrator"

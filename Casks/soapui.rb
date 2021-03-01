@@ -2,8 +2,8 @@ cask "soapui" do
   version "5.6.0"
   sha256 "1cada0b5f237856d6e23253b54a0aca321f60cabfd3e4c7ab97b519c4c616eb8"
 
-  # s3.amazonaws.com/downloads.eviware/soapuios/ was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/downloads.eviware/soapuios/#{version}/SoapUI-#{version}.dmg"
+  url "https://s3.amazonaws.com/downloads.eviware/soapuios/#{version}/SoapUI-#{version}.dmg",
+      verified: "s3.amazonaws.com/downloads.eviware/soapuios/"
   name "SmartBear SoapUI"
   homepage "https://www.soapui.org/"
 

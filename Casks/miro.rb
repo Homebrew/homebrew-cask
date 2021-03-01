@@ -1,5 +1,5 @@
 cask "miro" do
-  version "0.4.6"
+  version "0.4.9"
   sha256 :no_check
 
   url "https://desktop.miro.com/platforms/darwin/Miro.dmg"

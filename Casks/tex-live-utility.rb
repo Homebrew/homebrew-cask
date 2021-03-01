@@ -1,12 +1,16 @@
 cask "tex-live-utility" do
-  version "1.36"
-  sha256 "893ecc7d05b06e62a602399e59a4b433c787438e5921cf05c406efece057c7d4"
+  version "1.47"
+  sha256 "20eea6c96d6ee9282d99e1842a37663ae9546c1ebde6931ddf25eed58794b342"
 
   url "https://github.com/amaxwell/tlutility/releases/download/#{version}/TeX.Live.Utility.app-#{version}.dmg"
-  appcast "https://github.com/amaxwell/tlutility/releases.atom"
   name "TeX Live Utility"
   desc "Graphical user interface for TeX Live Manager"
   homepage "https://github.com/amaxwell/tlutility"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
 

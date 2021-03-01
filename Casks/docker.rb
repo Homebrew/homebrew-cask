@@ -3,17 +3,21 @@ cask "docker" do
     version "18.06.1-ce-mac73,26764"
     sha256 "3429eac38cf0d198039ad6e1adce0016f642cdb914a34c67ce40f069cdb047a5"
   else
-    version "2.5.0.1,49550"
-    sha256 "144eebacfb6815aa2a39987f778bdac31096008dbc034deee5f0903cbb62e266"
+    version "3.1.0,51484"
+    sha256 "9e68684d7d19de90034630ec2127a5d49138dc314857059fa75a99687be2b6b8"
   end
 
   url "https://desktop.docker.com/mac/stable/#{version.after_comma}/Docker.dmg"
-  appcast "https://desktop.docker.com/mac/stable/appcast.xml"
   name "Docker Desktop"
   name "Docker Community Edition"
   name "Docker CE"
   desc "App to build and share containerized applications and microservices"
   homepage "https://www.docker.com/products/docker-desktop"
+
+  livecheck do
+    url "https://desktop.docker.com/mac/stable/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 

@@ -1,5 +1,5 @@
 cask "zoom-outlook-plugin" do
-  version :latest
+  version "5.4.59712,2020.12.17"
   sha256 :no_check
 
   url "https://zoom.us/client/latest/ZoomMacOutlookPlugin.pkg"

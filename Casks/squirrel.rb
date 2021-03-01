@@ -1,12 +1,17 @@
 cask "squirrel" do
-  version "0.14.0"
-  sha256 "e7bc74ed1f0447a48b8c86f3685d8c6d0640d39895e6e4550488beeb4f870926"
+  version "0.15.2"
+  sha256 "91c3c7506e7225d793b8d1d77d65713f81ead65153bb3f1bdd69f9445c0ac9f6"
 
-  # dl.bintray.com/rime/squirrel/ was verified as official when first introduced to the cask
-  url "https://dl.bintray.com/rime/squirrel/Squirrel-#{version}.zip"
-  appcast "https://rime.im/release/squirrel/appcast.xml"
+  url "https://dl.bintray.com/rime/squirrel/Squirrel-#{version}.zip",
+      verified: "dl.bintray.com/rime/squirrel/"
   name "Squirrel"
+  desc "Rime input method engine"
   homepage "https://rime.im/"
+
+  livecheck do
+    url "https://rime.im/release/squirrel/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 

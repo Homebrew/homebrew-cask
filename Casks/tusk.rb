@@ -2,8 +2,8 @@ cask "tusk" do
   version "0.23.0"
   sha256 "859bf10e072e2446adeac86e4699e64b8f869f7b6738d07f5f54a1e112245238"
 
-  # github.com/klaussinani/tusk/ was verified as official when first introduced to the cask
-  url "https://github.com/klaussinani/tusk/releases/download/v#{version}/Tusk-#{version}.dmg"
+  url "https://github.com/klaussinani/tusk/releases/download/v#{version}/Tusk-#{version}.dmg",
+      verified: "github.com/klaussinani/tusk/"
   appcast "https://github.com/klaussinani/tusk/releases.atom"
   name "Tusk"
   desc "Refined Evernote desktop app"

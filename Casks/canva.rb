@@ -1,6 +1,6 @@
 cask "canva" do
-  version "1.12.0"
-  sha256 "1e39c4af33efcccebeb3f0cf395f4b9c8700eb73ace91fca55aa6228620bb944"
+  version "1.16.0"
+  sha256 "5f55a3439dc40c258caf84454f2a207d7da4674fb9206fd5a5a621417d54e399"
 
   url "https://desktop-release.canva-deploy.com/Canva-#{version}.dmg",
       verified: "desktop-release.canva-deploy.com/"
@@ -8,6 +8,8 @@ cask "canva" do
   name "Canva"
   desc "Design tool"
   homepage "https://www.canva.com/"
+
+  auto_updates true
 
   app "Canva.app"
 

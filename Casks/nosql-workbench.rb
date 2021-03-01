@@ -1,9 +1,9 @@
 cask "nosql-workbench" do
-  version "2.1.0"
-  sha256 "c3aa1b994f825a3929c0f474e1cfeb092263b9ea3fc735409835e9e8d238df65"
+  version "2.2.0"
+  sha256 "7391d63e64a207024ebfa4ce001042984c6edb6a0bd70c7b3b370dc55e6e2a20"
 
-  # s3.amazonaws.com/nosql-workbench/ was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/nosql-workbench/NoSQL%20Workbench-mac-#{version}.dmg"
+  url "https://s3.amazonaws.com/nosql-workbench/NoSQL%20Workbench-mac-#{version}.dmg",
+      verified: "s3.amazonaws.com/nosql-workbench/"
   appcast "https://nosql-workbench.s3.amazonaws.com/latest-mac.yml"
   name "NoSQL Workbench"
   desc "Client-side GUI application for modern database development and operations"

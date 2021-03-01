@@ -1,5 +1,5 @@
 cask "resxtreme" do
-  version "1.0.1"
+  version "1.0.1,6"
   sha256 :no_check
 
   url "http://resxtreme.com/download/ResXtreme.zip"

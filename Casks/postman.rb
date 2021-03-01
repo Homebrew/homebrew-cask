@@ -1,13 +1,17 @@
 cask "postman" do
-  version "7.36.0"
-  sha256 "b22b2e737bf3fa64ba81d2dca08d1363a69b1445d0a5b7781b7a681ca53feb08"
+  version "8.0.6"
+  sha256 "2d9df1d6e12826cd2932abce4bb896b0ab588b9c95f6cfa71b1f58d0b70df19c"
 
-  # dl.pstmn.io/download/version/ was verified as official when first introduced to the cask
-  url "https://dl.pstmn.io/download/version/#{version}/osx64"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=https://dl.pstmn.io/download/latest/osx"
+  url "https://dl.pstmn.io/download/version/#{version}/osx64",
+      verified: "dl.pstmn.io/download/version/"
   name "Postman"
   desc "Collaboration platform for API development"
   homepage "https://www.postman.com/"
+
+  livecheck do
+    url "https://dl.pstmn.io/download/latest/osx"
+    strategy :header_match
+  end
 
   auto_updates true
 

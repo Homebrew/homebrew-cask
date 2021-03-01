@@ -1,11 +1,15 @@
 cask "texturepacker" do
-  version "5.4.0"
-  sha256 "7055bed6c6ee278143431755d1dd9026611e4d9aba396b74de10cb09c270e108"
+  version "5.5.0"
+  sha256 "b7ee407741a554d1ad52df275674fcd1cf2c787ae2cbf8cae35de1cf465e60f1"
 
   url "https://www.codeandweb.com/download/texturepacker/#{version}/TexturePacker-#{version}-uni.dmg"
-  appcast "https://www.codeandweb.com/releases/TexturePacker/appcast-mac-release.xml"
   name "TexturePacker"
   homepage "https://www.codeandweb.com/texturepacker"
+
+  livecheck do
+    url "https://www.codeandweb.com/releases/TexturePacker/appcast-mac-release.xml"
+    strategy :sparkle
+  end
 
   app "TexturePacker.app"
 end

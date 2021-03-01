@@ -1,9 +1,9 @@
 cask "breaktimer" do
-  version "0.7.7"
-  sha256 "01fb90a307e2ffb59bb38c683032856aeeff8b5b8b7b0923d4ee307bb34cf2dd"
+  version "0.9.0"
+  sha256 "b269cd26ca054e95f102ed8152cbdcd2d33a944afc5104fd821d4b335ac0c318"
 
-  # github.com/tom-james-watson/breaktimer-app/ was verified as official when first introduced to the cask
-  url "https://github.com/tom-james-watson/breaktimer-app/releases/download/v#{version}/BreakTimer.dmg"
+  url "https://github.com/tom-james-watson/breaktimer-app/releases/download/v#{version}/BreakTimer.dmg",
+      verified: "github.com/tom-james-watson/breaktimer-app/"
   appcast "https://github.com/tom-james-watson/breaktimer-app/releases.atom"
   name "BreakTimer"
   desc "Tool to manage periodic breaks"

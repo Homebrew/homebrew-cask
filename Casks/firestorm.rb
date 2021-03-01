@@ -1,6 +1,6 @@
 cask "firestorm" do
-  version "6.3.9.58205"
-  sha256 "085a09c5edcd17963a1a66cd940088d8077c93a8aa11cd8661230cde97919fd1"
+  version "6.4.12.62831"
+  sha256 "0c0a7c8e21b9389bc141a18b489a76ac821049f4fa33f0b6ede5b77d23ae33ad"
 
   url "https://downloads.firestormviewer.org/mac/Phoenix-Firestorm-Releasex64_#{version.dots_to_underscores}_x86_64.dmg"
   appcast "https://www.firestormviewer.org/mac/"

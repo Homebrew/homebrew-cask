@@ -3,9 +3,14 @@ cask "gpg-suite-no-mail" do
   sha256 "e2ede6b317d53d1e321342a6f7dd5ab6b123a4900aa8f1eab89b29051a2a4742"
 
   url "https://releases.gpgtools.org/GPG_Suite-#{version}.dmg"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://gpgtools.org/download"
   name "GPG Suite (without GPG Mail)"
+  desc "Tools to protect your files"
   homepage "https://gpgtools.org/"
+
+  livecheck do
+    url "https://gpgtools.org/download"
+    strategy :header_match
+  end
 
   auto_updates true
   conflicts_with cask: [

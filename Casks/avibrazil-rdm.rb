@@ -2,8 +2,8 @@ cask "avibrazil-rdm" do
   version "2.2"
   sha256 "4baba78e89fb36ae022d5a234bb968402503ed277af59ae72e8270e9b6bef895"
 
-  # avi.alkalay.net/software/RDM/ was verified as official when first introduced to the cask
-  url "https://avi.alkalay.net/software/RDM/RDM-#{version}.pkg"
+  url "https://avi.alkalay.net/software/RDM/RDM-#{version}.pkg",
+      verified: "avi.alkalay.net/software/RDM/"
   appcast "https://avi.alkalay.net/software/RDM/"
   name "RDM"
   desc "Utility to set a Retina display to custom resolutions"

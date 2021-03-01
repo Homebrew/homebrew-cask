@@ -3,9 +3,14 @@ cask "twonkyserver" do
   sha256 "19694b1d7cad69eb14921a6ce234edd71e1d1f4edd671193330b61e042f1d66c"
 
   url "http://download.twonky.com/#{version}/TwonkyServerInstaller-#{version}.pkg"
-  appcast "https://twonky.com/downloads/index.html"
   name "Twonky Server"
   homepage "https://twonky.com/"
+
+  livecheck do
+    url "https://twonky.com/downloads/index.html"
+    strategy :page_match
+    regex(%r{href=.*?/TwonkyServerInstaller-(\d+(?:\.\d+)*)\.pkg}i)
+  end
 
   pkg "TwonkyServerInstaller-#{version}.pkg"
 

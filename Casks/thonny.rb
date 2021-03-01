@@ -1,9 +1,9 @@
 cask "thonny" do
-  version "3.2.7"
-  sha256 "0dc9d7b34bbe70cc3256575cfaed055614e8967dd3a26b8ce088998529429042"
+  version "3.3.4"
+  sha256 "19a0c12e07f28f9d0c33d193f81685893a0b16cb50d1298386edaa281a05795d"
 
-  # github.com/thonny/thonny/ was verified as official when first introduced to the cask
-  url "https://github.com/thonny/thonny/releases/download/v#{version}/thonny-#{version}.pkg"
+  url "https://github.com/thonny/thonny/releases/download/v#{version}/thonny-#{version}.pkg",
+      verified: "github.com/thonny/thonny/"
   appcast "https://github.com/thonny/thonny/releases.atom"
   name "Thonny"
   homepage "https://thonny.org/"

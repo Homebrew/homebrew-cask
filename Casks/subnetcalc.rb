@@ -12,5 +12,11 @@ cask "subnetcalc" do
   desc "Tool to calculate IP subnets"
   homepage "http://subnetcalc.free.fr/"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/subnetcalc-(\d+(?:\.\d+)*)\.dmg}i)
+  end
+
   app "SubnetCalc.app"
 end

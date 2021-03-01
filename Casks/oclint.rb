@@ -1,12 +1,16 @@
 cask "oclint" do
-  version "0.13.1,17.4.0"
-  sha256 "c67f014a1ce997e62a242fe9154a9ac0a4ea50ad07b0417f3fb8b13f20e1ab90"
+  version "20.11"
+  sha256 "c5167061ff162b791b73754963e3c2f9c545fe3e66b111cc842392cf0c987caf"
 
-  # github.com/oclint/oclint/ was verified as official when first introduced to the cask
-  url "https://github.com/oclint/oclint/releases/download/v#{version.before_comma}/oclint-#{version.before_comma}-x86_64-darwin-#{version.after_comma}.tar.gz"
-  appcast "https://github.com/oclint/oclint/releases.atom"
+  url "https://github.com/oclint/oclint/releases/download/v#{version}/oclint-#{version}-llvm-11.0.0-x86_64-darwin-macos-big-sur-11.0.1-xcode-12.2.tar.gz",
+      verified: "github.com/oclint/oclint/"
   name "OCLint"
-  homepage "http://oclint.org/"
+  homepage "https://oclint.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   binary "oclint-#{version.before_comma}/bin/oclint"
   binary "oclint-#{version.before_comma}/bin/oclint-json-compilation-database"

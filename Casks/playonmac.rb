@@ -1,6 +1,6 @@
 cask "playonmac" do
-  version "4.4.1"
-  sha256 "6d7ea936dd0cf97400a23605ac195e387074f2e49d3a0a7fb2780fa03ff90e62"
+  version "4.4.2"
+  sha256 "8f458bcf14ed7431acfec1dc79d0e917bf450da89c78a13b5a6f3deeddbe4a8b"
 
   url "https://repository.playonmac.com/PlayOnMac/PlayOnMac_#{version}.dmg"
   appcast "https://repository.playonmac.com/PlayOnMac/"

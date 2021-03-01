@@ -1,9 +1,9 @@
 cask "cryptomator" do
-  version "1.5.10"
-  sha256 "5451eef98ce9c2e0e13a477e9185878fde216c588c2ae807f1140676ea07eccd"
+  version "1.5.13"
+  sha256 "789a7e92d63997be03122efdab5e07de6c617fcd0fb36fb6c5807e3a6b119be0"
 
-  # dl.bintray.com/cryptomator/cryptomator/ was verified as official when first introduced to the cask
-  url "https://dl.bintray.com/cryptomator/cryptomator/#{version}/Cryptomator-#{version}.dmg"
+  url "https://dl.bintray.com/cryptomator/cryptomator/#{version}/Cryptomator-#{version}.dmg",
+      verified: "dl.bintray.com/cryptomator/cryptomator/"
   appcast "https://github.com/cryptomator/cryptomator/releases.atom"
   name "Cryptomator"
   desc "Multi-platform client-side cloud file encryption tool"

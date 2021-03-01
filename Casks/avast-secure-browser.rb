@@ -1,9 +1,9 @@
 cask "avast-secure-browser" do
-  version "1.23.0"
+  version "87.0.401.89"
   sha256 :no_check
 
-  # cdn-download.avastbrowser.com/ was verified as official when first introduced to the cask
-  url "https://cdn-download.avastbrowser.com/AvastSecureBrowserSetup.pkg"
+  url "https://cdn-download.avastbrowser.com/AvastSecureBrowserSetup.pkg",
+      verified: "cdn-download.avastbrowser.com/"
   name "Avast Secure Browser"
   desc "Web browser focusing on privacy"
   homepage "https://www.avast.com/secure-browser#mac"

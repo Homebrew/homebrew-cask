@@ -1,9 +1,9 @@
 cask "electrumsv" do
-  version "1.3.7"
-  sha256 "d9b127fc61c35741e472ccc76927ceca8c0882fda66e54374f4265aa250e165c"
+  version "1.3.11"
+  sha256 "77c2d24e8328f80d603cf21b18f8f1f3e7cca4308cfb0308479e282fa2e65dbe"
 
-  # s3.us-east-2.amazonaws.com/electrumsv-downloads/ was verified as official when first introduced to the cask
-  url "https://s3.us-east-2.amazonaws.com/electrumsv-downloads/releases/#{version}/ElectrumSV-#{version}.dmg"
+  url "https://s3.us-east-2.amazonaws.com/electrumsv-downloads/releases/#{version}/ElectrumSV-#{version}.dmg",
+      verified: "s3.us-east-2.amazonaws.com/electrumsv-downloads/"
   appcast "https://github.com/electrumsv/electrumsv/releases.atom"
   name "ElectrumSV"
   desc "Desktop wallet for Bitcoin SV"

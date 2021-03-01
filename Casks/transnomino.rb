@@ -1,12 +1,17 @@
 cask "transnomino" do
-  version "5.3.0"
-  sha256 "01f408e71385d22cab762fddee6e8f4fe7f116d05e589550c6f6129a82dc982f"
+  version "5.3.2"
+  sha256 "9e88fb2dda099bb368ddf403b3a8a286230e0d790caa829cc6242e281f9fdb32"
 
   url "https://transnomino.bastiaanverreijt.com/download/Transnomino-#{version}.dmg"
-  appcast "https://transnomino.bastiaanverreijt.com/"
   name "Transnomino"
   desc "Batch rename utility"
   homepage "https://transnomino.bastiaanverreijt.com/"
+
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/Transnomino-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   auto_updates true
 

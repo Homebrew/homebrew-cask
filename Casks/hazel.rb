@@ -1,13 +1,17 @@
 cask "hazel" do
-  version "5.0.3"
-  sha256 "89f87f1086c5cebe83ae80a3326c91fa9d71e368dc7843ce5c2c9122ab557471"
+  version "5.0.5"
+  sha256 "5f0bb95b2c1b6d4ef4eea8b93c95483938c88c25da0649e8d0dafcf7b0221a03"
 
-  # s3.amazonaws.com/Noodlesoft/ was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/Noodlesoft/Hazel-#{version}.dmg"
-  appcast "https://www.noodlesoft.com/Products/Hazel/generate-appcast.php"
+  url "https://s3.amazonaws.com/Noodlesoft/Hazel-#{version}.dmg",
+      verified: "s3.amazonaws.com/Noodlesoft/"
   name "Hazel"
   desc "Automated organization"
   homepage "https://www.noodlesoft.com/"
+
+  livecheck do
+    url "https://www.noodlesoft.com/Products/Hazel/generate-appcast.php"
+    strategy :sparkle
+  end
 
   auto_updates true
 

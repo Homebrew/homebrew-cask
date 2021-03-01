@@ -1,9 +1,9 @@
 cask "burn" do
-  version "2.7.10"
-  sha256 "2cffd7b897a906d1aac1cbb6b876b3cb52a403a5d340e620cb9bbfd02242680d"
+  version "3.1"
+  sha256 "c23941a9699a98c6fe0ad90aa17fcc0408a057e353c2daa2e16417cd6d7c1a47"
 
-  # downloads.sourceforge.net/burn-osx/ was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/burn-osx/Burn/#{version}/burn-#{version}.zip"
+  url "https://downloads.sourceforge.net/burn-osx/Burn/#{version}/burn-#{version}.zip",
+      verified: "downloads.sourceforge.net/burn-osx/"
   appcast "https://sourceforge.net/projects/burn-osx/rss?path=/Burn"
   name "Burn"
   desc "CD burning application"

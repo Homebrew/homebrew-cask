@@ -1,14 +1,19 @@
 cask "duet" do
-  version "2.3.2.6"
-  sha256 "5f5672e314fa34c7d26f07e108b5f074daba13d6875f12eb0b71a48a09040ae3"
+  version "2.3.3.1"
+  sha256 "b39f85264374cfd34dc76d7a5da13e9450f0458aee99ca001e02e7aa84b6f235"
 
-  # duet.nyc3.cdn.digitaloceanspaces.com/Mac/ was verified as official when first introduced to the cask
-  url "https://duet.nyc3.cdn.digitaloceanspaces.com/Mac/#{version.major_minor.dots_to_underscores}/duet-#{version.dots_to_hyphens}.zip"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://updates.duetdisplay.com/latestMac",
-          must_contain: version.dots_to_hyphens
+  url "https://duet.nyc3.cdn.digitaloceanspaces.com/Mac/#{version.major_minor.dots_to_underscores}/duet-#{version.dots_to_hyphens}.zip",
+      verified: "duet.nyc3.cdn.digitaloceanspaces.com/Mac/"
   name "Duet"
   desc "Tool for using an iPad as a second display"
   homepage "https://www.duetdisplay.com/"
+
+  livecheck do
+    url "https://updates.duetdisplay.com/latestMac"
+    strategy :header_match do |headers|
+      headers["location"][/-(\d+(?:-\d+)*)\.zip/i, 1].tr("-", ".")
+    end
+  end
 
   auto_updates true
 

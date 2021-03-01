@@ -1,11 +1,11 @@
 cask "kitty" do
-  version "0.19.2"
-  sha256 "31f2247f43bb7b635d75edb72aa4d576a5260a64bbb13e9aa01e005a060a8a75"
+  version "0.19.3"
+  sha256 "a8db77b59d5ac7d98eecb2cd6145c90754acd8b05b68ce3844d3bbc3f0d59892"
 
   url "https://github.com/kovidgoyal/kitty/releases/download/v#{version}/kitty-#{version}.dmg"
   appcast "https://github.com/kovidgoyal/kitty/releases.atom"
   name "kitty"
-  desc "Cross-platform, fast, feature full, GPU based terminal emulator"
+  desc "GPU-based terminal emulator"
   homepage "https://github.com/kovidgoyal/kitty"
 
   depends_on macos: ">= :sierra"

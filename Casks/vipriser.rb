@@ -1,12 +1,16 @@
 cask "vipriser" do
-  version "3.5"
-  sha256 "b01c3d0643143f456ed55a245c81b83e2aca6f4d3882ebbfabd87c6517f091f1"
+  version "3.7"
+  sha256 :no_check
 
   url "https://onflapp.github.io/blog/releases/vipriser/VipRiser.zip"
-  appcast "https://onflapp.github.io/blog/releases/vipriser/appcast.xml"
   name "VipRiser"
   desc "Produce a PDF from any application that can print"
   homepage "https://onflapp.github.io/blog/pages/VipRiser"
+
+  livecheck do
+    url "https://onflapp.github.io/blog/releases/vipriser/appcast.xml"
+    strategy :sparkle
+  end
 
   app "VipRiser.app"
 

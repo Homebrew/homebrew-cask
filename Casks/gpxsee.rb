@@ -1,11 +1,12 @@
 cask "gpxsee" do
-  version "7.37"
-  sha256 "477c37368d6c094ef804c3040172d8b8902d454f1df907ed07b1fcdadb200467"
+  version "8.7"
+  sha256 "da31f6682b4c30eda8017fe63b9bf8e921af64ae7a9172fdba6a851ef7adc557"
 
-  # sourceforge.net/gpxsee/Mac%20OS%20X/ was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/gpxsee/Mac%20OS%20X/GPXSee-#{version}.dmg"
+  url "https://downloads.sourceforge.net/gpxsee/Mac%20OS%20X/GPXSee-#{version}.dmg",
+      verified: "sourceforge.net/gpxsee/Mac%20OS%20X/"
   appcast "https://sourceforge.net/projects/gpxsee/rss?path=/Mac%20OS%20X"
   name "GPXSee"
+  desc "GPS log file viewer and analyze"
   homepage "https://www.gpxsee.org/"
 
   app "GPXSee.app"

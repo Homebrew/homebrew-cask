@@ -1,7 +1,7 @@
 cask "proxifier" do
   if MacOS.version <= :catalina
     version "2.26.2"
-    sha256 "671c9e8bfb8619b8c39574bad38d3add7b460e491e99a6dfbace6dd3f7535e69"
+    sha256 :no_check
     url "https://www.proxifier.com/download/ProxifierMac.dmg"
 
     appcast "https://www.proxifier.com/changelog/mac#{version.major}.html",

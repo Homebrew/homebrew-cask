@@ -1,13 +1,17 @@
 cask "rstudio" do
-  version "1.3.1093"
-  sha256 "bdc4d3a41f5e714c5399dbad466e31f7b85bf9b93db464c3010f5a560bd9914d"
+  version "1.4.1103"
+  sha256 "20148bd6ee7ed80d85ae8b309ebaa5d68df282d610056faeedf4acb8716aaaa2"
 
-  # rstudio-desktop.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://rstudio-desktop.s3.amazonaws.com/desktop/macos/RStudio-#{version}.dmg"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://rstudio.org/download/latest/stable/desktop/mac/RStudio-latest.dmg"
+  url "https://rstudio-desktop.s3.amazonaws.com/desktop/macos/RStudio-#{version}.dmg",
+      verified: "rstudio-desktop.s3.amazonaws.com/"
   name "RStudio"
   desc "Data science software focusing on R and Python"
   homepage "https://www.rstudio.com/"
+
+  livecheck do
+    url "https://rstudio.org/download/latest/stable/desktop/mac/RStudio-latest.dmg"
+    strategy :header_match
+  end
 
   conflicts_with cask: "homebrew/cask-versions/rstudio-preview"
   depends_on macos: ">= :high_sierra"
