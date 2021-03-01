@@ -3,7 +3,7 @@ cask "raindropio" do
   sha256 :no_check
 
   url "https://github.com/raindropio/desktop/releases/download/v#{version}/Raindrop-x64.dmg",
-    verified: "github.com/raindropio/"
+      verified: "github.com/raindropio/"
   name "Raindrop.io"
   desc "All-in-one bookmark manager"
   homepage "https://raindrop.io/"
