@@ -7,7 +7,7 @@ cask "zoom" do
     url "https://d11yldzmag5yn.cloudfront.net/prod/#{version}/Zoom.pkg",
         verified: "d11yldzmag5yn.cloudfront.net/"
   else
-    sha256 "a0b175dafaff471e475ee23d44f235f97fe9a8f3d611ca414e91fb54a28c0df7"
+    sha256 "279b6eb0f7ea1a2904f9b254733d68bac5b802e0e076683cc76674c8e9d002be"
 
     url "https://d11yldzmag5yn.cloudfront.net/prod/#{version}/arm64/Zoom.pkg",
         verified: "d11yldzmag5yn.cloudfront.net/"
