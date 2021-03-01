@@ -9,6 +9,8 @@ cask "deadbeef" do
   desc "Modular audio player"
   homepage "https://deadbeef.sourceforge.io/"
 
+  conflicts_with cask: "homebrew/cask-versions/deadbeef-nightly"
+
   app "DeaDBeeF.app"
 
   zap trash: [
