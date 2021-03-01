@@ -1,3 +1,6 @@
+# typed: false
+# frozen_string_literal: true
+
 cask "raindropio" do
   version "5.2.71"
   sha256 :no_check
