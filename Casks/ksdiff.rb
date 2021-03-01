@@ -1,14 +1,15 @@
 cask "ksdiff" do
-  version "2.2.0,122"
-  sha256 "cf32401d631e61cbbc3dc9947626174b45e8317a6cac39380067e7017e8d4c87"
+  version "2.4,124-feb-4-2021"
+  sha256 "cedb705806f28272f319c520d320a6c716ff57f675bdd03c73432dc5a0184eef"
 
-  url "https://updates.kaleidoscope.app/v2/prod/ksdiff-#{version.after_comma}-#{version.before_comma}.zip"
+  url "https://updates.kaleidoscope.app/v2/prod/ksdiff-#{version.before_comma}-#{version.after_comma}.zip"
   name "ksdiff"
+  desc "Command-line tool for the App Store version of Kaleidoscope"
   homepage "https://kaleidoscope.app/ksdiff2"
 
   conflicts_with cask: "kaleidoscope"
 
-  pkg "ksdiff-#{version.after_comma}/Install ksdiff.pkg"
+  pkg "ksdiff-#{version.before_comma}/Install ksdiff.pkg"
 
   uninstall pkgutil: "com.blackpixel.kaleidoscope.ksdiff.installer.pkg"
 

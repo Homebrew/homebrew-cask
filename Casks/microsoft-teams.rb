@@ -1,6 +1,6 @@
 cask "microsoft-teams" do
-  version "1.3.00.28778"
-  sha256 "b9fe38e7ad313da3773f164358e99e8fbfa084cde8750b13b002777a14501be9"
+  version "1.3.00.33671"
+  sha256 "9e141d6e69a16e9f7a0cfa00d3c7f4217ec7f510d3774b38b46575e6b55c03c0"
 
   url "https://statics.teams.microsoft.com/production-osx/#{version}/Teams_osx.pkg"
   name "Microsoft Teams"

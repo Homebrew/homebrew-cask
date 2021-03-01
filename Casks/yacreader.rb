@@ -4,10 +4,14 @@ cask "yacreader" do
 
   url "https://github.com/YACReader/yacreader/releases/download/#{version.major_minor_patch}/YACReader-#{version}.MacOSX-Intel.dmg",
       verified: "github.com/YACReader/yacreader/"
-  appcast "https://github.com/YACReader/yacreader/releases.atom",
-          must_contain: version.major_minor_patch
   name "YACReader"
   homepage "https://www.yacreader.com/"
+
+  livecheck do
+    url "https://github.com/YACReader/yacreader/releases/latest"
+    strategy :page_match
+    regex(%r{href=.*?/YACReader-(\d+(?:\.\d+)*)\.MacOSX-Intel\.dmg}i)
+  end
 
   app "YACReader.app"
   app "YACReaderLibrary.app"

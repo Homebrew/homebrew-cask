@@ -1,9 +1,18 @@
 cask "slack" do
-  version "4.12.0"
-  sha256 "5990ec9106d0c8fb6eaaf6d845063bb254c9e80401d2aa5aac173988cd2e502f"
+  version "4.13.0"
 
-  url "https://downloads.slack-edge.com/releases/macos/#{version}/prod/x64/Slack-#{version}-macOS.dmg",
-      verified: "downloads.slack-edge.com/"
+  if Hardware::CPU.intel?
+    sha256 "ee945d5c8ea66690988a06787e7f1663dcd0b51fb25322c6f11dd7b69e2b25b8"
+
+    url "https://downloads.slack-edge.com/releases/macos/#{version}/prod/x64/Slack-#{version}-macOS.dmg",
+        verified: "downloads.slack-edge.com/"
+  else
+    sha256 "f5b5a917494b6f04aad7297c4657edfa48a6a76b16953909c90b1abfcc39f979"
+
+    url "https://downloads.slack-edge.com/releases/macos/#{version}/prod/arm64/Slack-#{version}-macOS.dmg",
+        verified: "downloads.slack-edge.com/"
+  end
+
   name "Slack"
   desc "Team communication and collaboration software"
   homepage "https://slack.com/"

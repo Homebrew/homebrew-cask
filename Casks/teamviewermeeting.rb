@@ -1,10 +1,10 @@
 cask "teamviewermeeting" do
-  version "15.13.11"
-  sha256 "9cc468ccc4fa8bf21ed98f4671db9e4be33922e1545e168028f7ae6700b874e7"
+  version "15.14.2"
+  sha256 "5225a225c592e4051a84138d0ea0208c319adc2668abd828c45a91886e8a4ccc"
 
   url "https://dl.teamviewer.com/teamviewermeeting/installer/mac/#{version}/TeamViewerMeeting.dmg"
   name "TeamViewerMeeting"
-  desc "Cross-platform videoconferencing and communication software"
+  desc "Videoconferencing and communication software"
   homepage "https://www.teamviewer.com/meeting/"
 
   livecheck do

@@ -4,10 +4,17 @@ cask "texworks" do
 
   url "https://github.com/TeXworks/texworks/releases/download/release-#{version.before_comma}/TeXworks-osx-#{version.before_comma}-#{version.after_comma.before_colon}-git_#{version.after_colon}.dmg",
       verified: "github.com/TeXworks/texworks/"
-  appcast "https://github.com/TeXworks/texworks/releases.atom"
   name "TeXworks"
   desc "Main codebase"
   homepage "https://www.tug.org/texworks/"
+
+  livecheck do
+    url "https://github.com/TeXworks/texworks/releases/latest"
+    strategy :page_match do |page|
+      match = page.match(%r{href=.*?/TeXworks-osx-(\d+(?:\.\d+)*)-(\d+)-git_(.*?)\.dmg}i)
+      "#{match[1]},#{match[2]}:#{match[3]}"
+    end
+  end
 
   depends_on macos: ">= :high_sierra"
 

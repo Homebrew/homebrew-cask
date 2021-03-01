@@ -15,8 +15,10 @@ cask "avidemux" do
 
   appcast "https://sourceforge.net/projects/avidemux/rss?path=/avidemux"
   name "Avidemux"
-  desc "Open-source cross-platform video editor"
+  desc "Video editor"
   homepage "https://www.avidemux.org/"
 
   app "Avidemux_#{version}.app"
+  binary "#{appdir}/Avidemux_#{version}.app/Contents/MacOS/avidemux_cli", target: "avidemux"
+  binary "#{appdir}/Avidemux_#{version}.app/Contents/MacOS/avidemux_jobs"
 end

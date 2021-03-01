@@ -1,6 +1,6 @@
 cask "odrive" do
-  version "6918"
-  sha256 "9107f7634ac70cf017c889738b5bd8e3ac937bd991d5999119832d57407f0c22"
+  version "6984"
+  sha256 "b95adbf0786142888837982604e91c6606e937f3febe557f368d75dbaa1d329f"
 
   url "https://d3huse1s6vwzq6.cloudfront.net/odrivesync.#{version}.pkg",
       verified: "d3huse1s6vwzq6.cloudfront.net/"
@@ -18,8 +18,6 @@ cask "odrive" do
 
   uninstall quit:    [
     "com.oxygencloud.odrive",
-    "application.com.apple.installer.1152921500312163482",
-    "application.com.apple.systemevents.1152921500312199658",
   ],
             pkgutil: "com.oxygen.odrive.*"
 end

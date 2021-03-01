@@ -1,12 +1,17 @@
 cask "anydo" do
-  version "4.2.125"
-  sha256 "5e5a1e4bd341f8c6b12eba59ef6b0f51e0c668fd1c09f0cab598fada23565e35"
+  version "4.2.140"
+  sha256 "1bb1834c3a00f977062e63795a00f9a3631dafcf15786f82cee6787e8c9ffe53"
 
   url "https://electron-app.any.do/Any.do-#{version}.dmg"
-  appcast "https://electron-app.any.do/latest-mac.yml"
   name "Any.do"
   desc "Reminder, planner & calendar"
   homepage "https://www.any.do/"
+
+  livecheck do
+    url "https://electron-app.any.do/latest-mac.yml"
+    strategy :page_match
+    regex(/version: (\d+(?:\.\d+)*)/i)
+  end
 
   depends_on macos: ">= :catalina"
 

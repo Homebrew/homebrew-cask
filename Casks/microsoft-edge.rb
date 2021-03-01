@@ -1,8 +1,8 @@
 cask "microsoft-edge" do
-  version "87.0.664.66"
-  sha256 "0c06151af2de63e4357c12ae5c8d57e0a38ff2883c1a876bf98ff75fd3cd5470"
+  version "88.0.705.74"
+  sha256 "b5ad299b5117007730e713176fbd74838e204c69dc3c3b1f706bca99ecdd87ff"
 
-  url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/MicrosoftEdge-#{version}.pkg",
+  url "https://officecdn-microsoft-com.akamaized.net/pr/03ADF619-38C6-4249-95FF-4A01C0FFC962/MacAutoupdate/MicrosoftEdge-#{version}.pkg",
       verified: "officecdn-microsoft-com.akamaized.net/"
   name "Microsoft Edge"
   desc "Multi-platform web browser"

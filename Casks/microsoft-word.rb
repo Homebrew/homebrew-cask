@@ -1,6 +1,6 @@
 cask "microsoft-word" do
-  version "16.44.20121301"
-  sha256 "8738d93a64e7c37556142bbcbd5957ba20869a266fa79c5acf1cb893d667725b"
+  version "16.46.21021202"
+  sha256 "a1c8291eeb38850c08c85396e32a1aeda32e966f14950640c9b9436353e196cb"
 
   url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Word_#{version}_Installer.pkg",
       verified: "officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/"

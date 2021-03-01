@@ -3,10 +3,15 @@ cask "xmind-zen" do
   sha256 "44147f844524fd1dd9fcbfda322cd7877325c1a791aac491e583ce6d9e62f330"
 
   url "https://www.xmind.net/xmind/downloads/XMind-2020-for-macOS-#{version}.dmg"
-  appcast "https://www.xmind.net/download/"
   name "Xmind 2020"
   desc "Mindmap and brainstorming app"
   homepage "https://www.xmind.net/xmind2020/"
+
+  livecheck do
+    url "https://www.xmind.net/zen/download/mac/"
+    strategy :header_match
+    regex(/macOS-(\d+(?:\.\d+)*-\d+(?:\.\d+)*).dmg$/)
+  end
 
   auto_updates true
   conflicts_with cask: "xmind"

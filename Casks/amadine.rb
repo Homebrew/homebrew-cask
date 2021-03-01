@@ -1,5 +1,5 @@
 cask "amadine" do
-  version "1.1,87"
+  version "1.1.1,90"
   sha256 :no_check
 
   url "https://belightsoft.s3.amazonaws.com/Amadine.dmg",

@@ -1,16 +1,16 @@
 cask "powershell" do
-  version "7.1.0"
-  sha256 "9b7397266711b279b5413f42abc899730539c8d78a29fd116e19a1bb78244d78"
+  version "7.1.2"
+  sha256 "A3B664487FB2906ABF52442B5E620DF3CF1FCE8AFF82C81679923C66097272C2"
 
   url "https://github.com/PowerShell/PowerShell/releases/download/v#{version}/powershell-#{version}-osx-x64.pkg"
-  appcast "https://github.com/PowerShell/PowerShell/releases.atom"
   name "PowerShell"
   desc "Command-line shell and scripting language"
   homepage "https://github.com/PowerShell/PowerShell"
 
   livecheck do
     url :homepage
-    strategy :github_latest
+    strategy :git
+    regex(/^v?(\d+(?:\.\d+)*)$/)
   end
 
   depends_on macos: ">= :high_sierra"

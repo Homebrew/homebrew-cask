@@ -4,10 +4,14 @@ cask "wwdc" do
 
   url "https://github.com/insidegui/WWDC/releases/download/#{version}/WWDC_v#{version}.zip",
       verified: "github.com/insidegui/WWDC/"
-  appcast "https://github.com/insidegui/WWDC/releases.atom"
   name "WWDC"
   desc "Allows access to WWDC livestreams, videos and sessions"
   homepage "https://wwdc.io/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
   depends_on macos: ">= :catalina"

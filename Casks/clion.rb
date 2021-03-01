@@ -1,8 +1,14 @@
 cask "clion" do
-  version "2020.3.1,203.6682.181"
-  sha256 "53ac84ce8c13be1fd560d5d96015173e2544a2b8f0b15424a04ba5fea969973a"
+  version "2020.3.2"
 
-  url "https://download.jetbrains.com/cpp/CLion-#{version.before_comma}.dmg"
+  if Hardware::CPU.intel?
+    sha256 "0a1f6447442a07f60094f9c96fd06141556daacea47c77beef8c2630e8eebc8b"
+    url "https://download.jetbrains.com/cpp/CLion-#{version}.dmg"
+  else
+    sha256 "5c4708b2bb4f1d39432ee84da8d195cbe83f987f1dd1d028bc78eebc067f46ba"
+    url "https://download.jetbrains.com/cpp/CLion-#{version}-aarch64.dmg"
+  end
+
   appcast "https://data.services.jetbrains.com/products/releases?code=CL&latest=true&type=release"
   name "CLion"
   desc "C and C++ IDE"

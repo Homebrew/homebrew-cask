@@ -10,10 +10,14 @@ cask "amethyst" do
         verified: "github.com/ianyh/Amethyst/"
   end
 
-  appcast "https://github.com/ianyh/Amethyst/releases.atom"
   name "Amethyst"
   desc "Automatic tiling window manager similar to xmonad"
   homepage "https://ianyh.com/amethyst/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
 

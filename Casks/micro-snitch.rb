@@ -3,10 +3,15 @@ cask "micro-snitch" do
   sha256 "9a909b7a73de527a0d3b446dead7d40b12f71e81cb324484db3a8b1579b5d28a"
 
   url "https://www.obdev.at/downloads/MicroSnitch/MicroSnitch-#{version}.zip"
-  appcast "https://www.obdev.at/products/microsnitch/download.html"
   name "Micro Snitch"
   desc "Monitors and reports any microphone and camera activity"
   homepage "https://www.obdev.at/products/microsnitch/index.html"
+
+  livecheck do
+    url "https://www.obdev.at/products/microsnitch/download.html"
+    strategy :page_match
+    regex(%r{href=.*?/MicroSnitch-(\d+(?:\.\d+)*)\.zip}i)
+  end
 
   auto_updates true
   depends_on macos: ">= :el_capitan"

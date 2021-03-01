@@ -6,7 +6,7 @@ cask "my-budget" do
       verified: "github.com/reZach/my-budget/"
   appcast "https://github.com/reZach/my-budget/releases.atom"
   name "My Budget"
-  desc "Free, open-source offline cross-platform budgeting solution"
+  desc "Budgeting tool"
   homepage "https://rezach.github.io/my-budget/"
 
   app "My Budget.app"

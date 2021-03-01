@@ -6,7 +6,7 @@ cask "deluge" do
       verified: "ftp.osuosl.org/"
   appcast "https://ftp.osuosl.org/pub/deluge/mac_osx/?C=M;O=D"
   name "Deluge"
-  desc "Cross-platform BitTorrent client"
+  desc "BitTorrent client"
   homepage "https://deluge-torrent.org/"
 
   app "Deluge.app"

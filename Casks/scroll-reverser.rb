@@ -8,14 +8,16 @@ cask "scroll-reverser" do
   homepage "https://pilotmoon.com/scrollreverser/"
 
   livecheck do
-    url "https://softwareupdate.pilotmoon.com/update/scrollreverser/appcast.xml"
+    url "https://pilotmoon.com/appcast/sr.xml"
     strategy :sparkle
   end
 
   app "Scroll Reverser.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.pilotmoon.scroll-reverser.launcher",
     "~/Library/Caches/com.pilotmoon.scroll-reverser",
+    "~/Library/Containers/com.pilotmoon.scroll-reverser.launcher",
     "~/Library/Preferences/com.pilotmoon.scroll-reverser.plist",
   ]
 end

@@ -4,10 +4,14 @@ cask "cutter" do
 
   url "https://github.com/radareorg/cutter/releases/download/v#{version}/Cutter-v#{version}-x64.macOS.dmg",
       verified: "github.com/radareorg/cutter/"
-  appcast "https://github.com/radareorg/cutter/releases.atom"
   name "Cutter"
   desc "Reverse engineering platform powered by radare2"
   homepage "https://cutter.re/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   depends_on macos: ">= :sierra"
 

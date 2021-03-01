@@ -48,6 +48,9 @@ module Check
         system_command!("/bin/launchctl", args: ["list"], print_stderr: false, sudo: sudo)
           .stdout
           .lines.drop(1)
+          .reject do |id|
+            id.match?(/\A(?:application\.)?com\.apple\.(installer|Safari|systemevents|systempreferences)(?:\.|$)/)
+          end
       end
 
       [false, true]

@@ -2,11 +2,16 @@ cask "avitools" do
   version "3.7.2"
   sha256 "2a338b816efe6b861da3131cd263a99aebee7bb3e63459a600c901c1c1cfa0a7"
 
-  url "http://www.emmgunn.com/downloads/avitools#{version}.zip"
-  appcast "http://www.emmgunn.com/avitools-home/avitools-downloads/"
+  url "https://www.emmgunn.com/downloads/avitools#{version}.zip"
   name "AVItools"
   desc "Graphical interface for a variety of video file processing tools"
-  homepage "http://www.emmgunn.com/avitools-home/"
+  homepage "https://www.emmgunn.com/avitools-home/"
+
+  livecheck do
+    url "https://www.emmgunn.com/avitools-home/avitools-downloads/"
+    strategy :page_match
+    regex(%r{href=.*?/avitools(\d+(?:\.\d+)*)\.zip}i)
+  end
 
   app "avitools#{version}/AVItools.app"
 end

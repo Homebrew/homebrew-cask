@@ -4,9 +4,14 @@ cask "roaringapps" do
 
   url "https://s3.amazonaws.com/s3.roaringapps.com/downloads/RoaringApps-#{version}.zip",
       verified: "s3.amazonaws.com/s3.roaringapps.com/"
-  appcast "https://roaringapps.com/mac-app"
   name "RoaringApps"
   homepage "https://roaringapps.com/mac-app"
+
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/RoaringApps-(\d+(?:\.\d+)*)\.zip}i)
+  end
 
   app "RoaringApps.app"
 

@@ -4,9 +4,14 @@ cask "glyphfinder" do
 
   url "https://ueber.fra1.cdn.digitaloceanspaces.com/glyphfinder/mac/Glyphfinder-#{version}-mac.dmg",
       verified: "ueber.fra1.cdn.digitaloceanspaces.com/glyphfinder/"
-  appcast "https://www.glyphfinder.com/"
   name "Glyphfinder"
   homepage "https://www.glyphfinder.com/"
+
+  livecheck do
+    url "https://www.glyphfinder.com/"
+    strategy :page_match
+    regex(%r{href=.*?/Glyphfinder-(\d+(?:\.\d+)*)-mac\.dmg}i)
+  end
 
   app "Glyphfinder.app"
 end

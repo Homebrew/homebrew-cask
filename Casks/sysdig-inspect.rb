@@ -4,9 +4,13 @@ cask "sysdig-inspect" do
 
   url "https://download.sysdig.com/stable/sysdig-inspect/sysdig-inspect-#{version}-mac.dmg",
       verified: "download.sysdig.com/stable/sysdig-inspect/"
-  appcast "https://github.com/draios/sysdig-inspect/releases.atom"
   name "Sysdig Inspect"
   homepage "https://github.com/draios/sysdig-inspect"
+
+  livecheck do
+    url "https://github.com/draios/sysdig-inspect"
+    strategy :github_latest
+  end
 
   app "Sysdig Inspect.app"
 end

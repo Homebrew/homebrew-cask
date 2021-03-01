@@ -1,6 +1,6 @@
 cask "sqlectron" do
-  version "1.32.1"
-  sha256 "719195051fcb0405ce4b4b8e07df8eee8c7807ec8e9cabe5a5a088d100628280"
+  version "1.34.0"
+  sha256 "5ec0dbf6a487c062170874351f958b620876e3c58784cb9076527e050dc5b734"
 
   url "https://github.com/sqlectron/sqlectron-gui/releases/download/v#{version}/Sqlectron-#{version}-mac.zip",
       verified: "github.com/sqlectron/sqlectron-gui/"

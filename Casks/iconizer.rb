@@ -11,4 +11,6 @@ cask "iconizer" do
   auto_updates true
 
   app "Iconizer.app"
+
+  zap trash: "~/Library/Preferences/com.raphaelhanneken.iconizer.plist"
 end

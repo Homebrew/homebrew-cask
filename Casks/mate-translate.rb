@@ -16,4 +16,9 @@ cask "mate-translate" do
   depends_on macos: ">= :mojave"
 
   app "Mate Translate.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.twopeoplesoftware.InstantTranslate-nomas.Mate-Translate-Safari",
+    "~/Library/Containers/com.twopeoplesoftware.InstantTranslate-nomas.Mate-Translate-Safari",
+  ]
 end

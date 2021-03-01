@@ -1,12 +1,16 @@
 cask "tinkerwell" do
-  version "2.11.0"
-  sha256 "322070bd4973a7e8669af74b508710de527b6f7c6c7d8316553c22904b377e10"
+  version "2.12.1"
+  sha256 "4f70970540aa92f7f4635b618256a0272e67fb6b4725c4b33e2ef5d517c09fd4"
 
-  url "https://tinkerwell.fra1.digitaloceanspaces.com/tinkerwell/Tinkerwell-#{version}.dmg",
-      verified: "tinkerwell.fra1.digitaloceanspaces.com/"
-  appcast "https://tinkerwell.fra1.digitaloceanspaces.com/tinkerwell/latest-mac.yml"
+  url "https://download.tinkerwell.app/tinkerwell/Tinkerwell-#{version}.dmg"
   name "Tinkerwell"
   homepage "https://tinkerwell.app/"
+
+  livecheck do
+    url "https://download.tinkerwell.app/tinkerwell/latest-mac.yml"
+    strategy :page_match
+    regex(/version:\s*(\d+(?:\.\d+)*)/i)
+  end
 
   auto_updates true
 

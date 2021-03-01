@@ -7,5 +7,11 @@ cask "pineapple" do
   name "Pineapple"
   homepage "https://nwhitehead.github.io/pineapple/"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/Pineapple-(\d+(?:\.\d+)*)-Python3\.5\.dmg}i)
+  end
+
   app "Pineapple.app"
 end

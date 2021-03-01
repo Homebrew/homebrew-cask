@@ -15,4 +15,9 @@ cask "coconutid" do
   auto_updates true
 
   app "coconutID.app"
+
+  zap trash: [
+    "~/Library/Caches/com.coconut-flavour.coconutID",
+    "~/Library/Preferences/com.coconut-flavour.coconutID.plist",
+  ]
 end

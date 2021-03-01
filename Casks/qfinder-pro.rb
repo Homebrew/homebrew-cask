@@ -1,12 +1,16 @@
 cask "qfinder-pro" do
-  version "7.4.2.1118"
-  sha256 "121ab79617ce7a861b6ae9f422efe98268a5a3fcddfcc3eada3c1a5d8ab22a71"
+  version "7.4.5.0121"
+  sha256 "2908275ab87a5cd56084ead0f44c47187b3278b4031d1682d5750132f4a5f171"
 
   url "https://download.qnap.com/Storage/Utility/QNAPQfinderProMac-#{version}.dmg"
-  appcast "https://www.macupdater.net/cgi-bin/extract_text/extract_text_split_easy.cgi?url=https://update.qnap.com/SoftwareRelease.xml&splitter_1=Mac_for_QT&index_1=1&splitter_2=downloadURL&index_2=1"
   name "Qnap Qfinder Pro"
   desc "NAS management application"
   homepage "https://www.qnap.com/en/utilities#utliity_5"
+
+  livecheck do
+    url "https://update.qnap.com/SoftwareRelease.xml"
+    regex(%r{/QNAPQfinderProMac-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   pkg "Qfinder Pro.pkg"
 

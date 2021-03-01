@@ -1,5 +1,5 @@
 cask "amazon-workspaces" do
-  version "3.1.0.1521"
+  version "3.1.3.1649"
   sha256 :no_check
 
   url "https://workspaces-client-updates.s3.amazonaws.com/prod/iad/osx/WorkSpaces.pkg",
@@ -15,4 +15,10 @@ cask "amazon-workspaces" do
   pkg "WorkSpaces.pkg"
 
   uninstall pkgutil: "com.amazon.workspaces"
+
+  zap trash: [
+    "~/Library/Caches/com.amazon.workspaces",
+    "~/Library/Preferences/com.amazon.workspaces.plist",
+    "~/Library/Saved Application State/com.amazon.workspaces.savedState",
+  ]
 end

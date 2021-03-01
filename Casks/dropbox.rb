@@ -1,11 +1,16 @@
 cask "dropbox" do
-  version "112.4.321"
+  version "116.4.368"
   sha256 :no_check
 
   url "https://www.dropbox.com/download?plat=mac&full=1"
   name "Dropbox"
   desc "Client for the Dropbox cloud storage service"
   homepage "https://www.dropbox.com/"
+
+  livecheck do
+    url :url
+    strategy :header_match
+  end
 
   auto_updates true
   conflicts_with cask: "homebrew/cask-versions/dropbox-beta"

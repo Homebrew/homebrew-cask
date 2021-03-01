@@ -4,10 +4,15 @@ cask "aquamacs" do
 
   url "https://github.com/davidswelt/aquamacs-emacs/releases/download/Aquamacs-#{version}/Aquamacs-Emacs-#{version}.dmg",
       verified: "github.com/davidswelt/aquamacs-emacs/"
-  appcast "https://github.com/davidswelt/aquamacs-emacs/releases.atom"
   name "Aquamacs"
   desc "Text editor based on GNU Emacs"
   homepage "https://aquamacs.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^Aquamacs-(\d+(?:\.\d+)*)$/i)
+  end
 
   app "Aquamacs.app"
 

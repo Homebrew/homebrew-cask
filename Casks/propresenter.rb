@@ -1,6 +1,6 @@
 cask "propresenter" do
-  version "7.4,117702670"
-  sha256 "d1ddd64b280eb1bd89fd8f368baf3b19cf2fb2a91372cfe601460d662c09fc47"
+  version "7.4.1,117702927"
+  sha256 "7ff99359355f08fd497a27bddc87ab9d0548f7ae757f5bc767498167d9f6e8bf"
 
   url "https://renewedvision.com/downloads/propresenter/mac/ProPresenter_#{version.before_comma}_#{version.after_comma}.zip"
   appcast "https://api.renewedvision.com/v1/pro/upgrade?platform=macos&osVersion=0&appVersion=0&buildNumber=0&includeNotes=0"
@@ -8,6 +8,7 @@ cask "propresenter" do
   desc "Presentation and production application for live events"
   homepage "https://www.renewedvision.com/propresenter.php"
 
+  conflicts_with cask: "homebrew/cask-versions/propresenter-beta"
   depends_on macos: ">= :mojave"
 
   app "ProPresenter.app"

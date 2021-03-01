@@ -6,7 +6,7 @@ cask "codelite" do
   appcast "https://github.com/eranif/codelite/releases.atom",
           must_contain: version.chomp(".0")
   name "CodeLite"
-  desc "Cross-platform IDE for C, C++, PHP and Node.js"
+  desc "IDE for C, C++, PHP and Node.js"
   homepage "https://codelite.org/"
 
   app "codelite.app"

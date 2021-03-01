@@ -4,10 +4,14 @@ cask "ferdi" do
 
   url "https://github.com/getferdi/ferdi/releases/download/v#{version}/Ferdi-#{version}.dmg",
       verified: "github.com/getferdi/ferdi/"
-  appcast "https://github.com/getferdi/ferdi/releases.atom"
   name "Ferdi"
   desc "Free messaging app for popular messengers"
   homepage "https://getferdi.com/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
 

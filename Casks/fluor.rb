@@ -4,7 +4,6 @@ cask "fluor" do
 
   url "https://resources.pyrolyse.it/distrib/Fluor/Fluor%20#{version}.dmg",
       verified: "pyrolyse.it/"
-  appcast "https://fluorapp.net/"
   name "Fluor"
   homepage "https://fluorapp.net/"
 
