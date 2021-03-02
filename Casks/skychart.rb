@@ -4,11 +4,16 @@ cask "skychart" do
 
   url "https://downloads.sourceforge.net/skychart/skychart-#{version}-x86_64-macosx.dmg",
       verified: "downloads.sourceforge.net/skychart/"
-  appcast "https://sourceforge.net/projects/skychart/rss?path=/"
   name "SkyChart"
   name "Cartes du Ciel"
   desc "Free software to draw sky charts"
   homepage "https://www.ap-i.net/skychart/"
+
+  livecheck do
+    url "https://sourceforge.net/projects/skychart/rss?"
+    strategy :page_match
+    regex(/skychart-(\d+(?:\.\d+)*)-mac\.dmg/i)
+  end
 
   pkg "Install Skychart.pkg"
 
