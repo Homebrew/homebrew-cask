@@ -18,14 +18,5 @@ cask "mxsrvs" do
     "~/.MxSrvs",
     "~/Library/Application Support/MxSrvs",
     "~/Library/Preferences/com.xsrvs.name.plist",
-    "/private/var/db/receipts/com.xsrvs.name.plist",
-    "/private/var/db/receipts/com.xsrvs.name.bom",
   ]
-
-  caveats <<~EOS
-    Allow apps downloaded from Anywhere, by execute:
-      'sudo spctl --master-disable'
-    Open System Perferences -> Security & Privacy
-    Allow all blocked request becasue of unidentified developer, when launching the app for the first time
-  EOS
 end
