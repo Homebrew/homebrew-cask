@@ -3,7 +3,8 @@ cask "devolo-cockpit" do
   sha256 "21fae361aac8abb9ac1410bd2a6f0ad4d72ddf72e036c1c3b2cd9976009fc20c"
 
   url "https://www.devolo.com/fileadmin/Web-Content/DE/products/hnw/devolo-cockpit/software/devolo-cockpit-v#{version.dots_to_hyphens}.dmg"
-  appcast "https://www.devolo.com/support/downloads/download/devolo-cockpit"
+  appcast "https://www.devolo.com/support/downloads/download/devolo-cockpit",
+          must_contain: version.major_minor_patch
   name "Devolo dLAN Cockpit"
   desc "Configuration and network monitoring software"
   homepage "https://www.devolo.com/internet-in-any-room/devolo-cockpit"
