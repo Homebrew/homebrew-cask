@@ -1,6 +1,6 @@
 cask "malus" do
-  version "1.7.2,172"
-  sha256 "77c5f0a10e549760c7f2f19d254bcefb439b9107037cb8bc79b279f1068c0dbe"
+  version "1.7.6,176"
+  sha256 "b3cdf4bae6a5f67b66d6cd03e9cb98f6449384f54cd810cceac966f6cdece202"
 
   url "https://malus.s3cdn.net/uploads/Malus_#{version.before_comma.dots_to_underscores}.dmg",
       verified: "malus.s3cdn.net/"
