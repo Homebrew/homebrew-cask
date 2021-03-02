@@ -1,6 +1,6 @@
 cask "dingtalk" do
-  version "5.1.39.8"
-  sha256 "773760d33f40a24e7fd841020fe32853f6dd8549b54540e5fa093ba63222f6d0"
+  version "6.0.3.6"
+  sha256 "efd64fd4ecd4db9c5325b73316010c45ee069587593c7d354a8cec149f72090e"
 
   url "https://dtapp-pub.dingtalk.com/dingtalk-desktop/mac_dmg/Release/DingTalk_v#{version}.dmg"
   name "DingTalk"
@@ -9,10 +9,9 @@ cask "dingtalk" do
   homepage "https://www.dingtalk.com/"
 
   livecheck do
-    url "https://im.dingtalk.com/manifest/appcast_en.xml"
-    strategy :sparkle do |item|
-      item.url[/DingTalk_v(\d(?:\.\d+)*)\.dmg/i, 1]
-    end
+    url "https://www.dingtalk.com/mac/d/"
+    strategy :header_match
+    regex(/DingTalk_v(\d+(?:\.\d+)*)\.dmg/i)
   end
 
   auto_updates true
