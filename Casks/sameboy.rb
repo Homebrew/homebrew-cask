@@ -11,5 +11,10 @@ cask "sameboy" do
 
   depends_on macos: ">= :sierra"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "SameBoy.app"
 end
