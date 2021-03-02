@@ -1,9 +1,8 @@
 cask "eloston-chromium" do
-  version "88.0.4324.192-1.1"
-  sha256 "4cacb5ae40c37ef17cf01f4e063772ff7e83d829ae6132d8e6f2c98178bf10e9"
-
   if Hardware::CPU.intel?
     arch = "x86-64"
+    version "88.0.4324.192-1.1"
+    sha256 "4cacb5ae40c37ef17cf01f4e063772ff7e83d829ae6132d8e6f2c98178bf10e9"
   else
     arch = "arm64"
     version "88.0.4324.192-1.1"
@@ -24,9 +23,9 @@ cask "eloston-chromium" do
   app "Chromium.app"
 
   zap trash: [
-    "~/Library/Preferences/org.chromium.Chromium.plist",
-    "~/Library/Caches/Chromium",
     "~/Library/Application Support/Chromium",
+    "~/Library/Caches/Chromium",
+    "~/Library/Preferences/org.chromium.Chromium.plist",
     "~/Library/Saved Application State/org.chromium.Chromium.savedState",
   ]
 end
