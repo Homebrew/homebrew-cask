@@ -8,12 +8,12 @@ cask "sameboy" do
   desc "Game Boy and Game Boy Color emulator written in C"
   homepage "https://sameboy.github.io/"
 
-  depends_on macos: ">= :sierra"
-
   livecheck do
     url :url
     strategy :github_latest
   end
+
+  depends_on macos: ">= :sierra"
 
   app "SameBoy.app"
 end
