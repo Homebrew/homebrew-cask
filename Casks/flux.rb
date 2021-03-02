@@ -7,11 +7,6 @@ cask "flux" do
   desc "Screen color temperature controller"
   homepage "https://justgetflux.com/"
 
-  livecheck do
-    url "https://justgetflux.com/mac/macflux.xml"
-    strategy :sparkle
-  end
-
   auto_updates true
 
   app "Flux.app"
