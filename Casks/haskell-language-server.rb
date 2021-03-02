@@ -4,7 +4,7 @@ cask "haskell-language-server" do
 
   url "https://github.com/haskell/haskell-language-server/releases/download/#{version}/haskell-language-server-macOS-#{version}.tar.gz"
   name "Haskell Language Server"
-  desc "Integration point for ghcide and haskell-ide-engine. One IDE to rule them all."
+  desc "Integration point for ghcide and haskell-ide-engine. One IDE to rule them all"
   homepage "https://github.com/haskell/haskell-language-server"
 
   binary "haskell-language-server-wrapper"
