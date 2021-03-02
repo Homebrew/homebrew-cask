@@ -8,7 +8,7 @@ cask "horndis" do
   desc "Android USB tethering driver"
   homepage "https://github.com/jwise/HoRNDIS"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: "<= :big_sur"
 
   pkg "HoRNDIS-#{version}.pkg"
 
