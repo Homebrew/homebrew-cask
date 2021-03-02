@@ -7,9 +7,13 @@ cask "atomic-wallet" do
   desc "Manage Bitcoin, Ethereum, XRP, Litecoin, XLM and over 300 other coins and tokens"
   homepage "https://atomicwallet.io/"
 
+  livecheck do
+    url "https://releases.atomicwallet.io/latest-mac.yml"
+    strategy :page_match
+    regex(/AtomicWallet-(\d+(?:\.\d+)*)\.zip/i)
+  end
+
   app "Atomic Wallet.app"
 
-  zap trash: [
-    "~/Library/Application Support/atomic",
-  ]
+  zap trash: "~/Library/Application Support/atomic"
 end
