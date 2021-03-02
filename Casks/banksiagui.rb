@@ -8,6 +8,12 @@ cask "banksiagui" do
   desc "Chess GUI"
   homepage "https://banksiagui.com/"
 
+  livecheck do
+    url "https://banksiagui.com/download/"
+    strategy :page_match
+    regex(/BanksiaGui-(\d+(?:\.\d+)*)-mac\.zip/i)
+  end
+
   app "BanksiaGui.app"
 
   zap trash: [
