@@ -4,10 +4,14 @@ cask "guijs" do
 
   url "https://github.com/Akryum/guijs/releases/download/v#{version}/guijs.app.tgz",
       verified: "github.com/Akryum/guijs/"
-  appcast "https://github.com/Akryum/guijs/releases.atom"
   name "guijs"
   desc "Graphical interface to manage JS projects"
   homepage "https://guijs.dev/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "guijs.app"
 

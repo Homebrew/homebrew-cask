@@ -1,5 +1,5 @@
 cask "leech" do
-  version "3.1.4,3140"
+  version "3.1.5,3153"
   sha256 :no_check
 
   url "https://manytricks.com/download/leech"

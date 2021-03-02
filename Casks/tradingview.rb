@@ -5,7 +5,7 @@ cask "tradingview" do
   url "https://tvd-packages.tradingview.com/beta/#{version}/win32/x64/TradingView.dmg"
   name "TradingView Desktop Beta"
   desc "Desktop client for TradingView"
-  homepage "https://www.tradingview.com/blog/en/tradingview-desktop-beta-is-out-now-21962/"
+  homepage "https://www.tradingview.com/desktop/"
 
   livecheck do
     url :homepage

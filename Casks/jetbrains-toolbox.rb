@@ -1,8 +1,13 @@
 cask "jetbrains-toolbox" do
-  version "1.19.7784"
-  sha256 "1e0f90d3c8cdedf9a49fad903dfbcdaea8df1ec1592ef7963065d8725b10041f"
+  version "1.20.7940"
 
-  url "https://download.jetbrains.com/toolbox/jetbrains-toolbox-#{version}.dmg"
+  if Hardware::CPU.intel?
+    url "https://download.jetbrains.com/toolbox/jetbrains-toolbox-#{version}.dmg"
+    sha256 "9d8b0644b182cf5266836eb0506ac7b03199dc1f45eaf5e0d4c0d48d891ea79e"
+  else
+    url "https://download.jetbrains.com/toolbox/jetbrains-toolbox-#{version}-arm64.dmg"
+    sha256 "550cc384e497cc3fc54c3e8864c81726696577a8c5c5aef263f9cdb66ebde15a"
+  end
   appcast "https://data.services.jetbrains.com/products/releases?code=TBA&latest=true&type=release"
   name "JetBrains Toolbox"
   desc "JetBrains tools manager"

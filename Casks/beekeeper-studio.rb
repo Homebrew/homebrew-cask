@@ -1,13 +1,17 @@
 cask "beekeeper-studio" do
-  version "1.9.1"
-  sha256 "a753bff4336f4c9d75db74e181149cc5e07727fb9bb512cdf6e37c0b0d36cc2c"
+  version "1.9.4"
+  sha256 "d433340381ecd2fe3c37824ba32f4c759ae071d09b5c0c0f402aaca78119d3f4"
 
   url "https://github.com/beekeeper-studio/beekeeper-studio/releases/download/v#{version}/Beekeeper-Studio-#{version}.dmg",
       verified: "github.com/beekeeper-studio/beekeeper-studio/"
-  appcast "https://github.com/beekeeper-studio/beekeeper-studio/releases.atom"
   name "Beekeeper Studio"
   desc "Cross platform SQL editor and database management app"
   homepage "https://www.beekeeperstudio.io/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
 

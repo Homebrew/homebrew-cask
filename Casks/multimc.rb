@@ -4,9 +4,13 @@ cask "multimc" do
 
   url "https://github.com/MultiMC/MultiMC5/releases/download/#{version}/mmc-stable-osx64.tar.gz",
       verified: "github.com/MultiMC/MultiMC5/"
-  appcast "https://github.com/MultiMC/MultiMC5/releases.atom"
   name "Multi MC"
   homepage "https://multimc.org/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "MultiMC.app"
 end

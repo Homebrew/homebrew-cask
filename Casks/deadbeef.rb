@@ -1,13 +1,15 @@
 cask "deadbeef" do
-  version "1.8.5-beta2"
-  sha256 "d6ad1718a8bb8ec2ccb75d657df287dcda134a3a91650430c9f8fd3615467e90"
+  version "1.8.7-rc2"
+  sha256 "a3e47db1b24c682a7e303d763d2e7da7bc514cf7ba5c335fe6427c77e3549aac"
 
-  url "https://downloads.sourceforge.net/deadbeef/travis/osx/master/deadbeef-#{version}-osx-x86_64.zip",
+  url "https://downloads.sourceforge.net/deadbeef/travis/osx/#{version.major_minor}/deadbeef-#{version}-osx-x86_64.zip",
       verified: "downloads.sourceforge.net/deadbeef/"
-  appcast "https://sourceforge.net/projects/deadbeef/rss?path=/travis/osx/master"
+  appcast "https://sourceforge.net/projects/deadbeef/rss?path=/travis/osx/#{version.major_minor}"
   name "DeaDBeeF"
   desc "Modular audio player"
   homepage "https://deadbeef.sourceforge.io/"
+
+  conflicts_with cask: "homebrew/cask-versions/deadbeef-nightly"
 
   app "DeaDBeeF.app"
 

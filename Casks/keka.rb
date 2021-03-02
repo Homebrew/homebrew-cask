@@ -1,6 +1,6 @@
 cask "keka" do
-  version "1.2.7"
-  sha256 "53586a0d994cc34f47fc58c48b1280acd442ef4e14c16b5608b402b6f87f3f11"
+  version "1.2.11"
+  sha256 "9d690bce601481df9584771f17bc6c8a66a8966383b9a505491f526ed76797fb"
 
   url "https://github.com/aonez/Keka/releases/download/v#{version}/Keka-#{version}.dmg",
       verified: "github.com/aonez/Keka/"
@@ -10,7 +10,7 @@ cask "keka" do
   homepage "https://www.keka.io/"
 
   auto_updates true
-  conflicts_with cask: "keka-beta"
+  conflicts_with cask: "homebrew/cask-versions/keka-beta"
 
   app "Keka.app"
 

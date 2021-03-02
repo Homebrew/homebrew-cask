@@ -1,12 +1,16 @@
 cask "ledger-live" do
-  version "2.20.0"
-  sha256 "78fee1620138c16ecb04b725ec502fbdac5a5fcf628e8ac286c5a4c6ff28191f"
+  version "2.21.3"
+  sha256 "7b3ba82ed9a87599e49eef9c42903db5078fdaefc6bfb7ad8acdb0e71dcaf510"
 
   url "https://github.com/LedgerHQ/ledger-live-desktop/releases/download/v#{version}/ledger-live-desktop-#{version}-mac.dmg",
       verified: "github.com/LedgerHQ/ledger-live-desktop/"
-  appcast "https://github.com/LedgerHQ/ledger-live-desktop/releases.atom"
   name "Ledger Live"
   homepage "https://www.ledgerwallet.com/live"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
 

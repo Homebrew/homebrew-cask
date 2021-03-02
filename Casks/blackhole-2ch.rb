@@ -1,12 +1,16 @@
 cask "blackhole-2ch" do
-  version "0.2.8"
-  sha256 "2d834bcd54d35db691c6694cc618ee5df8e683d78fbeed45eb2f0b94545e46b9"
+  version "0.2.9"
+  sha256 "34c7333a7502ad17f62019f10e7d477dbf644bfd7b6203b3f7fe0dd420df86b5"
 
   url "https://existential.audio/downloads/BlackHole2ch.v#{version}.pkg"
-  appcast "https://github.com/ExistentialAudio/BlackHole/releases.atom"
   name "BlackHole 2ch"
   desc "Virtual Audio Driver"
   homepage "https://existential.audio/blackhole/"
+
+  livecheck do
+    url "https://github.com/ExistentialAudio/BlackHole"
+    strategy :github_latest
+  end
 
   pkg "BlackHole2ch.v#{version}.pkg"
 
@@ -22,5 +26,5 @@ cask "blackhole-2ch" do
   end
 
   uninstall quit:    "com.apple.audio.AudioMIDISetup",
-            pkgutil: "audio.existential.BlackHole2ch"
+            pkgutil: "audio.existential.BlackHole"
 end

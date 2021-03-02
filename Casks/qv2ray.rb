@@ -4,10 +4,14 @@ cask "qv2ray" do
 
   url "https://github.com/Qv2ray/Qv2ray/releases/download/v#{version}/Qv2ray-v#{version}.macOS-x64.dmg",
       verified: "github.com/Qv2ray/Qv2ray/"
-  appcast "https://github.com/Qv2ray/Qv2ray/releases.atom"
   name "Qv2ray"
   desc "V2Ray GUI client with extensive protocol support"
   homepage "https://qv2ray.net/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   depends_on formula: "v2ray"
   depends_on macos: ">= :mojave"

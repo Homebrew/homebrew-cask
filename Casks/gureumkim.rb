@@ -4,9 +4,13 @@ cask "gureumkim" do
 
   url "https://github.com/gureum/gureum/releases/download/#{version}/Gureum-#{version}.pkg",
       verified: "github.com/gureum/gureum/"
-  appcast "https://github.com/gureum/gureum/releases.atom"
   name "구름 입력기"
   homepage "https://gureum.io/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   pkg "Gureum-#{version}.pkg"
 

@@ -1,5 +1,5 @@
 cask "hype" do
-  version "4.1.3,720"
+  version "4.1.5,728"
   sha256 :no_check
 
   url "https://tumult.com/hype/download/Hype.zip"
