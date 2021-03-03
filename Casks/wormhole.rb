@@ -6,6 +6,7 @@ cask "wormhole" do
       verified: "files.octopusgame.com/"
   appcast "https://er.run/release"
   name "Wormhole"
+  desc "Browse & Control phone on PC, Screen Fusion for iOS & Android"
   homepage "https://er.run/"
 
   app "Wormhole.app"
