@@ -8,4 +8,11 @@ cask "chronos" do
   homepage "https://github.com/web-pal/chronos-timetracker"
 
   app "Chronos.app"
+  desc "Desktop client for JIRA. Track time, upload automatic and manual worklogs without a hassle. Cross-platform. Open-sourced."
+
+  zap trash: [
+    "~/Library/Application Support/Chronos",
+    "~/Library/Preferences/com.web-pal.chronos.plist",
+    "~/Library/Saved Application State/com.web-pal.chronos.savedState",
+  ]
 end
