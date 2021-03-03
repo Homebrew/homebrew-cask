@@ -1,6 +1,6 @@
 cask "image2icon" do
-  version "2.12,890"
-  sha256 "db9b7c25834a6d30cd9b050d39739ffe7e2c40b914aaf4ac07eece03fb36913b"
+  version "2.13,892"
+  sha256 "631d503dfdb264d20ce057c6ea5b65c57b6ea44b1596f453c951922de9fdfe6d"
 
   url "https://sf-applications.s3.amazonaws.com/Image2Icon/app-releases/Image2icon#{version.before_comma}.zip",
       verified: "sf-applications.s3.amazonaws.com/Image2Icon/"
