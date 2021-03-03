@@ -3,10 +3,14 @@ cask "clicker-for-netflix" do
   sha256 "0d1dd91dbe241325fec92918787ffcd5549c1058f97d55c3fce1ede4a5ed5f73"
 
   url "https://www.dbklabs.com/clicker-for-netflix/appcast/Clicker%20for%20Netflix%20#{version}.dmg"
-  appcast "https://www.dbklabs.com/clicker-for-netflix/appcast/appcast.xml"
   name "Clicker for Netflix"
   desc "Best standalone Netflix player"
   homepage "https://www.dbklabs.com/clicker-for-netflix/"
+
+  livecheck do
+    url "https://www.dbklabs.com/clicker-for-netflix/appcast/appcast.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :sierra"
 
