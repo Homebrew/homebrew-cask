@@ -1,11 +1,11 @@
 cask "visual-studio-code" do
-  version "1.53.1"
+  version "1.54.0"
 
   if Hardware::CPU.intel?
-    sha256 "cce23e760b7103d3e5e2d8ef488f8cf6b1f1e31aa42f68b0bcde66327db12cb2"
+    sha256 "a484a1530ff938139ac38565328f30eb22da7cc6c63b053181791c330b30a05c"
     url "https://update.code.visualstudio.com/#{version}/darwin/stable"
   else
-    sha256 "decf286cae311a808c7f0383fa74c6799aa8a6a4533db0c869689496c4d108bb"
+    sha256 "0d771d4416587e836090d940640fdf75c3cdec90bb5c125f002d1731f1433e1a"
     url "https://update.code.visualstudio.com/#{version}/darwin-arm64/stable"
   end
 
@@ -15,7 +15,7 @@ cask "visual-studio-code" do
   homepage "https://code.visualstudio.com/"
 
   livecheck do
-    url "https://update.code.visualstudio.com/api/update/darwin/stable/VERSION"
+    url "https://update.code.visualstudio.com/api/update/darwin-universal/stable/VERSION"
     strategy :page_match
     regex(/"productVersion"\s*:\s*"(\d+(:?\.\d+)*)"/)
   end

@@ -1,6 +1,6 @@
 cask "canva" do
-  version "1.14.0"
-  sha256 "04595dce762c2613efc28fdc0f8a15ca78149e912ceef4724f6eadec697a530b"
+  version "1.17.0"
+  sha256 "5e9027de37b9178e4ba63f73eb2a8f0b24723934d5c043a3634ab728b9415663"
 
   url "https://desktop-release.canva-deploy.com/Canva-#{version}.dmg",
       verified: "desktop-release.canva-deploy.com/"

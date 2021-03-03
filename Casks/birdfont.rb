@@ -6,8 +6,8 @@ cask "birdfont" do
     version "4.8.10"
     sha256 "067755cd2e02a70997aac3cb29a49ab2ec1c304c30d89f58b96add0df7802c88"
   else
-    version "4.9.7"
-    sha256 "e4fa3b56554c803e9036d3122f8d6c2d2e057dfbe731ca269134c2c2d85d2458"
+    version "4.12.2"
+    sha256 "1dda84ecd6213a5e960688c8fc805da3e28d26280ecd84208703e9a324e0bdcf"
 
     livecheck do
       url "https://birdfont.org/purchase.php"

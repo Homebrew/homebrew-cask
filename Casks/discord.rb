@@ -2,8 +2,8 @@ cask "discord" do
   version "0.0.261"
   sha256 "f6bed5976d1ee223b42986b185626fbc758d5f918aff27d3d7b0c2212406cba9"
 
-  url "https://cdn.discordapp.com/apps/osx/#{version}/Discord.dmg",
-      verified: "cdn.discordapp.com/"
+  url "https://dl.discordapp.net/apps/osx/#{version}/Discord.dmg",
+      verified: "dl.discordapp.net/"
   name "Discord"
   desc "Voice and text chat software"
   homepage "https://discord.com/"

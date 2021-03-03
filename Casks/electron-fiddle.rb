@@ -1,8 +1,8 @@
 cask "electron-fiddle" do
-  version "0.19.0"
+  version "0.20.0"
 
   if Hardware::CPU.intel?
-    sha256 "83deb7f48349c09522d9d23458f0f38e87aa727f42e68842a36a270c64d1adf2"
+    sha256 "64eaf723bf29425024d6765af589dc43191fdd8327c5f4f5140429f37db49a8f"
 
     url "https://github.com/electron/fiddle/releases/download/v#{version}/Electron.Fiddle-darwin-x64-#{version}.zip",
         verified: "github.com/electron/fiddle/"

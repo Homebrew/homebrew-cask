@@ -1,6 +1,6 @@
 cask "kinza" do
-  version "6.8.0"
-  sha256 "96942a29dc90917f3b623d40b9114e704904e37aebf18994a6bee5bdba34d992"
+  version "6.8.3"
+  sha256 "e4c3a7f105f5c95e7ce3c5e4ea9277b9b17e3ff48ba4ccb91e5388a3fcbb7cfe"
 
   url "https://d7s9ygw7nxr46.cloudfront.net/mac/kinza_#{version}.dmg",
       verified: "d7s9ygw7nxr46.cloudfront.net/"

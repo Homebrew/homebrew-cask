@@ -1,6 +1,6 @@
 cask "mymonero" do
-  version "1.1.18"
-  sha256 "be2f9f2452263f3084b82f94f39947994549fe98b03a29590d2604b3fabd990a"
+  version "1.1.19"
+  sha256 "4d66cdd658d9e950143fcdb3cd339dbba9b7734077236f7ac41ed5f6fb60757f"
 
   url "https://github.com/mymonero/mymonero-app-js/releases/download/v#{version}/MyMonero-#{version}.dmg",
       verified: "github.com/mymonero/mymonero-app-js/"

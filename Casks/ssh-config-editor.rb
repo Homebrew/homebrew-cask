@@ -12,6 +12,7 @@ cask "ssh-config-editor" do
     strategy :sparkle
   end
 
+  auto_updates true
   depends_on macos: ">= :catalina"
 
   app "SSH Config Editor.app"

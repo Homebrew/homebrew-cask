@@ -1,6 +1,6 @@
 cask "editaro" do
-  version "1.6.1"
-  sha256 "a1fe9a2c3279a7632e0fb6e0e9239f08594fe5d6e6a2dbaa37e164516783e97e"
+  version "1.7.0"
+  sha256 "550588781dead96e006062ba51f8c317b7803ec6c3aaa94e6d66a4fa26613c3a"
 
   url "https://github.com/kkosuge/editaro/releases/download/#{version}/Editaro-#{version}-mac.zip",
       verified: "github.com/kkosuge/editaro/"
