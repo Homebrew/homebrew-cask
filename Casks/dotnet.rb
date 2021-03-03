@@ -9,8 +9,8 @@ cask "dotnet" do
 
   conflicts_with cask: [
     "dotnet-sdk",
-    "dotnet-preview",
-    "dotnet-sdk-preview",
+    "homebrew/cask-versions/dotnet-preview",
+    "homebrew/cask-versions/dotnet-sdk-preview",
   ]
   depends_on macos: ">= :sierra"
 
