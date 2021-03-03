@@ -1,6 +1,6 @@
 cask "kstars" do
-  version "3.5.1"
-  sha256 "c324d6e81e15f1480a8ab06d60cc4aa854366d4f044a064450796bc5fa9275c6"
+  version "3.5.2"
+  sha256 "dcf6df488efea55d8423ea7e76b54f12643ae4555a8b12224510c6ab27ce26df"
 
   url "https://www.indilib.org/jdownloads/kstars/kstars-#{version}.dmg",
       verified: "indilib.org/jdownloads/kstars/"
