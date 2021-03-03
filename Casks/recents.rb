@@ -1,5 +1,5 @@
 cask "recents" do
-  version "2.0.3,4867"
+  version "2.2.1,6244"
   sha256 :no_check
 
   url "https://recentsapp.com/releases/Recents_latest.zip"
