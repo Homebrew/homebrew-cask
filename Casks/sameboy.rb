@@ -4,10 +4,14 @@ cask "sameboy" do
 
   url "https://github.com/LIJI32/SameBoy/releases/download/v#{version}/sameboy_cocoa_v#{version}.zip",
       verified: "github.com/LIJI32/SameBoy/"
-  appcast "https://github.com/LIJI32/SameBoy/releases.atom"
   name "SameBoy"
   desc "Game Boy and Game Boy Color emulator written in C"
   homepage "https://sameboy.github.io/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   depends_on macos: ">= :sierra"
 
