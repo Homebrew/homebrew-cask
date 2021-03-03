@@ -9,4 +9,9 @@ cask "evkey" do
   homepage "https://evkeyvn.com/"
 
   app "EVKey.app"
+
+  zap trash: [
+    "~/Library/Containers/com.lamquangminh.evkey",
+    "~/Library/Containers/com.lamquangminh.evkeyhelper",
+  ]
 end
