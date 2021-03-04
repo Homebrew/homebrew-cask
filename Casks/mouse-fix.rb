@@ -9,7 +9,7 @@ cask "mouse-fix" do
   homepage "https://mousefix.org/"
 
   livecheck do
-    url "https://github.com/noah-nuebling/mac-mouse-fix"
+    url :url
     strategy :github_latest
   end
 
