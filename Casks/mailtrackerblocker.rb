@@ -12,6 +12,12 @@ cask "mailtrackerblocker" do
 
   pkg "MailTrackerBlocker.pkg"
 
+  uninstall_postflight do
+    if system_command("ps", args: ["x"]).stdout.match?("Mail.app/Contents/MacOS/Mail")
+      opoo "Restart Mail.app to finish uninstalling #{token}"
+    end
+  end
+
   uninstall pkgutil: "com.onefatgiraffe.mailtrackerblocker",
             delete:  "/Library/Mail/Bundles/MailTrackerBlocker.mailbundle",
             quit:    "com.apple.mail"
