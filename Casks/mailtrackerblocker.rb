@@ -19,6 +19,5 @@ cask "mailtrackerblocker" do
   end
 
   uninstall pkgutil: "com.onefatgiraffe.mailtrackerblocker",
-            delete:  "/Library/Mail/Bundles/MailTrackerBlocker.mailbundle",
-            quit:    "com.apple.mail"
+            delete:  "/Library/Mail/Bundles/MailTrackerBlocker.mailbundle"
 end
