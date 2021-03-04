@@ -1,10 +1,10 @@
 cask "local" do
-  version "5.9.9,5246"
-  sha256 "e5b68be3f2e22d8faa977cc90fc1c439ba17e1fb8dd13b5eead25cd836888754"
+  version "5.10.0,5257"
+  sha256 "c5596e6ba8ef5b0da8ad6278659f9e7aaf9b2e50870440e2812fd548a8698ae0"
 
   url "https://cdn.localwp.com/releases-stable/#{version.before_comma}+#{version.after_comma}/local-#{version.before_comma}-mac.dmg"
   name "Local"
-  desc "WordPress local development tool"
+  desc "WordPress local development tool by Flywheel"
   homepage "https://localwp.com/"
 
   livecheck do
