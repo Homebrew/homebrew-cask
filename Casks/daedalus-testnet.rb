@@ -1,6 +1,3 @@
-# typed: false
-# frozen_string_literal: true
-
 cask "daedalus-testnet" do
   version "4.0.0-FC1,16868"
   sha256 "44f4a34b8bc592231f84abb266a03a06ed5a529866ad19da940e1ae3012bb235"
