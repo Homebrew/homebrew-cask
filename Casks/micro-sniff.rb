@@ -9,8 +9,8 @@ cask "micro-sniff" do
 
   depends_on macos: ">= :sierra"
 
-  app "Micro Sniff.app", target: "Micro Sniff.app"
-  
+  app "Micro Sniff.app"
+
   zap trash: [
     "~/Library/Application Scripts/foundation.dwarves.microsniff",
     "~/Library/Application Scripts/foundation.dwarves.microsnifflauncher",
