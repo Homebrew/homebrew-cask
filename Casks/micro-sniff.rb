@@ -4,10 +4,10 @@ cask "micro-sniff" do
 
   url "https://github.com/dwarvesf/micro-sniff/releases/download/v#{version}/Micro.Sniff.#{version}.dmg"
   name "Micro Sniff"
-  desc "This application allows you to monitor your microphone activity"
+  desc "Monitor microphone activity"
   homepage "https://github.com/dwarvesf/micro-sniff"
 
   depends_on macos: ">= :sierra"
 
-  app "Micro\ Sniff.app", target: "Micro\ Sniff.app"
+  app "Micro Sniff.app", target: "Micro Sniff.app"
 end
