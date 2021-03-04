@@ -11,7 +11,7 @@ cask "outline-manager" do
   livecheck do
     url "https://github.com/Jigsaw-Code/outline-releases/raw/master/manager/latest-mac.yml"
     strategy :page_match
-    regex(/version: ([\d.]+)/i)
+    regex(/version: (\d+(?:\.\d+)*)/i)
   end
 
   app "Outline Manager.app"
