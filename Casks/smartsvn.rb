@@ -9,7 +9,7 @@ cask "smartsvn" do
 
   livecheck do
     url "https://www.smartsvn.com/documents/smartsvn/changelog.txt"
-    regex(/SmartSVN (\d+(?:\.\d+)*)/i)
+    regex(/SmartSVN\s+(\d+(?:\.\d+)*)/i)
   end
 
   depends_on macos: ">= :el_capitan"
