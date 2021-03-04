@@ -5,7 +5,7 @@ cask "nvidia-geforce-now" do
   url "https://download.nvidia.com/gfnpc/GeForceNOW-release.dmg"
   name "NVIDIA GeForce NOW"
   desc "Cloud gaming platform"
-  homepage "https://www.nvidia.com/en-us/geforce/products/geforce-now/"
+  homepage "https://www.nvidia.com/en-us/geforce-now/download/"
 
   depends_on macos: ">= :yosemite"
 
