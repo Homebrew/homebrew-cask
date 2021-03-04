@@ -4,6 +4,7 @@ cask "secure-pipes" do
 
   url "https://www.opoet.com/pyro/index.php/files/download/#{version.after_comma}"
   name "Secure Pipes"
+  desc "Manage SSH tunnels"
   homepage "https://www.opoet.com/pyro/index.php/"
 
   app "Secure Pipes.app"
