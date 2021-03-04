@@ -13,7 +13,7 @@ cask "daedalus-testnet" do
 
     strategy :page_match do |page|
       version = page.match(/"version":"(.+?)"/)[1]
-      build = page.match(/-(\d+(?:\.\d+)*).pkg/)
+      build = page.match(/-(\d+(?:\.\d+)*)\.pkg/)
       "#{version},#{build}"
     end
   end
