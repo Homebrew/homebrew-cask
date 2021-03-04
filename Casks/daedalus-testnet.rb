@@ -15,9 +15,9 @@ cask "daedalus-testnet" do
     url "https://updates-cardano-testnet.s3.amazonaws.com/daedalus-latest-version.json"
 
     strategy :page_match do |page|
-      version = page.match(/"version":"(.+?)"/)
+      version = page.match(/"version":"(.+?)"/)[1]
       build = page.match(/-(\d+(?:\.\d+)*).pkg/)
-      "#{version[1]},#{build}"
+      "#{version},#{build}"
     end
   end
 
