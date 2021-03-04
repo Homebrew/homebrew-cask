@@ -7,7 +7,7 @@ cask "yandex-disk" do
   desc "Cloud storage"
   homepage "https://disk.yandex.ru/"
 
-  auto_update true
+  auto_updates true
 
   app "Yandex.Disk.2.app"
 
