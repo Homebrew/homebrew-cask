@@ -9,11 +9,16 @@ cask "mouse-fix" do
   homepage "https://mousefix.org/"
 
   livecheck do
-    url :url
+    url "https://github.com/noah-nuebling/mac-mouse-fix"
     strategy :github_latest
   end
 
   auto_updates true
 
   app "Mac Mouse Fix.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.nuebling.mac-mouse-fix",
+    "~/Library/LaunchAgents/com.nuebling.mac-mouse-fix.helper.plist",
+  ]
 end
