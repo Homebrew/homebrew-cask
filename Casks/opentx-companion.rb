@@ -10,7 +10,7 @@ cask "opentx-companion" do
   livecheck do
     url "https://www.open-tx.org/downloads"
     strategy :page_match
-    regex(/opentx\s(\d+(?:\.\d+)*)/i)
+    regex(/opentx\s(\d(?:\.\d+)*)/i)
   end
 
   app "OpenTX Companion #{version.major_minor}.app"
