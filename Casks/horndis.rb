@@ -13,7 +13,6 @@ cask "horndis" do
     :sierra,
     :high_sierra,
     :mojave,
-    :catalina,
   ]
 
   pkg "HoRNDIS-#{version}.pkg"
