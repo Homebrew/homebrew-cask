@@ -14,5 +14,9 @@ cask "texmacs" do
 
   app "TeXmacs.app"
 
-  zap trash: "~/.TeXmacs"
+  zap trash: [
+    "~/.TeXmacs",
+    "~/Library/Preferences/org.texmacs.TeXmacs.plist",
+    "~/Library/Saved Application State/org.texmacs.TeXmacs.savedState",
+  ]
 end
