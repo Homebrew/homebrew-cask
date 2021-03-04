@@ -5,7 +5,15 @@ cask "horndis" do
   url "https://github.com/jwise/HoRNDIS/releases/download/rel#{version}/HoRNDIS-#{version}.pkg"
   appcast "https://github.com/jwise/HoRNDIS/releases.atom"
   name "HoRNDIS"
+  desc "Android USB tethering driver"
   homepage "https://github.com/jwise/HoRNDIS"
+
+  depends_on macos: [
+    :el_capitan,
+    :sierra,
+    :high_sierra,
+    :mojave,
+  ]
 
   pkg "HoRNDIS-#{version}.pkg"
 
