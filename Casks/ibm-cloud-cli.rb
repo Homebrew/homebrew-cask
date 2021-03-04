@@ -14,48 +14,10 @@ cask "ibm-cloud-cli" do
 
   pkg "IBM_Cloud_CLI_#{version}.pkg"
 
-  uninstall_postflight do
-    if File.exist?("/etc/profile")
-      system_command "/usr/bin/sed",
-                     args: [
-                       "-E",
-                       "-i", "",
-                       "-e", "/^### Added by IBM Cloud CLI$/d",
-                       "-e", '/^source \/usr\/local\/Bluemix\/bx\/bash_autocomplete$/d',
-                       File.realpath("/etc/profile")
-                     ],
-                     sudo: true
-    end
-
-    if File.exist?("#{ENV["HOME"]}/.bashrc")
-      system_command "/usr/bin/sed",
-                     args: [
-                       "-E",
-                       "-i", "",
-                       "-e", "/^### Added by IBM Cloud CLI$/d",
-                       "-e", '/^source \/usr\/local\/Bluemix\/bx\/bash_autocomplete$/d',
-                       File.realpath("#{ENV["HOME"]}/.bashrc")
-                     ]
-    end
-
-    if File.exist?("#{ENV["HOME"]}/.zshrc")
-      system_command "/usr/bin/sed",
-                     args: [
-                       "-E",
-                       "-i", "",
-                       "-e", "/^### Added by IBM Cloud CLI$/d",
-                       "-e", '/^source \/usr\/local\/Bluemix\/bx\/zsh_autocomplete$/d',
-                       File.realpath("#{ENV["HOME"]}/.zshrc")
-                     ]
-    end
-  end
-
   uninstall pkgutil: "com.ibm.cloud.cli",
             delete:  [
               "/usr/local/bin/bluemix",
               "/usr/local/bin/bx",
-              "/usr/local/bin/bluemix-analytics",
-              "/usr/local/Bluemix",
               "/usr/local/ibmcloud",
             ]
 
