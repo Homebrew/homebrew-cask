@@ -11,4 +11,9 @@ cask "gswitch" do
   depends_on macos: ">= :sierra"
 
   app "gSwitch.app"
+
+  zap trash: [
+    "~/Library/Caches/gSwitch",
+    "~/Library/Preferences/com.CodySchrank.gSwitch.plist",
+  ]
 end
