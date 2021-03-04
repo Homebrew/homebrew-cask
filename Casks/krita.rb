@@ -10,7 +10,7 @@ cask "krita" do
 
   livecheck do
     url "https://download.kde.org/stable/krita/"
-    regex(%r{href="(\d+(?:\.\d+)*)/"}i)
+    regex(%r{href=['"]?(\d+(?:\.\d+)*)/['"]?}i)
   end
 
   depends_on macos: ">= :sierra"
