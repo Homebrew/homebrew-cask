@@ -1,10 +1,10 @@
 cask "clicker-for-youtube" do
-  version "1.7"
+  version "1.7,38"
   sha256 "0e1373ec78fe586c28181f97fa6f58e567779dce2ee7aa3fbf248f386ff20b65"
 
-  url "https://www.dbklabs.com/clicker-for-youtube/appcast/Clicker%20for%20YouTube%20#{version}.dmg"
+  url "https://www.dbklabs.com/clicker-for-youtube/appcast/Clicker%20for%20YouTube%20#{version.before_comma}.dmg"
   name "Clicker for YouTube"
-  desc "Best standalone YouTube app"
+  desc "Standalone YouTube app"
   homepage "https://www.dbklabs.com/clicker-for-youtube/"
 
   livecheck do
