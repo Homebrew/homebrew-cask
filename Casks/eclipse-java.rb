@@ -6,6 +6,17 @@ cask "eclipse-java" do
   name "Eclipse IDE for Java Developers"
   homepage "https://eclipse.org/"
 
+  livecheck do
+    url "https://projects.eclipse.org/releases/"
+    strategy :page_match do |page|
+      page.scan(%r{href=.*projects.eclipse.org/releases/(\d+-\d+)}i).map do |release|
+        version_page = Net::HTTP.get(URI.parse("https://projects.eclipse.org/releases/#{release[0]}"))
+        version = version_page.scan(%r{href="/projects/eclipse/releases/(\d+(?:\.\d+)*)"}i)
+        "#{version[0][0]},#{release[0]}:R"
+      end
+    end
+  end
+
   # Renamed to avoid conflict with other Eclipse.
   app "Eclipse.app", target: "Eclipse Java.app"
 end

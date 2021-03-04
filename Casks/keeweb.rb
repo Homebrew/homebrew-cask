@@ -6,7 +6,7 @@ cask "keeweb" do
     url "https://github.com/keeweb/keeweb/releases/download/v#{version}/KeeWeb-#{version}.mac.x64.dmg",
         verified: "github.com/keeweb/keeweb/"
   else
-    sha256 "e74f7a088ec689b0ec6420aecc78c60aad12e48292867748e263b1990ec5135c"
+    sha256 "4c9854b3ba80f902bfd015df15b246cebf8d9a007b69a7a2dede8eba076428fe"
     url "https://github.com/keeweb/keeweb/releases/download/v#{version}/KeeWeb-#{version}.mac.arm64.dmg",
         verified: "github.com/keeweb/keeweb/"
   end
