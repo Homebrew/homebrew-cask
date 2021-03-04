@@ -16,12 +16,4 @@ cask "mailtrackerblocker" do
   uninstall pkgutil: "com.onefatgiraffe.mailtrackerblocker",
             delete:  "/Library/Mail/Bundles/MailTrackerBlocker.mailbundle",
             quit:    ["com.apple.mail"]
-
-  def caveats
-    <<~EOS
-      To enable:
-        Open Mail, goto Preferences > General > Manage Plug-ins... >
-        check "MailTrackerBlocker.mailbundle" > Apply and Restart Mail.
-    EOS
-  end
 end
