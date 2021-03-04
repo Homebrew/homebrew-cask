@@ -7,12 +7,6 @@ cask "micro-sniff" do
   desc "This application allows you to monitor your Mac's microphone activity."
   homepage "https://github.com/dwarvesf/micro-sniff"
 
-    livecheck do
-    url :url
-    strategy :github_latest
-  end
-
-  auto_updates true
   depends_on macos: ">= :sierra"
 
   app "Micro\ Sniff.app", target: "Micro\ Sniff.app"
