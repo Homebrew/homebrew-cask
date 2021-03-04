@@ -8,7 +8,7 @@ cask "sdformatter" do
   homepage "https://www.sdcard.org/downloads/formatter/"
 
   livecheck do
-    url "https://www.sdcard.org/downloads/formatter/"
+    url :homepage
     regex(/SD Memory Card Formatter (\d+(?:\.\d+)*)/i)
   end
 
