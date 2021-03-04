@@ -19,10 +19,10 @@ cask "ibm-cloud-cli" do
       system_command "/usr/bin/sed",
                      args: [
                        "-E",
-                       "-i", ".bluemix_uninstall_bak",
+                       "-i", "",
                        "-e", "/^### Added by IBM Cloud CLI$/d",
                        "-e", '/^source \/usr\/local\/Bluemix\/bx\/bash_autocomplete$/d',
-                       "/etc/profile"
+                       File.realpath("/etc/profile")
                      ],
                      sudo: true
     end
@@ -31,10 +31,10 @@ cask "ibm-cloud-cli" do
       system_command "/usr/bin/sed",
                      args: [
                        "-E",
-                       "-i", ".bluemix_uninstall_bak",
+                       "-i", "",
                        "-e", "/^### Added by IBM Cloud CLI$/d",
                        "-e", '/^source \/usr\/local\/Bluemix\/bx\/bash_autocomplete$/d',
-                       "#{ENV["HOME"]}/.bashrc"
+                       File.realpath("#{ENV["HOME"]}/.bashrc")
                      ]
     end
 
@@ -42,10 +42,10 @@ cask "ibm-cloud-cli" do
       system_command "/usr/bin/sed",
                      args: [
                        "-E",
-                       "-i", ".bluemix_uninstall_bak",
+                       "-i", "",
                        "-e", "/^### Added by IBM Cloud CLI$/d",
                        "-e", '/^source \/usr\/local\/Bluemix\/bx\/zsh_autocomplete$/d',
-                       "#{ENV["HOME"]}/.zshrc"
+                       File.realpath("#{ENV["HOME"]}/.zshrc")
                      ]
     end
   end
