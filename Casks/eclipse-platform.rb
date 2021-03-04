@@ -6,6 +6,14 @@ cask "eclipse-platform" do
   name "Eclipse SDK"
   homepage "https://eclipse.org/"
 
+  livecheck do
+    url "http://download.eclipse.org/eclipse/downloads/"
+    regex(%r{href=.*/R-(\d+(?:\.\d+)*)-(\d+)/}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+    end
+  end
+
   # Renamed to avoid conflict with other Eclipse.
   app "Eclipse.app", target: "Eclipse Platform.app"
 end
