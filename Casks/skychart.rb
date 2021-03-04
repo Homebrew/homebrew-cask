@@ -6,11 +6,11 @@ cask "skychart" do
       verified: "downloads.sourceforge.net/skychart/"
   name "SkyChart"
   name "Cartes du Ciel"
-  desc "Free software to draw sky charts"
+  desc "Draw sky charts"
   homepage "https://www.ap-i.net/skychart/"
 
   livecheck do
-    url "https://sourceforge.net/projects/skychart/rss?path=/"
+    url "https://sourceforge.net/projects/skychart/rss?path=/1-software/"
     strategy :page_match
     regex(/skychart-(\d+(?:.\d+)*)-x86_64-macosx\.dmg/i)
   end
