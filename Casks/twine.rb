@@ -12,7 +12,6 @@ cask "twine" do
   app "Twine.app"
 
   zap trash: [
-    "~/Documents/Twine",
     "~/Library/Application Support/Twine",
     "~/Library/Logs/Twine",
     "~/Library/Preferences/com.electron.twine.plist",
