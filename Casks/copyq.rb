@@ -25,6 +25,7 @@ cask "copyq" do
     "~/.config/copyq",
     "~/Library/Application Support/copyq",
     "~/Library/Application Support/copyq.log",
+    "~/Library/Preferences/com.copyq.copyq.plist",
   ]
 
   caveats do
