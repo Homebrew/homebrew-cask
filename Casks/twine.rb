@@ -10,4 +10,12 @@ cask "twine" do
   homepage "https://twinery.org/"
 
   app "Twine.app"
+
+  zap trash: [
+    "~/Documents/Twine",
+    "~/Library/Application Support/Twine",
+    "~/Library/Logs/Twine",
+    "~/Library/Preferences/com.electron.twine.plist",
+    "~/Library/Saved Application State/com.electron.twine.savedState",
+  ]
 end
