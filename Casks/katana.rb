@@ -9,4 +9,11 @@ cask "katana" do
   homepage "https://github.com/bluegill/katana/"
 
   app "Katana.app"
+
+  zap trash: [
+    "~/Library/Application Support/Katana",
+    "~/Library/Logs/Katana",
+    "~/Library/Preferences/com.electron.katana.plist",
+    "~/.katana",
+  ]
 end
