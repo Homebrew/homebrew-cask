@@ -21,6 +21,12 @@ cask "copyq" do
     EOS
   end
 
+  zap trash: [
+    "~/.config/copyq",
+    "~/Library/Application Support/copyq",
+    "~/Library/Application Support/copyq.log",
+  ]
+
   caveats do
     unsigned_accessibility
   end
