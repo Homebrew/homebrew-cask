@@ -1,6 +1,6 @@
 cask "visual-studio-code" do
-  version "1.54.0"
-  sha256 "a484a1530ff938139ac38565328f30eb22da7cc6c63b053181791c330b30a05c"
+  version "1.54.1"
+  sha256 "9f5cf75b019933e7a61ff6410830b435a8a2e32c6b8a685b8b17f1ef33c0ba8e"
 
   url "https://update.code.visualstudio.com/#{version}/darwin/stable"
   name "Microsoft Visual Studio Code"
