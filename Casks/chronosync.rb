@@ -1,5 +1,5 @@
 cask "chronosync" do
-  version "4.9.12"
+  version "4.9.13"
   sha256 :no_check
 
   url "https://downloads.econtechnologies.com/CS4_Download.dmg"

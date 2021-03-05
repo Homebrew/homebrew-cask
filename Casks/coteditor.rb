@@ -15,7 +15,6 @@ cask "coteditor" do
 
   url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg",
       verified: "github.com/coteditor/CotEditor/"
-  appcast "https://github.com/coteditor/CotEditor/releases.atom"
   name "CotEditor"
   desc "Plain-text editor for web pages, program source codes and more"
   homepage "https://coteditor.com/"
@@ -31,5 +30,6 @@ cask "coteditor" do
     "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.coteditor.CotEditor.help*",
     "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/Japanese/HelpSDMIndexFile/com.coteditor.CotEditor.help*",
     "~/Library/Containers/com.coteditor.CotEditor",
+    "~/Library/Preferences/com.coteditor.CotEditor.plist",
   ]
 end

@@ -1,14 +1,12 @@
 cask "notion" do
-  version "2.0.11"
-
   if Hardware::CPU.intel?
-    sha256 "5b549f7ccc4738808ba997b22e63d626dbd79b9d7c544901fca7a9fe0a3073f8"
-
+    version "2.0.15"
+    sha256 "e3d736d730a6fb04d446328a82cc396e5a9af513588e8a3f266614830a8234c1"
     url "https://desktop-release.notion-static.com/Notion-#{version}.dmg",
         verified: "desktop-release.notion-static.com/"
   else
-    sha256 "aed019ddac9fdd72c8595214971366374da66d15e267786ac4f9e9055a4d44ed"
-
+    version "2.0.13"
+    sha256 "abe3dd4adc5fc4ba591be2f031e22cb0c43ce2d5503fe925b005231e7941d5bf"
     url "https://desktop-release.notion-static.com/Notion-#{version}-arm64.dmg",
         verified: "desktop-release.notion-static.com/"
   end
@@ -21,8 +19,6 @@ cask "notion" do
     url "https://www.notion.so/desktop/mac/download"
     strategy :header_match
   end
-
-  auto_updates true
 
   app "Notion.app"
 

@@ -1,6 +1,6 @@
 cask "electrum-ltc" do
-  version "4.0.9.1"
-  sha256 "08143c9fbeb1e0ae9f183b0fc9ef0cd1a726a49ea25b9c7d2f25f43da20c06d8"
+  version "4.0.9.2"
+  sha256 "e5af2e19818afbbeaec62c915d0828c57ee43543b691df3371059111e2a087f1"
 
   url "https://electrum-ltc.org/download/electrum-ltc-#{version}.dmg"
   name "Electrum-LTC"

@@ -1,6 +1,6 @@
 cask "paletro" do
-  version "1.5.0"
-  sha256 "e2aa88d381bd50536d585a9532d94e7ac071ba5d8209b7cfb98eb63c5f7af4df"
+  version "1.6.0"
+  sha256 "2067406b29f1e55493cc3f2baf02b6769ef9dc306a22a6e849a1e625545341d5"
 
   url "https://appmakes.io/paletro/download/Paletro-#{version}.dmg"
   name "Paletro"

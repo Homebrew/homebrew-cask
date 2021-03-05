@@ -15,4 +15,11 @@ cask "amazon-workspaces" do
   pkg "WorkSpaces.pkg"
 
   uninstall pkgutil: "com.amazon.workspaces"
+
+  zap trash: [
+    "~/Library/Application Support/Amazon Web Services/Amazon WorkSpaces",
+    "~/Library/Caches/com.amazon.workspaces",
+    "~/Library/Preferences/com.amazon.workspaces.plist",
+    "~/Library/Saved Application State/com.amazon.workspaces.savedState",
+  ]
 end

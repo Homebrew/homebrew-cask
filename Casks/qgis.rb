@@ -1,5 +1,5 @@
 cask "qgis" do
-  version "3.16.3"
+  version "3.18.0"
   sha256 :no_check
 
   url "https://qgis.org/downloads/macos/qgis-macos-pr.dmg"

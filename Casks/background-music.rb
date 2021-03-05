@@ -18,4 +18,6 @@ cask "background-music" do
   uninstall pkgutil:   "com.bearisdriving.BGM",
             quit:      "com.bearisdriving.BGM.App",
             launchctl: "com.bearisdriving.BGM.XPCHelper"
+
+  zap trash: "~/Library/Preferences/com.bearisdriving.BGM.App.plist"
 end

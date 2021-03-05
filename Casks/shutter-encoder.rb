@@ -1,6 +1,6 @@
 cask "shutter-encoder" do
-  version "14.6"
-  sha256 "7504fa09c384609089b8817d5971195bc34f3f18d3dd4ef0796b2310b5cf606f"
+  version "14.7"
+  sha256 "d8803deb5b698a96e05db0029c043f4ee3386e7f26a53b6b1571eeb8e73ad73f"
 
   url "https://www.shutterencoder.com/Shutter%20Encoder%20(MAC%20Version%20#{version}).zip"
   appcast "https://www.shutterencoder.com/changelog.txt"
