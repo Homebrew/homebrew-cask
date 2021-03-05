@@ -8,4 +8,10 @@ cask "devutils" do
   homepage "https://devutils.app/"
 
   app "DevUtils.app"
+
+  zap trash: [
+    "~/Library/Caches/DevUtils",
+    "~/Library/Caches/tonyapp.devutils",
+    "~/Library/Preferences/tonyapp.devutils",
+  ]
 end
