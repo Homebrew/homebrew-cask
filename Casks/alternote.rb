@@ -4,6 +4,7 @@ cask "alternote" do
 
   url "http://alternoteapp.com/assets/downloads/Alternote#{version.after_comma}.zip"
   name "Alternote"
+  desc "Note-taking App for Evernote"
   homepage "http://alternoteapp.com/"
 
   livecheck do
@@ -14,4 +15,9 @@ cask "alternote" do
   app "Alternote.app"
 
   uninstall quit: "com.Alternote"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.Alternote",
+    "~/Library/Containers/com.Alternote",
+  ]
 end
