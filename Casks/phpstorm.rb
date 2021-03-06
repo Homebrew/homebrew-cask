@@ -12,6 +12,7 @@ cask "phpstorm" do
   appcast "https://data.services.jetbrains.com/products/releases?code=PS&latest=true&type=release"
   name "JetBrains PhpStorm"
   homepage "https://www.jetbrains.com/phpstorm/"
+  desc "The PHP IDE by JetBrains"
 
   auto_updates true
 
