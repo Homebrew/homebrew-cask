@@ -15,4 +15,14 @@ cask "agenda" do
   depends_on macos: ">= :sierra"
 
   app "Agenda.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.momenta.agenda.macos",
+    "~/Library/Application Scripts/com.momenta.agenda.macos.extension-sharing",
+    "~/Library/Application Scripts/com.momenta.agenda.macos.extension-widget",
+    "~/Library/Containers/com.momenta.agenda.macos",
+    "~/Library/Containers/com.momenta.agenda.macos.extension-sharing",
+    "~/Library/Containers/com.momenta.agenda.macos.extension-widget",
+    "~/Library/Group Containers/WRBK2Z2EG7.group.com.momenta.agenda.macos",
+  ]
 end
