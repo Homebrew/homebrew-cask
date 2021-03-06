@@ -1,6 +1,5 @@
 name: Cask Request
 description: For requesting new casks
-issue_body: false
 body:
     - type: markdown
       attributes:
