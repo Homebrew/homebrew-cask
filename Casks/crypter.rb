@@ -9,4 +9,11 @@ cask "crypter" do
   homepage "https://github.com/HR/Crypter"
 
   app "Crypter.app"
+
+  zap trash: [
+    "~/Library/Application Support/Crypter",
+    "~/Library/Logs/Crypter",
+    "~/Library/Preferences/com.github.hr.crypter.plist",
+    "~/Library/Saved Application State/com.github.hr.crypter.savedState",
+  ]
 end
