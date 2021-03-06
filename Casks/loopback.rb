@@ -1,5 +1,5 @@
 cask "loopback" do
-  version "2.2.2"
+  version "2.2.3"
   sha256 :no_check
 
   url "https://d2oxtzozd38ts8.cloudfront.net/loopback/download/Loopback.zip",
