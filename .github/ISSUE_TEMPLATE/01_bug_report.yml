@@ -1,5 +1,5 @@
 name: Reproducible Bug Report
-description: If you’re sure it’s reproducible and not just your machine: submit an issue so we can investigate
+description: If you’re sure it’s reproducible and not just your machine, submit an issue so we can investigate
 issue_body: false
 body:
   - type: checkboxes
