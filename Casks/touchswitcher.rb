@@ -4,6 +4,7 @@ cask "touchswitcher" do
 
   url "https://hazeover.com/touchswitcher/TouchSwitcher.zip"
   name "TouchSwitcher"
+  desc "Use Touch Bar to Switch Apps"
   homepage "https://hazeover.com/touchswitcher.html"
 
   livecheck do
@@ -14,4 +15,6 @@ cask "touchswitcher" do
   depends_on macos: ">= :mojave"
 
   app "TouchSwitcher.app"
+
+  zap trash: "~/Library/Preferences/com.pointum.TouchSwitcher.plist"
 end
