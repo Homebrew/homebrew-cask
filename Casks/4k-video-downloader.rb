@@ -11,4 +11,10 @@ cask "4k-video-downloader" do
   depends_on macos: ">= :sierra"
 
   app "4K Video Downloader.app"
+
+  zap trash: [
+    "~/Library/Application Support/4kdownload.com/4K Video Downloader",
+    "~/Library/Preferences/com.4kdownload.4K Video Downloader.plist",
+    "~/Library/Preferences/com.4kdownload.ApplicationDirectories.plist",
+  ]
 end
