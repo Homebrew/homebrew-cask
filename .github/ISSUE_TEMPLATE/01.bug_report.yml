@@ -1,5 +1,5 @@
-name: New issue for Reproducible Bug
-about: "If you're sure it's reproducible and not just your machine: submit an issue so we can investigate."
+name: Reproducible Bug Report
+description: If you’re sure it’s reproducible and not just your machine: submit an issue so we can investigate
 issue_body: false
 body:
   - type: checkboxes
@@ -9,11 +9,11 @@ body:
         - label: I understand that [if I ignore these instructions, my issue may be closed without review](https://github.com/Homebrew/homebrew-cask/blob/master/doc/faq/closing_issues_without_review.md).
           required: true
         - label: I have retried my command with `--force`.
-          required: true
+          required: false
         - label: I ran `brew update-reset && brew update` and retried my command.
-          required: true
+          required: false
         - label: I ran `brew doctor`, fixed as many issues as possible and retried my command.
-          required: true
+          required: false
         - label: I have checked the instructions for [reporting bugs](https://github.com/Homebrew/homebrew-cask#reporting-bugs).
           required: true
         - label: I made doubly sure this is not a [checksum does not match](https://github.com/Homebrew/homebrew-cask/blob/master/doc/reporting_bugs/checksum_does_not_match_error.md) error.
