@@ -1,3 +1,6 @@
+# typed: false
+# frozen_string_literal: true
+
 cask "phpstorm" do
   version "2020.3.2"
 
@@ -11,8 +14,8 @@ cask "phpstorm" do
 
   appcast "https://data.services.jetbrains.com/products/releases?code=PS&latest=true&type=release"
   name "JetBrains PhpStorm"
+  desc "PHP IDE by JetBrains"
   homepage "https://www.jetbrains.com/phpstorm/"
-  desc "The PHP IDE by JetBrains"
 
   auto_updates true
 
