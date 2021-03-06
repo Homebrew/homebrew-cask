@@ -1,6 +1,6 @@
 cask "altserver" do
-  version "1.4.3,50"
-  sha256 "d911b4509325f571015e9a4f6f372d471ffafed25f741cfbfde80cac8dcef353"
+  version "1.4.4,51"
+  sha256 "18a4d37fd91fba892de8c186f176904c268125b411eeb2a19ed6e4b5a8d9de76"
 
   url "https://f000.backblazeb2.com/file/altstore/altserver/#{version.before_comma.dots_to_underscores}.zip",
       verified: "f000.backblazeb2.com/file/"
