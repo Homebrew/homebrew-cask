@@ -20,6 +20,8 @@ cask "notion" do
     strategy :header_match
   end
 
+  auto_updates true
+
   app "Notion.app"
 
   zap trash: [
