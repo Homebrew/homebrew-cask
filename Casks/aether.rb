@@ -5,7 +5,15 @@ cask "aether" do
   url "https://static.getaether.net/Releases/Aether-#{version.before_comma}/#{version.after_comma}/mac/Aether-#{version.before_comma}%2B#{version.after_comma}.dmg"
   appcast "https://static.getaether.net/WebsiteReleaseLinks/Latest/LatestReleaseLinks.json"
   name "Aether"
+  desc "Peer-to-peer ephemeral public communities"
   homepage "https://getaether.net/"
 
   app "Aether.app"
+
+  zap trash: [
+    "/Library/Logs/DiagnosticReports/aether-backend-mac-*.diag",
+    "~/Library/Application Support/Aether",
+    "~/Library/Preferences/com.aethertechnologies.Aether.plist",
+    "~/Library/Saved Application State/com.aethertechnologies.Aether.savedState",
+  ]
 end
