@@ -1,16 +1,20 @@
 cask "logisim-evolution" do
   version "3.4.1"
-  sha256 "1b72dd3397290b7be95f886b933bd37a2d9182b8d33247fa5f059d0867e8111c"
+  sha256 "253290b94ae1dba6d5528ff2ea478c2750cee4a40c4710f7da6006dc3f0b4b52"
 
-  url "https://github.com/reds-heig/logisim-evolution/releases/download/v#{version}/logisim-evolution-#{version}-all.jar"
+  url "https://github.com/reds-heig/logisim-evolution/releases/download/v#{version}/Logisim-evolution-#{version}.dmg"
   appcast "https://github.com/reds-heig/logisim-evolution/releases.atom"
   name "Logisim Evolution"
   desc "Digital logic designer and simulator"
   homepage "https://github.com/reds-heig/logisim-evolution"
 
-  container type: :naked
+  app "Logisim-evolution.app"
 
-  app "logisim-evolution-#{version}-all.jar", target: "logisim-evolution.jar"
+  # Address the broken app issue. https://github.com/reds-heig/logisim-evolution/issues/499
+  postflight do
+    system_command "xattr",
+                   args: ["-cr", "#{appdir}/Logisim-evolution.app"]
+  end
 
   zap trash: "~/Library/Preferences/com.cburch.logisim.plist"
 
