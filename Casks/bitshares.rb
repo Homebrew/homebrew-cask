@@ -1,6 +1,6 @@
 cask "bitshares" do
-  version "3.3.191120"
-  sha256 "27553d1038f6c301b7bcdc4f8a644e871722024d24585c6b847c868962a967aa"
+  version "5.0.210216"
+  sha256 "569fa44809f92f3b3e2809cb80906a24ebc6cdba5447a0f22136e97aab1ad1d4"
 
   url "https://github.com/bitshares/bitshares-ui/releases/download/#{version}/BitShares-#{version}-mac.zip",
       verified: "github.com/bitshares/bitshares-ui/"
