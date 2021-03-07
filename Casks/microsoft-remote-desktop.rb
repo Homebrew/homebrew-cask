@@ -13,9 +13,15 @@ cask "microsoft-remote-desktop" do
 
   pkg "Microsoft_Remote_Desktop_#{version}_installer.pkg"
 
-  uninstall pkgutil: [
+  uninstall pkgutil:   [
     "com.microsoft.rdc.macos",
-  ]
+  ],
+            launchctl: [
+              "com.microsoft.update.agent",
+            ],
+            quit:      [
+              "com.microsoft.autoupdate.fba",
+            ]
 
   zap trash: [
     "~/Library/Application Scripts/com.microsoft.rdc.macos",
