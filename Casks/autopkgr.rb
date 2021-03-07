@@ -1,6 +1,6 @@
 cask "autopkgr" do
-  version "1.5.6"
-  sha256 "e4bc5a241b7d06cf11ea215361ca0cc963b3737ef9fba39588e9b1ffbf82dd98"
+  version "1.5.7"
+  sha256 "01cbe230c0e4301a8b6fa93d812c69a294e88fc253323a44935eefc61b9f4160"
 
   url "https://github.com/lindegroup/autopkgr/releases/download/v#{version}/AutoPkgr-#{version}.dmg",
       verified: "github.com/lindegroup/autopkgr/"
