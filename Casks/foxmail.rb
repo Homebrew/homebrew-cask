@@ -1,6 +1,6 @@
 cask "foxmail" do
-  version "1.4.3.94171"
-  sha256 "86a1d5a421f24023e8d75e8634f76268cc346fa725a3fca3f2573f8e98ade0a3"
+  version "1.5.0.94503"
+  sha256 "1814c2024ca90ea434b672572d8815ad133db989a531f83543cffa00aa0b76bc"
 
   url "https://dldir1.qq.com/foxmail/MacFoxmail/Foxmail_for_Mac_#{version}.dmg",
       verified: "dldir1.qq.com/foxmail/MacFoxmail/"
