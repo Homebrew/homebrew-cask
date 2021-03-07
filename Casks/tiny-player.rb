@@ -1,6 +1,6 @@
 cask "tiny-player" do
-  version "1.4.0,164"
-  sha256 "c55ced0db548e77284f285b6c223ff13876c90026cb11ff327e37da78e476ee3"
+  version "1.4.2,167"
+  sha256 "552392f30edfc767a484e4b983c24c9f2230ea3301bf5be538c420b4e57b6b13"
 
   url "https://download.catnapgames.com/TinyPlayer-#{version.before_comma}.zip"
   name "Tiny Player for Mac"
