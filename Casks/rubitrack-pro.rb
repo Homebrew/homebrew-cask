@@ -1,6 +1,6 @@
 cask "rubitrack-pro" do
-  version "5.3.3,3200"
-  sha256 "77f7fa4d251ea48eaa5d59792ac56b76f3fa822ee67172103fd2112a0edea714"
+  version "5.3.6,3230"
+  sha256 "7413962215f21fcffec7f62bcaf9abe429c1b0c51cc64d02debf8592e1e89665"
 
   url "https://www.rubitrack.com/files/rubiTrack-#{version.before_comma}.dmg"
   name "rubiTrack"
