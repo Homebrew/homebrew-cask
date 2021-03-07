@@ -1,6 +1,6 @@
 cask "lens" do
-  version "4.1.3"
-  sha256 "1ac130f9bc25e57254981393794a51298fe5e56aab97c62747682a482916fd64"
+  version "4.1.4"
+  sha256 "901a5759691242f820ebfa390e5cfcf08ec41b05703ea4744b40f18321fe1e1f"
 
   url "https://github.com/lensapp/lens/releases/download/v#{version}/Lens-#{version}.dmg",
       verified: "github.com/lensapp/lens/"
