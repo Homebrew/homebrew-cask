@@ -12,7 +12,7 @@ cask "brave-browser" do
       strategy :sparkle
     end
   else
-    sha256 "2d62cd401c8f6f7313a9ff292caec54d112f4608b209ed0fb76dc7c4587537d7"
+    sha256 "4237e7c592b33c5f565a644515da7642594c721d09919f205e1f875b66f08684"
 
     url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Browser/stable-arm64/#{version.after_comma}/Brave-Browser-universal.dmg",
         verified: "updates-cdn.bravesoftware.com/sparkle/Brave-Browser/"
