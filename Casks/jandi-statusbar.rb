@@ -1,6 +1,6 @@
 cask "jandi-statusbar" do
-  version "1.1"
-  sha256 "a0ec4ec1fbc7b166841527d7a7142b39cc52f9dc02ae05001f618f120a6dcc70"
+  version "1.7"
+  sha256 "8814c0ed06236ea416bf6c439a6c8774e063f2627d94c7badd65f37efc63cd5c"
 
   url "https://github.com/techinpark/Jandi/releases/download/v#{version}/jandi.dmg"
   name "jandi"
