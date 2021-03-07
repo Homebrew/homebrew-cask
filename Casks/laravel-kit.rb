@@ -6,7 +6,7 @@ cask "laravel-kit" do
       verified: "github.com/tmdh/laravel-kit/"
   appcast "https://github.com/tmdh/laravel-kit/releases.atom"
   name "Laravel Kit"
-  desc "A desktop Laravel admin panel app"
+  desc "Desktop Laravel admin panel app"
   homepage "https://tmdh.github.io/laravel-kit"
 
   auto_updates true
