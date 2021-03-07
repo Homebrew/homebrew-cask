@@ -1,5 +1,5 @@
 cask "nomad" do
-  version "1.2.2,1047"
+  version "1.0.4"
   sha256 :no_check
 
   url "https://files.nomad.menu/NoMAD.pkg"
