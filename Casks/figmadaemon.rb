@@ -1,5 +1,5 @@
 cask "figmadaemon" do
-  version "17"
+  version "20"
   sha256 :no_check
 
   url "https://font-daemon.figma.com/FigmaInstaller.pkg"
