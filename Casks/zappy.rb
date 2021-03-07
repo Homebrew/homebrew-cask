@@ -1,5 +1,5 @@
 cask "zappy" do
-  version "2.8.0"
+  version "2.9.1"
   sha256 :no_check
 
   url "https://zappy.zapier.com/releases/zappy-latest.dmg"
