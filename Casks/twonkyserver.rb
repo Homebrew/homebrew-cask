@@ -2,7 +2,7 @@ cask "twonkyserver" do
   version "8.5.2"
   sha256 "6cf6cdc36069342211bdcb75a160045c494bd8825a3d73dc0e0520f720e28ed5"
 
-  url "http://download.twonky.com/#{version}/TwonkyServerInstaller-#{version}.pkg"
+  url "https://download.twonky.com/#{version}/TwonkyServerInstaller-#{version}.pkg"
   name "Twonky Server"
   homepage "https://twonky.com/"
 
