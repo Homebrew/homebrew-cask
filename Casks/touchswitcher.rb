@@ -4,7 +4,7 @@ cask "touchswitcher" do
 
   url "https://hazeover.com/touchswitcher/TouchSwitcher.zip"
   name "TouchSwitcher"
-  desc "Use Touch Bar to Switch Apps"
+  desc "Use Touch Bar to switch apps"
   homepage "https://hazeover.com/touchswitcher.html"
 
   livecheck do
