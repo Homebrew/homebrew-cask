@@ -15,7 +15,7 @@ cask "libreoffice" do
   end
 
   conflicts_with cask: "homebrew/cask-versions/libreoffice-still"
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :yosemite"
 
   app "LibreOffice.app"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/gengal"
