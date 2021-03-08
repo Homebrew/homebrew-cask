@@ -1,6 +1,6 @@
 cask "multi" do
-  version "2.1.1"
-  sha256 "7219ce73c0395b5aee36918674e610186edccbf6bdd0115e324f6d3e069b27e1"
+  version "2.1.2"
+  sha256 "808989027656c166d703c31934a673708a0947cc812fb9e66adaa2c878d3f981"
 
   url "https://github.com/hkgumbs/multi/releases/download/v#{version}/Multi.#{version}.dmg"
   appcast "https://github.com/hkgumbs/multi/releases.atom"
