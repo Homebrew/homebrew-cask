@@ -1,10 +1,17 @@
 cask "phpstorm" do
   version "2020.3.2"
-  sha256 "06ac3f4b3ad81e10750e501872332e1ef0d36eee24da92b2b9c7dc4130138d79"
 
-  url "https://download.jetbrains.com/webide/PhpStorm-#{version}.dmg"
+  if Hardware::CPU.intel?
+    sha256 "06ac3f4b3ad81e10750e501872332e1ef0d36eee24da92b2b9c7dc4130138d79"
+    url "https://download.jetbrains.com/webide/PhpStorm-#{version}.dmg"
+  else
+    sha256 "b1be4b4dfc7362f47ecc88ab3916b9515960e72fa59c411c25b1186abf2f8b96"
+    url "https://download.jetbrains.com/webide/PhpStorm-#{version}-aarch64.dmg"
+  end
+
   appcast "https://data.services.jetbrains.com/products/releases?code=PS&latest=true&type=release"
   name "JetBrains PhpStorm"
+  desc "PHP IDE by JetBrains"
   homepage "https://www.jetbrains.com/phpstorm/"
 
   auto_updates true
