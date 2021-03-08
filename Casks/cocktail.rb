@@ -37,10 +37,10 @@ cask "cocktail" do
     appcast "https://www.maintain.se/downloads/sparkle/catalina/catalina.xml"
   else
     version "14.2.3"
-    sha256 "df91ea36dd50d1c2e90dc580818fa015c02a4c413cd8ff7127e0b7b9a5c85bad"
+    sha256 "adba54cc975eca846453f5f6a0a8e64bedda177041bfd7e140dda4276fb78fb6"
 
-    url "http://usa.maintain.se/Cocktail#{version.major}BSE.dmg"
-    appcast "http://www.maintain.se/cocktail/"
+    url "https://www.maintain.se/downloads/Cocktail#{version.major}BSE.dmg"
+    appcast "https://www.maintain.se/cocktail/"
   end
 
   name "Cocktail"
