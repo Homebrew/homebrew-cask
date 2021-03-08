@@ -1,8 +1,8 @@
 cask "yesplaymusic" do
-  version "0.3.3"
-  sha256 "2a58aecf464c3bcb3b2060445b7b790e6d8e86a63013bb2aacaddf418e011a3a"
+  version "0.3.4"
+  sha256 "6fd1a172577c49c3925a1e6ce841404635b3b1e5384ade44b332f893f23b9722"
 
-  url "https://github.com/qier222/YesPlayMusic/releases/download/v#{version}/YesPlayMusic-#{version}-mac.dmg"
+  url "https://github.com/qier222/YesPlayMusic/releases/download/v#{version}/YesPlayMusic-mac-#{version}.dmg"
   name "YesPlayMusic"
   desc "Third-party NetEase cloud player"
   homepage "https://github.com/qier222/YesPlayMusic"
