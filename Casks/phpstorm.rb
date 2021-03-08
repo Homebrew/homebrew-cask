@@ -1,6 +1,3 @@
-# typed: false
-# frozen_string_literal: true
-
 cask "phpstorm" do
   version "2020.3.2"
 
