@@ -4,7 +4,7 @@ cask "internxt-drive" do
 
   url "https://internxt.com/downloads/drive.dmg"
   name "Internxt Drive"
-  desc "End-to-end encrypted, free, open source cloud storage"
+  desc "Client for Internxt file storage service"
   homepage "https://internxt.com/drive"
 
   auto_updates true
