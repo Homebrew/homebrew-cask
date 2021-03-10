@@ -4,7 +4,7 @@ cask "foobar2000" do
 
   url "https://www.foobar2000.org/files/foobar2000-v#{version}.dmg"
   name "foobar2000"
-  desc "Advanced freeware audio player"
+  desc "Audio player"
   homepage "https://www.foobar2000.org/mac"
 
   app "foobar2000.app"
