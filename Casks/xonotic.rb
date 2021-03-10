@@ -15,9 +15,9 @@ cask "xonotic" do
 
   suite "Xonotic"
 
-  zap trash: "~/Library/Application Support/xonotic"
+  postflight do
+    system_command "#{appdir}/Xonotic/misc/tools/rsync-updater/update-to-autobuild.sh"
+  end
 
-  caveats "This version has not been updated since April 2017. "\
-    "Run '/Applications/Xonotic/misc/tools/rsync-updater/update-to-autobuild.sh' "\
-    "after install for the latest release with improved performance and compatibility."
+  zap trash: "~/Library/Application Support/xonotic"
 end
