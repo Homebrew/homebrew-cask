@@ -10,7 +10,7 @@ cask "cacher" do
 
   livecheck do
     url "https://cacher-download.nyc3.digitaloceanspaces.com/latest-mac.yml"
-    regex(/version\s*:\s* (\d+(?:\.\d+)+)/i)
+    regex(/version\s*:\s*(\d+(?:\.\d+)+)/i)
   end
 
   app "Cacher.app"
