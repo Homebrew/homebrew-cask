@@ -9,7 +9,7 @@ cask "balsamiq-wireframes" do
 
   livecheck do
     url "https://builds.balsamiq.com/bwd/mac.jsonp"
-    regex(/"version":"(\d+(?:\.\d+)+)"/i)
+    regex(/"version"\s*:\s*"(\d+(?:\.\d+)+)"/i)
   end
 
   app "Balsamiq Wireframes.app"
