@@ -1,6 +1,6 @@
 cask "dotnet" do
-  version "5.0.3,60a8becd-ff61-4e17-8329-4d85f9d1e3b9:06ef79dad25a85905afbb3965f613bad"
-  sha256 "5931a842bca76b5c25f106034b4037ea08450c9d972d13473874f7dd7d7918b1"
+  version "5.0.4,c8320b32-f469-4c6b-9efe-39db01667197:c98a8dd2f5be1fca335e98c49e519fa6"
+  sha256 "79f1f101d6f24df75e2200710f7da2e03686ed5ed87afdfaf738123af9a4b1dc"
 
   url "https://download.visualstudio.microsoft.com/download/pr/#{version.after_comma.before_colon}/#{version.after_colon}/dotnet-runtime-#{version.before_comma}-osx-x64.pkg"
   appcast "https://dotnet.microsoft.com/download/dotnet-core"
