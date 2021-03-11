@@ -1,10 +1,17 @@
 cask "appcode" do
-  version "2020.3.2,203.7148.75"
-  sha256 "928dedb95ef09968f73a2f09ece82f59ac698fd73600a1b5a8b837e49c3dc22a"
+  version "2020.3.3,203.7148.89"
 
-  url "https://download.jetbrains.com/objc/AppCode-#{version.before_comma}.dmg"
+  if Hardware::CPU.intel?
+    sha256 "e2dfbbaafb52dfa5dd8b7dfcdc2eb4cc49c560c5fdfa285f8116c737bac34df7"
+    url "https://download.jetbrains.com/objc/AppCode-#{version.before_comma}.dmg"
+  else
+    sha256 "050406b4a2e7e6cfebb8353aad3dc1711138620dffccced0c311bafbe6705cb7"
+    url "https://download.jetbrains.com/objc/AppCode-#{version.before_comma}-aarch64.dmg"
+  end
+
   appcast "https://data.services.jetbrains.com/products/releases?code=AC&latest=true&type=release"
   name "AppCode"
+  desc "IDE for Swift, Objective-C, C, and C++ development"
   homepage "https://www.jetbrains.com/objc/"
 
   auto_updates true

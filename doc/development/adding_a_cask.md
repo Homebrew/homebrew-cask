@@ -1,5 +1,5 @@
 **Note**: Before taking the time to craft a new cask, make sure
-- it can be accepted by checking the [Rejected Casks FAQ document](https://github.com/Homebrew/homebrew-cask/blob/master/doc/faq/rejected_casks.md),
+- it can be accepted by checking the [Rejected Casks FAQ](https://github.com/Homebrew/brew/blob/master/docs/Acceptable-Casks.md#rejected-casks),
 - check if there are no [open pull requests] for the same cask and
 - check if the cask was not [already refused].
 

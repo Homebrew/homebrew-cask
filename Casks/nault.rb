@@ -1,11 +1,13 @@
 cask "nault" do
-  version "1.10.1"
-  sha256 "6710677ff215b35c8a3c3abb4959f6b8c7c32bfa6194fa3c78f4a0363cb7e1eb"
+  version "1.10.2"
+  sha256 "dac820634f4ce7553c9dffb3dc75429fd1eedf0aa668e5c19d17287a5b7d1b86"
 
   url "https://github.com/Nault/Nault/releases/download/v#{version}/Nault-#{version}-Mac.dmg"
   name "Nault"
   desc "Wallet for the Nano cryptocurrency with support for hardware wallets"
   homepage "https://github.com/Nault/Nault"
+
+  auto_updates true
 
   app "Nault.app"
 

@@ -1,6 +1,6 @@
 cask "numi" do
-  version "3.30.690"
-  sha256 "ab5152c1ae8d09b96b56299ff8eb10adc0d6b9586719aa3c8a4ba3e81de84fa7"
+  version "3.30.691"
+  sha256 "ee933a82f95fa570396ae2e0790a32e4636083d605df2096ef10c232433571ad"
 
   url "https://s3.numi.app/updates/#{version}/Numi.dmg"
   name "Numi"

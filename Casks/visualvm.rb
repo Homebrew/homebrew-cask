@@ -6,9 +6,15 @@ cask "visualvm" do
       verified: "github.com/oracle/visualvm/"
   appcast "https://github.com/oracle/visualvm/releases.atom"
   name "VisualVM"
+  desc "All-in-One Java Troubleshooting Tool"
   homepage "https://visualvm.github.io/"
 
   app "VisualVM.app"
+
+  zap trash: [
+    "~/Library/Application Support/VisualVM",
+    "~/Library/Caches/VisualVM",
+  ]
 
   caveats do
     depends_on_java

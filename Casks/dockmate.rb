@@ -1,6 +1,6 @@
 cask "dockmate" do
-  version "0.7.1,1930"
-  sha256 "c294c687aec1568d423bf4545aeb911aab513a97a98f455b6daefc505f824cb2"
+  version "0.8.3,2731"
+  sha256 "6afa32d9a3451b8584925405aba12b75c0bd2081ef40e882bbdcde696d76d690"
 
   url "https://raw.githubusercontent.com/w0lfschild/app_updates/master/DockMate/DockMate.#{version.before_comma}.zip",
       verified: "raw.githubusercontent.com/w0lfschild/"
