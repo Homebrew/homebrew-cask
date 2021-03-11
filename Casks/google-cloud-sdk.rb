@@ -31,6 +31,12 @@ cask "google-cloud-sdk" do
   # It is present to make clear an uninstall was not forgotten and that for this cask it is indeed this simple.
   uninstall delete: "#{staged_path}/#{token}"
 
+  # https://cloud.google.com/sdk/docs/uninstall-cloud-sdk
+  zap trash: [
+    "~/.config/gcloud",
+    "~/Library/Caches/**/#{token}",
+  ]
+
   caveats <<~EOS
     #{token} is installed at #{HOMEBREW_PREFIX}/share/#{token}. Add your profile:
 
