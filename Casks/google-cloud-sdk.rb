@@ -1,22 +1,29 @@
 cask "google-cloud-sdk" do
-  version :latest # Must remain unversioned, else all installed gcloud components would be lost on upgrade
-  sha256 :no_check
+  version "331.0.0"
+  sha256 "32c7b961f4c3d18f772a8900c9bc1300e7f81c0c05d71f93b770a222f00490ba"
 
-  url "https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz"
+  url "https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/#{token}-#{version}-darwin-x86_64.tar.gz"
   name "Google Cloud SDK"
   desc "Set of tools to manage resources and applications hosted on Google Cloud"
   homepage "https://cloud.google.com/sdk/"
 
+  auto_updates true
   depends_on formula: "python"
 
-  stage_only true
+  artifact token, target: "#{HOMEBREW_PREFIX}/share/#{token}"
 
   postflight do
     system_command "#{staged_path}/#{token}/install.sh",
                    args: [
                      "--usage-reporting", "false", "--bash-completion", "false", "--path-update", "false",
                      "--rc-path", "false", "--quiet"
-                   ],
+                   ] + (
+                     if ENV.key?("HOMEBREW_GOOGLE_CLOUD_SDK_ADDITIONAL_COMPONENTS")
+                       ["--additional-components"] + ENV["HOMEBREW_GOOGLE_CLOUD_SDK_ADDITIONAL_COMPONENTS"].split(",")
+                     else
+                       []
+                     end
+                   ),
                    env:  { "CLOUDSDK_PYTHON" => Formula["python"].opt_bin/"python3" }
   end
 
@@ -25,17 +32,20 @@ cask "google-cloud-sdk" do
   uninstall delete: "#{staged_path}/#{token}"
 
   caveats <<~EOS
-    #{token} is installed at #{staged_path}/#{token}. Add your profile:
+    #{token} is installed at #{HOMEBREW_PREFIX}/share/#{token}. Add your profile:
 
       for bash users
-        source "#{staged_path}/#{token}/path.bash.inc"
-        source "#{staged_path}/#{token}/completion.bash.inc"
+        source "#{HOMEBREW_PREFIX}/share/#{token}/path.bash.inc"
+        source "#{HOMEBREW_PREFIX}/share/#{token}/completion.bash.inc"
 
       for zsh users
-        source "#{staged_path}/#{token}/path.zsh.inc"
-        source "#{staged_path}/#{token}/completion.zsh.inc"
+        source "#{HOMEBREW_PREFIX}/share/#{token}/path.zsh.inc"
+        source "#{HOMEBREW_PREFIX}/share/#{token}/completion.zsh.inc"
 
       for fish users
-        source "#{staged_path}/#{token}/path.fish.inc"
+        source "#{HOMEBREW_PREFIX}/share/#{token}/path.fish.inc"
+
+    To keep additional components after an upgrade or reinstallation add to your profile:
+      export HOMEBREW_GOOGLE_CLOUD_SDK_ADDITIONAL_COMPONENTS='COMPONENT_ID,COMPONENT_ID'
   EOS
 end
