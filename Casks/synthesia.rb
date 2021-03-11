@@ -1,6 +1,6 @@
 cask "synthesia" do
-  version "10.6"
-  sha256 "53b3f9f0cbf4ff73738e859bd933aa6c15b245af6ff5e841843cde574e591bc0"
+  version "10.7"
+  sha256 "18dde0fa5ca7b10aab1964621509ae3cf4110a02b11c24470b3d6e0f1c3fee65"
 
   url "https://synthesia.s3.amazonaws.com/files/Synthesia-#{version}.dmg",
       verified: "synthesia.s3.amazonaws.com/"
