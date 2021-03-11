@@ -8,7 +8,7 @@ cask "swiftbar" do
   url "https://github.com/swiftbar/SwiftBar/releases/download/#{version}/SwiftBar.zip",
       verified: "github.com/swiftbar/SwiftBar/releases/"
   name "SwiftBar"
-  desc "Powerful macOS menu bar customization tool"
+  desc "Powerful menu bar customization tool"
   homepage "https://swiftbar.app/"
 
   livecheck do
