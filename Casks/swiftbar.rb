@@ -11,12 +11,5 @@ cask "swiftbar" do
   desc "Powerful menu bar customization tool"
   homepage "https://swiftbar.app/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
-  auto_updates true
-
   app "SwiftBar.app"
 end
