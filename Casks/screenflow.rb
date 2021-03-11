@@ -16,4 +16,13 @@ cask "screenflow" do
   depends_on macos: ">= :high_sierra"
 
   app "ScreenFlow.app"
+
+  zap trash: [
+    "~/Library/Application Support/ScreenFlow",
+    "~/Library/Caches/net.telestream.screenflow9",
+    "~/Library/Cookies/net.telestream.screenflow9.binarycookies",
+    "~/Library/Preferences/WSG985FR47.net.telestream.screenflowhelper.plist",
+    "~/Library/Preferences/net.telestream.screenflow.globallibrary.plist",
+    "~/Library/Preferences/net.telestream.screenflow9.plist",
+  ]
 end

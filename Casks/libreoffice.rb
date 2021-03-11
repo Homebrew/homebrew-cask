@@ -1,6 +1,6 @@
 cask "libreoffice" do
-  version "7.1.0"
-  sha256 "68a96594d2f79b0e325f65f0c867b74cb04946b8f0b058eaffafc692295cebfa"
+  version "7.1.1"
+  sha256 "c559fac982a44787c13656a210dfc424174800813c8101b09dea8b8d364743a4"
 
   url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/LibreOffice_#{version}_MacOS_x86-64.dmg",
       verified: "documentfoundation.org/"
@@ -15,7 +15,7 @@ cask "libreoffice" do
   end
 
   conflicts_with cask: "homebrew/cask-versions/libreoffice-still"
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :yosemite"
 
   app "LibreOffice.app"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/gengal"

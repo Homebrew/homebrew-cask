@@ -5,8 +5,18 @@ cask "pomotodo" do
   url "https://cdn.hackplan.com/theair/#{version.after_comma}/Pomotodo.#{version.before_comma}.dmg",
       verified: "cdn.hackplan.com/theair/"
   appcast "https://air.pomotodo.com/v1/p/com.pomotodo.PomotodoMac#{version.major}/latest.xml"
-  name "Pomodoro"
+  name "Pomododo"
+  desc "Time management app for creators"
   homepage "https://pomotodo.com/"
 
   app "Pomotodo.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.pomotodo.PomotodoMacHelper",
+    "~/Library/Caches/com.pomotodo.PomotodoMac",
+    "~/Library/Containers/com.pomotodo.PomotodoMacHelper",
+    "~/Library/Cookies/com.pomotodo.PomotodoMac.binarycookies",
+    "~/Library/Preferences/com.pomotodo.PomotodoMac.plist",
+    "~/Library/WebKit/com.pomotodo.PomotodoMac",
+  ]
 end

@@ -1,6 +1,6 @@
 cask "dotnet" do
-  version "3.1.9,175aea5a-1b4a-4faa-b29d-ff72fa8c16bc:fcef8fc0139672f19ec8b9913824b6bb"
-  sha256 "9169251b1a55a0f812efe426b9a456002d9288962712b266ef6195fe9ea6c942"
+  version "5.0.4,c8320b32-f469-4c6b-9efe-39db01667197:c98a8dd2f5be1fca335e98c49e519fa6"
+  sha256 "79f1f101d6f24df75e2200710f7da2e03686ed5ed87afdfaf738123af9a4b1dc"
 
   url "https://download.visualstudio.microsoft.com/download/pr/#{version.after_comma.before_colon}/#{version.after_colon}/dotnet-runtime-#{version.before_comma}-osx-x64.pkg"
   appcast "https://dotnet.microsoft.com/download/dotnet-core"
@@ -9,8 +9,8 @@ cask "dotnet" do
 
   conflicts_with cask: [
     "dotnet-sdk",
-    "dotnet-preview",
-    "dotnet-sdk-preview",
+    "homebrew/cask-versions/dotnet-preview",
+    "homebrew/cask-versions/dotnet-sdk-preview",
   ]
   depends_on macos: ">= :sierra"
 

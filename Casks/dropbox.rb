@@ -1,5 +1,5 @@
 cask "dropbox" do
-  version "116.4.368"
+  version "117.4.378"
   sha256 :no_check
 
   url "https://www.dropbox.com/download?plat=mac&full=1"

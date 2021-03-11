@@ -12,4 +12,11 @@ cask "mjolnir" do
   depends_on macos: ">= :sierra"
 
   app "Mjolnir.app"
+
+  zap trash: [
+    "~/Library/Caches/org.degutis.Mjolnir",
+    "~/Library/Preferences/org.degutis.Mjolnir.plist",
+    "~/Library/Saved Application State/org.degutis.Mjolnir.savedState",
+    "~/.mjolnir",
+  ]
 end
