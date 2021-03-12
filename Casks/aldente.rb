@@ -1,13 +1,8 @@
 cask "aldente" do
-  if MacOS.version <= :catalina
-    version "1.2"
-    sha256 "a588dc29faca894b7321e23420ca17d6a944b9b3b46412435f519b96e4ebee7b"
-    url "https://github.com/davidwernhart/AlDente/releases/download/#{version}/AlDente.app.zip"
-  else
-    version "2.1"
-    sha256 "3ba479e2400117e605dce4d4b222a984f36df6ebcd6a554b1f465406af1a0a7d"
-    url "https://github.com/davidwernhart/AlDente/releases/download/v#{version}/AlDente_#{version}.app.zip"
-  end
+
+  version "2.1.2"
+  sha256 "39cebc2db5b75c4217abd42470ecfee8280a35178b0d2581df3857cd8b742880"
+  url "https://github.com/davidwernhart/AlDente/releases/download/#{version}/AlDente_#{version}_Notarized.app.zip"
 
   appcast "https://github.com/davidwernhart/AlDente/releases.atom"
   name "AlDente"
