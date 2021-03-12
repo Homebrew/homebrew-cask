@@ -6,7 +6,7 @@ cask "mailtrackerblocker" do
       verified: "github.com/apparition47/MailTrackerBlocker/"
   name "MailTrackerBlocker"
   desc "Email tracker, read receipt and spy pixel blocker plugin for Apple Mail"
-  homepage "https://apparition47.github.io/MailTrackerBlocker/"
+  homepage "https://apparition47.github.io/MailTrackerBlocker"
 
   depends_on macos: ">= :el_capitan"
 
