@@ -1,8 +1,8 @@
 cask "dbeaver-ultimate" do
   version "21.0.0"
   sha256 "cc2df3f644432428adde85c188cf7c2edb9a15988ebce52d48f989684e608fd0"
-  desc "DBeaver Ultimate Database Manager"
 
+  desc "DBeaver Ultimate Database Manager"
   url "https://dbeaver.com/files/#{version}/dbeaver-ue-#{version}-macos.dmg"
   name "DBeaver Ultimate Edition"
   homepage "https://dbeaver.com/"
