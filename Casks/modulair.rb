@@ -1,6 +1,6 @@
 cask "modulair" do
-  version "1.2.1"
-  sha256 "fe1818a43f1756e61054c9fcb054a285c0622a1342e1016f5996837b382d8460"
+  version "1.2.2"
+  sha256 "8a16fc3ce0756811e623edfa34e3cade7e69f3d4bbeb5343c32a6e1a4a93d173"
 
   url "https://www.fullbucket.de/music/dl/modulair_#{version.dots_to_underscores}_mac.pkg"
   name "ModulAir"
