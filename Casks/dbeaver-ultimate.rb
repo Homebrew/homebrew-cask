@@ -12,6 +12,7 @@ cask "dbeaver-ultimate" do
   end
 
   app "DBeaverUltimate.app"
+
   caveats do
     depends_on_java "8+"
   end
