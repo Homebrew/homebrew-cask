@@ -6,6 +6,7 @@ cask "hbuilderx" do
       verified: "download1.dcloud.net.cn/"
   appcast "https://update.dcloud.net.cn/hbuilderx/changelog/#{version}.html"
   name "HBuilderX"
+  desc "HTML editor"
   homepage "https://www.dcloud.io/hbuilderx.html"
 
   app "HBuilderX.app"
