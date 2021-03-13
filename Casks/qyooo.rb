@@ -3,10 +3,15 @@ cask "qyooo" do
   sha256 "75a85ca2f53b859d2cb09c02db18162481a71ce07ae80a25b043ed836e30e0bb"
 
   url "https://www.fullbucket.de/music/dl/qyooo_#{version.dots_to_underscores}_mac.pkg"
-  appcast "https://www.fullbucket.de/music/qyooo.html"
   name "the qyooo"
   desc "Complex modulation synthesizer"
   homepage "https://www.fullbucket.de/music/qyooo.html"
+
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(/v(\d+(?:\.\d+)*)/)
+  end
 
   pkg "qyooo_#{version.dots_to_underscores}_mac.pkg"
 
