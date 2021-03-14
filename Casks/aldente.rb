@@ -21,4 +21,6 @@ cask "aldente" do
               "/Library/LaunchDaemons/com.davidwernhart.Helper.plist",
               "/Library/PrivilegedHelperTools/com.davidwernhart.Helper",
             ]
+
+  zap trash: "~/Library/Preferences/com.davidwernhart.AlDente.plist"
 end
