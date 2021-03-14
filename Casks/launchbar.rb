@@ -3,10 +3,15 @@ cask "launchbar" do
   sha256 "91c0423cdc0cb7a618357e2c9df7c05844ea077f9908640288af0e7eeacf384e"
 
   url "https://www.obdev.at/downloads/launchbar/LaunchBar-#{version}.dmg"
-  appcast "https://sw-update.obdev.at/update-feeds/launchbar-#{version.major}.plist"
   name "LaunchBar"
   desc "Productivity tool"
   homepage "https://www.obdev.at/products/launchbar/index.html"
+
+  livecheck do
+    url "https://www.obdev.at/products/launchbar/download.html"
+    strategy :page_match
+    regex(%r{href=.*?/LaunchBar-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   auto_updates true
   depends_on macos: ">= :mojave"
