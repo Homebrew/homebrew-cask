@@ -1,6 +1,6 @@
 cask "garagesale" do
-  version "8.3.4"
-  sha256 "1519620295eb2b0fde0400db7f4d21b6c7828665819ad5d4e7362a720abca2d9"
+  version "8.3.5"
+  sha256 "2649969901f7e5a36321d591a97557fd6a5e86b13396342c31c79c0e6b3f834c"
 
   url "https://downloads.iwascoding.com/downloads/GarageSale_#{version}.dmg"
   name "GarageSale"
