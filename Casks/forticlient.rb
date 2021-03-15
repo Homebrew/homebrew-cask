@@ -1,9 +1,9 @@
 cask "forticlient" do
-  version "6.4.2.1305"
-  sha256 "660901a65c72f06c1c4b93a01cd46e562a684c59e83c0cdfa75b254c506939cc"
+  version "6.4.3.1325"
+  sha256 "469baae00c624421492c2c0adc0715642bec0f9fcf6cadd18b1ddecdd6e724c9"
 
-  url "https://d3gpjj9d20n0p3.cloudfront.net/forticlient/downloads/FortiClient_#{version}_macosx.dmg",
-      verified: "https://d3gpjj9d20n0p3.cloudfront.net/forticlient/"
+  url "https://fortinetweb.s3.amazonaws.com/forticlient/downloads/FortiClient_#{version}_macosx.dmg",
+      verified: "https://fortinetweb.s3.amazonaws.com/forticlient/"
   name "FortiClient"
   desc "Fabric agent with endpoint protection and cloud sandbox"
   homepage "https://forticlient.com/"
