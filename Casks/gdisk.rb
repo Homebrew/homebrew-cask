@@ -1,6 +1,6 @@
 cask "gdisk" do
-  version "1.0.6"
-  sha256 "32b756969414e1e8e78050f7123869e6b4eeb445361bb3f34e9cb0fde97b0454"
+  version "1.0.7"
+  sha256 "917181d07c063b52795b14e53b8bf1d8ec0ab28354180d480aa803f5e9839a0b"
 
   url "https://downloads.sourceforge.net/gptfdisk/gdisk-#{version}.pkg"
   appcast "https://sourceforge.net/projects/gptfdisk/rss"
