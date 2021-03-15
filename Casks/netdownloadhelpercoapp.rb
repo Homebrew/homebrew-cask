@@ -1,6 +1,6 @@
 cask "netdownloadhelpercoapp" do
-  version "1.6.0"
-  sha256 "697e3a6ca9964b187a167e35c628d7ca4c927b405d0f90ff41d7bbf6e61cf544"
+  version "1.6.1"
+  sha256 "1ce1f3d0055bf5a2aa6da8044be22b477a68d26b4dbbc96abaf7d95445115e48"
 
   url "https://github.com/mi-g/vdhcoapp/releases/download/v#{version}/net.downloadhelper.coapp-#{version}.pkg",
       verified: "github.com/mi-g/vdhcoapp/"
