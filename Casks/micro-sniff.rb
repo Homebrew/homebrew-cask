@@ -3,6 +3,7 @@ cask "micro-sniff" do
   sha256 "92dbcad769340ab0df851483942003eaa6eaab388773408ef3191edce19b5bbe"
 
   url "https://github.com/dwarvesf/micro-sniff/releases/download/v#{version}/Micro.Sniff.#{version}.dmg"
+  appcast "https://github.com/dwarvesf/micro-sniff/releases.atom"
   name "Micro Sniff"
   desc "Monitor microphone activity"
   homepage "https://github.com/dwarvesf/micro-sniff"
