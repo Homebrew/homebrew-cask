@@ -1,6 +1,6 @@
 cask "data-rescue" do
-  version "6.0.3,6203.37.11"
-  sha256 "bf4754f2d20c347d3d3470a57abdb0a92881d603a5a310fd0a11cea0242c9888"
+  version "6.0.4,6210.63.02"
+  sha256 "5c77a271e30fbbc4eac136ed5f9a6971d7db07593b904e86edecbe9667b1c2a1"
 
   url "https://downloads.prosofteng.com/dr/Data_Rescue_#{version.before_comma}.dmg"
   name "Data Rescue #{version.major}"
