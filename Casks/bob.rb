@@ -5,6 +5,7 @@ cask "bob" do
   url "https://github.com/ripperhe/Bob/releases/download/v#{version}/Bob.zip"
   appcast "https://github.com/ripperhe/Bob/releases.atom"
   name "Bob"
+  desc "Translation application for text, pictures, and manual input"
   homepage "https://github.com/ripperhe/Bob"
 
   depends_on macos: ">= :sierra"
