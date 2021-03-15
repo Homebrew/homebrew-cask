@@ -1,6 +1,6 @@
 cask "mockuuups-studio" do
-  version "2.6.0"
-  sha256 "1e097714234369d25114dc14a7fd5df0c96ebe821ee3a2b59b9482d0fed55121"
+  version "3.0.0"
+  sha256 "0bed0aaaa60e84b3f9dc02e9c9dcb32df6e2c8e4533dc5641b2373863d9c3cb5"
 
   url "https://binaries.mockuuups.com/Mockuuups%20Studio-#{version}-mac.zip",
       verified: "mockuuups.com/"
