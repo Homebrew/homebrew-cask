@@ -10,13 +10,13 @@ cask "forticlient" do
 
   pkg "Install.mpkg"
 
-  uninstall quit:      [
+  uninstall quit: [
     "com.fortinet.FortiClientAgent",
     "com.fortinet.FortiClient.helper",
     "com.fortinet.FortiClient",
     "com.fortinet.FctMiscAgent",
   ],
-            pkgutil:   [
+            pkgutil: [
               "com.fortinet.forticlient.vpnservice",
               "com.fortinet.forticlient.pseudosra",
               "com.fortinet.forticlient.fctnewav",
@@ -55,8 +55,10 @@ cask "forticlient" do
               "com.fortinet.fctctl",
               "com.fortinet.fctwf",
             ],
-            delete:    [
+            delete: [
               "/Applications/FortiClient*",
+              "/Applications/FortiClient.app",
+              "/Applications/FortiClientUninstaller.app",
             ]
 
   zap trash: [
