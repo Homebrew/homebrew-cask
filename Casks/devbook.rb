@@ -1,8 +1,7 @@
 cask "devbook" do
-  version "0.1.11"
+  version "0.1.13"
   sha256 :no_check
 
-  url "https://download.usedevbook.com/mac/dmg/x64"
   name "Devbook"
   desc "Search engine for developers"
   homepage "https://usedevbook.com/"
@@ -12,6 +11,14 @@ cask "devbook" do
     strategy :page_match
     regex(/version:.(\d+(?:\.\d+)*)/)
   end
+
+  if Hardware::CPU.intel?
+    url "https://download.usedevbook.com/mac/dmg/x64"
+  else
+    url "https://download.usedevbook.com/mac/dmg/arm64"
+  end
+
+  auto_updates true
 
   app "Devbook.app"
 
