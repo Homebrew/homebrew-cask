@@ -7,6 +7,13 @@ cask "remnote" do
   desc "Spaced-repetition powered note-taking tool"
   homepage "https://www.remnote.io/"
 
+  livecheck do
+    url "https://s3.amazonaws.com/download.remnote.io/latest-mac.yml"
+    strategy :page_match do |page|
+      YAML.safe_load(page)["version"]
+    end
+  end
+
   app "RemNote.app"
 
   zap trash: [
