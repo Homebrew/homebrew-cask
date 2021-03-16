@@ -2,7 +2,7 @@ cask "google-cloud-sdk" do
   version "332.0.0"
   sha256 "1d158a84dfff8f3aa3cacdbbd3fb9cfbea3178728367b20c986760edc1665026"
 
-  url "https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/#{token}-#{version}-darwin-x86_64.tar.gz"
+  url "https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-#{version}-darwin-x86_64.tar.gz"
   name "Google Cloud SDK"
   desc "Set of tools to manage resources and applications hosted on Google Cloud"
   homepage "https://cloud.google.com/sdk/"
@@ -10,10 +10,10 @@ cask "google-cloud-sdk" do
   auto_updates true
   depends_on formula: "python"
 
-  artifact token, target: "#{HOMEBREW_PREFIX}/share/#{token}"
+  artifact "google-cloud-sdk", target: "#{HOMEBREW_PREFIX}/share/google-cloud-sdk"
 
   postflight do
-    system_command "#{staged_path}/#{token}/install.sh",
+    system_command "#{staged_path}/google-cloud-sdk/install.sh",
                    args: [
                      "--usage-reporting", "false", "--bash-completion", "false", "--path-update", "false",
                      "--rc-path", "false", "--quiet"
@@ -29,12 +29,12 @@ cask "google-cloud-sdk" do
 
   # Not actually necessary, since it would be deleted anyway.
   # It is present to make clear an uninstall was not forgotten and that for this cask it is indeed this simple.
-  uninstall delete: "#{staged_path}/#{token}"
+  uninstall delete: "#{staged_path}/google-cloud-sdk"
 
   # https://cloud.google.com/sdk/docs/uninstall-cloud-sdk
   zap trash: [
     "~/.config/gcloud",
-    "~/Library/Caches/**/#{token}",
+    "~/Library/Caches/**/google-cloud-sdk",
   ]
 
   caveats <<~EOS
