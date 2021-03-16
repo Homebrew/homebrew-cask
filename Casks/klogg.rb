@@ -14,4 +14,14 @@ cask "klogg" do
   end
 
   app "klogg.app"
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/klogg.wrapper.sh"
+  binary shimscript, target: "klogg"
+
+  preflight do
+    IO.write shimscript, <<~EOS
+      #!/bin/sh
+      exec '#{appdir}/klogg.app/Contents/MacOS/klogg' "$@"
+    EOS
+  end
 end
