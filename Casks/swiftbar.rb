@@ -12,4 +12,11 @@ cask "swiftbar" do
   homepage "https://swiftbar.app/"
 
   app "SwiftBar.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.ameba.SwiftBar-LaunchAtLoginHelper",
+    "~/Library/Caches/com.ameba.SwiftBar",
+    "~/Library/Containers/com.ameba.SwiftBar-LaunchAtLoginHelper",
+    "~/Library/Preferences/com.ameba.SwiftBar.plist",
+  ]
 end
