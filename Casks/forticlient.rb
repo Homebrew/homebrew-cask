@@ -17,7 +17,6 @@ cask "forticlient" do
     "com.fortinet.FctMiscAgent",
   ],
             pkgutil:   [
-              "com.fortinet.fctappfw2",
               "com.fortinet.forticlient.vpnservice",
               "com.fortinet.forticlient.pseudosra",
               "com.fortinet.forticlient.fctnewav",
