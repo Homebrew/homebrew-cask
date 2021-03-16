@@ -1,5 +1,5 @@
 cask "cold-turkey-blocker" do
-  version "4.2"
+  version "4.2,0"
   sha256 :no_check
 
   url "https://getcoldturkey.com/files/Cold_Turkey_Mac_Installer.pkg"
@@ -8,7 +8,10 @@ cask "cold-turkey-blocker" do
 
   pkg "Cold_Turkey_Mac_Installer.pkg"
 
-  uninstall launchctl: "launchkeep.cold-turkey",
+  uninstall launchctl: [
+    "launchkeep.cold-turkey",
+    "launchkeep.cold-turkey-all-users",
+  ],
             pkgutil:   [
               "com.getcoldturkey.coldturkeyblocker",
               "com.getcoldturkey.blocker-chrome-ext",
