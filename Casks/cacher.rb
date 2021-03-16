@@ -10,7 +10,9 @@ cask "cacher" do
 
   livecheck do
     url "https://cacher-download.nyc3.digitaloceanspaces.com/latest-mac.yml"
-    regex(/version\s*:\s*(\d+(?:\.\d+)+)/i)
+    strategy :page_match do |page|
+      YAML.safe_load(page)["version"]
+    end
   end
 
   app "Cacher.app"
