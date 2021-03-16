@@ -6,7 +6,7 @@ cask "browserosaurus" do
     url "https://github.com/will-stone/browserosaurus/releases/download/v#{version}/Browserosaurus-darwin-x64-#{version}.zip",
         verified: "github.com/will-stone/browserosaurus/"
   else
-    sha256 "d1c427a8cf6df2b92e04715a4bea9f980b9f86d7dfa7ae28d5f09a84bbb07a63"
+    sha256 "7f13cb931667238f07f65e05e14d6beadf1607ea6f231b4d690bd0a3cfb3ca1b"
     url "https://github.com/will-stone/browserosaurus/releases/download/v#{version}/Browserosaurus-darwin-arm64-#{version}.zip",
         verified: "github.com/will-stone/browserosaurus/"
   end
