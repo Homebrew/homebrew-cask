@@ -15,6 +15,6 @@ cask "flowsync" do
 
   pkg "FlowSync_installer-#{version}.pkg"
 
-  uninstall pkgutil: "com.polarelectro.pkg.flowsync",
-            quit:    "fi.polar.FlowSync"
+  uninstall pkgutil: "com.polarelectro.pkg.flowsync", "fi.polar.FlowSync"
+            quit:    "fi.polar.Polar-FlowSync"
 end
