@@ -1,6 +1,6 @@
 cask "google-cloud-sdk" do
-  version "331.0.0"
-  sha256 "32c7b961f4c3d18f772a8900c9bc1300e7f81c0c05d71f93b770a222f00490ba"
+  version "332.0.0"
+  sha256 "1d158a84dfff8f3aa3cacdbbd3fb9cfbea3178728367b20c986760edc1665026"
 
   url "https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/#{token}-#{version}-darwin-x86_64.tar.gz"
   name "Google Cloud SDK"
