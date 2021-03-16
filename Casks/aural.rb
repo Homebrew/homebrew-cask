@@ -1,6 +1,6 @@
 cask "aural" do
-  version "2.6.0"
-  sha256 "b806aa5f9a131bd880ea20b738ae2cd4a624e8b5de88d40e8bc44d7df9b60734"
+  version "2.7.0"
+  sha256 "1ecd832d6cc75c96d207bc1a137f42d7c1e1b3da59a6e9849d26665384006077"
 
   url "https://github.com/maculateConception/aural-player/releases/download/#{version}/AuralPlayer-#{version}.dmg"
   appcast "https://github.com/maculateConception/aural-player/releases.atom"
