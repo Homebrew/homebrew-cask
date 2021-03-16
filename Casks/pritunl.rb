@@ -1,19 +1,14 @@
 cask "pritunl" do
+  version "1.2.2737.2"
+
   if Hardware::CPU.intel?
-    if MacOS.version <= :catalina
-      version "1.2.2615.73"
-      sha256 "275f8498fb736a0a1ddebcbfcb6f03e82b8eb4fedf9b7eb61b0e306cb6de4a71"
-    else
-      version "1.2.2737.2"
-      sha256 "f46a17a612a5b7c051cbacbc19d35578b35a36cf6dae736621cea2b22b9b1403"
-    end
+    sha256 "f46a17a612a5b7c051cbacbc19d35578b35a36cf6dae736621cea2b22b9b1403"
 
     url "https://github.com/pritunl/pritunl-client-electron/releases/download/#{version}/Pritunl.pkg.zip",
         verified: "github.com/pritunl/pritunl-client-electron/"
 
     pkg "Pritunl.pkg"
   else
-    version "1.2.2737.2"
     sha256 "0ca6c97928860813ee90536bc64b3f69336ee195890d5eecca23dcc8a2e4f754"
 
     url "https://github.com/pritunl/pritunl-client-electron/releases/download/#{version}/Pritunl.arm64.pkg.zip",
