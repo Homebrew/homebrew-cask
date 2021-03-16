@@ -10,8 +10,9 @@ cask "opgg" do
 
   livecheck do
     url "https://desktop-app-update.s3.amazonaws.com/latest-mac.yml"
-    strategy :page_match
-    regex(/OP\.GG-(\d+(?:\.\d+)*)\.dmg/i)
+    strategy :page_match do |page|
+      YAML.safe_load(page)["version"]
+    end
   end
 
   app "OP.GG.app"
