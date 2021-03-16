@@ -13,4 +13,9 @@ cask "cinderella" do
   homepage "https://cinderella.de/"
 
   app "Cinderella.app"
+
+  zap trash: [
+    "~/Library/Preferences/cinderella2-user.properties",
+    "~/Library/Preferences/cinderella2-global.properties",
+  ]
 end
