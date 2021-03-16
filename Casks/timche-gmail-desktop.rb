@@ -1,6 +1,6 @@
 cask "timche-gmail-desktop" do
-  version "2.24.0"
-  sha256 "0b7f41c8b00c9f06706a186baaeeda086a31774e13db7564217a2bdce4136583"
+  version "2.25.0"
+  sha256 "618d791c157bc7ba06aa6aa8c8dece14298015ca7089fcec1e88259dad96400c"
 
   url "https://github.com/timche/gmail-desktop/releases/download/v#{version}/gmail-desktop-#{version}-mac.dmg"
   appcast "https://github.com/timche/gmail-desktop/releases.atom"
