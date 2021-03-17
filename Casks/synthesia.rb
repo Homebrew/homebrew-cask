@@ -4,9 +4,15 @@ cask "synthesia" do
 
   url "https://synthesia.s3.amazonaws.com/files/Synthesia-#{version}.dmg",
       verified: "synthesia.s3.amazonaws.com/"
-  appcast "https://www.synthesiagame.com/download"
   name "Synthesia"
+  desc "Learn how to play the piano using falling notes"
   homepage "https://www.synthesiagame.com/"
+
+  livecheck do
+    url "https://www.synthesiagame.com/download"
+    strategy :page_match
+    regex(/synthesia\s(\d+(?:\.\d+)*)\sfor\smacOS/i)
+  end
 
   app "Synthesia.app"
 
