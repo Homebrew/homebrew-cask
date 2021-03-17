@@ -1,11 +1,11 @@
 cask "cinderella" do
-  version "3.0b.1987"
+  version "3.0b.1989"
 
   if Hardware::CPU.intel?
-    sha256 "3947b3d5d535b050c306c164624be1a3f53629932df12aa168a0c47d913cde35"
+    sha256 "bf53c41a6f8639a48826958ecc9ce293afd651500865de0c1a17eb42f13f43fa"
     url "https://beta.cinderella.de/Cinderella-#{version}.dmg"
   else
-    sha256 "979a40c5e29e2bd27500ec2f08dd908adbd5fb5fed3b2e11b39096e334441636"
+    sha256 "7072d4410077646f6013a352ae620aa2e7a2b4099b4926c2494dce8c8300b336"
     url "https://beta.cinderella.de/Cinderella-silicon-#{version}.dmg"
   end
   name "Cinderella"
