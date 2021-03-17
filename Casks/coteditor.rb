@@ -9,8 +9,8 @@ cask "coteditor" do
     version "3.9.7"
     sha256 "be34d4f800e73cc8363d8b83e1b257a06176dc85d345d680149b108f51686cf2"
   else
-    version "4.0.1"
-    sha256 "879fa6ef8199c10c8b42b6adaa4a528b41295b97457c7e06fd1a412f65f0ffb9"
+    version "4.0.2"
+    sha256 "e5d61b781f1985e529f7955be59d0cf4b6ad6c75f7b3148acca2b95871b7e49c"
   end
 
   url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg",
