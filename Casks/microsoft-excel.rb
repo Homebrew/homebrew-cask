@@ -1,6 +1,6 @@
 cask "microsoft-excel" do
-  version "16.46.21021202"
-  sha256 "a6fd24b2e2a42efa893f7f795658ffed8ce085d44b5b525b3dea134ea2153c9d"
+  version "16.47.21031401"
+  sha256 "a9f16d7cbedfc431b6b1326197068bf977c556d7a364a0faadd51073cb090337"
 
   url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Excel_#{version}_Installer.pkg",
       verified: "officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/"
