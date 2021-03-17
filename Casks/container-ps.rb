@@ -1,6 +1,6 @@
 cask "container-ps" do
-  version "1.2.1"
-  sha256 "4e3201cf52936c7d92e45fad5f36698780b6b753d9fe03ee28dc20c60cf7953c"
+  version "1.3.0"
+  sha256 "8a710ff70ed79d7ca93d51461d77a3268cdb8c3aa985ce4d0b99686b36b62069"
 
   url "https://github.com/Toinane/container-ps/releases/download/#{version}/Container.PS-#{version}.dmg"
   appcast "https://github.com/Toinane/container-ps/releases.atom"
