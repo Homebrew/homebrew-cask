@@ -1,5 +1,5 @@
 cask "old-school-runescape" do
-  version :latest
+  version "1.2"
   sha256 :no_check
 
   url "https://www.runescape.com/downloads/OldSchool.dmg"
