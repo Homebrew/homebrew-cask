@@ -9,7 +9,7 @@ cask "fluor" do
 
   livecheck do
     url :url
-    strategy :github_latest
+    strategy :git
   end
 
   auto_updates true
