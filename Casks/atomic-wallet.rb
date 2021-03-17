@@ -9,8 +9,9 @@ cask "atomic-wallet" do
 
   livecheck do
     url "https://releases.atomicwallet.io/latest-mac.yml"
-    strategy :page_match
-    regex(/AtomicWallet-(\d+(?:\.\d+)*)\.zip/i)
+    strategy :page_match do |page|
+      YAML.safe_load(page)["version"]
+    end
   end
 
   app "Atomic Wallet.app"
