@@ -4,7 +4,7 @@ cask "synthesia" do
 
   url "https://synthesia.s3.amazonaws.com/files/Synthesia-#{version}.dmg",
       verified: "synthesia.s3.amazonaws.com/"
-  appcast "https://feeds.feedburner.com/SynthesiaNews"
+  appcast "https://www.synthesiagame.com/download"
   name "Synthesia"
   homepage "https://www.synthesiagame.com/"
 
