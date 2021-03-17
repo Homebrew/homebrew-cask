@@ -56,13 +56,12 @@ cask "forticlient" do
               "com.fortinet.fctwf",
             ],
             delete:    [
-              "/Applications/FortiClient*",
               "/Applications/FortiClient.app",
               "/Applications/FortiClientUninstaller.app",
+              "/Library/Application Support/Fortinet",
             ]
 
   zap trash: [
-    "/Library/Application Support/Fortinet",
     "~/Library/Application Support/Fortinet",
     "~/Library/Application Support/FortiClient",
     "~/Library/Logs/Fortinet",
