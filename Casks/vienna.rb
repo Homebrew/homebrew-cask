@@ -1,13 +1,19 @@
 cask "vienna" do
-  version "3.6.2"
-  sha256 "c43487411c8f39d29e82f0cc618a04d00a7147afa593dfe4cd45de2be5280bc6"
+  version "3.7.1,7437"
+  sha256 "3b6879e55ccc95ba965e6868084f5f3dd1d8d937f20f7c95730f1b8aedc2ba9a"
 
-  # bintray.com/viennarss/ was verified as official when first introduced to the cask
-  url "https://dl.bintray.com/viennarss/vienna-rss/Vienna#{version}.tar.gz"
-  appcast "https://viennarss.github.io/sparkle-files/changelog.xml"
+  url "https://dl.bintray.com/viennarss/vienna-rss/Vienna#{version.before_comma}.tar.gz",
+      verified: "bintray.com/viennarss/"
   name "Vienna"
   desc "RSS and Atom reader"
   homepage "https://www.vienna-rss.com/"
+
+  livecheck do
+    url "https://www.vienna-rss.com/sparkle-files/changelog.xml"
+    strategy :sparkle do |item|
+      "#{item.short_version.sub(/ :[^:]+:/, "")},#{item.version}"
+    end
+  end
 
   app "Vienna.app"
 

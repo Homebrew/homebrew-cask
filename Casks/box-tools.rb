@@ -2,8 +2,8 @@ cask "box-tools" do
   version :latest
   sha256 :no_check
 
-  # e3.boxcdn.net/box-installers/boxedit/mac/currentrelease/ was verified as official when first introduced to the cask
-  url "https://e3.boxcdn.net/box-installers/boxedit/mac/currentrelease/BoxToolsInstaller.dmg"
+  url "https://e3.boxcdn.net/box-installers/boxedit/mac/currentrelease/BoxToolsInstaller.dmg",
+      verified: "e3.boxcdn.net/box-installers/boxedit/mac/currentrelease/"
   name "Box Tools"
   desc "Create and edit any file directly from a web browser"
   homepage "https://www.box.com/resources/downloads"

@@ -1,12 +1,16 @@
 cask "minitube" do
-  version "3.6.7"
-  sha256 "b766b775f526663fef52feded80d64e4b00c2a309a1a04957544f52262b73b82"
+  version "3.8.1,2021.0226.104943"
+  sha256 :no_check
 
   url "https://flavio.tordini.org/files/minitube/minitube.dmg"
-  appcast "https://flavio.tordini.org/minitube-ws/appcast.xml"
   name "Minitube"
   desc "YouTube application"
   homepage "https://flavio.tordini.org/minitube"
+
+  livecheck do
+    url "https://flavio.tordini.org/minitube-ws/appcast.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :sierra"
 

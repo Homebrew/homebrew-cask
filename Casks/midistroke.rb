@@ -1,5 +1,5 @@
 cask "midistroke" do
-  version :latest
+  version "1.4"
   sha256 :no_check
 
   url "https://www.charlie-roberts.com/midiStroke/midiStroke.app.zip"

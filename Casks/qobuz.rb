@@ -1,10 +1,16 @@
 cask "qobuz" do
-  version "5.7.2-b024"
-  sha256 "7321926a8c352f068b0f7b8d05f08321bad0c79ede56719b452e44c52d448775"
+  version "5.8.0-b020"
+  sha256 "417eb5d684b8af2e457bf94adebaba6060b4168a39fa4547cdd47896d77fc0c0"
 
   url "https://desktop.qobuz.com/releases/darwin/x64/elCapitan_sierra/#{version}/Qobuz.dmg"
   name "Qobuz"
   homepage "https://www.qobuz.com/applications"
+
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/(\d+(?:\.\d+)*-b\d+)/Qobuz\.dmg}i)
+  end
 
   auto_updates true
 

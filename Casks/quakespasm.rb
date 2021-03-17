@@ -2,8 +2,8 @@ cask "quakespasm" do
   version "0.93.2"
   sha256 "e7d0d2d970a899ad3f54943f1d16e2cc210f29347c5d669dbd8988ea4531f797"
 
-  # downloads.sourceforge.net/quakespasm/ was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/quakespasm/Mac/QuakeSpasm-#{version}-osx.zip"
+  url "https://downloads.sourceforge.net/quakespasm/Mac/QuakeSpasm-#{version}-osx.zip",
+      verified: "downloads.sourceforge.net/quakespasm/"
   appcast "https://sourceforge.net/projects/quakespasm/rss?path=/Mac"
   name "QuakeSpasm"
   homepage "https://quakespasm.sourceforge.io/"

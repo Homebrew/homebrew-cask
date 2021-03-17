@@ -1,11 +1,28 @@
 cask "zulu" do
-  version "15.0.1,15.28.51-ca"
-  sha256 "991311eaa854b2c6ec7747d548d3208099b293ef2eb3727320ba83c875154777"
+  version "15.0.2,15.29.15-ca"
 
-  url "https://cdn.azul.com/zulu/bin/zulu#{version.after_comma}-jdk#{version.before_comma}-macosx_x64.dmg",
-      referer: "https://www.azul.com/downloads/zulu/zulu-mac/"
+  if Hardware::CPU.intel?
+    sha256 "6284c7fb89cbbc8552788a3db522f6226a64d84454d21e075558c050328f6ed7"
+
+    url "https://cdn.azul.com/zulu/bin/zulu#{version.after_comma}-jdk#{version.before_comma}-macosx_x64.dmg",
+        referer: "https://www.azul.com/downloads/zulu/zulu-mac/"
+  else
+    sha256 "599c3399eb6edb824f4660ba0a4fbb52118458041700dc71aec891bd383910e5"
+
+    url "https://cdn.azul.com/zulu/bin/zulu#{version.after_comma}-jdk#{version.before_comma}-macosx_aarch64.dmg",
+        referer: "https://www.azul.com/downloads/zulu/zulu-mac/"
+  end
+
   name "Azul Zulu Java Standard Edition Development Kit"
   homepage "https://www.azul.com/downloads/zulu/zulu-mac/"
+
+  livecheck do
+    url "https://api.azul.com/zulu/download/community/v1.0/bundles/latest/?jdk_version=#{version.major}&ext=dmg&os=macos"
+    strategy :page_match do |page|
+      match = page.match(%r{url"\s*:\s*"https:.*?/zulu(\d+(?:\.\d+)*-.*?)-jdk(\d+(?:\.\d+)*)-macos}i)
+      "#{match[2]},#{match[1]}"
+    end
+  end
 
   depends_on macos: ">= :sierra"
 

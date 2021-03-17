@@ -1,12 +1,16 @@
 cask "clashx" do
-  version "1.31.1"
-  sha256 "0fdb4b95f50d1d550ba9e80e25a530f0ebc73da58972bcc31ef53589a940ded9"
+  version "1.40.0"
+  sha256 "bd76637dc98f903eb23a5b580634b3eba38d587ac62ef9bebef2cb32d2bf8f4c"
 
   url "https://github.com/yichengchen/clashX/releases/download/#{version}/ClashX.dmg"
-  appcast "https://github.com/yichengchen/clashX/releases.atom"
   name "ClashX"
   desc "Rule-based custom proxy with GUI based on clash"
   homepage "https://github.com/yichengchen/clashX"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"

@@ -1,9 +1,9 @@
 cask "netiquette" do
-  version "1.1.1"
-  sha256 "974d1842a9cadd39ae6883f132625c95ab3132fb86ffb141c7146a738a3f83f3"
+  version "1.2.0"
+  sha256 "08795827772384abcc4426d63c44f21fbc9e75d3595ed975a559a68dac6019b9"
 
-  # bitbucket.org/objective-see/ was verified as official when first introduced to the cask
-  url "https://bitbucket.org/objective-see/deploy/downloads/Netiquette_#{version}.zip"
+  url "https://github.com/objective-see/Netiquette/releases/download/v#{version}/Netiquette_#{version}.zip",
+      verified: "github.com/objective-see/"
   appcast "https://objective-see.com/products/changelogs/Netiquette.txt"
   name "Netiquette"
   homepage "https://objective-see.com/products/netiquette.html"

@@ -8,4 +8,11 @@ cask "pennywise" do
   homepage "https://github.com/kamranahmedse/pennywise"
 
   app "Pennywise.app"
+
+  zap trash: [
+    "~/Library/Application Support/Pennywise",
+    "~/Library/Logs/Pennywise",
+    "~/Library/Preferences/info.kamranahmed.pennywise.plist",
+    "~/Library/Saved Application State/info.kamranahmed.pennywise.savedState",
+  ]
 end

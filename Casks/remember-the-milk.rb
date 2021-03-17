@@ -1,8 +1,16 @@
 cask "remember-the-milk" do
-  version "1.3.0"
-  sha256 "fe9750c55083b36e01b57b6c9f5fa9722ee2f92f2864017036440505bcf5e029"
+  version "1.3.3"
 
-  url "https://www.rememberthemilk.com/download/mac/RememberTheMilk-#{version}-x64.zip"
+  if Hardware::CPU.intel?
+    sha256 "6210e37543afc8a899afb1a5484f57675b21a223f33f4d3bb2e497e3a535742c"
+
+    url "https://www.rememberthemilk.com/download/mac/RememberTheMilk-#{version}-x64.zip"
+  else
+    sha256 "3c63a4d3214bbfbe7ce28240252be2e20be6920f337256b5c194e3592a17df1d"
+
+    url "https://www.rememberthemilk.com/download/mac/RememberTheMilk-#{version}-arm64.zip"
+  end
+
   appcast "https://www.rememberthemilk.com/services/mac/"
   name "Remember The Milk"
   desc "To-do app"

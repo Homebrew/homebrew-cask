@@ -1,12 +1,16 @@
 cask "command-tab-plus" do
-  version "1.124,374"
+  version "1.130,380"
   sha256 :no_check
 
   url "https://noteifyapp.com/download/Command-Tab%20Plus.dmg"
-  appcast "https://macplus-software.com/downloads/Command-Tab.xml"
   name "Command-Tab Plus"
   desc "Keyboard-centric application and window switcher"
   homepage "https://noteifyapp.com/command-tab-plus/"
+
+  livecheck do
+    url "https://macplus-software.com/downloads/Command-Tab.xml"
+    strategy :sparkle
+  end
 
   app "Command-Tab Plus.app"
 

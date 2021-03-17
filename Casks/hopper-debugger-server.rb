@@ -4,9 +4,13 @@ cask "hopper-debugger-server" do
 
   url "https://www.hopperapp.com/HopperGDBServer/HopperDebuggerServer-#{version}.zip",
       user_agent: :fake
-  appcast "https://www.hopperapp.com/HopperGDBServer/appcast.xml"
   name "Hopper Debugger Server"
   homepage "https://www.hopperapp.com/HopperGDBServer/"
+
+  livecheck do
+    url "https://www.hopperapp.com/HopperGDBServer/appcast.xml"
+    strategy :sparkle
+  end
 
   app "Hopper Debugger Server.app"
 end

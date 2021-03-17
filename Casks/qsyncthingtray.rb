@@ -5,7 +5,7 @@ cask "qsyncthingtray" do
   url "https://github.com/sieren/QSyncthingTray/releases/download/#{version}/QSyncthingTray_#{version}_MAC.dmg"
   appcast "https://github.com/sieren/QSyncthingTray/releases.atom"
   name "QSyncthingTray"
-  desc "Cross-platform tray app for Syncthing"
+  desc "Tray app for Syncthing"
   homepage "https://github.com/sieren/QSyncthingTray"
 
   app "QSyncthingTray.app"

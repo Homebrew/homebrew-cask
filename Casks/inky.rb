@@ -1,9 +1,9 @@
 cask "inky" do
-  version "0.11.0"
-  sha256 "eb6c25173b19e0550f48791a498ab1ce77cb0f49a6462cc357fee0c1d924ff2b"
+  version "0.12.0"
+  sha256 "3d7901d9dbe3d3ccca1a585321ec65d5aa5a298532c0d667a5285940035d38f8"
 
-  # github.com/inkle/inky/ was verified as official when first introduced to the cask
-  url "https://github.com/inkle/inky/releases/download/#{version}/Inky_mac.dmg"
+  url "https://github.com/inkle/inky/releases/download/#{version}/Inky_mac.dmg",
+      verified: "github.com/inkle/inky/"
   appcast "https://github.com/inkle/inky/releases.atom"
   name "Inky"
   desc "Editor for ink: inkle's narrative scripting language"

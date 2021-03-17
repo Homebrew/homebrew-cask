@@ -1,11 +1,16 @@
 cask "touchdesigner" do
-  version "2020.27390"
-  sha256 "92e0e8c0deecfc567f96a8e61ec59098c58729b5969af510e8871a146de269eb"
+  version "2021.11180"
+  sha256 "7dd73bb000a5256a818832222ac3353986a5ca22da3f27e2c37b05a0a4dc15d0"
 
   url "https://download.derivative.ca/TouchDesigner.#{version}.dmg"
-  appcast "https://www.derivative.ca/download/"
   name "Derivative TouchDesigner"
   homepage "https://www.derivative.ca/"
+
+  livecheck do
+    url "https://www.derivative.ca/download/"
+    strategy :page_match
+    regex(%r{href=.*?/TouchDesigner\.(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   app "TouchDesigner.app"
 end

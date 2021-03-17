@@ -1,14 +1,17 @@
 cask "jcryptool" do
-  version "1.0.1"
-  sha256 "6e63d68b2d2fd4600368f6e325bfeb6b3fae56397c54d119f67accf41cc8268c"
+  version "1.0.2"
+  sha256 "7ec8a49fd326cdbf9b11c5a099373e82e397b22ac03b925cb2184aa1a95561a1"
 
-  # github.com/jcryptool/core/ was verified as official when first introduced to the cask
-  url "https://github.com/jcryptool/core/releases/download/#{version}/JCrypTool-#{version}-macOS-64bit.tar.gz"
-  appcast "https://github.com/jcryptool/core/releases.atom",
-          must_contain: version.after_comma
+  url "https://github.com/jcryptool/core/releases/download/#{version}/JCrypTool-#{version}-macOS-64bit.tar.gz",
+      verified: "github.com/jcryptool/core/"
   name "JCrypTool"
   desc "Apply and analyze cryptographic algorithms"
   homepage "https://www.cryptool.org/en/jct/downloads"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "JCrypTool.app"
 

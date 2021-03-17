@@ -5,7 +5,7 @@ cask "liteide" do
   url "https://github.com/visualfc/liteide/releases/download/x#{version}/liteidex#{version}.macos-qt5.12.5.zip"
   appcast "https://github.com/visualfc/liteide/releases.atom"
   name "LiteIDE"
-  desc "Open-source, cross-platform Go IDE"
+  desc "Go IDE"
   homepage "https://github.com/visualfc/liteide"
 
   depends_on macos: ">= :sierra"

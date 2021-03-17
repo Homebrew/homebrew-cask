@@ -1,12 +1,26 @@
 cask "goland" do
-  version "2020.3,203.5981.98"
-  sha256 "bbd73cadabb7bb16b04f0a539c5a9093126c38b427615d48e8dab25ae1a32f45"
+  version "2020.3.3,203.7717.15"
 
-  url "https://download.jetbrains.com/go/goland-#{version.before_comma}.dmg"
-  appcast "https://data.services.jetbrains.com/products/releases?code=GO&latest=true&type=release"
+  if Hardware::CPU.intel?
+    sha256 "890e42ca6d4c2ec7dd82dae7d5c9ff5bf24358fdf87ddfc1bc406e6c500e30db"
+    url "https://download.jetbrains.com/go/goland-#{version.before_comma}.dmg"
+  else
+    sha256 "fa0456d656413d2ff0f764c603239c740a8e6c4120addaf1f6df7a08a9fad512"
+    url "https://download.jetbrains.com/go/goland-#{version.before_comma}-aarch64.dmg"
+  end
+
   name "Goland"
   desc "Go (golang) IDE"
   homepage "https://www.jetbrains.com/go/"
+
+  livecheck do
+    url "https://data.services.jetbrains.com/products/releases?code=GO&latest=true&type=release"
+    strategy :page_match do |page|
+      version = page.match(/"version":"(\d+(?:\.\d+)*)/i)
+      build = page.match(/"build":"(\d+(?:\.\d+)*)/i)
+      "#{version[1]},#{build[1]}"
+    end
+  end
 
   auto_updates true
 

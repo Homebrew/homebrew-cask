@@ -1,5 +1,5 @@
 cask "macpar-deluxe" do
-  version :latest
+  version "5.1.1"
   sha256 :no_check
 
   url "https://www.xs4all.nl/~gp/MacPAR_deLuxe/MacPARdeLuxe.dmg"

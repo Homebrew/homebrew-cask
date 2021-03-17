@@ -1,6 +1,6 @@
 cask "ebibookreader" do
   version "1.3.6.0"
-  sha256 "45744649ebc146a500571278839874fb1283fd87e06dd2120fbbfe805469b4da"
+  sha256 :no_check
 
   url "https://haishin.ebookjapan.jp/contents/appli/reader/ebiBookReader.dmg"
   appcast "https://www.ebookjapan.jp/ebj/reader/mac/reader.asp"

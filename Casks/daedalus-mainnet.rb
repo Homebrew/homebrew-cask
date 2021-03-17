@@ -1,6 +1,6 @@
 cask "daedalus-mainnet" do
-  version "2.6.0,15505"
-  sha256 "c37e11f5b2bdb9822deb17497b3e5dcff5b41df98d0145cbbcd63b278d9e66e9"
+  version "3.3.2,16919"
+  sha256 "eb8eaf93fcd6f699797a5a9be9de6b885b26bfd6045194e9fffdbb6c30b064d1"
 
   url "https://update-cardano-mainnet.iohk.io/daedalus-#{version.before_comma}-mainnet-#{version.after_comma}.pkg",
       verified: "update-cardano-mainnet.iohk.io/"

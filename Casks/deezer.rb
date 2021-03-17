@@ -1,12 +1,16 @@
 cask "deezer" do
-  version "4.28.0"
-  sha256 "9a891b5e21c0ab8331f0ab527fd8d7d023f9da149292faa88572c17e0fc15abf"
+  version "4.32.30"
+  sha256 "9f2390d522e0148d1032329a6166626d04c638558e373559ed7287d87959ad6e"
 
   url "https://www.deezer.com/desktop/download/artifact/darwin/x64/#{version}"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.deezer.com/desktop/download%3Fplatform%3Ddarwin%26architecture=x64"
   name "Deezer"
   desc "Music player"
   homepage "https://www.deezer.com/download"
+
+  livecheck do
+    url "https://www.deezer.com/desktop/download?platform=darwin&architecture=x64"
+    strategy :header_match
+  end
 
   auto_updates true
 

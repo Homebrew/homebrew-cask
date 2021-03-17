@@ -1,13 +1,20 @@
 cask "browserosaurus" do
-  version "12.3.1"
-  sha256 "1dadf4c75c76fc98be7522b062ba26cd77487b5fd8ac2e2acd66c3193ee114da"
+  version "13.3.2"
 
-  # github.com/will-stone/browserosaurus/ was verified as official when first introduced to the cask
-  url "https://github.com/will-stone/browserosaurus/releases/download/v#{version}/Browserosaurus-#{version}.dmg"
+  if Hardware::CPU.intel?
+    sha256 "49df861cf356a10d8fe22e29596257346f9e1dc1b6e64557e486bca9cd927cd3"
+    url "https://github.com/will-stone/browserosaurus/releases/download/v#{version}/Browserosaurus-darwin-x64-#{version}.zip",
+        verified: "github.com/will-stone/browserosaurus/"
+  else
+    sha256 "7f13cb931667238f07f65e05e14d6beadf1607ea6f231b4d690bd0a3cfb3ca1b"
+    url "https://github.com/will-stone/browserosaurus/releases/download/v#{version}/Browserosaurus-darwin-arm64-#{version}.zip",
+        verified: "github.com/will-stone/browserosaurus/"
+  end
+
   appcast "https://github.com/will-stone/browserosaurus/releases.atom"
   name "Browserosaurus"
   desc "Open-source browser prompter"
-  homepage "https://will-stone.github.io/browserosaurus/"
+  homepage "https://wstone.io/browserosaurus/"
 
   auto_updates true
 

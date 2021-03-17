@@ -1,13 +1,20 @@
 cask "twine" do
-  version "2.3.9"
-  sha256 "b6afb15ff3f496f88a42e2f268d11875df4d206376cc851f3911bd41ddc58ec5"
+  version "2.3.13"
+  sha256 "4f6f49b938a196181d87d6ab0dc96a5fc02a479b5e698ddaf216840e7d7af48a"
 
-  # github.com/klembot/twinejs/ was verified as official when first introduced to the cask
-  url "https://github.com/klembot/twinejs/releases/download/#{version}/twine_#{version}_macos.dmg"
+  url "https://github.com/klembot/twinejs/releases/download/#{version}/twine_#{version}_macos.dmg",
+      verified: "github.com/klembot/twinejs/"
   appcast "https://github.com/klembot/twinejs/releases.atom"
   name "Twine"
   desc "Tool for telling interactive, nonlinear stories"
   homepage "https://twinery.org/"
 
   app "Twine.app"
+
+  zap trash: [
+    "~/Library/Application Support/Twine",
+    "~/Library/Logs/Twine",
+    "~/Library/Preferences/com.electron.twine.plist",
+    "~/Library/Saved Application State/com.electron.twine.savedState",
+  ]
 end

@@ -3,14 +3,14 @@ cask "unison" do
     version "2.48.3"
     sha256 "d578196d8b38f35c1e0410a1c86ff4e115a91f7eb211201db7a940a3a3e0f099"
 
-    # github.com/bcpierce00/unison/ was verified as official when first introduced to the cask
-    url "https://github.com/bcpierce00/unison/releases/download/#{version}/Unison-OS-X-#{version}.zip"
+    url "https://github.com/bcpierce00/unison/releases/download/#{version}/Unison-OS-X-#{version}.zip",
+        verified: "github.com/bcpierce00/unison/"
   else
     version "2.51.2"
     sha256 "0738a6978fa29bb2af409322069cc20df293b770877942ac4b8774f06e774aa5"
 
-    # github.com/bcpierce00/unison/ was verified as official when first introduced to the cask
-    url "https://github.com/bcpierce00/unison/releases/download/v#{version}/Unison-#{version}.OS.X.zip"
+    url "https://github.com/bcpierce00/unison/releases/download/v#{version}/Unison-#{version}.OS.X.zip",
+        verified: "github.com/bcpierce00/unison/"
   end
 
   appcast "https://github.com/bcpierce00/unison/releases.atom"

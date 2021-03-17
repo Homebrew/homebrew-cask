@@ -1,9 +1,9 @@
 cask "zoomus" do
-  version "5.4.58903.1122,alias"
+  version "5.4.58903.1122.1" # So it triggers an upgrade for users of the cask
   sha256 "614fa5e81ca40fa868e8b682e59ce7f2195bd70593b42e95af2a405afb395c21"
 
-  # d11yldzmag5yn.cloudfront.net/ was verified as official when first introduced to the cask
-  url "https://d11yldzmag5yn.cloudfront.net/prod/#{version.before_comma}/Zoom.pkg"
+  url "https://d11yldzmag5yn.cloudfront.net/prod/#{version.before_comma}/Zoom.pkg",
+      verified: "d11yldzmag5yn.cloudfront.net/"
   name "Zoom.us makeshift alias"
   desc "Temporary makeshift alias for the video communication tool Zoom"
   homepage "https://www.zoom.us/"

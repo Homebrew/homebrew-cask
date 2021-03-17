@@ -1,13 +1,18 @@
 cask "github" do
-  version "2.6.0-b666c0f3"
-  sha256 "3cd783ff30461d79e57e8ac5aba6592314a5f4655e9b450deb55ca6d378b6798"
+  version "2.6.6-74281ffb"
+  sha256 "e36699b769eaad2f43dfe8fe7223627520074db888ecf7690764ef9d3647fa75"
 
-  # githubusercontent.com/ was verified as official when first introduced to the cask
-  url "https://desktop.githubusercontent.com/releases/#{version}/GitHubDesktop.zip"
-  appcast "https://github.com/desktop/desktop/releases.atom"
+  url "https://desktop.githubusercontent.com/releases/#{version}/GitHubDesktop.zip",
+      verified: "githubusercontent.com/"
   name "GitHub Desktop"
   desc "Desktop client for GitHub repositories"
   homepage "https://desktop.github.com/"
+
+  livecheck do
+    url "https://central.github.com/deployments/desktop/desktop/latest/darwin"
+    strategy :header_match
+    regex(%r{(\d+(?:\.\d+).*)/GitHubDesktop\.zip}i)
+  end
 
   auto_updates true
 

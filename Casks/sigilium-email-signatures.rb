@@ -1,5 +1,5 @@
 cask "sigilium-email-signatures" do
-  version "1.2.7"
+  version "1.3.1"
   sha256 :no_check
 
   url "https://sigilium.com/apps/sigilium.zip"

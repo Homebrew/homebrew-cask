@@ -1,12 +1,18 @@
 cask "adguard" do
-  version "2.5.1.928"
-  sha256 "8b7749dcd1146e99f47a501b18804730aad47954f859796f7a701c8185eb119a"
+  version "2.5.3.955"
+  sha256 "449a8ca91c8755eef4f5f3f247dfdfcdbf8c2a1096ad01f20d983d1ddafb38bc"
 
   url "https://static.adguard.com/mac/release/AdGuard-#{version}.dmg"
-  appcast "https://static.adguard.com/mac/adguard-release-appcast.xml"
   name "Adguard"
   desc "Stand alone ad blocker"
   homepage "https://adguard.com/"
+
+  livecheck do
+    url "https://static.adguard.com/mac/adguard-release-appcast.xml"
+    strategy :sparkle do |item|
+      item.short_version.sub(/ release.*/, "")
+    end
+  end
 
   auto_updates true
 

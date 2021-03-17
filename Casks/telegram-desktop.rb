@@ -1,13 +1,17 @@
 cask "telegram-desktop" do
-  version "2.4.7"
-  sha256 "806e1c04b79e87269f6a98a768f97e53de2a89eb09c7853a3c83e5691ace6387"
+  version "2.6.1"
+  sha256 "181c80eb87b7d31a1d84c9d3cf060ad5e9734c94969604e89aa0ad79fe2ddbc2"
 
-  # github.com/telegramdesktop/tdesktop/ was verified as official when first introduced to the cask
-  url "https://github.com/telegramdesktop/tdesktop/releases/download/v#{version}/tsetup.#{version}.dmg"
-  appcast "https://github.com/telegramdesktop/tdesktop/releases.atom"
+  url "https://github.com/telegramdesktop/tdesktop/releases/download/v#{version}/tsetup.#{version}.dmg",
+      verified: "github.com/telegramdesktop/tdesktop/"
   name "Telegram Desktop"
   desc "Desktop client for Telegram messenger"
   homepage "https://desktop.telegram.org/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
   conflicts_with cask: "homebrew/cask-versions/telegram-desktop-dev"

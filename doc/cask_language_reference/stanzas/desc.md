@@ -1,6 +1,8 @@
 # desc
 
-`desc` accepts a single-line UTF-8 string containing a short description of the software. It’s used to help with searchability and disambiguation.
+`desc` accepts a single-line UTF-8 string containing a short description of the software. It’s used to help with searchability and disambiguation, thus it must concisely describe what the software does (or what you can accomplish with it).
+
+`desc` is not for app slogans! Vendors’ descriptions tend to be filled with generic adjectives such as “modern” and “lightweight”. Those are meaningless marketing fluff (do you ever see apps proudly describing themselves as outdated and bulky?) which must the deleted. It’s fine to use the information on the software’s website as a starting point, but it will require editing in almost all cases.
 
 ## Dos and Don'ts
 

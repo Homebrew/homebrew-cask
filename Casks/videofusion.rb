@@ -1,6 +1,6 @@
 cask "videofusion" do
-  version "1.0.1.0"
-  sha256 "106328304796a77ddf2180af014e3834c695cef09226a0f412e811f635e66a25"
+  version "1.2.1.0"
+  sha256 "8bfb284a01d66b35399e311236a2ebbeabd268157e9e8099523716ab9c70ee88"
 
   url "https://lf3-faceucdn-tos.pstatp.com/obj/faceu-packages/Jianying_Pro_#{version.dots_to_underscores}.pkg",
       verified: "lf3-faceucdn-tos.pstatp.com/obj/faceu-packages/"
@@ -15,7 +15,7 @@ cask "videofusion" do
 
   uninstall pkgutil: [
     "com.lemon.lvpro",
-    "com.mygreatcompany.pkg.LVPro",
+    "com.mygreatcompany.pkg.lvpro",
   ]
 
   zap trash: [

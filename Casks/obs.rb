@@ -1,6 +1,6 @@
 cask "obs" do
-  version "26.0.2"
-  sha256 "66855df67a829c8bf1b5e5f7321556e7f9e338f8a95e51ca6afcee349d206ac2"
+  version "26.1.2"
+  sha256 "42b852a5f23c5fd20d7a3ec444d6e5632fc92a63d3c8546aa6267ee6ad2f085d"
 
   url "https://cdn-fastly.obsproject.com/downloads/obs-mac-#{version}.dmg"
   appcast "https://github.com/obsproject/obs-studio/releases.atom"
@@ -13,6 +13,7 @@ cask "obs" do
   app "OBS.app"
 
   zap trash: [
+    "/Library/CoreMediaIO/Plug-Ins/DAL/obs-mac-virtualcam.plugin",
     "~/Library/Application Support/obs-studio",
     "~/Library/Preferences/com.obsproject.obs-studio.plist",
     "~/Library/Saved Application State/com.obsproject.obs-studio.savedState",

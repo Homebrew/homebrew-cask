@@ -1,9 +1,9 @@
 cask "knockknock" do
-  version "2.1.1"
-  sha256 "c3293e6f6524b557246a9c5e06a1fb2eb3f49be2297fe671d0fa8fca7aa142fa"
+  version "2.3.0"
+  sha256 "140f5f3c6d02541bed685810cb4c6916231fe2385ad749dd4856e7c9f2dcd05c"
 
-  url "https://bitbucket.org/objective-see/deploy/downloads/KnockKnock_#{version}.zip",
-      verified: "bitbucket.org/objective-see/"
+  url "https://github.com/objective-see/KnockKnock/releases/download/v#{version}/KnockKnock_#{version}.zip",
+      verified: "github.com/objective-see/KnockKnock/"
   appcast "https://objective-see.com/products/changelogs/KnockKnock.txt"
   name "KnockKnock"
   desc "Tool to show what is persistently installed on the computer"

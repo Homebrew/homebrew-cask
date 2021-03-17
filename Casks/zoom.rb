@@ -1,13 +1,26 @@
 cask "zoom" do
-  version "5.4.59296.1207"
-  sha256 "545475718adc1e60177f991fc9b3c6ad48f3625a00334dd3de01f63eb60d9adf"
+  version "5.5.13148.0305"
 
-  # d11yldzmag5yn.cloudfront.net/ was verified as official when first introduced to the cask
-  url "https://d11yldzmag5yn.cloudfront.net/prod/#{version}/Zoom.pkg"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://zoom.us/client/latest/Zoom.pkg"
+  if Hardware::CPU.intel?
+    sha256 "62e78f5fc1663b0d78ae7d7205fa434d95479322a193d99fe818de3dd819a7a2"
+
+    url "https://d11yldzmag5yn.cloudfront.net/prod/#{version}/Zoom.pkg",
+        verified: "d11yldzmag5yn.cloudfront.net/"
+  else
+    sha256 "bc80ccaead57c85031181264dd6cac453b82d8e5e46b227824cf956f8de50bcc"
+
+    url "https://d11yldzmag5yn.cloudfront.net/prod/#{version}/arm64/Zoom.pkg",
+        verified: "d11yldzmag5yn.cloudfront.net/"
+  end
+
   name "Zoom.us"
   desc "Video communication and virtual meeting platform"
   homepage "https://www.zoom.us/"
+
+  livecheck do
+    url "https://zoom.us/client/latest/Zoom.pkg"
+    strategy :header_match
+  end
 
   # Do not add `auto_updates`. While supporting an auto-update mechanism, this software is more inconvenient than most
   # See https://github.com/Homebrew/homebrew-cask/pull/93083

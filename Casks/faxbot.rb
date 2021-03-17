@@ -1,12 +1,18 @@
 cask "faxbot" do
-  version "2.5.1"
-  sha256 "665d5bf085d5795203808f1d90cdd596fffa574bfa6d1dc24efa3d306e2d5860"
+  version "2.6,201218.1"
+  sha256 :no_check
 
   url "https://www.hosy.de/faxer/Faxer.zip"
-  appcast "https://www.hosy.de/faxer/version.xml"
   name "Faxbot"
   desc "Send Faxes via FRITZ!Box"
   homepage "https://www.hosy.de/faxer/"
+
+  livecheck do
+    url "https://www.hosy.de/faxer/version.xml"
+    strategy :sparkle do |item|
+      "#{item.title[/Version (\d+(?:\.\d+)*)/i, 1]},#{item.version}"
+    end
+  end
 
   app "Faxbot.app"
 

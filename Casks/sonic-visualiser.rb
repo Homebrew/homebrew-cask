@@ -1,9 +1,9 @@
 cask "sonic-visualiser" do
-  version "4.2"
-  sha256 "2eedac658572e570366f6658850a7830e3c56e8be4ccb2de63cd88a8948468d8"
+  version "4.3"
+  sha256 "eafd46decd7c00680ba95c2246fd34a9da64a280479bb3077d4487d656a6cdc2"
 
-  # bintray.com/sonic-visualiser was verified as official when first introduced to the cask
-  url "https://bintray.com/sonic-visualiser/sonic-visualiser/download_file?file_path=Sonic+Visualiser-#{version}.dmg"
+  url "https://bintray.com/sonic-visualiser/sonic-visualiser/download_file?file_path=Sonic+Visualiser-#{version}.dmg",
+      verified: "bintray.com/sonic-visualiser/"
   appcast "https://code.soundsoftware.ac.uk/projects/sonic-visualiser/repository/raw/CHANGELOG"
   name "Sonic Visualiser"
   desc "Visualisation, analysis, and annotation of music audio recordings"

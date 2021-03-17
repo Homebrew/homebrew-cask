@@ -1,9 +1,9 @@
 cask "min" do
-  version "1.17.1"
-  sha256 "fd392b2aed1b990e534f36948ce657892f77373d637a90789ba3f56e3932bf11"
+  version "1.18.1"
+  sha256 "8c77f3e1e6ead2ceb019e39d4d5522f90b7c3ab28d4ccaa52600c30a8630031a"
 
-  # github.com/minbrowser/min/ was verified as official when first introduced to the cask
-  url "https://github.com/minbrowser/min/releases/download/v#{version}/Min-v#{version}-darwin-x64.zip"
+  url "https://github.com/minbrowser/min/releases/download/v#{version}/Min-v#{version}-darwin-x64.zip",
+      verified: "github.com/minbrowser/min/"
   appcast "https://github.com/minbrowser/min/releases.atom"
   name "Min"
   desc "Minimal browser that protects privacy"

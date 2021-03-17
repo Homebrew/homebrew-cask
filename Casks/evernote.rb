@@ -15,16 +15,23 @@ cask "evernote" do
 
     url "https://cdn1.evernote.com/mac-smd/public/Evernote_RELEASE_#{version}.dmg"
   else
-    version "10.4.4-2096"
-    sha256 "d836d7f2c91feb27f323f9bd1c68f5e74bde605d6981583f75c2b6098ef958bc"
+    version "10.9.10,2439"
+    sha256 "5e3991b7e9018c4f5872847bc0bec3472a335126eb3e748e829cfaad8c0e467e"
 
-    url "https://cdn1.evernote.com/boron/mac/builds/Evernote-#{version}.dmg"
+    url "https://cdn1.evernote.com/boron/mac/builds/Evernote-#{version.before_comma}-mac-ddl-ga-#{version.after_comma}.dmg"
   end
 
-  appcast "https://evernote.s3.amazonaws.com/boron/mac/public/latest-mac.yml"
   name "Evernote"
   desc "App for note taking, organizing, task lists, and archiving"
   homepage "https://evernote.com/"
+
+  livecheck do
+    url "https://evernote.s3.amazonaws.com/boron/mac/public/latest-mac.yml"
+    strategy :page_match do |page|
+      match = page.match(/(\d+(?:\.\d+)*)-mac-ddl-ga-(\d+)\.zip/)
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
   auto_updates true
 
@@ -36,10 +43,15 @@ cask "evernote" do
   ]
 
   zap trash: [
+    "~/Library/Application Support/Evernote",
     "~/Library/Application Support/com.evernote.Evernote",
     "~/Library/Application Support/com.evernote.EvernoteHelper",
+    "~/Library/Application Support/Caches/evernote-client-updater",
     "~/Library/Caches/com.evernote.Evernote",
     "~/Library/Preferences/com.evernote.Evernote.plist",
     "~/Library/Preferences/com.evernote.EvernoteHelper.plist",
+    "~/Library/Logs/Evernote",
+    "~/Library/Cookies/com.evernote.Evernote.binarycookies",
+    "~/Library/Saved Application State/com.evernote.Evernote.savedState",
   ]
 end

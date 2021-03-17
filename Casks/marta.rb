@@ -3,9 +3,13 @@ cask "marta" do
   sha256 "25ad0b66486b219ab380e55567c7b308d3811250797bd287bb721ce3e25daf07"
 
   url "https://updates.marta.yanex.org/release/Marta-#{version}.dmg"
-  appcast "https://updates.marta.yanex.org/release/appcast.xml"
   name "Marta File Manager"
   homepage "https://marta.yanex.org/"
+
+  livecheck do
+    url "https://updates.marta.yanex.org/release/appcast.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :high_sierra"
 

@@ -1,12 +1,16 @@
 cask "texshop" do
-  version "4.53"
-  sha256 "0906db3c463d56a9b7c9fb4353ea26c90662daa7423d5e599812d0623e226815"
+  version "4.60"
+  sha256 "461d50c659ab2cc8f69a890341bdb321e871150d51fd438335593e5401063ed5"
 
   url "https://pages.uoregon.edu/koch/texshop/texshop-64/texshop#{version.no_dots}.zip"
-  appcast "https://pages.uoregon.edu/koch/texshop/texshop-64/texshopappcast.xml"
   name "TeXShop"
   desc "TeX previewer"
   homepage "https://pages.uoregon.edu/koch/texshop/"
+
+  livecheck do
+    url "https://pages.uoregon.edu/koch/texshop/texshop-64/texshopappcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"

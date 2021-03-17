@@ -48,6 +48,9 @@ module Check
         system_command!("/bin/launchctl", args: ["list"], print_stderr: false, sudo: sudo)
           .stdout
           .lines.drop(1)
+          .reject do |id|
+            id.match?(/\A(?:application\.)?com\.apple\.(installer|Safari|systemevents|systempreferences)(?:\.|$)/)
+          end
       end
 
       [false, true]
@@ -123,21 +126,23 @@ module Check
     running_apps = diff[:loaded_launchjobs]
                    .added
                    .select { |id| id.match?(/\.\d+\Z/) }
-                   .map { |id| id.sub(/\.\d+\Z/, "") }
+                   .map { |id| id.sub(/\A(?:application\.)?(.*?)(?:\.\d+){0,2}\Z/, '\1') }
 
     loaded_launchjobs = diff[:loaded_launchjobs]
                         .added
                         .reject { |id| id.match?(/\.\d+\Z/) }
 
-    if (running_apps - Array(uninstall_directives[:quit])).any?
+    missing_running_apps = running_apps - Array(uninstall_directives[:quit])
+    if missing_running_apps.any?
       message = "Some applications are still running, add them to #{Formatter.identifier("uninstall quit:")}\n"
-      message += running_apps.join("\n")
+      message += missing_running_apps.join("\n")
       errors << message
     end
 
-    if (loaded_launchjobs - Array(uninstall_directives[:launchctl])).any?
+    missing_loaded_launchjobs = loaded_launchjobs - Array(uninstall_directives[:launchctl])
+    if missing_loaded_launchjobs.any?
       message = "Some launch jobs were not unloaded, add them to #{Formatter.identifier("uninstall launchctl:")}\n"
-      message += loaded_launchjobs.join("\n")
+      message += missing_loaded_launchjobs.join("\n")
       errors << message
     end
 

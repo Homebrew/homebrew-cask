@@ -1,13 +1,18 @@
 cask "musicbrainz-picard" do
-  version "2.5.2"
-  sha256 "cb9f2df4e0f476cd73b6d5099aec77c1789d6f3d8ed65323c6dc9b6713ccdd64"
+  version "2.5.6"
+  sha256 "c4686cc3b29c8b672245a89b0c18cc86b54e06f5491c0cdfdb5f471e061fff32"
 
-  # musicbrainz.osuosl.org/pub/ was verified as official when first introduced to the cask
-  url "https://musicbrainz.osuosl.org/pub/musicbrainz/picard/MusicBrainz-Picard-#{version}.dmg"
-  appcast "https://picard.musicbrainz.org/downloads/"
+  url "https://musicbrainz.osuosl.org/pub/musicbrainz/picard/MusicBrainz-Picard-#{version}.dmg",
+      verified: "musicbrainz.osuosl.org/pub/"
   name "MusicBrainz Picard"
-  desc "Cross-platform music tagger"
+  desc "Music tagger"
   homepage "https://picard.musicbrainz.org/"
+
+  livecheck do
+    url "https://picard.musicbrainz.org/downloads/"
+    strategy :page_match
+    regex(%r{href=.*?/MusicBrainz-Picard-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   depends_on macos: ">= :sierra"
 

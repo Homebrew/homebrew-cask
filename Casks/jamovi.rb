@@ -1,13 +1,17 @@
 cask "jamovi" do
-  version "1.2.27.0"
-  sha256 "3c1621f407849a1bd0d64c5eda424010debdc5307669ae1ed5dfd46c905ba84d"
+  version "1.6.18.0"
+  sha256 "148e9e9dc56b9ed2833e494b90c836dc05cf1afa8091901252179389d608509f"
 
   url "https://www.jamovi.org/downloads/jamovi-#{version}-macos.dmg"
-  appcast "https://www.jamovi.org/download.html",
-          must_contain: "solid</td><td>.dmg</td><td>#{version.chomp(".0")}"
   name "jamovi"
   desc "Free and open statistical software"
   homepage "https://www.jamovi.org/"
+
+  livecheck do
+    url "https://www.jamovi.org/download.html"
+    strategy :page_match
+    regex(%r{href=.*?/jamovi-(\d+(?:\.\d+)*)-macos\.dmg}i)
+  end
 
   auto_updates true
 

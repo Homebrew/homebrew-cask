@@ -1,9 +1,8 @@
 cask "flux" do
-  version "40.1"
-  sha256 "1844305519b450cfe3c5475e99f6c06fb2eea51e65c1b0ee25f6671a49fff75d"
+  version "41.4"
+  sha256 "be67b22bb2dc1f2a4758f5aa642a7d7740c4c575712e8c57591cd7c8c2d1b3ce"
 
   url "https://justgetflux.com/mac/Flux#{version}.zip"
-  appcast "https://justgetflux.com/mac/macflux.xml"
   name "f.lux"
   desc "Screen color temperature controller"
   homepage "https://justgetflux.com/"

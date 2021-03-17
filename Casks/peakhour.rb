@@ -1,12 +1,16 @@
 cask "peakhour" do
-  version "4.1.11,35215"
-  sha256 "f7356a79abb5284f9a64dd4709842b1d04c5f64c83481abb200a5928e4e55692"
+  version "4.1.13,35438"
+  sha256 "b02f7dacafa25ef59afddf06756f9ac99389bccaa7b93b64deaab39ba93dbeec"
 
   url "https://updates.peakhourapp.com/releases/PeakHour%20#{version.before_comma}.zip"
-  appcast "https://updates.peakhourapp.com/PeakHour#{version.major}Appcast.xml"
   name "PeakHour"
   desc "Network bandwidth and network quality visualiser"
   homepage "https://www.peakhourapp.com/"
+
+  livecheck do
+    url "https://updates.peakhourapp.com/PeakHour#{version.major}Appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 

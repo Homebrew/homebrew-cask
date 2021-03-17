@@ -1,12 +1,17 @@
 cask "syncovery" do
-  version "9.23"
-  sha256 "90224a0950ba5ca783ec50829535e8688e40ab019fd7a97598026377f64801df"
+  version "9.31a"
+  sha256 "9c89d6519659340b226a300d5d6a469cb46b40e92c1db2966ac0f45303477412"
 
   url "https://www.syncovery.com/release/SyncoveryMac#{version}.dmg"
-  appcast "https://www.syncovery.com/download/mac/"
   name "Syncovery"
   desc "File synchronization and backup software"
   homepage "https://www.syncovery.com/"
+
+  livecheck do
+    url "https://www.syncovery.com/download/mac/"
+    strategy :page_match
+    regex(%r{href=.*?/SyncoveryMac(\d+(?:\.\d+)*[a-z]?)\.dmg}i)
+  end
 
   pkg "SyncoveryMac (double-click to install).pkg"
 

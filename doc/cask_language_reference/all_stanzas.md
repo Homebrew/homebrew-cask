@@ -6,7 +6,7 @@ Each of the following stanzas is required for every Cask.
 
 | name       | multiple occurrences allowed? | value                           |
 | ---------- |------------------------------ | ------------------------------- |
-| `version`  | no                            | Application version; set the value to `:latest` if versioned downloads are not offered.<br />See [Version Stanza Details](stanzas/version.md) for more information.
+| `version`  | no                            | Application version.<br />See [Version Stanza Details](stanzas/version.md) for more information.
 | `sha256`   | no                            | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`. Can be suppressed by using the special value `:no_check`.<br />See [Checksum Stanza Details](stanzas/sha256.md) for more information.
 | `url`      | no                            | URL to the `.dmg`/`.zip`/`.tgz`/`.tbz2` file that contains the application.<br />A [comment](stanzas/url.md#when-url-and-homepage-hostnames-differ-add-a-comment) should be added if the hostnames in the `url` and `homepage` stanzas differ. Block syntax should be used for URLs that change on every visit.<br />See [URL Stanza Details](stanzas/url.md) for more information.
 | `name`     | yes                           | String providing the full and proper name defined by the vendor.<br />See [Name Stanza Details](stanzas/name.md) for more information.
@@ -51,6 +51,7 @@ Each Cask must declare one or more *artifacts* (i.e. something to install).
 | `depends_on`           | yes                           | List of dependencies and requirements for this Cask.<br />See [Depends_on Stanza Details](stanzas/depends_on.md) for more information.
 | `conflicts_with`       | yes                           | List of conflicts with this Cask (*not yet functional*).<br />See [Conflicts_with Stanza Details](stanzas/conflicts_with.md) for more information.
 | `caveats`              | yes                           | String or Ruby block providing the user with Cask-specific information at install time.<br />See [Caveats Stanza Details](stanzas/caveats.md) for more information.
+| `livecheck`            | no                            | Ruby block describing how to find updates for this Cask.<br />See [Livecheck Stanza Details](stanzas/livecheck.md) for more information.
 | `preflight`            | yes                           | Ruby block containing preflight install operations (needed only in very rare cases).
 | `postflight`           | yes                           | Ruby block containing postflight install operations.<br />See [Postflight Stanza Details](stanzas/flight.md) for more information.
 | `uninstall_preflight`  | yes                           | Ruby block containing preflight uninstall operations (needed only in very rare cases).

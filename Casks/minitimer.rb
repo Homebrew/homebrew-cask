@@ -6,5 +6,11 @@ cask "minitimer" do
   name "miniTimer"
   homepage "http://kevingessner.com/software/minitimer/"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/(\d+(?:\.\d+)*)/miniTimer\.dmg}i)
+  end
+
   app "miniTimer.app"
 end

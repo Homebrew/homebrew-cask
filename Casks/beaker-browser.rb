@@ -1,9 +1,9 @@
 cask "beaker-browser" do
-  version "1.0.0"
-  sha256 "97ad8bd0382c3bcb99e7fbf6c50218368922b0e20e13a531d4fd1bd2b47ad44f"
+  version "1.1.0"
+  sha256 "c88718c6ec1f7cbb70f33e3ac04f0d2117ab5b7907d9fa0529cd8b70f13df0e2"
 
-  # github.com/beakerbrowser/beaker/ was verified as official when first introduced to the cask
-  url "https://github.com/beakerbrowser/beaker/releases/download/#{version}/beaker-browser-#{version}.dmg"
+  url "https://github.com/beakerbrowser/beaker/releases/download/#{version}/beaker-browser-#{version}.dmg",
+      verified: "github.com/beakerbrowser/beaker/"
   appcast "https://github.com/beakerbrowser/beaker/releases.atom"
   name "Beaker Browser"
   desc "Experimental peer-to-peer web browser"

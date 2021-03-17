@@ -1,11 +1,15 @@
 cask "sofa-server" do
-  version "1.3.4"
-  sha256 "14860aa797c3ef39c9c81d829e77b63f36a7dc4c1190b90542a7e614a37e7ed5"
+  version "1.3.4,2020.0327.100116"
+  sha256 :no_check
 
   url "https://flavio.tordini.org/files/sofa/sofa-server.dmg"
-  appcast "https://flavio.tordini.org/sofa-ws/appcast.xml"
   name "Sofa"
   homepage "https://flavio.tordini.org/sofa/"
+
+  livecheck do
+    url "https://flavio.tordini.org/sofa-ws/appcast.xml"
+    strategy :sparkle
+  end
 
   app "Sofa Server.app"
 

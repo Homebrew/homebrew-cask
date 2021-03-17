@@ -1,10 +1,11 @@
 cask "geph" do
-  version "3.6.7"
-  sha256 "0c2a2b0ba3b8ccf1acc66be891b3960716489fb4974e342a7dc9759552199d18"
+  version "4.2.3"
+  sha256 "ed0dfbb5b101c25903b70200461f1ab6dd0405c1bca0717a81f9382ceb14002b"
 
-  url "https://dl.geph.io/desktop-builds/geph-macos-#{version}.dmg"
-  appcast "https://geph.io/"
+  url "https://f001.backblazeb2.com/file/geph4-dl/Geph4Releases/#{version}/geph-macos-#{version}.dmg",
+      verified: "f001.backblazeb2.com/file/geph4-dl/"
   name "Geph"
+  desc "Modular Internet censorship circumvention system"
   homepage "https://geph.io/"
 
   app "Geph.app"

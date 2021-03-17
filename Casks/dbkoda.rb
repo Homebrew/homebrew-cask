@@ -2,8 +2,8 @@ cask "dbkoda" do
   version "1.1.0.187"
   sha256 :no_check
 
-  # s3-us-west-1.amazonaws.com/uswest-nc.release.dbkoda/ was verified as official when first introduced to the cask
-  url "https://s3-us-west-1.amazonaws.com/uswest-nc.release.dbkoda/dbkoda-latest.dmg"
+  url "https://s3-us-west-1.amazonaws.com/uswest-nc.release.dbkoda/dbkoda-latest.dmg",
+      verified: "s3-us-west-1.amazonaws.com/uswest-nc.release.dbkoda/"
   name "dbKoda"
   homepage "https://www.dbkoda.com/"
 

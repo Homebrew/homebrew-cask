@@ -1,9 +1,9 @@
 cask "boom" do
-  version "1.6.12"
-  sha256 "5245955060a740c009ec8b789d1e3b02809f07874e02407d5344d1c2240ff96a"
+  version "1.6.13,1.6.13004"
+  sha256 :no_check
 
-  # d13nae1tw8tdnq.cloudfront.net/Boom2mac/ was verified as official when first introduced to the cask
-  url "https://d13nae1tw8tdnq.cloudfront.net/Boom2mac/webstore/Boom2.dmg"
+  url "https://d13nae1tw8tdnq.cloudfront.net/Boom2mac/webstore/Boom2.dmg",
+      verified: "d13nae1tw8tdnq.cloudfront.net/Boom2mac/"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_lastmodified.cgi?url=https://d13nae1tw8tdnq.cloudfront.net/Boom2mac/webstore/Boom2.dmg"
   name "Boom"
   desc "Transforms audio input"

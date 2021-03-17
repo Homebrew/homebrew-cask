@@ -5,7 +5,7 @@ cask "scihubeva" do
   url "https://github.com/leovan/SciHubEVA/releases/download/#{version}/SciHubEVA-#{version}.dmg"
   appcast "https://github.com/leovan/SciHubEVA/releases.atom"
   name "SciHubEVA"
-  desc "Cross-platform Sci-Hub GUI app"
+  desc "Sci-Hub GUI app"
   homepage "https://github.com/leovan/SciHubEVA"
 
   app "SciHubEVA.app"

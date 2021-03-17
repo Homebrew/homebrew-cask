@@ -1,11 +1,16 @@
 cask "c0re100-qbittorrent" do
-  version "4.3.1.11"
-  sha256 "b6396690bf9104f3005387777637b9d127cc39b087daaa19d1b0640744e7a64e"
+  version "4.3.3.10"
+  sha256 "0001a8acec784084cd836cf3f2b45a20648317bff54465b7086cdf08582d781c"
 
   url "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-#{version}/qBittorrent-#{version}.dmg"
-  appcast "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases.atom"
   name "qBittorrent Enhanced Edition"
   homepage "https://github.com/c0re100/qBittorrent-Enhanced-Edition"
+
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^release-(\d+(?:\.\d+)*)$/i)
+  end
 
   depends_on macos: ">= :sierra"
 

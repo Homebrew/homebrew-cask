@@ -1,12 +1,16 @@
 cask "sketch" do
-  version "70.2-109071"
-  sha256 "688ec4d32b76f43579c4862d65607392ea32b0f8d56602048682cd136dc1d0fd"
+  version "70.6,109241"
+  sha256 "54c67b872dbbd2c66dd50c635a3f6455412c179869e1b9f01062751a6daf8ed7"
 
-  url "https://download.sketchapp.com/sketch-#{version}.zip"
-  appcast "https://download.sketchapp.com/sketch-versions.xml"
+  url "https://download.sketchapp.com/sketch-#{version.before_comma}-#{version.after_comma}.zip"
   name "Sketch"
   desc "Digital design and prototyping platform"
   homepage "https://www.sketchapp.com/"
+
+  livecheck do
+    url "https://download.sketchapp.com/sketch-versions.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :mojave"
@@ -22,5 +26,8 @@ cask "sketch" do
     "~/Library/Preferences/com.bohemiancoding.sketch3.LSSharedFileList.plist",
     "~/Library/Preferences/com.bohemiancoding.sketch3.plist",
     "~/Library/Cookies/com.bohemiancoding.sketch3.binarycookies",
+    "~/Library/HTTPStorages/com.bohemiancoding.sketch3.binarycookies",
+    "~/Library/Saved Application State/com.bohemiancoding.sketch3.savedState",
+    "~/Library/Autosave Information/com.bohemiancoding.sketch3.plist",
   ]
 end

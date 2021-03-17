@@ -1,6 +1,6 @@
 cask "anydesk" do
-  version "6.1.0"
-  sha256 "f6459b38491f3a0bbdd01b366101391bbd8b5705c46f46879301e07014d9c38a"
+  version "6.1.2"
+  sha256 :no_check
 
   url "https://download.anydesk.com/anydesk.dmg"
   appcast "https://anydesk.com/en/downloads/mac-os"

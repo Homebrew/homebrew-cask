@@ -1,12 +1,12 @@
 cask "reaper" do
-  version "6.18.0,6.18"
+  version "6.25.0,6.25"
 
   if MacOS.version <= :mojave
-    sha256 "4889ce35bf1056b2016ecc247935c20ca8508029b288d51b4fbf9d23010a528a"
+    sha256 "49a269ebf9f3f8d2e992b1b63abd2caca3e2ea2bd77291078bdc5c73de683066"
 
     url "https://www.reaper.fm/files/#{version.major}.x/reaper#{version.after_comma.no_dots}_x86_64.dmg"
   else
-    sha256 "a89222a082dbd3a5e49b67606d54c535956acb1af3b0380cd266c90d620b3998"
+    sha256 "d26c294015052b4d9d13d046e297d4a1a88e846d2cff9614889875e6e96a6926"
 
     url "https://www.reaper.fm/files/#{version.major}.x/reaper#{version.after_comma.no_dots}_x86_64_catalina.dmg"
   end

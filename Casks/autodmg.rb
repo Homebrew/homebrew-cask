@@ -3,10 +3,14 @@ cask "autodmg" do
   sha256 "92c10590ef5569797f1879f3b123e0a1f5a0434654a9cc6f6dbb517e779e6a79"
 
   url "https://github.com/MagerValp/AutoDMG/releases/download/v#{version}/AutoDMG-#{version}.dmg"
-  appcast "https://github.com/MagerValp/AutoDMG/releases.atom"
   name "AutoDMG"
   desc "App for creating deployable system images from a system installer"
   homepage "https://github.com/MagerValp/AutoDMG"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   depends_on macos: ">= :sierra"
 

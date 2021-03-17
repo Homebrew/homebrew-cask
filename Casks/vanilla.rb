@@ -1,6 +1,6 @@
 cask "vanilla" do
-  version "2.0.1,47"
-  sha256 "69e9c73719e32f0b524b8c4fad99ac6d21a25df426fb8432e1a61c7cd1fc5ab2"
+  version "2.0.2,48"
+  sha256 "0d9190844431871fb8306f0d2d5289f7a1e89c095a55f4304efb32a0332d2f83"
 
   url "https://macrelease.matthewpalmer.net/distribution/appcasts/Vanilla-#{version.after_comma}.dmg"
   appcast "https://macrelease.matthewpalmer.net/distribution/appcasts/vanilla.xml?beta=false"
@@ -11,4 +11,9 @@ cask "vanilla" do
   depends_on macos: ">= :sierra"
 
   app "Vanilla.app"
+
+  zap trash: [
+    "~/Library/Application Support/Vanilla",
+    "~/Library/Preferences/net.matthewpalmer.Vanilla.plist",
+  ]
 end

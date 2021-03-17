@@ -1,12 +1,16 @@
 cask "macgesture" do
-  version "2.2.5"
-  sha256 "0fb8b9c6d502f7d70bc3a929b2f5fb73b4f0dac596f45695130af4fb7f85f1df"
+  version "3.0.0"
+  sha256 "bd3e2638dc9eef8d1a6a9945792d7285c3cf85d47cc12bd8b9000bec83c43831"
 
   url "https://github.com/MacGesture/MacGesture/releases/download/#{version}/MacGesture-#{version}.zip"
-  appcast "https://github.com/MacGesture/MacGesture/releases.atom"
   name "MacGesture"
   desc "Utility to set up global mouse gestures"
   homepage "https://github.com/MacGesture/MacGesture"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "MacGesture.app"
 end

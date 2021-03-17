@@ -1,12 +1,17 @@
 cask "whatsapp" do
-  version "2.2047.12"
-  sha256 "07d45ba13d063a2004a96365325a1bed02c19a02c41fd4256c258ebeeaeda158"
+  version "2.2108.8"
+  sha256 "91c14dbebe039ebcf69225e6e77a8ad41095841b0009e9b4ac3d8d0bb4a4f076"
 
   url "https://web.whatsapp.com/desktop/mac/files/release-#{version}.zip"
-  appcast "https://web.whatsapp.com/desktop/mac/releases?platform=darwin&arch=x64"
   name "WhatsApp"
   desc "Desktop client for WhatsApp"
   homepage "https://www.whatsapp.com/"
+
+  livecheck do
+    url "https://web.whatsapp.com/desktop/mac/releases"
+    strategy :page_match
+    regex(/release-(\d+(?:\.\d+)*)\.zip/i)
+  end
 
   auto_updates true
 

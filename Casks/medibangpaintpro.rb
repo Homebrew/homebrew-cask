@@ -1,8 +1,9 @@
 cask "medibangpaintpro" do
-  version "26.0"
-  sha256 "2704ba37b2944fcc8fdc78534b1f7217e08a224a67411f1c279be153ec5f156c"
+  version "26.1"
+  sha256 "7004726fa40274922fd981ad2e3cfcf67fe5d7d81073c1fca3e3640884672205"
 
   url "https://medibangpaint.com/static/installer/MediBangPaintPro/MediBangPaintPro-#{version}.dmg"
+  appcast "https://medibangpaint.com/en/pc/releasenote/"
   name "MediBang Paint Pro"
   desc "Create digital art and comics"
   homepage "https://medibangpaint.com/en/pc/"

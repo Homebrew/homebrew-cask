@@ -1,6 +1,6 @@
 cask "leocad" do
-  version "19.07.1"
-  sha256 "5f0a63b32b86d3ec50deb465e492189132fcd170594c0bef0937c1eead57899c"
+  version "21.03"
+  sha256 "52459d5c4d143a7dea917e600cb80061c64d96894258be68c7b54d4a9794f971"
 
   url "https://github.com/leozide/leocad/releases/download/v#{version}/LeoCAD-macOS-#{version}.dmg"
   appcast "https://github.com/leozide/leocad/releases.atom"

@@ -1,6 +1,6 @@
 cask "cisco-proximity" do
-  version "3.1.0"
-  sha256 "18c5087998a9728bfe4dbc192183086b8f0022387ca13ee4e7b404155d3f1744"
+  version "desktop-3.1.0"
+  sha256 :no_check
 
   url "https://proximity.cisco.com/mac/Proximity.dmg"
   appcast "https://proximity.cisco.com/mac/version.txt"

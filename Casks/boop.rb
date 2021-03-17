@@ -2,8 +2,8 @@ cask "boop" do
   version "1.3.0"
   sha256 "f976d6dfdd3758053dd449fd5138fa7d9375de8e192bab41e49669ce5a89ede9"
 
-  # github.com/IvanMathy/Boop was verified as official when first introduced to the cask
-  url "https://github.com/IvanMathy/Boop/releases/download/#{version}/Boop.zip"
+  url "https://github.com/IvanMathy/Boop/releases/download/#{version}/Boop.zip",
+      verified: "github.com/IvanMathy/Boop/"
   appcast "https://github.com/IvanMathy/Boop/releases.atom"
   name "Boop"
   desc "Scriptable scratchpad for developers"

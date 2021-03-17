@@ -1,9 +1,9 @@
 cask "nosqlbooster-for-mongodb" do
-  version "6.2.4"
-  sha256 "23948a48c2f5316be082d363d2f203ce0ced08715f545de9ca8ea89e45630a24"
+  version "6.2.8"
+  sha256 "766274ca074b9cd5f9499435b9678c65c8efa24df0a71bedc92ae411c2fed786"
 
-  # mongobooster.com was verified as official when first introduced to the cask
-  url "https://s3.mongobooster.com/download/releasesv#{version.major}/nosqlbooster4mongo-#{version}.dmg"
+  url "https://s3.mongobooster.com/download/releasesv#{version.major}/nosqlbooster4mongo-#{version}.dmg",
+      verified: "mongobooster.com/"
   appcast "https://nosqlbooster.com/downloads"
   name "NoSQLBooster for MongoDB"
   homepage "https://nosqlbooster.com/"
