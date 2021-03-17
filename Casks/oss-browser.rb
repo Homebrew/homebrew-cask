@@ -1,6 +1,6 @@
 cask "oss-browser" do
   version "1.14.0"
-  sha256 "7f1dc15059fb16fc10ece2f544b5f587682890d46101f09e1ea3aa691fe635cf"
+  sha256 "b5d082509b2e50bde261c9df10f97ea28c6c1472c2ce44d863b6eae62a2cf4e7"
 
   url "https://oss-attachment.cn-hangzhou.oss.aliyun-inc.com/oss-browser/#{version}/oss-browser-darwin-x64.zip",
       verified: "oss-attachment.cn-hangzhou.oss.aliyun-inc.com"
