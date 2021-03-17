@@ -5,6 +5,7 @@ cask "tunnelblick" do
   url "https://github.com/Tunnelblick/Tunnelblick/releases/download/v#{version.before_comma}/Tunnelblick_#{version.before_comma}_build_#{version.after_comma}.dmg",
       verified: "github.com/Tunnelblick/Tunnelblick/"
   name "Tunnelblick"
+  desc "Free and open-source OpenVPN client"
   homepage "https://www.tunnelblick.net/"
 
   # We need to check all releases since the current latest release is a beta version.
