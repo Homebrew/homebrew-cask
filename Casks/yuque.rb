@@ -4,7 +4,7 @@ cask "yuque" do
 
   url "https://app.nlark.com/yuque-desktop/Yuque-#{version}.dmg",
       verified: "app.nlark.com/yuque-desktop/"
-  appcast "https://www.yuque.com/install/desktop"
+  appcast "https://www.yuque.com/yuque/help/changelog"
   name "Yuque"
   name "语雀"
   desc "Cloud knowledge base"
