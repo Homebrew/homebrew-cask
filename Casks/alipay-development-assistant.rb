@@ -8,4 +8,10 @@ cask "alipay-development-assistant" do
   homepage "https://opendocs.alipay.com/open/291/introduce"
 
   app "支付宝开放平台开发助手.app"
+
+  zap trash: [
+    "~/Library/Application Support/alipaykeytool",
+    "~/Library/Preferences/com.alipay.alipayleytool.plist",
+    "~/Library/Saved Application State/com.alipay.alipayleytool.savedState"
+  ]
 end
