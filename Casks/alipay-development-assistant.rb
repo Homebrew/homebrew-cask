@@ -12,6 +12,6 @@ cask "alipay-development-assistant" do
   zap trash: [
     "~/Library/Application Support/alipaykeytool",
     "~/Library/Preferences/com.alipay.alipayleytool.plist",
-    "~/Library/Saved Application State/com.alipay.alipayleytool.savedState"
+    "~/Library/Saved Application State/com.alipay.alipayleytool.savedState",
   ]
 end
