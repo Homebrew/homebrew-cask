@@ -8,8 +8,9 @@ cask "devbook" do
 
   livecheck do
     url "https://download.todesktop.com/2102273jsy18baz/latest-mac.yml"
-    strategy :page_match
-    regex(/version:.(\d+(?:\.\d+)*)/)
+    strategy :page_match do |page|
+      YAML.safe_load(page)["version"]
+    end
   end
 
   if Hardware::CPU.intel?
