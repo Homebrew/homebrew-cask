@@ -4,6 +4,7 @@ cask "raspberry-pi-imager" do
 
   url "https://downloads.raspberrypi.org/imager/imager_#{version}.dmg"
   name "Raspberry Pi Imager"
+  desc "Imaging utility to install operating systems to a microSD card"
   homepage "https://www.raspberrypi.org/downloads/"
 
   livecheck do
