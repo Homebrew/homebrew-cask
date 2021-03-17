@@ -4,11 +4,16 @@ cask "yuque" do
 
   url "https://app.nlark.com/yuque-desktop/Yuque-#{version}.dmg",
       verified: "app.nlark.com/yuque-desktop/"
-  appcast "https://www.yuque.com/yuque/help/changelog"
   name "Yuque"
   name "语雀"
   desc "Cloud knowledge base"
   homepage "https://www.yuque.com/"
+
+  livecheck do
+    url "https://www.yuque.com/yuque/help/changelog"
+    strategy :page_match
+    regex(/下载地址(\d+(?:\.\d+)*)/i)
+  end
 
   app "语雀.app"
 
