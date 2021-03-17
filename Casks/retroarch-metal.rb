@@ -10,7 +10,6 @@ cask "retroarch-metal" do
 
   conflicts_with cask: [
     "retroarch",
-    "retroarch-cg",
   ]
 
   app "RetroArch.app"
