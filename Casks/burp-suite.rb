@@ -3,9 +3,15 @@ cask "burp-suite" do
   sha256 "aee5beeded139278c0e4aea19128b1a2682e4197b6c30c5ca5785f011854d31b"
 
   url "https://portswigger.net/burp/releases/download?product=community&version=#{version}&type=MacOsx"
-  appcast "https://portswigger.net/burp/releases?initialTab=community"
   name "Burp Suite"
+  desc "Web security testing toolkit"
   homepage "https://portswigger.net/burp/"
+
+  livecheck do
+    url "https://portswigger.net/burp/releases?initialTab=community"
+    strategy :page_match
+    regex(%r{Professional\s*/\s*Community\s*(\d+(:?\.\d+)*)}i)
+  end
 
   installer script: {
     executable: "Burp Suite Community Edition Installer.app/Contents/MacOS/JavaApplicationStub",
