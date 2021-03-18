@@ -1,6 +1,6 @@
 cask "electron" do
-  version "12.0.0"
-  sha256 "18546dec0ecc63d1a679762e00bc85fbb820e08f7ca205924681379bb0a7afc2"
+  version "12.0.1"
+  sha256 "af2adac0b5b32c95ad2b834d5521bd301983954e986048b46cdf5c739423de17"
 
   url "https://github.com/electron/electron/releases/download/v#{version}/electron-v#{version}-darwin-x64.zip",
       verified: "github.com/electron/electron/"
