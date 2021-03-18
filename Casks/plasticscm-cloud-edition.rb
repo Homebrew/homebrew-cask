@@ -4,7 +4,7 @@ cask "plasticscm-cloud-edition" do
 
   url "https://s3.eu-west-2.amazonaws.com/plastic-releases/releases/#{version}/plasticscm/osx/plasticscm-cloud-#{version}.pkg.zip",
       verified: "s3.eu-west-2.amazonaws.com/plastic-releases/"
-  name "PlasicSCM -a Cloud Edition"
+  name "PlasicSCM - a Cloud Edition"
   desc "Install PlasticSCM locally and join a Cloud Edition subscription"
   homepage "https://www.plasticscm.com/"
 
@@ -20,9 +20,7 @@ cask "plasticscm-cloud-edition" do
     "com.codicesoftware.plasticscm.macplastic",
     "com.codicesoftware.plasticscm.server",
   ],
-            quit:      [
-              "com.codicesoftware.plasticscm",
-            ],
+            quit:      "com.codicesoftware.plasticscm",
             pkgutil:   [
               "com.codicesoftware.plasticscm.macplastic",
               "com.codicesoftware.plasticscm.server",
