@@ -10,7 +10,7 @@ cask "burp-suite" do
   livecheck do
     url "https://portswigger.net/burp/releases?initialTab=community"
     strategy :page_match
-    regex(%r{Professional\s*/\s*Community\s*(\d+(:?\.\d+)*)})
+    regex(%r{Professional\s*/\s*Community\s*(\d+(:?\.\d+)*)}i)
   end
 
   installer script: {
