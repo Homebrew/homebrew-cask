@@ -19,7 +19,7 @@ puts 'Detecting changes…'
   '.github/*.md',
   '.github/*.yml',
   '.github/actions/{automerge}/**/*',
-  '.github/ISSUE_TEMPLATE/*.md',
+  '.github/ISSUE_TEMPLATE/*.{md,yml}',
   '.github/workflows/{automerge,cache,ci,dispatch-command,rebase,rerun-workflow,review,self-approve}.yml',
   '.gitignore',
   '.travis.yml',
