@@ -1,6 +1,6 @@
 cask "betterzip" do
-  version "5.0.3"
-  sha256 "061b4171fe9ccf6a291cb47ceadbd3fd8b10a818105e11d1e1dfd9b689ecadfb"
+  version "5.1"
+  sha256 "97cb0453593c53ceb13a469e7d4bc7528d8712f7e83515cb5dfc6945792ec915"
 
   url "https://macitbetter.s3.amazonaws.com/BetterZip-#{version}.zip",
       verified: "macitbetter.s3.amazonaws.com/"
