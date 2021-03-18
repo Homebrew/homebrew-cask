@@ -1,6 +1,6 @@
 cask "smartgit" do
-  version "20.2.3"
-  sha256 "f0a989093add0b07cd109e0ec6427cf7d9953b72dbe86f2efa67317bb979252c"
+  version "20.2.4"
+  sha256 "753934c729ac808b882f6798bc84b49db45bbeb4a8e6c4399cebcf3d559b62c1"
 
   url "https://www.syntevo.com/downloads/smartgit/smartgit-macosx-#{version.dots_to_underscores}.dmg"
   appcast "https://www.syntevo.com/smartgit/changelog.txt",
