@@ -9,9 +9,9 @@ cask "plasticscm-cloud-edition" do
   homepage "https://www.plasticscm.com/"
 
   livecheck do
-    url "https://www.plasticscm.com/download/#{version}/macosx"
+    url "https://www.plasticscm.com/download/releasenotes/"
     strategy :page_match
-    regex(%r{href=.*?(\d+\.\d+.\d+\.\d+)/macosx}i)
+    regex(/plastic\sscm\s-\srelease\snotes\s-\s(\d+(?:\.\d+)*)/i)
   end
 
   pkg "plasticscm-cloud-#{version}.pkg"
