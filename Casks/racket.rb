@@ -39,4 +39,13 @@ cask "racket" do
   binary "#{appdir}/Racket v#{version}/bin/slatex"
   binary "#{appdir}/Racket v#{version}/bin/slideshow"
   binary "#{appdir}/Racket v#{version}/bin/swindle"
+  manpage "#{appdir}/Racket v#{version}/man/man1/drracket.1"
+  manpage "#{appdir}/Racket v#{version}/man/man1/gracket.1"
+  manpage "#{appdir}/Racket v#{version}/man/man1/mred.1"
+  manpage "#{appdir}/Racket v#{version}/man/man1/mzc.1"
+  manpage "#{appdir}/Racket v#{version}/man/man1/mzscheme.1"
+  manpage "#{appdir}/Racket v#{version}/man/man1/plt-help.1"
+  manpage "#{appdir}/Racket v#{version}/man/man1/racket.1"
+  manpage "#{appdir}/Racket v#{version}/man/man1/raco.1"
+  manpage "#{appdir}/Racket v#{version}/man/man1/setup-plt.1"
 end
