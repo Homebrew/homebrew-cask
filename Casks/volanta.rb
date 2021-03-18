@@ -7,6 +7,14 @@ cask "volanta" do
   desc "Personal flight tracker"
   homepage "https://volanta.app/roadmap/"
 
+  livecheck do
+    url "https://api.volanta.app/api/v1/ClientUpdate/latest-mac.yml"
+    strategy :page_match do |page|
+      match = page.match(/volanta-app\/(\d+(?:\.\d+)*)-(.+)\//i)
+      "#{match[1]},#{match[2]}"
+    end
+  end
+
   app "Volanta.app"
 
   zap trash: [
