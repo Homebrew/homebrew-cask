@@ -10,8 +10,7 @@ cask "textbuddy" do
 
   livecheck do
     url "https://shine.clickontyler.com/appcast.php?id=58"
-    strategy :page_match
-    regex(/TextBuddy\s(\d+(?:\.\d+)*)/i)
+    strategy :sparkle
   end
 
   auto_updates true
