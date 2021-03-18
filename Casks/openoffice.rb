@@ -5,6 +5,10 @@ cask "openoffice" do
     sha256 "332132fa734020b048d677f615fd648a4437bc484612866394a5b045f56f2c41"
     "en-US"
   end
+  language "de" do
+    sha256 "ac44bb2d186d20450f38e0d14d9982b801d37c016abb43dd619ab3bedd211d61"
+    "de"
+  end
   language "fr" do
     sha256 "c293bf44507a75eed40eff0207180cbca3213cd2e01afe1ed7fbf6f1c956c2a3"
     "fr"
