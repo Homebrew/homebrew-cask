@@ -10,7 +10,7 @@ cask "volanta" do
   livecheck do
     url "https://api.volanta.app/api/v1/ClientUpdate/latest-mac.yml"
     strategy :page_match do |page|
-      match = page.match(/volanta-app\/(\d+(?:\.\d+)*)-(.+)\//i)
+      match = page.match(%r{volanta-app\/(\d+(?:\.\d+)*)-(.+)\/}i)
       "#{match[1]},#{match[2]}"
     end
   end
