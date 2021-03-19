@@ -4,10 +4,15 @@ cask "archiver" do
 
   url "https://storage.googleapis.com/incrediblebee/apps/Archiver-#{version.major}/Archiver-#{version}.zip",
       verified: "storage.googleapis.com/incrediblebee/"
-  appcast "https://api.incrediblebee.com/appcasts/archiver-#{version.major}.xml"
   name "Archiver"
   desc "Open archives, compress files, as well as split and combine files"
   homepage "https://archiverapp.com/"
+
+  livecheck do
+    url "https://api.incrediblebee.com/appcasts/archiver-#{version.major}.xml"
+    strategy :page_match
+    regex(%r{url=.*?/Archiver-(\d+(?:\.\d+)*)\.zip}i)
+  end
 
   depends_on macos: ">= :sierra"
 
