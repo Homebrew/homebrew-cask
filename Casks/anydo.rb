@@ -17,4 +17,10 @@ cask "anydo" do
   depends_on macos: ">= :catalina"
 
   app "Any.do.app"
+
+  zap trash: [
+    "~/Library/Application Support/@anydo",
+    "~/Library/Preferences/com.anydo.mac.plist",
+    "~/Library/Saved Application State/com.anydo.mac.savedState",
+  ]
 end
