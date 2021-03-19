@@ -10,7 +10,8 @@ cask "nure" do
 
   app "Nure.app"
 
-  uninstall quit: "app.com.nure", launchctl: "app.com.nure"
+  uninstall quit:      "app.com.nure",
+            launchctl: "app.com.nure"
 
   zap trash: [
     "~/Library/Application Support/Nure",
