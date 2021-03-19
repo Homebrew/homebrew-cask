@@ -11,4 +11,12 @@ cask "macjournal" do
   depends_on macos: ">= :mojave"
 
   app "MacJournal.app"
+
+  zap trash: [
+    "~/Library/Application Support/MacJournal",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.danschimpf.macjournal.sfl2",
+    "~/Library/Caches/com.DanSchimpf.MacJournal",
+    "~/Library/Preferences/com.DanSchimpf.MacJournal.plist",
+    "~/Library/Saved Application State/com.DanSchimpf.MacJournal.savedState",
+  ]
 end
