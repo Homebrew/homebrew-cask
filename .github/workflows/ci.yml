@@ -133,6 +133,7 @@ jobs:
       - name: Gather cask information
         id: info
         run: |
+          brew tap homebrew/cask-versions
           brew ruby <<'EOF'
             require 'cask/cask_loader'
             require 'cask/installer'
