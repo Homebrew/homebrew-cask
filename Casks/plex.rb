@@ -9,7 +9,7 @@ cask "plex" do
 
   livecheck do
     url "https://plex.tv/api/downloads/6.json"
-    regex(/"version":"(\d\.\d{2}\.\d\.\d+-[a-f0-9]{8})"/i)
+    regex(/"version"\s*:\s*"(\d(?:\.\d+)*-[a-f0-9]{8})"/i)
   end
 
   auto_updates true
