@@ -1,6 +1,6 @@
 cask "easy-move-plus-resize" do
-  version "1.4.0"
-  sha256 "b68ec37dd8243f20a79d4c80b66bd1fad047074e23f05b22720e2088c4ac6ed1"
+  version "1.4.1"
+  sha256 "13ecf94c77b40ab18f158a9ada72d36cda6784b98fb61eb7930e1e4b774ae439"
 
   url "https://github.com/dmarcotte/easy-move-resize/releases/download/#{version}/Easy.Move+Resize.app.zip"
   appcast "https://github.com/dmarcotte/easy-move-resize/releases.atom"
