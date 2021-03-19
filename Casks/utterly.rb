@@ -4,12 +4,12 @@ cask "utterly" do
 
   url "https://www.utterly.app/Utterly.pkg"
   name "Utterly"
-  desc "With AI at the core, Utterly plugin will remove background noise during your calls in any audio or video conferencing app."
-  homepage "https://www.utterly.app"
+  desc "Remove background noise during your calls in any audio or video conferencing app"
+  homepage "https://www.utterly.app/"
 
   pkg "Utterly.pkg"
 
   uninstall script: {
-    executable: "/Applications/Utterly.app/Contents/Resources/_uninstall-non-interactive.sh"
+    executable: "/Applications/Utterly.app/Contents/Resources/_uninstall-non-interactive.sh",
   }
 end
