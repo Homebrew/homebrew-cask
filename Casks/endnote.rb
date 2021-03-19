@@ -6,7 +6,7 @@ cask "endnote" do
   name "EndNote"
   homepage "https://endnote.com/"
 
-  container nested: "Install EndNote X#{version}.app/Contents/Resources/EndNote.zip"
+  container nested: "Install EndNote #{version}.app/Contents/Resources/EndNote.zip"
 
   suite "EndNote"
 
