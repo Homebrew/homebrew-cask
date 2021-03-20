@@ -1,6 +1,6 @@
 cask "bonitastudiocommunity" do
   version "2021.1"
-  sha256 "46e42b4c902922c103fdc465f8595115640b4a8a611ed506f9f2e978794a2308"
+  sha256 "428831b29c146a7dd8327f837be49b0582239f9d980d9b21fc9c9d0bf99aca7c"
 
   url "https://github.com/bonitasoft/bonita-platform-releases/releases/download/#{version}/BonitaStudioCommunity-#{version}-x86_64.dmg",
       verified: "github.com/bonitasoft/bonita-platform-releases/"
