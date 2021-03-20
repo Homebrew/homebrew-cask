@@ -9,6 +9,11 @@ cask "bonitastudiocommunity" do
   name "Bonita Studio Community Edition"
   homepage "https://www.bonitasoft.com/downloads"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   installer script: {
     executable: "#{staged_path}/BonitaStudioCommunity-#{version}.app/Contents/MacOS/installbuilder.sh",
     args:       ["--mode", "unattended"],
