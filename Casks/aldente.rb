@@ -9,7 +9,6 @@ cask "aldente" do
     url "https://github.com/davidwernhart/AlDente/releases/download/#{version}/AlDente_#{version}_Notarized.app.zip"
   end
 
-  appcast "https://github.com/davidwernhart/AlDente/releases.atom"
   name "AlDente"
   desc "Menu bar tool to limit maximum charging percentage"
   homepage "https://github.com/davidwernhart/AlDente"
