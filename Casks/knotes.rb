@@ -1,6 +1,6 @@
 cask "knotes" do
-  version "2.8.1"
-  sha256 "689ea41584f4995b76955b6c74eb2e7f6ac47008a96c198d048e384832ab23bc"
+  version "2.8.2"
+  sha256 "ed64549e066a582e675f8dafb5fc2304d508040e3d05ceb2964188cdf75bba6a"
 
   url "https://knotes2.s3-ap-northeast-1.amazonaws.com/download/mac/Knotes-#{version}.dmg",
       verified: "knotes2.s3-ap-northeast-1.amazonaws.com/"
