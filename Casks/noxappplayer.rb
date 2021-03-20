@@ -18,4 +18,9 @@ cask "noxappplayer" do
   container nested: "NoxAppPlayerInstaller.app/Contents/MacOS/NoxAppPlayer.zip"
 
   app "NoxAppPlayer.app"
+
+  zap trash: [
+    "~/Library/Application Support/NoxAppPlayer",
+    "~/Library/Saved Application State/com.nox.NoxAppPlayer.savedState",
+  ]
 end
