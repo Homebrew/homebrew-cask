@@ -4,7 +4,6 @@ cask "alloy" do
 
   url "https://github.com/AlloyTools/org.alloytools.alloy/releases/download/v#{version}/alloy.dmg",
       verified: "github.com/AlloyTools/org.alloytools.alloy/"
-  appcast "https://github.com/AlloyTools/org.alloytools.alloy/releases.atom"
   name "Alloy"
   homepage "https://alloytools.org/"
 
