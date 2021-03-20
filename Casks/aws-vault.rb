@@ -3,7 +3,7 @@ cask "aws-vault" do
 
   appcast "https://github.com/99designs/aws-vault/releases.atom"
   name "aws-vault"
-  desc "Vault for securely storing and accessing AWS credentials in development environments"
+  desc "Securely stores and accesses AWS credentials in a development environment"
   homepage "https://github.com/99designs/aws-vault"
 
   binary "aws-vault"
