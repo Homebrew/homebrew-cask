@@ -1,6 +1,6 @@
 cask "fetch" do
-  version "5.8.1,5.8.1217"
-  sha256 "80e824a2fb483f08827a53d61bf07df3ae3f4e6243ff4811bd1ffbeaa48eedc2"
+  version "5.8.2,5.8.1354"
+  sha256 "839a49e2e820b0bb6987a273fa18b0aaae2d6cd8b5aac5b7d41cd018d5e74d68"
 
   url "https://fetchsoftworks.com/fetch/download/Fetch_#{version.before_comma}.zip"
   name "Fetch"
