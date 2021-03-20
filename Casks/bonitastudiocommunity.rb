@@ -4,8 +4,6 @@ cask "bonitastudiocommunity" do
 
   url "https://github.com/bonitasoft/bonita-platform-releases/releases/download/#{version}/BonitaStudioCommunity-#{version}-x86_64.dmg",
       verified: "github.com/bonitasoft/bonita-platform-releases/"
-  appcast "https://www.bonitasoft.com/downloads",
-          must_contain: version.major_minor
   name "Bonita Studio Community Edition"
   homepage "https://www.bonitasoft.com/downloads"
 
