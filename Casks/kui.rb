@@ -1,6 +1,6 @@
 cask "kui" do
-  version "10.2.0"
-  sha256 "5de4295d41fcca66b408247caa696cbc8ec2f8cf4fe5b47ce6cdbb3f94c61453"
+  version "10.2.1"
+  sha256 "b5181ad8f22b37bf2bde00bf1e6315799076f78db39c78db1212488e0461fe5e"
 
   url "https://github.com/IBM/kui/releases/download/v#{version}/Kui-darwin-x64.tar.bz2",
       verified: "github.com/IBM/kui/"
