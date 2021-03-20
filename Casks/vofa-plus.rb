@@ -1,6 +1,6 @@
 cask "vofa-plus" do
-  version "1.3.9"
-  sha256 "e1e94e63abf346f6857fb5bd6dabc756666ea7ec57cf74bcb808046a3727dca2"
+  version "1.3.10"
+  sha256 "376575ccfa82866c3fdaa989d1d0d19a927797789d246ccdba737f4e3fec4d7d"
 
   url "https://je00.github.io/downloads/vofa+_#{version}_amd64.dmg",
       verified: "je00.github.io/"
