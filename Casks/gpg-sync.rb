@@ -3,7 +3,6 @@ cask "gpg-sync" do
   sha256 "3517b53a9a8fd7312b6f5c7d5c425c9facc2cc6cbbadaabd2edb83e07c291c0d"
 
   url "https://github.com/firstlookmedia/gpgsync/releases/download/v#{version}/GPGSync-#{version}.pkg"
-  appcast "https://github.com/firstlookmedia/gpgsync/releases.atom"
   name "GPG Sync"
   homepage "https://github.com/firstlookmedia/gpgsync/"
 
