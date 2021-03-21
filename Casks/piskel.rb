@@ -4,7 +4,6 @@ cask "piskel" do
 
   url "https://drive.google.com/uc?export=download&id=1xLt5JbaEoA1fMJgsfbnuD9KMMbuEysbj",
       verified: "drive.google.com/uc?export=download&id=1xLt5JbaEoA1fMJgsfbnuD9KMMbuEysbj"
-  appcast "https://github.com/piskelapp/piskel/releases.atom"
   name "Piskel"
   homepage "https://www.piskelapp.com/"
 
