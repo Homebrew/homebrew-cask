@@ -1,6 +1,6 @@
 cask "soqlxplorer" do
-  version "3.4"
-  sha256 "ebecf0fa59156522c9fb26c1f7f7c56a7e8669e146cd05ee95387f4a80712e69"
+  version "3.5"
+  sha256 "e699d0ac80936f0701c82988f350986db5d9892b8e4e2c92d4fe5b7395476d5d"
 
   url "https://www.pocketsoap.com/osx/soqlx/SoqlXplorer_v#{version}.zip"
   name "SoqlXplorer"
