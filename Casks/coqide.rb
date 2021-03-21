@@ -4,7 +4,6 @@ cask "coqide" do
 
   url "https://github.com/coq/coq/releases/download/V#{version}/coq-#{version}-installer-macos.dmg",
       verified: "github.com/coq/coq/"
-  appcast "https://github.com/coq/coq/releases.atom"
   name "Coq"
   desc "Formal proof management system"
   homepage "https://coq.inria.fr/"
