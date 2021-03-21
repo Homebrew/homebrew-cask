@@ -13,7 +13,6 @@ cask "electron-fiddle" do
         verified: "github.com/electron/fiddle/"
   end
 
-  appcast "https://github.com/electron/fiddle/releases.atom"
   name "Electron Fiddle"
   desc "Easiest way to get started with Electron"
   homepage "https://electron.atom.io/"
