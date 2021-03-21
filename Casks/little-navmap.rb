@@ -4,7 +4,6 @@ cask "little-navmap" do
 
   url "https://github.com/albar965/littlenavmap/releases/download/v#{version}/LittleNavmap-macOS-#{version}.zip",
       verified: "github.com/albar965/littlenavmap/"
-  appcast "https://github.com/albar965/littlenavmap/releases.atom"
   name "Little Navmap"
   desc "Flight planning and navigation and airport search and information system"
   homepage "https://albar965.github.io/littlenavmap.html"
