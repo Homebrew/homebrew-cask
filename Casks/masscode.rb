@@ -4,7 +4,6 @@ cask "masscode" do
 
   url "https://github.com/antonreshetov/massCode/releases/download/v#{version}/massCode-#{version}.dmg",
       verified: "github.com/antonreshetov/massCode/"
-  appcast "https://github.com/antonreshetov/massCode/releases.atom"
   name "massCode"
   desc "Open-source code snippets manager for developers"
   homepage "https://masscode.io/"
