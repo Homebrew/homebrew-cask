@@ -4,7 +4,6 @@ cask "todotxt" do
 
   url "https://github.com/mjdescy/TodoTxtMac/releases/download/#{version}/TodoTxtMac.app.zip",
       verified: "github.com/mjdescy/TodoTxtMac/"
-  appcast "https://github.com/mjdescy/TodoTxtMac/releases.atom"
   name "TodoTxtMac"
   homepage "https://mjdescy.github.io/TodoTxtMac/"
 
