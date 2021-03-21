@@ -3,7 +3,6 @@ cask "menubar-countdown" do
   sha256 "9b72a2c3544c7e3e9c9cb60feb9be2ff7905184c9e988f921bea5269a60fb805"
 
   url "https://github.com/kristopherjohnson/MenubarCountdown/releases/download/#{version}/Menubar_Countdown_#{version}.zip"
-  appcast "https://github.com/kristopherjohnson/MenubarCountdown/releases.atom"
   name "Menubar Countdown"
   desc "Countdown timer for the menu bar"
   homepage "https://github.com/kristopherjohnson/MenubarCountdown"
