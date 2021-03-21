@@ -4,7 +4,6 @@ cask "intel-haxm" do
 
   url "https://github.com/intel/haxm/releases/download/v#{version}/haxm-macosx_v#{version.dots_to_underscores}.zip",
       verified: "github.com/intel/haxm/"
-  appcast "https://github.com/intel/haxm/releases.atom"
   name "Intel HAXM"
   homepage "https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager"
 
