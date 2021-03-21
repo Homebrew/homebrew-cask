@@ -3,7 +3,6 @@ cask "aquaskk" do
   sha256 "bf3300ceb8f5fd2433e244de0f43f1962073b5048f1536ef58e617f7c4785abd"
 
   url "https://github.com/codefirst/aquaskk/releases/download/#{version}/AquaSKK-#{version}.pkg"
-  appcast "https://github.com/codefirst/aquaskk/releases.atom"
   name "AquaSKK"
   homepage "https://github.com/codefirst/aquaskk"
 
