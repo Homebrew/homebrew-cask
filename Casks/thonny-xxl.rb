@@ -4,7 +4,6 @@ cask "thonny-xxl" do
 
   url "https://github.com/thonny/thonny/releases/download/v#{version}/thonny-xxl-#{version}.pkg",
       verified: "github.com/thonny/thonny/"
-  appcast "https://github.com/thonny/thonny/releases.atom"
   name "Thonny (XXL bundle)"
   desc "Python IDE for beginners"
   homepage "https://thonny.org/"
