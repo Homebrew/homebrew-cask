@@ -3,7 +3,6 @@ cask "inloop-qlplayground" do
   sha256 "44c25a7da0dc3748b01deb0c01634044ccbc625b4266b4fea0630cbedb773929"
 
   url "https://github.com/inloop/qlplayground/releases/download/v#{version}/inloop-qlplayground.v#{version}.zip"
-  appcast "https://github.com/inloop/qlplayground/releases.atom"
   name "inloop-qlplayground"
   homepage "https://github.com/inloop/qlplayground"
 
