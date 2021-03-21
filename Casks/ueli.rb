@@ -4,7 +4,6 @@ cask "ueli" do
 
   url "https://github.com/oliverschwendener/ueli/releases/download/v#{version}/ueli-#{version}.dmg",
       verified: "github.com/oliverschwendener/ueli/"
-  appcast "https://github.com/oliverschwendener/ueli/releases.atom"
   name "Ueli"
   desc "Keystroke launcher"
   homepage "https://ueli.app/"
