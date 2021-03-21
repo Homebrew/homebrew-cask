@@ -3,7 +3,6 @@ cask "ripme" do
   sha256 "1ebe144d0f294c4e8b482742a2588201f8b962fbcebbbd109627e1fc9e2b6d94"
 
   url "https://github.com/RipMeApp/ripme/releases/download/#{version}/ripme.jar"
-  appcast "https://github.com/RipMeApp/ripme/releases.atom"
   name "RipMe"
   desc "Album ripper for various websites"
   homepage "https://github.com/RipMeApp/ripme"
