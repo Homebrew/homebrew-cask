@@ -4,7 +4,6 @@ cask "natron" do
 
   url "https://github.com/NatronGitHub/Natron/releases/download/v#{version}/Natron-#{version}-OSX-64.dmg",
       verified: "github.com/NatronGitHub/Natron/"
-  appcast "https://github.com/NatronGitHub/Natron/releases.atom"
   name "Natron"
   desc "Open-source node-graph based video compositing software"
   homepage "https://NatronGitHub.github.io/"
