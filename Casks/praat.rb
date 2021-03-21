@@ -4,7 +4,6 @@ cask "praat" do
 
   url "https://github.com/praat/praat/releases/download/v#{version}/praat#{version.no_dots}_mac.dmg",
       verified: "github.com/praat/praat/"
-  appcast "https://github.com/praat/praat/releases.atom"
   name "Praat"
   desc "Doing phonetics by computer"
   homepage "https://www.fon.hum.uva.nl/praat/"
