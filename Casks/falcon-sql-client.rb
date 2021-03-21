@@ -4,7 +4,6 @@ cask "falcon-sql-client" do
 
   url "https://github.com/plotly/falcon/releases/download/v#{version}/mac-falcon-v#{version}.zip",
       verified: "github.com/plotly/falcon/"
-  appcast "https://github.com/plotly/falcon/releases.atom"
   name "Falcon SQL Client"
   desc "Free, open-source SQL client"
   homepage "https://plot.ly/free-sql-client-download/"
