@@ -4,7 +4,6 @@ cask "macfuse" do
 
   url "https://github.com/osxfuse/osxfuse/releases/download/macfuse-#{version}/macfuse-#{version}.dmg",
       verified: "github.com/osxfuse/osxfuse/"
-  appcast "https://github.com/osxfuse/osxfuse/releases.atom"
   name "macFUSE"
   desc "File system integration"
   homepage "https://osxfuse.github.io/"
