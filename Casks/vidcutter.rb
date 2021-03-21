@@ -4,7 +4,6 @@ cask "vidcutter" do
 
   url "https://github.com/ozmartian/vidcutter/releases/download/#{version.major_minor}.0/VidCutter-#{version}-macOS.dmg",
       verified: "github.com/ozmartian/vidcutter/"
-  appcast "https://github.com/ozmartian/vidcutter/releases.atom"
   name "VidCutter"
   homepage "https://vidcutter.ozmartians.com/"
 
