@@ -4,7 +4,6 @@ cask "instant-articles-builder" do
 
   url "https://github.com/facebook/instant-articles-builder/releases/download/#{version}/Instant.Articles.Builder.for.Mac-#{version}.zip",
       verified: "github.com/facebook/instant-articles-builder/"
-  appcast "https://github.com/facebook/instant-articles-builder/releases.atom"
   name "Facebook Instant Articles Builder"
   homepage "https://facebook.github.io/instant-articles-builder/"
 
