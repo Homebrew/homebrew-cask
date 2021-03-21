@@ -4,7 +4,6 @@ cask "jubler" do
 
   url "https://github.com/teras/Jubler/releases/download/v#{version}/Jubler-#{version}.dmg",
       verified: "github.com/teras/Jubler/"
-  appcast "https://github.com/teras/Jubler/releases.atom"
   name "Jubler"
   desc "Subtitle editor"
   homepage "https://www.jubler.org/"
