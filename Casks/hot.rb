@@ -3,7 +3,6 @@ cask "hot" do
   sha256 "88d2344df7de593e35cf488ef8524756d68fb316632c676127745bb13daa8ad7"
 
   url "https://github.com/macmade/Hot/releases/download/#{version}/Hot.app.zip"
-  appcast "https://github.com/macmade/Hot/releases.atom"
   name "Hot"
   desc "Menu bar application that displays the CPU speed limit due to thermal issues"
   homepage "https://github.com/macmade/Hot"
