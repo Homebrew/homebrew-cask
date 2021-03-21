@@ -4,7 +4,6 @@ cask "bossa" do
 
   url "https://github.com/shumatech/BOSSA/releases/download/#{version}/bossa-#{version}.dmg",
       verified: "github.com/shumatech/BOSSA/"
-  appcast "https://github.com/shumatech/BOSSA/releases.atom"
   name "bossa"
   homepage "https://www.shumatech.com/web/products/bossa"
 
