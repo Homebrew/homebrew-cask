@@ -3,7 +3,6 @@ cask "bilibili" do
   sha256 "62784fa27396644337c5ee63d6e3ad32e3436aed7eb79009a306ef6100527452"
 
   url "https://github.com/typcn/bilibili-mac-client/releases/download/#{version}/Bilibili.dmg"
-  appcast "https://github.com/typcn/bilibili-mac-client/releases.atom"
   name "Bilibili"
   desc "Unofficial bilibili client"
   homepage "https://github.com/typcn/bilibili-mac-client/"
