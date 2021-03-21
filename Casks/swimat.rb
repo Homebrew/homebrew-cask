@@ -3,7 +3,6 @@ cask "swimat" do
   sha256 "adcf450d98c247fe4c45c68353f19afca3e2039c8431ec080f14000fe9cc36bf"
 
   url "https://github.com/Jintin/Swimat/releases/download/#{version}/Swimat.zip"
-  appcast "https://github.com/Jintin/Swimat/releases.atom"
   name "Swimat"
   desc "Xcode formatter plug-in for Swift code"
   homepage "https://github.com/Jintin/Swimat"
