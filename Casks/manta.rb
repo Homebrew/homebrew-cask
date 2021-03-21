@@ -4,7 +4,6 @@ cask "manta" do
 
   url "https://github.com/hql287/Manta/releases/download/v#{version}/Manta-#{version}-mac.zip",
       verified: "github.com/hql287/Manta/"
-  appcast "https://github.com/hql287/Manta/releases.atom"
   name "Manta"
   desc "Invoicing desktop app with customizable templates"
   homepage "https://getmanta.app/"
