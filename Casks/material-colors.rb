@@ -3,7 +3,6 @@ cask "material-colors" do
   sha256 "601465d533d93399c89fa2a135dba8d936cca239ff601d20195c44244a64053a"
 
   url "https://github.com/romannurik/MaterialColorsApp/releases/download/v#{version}/MaterialColors-#{version}.zip"
-  appcast "https://github.com/romannurik/MaterialColorsApp/releases.atom"
   name "Material Colors for Mac"
   homepage "https://github.com/romannurik/MaterialColorsApp"
 
