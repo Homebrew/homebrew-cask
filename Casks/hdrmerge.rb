@@ -4,7 +4,6 @@ cask "hdrmerge" do
 
   url "https://github.com/jcelaya/hdrmerge/releases/download/v#{version}/HDRMerge.dmg",
       verified: "github.com/jcelaya/hdrmerge/"
-  appcast "https://github.com/jcelaya/hdrmerge/releases.atom"
   name "HDRMerge"
   homepage "https://jcelaya.github.io/hdrmerge/"
 
