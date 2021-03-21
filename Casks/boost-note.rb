@@ -4,7 +4,6 @@ cask "boost-note" do
 
   url "https://github.com/BoostIO/BoostNote.next/releases/download/v#{version}/boost-note-mac.dmg",
       verified: "github.com/BoostIO/BoostNote.next/"
-  appcast "https://github.com/BoostIO/BoostNote.next/releases.atom"
   name "Boostnote.Next"
   desc "Markdown note editor for developers"
   homepage "https://boostnote.io/"
