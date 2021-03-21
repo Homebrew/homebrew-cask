@@ -4,7 +4,6 @@ cask "cocoarestclient" do
 
   url "https://github.com/mmattozzi/cocoa-rest-client/releases/download/#{version}/CocoaRestClient-#{version}.dmg",
       verified: "github.com/mmattozzi/cocoa-rest-client/"
-  appcast "https://github.com/mmattozzi/cocoa-rest-client/releases.atom"
   name "CocoaRestClient"
   desc "App for testing HTTP/REST endpoints"
   homepage "https://mmattozzi.github.io/cocoa-rest-client/"
