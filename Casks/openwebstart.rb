@@ -4,7 +4,6 @@ cask "openwebstart" do
 
   url "https://github.com/karakun/OpenWebStart/releases/download/v#{version}/OpenWebStart_macos_#{version.dots_to_underscores}.dmg",
       verified: "github.com/karakun/OpenWebStart/"
-  appcast "https://github.com/karakun/OpenWebStart/releases.atom"
   name "OpenWebStart"
   desc "Tool to run Java Web Start-based applications after the release of Java 11"
   homepage "https://openwebstart.com/"
