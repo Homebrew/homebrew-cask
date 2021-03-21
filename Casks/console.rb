@@ -3,7 +3,6 @@ cask "console" do
   sha256 "282455fda66cf8a84a551c2396649be8b668885b3a62819fbdd5033448934914"
 
   url "https://github.com/macmade/Console/releases/download/#{version}/Console.app.zip"
-  appcast "https://github.com/macmade/Console/releases.atom"
   name "Console"
   homepage "https://github.com/macmade/Console"
 
