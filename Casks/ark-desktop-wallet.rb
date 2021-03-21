@@ -4,7 +4,6 @@ cask "ark-desktop-wallet" do
 
   url "https://github.com/ArkEcosystem/desktop-wallet/releases/download/#{version}/ark-desktop-wallet-mac-#{version}.dmg",
       verified: "github.com/ArkEcosystem/desktop-wallet/"
-  appcast "https://github.com/ArkEcosystem/desktop-wallet/releases.atom"
   name "Ark Desktop Wallet"
   desc "Multi Platform ARK Desktop Wallet"
   homepage "https://ark.io/"
