@@ -4,7 +4,6 @@ cask "sparkleshare" do
 
   url "https://github.com/hbons/SparkleShare/releases/download/#{version}/sparkleshare-mac-#{version}.zip",
       verified: "github.com/hbons/SparkleShare/"
-  appcast "https://github.com/hbons/SparkleShare/releases.atom"
   name "SparkleShare"
   desc "Tool to sync with any Git repository instantly"
   homepage "https://sparkleshare.org/"
