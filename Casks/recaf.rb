@@ -4,7 +4,6 @@ cask "recaf" do
 
   url "https://github.com/Col-E/Recaf/releases/download/#{version}/recaf-#{version}-J8-jar-with-dependencies.jar",
       verified: "github.com/Col-E/Recaf/"
-  appcast "https://github.com/Col-E/Recaf/releases.atom"
   name "Recaf"
   desc "Java bytecode editor"
   homepage "https://www.coley.software/Recaf"
