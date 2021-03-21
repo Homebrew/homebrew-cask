@@ -4,7 +4,6 @@ cask "museeks" do
 
   url "https://github.com/martpie/museeks/releases/download/#{version}/museeks.dmg",
       verified: "github.com/martpie/museeks/"
-  appcast "https://github.com/martpie/museeks/releases.atom"
   name "Museeks"
   desc "Music player"
   homepage "https://museeks.io/"
