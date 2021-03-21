@@ -4,7 +4,6 @@ cask "mymonero" do
 
   url "https://github.com/mymonero/mymonero-app-js/releases/download/v#{version}/MyMonero-#{version}.dmg",
       verified: "github.com/mymonero/mymonero-app-js/"
-  appcast "https://github.com/mymonero/mymonero-app-js/releases.atom"
   name "MyMonero"
   desc "Wallet for the Monero cryptocurrency"
   homepage "https://mymonero.com/"
