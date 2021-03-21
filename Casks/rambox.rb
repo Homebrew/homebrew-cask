@@ -4,7 +4,6 @@ cask "rambox" do
 
   url "https://github.com/ramboxapp/community-edition/releases/download/#{version}/Rambox-#{version}-mac.zip",
       verified: "github.com/ramboxapp/community-edition/"
-  appcast "https://github.com/ramboxapp/community-edition/releases.atom"
   name "Rambox"
   desc "Free and Open Source messaging and emailing app"
   homepage "https://rambox.pro/"
