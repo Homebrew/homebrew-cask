@@ -3,7 +3,6 @@ cask "swiftformat-for-xcode" do
   sha256 "3a1c6a88dc9d384bf449fc5f1e6590787af27df3646c13257ceb969a3bcd392e"
 
   url "https://github.com/nicklockwood/SwiftFormat/archive/#{version}.zip"
-  appcast "https://github.com/nicklockwood/SwiftFormat/releases.atom"
   name "SwiftFormat for Xcode"
   desc "Xcode Extension for reformatting Swift code"
   homepage "https://github.com/nicklockwood/SwiftFormat"
