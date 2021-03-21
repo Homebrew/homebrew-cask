@@ -15,7 +15,6 @@ cask "strawberry" do
         verified: "github.com/strawberrymusicplayer/strawberry/"
   end
 
-  appcast "https://github.com/strawberrymusicplayer/strawberry/releases.atom"
   name "Strawberry"
   desc "Music player and music collection organizer"
   homepage "https://www.strawberrymusicplayer.org/"
