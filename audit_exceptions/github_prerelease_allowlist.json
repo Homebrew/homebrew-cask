@@ -1,6 +1,7 @@
 {
   "altdeploy": "all",
   "cleartext": "all",
+  "comma-chameleon": "all",
   "crypter": "all",
   "duplicati": "all",
   "extraterm": "all",
