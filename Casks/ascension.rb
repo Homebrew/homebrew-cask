@@ -3,7 +3,6 @@ cask "ascension" do
   sha256 "b21598b455878b997a08c88ef1c800eef2ad648ca672228db90ece0754d5e492"
 
   url "https://github.com/ansilove/Ascension/releases/download/v#{version}/Ascension_v#{version}.zip"
-  appcast "https://github.com/ansilove/Ascension/releases.atom"
   name "Ascension"
   desc "ANSI/ASCII art viewer"
   homepage "https://github.com/ansilove/Ascension"
