@@ -4,7 +4,6 @@ cask "batteries" do
 
   url "https://github.com/ronyfadel/BatteriesReleases/releases/download/v#{version}/Batteries.dmg",
       verified: "github.com/ronyfadel/BatteriesReleases/"
-  appcast "https://github.com/ronyfadel/BatteriesReleases/releases.atom"
   name "Batteries"
   homepage "https://www.fadel.io/batteries/"
 
