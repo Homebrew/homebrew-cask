@@ -4,7 +4,6 @@ cask "boop" do
 
   url "https://github.com/IvanMathy/Boop/releases/download/#{version}/Boop.zip",
       verified: "github.com/IvanMathy/Boop/"
-  appcast "https://github.com/IvanMathy/Boop/releases.atom"
   name "Boop"
   desc "Scriptable scratchpad for developers"
   homepage "https://boop.okat.best/"
