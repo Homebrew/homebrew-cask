@@ -4,7 +4,6 @@ cask "tusk" do
 
   url "https://github.com/klaussinani/tusk/releases/download/v#{version}/Tusk-#{version}.dmg",
       verified: "github.com/klaussinani/tusk/"
-  appcast "https://github.com/klaussinani/tusk/releases.atom"
   name "Tusk"
   desc "Refined Evernote desktop app"
   homepage "https://klaussinani.github.io/tusk/"
