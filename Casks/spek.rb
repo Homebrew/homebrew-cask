@@ -4,7 +4,6 @@ cask "spek" do
 
   url "https://github.com/alexkay/spek/releases/download/v#{version}/spek-#{version}.dmg",
       verified: "github.com/alexkay/spek/"
-  appcast "https://github.com/alexkay/spek/releases.atom"
   name "Spek"
   desc "Acoustic spectrum analyser"
   homepage "http://spek.cc/"
