@@ -3,7 +3,6 @@ cask "simsim" do
   sha256 "7f6fc17b934df27c2034dedd8c34f764bf431d98a1a757cdcde8e47a029b4c3f"
 
   url "https://github.com/dsmelov/simsim/releases/download/#{version}/SimSim_#{version}.zip"
-  appcast "https://github.com/dsmelov/simsim/releases.atom"
   name "SimSim"
   desc "Tool to explore iOS application folders in Terminal or Finder"
   homepage "https://github.com/dsmelov/simsim/"
