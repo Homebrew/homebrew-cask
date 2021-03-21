@@ -4,7 +4,6 @@ cask "gdlauncher" do
 
   url "https://github.com/gorilla-devs/GDLauncher/releases/download/v#{version}/GDLauncher-mac-setup.dmg",
       verified: "github.com/gorilla-devs/GDLauncher/"
-  appcast "https://github.com/gorilla-devs/GDLauncher/releases.atom"
   name "GDLauncher"
   desc "Custom Minecraft Launcher"
   homepage "https://gdevs.io/"
