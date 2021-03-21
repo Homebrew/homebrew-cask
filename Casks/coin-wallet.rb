@@ -4,7 +4,6 @@ cask "coin-wallet" do
 
   url "https://github.com/CoinSpace/CoinSpace/releases/download/v#{version}/Coin.Wallet.dmg",
       verified: "github.com/CoinSpace/CoinSpace/"
-  appcast "https://github.com/CoinSpace/CoinSpace/releases.atom"
   name "Coin Wallet"
   desc "Digital currency wallet"
   homepage "https://coin.space/"
