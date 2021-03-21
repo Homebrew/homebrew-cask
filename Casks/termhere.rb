@@ -4,7 +4,6 @@ cask "termhere" do
 
   url "https://github.com/hbang/TermHere/releases/download/#{version}/TermHere.#{version}.dmg",
       verified: "github.com/hbang/TermHere/"
-  appcast "https://github.com/hbang/TermHere/releases.atom"
   name "TermHere"
   desc "Finder extension for opening a terminal from the current directory"
   homepage "https://hbang.ws/apps/termhere/"
