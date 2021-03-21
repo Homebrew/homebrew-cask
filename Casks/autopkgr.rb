@@ -4,7 +4,6 @@ cask "autopkgr" do
 
   url "https://github.com/lindegroup/autopkgr/releases/download/v#{version}/AutoPkgr-#{version}.dmg",
       verified: "github.com/lindegroup/autopkgr/"
-  appcast "https://github.com/lindegroup/autopkgr/releases.atom"
   name "AutoPkgr"
   desc "Install and configure AutoPkg"
   homepage "https://www.lindegroup.com/autopkgr"
