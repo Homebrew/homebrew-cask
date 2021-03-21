@@ -4,10 +4,15 @@ cask "josm" do
 
   url "https://github.com/openstreetmap/josm/releases/download/#{version}-tested/JOSM-macOS-java16.zip",
       verified: "github.com/openstreetmap/josm/"
-  appcast "https://github.com/openstreetmap/josm/releases.atom"
   name "JOSM"
   desc "Extensible editor for OpenStreetMap"
   homepage "https://josm.openstreetmap.de/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+    regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)*)(?:[._-]tested)?["' >]}i)
+  end
 
   app "JOSM.app"
 
