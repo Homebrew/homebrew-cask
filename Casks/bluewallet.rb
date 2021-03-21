@@ -4,7 +4,6 @@ cask "bluewallet" do
 
   url "https://github.com/BlueWallet/BlueWallet/releases/download/v#{version}/BlueWallet.#{version}.dmg",
       verified: "github.com/BlueWallet/BlueWallet/"
-  appcast "https://github.com/BlueWallet/BlueWallet/releases.atom"
   name "BlueWallet"
   desc "Bitcoin wallet and Lightning wallet"
   homepage "https://bluewallet.io/"
