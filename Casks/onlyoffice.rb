@@ -4,7 +4,6 @@ cask "onlyoffice" do
 
   url "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v#{version}/ONLYOFFICE.dmg",
       verified: "github.com/ONLYOFFICE/DesktopEditors/"
-  appcast "https://github.com/ONLYOFFICE/DesktopEditors/releases.atom"
   name "ONLYOFFICE"
   desc "Document editor"
   homepage "https://www.onlyoffice.com/"
