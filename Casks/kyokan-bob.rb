@@ -4,7 +4,6 @@ cask "kyokan-bob" do
 
   url "https://github.com/kyokan/bob-wallet/releases/download/v#{version}/Bob-#{version}.dmg",
       verified: "github.com/kyokan/bob-wallet"
-  appcast "https://github.com/kyokan/bob-wallet/releases.atom"
   name "Bob Wallet"
   desc "Handshake wallet GUI for name auction and DNS record management"
   homepage "https://bobwallet.io/"
