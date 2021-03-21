@@ -4,7 +4,6 @@ cask "lightproxy" do
 
   url "https://github.com/alibaba/lightproxy/releases/download/v#{version}/LightProxy-#{version}.dmg",
       verified: "github.com/alibaba/lightproxy/"
-  appcast "https://github.com/alibaba/lightproxy/releases.atom"
   name "LightProxy"
   desc "Proxy & Debug tools based on whistle with Chrome Devtools UI"
   homepage "https://alibaba.github.io/lightproxy/"
