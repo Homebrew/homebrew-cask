@@ -4,7 +4,6 @@ cask "whalebird" do
 
   url "https://github.com/h3poteto/whalebird-desktop/releases/download/#{version}/Whalebird-#{version}-darwin-x64.dmg",
       verified: "github.com/h3poteto/whalebird-desktop/"
-  appcast "https://github.com/h3poteto/whalebird-desktop/releases.atom"
   name "Whalebird"
   desc "Electron-based Mastodon and Pleroma client"
   homepage "https://whalebird.social/"
