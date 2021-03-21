@@ -4,7 +4,6 @@ cask "angry-ip-scanner" do
 
   url "https://github.com/angryip/ipscan/releases/download/#{version}/ipscan-mac-#{version}.zip",
       verified: "github.com/angryip/ipscan/"
-  appcast "https://github.com/angryip/ipscan/releases.atom"
   name "Angry IP Scanner"
   desc "Network scanner"
   homepage "https://angryip.org/"
