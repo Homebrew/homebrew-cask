@@ -4,7 +4,6 @@ cask "utm" do
 
   url "https://github.com/utmapp/UTM/releases/download/v#{version}/UTM.dmg",
       verified: "github.com/utmapp/UTM/"
-  appcast "https://github.com/utmapp/UTM/releases.atom"
   name "UTM"
   desc "Virtual machines UI using QEMU"
   homepage "https://getutm.app/"
