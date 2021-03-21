@@ -4,7 +4,6 @@ cask "bitshares" do
 
   url "https://github.com/bitshares/bitshares-ui/releases/download/#{version}/BitShares-#{version}-mac.zip",
       verified: "github.com/bitshares/bitshares-ui/"
-  appcast "https://github.com/bitshares/bitshares-ui/releases.atom"
   name "BitShares"
   desc "GUI / Reference wallet for the BitShares blockchain"
   homepage "https://bitshares.org/"
