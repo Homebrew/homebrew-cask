@@ -4,7 +4,6 @@ cask "via" do
 
   url "https://github.com/the-via/releases/releases/download/v#{version}/via-#{version}-mac.dmg",
       verified: "github.com/the-via/releases/"
-  appcast "https://github.com/the-via/releases/releases.atom"
   name "VIA"
   homepage "https://caniusevia.com/"
 
