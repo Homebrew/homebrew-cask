@@ -3,10 +3,14 @@ cask "dolphin" do
   sha256 "1e7127cf9b110c5d7feabc0d05f620bad31d0f47a1d16e1f46e2e402d0ec233c"
 
   url "https://dl-mirror.dolphin-emu.org/#{version}/dolphin-#{version}.dmg"
-  appcast "https://github.com/dolphin-emu/dolphin/releases.atom"
   name "Dolphin"
   desc "Emulator to play GameCube and Wii games"
   homepage "https://dolphin-emu.org/"
+
+  livecheck do
+    url "https://github.com/dolphin-emu/dolphin"
+    strategy :git
+  end
 
   app "Dolphin.app"
 
