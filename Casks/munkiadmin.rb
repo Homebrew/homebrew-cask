@@ -4,7 +4,6 @@ cask "munkiadmin" do
 
   url "https://github.com/hjuutilainen/munkiadmin/releases/download/v#{version}/MunkiAdmin-#{version}.dmg",
       verified: "github.com/hjuutilainen/munkiadmin/"
-  appcast "https://github.com/hjuutilainen/munkiadmin/releases.atom"
   name "MunkiAdmin"
   desc "Tool to manage Munki repositories"
   homepage "https://hjuutilainen.github.io/munkiadmin/"
