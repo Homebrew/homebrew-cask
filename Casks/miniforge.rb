@@ -19,7 +19,6 @@ cask "miniforge" do
     }
   end
 
-  appcast "https://github.com/conda-forge/miniforge/releases.atom"
   name "miniforge"
   desc "Minimal installer for conda specific to conda-forge"
   homepage "https://github.com/conda-forge/miniforge"
