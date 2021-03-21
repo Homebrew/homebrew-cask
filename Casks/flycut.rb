@@ -3,7 +3,6 @@ cask "flycut" do
   sha256 "bc1a73b9cb4b4d316fa11572f43383f0f02fc7e6ba88bbed046cc1b074336862"
 
   url "https://github.com/TermiT/Flycut/releases/download/#{version}/Flycut.#{version}.zip"
-  appcast "https://github.com/TermiT/Flycut/releases.atom"
   name "Flycut"
   desc "Clipboard manager for developers"
   homepage "https://github.com/TermiT/Flycut"
