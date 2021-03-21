@@ -4,7 +4,6 @@ cask "getrasplex" do
 
   url "https://github.com/RasPlex/rasplex-installer/releases/download/#{version}/GetRasplex-#{version}.dmg",
       verified: "github.com/RasPlex/rasplex-installer/"
-  appcast "https://github.com/RasPlex/rasplex-installer/releases.atom"
   name "Rasplex Installer"
   desc "Plex Client for the Raspberry Pi computer"
   homepage "https://www.rasplex.com/"
