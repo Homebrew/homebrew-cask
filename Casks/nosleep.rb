@@ -4,7 +4,6 @@ cask "nosleep" do
 
   url "https://github.com/integralpro/nosleep/releases/download/#{version}/NoSleep-#{version}.dmg",
       verified: "github.com/integralpro/nosleep/"
-  appcast "https://github.com/integralpro/nosleep/releases.atom"
   name "NoSleep"
   desc "Kernel extension that prevents sleep when the lid is closed"
   homepage "https://integralpro.github.io/nosleep/"
