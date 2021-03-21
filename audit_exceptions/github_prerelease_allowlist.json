@@ -1,4 +1,5 @@
 {
+  "altdeploy": "all",
   "crypter": "all",
   "duplicati": "all",
   "extraterm": "all",
