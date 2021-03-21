@@ -4,7 +4,6 @@ cask "thonny" do
 
   url "https://github.com/thonny/thonny/releases/download/v#{version}/thonny-#{version}.pkg",
       verified: "github.com/thonny/thonny/"
-  appcast "https://github.com/thonny/thonny/releases.atom"
   name "Thonny"
   homepage "https://thonny.org/"
 
