@@ -4,7 +4,6 @@ cask "breaktimer" do
 
   url "https://github.com/tom-james-watson/breaktimer-app/releases/download/v#{version}/BreakTimer.dmg",
       verified: "github.com/tom-james-watson/breaktimer-app/"
-  appcast "https://github.com/tom-james-watson/breaktimer-app/releases.atom"
   name "BreakTimer"
   desc "Tool to manage periodic breaks"
   homepage "https://breaktimer.app/"
