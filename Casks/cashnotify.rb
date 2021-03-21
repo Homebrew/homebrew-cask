@@ -1,5 +1,5 @@
 cask "cashnotify" do
-  version "3.3.2"
+  version "3.4.0"
   sha256 :no_check
 
   url "https://download.cashnotify.com/download/mac/"
