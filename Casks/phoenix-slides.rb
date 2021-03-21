@@ -4,7 +4,6 @@ cask "phoenix-slides" do
 
   url "https://github.com/gobbledegook/creevey/releases/download/v#{version}/phoenix-slides-#{version.no_dots}.dmg",
       verified: "github.com/gobbledegook/creevey/"
-  appcast "https://github.com/gobbledegook/creevey/releases.atom"
   name "Phoenix Slides"
   homepage "https://blyt.net/phxslides/"
 
