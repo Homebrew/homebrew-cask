@@ -4,7 +4,6 @@ cask "openmw" do
 
   url "https://github.com/OpenMW/openmw/releases/download/openmw-#{version}/OpenMW-#{version}.dmg",
       verified: "github.com/"
-  appcast "https://github.com/OpenMW/openmw/releases.atom"
   name "OpenMW"
   desc "Open-source open-world RPG game engine that supports playing Morrowind"
   homepage "https://openmw.org/"
