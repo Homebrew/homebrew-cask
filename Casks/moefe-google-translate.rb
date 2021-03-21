@@ -3,7 +3,6 @@ cask "moefe-google-translate" do
   sha256 "7c9b896336b3bd6ca978afcde97dfacfa4ebc785c7419c36bcf92c2475e5bd24"
 
   url "https://github.com/MoeFE/GoogleTranslate/releases/download/v#{version}/google-translate-#{version}-mac.zip"
-  appcast "https://github.com/MoeFE/GoogleTranslate/releases.atom"
   name "MoeFE Google Translate"
   homepage "https://github.com/MoeFE/GoogleTranslate"
 
