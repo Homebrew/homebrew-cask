@@ -4,7 +4,6 @@ cask "stellarium" do
 
   url "https://github.com/Stellarium/stellarium/releases/download/v#{version.major_minor_patch}/Stellarium-#{version}.zip",
       verified: "github.com/Stellarium/stellarium/"
-  appcast "https://github.com/Stellarium/stellarium/releases.atom"
   name "Stellarium"
   desc "Tool to render realistic skies in real time on the screen"
   homepage "https://stellarium.org/"
