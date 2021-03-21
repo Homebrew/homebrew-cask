@@ -4,7 +4,6 @@ cask "pixelorama" do
 
   url "https://github.com/Orama-Interactive/Pixelorama/releases/download/v#{version}/Pixelorama.Mac.dmg",
       verified: "github.com/Orama-Interactive/Pixelorama/"
-  appcast "https://github.com/Orama-Interactive/Pixelorama/releases.atom"
   name "Pixelorama"
   desc "2D sprite editor made with the Godot Engine"
   homepage "https://orama-interactive.itch.io/pixelorama"
