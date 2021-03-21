@@ -3,7 +3,6 @@ cask "mobster" do
   sha256 "47ab506e59d9a3491f06943baecd1b225277e472ce71bc5052efc9d152712233"
 
   url "https://github.com/dillonkearns/mobster/releases/download/v#{version}/Mobster-#{version}.dmg"
-  appcast "https://github.com/dillonkearns/mobster/releases.atom"
   name "Mobster"
   desc "Pair and mob programming timer"
   homepage "https://github.com/dillonkearns/mobster/"
