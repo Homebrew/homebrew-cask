@@ -4,7 +4,6 @@ cask "moonlight" do
 
   url "https://github.com/moonlight-stream/moonlight-qt/releases/download/v#{version}/Moonlight-#{version}.dmg",
       verified: "github.com/moonlight-stream/moonlight-qt/"
-  appcast "https://github.com/moonlight-stream/moonlight-qt/releases.atom"
   name "Moonlight"
   desc "GameStream client"
   homepage "https://moonlight-stream.org/"
