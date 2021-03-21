@@ -17,7 +17,6 @@ cask "pritunl" do
     pkg "Pritunl.arm64.pkg"
   end
 
-  appcast "https://github.com/pritunl/pritunl-client-electron/releases.atom"
   name "Pritunl"
   desc "OpenVPN client"
   homepage "https://client.pritunl.com/"
