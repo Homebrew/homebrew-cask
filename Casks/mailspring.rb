@@ -4,7 +4,6 @@ cask "mailspring" do
 
   url "https://github.com/Foundry376/Mailspring/releases/download/#{version}/Mailspring.zip",
       verified: "github.com/Foundry376/Mailspring/"
-  appcast "https://github.com/Foundry376/Mailspring/releases.atom"
   name "Mailspring"
   desc "Fork of Nylas Mail"
   homepage "https://getmailspring.com/"
