@@ -4,7 +4,6 @@ cask "openra" do
 
   url "https://github.com/OpenRA/OpenRA/releases/download/release-#{version}/OpenRA-release-#{version}.dmg",
       verified: "github.com/OpenRA/OpenRA/"
-  appcast "https://github.com/OpenRA/OpenRA/releases.atom"
   name "OpenRA"
   desc "Real-time strategy game engine for Westwood games"
   homepage "https://www.openra.net/"
