@@ -4,7 +4,6 @@ cask "prusaslicer" do
 
   url "https://github.com/prusa3d/PrusaSlicer/releases/download/version_#{version.before_comma}/PrusaSlicer-#{version.before_comma}+-#{version.after_comma}.dmg",
       verified: "github.com/prusa3d/PrusaSlicer/"
-  appcast "https://github.com/prusa3d/PrusaSlicer/releases.atom"
   name "PrusaSlicer"
   desc "G-code generator for 3D printers (RepRap, Makerbot, Ultimaker etc.)"
   homepage "https://www.prusa3d.com/slic3r-prusa-edition/"
