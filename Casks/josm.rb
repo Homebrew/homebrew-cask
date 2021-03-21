@@ -11,7 +11,7 @@ cask "josm" do
   livecheck do
     url :url
     strategy :github_latest
-    regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)*)(?:[._-]tested)?["' >]}i)
+    regex(%r{href=.*?/(\d+(?:\.\d+)*)(?:[._-]tested)?/JOSM-macOS-java\d+\.zip}i)
   end
 
   app "JOSM.app"
