@@ -4,7 +4,6 @@ cask "mcbopomofo" do
 
   url "https://github.com/openvanilla/McBopomofo/releases/download/#{version}/McBopomofo-Installer-#{version}.zip",
       verified: "github.com/"
-  appcast "https://github.com/openvanilla/McBopomofo/releases.atom"
   name "McBopomofo"
   homepage "https://mcbopomofo.openvanilla.org/"
 
