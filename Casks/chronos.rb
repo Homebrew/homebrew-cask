@@ -3,7 +3,6 @@ cask "chronos" do
   sha256 "3130fcd1b0f62d88aa9f3f3b11f82ed359418377a0240b321c4975254285fbd4"
 
   url "https://github.com/web-pal/chronos-timetracker/releases/download/v#{version}/Chronos-#{version}-mac.zip"
-  appcast "https://github.com/web-pal/chronos-timetracker/releases.atom"
   name "Chronos Timetracker"
   desc "Desktop client for JIRA and Trello"
   homepage "https://github.com/web-pal/chronos-timetracker"

@@ -11,7 +11,6 @@ cask "browserosaurus" do
         verified: "github.com/will-stone/browserosaurus/"
   end
 
-  appcast "https://github.com/will-stone/browserosaurus/releases.atom"
   name "Browserosaurus"
   desc "Open-source browser prompter"
   homepage "https://wstone.io/browserosaurus/"

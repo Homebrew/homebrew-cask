@@ -4,7 +4,6 @@ cask "expo-xde" do
 
   url "https://github.com/expo/xde/releases/download/v#{version}/xde-#{version}.dmg",
       verified: "github.com/expo/xde/"
-  appcast "https://github.com/expo/xde/releases.atom"
   name "Expo Development Environment (XDE)"
   homepage "https://expo.io/"
 

@@ -4,7 +4,6 @@ cask "blink1control" do
 
   url "https://github.com/todbot/Blink1Control2/releases/download/v#{version}/Blink1Control#{version.major}-#{version}-mac.dmg",
       verified: "github.com/todbot/Blink1Control2/"
-  appcast "https://github.com/todbot/Blink1Control2/releases.atom"
   name "Blink1Control"
   desc "Utility to control blink(1) USB RGB LED devices"
   homepage "https://blink1.thingm.com/"

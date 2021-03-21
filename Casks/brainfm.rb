@@ -3,7 +3,6 @@ cask "brainfm" do
   sha256 "c6869346e1b68aa43db89f785bca6311d1aee117975a0df47c72cf7ab478e7c0"
 
   url "https://github.com/Dinius/Brain.fm-Desktop-Client/releases/download/v#{version}/brainfm-macos.zip"
-  appcast "https://github.com/Dinius/Brain.fm-Desktop-Client/releases.atom"
   name "Brain.fm"
   desc "Desktop client for brain.fm"
   homepage "https://github.com/Dinius/Brain.fm-Desktop-Client"

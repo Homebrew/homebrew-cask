@@ -1,6 +1,6 @@
 cask "unpkg" do
-  version "4.6"
-  sha256 "6949b648d5cd02138f9e7f505f1fb3541905d6016ed951daa71cb7250c3ace2e"
+  version "4.7"
+  sha256 "fee4f5ee286573f00a46dbe0e372d671ba82ce270ba4104cac9743b2e528d5b1"
 
   url "https://www.timdoug.com/unpkg/unpkg-#{version}.zip"
   appcast "https://www.timdoug.com/unpkg/"

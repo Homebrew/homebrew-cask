@@ -4,7 +4,6 @@ cask "gridea" do
 
   url "https://github.com/getgridea/gridea/releases/download/v#{version}/Gridea-#{version}.dmg",
       verified: "github.com/getgridea/gridea/"
-  appcast "https://github.com/getgridea/gridea/releases.atom"
   name "Gridea"
   desc "Static blog writing client"
   homepage "https://gridea.dev/"

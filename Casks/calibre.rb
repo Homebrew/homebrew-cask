@@ -8,7 +8,6 @@ cask "calibre" do
     sha256 "9d4a6ea415e04d0acb9b246d74d05785af42d9140bbe530b195035ed127ccd87"
     url "https://github.com/kovidgoyal/calibre/releases/download/v#{version}/calibre-#{version}.dmg",
         verified: "github.com/kovidgoyal/calibre/"
-    appcast "https://github.com/kovidgoyal/calibre/releases.atom"
   end
 
   name "calibre"
