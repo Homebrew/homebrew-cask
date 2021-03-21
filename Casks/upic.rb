@@ -3,7 +3,6 @@ cask "upic" do
   sha256 "1152e2f3995cc33d16d764348618a70a9fb067f2b17f548a813646809aa1154c"
 
   url "https://github.com/gee1k/uPic/releases/download/v#{version}/uPic.zip"
-  appcast "https://github.com/gee1k/uPic/releases.atom"
   name "uPic"
   desc "Native and simple picture and file upload tool"
   homepage "https://github.com/gee1k/uPic"
