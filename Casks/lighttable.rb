@@ -4,7 +4,6 @@ cask "lighttable" do
 
   url "https://github.com/LightTable/LightTable/releases/download/#{version}/lighttable-#{version}-mac.tar.gz",
       verified: "github.com/LightTable/LightTable/"
-  appcast "https://github.com/LightTable/LightTable/releases.atom"
   name "Light Table"
   desc "IDE"
   homepage "http://lighttable.com/"
