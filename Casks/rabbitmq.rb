@@ -4,7 +4,6 @@ cask "rabbitmq" do
 
   url "https://github.com/jpadilla/rabbitmqapp/releases/download/#{version}/RabbitMQ.zip",
       verified: "github.com/jpadilla/rabbitmqapp/"
-  appcast "https://github.com/jpadilla/rabbitmqapp/releases.atom"
   name "RabbitMQ"
   homepage "https://jpadilla.github.io/rabbitmqapp/"
 
