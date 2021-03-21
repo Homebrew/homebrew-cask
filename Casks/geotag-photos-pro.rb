@@ -4,7 +4,6 @@ cask "geotag-photos-pro" do
 
   url "https://github.com/tappytaps/geotag-desktop-app/releases/download/v#{version}/Geotag-Photos-Pro-2-#{version}.dmg",
       verified: "github.com/tappytaps/geotag-desktop-app/"
-  appcast "https://github.com/tappytaps/geotag-desktop-app/releases.atom"
   name "Geotag Photos Pro"
   homepage "https://www.geotagphotos.net/"
 
