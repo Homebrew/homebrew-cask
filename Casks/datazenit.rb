@@ -4,7 +4,6 @@ cask "datazenit" do
 
   url "https://github.com/datazenit/datazenit-releases/releases/download/v#{version}/mac.tar.gz",
       verified: "github.com/datazenit/datazenit-releases/"
-  appcast "https://github.com/datazenit/datazenit-releases/releases.atom"
   name "Datazenit"
   homepage "https://datazenit.com/"
 
