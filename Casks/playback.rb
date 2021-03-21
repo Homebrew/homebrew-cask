@@ -4,7 +4,6 @@ cask "playback" do
 
   url "https://github.com/mafintosh/playback/releases/download/v#{version}/Playback.app.zip",
       verified: "github.com/mafintosh/playback/"
-  appcast "https://github.com/mafintosh/playback/releases.atom"
   name "Playback"
   desc "Video player"
   homepage "https://mafintosh.github.io/playback/"
