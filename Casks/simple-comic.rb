@@ -4,7 +4,6 @@ cask "simple-comic" do
 
   url "https://github.com/dancingtortoise/Simple-Comic/releases/download/#{version}/SimpleComic_#{version}.zip",
       verified: "github.com/dancingtortoise/Simple-Comic/"
-  appcast "https://github.com/dancingtortoise/Simple-Comic/releases.atom"
   name "Simple Comic"
   desc "Comic viewer/reader"
   homepage "https://dancingtortoise.github.io/"
