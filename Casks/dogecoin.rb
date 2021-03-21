@@ -4,7 +4,6 @@ cask "dogecoin" do
 
   url "https://github.com/dogecoin/dogecoin/releases/download/v#{version}/dogecoin-#{version}-osx.dmg",
       verified: "github.com/dogecoin/dogecoin/"
-  appcast "https://github.com/dogecoin/dogecoin/releases.atom"
   name "Dogecoin"
   desc "Cryptocurrency"
   homepage "https://dogecoin.com/"
