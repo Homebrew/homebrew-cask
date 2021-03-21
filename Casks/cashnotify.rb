@@ -3,7 +3,6 @@ cask "cashnotify" do
   sha256 :no_check
 
   url "https://download.cashnotify.com/download/mac/"
-  appcast "https://github.com/BaguetteEngineering/download.cashnotify.com/releases.atom"
   name "CashNotify"
   homepage "https://cashnotify.com/"
 
