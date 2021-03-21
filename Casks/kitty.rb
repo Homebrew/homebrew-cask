@@ -3,7 +3,6 @@ cask "kitty" do
   sha256 "a8db77b59d5ac7d98eecb2cd6145c90754acd8b05b68ce3844d3bbc3f0d59892"
 
   url "https://github.com/kovidgoyal/kitty/releases/download/v#{version}/kitty-#{version}.dmg"
-  appcast "https://github.com/kovidgoyal/kitty/releases.atom"
   name "kitty"
   desc "GPU-based terminal emulator"
   homepage "https://github.com/kovidgoyal/kitty"
