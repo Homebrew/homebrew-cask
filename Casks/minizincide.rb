@@ -4,7 +4,6 @@ cask "minizincide" do
 
   url "https://github.com/MiniZinc/MiniZincIDE/releases/download/#{version}/MiniZincIDE-#{version}-bundled.dmg",
       verified: "github.com/MiniZinc/MiniZincIDE/"
-  appcast "https://github.com/MiniZinc/MiniZincIDE/releases.atom"
   name "MiniZincIDE"
   desc "Open-source constraint modeling language and IDE"
   homepage "https://www.minizinc.org/index.html"
