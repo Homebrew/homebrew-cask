@@ -4,7 +4,6 @@ cask "invesalius" do
 
   url "https://github.com/invesalius/invesalius3/releases/download/v#{version}/InVesalius-#{version}.dmg",
       verified: "github.com/invesalius/invesalius3/"
-  appcast "https://github.com/invesalius/invesalius3/releases.atom"
   name "InVesalius"
   homepage "https://www.cti.gov.br/en/invesalius"
 
