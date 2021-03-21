@@ -11,7 +11,6 @@ cask "eloston-chromium" do
 
   url "https://github.com/kramred/ungoogled-chromium-macos/releases/download/#{version}_#{arch}/ungoogled-chromium_#{version}_#{arch}-macos.dmg",
       verified: "github.com/kramred/ungoogled-chromium-macos/"
-  appcast "https://github.com/kramred/ungoogled-chromium-macos/releases.atom"
   name "Ungoogled Chromium"
   homepage "https://ungoogled-software.github.io/ungoogled-chromium-binaries/"
 
