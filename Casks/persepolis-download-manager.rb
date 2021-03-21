@@ -4,7 +4,6 @@ cask "persepolis-download-manager" do
 
   url "https://github.com/persepolisdm/persepolis/releases/download/#{version}/persepolis_#{version}_mac.zip",
       verified: "github.com/persepolisdm/persepolis/"
-  appcast "https://github.com/persepolisdm/persepolis/releases.atom"
   name "Persepolis"
   desc "GUI for aria2"
   homepage "https://persepolisdm.github.io/"
