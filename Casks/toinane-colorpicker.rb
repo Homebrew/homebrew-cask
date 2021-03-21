@@ -4,7 +4,6 @@ cask "toinane-colorpicker" do
 
   url "https://github.com/toinane/colorpicker/releases/download/#{version}/Colorpicker_#{version}_darwin.zip",
       verified: "github.com/toinane/colorpicker/"
-  appcast "https://github.com/toinane/colorpicker/releases.atom"
   name "Colorpicker"
   homepage "https://colorpicker.fr/"
 
