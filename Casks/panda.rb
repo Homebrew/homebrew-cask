@@ -3,7 +3,6 @@ cask "panda" do
   sha256 "551a2f4c2195dd1c00e7dfe83836a86485212ebeb6b008f130cecb83e002e3b8"
 
   url "https://github.com/pablosproject/Panda-Mac-app/releases/download/#{version}/Panda.zip"
-  appcast "https://github.com/pablosproject/Panda-Mac-app/releases.atom"
   name "Panda"
   desc "Utility to switch from light to dark mode"
   homepage "https://github.com/pablosproject/Panda-Mac-app"
