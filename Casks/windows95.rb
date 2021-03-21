@@ -4,7 +4,6 @@ cask "windows95" do
   sha256 "dc89096e83b8e494390715e502701f3f35d4b19c45635e8eab9ac8036169b904"
 
   url "https://github.com/felixrieseberg/windows95/releases/download/v#{version}/windows95-darwin-x64-#{version}.zip"
-  appcast "https://github.com/felixrieseberg/windows95/releases.atom"
   name "Windows 95"
   homepage "https://github.com/felixrieseberg/windows95"
 
