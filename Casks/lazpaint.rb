@@ -4,7 +4,6 @@ cask "lazpaint" do
 
   url "https://github.com/bgrabitmap/lazpaint/releases/download/v#{version}/lazpaint#{version}_macos64.dmg",
       verified: "github.com/bgrabitmap/lazpaint/"
-  appcast "https://github.com/bgrabitmap/lazpaint/releases.atom"
   name "LazPaint"
   homepage "https://bgrabitmap.github.io/lazpaint/"
 
