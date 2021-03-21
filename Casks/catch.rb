@@ -4,7 +4,6 @@ cask "catch" do
 
   url "https://github.com/mipstian/catch/releases/download/#{version}/Catch-#{version}.zip",
       verified: "github.com/mipstian/catch/"
-  appcast "https://github.com/mipstian/catch/releases.atom"
   name "Catch"
   homepage "https://www.giorgiocalderolla.com/index.html#catch"
 

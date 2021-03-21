@@ -4,7 +4,6 @@ cask "gb-studio" do
 
   url "https://github.com/chrismaltby/gb-studio/releases/download/v#{version}/GB-Studio-Mac-#{version}.zip",
       verified: "github.com/chrismaltby/gb-studio/"
-  appcast "https://github.com/chrismaltby/gb-studio/releases.atom"
   name "GB Studio"
   desc "Drag and drop retro game creator"
   homepage "https://www.gbstudio.dev/"
