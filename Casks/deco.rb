@@ -4,7 +4,6 @@ cask "deco" do
 
   url "https://github.com/decosoftware/deco-ide/releases/download/v#{version}/Deco-#{version}.pkg",
       verified: "github.com/decosoftware/deco-ide/"
-  appcast "https://github.com/decosoftware/deco-ide/releases.atom"
   name "Deco"
   desc "IDE for building React Native applications"
   homepage "https://www.decosoftware.com/"
