@@ -4,7 +4,6 @@ cask "surge-synthesizer" do
 
   url "https://github.com/surge-synthesizer/releases/releases/download/#{version}/Surge-#{version}-Setup.dmg",
       verified: "github.com/surge-synthesizer/releases/"
-  appcast "https://github.com/surge-synthesizer/releases/releases.atom"
   name "Surge"
   desc "Hybrid synthesizer"
   homepage "https://surge-synthesizer.github.io/"
