@@ -4,7 +4,6 @@ cask "penc" do
 
   url "https://github.com/dgurkaynak/Penc/releases/download/#{version}/Penc-#{version}.dmg",
       verified: "github.com/dgurkaynak/Penc/"
-  appcast "https://github.com/dgurkaynak/Penc/releases.atom"
   name "Penc"
   desc "Trackpad-oriented window manager"
   homepage "https://dgurkaynak.github.io/Penc/"
