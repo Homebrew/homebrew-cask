@@ -4,7 +4,6 @@ cask "laravel-kit" do
 
   url "https://github.com/tmdh/laravel-kit/releases/download/v#{version}/laravel-kit-#{version}-mac.zip",
       verified: "github.com/tmdh/laravel-kit/"
-  appcast "https://github.com/tmdh/laravel-kit/releases.atom"
   name "Laravel Kit"
   desc "Desktop Laravel admin panel app"
   homepage "https://tmdh.github.io/laravel-kit"
