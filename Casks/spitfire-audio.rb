@@ -5,7 +5,7 @@ cask "spitfire-audio" do
   url "https://d1t3zg51rvnesz.cloudfront.net/p/files/lm/#{version.after_comma}/mac/SpitfireAudio-Mac-#{version.before_comma}.dmg",
       verified: "d1t3zg51rvnesz.cloudfront.net/"
   name "Spitfire Audio"
-  desc "Downloade manager for Spitfire audio libraries"
+  desc "Download manager for Spitfire audio libraries"
   homepage "https://www.spitfireaudio.com/info/library-manager/"
 
   livecheck do
