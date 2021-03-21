@@ -7,5 +7,5 @@ cask "instant-articles-builder" do
   name "Facebook Instant Articles Builder"
   homepage "https://facebook.github.io/instant-articles-builder/"
 
-  app "Instant.Articles.Builder.for.Mac-#{version}/Instant Articles Builder.app"
+  app "Instant Articles Builder-darwin-x64/Instant Articles Builder.app"
 end
