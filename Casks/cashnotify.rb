@@ -6,6 +6,11 @@ cask "cashnotify" do
   name "CashNotify"
   homepage "https://cashnotify.com/"
 
+  livecheck do
+    url "https://github.com/BaguetteEngineering/download.cashnotify.com"
+    strategy :git
+  end
+
   auto_updates true
 
   app "CashNotify.app"
