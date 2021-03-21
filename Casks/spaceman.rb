@@ -3,7 +3,6 @@ cask "spaceman" do
   sha256 "a49aea8f91b8ef0908b4c196f403f5fe67b299eedadf6b78e2c45aba8f48d3a8"
 
   url "https://github.com/Jaysce/Spaceman/releases/download/v#{version}/Spaceman.#{version}.dmg"
-  appcast "https://github.com/Jaysce/Spaceman/releases.atom"
   name "Spaceman"
   desc "View Spaces / Virtual Desktops in the menu bar"
   homepage "https://github.com/Jaysce/Spaceman"
