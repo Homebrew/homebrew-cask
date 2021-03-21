@@ -4,7 +4,6 @@ cask "moscow-ml" do
 
   url "https://github.com/kfl/mosml/releases/download/ver-#{version}/mosml-#{version}.pkg",
       verified: "github.com/kfl/mosml/"
-  appcast "https://github.com/kfl/mosml/releases.atom"
   name "Moscow ML"
   homepage "https://mosml.org/"
 
