@@ -4,7 +4,6 @@ cask "responsively" do
 
   url "https://github.com/responsively-org/responsively-app/releases/download/v#{version}/ResponsivelyApp-#{version}.dmg",
       verified: "github.com/responsively-org/responsively-app/"
-  appcast "https://github.com/responsively-org/responsively-app/releases.atom"
   name "Responsively"
   desc "Modified browser that helps in responsive web development"
   homepage "https://responsively.app/"
