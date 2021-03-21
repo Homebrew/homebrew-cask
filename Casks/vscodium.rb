@@ -3,7 +3,6 @@ cask "vscodium" do
   sha256 "a927b3fea12cdfd0fdb02a2a3134d17f1ebf1b755f0f92762942d159fb83013d"
 
   url "https://github.com/VSCodium/vscodium/releases/download/#{version}/VSCodium.x64.#{version}.dmg"
-  appcast "https://github.com/VSCodium/vscodium/releases.atom"
   name "VSCodium"
   desc "Binary releases of VS Code without MS branding/telemetry/licensing"
   homepage "https://github.com/VSCodium/vscodium"
