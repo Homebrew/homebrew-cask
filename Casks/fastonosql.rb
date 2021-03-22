@@ -9,7 +9,7 @@ cask "fastonosql" do
   livecheck do
     url "https://fastonosql.com/anonim_users_downloads"
     strategy :page_match
-    regex(%r{Mac\s*OS\s*X\s+(\d+(?:\.\d+)*)\s+Installer}i)
+    regex(/Mac\s*OS\s*X\s+(\d+(?:\.\d+)*)\s+Installer/i)
   end
 
   app "FastoNoSQL.app"
