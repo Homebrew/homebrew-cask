@@ -4,7 +4,6 @@ cask "pibar" do
 
   url "https://s3.amazonaws.com/amiantos/PiBar-#{version}.zip",
       verified: "s3.amazonaws.com/amiantos"
-  appcast "https://github.com/amiantos/pibar/releases.atom"
   name "PiBar"
   desc "Pi-hole(s) management in the menu bar"
   homepage "https://github.com/amiantos/pibar"

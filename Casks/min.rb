@@ -4,7 +4,6 @@ cask "min" do
 
   url "https://github.com/minbrowser/min/releases/download/v#{version}/Min-v#{version}-darwin-x64.zip",
       verified: "github.com/minbrowser/min/"
-  appcast "https://github.com/minbrowser/min/releases.atom"
   name "Min"
   desc "Minimal browser that protects privacy"
   homepage "https://minbrowser.github.io/min/"

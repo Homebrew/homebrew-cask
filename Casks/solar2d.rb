@@ -4,7 +4,6 @@ cask "solar2d" do
 
   url "https://github.com/coronalabs/corona/releases/download/#{version.minor}/Solar2D-macOS-#{version}.dmg",
       verified: "github.com/coronalabs/corona/"
-  appcast "https://github.com/coronalabs/corona/releases.atom"
   name "Solar2D"
   desc "Lua based game engine"
   homepage "https://solar2d.com/"

@@ -11,7 +11,7 @@ cask "bartender" do
         referer: "https://www.macbartender.com"
   else
     version "4.0.41,40041"
-    sha256 "4f5dd07ef32ecc26d897d7001a48ea06a4e2b622a36ce49aa6fed93739584c27"
+    sha256 "79d494b6005783dfe99fafea7690ebbd793c4a983658a06f0ad80f691f3d634a"
     url "https://macbartender.com/B2/updates/B4Latest/Bartender%20#{version.major}.dmg",
         referer: "https://www.macbartender.com"
   end

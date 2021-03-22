@@ -4,10 +4,9 @@ cask "airpass" do
 
   url "https://github.com/alvesjtiago/airpass/releases/download/#{version}/Airpass.dmg",
       verified: "github.com/alvesjtiago/airpass/"
-  appcast "https://github.com/alvesjtiago/airpass/releases.atom"
   name "Airpass"
   desc "Status bar app to overcome time-constrained WiFi networks"
-  homepage "http://airpass.tiagoalves.me/"
+  homepage "https://airpass.tiagoalves.me/"
 
   app "Airpass.app"
 end

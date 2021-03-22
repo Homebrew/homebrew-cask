@@ -4,7 +4,6 @@ cask "marshallofsound-google-play-music-player" do
 
   url "https://github.com/MarshallOfSound/Google-Play-Music-Desktop-Player-UNOFFICIAL-/releases/download/v#{version}/Google.Play.Music.Desktop.Player.OSX.zip",
       verified: "github.com/MarshallOfSound/Google-Play-Music-Desktop-Player-UNOFFICIAL-/"
-  appcast "https://github.com/MarshallOfSound/Google-Play-Music-Desktop-Player-UNOFFICIAL-/releases.atom"
   name "Google Play Music Desktop Player"
   homepage "https://www.googleplaymusicdesktopplayer.com/"
 

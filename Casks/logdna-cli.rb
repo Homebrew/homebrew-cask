@@ -4,7 +4,6 @@ cask "logdna-cli" do
 
   url "https://github.com/logdna/logdna-cli/releases/download/#{version}/logdna-cli.pkg",
       verified: "github.com/logdna/logdna-cli/"
-  appcast "https://github.com/logdna/logdna-cli/releases.atom"
   name "LogDNA CLI"
   homepage "https://logdna.com/"
 

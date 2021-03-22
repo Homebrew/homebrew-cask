@@ -13,7 +13,6 @@ cask "freac" do
         verified: "github.com/enzo1982/freac/"
   end
 
-  appcast "https://github.com/enzo1982/freac/releases.atom"
   name "fre:ac"
   desc "Audio converter and CD ripper"
   homepage "https://www.freac.org/"

@@ -4,7 +4,6 @@ cask "trufont" do
 
   url "https://github.com/trufont/trufont/releases/download/#{version}/TruFont.app.zip",
       verified: "github.com/trufont/trufont/"
-  appcast "https://github.com/trufont/trufont/releases.atom"
   name "TruFont"
   desc "Streamlined and hackable font editor"
   homepage "https://trufont.github.io/"

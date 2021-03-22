@@ -4,7 +4,6 @@ cask "airqmon" do
 
   url "https://github.com/jsynowiec/airqmon/releases/download/v#{version}/airqmon-mac.zip",
       verified: "github.com/jsynowiec/airqmon/"
-  appcast "https://github.com/jsynowiec/airqmon/releases.atom"
   name "Airqmon"
   homepage "https://airqmon.app/"
 

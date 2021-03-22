@@ -3,7 +3,6 @@ cask "pivy" do
   sha256 "d66ed12c55b166c769623c56383237c15a9d27c2504d6c3045104e59e77f189c"
 
   url "https://github.com/joyent/pivy/releases/download/v#{version}/pivy-#{version}.pkg"
-  appcast "https://github.com/joyent/pivy/releases.atom"
   name "pivy"
   homepage "https://github.com/joyent/pivy"
 

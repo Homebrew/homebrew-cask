@@ -4,7 +4,6 @@ cask "solvespace" do
 
   url "https://github.com/solvespace/solvespace/releases/download/v#{version}/solvespace.dmg",
       verified: "github.com/"
-  appcast "https://github.com/solvespace/solvespace/releases.atom"
   name "SolveSpace"
   homepage "https://solvespace.com/index.pl/"
 

@@ -4,7 +4,6 @@ cask "mqttx" do
 
   url "https://github.com/emqx/MQTTX/releases/download/v#{version}/MQTTX-#{version}-mac.zip",
       verified: "github.com/emqx/MQTTX/"
-  appcast "https://github.com/emqx/MQTTX/releases.atom"
   name "MQTTX"
   desc "MQTT 5.0 Client"
   homepage "https://mqttx.app/"

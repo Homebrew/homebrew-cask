@@ -4,7 +4,6 @@ cask "dynobase" do
 
   url "https://github.com/Dynobase/dynobase/releases/download/#{version}/Dynobase-#{version}.dmg",
       verified: "github.com/Dynobase/dynobase/"
-  appcast "https://github.com/Dynobase/dynobase/releases.atom"
   name "Dynobase"
   desc "GUI Client for DynamoDB"
   homepage "https://dynobase.dev/"

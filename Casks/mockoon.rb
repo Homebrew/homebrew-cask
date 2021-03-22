@@ -4,7 +4,6 @@ cask "mockoon" do
 
   url "https://github.com/mockoon/mockoon/releases/download/v#{version}/mockoon.setup.#{version}.dmg",
       verified: "github.com/mockoon/mockoon/"
-  appcast "https://github.com/mockoon/mockoon/releases.atom"
   name "Mockoon"
   desc "Utility to run mock APIs locally"
   homepage "https://mockoon.com/"

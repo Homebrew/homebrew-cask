@@ -11,7 +11,6 @@ cask "drawio" do
         verified: "github.com/jgraph/drawio-desktop/"
   end
 
-  appcast "https://github.com/jgraph/drawio-desktop/releases.atom"
   name "draw.io Desktop"
   desc "Draw.io is free online diagram software"
   homepage "https://www.draw.io/"

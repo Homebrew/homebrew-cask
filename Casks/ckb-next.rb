@@ -3,7 +3,6 @@ cask "ckb-next" do
   sha256 "2a762181525ba4b1f26a95b374babe48ff0d590f1d36bc109749c845c8a57090"
 
   url "https://github.com/ckb-next/ckb-next/releases/download/v#{version}/ckb-next_v#{version}.dmg"
-  appcast "https://github.com/ckb-next/ckb-next/releases.atom"
   name "ckb-next"
   desc "RGB driver"
   homepage "https://github.com/ckb-next/ckb-next"
