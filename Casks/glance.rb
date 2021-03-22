@@ -3,7 +3,6 @@ cask "glance" do
   sha256 "8584901c292a2a7ce084ee25b0b3e020d143e193ab198b69831b398cdc164c06"
 
   url "https://github.com/samuelmeuli/glance/releases/download/v#{version}/Glance.dmg"
-  appcast "https://github.com/samuelmeuli/glance/releases.atom"
   name "Glance"
   desc "Utility to provide quick look previews for files that aren't natively supported"
   homepage "https://github.com/samuelmeuli/glance"
@@ -20,7 +19,10 @@ cask "glance" do
     "~/Library/Group Containers/group.com.samuelmeuli.glance",
   ]
 
-  caveats <<~EOS
-    You must start #{appdir}/Glance.app once manually to setup the QuickLook plugin.
-  EOS
+  caveats do
+    discontinued
+    <<~EOS
+      You must start #{appdir}/Glance.app once manually to setup the QuickLook plugin.
+    EOS
+  end
 end
