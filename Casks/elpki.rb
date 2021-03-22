@@ -9,7 +9,5 @@ cask "elpki" do
 
   pkg "ELPKISetup.pkg"
 
-  uninstall pkgutil: [
-    "jp.eltax.elpki",
-  ]
+  uninstall pkgutil: "jp.eltax.elpki"
 end
