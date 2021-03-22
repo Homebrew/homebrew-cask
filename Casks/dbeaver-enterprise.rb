@@ -4,6 +4,7 @@ cask "dbeaver-enterprise" do
 
   url "https://dbeaver.com/files/#{version}/dbeaver-ee-#{version}-macos.dmg"
   name "DBeaver Enterprise Edition"
+  desc "Universal database tool and SQL client"
   homepage "https://dbeaver.com/"
 
   livecheck do
