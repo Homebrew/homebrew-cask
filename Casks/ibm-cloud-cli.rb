@@ -3,10 +3,14 @@ cask "ibm-cloud-cli" do
   sha256 "b30c4459041d583f1c9d707ec2962e44827e751fb948cb0a527a9d6c89e1078a"
 
   url "https://download.clis.cloud.ibm.com/ibm-cloud-cli/#{version}/IBM_Cloud_CLI_#{version}.pkg"
-  appcast "https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases.atom"
   name "IBM Cloud CLI"
   desc "Command-line API client"
   homepage "https://cloud.ibm.com/docs/cli/index.html"
+
+  livecheck do
+    url "https://github.com/IBM-Cloud/ibm-cloud-cli-release"
+    strategy :git
+  end
 
   depends_on cask: "docker"
   depends_on formula: "kubectl"
