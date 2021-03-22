@@ -4,7 +4,6 @@ cask "gswitch" do
 
   url "https://github.com/CodySchrank/gSwitch/releases/download/#{version}/gSwitch.zip",
       verified: "github.com/CodySchrank/gSwitch/"
-  appcast "https://github.com/CodySchrank/gSwitch/releases.atom"
   name "gSwitch"
   desc "Set which graphics card to use"
   homepage "https://codyschrank.github.io/gSwitch/"
