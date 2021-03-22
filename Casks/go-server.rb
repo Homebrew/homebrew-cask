@@ -10,10 +10,10 @@ cask "go-server" do
   homepage "https://www.gocd.org/"
 
   livecheck do
-     url "https://download.gocd.org/releases.json"
-     strategy :page_match
-     regex(/go-server-(\d+(?:\.\d+)*-\d+)-osx\.zip/i)
-   end
+    url "https://download.gocd.org/releases.json"
+    strategy :page_match
+    regex(/go-server-(\d+(?:\.\d+)*-\d+)-osx\.zip/i)
+  end
 
   app "Go Server.app"
 end
