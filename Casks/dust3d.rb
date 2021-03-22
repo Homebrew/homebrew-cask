@@ -9,9 +9,7 @@ cask "dust3d" do
 
   livecheck do
     url :url
-    strategy :git do |tags|
-      p tags
-    end
+    strategy :git
     regex(%r{^(\d+(?:\.d+)*(?:-rc\.\d+)?)$}i)
   end
 
