@@ -13,11 +13,15 @@ cask "eddie" do
         verified: "eddie.website/"
   end
 
-  appcast "https://github.com/AirVPN/Eddie/releases.atom"
   name "Air VPN"
   name "Eddie"
   desc "OpenVPN UI"
   homepage "https://airvpn.org/macos/"
+
+  livecheck do
+    url "https://github.com/AirVPN/Eddie"
+    strategy :git
+  end
 
   app "Eddie.app"
 
