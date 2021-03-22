@@ -4,10 +4,14 @@ cask "electrumsv" do
 
   url "https://s3.us-east-2.amazonaws.com/electrumsv-downloads/releases/#{version}/ElectrumSV-#{version}.dmg",
       verified: "s3.us-east-2.amazonaws.com/electrumsv-downloads/"
-  appcast "https://github.com/electrumsv/electrumsv/releases.atom"
   name "ElectrumSV"
   desc "Desktop wallet for Bitcoin SV"
   homepage "https://electrumsv.io/"
+
+  livecheck do
+    url "https://github.com/electrumsv/electrumsv"
+    strategy :git
+  end
 
   app "ElectrumSV.app"
 end
