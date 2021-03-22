@@ -4,7 +4,6 @@ cask "goofy" do
 
   url "https://github.com/danielbuechele/goofy/releases/download/v#{version}/Goofy-#{version}.dmg",
       verified: "github.com/danielbuechele/goofy/"
-  appcast "https://github.com/danielbuechele/goofy/releases.atom"
   name "Goofy"
   desc "Desktop client for Facebook Messenger"
   homepage "https://www.goofyapp.com/"
@@ -19,4 +18,8 @@ cask "goofy" do
     "~/Library/Preferences/cc.buechele.Goofy.plist",
     "~/Library/Saved Application State/cc.buechele.Goofy.savedState",
   ]
+
+  caveats do
+    discontinued
+  end
 end
