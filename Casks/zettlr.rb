@@ -11,7 +11,6 @@ cask "zettlr" do
         verified: "github.com/Zettlr/Zettlr/"
   end
 
-  appcast "https://github.com/Zettlr/Zettlr/releases.atom"
   name "Zettlr"
   desc "Open-source markdown editor"
   homepage "https://www.zettlr.com/"
