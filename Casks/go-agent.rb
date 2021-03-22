@@ -12,7 +12,7 @@ cask "go-agent" do
   livecheck do
     url "https://download.gocd.org/releases.json"
     strategy :page_match
-    regex(%r{go-agent-(\d+(?:\.\d+)*-\d+)-osx\.zip}i)
+    regex(/go-agent-(\d+(?:\.\d+)*-\d+)-osx\.zip/i)
   end
 
   app "Go Agent.app"
