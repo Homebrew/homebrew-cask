@@ -10,7 +10,7 @@ cask "dust3d" do
   livecheck do
     url :url
     strategy :git
-    regex(%r{^(\d+(?:\.d+)*(?:-rc\.\d+)?)$}i)
+    regex(%r{^(\d+(?:\.\d+)*(?:-rc\.\d+)?)$}i)
   end
 
   app "dust3d-#{version}.app"
