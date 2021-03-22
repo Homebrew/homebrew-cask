@@ -1,12 +1,12 @@
 cask "jdk-mission-control" do
-  version "7.1.2,04"
-  sha256 "ca58d200ee8a350fcc3f5c8ffe7b9b51dd8a9372de106a0ebff11f748647f986"
+  version "8.0.0,13"
+  sha256 "3eb380e7ae241851cebeaf636b0de063d7a4a9585265c25ce1b1bfba8d56b100"
 
   url "https://download.java.net/java/GA/jmc#{version.major}/#{version.after_comma}/binaries/jmc-#{version.before_comma}_osx-x64.tar.gz"
-  appcast "https://jdk.java.net/jmc/",
+  appcast "https://jdk.java.net/jmc/8",
           must_contain: version.after_comma
   name "JDK Mission Control"
-  homepage "https://jdk.java.net/jmc/"
+  homepage "https://jdk.java.net/jmc/8"
 
   app "jmc-#{version.before_comma}_osx-x64/JDK Mission Control.app"
 
