@@ -6,7 +6,11 @@ cask "cinderella" do
   name "Cinderella"
   desc "Interactive Geometry Software"
   homepage "https://cinderella.de/"
-
+  livecheck do
+    url "https://beta.cinderella.de/"
+    regex(/href=\"Cinderella-(\d+.\d+[b]?.+)\.dmg\"/i)
+  end
+  
   app "Cinderella.app"
 
   zap trash: [
