@@ -1,10 +1,9 @@
 cask "opensesame" do
-  version "3.3.6"
-  sha256 "4547ff51494b4dabf4d34ed9d6b0ac13a3cc9b39b61bc2adaca98e3638e7300f"
+  version "3.3.8"
+  sha256 "3aa5e50ff728a4f51b444384449ebe02da8061c8424aceb525a064b225b07691"
 
-  url "https://github.com/smathot/OpenSesame/releases/download/release%2F#{version}/opensesame_#{version}-py37-macos-2.dmg",
+  url "https://github.com/smathot/OpenSesame/releases/download/release%2F#{version}/opensesame_#{version}-py37-macos-1.dmg",
       verified: "github.com/smathot/OpenSesame/"
-  appcast "https://github.com/smathot/OpenSesame/releases.atom"
   name "OpenSesame"
   desc "Graphical experiment builder for the social sciences"
   homepage "https://osdoc.cogsci.nl/"
