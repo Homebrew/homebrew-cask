@@ -4,10 +4,9 @@ cask "mongodb-realm-studio" do
 
   url "https://github.com/realm/realm-studio/releases/download/v#{version}/MongoDB.Realm.Studio-#{version}.dmg",
       verified: "github.com/realm/realm-studio/"
-  appcast "https://github.com/realm/realm-studio/releases.atom"
   name "MongoDB Realm Studio"
   desc "Tool for the Realm Database and Realm Platform"
-  homepage "https://www.mongodb.com/realm/mobile/database"
+  homepage "https://docs.mongodb.com/realm-legacy/products/realm-studio.html"
 
   auto_updates true
 
