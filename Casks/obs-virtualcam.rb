@@ -9,7 +9,7 @@ cask "obs-virtualcam" do
   livecheck do
     url "https://github.com/johnboiles/obs-mac-virtualcam/releases"
     strategy :page_match do |page|
-      match = page.match(%r{href=.*?/obs-mac-virtualcam-(\d+(?:\.\d+)*)-v?([a-f0-9]+)\.pkg}i)
+      match = page.match(%r{href=.*?/obs-mac-virtualcam-([a-f0-9]+)-v?(\d+(?:\.\d+)*)\.pkg}i)
       "#{match[1]},#{match[2]}"
     end
   end
