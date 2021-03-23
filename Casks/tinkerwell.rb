@@ -8,9 +8,7 @@ cask "tinkerwell" do
 
   livecheck do
     url "https://download.tinkerwell.app/tinkerwell/latest-mac.yml"
-    strategy :page_match do |page|
-      YAML.safe_load(page)["version"]
-    end
+    strategy :electron_builder
   end
 
   auto_updates true
