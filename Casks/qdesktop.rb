@@ -10,10 +10,10 @@ cask "qdesktop" do
   livecheck do
     url :url
     strategy :git do |tags|
-      tags.map { |tag|
+      tags.map do |tag|
         match = tag.match(/^v?(\d+(?:\.\d+)*)-(\d+)$/i)
         "#{match[1]},#{match[2]}"
-      }
+      end
     end
   end
 
