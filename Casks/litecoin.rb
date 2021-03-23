@@ -3,10 +3,14 @@ cask "litecoin" do
   sha256 "b81d9101c6ecb38b7699cf3d05ab57df7922f40f23c8a3377750c335d7102266"
 
   url "https://download.litecoin.org/litecoin-#{version}/osx/litecoin-#{version}-osx.dmg"
-  appcast "https://github.com/litecoin-project/litecoin/releases.atom"
   name "Litecoin"
   desc "Cryptocurrency wallet"
   homepage "https://litecoin.org/"
+
+  livecheck do
+    url "https://github.com/litecoin-project/litecoin"
+    strategy :git
+  end
 
   app "Litecoin-Qt.app"
 
