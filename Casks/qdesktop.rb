@@ -11,7 +11,7 @@ cask "qdesktop" do
     url :url
     strategy :git do |tags|
       tags.map { |tag|
-        match = tag.match(%r{^v?(\d+(?:\.\d+)*)-(\d+)$}i)
+        match = tag.match(/^v?(\d+(?:\.\d+)*)-(\d+)$/i)
         "#{match[1]},#{match[2]}"
       }
     end
