@@ -6,7 +6,7 @@ cask "intellij-idea-ce" do
 
     url "https://download.jetbrains.com/idea/ideaIC-#{version}.dmg"
   else
-    sha256 "efadaf026e141227d07420505bcde6cadd5297db66fbfb5bbaefc0cf5f26481f"
+    sha256 "941e0730a807160799667186619ce1eae429bb1f6f6af707c29888b618b176eb"
 
     url "https://download.jetbrains.com/idea/ideaIC-#{version}-aarch64.dmg"
   end
