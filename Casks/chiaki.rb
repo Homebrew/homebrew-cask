@@ -4,7 +4,7 @@ cask "chiaki" do
 
   url "https://git.sr.ht/~thestr4ng3r/chiaki/refs/download/v#{version}/Chiaki-v#{version}-macOS-x86_64.dmg"
   name "Chiaki"
-  desc "Free and Open Source PlayStation Remote Play Client"
+  desc "PlayStation Remote Play Client"
   homepage "https://git.sr.ht/~thestr4ng3r/chiaki"
 
   livecheck do
