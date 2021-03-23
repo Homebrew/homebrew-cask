@@ -5,7 +5,7 @@ cask "kvirc" do
   url "ftp://ftp.kvirc.net/pub/kvirc/#{version}/binary/macosx/KVIrc-#{version}.dmg"
   name "KVIrc"
   desc "IRC Client"
-  homepage "http://kvirc.net"
+  homepage "http://kvirc.net/"
 
   livecheck do
     url "https://github.com/kvirc/KVIrc"
