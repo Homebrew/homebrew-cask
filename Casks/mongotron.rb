@@ -4,10 +4,14 @@ cask "mongotron" do
 
   url "https://github.com/officert/mongotron/releases/download/#{version}/Mongotron-darwin-x64.zip",
       verified: "github.com/officert/mongotron/"
-  appcast "https://github.com/officert/mongotron/releases.atom"
   name "Mongotron"
   desc "Mongo DB management"
   homepage "http://mongotron.io/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "Mongotron-darwin-x64/Mongotron.app"
 
