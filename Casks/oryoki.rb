@@ -4,7 +4,6 @@ cask "oryoki" do
 
   url "https://github.com/thmsbfft/oryoki/releases/download/#{version}/Oryoki-#{version}.zip",
       verified: "github.com/thmsbfft/oryoki/"
-  appcast "https://github.com/thmsbfft/oryoki/releases.atom"
   name "Oryoki"
   name "Ōryōki"
   name "応量器"
