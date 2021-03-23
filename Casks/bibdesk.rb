@@ -1,8 +1,8 @@
 cask "bibdesk" do
-  version "1.8.1,5530"
-  sha256 "8850aafbcb51905122d2fbe94345cb8732bfd8b5a696f5caf0dff3fa5134c09c"
+  version "1.8.2,5548"
+  sha256 "f5db9daad0239e6e851efbcc45e51d5ffb20003790d7784500307930be16cfab"
 
-  url "https://downloads.sourceforge.net/bibdesk/BibDesk/BibDesk-#{version.before_comma}/BibDesk-#{version.before_comma}.dmg",
+  url "https://downloads.sourceforge.net/bibdesk/BibDesk/BibDesk-#{version.before_comma}/BibDesk-#{version.before_comma}.zip",
       verified: "downloads.sourceforge.net/bibdesk/"
   name "BibDesk"
   desc "Edit and manage bibliographies"
