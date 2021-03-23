@@ -15,5 +15,5 @@ cask "go-server" do
     regex(/go-server-(\d+(?:\.\d+)*-\d+)-osx\.zip/i)
   end
 
-  app "Go Server.app"
+  binary "bin/go-server"
 end
