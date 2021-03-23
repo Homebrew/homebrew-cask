@@ -8,5 +8,11 @@ cask "wxmacmolplt" do
   desc "Cross-platform GUI input generator for GAMESS"
   homepage "https://brettbode.github.io/wxmacmolplt"
 
+  livecheck do
+    url "https://brettbode.github.io/wxmacmolplt/downloads.html"
+    strategy :page_match
+    regex(/wxMacMolPlt (\d+(?:\.\d+)*) for Mac OS X 10.7 or newer/i)
+  end
+
   app "MacMolPlt/wxMacMolPlt.app"
 end
