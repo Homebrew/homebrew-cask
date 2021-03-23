@@ -15,5 +15,5 @@ cask "go-server" do
     regex(/go-server-(\d+(?:\.\d+)*-\d+)-osx\.zip/i)
   end
 
-  binary "bin/go-server"
+  binary "go-server-#{version.split("-").first}/bin/go-server"
 end
