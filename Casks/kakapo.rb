@@ -4,7 +4,6 @@ cask "kakapo" do
 
   url "https://github.com/bluedaniel/Kakapo-app/releases/download/v#{version}/Kakapo-#{version}-Mac.zip",
       verified: "github.com/bluedaniel/Kakapo-app/"
-  appcast "https://github.com/bluedaniel/Kakapo-app/releases.atom"
   name "Kakapo"
   desc "Open-source ambient sound mixer"
   homepage "http://www.kakapo.co/app.html"
