@@ -5,7 +5,7 @@ cask "xbar" do
   url "https://github.com/matryer/xbar/releases/download/v#{version}/xbar.v#{version}.dmg",
       verified: "github.com/matryer/xbar/"
   name "xbar"
-  desc "Put anything in your menu bar"
+  desc "View output from scripts in the menu bar"
   homepage "https://xbarapp.com/"
 
   livecheck do
