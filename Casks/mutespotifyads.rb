@@ -3,7 +3,6 @@ cask "mutespotifyads" do
   sha256 "8285a957ee67918f0ca08b50e183717a89ec689b502155b08acb6cd913eb9dff"
 
   url "https://github.com/simonmeusel/MuteSpotifyAds/releases/download/v#{version}/MuteSpotifyAds.app.zip"
-  appcast "https://github.com/simonmeusel/MuteSpotifyAds/releases.atom"
   name "MuteSpotifyAds"
   homepage "https://github.com/simonmeusel/MuteSpotifyAds"
 
@@ -12,4 +11,8 @@ cask "mutespotifyads" do
   app "MuteSpotifyAds.app"
 
   zap trash: "~/Library/SyncedPreferences/de.simonmeusel.MuteSpotifyAds.plist"
+
+  caveats do
+    discontinued
+  end
 end
