@@ -4,7 +4,6 @@ cask "microsoft-r-open" do
 
   url "https://mran.blob.core.windows.net/install/mro/#{version}/microsoft-r-open-#{version}.pkg",
       verified: "mran.blob.core.windows.net/"
-  appcast "https://github.com/Microsoft/microsoft-r-open/releases.atom"
   name "Microsoft R Open"
   name "MRO"
   homepage "https://mran.microsoft.com/"
@@ -31,4 +30,8 @@ cask "microsoft-r-open" do
     "~/Library/R",
     "~/Library/Caches/org.R-project.R",
   ]
+
+  caveats do
+    discontinued
+  end
 end

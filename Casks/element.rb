@@ -4,10 +4,14 @@ cask "element" do
 
   url "https://packages.riot.im/desktop/install/macos/Element-#{version}.dmg",
       verified: "packages.riot.im/desktop/"
-  appcast "https://github.com/vector-im/riot-desktop/releases.atom"
   name "Element"
   desc "Matrix collaboration client"
   homepage "https://element.io/get-started"
+
+  livecheck do
+    url "https://github.com/vector-im/riot-desktop"
+    strategy :git
+  end
 
   auto_updates true
 

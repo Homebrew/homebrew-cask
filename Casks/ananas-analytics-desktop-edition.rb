@@ -4,7 +4,6 @@ cask "ananas-analytics-desktop-edition" do
 
   url "https://github.com/ananas-analytics/ananas-desktop/releases/download/v#{version}/Ananas.Analytics.Desktop.Edition-#{version}.macos.dmg",
       verified: "github.com/ananas-analytics/ananas-desktop/"
-  appcast "https://github.com/ananas-analytics/ananas-desktop/releases.atom"
   name "Ananas Analytics Desktop Edition"
   desc "Hackable data integration & analysis tool"
   homepage "https://ananasanalytics.com/"
