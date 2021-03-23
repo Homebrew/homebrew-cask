@@ -4,11 +4,14 @@ cask "parse" do
 
   url "https://github.com/parse-community/parse-cli/releases/download/release_#{version}/parse",
       verified: "github.com/parse-community/"
-  appcast "https://github.com/parse-community/parse-cli/releases.atom"
   name "Parse"
   homepage "https://parseplatform.org/"
 
   container type: :naked
 
   binary "parse"
+
+  caveats do
+    discontinued
+  end
 end
