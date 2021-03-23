@@ -4,7 +4,6 @@ cask "redeclipse" do
 
   url "https://github.com/redeclipse/base/releases/download/v#{version}/redeclipse_#{version}_mac.tar.bz2",
       verified: "github.com/redeclipse/base/"
-  appcast "https://github.com/redeclipse/base/releases.atom"
   name "Red Eclipse"
   homepage "https://www.redeclipse.net/"
 
