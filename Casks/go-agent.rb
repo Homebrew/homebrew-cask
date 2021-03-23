@@ -15,5 +15,5 @@ cask "go-agent" do
     regex(/go-agent-(\d+(?:\.\d+)*-\d+)-osx\.zip/i)
   end
 
-  app "Go Agent.app"
+  binary "bin/go-agent"
 end
