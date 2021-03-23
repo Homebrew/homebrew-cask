@@ -9,4 +9,12 @@ cask "inky" do
   homepage "https://www.inklestudios.com/ink/"
 
   app "Inky.app"
+
+  zap trash: [
+    "~/Library/Application Support/Inky",
+    "~/Library/Preferences/com.inkle.inky.helper.plist",
+    "~/Library/Preferences/com.inkle.inky.plist",
+    "~/Library/Saved Application State/com.inkle.inky.savedState",
+    "~/Library/Logs/Inky",
+  ]
 end
