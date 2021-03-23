@@ -7,6 +7,11 @@ cask "vscodium" do
   desc "Binary releases of VS Code without MS branding/telemetry/licensing"
   homepage "https://github.com/VSCodium/vscodium"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
   conflicts_with cask: "visual-studio-code"
 
