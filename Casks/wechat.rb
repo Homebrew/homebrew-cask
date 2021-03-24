@@ -7,7 +7,7 @@ cask "wechat" do
   name "微信 Mac 版"
   desc "Free messaging and calling application"
   homepage "https://mac.weixin.qq.com/"
-  
+
   # This appcast is slower to update than the submissions we get. See:
   # https://github.com/Homebrew/homebrew-cask/pull/90907#issuecomment-710107547
   livecheck do
