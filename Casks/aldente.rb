@@ -8,8 +8,8 @@ cask "aldente" do
       skip
     end
   else
-    version "2.1.2"
-    sha256 "39cebc2db5b75c4217abd42470ecfee8280a35178b0d2581df3857cd8b742880"
+    version "2.2"
+    sha256 "b1f93da6677531cd387094a8d421523a838d2036ccfe26d5744fbcf7a3c43a2f"
     url "https://github.com/davidwernhart/AlDente/releases/download/#{version}/AlDente_#{version}_Notarized.app.zip"
   end
 
