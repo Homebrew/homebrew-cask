@@ -12,7 +12,7 @@ cask "thought-train" do
     strategy :git
   end
 
-  pkg "thought-train-#{version}.pkg"
+  pkg "thought-train-#{version.major_minor}.pkg"
 
   uninstall pkgutil: "thought-train"
 end
