@@ -4,10 +4,14 @@ cask "vagrant" do
 
   url "https://releases.hashicorp.com/vagrant/#{version}/vagrant_#{version}_x86_64.dmg",
       verified: "hashicorp.com/vagrant/"
-  appcast "https://github.com/hashicorp/vagrant/releases.atom"
   name "Vagrant"
   desc "Development environment"
   homepage "https://www.vagrantup.com/"
+
+  livecheck do
+    url "https://github.com/hashicorp/vagrant"
+    strategy :git
+  end
 
   pkg "vagrant.pkg"
 
