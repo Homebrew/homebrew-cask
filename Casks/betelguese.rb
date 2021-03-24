@@ -8,7 +8,4 @@ cask "betelguese" do
   homepage "https://github.com/23Aaron/Betelguese"
 
   app "Betelguese.app"
-
-  zap trash: "~/Documents/Betelguese"
-
 end
