@@ -7,6 +7,12 @@ cask "drovio" do
   desc "Remote pair programming and team collaboration tool"
   homepage "https://www.drovio.com/"
 
+  livecheck do
+    url "https://repository.drovio.com/stable/drovio/macos/latest_version/release.json"
+    strategy :page_match
+    regex(/"version":\s"(\d+(?:\.\d+)*)"/i)
+  end
+
   auto_updates true
   depends_on macos: ">= :sierra"
 
