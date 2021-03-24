@@ -15,4 +15,9 @@ cask "wxmacmolplt" do
   end
 
   app "MacMolPlt/wxMacMolPlt.app"
+
+  zap trash: [
+    "~/Library/Preferences/gov.ameslab.wxMacMolplt.plist",
+    "~/Library/Saved Application State/gov.ameslab.wxMacMolplt.savedState",
+  ]
 end
