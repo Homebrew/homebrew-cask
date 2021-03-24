@@ -4,10 +4,14 @@ cask "tigervnc-viewer" do
 
   url "https://bintray.com/tigervnc/stable/download_file?file_path=TigerVNC-#{version}.dmg",
       verified: "bintray.com/tigervnc/"
-  appcast "https://github.com/TigerVNC/tigervnc/releases.atom"
   name "TigerVNC"
   desc "Multi-platform VNC client and server"
   homepage "https://tigervnc.org/"
+
+  livecheck do
+    url "https://github.com/TigerVNC/tigervnc"
+    strategy :git
+  end
 
   app "TigerVNC Viewer #{version}.app"
 end
