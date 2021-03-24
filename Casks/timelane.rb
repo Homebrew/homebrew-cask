@@ -4,9 +4,8 @@ cask "timelane" do
 
   url "https://github.com/icanzilb/Timelane/releases/download/#{version}/Timelane.app-#{version}.zip",
       verified: "github.com/icanzilb/Timelane/"
-  appcast "https://github.com/icanzilb/Timelane/releases.atom"
   name "Timelane"
-  homepage "http://timelane.tools/"
+  homepage "https://timelane.tools/"
 
   depends_on macos: ">= :mojave"
 
