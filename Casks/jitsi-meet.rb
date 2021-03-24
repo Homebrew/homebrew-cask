@@ -1,6 +1,6 @@
 cask "jitsi-meet" do
-  version "2.7.1"
-  sha256 "212fe022d03baafa8b98fa4a702e49052f2a9b0168331bcc8b7bc7331b73f166"
+  version "2.8.2"
+  sha256 "df15bd13ff65b3e15d885a1944d874918b69a4e21ffb549f22fb10ae635ec849"
 
   url "https://github.com/jitsi/jitsi-meet-electron/releases/download/v#{version}/jitsi-meet.dmg"
   name "Jitsi Meet"
