@@ -1,12 +1,12 @@
 cask "intellij-idea-ce" do
-  version "2020.3.2"
+  version "2020.3.3"
 
   if Hardware::CPU.intel?
-    sha256 "008259b4df15cea0d38edc55e166dc24b7973ad3a4985ce2ebaa02b6023a66ac"
+    sha256 "ae786cd8f4302c6bb92af166416c92673cded9971011016fceba9d92e0968d96"
 
     url "https://download.jetbrains.com/idea/ideaIC-#{version}.dmg"
   else
-    sha256 "efadaf026e141227d07420505bcde6cadd5297db66fbfb5bbaefc0cf5f26481f"
+    sha256 "941e0730a807160799667186619ce1eae429bb1f6f6af707c29888b618b176eb"
 
     url "https://download.jetbrains.com/idea/ideaIC-#{version}-aarch64.dmg"
   end

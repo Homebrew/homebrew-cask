@@ -4,7 +4,6 @@ cask "manuskript" do
 
   url "https://github.com/olivierkes/manuskript/releases/download/#{version.major_minor_patch}/manuskript-#{version}-osx.zip",
       verified: "github.com/olivierkes/manuskript/"
-  appcast "https://github.com/olivierkes/manuskript/releases.atom"
   name "Manuskript"
   homepage "https://www.theologeek.ch/manuskript/"
 
