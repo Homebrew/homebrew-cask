@@ -19,10 +19,14 @@ cask "visit" do
         verified: "github.com/visit-dav/visit/"
   end
 
-  appcast "https://github.com/visit-dav/visit/releases.atom"
   name "VisIt"
   desc "Visualization and data analysis for mesh-based scientific data"
   homepage "https://wci.llnl.gov/simulation/computer-codes/visit"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   depends_on macos: ">= :high_sierra"
 
