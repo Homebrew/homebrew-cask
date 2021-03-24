@@ -1,6 +1,6 @@
 cask "sonarr" do
   version "3.0.5.1144"
-  sha256 :no_check
+  sha256 "89d7e5570ffdf2e62a8e774debb4899f259c82390a2cd1fb3b48b3f0c93cfbd0"
 
   url "https://github.com/Sonarr/Sonarr/archive/refs/tags/v#{version}.zip",
       verified: "github.com/Sonarr/Sonarr/"
@@ -22,7 +22,7 @@ cask "sonarr" do
 
   zap trash: [
     "~/Library/Application Support/Sonarr",
-    "~/.config/NzbDrone",
     "~/Library/Preferences/tv.sonarr.Sonarr.plist",
+    "~/.config/NzbDrone",
   ]
 end
