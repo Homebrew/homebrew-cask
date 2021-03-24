@@ -26,4 +26,10 @@ cask "lbry" do
       exec '#{appdir}/LBRY.app/Contents/Resources/static/lbry-first/lbry-first' "$@"
     EOS
   end
+
+  zap trash: [
+    "~/Library/Application Support/lbry",
+    "~/Library/Preferences/io.lbry.LBRY.plist",
+    "~/Library/Saved Application State/io.lbry.LBRY.savedState",
+  ]
 end
