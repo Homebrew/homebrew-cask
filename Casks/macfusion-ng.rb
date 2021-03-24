@@ -6,6 +6,11 @@ cask "macfusion-ng" do
   name "Macfusion"
   homepage "https://github.com/macfusion-ng/macfusion#{version.major}/"
 
+  livecheck do
+    url :url
+    strategy :git
+  end
+
   conflicts_with cask: "macfusion"
   depends_on formula: "sshfs"
 
