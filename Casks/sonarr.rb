@@ -14,7 +14,7 @@ cask "sonarr" do
 
   depends_on cask: "mono-mdk"
 
-  app "distribution/osx/Sonarr.app"
+  app "Sonarr-#{version}/distribution/osx/Sonarr.app"
 
   preflight do
     set_permissions "#{staged_path}/Sonarr.app", "0755"
