@@ -4,6 +4,7 @@ cask "tutanota" do
 
   url "https://mail.tutanota.com/desktop/tutanota-desktop-mac.zip"
   name "Tutanota Desktop"
+  desc "Email client"
   homepage "https://tutanota.com/"
 
   app "Tutanota Desktop.app"
