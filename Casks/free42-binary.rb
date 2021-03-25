@@ -8,4 +8,10 @@ cask "free42-binary" do
   homepage "https://thomasokken.com/free42/"
 
   app "Free42 Binary.app"
+
+  zap trash: [
+    "~/Library/Application Support/Free42",
+    "~/Library/Preferences/com.thomasokken.Free42.plist",
+    "~/Library/Caches/com.thomasokken.Free42",
+  ]
 end
