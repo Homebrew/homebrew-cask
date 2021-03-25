@@ -16,9 +16,9 @@ cask "racket" do
   homepage "https://racket-lang.org/"
 
   livecheck do
-    url "https://download.racket-lang.org/"
+    url "https://download.racket-lang.org/all-versions.html"
     strategy :page_match
-    regex(%r{href=.*?/racket-(\d+(?:\.\d+)*)-}i)
+    regex(/racket-v?(\d+(?:\.\d+)*)/i)
   end
 
   suite "Racket v#{version}"
