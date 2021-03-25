@@ -1,12 +1,12 @@
 cask "tencent-meeting" do
   if Hardware::CPU.intel?
-    version "2.7.5.434,727e439f79327c7c63677a9097353d3d"
-    sha256 "f072dafd53fd816acc95542dae0f750727704532b81b7afc5861e0cb9df75d71"
+    version "2.8.8.403,59b6424ee3fb1f46a1c4e617425ec179"
+    sha256 "5d57d76a951eeae18bea2978dd665e15dd1d51da1e8a6d91c8d0288834c112e2"
     url "https://updatecdn.meeting.qq.com/#{version.after_comma}/TencentMeeting_0300000000_#{version.before_comma}.publish.x86_64.dmg",
         verified: "qq.com/"
   else
-    version "2.7.5.434,2a4a7de84f9518b5ba69df232eb7a1d0"
-    sha256 "7e5c56185e9f29c3b6db10283101118e1d02b3d87178e45d90d9a0a27b6dc9fa"
+    version "2.8.8.403,facd5a060563cdaec1df7aa71c617514"
+    sha256 "7af75d73f14f7cc1a0d743df9da4666c9c4ae22b481719ba8fe52f7b089d54a5"
     url "https://updatecdn.meeting.qq.com/#{version.after_comma}/TencentMeeting_0300000000_#{version.before_comma}.publish.arm64.dmg",
         verified: "qq.com/"
   end
