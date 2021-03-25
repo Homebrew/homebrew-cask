@@ -10,6 +10,7 @@ cask "tutanota" do
   livecheck do
     url "https://github.com/tutao/tutanota"
     strategy :github_latest
+    regex(%r{href=.*?/tutanota-release-(\d+(?:\.\d+)*)}i)
   end
 
   app "Tutanota Desktop.app"
