@@ -17,7 +17,7 @@ cask "xquartz" do
 
   auto_updates true
 
-  pkg "XQuartz.pkg"
+  pkg "Xquartz.pkg"
 
   uninstall launchctl: "org.xquartz.privileged_startx",
             pkgutil:   "org.xquartz.X11"
