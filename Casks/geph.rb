@@ -7,6 +7,8 @@ cask "geph" do
   name "Geph"
   desc "Modular Internet censorship circumvention system"
   homepage "https://geph.io/"
-
+  livecheck do
+    skip "No version information available"
+  end
   app "Geph.app"
 end
