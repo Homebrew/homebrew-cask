@@ -143,10 +143,15 @@ cask "tor-browser" do
   end
 
   url "https://dist.torproject.org/torbrowser/#{version}/TorBrowser-#{version}-osx64_#{language}.dmg"
-  appcast "https://www.torproject.org/download/"
   name "Tor Browser"
   desc "Web browser focusing on security"
   homepage "https://www.torproject.org/"
+
+  livecheck do
+    url "https://www.torproject.org/download/"
+    strategy :page_match
+    regex(%r{href=.*?/TorBrowser-(\d+(?:\.\d+)*)-osx64_.*\.dmg}i)
+  end
 
   auto_updates true
   conflicts_with cask: "homebrew/cask-versions/tor-browser-alpha"
