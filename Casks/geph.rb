@@ -9,7 +9,7 @@ cask "geph" do
   homepage "https://geph.io/"
 
   livecheck do
-    skip "No version information available"
+    skip
   end
 
   app "Geph.app"
