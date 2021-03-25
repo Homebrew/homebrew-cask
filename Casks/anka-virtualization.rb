@@ -29,6 +29,7 @@ cask "anka-virtualization" do
   zap trash: [
     "~/.anka",
     "~/Library/Application Support/Veertu/Anka",
+    "~/Library/Application Support/CrashReporter/ankahv_*.plist",
     "~/Library/Logs/Anka",
     "~/Library/Preferences/com.veertu.ankaview.plist",
     "/Library/Application Support/Veertu/Anka",
