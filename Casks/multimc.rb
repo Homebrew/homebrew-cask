@@ -12,5 +12,7 @@ cask "multimc" do
     strategy :github_latest
   end
 
+  auto_updates true
+
   app "MultiMC.app"
 end
