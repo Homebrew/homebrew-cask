@@ -7,6 +7,10 @@ cask "cloudflare-warp" do
   desc "Free app that makes your Internet safer"
   homepage "https://1.1.1.1/"
 
+  livecheck do
+    skip
+  end
+
   auto_updates true
 
   pkg "Cloudflare_WARP.pkg"
