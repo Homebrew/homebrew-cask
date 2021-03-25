@@ -11,10 +11,15 @@ cask "racket" do
     url "https://mirror.racket-lang.org/installers/#{version}/racket-#{version}-aarch64-macosx-cs.dmg"
   end
 
-  appcast "https://download.racket-lang.org/all-versions.html"
   name "Racket"
   desc "Modern programming language in the Lisp/Scheme family"
   homepage "https://racket-lang.org/"
+
+  livecheck do
+    url "https://download.racket-lang.org/all-versions.html"
+    strategy :page_match
+    regex(/racket-v?(\d+(?:\.\d+)*)/i)
+  end
 
   suite "Racket v#{version}"
   binary "#{appdir}/Racket v#{version}/bin/drracket"
