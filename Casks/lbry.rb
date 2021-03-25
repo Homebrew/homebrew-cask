@@ -8,6 +8,11 @@ cask "lbry" do
   desc "Official client for LBRY, a decentralised file-sharing and payment network"
   homepage "https://lbry.com/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "LBRY.app"
   # shim scripts (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shim_lbrynet = "#{staged_path}/lbrynet.wrapper.sh"
