@@ -4,6 +4,7 @@ cask "anaconda" do
 
   url "https://repo.anaconda.com/archive/Anaconda3-#{version}-MacOSX-x86_64.sh"
   name "Continuum Analytics Anaconda"
+  desc "Distribution of the Python and R programming languages for scientific computing"
   homepage "https://www.anaconda.com/"
 
   livecheck do
