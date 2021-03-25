@@ -1,11 +1,16 @@
 cask "tutanota" do
-  version "3.82.12.1364"
+  version "3.82.12"
   sha256 :no_check
 
   url "https://mail.tutanota.com/desktop/tutanota-desktop-mac.zip"
   name "Tutanota Desktop"
   desc "Email client"
   homepage "https://tutanota.com/"
+
+  livecheck do
+	  url "https://github.com/tutao/tutanota"
+    strategy :github_latest
+  end
 
   app "Tutanota Desktop.app"
 
