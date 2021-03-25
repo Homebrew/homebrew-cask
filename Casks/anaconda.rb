@@ -6,6 +6,12 @@ cask "anaconda" do
   name "Continuum Analytics Anaconda"
   homepage "https://www.anaconda.com/"
 
+  livecheck do
+    url "https://www.anaconda.com/products/individual"
+    strategy :page_match
+    regex(/href=.*?Anaconda3-(\d+(?:\.\d+)*)-MacOSX-x86_64\.sh/i)
+  end
+
   auto_updates true
   container type: :naked
 
