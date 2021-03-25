@@ -10,7 +10,7 @@ cask "blender" do
   livecheck do
     url "https://www.blender.org/download/"
     strategy :page_match
-    regex(/href=.*?/blender-(\d+(?:\.\d+)*)-macos\.dmg/i)
+    regex(%r{href=.*?/blender-(\d+(?:\.\d+)*)-macos\.dmg}i)
   end
 
   conflicts_with cask: "homebrew/cask-versions/blender-lts"
