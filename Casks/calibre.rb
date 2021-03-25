@@ -14,6 +14,12 @@ cask "calibre" do
   desc "E-books management software"
   homepage "https://calibre-ebook.com/"
 
+  livecheck do
+    url "https://github.com/kovidgoyal/calibre/releases/latest"
+    strategy :page_match
+    regex(%r{href=.*?/calibre-(\d+(?:\.\d+)*)\.dmg}i)
+  end
+
   conflicts_with cask: "homebrew/cask-versions/calibre4"
 
   app "calibre.app"
