@@ -7,6 +7,12 @@ cask "free42-decimal" do
   desc "HP-42S calculator simulator"
   homepage "https://thomasokken.com/free42/"
 
+  livecheck do
+    url "https://thomasokken.com/free42/history.html"
+    strategy :page_match
+    regex(/release\s*(\d+(?:\.\d+)*)/i)
+  end
+
   app "Free42 Decimal.app"
 
   zap trash: [
