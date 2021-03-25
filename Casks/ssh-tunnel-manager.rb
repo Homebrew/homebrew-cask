@@ -14,6 +14,11 @@ cask "ssh-tunnel-manager" do
     end
   end
 
+  livecheck do
+    url "https://updates.devmate.com/org.tynsoe.sshtunnelmanager.xml"
+    strategy :sparkle
+  end
+
   app "SSH Tunnel Manager.app"
 
   zap trash: "~/Library/Preferences/org.tynsoe.sshtunnelmanager.plist"

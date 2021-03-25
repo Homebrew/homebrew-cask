@@ -4,9 +4,13 @@ cask "xamarin-studio" do
 
   url "https://dl.xamarin.com/MonoDevelop/Mac/XamarinStudio-#{version}.dmg",
       verified: "dl.xamarin.com/MonoDevelop/Mac/"
-  appcast "https://xampubdl.blob.core.windows.net/static/installer_assets/v3/Mac/Universal/InstallationManifest.xml"
   name "Xamarin Studio"
   homepage "https://www.visualstudio.com/vs/visual-studio-mac/"
+
+  livecheck do
+    url "https://xampubdl.blob.core.windows.net/static/installer_assets/v3/Mac/Universal/InstallationManifest.xml"
+    strategy :sparkle
+  end
 
   conflicts_with cask: "xamarin"
 

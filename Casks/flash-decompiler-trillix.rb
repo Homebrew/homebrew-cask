@@ -12,5 +12,10 @@ cask "flash-decompiler-trillix" do
     strategy :sparkle
   end
 
+  livecheck do
+    url "https://cdn.eltima.com/download/fd-mac-update/fd-mac.xml"
+    strategy :sparkle
+  end
+
   app "Flash Decompiler Trillix.app"
 end
