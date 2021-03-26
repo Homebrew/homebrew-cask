@@ -4,10 +4,14 @@ cask "neofinder" do
 
   url "https://www.wfs-apps.de/updates/neofinder.#{version}.zip",
       verified: "wfs-apps.de/"
-  appcast "https://www.wfs-apps.de/updates/neofinder-appcast-64.xml"
   name "NeoFinder"
   desc "Digital media asset manager"
   homepage "https://www.cdfinder.de/"
+
+  livecheck do
+    url "https://www.wfs-apps.de/updates/neofinder-appcast-64.xml"
+    strategy :sparkle
+  end
 
   app "NeoFinder.app"
 end
