@@ -7,9 +7,9 @@ cask "eclipse-rcp" do
   homepage "https://eclipse.org/"
 
   livecheck do
-    url "https://projects.eclipse.org/releases/"
+    url "https://www.eclipse.org/downloads/packages/"
     strategy :page_match do |page|
-      page.scan(%r{href=.*projects.eclipse.org/releases/(\d+-\d+)}i).map do |release|
+      page.scan(%r{href="/downloads/packages/release/(\d+-\d+)"}i).map do |release|
         version_page = Net::HTTP.get(URI.parse("https://projects.eclipse.org/releases/#{release[0]}"))
         version = version_page.scan(%r{href="/projects/eclipse/releases/(\d+(?:\.\d+)*)"}i)
         "#{version[0][0]},#{release[0]}:R"

@@ -7,10 +7,13 @@ cask "eclipse-platform" do
   homepage "https://eclipse.org/"
 
   livecheck do
-    url "http://download.eclipse.org/eclipse/downloads/"
-    regex(%r{href=.*/R-(\d+(?:\.\d+)*)-(\d+)/}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+    url "https://www.eclipse.org/downloads/packages/"
+    strategy :page_match do |page|
+      page.scan(%r{href="/downloads/packages/release/(\d+-\d+)"}i).map do |release|
+        version_page = Net::HTTP.get(URI.parse("https://projects.eclipse.org/releases/#{release[0]}"))
+        version = version_page.scan(%r{href="/projects/eclipse/releases/(\d+(?:\.\d+)*)"}i)
+        "#{version[0][0]},#{release[0]}:R"
+      end
     end
   end
 
