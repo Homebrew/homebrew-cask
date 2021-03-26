@@ -5,11 +5,14 @@ cask "eudic" do
   url "https://static.frdic.com/pkg/eudicmac.dmg?v=#{version.after_comma}",
       verified:   "static.frdic.com/",
       user_agent: :fake
-  appcast "https://www.eudic.net/update/eudic_mac.xml",
-          must_contain: version.after_comma
   name "Eudic"
   name "欧路词典"
   homepage "https://www.eudic.net/v4/en/app/eudic"
+
+  livecheck do
+    url "https://www.eudic.net/update/eudic_mac.xml"
+    strategy :sparkle
+  end
 
   app "Eudic.app"
 
