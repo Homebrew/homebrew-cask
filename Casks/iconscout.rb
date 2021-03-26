@@ -6,7 +6,10 @@ cask "iconscout" do
   name "Iconscout"
   desc "Desktop toolbar for Iconscout"
   homepage "https://iconscout.com/"
-  
+
+  livecheck do
+    skip "No version information available"
+  end
 
   app "Iconscout.app"
 
@@ -17,8 +20,4 @@ cask "iconscout" do
     "~/Library/Caches/com.electron.iconscout",
     "~/Library/Caches/com.electron.iconscout.ShipIt",
   ]
-
-  livecheck do
-    skip "No version information available"
-  end
 end
