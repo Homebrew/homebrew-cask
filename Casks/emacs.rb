@@ -10,7 +10,7 @@ cask "emacs" do
   livecheck do
     url "https://emacsformacosx.com/atom/release"
     strategy :page_match
-    regex(%r{href=.*?/Emacs-(\d+(?:\.\d+)*-\d+)-universal\.dmg}i)
+    regex(%r{href=.*?/Emacs-(\d+(?:\.\d+)*(?:-\d+)?)-universal\.dmg}i)
   end
 
   conflicts_with formula: "emacs"
