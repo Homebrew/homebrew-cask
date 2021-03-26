@@ -19,4 +19,6 @@ cask "droplr" do
   depends_on macos: ">= :sierra"
 
   pkg "Droplr#{version.before_comma.no_dots}-#{version.after_comma}.pkg"
+
+  uninstall pkgutil: "com.droplr.droplr-mac"
 end
