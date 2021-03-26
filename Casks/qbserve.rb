@@ -1,6 +1,6 @@
 cask "qbserve" do
-  version "1.87"
-  sha256 "0ff31699fd05048ff8cdee780db9ac5080dee86279e866b15f24805207ebc365"
+  version "1.88"
+  sha256 "b5fe36245f5268b8a5a2a68848627fa6fcd9c7a8dbf05502f1eba8c9815d5adc"
 
   url "https://qotoqot.com/qbserve/app/Qbserve-#{version}.zip"
   name "Qbserve"
