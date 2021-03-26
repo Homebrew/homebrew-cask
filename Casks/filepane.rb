@@ -9,10 +9,10 @@ cask "filepane" do
   homepage "https://mymixapps.com/filepane"
 
   livecheck do
+    skip "timestamp is not contained in the appcast"
+
     url "https://updates.devmate.com/com.mymixapps.FilePane.xml"
     strategy :sparkle
-
-    skip "timestamp is not contained in the appcast"
   end
 
   app "FilePane.app"
