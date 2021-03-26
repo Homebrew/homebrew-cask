@@ -1,9 +1,10 @@
 cask "emacs" do
-  version "27.1-1"
-  sha256 "67688cfa124544a2d41d62ad33dcd12843679a1bd48e870836044d9a0bb9b062"
+  version "27.2"
+  sha256 "fad00b2329cc2a375ca280f703991541325125e731c2057c69316d773517fcbc"
 
   url "https://emacsformacosx.com/emacs-builds/Emacs-#{version}-universal.dmg"
   name "Emacs"
+  desc "Extensible, customizable, free/libre text editor - and more"
   homepage "https://emacsformacosx.com/"
 
   livecheck do
