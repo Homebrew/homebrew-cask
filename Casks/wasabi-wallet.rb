@@ -1,6 +1,6 @@
 cask "wasabi-wallet" do
-  version "1.1.12.5"
-  sha256 "6dd0393f1828e11559c220a5fd68bf54db45c036474af4275ffc50cf3775c229"
+  version "1.1.12.6"
+  sha256 "bcd392e0be832078569b518e2e1f72e49485b56cac29c203746bd47794468a50"
 
   url "https://github.com/zkSNACKs/WalletWasabi/releases/download/v#{version}/Wasabi-#{version}.dmg",
       verified: "github.com/zkSNACKs/WalletWasabi/"
