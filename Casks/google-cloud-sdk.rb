@@ -2,15 +2,15 @@ cask "google-cloud-sdk" do
   version "333.0.0"
   sha256 "ed55af0312925a0685fd7d14f459dfb973f826b90ab81eb10ee947413a284c87"
 
-  livecheck do
-    url "https://dl.google.com/dl/cloudsdk/channels/rapid/components-2.json"
-    regex(/  \"version\": \"(\d+\.\d+\.\d+)\"\n\}$/i)
-  end
-
   url "https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-#{version}-darwin-x86_64.tar.gz"
   name "Google Cloud SDK"
   desc "Set of tools to manage resources and applications hosted on Google Cloud"
   homepage "https://cloud.google.com/sdk/"
+
+  livecheck do
+    url "https://dl.google.com/dl/cloudsdk/channels/rapid/components-2.json"
+    regex(/  "version": "(\d+\.\d+\.\d+)"\n\}$/i)
+  end
 
   auto_updates true
   depends_on formula: "python"
