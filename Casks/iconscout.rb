@@ -4,7 +4,7 @@ cask "iconscout" do
 
   url "https://iconscout.com/download/v#{version}/Iconscout-#{version}.dmg"
   name "Iconscout"
-  desc "Iconscout desktop app"
+  desc "Desktop toolbar for Iconscout"
   homepage "https://iconscout.com/"
 
   app "Iconscout.app"
