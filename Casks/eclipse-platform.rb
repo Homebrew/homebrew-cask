@@ -1,6 +1,6 @@
 cask "eclipse-platform" do
-  version "4.19,202103031800"
-  sha256 "0b19648afda7b5773c0e5f93c1eab101662a5df6680225413e62d084c29d856e"
+  version "4.19.0,2021-03:R"
+  sha256 "2c80ef71f6b171393667f5b0dfde1bc15a7ef6a45e7175ddba5809f475777ce0"
 
   url "https://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops#{version.major}/R-#{version.before_comma}-#{version.after_comma}/eclipse-SDK-#{version.before_comma}-macosx-cocoa-x86_64.dmg&r=1"
   name "Eclipse SDK"
