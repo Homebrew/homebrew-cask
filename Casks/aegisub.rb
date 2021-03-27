@@ -2,11 +2,15 @@ cask "aegisub" do
   version "3.2.2"
   sha256 "d71fa46f074a2d5a252f30779e0b8d913d5157258f5d9fc333411f8c9493f42b"
 
-  url "http://ftp.aegisub.org/pub/releases/Aegisub-#{version}.dmg"
-  appcast "http://www.aegisub.org/downloads/#current"
+  url "https://github.com/Aegisub/Aegisub/releases/download/v#{version}/Aegisub-#{version}.dmg"
   name "Aegisub"
-  desc "Cross-platform, open-source tool for creating and modifying subtitles"
-  homepage "http://www.aegisub.org/"
+  desc "Create and modify subtitles"
+  homepage "https://github.com/Aegisub/Aegisub"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Aegisub.app"
 

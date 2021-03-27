@@ -1,13 +1,27 @@
 cask "pycharm-ce" do
-  version "2020.3,203.5981.165"
-  sha256 "43dcb5c29298aec7e7a4ca8cad610404fcc1e53504c2e9993f019de8095525b1"
+  version "2020.3.4,203.7717.65"
 
-  url "https://download.jetbrains.com/python/pycharm-community-#{version.before_comma}.dmg"
-  appcast "https://data.services.jetbrains.com/products/releases?code=PCC&latest=true&type=release"
+  if Hardware::CPU.intel?
+    sha256 "c6542cc304e0b9d931fdb7f91e962006dffd4cb45cbe7f79739ecfd2677281a4"
+    url "https://download.jetbrains.com/python/pycharm-community-#{version.before_comma}.dmg"
+  else
+    sha256 "faa93f789bb588115b4f702a14ae962bbfcc99b9eb66fbbd2a0a655f3f192754"
+    url "https://download.jetbrains.com/python/pycharm-community-#{version.before_comma}-aarch64.dmg"
+  end
+
   name "Jetbrains PyCharm Community Edition"
   name "PyCharm CE"
   desc "Free and open-source IDE for Python programming - Community Edition"
   homepage "https://www.jetbrains.com/pycharm/"
+
+  livecheck do
+    url "https://data.services.jetbrains.com/products/releases?code=PCC&latest=true&type=release"
+    strategy :page_match do |page|
+      version = page.match(/"version":"(\d+(?:\.\d+)*)/i)
+      build = page.match(/"build":"(\d+(?:\.\d+)*)/i)
+      "#{version[1]},#{build[1]}"
+    end
+  end
 
   auto_updates true
 

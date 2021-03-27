@@ -2,12 +2,16 @@ cask "authy" do
   version "1.8.3"
   sha256 "7c276cabcacfdcde4c695f93b2065c4499c25849831e8316aaedb75750ccd559"
 
-  # authy-electron-repository-production.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://authy-electron-repository-production.s3.amazonaws.com/authy/stable/#{version}/darwin/x64/Authy%20Desktop-#{version}.dmg"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://electron.authy.com/download%3Fchannel=stable%26arch=x64%26platform=darwin%26version=latest%26product=authy"
+  url "https://authy-electron-repository-production.s3.amazonaws.com/authy/stable/#{version}/darwin/x64/Authy%20Desktop-#{version}.dmg",
+      verified: "authy-electron-repository-production.s3.amazonaws.com/"
   name "Authy Desktop"
   desc "Two-factor authentication software"
   homepage "https://authy.com/"
+
+  livecheck do
+    url "https://electron.authy.com/download?channel=stable&arch=x64&platform=darwin&version=latest&product=authy"
+    strategy :header_match
+  end
 
   auto_updates true
 

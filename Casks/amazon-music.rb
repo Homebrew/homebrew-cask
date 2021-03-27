@@ -1,9 +1,9 @@
 cask "amazon-music" do
-  version "8.0.0.2229,22291029_f175a7c624388fac90425033a604202d"
-  sha256 "6797c6e044cbe62a59b6f3c9fa5152c2cfa3dff4b43e6230f0007f2b6e8d3272"
+  version "8.2.1.2239,01222239_032a1615c80950ffb972ac9e3e043bdd"
+  sha256 "623147209fc618907a2a4a9668b5b0411a2822306342ab232e681751d72dedb0"
 
-  # morpho-releases.s3-us-west-2.amazonaws.com/mac/ was verified as official when first introduced to the cask
-  url "https://morpho-releases.s3-us-west-2.amazonaws.com/mac/#{version.after_comma}/AmazonMusicInstaller.dmg"
+  url "https://morpho-releases.s3-us-west-2.amazonaws.com/mac/#{version.after_comma}/Amazon+Music+Installer.dmg",
+      verified: "morpho-releases.s3-us-west-2.amazonaws.com/mac/"
   appcast "https://www.amazon.com/gp/dmusic/desktop/downloadPlayer",
           must_contain: version.after_comma
   name "Amazon Music"
@@ -27,8 +27,12 @@ cask "amazon-music" do
             ]
 
   zap trash: [
-    "~/Library/Preferences/com.amazon.music.plist",
     "~/Library/Application Support/Amazon Music",
+    "~/Library/LaunchAgents/com.amazon.music.plist",
+    "~/Library/LaunchAgents/com.amazon.music.startup.plist",
+    "~/Library/Preferences/com.amazon.music-renderer.plist",
+    "~/Library/Preferences/com.amazon.music.plist",
+    "~/Library/Saved Application State/com.amazon.music.savedState",
   ]
 
   caveats <<~EOS

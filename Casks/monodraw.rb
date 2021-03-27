@@ -1,13 +1,18 @@
 cask "monodraw" do
-  version "1.5,b107"
+  version "1.5,107"
   sha256 "f5f9042605bd9f80efd0a0a634c27f04ff079e2e55d12491d0c9f22fd4f0a09c"
 
-  url "https://updates.helftone.com/monodraw/downloads/Monodraw-#{version.after_comma}.zip"
-  appcast "https://updates.helftone.com/monodraw/appcast-beta.xml"
+  url "https://updates.helftone.com/monodraw/downloads/Monodraw-b#{version.after_comma}.zip"
   name "Monodraw"
   desc "Tool to create text-based art"
   homepage "https://monodraw.helftone.com/"
 
+  livecheck do
+    url "https://updates.helftone.com/monodraw/appcast-beta.xml"
+    strategy :sparkle
+  end
+
+  auto_updates true
   depends_on macos: ">= :mojave"
 
   app "Monodraw.app"

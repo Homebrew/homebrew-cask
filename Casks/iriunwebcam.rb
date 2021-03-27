@@ -1,12 +1,17 @@
 cask "iriunwebcam" do
-  version "2.4.2"
-  sha256 "047a0568dc3f96ffac7dedd520bab6f71da153a7409561cc87c6872167a589eb"
+  version "2.4.6"
+  sha256 "f56a2d20a96d7da48ea8fcc673a69f2e05e1683d68aed42245d65f05b36cd12d"
 
-  # 1758658189.rsc.cdn77.org/ was verified as official when first introduced to the cask
-  url "https://1758658189.rsc.cdn77.org/IriunWebcam-#{version}.pkg"
-  appcast "https://iriun.com/"
+  url "https://1758658189.rsc.cdn77.org/IriunWebcam-#{version}.pkg",
+      verified: "1758658189.rsc.cdn77.org/"
   name "Iriun"
   homepage "https://iriun.com/"
+
+  livecheck do
+    url "https://iriun.com/"
+    strategy :page_match
+    regex(%r{href=.*?/IriunWebcam-(\d+(?:\.\d+)*)\.pkg}i)
+  end
 
   pkg "IriunWebcam-#{version}.pkg"
 

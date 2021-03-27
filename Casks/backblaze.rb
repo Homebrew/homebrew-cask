@@ -1,13 +1,17 @@
 cask "backblaze" do
-  version "7.0.2.470"
-  sha256 "041d0c1372c8d999cb3e2d12abc1071e72839955601da7d2d95bd27b009d6b53"
+  version "7.0.2.492"
+  sha256 "bec93cfedb5726aff1f1a67d85a1552428260f6ba2875a036600b18cc6a2dcfa"
 
   url "https://secure.backblaze.com/api/install_backblaze?file=bzinstall-mac-#{version}.zip"
-  appcast "https://secure.backblaze.com/api/clientversion.xml",
-          must_contain: "mac_version=\"#{version}\""
   name "Backblaze"
   desc "Data backup and storage service"
   homepage "https://backblaze.com/"
+
+  livecheck do
+    url "https://secure.backblaze.com/api/clientversion.xml"
+    strategy :page_match
+    regex(/mac_version=.*?(\d+(?:\.\d+)*)/i)
+  end
 
   auto_updates true
 

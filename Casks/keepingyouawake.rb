@@ -2,12 +2,17 @@ cask "keepingyouawake" do
   version "1.6.0"
   sha256 "e3475e9cfa2e7c49a6eca1befecdaf2be8a705919fe46881b2f4fe9360c1d6d5"
 
-  # github.com/newmarcel/KeepingYouAwake/ was verified as official when first introduced to the cask
-  url "https://github.com/newmarcel/KeepingYouAwake/releases/download/#{version}/KeepingYouAwake-#{version}.zip"
-  appcast "https://github.com/newmarcel/KeepingYouAwake/releases.atom"
+  url "https://github.com/newmarcel/KeepingYouAwake/releases/download/#{version}/KeepingYouAwake-#{version}.zip",
+      verified: "github.com/newmarcel/KeepingYouAwake/"
   name "KeepingYouAwake"
   desc "Tool to prevent the system from going into sleep mode"
   homepage "https://keepingyouawake.app/"
+
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^v?(\d+(?:\.\d+)*)$/)
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"

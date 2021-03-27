@@ -1,12 +1,16 @@
 cask "displays" do
-  version "1.9.6"
-  sha256 "a8ac215d8334a09e1dc8da4b9db12266512087b19842d231e6e92773e585d478"
+  version "1.9.8,110"
+  sha256 "33357f298d380513d89e6780eccad7edc07c816c844ac7c6f3c385992bff3a5f"
 
-  url "https://www.jibapps.com/ressources/displays/files/Displays.#{version}.zip"
-  appcast "https://www.jibapps.com/ressources/displays/appcast.xml"
+  url "https://www.jibapps.com/ressources/displays/files/Displays.#{version.before_comma}.zip"
   name "Displays"
   desc "Monitor resolution and settings manager"
   homepage "https://www.jibapps.com/apps/displays/"
+
+  livecheck do
+    url "https://www.jibapps.com/ressources/displays/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 

@@ -1,11 +1,15 @@
 cask "middle" do
-  version "1.5.7"
-  sha256 "0778fd70e1e69ae5508062f7050f1c662389ed67c99e475c56f0eaba8fee424a"
+  version "1.5.20,54"
+  sha256 "39c87a2308affb21aabeb8f7e46c898f16e75f01304cd9136aa11841f97542e6"
 
-  url "https://middleclick.app/downloads/Middle#{version}.dmg"
-  appcast "https://middleclick.app/downloads/updates.xml"
+  url "https://middleclick.app/downloads/Middle#{version.before_comma}.dmg"
   name "Middle"
   homepage "https://middleclick.app/"
+
+  livecheck do
+    url "https://middleclick.app/downloads/updates.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 

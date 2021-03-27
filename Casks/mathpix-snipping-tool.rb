@@ -1,12 +1,16 @@
 cask "mathpix-snipping-tool" do
-  version "2.7.1,192"
+  version "3.1,202"
   sha256 :no_check
 
   url "https://mathpix.com/dmg/snip.dmg"
-  appcast "https://mathpix.com/appcast.xml"
   name "Mathpix Snipping Tool"
   desc "Scanner app for math and science"
   homepage "https://mathpix.com/"
+
+  livecheck do
+    url "https://mathpix.com/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"

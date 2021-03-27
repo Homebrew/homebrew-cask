@@ -3,9 +3,13 @@ cask "deckset" do
   sha256 "8a5518e538137a54c70bf6e9e285b965f5da1ff60e13af77ce3ac9b6dc524fb9"
 
   url "https://dl.decksetapp.com/Deckset+#{version.before_comma}+(#{version.after_comma}).dmg"
-  appcast "https://dl.decksetapp.com/appcast.xml"
   name "Deckset"
   homepage "https://www.decksetapp.com/"
+
+  livecheck do
+    url "https://dl.decksetapp.com/appcast.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :sierra"
 

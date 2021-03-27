@@ -1,12 +1,17 @@
 cask "radio-silence" do
-  version "2.3"
-  sha256 "4c9b6db366d542ad9bc839dc496521ff7133e13d0c71435cacf30f449718f0d6"
+  version "3.0"
+  sha256 "fbd864e3a2d17dbfe17ab29b97f6a7c38eea20cd2dbde1b28c5b67db1e7d33ad"
 
   url "https://radiosilenceapp.com/downloads/Radio_Silence_#{version}.pkg"
-  appcast "https://radiosilenceapp.com/update"
   name "Radio Silence"
   desc "Network monitor and firewall"
   homepage "https://radiosilenceapp.com/"
+
+  livecheck do
+    url "https://radiosilenceapp.com/update"
+    strategy :page_match
+    regex(%r{href=.*?/Radio_Silence_(\d+(?:\.\d+)*)\.pkg}i)
+  end
 
   pkg "Radio_Silence_#{version}.pkg"
 

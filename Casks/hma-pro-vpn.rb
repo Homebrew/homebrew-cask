@@ -2,8 +2,8 @@ cask "hma-pro-vpn" do
   version :latest
   sha256 :no_check
 
-  # s-mac-sl.avcdn.net/ was verified as official when first introduced to the cask
-  url "https://s-mac-sl.avcdn.net/macosx/privax/HMA-Pro-VPN.dmg"
+  url "https://s-mac-sl.avcdn.net/macosx/privax/HMA-Pro-VPN.dmg",
+      verified: "s-mac-sl.avcdn.net/"
   name "HMA! Pro VPN"
   name "HideMyAss! Pro VPN"
   homepage "https://www.hidemyass.com/index"

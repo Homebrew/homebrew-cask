@@ -1,6 +1,6 @@
 cask "parallels" do
-  version "16.1.1-49141"
-  sha256 "daf6da60fa5b53353b43c3b9a95ce3c29648e78e6a9734975a55a4f5e79e8839"
+  version "16.1.3-49160"
+  sha256 "a2faaba504f32c57d70431bc74f2c10785949de70f7beab494c1cb13901938e0"
 
   url "https://download.parallels.com/desktop/v#{version.major}/#{version}/ParallelsDesktop-#{version}.dmg"
   appcast "https://kb.parallels.com/en/125053"
@@ -42,9 +42,11 @@ cask "parallels" do
 
   zap trash: [
     "~/.parallels_settings",
+    "~/Library/Application Scripts/com.parallels.desktop*",
     "~/Library/Caches/com.apple.helpd/Generated/com.parallels.desktop.console.help*",
     "~/Library/Caches/com.parallels.desktop.console",
     "~/Library/Caches/Parallels Software/Parallels Desktop",
+    "~/Library/Containers/com.parallels.desktop*",
     "~/Library/Logs/parallels.log",
     "~/Library/Parallels/Parallels Desktop",
     "~/Library/Preferences/com.parallels.desktop.console.LSSharedFileList.plist",

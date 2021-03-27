@@ -1,10 +1,9 @@
 cask "nota" do
-  version "0.19.1"
-  sha256 "0dd82fc7348e8fca93bf3dc732d9861066d4ff84c64589dd657a4f7691a293cc"
+  version "0.24.1"
+  sha256 "4485f37ba36eebbedd200c0b396747829047e16f9e2bdd9d869c140f41c1ea6a"
 
-  # github.com/notaapp/releases/ was verified as official when first introduced to the cask
-  url "https://github.com/notaapp/releases/releases/download/#{version}/Nota-#{version}-mac.zip"
-  appcast "https://github.com/notaapp/releases/releases.atom"
+  url "https://github.com/notaapp/releases/releases/download/#{version}/Nota-#{version}-mac.zip",
+      verified: "github.com/notaapp/releases/"
   name "Nota"
   desc "Markdown files editor"
   homepage "https://nota.md/"

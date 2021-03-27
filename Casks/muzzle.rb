@@ -3,10 +3,14 @@ cask "muzzle" do
   sha256 "d3f681c5a6e7e13a65dc4e15754d4ec0930d32cdb71637f13859c51a30b4deab"
 
   url "https://muzzleapp.com/binaries/muzzle-#{version.after_comma}.zip"
-  appcast "https://muzzleapp.com/api/1/appcast.xml"
   name "Muzzle"
   desc "Silence embarrassing notifications while screensharing"
   homepage "https://muzzleapp.com/"
+
+  livecheck do
+    url "https://muzzleapp.com/api/1/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :mojave"

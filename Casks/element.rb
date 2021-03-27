@@ -1,20 +1,23 @@
 cask "element" do
-  version "1.7.15"
-  sha256 "28fb6d258de7911f2c023e753416785e4e7d7f10e107f0f52444cf9969cd14bc"
+  version "1.7.23"
+  sha256 "8a0a20df393c11052aa31faf7816d710af50753b96acb5d10a1ff52c83740646"
 
-  # packages.riot.im/desktop was verified as official when first introduced to the cask
-  url "https://packages.riot.im/desktop/install/macos/Element-#{version}.dmg"
-  appcast "https://github.com/vector-im/riot-desktop/releases.atom"
-  name "Element (Riot)"
+  url "https://packages.riot.im/desktop/install/macos/Element-#{version}.dmg",
+      verified: "packages.riot.im/desktop/"
+  name "Element"
   desc "Matrix collaboration client"
   homepage "https://element.io/get-started"
+
+  livecheck do
+    url "https://github.com/vector-im/riot-desktop"
+    strategy :git
+  end
 
   auto_updates true
 
   app "Element.app"
 
   zap trash: [
-    "~/Library/Application Support/Element (Riot)",
     "~/Library/Application Support/Element",
     "~/Library/Application Support/Riot",
     "~/Library/Caches/im.riot.app",

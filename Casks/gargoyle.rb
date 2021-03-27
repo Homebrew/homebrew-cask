@@ -3,10 +3,16 @@ cask "gargoyle" do
   sha256 "239cd26ba6063a302c6cd12d8241cff0f2837f31ce89f9dc2718e4dcd4cfecc7"
 
   url "https://github.com/garglk/garglk/releases/download/#{version}/gargoyle-#{version}-mac-nota.dmg"
-  appcast "https://github.com/garglk/garglk/releases.atom"
   name "Gargoyle"
-  desc "Cross-platform IO layer for an interactive fiction player"
+  desc "IO layer for interactive fiction players"
   homepage "https://github.com/garglk/garglk"
+
+  # We need to check all releases since not all releases are for macOS.
+  livecheck do
+    url "https://github.com/garglk/garglk/releases"
+    strategy :page_match
+    regex(%r{href=.*?/gargoyle-(\d+(?:\.\d+)*)-mac-nota\.dmg}i)
+  end
 
   app "Gargoyle.app"
 end

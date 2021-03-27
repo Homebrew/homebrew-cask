@@ -1,5 +1,5 @@
 cask "avast-secureline-vpn" do
-  version :latest
+  version "2.1.4"
   sha256 :no_check
 
   url "http://mac.sl.d.avast.com/mac/avast_secureline.dmg"

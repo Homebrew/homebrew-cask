@@ -11,13 +11,17 @@ cask "couchbase-server-enterprise" do
     sha256 "9ee7d7c9fd26f48676b06b39e205f45b89c9212a3a370f91ee19b585615f3597"
 
     url "https://packages.couchbase.com/releases/#{version}/couchbase-server-enterprise_#{version}-macos_x86_64.dmg"
-    appcast "http://appcast.couchbase.com/membasex.xml"
 
     app "Couchbase Server.app"
   end
 
   name "Couchbase Server"
   homepage "https://www.couchbase.com/"
+
+  livecheck do
+    url "http://appcast.couchbase.com/membasex.xml"
+    strategy :sparkle
+  end
 
   conflicts_with cask: "couchbase-server-community"
 end

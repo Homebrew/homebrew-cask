@@ -11,4 +11,9 @@ cask "soundboosterlite" do
   uninstall quit:      "com.froyosoft.SoundBoosterLite",
             launchctl: "com.froyosoft.soundboosterxpc",
             pkgutil:   "com.froyosoft.pkg.SoundBoosterLite"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.froyosoft.SoundBoosterLite",
+    "~/Library/Containers/com.froyosoft.SoundBoosterLite",
+  ]
 end

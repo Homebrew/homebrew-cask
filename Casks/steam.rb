@@ -1,12 +1,22 @@
 cask "steam" do
-  version :latest
+  version "2021-02-13"
   sha256 :no_check
 
-  # steamcdn-a.akamaihd.net/ was verified as official when first introduced to the cask
-  url "https://steamcdn-a.akamaihd.net/client/installer/steam.dmg"
+  url "https://steamcdn-a.akamaihd.net/client/installer/steam.dmg",
+      verified: "steamcdn-a.akamaihd.net/"
   name "Steam"
   desc "Video game digital distribution service"
   homepage "https://store.steampowered.com/about/"
+
+  livecheck do
+    url "https://store.steampowered.com/oldnews/?feed=steam_client"
+    strategy :page_match do |page|
+      date = Time.parse(page[/class=["']?date["']?[^>]*>([^<]+)/i, 1])
+      date.strftime("%Y-%m-%d")
+    end
+  end
+
+  auto_updates true
 
   app "Steam.app"
 

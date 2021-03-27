@@ -1,12 +1,16 @@
 cask "feed-the-beast" do
-  version "202011261605-2be2c6a678-release"
-  sha256 "47ae66483fab1837e7bc8ae0f9a23a883227ab2db87dfef3b7e7dfd429e2e4d6"
+  version "202101041428-54016a89dc"
+  sha256 "e2ad72443d003c8b46a4c973bbb711de71cdcb8ac51dc90289e6d4e438196c65"
 
-  # apps.modpacks.ch/FTBApp/ was verified as official when first introduced to the cask
-  url "https://apps.modpacks.ch/FTBApp/release/#{version}/FTBA_macos_#{version.dots_to_underscores}.dmg"
-  appcast "https://www.feed-the-beast.com/app_release.xml"
+  url "https://apps.modpacks.ch/FTBApp/release/#{version}-release/FTBA_macos_#{version}-release.dmg",
+      verified: "apps.modpacks.ch/FTBApp/"
   name "Feed the Beast"
   homepage "https://www.feed-the-beast.com/"
+
+  livecheck do
+    url "https://www.feed-the-beast.com/app_release.xml"
+    regex(/FTBA_macos_(\d+-[a-f0-9]+)-release\.dmg/i)
+  end
 
   app "FTBApp.app"
 

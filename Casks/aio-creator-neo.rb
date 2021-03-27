@@ -1,9 +1,9 @@
 cask "aio-creator-neo" do
-  version :latest
+  version "2.9.3"
   sha256 :no_check
 
-  # s3-eu-west-1.amazonaws.com/mediola-download/ was verified as official when first introduced to the cask
-  url "https://s3-eu-west-1.amazonaws.com/mediola-download/creator_neo/release/aioCreatorNeoInstaller.dmg"
+  url "https://s3-eu-west-1.amazonaws.com/mediola-download/creator_neo/release/aioCreatorNeoInstaller.dmg",
+      verified: "s3-eu-west-1.amazonaws.com/mediola-download/"
   name "AIO CREATOR NEO"
   desc "Automation manager for smart home devices"
   homepage "https://www.mediola.com/en/products"

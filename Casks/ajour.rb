@@ -1,12 +1,17 @@
 cask "ajour" do
-  version "0.5.4"
-  sha256 "7a00548b5f9c6fbc183fb5501c9936853850131bc803b550ab20886e8e8b811f"
+  version "1.0.0"
+  sha256 "04eadbbd80c49dffd506d52023a8ad9673d6df7fd3ade09444cf2d644e22cbd2"
 
   url "https://github.com/casperstorm/ajour/releases/download/#{version}/ajour.dmg"
-  appcast "https://github.com/casperstorm/ajour/releases.atom"
   name "Ajour"
   desc "World of Warcraft addon manager"
   homepage "https://github.com/casperstorm/ajour"
+
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^(\d+(?:\.\d+)*)$/i)
+  end
 
   app "Ajour.app"
 

@@ -6,5 +6,11 @@ cask "cryo" do
   name "cryo"
   homepage "https://cryonet.io/"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/cryo_(\d+(?:\.\d+)*)_macos\.zip}i)
+  end
+
   app "cryo.app"
 end

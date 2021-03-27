@@ -1,14 +1,18 @@
 cask "houdahspot" do
-  version "6.0"
-  sha256 "649e6db7eaef750abcdb2f9d256cd0f69b48ef0d2f384eceb997e6859587a07e"
+  version "6.0.4,576"
+  sha256 "0ae5616f602cb8790089e8b01403240a0a77ff2371778b1fe79d4d1ea3caf944"
 
-  url "https://dl.houdah.com/houdahSpot/updates/cast#{version.major}_assets/HoudahSpot#{version}.zip"
-  appcast "https://www.houdah.com/houdahSpot/updates/cast#{version.major}.xml"
+  url "https://dl.houdah.com/houdahSpot/updates/cast#{version.major}_assets/HoudahSpot#{version.before_comma}.zip"
   name "HoudahSpot"
   desc "File searching application"
   homepage "https://www.houdah.com/houdahSpot/"
 
-  depends_on macos: ">= :high_sierra"
+  livecheck do
+    url "https://www.houdah.com/houdahSpot/updates/cast#{version.major}.xml"
+    strategy :sparkle
+  end
+
+  depends_on macos: ">= :mojave"
 
   app "HoudahSpot.app"
 end

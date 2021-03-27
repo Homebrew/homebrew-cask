@@ -1,12 +1,16 @@
 cask "imgotv" do
-  version "6.3.6"
-  sha256 "8fde36fcb283cb83cd4c1a5f8eb8f3c187c5859039dff42b7e702c4e4fb5ee99"
+  version "6.3.9"
+  sha256 "dce3c23f6f4afb1f01a78e351df04c471d4e0adab934811f1b41d43cae43cffa"
 
-  # download.imgo.tv/ was verified as official when first introduced to the cask
-  url "https://download.imgo.tv/app/mac/#{version}/mgtv-mango-#{version}.dmg"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?user_agent=Mac%20OS%20X&url=https://pcconf.api.mgtv.com/getPcDownloadUrl?source=mango2"
+  url "https://download.imgo.tv/app/mac/#{version}/mgtv-mango-#{version}.dmg",
+      verified: "download.imgo.tv/"
   name "芒果TV"
   homepage "https://www.mgtv.com/app/"
+
+  livecheck do
+    url "https://pcconf.api.mgtv.com/getPcDownloadUrl?source=mango2"
+    strategy :header_match
+  end
 
   auto_updates true
   depends_on macos: ">= :yosemite"

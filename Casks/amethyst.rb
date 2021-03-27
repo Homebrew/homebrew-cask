@@ -6,14 +6,18 @@ cask "amethyst" do
   else
     version "0.15.4"
     sha256 "a3519c308134da7c47c502051e351da81b0e04596eec15b1d2a41a2d7ddbc59a"
-    # github.com/ianyh/Amethyst/ was verified as official when first introduced to the cask
-    url "https://github.com/ianyh/Amethyst/releases/download/v#{version}/Amethyst.zip"
+    url "https://github.com/ianyh/Amethyst/releases/download/v#{version}/Amethyst.zip",
+        verified: "github.com/ianyh/Amethyst/"
   end
 
-  appcast "https://github.com/ianyh/Amethyst/releases.atom"
   name "Amethyst"
   desc "Automatic tiling window manager similar to xmonad"
   homepage "https://ianyh.com/amethyst/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
 

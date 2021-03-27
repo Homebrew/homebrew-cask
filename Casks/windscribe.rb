@@ -1,5 +1,5 @@
 cask "windscribe" do
-  version :latest
+  version "1.83.1.25"
   sha256 :no_check
 
   url "https://assets.windscribe.com/desktop/mac/Windscribe.dmg"

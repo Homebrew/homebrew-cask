@@ -2,12 +2,16 @@ cask "airflow" do
   version "3.2.0"
   sha256 "71f078b3fdce42b40dabf6131dc28d563487e1759db538732a6e91cc1328ba05"
 
-  # cdn.downloads.iocave.net/Airflow/ was verified as official when first introduced to the cask
-  url "https://cdn.downloads.iocave.net/Airflow/Airflow%20#{version}.zip"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://airflowapp.com/download/latest?mac"
+  url "https://cdn.downloads.iocave.net/Airflow/Airflow%20#{version}.zip",
+      verified: "cdn.downloads.iocave.net/Airflow/"
   name "Airflow"
   desc "Watch local content on Apple TV and Chromecast"
   homepage "https://airflowapp.com/"
+
+  livecheck do
+    url "https://airflowapp.com/download/latest?mac"
+    strategy :header_match
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"

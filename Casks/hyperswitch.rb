@@ -1,11 +1,15 @@
 cask "hyperswitch" do
-  version "0.2.591-dev"
-  sha256 "a031571695d204b50ade3c72b2e1512f3a07d1c1234820cb1f3a38fd8906709a"
+  version "0.2.592-dev"
+  sha256 "7e4a24e160e5ff77624efbde93fb7ae74dced46f4bfeec869c6184437ca4cf1a"
 
   url "https://bahoom.com/hyperswitch/#{version}/HyperSwitch.zip"
-  appcast "https://bahoom.com/hyperswitch/appcast.xml"
   name "HyperSwitch"
   homepage "https://bahoom.com/hyperswitch/"
+
+  livecheck do
+    url "https://bahoom.com/hyperswitch/appcast.xml"
+    strategy :sparkle, &:short_version
+  end
 
   auto_updates true
 

@@ -2,9 +2,8 @@ cask "harmony" do
   version "0.9.1"
   sha256 "c62e010fea64b5ff5f5ca54a58575f3fa5e98d01cf7bc88dc2fb4368437b6f50"
 
-  # github.com/vincelwt/harmony/ was verified as official when first introduced to the cask
-  url "https://github.com/vincelwt/harmony/releases/download/v#{version}/harmony-#{version}-mac.app.zip"
-  appcast "https://github.com/vincelwt/harmony/releases.atom"
+  url "https://github.com/vincelwt/harmony/releases/download/v#{version}/harmony-#{version}-mac.app.zip",
+      verified: "github.com/vincelwt/harmony/"
   name "Harmony"
   desc "Music player"
   homepage "https://getharmony.xyz/"

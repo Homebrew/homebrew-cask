@@ -3,9 +3,13 @@ cask "magicprefs" do
   sha256 :no_check
 
   url "http://magicprefs.com/MagicPrefs.app.zip"
-  appcast "http://magicprefs.com/appcast.xml"
   name "MagicPrefs"
   homepage "http://magicprefs.com/"
+
+  livecheck do
+    url "http://magicprefs.com/appcast.xml"
+    strategy :sparkle
+  end
 
   app "MagicPrefs.app"
 

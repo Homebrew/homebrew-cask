@@ -1,8 +1,16 @@
 cask "adobe-creative-cloud" do
-  version "5.3.1.470"
-  sha256 "9e0c49b0078f2ad76129185ddfb3467a8061c7e160e71b877617f899fca62d5a"
+  version "5.4.1.534"
 
-  url "https://ccmdl.adobe.com/AdobeProducts/KCCC/CCD/#{version.major_minor_patch.dots_to_underscores}/osx10/ACCCx#{version.dots_to_underscores}.dmg"
+  if Hardware::CPU.intel?
+    sha256 "dd71684c8189532356e10c3347edbb62c95cd5d76cf75ad8bcc1c871308f62e2"
+
+    url "https://ccmdl.adobe.com/AdobeProducts/KCCC/CCD/#{version.major_minor_patch.dots_to_underscores}/osx10/ACCCx#{version.dots_to_underscores}.dmg"
+  else
+    sha256 "cd8a62869e68c90885fca738e8184c6091a20bb55b56a1d93cc123aa69994417"
+
+    url "https://ccmdl.adobe.com/AdobeProducts/KCCC/CCD/#{version.major_minor_patch.dots_to_underscores}/macarm64/ACCCx#{version.dots_to_underscores}.dmg"
+  end
+
   name "Adobe Creative Cloud"
   desc "Collection of apps and services for photography, design, video, web, and UX"
   homepage "https://www.adobe.com/creativecloud.html"
@@ -22,7 +30,7 @@ cask "adobe-creative-cloud" do
 
   uninstall_postflight do
     stdout, * = system_command "/bin/launchctl", args: ["print", "gui/#{Process.uid}"]
-    ccx_processes = stdout.lines.grep(/com\.adobe\.CCXProcess\.\d{5}/) { $& }.uniq
+    ccx_processes = stdout.lines.grep(/com\.adobe\.CCXProcess\.\d{5}/) { Regexp.last_match(0) }.uniq
     ccx_processes.each { |id| system "/bin/launchctl", "bootout", "gui/#{Process.uid}/#{id}" }
   end
 

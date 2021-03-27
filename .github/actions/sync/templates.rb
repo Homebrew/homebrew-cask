@@ -19,7 +19,7 @@ puts 'Detecting changes…'
   '.github/*.md',
   '.github/*.yml',
   '.github/actions/{automerge}/**/*',
-  '.github/ISSUE_TEMPLATE/*.md',
+  '.github/ISSUE_TEMPLATE/*.{md,yml}',
   '.github/workflows/{automerge,cache,ci,dispatch-command,rebase,rerun-workflow,review,self-approve}.yml',
   '.gitignore',
   '.travis.yml',
@@ -38,7 +38,7 @@ puts 'Detecting changes…'
   end
 end
 
-FileUtils.rm repo_dir.join('.github/ISSUE_TEMPLATE/02_feature_request.md')
+FileUtils.rm repo_dir.join('.github/ISSUE_TEMPLATE/02_feature_request.yml')
 
 workflow = File.read(repo_dir.join('.github/PULL_REQUEST_TEMPLATE.md'))
 File.write repo_dir.join('.github/PULL_REQUEST_TEMPLATE.md'), workflow.gsub(/Homebrew\/homebrew-cask\/(pulls|issues|search)/, "#{repo}/\\1")

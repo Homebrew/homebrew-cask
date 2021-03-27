@@ -1,9 +1,9 @@
 cask "projectlibre" do
-  version "1.9.2"
-  sha256 "2e0f85b6d686eadacfa4d6e70c1ff12940808dc57e7232c78ac22bd1fea84031"
+  version "1.9.3"
+  sha256 "7dea79e90f3d9172aa9f8feafdb24c96b0e19380db6e530a9b2e1a5c3d99717b"
 
-  # sourceforge.net/projectlibre/ was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/projectlibre/ProjectLibre/#{version.major_minor}/ProjectLibre-#{version}.dmg"
+  url "https://downloads.sourceforge.net/projectlibre/ProjectLibre/#{version.major_minor}/projectlibre-#{version}.dmg",
+      verified: "sourceforge.net/projectlibre/"
   appcast "https://sourceforge.net/projects/projectlibre/rss?path=/ProjectLibre"
   name "ProjectLibre"
   homepage "https://www.projectlibre.com/"

@@ -1,11 +1,18 @@
 cask "ipremoteutility" do
-  version "1.8.4"
-  sha256 "5aebab95b3cc13a7f2c2cf38cf5b9018fa10b813ff7a6b1a6c6ebe9ec6655f05"
+  version "1.8.6"
+  sha256 "02fe5e2edb7e97384c7f2e89f7a17d83b57d8922b8de7a84fea59900acac4e18"
 
   url "https://www.flandersscientific.com/ip-remote/release/IPRemoteUtility-#{version}-macOSX.zip"
-  appcast "https://flandersscientific.com/ip-remote/"
   name "Flanders IP Remote Utility"
   homepage "https://www.flandersscientific.com/ip-remote/"
+
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/IPRemoteUtility-(\d+(?:\.\d+)*)-macOSX\.zip}i)
+  end
+
+  container nested: "IPRemoteUtility-#{version}-macOSX/IPRemoteUtility-#{version}.dmg"
 
   app "IPRemoteUtility.app"
 end

@@ -4,10 +4,14 @@ cask "icons8" do
   sha256 :no_check
 
   url "https://desktop.icons8.com/updates/mac/Icons8App_for_Mac_OS.dmg"
-  appcast "https://desktop.icons8.com/updates/mac/icons8_cast.xml"
   name "Icons8 App"
   desc "App for browsing icon, photo and music packages"
   homepage "https://icons8.com/"
+
+  livecheck do
+    url "https://desktop.icons8.com/updates/mac/icons8_cast.xml"
+    strategy :sparkle
+  end
 
   app "Icons8.app"
 

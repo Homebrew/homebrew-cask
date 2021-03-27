@@ -8,15 +8,19 @@ cask "omnigraffle" do
     sha256 "83ef24af2dbd7977b9922e992f17f23e102562f0589d28bc37d5579b4a4d4938"
     url "https://downloads.omnigroup.com/software/MacOSX/10.13/OmniGraffle-#{version}.dmg"
   else
-    version "7.18.1"
-    sha256 "1dd164810e5ff18aea5b51d7b463dc46c3efbb959df72fac7e1eda20f0d8a678"
+    version "7.18.4"
+    sha256 "6ff08d59cdcffe9399858a4679fc01c2d8d802d17fbb97cb114d5f2f61c55891"
     url "https://downloads.omnigroup.com/software/MacOSX/10.14/OmniGraffle-#{version}.dmg"
   end
 
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.omnigroup.com/download/latest/omnigraffle/"
   name "OmniGraffle"
   desc "Visual communication software"
   homepage "https://www.omnigroup.com/omnigraffle/"
+
+  livecheck do
+    url "https://www.omnigroup.com/download/latest/omnigraffle/"
+    strategy :header_match
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"

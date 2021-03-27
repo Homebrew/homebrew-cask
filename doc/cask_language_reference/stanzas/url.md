@@ -97,11 +97,10 @@ Similar to the `preflight`, `postflight`, `uninstall_preflight`, and `uninstall_
 ```rb
 url do
   require "open-uri"
-  # No known stable URL; fetching disposable URL from landing site
-  URI("https://example.com/app/landing").open do |landing_page|
-    content = landing_page.read
-    parse(content) # => https://example.com/download?23309800482283
-  end
+  base_url = "https://handbrake.fr/nightly.php"
+  content = URI(base_url).read
+  file_path = content[/href=["']?([^"' >]*Handbrake[._-][^"' >]+\.dmg)["' >]/i, 1]
+  file_path ? URI.join(base_url, file_path) : nil
 end
 ```
 

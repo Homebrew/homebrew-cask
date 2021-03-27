@@ -6,15 +6,19 @@ cask "liteicon" do
     version "3.9"
     sha256 "d185503d1c6cbbc6f770517853bd9ef08dc620f4e7ce3de913251a57e4d450d9"
   else
-    version "4.1"
+    version "4.1,1518"
     sha256 "545cff53df31b63fe28e794fb7f45e4c891885f5de57422b1483724f6d7ed4e0"
   end
 
-  url "https://www.freemacsoft.net/downloads/LiteIcon_#{version}.zip"
-  appcast "https://freemacsoft.net/liteicon/updates.xml"
+  url "https://www.freemacsoft.net/downloads/LiteIcon_#{version.before_comma}.zip"
   name "LiteIcon"
   desc "Tool to change system icons"
   homepage "https://freemacsoft.net/liteicon/"
+
+  livecheck do
+    url "https://freemacsoft.net/liteicon/updates.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 

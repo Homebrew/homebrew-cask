@@ -1,13 +1,17 @@
 cask "tap-forms" do
-  version "5.3.17,1852"
+  version "5.3.17"
   sha256 :no_check
 
-  # vendors.paddle.com/download/product/503174 was verified as official when first introduced to the cask. Developer uses paddle.com to process licences and payments for the software
-  url "https://vendors.paddle.com/download/product/503174"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://vendors.paddle.com/download/product/503174"
+  url "https://paddle.s3.amazonaws.com/fulfillment_downloads/9234/503174/e5FEK2CRaefFHU772pok_Tap%20Forms%20Install%20#{version}.dmg",
+      verified: "paddle.s3.amazonaws.com/"
   name "Tap Forms 5"
   desc "Helps to organize important files in one place"
   homepage "https://www.tapforms.com/"
+
+  livecheck do
+    url "https://vendors.paddle.com/download/product/503174"
+    strategy :header_match
+  end
 
   app "Tap Forms Mac #{version.major}.app"
 

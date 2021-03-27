@@ -3,7 +3,6 @@ cask "bluetility" do
   sha256 "fc70baf397c5a9fb24261c823859ec6b798004b406dee3ac39c01fb79342988f"
 
   url "https://github.com/jnross/Bluetility/releases/download/#{version}/Bluetility.app.zip"
-  appcast "https://github.com/jnross/Bluetility/releases.atom"
   name "Bluetility"
   desc "Bluetooth Low Energy browser"
   homepage "https://github.com/jnross/Bluetility"

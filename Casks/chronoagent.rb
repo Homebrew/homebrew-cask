@@ -1,5 +1,5 @@
 cask "chronoagent" do
-  version :latest
+  version "1.9.8"
   sha256 :no_check
 
   url "https://downloads.econtechnologies.com/CA_Mac_Download.dmg"
@@ -8,5 +8,6 @@ cask "chronoagent" do
 
   pkg "Install.pkg"
 
-  uninstall pkgutil: "com.econtechnologies.pkg.ChronoAgent"
+  uninstall pkgutil: "com.econtechnologies.pkg.ChronoAgent",
+            quit:    "com.econtechnologies.backgrounder.CAMonitorBackgrounder"
 end

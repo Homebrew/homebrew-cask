@@ -6,6 +6,12 @@ cask "webex-nbr-player" do
   name "Webex Network Recording player"
   homepage "https://www.webex.com/play-webex-recording.html"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/(T\d+L)/mac/intel/webexnbrplayer_intel\.dmg}i)
+  end
+
   pkg "Network Recording Player.pkg"
 
   uninstall pkgutil: "nbr.mac.webex.com"

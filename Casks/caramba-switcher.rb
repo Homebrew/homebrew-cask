@@ -1,8 +1,7 @@
 cask "caramba-switcher" do
-  version :latest
+  version "2020.12.17,20201217.2"
   sha256 :no_check
 
-  # download.caramba.tech/apps/switcher/ was verified as official when first introduced to the cask
   url "https://cdn.caramba-switcher.com/files/CarambaSwitcherBeta.pkg"
   name "Caramba Switcher"
   desc "Keyboard switcher"

@@ -1,11 +1,16 @@
 cask "pinegrow" do
-  version "5.981"
-  sha256 "71a76d22935307d1588e1905c6c6586ddce4d18231eaad2c1d96f10b977d579c"
+  version "5.992"
+  sha256 "b4d932df613af141926cebb44fa5c54e0fe1ed0be95caa09026c555a0433a234"
 
   url "https://download.pinegrow.com/PinegrowMac.#{version}.dmg"
-  appcast "https://pinegrow.com/"
   name "Pinegrow"
   homepage "https://pinegrow.com/"
+
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/PinegrowMac\.(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   app "Pinegrow.app"
 end

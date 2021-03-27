@@ -1,9 +1,14 @@
 cask "superhuman" do
-  version "8.0.6"
+  version "11.0.13"
   sha256 :no_check
 
-  url "https://download.superhuman.com/Superhuman.dmg"
   name "Superhuman"
+  if Hardware::CPU.intel?
+    url "https://download.superhuman.com/Superhuman.dmg"
+  else
+    url "https://download.superhuman.com/Superhuman-arm64.dmg"
+  end
+  desc "Email client"
   homepage "https://superhuman.com/"
 
   app "Superhuman.app"

@@ -1,13 +1,24 @@
 cask "electron" do
-  version "11.0.4"
-  sha256 "0b5bb200fa901eb08337c8691673583f8fee084704d45450bc2492f992f6c753"
+  version "12.0.2"
 
-  # github.com/electron/electron/ was verified as official when first introduced to the cask
-  url "https://github.com/electron/electron/releases/download/v#{version}/electron-v#{version}-darwin-x64.zip"
-  appcast "https://www.electronjs.org/releases/stable"
+  if Hardware::CPU.intel?
+    sha256 "766ca8f8adc4535db3069665ea8983979ea79dd5ec376e1c298f858b420ec58f"
+    url "https://github.com/electron/electron/releases/download/v#{version}/electron-v#{version}-darwin-x64.zip",
+        verified: "github.com/electron/electron/"
+  else
+    sha256 "d4f0f73e0a5a723ef7f3f1e6ca3743b6267eef385cf79aa63a2fb3f698a7931d"
+    url "https://github.com/electron/electron/releases/download/v#{version}/electron-v#{version}-darwin-arm64.zip",
+        verified: "github.com/electron/electron/"
+  end
+
   name "Electron"
-  desc "Build cross-platform desktop apps with JavaScript, HTML, and CSS"
+  desc "Build desktop apps with JavaScript, HTML, and CSS"
   homepage "https://electronjs.org/"
+
+  livecheck do
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
 
   app "Electron.app"
 

@@ -1,9 +1,9 @@
 cask "dialpad" do
-  version "18.78.6"
+  version "18.81.9"
   sha256 :no_check
 
-  # storage.googleapis.com/dialpad_native/osx/ was verified as official when first introduced to the cask
-  url "https://storage.googleapis.com/dialpad_native/osx/Dialpad.dmg"
+  url "https://storage.googleapis.com/dialpad_native/osx/Dialpad.dmg",
+      verified: "storage.googleapis.com/dialpad_native/osx/"
   name "Dialpad"
   homepage "https://dialpad.com/download"
 

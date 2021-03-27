@@ -1,6 +1,6 @@
 cask "kafka-tool" do
-  version "2.0.8"
-  sha256 "fe88a7778cbf78aa397f20c962c21779a78c237307a9627ea65fd42db266a779"
+  version "2.0.9"
+  sha256 :no_check
 
   url "https://www.kafkatool.com/download2/kafkatool.dmg"
   appcast "https://www.kafkatool.com/download.html"

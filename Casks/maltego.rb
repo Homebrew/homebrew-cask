@@ -1,9 +1,9 @@
 cask "maltego" do
-  version "4.2.13.13462"
-  sha256 "d1db4084c4861c552575734689c10b53e2d669ad45fab78b9dc91a572766ae75"
+  version "4.2.15.13632"
+  sha256 "199b7abc49fe94d5f99fd06297ec772dd563e915af17d5d14365e6881cae36cf"
 
-  # maltego-downloads.s3.us-east-2.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://maltego-downloads.s3.us-east-2.amazonaws.com/mac/Maltego.v#{version}.dmg"
+  url "https://maltego-downloads.s3.us-east-2.amazonaws.com/mac/Maltego.v#{version}.dmg",
+      verified: "maltego-downloads.s3.us-east-2.amazonaws.com/"
   appcast "https://maltego-downloads.s3.us-east-2.amazonaws.com/info.json"
   name "Maltego"
   homepage "https://www.maltego.com/pricing-plans/"

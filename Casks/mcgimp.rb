@@ -7,6 +7,12 @@ cask "mcgimp" do
   desc "Recompiled GIMP installation"
   homepage "https://www.partha.com/"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/McGimp-(\d+(?:\.\d+)*)\.app\.zip}i)
+  end
+
   depends_on macos: ">= :sierra"
 
   app "McGimp-#{version}.app"

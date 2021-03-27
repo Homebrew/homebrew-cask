@@ -1,10 +1,9 @@
 cask "sqlitestudio" do
-  version "3.2.1"
-  sha256 "b66ce10747ca734c7f0dacf19fc773936756db1ab5441ec29b9b5ba23308844c"
+  version "3.3.2"
+  sha256 "8b0604a0a07b3941d8bfe4fd8e1154b5e0c4aa307a9dcd98b2c341eb9310fccf"
 
-  # github.com/pawelsalawa/sqlitestudio/releases/download/ was verified as official when first introduced to the cask
-  url "https://github.com/pawelsalawa/sqlitestudio/releases/download/#{version}/SQLiteStudio-#{version}.dmg"
-  appcast "https://github.com/pawelsalawa/sqlitestudio/releases.atom"
+  url "https://github.com/pawelsalawa/sqlitestudio/releases/download/#{version}/SQLiteStudio-#{version}.dmg",
+      verified: "github.com/pawelsalawa/sqlitestudio/releases/download/"
   name "SQLiteStudio"
   desc "Create, edit, browse SQLite databases"
   homepage "https://sqlitestudio.pl/"

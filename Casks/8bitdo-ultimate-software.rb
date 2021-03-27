@@ -1,11 +1,15 @@
 cask "8bitdo-ultimate-software" do
-  version "1.3.4"
-  sha256 "4f20ae0b3ad750022bfaec77693a322a90864f391b963d55684da60788b458cb"
+  version "2.0.0"
+  sha256 "8f1fffaa652bf69cc17b82a4f1014c020132f2c21a980272aad11f420355c0ae"
 
   url "http://tools.8bitdo.com/8BitdoUltimateSoftware/8BitDoUltimateSoftwareV#{version}.zip"
-  appcast "http://tools.8bitdo.com/8BitdoUltimateSoftware/appcast.xml"
   name "8BitDo Ultimate Software"
   homepage "https://support.8bitdo.com/ultimate-software.html"
+
+  livecheck do
+    url "http://tools.8bitdo.com/8BitdoUltimateSoftware/appcast.xml"
+    strategy :sparkle
+  end
 
   app "8BitDo Ultimate Software.app"
 

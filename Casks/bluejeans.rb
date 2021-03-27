@@ -1,12 +1,16 @@
 cask "bluejeans" do
-  version "2.25.0.230"
-  sha256 "509c5a96341cc6e5fd1559dec715b9f64740d01fa8db6ea2ae3db8a9c3d6df00"
+  version "2.27.0.256"
+  sha256 "cd593d61a63c1351cebae02cc80f1de9a7a62769f457f5845080fc44fa83c001"
 
   url "https://swdl.bluejeans.com/desktop-app/mac/#{version.major_minor_patch}/#{version}/BlueJeansInstaller.pkg"
-  appcast "https://www.bluejeans.com/downloads"
   name "BlueJeans"
   desc "Video conferencing for the digital workplace"
   homepage "https://www.bluejeans.com/"
+
+  livecheck do
+    url "https://swdl.bluejeans.com/desktop-app/mac/ga.appcast.xml"
+    strategy :sparkle
+  end
 
   pkg "BlueJeansInstaller.pkg"
 

@@ -2,8 +2,8 @@ cask "youdaonote" do
   version "3.6.3,6382"
   sha256 :no_check
 
-  # download.ydstatic.com/notewebsite/downloads/ was verified as official when first introduced to the cask
-  url "https://download.ydstatic.com/notewebsite/downloads/YoudaoNote.dmg"
+  url "https://download.ydstatic.com/notewebsite/downloads/YoudaoNote.dmg",
+      verified: "download.ydstatic.com/notewebsite/downloads/"
   appcast "https://note.youdao.com/update/updateConfig.json"
   name "YoudaoNote"
   name "有道云笔记"

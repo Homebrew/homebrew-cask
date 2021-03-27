@@ -3,10 +3,12 @@ cask "ncar-ncl" do
 
   if MacOS.version <= :high_sierra
     sha256 "4e937a6de4303a4928f0f42390d991b12a37659726d15b9da7e8072db74e1867"
-    url "https://www.earthsystemgrid.org/dataset/ncl.#{version.no_dots}.dap/file/ncl_ncarg-#{version}-MacOS_10.13_64bit_gnu710.tar.gz"
+    url "https://www.earthsystemgrid.org/dataset/ncl.#{version.no_dots}.dap/file/ncl_ncarg-#{version}-MacOS_10.13_64bit_gnu710.tar.gz",
+        verified: "earthsystemgrid.org/dataset/ncl."
   else
     sha256 "e2cd644f6b1bb41f55480b8818319e60c450998e31e5e489c69a5e84f3d1f359"
-    url "https://www.earthsystemgrid.org/dataset/ncl.#{version.no_dots}.dap/file/ncl_ncarg-#{version}-MacOS_10.14_64bit_gnu730.tar.gz"
+    url "https://www.earthsystemgrid.org/dataset/ncl.#{version.no_dots}.dap/file/ncl_ncarg-#{version}-MacOS_10.14_64bit_gnu730.tar.gz",
+        verified: "earthsystemgrid.org/dataset/ncl."
   end
 
   appcast "https://www.ncl.ucar.edu/current_release.shtml"
@@ -15,7 +17,7 @@ cask "ncar-ncl" do
   desc "Interpreted language for scientific data analysis and visualization"
   homepage "https://www.ncl.ucar.edu/"
 
-  depends_on x11: true
+  depends_on cask: "xquartz"
   depends_on formula: "gcc"
   depends_on macos: ">= :high_sierra"
 

@@ -2,11 +2,15 @@ cask "knock" do
   version "2.2.1,98"
   sha256 :no_check
 
-  # knock-updates.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://knock-updates.s3.amazonaws.com/Knock.zip"
-  appcast "https://knock-updates.s3.amazonaws.com/Knock.xml"
+  url "https://knock-updates.s3.amazonaws.com/Knock.zip",
+      verified: "knock-updates.s3.amazonaws.com/"
   name "Knock"
   homepage "http://www.knocktounlock.com/"
+
+  livecheck do
+    url "https://knock-updates.s3.amazonaws.com/Knock.xml"
+    strategy :sparkle
+  end
 
   app "Knock.app"
 

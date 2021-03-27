@@ -2,12 +2,16 @@ cask "wallpaper-wizard" do
   version "2.2.0"
   sha256 "8237a147a685cf4831a637b3fbf113ccb14f1150801450b2f1cc96f2f5b7942c"
 
-  # dl.devmate.com/com.macpaw.WallWiz-site/ was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.macpaw.WallWiz-site/WallpaperWizard-#{version.major}.dmg"
-  appcast "https://updates.devmate.com/com.macpaw.WallWiz-site.xml"
+  url "https://dl.devmate.com/com.macpaw.WallWiz-site/WallpaperWizard-#{version.major}.dmg",
+      verified: "dl.devmate.com/com.macpaw.WallWiz-site/"
   name "Wallpaper Wizard"
   desc "Adjustable wallpaper application"
   homepage "https://wallwiz.com/"
+
+  livecheck do
+    url "https://updates.devmate.com/com.macpaw.WallWiz-site.xml"
+    strategy :sparkle
+  end
 
   app "Wallpaper Wizard.app"
 

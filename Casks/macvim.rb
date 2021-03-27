@@ -1,12 +1,16 @@
 cask "macvim" do
-  version "8.2.1719,166"
-  sha256 "7c316ec0d0f30223a77699e9acfa6f710dc45be2e2b4c7870cb1823324845d74"
+  version "170"
+  sha256 "f873f18f04b574e9c24a4eafaad77c83a2c787a51033069714362e4f5f1a48e1"
 
-  url "https://github.com/macvim-dev/macvim/releases/download/snapshot-#{version.after_comma}/MacVim.dmg"
-  appcast "https://github.com/macvim-dev/macvim/releases.atom"
+  url "https://github.com/macvim-dev/macvim/releases/download/snapshot-#{version}/MacVim.dmg"
   name "MacVim"
   desc "Text editor"
   homepage "https://github.com/macvim-dev/macvim"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   auto_updates true
   conflicts_with formula: "macvim"

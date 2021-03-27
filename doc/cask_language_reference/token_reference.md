@@ -31,11 +31,11 @@ Details of software names and brands will inevitably be lost in the conversion t
 
 * Remove `.app` from the end.
 
-* Remove from the end: the string “app”, if the vendor styles the name like “Software App.app”. Exception: when “app” is an inseparable part of the name, without which the name would be inherently nonsensical, as in [rcdefaultapp.rb](../../Casks/rcdefaultapp.rb).
+* Remove from the end: the string “app”, if the vendor styles the name like “Software App.app”. Exception: when “app” is an inseparable part of the name, without which the name would be inherently nonsensical, as in [whatsapp.rb](../../Casks/whatsapp.rb).
 
-* Remove from the end: version numbers or incremental release designations such as “alpha”, “beta”, or “release candidate”. Strings which distinguish different capabilities or codebases such as “Community Edition” are currently accepted. Exception: when a number is not an incremental release counter, but a differentiator for a different product from a different vendor, as in [pgadmin3.rb](../../Casks/pgadmin3.rb).
+* Remove from the end: version numbers or incremental release designations such as “alpha”, “beta”, or “release candidate”. Strings which distinguish different capabilities or codebases such as “Community Edition” are currently accepted. Exception: when a number is not an incremental release counter, but a differentiator for a different product from a different vendor, as in [kdiff3.rb](../../Casks/kdiff3.rb).
 
-* If the version number is arranged to occur in the middle of the App name, it should also be removed. Example: [IntelliJ IDEA 13 CE.app](../../../../../homebrew-cask-versions/tree/master/Casks/intellij-idea-ce.rb).
+* If the version number is arranged to occur in the middle of the App name, it should also be removed.
 
 * Remove from the end: “Launcher”, “Quick Launcher”.
 
@@ -45,7 +45,7 @@ Details of software names and brands will inevitably be lost in the conversion t
 
 * Remove from the end: hardware designations such as “for x86”, “32-bit”, “ppc”.
 
-* Remove from the end: software framework names such as “Cocoa”, “Qt”, “Gtk”, “Wx”, “Java”, “Oracle JVM”, etc. Exception: the framework is the product being Casked, as in [java.rb](../../Casks/java.rb).
+* Remove from the end: software framework names such as “Cocoa”, “Qt”, “Gtk”, “Wx”, “Java”, “Oracle JVM”, etc. Exception: the framework is the product being Casked.
 
 * Remove from the end: localization strings such as “en-US”.
 

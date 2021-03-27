@@ -1,11 +1,11 @@
 cask "qgroundcontrol" do
-  version :latest
+  version "4.0.11"
   sha256 :no_check
 
-  # qgroundcontrol.s3.amazonaws.com/latest was verified as official when first introduced to the cask
-  url "https://qgroundcontrol.s3.amazonaws.com/latest/QGroundControl.dmg"
+  url "https://qgroundcontrol.s3.amazonaws.com/latest/QGroundControl.dmg",
+      verified: "qgroundcontrol.s3.amazonaws.com/latest/"
   name "QGroundControl"
-  desc "Cross-platform ground control station for drones"
+  desc "Ground control station for drones"
   homepage "http://qgroundcontrol.com/"
 
   app "qgroundcontrol.app"

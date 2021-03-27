@@ -1,12 +1,17 @@
 cask "tableau-prep" do
-  version "2020.3.3"
-  sha256 "bea583dd782c932bf6eb6eaf7ed6e69e2ea13eb808087ef6ea022791da8fce2b"
+  version "2021.1.2"
+  sha256 "6dfe2c62730085784351258b246592bc68a1f52268c350d3fd8ebf5b0b24b687"
 
   url "https://downloads.tableau.com/esdalt/tableau_prep/#{version}/TableauPrep-#{version.dots_to_hyphens}.dmg"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.tableau.com/downloads/prep/mac",
-          must_contain: version.dots_to_hyphens
   name "Tableau Prep"
   homepage "https://www.tableau.com/support/releases/prep"
+
+  livecheck do
+    url "https://www.tableau.com/downloads/prep/mac"
+    strategy :header_match do |headers|
+      headers["location"][/-(\d+-\d+-\d+)\.dmg/i, 1].tr("-", ".")
+    end
+  end
 
   depends_on macos: ">= :el_capitan"
 

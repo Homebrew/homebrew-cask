@@ -1,10 +1,16 @@
 cask "aws-vault" do
-  version "6.2.0"
-  sha256 "c6364250172b8fe0a8b5b90d9cbbb69283fe9b97a1e0ddf53468e85fd8af8bd3"
+  version "6.3.0"
 
-  url "https://github.com/99designs/aws-vault/releases/download/v#{version}/aws-vault-darwin-amd64.dmg"
-  appcast "https://github.com/99designs/aws-vault/releases.atom"
+  if Hardware::CPU.intel?
+    sha256 "7af98c76d3afcffd60829716d06986224239d2583108fd7669cb660e215ff98e"
+    url "https://github.com/99designs/aws-vault/releases/download/v#{version}/aws-vault-darwin-amd64.dmg"
+  else
+    sha256 "1e99a2109ad21a30ec0af5004cd3f65c337ac9775a29a3fe1d27c5dd8d0ef703"
+    url "https://github.com/99designs/aws-vault/releases/download/v#{version}/aws-vault-darwin-arm64.dmg"
+  end
+
   name "aws-vault"
+  desc "Securely stores and accesses AWS credentials in a development environment"
   homepage "https://github.com/99designs/aws-vault"
 
   binary "aws-vault"

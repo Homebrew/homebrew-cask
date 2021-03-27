@@ -1,8 +1,14 @@
 cask "webstorm" do
-  version "2020.3,203.5981.135"
-  sha256 "6365de397ecc2a8ecfd6421c3dec1d1da0d3a7bc68b3ede5bef4a1c608fe3af5"
+  version "2020.3.3"
 
-  url "https://download.jetbrains.com/webstorm/WebStorm-#{version.before_comma}.dmg"
+  if Hardware::CPU.intel?
+    url "https://download.jetbrains.com/webstorm/WebStorm-#{version}.dmg"
+    sha256 "05997f0f0171ead020202ba7e2c38634164138f1731d76dc3528705141869dc9"
+  else
+    url "https://download.jetbrains.com/webstorm/WebStorm-#{version}-aarch64.dmg"
+    sha256 "5ade428ab3dd954a36a145e69364789f5494b67abbd17c36febc34aedbc2c31e"
+  end
+
   appcast "https://data.services.jetbrains.com/products/releases?code=WS&latest=true&type=release"
   name "WebStorm"
   desc "JavaScript IDE"

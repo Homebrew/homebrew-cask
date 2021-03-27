@@ -1,5 +1,5 @@
 cask "osirix-quicklook" do
-  version :latest
+  version "6.0"
   sha256 :no_check
 
   url "https://www.osirix-viewer.com/Museum/OsiriXQuickLookInstaller.zip"

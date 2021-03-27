@@ -1,13 +1,20 @@
 cask "rowanj-gitx" do
-  version "0.15.1964"
+  version "0.15,1964"
   sha256 "d88bcb7f92ca1cdf31cb3f1d2e24c03e2091ab330319aeef2e770c0dbd6f7817"
 
-  # github.com/rowanj/gitx/ was verified as official when first introduced to the cask
-  url "https://github.com/rowanj/gitx/releases/download/builds/#{version.major_minor}/#{version.patch}/GitX-dev-#{version.patch}.dmg"
-  appcast "https://github.com/rowanj/gitx/releases.atom"
+  url "https://github.com/rowanj/gitx/releases/download/builds/#{version.before_comma}/#{version.after_comma}/GitX-dev-#{version.after_comma}.dmg",
+      verified: "github.com/rowanj/gitx/"
   name "GitX-dev"
   desc "Native graphical client for the git version control system"
   homepage "https://rowanj.github.io/gitx/"
+
+  livecheck do
+    url "https://github.com/rowanj/gitx/releases/latest"
+    strategy :page_match do |page|
+      match = page.match(%r{href=.*?%2F(\d+(?:\.\d+)*)%2F(\d+)/GitX-dev-\d+\.dmg}i)
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
   conflicts_with cask: "gitx"
 

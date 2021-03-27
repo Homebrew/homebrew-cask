@@ -1,6 +1,6 @@
 cask "querious" do
-  version "3.0.8"
-  sha256 "34ea7b387f1d8238a8f5c1ae1726484f0a31e14d73eedd4458a15b5d23ac0e6e"
+  version "3.0.9"
+  sha256 "e22b4618207812162499d8cdcce5d9912c9d61ecaca328df1117a06acab83aea"
 
   url "https://www.araelium.com/querious/downloads/versions/Querious#{version}.zip"
   appcast "https://arweb-assets.s3.amazonaws.com/downloads/querious/updates.json"

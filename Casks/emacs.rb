@@ -3,9 +3,14 @@ cask "emacs" do
   sha256 "67688cfa124544a2d41d62ad33dcd12843679a1bd48e870836044d9a0bb9b062"
 
   url "https://emacsformacosx.com/emacs-builds/Emacs-#{version}-universal.dmg"
-  appcast "https://emacsformacosx.com/atom/release"
   name "Emacs"
   homepage "https://emacsformacosx.com/"
+
+  livecheck do
+    url "https://emacsformacosx.com/atom/release"
+    strategy :page_match
+    regex(%r{href=.*?/Emacs-(\d+(?:\.\d+)*-\d+)-universal\.dmg}i)
+  end
 
   conflicts_with formula: "emacs"
 

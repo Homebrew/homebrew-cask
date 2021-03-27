@@ -1,5 +1,5 @@
 cask "criptext" do
-  version "0.31.0"
+  version "0.31.0,2.0.82"
   sha256 :no_check
 
   url "https://cdn.criptext.com/Criptext-Email-Desktop/mac/Criptext-latest.dmg"

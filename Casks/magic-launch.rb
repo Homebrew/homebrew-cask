@@ -6,6 +6,12 @@ cask "magic-launch" do
   name "Magic Launch"
   homepage "https://www.oneperiodic.com/products/magiclaunch/"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/Magic%20Launch%20v?(\d+(?:\.\d+)*)\.zip}i)
+  end
+
   prefpane "Magic Launch.prefPane"
 
   zap trash: "~/Library/Preferences/com.metakine.magic-launch.agent.plist"

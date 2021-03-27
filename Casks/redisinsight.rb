@@ -1,14 +1,17 @@
 cask "redisinsight" do
-  version "1.8.0"
-  sha256 "c1675342b848d41357afd5a436b1660a3cb1faa160f2fd5b9ef829c7db9aa83a"
+  version "1.10.0"
+  sha256 "e2c096e340fd2d415969106d8ddc2574fd7e65a006e583aa5996ba07b47091b1"
 
   url "https://downloads.redisinsight.redislabs.com/#{version}/redisinsight-mac.dmg"
-  appcast "https://docs.redislabs.com/latest/ri/release-notes/",
-          must_contain: version.major_minor
   name "RedisInsight"
   homepage "https://www.redislabs.com/redisinsight/"
 
-  app "redisinsight.app"
+  livecheck do
+    url "https://downloads.redisinsight.redislabs.com/latest/redisinsight-mac.dmg"
+    strategy :header_match
+  end
+
+  app "RedisInsight.app"
 
   zap trash: "~/Library/Saved Application State/com.redislabs.redisinsight.savedState"
 end

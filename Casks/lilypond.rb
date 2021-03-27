@@ -1,11 +1,16 @@
 cask "lilypond" do
-  version "2.20.0-1"
-  sha256 "1680ca85ff7bdb942a39bff323956357fbb0e6ab17edf9c0e145d52b6c0dc231"
+  version "2.22.0-1"
+  sha256 "154c21991c534802dbdae8b101863ec696427fbf26e0670c496cf0888dbab374"
 
   url "https://lilypond.org/downloads/binaries/darwin-x86/lilypond-#{version}.darwin-x86.tar.bz2"
-  appcast "https://lilypond.org/macos-x.html"
   name "LilyPond"
   homepage "https://lilypond.org/"
+
+  livecheck do
+    url "https://lilypond.org/macos-x.html"
+    strategy :page_match
+    regex(%r{href=.*?/lilypond-(\d+(?:\.\d+)*-\d+)\.darwin-x86\.tar\.bz2}i)
+  end
 
   depends_on macos: "<= :mojave"
 

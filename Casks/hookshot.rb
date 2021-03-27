@@ -1,11 +1,15 @@
 cask "hookshot" do
-  version "1.14"
-  sha256 "0cd37f4d4cb3bdf61b4b3196e8a822035d35933bf387686ca1b176da6023e046"
+  version "1.20.1,39"
+  sha256 "da89e1c8d01be1cffd3932c1eaff55c2930fc027909217b36f7797bb09cbabd7"
 
-  url "https://hookshot.app/downloads/Hookshot#{version}.dmg"
-  appcast "https://hookshot.app/downloads/updates.xml"
+  url "https://hookshot.app/downloads/Hookshot#{version.before_comma}.dmg"
   name "Hookshot"
   homepage "https://hookshot.app/"
+
+  livecheck do
+    url "https://hookshot.app/downloads/updates.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"

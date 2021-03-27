@@ -1,13 +1,17 @@
 cask "insomnia" do
-  version "2020.5.1"
-  sha256 "63aae00b618e45e70546d0647566ea51481eea3c5018f2972470008ce5c6c8a9"
+  version "2021.2.1"
+  sha256 "cfea83cf46a2ba1e739b580915a0d0f5729f613b90a91ee667f2506a9a958eb9"
 
-  # github.com/Kong/insomnia/ was verified as official when first introduced to the cask
-  url "https://github.com/Kong/insomnia/releases/download/core%40#{version}/Insomnia.Core-#{version}.dmg"
-  appcast "https://api.insomnia.rest/changelog.json?app=com.insomnia.app"
+  url "https://github.com/Kong/insomnia/releases/download/core%40#{version}/Insomnia.Core-#{version}.dmg",
+      verified: "github.com/Kong/insomnia/"
   name "Insomnia"
-  desc "Cross-platform HTTP and GraphQL Client"
+  desc "HTTP and GraphQL Client"
   homepage "https://insomnia.rest/"
+
+  livecheck do
+    url :url
+    regex(/^core@?(\d+(?:\.\d+)+)$/i)
+  end
 
   auto_updates true
 

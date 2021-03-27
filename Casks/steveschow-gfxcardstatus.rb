@@ -3,7 +3,6 @@ cask "steveschow-gfxcardstatus" do
   sha256 "69c0d6602808cca60158a6d833eab8d82d59f683d3c25de34d977c83fe208dd0"
 
   url "https://github.com/steveschow/gfxCardStatus/releases/download/v#{version}/gfxCardStatus.app.zip"
-  appcast "https://github.com/steveschow/gfxCardStatus/releases.atom"
   name "gfxCardStatus"
   homepage "https://github.com/steveschow/gfxCardStatus"
 

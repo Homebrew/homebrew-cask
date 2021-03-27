@@ -6,7 +6,7 @@ Homebrew Cask extends [Homebrew](https://brew.sh) and brings its elegance, simpl
 
 We do this by providing a friendly CLI workflow for the administration of macOS applications distributed as binaries.
 
-[![Join us on https://discourse.brew.sh](https://img.shields.io/badge/Discourse-forum-blue.svg)](https://discourse.brew.sh)
+[![Join us on GitHub discussions](https://img.shields.io/badge/github-discussions-informational)](https://github.com/Homebrew/discussions)
 
 ## Let’s try it!
 
@@ -51,7 +51,8 @@ If the issue is still not solved, see the guides for common problems:
 * [`Checksum does not match` error](doc/reporting_bugs/checksum_does_not_match_error.md)
 * [`source is not there` error](doc/reporting_bugs/source_is_not_there_error.md)
 * [`wrong number of arguments` error](doc/reporting_bugs/wrong_number_of_arguments_error.md)
-* [The app can’t be opened because it is from an unidentified developer](doc/faq/the_app_cant_be_opened.md)
+* [App isn’t included in `upgrade`](doc/faq/app_not_upgrading.md)
+* [The app can’t be opened because it is from an unidentified developer](doc/faq/app_cant_be_opened.md)
 * [My problem isn’t listed](https://github.com/Homebrew/homebrew-cask/issues/new?template=01_bug_report.md)
 
 ## Requests
@@ -64,7 +65,7 @@ If the issue is still not solved, see the guides for common problems:
 We’re really rather friendly! Here are the best places to talk about the project:
 
 * [Open an issue](https://github.com/Homebrew/homebrew-cask/issues/new/choose).
-* Join us on [discourse.brew.sh (forum)](https://discourse.brew.sh)
+* Join us on [GitHub discussions (forum)](https://github.com/Homebrew/discussions)
 
 ## License
 Code is under the [BSD 2 Clause (NetBSD) license](LICENSE)

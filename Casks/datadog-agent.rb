@@ -2,8 +2,8 @@ cask "datadog-agent" do
   version "7.22.0-1"
   sha256 "ceb52c36924959c6dc88c75f7f403361937ced94efaf9bbf70fbdd895bb81e21"
 
-  # s3.amazonaws.com/dd-agent/ was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/dd-agent/datadog-agent-#{version}.dmg"
+  url "https://s3.amazonaws.com/dd-agent/datadog-agent-#{version}.dmg",
+      verified: "s3.amazonaws.com/dd-agent/"
   appcast "https://s3.amazonaws.com/dd-agent/"
   name "Datadog Agent"
   desc "Monitoring and security across systems, apps, and services"

@@ -1,9 +1,9 @@
 cask "malus" do
-  version "1.5.1,152"
-  sha256 "dfca2126b338fc5836b9abba87860922b23455712a15bb854aa604aedf3d4efd"
+  version "1.7.6,176"
+  sha256 "b3cdf4bae6a5f67b66d6cd03e9cb98f6449384f54cd810cceac966f6cdece202"
 
-  # malus.s3cdn.net/ was verified as official when first introduced to the cask
-  url "https://malus.s3cdn.net/uploads/Malus-mac-#{version.after_comma}.dmg"
+  url "https://malus.s3cdn.net/uploads/Malus_#{version.before_comma.dots_to_underscores}.dmg",
+      verified: "malus.s3cdn.net/"
   appcast "https://api.getmalus.com/api/checkDesktopUpdate?type=mac"
   name "Malus"
   desc "Proxy to help accessing various online media resources/services"

@@ -1,11 +1,15 @@
 cask "isubtitle" do
-  version "3.3.2"
-  sha256 "42f7f0bcd809693c62b9d07340723768e3844fe653000515a33d9504edbfe89e"
+  version "3.4.1,40"
+  sha256 "d3141e2a3689e74f5f7b7e3fcfca62ef9a8f13de3aa8808c90be1bf7b403eecf"
 
-  url "https://www.bitfield.se/isubtitle#{version.major}/download/iSubtitle_#{version}.zip"
-  appcast "https://www.bitfield.se/isubtitle#{version.major}/changelog.xml"
+  url "https://www.bitfield.se/isubtitle#{version.major}/download/iSubtitle_#{version.before_comma}.zip"
   name "iSubtitle"
   homepage "https://www.bitfield.se/isubtitle/"
+
+  livecheck do
+    url "https://www.bitfield.se/isubtitle#{version.major}/changelog.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :sierra"
 

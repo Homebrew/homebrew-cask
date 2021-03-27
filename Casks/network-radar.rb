@@ -1,12 +1,16 @@
 cask "network-radar" do
-  version "2.10"
-  sha256 "566f9049d68e7287a5a2dc1da0ff04bca540db8d23fbbddd0da8546302892df5"
+  version "2.10,290b"
+  sha256 :no_check
 
   url "https://witt-software.com/downloads/networkradar/Network%20Radar.dmg"
-  appcast "https://www.witt-software.com/downloads/networkradar/appcast.xml"
   name "Network Radar"
   desc "Tool to scan and monitor the network"
   homepage "https://www.witt-software.com/networkradar"
+
+  livecheck do
+    url "https://www.witt-software.com/downloads/networkradar/appcast.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :el_capitan"
 

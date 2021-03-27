@@ -1,9 +1,10 @@
 cask "red-eye" do
-  version "1.1"
-  sha256 "12dd416b0c9e7ef1f8ff49b1bb7adc7bc98d6135c233bfd5d832d3307ba08b72"
+  version "1.1.0,15"
+  sha256 :no_check
 
   url "https://www.hexedbits.com/downloads/redeye.zip"
-  appcast "https://www.hexedbits.com/redeye/"
+  appcast "https://www.hexedbits.com/redeye/",
+          must_contain: version.before_comma.chomp(".0")
   name "Red Eye"
   homepage "https://www.hexedbits.com/redeye/"
 

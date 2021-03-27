@@ -3,10 +3,15 @@ cask "kern" do
   sha256 "3b0420f5673227f20a16973208a434ab7c6faa7ec26161dc1c7d6f36dcc86ad7"
 
   url "https://www.fullbucket.de/music/dl/kern_#{version.dots_to_underscores}_mac.pkg"
-  appcast "https://www.fullbucket.de/music/kern.html"
   name "Kern"
   desc "Performance synthesizer"
   homepage "https://www.fullbucket.de/music/kern.html"
+
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(/v(\d+(?:\.\d+)*)/)
+  end
 
   pkg "kern_#{version.dots_to_underscores}_mac.pkg"
 

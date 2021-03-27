@@ -1,5 +1,5 @@
 cask "stashcat" do
-  version "3.19.1.3917"
+  version "3.19.2.3930"
   sha256 :no_check
 
   url "https://stashcat.s3-de-central.profitbricks.com/installer/StashcatSetup.dmg",

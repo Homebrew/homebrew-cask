@@ -1,12 +1,16 @@
 cask "gpg-suite-pinentry" do
-  version "2020.2"
+  version "2020.2,100"
   sha256 "e2ede6b317d53d1e321342a6f7dd5ab6b123a4900aa8f1eab89b29051a2a4742"
 
-  url "https://releases.gpgtools.org/GPG_Suite-#{version}.dmg"
-  appcast "https://gpgtools.org/releases/gka/appcast.xml"
+  url "https://releases.gpgtools.org/GPG_Suite-#{version.before_comma}.dmg"
   name "GPG Suite Pinentry"
   desc "Pinentry GUI for GPG Suite"
   homepage "https://gpgtools.org/"
+
+  livecheck do
+    url "https://gpgtools.org/releases/gka/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   conflicts_with cask: [

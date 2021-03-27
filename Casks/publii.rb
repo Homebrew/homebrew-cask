@@ -1,11 +1,16 @@
 cask "publii" do
-  version "0.37.3"
-  sha256 "60462b5c9977ca730e12c412150adde97c94c2aea8a71c0770aa399f92015137"
+  version "0.38.1"
+  sha256 "4755788b0d1e6dd543011901a68880d9cc6bafe8c6e3d452d15c51bee24f899f"
 
   url "https://cdn.getpublii.com/Publii-#{version}.dmg"
-  appcast "https://getpublii.com/download/"
   name "Publii"
   homepage "https://getpublii.com/"
+
+  livecheck do
+    url "https://getpublii.com/download/"
+    strategy :page_match
+    regex(%r{href=.*?/Publii-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   app "Publii.app"
 

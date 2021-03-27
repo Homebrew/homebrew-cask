@@ -1,12 +1,18 @@
 cask "azure-data-studio" do
-  version "1.24.0,eb3c0f5d9df86b9490606aab7fffaa253b0aca4d"
-  sha256 "5f435fac4997642b20b063a422c6d219073bc552ff4a1eb3fd4fa079f0a9589f"
+  version "1.27.0"
+  sha256 "b1de1b5b9155056729594c69b3844f01956a640f25986d08fbc34db3ef4b299f"
 
-  # sqlopsbuilds.azureedge.net/stable was verified as official when first introduced to the cask
-  url "https://sqlopsbuilds.azureedge.net/stable/#{version.after_comma}/azuredatastudio-macos-#{version.before_comma}.zip"
-  appcast "https://github.com/Microsoft/azuredatastudio/releases.atom"
+  url "https://azuredatastudio-update.azurewebsites.net/#{version}/darwin/stable",
+      verified: "azuredatastudio-update.azurewebsites.net/"
   name "Azure Data Studio"
+  desc "Data management tool that enables working with SQL Server"
   homepage "https://docs.microsoft.com/en-us/sql/azure-data-studio/"
+
+  livecheck do
+    url "https://azuredatastudio-update.azurewebsites.net/api/update/darwin/stable/VERSION"
+    strategy :page_match
+    regex(/"productVersion"\s*:\s*"(\d+(:?\.\d+)*)"/)
+  end
 
   auto_updates true
 

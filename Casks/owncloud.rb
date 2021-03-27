@@ -1,12 +1,17 @@
 cask "owncloud" do
-  version "2.7.2.2626"
-  sha256 "bff23f9a78ee48284be6d4e2a214c562bbb132d8275d60804bb2c5ac2f17b94c"
+  version "2.7.6.3261"
+  sha256 "6c2366e13d5989259f3b70f81657c85dadecdaa17b16d5faaee5d136d8020087"
 
   url "https://download.owncloud.com/desktop/ownCloud/stable/#{version}/mac/ownCloud-#{version}.pkg"
-  appcast "https://github.com/owncloud/client/releases.atom"
   name "ownCloud"
   desc "Desktop syncing client for ownCloud"
   homepage "https://owncloud.com/"
+
+  livecheck do
+    url "https://owncloud.com/desktop-app/"
+    strategy :page_match
+    regex(%r{href=.*?/owncloud-(\d+(?:\.\d+)*)\.pkg}i)
+  end
 
   depends_on macos: ">= :sierra"
 

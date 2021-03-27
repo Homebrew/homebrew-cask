@@ -1,12 +1,16 @@
 cask "inssider" do
-  version "0.0.2.14,5"
-  sha256 "8d995306facb7d1341a54521a7cd8e76290ff44763fa00a7dfca85932f82a524"
+  version "0.0.4.5,8"
+  sha256 "aae290a9e1c35db4b923ff6cf64332b1825ab82a848761e10debdddf3e3f9cfa"
 
-  # nyc3.digitaloceanspaces.com/Installers/Mac/ was verified as official when first introduced to the cask
-  url "https://metageek-desktop.nyc3.digitaloceanspaces.com/Installers/Mac/inSSIDer-#{version.after_comma}/inSSIDer.dmg"
-  appcast "https://metageek-desktop.nyc3.digitaloceanspaces.com/Installers/Mac/inSSIDer-#{version.after_comma}/inssider_#{version.after_comma}_mac_appcast.xml"
+  url "https://metageek.link/inssider-5-mac-release-folder/inSSIDer-#{version.before_comma}.dmg",
+      verified: "metageek.link/"
   name "inSSIDer"
   homepage "https://www.metageek.com/products/inssider/"
+
+  livecheck do
+    url "https://metageek.link/inssider-5-mac-update-xml"
+    strategy :sparkle
+  end
 
   app "inSSIDer.app"
 end

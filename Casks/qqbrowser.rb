@@ -1,5 +1,5 @@
 cask "qqbrowser" do
-  version "4.5.123.400"
+  version "4.5.123.400,123.400"
   sha256 :no_check
 
   url "https://dldir1.qq.com/invc/tt/QQBrowser_for_Mac.dmg"

@@ -3,10 +3,14 @@ cask "charles" do
   sha256 "81b779b352ce8ed588009472ae78f28c5f19613bec6d66f6f92703cdfb7df033"
 
   url "https://www.charlesproxy.com/assets/release/#{version}/charles-proxy-#{version}.dmg"
-  appcast "https://www.charlesproxy.com/latest.do"
   name "Charles"
   desc "Web debugging Proxy application"
   homepage "https://www.charlesproxy.com/"
+
+  livecheck do
+    url "https://www.charlesproxy.com/latest.do"
+    regex(/v?(\d+(?:\.\d+)+)/i)
+  end
 
   app "Charles.app"
 

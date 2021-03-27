@@ -3,8 +3,8 @@ cask "uberconference" do
   sha256 "4cf47171b3065c5dd6bb20e3e6419b7233ffe4d2f3979b259a21e2e217f44fb5"
 
   # See https://help.uberconference.com/hc/en-us/articles/360033352091-Use-the-Desktop-App
-  # storage.googleapis.com/ was verified as official when first introduced to the cask
-  url "https://storage.googleapis.com/uc_native/osx/UberConference.#{version}.zip"
+  url "https://storage.googleapis.com/uc_native/osx/UberConference.#{version}.zip",
+      verified: "storage.googleapis.com/"
   appcast "https://www.uberconference.com/api/i1/native/checkversion/darwin/x64/0?channel=stable"
   name "UberConference"
   homepage "https://www.uberconference.com/"

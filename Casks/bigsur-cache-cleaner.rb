@@ -1,5 +1,5 @@
 cask "bigsur-cache-cleaner" do
-  version "16.1.0.0.0"
+  version "16.1.1,16.1.0.0.0"
   sha256 :no_check
 
   url "https://www.northernsoftworks.com/downloads/bscc.dmg"

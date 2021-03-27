@@ -1,9 +1,9 @@
 cask "softmaker-freeoffice" do
-  version "2018,980"
-  sha256 "17b76bcf47b3343b4af833cea03629029e7c057f2d473f9377ff8eccfce81e1a"
+  version "2018,982"
+  sha256 "9cf218b964830d1ab6c1394738becaf85b8eb91b7a7e516ba64852c86df68e98"
 
-  # softmaker.net/ was verified as official when first introduced to the cask
-  url "https://www.softmaker.net/down/softmaker-freeoffice-#{version.before_comma}.pkg"
+  url "https://www.softmaker.net/down/softmaker-freeoffice-#{version.before_comma}.pkg",
+      verified: "softmaker.net/"
   appcast "https://www.freeoffice.com/en/support/version-history",
           must_contain: version.after_comma
   name "SoftMaker FreeOffice"

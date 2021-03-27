@@ -2,12 +2,16 @@ cask "colorsnapper" do
   version "1.6.4"
   sha256 "75fbc9a5c43a81017cb1be1b62df47950504def14f9378b25f58e079302828e5"
 
-  # cs2-binaries.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://cs2-binaries.s3.amazonaws.com/ColorSnapper2-#{version.dots_to_underscores}.zip"
-  appcast "https://cs2-appcast.s3.amazonaws.com/appcast.xml"
+  url "https://cs2-binaries.s3.amazonaws.com/ColorSnapper2-#{version.dots_to_underscores}.zip",
+      verified: "cs2-binaries.s3.amazonaws.com/"
   name "ColorSnapper 2"
   desc "Color picking application"
   homepage "https://colorsnapper.com/"
+
+  livecheck do
+    url "https://cs2-appcast.s3.amazonaws.com/appcast.xml"
+    strategy :sparkle
+  end
 
   app "ColorSnapper2.app"
 

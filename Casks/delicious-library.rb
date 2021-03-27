@@ -1,11 +1,17 @@
 cask "delicious-library" do
-  version "3.9.2"
-  sha256 "b7cd5d5e4a410f7191b7cfcda3433818797787cc73507c5672a3502326dc2590"
+  version "3.9.3"
+  sha256 "bd0243c806e044bffd8e568f99993440bf5302c9ff30027984bc817c69ae9931"
 
   url "https://www.delicious-monster.com/downloads/DeliciousLibrary#{version.major}/v#{version}/DeliciousLibrary#{version.major}.zip"
-  appcast "https://www.delicious-monster.com/downloads/DeliciousLibrary#{version.major}.xml"
   name "Delicious Library"
   homepage "https://www.delicious-monster.com/"
+
+  livecheck do
+    url "https://www.delicious-monster.com/downloads/DeliciousLibrary#{version.major}.xml"
+    strategy :sparkle do |item|
+      item.version.delete_prefix("v")
+    end
+  end
 
   app "Delicious Library #{version.major}.app"
 

@@ -4,15 +4,19 @@ cask "omniplan" do
     sha256 "82e0d7db2626d751f93f97d80dc032e4bc01bba1e05ea52c553e4771c8cfeec5"
     url "https://downloads.omnigroup.com/software/MacOSX/10.13/OmniPlan-#{version}.dmg"
   else
-    version "4.2.2"
-    sha256 "ab14697fbae52298daadefd1466584b44ba4f0cd1fb51362efb8ecf4ad60ec0f"
+    version "4.2.5"
+    sha256 "b243f2c9f0e6bf2eb28db8328c94ca8a1cf080bb3337c8a031c278731fb7e4aa"
     url "https://downloads.omnigroup.com/software/MacOSX/10.14/OmniPlan-#{version}.dmg"
   end
 
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.omnigroup.com/download/latest/omniplan/"
   name "OmniPlan"
   desc "Project planning and management software"
   homepage "https://www.omnigroup.com/omniplan/"
+
+  livecheck do
+    url "https://www.omnigroup.com/download/latest/omniplan/"
+    strategy :header_match
+  end
 
   auto_updates true
   conflicts_with cask: "homebrew/cask-versions/omniplan3"

@@ -7,6 +7,12 @@ cask "candybar" do
   desc "Tool to modify file icons"
   homepage "https://panic.com/blog/candybar-mountain-lion-and-beyond/"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/CandyBar%20(\d+(?:\.\d+)*)\.zip}i)
+  end
+
   app "CandyBar.app"
 
   caveats do

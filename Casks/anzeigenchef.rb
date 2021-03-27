@@ -1,11 +1,15 @@
 cask "anzeigenchef" do
   version "2.1.046"
-  sha256 "453c3e092223d298ef53b968ebff4ffedb7e575050823dde859c3d97c085108c"
+  sha256 :no_check
 
   url "https://anzeigenchef.roundcubes.de/downloads/mac/AnzeigenChef.app.zip"
-  appcast "https://anzeigenchef.roundcubes.de/downloads/mac/appcast.xml"
   name "AnzeigenChef"
   homepage "https://anzeigenchef.roundcubes.de/"
+
+  livecheck do
+    url "https://anzeigenchef.roundcubes.de/downloads/mac/appcast.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :sierra"
 

@@ -1,9 +1,9 @@
 cask "mikogo" do
-  version :latest
+  version "5.10.0"
   sha256 :no_check
 
-  # mikogo4.com/ was verified as official when first introduced to the cask
-  url "https://download.mikogo4.com/Mikogo-installer.signed.pkg"
+  url "https://download.mikogo4.com/Mikogo-installer.signed.pkg",
+      verified: "mikogo4.com/"
   name "Mikogo"
   homepage "https://www.mikogo.com/"
 

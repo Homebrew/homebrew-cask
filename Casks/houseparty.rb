@@ -1,9 +1,9 @@
 cask "houseparty" do
-  version "1.14.6"
+  version "1.14.6,4707"
   sha256 :no_check
 
-  # houseparty-mac-builds.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://houseparty-mac-builds.s3.amazonaws.com/Houseparty.dmg"
+  url "https://houseparty-mac-builds.s3.amazonaws.com/Houseparty.dmg",
+      verified: "houseparty-mac-builds.s3.amazonaws.com/"
   name "Houseparty"
   desc "Face-to-face social networking app"
   homepage "https://houseparty.com/"

@@ -1,6 +1,6 @@
 cask "sunvox" do
-  version "1.9.6b"
-  sha256 "a61a58f6bd093212028afa9df50fb9fb73414b475e4369f98d2407ceb9eada83"
+  version "1.9.6c"
+  sha256 "300eb555c47293370c99cdf5b45e852c581e92cecaaf2db88bca306191c91f53"
 
   url "https://www.warmplace.ru/soft/sunvox/sunvox-#{version}.zip"
   appcast "https://www.warmplace.ru/soft/sunvox/changelog.txt"

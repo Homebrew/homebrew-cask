@@ -1,14 +1,14 @@
 cask "jasp" do
-  version "0.14.0.0"
+  version "0.14.1.0"
 
   if MacOS.version <= :mojave
-    sha256 "f2ea3faec2de0afb218b52aae4dfed7c4f0521469091e67715ca22f28aa21583"
+    sha256 "8fe3cf08058576e54c78e1d87a2cfe159dead894c26aca37fd6fa610a5fb3cf7"
 
     url "https://static.jasp-stats.org/JASP-#{version}-preCatalina.dmg"
   else
-    sha256 "2e6a750f0f23d6528b72792712a4290a957d3bc1be40c66b110ac741d55a13be"
+    sha256 "ea682a95e51f9f0cd3d92b49eac18831c38de1e03f90020321cfce3eba5a0ee6"
 
-    url "https://static.jasp-stats.org/JASP-#{version}-Catalina.dmg"
+    url "https://static.jasp-stats.org/JASP-#{version}-postMojave.dmg"
   end
   appcast "https://jasp-stats.org/download/",
           must_contain: version.sub(/(.0)+$/, "")

@@ -1,10 +1,9 @@
 cask "recaf" do
-  version "2.13.1"
-  sha256 "1961f96a499aa564b6508033310aab0c1ba61e08139a0c4fda23e3e8bef387bd"
+  version "2.18.3"
+  sha256 "645e8bc581c1a369e96f733e3ac1f08a2143f213bc2fe798af895376c4794b3d"
 
-  # github.com/Col-E/Recaf/ was verified as official when first introduced to the cask
-  url "https://github.com/Col-E/Recaf/releases/download/#{version}/recaf-#{version}-J8-jar-with-dependencies.jar"
-  appcast "https://github.com/Col-E/Recaf/releases.atom"
+  url "https://github.com/Col-E/Recaf/releases/download/#{version}/recaf-#{version}-J8-jar-with-dependencies.jar",
+      verified: "github.com/Col-E/Recaf/"
   name "Recaf"
   desc "Java bytecode editor"
   homepage "https://www.coley.software/Recaf"

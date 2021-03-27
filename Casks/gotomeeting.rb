@@ -1,14 +1,19 @@
 cask "gotomeeting" do
-  version "10.14.0,18962"
-  sha256 "ffcc6a3000eea1841bd79ba67f59036ed8392097f58a2bd438f37239c2c2e7df"
+  version "19228"
+  sha256 "aced1b755ef29d15909e3eb10fb5ed72f705b77920c831a1ab7112948a05df38"
 
-  # builds.cdn.getgo.com/builds/g2m/ was verified as official when first introduced to the cask
-  url "https://builds.cdn.getgo.com/builds/g2m/#{version.after_comma}/GoToMeeting.dmg"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://link.gotomeeting.com/latest-dmg",
-          must_contain: version.after_comma
+  url "https://builds.cdn.getgo.com/builds/g2m/#{version}/GoToMeeting.dmg",
+      verified: "builds.cdn.getgo.com/builds/g2m/"
   name "GoToMeeting"
   desc "Online meetings, desktop sharing, and video conferencing"
   homepage "https://www.goto.com/meeting"
+
+  livecheck do
+    url "https://link.gotomeeting.com/latest-dmg"
+    strategy :header_match do |headers|
+      headers["location"][%r{/([^/]+)/GoToMeeting\.dmg}i, 1]
+    end
+  end
 
   app "GoToMeeting.app"
 

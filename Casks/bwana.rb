@@ -1,5 +1,5 @@
 cask "bwana" do
-  version :latest
+  version "2.8.1"
   sha256 :no_check
 
   url "https://www.bruji.com/bwana/bwana.dmg"

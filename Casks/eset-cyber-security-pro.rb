@@ -1,6 +1,6 @@
 cask "eset-cyber-security-pro" do
   version "6.10.460.1"
-  sha256 "318a7ff40df185bedb7c9be8131d893cbdb0dcc4ab3ac059e9f12e80f5cf95e0"
+  sha256 :no_check
 
   url "https://download.eset.com/com/eset/apps/home/ess/mac/latest/eset_cybersecurity_pro_en.dmg"
   appcast "https://www.eset.com/int/home/cyber-security-pro/download/?type=13554&tx_esetdownloads_ajax%5Bproduct%5D=83&tx_esetdownloads_ajax%5Bplugin_id%5D=34398"

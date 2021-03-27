@@ -1,11 +1,17 @@
 cask "gloomhaven-helper" do
-  version "8.4.7"
-  sha256 "acb4ba170f67adc9b08ca04819c7baaf5147fb9579c08a66686750b2dda24cac"
+  version "8.4.8"
+  sha256 "b35bf9d5ac7acea2437bb1cafb6516ce9d4988fc8f06077cd0323bd3e666ab21"
 
   url "https://esotericsoftware.com/files/ghh/GloomhavenHelper-#{version}.zip"
-  appcast "https://esotericsoftware.com/gloomhaven-helper"
   name "Gloomhaven Helper"
+  desc "Officially licensed companion application for playing the Gloomhaven board game"
   homepage "https://esotericsoftware.com/gloomhaven-helper"
+
+  livecheck do
+    url "https://esotericsoftware.com/gloomhaven-helper"
+    strategy :page_match
+    regex(%r{href=.*?/GloomhavenHelper-(\d+(?:\.\d+)*)\.zip}i)
+  end
 
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/GloomhavenHelper/gloomhaven-helper.wrapper.sh"
