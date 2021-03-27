@@ -8,7 +8,7 @@ cask "sqlworkbenchj" do
 
   livecheck do
     url "https://www.sql-workbench.eu/downloads.html"
-    regex(%r{Current\s+stable\s+release:\s+Build\s+(\d+)}i)
+    regex(/Current\s+stable\s+release:\s+Build\s+(\d+)/i)
   end
 
   app "SQLWorkbenchJ.app"
