@@ -1,6 +1,6 @@
 cask "emacs" do
-  version "27.2-1"
-  sha256 "28a252020ae7236115689f029170f2af42b4b2195eac49e277bdc81853074349"
+  version "27.2-2"
+  sha256 "a5f5efe3ce8e3c2ef1c0e1aaf6ab9197ee93ad22e80c2742710338fad27bad8b"
 
   url "https://emacsformacosx.com/emacs-builds/Emacs-#{version}-universal.dmg"
   name "Emacs"
@@ -17,6 +17,9 @@ cask "emacs" do
 
   app "Emacs.app"
   binary "#{appdir}/Emacs.app/Contents/MacOS/Emacs", target: "emacs"
+  binary "#{appdir}/Emacs.app/Contents/MacOS/bin/ebrowse"
+  binary "#{appdir}/Emacs.app/Contents/MacOS/bin/emacsclient"
+  binary "#{appdir}/Emacs.app/Contents/MacOS/bin/etags"
 
   zap trash: [
     "~/Library/Caches/org.gnu.Emacs",
