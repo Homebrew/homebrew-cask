@@ -1,5 +1,5 @@
 cask "appcode" do
-  version "2020.3.4"
+  version "2020.3.4,203.7717.57"
 
   if Hardware::CPU.intel?
     sha256 "dcb50aef60debcc58436aaea5df7c92282dc4c4924df372a00b7cbcf95447464"
