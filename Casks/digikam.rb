@@ -16,11 +16,11 @@ cask "digikam" do
               "/Applications/showfoto.app",
             ]
 
-zap trash: [
-  "~/Library/Application Support/digikam",
-  "~/Library/Caches/digikam",
-  "~/Library/Preferences/digikam.plist",
-  "~/Library/Preferences/digikamrc",
-  "~/Library/Saved Application State/digikam.savedState",
-]
+  zap trash: [
+    "~/Library/Application Support/digikam",
+    "~/Library/Caches/digikam",
+    "~/Library/Preferences/digikam.plist",
+    "~/Library/Preferences/digikamrc",
+    "~/Library/Saved Application State/digikam.savedState",
+  ]
 end
