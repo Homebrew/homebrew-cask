@@ -23,5 +23,4 @@ zap trash: [
   "~/Library/Preferences/digikamrc",
   "~/Library/Saved Application State/digikam.savedState",
 ]
-
 end
