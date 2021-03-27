@@ -8,7 +8,7 @@ cask "rowmote-helper" do
 
   livecheck do
     url :homepage
-    regex(%r{Rowmote\s+Helper\s+(\d+(?:\.\d+)*)}i)
+    regex(/Rowmote\s+Helper\s+(\d+(?:\.\d+)*)/i)
   end
 
   auto_updates true
