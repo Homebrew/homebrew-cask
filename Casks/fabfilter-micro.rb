@@ -20,6 +20,6 @@ cask "fabfilter-micro" do
   pkg "#{name[0]} #{version} Installer.pkg"
 
   uninstall pkgutil: [
-    "com.fabfilter.Micro.#{version.major}"
+    "com.fabfilter.Micro.#{version.major}",
   ]
 end

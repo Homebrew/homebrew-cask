@@ -20,6 +20,6 @@ cask "fabfilter-simplon" do
   pkg "#{name[0]} #{version} Installer.pkg"
 
   uninstall pkgutil: [
-    "com.fabfilter.Simplon.#{version.major}"
+    "com.fabfilter.Simplon.#{version.major}",
   ]
 end

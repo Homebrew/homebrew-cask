@@ -20,6 +20,6 @@ cask "fabfilter-twin" do
   pkg "#{name[0]} #{version} Installer.pkg"
 
   uninstall pkgutil: [
-    "com.fabfilter.Twin.#{version.major}"
+    "com.fabfilter.Twin.#{version.major}",
   ]
 end

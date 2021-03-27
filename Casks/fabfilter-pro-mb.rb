@@ -20,6 +20,6 @@ cask "fabfilter-pro-mb" do
   pkg "#{name[0]} #{version} Installer.pkg"
 
   uninstall pkgutil: [
-    "com.fabfilter.Pro-MB.#{version.major}"
+    "com.fabfilter.Pro-MB.#{version.major}",
   ]
 end

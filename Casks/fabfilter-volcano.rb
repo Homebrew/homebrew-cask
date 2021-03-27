@@ -20,6 +20,6 @@ cask "fabfilter-volcano" do
   pkg "#{name[0]} #{version} Installer.pkg"
 
   uninstall pkgutil: [
-    "com.fabfilter.Volcano.#{version.major}"
+    "com.fabfilter.Volcano.#{version.major}",
   ]
 end

@@ -20,6 +20,6 @@ cask "fabfilter-saturn" do
   pkg "#{name[0]} #{version} Installer.pkg"
 
   uninstall pkgutil: [
-    "com.fabfilter.Saturn.#{version.major}"
+    "com.fabfilter.Saturn.#{version.major}",
   ]
 end
