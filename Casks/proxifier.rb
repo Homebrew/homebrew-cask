@@ -20,9 +20,12 @@ cask "proxifier" do
   app "Proxifier.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.initex.proxifier.v3.macos",
     "~/Library/Application Support/Proxifier",
     "~/Library/Caches/com.initex.proxifier.macosx",
     "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/Proxifier Help*",
+    "~/Library/Containers/com.initex.proxifier.v3.macos",
+    "~/Library/Group Containers/NXELXU5YLW.com.initex.proxifier.v3.macos",
     "~/Library/Logs/Proxifier",
     "~/Library/Preferences/com.initex.proxifier.macosx.plist",
     "~/Library/Saved Application State/com.initex.proxifier.macosx.savedState",
