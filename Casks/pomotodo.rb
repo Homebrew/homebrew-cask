@@ -4,10 +4,17 @@ cask "pomotodo" do
 
   url "https://cdn.hackplan.com/theair/#{version.after_comma}/Pomotodo.#{version.before_comma}.dmg",
       verified: "cdn.hackplan.com/theair/"
-  appcast "https://air.pomotodo.com/v1/p/com.pomotodo.PomotodoMac#{version.major}/latest.xml"
   name "Pomododo"
   desc "Time management app for creators"
   homepage "https://pomotodo.com/"
+
+  livecheck do
+    url "https://air.pomotodo.com/v1/p/com.pomotodo.PomotodoMac#{version.major}/latest.xml"
+    strategy :sparkle do |item|
+      match = item.url.match(%r{/(\d+)/Pomotodo\.(\d+(?:\.\d+)*)\.dmg}i)
+      "#{match[2]},#{match[1]}"
+    end
+  end
 
   app "Pomotodo.app"
 
