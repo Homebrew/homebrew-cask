@@ -9,7 +9,7 @@ cask "jalview" do
 
   livecheck do
     url "https://www.jalview.org/getdown/release/install4j/1.8/updates.xml"
-    regex(%r{newVersion="(\d+(?:\.\d+)*)"}i)
+    regex(/newVersion="(\d+(?:\.\d+)*)"/i)
   end
 
   app "Jalview.app"
