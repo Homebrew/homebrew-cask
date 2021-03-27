@@ -17,9 +17,6 @@ cask "emacs" do
 
   app "Emacs.app"
   binary "#{appdir}/Emacs.app/Contents/MacOS/Emacs", target: "emacs"
-  binary "#{appdir}/Emacs.app/Contents/MacOS/bin/ebrowse"
-  binary "#{appdir}/Emacs.app/Contents/MacOS/bin/emacsclient"
-  binary "#{appdir}/Emacs.app/Contents/MacOS/bin/etags"
 
   zap trash: [
     "~/Library/Caches/org.gnu.Emacs",
