@@ -10,7 +10,7 @@ cask "reunion" do
     url "https://store.leisterpro.com/updates/reunion#{version.major}/appcast.xml"
     strategy :sparkle do |item|
       match = item.url.match(%r{/Reunion-(\d+(?:-\d+)*)-(\d+.*?)\.zip}i)
-      "#{match[1].tr('-', '.')},#{match[2]}"
+      "#{match[1].tr("-", ".")},#{match[2]}"
     end
   end
 
