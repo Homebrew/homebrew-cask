@@ -16,5 +16,5 @@ cask "quickbooks" do
 
   depends_on macos: ">= :mojave"
 
-  app "QuickBooks #{version}.app"
+  app "QuickBooks #{version.after_comma}.app"
 end
