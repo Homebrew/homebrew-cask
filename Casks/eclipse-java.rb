@@ -1,6 +1,6 @@
 cask "eclipse-java" do
   version "2021-03"
-  sha256 "834dc1173718adaddc8129369711ade0ffa1b03af8423786f8ded18b0ddcc856"
+  sha256 "88628dc853584e80621ff5e3fd54c9b560385be4a65362006ba214506290242e"
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version}/R/eclipse-java-#{version}-R-macosx-cocoa-x86_64.dmg"
   name "Eclipse IDE for Java Developers"
