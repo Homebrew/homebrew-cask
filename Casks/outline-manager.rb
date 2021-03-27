@@ -1,6 +1,6 @@
 cask "outline-manager" do
-  version "1.6.1"
-  sha256 "329db2c8c64c5b8700f0ade335d69c68020dd5ab0ff788a68c90771b1dc6905a"
+  version "1.7.2"
+  sha256 "16e0e8d07cb17b5f4eec791e7a4643de691abe8bc2292707c01bfee6be5df813"
 
   url "https://github.com/Jigsaw-Code/outline-server/releases/download/v#{version}/Outline-Manager.dmg",
       verified: "github.com/Jigsaw-Code/outline-server/"
