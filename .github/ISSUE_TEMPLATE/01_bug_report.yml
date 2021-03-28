@@ -20,7 +20,7 @@ body:
           required: true
   - type: textarea
     attributes:
-      label: Description of issue
+      label: Description
     validations:
       required: true
   - type: input
