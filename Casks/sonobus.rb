@@ -7,6 +7,8 @@ cask "sonobus" do
   desc "High-quality network audio streaming"
   homepage "https://sonobus.net/"
 
+  depends_on macos: ">= 10.9"
+
   livecheck do
     url :homepage
     strategy :page_match
