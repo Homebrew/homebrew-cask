@@ -16,6 +16,10 @@ jobs:
               {
                 "label": "documentation",
                 "path": ".*\\.md"
+              },
+              {
+                "label": "documentation",
+                "path": "\\.github/ISSUE_TEMPLATE/.*\\.yml"
               }
             ]
         if: always()
