@@ -19,6 +19,16 @@ cask "ibm-aspera-connect" do
   uninstall script: {
     executable: "~/Library/Application Support/Aspera/Aspera Connect/uninstall_connect.sh",
     args:       ["-f"],
-  },
-            delete: "~/Library/Logs/Aspera_Connect"
+  }
+
+  zap trash: [
+    "~/Library/Application Scripts/com.aspera.connect.SafariExtension",
+    "~/Library/Application Scripts/com.aspera.drive.SendToExtension",
+    "~/Library/Containers/com.aspera.connect.SafariExtension",
+    "~/Library/Containers/com.aspera.drive.SendToExtension",
+    "~/Library/Group Containers/group.com.aspera.connect",
+    "~/Library/Logs/Aspera_Connect",
+    "~/Library/Preferences/com.aspera.connect.plist",
+    "~/Library/Saved Application State/com.aspera.connect.savedState",
+  ]
 end
