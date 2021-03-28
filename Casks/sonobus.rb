@@ -13,7 +13,7 @@ cask "sonobus" do
     regex(%r{href="releases/.*?-(.+)-mac\.dmg}i)
   end
 
-  pkg "SonoBus Installer.png"
+  pkg "SonoBus Installer.pkg"
 
   uninstall pkgutil: [
     "net.sonobus.pkg.aax",
