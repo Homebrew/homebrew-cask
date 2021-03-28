@@ -5,7 +5,7 @@ cask "sonobus" do
   url "https://sonobus.net/releases/sonobus-#{version}-mac.dmg"
   name "SonoBus"
   desc "High-quality network audio streaming"
-  homepage "https://sonobus.net"
+  homepage "https://sonobus.net/"
 
   livecheck do
     url :homepage
