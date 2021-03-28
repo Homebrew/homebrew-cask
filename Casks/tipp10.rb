@@ -8,6 +8,7 @@ cask "tipp10" do
   name "TIPP10"
   desc "Free touch typing tutor"
   homepage "https://www.tipp10.com/"
+  depends_on macos: "<= :mojave"
 
   app "TIPP10.app"
 end
