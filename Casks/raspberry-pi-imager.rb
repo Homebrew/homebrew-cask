@@ -8,9 +8,8 @@ cask "raspberry-pi-imager" do
   homepage "https://www.raspberrypi.org/downloads/"
 
   livecheck do
-    url "https://www.raspberrypi.org/software/"
-    strategy :page_match
-    regex(%r{href=.*?/imager_(\d+(?:\.\d+)*)\.dmg}i)
+    url "https://downloads.raspberrypi.org/imager/imager_latest.dmg"
+    strategy :header_match
   end
 
   app "Raspberry Pi Imager.app"
