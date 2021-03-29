@@ -12,7 +12,7 @@ cask "tipp10" do
   depends_on macos: "<= :mojave"
 
   app "TIPP10.app"
-  
+
   caveats do
     discontinued
   end
