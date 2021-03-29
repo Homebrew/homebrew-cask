@@ -10,7 +10,7 @@ cask "sonobus" do
   livecheck do
     url :homepage
     strategy :page_match
-    regex(%r{href="releases/.*?-(.+)-mac\.dmg}i)
+    regex(%r{href="releases/.*?-(\d+(?:\.\d+)*)-mac\.dmg}i)
   end
 
   pkg "SonoBus Installer.pkg"
@@ -21,5 +21,11 @@ cask "sonobus" do
     "net.sonobus.pkg.vst3",
     "net.sonobus.pkg.au",
     "net.sonobus.pkg.app",
+  ]
+
+  zap trash: [
+    "~/Library/Application Support/SonoBus",
+    "~/Library/Caches/com.Sonosaurus.SonoBus",
+    "~/Library/Saved Application State/com.Sonosaurus.SonoBus.savedState",
   ]
 end
