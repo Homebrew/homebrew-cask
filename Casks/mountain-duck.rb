@@ -3,10 +3,14 @@ cask "mountain-duck" do
   sha256 "1a48d0f8ac6c5c3c34b86076df4b84ddaec670b7bab54a68cd7c3eb482087771"
 
   url "https://dist.mountainduck.io/Mountain%20Duck-#{version}.zip"
-  appcast "https://version.mountainduck.io/#{version.major}/macos/changelog.rss"
   name "Mountain Duck"
   desc "Mounts servers and cloud storages as a disk on the desktop"
   homepage "https://mountainduck.io/"
+
+  livecheck do
+    url "https://version.mountainduck.io/#{version.major}/macos/changelog.rss"
+    strategy :sparkle
+  end
 
   auto_updates true
 
