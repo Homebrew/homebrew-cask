@@ -1,5 +1,5 @@
 cask "emacs" do
-  version "27.1-1"
+  version "27.2-2"
   sha256 "67688cfa124544a2d41d62ad33dcd12843679a1bd48e870836044d9a0bb9b062"
 
   url "https://emacsformacosx.com/emacs-builds/Emacs-#{version}-universal.dmg"
