@@ -5,7 +5,7 @@ cask "chatterino" do
   url "https://chatterino.com/download/#{version}/Chatterino.dmg"
   name "Chatterino"
   desc "Chat client for https://twitch.tv"
-  homepage "https://chatterino.com"
+  homepage "https://chatterino.com/"
 
   app "chatterino.app"
 
