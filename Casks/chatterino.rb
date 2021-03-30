@@ -10,7 +10,7 @@ cask "chatterino" do
   livecheck do
     url :homepage
     strategy :page_match
-    regex(%r{span>macOS \((.*)\)</span}i)
+    regex(%r{span>macOS \(v(.*)\)</span}i)
   end
 
   app "chatterino.app"
