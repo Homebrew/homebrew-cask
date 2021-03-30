@@ -8,6 +8,10 @@ cask "flutter" do
   desc "UI toolkit for building applications for mobile, web and desktop"
   homepage "https://flutter.dev/"
 
+  livecheck do
+    skip "No version information available"
+  end
+
   auto_updates true
 
   binary "flutter/bin/dart"
