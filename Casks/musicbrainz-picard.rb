@@ -11,7 +11,7 @@ cask "musicbrainz-picard" do
   livecheck do
     url "https://picard.musicbrainz.org/downloads/"
     strategy :page_match
-    regex(%r{href=.*?/MusicBrainz-Picard-(\d+(?:\.\d+)*)-macOS-10.14\.dmg}i)
+    regex(%r{href=.*?/MusicBrainz-Picard-(\d+(?:\.\d+)*)-macOS-(?:\d+(?:\.\d+)*)\.dmg}i)
   end
 
   depends_on macos: ">= :sierra"
