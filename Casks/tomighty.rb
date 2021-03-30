@@ -8,4 +8,6 @@ cask "tomighty" do
   homepage "https://github.com/tomighty/tomighty-osx"
 
   app "Tomighty.app"
+
+  zap trash: "~/Library/Preferences/org.tomighty.Tomighty.plist"
 end
