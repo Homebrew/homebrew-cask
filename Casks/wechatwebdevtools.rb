@@ -11,7 +11,7 @@ cask "wechatwebdevtools" do
   livecheck do
     url "https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html"
     strategy :page_match
-    regex(%r{Stable Build</a> \((\d+(?:\.\d+)*)}i)
+    regex(%r{Stable Build</a>\s*\((\d+(?:\.\d+)*)}i)
   end
 
   auto_updates true
