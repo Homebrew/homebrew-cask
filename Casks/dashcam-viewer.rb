@@ -1,6 +1,6 @@
 cask "dashcam-viewer" do
-  version "3.6.5"
-  sha256 "8ccb39854b7f524bdcbfb0fc84648e110848110b399d219c550070bce2ee2086"
+  version "3.6.6"
+  sha256 "586f67c9bd9dddfd57237a46810022148631a15b1cbd54f0b8172f227e180069"
 
   url "https://filedn.com/l2s8TAtm4VASBX72ds0zYD8/dcv/Dashcam_Viewer_v#{version}.dmg",
       verified: "filedn.com/l2s8TAtm4VASBX72ds0zYD8/dcv/"
