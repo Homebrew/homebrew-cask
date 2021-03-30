@@ -1,9 +1,10 @@
 cask "openframeworks" do
-  version "0.11.1"
-  sha256 "815d578512ee328aaa9592951298f88716abb6a7e4bbcb4993aa755f477ed004"
+  version "0.11.2"
+  sha256 "cd618d058c1fe4ef90bfd42fe1149e1ecfd0504881c031e46e8e1298be96f6d7"
 
   url "https://openframeworks.cc/versions/v#{version}/of_v#{version}_osx_release.zip"
   name "Openframeworks"
+  desc "C++ toolkit for creative coding"
   homepage "https://openframeworks.cc/"
 
   livecheck do
