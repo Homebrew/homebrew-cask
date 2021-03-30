@@ -8,6 +8,12 @@ cask "nova" do
   desc "Native code editor"
   homepage "https://nova.app/"
 
+  livecheck do
+    url "https://download-cdn.panic.com/nova/"
+    strategy :page_match
+    regex(/nova\s(\d+(?:\.\d+)*)\.zip/i)
+  end
+
   auto_updates true
   depends_on macos: ">= :mojave"
 
