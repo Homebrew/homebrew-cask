@@ -4,7 +4,7 @@ cask "emacs" do
 
   url "https://emacsformacosx.com/emacs-builds/Emacs-#{version}-universal.dmg"
   name "Emacs"
-  desc "Extensible, customizable, free/libre text editor - and more"
+  desc "Text editor"
   homepage "https://emacsformacosx.com/"
 
   livecheck do
