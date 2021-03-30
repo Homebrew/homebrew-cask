@@ -1,6 +1,6 @@
 cask "switchhosts" do
-  version "3.5.7.5554"
-  sha256 "e837625cf19d881e33ebffb9984fbaca7d9c74780d67767f0b015595b176c82d"
+  version "3.5.8.5556"
+  sha256 "62cfdd4273e5b0213f26319917c4a3b860433f82114cc07efd0ad4db68431f4e"
 
   url "https://github.com/oldj/SwitchHosts/releases/download/v#{version.major_minor_patch}/SwitchHosts._macOS_#{version}.dmg",
       verified: "github.com/oldj/SwitchHosts/"
