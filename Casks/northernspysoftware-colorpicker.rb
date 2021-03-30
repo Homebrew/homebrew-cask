@@ -7,6 +7,12 @@ cask "northernspysoftware-colorpicker" do
   desc "Utility to use the Apple color picker anywhere"
   homepage "http://www.northernspysoftware.com/software/colorpicker"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(/ColorPicker_(\d+(?:\.\d+)*)\.dmg/i)
+  end
+
   app "ColorPicker.app"
 
   zap trash: [
