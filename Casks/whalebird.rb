@@ -7,7 +7,7 @@ cask "whalebird" do
   url "https://github.com/h3poteto/whalebird-desktop/releases/download/#{version}/Whalebird-#{version}-darwin-universal.dmg",
       verified: "github.com/h3poteto/whalebird-desktop/"
   name "Whalebird"
-  desc "Electron-based Mastodon, Pleroma and Misskey client"
+  desc "Mastodon, Pleroma and Misskey client"
   homepage "https://whalebird.social/"
 
   app "Whalebird.app"
