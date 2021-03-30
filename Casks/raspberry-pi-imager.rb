@@ -1,6 +1,6 @@
 cask "raspberry-pi-imager" do
-  version "1.6"
-  sha256 "800c48d49eca9199f275a73821686381e23dc5a22d0b87b77b57322afafbe5f2"
+  version "1.6.1"
+  sha256 "7c84ec9d458b43cb8174b4463a80607d59615521150e0003c04affa9be7282d0"
 
   url "https://downloads.raspberrypi.org/imager/imager_#{version}.dmg"
   name "Raspberry Pi Imager"
@@ -8,9 +8,8 @@ cask "raspberry-pi-imager" do
   homepage "https://www.raspberrypi.org/downloads/"
 
   livecheck do
-    url "https://www.raspberrypi.org/software/"
-    strategy :page_match
-    regex(%r{href=.*?/imager_(\d+(?:\.\d+)*)\.dmg}i)
+    url "https://downloads.raspberrypi.org/imager/imager_latest.dmg"
+    strategy :header_match
   end
 
   app "Raspberry Pi Imager.app"
