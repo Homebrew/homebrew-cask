@@ -7,6 +7,12 @@ cask "chatterino" do
   desc "Chat client for https://twitch.tv"
   homepage "https://chatterino.com/"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{span>macOS \((.*)\)</span}i)
+  end
+
   app "chatterino.app"
 
   zap trash: "~/Library/Application Support/chatterino"
