@@ -4,12 +4,13 @@ cask "emacs" do
 
   url "https://emacsformacosx.com/emacs-builds/Emacs-#{version}-universal.dmg"
   name "Emacs"
+  desc "Text editor"
   homepage "https://emacsformacosx.com/"
 
   livecheck do
     url "https://emacsformacosx.com/atom/release"
     strategy :page_match
-    regex(%r{href=.*?/Emacs-(\d+(?:\.\d+)*-\d+)-universal\.dmg}i)
+    regex(%r{href=.*?/Emacs-(\d+(?:\.\d+)*(?:-\d+)?)-universal\.dmg}i)
   end
 
   conflicts_with formula: "emacs"
