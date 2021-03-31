@@ -8,8 +8,8 @@ cask "lyx" do
   homepage "https://www.lyx.org/"
 
   livecheck do
-    url "https://www.lyx.org/misc/rss/lyx_news_feed.xml"
-    regex(/LyX (\d+(?:\.\d+)*)/i)
+    url "https://www.lyx.org/Download"
+    regex(/LyX-(\d+(?:\.\d+)*)\+qt5/i)
   end
 
   app "LyX.app"
