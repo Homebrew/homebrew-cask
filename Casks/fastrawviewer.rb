@@ -8,7 +8,7 @@ cask "fastrawviewer" do
   homepage "https://www.fastrawviewer.com/"
 
   livecheck do
-    url "https://www.fastrawviewer.com/download"
+    url "https://updates.fastrawviewer.com/data/"
     strategy :page_match
     regex(%r{href=.*?/FastRawViewer-(\d+(?:\.\d+)*)\.dmg}i)
   end
