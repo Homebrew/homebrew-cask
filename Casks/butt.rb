@@ -8,5 +8,10 @@ cask "butt" do
   desc "Shoutcast and Icecast streaming client"
   homepage "https://danielnoethen.de/butt/"
 
+  livecheck do
+    url :url
+    strategy :sourceforge
+  end
+
   app "butt.app"
 end
