@@ -13,7 +13,7 @@ cask "vallum" do
     regex(/^v?(\d+(?:\.\d+)*)$/i)
   end
 
-  pkg "Vallum.pkg"
+  app "Vallum.app"
 
   uninstall pkgutil:   "it.murus.afw.Vallum",
             launchctl: [
