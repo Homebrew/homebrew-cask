@@ -12,7 +12,7 @@ cask "wxmacmolplt" do
     url "https://brettbode.github.io/wxmacmolplt/downloads.html"
     strategy :page_match do |page|
       match = page.match(
-        /([a-z0-9]+)\.gz">\n.*wxMacMolPlt\s(\d+(?:\.\d+)*).+Does\snot\sinclude\sQuickTime\ssupport/i
+        /([a-z0-9]+)\.gz">\n.*wxMacMolPlt\s(\d+(?:\.\d+)*).+Does\snot\sinclude\sQuickTime\ssupport/i,
       )
       "#{match[2]},#{match[1]}"
     end
