@@ -13,5 +13,7 @@ cask "utterly" do
     executable: "/Applications/Utterly.app/Contents/Resources/_uninstall-non-interactive.sh",
     sudo:       true,
   },
-            pkgutil: "app.utterly.Utterly"
+            pkgutil: "app.utterly.Utterly",
+            launchctl: "app.utterly.Utterly.XPCHelper",
+            quit: "app.utterly.Utterly.App"
 end
