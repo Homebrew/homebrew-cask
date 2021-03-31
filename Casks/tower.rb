@@ -10,7 +10,10 @@ cask "tower" do
 
   livecheck do
     url "https://updates.fournova.com/updates/tower3-mac/stable"
-    strategy :sparkle
+    strategy :page_match do |page|
+      match = page.match(%r{(\d+(?:\.\d+)*)-([a-z0-9]+)/Tower-(\d+(?:\.\d+)*)-(\d+(?:\.\d+)*)\.zip}i)
+      "#{match[3]},#{match[1]}:#{match[2]}"
+    end
   end
 
   auto_updates true
