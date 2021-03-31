@@ -8,7 +8,7 @@ cask "yojimbo" do
   homepage "https://www.barebones.com/products/yojimbo/"
 
   livecheck do
-    url "https://versioncheck.barebones.com/Yojimbo.xml"
+    url "http://versioncheck.barebones.com/Yojimbo.xml"
     regex(/Yojimbo[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
