@@ -45,7 +45,7 @@ cask "forticlient" do
               "com.fortinet.fct_launcher",
               "com.fortinet.fssoagent_launchagent",
               "com.fortinet.forticlient.vpn.vpn_control",
-              "com.fortinet.fctappfw",
+              "com.fortinet.fctappfw2",
               "com.fortinet.config",
               "com.fortinet.epctrl",
               "com.fortinet.fmon2",
