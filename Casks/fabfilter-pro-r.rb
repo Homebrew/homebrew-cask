@@ -10,7 +10,7 @@ cask "fabfilter-pro-r" do
   livecheck do
     url "https://www.fabfilter.com/download"
     strategy :page_match do |page|
-      match = page.match(%r{href=".+/ffpror(\d)(\d\d).dmg"}i)
+      match = page.match(%r{href=".*?/ffpror(\d)(\d\d)\.dmg}i)
       "#{match[1]}.#{match[2]}"
     end
   end
