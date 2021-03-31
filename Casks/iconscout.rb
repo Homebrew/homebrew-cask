@@ -8,16 +8,18 @@ cask "iconscout" do
   homepage "https://iconscout.com/"
 
   livecheck do
-    skip "No version information available"
+    url "https://iconscout.com/download"
+    strategy :page_match
+    regex(/Iconscout-(\d+(?:\.\d+)*)/i)
   end
 
   app "Iconscout.app"
 
   zap trash: [
     "~/Library/Application Support/Iconscout",
-    "~/Library/Saved Application State/com.electron.iconscout.savedState",
-    "~/Library/Preferences/com.electron.iconscout.plist",
     "~/Library/Caches/com.electron.iconscout",
     "~/Library/Caches/com.electron.iconscout.ShipIt",
+    "~/Library/Preferences/com.electron.iconscout.plist",
+    "~/Library/Saved Application State/com.electron.iconscout.savedState",
   ]
 end
