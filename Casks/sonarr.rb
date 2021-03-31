@@ -1,6 +1,6 @@
 cask "sonarr" do
-  version "3.0.5.1144"
-  sha256 "89d7e5570ffdf2e62a8e774debb4899f259c82390a2cd1fb3b48b3f0c93cfbd0"
+  version "3.0.6.1196"
+  sha256 "41055ce7e24f46f1ea62745251d245dd9ed827a2fbfdf63732ff4a65470ce707"
 
   url "https://github.com/Sonarr/Sonarr/archive/refs/tags/v#{version}.zip",
       verified: "github.com/Sonarr/Sonarr/"
