@@ -9,10 +9,10 @@ cask "utterly" do
 
   pkg "Utterly.pkg"
 
-  uninstall script:  {
+  uninstall script:    {
     executable: "/Applications/Utterly.app/Contents/Resources/_uninstall-non-interactive.sh",
   },
-            pkgutil: "app.utterly.Utterly",
+            pkgutil:   "app.utterly.Utterly",
             launchctl: "app.utterly.Utterly.XPCHelper",
-            quit: "app.utterly.Utterly.App"
+            quit:      "app.utterly.Utterly.App"
 end
