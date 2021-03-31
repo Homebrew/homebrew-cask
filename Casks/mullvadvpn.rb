@@ -19,4 +19,11 @@ cask "mullvadvpn" do
 
   uninstall pkgutil:   "net.mullvad.vpn",
             launchctl: "net.mullvad.daemon"
+
+  zap trash: [
+    "~/Library/Application Support/Mullvad VPN",
+    "~/Library/Logs/Mullvad VPN",
+    "~/Library/Preferences/net.mullvad.vpn.plist",
+    "/Library/LaunchDaemons/net.mullvad.daemon.plist",
+  ]
 end
