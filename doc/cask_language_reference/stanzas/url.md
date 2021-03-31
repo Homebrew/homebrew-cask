@@ -101,9 +101,11 @@ url "https://handbrake.fr/nightly.php" do |page|
 end
 ```
 
+You can also nest `url do` blocks inside `url do` blocks to follow a chain of URLs.
+
 The block is only evaluated when needed, for example on download time or when auditing a Cask. Inside a block, you may safely do things such as HTTP/S requests that may take a long time to execute. You may also refer to the `@cask` instance variable, and invoke any method available on `@cask`.
 
-The block will be called immediately before downloading; its result value will be assumed to be a `String` and subsequently used as a download URL.
+The block will be called immediately before downloading; its result value will be assumed to be a `String` (or a pair of a `String` and `Hash` containing parameters) and subsequently used as a download URL.
 
 You can use the `url` stanza with either a direct argument or a block but not with both.
 
