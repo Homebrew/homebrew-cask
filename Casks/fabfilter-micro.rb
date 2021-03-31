@@ -17,7 +17,7 @@ cask "fabfilter-micro" do
 
   depends_on macos: ">= :yosemite"
 
-  pkg "#{name[0]} #{version} Installer.pkg"
+  pkg "FabFilter Micro #{version} Installer.pkg"
 
   uninstall pkgutil: [
     "com.fabfilter.Micro.#{version.major}",

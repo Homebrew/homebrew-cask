@@ -17,7 +17,7 @@ cask "fabfilter-simplon" do
 
   depends_on macos: ">= :yosemite"
 
-  pkg "#{name[0]} #{version} Installer.pkg"
+  pkg "FabFilter Simplon #{version} Installer.pkg"
 
   uninstall pkgutil: [
     "com.fabfilter.Simplon.#{version.major}",

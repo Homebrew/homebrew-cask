@@ -17,7 +17,7 @@ cask "fabfilter-timeless" do
 
   depends_on macos: ">= :yosemite"
 
-  pkg "#{name[0]} #{version} Installer.pkg"
+  pkg "FabFilter Timeless #{version} Installer.pkg"
 
   uninstall pkgutil: [
     "com.fabfilter.Timeless.#{version.major}",

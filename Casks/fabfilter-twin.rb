@@ -17,7 +17,7 @@ cask "fabfilter-twin" do
 
   depends_on macos: ">= :yosemite"
 
-  pkg "#{name[0]} #{version} Installer.pkg"
+  pkg "FabFilter Twin #{version} Installer.pkg"
 
   uninstall pkgutil: [
     "com.fabfilter.Twin.#{version.major}",

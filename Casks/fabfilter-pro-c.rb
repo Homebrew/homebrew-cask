@@ -17,7 +17,7 @@ cask "fabfilter-pro-c" do
 
   depends_on macos: ">= :yosemite"
 
-  pkg "#{name[0]} #{version} Installer.pkg"
+  pkg "FabFilter Pro-C #{version} Installer.pkg"
 
   uninstall pkgutil: [
     "com.fabfilter.Pro-C.#{version.major}",

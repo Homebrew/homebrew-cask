@@ -17,7 +17,7 @@ cask "fabfilter-one" do
 
   depends_on macos: ">= :yosemite"
 
-  pkg "#{name[0]} #{version} Installer.pkg"
+  pkg "FabFilter One #{version} Installer.pkg"
 
   uninstall pkgutil: [
     "com.fabfilter.One.#{version.major}",

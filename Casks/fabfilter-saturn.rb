@@ -17,7 +17,7 @@ cask "fabfilter-saturn" do
 
   depends_on macos: ">= :yosemite"
 
-  pkg "#{name[0]} #{version} Installer.pkg"
+  pkg "FabFilter Saturn #{version} Installer.pkg"
 
   uninstall pkgutil: [
     "com.fabfilter.Saturn.#{version.major}",
