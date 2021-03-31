@@ -7,6 +7,10 @@ cask "tyme" do
   desc "Time tracking app"
   homepage "https://www.tyme-app.com/"
 
+  livecheck do
+    skip "No version information available"
+  end
+
   app "Tyme.app"
 
   zap trash: [
