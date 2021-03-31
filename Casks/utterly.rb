@@ -11,7 +11,6 @@ cask "utterly" do
 
   uninstall script:  {
     executable: "/Applications/Utterly.app/Contents/Resources/_uninstall-non-interactive.sh",
-    sudo:       true,
   },
             pkgutil: "app.utterly.Utterly",
             launchctl: "app.utterly.Utterly.XPCHelper",
