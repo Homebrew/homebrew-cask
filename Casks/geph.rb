@@ -1,6 +1,6 @@
 cask "geph" do
-  version "4.2.6"
-  sha256 "e258c05053b72d65f711fc165452c9b7096c3fab36b98e0fe9ed77b1aba36f13"
+  version "4.3.0"
+  sha256 "3bffcc36865c1f554b309eda6e2ab3a0d5a75dd7a76b071f801d9b91046646c3"
 
   url "https://f001.backblazeb2.com/file/geph4-dl/Geph4Releases/#{version}/geph-macos-#{version}.dmg",
       verified: "f001.backblazeb2.com/file/geph4-dl/"
