@@ -1,8 +1,8 @@
 cask "wxmacmolplt" do
-  version "7.7"
-  sha256 :no_check
+  version "7.7,ijfreodzydtqn214qui3snyvj5vdovqr"
+  sha256 "c3bf2e39a85d0c55ef28c9cc61b0897304a2804b79c34f765eb4537c1a97a5e8"
 
-  url "https://uofi.box.com/shared/static/ijfreodzydtqn214qui3snyvj5vdovqr.gz",
+  url "https://uofi.box.com/shared/static/#{version.after_comma}.gz",
       verified: "https://uofi.box.com/shared/static/"
   name "wxMacMolPlt"
   desc "Cross-platform GUI input generator for GAMESS"
@@ -10,8 +10,10 @@ cask "wxmacmolplt" do
 
   livecheck do
     url "https://brettbode.github.io/wxmacmolplt/downloads.html"
-    strategy :page_match
-    regex(/wxMacMolPlt (\d+(?:\.\d+)*) for Mac OS X 10.7 or newer/i)
+    strategy :page_match do |page|
+      match = page.match(%r{([a-z0-9]+)\.gz">\n.*wxMacMolPlt\s(\d+(?:\.\d+)*).+Does\snot\sinclude\sQuickTime\ssupport}i)
+      "#{match[2]},#{match[1]}"
+    end
   end
 
   app "MacMolPlt/wxMacMolPlt.app"
