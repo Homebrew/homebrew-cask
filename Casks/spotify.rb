@@ -8,6 +8,10 @@ cask "spotify" do
   desc "Music streaming service"
   homepage "https://www.spotify.com/"
 
+  livecheck do
+    skip "No version information available"
+  end
+
   auto_updates true
 
   app "Spotify.app"
