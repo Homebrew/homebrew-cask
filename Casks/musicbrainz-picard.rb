@@ -1,8 +1,8 @@
 cask "musicbrainz-picard" do
-  version "2.5.6"
-  sha256 "c4686cc3b29c8b672245a89b0c18cc86b54e06f5491c0cdfdb5f471e061fff32"
+  version "2.6"
+  sha256 "3058eef5a4d03f2962b0981aaa92b422bfe6a2a3c5c73cc22b474e6f1c3453c5"
 
-  url "https://musicbrainz.osuosl.org/pub/musicbrainz/picard/MusicBrainz-Picard-#{version}.dmg",
+  url "https://musicbrainz.osuosl.org/pub/musicbrainz/picard/MusicBrainz-Picard-#{version}-macOS-10.14.dmg",
       verified: "musicbrainz.osuosl.org/pub/"
   name "MusicBrainz Picard"
   desc "Music tagger"
@@ -11,7 +11,7 @@ cask "musicbrainz-picard" do
   livecheck do
     url "https://picard.musicbrainz.org/downloads/"
     strategy :page_match
-    regex(%r{href=.*?/MusicBrainz-Picard-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/MusicBrainz-Picard-(\d+(?:\.\d+)*)-macOS-(?:\d+(?:\.\d+)*)\.dmg}i)
   end
 
   depends_on macos: ">= :sierra"
