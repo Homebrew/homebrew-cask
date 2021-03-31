@@ -1,6 +1,6 @@
 cask "fastrawviewer" do
-  version "1.7.2.1696"
-  sha256 "16b121d501e10fba89f778006b9151709cb367b74d6aab23dc100bc3107d8b7b"
+  version "1.7.3.1715"
+  sha256 "20954531bb166864f500c3d0fed4d75bb364c164ff576fb5839fc41f239d05e1"
 
   url "https://updates.fastrawviewer.com/data/FastRawViewer-#{version}.dmg"
   name "FastRawViewer"
@@ -8,9 +8,9 @@ cask "fastrawviewer" do
   homepage "https://www.fastrawviewer.com/"
 
   livecheck do
-    url "https://www.fastrawviewer.com/download"
+    url "https://updates.fastrawviewer.com/data/"
     strategy :page_match
-    regex(%r{href=.*?/FastRawViewer-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(/FastRawViewer-(\d+(?:\.\d+)*)\.dmg/i)
   end
 
   app "FastRawViewer.app"
