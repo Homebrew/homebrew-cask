@@ -6,6 +6,10 @@ cask "adobe-connect" do
   name "Adobe Connect"
   homepage "https://www.adobe.com/products/adobeconnect.html"
 
+  livecheck do
+    skip "No version information available"
+  end
+
   auto_updates true
 
   installer manual: "AdobeConnectInstaller.app"
