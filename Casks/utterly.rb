@@ -20,11 +20,9 @@ cask "utterly" do
               "/Applications/Utterly.app",
               "/Library/Application Support/Utterly/UtterlyXPCHelper.xpc",
               "/Library/Audio/Plug-Ins/HAL/Utterly Device.driver",
+              "/Library/LaunchDaemons/app.utterly.Utterly.XPCHelper.plist",
               "/usr/local/libexec/UtterlyXPCHelper.xpc",
             ]
 
-  zap trash: [
-    "~/Library/Preferences/app.utterly.Utterly.App.plist",
-    "/Library/LaunchDaemons/app.utterly.Utterly.XPCHelper.plist",
-  ]
+  zap trash: "~/Library/Preferences/app.utterly.Utterly.App.plist"
 end
