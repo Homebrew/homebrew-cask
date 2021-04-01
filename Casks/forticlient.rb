@@ -9,9 +9,7 @@ cask "forticlient" do
   homepage "https://forticlient.com/"
 
   livecheck do
-    url "https://www.forticlient.com/downloads"
-    strategy :page_match
-    regex(/FortiClient_(\d+(?:\.\d+)*)_macosx\.dmg/i)
+    skip "No version information available"
   end
 
   pkg "Install.mpkg"
