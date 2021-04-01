@@ -1,11 +1,11 @@
 cask "airbuddy" do
-  version "2.3-275"
-  sha256 :no_check # required as upstream package is updated in-place
+  version "2.3.2-282"
+  sha256 "f744d3c125a763eed3a4d6c1f6d5c79ef6100ab44577ff4ed66053a72c39ea98"
 
   url "https://su.airbuddy.app/kCRSAmcjBc/AirBuddy_v#{version}.dmg"
-  name "Airbuddy"
-  desc "AirPods companion app"
-  homepage "https://v2.airbuddy.app/"
+  name "AirBuddy"
+  desc "Experience AirPods on your Mac like never before."
+  homepage "https://airbuddy.app/"
 
   livecheck do
     url "https://su.airbuddy.app/kCRSAmcjBc/appcast_hyeon.xml"
