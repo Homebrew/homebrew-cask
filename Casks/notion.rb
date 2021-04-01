@@ -5,8 +5,8 @@ cask "notion" do
     url "https://desktop-release.notion-static.com/Notion-#{version}.dmg",
         verified: "desktop-release.notion-static.com/"
   else
-    version "2.0.13"
-    sha256 "abe3dd4adc5fc4ba591be2f031e22cb0c43ce2d5503fe925b005231e7941d5bf"
+    version "2.0.16"
+    sha256 "9c73cbd5eec4474a176ca09f66321eedb8fb62989a02256fa4c0a9544ad50f5b"
     url "https://desktop-release.notion-static.com/Notion-#{version}-arm64.dmg",
         verified: "desktop-release.notion-static.com/"
   end
