@@ -4,7 +4,7 @@ cask "airbuddy" do
 
   url "https://su.airbuddy.app/kCRSAmcjBc/AirBuddy_v#{version}.dmg"
   name "AirBuddy"
-  desc "Experience AirPods on your Mac like never before."
+  desc "AirPods companion app"
   homepage "https://airbuddy.app/"
 
   livecheck do
