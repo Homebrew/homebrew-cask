@@ -7,6 +7,10 @@ cask "old-school-runescape" do
   desc "Game client for Old School RuneScape"
   homepage "https://oldschool.runescape.com/"
 
+  livecheck do
+    skip "No version information available"
+  end
+
   app "Old School RuneScape.app"
 
   zap trash: [
