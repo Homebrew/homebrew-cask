@@ -7,12 +7,19 @@ cask "utterly" do
   desc "Remove background noise during your calls in any audio or video conferencing app"
   homepage "https://www.utterly.app/"
 
+  livecheck do
+    skip "No version information available"
+  end
+
   pkg "Utterly.pkg"
 
-  uninstall script:    {
-    executable: "/Applications/Utterly.app/Contents/Resources/_uninstall-non-interactive.sh",
-  },
+  uninstall quit:      "app.utterly.Utterly.App"
             pkgutil:   "app.utterly.Utterly",
             launchctl: "app.utterly.Utterly.XPCHelper",
-            quit:      "app.utterly.Utterly.App"
+            delete:    [
+              "/Applications/Utterly.app",
+              "/Library/Application Support/Utterly/UtterlyXPCHelper.xpc",
+              "/Library/Audio/Plug-Ins/HAL/Utterly Device.driver",
+              "/usr/local/libexec/UtterlyXPCHelper.xpc",
+            ]
 end
