@@ -13,7 +13,7 @@ cask "utterly" do
 
   pkg "Utterly.pkg"
 
-  uninstall quit:      "app.utterly.Utterly.App"
+  uninstall quit:      "app.utterly.Utterly.App",
             pkgutil:   "app.utterly.Utterly",
             launchctl: "app.utterly.Utterly.XPCHelper",
             delete:    [
