@@ -1,8 +1,8 @@
 cask "airbuddy" do
-  version "2.3.2-282"
+  version "2.3.2,282"
   sha256 "f744d3c125a763eed3a4d6c1f6d5c79ef6100ab44577ff4ed66053a72c39ea98"
 
-  url "https://su.airbuddy.app/kCRSAmcjBc/AirBuddy_v#{version}.dmg"
+  url "https://su.airbuddy.app/kCRSAmcjBc/AirBuddy_v#{version.before_comma}-#{version.after_comma}.dmg"
   name "AirBuddy"
   desc "AirPods companion app"
   homepage "https://airbuddy.app/"
