@@ -4,10 +4,15 @@ cask "runelite" do
 
   url "https://github.com/runelite/launcher/releases/download/#{version}/RuneLite.dmg",
       verified: "github.com/runelite/launcher/"
-  appcast "https://github.com/runelite/launcher/releases.atom"
   name "RuneLite"
-  desc "Popular free, open-source and super fast client for Old School RuneScape"
+  desc "Client for Old School RuneScape"
   homepage "https://runelite.net/"
+
+  livecheck do
+    url "https://github.com/runelite/launcher/releases"
+    strategy :page_match
+    regex(%r{(\d+(?:\.\d+)*)/RuneLite\.dmg}i)
+  end
 
   app "RuneLite.app"
 
