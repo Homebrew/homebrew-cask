@@ -18,7 +18,6 @@ cask "airbuddy" do
   app "AirBuddy.app"
 
   zap trash: [
-    "~/Library/Preferences/codes.rambo.AirBuddy.plist",
     "~/Library/Application Scripts/codes.rambo.AirBuddy*",
     "~/Library/Caches/codes.rambo.AirBuddy",
     "~/Library/Caches/codes.rambo.AirCore",
@@ -26,6 +25,7 @@ cask "airbuddy" do
     "~/Library/Group Containers/8C7439RJLG.group.codes.rambo.AirBuddy",
     "~/Library/HTTPStorages/codes.rambo.AirBuddy.binarycookies",
     "~/Library/LaunchAgents/codes.rambo.AirBuddyHelper.plist",
+    "~/Library/Preferences/codes.rambo.AirBuddy.plist",
     "~/Library/SyncedPreferences/codes.rambo.AirBuddy.plist",
   ]
 end
