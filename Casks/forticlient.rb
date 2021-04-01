@@ -16,6 +16,10 @@ cask "forticlient" do
 
   pkg "Install.mpkg"
 
+  uninstall_preflight do
+    set_permissions "/Applications/FortiClient.app", "0755"
+  end
+
   uninstall quit:      [
     "com.fortinet.FortiClient",
     "com.fortinet.FortiClientAgent",
