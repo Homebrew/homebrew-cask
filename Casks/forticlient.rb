@@ -8,6 +8,12 @@ cask "forticlient" do
   desc "Fabric agent with endpoint protection and cloud sandbox"
   homepage "https://forticlient.com/"
 
+  livecheck do
+    url "https://www.forticlient.com/downloads"
+    strategy :page_match
+    regex(/FortiClient_(\d+(?:\.\d+)*)_macosx\.dmg/i)
+  end
+
   pkg "Install.mpkg"
 
   uninstall quit:      [
