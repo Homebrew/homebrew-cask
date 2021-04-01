@@ -9,8 +9,7 @@ cask "airbuddy" do
 
   livecheck do
     url "https://su.airbuddy.app/kCRSAmcjBc/appcast_hyeon.xml"
-    strategy :page_match
-    regex(/airbuddy_v(\d+(?:.\d+)*)\.dmg/i)
+    strategy :sparkle
   end
 
   auto_updates true
