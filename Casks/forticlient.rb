@@ -17,9 +17,9 @@ cask "forticlient" do
   pkg "Install.mpkg"
 
   uninstall quit:      [
+    "com.fortinet.FortiClient",
     "com.fortinet.FortiClientAgent",
     "com.fortinet.FortiClient.helper",
-    "com.fortinet.FortiClient",
     "com.fortinet.FctMiscAgent",
   ],
             pkgutil:   [
