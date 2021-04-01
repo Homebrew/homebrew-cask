@@ -19,6 +19,9 @@ cask "forticlient" do
   uninstall_preflight do
     system_command "/usr/bin/chflags",
                    args: ["-R", "nouchg,noschg", "/Applications/FortiClient.app"],
+                   sudo: true,
+    system_command "/usr/bin/chflags",
+                   args: ["-R", "nouchg,noschg", "/Applications/FortiClientUninstaller.app"],
                    sudo: true
   end
 
