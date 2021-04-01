@@ -8,6 +8,12 @@ cask "opencore-configurator" do
   desc "OpenCore EFI bootloader configuration helper"
   homepage "https://mackie100projects.altervista.org/opencore-configurator/"
 
+  livecheck do
+    url "https://mackie100projects.altervista.org/download-opencore-configurator/"
+    strategy :page_match
+    regex(/OpenCore\sConfigurator\s(\d+(?:\.\d+)*)/i)
+  end
+
   auto_updates true
 
   app "OpenCore Configurator.app"
