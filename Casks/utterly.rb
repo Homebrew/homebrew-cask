@@ -22,4 +22,9 @@ cask "utterly" do
               "/Library/Audio/Plug-Ins/HAL/Utterly Device.driver",
               "/usr/local/libexec/UtterlyXPCHelper.xpc",
             ]
+
+  zap trash: [
+    "~/Library/Preferences/app.utterly.Utterly.App.plist",
+    "/Library/LaunchDaemons/app.utterly.Utterly.XPCHelper.plist",
+  ]
 end
