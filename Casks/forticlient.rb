@@ -16,7 +16,7 @@ cask "forticlient" do
 
   pkg "Install.mpkg"
 
-  uninstall_preflight do
+  postflight do
     system_command "chflags",
                    args: ["-R", "nouchg", "/Applications/FortiClient.app"]
   end
