@@ -5,7 +5,7 @@ cask "audacity" do
   url "https://github.com/audacity/audacity/releases/download/Audacity-#{version}/audacity-macos-#{version}.dmg",
       verified: "github.com/audacity/audacity/"
   name "Audacity"
-  desc "Easy-to-use, multi-track audio editor and recorder"
+  desc "Multi-track audio editor and recorder"
   homepage "https://www.audacityteam.org/"
 
   app "Audacity.app"
