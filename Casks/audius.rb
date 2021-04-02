@@ -8,8 +8,8 @@ cask "audius" do
   homepage "https://audius.co/"
 
   livecheck do
-     url "https://s3-us-west-1.amazonaws.com/download.audius.co/latest-mac.yml"
-     strategy :electron_builder
+    url "https://s3-us-west-1.amazonaws.com/download.audius.co/latest-mac.yml"
+    strategy :electron_builder
   end
 
   app "Audius.app"
