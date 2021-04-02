@@ -1,6 +1,6 @@
 cask "mactex-no-gui" do
-  version "2020.0407"
-  sha256 "a33af89de36c7c84a76050c9704d50d23892e9c2070f04f6a53e1c6d5a332f67"
+  version "2021.0328"
+  sha256 "e541257d70f911550341853709fc45d9fa9fcd4c93058382000ebb19b284833b"
 
   url "http://mirror.ctan.org/systems/mac/mactex/mactex-#{version.no_dots}.pkg",
       verified: "mirror.ctan.org/systems/mac/mactex/"
