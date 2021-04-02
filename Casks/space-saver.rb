@@ -1,6 +1,6 @@
 cask "space-saver" do
-  version "0.5"
-  sha256 "a6f26f90aef4dd06b222d02bf47c52004b9f71af6e56258467a955fea1d9bea8"
+  version "0.6"
+  sha256 "04c58635d432598573b5fadfe6cbde3a5ac2d17aeeb927bf6e413a452312f544"
 
   url "https://www.mariogt.com/appsChest/SpaceSaver#{version.dots_to_hyphens}.zip"
   name "Space Saver"
