@@ -27,13 +27,13 @@ cask "mactex" do
       choices: [
         {
           # Ghostscript
-          "choiceIdentifier" => "org.tug.mactex.ghostscript9.50",
+          "choiceIdentifier" => "org.tug.mactex.ghostscript9.53.3",
           "choiceAttribute"  => "selected",
           "attributeSetting" => 0,
         },
         {
           # Ghostscript Dynamic Library
-          "choiceIdentifier" => "org.tug.mactex.ghostscript9.50libgs",
+          "choiceIdentifier" => "org.tug.mactex.ghostscript9.53.3libgs",
           "choiceAttribute"  => "selected",
           "attributeSetting" => 0,
         },
