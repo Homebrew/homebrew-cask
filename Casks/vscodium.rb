@@ -1,6 +1,6 @@
 cask "vscodium" do
-  version "1.54.3"
-  sha256 "a927b3fea12cdfd0fdb02a2a3134d17f1ebf1b755f0f92762942d159fb83013d"
+  version "1.55.0"
+  sha256 "f99761d3f0367d363682c0b76ae3bb74edcb12f7c5a3c882e6891db1288a0d78"
 
   url "https://github.com/VSCodium/vscodium/releases/download/#{version}/VSCodium.x64.#{version}.dmg"
   name "VSCodium"
@@ -11,7 +11,7 @@ cask "vscodium" do
   conflicts_with cask: "visual-studio-code"
 
   app "VSCodium.app"
-  binary "#{appdir}/VSCodium.app/Contents/Resources/app/bin/code"
+  binary "#{appdir}/VSCodium.app/Contents/Resources/app/bin/codium"
 
   zap trash: [
     "~/Library/Application Support/VSCodium",
