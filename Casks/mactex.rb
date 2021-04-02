@@ -9,7 +9,7 @@ cask "mactex" do
   homepage "https://www.tug.org/mactex/"
 
   livecheck do
-    url "http://mirror.ctan.org/systems/mac/mactex/"
+    url "https://ctan.org/tex-archive/systems/mac/mactex/"
     strategy :page_match do |page|
       match = page.match(/href=.*?mactex-(\d{4})(\d{2})(\d{2})\.pkg/)
       "#{match[1]}.#{match[2]}#{match[3]}"
