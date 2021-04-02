@@ -1,6 +1,6 @@
 cask "josm" do
-  version "17580"
-  sha256 "c18f7b4ba47d138bde1345ce2ebeb78481180ad47773f58d3a71fd5092c9132b"
+  version "17702"
+  sha256 "f3da34654b4eb88f3e2f0d27c38b5c60e993731234ce8ad6f4a2a0dae1652764"
 
   url "https://github.com/openstreetmap/josm/releases/download/#{version}-tested/JOSM-macOS-java16.zip",
       verified: "github.com/openstreetmap/josm/"
