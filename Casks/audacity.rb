@@ -9,4 +9,10 @@ cask "audacity" do
   homepage "https://www.audacityteam.org/"
 
   app "Audacity.app"
+  
+  zap trash: [
+    "~/Library/Application Support/audacity",
+    "~/Library/Preferences/org.audacityteam.audacity.plist",
+    "~/Library/Saved Application State/org.audacityteam.audacity.savedState",
+  ]
 end
