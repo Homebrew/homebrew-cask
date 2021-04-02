@@ -10,11 +10,6 @@ cask "audius" do
   livecheck do
      url "https://s3-us-west-1.amazonaws.com/download.audius.co/latest-mac.yml"
      strategy :electron_builder
-   end
-    url "https://s3-us-west-1.amazonaws.com/download.audius.co/latest-mac.yml"
-    strategy :page_match do |page|
-      YAML.safe_load(page)["version"]
-    end
   end
 
   app "Audius.app"
