@@ -5,7 +5,7 @@ cask "sabnzbd" do
   url "https://github.com/sabnzbd/sabnzbd/releases/download/#{version}/SABnzbd-#{version}-osx.dmg",
       verified: "github.com/sabnzbd/sabnzbd/"
   name "SABnzbd"
-  desc "Free and easy binary newsreader"
+  desc "Binary newsreader"
   homepage "https://sabnzbd.org/"
 
   livecheck do
