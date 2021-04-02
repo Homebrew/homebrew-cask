@@ -95,18 +95,17 @@ However, this typically involves an HTTP round trip to a landing site, which may
 Similar to the `preflight`, `postflight`, `uninstall_preflight`, and `uninstall_postflight` blocks, the `url` stanza offers an optional _block syntax_:
 
 ```rb
-url do
-  require "open-uri"
-  base_url = "https://handbrake.fr/nightly.php"
-  content = URI(base_url).read
-  file_path = content[/href=["']?([^"' >]*Handbrake[._-][^"' >]+\.dmg)["' >]/i, 1]
-  file_path ? URI.join(base_url, file_path) : nil
+url "https://handbrake.fr/nightly.php" do |page|
+  file_path = page[/href=["']?([^"' >]*Handbrake[._-][^"' >]+\.dmg)["' >]/i, 1]
+  file_path ? URI.join(page.url, file_path) : nil
 end
 ```
 
+You can also nest `url do` blocks inside `url do` blocks to follow a chain of URLs.
+
 The block is only evaluated when needed, for example on download time or when auditing a Cask. Inside a block, you may safely do things such as HTTP/S requests that may take a long time to execute. You may also refer to the `@cask` instance variable, and invoke any method available on `@cask`.
 
-The block will be called immediately before downloading; its result value will be assumed to be a `String` and subsequently used as a download URL.
+The block will be called immediately before downloading; its result value will be assumed to be a `String` (or a pair of a `String` and `Hash` containing parameters) and subsequently used as a download URL.
 
 You can use the `url` stanza with either a direct argument or a block but not with both.
 
