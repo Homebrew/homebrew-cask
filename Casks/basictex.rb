@@ -1,6 +1,6 @@
 cask "basictex" do
-  version "2020.0407"
-  sha256 "c6a27c95a8af3bc26121cc3be415f3fc7120ffaa4ff4c1a860a7fe9fe78ac31e"
+  version "2021.0325"
+  sha256 "0d8f7c39ac7a2a66b070775f0c684aab01a7fb3c075045c33cd19f9b29317d53"
 
   url "http://mirror.ctan.org/systems/mac/mactex/mactex-basictex-#{version.no_dots}.pkg",
       verified: "mirror.ctan.org/systems/mac/mactex/"
