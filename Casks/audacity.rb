@@ -8,11 +8,6 @@ cask "audacity" do
   desc "Easy-to-use, multi-track audio editor and recorder"
   homepage "https://www.audacityteam.org/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   app "Audacity.app"
 
   zap trash: [
