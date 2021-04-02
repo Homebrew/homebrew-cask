@@ -1,12 +1,19 @@
 cask "vmware-fusion" do
-  version "12.1.0-17195230"
-  sha256 "75a54777ddc759babe84d276156dafa8822bdc5ece7b751de8ac1948b13af136"
+  version "12.1.1-17801503"
+  sha256 "fbc94a432c00fb9e05dd648cc80dd58cfb052c3aa53f44dc996be02e25a7c270"
 
   url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version}.dmg"
-  appcast "https://softwareupdate.vmware.com/cds/vmw-desktop/fusion.xml"
   name "VMware Fusion"
   desc "App to run other operating systems without rebooting"
   homepage "https://www.vmware.com/products/fusion.html"
+
+  livecheck do
+    url "https://softwareupdate.vmware.com/cds/vmw-desktop/fusion.xml"
+    strategy :page_match do |page|
+      scan = page.scan(%r{fusion/(\d+(?:\.\d+)+)/(\d+)/core}i)
+      scan.map { |v| "#{v[0]}-#{v[1]}" }
+    end
+  end
 
   auto_updates true
   depends_on macos: ">= :catalina"
