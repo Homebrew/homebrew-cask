@@ -6,7 +6,7 @@ cask "joplin" do
       verified: "github.com/laurent22/joplin/"
   name "Joplin"
   desc "Note taking and to-do application with synchronization capabilities"
-  homepage "https://joplin.cozic.net/"
+  homepage "https://joplinapp.org/"
 
   livecheck do
     url :url
