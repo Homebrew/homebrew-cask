@@ -4,10 +4,14 @@ cask "datadog-agent" do
 
   url "https://s3.amazonaws.com/dd-agent/datadog-agent-#{version}.dmg",
       verified: "s3.amazonaws.com/dd-agent/"
-  appcast "https://s3.amazonaws.com/dd-agent/"
   name "Datadog Agent"
   desc "Monitoring and security across systems, apps, and services"
   homepage "https://www.datadoghq.com/"
+
+  livecheck do
+    url "https://s3.amazonaws.com/dd-agent/"
+    regex(%r{<Key>datadog-agent-([\d.-]+)\.dmg</Key>})
+  end
 
   installer manual: "datadog-agent-#{version}.pkg"
 
