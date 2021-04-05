@@ -4,7 +4,6 @@ cask "vmpk" do
 
   url "https://downloads.sourceforge.net/vmpk/#{version.major_minor_patch}/vmpk-#{version}-mac-x64.dmg",
       verified: "downloads.sourceforge.net/vmpk/"
-  appcast "https://sourceforge.net/projects/vmpk/rss"
   name "VMPK"
   homepage "https://vmpk.sourceforge.io/"
 
