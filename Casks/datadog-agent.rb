@@ -10,7 +10,7 @@ cask "datadog-agent" do
 
   livecheck do
     url "https://s3.amazonaws.com/dd-agent/"
-    regex(%r{<Key>datadog-agent-([\d.-]+)\.dmg</Key>})
+    regex(%r{<Key>datadog-agent-([\d.-]+)\.dmg</Key>}i)
   end
 
   installer manual: "datadog-agent-#{version}.pkg"
