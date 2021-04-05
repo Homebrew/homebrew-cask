@@ -7,6 +7,16 @@ cask "sequel-ace" do
   desc "MySQL/MariaDB database management"
   homepage "https://github.com/Sequel-Ace/Sequel-Ace"
 
+  livecheck do
+    url :url
+    strategy :git do |tags|
+      tags.map do |tag| 
+        match = tag.match(/^(\d+(?:\.\d+)*)-(\d+)$/i)
+        "#{match[1]},#{match[2]}" if match
+      end.compact
+    end
+  end
+
   app "Sequel Ace.app"
 
   zap trash: [
