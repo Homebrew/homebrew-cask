@@ -13,7 +13,7 @@ cask "gpg-suite" do
   end
 
   auto_updates true
-  conflicts_with cask: "gpg-suite-nightly"
+  conflicts_with cask: "gpg-suite-nightly", formula: "gpg"
   depends_on macos: ">= :mojave"
 
   pkg "Install.pkg"
