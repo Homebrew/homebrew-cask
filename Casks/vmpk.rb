@@ -5,6 +5,7 @@ cask "vmpk" do
   url "https://downloads.sourceforge.net/vmpk/#{version.major_minor_patch}/vmpk-#{version}-mac-x64.dmg",
       verified: "downloads.sourceforge.net/vmpk/"
   name "VMPK"
+  desc "Virtual MIDI Piano Keyboard"
   homepage "https://vmpk.sourceforge.io/"
 
   depends_on macos: ">= :sierra"
