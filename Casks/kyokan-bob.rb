@@ -8,6 +8,12 @@ cask "kyokan-bob" do
   desc "Handshake wallet GUI for name auction and DNS record management"
   homepage "https://bobwallet.io/"
 
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^(\d+(?:\.\d+)*)$/i)
+  end
+
   app "Bob.app"
 
   zap trash: [
