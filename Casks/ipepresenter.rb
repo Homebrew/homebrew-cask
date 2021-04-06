@@ -4,10 +4,15 @@ cask "ipepresenter" do
 
   url "https://dl.bintray.com/otfried/generic/ipe/#{version.major_minor}/ipepresenter-#{version}-mac.dmg",
       verified: "bintray.com/otfried/"
-  appcast "http://ipepresenter.otfried.org/"
   name "IpePresenter"
   desc "Make presentations from PDFs"
-  homepage "http://ipepresenter.otfried.org/"
+  homepage "https://ipepresenter.otfried.org/"
+
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/ipepresenter-(\d+(?:\.\d+)*)-mac\.dmg}i)
+  end
 
   depends_on macos: ">= :yosemite"
 
