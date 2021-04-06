@@ -20,13 +20,13 @@ cask "datadog-agent" do
             pkgutil:   "com.datadoghq.agent",
             delete:    [
               "/Applications/Datadog Agent.app",
-              "/opt/datadog-agent",
               "/usr/local/bin/datadog-agent",
             ]
 
   zap trash: [
     "~/.datadog-agent",
     "~/Library/LaunchAgents/com.datadoghq.agent.plist",
+    "/opt/datadog-agent",
   ]
 
   caveats <<~EOS
