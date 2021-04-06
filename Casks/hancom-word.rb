@@ -5,7 +5,7 @@ cask "hancom-word" do
   url "https://cdn.hancom.com/pds/hnc/DOWN/HwpMac2014VP_Home.pkg",
       referer: "https://hancom.com/mypage/myIndivPrdtList.do"
   name "Hacom Word Processor 2014 VP"
-  desc "Hwp file extension document editor"
+  desc "Word processor"
   homepage "https://office.hancom.com/"
 
   pkg "HwpMac2014VP_Home.pkg"
