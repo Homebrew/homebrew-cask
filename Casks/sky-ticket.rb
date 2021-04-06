@@ -8,6 +8,10 @@ cask "sky-ticket" do
   desc "Stream Sky Ticket content"
   homepage "https://skyticket.sky.de/"
 
+  livecheck do
+    skip "unversioned URL"
+  end
+
   app "Sky Ticket.app"
 
   zap trash: [
