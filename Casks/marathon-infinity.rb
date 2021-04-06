@@ -1,6 +1,6 @@
 cask "marathon-infinity" do
-  version "20200904"
-  sha256 "ee96ebf857044ffd5df19b53bb0bdf26299179d1e2e2a6d8be506e31e0b67e8f"
+  version "20210328"
+  sha256 "5ffc61b6072a9d6cbe87d073beb0247c1c2b1304eeb263dfaaf7c2725666f86b"
 
   url "https://github.com/Aleph-One-Marathon/alephone/releases/download/release-#{version}/MarathonInfinity-#{version}-Mac.dmg",
       verified: "github.com/Aleph-One-Marathon/alephone/"
