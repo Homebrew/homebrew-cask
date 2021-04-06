@@ -9,7 +9,10 @@ cask "mdrp" do
 
   livecheck do
     url "https://www.macdvdripperpro.com/mdrp_sparkle#{version.major}.xml"
-    strategy :sparkle
+    strategy :page_match do |page|
+      match = page.match(/MDRP_v(\d)(\d)(\d)\.zip/i)
+      "#{match[1]}.#{match[2]}.#{match[3]}"
+    end
   end
 
   app "MDRP.app"
