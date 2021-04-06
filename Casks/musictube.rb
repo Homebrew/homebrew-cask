@@ -1,5 +1,5 @@
 cask "musictube" do
-  version "1.14.3,2020.1123.112930"
+  version "1.14.4,2021.0402.104949"
   sha256 :no_check
 
   url "https://flavio.tordini.org/files/musictube/musictube.dmg"
