@@ -4,10 +4,15 @@ cask "mpv" do
 
   url "https://laboratory.stolendata.net/~djinn/mpv_osx/mpv-#{version}.tar.gz",
       verified: "laboratory.stolendata.net/~djinn/mpv_osx/"
-  appcast "https://laboratory.stolendata.net/~djinn/mpv_osx/"
   name "mpv"
   desc "Media player based on MPlayer and mplayer2"
   homepage "https://mpv.io/"
+
+  livecheck do
+    url "https://laboratory.stolendata.net/~djinn/mpv_osx/"
+    strategy :page_match
+    regex(/mpv-(\d+(?:\.\d+)*)\.tar\.gz/i)
+  end
 
   conflicts_with formula: "mpv"
   depends_on macos: ">= :sierra"
