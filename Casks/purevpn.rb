@@ -7,6 +7,10 @@ cask "purevpn" do
   name "PureVPN"
   homepage "https://www.purevpn.com/"
 
+  livecheck do
+    skip "unversioned URL"
+  end
+
   pkg "PureVPN.pkg"
 
   uninstall quit:    "com.purevpn.app.mac",
