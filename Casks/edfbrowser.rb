@@ -10,10 +10,10 @@ cask "edfbrowser" do
   homepage "https://www.teuniz.net/edfbrowser"
 
   app "EDFbrowser.app"
-  
+
   zap trash: [
-      "~/Library/Preferences/net.teuniz.EDFbrowser.plist",
-      "~/Library/Saved Application State/net.teuniz.EDFbrowser.savedState",
-      "~/.EDFbrowser",
+    "~/Library/Preferences/net.teuniz.EDFbrowser.plist",
+    "~/Library/Saved Application State/net.teuniz.EDFbrowser.savedState",
+    "~/.EDFbrowser",
   ]
 end
