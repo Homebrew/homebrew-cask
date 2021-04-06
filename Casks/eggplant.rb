@@ -6,5 +6,9 @@ cask "eggplant" do
   name "eggPlant Functional"
   homepage "https://www.eggplantsoftware.com/eggplant-functional-downloads"
 
+  livecheck do
+    skip "unversioned URL"
+  end
+
   app "eggPlant.app"
 end
