@@ -1,5 +1,5 @@
 cask "mindmaster" do
-  version "8.0.0,80"
+  version "8.5.1,851"
   sha256 :no_check
 
   url "https://download.edrawsoft.com/mindmaster_full5378.dmg"
