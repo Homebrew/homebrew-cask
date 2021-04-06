@@ -4,7 +4,6 @@ cask "squirrelsql" do
 
   url "https://downloads.sourceforge.net/squirrel-sql/1-stable/#{version}/squirrel-sql-#{version}-MACOSX-install.jar",
       verified: "sourceforge.net/squirrel-sql/"
-  appcast "https://sourceforge.net/projects/squirrel-sql/rss?path=/1-stable"
   name "SQuirrel SQL"
   homepage "http://www.squirrelsql.org/"
 
