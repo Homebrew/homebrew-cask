@@ -1,6 +1,6 @@
 cask "zoomus" do
-  version "5.4.58903.1122.1" # So it triggers an upgrade for users of the cask
-  sha256 "614fa5e81ca40fa868e8b682e59ce7f2195bd70593b42e95af2a405afb395c21"
+  version "5.6.1.560" # So it triggers an upgrade for users of the cask
+  sha256 "e0b01025388de07b292c7f14a13ea9041fa6333e308b115210c3fa3610a60521"
 
   url "https://d11yldzmag5yn.cloudfront.net/prod/#{version.before_comma}/Zoom.pkg",
       verified: "d11yldzmag5yn.cloudfront.net/"
