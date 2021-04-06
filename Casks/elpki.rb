@@ -7,6 +7,10 @@ cask "elpki" do
   desc "Safari plugin for using local tax system in Japan"
   homepage "https://www.eltax.lta.go.jp/eltax/junbi/syomei/"
 
+  livecheck do
+    skip "unversioned URL"
+  end
+
   pkg "ELPKISetup.pkg"
 
   uninstall pkgutil: "jp.eltax.elpki"
