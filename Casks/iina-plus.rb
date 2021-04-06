@@ -7,6 +7,14 @@ cask "iina-plus" do
   desc "Extra danmaku support for iina (iina 弹幕支持)"
   homepage "https://github.com/xjbeta/iina-plus"
 
+  livecheck do
+    url "https://github.com/xjbeta/iina-plus/releases/latest"
+    strategy :page_match do |page|
+      match = page.match(/(\d+(?:\.\d+)*)\((\d+)\)/i)
+      "#{match[1]},#{match[2]}"
+    end
+  end
+
   app "iina+.app"
 
   zap trash: [
