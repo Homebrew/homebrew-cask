@@ -9,9 +9,7 @@ cask "remnote" do
 
   livecheck do
     url "https://s3.amazonaws.com/download.remnote.io/latest-mac.yml"
-    strategy :page_match do |page|
-      YAML.safe_load(page)["version"]
-    end
+    strategy :electron_builder
   end
 
   app "RemNote.app"
