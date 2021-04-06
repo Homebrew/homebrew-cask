@@ -4,10 +4,15 @@ cask "securesafe" do
 
   url "https://www.dswiss.com/userdata/downloads/securesafe-#{version}.pkg",
       verified: "dswiss.com/userdata/downloads/"
-  appcast "https://www.securesafe.com/en/downloads/"
   name "SecureSafe"
   desc "Highly secure online storage with password manager"
   homepage "https://www.securesafe.com/"
+
+  livecheck do
+    url "https://www.securesafe.com/en/downloads"
+    strategy :page_match
+    regex(/securesafe-(\d+(?:\.\d+)*)\.pkg/i)
+  end
 
   depends_on macos: ">= :sierra"
 
