@@ -1,5 +1,5 @@
 cask "cheetah3d" do
-  version "7.4.2"
+  version "7.5.1"
   sha256 :no_check
 
   url "https://cheetah3d.com/download/Cheetah3D.dmg"
