@@ -11,6 +11,10 @@ cask "superhuman" do
   desc "Email client"
   homepage "https://superhuman.com/"
 
+  livecheck do
+    skip "unversioned URL"
+  end
+
   app "Superhuman.app"
 
   zap trash: [
