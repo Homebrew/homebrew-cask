@@ -8,6 +8,11 @@ cask "dynobase" do
   desc "GUI Client for DynamoDB"
   homepage "https://dynobase.dev/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Dynobase.app"
 
   zap trash: [
