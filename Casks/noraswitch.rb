@@ -4,7 +4,7 @@ cask "noraswitch" do
 
   url "https://noraswitch.com/dmg/noraSwitch%20#{version.before_comma}.dmg"
   name "noraSwitch"
-  desc "Less settings, low-key window switcher"
+  desc "Window switcher"
   homepage "https://noraswitch.com/"
 
   livecheck do
