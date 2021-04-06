@@ -7,5 +7,9 @@ cask "mylio" do
   name "Mylio"
   homepage "https://mylio.com/"
 
+  livecheck do
+    skip "unversioned URL"
+  end
+
   app "Mylio.app"
 end
