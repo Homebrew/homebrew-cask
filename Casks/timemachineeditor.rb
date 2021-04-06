@@ -1,5 +1,5 @@
 cask "timemachineeditor" do
-  version "5.1.7,210"
+  version "5.1.8,212"
   sha256 :no_check
 
   url "https://tclementdev.com/timemachineeditor/TimeMachineEditor.pkg"
