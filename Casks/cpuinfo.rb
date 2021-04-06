@@ -1,5 +1,5 @@
 cask "cpuinfo" do
-  version "1.4.5,229"
+  version "1.4.6,230"
   sha256 :no_check
 
   url "https://github.com/yusukeshibata/cpuinfo/blob/master/dist/cpuinfo.zip?raw=true"
