@@ -59,6 +59,8 @@ cask "racket" do
     "~/Library/Caches/Racket",
     "~/Library/Preferences/org.racket-lang.DrRacket.plist",
     "~/Library/Preferences/org.racket-lang.prefs.rktd",
+    "~/Library/Preferences/PLT-autosave-toc-save.rktd",
+    "~/Library/Preferences/PLT-autosave-toc.rktd",
     "~/Library/Saved Application State/org.racket-lang.DrRacket.savedState",
     "~/Library/Saved Application State/org.racket-lang.DrRacketBC.savedState",
     "~/Library/Saved Application State/org.racket-lang.GRacket3m.savedState",
