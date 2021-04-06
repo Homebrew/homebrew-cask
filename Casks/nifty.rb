@@ -6,5 +6,9 @@ cask "nifty" do
   name "Nifty"
   homepage "https://niftypm.com/"
 
+  livecheck do
+    skip "unversioned URL"
+  end
+
   app "Nifty.app"
 end
