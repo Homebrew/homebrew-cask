@@ -1,6 +1,6 @@
 cask "anka-build-cloud-registry" do
-  version "1.14.0-1e39461"
-  sha256 "fd53531c20bb4cded2b89b979ca29acc9f5c1729f0b0b9c043dc64c0698de108"
+  version "1.15.0-a88b7bc"
+  sha256 "a37f7ab7a2f14fb58b671d9678d700a684e832a549cb28627bc3cef597207c0b"
 
   url "https://d1efqjhnhbvc57.cloudfront.net/AnkaRegistry-#{version}.pkg",
       verified: "d1efqjhnhbvc57.cloudfront.net/"
