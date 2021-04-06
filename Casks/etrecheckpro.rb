@@ -1,11 +1,15 @@
 cask "etrecheckpro" do
-  version "6.3.6,6D029"
+  version "6.4.3,6E010"
   sha256 :no_check
 
   url "https://cdn.etrecheck.com/EtreCheckPro.zip"
   name "EtreCheck"
   desc "Utility to finds and fix problems on computer systems"
   homepage "https://etrecheck.com/"
+
+  livecheck do
+    skip "No version information available"
+  end
 
   app "EtreCheckPro.app"
 
