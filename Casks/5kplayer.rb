@@ -1,5 +1,5 @@
 cask "5kplayer" do
-  version "6.5.0,6500"
+  version "6.5.0,5000"
   sha256 :no_check
 
   url "https://www.5kplayer.com/download/5kplayer.dmg"
@@ -7,7 +7,7 @@ cask "5kplayer" do
   homepage "https://www.5kplayer.com/"
 
   livecheck do
-    url "https://www.5kplayer.com/upgrade/mac/updatecast.xml"
+    url "http://www.5kplayer.com/upgrade/mac/updatecast.xml"
     strategy :sparkle
   end
 
