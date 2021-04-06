@@ -8,5 +8,9 @@ cask "workplace-chat" do
   desc "Communications portal for your organisation"
   homepage "https://www.facebook.com/workplace/chat-app"
 
+  livecheck do
+    skip "unversioned URL"
+  end
+
   app "Workplace Chat.app"
 end
