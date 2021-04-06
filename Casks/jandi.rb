@@ -6,6 +6,10 @@ cask "jandi" do
   name "JANDI"
   homepage "https://www.jandi.com/landing/"
 
+  livecheck do
+    skip "unversioned URL"
+  end
+
   app "JANDI.app"
 
   uninstall quit: "com.jandi.osx.JANDI"
