@@ -1,5 +1,5 @@
 cask "eggplant" do
-  version "21.0.0,2010241818"
+  version "21.1.0,2101270001"
   sha256 :no_check
 
   url "https://downloads.eggplantsoftware.com/downloads/Eggplant/eggPlant.dmg"
