@@ -7,6 +7,10 @@ cask "viber" do
   desc "Calling and messaging application focusing on security"
   homepage "https://www.viber.com/"
 
+  livecheck do
+    skip "unversioned URL"
+  end
+
   depends_on macos: ">= :sierra"
 
   app "Viber.app"
@@ -15,7 +19,7 @@ cask "viber" do
     "~/Library/Application Scripts/com.viber.osx.macvibershare",
     "~/Library/Application Support/com.viber.osx",
     "~/Library/Application Support/ViberPC",
-    "~/Library/Caches/Viber Media S.à r.l",
+    "~/Library/Caches/Viber Media S.à r.l",
     "~/Library/Caches/com.viber.osx",
     "~/Library/Containers/com.viber.osx.macvibershare",
     "~/Library/Preferences/com.viber.*.plist",
