@@ -2,8 +2,8 @@ cask "miniforge" do
   version "4.10.0-0"
 
   if Hardware::CPU.intel?
-    sha256 "5813f9eadda46f655fdcf2daee10a8586ba067bb453551466fb66168268ea31b"
-    url "https://github.com/conda-forge/miniforge/releases/download/4.10.0-0/Miniforge3-4.10.0-0-MacOSX-arm64.sh"
+    sha256 "5aa5b5edd0260d92e27217da263db321d0dfc52b5ed66d3ad1a59a46595ca40e"
+    url "https://github.com/conda-forge/miniforge/releases/download/#{version}/Miniforge3-#{version}-MacOSX-x86_64.sh"
 
     installer script: {
       executable: "Miniforge3-#{version}-MacOSX-x86_64.sh",
