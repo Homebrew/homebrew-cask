@@ -21,7 +21,7 @@ cask "mactex-no-gui" do
     "mactex",
   ]
   depends_on formula: "ghostscript"
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :mojave"
 
   pkg "mactex-#{version.no_dots}.pkg",
       choices: [
@@ -59,14 +59,8 @@ cask "mactex-no-gui" do
               "/etc/manpaths.d/TeX",
             ]
 
-  zap trash: [
-    "/usr/local/texlive/texmf-local",
-    "~/Library/texlive/#{version.major}",
-  ],
-      rmdir: [
-        "/usr/local/texlive",
-        "~/Library/texlive",
-      ]
+  zap trash: "/usr/local/texlive/texmf-local",
+      rmdir: "/usr/local/texlive"
 
   caveats <<~EOS
     You must restart your terminal window for the installation of MacTex CLI tools to take effect.
