@@ -8,6 +8,10 @@ cask "stashcat" do
   desc "GDPR-compliant secure messenger"
   homepage "https://stashcat.com/"
 
+  livecheck do
+    skip "unversioned URL"
+  end
+
   app "Stashcat.app"
 
   zap trash: [
