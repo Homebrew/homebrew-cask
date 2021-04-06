@@ -6,5 +6,9 @@ cask "mindmaster" do
   name "MindMaster"
   homepage "https://www.edrawsoft.com/mindmaster/"
 
+  livecheck do
+    skip "unversioned URL"
+  end
+
   app "MindMaster.app"
 end
