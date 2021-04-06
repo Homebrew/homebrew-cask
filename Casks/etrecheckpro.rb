@@ -7,6 +7,10 @@ cask "etrecheckpro" do
   desc "Utility to finds and fix problems on computer systems"
   homepage "https://etrecheck.com/"
 
+  livecheck do
+    skip "No version information available"
+  end
+
   app "EtreCheckPro.app"
 
   zap trash: [
