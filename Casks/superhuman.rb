@@ -1,5 +1,5 @@
 cask "superhuman" do
-  version "11.0.13"
+  version "11.0.26"
   sha256 :no_check
 
   name "Superhuman"
