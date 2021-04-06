@@ -6,5 +6,9 @@ cask "sigilium-email-signatures" do
   name "Sigilium Email Signatures"
   homepage "https://sigilium.com/"
 
+  livecheck do
+    skip "unversioned URL"
+  end
+
   app "Sigilium Email Signatures.app"
 end
