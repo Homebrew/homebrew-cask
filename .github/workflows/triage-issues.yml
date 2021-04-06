@@ -4,7 +4,7 @@ name: Triage issues
 on:
   push:
     paths:
-    - .github/workflows/triage-issues.yml
+      - .github/workflows/triage-issues.yml
   schedule:
     # Once every day at midnight UTC
     - cron: "0 0 * * *"
@@ -24,7 +24,7 @@ jobs:
       - name: Mark/Close Stale Issues and Pull Requests
         uses: actions/stale@v3
         with:
-          repo-token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
           days-before-stale: 21
           days-before-close: 7
           stale-issue-message: >
@@ -33,8 +33,8 @@ jobs:
           stale-pr-message: >
             This pull request has been automatically marked as stale because it has not had
             recent activity. It will be closed if no further activity occurs.
-          exempt-issue-labels: 'gsoc-outreachy,help wanted,in progress'
-          exempt-pr-labels: 'gsoc-outreachy,help wanted,in progress'
+          exempt-issue-labels: "gsoc-outreachy,help wanted,in progress"
+          exempt-pr-labels: "gsoc-outreachy,help wanted,in progress"
 
   lock-threads:
     if: startsWith(github.repository, 'Homebrew/') && github.event_name != 'issue_comment'
@@ -43,7 +43,7 @@ jobs:
       - name: Lock Outdated Threads
         uses: dessant/lock-threads@486f7380c15596f92b724e4260e4981c68d6bde6
         with:
-          github-token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           issue-lock-inactive-days: 30
           issue-lock-labels: outdated
           pr-lock-inactive-days: 30
