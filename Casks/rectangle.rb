@@ -1,21 +1,30 @@
-cask 'rectangle' do
-  version '0.14'
-  sha256 '668e229c6dce470ec34f00d7b98e0643c8ff1b3237cbc2d52e1f1a70ebf81311'
+cask "rectangle" do
+  version "0.44,49"
+  sha256 "d8d26d25b9779c8ab0c9b5aac12ab71c63be1724856a0a31d139abf78b617a62"
 
-  # github.com/rxhanson/Rectangle/releases/download/v was verified as official when first introduced to the cask
-  url "https://github.com/rxhanson/Rectangle/releases/download/v#{version}/Rectangle#{version}.dmg"
-  appcast 'https://www.rectangleapp.com/downloads/updates.xml'
-  name 'Rectangle'
-  homepage 'https://rectangleapp.com/'
+  url "https://github.com/rxhanson/Rectangle/releases/download/v#{version.before_comma}/Rectangle#{version.before_comma}.dmg",
+      verified: "github.com/rxhanson/Rectangle/"
+  name "Rectangle"
+  desc "Move and resize windows using keyboard shortcuts or snap areas"
+  homepage "https://rectangleapp.com/"
+
+  livecheck do
+    url "https://www.rectangleapp.com/downloads/updates.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :el_capitan"
 
-  app 'Rectangle.app'
+  app "Rectangle.app"
+
+  uninstall quit: "com.knollsoft.Rectangle"
 
   zap trash: [
-               '~/Library/Preferences/com.knollsoft.Rectangle',
-               '~/Library/Application Support/Rectangle',
-               '~/Library/Caches/com.knollsoft.Rectangle',
-             ]
+    "~/Library/Application Scripts/com.knollsoft.RectangleLauncher",
+    "~/Library/Application Support/Rectangle",
+    "~/Library/Caches/com.knollsoft.Rectangle",
+    "~/Library/Containers/com.knollsoft.RectangleLauncher",
+    "~/Library/Preferences/com.knollsoft.Rectangle.plist",
+  ]
 end

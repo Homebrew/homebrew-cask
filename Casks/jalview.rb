@@ -1,11 +1,16 @@
-cask 'jalview' do
-  version '2.11.0'
-  sha256 '640c43b9e564092d4f765b5b30bc901003a7ee80a49442544159bc0bfb207cfc'
+cask "jalview" do
+  version "2.11.1.4"
+  sha256 "b49a13803461d35bad9df4ce587a910d7e0bc9123fcdd8b1060b8ed39dd92afa"
 
-  url "https://www.jalview.org/getdown/release/install4j/1.8/Jalview-OFFLINE_macos-app_#{version.dots_to_underscores}-j8.dmg"
-  appcast 'https://www.jalview.org/getdown/release/'
-  name 'Jalview'
-  homepage 'https://www.jalview.org/'
+  url "https://www.jalview.org/getdown/release/install4j/1.8/Jalview-#{version.dots_to_underscores}-macos-java_8.dmg"
+  name "Jalview"
+  desc "Multiple sequence alignment editor, visualisor, analysis and figure generator"
+  homepage "https://www.jalview.org/"
 
-  app 'Jalview.app'
+  livecheck do
+    url "https://www.jalview.org/getdown/release/install4j/1.8/updates.xml"
+    regex(/newVersion="(\d+(?:\.\d+)*)"/i)
+  end
+
+  app "Jalview.app"
 end

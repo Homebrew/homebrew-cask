@@ -1,14 +1,14 @@
-cask 'lightworks' do
-  version '14.5.0'
-  sha256 '8b7d5890f7c0f2ede05d4de16a7a09e5bfc5b322690e70cbd2e481e3638e738c'
+cask "lightworks" do
+  version "2020.1.1,r124942"
+  sha256 "67df2a00f290aa703fbb1e5af080ac3af57952a8ec5e14b2e98498a01d5b2857"
 
-  url "https://downloads.lwks.com/v#{version.major_minor.dots_to_hyphens}-new/lightworks_v#{version}.dmg"
-  appcast 'https://www.lwks.com/index.php?option=com_lwks&view=download&Itemid=206&tab=2',
-          configuration: version.major_minor
-  name 'Lightworks'
-  homepage 'https://www.lwks.com/'
+  url "https://cdn.lwks.com/releases/#{version.before_comma}/lightworks_#{version.before_comma}_#{version.after_comma}.dmg"
+  appcast "https://www.lwks.com/index.php?option=com_lwks&view=download&Itemid=206&tab=2"
+  name "Lightworks"
+  desc "Complete video creation package"
+  homepage "https://www.lwks.com/"
 
-  app 'Lightworks.app'
+  app "Lightworks.app"
 
-  zap trash: '~/Library/Saved Application State/com.editshare.lightworks.savedState'
+  zap trash: "~/Library/Saved Application State/com.editshare.lightworks.savedState"
 end

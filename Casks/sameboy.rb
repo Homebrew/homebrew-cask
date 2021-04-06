@@ -1,14 +1,19 @@
-cask 'sameboy' do
-  version '0.12.2'
-  sha256 'ff366d729fe4c18fefa03edd8936f8146075ac3ee5b5a0a71e5d8e8b753a43b3'
+cask "sameboy" do
+  version "0.14.2"
+  sha256 "bd8ca989f4203562838612e5ef5239221c28e9821734dc885c980b5e5b38f72a"
 
-  # github.com/LIJI32/SameBoy was verified as official when first introduced to the cask
-  url "https://github.com/LIJI32/SameBoy/releases/download/v#{version}/sameboy_cocoa_v#{version}.zip"
-  appcast 'https://github.com/LIJI32/SameBoy/releases.atom'
-  name 'SameBoy'
-  homepage 'https://sameboy.github.io/'
+  url "https://github.com/LIJI32/SameBoy/releases/download/v#{version}/sameboy_cocoa_v#{version}.zip",
+      verified: "github.com/LIJI32/SameBoy/"
+  name "SameBoy"
+  desc "Game Boy and Game Boy Color emulator written in C"
+  homepage "https://sameboy.github.io/"
 
-  depends_on macos: '>= :sierra'
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
-  app 'SameBoy.app'
+  depends_on macos: ">= :sierra"
+
+  app "SameBoy.app"
 end

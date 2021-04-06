@@ -1,11 +1,11 @@
-cask 'maciasl' do
-  version '1.4'
-  sha256 '24c0dbaa9a13231b8c8e364ef0e6d60656718320ce69d8bb23aa5bc27e82e87d'
+cask "maciasl" do
+  version "1.6.0"
+  sha256 "afaf1ecfb8aab59172829e34a0f82cd5f32eb92203043b65e540412ca2368cec"
 
-  url "https://downloads.sourceforge.net/maciasl/#{version}/MaciASL.zip"
-  appcast 'https://sourceforge.net/projects/maciasl/rss'
-  name 'MaciASL'
-  homepage 'https://sourceforge.net/projects/maciasl/'
+  url "https://github.com/acidanthera/MaciASL/releases/download/#{version}/MaciASL-#{version}-RELEASE.zip"
+  name "MaciASL"
+  homepage "https://github.com/acidanthera/MaciASL"
 
-  app 'MaciASL.app'
+  app "MaciASL.app"
+  binary "#{appdir}/MaciASL.app/Contents/MacOS/iasl-stable", target: "iasl"
 end

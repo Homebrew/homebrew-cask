@@ -1,14 +1,14 @@
-cask 'securityspy' do
-  version '5.2.0'
-  sha256 '038ef1d321b4a361ada48bef51c663408c89ce4290ba6f1fdaf1b13a4739b39a'
+cask "securityspy" do
+  version "5.3.2,5.0"
+  sha256 :no_check
 
-  url 'https://www.bensoftware.com/securityspy/SecuritySpy.dmg'
-  appcast 'https://www.bensoftware.com/securityspy/versionhistory.html',
-          configuration: version.chomp('.0')
-  name 'SecuritySpy'
-  homepage 'https://www.bensoftware.com/securityspy/'
+  url "https://www.bensoftware.com/securityspy/SecuritySpy.dmg"
+  appcast "https://www.bensoftware.com/securityspy/versionhistory.html",
+          must_contain: version.before_comma
+  name "SecuritySpy"
+  homepage "https://www.bensoftware.com/securityspy/"
 
-  depends_on macos: '>= :high_sierra'
+  depends_on macos: ">= :high_sierra"
 
-  app 'SecuritySpy.app'
+  app "SecuritySpy.app"
 end

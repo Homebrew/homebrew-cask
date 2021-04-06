@@ -1,14 +1,18 @@
-cask 'retrobatch' do
-  version '1.3'
-  sha256 '97c326a7c5051c8af59f209f1b53e28025744d1fd851ec1299b23e84c4c5e3b5'
+cask "retrobatch" do
+  version "1.4.3,946"
+  sha256 :no_check
 
-  url 'https://flyingmeat.com/download/Retrobatch.zip'
-  appcast "https://www.flyingmeat.com/download/retrobatch#{version.major}update.xml"
-  name 'Retrobatch'
-  homepage 'https://flyingmeat.com/retrobatch/'
+  url "https://flyingmeat.com/download/Retrobatch.zip"
+  name "Retrobatch"
+  homepage "https://flyingmeat.com/retrobatch/"
+
+  livecheck do
+    url "https://www.flyingmeat.com/download/retrobatch#{version.major}update.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'Retrobatch.app'
+  app "Retrobatch.app"
 end

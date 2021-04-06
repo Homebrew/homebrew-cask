@@ -1,11 +1,22 @@
-cask 'jump' do
-  version '8.4.9'
-  sha256 '9abfe1a2b78977d75b7bfc5b72596628f566ef23e0ec6745a9957f0b0118302b'
+cask "jump" do
+  version "8.7.15,80715"
+  sha256 "5d9a9ac66fe35e3b9313ee916fd678867826c89c8f610d0688e462a245b18d80"
 
-  url "https://mirror.jumpdesktop.com/downloads/JumpDesktopMac-#{version}.zip"
-  appcast 'https://jumpdesktop.com/downloads/viewer/jdmac-web-appcast.xml'
-  name 'Jump Desktop'
-  homepage 'https://jumpdesktop.com/#jdmac'
+  url "https://dl.jumpdesktop.com/downloads/jdm/JumpDesktopMac-#{version.before_comma}.zip"
+  name "Jump Desktop"
+  desc "Remote desktop application"
+  homepage "https://jumpdesktop.com/#jdmac"
 
-  app 'Jump Desktop.app'
+  livecheck do
+    url "https://jumpdesktop.com/downloads/viewer/jdmac-web-appcast.xml"
+    strategy :sparkle
+  end
+
+  app "Jump Desktop.app"
+
+  zap trash: [
+    "~/Documents/JumpDesktop",
+    "~/Library/Caches/com.p5sys.jump.mac.viewer.web",
+    "~/Library/Cookies/com.p5sys.jump.mac.viewer.web.binarycookies",
+  ]
 end

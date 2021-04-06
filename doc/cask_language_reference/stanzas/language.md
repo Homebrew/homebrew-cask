@@ -1,36 +1,36 @@
 # language
 
-The `language` stanza can match language codes ([ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) or [ISO 639-2](https://en.wikipedia.org/wiki/ISO_639-2)), regional identifiers ([ISO 3166-1 Alpha 2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)) and script codes ([ISO 15924](https://en.wikipedia.org/wiki/ISO_15924)), or a combination thereof.
+The `language` stanza can match [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) language codes, regional identifiers ([ISO 3166-1 Alpha 2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)) and script codes ([ISO 15924](https://en.wikipedia.org/wiki/ISO_15924)), or a combination thereof.
 
 US English should always be used as the default language:
 
 ```ruby
-language 'zh', 'CN' do
-  'zh_CN'
+language "zh", "CN" do
+  "zh_CN"
 end
 
-language 'de' do
-  'de_DE'
+language "de" do
+  "de_DE"
 end
 
-language 'en-GB' do
-  'en_GB'
+language "en-GB" do
+  "en_GB"
 end
 
-language 'en', default: true do
-  'en_US'
+language "en", default: true do
+  "en_US"
 end
 ```
 
 Note that the following are not the same:
 
 ```ruby
-language 'en', 'GB' do
-  # matches all locales containing 'en' or 'GB'
+language "en", "GB" do
+  # matches all locales containing "en" or "GB"
 end
 
-language 'en-GB' do
-  # matches only locales containing 'en' and 'GB'
+language "en-GB" do
+  # matches only locales containing "en" and "GB"
 end
 ```
 
@@ -45,8 +45,8 @@ Examples: [Firefox](https://github.com/Homebrew/homebrew-cask/blob/306b8fbd95020
 
 ## Installation
 
-To install a cask in a specific language, you can pass the `--language=` option to `brew cask install`:
+To install a cask in a specific language, you can pass the `--language=` option to `brew install`:
 
 ```
-brew cask install firefox --language=it
+brew install firefox --language=it
 ```

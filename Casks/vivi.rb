@@ -1,12 +1,12 @@
-cask 'vivi' do
-  version '2.18.0'
-  sha256 'a4ec814af1ae47168edf2d4545498297f46ee5dbbdb885b85a6c09a5b7bcebc0'
+cask "vivi" do
+  version "2.21.2"
+  sha256 "909eff68785dd5173b50c245855eedd8868ae1eb555f1a90118e5a059d4168de"
 
   url "https://downloads.vivi.io/app/#{version}/Vivi.pkg"
-  name 'Vivi'
-  homepage 'https://www.vivi.io/'
+  name "Vivi"
+  homepage "https://www.vivi.io/"
 
-  pkg 'Vivi.pkg'
+  pkg "Vivi.pkg"
 
-  uninstall pkgutil: 'au.com.viviaustralia.mac'
+  uninstall pkgutil: "au.com.viviaustralia.mac"
 end

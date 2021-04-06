@@ -1,20 +1,29 @@
-cask 'termius' do
-  version '5.2.3'
-  sha256 'b54c4c3169c1276173b05704e5a8a8477fe3787e46987f4eb51720bf97f69f46'
+cask "termius" do
+  version "7.8.0"
+  sha256 :no_check
 
-  # s3.amazonaws.com/termius.desktop.autoupdate/mac was verified as official when first introduced to the cask
-  url 'https://s3.amazonaws.com/termius.desktop.autoupdate/mac/Termius.dmg'
-  appcast 'https://docs.termius.com/changelog/desktop'
-  name 'Termius'
-  homepage 'https://www.termius.com/'
+  if Hardware::CPU.intel?
+    url "https://autoupdate.termius.com/mac/Termius.dmg"
+    appcast "https://autoupdate.termius.com/mac/latest-mac.yml"
+  else
+    url "https://autoupdate.termius.com/mac-arm64/Termius.dmg"
+    appcast "https://autoupdate.termius.com/mac-arm64/latest-mac.yml"
+  end
 
-  app 'Termius.app'
+  name "Termius"
+  desc "SSH client"
+  homepage "https://www.termius.com/"
+
+  auto_updates true
+  depends_on macos: ">= :yosemite"
+
+  app "Termius.app"
 
   zap trash: [
-               '~/.termius',
-               '~/Library/Application Support/Termius',
-               '~/Library/Saved Application State/com.termius-dmg.mac.savedState',
-               '/Library/Preferences/com.termius-dmg.mac.plist',
-               '~/Library/Logs/Termius',
-             ]
+    "~/.termius",
+    "~/Library/Application Support/Termius",
+    "~/Library/Saved Application State/com.termius-dmg.mac.savedState",
+    "/Library/Preferences/com.termius-dmg.mac.plist",
+    "~/Library/Logs/Termius",
+  ]
 end

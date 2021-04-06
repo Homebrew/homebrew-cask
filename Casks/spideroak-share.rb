@@ -1,18 +1,18 @@
-cask 'spideroak-share' do
-  version :latest
+cask "spideroak-share" do
+  version "2.2.1,100"
   sha256 :no_check
 
-  url 'https://spideroak.com/release/share'
-  name 'SpiderOak Share'
-  homepage 'https://spideroak.com/spideroak-share/'
+  url "https://spideroak.com/release/share"
+  name "SpiderOak Share"
+  homepage "https://spideroak.com/spideroak-share/"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'SpiderOak Share.app'
+  app "SpiderOak Share.app"
 
   zap trash: [
-               '~/Library/Logs/Share',
-               '~/Library/Preferences/com.spideroak.share.plist',
-               '~/Library/Saved Application State/com.spideroak.share.savedState',
-             ]
+    "~/Library/Logs/Share",
+    "~/Library/Preferences/com.spideroak.share.plist",
+    "~/Library/Saved Application State/com.spideroak.share.savedState",
+  ]
 end

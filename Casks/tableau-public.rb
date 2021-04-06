@@ -1,17 +1,22 @@
-cask 'tableau-public' do
-  version '2019.4.1'
-  sha256 '739b6ed5c7ac506c501136a217147edb9ba51d931e1b8c8836c2ed01e2aa8428'
+cask "tableau-public" do
+  version "2021.1.0"
+  sha256 "047f938ca3dbb028b50fb91c2935ff88bcc751b6d14d30fb75a489d7a0046db6"
 
   url "https://downloads.tableau.com/public/TableauPublic-#{version.dots_to_hyphens}.dmg"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.tableau.com/downloads/public/mac',
-          configuration: version.dots_to_hyphens
-  name 'Tableau Public'
-  homepage 'https://public.tableau.com/s/'
+  name "Tableau Public"
+  homepage "https://public.tableau.com/s/"
 
-  pkg 'Tableau Public.pkg'
+  livecheck do
+    url "https://www.tableau.com/downloads/public/mac"
+    strategy :header_match do |headers|
+      headers["location"][/-(\d+-\d+-\d+)\.dmg/i, 1].tr("-", ".")
+    end
+  end
+
+  pkg "Tableau Public.pkg"
 
   uninstall pkgutil: [
-                       'com.tableausoftware.FLEXNet.*',
-                       'com.tableausoftware.Public.app',
-                     ]
+    "com.tableausoftware.FLEXNet.*",
+    "com.tableausoftware.Public.app",
+  ]
 end

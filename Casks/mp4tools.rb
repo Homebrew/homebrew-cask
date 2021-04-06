@@ -1,12 +1,17 @@
-cask 'mp4tools' do
-  version '3.7.2'
-  sha256 'e4101837c5539f3f0441af3a1f02219636124a0f80e02f733f04cbf05ec11123'
+cask "mp4tools" do
+  version "3.7.2"
+  sha256 "e4101837c5539f3f0441af3a1f02219636124a0f80e02f733f04cbf05ec11123"
 
-  url "http://www.emmgunn.com/downloads/mp4tools#{version}.zip",
-      referer: 'http://www.emmgunn.com/mp4tools-home/mp4tools-downloads/'
-  appcast 'http://www.emmgunn.com/mp4tools-home/mp4tools-downloads/'
-  name 'MP4tools'
-  homepage 'http://www.emmgunn.com/mp4tools-home/'
+  url "https://www.emmgunn.com/downloads/mp4tools#{version}.zip"
+  name "MP4tools"
+  desc "Create and edit MP4 videos"
+  homepage "https://www.emmgunn.com/mp4tools-home/"
+
+  livecheck do
+    url "https://www.emmgunn.com/mp4tools-home/mp4tools-downloads/"
+    strategy :page_match
+    regex(%r{href=.*?/mp4tools(\d+(?:\.\d+)*)\.zip}i)
+  end
 
   app "mp4tools#{version}/MP4Tools.app"
 end

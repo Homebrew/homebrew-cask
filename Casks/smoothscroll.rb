@@ -1,13 +1,17 @@
-cask 'smoothscroll' do
-  version '1.4.10'
-  sha256 'cc2141b8dc85c641fddad162c21b9b1be2323993f9020be36c3eb781c2d0b327'
+cask "smoothscroll" do
+  version "1.5.0,10500.1"
+  sha256 :no_check
 
-  url 'https://www.smoothscroll.net/mac/download/SmoothScroll.app.zip'
-  appcast 'https://updater.smoothscroll.net/mac/updater.xml'
-  name 'SmoothScroll'
-  homepage 'https://www.smoothscroll.net/'
+  url "https://www.smoothscroll.net/mac/download/SmoothScroll.app.zip"
+  name "SmoothScroll"
+  homepage "https://www.smoothscroll.net/"
 
-  depends_on macos: '>= :sierra'
+  livecheck do
+    url "https://updater.smoothscroll.net/mac/updater.xml"
+    strategy :sparkle
+  end
 
-  app 'SmoothScroll.app'
+  depends_on macos: ">= :sierra"
+
+  app "SmoothScroll.app"
 end

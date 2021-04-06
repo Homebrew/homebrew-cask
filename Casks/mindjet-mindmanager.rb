@@ -1,14 +1,20 @@
-cask 'mindjet-mindmanager' do
-  version '12.1.190'
-  sha256 '06a68a50fda70bf9d270a9a02ad69441e359b4a0eb63b8217610f08e1998048a'
+cask "mindjet-mindmanager" do
+  version "13.2.204"
+  sha256 "6f23f3afee1f8046f9997d01179e3e8e4fd6354acb13ed1bf7c005478e15f4da"
 
-  url "https://download.mindjet.com/Mindjet_MindManager_Mac_#{version}.dmg"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.mindjet.com/latest-release-notes-mac-english',
-          configuration: version.dots_to_underscores
-  name 'Mindjet Mindmanager'
-  homepage 'https://www.mindjet.com/mindmanager/'
+  url "https://download.mindjet.com/MindManager_Mac_#{version}.dmg"
+  name "Mindmanager"
+  desc "Mind Mapping Tool"
+  homepage "https://www.mindjet.com/mindmanager/"
 
-  depends_on macos: '>= :high_sierra'
+  livecheck do
+    url "https://www.mindjet.com/latest-release-notes-mac-english"
+    strategy :header_match do |headers|
+      headers["location"][/_(\d+(?:_\d+)*)_/, 1].tr("_", ".")
+    end
+  end
 
-  app 'Mindjet MindManager.app'
+  depends_on macos: ">= :high_sierra"
+
+  app "MindManager.app"
 end

@@ -1,11 +1,12 @@
-cask 'vuescan' do
-  version '9.7.14'
-  sha256 '6bf1224b0dcd983fbbe058206dd2886f55d1f175eb6ae26c593d3306504f834d'
+cask "vuescan" do
+  version "9.7.51"
+  sha256 :no_check # required as upstream package is updated in-place
 
-  url "https://www.hamrick.com/files/vuex64#{version.major_minor.no_dots}.dmg"
-  appcast 'https://www.hamrick.com/alternate-versions.html'
-  name 'VueScan'
-  homepage 'https://www.hamrick.com/'
+  url "https://www.hamrick.com/files/vuea64#{version.major_minor.no_dots}.dmg"
+  appcast "https://www.hamrick.com/vuescan/vuescan.htm"
+  name "VueScan"
+  desc "App that provides drivers for older model scanners that are no longer supported"
+  homepage "https://www.hamrick.com/"
 
-  app 'VueScan.app'
+  app "VueScan.app"
 end

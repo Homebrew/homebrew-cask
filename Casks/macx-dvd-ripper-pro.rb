@@ -1,11 +1,13 @@
-cask 'macx-dvd-ripper-pro' do
-  version '6.5.1,20191223'
-  sha256 '291758ace70b0a11c3bef51f442d8ee93ce1a2f8b5fed9ead186b093803e6f4c'
+cask "macx-dvd-ripper-pro" do
+  version "6.5.5,20210105"
+  sha256 :no_check
 
-  url 'https://www.macxdvd.com/download/macx-dvd-ripper-pro.dmg'
-  appcast 'https://www.macxdvd.com/mac-dvd-ripper-pro/upgrade/macx-dvd-ripper-pro'
-  name 'MacX DVD Ripper Pro'
-  homepage 'https://www.macxdvd.com/mac-dvd-ripper-pro/'
+  url "https://www.macxdvd.com/download/macx-dvd-ripper-pro.dmg"
+  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_sizeandmodified.cgi?url=https://www.macxdvd.com/download/macx-dvd-ripper-pro.dmg",
+          must_contain: "GMT"
+  name "MacX DVD Ripper Pro"
+  desc "DVD ripping application"
+  homepage "https://www.macxdvd.com/mac-dvd-ripper-pro/"
 
-  app 'MacX DVD Ripper Pro.app'
+  app "MacX DVD Ripper Pro.app"
 end

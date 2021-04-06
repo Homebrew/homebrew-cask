@@ -1,11 +1,25 @@
-cask 'obs' do
-  version '24.0.6'
-  sha256 '7cb521f4eaeebf5807991d22604fd08af146728d1df7a1f4f6c38230f2f32a0d'
+cask "obs" do
+  version "26.1.2"
+  sha256 "42b852a5f23c5fd20d7a3ec444d6e5632fc92a63d3c8546aa6267ee6ad2f085d"
 
   url "https://cdn-fastly.obsproject.com/downloads/obs-mac-#{version}.dmg"
-  appcast 'https://github.com/obsproject/obs-studio/releases.atom'
-  name 'OBS'
-  homepage 'https://obsproject.com/'
+  name "OBS"
+  desc "Open-source software for live streaming and screen recording"
+  homepage "https://obsproject.com/"
 
-  app 'OBS.app'
+  livecheck do
+    url "https://github.com/obsproject/obs-studio"
+    strategy :git
+  end
+
+  auto_updates true
+
+  app "OBS.app"
+
+  zap trash: [
+    "/Library/CoreMediaIO/Plug-Ins/DAL/obs-mac-virtualcam.plugin",
+    "~/Library/Application Support/obs-studio",
+    "~/Library/Preferences/com.obsproject.obs-studio.plist",
+    "~/Library/Saved Application State/com.obsproject.obs-studio.savedState",
+  ]
 end

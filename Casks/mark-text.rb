@@ -1,12 +1,18 @@
-cask 'mark-text' do
-  version '0.15.1'
-  sha256 '92a5582782c2f3de0b61ebdd265da264ffaa798521130ca43fad9d6ae0711439'
+cask "mark-text" do
+  version "0.16.3"
+  sha256 "7054e56a439d5d09dd4b0898e01e541e1afb22fc74556678bcb006d37c1e041d"
 
-  # github.com/marktext/marktext was verified as official when first introduced to the cask
-  url "https://github.com/marktext/marktext/releases/download/v#{version}/marktext-#{version}.dmg"
-  appcast 'https://github.com/marktext/marktext/releases.atom'
-  name 'Mark Text'
-  homepage 'https://marktext.github.io/website/'
+  url "https://github.com/marktext/marktext/releases/download/v#{version}/marktext.dmg",
+      verified: "github.com/marktext/marktext/"
+  name "Mark Text"
+  homepage "https://marktext.app/"
 
-  app 'Mark Text.app'
+  app "Mark Text.app"
+
+  zap trash: [
+    "~/Library/Application Support/marktext",
+    "~/Library/Preferences/com.github.marktext.marktext.plist",
+    "~/Library/Saved Application State/com.github.marktext.marktext.savedState",
+    "~/Library/Logs/Mark Text",
+  ]
 end

@@ -1,13 +1,17 @@
-cask 'yate' do
-  version '5.0.3.2'
-  sha256 '5b408188df2a776ab88509da9296a1e2d8a3aad53e1db92e3f278410c20a0bed'
+cask "yate" do
+  version "6.4.1,10306"
+  sha256 :no_check
 
-  url 'https://2manyrobots.com/Updates/Yate/Yate.zip'
-  appcast 'https://2manyrobots.com/Updates/Yate/appcast.xml'
-  name 'Yate'
-  homepage 'https://2manyrobots.com/yate/'
+  url "https://2manyrobots.com/Updates/Yate/Yate.zip"
+  name "Yate"
+  homepage "https://2manyrobots.com/yate/"
+
+  livecheck do
+    url "https://2manyrobots.com/Updates/Yate/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 
-  app 'Yate.app'
+  app "Yate.app"
 end

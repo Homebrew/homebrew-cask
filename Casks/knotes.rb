@@ -1,20 +1,25 @@
-cask 'knotes' do
-  version '1.6.0'
-  sha256 '8884b6a67f1c43b7880ff5da957f2c0684f3afb12a6f1fc24b960d72e2f9bae9'
+cask "knotes" do
+  version "2.8.2"
+  sha256 "ed64549e066a582e675f8dafb5fc2304d508040e3d05ceb2964188cdf75bba6a"
 
-  # s3.ap-northeast-2.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://s3.ap-northeast-2.amazonaws.com/knotes-release-cn/mac/Knotes-#{version}-mac.zip"
-  appcast 'http://knotesapp.com/'
-  name 'Knotes'
-  homepage 'http://knotesapp.com/'
+  url "https://knotes2.s3-ap-northeast-1.amazonaws.com/download/mac/Knotes-#{version}.dmg",
+      verified: "knotes2.s3-ap-northeast-1.amazonaws.com/"
+  name "Knotes"
+  homepage "https://knotesapp.com/"
 
-  app 'Knotes.app'
+  livecheck do
+    url "https://knotesapp.com/"
+    strategy :page_match
+    regex(%r{href=.*?/Knotes-(\d+(?:\.\d+)*)\.dmg}i)
+  end
+
+  app "Knotes.app"
 
   zap trash: [
-               '~/Library/Application Support/knotes',
-               '~/Library/Logs/knotes',
-               '~/Library/Preferences/com.knotesapp.knotes.helper.plist',
-               '~/Library/Preferences/com.knotesapp.knotes.plist',
-               '~/Library/Saved Application State/com.knotesapp.knotes.savedState',
-             ]
+    "~/Library/Application Support/knotes",
+    "~/Library/Logs/knotes",
+    "~/Library/Preferences/com.knotesapp.knotes.helper.plist",
+    "~/Library/Preferences/com.knotesapp.knotes.plist",
+    "~/Library/Saved Application State/com.knotesapp.knotes.savedState",
+  ]
 end

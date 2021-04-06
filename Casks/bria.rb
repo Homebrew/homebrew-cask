@@ -1,11 +1,20 @@
-cask 'bria' do
-  version '6.0.1_102001'
-  sha256 'd327f8518f8c4aa16e67f3c557fe4985c158d448f889f87f0bf1858a6ae95ea0'
+cask "bria" do
+  version "6.3.0,105536"
+  sha256 "ad71abb778fc6d3e591755f3632fcf84fb27bb9ab6ac6f5847a4167cbbf1d65d"
 
-  url "https://secure.counterpath.com/Downloads/Bria_#{version}.dmg"
-  appcast 'https://www.macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://solo.softphone.com/downloads/bria-for-mac'
-  name 'Bria'
-  homepage 'https://www.counterpath.com/bria-solo/'
+  url "https://counterpath.s3.amazonaws.com/downloads/Bria_#{version.before_comma}_#{version.after_comma}.dmg",
+      verified: "counterpath.s3.amazonaws.com/"
+  name "Bria"
+  desc "Softphone application"
+  homepage "https://www.counterpath.com/bria-solo/"
 
-  app 'Bria.app'
+  livecheck do
+    url "https://www.counterpath.com/Bria6forMac"
+    strategy :header_match do |headers|
+      match = headers["location"].match(%r{/Bria_(\d+(?:\.\d+)*)_(\d+)\.dmg}i)
+      "#{match[1]},#{match[2]}"
+    end
+  end
+
+  app "Bria.app"
 end

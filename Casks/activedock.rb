@@ -1,14 +1,19 @@
-cask 'activedock' do
-  version '1.53'
-  sha256 'd37db887147f9027278ee030406d5a00e72f5cb3acae390ee51f4d695911e265'
+cask "activedock" do
+  version "2.86,2096"
+  sha256 :no_check
 
-  # s3.amazonaws.com/downloads.macplussoftware was verified as official when first introduced to the cask
-  url 'https://s3.amazonaws.com/downloads.macplussoftware/ActiveDock.zip'
-  appcast 'https://s3.amazonaws.com/downloads.macplussoftware/ActiveDock.xml'
-  name 'ActiveDock'
-  homepage 'https://www.noteifyapp.com/activedock/'
+  url "https://macplus-software.com/downloads/ActiveDock.zip",
+      verified: "macplus-software.com/"
+  name "ActiveDock"
+  desc "Customizable dock, application launcher, dock replacement"
+  homepage "https://www.noteifyapp.com/activedock/"
 
-  depends_on macos: '>= :high_sierra'
+  livecheck do
+    url "https://macplus-software.com/downloads/ActiveDock.xml"
+    strategy :sparkle
+  end
 
-  app 'ActiveDock.app'
+  depends_on macos: ">= :high_sierra"
+
+  app "ActiveDock #{version.before_comma.major}.app"
 end

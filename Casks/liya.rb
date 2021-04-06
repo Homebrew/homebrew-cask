@@ -1,10 +1,13 @@
-cask 'liya' do
-  version :latest
+cask "liya" do
+  version "5.0.4,8"
   sha256 :no_check
 
-  url 'https://cutedgesystems.com/downloads/Liya.zip'
-  name 'Liya'
-  homepage 'https://cutedgesystems.com/software/liya/'
+  url "https://cutedgesystems.com/downloads/Liya.zip"
+  name "Liya"
+  desc "Access three database systems simultaneously from a single visual interface"
+  homepage "https://cutedgesystems.com/software/liya/"
 
-  app 'Liya.app'
+  depends_on macos: ">= :catalina"
+
+  app "Liya.app"
 end

@@ -1,11 +1,15 @@
-cask 'thebrain' do
-  version '10.0.66.0'
-  sha256 '2a9a7b6f08a2694e2ee94e4dd7217a4aaf7b53042557fd77b6b304909f3d1383'
+cask "thebrain" do
+  version "11.0.137.0"
+  sha256 "67ec72cfc2166ffa9e19cebdd709c106aa52fef23eb8e58a106a424542d2955b"
 
-  url "http://updater.thebrain.com/files/TheBrain#{version}.dmg"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://salesapi.thebrain.com/?a=doDirectDownload%26id=10000'
-  name 'TheBrain'
-  homepage 'https://www.thebrain.com/'
+  url "https://updater.thebrain.com/files/TheBrain#{version}.dmg"
+  name "TheBrain"
+  homepage "https://www.thebrain.com/"
+
+  livecheck do
+    url "https://salesapi.thebrain.com/?a=doDirectDownload&id=11000"
+    strategy :header_match
+  end
 
   app "TheBrain #{version.major}.app"
 end

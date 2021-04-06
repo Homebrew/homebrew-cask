@@ -1,18 +1,18 @@
-cask 'ghidra' do
-  version '9.1.1_PUBLIC,20191218'
-  sha256 'b0d40a4497c66011084e4a639d61ac76da4b4c5cabd62ab63adadb7293b0e506'
+cask "ghidra" do
+  version "9.2.2,20201229"
+  sha256 "8cf8806dd5b8b7c7826f04fad8b86fc7e07ea380eae497f3035f8c974de72cf8"
 
-  url "https://www.ghidra-sre.org/ghidra_#{version.before_comma}_#{version.after_comma}.zip"
-  name 'Ghidra'
-  homepage 'https://www.ghidra-sre.org/'
+  url "https://www.ghidra-sre.org/ghidra_#{version.before_comma}_PUBLIC_#{version.after_comma}.zip"
+  name "Ghidra"
+  homepage "https://www.ghidra-sre.org/"
 
-  conflicts_with cask: 'ghidra-beta'
+  conflicts_with cask: "homebrew/cask-versions/ghidra-beta"
 
-  binary "ghidra_#{version.before_comma}/ghidraRun"
+  binary "ghidra_#{version.before_comma}_PUBLIC/ghidraRun"
 
-  zap trash: '~/.ghidra'
+  zap trash: "~/.ghidra"
 
   caveats do
-    depends_on_java '11+'
+    depends_on_java "11+"
   end
 end

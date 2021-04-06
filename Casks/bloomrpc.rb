@@ -1,11 +1,11 @@
-cask 'bloomrpc' do
-  version '1.3.1'
-  sha256 '229212189e90f742c9318d6fc8ca61e45f939f03d63a32eb0e70f3b39e7dd9d0'
+cask "bloomrpc" do
+  version "1.5.2"
+  sha256 "af138f611156919169a1452a02d595ef5ae7a0e431dc90a537e9f47001f4c643"
 
   url "https://github.com/uw-labs/bloomrpc/releases/download/#{version}/BloomRPC-#{version}.dmg"
-  appcast 'https://github.com/uw-labs/bloomrpc/releases.atom'
-  name 'BloomRPC'
-  homepage 'https://github.com/uw-labs/bloomrpc'
+  name "BloomRPC"
+  desc "GUI Client for GRPC Services"
+  homepage "https://github.com/uw-labs/bloomrpc"
 
-  app 'BloomRPC.app'
+  app "BloomRPC.app"
 end

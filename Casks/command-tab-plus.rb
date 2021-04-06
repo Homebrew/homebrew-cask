@@ -1,19 +1,22 @@
-cask 'command-tab-plus' do
-  version '1.109,359:1576772358'
-  sha256 '608458aa55d699f6c1d21a6bc834365d0787174b4f34b266dad8f267acfdc328'
+cask "command-tab-plus" do
+  version "1.130,380"
+  sha256 :no_check
 
-  # dl.devmate.com/com.sergey-gerasimenko.Command-Tab was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.sergey-gerasimenko.Command-Tab/#{version.after_comma.before_colon}/#{version.after_colon}/Command-Tab-#{version.after_comma.before_colon}.zip"
-  appcast 'https://updates.devmate.com/com.sergey-gerasimenko.Command-Tab.xml',
-          configuration: version.after_comma.before_colon
-  name 'Command-Tab Plus'
-  homepage 'http://commandtab.noteifyapp.com/'
+  url "https://noteifyapp.com/download/Command-Tab%20Plus.dmg"
+  name "Command-Tab Plus"
+  desc "Keyboard-centric application and window switcher"
+  homepage "https://noteifyapp.com/command-tab-plus/"
 
-  app 'Command-Tab Plus.app'
+  livecheck do
+    url "https://macplus-software.com/downloads/Command-Tab.xml"
+    strategy :sparkle
+  end
+
+  app "Command-Tab Plus.app"
 
   zap trash: [
-               '/Users/Shared/Command-Tab Plus',
-               '~/Library/Application Support/Command-Tab Plus',
-               '~/Library/Caches/com.sergey-gerasimenko.Command-Tab',
-             ]
+    "/Users/Shared/Command-Tab Plus",
+    "~/Library/Application Support/Command-Tab Plus",
+    "~/Library/Caches/com.sergey-gerasimenko.Command-Tab",
+  ]
 end

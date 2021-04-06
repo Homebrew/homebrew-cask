@@ -1,20 +1,20 @@
-cask 'minecraft-server' do
-  version '1.15,e9f105b3c5c7e85c7b445249a93362a22f62442d'
-  sha256 'e0fe1749263b5ec211b358b598b46e787645bffa8411414f0c812a92bdc70c84'
+cask "minecraft-server" do
+  version "1.16.5,1b557e7b033b583cd9f66746b7a9ab1ec1673ced"
+  sha256 "58f329c7d2696526f948470aa6fd0b45545039b64cb75015e64c12194b373da6"
 
-  # launcher.mojang.com was verified as official when first introduced to the cask
-  url "https://launcher.mojang.com/v#{version.major}/objects/#{version.after_comma}/server.jar"
-  appcast 'https://minecraft.net/en-us/download/server/'
-  name 'Minecraft Server'
-  homepage 'https://minecraft.net/'
+  url "https://launcher.mojang.com/v#{version.major}/objects/#{version.after_comma}/server.jar",
+      verified: "launcher.mojang.com/"
+  appcast "https://minecraft.net/en-us/download/server/"
+  name "Minecraft Server"
+  homepage "https://minecraft.net/"
 
   container type: :naked
 
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/minecraft-server.wrapper.sh"
-  binary shimscript, target: 'minecraft-server'
+  binary shimscript, target: "minecraft-server"
 
-  config_dir = HOMEBREW_PREFIX.join('etc', 'minecraft-server')
+  config_dir = HOMEBREW_PREFIX.join("etc", "minecraft-server")
 
   preflight do
     FileUtils.mkdir_p config_dir
@@ -26,11 +26,11 @@ cask 'minecraft-server' do
     EOS
   end
 
-  eula_file = config_dir.join('eula.txt')
+  eula_file = config_dir.join("eula.txt")
 
   postflight do
     system_command shimscript
-    IO.write(eula_file, IO.read(eula_file).sub('eula=false', 'eula=TRUE'))
+    IO.write(eula_file, IO.read(eula_file).sub("eula=false", "eula=TRUE"))
   end
 
   uninstall_preflight do

@@ -10,32 +10,27 @@ When a plain URL string is insufficient to fetch a file, additional information 
 
 | key                | value       |
 | ------------------ | ----------- |
+| `verified:`        | a string repeating the beginning of `url`, for verification purposes. [See below](#when-url-and-homepage-hostnames-differ-add-verified).
 | `using:`           | the symbol `:post` is the only legal value
 | `cookies:`         | a hash of cookies to be set in the download request
-| `referer:`         | a string holding the URL to set as referrer in the download request
+| `referer:`         | a string holding the URL to set as referer in the download request
 | `header:`          | a string holding the header to set for the download request.
 | `user_agent:`      | a string holding the user agent to set for the download request. Can also be set to the symbol `:fake`, which will use a generic Browser-like user agent string. We prefer `:fake` when the server does not require a specific user agent.
 | `data:`            | a hash of parameters to be set in the POST request
 
-Example of using `cookies:`: [java.rb](https://github.com/Homebrew/homebrew-cask/blob/472930df191d66747a57d5c96c0d00511d56e21b/Casks/java.rb#L5#L8)
+Example of using `cookies:`: [java.rb](https://github.com/Homebrew/homebrew-cask/blob/472930df191d66747a57d5c96c0d00511d56e21b/Casks/java.rb#L5-L8)
 
 Example of using `referer:`: [rrootage.rb](https://github.com/Homebrew/homebrew-cask/blob/312ae841f1f1b2ec07f4d88b7dfdd7fbdf8d4f94/Casks/rrootage.rb#L5)
 
 Example of using `header:`: [issue-325182724](https://github.com/Homebrew/brew/pull/6545#issue-325182724)
 
-## When URL and Homepage Hostnames Differ, Add a Comment
+## When URL and Homepage Hostnames Differ, Add `verified:`
 
-When the hostnames of `url` and `homepage` differ, the discrepancy should be documented with a comment of the form:
+When the hostnames of `url` and `homepage` differ, the discrepancy should be documented with the `verified:` parameter, repeating the smallest possible portion of the URL that uniquely identifies the app or vendor, excluding the protocol. Example: [`shotcut.rb`](https://github.com/Homebrew/homebrew-cask/blob/08733296b49c59c58b6beeada59ed4207cef60c3/Casks/shotcut.rb#L5L6).
 
-```
-# URL_SECTION was verified as official when first introduced to the cask
-```
+This must be added so a user auditing the cask knows the URL was verified by the Homebrew Cask team as the one provided by the vendor, even though it may look unofficial. It is our responsibility as Homebrew Cask maintainers to verify both the `url` and `homepage` information when first added (or subsequently modified, apart from versioning).
 
-Where `URL_SECTION` is the smallest possible portion of the URL that uniquely identifies the app or vendor. Examples can be seen in [`airfoil.rb`](https://github.com/Homebrew/homebrew-cask/blob/1666993ee93e2a43f00a4dfc3c727da7c0b5ada9/Casks/airfoil.rb#L5), [`knockknock.rb`](https://github.com/Homebrew/homebrew-cask/blob/6645a6090d1cb8fc026f243a47048749b31c32bf/Casks/knockknock.rb#L5), [`lightpaper.rb`](https://github.com/Homebrew/homebrew-cask/blob/7a75f4e84c01bf192bd55f251b96cf2c1e086281/Casks/lightpaper.rb#L5), [`airtool.rb`](https://github.com/Homebrew/homebrew-cask/blob/355211a8a3ea54046ae45022bcf71980bd2d5432/Casks/airtool.rb#L5), [`screencat.rb`](https://github.com/Homebrew/homebrew-cask/blob/5fc818752c30c156c00f79b04b66406189ab2f30/Casks/screencat.rb#L5), [`0ad.rb`](https://github.com/Homebrew/homebrew-cask/blob/7a75f4e84c01bf192bd55f251b96cf2c1e086281/Casks/0ad.rb#L5).
-
-These comments must be added so a user auditing the cask knows the URL was verified by the Homebrew Cask team as the one provided by the vendor, even though it may look unofficial or suspicious. It is our responsibility as Homebrew Cask maintainers to verify both the `url` and `homepage` information when first added (or subsequently modified, apart from versioning).
-
-The comment doesn’t mean you should trust the source blindly, but we only approve casks in which users can easily verify its authenticity with basic means, such as checking the official homepage or public repository. Occasionally, slightly more elaborate techniques may be used, such as inspecting an [`appcast`](appcast.md) we established as official. Cases where such quick verifications aren’t possible (e.g. when the download URL is behind a registration wall) are [treated in a stricter manner](../../development/adding_a_cask.md#unofficial-vendorless-and-walled-builds).
+The parameter doesn’t mean you should trust the source blindly, but we only approve casks in which users can easily verify its authenticity with basic means, such as checking the official homepage or public repository. Occasionally, slightly more elaborate techniques may be used, such as inspecting an [`appcast`](appcast.md) we established as official. Cases where such quick verifications aren’t possible (e.g. when the download URL is behind a registration wall) are [treated in a stricter manner](../../development/adding_a_cask.md#unofficial-vendorless-and-walled-builds).
 
 ## Difficulty Finding a URL
 
@@ -79,51 +74,38 @@ If these formats are not available, and the application is macOS-exclusive (othe
 https://sourceforge.net/projects/{{project_name}}/files/latest/download
 ```
 
-## Personal Hosting Such as Dropbox
-
-URLs from dropbox.com or cl.ly/cloudapp.com are not readily distinguishable as being controlled by the original software vendor. These URLs should be used only when given as such on the official project website.
-
-Also make sure to give the URL for the binary download itself, rather than a preview page. (See <https://www.dropbox.com/help/201/en>.)
-
 ## Some Providers Block Command-line Downloads
 
 Some hosting providers actively block command-line HTTP clients. Such URLs cannot be used in Casks.
 
-Some providers do not actively block command-line HTTP clients but use URLs that change periodically, or even on each visit (example: FossHub). For those, see section [URLs that Change on Every Visit](#urls-that-change-on-every-visit).
+Other providers may use URLs that change periodically, or even on each visit (example: FossHub). While some cases [could be circumvented](#using-a-block-to-defer-code-execution), they tend to occur when the vendor is actively trying to prevent automated downloads, so we prefer to not add those casks to the main repository.
 
-## Vendor URLs Are Preferred
+## Using a Block to Defer Code Execution
 
-When possible, it is best to use a download URL from the original developer or vendor, rather than an aggregator such as `macupdate.com`.
-
-## URLs that Change on Every Visit
-
-Some providers use disposable URLs, which a Cask author cannot know in advance. Such URLs may change daily, or on every visit, and sometimes need to be dynamically obtained from a landing site.
+Some casks—notably nightlies—have versioned download URLs but are updated so often that they become impractical to keep current with the usual process. For those, we want to dynamically determine `url`.
 
 ### The Problem
 
 In theory, one can write arbitrary Ruby code right in the Cask definition to fetch and construct a disposable URL.
 
-However, this typically involves an HTTP/S round trip to a landing site, which may take a long time. Because of the way Homebrew Cask loads and parses Casks, it is not acceptable that such expensive operations be performed directly in the body of a Cask definition.
+However, this typically involves an HTTP round trip to a landing site, which may take a long time. Because of the way Homebrew Cask loads and parses Casks, it is not acceptable that such expensive operations be performed directly in the body of a Cask definition.
 
-### Using a Block to Defer Code Execution
+### Writing the Block
 
 Similar to the `preflight`, `postflight`, `uninstall_preflight`, and `uninstall_postflight` blocks, the `url` stanza offers an optional _block syntax_:
 
 ```rb
-url do
-  require 'open-uri'
-  # No known stable URL; fetching disposable URL from landing site
-  URI('https://example.com/app/landing').open do |landing_page|
-    content = landing_page.read
-    parse(content) # => https://example.com/download?23309800482283
-  end
+url "https://handbrake.fr/nightly.php" do |page|
+  file_path = page[/href=["']?([^"' >]*Handbrake[._-][^"' >]+\.dmg)["' >]/i, 1]
+  file_path ? URI.join(page.url, file_path) : nil
 end
 ```
 
-The block is only evaluated when needed, for example on download time or when auditing a Cask.
-Inside a block, you may safely do things such as HTTP/S requests that may take a long time to execute. You may also refer to the `@cask` instance variable, and invoke any method available on `@cask`.
+You can also nest `url do` blocks inside `url do` blocks to follow a chain of URLs.
 
-The block will be called immediately before downloading; its result value will be assumed to be a `String` and subsequently used as a download URL.
+The block is only evaluated when needed, for example on download time or when auditing a Cask. Inside a block, you may safely do things such as HTTP/S requests that may take a long time to execute. You may also refer to the `@cask` instance variable, and invoke any method available on `@cask`.
+
+The block will be called immediately before downloading; its result value will be assumed to be a `String` (or a pair of a `String` and `Hash` containing parameters) and subsequently used as a download URL.
 
 You can use the `url` stanza with either a direct argument or a block but not with both.
 

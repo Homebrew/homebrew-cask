@@ -1,17 +1,21 @@
-cask 'krisp' do
-  version '1.9.10'
-  sha256 'b6d07e8c2258f53d6a9b35c936dd0293eee8ecc5dad3ab902ece0ebb24c14c2f'
+cask "krisp" do
+  version "1.19.12"
+  sha256 "80fda6a8fd9268b6277baf6722ca5d645d402aa2d1d5285e7a965657f81c9e14"
 
   url "https://cdn.krisp.ai/mac/release/v#{version.major}.#{version.minor}/krisp_#{version}.pkg"
-  appcast 'https://www.macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://api.krisp.ai/v2/download/mac'
-  name 'Krisp'
-  homepage 'https://krisp.ai/'
+  name "Krisp"
+  homepage "https://krisp.ai/"
+
+  livecheck do
+    url "https://api.krisp.ai/v2/download/mac"
+    strategy :header_match
+  end
 
   auto_updates true
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
   pkg "krisp_#{version}.pkg"
 
-  uninstall quit:    'ai.2Hz.krisp',
-            pkgutil: 'ai.2Hz.Krisp'
+  uninstall quit:    "ai.krisp.krispMac",
+            pkgutil: "ai.krisp.krispMac"
 end

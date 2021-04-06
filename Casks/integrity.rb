@@ -1,18 +1,19 @@
-cask 'integrity' do
-  version '9.3.4'
-  sha256 'e4dd2d51d626d433128e3691717b699ef274631a232c5b3ff16e97db435cc01d'
+cask "integrity" do
+  version "9.14.3"
+  sha256 :no_check
 
-  url 'https://peacockmedia.software/mac/integrity/integrity.dmg'
-  appcast 'https://peacockmedia.software/mac/integrity/version_history.html'
-  name 'Integrity'
-  homepage 'https://peacockmedia.software/mac/integrity/'
+  url "https://peacockmedia.software/mac/integrity/integrity.dmg"
+  appcast "https://peacockmedia.software/mac/integrity/version_history.html"
+  name "Integrity"
+  desc "Tool to scans a website checking for broken links"
+  homepage "https://peacockmedia.software/mac/integrity/"
 
-  app 'Integrity.app'
+  app "Integrity.app"
 
   zap trash: [
-               '~/Library/Application Support/Integrity',
-               '~/Library/Caches/com.peacockmedia.integrity',
-               '~/Library/Cookies/com.peacockmedia.integrity.binarycookies',
-               '~/Library/Preferences/com.peacockmedia.integrity.plist',
-             ]
+    "~/Library/Application Support/Integrity",
+    "~/Library/Caches/com.peacockmedia.integrity",
+    "~/Library/Cookies/com.peacockmedia.integrity.binarycookies",
+    "~/Library/Preferences/com.peacockmedia.integrity.plist",
+  ]
 end

@@ -1,12 +1,17 @@
-cask 'tagspaces' do
-  version '3.3.2'
-  sha256 '68ddb090cbe9ab8ff38c05d6de5611fc190f17b9ba1925a85fe789fc3ff61428'
+cask "tagspaces" do
+  version "3.9.5"
+  sha256 "5dd98dd4c674373dd8b80e7f46d2d65320831ae87309e7e2aff5c102fc1c78c1"
 
-  # github.com/tagspaces/tagspaces was verified as official when first introduced to the cask
-  url "https://github.com/tagspaces/tagspaces/releases/download/v#{version}/tagspaces-mac-#{version}.zip"
-  appcast 'https://github.com/tagspaces/tagspaces/releases.atom'
-  name 'TagSpaces'
-  homepage 'https://www.tagspaces.org/'
+  url "https://github.com/tagspaces/tagspaces/releases/download/v#{version}/tagspaces-mac-#{version}.zip",
+      verified: "github.com/tagspaces/tagspaces/"
+  name "TagSpaces"
+  desc "Offline, open-source, document manager with tagging support"
+  homepage "https://www.tagspaces.org/"
 
-  app 'TagSpaces.app'
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  app "TagSpaces.app"
 end

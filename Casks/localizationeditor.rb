@@ -1,13 +1,12 @@
-cask 'localizationeditor' do
-  version '2.3'
-  sha256 'a3b6914ec001effd1d74a8de28550dd475d3168f9487ef8d479503cedd60779c'
+cask "localizationeditor" do
+  version "2.8"
+  sha256 "0b2f24a4485d338edf7166b6ccbad34c9f0511bb7ecf82bb376440a800121a07"
 
   url "https://github.com/igorkulman/iOSLocalizationEditor/releases/download/v#{version}/LocalizationEditor.app.zip"
-  appcast 'https://github.com/igorkulman/iOSLocalizationEditor/releases.atom'
-  name 'LocalizationEditor'
-  homepage 'https://github.com/igorkulman/iOSLocalizationEditor/'
+  name "LocalizationEditor"
+  homepage "https://github.com/igorkulman/iOSLocalizationEditor/"
 
-  depends_on macos: '>= :high_sierra'
+  depends_on macos: ">= :high_sierra"
 
-  app 'LocalizationEditor.app'
+  app "LocalizationEditor.app"
 end

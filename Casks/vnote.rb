@@ -1,12 +1,19 @@
-cask 'vnote' do
-  version '2.8.2'
-  sha256 '043ac56b11a04c7614e1adf43235035925e2aa3735524e884ace6bb14192b705'
+cask "vnote" do
+  version "2.10"
+  sha256 "9adc4d003bcfea3d3386a952b09ab5012fb6a4d22dc2ec1e313b6c3350f26059"
 
-  # github.com/tamlok/vnote was verified as official when first introduced to the cask
-  url "https://github.com/tamlok/vnote/releases/download/v#{version}/VNote-#{version}-x64.dmg"
-  appcast 'https://github.com/tamlok/vnote/releases.atom'
-  name 'VNote'
-  homepage 'https://tamlok.github.io/vnote/'
+  url "https://github.com/vnotex/vnote/releases/download/v#{version}/VNote-#{version}-x64.dmg",
+      verified: "github.com/vnotex/vnote/"
+  name "VNote"
+  desc "Note-taking application that knows programmers and Markdown better"
+  homepage "https://vnotex.github.io/vnote/"
 
-  app 'VNote.app'
+  # We need to check all releases since the current latest release is a beta version.
+  livecheck do
+    url "https://github.com/vnotex/vnote/releases"
+    strategy :page_match
+    regex(%r{href=.*?/VNote-(?:mac-x64)?v?(\d+(?:\.\d+)*)(?:-x64)?\.(?:dmg|zip)}i)
+  end
+
+  app "VNote.app"
 end
