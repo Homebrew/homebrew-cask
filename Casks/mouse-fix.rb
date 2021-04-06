@@ -8,6 +8,11 @@ cask "mouse-fix" do
   desc "Mouse utility to add gesture functions and smooth scrolling to 3rd party mice"
   homepage "https://mousefix.org/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
 
   app "Mac Mouse Fix.app"
