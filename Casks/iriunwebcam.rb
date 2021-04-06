@@ -17,5 +17,10 @@ cask "iriunwebcam" do
 
   uninstall quit:      "com.iriun.webcam",
             pkgutil:   "com.iriun.*",
-            launchctl: "com.iriun.cmio.DPA.camera"
+            launchctl: [
+              "com.iriun.cmio.DPA.camera",
+              "com.iriun.cmio.DPA.camerb",
+              "com.iriun.cmio.DPA.camerc",
+              "com.iriun.cmio.DPA.camerd",
+            ]
 end
