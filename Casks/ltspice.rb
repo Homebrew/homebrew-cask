@@ -7,6 +7,10 @@ cask "ltspice" do
   desc "SPICE simulation software, schematic capture and waveform viewer"
   homepage "https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html"
 
+  livecheck do
+    skip "No version information available"
+  end
+
   app "LTspice.app"
 
   zap trash: [
