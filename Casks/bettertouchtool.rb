@@ -1,28 +1,23 @@
-cask 'bettertouchtool' do
-  if MacOS.version <= :mavericks
-    version '2.05'
-    sha256 '41013cfeffee286a038363651db3dd315ff3a1e0cf07774d9ce852111be50a5a'
+cask "bettertouchtool" do
+  version "3.560,1700"
+  sha256 "cec80de7977fc19cd54f5d4bb4abda1db28bb8a2ff2267b77317eca195e9b287"
 
-    # bettertouchtool.net/releases was verified as official when first introduced to the cask
-    url "https://bettertouchtool.net/releases/btt#{version}_final_10_9.zip"
-  else
-    version '3.214'
-    sha256 'c87ebe47d8783087e1aed26d152b9c6f130bfc69aeb7ad5db7f7f5a45cbe2526'
+  url "https://folivora.ai/releases/btt#{version.before_comma}-#{version.after_comma}.zip"
+  name "BetterTouchTool"
+  desc "Tool to customize input devices and automate computer systems"
+  homepage "https://folivora.ai/"
 
-    # bettertouchtool.net/releases was verified as official when first introduced to the cask
-    url "https://bettertouchtool.net/releases/btt#{version}.zip"
-    appcast 'https://bettertouchtool.net/releases/'
+  livecheck do
+    url "https://updates.folivora.ai/appcast.xml?trial=1"
+    strategy :sparkle
   end
-
-  name 'BetterTouchTool'
-  homepage 'https://folivora.ai/'
 
   auto_updates true
 
-  app 'BetterTouchTool.app'
+  app "BetterTouchTool.app"
 
   zap trash: [
-               '~/Library/Preferences/com.hegenberg.BetterTouchTool.plist',
-               '~/Library/Application Support/BetterTouchTool',
-             ]
+    "~/Library/Preferences/com.hegenberg.BetterTouchTool.plist",
+    "~/Library/Application Support/BetterTouchTool",
+  ]
 end

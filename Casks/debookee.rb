@@ -1,27 +1,30 @@
-cask 'debookee' do
-  version '7.3.1'
-  sha256 'e4aecb9e4e8ac8cd295b0b1a29351f5577fd2e3b18f901f10ed5f62876afc676'
+cask "debookee" do
+  version "8.0.0b1,3139"
+  sha256 :no_check
 
-  # iwaxx.com/debookee was verified as official when first introduced to the cask
-  url 'https://www.iwaxx.com/debookee/debookee.zip'
-  appcast 'https://www.iwaxx.com/debookee/appcast.php'
-  name 'Debookee'
-  homepage 'https://debookee.com/'
+  url "https://www.iwaxx.com/debookee/debookee.zip",
+      verified: "iwaxx.com/debookee/"
+  appcast "https://www.iwaxx.com/debookee/appcast.php"
+  name "Debookee"
+  desc "Network traffic analyzer"
+  homepage "https://debookee.com/"
 
-  depends_on macos: '>= :sierra'
+  auto_updates true
+  depends_on macos: ">= :mojave"
 
-  app 'Debookee.app'
+  app "Debookee.app"
 
-  uninstall delete:    '/Library/PrivilegedHelperTools/com.iwaxx.Debookee.PacketTool',
-            launchctl: 'com.iwaxx.Debookee.PacketTool'
+  uninstall delete:    "/Library/PrivilegedHelperTools/com.iwaxx.Debookee.PacketTool",
+            launchctl: "com.iwaxx.Debookee.PacketTool"
 
   zap trash: [
-               '~/Library/Application Support/com.iwaxx.Debookee',
-               '~/Library/Caches/com.iwaxx.Debookee',
-               '~/Library/Cookies/com.iwaxx.Debookee.binarycookies',
-               '~/Library/Logs/Debookee',
-               '~/Library/Preferences/com.iwaxx.Debookee.plist',
-               '~/Library/Saved Application State/com.iwaxx.Debookee.savedState',
-               '~/Library/WebKit/com.iwaxx.Debookee',
-             ]
+    "~/.debookee",
+    "~/Library/Application Support/com.iwaxx.Debookee",
+    "~/Library/Caches/com.iwaxx.Debookee",
+    "~/Library/Cookies/com.iwaxx.Debookee.binarycookies",
+    "~/Library/Logs/Debookee",
+    "~/Library/Preferences/com.iwaxx.Debookee.plist",
+    "~/Library/Saved Application State/com.iwaxx.Debookee.savedState",
+    "~/Library/WebKit/com.iwaxx.Debookee",
+  ]
 end

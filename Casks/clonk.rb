@@ -1,11 +1,11 @@
-cask 'clonk' do
-  version :latest
+cask "clonk" do
+  version "1.0"
   sha256 :no_check
 
-  # clonkx.de was verified as official when first introduced to the cask
-  url 'http://www.clonkx.de/rage/cr_full_mac.zip'
-  name 'Clonk Rage'
-  homepage 'http://www.clonk.de/cr.php'
+  url "http://www.clonkx.de/rage/cr_full_mac.zip",
+      verified: "clonkx.de/"
+  name "Clonk Rage"
+  homepage "http://www.clonk.de/cr.php"
 
-  app 'Clonk.app'
+  app "Clonk.app"
 end

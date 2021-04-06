@@ -1,13 +1,18 @@
-cask 'minitube' do
-  version '3.3'
-  sha256 'f20082b2d00e0bed5e6be47c2c86fd7c32b0042672a6490f087d694ad92f744a'
+cask "minitube" do
+  version "3.8.1,2021.0226.104943"
+  sha256 :no_check
 
-  url 'https://flavio.tordini.org/files/minitube/minitube.dmg'
-  appcast 'https://flavio.tordini.org/minitube-ws/appcast.xml'
-  name 'Minitube'
-  homepage 'https://flavio.tordini.org/minitube'
+  url "https://flavio.tordini.org/files/minitube/minitube.dmg"
+  name "Minitube"
+  desc "YouTube application"
+  homepage "https://flavio.tordini.org/minitube"
 
-  depends_on macos: '>= :sierra'
+  livecheck do
+    url "https://flavio.tordini.org/minitube-ws/appcast.xml"
+    strategy :sparkle
+  end
 
-  app 'Minitube.app'
+  depends_on macos: ">= :sierra"
+
+  app "Minitube.app"
 end

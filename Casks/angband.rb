@@ -1,13 +1,13 @@
-cask 'angband' do
-  version '4.2.0'
-  sha256 '6de909d72d71cb8423a59f33169e05d5d0fa3f7957a01c4d4abc19917ea0519a'
+cask "angband" do
+  version "4.2.1"
+  sha256 "82fb2a2939c4ad2d3157a13013a69291cb44165052e01b1c4d4fc35f8a3fbe2b"
 
   url "https://rephial.org/downloads/#{version.major_minor}/Angband-#{version}-osx.dmg"
-  appcast 'https://rephial.org/release/'
-  name 'Angband'
-  homepage 'https://rephial.org/'
+  appcast "https://rephial.org/release/"
+  name "Angband"
+  homepage "https://rephial.org/"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'Angband.app'
+  app "Angband.app"
 end

@@ -1,11 +1,23 @@
-cask 'orange' do
-  version '3.23.1'
-  sha256 '03220412b455df991a101a353b373a50663e2061be916daf88eb6bb4073439a1'
+cask "orange" do
+  version "3.28.0"
+  sha256 "d6369ee829bb7cb7614c2f8e735115a8af43ae320901e71122bac51f8dad9adb"
 
-  url "https://download.biolab.si/download/files/Orange#{version.major}-#{version}.dmg"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://service.biolab.si/download/orange?platform=mac'
-  name 'Orange'
-  homepage 'https://orange.biolab.si/'
+  url "https://download.biolab.si/download/files/Orange#{version.major}-#{version}-Python3.8.8.dmg"
+  name "Orange"
+  desc "Component-based data mining software"
+  homepage "https://orange.biolab.si/"
+
+  livecheck do
+    url "https://github.com/biolab/orange3"
+    strategy :git
+  end
 
   app "Orange#{version.major}.app"
+
+  zap trash: [
+    "~/Library/Application Support/Orange",
+    "~/Library/Caches/Orange",
+    "~/Library/Logs/Orange",
+    "~/Library/Saved Application State/si.biolab.orange.savedState",
+  ]
 end

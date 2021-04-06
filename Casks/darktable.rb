@@ -1,14 +1,14 @@
-cask 'darktable' do
-  version '3.0.0'
-  sha256 '8972fd773ff599c2baca0cd9e1b89e20a9e62495cf08ad94c8b9b7ed5962cd4b'
+cask "darktable" do
+  version "3.4.1"
+  sha256 "e13112ed1d5f9c55e5287aa9d7276f04b90909b2e356640f36227a0a53321658"
 
-  # github.com/darktable-org/darktable was verified as official when first introduced to the cask
-  url "https://github.com/darktable-org/darktable/releases/download/release-#{version.major_minor_patch}/darktable-#{version}.dmg"
-  appcast 'https://github.com/darktable-org/darktable/releases.atom'
-  name 'darktable'
-  homepage 'https://www.darktable.org/'
+  url "https://github.com/darktable-org/darktable/releases/download/release-#{version.major_minor_patch}/darktable-#{version}.dmg",
+      verified: "github.com/darktable-org/darktable/"
+  name "darktable"
+  desc "Photography workflow application and raw developer"
+  homepage "https://www.darktable.org/"
 
-  conflicts_with cask: 'darktable-dev'
+  conflicts_with cask: "homebrew/cask-versions/darktable-dev"
 
-  app 'darktable.app'
+  app "darktable.app"
 end

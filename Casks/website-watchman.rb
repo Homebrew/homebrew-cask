@@ -1,11 +1,11 @@
-cask 'website-watchman' do
-  version '2.5.5'
-  sha256 '39252e6808266ab7b3c7ec5bb0a85191471dedaf7f5412ffe10f21498198191e'
+cask "website-watchman" do
+  version "2.12.0,2.12.00"
+  sha256 :no_check
 
-  url 'https://peacockmedia.software/mac/watchman/watchman.dmg'
-  appcast 'https://peacockmedia.software/mac/watchman/'
-  name 'Website Watchman'
-  homepage 'https://peacockmedia.software/mac/watchman/'
+  url "https://peacockmedia.software/mac/watchman/watchman.dmg"
+  appcast "https://peacockmedia.software/mac/watchman/"
+  name "Website Watchman"
+  homepage "https://peacockmedia.software/mac/watchman/"
 
-  app 'Website Watchman.app'
+  app "Website Watchman.app"
 end

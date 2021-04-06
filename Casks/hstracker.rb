@@ -1,12 +1,29 @@
-cask 'hstracker' do
-  version '1.6.10'
-  sha256 '74e3de080e2eae68b434fabace88c4700a33d4e9ebd53ad57c80055a9c3e8b2c'
+cask "hstracker" do
+  version "1.9.0"
+  sha256 "e090b34b93d018cdd70c02f12bc070d95a1a0a5fee311cfbf13363b71bb97ac7"
 
-  # github.com/HearthSim/HSTracker was verified as official when first introduced to the cask
-  url "https://github.com/HearthSim/HSTracker/releases/download/#{version}/HSTracker.app.zip"
-  appcast 'https://github.com/HearthSim/HSTracker/releases.atom'
-  name 'Hearthstone Deck Tracker'
-  homepage 'https://hsdecktracker.net/'
+  url "https://github.com/HearthSim/HSTracker/releases/download/#{version}/HSTracker.app.zip",
+      verified: "github.com/HearthSim/HSTracker/"
+  name "Hearthstone Deck Tracker"
+  desc "Deck tracker and deck manager for Hearthstone"
+  homepage "https://hsdecktracker.net/"
 
-  app 'HSTracker.app'
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^(\d+(?:\.\d+)*)$/)
+  end
+
+  app "HSTracker.app"
+
+  zap trash: [
+    "~/Library/Application Support/HSTracker",
+    "~/Library/Application Support/net.hearthsim.hstracker",
+    "~/Library/Caches/HSTracker",
+    "~/Library/Caches/net.hearthsim.hstracker",
+    "~/Library/Cookies/net.hearthsim.hstracker.binarycookies*",
+    "~/Library/Logs/HSTracker",
+    "~/Library/Preferences/net.hearthsim.hstracker.plist",
+    "~/Library/Saved Application State/net.hearthsim.hstracker.savedState",
+  ]
 end

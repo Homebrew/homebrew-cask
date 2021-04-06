@@ -1,11 +1,13 @@
-cask 'epichrome' do
-  version '2.2.4'
-  sha256 'a9da4cb25a8c8797fb8ae7fddb1e78511a6812761b701cabb5aa6007be3cba7a'
+cask "epichrome" do
+  version "2.4.2"
+  sha256 "6c2145110355c30be607dba605f009903d0a7ad7a67822611b5d756b8d492f09"
 
-  url "https://github.com/dmarmor/epichrome/releases/download/v#{version}/epichrome-#{version}.dmg"
-  appcast 'https://github.com/dmarmor/epichrome/releases.atom'
-  name 'Epichrome'
-  homepage 'https://github.com/dmarmor/epichrome'
+  url "https://github.com/dmarmor/epichrome/releases/download/v#{version}/epichrome-#{version}.pkg"
+  name "Epichrome"
+  desc "Tool to create web-based applications that work like standalone apps"
+  homepage "https://github.com/dmarmor/epichrome"
 
-  app 'Epichrome.app'
+  pkg "epichrome-#{version}.pkg"
+
+  uninstall pkgutil: "org.epichrome.Epichrome"
 end

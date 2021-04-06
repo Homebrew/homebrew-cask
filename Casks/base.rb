@@ -1,22 +1,23 @@
-cask 'base' do
-  version '2.4.15'
-  sha256 'a420e9ed0e5309c2466374ae61c7a865e4c4f7d086d81753641bb32bd3601507'
+cask "base" do
+  version "2.5.2"
+  sha256 "84848093681459b039572a15a82e1cc60e4366ccf5fb69a4de5c90d240871d8c"
 
   url "https://files.menial.co.uk/base/base_#{version}.zip"
-  appcast 'https://update.menial.co.uk/software/base/'
-  name 'Menial Base'
-  homepage 'https://menial.co.uk/base/'
+  appcast "https://update.menial.co.uk/software/base/"
+  name "Menial Base"
+  desc "App to create, design, edit and browse SQLite 3 database files"
+  homepage "https://menial.co.uk/base/"
 
-  depends_on macos: '>= :mojave'
+  depends_on macos: ">= :mojave"
 
-  app 'Base.app'
+  app "Base.app"
 
   zap trash: [
-               '~/Library/Application Support/Base',
-               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/uk.co.menial.base.sfl*',
-               '~/Library/Caches/com.apple.helpd/Generated/uk.co.menial.base.help*',
-               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/uk.co.menial.base.help*',
-               '~/Library/Caches/uk.co.menial.Base',
-               '~/Library/Preferences/uk.co.menial.Base.plist',
-             ]
+    "~/Library/Application Support/Base",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/uk.co.menial.base.sfl*",
+    "~/Library/Caches/com.apple.helpd/Generated/uk.co.menial.base.help*",
+    "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/uk.co.menial.base.help*",
+    "~/Library/Caches/uk.co.menial.Base",
+    "~/Library/Preferences/uk.co.menial.Base.plist",
+  ]
 end

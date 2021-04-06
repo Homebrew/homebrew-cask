@@ -1,16 +1,18 @@
-cask 'codelite' do
-  version '13.0.0'
-  sha256 '7061fe30ea8ebfcc8bf0d143f6992fbad1d2d834810ab85b79718de41c17a9c0'
+cask "codelite" do
+  version "14.0.0"
+  sha256 :no_check
 
-  url 'https://downloads.codelite.org/downloads.php?osx'
-  appcast 'https://github.com/eranif/codelite/releases.atom'
-  name 'CodeLite'
-  homepage 'https://codelite.org/'
+  url "https://downloads.codelite.org/downloads.php?osx"
+  appcast "https://github.com/eranif/codelite/releases.atom",
+          must_contain: version.chomp(".0")
+  name "CodeLite"
+  desc "IDE for C, C++, PHP and Node.js"
+  homepage "https://codelite.org/"
 
-  app 'codelite.app'
+  app "codelite.app"
 
   zap trash: [
-               '~/Library/Application Support/codelite',
-               '~/Library/Preferences/codelite.plist',
-             ]
+    "~/Library/Application Support/codelite",
+    "~/Library/Preferences/codelite.plist",
+  ]
 end

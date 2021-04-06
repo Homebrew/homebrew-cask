@@ -1,10 +1,16 @@
-cask 'sauce-connect' do
-  version '4.5.4'
-  sha256 '7dd691a46a57c7c39f527688abd4825531d25a8a1c5b074f684783e397529ba6'
+cask "sauce-connect" do
+  version "4.6.4"
+  sha256 "c24ebe9bcc4da942b5e40c1f0845e08ac7d483a420adddaf1f664ad4741e46f7"
 
   url "https://saucelabs.com/downloads/sc-#{version}-osx.zip"
-  name 'Sauce Connect'
-  homepage 'https://wiki.saucelabs.com/display/DOCS/Sauce+Connect+Proxy'
+  name "Sauce Connect"
+  homepage "https://wiki.saucelabs.com/display/DOCS/Sauce+Connect+Proxy"
+
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/sc-(\d+(?:\.\d+)*)-osx\.zip}i)
+  end
 
   binary "sc-#{version}-osx/bin/sc"
 end

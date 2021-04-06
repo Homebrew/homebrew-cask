@@ -1,14 +1,25 @@
-cask 'cryptomator' do
-  version '1.4.17'
-  sha256 '85d4ce3c022065d15411d31eb71029ee2f643af6ab34deb492b23bc9e0120298'
+cask "cryptomator" do
+  version "1.5.14"
+  sha256 "2c7edaa8beae6b0db06260910846b15a57f4950f68e5c4025513ead540809d4c"
 
-  # dl.bintray.com/cryptomator/cryptomator was verified as official when first introduced to the cask
-  url "https://dl.bintray.com/cryptomator/cryptomator/#{version}/Cryptomator-#{version}.dmg"
-  appcast 'https://github.com/cryptomator/cryptomator/releases.atom'
-  name 'Cryptomator'
-  homepage 'https://cryptomator.org/'
+  url "https://dl.bintray.com/cryptomator/cryptomator/#{version}/Cryptomator-#{version}.dmg",
+      verified: "dl.bintray.com/cryptomator/cryptomator/"
+  name "Cryptomator"
+  desc "Multi-platform client-side cloud file encryption tool"
+  homepage "https://cryptomator.org/"
 
-  depends_on macos: '>= :yosemite'
+  livecheck do
+    url "https://github.com/cryptomator/cryptomator"
+    strategy :git
+  end
 
-  app 'Cryptomator.app'
+  depends_on macos: ">= :yosemite"
+
+  app "Cryptomator.app"
+
+  zap trash: [
+    "~/Library/Application Support/Cryptomator",
+    "~/Library/Logs/Cryptomator",
+    "~/Library/Preferences/org.cryptomator.plist",
+  ]
 end

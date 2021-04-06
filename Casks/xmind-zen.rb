@@ -1,13 +1,28 @@
-cask 'xmind-zen' do
-  version '10.0.0-201911180024'
-  sha256 '344b209c5ce399751aa7fafd3c8b313e5bf9d5f8da8208a55e7582d348627806'
+cask "xmind-zen" do
+  version "10.3.1-202101070049"
+  sha256 "44147f844524fd1dd9fcbfda322cd7877325c1a791aac491e583ce6d9e62f330"
 
-  url "http://dl2.xmind.net/xmind-downloads/XMind-ZEN-for-macOS-#{version}.dmg"
-  appcast 'https://www.xmind.net/download/'
-  name 'XMind ZEN'
-  homepage 'https://www.xmind.net/zen/'
+  url "https://www.xmind.net/xmind/downloads/XMind-2020-for-macOS-#{version}.dmg"
+  name "Xmind 2020"
+  desc "Mindmap and brainstorming app"
+  homepage "https://www.xmind.net/xmind2020/"
 
-  app 'XMind ZEN.app'
+  livecheck do
+    url "https://www.xmind.net/zen/download/mac/"
+    strategy :header_match
+    regex(/macOS-(\d+(?:\.\d+)*-\d+(?:\.\d+)*).dmg$/)
+  end
 
-  zap trash: '~/Library/Application Support/XMind ZEN'
+  auto_updates true
+  conflicts_with cask: "xmind"
+
+  app "XMind.app"
+
+  zap trash: "~/Library/Application Support/XMind ZEN"
+
+  caveats <<~EOS
+    Internally, Xmind Zen is now Xmind 2020. See their announcement:
+
+      https://www.xmind.net/blog/en/xmind%3A-zen-is-now-xmind%3A-2020/
+  EOS
 end

@@ -1,12 +1,18 @@
-cask 'veusz' do
-  version '3.1'
-  sha256 '468dd2af4dab24342b9180cdf5ea31d7119ba9db853eba3fabf8143be3f20695'
+cask "veusz" do
+  version "3.3.1"
+  sha256 "1f5b96912d859a6d857041753cc9c4f7843158a8d148587eea71246c283278ac"
 
-  # github.com/veusz/veusz was verified as official when first introduced to the cask
-  url "https://github.com/veusz/veusz/releases/download/veusz-#{version}/veusz-#{version}-AppleOSX.dmg"
-  appcast 'https://github.com/veusz/veusz/releases.atom'
-  name 'Veusz'
-  homepage 'https://veusz.github.io/'
+  url "https://github.com/veusz/veusz/releases/download/veusz-#{version}/veusz-#{version}-AppleOSX.dmg",
+      verified: "github.com/veusz/veusz/"
+  name "Veusz"
+  desc "Scientific plotting application"
+  homepage "https://veusz.github.io/"
 
-  app 'Veusz.app'
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^veusz-(\d+(?:\.\d+)*)$/i)
+  end
+
+  app "Veusz.app"
 end

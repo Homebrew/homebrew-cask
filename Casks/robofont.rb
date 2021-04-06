@@ -1,12 +1,19 @@
-cask 'robofont' do
-  version '3.3'
-  sha256 '2ee6460201abe754710188c0a18ff725af1599c49d38ffa6ca5828f33bd04683'
+cask "robofont" do
+  version "3.4,2004281315"
+  sha256 :no_check
 
-  # static.typemytype.com/robofont was verified as official when first introduced to the cask
-  url 'https://static.typemytype.com/robofont/RoboFont.dmg'
-  appcast 'https://doc.robofont.com/appcast.xml'
-  name 'RoboFont'
-  homepage 'https://robofont.com/'
+  url "https://static.typemytype.com/robofont/RoboFont.dmg",
+      verified: "static.typemytype.com/robofont/"
+  name "RoboFont"
+  homepage "https://robofont.com/"
 
-  app 'RoboFont.app'
+  livecheck do
+    url "https://doc.robofont.com/appcast.xml"
+    strategy :page_match do |page|
+      match = page.match(/Version\s(\d+(?:\.\d+)*)\s\(build\s(\d+(?:\.\d+)*)\)/i)
+      "#{match[1]},#{match[2]}"
+    end
+  end
+
+  app "RoboFont.app"
 end

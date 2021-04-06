@@ -1,13 +1,26 @@
-cask 'altserver' do
-  version :latest
-  sha256 :no_check
+cask "altserver" do
+  version "1.4.4,51"
+  sha256 "18a4d37fd91fba892de8c186f176904c268125b411eeb2a19ed6e4b5a8d9de76"
 
-  # f000.backblazeb2.com/file was verified as official when first introduced to the cask
-  url 'https://f000.backblazeb2.com/file/altstore/altserver.dmg'
-  name 'AltServer'
-  homepage 'https://altstore.io/'
+  url "https://f000.backblazeb2.com/file/altstore/altserver/#{version.before_comma.dots_to_underscores}.zip",
+      verified: "f000.backblazeb2.com/file/"
+  name "AltServer"
+  homepage "https://altstore.io/"
 
-  depends_on macos: '>= :mojave'
+  livecheck do
+    url "https://altstore.io/altserver/sparkle-macos.xml"
+    strategy :sparkle
+  end
 
-  app 'AltServer.app'
+  depends_on macos: ">= :mojave"
+
+  app "AltServer.app"
+
+  uninstall quit: "com.rileytestut.AltServer"
+
+  zap trash: [
+    "~/Library/Caches/com.rileytestut.AltServer",
+    "~/Library/Cookies/com.rileytestut.AltServer.binarycookies",
+    "~/Library/Preferences/com.rileytestut.AltServer.plist",
+  ]
 end

@@ -1,12 +1,17 @@
-cask 'exactscan' do
-  version '19.12.7'
-  sha256 '0b930dd60601ec386ff2ed549c98abd77845738ec2e458ffdb7d3f6259f70f54'
+cask "exactscan" do
+  version "20.1.6"
+  sha256 "90327d282eaa5745477f0532a9608516262d45bd94999d03d51f669935e38d96"
 
-  # dl.exactcode.com was verified as official when first introduced to the cask
-  url "https://dl.exactcode.com/exactscan/ExactScan-#{version}.dmg"
-  appcast 'https://exactscan.com/download.html'
-  name 'ExactScan'
-  homepage 'https://exactscan.com/index.html'
+  url "https://dl.exactcode.com/exactscan/ExactScan-#{version}.dmg",
+      verified: "dl.exactcode.com/"
+  name "ExactScan"
+  homepage "https://exactscan.com/index.html"
 
-  app 'ExactScan.app'
+  livecheck do
+    url "https://exactscan.com/download.html"
+    strategy :page_match
+    regex(%r{href=.*?/ExactScan-(\d+(?:\.\d+)*)\.dmg}i)
+  end
+
+  app "ExactScan.app"
 end

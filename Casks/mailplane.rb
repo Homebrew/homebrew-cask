@@ -1,16 +1,16 @@
-cask 'mailplane' do
-  version '4.2.1,4781'
-  sha256 'fc37da83fd8d8f1fb68b78c7470f695eaf680ce835973be3220453193fb3308f'
+cask "mailplane" do
+  version "4.3.1,4859"
+  sha256 "c76e71b0b6db97dacd80a5421d1a5dc647504c16062db934b45ff5708fbbbd42"
 
-  url "https://update.mailplaneapp.com/builds/Mailplane_#{version.major}_#{version.after_comma}.tbz"
+  url "https://builds.mailplaneapp.com/Mailplane_#{version.major}_#{version.after_comma}.tbz"
   appcast "https://update.mailplaneapp.com/appcast.php?rqsr=1&osVersion=10.14.1&appVersion=#{version.after_comma}&shortVersionString=#{version.before_comma}"
-  name 'Mailplane'
-  homepage 'https://mailplaneapp.com/'
+  name "Mailplane"
+  homepage "https://mailplaneapp.com/"
 
   auto_updates true
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'Mailplane.app'
+  app "Mailplane.app"
 
-  zap trash: '~/Library/Preferences/com.mailplaneapp.Mailplane.plist'
+  zap trash: "~/Library/Preferences/com.mailplaneapp.Mailplane.plist"
 end

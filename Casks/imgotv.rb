@@ -1,25 +1,28 @@
-cask 'imgotv' do
-  version '6.1.7-mango2'
-  sha256 '90b1a6506740b3260aefeafa369bd20232a22eae2dc43b9f5e117e0d839f9d27'
+cask "imgotv" do
+  version "6.4.0"
+  sha256 "e0bae3b87de6919a6d845989ea23451f68328645094cb81984307502cb2ef23e"
 
-  # download.imgo.tv was verified as official when first introduced to the cask
-  url "https://download.imgo.tv/app/pc/mac/mgtv-client-#{version}.dmg"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?user_agent=Mac%20OS%20X&url=http://pcconf.api.mgtv.com/getPcDownloadUrl?source=mango2'
-  name 'hunantv'
-  name '芒果视频'
-  homepage 'https://www.mgtv.com/app/'
+  url "https://download.imgo.tv/app/mac/#{version}/mgtv-mango-#{version}.dmg",
+      verified: "download.imgo.tv/"
+  name "芒果TV"
+  homepage "https://www.mgtv.com/app/"
+
+  livecheck do
+    url "https://pcconf.api.mgtv.com/getPcDownloadUrl?source=mango2"
+    strategy :header_match
+  end
 
   auto_updates true
-  depends_on macos: '>= :yosemite'
+  depends_on macos: ">= :yosemite"
 
-  app '芒果TV极速版.app'
+  app "芒果TV.app"
 
   zap trash: [
-               '~/Library/Preferences/com.hunantv.osx.imgotv.plist',
-               '~/Library/Caches/com.hunantv.LaunchAtLoginHelper',
-               '~/Library/Saved Application State/com.hunantv.osx.imgotv.savedState',
-               '~/Library/Caches/com.hunantv.osx.imgotv',
-               '~/Library/Caches/Imgotv-Mac',
-               '~/Library/Logs/Imgotv-Mac',
-             ]
+    "~/Library/Preferences/com.hunantv.osx.imgotv.plist",
+    "~/Library/Caches/com.hunantv.LaunchAtLoginHelper",
+    "~/Library/Saved Application State/com.hunantv.osx.imgotv.savedState",
+    "~/Library/Caches/com.hunantv.osx.imgotv",
+    "~/Library/Caches/Imgotv-Mac",
+    "~/Library/Logs/Imgotv-Mac",
+  ]
 end

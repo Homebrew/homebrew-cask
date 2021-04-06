@@ -1,19 +1,33 @@
-cask 'terminus' do
-  version '1.0.97'
-  sha256 '6355481b3a55af9b7538c358d5baf77c5cb9bfe6fbd4838a89bcbe49c45c684b'
+cask "terminus" do
+  version "1.0.135"
 
-  # github.com/Eugeny/terminus was verified as official when first introduced to the cask
-  url "https://github.com/Eugeny/terminus/releases/download/v#{version}/terminus-#{version}-macos.zip"
-  appcast 'https://github.com/Eugeny/terminus/releases.atom'
-  name 'Terminus'
-  homepage 'https://eugeny.github.io/terminus/'
+  if Hardware::CPU.intel?
+    sha256 "10d007984e6a96f77f76a2ae06903ac8790ea5db43e6419772f11cf8c3273356"
 
-  app 'Terminus.app'
+    url "https://github.com/Eugeny/terminus/releases/download/v#{version}/terminus-#{version}-macos-x86_64.zip",
+        verified: "github.com/Eugeny/terminus/"
+  else
+    sha256 "d4ebb75e58dfa604e4090484f0f8bc26ce1d6c0c9ea991d41615ecd73eca7307"
+
+    url "https://github.com/Eugeny/terminus/releases/download/v#{version}/terminus-#{version}-macos-arm64.zip",
+        verified: "github.com/Eugeny/terminus/"
+  end
+
+  name "Terminus"
+  desc "Terminal for a more modern age"
+  homepage "https://eugeny.github.io/terminus/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  app "Terminus.app"
 
   zap trash: [
-               '~/Library/Application Support/terminus',
-               '~/Library/Preferences/org.terminus.helper.plist',
-               '~/Library/Preferences/org.terminus.plist',
-               '~/Library/Saved Application State/org.terminus.savedState',
-             ]
+    "~/Library/Application Support/terminus",
+    "~/Library/Preferences/org.terminus.helper.plist",
+    "~/Library/Preferences/org.terminus.plist",
+    "~/Library/Saved Application State/org.terminus.savedState",
+  ]
 end

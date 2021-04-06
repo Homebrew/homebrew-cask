@@ -1,14 +1,19 @@
-cask 'frescobaldi' do
-  version '2.20.0'
-  sha256 '575910ceaeb6016355dcfac77ab5dcfceca42a7ff84db5f3316030231cb86bfc'
+cask "frescobaldi" do
+  version "3.1.3"
+  sha256 "a7c53b67015c8515ae31102a53e16a9eca6b0e5c98ced6e859bb834e3e12f29c"
 
-  # github.com/frescobaldi/frescobaldi was verified as official when first introduced to the cask
-  url "https://github.com/frescobaldi/frescobaldi/releases/download/v#{version}/Frescobaldi-#{version}-x86_64.dmg"
-  appcast 'https://github.com/frescobaldi/frescobaldi/releases.atom'
-  name 'Frescobaldi'
-  homepage 'http://frescobaldi.org/'
+  url "https://github.com/frescobaldi/frescobaldi/releases/download/v#{version}/Frescobaldi-#{version}-x86_64.dmg",
+      verified: "github.com/frescobaldi/frescobaldi/"
+  name "Frescobaldi"
+  desc "LilyPond Editor"
+  homepage "https://frescobaldi.org/"
 
-  app 'Frescobaldi.app'
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
-  zap trash: '~/Library/Preferences/org.frescobaldi.frescobaldi.plist'
+  app "Frescobaldi.app"
+
+  zap trash: "~/Library/Preferences/org.frescobaldi.frescobaldi.plist"
 end

@@ -1,21 +1,26 @@
-cask 'local' do
-  version '5.0.7'
-  sha256 '9da001589453643dcef9c8ee46c163a97749d37ddf32ffa567810c8c8281931d'
+cask "local" do
+  version "5.10.3,5332"
+  sha256 "3dad4870f65392b9cff4bac6fdd2f51b17e2e6bec5dcc78419d15b407720aced"
 
-  # local-by-flywheel-flywheel.netdna-ssl.com/releases was verified as official when first introduced to the cask
-  url "https://local-by-flywheel-flywheel.netdna-ssl.com/releases/#{version.dots_to_hyphens}/local-#{version.dots_to_hyphens}-mac.dmg"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://local-by-flywheel-flywheel.netdna-ssl.com/latest/mac',
-          configuration: version.dots_to_hyphens
-  name 'Local by Flywheel'
-  homepage 'https://localbyflywheel.com/'
+  url "https://cdn.localwp.com/releases-stable/#{version.before_comma}+#{version.after_comma}/local-#{version.before_comma}-mac.dmg"
+  name "Local"
+  desc "WordPress local development tool by Flywheel"
+  homepage "https://localwp.com/"
 
-  app 'Local.app'
+  livecheck do
+    url "https://cdn.localwp.com/stable/latest/mac"
+    strategy :header_match do |headers|
+      match = headers["location"].match(%r{/(\d+(?:\.\d+)*)\+(\d+)/})
+      "#{match[1]},#{match[2]}"
+    end
+  end
+
+  app "Local.app"
 
   zap trash: [
-               '~/Library/Application Support/Local by Flywheel',
-               '~/Library/Logs/local-by-flywheel.log',
-               '~/Library/Preferences/com.getflywheel.local.plist',
-               '~/Library/Preferences/com.getflywheel.local.helper.plist',
-               '~/Library/Saved Application State/com.getflywheel.local.savedState',
-             ]
+    "~/Library/Application Support/Local",
+    "~/Library/Logs/local-lightning.log",
+    "~/Library/Preferences/com.getflywheel.lightning.local.plist",
+    "~/Library/Saved Application State/com.getflywheel.lightning.local.savedState",
+  ]
 end

@@ -1,11 +1,11 @@
-cask 'beatport-pro' do
-  version '2.4.3_178'
-  sha256 '821c791ab9bd01aff5082ed1ce317c25d36385953efbe9eb06fe75dc14980ea2'
+cask "beatport-pro" do
+  version "2.4.6_196"
+  sha256 "839da8e6d0681cc3b4bf4563e6b966e9133296884026d09d45939438292be737"
 
   url "https://pro.beatport.com/mac/#{version}/beatportpro_#{version}.zip"
-  appcast 'https://pro.beatport.com/mac/appcast.xml'
-  name 'Beatport Pro'
-  homepage 'https://www.beatport.com/'
+  appcast "https://pro.beatport.com/mac/appcast.xml"
+  name "Beatport Pro"
+  homepage "https://www.beatport.com/"
 
-  app 'Beatport Pro.app'
+  app "Beatport Pro.app"
 end

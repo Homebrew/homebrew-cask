@@ -1,13 +1,18 @@
-cask 'garagesale' do
-  version '8.0.9'
-  sha256 'da7d91f3604b096157ab74b126e54d4ad1d59957c88bb3552ea436028de64e9a'
+cask "garagesale" do
+  version "8.3.5"
+  sha256 "2649969901f7e5a36321d591a97557fd6a5e86b13396342c31c79c0e6b3f834c"
 
   url "https://downloads.iwascoding.com/downloads/GarageSale_#{version}.dmg"
-  appcast 'https://www.iwascoding.com/GarageSale/Downloads.html#VersionHistory'
-  name 'GarageSale'
-  homepage 'https://www.iwascoding.com/GarageSale/'
+  name "GarageSale"
+  homepage "https://www.iwascoding.com/GarageSale/"
 
-  depends_on macos: '>= :sierra'
+  livecheck do
+    url "https://www.iwascoding.com/GarageSale/Downloads.html#VersionHistory"
+    strategy :page_match
+    regex(%r{href=.*?/GarageSale_(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
-  app 'GarageSale.app'
+  depends_on macos: ">= :sierra"
+
+  app "GarageSale.app"
 end

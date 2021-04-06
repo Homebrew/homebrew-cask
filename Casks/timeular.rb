@@ -1,14 +1,15 @@
-cask 'timeular' do
-  version '2.4.0'
-  sha256 '9b78c28b7da5b6b7bfa0bfeffd83f707f0dcb516ca1378afd3a486a830e722c7'
+cask "timeular" do
+  version "3.8.0"
+  sha256 "3c0dbdb97f9cf37882558c39fb3679191a54de80336271f9eefc4160e6412f6a"
 
-  # timeular-desktop-packages.s3.amazonaws.com was verified as official when first introduced to the cask
-  url "https://timeular-desktop-packages.s3.amazonaws.com/mac/production/Timeular-#{version}.dmg"
-  appcast 'https://timeular-desktop-packages.s3.amazonaws.com/mac/production/latest-mac.yml'
-  name 'Timeular'
-  homepage 'https://timeular.com/'
+  url "https://timeular-desktop-packages.s3.amazonaws.com/mac/production/Timeular-#{version}.dmg",
+      verified: "timeular-desktop-packages.s3.amazonaws.com/"
+  appcast "https://timeular-desktop-packages.s3.amazonaws.com/mac/production/latest-mac.yml"
+  name "Timeular"
+  desc "Time tracking aided by a physical device"
+  homepage "https://timeular.com/"
 
   auto_updates true
 
-  app 'Timeular.app'
+  app "Timeular.app"
 end

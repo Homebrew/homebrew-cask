@@ -1,19 +1,29 @@
-cask 'maccy' do
-  version '0.7.0'
-  sha256 'de5c2ae240789528fdc3694f4b3b191dd2f4a04006d4fe6cbbce28c18bf50621'
+cask "maccy" do
+  version "0.20.1,6"
+  sha256 "4d3411399ab0a6bc8dc5ac2590e113ad11206665d7680848c00091db6c4be386"
 
-  # github.com/p0deje/Maccy was verified as official when first introduced to the cask
-  url "https://github.com/p0deje/Maccy/releases/download/#{version}/Maccy.app.zip"
-  appcast 'https://github.com/p0deje/Maccy/releases.atom'
-  name 'Maccy'
-  homepage 'https://maccy.app/'
+  url "https://github.com/p0deje/Maccy/releases/download/#{version.before_comma}/Maccy.app.zip",
+      verified: "github.com/p0deje/Maccy/"
+  name "Maccy"
+  desc "Clipboard manager"
+  homepage "https://maccy.app/"
 
-  depends_on macos: '>= :high_sierra'
+  livecheck do
+    url "https://raw.githubusercontent.com/p0deje/Maccy/master/appcast.xml"
+    strategy :sparkle
+  end
 
-  app 'Maccy.app'
+  auto_updates true
+  depends_on macos: ">= :mojave"
 
-  uninstall quit: 'org.p0deje.Maccy'
+  app "Maccy.app"
 
-  zap login_item: 'Maccy',
-      trash:      '~/Library/Preferences/org.p0deje.Maccy.plist'
+  uninstall quit: "org.p0deje.Maccy"
+
+  zap login_item: "Maccy",
+      trash:      [
+        "~/Library/Preferences/org.p0deje.Maccy.plist",
+        "~/Library/Application Scripts/org.p0deje.Maccy",
+        "~/Library/Containers/org.p0deje.Maccy",
+      ]
 end

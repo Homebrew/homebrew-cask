@@ -1,24 +1,30 @@
-cask 'plex-media-server' do
-  version '1.18.3.2156-349e9837e'
-  sha256 '2dedf94c97168486ebcd39fbc9978fbcf3e0784beb8894584eff74a074a20d72'
+cask "plex-media-server" do
+  version "1.22.1.4275-48e10484b"
+  sha256 "209e5fb44cded08c1e3391cccb22bd4930bd2e791b6eb47bb0a54387fecd5671"
 
   url "https://downloads.plex.tv/plex-media-server-new/#{version}/macos/PlexMediaServer-#{version}-x86_64.zip"
-  appcast 'https://plex.tv/api/downloads/5.json'
-  name 'Plex Media Server'
-  homepage 'https://www.plex.tv/'
+  name "Plex Media Server"
+  desc "Home media server"
+  homepage "https://www.plex.tv/"
+
+  livecheck do
+    url "https://plex.tv/api/downloads/5.json"
+    strategy :page_match
+    regex(%r{href=.*?/PlexMediaServer-(\d+(?:\.\d+)*-[\da-f]+)-x86_64\.zip}i)
+  end
 
   auto_updates true
 
-  app 'Plex Media Server.app'
-  binary "#{appdir}/Plex Media Server.app/Contents/MacOS/Plex Media Scanner", target: 'pms'
+  app "Plex Media Server.app"
+  binary "#{appdir}/Plex Media Server.app/Contents/MacOS/Plex Media Scanner", target: "plexms"
 
-  uninstall quit:      'com.plexapp.plexmediaserver',
-            launchctl: 'com.plexapp.mediaserver'
+  uninstall quit:      "com.plexapp.plexmediaserver",
+            launchctl: "com.plexapp.mediaserver"
 
   zap trash: [
-               '~/Library/Application Support/Plex Media Server/',
-               '~/Library/Caches/PlexMediaServer/',
-               '~/Library/Logs/Plex Media Server/',
-               '~/Library/Preferences/com.plexapp.plexmediaserver.plist',
-             ]
+    "~/Library/Application Support/Plex Media Server/",
+    "~/Library/Caches/PlexMediaServer/",
+    "~/Library/Logs/Plex Media Server/",
+    "~/Library/Preferences/com.plexapp.plexmediaserver.plist",
+  ]
 end

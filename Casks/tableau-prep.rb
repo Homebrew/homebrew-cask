@@ -1,27 +1,32 @@
-cask 'tableau-prep' do
-  version '2019.4.2'
-  sha256 '6b3c5ace028cfea9583b7705921fcba881dc4b1a33e431bb8d772502681e837c'
+cask "tableau-prep" do
+  version "2021.1.2"
+  sha256 "6dfe2c62730085784351258b246592bc68a1f52268c350d3fd8ebf5b0b24b687"
 
   url "https://downloads.tableau.com/esdalt/tableau_prep/#{version}/TableauPrep-#{version.dots_to_hyphens}.dmg"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.tableau.com/downloads/prep/mac',
-          configuration: version.dots_to_hyphens
-  name 'Tableau Prep'
-  homepage 'https://www.tableau.com/support/releases/prep'
+  name "Tableau Prep"
+  homepage "https://www.tableau.com/support/releases/prep"
 
-  depends_on macos: '>= :el_capitan'
+  livecheck do
+    url "https://www.tableau.com/downloads/prep/mac"
+    strategy :header_match do |headers|
+      headers["location"][/-(\d+-\d+-\d+)\.dmg/i, 1].tr("-", ".")
+    end
+  end
 
-  pkg 'Tableau Prep Builder.pkg'
+  depends_on macos: ">= :el_capitan"
+
+  pkg "Tableau Prep Builder.pkg"
 
   uninstall pkgutil: [
-                       'com.amazon.redshiftodbc',
-                       'simba.sparkodbc',
-                       'com.simba.sparkodbc',
-                       'com.simba.sqlserverodbc',
-                       'com.tableausoftware.Maestro.app',
-                       'com.tableausoftware.desktopShortcut',
-                       'com.tableausoftware.telemetry',
-                       'com.tableausoftware.FLEXNet.11.*',
-                       'com.tableausoftware.oracle',
-                       'com.tableausoftware.postgresql',
-                     ]
+    "com.amazon.redshiftodbc",
+    "simba.sparkodbc",
+    "com.simba.sparkodbc",
+    "com.simba.sqlserverodbc",
+    "com.tableausoftware.Maestro.app",
+    "com.tableausoftware.desktopShortcut",
+    "com.tableausoftware.telemetry",
+    "com.tableausoftware.FLEXNet.11.*",
+    "com.tableausoftware.oracle",
+    "com.tableausoftware.postgresql",
+  ]
 end

@@ -13,16 +13,11 @@ This document describes the algorithm implemented in the `generate_cask_token` s
 
 ## Purpose
 
-The purpose of these stringent conventions is to:
+Software vendors are often inconsistent with their naming. By enforcing strict naming conventions we aim to:
 
-* Unambiguously boil down the name of the software into a unique identifier
-* Minimize renaming events
 * Prevent duplicate submissions
-
-The token itself should be:
-
-* Suitable for use as a filename
-* Mnemonic
+* Minimize renaming events
+* Unambiguously boil down the name of the software into a unique identifier
 
 Details of software names and brands will inevitably be lost in the conversion to a minimal token. To capture the vendor’s full name for a distribution, use the [`name`](https://github.com/Homebrew/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/name.md) within a Cask. `name` accepts an unrestricted UTF-8 string.
 
@@ -36,11 +31,11 @@ Details of software names and brands will inevitably be lost in the conversion t
 
 * Remove `.app` from the end.
 
-* Remove from the end: the string “app”, if the vendor styles the name like “Software App.app”. Exception: when “app” is an inseparable part of the name, without which the name would be inherently nonsensical, as in [rcdefaultapp.rb](../../Casks/rcdefaultapp.rb).
+* Remove from the end: the string “app”, if the vendor styles the name like “Software App.app”. Exception: when “app” is an inseparable part of the name, without which the name would be inherently nonsensical, as in [whatsapp.rb](../../Casks/whatsapp.rb).
 
-* Remove from the end: version numbers or incremental release designations such as “alpha”, “beta”, or “release candidate”. Strings which distinguish different capabilities or codebases such as “Community Edition” are currently accepted. Exception: when a number is not an incremental release counter, but a differentiator for a different product from a different vendor, as in [pgadmin3.rb](../../Casks/pgadmin3.rb).
+* Remove from the end: version numbers or incremental release designations such as “alpha”, “beta”, or “release candidate”. Strings which distinguish different capabilities or codebases such as “Community Edition” are currently accepted. Exception: when a number is not an incremental release counter, but a differentiator for a different product from a different vendor, as in [kdiff3.rb](../../Casks/kdiff3.rb).
 
-* If the version number is arranged to occur in the middle of the App name, it should also be removed. Example: [IntelliJ IDEA 13 CE.app](../../../../../homebrew-cask-versions/tree/master/Casks/intellij-idea-ce.rb).
+* If the version number is arranged to occur in the middle of the App name, it should also be removed.
 
 * Remove from the end: “Launcher”, “Quick Launcher”.
 
@@ -50,7 +45,7 @@ Details of software names and brands will inevitably be lost in the conversion t
 
 * Remove from the end: hardware designations such as “for x86”, “32-bit”, “ppc”.
 
-* Remove from the end: software framework names such as “Cocoa”, “Qt”, “Gtk”, “Wx”, “Java”, “Oracle JVM”, etc. Exception: the framework is the product being Casked, as in [java.rb](../../Casks/java.rb).
+* Remove from the end: software framework names such as “Cocoa”, “Qt”, “Gtk”, “Wx”, “Java”, “Oracle JVM”, etc. Exception: the framework is the product being Casked.
 
 * Remove from the end: localization strings such as “en-US”.
 
@@ -102,8 +97,6 @@ To convert the App’s Simplified Name (above) to a token:
 * Delete any character which is not alphanumeric or a hyphen.
 * Collapse a series of multiple hyphens into one hyphen.
 * Delete a leading or trailing hyphen.
-
-We avoid defining Cask tokens in the repository which differ only by the placement of hyphens. Prepend the vendor name if needed to disambiguate the token.
 
 ## Cask Filenames
 

@@ -1,11 +1,11 @@
-cask 'dcp-o-matic' do
-  version '2.14.19'
-  sha256 'c27bed5ded06c4ea6031f361d167a9073923e68815d4c45bb0671f870f524e1d'
+cask "dcp-o-matic" do
+  version "2.14.47"
+  sha256 "774243e24527bd7bde151dc8d50d438f13659f30813e7b0a15a68c84d5e30a05"
 
-  url "https://dcpomatic.com/dl.php?id=osx-main&version=#{version}"
-  appcast 'https://dcpomatic.com/download'
-  name 'DCP-o-matic'
-  homepage 'https://dcpomatic.com/'
+  url "https://dcpomatic.com/dl.php?id=osx-10.9-main&version=#{version}"
+  appcast "https://dcpomatic.com/download"
+  name "DCP-o-matic"
+  homepage "https://dcpomatic.com/"
 
   app "DCP-o-matic #{version.major}.app"
 end

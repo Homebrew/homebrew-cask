@@ -1,27 +1,32 @@
-cask 'balenaetcher' do
-  version '1.5.70'
-  sha256 'e70c2f613d70fad444fa2b2115cecbae68a6b958d46967bef700b85e1b377ecc'
+cask "balenaetcher" do
+  version "1.5.116"
+  sha256 "3bf5c0ebf0bf424ab3a3134e1bfb1b6e341b90267fe7b9137a9908ff2454663c"
 
-  # github.com/balena-io/etcher was verified as official when first introduced to the cask
-  url "https://github.com/balena-io/etcher/releases/download/v#{version}/balenaEtcher-#{version}.dmg"
-  appcast 'https://github.com/balena-io/etcher/releases.atom'
-  name 'Etcher'
-  homepage 'https://balena.io/etcher'
+  url "https://github.com/balena-io/etcher/releases/download/v#{version}/balenaEtcher-#{version}.dmg",
+      verified: "github.com/balena-io/etcher/"
+  name "Etcher"
+  desc "Tool to flash OS images to SD cards & USB drives"
+  homepage "https://balena.io/etcher"
 
-  app 'balenaEtcher.app'
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  app "balenaEtcher.app"
 
   uninstall quit: [
-                    'com.github.Squirrel',
-                    'com.github.electron.framework',
-                    'io.balena.etcher.*',
-                    'org.mantle.Mantle',
-                    'org.reactivecocoa.ReactiveCocoa',
-                  ]
+    "com.github.Squirrel",
+    "com.github.electron.framework",
+    "io.balena.etcher.*",
+    "org.mantle.Mantle",
+    "org.reactivecocoa.ReactiveCocoa",
+  ]
 
   zap trash: [
-               '~/Library/Application Support/balena-etcher',
-               '~/Library/Preferences/io.balena.etcher.helper.plist',
-               '~/Library/Preferences/io.balena.etcher.plist',
-               '~/Library/Saved Application State/io.balena.etcher.savedState',
-             ]
+    "~/Library/Application Support/balena-etcher",
+    "~/Library/Preferences/io.balena.etcher.helper.plist",
+    "~/Library/Preferences/io.balena.etcher.plist",
+    "~/Library/Saved Application State/io.balena.etcher.savedState",
+  ]
 end

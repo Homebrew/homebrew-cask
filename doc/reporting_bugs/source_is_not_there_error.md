@@ -1,6 +1,6 @@
 First, you need to identify which artifact is not being handled correctly anymore. It’s explicit in the error message: if it says `It seems the App source…'` the problem is [`app`](https://github.com/Homebrew/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/app.md). The pattern is the same across [all artifacts](https://github.com/Homebrew/homebrew-cask/blob/master/doc/cask_language_reference/all_stanzas.md#at-least-one-artifact-stanza-is-also-required).
 
-Fixing this error is typically easy, and requires only a bit of time on your part. Start by downloading the package for the cask: `brew cask fetch {{cask_name}}`. The last line of output will inform you of the location of the download. Navigate there and manually unpack it. As an example, lets say the structure inside the archive is as follows:
+Fixing this error is typically easy, and requires only a bit of time on your part. Start by downloading the package for the cask: `brew fetch {{cask_name}}`. The last line of output will inform you of the location of the download. Navigate there and manually unpack it. As an example, lets say the structure inside the archive is as follows:
 
 ```
 .
@@ -9,11 +9,11 @@ Fixing this error is typically easy, and requires only a bit of time on your par
 └─ README.md
 ```
 
-Now, let's look at the cask (`brew cask cat {{cask_name}}`):
+Now, let's look at the cask (`brew cat {{cask_name}}`):
 
 ```
 (…)
-app 'SomeApp.app'
+app "SomeApp.app"
 (…)
 ```
 
