@@ -7,5 +7,9 @@ cask "clickcharts" do
   name "ClickCharts"
   homepage "https://www.nchsoftware.com/"
 
+  livecheck do
+    skip "unversioned URL"
+  end
+
   app "ClickCharts.app"
 end
