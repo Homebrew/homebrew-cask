@@ -7,6 +7,12 @@ cask "raycast" do
   desc "Control your tools with a few keystrokes"
   homepage "https://raycast.app/"
 
+  livecheck do
+    url :url
+    strategy :header_match
+    regex(/Raycast_v?(\d+(?:\.\d+)*)_universal\.dmg/i)
+  end
+
   auto_updates true
 
   app "Raycast.app"
