@@ -9,8 +9,8 @@ cask "wwdc" do
   homepage "https://wwdc.io/"
 
   livecheck do
-    url "https://github.com/insidegui/WWDC/releases/"
-    strategy :page_match do |page|
+    url :url
+    strategy :github_latest do |page|
       match = page.match(/WWDC_v?(\d+(?:\.\d+)*)-(\d+(?:\.\d+)*)\.dmg/i)
       "#{match[1]},#{match[2]}"
     end
