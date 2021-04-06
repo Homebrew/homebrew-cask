@@ -7,5 +7,9 @@ cask "prowritingaid" do
   desc "Grammar checker, style editor, and writing mentor"
   homepage "https://prowritingaid.com/"
 
+  livecheck do
+    skip "No version information available"
+  end
+
   app "ProWritingAid.app"
 end
