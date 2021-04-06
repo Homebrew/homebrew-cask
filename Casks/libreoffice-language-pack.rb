@@ -396,13 +396,18 @@ cask "libreoffice-language-pack" do
 
   url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/LibreOffice_#{version}_MacOS_x86-64_langpack_#{language}.dmg",
       verified: "documentfoundation.org/"
-  appcast "https://download.documentfoundation.org/libreoffice/stable/"
   name "LibreOffice Language Pack"
   desc "Collection of alternate languages for LibreOffice"
   homepage "https://www.libreoffice.org/"
 
+  livecheck do
+    url "https://download.documentfoundation.org/libreoffice/stable/"
+    strategy :page_match
+    regex(%r{href="(\d+(?:\.\d+)*)/"}i)
+  end
+
   depends_on cask: "libreoffice"
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :yosemite"
 
   installer manual: "LibreOffice Language Pack.app"
 
