@@ -7,6 +7,11 @@ cask "finisher-fluxx" do
   desc "VST/AU/AAX effect plugin for deconstructing, transforming, and animating sounds"
   homepage "https://www.ujam.com/finisher/fluxx/"
 
+  livecheck do
+    url :url
+    strategy :header_match
+  end
+
   pkg "FIN-FLUXX_osx_#{version.after_comma}.pkg"
 
   uninstall pkgutil: "com.ujam.finfluxx.*"
