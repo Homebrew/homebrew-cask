@@ -6,5 +6,10 @@ cask "rapidminer-studio" do
   name "RapidMiner Studio"
   homepage "https://rapidminer.com/products/studio/"
 
+  livecheck do
+    url :url
+    strategy :header_match
+  end
+
   app "RapidMiner Studio.app"
 end
