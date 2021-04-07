@@ -1,5 +1,5 @@
 cask "zenbeats" do
-  version "2.0.6,8159"
+  version "2.1.2,8377"
   sha256 :no_check
 
   url "https://static.roland.com/assets/media/pkg/Zenbeats_Installer.pkg"
