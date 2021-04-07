@@ -20,4 +20,11 @@ cask "feishu" do
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "Lark.app", target: "Feishu.app"
+
+  zap trash: [
+    "~/Library/Caches/com.bytedance.lark.helper",
+    "~/Library/Caches/com.electron.lark",
+    "~/Library/Preferences/com.bytedance.lark.helper.plist",
+    "~/Library/Saved Application State/com.electron.lark.savedState",
+  ]
 end
