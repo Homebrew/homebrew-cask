@@ -8,6 +8,10 @@ cask "mailmaster" do
   name "网易邮箱大师"
   homepage "https://mail.163.com/dashi/"
 
+  livecheck do
+    skip "unversioned URL"
+  end
+
   app "MailMaster.app"
 
   uninstall quit: "com.netease.macmail"
