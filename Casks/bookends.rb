@@ -7,5 +7,11 @@ cask "bookends" do
   desc "Reference management and bibliography software"
   homepage "https://www.sonnysoftware.com/"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(/version\s*(\d+(?:\.\d+)*)/i)
+  end
+
   app "Bookends.app"
 end
