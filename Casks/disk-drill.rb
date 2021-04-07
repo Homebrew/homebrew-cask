@@ -1,6 +1,6 @@
 cask "disk-drill" do
-  version "4.2.274"
-  sha256 "c2d15ec2e251b19872b3209f6972577e128b19144a18147078c887e97f7cdbec"
+  version "4.3.314"
+  sha256 "9c36ed4fbcd3a3bc41aaaf21d6ae7155010983d3c9abf972ddfad9dcd5e9805f"
 
   url "https://www.cleverfiles.com/releases/DiskDrill_#{version}.dmg"
   name "Disk Drill"
