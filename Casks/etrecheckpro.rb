@@ -1,5 +1,5 @@
 cask "etrecheckpro" do
-  version "6.4.3,6E010"
+  version "6.4.3"
   sha256 :no_check
 
   url "https://cdn.etrecheck.com/EtreCheckPro.zip"
@@ -8,7 +8,9 @@ cask "etrecheckpro" do
   homepage "https://etrecheck.com/"
 
   livecheck do
-    skip "No version information available"
+    url "https://etrecheck.com/details"
+    strategy :page_match
+    regex(/Changes\sin\sEtreCheckPro\sversion\s(\d+(?:\.\d+)*)/i)
   end
 
   app "EtreCheckPro.app"
