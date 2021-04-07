@@ -20,7 +20,7 @@ module CiMatrix
     cask_content = path.read
 
     if cask_content.match?(/\bMacOS\s*\.version\b/m) &&
-       RUNNERS.keys.none? { |runner| cask_content.include?(runner[:symbol].inspect) }
+       RUNNERS.keys.any? { |runner| cask_content.include?(runner[:symbol].inspect) }
       # If the cask depends on `MacOS.version`, test it on every possible macOS version.
       RUNNERS.keys
     else
