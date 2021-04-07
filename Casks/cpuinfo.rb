@@ -1,6 +1,6 @@
 cask "cpuinfo" do
   version "1.4.6"
-  sha256 "ffff"
+  sha256 "bbf19dd1a7833dbb80933b4ac9845d70d35b434723cbcfcca060250a3c635770"
 
   url "https://github.com/yusukeshibata/cpuinfo/raw/#{version}/dist/cpuinfo.zip"
   name "cpuinfo"
