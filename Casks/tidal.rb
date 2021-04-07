@@ -1,5 +1,5 @@
 cask "tidal" do
-  version "2.23.0"
+  version "2.26.1"
   sha256 :no_check
 
   url "https://download.tidal.com/desktop/TIDAL.dmg"
