@@ -1,5 +1,5 @@
 cask "paintbrush" do
-  version "2.5.2"
+  version "2.5.2,20201220"
   sha256 "0fdfb727ba8fdcd50fa3ed8e768b8b781aadb918630488c723278eb0bab2a164"
 
   url "https://downloads.sourceforge.net/paintbrush/Paintbrush%202.x/Paintbrush%20#{version.before_comma}/Paintbrush-#{version.before_comma}.zip",
