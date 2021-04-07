@@ -8,4 +8,6 @@ cask "katrain" do
   homepage "https://github.com/sanderland/katrain"
 
   app "KaTrain.app"
+
+  zap trash: "~/.katrain"
 end
