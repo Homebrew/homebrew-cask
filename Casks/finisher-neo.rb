@@ -12,7 +12,7 @@ cask "finisher-neo" do
     strategy :header_match
   end
 
-  pkg "FIN-NEO_osx_#{version.after_comma}.pkg"
+  pkg "FIN-NEO_osx_#{version}.pkg"
 
   uninstall pkgutil: "com.ujam.finneo.*"
 
