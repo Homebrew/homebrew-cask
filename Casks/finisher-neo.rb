@@ -7,6 +7,11 @@ cask "finisher-neo" do
   desc "VST/AU/AAX multi-effect plugin"
   homepage "https://www.ujam.com/finisher/neo/"
 
+  livecheck do
+    url :url
+    strategy :header_match
+  end
+
   pkg "FIN-NEO_osx_#{version.after_comma}.pkg"
 
   uninstall pkgutil: "com.ujam.finneo.*"
