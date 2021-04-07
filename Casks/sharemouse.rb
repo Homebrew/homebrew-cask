@@ -1,12 +1,17 @@
 cask "sharemouse" do
-  version "5.0.47"
+  version "5.0.48"
   sha256 :no_check
 
   url "https://www.sharemouse.com/ShareMouseSetup.dmg"
-  appcast "https://www.sharemouse.com/download/"
   name "ShareMouse"
   desc "Share peripherals between computers"
   homepage "https://www.sharemouse.com/"
+
+  livecheck do
+    url "https://www.sharemouse.com/download/"
+    strategy :page_match
+    regex(/Mac\s*Version:.*?(\d+(?:\.\d+)*)/i)
+  end
 
   app "ShareMouse.app"
 
