@@ -11,7 +11,7 @@ cask "emailchemy" do
   livecheck do
     url "https://weirdkid.com/emailchemyversionhistory"
     strategy :page_match
-    regex(/version\s(\d+(?:\.\d+)*)/i)
+    regex(/version\s*(\d+(?:\.\d+)*)/i)
   end
 
   app "Emailchemy.app"
