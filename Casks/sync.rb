@@ -7,5 +7,11 @@ cask "sync" do
   desc "Store, share and access files from anywhere"
   homepage "https://www.sync.com/"
 
+  livecheck do
+    url "https://www.sync.com/install/"
+    strategy :page_match
+    regex(/(\d+(?:\.\d+)*).*?release\s*notes/i)
+  end
+
   app "Sync.app"
 end
