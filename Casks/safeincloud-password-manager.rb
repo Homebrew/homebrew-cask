@@ -6,5 +6,9 @@ cask "safeincloud-password-manager" do
   name "SafeInCloud Password Manager"
   homepage "https://www.safe-in-cloud.com/"
 
+  livecheck do
+    skip "unversioned URL"
+  end
+
   app "SafeInCloud Password Manager.app"
 end
