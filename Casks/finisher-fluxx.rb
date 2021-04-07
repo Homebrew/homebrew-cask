@@ -1,5 +1,5 @@
 cask "finisher-fluxx" do
-  version "1.0.0"
+  version "136"
   sha256 :no_check
 
   url "https://www.ujam.com/api/delivery/product?os=osx&sku=FIN-FLUXX"
