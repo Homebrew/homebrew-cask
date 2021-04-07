@@ -7,7 +7,9 @@ cask "atlauncher" do
   homepage "https://www.atlauncher.com/"
 
   livecheck do
-    skip "unversioned URL"
+    url "https://atlauncher.com/downloads"
+    strategy :page_match
+    regex(/{\s*active:\s*['"](\d+(?:\.\d+)*)['"]\s*}/i)
   end
 
   app "ATLauncher.app"
