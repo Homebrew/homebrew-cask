@@ -7,6 +7,10 @@ cask "tidal" do
   desc "Music streaming service with high fidelity sound and hi-def video quality"
   homepage "https://tidal.com/"
 
+  livecheck do
+    skip "unversioned URL"
+  end
+
   app "TIDAL.app"
 
   zap trash: [
