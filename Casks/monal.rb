@@ -7,6 +7,10 @@ cask "monal" do
   desc "Tool to securely connect to chat servers"
   homepage "https://monal.im/"
 
+  livecheck do
+    skip "unversioned URL"
+  end
+
   depends_on macos: ">= :catalina"
 
   app "Monal.app"
