@@ -7,5 +7,11 @@ cask "valentina-studio" do
   desc "Visual editors for data"
   homepage "https://valentina-db.com/en/valentina-studio-overview"
 
+  livecheck do
+    url "https://valentina-db.com/en/all-downloads/vstudio"
+    strategy :page_match
+    regex(%r{href="/en/all-downloads/vstudio/current">\n\t+(\d+(?:\.\d+)*)}i)
+  end
+
   app "Valentina Studio.app"
 end
