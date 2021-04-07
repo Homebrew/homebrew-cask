@@ -7,6 +7,10 @@ cask "zoom-outlook-plugin" do
   desc "Outlook Plugin for Zoom.us"
   homepage "https://www.zoom.us/"
 
+  livecheck do
+    skip "unversioned URL"
+  end
+
   depends_on macos: "<= :mojave"
 
   pkg "ZoomMacOutlookPlugin.pkg"
