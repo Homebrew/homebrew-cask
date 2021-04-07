@@ -1,5 +1,5 @@
 cask "fing" do
-  version "2.4.1"
+  version "2.5.1"
   sha256 :no_check
 
   url "https://get.fing.com/fing-desktop-releases/mac/Fing.dmg"
