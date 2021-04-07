@@ -4,6 +4,7 @@ cask "rapidminer-studio" do
 
   url "https://releases.rapidminer.com/latest/rapidminer-studio/rapidminer-studio-osx.dmg"
   name "RapidMiner Studio"
+  desc "Data science platform"
   homepage "https://rapidminer.com/products/studio/"
 
   livecheck do
