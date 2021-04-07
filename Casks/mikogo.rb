@@ -7,6 +7,10 @@ cask "mikogo" do
   name "Mikogo"
   homepage "https://www.mikogo.com/"
 
+  livecheck do
+    skip "unversioned URL"
+  end
+
   pkg "Mikogo-installer.signed.pkg"
 
   uninstall pkgutil: [
