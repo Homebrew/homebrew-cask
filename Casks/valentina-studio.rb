@@ -10,7 +10,7 @@ cask "valentina-studio" do
   livecheck do
     url "https://valentina-db.com/en/all-downloads/vstudio"
     strategy :page_match
-    regex(%r{href="/en/all-downloads/vstudio/current">\n\t+(\d+(?:\.\d+)*)}i)
+    regex(%r{href=['"]?/en/all-downloads/vstudio/current['"]?>\s*(\d+(?:\.\d+)*)}i)
   end
 
   app "Valentina Studio.app"
