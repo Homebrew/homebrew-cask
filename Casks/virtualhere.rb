@@ -7,5 +7,11 @@ cask "virtualhere" do
   desc "Use USB devices remotely over a network"
   homepage "https://www.virtualhere.com/usb_client_software"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(/Version\s*(\d+(?:\.\d+)*)/i)
+  end
+
   app "VirtualHere.app"
 end
