@@ -6,7 +6,7 @@ cask "ipe" do
       verified: "github.com/otfried/ipe/"
   name "Ipe"
   desc "Drawing editor for creating figures in PDF format"
-  homepage "http://ipe.otfried.org/"
+  homepage "https://ipe.otfried.org/"
 
   depends_on macos: ">= :yosemite"
 
