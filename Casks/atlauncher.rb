@@ -6,5 +6,9 @@ cask "atlauncher" do
   name "ATLauncher"
   homepage "https://www.atlauncher.com/"
 
+  livecheck do
+    skip "unversioned URL"
+  end
+
   app "ATLauncher.app"
 end
