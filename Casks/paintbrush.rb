@@ -11,7 +11,7 @@ cask "paintbrush" do
   livecheck do
     url "https://paintbrush.sourceforge.io/updates#{version.major}x.xml"
     strategy :sparkle do |item|
-      "#{item.short_version}.0,#{item.version}"
+      "#{item.short_version},#{item.version}"
     end
   end
 
