@@ -1,6 +1,6 @@
 cask "nomachine" do
-  version "7.1.3_6"
-  sha256 "c36b693c64e39da20ebfb0b58a0fb09c304412414b2f4d54a24b55afff473d5c"
+  version "7.4.1_1"
+  sha256 "b70bf1152830ea551df69d5053eeb5ca58bb07fb6e4aea4d52c9d14135857606"
 
   url "https://download.nomachine.com/download/#{version.major_minor}/MacOSX/nomachine_#{version}.dmg"
   appcast "https://www.nomachine.com/download/download&id=7"
