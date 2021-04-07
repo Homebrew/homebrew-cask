@@ -1,5 +1,5 @@
 cask "zoho-docs" do
-  version "1.10.0"
+  version "1.10.2"
   sha256 :no_check
 
   url "https://files-accl.zohopublic.com/public/docsbin/download/393b1306f04a3078b525b2c637d0a727",
