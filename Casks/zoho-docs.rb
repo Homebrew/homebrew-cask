@@ -7,5 +7,9 @@ cask "zoho-docs" do
   name "Zoho Docs"
   homepage "https://www.zoho.com/docs/desktop-sync.html"
 
+  livecheck do
+    skip "unversioned URL"
+  end
+
   app "Zoho Docs.app"
 end
