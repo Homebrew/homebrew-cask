@@ -12,7 +12,7 @@ cask "finisher-fluxx" do
     strategy :header_match
   end
 
-  pkg "FIN-FLUXX_osx_#{version.after_comma}.pkg"
+  pkg "FIN-FLUXX_osx_#{version}.pkg"
 
   uninstall pkgutil: "com.ujam.finfluxx.*"
 
