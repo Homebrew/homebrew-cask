@@ -6,6 +6,10 @@ cask "zenbeats" do
   name "Zenbeats"
   homepage "https://www.roland.com/us/products/zenbeats/"
 
+  livecheck do
+    skip "unversioned URL"
+  end
+
   pkg "Zenbeats_Installer.pkg"
 
   uninstall pkgutil: "jp.co.roland.zenbeats",
