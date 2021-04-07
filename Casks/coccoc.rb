@@ -6,6 +6,10 @@ cask "coccoc" do
   name "Cốc Cốc"
   homepage "https://coccoc.com/"
 
+  livecheck do
+    skip "unversioned URL"
+  end
+
   app "CocCoc.app"
 
   uninstall launchctl: "com.coccoc.CocCoc"
