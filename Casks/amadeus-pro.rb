@@ -2,8 +2,8 @@ cask "amadeus-pro" do
   version "2.8.5,2555"
   sha256 :no_check
 
-  url "https://s3.amazonaws.com/AmadeusPro2/AmadeusPro.zip",
-      verified: "s3.amazonaws.com/AmadeusPro2/"
+  url "https://s3.amazonaws.com/AmadeusPro#{version.major}/AmadeusPro.zip",
+      verified: "s3.amazonaws.com/AmadeusPro#{version.major}/"
   name "Amadeus Pro"
   desc "Multi-purpose audio recorder, editor and converter"
   homepage "https://www.hairersoft.com/pro.html"
