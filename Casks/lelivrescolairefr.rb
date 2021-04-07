@@ -7,5 +7,9 @@ cask "lelivrescolairefr" do
   name "Lelivrescolaire.fr"
   homepage "https://www.lelivrescolaire.fr/"
 
+  livecheck do
+    skip "unversioned URL"
+  end
+
   app "Lelivrescolaire.fr.app"
 end
