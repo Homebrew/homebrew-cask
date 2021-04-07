@@ -7,6 +7,10 @@ cask "unclack" do
   desc "Mutes your keyboard while you type"
   homepage "https://unclack.app/"
 
+  livecheck do
+    skip "unversioned URL"
+  end
+
   app "Unclack.app"
 
   zap trash: [
