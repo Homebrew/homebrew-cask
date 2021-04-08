@@ -4,10 +4,19 @@ cask "lark" do
 
   url "https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/#{version.after_comma}/lark-mac-#{version.before_comma}.dmg",
       verified: "sf16-va.larksuitecdn.com/obj/lark-artifact-storage/"
-  appcast "https://www.larksuite.com/api/downloads"
   name "Lark"
   desc "Project management software"
   homepage "https://www.larksuite.com/"
+
+  livecheck do
+    url "https://www.larksuite.com/api/downloads"
+    strategy :page_match do |page|
+      match = page.match(%r{lark-artifact-storage/(\w+)/lark-mac-(\d+(?:\.\d+)*)\.dmg}i)
+      "#{match[2]},#{match[1]}"
+    end
+  end
+
+  auto_updates true
 
   app "Lark.app"
 end
