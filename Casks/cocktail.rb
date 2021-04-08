@@ -50,7 +50,7 @@ cask "cocktail" do
       strategy :sparkle
     end
   elsif MacOS.version <= :catalina
-    version "13.2.6"
+    version "13.3"
     sha256 "9b59655ef2511218e16736679b0eadde43f9b1a90e7162ffef2e284ca71d149b"
 
     url "https://www.maintain.se/downloads/sparkle/catalina/Cocktail_#{version}.zip"
