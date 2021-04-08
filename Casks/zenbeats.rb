@@ -13,8 +13,7 @@ cask "zenbeats" do
 
   pkg "Zenbeats_Installer.pkg"
 
-  uninstall signal:  ["KILL", "jp.co.roland.zenbeats"],
-            pkgutil: "jp.co.roland.zenbeats"
+  uninstall pkgutil: "“jp.co.roland.zenbeats”"
 
   zap trash: [
     "~/Library/Caches/com.juce.locks/juceAppLock_Roland Zenbeats",
