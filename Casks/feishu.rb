@@ -25,11 +25,9 @@ cask "feishu" do
     # feishu
     "~/Library/Caches/com.bytedance.lark.helper",
     "~/Library/Preferences/com.bytedance.lark.helper.plist",
-
     # lark
     "~/Library/Caches/com.electron.lark.helper",
     "~/Library/Preferences/com.electron.lark.helper.plist",
-
     # both
     "~/Library/Caches/com.electron.lark",
     "~/Library/Saved Application State/com.electron.lark.savedState",
