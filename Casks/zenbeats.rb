@@ -13,7 +13,7 @@ cask "zenbeats" do
 
   pkg "Zenbeats_Installer.pkg"
 
-  uninstall quit:    "jp.co.roland.zenbeats",
+  uninstall signal:  ["KILL", "jp.co.roland.zenbeats"],
             pkgutil: "jp.co.roland.zenbeats"
 
   zap trash: [
