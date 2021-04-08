@@ -1,12 +1,18 @@
 cask "ray" do
-  version "1.12.0"
-  sha256 "6f7c43c34ca9d0a20796f80c7930042900b44ae1d29bfc65585896bd7f37dc5d"
+  version "1.14.7"
+  sha256 "e35fe2e4c7c016822427eb407732b3cdd5c8cb81b9591b42dbc5ba316eafc764"
 
   url "https://ray-app.s3.eu-west-1.amazonaws.com/Ray-#{version}.dmg",
       verified: "ray-app.s3.eu-west-1.amazonaws.com/"
   name "Ray"
   desc "Debug with Ray to fix problems faster"
   homepage "https://myray.app/"
+
+  livecheck do
+    url "https://ray-app.s3.amazonaws.com/latest-mac.yml"
+    strategy :page_match
+    regex(/Ray-(\d+(?:\.\d+)*)-mac\.zip/i)
+  end
 
   auto_updates true
 
