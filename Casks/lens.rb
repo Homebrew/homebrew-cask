@@ -8,6 +8,8 @@ cask "lens" do
   desc "Kubernetes IDE"
   homepage "https://k8slens.dev/"
 
+  auto_updates true
+
   app "Lens.app"
 
   zap trash: [
