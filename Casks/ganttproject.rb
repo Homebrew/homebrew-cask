@@ -1,10 +1,11 @@
 cask "ganttproject" do
-  version "2.8.11,2396"
-  sha256 "b8f64286ca9c04f606336994785c5ed3995c1842f8b1d82199f7ad0bb01d2851"
+  version "3.0.3000"
+  sha256 "be30dc8ded552109f16c4f4388a440f7a09aa3151632832cb30c62efb5d875de"
 
-  url "https://github.com/bardsoftware/ganttproject/releases/download/ganttproject-#{version.before_comma}/ganttproject-#{version.before_comma}-r#{version.after_comma}.dmg",
+  url "https://github.com/bardsoftware/ganttproject/releases/download/ganttproject-#{version.before_comma}/ganttproject-#{version.before_comma}-#{version.after_comma}.dmg",
       verified: "github.com/bardsoftware/ganttproject/"
   name "GanttProject"
+  desc "Gantt chart and project management tool."
   homepage "https://www.ganttproject.biz/"
 
   livecheck do
