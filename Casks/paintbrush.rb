@@ -1,6 +1,6 @@
 cask "paintbrush" do
-  version "2.5.2,20210331"
-  sha256 "0fdfb727ba8fdcd50fa3ed8e768b8b781aadb918630488c723278eb0bab2a164"
+  version "2.6.0,20210402"
+  sha256 "9d12b754ec65edc77fa51d3a3c8a0b08ac863e10fd530bff219f9f22bb9dba3a"
 
   url "https://downloads.sourceforge.net/paintbrush/Paintbrush%202.x/Paintbrush%20#{version.before_comma}/Paintbrush-#{version.before_comma}.zip",
       verified: "downloads.sourceforge.net/paintbrush/"
@@ -11,7 +11,7 @@ cask "paintbrush" do
   livecheck do
     url "https://paintbrush.sourceforge.io/updates/paintbrush-release.xml"
     strategy :sparkle do |item|
-      "#{item.short_version},#{item.version}"
+      "#{item.short_version}.0,#{item.version}"
     end
   end
 
