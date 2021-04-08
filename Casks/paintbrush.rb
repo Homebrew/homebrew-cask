@@ -9,7 +9,7 @@ cask "paintbrush" do
   homepage "https://paintbrush.sourceforge.io/"
 
   livecheck do
-    url "https://paintbrush.sourceforge.io/updates#{version.major}x.xml"
+    url "https://paintbrush.sourceforge.io/updates/paintbrush-release.xml"
     strategy :sparkle do |item|
       "#{item.short_version},#{item.version}"
     end
