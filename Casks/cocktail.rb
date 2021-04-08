@@ -51,7 +51,7 @@ cask "cocktail" do
     end
   elsif MacOS.version <= :catalina
     version "13.3"
-    sha256 "9b59655ef2511218e16736679b0eadde43f9b1a90e7162ffef2e284ca71d149b"
+    sha256 "8fa2285b84360e9fea73024b9477dbc7ce1bf073fae36a86553c8c95c5fcfcc2"
 
     url "https://www.maintain.se/downloads/sparkle/catalina/Cocktail_#{version}.zip"
 
