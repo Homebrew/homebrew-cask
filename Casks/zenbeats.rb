@@ -4,6 +4,7 @@ cask "zenbeats" do
 
   url "https://static.roland.com/assets/media/pkg/Zenbeats_Installer.pkg"
   name "Zenbeats"
+  desc "Music creation app"
   homepage "https://www.roland.com/us/products/zenbeats/"
 
   livecheck do
@@ -12,12 +13,7 @@ cask "zenbeats" do
 
   pkg "Zenbeats_Installer.pkg"
 
-  uninstall pkgutil: [
-    "jp.co.roland.zenbeats.Zenbeats.pkg",
-    "jp.co.roland.zenbeats",
-  ],
-            quit:    "jp.co.roland.zenbeats",
-            signal:  ["KILL", "jp.co.roland.zenbeats"]
+  uninstall pkgutil: "jp.co.roland.zenbeats"
 
   zap trash: [
     "~/Library/Caches/com.juce.locks/juceAppLock_Roland Zenbeats",
