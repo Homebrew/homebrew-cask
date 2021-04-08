@@ -8,13 +8,24 @@ cask "osxfuse" do
   desc "File system integration"
   homepage "https://osxfuse.github.io/"
 
+  livecheck do
+    url "https://github.com/osxfuse/osxfuse/releases"
+    strategy :page_match
+    regex(/osxfuse-(\d+(?:\.\d+)*)\.dmg/i)
+  end
+
   pkg "Extras/FUSE for macOS #{version}.pkg"
 
   postflight do
-    set_ownership ["/usr/local/lib/libosxfuse.2.dylib", "/usr/local/lib/libosxfuse.dylib",
-                   "/usr/local/lib/libosxfuse.la", "/usr/local/lib/libosxfuse_i64.2.dylib",
-                   "/usr/local/lib/libosxfuse_i64.dylib", "/usr/local/lib/libosxfuse_i64.la",
-                   "/usr/local/include/osxfuse"]
+    set_ownership [
+      "/usr/local/include/osxfuse",
+      "/usr/local/lib/libosxfuse.2.dylib",
+      "/usr/local/lib/libosxfuse.dylib",
+      "/usr/local/lib/libosxfuse_i64.2.dylib",
+      "/usr/local/lib/libosxfuse_i64.dylib",
+      "/usr/local/lib/libosxfuse_i64.la",
+      "/usr/local/lib/libosxfuse.la",
+    ]
   end
 
   uninstall pkgutil: [
