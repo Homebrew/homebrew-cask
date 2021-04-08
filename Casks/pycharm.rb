@@ -1,5 +1,5 @@
 cask "pycharm" do
-  version "2021.1,211.6693.115"
+  version "2021.1"
 
   if Hardware::CPU.intel?
     sha256 "15f65709c3e35cdd22689861df333664093d405c8c86d26d5dd459f05672dc4d"
