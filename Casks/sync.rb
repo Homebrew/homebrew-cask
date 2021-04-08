@@ -10,7 +10,7 @@ cask "sync" do
   livecheck do
     url "https://www.sync.com/install/"
     strategy :page_match
-    regex(/(\d+(?:\.\d+)*).*?release\s*notes/mi)
+    regex(/(\d+(?:\.\d+)*)\n.*release\s*notes/i)
   end
 
   app "Sync.app"
