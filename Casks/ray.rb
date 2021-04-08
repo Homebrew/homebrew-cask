@@ -8,6 +8,12 @@ cask "ray" do
   desc "Debug with Ray to fix problems faster"
   homepage "https://myray.app/"
 
+  livecheck do
+    url "https://ray-app.s3.amazonaws.com/latest-mac.yml"
+    strategy :page_match
+    regex(/Ray-(\d+(?:\.\d+)*)-mac\.zip/i)
+  end
+
   auto_updates true
 
   app "Ray.app"
