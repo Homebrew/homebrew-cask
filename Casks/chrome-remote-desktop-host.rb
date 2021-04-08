@@ -13,15 +13,12 @@ cask "chrome-remote-desktop-host" do
 
   pkg "Chrome Remote Desktop Host.pkg"
 
-  uninstall script:    {
+  uninstall script:  {
     executable: "/Applications/Chrome Remote Desktop Host Uninstaller.app/Contents/MacOS/remoting_host_uninstaller",
     args:       ["--no-ui"],
     sudo:       true,
   },
-            launchctl: [
-              "com.google.keystone.agent",
-            ],
-            pkgutil:   [
+            pkgutil: [
               "com.google.pkg.ChromeRemoteDesktopHost",
               "com.google.pkg.ChromeRemoteDesktopHostService",
               "com.google.pkg.ChromeRemoteDesktopHostUninstaller",
