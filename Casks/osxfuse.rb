@@ -11,7 +11,10 @@ cask "osxfuse" do
   pkg "Extras/FUSE for macOS #{version}.pkg"
 
   postflight do
-    set_ownership ["/usr/local/include", "/usr/local/lib"]
+    set_ownership ["/usr/local/lib/libosxfuse.2.dylib", "/usr/local/lib/libosxfuse.dylib",
+                   "/usr/local/lib/libosxfuse.la", "/usr/local/lib/libosxfuse_i64.2.dylib",
+                   "/usr/local/lib/libosxfuse_i64.dylib", "/usr/local/lib/libosxfuse_i64.la",
+                   "/usr/local/include/osxfuse"]
   end
 
   uninstall pkgutil: [
