@@ -1,6 +1,6 @@
 cask "intel-haxm" do
-  version "7.6.5"
-  sha256 "e05d1626d8fe40004bed7a3b09f0e977cb2b53ed713bebc17e1194b1c2dd0864"
+  version "7.6.6"
+  sha256 "ba2ecae32acc4d635bf2b8edc2dffc0679076e0a74a707597b53291aa0fa4263"
 
   url "https://github.com/intel/haxm/releases/download/v#{version}/haxm-macosx_v#{version.dots_to_underscores}.zip",
       verified: "github.com/intel/haxm/"
