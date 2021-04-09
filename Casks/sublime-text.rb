@@ -1,8 +1,8 @@
 cask "sublime-text" do
-  version "3211"
+  version "3.211"
   sha256 "531c84e24983927c59dc0c5611f605776f917d1c516af80c69c09ea232d24e01"
 
-  url "https://download.sublimetext.com/Sublime%20Text%20Build%20#{version}.dmg"
+  url "https://download.sublimetext.com/Sublime%20Text%20Build%20#{version.no_dots}.dmg"
   name "Sublime Text"
   desc "Text editor for code, markup and prose"
   homepage "https://www.sublimetext.com/#{version.major}"
@@ -10,7 +10,8 @@ cask "sublime-text" do
   livecheck do
     url "https://www.sublimetext.com/updates/#{version.major}/stable/appcast_osx.xml"
     strategy :sparkle do |item|
-      item.version
+      match = item.version.match(/(\d)(\d+)/)
+      "#{match[1]}.#{match[2]}"
     end
   end
 
