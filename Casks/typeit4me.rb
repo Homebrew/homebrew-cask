@@ -13,5 +13,5 @@ cask "typeit4me" do
 
   auto_updates true
 
-  app "TypeIt4Me.app"
+  app "TypeIt4Meb#{version.after_comma}notarised.app", target: "TypeIt4Me.app"
 end
