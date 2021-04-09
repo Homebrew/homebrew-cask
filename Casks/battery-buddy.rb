@@ -1,0 +1,14 @@
+cask "battery-buddy" do
+  version "1.0.3"
+  sha256 :no_check
+
+  url "https://batterybuddy.app/releases/Battery%20Buddy.zip"
+  name "Battery Buddy"
+  desc "Cute replacement of the default battery indicator in the menu bar"
+  homepage "https://batterybuddy.app/"
+
+  auto_updates true
+  depends_on macos: ">= :big_sur"
+
+  app "Battery Buddy.app"
+end
