@@ -36,10 +36,10 @@ cask "goland" do
   end
 
   zap trash: [
-    "~/Library/Application Support/GoLand",
-    "~/Library/Application Support/GoLand#{version.major_minor}",
-    "~/Library/Caches/GoLand#{version.major_minor}",
-    "~/Library/Logs/GoLand#{version.major_minor}",
+    "~/Library/Application Support/JetBrains/GoLand",
+    "~/Library/Application Support/JetBrains/GoLand#{version.major_minor}",
+    "~/Library/Caches/JetBrains/GoLand#{version.major_minor}",
+    "~/Library/Logs/JetBrains/GoLand#{version.major_minor}",
     "~/Library/Preferences/GoLand#{version.major_minor}",
     "~/Library/Preferences/com.jetbrains.goland.plist",
     "~/Library/Saved Application State/com.jetbrains.goland.SavedState",
