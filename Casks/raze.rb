@@ -1,8 +1,8 @@
 cask "raze" do
-  version "0.9.1"
-  sha256 "490a56e60116a9093e2711580864afd71de0ff05974beb01358400a0e701ef36"
+  version "1.0.0"
+  sha256 "3347fe53189b4aa70bec0070459608035bb30e468cf32d88ff523ba8363dadeb"
 
-  url "https://github.com/coelckers/Raze/releases/download/#{version}_beta/raze-macos-#{version}.zip"
+  url "https://github.com/coelckers/Raze/releases/download/#{version}/raze-macos-#{version}.zip"
   name "Raze"
   desc "Build engine port backed by GZDoom tech"
   homepage "https://github.com/coelckers/Raze"
