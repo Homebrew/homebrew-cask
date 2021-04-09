@@ -10,9 +10,7 @@ cask "tuple" do
 
   livecheck do
     url "https://s3.us-east-2.amazonaws.com/tuple-releases/production/sparkle/appcast.xml"
-    strategy :sparkle do |item|
-      item.version
-    end
+    strategy :sparkle, &:version
   end
 
   auto_updates true
