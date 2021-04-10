@@ -4,6 +4,7 @@ cask "ampps" do
 
   url "https://files.ampps.com/AMPPS-#{version}.dmg"
   name "AMPPS"
+  desc "Software stack for website development"
   homepage "https://www.ampps.com/"
 
   livecheck do
