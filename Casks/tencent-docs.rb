@@ -5,7 +5,7 @@ cask "tencent-docs" do
   url "https://down.qq.com/qqweb/mac_docs/MacTencentDocs.dmg"
   name "Tencent Docs"
   name "腾讯文档"
-  desc "Online editior for Word, Excel and PPT documents"
+  desc "Online editor for Word, Excel and PPT documents"
   homepage "https://docs.qq.com/"
 
   livecheck do
