@@ -8,6 +8,11 @@ cask "send-to-kindle" do
   desc "Tool for sending personal documents to Kindles from Macs"
   homepage "https://www.amazon.com/gp/sendtokindle/mac"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   pkg "SendToKindleForMac-installer.pkg"
 
   uninstall launchctl: "com.amazon.sendtokindle.launcher",
