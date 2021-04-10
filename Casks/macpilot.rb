@@ -11,7 +11,7 @@ cask "macpilot" do
     url "https://www.koingosw.com/products/macpilot/download/old/macpilot_#{version.no_dots}_intel_for_1015.dmg"
 
     livecheck do
-      skip "last version for Catalina"
+      skip "newer versions only available for Big Sur or higher"
     end
   else
     version "12.0.8"
