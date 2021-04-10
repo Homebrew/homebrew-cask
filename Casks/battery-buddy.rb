@@ -4,8 +4,13 @@ cask "battery-buddy" do
 
   url "https://batterybuddy.app/releases/Battery%20Buddy.zip"
   name "Battery Buddy"
-  desc "Cute replacement of the default battery indicator in the menu bar"
+  desc "Replacement of the default battery indicator in the menu bar"
   homepage "https://batterybuddy.app/"
+
+  livecheck do
+    url "https://batterybuddy.app/releases/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :big_sur"
