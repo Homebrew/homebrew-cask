@@ -4,6 +4,7 @@ cask "atlantis" do
 
   url "https://www.riverdark.net/atlantis/downloads/Atlantis-#{version}.zip"
   name "Atlantis"
+  desc "MUD (Multi User Dungeon) client"
   homepage "https://www.riverdark.net/atlantis/"
 
   livecheck do
