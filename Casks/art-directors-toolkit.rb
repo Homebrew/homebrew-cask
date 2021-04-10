@@ -4,6 +4,7 @@ cask "art-directors-toolkit" do
 
   url "https://www.code-line.com/download/ArtDirectorsToolkit#{version.major}i.zip"
   name "Art Directors Toolkit"
+  desc "Toolset for digital media"
   homepage "https://www.code-line.com/artdirectorstoolkit/"
 
   livecheck do
