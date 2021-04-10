@@ -4,6 +4,7 @@ cask "babeledit" do
 
   url "https://www.codeandweb.com/download/babeledit/#{version}/BabelEdit-#{version}.dmg"
   name "BabelEdit"
+  desc "Translation editor"
   homepage "https://www.codeandweb.com/babeledit"
 
   livecheck do
