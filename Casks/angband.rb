@@ -4,6 +4,7 @@ cask "angband" do
 
   url "https://rephial.org/downloads/#{version.major_minor}/Angband-#{version}-osx.dmg"
   name "Angband"
+  desc "Dungeon exploration game"
   homepage "https://rephial.org/"
 
   livecheck do
