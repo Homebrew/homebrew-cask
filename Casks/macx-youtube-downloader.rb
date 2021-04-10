@@ -8,7 +8,9 @@ cask "macx-youtube-downloader" do
   homepage "https://www.macxdvd.com/free-youtube-video-downloader-mac/"
 
   livecheck do
-    skip "unversioned URL"
+    url "https://download.cnet.com/MacX-YouTube-Downloader/3000-2071_4-76641301.html"
+    strategy :page_match
+    regex(/Version.*?(\d+(?:\.\d+)*)/i)
   end
 
   app "MacX YouTube Downloader.app"
