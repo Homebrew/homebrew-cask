@@ -4,6 +4,7 @@ cask "alt-c" do
 
   url "https://altcopy.net/Alt-C_Setup_#{version}.pkg"
   name "Alt-C"
+  desc "Two-way text copying"
   homepage "https://altcopy.net/"
 
   livecheck do
