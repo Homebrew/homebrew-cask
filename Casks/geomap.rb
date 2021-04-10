@@ -6,6 +6,12 @@ cask "geomap" do
   name "GeoMapApp"
   homepage "http://www.geomapapp.org/"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(/GeoMapApp\s*is.*?(\d+(?:\.\d+)*)/mi)
+  end
+
   app "GeoMapApp.app"
 
   zap trash: "~/.GMA"
