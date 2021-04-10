@@ -18,8 +18,8 @@ cask "battery-buddy" do
   app "Battery Buddy.app"
 
   zap trash: [
-  "~/Library/Application Scripts/com.NeilSardesai.Battery-Buddy-Helper",
-  "~/Library/Containers/com.NeilSardesai.Battery-Buddy-Helper",
-  "~/Library/Preferences/com.NeilSardesai.Battery-Buddy.plist",
+    "~/Library/Application Scripts/com.NeilSardesai.Battery-Buddy-Helper",
+    "~/Library/Containers/com.NeilSardesai.Battery-Buddy-Helper",
+    "~/Library/Preferences/com.NeilSardesai.Battery-Buddy.plist",
   ]
 end
