@@ -12,7 +12,7 @@ cask "aurora-hdr" do
     strategy :sparkle
   end
 
-  app "Aurora HDR 2019.app"
+  app "Aurora HDR.app"
 
   uninstall delete: [
     "~/Library/Preferences/com.macphun.auroraHDR2019.plist",
