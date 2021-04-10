@@ -10,7 +10,7 @@ cask "macx-youtube-downloader" do
   livecheck do
     url "https://download.cnet.com/MacX-YouTube-Downloader/3000-2071_4-76641301.html"
     strategy :page_match
-    regex(/softwareVersion:\s*"(\d+(?:\.\d+)*)"/i)
+    regex(/"softwareVersion"\s*:\s*"(\d+(?:\.\d+)*)"\s*,/i)
   end
 
   app "MacX YouTube Downloader.app"
