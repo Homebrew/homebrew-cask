@@ -1,8 +1,8 @@
 cask "adobe-digital-editions" do
-  version "4.5"
+  version "4.5.11"
   sha256 "4bfdb9fdefb7a65bc5227518531ffba2cd2d547a1293265709a526a153800e7e"
 
-  url "https://adedownload.adobe.com/pub/adobe/digitaleditions/ADE_#{version}_Installer.dmg"
+  url "https://adedownload.adobe.com/pub/adobe/digitaleditions/ADE_#{version.major_minor}_Installer.dmg"
   name "Adobe Digital Editions"
   desc "E-book reader"
   homepage "https://www.adobe.com/solutions/ebook/digital-editions.html"
@@ -10,10 +10,10 @@ cask "adobe-digital-editions" do
   livecheck do
     url "https://www.adobe.com/solutions/ebook/digital-editions/download.html"
     strategy :page_match
-    regex(%r{href=.*?/ADE_(\d+(?:\.\d+)*)_Installer\.dmg}i)
+    regex(%r{Adobe\s*Digital\s*Editions\s*(\d+(?:\.\d+)*)}i)
   end
 
-  pkg "Digital Editions #{version} Installer.pkg"
+  pkg "Digital Editions #{version.major_minor} Installer.pkg"
 
   uninstall quit:    "com.adobe.adobedigitaleditions.app",
             pkgutil: "com.adobe.adobedigitaleditions.app",
