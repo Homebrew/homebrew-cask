@@ -9,7 +9,7 @@ cask "topcat" do
   livecheck do
     url :homepage
     strategy :page_match
-    regex(/Version\s*(\d+(?:\.\d+)*)/i)
+    regex(/Version\s*(\d+(?:\.\d+)*)\s*released/i)
   end
 
   app "TOPCAT.app"
