@@ -8,6 +8,11 @@ cask "tencent-docs" do
   desc "Online editior for Word, Excel and PPT documents"
   homepage "https://docs.qq.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   auto_updates true
 
   app "腾讯文档.app"
