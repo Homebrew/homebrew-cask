@@ -9,7 +9,7 @@ cask "algodoo" do
   livecheck do
     url "http://www.algodoo.com/download/"
     strategy :page_match do |page|
-      v = page[%r{href=.*?/Algodoo_(\d+(?:\_\d+)*)-MacOS\.dmg}i, 1]
+      v = page[%r{href=.*?/Algodoo_(\d+(?:_\d+)*)-MacOS\.dmg}i, 1]
       v.tr("_", ".")
     end
   end
