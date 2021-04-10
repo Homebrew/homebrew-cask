@@ -7,5 +7,11 @@ cask "mediahuman-audio-converter" do
   desc "Audio converter"
   homepage "https://www.mediahuman.com/audio-converter/"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(/Version:\s*(\d+(?:\.\d+)*)/i)
+  end
+
   app "MediaHuman Audio Converter.app"
 end
