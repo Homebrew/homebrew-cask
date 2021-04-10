@@ -6,6 +6,11 @@ cask "speedify" do
   name "Speedify"
   homepage "https://speedify.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Speedify.app"
 
   uninstall launchctl: [
