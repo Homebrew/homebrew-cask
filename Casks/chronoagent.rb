@@ -9,7 +9,7 @@ cask "chronoagent" do
   livecheck do
     url "https://www.econtechnologies.com/downloads/downloads.html"
     strategy :page_match
-    regex(/ChronoAgent.*?Version\s*(\d+(?:\.\d+)*)/i)
+    regex(/ChronoAgent.*?Version\s*(\d+(?:\.\d+)*)/mi)
   end
 
   pkg "Install.pkg"
