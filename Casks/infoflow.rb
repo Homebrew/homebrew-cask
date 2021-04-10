@@ -11,7 +11,8 @@ cask "infoflow" do
   homepage "https://infoflow.baidu.com/"
 
   livecheck do
-    skip "unversioned URL"
+    url :url
+    strategy :extract_plist
   end
 
   app "如流.app"
