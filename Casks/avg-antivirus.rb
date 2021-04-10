@@ -1,5 +1,5 @@
 cask "avg-antivirus" do
-  version :latest
+  version "4.0,2.0"
   sha256 :no_check
 
   url "https://s-install.avcdn.net/mac-av/10_10/AAVG/avg_mac_security_online.dmg",
