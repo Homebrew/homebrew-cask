@@ -9,8 +9,7 @@ cask "accessmenubarapps" do
 
   livecheck do
     url "https://www.ortisoft.de/accessmenubarapps/profileInfo.php"
-    strategy :page_match
-    regex(%r{/AccessMenuBarApps(\d+(?:\.\d+)*)\.zip}i)
+    strategy :sparkle
   end
 
   app "AccessMenuBarApps#{version}/AccessMenuBarApps.app"
