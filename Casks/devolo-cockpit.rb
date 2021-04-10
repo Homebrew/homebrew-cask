@@ -10,7 +10,7 @@ cask "devolo-cockpit" do
   livecheck do
     url "https://www.devolo.global/support/downloads/download/devolo-cockpit"
     strategy :page_match do |page|
-      match = page[%r{href=.*?/devolo-cockpit-v?(\d+(?:\-\d+)*).dmg}i, 1]
+      match = page[%r{href=.*?/devolo-cockpit-v?(\d+(?:-\d+)*).dmg}i, 1]
       match.tr("-", ".")
     end
   end
