@@ -8,6 +8,10 @@ cask "avast-secure-browser" do
   desc "Web browser focusing on privacy"
   homepage "https://www.avast.com/secure-browser#mac"
 
+  livecheck do
+    skip "unversioned URL"
+  end
+
   pkg "AvastSecureBrowserSetup.pkg"
 
   uninstall quit:    "com.avast.browser",
