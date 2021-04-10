@@ -8,8 +8,9 @@ cask "liya" do
   homepage "https://cutedgesystems.com/software/liya/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url :homepage
+    strategy :page_match
+    regex(/latest\s*Liya\s*version\s*is\s*(\d+(?:\.\d+)*)/i)
   end
 
   depends_on macos: ">= :catalina"
