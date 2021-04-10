@@ -1,8 +1,8 @@
 cask "xlink-kai" do
-  version "7.4.39,539601671"
-  sha256 "b5b6d3fec363c1c522b07cbf009fa097aa2719689ebe90309a95b7a7ff3a6a3f"
+  version "7.4.40,539601682"
+  sha256 "e75c5f002ccc2071919f66836e0aa504cce1ab910d96ae587bc1e61da5c4ad0c"
 
-  url "https://github.com/Team-XLink/releases/releases/download/v#{version.before_comma}/XLinkKai-#{version.before_comma}-#{version.after_comma}-macOS.dmg",
+  url "https://github.com/Team-XLink/releases/releases/download/#{version.before_comma}/XLinkKai-#{version.before_comma}-#{version.after_comma}-macOS.dmg",
       verified: "github.com/Team-XLink/releases/"
   name "XLink Kai"
   homepage "https://www.teamxlink.co.uk/"
