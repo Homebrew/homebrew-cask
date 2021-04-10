@@ -6,6 +6,11 @@ cask "pokerstars" do
   name "PokerStars"
   homepage "https://www.pokerstars.net/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   container nested: "PokerStars.net/PokerStars.net.dmg"
 
   app "PokerStars.net.app"
