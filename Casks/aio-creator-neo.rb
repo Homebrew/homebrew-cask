@@ -9,7 +9,8 @@ cask "aio-creator-neo" do
   homepage "https://www.mediola.com/en/products"
 
   livecheck do
-    skip "unversioned URL"
+    url :url
+    strategy :extract_plist
   end
 
   pkg "AIO CREATOR NEO installieren.pkg"
