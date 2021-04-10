@@ -11,7 +11,7 @@ cask "yandex" do
   livecheck do
     url :homepage
     strategy :page_match
-    regex(/download__version.*?(\d+(?:\.\d+))/i)
+    regex(/download__version.*?(\d+(?:\.\d+))/mi)
   end
 
   app "Yandex.app"
