@@ -1,5 +1,5 @@
 cask "liya" do
-  version "5.0.4,8"
+  version "5.0.5,9"
   sha256 :no_check
 
   url "https://cutedgesystems.com/downloads/Liya.zip"
