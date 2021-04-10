@@ -7,6 +7,11 @@ cask "surfshark" do
   desc "VPN client for secure internet access and private browsing"
   homepage "https://surfshark.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Surfshark.app"
 
   zap trash: [
