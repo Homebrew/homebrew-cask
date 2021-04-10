@@ -9,6 +9,10 @@ cask "macpilot" do
     sha256 "75fc421d51ebd172ebdf149400fbcd010cf1224529e2e7d3fdf1915e62757f64"
 
     url "https://www.koingosw.com/products/macpilot/download/old/macpilot_#{version.no_dots}_intel_for_1015.dmg"
+
+    livecheck do
+      skip "last version for Catalina"
+    end
   else
     version "12.0.8"
     sha256 :no_check
