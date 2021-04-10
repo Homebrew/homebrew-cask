@@ -8,5 +8,10 @@ cask "yandex" do
   desc "Web browser"
   homepage "https://browser.yandex.ru/desktop/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Yandex.app"
 end
