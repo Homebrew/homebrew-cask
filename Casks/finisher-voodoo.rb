@@ -7,7 +7,12 @@ cask "finisher-voodoo" do
   desc "VST/AU/AAX guitar effect plug-in"
   homepage "https://www.ujam.com/finisher/voodoo/"
 
-  pkg "FIN-VOOD_osx_#{version.after_comma}.pkg"
+  livecheck do
+    url :url
+    strategy :header_match
+  end
+
+  pkg "FIN-VOOD_osx_#{version}.pkg"
 
   uninstall pkgutil: "com.ujam.finvood.*"
 
