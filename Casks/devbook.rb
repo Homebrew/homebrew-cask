@@ -8,9 +8,7 @@ cask "devbook" do
 
   livecheck do
     url "https://download.todesktop.com/2102273jsy18baz/latest-mac.yml"
-    strategy :page_match do |page|
-      YAML.safe_load(page)["version"]
-    end
+    strategy :electron_builder
   end
 
   if Hardware::CPU.intel?
