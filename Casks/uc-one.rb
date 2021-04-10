@@ -7,6 +7,11 @@ cask "uc-one" do
   name "Cisco UC-One"
   homepage "https://uc-one.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "UC-One.app"
 
   zap trash: "~/Library/Application Support/BroadSoft"
