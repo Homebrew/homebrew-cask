@@ -1,5 +1,5 @@
 cask "finisher-micro" do
-  version "1.0.1,128"
+  version "1.0.1"
   sha256 :no_check
 
   url "https://www.ujam.com/api/delivery/product?os=osx&sku=FIN-MICRO"
