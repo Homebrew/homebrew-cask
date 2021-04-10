@@ -7,6 +7,11 @@ cask "alinof-timer" do
   desc "Timer app"
   homepage "https://www.alinofsoftware.ch/apps/products-timer/index.html"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   pkg "AlinofTimer.pkg"
 
   uninstall pkgutil: "com.alinofsoftware.alinoftimer"
