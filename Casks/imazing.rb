@@ -13,7 +13,6 @@ cask "imazing" do
   end
 
   auto_updates true
-  conflicts_with cask: "imazing-mini"
 
   app "iMazing.app"
 
