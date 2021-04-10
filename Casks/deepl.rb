@@ -7,6 +7,11 @@ cask "deepl" do
   desc "Trains AIs to understand and translate texts"
   homepage "https://www.deepl.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
