@@ -1,5 +1,5 @@
 cask "finisher-voodoo" do
-  version "1.0.0,206"
+  version "1.0.0"
   sha256 :no_check
 
   url "https://www.ujam.com/api/delivery/product?os=osx&sku=FIN-VOOD"
