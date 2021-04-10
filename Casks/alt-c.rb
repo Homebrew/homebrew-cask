@@ -3,9 +3,15 @@ cask "alt-c" do
   sha256 "5672a42a6358ee5497c7e17d8618ca31745ff735e425496409267e6265cca3e9"
 
   url "https://altcopy.net/Alt-C_Setup_#{version}.pkg"
-  appcast "https://altcopy.net/"
   name "Alt-C"
+  desc "Two-way text copying"
   homepage "https://altcopy.net/"
+
+  livecheck do
+    url "https://altcopy.net/versionMac"
+    strategy :page_match
+    regex(/^(\d+(?:\.\d+)*)$/i)
+  end
 
   pkg "Alt-C_Setup_#{version}.pkg"
 
