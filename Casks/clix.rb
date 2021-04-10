@@ -1,5 +1,5 @@
 cask "clix" do
-  version "2.4.0.0"
+  version "Standalone,2.4.0.0"
   sha256 :no_check
 
   url "ftp://rixstep.com/CLIX.zip"
