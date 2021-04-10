@@ -9,9 +9,9 @@ cask "purei-play" do
   homepage "https://purei.org/"
 
   livecheck do
-    url "https://purei.org/downloads.php"
-    strategy :page_match
-    regex(%r{href=.*?/([0-9a-f]+)/Play\.dmg}i)
+    url "https://purei.org/download_latest.php?platform=macos"
+    strategy :header_match
+    regex(%r{([0-9a-f]+)/Play\.dmg}i)
   end
 
   app "Play.app"
