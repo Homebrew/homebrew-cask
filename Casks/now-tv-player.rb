@@ -6,5 +6,10 @@ cask "now-tv-player" do
   name "NOW TV Player"
   homepage "https://www.nowtv.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "NOW TV Player.app"
 end
