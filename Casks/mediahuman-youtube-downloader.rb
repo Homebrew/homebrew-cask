@@ -10,7 +10,7 @@ cask "mediahuman-youtube-downloader" do
   livecheck do
     url :homepage
     strategy :page_match
-    regex(/Version:\s*(\d+(?:\.\d+)*)/i)
+    regex(/Version:\s*(\d+(?:\.\d+)*)/mi)
   end
 
   app "MediaHuman YouTube Downloader.app"
