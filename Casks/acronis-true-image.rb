@@ -15,5 +15,6 @@ cask "acronis-true-image" do
 
   pkg "Install Acronis True Image.pkg"
 
-  uninstall pkgutil: "com.acronis.trueimageformac"
+  uninstall pkgutil: "com.acronis.trueimageformac",
+            delete:  "/Applications/Acronis True Image.app"
 end
