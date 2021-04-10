@@ -4,6 +4,7 @@ cask "badlion-client" do
 
   url "https://client-updates.badlion.net/Badlion%20Client-#{version}.dmg"
   name "Badlion Client"
+  desc "Minecraft launcher"
   homepage "https://www.badlion.net/"
 
   livecheck do
