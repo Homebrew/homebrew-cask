@@ -6,6 +6,11 @@ cask "globalmeet" do
   name "GlobalMeet"
   homepage "https://www.globalmeet.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "GlobalMeet.app"
 
   zap trash: [
