@@ -9,8 +9,9 @@ cask "yandex" do
   homepage "https://browser.yandex.ru/desktop/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url :homepage
+    strategy :page_match
+    regex(/download__version.*?(\d+(?:\.\d+))/i)
   end
 
   app "Yandex.app"
