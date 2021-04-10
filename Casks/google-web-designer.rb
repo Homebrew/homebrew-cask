@@ -6,5 +6,10 @@ cask "google-web-designer" do
   name "Google Web Designer"
   homepage "https://www.google.com/webdesigner/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Google Web Designer.app"
 end
