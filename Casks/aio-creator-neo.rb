@@ -8,6 +8,10 @@ cask "aio-creator-neo" do
   desc "Automation manager for smart home devices"
   homepage "https://www.mediola.com/en/products"
 
+  livecheck do
+    skip "unversioned URL"
+  end
+
   pkg "AIO CREATOR NEO installieren.pkg"
 
   uninstall quit:    "com.mediola.aiocreatorneo",
