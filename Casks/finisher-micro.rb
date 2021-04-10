@@ -12,7 +12,7 @@ cask "finisher-micro" do
     strategy :header_match
   end
 
-  pkg "FIN-MICRO_osx_#{version.after_comma}.pkg"
+  pkg "FIN-MICRO_osx_#{version}.pkg"
 
   uninstall pkgutil: "com.ujam.finmicro.*"
 
