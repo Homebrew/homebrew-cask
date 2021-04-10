@@ -7,5 +7,10 @@ cask "zoho-workdrive" do
   name "Zoho WorkDrive"
   homepage "https://www.zoho.com/workdrive/desktop-sync.html"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Zoho WorkDrive.app"
 end
