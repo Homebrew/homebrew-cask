@@ -9,9 +9,7 @@ cask "atomic-wallet" do
 
   livecheck do
     url "https://releases.atomicwallet.io/latest-mac.yml"
-    strategy :page_match do |page|
-      YAML.safe_load(page)["version"]
-    end
+    strategy :electron_builder
   end
 
   app "Atomic Wallet.app"
