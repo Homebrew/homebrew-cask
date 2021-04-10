@@ -7,6 +7,12 @@ cask "kindle-previewer" do
   name "Kindle Previewer"
   homepage "https://www.amazon.com/gp/feature.html?ie=UTF8&docId=1003018611"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(/Kindle\s*Previewer\s*(\d+(?:\.\d+)*)/i)
+  end
+
   pkg "KindlePreviewerInstaller.pkg"
 
   uninstall launchctl: "com.amazon.KindlePreviewerUpdater",
