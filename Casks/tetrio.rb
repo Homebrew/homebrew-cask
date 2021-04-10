@@ -7,6 +7,10 @@ cask "tetrio" do
   desc "Free-to-play Tetris clone"
   homepage "https://tetr.io/about"
 
+  livecheck do
+    skip "unversioned URL"
+  end
+  
   app "TETR.IO.app"
 
   zap trash: [
