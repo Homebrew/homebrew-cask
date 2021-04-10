@@ -6,6 +6,12 @@ cask "chronoagent" do
   name "ChronoAgent"
   homepage "https://www.econtechnologies.com/"
 
+  livecheck do
+    url "https://www.econtechnologies.com/downloads/downloads.html"
+    strategy :page_match
+    regex(/ChronoAgent.*?Version\s*(\d+(?:\.\d+)*)/i)
+  end
+
   pkg "Install.pkg"
 
   uninstall pkgutil:   "com.econtechnologies.pkg.ChronoAgent",
