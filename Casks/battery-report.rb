@@ -4,6 +4,7 @@ cask "battery-report" do
 
   url "https://www.dssw.co.uk/batteryreport/dsswbatteryreport-#{version.no_dots}.dmg"
   name "Battery Report"
+  desc "Creates technical summaries of power supplies"
   homepage "https://www.dssw.co.uk/batteryreport/"
 
   livecheck do
