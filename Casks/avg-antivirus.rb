@@ -7,6 +7,11 @@ cask "avg-antivirus" do
   name "AVG Antivirus for Mac"
   homepage "https://www.avg.com/us-en/avg-antivirus-for-mac"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   pkg "Install AVG AntiVirus.pkg"
 
   uninstall script:    {
