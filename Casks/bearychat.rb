@@ -8,9 +8,10 @@ cask "bearychat" do
   homepage "https://bearychat.com/"
 
   livecheck do
-    url "https://bearychat.com/downloads"
-    strategy :page_match
-    regex(/Mac\s*App.*?Version:?.*?(\d+(?:\.\d+)*)/mi)
+    url "https://bearychat.com/releases/client/changelog.json"
+    strategy :page_match do |page|
+      JSON.parse(page)["body"]["releases"].first["version"]
+    end
   end
 
   app "倍洽.app"
