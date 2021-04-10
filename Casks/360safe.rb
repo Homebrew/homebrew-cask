@@ -4,6 +4,7 @@ cask "360safe" do
 
   url "https://free.360totalsecurity.com/totalsecurity/mac/360ts_mac_#{version}.dmg"
   name "360 Total Security"
+  desc "Protection and antivirus security"
   homepage "https://www.360totalsecurity.com/features/360-total-security-mac/"
 
   livecheck do
