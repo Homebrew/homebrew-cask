@@ -11,11 +11,14 @@ cask "ltspice" do
     skip "No version information available"
   end
 
-  app "LTspice.app"
+  pkg "LTspice.pkg"
+
+  uninstall pkgutil: "com.analog.LTspice.App"
 
   zap trash: [
     "~/Documents/LTspice/examples",
     "~/Library/Application Support/LTspice",
+    "~/Library/Preferences/com.analog.LTspice.App.plist",
   ],
       rmdir: "~/Documents/LTspice"
 end
