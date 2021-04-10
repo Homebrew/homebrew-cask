@@ -10,5 +10,9 @@ cask "infoflow" do
   name "infoflow"
   homepage "https://infoflow.baidu.com/"
 
+  livecheck do
+    skip "unversioned URL"
+  end
+
   app "如流.app"
 end
