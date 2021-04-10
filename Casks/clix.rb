@@ -9,7 +9,7 @@ cask "clix" do
   livecheck do
     url :url
     strategy :extract_plist do |items|
-      p items
+      items["com.rixstep.CLIX"].version
     end
   end
 
