@@ -9,10 +9,8 @@ cask "aether" do
 
   livecheck do
     url "https://static.getaether.net/WebsiteReleaseLinks/Latest/LatestReleaseLinks.json"
-    strategy :page_match do |page|
-      match = page.match(%r{/Aether-(\d+(?:\.\d+)*-dev\.\d+)%2B(\d+\.[0-9a-f]+)\.dmg}i)
-      "#{match[1]},#{match[2]}"
-    end
+    strategy :page_match
+    regex(%r{href=.*?/Aether-#{version.before_comma}%2B(\d+(?:\.\d+)*)\.dmg}i)
   end
 
   app "Aether.app"

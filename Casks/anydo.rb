@@ -9,9 +9,7 @@ cask "anydo" do
 
   livecheck do
     url "https://electron-app.any.do/latest-mac.yml"
-    strategy :page_match do |page|
-      YAML.safe_load(page)["version"]
-    end
+    strategy :electron_builder
   end
 
   depends_on macos: ">= :catalina"

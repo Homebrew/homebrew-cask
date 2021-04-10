@@ -10,7 +10,7 @@ cask "arq" do
   livecheck do
     url "https://www.arqbackup.com/download/arqbackup/arq#{version.major}_release_notes.html"
     strategy :page_match
-    regex(/Version\s*(\d+(?:\.\d+)*)/i)
+    regex(%r{href=.*?/Arq(\d+(?:\.\d+)*)\.pkg}i)
   end
 
   auto_updates true

@@ -4,9 +4,13 @@ cask "sipgate-softphone" do
 
   url "https://sipgate-desktop-app-dev.s3.amazonaws.com/sipgate-softphone-#{version}.dmg",
       verified: "sipgate-desktop-app-dev.s3.amazonaws.com/"
-  appcast "https://sipgate-desktop-app-dev.s3.amazonaws.com/latest-mac.yml"
   name "sipgate softphone"
   homepage "https://www.sipgateteam.de/softphone"
+
+  livecheck do
+    url "https://sipgate-desktop-app-dev.s3.amazonaws.com/latest-mac.yml"
+    strategy :electron_builder
+  end
 
   app "sipgate softphone.app"
 

@@ -8,10 +8,15 @@ cask "sitesucker-pro" do
   end
 
   url "https://ricks-apps.com/osx/sitesucker/archive/#{version.major}.x/#{version.major_minor}.x/#{version}/SiteSucker_Pro_#{version}.dmg"
-  appcast "https://ricks-apps.com/osx/sitesucker/history.html"
   name "SiteSucker Pro"
   desc "Website downloader tool"
   homepage "https://ricks-apps.com/osx/sitesucker/index.html"
+
+  livecheck do
+    url "https://ricks-apps.com/osx/sitesucker/history.html"
+    strategy :page_match
+    regex(%r{href=.*?/SiteSucker_Pro_(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   auto_updates true
   depends_on macos: ">= :mojave"

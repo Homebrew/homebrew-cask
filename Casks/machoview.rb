@@ -7,6 +7,12 @@ cask "machoview" do
   desc "Visual Mach-O file browser"
   homepage "https://sourceforge.net/projects/machoview/"
 
+  livecheck do
+    url "https://sourceforge.net/projects/machoview/rss"
+    strategy :page_match
+    regex(%r{href=.*?/MachOView-(\d+(?:\.\d+)*)\.dmg}i)
+  end
+
   app "MachOView.app"
 
   zap trash: [

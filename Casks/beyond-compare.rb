@@ -8,9 +8,9 @@ cask "beyond-compare" do
   homepage "https://www.scootersoftware.com/"
 
   livecheck do
-    url "https://www.scootersoftware.com/download.php?zz=v4changelog"
+    url "https://www.scootersoftware.com/download.php"
     strategy :page_match
-    regex(/<h2[^>]*>(\d+(?:\.\d+)*)/i)
+    regex(%r{href=.*?/BCompareOSX-(\d+(?:\.\d+)*)\.zip}i)
   end
 
   auto_updates true

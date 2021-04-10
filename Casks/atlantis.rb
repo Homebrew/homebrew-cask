@@ -4,13 +4,12 @@ cask "atlantis" do
 
   url "https://www.riverdark.net/atlantis/downloads/Atlantis-#{version}.zip"
   name "Atlantis"
-  desc "MUD (Multi User Dungeon) client"
   homepage "https://www.riverdark.net/atlantis/"
 
   livecheck do
     url "https://www.riverdark.net/atlantis/downloads/"
     strategy :page_match
-    regex(/href=.*?Atlantis-(\d+(?:\.\d+)*)\.zip/i)
+    regex(%r{href=.*?/Atlantis-(\d+(?:\.\d+)*)\.zip}i)
   end
 
   app "Atlantis.app"

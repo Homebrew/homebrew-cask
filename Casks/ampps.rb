@@ -4,13 +4,12 @@ cask "ampps" do
 
   url "https://files.ampps.com/AMPPS-#{version}.dmg"
   name "AMPPS"
-  desc "Software stack for website development"
   homepage "https://www.ampps.com/"
 
   livecheck do
     url "https://www.ampps.com/downloads"
     strategy :page_match
-    regex(%r{href=.*?/AMPPS-(\d+(?:\.\d+)*)-x86_64\.dmg}i)
+    regex(%r{href=.*?/AMPPS-(\d+(?:\.\d+)*)\.dmg}i)
   end
 
   suite "AMPPS"

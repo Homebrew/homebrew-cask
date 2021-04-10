@@ -4,10 +4,14 @@ cask "stack-stack" do
 
   url "https://stack-v1.s3.amazonaws.com/builds/prod/Stack-#{version}.dmg",
       verified: "stack-v1.s3.amazonaws.com/"
-  appcast "https://stack-v1.s3.amazonaws.com/builds/prod/latest-mac.yml"
   name "Stack"
   desc "Workspace to manage all your productivity apps from one place"
   homepage "https://getstack.app/"
+
+  livecheck do
+    url "https://stack-v1.s3.amazonaws.com/builds/prod/latest-mac.yml"
+    strategy :electron_builder
+  end
 
   auto_updates true
   depends_on macos: ">= :yosemite"

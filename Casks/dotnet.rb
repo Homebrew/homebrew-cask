@@ -3,9 +3,14 @@ cask "dotnet" do
   sha256 "f4f3b02899e48b7cb0f1ed8b99f38db630f2e957d47b96de1ee76444b9201dae"
 
   url "https://download.visualstudio.microsoft.com/download/pr/#{version.after_comma.before_colon}/#{version.after_colon}/dotnet-runtime-#{version.before_comma}-osx-x64.pkg"
-  appcast "https://dotnet.microsoft.com/download/dotnet-core"
   name ".Net Core Runtime"
   homepage "https://www.microsoft.com/net/core#macos"
+
+  livecheck do
+    url "https://dotnet.microsoft.com/download/dotnet-core"
+    strategy :page_match
+    regex(%r{href=.*?/dotnet-runtime-(\d+(?:\.\d+)*)-osx-x64\.pkg}i)
+  end
 
   conflicts_with cask: [
     "dotnet-sdk",

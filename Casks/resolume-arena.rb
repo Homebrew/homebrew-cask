@@ -3,9 +3,14 @@ cask "resolume-arena" do
   sha256 "0b25904b650dc1dd7a8c99dbe6833e3f95ec3bd757d8843aeba4809527971225"
 
   url "https://resolume.com/download/Resolume_Arena_#{version.major_minor_patch.dots_to_underscores}_rev_#{version.after_comma}_Installer.dmg"
-  appcast "https://resolume.com/download/"
   name "Resolume Arena"
   homepage "https://resolume.com/"
+
+  livecheck do
+    url "https://resolume.com/download/"
+    strategy :page_match
+    regex(%r{href=.*?/Resolume_Arena_#{version.major_minor_patch.dots_to_underscores}_rev_(\d+(?:\.\d+)*)_Installer\.dmg}i)
+  end
 
   pkg "Resolume Arena Installer.pkg"
 

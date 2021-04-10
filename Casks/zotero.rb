@@ -3,10 +3,15 @@ cask "zotero" do
   sha256 "7813ba51147ba44cc56a47b3326852b524c6d78eea967fa88e6291e393855a7c"
 
   url "https://download.zotero.org/client/release/#{version}/Zotero-#{version}.dmg"
-  appcast "https://www.zotero.org/download/"
   name "Zotero"
   desc "Collect, organize, cite, and share research sources"
   homepage "https://www.zotero.org/"
+
+  livecheck do
+    url "https://www.zotero.org/download/"
+    strategy :page_match
+    regex(%r{href=.*?/Zotero-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   auto_updates true
 

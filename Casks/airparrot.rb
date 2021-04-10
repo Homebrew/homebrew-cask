@@ -8,7 +8,7 @@ cask "airparrot" do
   homepage "https://www.airsquirrels.com/airparrot/"
 
   livecheck do
-    url "https://www.airsquirrels.com/airparrot/download"
+    url "https://www.airsquirrels.com/airparrot/release-notes/mac"
     strategy :page_match
     regex(%r{href=.*?/AirParrot-(\d+(?:\.\d+)*)\.dmg}i)
   end

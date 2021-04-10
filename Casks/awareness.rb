@@ -4,13 +4,12 @@ cask "awareness" do
 
   url "http://iamfutureproof.com/downloads/Awareness-#{version}.dmg"
   name "Awareness"
-  desc "Time tracking application"
   homepage "http://iamfutureproof.com/tools/awareness/"
 
   livecheck do
     url "http://iamfutureproof.com/javascripts/tools/awareness.js"
     strategy :page_match
-    regex(%r{/Awareness-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/Awareness-(\d+(?:\.\d+)*)\.dmg}i)
   end
 
   app "Awareness.app"

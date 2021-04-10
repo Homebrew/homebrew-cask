@@ -3,9 +3,14 @@ cask "screenflick" do
   sha256 "8884ff8119407753eb52c84816c66d2ba86c12d3cf81891a08c804f8024f5f30"
 
   url "https://store.araelium.com/screenflick/downloads/versions/Screenflick#{version}.zip"
-  appcast "https://arweb-assets.s3.amazonaws.com/downloads/screenflick/updates.json"
   name "Screenflick"
   homepage "https://www.araelium.com/screenflick/"
+
+  livecheck do
+    url "https://arweb-assets.s3.amazonaws.com/downloads/screenflick/updates.json"
+    strategy :page_match
+    regex(%r{href=.*?/Screenflick(\d+(?:\.\d+)*)\.zip}i)
+  end
 
   app "Screenflick.app"
 end

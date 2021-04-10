@@ -7,6 +7,12 @@ cask "gdisk" do
   desc "Disk partitioning tool"
   homepage "https://sourceforge.net/projects/gptfdisk/"
 
+  livecheck do
+    url "https://sourceforge.net/projects/gptfdisk/rss"
+    strategy :page_match
+    regex(%r{href=.*?/gdisk-(\d+(?:\.\d+)*)\.pkg}i)
+  end
+
   pkg "gdisk-#{version}.pkg"
 
   uninstall pkgutil: "com.rodsbooks.pkg.gdisk"

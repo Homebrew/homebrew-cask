@@ -4,10 +4,14 @@ cask "timeular" do
 
   url "https://timeular-desktop-packages.s3.amazonaws.com/mac/production/Timeular-#{version}.dmg",
       verified: "timeular-desktop-packages.s3.amazonaws.com/"
-  appcast "https://timeular-desktop-packages.s3.amazonaws.com/mac/production/latest-mac.yml"
   name "Timeular"
   desc "Time tracking aided by a physical device"
   homepage "https://timeular.com/"
+
+  livecheck do
+    url "https://timeular-desktop-packages.s3.amazonaws.com/mac/production/latest-mac.yml"
+    strategy :electron_builder
+  end
 
   auto_updates true
 

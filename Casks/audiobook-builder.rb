@@ -4,13 +4,12 @@ cask "audiobook-builder" do
 
   url "https://www.splasm.com/downloads/audiobookbuilder/Audiobook%20Builder%20#{version}.dmg"
   name "Audiobook Builder"
-  desc "Turn audio CDs and files into audiobooks"
   homepage "https://www.splasm.com/audiobookbuilder/"
 
   livecheck do
     url "https://www.splasm.com/audiobookbuilder/"
     strategy :page_match
-    regex(/Version\s*(\d+(?:\.\d+)*)/i)
+    regex(%r{href=.*?/Audiobook%20Builder%20(\d+(?:\.\d+)*)\.dmg}i)
   end
 
   app "Audiobook Builder.app"

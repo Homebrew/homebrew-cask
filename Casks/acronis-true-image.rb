@@ -4,17 +4,14 @@ cask "acronis-true-image" do
 
   url "https://dl.acronis.com/u/AcronisTrueImage#{version}.dmg"
   name "Acronis True Image"
-  desc "Full image backup and cloning software"
+  desc "Full Image Backup & Cloning software"
   homepage "https://www.acronis.com/personal/computer-backup/"
 
   livecheck do
     url "https://www.acronis.com/en-us/support/updates/index.html"
     strategy :page_match
-    regex(/Acronis\s*True\s*Image\s*(\d+(?:\.\d+)*)/i)
+    regex(%r{href=.*?/AcronisTrueImage(\d+(?:\.\d+)*)\.dmg}i)
   end
 
-  pkg "Install Acronis True Image.pkg"
-
-  uninstall pkgutil: "com.acronis.trueimageformac",
-            delete:  "/Applications/Acronis True Image.app"
+  app "Acronis True Image.app"
 end

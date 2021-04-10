@@ -3,9 +3,14 @@ cask "rocks-n-diamonds" do
   sha256 "896a2b5f4f14632d46b4afcfb0788c2089eb9f4507a3135cdfba524e214b7733"
 
   url "https://www.artsoft.org/RELEASES/macosx/rocksndiamonds/rocksndiamonds-#{version}.dmg"
-  appcast "https://www.artsoft.org/RELEASES/macosx/rocksndiamonds/"
   name "Rocks'n'Diamonds"
   homepage "https://www.artsoft.org/rocksndiamonds/"
+
+  livecheck do
+    url "https://www.artsoft.org/RELEASES/macosx/rocksndiamonds/"
+    strategy :page_match
+    regex(%r{href=.*?/rocksndiamonds-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   app "Rocks'n'Diamonds.app"
 end

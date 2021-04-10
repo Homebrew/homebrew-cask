@@ -1,16 +1,15 @@
 cask "alfaview" do
-  version "8.16.0"
-  sha256 "3464f7be79857e90f6739a9248543aba6679e85c5e3211bf0f929390645e139e"
+  version "8.12.1"
+  sha256 "6028b02fec473628bac312934c938edb22e0ccb1778c67be5ae2b8d551d14879"
 
   url "https://assets.alfaview.com/stable/mac/alfaview-mac-production-#{version}.dmg"
   name "Alfaview"
-  desc "Audio video conferencing"
   homepage "https://alfaview.com/"
 
   livecheck do
     url "https://production-alfaview-assets.alfaview.com/stable/mac/version.info"
     strategy :page_match
-    regex(/alfaview-mac-production-(\d+(?:\.\d+)*)\.dmg/i)
+    regex(%r{href=.*?/alfaview-mac-production-(\d+(?:\.\d+)*)\.dmg}i)
   end
 
   app "alfaview.app"

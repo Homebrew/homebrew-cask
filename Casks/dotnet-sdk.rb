@@ -8,10 +8,15 @@ cask "dotnet-sdk" do
   end
 
   url "https://download.visualstudio.microsoft.com/download/pr/#{version.after_comma.before_colon}/#{version.after_colon}/dotnet-sdk-#{version.before_comma}-osx-x64.pkg"
-  appcast "https://github.com/dotnet/sdk/releases.atom"
   name ".NET SDK"
   desc "Developer platform"
   homepage "https://www.microsoft.com/net/core#macos"
+
+  livecheck do
+    url "https://github.com/dotnet/sdk/releases.atom"
+    strategy :page_match
+    regex(%r{href=.*?/dotnet-sdk-(\d+(?:\.\d+)*)-osx-x64\.pkg}i)
+  end
 
   conflicts_with cask: [
     "dotnet",

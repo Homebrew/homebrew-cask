@@ -3,9 +3,14 @@ cask "rpn-scientific" do
   sha256 "96e72827fe0214eb9cc279484a718814b356f2e3e1cd6653314ed213548e83d9"
 
   url "http://rpnscientific.freehostia.com/RPNScientificV#{version}.dmg"
-  appcast "http://rpnscientific.freehostia.com/"
   name "RPN Scientific Calculator"
   homepage "http://rpnscientific.freehostia.com/"
+
+  livecheck do
+    url "http://rpnscientific.freehostia.com/"
+    strategy :page_match
+    regex(%r{href=.*?/RPNScientificV(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   app "RPN Scientific.app"
 

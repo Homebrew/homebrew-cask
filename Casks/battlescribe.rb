@@ -4,13 +4,12 @@ cask "battlescribe" do
 
   url "https://battlescribe.net/files/BattleScribe_#{version}_Installer.pkg"
   name "BattleScribe"
-  desc "Army list creator for tabletop wargamers"
   homepage "https://battlescribe.net/"
 
   livecheck do
     url "https://battlescribe.net/?tab=downloads"
     strategy :page_match
-    regex(/"desktop"\s*:\s*"(\d+(?:\.\d+)*)"/i)
+    regex(%r{href=.*?/BattleScribe_(\d+(?:\.\d+)*)_Installer\.pkg}i)
   end
 
   pkg "BattleScribe_#{version}_Installer.pkg"

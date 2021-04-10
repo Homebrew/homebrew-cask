@@ -8,11 +8,9 @@ cask "appzapper" do
   homepage "https://www.appzapper.com/"
 
   livecheck do
-    url :homepage
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/appzapper(\d+)(\d+)(\d+)\.zip}i)
-      "#{match[1]}.#{match[2]}.#{match[3]}"
-    end
+    url "https://www.appzapper.com/"
+    strategy :page_match
+    regex(%r{href=.*?/appzapper(\d+(?:\.\d+)*)\.zip}i)
   end
 
   auto_updates true

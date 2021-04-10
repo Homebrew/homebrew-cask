@@ -8,10 +8,15 @@ cask "vidrio" do
   end
 
   url "https://vidr.io/releases/macos/Vidrio-#{version}.dmg"
-  appcast "https://vidr.io/latest-version"
   name "Vidrio"
   desc "Presentation design tool"
   homepage "https://vidr.io/"
+
+  livecheck do
+    url "https://vidr.io/latest-version"
+    strategy :page_match
+    regex(%r{href=.*?/Vidrio-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   app "Vidrio.app"
 

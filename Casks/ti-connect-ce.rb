@@ -3,9 +3,14 @@ cask "ti-connect-ce" do
   sha256 "f9fc77fbd4df8bc9bfcfdb66b9cbf2692ec3cee3839e7b2202414c8e5595ba64"
 
   url "https://education.ti.com/download/en/ed-tech/68CEDD34FDC94622B4DBD173E6A0D8C3/#{version.after_comma}/TIConnectCE-#{version.before_comma}.dmg"
-  appcast "https://education.ti.com/en/software/details/en/68CEDD34FDC94622B4DBD173E6A0D8C3/swticonnectcesoftwareformacintosh"
   name "TI Connect™ CE"
   homepage "https://education.ti.com/en/products/computer-software/ti-connect-ce-sw"
+
+  livecheck do
+    url "https://education.ti.com/en/software/details/en/68CEDD34FDC94622B4DBD173E6A0D8C3/swticonnectcesoftwareformacintosh"
+    strategy :page_match
+    regex(%r{href=.*?/TIConnectCE-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   app "TI Connect CE.app"
 

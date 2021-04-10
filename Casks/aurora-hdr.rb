@@ -1,21 +1,24 @@
 cask "aurora-hdr" do
-  version "1.0.1,6438"
-  sha256 "eb95b9959bbdf739e0b0158480f3793b0ee1376fba544ede3734a6cbbcb7bee1"
+  version "1.0.0.5825"
+  sha256 "ebf975075b5ac3dd58277f3ba52b2a0fc70989429ddbacc18a3bbb81cdd014ba"
 
-  url "https://downloads.skylum.com/aurorahdr/mac/AuroraHDR_Distribution_v#{version.before_comma.dots_to_underscores}_#{version.after_comma}.zip"
+  url "https://downloads.skylum.com/aurorahdr2019/mac/AuroraHDR2019_Distribution_v#{version.dots_to_underscores}.zip"
   name "Aurora HDR"
   desc "HDR photo editor with filters, batch processing and more"
   homepage "https://skylum.com/aurorahdr"
 
   livecheck do
     url "http://aurorahdr2019mac.update.skylum.com/"
-    strategy :sparkle
+    strategy :page_match
+    regex(%r{href=.*?/AuroraHDR2019_Distribution_v(\d+(?:\.\d+)*)\.zip}i)
   end
 
-  app "Aurora HDR.app"
+  app "Aurora HDR 2019.app"
 
   uninstall delete: [
     "~/Library/Preferences/com.macphun.auroraHDR2019.plist",
     "~/Library/Caches/com.macphun.auroraHDR2019",
+    "/Applications/Aurora HDR 2019.app",
+    "/Applications/Aurora HDR 2019 Installer.app",
   ]
 end

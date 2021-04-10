@@ -7,6 +7,12 @@ cask "desmume" do
   desc "Nintendo DS emulator"
   homepage "https://sourceforge.net/projects/desmume/"
 
+  livecheck do
+    url "https://sourceforge.net/projects/desmume/rss"
+    strategy :page_match
+    regex(%r{href=.*?/desmume-(\d+(?:\.\d+)*)-mac\.dmg}i)
+  end
+
   app "DeSmuME.app"
 
   zap trash: [

@@ -4,9 +4,13 @@ cask "ridibooks" do
 
   url "https://viewer-ota.ridicdn.net/pc_electron/Ridibooks-#{version}.dmg",
       verified: "viewer-ota.ridicdn.net/pc_electron/"
-  appcast "https://s3-ap-northeast-2.amazonaws.com/viewer-ota.ridicdn.net/pc_electron/latest-mac.yml"
   name "Ridibooks"
   homepage "https://ridibooks.com/support/app/download"
+
+  livecheck do
+    url "https://s3-ap-northeast-2.amazonaws.com/viewer-ota.ridicdn.net/pc_electron/latest-mac.yml"
+    strategy :electron_builder
+  end
 
   depends_on macos: ">= :sierra"
 

@@ -4,15 +4,12 @@ cask "armitage" do
 
   url "http://www.fastandeasyhacking.com/download/armitage#{version.no_dots}.dmg"
   name "Armitage"
-  desc "Scriptable collaboration tool for Metasploit"
   homepage "http://www.fastandeasyhacking.com/"
 
   livecheck do
-    url "http://www.fastandeasyhacking.com/download/"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/armitage(\d\d+)(\d\d+)(\d\d+)\.dmg}i)
-      "#{match[1]}.#{match[2]}.#{match[3]}"
-    end
+    url "http://www.fastandeasyhacking.com/changelog"
+    strategy :page_match
+    regex(%r{href=.*?/armitage(\d+(?:\.\d+)*)\.dmg}i)
   end
 
   app "Armitage.app"

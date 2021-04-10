@@ -7,5 +7,11 @@ cask "eiskaltdcpp" do
   desc "Filesharing using Direct Connect and ADC protocols"
   homepage "https://sourceforge.net/projects/eiskaltdcpp/"
 
+  livecheck do
+    url "https://sourceforge.net/projects/eiskaltdcpp/rss"
+    strategy :page_match
+    regex(%r{href=.*?/EiskaltDC++-(\d+(?:\.\d+)*)-x86_64\.dmg}i)
+  end
+
   app "EiskaltDC++.app"
 end

@@ -7,6 +7,12 @@ cask "aquaterm" do
   desc "Grahics renderer"
   homepage "https://sourceforge.net/projects/aquaterm/"
 
+  livecheck do
+    url "https://sourceforge.net/projects/aquaterm/rss?path=/AquaTerm"
+    strategy :page_match
+    regex(%r{href=.*?/AquaTerm-(\d+(?:\.\d+)*)\.dmg}i)
+  end
+
   depends_on macos: ">= :high_sierra"
 
   pkg "AquaTermInstaller.pkg"

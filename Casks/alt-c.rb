@@ -4,13 +4,12 @@ cask "alt-c" do
 
   url "https://altcopy.net/Alt-C_Setup_#{version}.pkg"
   name "Alt-C"
-  desc "Two-way text copying"
   homepage "https://altcopy.net/"
 
   livecheck do
-    url "https://altcopy.net/versionMac"
+    url "https://altcopy.net/"
     strategy :page_match
-    regex(/^(\d+(?:\.\d+)*)$/i)
+    regex(%r{href=.*?/Alt-C_Setup_(\d+(?:\.\d+)*)\.pkg}i)
   end
 
   pkg "Alt-C_Setup_#{version}.pkg"

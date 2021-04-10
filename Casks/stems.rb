@@ -4,10 +4,14 @@ cask "stems" do
 
   url "https://stems-releases.s3.us-east-1.amazonaws.com/Stems-#{version}.dmg",
       verified: "stems-releases.s3.us-east-1.amazonaws.com/"
-  appcast "https://stems-releases.s3.amazonaws.com/latest-mac.yml"
   name "Stems"
   desc "Split an audio file into individual tracks"
   homepage "https://stems.app/"
+
+  livecheck do
+    url "https://stems-releases.s3.amazonaws.com/latest-mac.yml"
+    strategy :electron_builder
+  end
 
   app "Stems.app"
 

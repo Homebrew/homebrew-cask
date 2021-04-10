@@ -7,5 +7,11 @@ cask "data-integration" do
   desc "End to end data integration and analytics platform"
   homepage "https://sourceforge.net/projects/pentaho/"
 
+  livecheck do
+    url "https://sourceforge.net/projects/pentaho/rss?path=/"
+    strategy :page_match
+    regex(%r{href=.*?/pdi-ce-(\d+(?:\.\d+)*)\.zip}i)
+  end
+
   app "data-integration/Data Integration.app"
 end

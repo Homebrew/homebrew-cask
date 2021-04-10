@@ -4,9 +4,13 @@ cask "runway" do
 
   url "https://runway-releases.s3.amazonaws.com/Runway-#{version}.dmg",
       verified: "runway-releases.s3.amazonaws.com/"
-  appcast "https://runway-releases.s3.amazonaws.com/latest-mac.yml"
   name "Runway"
   homepage "https://runwayml.com/"
+
+  livecheck do
+    url "https://runway-releases.s3.amazonaws.com/latest-mac.yml"
+    strategy :electron_builder
+  end
 
   app "Runway.app"
 end

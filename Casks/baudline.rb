@@ -4,13 +4,12 @@ cask "baudline" do
 
   url "https://www.baudline.com/baudline_#{version}_macosx_universal.dmg"
   name "baudline"
-  desc "Time-frequency browser"
   homepage "https://www.baudline.com/"
 
   livecheck do
     url "https://www.baudline.com/download.html"
     strategy :page_match
-    regex(/href=.*?baudline_(\d+(?:\.\d+)*)_macosx_universal\.dmg/i)
+    regex(%r{href=.*?/baudline_(\d+(?:\.\d+)*)_macosx_universal\.dmg}i)
   end
 
   app "baudline.app"

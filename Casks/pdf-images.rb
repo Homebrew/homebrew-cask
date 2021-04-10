@@ -6,6 +6,12 @@ cask "pdf-images" do
   name "PDF-Images"
   homepage "https://sourceforge.net/projects/pdf-images/"
 
+  livecheck do
+    url "https://sourceforge.net/projects/pdf-images/rss"
+    strategy :page_match
+    regex(%r{href=.*?/PDF-Images-(\d+(?:\.\d+)*)\.dmg}i)
+  end
+
   app "PDF-Images.app"
   binary "#{appdir}/PDF-Images.app/Contents/MacOS/pdfimages"
 end

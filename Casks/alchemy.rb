@@ -4,11 +4,10 @@ cask "alchemy" do
 
   url "https://al.chemy.org/files/Alchemy-#{version}.dmg"
   name "Alchemy"
-  desc "Open drawing project"
   homepage "https://al.chemy.org/"
 
   livecheck do
-    url "http://al.chemy.org/download/"
+    url "https://al.chemy.org/download/version-history/"
     strategy :page_match
     regex(%r{href=.*?/Alchemy-(\d+(?:\.\d+)*)\.dmg}i)
   end

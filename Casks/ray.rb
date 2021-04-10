@@ -17,8 +17,7 @@ cask "ray" do
 
   livecheck do
     url "https://ray-app.s3.amazonaws.com/latest-mac.yml"
-    strategy :page_match
-    regex(/Ray-(\d+(?:\.\d+)*)-mac\.zip/i)
+    strategy :electron_builder
   end
 
   auto_updates true

@@ -3,10 +3,15 @@ cask "waterfox" do
   sha256 "0b215d7779af3c59eee7a43c84bd9695443c8d07e05db250343cdee5f7f56aa2"
 
   url "https://cdn.waterfox.net/releases/osx64/installer/Waterfox%20G#{version.before_comma}%20Setup.dmg"
-  appcast "https://www.waterfox.net/download/"
   name "Waterfox"
   desc "Web browser"
   homepage "https://www.waterfox.net/"
+
+  livecheck do
+    url "https://www.waterfox.net/download/"
+    strategy :page_match
+    regex(%r{href=.*?/Waterfox%20G(\d+(?:\.\d+)*)%20Setup\.dmg}i)
+  end
 
   app "Waterfox.app"
 

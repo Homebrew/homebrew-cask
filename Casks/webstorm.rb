@@ -9,10 +9,18 @@ cask "webstorm" do
     sha256 "7538b56ddc30890f3598359d5688c3659180de941800965bee338d3d4ac7338f"
   end
 
-  appcast "https://data.services.jetbrains.com/products/releases?code=WS&latest=true&type=release"
   name "WebStorm"
   desc "JavaScript IDE"
   homepage "https://www.jetbrains.com/webstorm/"
+
+  livecheck do
+    url "https://data.services.jetbrains.com/products/releases?code=WS&latest=true&type=release"
+    strategy :page_match do |page|
+      version = page.match(/"version":"(\d+(?:\.\d+)*)/i)
+      build = page.match(/"build":"(\d+(?:\.\d+)*)/i)
+      "#{version[1]},#{build[1]}"
+    end
+  end
 
   auto_updates true
 

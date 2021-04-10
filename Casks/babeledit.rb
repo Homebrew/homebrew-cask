@@ -4,13 +4,12 @@ cask "babeledit" do
 
   url "https://www.codeandweb.com/download/babeledit/#{version}/BabelEdit-#{version}.dmg"
   name "BabelEdit"
-  desc "Translation editor"
   homepage "https://www.codeandweb.com/babeledit"
 
   livecheck do
     url "https://www.codeandweb.com/babeledit/download"
     strategy :page_match
-    regex(/BabelEdit-(\d+(?:\.\d+)*)\.dmg/i)
+    regex(%r{href=.*?/BabelEdit-(\d+(?:\.\d+)*)\.dmg}i)
   end
 
   app "BabelEdit.app"

@@ -3,10 +3,15 @@ cask "viscosity" do
   sha256 "7f076785e462b9d53235ae7f0eaf3a03b5a3a3e6403fe784566d7bc3c1a9851a"
 
   url "https://swupdate.sparklabs.com/download/mac/release/viscosity/Viscosity%20#{version}.dmg"
-  appcast "https://swupdate.sparklabs.com/appcast/mac/release/viscosity/"
   name "Viscosity"
   desc "VPN client for secure internet access and private browsing"
   homepage "https://www.sparklabs.com/viscosity/"
+
+  livecheck do
+    url "https://swupdate.sparklabs.com/appcast/mac/release/viscosity/"
+    strategy :page_match
+    regex(%r{href=.*?/Viscosity%20(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   auto_updates true
 

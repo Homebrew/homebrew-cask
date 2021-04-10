@@ -4,10 +4,14 @@ cask "tandem" do
 
   url "https://download.todesktop.com/200527auaqaacsy/Tandem%20#{version}.dmg",
       verified: "download.todesktop.com/200527auaqaacsy/"
-  appcast "https://download.todesktop.com/200527auaqaacsy/latest-mac.yml"
   name "Tandem"
   desc "Virtual office for remote teams"
   homepage "https://tandem.chat/"
+
+  livecheck do
+    url "https://download.todesktop.com/200527auaqaacsy/latest-mac.yml"
+    strategy :electron_builder
+  end
 
   auto_updates true
 

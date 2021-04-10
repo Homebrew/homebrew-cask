@@ -3,10 +3,15 @@ cask "soda-player" do
   sha256 "8a11327336f0e79393e9c57f4fbb86513f50920559b7e1057627426b0654de76"
 
   url "https://releases.sodaplayer.com/mac/Soda%20Player%20#{version}.dmg"
-  appcast "https://www.sodaplayer.com"
   name "Soda Player"
   desc "Video player and streaming platform"
   homepage "https://www.sodaplayer.com/"
+
+  livecheck do
+    url "https://www.sodaplayer.com"
+    strategy :page_match
+    regex(%r{href=.*?/Soda%20Player%20(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   auto_updates true
 

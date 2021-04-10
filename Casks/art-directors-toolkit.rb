@@ -4,13 +4,12 @@ cask "art-directors-toolkit" do
 
   url "https://www.code-line.com/download/ArtDirectorsToolkit#{version.major}i.zip"
   name "Art Directors Toolkit"
-  desc "Toolset for digital media"
   homepage "https://www.code-line.com/artdirectorstoolkit/"
 
   livecheck do
     url "https://www.code-line.com/downloads/"
     strategy :page_match
-    regex(/Art\s*Directors\s*Toolkit.*?\(v?(\d+(?:\.\d+)*)\)/i)
+    regex(%r{href=.*?/ArtDirectorsToolkit(\d+(?:\.\d+)*)i\.zip}i)
   end
 
   app "Art Directors Toolkit #{version.major}i.app"
