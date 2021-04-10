@@ -11,7 +11,7 @@ cask "tencent-docs" do
   livecheck do
     url "https://docs.qq.com/home/download"
     strategy :page_match
-    regex(/Mac\s*version\s*(\d+(?:\.\d+)*)/i)
+    regex(/Mac\s*版本号\s*(\d+(?:\.\d+)*)/i)
   end
 
   auto_updates true
