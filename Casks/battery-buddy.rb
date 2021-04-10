@@ -16,4 +16,10 @@ cask "battery-buddy" do
   depends_on macos: ">= :big_sur"
 
   app "Battery Buddy.app"
+
+  zap trash: [
+  "~/Library/Application Scripts/com.NeilSardesai.Battery-Buddy-Helper",
+  "~/Library/Containers/com.NeilSardesai.Battery-Buddy-Helper",
+  "~/Library/Preferences/com.NeilSardesai.Battery-Buddy.plist",
+  ]
 end
