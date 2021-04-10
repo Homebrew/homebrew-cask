@@ -1,5 +1,5 @@
 cask "atomic-wallet" do
-  version "2.28.1.677"
+  version "2.28.1"
   sha256 :no_check
 
   url "https://get.atomicwallet.io/download/atomicwallet.dmg"
