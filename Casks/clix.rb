@@ -8,7 +8,9 @@ cask "clix" do
 
   livecheck do
     url :url
-    strategy :extract_plist, &:version
+    strategy :extract_plist do |items|
+      p items
+    end
   end
 
   app "CLIX/CLIX.app"
