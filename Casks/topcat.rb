@@ -7,6 +7,12 @@ cask "topcat" do
   name "TOPCAT"
   homepage "http://www.star.bris.ac.uk/~mbt/topcat/"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(/Version\s*(\d+(?:\.\d+)*)/i)
+  end
+
   app "TOPCAT.app"
   binary "#{appdir}/TOPCAT.app/Contents/Resources/bin/topcat"
   binary "#{appdir}/TOPCAT.app/Contents/Resources/bin/stilts"
