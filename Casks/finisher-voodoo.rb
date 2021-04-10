@@ -1,5 +1,5 @@
 cask "finisher-voodoo" do
-  version "1.0.0,206"
+  version "206"
   sha256 :no_check
 
   url "https://www.ujam.com/api/delivery/product?os=osx&sku=FIN-VOOD"
@@ -7,7 +7,12 @@ cask "finisher-voodoo" do
   desc "VST/AU/AAX guitar effect plug-in"
   homepage "https://www.ujam.com/finisher/voodoo/"
 
-  pkg "FIN-VOOD_osx_#{version.after_comma}.pkg"
+  livecheck do
+    url :url
+    strategy :header_match
+  end
+
+  pkg "FIN-VOOD_osx_#{version}.pkg"
 
   uninstall pkgutil: "com.ujam.finvood.*"
 
