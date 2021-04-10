@@ -4,6 +4,7 @@ cask "awareness" do
 
   url "http://iamfutureproof.com/downloads/Awareness-#{version}.dmg"
   name "Awareness"
+  desc "Time tracking application"
   homepage "http://iamfutureproof.com/tools/awareness/"
 
   livecheck do
