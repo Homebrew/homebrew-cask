@@ -4,7 +4,7 @@ cask "back-in-time" do
 
   url "https://www.tri-edre.com/pub/files/backintime#{version.major}.dmg"
   name "Back-In-Time"
-  desc "Access content of Time Machine backups'
+  desc "Access content of Time Machine backups"
   homepage "https://www.tri-edre.com/english/backintime.html"
 
   livecheck do
