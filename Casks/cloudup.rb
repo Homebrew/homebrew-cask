@@ -6,5 +6,10 @@ cask "cloudup" do
   name "Cloudup"
   homepage "https://cloudup.com/download"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Cloudup.app"
 end
