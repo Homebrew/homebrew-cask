@@ -10,7 +10,7 @@ cask "bearychat" do
   livecheck do
     url "https://bearychat.com/downloads"
     strategy :page_match
-    regex(/Mac\s*App.*?Version:?\s*(\d+(?:\.\d+)*)/mi)
+    regex(/Mac\s*App.*?Version:?.*?(\d+(?:\.\d+)*)/mi)
   end
 
   app "倍洽.app"
