@@ -7,5 +7,10 @@ cask "purei-play" do
   desc "PlayStation 2 emulator"
   homepage "https://purei.org/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Play.app"
 end
