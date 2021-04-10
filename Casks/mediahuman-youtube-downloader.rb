@@ -7,5 +7,11 @@ cask "mediahuman-youtube-downloader" do
   desc "YouTube videos downloader"
   homepage "https://www.mediahuman.com/youtube-downloader/"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(/Version:\s*(\d+(?:\.\d+)*)/i)
+  end
+
   app "MediaHuman YouTube Downloader.app"
 end
