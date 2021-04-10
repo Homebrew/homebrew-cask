@@ -7,5 +7,9 @@ cask "macx-youtube-downloader" do
   desc "Tool to download videos from YouTube"
   homepage "https://www.macxdvd.com/free-youtube-video-downloader-mac/"
 
+  livecheck do
+    skip "unversioned URL"
+  end
+
   app "MacX YouTube Downloader.app"
 end
