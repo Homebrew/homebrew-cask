@@ -6,5 +6,10 @@ cask "keeper-password-manager" do
   name "Keeper Password Manager"
   homepage "https://keepersecurity.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Keeper Password Manager.app"
 end
