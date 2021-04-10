@@ -4,6 +4,7 @@ cask "axe-edit-iii" do
 
   url "https://www.fractalaudio.com/downloads/Axe-Edit-III/Axe-Edit-III-OSX-v#{version.tr(".", "p")}.dmg"
   name "Axe-Edit III"
+  desc "Editor software for the AXE-FX III"
   homepage "https://www.fractalaudio.com/axe-fx-iii-edit/"
 
   livecheck do
