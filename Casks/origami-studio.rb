@@ -4,7 +4,6 @@ cask "origami-studio" do
 
   url "https://facebook.com/designtools/origami/",
       verified: "facebook.com/designtools/"
-  # The appcast will fail CI due to its Cache-Control settings
   name "Origami Studio"
   desc "Design, animate, and prototype design tool from Facebook"
   homepage "https://origami.design/"
