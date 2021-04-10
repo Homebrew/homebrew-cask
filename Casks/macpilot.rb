@@ -14,7 +14,11 @@ cask "macpilot" do
     sha256 :no_check
 
     url "https://www.koingosw.com/products/macpilot/download/macpilot.dmg"
-    appcast "https://www.koingosw.com/postback/versioncheck.php?appname=macpilot&type=sparkle"
+    
+    livecheck do
+      url "https://www.koingosw.com/postback/versioncheck.php?appname=macpilot&type=sparkle"
+      strategy :sparkle
+    end
   end
 
   name "MacPilot"
