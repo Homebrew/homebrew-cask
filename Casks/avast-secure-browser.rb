@@ -9,7 +9,8 @@ cask "avast-secure-browser" do
   homepage "https://www.avast.com/secure-browser#mac"
 
   livecheck do
-    skip "unversioned URL"
+    url :url
+    strategy :extract_plist
   end
 
   pkg "AvastSecureBrowserSetup.pkg"
