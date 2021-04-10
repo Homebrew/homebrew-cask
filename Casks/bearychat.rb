@@ -7,6 +7,12 @@ cask "bearychat" do
   name "倍洽"
   homepage "https://bearychat.com/"
 
+  livecheck do
+    url "https://bearychat.com/downloads"
+    strategy :page_match
+    regex(/Version:?\s*(\d+(?:\.\d+)*)/i)
+  end
+
   app "倍洽.app"
 
   zap trash: [
