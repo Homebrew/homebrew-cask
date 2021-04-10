@@ -4,6 +4,7 @@ cask "alfaview" do
 
   url "https://assets.alfaview.com/stable/mac/alfaview-mac-production-#{version}.dmg"
   name "Alfaview"
+  desc "Audio video conferencing"
   homepage "https://alfaview.com/"
 
   livecheck do
