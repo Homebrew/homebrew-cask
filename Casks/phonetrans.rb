@@ -6,5 +6,10 @@ cask "phonetrans" do
   name "PhoneTrans"
   homepage "https://www.imobie.com/phonetrans/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "PhoneTrans.app"
 end
