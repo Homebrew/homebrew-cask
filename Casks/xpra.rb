@@ -6,6 +6,11 @@ cask "xpra" do
   name "Xpra"
   homepage "https://www.xpra.org/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   pkg "Xpra-x86_64.pkg"
 
   uninstall pkgutil:  "org.xpra.pkg"
