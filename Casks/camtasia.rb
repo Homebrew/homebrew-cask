@@ -1,5 +1,5 @@
 cask "camtasia" do
-  version "2020.0.12,113623"
+  version "2020.0.18,114362"
   sha256 :no_check
 
   url "https://download.techsmith.com/camtasiamac/releases/Camtasia.dmg"
