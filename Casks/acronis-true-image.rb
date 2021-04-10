@@ -13,5 +13,5 @@ cask "acronis-true-image" do
     regex(/Acronis\s*True\s*Image\s*(\d+(?:\.\d+)*)/i)
   end
 
-  app "Acronis True Image.app"
+  pkg "Install Acronis True Image.pkg"
 end
