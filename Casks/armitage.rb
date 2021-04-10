@@ -4,6 +4,7 @@ cask "armitage" do
 
   url "http://www.fastandeasyhacking.com/download/armitage#{version.no_dots}.dmg"
   name "Armitage"
+  desc "Scriptable collaboration tool for Metasploit"
   homepage "http://www.fastandeasyhacking.com/"
 
   livecheck do
