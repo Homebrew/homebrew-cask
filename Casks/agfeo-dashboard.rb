@@ -4,6 +4,7 @@ cask "agfeo-dashboard" do
 
   url "https://www2.agfeo.de/agfeo_web/dokulib.nsf/Anlage_w/#{version.after_comma}/$FILE/AGFEO-Dashboard_x64_agfeo_#{version.before_comma}.dmg"
   name "AGFEO Dashboard"
+  desc "CTI/UC cockpit for your HyperVoice and ES communication system"
   homepage "https://agfeo.de/produkt/agfeo-dashboard/"
 
   livecheck do
