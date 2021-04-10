@@ -8,6 +8,11 @@ cask "gitfox" do
   desc "Git client"
   homepage "https://www.gitfox.app/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   auto_updates true
 
   app "Gitfox.app"
