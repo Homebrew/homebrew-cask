@@ -11,7 +11,8 @@ cask "tencent-docs" do
   livecheck do
     # curl \
     #   -H 'content-type: application/json' \
-    #   --data-binary '{"pull_item":{"app_id":"936c3190-4a5a-4608-ac9e-d37fe33f40be","group":"DOWNLOAD.release-note-mac"}}' \
+    #   --data-binary \
+    #   '{"pull_item":{"app_id":"936c3190-4a5a-4608-ac9e-d37fe33f40be","group":"DOWNLOAD.release-note-mac"}}' \
     #   https://docs.qq.com/config.v2.ConfigService/PullConfigReq
     url "https://docs.qq.com/home/download"
     strategy :page_match
