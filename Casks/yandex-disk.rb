@@ -8,7 +8,7 @@ cask "yandex-disk" do
   homepage "https://disk.yandex.ru/"
 
   livecheck do
-    skip "unversioned URL"
+    skip :extract_plist
   end
 
   app "Yandex.Disk.2.app"
