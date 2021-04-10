@@ -7,6 +7,10 @@ cask "yandex-disk" do
   desc "Cloud storage"
   homepage "https://disk.yandex.ru/"
 
+  livecheck do
+    skip "unversioned URL"
+  end
+
   app "Yandex.Disk.2.app"
 
   zap trash: [
