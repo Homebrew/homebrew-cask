@@ -4,6 +4,7 @@ cask "4k-video-to-mp3" do
 
   url "https://dl.4kdownload.com/app/4kvideotomp3_#{version}.dmg"
   name "4K Video to MP3"
+  desc "Convert any video to MP3"
   homepage "https://www.4kdownload.com/products/product-videotomp3"
 
   livecheck do
