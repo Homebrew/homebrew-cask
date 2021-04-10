@@ -1,8 +1,8 @@
 cask "cold-turkey-blocker" do
-  version "4.2,0"
+  version "4.2.1"
   sha256 :no_check
 
-  url "https://getcoldturkey.com/files/Cold_Turkey_Mac_Installer.pkg"
+  url "https://getcoldturkey.com/files/Cold_Turkey_Mac_Installer.pkg?v=#{version}"
   name "Cold Turkey"
   homepage "https://getcoldturkey.com/"
 
