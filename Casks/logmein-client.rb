@@ -6,5 +6,10 @@ cask "logmein-client" do
   name "LogMeIn Client"
   homepage "https://secure.logmein.com/products/pro/learnmore/desktopapp.aspx"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "LogMeIn Client.app"
 end
