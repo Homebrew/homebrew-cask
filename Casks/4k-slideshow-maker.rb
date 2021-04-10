@@ -4,7 +4,7 @@ cask "4k-slideshow-maker" do
 
   url "https://dl.4kdownload.com/app/4kslideshowmaker_#{version}.dmg"
   name "4K Slideshow Maker"
-  desc "Slideshow maker'
+  desc "Slideshow maker"
   homepage "https://www.4kdownload.com/products/product-slideshowmaker"
 
   livecheck do
