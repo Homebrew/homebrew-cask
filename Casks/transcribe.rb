@@ -10,7 +10,7 @@ cask "transcribe" do
       regex(/version\s*(\d+(?:\.\d+)*)\s*for\s*Mac\s*OS\s*10/i)
     end
   else
-    version "9.00.0"
+    version "9.00"
     sha256 :no_check
     url "https://www.seventhstring.com/xscribe/transcribe.dmg"
 
