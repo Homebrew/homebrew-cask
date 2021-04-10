@@ -8,9 +8,10 @@ cask "tetrio" do
   homepage "https://tetr.io/about"
 
   livecheck do
-    skip "unversioned URL"
+    url :url
+    strategy :extract_plist
   end
-  
+
   app "TETR.IO.app"
 
   zap trash: [
