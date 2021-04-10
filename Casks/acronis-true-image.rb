@@ -4,7 +4,7 @@ cask "acronis-true-image" do
 
   url "https://dl.acronis.com/u/AcronisTrueImage#{version}.dmg"
   name "Acronis True Image"
-  desc "Full Image Backup & Cloning software"
+  desc "Full image backup and cloning software"
   homepage "https://www.acronis.com/personal/computer-backup/"
 
   livecheck do
@@ -14,4 +14,6 @@ cask "acronis-true-image" do
   end
 
   pkg "Install Acronis True Image.pkg"
+
+  uninstall pkgutil: "com.acronis.trueimageformac"
 end
