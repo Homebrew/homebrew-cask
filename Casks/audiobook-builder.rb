@@ -4,6 +4,7 @@ cask "audiobook-builder" do
 
   url "https://www.splasm.com/downloads/audiobookbuilder/Audiobook%20Builder%20#{version}.dmg"
   name "Audiobook Builder"
+  desc "Turn audio CDs and files into audiobooks"
   homepage "https://www.splasm.com/audiobookbuilder/"
 
   livecheck do
