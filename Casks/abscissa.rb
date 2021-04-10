@@ -4,6 +4,7 @@ cask "abscissa" do
 
   url "http://rbruehl.macbay.de/Abscissa/Downloads/Abscissa-#{version}.zip"
   name "Abscissa"
+  desc "Plotting software"
   homepage "http://rbruehl.macbay.de/Abscissa/"
 
   livecheck do
