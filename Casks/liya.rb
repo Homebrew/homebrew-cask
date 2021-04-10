@@ -10,7 +10,7 @@ cask "liya" do
   livecheck do
     url :homepage
     strategy :page_match
-    regex(/latest\s*Liya\s*version\s*is\s*(\d+(?:\.\d+)*)/i)
+    regex(/latest\s*Liya\s*version\s*is.*?(\d+(?:\.\d+)*)/i)
   end
 
   depends_on macos: ">= :catalina"
