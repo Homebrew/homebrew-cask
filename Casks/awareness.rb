@@ -3,9 +3,15 @@ cask "awareness" do
   sha256 "a5ce31fef63aeabde3c8cabac367fb44868de318800b4fcd9032f05b17f74cdf"
 
   url "http://iamfutureproof.com/downloads/Awareness-#{version}.dmg"
-  appcast "http://iamfutureproof.com/javascripts/tools/awareness.js"
   name "Awareness"
+  desc "Time tracking application"
   homepage "http://iamfutureproof.com/tools/awareness/"
+
+  livecheck do
+    url "http://iamfutureproof.com/javascripts/tools/awareness.js"
+    strategy :page_match
+    regex(%r{/Awareness-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   app "Awareness.app"
 
