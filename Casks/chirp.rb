@@ -8,7 +8,5 @@ cask "chirp" do
   desc "Tool for programming amateur radio"
   homepage "https://chirp.danplanet.com/projects/chirp/wiki/Home"
 
-  depends_on cask: "kk7ds-python-runtime"
-
   app "CHIRP.app"
 end
