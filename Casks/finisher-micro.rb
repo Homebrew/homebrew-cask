@@ -7,6 +7,11 @@ cask "finisher-micro" do
   desc "Free VST/AU/AAX multi-effect plugin"
   homepage "https://www.ujam.com/finisher/micro/"
 
+  livecheck do
+    url :url
+    strategy :header_match
+  end
+
   pkg "FIN-MICRO_osx_#{version.after_comma}.pkg"
 
   uninstall pkgutil: "com.ujam.finmicro.*"
