@@ -4,6 +4,7 @@ cask "algodoo" do
 
   url "http://www.algodoo.com/download/Algodoo_#{version.dots_to_underscores}-MacOS.dmg"
   name "Algodoo"
+  desc "Draw and interact with physical systems"
   homepage "https://www.algodoo.com/"
 
   livecheck do
