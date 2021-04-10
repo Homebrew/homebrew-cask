@@ -4,6 +4,7 @@ cask "amazon-chime" do
 
   url "https://clients.chime.aws/mac/releases/AmazonChime-OSX.release-#{version}.dmg"
   name "Amazon Chime"
+  desc "Communications service"
   homepage "https://chime.aws/"
 
   livecheck do
