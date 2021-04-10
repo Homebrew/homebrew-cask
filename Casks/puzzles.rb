@@ -6,5 +6,10 @@ cask "puzzles" do
   name "Simon Tatham's Portable Puzzle Collection"
   homepage "https://www.chiark.greenend.org.uk/~sgtatham/puzzles/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Puzzles.app"
 end
