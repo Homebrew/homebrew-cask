@@ -8,6 +8,7 @@ cask "chronoagent" do
 
   pkg "Install.pkg"
 
-  uninstall pkgutil: "com.econtechnologies.pkg.ChronoAgent",
-            quit:    "com.econtechnologies.backgrounder.CAMonitorBackgrounder"
+  uninstall pkgutil:   "com.econtechnologies.pkg.ChronoAgent",
+            launchctl: "com.econtechnologies.ChronoAgentRemote",
+            quit:      "com.econtechnologies.backgrounder.CAMonitorBackgrounder"
 end
