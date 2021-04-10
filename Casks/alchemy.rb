@@ -4,6 +4,7 @@ cask "alchemy" do
 
   url "https://al.chemy.org/files/Alchemy-#{version}.dmg"
   name "Alchemy"
+  desc "Open drawing project"
   homepage "https://al.chemy.org/"
 
   livecheck do
