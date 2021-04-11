@@ -1,8 +1,8 @@
 cask "cold-turkey-blocker" do
   version "4.2.1"
-  sha256 "745408cc07c761f8ecc58243adb4fad28be9a1a43e5922403432ab2e82e644ce"
+  sha256 :no_check
 
-  url "https://getcoldturkey.com/files/Cold_Turkey_Mac_Installer.pkg?v=#{version}"
+  url "https://getcoldturkey.com/files/Cold_Turkey_Mac_Installer.pkg"
   name "Cold Turkey"
   desc "Block websites, games and applications"
   homepage "https://getcoldturkey.com/"
@@ -13,7 +13,7 @@ cask "cold-turkey-blocker" do
     regex(/Cold_Turkey_Mac_Installer\.pkg\?v=(\d+(?:\.\d+)*)/i)
   end
 
-  pkg "Cold_Turkey_Blocker.pkg"
+  pkg "Cold_Turkey_Mac_Installer.pkg"
 
   uninstall launchctl: [
     "launchkeep.cold-turkey",
