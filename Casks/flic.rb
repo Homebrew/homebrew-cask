@@ -1,6 +1,6 @@
 cask "flic" do
-  version "2.0.2"
-  sha256 "46fad4ca0e69128b28906e8c2e7b785e39a1dc406a775a6c48184e8bf90869b6"
+  version "2.1.0"
+  sha256 "8fceaa6d5eedf4a3013519c9e372e3c640419abc28a2dafc00f0219094933309"
 
   url "https://misc-scl-cdn.s3.amazonaws.com/Flic.#{version}.zip",
       verified: "misc-scl-cdn.s3.amazonaws.com/"
