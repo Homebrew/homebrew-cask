@@ -4,6 +4,7 @@ cask "tinymediamanager" do
 
   url "https://release.tinymediamanager.org/v#{version.major}/dist/tmm_#{version}_mac.zip"
   name "tinyMediaManager"
+  desc "Media management tool"
   homepage "https://www.tinymediamanager.org/"
 
   livecheck do
