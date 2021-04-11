@@ -4,6 +4,7 @@ cask "clock" do
 
   url "https://github.com/downloads/zachwaugh/Clock.app/Clock-#{version}.zip"
   name "Clock"
+  desc "Big clock"
   homepage "https://github.com/zachwaugh/Clock.app"
 
   livecheck do
