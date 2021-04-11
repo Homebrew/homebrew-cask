@@ -4,6 +4,7 @@ cask "beatunes" do
 
   url "http://coxy.beatunes.com/download/beaTunes-#{version.dots_to_hyphens}.dmg"
   name "beaTunes"
+  desc "Analyze, inspect, and play songs"
   homepage "https://www.beatunes.com/"
 
   livecheck do
