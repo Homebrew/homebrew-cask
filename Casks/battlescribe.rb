@@ -4,6 +4,7 @@ cask "battlescribe" do
 
   url "https://battlescribe.net/files/BattleScribe_#{version}_Installer.pkg"
   name "BattleScribe"
+  desc "Army list creator for tabletop wargamers"
   homepage "https://battlescribe.net/"
 
   livecheck do
