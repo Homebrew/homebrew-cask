@@ -23,9 +23,9 @@ cask "nordlocker" do
     "com.nordlocker.macos.launcher",
   ],
             launchctl:  [
-                        "com.nordlocker.nordfs.Mounter.Helper",
-                        "com.nordlocker.macos.launcher",
-  ],
+              "com.nordlocker.nordfs.Mounter.Helper",
+              "com.nordlocker.macos.launcher",
+            ],
             delete:     "/Library/PrivilegedHelperTools/com.nordlocker.nordfs.Mounter.Helper",
             login_item: "NordLocker",
             pkgutil:    "com.nordlocker.macos"
