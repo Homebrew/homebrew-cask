@@ -4,6 +4,7 @@ cask "baudline" do
 
   url "https://www.baudline.com/baudline_#{version}_macosx_universal.dmg"
   name "baudline"
+  desc "Time-frequency browser"
   homepage "https://www.baudline.com/"
 
   livecheck do
