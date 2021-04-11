@@ -5,6 +5,7 @@ cask "bitwig-studio" do
   url "https://downloads.bitwig.com/stable/#{version}/Bitwig%20Studio%20#{version}.dmg"
   appcast "https://www.bitwig.com/en/download.html"
   name "Bitwig Studio"
+  desc "Digital Audio Workstation"
   homepage "https://www.bitwig.com/"
 
   app "Bitwig Studio.app"
