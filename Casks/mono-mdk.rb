@@ -4,6 +4,7 @@ cask "mono-mdk" do
 
   url "https://download.mono-project.com/archive/#{version.major_minor_patch}/macos-10-universal/MonoFramework-MDK-#{version}.macos10.xamarin.universal.pkg"
   name "Mono"
+  desc "Open source implementation of Microsoft's .NET Framework"
   homepage "https://www.mono-project.com/"
 
   livecheck do
