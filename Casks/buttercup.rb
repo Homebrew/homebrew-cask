@@ -8,5 +8,10 @@ cask "buttercup" do
   desc "Javascript Secrets Vault - Multi-Platform Desktop Application"
   homepage "https://buttercup.pw/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Buttercup.app"
 end
