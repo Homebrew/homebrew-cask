@@ -8,4 +8,15 @@ cask "command-pad" do
   homepage "https://github.com/supnate/command-pad"
 
   app "Command Pad.app"
+<<<<<<< Updated upstream
+=======
+
+  zap trash: [
+    "~/Library/Application Support/Command Pad",
+    "~/Library/Logs/Command Pad",
+    "~/Library/Preferences/com.webows.commandpad.helper.plist",
+    "~/Library/Preferences/com.webows.commandpad.plist",
+    "~/Library/Saved Application State/com.webows/commandpad.savedState",
+  ]
+>>>>>>> Stashed changes
 end
