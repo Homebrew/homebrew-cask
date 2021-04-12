@@ -4,7 +4,6 @@ cask "burn" do
 
   url "https://downloads.sourceforge.net/burn-osx/Burn/#{version}/burn-#{version}.zip",
       verified: "downloads.sourceforge.net/burn-osx/"
-  appcast "https://sourceforge.net/projects/burn-osx/rss?path=/Burn"
   name "Burn"
   desc "CD burning application"
   homepage "https://burn-osx.sourceforge.io/"
