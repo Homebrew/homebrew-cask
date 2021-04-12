@@ -4,7 +4,7 @@ cask "bitwig-studio" do
 
   url "https://downloads.bitwig.com/stable/#{version}/Bitwig%20Studio%20#{version}.dmg"
   name "Bitwig Studio"
-  desc "Digital Audio Workstation"
+  desc "Digital audio workstation"
   homepage "https://www.bitwig.com/"
 
   livecheck do
