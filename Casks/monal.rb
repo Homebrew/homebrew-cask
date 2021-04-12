@@ -8,7 +8,8 @@ cask "monal" do
   homepage "https://monal.im/"
 
   livecheck do
-    skip "unversioned URL"
+    url :url
+    strategy :extract_plist
   end
 
   depends_on macos: ">= :catalina"
