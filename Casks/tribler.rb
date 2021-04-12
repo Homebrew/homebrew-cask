@@ -8,5 +8,10 @@ cask "tribler" do
   desc "Privacy enhanced BitTorrent client with P2P content discovery"
   homepage "https://www.tribler.org/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Tribler.app"
 end
