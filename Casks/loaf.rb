@@ -1,6 +1,6 @@
 cask "loaf" do
-  version "1.1.10"
-  sha256 "eb162200c9ca920e3d9472a42a1d91a8331eada080a701ed6ca65063e46a3c61"
+  version "1.1.11"
+  sha256 "8374eefdc89f6626e87c390d3f8998509abcc3cf1471f5aa0a8ce17c7f0dccfb"
 
   url "https://github.com/philipardeljan/getloaf/releases/download/v#{version}/loaf.dmg",
       verified: "github.com/philipardeljan/getloaf/"
