@@ -1,6 +1,6 @@
 cask "feishu" do
-  version "3.45.4,077514"
-  sha256 "cbc5f1ceeed0ced9c3ebf33569bce85a11c5e404c70033b89d6d074f6eba6541"
+  version "3.46.9,061e09"
+  sha256 "c49a282d163f1ff7453819537551ef82cffca69c19bcefb41936a0524168b19a"
 
   url "https://sf3-cn.feishucdn.com/obj/ee-appcenter/#{version.after_comma}/feishu-mac-#{version.before_comma}.dmg",
       verified: "sf3-cn.feishucdn.com/"
