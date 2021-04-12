@@ -1,6 +1,6 @@
 cask "sourcetrail" do
-  version "2020.4.35"
-  sha256 "cf251f79038acd79609a8978ee369a3f68459b4ca98f919da1900565c2ecc764"
+  version "2021.1.30"
+  sha256 "4af4d5e954dc82850c4065f5a44a3e87fa4373f2d979e631cb005c4f90721e02"
 
   url "https://github.com/CoatiSoftware/Sourcetrail/releases/download/#{version}/Sourcetrail_#{version.dots_to_underscores}_macOS_64bit.dmg",
       verified: "github.com/CoatiSoftware/Sourcetrail/"
