@@ -8,6 +8,11 @@ cask "nordpass" do
   desc "Store credentials in a single place and log in on any device, even when offline"
   homepage "https://nordpass.com/"
 
+  livecheck do
+    url "https://downloads.npass.app/mac/latest-mac.yml"
+    strategy :electron_builder
+  end
+
   auto_updates true
   depends_on macos: ">= :yosemite"
 
