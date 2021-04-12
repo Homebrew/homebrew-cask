@@ -9,7 +9,7 @@ cask "textexpander" do
   homepage "https://smilesoftware.com/TextExpander"
 
   livecheck do
-    url "https://smilesoftware.com/appcast/TextExpander#{version.major}.xml"
+    url "https://textexpander.com/appcast/TextExpander-macOS.xml"
     strategy :sparkle
   end
 
