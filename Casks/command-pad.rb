@@ -4,7 +4,7 @@ cask "command-pad" do
 
   url "https://github.com/supnate/command-pad/releases/download/v#{version}/Command.Pad-#{version}.dmg"
   name "Command Pad"
-  desc "Start and stop command-line tools easily and you can also monitor the output"
+  desc "Start and stop command-line tools and monitor the output"
   homepage "https://github.com/supnate/command-pad"
 
   app "Command Pad.app"
