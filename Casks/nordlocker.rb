@@ -1,11 +1,11 @@
 cask "nordlocker" do
   version "2.10.2,133"
-  sha256 :no_check
+  sha256 "357dc9487354f4f51cbda125ee4d0574fcb2104ed75c65a054720893e5d6e52e"
 
   url "https://downloads.nordcdn.com/apps/macos/generic/NordLocker/#{version.before_comma}/NordLocker.pkg",
       verified: "https://downloads.nordcdn.com/"
   name "NordLocker"
-  desc "Store and sync files securely. Get 3 GB of cloud storage for free"
+  desc "Store and sync files securely"
   homepage "https://nordlocker.com/"
 
   livecheck do
