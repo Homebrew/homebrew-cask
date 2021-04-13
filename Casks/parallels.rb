@@ -3,10 +3,17 @@ cask "parallels" do
   sha256 "a2faaba504f32c57d70431bc74f2c10785949de70f7beab494c1cb13901938e0"
 
   url "https://download.parallels.com/desktop/v#{version.major}/#{version}/ParallelsDesktop-#{version}.dmg"
-  appcast "https://kb.parallels.com/en/125053"
   name "Parallels Desktop"
   desc "Desktop virtualization software"
   homepage "https://www.parallels.com/products/desktop/"
+
+  livecheck do
+    url "https://kb.parallels.com/en/125053"
+    strategy :page_match do |page|
+      match = page.match(/Version\s*(\d+(?:\.\d+)*)\s*\((\d+)\)/i)
+      "#{match[1]}-#{match[2]}"
+    end
+  end
 
   auto_updates true
   depends_on macos: ">= :high_sierra"
