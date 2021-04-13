@@ -4,6 +4,7 @@ cask "dendroscope" do
 
   url "https://software-ab.informatik.uni-tuebingen.de/download/dendroscope/Dendroscope_macos_#{version.dots_to_underscores}.dmg"
   name "Dendroscope"
+  desc "Interactive viewer for rooted phylogenetic trees and networks"
   homepage "https://www.wsi.uni-tuebingen.de/lehrstuehle/algorithms-in-bioinformatics/software/dendroscope/"
 
   livecheck do
