@@ -15,11 +15,6 @@ cask "docker" do
     
     url "https://desktop.docker.com/mac/stable/arm64/#{version.after_comma}/Docker.dmg"
   end
-
-    livecheck do
-      url "https://desktop.docker.com/mac/stable/appcast.xml"
-      strategy :sparkle
-    end
   
   name "Docker Desktop"
   name "Docker Community Edition"
