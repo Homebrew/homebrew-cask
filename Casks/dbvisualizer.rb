@@ -9,7 +9,7 @@ cask "dbvisualizer" do
   livecheck do
     url "https://www.dbvis.com/download/"
     strategy :page_match do |page|
-      v = page[%r{href=.*?/dbvis_macos_(\d+(?:\_\d+)*)_jre\.dmg}i, 1]
+      v = page[%r{href=.*?/dbvis_macos_(\d+(?:_\d+)*)_jre\.dmg}i, 1]
       v.tr("_", ".")
     end
   end
