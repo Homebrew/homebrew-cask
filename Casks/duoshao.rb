@@ -4,10 +4,14 @@ cask "duoshao" do
 
   url "https://haokuai.cdn.tinyservices.net/duoshao/Duoshao-#{version}.dmg",
       verified: "haokuai.cdn.tinyservices.net/duoshao/"
-  appcast "https://electron-releases-1259797650.cos.ap-nanjing.myqcloud.com/duoshao/latest-mac.yml"
   name "duoshao"
   desc "Collaborative accounting with double-entry bookkeeping"
   homepage "https://duoshao.net/"
+
+  livecheck do
+    url "https://electron-releases-1259797650.cos.ap-nanjing.myqcloud.com/duoshao/latest-mac.yml"
+    strategy :electron_builder
+  end
 
   app "多少记账.app"
 end
