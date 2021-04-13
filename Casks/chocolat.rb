@@ -4,6 +4,7 @@ cask "chocolat" do
 
   url "https://chocolatapp.com/versions/Chocolat_#{version}.zip"
   name "Chocolat"
+  desc "Text editor"
   homepage "https://chocolatapp.com/"
 
   livecheck do
