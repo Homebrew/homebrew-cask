@@ -4,6 +4,7 @@ cask "denemo" do
 
   url "http://denemo.org/downloads/denemo-#{version}-darwin-x64.tar.bz2"
   name "Denemo"
+  desc "Music notation program"
   homepage "http://denemo.org/"
 
   livecheck do
