@@ -4,6 +4,7 @@ cask "blueharvest" do
 
   url "https://zeroonetwenty.com/blueharvest/downloads/BlueHarvest#{version.no_dots}.dmg"
   name "BlueHarvest"
+  desc "Remove metadata files from external drives"
   homepage "https://zeroonetwenty.com/blueharvest/"
 
   livecheck do
