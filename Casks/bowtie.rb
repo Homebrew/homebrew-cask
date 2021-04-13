@@ -4,6 +4,7 @@ cask "bowtie" do
 
   url "http://bowtieapp.com/bowtie-#{version.before_comma}.zip"
   name "Bowtie"
+  desc "Control your music with customizable shortcuts"
   homepage "http://bowtieapp.com/"
 
   livecheck do
