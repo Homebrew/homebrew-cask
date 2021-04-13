@@ -6,7 +6,7 @@ cask "docker" do
     url "https://desktop.docker.com/mac/stable/amd64/#{version.after_comma}/Docker.dmg"
   else
     version "3.3.0,62632"
-    sha256 "d533aa7d4a4a00d49bb78f4488535e577d7674292538c59769daa61e9bff1109"
+    sha256 "648e36a83811c7041a97a41c050073b9ec50602c588e692501df2c14ef4b66a3"
 
     url "https://desktop.docker.com/mac/stable/arm64/#{version.after_comma}/Docker.dmg"
   end
