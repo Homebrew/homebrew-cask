@@ -4,6 +4,7 @@ cask "favro" do
 
   url "https://download.favro.com/FavroDesktop/macOS/x64/Favro-#{version}.dmg"
   name "Favro"
+  desc "Collaborative planning app"
   homepage "https://www.favro.com/"
 
   livecheck do
