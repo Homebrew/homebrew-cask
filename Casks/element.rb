@@ -10,7 +10,7 @@ cask "element" do
 
   livecheck do
     url "https://github.com/vector-im/riot-desktop"
-    strategy :git
+    strategy :github_latest
   end
 
   auto_updates true

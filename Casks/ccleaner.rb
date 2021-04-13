@@ -1,11 +1,19 @@
 cask "ccleaner" do
-  version "1.18.30"
+  version "1.18"
   sha256 "52295172b846c477f1c5396c9f568d602b89fad52d2fcaba394a14296e096ce6"
 
-  url "https://download.ccleaner.com/mac/CCMacSetup#{version.major_minor.no_dots}.dmg"
-  appcast "https://www.ccleaner.com/ccleaner/download?mac"
+  url "https://download.ccleaner.com/mac/CCMacSetup#{version.no_dots}.dmg"
   name "Piriform CCleaner"
+  desc "Remove junk and unused files"
   homepage "https://www.ccleaner.com/ccleaner-mac"
+
+  livecheck do
+    url "https://www.ccleaner.com/ccleaner/download?mac"
+    strategy :page_match do |page|
+      match = page.match(%r{href=.*?/CCMacSetup(\d+?)(\d+)\.dmg}i)
+      "#{match[1]}.#{match[2]}"
+    end
+  end
 
   app "CCleaner.app"
 

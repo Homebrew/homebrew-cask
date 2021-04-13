@@ -1,10 +1,15 @@
 cask "globalmeet" do
-  version "7.0.1910.1910"
+  version "7.3.2051.2051"
   sha256 :no_check
 
   url "https://convergencedesktop.globalmeet.com/installers/stable/GlobalMeet.dmg"
   name "GlobalMeet"
   homepage "https://www.globalmeet.com/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   app "GlobalMeet.app"
 
