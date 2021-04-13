@@ -4,6 +4,7 @@ cask "celestialteapot-runway" do
 
   url "https://celestialteapot.com/runway/dist/Runway_#{version.before_comma}.zip"
   name "Runway"
+  desc "UML (Unified Modeling Language) design app"
   homepage "https://celestialteapot.com/runway/"
 
   livecheck do
