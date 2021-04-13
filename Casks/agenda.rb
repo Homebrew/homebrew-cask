@@ -1,8 +1,8 @@
 cask "agenda" do
-  version "12.0.2,181"
-  sha256 "defa0876ae5bcb0a2afc61ef6b32efe967955323969a8991cf26f5efae523ad2"
+  version "13.0,187"
+  sha256 :no_check
 
-  url "https://downloads.agenda.com/Agenda_#{version.before_comma}.zip"
+  url "https://downloads.agenda.com/Agenda_13.0.zip"
   name "Agenda"
   desc "Note taking application focusing on dates"
   homepage "https://agenda.com/"
