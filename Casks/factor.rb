@@ -4,6 +4,7 @@ cask "factor" do
 
   url "https://downloads.factorcode.org/releases/#{version}/factor-macosx-x86-64-#{version}.dmg"
   name "Factor"
+  desc "Programming language"
   homepage "https://factorcode.org/"
 
   livecheck do
