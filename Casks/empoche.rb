@@ -4,9 +4,13 @@ cask "empoche" do
 
   url "https://empoche-desktop.s3.amazonaws.com/Empoche-#{version}-mac.zip",
       verified: "empoche-desktop.s3.amazonaws.com/"
-  appcast "https://empoche-desktop.s3.amazonaws.com/latest-mac.yml"
   name "Empoche"
   homepage "https://empoche.com/"
+
+  livecheck do
+    url "https://empoche-desktop.s3.amazonaws.com/latest-mac.yml"
+    strategy :electron_builder
+  end
 
   app "Empoche.app"
 
