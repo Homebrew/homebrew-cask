@@ -4,6 +4,7 @@ cask "elan" do
 
   url "https://www.mpi.nl/tools/elan/ELAN_#{version.dots_to_hyphens}_mac.zip"
   name "ELAN"
+  desc "Annotation tool for audio and video recordings"
   homepage "https://archive.mpi.nl/tla/elan"
 
   livecheck do
