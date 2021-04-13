@@ -5,6 +5,7 @@ cask "empoche" do
   url "https://empoche-desktop.s3.amazonaws.com/Empoche-#{version}-mac.zip",
       verified: "empoche-desktop.s3.amazonaws.com/"
   name "Empoche"
+  desc "Automatic time-tracking with task and project management"
   homepage "https://empoche.com/"
 
   livecheck do
