@@ -4,6 +4,7 @@ cask "eiskaltdcpp" do
 
   url "https://downloads.sourceforge.net/eiskaltdcpp/EiskaltDC++-#{version}-x86_64.dmg"
   name "EiskaltDC++"
+  desc "Filesharing using Direct Connect and ADC protocols"
   homepage "https://sourceforge.net/projects/eiskaltdcpp/"
 
   app "EiskaltDC++.app"
