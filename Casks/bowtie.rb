@@ -11,5 +11,5 @@ cask "bowtie" do
     strategy :sparkle
   end
 
-  app "Bowtie #{version}/Bowtie.app"
+  app "Bowtie #{version.before_comma}/Bowtie.app"
 end
