@@ -13,11 +13,11 @@ cask "flrig" do
     regex(/flrig-(\d+(?:\.\d+)*)_x86_64\.dmg/i)
   end
 
+  app "flrig.app"
+
   preflight do
     staged_path.glob("flrig-*.app").first.rename(staged_path/"flrig.app")
   end
-
-  app "flrig.app"
 
   zap trash: "~/.flrig"
 end
