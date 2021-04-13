@@ -2,7 +2,7 @@ cask "ray" do
   version "1.14.7"
 
   if Hardware::CPU.intel?
-    sha256 "e35fe2e4c7c016822427eb407732b3cdd5c8cb81b9591b42dbc5ba316eafc764"
+    sha256 "799798cf31ff96924db32b14930fb8ab302e0ee16f084e2d388b378f4b13f708"
     url "https://ray-app.s3.eu-west-1.amazonaws.com/Ray-#{version}.dmg",
         verified: "ray-app.s3.eu-west-1.amazonaws.com/"
   else
