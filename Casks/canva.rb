@@ -1,13 +1,17 @@
 cask "canva" do
-  version "1.18.0"
-  sha256 "e357fb7a9cab423e577a6be335f8a93556aee372c0936d87b2863b6662cfe588"
+  version "1.20.0"
+  sha256 "1a50ba5064f4bdc34a7cfecaf4494270f003bd5b3e5ed6f8fc01b8ee60562c28"
 
   url "https://desktop-release.canva-deploy.com/Canva-#{version}.dmg",
       verified: "desktop-release.canva-deploy.com/"
-  appcast "https://desktop-release.canva-deploy.com/latest-mac.yml"
   name "Canva"
   desc "Design tool"
   homepage "https://www.canva.com/"
+
+  livecheck do
+    url "https://desktop-release.canva-deploy.com/latest-mac.yml"
+    strategy :electron_builder
+  end
 
   auto_updates true
 
