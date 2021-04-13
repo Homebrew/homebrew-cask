@@ -4,6 +4,7 @@ cask "dupscanub" do
 
   url "http://www5.wind.ne.jp/miko/mac_soft/dup_scan/hqx/DupScanUB_#{version.no_dots}.dmg.zip"
   name "DupScan"
+  desc "Searches for duplicated files in specified folders"
   homepage "http://www5.wind.ne.jp/miko/mac_soft/dup_scan/"
 
   livecheck do
