@@ -4,6 +4,7 @@ cask "desmume" do
 
   url "https://downloads.sourceforge.net/desmume/desmume-#{version}-mac.dmg"
   name "DeSmuME"
+  desc "Nintendo DS emulator"
   homepage "https://sourceforge.net/projects/desmume/"
 
   app "DeSmuME.app"
