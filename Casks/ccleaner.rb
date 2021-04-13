@@ -4,6 +4,7 @@ cask "ccleaner" do
 
   url "https://download.ccleaner.com/mac/CCMacSetup#{version.no_dots}.dmg"
   name "Piriform CCleaner"
+  desc "Remove junk and unused files"
   homepage "https://www.ccleaner.com/ccleaner-mac"
 
   livecheck do
