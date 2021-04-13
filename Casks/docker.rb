@@ -4,11 +4,21 @@ cask "docker" do
     sha256 "d533aa7d4a4a00d49bb78f4488535e577d7674292538c59769daa61e9bff1109"
 
     url "https://desktop.docker.com/mac/stable/amd64/#{version.after_comma}/Docker.dmg"
+
+    livecheck do
+      url "https://desktop.docker.com/mac/stable/amd64/appcast.xml"
+      strategy :sparkle
+    end
   else
     version "3.3.0,62632"
     sha256 "648e36a83811c7041a97a41c050073b9ec50602c588e692501df2c14ef4b66a3"
 
     url "https://desktop.docker.com/mac/stable/arm64/#{version.after_comma}/Docker.dmg"
+
+    livecheck do
+      url "https://desktop.docker.com/mac/stable/arm64/appcast.xml"
+      strategy :sparkle
+    end
   end
 
   name "Docker Desktop"
@@ -16,11 +26,6 @@ cask "docker" do
   name "Docker CE"
   desc "App to build and share containerized applications and microservices"
   homepage "https://www.docker.com/products/docker-desktop"
-
-  livecheck do
-    url "https://desktop.docker.com/mac/stable/appcast.xml"
-    strategy :sparkle
-  end
 
   auto_updates true
 
