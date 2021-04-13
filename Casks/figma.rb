@@ -4,6 +4,7 @@ cask "figma" do
 
   url "https://desktop.figma.com/mac/Figma-#{version}.zip"
   name "Figma"
+  desc "Collaborative team software"
   homepage "https://www.figma.com/"
 
   livecheck do
