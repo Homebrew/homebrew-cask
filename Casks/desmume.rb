@@ -6,7 +6,6 @@ cask "desmume" do
   name "DeSmuME"
   homepage "https://sourceforge.net/projects/desmume/"
 
-
   app "DeSmuME.app"
 
   zap trash: [
