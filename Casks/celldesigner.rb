@@ -4,6 +4,7 @@ cask "celldesigner" do
 
   url "http://www.systems-biology.org/download/CellDesigner-#{version}-osx-installer.dmg"
   name "CellDesigner"
+  desc "Modeling tool of biochemical networks"
   homepage "http://systems-biology.org/software/celldesigner/"
 
   livecheck do
