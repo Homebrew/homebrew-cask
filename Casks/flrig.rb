@@ -10,7 +10,7 @@ cask "flrig" do
   livecheck do
     url "https://sourceforge.net/projects/fldigi/rss?path=/flrig"
     strategy :page_match
-    regex(%r{flrig-(\d+(?:\.\d+)*)_x86_64\.dmg}i)
+    regex(/flrig-(\d+(?:\.\d+)*)_x86_64\.dmg/i)
   end
 
   preflight do
