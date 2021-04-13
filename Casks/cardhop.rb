@@ -1,12 +1,16 @@
 cask "cardhop" do
-  version "1.3.7"
-  sha256 "12ebd91f64dce8db3924b25487a8984e33803c9fbea8598d049f383563572563"
+  version "1.3.8,236"
+  sha256 "edbc00e147cd2fd9262e6615ed0d18a16d63ebd22e0e6f333a4606a6dfbbaf13"
 
-  url "https://cdn.flexibits.com/Cardhop_#{version}.zip"
-  appcast "https://flexibits.com/cardhop/appcast.php"
+  url "https://cdn.flexibits.com/Cardhop_#{version.before_comma}.zip"
   name "Cardhop"
   desc "Contacts manager"
   homepage "https://flexibits.com/cardhop"
+
+  livecheck do
+    url "https://flexibits.com/cardhop/appcast.php"
+    strategy :sparkle
+  end
 
   auto_updates true
 
