@@ -4,6 +4,7 @@ cask "deepgit" do
 
   url "https://www.syntevo.com/downloads/deepgit/deepgit-macosx-#{version.dots_to_underscores}.dmg"
   name "DeepGit"
+  desc "Tool to investigate the history of source code"
   homepage "https://www.syntevo.com/deepgit/"
 
   livecheck do
