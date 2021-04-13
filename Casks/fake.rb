@@ -4,6 +4,7 @@ cask "fake" do
 
   url "https://fakeapp.com/dist/Fake_#{version.before_comma}.zip"
   name "Fake"
+  desc "Browser for web automation and testing"
   homepage "https://fakeapp.com/"
 
   livecheck do
