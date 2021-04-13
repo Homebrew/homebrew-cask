@@ -4,6 +4,7 @@ cask "doomrl" do
 
   url "https://doom.chaosforge.org/file_download/31/doomrl-#{version.no_dots}.dmg"
   name "Doom the Roguelike"
+  desc "Roguelike game inspired by Doom"
   homepage "https://doom.chaosforge.org/"
 
   livecheck do
