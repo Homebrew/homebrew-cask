@@ -4,6 +4,7 @@ cask "endurance" do
 
   url "https://enduranceapp.com/downloads/Endurance#{version.before_comma}.zip"
   name "Endurance"
+  desc "Battery monitoring and management"
   homepage "https://enduranceapp.com/"
 
   livecheck do
