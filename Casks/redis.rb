@@ -4,7 +4,6 @@ cask "redis" do
 
   url "https://github.com/jpadilla/redisapp/releases/download/#{version}/Redis.zip",
       verified: "github.com/jpadilla/redisapp/"
-  appcast "https://github.com/jpadilla/redisapp/releases.atom"
   name "Redis"
   homepage "https://jpadilla.github.io/redisapp/"
 

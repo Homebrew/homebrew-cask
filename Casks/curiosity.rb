@@ -3,7 +3,6 @@ cask "curiosity" do
   sha256 "cb7aacd709b3f7e591e8ac96df96f37b156828cf7aac80850634a81ada4bdcf4"
 
   url "https://github.com/Dimillian/RedditOS/releases/download/#{version}/Curiosity.app.zip"
-  appcast "https://github.com/Dimillian/RedditOS/releases.atom"
   name "Curiosity"
   desc "SwiftUI Reddit client"
   homepage "https://github.com/Dimillian/RedditOS"

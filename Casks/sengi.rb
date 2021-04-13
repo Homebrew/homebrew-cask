@@ -1,8 +1,8 @@
 cask "sengi" do
-  version "1.0.3"
-  sha256 "e09c5de93c6080e687a160d91cabf61375743a05f5899d8e8c204c53a0fe9338"
+  version "1.1.3"
+  sha256 "f46f87fc91d093e579b05c613b443737e5df31c8356f4367af4cfdc9ec3077e1"
 
-  url "https://github.com/NicolasConstant/sengi/releases/download/#{version}/Sengi-#{version}-mac.dmg"
+  url "https://github.com/NicolasConstant/sengi/releases/download/#{version}/Sengi-#{version.major_minor_patch}-mac.dmg"
   name "Sengi"
   desc "Mastodon and Pleroma desktop client"
   homepage "https://github.com/NicolasConstant/sengi"
@@ -10,7 +10,6 @@ cask "sengi" do
   livecheck do
     url :url
     strategy :github_latest
-    regex(%r{href=.*?/Sengi-(\d+(?:\.\d+)*)-mac\.dmg}i)
   end
 
   app "Sengi.app"

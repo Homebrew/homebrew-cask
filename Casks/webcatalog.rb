@@ -1,10 +1,9 @@
 cask "webcatalog" do
-  version "30.2.1"
-  sha256 "b8fc20d274bacd16d86bda85b88d78f40be47b2b1da5ad08bcb6ca564db9eeb9"
+  version "31.2.0"
+  sha256 "d205aaf5e1a9da868c03ef2fad67ec83f86e97a42797548bafe4b6617b9ab711"
 
   url "https://github.com/webcatalog/webcatalog-app/releases/download/v#{version}/WebCatalog-#{version}.dmg",
       verified: "github.com/webcatalog/webcatalog-app/"
-  appcast "https://github.com/webcatalog/webcatalog-app/releases.atom"
   name "WebCatalog"
   desc "Tool to run web apps like desktop apps"
   homepage "https://webcatalog.app/"

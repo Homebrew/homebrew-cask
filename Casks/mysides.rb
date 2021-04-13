@@ -3,7 +3,6 @@ cask "mysides" do
   sha256 "76946b8f7c5bf714125d75f1ada8140e034f05a9e288c73a7af445d76c2a5514"
 
   url "https://github.com/mosen/mysides/releases/download/v#{version}/mysides-#{version}.pkg"
-  appcast "https://github.com/mosen/mysides/releases.atom"
   name "mysides"
   homepage "https://github.com/mosen/mysides"
 

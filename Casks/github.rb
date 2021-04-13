@@ -1,6 +1,6 @@
 cask "github" do
-  version "2.6.6-74281ffb"
-  sha256 "e36699b769eaad2f43dfe8fe7223627520074db888ecf7690764ef9d3647fa75"
+  version "2.7.2-5b94c877"
+  sha256 "c88d668ac4678f3dae75da62b063e37d8f3f8768668468991d1a95988b6bde6f"
 
   url "https://desktop.githubusercontent.com/releases/#{version}/GitHubDesktop.zip",
       verified: "githubusercontent.com/"
@@ -15,6 +15,7 @@ cask "github" do
   end
 
   auto_updates true
+  conflicts_with cask: "homebrew/cask-versions/github-beta"
 
   app "GitHub Desktop.app"
   binary "#{appdir}/GitHub Desktop.app/Contents/Resources/app/static/github.sh", target: "github"

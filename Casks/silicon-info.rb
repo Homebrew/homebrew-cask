@@ -3,7 +3,6 @@ cask "silicon-info" do
   sha256 "ada6ba4665e2aa2973e2faef59f312cc82ae689505236c4c2d412bc3ae18d0f9"
 
   url "https://github.com/billycastelli/Silicon-Info/releases/download/#{version}/Silicon.Info.app.zip"
-  appcast "https://github.com/billycastelli/Silicon-Info/releases.atom"
   name "Silicon Info"
   desc "View the architecture of the running application"
   homepage "https://github.com/billycastelli/Silicon-Info"

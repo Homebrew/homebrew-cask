@@ -1,10 +1,14 @@
 cask "adobe-connect" do
-  version "11,2021.2.18"
-  sha256 "9db35ce360935fb6e26e3d042d75528fa2fd957dab014ca0d0cf4ede21933688"
+  version "11,2021.3.27"
+  sha256 "fafd3769e3e26527f602ed28076afdda5927ac7504e805e99a4bbf80dcd5509d"
 
   url "https://download.adobe.com/pub/connect/updaters/meeting/#{version.before_comma}/AdobeConnect_#{version.after_comma.dots_to_underscores}.dmg"
   name "Adobe Connect"
   homepage "https://www.adobe.com/products/adobeconnect.html"
+
+  livecheck do
+    skip "No version information available"
+  end
 
   auto_updates true
 

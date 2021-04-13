@@ -5,8 +5,8 @@ cask "tripmode" do
     url "https://tripmode-updates.ch/app/TripMode-#{version.before_comma}-#{version.after_comma}-app.dmg",
         verified: "tripmode-updates.ch/"
   else
-    version "3.0.0,1023"
-    sha256 "8c684785c7e91847cc998355203712c515b2ce4629d68fd5e559a5587c4a60a9"
+    version "3.0.4,1113"
+    sha256 "6e5ebc41580fddab4efda4842619cf0fe605210ee2a737d8c833b29944e41244"
     url "https://tripmode-updates.ch/app/TripMode-#{version.before_comma}-#{version.after_comma}.zip",
         verified: "tripmode-updates.ch/"
   end

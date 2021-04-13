@@ -4,7 +4,6 @@ cask "mjolnir" do
 
   url "https://github.com/mjolnirapp/mjolnir/releases/download/#{version}/Mjolnir.app.zip",
       verified: "github.com/mjolnirapp/mjolnir/"
-  appcast "https://github.com/mjolnirapp/mjolnir/releases.atom"
   name "Mjolnir"
   desc "Lightweight automation and productivity app"
   homepage "https://mjolnir.rocks/"

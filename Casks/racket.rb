@@ -11,10 +11,15 @@ cask "racket" do
     url "https://mirror.racket-lang.org/installers/#{version}/racket-#{version}-aarch64-macosx-cs.dmg"
   end
 
-  appcast "https://download.racket-lang.org/all-versions.html"
   name "Racket"
   desc "Modern programming language in the Lisp/Scheme family"
   homepage "https://racket-lang.org/"
+
+  livecheck do
+    url "https://download.racket-lang.org/all-versions.html"
+    strategy :page_match
+    regex(/racket-v?(\d+(?:\.\d+)*)/i)
+  end
 
   suite "Racket v#{version}"
   binary "#{appdir}/Racket v#{version}/bin/drracket"
@@ -48,4 +53,18 @@ cask "racket" do
   manpage "#{appdir}/Racket v#{version}/man/man1/racket.1"
   manpage "#{appdir}/Racket v#{version}/man/man1/raco.1"
   manpage "#{appdir}/Racket v#{version}/man/man1/setup-plt.1"
+
+  zap trash: [
+    "~/Library/Racket",
+    "~/Library/Caches/Racket",
+    "~/Library/Preferences/org.racket-lang.DrRacket.plist",
+    "~/Library/Preferences/org.racket-lang.prefs.rktd",
+    "~/Library/Preferences/PLT-autosave-toc-save.rktd",
+    "~/Library/Preferences/PLT-autosave-toc.rktd",
+    "~/Library/Saved Application State/org.racket-lang.DrRacket.savedState",
+    "~/Library/Saved Application State/org.racket-lang.DrRacketBC.savedState",
+    "~/Library/Saved Application State/org.racket-lang.GRacket3m.savedState",
+    "~/Library/Saved Application State/org.racket-lang.PLT Games.savedState",
+    "~/Library/Saved Application State/org.racket-lang.Slideshow.savedState",
+  ]
 end

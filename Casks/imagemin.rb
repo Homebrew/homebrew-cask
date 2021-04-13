@@ -3,7 +3,6 @@ cask "imagemin" do
   sha256 "8a4304d37eaa8a71fbeb550aece6a80c98dbcdf7a9fb6eb09faae1ad93df40d6"
 
   url "https://github.com/imagemin/imagemin-app/releases/download/#{version}/imagemin-app-v#{version}-darwin.zip"
-  appcast "https://github.com/imagemin/imagemin-app/releases.atom"
   name "imagemin"
   homepage "https://github.com/imagemin/imagemin-app"
 

@@ -1,12 +1,16 @@
 cask "flutter" do
-  version "2.0.2"
-  sha256 "0fd76e44c2080e3e9c02e2960628ca3ee0999d4ad13dd4e6b76d0f3fee76379e"
+  version "2.0.4"
+  sha256 "31e4a9f874e9d9743e7c3bb6bc69b3ba1bad122e71a4424e4240f204d0c9b34e"
 
   url "https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_#{version}-stable.zip",
       verified: "storage.googleapis.com/flutter_infra/"
   name "Flutter SDK"
   desc "UI toolkit for building applications for mobile, web and desktop"
   homepage "https://flutter.dev/"
+
+  livecheck do
+    skip "No version information available"
+  end
 
   auto_updates true
 

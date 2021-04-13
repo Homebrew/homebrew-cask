@@ -1,11 +1,17 @@
 cask "tinymediamanager" do
-  version "4.1.1"
-  sha256 "681bd568a3c3b58b6c827e65b56fb6d6d87762b27ef534b59043e128fc2c5345"
+  version "4.1.3"
+  sha256 "f39526beac22ade508c5748dc050636215ae14c721d70e9052fa3c8279ebf2ae"
 
   url "https://release.tinymediamanager.org/v#{version.major}/dist/tmm_#{version}_mac.zip"
-  appcast "https://release.tinymediamanager.org/"
   name "tinyMediaManager"
+  desc "Media management tool"
   homepage "https://www.tinymediamanager.org/"
+
+  livecheck do
+    url "https://release.tinymediamanager.org/"
+    strategy :page_match
+    regex(%r{href=.*?/tmm_(\d+(?:\.\d+)*)_mac\.zip}i)
+  end
 
   auto_updates true
 

@@ -1,6 +1,6 @@
 cask "helo" do
-  version "1.3.2"
-  sha256 "6e51c532e2340d1d432e498ff1dd908afbe1e2978cb6cea6086b8dea5a746f9c"
+  version "1.4.0"
+  sha256 "5d731216607fc39fbc331728e85895d0187115b4ae464bae59182cac8f1d349a"
 
   url "https://helo.fra1.digitaloceanspaces.com/helo/HELO-#{version}.dmg",
       verified: "helo.fra1.digitaloceanspaces.com"

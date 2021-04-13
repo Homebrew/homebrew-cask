@@ -4,7 +4,6 @@ cask "fontgoggles" do
 
   url "https://github.com/justvanrossum/fontgoggles/releases/download/v#{version}/FontGoggles.dmg",
       verified: "github.com/justvanrossum/fontgoggles/"
-  appcast "https://github.com/justvanrossum/fontgoggles/releases.atom"
   name "FontGoggles"
   desc "Font viewer for various font formats"
   homepage "https://fontgoggles.org/"

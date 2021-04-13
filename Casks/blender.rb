@@ -3,11 +3,15 @@ cask "blender" do
   sha256 "0ab72447b8b02e6a9553aa9b2cb77ff63500e63e176cf31d8762f8b62bbfb03d"
 
   url "https://download.blender.org/release/Blender#{version.major_minor}/blender-#{version}-macOS.dmg"
-  appcast "https://download.blender.org/release/",
-          must_contain: version.major_minor.delete("a-z")
   name "Blender"
   desc "Free and open-source 3D creation suite"
   homepage "https://www.blender.org/"
+
+  livecheck do
+    url "https://www.blender.org/download/"
+    strategy :page_match
+    regex(%r{href=.*?/blender-(\d+(?:\.\d+)*)-macos\.dmg}i)
+  end
 
   conflicts_with cask: "homebrew/cask-versions/blender-lts"
 
@@ -25,4 +29,9 @@ cask "blender" do
       '#{appdir}/Blender.app/Contents/MacOS/Blender' "$@"
     EOS
   end
+
+  zap trash: [
+    "~/Library/Application Support/Blender",
+    "~/Library/Saved Application State/org.blenderfoundation.blender.savedState",
+  ]
 end

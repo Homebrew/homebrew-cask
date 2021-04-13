@@ -3,10 +3,15 @@ cask "beyond-compare" do
   sha256 "c7f5700b9b2b1d13f58afcec2e7f2909e912c6d9409d1d62dcd9aaa16198bc32"
 
   url "https://www.scootersoftware.com/BCompareOSX-#{version}.zip"
-  appcast "https://www.scootersoftware.com/download.php"
   name "Beyond Compare"
   desc "Compare files and folders"
   homepage "https://www.scootersoftware.com/"
+
+  livecheck do
+    url "https://www.scootersoftware.com/download.php?zz=v4changelog"
+    strategy :page_match
+    regex(/<h2[^>]*>(\d+(?:\.\d+)*)/i)
+  end
 
   auto_updates true
 

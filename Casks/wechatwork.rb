@@ -1,6 +1,6 @@
 cask "wechatwork" do
-  version "3.1.2.2368"
-  sha256 "6621efd6b63b246814fc3449deac33c7bdef688d55f1697b1d4803f85e8f7f98"
+  version "3.1.6.90132"
+  sha256 "eabb68388b061eabceb159cf65ae9b20ca6d4939d5ac1e6f786d7fb8672946d6"
 
   url "https://dldir1.qq.com/wework/work_weixin/WeCom_#{version}.dmg"
   name "WeChat Work"

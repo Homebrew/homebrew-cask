@@ -18,11 +18,11 @@ cask "blockblock" do
       sudo:       true,
     }
   else
-    version "1.1.0"
-    sha256 "a5260a993c2f713f3f101b8728ad7b1636336c28f325f70cbc4445f6c0c1f420"
+    version "2.0.1"
+    sha256 "66a63c60b6779c49b0c05bad378f752014549501e106cf335d30adee54f7102f"
 
-    url "https://bitbucket.org/objective-see/deploy/downloads/BlockBlock_#{version}.zip",
-        verified: "bitbucket.org/objective-see/"
+    url "https://github.com/objective-see/BlockBlock/releases/download/v#{version}/BlockBlock_#{version}.zip",
+        verified: "github.com/objective-see/BlockBlock/"
 
     installer script: {
       executable: "#{staged_path}/BlockBlock Installer.app/Contents/MacOS/BlockBlock Installer",
@@ -37,8 +37,8 @@ cask "blockblock" do
     }
   end
 
-  appcast "https://objective-see.com/products/changelogs/BlockBlock.txt"
   name "BlockBlock"
+  desc "Monitors common persistence locations"
   homepage "https://objective-see.com/products/blockblock.html"
 
   zap trash: "~/Library/Preferences/com.objectiveSee.BlockBlock.plist"

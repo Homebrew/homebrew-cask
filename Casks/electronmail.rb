@@ -1,9 +1,8 @@
 cask "electronmail" do
-  version "4.10.2"
-  sha256 "4bcff8555b7217e6339c281a4e36d776ee50fd43207326161e5edee6f4e83337"
+  version "4.12.0"
+  sha256 "2d3bd22ecf07683a87d6e86e2f46b313cfa20a5c6817db04674f0374c90a27a9"
 
   url "https://github.com/vladimiry/ElectronMail/releases/download/v#{version}/electron-mail-#{version}-mac.dmg"
-  appcast "https://github.com/vladimiry/ElectronMail/releases.atom"
   name "ElectronMail"
   desc "Unofficial ProtonMail Desktop App"
   homepage "https://github.com/vladimiry/ElectronMail"

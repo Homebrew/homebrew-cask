@@ -1,5 +1,5 @@
 cask "atomic-wallet" do
-  version "2.27.1"
+  version "2.28.1"
   sha256 :no_check
 
   url "https://get.atomicwallet.io/download/atomicwallet.dmg"
@@ -9,9 +9,7 @@ cask "atomic-wallet" do
 
   livecheck do
     url "https://releases.atomicwallet.io/latest-mac.yml"
-    strategy :page_match do |page|
-      YAML.safe_load(page)["version"]
-    end
+    strategy :electron_builder
   end
 
   app "Atomic Wallet.app"

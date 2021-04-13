@@ -4,7 +4,6 @@ cask "trailer" do
 
   url "https://github.com/ptsochantaris/trailer/releases/download/#{version}/Trailer-#{version.no_dots}.zip",
       verified: "github.com/ptsochantaris/trailer/"
-  appcast "https://github.com/ptsochantaris/trailer/releases.atom"
   name "Trailer"
   desc "Managing Pull Requests and Issues For GitHub & GitHub Enterprise"
   homepage "https://ptsochantaris.github.io/trailer/"

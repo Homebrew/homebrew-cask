@@ -1,6 +1,6 @@
 cask "raindropio" do
-  version "5.2.71"
-  sha256 "cd769fbb09c6524c403ede0f09ccd696c5e5e5a43d6d886d81db193bc7a09f73"
+  version "5.3.23"
+  sha256 "ea40e266e4fab2877576227543ed3e821e7038c446f33f220900c7c8a9d63a80"
 
   url "https://github.com/raindropio/desktop/releases/download/v#{version}/Raindrop-x64.dmg",
       verified: "github.com/raindropio/desktop/"

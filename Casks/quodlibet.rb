@@ -4,7 +4,6 @@ cask "quodlibet" do
 
   url "https://github.com/quodlibet/quodlibet/releases/download/release-#{version}/QuodLibet-#{version}.dmg",
       verified: "github.com/quodlibet/quodlibet/"
-  appcast "https://github.com/quodlibet/quodlibet/releases.atom"
   name "Quod Libet"
   desc "Music player and music library manager"
   homepage "https://quodlibet.readthedocs.io/"
