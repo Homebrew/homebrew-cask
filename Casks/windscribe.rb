@@ -10,9 +10,9 @@ cask "windscribe" do
   installer manual: "WindscribeInstaller.app"
 
   uninstall launchctl: [
-              "com.windscribe.helper.macos",
-              "com.windscribe.launcher.macos",
-            ],
+    "com.windscribe.helper.macos",
+    "com.windscribe.launcher.macos",
+  ],
             quit:      [
               "com.windscribe.gui.macos",
               "com.windscribe.helper.macos",
