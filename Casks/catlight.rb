@@ -4,6 +4,7 @@ cask "catlight" do
 
   url "https://download.catlight.io/rel/mac/beta/CatLightSetup-#{version}.zip"
   name "catlight"
+  desc "Action center for developers"
   homepage "https://catlight.io/"
 
   livecheck do
