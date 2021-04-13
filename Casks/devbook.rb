@@ -1,5 +1,5 @@
 cask "devbook" do
-  version "0.1.15"
+  version "0.1.16"
   sha256 :no_check
 
   name "Devbook"
