@@ -4,6 +4,7 @@ cask "dbschema" do
 
   url "https://www.dbschema.com/download/DbSchema_macos_#{version.dots_to_underscores}.tgz"
   name "DbSchema"
+  desc "Design, document and deploy databases"
   homepage "https://www.dbschema.com/"
 
   livecheck do
