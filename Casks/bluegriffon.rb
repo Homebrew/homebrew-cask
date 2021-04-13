@@ -4,6 +4,7 @@ cask "bluegriffon" do
 
   url "http://bluegriffon.org/freshmeat/#{version}/bluegriffon-#{version}.mac-x86_64.dmg"
   name "BlueGriffon"
+  desc "Web and EPUB editor"
   homepage "http://bluegriffon.org/"
 
   livecheck do
