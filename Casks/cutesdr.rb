@@ -4,6 +4,7 @@ cask "cutesdr" do
 
   url "https://downloads.sourceforge.net/cutesdr/CuteSdr#{version.no_dots}.dmg"
   name "CuteSDR"
+  desc "Demodulation and spectrum display program"
   homepage "https://sourceforge.net/projects/cutesdr/"
 
   livecheck do
