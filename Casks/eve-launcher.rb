@@ -4,6 +4,7 @@ cask "eve-launcher" do
 
   url "https://binaries.eveonline.com/EveLauncher-#{version}.dmg"
   name "Eve Online"
+  desc "EVE Online client"
   homepage "https://www.eveonline.com/"
 
   livecheck do
