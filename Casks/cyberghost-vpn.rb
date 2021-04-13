@@ -4,6 +4,7 @@ cask "cyberghost-vpn" do
 
   url "https://download.cyberghostvpn.com/mac/updates/v#{version.major}/cg#{version.major}mac_#{version}.dmg"
   name "CyberGhost"
+  desc "VPN client"
   homepage "https://www.cyberghostvpn.com/"
 
   livecheck do
