@@ -3,9 +3,13 @@ cask "key-codes" do
   sha256 :no_check
 
   url "https://manytricks.com/download/keycodes"
-  appcast "https://manytricks.com/keycodes/appcast"
   name "Key Codes"
   homepage "https://manytricks.com/keycodes/"
+
+  livecheck do
+    url "https://manytricks.com/keycodes/appcast/"
+    strategy :sparkle
+  end
 
   auto_updates true
 
