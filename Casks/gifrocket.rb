@@ -10,7 +10,7 @@ cask "gifrocket" do
   livecheck do
     url :homepage
     strategy :page_match
-    regex(%r{href=.*?Gifrocket.(\d+(?:\.\d+)*)\.zip}i)
+    regex(/href=.*?Gifrocket.(\d+(?:\.\d+)*)\.zip/i)
   end
 
   app "Gifrocket.app"
