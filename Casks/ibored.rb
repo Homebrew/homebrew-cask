@@ -4,6 +4,7 @@ cask "ibored" do
 
   url "https://files.tempel.org/iBored/iBored-Mac_#{version}.zip"
   name "iBored"
+  desc "Hex editor"
   homepage "https://apps.tempel.org/iBored/"
 
   livecheck do
