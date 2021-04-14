@@ -4,6 +4,7 @@ cask "focuswriter" do
 
   url "https://gottcode.org/focuswriter/FocusWriter_#{version}.dmg"
   name "FocusWriter"
+  desc "Distraction-free writing environment"
   homepage "https://gottcode.org/focuswriter/"
 
   livecheck do
