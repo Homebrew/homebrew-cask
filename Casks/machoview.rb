@@ -3,7 +3,6 @@ cask "machoview" do
   sha256 "1eae99e92f51ca7a7470ffa9d78a2a31e28c743805ca514ec4a41210bc145e26"
 
   url "https://downloads.sourceforge.net/machoview/MachOView-#{version}.dmg"
-  appcast "https://sourceforge.net/projects/machoview/rss"
   name "MachOView"
   desc "Visual Mach-O file browser"
   homepage "https://sourceforge.net/projects/machoview/"
