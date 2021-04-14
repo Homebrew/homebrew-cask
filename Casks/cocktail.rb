@@ -60,8 +60,8 @@ cask "cocktail" do
       strategy :sparkle
     end
   else
-    version "14.3"
-    sha256 "e4e215d5231732064bb28dcd576f1030f0365c06e6435a504464e35016c9bc97"
+    version "14.3.1"
+    sha256 "60d48d44b28474237b99c7fe5fa4794ed6d420adff6047c00cbf1a0d933feea5"
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}BSE.dmg"
 
