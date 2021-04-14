@@ -4,6 +4,7 @@ cask "insync" do
 
   url "http://s.insynchq.com/builds/Insync-#{version}.dmg"
   name "Insync"
+  desc "Manage your Google Drive and OneDrive files"
   homepage "https://www.insynchq.com/"
 
   livecheck do
