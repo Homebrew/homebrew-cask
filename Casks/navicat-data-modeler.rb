@@ -7,7 +7,7 @@ cask "navicat-data-modeler" do
   homepage "https://www.navicat.com/products/navicat-data-modeler"
 
   livecheck do
-    url "https://updater.navicat.com/mac/navicat_updates.php?appName=Navicat%20Data%20Modeler"
+    url "https://updater.navicat.com/mac/navicat_updates.php?appName=Navicat%20Data%20Modeler&appLang=en"
     strategy :sparkle
   end
 
