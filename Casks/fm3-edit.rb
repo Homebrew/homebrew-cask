@@ -4,6 +4,7 @@ cask "fm3-edit" do
 
   url "https://www.fractalaudio.com/downloads/FM3-Edit/FM3-Edit-OSX-v#{version.tr(".", "p")}.dmg"
   name "FM3 Edit"
+  desc "Editor for the FM3 Amp Modeler/FX Processor"
   homepage "https://www.fractalaudio.com/fm3-edit/"
 
   livecheck do
