@@ -4,6 +4,7 @@ cask "islide" do
 
   url "https://static.islide.cc/site/product/package/dmg/iSlide-#{version}.dmg"
   name "iSlide"
+  desc "PPT-based plug-in tool"
   homepage "https://www.islide.cc/"
 
   livecheck do
