@@ -4,6 +4,7 @@ cask "guitar-pro" do
 
   url "https://alt-downloads.guitar-pro.com/gp7/stable/guitar-pro-#{version.major}-setup.pkg"
   name "Guitar Pro"
+  desc "Sheet music editor software for guitar, bass, keyboards, drums and more"
   homepage "https://www.guitar-pro.com/"
 
   livecheck do
