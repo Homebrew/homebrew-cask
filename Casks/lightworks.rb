@@ -10,7 +10,7 @@ cask "lightworks" do
   livecheck do
     url "https://www.lwks.com/index.php?option=com_docman&task=doc_download&gid=210"
     strategy :header_match do |headers|
-      match = headers["location"].match(%r{lightworks_(\d+(?:\.\d+)*)_r(\d+)\.dmg}i)
+      match = headers["location"].match(/lightworks_(\d+(?:\.\d+)*)_r(\d+)\.dmg/i)
       "#{match[1]},#{match[2]}"
     end
   end
