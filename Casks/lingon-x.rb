@@ -8,10 +8,15 @@ cask "lingon-x" do
   end
 
   url "https://www.peterborgapps.com/downloads/LingonX#{version.major}.zip"
-  appcast "https://www.peterborgapps.com/updates/lingonx#{version.major}.plist"
   name "Lingon X"
   desc "Automator software to start apps, run scripts or commands and more"
   homepage "https://www.peterborgapps.com/lingon/"
+
+  livecheck do
+    url "https://www.peterborgapps.com/updates/lingonx#{version.major}.plist"
+    strategy :page_match
+    regex(%r{<key>version<\/key>\s*\n\s*<string>(\d+(?:\.\d+)*)<\/string>}i)
+  end
 
   depends_on macos: ">= :high_sierra"
 
@@ -19,7 +24,7 @@ cask "lingon-x" do
 
   zap trash: [
     "~/Library/Application Scripts/com.peterborgapps.LingonX#{version.major}",
-    "~/Library/Containers/com.peterborgapps.LingonX#{version.major}",
     "~/Library/Application Support/Lingon X",
+    "~/Library/Containers/com.peterborgapps.LingonX#{version.major}",
   ]
 end
