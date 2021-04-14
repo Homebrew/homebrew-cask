@@ -8,7 +8,7 @@ cask "navicat-for-mariadb" do
   homepage "https://www.navicat.com/products/navicat-for-mariadb"
 
   livecheck do
-    url "https://updater.navicat.com/mac/navicat_updates.php?appName=Navicat%20for%20MariaDB&appLang=en"
+    url "https://updater.navicat.com/mac/navicat_updates.php?appName=Navicat%20for%20MariaDB"
     strategy :sparkle
   end
 
