@@ -8,7 +8,7 @@ cask "moom" do
   homepage "https://manytricks.com/moom/"
 
   livecheck do
-    url "https://manytricks.com/moom/appcast"
+    url "https://manytricks.com/moom/appcast/"
     strategy :sparkle
   end
 
