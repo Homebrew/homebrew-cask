@@ -4,6 +4,7 @@ cask "hedgewars" do
 
   url "https://www.hedgewars.org/download/releases/Hedgewars-#{version}.dmg"
   name "Hedgewars"
+  desc "Turn-based strategy, artillery, action and comedy game"
   homepage "https://hedgewars.org/"
 
   livecheck do
