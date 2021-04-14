@@ -4,6 +4,7 @@ cask "greenfoot" do
 
   url "https://www.greenfoot.org/download/files/Greenfoot-mac-#{version.no_dots}.zip"
   name "Greenfoot"
+  desc "Teach object orientation with Java"
   homepage "https://www.greenfoot.org/home"
 
   livecheck do
