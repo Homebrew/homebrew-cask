@@ -4,6 +4,7 @@ cask "fitbit-os-simulator" do
 
   url "https://simulator-updates.fitbit.com/Fitbit%20OS%20Simulator-latest-#{version}.dmg"
   name "Fitbit OS Simulator"
+  desc "Build apps and clock faces for Fitbit"
   homepage "https://dev.fitbit.com/"
 
   livecheck do
