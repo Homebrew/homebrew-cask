@@ -4,6 +4,7 @@ cask "historyhound" do
 
   url "https://www.stclairsoft.com/download/HistoryHound-#{version.before_comma}.dmg"
   name "HistoryHound"
+  desc "Browser history and bookmarks keyword search"
   homepage "https://www.stclairsoft.com/HistoryHound/"
 
   livecheck do
