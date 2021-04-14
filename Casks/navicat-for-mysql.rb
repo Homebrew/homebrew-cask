@@ -8,7 +8,7 @@ cask "navicat-for-mysql" do
   homepage "https://www.navicat.com/products/navicat-for-mysql"
 
   livecheck do
-    url "https://updater.navicat.com/mac/navicat_updates.php?appName=Navicat%20for%20MySQL"
+    url "https://updater.navicat.com/mac/navicat_updates.php?appName=Navicat%20for%20MySQL&appLang=en"
     strategy :sparkle
   end
 
