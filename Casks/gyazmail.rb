@@ -4,6 +4,7 @@ cask "gyazmail" do
 
   url "http://gyazsquare.com/gyazmail/GyazMail-#{version.no_dots}.dmg"
   name "GyazMail"
+  desc "Email client"
   homepage "http://gyazsquare.com/gyazmail/"
 
   livecheck do
