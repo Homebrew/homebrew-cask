@@ -4,9 +4,13 @@ cask "kubernetic" do
 
   url "https://kubernetic.s3.amazonaws.com/Kubernetic-#{version}.dmg",
       verified: "kubernetic.s3.amazonaws.com/"
-  appcast "https://kubernetic.s3.amazonaws.com/latest-mac.yml"
   name "Kubernetic"
   homepage "https://kubernetic.com/"
+
+  livecheck do
+    url "https://kubernetic.s3.amazonaws.com/latest-mac.yml"
+    strategy :electron_builder
+  end
 
   app "Kubernetic.app"
 
