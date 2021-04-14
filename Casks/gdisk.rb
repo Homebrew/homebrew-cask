@@ -4,6 +4,7 @@ cask "gdisk" do
 
   url "https://downloads.sourceforge.net/gptfdisk/gdisk-#{version}.pkg"
   name "GPT fdisk"
+  desc "Disk partitioning tool"
   homepage "https://sourceforge.net/projects/gptfdisk/"
 
   pkg "gdisk-#{version}.pkg"
