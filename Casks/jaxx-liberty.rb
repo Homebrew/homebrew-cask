@@ -4,6 +4,7 @@ cask "jaxx-liberty" do
 
   url "https://download-liberty.jaxx.io/Jaxx.Liberty-#{version}.dmg"
   name "Jaxx Blockchain Wallet"
+  desc "Blockchain Wallet, holdings, crypto prices and news"
   homepage "https://jaxx.io/"
 
   livecheck do
