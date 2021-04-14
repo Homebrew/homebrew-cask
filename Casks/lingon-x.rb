@@ -20,5 +20,6 @@ cask "lingon-x" do
   zap trash: [
     "~/Library/Application Scripts/com.peterborgapps.LingonX#{version.major}",
     "~/Library/Containers/com.peterborgapps.LingonX#{version.major}",
+    "~/Library/Application Support/Lingon X",
   ]
 end
