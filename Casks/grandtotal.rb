@@ -1,11 +1,16 @@
 cask "grandtotal" do
-  version "7.0.2.10"
-  sha256 "bcc8d9c51eb9cb041c447392f534c540357af39bc6d2cee1fb4d1bcce3c3bcad"
+  version "7.0.5"
+  sha256 "3d4f5a80afcc2d7f292c435ddb7a9683eb1440edd3595d7017a1a00d31ccba81"
 
   url "https://mediaatelier.com/GrandTotal#{version.major}/GrandTotal_#{version}.zip"
-  appcast "https://mediaatelier.com/GrandTotal#{version.major}/feed.php"
   name "GrandTotal"
+  desc "Create invoices and estimates"
   homepage "https://www.mediaatelier.com/GrandTotal#{version.major}/"
+
+  livecheck do
+    url "https://mediaatelier.com/GrandTotal#{version.major}/feed.php"
+    strategy :sparkle
+  end
 
   app "GrandTotal.app"
 end
