@@ -4,6 +4,7 @@ cask "crypt" do
 
   url "https://voluntarylabs.org/crypt/binaries/Crypt#{version.before_comma}_#{version.after_comma}.zip"
   name "Crypt"
+  desc "App for encrypting and decrypting files and folders"
   homepage "https://voluntarylabs.org/crypt/index.html"
 
   livecheck do
