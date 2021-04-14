@@ -4,6 +4,7 @@ cask "gitfiend" do
 
   url "https://gitfiend.com/resources/GitFiend-#{version}.dmg"
   name "GitFiend"
+  desc "Git client"
   homepage "https://gitfiend.com/"
 
   livecheck do
