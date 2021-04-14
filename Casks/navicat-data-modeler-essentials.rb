@@ -4,7 +4,7 @@ cask "navicat-data-modeler-essentials" do
 
   url "https://download3.navicat.com/updater/modeler0#{version.major_minor.no_dots}_ess_mac_en.zip"
   name "Navicat Data Modeler Essentials"
-  homepage "https://www.navicat.com/en/products/navicat-data-modeler"
+  homepage "https://www.navicat.com/products/navicat-data-modeler"
 
   livecheck do
     url "https://updater.navicat.com/mac/navicat_updates.php?appName=Navicat%20Data%20Modeler%20Essentials"
