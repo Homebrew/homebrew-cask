@@ -12,5 +12,5 @@ cask "magicplot" do
     regex(/href=.*?MagicPlot(\d+(?:\.\d+)*)\.zip/i)
   end
 
-  app "MagicPlotPro#{version}.app"
+  app "MagicPlot.app"
 end
