@@ -2,8 +2,8 @@ cask "dingtalk-lite" do
   version "5.1.21"
   sha256 "25f1fe4cb261f1bd597416290e285ea243cf417124c34dc24c51bb347767aaed"
 
-  # dtapp-pub.dingtalk.com is the official download host per the vendor homepage
-  url "https://dtapp-pub.dingtalk.com/dingtalk-desktop/mac_dmg/Release/DingTalkLite_v#{version}.dmg"
+  url "https://dtapp-pub.dingtalk.com/dingtalk-desktop/mac_dmg/Release/DingTalkLite_v#{version}.dmg",
+      verified: "dtapp-pub.dingtalk.com/dingtalk-desktop/"
   name "DingTalk Lite"
   name "钉钉 Lite"
   desc "Teamwork app by Alibaba Group"
