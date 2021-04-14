@@ -9,9 +9,8 @@ cask "parallels" do
 
   livecheck do
     url "https://kb.parallels.com/en/125053"
-    strategy :page_match do |page|
-      match = page.match(/Version\s*(\d+(?:\.\d+)*)\s*\((\d+)\)/i)
-      "#{match[1]}-#{match[2]}"
+    strategy :page_match
+    regex(/Version\s*(\d+(?:\.\d+)*)(?:\s*\((\d+)\))?/i)
     end
   end
 
