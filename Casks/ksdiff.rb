@@ -8,7 +8,7 @@ cask "ksdiff" do
 
   homepage "https://kaleidoscope.app/ksdiff2"
   livecheck do
-    url "https://updates.kaleidoscope.app/v2/prod/appcast"
+    url "https://updates.kaleidoscope.app/v#{version.major}/prod/appcast"
     strategy :sparkle do |item|
       match = item.url.match(%r{/Kaleidoscope-(\d+(?:\.\d+)*)-(\d+)-(\w+(?:-\d+)*)\.app\.zip}i)
       "#{match[1]},#{match[2]}:#{match[3]}"
