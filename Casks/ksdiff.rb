@@ -10,7 +10,7 @@ cask "ksdiff" do
   livecheck do
     url "https://kaleidoscope.app/download/latest/ksdiff"
     strategy :header_match do |headers|
-      match = headers["location"].match(%r{/ksdiff-(\d+(?:\.\d+)*)-(\d+)-(\w+(?:-\d+)*)\.app\.zip}i)
+      match = headers["location"].match(%r{/ksdiff-(\d+(?:\.\d+)*)-(\d+)-(\w+(?:-\d+)*)\.zip}i)
       "#{match[1]},#{match[2]}:#{match[3]}"
     end
   end
