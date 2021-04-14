@@ -4,6 +4,7 @@ cask "fs-uae" do
 
   url "https://fs-uae.net/stable/#{version}/FS-UAE-Suite_#{version}_macOS_x86-64.dmg"
   name "FS-UAE"
+  desc "Amiga emulator"
   homepage "https://fs-uae.net/"
 
   livecheck do
