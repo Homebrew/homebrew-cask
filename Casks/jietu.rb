@@ -5,6 +5,7 @@ cask "jietu" do
   url "https://dldir1.qq.com/invc/tt/QB/Jietu/Jietu_#{version.before_comma}(#{version.after_comma}).dmg"
   name "Jietu"
   name "截图"
+  desc "Quick annotation and sharing screenshot tool"
   homepage "https://jietu.qq.com/"
 
   livecheck do
