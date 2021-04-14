@@ -4,6 +4,7 @@ cask "front" do
 
   url "https://dl.frontapp.com/desktop/builds/#{version}/Front-#{version}.zip"
   name "Front"
+  desc "Customer communication platform"
   homepage "https://frontapp.com/"
 
   livecheck do
