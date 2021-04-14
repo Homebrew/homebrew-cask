@@ -4,6 +4,7 @@ cask "ishowu-instant" do
 
   url "https://www.shinywhitebox.com/downloads/instant/iShowU_Instant_#{version.before_comma}.dmg"
   name "iShowU Instant"
+  desc "Realtime screen recording"
   homepage "https://www.shinywhitebox.com/ishowu-instant"
 
   livecheck do
