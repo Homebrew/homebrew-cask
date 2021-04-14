@@ -10,7 +10,7 @@ cask "isabelle" do
   livecheck do
     url :homepage
     strategy :page_match
-    regex(%r{href=.*?/Isabelle(\d+(?:\.\d+)*)_macos.tar\.gz}i)
+    regex(%r{href=.*?/Isabelle(\d+(?:\.\d+)*)_macos\.tar\.gz}i)
   end
 
   app "Isabelle#{version}.app"
