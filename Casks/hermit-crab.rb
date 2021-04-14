@@ -4,6 +4,7 @@ cask "hermit-crab" do
 
   url "https://belkadan.com/hermitcrab/updates/HermitCrab-#{version}.zip"
   name "Hermit Crab"
+  desc "Run shell commands without leaving your current app"
   homepage "https://belkadan.com/hermitcrab/"
 
   livecheck do
