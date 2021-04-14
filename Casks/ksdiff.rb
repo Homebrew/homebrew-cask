@@ -5,12 +5,12 @@ cask "ksdiff" do
   url "https://updates.kaleidoscope.app/v2/prod/ksdiff-#{version.before_comma}-#{version.after_comma.before_colon}-#{version.after_colon}.zip"
   name "ksdiff"
   desc "Command-line tool for the App Store version of Kaleidoscope"
-
   homepage "https://kaleidoscope.app/ksdiff2"
+
   livecheck do
-    url "https://updates.kaleidoscope.app/v#{version.major}/prod/appcast"
-    strategy :sparkle do |item|
-      match = item.url.match(%r{/Kaleidoscope-(\d+(?:\.\d+)*)-(\d+)-(\w+(?:-\d+)*)\.app\.zip}i)
+    url "https://kaleidoscope.app/download/latest/ksdiff"
+    strategy :header_match do |headers|
+      match = headers["location"].match(%r{/ksdiff-(\d+(?:\.\d+)*)-(\d+)-(\w+(?:-\d+)*)\.app\.zip}i)
       "#{match[1]},#{match[2]}:#{match[3]}"
     end
   end
