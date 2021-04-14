@@ -5,6 +5,7 @@ cask "fluxcenter" do
   url "https://flux-caffeine.s3-accelerate.amazonaws.com/files/Flux/CENTER%20%20INSTALLERS/Flux_FluxCenter_MacOS_Installer_%28#{version}%29.dmg",
       verified: "flux-caffeine.s3-accelerate.amazonaws.com/"
   name "FluxCenter"
+  desc "Audio production software"
   homepage "https://www.flux.audio/"
 
   livecheck do
