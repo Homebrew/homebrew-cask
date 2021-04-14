@@ -14,5 +14,5 @@ cask "isabelle" do
   end
 
   app "Isabelle#{version}.app"
-  binary "#{appdir}/Isabelle#{version}.app/Isabelle/bin/isabelle"
+  binary "#{appdir}/Isabelle#{version}.app/bin/isabelle"
 end
