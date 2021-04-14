@@ -4,6 +4,7 @@ cask "geneious-prime" do
 
   url "https://assets.geneious.com/installers/geneious/release/Geneious_Prime_mac64_#{version.dots_to_underscores}_with_jre.dmg"
   name "Geneious Prime"
+  desc "Bioinformatics software platform"
   homepage "https://www.geneious.com/"
 
   livecheck do
