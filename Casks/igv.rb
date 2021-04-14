@@ -4,6 +4,7 @@ cask "igv" do
 
   url "https://data.broadinstitute.org/igv/projects/downloads/#{version.major_minor}/IGV_MacApp_#{version}.zip"
   name "Integrative Genomics Viewer (IGV)"
+  desc "Visual exploration of genomic data"
   homepage "https://software.broadinstitute.org/software/igv/"
 
   livecheck do
