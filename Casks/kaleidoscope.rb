@@ -10,7 +10,7 @@ cask "kaleidoscope" do
   livecheck do
     url "https://updates.kaleidoscope.app/v2/prod/appcast"
     strategy :sparkle do |item|
-      match = item.url.match(%r{/Kaleidoscope-(\d+(?:\.\d+)*)-(\d+)-(.+(?:\-.+)*)\.app\.zip}i)
+      match = item.url.match(%r{/Kaleidoscope-(\d+(?:\.\d+)*)-(\d+)-(\w+(?:-\d+)*)\.app\.zip}i)
       "#{match[1]},#{match[2]}:#{match[3]}"
     end
   end
