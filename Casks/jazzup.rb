@@ -4,6 +4,7 @@ cask "jazzup" do
 
   url "https://www.irradiatedsoftware.com/downloads/JazzUp_#{version.before_comma}.zip"
   name "JazzUp"
+  desc "Plays sound effects as you type"
   homepage "https://www.irradiatedsoftware.com/labs/"
 
   livecheck do
