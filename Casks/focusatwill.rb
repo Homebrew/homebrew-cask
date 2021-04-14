@@ -4,9 +4,14 @@ cask "focusatwill" do
 
   url "https://faw-desktop.s3.amazonaws.com/focusatwill-#{version}.dmg",
       verified: "faw-desktop.s3.amazonaws.com/"
-  appcast "https://faw-desktop.s3.amazonaws.com/latest-mac.yml"
   name "Focus@Will"
+  desc "Personalized focus music"
   homepage "https://www.focusatwill.com/"
+
+  livecheck do
+    url "https://faw-desktop.s3.amazonaws.com/latest-mac.yml"
+    strategy :electron_builder
+  end
 
   app "focusatwill.app"
 end
