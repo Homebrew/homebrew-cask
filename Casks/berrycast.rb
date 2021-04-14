@@ -4,10 +4,15 @@ cask "berrycast" do
 
   url "https://media.berrycast.app/desktop-installer/Berrycast-#{version}-latest.dmg",
       verified: "media.berrycast.app/"
-  appcast "https://media.berrycast.app/desktop-installer/v2/latest-mac.yml"
   name "Berrycast"
   desc "Screen recorder"
   homepage "https://www.berrycast.com/"
+
+  livecheck do
+    url "https://media.berrycast.app/desktop-installer/v2/latest-mac.yml"
+    strategy :page_match
+    regex(/Berrycast-(\d+(?:\.\d+)*)-latest\.dmg/i)
+  end
 
   app "Berrycast.app"
 
