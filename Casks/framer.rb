@@ -4,6 +4,7 @@ cask "framer" do
 
   url "https://dl.framer.com/com.framer.desktop/#{version.before_comma}/#{version.after_comma}/FramerDesktop-#{version.before_comma}.zip"
   name "Framer"
+  desc "Tool that helps teams design every part of the product experience"
   homepage "https://www.framer.com/desktop/"
 
   livecheck do
