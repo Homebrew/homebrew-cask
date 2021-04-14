@@ -4,6 +4,7 @@ cask "data-integration" do
 
   url "https://downloads.sourceforge.net/pentaho/pdi-ce-#{version}.zip"
   name "Pentaho Data Integration"
+  desc "End to end data integration and analytics platform"
   homepage "https://sourceforge.net/projects/pentaho/"
 
   app "data-integration/Data Integration.app"
