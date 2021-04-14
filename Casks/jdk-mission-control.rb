@@ -4,7 +4,7 @@ cask "jdk-mission-control" do
 
   url "https://download.java.net/java/GA/jmc#{version.major}/#{version.after_comma}/binaries/jmc-#{version.before_comma}_osx-x64.tar.gz"
   name "JDK Mission Control"
-  desc "Set of tools for managing, monitoring, profiling, and troubleshooting Java applications"
+  desc "Tools to manage, monitor, profile and troubleshoot Java applications"
   homepage "https://jdk.java.net/jmc/8"
 
   livecheck do
