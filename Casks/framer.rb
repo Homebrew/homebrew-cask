@@ -1,11 +1,18 @@
 cask "framer" do
-  version "57017,1606907524"
-  sha256 "8fe579d6a722bea3c9c4bac59c587fe7471a74fa852569d11d9a3bd4dbd72a50"
+  version "63096,1616509244"
+  sha256 "010dac8f36fa842171832d863c69d898445b700623a65b7425b484971ea242d9"
 
   url "https://dl.framer.com/com.framer.desktop/#{version.before_comma}/#{version.after_comma}/FramerDesktop-#{version.before_comma}.zip"
-  appcast "https://updates.framer.com/sparkle/com.framer.desktop"
   name "Framer"
+  desc "Tool that helps teams design every part of the product experience"
   homepage "https://www.framer.com/desktop/"
+
+  livecheck do
+    url "https://updates.framer.com/sparkle/com.framer.desktop"
+    strategy :sparkle do |item|
+      "#{item.version},#{item.url[%r{/(\d+)/FramerDesktop-\d+.zip}i, 1]}"
+    end
+  end
 
   auto_updates true
   depends_on macos: ">= :mojave"
