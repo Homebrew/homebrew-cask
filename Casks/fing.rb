@@ -4,6 +4,7 @@ cask "fing" do
 
   url "https://get.fing.com/fing-desktop-releases/mac/Fing.dmg"
   name "Fing Desktop"
+  desc "Network scanner"
   homepage "https://www.fing.com/products/fing-desktop"
 
   livecheck do
