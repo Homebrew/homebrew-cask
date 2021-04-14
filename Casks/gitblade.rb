@@ -4,6 +4,7 @@ cask "gitblade" do
 
   url "https://gitblade.com/dl/gitblade-#{version}-darwin-x64.dmg"
   name "GitBlade"
+  desc "Graphical client for Git"
   homepage "https://gitblade.com/"
 
   livecheck do
