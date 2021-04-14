@@ -4,6 +4,7 @@ cask "duefocus" do
 
   url "https://web.duefocus.com/distribution/darwin/v3/DueFocus-#{version}.dmg"
   name "DueFocus"
+  desc "Time tracking and productivity software"
   homepage "https://duefocus.com/"
 
   livecheck do
