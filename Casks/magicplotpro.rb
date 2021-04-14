@@ -1,9 +1,9 @@
-cask "magicplotpro" do
+cask "magicplot" do
   version "3.0"
   sha256 "4b56ef31ff7b347d729b8ed958b2ec14affa031b4c27db653cdaa3618b57d710"
 
   url "https://magicplot.com/downloads/MagicPlot#{version}.zip"
-  name "MagicPlot Pro"
+  name "MagicPlot"
   homepage "https://magicplot.com/"
 
   livecheck do
