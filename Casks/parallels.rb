@@ -11,7 +11,6 @@ cask "parallels" do
     url "https://kb.parallels.com/en/125053"
     strategy :page_match
     regex(/Version\s*(\d+(?:\.\d+)*)(?:\s*\((\d+)\))?/i)
-    end
   end
 
   auto_updates true
