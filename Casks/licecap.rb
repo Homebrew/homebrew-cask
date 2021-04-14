@@ -3,10 +3,15 @@ cask "licecap" do
   sha256 "704cd237b261d355b1ed86f19f286a5a5ad7581ef563cb1c84a5df1266b48f2d"
 
   url "https://www.cockos.com/licecap/licecap#{version.no_dots}.dmg"
-  appcast "https://www.cockos.com/licecap/"
   name "LICEcap"
   desc "Animated screen capture application"
   homepage "https://www.cockos.com/licecap/"
+
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(/v?(\d+(?:\.\d+)*)\s*for\s*macOS/i)
+  end
 
   app "LICEcap.app"
 
