@@ -4,6 +4,7 @@ cask "firestorm" do
 
   url "https://downloads.firestormviewer.org/mac/Phoenix-Firestorm-Releasex64_#{version.dots_to_underscores}_x86_64.dmg"
   name "Phoenix Firestorm viewer for Second Life"
+  desc "Viewer for accessing Virtual Worlds"
   homepage "https://www.firestormviewer.org/"
 
   livecheck do
