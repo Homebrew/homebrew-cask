@@ -4,6 +4,7 @@ cask "firestormos" do
 
   url "https://downloads.firestormviewer.org/mac/Phoenix-FirestormOS-Releasex64_#{version.dots_to_underscores}_x86_64.dmg"
   name "Phoenix Firestorm viewer for OpenSim"
+  desc "Viewer for accessing Virtual Worlds"
   homepage "https://www.firestormviewer.org/"
 
   livecheck do
