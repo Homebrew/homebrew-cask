@@ -5,7 +5,7 @@ cask "dingtalk-lite" do
   # dtapp-pub.dingtalk.com is the official download host per the vendor homepage
   url "https://dtapp-pub.dingtalk.com/dingtalk-desktop/mac_dmg/Release/DingTalkLite_v#{version}.dmg"
   name "DingTalk Lite"
-  name "钉钉"
+  name "钉钉 Lite"
   desc "Teamwork app by Alibaba Group"
   homepage "https://www.dingtalk.com/"
 
