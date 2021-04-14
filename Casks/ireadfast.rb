@@ -4,6 +4,7 @@ cask "ireadfast" do
 
   url "https://www.gengis.net/downloads/iReadFast%20#{version}.dmg"
   name "iReadFast"
+  desc "Speed reading program"
   homepage "https://www.gengis.net/prodotti/iReadFast_Mac/en/index.php"
 
   livecheck do
