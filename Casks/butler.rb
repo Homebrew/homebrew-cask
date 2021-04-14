@@ -1,11 +1,15 @@
 cask "butler" do
-  version "4.3.3,5096"
+  version "4.4.1,5111"
   sha256 :no_check
 
   url "https://manytricks.com/download/butler"
-  appcast "https://manytricks.com/butler/appcast"
   name "Butler"
   homepage "https://manytricks.com/butler/"
+
+  livecheck do
+    url "https://manytricks.com/butler/appcast/"
+    strategy :sparkle
+  end
 
   auto_updates true
 
