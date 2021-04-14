@@ -7,7 +7,7 @@ cask "crypt" do
   homepage "https://voluntarylabs.org/crypt/index.html"
 
   livecheck do
-    url "https://voluntarylabs.org/crypt/index.html"
+    url :homepage
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/Crypt(\d+)_(\d+(?:\.\d+)*)\.zip}i)
       "#{match[1]},#{match[2]}"
