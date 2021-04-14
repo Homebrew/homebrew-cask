@@ -4,6 +4,7 @@ cask "airmedia" do
 
   url "https://www.crestron.com/Crestron/media/Crestron/WidenResources/Web%20Miscellaneous/airmedia_osx_#{version.dots_to_underscores}_guest.zip"
   name "Crestron AirMedia"
+  desc "Touchless presentation and collaboration software"
   homepage "https://www.crestron.com/microsites/airmedia-mobile-wireless-hd-presentations"
 
   livecheck do
