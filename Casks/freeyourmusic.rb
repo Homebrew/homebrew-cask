@@ -5,6 +5,7 @@ cask "freeyourmusic" do
   url "https://dzqeytqqx888.cloudfront.net/FreeYourMusic-#{version}.dmg",
       verified: "dzqeytqqx888.cloudfront.net/"
   name "FreeYourMusic⁩"
+  desc "Move playlists, tracks, and albums between music platforms"
   homepage "https://freeyourmusic.com/"
 
   livecheck do
