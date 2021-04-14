@@ -4,6 +4,7 @@ cask "id3-editor" do
 
   url "http://www.pa-software.com/release/ID3Editor.ub.#{version}.dmg"
   name "ID3 Editor"
+  desc "MP3 and AIFF ID3 tag editor"
   homepage "http://www.pa-software.com/id3editor/"
 
   livecheck do
