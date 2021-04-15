@@ -4,6 +4,7 @@ cask "mini-vmac" do
 
   url "https://www.gryphel.com/d/minivmac/minivmac-#{version}/minivmac-#{version}-mc64.bin.tgz"
   name "Mini vMac"
+  desc "Allows modern computers to run software made for early Apple computers"
   homepage "https://www.gryphel.com/c/minivmac/"
 
   livecheck do
