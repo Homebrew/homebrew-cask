@@ -6,7 +6,7 @@ cask "tencent-lemon" do
       verified: "pm.myapp.com/invc/xfspeed/qqpcmgr/"
   appcast "https://lemon.guanjia.qq.com/latest/package"
   name "Tencent Lemon Cleaner"
-  homepage "https://mac.gj.qq.com/"
+  homepage "https://lemon.qq.com/"
 
   app "Tencent Lemon.app"
 
