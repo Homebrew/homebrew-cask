@@ -4,6 +4,7 @@ cask "navicat-data-modeler-essentials" do
 
   url "https://download3.navicat.com/updater/modeler0#{version.major_minor.no_dots}_ess_mac_en.zip"
   name "Navicat Data Modeler Essentials"
+  desc "Database design tool"
   homepage "https://www.navicat.com/products/navicat-data-modeler"
 
   livecheck do
