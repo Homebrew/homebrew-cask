@@ -4,6 +4,7 @@ cask "metashape" do
 
   url "http://download.agisoft.com/metashape_#{version.dots_to_underscores}.dmg"
   name "Agisoft Metashape Standard Edition"
+  desc "Process digital images and generate 3D spatial data"
   homepage "https://www.agisoft.com/"
 
   livecheck do
