@@ -1,11 +1,14 @@
 cask "adobe-air-sdk" do
-  version "31.0.0.96"
-  sha256 "820bfd701177320f152ac2b70f4538e7cd970905520c591e46209a6bca897125"
+  version "33.1.1.444"
+  sha256 :no_check
 
-  url "https://airdownload.adobe.com/air/mac/download/#{version.major_minor}/AIRSDK_Compiler.dmg"
-  appcast "https://helpx.adobe.com/au/air/kb/archived-air-sdk-version.html"
+  url "https://airsdk.harman.com/api/versions/#{version}/sdks/AIRSDK_MacOS.zip?id=79770"
   name "Adobe AIR SDK"
-  homepage "https://www.adobe.com/devnet/air/air-sdk-download.html"
+  homepage "https://airsdk.harman.com"
+
+  livecheck do
+    url "https://airsdk.harman.com/download"
+  end
 
   binary "bin/aasdoc.wrapper.sh",     target: "aasdoc"
   binary "bin/acompc.wrapper.sh",     target: "acompc"
