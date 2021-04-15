@@ -4,6 +4,7 @@ cask "logicsniffer" do
 
   url "https://lxtreme.nl/ols/ols-#{version}-full.dmg"
   name "Logic Sniffer"
+  desc "Software client for the Open Bench Logic Sniffer logic analyser hardware"
   homepage "https://lxtreme.nl/projects/ols/"
 
   livecheck do
