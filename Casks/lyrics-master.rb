@@ -4,6 +4,7 @@ cask "lyrics-master" do
 
   url "http://www.kenichimaehashi.com/lyricsmaster/download/LyricsMaster#{version.no_dots}.dmg"
   name "Lyrics Master"
+  desc "Find and download lyrics"
   homepage "http://www.kenichimaehashi.com/lyricsmaster/"
 
   livecheck do
