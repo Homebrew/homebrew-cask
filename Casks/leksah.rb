@@ -4,6 +4,7 @@ cask "leksah" do
 
   url "http://www.leksah.org/packages/leksah-#{version}.dmg"
   name "Leksah"
+  desc "Haskell IDE"
   homepage "http://leksah.org/"
 
   livecheck do
