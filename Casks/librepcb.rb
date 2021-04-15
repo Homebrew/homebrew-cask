@@ -4,6 +4,7 @@ cask "librepcb" do
 
   url "https://download.librepcb.org/releases/#{version}/librepcb-#{version}-mac-x86_64.dmg"
   name "LibrePCB"
+  desc "EDA software to develop printed circuit boards"
   homepage "https://librepcb.org/"
 
   livecheck do
