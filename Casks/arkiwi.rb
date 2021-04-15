@@ -4,7 +4,7 @@ cask "arkiwi" do
 
   url "https://www.mariogt.com/appsChest/ArKiwi#{version.dots_to_hypens}.zip"
   name "ArKiwi"
-  desc "Blazing fast and optimized macOS file archiver"
+  desc "Blazing fast and optimized file archiver"
   homepage "https://www.mariogt.com/arkiwi.html"
 
   livecheck do
