@@ -4,6 +4,7 @@ cask "komodo-edit" do
 
   url "https://downloads.activestate.com/Komodo/releases/#{version.before_comma}/Komodo-Edit-#{version.before_comma}-#{version.after_comma}-macosx-x86_64.dmg"
   name "Komodo Edit"
+  desc "Text editor"
   homepage "https://www.activestate.com/komodo-edit/"
 
   livecheck do
