@@ -4,6 +4,7 @@ cask "mps" do
 
   url "https://download.jetbrains.com/mps/#{version.major_minor}/MPS-#{version.before_comma}-macos.dmg"
   name "JetBrains MPS"
+  desc "Create your own domain-specific language"
   homepage "https://www.jetbrains.com/mps/"
 
   livecheck do
