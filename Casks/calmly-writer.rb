@@ -4,8 +4,8 @@ cask "calmly-writer" do
 
   url "https://www.calmlywriter.com/releases/arm64/Calmly%20Writer-#{version}.pkg"
   name "Calmly Writer"
-  desc "Calmly Writer is an editor designed to focus on what you want to tell, with a simple, unoptrusive and ease-to-use user interface."
-  homepage "https://calmlywriter.com"
+  desc "Editor designed to focus on what you want to tell"
+  homepage "https://calmlywriter.com/"
 
   pkg "Calmly Writer-#{version}.pkg"
 
