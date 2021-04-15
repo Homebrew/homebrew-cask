@@ -8,8 +8,8 @@ cask "adobe-air-sdk" do
   homepage "https://airsdk.harman.com/"
 
   livecheck do
-    url "https://airsdk.harman.com/download"
-    regex(/AIR\s*(\d+(?:\.\d+)*)/i)
+    url "https://airsdk.harman.com/api/config-settings/download"
+    regex(/"versionName"\s*:\s*"(\d+(?:\.\d+)*)/i)
   end
 
   binary "bin/aasdoc.wrapper.sh",     target: "aasdoc"
