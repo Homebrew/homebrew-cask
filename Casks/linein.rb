@@ -3,9 +3,14 @@ cask "linein" do
   sha256 "583ce553838779116d5b25f20a3855260a1e8580f9b55a134a58a24bfdf31c96"
 
   url "https://rogueamoeba.com/legacy/downloads/LineIn-#{version.no_dots}.zip"
-  appcast "https://rogueamoeba.com/freebies/version-linein.rss"
   name "LineIn"
+  desc "Audio play-thru of input devices"
   homepage "https://www.rogueamoeba.com/freebies/"
+
+  livecheck do
+    url "https://rogueamoeba.com/freebies/version-linein.rss"
+    strategy :sparkle
+  end
 
   depends_on macos: "<= :mojave"
 
