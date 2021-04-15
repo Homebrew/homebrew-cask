@@ -4,7 +4,8 @@ cask "missive" do
 
   url "https://d1weoh55n7oehu.cloudfront.net/#{version}/Missive-#{version}.dmg",
       verified: "d1weoh55n7oehu.cloudfront.net/"
-  name "missive"
+  name "Missive"
+  desc "Team inbox and chat tool"
   homepage "https://missiveapp.com/"
 
   livecheck do
