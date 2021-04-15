@@ -4,6 +4,7 @@ cask "mcreator" do
 
   url "https://mcreator.net/repository/#{version.dots_to_hyphens}/MCreator%20#{version}%20Mac%2064bit.dmg"
   name "MCreator"
+  desc "Software used to make Minecraft Java Edition mods"
   homepage "https://mcreator.net/"
 
   livecheck do
