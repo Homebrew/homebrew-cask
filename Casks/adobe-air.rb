@@ -7,7 +7,7 @@ cask "adobe-air" do
   homepage "https://airsdk.harman.com/runtime"
 
   livecheck do
-    url :homepage
+    url "https://airsdk.harman.com/main.df64a052216e26eaedd8.js"
     strategy :page_match
     regex(/version\s*(\d+(?:\.\d+)*)/i)
   end
