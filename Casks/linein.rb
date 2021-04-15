@@ -4,6 +4,7 @@ cask "linein" do
 
   url "https://rogueamoeba.com/legacy/downloads/LineIn-#{version.no_dots}.zip"
   name "LineIn"
+  desc "Audio play-thru of input devices"
   homepage "https://www.rogueamoeba.com/freebies/"
 
   livecheck do
