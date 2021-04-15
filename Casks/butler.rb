@@ -4,6 +4,7 @@ cask "butler" do
 
   url "https://manytricks.com/download/butler"
   name "Butler"
+  desc "Arrange your tasks in a customizable configuration"
   homepage "https://manytricks.com/butler/"
 
   livecheck do
