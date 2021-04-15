@@ -4,6 +4,7 @@ cask "keyfinder" do
 
   url "http://www.ibrahimshaath.co.uk/keyfinder/bins/KeyFinder-OSX-#{version.dots_to_hyphens}.zip"
   name "KeyFinder"
+  desc "Music key detection tool"
   homepage "http://www.ibrahimshaath.co.uk/keyfinder/"
 
   livecheck do
