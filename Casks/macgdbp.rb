@@ -4,6 +4,7 @@ cask "macgdbp" do
 
   url "https://www.bluestatic.org/downloads/macgdbp/macgdbp-#{version.before_comma}.zip"
   name "MacGDBp"
+  desc "Live, interactive debugging of your running PHP applications"
   homepage "https://www.bluestatic.org/software/macgdbp/"
 
   livecheck do
