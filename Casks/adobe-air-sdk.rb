@@ -4,7 +4,7 @@ cask "adobe-air-sdk" do
 
   url "https://airsdk.harman.com/api/versions/#{version}/sdks/AIRSDK_MacOS.zip?id=79770"
   name "Adobe AIR SDK"
-  homepage "https://airsdk.harman.com"
+  homepage "https://airsdk.harman.com/"
 
   livecheck do
     url "https://airsdk.harman.com/download"
