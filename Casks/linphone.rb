@@ -4,6 +4,7 @@ cask "linphone" do
 
   url "https://www.linphone.org/releases/macosx/app/Linphone-#{version}-mac.dmg"
   name "Linphone"
+  desc "Software for communication systems developers"
   homepage "https://www.linphone.org/"
 
   livecheck do
