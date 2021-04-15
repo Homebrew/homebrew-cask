@@ -7,12 +7,6 @@ cask "arkiwi" do
   desc "Blazing fast and optimized file archiver"
   homepage "https://www.mariogt.com/arkiwi.html"
 
-  livecheck do
-    url :homepage
-    strategy :page_match
-    regex(/Download ArKiwi \(ver (\d+(?:\.\d+)*)\)/i)
-  end
-
   app "ArKiwi.app"
 
   zap trash: [
