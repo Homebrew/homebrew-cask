@@ -10,6 +10,7 @@ cask "intellij-idea" do
   end
 
   name "IntelliJ IDEA Ultimate"
+  desc "Java IDE by JetBrains"
   homepage "https://www.jetbrains.com/idea/"
 
   livecheck do
