@@ -5,6 +5,7 @@ cask "kubernetic" do
   url "https://kubernetic.s3.amazonaws.com/Kubernetic-#{version}.dmg",
       verified: "kubernetic.s3.amazonaws.com/"
   name "Kubernetic"
+  desc "Kubernetes desktop client"
   homepage "https://kubernetic.com/"
 
   livecheck do
