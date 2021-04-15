@@ -4,6 +4,7 @@ cask "komodo-ide" do
 
   url "https://downloads.activestate.com/Komodo/releases/#{version.before_comma}/Komodo-IDE-#{version.before_comma}-#{version.after_comma}-macosx-x86_64.dmg"
   name "Komodo IDE"
+  desc "One IDE for all your languages"
   homepage "https://www.activestate.com/komodo-ide/"
 
   livecheck do
