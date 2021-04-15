@@ -10,8 +10,8 @@ cask "docker" do
       strategy :sparkle
     end
   else
-    version "3.3.0,62632"
-    sha256 "648e36a83811c7041a97a41c050073b9ec50602c588e692501df2c14ef4b66a3"
+    version "3.3.1,63152"
+    sha256 "68b5038b09292aa3b2acb62f9edc5d2fdc314f37cc020ce4cf282d7114248070"
 
     url "https://desktop.docker.com/mac/stable/arm64/#{version.after_comma}/Docker.dmg"
 
