@@ -4,6 +4,7 @@ cask "navicat-for-postgresql" do
 
   url "http://download.navicat.com/download/navicat#{version.major_minor.no_dots}_pgsql_en.dmg"
   name "Navicat for PostgreSQL"
+  desc "Database administration and development tool for PostgreSQL"
   homepage "https://www.navicat.com/products/navicat-for-postgresql"
 
   livecheck do
