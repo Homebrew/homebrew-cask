@@ -4,7 +4,7 @@ cask "adobe-air" do
 
   url "https://airsdk.harman.com/assets/downloads/AdobeAIR.dmg"
   name "Adobe AIR"
-  homepage "https://airsdk.harman.com/runtime"
+  homepage "https://airsdk.harman.com/"
 
   livecheck do
     url "https://airsdk.harman.com/api/config-settings/download"
