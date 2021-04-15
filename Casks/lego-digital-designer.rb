@@ -4,6 +4,7 @@ cask "lego-digital-designer" do
 
   url "https://www.lego.com/assets/franchisesites/ldd/installer/SetupLDD-MAC-#{version.dots_to_underscores}.zip"
   name "Lego Digital Designer"
+  desc "Build models using virtual Lego bricks"
   homepage "https://www.lego.com/en-us/ldd"
 
   livecheck do
