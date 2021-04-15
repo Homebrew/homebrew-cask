@@ -4,6 +4,7 @@ cask "mailplane" do
 
   url "https://builds.mailplaneapp.com/Mailplane_#{version.major}_#{version.after_comma}.tbz"
   name "Mailplane"
+  desc "Gmail client"
   homepage "https://mailplaneapp.com/"
 
   livecheck do
