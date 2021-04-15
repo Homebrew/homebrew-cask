@@ -21,4 +21,11 @@ cask "logseq" do
   auto_updates true
 
   app "Logseq.app"
+
+  zap trash: [
+    "~/Library/Application Support/Logseq",
+    "~/Library/Logs/Logseq",
+    "~/Library/Preferences/com.electron.logseq.plist",
+    "~/Library/Saved Application State/com.electron.logseq.savedState",
+  ]
 end
