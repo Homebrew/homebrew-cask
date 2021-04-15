@@ -14,8 +14,8 @@ cask "logseq" do
   homepage "https://github.com/logseq/logseq"
 
   livecheck do
-     url :url
-     strategy :github_latest
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true
