@@ -13,7 +13,7 @@ cask "arkiwi" do
     regex(/Download ArKiwi \(ver (\d+(?:\.\d+)*)\)/i)
   end
 
-3  app "ArKiwi.app"
+  app "ArKiwi.app"
 
   zap trash: [
     "~/Library/Containers/com.mariogt.arkiwi/Data/Library/Application Support/ArKiwi",
