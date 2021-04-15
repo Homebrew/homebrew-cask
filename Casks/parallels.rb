@@ -8,9 +8,8 @@ cask "parallels" do
   homepage "https://www.parallels.com/products/desktop/"
 
   livecheck do
-    url "https://kb.parallels.com/en/125053"
-    strategy :page_match
-    regex(/Version\s*(\d+(?:\.\d+)*)(?:\s*\((\d+)\))?/i)
+    url "https://www.parallels.com/directdownload/pd16/intel/"
+    strategy :header_match
   end
 
   auto_updates true
