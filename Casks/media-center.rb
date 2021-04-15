@@ -4,6 +4,7 @@ cask "media-center" do
 
   url "https://files.jriver.com/mediacenter/channels/v#{version.major}/stable/MediaCenter#{version.no_dots}.dmg"
   name "JRiver Media Center"
+  desc "Manage and play your media"
   homepage "https://www.jriver.com/"
 
   livecheck do
