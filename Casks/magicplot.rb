@@ -4,6 +4,7 @@ cask "magicplot" do
 
   url "https://magicplot.com/downloads/MagicPlot#{version}.zip"
   name "MagicPlot"
+  desc "Software for nonlinear fitting, plotting and data analysis"
   homepage "https://magicplot.com/"
 
   livecheck do
