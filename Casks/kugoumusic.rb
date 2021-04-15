@@ -4,6 +4,7 @@ cask "kugoumusic" do
 
   url "http://downmini.kugou.com/mac/Kugou_V#{version}.dmg"
   name "Kugou Music"
+  desc "Digital music service"
   homepage "https://www.kugou.com/"
 
   livecheck do
