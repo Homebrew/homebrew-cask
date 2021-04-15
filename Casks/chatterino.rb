@@ -8,7 +8,7 @@ cask "chatterino" do
   homepage "https://chatterino.com/"
 
   livecheck do
-    url :homepage
+    url "https://notitia.chatterino.com/version/chatterino/macos/stable"
     strategy :page_match
     regex(%r{span>macOS \(v(.*)\)</span}i)
   end
