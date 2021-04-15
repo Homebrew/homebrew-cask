@@ -4,6 +4,7 @@ cask "jprofiler" do
 
   url "https://download-gcdn.ej-technologies.com/jprofiler/jprofiler_macos_#{version.dots_to_underscores}.dmg"
   name "JProfiler"
+  desc "Java profiler"
   homepage "https://www.ej-technologies.com/products/jprofiler/overview.html"
 
   livecheck do
