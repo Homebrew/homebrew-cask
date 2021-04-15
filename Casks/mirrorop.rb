@@ -4,6 +4,7 @@ cask "mirrorop" do
 
   url "https://www.barco.com/services/website/en/TdeFiles/Download?FileNumber=R33050100&TdeType=3&MajorVersion=#{version.major}&MinorVersion=#{version.minor}&PatchVersion=#{version.patch}&BuildVersion=#{version.split(".")[-1]}"
   name "MirrorOp Sender"
+  desc "Mirroring software application for wePresent systems"
   homepage "https://www.barco.com/en/product/mirrorop"
 
   livecheck do
