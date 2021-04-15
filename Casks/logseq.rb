@@ -13,6 +13,11 @@ cask "logseq" do
   desc "Privacy-first, open-source platform for knowledge sharing and management"
   homepage "https://github.com/logseq/logseq"
 
+  livecheck do
+     url :url
+     strategy :github_latest
+   end
+
   auto_updates true
 
   app "Logseq.app"
