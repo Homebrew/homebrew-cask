@@ -9,6 +9,7 @@ cask "adobe-air-sdk" do
 
   livecheck do
     url "https://airsdk.harman.com/api/config-settings/download"
+    strategy :page_match
     regex(/"versionName"\s*:\s*"(\d+(?:\.\d+)*)/i)
   end
 
