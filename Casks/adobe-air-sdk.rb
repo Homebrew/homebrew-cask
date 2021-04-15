@@ -2,7 +2,8 @@ cask "adobe-air-sdk" do
   version "33.1.1.444"
   sha256 :no_check
 
-  url "https://airsdk.harman.com/api/versions/#{version}/sdks/AIRSDK_MacOS.zip?id=79770"
+  url "https://airsdk.harman.com/api/versions/#{version}/sdks/AIRSDK_MacOS.zip?id=93281",
+      cookies: { "JSESSIONID" => "48100F2260F62F821B2F7BA9C207E02D" }
   name "Adobe AIR SDK"
   homepage "https://airsdk.harman.com/"
 
