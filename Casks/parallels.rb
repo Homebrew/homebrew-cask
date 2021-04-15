@@ -8,7 +8,7 @@ cask "parallels" do
   homepage "https://www.parallels.com/products/desktop/"
 
   livecheck do
-    url "https://www.parallels.com/directdownload/pd16/intel/"
+    url "https://www.parallels.com/directdownload/pd#{version.major}/intel/"
     strategy :header_match
   end
 
