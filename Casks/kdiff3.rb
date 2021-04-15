@@ -5,6 +5,7 @@ cask "kdiff3" do
 
   url "https://download.kde.org/stable/kdiff3/kdiff3-#{version}-macos-64.dmg"
   name "KDiff3"
+  desc "Utility for comparing and merging files and directories"
   homepage "https://invent.kde.org/sdk/kdiff3"
 
   livecheck do
