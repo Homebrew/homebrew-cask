@@ -3,10 +3,14 @@ cask "devonthink" do
   sha256 "94fdcd1e920704ee3d03e4db06119f654276762243486a1e6fd86c7e415822c1"
 
   url "https://download.devontechnologies.com/download/devonthink/#{version}/DEVONthink_#{version.major}.app.zip"
-  appcast "https://api.devontechnologies.com/1/apps/sparkle/sparkle.php?id=300900000"
   name "DEVONthink"
   desc "Collect, organize, edit and annotate documents"
   homepage "https://www.devontechnologies.com/apps/devonthink/"
+
+  livecheck do
+    url "https://api.devontechnologies.com/1/apps/sparkle/sparkle.php?id=300900000"
+    strategy :sparkle
+  end
 
   auto_updates true
 

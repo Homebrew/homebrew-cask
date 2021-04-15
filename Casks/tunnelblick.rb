@@ -1,6 +1,6 @@
 cask "tunnelblick" do
-  version "3.8.4a,5601"
-  sha256 "a693270cd731875de71819f845ba0ba538c66a0bf12b94672edac2b57f23b48c"
+  version "3.8.5,5670"
+  sha256 "1c7f4f441b472bfa841686dd981802caafa658b9a284e2b4c62d6918cd115bef"
 
   url "https://github.com/Tunnelblick/Tunnelblick/releases/download/v#{version.before_comma}/Tunnelblick_#{version.before_comma}_build_#{version.after_comma}.dmg",
       verified: "github.com/Tunnelblick/Tunnelblick/"

@@ -1,6 +1,6 @@
 cask "maciasl" do
-  version "1.5.9"
-  sha256 "706bdb1ca7dde9a17c4d0b695a36bbc6191f9fd7b58b2772b82cf16147407f94"
+  version "1.6.0"
+  sha256 "afaf1ecfb8aab59172829e34a0f82cd5f32eb92203043b65e540412ca2368cec"
 
   url "https://github.com/acidanthera/MaciASL/releases/download/#{version}/MaciASL-#{version}-RELEASE.zip"
   name "MaciASL"

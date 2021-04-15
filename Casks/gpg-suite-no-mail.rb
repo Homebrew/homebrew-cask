@@ -17,7 +17,7 @@ cask "gpg-suite-no-mail" do
     "gpg-suite",
     "gpg-suite-nightly",
     "gpg-suite-pinentry",
-  ]
+  ], formula: "gpg"
   depends_on macos: ">= :sierra"
 
   pkg "Install.pkg",

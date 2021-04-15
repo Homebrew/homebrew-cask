@@ -1,5 +1,5 @@
 cask "devbook" do
-  version "0.1.14"
+  version "0.1.16"
   sha256 :no_check
 
   name "Devbook"
@@ -8,9 +8,7 @@ cask "devbook" do
 
   livecheck do
     url "https://download.todesktop.com/2102273jsy18baz/latest-mac.yml"
-    strategy :page_match do |page|
-      YAML.safe_load(page)["version"]
-    end
+    strategy :electron_builder
   end
 
   if Hardware::CPU.intel?

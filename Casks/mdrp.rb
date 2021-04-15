@@ -1,6 +1,6 @@
 cask "mdrp" do
-  version "9.0.2"
-  sha256 "e146b80260d4a194895245f767c698f00bbc568dfcc4c76e3de3991dc5e72710"
+  version "9.1.0"
+  sha256 "044384eaa81118ad78c0878f669858a7749af3114d0e052fb0cd6a63021bc4cf"
 
   url "https://www.macdvdripperpro.com/MDRP_v#{version.no_dots}.zip"
   name "Mac DVDRipper Pro"
@@ -9,7 +9,10 @@ cask "mdrp" do
 
   livecheck do
     url "https://www.macdvdripperpro.com/mdrp_sparkle#{version.major}.xml"
-    strategy :sparkle
+    strategy :page_match do |page|
+      match = page.match(/MDRP_v(\d)(\d)(\d)\.zip/i)
+      "#{match[1]}.#{match[2]}.#{match[3]}"
+    end
   end
 
   app "MDRP.app"

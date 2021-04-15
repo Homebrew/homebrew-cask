@@ -1,12 +1,17 @@
 cask "dynobase" do
-  version "1.3.4"
-  sha256 "5ee94a9841b2808bf3f55dd4f5a66a1b00c4b6bc6d053c797196ad63c6c934d7"
+  version "1.3.6"
+  sha256 "2a7f91f64be8e295fd3fa7e7fcabcf95f80d9cfd9f897452762dfa21d709e012"
 
   url "https://github.com/Dynobase/dynobase/releases/download/#{version}/Dynobase-#{version}.dmg",
       verified: "github.com/Dynobase/dynobase/"
   name "Dynobase"
   desc "GUI Client for DynamoDB"
   homepage "https://dynobase.dev/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Dynobase.app"
 

@@ -1,23 +1,31 @@
 cask "docker" do
-  if MacOS.version <= :el_capitan
-    version "18.06.1-ce-mac73,26764"
-    sha256 "3429eac38cf0d198039ad6e1adce0016f642cdb914a34c67ce40f069cdb047a5"
+  if Hardware::CPU.intel?
+    version "3.3.0,62916"
+    sha256 "d533aa7d4a4a00d49bb78f4488535e577d7674292538c59769daa61e9bff1109"
+
+    url "https://desktop.docker.com/mac/stable/amd64/#{version.after_comma}/Docker.dmg"
+
+    livecheck do
+      url "https://desktop.docker.com/mac/stable/amd64/appcast.xml"
+      strategy :sparkle
+    end
   else
-    version "3.2.2,61853"
-    sha256 "c44d4039f46ea0df07c2fe7825ca80c02cea9b6c4ac1646263b6a960cdbeaa6b"
+    version "3.3.0,62632"
+    sha256 "648e36a83811c7041a97a41c050073b9ec50602c588e692501df2c14ef4b66a3"
+
+    url "https://desktop.docker.com/mac/stable/arm64/#{version.after_comma}/Docker.dmg"
+
+    livecheck do
+      url "https://desktop.docker.com/mac/stable/arm64/appcast.xml"
+      strategy :sparkle
+    end
   end
 
-  url "https://desktop.docker.com/mac/stable/amd64/#{version.after_comma}/Docker.dmg"
   name "Docker Desktop"
   name "Docker Community Edition"
   name "Docker CE"
   desc "App to build and share containerized applications and microservices"
   homepage "https://www.docker.com/products/docker-desktop"
-
-  livecheck do
-    url "https://desktop.docker.com/mac/stable/appcast.xml"
-    strategy :sparkle
-  end
 
   auto_updates true
 

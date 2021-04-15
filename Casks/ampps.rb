@@ -3,9 +3,15 @@ cask "ampps" do
   sha256 "7395bdcb3958cef4c3274cc1c6c68444104e6e464f692a76b61ead878236ec7d"
 
   url "https://files.ampps.com/AMPPS-#{version}.dmg"
-  appcast "https://www.ampps.com/downloads"
   name "AMPPS"
+  desc "Software stack for website development"
   homepage "https://www.ampps.com/"
+
+  livecheck do
+    url "https://www.ampps.com/downloads"
+    strategy :page_match
+    regex(%r{href=.*?/AMPPS-(\d+(?:\.\d+)*)-x86_64\.dmg}i)
+  end
 
   suite "AMPPS"
 

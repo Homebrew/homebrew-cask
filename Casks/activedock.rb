@@ -1,5 +1,5 @@
 cask "activedock" do
-  version "2.80,2095"
+  version "2.87,2097"
   sha256 :no_check
 
   url "https://macplus-software.com/downloads/ActiveDock.zip",

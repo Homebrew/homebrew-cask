@@ -4,13 +4,11 @@ cask "zoom" do
   if Hardware::CPU.intel?
     sha256 "e0b01025388de07b292c7f14a13ea9041fa6333e308b115210c3fa3610a60521"
 
-    url "https://d11yldzmag5yn.cloudfront.net/prod/#{version}/Zoom.pkg",
-        verified: "d11yldzmag5yn.cloudfront.net/"
+    url "https://cdn.zoom.us/prod/#{version}/Zoom.pkg"
   else
     sha256 "3f860a6c37e99634b24747ec948f66cb2f466f4c2af542cd9517a5c25e8a6026"
 
-    url "https://d11yldzmag5yn.cloudfront.net/prod/#{version}/arm64/Zoom.pkg",
-        verified: "d11yldzmag5yn.cloudfront.net/"
+    url "https://cdn.zoom.us/prod/#{version}/arm64/Zoom.pkg"
   end
 
   name "Zoom.us"

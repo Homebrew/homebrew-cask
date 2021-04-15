@@ -1,13 +1,19 @@
 cask "acquia-dev" do
-  version "2.2020.09.23"
-  sha256 "3fda351ecda5d19ecaccdd3f3b8fa4930afe84943a14f9cdbd2aed62c25c5495"
+  version "2.2021.01.14"
+  sha256 "91c4d524ed5e218897a7284480e616f833e59e91cadafa966563e8034fdee19a"
 
-  url "https://dev.acquia.com/sites/default/files/file/#{version.minor_patch.dots_to_hyphens}/AcquiaDevDesktop-#{version.dots_to_hyphens}.dmg"
-  appcast "https://dev.acquia.com/downloads",
-          must_contain: version.dots_to_hyphens
+  url "https://dev.acquia.com/sites/default/files/file/#{version.minor_patch.dots_to_hyphens}/AcquiaDevDesktop-#{version.dots_to_hyphens}-osx-installer_0.zip"
   name "Acquia Dev Desktop"
   desc "Install, test, and build Drupal sites locally"
   homepage "https://www.acquia.com/drupal/acquia-dev-desktop"
+
+  livecheck do
+    url "https://dev.acquia.com/downloads"
+    strategy :page_match do |page|
+      v = page[%r{href=.*?/AcquiaDevDesktop-(\d+(?:-\d+)*)-osx-installer_0\.zip}, 1]
+      v.tr("-", ".")
+    end
+  end
 
   installer manual: "Acquia Dev Desktop Installer.app"
 

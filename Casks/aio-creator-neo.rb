@@ -1,5 +1,5 @@
 cask "aio-creator-neo" do
-  version "2.9.3"
+  version "2.9.4"
   sha256 :no_check
 
   url "https://s3-eu-west-1.amazonaws.com/mediola-download/creator_neo/release/aioCreatorNeoInstaller.dmg",
@@ -7,6 +7,11 @@ cask "aio-creator-neo" do
   name "AIO CREATOR NEO"
   desc "Automation manager for smart home devices"
   homepage "https://www.mediola.com/en/products"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   pkg "AIO CREATOR NEO installieren.pkg"
 

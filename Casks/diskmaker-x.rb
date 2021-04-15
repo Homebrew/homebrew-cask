@@ -5,14 +5,19 @@ cask "diskmaker-x" do
 
     app "DiskMaker X #{version.major} for macOS Mojave.app"
   else
-    version "9"
+    version "9.0"
     sha256 "96845cd375543401b822fb4e17d2ecc300fcb621f56afcdad613ae11c9afddce"
 
     app "DiskMaker X #{version.major} for macOS Catalina.app"
+
+    livecheck do
+      url "https://diskmakerx.com/"
+      strategy :page_match
+      regex(/DiskMaker\s*X\s*(\d+(?:\.\d+)*)/i)
+    end
   end
 
-  url "https://diskmakerx.com/downloads/DiskMaker_X_#{version.no_dots}.dmg"
-  appcast "https://diskmakerx.com/feed/"
+  url "https://diskmakerx.com/downloads/DiskMaker_X_#{version.major}.dmg"
   name "DiskMaker X"
   desc "Tool to build a system install disk"
   homepage "https://diskmakerx.com/"

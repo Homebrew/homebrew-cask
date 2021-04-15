@@ -1,6 +1,6 @@
 cask "vapor" do
-  version "3.3.0"
-  sha256 "13c2937f1ce9d25cb0aef3ea7fc4430386cbff73771502f2725a81591f08c792"
+  version "3.4.0"
+  sha256 "ebe3494eb45c098bdc3df0e4cb41a6699f7856147633d90388e99cb3b4221710"
 
   url "https://github.com/NCAR/VAPOR/releases/download/#{version}/VAPOR3-#{version}-Darwin.dmg"
   name "VAPOR"

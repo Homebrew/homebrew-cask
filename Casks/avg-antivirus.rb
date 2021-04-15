@@ -1,11 +1,16 @@
 cask "avg-antivirus" do
-  version :latest
+  version "4.0,2.0"
   sha256 :no_check
 
   url "https://s-install.avcdn.net/mac-av/10_10/AAVG/avg_mac_security_online.dmg",
       verified: "s-install.avcdn.net/mac-av/"
   name "AVG Antivirus for Mac"
   homepage "https://www.avg.com/us-en/avg-antivirus-for-mac"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   pkg "Install AVG AntiVirus.pkg"
 

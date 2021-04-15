@@ -1,6 +1,6 @@
 cask "switchresx" do
   version "4.11"
-  sha256 "053ded96f23d25ae2b40ecb1b63f9d609036c8569829b5341b8beced08aa7a50"
+  sha256 "c1d154cf4db71679775bc6306d6abe33a5cef6108dd8177aca91d931549fcb85"
 
   url "https://www.madrau.com/data/switchresx/SwitchResX#{version.major}.zip"
   name "SwitchResX"

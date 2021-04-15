@@ -3,9 +3,15 @@ cask "mono-mdk" do
   sha256 "e4b9964477a05474b6a182b0ca08701c7c56beedd4afb7a8f2ac4af5d26fb1fa"
 
   url "https://download.mono-project.com/archive/#{version.major_minor_patch}/macos-10-universal/MonoFramework-MDK-#{version}.macos10.xamarin.universal.pkg"
-  appcast "https://www.mono-project.com/download/stable/"
   name "Mono"
+  desc "Open source implementation of Microsoft's .NET Framework"
   homepage "https://www.mono-project.com/"
+
+  livecheck do
+    url "https://www.mono-project.com/download/stable/"
+    strategy :page_match
+    regex(%r{href=.*?/MonoFramework-MDK-(\d+(?:\.\d+)*).macos10.xamarin.universal\.pkg}i)
+  end
 
   conflicts_with cask: "homebrew/cask-versions/mono-mdk-for-visual-studio"
 

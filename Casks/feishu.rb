@@ -1,16 +1,35 @@
 cask "feishu" do
-  version "3.43.5,f94a8c"
-  sha256 "c7d192ba13a687bf62ed0b042fee18fe9291fc37a13d548c52e318f12a2d3034"
+  version "3.46.9,061e09"
+  sha256 "c49a282d163f1ff7453819537551ef82cffca69c19bcefb41936a0524168b19a"
 
-  url "https://sf3-eecdn-tos.pstatp.com/obj/ee-appcenter/#{version.after_comma}/feishu-mac-#{version.before_comma}.dmg",
-      verified: "sf3-eecdn-tos.pstatp.com/"
-  appcast "https://www.feishu.cn/api/downloads"
+  url "https://sf3-cn.feishucdn.com/obj/ee-appcenter/#{version.after_comma}/feishu-mac-#{version.before_comma}.dmg",
+      verified: "sf3-cn.feishucdn.com/"
   name "feishu"
   desc "Project management software"
   homepage "https://www.feishu.cn/"
+
+  livecheck do
+    url "https://www.feishu.cn/api/downloads"
+    strategy :page_match do |page|
+      match = page.match(%r{sf3-cn\.feishucdn\.com/obj/ee-appcenter/(\w+)/feishu-mac-(\d+(?:\.\d+)*)\.dmg}i)
+      "#{match[2]},#{match[1]}"
+    end
+  end
 
   auto_updates true
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "Lark.app", target: "Feishu.app"
+
+  zap trash: [
+    # feishu
+    "~/Library/Caches/com.bytedance.lark.helper",
+    "~/Library/Preferences/com.bytedance.lark.helper.plist",
+    # lark
+    "~/Library/Caches/com.electron.lark.helper",
+    "~/Library/Preferences/com.electron.lark.helper.plist",
+    # both
+    "~/Library/Caches/com.electron.lark",
+    "~/Library/Saved Application State/com.electron.lark.savedState",
+  ]
 end
