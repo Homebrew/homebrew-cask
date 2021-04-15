@@ -4,6 +4,7 @@ cask "macdive" do
 
   url "https://www.mac-dive.com/downloads/MacDive_#{version}.dmg"
   name "MacDive"
+  desc "Digital dive log"
   homepage "https://www.mac-dive.com/"
 
   livecheck do
