@@ -4,6 +4,7 @@ cask "mousepose" do
 
   url "https://cdn.boinx.com/software/mousepose/Boinx_Mousepose_#{version.before_comma}-#{version.after_comma}.app.zip"
   name "Mouseposé"
+  desc "Highlight your mouse pointer and cursor position"
   homepage "https://boinx.com/mousepose/overview/"
 
   livecheck do
