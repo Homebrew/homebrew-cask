@@ -4,6 +4,7 @@ cask "mesasqlite" do
 
   url "http://www.desertsandsoftware.com/DEMOS/MesaSQLite#{version.no_dots}.zip"
   name "MesaSQLite"
+  desc "Create, design and alter an SQLite3 database"
   homepage "http://www.desertsandsoftware.com/wordpress/?page_id=17"
 
   livecheck do
