@@ -4,6 +4,7 @@ cask "key-codes" do
 
   url "https://manytricks.com/download/keycodes"
   name "Key Codes"
+  desc "Display key code, unicode value and modifier keys state for any key combination"
   homepage "https://manytricks.com/keycodes/"
 
   livecheck do
