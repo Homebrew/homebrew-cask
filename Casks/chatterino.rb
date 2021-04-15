@@ -10,7 +10,7 @@ cask "chatterino" do
   livecheck do
     url "https://notitia.chatterino.com/version/chatterino/macos/stable"
     strategy :page_match
-    regex(%r{span>macOS \(v(.*)\)</span}i)
+    regex(%r{"version":"(\d+\.\d+\.\d+(-\w+)?)"}i)
   end
 
   app "chatterino.app"
