@@ -4,6 +4,7 @@ cask "kapow" do
 
   url "https://gottcode.org/kapow/Kapow_#{version}.dmg"
   name "Kapow"
+  desc "Punch clock program"
   homepage "https://gottcode.org/kapow/"
 
   livecheck do
