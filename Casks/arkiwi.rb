@@ -14,4 +14,9 @@ cask "arkiwi" do
   end
 
   app "ArKiwi.app"
+
+  zap trash: [
+        "~/Library/Containers/com.mariogt.arkiwi/Data/Library/Application\ Support/ArKiwi",
+        "~/Library/Containers/com.mariogt.arkiwi/Data/Library/Preferences/com.mariogt.arkiwi.plist",
+      ]
 end
