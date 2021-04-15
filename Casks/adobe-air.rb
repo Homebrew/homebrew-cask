@@ -7,9 +7,9 @@ cask "adobe-air" do
   homepage "https://airsdk.harman.com/runtime"
 
   livecheck do
-    url "https://airsdk.harman.com/main.df64a052216e26eaedd8.js"
+    url "https://airsdk.harman.com/api/config-settings/download"
     strategy :page_match
-    regex(/version\s*(\d+(?:\.\d+)*)/i)
+    regex(/"versionName"\s*:\s*"(\d+(?:\.\d+)*)/i)
   end
 
   installer script: {
