@@ -4,6 +4,7 @@ cask "leech" do
 
   url "https://manytricks.com/download/leech"
   name "Leech"
+  desc "Lightweight download manager"
   homepage "https://manytricks.com/leech/"
 
   livecheck do
