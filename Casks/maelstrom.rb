@@ -4,6 +4,7 @@ cask "maelstrom" do
 
   url "https://www.libsdl.org/projects/Maelstrom/bin/Maelstrom-#{version}-MacOSX.dmg"
   name "Maelstrom"
+  desc "Multidirectional shooter game"
   homepage "https://www.libsdl.org/projects/Maelstrom/index.html"
 
   livecheck do
