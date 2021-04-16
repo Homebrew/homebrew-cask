@@ -4,13 +4,13 @@ cask "netbeans" do
 
   url "https://www-eu.apache.org/dist/netbeans/netbeans/#{version}/Apache-NetBeans-#{version}-bin-macosx.dmg"
   name "NetBeans IDE"
-  desc "Open-source development environment, tooling"
+  desc "Development environment, tooling platform and application framework"
   homepage "https://netbeans.apache.org/download/index.html"
 
   livecheck do
     url "https://netbeans.org/downloads/"
     strategy :page_match
-    regex(%r{NetBeans\s*(\d+(?:\.\d+)*)}i)
+    regex(/NetBeans\s*(\d+(?:\.\d+)*)/i)
   end
 
   pkg "Apache NetBeans #{version}.pkg"
