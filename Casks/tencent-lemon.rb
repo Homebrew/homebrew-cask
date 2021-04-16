@@ -4,9 +4,15 @@ cask "tencent-lemon" do
 
   url "https://pm.myapp.com/invc/xfspeed/qqpcmgr/module_update/Lemon_#{version}.dmg",
       verified: "pm.myapp.com/invc/xfspeed/qqpcmgr/"
-  appcast "https://lemon.guanjia.qq.com/latest/package"
   name "Tencent Lemon Cleaner"
-  homepage "https://mac.gj.qq.com/"
+  desc "Cleanup and system status tool"
+  homepage "https://lemon.qq.com/"
+
+  livecheck do
+    url "https://lemon.guanjia.qq.com/latest/package"
+    strategy :page_match
+    regex(/Lemon_(\d+(?:\.\d+)*)\.dmg/i)
+  end
 
   app "Tencent Lemon.app"
 
