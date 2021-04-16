@@ -3,9 +3,15 @@ cask "netlogo" do
   sha256 "ab72b7161401745d71841b0cf711d3755dc88edebfdcb73590e4b8e4b915bbde"
 
   url "https://ccl.northwestern.edu/netlogo/#{version}/NetLogo-#{version}.dmg"
-  appcast "https://ccl.northwestern.edu/netlogo/oldversions.shtml"
   name "NetLogo"
+  desc "Multi-agent programmable modeling environment"
   homepage "https://ccl.northwestern.edu/netlogo/"
+
+  livecheck do
+    url "https://ccl.northwestern.edu/netlogo/oldversions.shtml"
+    strategy :page_match
+    regex(/NetLogo\s*(\d+(?:\.\d+)*)/i)
+  end
 
   suite "NetLogo #{version}"
 
