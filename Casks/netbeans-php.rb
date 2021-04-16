@@ -4,6 +4,7 @@ cask "netbeans-php" do
 
   url "https://download.netbeans.org/netbeans/#{version}/final/bundles/netbeans-#{version}-php-macosx.dmg"
   name "NetBeans IDE for PHP"
+  desc "Development environment, tooling platform and application framework"
   homepage "https://netbeans.org/"
 
   livecheck do
@@ -12,7 +13,7 @@ cask "netbeans-php" do
     regex(/NetBeans\s*(\d+(?:\.\d+)*)/i)
   end
 
-  pkg "NetBeans #{version}.pkg"
+  pkg "Apache NetBeans #{version}.pkg"
 
   uninstall delete: "/Applications/NetBeans"
 end
