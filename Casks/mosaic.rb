@@ -10,7 +10,7 @@ cask "mosaic" do
   livecheck do
     url "https://lightpillar.com/appdata/mosaic/features/version-history.html"
     strategy :page_match
-    regex(%r{Version\s*(\d+(?:\.\d+)*)}i)
+    regex(/Version\s*(\d+(?:\.\d+)*)/i)
   end
 
   pkg "Mosaic_#{version.dots_to_underscores}.pkg"
