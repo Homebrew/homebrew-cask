@@ -1,8 +1,8 @@
 cask "netbeans-php" do
   version "12.3"
-  sha256 "b8662b2b03b96a720c3e3189290cba95b0462df48435ba6f8ef7e8f8d9f26562"
+  sha256 "a34c046619b69e5b13a2618d12336b97bcb404424880fe5d0c4c10ed100da6ba"
 
-  url "https://download.netbeans.org/netbeans/#{version}/final/bundles/netbeans-#{version}-php-macosx.dmg"
+  url "https://downloads.apache.org/netbeans/netbeans/#{version}/Apache-NetBeans-#{version}-bin-macosx.dmg"
   name "NetBeans IDE for PHP"
   desc "Development environment, tooling platform and application framework"
   homepage "https://netbeans.org/"
