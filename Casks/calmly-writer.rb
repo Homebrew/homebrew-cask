@@ -20,5 +20,4 @@ cask "calmly-writer" do
     "~/Library/Preferences/calmlywriter.plist",
     "~/Library/Saved Application State/calmlywriter.savedState",
   ]
-  
 end
