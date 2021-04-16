@@ -4,6 +4,7 @@ cask "lynxlet" do
 
   url "https://habilis.net/lynxlet/Lynxlet_#{version}.dmg"
   name "Lynxlet"
+  desc "Launch Lynx in a Terminal window"
   homepage "https://habilis.net/lynxlet/"
 
   livecheck do
