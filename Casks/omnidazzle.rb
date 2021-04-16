@@ -4,6 +4,7 @@ cask "omnidazzle" do
 
   url "https://downloads.omnigroup.com/software/MacOSX/10.6/OmniDazzle-#{version}.dmg"
   name "OmniDazzle"
+  desc "Set of plug-ins to highlight areas of your screen and your mouse pointer"
   homepage "https://support.omnigroup.com/omnidazzle-troubleshooting/"
 
   livecheck do
