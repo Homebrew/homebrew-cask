@@ -10,6 +10,7 @@ cask "eloston-chromium" do
   url "https://github.com/kramred/ungoogled-chromium-macos/releases/download/#{version}/ungoogled-chromium_#{version}-macos.dmg",
       verified: "github.com/kramred/ungoogled-chromium-macos/"
   name "Ungoogled Chromium"
+  desc "Google Chromium, sans integration with Google"
   homepage "https://ungoogled-software.github.io/ungoogled-chromium-binaries/"
 
   conflicts_with cask: [
