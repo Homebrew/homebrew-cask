@@ -4,7 +4,6 @@ cask "tencent-lemon" do
 
   url "https://pm.myapp.com/invc/xfspeed/qqpcmgr/module_update/Lemon_#{version}.dmg",
       verified: "pm.myapp.com/invc/xfspeed/qqpcmgr/"
-  appcast "https://lemon.guanjia.qq.com/latest/package"
   name "Tencent Lemon Cleaner"
   desc "Cleanup and system status tool"
   homepage "https://lemon.qq.com/"
