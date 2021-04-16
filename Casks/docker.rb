@@ -1,31 +1,18 @@
 cask "docker" do
-  if Hardware::CPU.intel?
-    version "3.3.0,62916"
-    sha256 "d533aa7d4a4a00d49bb78f4488535e577d7674292538c59769daa61e9bff1109"
+  version "3.3.1,63152"
+  sha256 "360f8142b1e07dc9e232cbccfafda52a8e7e9b48ad8323f0ba389339b0501a60"
 
-    url "https://desktop.docker.com/mac/stable/amd64/#{version.after_comma}/Docker.dmg"
-
-    livecheck do
-      url "https://desktop.docker.com/mac/stable/amd64/appcast.xml"
-      strategy :sparkle
-    end
-  else
-    version "3.3.1,63152"
-    sha256 "68b5038b09292aa3b2acb62f9edc5d2fdc314f37cc020ce4cf282d7114248070"
-
-    url "https://desktop.docker.com/mac/stable/arm64/#{version.after_comma}/Docker.dmg"
-
-    livecheck do
-      url "https://desktop.docker.com/mac/stable/arm64/appcast.xml"
-      strategy :sparkle
-    end
-  end
-
+  url "https://desktop.docker.com/mac/stable/amd64/#{version.after_comma}/Docker.dmg"
   name "Docker Desktop"
   name "Docker Community Edition"
   name "Docker CE"
   desc "App to build and share containerized applications and microservices"
   homepage "https://www.docker.com/products/docker-desktop"
+
+  livecheck do
+    url "https://desktop.docker.com/mac/stable/amd64/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 
