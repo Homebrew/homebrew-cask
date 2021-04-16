@@ -4,12 +4,13 @@ cask "nomachine-enterprise-client" do
 
   url "https://download.nomachine.com/download/#{version.major_minor}/MacOSX/nomachine-enterprise-client_#{version}.dmg"
   name "NoMachine Enterprise Client"
+  desc "Remote desktop software"
   homepage "https://www.nomachine.com/"
 
   livecheck do
     url "https://www.nomachine.com/download/download&id=15"
     strategy :page_match
-    regex(%r{nomachine-enterprise-client_(\d+(?:\.\d+)*_\d+)\.dmg}i)
+    regex(/nomachine-enterprise-client_(\d+(?:\.\d+)*_\d+)\.dmg/i)
   end
 
   pkg "NoMachine.pkg"
