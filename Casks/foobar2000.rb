@@ -7,6 +7,12 @@ cask "foobar2000" do
   desc "Audio player"
   homepage "https://www.foobar2000.org/mac"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/foobar2000-v(\d+(?:\.\d+)*)\.dmg}i)
+  end
+
   app "foobar2000.app"
 
   zap trash: [
