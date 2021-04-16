@@ -4,6 +4,7 @@ cask "netxms-console" do
 
   url "https://netxms.org/download/releases/#{version.major_minor}/nxmc-#{version}.dmg"
   name "NetXMS Management Console"
+  desc "Network and infrastructure monitoring and management system"
   homepage "https://netxms.org/"
 
   livecheck do
