@@ -5,7 +5,7 @@ cask "snowflake-snowsql" do
   url "https://sfc-repo.snowflakecomputing.com/snowsql/bootstrap/#{version.major_minor}/darwin_x86_64/snowsql-#{version}-darwin_x86_64.pkg",
       verified: "sfc-repo.snowflakecomputing.com/"
   name "SnowSQL"
-  desc "Command line client for connecting to Snowflake"
+  desc "Command-line client for connecting to Snowflake"
   homepage "https://snowflake.com/"
 
   livecheck do
