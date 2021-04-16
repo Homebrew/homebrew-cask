@@ -4,6 +4,7 @@ cask "nomachine" do
 
   url "https://download.nomachine.com/download/#{version.major_minor}/MacOSX/nomachine_#{version}.dmg"
   name "NoMachine"
+  desc "Remote desktop software""
   homepage "https://www.nomachine.com/"
 
   livecheck do
