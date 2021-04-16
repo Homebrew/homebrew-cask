@@ -4,6 +4,7 @@ cask "adobe-air" do
 
   url "https://airsdk.harman.com/assets/downloads/AdobeAIR.dmg"
   name "Adobe AIR"
+  desc "Framework used in the development of applications and games"
   homepage "https://airsdk.harman.com/"
 
   livecheck do
