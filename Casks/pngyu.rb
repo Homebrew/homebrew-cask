@@ -10,7 +10,7 @@ cask "pngyu" do
   livecheck do
     url :homepage
     strategy :page_match
-    regex(%r{mac:\s*(\d+(?:\.\d+)*)}i)
+    regex(/mac:\s*(\d+(?:\.\d+)*)/i)
   end
 
   app "Pngyu.app"
