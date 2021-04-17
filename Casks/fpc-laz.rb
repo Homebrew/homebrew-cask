@@ -8,6 +8,8 @@ cask "fpc-laz" do
   name "Free Pascal Compiler"
   homepage "https://www.freepascal.org/"
 
+  conflicts_with formula: "fpc"
+
   pkg "fpc-#{version.before_comma}-intel-macosx.pkg"
 
   uninstall pkgutil: "org.freepascal.fpc"
