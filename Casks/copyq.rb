@@ -2,7 +2,7 @@ cask "copyq" do
   version "4.0.0"
   sha256 "8d1c4f90fcf9b4a7c676d8335447e2f0caf039cfe0beae2cf22667f6e24b8167"
 
-  url "https://github.com/hluk/CopyQ/releases/download/v#{version}/CopyQ.dmg",
+  url "https://github.com/hluk/CopyQ/releases/download/v#{version}/CopyQ.dmg.zip",
       verified: "github.com/hluk/CopyQ/"
   name "CopyQ"
   desc "Clipboard manager with advanced features"
