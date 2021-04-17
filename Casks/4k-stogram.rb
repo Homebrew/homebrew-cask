@@ -1,6 +1,6 @@
 cask "4k-stogram" do
-  version "3.3.4"
-  sha256 "d29099b5037778bdf002aeea2504336da5568044abfa466bccd91b2ce06e10df"
+  version "3.4.0"
+  sha256 "c6339111f3dd6f81f1ea60b34d262b900fa47d80bc410f410fcf4b46e8fcbf8f"
 
   url "https://dl.4kdownload.com/app/4kstogram_#{version}.dmg"
   name "4K Stogram"
@@ -13,6 +13,7 @@ cask "4k-stogram" do
     regex(%r{href=.*?/4kstogram_(\d+(?:\.\d+)*)\.dmg}i)
   end
 
+  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "4K Stogram.app"

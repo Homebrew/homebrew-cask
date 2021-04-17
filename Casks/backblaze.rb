@@ -1,6 +1,6 @@
 cask "backblaze" do
-  version "7.0.2.492"
-  sha256 "bec93cfedb5726aff1f1a67d85a1552428260f6ba2875a036600b18cc6a2dcfa"
+  version "7.0.2.494"
+  sha256 "98edc89d53963bc3ab10f411b9ba1911e5d0261a108abef6c3cb4a2a0dec95c9"
 
   url "https://secure.backblaze.com/api/install_backblaze?file=bzinstall-mac-#{version}.zip"
   name "Backblaze"

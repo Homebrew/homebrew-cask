@@ -3,10 +3,14 @@ cask "private-internet-access" do
   sha256 "88a51130e28c2139f8f3a9f49faedaa1089d4c999e0e39ee54b87610d10a4f45"
 
   url "https://installers.privateinternetaccess.com/download/pia-macos-#{version}.zip"
-  appcast "https://www.privateinternetaccess.com/pages/download"
   name "Private Internet Access"
   desc "VPN client"
   homepage "https://www.privateinternetaccess.com/"
+
+  livecheck do
+    url "https://www.privateinternetaccess.com/installer/x/download_installer_osx"
+    regex(/pia-macos-(\d+(?:.\d+)*)\.zip/i)
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"
