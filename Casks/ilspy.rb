@@ -8,8 +8,7 @@ cask "ilspy" do
   homepage "https://github.com/icsharpcode/AvaloniaILSpy"
 
   livecheck do
-    url "https://github.com/icsharpcode/AvaloniaILSpy/releases.atom"
-    strategy :sparkle
+    skip
   end
 
   depends_on arch: :intel
