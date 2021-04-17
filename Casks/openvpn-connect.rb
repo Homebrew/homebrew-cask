@@ -8,7 +8,7 @@ cask "openvpn-connect" do
   homepage "https://openvpn.net/client-connect-vpn-for-mac-os/"
 
   livecheck do
-    url "https://openvpn.net/downloads/openvpn-connect-v3-macos.dmg"
+    url "https://openvpn.net/downloads/openvpn-connect-v#{version.major}-macos.dmg"
     strategy :header_match do |headers|
       match = headers["location"].match(%r{/openvpn-connect-(\d+(?:\.\d+)*)\.(\d+)_signed\.dmg}i)
       "#{match[1]},#{match[2]}"
