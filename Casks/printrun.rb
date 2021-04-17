@@ -4,7 +4,7 @@ cask "printrun" do
 
   url "https://github.com/kliment/Printrun/releases/download/printrun-#{version}/pronterface-macos-app-#{version}.zip"
   name "Printrun"
-  desc "control your 3D printer from your PC"
+  desc "Control your 3D printer from your PC"
   homepage "https://github.com/kliment/Printrun"
 
   livecheck do
