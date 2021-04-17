@@ -6,6 +6,14 @@ cask "ghidra" do
   name "Ghidra"
   homepage "https://www.ghidra-sre.org/"
 
+  livecheck do
+    url "https://ghidra-sre.org/"
+    regex(%r{href="ghidra[._-](\d+\.\d+\.\d+)_PUBLIC_(\d+)\.zip"}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match.first},#{match.second}" }
+    end
+  end
+
   conflicts_with cask: "homebrew/cask-versions/ghidra-beta"
 
   binary "ghidra_#{version.before_comma}_PUBLIC/ghidraRun"
