@@ -22,7 +22,7 @@ cask "calmly-writer" do
 
   pkg "Calmly Writer-#{version}.pkg"
 
-  uninstall pkgutil: "Calmly Writer-#{version}.pkg"
+  uninstall pkgutil: "calmlywriter"
 
   zap trash: [
     "~/Library/Preferences/calmlywriter.plist",
