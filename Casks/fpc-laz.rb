@@ -10,5 +10,5 @@ cask "fpc-laz" do
 
   pkg "fpc-#{version.before_comma}-intel-macosx.pkg"
 
-  # uninstall pkgutil: "org.freepascal.fpc.source"
+  uninstall pkgutil: "org.freepascal.fpc"
 end
