@@ -1,18 +1,18 @@
 cask "printrun" do
-  version "1.6.0,18Nov2017"
-  sha256 "426229043a2a33a6768dcca12135f0751c007595af078665eb854cf87e4e2999"
+  version "2.0.0rc8"
+  sha256 "45f2a288939b3cb2594c821a614fa21af37b17e2b46310d7b72f3be45e15f5af"
 
-  url "https://github.com/kliment/Printrun/releases/download/printrun-#{version.before_comma}/Printrun-Mac-#{version.after_comma}.zip"
+  url "https://github.com/kliment/Printrun/releases/download/printrun-#{version}/pronterface-macos-app-#{version}.zip"
   name "Printrun"
   homepage "https://github.com/kliment/Printrun"
 
   livecheck do
     url "https://github.com/kliment/Printrun/releases/latest"
     strategy :page_match do |page|
-      match = page.match(%r{href=.*?/printrun-(\d+(?:\.\d+)*)/Printrun-Mac-(.*?)\.zip}i)
+      match = page.match(%r{href=.*?/printrun-(\d+(?:\.\d+)*)/pronterface-macos-(.*?)\.zip}i)
       "#{match[1]},#{match[2]}"
     end
   end
 
-  app "Printrun-Mac-#{version.after_comma}.app"
+  app "pronterface.app"
 end
