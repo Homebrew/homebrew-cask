@@ -5,6 +5,7 @@ cask "flic" do
   url "https://misc-scl-cdn.s3.amazonaws.com/Flic.#{version}.zip",
       verified: "misc-scl-cdn.s3.amazonaws.com/"
   name "Flic"
+  desc "Flic smart buttons for the Mac"
   homepage "https://flic.io/mac-app"
 
   livecheck do
