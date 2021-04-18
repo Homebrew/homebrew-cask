@@ -10,7 +10,7 @@ cask "arkiwi" do
   livecheck do
     url :homepage
     strategy :page_match
-    regex(/Download ArKiwi \(ver (\d+(?:\.\d+)*)\)/i)
+    regex(/Download ArKiwi (\d+[.]\d+)/i)
   end
 
   app "ArKiwi.app"
