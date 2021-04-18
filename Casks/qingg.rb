@@ -14,7 +14,7 @@ cask "qingg" do
 
   auto_updates true
 
-  pkg "Qingg.pkg"
+  pkg "安装包.pkg"
 
   uninstall pkgutil: "com.aodaren.*"
 
