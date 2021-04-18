@@ -19,15 +19,15 @@ jobs:
               }
             ]
         if: always()
-      - name: Review Pull Request
-        id: review
-        uses: Homebrew/actions/review-cask-pr@master
-        if: always()
-      - name: Post Pull Request Review
-        uses: Homebrew/actions/post-review@master
-        with:
-          token: ${{ (github.event.pull_request.user.login == 'BrewTestBot' && secrets.GITHUB_TOKEN) || secrets.HOMEBREW_GITHUB_API_TOKEN }}
-          event: ${{ steps.review.outputs.event }}
-          body: |
-            ${{ steps.review.outputs.message }}
-        if: always() && steps.review.outputs.event
+      # - name: Review Pull Request
+      #   id: review
+      #   uses: Homebrew/actions/review-cask-pr@master
+      #   if: always()
+      # - name: Post Pull Request Review
+      #   uses: Homebrew/actions/post-review@master
+      #   with:
+      #     token: ${{ (github.event.pull_request.user.login == 'BrewTestBot' && secrets.GITHUB_TOKEN) || secrets.HOMEBREW_GITHUB_API_TOKEN }}
+      #     event: ${{ steps.review.outputs.event }}
+      #     body: |
+      #       ${{ steps.review.outputs.message }}
+      #   if: always() && steps.review.outputs.event
