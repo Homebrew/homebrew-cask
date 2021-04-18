@@ -9,7 +9,7 @@ cask "ghidra" do
   livecheck do
     url "https://ghidra-sre.org/"
     strategy :page_match do |page|
-      match = page.match(/href=.*?ghidra[._-](\d+\.\d+\.\d+)_PUBLIC_(\d+)\.zip/i)
+      match = page.match(/href=.*?ghidra[._-](\d+(?:\.\d+)*)_PUBLIC_(\d+)\.zip/i)
       "#{match[1]},#{match[2]}"
     end
   end
