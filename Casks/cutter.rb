@@ -2,7 +2,7 @@ cask "cutter" do
   version "2.0.1"
   sha256 "f797ab73079e5f261a7137c8ac78989d9f45326255bdde0eb2bfab7e544c8b58"
 
-  url "https://github.com/rizinorg/cutter/releases/download/v#{version}/Cutter-v#{version}-Darwin.dmg",
+  url "https://github.com/rizinorg/cutter/releases/download/v#{version}/Cutter-v#{version}-x64.macOS.dmg",
       verified: "github.com/rizinorg/cutter/"
   name "Cutter"
   desc "Reverse engineering platform powered by radare2"
