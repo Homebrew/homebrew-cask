@@ -10,7 +10,7 @@ cask "pcoipclient" do
   livecheck do
     url "https://downloads.teradici.com/mac/stable/"
     strategy :page_match
-    regex(%r{href=.*?pcoip-client_(\d+(?:\.\d+)*)\.dmg}i)
+    regex(/href=.*?pcoip-client_(\d+(?:\.\d+)*)\.dmg/i)
   end
 
   app "PCoIPClient.app"
