@@ -1,14 +1,15 @@
 cask "ltspice" do
-  version "17.0.22.0"
+  version "17.0.33"
   sha256 :no_check
 
-  url "https://ltspice.analog.com/software/LTspice.dmg"
+  url "https://ltspice.analog.com/software/LTspice.pkg"
   name "LTspice"
   desc "SPICE simulation software, schematic capture and waveform viewer"
   homepage "https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html"
 
   livecheck do
-    skip "No version information available"
+    url :url
+    strategy :extract_plist
   end
 
   pkg "LTspice.pkg"
