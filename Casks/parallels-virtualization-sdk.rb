@@ -13,12 +13,12 @@ cask "parallels-virtualization-sdk" do
   homepage "https://www.parallels.com/products/desktop/download/"
 
   livecheck do
-    if Hardware::CPU.arm?
-      url "https://www.parallels.com/download/pvsdk/m1/"
-    else
+    if Hardware::CPU.intel?
       url "https://www.parallels.com/download/pvsdk/intel/"
+    else
+      url "https://www.parallels.com/download/pvsdk/m1/"
     end
-    regex(/.*?parallelsvirtualizationsdk-?(\d+(?:\.\d+)+-\d+)(?:-mac)?\.d/i)
+    regex(%r{/parallelsvirtualizationsdk-?(\d+(?:\.\d+)+-\d+)(?:-mac)?\.dmg}i)
     strategy :header_match
   end
 
