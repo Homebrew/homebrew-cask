@@ -4,10 +4,14 @@ cask "plexamp" do
 
   url "https://plexamp.plex.tv/plexamp.plex.tv/desktop/Plexamp-#{version}.dmg",
       verified: "plexamp.plex.tv/"
-  appcast "https://plexamp.plex.tv/plexamp.plex.tv/desktop/latest-mac.yml"
   name "Plexamp"
   desc "Music player focusing on visuals"
   homepage "https://plexamp.com/"
+
+  livecheck do
+    url "https://plexamp.plex.tv/plexamp.plex.tv/desktop/latest-mac.yml"
+    strategy :electron_builder
+  end
 
   app "Plexamp.app"
 end
