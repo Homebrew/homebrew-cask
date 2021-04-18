@@ -17,7 +17,7 @@ on:
 jobs:
   rerun-workflow:
     if: >
-      startsWith(github.repository, 'Homebrew/') && 
+      startsWith(github.repository, 'Homebrew/') &&
       (
         github.event.label.name == 'ci-requeue' ||
         github.event.label.name == 'ci-retry' ||
@@ -31,7 +31,7 @@ jobs:
       - name: Re-run CI workflow
         uses: reitermarkus/rerun-workflow@64cba9e834916060e77b7dad424d086837fdd0a6
         with:
-          token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+          token: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
           once-label: ci-requeue
           continuous-label: ci-retry
           trigger-labels: ci-skip-appcast,ci-skip-install,ci-syntax-only

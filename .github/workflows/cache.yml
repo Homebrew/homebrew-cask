@@ -15,7 +15,7 @@ jobs:
       - name: Cancel Previous Runs
         uses: n1hility/cancel-previous-runs@953c92201f368370112ea2754545cb4468d89f12
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ github.token }}
 
   update:
     if: startsWith(github.repository, 'Homebrew/')

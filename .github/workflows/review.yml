@@ -10,7 +10,7 @@ jobs:
       - name: Label Pull Request
         uses: Homebrew/actions/label-pull-requests@master
         with:
-          token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+          token: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
           def: |
             [
               {
