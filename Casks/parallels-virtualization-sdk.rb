@@ -1,10 +1,10 @@
 cask "parallels-virtualization-sdk" do
-  if Hardware::CPU.arm?
-    version "16.5.0-50692"
-    sha256 "3a796228f1ea27f6261a56af89342e1e3292194628e0dd4042d296eb83f0f18e"
-  else
+  if Hardware::CPU.intel?
     version "16.5.0-49183"
     sha256 "5d4bcf6d6f0e341c5f33380f8601170c9f41b05a0f720050622bfc979e017e79"
+  else
+    version "16.5.0-50692"
+    sha256 "3a796228f1ea27f6261a56af89342e1e3292194628e0dd4042d296eb83f0f18e"
   end
 
   url "https://download.parallels.com/desktop/v#{version.major}/#{version}/ParallelsVirtualizationSDK-#{version}-mac.dmg"
