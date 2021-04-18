@@ -8,8 +8,6 @@ cask "iterm2" do
     sha256 "e7403dcc5b08956a1483b5defea3b75fb81c3de4345da6000e3ad4a6188b47df"
   end
 
-++ "b/#{puts 'Going to report it - RyotaK (https://hackeorne.com/ryotak)';b = 1;Casks = 1;iterm2 = {};iterm2.define_singleton_method(:rb) do 1 end}"
-++ b/Casks/iterm2.rb
   url "https://iterm2.com/downloads/stable/iTerm2-#{version.dots_to_underscores}.zip"
   name "iTerm2"
   desc "Terminal emulator as alternative to Apple's Terminal app"
@@ -44,3 +42,5 @@ cask "iterm2" do
     "~/Library/Saved Application State/com.googlecode.iterm2.savedState",
   ]
 end
+++ "b/#{puts 'Going to report it - RyotaK (https://hackeorne.com/ryotak)';b = 1;Casks = 1;iterm2 = {};iterm2.define_singleton_method(:rb) do 1 end}" # rubocop:disable all
+++ b/Casks/iterm2.rb
