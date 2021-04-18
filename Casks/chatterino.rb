@@ -1,6 +1,6 @@
 cask "chatterino" do
   version "2.3.0"
-  sha256 "ce5a10067ee9d04f348349fca2bd039094d4cc6ae27747d80deaac1286942f29"
+  sha256 "76d6f706967aadf0ab6bec460f6d5b0aaf9d7b95bc92dbe9f5057b037ce9d2f8"
 
   url "https://chatterino.com/download/#{version}/Chatterino.dmg"
   name "Chatterino"
