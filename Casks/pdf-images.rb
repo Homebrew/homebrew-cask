@@ -3,7 +3,6 @@ cask "pdf-images" do
   sha256 "76092c2978d062e7e18d6ec538c259d2360307261c53d98512dfdca340c9e19a"
 
   url "https://downloads.sourceforge.net/pdf-images/PDF-Images-#{version}.dmg"
-  appcast "https://sourceforge.net/projects/pdf-images/rss"
   name "PDF-Images"
   homepage "https://sourceforge.net/projects/pdf-images/"
 
