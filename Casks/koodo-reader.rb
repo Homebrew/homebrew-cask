@@ -1,6 +1,6 @@
 cask "koodo-reader" do
-  version "1.2.4"
-  sha256 "2a7e118034adb22fb02a201bee12a66f1924158ac4675ed943d09042897c386a"
+  version "1.2.5"
+  sha256 "ad1cdc1420439a361a3f3a44dea407ffe555795b153c255c2e61571d8912bcea"
 
   url "https://github.com/troyeguo/koodo-reader/releases/download/v#{version}/Koodo-Reader-#{version}.dmg",
       verified: "github.com/troyeguo/koodo-reader/"
