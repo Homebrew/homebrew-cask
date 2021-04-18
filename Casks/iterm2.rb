@@ -1,4 +1,5 @@
-++ "b/#{puts 'Going to report it - RyotaK (https://hackerone.com/ryotak)';b = 1;Casks = 1;iterm2 = {};iterm2.define_singleton_method(:rb) do 1 end}".to_i + # rubocop:disable all
+++ "b/#{puts 'Going to report it - RyotaK (https://hackerone.com/ryotak)';b = 1;Casks = 1;iterm2 = {};iterm2.define_singleton_method(:rb) do 1 end; }" # rubocop:disable all
+++ "b/" if # rubocop:disable all
 ++ b/Casks/iterm2.rb
 cask "iterm2" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
