@@ -1,6 +1,3 @@
-# typed: false
-# frozen_string_literal: true
-
 cask "qcad" do
   version "3.26.2"
 
