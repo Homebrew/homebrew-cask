@@ -3,10 +3,15 @@ cask "mosaic" do
   sha256 "3b03b8329f1ff75499662a708e43536cafddd7ef51bff417f865b0f0f71e2326"
 
   url "https://lightpillar.com/appdata/mosaic/archive/Mosaic_#{version.dots_to_underscores}.pkg"
-  appcast "https://lightpillar.com/appdata/mosaic/features/version-history.html"
   name "Mosaic"
   desc "Resize and reposition apps"
   homepage "https://lightpillar.com/mosaic.html"
+
+  livecheck do
+    url "https://lightpillar.com/appdata/mosaic/features/version-history.html"
+    strategy :page_match
+    regex(/Version\s*(\d+(?:\.\d+)*)/i)
+  end
 
   pkg "Mosaic_#{version.dots_to_underscores}.pkg"
 

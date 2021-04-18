@@ -1,15 +1,16 @@
 cask "eloston-chromium" do
   if Hardware::CPU.intel?
-    version "89.0.4389.114-1.1_x86-64"
-    sha256 "7abf8fb4f0cc115c26f65913b0ccc426693bf75538ef6e1093c0e475a1670319"
+    version "90.0.4430.72-1.1_x86-64"
+    sha256 "98f5a63ec371ed4bc400b789bcfd57654c831f88a7b5b979715e154d0f965057"
   else
-    version "89.0.4389.114-1.1_arm64"
-    sha256 "0038596ec4872dd098badd0cf75ee201051a16446a5bad5073d6b8204b43adb0"
+    version "89.0.4389.128-1.1_arm64"
+    sha256 "29c826295c9a1926eaf04f2497ec6322a48acc0d05deb49bc2e33ad7d22b6651"
   end
 
   url "https://github.com/kramred/ungoogled-chromium-macos/releases/download/#{version}/ungoogled-chromium_#{version}-macos.dmg",
       verified: "github.com/kramred/ungoogled-chromium-macos/"
   name "Ungoogled Chromium"
+  desc "Google Chromium, sans integration with Google"
   homepage "https://ungoogled-software.github.io/ungoogled-chromium-binaries/"
 
   conflicts_with cask: [
