@@ -1,12 +1,16 @@
 cask "paparazzi" do
-  version "1.0b11"
+  version "1.0b11,868"
   sha256 "106c31b4297f3a9671648db75adfbb79c929de3af306b537aa141b7bac668a7c"
 
-  url "https://derailer.org/paparazzi/Paparazzi!%20#{version}.dmg"
-  appcast "https://derailer.org/paparazzi/appcast/"
+  url "https://derailer.org/paparazzi/Paparazzi!%20#{version.before_comma}.dmg"
   name "Paparazzi!"
   desc "Utility to take screenshots of webpages"
   homepage "https://derailer.org/paparazzi/"
+
+  livecheck do
+    url "https://derailer.org/paparazzi/appcast/"
+    strategy :sparkle
+  end
 
   app "Paparazzi!.app"
 
