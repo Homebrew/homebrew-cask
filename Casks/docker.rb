@@ -1,5 +1,6 @@
 cask "docker" do
   version "3.3.1,63152"
+
   if Hardware::CPU.intel?
     sha256 "360f8142b1e07dc9e232cbccfafda52a8e7e9b48ad8323f0ba389339b0501a60"
 
