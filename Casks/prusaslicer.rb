@@ -8,6 +8,12 @@ cask "prusaslicer" do
   desc "G-code generator for 3D printers (RepRap, Makerbot, Ultimaker etc.)"
   homepage "https://www.prusa3d.com/slic3r-prusa-edition/"
 
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^version_(\d+(?:\.\d+)*)$/)
+  end
+
   app "PrusaSlicer.app"
 
   zap trash: [
