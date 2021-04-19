@@ -9,7 +9,7 @@ cask "smartsynchronize" do
   livecheck do
     url "https://www.syntevo.com/smartsynchronize/changelog.txt"
     strategy :page_match
-    regex(%r{(\d+(?:\.\d+)*)\s*\(}i)
+    regex(/(\d+(?:\.\d+)*)\s*\(/i)
   end
 
   app "SmartSynchronize.app"
