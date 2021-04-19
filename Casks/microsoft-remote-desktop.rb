@@ -1,6 +1,6 @@
 cask "microsoft-remote-desktop" do
-  version "10.5.2"
-  sha256 "b648e704f3701116b9abbae7d5960a87fd45d85e9e129561c3cbfd692e48bb96"
+  version "10.6.1"
+  sha256 "d3669079c39ca6f6f78111cc09cb645dc7f300fa9d3a8e975a7ce377338f0332"
 
   url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Remote_Desktop_#{version}_installer.pkg",
       verified: "officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/"
