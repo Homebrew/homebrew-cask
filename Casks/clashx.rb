@@ -1,6 +1,6 @@
 cask "clashx" do
-  version "1.50.0"
-  sha256 "f529b904c7a5ee59c4f84db627890c069c2b6e61b26810463261874d90ca875b"
+  version "1.50.1"
+  sha256 "0295266db13e79c0c7280b272f9d961ceaba569eadcf78ae60490c70a6dc963e"
 
   url "https://github.com/yichengchen/clashX/releases/download/#{version}/ClashX.dmg"
   name "ClashX"
