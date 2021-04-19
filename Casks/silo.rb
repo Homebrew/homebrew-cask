@@ -1,11 +1,16 @@
 cask "silo" do
-  version "2.5.6"
-  sha256 "c0c0075fc410ec6ca2fad349a75c8040b5f24f1fa96b0fbb0953d1d6e2264e55"
+  version "2021.0.0"
+  sha256 "81490457a8b090421291ada3c32b64fd27dc593fd205059afffa853f1f265390"
 
-  url "https://nevercenter.com/silo/download_file/filearchive/Install_Silo_#{version.dots_to_underscores}_mac.dmg"
-  appcast "https://nevercenter.com/silo/download_file/"
+  url "https://nevercenter.com/silo/download/filearchive/Install_Silo_#{version.major}_#{version.minor}#{version.patch}_mac.dmg"
   name "Silo"
   homepage "https://nevercenter.com/silo/"
 
-  app "Silo #{version.major}.app"
+  livecheck do
+    url "https://nevercenter.com/silo/download/"
+    strategy :page_match
+    regex(/Silo\s*(\d+(?:\.\d+)*)\s*/)
+  end
+
+  app "Silo.app"
 end
