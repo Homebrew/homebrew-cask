@@ -14,4 +14,6 @@ cask "shutter-encoder" do
   end
 
   pkg "Shutter Encoder #{version} Mac 64bits.pkg"
+
+  uninstall pkgutil: "com.paulpacifico.pkg.ShutterEncoder"
 end
