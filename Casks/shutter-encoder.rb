@@ -14,8 +14,4 @@ cask "shutter-encoder" do
   end
 
   pkg "Shutter Encoder #{version} Mac 64bits.pkg"
-
-  uninstall_preflight do
-    set_permissions "#{appdir}/Shutter Encoder.app", "0755"
-  end
 end
