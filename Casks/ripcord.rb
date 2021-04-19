@@ -3,10 +3,15 @@ cask "ripcord" do
   sha256 "98b2a5071ac4e64b03ac26bb4d1496d1764b4aa73894fcb67ecb1d911853e005"
 
   url "https://cancel.fm/dl/Ripcord_Mac_#{version}.zip"
-  appcast "https://cancel.fm/ripcord/updates/v1"
   name "Ripcord"
   desc "Desktop chat client for Slack (and Discord)"
   homepage "https://cancel.fm/ripcord/"
+
+  livecheck do
+    url "https://cancel.fm/ripcord/updates/v1"
+    strategy :page_match
+    regex(%r{/Ripcord_Mac_(\d+(?:\.\d+)*)\.zip}i)
+  end
 
   depends_on macos: ">= :sierra"
 
