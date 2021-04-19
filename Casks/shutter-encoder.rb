@@ -13,7 +13,7 @@ cask "shutter-encoder" do
     regex(/Version\s*(\d+(?:\.\d+)*)\s*-/i)
   end
 
-  app "Shutter Encoder.app"
+  pkg "Shutter Encoder #{version} Mac 64bits.pkg"
 
   uninstall_preflight do
     set_permissions "#{appdir}/Shutter Encoder.app", "0755"
