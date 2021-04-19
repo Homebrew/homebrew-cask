@@ -11,7 +11,7 @@ cask "prusaslicer" do
   livecheck do
     url :url
     strategy :github_latest do |page|
-      match = page.match(%r{href=.*?/PrusaSlicer-(\d+(?:\.\d+)*)+universal-(\d+)\.dmg}i)
+      match = page.match(%r{href=.*?/PrusaSlicer-(\d+(?:\.\d+)*)\+universal-(\d+)\.dmg}i)
       "#{match[1]},#{match[2]}"
     end
   end
