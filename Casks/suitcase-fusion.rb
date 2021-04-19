@@ -9,7 +9,7 @@ cask "suitcase-fusion" do
   livecheck do
     url "https://www.extensis.com/support/suitcase-fusion-#{version.major}/release-notes/"
     strategy :page_match
-    regex(%r{Current\s*version:\s*(\d+(?:\.\d+)*)}i)
+    regex(/Current\s*version:\s*(\d+(?:\.\d+)*)/i)
   end
 
   depends_on macos: ">= :high_sierra"
