@@ -16,5 +16,5 @@ cask "simpholders" do
 
   depends_on macos: ">= :catalina"
 
-  app "SimPholders.app"
+  app "simpholders_#{version.before_comma.dots_to_underscores}.app", target: "SimPholders.app"
 end
