@@ -15,7 +15,7 @@ cask "sitesucker-pro" do
   livecheck do
     url "https://ricks-apps.com/osx/sitesucker/history.html"
     strategy :page_match
-    regex(%r{Version\s*(\d+(?:\.\d+)*)}i)
+    regex(/Version\s*(\d+(?:\.\d+)*)/i)
   end
 
   auto_updates true
