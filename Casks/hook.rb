@@ -6,25 +6,25 @@ cask "hook" do
   name "Hook"
   desc "Link & retrieve key information"
   homepage "https://hookproductivity.com/"
-  
+
   livecheck do
     url :homepage
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/(\d+)/(\d+)/Hook-productivity-app-(\d+(?:\.\d+)*)\.dmg}i)
       "#{match[3]},#{match[1]}-#{match[2]}"
+    end
   end
-    
+
   auto_updates true
 
-  app 'Hook.app'
+  app "Hook.app"
 
-  uninstall launchctl: 'com.cogsciapps.hookautolaunchhelper',
-            quit:      'com.cogsciapps.hook'
+  uninstall launchctl: "com.cogsciapps.hookautolaunchhelper",
+            quit:      "com.cogsciapps.hook"
 
-  zap trash:
-             [
-               '~/Library/Caches/com.cogsciapps.hook',
-               '~/Library/Logs/com.cogsciapps.hook',
-               '~/Library/Preferences/com.cogsciapps.hook.plist',
-             ]
+  zap trash: [
+    "~/Library/Caches/com.cogsciapps.hook",
+    "~/Library/Logs/com.cogsciapps.hook",
+    "~/Library/Preferences/com.cogsciapps.hook.plist",
+  ]
 end
