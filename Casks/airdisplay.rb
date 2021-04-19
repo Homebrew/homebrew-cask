@@ -1,6 +1,6 @@
 cask "airdisplay" do
-  version "3.4.2,26581"
-  sha256 "272d14f33b3a4a16e5e0e1ebb2d519db4e0e3da17f95f77c91455b354bee7ee7"
+  version "1.0.1"
+  sha256 "04cabe96dd98aebd81214792d58defa97380746ec34b5034da780d38dde541ad"
 
   url "https://www.avatron.com/updates/software/airdisplay/ad#{version.before_comma.no_dots}.zip"
   name "Air Display"
