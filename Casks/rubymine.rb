@@ -3,10 +3,18 @@ cask "rubymine" do
   sha256 "553a3e0b3e11f42def5490bff66d66289e580afd892ad57755b3a2b7079009e9"
 
   url "https://download.jetbrains.com/ruby/RubyMine-#{version.before_comma}.dmg"
-  appcast "https://data.services.jetbrains.com/products/releases?code=RM&latest=true&type=release"
   name "RubyMine"
   desc "Ruby on Rails IDE"
   homepage "https://www.jetbrains.com/ruby/"
+
+  livecheck do
+    url "https://data.services.jetbrains.com/products/releases?code=RM&latest=true&type=release"
+    strategy :page_match do |page|
+      version = page.match(/"version":"(\d+(?:\.\d+)*)/i)
+      build = page.match(/"build":"(\d+(?:\.\d+)*)/i)
+      "#{version[1]},#{build[1]}"
+    end
+  end
 
   auto_updates true
 
