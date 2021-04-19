@@ -125,6 +125,7 @@ jobs:
         id: audit
         run: |
           brew audit --cask ${{ join(matrix.audit_args, ' ') }}${{ (matrix.cask && ' ') || ' --tap ' }}'${{ matrix.cask.path || matrix.tap }}'
+        timeout-minutes: 30
         if: >
           always() && steps.gems.outcome == 'success' &&
           (!matrix.cask || steps.fetch.outcome == 'success') &&
