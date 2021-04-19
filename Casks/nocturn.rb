@@ -1,6 +1,6 @@
 cask "nocturn" do
-  version "1.8.2"
-  sha256 "5ec4c8d1e209d2a2f10d46ea8b4e0f16ddcdc28bebb76affba55560d7dfb3a2d"
+  version "1.8.3"
+  sha256 "6b0c23c5c62003d724923efc36d7f51e6655ce6ac8c9e6d98bb39c49c4abc2da"
 
   url "https://github.com/k0kubun/Nocturn/releases/download/v#{version}/Nocturn-darwin-x64.zip"
   name "Nocturn"
