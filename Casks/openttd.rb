@@ -1,6 +1,6 @@
 cask "openttd" do
-  version "1.11.0"
-  sha256 "93316b061800271b933cd131a4b8507bc354d211e200e50066736b5d36a26786"
+  version "1.11.1"
+  sha256 "b6cb0211f2332e132eb725f33f5c76a9dc1ec8e46558884817da9b688ccb8910"
 
   url "https://proxy.binaries.openttd.org/openttd-releases/#{version}/openttd-#{version}-macos-universal.zip"
   name "OpenTTD"
@@ -14,4 +14,11 @@ cask "openttd" do
   end
 
   app "OpenTTD.app"
+
+  zap trash: [
+    "~/Documents/OpenTTD",
+    "~/Library/Application Support/CrashReporter/openttd_*.plist",
+    "~/Library/Logs/DiagnosticReports/openttd_*.crash",
+    "~/Library/Saved Application State/org.openttd.openttd.savedState",
+  ]
 end
