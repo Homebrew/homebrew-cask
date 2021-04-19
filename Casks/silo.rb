@@ -12,5 +12,5 @@ cask "silo" do
     regex(/Silo\s*(\d+(?:\.\d+)*)\s*/)
   end
 
-  app "Silo #{version.major}.app"
+  app "Silo.app"
 end
