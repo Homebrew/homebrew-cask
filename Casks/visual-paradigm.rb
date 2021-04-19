@@ -1,6 +1,6 @@
 cask "visual-paradigm" do
-  version "16.2,20210403"
-  sha256 "7150e53e65a8f441260674737b66d08ebbbeaa93522bae5ebf34b3b5dba6fdca"
+  version "16.3,20210420"
+  sha256 "dd94d4a64843844bbfedd4162f0860bc2e3df7c6594fa955ec019a08dc96dbc5"
 
   url "https://www.visual-paradigm.com/downloads/vp#{version.before_comma}/#{version.after_comma}/Visual_Paradigm_#{version.before_comma.dots_to_underscores}_#{version.after_comma}_OSX_WithJRE.dmg"
   name "Visual Paradigm"
