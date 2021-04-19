@@ -9,7 +9,7 @@ cask "rightzoom" do
   livecheck do
     url "https://www.blazingtools.com/right_zoom_mac.html"
     strategy :page_match
-    regex(%r{Right\s*Zoom\s*v\.\s*(\d+(?:\.\d+)*)}i)
+    regex(/Right\s*Zoom\s*v\.\s*(\d+(?:\.\d+)*)/i)
   end
 
   app "RightZoom.app"
