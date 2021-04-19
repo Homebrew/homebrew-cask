@@ -9,7 +9,7 @@ cask "sunvox" do
   livecheck do
     url "https://www.warmplace.ru/soft/sunvox/changelog.txt"
     strategy :page_match
-    regex(%r{^v(\d+(?:\.\d+)*[a-z]?)\s*\(\d+}i)
+    regex(/^v(\d+(?:\.\d+)*[a-z]?)\s*\(\d+/i)
   end
 
   app "sunvox/sunvox/macos/SunVox.app"
