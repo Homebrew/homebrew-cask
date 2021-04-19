@@ -10,7 +10,7 @@ cask "sim-daltonism" do
   livecheck do
     url "https://littoral.michelf.ca/apps/sim-daltonism/"
     strategy :page_match
-    regex(%r{href=.*?sim-daltonism-(\d+(?:\.\d+)*)\.zip}i)
+    regex(/href=.*?sim-daltonism-(\d+(?:\.\d+)*)\.zip/i)
   end
 
   app "Sim Daltonism.app"
