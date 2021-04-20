@@ -1,6 +1,6 @@
 cask "solvespace" do
-  version "2.3"
-  sha256 "2e93301bbfef9253b5ef614862d891e2ab84e18c6a1e4e36225c5d47cacabc2d"
+  version "3.0"
+  sha256 "903252c6844ede39b2c633ef23e5a304bec68cbc90dda229ba2b53434f2045a1"
 
   url "https://github.com/solvespace/solvespace/releases/download/v#{version}/solvespace.dmg",
       verified: "github.com/"
