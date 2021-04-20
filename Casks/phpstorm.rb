@@ -5,7 +5,7 @@ cask "phpstorm" do
     sha256 "94df67e2fb8c2c63ae5d221c4c7d129e56fd959a1b6fd1e1a97c5d23a8272d83"
     url "https://download.jetbrains.com/webide/PhpStorm-#{version.before_comma}.dmg"
   else
-    sha256 "465aa85bc86f16de6e75a056e855aeab6e6b6104e478f963f19311eede0c98da"
+    sha256 "fdb8e6d06e24b7963d33055111cb7bc7258e2779fad988292503576b4013060b"
     url "https://download.jetbrains.com/webide/PhpStorm-#{version.before_comma}-aarch64.dmg"
   end
 
