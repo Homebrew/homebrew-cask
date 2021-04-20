@@ -1,5 +1,5 @@
 cask "output-factory" do
-  version "2.4.56"
+  version "2.4.60"
   sha256 :no_check
 
   url "https://zevrix.com/downloads/OutputFactory.dmg"
