@@ -5,7 +5,7 @@ cask "chia" do
   url "https://github.com/Chia-Network/chia-blockchain/releases/download/#{version}/Chia-#{version}.dmg",
       verified: "github.com/Chia-Network/chia-blockchain/"
   name "Chia Blockchain"
-  desc "GUI Python Implementation for"
+  desc "GUI Python Implementation for Chia Blockchain"
   homepage "https://www.chia.net/"
 
   livecheck do
