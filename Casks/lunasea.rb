@@ -8,10 +8,5 @@ cask "lunasea" do
   desc "Controller for all of your self-hosted media software"
   homepage "https://www.lunasea.app/"
 
-  # livecheck do
-  #  url :url
-  #  strategy :github_latest
-  # end
-
   app "LunaSea.app"
 end
