@@ -1,11 +1,17 @@
 cask "output-factory" do
-  version "2.4.56"
+  version "2.4.60"
   sha256 :no_check
 
   url "https://zevrix.com/downloads/OutputFactory.dmg"
   name "Output Factory"
   desc "Automate printing and exporting from Adobe InDesign"
   homepage "https://zevrix.com/OutputFactory/"
+
+  livecheck do
+    url "https://zevrix.com/download/"
+    strategy :page_match
+    regex(/Output\s*Factory\s*(\d+(?:\.\d+)*)/i)
+  end
 
   installer manual: "Output Factory Installer.app"
 
