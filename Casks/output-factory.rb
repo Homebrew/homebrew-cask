@@ -7,6 +7,12 @@ cask "output-factory" do
   desc "Automate printing and exporting from Adobe InDesign"
   homepage "https://zevrix.com/OutputFactory/"
 
+  livecheck do
+    url "https://zevrix.com/download/"
+    strategy :page_match
+    regex(/Output\s*Factory\s*(\d+(?:\.\d+)*)/i)
+  end
+
   installer manual: "Output Factory Installer.app"
 
   uninstall trash: "/Applications/Adobe Indesign */Plug-Ins/Zevrix/Output Factory.app"
