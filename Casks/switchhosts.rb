@@ -4,15 +4,15 @@ cask "switchhosts" do
 
   url "https://github.com/oldj/SwitchHosts/releases/download/v#{version.major_minor_patch}/SwitchHosts_#{version}.dmg",
       verified: "github.com/oldj/SwitchHosts/"
-  name "SwitchHosts!"
+  name "SwitchHosts"
   desc "App to switch hosts"
   homepage "https://oldj.github.io/SwitchHosts/"
 
   livecheck do
     url :url
     strategy :github_latest
-    regex(%r{/SwitchHosts\._macOS_(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{/SwitchHosts_(\d+(?:\.\d+)*)\.dmg}i)
   end
 
-  app "SwitchHosts!.app"
+  app "SwitchHosts.app"
 end
