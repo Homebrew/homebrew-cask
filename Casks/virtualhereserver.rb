@@ -1,5 +1,5 @@
 cask "virtualhereserver" do
-  version "4.2.8"
+  version "4.2.9"
   sha256 :no_check
 
   if Hardware::CPU.intel?
