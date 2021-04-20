@@ -5,7 +5,7 @@ cask "lunasea" do
   url "https://github.com/CometTools/LunaSea/releases/download/#{version}%2B50000018/LunaSea-macOS-release.zip",
       verified: "https://github.com/CometTools/LunaSea/"
   name "LunaSea"
-  desc "Is a fully featured, open source self-hosted controller! Focused on giving you a seamless experience between all of your self-hosted media software"
+  desc "Controller for all of your self-hosted media software"
   homepage "https://www.lunasea.app/"
 
   livecheck do
