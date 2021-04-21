@@ -1,0 +1,24 @@
+#!/bin/bash
+
+readonly program="$(basename "${0}")"
+
+function usage {
+  echo "
+    List Bundle IDs for currently loaded kernel extensions (kexts). Useful to identify kexts installed by packages. Kexts attributed to Apple are excluded from the output.
+
+    Usage:
+      ${program} [options]
+
+    Options:
+      -h, --help   Show this message.
+  " | sed -E 's/ {4}//'
+}
+
+if [[ "${1}" =~ ^(-h|--help)$ ]]; then
+  usage
+  exit 0
+fi
+
+/usr/sbin/kextstat -no-kernel -list-only | \
+  /usr/bin/awk '{print $6}' | \
+  /usr/bin/grep --invert-match '^com\.apple\.'

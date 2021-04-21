@@ -1,0 +1,25 @@
+cask "grid" do
+  version "1.4"
+  sha256 "46f415795003460d5da018aaaeb72317d3c6b654ebdde33c1556e6e8659f0cdc"
+
+  url "https://macgrid.app/download/Grid-#{version}.dmg"
+  appcast "https://macgrid.app/appcast.xml"
+  name "Grid"
+  desc "Window manager"
+  homepage "https://macgrid.app/"
+
+  app "Grid.app"
+
+  uninstall quit:      [
+    "app.macgrid.Grid",
+    "app.macgrid.GridLaunchAtLogin",
+  ],
+            launchctl: "app.macgrid.GridLaunchAtLogin"
+
+  zap trash: [
+    "~/Library/Application Support/Grid",
+    "~/Library/Caches/app.macgrid.Grid",
+    "~/Library/Containers/app.macgrid.GridLaunchAtLogin",
+    "~/Library/Preferences/app.macgrid.Grid.plist",
+  ]
+end
