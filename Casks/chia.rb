@@ -17,8 +17,8 @@ cask "chia" do
 
   zap trash: [
     "~/Library/Application Support/Chia Blockchain",
-    "~/Library/Saved Application State/net.chia.blockchain.savedState",
     "~/Library/Preferences/net.chia.blockchain.plist",
+    "~/Library/Saved Application State/net.chia.blockchain.savedState",
     "~/.chia",
   ]
 end
