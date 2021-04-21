@@ -8,11 +8,5 @@ cask "chia" do
   desc "GUI Python implementation for the Chia blockchain"
   homepage "https://www.chia.net/"
 
-  livecheck do
-    url "https://github.com/Chia-Network/chia-blockchain/releases"
-    strategy :page_match
-    regex(%r{href=.*?/Chia-(\d+(?:\.\d+)*)\.dmg}i)
-  end
-
   app "Chia.app"
 end
