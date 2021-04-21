@@ -15,6 +15,8 @@ cask "tenable-nessus-agent" do
     end
   end
 
+  auto_updates true
+
   pkg "Install Nessus Agent.pkg"
 
   uninstall pkgutil:   "com.tenablesecurity.NessusAgent.Preferences",
