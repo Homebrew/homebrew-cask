@@ -1,6 +1,6 @@
 cask "goodsync" do
-  version "11.6.1"
-  sha256 "8fe5ed43c98741b0516fc3cf21298f2c6a9b65733d2ded5704de8a7a44f49dbc"
+  version "11.6.3"
+  sha256 "c11af8241699faca231126de61bbc1dd1aedac9368395125457b5e7b28330081"
 
   url "https://www.goodsync.com/download/goodsync-v#{version.major}-mac.dmg"
   name "GoodSync"
