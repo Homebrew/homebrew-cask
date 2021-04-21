@@ -8,9 +8,8 @@ cask "arkiwi" do
   homepage "https://www.mariogt.com/arkiwi.html"
 
   livecheck do
-    url :homepage
-    strategy :page_match
-    regex(/Download\s*ArKiwi\s*(\d+(?:\.\d+)*)/i)
+    url "https://www.mariogt.com/appsChest/arkiwiAppCast.xml"
+    strategy :spakle
   end
 
   app "ArKiwi.app"
