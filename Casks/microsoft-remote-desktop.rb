@@ -26,6 +26,7 @@ cask "microsoft-remote-desktop" do
               "com.microsoft.update.agent",
             ],
             quit:      [
+              "com.microsoft.autoupdate2",
               "com.microsoft.autoupdate.fba",
             ]
 
