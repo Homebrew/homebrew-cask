@@ -8,9 +8,8 @@ cask "slidepilot" do
   homepage "https://slidepilotapp.com/en"
 
   livecheck do
-    url :homepage
-    strategy :page_match
-    regex(/Version (\d+(?:\.\d+)*)/i)
+    url "https://slidepilotapp.com/updates/versions.xml"
+    strategy :sparkle
   end
 
   auto_updates true
