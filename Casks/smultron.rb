@@ -7,6 +7,11 @@ cask "smultron" do
   desc "General-purpose text editor"
   homepage "https://www.peterborgapps.com/smultron/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   auto_updates true
   depends_on macos: ">= :mojave"
 
