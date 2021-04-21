@@ -1,6 +1,6 @@
 cask "cozy-drive" do
-  version "3.26.1"
-  sha256 "ea2ea9facfc1716f1556c88e6b856db3250d288ec2da8e9d42c6c593a948523c"
+  version "3.27.0"
+  sha256 "f197b068256c3faf79d369e87eb8145737d12438455d266aaeb0015a1b0dda3d"
 
   url "https://nuts.cozycloud.cc/download/channel/stable/CozyDrive-#{version}.dmg",
       verified: "nuts.cozycloud.cc/"
