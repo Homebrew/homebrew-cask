@@ -9,7 +9,7 @@ cask "arkiwi" do
 
   livecheck do
     url "https://www.mariogt.com/appsChest/arkiwiAppCast.xml"
-    strategy :spakle
+    strategy :sparkle
   end
 
   app "ArKiwi.app"
