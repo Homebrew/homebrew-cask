@@ -8,5 +8,10 @@ cask "chia" do
   desc "GUI Python implementation for the Chia blockchain"
   homepage "https://www.chia.net/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Chia.app"
 end
