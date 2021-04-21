@@ -4,13 +4,13 @@ cask "arkiwi" do
 
   url "https://www.mariogt.com/appsChest/ArKiwi#{version.dots_to_hyphens}.zip"
   name "ArKiwi"
-  desc "Blazing fast and optimized file archiver"
+  desc "File archiver"
   homepage "https://www.mariogt.com/arkiwi.html"
 
   livecheck do
     url :homepage
     strategy :page_match
-    regex(/Download ArKiwi (\d+[.]\d+)/i)
+    regex(/Download\s*ArKiwi\s*(\d+(?:\.\d+)*)/i)
   end
 
   app "ArKiwi.app"
