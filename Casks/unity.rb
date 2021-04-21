@@ -4,10 +4,17 @@ cask "unity" do
 
   url "https://download.unity3d.com/download_unity/#{version.after_comma}/MacEditorInstaller/Unity-#{version.before_comma}.pkg",
       verified: "download.unity3d.com/download_unity/"
-  appcast "https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json"
   name "Unity Editor"
   desc "Platform for 3D content"
   homepage "https://unity.com/products"
+
+  livecheck do
+    url "https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json"
+    strategy :page_match do |page|
+      match = page.match(%r{href=([0-9a-f]+)/MacEditorInstaller/Unity-(\d+(?:.\d+)*)\.pkg}i)
+      "#{match[2]},#{match[1]}"
+    end
+  end
 
   pkg "Unity-#{version.before_comma}.pkg"
 
