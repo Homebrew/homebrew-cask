@@ -1,5 +1,5 @@
 cask "typeface" do
-  version "2.7.0,2023"
+  version "3.0.0,2765"
   sha256 :no_check
 
   url "https://dcdn.typefaceapp.com/latest"
