@@ -9,7 +9,7 @@ cask "slidepilot" do
 
   livecheck do
     url "https://slidepilotapp.com/updates/versions.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
