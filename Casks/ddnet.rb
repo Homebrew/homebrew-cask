@@ -7,6 +7,11 @@ cask "ddnet" do
   desc "Teeworlds version of DDRace"
   homepage "https://ddnet.tw/"
 
+  livecheck do
+    url "https://github.com/ddnet/ddnet/releases"
+    strategy :github_latest
+  end
+
   app "DDNet.app"
   app "DDNet-Server.app"
 end
