@@ -4,7 +4,7 @@ cask "optimus-player" do
 
   url "https://download.optimusplayer.com/Optimus%20Player%20#{version}.dmg"
   name "Optimus Player"
-  desc "The best app for playing audiovisual content on the Mac"
+  desc "Media player"
   homepage "https://www.optimusplayer.com/"
 
   livecheck do
