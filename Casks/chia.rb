@@ -14,4 +14,11 @@ cask "chia" do
   end
 
   app "Chia.app"
+
+  zap trash: [
+    "~/Library/Application Support/Chia Blockchain",
+    "~/Library/Saved Application State/net.chia.blockchain.savedState",
+    "~/Library/Preferences/net.chia.blockchain.plist",
+    "~/.chia",
+  ]
 end
