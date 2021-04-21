@@ -4,14 +4,8 @@ cask "ilspy" do
 
   url "https://github.com/icsharpcode/AvaloniaILSpy/releases/download/#{version}/ILSpy-osx-x64-Release.zip"
   name "ILSpy"
-  desc "Cross-platform version of  built with Avalonia"
+  desc "Avalonia-based .NET decompiler"
   homepage "https://github.com/icsharpcode/AvaloniaILSpy"
-
-  livecheck do
-    skip
-  end
-
-  depends_on arch: :intel
 
   app "ILSpy.app"
 end
