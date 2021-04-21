@@ -2,7 +2,7 @@ cask "texworks" do
   version "0.6.6,202103111124:24442ac"
   sha256 "9517f6bd8f3a34264bc9e5c6ae59969a81bcfdafda2c830d58d2d0d652cffe57"
 
-  url "https://github.com/TeXworks/texworks/releases/download/release-#{version.before_comma}/TeXworks-osx-#{version.before_comma}-#{version.after_comma.before_colon}-git_#{version.after_colon}.dmg",
+  url "https://github.com/TeXworks/texworks/releases/download/release-#{version.before_comma}/TeXworks-macos-#{version.before_comma}-#{version.after_comma.before_colon}-git_#{version.after_colon}.dmg",
       verified: "github.com/TeXworks/texworks/"
   name "TeXworks"
   desc "Main codebase"
