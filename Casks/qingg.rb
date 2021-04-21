@@ -1,16 +1,20 @@
 cask "qingg" do
-  version "2.8.1"
-  sha256 "e38daedf7e2e30ed078c7f9094323b78f8685ebcaafa6b42b0c792ed41c388c7"
+  version "2.9,3400"
+  sha256 "00dd9c50b77e91f9b5d0ba407caf1f4cf5e99b93f47c733811c5e9f8f55ed7b8"
 
-  url "https://qingg.im/download/Qingg-#{version}.dmg"
-  appcast "https://qingg.im/sparkle/appcast.php"
+  url "https://qingg.im/download/Qingg-#{version.before_comma}.dmg"
   name "QinggIM"
   name "清歌输入法"
   homepage "https://qingg.im/mac/"
 
+  livecheck do
+    url "https://qingg.im/sparkle/appcast.php"
+    strategy :sparkle
+  end
+
   auto_updates true
 
-  pkg "Qingg.pkg"
+  pkg "安装包.pkg"
 
   uninstall pkgutil: "com.aodaren.*"
 

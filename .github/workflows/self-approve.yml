@@ -14,7 +14,7 @@ jobs:
       - name: Post Pull Request Review
         uses: Homebrew/actions/post-review@master
         with:
-          token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+          token: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
           pull_request: ${{ github.event.inputs.pull_request }}
           event: APPROVE
           body: Self-approved by @${{ github.actor }}.

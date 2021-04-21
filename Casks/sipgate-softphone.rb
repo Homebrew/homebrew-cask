@@ -1,12 +1,16 @@
 cask "sipgate-softphone" do
-  version "1.10.27"
-  sha256 "4587c8599040477323af3e0883c60bcb1474543035d32597302a06e82b8dfdda"
+  version "1.14.2"
+  sha256 "bda48c9db62ae47b5b9603081e4fb45f1ed12f2665633d1bb267fa41ff5d4a6e"
 
   url "https://sipgate-desktop-app-dev.s3.amazonaws.com/sipgate-softphone-#{version}.dmg",
       verified: "sipgate-desktop-app-dev.s3.amazonaws.com/"
-  appcast "https://sipgate-desktop-app-dev.s3.amazonaws.com/latest-mac.yml"
   name "sipgate softphone"
   homepage "https://www.sipgateteam.de/softphone"
+
+  livecheck do
+    url "https://sipgate-desktop-app-dev.s3.amazonaws.com/latest-mac.yml"
+    strategy :electron_builder
+  end
 
   app "sipgate softphone.app"
 

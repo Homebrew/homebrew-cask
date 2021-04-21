@@ -36,9 +36,9 @@ jobs:
       )
     runs-on: ubuntu-latest
     steps:
-      - uses: reitermarkus/automerge@46b8b95bac3325964476acc56f9160a98d1e7291
+      - uses: reitermarkus/automerge@72bc1353d0a084c84034be23424b124d900d1658
         with:
-          token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+          token: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
           merge-method: squash
           squash-title: true
           do-not-merge-labels: 'do not merge,awaiting maintainer feedback,awaiting user reply'
