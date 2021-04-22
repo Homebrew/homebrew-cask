@@ -11,6 +11,7 @@ cask "ocenaudio" do
   else
     url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_bigsur_arm64.dmg"
   end
+
   name "ocenaudio"
   desc "Audio editor"
   homepage "https://www.ocenaudio.com/en"
