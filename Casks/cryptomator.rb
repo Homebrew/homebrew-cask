@@ -8,11 +8,6 @@ cask "cryptomator" do
   desc "Multi-platform client-side cloud file encryption tool"
   homepage "https://cryptomator.org/"
 
-  livecheck do
-    url "https://github.com/cryptomator/cryptomator"
-    strategy :git
-  end
-
   depends_on macos: ">= :yosemite"
 
   app "Cryptomator.app"
