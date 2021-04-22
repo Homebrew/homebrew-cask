@@ -14,4 +14,6 @@ cask "tigervnc-viewer" do
   end
 
   app "TigerVNC Viewer #{version}.app"
+
+  zap trash: "~/Library/Saved Application State/com.tigervnc.tigervnc.savedState"
 end
