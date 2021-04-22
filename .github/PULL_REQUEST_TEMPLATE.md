@@ -2,7 +2,7 @@
 
 After making all changes to a cask, verify:
 
-- [ ] The submission is for [a stable version](https://github.com/Homebrew/brew/blob/master/docs/Acceptable-Casks.md#stable-versions) or [documented exception](https://github.com/Homebrew/homebrew-cask/blob/master/doc/development/adding_a_cask.md#but-there-is-no-stable-version).
+- [ ] The submission is for [a stable version](https://docs.brew.sh/Acceptable-Casks#stable-versions) or [documented exception](https://docs.brew.sh/Acceptable-Casks#but-there-is-no-stable-version).
 - [ ] `brew audit --cask {{cask_file}}` is error-free.
 - [ ] `brew style --fix {{cask_file}}` reports no offenses.
 
