@@ -5,6 +5,7 @@ cask "godot" do
   url "https://downloads.tuxfamily.org/godotengine/#{version}/Godot_v#{version}-stable_osx.universal.zip",
       verified: "downloads.tuxfamily.org/godotengine/"
   name "Godot Engine"
+  desc "Game development engine"
   homepage "https://godotengine.org/"
 
   livecheck do
