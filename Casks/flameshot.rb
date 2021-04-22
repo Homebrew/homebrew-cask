@@ -5,7 +5,7 @@ cask "flameshot" do
   url "https://github.com/flameshot-org/flameshot/releases/download/v#{version}/flameshot.dmg",
       verified: "github.com/flameshot-org/flameshot/"
   name "Flameshot"
-  desc "Screenshoting software"
+  desc "Screenshot software"
   homepage "https://flameshot.org/"
 
   app "flameshot.app"
