@@ -8,7 +8,7 @@ cask "pdfpenpro" do
   homepage "https://smilesoftware.com/PDFpenPro"
 
   livecheck do
-    url "https://smilesoftware.com/appcast/PDFpenPro#{version.major}.xml"
+    url "https://cgi.pdfpen.com/appcast/PDFpenPro#{version.major}.xml"
     strategy :sparkle
   end
 
