@@ -8,7 +8,7 @@ cask "bettertouchtool" do
   homepage "https://folivora.ai/"
 
   livecheck do
-    url "https://updates.folivora.ai/appcast.xml?trial=1"
+    url "https://folivora.ai/releases/"
     strategy :page_match
     regex(/btt(\d+(?:.\d+)*)\.zip/i)
   end
