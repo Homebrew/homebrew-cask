@@ -1,5 +1,5 @@
 cask "menuwhere" do
-  version "1.0.0"
+  version "2.0.0"
   sha256 :no_check
 
   url "https://manytricks.com/download/menuwhere"
