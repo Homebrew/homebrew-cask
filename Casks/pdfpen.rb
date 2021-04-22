@@ -4,11 +4,11 @@ cask "pdfpen" do
 
   url "https://cdn.smilesoftware.com/PDFpen_#{version.before_comma}.dmg"
   name "PDFpen"
-  desc "PDF editor"
+  desc "PDF editing software"
   homepage "https://smilesoftware.com/PDFpen"
 
   livecheck do
-    url "https://smilesoftware.com/appcast/PDFpen#{version.major}.xml"
+    url "https://cgi.pdfpen.com/appcast/PDFpen#{version.major}.xml"
     strategy :sparkle
   end
 
