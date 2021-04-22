@@ -4,6 +4,7 @@ cask "synology-note-station-client" do
 
   url "https://global.download.synology.com/download/Utility/NoteStationClient/#{version}/Mac/x86_64/synology-note-station-client-#{version}-mac-x64.dmg"
   name "Synology Note Station Client"
+  desc "Write, view, manage and share content-rich notes"
   homepage "https://www.synology.com/en-us/dsm/packages/NoteStation"
 
   livecheck do
