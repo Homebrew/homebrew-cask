@@ -8,6 +8,12 @@ cask "cinco" do
   desc "Generator-driven Eclipse IDE for domain-specific graphical modeling tools"
   homepage "https://cinco.scce.info/"
 
+  livecheck do
+    url "https://ls5download.cs.tu-dortmund.de/cinco/releases/"
+    strategy :page_match
+    regex(%r{href="(\d+(?:\.\d+)*)/"}i)
+  end
+
   pkg "Install Cinco.pkg"
 
   uninstall quit:    "de.jabc.cinco.meta.product.product",
