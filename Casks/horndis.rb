@@ -12,8 +12,9 @@ cask "horndis" do
     :sierra,
     :high_sierra,
     :mojave,
+    :catalina,
   ]
-
+  
   pkg "HoRNDIS-#{version}.pkg"
 
   uninstall kext:    "com.joshuawise.kexts.HoRNDIS",
