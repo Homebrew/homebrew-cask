@@ -1,6 +1,6 @@
 cask "pdfpenpro" do
-  version "12.2.2,1222.7"
-  sha256 "ecabbe5bc4d8b152adc967c7d9c45d0db17554674231a0b3e16d9318cfd2877e"
+  version "12.2.3"
+  sha256 "6522b30a957ceeea13bc18506da501673ab3798fbdfe5fe73add6d764f5dc0a8"
 
   url "https://cdn.smilesoftware.com/PDFpenPro_#{version.before_comma}.dmg"
   name "PDFpenPro"
