@@ -1,11 +1,16 @@
 cask "ddnet" do
-  version "15.3.2"
-  sha256 "916a956e88728f6d182cf7ed8149889cc0f9aac5a0df7b2a9a367c2bcd01fd59"
+  version "15.4"
+  sha256 "fe062e3df2170ad23c59d1714d1321ec74e5bfca939220a798638355bdba036c"
 
   url "https://ddnet.tw/downloads/DDNet-#{version}-osx.dmg"
   name "DDNet"
   desc "Teeworlds version of DDRace"
   homepage "https://ddnet.tw/"
+
+  livecheck do
+    url "https://github.com/ddnet/ddnet/releases"
+    strategy :github_latest
+  end
 
   app "DDNet.app"
   app "DDNet-Server.app"
