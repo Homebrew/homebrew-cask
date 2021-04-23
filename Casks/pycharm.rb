@@ -1,11 +1,11 @@
 cask "pycharm" do
-  version "2021.1,211.6693.115"
+  version "2021.1.1,211.7142.13"
 
   if Hardware::CPU.intel?
-    sha256 "15f65709c3e35cdd22689861df333664093d405c8c86d26d5dd459f05672dc4d"
+    sha256 "549e5f5b75e702d9ca24e7c89dcff4df1eef27d454ed70f2d59a9f9fba676d37"
     url "https://download.jetbrains.com/python/pycharm-professional-#{version.before_comma}.dmg"
   else
-    sha256 "743c37650d853445e927c30c92ce4c51186be67c24fe568e11fbdc90fba2af8a"
+    sha256 "49cd1fa712996dfe728892a033c353eb5b21e5c63742778e54a41cea39aa1175"
     url "https://download.jetbrains.com/python/pycharm-professional-#{version.before_comma}-aarch64.dmg"
   end
 
