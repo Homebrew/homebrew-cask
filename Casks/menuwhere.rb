@@ -4,7 +4,7 @@ cask "menuwhere" do
 
   url "https://manytricks.com/download/menuwhere"
   name "Menuwhere"
-  desc "The menu, anywhere"
+  desc "Access the menu from anywhere"
   homepage "https://manytricks.com/menuwhere/"
 
   livecheck do
