@@ -9,5 +9,11 @@ cask "qgis" do
   desc "Geographic Information System"
   homepage "https://www.qgis.org/"
 
+  livecheck do
+    url "https://qgis.org/downloads/macos/qgis-macos-pr.sha256sum"
+    strategy :page_match
+    regex(/Version:\s*(\d+(?:\.\d+)*)/i)
+  end
+
   app "QGIS.app"
 end
