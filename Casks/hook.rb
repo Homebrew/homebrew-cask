@@ -4,7 +4,7 @@ cask "hook" do
 
   url "https://hookproductivity.com/wp-content/uploads/#{version.after_comma.tr("-", "/")}/Hook-productivity-app-#{version.before_comma}.dmg"
   name "Hook"
-  desc "Link & retrieve key information"
+  desc "Link and retrieve key information"
   homepage "https://hookproductivity.com/"
 
   livecheck do
