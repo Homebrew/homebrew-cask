@@ -12,13 +12,8 @@ cask "budgetbudget" do
   end
 
   name "BudgetBudget"
-  desc "Gain confidence in financial decisions and plan monthly budgets with MoneyMoney"
+  desc "Financial planning and decisions, monthly budgets with MoneyMoney"
   homepage "https://budgetbudget.app/"
-
-  livecheck do
-    url :url
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
-  end
 
   app "BudgetBudget.app"
 end
