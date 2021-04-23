@@ -7,6 +7,11 @@ cask "webex" do
   desc "Video communication and virtual meeting platform"
   homepage "https://www.webex.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Webex.app"
 
   uninstall signal: [
