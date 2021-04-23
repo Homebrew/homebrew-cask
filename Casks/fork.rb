@@ -1,6 +1,6 @@
 cask "fork" do
-  version "2.6.1"
-  sha256 "1a425a0b3191aa7de281291e0db4fd8658eb7add760882bce79a7b448b119c18"
+  version "2.7"
+  sha256 "dc1a3acf47e8cbc514f4fb4a9f6de3b91a4a6a1391cf197aa2d1897c631367c6"
 
   url "https://forkapp.ams3.cdn.digitaloceanspaces.com/mac/Fork-#{version}.dmg",
       verified: "forkapp.ams3.cdn.digitaloceanspaces.com/mac/"
