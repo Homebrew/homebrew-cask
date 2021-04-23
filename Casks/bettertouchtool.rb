@@ -9,8 +9,11 @@ cask "bettertouchtool" do
 
   livecheck do
     url "https://folivora.ai/releases/"
-    strategy :page_match
-    regex(/btt(\d+(?:.\d+)*)\.zip/i)
+    strategy :page_match do
+      page.scan(/btt(\d+(?:.\d+)*)\.zip.*?(\d\d\d\d-\d\d-\d\d)\s+\d\d:\d\d)/i)
+          .max_by { |(_, time)| Time.parse(time) }
+          .first
+    end
   end
 
   auto_updates true
