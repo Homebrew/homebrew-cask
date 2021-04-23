@@ -1,16 +1,16 @@
 cask "strawberry" do
-  version "0.9.2"
+  version "0.9.3"
 
   if MacOS.version <= :mojave
     sha256 "7129b83932c99cba9195602a53c3a3dd1ff8eeee0cfd6494f4f41fc08f43bfc3"
     url "https://github.com/strawberrymusicplayer/strawberry/releases/download/#{version}/strawberry-#{version}-mojave-x86_64.dmg",
         verified: "github.com/strawberrymusicplayer/strawberry/"
   elsif MacOS.version <= :catalina
-    sha256 "379bd6fe2dd3a4167552c0e6ef83d2158aeec89ae3c41b36e02de1170d6e59cd"
+    sha256 "2f62dbca3a59edbde801b20d55392d4f910c7063612e69846ab62f872e9d71ad"
     url "https://github.com/strawberrymusicplayer/strawberry/releases/download/#{version}/strawberry-#{version}-catalina-x86_64.dmg",
         verified: "github.com/strawberrymusicplayer/strawberry/"
   else
-    sha256 "bd548822cbfeb4b9640f9169ba2ffb32a35debda437b23199beb1cbd39ace060"
+    sha256 "60b12797bfc513b1c6a3f54a4d1e207b3b8122e31aa80ea789a17a1002c86174"
     url "https://github.com/strawberrymusicplayer/strawberry/releases/download/#{version}/strawberry-#{version}-bigsur-x86_64.dmg",
         verified: "github.com/strawberrymusicplayer/strawberry/"
   end

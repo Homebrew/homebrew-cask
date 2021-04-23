@@ -1,6 +1,6 @@
 cask "juicebar" do
-  version "1.0.78"
-  sha256 "528a719ccf4fac49a1935e43e00ca5aeb4f3e821b99e76f8f0ec9767d204dd51"
+  version "1.0.81"
+  sha256 "80942083efb236815cc64e0f667fabf145102a3690edf427a458cf7ae4aa46b6"
 
   url "https://mango.get-juicebar.com/v#{version.major}/bundles/macOS/latest"
   name "JuiceBar"

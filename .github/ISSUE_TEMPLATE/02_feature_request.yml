@@ -1,6 +1,5 @@
 name: Feature Request
 description: Suggest a feature for the Cask part of Homebrew
-issue_body: false
 body:
   - type: textarea
     attributes:
