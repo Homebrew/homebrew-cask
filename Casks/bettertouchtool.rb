@@ -10,7 +10,7 @@ cask "bettertouchtool" do
   livecheck do
     url "https://folivora.ai/releases/"
     strategy :page_match do
-      page.scan(/btt(\d+(?:.\d+)*)\.zip.*?(\d\d\d\d-\d\d-\d\d)\s+\d\d:\d\d)/i)
+      page.scan(/btt(\d+(?:.\d+)*)\.zip.*?(\d{4}-\d{2}-\d{2})\s+\d{2}:\d{2})/i)
           .max_by { |(_, time)| Time.parse(time) }
           .first
     end
