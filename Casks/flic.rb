@@ -9,8 +9,9 @@ cask "flic" do
   homepage "https://flic.io/mac-app"
 
   livecheck do
-    url "https://flic.io/mac-app/download"
-    strategy :header_match
+    url :homepage
+    strategy :page_match
+    regex(/Flic\.(\d+(?:\.\d+)*)\.zip/i)
   end
 
   app "Flic.app"
