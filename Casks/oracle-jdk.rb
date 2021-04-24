@@ -7,7 +7,7 @@ cask "oracle-jdk" do
         "oraclelicense" => "accept-securebackup-cookie",
       }
   name "Oracle Java Standard Edition Development Kit"
-  desc "Oracle JDK"
+  desc "JDK from Oracle"
   homepage "https://www.oracle.com/technetwork/java/javase/overview/index.html"
 
   livecheck do
