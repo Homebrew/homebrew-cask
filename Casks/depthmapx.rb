@@ -8,5 +8,9 @@ cask "depthmapx" do
   homepage "https://github.com/SpaceGroupUCL/depthmapX"
 
   app "depthmapX.app"
-end
 
+  caveats "depthmapX-cli is not included"
+  caveats do
+    unsigned_accessibility
+  end
+end
