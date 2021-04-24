@@ -8,6 +8,12 @@ cask "expandrive" do
   desc "Network drive and browser for cloud storage"
   homepage "https://www.expandrive.com/apps/expandrive/"
 
+  livecheck do
+    url "https://updates.expandrive.com/appcast/expandrive#{version.major}.json"
+    strategy :page_match
+    regex(/mac\sversion\s(\d+(?:\.\d+)*)/i)
+  end
+
   app "ExpanDrive.app"
 
   zap trash: [
