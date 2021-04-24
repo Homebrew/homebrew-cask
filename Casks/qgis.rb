@@ -10,7 +10,7 @@ cask "qgis" do
   livecheck do
     url "https://qgis.org/downloads/macos/qgis-macos-pr.sha256sum"
     strategy :page_match do |page|
-      v = page[/qgis_pr_final-(\d+(?:_\d{,3})*)(?:_\d+)*)\.dmg/i, 1]
+      v = page[/qgis_pr_final-(\d+(?:_\d{,3})*)(?:_\d+)*\.dmg/i, 1]
       v.tr("_", ".")
     end
   end
