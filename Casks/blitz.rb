@@ -4,6 +4,7 @@ cask "blitz" do
 
   url "https://dl.blitz.gg/download/Blitz-#{version}.dmg"
   name "Blitz"
+  desc "Performance analysis software"
   homepage "https://blitz.gg/"
 
   livecheck do
