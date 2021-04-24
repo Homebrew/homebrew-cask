@@ -4,10 +4,11 @@ cask "sentinel" do
 
   url "https://releases.hashicorp.com/sentinel/#{version}/sentinel_#{version}_darwin_amd64.zip"
   name "Sentinel"
-  homepage "https://docs.hashicorp.com/sentinel/"
+  desc "Language and framework for policy as code"
+  homepage "https://docs.hashicorp.com/sentinel"
 
   livecheck do
-    url "https://docs.hashicorp.com/sentinel/downloads/"
+    url "https://docs.hashicorp.com/sentinel/downloads"
     strategy :page_match
     regex(%r{href=.*?/sentinel_(\d+(?:\.\d+)*)_darwin_amd64\.zip}i)
   end
