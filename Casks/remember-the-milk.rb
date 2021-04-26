@@ -11,10 +11,15 @@ cask "remember-the-milk" do
     url "https://www.rememberthemilk.com/download/mac/RememberTheMilk-#{version}-arm64.zip"
   end
 
-  appcast "https://www.rememberthemilk.com/services/mac/"
   name "Remember The Milk"
   desc "To-do app"
   homepage "https://www.rememberthemilk.com/"
+
+  livecheck do
+    url "https://www.rememberthemilk.com/services/mac/"
+    strategy :page_match
+    regex(%r{<b>Version:</b>\s(\d+(?:\.\d+)*)}i)
+  end
 
   app "Remember The Milk.app"
 
