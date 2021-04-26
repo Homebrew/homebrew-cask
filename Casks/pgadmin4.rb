@@ -4,7 +4,6 @@ cask "pgadmin4" do
 
   url "https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v#{version}/macos/pgadmin4-#{version}.dmg",
       verified: "ftp.postgresql.org/"
-  appcast "https://ftp.postgresql.org/pub/pgadmin/pgadmin4/"
   name "pgAdmin4"
   desc "Administration and development platform for PostgreSQL"
   homepage "https://www.pgadmin.org/"
