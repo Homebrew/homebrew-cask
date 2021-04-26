@@ -9,7 +9,11 @@ cask "fpc-src-laz" do
   homepage "https://www.lazarus-ide.org/"
 
   livecheck do
-    skip
+    url "https://sourceforge.net/projects/lazarus/rss"
+    strategy :page_match do |page|
+      match = page.match(%r{Lazarus\%20(\d+(?:.\d+)*)/fpc-src-(\d+(?:.\d+)*)-laz\.pkg}i)
+      "#{match[2]},#{match[1]}"
+    end
   end
 
   pkg "fpc-src-#{version.before_comma}-laz.pkg"
