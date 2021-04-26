@@ -4,6 +4,7 @@ cask "atlauncher" do
 
   url "https://www.atlauncher.com/download/zip"
   name "ATLauncher"
+  desc "Minecraft launcher"
   homepage "https://www.atlauncher.com/"
 
   livecheck do
