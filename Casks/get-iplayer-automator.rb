@@ -4,6 +4,7 @@ cask "get-iplayer-automator" do
 
   url "https://github.com/Ascoware/get-iplayer-automator/releases/download/v#{version.before_comma}/Get.iPlayer.Automator.v#{version.before_comma}.b#{version.after_comma}.zip"
   name "Get iPlayer Automator"
+  desc "Download and watch BBC and ITV shows"
   homepage "https://github.com/Ascoware/get-iplayer-automator"
 
   livecheck do
