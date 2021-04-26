@@ -4,6 +4,7 @@ cask "tableau-public" do
 
   url "https://downloads.tableau.com/public/TableauPublic-#{version.dots_to_hyphens}.dmg"
   name "Tableau Public"
+  desc "Explore, create and publicly share data visualizations online"
   homepage "https://public.tableau.com/s/"
 
   livecheck do
