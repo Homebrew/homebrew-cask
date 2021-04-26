@@ -5,6 +5,7 @@ cask "godot-mono" do
   url "https://downloads.tuxfamily.org/godotengine/#{version}/mono/Godot_v#{version}-stable_mono_osx.64.zip",
       verified: "downloads.tuxfamily.org/godotengine/"
   name "Godot Engine"
+  desc "2D and 3D game engine"
   homepage "https://godotengine.org/"
 
   livecheck do
