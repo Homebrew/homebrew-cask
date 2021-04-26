@@ -1,6 +1,6 @@
 cask "tableau" do
-  version "2021.1.0"
-  sha256 "97bef9b3a5c9c40cfe6a1fa2070e17ade048c3301333ccbb7ec87b1b477837d3"
+  version "2021.1.1"
+  sha256 "f379c9e8d2681cdf751e024c769205058d4acb4b2a9b85296030aa82aeab6321"
 
   url "https://downloads.tableau.com/tssoftware/TableauDesktop-#{version.dots_to_hyphens}.dmg"
   name "Tableau Desktop"
