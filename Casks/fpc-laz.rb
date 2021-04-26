@@ -9,7 +9,11 @@ cask "fpc-laz" do
   homepage "https://www.lazarus-ide.org/"
 
   livecheck do
-    skip
+    url "https://sourceforge.net/projects/lazarus/rss"
+    strategy :page_match do |page|
+      match = page.match(%r{Lazarus\%20(\d+(?:\.\d+)*)/fpc-(\d+(?:\.\d+)*)\.intel-macosx\.dmg}i)
+      "#{match[2]},#{match[1]}"
+    end
   end
 
   conflicts_with formula: "fpc"
