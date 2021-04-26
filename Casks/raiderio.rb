@@ -5,6 +5,7 @@ cask "raiderio" do
   url "https://github.com/RaiderIO/raiderio-client-builds/releases/download/v#{version}/RaiderIO_Client.dmg",
       verified: "github.com/RaiderIO/raiderio-client-builds/"
   name "RaiderIO Client"
+  desc "World of Warcraft rankings site client"
   homepage "https://raider.io/"
 
   app "RaiderIO.app"
