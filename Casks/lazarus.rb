@@ -8,7 +8,9 @@ cask "lazarus" do
   homepage "https://www.lazarus-ide.org/"
 
   livecheck do
-    skip
+    url "https://sourceforge.net/projects/lazarus/rss"
+    strategy :page_match
+    regex(/Lazarus-(\d+(?:.\d+)*)-x86_64-macosx\.pkg/i)
   end
 
   depends_on cask: "fpc-laz"
