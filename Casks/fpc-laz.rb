@@ -8,6 +8,10 @@ cask "fpc-laz" do
   desc "Pascal compiler for Lazerus"
   homepage "https://www.lazarus-ide.org/"
 
+  livecheck do
+    skip
+  end
+
   conflicts_with formula: "fpc"
 
   pkg "fpc-#{version.before_comma}-intel-macosx.pkg"
