@@ -4,6 +4,7 @@ cask "protopie" do
 
   url "https://release.protopie.io/ProtoPie-#{version}.dmg"
   name "ProtoPie"
+  desc "Create interactive prototypes"
   homepage "https://www.protopie.io/"
 
   livecheck do
