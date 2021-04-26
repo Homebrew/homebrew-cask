@@ -16,6 +16,10 @@ cask "tencent-meeting" do
   desc "Cloud video conferencing"
   homepage "https://meeting.tencent.com/"
 
+  livecheck do
+    skip "No version information available"
+  end
+
   auto_updates true
 
   app "TencentMeeting.app"
