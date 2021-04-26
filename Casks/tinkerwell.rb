@@ -1,9 +1,10 @@
 cask "tinkerwell" do
-  version "2.12.1"
-  sha256 "4f70970540aa92f7f4635b618256a0272e67fb6b4725c4b33e2ef5d517c09fd4"
+  version "2.13.0"
+  sha256 "f144e72d373f026c9dd3c06f9d85b046c53fc81c314a12298f1e4153e569f1cd"
 
   url "https://download.tinkerwell.app/tinkerwell/Tinkerwell-#{version}.dmg"
   name "Tinkerwell"
+  desc "Tinker tool for PHP and Laravel developers"
   homepage "https://tinkerwell.app/"
 
   livecheck do
