@@ -6,7 +6,7 @@ cask "fpc-laz" do
       verified: "sourceforge.net/lazarus/"
   name "Pascal compiler for Lazerus"
   desc "Pascal compiler for Lazerus"
-  homepage "https://www.freepascal.org/"
+  homepage "https://www.lazarus-ide.org/"
 
   conflicts_with formula: "fpc"
 
