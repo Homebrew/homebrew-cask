@@ -4,6 +4,7 @@ cask "tinkerwell" do
 
   url "https://download.tinkerwell.app/tinkerwell/Tinkerwell-#{version}.dmg"
   name "Tinkerwell"
+  desc "Tinker tool for PHP and Laravel developers"
   homepage "https://tinkerwell.app/"
 
   livecheck do
