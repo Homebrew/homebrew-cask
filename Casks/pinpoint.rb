@@ -7,12 +7,13 @@ cask "pinpoint" do
   desc "Workspace for shared document collaboration with context"
   homepage "https://pinpoint.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   auto_updates true
   depends_on macos: ">= :yosemite"
-  
-  livecheck do
-    skip "No version information available"
-  end
 
   app "Pinpoint.app"
 end
