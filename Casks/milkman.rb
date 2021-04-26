@@ -4,6 +4,7 @@ cask "milkman" do
 
   url "https://github.com/warmuuh/milkman/releases/download/#{version}/milkman-dist-appbundle-macos64-bin.tgz"
   name "Milkman"
+  desc "Extensible request and response workbench"
   homepage "https://github.com/warmuuh/milkman"
 
   app "Milkman.app"
