@@ -4,13 +4,16 @@ cask "fpc-laz" do
 
   url "https://downloads.sourceforge.net/lazarus/Lazarus%20macOS%20x86-64/Lazarus%20#{version.after_comma}/fpc-#{version.before_comma}.intel-macosx.dmg",
       verified: "sourceforge.net/lazarus/"
-  appcast "https://sourceforge.net/projects/lazarus/rss"
-  name "Free Pascal Compiler"
+  name "Pascal Compiler for Lazerus"
+  desc "Pascal Compiler for Lazerus"
   homepage "https://www.freepascal.org/"
 
   conflicts_with formula: "fpc"
 
   pkg "fpc-#{version.before_comma}-intel-macosx.pkg"
 
-  uninstall pkgutil: "org.freepascal.fpc"
+  uninstall pkgutil: [
+    "org.freepascal.freePascalCompiler320.fpcinst386",
+    "org.freepascal.fpc",
+  ]
 end
