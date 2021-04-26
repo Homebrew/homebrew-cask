@@ -4,6 +4,7 @@ cask "segger-embedded-studio-for-arm" do
 
   url "https://www.segger.com/downloads/embedded-studio/Setup_EmbeddedStudio_ARM_v#{version.no_dots}_macos_x64.dmg"
   name "SEGGER Embedded Studio for ARM"
+  desc "IDE for embedded systems"
   homepage "https://www.segger.com/products/development-tools/embedded-studio"
 
   livecheck do
