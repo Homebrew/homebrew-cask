@@ -1,9 +1,10 @@
 cask "speedify" do
-  version "11.0.1,8434"
+  version "11.1.1,8500"
   sha256 :no_check
 
   url "https://downloads.speedify.com/speedify.php?platform=osx"
   name "Speedify"
+  desc "VPN client"
   homepage "https://speedify.com/"
 
   livecheck do
