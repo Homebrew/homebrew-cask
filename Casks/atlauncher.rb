@@ -1,9 +1,10 @@
 cask "atlauncher" do
-  version "3.4.3.1"
+  version "3.4.3.2"
   sha256 :no_check
 
   url "https://www.atlauncher.com/download/zip"
   name "ATLauncher"
+  desc "Minecraft launcher"
   homepage "https://www.atlauncher.com/"
 
   livecheck do
