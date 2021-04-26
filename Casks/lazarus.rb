@@ -9,7 +9,7 @@ cask "lazarus" do
   homepage "https://www.lazarus-ide.org/"
 
   depends_on cask: "fpc-laz"
-  depends_on cask: "fpcsrc"
+  depends_on cask: "fpc-src-laz"
 
   pkg "Lazarus-#{version}-x86_64-macosx.pkg"
 
