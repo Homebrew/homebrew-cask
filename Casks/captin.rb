@@ -5,6 +5,7 @@ cask "captin" do
   url "https://dl.devmate.com/com.100hps.captin/#{version.after_comma.before_colon}/#{version.after_colon}/Captin-#{version.after_comma.before_colon}.dmg",
       verified: "dl.devmate.com/com.100hps.captin/"
   name "Captin"
+  desc "Tool to show caps lock status"
   homepage "http://captin.strikingly.com/"
 
   livecheck do
