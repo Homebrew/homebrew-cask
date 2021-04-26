@@ -4,6 +4,7 @@ cask "softorino-youtube-converter" do
 
   url "https://shining.softorino.com/shine_uploads/softorinoyoutubeconverter#{version.major}mac_#{version}.dmg"
   name "Softorino YouTube Converter"
+  desc "YouTube downloader and converter"
   homepage "https://softorino.com/youtube-converter/"
 
   livecheck do
