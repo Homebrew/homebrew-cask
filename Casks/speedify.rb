@@ -4,6 +4,7 @@ cask "speedify" do
 
   url "https://downloads.speedify.com/speedify.php?platform=osx"
   name "Speedify"
+  desc "VPN client"
   homepage "https://speedify.com/"
 
   livecheck do
