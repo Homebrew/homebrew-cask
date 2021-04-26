@@ -1,10 +1,11 @@
 cask "captin" do
-  version "1.1.2,137:1614351875"
-  sha256 "62da27c0a81e2b4666e97ed749707f7f4734504c325f46cf9aa5422421dcd858"
+  version "1.1.3,143:1619187317"
+  sha256 "15854fad5bd0c0303649c1c53561a0ba9c02e6e2ffcfbd492df4b522c800d543"
 
   url "https://dl.devmate.com/com.100hps.captin/#{version.after_comma.before_colon}/#{version.after_colon}/Captin-#{version.after_comma.before_colon}.dmg",
       verified: "dl.devmate.com/com.100hps.captin/"
   name "Captin"
+  desc "Tool to show caps lock status"
   homepage "http://captin.strikingly.com/"
 
   livecheck do
