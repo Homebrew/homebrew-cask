@@ -1,11 +1,11 @@
 cask "cutter" do
-  version "2.0.1"
-  sha256 "f797ab73079e5f261a7137c8ac78989d9f45326255bdde0eb2bfab7e544c8b58"
+  version "2.0.2"
+  sha256 "18df2677ebe016e77313fb2975e4a7be7551ade1878684e968ec7267b01a9e2a"
 
   url "https://github.com/rizinorg/cutter/releases/download/v#{version}/Cutter-v#{version}-x64.macOS.dmg",
       verified: "github.com/rizinorg/cutter/"
   name "Cutter"
-  desc "Reverse engineering platform powered by radare2"
+  desc "Reverse engineering platform powered by Rizin"
   homepage "https://cutter.re/"
 
   livecheck do
@@ -28,11 +28,11 @@ cask "cutter" do
   end
 
   zap trash: [
-    "~/.config/RadareOrg",
-    "~/.local/share/radare2",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.radare.cutter.sfl*",
-    "~/Library/Application Support/RadareOrg",
-    "~/Library/Preferences/org.radare.cutter.plist",
-    "~/Library/Saved Application State/org.radare.cutter.savedState",
+    "~/.config/rizin",
+    "~/.local/share/rizin",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/re.rizin.cutter.sfl*",
+    "~/Library/Application Support/rizin",
+    "~/Library/Preferences/re.rizin.cutter.plist",
+    "~/Library/Saved Application State/re.rizin.cutter.savedState",
   ]
 end
