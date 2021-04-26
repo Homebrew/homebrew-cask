@@ -11,7 +11,7 @@ cask "visual-studio" do
   homepage "https://www.visualstudio.com/vs/visual-studio-mac/"
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
   depends_on cask: "homebrew/cask-versions/mono-mdk-for-visual-studio"
 
   app "Visual Studio.app"
