@@ -4,6 +4,7 @@ cask "xpra" do
 
   url "https://www.xpra.org/dists/osx/x86_64/Xpra-x86_64.pkg"
   name "Xpra"
+  desc "Screen and application forwarding system"
   homepage "https://www.xpra.org/"
 
   livecheck do
