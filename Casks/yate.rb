@@ -4,6 +4,7 @@ cask "yate" do
 
   url "https://2manyrobots.com/Updates/Yate/Yate.zip"
   name "Yate"
+  desc "Media file tag editor"
   homepage "https://2manyrobots.com/yate/"
 
   livecheck do
