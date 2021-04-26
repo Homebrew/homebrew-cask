@@ -4,6 +4,7 @@ cask "principle" do
 
   url "https://principleformac.com/download/Principle_#{version.before_comma.dots_to_underscores}.zip"
   name "Principle"
+  desc "Design animated and interactive user interfaces"
   homepage "https://principleformac.com/"
 
   livecheck do
