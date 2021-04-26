@@ -4,8 +4,8 @@ cask "fpc-laz" do
 
   url "https://downloads.sourceforge.net/lazarus/Lazarus%20macOS%20x86-64/Lazarus%20#{version.after_comma}/fpc-#{version.before_comma}.intel-macosx.dmg",
       verified: "sourceforge.net/lazarus/"
-  name "Pascal compiler for Lazerus"
-  desc "Pascal compiler for Lazerus"
+  name "Pascal compiler for Lazarus"
+  desc "Pascal compiler for Lazarus"
   homepage "https://www.lazarus-ide.org/"
 
   livecheck do
