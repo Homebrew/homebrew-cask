@@ -8,6 +8,10 @@ cask "fpc-src-laz" do
   desc "Pascal compiler source files for Lazerus"
   homepage "https://www.lazarus-ide.org/"
 
+  livecheck do
+    skip
+  end
+
   pkg "fpc-src-#{version.before_comma}-laz.pkg"
 
   uninstall pkgutil: [
