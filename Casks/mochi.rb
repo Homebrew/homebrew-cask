@@ -4,6 +4,7 @@ cask "mochi" do
 
   url "https://mochi.cards/releases/Mochi-#{version}.dmg"
   name "Mochi"
+  desc "Study notes and flashcards using spaced repetition"
   homepage "https://mochi.cards/"
 
   livecheck do
