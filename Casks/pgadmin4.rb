@@ -9,6 +9,12 @@ cask "pgadmin4" do
   desc "Administration and development platform for PostgreSQL"
   homepage "https://www.pgadmin.org/"
 
+  livecheck do
+    url "https://ftp.postgresql.org/pub/pgadmin/pgadmin4/"
+    strategy :page_match
+    regex(/href="v?(\d+(?:\.\d+)*)/i)
+  end
+
   app "pgAdmin 4.app"
 
   zap trash: [
