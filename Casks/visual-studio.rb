@@ -1,17 +1,25 @@
 cask "visual-studio" do
-  version "8.9.2.0"
-  sha256 "c4b04f995fc7300b4b1a8c5115133b31d7c15e63401c3e8252b0ae27a6227c78"
+  version "8.9.7.8"
+  sha256 "a77e36b823eb429bf4a56cef13a728ac9b6a1deca20456f2a64deb178aed57e4"
 
   url "https://dl.xamarin.com/VsMac/VisualStudioForMac-#{version}.dmg",
       verified: "dl.xamarin.com/VsMac/"
-  appcast "https://docs.microsoft.com/en-us/visualstudio/releasenotes/vs2019-mac-relnotes",
-          must_contain: version.major_minor_patch
   name "Microsoft Visual Studio"
   desc "Integrated development environment"
   homepage "https://www.visualstudio.com/vs/visual-studio-mac/"
 
+  livecheck do
+    url "https://docs.microsoft.com/en-us/visualstudio/releasenotes/vs2019-mac-relnotes"
+    strategy :page_match do |page|
+      match = page.match(
+        /Visual\sStudio\s(\d+(?:\.\d+)*)\sfor\sMac\sversion\s(\d+(?:\.\d+)*)\s\((\d+(?:\.\d+)*)\)/i,
+      )
+      (match[3]).to_s
+    end
+  end
+
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
   depends_on cask: "homebrew/cask-versions/mono-mdk-for-visual-studio"
 
   app "Visual Studio.app"

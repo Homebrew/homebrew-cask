@@ -1,6 +1,6 @@
 cask "lx-music" do
-  version "1.8.2"
-  sha256 "08f73f7492b56879d6c609dda120354cd42169228f7cd636f9dde462ceeefc6e"
+  version "1.9.0"
+  sha256 "d3a362b12afe2660cfcb1579fb97330a546f127e94fb01bd47e205936d5d76c0"
 
   url "https://github.com/lyswhut/lx-music-desktop/releases/download/v#{version}/lx-music-desktop-#{version}.dmg"
   name "LX Music Assistant Desktop Edition"
