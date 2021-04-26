@@ -4,6 +4,7 @@ cask "middle" do
 
   url "https://middleclick.app/downloads/Middle#{version.before_comma}.dmg"
   name "Middle"
+  desc "Add middle click for Trackpad and Magic Mouse"
   homepage "https://middleclick.app/"
 
   livecheck do
