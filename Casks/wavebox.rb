@@ -1,6 +1,6 @@
 cask "wavebox" do
-  version "10.0.462.2"
-  sha256 "a18a59a8caf65f7927084cbc9b1207b648cebc39ca257ab963ed539de91f70f7"
+  version "10.0.495.2"
+  sha256 "9b11ebcafce23a3cf1c3db03f922109c8eb2ef80ce45585b285ef4cbff39b711"
 
   url "https://download.wavebox.app/stable/mac/Install%20Wavebox%20#{version}.dmg",
       verified: "download.wavebox.app/"
@@ -10,7 +10,8 @@ cask "wavebox" do
 
   livecheck do
     url "https://download.wavebox.app/stable/mac/appcast.xml"
-    strategy :sparkle
+    strategy :page_match
+    regex(/Wavebox_(\d+(?:\.\d+)*)\.zip/i)
   end
 
   auto_updates true
