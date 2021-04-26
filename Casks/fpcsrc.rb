@@ -4,11 +4,14 @@ cask "fpcsrc" do
 
   url "https://downloads.sourceforge.net/lazarus/Lazarus%20macOS%20x86-64/Lazarus%20#{version.after_comma}/fpc-src-#{version.before_comma}-laz.pkg",
       verified: "sourceforge.net/lazarus/"
-  appcast "https://sourceforge.net/projects/lazarus/rss"
-  name "Free Pascal Compiler Source"
+  name "Pascal compiler source files for Lazerus"
+  desc "Pascal compiler source file for Lazerus"
   homepage "https://www.freepascal.org/"
 
   pkg "fpc-src-#{version.before_comma}-laz.pkg"
 
-  uninstall pkgutil: "org.freepascal.fpc.source"
+  uninstall pkgutil: [
+    "org.freepascal.fpc.source",
+    "org.freepascal.pkg.fpcsrc-320-laz",
+  ]
 end
