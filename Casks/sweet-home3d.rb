@@ -4,8 +4,8 @@ cask "sweet-home3d" do
 
   url "https://downloads.sourceforge.net/sweethome3d/SweetHome3D/SweetHome3D-#{version}/SweetHome3D-#{version}-macosx.dmg",
       verified: "sourceforge.net/sweethome3d/"
-  appcast "https://sourceforge.net/projects/sweethome3d/rss?path=/SweetHome3D"
   name "Sweet Home 3D"
+  desc "Interior design application"
   homepage "http://www.sweethome3d.com/"
 
   app "Sweet Home 3D.app"
