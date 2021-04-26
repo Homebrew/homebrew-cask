@@ -5,6 +5,7 @@ cask "lazarus" do
   url "https://downloads.sourceforge.net/lazarus/Lazarus%20macOS%20x86-64/Lazarus%20#{version}/Lazarus-#{version}-x86_64-macosx.pkg",
       verified: "sourceforge.net/lazarus/"
   name "Lazarus"
+  desc "IDE for rapid application development"
   homepage "https://www.lazarus-ide.org/"
 
   livecheck do
