@@ -7,6 +7,10 @@ cask "lazarus" do
   name "Lazarus"
   homepage "https://www.lazarus-ide.org/"
 
+  livecheck do
+    skip
+  end
+
   depends_on cask: "fpc-laz"
   depends_on cask: "fpc-src-laz"
 
