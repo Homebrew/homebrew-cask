@@ -4,12 +4,18 @@ cask "lazarus" do
 
   url "https://downloads.sourceforge.net/lazarus/Lazarus%20macOS%20x86-64/Lazarus%20#{version}/Lazarus-#{version}-x86_64-macosx.pkg",
       verified: "sourceforge.net/lazarus/"
-  appcast "https://sourceforge.net/projects/lazarus/rss"
   name "Lazarus"
+  desc "IDE for rapid application development"
   homepage "https://www.lazarus-ide.org/"
 
-  depends_on formula: "fpc"
-  depends_on cask: "fpcsrc"
+  livecheck do
+    url "https://sourceforge.net/projects/lazarus/rss"
+    strategy :page_match
+    regex(/Lazarus-(\d+(?:.\d+)*)-x86_64-macosx\.pkg/i)
+  end
+
+  depends_on cask: "fpc-laz"
+  depends_on cask: "fpc-src-laz"
 
   pkg "Lazarus-#{version}-x86_64-macosx.pkg"
 
