@@ -6,6 +6,7 @@ cask "pgadmin4" do
       verified: "ftp.postgresql.org/"
   appcast "https://ftp.postgresql.org/pub/pgadmin/pgadmin4/"
   name "pgAdmin4"
+  desc "Administration and development platform for PostgreSQL"
   homepage "https://www.pgadmin.org/"
 
   app "pgAdmin 4.app"
