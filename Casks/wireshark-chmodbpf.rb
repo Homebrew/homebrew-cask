@@ -4,6 +4,7 @@ cask "wireshark-chmodbpf" do
 
   url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20Intel%2064.dmg"
   name "Wireshark-ChmodBPF"
+  desc "Network protocol analyzer"
   homepage "https://www.wireshark.org/"
 
   livecheck do
