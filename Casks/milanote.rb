@@ -1,10 +1,11 @@
 cask "milanote" do
-  version "2.2.37"
-  sha256 "60b04a844eac56fed2ae065353f91576338cb82a5bbbaab04ac136aa11459f08"
+  version "2.2.38"
+  sha256 "fc14c54669947d379cf5f9f2c76314be5f3459d51689fcda157004a10a97fd82"
 
   url "https://milanote-app-releases.s3.amazonaws.com/Milanote-#{version}.dmg",
       verified: "milanote-app-releases.s3.amazonaws.com/"
   name "Milanote"
+  desc "Organize your ideas and projects into visual boards"
   homepage "https://www.milanote.com/"
 
   livecheck do
