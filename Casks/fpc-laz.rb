@@ -11,7 +11,7 @@ cask "fpc-laz" do
   livecheck do
     url "https://sourceforge.net/projects/lazarus/rss"
     strategy :page_match do |page|
-      match = page.match(%r{Lazarus\%20(\d+(?:\.\d+)*)/fpc-(\d+(?:\.\d+)*)\.intel-macosx\.dmg}i)
+      match = page.match(%r{Lazarus\%20(\d+(?:.\d+)*)/fpc-(\d+(?:.\d+)*)\.intel-macosx\.dmg}i)
       "#{match[2]},#{match[1]}"
     end
   end
