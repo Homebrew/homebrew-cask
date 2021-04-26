@@ -5,6 +5,7 @@ cask "runway" do
   url "https://runway-releases.s3.amazonaws.com/Runway-#{version}.dmg",
       verified: "runway-releases.s3.amazonaws.com/"
   name "Runway"
+  desc "Creative toolkit powered by machine learning"
   homepage "https://runwayml.com/"
 
   livecheck do
