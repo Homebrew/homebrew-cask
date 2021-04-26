@@ -7,6 +7,11 @@ cask "depthmapx" do
   desc "Multi-Platform Spatial Network Analysis Software"
   homepage "https://github.com/SpaceGroupUCL/depthmapX"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "depthmapX.app"
 
   caveats "depthmapX-cli is not included"
