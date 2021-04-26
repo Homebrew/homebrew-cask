@@ -4,6 +4,7 @@ cask "isubtitle" do
 
   url "https://www.bitfield.se/isubtitle#{version.major}/download/iSubtitle_#{version.before_comma}.zip"
   name "iSubtitle"
+  desc "Inject subtitle tracks, chapter markers and metadata into your media"
   homepage "https://www.bitfield.se/isubtitle/"
 
   livecheck do
