@@ -19,11 +19,7 @@ cask "arq" do
 
   uninstall pkgutil:   "com.haystacksoftware.Arq",
             quit:      "com.haystacksoftware.Arq",
-            delete:    [
-              "/Applications/Arq.app",
-              "/Applications/Arq.app/Contents/Resources/ArqAgent.app",
-              "/Applications/Arq.app/Contents/Resources/ArqMonitor.app",
-            ],
+            delete:    "/Applications/Arq.app",
             launchctl: [
               "com.haystacksoftware.ArqMonitor",
               "com.haystacksoftware.arqagent",
