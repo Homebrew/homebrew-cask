@@ -2,7 +2,7 @@ cask "melonds" do
   version "0.9.2"
 
   if Hardware::CPU.intel?
-    sha256 "80cc5c8b71eda3fdc1172809f6e957adc20899951facdd7cf1704317d5df6b86"
+    sha256 "253c3ce58c626d05c62444a347ccc6b3bd6e7698f685ffd404c9a51ac5c08a91"
     url "http://melonds.kuribo64.net/downloads/melonDS_#{version}_mac64.dmg"
   else
     sha256 "5dc4f493aaabaac91bf8fdd79c5de1c5014daa2cce64718c43f461c2640c82ab"
