@@ -1,6 +1,6 @@
 cask "fawkes" do
-  version "0.3.1"
-  sha256 "7101ecb08e9ce319c66f1e6dae25443a3175917eaa48feeaf17b1864f91ab6f8"
+  version "1.0"
+  sha256 "83eb4f646cbe8ef31c7aa9b92877f371c9022fd64b5f3048b300e6f7f30db48b"
 
   url "https://mirror.cs.uchicago.edu/fawkes/files/#{version.major_minor}/Fawkes-#{version}.dmg"
   name "Fawkes"
