@@ -4,10 +4,14 @@ cask "cheatsheet" do
 
   url "https://mediaatelier.com/CheatSheet/CheatSheet_#{version}.zip",
       verified: "mediaatelier.com/CheatSheet/"
-  appcast "https://mediaatelier.com/CheatSheet/feed.php"
   name "CheatSheet"
   desc "Tool to list all active shortcuts of the current application"
   homepage "https://www.cheatsheetapp.com/CheatSheet/"
+
+  livecheck do
+    url "https://mediaatelier.com/CheatSheet/feed.php"
+    strategy :sparkle
+  end
 
   app "CheatSheet.app"
 
