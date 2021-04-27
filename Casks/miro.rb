@@ -5,6 +5,7 @@ cask "miro" do
   url "https://desktop.miro.com/platforms/darwin/Miro.dmg"
   name "Miro"
   name "RealtimeBoard"
+  desc "Online collaborative whiteboard platform"
   homepage "https://miro.com/"
 
   livecheck do
