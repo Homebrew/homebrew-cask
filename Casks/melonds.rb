@@ -7,9 +7,14 @@ cask "melonds" do
   desc "Nintendo DS and DSi emulator"
   homepage "http://melonds.kuribo64.net/"
 
+  livecheck do
+    url "https://github.com/Arisotura/melonDS"
+    strategy :github_latest
+  end
+
+  depends_on formula: "libslirp"
   depends_on formula: "qt@5"
   depends_on formula: "sdl2"
-  depends_on formula: "libslirp"
 
   app "melonDS.app"
 
