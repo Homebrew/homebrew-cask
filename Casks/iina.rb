@@ -3,7 +3,7 @@ cask "iina" do
   sha256 "91b87e80055f097a1cb7a8c91979deb5303315f2067552cbe7387f48bfc42736"
 
   url "https://github.com/iina/iina/releases/download/v#{version}/IINA.v#{version}.dmg",
-     verified: "github.com/iina/iina"
+      verified: "github.com/iina/iina"
   name "IINA"
   desc "Free and open-source media player"
   homepage "https://iina.io/"
@@ -34,3 +34,4 @@ cask "iina" do
     "~/Library/Saved Application State/com.colliderli.iina.savedState",
   ]
 end
+
