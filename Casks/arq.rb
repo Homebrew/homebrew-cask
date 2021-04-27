@@ -1,6 +1,6 @@
 cask "arq" do
-  version "7.5.3"
-  sha256 "bc92a67dba04b3a8e976ba89a097cedec6768e7c28d3b799d837fa7830fd330d"
+  version "7.5.6"
+  sha256 "1486819a9ac5eaaabbbed117dd9af55762f05df12260866d94af51d1429916d8"
 
   url "https://www.arqbackup.com/download/arqbackup/Arq#{version}.pkg"
   name "Arq"
@@ -19,6 +19,7 @@ cask "arq" do
 
   uninstall pkgutil:   "com.haystacksoftware.Arq",
             quit:      "com.haystacksoftware.Arq",
+            delete:    "/Applications/Arq.app",
             launchctl: [
               "com.haystacksoftware.ArqMonitor",
               "com.haystacksoftware.arqagent",
