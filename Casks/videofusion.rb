@@ -9,6 +9,10 @@ cask "videofusion" do
   desc "Video editor"
   homepage "https://lv.ulikecam.com/"
 
+  livecheck do
+    skip "No version information available"
+  end
+
   depends_on macos: ">= :mojave"
 
   pkg "Jianying_Pro_#{version.dots_to_underscores}.pkg"
