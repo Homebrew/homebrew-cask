@@ -7,5 +7,9 @@ cask "sia-ui" do
   desc "Graphical frontend for Sia"
   homepage "https://sia.tech/"
 
+  livecheck do
+    skip "No version information available"
+  end
+
   app "Sia-UI.app"
 end
