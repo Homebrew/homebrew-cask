@@ -1,8 +1,8 @@
 cask "typora" do
   version "0.9.9.36.2,4901"
-  sha256 "b7f0628cc0421a5cfbcd4fcfb07799091880f0f717494137ba19b5cfb24a424b"
+  sha256 :no_check
 
-  url "https://www.typora.io/download/Typora-#{version.before_comma}.dmg"
+  url "https://typora.io/download/Typora.dmg"
   name "Typora"
   desc "Configurable document editor that supports Markdown"
   homepage "https://typora.io/"
