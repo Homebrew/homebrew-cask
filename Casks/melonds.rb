@@ -1,15 +1,20 @@
 cask "melonds" do
-  version "0.9.1"
-  sha256 "5928ad133661b6ea428264894160b87cc48cdfc79461fb220c72d984613d6a62"
+  version "0.9.2"
+  sha256 "80cc5c8b71eda3fdc1172809f6e957adc20899951facdd7cf1704317d5df6b86"
 
-  url "http://melonds.kuribo64.net/downloads/melonDS_#{version}_mac64.tar.gz"
+  url "http://melonds.kuribo64.net/downloads/melonDS_#{version}_mac64.dmg"
   name "melonDS"
   desc "Nintendo DS and DSi emulator"
   homepage "http://melonds.kuribo64.net/"
 
+  livecheck do
+    url "https://github.com/Arisotura/melonDS"
+    strategy :github_latest
+  end
+
+  depends_on formula: "libslirp"
   depends_on formula: "qt@5"
   depends_on formula: "sdl2"
-  depends_on formula: "libslirp"
 
   app "melonDS.app"
 
