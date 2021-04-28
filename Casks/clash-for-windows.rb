@@ -8,7 +8,7 @@ cask "clash-for-windows" do
     url "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/#{version}/Clash.for.Windows-#{version}-arm64.dmg"
     sha256 "c6e1766e6bf15cf80d37871401b840516c8896dcb418770f4e9faaaf316db0b3"
   end
-  
+
   name "Clash for Windows"
   desc "GUI based on Clash"
   homepage "https://github.com/Fndroid/clash_for_windows_pkg"
