@@ -4,7 +4,7 @@ cask "usr-sse2-rdm" do
 
   url "https://github.com/usr-sse2/RDM/releases/download/#{version}/RDM.zip"
   name "RDM"
-  desc "Utility to set a Retina display to custom resolutions"
+  desc "Set a Retina display to custom resolutions"
   homepage "https://github.com/usr-sse2/RDM"
 
   livecheck do
