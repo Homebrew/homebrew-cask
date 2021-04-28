@@ -3,14 +3,17 @@ cask "transmit" do
   sha256 "7706072f43f615b83ba2e227bcd6e0a79f3eb15363d0b6ce982a4729c6dc28bd"
 
   url "https://www.panic.com/transmit/d/Transmit%20#{version}.zip"
-  appcast "https://library.panic.com/releasenotes/transmit#{version.major}/",
-          must_contain: version.chomp(".0")
   name "Transmit"
   desc "File transfer application"
   homepage "https://panic.com/transmit/"
 
+  livecheck do
+    url "https://panic.com/download/transmit/Transmit-#{version.major}-Latest.zip"
+    strategy :header_match
+  end
+
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :mojave"
 
   app "Transmit.app"
 
