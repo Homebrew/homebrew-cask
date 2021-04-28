@@ -1,13 +1,17 @@
 cask "debookee" do
-  version "8.0.3,3204"
+  version "8.0.4,3207"
   sha256 :no_check
 
   url "https://www.iwaxx.com/debookee/debookee.zip",
       verified: "iwaxx.com/debookee/"
-  appcast "https://www.iwaxx.com/debookee/appcast.php"
   name "Debookee"
   desc "Network traffic analyzer"
   homepage "https://debookee.com/"
+
+  livecheck do
+    url "https://www.iwaxx.com/debookee/appcast.php"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :mojave"
