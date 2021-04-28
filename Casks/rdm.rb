@@ -9,7 +9,6 @@ cask "rdm" do
 
   livecheck do
     url :url
-    strategy :git
   end
 
   depends_on macos: ">= :sierra"
