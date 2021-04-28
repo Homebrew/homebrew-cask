@@ -7,6 +7,11 @@ cask "usr-sse2-rdm" do
   desc "Utility to set a Retina display to custom resolutions"
   homepage "https://github.com/usr-sse2/RDM"
 
+  livecheck do
+    url :url
+    strategy :git
+  end
+
   depends_on macos: ">= :sierra"
 
   app "RDM.app"
