@@ -11,7 +11,6 @@ cask "usr-sse2-rdm" do
 
   app "RDM.app"
 
-  uninstall quit: "net.alkalay.RDM",
-            quit: "RDM",
+  uninstall quit:    "RDM",
             pkgutil: "net.alkalay.RDM"
 end
