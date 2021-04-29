@@ -2,8 +2,8 @@
 # frozen_string_literal: true
 
 cask "syntax-highlight" do
-  version "2.0.0"
-  sha256 "e52c94f7e387a1154b4d47f3b6ad41f8d7d694de6f06c1430cd0c2649baff5cf"
+  version "2.0.1"
+  sha256 "9a47cf1c5faa5d56e9142ea8b158de0d3d4db4b910e052e86940e475875b2b9c"
 
   url "https://github.com/sbarex/SourceCodeSyntaxHighlight/releases/download/#{version}/Syntax.Highlight.zip"
   name "Syntax Highlight"
