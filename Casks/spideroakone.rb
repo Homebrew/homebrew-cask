@@ -10,6 +10,7 @@ cask 'spideroakone' do
     url 'https://spideroak.com/release/spideroak/osx'
   end
   name 'SpiderOakOne'
+  desc 'Cloud backup and storage'
   homepage 'https://spideroak.com/'
 
   pkg 'SpiderOakONE.pkg'
