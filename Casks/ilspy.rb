@@ -7,5 +7,9 @@ cask "ilspy" do
   desc "Avalonia-based .NET decompiler"
   homepage "https://github.com/icsharpcode/AvaloniaILSpy"
 
+  livecheck do
+    url :url
+  end
+
   app "ILSpy.app"
 end
