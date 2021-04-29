@@ -4,6 +4,7 @@ cask "pd" do
 
   url "http://msp.ucsd.edu/Software/pd-#{version}.mac.tar.gz"
   name "Pd"
+  desc "Pure data distribution. More info at http://puredata.info"
   homepage "http://msp.ucsd.edu/software.html"
 
   livecheck do
