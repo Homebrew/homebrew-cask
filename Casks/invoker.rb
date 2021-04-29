@@ -10,8 +10,7 @@ cask "invoker" do
 
   livecheck do
     url "https://invokerdev.fra1.digitaloceanspaces.com/invoker/latest-mac.yml"
-    strategy :page_match
-    regex(/version:\s*(\d+(?:\.\d+)*)/i)
+    strategy :electron_builder
   end
 
   auto_updates true
