@@ -9,7 +9,6 @@ cask "ilspy" do
 
   livecheck do
     url :url
-    strategy :github_latest
   end
 
   app "ILSpy.app"
