@@ -1,11 +1,11 @@
-cask 'openineditor-lite' do
-  version '1.1.2'
-  sha256 'b804f7c7c80d68fd75c44257ae1d83954d0e53d4fe7d81ba1d51297e48c28b7a'
+cask "openineditor-lite" do
+  version "1.2.3"
+  sha256 "68f9c93c18324885c03a03d571ca110a24a2fd0fd90d923165d82f4db7e0699d"
 
-  url "https://github.com/Ji4n1ng/OpenInTerminal/releases/download/#{version}/OpenInEditor-Lite.app.zip"
-  appcast 'https://github.com/Ji4n1ng/OpenInTerminal/releases.atom'
-  name 'OpenInEditor-Lite'
-  homepage 'https://github.com/Ji4n1ng/OpenInTerminal'
+  url "https://github.com/Ji4n1ng/OpenInTerminal/releases/download/v#{version}/OpenInEditor-Lite.app.zip"
+  name "OpenInEditor-Lite"
+  desc "Finder Toolbar app to open the current directory in Editor"
+  homepage "https://github.com/Ji4n1ng/OpenInTerminal"
 
-  app 'OpenInEditor-Lite.app'
+  app "OpenInEditor-Lite.app"
 end

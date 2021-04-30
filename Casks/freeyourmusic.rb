@@ -1,12 +1,17 @@
-cask 'freeyourmusic' do
-  version '5.4.3'
-  sha256 '1d660303c7d230fe5336c7f1baa4ad8428c600a6fea3d984f9afa0e6137791a7'
+cask "freeyourmusic" do
+  version "6.0.0"
+  sha256 "f696cf0749cd6182808a06bffcac6f5f80a7695ba4ec3a0c77ecdde87f81b824"
 
-  # dzqeytqqx888.cloudfront.net/ was verified as official when first introduced to the cask
-  url "https://dzqeytqqx888.cloudfront.net/FreeYourMusic-#{version}.dmg"
-  appcast 'https://stamp-live.s3.amazonaws.com/latest-mac.yml'
-  name 'FreeYourMusic⁩'
-  homepage 'https://freeyourmusic.com/'
+  url "https://dzqeytqqx888.cloudfront.net/FreeYourMusic-#{version}.dmg",
+      verified: "dzqeytqqx888.cloudfront.net/"
+  name "FreeYourMusic⁩"
+  desc "Move playlists, tracks, and albums between music platforms"
+  homepage "https://freeyourmusic.com/"
 
-  app 'FreeYourMusic.app'
+  livecheck do
+    url "https://stamp-live.s3.amazonaws.com/latest-mac.yml"
+    strategy :electron_builder
+  end
+
+  app "FreeYourMusic.app"
 end

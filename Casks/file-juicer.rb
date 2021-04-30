@@ -1,11 +1,16 @@
-cask 'file-juicer' do
-  version '4.84'
+cask "file-juicer" do
+  version "4.93"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://echoone.com/filejuicer/FileJuicer-#{version}.zip"
-  appcast 'https://echoone.com/filejuicer/download'
-  name 'File Juicer'
-  homepage 'https://echoone.com/filejuicer/'
+  name "File Juicer"
+  desc "Extract images from PDF, PowerPoint, Word, Excel and other Files"
+  homepage "https://echoone.com/filejuicer/"
 
-  app 'File Juicer.app'
+  livecheck do
+    url "https://echoone.com/filejuicer/latestversion"
+    strategy :header_match
+  end
+
+  app "File Juicer.app"
 end

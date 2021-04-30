@@ -1,13 +1,18 @@
-cask 'ultimate' do
-  version '3.0.12.529'
-  sha256 'e380fd34fbb788a1bf57aa699304cc2d1c5abb7e23fabe4246877087938b1d47'
+cask "ultimate" do
+  version "3.0.13.120"
+  sha256 :no_check
 
-  url 'https://download.epubor.com/epubor_ultimate.zip'
-  appcast 'https://www.epubor.com/ultimate.html'
-  name 'Ultimate Converter'
-  homepage 'https://www.epubor.com/'
+  url "https://download.epubor.com/epubor_ultimate.zip"
+  name "Ultimate Converter"
+  homepage "https://www.epubor.com/"
 
-  pkg 'Ultimate.pkg'
+  livecheck do
+    url "https://www.epubor.com/ultimate.html"
+    strategy :page_match
+    regex(/Version:\s*(\d+(?:\.\d+)*)/i)
+  end
 
-  uninstall pkgutil: 'EpuborStudioUltimate2'
+  pkg "Ultimate.pkg"
+
+  uninstall pkgutil: "EpuborStudioUltimate2"
 end

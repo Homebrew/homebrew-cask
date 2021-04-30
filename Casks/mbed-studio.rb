@@ -1,19 +1,28 @@
-cask 'mbed-studio' do
-  version :latest
+cask "mbed-studio" do
+  version "1.4.0"
   sha256 :no_check
 
-  url 'https://studio.mbed.com/installers/latest/mac/MbedStudio.pkg'
-  name 'Mbed Studio'
-  homepage 'https://os.mbed.com/studio/'
+  url "https://studio.mbed.com/installers/latest/mac/MbedStudio.pkg"
+  name "Mbed Studio"
+  homepage "https://os.mbed.com/studio/"
 
-  pkg 'MbedStudio.pkg'
+  livecheck do
+    url :url
+    strategy :header_match
+  end
 
-  uninstall pkgutil: 'com.arm.mbed.studio'
+  pkg "MbedStudio.pkg"
+
+  preflight do
+    staged_path.glob("MbedStudio-*.pkg").first.rename("#{staged_path}/MbedStudio.pkg")
+  end
+
+  uninstall pkgutil: "com.arm.mbed.studio"
 
   zap trash: [
-               '~/Library/Application Support/Mbed Studio',
-               '~/.mbed-library-cache',
-               '~/.mbed-library-pipeline',
-               '~/.mbed-studio',
-             ]
+    "~/Library/Application Support/Mbed Studio",
+    "~/.mbed-library-cache",
+    "~/.mbed-library-pipeline",
+    "~/.mbed-studio",
+  ]
 end

@@ -1,18 +1,29 @@
-cask 'qiyimedia' do
-  version '20200610,5.19.2-270'
-  sha256 'f7446f1a0fb173c99066f900af1e9dbe1c6216ca4023d017e48005ead3ead7ba'
+cask "qiyimedia" do
+  version "20201215,17:34"
+  sha256 :no_check
 
-  url 'https://mbdapp.iqiyi.com/j/ot/iQIYIMedia_000.dmg'
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://mbdapp.iqiyi.com/j/ot/iQIYIMedia_000.dmg',
-          must_contain: version.before_comma
-  name '爱奇艺视频'
-  homepage 'https://app.iqiyi.com/mac/player/index.html'
+  url "http://221.212.217.42/cdn/pcclient/#{version.before_comma}/#{version.after_comma.before_colon}/#{version.after_colon}/iQIYIMedia_271.dmg",
+      verified: "221.212.217.42/"
+  name "iQIYI"
+  name "爱奇艺视频"
+  desc "Interactive media player"
+  homepage "https://app.iqiyi.com/mac/player/index.html"
 
-  app '爱奇艺.app'
+  livecheck do
+    url "https://mbdapp.iqiyi.com/j/ot/iQIYIMedia_271.dmg"
+    strategy :header_match do |headers|
+      match = headers["location"].match(%r{/(\d+)/(\d+)/(\d+)/iQIYIMedia_\d+\.dmg}i)
+      "#{match[1]},#{match[2]}:#{match[3]}"
+    end
+  end
+
+  depends_on macos: ">= :catalina"
+
+  app "爱奇艺.app"
 
   zap trash: [
-               '~/Library/Application Scripts/com.iqiyi.player',
-               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.iqiyi.player.sfl*',
-               '~/Library/Containers/com.iqiyi.player',
-             ]
+    "~/Library/Application Scripts/com.iqiyi.player",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.iqiyi.player.sfl*",
+    "~/Library/Containers/com.iqiyi.player",
+  ]
 end

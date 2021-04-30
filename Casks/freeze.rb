@@ -1,16 +1,21 @@
-cask 'freeze' do
-  version '3.12.1'
-  sha256 '12ec213afe5fa0500978a3c454227035e2f53aaceeab1c3bc14ce718fc437103'
+cask "freeze" do
+  version "3.14,305"
+  sha256 :no_check
 
-  url 'https://www.freezeapp.net/download/Freeze.zip'
-  appcast 'https://www.freezeapp.net/appcast.xml'
-  name 'Freeze'
-  homepage 'https://www.freezeapp.net/'
+  url "https://www.freezeapp.net/download/Freeze.zip"
+  name "Freeze"
+  desc "Amazon Glacier file transfer client"
+  homepage "https://www.freezeapp.net/"
 
-  app 'Freeze.app'
+  livecheck do
+    url "https://www.freezeapp.net/appcast.xml"
+    strategy :sparkle
+  end
+
+  app "Freeze.app"
 
   zap trash: [
-               '~/Library/Application Scripts/seb.GlacierMac',
-               '~/Library/Containers/seb.GlacierMac',
-             ]
+    "~/Library/Application Scripts/seb.GlacierMac",
+    "~/Library/Containers/seb.GlacierMac",
+  ]
 end

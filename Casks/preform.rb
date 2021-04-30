@@ -1,12 +1,20 @@
-cask 'preform' do
-  version '3.5.2,371'
-  sha256 '7d823d863da9e31a111d0064c321723b68ef23c114fd0ea887c47b663260c490'
+cask "preform" do
+  version "3.13.0,811"
+  sha256 "ce9829ebaf02b27dfddefb88d688f957aed07e9698460cd6717665153a623b88"
 
-  # s3.amazonaws.com/FormlabsReleases/ was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/FormlabsReleases/Release/#{version.before_comma}/PreForm_#{version.before_comma}_release_origin_release_#{version.before_comma}_build_#{version.after_comma}.dmg"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://formlabs.com/download-preform-mac/'
-  name 'PreForm'
-  homepage 'https://formlabs.com/tools/preform/'
+  url "https://s3.amazonaws.com/FormlabsReleases/Release/#{version.before_comma}/PreForm_#{version.before_comma}_release__build_#{version.after_comma}.dmg",
+      verified: "s3.amazonaws.com/FormlabsReleases/"
+  name "PreForm"
+  desc "3D printing setup, management, and monitoring"
+  homepage "https://formlabs.com/tools/preform/"
 
-  app 'PreForm.app'
+  livecheck do
+    url "https://formlabs.com/download-preform-mac/"
+    strategy :header_match do |headers|
+      match = headers["location"].match(%r{/PreForm_(\d+(?:\.\d+)*)_release__build_(\d+)\.dmg}i)
+      "#{match[1]},#{match[2]}"
+    end
+  end
+
+  app "PreForm.app"
 end

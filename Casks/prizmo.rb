@@ -1,14 +1,20 @@
-cask 'prizmo' do
-  version '4.0.3'
-  sha256 '37251e6faab7589a073f750fecb8b9e30a0adb44fb04cf851fc51ad8b361f89f'
+cask "prizmo" do
+  version "4.1,4.276.2226"
+  sha256 "ec6e8d70f604efa17b9380ef1e45b4ee93d232f7942098192a27a6e35d2501d6"
 
-  url "https://www.creaceed.com/downloads/prizmo#{version.major}_#{version}.zip"
-  appcast "https://www.creaceed.com/appcasts/prizmo#{version.major}.xml"
-  name 'Prizmo'
-  homepage 'https://creaceed.com/prizmo'
+  url "https://creaceed.s3.amazonaws.com/downloads/prizmo#{version.major}_#{version.before_comma}.zip",
+      verified: "creaceed.s3.amazonaws.com/downloads/"
+  name "Prizmo"
+  desc "Scanning application with Optical Character Recognition (OCR)"
+  homepage "https://creaceed.com/prizmo"
+
+  livecheck do
+    url "https://creaceed.com/appcasts/prizmo#{version.major}.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
-  depends_on macos: '>= :yosemite'
+  depends_on macos: ">= :yosemite"
 
-  app 'Prizmo.app'
+  app "Prizmo.app"
 end

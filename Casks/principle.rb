@@ -1,13 +1,18 @@
-cask 'principle' do
-  version '5.12'
-  sha256 'a1b8f16b7845f3afd92c9e2bbbe86b590dac375d342b33d653b4171db276f157'
+cask "principle" do
+  version "6.5,6007"
+  sha256 "50a6fb3cad00560566aeb6edf776a72346e8402d0c2b8e5062674c0b179de38b"
 
-  url "https://principleformac.com/download/Principle_#{version.dots_to_underscores}.zip"
-  appcast 'https://principleformac.com/update2.xml'
-  name 'Principle'
-  homepage 'https://principleformac.com/'
+  url "https://principleformac.com/download/Principle_#{version.before_comma.dots_to_underscores}.zip"
+  name "Principle"
+  desc "Design animated and interactive user interfaces"
+  homepage "https://principleformac.com/"
 
-  depends_on macos: '>= :high_sierra'
+  livecheck do
+    url "https://principleformac.com/update2.xml"
+    strategy :sparkle
+  end
 
-  app 'Principle.app'
+  depends_on macos: ">= :high_sierra"
+
+  app "Principle.app"
 end

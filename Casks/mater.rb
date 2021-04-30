@@ -1,11 +1,10 @@
-cask 'mater' do
-  version '1.0.4'
-  sha256 'b101a22ede300556f6cddfacefb15926307e711a3f4fdc121627fea02662385b'
+cask "mater" do
+  version "1.0.10"
+  sha256 "613dba1cd8ca8dee74b30a456d3d2cb87896020b5305d6ff25f5f324499c4ee7"
 
-  url "https://github.com/jasonlong/mater/releases/download/v#{version}/Mater-darwin-x64.zip"
-  appcast 'https://github.com/jasonlong/mater/releases.atom'
-  name 'Mater'
-  homepage 'https://github.com/jasonlong/mater'
+  url "https://github.com/jasonlong/mater/releases/download/#{version}/Mater-darwin-x64.zip"
+  name "Mater"
+  homepage "https://github.com/jasonlong/mater"
 
-  app 'Mater-darwin-x64/Mater.app'
+  app "Mater-darwin-x64/Mater.app"
 end

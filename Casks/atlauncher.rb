@@ -1,10 +1,17 @@
-cask 'atlauncher' do
-  version :latest
+cask "atlauncher" do
+  version "3.4.3.2"
   sha256 :no_check
 
-  url 'https://www.atlauncher.com/download/zip'
-  name 'ATLauncher'
-  homepage 'https://www.atlauncher.com/'
+  url "https://www.atlauncher.com/download/zip"
+  name "ATLauncher"
+  desc "Minecraft launcher"
+  homepage "https://www.atlauncher.com/"
 
-  app 'ATLauncher.app'
+  livecheck do
+    url "https://atlauncher.com/downloads"
+    strategy :page_match
+    regex(/{\s*active:\s*['"](\d+(?:\.\d+)*)['"]\s*}/i)
+  end
+
+  app "ATLauncher.app"
 end

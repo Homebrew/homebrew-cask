@@ -1,12 +1,17 @@
-cask 'xaos' do
-  version '4.0'
-  sha256 'b546012110d508af24113c52449f507d716823f0c25fd29d5a7cd38113b25d58'
+cask "xaos" do
+  version "4.2.1"
+  sha256 "be88d2b1c26b3ef1ec8a297195364acfc549a60facf91d49e01941415f662a72"
 
-  # github.com/xaos-project/XaoS/ was verified as official when first introduced to the cask
-  url "https://github.com/xaos-project/XaoS/releases/download/release-#{version}/XaoS-#{version}.dmg"
-  appcast 'https://github.com/xaos-project/XaoS/releases.atom'
-  name 'GNU XaoS'
-  homepage 'https://xaos-project.github.io/'
+  url "https://github.com/xaos-project/XaoS/releases/download/release-#{version}/XaoS-#{version}.dmg",
+      verified: "github.com/xaos-project/XaoS/"
+  name "GNU XaoS"
+  homepage "https://xaos-project.github.io/"
 
-  app 'XaoS.app'
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^release-(\d+(?:\.\d+)*)$/i)
+  end
+
+  app "XaoS.app"
 end

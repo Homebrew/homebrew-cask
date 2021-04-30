@@ -1,152 +1,149 @@
-cask 'firefox' do
-  version '77.0.1'
+cask "firefox" do
+  version "88.0"
 
-  language 'cs' do
-    sha256 'db339fd0c9198a06b4fea425db4090cd0a23169bff0ad2a90ae8965a9906e1da'
-    'cs'
+  language "cs" do
+    sha256 "2113b3901bb1b7697fd3044c5e41f4315624cf64aa60090d44a024a830d86b04"
+    "cs"
+  end
+  language "de" do
+    sha256 "853c37356fc89dee38926e375de5d3ad1ac34aa9b9bf5d2434fb2aefa5ec140a"
+    "de"
+  end
+  language "en-CA" do
+    sha256 "1b83a3e8c4e6006b6978b4a82006af9b8e4fa59481a9955039551ad0446a094c"
+    "en-CA"
+  end
+  language "en-GB" do
+    sha256 "f7dddd663d7dc45450f177b708e9560da24e1240eedc5abe6f8f86880f517a9d"
+    "en-GB"
+  end
+  language "en", default: true do
+    sha256 "8e12a1f5db329e349c5e49e448a589b9649cdbda225eae13813b41e8f88f0f33"
+    "en-US"
+  end
+  language "eo" do
+    sha256 "9c60f5156cfd95555d48da047fc8947bf0be15f06583720a15cdd26e555c71ca"
+    "eo"
+  end
+  language "es-AR" do
+    sha256 "f3c40dc9a9542b28cb1b3d01b9bd9ad60bc9ceeede2c6801b87e7a9948005931"
+    "es-AR"
+  end
+  language "es-CL" do
+    sha256 "23a3e3731308494d7c49eb7c63467aa018ec1483272610ec7867c8744495536b"
+    "es-CL"
+  end
+  language "es-ES" do
+    sha256 "30646fcb39f2fd090793ae8333c02bc7289111cc1436708ef21bfd95e72f680d"
+    "es-ES"
+  end
+  language "fi" do
+    sha256 "0099f7efffe4031ab8a2f34a4053bcdf989829f5792db577469ac7fc17b6ae87"
+    "fi"
+  end
+  language "fr" do
+    sha256 "148f400e657c50740ba763685f327d3813f0114e9241761268bf439da3c426a3"
+    "fr"
+  end
+  language "gl" do
+    sha256 "e00345103bbffa22c2a20c88c92b5f996e6594af2c6600128528d4160f114bec"
+    "gl"
+  end
+  language "in" do
+    sha256 "8891ba4d12f0dbd68e5da80de9762c29fad2b19abaff60e205ee204b317b803c"
+    "hi-IN"
+  end
+  language "it" do
+    sha256 "ae59164f318131164a35ba6226e205d4fd72ceb9a81acf243f12454266a6c8f5"
+    "it"
+  end
+  language "ja" do
+    sha256 "7112de36c67c52e34ee69023ccf890098ccd54b6d21fa8748b495c2e83469dca"
+    "ja-JP-mac"
+  end
+  language "ko" do
+    sha256 "a871878d7732d3f81a298f021b9c7bf671bdc5d92cc5e1812087b4744808f773"
+    "ko"
+  end
+  language "nl" do
+    sha256 "8b8d4388d5e75c08c392c9fe25d2e865169c86122b8fb20f009f8e78332e49ff"
+    "nl"
+  end
+  language "pl" do
+    sha256 "b0cadedef4927af2c9ffcbfc3b86d707616e82fe4ebd7eb99bd48ec032fcf713"
+    "pl"
+  end
+  language "pt-BR" do
+    sha256 "521e51af10b02e89a1c4bdf0f894037df2a3779cd5ea75a0bbfbe8cf84a73cff"
+    "pt-BR"
+  end
+  language "pt" do
+    sha256 "0a52bb7771bdbc4299084994e74b4ac4726c3142f98351ee17dc5c56e60cbd07"
+    "pt-PT"
+  end
+  language "ru" do
+    sha256 "e81a2503748b8c23a060871f1bab1231ee5db1815022fd7e72134a0bf4a585d2"
+    "ru"
+  end
+  language "sv" do
+    sha256 "6d9d7ea493ea1460eaa02c66e2293195dd51d7f30bf22b80172bea535cca96f0"
+    "sv-SE"
+  end
+  language "tr" do
+    sha256 "0ed99f2233067f2dd9d33ebe1dc380ee4c24cd71e6aedfdee05806431221d0d0"
+    "tr"
+  end
+  language "uk" do
+    sha256 "d5b6487b31c64094aa253d7c572c278bc824da72deef02920a92c73722bb4056"
+    "uk"
+  end
+  language "zh-TW" do
+    sha256 "dd50e7939535fcf4002e9918b872ca64c0e81cfce66264681b3f55906445a66c"
+    "zh-TW"
+  end
+  language "zh" do
+    sha256 "3852cdbc8045615ec261848dad3403dfc058aec8f23035823d07294664d4a8ff"
+    "zh-CN"
   end
 
-  language 'de' do
-    sha256 '91baccd3b1f1a03294f44c2cf87c12a732a89592974552ea4a33269e3029ae84'
-    'de'
-  end
+  url "https://download-installer.cdn.mozilla.net/pub/firefox/releases/#{version}/mac/#{language}/Firefox%20#{version}.dmg",
+      verified: "download-installer.cdn.mozilla.net/pub/firefox/releases/"
+  name "Mozilla Firefox"
+  desc "Web browser"
+  homepage "https://www.mozilla.org/firefox/"
 
-  language 'en-GB' do
-    sha256 '278facb713b60b82dab6d8eb7fbcdf8699967e515691c2f639921742fe332737'
-    'en-GB'
+  livecheck do
+    url "https://download.mozilla.org/?product=firefox-latest-ssl&os=osx"
+    strategy :header_match
   end
-
-  language 'en', default: true do
-    sha256 '8816d93824644733682ed4544c9730012fde0d46d51f5d050fe7968f2bf22ec5'
-    'en-US'
-  end
-
-  language 'eo' do
-    sha256 '5531758a0b879ca4f324b89f3bcee8f2aa5c66d77698b5b7f806cc508ab00169'
-    'eo'
-  end
-
-  language 'es-AR' do
-    sha256 '1cfa70b43bfcc74ff5d158484407db797cc699d59bbc5edc147e5f09f007855e'
-    'es-AR'
-  end
-
-  language 'es-CL' do
-    sha256 '0fb92f103723d40833d89bc6a8271a59cc8c5f6b934b66ac3db41ca8c92d0e28'
-    'es-CL'
-  end
-
-  language 'es-ES' do
-    sha256 'fd97ae5ce1e8c514a570edfe77669904b8b08c11f496a5cc3d2ae63d076d57cc'
-    'es-ES'
-  end
-
-  language 'fi' do
-    sha256 'c32c6a21ce5eaa5ce64ff6fbf9740b982513ae948d86a6e1bf8b2341b0e1b7e8'
-    'fi'
-  end
-
-  language 'fr' do
-    sha256 '2b0fbecc6aac220dcafe0f5c974e7e1d0574857c29fb947625daaac53b9bbff2'
-    'fr'
-  end
-
-  language 'gl' do
-    sha256 'e6289a860391d939b8e9b037f0dbb77e005eec8796c5b2ce1d099e4b15d88145'
-    'gl'
-  end
-
-  language 'in' do
-    sha256 '69977fc1a4707423a746a0b4b490ecb1108962fbfe7100ed71610740ef0cccee'
-    'hi-IN'
-  end
-
-  language 'it' do
-    sha256 '951a4a1243feeee3b9c8fa199d5c5d05b7050ed1cee1caeda624549fcc338b70'
-    'it'
-  end
-
-  language 'ja' do
-    sha256 'aa2b0baf5b468a7d8c989453fc68050ba38236d9a1ade58e13f1048131ae473e'
-    'ja-JP-mac'
-  end
-
-  language 'ko' do
-    sha256 '9d687faa3d6fd004e31d156564e2708cd3ddb4d8da21dea3273c7c36c0903b50'
-    'ko'
-  end
-
-  language 'nl' do
-    sha256 'd9db813c514ccca4d2ec65b860004bad18d8ea7138c78b244e285762f323ac25'
-    'nl'
-  end
-
-  language 'pl' do
-    sha256 '37bdd02f819eababe0106d3238953f59c2d12c0cf08934ec4baec3dec88110cc'
-    'pl'
-  end
-
-  language 'pt-BR' do
-    sha256 '2b5f4f269352bc02cc9a51514a476c094626957589c79e53cd263aa03b53675f'
-    'pt-BR'
-  end
-
-  language 'pt' do
-    sha256 'fd70be0b91021dec4d403f72392b93e511497461de8084300b7b4aa8d675a489'
-    'pt-PT'
-  end
-
-  language 'ru' do
-    sha256 '1a5cf91a5cdfbe634ce3f7f62b96d51f99c75767fc0938eab4654bae6c57427c'
-    'ru'
-  end
-
-  language 'tr' do
-    sha256 'd40c5d773c260283fa944a21c6f1e45ceabef29b2e908e31217c4085e8de6bbc'
-    'tr'
-  end
-
-  language 'uk' do
-    sha256 'f4a0b8aae8a655f6e39ba6edb738f551ac55b52c38e3bbc768225cf0756c8d0a'
-    'uk'
-  end
-
-  language 'zh-TW' do
-    sha256 'd54696a8657b758728df2573f05769465edb614c53d956dfa510ac774259b634'
-    'zh-TW'
-  end
-
-  language 'zh' do
-    sha256 'a7592d80af3b7bda655a37f9779f7357872c6ec1a4dea708f0aab02e7f344375'
-    'zh-CN'
-  end
-
-  # download-installer.cdn.mozilla.net/pub/firefox/releases/ was verified as official when first introduced to the cask
-  url "https://download-installer.cdn.mozilla.net/pub/firefox/releases/#{version}/mac/#{language}/Firefox%20#{version}.dmg"
-  appcast 'https://www.macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://download.mozilla.org/%3Fproduct=firefox-latest-ssl%26os=osx'
-  name 'Mozilla Firefox'
-  homepage 'https://www.mozilla.org/firefox/'
 
   auto_updates true
   conflicts_with cask: [
-                         'firefox-beta',
-                         'firefox-esr',
-                       ]
+    "homebrew/cask-versions/firefox-beta",
+    "homebrew/cask-versions/firefox-esr",
+  ]
+  depends_on macos: ">= :sierra"
 
-  app 'Firefox.app'
+  app "Firefox.app"
 
   zap trash: [
-               '/Library/Logs/DiagnosticReports/firefox_*',
-               '~/Library/Application Support/Firefox',
-               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.firefox.sfl*',
-               '~/Library/Caches/Firefox',
-               '~/Library/Caches/Mozilla/updates/Applications/Firefox',
-               '~/Library/Preferences/org.mozilla.firefox.plist',
-             ],
+    "/Library/Logs/DiagnosticReports/firefox_*",
+    "~/Library/Application Support/Firefox",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.firefox.sfl*",
+    "~/Library/Application Support/CrashReporter/firefox_*",
+    "~/Library/Caches/Firefox",
+    "~/Library/Caches/Mozilla/updates/Applications/Firefox",
+    "~/Library/Caches/org.mozilla.firefox",
+    "~/Library/Caches/org.mozilla.crashreporter",
+    "~/Library/Preferences/org.mozilla.firefox.plist",
+    "~/Library/Preferences/org.mozilla.crashreporter.plist",
+    "~/Library/Saved Application State/org.mozilla.firefox.savedState",
+    "~/Library/WebKit/org.mozilla.firefox",
+  ],
       rmdir: [
-               '~/Library/Application Support/Mozilla', #  May also contain non-Firefox data
-               '~/Library/Caches/Mozilla/updates/Applications',
-               '~/Library/Caches/Mozilla/updates',
-               '~/Library/Caches/Mozilla',
-             ]
+        "~/Library/Application Support/Mozilla", #  May also contain non-Firefox data
+        "~/Library/Caches/Mozilla/updates/Applications",
+        "~/Library/Caches/Mozilla/updates",
+        "~/Library/Caches/Mozilla",
+      ]
 end

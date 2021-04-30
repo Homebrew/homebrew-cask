@@ -1,22 +1,30 @@
-cask 'wwdc' do
-  version '7.0'
-  sha256 '2c04ad6bc542ae6e46dc677434824541a379e681eeb2f0454558878d5ec3abff'
+cask "wwdc" do
+  version "7.2,1016"
+  sha256 "60dd29ca916b597663881bd3e9193a2e66f578c802b09b60a320bc25af92522b"
 
-  # github.com/insidegui/WWDC/ was verified as official when first introduced to the cask
-  url "https://github.com/insidegui/WWDC/releases/download/#{version}/WWDC_v#{version.major}.zip"
-  appcast 'https://github.com/insidegui/WWDC/releases.atom'
-  name 'WWDC'
-  homepage 'https://wwdc.io/'
+  url "https://github.com/insidegui/WWDC/releases/download/#{version.before_comma}/WWDC_v#{version.before_comma}-#{version.after_comma}.dmg",
+      verified: "github.com/insidegui/WWDC/"
+  name "WWDC"
+  desc "Allows access to WWDC livestreams, videos and sessions"
+  homepage "https://wwdc.io/"
+
+  livecheck do
+    url :url
+    strategy :github_latest do |page|
+      match = page.match(/WWDC_v?(\d+(?:\.\d+)*)-(\d+(?:\.\d+)*)\.dmg/i)
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
   auto_updates true
-  depends_on macos: '>= :catalina'
+  depends_on macos: ">= :catalina"
 
-  app 'WWDC.app'
+  app "WWDC.app"
 
   zap trash: [
-               '~/Library/Application Support/io.wwdc.app',
-               '~/Library/Application Support/io.wwdc.app.TranscriptIndexingService',
-               '~/Library/Application Support/WWDC',
-               '~/Library/Preferences/io.wwdc.app.plist',
-             ]
+    "~/Library/Application Support/io.wwdc.app",
+    "~/Library/Application Support/io.wwdc.app.TranscriptIndexingService",
+    "~/Library/Application Support/WWDC",
+    "~/Library/Preferences/io.wwdc.app.plist",
+  ]
 end

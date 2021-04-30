@@ -1,16 +1,30 @@
-cask 'megasync' do
-  version '4.3.2'
-  sha256 '896d922bb94f4e2884403a7a8d2d1979bd7c8a29ffa6056fc08d850c421340e7'
+cask "megasync" do
+  version "4.3.8.0"
+  sha256 :no_check
 
-  url 'https://mega.nz/MEGAsyncSetup.dmg'
-  appcast 'https://github.com/meganz/MEGAsync/releases.atom'
-  name 'MEGAsync'
-  homepage 'https://mega.nz/'
+  url "https://mega.nz/MEGAsyncSetup.dmg"
+  name "MEGAsync"
+  desc "Syncs files between computers and MEGA Cloud drives"
+  homepage "https://mega.nz/sync"
 
-  app 'MEGAsync.app'
+  livecheck do
+    url "https://github.com/meganz/MEGAsync/releases"
+    strategy :page_match
+    regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)*)_OSX}i)
+  end
+
+  auto_updates true
+
+  app "MEGAsync.app"
+
+  uninstall launchctl:  "mega.mac.megaupdater",
+            login_item: "MEGAsync"
 
   zap trash: [
-               '~/Library/Caches/mega.mac',
-               '~/Library/Preferences/mega.mac.plist',
-             ]
+    "~/Library/Application Scripts/mega.mac.MEGAShellExtFinder",
+    "~/Library/Caches/mega.mac",
+    "~/Library/Containers/mega.mac.MEGAShellExtFinder",
+    "~/Library/LaunchAgents/mega.mac.megaupdater.plist",
+    "~/Library/Preferences/mega.mac.plist",
+  ]
 end

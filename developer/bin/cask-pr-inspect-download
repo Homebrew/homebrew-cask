@@ -1,12 +1,13 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
-require 'json'
-require 'open-uri'
-require 'optparse'
-require 'tmpdir'
+require "json"
+require "open-uri"
+require "optparse"
+require "tmpdir"
 
 # Options
-ARGV.push('--help') if ARGV.empty?
+ARGV.push("--help") if ARGV.empty?
 
 OptionParser.new do |opt|
   opt.banner = <<~BANNER
@@ -20,7 +21,7 @@ OptionParser.new do |opt|
     Options:
   BANNER
 
-  opt.on('-h', '--help', 'Show this help.') do
+  opt.on("-h", "--help", "Show this help.") do
     puts opt
     exit 0
   end
@@ -28,29 +29,32 @@ end.parse!
 
 pr_url = ARGV[0]
 
-abort 'URL is not from an official Homebrew Cask tap' if pr_url !~ %r{^https://github.com/Homebrew/homebrew-cask.*}
+unless %r{^https://github.com/Homebrew/homebrew-cask.*}.match?(pr_url)
+  abort "URL is not from an official Homebrew Cask tap"
+end
 
-pr_api = pr_url.sub(%r{^https://github.com/([^/]+)/([^/]+)/pull/([^/]+).*}, 'https://api.github.com/repos/\1/\2/pulls/\3/files')
-pr_json = JSON.parse(URI.open(pr_api).read)
+pr_api = pr_url.sub(%r{^https://github.com/([^/]+)/([^/]+)/pull/([^/]+).*},
+                    'https://api.github.com/repos/\1/\2/pulls/\3/files')
+pr_json = JSON.parse(URI(pr_api).read)
 
-abort 'PR needs to have a single file' if pr_json.count != 1
+abort "PR needs to have a single file" if pr_json.count != 1
 
-file_raw_url = pr_json[0]['raw_url']
+file_raw_url = pr_json[0]["raw_url"]
 file_name = File.basename(file_raw_url)
 local_file = File.join(Dir.mktmpdir, file_name)
 tmp_cache_dir = Dir.mktmpdir
-tmp_download_dir = File.join(tmp_cache_dir, 'downloads')
+tmp_download_dir = File.join(tmp_cache_dir, "downloads")
 
-ENV['HOMEBREW_CACHE'] = tmp_cache_dir
-File.write(local_file, URI.open(file_raw_url).read)
-system('brew', 'cask', 'fetch', local_file)
+ENV["HOMEBREW_CACHE"] = tmp_cache_dir
+File.write(local_file, URI(file_raw_url).read)
+system("brew", "fetch", "--cask", local_file)
 
 downloaded_file = File.join(tmp_download_dir, Dir.children(tmp_download_dir).first)
 downloaded_file_ext = File.extname(downloaded_file)
 
 case downloaded_file_ext
-when '.dmg', '.zip', '.tar.gz', '.tgz'
-  system('open', downloaded_file)
+when ".dmg", ".zip", ".tar.gz", ".tgz"
+  system("open", downloaded_file)
 else
-  system('open', tmp_download_dir)
+  system("open", tmp_download_dir)
 end

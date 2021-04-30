@@ -1,11 +1,16 @@
-cask 'classroom-assistant' do
-  version '2.0.1'
-  sha256 'b3e13813d5895cb115a44714d24a0a279efc7c6e04b59922de3dd3cd7bfeeac2'
+cask "classroom-assistant" do
+  version "2.0.3"
+  sha256 "ffb76331ef43696a8ee6acb4e9afb1e8f2819ca3d3c61fbc8cf9bfd0d018deee"
 
   url "https://github.com/education/classroom-assistant/releases/download/v#{version}/Classroom.Assistant-darwin-x64-#{version}.zip"
-  appcast 'https://github.com/education/classroom-assistant/releases.atom'
-  name 'GitHub Classroom Assistant'
-  homepage 'https://classroom.github.com/assistant'
+  name "GitHub Classroom Assistant"
+  desc "Tool to clone student repositories in bulk"
+  homepage "https://classroom.github.com/assistant"
 
-  app 'Classroom Assistant.app'
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  app "Classroom Assistant.app"
 end

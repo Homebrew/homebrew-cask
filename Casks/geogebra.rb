@@ -1,23 +1,30 @@
-cask 'geogebra' do
-  version '6.0.588.0'
-  sha256 'ea493ed4e989d0a6fc6c55b1f8b8541e96982076610dc4f03b90497de3c7bcee'
+cask "geogebra" do
+  version "6.0.639.0"
+  sha256 "75f377f69a892c7e28ef7f4990f2685443a21743ad2d7062b113a8c5d0d501dc"
 
-  url "https://download.geogebra.org/installers/#{version.major_minor}/GeoGebra-Classic-6-MacOS-Portable-#{version.dots_to_hyphens}.zip"
-  appcast "https://download.geogebra.org/installers/#{version.major_minor}/version.txt",
-          must_contain: version.dots_to_hyphens
-  name 'GeoGebra'
-  homepage 'https://www.geogebra.org/'
+  url "https://download.geogebra.org/installers/#{version.major_minor}/GeoGebra-Classic-#{version.major}-MacOS-Portable-#{version.dots_to_hyphens}.zip"
+  name "GeoGebra"
+  desc "Solve, save and share math problems, graph functions, etc"
+  homepage "https://www.geogebra.org/"
+
+  livecheck do
+    url "https://download.geogebra.org/package/mac-port"
+    strategy :header_match do |headers|
+      v = headers["location"][%r{/GeoGebra-Classic-\d+-MacOS-Portable-(\d+(?:-\d+)*)\.zip}i, 1]
+      v.tr("-", ".")
+    end
+  end
 
   app "GeoGebra Classic #{version.major}.app"
 
-  uninstall quit:       'org.geogebra.mathapps',
-            login_item: 'GeoGebra',
-            pkgutil:    'org.geogebra6.mac'
+  uninstall quit:       "org.geogebra.mathapps",
+            login_item: "GeoGebra",
+            pkgutil:    "org.geogebra6.mac"
 
   zap trash: [
-               '~/Library/GeoGebra',
-               '~/Library/Preferences/org.geogebra.mathapps.helper.plist',
-               '~/Library/Preferences/org.geogebra.mathapps.plist',
-               '~/Library/Saved Application State/org.geogebra.mathapps.savedState',
-             ]
+    "~/Library/GeoGebra",
+    "~/Library/Preferences/org.geogebra.mathapps.helper.plist",
+    "~/Library/Preferences/org.geogebra.mathapps.plist",
+    "~/Library/Saved Application State/org.geogebra.mathapps.savedState",
+  ]
 end

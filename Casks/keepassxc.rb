@@ -1,32 +1,38 @@
-cask 'keepassxc' do
-  version '2.5.4'
+cask "keepassxc" do
+  version "2.6.4"
 
-  if MacOS.version <= :sierra
-    # github.com/keepassxreboot/keepassxc/ was verified as official when first introduced to the cask
-    url "https://github.com/keepassxreboot/keepassxc/releases/download/#{version}/KeePassXC-#{version}-Sierra.dmg"
-    sha256 '7cd8dc34022091c240e538f7a9889afd7dc8f9f3957a66bca9d70c067045ade4'
+  if Hardware::CPU.intel?
+    url "https://github.com/keepassxreboot/keepassxc/releases/download/#{version}/KeePassXC-#{version}-x86_64.dmg",
+        verified: "github.com/keepassxreboot/keepassxc/"
+    sha256 "639fdfe0379dc3f00f1bd6a72c974cfddae0d4c8ddb66f7297d0b01b1a582ede"
   else
-    # github.com/keepassxreboot/keepassxc/ was verified as official when first introduced to the cask
-    url "https://github.com/keepassxreboot/keepassxc/releases/download/#{version}/KeePassXC-#{version}.dmg"
-    sha256 '3d56ebbcb3471a2f6116abe884d1e7b662347b80e18cc0a12ca9fdf2c9a14d7a'
+    url "https://github.com/keepassxreboot/keepassxc/releases/download/#{version}/KeePassXC-#{version}-2-arm64.dmg",
+        verified: "github.com/keepassxreboot/keepassxc/"
+    sha256 "49c28e3f6341710b24d4415186ec0a52f6c0af5e72c0fc7548ddd7999d2eaa4d"
   end
 
-  appcast 'https://github.com/keepassxreboot/keepassxc/releases.atom'
-  name 'KeePassXC'
-  homepage 'https://keepassxc.org/'
+  name "KeePassXC"
+  desc "Password manager app"
+  homepage "https://keepassxc.org/"
 
-  depends_on macos: '>= :sierra'
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
-  app 'KeePassXC.app'
+  conflicts_with cask: "homebrew/cask-versions/keepassxc-beta"
+  depends_on macos: ">= :high_sierra"
+
+  app "KeePassXC.app"
   binary "#{appdir}/KeePassXC.app/Contents/MacOS/keepassxc-cli"
 
   zap trash: [
-               '~/.keepassxc',
-               '~/Library/Application Support/keepassxc',
-               '~/Library/Caches/org.keepassx.keepassxc',
-               '~/Library/Preferences/org.keepassx.keepassxc.plist',
-               '~/Library/Saved Application State/org.keepassx.keepassxc.savedState',
-               '~/Library/Logs/DiagnosticReports/KeePassXC_*.crash',
-               '~/Library/Application Support/CrashReporter/KeePassXC_*.plist',
-             ]
+    "~/.keepassxc",
+    "~/Library/Application Support/keepassxc",
+    "~/Library/Caches/org.keepassx.keepassxc",
+    "~/Library/Preferences/org.keepassx.keepassxc.plist",
+    "~/Library/Saved Application State/org.keepassx.keepassxc.savedState",
+    "~/Library/Logs/DiagnosticReports/KeePassXC_*.crash",
+    "~/Library/Application Support/CrashReporter/KeePassXC_*.plist",
+  ]
 end

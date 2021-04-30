@@ -1,10 +1,17 @@
-cask 'valentina-studio' do
-  version :latest
+cask "valentina-studio" do
+  version "11.2.3"
   sha256 :no_check
 
-  url 'https://www.valentina-db.net/en/all-downloads/vstudio/current/vstudio_mac_x64-dmg?format=raw'
-  name 'Valentina Studio'
-  homepage 'https://www.valentina-db.net/en/valentina-studio-overview'
+  url "https://valentina-db.com/en/all-downloads/vstudio/current/vstudio_mac_x64-dmg?format=raw"
+  name "Valentina Studio"
+  desc "Visual editors for data"
+  homepage "https://valentina-db.com/en/valentina-studio-overview"
 
-  app 'Valentina Studio.app'
+  livecheck do
+    url "https://valentina-db.com/en/all-downloads/vstudio"
+    strategy :page_match
+    regex(%r{href=['"]?/en/all-downloads/vstudio/current['"]?>\s*(\d+(?:\.\d+)*)}i)
+  end
+
+  app "Valentina Studio.app"
 end

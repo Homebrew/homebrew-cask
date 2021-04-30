@@ -1,11 +1,10 @@
-cask 'developerexcuses' do
-  version '2.1.2'
-  sha256 '9e2b0d8aa60b6538d289213b5d84e6ec897f119ed782ec15551cd24b4d29450f'
+cask "developerexcuses" do
+  version "2.1.4"
+  sha256 "cbcee9d430a707f0b1b6187392af038ea8d8a5602a05a6d327dc54b4d01ab657"
 
   url "https://github.com/kimar/DeveloperExcuses/releases/download/#{version}/DeveloperExcuses.saver.zip"
-  appcast 'https://github.com/kimar/DeveloperExcuses/releases.atom'
-  name 'Developer Excuses Screensaver'
-  homepage 'https://github.com/kimar/DeveloperExcuses'
+  name "Developer Excuses Screensaver"
+  homepage "https://github.com/kimar/DeveloperExcuses"
 
-  screen_saver 'DeveloperExcuses.saver'
+  screen_saver "DeveloperExcuses.saver"
 end

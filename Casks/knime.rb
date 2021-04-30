@@ -1,12 +1,21 @@
-cask 'knime' do
-  version '4.1.3'
-  sha256 'c87665c6746462c23f7ba567a281d6fd7146987b7c918a1ce0f9ac04bb82cdcc'
+cask "knime" do
+  version "4.3.0"
+  sha256 "18b11e2be6995727775b9f35705c4aa330d4208c36ad30072bb98289e66972fe"
 
-  # download.knime.org/analytics-platform/macosx/ was verified as official when first introduced to the cask
-  url "https://download.knime.org/analytics-platform/macosx/knime_#{version}.app.macosx.cocoa.x86_64.dmg"
-  appcast 'https://www.knime.com/downloads/download-knime'
-  name 'KNIME Analytics Platform'
-  homepage 'https://www.knime.com/'
+  url "https://download.knime.org/analytics-platform/macosx/knime_#{version}.app.macosx.cocoa.x86_64.dmg",
+      verified: "download.knime.org/analytics-platform/macosx/"
+  appcast "https://www.knime.com/downloads/download-knime"
+  name "KNIME Analytics Platform"
+  desc "Software to create and productionize data science"
+  homepage "https://www.knime.com/"
+
+  depends_on macos: ">= :high_sierra"
 
   app "KNIME #{version}.app"
+
+  zap trash: [
+    "~/Library/Caches/org.knime.product",
+    "~/Library/Preferences/org.knime.product.plist",
+    "~/Library/Saved Application State/org.knime.product.savedState",
+  ]
 end

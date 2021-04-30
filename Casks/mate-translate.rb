@@ -1,12 +1,24 @@
-cask 'mate-translate' do
-  version '6.2.0'
-  sha256 'af3e6543d3206e91e5ed16eac9d6cad49d02f4a1517f5eb56cbd3ab8a9992e94'
+cask "mate-translate" do
+  version "7.1.0,3016"
+  sha256 :no_check
 
-  # gikken.co/mate/ was verified as official when first introduced to the cask
-  url 'https://gikken.co/mate/MateTranslate.zip'
-  appcast 'https://gikken.co/mate/appcast.xml'
-  name 'Mate Translate'
-  homepage 'https://twopeoplesoftware.com/mate'
+  url "https://gikken.co/mate/MateTranslate.zip",
+      verified: "gikken.co/mate/"
+  name "Mate Translate"
+  desc "Select text in any app and translate it"
+  homepage "https://twopeoplesoftware.com/mate"
 
-  app 'Mate Translate.app'
+  livecheck do
+    url "https://gikken.co/mate/appcast.xml"
+    strategy :sparkle
+  end
+
+  depends_on macos: ">= :mojave"
+
+  app "Mate Translate.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.twopeoplesoftware.InstantTranslate-nomas.Mate-Translate-Safari",
+    "~/Library/Containers/com.twopeoplesoftware.InstantTranslate-nomas.Mate-Translate-Safari",
+  ]
 end

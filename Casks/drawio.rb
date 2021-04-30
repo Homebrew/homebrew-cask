@@ -1,22 +1,29 @@
-cask 'drawio' do
-  version '13.0.3'
-  sha256 'decea8307b0f63720e5d7abb8cac1eb88d0022109199757f672a3641e7695488'
+cask "drawio" do
+  version "14.5.1"
 
-  # github.com/jgraph/drawio-desktop/ was verified as official when first introduced to the cask
-  url "https://github.com/jgraph/drawio-desktop/releases/download/v#{version}/draw.io-#{version}.dmg"
-  appcast 'https://github.com/jgraph/drawio-desktop/releases.atom'
-  name 'draw.io Desktop'
-  homepage 'https://www.draw.io/'
+  if Hardware::CPU.intel?
+    sha256 "15b3e8f62473e69d7faad205e46135c08e8e444120f7596c522bf92f0df02199"
+    url "https://github.com/jgraph/drawio-desktop/releases/download/v#{version}/draw.io-#{version}.dmg",
+        verified: "github.com/jgraph/drawio-desktop/"
+  else
+    sha256 "db551dbb04f41ee0be17fdc7090d210407eaff64c515e8445d670b60effa5dc9"
+    url "https://github.com/jgraph/drawio-desktop/releases/download/v#{version}/draw.io-arm64-#{version}.dmg",
+        verified: "github.com/jgraph/drawio-desktop/"
+  end
 
-  app 'draw.io.app'
+  name "draw.io Desktop"
+  desc "Draw.io is free online diagram software"
+  homepage "https://www.draw.io/"
+
+  app "draw.io.app"
 
   zap trash: [
-               '~/Library/Application Support/draw.io',
-               '~/Library/Caches/com.jgraph.drawio.desktop',
-               '~/Library/Logs/draw.io',
-               '~/Library/Preferences/com.jgraph.drawio.desktop.helper.plist',
-               '~/Library/Preferences/com.jgraph.drawio.desktop.plist',
-               '~/Library/Saved Application State/com.jgraph.drawio.desktop.savedState',
-               '~/Library/WebKit/com.jgraph.drawio.desktop',
-             ]
+    "~/Library/Application Support/draw.io",
+    "~/Library/Caches/com.jgraph.drawio.desktop",
+    "~/Library/Logs/draw.io",
+    "~/Library/Preferences/com.jgraph.drawio.desktop.helper.plist",
+    "~/Library/Preferences/com.jgraph.drawio.desktop.plist",
+    "~/Library/Saved Application State/com.jgraph.drawio.desktop.savedState",
+    "~/Library/WebKit/com.jgraph.drawio.desktop",
+  ]
 end

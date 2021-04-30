@@ -1,18 +1,18 @@
-cask 'maltego' do
-  version '4.2.10.13007'
-  sha256 '4402096d851baee4cadbc9eca5fec63a45b179d531d13105cba7ccaf40b08ef0'
+cask "maltego" do
+  version "4.2.15.13632"
+  sha256 "199b7abc49fe94d5f99fd06297ec772dd563e915af17d5d14365e6881cae36cf"
 
-  # maltego-downloads.s3.us-east-2.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://maltego-downloads.s3.us-east-2.amazonaws.com/mac/Maltego.v#{version}.dmg"
-  appcast 'https://maltego-downloads.s3.us-east-2.amazonaws.com/info.json'
-  name 'Maltego'
-  homepage 'https://www.maltego.com/pricing-plans/'
+  url "https://maltego-downloads.s3.us-east-2.amazonaws.com/mac/Maltego.v#{version}.dmg",
+      verified: "maltego-downloads.s3.us-east-2.amazonaws.com/"
+  appcast "https://maltego-downloads.s3.us-east-2.amazonaws.com/info.json"
+  name "Maltego"
+  homepage "https://www.maltego.com/pricing-plans/"
 
-  app 'Maltego.app'
+  app "Maltego.app"
 
-  zap trash: '~/Library/Application Support/maltego'
+  zap trash: "~/Library/Application Support/maltego"
 
   caveats do
-    depends_on_java '11'
+    depends_on_java "11"
   end
 end

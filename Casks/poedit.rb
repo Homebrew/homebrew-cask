@@ -1,11 +1,17 @@
-cask 'poedit' do
-  version '2.3.1'
-  sha256 'a6e5314df29a1ac04a4798e28b74462b829c96f1d037058145083fea2a43e891'
+cask "poedit" do
+  version "2.4.2,6064"
+  sha256 "3c88650a6a2ac43eb0c34d0eb1abacdee109b5bae9aa5313d88276291e16afad"
 
-  url "https://download.poedit.net/Poedit-#{version}.zip"
-  appcast "https://poedit.net/updates_v#{version.major}/osx/appcast"
-  name 'Poedit'
-  homepage 'https://poedit.net/'
+  url "https://download.poedit.net/Poedit-#{version.before_comma}.zip"
+  name "Poedit"
+  homepage "https://poedit.net/"
 
-  app 'Poedit.app'
+  livecheck do
+    url "https://poedit.net/updates_v#{version.major}/osx/appcast"
+    strategy :sparkle
+  end
+
+  auto_updates true
+
+  app "Poedit.app"
 end

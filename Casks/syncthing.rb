@@ -1,22 +1,28 @@
-cask 'syncthing' do
-  version '1.6.1-1'
-  sha256 '6ef012c28776ce3b86d75596daa25bd0699c4fcb5e200610431ceffe3711adb3'
+cask "syncthing" do
+  version "1.15.1-1"
+  sha256 "28aba3a25b5d79e6a1f8d1ce28aca03d1d06b07a0f7dd68e389e9b6c383a4eb8"
 
-  # github.com/syncthing/syncthing-macos/ was verified as official when first introduced to the cask
-  url "https://github.com/syncthing/syncthing-macos/releases/download/v#{version}/Syncthing-#{version}.dmg"
-  appcast 'https://github.com/syncthing/syncthing-macos/releases.atom'
-  name 'Syncthing'
-  homepage 'https://syncthing.net/'
+  url "https://github.com/syncthing/syncthing-macos/releases/download/v#{version}/Syncthing-#{version}.dmg",
+      verified: "github.com/syncthing/syncthing-macos/"
+  name "Syncthing"
+  desc "Real time file synchronization software"
+  homepage "https://syncthing.net/"
+
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^v?(\d+(?:\.\d+)*(?:-\d+)?)$/i)
+  end
 
   auto_updates true
-  depends_on macos: '>= :yosemite'
+  depends_on macos: ">= :sierra"
 
-  app 'Syncthing.app'
+  app "Syncthing.app"
 
   zap trash: [
-               '~/Library/Application Support/Syncthing-macOS',
-               '~/Library/Caches/com.github.xor-gate.syncthing-macosx',
-               '~/Library/Cookies/com.github.xor-gate.syncthing-macosx.binarycookies',
-               '~/Library/Preferences/com.github.xor-gate.syncthing-macosx.plist',
-             ]
+    "~/Library/Application Support/Syncthing-macOS",
+    "~/Library/Caches/com.github.xor-gate.syncthing-macosx",
+    "~/Library/Cookies/com.github.xor-gate.syncthing-macosx.binarycookies",
+    "~/Library/Preferences/com.github.xor-gate.syncthing-macosx.plist",
+  ]
 end

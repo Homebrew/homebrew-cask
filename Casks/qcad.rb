@@ -1,17 +1,23 @@
-cask 'qcad' do
-  version '3.24.3'
+cask "qcad" do
+  version "3.26.2"
 
   if MacOS.version <= :high_sierra
-    sha256 '2313e906d1892ad7a433ff23074c9f28ab747e7731231c0c8a02ff6eab5ae44a'
+    sha256 "d1c06bf0f2fc7df0bbe2f428e159c7aa12f13537141bc69d8e5dee1c793047b6"
     url "https://www.qcad.org/archives/qcad/qcad-#{version}-trial-macos-10.10-10.13.dmg"
   else
-    sha256 '9c03efd3d5c41952637cd6bde7b090466ef4f8d87229f509194268f3cadff4ef'
-    url "https://www.qcad.org/archives/qcad/qcad-#{version}-trial-macos-10.14-10.15.dmg"
+    sha256 "46fb356960449ae4addf0ce1555872bad5d1b70aaf8f94c10793f5f61e429695"
+    url "https://www.qcad.org/archives/qcad/qcad-#{version}-trial-macos-10.14-11.2.dmg"
   end
 
-  appcast 'https://www.qcad.org/en/download'
-  name 'QCAD'
-  homepage 'https://www.qcad.org/'
+  name "QCAD"
+  desc "Free, open source application for computer aided drafting in 2D"
+  homepage "https://www.qcad.org/"
 
-  app 'QCAD.app'
+  livecheck do
+    url "https://www.qcad.org/en/download"
+    strategy :page_match
+    regex(%r{href=.*?/qcad-(\d+(?:\.\d+)*)-trial-macos-10\.14-11\.2\.dmg}i)
+  end
+
+  app "QCAD.app"
 end

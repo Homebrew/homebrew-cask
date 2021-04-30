@@ -1,18 +1,23 @@
-cask 'empoche' do
-  version '0.4.3'
-  sha256 '3bdcbc742be337db49e63bb4c675938e3a921993be733980404c6fc41b016bf5'
+cask "empoche" do
+  version "0.4.5"
+  sha256 "8a4c57928da42a3ed60b1e0648b24614f84ecc582f3b9c9ee04cd5323e58ea4f"
 
-  # empoche-desktop.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://empoche-desktop.s3.amazonaws.com/Empoche-#{version}-mac.zip"
-  appcast 'https://empoche-desktop.s3.amazonaws.com/latest-mac.yml'
-  name 'Empoche'
-  homepage 'https://empoche.com/'
+  url "https://empoche-desktop.s3.amazonaws.com/Empoche-#{version}-mac.zip",
+      verified: "empoche-desktop.s3.amazonaws.com/"
+  name "Empoche"
+  desc "Automatic time-tracking with task and project management"
+  homepage "https://empoche.com/"
 
-  app 'Empoche.app'
+  livecheck do
+    url "https://empoche-desktop.s3.amazonaws.com/latest-mac.yml"
+    strategy :electron_builder
+  end
+
+  app "Empoche.app"
 
   zap trash: [
-               '~/Library/Application Support/empoche',
-               '~/Library/Saved Application State/com.empoche.app.savedState',
-               '~/Library/Preferences/com.empoche.app.plist',
-             ]
+    "~/Library/Application Support/empoche",
+    "~/Library/Saved Application State/com.empoche.app.savedState",
+    "~/Library/Preferences/com.empoche.app.plist",
+  ]
 end

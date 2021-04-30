@@ -1,11 +1,11 @@
-cask 'fly' do
-  version '6.1.0'
-  sha256 '1e33de1f8f845283b73f664a9a8bc6fb8dbf6b2d2d973e89ff44b7298f2bf7f2'
+cask "fly" do
+  version "7.1.0"
+  sha256 "461fb517430bd1d8f21fe0e2f59d4c293770d7c76e64d7c96133d5c63e3e04b5"
 
   url "https://github.com/concourse/concourse/releases/download/v#{version}/fly-#{version}-darwin-amd64.tgz"
-  appcast 'https://github.com/concourse/concourse/releases.atom'
-  name 'fly'
-  homepage 'https://github.com/concourse/concourse'
+  name "fly"
+  desc "Official CLI tool for Concourse CI"
+  homepage "https://github.com/concourse/concourse"
 
-  binary 'fly'
+  binary "fly"
 end

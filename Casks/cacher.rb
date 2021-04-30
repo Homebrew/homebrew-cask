@@ -1,12 +1,19 @@
-cask 'cacher' do
-  version '2.29.1'
-  sha256 '0eb36994a285d31a4e99f22fda801b8c28441809044de331d0d6e747d272167f'
+cask "cacher" do
+  version "2.41.1"
+  sha256 "02fedb48df90002fde94a61e5608370e0448ddbc0fc64fb50e6dd7b87528647d"
 
-  # cacher-download.nyc3.digitaloceanspaces.com/ was verified as official when first introduced to the cask
-  url "https://cacher-download.nyc3.digitaloceanspaces.com/Cacher-#{version}-mac.zip"
-  appcast 'https://cacher-download.nyc3.digitaloceanspaces.com/latest-mac.yml'
-  name 'Cacher'
-  homepage 'https://www.cacher.io/'
+  url "https://cacher-download.nyc3.digitaloceanspaces.com/Cacher-#{version}-mac.zip",
+      verified: "cacher-download.nyc3.digitaloceanspaces.com/"
+  name "Cacher"
+  desc "Code snippet organizer"
+  homepage "https://www.cacher.io/"
 
-  app 'Cacher.app'
+  livecheck do
+    url "https://cacher-download.nyc3.digitaloceanspaces.com/latest-mac.yml"
+    strategy :page_match do |page|
+      YAML.safe_load(page)["version"]
+    end
+  end
+
+  app "Cacher.app"
 end

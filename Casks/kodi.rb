@@ -1,19 +1,25 @@
-cask 'kodi' do
-  version '18.7-Leia'
-  sha256 '88822a1a4aa3dba8959cf84a49fb65ec2dd93ab08fc38467bd8af927707ba153'
+cask "kodi" do
+  version "19.0-Matrix"
+  sha256 "4654b0f5a4d391f1a3781c4d122ec78d8457284e21a38a4739e85f8296840579"
 
   url "https://mirrors.kodi.tv/releases/osx/x86_64/kodi-#{version}-x86_64.dmg"
-  appcast 'https://github.com/xbmc/xbmc/releases.atom'
-  name 'Kodi'
-  homepage 'https://kodi.tv/'
+  name "Kodi"
+  desc "Free and open-source media player"
+  homepage "https://kodi.tv/"
 
-  app 'Kodi.app'
+  livecheck do
+    url "https://github.com/xbmc/xbmc/releases"
+    strategy :git
+    regex(/^(\d+(?:\.\d+)*-[a-z]+)$/i)
+  end
+
+  app "Kodi.app"
 
   zap trash: [
-               '~/.kodi',
-               '~/Library/Application Support/Kodi',
-               '~/Library/Logs/kodi.log',
-               '~/Library/Logs/kodi.old.log',
-               '~/Library/Saved Application State/org.xbmc.kodi.savedState',
-             ]
+    "~/.kodi",
+    "~/Library/Application Support/Kodi",
+    "~/Library/Logs/kodi.log",
+    "~/Library/Logs/kodi.old.log",
+    "~/Library/Saved Application State/org.xbmc.kodi.savedState",
+  ]
 end

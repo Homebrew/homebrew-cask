@@ -1,14 +1,20 @@
-cask 'xpra' do
-  version :latest
+cask "xpra" do
+  version "4.1.3"
   sha256 :no_check
 
-  url 'https://www.xpra.org/dists/osx/x86_64/Xpra-x86_64.pkg'
-  name 'Xpra'
-  homepage 'https://www.xpra.org/'
+  url "https://www.xpra.org/dists/osx/x86_64/Xpra-x86_64.pkg"
+  name "Xpra"
+  desc "Screen and application forwarding system"
+  homepage "https://www.xpra.org/"
 
-  pkg 'Xpra-x86_64.pkg'
+  livecheck do
+    url "https://github.com/Xpra-org/xpra/releases"
+    strategy :git
+  end
 
-  uninstall pkgutil:  'org.xpra.pkg'
+  pkg "Xpra-x86_64.pkg"
 
-  zap trash: '/Library/Application Support/Xpra'
+  uninstall pkgutil:  "org.xpra.pkg"
+
+  zap trash: "/Library/Application Support/Xpra"
 end

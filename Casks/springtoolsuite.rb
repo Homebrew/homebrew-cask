@@ -1,12 +1,22 @@
-cask 'springtoolsuite' do
-  version '4.6.2.RELEASE,4.15.0'
-  sha256 '9f093c3d99b877953eb683f1ff45f9510452fcdafe4a8b5b745b69f93fd93025'
+cask "springtoolsuite" do
+  version "4.10.0,4.19.0"
+  sha256 "4cf922c17a0c7f1fa9eb986f09905b0530a4b1dec14f717a35f913c4192de288"
 
-  # download.springsource.com/release/ was verified as official when first introduced to the cask
-  url "https://download.springsource.com/release/STS#{version.major}/#{version.before_comma}/dist/e#{version.after_comma.major_minor}/spring-tool-suite-#{version.major}-#{version.before_comma}-e#{version.after_comma}-macosx.cocoa.x86_64.dmg"
-  appcast 'https://github.com/spring-projects/sts4/releases.atom'
-  name 'Spring Tool Suite'
-  homepage 'https://spring.io/tools'
+  url "https://download.springsource.com/release/STS#{version.major}/#{version.before_comma}.RELEASE/dist/e#{version.after_comma.major_minor}/spring-tool-suite-#{version.major}-#{version.before_comma}.RELEASE-e#{version.after_comma}-macosx.cocoa.x86_64.dmg",
+      verified: "download.springsource.com/release/"
+  name "Spring Tool Suite"
+  desc "Next generation tooling for Spring Boot"
+  homepage "https://spring.io/tools"
+
+  livecheck do
+    url :homepage
+    strategy :page_match do |page|
+      match = page.match(
+        %r{href=.*?/spring-tool-suite-\d+-(\d+(?:\.\d+)*)\.RELEASE-e(\d+(?:\.\d+)*)-macosx\.cocoa\.x86_64\.dmg}i,
+      )
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
   auto_updates true
 

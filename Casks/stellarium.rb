@@ -1,16 +1,16 @@
-cask 'stellarium' do
-  version '0.20.1'
-  sha256 '154e4a61cea2225e93626077fd7d22f49706c84fa7dd56f51bc3bded84f9d0ce'
+cask "stellarium" do
+  version "0.21.0"
+  sha256 "70fc56d06af3ea2528e9402df14494ccfc531e0ade49c5364edd4a9e9c05ffb7"
 
-  # github.com/Stellarium/stellarium/ was verified as official when first introduced to the cask
-  url "https://github.com/Stellarium/stellarium/releases/download/v#{version}/Stellarium-#{version}.zip"
-  appcast 'https://github.com/Stellarium/stellarium/releases.atom'
-  name 'Stellarium'
-  homepage 'https://stellarium.org/'
+  url "https://github.com/Stellarium/stellarium/releases/download/v#{version.major_minor_patch}/Stellarium-#{version}.zip",
+      verified: "github.com/Stellarium/stellarium/"
+  name "Stellarium"
+  desc "Tool to render realistic skies in real time on the screen"
+  homepage "https://stellarium.org/"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'Stellarium.app'
+  app "Stellarium.app"
 
-  zap trash: '~/Library/Preferences/Stellarium'
+  zap trash: "~/Library/Preferences/Stellarium"
 end

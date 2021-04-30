@@ -1,11 +1,11 @@
-cask 'another-redis-desktop-manager' do
-  version '1.3.6'
-  sha256 '22f8ca81cb5f19c3eceacf8494191db07709ff93608051a164f52b967430cf0d'
+cask "another-redis-desktop-manager" do
+  version "1.4.3"
+  sha256 "56af157f4a9eef8ec1d34072dfd381a402351a2b706f7489ceb1de471c5adc0e"
 
   url "https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v#{version}/Another-Redis-Desktop-Manager.#{version}.dmg"
-  appcast 'https://github.com/qishibo/AnotherRedisDesktopManager/releases.atom'
-  name 'Another Redis Desktop Manager'
-  homepage 'https://github.com/qishibo/AnotherRedisDesktopManager/'
+  name "Another Redis Desktop Manager"
+  desc "Redis desktop manager"
+  homepage "https://github.com/qishibo/AnotherRedisDesktopManager/"
 
-  app 'Another Redis Desktop Manager.app'
+  app "Another Redis Desktop Manager.app"
 end

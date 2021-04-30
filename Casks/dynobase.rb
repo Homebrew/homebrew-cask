@@ -1,17 +1,22 @@
-cask 'dynobase' do
-  version '0.7.4'
-  sha256 '9722c2b7df4d18799ee4ba04404edfb7594e33ade2c4cd61e57f1a93360d397f'
+cask "dynobase" do
+  version "1.3.6"
+  sha256 "2a7f91f64be8e295fd3fa7e7fcabcf95f80d9cfd9f897452762dfa21d709e012"
 
-  # hazel.rwilinski.now.sh was verified as official when first introduced to the cask
-  url 'https://hazel.rwilinski.now.sh/download/darwin'
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=#{url}"
-  name 'Dynobase'
-  homepage 'https://dynobase.dev/'
+  url "https://github.com/Dynobase/dynobase/releases/download/#{version}/Dynobase-#{version}.dmg",
+      verified: "github.com/Dynobase/dynobase/"
+  name "Dynobase"
+  desc "GUI Client for DynamoDB"
+  homepage "https://dynobase.dev/"
 
-  app 'Dynobase.app'
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  app "Dynobase.app"
 
   zap trash: [
-               '~/Library/Application Support/dynobase',
-               '~/Library/Saved Application State/com.rwilinski.dynobase.savedState',
-             ]
+    "~/Library/Application Support/dynobase",
+    "~/Library/Saved Application State/com.rwilinski.dynobase.savedState",
+  ]
 end

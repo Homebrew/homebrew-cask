@@ -1,65 +1,66 @@
-cask 'mactex-no-gui' do
-  version '2020.0407'
-  sha256 'a33af89de36c7c84a76050c9704d50d23892e9c2070f04f6a53e1c6d5a332f67'
+cask "mactex-no-gui" do
+  version "2021.0328"
+  sha256 "e541257d70f911550341853709fc45d9fa9fcd4c93058382000ebb19b284833b"
 
-  # mirror.ctan.org/systems/mac/mactex/ was verified as official when first introduced to the cask
-  url "http://mirror.ctan.org/systems/mac/mactex/mactex-#{version.no_dots}.pkg"
-  appcast 'https://www.tug.org/mactex/downloading.html',
-          must_contain: version.major
-  name 'MacTeX'
-  homepage 'https://www.tug.org/mactex/'
+  url "http://mirror.ctan.org/systems/mac/mactex/mactex-#{version.no_dots}.pkg",
+      verified: "mirror.ctan.org/systems/mac/mactex/"
+  name "MacTeX"
+  desc "Full TeX Live distribution without GUI applications"
+  homepage "https://www.tug.org/mactex/"
+
+  livecheck do
+    url "https://ctan.org/texarchive/systems/mac/mactex/"
+    strategy :page_match do |page|
+      match = page.match(/href=.*?mactex-(\d{4})(\d{2})(\d{2})\.pkg/)
+      "#{match[1]}.#{match[2]}#{match[3]}"
+    end
+  end
 
   conflicts_with cask: [
-                         'basictex',
-                         'mactex',
-                       ]
-  depends_on formula: 'ghostscript'
-  depends_on macos: '>= :high_sierra'
+    "basictex",
+    "mactex",
+  ]
+  depends_on formula: "ghostscript"
+  depends_on macos: ">= :mojave"
 
   pkg "mactex-#{version.no_dots}.pkg",
       choices: [
-                 {
-                   # Ghostscript
-                   'choiceIdentifier' => 'org.tug.mactex.ghostscript9.50',
-                   'choiceAttribute'  => 'selected',
-                   'attributeSetting' => 0,
-                 },
-                 {
-                   # Ghostscript Dynamic Library
-                   'choiceIdentifier' => 'org.tug.mactex.ghostscript9.50libgs',
-                   'choiceAttribute'  => 'selected',
-                   'attributeSetting' => 0,
-                 },
-                 {
-                   # GUI Applications
-                   'choiceIdentifier' => "org.tug.mactex.gui#{version.major}",
-                   'choiceAttribute'  => 'selected',
-                   'attributeSetting' => 0,
-                 },
-                 {
-                   # TeXLive
-                   'choiceIdentifier' => "org.tug.mactex.texlive#{version.major}",
-                   'choiceAttribute'  => 'selected',
-                   'attributeSetting' => 1,
-                 },
-               ]
+        {
+          # Ghostscript
+          "choiceIdentifier" => "org.tug.mactex.ghostscript9.53.3",
+          "choiceAttribute"  => "selected",
+          "attributeSetting" => 0,
+        },
+        {
+          # Ghostscript Dynamic Library
+          "choiceIdentifier" => "org.tug.mactex.ghostscript9.53.3libgs",
+          "choiceAttribute"  => "selected",
+          "attributeSetting" => 0,
+        },
+        {
+          # GUI Applications
+          "choiceIdentifier" => "org.tug.mactex.gui#{version.major}",
+          "choiceAttribute"  => "selected",
+          "attributeSetting" => 0,
+        },
+        {
+          # TeXLive
+          "choiceIdentifier" => "org.tug.mactex.texlive#{version.major}",
+          "choiceAttribute"  => "selected",
+          "attributeSetting" => 1,
+        },
+      ]
 
   uninstall pkgutil: "org.tug.mactex.texlive#{version.major}",
             delete:  [
-                       "/usr/local/texlive/#{version.major}",
-                       '/Library/TeX',
-                       '/etc/paths.d/TeX',
-                       '/etc/manpaths.d/TeX',
-                     ]
+              "/usr/local/texlive/#{version.major}",
+              "/Library/TeX",
+              "/etc/paths.d/TeX",
+              "/etc/manpaths.d/TeX",
+            ]
 
-  zap trash: [
-               '/usr/local/texlive/texmf-local',
-               "~/Library/texlive/#{version.major}",
-             ],
-      rmdir: [
-               '/usr/local/texlive',
-               '~/Library/texlive',
-             ]
+  zap trash: "/usr/local/texlive/texmf-local",
+      rmdir: "/usr/local/texlive"
 
   caveats <<~EOS
     You must restart your terminal window for the installation of MacTex CLI tools to take effect.

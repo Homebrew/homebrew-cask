@@ -1,11 +1,17 @@
-cask 'hubstaff' do
-  version '1.5.12,2388'
-  sha256 '6f486c41c06d26dd70ea6b6077d5d2a91b36efb1ab6b38c9fc18464af4c8a9b3'
+cask "hubstaff" do
+  version "1.5.17,2982"
+  sha256 "90d0791902d1aac8ea797f302e97aeae26110394cb702e207e2b70cd1448f55a"
 
   url "https://app.hubstaff.com/download/#{version.after_comma}-mac-os-x-#{version.before_comma.dots_to_hyphens}-release"
-  appcast 'https://app.hubstaff.com/appcast.xml'
-  name 'Hubstaff'
-  homepage 'https://hubstaff.com/'
+  name "Hubstaff"
+  homepage "https://hubstaff.com/"
 
-  app 'Hubstaff.app'
+  livecheck do
+    url "https://app.hubstaff.com/appcast.xml"
+    strategy :sparkle do |item|
+      "#{item.short_version.split("-").first},#{item.url[%r{/(\d+)-mac-os-x-(?:\d(?:-\d+)*)-release}i, 1]}"
+    end
+  end
+
+  app "Hubstaff.app"
 end

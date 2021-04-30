@@ -1,22 +1,27 @@
-cask 'noraswitch' do
-  version '1.0.1'
-  sha256 '4027f96ad1ad2f95720eefb72a02e3d9cabd67558074fca515275a9c7205a224'
+cask "noraswitch" do
+  version "1.0.3,51"
+  sha256 "38519f5cf61d1278dd5db438e7c9a1fe210a39ee3c200b9ffc2564feaf1971c2"
 
-  url "https://noraswitch.com/dmg/noraSwitch%20#{version}.dmg"
-  appcast 'https://noraswitch.com/appcast.xml'
-  name 'noraSwitch'
-  homepage 'https://noraswitch.com/'
+  url "https://noraswitch.com/dmg/noraSwitch%20#{version.before_comma}.dmg"
+  name "noraSwitch"
+  desc "Window switcher"
+  homepage "https://noraswitch.com/"
 
-  depends_on macos: '>= :mojave'
+  livecheck do
+    url "https://noraswitch.com/appcast.xml"
+    strategy :sparkle
+  end
 
-  app 'noraSwitch.app'
+  depends_on macos: ">= :mojave"
 
-  uninstall quit:      'com.trrn.noraSwitch',
-            launchctl: 'com.trrn.noraSwitch-LaunchAtLoginHelper'
+  app "noraSwitch.app"
+
+  uninstall quit:      "com.trrn.noraSwitch",
+            launchctl: "com.trrn.noraSwitch-LaunchAtLoginHelper"
 
   zap trash: [
-               '~/Library/Application Support/com.trrn.noraSwitch',
-               '~/Library/Caches/com.trrn.noraSwitch',
-               '~/Library/Preferences/com.trrn.noraSwitch.plist',
-             ]
+    "~/Library/Application Support/com.trrn.noraSwitch",
+    "~/Library/Caches/com.trrn.noraSwitch",
+    "~/Library/Preferences/com.trrn.noraSwitch.plist",
+  ]
 end

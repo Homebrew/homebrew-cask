@@ -10,7 +10,7 @@ IF YOU CANNOT DESIGN A WORKING `UNINSTALL` STANZA, PLEASE SUBMIT YOUR CASK ANYWA
 
 For most Casks, uninstall actions are determined automatically, and an explicit `uninstall` stanza is not needed. However, a Cask which uses the `pkg` or `installer manual:` stanzas will **not** know how to uninstall correctly unless an `uninstall` stanza is given.
 
-So, while the Cask language does not enforce the requirement, it is much better for end-users if every `pkg` and `installer manual:` has a corresponding `uninstall`.
+So, while the [Cask DSL](../readme.md) does not enforce the requirement, it is much better for end-users if every `pkg` and `installer manual:` has a corresponding `uninstall`.
 
 The `uninstall` stanza is available for non-`pkg` Casks, and is useful for a few corner cases. However, the documentation below concerns the typical case of using `uninstall` to define procedures for a `pkg`.
 
@@ -113,11 +113,11 @@ An example, with commonly-used signals in ascending order of severity:
 
 ```ruby
   uninstall signal: [
-                      ['TERM', 'fr.madrau.switchresx.daemon'],
-                      ['QUIT', 'fr.madrau.switchresx.daemon'],
-                      ['INT',  'fr.madrau.switchresx.daemon'],
-                      ['HUP',  'fr.madrau.switchresx.daemon'],
-                      ['KILL', 'fr.madrau.switchresx.daemon'],
+                      ["TERM", "fr.madrau.switchresx.daemon"],
+                      ["QUIT", "fr.madrau.switchresx.daemon"],
+                      ["INT",  "fr.madrau.switchresx.daemon"],
+                      ["HUP",  "fr.madrau.switchresx.daemon"],
+                      ["KILL", "fr.madrau.switchresx.daemon"],
                     ]
 ```
 
@@ -168,7 +168,6 @@ It is important to note that, although `script:` in the above example does attem
 
 Arguments to `uninstall delete:` should use the following basic rules:
 
-* Only single quotes should be used, except when invoking [`#{version}` interpolation](https://github.com/Homebrew/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/version.md). `ENV['HOME']` and other variables should not be interpolated in the value.
 * Basic tilde expansion is performed on paths, i.e., leading `~` is expanded to the home directory.
 * Paths must be absolute.
 * Glob expansion is performed using the [standard set of characters](https://en.wikipedia.org/wiki/Glob_(programming)).

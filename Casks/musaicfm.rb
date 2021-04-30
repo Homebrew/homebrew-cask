@@ -1,11 +1,10 @@
-cask 'musaicfm' do
-  version '1.1.5'
-  sha256 '760a5545922d71f72d0b55e9d750f61cdde508a46150dcce869c6cafbdd252f0'
+cask "musaicfm" do
+  version "1.2.2"
+  sha256 "e694af171183e520f3837b9ff2493398a56bf510a983fe03dc7026bc1cfe1c06"
 
   url "https://github.com/docterd/MusaicFM/releases/download/#{version}/MusaicFM.saver.zip"
-  appcast 'https://github.com/docterd/MusaicFM/releases.atom'
-  name 'MusaicFM Screensaver'
-  homepage 'https://github.com/docterd/MusaicFM'
+  name "MusaicFM Screensaver"
+  homepage "https://github.com/docterd/MusaicFM"
 
-  screen_saver 'MusaicFM.saver'
+  screen_saver "MusaicFM.saver"
 end

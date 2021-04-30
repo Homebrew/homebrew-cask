@@ -1,12 +1,11 @@
-cask 'superproductivity' do
-  version '5.3.3'
-  sha256 'aab2f69012c9ee1a9e1d2946f70caaf21c5f7047e316fe09529a05b6ba793181'
+cask "superproductivity" do
+  version "6.5.2"
+  sha256 "f913d96ea98450eadbadf295803ec938bc3e6b600df5e8c36e5360b32551bb89"
 
-  # github.com/johannesjo/super-productivity/ was verified as official when first introduced to the cask
-  url "https://github.com/johannesjo/super-productivity/releases/download/v#{version}/superProductivity-#{version}-mac.zip"
-  appcast 'https://github.com/johannesjo/super-productivity/releases.atom'
-  name 'Super Productivity'
-  homepage 'https://super-productivity.com/'
+  url "https://github.com/johannesjo/super-productivity/releases/download/v#{version}/superProductivity-#{version}-mac.zip",
+      verified: "github.com/johannesjo/super-productivity/"
+  name "Super Productivity"
+  homepage "https://super-productivity.com/"
 
-  app 'superProductivity.app'
+  app "superProductivity.app"
 end

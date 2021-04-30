@@ -1,12 +1,13 @@
-cask 'jalbum' do
-  version '20.2.3'
-  sha256 '91f60902b1df36744f3b86ef630dad95e8fd2f8fbaad1dcf441b21b3da2a9e78'
+cask "jalbum" do
+  version "23.1"
+  sha256 "c5b2eb6be8ee3e57a6adc0b08a869b195c3bb9b358879edd8a0a30f0c0e06962"
 
-  url "https://download.jalbum.net/download/#{version.major_minor}/MacOSX/jAlbum.dmg"
-  appcast 'https://jalbum.net/en/software/release-notes',
-          must_contain: version.major_minor.chomp('.0')
-  name 'jAlbum'
-  homepage 'https://jalbum.net/'
+  url "https://download.jalbum.net/download/#{version}/MacOSX/jAlbum.dmg"
+  appcast "https://jalbum.net/en/software/release-notes",
+          must_contain: version.major_minor.chomp(".0")
+  name "jAlbum"
+  desc "Tool to create photo album websites from local images"
+  homepage "https://jalbum.net/"
 
-  app 'jAlbum.app'
+  app "jAlbum.app"
 end

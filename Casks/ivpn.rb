@@ -1,26 +1,31 @@
-cask 'ivpn' do
-  version '2.12.3'
-  sha256 '858b8fcf618a6213e1021f108d5f0986e79d6faca378a7b6d33d39c48490585e'
+cask "ivpn" do
+  version "3.3.7"
+  sha256 "19a2d2e1a84c39ef68e3e92417779bc4bba8fad9d15152011b7610a0a5e14f26"
 
-  url "https://cdn.ivpn.net/releases/osx/IVPN-#{version}.dmg"
-  appcast 'https://www.ivpn.net/setup/mac-changelog.html'
-  name 'IVPN'
-  homepage 'https://www.ivpn.net/apps-macos'
+  url "https://repo.ivpn.net/macos/bin/IVPN-#{version}.dmg"
+  name "IVPN"
+  homepage "https://www.ivpn.net/apps-macos"
+
+  livecheck do
+    url "https://www.ivpn.net/setup/mac-changelog.html"
+    strategy :page_match
+    regex(%r{href=.*?/IVPN-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   auto_updates true
 
-  app 'IVPN.app'
+  app "IVPN.app"
 
   uninstall_preflight do
     set_ownership "#{appdir}/IVPN.app"
   end
 
   uninstall delete:    [
-                         '/Library/Application Support/IVPN',
-                         '/Library/PrivilegedHelperTools/net.ivpn.client.Helper',
-                       ],
-            launchctl: 'net.ivpn.client.Helper',
-            quit:      'net.ivpn.client.IVPN'
+    "/Library/Application Support/IVPN",
+    "/Library/PrivilegedHelperTools/net.ivpn.client.Helper",
+  ],
+            launchctl: "net.ivpn.client.Helper",
+            quit:      "net.ivpn.client.IVPN"
 
-  zap trash: '~/Library/Preferences/net.ivpn.client.IVPN.plist'
+  zap trash: "~/Library/Preferences/net.ivpn.client.IVPN.plist"
 end

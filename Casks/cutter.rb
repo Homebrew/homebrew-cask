@@ -1,23 +1,38 @@
-cask 'cutter' do
-  version '1.10.3'
-  sha256 'af01ca5da120afbc8666c5a029996435226ac3d72448cb48b02fd8a4853e6c80'
+cask "cutter" do
+  version "2.0.2"
+  sha256 "18df2677ebe016e77313fb2975e4a7be7551ade1878684e968ec7267b01a9e2a"
 
-  # github.com/radareorg/cutter/ was verified as official when first introduced to the cask
-  url "https://github.com/radareorg/cutter/releases/download/v#{version}/Cutter-v#{version}-x64.macOS.dmg"
-  appcast 'https://github.com/radareorg/cutter/releases.atom'
-  name 'Cutter'
-  homepage 'https://radare.org/cutter/'
+  url "https://github.com/rizinorg/cutter/releases/download/v#{version}/Cutter-v#{version}-x64.macOS.dmg",
+      verified: "github.com/rizinorg/cutter/"
+  name "Cutter"
+  desc "Reverse engineering platform powered by Rizin"
+  homepage "https://cutter.re/"
 
-  depends_on macos: '>= :sierra'
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
-  app 'Cutter.app'
+  depends_on macos: ">= :sierra"
+
+  app "Cutter.app"
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/cutter.wrapper.sh"
+  binary shimscript, target: "cutter"
+
+  preflight do
+    IO.write shimscript, <<~EOS
+      #!/bin/sh
+      '#{appdir}/Cutter.app/Contents/MacOS/Cutter' "$@"
+    EOS
+  end
 
   zap trash: [
-               '~/.config/RadareOrg',
-               '~/.local/share/radare2',
-               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.radare.cutter.sfl*',
-               '~/Library/Application Support/RadareOrg/Cutter',
-               '~/Library/Preferences/org.radare.cutter.plist',
-               '~/Library/Saved Application State/org.radare.cutter.savedState',
-             ]
+    "~/.config/rizin",
+    "~/.local/share/rizin",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/re.rizin.cutter.sfl*",
+    "~/Library/Application Support/rizin",
+    "~/Library/Preferences/re.rizin.cutter.plist",
+    "~/Library/Saved Application State/re.rizin.cutter.savedState",
+  ]
 end

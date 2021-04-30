@@ -1,13 +1,18 @@
-cask 'thought-train' do
-  version '1.3'
-  sha256 '33460d0028807d1875a5e2ee0a197286dbfcc1f1bfab4f14fe63cbdd41686699'
+cask "thought-train" do
+  version "1.4.0"
+  sha256 "f135917e56bdc150923beb28d0005f1d00167f6b90ee67abb0e5d549ce39d0b4"
 
-  url "https://thoughttrain.cc/downloads/thought-train-#{version}.pkg"
-  appcast 'https://github.com/marcperel/thought-train-production/releases.atom'
-  name 'Thought Train'
-  homepage 'https://www.thoughttrain.cc/'
+  url "https://thoughttrain.cc/downloads/thought-train-#{version.major_minor}.pkg"
+  name "Thought Train"
+  desc "Note taking and to-do-list application"
+  homepage "https://www.thoughttrain.cc/"
 
-  pkg "thought-train-#{version}.pkg"
+  livecheck do
+    url "https://github.com/marcperel/thought-train-production"
+    strategy :git
+  end
 
-  uninstall pkgutil: 'thought-train'
+  pkg "thought-train-#{version.major_minor}.pkg"
+
+  uninstall pkgutil: "thought-train"
 end

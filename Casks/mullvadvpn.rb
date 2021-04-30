@@ -1,17 +1,29 @@
-cask 'mullvadvpn' do
-  version '2020.4'
-  sha256 '8570baaa98c3ef884bd89e9bb855dc68e716cb76eef06d7d5ea5b8e32fca416a'
+cask "mullvadvpn" do
+  version "2021.3"
+  sha256 "8fc9fbd876f9c7392b7de748c222e2046b15fdc78e58eebe80fe139d030abed0"
 
-  # github.com/mullvad/mullvadvpn-app/ was verified as official when first introduced to the cask
-  url "https://github.com/mullvad/mullvadvpn-app/releases/download/#{version}/MullvadVPN-#{version}.pkg"
-  appcast 'https://github.com/mullvad/mullvadvpn-app/releases.atom'
-  name 'Mullvad VPN'
-  homepage 'https://mullvad.net/'
+  url "https://github.com/mullvad/mullvadvpn-app/releases/download/#{version}/MullvadVPN-#{version}.pkg",
+      verified: "github.com/mullvad/mullvadvpn-app/"
+  name "Mullvad VPN"
+  desc "VPN client"
+  homepage "https://mullvad.net/"
 
-  conflicts_with cask: 'mullvadvpn-beta'
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  conflicts_with cask: "homebrew/cask-versions/mullvadvpn-beta"
 
   pkg "MullvadVPN-#{version}.pkg"
 
-  uninstall pkgutil:   'net.mullvad.vpn',
-            launchctl: 'net.mullvad.daemon'
+  uninstall pkgutil:   "net.mullvad.vpn",
+            launchctl: "net.mullvad.daemon"
+
+  zap trash: [
+    "~/Library/Application Support/Mullvad VPN",
+    "~/Library/Logs/Mullvad VPN",
+    "~/Library/Preferences/net.mullvad.vpn.plist",
+    "/Library/LaunchDaemons/net.mullvad.daemon.plist",
+  ]
 end

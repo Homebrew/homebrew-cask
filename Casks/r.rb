@@ -1,35 +1,41 @@
-cask 'r' do
-  version '4.0.1'
-  sha256 '975ffb42ef1bef3ff3f8955e8f6938b089d9eb207d097f797c74a741b9520c23'
+cask "r" do
+  version "4.0.5"
+  sha256 "0143dd1b17dd5d8bccb9e13d361f69c2dd69e1c8289e3fb0271daef1615c57bd"
 
   url "https://cloud.r-project.org/bin/macosx/R-#{version}.pkg"
-  appcast 'https://cloud.r-project.org/bin/macosx/'
-  name 'R'
-  homepage 'https://www.r-project.org/'
+  name "R"
+  desc "Environment for statistical computing and graphics"
+  homepage "https://www.r-project.org/"
 
-  depends_on macos: '>= :el_capitan'
+  livecheck do
+    url "https://cloud.r-project.org/bin/macosx/"
+    strategy :page_match
+    regex(/href=.*?R-(\d+(?:\.\d+)*)\.pkg/i)
+  end
+
+  depends_on macos: ">= :el_capitan"
 
   pkg "R-#{version}.pkg"
 
   uninstall pkgutil: [
-                       'org.r-project*',
-                       'org.R-project*',
-                     ],
+    "org.r-project*",
+    "org.R-project*",
+  ],
             delete:  [
-                       '/Library/Frameworks/R.Framework',
-                       '/usr/bin/R',
-                       '/usr/bin/Rscript',
-                     ]
+              "/Library/Frameworks/R.Framework",
+              "/usr/bin/R",
+              "/usr/bin/Rscript",
+            ]
 
   zap trash: [
-               '~/.R',
-               '~/.Rapp.history',
-               '~/.RData',
-               '~/.Rhistory',
-               '~/.Rprofile',
-               '~/Library/R',
-               '~/Library/Caches/org.R-project.R',
-             ]
+    "~/.R",
+    "~/.Rapp.history",
+    "~/.RData",
+    "~/.Rhistory",
+    "~/.Rprofile",
+    "~/Library/R",
+    "~/Library/Caches/org.R-project.R",
+  ]
 
   caveats do
     files_in_usr_local

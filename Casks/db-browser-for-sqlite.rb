@@ -1,17 +1,23 @@
-cask 'db-browser-for-sqlite' do
-  version '3.11.2'
-  sha256 '022536d420dca87285864a4a948b699d01430721b511722bcf9c8713ab946776'
+cask "db-browser-for-sqlite" do
+  version "3.12.1"
+  sha256 "45c8789dc77461299a0aeb9eaae2d089086e76eebae31b45b7a0ee48c1c9e898"
 
-  # github.com/sqlitebrowser/sqlitebrowser/ was verified as official when first introduced to the cask
-  url "https://github.com/sqlitebrowser/sqlitebrowser/releases/download/v#{version.major_minor_patch}/DB.Browser.for.SQLite-#{version}.dmg"
-  appcast 'https://github.com/sqlitebrowser/sqlitebrowser/releases.atom'
-  name 'SQLite Database Browser'
-  homepage 'https://sqlitebrowser.org/'
+  url "https://github.com/sqlitebrowser/sqlitebrowser/releases/download/v#{version}/DB.Browser.for.SQLite-#{version}-v2.dmg",
+      verified: "github.com/sqlitebrowser/sqlitebrowser/"
+  name "DB Browser for SQLite"
+  desc "Browser for SQLite databases"
+  homepage "https://sqlitebrowser.org/"
 
-  app 'DB Browser for SQLite.app'
+  livecheck do
+    url "https://github.com/sqlitebrowser/sqlitebrowser/releases"
+    strategy :page_match
+    regex(%r{href=.*?/DB\.Browser\.for\.SQLite-(\d+(?:\.\d+)*)(?:-v\d+)?\.dmg}i)
+  end
+
+  app "DB Browser for SQLite.app"
 
   zap trash: [
-               '~/Library/Preferences/net.sourceforge.sqlitebrowser.plist',
-               '~/Library/Saved Application State/net.sourceforge.sqlitebrowser.savedState',
-             ]
+    "~/Library/Preferences/com.sqlitebrowser.sqlitebrowser.plist",
+    "~/Library/Saved Application State/net.sourceforge.sqlitebrowser.savedState",
+  ]
 end

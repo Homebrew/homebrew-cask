@@ -1,15 +1,17 @@
-cask 'unity-lumin-support-for-editor' do
-  version '2019.4.0f1,0af376155913'
-  sha256 'ba7a1269bbc592835b157f037ad28669bd99d7a8768d1fe44339bf025c57246c'
+cask "unity-lumin-support-for-editor" do
+  version "2020.1.17f1,9957aee8edc2"
+  sha256 "e326abccca5d42540b3c322acd1f0a5152d4c42fca9c0ad8abcc5b2b8e84953e"
 
-  url "https://download.unity3d.com/download_unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Lumin-Support-for-Editor-#{version.before_comma}.pkg"
-  appcast 'https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json'
-  name 'Unity Lumin Build Support'
-  homepage 'https://unity3d.com/unity/whats-new/'
+  url "https://download.unity3d.com/download_unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Lumin-Support-for-Editor-#{version.before_comma}.pkg",
+      verified: "download.unity3d.com/download_unity/"
+  appcast "https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json"
+  name "Unity Lumin Build Support"
+  desc "Lumin target support for Unity"
+  homepage "https://unity.com/products"
 
-  depends_on cask: 'unity'
+  depends_on cask: "unity"
 
   pkg "UnitySetup-Lumin-Support-for-Editor-#{version.before_comma}.pkg"
 
-  uninstall pkgutil: 'com.unity3d.LuminSupport'
+  uninstall pkgutil: "com.unity3d.LuminSupport"
 end

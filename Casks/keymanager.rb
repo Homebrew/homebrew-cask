@@ -1,11 +1,11 @@
-cask 'keymanager' do
-  version '3.13.10'
-  sha256 'bd09c00fc86d0421f5ae6dd7e52202fd173552df17f9d90726ba8749095a710a'
+cask "keymanager" do
+  version "4.4.19"
+  sha256 "fd41152f8897bfce5e6e95fc74c7aa3044a60266726d7b2dee0896901b02359b"
 
-  # keymanager.trustasia.com/ was verified as official when first introduced to the cask
-  url "https://keymanager.trustasia.com/release/KeyManager-#{version}.dmg"
-  name 'KeyManager'
-  homepage 'https://keymanager.org/'
+  url "https://keymanager.trustasia.com/release/KeyManager-#{version}.dmg",
+      verified: "keymanager.trustasia.com/"
+  name "KeyManager"
+  homepage "https://keymanager.org/"
 
-  app 'KeyManager.app'
+  app "KeyManager.app"
 end

@@ -1,23 +1,26 @@
-cask 'tableplus' do
-  version '3.6.1,320'
-  sha256 '800cff90b5609368920096c7d73355a93203c680ef2dce5625cfd14ade3a052b'
+cask "tableplus" do
+  version "3.12.6,366"
+  sha256 "f5e13e93739c4417d4853e8509aff300e46a70f4cf219eac4380f5498d6fc9a1"
 
-  # tableplus-osx-builds.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://tableplus-osx-builds.s3.amazonaws.com/#{version.after_comma}/TablePlus.dmg"
-  appcast 'https://tableplus.io/osx/version.xml',
-          must_contain: version.after_comma
-  name 'TablePlus'
-  homepage 'https://tableplus.io/'
+  url "https://download.tableplus.com/macos/#{version.after_comma}/TablePlus.dmg"
+  name "TablePlus"
+  desc "Native GUI tool for relational databases"
+  homepage "https://tableplus.com/"
+
+  livecheck do
+    url "https://tableplus.com/osx/version.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 
-  app 'TablePlus.app'
+  app "TablePlus.app"
 
   zap trash: [
-               '~/Library/Application Support/com.tinyapp.TablePlus',
-               '~/Library/Caches/com.tinyapp.TablePlus',
-               '~/Library/Cookies/com.tinyapp.TablePlus.binarycookies',
-               '~/Library/Preferences/com.tinyapp.TablePlus.plist',
-               '~/Library/Saved Application State/com.tinyapp.TablePlus.savedState',
-             ]
+    "~/Library/Application Support/com.tinyapp.TablePlus",
+    "~/Library/Caches/com.tinyapp.TablePlus",
+    "~/Library/Cookies/com.tinyapp.TablePlus.binarycookies",
+    "~/Library/Preferences/com.tinyapp.TablePlus.plist",
+    "~/Library/Saved Application State/com.tinyapp.TablePlus.savedState",
+  ]
 end

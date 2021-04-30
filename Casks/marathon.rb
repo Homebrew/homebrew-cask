@@ -1,12 +1,12 @@
-cask 'marathon' do
-  version '20150620'
-  sha256 'd7e1a4063f19d247b738b1b856e48c24ea37b2543306de7608d65cb03d8d4327'
+cask "marathon" do
+  version "20210408"
+  sha256 "2b0be87a12f697c83bb2560c6a4e2a218e643fcd5035f0cc6b75db1d770753cc"
 
-  # github.com/Aleph-One-Marathon/alephone/ was verified as official when first introduced to the cask
-  url "https://github.com/Aleph-One-Marathon/alephone/releases/download/release-#{version}/Marathon-#{version}-Mac.dmg"
-  appcast 'https://github.com/Aleph-One-Marathon/alephone/releases.atom'
-  name 'Marathon'
-  homepage 'https://alephone.lhowon.org/'
+  url "https://github.com/Aleph-One-Marathon/alephone/releases/download/release-#{version}/Marathon-#{version}-Mac.dmg",
+      verified: "github.com/Aleph-One-Marathon/alephone/"
+  name "Marathon"
+  desc "First-person shooter, first in a trilogy"
+  homepage "https://alephone.lhowon.org/"
 
-  app 'Marathon.app'
+  app "Marathon.app"
 end

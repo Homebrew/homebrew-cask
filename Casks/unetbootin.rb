@@ -1,14 +1,20 @@
-cask 'unetbootin' do
-  version '677'
-  sha256 '2f232c59e0a1d627206df3618e0b71ff0227b7ec985c679f1cc5e6bd4ea1cd5b'
+cask "unetbootin" do
+  version "702"
+  sha256 "204f867e9b2604a5ba8818b7d7f4be83d08fa0c3eb0c22e51c39fc5526bd1aed"
 
-  # github.com/unetbootin/unetbootin/ was verified as official when first introduced to the cask
-  url "https://github.com/unetbootin/unetbootin/releases/download/#{version}/unetbootin-mac-#{version}.dmg"
-  appcast 'https://github.com/unetbootin/unetbootin/releases.atom'
-  name 'UNetbootin'
-  homepage 'https://unetbootin.github.io/'
+  url "https://github.com/unetbootin/unetbootin/releases/download/#{version}/unetbootin-mac-#{version}.dmg",
+      verified: "github.com/unetbootin/unetbootin/"
+  name "UNetbootin"
+  desc "Tool to install Linux/BSD distributions to a partition or USB drive"
+  homepage "https://unetbootin.github.io/"
 
-  app 'unetbootin.app'
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^(\d+(?:\.\d+)*)$/i)
+  end
 
-  zap trash: '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.yourcompany.unetbootin.sfl*'
+  app "unetbootin.app"
+
+  zap trash: "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.yourcompany.unetbootin.sfl*"
 end

@@ -1,11 +1,16 @@
-cask 'openlp' do
-  version '2.9.1'
-  sha256 '1ab87856634a8761d6598e1b4f2c468c3b32676f8e35f63f322a54b803bf823f'
+cask "openlp" do
+  version "2.9.2"
+  sha256 "37b4febdb870158dd5306edc95a2490708f71048485944e185399f9851097c9d"
 
   url "https://get.openlp.org/#{version}/OpenLP-#{version}.dmg"
-  appcast 'https://get.openlp.org'
-  name 'OpenLP'
-  homepage 'https://openlp.org/'
+  name "OpenLP"
+  homepage "https://openlp.org/"
 
-  app 'OpenLP.app'
+  livecheck do
+    url "https://get.openlp.org"
+    strategy :page_match
+    regex(/href=['"]?(\d+(?:\.\d+)*)['"]?/i)
+  end
+
+  app "OpenLP.app"
 end

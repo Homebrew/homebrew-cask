@@ -1,11 +1,34 @@
-cask 'remember-the-milk' do
-  version '1.2.0'
-  sha256 '3d8ad4dc8f58a13246550defb6d3efd46d739981ecae958a2f3419f0fc7acdbf'
+cask "remember-the-milk" do
+  version "1.3.5"
 
-  url "https://www.rememberthemilk.com/download/mac/RememberTheMilk-#{version}.zip"
-  appcast 'https://www.rememberthemilk.com/services/mac/'
-  name 'Remember The Milk'
-  homepage 'https://www.rememberthemilk.com/'
+  if Hardware::CPU.intel?
+    sha256 "a2cce88eb08daf6c9b382c10412a862bfd6f9a16afe757e595e5888c2e38f7f2"
 
-  app 'Remember The Milk.app'
+    url "https://www.rememberthemilk.com/download/mac/RememberTheMilk-#{version}-x64.zip"
+  else
+    sha256 "9712d1cd75e79f00d609afd0864b370639b395e8c69b28e900cff04b94b9c1b7"
+
+    url "https://www.rememberthemilk.com/download/mac/RememberTheMilk-#{version}-arm64.zip"
+  end
+
+  name "Remember The Milk"
+  desc "To-do app"
+  homepage "https://www.rememberthemilk.com/"
+
+  livecheck do
+    url "https://www.rememberthemilk.com/services/mac/"
+    strategy :page_match
+    regex(%r{<b>Version:</b>\s(\d+(?:\.\d+)*)}i)
+  end
+
+  app "Remember The Milk.app"
+
+  zap trash: [
+    "~/Library/Application Support/Remember The Milk",
+    "~/Library/Caches/com.rememberthemilk.Deskmilk",
+    "~/Library/Caches/com.rememberthemilk.Deskmilk.ShipIt",
+    "~/Library/HTTPStorages/com.rememberthemilk.Deskmilk.binarycookies",
+    "~/Library/Preferences/com.rememberthemilk.Deskmilk.plist",
+    "~/Library/Saved Application State/com.rememberthemilk.Deskmilk.savedState",
+  ]
 end

@@ -1,18 +1,18 @@
-cask 'virtualgl' do
-  version '2.6.3'
-  sha256 'fbbc32adca830dc68eeff099843d230388c1f0fe51ea2f243855b9e17221e324'
+cask "virtualgl" do
+  version "2.6.5"
+  sha256 "7071294cbaa94057aa6cd48e3e691cfaf5f9dca1122e04218b464315095ed0c9"
 
-  # downloads.sourceforge.net/virtualgl/ was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/virtualgl/VirtualGL-#{version}.dmg"
-  appcast 'https://sourceforge.net/projects/virtualgl/rss'
-  name 'VirtualGL'
-  homepage 'https://www.virtualgl.org/'
+  url "https://downloads.sourceforge.net/virtualgl/VirtualGL-#{version}.dmg",
+      verified: "downloads.sourceforge.net/virtualgl/"
+  appcast "https://sourceforge.net/projects/virtualgl/rss"
+  name "VirtualGL"
+  homepage "https://www.virtualgl.org/"
 
-  pkg 'VirtualGL.pkg'
+  pkg "VirtualGL.pkg"
 
-  uninstall pkgutil: 'com.virtualgl.vglclient',
+  uninstall pkgutil: "com.virtualgl.vglclient",
             script:  {
-                       executable: '/opt/VirtualGL/bin/uninstall',
-                       sudo:       true,
-                     }
+              executable: "/opt/VirtualGL/bin/uninstall",
+              sudo:       true,
+            }
 end

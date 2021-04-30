@@ -1,40 +1,46 @@
-cask 'virtualbox-extension-pack' do
-  version '6.1.10'
-  sha256 '03067f27f4da07c5d0fdafc56d27e3ea23a60682b333b2a1010fb74ef9a40c28'
+cask "virtualbox-extension-pack" do
+  version "6.1.20"
+  sha256 "15bdee9c0385ddd4cdbbe0e446c0180ad4ae21554ddd52f8b44783aebd4aeef4"
 
   url "https://download.virtualbox.org/virtualbox/#{version}/Oracle_VM_VirtualBox_Extension_Pack-#{version}.vbox-extpack"
-  appcast 'https://download.virtualbox.org/virtualbox/LATEST.TXT'
-  name 'Oracle VirtualBox Extension Pack'
-  homepage 'https://www.virtualbox.org/'
+  name "Oracle VirtualBox Extension Pack"
+  desc "AMD64/Intel64 and x86 virtualization"
+  homepage "https://www.virtualbox.org/"
 
-  conflicts_with cask: 'virtualbox-extension-pack-beta'
-  depends_on cask: 'virtualbox'
+  livecheck do
+    url "https://download.virtualbox.org/virtualbox/LATEST.TXT"
+    strategy :page_match
+    regex(/\d+\.\d+\.\d+/)
+  end
+
+  conflicts_with cask: "virtualbox-extension-pack-beta"
+  depends_on cask: "virtualbox"
   container type: :naked
 
   stage_only true
 
   postflight do
-    system_command '/usr/local/bin/VBoxManage',
+    system_command "/usr/local/bin/VBoxManage",
                    args:  [
-                            'extpack', 'install',
-                            '--replace', "#{staged_path}/Oracle_VM_VirtualBox_Extension_Pack-#{version}.vbox-extpack"
-                          ],
-                   input: 'y',
+                     "extpack", "install",
+                     "--replace", "#{staged_path}/Oracle_VM_VirtualBox_Extension_Pack-#{version}.vbox-extpack"
+                   ],
+                   input: "y",
                    sudo:  true
   end
 
   uninstall_postflight do
-    next unless File.exist?('/usr/local/bin/VBoxManage')
+    next unless File.exist?("/usr/local/bin/VBoxManage")
 
-    system_command '/usr/local/bin/VBoxManage',
+    system_command "/usr/local/bin/VBoxManage",
                    args: [
-                           'extpack', 'uninstall',
-                           'Oracle VM VirtualBox Extension Pack'
-                         ],
+                     "extpack", "uninstall",
+                     "Oracle VM VirtualBox Extension Pack"
+                   ],
                    sudo: true
   end
 
   caveats do
-    license 'https://www.virtualbox.org/wiki/VirtualBox_PUEL'
+    license "https://www.virtualbox.org/wiki/VirtualBox_PUEL"
   end
 end

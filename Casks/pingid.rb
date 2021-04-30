@@ -1,13 +1,13 @@
-cask 'pingid' do
-  version :latest
+cask "pingid" do
+  version "1.7.1"
   sha256 :no_check
 
-  # pingone-downloads.s3.amazonaws.com/pingid/mac-client/ was verified as official when first introduced to the cask
-  url 'https://pingone-downloads.s3.amazonaws.com/pingid/mac-client/PingID.pkg'
-  name 'PingID'
-  homepage 'https://www.pingidentity.com/'
+  url "https://pingone-downloads.s3.amazonaws.com/pingid/mac-client/PingID.pkg",
+      verified: "pingone-downloads.s3.amazonaws.com/pingid/mac-client/"
+  name "PingID"
+  homepage "https://www.pingidentity.com/"
 
-  pkg 'PingID.pkg'
+  pkg "PingID.pkg"
 
-  uninstall pkgutil: 'com.pingidentity.pingid.pcclient'
+  uninstall pkgutil: "com.pingidentity.pingid.pcclient"
 end

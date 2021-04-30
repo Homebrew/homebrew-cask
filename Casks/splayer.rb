@@ -1,11 +1,12 @@
-cask 'splayer' do
-  version '4.9.1'
-  sha256 'f7755ae224794f221cdd7fbd83cabc1b38fd4e554cd2a74907f75291bccf23bd'
+cask "splayer" do
+  version "4.9.4"
+  sha256 "e91c8d39840039393d73a682e14ed5115dfa6f66ac582aeee482597525704fe5"
 
-  url "https://cdn.splayer.org/download/SPlayer-#{version}.dmg"
-  appcast 'https://github.com/chiflix/splayerx/releases.atom'
-  name 'SPlayer'
-  homepage 'https://splayer.org/'
+  url "https://github.com/chiflix/splayerx/releases/download/#{version}/SPlayer-#{version}.dmg",
+      verified: "github.com/chiflix/splayerx/"
+  name "SPlayer"
+  desc "Media player"
+  homepage "https://splayer.org/"
 
-  app 'SPlayer.app'
+  app "SPlayer.app"
 end

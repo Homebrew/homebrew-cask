@@ -1,19 +1,24 @@
-cask 'session' do
-  version '1.0.9'
-  sha256 'dcdcaf12c18ef8b41fea50700b8c39580353757ac818a00a4c4e15ceeb482bf8'
+cask "session" do
+  version "1.5.4"
+  sha256 "9c049314217dd1471a0e1de11ff77dfa3cf6fdf5750f7e0a26a1a3fdc853c200"
 
-  # github.com/loki-project/session-desktop/ was verified as official when first introduced to the cask
-  url "https://github.com/loki-project/session-desktop/releases/download/v#{version}/session-messenger-desktop-mac-#{version}.dmg"
-  appcast 'https://github.com/loki-project/session-desktop/releases.atom'
-  name 'Session'
-  homepage 'https://getsession.org/'
+  url "https://github.com/loki-project/session-desktop/releases/download/v#{version}/session-desktop-mac-#{version}.dmg",
+      verified: "github.com/loki-project/session-desktop/"
+  name "Session"
+  desc "Onion routing based messenger"
+  homepage "https://getsession.org/"
 
-  app 'Session.app'
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  app "Session.app"
 
   zap trash: [
-               '~/Library/Application Support/Session',
-               '~/Library/Caches/Session',
-               '~/Library/Preferences/com.loki-project.messenger-desktop.plist',
-               '~/Library/Saved Application State/com.loki-project.messenger-desktop.savedState',
-             ]
+    "~/Library/Application Support/Session",
+    "~/Library/Caches/Session",
+    "~/Library/Preferences/com.loki-project.messenger-desktop.plist",
+    "~/Library/Saved Application State/com.loki-project.messenger-desktop.savedState",
+  ]
 end

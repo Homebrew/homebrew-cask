@@ -1,29 +1,34 @@
-cask 'carbon-copy-cloner' do
-  version '5.1.18.6009'
-  sha256 '1fee4bc868240e8c824ebe9846bc354c9f55a76f1aaa715237d6cb1016168c52'
+cask "carbon-copy-cloner" do
+  version "5.1.26.6180"
+  sha256 "4cc505232be165e44af1e83cabdcf8b23449078f668b0ec6d988898e6dbbfe42"
 
-  # bombich.scdn1.secure.raxcdn.com/software/files/ was verified as official when first introduced to the cask
-  url "https://bombich.scdn1.secure.raxcdn.com/software/files/ccc-#{version}.zip"
-  appcast "https://bombich.com/software/updates/ccc.php?os_major=10&os_minor=14&os_bugfix=0&ccc=#{version.split('.').last}&beta=0"
-  name 'Carbon Copy Cloner'
-  homepage 'https://bombich.com/'
+  url "https://bombich.scdn1.secure.raxcdn.com/software/files/ccc-#{version}.zip",
+      verified: "bombich.scdn1.secure.raxcdn.com/software/files/"
+  name "Carbon Copy Cloner"
+  desc "Hard disk backup and cloning utility"
+  homepage "https://bombich.com/"
+
+  livecheck do
+    url "https://bombich.com/software/download_ccc.php?v=latest"
+    strategy :header_match
+  end
 
   auto_updates true
 
-  app 'Carbon Copy Cloner.app'
+  app "Carbon Copy Cloner.app"
 
-  uninstall login_item: 'CCC User Agent',
+  uninstall login_item: "CCC User Agent",
             quit:       [
-                          'com.bombich.ccc',
-                          'com.bombich.cccuseragent',
-                        ]
+              "com.bombich.ccc",
+              "com.bombich.cccuseragent",
+            ]
 
   zap trash: [
-               '~/Library/Application Support/com.bombich.ccc',
-               '~/Library/Caches/com.bombich.ccc',
-               '~/Library/Preferences/com.bombich.ccc.plist',
-               '~/Library/Preferences/com.bombich.cccuseragent.plist',
-               '~/Library/Saved Application State/com.bombich.ccc.savedState',
-               '/Library/LaunchDaemons/com.bombich.ccchelper.plist',
-             ]
+    "~/Library/Application Support/com.bombich.ccc",
+    "~/Library/Caches/com.bombich.ccc",
+    "~/Library/Preferences/com.bombich.ccc.plist",
+    "~/Library/Preferences/com.bombich.cccuseragent.plist",
+    "~/Library/Saved Application State/com.bombich.ccc.savedState",
+    "/Library/LaunchDaemons/com.bombich.ccchelper.plist",
+  ]
 end

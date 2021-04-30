@@ -1,30 +1,39 @@
-cask 'visual-studio' do
-  version '8.6.3.30'
-  sha256 '62740dc0e72dc23b63a4c7bfb6b49d747ef3fdb1ab5cae1d421d0e1d451dcc86'
+cask "visual-studio" do
+  version "8.9.7.8"
+  sha256 "a77e36b823eb429bf4a56cef13a728ac9b6a1deca20456f2a64deb178aed57e4"
 
-  # dl.xamarin.com/VsMac/ was verified as official when first introduced to the cask
-  url "https://dl.xamarin.com/VsMac/VisualStudioForMac-#{version}.dmg"
-  appcast 'https://docs.microsoft.com/en-us/visualstudio/releasenotes/vs2019-mac-relnotes',
-          must_contain: version.major_minor_patch
-  name 'Visual Studio for Mac'
-  homepage 'https://www.visualstudio.com/vs/visual-studio-mac/'
+  url "https://dl.xamarin.com/VsMac/VisualStudioForMac-#{version}.dmg",
+      verified: "dl.xamarin.com/VsMac/"
+  name "Microsoft Visual Studio"
+  desc "Integrated development environment"
+  homepage "https://www.visualstudio.com/vs/visual-studio-mac/"
+
+  livecheck do
+    url "https://docs.microsoft.com/en-us/visualstudio/releasenotes/vs2019-mac-relnotes"
+    strategy :page_match do |page|
+      match = page.match(
+        /Visual\sStudio\s(\d+(?:\.\d+)*)\sfor\sMac\sversion\s(\d+(?:\.\d+)*)\s\((\d+(?:\.\d+)*)\)/i,
+      )
+      (match[3]).to_s
+    end
+  end
 
   auto_updates true
-  depends_on macos: '>= :sierra'
-  depends_on cask: 'homebrew/cask-versions/mono-mdk-for-visual-studio'
+  depends_on macos: ">= :high_sierra"
+  depends_on cask: "homebrew/cask-versions/mono-mdk-for-visual-studio"
 
-  app 'Visual Studio.app'
+  app "Visual Studio.app"
 
   zap trash: [
-               '/Applications/Xamarin Workbooks.app',
-               '/Applications/Xamarin Profiler.app',
-               '~/Library/Application Support/VisualStudio',
-               '~/Library/Application Support/CrashReporter/VisualStudio*',
-               '~/Library/Caches/VisualStudio',
-               '~/Library/Logs/VisualStudio',
-               '~/Library/Preferences/Visual*Studio',
-               '~/Library/Preferences/Xamarin',
-               '~/Library/Developer/Xamarin',
-               '~/Library/VisualStudio',
-             ]
+    "/Applications/Xamarin Workbooks.app",
+    "/Applications/Xamarin Profiler.app",
+    "~/Library/Application Support/VisualStudio",
+    "~/Library/Application Support/CrashReporter/VisualStudio*",
+    "~/Library/Caches/VisualStudio",
+    "~/Library/Logs/VisualStudio",
+    "~/Library/Preferences/Visual*Studio",
+    "~/Library/Preferences/Xamarin",
+    "~/Library/Developer/Xamarin",
+    "~/Library/VisualStudio",
+  ]
 end

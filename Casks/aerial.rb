@@ -1,13 +1,12 @@
-cask 'aerial' do
-  version '1.9.1'
-  sha256 '63e04c6b7a1217f88afbd0422232dfaf00dda88d06abe6ec464bf24df1b6b4c0'
+cask "aerial" do
+  version "2.3.2"
+  sha256 "34fdbd5ec7ca087e3bea72c421947f38e43b0f62992caa532157c29b0f3e9ff1"
 
   url "https://github.com/JohnCoates/Aerial/releases/download/v#{version}/Aerial.saver.zip"
-  appcast 'https://github.com/JohnCoates/Aerial/releases.atom'
-  name 'Aerial Screensaver'
-  homepage 'https://github.com/JohnCoates/Aerial'
+  name "Aerial Screensaver"
+  homepage "https://github.com/JohnCoates/Aerial"
 
-  screen_saver 'Aerial.saver'
+  screen_saver "Aerial.saver"
 
-  zap trash: '~/Library/Caches/Aerial'
+  zap trash: "~/Library/Caches/Aerial"
 end

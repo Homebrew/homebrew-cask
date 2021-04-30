@@ -1,22 +1,22 @@
-cask 'localdev' do
-  version '0.10.0'
-  sha256 '276c470e6e1d45f074fbfc1b97990e923bdcc09ab6356d7e6a66b90b9fb6eea8'
+cask "localdev" do
+  version "0.12.0"
+  sha256 "e5e8d9620cd5c67e5a497855b20dde44ff8d482edeae984363d7ba1eed7d296b"
 
-  # pantheon-localdev.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://pantheon-localdev.s3.amazonaws.com/Localdev-v#{version}.dmg"
-  name 'Localdev'
-  homepage 'https://pantheon.io/localdev'
+  url "https://pantheon-localdev.s3.amazonaws.com/Localdev-v#{version}.dmg",
+      verified: "pantheon-localdev.s3.amazonaws.com/"
+  name "Localdev"
+  homepage "https://pantheon.io/localdev"
 
-  app 'Localdev.app'
+  app "Localdev.app"
 
   uninstall delete: [
-                      '~/Library/Application Support/localdev',
-                      '~/Library/Preferences/io.pantheon.local.helper.plist',
-                      '~/Library/Preferences/io.pantheon.local.plist',
-                    ]
+    "~/Library/Application Support/localdev",
+    "~/Library/Preferences/io.pantheon.local.helper.plist",
+    "~/Library/Preferences/io.pantheon.local.plist",
+  ]
 
   zap trash: [
-               '~/Localdev',
-               '~/.pantheonlocaldev',
-             ]
+    "~/Localdev",
+    "~/.pantheonlocaldev",
+  ]
 end

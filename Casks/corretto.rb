@@ -1,11 +1,18 @@
-cask 'corretto' do
-  version '11.0.7.10.1'
-  sha256 'efd6cba4404041ef6ac3e882042f12c76b844d918f83b56493187df3bae3815e'
+cask "corretto" do
+  version "16.0.1.9.1"
+  sha256 "d4193891a0e4c82bb67182dd405bd01ae9e17078d0433350b09f8f3107f27262"
 
-  url "https://corretto.aws/downloads/resources/#{version.sub(%r{-\d+}, '')}/amazon-corretto-#{version}-macosx-x64.pkg"
-  appcast 'https://www.macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://corretto.aws/downloads/latest/amazon-corretto-11-x64-macos-jdk.pkg'
-  name 'Amazon Corretto'
-  homepage 'https://corretto.aws/'
+  url "https://corretto.aws/downloads/resources/#{version.sub(/-\d+/, "")}/amazon-corretto-#{version}-macosx-x64.pkg"
+  name "AWS Corretto JDK"
+  desc "OpenJDK distribution from Amazon"
+  homepage "https://corretto.aws/"
+
+  livecheck do
+    url "https://corretto.aws/downloads/latest/amazon-corretto-#{version.major}-x64-macos-jdk.pkg"
+    strategy :header_match do |headers|
+      headers["location"][%r{/amazon-corretto-(\d+(?:\.\d+)*)-macosx-x64\.pkg}i, 1]
+    end
+  end
 
   pkg "amazon-corretto-#{version}-macosx-x64.pkg"
 

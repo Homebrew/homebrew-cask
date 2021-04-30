@@ -1,13 +1,19 @@
-cask 'zenmate-vpn' do
-  version '5.0.1.14'
-  sha256 'a2eca4e6eeb7d0a3057bbd16bfdcfc3bed5d1125b02673e43589ab3e5a734db2'
+cask "zenmate-vpn" do
+  version "5.1.0.21"
+  sha256 "aba2b4714517e55c852d21e217690de14e1b9b623e50a1e9516398f49978c85d"
 
   url "https://download.zenmate.com/mac/#{version.major}/zm_#{version}.dmg"
-  appcast 'https://download.zenmate.com/mac/zenmate.xml'
-  name 'ZenMate VPN'
-  homepage 'https://zenmate.com/products/vpn-for-osx/'
+  name "ZenMate VPN"
+  homepage "https://zenmate.com/products/vpn-for-osx/"
 
-  depends_on macos: '>= :sierra'
+  livecheck do
+    url "https://download.zenmate.com/mac/zenmate.xml"
+    strategy :sparkle do |item|
+      item.url[%r{/zm_(\d+(?:\.\d+)*)\.dmg}i, 1]
+    end
+  end
 
-  app 'ZenMate VPN.app'
+  depends_on macos: ">= :sierra"
+
+  app "ZenMate VPN.app"
 end

@@ -1,11 +1,15 @@
-cask 'ipvanish-vpn' do
-  version '3.1.0_b15007'
-  sha256 '085d7fb077951656c3d7e3e2247c32f32244adb2fc735ef48473cc1c19d128b1'
+cask "ipvanish-vpn" do
+  version "3.2.2,59381"
+  sha256 "b12ea1556d59f7feebff931d820bf3ee8593f20b6dcf49aa2307c3b22c5d8e0a"
 
-  url "https://www.ipvanish.com/software/osx/IPVanish_v#{version}.zip"
-  appcast 'https://www.ipvanish.com/software/osx/updates.xml'
-  name 'IPVanish'
-  homepage 'https://www.ipvanish.com/'
+  url "https://www.ipvanish.com/software/osx/IPVanish_v#{version.before_comma}_b#{version.after_comma}.zip"
+  name "IPVanish"
+  homepage "https://www.ipvanish.com/"
 
-  app 'IPVanish VPN.app'
+  livecheck do
+    url "https://www.ipvanish.com/software/osx/updates.xml"
+    strategy :sparkle
+  end
+
+  app "IPVanish VPN.app"
 end

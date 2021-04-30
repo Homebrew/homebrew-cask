@@ -1,20 +1,23 @@
-cask 'nvidia-geforce-now' do
-  version '2.0.20.86,57612F'
-  sha256 'a3128cf9cf7137bf03c35ab0e5fb3e2f984c8605e7b62534ddbcaaa81aff6aa3'
+cask "nvidia-geforce-now" do
+  version "2.0.28.140"
+  sha256 :no_check
 
-  url "https://ota-downloads.nvidia.com/ota/GeForceNOW-release_#{version.after_comma}.dmg"
-  appcast "https://ota.nvidia.com/release/available?product=GFN-mac&version=#{version.before_comma}&channel=OFFICIAL",
-          must_contain: '[]' # Only happens when there are no newer versions
-  name 'NVIDIA GeForce NOW'
-  homepage 'https://www.nvidia.com/en-us/geforce/products/geforce-now/'
+  url "https://download.nvidia.com/gfnpc/GeForceNOW-release.dmg"
+  name "NVIDIA GeForce NOW"
+  desc "Cloud gaming platform"
+  homepage "https://www.nvidia.com/en-us/geforce-now/download/"
 
-  depends_on macos: '>= :yosemite'
+  livecheck do
+    skip "No version information available"
+  end
+
+  depends_on macos: ">= :yosemite"
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
-  app 'GeForceNOW.app', target: 'NVIDIA GeForce NOW.app'
+  app "GeForceNOW.app", target: "NVIDIA GeForce NOW.app"
 
   zap trash: [
-               '~/Library/Application Support/NVIDIA/GeForceNOW',
-               '~/Library/Preferences/com.nvidia.gfnpc.mall.helper.plist',
-             ]
+    "~/Library/Application Support/NVIDIA/GeForceNOW",
+    "~/Library/Preferences/com.nvidia.gfnpc.mall.helper.plist",
+  ]
 end

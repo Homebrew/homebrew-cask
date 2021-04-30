@@ -1,14 +1,14 @@
-cask 'ipepresenter' do
-  version '7.2.18'
-  sha256 '1e2e6b7f245d639098d03117a43795a099052a0b910934aa532a36513190f6b4'
+cask "ipepresenter" do
+  version "7.2.24"
+  sha256 "916217671a92de7600ff92de513ce1f62787b52039478e66fc79ef6e2c2c25ba"
 
-  # bintray.com/otfried/ was verified as official when first introduced to the cask
-  url "https://dl.bintray.com/otfried/generic/ipe/#{version.major_minor}/ipepresenter-#{version}-mac.dmg"
-  appcast 'http://ipepresenter.otfried.org/'
-  name 'IpePresenter'
-  homepage 'http://ipepresenter.otfried.org/'
+  url "https://github.com/otfried/ipe/releases/download/v#{version}/ipepresenter-#{version}-mac.dmg",
+      verified: "github.com/otfried/ipe/"
+  name "IpePresenter"
+  desc "Make presentations from PDFs"
+  homepage "https://ipepresenter.otfried.org/"
 
-  depends_on macos: '>= :yosemite'
+  depends_on macos: ">= :yosemite"
 
-  app 'IpePresenter.app'
+  app "IpePresenter.app"
 end

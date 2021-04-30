@@ -1,13 +1,17 @@
-cask 'qsync-client' do
-  version '3.4.0.0416'
-  sha256 '704638070a9e557682ca19c1aa62f6496fdc86ff3aa918b55d32ade859415aad'
+cask "qsync-client" do
+  version "3.6.0.1026"
+  sha256 "ebdace7b5c170e946a68e78a6dbf1d713996a2299eb09b2e7ddce06fff128b14"
 
   url "https://download.qnap.com/Storage/Utility/QNAPQsyncClientMac-#{version}.dmg"
-  appcast 'https://update.qnap.com/SoftwareRelease.xml'
-  name 'Qnap Qsync'
-  homepage 'https://www.qnap.com/i/in/utility/#block_3'
+  name "Qnap Qsync"
+  homepage "https://www.qnap.com/i/in/utility/#block_3"
 
-  installer manual: 'Qsync Client.pkg'
+  livecheck do
+    url "https://update.qnap.com/SoftwareRelease.xml"
+    regex(/QNAPQsyncClientMac[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+  end
 
-  uninstall pkgutil: 'com.qnap.qsync.*'
+  installer manual: "Qsync Client.pkg"
+
+  uninstall pkgutil: "com.qnap.qsync.*"
 end

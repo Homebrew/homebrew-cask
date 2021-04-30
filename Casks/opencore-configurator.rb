@@ -1,11 +1,25 @@
-cask 'opencore-configurator' do
-  version '2.6.0.2'
-  sha256 '705c34e9e934f91be04a59ade92bc95dacdb731e295a97244de3147302186aa7'
+cask "opencore-configurator" do
+  version "2.35.0.0"
+  sha256 :no_check
 
-  url 'https://mackie100projects.altervista.org/apps/opencoreconf/download-new-build.php?version=last'
-  appcast 'https://mackie100projects.altervista.org/category/opencore-configurator-changelog/'
-  name 'OpenCore Configurator'
-  homepage 'https://mackie100projects.altervista.org/download-opencore-configurator/'
+  url "https://mackie100projects.altervista.org/apps/opencoreconf/download-new-build.php?version=last",
+      referer: "https://mackie100projects.altervista.org/"
+  name "OpenCore Configurator"
+  desc "OpenCore EFI bootloader configuration helper"
+  homepage "https://mackie100projects.altervista.org/opencore-configurator/"
 
-  app 'OpenCore Configurator.app'
+  livecheck do
+    url "https://mackie100projects.altervista.org/download-opencore-configurator/"
+    strategy :page_match
+    regex(/OpenCore\sConfigurator\s(\d+(?:\.\d+)*)/i)
+  end
+
+  auto_updates true
+
+  app "OpenCore Configurator.app"
+
+  zap trash: [
+    "~/Library/Caches/org.altervista.mackie100projects.OpenCore-Configurator",
+    "~/Library/Preferences/org.altervista.mackie100projects.OpenCore-Configurator.plist",
+  ]
 end

@@ -1,12 +1,24 @@
-cask 'tweeten' do
-  version '5.0.3'
-  sha256 '942a5dcd010caae035e511939e98ef2135d458434f5d575fc3e652e179cbec50'
+cask "tweeten" do
+  version "5.3.0"
+  sha256 "b894797844c70b1e356f213b30da00076dd25799888da37ab81ed65307fa7034"
 
-  # github.com/MehediH/Tweeten/ was verified as official when first introduced to the cask
-  url "https://github.com/MehediH/Tweeten/releases/download/v#{version}/tweeten-darwin-x64.zip"
-  appcast 'https://github.com/MehediH/Tweeten/releases.atom'
-  name 'Tweeten'
-  homepage 'https://tweetenapp.com/'
+  url "https://github.com/MehediH/Tweeten/releases/download/v#{version}/tweeten-darwin-x64.zip",
+      verified: "github.com/MehediH/Tweeten/"
+  name "Tweeten"
+  desc "Twitter client"
+  homepage "https://tweetenapp.com/"
 
-  app 'Tweeten.app'
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  app "Tweeten.app"
+
+  zap trash: [
+    "~/Library/Application Support/Tweeten",
+    "~/Library/Logs/Tweeten",
+    "~/Library/Preferences/com.builtbymeh.tweeten.plist",
+    "~/Library/Saved Application State/com.builtbymeh.tweeten.savedState",
+  ]
 end

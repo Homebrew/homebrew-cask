@@ -1,19 +1,24 @@
-cask 'hazeover' do
-  version '1.8.5-900'
-  sha256 '759f08636ef5668612c34049e482a1bd1cfbab83d38a38ae597d7f10e8085e11'
+cask "hazeover" do
+  version "1.8.9,1050"
+  sha256 :no_check
 
-  url 'https://hazeover.com/HazeOver.dmg'
-  appcast 'https://hazeover.com/updates.xml'
-  name 'HazeOver'
-  homepage 'https://hazeover.com/'
+  url "https://hazeover.com/HazeOver.dmg"
+  name "HazeOver"
+  desc "Windows manager and desktop organizer"
+  homepage "https://hazeover.com/"
 
-  app 'HazeOver.app'
+  livecheck do
+    url "https://hazeover.com/updates.xml"
+    strategy :sparkle
+  end
 
-  uninstall launchctl: 'com.pointum.hazeover.launcher',
-            quit:      'com.pointum.hazeover'
+  app "HazeOver.app"
+
+  uninstall launchctl: "com.pointum.hazeover.launcher",
+            quit:      "com.pointum.hazeover"
 
   zap trash: [
-               '~/Library/Caches/com.pointum.hazeover',
-               '~/Library/Preferences/com.pointum.hazeover.plist',
-             ]
+    "~/Library/Caches/com.pointum.hazeover",
+    "~/Library/Preferences/com.pointum.hazeover.plist",
+  ]
 end

@@ -1,12 +1,27 @@
-cask 'gobdokumente' do
-  version '1.6.6'
-  sha256 '94627a8af764ff7a921e8593f7d2168d73ba4c51224a7f14d82ca076a3ba75f5'
+cask "gobdokumente" do
+  if MacOS.version <= :catalina
+    version "1.6.8"
+    sha256 :no_check
+    url "https://download.moapp.software/GoBDokumente.zip",
+        verified: "download.moapp.software/"
+  else
+    version "1.8"
+    sha256 :no_check
+    url "https://download.moapp.software/GoBDokumente_BS.zip",
+        verified: "download.moapp.software/"
+  end
 
-  # download.moapp.software/ was verified as official when first introduced to the cask
-  url 'https://download.moapp.software/GoBDokumente.zip'
-  appcast 'https://sparkle.moapp.software/gobdokumente.xml'
-  name 'GoBDokumente'
-  homepage 'https://gobdokumente.de/'
+  name "GoBDokumente"
+  name "GoBDocuments"
+  desc "Document management system"
+  homepage "https://gobdokumente.de/"
 
-  app 'GoBDokumente.app'
+  livecheck do
+    url "https://sparkle.moapp.software/gobdokumente.xml"
+    strategy :sparkle
+  end
+
+  depends_on macos: ">= :el_capitan"
+
+  app "GoBDokumente.app"
 end

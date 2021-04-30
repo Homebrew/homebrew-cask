@@ -1,12 +1,34 @@
-cask 'lark' do
-  version '3.24.9'
-  sha256 'd60c50596a05d791fa5c212d0905a9ca5f50db4d6917323b3bb28881f86512a6'
+cask "lark" do
+  version "3.46.9,515418"
+  sha256 "91295ab4dda05a82ff1f5ec8a78ff7253681586f74fbfa77a9812a6838623391"
 
-  # sf3-ttcdn-tos.pstatp.com/ was verified as official when first introduced to the cask
-  url "https://sf3-ttcdn-tos.pstatp.com/obj/ee-appcenter/Lark-#{version}.dmg"
-  appcast 'https://www.larksuite.com/api/downloads'
-  name 'Lark'
-  homepage 'https://www.larksuite.com/'
+  url "https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/#{version.after_comma}/lark-mac-#{version.before_comma}.dmg",
+      verified: "sf16-va.larksuitecdn.com/obj/lark-artifact-storage/"
+  name "Lark"
+  desc "Project management software"
+  homepage "https://www.larksuite.com/"
 
-  app 'Lark.app'
+  livecheck do
+    url "https://www.larksuite.com/api/downloads"
+    strategy :page_match do |page|
+      match = page.match(%r{lark-artifact-storage/(\w+)/lark-mac-(\d+(?:\.\d+)*)\.dmg}i)
+      "#{match[2]},#{match[1]}"
+    end
+  end
+
+  auto_updates true
+
+  app "Lark.app"
+
+  zap trash: [
+    # feishu
+    "~/Library/Caches/com.bytedance.lark.helper",
+    "~/Library/Preferences/com.bytedance.lark.helper.plist",
+    # lark
+    "~/Library/Caches/com.electron.lark.helper",
+    "~/Library/Preferences/com.electron.lark.helper.plist",
+    # both
+    "~/Library/Caches/com.electron.lark",
+    "~/Library/Saved Application State/com.electron.lark.savedState",
+  ]
 end

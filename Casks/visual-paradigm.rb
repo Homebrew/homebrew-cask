@@ -1,12 +1,19 @@
-cask 'visual-paradigm' do
-  version '16.1,20200601'
-  sha256 'de5355dee8040fb3902fa58501e65ba92df25d3ca3a51124506a6268ee9f0199'
+cask "visual-paradigm" do
+  version "16.3,20210420"
+  sha256 "dd94d4a64843844bbfedd4162f0860bc2e3df7c6594fa955ec019a08dc96dbc5"
 
-  url "https://eu8.dl.visual-paradigm.com/visual-paradigm/vp#{version.before_comma}/#{version.after_comma}/Visual_Paradigm_#{version.before_comma.dots_to_underscores}_#{version.after_comma}_OSX_WithJRE.dmg"
-  appcast 'https://www.macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.visual-paradigm.com/downloads/vp/checksum.html',
-          must_contain: "#{version.before_comma}/#{version.after_comma}"
-  name 'Visual Paradigm'
-  homepage 'https://www.visual-paradigm.com/'
+  url "https://www.visual-paradigm.com/downloads/vp#{version.before_comma}/#{version.after_comma}/Visual_Paradigm_#{version.before_comma.dots_to_underscores}_#{version.after_comma}_OSX_WithJRE.dmg"
+  name "Visual Paradigm"
+  desc "UML CASE Tool supporting UML 2, SysML and Business Process Modeling Notation"
+  homepage "https://www.visual-paradigm.com/"
 
-  app 'Visual Paradigm.app'
+  livecheck do
+    url "https://www.visual-paradigm.com/downloads/vp/checksum.html"
+    strategy :header_match do |headers|
+      match = headers["location"].match(%r{/vp(\d+(?:\.\d+)*)/(\d+)/checksum\.html}i)
+      "#{match[1]},#{match[2]}"
+    end
+  end
+
+  app "Visual Paradigm.app"
 end

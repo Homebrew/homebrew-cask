@@ -1,13 +1,28 @@
-cask 'agenda' do
-  version '10.0.2'
-  sha256 'cf42eb72d7389f14bc33d669a4005767379076ca70c9e49f8dd701e42159fca1'
+cask "agenda" do
+  version "13.0,187"
+  sha256 "a592cf6a84e1fc5764474f787310462984d1793bf6d14ae2d527a74451e80ec8"
 
-  url "https://downloads.agenda.com/Agenda_#{version}.zip"
-  appcast 'https://downloads.agenda.com/AgendaSparkleAppcast.xml'
-  name 'Agenda'
-  homepage 'https://agenda.com/'
+  url "https://downloads.agenda.com/Agenda_#{version.before_comma}.zip"
+  name "Agenda"
+  desc "Note taking application focusing on dates"
+  homepage "https://agenda.com/"
 
-  depends_on macos: '>= :sierra'
+  livecheck do
+    url "https://downloads.agenda.com/AgendaSparkleAppcast.xml"
+    strategy :sparkle
+  end
 
-  app 'Agenda.app'
+  depends_on macos: ">= :sierra"
+
+  app "Agenda.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.momenta.agenda.macos",
+    "~/Library/Application Scripts/com.momenta.agenda.macos.extension-sharing",
+    "~/Library/Application Scripts/com.momenta.agenda.macos.extension-widget",
+    "~/Library/Containers/com.momenta.agenda.macos",
+    "~/Library/Containers/com.momenta.agenda.macos.extension-sharing",
+    "~/Library/Containers/com.momenta.agenda.macos.extension-widget",
+    "~/Library/Group Containers/WRBK2Z2EG7.group.com.momenta.agenda.macos",
+  ]
 end

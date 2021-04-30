@@ -1,14 +1,19 @@
-cask 'renamer' do
-  version '6.0.5'
-  sha256 'fbe82a98acfafa5bd2841a1ffe0c9064edc3504abe07e67363e68c20513b1609'
+cask "renamer" do
+  version "6.0.6,60600"
+  sha256 "66024e88c714080854a5208d2888eda9ab3f9cccc80c81be83698f570b93b05c"
 
-  # storage.googleapis.com/incrediblebee/ was verified as official when first introduced to the cask
-  url "https://storage.googleapis.com/incrediblebee/apps/Renamer-#{version.major}/Renamer-#{version}.zip"
-  appcast "https://api.incrediblebee.com/appcasts/renamer-#{version.major}.xml"
-  name 'Renamer'
-  homepage 'https://renamer.com/'
+  url "https://storage.googleapis.com/incrediblebee/apps/Renamer-#{version.major}/Renamer-#{version.before_comma}.zip",
+      verified: "storage.googleapis.com/incrediblebee/"
+  name "Renamer"
+  desc "Batch file renamer application"
+  homepage "https://renamer.com/"
 
-  depends_on macos: '>= :mojave'
+  livecheck do
+    url "https://api.incrediblebee.com/appcasts/renamer-#{version.major}.xml"
+    strategy :sparkle
+  end
 
-  app 'Renamer.app'
+  depends_on macos: ">= :mojave"
+
+  app "Renamer.app"
 end

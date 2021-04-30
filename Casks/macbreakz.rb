@@ -1,11 +1,15 @@
-cask 'macbreakz' do
-  version '5.34'
-  sha256 '347c0d6f2379d5fa1b3737d39535dc48531c7c0c4f4104874caaeda5f0c7bb80'
+cask "macbreakz" do
+  version "5.44"
+  sha256 "6e22b2105adac3f9b935d6066212f140cd2874f0e473ea2ce0b9078b889d13ae"
 
   url "https://www.publicspace.net/download/MacBreakZ#{version.major}.dmg"
-  appcast "https://www.publicspace.net/app/signed_mb#{version.major}.xml"
-  name 'MacBreakZ'
-  homepage 'https://www.publicspace.net/MacBreakZ/'
+  name "MacBreakZ"
+  homepage "https://www.publicspace.net/MacBreakZ/"
+
+  livecheck do
+    url "https://www.publicspace.net/app/signed_mb#{version.major}.xml"
+    strategy :sparkle
+  end
 
   app "MacBreakZ #{version.major}.app"
 end

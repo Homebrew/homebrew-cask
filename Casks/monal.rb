@@ -1,12 +1,18 @@
-cask 'monal' do
-  version :latest
+cask "monal" do
+  version "5.0,716"
   sha256 :no_check
 
-  url 'https://monal.im/Monal-OSX/Monal-OSX.zip'
-  name 'Monal'
-  homepage 'https://monal.im/'
+  url "https://monal.im/macOS/Monal-macOS.tar.gz"
+  name "Monal"
+  desc "Tool to securely connect to chat servers"
+  homepage "https://monal.im/"
 
-  depends_on macos: '>= :catalina'
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
-  app 'Monal.app'
+  depends_on macos: ">= :catalina"
+
+  app "Monal.app"
 end

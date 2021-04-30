@@ -1,18 +1,18 @@
-cask 'dexed' do
-  version '0.9.4'
-  sha256 '079eac6aa65de3ea19efbb43cadfa050a8c3978ab4ea79d4a660226cd4e0d5e3'
+cask "dexed" do
+  version "0.9.6"
+  sha256 "7a9481628a92b7e348857f18be3a24fe8b48d4a67d3a9d7fe290e37e915d2fc4"
 
-  # github.com/asb2m10/dexed/ was verified as official when first introduced to the cask
-  url "https://github.com/asb2m10/dexed/releases/download/v#{version}hf1/dexed-#{version}-osx.zip"
-  appcast 'https://github.com/asb2m10/dexed/releases.atom'
-  name 'Dexed'
-  homepage 'https://asb2m10.github.io/dexed/'
+  url "https://github.com/asb2m10/dexed/releases/download/v#{version}/dexed-#{version}-macos.zip",
+      verified: "github.com/asb2m10/dexed/"
+  name "Dexed"
+  desc "DX7 FM synthesizer"
+  homepage "https://asb2m10.github.io/dexed/"
 
-  pkg "dexed-#{version}-osx.mpkg"
+  pkg "dexed-#{version}.mpkg"
 
   uninstall pkgutil: [
-                       'com.digitalsuburban.DexedStandalone',
-                       'com.digitalsuburban.DexedVST',
-                       'com.digitalsuburban.DexedAU',
-                     ]
+    "com.digitalsuburban.DexedStandalone",
+    "com.digitalsuburban.DexedVST3",
+    "com.digitalsuburban.DexedAU",
+  ]
 end

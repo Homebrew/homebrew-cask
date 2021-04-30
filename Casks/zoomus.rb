@@ -1,59 +1,28 @@
-cask 'zoomus' do
-  version '5.0.26223.0603'
-  sha256 '3b4ca2ae2ab87db91187093119f26a06c9c4e6ddd4eb28b61cc86ecb2af1fdce'
+cask "zoomus" do
+  version "5.4.58903.1122.1" # So it triggers an upgrade for users of the cask
+  sha256 "614fa5e81ca40fa868e8b682e59ce7f2195bd70593b42e95af2a405afb395c21"
 
-  # d11yldzmag5yn.cloudfront.net/ was verified as official when first introduced to the cask
-  url "https://d11yldzmag5yn.cloudfront.net/prod/#{version}/Zoom.pkg"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://zoom.us/client/latest/Zoom.pkg'
-  name 'Zoom.us'
-  homepage 'https://www.zoom.us/'
+  url "https://d11yldzmag5yn.cloudfront.net/prod/#{version.before_comma}/Zoom.pkg",
+      verified: "d11yldzmag5yn.cloudfront.net/"
+  name "Zoom.us makeshift alias"
+  desc "Temporary makeshift alias for the video communication tool Zoom"
+  homepage "https://www.zoom.us/"
 
-  auto_updates true
+  depends_on cask: "zoom"
 
-  pkg 'Zoom.pkg'
+  stage_only true
 
-  postflight do
-    set_ownership '~/Library/Application Support/zoom.us'
-  end
+  caveats <<~EOS
+    RENAME WARNING
 
-  uninstall quit:       'us.zoom.ZoomOpener',
-            signal:     ['KILL', 'us.zoom.xos'],
-            pkgutil:    'us.zoom.pkg.videmeeting',
-            login_item: 'ZoomOpener',
-            script:     {
-                          executable:   '/usr/bin/defaults',
-                          args:         ['delete', 'us.zoom.xos'],
-                          must_succeed: false,
-                          sudo:         true,
-                        },
-            delete:     [
-                          '/Applications/zoom.us.app',
-                          '/Library/Audio/Plug-Ins/HAL/ZoomAudioDevice.driver',
-                          '/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin',
-                          '/Library/Logs/DiagnosticReports/zoom.us*',
-                          '~/.zoomus/ZoomOpener.app',
-                          '~/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin',
-                        ]
+    Due to prevalent user confusion, the zoomus cask (this one) will be renamed to zoom.
+    In the meantime, zoomus will install zoom for you as a dependency, but you should update your scripts.
 
-  zap trash: [
-               '~/.zoomus',
-               '~/Desktop/Zoom',
-               '~/Documents/Zoom',
-               '~/Library/Application Support/CloudDocs/session/containers/iCloud.us.zoom.videomeetings',
-               '~/Library/Application Support/CloudDocs/session/containers/iCloud.us.zoom.videomeetings.plist',
-               '~/Library/Application Support/zoom.us',
-               '~/Library/Caches/us.zoom.xos',
-               '~/Library/Cookies/us.zoom.xos.binarycookies',
-               '~/Library/Logs/zoom.us',
-               '~/Library/Logs/zoominstall.log',
-               '~/Library/Logs/ZoomPhone',
-               '~/Library/Mobile Documents/iCloud~us~zoom~videomeetings',
-               '~/Library/Preferences/ZoomChat.plist',
-               '~/Library/Preferences/us.zoom.airhost.plist',
-               '~/Library/Preferences/us.zoom.xos.Hotkey.plist',
-               '~/Library/Preferences/us.zoom.xos.plist',
-               '~/Library/Safari/PerSiteZoomPreferences.plist',
-               '~/Library/SafariTechnologyPreview/PerSiteZoomPreferences.plist',
-               '~/Library/Saved Application State/us.zoom.xos.savedState',
-             ]
+    We’re aware this solution is subpar. If you’d like to help us improve it,
+    we accept PRs and need the equivalent of formula_renames.json for casks: https://docs.brew.sh/Rename-A-Formula
+
+    To migrate now, do:
+      brew uninstall zoomus
+      brew install zoom
+  EOS
 end

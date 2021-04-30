@@ -1,13 +1,16 @@
-cask 'webviewscreensaver' do
-  version '2.0'
-  sha256 'ce06b90cff589c56974b6a9555aa4466f24914d33425f4d4c0b81dbb9effa724'
+cask "webviewscreensaver" do
+  version "2.2"
+  sha256 "0b67907739674bc0294ad659e1ccc7db0b139c3d694b8d552bf27ef0fb623591"
 
   url "https://github.com/liquidx/webviewscreensaver/releases/download/v#{version}/WebViewScreenSaver-#{version}.zip"
-  appcast 'https://github.com/liquidx/webviewscreensaver/releases.atom'
-  name 'WebViewScreenSaver'
-  homepage 'https://github.com/liquidx/webviewscreensaver'
+  name "WebViewScreenSaver"
+  desc "Screen saver that displays web pages"
+  homepage "https://github.com/liquidx/webviewscreensaver"
 
-  depends_on macos: '<= :mojave'
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
-  screen_saver 'WebViewScreenSaver.saver'
+  screen_saver "WebViewScreenSaver.saver"
 end

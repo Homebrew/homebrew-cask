@@ -1,24 +1,31 @@
-cask 'kaleidoscope' do
-  version '2.3.1,1441-apr-7-2020'
-  sha256 '720abc4bc1a5cdb0d58fb1794d16c9d4e00d82a570d428ff7b44e36fa45212bd'
+cask "kaleidoscope" do
+  version "2.4.1,1453:apr-6-2021"
+  sha256 "5b6c995b00eeb0163d9ac139f4a4da289e57e0ee364fc959a5ba909e9b19715a"
 
-  # appcasts.hypergiant.com/ks/prod/ was verified as official when first introduced to the cask
-  url "https://appcasts.hypergiant.com/ks/prod/Kaleidoscope-#{version.before_comma}-build-#{version.after_comma}.zip"
-  appcast 'https://appcasts.hypergiant.com/ks/prod/updates'
-  name 'Kaleidoscope'
-  homepage 'https://www.kaleidoscopeapp.com/'
+  url "https://updates.kaleidoscope.app/v2/prod/Kaleidoscope-#{version.before_comma}-#{version.after_comma.before_colon}-#{version.after_colon}.app.zip"
+  name "Kaleidoscope"
+  desc "Spot and merge differences in text and image files or folders"
+  homepage "https://www.kaleidoscope.app/"
+
+  livecheck do
+    url "https://updates.kaleidoscope.app/v#{version.major}/prod/appcast"
+    strategy :sparkle do |item|
+      match = item.url.match(%r{/Kaleidoscope-(\d+(?:\.\d+)*)-(\d+)-(\w+(?:-\d+)*)\.app\.zip}i)
+      "#{match[1]},#{match[2]}:#{match[3]}"
+    end
+  end
 
   auto_updates true
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :high_sierra"
 
-  app 'Kaleidoscope.app'
+  app "Kaleidoscope.app"
   binary "#{appdir}/Kaleidoscope.app/Contents/Resources/bin/ksdiff"
 
   zap trash: [
-               '~/Library/Application Support/com.blackpixel.kaleidoscope',
-               '~/Library/Caches/com.blackpixel.kaleidoscope',
-               '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.blackpixel.kaleidoscope',
-               '~/Library/Preferences/com.blackpixel.kaleidoscope.plist',
-               '~/Library/Saved Application State/com.blackpixel.kaleidoscope.savedState',
-             ]
+    "~/Library/Application Support/com.blackpixel.kaleidoscope",
+    "~/Library/Caches/com.blackpixel.kaleidoscope",
+    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.blackpixel.kaleidoscope",
+    "~/Library/Preferences/com.blackpixel.kaleidoscope.plist",
+    "~/Library/Saved Application State/com.blackpixel.kaleidoscope.savedState",
+  ]
 end

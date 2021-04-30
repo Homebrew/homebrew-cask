@@ -1,11 +1,17 @@
-cask 'mochi' do
-  version '1.5.1'
-  sha256 'a61e57f265a8f5222774570342e5ac265b2c1293370983bc2df25382640d5e0b'
+cask "mochi" do
+  version "1.9.10"
+  sha256 "138367123d62cdb3a03a5fd425291f7d1d429d0c2a1cb25c9b39242cf8d19480"
 
   url "https://mochi.cards/releases/Mochi-#{version}.dmg"
-  appcast 'https://mochi.cards/'
-  name 'Mochi'
-  homepage 'https://mochi.cards/'
+  name "Mochi"
+  desc "Study notes and flashcards using spaced repetition"
+  homepage "https://mochi.cards/"
 
-  app 'Mochi.app'
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/Mochi-(\d+(?:\.\d+)*)\.dmg}i)
+  end
+
+  app "Mochi.app"
 end

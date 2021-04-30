@@ -1,23 +1,30 @@
-cask 'mpv' do
-  version '0.32.0'
-  sha256 '5c1b21412a0cfa8fbd06b18aa3cea919c1b9ce86d3aa39672cbc714cb753004c'
+cask "mpv" do
+  version "0.33.1"
+  sha256 "b2cfa0dd1dfd3d00d360a5ed50919920a2429da84315148fdda4bda886aa8225"
 
-  # laboratory.stolendata.net/~djinn/mpv_osx/ was verified as official when first introduced to the cask
-  url "https://laboratory.stolendata.net/~djinn/mpv_osx/mpv-#{version}.tar.gz"
-  appcast 'https://laboratory.stolendata.net/~djinn/mpv_osx/'
-  name 'mpv'
-  homepage 'https://mpv.io/'
+  url "https://laboratory.stolendata.net/~djinn/mpv_osx/mpv-#{version}.tar.gz",
+      verified: "laboratory.stolendata.net/~djinn/mpv_osx/"
+  name "mpv"
+  desc "Media player based on MPlayer and mplayer2"
+  homepage "https://mpv.io/"
 
-  depends_on macos: '>= :yosemite'
+  livecheck do
+    url "https://laboratory.stolendata.net/~djinn/mpv_osx/"
+    strategy :page_match
+    regex(/mpv-(\d+(?:\.\d+)*)\.tar\.gz/i)
+  end
 
-  app 'mpv.app'
+  conflicts_with formula: "mpv"
+  depends_on macos: ">= :sierra"
+
+  app "mpv.app"
   binary "#{appdir}/mpv.app/Contents/MacOS/mpv"
-  manpage 'documentation/man/mpv.1'
+  manpage "documentation/man/mpv.1"
 
   zap trash: [
-               '~/.config/mpv',
-               '~/Library/Logs/mpv.log',
-               '~/Library/Preferences/io.mpv.plist',
-               '~/Library/Preferences/mpv.plist',
-             ]
+    "~/.config/mpv",
+    "~/Library/Logs/mpv.log",
+    "~/Library/Preferences/io.mpv.plist",
+    "~/Library/Preferences/mpv.plist",
+  ]
 end

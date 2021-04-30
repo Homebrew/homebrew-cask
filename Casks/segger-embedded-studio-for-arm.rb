@@ -1,13 +1,19 @@
-cask 'segger-embedded-studio-for-arm' do
-  version '4.52c'
-  sha256 '3a380781029296cfbe11121971743afc96659ccae109c8ea746c9a138fe3998e'
+cask "segger-embedded-studio-for-arm" do
+  version "5.42b"
+  sha256 "56570f3251ed5bbec70fb5f9a02e590c5b9b6c25727f14c75118ee7e258df2d9"
 
   url "https://www.segger.com/downloads/embedded-studio/Setup_EmbeddedStudio_ARM_v#{version.no_dots}_macos_x64.dmg"
-  appcast 'https://studio.segger.com/arm_segger_studio_release_notes.htm'
-  name 'SEGGER Embedded Studio for ARM'
-  homepage 'https://www.segger.com/products/development-tools/embedded-studio'
+  name "SEGGER Embedded Studio for ARM"
+  desc "IDE for embedded systems"
+  homepage "https://www.segger.com/products/development-tools/embedded-studio"
+
+  livecheck do
+    url "https://studio.segger.com/arm_segger_studio_release_notes.htm"
+    strategy :page_match
+    regex(/<h2[^>]*>\s*Version\s*(\d+(?:\.\d+)*[a-z]?)/i)
+  end
 
   pkg "Install SEGGER Embedded Studio for ARM #{version}.pkg"
 
-  uninstall pkgutil: 'arm_segger_studio'
+  uninstall pkgutil: "arm_segger_studio"
 end

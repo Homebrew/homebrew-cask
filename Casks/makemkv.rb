@@ -1,16 +1,23 @@
-cask 'makemkv' do
-  version '1.15.1'
-  sha256 'be82a4ef69b0c3a619da07d04c7c0a85678d22f4938e023077bfaa9b802a73d7'
+cask "makemkv" do
+  version "1.16.3"
+  sha256 "a62b0b22a52622e8591bf936efc26fee41787fe618f062698870e775642c00d3"
 
   url "https://www.makemkv.com/download/makemkv_v#{version}_osx.dmg"
-  appcast 'https://www.makemkv.com/download/'
-  name 'MakeMKV'
-  homepage 'https://www.makemkv.com/'
+  name "MakeMKV"
+  desc "Video format converter (transcoder)"
+  homepage "https://www.makemkv.com/"
 
-  app 'MakeMKV.app'
+  livecheck do
+    url "https://www.makemkv.com/download/"
+    strategy :page_match
+    regex(%r{href=.*?/makemkv_v?(\d+(?:\.\d+)*)_osx\.dmg}i)
+  end
+
+  app "MakeMKV.app"
+  binary "#{appdir}/MakeMKV.app/Contents/MacOS/makemkvcon"
 
   zap trash: [
-               '~/Library/Preferences/com.makemkv.MakeMKV.plist',
-               '~/Library/Saved Application State/com.makemkv.MakeMKV.savedState',
-             ]
+    "~/Library/Preferences/com.makemkv.MakeMKV.plist",
+    "~/Library/Saved Application State/com.makemkv.MakeMKV.savedState",
+  ]
 end

@@ -1,14 +1,19 @@
-cask 'insync' do
-  version '3.1.9.40821'
-  sha256 '8f3d84ec6bb8a83c53b0457eeed04b56968ed5729a1a4c6a0a236c253e89811c'
+cask "insync" do
+  version "3.3.8.40942"
+  sha256 "0c56d4e41411ff5aa951beca054395559cbb89759971dc9fa6e4dcc23716c8bf"
 
   url "http://s.insynchq.com/builds/Insync-#{version}.dmg"
-  appcast 'https://www.insynchq.com/downloads?start=true'
-  name 'Insync'
-  homepage 'https://www.insynchq.com/'
+  name "Insync"
+  desc "Manage your Google Drive and OneDrive files"
+  homepage "https://www.insynchq.com/"
+
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(/Version\s*(\d+(?:\.\d+)*)/i)
+  end
 
   auto_updates true
-  conflicts_with cask: 'insync-beta'
 
-  app 'Insync.app'
+  app "Insync.app"
 end

@@ -1,13 +1,13 @@
-cask 'listen1' do
-  # note: "1" is not a version number, but an intrinsic part of the product name
-  version '2.7.2'
-  sha256 'b64cae4a4ae91292d18167418e2edf7ec663c08481ba601852911f3c5a1de6fc'
+cask "listen1" do
+  # NOTE: "1" is not a version number, but an intrinsic part of the product name
+  version "2.21.1"
+  sha256 "2fd0eb3af67fe1ebadd2b4ca0f13ec09e88e7b54a55eb5e540bbeafa17e394ba"
 
-  # github.com/listen1/listen1_desktop/ was verified as official when first introduced to the cask
-  url "https://github.com/listen1/listen1_desktop/releases/download/v#{version}/Listen1_#{version}_mac.dmg"
-  appcast 'https://github.com/listen1/listen1_desktop/releases.atom'
-  name 'Listen 1'
-  homepage 'https://listen1.github.io/listen1/'
+  url "https://github.com/listen1/listen1_desktop/releases/download/v#{version}/Listen1_#{version}_mac.dmg",
+      verified: "github.com/listen1/listen1_desktop/"
+  name "Listen 1"
+  desc "Search and play songs from a variety of online sources"
+  homepage "https://listen1.github.io/listen1/"
 
-  app 'Listen1.app'
+  app "Listen1.app"
 end

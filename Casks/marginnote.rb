@@ -1,19 +1,24 @@
-cask 'marginnote' do
-  version '3.6.11'
-  sha256 '0c7560beecdd91396452890a919147c902191fc07ad6da841a81ac67832d5010'
+cask "marginnote" do
+  version "3.7.5,3.7.5007"
+  sha256 "5a4b77a4d6b4bdea85490d41e6c922cbd9c0a1673b1be4649a61a5037fd2f9e2"
 
-  # marginstudy.com/ was verified as official when first introduced to the cask
-  url "https://marginstudy.com/mac/MarginNote#{version.major}.dmg"
-  appcast "https://dist.marginnote.cn/marginnote#{version.major}.xml"
-  name 'MarginNote'
-  homepage 'https://www.marginnote.com/'
+  url "https://marginstudy.com/mac/MarginNote#{version.major}.dmg",
+      verified: "marginstudy.com/"
+  name "MarginNote"
+  desc "E-reader"
+  homepage "https://www.marginnote.com/"
+
+  livecheck do
+    url "https://dist.marginnote.cn/marginnote#{version.major}.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 
   app "MarginNote #{version.major}.app"
 
   zap trash: [
-               '~/Library/Application Support/QReader.MarginStudyMac',
-               '~/Library/Containers/QReader.MarginStudyMac',
-             ]
+    "~/Library/Application Support/QReader.MarginStudyMac",
+    "~/Library/Containers/QReader.MarginStudyMac",
+  ]
 end

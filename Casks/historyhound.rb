@@ -1,19 +1,24 @@
-cask 'historyhound' do
-  version '2.2'
-  sha256 '527b8e799764393558bda0812f278677784d954826112cf98cd1a4b7ec83c4b9'
+cask "historyhound" do
+  version "2.3.2,8864"
+  sha256 "e06cb23988390ddf4043b113fa8d6cbf83d8689b78cf6be37f7d83b8514aaf25"
 
-  url "https://www.stclairsoft.com/download/HistoryHound-#{version}.dmg"
-  appcast 'https://www.stclairsoft.com/cgi-bin/sparkle.cgi?HH'
-  name 'HistoryHound'
-  homepage 'https://www.stclairsoft.com/HistoryHound/'
+  url "https://www.stclairsoft.com/download/HistoryHound-#{version.before_comma}.dmg"
+  name "HistoryHound"
+  desc "Browser history and bookmarks keyword search"
+  homepage "https://www.stclairsoft.com/HistoryHound/"
+
+  livecheck do
+    url "https://www.stclairsoft.com/cgi-bin/sparkle.cgi?HH"
+    strategy :sparkle
+  end
 
   auto_updates true
 
-  app 'HistoryHound.app'
+  app "HistoryHound.app"
 
   zap trash: [
-               '~/Library/Application Support/HistoryHound',
-               '~/Library/Caches/com.stclairsoft.HistoryHound',
-               '~/Library/Preferences/com.stclairsoft.HistoryHound.plist',
-             ]
+    "~/Library/Application Support/HistoryHound",
+    "~/Library/Caches/com.stclairsoft.HistoryHound",
+    "~/Library/Preferences/com.stclairsoft.HistoryHound.plist",
+  ]
 end

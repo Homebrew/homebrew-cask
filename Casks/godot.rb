@@ -1,12 +1,18 @@
-cask 'godot' do
-  version '3.2.1'
-  sha256 'bf03a9430d53ed1f748f25d8840cba109f99e1d5d11ae8b23535a0b75286ec95'
+cask "godot" do
+  version "3.3"
+  sha256 "f490a91e840ada5f6cc1db030e2d6950ae58583b388e763484e9b5a16cbdcaf7"
 
-  # downloads.tuxfamily.org/godotengine/ was verified as official when first introduced to the cask
-  url "https://downloads.tuxfamily.org/godotengine/#{version}/Godot_v#{version}-stable_osx.64.zip"
-  appcast 'https://github.com/godotengine/godot/releases.atom'
-  name 'Godot Engine'
-  homepage 'https://godotengine.org/'
+  url "https://downloads.tuxfamily.org/godotengine/#{version}/Godot_v#{version}-stable_osx.universal.zip",
+      verified: "downloads.tuxfamily.org/godotengine/"
+  name "Godot Engine"
+  desc "Game development engine"
+  homepage "https://godotengine.org/"
 
-  app 'Godot.app'
+  livecheck do
+    url "https://github.com/godotengine/godot/releases"
+    strategy :git
+    regex(/^(\d+(?:\.\d+)*)-stable$/)
+  end
+
+  app "Godot.app"
 end

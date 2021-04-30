@@ -1,12 +1,13 @@
-cask 'wickrme' do
-  version '5.55.7'
-  sha256 '2a606d4af01cb785b1bdc4ad8b52aff13f4ff45fb9ade2fe580368b0c2384daa'
+cask "wickrme" do
+  version "5.74.8"
+  sha256 "d0a6eaeeaa39078f6fa437b1dcbb810a84f3c68bd5b9f6fcc105ac7c64e223e2"
 
-  # s3.amazonaws.com/static.wickr.com/ was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/static.wickr.com/downloads/mac/me/WickrMe-#{version}.dmg"
-  appcast 'https://pro-download.wickr.com/api/multiVerify/pro/undefined/'
-  name 'Wickr Me'
-  homepage 'https://wickr.com/products/personal/'
+  url "https://s3.amazonaws.com/static.wickr.com/downloads/mac/me/WickrMe-#{version}.dmg",
+      verified: "s3.amazonaws.com/static.wickr.com/"
+  appcast "https://me-download.wickr.com/api/multiVerify/me/undefined/"
+  name "Wickr Me"
+  desc "Desktop client for Wickr Me"
+  homepage "https://wickr.com/products/personal/"
 
-  app 'WickrMe.app'
+  app "WickrMe.app"
 end

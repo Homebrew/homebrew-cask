@@ -1,19 +1,23 @@
-cask 'munki' do
-  version '3.6.4.3786'
-  sha256 'c20826da7df6dd7c9b3404e1c348523a5f04b760413dfd7a2b632cb861025d0d'
+cask "munki" do
+  version "5.3.0.4335"
+  sha256 "357d202a0732e662f6155c4e8ebdef468cefbfb52d122f3964cf1ae84fac2537"
 
-  # github.com/munki/munki/ was verified as official when first introduced to the cask
-  url "https://github.com/munki/munki/releases/download/v#{version.major_minor_patch}/munkitools-#{version}.pkg"
-  appcast 'https://github.com/munki/munki/releases.atom',
-          must_contain: version.major_minor_patch
-  name 'Munki'
-  homepage 'https://www.munki.org/munki/'
+  url "https://github.com/munki/munki/releases/download/v#{version.major_minor_patch}/munkitools-#{version}.pkg",
+      verified: "github.com/munki/munki/"
+  name "Munki"
+  homepage "https://www.munki.org/munki/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+    regex(%r{href=.*?/munkitools-(\d+(?:\.\d+)*)\.pkg}i)
+  end
 
   pkg "munkitools-#{version}.pkg"
 
-  uninstall pkgutil:   'com.googlecode.munki.*',
+  uninstall pkgutil:   "com.googlecode.munki.*",
             launchctl: [
-                         'com.googlecode.munki.app_usage_monitor',
-                         'com.googlecode.munki.appusaged',
-                       ]
+              "com.googlecode.munki.app_usage_monitor",
+              "com.googlecode.munki.appusaged",
+            ]
 end

@@ -1,11 +1,15 @@
-cask 'ammonite' do
-  version '1.20'
-  sha256 '1f8b34ef2f57305f85acfe09feab85049ca8e77c812182eee9061d478b65e877'
+cask "ammonite" do
+  version "1.21,508"
+  sha256 "bce4d85f8c93d1d9eaf6a61b82f2d94e20263f278c2dd17a96f5f85fd4af06aa"
 
-  url "https://www.soma-zone.com/download/files/Ammonite-#{version}.tar.bz2"
-  appcast 'https://www.soma-zone.com/Ammonite/a/appcast_update.xml'
-  name 'Ammonite'
-  homepage 'https://www.soma-zone.com/Ammonite/'
+  url "https://www.soma-zone.com/download/files/Ammonite-#{version.before_comma}.tar.bz2"
+  name "Ammonite"
+  homepage "https://www.soma-zone.com/Ammonite/"
 
-  app 'Ammonite.app'
+  livecheck do
+    url "https://www.soma-zone.com/Ammonite/a/appcast.xml"
+    strategy :sparkle
+  end
+
+  app "Ammonite.app"
 end

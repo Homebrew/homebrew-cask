@@ -1,12 +1,18 @@
-cask 'sapmachine-jdk' do
-  version '14.0.1'
-  sha256 '70627d74dafb9d21a766365e3184b872a160ec17099c5fbc41926c6e9ccf4c9f'
+cask "sapmachine-jdk" do
+  version "16.0.1"
+  sha256 "858bf721b32f839011ecbc2f387a1133c93cfec8bbf147d13f23a96553bbe40d"
 
-  # github.com/SAP/SapMachine/ was verified as official when first introduced to the cask
-  url "https://github.com/SAP/SapMachine/releases/download/sapmachine-#{version}/sapmachine-jdk-#{version}_osx-x64_bin.dmg"
-  appcast "https://sap.github.io/SapMachine/latest/#{version.major}"
-  name 'SapMachine OpenJDK Development Kit'
-  homepage 'https://sapmachine.io/'
+  url "https://github.com/SAP/SapMachine/releases/download/sapmachine-#{version}/sapmachine-jdk-#{version}_osx-x64_bin.dmg",
+      verified: "github.com/SAP/SapMachine/"
+  name "SapMachine OpenJDK Development Kit"
+  desc "OpenJDK release maintained and supported by SAP"
+  homepage "https://sapmachine.io/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+    regex(%r{href=.*/sapmachine-jdk-(\d+(?:\.\d+)*(?:\+\d+(?:\.\d+)*)?)_osx-x64_bin\.dmg}i)
+  end
 
   artifact "sapmachine-jdk-#{version}.jdk", target: "/Library/Java/JavaVirtualMachines/sapmachine-jdk-#{version}.jdk"
 end

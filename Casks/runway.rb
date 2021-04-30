@@ -1,12 +1,17 @@
-cask 'runway' do
-  version '0.12.6'
-  sha256 '3b7e05fcfb25d63de2428e44a1f9f1a9c4fc8549434758d1775b11e5621738a0'
+cask "runway" do
+  version "0.17.7"
+  sha256 "23ea39f6b4c5e6ce21cca2969db5e9154cfc922d49bee91a5ab117a723bfeaeb"
 
-  # runway-releases.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://runway-releases.s3.amazonaws.com/Runway-#{version}.dmg"
-  appcast 'https://runway-releases.s3.amazonaws.com/latest-mac.yml'
-  name 'Runway'
-  homepage 'https://runwayml.com/'
+  url "https://runway-releases.s3.amazonaws.com/Runway-#{version}.dmg",
+      verified: "runway-releases.s3.amazonaws.com/"
+  name "Runway"
+  desc "Creative toolkit powered by machine learning"
+  homepage "https://runwayml.com/"
 
-  app 'Runway.app'
+  livecheck do
+    url "https://runway-releases.s3.amazonaws.com/latest-mac.yml"
+    strategy :electron_builder
+  end
+
+  app "Runway.app"
 end

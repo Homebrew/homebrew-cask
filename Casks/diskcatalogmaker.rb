@@ -1,12 +1,19 @@
-cask 'diskcatalogmaker' do
-  version '8.1.3'
-  sha256 '1bcdf68a063e4a8165bdff6d8d566663163f938eed3d8a9b91bca4984fe217f7'
+cask "diskcatalogmaker" do
+  version "8.3.4"
+  sha256 :no_check
 
-  url 'https://download.diskcatalogmaker.com/zip/DiskCatalogMaker.zip'
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://download.diskcatalogmaker.com/zip/DiskCatalogMaker.zip',
-          must_contain: version.no_dots
-  name 'DiskCatalogMaker'
-  homepage 'https://diskcatalogmaker.com/'
+  url "https://download.diskcatalogmaker.com/zip/DiskCatalogMaker.zip"
+  name "DiskCatalogMaker"
+  desc "Toast-bundled version of DiskCatalogMaker"
+  homepage "https://diskcatalogmaker.com/"
 
-  app 'DiskCatalogMaker.app'
+  livecheck do
+    url "https://download.diskcatalogmaker.com/zip/DiskCatalogMaker.zip"
+    strategy :header_match do |headers|
+      match = headers["location"].match(/DiskCatalogMaker(\d+)f?(\d+)\.zip/i)
+      "#{match[1].split("", 3).reject(&:empty?).join(".")}.#{match[2]}"
+    end
+  end
+
+  app "DiskCatalogMaker.app"
 end

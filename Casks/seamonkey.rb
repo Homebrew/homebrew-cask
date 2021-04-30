@@ -1,43 +1,39 @@
-cask 'seamonkey' do
-  version '2.53.2'
+cask "seamonkey" do
+  version "2.53.5.1"
 
-  language 'de' do
-    sha256 '06dd692e8debe3d8c64f34659f675ae207bf4f1d60b2a9810ab2a389d37c691f'
-    'de'
+  language "de" do
+    sha256 "4c14e1c717198f770069b102a43b38be09df789892302f1e5f0563d7f4e35079"
+    "de"
+  end
+  language "en-GB" do
+    sha256 "a3efa795ab6aed915b2fd47b2640db099b0299be82e5f2b5b667df3a3756690f"
+    "en-GB"
+  end
+  language "en-US", default: true do
+    sha256 "437c4127483d8db3c0cfcfe978f17d12345de7172e3b1fe712172f2a8cd03bce"
+    "en-US"
+  end
+  language "fr" do
+    sha256 "846580b1ada457df23f44e3976f3cca0c6e03d1c777e68b683ad6c039763e534"
+    "fr"
+  end
+  language "it" do
+    sha256 "7b57f8c76aafde48cb8ce48caf616495d24bfa8ce795af94043d7e495933a41b"
+    "it"
+  end
+  language "ru" do
+    sha256 "06639433277b3c4fbf08cded488168b4ed0c3121ed9f3b0ed09954d984a320e8"
+    "ru"
   end
 
-  language 'en-GB' do
-    sha256 '46fdc10bc29f757bccd9cb3cf933490d06a59c63c2fbc572ca626d7bd25e00dd'
-    'en-GB'
-  end
-
-  language 'en-US', default: true do
-    sha256 '4ed0131465029c5e6403bf881fd7469f7f7d002b436703166275fa131cab073e'
-    'en-US'
-  end
-
-  language 'fr' do
-    sha256 '075f2fb8f3b2195c8475132054ac9a3d429b575349d6592b16943fedfed9ee68'
-    'fr'
-  end
-
-  language 'it' do
-    sha256 'b3fd64c5dfd7417a54415ce92c20b53ac98be784f263069c1f9d3ca654cc70b7'
-    'it'
-  end
-
-  language 'ru' do
-    sha256 '796867c304b411d07c9f0bf92a9f7330ae97ff830da461386855efc756def3f1'
-    'ru'
-  end
-
-  # mozilla.org/pub/seamonkey/releases/ was verified as official when first introduced to the cask
-  url "https://archive.mozilla.org/pub/seamonkey/releases/#{version}/mac/#{language}/seamonkey-#{version}.#{language}.mac.dmg"
-  appcast 'https://www.seamonkey-project.org/releases/'
-  name 'SeaMonkey'
-  homepage 'https://www.seamonkey-project.org/'
+  url "https://archive.mozilla.org/pub/seamonkey/releases/#{version}/mac/#{language}/seamonkey-#{version}.#{language}.mac.dmg",
+      verified: "mozilla.org/pub/seamonkey/releases/"
+  appcast "https://www.seamonkey-project.org/releases/"
+  name "SeaMonkey"
+  desc "Development of SeaMonkey Internet Application Suite"
+  homepage "https://www.seamonkey-project.org/"
 
   auto_updates true
 
-  app 'SeaMonkey.app'
+  app "SeaMonkey.app"
 end

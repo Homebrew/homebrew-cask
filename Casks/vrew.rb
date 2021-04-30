@@ -1,15 +1,17 @@
-cask 'vrew' do
-  version '0.4.22'
-  sha256 'cb4d5fa942a56e409932783930d29d0f708627a22a691da9bf904d639f571d72'
+cask "vrew" do
+  version "0.7.0"
+  sha256 "1aa86b2aaabde99f4802223b1d633e8c6975e6cca0d84b5e09810016b023b1b4"
 
   url "https://vrew-files.voyagerx.com/Vrew-#{version}.dmg"
-  name 'vrew'
-  homepage 'https://vrew.voyagerx.com/'
+  appcast "https://s3-ap-northeast-2.amazonaws.com/vrew-files.voyagerx.com/latest-mac.yml"
+  name "vrew"
+  desc "Video editor"
+  homepage "https://vrew.voyagerx.com/"
 
-  app 'Vrew.app'
+  app "Vrew.app"
 
   zap trash: [
-               '~/Library/Application Support/vrew',
-               '~/Library/Preferences/com.voyagerx.vrew.plist',
-             ]
+    "~/Library/Application Support/vrew",
+    "~/Library/Preferences/com.voyagerx.vrew.plist",
+  ]
 end

@@ -1,14 +1,25 @@
-cask 'amazon-workspaces' do
-  version '3.0.7.1122'
-  sha256 '0f5da9622bee54191f12538a01635fd5ceb2f9259ef8973c0980cdc633c88cc9'
+cask "amazon-workspaces" do
+  version "3.1.6.1840"
+  sha256 :no_check
 
-  # workspaces-client-updates.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url 'https://workspaces-client-updates.s3.amazonaws.com/prod/iad/osx/WorkSpaces.pkg'
-  appcast 'https://d2td7dqidlhjx7.cloudfront.net/prod/iad/osx/WorkSpacesAppCast_macOS_20171023.xml'
-  name 'Amazon Workspaces'
-  homepage 'https://clients.amazonworkspaces.com/'
+  url "https://workspaces-client-updates.s3.amazonaws.com/prod/iad/osx/WorkSpaces.pkg",
+      verified: "workspaces-client-updates.s3.amazonaws.com/"
+  name "Amazon Workspaces"
+  homepage "https://clients.amazonworkspaces.com/"
 
-  pkg 'WorkSpaces.pkg'
+  livecheck do
+    url "https://d2td7dqidlhjx7.cloudfront.net/prod/iad/osx/WorkSpacesAppCast_macOS_20171023.xml"
+    strategy :sparkle
+  end
 
-  uninstall pkgutil: 'com.amazon.workspaces'
+  pkg "WorkSpaces.pkg"
+
+  uninstall pkgutil: "com.amazon.workspaces"
+
+  zap trash: [
+    "~/Library/Application Support/Amazon Web Services/Amazon WorkSpaces",
+    "~/Library/Caches/com.amazon.workspaces",
+    "~/Library/Preferences/com.amazon.workspaces.plist",
+    "~/Library/Saved Application State/com.amazon.workspaces.savedState",
+  ]
 end

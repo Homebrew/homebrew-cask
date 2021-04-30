@@ -1,25 +1,27 @@
+# frozen_string_literal: true
+
 require "forwardable"
 
-class Check
+module Check
   CHECKS = {
-    installed_apps: -> {
+    installed_apps:       lambda {
       ["/Applications", File.expand_path("~/Applications")]
         .flat_map { |dir| (0..5).map { |i| "/*" * i }.flat_map { |glob| Dir["#{dir}#{glob}.app"] } }
     },
-    installed_kexts: -> {
+    installed_kexts:      lambda {
       system_command!("/usr/sbin/kextstat", args: ["-kl"], print_stderr: false)
         .stdout
         .lines
         .map { |l| l.match(/^.{52}([^\s]+)/)[1] }
         .grep_v(/^com\.apple\./)
     },
-    installed_pkgs: -> {
+    installed_pkgs:       lambda {
       Pathname("/var/db/receipts")
         .children
         .grep(/\.plist$/)
         .map { |path| path.basename.to_s.sub(/\.plist$/, "") }
     },
-    installed_launchjobs: -> {
+    installed_launchjobs: lambda {
       format_launchjob = lambda { |file|
         name = file.basename(".plist").to_s
 
@@ -41,11 +43,14 @@ class Check
         .select(&:exist?)
         .map(&format_launchjob)
     },
-    loaded_launchjobs: -> {
+    loaded_launchjobs:    lambda {
       launchctl = lambda do |sudo|
         system_command!("/bin/launchctl", args: ["list"], print_stderr: false, sudo: sudo)
           .stdout
           .lines.drop(1)
+          .reject do |id|
+            id.match?(/\A(?:application\.)?com\.apple\.(installer|Safari|systemevents|systempreferences)(?:\.|$)/)
+          end
       end
 
       [false, true]
@@ -53,7 +58,8 @@ class Check
         .map { |l| l.split(/\s+/)[2] }
         .grep_v(/^com\.apple\./)
     },
-  }
+  }.freeze
+  private_constant :CHECKS
 
   class Diff
     attr_reader :removed, :added
@@ -69,103 +75,77 @@ class Check
       removed.any? || added.any?
     end
   end
+  private_constant :Diff
 
-  def before
-    @diff = nil
-
-    @before = {}
-
-    CHECKS.each do |name, block|
-      @before[name] = block.call
-    end
+  def self.all
+    CHECKS.transform_values(&:call)
   end
 
-  def after
-    @diff = nil
+  def self.errors(before, after, cask:)
+    uninstall_directives = cask.artifacts.find { |a| a.instance_of?(Cask::Artifact::Uninstall) }&.directives || {}
 
-    @after = {}
+    diff = {}
 
-    CHECKS.each do |name, block|
-      @after[name] = block.call
-    end
-  end
-
-  def diff
-    return @diff if @diff
-
-    @diff = {}
-
-    CHECKS.keys.each do |name|
-      @diff[name] = Diff.new(@before[name], @after[name])
+    CHECKS.each_key do |name|
+      diff[name] = Diff.new(before[name], after[name])
     end
 
-    @diff
-  end
-  private :diff
-
-  def success?(ignore_exceptions: true)
-    diff.values
-      .map { |v| v.added.reject { |s| ignore_exceptions ? zap_exceptions.include?(s) : false  } }
-      .all?(&:none?)
-  end
-
-  def zap_exceptions
-    [
-      "com.microsoft.autoupdate.helper",
-      "com.microsoft.package.Microsoft_AU_Bootstrapper.app",
-      "com.microsoft.package.Microsoft_AutoUpdate.app",
-      "com.microsoft.update.agent",
-    ].freeze
-  end
-
-  def message(stanza: "uninstall")
-    lines = []
+    errors = []
 
     pkg_files = diff[:installed_pkgs]
-                 .added
-                 .flat_map { |id| Cask::Pkg.new(id).pkgutil_bom_all.map(&:to_s) }
-
+                .added
+                .flat_map { |id| Cask::Pkg.new(id).pkgutil_bom_all.map(&:to_s) }
     installed_apps = diff[:installed_apps].added - pkg_files
-
     if installed_apps.any?
-      lines << Formatter.error("Some applications are still installed, add them to #{Formatter.identifier("#{stanza} delete:")}", label: "Error")
-      lines << installed_apps.join("\n")
+      message = "Some applications are still installed, add them to #{Formatter.identifier("uninstall delete:")}\n"
+      message += installed_apps.join("\n")
+      errors << message
     end
 
-    if (installed_kexts = diff[:installed_kexts].added).any?
-      lines << Formatter.error("Some kernel extensions are still installed, add them to #{Formatter.identifier("#{stanza} kext:")}", label: "Error")
-      lines << installed_kexts.join("\n")
+    installed_kexts = diff[:installed_kexts].added
+    if installed_kexts.any?
+      message = "Some kernel extensions are still installed, add them to #{Formatter.identifier("uninstall kext:")}\n"
+      message += installed_kexts.join("\n")
+      errors << message
     end
 
-    if (installed_packages = diff[:installed_pkgs].added).any?
-      lines << Formatter.error("Some packages are still installed, add them to #{Formatter.identifier("#{stanza} pkgutil:")}", label: "Error")
-      lines << installed_packages.join("\n")
+    installed_packages = diff[:installed_pkgs].added
+    if installed_packages.any?
+      message = "Some packages are still installed, add them to #{Formatter.identifier("uninstall pkgutil:")}\n"
+      message += installed_packages.join("\n")
+      errors << message
     end
 
-    if (installed_launchjobs = diff[:installed_launchjobs].added).any?
-      lines << Formatter.error("Some launch jobs are still installed, add them to #{Formatter.identifier("#{stanza} launchctl:")}", label: "Error")
-      lines << installed_launchjobs.join("\n")
+    installed_launchjobs = diff[:installed_launchjobs].added
+    if installed_launchjobs.any?
+      message = "Some launch jobs are still installed, add them to #{Formatter.identifier("uninstall launchctl:")}\n"
+      message += installed_launchjobs.join("\n")
+      errors << message
     end
 
     running_apps = diff[:loaded_launchjobs]
-                     .added
-                     .select { |id| id.match?(/\.\d+\Z/) }
-                     .map { |id| id.sub(/\.\d+\Z/, "") }
+                   .added
+                   .select { |id| id.match?(/\.\d+\Z/) }
+                   .map { |id| id.sub(/\A(?:application\.)?(.*?)(?:\.\d+){0,2}\Z/, '\1') }
 
     loaded_launchjobs = diff[:loaded_launchjobs]
-                         .added
-                         .reject { |id| id.match?(/\.\d+\Z/) }
+                        .added
+                        .reject { |id| id.match?(/\.\d+\Z/) }
 
-    if running_apps.any?
-      lines << Formatter.error("Some applications are still running, add them to #{Formatter.identifier("#{stanza} quit:")}", label: "Error")
-      lines << running_apps.join("\n")
+    missing_running_apps = running_apps - Array(uninstall_directives[:quit])
+    if missing_running_apps.any?
+      message = "Some applications are still running, add them to #{Formatter.identifier("uninstall quit:")}\n"
+      message += missing_running_apps.join("\n")
+      errors << message
     end
 
-    if loaded_launchjobs.any?
-      lines << Formatter.error("Some launch jobs were not unloaded, add them to #{Formatter.identifier("#{stanza} launchctl:")}", label: "Error")
-      lines << loaded_launchjobs.join("\n")
+    missing_loaded_launchjobs = loaded_launchjobs - Array(uninstall_directives[:launchctl])
+    if missing_loaded_launchjobs.any?
+      message = "Some launch jobs were not unloaded, add them to #{Formatter.identifier("uninstall launchctl:")}\n"
+      message += missing_loaded_launchjobs.join("\n")
+      errors << message
     end
 
-    lines.join("\n")
+    errors
   end
 end

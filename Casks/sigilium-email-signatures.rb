@@ -1,10 +1,14 @@
-cask 'sigilium-email-signatures' do
-  version :latest
+cask "sigilium-email-signatures" do
+  version "1.3.2"
   sha256 :no_check
 
-  url 'https://sigilium.com/apps/sigilium.zip'
-  name 'Sigilium Email Signatures'
-  homepage 'https://sigilium.com/'
+  url "https://sigilium.com/apps/sigilium.zip"
+  name "Sigilium Email Signatures"
+  homepage "https://sigilium.com/"
 
-  app 'Sigilium Email Signatures.app'
+  livecheck do
+    skip "unversioned URL"
+  end
+
+  app "Sigilium Email Signatures.app"
 end

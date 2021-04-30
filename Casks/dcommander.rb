@@ -1,13 +1,20 @@
-cask 'dcommander' do
-  version '3850'
-  sha256 'a3020935eed07fd8ff84968d64b34f97a653e0e44101cd3d3029a9404662d2d9'
+cask "dcommander" do
+  version "3.9.0.4"
+  sha256 :no_check
 
-  url 'https://devstorm-apps.com/dc/download.php'
-  appcast 'https://www.macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=https://devstorm-apps.com/dc/download.php'
-  name 'DCommander'
-  homepage 'https://devstorm-apps.com/dc/'
+  url "https://devstorm-apps.com/dc/download.php"
+  name "DCommander"
+  desc "Two-pane file manager"
+  homepage "https://devstorm-apps.com/dc/"
 
-  app 'DCommander.app'
+  livecheck do
+    url "https://devstorm-apps.com/dc/download.php"
+    strategy :header_match do |headers|
+      headers["content-disposition"][/DCommander-(\d+)\.dmg/i, 1].split("", 4).join(".")
+    end
+  end
 
-  zap trash: '~/Library/Containers/com.devstorm.dc3'
+  app "DCommander.app"
+
+  zap trash: "~/Library/Containers/com.devstorm.dc3"
 end

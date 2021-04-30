@@ -1,19 +1,27 @@
-cask 'duplicati' do
-  version '2.0.5.1,2020-01-18'
-  sha256 '38509531cc9a007b98527af604f9a5faeb41b9221a79c7bd36e8846a32f1fda0'
+cask "duplicati" do
+  version "2.0.6.0,experimental:2021-04-09"
+  sha256 "b8a331a9b8ade6d07e7c898224229c3b5a7346bcd707e622ba987f873e263259"
 
-  # github.com/duplicati/duplicati/ was verified as official when first introduced to the cask
-  url "https://github.com/duplicati/duplicati/releases/download/v#{version.before_comma}-#{version.before_comma}_beta_#{version.after_comma}/duplicati-#{version.before_comma}_beta_#{version.after_comma}.dmg"
-  appcast 'https://github.com/duplicati/duplicati/releases.atom'
-  name 'Duplicati'
-  homepage 'https://www.duplicati.com/'
+  url "https://github.com/duplicati/duplicati/releases/download/v#{version.before_comma}-#{version.before_comma}_#{version.after_comma.before_colon}_#{version.after_colon}/duplicati-#{version.before_comma}_#{version.after_comma.before_colon}_#{version.after_colon}.dmg",
+      verified: "github.com/duplicati/duplicati/"
+  name "Duplicati"
+  desc "Store securely encrypted backups in the cloud!"
+  homepage "https://www.duplicati.com/"
 
-  depends_on formula: 'mono'
+  livecheck do
+    url "https://github.com/duplicati/duplicati/releases/latest"
+    strategy :page_match do |page|
+      match = page.match(%r{href=.*?/duplicati-(\d+(?:\.\d+)*)_([^/]*?)_(\d+(?:-\d+)*)\.dmg}i)
+      "#{match[1]},#{match[2]}:#{match[3]}"
+    end
+  end
 
-  app 'Duplicati.app'
+  depends_on formula: "mono"
+
+  app "Duplicati.app"
 
   zap trash: [
-               '~/Library/Application Support/Duplicati',
-               '~/.config/Duplicati',
-             ]
+    "~/Library/Application Support/Duplicati",
+    "~/.config/Duplicati",
+  ]
 end

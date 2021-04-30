@@ -1,11 +1,16 @@
-cask 'stremio' do
-  version '4.4.106'
-  sha256 '6bd8b13cd96738028eae7f3c62fedf1d9c5dfcb6f5b8ba9186c998a97e8b31a7'
+cask "stremio" do
+  version "4.4.137"
+  sha256 "cea038eb7b5c45552276823c2a5776f334be03c580d57862b6a85258aa606c73"
 
-  url "https://dl.strem.io/mac/v#{version}/Stremio+#{version}.dmg"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.strem.io/download?platform=mac%26four=true'
-  name 'Stremio'
-  homepage 'https://www.strem.io/'
+  url "https://dl.strem.io/shell-osx/v#{version}/Stremio+#{version}.dmg"
+  name "Stremio"
+  desc "Open-source media center"
+  homepage "https://www.strem.io/"
 
-  app 'Stremio.app'
+  livecheck do
+    url "https://www.strem.io/download?platform=mac&four=true"
+    strategy :header_match
+  end
+
+  app "Stremio.app"
 end

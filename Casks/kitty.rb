@@ -1,18 +1,18 @@
-cask 'kitty' do
-  version '0.17.4'
-  sha256 '9be739b3c7c5ae051cd3140d235f7a5a9958059abdfa53607a6b3985a65476f0'
+cask "kitty" do
+  version "0.20.2"
+  sha256 "3d4d3f6d3c09892437fe665d6c16c7f7e5b3a6e632ddeaad75511e630333497b"
 
   url "https://github.com/kovidgoyal/kitty/releases/download/v#{version}/kitty-#{version}.dmg"
-  appcast 'https://github.com/kovidgoyal/kitty/releases.atom'
-  name 'kitty'
-  homepage 'https://github.com/kovidgoyal/kitty'
+  name "kitty"
+  desc "GPU-based terminal emulator"
+  homepage "https://github.com/kovidgoyal/kitty"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'kitty.app'
+  app "kitty.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/kitty.wrapper.sh"
-  binary shimscript, target: 'kitty'
+  binary shimscript, target: "kitty"
 
   preflight do
     IO.write shimscript, <<~EOS
@@ -22,8 +22,8 @@ cask 'kitty' do
   end
 
   zap trash: [
-               '~/.config/kitty',
-               '~/Library/Preferences/kitty',
-               '~/Library/Saved Application State/net.kovidgoyal.kitty.savedState',
-             ]
+    "~/.config/kitty",
+    "~/Library/Preferences/kitty",
+    "~/Library/Saved Application State/net.kovidgoyal.kitty.savedState",
+  ]
 end

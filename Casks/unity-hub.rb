@@ -1,18 +1,26 @@
-cask 'unity-hub' do
-  version :latest
+cask "unity-hub" do
+  version "2.4.3"
   sha256 :no_check
 
-  url 'https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.dmg'
-  name 'Unity Hub'
-  homepage 'https://unity3d.com/unity/beta-download'
+  url "https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.dmg"
+  name "Unity Hub"
+  desc "Management tool for Unity"
+  homepage "https://unity3d.com/get-unity/download"
 
-  app 'Unity Hub.app'
+  livecheck do
+    url "https://public-cdn.cloud.unity3d.com/hub/prod/latest-mac.yml"
+    strategy :electron_builder
+  end
 
-  uninstall quit: 'com.unity3d.unityhub'
+  auto_updates true
+
+  app "Unity Hub.app"
+
+  uninstall quit: "com.unity3d.unityhub"
 
   zap trash: [
-               '/Applications/Unity/Hub',
-               '~/Library/Preferences/com.unity3d.unityhub.plist',
-               '~/Library/Preferences/com.unity3d.unityhub.helper.plist',
-             ]
+    "~/Library/Preferences/com.unity3d.unityhub.plist",
+    "~/Library/Preferences/com.unity3d.unityhub.helper.plist",
+  ],
+      rmdir: "/Applications/Unity/Hub"
 end

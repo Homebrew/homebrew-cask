@@ -1,25 +1,29 @@
-cask 'mplab-xc8' do
-  version '2.20'
-  sha256 'e7471560a327b8ea573f4b7d9fdcd8faa504adce5a0d93242c18d85a121b6984'
+cask "mplab-xc8" do
+  version "2.32"
+  sha256 "651919702d7e68416908983784971c83c2e816aaf0735dbcd587f556bdcee904"
 
-  url "https://ww1.microchip.com/downloads/en/DeviceDoc/xc8-v#{version}-full-install-macos-installer.dmg"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.microchip.com/mplabxc8osx'
-  name 'MPLab XC8 Compiler'
-  homepage 'https://www.microchip.com/mplab/compilers'
+  url "https://ww1.microchip.com/downloads/en/DeviceDoc/xc8-v#{version}-full-install-macos-x64-installer.dmg"
+  name "MPLab XC8 Compiler"
+  homepage "https://www.microchip.com/mplab/compilers"
+
+  livecheck do
+    url "https://www.microchip.com/mplabxc8osx"
+    strategy :header_match
+  end
 
   installer script: {
-                      executable: "xc8-v#{version}-full-install-macos-x64-installer.app/Contents/MacOS/installbuilder.sh",
-                      args:       [
-                                    '--mode', 'unattended',
-                                    '--unattendedmodeui', 'none',
-                                    '--ModifyAll', '0',
-                                    '--netservername', '""',
-                                    '--LicenseType', 'FreeMode',
-                                    '--prefix', staged_path.to_s
-                                  ],
-                      input:      ['y'],
-                      sudo:       true,
-                    }
+    executable: "xc8-v#{version}-full-install-macos-x64-installer.app/Contents/MacOS/installbuilder.sh",
+    args:       [
+      "--mode", "unattended",
+      "--unattendedmodeui", "none",
+      "--ModifyAll", "0",
+      "--netservername", '""',
+      "--LicenseType", "FreeMode",
+      "--prefix", staged_path.to_s
+    ],
+    input:      ["y"],
+    sudo:       true,
+  }
   binary "#{staged_path}/bin/xc-ccov"
   binary "#{staged_path}/bin/xc8"
   binary "#{staged_path}/bin/xc8-ar"
@@ -31,8 +35,8 @@ cask 'mplab-xc8' do
   end
 
   uninstall script: {
-                      executable: "Uninstall-xc8-v#{version}.app/Contents/MacOS/installbuilder.sh",
-                      args:       ['--mode', 'unattended'],
-                      sudo:       true,
-                    }
+    executable: "Uninstall-xc8-v#{version}.app/Contents/MacOS/installbuilder.sh",
+    args:       ["--mode", "unattended"],
+    sudo:       true,
+  }
 end

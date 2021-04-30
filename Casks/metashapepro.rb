@@ -1,10 +1,10 @@
-cask 'metashapepro' do
-  version '1.6.2'
-  sha256 'd0313cd8570da9cd331c1f073ec8fe22e57ce8da6257a603274e11b415a2dd22'
+cask "metashapepro" do
+  version "1.7.0"
+  sha256 "19ad58089df92792cbb0a469175784e0f5f58ae142323066b02528090b358e72"
 
   url "http://download.agisoft.com/metashape-pro_#{version.dots_to_underscores}.dmg"
-  name 'Agisoft Metashape Professional Edition'
-  homepage 'https://www.agisoft.com/'
+  name "Agisoft Metashape Professional Edition"
+  homepage "https://www.agisoft.com/"
 
-  app 'MetashapePro.app'
+  app "MetashapePro.app"
 end

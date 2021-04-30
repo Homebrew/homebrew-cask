@@ -1,18 +1,25 @@
-cask 'gitfiend' do
-  version '0.23.1'
-  sha256 '2b231a127c92857fa46d3832cf3bdde4486e75fad48e248cf1696474b1357394'
+cask "gitfiend" do
+  version "0.26.0"
+  sha256 "33a9de3a5a56f7851e699bb9f5eb4910d8bd14259ce60e71cba115e6ec968e07"
 
   url "https://gitfiend.com/resources/GitFiend-#{version}.dmg"
-  appcast 'https://gitfiend.com/app-info'
-  name 'GitFiend'
-  homepage 'https://gitfiend.com/'
+  name "GitFiend"
+  desc "Git client"
+  homepage "https://gitfiend.com/"
+
+  livecheck do
+    url "https://gitfiend.com/app-info"
+    strategy :page_match do |page|
+      JSON.parse(page)["version"]
+    end
+  end
 
   auto_updates true
 
-  app 'GitFiend.app'
+  app "GitFiend.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/gitfiend.wrapper.sh"
-  binary shimscript, target: 'gitfiend'
+  binary shimscript, target: "gitfiend"
 
   preflight do
     IO.write shimscript, <<~EOS
@@ -22,8 +29,8 @@ cask 'gitfiend' do
   end
 
   zap trash: [
-               '~/Library/Application Support/GitFiend',
-               '~/Library/Preferences/com.tobysuggate.gitfiend.plist',
-               '~/Library/Saved Application State/com.tobysuggate.gitfiend.savedState',
-             ]
+    "~/Library/Application Support/GitFiend",
+    "~/Library/Preferences/com.tobysuggate.gitfiend.plist",
+    "~/Library/Saved Application State/com.tobysuggate.gitfiend.savedState",
+  ]
 end

@@ -1,11 +1,15 @@
-cask 'mylio' do
-  version :latest
+cask "mylio" do
+  version "3.14.7255"
   sha256 :no_check
 
-  # myliodownloads.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url 'https://myliodownloads.s3.amazonaws.com/Mylio.dmg'
-  name 'Mylio'
-  homepage 'https://mylio.com/'
+  url "https://myliodownloads.s3.amazonaws.com/Mylio.dmg",
+      verified: "myliodownloads.s3.amazonaws.com/"
+  name "Mylio"
+  homepage "https://mylio.com/"
 
-  app 'Mylio.app'
+  livecheck do
+    skip "unversioned URL"
+  end
+
+  app "Mylio.app"
 end

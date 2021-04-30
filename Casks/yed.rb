@@ -1,11 +1,16 @@
-cask 'yed' do
-  version '3.20'
-  sha256 'fd695805a2c5606ceb35db44f47335b5ea39cdba7d2a31e6606eada39aa91aa6'
+cask "yed" do
+  version "3.21.1"
+  sha256 "a13b762d517107fd7f6350536054d650764d1bea5f5891b0f32b8eaca624a162"
 
-  url "https://www.yworks.com/resources/yed/demo/yEd-#{version}_with-JRE14.dmg"
-  appcast 'https://www.yworks.com/products/yed/download#download'
-  name 'yWorks yEd'
-  homepage 'https://www.yworks.com/products/yed'
+  url "https://www.yworks.com/resources/yed/demo/yEd-#{version}_with-JRE15.dmg"
+  name "yWorks yEd"
+  desc "Create diagrams manually, or import external data for analysis"
+  homepage "https://www.yworks.com/products/yed"
 
-  app 'yEd.app'
+  livecheck do
+    url "https://www.yworks.com/products/yed/download#download"
+    regex(/yEd[._-]v?(\d+(?:\.\d+)+)[._-]with[._-]JRE\d+?\.dmg/i)
+  end
+
+  app "yEd.app"
 end

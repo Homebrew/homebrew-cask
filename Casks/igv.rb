@@ -1,16 +1,21 @@
-cask 'igv' do
-  version '2.8.0'
-  sha256 'e8bbf376ac190f548bc0a370355a088a79754bb110298f0f153104efd614bf5d'
+cask "igv" do
+  version "2.9.4"
+  sha256 "5bf4bf52337c32c9350d45aab0fcf3426ac5b8ecd1036b8499a7373c7f7a682f"
 
-  url "https://data.broadinstitute.org/igv/projects/downloads/#{version.major_minor}/IGV_#{version}.app.zip"
-  appcast 'https://data.broadinstitute.org/igv/projects/downloads/',
-          must_contain: version.major_minor
-  name 'Integrative Genomics Viewer (IGV)'
-  homepage 'https://software.broadinstitute.org/software/igv/'
+  url "https://data.broadinstitute.org/igv/projects/downloads/#{version.major_minor}/IGV_MacApp_#{version}.zip"
+  name "Integrative Genomics Viewer (IGV)"
+  desc "Visual exploration of genomic data"
+  homepage "https://software.broadinstitute.org/software/igv/"
+
+  livecheck do
+    url "https://software.broadinstitute.org/software/igv/download"
+    strategy :page_match
+    regex(%r{href=.*?/IGV_MacApp_(\d+(?:\.\d+)*)\.zip}i)
+  end
 
   app "IGV_#{version}.app"
 
   caveats do
-    depends_on_java '8+'
+    depends_on_java "8+"
   end
 end
