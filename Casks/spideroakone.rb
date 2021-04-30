@@ -8,7 +8,7 @@ cask "spideroakone" do
     url "https://spideroak.com/release/spideroak/osx"
   end
 
-  name "SpiderOakOne"
+  name "SpiderOak One Backup"
   desc "Cloud backup and storage"
   homepage "https://spideroak.com/"
 
