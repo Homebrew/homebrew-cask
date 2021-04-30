@@ -14,6 +14,11 @@ cask "spideroakone" do
   desc "Cloud backup and storage"
   homepage "https://spideroak.com/"
 
+  livecheck do
+    url :url
+    strategy :header_match
+  end
+
   pkg "SpiderOakONE.pkg"
 
   uninstall signal:  [
