@@ -8,7 +8,8 @@ cask "tradingview" do
   homepage "https://www.tradingview.com/desktop/"
 
   livecheck do
-    skip "No Version Information Available"
+    url "https://tvd-packages.tradingview.com/stable/latest/darwin/x64/stable-mac.yml"
+    strategy :electron_builder
   end
 
   app "TradingView.app"
