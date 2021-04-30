@@ -2,14 +2,15 @@
 # frozen_string_literal: true
 
 cask "syntax-highlight" do
-  version "2.0.1"
-  sha256 "9a47cf1c5faa5d56e9142ea8b158de0d3d4db4b910e052e86940e475875b2b9c"
+  version "2.0.2"
+  sha256 "82234f69ba7bcecf335da8e5a06931fa40d3d1028afcc7ad0bcdbdbe29ca1ec6"
 
   url "https://github.com/sbarex/SourceCodeSyntaxHighlight/releases/download/#{version}/Syntax.Highlight.zip"
   name "Syntax Highlight"
   desc "Quicklook extension for source files"
   homepage "https://github.com/sbarex/SourceCodeSyntaxHighlight"
 
+  auto_updates true
   depends_on macos: ">= :catalina"
 
   app "Syntax Highlight.app"
