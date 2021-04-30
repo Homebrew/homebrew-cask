@@ -1,5 +1,5 @@
 cask "spideroakone" do
-  version "7.5.0.10333"
+  version "7.5.0"
   sha256 :no_check
 
   if MacOS.version <= :sierra
