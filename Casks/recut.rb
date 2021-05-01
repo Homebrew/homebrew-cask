@@ -1,8 +1,8 @@
 cask "recut" do
-  version "1.1.2"
+  version "1.1.2,364"
   sha256 "1f6d33a99a74422db9cb8fdee09b6ba8b3690a3661fdf6f284733278765e87ac"
 
-  url "https://updates.getrecut.com/Recut-#{version}.dmg"
+  url "https://updates.getrecut.com/Recut-#{version.before_comma}.dmg"
   name "Recut"
   desc "Remove silence from videos and automatically generate a cut list"
   homepage "https://getrecut.com/"
