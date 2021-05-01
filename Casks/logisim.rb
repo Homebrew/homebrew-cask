@@ -4,11 +4,15 @@ cask "logisim" do
 
   url "https://downloads.sourceforge.net/circuit/#{version.sub(/\d+$/, "x")}/#{version}/logisim-macosx-#{version}.tar.gz",
       verified: "sourceforge.net/circuit/"
-  appcast "https://sourceforge.net/projects/circuit/rss"
   name "Logisim"
+  desc "Tool for designing and simulating digital logic circuits"
   homepage "http://www.cburch.com/logisim/"
 
   app "Logisim.app"
 
   zap trash: "~/Library/Preferences/com.cburch.logisim.plist"
+
+  caveats do
+    discontinued
+  end
 end
