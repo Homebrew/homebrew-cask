@@ -1,5 +1,5 @@
 cask "intellij-idea" do
-  version "2021.1.1,211.7142.45"
+  version "2021.1.1"
 
   if Hardware::CPU.intel?
     sha256 "ec43a810329b619b5d52aeda3e6240a698b8df137b2c39c1babd1010d81e5555"
