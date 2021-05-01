@@ -12,10 +12,10 @@ cask "packetsender" do
       regex(%r{href=.*?/PacketSender_v?(\d+(?:\.\d+)*)\.dmg}i)
     end
   else
-    version "7.0.5,7.1.0"
-    sha256 "a2ab110a5d498389de5b0fd73ca7a63349f1b79235f4acda1da7c2e5322f0d7f"
+    version "7.2.3,7.2.4"
+    sha256 "9d5ba752d4e3625ce31909dfb324b3bc2979b650079f111e3d6350432e8c00be"
 
-    url "https://github.com/dannagle/PacketSender/releases/download/v#{version.before_comma}/PacketSender_BigSur_v#{version.after_comma}.dmg",
+    url "https://github.com/dannagle/PacketSender/releases/download/v#{version.before_comma}/PacketSender_v#{version.after_comma}.dmg",
         verified: "github.com/dannagle/PacketSender/"
 
     livecheck do
