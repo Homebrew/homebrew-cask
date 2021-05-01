@@ -21,4 +21,4 @@ The cask was expecting `SomeApp.app` to be in the top directory of the archive (
 
 Note that occasionally the app’s name changes completely (from `SomeApp.app` to `OtherApp.app`, let's say). In these instances, the filename of the cask itself, as well as its token, must also change. Consult the [`token reference`](https://github.com/Homebrew/homebrew-cask/blob/master/doc/cask_language_reference/token_reference.md) for complete instructions on the new name.
 
-Help us by [submitting a fix](https://github.com/Homebrew/homebrew-cask/blob/master/CONTRIBUTING.md#updating-a-cask). If you get stumped, [open an issue](https://github.com/Homebrew/homebrew-cask/issues/new?template=01_bug_report.md) explaining your steps so far and where you’re having trouble.
+Help us by [submitting a fix](https://github.com/Homebrew/homebrew-cask/blob/master/CONTRIBUTING.md#updating-a-cask). If you get stumped, [open an issue](https://github.com/Homebrew/homebrew-cask/issues/new?assignees=&labels=&template=01_bug_report.yml) explaining your steps so far and where you’re having trouble.
