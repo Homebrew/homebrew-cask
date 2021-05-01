@@ -32,4 +32,8 @@ cask "pycharm-ce-with-anaconda-plugin" do
     "~/Library/Preferences/PyCharmCE#{version.major_minor}",
     "~/Library/Saved Application State/com.jetbrains.pycharm.savedState",
   ]
+
+  caveats do
+    discontinued
+  end
 end
