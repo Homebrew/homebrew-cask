@@ -19,9 +19,12 @@ cask "vienna" do
 
   zap trash: [
     "~/Library/Application Support/Vienna",
+    "~/Library/Application Scripts/uk.co.opencommunity.vienna2",
     "~/Library/Caches/uk.co.opencommunity.vienna2",
     "~/Library/Cookies/uk.co.opencommunity.vienna2.binarycookies",
+    "~/Library/HTTPStorages/uk.co.opencommunity.vienna2.binarycookies",
     "~/Library/Preferences/uk.co.opencommunity.vienna2.plist",
     "~/Library/Saved Application State/uk.co.opencommunity.vienna2.savedState",
+    "~/Library/Scripts/Vienna",
   ]
 end
