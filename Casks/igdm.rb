@@ -1,6 +1,6 @@
 cask "igdm" do
-  version "3.0.1"
-  sha256 "b114842282b64daccc3530790aedc4ed09914fa16e14724948c392b6d48236df"
+  version "3.0.2"
+  sha256 "f9cb415544bec7d186ea6f52dd89f3d5e8326d5d6ef8338b4220492898a5f7aa"
 
   url "https://github.com/ifedapoolarewaju/igdm/releases/download/v#{version}/IGdm-#{version}.dmg",
       verified: "github.com/ifedapoolarewaju/igdm/"
