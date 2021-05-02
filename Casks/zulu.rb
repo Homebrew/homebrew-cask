@@ -1,13 +1,13 @@
 cask "zulu" do
-  version "16.0.0,16.28.11-ca"
+  version "16.0.1,16.30.15-ca"
 
   if Hardware::CPU.intel?
-    sha256 "be159c6b98e23b2d5de0006b0c5f06ca9a35ecc6e5d2a8b1b3b19c55cf608d5d"
+    sha256 "a9988581a95f00da7768562f19632a71e13b7d695329b074504b8b6883a6dc30"
 
     url "https://cdn.azul.com/zulu/bin/zulu#{version.after_comma}-jdk#{version.before_comma}-macosx_x64.dmg",
         referer: "https://www.azul.com/downloads/zulu/zulu-mac/"
   else
-    sha256 "c60b1b09f68f8ed38754a0d14c5ea45e4c9c81fdf4638030ed15cb895cb7eaf7"
+    sha256 "5899e7783d06df2ce72ea34435afa9ccedc52528ff94705a8eaa3344096cd9fc"
 
     url "https://cdn.azul.com/zulu/bin/zulu#{version.after_comma}-jdk#{version.before_comma}-macosx_aarch64.dmg",
         referer: "https://www.azul.com/downloads/zulu/zulu-mac/"
