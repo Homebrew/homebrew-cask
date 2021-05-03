@@ -1,12 +1,19 @@
 cask "script-debugger" do
-  version "7.0.12-7A112"
-  sha256 "3be99ccffadebf5d876cfd0dddc5f81bd4ae36c93f1913a633c0bb36fbfa41c9"
+  version "7.0.13,7A125"
+  sha256 "ff39872c7a9bc3926abb2d4f476bd6ade1db094491889b40e433726461d030c0"
 
-  url "https://s3.amazonaws.com/latenightsw.com/ScriptDebugger#{version}.dmg",
+  url "https://s3.amazonaws.com/latenightsw.com/ScriptDebugger#{version.before_comma}-#{version.after_comma}.dmg",
       verified: "s3.amazonaws.com/latenightsw.com/"
-  appcast "https://www.latenightsw.com/versions/com.latenightsw.ScriptDebugger#{version.major}.php"
   name "Script Debugger"
+  desc "Integrated development environment focused entirely on AppleScript"
   homepage "https://latenightsw.com/"
+
+  livecheck do
+    url "https://www.latenightsw.com/versions/com.latenightsw.ScriptDebugger#{version.major}.php"
+    strategy :sparkle
+  end
+
+  depends_on macos: ">= :el_capitan"
 
   app "Script Debugger.app"
 
