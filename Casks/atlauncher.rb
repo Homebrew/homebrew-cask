@@ -1,5 +1,5 @@
 cask "atlauncher" do
-  version "3.4.3.2"
+  version "3.4.3.3"
   sha256 :no_check
 
   url "https://www.atlauncher.com/download/zip"

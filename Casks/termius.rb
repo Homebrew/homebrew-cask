@@ -1,18 +1,21 @@
 cask "termius" do
-  version "7.9.0"
+  version "7.10.1"
   sha256 :no_check
 
   if Hardware::CPU.intel?
     url "https://autoupdate.termius.com/mac/Termius.dmg"
-    appcast "https://autoupdate.termius.com/mac/latest-mac.yml"
   else
     url "https://autoupdate.termius.com/mac-arm64/Termius.dmg"
-    appcast "https://autoupdate.termius.com/mac-arm64/latest-mac.yml"
   end
 
   name "Termius"
   desc "SSH client"
   homepage "https://www.termius.com/"
+
+  livecheck do
+    url "https://autoupdate.termius.com/mac/latest-mac.yml"
+    strategy :electron_builder
+  end
 
   auto_updates true
   depends_on macos: ">= :yosemite"

@@ -4,10 +4,14 @@ cask "latexit" do
 
   url "https://pierre.chachatelier.fr/latexit/downloads/LaTeXiT-#{version.dots_to_underscores}.dmg",
       user_agent: :fake
-  appcast "https://pierre.chachatelier.fr/latexit/downloads/latexit-sparkle-en.rss"
   name "LaTeXiT"
   desc "Graphical interface for LaTeX"
   homepage "https://www.chachatelier.fr/latexit/"
+
+  livecheck do
+    url "https://pierre.chachatelier.fr/latexit/downloads/latexit-sparkle-en.rss"
+    strategy :sparkle
+  end
 
   auto_updates true
 

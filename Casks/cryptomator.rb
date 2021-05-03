@@ -8,7 +8,13 @@ cask "cryptomator" do
   desc "Multi-platform client-side cloud file encryption tool"
   homepage "https://cryptomator.org/"
 
-  depends_on macos: ">= :yosemite"
+  livecheck do
+    url "https://cryptomator.org/downloads/mac/thanks/"
+    strategy :page_match
+    regex(%r{href=.*?/Cryptomator-(\d+(?:\.\d+)*)\.dmg}i)
+  end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Cryptomator.app"
 

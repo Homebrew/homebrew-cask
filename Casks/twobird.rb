@@ -1,12 +1,16 @@
 cask "twobird" do
-  version "1.0.27"
+  version "1.0.30"
   sha256 :no_check
 
   url "https://www.twobird.com/download/mac"
-  appcast "https://dl.twobird.com/latest-mac.yml"
   name "Twobird"
   desc "Email client with collaborative notes"
   homepage "https://www.twobird.com/"
+
+  livecheck do
+    url "https://dl.twobird.com/latest-mac.yml"
+    strategy :electron_builder
+  end
 
   auto_updates true
 
