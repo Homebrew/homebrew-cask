@@ -1,6 +1,3 @@
-# typed: false
-# frozen_string_literal: true
-
 cask "syntax-highlight" do
   version "2.0.2"
   sha256 "82234f69ba7bcecf335da8e5a06931fa40d3d1028afcc7ad0bcdbdbe29ca1ec6"
