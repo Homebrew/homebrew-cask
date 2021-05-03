@@ -9,7 +9,6 @@ cask "izip" do
 
   livecheck do
     url "https://www.izip.com/download"
-    strategy :page_match
     regex(%r{<li>Version:\s*(\d+(?:\.\d+)*)</li>}i)
   end
 
