@@ -1,14 +1,14 @@
 cask "blitz" do
-  version "1.14.5"
-  sha256 "3198aaeca723648b073160a7495102a255de8471f1f63e124d0c3ff088a0b113"
+  version "1.14.6"
+  sha256 :no_check
 
-  url "https://dl.blitz.gg/download/Blitz-#{version}.dmg"
+  url "https://dl.blitz.gg/download/mac"
   name "Blitz"
   desc "Performance analysis software"
   homepage "https://blitz.gg/"
 
   livecheck do
-    url "https://dl.blitz.gg/download/mac"
+    url :url
     strategy :header_match
   end
 
