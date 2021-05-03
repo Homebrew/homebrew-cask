@@ -10,7 +10,6 @@ cask "sublime-merge" do
 
   livecheck do
     url "https://www.sublimemerge.com/updates/stable_update_check"
-    strategy :page_match
     regex(/"latest_version":\s*(\d+)/i)
   end
 
