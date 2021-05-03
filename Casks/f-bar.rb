@@ -3,8 +3,8 @@ cask "f-bar" do
     version "3.1.1"
     sha256 "dd2cbcc8bfb9244cf952d29354f6cd7f442472ca4ed8a11063c006c9f83b07af"
   else
-    version "4.0.2"
-    sha256 "8ffc48c859e5d10332706def0b2d79588a13d6b288ec113c5e5003e1452fd4b9"
+    version "5.0.2"
+    sha256 "e3d7ae33185c12a65c377f43ad277b9f1ccc8544dfa74ff26da598749d1a4aec"
   end
 
   url "https://apps.eastwest.se/fbar/updates/F-Bar_#{version}.zip",
