@@ -8,6 +8,10 @@ cask "openra" do
   desc "Real-time strategy game engine for Westwood games"
   homepage "https://www.openra.net/"
 
+  livecheck do
+    regex(/^release-(\d+)$/i)
+  end
+
   app "OpenRA - Dune 2000.app"
   app "OpenRA - Red Alert.app"
   app "OpenRA - Tiberian Dawn.app"
