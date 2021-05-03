@@ -1,6 +1,6 @@
 cask "blitz" do
   version "1.14.6"
-  sha256 :no_check
+  sha256 "d55bb5f4c1a3b3b8d73317d03af0175f4b58de572e5bdab7f1fd3d2a0a860aa0"
 
   url "https://dl.blitz.gg/download/mac"
   name "Blitz"
