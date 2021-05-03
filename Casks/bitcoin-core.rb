@@ -4,7 +4,7 @@ cask "bitcoin-core" do
 
   url "https://bitcoincore.org/bin/bitcoin-core-#{version}/bitcoin-#{version}-osx.dmg"
   name "Bitcoin Core"
-  desc "Open-source, \"full\" Bitcoin client and wallet"
+  desc "Bitcoin client and wallet"
   homepage "https://bitcoincore.org/"
 
   livecheck do
