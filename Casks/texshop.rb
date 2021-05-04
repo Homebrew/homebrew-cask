@@ -1,6 +1,6 @@
 cask "texshop" do
-  version "4.63"
-  sha256 "df0699415fe4bf93463ac3029f39d1ce96d449b087bb5886559ff4580a992c53"
+  version "4.64"
+  sha256 "32bad648fe18ce867600cfe5be84b8eafc8c851f6a6c0a031f48cb400437301c"
 
   url "https://pages.uoregon.edu/koch/texshop/texshop-64/texshop#{version.no_dots}.zip"
   name "TeXShop"
