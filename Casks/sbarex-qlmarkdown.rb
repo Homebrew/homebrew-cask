@@ -13,10 +13,10 @@ cask "sbarex-qlmarkdown" do
   app "QLMarkdown.app"
 
   zap trash: [
+    "~/Library/Application Scripts/org.sbarex.QLMarkdown",
+    "~/Library/Application Scripts/org.sbarex.QLMarkdown.QLExtension",
     "~/Library/Containers/org.sbarex.QLMarkdown",
     "~/Library/Containers/org.sbarex.QLMarkdown.QLExtension",
     "~/Library/Preferences/org.sbarex.QLMarkdown.plist",
-    "~/Library/Application Scripts/org.sbarex.QLMarkdown",
-    "~/Library/Application Scripts/org.sbarex.QLMarkdown.QLExtension",
   ]
 end
