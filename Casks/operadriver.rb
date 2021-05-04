@@ -4,6 +4,7 @@ cask "operadriver" do
 
   url "https://github.com/operasoftware/operachromiumdriver/releases/download/v.#{version}/operadriver_mac64.zip"
   name "operachromiumdriver"
+  desc "Driver for Chromium-based Opera releases"
   homepage "https://github.com/operasoftware/operachromiumdriver"
 
   livecheck do
