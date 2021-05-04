@@ -1,9 +1,10 @@
 cask "prince" do
-  version "14.1"
-  sha256 "10b695cf840e93e7b0a4bb0581dfab5f78c4414e6312656325d95dcc27a58fd5"
+  version "14.2"
+  sha256 "b6ba20b26e5451118727ab595bf5a0ea9342aa5923ac29e7edfd7e84407348d8"
 
   url "https://www.princexml.com/download/prince-#{version}-macos.zip"
   name "Prince"
+  desc "Convert HTML to PDF"
   homepage "https://www.princexml.com/"
 
   livecheck do
