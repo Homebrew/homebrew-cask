@@ -9,7 +9,7 @@ cask "specter" do
   homepage "https://specter.solutions/"
 
   livecheck do
-    url "https://github.com/cryptoadvance/specter-desktop/"
+    url :url
     strategy :github_latest
   end
 
