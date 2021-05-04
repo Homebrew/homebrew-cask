@@ -14,7 +14,5 @@ cask "tabtopus" do
 
   app "TabTopus.app"
 
-  zap trash: [
-    "~/Library/Preferences/com.mariogt.tabtopus.plist",
-  ]
+  zap trash: "~/Library/Preferences/com.mariogt.tabtopus.plist"
 end
