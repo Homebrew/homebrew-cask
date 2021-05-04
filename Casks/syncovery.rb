@@ -1,8 +1,16 @@
 cask "syncovery" do
-  version "9.34"
-  sha256 "8b43e32accf3de94fe7cbf0cabf0d99b28b4e69bf3f62d8c90648cfaa96ae2cd"
+  version "9.35a"
 
-  url "https://www.syncovery.com/release/SyncoveryMac#{version}.dmg"
+  if Hardware::CPU.intel?
+    sha256 "596b59060d0e354eff5a150e8ebde95bc9cd0bd22d3ebd175a3ca280a74073e1"
+
+    url "https://www.syncovery.com/release/SyncoveryMac#{version}.dmg"
+  else
+    sha256 "896672cfdcbab4c1c184ce5046549200d4b161543b1832f8fa61276044c4ca11"
+
+    url "https://www.syncovery.com/release/SyncoveryMac#{version}-Apple.dmg"
+  end
+
   name "Syncovery"
   desc "File synchronization and backup software"
   homepage "https://www.syncovery.com/"
