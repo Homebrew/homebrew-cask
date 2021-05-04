@@ -1,9 +1,10 @@
 cask "nwjs" do
-  version "0.52.2"
-  sha256 "8a2bfe23c9ff6e83787ca7fc7a2ebd1d1c2942d76893ca7898f0aad67f3a436a"
+  version "0.53.0"
+  sha256 "f3e35ce255a9f0b6a0dba7066069a591c1aafe7014141348c4f83b1b4d26e083"
 
   url "https://dl.nwjs.io/v#{version}/nwjs-sdk-v#{version}-osx-x64.zip"
   name "NW.js"
+  desc "Call all Node.js modules directly from the DOM and Web Workers"
   homepage "https://nwjs.io/"
 
   livecheck do
