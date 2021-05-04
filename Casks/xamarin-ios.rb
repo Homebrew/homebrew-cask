@@ -4,6 +4,7 @@ cask "xamarin-ios" do
 
   url "https://dl.xamarin.com/MonoTouch/Mac/xamarin.ios-#{version}.pkg"
   name "Xamarin.iOS"
+  desc "Gives .NET developers complete access to iOS, watchOS, and tvOS SDK's"
   homepage "https://www.xamarin.com/platform"
 
   livecheck do
