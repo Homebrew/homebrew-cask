@@ -5,6 +5,7 @@ cask "nucleo" do
   url "https://nucleo-app-releases.s3.amazonaws.com/mac/Nucleo_#{version}.zip",
       verified: "nucleo-app-releases.s3.amazonaws.com/"
   name "Nucleo"
+  desc "Icon manager and library"
   homepage "https://nucleoapp.com/"
 
   livecheck do
