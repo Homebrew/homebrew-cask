@@ -9,9 +9,8 @@ cask "cryptonomic-galleon" do
   homepage "https://cryptonomic.tech/galleon.html"
 
   livecheck do
-    url "https://github.com/Cryptonomic/Deployments/wiki/Galleon%3A-Releases"
-    strategy :page_match
-    regex(/Galleon\s*(\d+(?:\.\d+)*\w)/i)
+    url "https://github.com/Cryptonomic/T2/releases"
+    strategy :github_latest
   end
 
   app "Galleon.app"
