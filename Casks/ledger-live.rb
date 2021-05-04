@@ -5,6 +5,7 @@ cask "ledger-live" do
   url "https://github.com/LedgerHQ/ledger-live-desktop/releases/download/v#{version}/ledger-live-desktop-#{version}-mac.dmg",
       verified: "github.com/LedgerHQ/ledger-live-desktop/"
   name "Ledger Live"
+  desc "Wallet desktop application to maintain multiple cryptocurrencies"
   homepage "https://www.ledgerwallet.com/live"
 
   livecheck do
