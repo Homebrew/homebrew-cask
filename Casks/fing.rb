@@ -1,8 +1,8 @@
 cask "fing" do
-  version "2.5.1"
-  sha256 :no_check
+  version "2.6.0"
+  sha256 "b380a04b226a1ae2740a6476406fc1877e5ca93b5872a2c2ac9400e92b4fffad"
 
-  url "https://get.fing.com/fing-desktop-releases/mac/Fing.dmg"
+  url "https://get.fing.com/fing-desktop-releases/mac/Fing-#{version}.dmg"
   name "Fing Desktop"
   desc "Network scanner"
   homepage "https://www.fing.com/products/fing-desktop"
