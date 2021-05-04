@@ -11,6 +11,7 @@ cask "cryptonomic-galleon" do
   livecheck do
     url "https://github.com/Cryptonomic/T2/releases"
     strategy :github_latest
+    regex(/v?(\d+(?:\.\d+)*\w*)/i)
   end
 
   app "Galleon.app"
