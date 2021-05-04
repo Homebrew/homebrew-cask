@@ -1,6 +1,6 @@
 cask "mubu" do
-  version "3.2.0"
-  sha256 "77ceb25b76a80a5c4ba287a42e61a40669e86919cd8a740ced4d54df20c7c524"
+  version "3.3.0"
+  sha256 "d5d1a2ec403d1039ed792e710385d6bd659e897aecfea3778fd4c0d9bf91ae6d"
 
   url "https://lf6-ttcdn-tos.pstatp.com/obj/mubu-img/client/Mubu-#{version}.dmg",
       verified: "lf6-ttcdn-tos.pstatp.com/obj/mubu-img/"
