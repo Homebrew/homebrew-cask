@@ -5,6 +5,7 @@ cask "adoptopenjdk" do
   url "https://github.com/AdoptOpenJDK/openjdk#{version.major}-binaries/releases/download/jdk-#{version.before_comma}%2B#{version.after_comma}/OpenJDK#{version.major}U-jdk_x64_mac_hotspot_#{version.before_comma}_#{version.after_comma.major}.pkg",
       verified: "github.com/AdoptOpenJDK/"
   name "AdoptOpenJDK Java Development Kit"
+  desc "JDK from the Java User Group (JUG)"
   homepage "https://adoptopenjdk.net/"
 
   livecheck do
