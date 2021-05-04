@@ -11,5 +11,10 @@ cask "ilspy" do
     url :url
   end
 
+  zap trash: [
+    "~/Library/Preferences/ilspy.plist",
+    "~/Library/Saved Application State/ilspy.savedState",
+  ]
+
   app "ILSpy.app"
 end
