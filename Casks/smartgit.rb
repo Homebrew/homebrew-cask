@@ -4,6 +4,7 @@ cask "smartgit" do
 
   url "https://www.syntevo.com/downloads/smartgit/smartgit-macosx-#{version.dots_to_underscores}.dmg"
   name "SmartGit"
+  desc "Git client"
   homepage "https://www.syntevo.com/smartgit/"
 
   livecheck do
