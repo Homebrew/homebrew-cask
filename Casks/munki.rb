@@ -5,6 +5,7 @@ cask "munki" do
   url "https://github.com/munki/munki/releases/download/v#{version.major_minor_patch}/munkitools-#{version}.pkg",
       verified: "github.com/munki/munki/"
   name "Munki"
+  desc "Software installation manager"
   homepage "https://www.munki.org/munki/"
 
   livecheck do
