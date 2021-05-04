@@ -1,6 +1,6 @@
 cask "electrumsv" do
-  version "1.3.11"
-  sha256 "77c2d24e8328f80d603cf21b18f8f1f3e7cca4308cfb0308479e282fa2e65dbe"
+  version "1.3.13"
+  sha256 "c57ed3939216e78c4692f52aeaf18a75bf6f0a07e13f808b20694ebadf5f7306"
 
   url "https://s3.us-east-2.amazonaws.com/electrumsv-downloads/releases/#{version}/ElectrumSV-#{version}.dmg",
       verified: "s3.us-east-2.amazonaws.com/electrumsv-downloads/"
