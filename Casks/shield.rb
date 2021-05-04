@@ -16,7 +16,5 @@ cask "shield" do
 
   app "Shield.app"
 
-  zap trash: [
-    "/Library/Application Support/Shield/com.csaba.fitzl.shield.preferences.plist",
-  ]
+  zap trash: "/Library/Application Support/Shield/com.csaba.fitzl.shield.preferences.plist"
 end
