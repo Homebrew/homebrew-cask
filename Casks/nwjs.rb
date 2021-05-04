@@ -4,6 +4,7 @@ cask "nwjs" do
 
   url "https://dl.nwjs.io/v#{version}/nwjs-sdk-v#{version}-osx-x64.zip"
   name "NW.js"
+  desc "Call all Node.js modules directly from the DOM and Web Workers"
   homepage "https://nwjs.io/"
 
   livecheck do
