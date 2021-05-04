@@ -4,6 +4,7 @@ cask "prince" do
 
   url "https://www.princexml.com/download/prince-#{version}-macos.zip"
   name "Prince"
+  desc "Convert HTML to PDF"
   homepage "https://www.princexml.com/"
 
   livecheck do
