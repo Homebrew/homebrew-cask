@@ -6,6 +6,7 @@ cask "nosqlbooster-for-mongodb" do
       verified: "mongobooster.com/"
   appcast "https://nosqlbooster.com/downloads"
   name "NoSQLBooster for MongoDB"
+  desc "GUI tool and IDE for MongoDB"
   homepage "https://nosqlbooster.com/"
 
   app "NoSQLBooster for MongoDB.app"
