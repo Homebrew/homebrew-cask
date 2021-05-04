@@ -4,6 +4,7 @@ cask "lilypond" do
 
   url "https://lilypond.org/downloads/binaries/darwin-x86/lilypond-#{version}.darwin-x86.tar.bz2"
   name "LilyPond"
+  desc "Music engraving program"
   homepage "https://lilypond.org/"
 
   livecheck do
