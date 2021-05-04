@@ -8,6 +8,11 @@ cask "tigervnc-viewer" do
   desc "Multi-platform VNC client and server"
   homepage "https://tigervnc.org/"
 
+  livecheck do
+    url "https://github.com/TigerVNC/tigervnc"
+    strategy :git
+  end
+
   app "TigerVNC Viewer #{version}.app"
 
   zap trash: "~/Library/Saved Application State/com.tigervnc.tigervnc.savedState"
