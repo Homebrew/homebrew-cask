@@ -14,6 +14,11 @@ cask "f-bar" do
   desc "Manage Laravel Forge servers from the menubar"
   homepage "https://laravel-forge-menubar.com/"
 
+  livecheck do
+    url "https://apps.eastwest.se/fbar/updates/FBarAppcast.xml"
+    strategy :sparkle
+  end
+
   auto_updates true
   depends_on macos: ">= :yosemite"
 
