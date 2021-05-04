@@ -1,6 +1,6 @@
 cask "blueharvest" do
-  version "8.0.8"
-  sha256 "fbd420271c333bb6899b51ddc45af0a360c16c003f095524e536a7f36d0d5707"
+  version "8.0.9"
+  sha256 "a7d9601f8904b054031144a7c721551e09e950da0a865e552205dd64378b87f6"
 
   url "https://zeroonetwenty.com/blueharvest/downloads/BlueHarvest#{version.no_dots}.dmg"
   name "BlueHarvest"
