@@ -10,7 +10,7 @@ cask "vitals" do
   app "Vitals.app"
 
   zap trash: [
-    "~/Library/Application\ Scripts/com.hmarr.Vitals-LaunchAtLoginHelper",
+    "~/Library/Application Scripts/com.hmarr.Vitals-LaunchAtLoginHelper",
     "~/Library/Containers/com.hmarr.Vitals-LaunchAtLoginHelper",
   ]
 end
