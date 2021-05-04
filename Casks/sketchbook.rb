@@ -8,6 +8,14 @@ cask "sketchbook" do
   desc "Draw, paint, & sketch application"
   homepage "https://www.sketchbook.com/"
 
+  livecheck do
+    url "https://www.autodesk.com/products/sketchbook/free-download"
+    strategy :page_match do |page|
+      match = page.match(%r{sketchbook_(\d+)/sketchbook_v?(\d+(?:\.\d+)*)_mac\.dmg}/i)
+      "#{match[2]},#{match[1]}"
+    end
+  end
+
   pkg "SketchBook_v#{version.before_comma}_mac.pkg"
 
   uninstall quit:    "com.autodesk.SketchBook",
