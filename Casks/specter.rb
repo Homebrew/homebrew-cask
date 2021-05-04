@@ -8,5 +8,10 @@ cask "specter" do
   desc "Desktop GUI for Bitcoin Core optimised to work with hardware wallets"
   homepage "https://specter.solutions/"
 
+  livecheck do
+    url "https://github.com/cryptoadvance/specter-desktop/"
+    strategy :github_latest
+  end
+
   app "Specter.app"
 end
