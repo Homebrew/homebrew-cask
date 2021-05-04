@@ -14,4 +14,10 @@ cask "specter" do
   end
 
   app "Specter.app"
+  
+  zap trash: [
+    "~/Library/Application Support/specter-desktop",
+    "~/Library/Preferences/solutions.specter.desktop.plist",
+    "~/Library/Saved Application State/solutions.specter.desktop.savedState",
+  ]
 end
