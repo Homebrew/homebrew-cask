@@ -17,8 +17,8 @@ cask "cryptonomic-galleon" do
   app "Galleon.app"
 
   zap trash: [
-    "~/Library/Preferences/tech.galleon-wallet.galleon.plist",
     "~/Library/Application Support/Galleon",
+    "~/Library/Preferences/tech.galleon-wallet.galleon.plist",
     "~/Library/Saved Application State/tech.galleon-wallet.galleon.savedState",
   ]
 end
