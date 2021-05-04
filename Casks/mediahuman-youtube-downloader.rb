@@ -1,5 +1,5 @@
 cask "mediahuman-youtube-downloader" do
-  version "3.9.9.54"
+  version "3.9.9.55"
   sha256 :no_check
 
   url "https://www.mediahuman.com/download/YouTubeDownloader.dmg"
