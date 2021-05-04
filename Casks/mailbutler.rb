@@ -1,6 +1,6 @@
 cask "mailbutler" do
-  version "3913,26018"
-  sha256 "258d7c945ee6db508905f024a07713da39120ac5c58a73a435f63e89f4b7befe"
+  version "3919,26021"
+  sha256 "81bb0b66b0e09ddcc1fa662cb9d079d586f6f36a221df65c2dc5d19436154d7f"
 
   url "https://downloads.mailbutler.io/sparkle/public/Mailbutler_#{version.before_comma}-#{version.after_comma}.zip"
   name "Mailbutler"
@@ -12,7 +12,7 @@ cask "mailbutler" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "Mailbutler.app"
 end
