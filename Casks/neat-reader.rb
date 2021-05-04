@@ -1,6 +1,6 @@
 cask "neat-reader" do
-  version "6.0.8"
-  sha256 "6652eef87ca440bad5ebd6b3337f3daaab7eea30252e9c4ef57dd096c9ad4b06"
+  version "7.0.5"
+  sha256 "72f5ff8cfe0170e30ace5524956c0b529a5be47758cf5187dfa3625add933e43"
 
   url "https://neat-reader-release.oss-cn-hongkong.aliyuncs.com/NeatReader-#{version}.dmg",
       verified: "neat-reader-release.oss-cn-hongkong.aliyuncs.com/"
