@@ -13,6 +13,6 @@ cask "exist-db" do
   zap trash: "~/Library/Application Support/org.exist"
 
   caveats do
-    depends_on_java ["8", "11"]
+    depends_on_java "8"
   end
 end
