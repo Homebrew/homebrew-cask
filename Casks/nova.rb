@@ -9,9 +9,8 @@ cask "nova" do
   homepage "https://nova.app/"
 
   livecheck do
-    url "https://download-cdn.panic.com/nova/"
-    strategy :page_match
-    regex(/nova\s(\d+(?:\.\d+)*)\.zip/i)
+    url :homepage
+    regex(%r{href=.*?/Nova(?:\s*|%20)?(\d+(?:\.\d+)*)\.zip}i)
   end
 
   auto_updates true
