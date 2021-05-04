@@ -16,7 +16,7 @@ cask "f-bar" do
 
   livecheck do
     url "https://apps.eastwest.se/fbar/updates/FBarAppcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
