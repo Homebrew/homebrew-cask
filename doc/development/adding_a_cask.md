@@ -1,5 +1,5 @@
 **Note**: Before taking the time to craft a new cask, make sure
-- it can be accepted by checking the [Rejected Casks FAQ](https://github.com/Homebrew/brew/blob/master/docs/Acceptable-Casks.md#rejected-casks),
+- it can be accepted by checking the [Rejected Casks FAQ](https://github.com/Homebrew/brew/blob/HEAD/docs/Acceptable-Casks.md#rejected-casks),
 - check if there are no [open pull requests] for the same cask and
 - check if the cask was not [already refused].
 
@@ -12,7 +12,7 @@ Making a new Cask is easy. Follow the directions in [Getting Set Up To Contribut
 
 ### Examples
 
-Here’s a Cask for `shuttle` as an example. Note the comment above `url`, which is needed when [the url and homepage hostnames differ](../cask_language_reference/stanzas/url.md#when-url-and-homepage-hostnames-differ-add-a-comment)
+Here’s a Cask for `shuttle` as an example. Note the comment above `url`, which is needed when [the url and homepage hostnames differ](https://docs.brew.sh/Cask-Cookbook.md#when-url-and-homepage-hostnames-differ-add-a-comment)
 
 ```ruby
 cask "shuttle" do
@@ -48,9 +48,9 @@ cask "advancedcolors" do
 end
 ```
 
-Here is a last example for `airdisplay`, which uses a `pkg` installer to install the application instead of a stand-alone application bundle (`.app`). Note the [`uninstall pkgutil` stanza](../cask_language_reference/stanzas/uninstall.md#uninstall-key-pkgutil), which is needed to uninstall all files which were installed using the installer.
+Here is a last example for `airdisplay`, which uses a `pkg` installer to install the application instead of a stand-alone application bundle (`.app`). Note the [`uninstall pkgutil` stanza](https://docs.brew.sh/Cask-Cookbook.md#uninstall-key-pkgutil), which is needed to uninstall all files which were installed using the installer.
 
-You will also see how to adapt `version` to the download `url`. Use [our custom `version` methods](../cask_language_reference/stanzas/version.md#version-methods) to do so, resorting to the standard [Ruby String methods](https://ruby-doc.org/core/String.html) when they don’t suffice.
+You will also see how to adapt `version` to the download `url`. Use [our custom `version` methods](https://docs.brew.sh/Cask-Cookbook.md#version-methods) to do so, resorting to the standard [Ruby String methods](https://ruby-doc.org/core/String.html) when they don’t suffice.
 
 ```ruby
 cask "airdisplay" do
@@ -123,24 +123,24 @@ Fill in the following stanzas for your Cask:
 | name               | value       |
 | ------------------ | ----------- |
 | `version`          | application version
-| `sha256`           | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`. Can be suppressed by using the special value `:no_check`. (see [sha256](../cask_language_reference/stanzas/sha256.md))
-| `url`              | URL to the `.dmg`/`.zip`/`.tgz`/`.tbz2` file that contains the application.<br />A [comment](../cask_language_reference/stanzas/url.md#when-url-and-homepage-hostnames-differ-add-a-comment) must be added if the hostnames in the `url` and `homepage` stanzas differ. [Block syntax](../cask_language_reference/stanzas/url.md#using-a-block-to-defer-code-execution) is available for URLs that change on every visit
-| `name`             | the full and proper name defined by the vendor, and any useful alternate names (see [Name Stanza Details](../cask_language_reference/stanzas/name.md))
-| `desc`             | one-line description of the software (see [Desc Stanza Details](../cask_language_reference/stanzas/desc.md))
+| `sha256`           | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`. Can be suppressed by using the special value `:no_check`. (see [sha256](https://docs.brew.sh/Cask-Cookbook.md#stanza-sha256))
+| `url`              | URL to the `.dmg`/`.zip`/`.tgz`/`.tbz2` file that contains the application.<br />A [comment](https://docs.brew.sh/Cask-Cookbook.md#when-url-and-homepage-hostnames-differ-add-a-comment) must be added if the hostnames in the `url` and `homepage` stanzas differ. [Block syntax](https://docs.brew.sh/Cask-Cookbook.md#using-a-block-to-defer-code-execution) is available for URLs that change on every visit
+| `name`             | the full and proper name defined by the vendor, and any useful alternate names (see [Name Stanza Details](https://docs.brew.sh/Cask-Cookbook.md#stanza-name))
+| `desc`             | one-line description of the software (see [Desc Stanza Details](https://docs.brew.sh/Cask-Cookbook.md#stanza-desc))
 | `homepage`         | application homepage; used for the `brew home` command
-| `app`              | relative path to an `.app` bundle that should be moved into the `/Applications` folder on installation (see [App Stanza Details](../cask_language_reference/stanzas/app.md))
+| `app`              | relative path to an `.app` bundle that should be moved into the `/Applications` folder on installation (see [App Stanza Details](https://docs.brew.sh/Cask-Cookbook.md#stanzas-app))
 
 Other commonly-used stanzas are:
 
 | name               | value       |
 | ------------------ | ----------- |
-| `appcast`          | a URL providing an appcast feed to find updates for this Cask. (see [Appcast Stanza Details](../cask_language_reference/stanzas/appcast.md))
-| `pkg`              | relative path to a `.pkg` file containing the distribution (see [Pkg Stanza Details](../cask_language_reference/stanzas/pkg.md))
-| `caveats`          | a string or Ruby block providing the user with Cask-specific information at install time (see [Caveats Stanza Details](../cask_language_reference/stanzas/caveats.md))
-| `uninstall`        | procedures to uninstall a Cask. Optional unless the `pkg` stanza is used. (see [Uninstall Stanza Details](../cask_language_reference/stanzas/uninstall.md))
-| `zap`        		 | additional procedures for a more complete uninstall, including configuration files and shared resources (see [Zap Stanza Details](../cask_language_reference/stanzas/zap.md))
+| `appcast`          | a URL providing an appcast feed to find updates for this Cask. (see [Appcast Stanza Details](https://docs.brew.sh/Cask-Cookbook.md#stanza-appcast))
+| `pkg`              | relative path to a `.pkg` file containing the distribution (see [Pkg Stanza Details](https://docs.brew.sh/Cask-Cookbook.md#stanza-pkg))
+| `caveats`          | a string or Ruby block providing the user with Cask-specific information at install time (see [Caveats Stanza Details](https://docs.brew.sh/Cask-Cookbook.md#stanza-caveats))
+| `uninstall`        | procedures to uninstall a Cask. Optional unless the `pkg` stanza is used. (see [Uninstall Stanza Details](https://docs.brew.sh/Cask-Cookbook.md#stanza-uninstall))
+| `zap`        		 | additional procedures for a more complete uninstall, including configuration files and shared resources (see [Zap Stanza Details](https://docs.brew.sh/Cask-Cookbook.md#stanza-zap))
 
-Additional `artifact` stanzas you might need for special use-cases can be found [here](../cask_language_reference/all_stanzas.md#at-least-one-artifact-stanza-is-also-required). Even more special-use stanzas are listed at [Optional Stanzas](../cask_language_reference/all_stanzas.md#optional-stanzas).
+Additional `artifact` stanzas you might need for special use-cases can be found [here](https://docs.brew.sh/Cask-Cookbook.md#at-least-one-artifact-stanza-is-also-required). Even more special-use stanzas are listed at [Optional Stanzas](https://docs.brew.sh/Cask-Cookbook.md#optional-stanzas).
 
 ### Cask Token Details
 
@@ -148,7 +148,7 @@ If a token conflicts with an already-existing Cask, authors should manually make
 
 If possible, avoid creating tokens which differ only by the placement of hyphens.
 
-To generate a token manually, or to learn about exceptions for unusual cases, see [token_reference.md](../cask_language_reference/token_reference.md).
+To generate a token manually, or to learn about exceptions for unusual cases, see [token_reference.md](https://docs.brew.sh/Cask-Cookbook.md#token-reference).
 
 ### Archives With Subfolders
 
@@ -200,7 +200,7 @@ If your application and Homebrew Cask do not work well together, feel free to [f
 
 ## Finding a Home For Your Cask
 
-See the [Acceptable Casks documentation](https://github.com/Homebrew/brew/blob/master/docs/Acceptable-Casks.md#finding-a-home-for-your-cask).
+See the [Acceptable Casks documentation](https://github.com/Homebrew/brew/blob/HEAD/docs/Acceptable-Casks.md#finding-a-home-for-your-cask).
 
 ## Submitting Your Changes
 
