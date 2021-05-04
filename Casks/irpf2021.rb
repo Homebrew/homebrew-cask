@@ -16,10 +16,6 @@ cask "irpf2021" do
 
   pkg "IRPF2021-v#{version}.pkg"
 
-  uninstall pkgutil: "br.gov.economia.receita.IRPF2021"
-
-  zap trash: [
-    "/Applications/IRPF2021.app",
-    "/Library/Application Support/IRPF2021",
-  ]
+  uninstall pkgutil: "br.gov.economia.receita.IRPF2021",
+            delete:  "/Library/Application Support/IRPF2021"
 end
