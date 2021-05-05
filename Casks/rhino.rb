@@ -5,6 +5,7 @@ cask "rhino" do
   url "https://files.mcneel.com/rhino/#{version.major}/mac/releases/rhino_#{version}.dmg",
       verified: "mcneel.com/"
   name "Rhinoceros"
+  desc "3D model creator"
   homepage "https://www.rhino3d.com/"
 
   livecheck do
