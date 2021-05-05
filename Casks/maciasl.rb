@@ -4,6 +4,7 @@ cask "maciasl" do
 
   url "https://github.com/acidanthera/MaciASL/releases/download/#{version}/MaciASL-#{version}-RELEASE.dmg"
   name "MaciASL"
+  desc "ACPI Machine Language (AML) compiler and IDE"
   homepage "https://github.com/acidanthera/MaciASL"
 
   app "MaciASL.app"
