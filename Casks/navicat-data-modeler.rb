@@ -1,5 +1,5 @@
 cask "navicat-data-modeler" do
-  version "3.0.15"
+  version "3.0.16"
   sha256 :no_check
 
   url "http://download.navicat.com/download/modeler0#{version.major_minor.no_dots}_en.dmg"
