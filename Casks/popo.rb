@@ -4,6 +4,7 @@ cask "popo" do
 
   url "https://popo.netease.com/file/popomac/POPO_Mac_V#{version.dots_to_underscores}.dmg"
   name "NetEase POPO"
+  desc "Instant messaging platform"
   homepage "https://popo.netease.com/"
 
   livecheck do
