@@ -14,4 +14,11 @@ cask "siyuan" do
   homepage "https://github.com/siyuan-note/siyuan"
 
   app "SiYuan.app"
+
+  zap trash: [
+    "~/Library/Application Support/SiYuan",
+    "~/Library/Preferences/org.b3log.siyuan.plist",
+    "~/Library/Saved Application State/org.b3log.siyuan.savedState",
+    "~/.siyuan",
+  ]
 end
