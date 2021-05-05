@@ -1,8 +1,14 @@
 cask "rubymine" do
   version "2021.1.1,211.7142.41"
-  sha256 "dab2fdf132981de92818ebdc235874ee507c1e58eb68574f42791b2c0927edef"
 
-  url "https://download.jetbrains.com/ruby/RubyMine-#{version.before_comma}.dmg"
+  if Hardware::CPU.intel?
+    sha256 "dab2fdf132981de92818ebdc235874ee507c1e58eb68574f42791b2c0927edef"
+    url "https://download.jetbrains.com/ruby/RubyMine-#{version.before_comma}.dmg"
+  else
+    sha256 "0cd0d267d54e1f8ed14595a055fe8041a811d42fa4ae3b1d7f091278042741ae"
+    url "https://download.jetbrains.com/ruby/RubyMine-#{version.before_comma}-aarch64.dmg"
+  end
+
   name "RubyMine"
   desc "Ruby on Rails IDE"
   homepage "https://www.jetbrains.com/ruby/"
