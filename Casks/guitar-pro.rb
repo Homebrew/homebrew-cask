@@ -8,8 +8,7 @@ cask "guitar-pro" do
   homepage "https://www.guitar-pro.com/"
 
   livecheck do
-    url "https://www.guitar-pro.com/en/index.php?pg=download"
-    strategy :page_match
+    url :homepage
     regex(/Guitar\s*Pro\s*(\d+(?:\.\d+)*)/i)
   end
 
