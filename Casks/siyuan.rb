@@ -9,7 +9,7 @@ cask "siyuan" do
     url "https://github.com/siyuan-note/siyuan/releases/download/v#{version}/siyuan-#{version}-mac-arm64.dmg"
   end
 
-  name "siyuan"
+  name "SiYuan"
   desc "Local-first personal knowledge management system"
   homepage "https://github.com/siyuan-note/siyuan"
 
