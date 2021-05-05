@@ -14,4 +14,6 @@ cask "crescendo" do
   depends_on macos: ">= :catalina"
 
   app "Crescendo.app"
+
+  zap trash: "~/Library/Saved Application State/com.suprhackersteve.crescendo.savedState"
 end
