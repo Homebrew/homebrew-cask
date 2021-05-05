@@ -9,10 +9,8 @@ cask "printrun" do
 
   livecheck do
     url "https://github.com/kliment/Printrun/releases/latest"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/printrun-(\d+(?:\.\d+)*)/pronterface-macos-(.*?)\.zip}i)
-      "#{match[1]},#{match[2]}"
-    end
+    strategy :page_match
+    regex(%r{href=.*?/pronterface-macos-app-(\d+(?:\.\d+)*(?:rc\d*)?)\.zip}i)
   end
 
   app "pronterface.app"
