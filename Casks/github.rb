@@ -1,6 +1,6 @@
 cask "github" do
-  version "2.8.0-853674e1"
-  sha256 "7e95458881b5a59cd22b5d9431fe3b38c03166302873c1f08a5d88501ef3e05a"
+  version "2.8.1-717be06b"
+  sha256 "33c861cee87422c480f6ce57229e8de4c675857ebe032cd02ad44b6bd0c910e9"
 
   url "https://desktop.githubusercontent.com/releases/#{version}/GitHubDesktop-x64.zip",
       verified: "githubusercontent.com/"
