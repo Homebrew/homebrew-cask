@@ -4,6 +4,7 @@ cask "yam-display" do
 
   url "https://www.yamdisplay.com/app/YamDisplay#{version}.zip"
   name "Yam Display"
+  desc "Yet another monitor"
   homepage "https://www.yamdisplay.com/"
 
   livecheck do
