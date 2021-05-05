@@ -1,20 +1,25 @@
 cask "android-commandlinetools" do
-  version "6858069"
-  sha256 "58a55d9c5bcacd7c42170d2cf2c9ae2889c6797a6128307aaf69100636f54a13"
+  version "7302050"
+  sha256 "fda8189832e506a58643c119f02c515a5a85741ae9c040fab41ee6c5ac021311"
 
   url "https://dl.google.com/android/repository/commandlinetools-mac-#{version}_latest.zip",
-      verified: "dl.google.com"
+      verified: "dl.google.com/android/repository/"
+  name "android-cmdline-tools"
+  desc "Command-line tools for building and debugging Android apps"
+  homepage "https://developer.android.com/studio"
 
   livecheck do
-    url "https://developer.android.com/studio#cmdline-tools"
+    url :homepage
+    regex(%r{href=.*?/commandlinetools-mac-(\d+)_latest\.zip}i)
   end
 
-  name "android-cmdline-tools"
-  homepage "https://developer.android.com/studio"
-  desc "Android command-line tools without needing Android Studio"
+  conflicts_with cask:    "android-sdk",
+                 formula: "proguard"
 
-  conflicts_with cask: [
-    "android-sdk",
-    "android-platform-tools",
-  ]
+  binary "#{staged_path}/cmdline-tools/bin/apkanalyzer"
+  binary "#{staged_path}/cmdline-tools/bin/avdmanager"
+  binary "#{staged_path}/cmdline-tools/bin/lint"
+  binary "#{staged_path}/cmdline-tools/bin/retrace"
+  binary "#{staged_path}/cmdline-tools/bin/screenshot2"
+  binary "#{staged_path}/cmdline-tools/bin/sdkmanager"
 end
