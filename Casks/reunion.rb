@@ -4,6 +4,7 @@ cask "reunion" do
 
   url "https://store.leisterpro.com/updates/reunion#{version.major}/Reunion-#{version.before_comma.dots_to_hyphens}-#{version.after_comma}.zip"
   name "Reunion"
+  desc "Genealogy (family tree) app"
   homepage "https://www.leisterpro.com/"
 
   livecheck do
