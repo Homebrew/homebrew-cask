@@ -4,6 +4,7 @@ cask "polycom-realpresence" do
 
   url "https://downloads.polycom.com/video/realpresence_desktop/RPDesktop_#{version.dots_to_underscores}.dmg"
   name "Polycom RealPresence Desktop"
+  desc "Video collaboration app"
   homepage "https://www.polycom.com/products-services/hd-telepresence-video-conferencing/realpresence-desktop/realpresence-desktop.html"
 
   livecheck do
