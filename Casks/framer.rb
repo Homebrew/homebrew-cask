@@ -1,14 +1,10 @@
 cask "framer" do
   version "2021.16.5"
+  sha256 :no_check
   
   if Hardware::CPU.intel?
-    sha256 "008279eca248e6c7cad163223b1e7df2de330e62b918216f15aba469cd09d6da"
-
     url "https://updates.framer.com/electron/darwin/x64/Framer.zip"
-    end
   else
-    sha256 "296efac5623ce68a5832b9be20a6483ee2c7d9692778f403c69d489c75042f53"
-
     url "https://updates.framer.com/electron/darwin/arm64/Framer.zip"
   end
 
