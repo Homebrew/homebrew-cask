@@ -8,11 +8,8 @@ cask "mixed-in-key" do
   homepage "https://mixedinkey.com/get#{version.major}/"
 
   livecheck do
-    url :homepage
-    strategy :page_match do |page|
-      match = page.match(/Mixed In Key (\d+)/i)
-      match[1] + version.sub(/^\d+/, "")
-    end
+    url :url
+    strategy :header_match
   end
 
   auto_updates true
@@ -22,12 +19,12 @@ cask "mixed-in-key" do
   uninstall quit: "com.mixedinkey.application"
 
   zap trash: [
-    "~/Library/Application Support/Mixedinkey",
-    "~/Library/Application Support/com.mixedinkey.application",
-    "~/Library/Caches/com.mixedinkey.application",
-    "~/Library/Preferences/com.mixedinkey.Session.plist",
-    "~/Library/Preferences/com.mixedinkey.application.plist",
-    "~/Library/Saved Application State/com.mixedinkey.application.savedState",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mixedinkey.application.sfl*",
+    "~/Library/Application Support/com.mixedinkey.application",
+    "~/Library/Application Support/Mixedinkey",
+    "~/Library/Caches/com.mixedinkey.application",
+    "~/Library/Preferences/com.mixedinkey.application.plist",
+    "~/Library/Preferences/com.mixedinkey.Session.plist",
+    "~/Library/Saved Application State/com.mixedinkey.application.savedState",
   ]
 end
