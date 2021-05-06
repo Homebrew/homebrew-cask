@@ -10,7 +10,7 @@ cask "forticlient-vpn" do
 
   livecheck do
     url "https://filestore.fortinet.com/forticlient/"
-    regex(%r{downloads\/FortiClientVPN_[\d\.]+_OnlineInstaller\.dmg}i)
+    regex(%r{downloads/FortiClientVPN_[\d.]+_OnlineInstaller\.dmg}i)
   end
 
   installer manual: "FortiClientUpdate.app"
