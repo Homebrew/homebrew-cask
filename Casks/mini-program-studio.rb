@@ -9,7 +9,7 @@ cask "mini-program-studio" do
   desc "DingTalk, produced by Alibaba, is a seamless communication across devices"
   homepage "https://opendocs.alipay.com/mini/ide"
 
-  # The download page (https://opendocs.alipay.com/mini/ide/download/) is
+  # The download page (https://opendocs.alipay.com/mini/ide/download) is
   # rendered using JavaScript. The URL below returns JSON data that contains
   # the HTML for the release information, so we can match within that.
   livecheck do
