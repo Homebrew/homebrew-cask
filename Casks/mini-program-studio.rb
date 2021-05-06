@@ -6,7 +6,7 @@ cask "mini-program-studio" do
       verified: "gw.alipayobjects.com/"
   name "Mini Program Studio"
   name "小程序开发者工具"
-  desc "DingTalk, produced by Alibaba, is a seamless communication across devices"
+  desc "IDE for the development of Alipay applets"
   homepage "https://opendocs.alipay.com/mini/ide"
 
   # The download page (https://opendocs.alipay.com/mini/ide/download) is
