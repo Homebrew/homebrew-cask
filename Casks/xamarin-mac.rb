@@ -4,6 +4,7 @@ cask "xamarin-mac" do
 
   url "https://dl.xamarin.com/XamarinforMac/Mac/xamarin.mac-#{version}.pkg"
   name "Xamarin Mac"
+  desc "Gives C# and .NET developers access to Objective-C and Swift API's"
   homepage "https://www.xamarin.com/platform"
 
   livecheck do
