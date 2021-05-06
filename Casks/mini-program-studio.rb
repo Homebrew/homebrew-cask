@@ -9,8 +9,17 @@ cask "mini-program-studio" do
   desc "DingTalk, produced by Alibaba, is a seamless communication across devices"
   homepage "https://opendocs.alipay.com/mini/ide"
 
+  # The download page (https://opendocs.alipay.com/mini/ide/download) is
+  # rendered using JavaScript. The URL below returns JSON data that contains
+  # the HTML for the release information, so we can match within that.
   livecheck do
-    skip "The content of https://opendocs.alipay.com/mini/ide/download is dynamic"
+    url "https://opendocs.alipay.com/api/content/006l6m"
+    regex(%r{href=.*?/([a-z\d-]+)/MiniProgramStudio[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    strategy :page_match do |page|
+      page.scan(regex).map do |match|
+        (match[0] && match[1]) ? "#{match[1]},#{match[0]}" : ""
+      end
+    end
   end
 
   app "小程序开发者工具.app"
