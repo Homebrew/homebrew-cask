@@ -8,6 +8,11 @@ cask "forticlient-vpn" do
   desc "Free VPN client for FortiClient"
   homepage "https://forticlient.com/"
 
+  livecheck do
+    url "https://filestore.fortinet.com/forticlient/"
+    regex(%r{downloads\/FortiClientVPN_[\d\.]+_OnlineInstaller\.dmg}i)
+  end
+
   installer manual: "FortiClientUpdate.app"
 
   uninstall script: {
