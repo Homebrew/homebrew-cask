@@ -1,5 +1,5 @@
 cask "webex" do
-  version "41.4.0.18629"
+  version "41.5.0.18787"
   sha256 :no_check
 
   url "https://binaries.webex.com/WebexTeamsDesktop-MACOS-Gold/Webex.dmg"
