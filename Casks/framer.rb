@@ -13,10 +13,8 @@ cask "framer" do
   homepage "https://www.framer.com/desktop/"
 
   livecheck do
-    url "https://updates.framer.com/sparkle/com.framer.desktop"
-    strategy :sparkle do |item|
-      "#{item.version},#{item.url[%r{/(\d+)/FramerDesktop-\d+.zip}i, 1]}"
-    end
+    url :url
+    strategy :extract_plist
   end
 
   auto_updates true
