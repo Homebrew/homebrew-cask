@@ -1,12 +1,12 @@
 cask "webstorm" do
-  version "2021.1"
+  version "2021.1.1"
 
   if Hardware::CPU.intel?
     url "https://download.jetbrains.com/webstorm/WebStorm-#{version}.dmg"
-    sha256 "3c0b885416b336e8cae267f6c3c7c6074c5dc0395f901270f9779e9a06eea58c"
+    sha256 "b62b35faa47c59ac552b6e0604fe1c8e63897a1d4477ba302574728a78c9759b"
   else
     url "https://download.jetbrains.com/webstorm/WebStorm-#{version}-aarch64.dmg"
-    sha256 "7538b56ddc30890f3598359d5688c3659180de941800965bee338d3d4ac7338f"
+    sha256 "1426e338dd372abad1b5b97b340fab5c02dd16b15348b8d151f85e829e3baa63"
   end
 
   appcast "https://data.services.jetbrains.com/products/releases?code=WS&latest=true&type=release"
