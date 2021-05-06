@@ -8,7 +8,7 @@ cask "mini-program-studio" do
   name "小程序开发者工具"
   desc "DingTalk, produced by Alibaba, is a seamless communication across devices"
   homepage "https://opendocs.alipay.com/mini/ide"
-  
+
   livecheck do
     skip "The content of https://opendocs.alipay.com/mini/ide/download is dynamic"
   end
