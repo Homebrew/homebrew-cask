@@ -1,8 +1,8 @@
 cask "taskade" do
-  version "3.3.0"
-  sha256 "c99a2e45fb0a2f36156b86e5cf2670da11d9084ba394c2bc1aed337f35bf43b4"
+  version "3.3.6"
+  sha256 "e6e47f08de0af0e13f24b701afe03596829a6b836d72c53e26a113ecf3c61b57"
 
-  url "https://apps.taskade.com/updates/Taskade-#{version}.dmg"
+  url "https://apps.taskade.com/updates/Taskade-#{version}-universal.dmg"
   name "Taskade"
   desc "Task manager for teams"
   homepage "https://www.taskade.com/"
@@ -10,7 +10,7 @@ cask "taskade" do
   livecheck do
     url "https://www.taskade.com/downloads"
     strategy :page_match
-    regex(%r{href=.*?/Taskade-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/Taskade-(\d+(?:\.\d+)*)-universal\.dmg}i)
   end
 
   app "Taskade.app"
