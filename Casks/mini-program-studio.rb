@@ -6,7 +6,7 @@ cask "mini-program-studio" do
       verified: "gw.alipayobjects.com/"
   name "Mini Program Studio"
   name "小程序开发者工具"
-  desc "DingTalk, produced by Alibaba, is a seamless communication across devices."
+  desc "DingTalk, produced by Alibaba, is a seamless communication across devices"
   homepage "https://open.alipay.com/channel/miniIndex.htm"
 
   app "小程序开发者工具.app"
