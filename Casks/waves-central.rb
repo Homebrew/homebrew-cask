@@ -17,7 +17,7 @@ cask "waves-central" do
   zap trash: [
     "~/Library/Application Support/Waves Central",
     "~/Library/Application Support/Waves Audio",
-    "~/Library/Saved Application State/com.WavesAudio.central.savedState",
     "~/Library/Preferences/com.WavesAudio.central.plist",
+    "~/Library/Saved Application State/com.WavesAudio.central.savedState",
   ]
 end
