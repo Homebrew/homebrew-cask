@@ -9,8 +9,8 @@ cask "forticlient-vpn" do
   homepage "https://forticlient.com/"
 
   livecheck do
-    url "https://filestore.fortinet.com/forticlient/"
-    regex(%r{downloads/FortiClientVPN_[\d.]+_OnlineInstaller\.dmg}i)
+    url "https://links.fortinet.com/forticlient/mac/vpnagent"
+    strategy :header_match
   end
 
   installer manual: "FortiClientUpdate.app"
