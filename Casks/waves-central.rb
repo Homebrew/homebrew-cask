@@ -7,6 +7,11 @@ cask "waves-central" do
   desc "Client to install and activate Waves products"
   homepage "https://www.waves.com/"
 
+  livecheck do
+    url "https://register.waves.com/Autoupdate/Updates/ByProductId/1/latest-mac.yml"
+    strategy :electron_builder
+  end
+
   app "Waves Central.app"
 
   zap trash: [
