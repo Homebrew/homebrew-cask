@@ -1,8 +1,8 @@
 cask "mini-program-studio" do
-  version "1.15.7,b9179b0f-9656-4f2a-a42d-f08e335dd696"
-  sha256 "1a0d1e322a36a83e1d887d569efcdb0a88f0edec786a60301599d9c99e150b8c"
+  version "2.0.6,45f57ec9-2dd1-4150-b107-2003b55b91d6"
+  sha256 "d825eed5500d8127741c4b691826ff06b54e66a6f583de7bbbb5a4ffe5672058"
 
-  url "https://gw.alipayobjects.com/os/bmw-prod/#{version.after_comma}.dmg",
+  url "https://gw.alipayobjects.com/os/volans-demo/#{version.after_comma}/MiniProgramStudio-#{version.before_comma}.dmg",
       verified: "gw.alipayobjects.com/"
   name "Mini Program Studio"
   name "小程序开发者工具"
