@@ -1,17 +1,19 @@
 cask "mmex" do
-  version "1.3.6"
-  sha256 "90aa96bf55dde10f19b8dd9b9cc1645ac088c526843848d6202c97109c4714d2"
+  version "1.5.1,2021.04.24"
+  sha256 "36dda3d0177dddc71fd3ed29fc43a64783f2e2d2637dc473ebfc2f89d4351a1d"
 
-  url "https://downloads.sourceforge.net/moneymanagerex/v#{version}/mmex%20v#{version}-macOS-fix.dmg",
+  url "https://downloads.sourceforge.net/moneymanagerex/mmex%20v#{version.before_comma}-macOS.#{version.after_comma}.dmg",
       verified: "downloads.sourceforge.net/moneymanagerex/"
   name "Money Manager Ex"
   desc "Money management application"
   homepage "https://www.moneymanagerex.org/"
 
   livecheck do
-    url "https://github.com/moneymanagerex/moneymanagerex"
-    strategy :git
-    regex(/^v?(\d+(?:\.\d+)*)$/)
+    url "https://sourceforge.net/projects/moneymanagerex/rss"
+    strategy :page_match do |page|
+      match = page.match(%r{/mmex\s*v?(\d+(?:\.\d+)*)[._-]macOS[._-](\d+(?:\.\d+)*)\.dmg}i)
+      "#{match[1]},#{match[2]}"
+    end
   end
 
   app "MMEX.app"
