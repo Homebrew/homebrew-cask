@@ -4,6 +4,7 @@ cask "mbed-studio" do
 
   url "https://studio.mbed.com/installers/latest/mac/MbedStudio.pkg"
   name "Mbed Studio"
+  desc "IDE for Mbed OS application and library development"
   homepage "https://os.mbed.com/studio/"
 
   livecheck do
