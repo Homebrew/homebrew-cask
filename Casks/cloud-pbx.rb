@@ -5,6 +5,7 @@ cask "cloud-pbx" do
   url "https://cpbx-hilfe.deutschland-lan.de/downloads/desktop-clients/cloud-pbx.osx-#{version}",
       verified: "cpbx-hilfe.deutschland-lan.de/downloads/"
   name "Cloud PBX"
+  desc "Cloud-based telephone system"
   homepage "https://geschaeftskunden.telekom.de/startseite/festnetz-internet/tarife/332198/telefonanlage-aus-der-cloud.html"
 
   livecheck do
