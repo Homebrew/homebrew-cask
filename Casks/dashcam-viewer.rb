@@ -6,11 +6,11 @@ cask "dashcam-viewer" do
       verified: "filedn.com/l2s8TAtm4VASBX72ds0zYD8/dcv/"
   name "Dashcam Viewer"
   name "Dashcam Viewer by Earthshine Software"
+  desc "View videos, GPS data, and G-force data recorded by dashcams and action cams"
   homepage "https://dashcamviewer.com/"
 
   livecheck do
-    url "https://dashcamviewer.com/"
-    strategy :page_match
+    url "https://dashcamviewer.com/free-trial/"
     regex(%r{href=.*?/Dashcam_Viewer_v?(\d+(?:\.\d+)*)\.dmg}i)
   end
 
