@@ -4,6 +4,7 @@ cask "prepros" do
 
   url "https://downloads.prepros.io/v#{version.major}/Prepros-#{version}.zip"
   name "Prepros"
+  desc "Web development companion"
   homepage "https://prepros.io/"
 
   livecheck do
