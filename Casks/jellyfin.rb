@@ -4,11 +4,11 @@ cask "jellyfin" do
 
   url "https://repo.jellyfin.org/releases/server/macos/stable/installer/Jellyfin_#{version}.dmg"
   name "Jellyfin"
+  desc "Media system"
   homepage "https://jellyfin.org/"
 
   livecheck do
     url "https://repo.jellyfin.org/releases/server/macos/stable/"
-    strategy :page_match
     regex(%r{href=.*?/Jellyfin_(\d+(?:\.\d+)*)\.dmg}i)
   end
 
