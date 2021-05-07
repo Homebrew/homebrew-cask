@@ -4,6 +4,7 @@ cask "redisinsight" do
 
   url "https://downloads.redisinsight.redislabs.com/#{version}/redisinsight-mac.dmg"
   name "RedisInsight"
+  desc "GUI for streamlined Redis application development"
   homepage "https://www.redislabs.com/redisinsight/"
 
   livecheck do
