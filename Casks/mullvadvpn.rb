@@ -9,11 +9,12 @@ cask "mullvadvpn" do
   homepage "https://mullvad.net/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://mullvad.net/download/app/pkg/latest/"
+    strategy :header_match
   end
 
   conflicts_with cask: "homebrew/cask-versions/mullvadvpn-beta"
+  depends_on macos: ">= :high_sierra"
 
   pkg "MullvadVPN-#{version}.pkg"
 
