@@ -5,6 +5,7 @@ cask "memory" do
   url "https://memorymacapp.s3.amazonaws.com/Memory.zip",
       verified: "memorymacapp.s3.amazonaws.com/"
   name "Memory Tracker by Timely"
+  desc "Time tracking software"
   homepage "https://memory.ai/timely/"
 
   livecheck do
