@@ -5,6 +5,7 @@ cask "mockuuups-studio" do
   url "https://binaries.mockuuups.com/Mockuuups%20Studio-#{version}-mac.zip",
       verified: "mockuuups.com/"
   name "Mockuuups Studio"
+  desc "Allows designers and marketers to drag and drop visuals into scenes"
   homepage "https://mockuuups.studio/"
 
   livecheck do
