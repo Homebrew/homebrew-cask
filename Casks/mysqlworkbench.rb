@@ -19,17 +19,17 @@ cask "mysqlworkbench" do
     version "8.0.24"
     sha256 "21d2145b29a05ff943ba7eb624e237a89436bfcea55f0a6372037857a1a99f63"
     url "https://cdn.mysql.com/Downloads/MySQLGUITools/mysql-workbench-community-#{version}-macos-x86_64.dmg"
+
+    livecheck do
+      url "https://dev.mysql.com/downloads/workbench/"
+      strategy :page_match
+      regex(/MySQL\s*Workbench\s*(\d+(?:\.\d+)*)/i)
+    end
   end
 
   name "MySQL Workbench"
   desc "Visual tool to design, develop and administer MySQL servers"
   homepage "https://www.mysql.com/products/workbench/"
-
-  livecheck do
-    url "https://dev.mysql.com/downloads/workbench/"
-    strategy :page_match
-    regex(/MySQL\s*Workbench\s*(\d+(?:\.\d+)*)/i)
-  end
 
   app "MySQLWorkbench.app"
 
