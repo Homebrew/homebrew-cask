@@ -17,9 +17,7 @@ cask "mysqlworkbench" do
     url "https://downloads.mysql.com/archives/get/p/#{version.major}/file/mysql-workbench-community-#{version}-macos-x86_64.dmg"
 
     livecheck do
-      url "https://downloads.mysql.com/archives/workbench/"
-      strategy :page_match
-      regex(/MySQL\s*Workbench\s*(\d+(?:\.\d+)*)/i)
+      skip "newer versions only available for Big Sur or higher"
     end
   else
     version "8.0.24"
