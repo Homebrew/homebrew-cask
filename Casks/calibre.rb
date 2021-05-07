@@ -12,6 +12,11 @@ cask "calibre" do
   desc "E-books management software"
   homepage "https://calibre-ebook.com/"
 
+  livecheck do
+    url "https://github.com/kovidgoyal/calibre"
+    strategy :github_latest
+  end
+
   conflicts_with cask: "homebrew/cask-versions/calibre4"
 
   app "calibre.app"
