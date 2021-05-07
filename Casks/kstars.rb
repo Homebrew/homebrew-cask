@@ -5,6 +5,7 @@ cask "kstars" do
   url "https://www.indilib.org/jdownloads/kstars/kstars-#{version}.dmg",
       verified: "indilib.org/jdownloads/kstars/"
   name "KStars"
+  desc "Astronomy software"
   homepage "https://edu.kde.org/kstars/"
 
   livecheck do
@@ -12,6 +13,8 @@ cask "kstars" do
     strategy :page_match
     regex(%r{href=.*?/kstars-(\d+(?:\.\d+)*)\.dmg}i)
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "kstars.app"
 end
