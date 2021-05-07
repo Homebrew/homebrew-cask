@@ -1,8 +1,8 @@
 cask "lightworks" do
-  version "2021.1,126716"
-  sha256 "cde6525e031e84a241f3721284fc64b1f6425b17360395127717f7640271e4b6"
+  version "2021.2.1,128456"
+  sha256 "cb772b20bbbdc1234c2d1bcfc499dff61b19f5c7169099c1bb8f0834b19c353b"
 
-  url "https://cdn.lwks.com/releases/#{version.before_comma}/lightworks_#{version.before_comma}_r#{version.after_comma}.dmg"
+  url "https://cdn.lwks.com/releases/#{version.before_comma}/lightworks_#{version.before_comma.major_minor}_r#{version.after_comma}.dmg"
   name "Lightworks"
   desc "Complete video creation package"
   homepage "https://www.lwks.com/"
@@ -10,7 +10,7 @@ cask "lightworks" do
   livecheck do
     url "https://www.lwks.com/index.php?option=com_docman&task=doc_download&gid=210"
     strategy :header_match do |headers|
-      match = headers["location"].match(/lightworks_(\d+(?:\.\d+)*)_r(\d+)\.dmg/i)
+      match = headers["location"].match(%r{/(\d+(?:\.\d+)*)/lightworks_\d+(?:\.\d+)*_r(\d+)\.dmg}i)
       "#{match[1]},#{match[2]}"
     end
   end
