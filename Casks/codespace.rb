@@ -4,6 +4,7 @@ cask "codespace" do
 
   url "https://codespace.app/download/latest"
   name "Codespace"
+  desc "Code snippet manager"
   homepage "https://codespace.app/"
 
   livecheck do
