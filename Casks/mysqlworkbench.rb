@@ -15,6 +15,12 @@ cask "mysqlworkbench" do
     version "8.0.23"
     sha256 "4c8664f5686a449a9760bda9b85d7e8c6beb1367d35f668048ffe534652da7b3"
     url "https://downloads.mysql.com/archives/get/p/#{version.major}/file/mysql-workbench-community-#{version}-macos-x86_64.dmg"
+
+    livecheck do
+      url "https://downloads.mysql.com/archives/workbench/"
+      strategy :page_match
+      regex(/MySQL\s*Workbench\s*(\d+(?:\.\d+)*)/i)
+    end
   else
     version "8.0.24"
     sha256 "21d2145b29a05ff943ba7eb624e237a89436bfcea55f0a6372037857a1a99f63"
