@@ -5,6 +5,7 @@ cask "marvin" do
   url "https://amazingmarvin.s3.amazonaws.com/Marvin-#{version}.dmg",
       verified: "amazingmarvin.s3.amazonaws.com/"
   name "Amazing Marvin"
+  desc "Personal productivity app"
   homepage "https://www.amazingmarvin.com/"
 
   livecheck do
