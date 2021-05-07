@@ -1,12 +1,12 @@
 cask "zettlr" do
-  version "1.8.7"
+  version "1.8.8"
 
   if Hardware::CPU.intel?
-    sha256 "b387580300b0f37767b7cf66abb74034c0386ba87d71504d818e8d74acd4d200"
+    sha256 "0045e9ef42d327b0c2329e6e09db8fdc6b520ee9a211bf096abfa7e13605a562"
     url "https://github.com/Zettlr/Zettlr/releases/download/v#{version}/Zettlr-#{version}-x64.dmg",
         verified: "github.com/Zettlr/Zettlr/"
   else
-    sha256 "0ac726e7bbfe2bb8378b555b2ea9d47165c71fbc94aef3aa1a69308f2989ddff"
+    sha256 "e11fd5dbff090bca431bfb5f4cf86e7385f9dc24152895685794596e7d2b57ea"
     url "https://github.com/Zettlr/Zettlr/releases/download/v#{version}/Zettlr-#{version}-arm64.dmg",
         verified: "github.com/Zettlr/Zettlr/"
   end
