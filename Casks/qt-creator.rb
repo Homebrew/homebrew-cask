@@ -7,12 +7,21 @@ cask "qt-creator" do
   desc "IDE for application development"
   homepage "https://www.qt.io/developers/"
 
+  # It's necessary to check within a major/minor version directory
+  # (fetching an additional page) to obtain the full version.
   livecheck do
-    url "https://download.qt.io/official_releases/qtcreator/"
+    url "https://download.qt.io/official_releases/qtcreator/?C=M;O=D"
     strategy :page_match do |page|
-      page.scan(%r{href="(\d+(?:\.\d+)*)/"}i).lazy.map do |match|
-        version_page = Net::HTTP.get(URI.parse("#{url}#{match[0]}/"))
-        version_page[%r{href="(\d+(?:\.\d+)*)/"}i, 1]
+      # These version directories can sometimes be empty, so this will check
+      # directory pages until it finds versions
+      page.scan(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i).lazy.map do |match|
+        version_page = Homebrew::Livecheck::Strategy.page_content(url.sub("/?", "/#{match[0]}/?"))
+        next if version_page[:content].blank?
+
+        versions = version_page[:content].scan(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i).map(&:first)
+        next if versions.blank?
+
+        versions
       end.reject(&:nil?).first
     end
   end
