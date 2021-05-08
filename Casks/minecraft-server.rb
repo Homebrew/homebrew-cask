@@ -4,9 +4,17 @@ cask "minecraft-server" do
 
   url "https://launcher.mojang.com/v#{version.major}/objects/#{version.after_comma}/server.jar",
       verified: "launcher.mojang.com/"
-  appcast "https://minecraft.net/en-us/download/server/"
   name "Minecraft Server"
-  homepage "https://minecraft.net/"
+  desc "Run a Minecraft multiplayer server"
+  homepage "https://www.minecraft.net/en-us/"
+
+  livecheck do
+    url "https://www.minecraft.net/en-us/download/server/"
+    strategy :page_match do |page|
+      page.scan(%r{href=.*?/objects/(\h+)/server\.jar[^>]*>minecraft[_-]server[._-]v?(\d+(?:\.\d+)*)\.jar}i)
+          .map { |match| "#{match[1]},#{match[0]}" }
+    end
+  end
 
   container type: :naked
 
@@ -19,7 +27,7 @@ cask "minecraft-server" do
   preflight do
     FileUtils.mkdir_p config_dir
 
-    IO.write shimscript, <<~EOS
+    File.write shimscript, <<~EOS
       #!/bin/sh
       cd '#{config_dir}' && \
         exec /usr/bin/java ${@:--Xms1024M -Xmx1024M} -jar '#{staged_path}/server.jar' nogui
