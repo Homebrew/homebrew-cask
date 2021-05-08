@@ -7,6 +7,10 @@ cask "flip4mac" do
   desc "Play back and convert Windows Media"
   homepage "https://www.telestream.net/flip4mac/"
 
+  livecheck do
+    skip "Discontinued"
+  end
+
   depends_on macos: "<= :el_capitan"
 
   pkg "Flip4Mac.pkg"
