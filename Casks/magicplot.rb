@@ -1,6 +1,6 @@
 cask "magicplot" do
-  version "3.0"
-  sha256 "4b56ef31ff7b347d729b8ed958b2ec14affa031b4c27db653cdaa3618b57d710"
+  version "3.0.1"
+  sha256 "67419db679bd1c5cd9c6bc919dfb4e37e767222afe4a2d164e67abfd94fda11b"
 
   url "https://magicplot.com/downloads/MagicPlot#{version}.zip"
   name "MagicPlot"

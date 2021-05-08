@@ -1,8 +1,16 @@
 cask "pycharm-edu" do
-  version "2020.3.4,203.7717.76"
-  sha256 "bbb7db6c53a16024d8074a5b3263edf9892451c7e4b2021ce7d796654412404c"
+  version "2021.1,211.7142.37"
 
-  url "https://download.jetbrains.com/python/pycharm-edu-#{version.before_comma}.dmg"
+  if Hardware::CPU.intel?
+    sha256 "88cdd8d9afaed9c6d2792d952ca1568892901e76cffd111d163f26d27a2cc3cd"
+
+    url "https://download.jetbrains.com/python/pycharm-edu-#{version.before_comma}.dmg"
+  else
+    sha256 "8d972d603b07f6ba052eaf3ef4d7536099ec1c05ba14b6b77c836e1aebd8f83f"
+
+    url "https://download.jetbrains.com/python/pycharm-edu-#{version.before_comma}-aarch64.dmg"
+  end
+
   name "Jetbrains PyCharm Educational Edition"
   name "PyCharm Edu"
   desc "Professional IDE for scientific and web Python development"

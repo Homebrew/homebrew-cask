@@ -1,6 +1,6 @@
 cask "radarr" do
-  version "3.0.2.4552"
-  sha256 "4f239e5e8f45b91a7ebc35304cdb5abddfc205d8ce52f064e00b9b531ee75b8c"
+  version "3.1.1.4954"
+  sha256 "a336d213e93fc80d15b3a855e8466cfa19e71a85b3fef3e2236779500c22c492"
 
   url "https://github.com/Radarr/Radarr/releases/download/v#{version}/Radarr.master.#{version}.osx-app-core-x64.zip",
       verified: "github.com/Radarr/Radarr/"

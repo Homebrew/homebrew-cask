@@ -1,6 +1,6 @@
 cask "devonthink" do
-  version "3.6.3"
-  sha256 "94fdcd1e920704ee3d03e4db06119f654276762243486a1e6fd86c7e415822c1"
+  version "3.7.1"
+  sha256 "3f15fcec63815b391982056fe8a3bf4ac4a34b7234fc6b63308c4c1f49eabc36"
 
   url "https://download.devontechnologies.com/download/devonthink/#{version}/DEVONthink_#{version.major}.app.zip"
   name "DEVONthink"
@@ -13,6 +13,7 @@ cask "devonthink" do
   end
 
   auto_updates true
+  depends_on macos: ">= :el_capitan"
 
   app "DEVONthink #{version.major}.app"
 

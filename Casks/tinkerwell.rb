@@ -1,6 +1,6 @@
 cask "tinkerwell" do
-  version "2.13.0"
-  sha256 "f144e72d373f026c9dd3c06f9d85b046c53fc81c314a12298f1e4153e569f1cd"
+  version "2.13.1"
+  sha256 "b5595a0d9b26fdcb7620d1813ad50e8314fb8adcfb8694520137a0d9a76cadc5"
 
   url "https://download.tinkerwell.app/tinkerwell/Tinkerwell-#{version}.dmg"
   name "Tinkerwell"

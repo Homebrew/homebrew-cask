@@ -1,6 +1,6 @@
 cask "devolo-cockpit" do
-  version "5.1.5.245"
-  sha256 "21fae361aac8abb9ac1410bd2a6f0ad4d72ddf72e036c1c3b2cd9976009fc20c"
+  version "5.1.6.2"
+  sha256 "3fe3c6fd1fd8045178a65a8a52b0c2ac443ec468ad6efbee373b4b89b92782c9"
 
   url "https://www.devolo.global/fileadmin/Web-Content/DE/products/hnw/devolo-cockpit/software/devolo-cockpit-v#{version.dots_to_hyphens}.dmg"
   name "Devolo dLAN Cockpit"

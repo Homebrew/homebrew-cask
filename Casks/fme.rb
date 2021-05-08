@@ -1,6 +1,6 @@
 cask "fme" do
-  version "2021.0.1,21313"
-  sha256 "e36cefc71c09531fbc3666c90dfb5ed84520f0f43f165a23b18f2634a717204a"
+  version "2021.0.2,21321"
+  sha256 "7c872ce977bb3f642b2812321d067544d68f165b9a6e5b7fa03f117c4ae09be8"
 
   url "https://downloads.safe.com/fme/#{version.major}/fme-desktop-#{version.before_comma}-b#{version.after_comma}-macosx.dmg"
   name "FME Desktop"

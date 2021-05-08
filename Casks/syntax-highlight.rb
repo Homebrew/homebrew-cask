@@ -13,12 +13,12 @@ cask "syntax-highlight" do
   app "Syntax Highlight.app"
 
   zap trash: [
-    "~Library/Application Scripts/org.sbarex.SourceCodeSyntaxHighlight",
-    "~Library/Application Scripts/org.sbarex.SourceCodeSyntaxHighlight.QuicklookExtension",
-    "~Library/Application Support/Syntax Highlight",
-    "~Library/Caches/com.apple.helpd/Generated/org.sbarex.SourceCodeSyntaxHighlight.help*1.0",
-    "~Library/Containers/org.sbarex.SourceCodeSyntaxHighlight",
-    "~Library/Containers/org.sbarex.SourceCodeSyntaxHighlight.QuicklookExtension",
-    "~Library/Preferences/org.sbarex.SourceCodeSyntaxHighlight.plist",
+    "~/Library/Application Scripts/org.sbarex.SourceCodeSyntaxHighlight",
+    "~/Library/Application Scripts/org.sbarex.SourceCodeSyntaxHighlight.QuicklookExtension",
+    "~/Library/Application Support/Syntax Highlight",
+    "~/Library/Caches/com.apple.helpd/Generated/org.sbarex.SourceCodeSyntaxHighlight.help*#{version}",
+    "~/Library/Containers/org.sbarex.SourceCodeSyntaxHighlight",
+    "~/Library/Containers/org.sbarex.SourceCodeSyntaxHighlight.QuicklookExtension",
+    "~/Library/Preferences/org.sbarex.SourceCodeSyntaxHighlight.plist",
   ]
 end

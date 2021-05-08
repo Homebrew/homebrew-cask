@@ -3,11 +3,14 @@ cask "pycharm-ce-with-anaconda-plugin" do
   sha256 "978819647422f10a58761f9fc93f2a302f497da3e966c8a6b9e4a113558daf32"
 
   url "https://download.jetbrains.com/python/pycharm-community-anaconda-#{version.before_comma}.dmg"
-  appcast "https://data.services.jetbrains.com/products/releases?code=PCC&latest=true&type=release"
   name "Jetbrains PyCharm Community Edition with Anaconda plugin"
   name "PyCharm CE with Anaconda plugin"
   desc "PyCharm IDE with Anaconda plugin"
   homepage "https://www.jetbrains.com/pycharm/promo/anaconda"
+
+  livecheck do
+    skip "Discontinued"
+  end
 
   auto_updates true
 
@@ -32,4 +35,8 @@ cask "pycharm-ce-with-anaconda-plugin" do
     "~/Library/Preferences/PyCharmCE#{version.major_minor}",
     "~/Library/Saved Application State/com.jetbrains.pycharm.savedState",
   ]
+
+  caveats do
+    discontinued
+  end
 end

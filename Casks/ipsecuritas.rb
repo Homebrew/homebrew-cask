@@ -10,8 +10,8 @@ cask "ipsecuritas" do
 
     url "https://www.lobotomo.com/products/downloads/IPSecuritas%20#{version}.dmg"
   else
-    version "5.0"
-    sha256 "874f25ba7e5819ddc738a198584c3120ede20157afb13b9e728c8d6e0b1d75d4"
+    version "5.0.1"
+    sha256 "b58bc8f3583a34287a3b1987dec37b89fc30eabce54523aaa37f8b21e6390190"
 
     url "https://www.lobotomo.com/download/ipsecuritas-#{version}.dmg"
   end

@@ -1,6 +1,6 @@
 cask "securesafe" do
-  version "2.9.2"
-  sha256 "f15988c0048d47f6c6434f2a0d84f04addb88c0ee734cab03b74e2060b1915d0"
+  version "2.10.0"
+  sha256 "4c09de831aaba8ceccc594f9ccaaf3cca5c1afaa84e87b55b7d4e4f8e824fe61"
 
   url "https://www.dswiss.com/userdata/downloads/securesafe-#{version}.pkg",
       verified: "dswiss.com/userdata/downloads/"

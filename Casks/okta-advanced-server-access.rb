@@ -1,6 +1,6 @@
 cask "okta-advanced-server-access" do
-  version "1.51.3"
-  sha256 "0594f06c0e0d763cd07d94a134941b8a539ff11b7935699d662edb9a092c7631"
+  version "1.52.2"
+  sha256 "5aad5453e027def51c1248fe57e4286470100c948d72417e6b846584d28cc523"
 
   url "https://dist.scaleft.com/client-tools/mac/v#{version}/ScaleFT-#{version}.pkg",
       verified: "scaleft.com/"
