@@ -4,10 +4,14 @@ cask "deluge" do
 
   url "https://ftp.osuosl.org/pub/deluge/mac_osx/deluge-#{version}-macosx-x64.dmg",
       verified: "ftp.osuosl.org/"
-  appcast "https://ftp.osuosl.org/pub/deluge/mac_osx/?C=M;O=D"
   name "Deluge"
   desc "BitTorrent client"
   homepage "https://deluge-torrent.org/"
+
+  livecheck do
+    url "https://ftp.osuosl.org/pub/deluge/mac_osx/?C=M;O=D"
+    regex(/href=["']?deluge[._-]v?(\d+(?:\.\d+)*)[._-][a-z0-9._-]*\.dmg/i)
+  end
 
   app "Deluge.app"
 end
