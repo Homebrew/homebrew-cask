@@ -10,7 +10,6 @@ cask "xca" do
 
   livecheck do
     url :url
-    strategy :git
     regex(/^RELEASE\.(\d+(?:\.\d+)*)$/i)
   end
 
