@@ -4,6 +4,7 @@ cask "ammonite" do
 
   url "https://www.soma-zone.com/download/files/Ammonite-#{version.before_comma}.tar.bz2"
   name "Ammonite"
+  desc "Tag visualizer and search utility"
   homepage "https://www.soma-zone.com/Ammonite/"
 
   livecheck do
