@@ -4,10 +4,14 @@ cask "disk-inventory-x" do
 
   url "http://www.derlien.com/diskinventoryx/downloads/Disk%20Inventory%20X%20#{version}.dmg",
       user_agent: :fake
-  appcast "http://www.derlien.com/downloads/index.html"
   name "Disk Inventory X"
   desc "Disk usage utility"
   homepage "http://www.derlien.com/"
+
+  livecheck do
+    url "http://www.derlien.com/download.php?file=DiskInventoryX"
+    strategy :header_match
+  end
 
   depends_on macos: ">= :high_sierra"
 
