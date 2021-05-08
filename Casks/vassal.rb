@@ -1,8 +1,8 @@
 cask "vassal" do
-  version "3.4.13"
-  sha256 "300b6c5e0837172019813b399d924c5e880ee9b7821b0ab90a9253027860ff70"
+  version "3.5.5"
+  sha256 "4ea3dac56ac4e8b3249d9bf009fe2c736a350967fa07b248276a2f4ce1002823"
 
-  url "https://github.com/vassalengine/vassal/releases/download/#{version}/VASSAL-#{version}-macosx.dmg",
+  url "https://github.com/vassalengine/vassal/releases/download/#{version}/VASSAL-#{version}-macos.dmg",
       verified: "github.com/vassalengine/vassal/"
   name "VASSAL"
   desc "Open-source boardgame engine"
