@@ -7,6 +7,11 @@ cask "logisim-evolution" do
   desc "Digital logic designer and simulator"
   homepage "https://github.com/reds-heig/logisim-evolution"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   container type: :naked
 
   app "logisim-evolution-#{version}-all.jar", target: "logisim-evolution.jar"
