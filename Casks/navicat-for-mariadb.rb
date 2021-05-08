@@ -1,5 +1,5 @@
 cask "navicat-for-mariadb" do
-  version "15.0.26"
+  version "15.0.28"
   sha256 :no_check
 
   url "http://download.navicat.com/download/navicat#{version.major_minor.no_dots}_mariadb_en.dmg"
