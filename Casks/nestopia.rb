@@ -4,7 +4,7 @@ cask "nestopia" do
 
   url "https://www.bannister.org/cgi-bin/download.cgi?nestopia"
   name "Nestopia"
-  desc "Nintendo NES emulator"
+  desc "Nintendo Entertainment System (NES) emulator"
   homepage "https://www.bannister.org/software/nestopia.htm"
 
   livecheck do
