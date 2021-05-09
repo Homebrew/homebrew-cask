@@ -4,6 +4,7 @@ cask "santa" do
 
   url "https://github.com/google/santa/releases/download/#{version}/santa-#{version}.dmg"
   name "Santa"
+  desc "Binary authorization system"
   homepage "https://github.com/google/santa"
 
   pkg "santa-#{version}.pkg"
