@@ -11,6 +11,7 @@ cask "jedit-omega" do
       verified: "artman21.co.jp/"
   appcast "http://www.artman21.com/en/jeditOmega/history.html"
   name "Jedit Ω"
+  desc "Text editor"
   homepage "http://www.artman21.com/en/jeditOmega/"
 
   app "Jedit Ω.app"
