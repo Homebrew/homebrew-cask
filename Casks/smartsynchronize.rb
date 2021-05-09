@@ -1,6 +1,6 @@
 cask "smartsynchronize" do
-  version "4.2.0"
-  sha256 "28d1255b9b4479ded49e3d5b4100db70c65e8a5b1ddaab1f7c35c07cb6a4c743"
+  version "32"
+  sha256 "a565e6b42077c415dd0e7a97485330bf9f087634de6be09e2e10c9803a8d5798"
 
   url "https://www.syntevo.com/downloads/smartsynchronize/smartsynchronize-macos-#{version.dots_to_underscores}.dmg"
   name "SmartSynchronize"
