@@ -4,15 +4,13 @@ cask "depthmapx" do
 
   url "https://github.com/SpaceGroupUCL/depthmapX/releases/download/v#{version}/depthmapX-#{version}_macos.zip"
   name "depthmapX"
-  desc "Multi-Platform Spatial Network Analysis Software"
+  desc "Spatial Network Analysis Software"
   homepage "https://github.com/SpaceGroupUCL/depthmapX"
 
   livecheck do
     url :url
     strategy :github_latest
   end
-
-  app "depthmapX.app"
 
   caveats "depthmapX-cli is not included"
   caveats do
