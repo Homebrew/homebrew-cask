@@ -6,7 +6,7 @@ cask "vscodium" do
   name "VSCodium"
   desc "Binary releases of VS Code without MS branding/telemetry/licensing"
   homepage "https://github.com/VSCodium/vscodium"
-  
+
   auto_updates true
 
   app "VSCodium.app"
