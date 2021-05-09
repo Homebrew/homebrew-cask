@@ -9,8 +9,7 @@ cask "mongodb-compass" do
 
   livecheck do
     url "https://info-mongodb-com.s3.amazonaws.com/com-download-center/compass.json"
-    strategy :page_match
-    regex(/"version"\s*:\s*"(\d+(?:\.\d+)*)\s*/i)
+    regex(/"version"\s*:\s*"(\d+(?:\.\d+)+)\s*\(Stable/i)
   end
 
   app "MongoDB Compass.app"
