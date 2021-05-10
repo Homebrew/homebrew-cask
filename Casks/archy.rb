@@ -4,7 +4,7 @@ cask "archy" do
 
   url "https://sdk-cdn.mypurecloud.com/archy/#{version}/archy-macos.zip"
   name "archy"
-  desc "Is a Genesys Cloud Architect YAML processor that lets you create Architect flows from YAML files that you write"
+  desc "Is a Genesys Cloud Architect YAML processor"
   homepage "https://developer.mypurecloud.com/devapps/archy/"
 
   binary "archyBin/archy-macos-#{version}", target: "archy"
