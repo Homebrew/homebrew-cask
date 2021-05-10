@@ -2,10 +2,15 @@ cask "vitalsigns" do
   version "3.0.10"
   sha256 :no_check
 
-  url "https://www.disometric.com/downloads/VitalSigns3/VitalSigns.dmg"
-  name "vitalsigns"
-  desc "Temperature and Memory Monitor"
+  url "https://www.disometric.com/downloads/VitalSigns#{version.major}/VitalSigns.dmg"
+  name "Vitalsigns"
+  desc "Temperature and memory monitor"
   homepage "https://www.disometric.com/vitalsigns/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   auto_updates true
   depends_on macos: ">= :catalina"
