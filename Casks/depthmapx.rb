@@ -12,6 +12,8 @@ cask "depthmapx" do
     strategy :github_latest
   end
 
+  app "depthmapX.app"
+
   caveats "depthmapX-cli is not included"
   caveats do
     unsigned_accessibility
