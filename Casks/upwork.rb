@@ -4,6 +4,7 @@ cask "upwork" do
 
   url "https://updates-desktopapp.upwork.com/binaries/v#{version.before_comma.dots_to_underscores}_#{version.after_comma}/Upwork.dmg"
   name "Upwork"
+  desc "Work marketplace for freelancing"
   homepage "https://www.upwork.com/"
 
   livecheck do
