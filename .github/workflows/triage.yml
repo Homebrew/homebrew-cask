@@ -3,32 +3,32 @@ name: Triage tasks
 on: pull_request_target
 
 jobs:
-    triage:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Check commit format
-              uses: Homebrew/actions/check-commit-format@master
-              with:
-                  token: ${{secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN}}
-            - name: Cancel previous runs
-              uses: Homebrew/actions/cancel-previous-runs@master
-              if: always()
-              with:
-                  token: ${{secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN}}
-            - name: Label pull request
-              uses: Homebrew/actions/label-pull-requests@master
-              if: always()
-              with:
-                  token: ${{secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN}}
-                  def: |
-                      [
-                          {
-                              "label": "new cask",
-                              "status": "added",
-                              "path": "Casks/.+"
-                          }, {
-                              "label": "marked for removal/rejection",
-                              "status": "removed",
-                              "path": "Casks/.+"
-                          }
-                      ]
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check commit format
+        uses: Homebrew/actions/check-commit-format@master
+        with:
+          token: ${{secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN}}
+      - name: Cancel previous runs
+        uses: Homebrew/actions/cancel-previous-runs@master
+        if: always()
+        with:
+          token: ${{secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN}}
+      - name: Label pull request
+        uses: Homebrew/actions/label-pull-requests@master
+        if: always()
+        with:
+          token: ${{secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN}}
+          def: |
+            [
+              {
+                "label": "new cask",
+                "status": "added",
+                "path": "Casks/.+"
+              }, {
+                "label": "marked for removal/rejection",
+                "status": "removed",
+                "path": "Casks/.+"
+              }
+            ]
