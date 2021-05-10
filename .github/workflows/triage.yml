@@ -30,5 +30,8 @@ jobs:
                 "label": "marked for removal/rejection",
                 "status": "removed",
                 "path": "Casks/.+"
+              }, {
+                "label": "bump-cask-pr",
+                "pr_body_content": "Created with `brew bump-cask-pr`"
               }
             ]
