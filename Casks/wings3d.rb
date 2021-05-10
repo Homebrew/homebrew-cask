@@ -4,8 +4,8 @@ cask "wings3d" do
 
   url "https://downloads.sourceforge.net/wings/wings-#{version}-macosx.dmg",
       verified: "sourceforge.net/wings/"
-  appcast "https://sourceforge.net/projects/wings/rss"
   name "Wings 3D"
+  desc "Advanced subdivision modeler"
   homepage "http://www.wings3d.com/"
 
   app "Wings3D.app"
