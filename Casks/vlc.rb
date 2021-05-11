@@ -1,7 +1,7 @@
 cask "vlc" do
   if Hardware::CPU.intel?
-    version "3.0.12"
-    sha256 "9b8b5a78ee0d7448e840680df34c1417f7c8c87161127c2d150794b2449be5d1"
+    version "3.0.13"
+    sha256 "46ff8614c9638768c3f7ffb5ebd6515a9014a6ea6d3066cdbc4825e554aee9bd"
 
     url "https://get.videolan.org/vlc/#{version}/macosx/vlc-#{version}-intel64.dmg"
 
@@ -10,8 +10,8 @@ cask "vlc" do
       strategy :sparkle
     end
   else
-    version "3.0.12.1"
-    sha256 "5a5572c3a0bcf5c7a286dee0fbc027899a916a1c3fea919492894ae714789efa"
+    version "3.0.13"
+    sha256 "0f7034b12dc855d70dead31bf4937d7cc16478c61627ac250c8349285fdfe4de"
 
     url "https://get.videolan.org/vlc/#{version}/macosx/vlc-#{version}-arm64.dmg"
 
