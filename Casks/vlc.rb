@@ -6,24 +6,25 @@ cask "vlc" do
 
     url "https://get.videolan.org/vlc/#{version}/macosx/vlc-#{version}-intel64.dmg"
 
-    livecheck do
-      url "https://update.videolan.org/vlc/sparkle/vlc-intel64.xml"
-      strategy :sparkle
-    end
   else
     sha256 "0f7034b12dc855d70dead31bf4937d7cc16478c61627ac250c8349285fdfe4de"
 
     url "https://get.videolan.org/vlc/#{version}/macosx/vlc-#{version}-arm64.dmg"
 
-    livecheck do
-      url "https://update.videolan.org/vlc/sparkle/vlc-arm64.xml"
-      strategy :sparkle
-    end
   end
 
   name "VLC media player"
   desc "Multimedia player"
   homepage "https://www.videolan.org/vlc/"
+
+  livecheck do
+    if Hardware::CPU.intel?
+      url "https://update.videolan.org/vlc/sparkle/vlc-intel64.xml"
+    else
+      url "https://update.videolan.org/vlc/sparkle/vlc-arm64.xml"
+    end
+    strategy :sparkle
+  end
 
   auto_updates true
   conflicts_with cask: "homebrew/cask-versions/vlc-nightly"
