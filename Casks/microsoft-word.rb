@@ -6,6 +6,7 @@ cask "microsoft-word" do
       verified: "officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/"
   appcast "https://docs.microsoft.com/en-us/officeupdates/update-history-office-for-mac"
   name "Microsoft Word"
+  desc "Word processor"
   homepage "https://products.office.com/en-US/word"
 
   auto_updates true
