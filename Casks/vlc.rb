@@ -18,8 +18,8 @@ cask "vlc" do
   homepage "https://www.videolan.org/vlc/"
 
   livecheck do
-    url "https://update.videolan.org/vlc/sparkle/vlc-intel64.xml"
-    strategy :sparkle
+    url "https://www.videolan.org/vlc/download-macosx.html"
+    regex(%r{href=.*?/vlc[._-]v?(\d+(?:\.\d+)+)(?:[._-][a-z]\w*)?\.dmg}i)
   end
 
   auto_updates true
