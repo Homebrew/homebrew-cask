@@ -4,9 +4,14 @@ cask "microsoft-excel" do
 
   url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Excel_#{version}_Installer.pkg",
       verified: "officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/"
-  appcast "https://docs.microsoft.com/en-us/officeupdates/update-history-office-for-mac"
   name "Microsoft Excel"
+  desc "Spreadsheet software"
   homepage "https://products.office.com/en-US/excel"
+
+  livecheck do
+    url "https://go.microsoft.com/fwlink/p/?linkid=525135"
+    strategy :header_match
+  end
 
   auto_updates true
   conflicts_with cask: "microsoft-office"
