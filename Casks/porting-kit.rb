@@ -1,14 +1,14 @@
 cask "porting-kit" do
-  version "3.0.60"
-  sha256 "7c6fd060d90e76c2a8c2272d49f92ef99600c65ed9b7c71617f9e96256a76637"
+  version "4.1.31"
+  sha256 "7b1c65bafd41a621e5b10843f5eb27ad9f10b77dede13ad5219911cb94a2871f"
 
-  url "https://portingkit.com/kit/Porting%20Kit%20#{version}.zip"
+  url "https://portingkit.com/pub/portingkit/Porting%20Kit-#{version}-mac.zip"
   name "Porting Kit"
   homepage "https://portingkit.com/"
 
   livecheck do
-    url "https://portingkit.com/kit/updatecast.xml"
-    strategy :sparkle
+    url "https://portingkit.com/pub/portingkit/latest-mac.yml"
+    strategy :electron_builder
   end
 
   auto_updates true
