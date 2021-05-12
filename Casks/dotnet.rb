@@ -1,11 +1,16 @@
 cask "dotnet" do
-  version "5.0.5,0e2acfdc-5dad-48a8-935d-6095a0ae2217:3ffa41859dbb1ca40a7e1ff704651178"
-  sha256 "f4f3b02899e48b7cb0f1ed8b99f38db630f2e957d47b96de1ee76444b9201dae"
+  version "5.0.6,4e2e2c76-626f-4927-8753-55d47ab79e06:4417509d68777cab1ed5f927e86db82"
+  sha256 "208eae389ea28d76b6b081f944cecca9ec7f0d59bba6711ade976a8c2bf18994"
 
   url "https://download.visualstudio.microsoft.com/download/pr/#{version.after_comma.before_colon}/#{version.after_colon}/dotnet-runtime-#{version.before_comma}-osx-x64.pkg"
   appcast "https://dotnet.microsoft.com/download/dotnet-core"
-  name ".Net Core Runtime"
+  name ".Net Runtime"
+  desc "Developer platform"
   homepage "https://www.microsoft.com/net/core#macos"
+
+  livecheck do
+    skip "No version information available"
+  end
 
   conflicts_with cask: [
     "dotnet-sdk",
