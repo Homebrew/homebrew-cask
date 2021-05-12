@@ -7,6 +7,9 @@ cask "dotnet" do
   desc "Developer platform"
   homepage "https://www.microsoft.com/net/core#macos"
 
+  # This identifies releases with the same major/minor version as the current
+  # cask version. New major/minor releases occur annually in November and the
+  # check will automatically update its behavior when the cask is updated.
   livecheck do
     url "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/#{version.major_minor}/releases.json"
     strategy :page_match do |page|
