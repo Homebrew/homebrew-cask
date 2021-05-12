@@ -18,11 +18,7 @@ cask "vlc" do
   homepage "https://www.videolan.org/vlc/"
 
   livecheck do
-    if Hardware::CPU.intel?
-      url "https://update.videolan.org/vlc/sparkle/vlc-intel64.xml"
-    else
-      url "https://update.videolan.org/vlc/sparkle/vlc-arm64.xml"
-    end
+    url "https://update.videolan.org/vlc/sparkle/vlc-intel64.xml"
     strategy :sparkle
   end
 
