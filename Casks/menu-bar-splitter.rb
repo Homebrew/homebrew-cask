@@ -7,11 +7,6 @@ cask "menu-bar-splitter" do
   desc "Utility for keeping menu bar organized"
   homepage "https://github.com/jwhamilton99/menu-bar-splitter"
 
-  livecheck do
-    url "https://github.com/jwhamilton99/menu-bar-splitter"
-    strategy :git
-  end
-
   depends_on macos: ">= :catalina"
 
   app "Menu Bar Splitter.app"
