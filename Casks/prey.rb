@@ -14,6 +14,10 @@ cask "prey" do
 
   pkg "prey-mac-#{version}-x64.pkg"
 
+  preflight do
+    ENV["API_KEY"] = ENV["HOMEBREW_PREY_SETUP_API_KEY"]
+  end
+
   uninstall pkgutil:   "com.prey.agent",
             launchctl: "com.prey.agent"
 
@@ -25,6 +29,6 @@ cask "prey" do
 
     The API key may be set as an environment variable as follows:
 
-      HOMEBREW_NO_ENV_FILTERING=1 API_KEY="foobar123" brew install --cask prey
+      HOMEBREW_PREY_SETUP_API_KEY="foobar123" brew install --cask prey
   EOS
 end
