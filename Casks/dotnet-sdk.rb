@@ -16,7 +16,7 @@ cask "dotnet-sdk" do
     "homebrew/cask-versions/dotnet-preview",
     "homebrew/cask-versions/dotnet-sdk-preview",
   ]
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   pkg "dotnet-sdk-#{version.before_comma}-osx-x64.pkg"
   binary "/usr/local/share/dotnet/dotnet"
