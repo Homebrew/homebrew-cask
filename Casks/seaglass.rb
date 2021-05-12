@@ -7,12 +7,6 @@ cask "seaglass" do
   desc "Matrix client"
   homepage "https://github.com/neilalexander/seaglass/"
 
-  livecheck do
-    url "https://github.com/neilalexander/seaglass/releases"
-    strategy :page_match
-    regex(/Seaglass-(\d+(?:.\w+)*)\.zip/i)
-  end
-
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
