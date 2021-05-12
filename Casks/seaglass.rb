@@ -9,6 +9,7 @@ cask "seaglass" do
 
   livecheck do
     url "https://github.com/neilalexander/seaglass/releases"
+    strategy :page_match
     regex(/Seaglass-(\d+(?:.\w+)*)\.zip/i)
   end
 
