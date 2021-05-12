@@ -11,7 +11,7 @@ cask "magicavoxel" do
   livecheck do
     url "https://github.com/ephtracy/ephtracy.github.io/releases"
     strategy :page_match
-    regex(/MagicaVoxel-(\d+(?:\.\d+)*)/i)
+    regex(/MagicaVoxel-(\d+(?:\.\d+)*)-macos/i)
   end
 
   suite staged_path, target: "MagicaVoxel"
