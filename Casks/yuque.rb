@@ -10,8 +10,7 @@ cask "yuque" do
   homepage "https://www.yuque.com/"
 
   livecheck do
-    url "https://www.yuque.com/yuque/help/changelog"
-    strategy :page_match
+    url "https://www.yuque.com/yuque/yuque-desktop/changelog"
     regex(/下载地址(\d+(?:\.\d+)*)/i)
   end
 
