@@ -3,7 +3,7 @@ cask "microsoft-office" do
   sha256 "cf605558a84f9e51e11d766196be94c60ec236c17cbf7f2627bd5eefd4cd98e4"
 
   url "https://officecdn-microsoft-com.akamaized.net/db/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Office_#{version}_Installer.pkg",
-      verified: "officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/"
+      verified: "officecdn-microsoft-com.akamaized.net/db/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/"
   name "Microsoft Office"
   desc "Office suite"
   homepage "https://products.office.com/mac/microsoft-office-for-mac/"
