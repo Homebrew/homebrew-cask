@@ -4,7 +4,6 @@ cask "oversight" do
 
   url "https://github.com/objective-see/OverSight/releases/download/v#{version}/OverSight_#{version}.zip",
       verified: "github.com/objective-see/OverSight"
-  appcast "https://objective-see.com/products/changelogs/OverSight.txt"
   name "OverSight"
   desc "Monitors computer mic and webcam"
   homepage "https://objective-see.com/products/oversight.html"
