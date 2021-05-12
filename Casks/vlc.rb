@@ -1,13 +1,13 @@
 cask "vlc" do
-  version "3.0.13"
+  version "3.0.14"
 
   if Hardware::CPU.intel?
-    sha256 "46ff8614c9638768c3f7ffb5ebd6515a9014a6ea6d3066cdbc4825e554aee9bd"
+    sha256 "a5628b5f7e69ce18dd13ca724f67c7c4381c0ed22862fcb2064d00227f42f42f"
 
     url "https://get.videolan.org/vlc/#{version}/macosx/vlc-#{version}-intel64.dmg"
 
   else
-    sha256 "0f7034b12dc855d70dead31bf4937d7cc16478c61627ac250c8349285fdfe4de"
+    sha256 "8d0b897ba5a9366f1482d84fea4e67eec42c47711df18f80ae596872ac881365"
 
     url "https://get.videolan.org/vlc/#{version}/macosx/vlc-#{version}-arm64.dmg"
 
