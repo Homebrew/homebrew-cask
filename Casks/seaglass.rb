@@ -4,9 +4,14 @@ cask "seaglass" do
 
   url "https://github.com/neilalexander/seaglass/releases/download/#{version}/Seaglass-#{version}.zip",
       verified: "github.com/neilalexander/seaglass/"
-  appcast "https://github.com/neilalexander/seaglass/releases.atom"
   name "Seaglass"
+  desc "Matrix client"
   homepage "https://neilalexander.eu/seaglass/"
+
+  livecheck do
+    url :url
+    regex(/Seaglass-(\d+(?:.\w+)*)\.zip/i)
+  end
 
   auto_updates true
   depends_on macos: ">= :high_sierra"
