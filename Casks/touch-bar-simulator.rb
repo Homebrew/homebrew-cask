@@ -17,7 +17,7 @@ cask "touch-bar-simulator" do
   end
 
   name "Touch Bar Simulator"
-  desc "The Touch Bar as a standalone app"
+  desc "Touch Bar as a standalone app"
   homepage "https://github.com/sindresorhus/touch-bar-simulator"
 
   depends_on macos: ">= :sierra"
