@@ -38,7 +38,7 @@ cask "minecraft-server" do
 
   postflight do
     system_command shimscript
-    IO.write(eula_file, IO.read(eula_file).sub("eula=false", "eula=TRUE"))
+    File.write(eula_file, File.read(eula_file).sub("eula=false", "eula=TRUE"))
   end
 
   uninstall_preflight do
