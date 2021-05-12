@@ -4,8 +4,8 @@ cask "pokerth" do
 
   url "https://downloads.sourceforge.net/pokerth/PokerTH_#{version}.dmg",
       verified: "downloads.sourceforge.net/pokerth/"
-  appcast "https://sourceforge.net/projects/pokerth/rss"
   name "PokerTH"
+  desc "Free Texas hold'em poker"
   homepage "https://www.pokerth.net/"
 
   app "pokerth.app"
