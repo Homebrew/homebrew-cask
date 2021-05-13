@@ -4,7 +4,6 @@ cask "packet-peeper" do
 
   url "https://github.com/choll/packetpeeper/releases/download/#{version}/PacketPeeper_#{version}.dmg",
       verified: "github.com/choll/packetpeeper/"
-  appcast "https://packetpeeper.org/release-notes/"
   name "Packet Peeper"
   desc "Network protocol analyzer"
   homepage "https://packetpeeper.org/"
