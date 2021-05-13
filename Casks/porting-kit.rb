@@ -4,6 +4,7 @@ cask "porting-kit" do
 
   url "https://portingkit.com/pub/portingkit/Porting%20Kit-#{version}-mac.zip"
   name "Porting Kit"
+  desc "Install games and apps compiled for Microsoft Windows"
   homepage "https://portingkit.com/"
 
   livecheck do
