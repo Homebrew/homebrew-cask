@@ -10,7 +10,7 @@ cask "shortcutor" do
   livecheck do
     url "https://shortcutor.com/getfile.html"
     strategy :page_match
-    regex(/(\d{4}\.\d+\.\d+)/)
+    regex(/Shortcutor-(\d+(?:\.\d+)*)\.dmg/i)
   end
 
   app "Shortcutor.app"
