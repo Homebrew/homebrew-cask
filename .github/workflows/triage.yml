@@ -31,6 +31,9 @@ jobs:
                 "status": "removed",
                 "path": "Casks/.+"
               }, {
+                "label": "documentation",
+                "path": "(.*\\.md|\\.github/ISSUE_TEMPLATE/.*\\.yml)"
+              }, {
                 "label": "bump-cask-pr",
                 "pr_body_content": "Created with `brew bump-cask-pr`"
               }
