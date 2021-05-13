@@ -8,6 +8,8 @@ cask "opennx" do
   desc "Replacement for NoMachine's NX client"
   homepage "http://opennx.net/"
 
+  depends_on cask: "xquartz"
+
   pkg "OpenNX.pkg"
 
   uninstall script:  {
