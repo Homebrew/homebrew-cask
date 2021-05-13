@@ -4,10 +4,14 @@ cask "impactor" do
 
   url "https://cache.saurik.com/impactor/mac/Impactor_#{version}.dmg",
       verified: "cache.saurik.com/impactor/"
-  appcast "https://cydia.saurik.com/api/appcast/1"
   name "Impactor"
   desc "GUI tool for working with mobile devices"
   homepage "http://www.cydiaimpactor.com/"
+
+  livecheck do
+    url "https://cydia.saurik.com/api/latest/1"
+    strategy :header_match
+  end
 
   app "Impactor.app"
 
