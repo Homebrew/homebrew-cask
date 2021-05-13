@@ -21,4 +21,8 @@ cask "cocoapods" do
   end
 
   zap trash: "~/Library/Preferences/org.cocoapods.CocoaPods.plist"
+
+  caveats do
+    discontinued
+  end
 end
