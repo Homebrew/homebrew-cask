@@ -4,8 +4,8 @@ cask "opennx" do
 
   url "https://downloads.sourceforge.net/opennx/OpenNX-#{version}.dmg",
       verified: "sourceforge.net/opennx/"
-  appcast "https://sourceforge.net/projects/opennx/rss"
   name "OpenNX"
+  desc "Replacement for NoMachine's NX client"
   homepage "http://opennx.net/"
 
   pkg "OpenNX.pkg"
