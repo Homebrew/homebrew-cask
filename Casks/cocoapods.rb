@@ -4,7 +4,6 @@ cask "cocoapods" do
 
   url "https://github.com/CocoaPods/CocoaPods-app/releases/download/#{version}/CocoaPods.app-#{version}.tar.bz2",
       verified: "github.com/CocoaPods/CocoaPods-app/"
-  appcast "https://app.cocoapods.org/sparkle"
   name "CocoaPods.app"
   desc "Dependency manager for Cocoa projects"
   homepage "https://cocoapods.org/"
