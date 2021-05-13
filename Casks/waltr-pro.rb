@@ -7,5 +7,5 @@ cask "waltr-pro" do
   name "WALTR PRO"
   homepage "https://softorino.com/waltr/"
 
-  app "Waltr #{version.major}.app"
+  app "WALTR PRO.app"
 end
