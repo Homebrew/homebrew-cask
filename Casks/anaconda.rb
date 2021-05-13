@@ -8,9 +8,9 @@ cask "anaconda" do
   homepage "https://www.anaconda.com/"
 
   livecheck do
-    url "https://www.anaconda.com/products/individual"
+    url "https://repo.anaconda.com/archive/"
     strategy :page_match
-    regex(/href=.*?Anaconda3-(\d+(?:\.\d+)*)-MacOSX-x86_64\.sh/i)
+    regex(/Anaconda3-(\d+(?:\.\d+)*)-MacOSX-x86_64\.sh/i)
   end
 
   auto_updates true
