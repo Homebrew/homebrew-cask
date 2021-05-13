@@ -14,5 +14,9 @@ cask "waltr-pro" do
 
   app "WALTR PRO.app"
 
-  zap trash: "~/Library/Application Support/WALTR PRO"
+  zap trash: [
+    "~/Library/Application Support/WALTR PRO",
+    "~/Library/Preferences/com.softorino.waltrpro.plist",
+    "/Users/Shared/WALTR PRO",
+  ]
 end
