@@ -7,8 +7,16 @@ cask "dotnet-sdk" do
   desc "Developer platform"
   homepage "https://www.microsoft.com/net/core#macos"
 
+  # This identifies releases with the same major/minor version as the current
+  # cask version. New major/minor releases occur annually in November and the
+  # check will automatically update its behavior when the cask is updated.
   livecheck do
-    skip "No version information available"
+    url "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/#{version.major_minor}/releases.json"
+    strategy :page_match do |page|
+      page.scan(%r{/download/pr/([^/]+)/([^/]+)/dotnet-sdk-v?(\d+(?:\.\d+)+)-osx-x64\.pkg}i).map do |match|
+        "#{match[2]},#{match[0]}:#{match[1]}"
+      end
+    end
   end
 
   conflicts_with cask: [
