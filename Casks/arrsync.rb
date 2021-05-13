@@ -4,9 +4,15 @@ cask "arrsync" do
 
   url "https://downloads.sourceforge.net/arrsync/arrsync-#{version}.dmg",
       verified: "downloads.sourceforge.net/arrsync/"
-  appcast "https://sourceforge.net/projects/arrsync/rss"
   name "arRsync"
-  homepage "https://arrsync.sourceforge.io/"
+  desc "Graphical front end for the utility rsync"
+  homepage "http://arrsync.sourceforge.net/"
+
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(/arrsync-(\d+(?:\.\d+)*)\.dmg/i)
+  end
 
   app "arRsync.app"
 end
