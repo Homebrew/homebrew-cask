@@ -4,9 +4,14 @@ cask "cuda-z" do
 
   url "https://downloads.sourceforge.net/cuda-z/CUDA-Z-#{version}.dmg",
       verified: "downloads.sourceforge.net/cuda-z/"
-  appcast "https://sourceforge.net/projects/cuda-z/rss"
   name "CUDA-Z"
-  homepage "https://cuda-z.sourceforge.io/"
+  homepage "http://cuda-z.sourceforge.net/"
+
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(/CUDA-Z-(\d+(?:\.\d+)*)\.dmg/i)
+  end
 
   app "CUDA-Z.app"
 end
