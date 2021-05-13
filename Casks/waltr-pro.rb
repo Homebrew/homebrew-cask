@@ -13,4 +13,8 @@ cask "waltr-pro" do
   end
 
   app "WALTR PRO.app"
+
+  zap trash: [
+    "~/Library/Application Support/WALTR PRO"
+  ]
 end
