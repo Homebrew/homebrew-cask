@@ -8,5 +8,11 @@ cask "mem" do
   desc "Capture and access information from anywhere"
   homepage "https://get.mem.ai/"
 
+  livecheck do
+    url "https://storage.googleapis.com/mem-desktop/latest-mac.yml"
+    strategy :page_match
+    regex(/Mem-(\d+(?:\.\d+)*)\.dmg/i)
+  end
+
   app "Mem.app"
 end
