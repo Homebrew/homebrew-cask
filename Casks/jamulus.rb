@@ -4,8 +4,8 @@ cask "jamulus" do
 
   url "https://downloads.sourceforge.net/llcon/jamulus_#{version}_mac.dmg",
       verified: "downloads.sourceforge.net/llcon/"
-  appcast "https://sourceforge.net/projects/llcon/rss"
   name "Jamulus"
+  desc "Play music online with friends"
   homepage "https://jamulus.io/"
 
   depends_on macos: ">= :el_capitan"
