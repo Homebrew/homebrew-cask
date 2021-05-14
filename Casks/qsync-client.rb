@@ -12,7 +12,7 @@ cask "qsync-client" do
     regex(/QNAPQsyncClientMac[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  pkg "Qsync Client.pkg"
+  installer manual: "Qsync Client.pkg"
 
   uninstall pkgutil: "com.qnap.qsync",
             quit:    [
