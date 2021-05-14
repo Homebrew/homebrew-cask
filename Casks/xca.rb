@@ -1,6 +1,6 @@
 cask "xca" do
   version "2.4.0"
-  sha256 "a5672fd46168b8d81c226dc47dd0022773382389291676c8aa17d6765e20b697"
+  sha256 "1fb5fa69759f9bfd15e0a8ddabc6b9e2cf52e9c41ad2346b2f4c293d950c6bc4"
 
   url "https://github.com/chris2511/xca/releases/download/RELEASE.#{version}/xca-#{version}.dmg",
       verified: "github.com/chris2511/xca/"
