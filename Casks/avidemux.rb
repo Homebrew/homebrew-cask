@@ -13,7 +13,6 @@ cask "avidemux" do
         verified: "sourceforge.net/avidemux/"
   end
 
-  appcast "https://sourceforge.net/projects/avidemux/rss?path=/avidemux"
   name "Avidemux"
   desc "Video editor"
   homepage "https://www.avidemux.org/"

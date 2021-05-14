@@ -1,15 +1,15 @@
 cask "pritunl" do
-  version "1.2.2768.85"
+  version "1.2.2799.2"
 
   if Hardware::CPU.intel?
-    sha256 "833d2ed4b5a8d36af110b0bcb91db6bcef51f0c2b3dc1c73186befb450c1fcb2"
+    sha256 "4482bc804242c3c6d04fa9a18e5c4a07eb77a5c0aa12e8f10a109730f8eba36d"
 
     url "https://github.com/pritunl/pritunl-client-electron/releases/download/#{version}/Pritunl.pkg.zip",
         verified: "github.com/pritunl/pritunl-client-electron/"
 
     pkg "Pritunl.pkg"
   else
-    sha256 "db042372c29a6bd99ca9f769c875e0778c8c4d1b6f3266a16b92547056ca2b42"
+    sha256 "79c75a385ddc9f4f99e8e05888a0864b947049cc1311c6c34b4aa1c50186edcc"
 
     url "https://github.com/pritunl/pritunl-client-electron/releases/download/#{version}/Pritunl.arm64.pkg.zip",
         verified: "github.com/pritunl/pritunl-client-electron/"
