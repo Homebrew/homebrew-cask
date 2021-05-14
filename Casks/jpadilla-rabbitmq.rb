@@ -4,7 +4,7 @@ cask "jpadilla-rabbitmq" do
 
   url "https://github.com/jpadilla/rabbitmqapp/releases/download/#{version}/RabbitMQ.zip",
       verified: "github.com/jpadilla/rabbitmqapp/"
-  name "RabbitMQ.app"
+  name "RabbitMQ"
   desc "App wrapper for RabbitMQ"
   homepage "https://jpadilla.github.io/rabbitmqapp/"
 
