@@ -10,8 +10,7 @@ cask "mem" do
 
   livecheck do
     url "https://storage.googleapis.com/mem-desktop/latest-mac.yml"
-    strategy :page_match
-    regex(/Mem-(\d+(?:\.\d+)*)\.dmg/i)
+    strategy :electron_builder
   end
 
   app "Mem.app"
