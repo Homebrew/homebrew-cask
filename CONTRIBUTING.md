@@ -51,9 +51,9 @@ With a bit of work, you can create a Cask for it. The document [Adding A Cask](d
 Some style guidelines:
 
 * All Casks and code should be indented using two spaces (never tabs). When `brew style` contradicts this, `style` must be followed.
-* There should not be any extraneous comments - the only comments that should be used are the ones explicitly defined in the [Cask Cookbook](https://docs.brew.sh/Cask-Cookbook.md).
-* The stanza order and position of newlines is important to make things easier (See [Stanza order](https://docs.brew.sh/Cask-Cookbook.md#stanza-order)).
-* Use string manipulations to improve the maintainability of your Cask (See [`version` methods](https://docs.brew.sh/Cask-Cookbook.md#version-methods)).
+* There should not be any extraneous comments - the only comments that should be used are the ones explicitly defined in the [Cask Cookbook](https://docs.brew.sh/Cask-Cookbook).
+* The stanza order and position of newlines is important to make things easier (See [Stanza order](https://docs.brew.sh/Cask-Cookbook#stanza-order)).
+* Use string manipulations to improve the maintainability of your Cask (See [`version` methods](https://docs.brew.sh/Cask-Cookbook#version-methods)).
 * Test your cask using `brew audit/style` (See [testing](doc/development/adding_a_cask.md#testing-your-new-cask)).
 * Make one Pull Request per Cask change.
 * Do not squash commits after updating a Pull Request.
