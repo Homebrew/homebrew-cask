@@ -4,7 +4,6 @@ cask "meteorologist" do
 
   url "https://downloads.sourceforge.net/heat-meteo/Meteorologist-#{version}.dmg",
       verified: "downloads.sourceforge.net/heat-meteo/"
-  appcast "https://sourceforge.net/projects/heat-meteo/rss"
   name "Meteorologist"
   desc "Adjustable weather viewing application"
   homepage "https://heat-meteo.sourceforge.io/"

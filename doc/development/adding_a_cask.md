@@ -12,7 +12,7 @@ Making a new Cask is easy. Follow the directions in [Getting Set Up To Contribut
 
 ### Examples
 
-Here’s a Cask for `shuttle` as an example. Note the comment above `url`, which is needed when [the url and homepage hostnames differ](https://docs.brew.sh/Cask-Cookbook.md#when-url-and-homepage-hostnames-differ-add-a-comment)
+Here’s a Cask for `shuttle` as an example. Note the `verified` parameter below the `url`, which is needed when [the url and homepage hostnames differ](https://docs.brew.sh/Cask-Cookbook#when-url-and-homepage-hostnames-differ-add-verified)
 
 ```ruby
 cask "shuttle" do
@@ -21,7 +21,6 @@ cask "shuttle" do
 
   url "https://github.com/fitztrev/shuttle/releases/download/v#{version}/Shuttle.zip",
       verified: "github.com/fitztrev/shuttle/"
-  appcast "https://github.com/fitztrev/shuttle/releases.atom"
   name "Shuttle"
   desc "Simple shortcut menu"
   homepage "https://fitztrev.github.io/shuttle/"
@@ -32,36 +31,40 @@ cask "shuttle" do
 end
 ```
 
-And here is one for `advancedcolors`. Note that it has an unversioned download (the download `url` does not contain the version number, unlike the example above). It also suppresses the checksum with `sha256 :no_check`, which is necessary because the checksum will change on the same `url` when a new distribution is made available.
+And here is one for `noisy`. Note that it has an unversioned download (the download `url` does not contain the version number, unlike the example above). It also suppresses the checksum with `sha256 :no_check`, which is necessary because the checksum will change on the same `url` when a new distribution is made available.
 
 ```ruby
-cask "advancedcolors" do
-  version "1.0.0"
+cask "noisy" do
+  version "1.3"
   sha256 :no_check
 
-  url "https://advancedcolors.com/AdvancedColors.zip"
-  name "Advanced Colors"
-  desc "Lightning fast swatch tool for designers and developers"
-  homepage "https://advancedcolors.com/"
+  url "https://github.com/downloads/jonshea/Noisy/Noisy.zip"
+  name "Noisy"
+  desc "White noise generator"
+  homepage "https://github.com/jonshea/Noisy"
 
-  app "AdvancedColors.app"
+  app "Noisy.app"
 end
 ```
 
-Here is a last example for `airdisplay`, which uses a `pkg` installer to install the application instead of a stand-alone application bundle (`.app`). Note the [`uninstall pkgutil` stanza](https://docs.brew.sh/Cask-Cookbook.md#uninstall-key-pkgutil), which is needed to uninstall all files which were installed using the installer.
+Here is a last example for `airdisplay`, which uses a `pkg` installer to install the application instead of a stand-alone application bundle (`.app`). Note the [`uninstall pkgutil` stanza](https://docs.brew.sh/Cask-Cookbook#uninstall-key-pkgutil), which is needed to uninstall all files which were installed using the installer.
 
-You will also see how to adapt `version` to the download `url`. Use [our custom `version` methods](https://docs.brew.sh/Cask-Cookbook.md#version-methods) to do so, resorting to the standard [Ruby String methods](https://ruby-doc.org/core/String.html) when they don’t suffice.
+You will also see how to adapt `version` to the download `url`. Use [our custom `version` methods](https://docs.brew.sh/Cask-Cookbook#version-methods) to do so, resorting to the standard [Ruby String methods](https://ruby-doc.org/core/String.html) when they don’t suffice.
 
 ```ruby
 cask "airdisplay" do
-  version "3.4.2"
+  version "3.4.2,26581"
   sha256 "272d14f33b3a4a16e5e0e1ebb2d519db4e0e3da17f95f77c91455b354bee7ee7"
 
-  url "https://www.avatron.com/updates/software/airdisplay/ad#{version.no_dots}.zip"
-  appcast "https://www.avatron.com/updates/software/airdisplay/appcast.xml"
+  url "https://www.avatron.com/updates/software/airdisplay/ad#{version.before_comma.no_dots}.zip"
   name "Air Display"
   desc "Utility for using a tablet as a second monitor"
   homepage "https://avatron.com/applications/air-display/"
+
+  livecheck do
+    url "https://www.avatron.com/updates/software/airdisplay/appcast.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :mojave"
 
@@ -123,24 +126,24 @@ Fill in the following stanzas for your Cask:
 | name               | value       |
 | ------------------ | ----------- |
 | `version`          | application version
-| `sha256`           | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`. Can be suppressed by using the special value `:no_check`. (see [sha256](https://docs.brew.sh/Cask-Cookbook.md#stanza-sha256))
-| `url`              | URL to the `.dmg`/`.zip`/`.tgz`/`.tbz2` file that contains the application.<br />A [comment](https://docs.brew.sh/Cask-Cookbook.md#when-url-and-homepage-hostnames-differ-add-a-comment) must be added if the hostnames in the `url` and `homepage` stanzas differ. [Block syntax](https://docs.brew.sh/Cask-Cookbook.md#using-a-block-to-defer-code-execution) is available for URLs that change on every visit
-| `name`             | the full and proper name defined by the vendor, and any useful alternate names (see [Name Stanza Details](https://docs.brew.sh/Cask-Cookbook.md#stanza-name))
-| `desc`             | one-line description of the software (see [Desc Stanza Details](https://docs.brew.sh/Cask-Cookbook.md#stanza-desc))
+| `sha256`           | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`. Can be suppressed by using the special value `:no_check`. (see [sha256](https://docs.brew.sh/Cask-Cookbook#stanza-sha256))
+| `url`              | URL to the `.dmg`/`.zip`/`.tgz`/`.tbz2` file that contains the application.<br />A [`verified` parameter](https://docs.brew.sh/Cask-Cookbook#when-url-and-homepage-hostnames-differ-add-verified) must be added if the hostnames in the `url` and `homepage` stanzas differ. [Block syntax](https://docs.brew.sh/Cask-Cookbook#using-a-block-to-defer-code-execution) is available for URLs that change on every visit
+| `name`             | the full and proper name defined by the vendor, and any useful alternate names (see [Name Stanza Details](https://docs.brew.sh/Cask-Cookbook#stanza-name))
+| `desc`             | one-line description of the software (see [Desc Stanza Details](https://docs.brew.sh/Cask-Cookbook#stanza-desc))
 | `homepage`         | application homepage; used for the `brew home` command
-| `app`              | relative path to an `.app` bundle that should be moved into the `/Applications` folder on installation (see [App Stanza Details](https://docs.brew.sh/Cask-Cookbook.md#stanzas-app))
+| `app`              | relative path to an `.app` bundle that should be moved into the `/Applications` folder on installation (see [App Stanza Details](https://docs.brew.sh/Cask-Cookbook#stanza-app))
 
 Other commonly-used stanzas are:
 
 | name               | value       |
 | ------------------ | ----------- |
-| `appcast`          | a URL providing an appcast feed to find updates for this Cask. (see [Appcast Stanza Details](https://docs.brew.sh/Cask-Cookbook.md#stanza-appcast))
-| `pkg`              | relative path to a `.pkg` file containing the distribution (see [Pkg Stanza Details](https://docs.brew.sh/Cask-Cookbook.md#stanza-pkg))
-| `caveats`          | a string or Ruby block providing the user with Cask-specific information at install time (see [Caveats Stanza Details](https://docs.brew.sh/Cask-Cookbook.md#stanza-caveats))
-| `uninstall`        | procedures to uninstall a Cask. Optional unless the `pkg` stanza is used. (see [Uninstall Stanza Details](https://docs.brew.sh/Cask-Cookbook.md#stanza-uninstall))
-| `zap`        		 | additional procedures for a more complete uninstall, including configuration files and shared resources (see [Zap Stanza Details](https://docs.brew.sh/Cask-Cookbook.md#stanza-zap))
+| `livecheck`          | Ruby block describing how to find updates for this Cask (see [Livecheck Stanza Details](https://docs.brew.sh/Cask-Cookbook#stanza-livecheck))
+| `pkg`              | relative path to a `.pkg` file containing the distribution (see [Pkg Stanza Details](https://docs.brew.sh/Cask-Cookbook#stanza-pkg))
+| `caveats`          | a string or Ruby block providing the user with Cask-specific information at install time (see [Caveats Stanza Details](https://docs.brew.sh/Cask-Cookbook#stanza-caveats))
+| `uninstall`        | procedures to uninstall a Cask. Optional unless the `pkg` stanza is used. (see [Uninstall Stanza Details](https://docs.brew.sh/Cask-Cookbook#stanza-uninstall))
+| `zap`        		 | additional procedures for a more complete uninstall, including configuration files and shared resources (see [Zap Stanza Details](https://docs.brew.sh/Cask-Cookbook#stanza-zap))
 
-Additional `artifact` stanzas you might need for special use-cases can be found [here](https://docs.brew.sh/Cask-Cookbook.md#at-least-one-artifact-stanza-is-also-required). Even more special-use stanzas are listed at [Optional Stanzas](https://docs.brew.sh/Cask-Cookbook.md#optional-stanzas).
+Additional `artifact` stanzas you might need for special use-cases can be found [here](https://docs.brew.sh/Cask-Cookbook#at-least-one-artifact-stanza-is-also-required). Even more special-use stanzas are listed at [Optional Stanzas](https://docs.brew.sh/Cask-Cookbook#optional-stanzas).
 
 ### Cask Token Details
 
@@ -148,7 +151,7 @@ If a token conflicts with an already-existing Cask, authors should manually make
 
 If possible, avoid creating tokens which differ only by the placement of hyphens.
 
-To generate a token manually, or to learn about exceptions for unusual cases, see [token_reference.md](https://docs.brew.sh/Cask-Cookbook.md#token-reference).
+To generate a token manually, or to learn about exceptions for unusual cases, see [token_reference.md](https://docs.brew.sh/Cask-Cookbook#token-reference).
 
 ### Archives With Subfolders
 

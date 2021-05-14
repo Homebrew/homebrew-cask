@@ -4,8 +4,8 @@ cask "avogadro" do
 
   url "https://downloads.sourceforge.net/avogadro/avogadro2/Avogadro2-#{version}-Darwin.dmg",
       verified: "sourceforge.net/avogadro/avogadro2/"
-  appcast "https://sourceforge.net/projects/avogadro/rss"
   name "Avogadro"
+  desc "Molecule editor and visualizer"
   homepage "https://avogadro.cc/"
 
   app "Avogadro2.app"

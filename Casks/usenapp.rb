@@ -1,6 +1,6 @@
 cask "usenapp" do
-  version "1.05,313"
-  sha256 "082d3a2e0a29a18d08003f8ee3c47e2231dce2d596299b316cac944df37ab0d7"
+  version "1.07.2,320"
+  sha256 "6578820052772238c94cbbabfe3c1680a1aaef951c0116d4cca69922981b69ca"
 
   url "https://www.usenapp.com/download/Usenapp-#{version.before_comma}.dmg"
   name "Usenapp"
@@ -11,6 +11,8 @@ cask "usenapp" do
     url "https://www.usenapp.com/download/appcast_unp1.xml"
     strategy :sparkle
   end
+
+  depends_on macos: ">= :el_capitan"
 
   app "Usenapp.app"
 

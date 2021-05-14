@@ -8,8 +8,8 @@ cask "chocolat" do
   homepage "https://chocolatapp.com/"
 
   livecheck do
-    url "https://chocolatapp.com/userspace/appcast/appcast_alpha.php"
-    strategy :sparkle
+    url "https://chocolatapp.com/download/"
+    strategy :header_match
   end
 
   app "Chocolat.app"

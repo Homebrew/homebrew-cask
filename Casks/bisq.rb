@@ -1,6 +1,6 @@
 cask "bisq" do
-  version "1.6.2"
-  sha256 "89bea0bd3b66bf2c50d79f8d4bac201c1149acefc0aae1d8150d9f8fbb9e602c"
+  version "1.6.4"
+  sha256 "a911edd2a12a8f07e3a164111820952df5045bdb00ec2bb265d0998a5e6d45e8"
 
   url "https://github.com/bisq-network/bisq/releases/download/v#{version}/Bisq-#{version}.dmg",
       verified: "github.com/bisq-network/bisq/"

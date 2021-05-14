@@ -1,6 +1,6 @@
 cask "axe-edit-iii" do
-  version "1.08.13"
-  sha256 "8c465488c8cca43ed6e7714799a3da35dd1f60778f3b48e7ac1dfc40d8ae9372"
+  version "1.08.14"
+  sha256 "592adcbee058c2a4628efa29067f34ee5248a520922989563b3c026228e40261"
 
   url "https://www.fractalaudio.com/downloads/Axe-Edit-III/Axe-Edit-III-OSX-v#{version.tr(".", "p")}.dmg"
   name "Axe-Edit III"

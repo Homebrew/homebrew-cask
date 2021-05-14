@@ -5,7 +5,8 @@ cask "solvespace" do
   url "https://github.com/solvespace/solvespace/releases/download/v#{version}/solvespace.dmg",
       verified: "github.com/"
   name "SolveSpace"
+  desc "Parametric 2d/3d CAD"
   homepage "https://solvespace.com/index.pl/"
 
-  app "solvespace.app"
+  app "SolveSpace.app"
 end

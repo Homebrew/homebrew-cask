@@ -4,10 +4,15 @@ cask "freeplane" do
 
   url "https://downloads.sourceforge.net/freeplane/freeplane%20stable/Freeplane-#{version}.dmg",
       verified: "downloads.sourceforge.net/freeplane/"
-  appcast "https://sourceforge.net/projects/freeplane/rss?path=/freeplane%20stable"
   name "Freeplane"
   desc "Mind mapping and knowledge management software"
   homepage "https://freeplane.sourceforge.io/"
+
+  livecheck do
+    url "https://sourceforge.net/projects/freeplane/rss?path=/freeplane%20stable"
+    strategy :page_match
+    regex(%r{stable/Freeplane[._-](\d+(?:\.\d+)+)\.dmg}i)
+  end
 
   app "Freeplane.app"
 

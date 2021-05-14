@@ -1,12 +1,12 @@
 cask "keeweb" do
-  version "1.17.6"
+  version "1.18.4"
 
   if Hardware::CPU.intel?
-    sha256 "d6996ec8706620ba39eec3804c46ecedd7e95c2ce9d0b6de054666dc713dbf5a"
+    sha256 "1c9f4d8cafc78d9d4c61211647be98bc44057293de9413ec52027248d699f6b9"
     url "https://github.com/keeweb/keeweb/releases/download/v#{version}/KeeWeb-#{version}.mac.x64.dmg",
         verified: "github.com/keeweb/keeweb/"
   else
-    sha256 "70aa0975ae43beaebf50dff944d7116b5482bb50e6fbc0d64f4bcbaf21afdcb7"
+    sha256 "5db8af72a10f74390ec5357a2ba50a05c2304521090dea30ebdb1b0bfd1a6105"
     url "https://github.com/keeweb/keeweb/releases/download/v#{version}/KeeWeb-#{version}.mac.arm64.dmg",
         verified: "github.com/keeweb/keeweb/"
   end
