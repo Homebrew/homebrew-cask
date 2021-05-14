@@ -8,9 +8,9 @@ After making all changes to a cask, verify:
 
 Additionally, **if adding a new cask**:
 
-- [ ] Named the cask according to the [token reference](https://github.com/Homebrew/homebrew-cask/blob/master/doc/cask_language_reference/token_reference.md).
+- [ ] Named the cask according to the [token reference](https://docs.brew.sh/Cask-Cookbook#token-reference).
 - [ ] Checked the cask was not [already refused](https://github.com/Homebrew/homebrew-cask/search?q=is%3Aclosed&type=Issues).
-- [ ] Checked the cask is submitted to [the correct repo](https://github.com/Homebrew/homebrew-cask/blob/master/doc/development/adding_a_cask.md#finding-a-home-for-your-cask).
+- [ ] Checked the cask is submitted to [the correct repo](https://docs.brew.sh/Acceptable-Casks#finding-a-home-for-your-cask).
 - [ ] `brew audit --new-cask {{cask_file}}` worked successfully.
 - [ ] `brew install --cask {{cask_file}}` worked successfully.
 - [ ] `brew uninstall --cask {{cask_file}}` worked successfully.
