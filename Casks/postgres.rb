@@ -1,10 +1,10 @@
-cask "postgres-unofficial" do
+cask "postgres" do
   version "2.4.2"
   sha256 "4ea80659448cb98edd16a53e664672a558a1b64d5c960393dd72456da6772231"
 
   url "https://github.com/PostgresApp/PostgresApp/releases/download/v#{version}/Postgres-#{version}-9.5-9.6-10-11-12-13.dmg",
       verified: "github.com/PostgresApp/PostgresApp/"
-  name "Postgres.app"
+  name "Postgres"
   homepage "https://postgresapp.com/"
 
   livecheck do
