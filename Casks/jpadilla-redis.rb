@@ -4,7 +4,7 @@ cask "jpadilla-redis" do
 
   url "https://github.com/jpadilla/redisapp/releases/download/#{version}/Redis.zip",
       verified: "github.com/jpadilla/redisapp/"
-  name "Redis.app"
+  name "Redis"
   desc "App wrapper for Redis"
   homepage "https://jpadilla.github.io/redisapp/"
 
