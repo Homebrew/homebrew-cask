@@ -1,6 +1,6 @@
 cask "dwarf-fortress" do
-  version "0.47.04"
-  sha256 "1b424d530554399fa3897a9e7a902f6a93e2eb1b680fdeffbac416bb4a312f30"
+  version "0.47.05"
+  sha256 "bc79a92adb96497d59546378e8c9ab2ef67ca22abfbd9763616de9c2e00e5f24"
 
   url "https://www.bay12games.com/dwarves/df_#{version.minor}_#{version.patch}_osx.tar.bz2"
   name "Dwarf Fortress"

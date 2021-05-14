@@ -1,12 +1,16 @@
 cask "binance" do
-  version "1.6.1"
-  sha256 "c75fea82ccf6210a820b7bfc4b400f813e30cc13038241e40e845c5dbe7dee83"
+  version "1.16.0"
+  sha256 "3c8f1205d1daffeec4a2f778f410b0c670d118e64d51d0a9e6ed16fefb843cfb"
 
   url "https://ftp.binance.com/electron-desktop/mac/production/binance-#{version}.dmg"
-  appcast "https://ftp.binance.com/electron-desktop/mac/production/latest-mac.yml"
   name "Binance"
   desc "Cryptocurrency exchange"
   homepage "http://binance.com/"
+
+  livecheck do
+    url "https://ftp.binance.com/electron-desktop/mac/production/latest-mac.yml"
+    strategy :electron_builder
+  end
 
   app "Binance.app"
 

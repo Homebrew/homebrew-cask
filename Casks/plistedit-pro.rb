@@ -1,12 +1,16 @@
 cask "plistedit-pro" do
-  version "1.9.2"
-  sha256 "5db33711689cc911a33af8f5140e27436df392e13f0fece3de0ba11ac4e0f839"
+  version "1.9.2,908"
+  sha256 :no_check
 
   url "https://www.fatcatsoftware.com/plisteditpro/PlistEditPro.zip"
-  appcast "https://www.fatcatsoftware.com/plisteditpro/plisteditpro_appcast.xml"
   name "PlistEdit Pro"
   desc "Property list and JSON editor"
   homepage "https://www.fatcatsoftware.com/plisteditpro/"
+
+  livecheck do
+    url "https://www.fatcatsoftware.com/plisteditpro/plisteditpro_appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :high_sierra"

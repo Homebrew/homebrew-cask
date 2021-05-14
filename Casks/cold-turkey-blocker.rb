@@ -1,12 +1,28 @@
 cask "cold-turkey-blocker" do
-  version :latest
+  version "4.2.1"
   sha256 :no_check
 
   url "https://getcoldturkey.com/files/Cold_Turkey_Mac_Installer.pkg"
   name "Cold Turkey"
+  desc "Block websites, games and applications"
   homepage "https://getcoldturkey.com/"
+
+  livecheck do
+    url "https://getcoldturkey.com/download/mac/"
+    strategy :page_match
+    regex(/Cold_Turkey_Mac_Installer\.pkg\?v=(\d+(?:\.\d+)*)/i)
+  end
 
   pkg "Cold_Turkey_Mac_Installer.pkg"
 
-  uninstall pkgutil: "com.getcoldturkey.coldTurkeyBlocker.ColdTurkeyBlocker.pkg"
+  uninstall launchctl: [
+    "launchkeep.cold-turkey",
+    "launchkeep.cold-turkey-all-users",
+  ],
+            pkgutil:   [
+              "com.getcoldturkey.coldturkeyblocker",
+              "com.getcoldturkey.blocker-chrome-ext",
+              "com.getcoldturkey.blocker-edge-ext",
+              "com.getcoldturkey.blocker-firefox-ext",
+            ]
 end

@@ -1,37 +1,42 @@
 cask "seamonkey" do
-  version "2.53.4"
+  version "2.53.7.1"
 
   language "de" do
-    sha256 "028b526965be854a81e9f09429ef2787a8f296a3c461116804bdea236e6b3b01"
+    sha256 "e9d38b495ad95f980852caa6126c3ec6c3ee96f7df3e8579dc468a7d44dc2ffa"
     "de"
   end
   language "en-GB" do
-    sha256 "edbb5845566c986239f5ba0ed1941d6e43d36d72adbc3f7e32375953c89855a2"
+    sha256 "0708c7faf96090ebbf2d0d27a321bff24c2c6dc74550be71a353d5aadf896b80"
     "en-GB"
   end
   language "en-US", default: true do
-    sha256 "c3f2603a141878ce0e7b2cab3d3351a32707b00b677b79b395cc969a08873020"
+    sha256 "d119078149d42c5055558339c413e1a86341fbc7431fddd49833eadf7521958c"
     "en-US"
   end
   language "fr" do
-    sha256 "eec9e5fbad24be0d8331951f332597c3fdc3174bc3f4b20103b3b01fa2c31f6e"
+    sha256 "5b76846616780743f655fa005369db432fb1b9925ba98c924a873e4cec3d81a0"
     "fr"
   end
   language "it" do
-    sha256 "f9972ff9a80bca3f9c7404a8281f5162363fb100f3d4a33fd4e0aba7ac8aa65c"
+    sha256 "5241f802670be852406b66784598f901ae92121ef540d4136e4b7179b159628e"
     "it"
   end
   language "ru" do
-    sha256 "0eec1ff3c9f015cc5ef0ce8e94bfce352c02906df49703b34086a5fb5e81fb8a"
+    sha256 "e46dc04b8f917011df15a722d5f732fc4f4d36251d2a9494edaa068ec084cb1c"
     "ru"
   end
 
-  # mozilla.org/pub/seamonkey/releases/ was verified as official when first introduced to the cask
-  url "https://archive.mozilla.org/pub/seamonkey/releases/#{version}/mac/#{language}/seamonkey-#{version}.#{language}.mac.dmg"
-  appcast "https://www.seamonkey-project.org/releases/"
+  url "https://archive.mozilla.org/pub/seamonkey/releases/#{version}/mac/#{language}/seamonkey-#{version}.#{language}.mac.dmg",
+      verified: "mozilla.org/pub/seamonkey/releases/"
   name "SeaMonkey"
   desc "Development of SeaMonkey Internet Application Suite"
   homepage "https://www.seamonkey-project.org/"
+
+  livecheck do
+    url "https://www.seamonkey-project.org/releases/"
+    strategy :page_match
+    regex(%r{href=.*?/seamonkey-(\d+(?:\.\d+)*)\.en-US\.mac\.dmg}i)
+  end
 
   auto_updates true
 

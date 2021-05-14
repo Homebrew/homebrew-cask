@@ -1,5 +1,5 @@
 cask "private-eye" do
-  version :latest
+  version "1.1.0"
   sha256 :no_check
 
   url "https://radiosilenceapp.com/downloads/Private_Eye_for_OS_X_10.9_and_later.pkg"

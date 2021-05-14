@@ -1,12 +1,26 @@
 cask "vlc" do
-  version "3.0.11.1"
-  sha256 "021212d2f6e6701ec3b254d56dfa5c5f848c9c02813c5750c6944a8458de8fb5"
+  version "3.0.14"
 
-  url "https://get.videolan.org/vlc/#{version}/macosx/vlc-#{version}.dmg"
-  appcast "https://www.videolan.org/vlc/download-macosx.html"
+  if Hardware::CPU.intel?
+    sha256 "a5628b5f7e69ce18dd13ca724f67c7c4381c0ed22862fcb2064d00227f42f42f"
+
+    url "https://get.videolan.org/vlc/#{version}/macosx/vlc-#{version}-intel64.dmg"
+
+  else
+    sha256 "8d0b897ba5a9366f1482d84fea4e67eec42c47711df18f80ae596872ac881365"
+
+    url "https://get.videolan.org/vlc/#{version}/macosx/vlc-#{version}-arm64.dmg"
+
+  end
+
   name "VLC media player"
-  desc "Open-source cross-platform multimedia player"
+  desc "Multimedia player"
   homepage "https://www.videolan.org/vlc/"
+
+  livecheck do
+    url "https://www.videolan.org/vlc/download-macosx.html"
+    regex(%r{href=.*?/vlc[._-]v?(\d+(?:\.\d+)+)(?:[._-][a-z]\w*)?\.dmg}i)
+  end
 
   auto_updates true
   conflicts_with cask: "homebrew/cask-versions/vlc-nightly"

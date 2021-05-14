@@ -1,12 +1,21 @@
 cask "qiyimedia" do
-  version "20200914,11.9.0"
-  sha256 "f92a51ddcdd906935a5e4298f17c56e7c9e1af5da375867082ade0fcda8f44d2"
+  version "20201215,17:34"
+  sha256 :no_check
 
-  url "https://mbdapp.iqiyi.com/j/ot/iQIYIMedia_271.dmg"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://mbdapp.iqiyi.com/j/ot/iQIYIMedia_271.dmg",
-          must_contain: version.before_comma
+  url "http://221.212.217.42/cdn/pcclient/#{version.before_comma}/#{version.after_comma.before_colon}/#{version.after_colon}/iQIYIMedia_271.dmg",
+      verified: "221.212.217.42/"
+  name "iQIYI"
   name "爱奇艺视频"
+  desc "Interactive media player"
   homepage "https://app.iqiyi.com/mac/player/index.html"
+
+  livecheck do
+    url "https://mbdapp.iqiyi.com/j/ot/iQIYIMedia_271.dmg"
+    strategy :header_match do |headers|
+      match = headers["location"].match(%r{/(\d+)/(\d+)/(\d+)/iQIYIMedia_\d+\.dmg}i)
+      "#{match[1]},#{match[2]}:#{match[3]}"
+    end
+  end
 
   depends_on macos: ">= :catalina"
 

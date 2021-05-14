@@ -1,10 +1,9 @@
 cask "milkytracker" do
-  version "1.02.00"
-  sha256 "b526497dc957454a4150e77b1f2f835ce564122e56f49bbe7b494dc984be076d"
+  version "1.03.00"
+  sha256 "21c7261805e800602843a575b55993d87530aa075cc4ee4bd3978e30e3a2bc29"
 
-  # github.com/milkytracker/MilkyTracker/ was verified as official when first introduced to the cask
-  url "https://github.com/milkytracker/MilkyTracker/releases/download/v#{version}/milkytracker-#{version}.dmg"
-  appcast "https://github.com/milkytracker/MilkyTracker/releases.atom"
+  url "https://github.com/milkytracker/MilkyTracker/releases/download/v#{version}/milkytracker-#{version}-macos.dmg",
+      verified: "github.com/milkytracker/MilkyTracker/"
   name "MilkyTracker"
   desc "Music tracker compatible with FT2"
   homepage "https://milkytracker.titandemo.org/"

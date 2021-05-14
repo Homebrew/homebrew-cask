@@ -3,7 +3,6 @@ cask "figtree" do
   sha256 "4a11741143982a9b7fea78e60c8315ce8e8436eeb96ab3ee5376c53c83e54b9b"
 
   url "https://github.com/rambaut/figtree/releases/download/v#{version}/FigTree.v#{version}.dmg"
-  appcast "https://github.com/rambaut/figtree/releases.atom"
   name "FigTree"
   homepage "https://github.com/rambaut/figtree/"
 

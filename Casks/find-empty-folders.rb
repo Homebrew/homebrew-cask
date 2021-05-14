@@ -1,6 +1,6 @@
 cask "find-empty-folders" do
-  version "1.2.1"
-  sha256 "63033d326f44c7eda130e0a1ce54d4b5a7009a095afa4bd8b3d557d2c357cece"
+  version "1.2.2"
+  sha256 :no_check
 
   url "https://files.tempel.org/FindEmptyFolders/FindEmptyFolders.zip"
   appcast "https://www.tempel.org/FindEmptyFolders"

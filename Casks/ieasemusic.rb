@@ -3,7 +3,6 @@ cask "ieasemusic" do
   sha256 "6b7f6d7be86b5a37f3c203012261ec19bd3492bc489a94c1e1dbcc9299b0cc26"
 
   url "https://github.com/trazyn/ieaseMusic/releases/download/v#{version}/ieaseMusic-#{version}-mac.dmg"
-  appcast "https://github.com/trazyn/ieaseMusic/releases.atom"
   name "ieaseMusic"
   homepage "https://github.com/trazyn/ieaseMusic"
 

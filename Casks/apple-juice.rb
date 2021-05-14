@@ -1,9 +1,8 @@
 cask "apple-juice" do
-  version "1.10.2"
-  sha256 "dedbbf56a4d972ed0ad987be5b2577f2c59c55b0b9e4effd05c60f3c29773677"
+  version "2020.12.0"
+  sha256 "32aff8e2b2de61076fca1243091ab6e0166d38b4657afedcf01ae28133b69cae"
 
   url "https://github.com/raphaelhanneken/apple-juice/releases/download/#{version}/Apple.Juice.dmg"
-  appcast "https://github.com/raphaelhanneken/apple-juice/releases.atom"
   name "Apple Juice"
   desc "Battery gauge that displays the remaining battery time and more"
   homepage "https://github.com/raphaelhanneken/apple-juice"

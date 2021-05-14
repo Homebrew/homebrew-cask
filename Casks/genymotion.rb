@@ -1,11 +1,17 @@
 cask "genymotion" do
-  version "3.1.2"
-  sha256 "6dbed0cd76b11c8b5c01ef2caa08cf8fde4150ba31e3284e7b1e3f736ab244fd"
+  version "3.2.1"
+  sha256 "60dc9996e988f42a09e2870766a10072010b49a21fe9fd655a02b944db3a3f2d"
 
   url "https://dl.genymotion.com/releases/genymotion-#{version}/genymotion-#{version}.dmg"
-  appcast "https://www.genymotion.com/product-release-note/desktop/"
   name "Genymotion"
+  desc "Android emulator"
   homepage "https://www.genymotion.com/"
+
+  livecheck do
+    url "https://www.genymotion.com/download/"
+    strategy :page_match
+    regex(/Genymotion\s*Desktop\s*(\d+(?:\.\d+)*)/i)
+  end
 
   depends_on cask: "virtualbox"
 

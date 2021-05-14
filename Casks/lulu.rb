@@ -1,24 +1,25 @@
 cask "lulu" do
-  version "1.2.3"
-  sha256 "9c7bf4333af8dc7330614f2c9a389feac27334bc07f4b6039107b97eb476a3df"
+  version "2.3.1"
+  sha256 "adeaba9531d66ba8ffca4d5f6259e9cbf915afc8eb2cf604cabe5e4a721dc1fa"
 
-  # bitbucket.org/objective-see/ was verified as official when first introduced to the cask
-  url "https://bitbucket.org/objective-see/deploy/downloads/LuLu_#{version}.zip"
-  appcast "https://objective-see.com/products/changelogs/LuLu.txt"
+  url "https://github.com/objective-see/LuLu/releases/download/v#{version}/LuLu_#{version}.dmg",
+      verified: "github.com/objective-see/LuLu/"
   name "LuLu"
   desc "Open-source firewall to block unknown outgoing connections"
   homepage "https://objective-see.com/products/lulu.html"
 
-  depends_on macos: ">= :sierra"
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
-  installer script: {
-    executable: "#{staged_path}/LuLu Installer.app/Contents/MacOS/LuLu Installer",
-    args:       ["-install"],
-    sudo:       true,
-  }
+  auto_updates true
+  depends_on macos: ">= :catalina"
+
+  app "LuLu.app"
 
   uninstall script: {
-    executable: "#{staged_path}/LuLu Installer.app/Contents/MacOS/LuLu Installer",
+    executable: "#{appdir}/LuLu.app/Contents/Resources/LuLu Uninstaller.app/Contents/MacOS/LuLu Uninstaller",
     args:       ["-uninstall"],
     sudo:       true,
   }
@@ -28,12 +29,5 @@ cask "lulu" do
     "~/Library/Caches/com.objective-see.lulu.helper",
     "~/Library/Preferences/com.objective-see.lulu.plist",
     "~/Library/Preferences/com.objective-see.lulu.helper.plist",
-    "/Library/LaunchDaemons/com.objective-see.lulu.plist",
-    "/Library/LaunchDaemons/com.objective-see.lulu.configHelper.plist",
-    "/Library/Logs/LuLu.log",
   ]
-
-  caveats do
-    kext
-  end
 end

@@ -1,11 +1,15 @@
 cask "witch" do
-  version "4.3.5"
-  sha256 "5fd6f1e2678c1c4687527612f981b3fec7c3d33aae3344a2548fd758ae75b4b3"
+  version "4.3.8,3504"
+  sha256 :no_check
 
   url "https://manytricks.com/download/witch"
-  appcast "https://manytricks.com/witch/appcast.xml"
   name "Witch"
   homepage "https://manytricks.com/witch/"
+
+  livecheck do
+    url "https://manytricks.com/witch/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 

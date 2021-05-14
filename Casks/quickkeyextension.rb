@@ -1,9 +1,9 @@
 cask "quickkeyextension" do
-  version :latest
+  version "1.0,2"
   sha256 :no_check
 
-  # littlefin.com/ was verified as official when first introduced to the cask
-  url "http://www.littlefin.com/downloads/qkextension.zip"
+  url "http://www.littlefin.com/downloads/qkextension.zip",
+      verified: "littlefin.com/"
   name "QuickKey Extension"
   homepage "http://quickkey-app.com/extension/"
 

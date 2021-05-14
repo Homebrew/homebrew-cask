@@ -1,9 +1,8 @@
 cask "eul" do
-  version "1.4.2"
-  sha256 "cf3f4790f31aa0241070ef532cdb580f1ba68ac6ae85486d2e359af388e2fbc0"
+  version "1.5.17"
+  sha256 "31e00060a59fc5363e4e1beee25bd2fe133b214fc753daedf996ddda3a2c6ef0"
 
   url "https://github.com/gao-sun/eul/releases/download/v#{version}/eul.app.zip"
-  appcast "https://github.com/gao-sun/eul/releases.atom"
   name "eul"
   desc "Status monitoring"
   homepage "https://github.com/gao-sun/eul"

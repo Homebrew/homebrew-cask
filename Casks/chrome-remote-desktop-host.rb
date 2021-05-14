@@ -1,11 +1,15 @@
 cask "chrome-remote-desktop-host" do
-  version :latest
+  version "89.0.4389.25"
   sha256 :no_check
 
   url "https://dl.google.com/chrome-remote-desktop/chromeremotedesktop.dmg"
   name "Chrome Remote Desktop"
-  desc "Remotely access another computer through the Chrome browser"
+  desc "Remotely access another computer through the Google Chrome browser"
   homepage "https://chrome.google.com/webstore/detail/chrome-remote-desktop/inomeogfingihgjfjlpeplalcfajhgai"
+
+  livecheck do
+    skip "unversioned URL"
+  end
 
   pkg "Chrome Remote Desktop Host.pkg"
 

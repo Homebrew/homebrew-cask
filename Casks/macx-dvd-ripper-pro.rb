@@ -1,6 +1,6 @@
 cask "macx-dvd-ripper-pro" do
-  version "6.5.4,20201015"
-  sha256 "fc7ad20e55eedac7f1c864658ef8fe65e89a8bb227a68a829c06a83e1882f81a"
+  version "6.5.5,20210105"
+  sha256 :no_check
 
   url "https://www.macxdvd.com/download/macx-dvd-ripper-pro.dmg"
   appcast "https://macupdater.net/cgi-bin/check_urls/check_url_sizeandmodified.cgi?url=https://www.macxdvd.com/download/macx-dvd-ripper-pro.dmg",

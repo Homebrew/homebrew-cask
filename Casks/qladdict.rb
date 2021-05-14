@@ -3,7 +3,6 @@ cask "qladdict" do
   sha256 "9342a65b103ab4f71b21f4094f0f9ad8c48b38e976fc4d10cf2995936531e551"
 
   url "https://github.com/tattali/QLAddict/releases/download/#{version}/QLAddict.qlgenerator.#{version}.zip"
-  appcast "https://github.com/tattali/QLAddict/releases.atom"
   name "QLAddict"
   homepage "https://github.com/tattali/QLAddict/"
 

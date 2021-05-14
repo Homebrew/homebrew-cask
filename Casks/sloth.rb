@@ -1,12 +1,16 @@
 cask "sloth" do
-  version "2.9"
-  sha256 "b8fecd3ca901012b92be681d9e20eac5deea65e184b2a5313223247ffb43d6b5"
+  version "3.1,282"
+  sha256 "de6d97f2c63107e209f52f10f74ebe329e3a8c86ac578c188a9e36b790ed5e52"
 
-  url "https://sveinbjorn.org/files/software/sloth/sloth-#{version}.zip"
-  appcast "https://sveinbjorn.org/files/appcasts/SlothAppcast.xml"
+  url "https://sveinbjorn.org/files/software/sloth/sloth-#{version.before_comma}.zip"
   name "Sloth"
   desc "Displays all open files and sockets in use by all running processes"
   homepage "https://sveinbjorn.org/sloth"
+
+  livecheck do
+    url "https://sveinbjorn.org/files/appcasts/SlothAppcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 

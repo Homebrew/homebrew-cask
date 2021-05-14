@@ -1,11 +1,13 @@
 cask "simply-fortran" do
-  version "3.15.3375"
-
   if MacOS.version <= :mojave
-    sha256 "84eb3a7030f2174809c0727bb92a0681ca5f9f65be05c40ef24cbdcfbfc7ba2a"
+    version "3.15.3382"
+
+    sha256 "45441f0f222822af0a03dcb3da898f07252f739d71a88d534af5dd5f459f8da5"
     url "https://download.simplyfortran.com/#{version.major_minor}/macos/simplyfortran-#{version}.legacy.dmg"
   else
-    sha256 "a9116fba5a1350a3c742ca710c3311aee784a87926dea41982199b479b5d7c46"
+    version "3.15.3384"
+
+    sha256 "b9f5e479097643089b5a6999498d3bafbea2f682e5fb8a73fa7d1d11e1dfdf16"
     url "https://download.simplyfortran.com/#{version.major_minor}/macos/simplyfortran-#{version}.dmg"
   end
   appcast "https://simplyfortran.com/download/?platform=macos",

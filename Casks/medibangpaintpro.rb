@@ -1,11 +1,17 @@
 cask "medibangpaintpro" do
-  version "25.5"
-  sha256 "27ffd385c9aee355265f479d3b40ced3c4d9ad74c64613a281dd7ebc62741c06"
+  version "26.2"
+  sha256 "d53fc36e02e3d9b77f3dd3c620f53452712aad4cdb6748b933e41a2b05d06a05"
 
   url "https://medibangpaint.com/static/installer/MediBangPaintPro/MediBangPaintPro-#{version}.dmg"
   name "MediBang Paint Pro"
   desc "Create digital art and comics"
   homepage "https://medibangpaint.com/en/pc/"
+
+  livecheck do
+    url "https://medibangpaint.com/en/app-download/"
+    strategy :page_match
+    regex(%r{href=.*?/MediBangPaintPro-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   app "MediBangPaintPro.app"
 

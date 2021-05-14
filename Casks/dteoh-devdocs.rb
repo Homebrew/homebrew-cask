@@ -1,13 +1,13 @@
 cask "dteoh-devdocs" do
-  version "0.5.2"
-  sha256 "706986440df2ec1765b483d42876953ebc789cd0170c657cb5266cc945ca25e9"
+  version "0.6.2"
+  sha256 "5577150e2f70ac09466c4ecf0f45db38bbc40318a6fa40e955abe784b285d881"
 
   url "https://github.com/dteoh/devdocs-macos/releases/download/v#{version}/DevDocs.zip"
-  appcast "https://github.com/dteoh/devdocs-macos/releases.atom"
-  name "DevDocs App"
+  name "DevDocs"
+  desc "API documentation viewer"
   homepage "https://github.com/dteoh/devdocs-macos/"
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :big_sur"
 
   app "DevDocs.app"
 

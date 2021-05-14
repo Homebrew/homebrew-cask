@@ -1,12 +1,13 @@
 cask "p4v" do
-  version "20.2,2028073"
-  sha256 "860baf3635aa49c7bd2fd3d1e562bc36d84afc65af9f08537ebd4b0afbe9930e"
+  version "21.1,2085655"
+  sha256 "3aab37718d4d6dfd379e9c9daf5eecb661bf36405d3e77ba79a42d027c9ddd45"
 
   url "https://cdist2.perforce.com/perforce/r#{version.before_comma}/bin.macosx1015x86_64/P4V.dmg"
   appcast "https://www.perforce.com/perforce/doc.current/user/p4vnotes.txt"
   name "Perforce Visual Client"
   name "P4Merge"
   name "P4V"
+  desc "Visual client for Helix Core"
   homepage "https://www.perforce.com/products/helix-core-apps/helix-visual-client-p4v"
 
   app "p4v.app"

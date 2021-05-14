@@ -2,12 +2,18 @@ cask "copytranslator" do
   version "9.0.2"
   sha256 "5da337e06e1ac6325627f99a0662042b1d97689613685cc046441d41d6d1f075"
 
-  # github.com/CopyTranslator/CopyTranslator/ was verified as official when first introduced to the cask
-  url "https://github.com/CopyTranslator/CopyTranslator/releases/download/v#{version}/copytranslator-#{version}.dmg"
-  appcast "https://github.com/CopyTranslator/CopyTranslator/releases.atom"
+  url "https://github.com/CopyTranslator/CopyTranslator/releases/download/v#{version}/copytranslator-#{version}.dmg",
+      verified: "github.com/CopyTranslator/CopyTranslator/"
   name "CopyTranslator"
   desc "Tool that translates text in real-time while copying"
   homepage "https://copytranslator.github.io/"
+
+  # We need to check all releases since not all releases are for macOS.
+  livecheck do
+    url "https://github.com/CopyTranslator/CopyTranslator/releases"
+    strategy :page_match
+    regex(%r{href=.*?/copytranslator[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+  end
 
   depends_on macos: ">= :sierra"
 

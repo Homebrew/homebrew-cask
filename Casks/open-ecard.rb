@@ -1,10 +1,9 @@
 cask "open-ecard" do
-  version "1.4.4"
-  sha256 "a7c3e9475d4e4cc2ae3bbfd418ce21f97bb568e5f5f96252f6d433a418de0cd9"
+  version "1.4.5"
+  sha256 "82ba03dd92dbb45d2bafec04330aea4ccb98f2520e687dc1e3986777ed9306d6"
 
-  # github.com/ecsec/open-ecard/ was verified as official when first introduced to the cask
-  url "https://github.com/ecsec/open-ecard/releases/download/#{version}/Open-eCard-App-#{version}.dmg"
-  appcast "https://github.com/ecsec/open-ecard/releases.atom"
+  url "https://github.com/ecsec/open-ecard/releases/download/#{version}/Open-eCard-App-#{version}.dmg",
+      verified: "github.com/ecsec/open-ecard/"
   name "Open eCard"
   desc "Client side implementation of the eCard-API-Framework (BSI TR-03112)"
   homepage "https://www.openecard.org/"

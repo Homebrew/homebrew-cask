@@ -1,9 +1,8 @@
 cask "jupyter-notebook-ql" do
   version "0.2"
-  sha256 "bc4825d9c889463067a6e920cfc7c9c64f526e8a7c5cb4cdb09eb0688554dc66"
+  sha256 "f3a39ba316a32cd3ba63e2274e2d3355a0ef639f6e79c2eec40d462020599653"
 
   url "https://github.com/jendas1/jupyter-notebook-quick-look/releases/download/v#{version}/jupyter-notebook-quick-look.qlgenerator.zip"
-  appcast "https://github.com/jendas1/jupyter-notebook-quick-look/releases.atom"
   name "Jupyter Notebook Quick Look"
   homepage "https://github.com/jendas1/jupyter-notebook-quick-look"
 

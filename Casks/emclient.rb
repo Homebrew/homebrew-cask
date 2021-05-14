@@ -1,12 +1,18 @@
 cask "emclient" do
-  version "8.0.3494"
-  sha256 "ec85fdf7c1344fc92f9b04123cf27e466cdaf8297db32702903200b4152be21c"
+  version "8.1.1127"
+  sha256 "ea23c39563a1e70ed8a6c67b18ae0aa0b81f3f75903e8e0e2b5e54aae6738078"
 
   url "https://cdn-dist.emclient.com/dist/v#{version}_Mac/setup.pkg"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.emclient.com/dist/latest/setup.pkg"
   name "eM Client"
   desc "Email client"
   homepage "https://www.emclient.com/"
+
+  livecheck do
+    url "https://www.emclient.com/dist/latest/setup.pkg"
+    strategy :header_match do |headers|
+      headers["location"][/v(\d+(?:\.\d+)*)_Mac/i, 1]
+    end
+  end
 
   auto_updates true
 

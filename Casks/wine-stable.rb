@@ -3,16 +3,21 @@ cask "wine-stable" do
   sha256 "de2b23342edfa29a1518d8940992e855d30b3416084964311f184c9fdfb146a5"
 
   url "https://dl.winehq.org/wine-builds/macosx/pool/winehq-stable-#{version}.pkg"
-  appcast "https://dl.winehq.org/wine-builds/macosx/download.html"
   name "WineHQ-stable"
+  desc "Compatibility layer to run Windows applications"
   homepage "https://wiki.winehq.org/MacOS"
 
-  conflicts_with formula: "wine",
-                 cask:    [
-                   "wine-devel",
-                   "wine-staging",
-                 ]
-  depends_on x11: true
+  livecheck do
+    url "https://dl.winehq.org/wine-builds/macosx/download.html"
+    strategy :page_match
+    regex(%r{href=.*?/winehq-stable-(\d+(?:\.\d+)*)\.pkg}i)
+  end
+
+  conflicts_with cask: [
+    "wine-devel",
+    "wine-staging",
+  ]
+  depends_on cask: "xquartz"
 
   pkg "winehq-stable-#{version}.pkg",
       choices: [

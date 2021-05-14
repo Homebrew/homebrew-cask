@@ -1,11 +1,16 @@
 cask "multitouch" do
-  version "1.19.5"
-  sha256 "5b6e8fedac7ac6635d041a6d72ae68dadd0ea008896ebe29eac031d481a3ff59"
+  version "1.24.9,136"
+  sha256 "9417c7d2c20dcfe003d844633360beb5701aa30b47d93e3533056ecce5400981"
 
-  url "https://multitouch.app/downloads/multitouch#{version}.dmg"
-  appcast "https://www.multitouch.app/downloads/updates.xml"
+  url "https://multitouch.app/downloads/multitouch#{version.before_comma}.dmg"
   name "Multitouch"
+  desc "Add more gestures for Trackpad and Magic Mouse"
   homepage "https://multitouch.app/"
+
+  livecheck do
+    url "https://www.multitouch.app/downloads/updates.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"

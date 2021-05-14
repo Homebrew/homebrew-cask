@@ -1,13 +1,18 @@
 cask "hammerspoon" do
-  version "0.9.81"
-  sha256 "b6b92735e64ae09709804cc3296212529d8669235a035d7a42b77e2e7a37fe29"
+  version "0.9.90"
+  sha256 "f129842bb4a8a0e7a8bad64f2c9b0c6044569a48b789ca62f86a2cb45f8b9023"
 
-  # github.com/Hammerspoon/hammerspoon/ was verified as official when first introduced to the cask
-  url "https://github.com/Hammerspoon/hammerspoon/releases/download/#{version}/Hammerspoon-#{version}.zip"
-  appcast "https://github.com/Hammerspoon/hammerspoon/releases.atom"
+  url "https://github.com/Hammerspoon/hammerspoon/releases/download/#{version}/Hammerspoon-#{version}.zip",
+      verified: "github.com/Hammerspoon/hammerspoon/"
   name "Hammerspoon"
   desc "Desktop automation application"
   homepage "https://www.hammerspoon.org/"
+
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^(\d+(?:\.\d+)*)$/)
+  end
 
   auto_updates true
 

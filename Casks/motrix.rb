@@ -1,10 +1,18 @@
 cask "motrix" do
-  version "1.5.15"
-  sha256 "f918e23d01fabe75d1970d7839e80a2a2b220b9f66b9ae69d056734e8bb9046c"
+  version "1.6.10"
 
-  # github.com/ was verified as official when first introduced to the cask
-  url "https://github.com/agalwood/Motrix/releases/download/v#{version}/Motrix-#{version}.dmg"
-  appcast "https://github.com/agalwood/Motrix/releases.atom"
+  if Hardware::CPU.intel?
+    sha256 "813e202a3d2555134fe841e5b790dcb2c539f6773389890412ec06a118ce629e"
+
+    url "https://github.com/agalwood/Motrix/releases/download/v#{version}/Motrix-#{version}.dmg",
+        verified: "github.com/agalwood/Motrix/"
+  else
+    sha256 "9cde89252b5a55eb714030038013f5a31dffabe8712bbfccbe4aa5ffc726c684"
+
+    url "https://github.com/agalwood/Motrix/releases/download/v#{version}/Motrix-#{version}-arm64.dmg",
+        verified: "github.com/agalwood/Motrix/"
+  end
+
   name "Motrix"
   desc "Open-source download manager"
   homepage "https://motrix.app/"

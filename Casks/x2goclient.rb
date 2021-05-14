@@ -12,8 +12,6 @@ cask "x2goclient" do
   name "X2Go Client"
   homepage "https://wiki.x2go.org/doku.php"
 
-  depends_on x11: true
-
   app "x2goclient.app"
 
   zap trash: [

@@ -1,9 +1,23 @@
 cask "parallels" do
-  version "16.1.0-48950"
-  sha256 "7d54a8618515bc4d584df2143e36e35b4faa7a6f2e271c4b58d437d88bf235a7"
+  if Hardware::CPU.intel?
+    version "16.5.0-49183"
+    sha256 "e23af6f6ba6213e6f60e34f97df03d66287c17e8c8c7f0913216e8a6dafa52c5"
+
+    livecheck do
+      url "https://www.parallels.com/directdownload/pd#{version.major}/intel/"
+      strategy :header_match
+    end
+  else
+    version "16.5.0-50692"
+    sha256 "029eceae6e348e3257112aa59b63bc5db96288a0846effaa14f4a1e87d77b6c3"
+
+    livecheck do
+      url "https://www.parallels.com/directdownload/pd#{version.major}/m1/"
+      strategy :header_match
+    end
+  end
 
   url "https://download.parallels.com/desktop/v#{version.major}/#{version}/ParallelsDesktop-#{version}.dmg"
-  appcast "https://kb.parallels.com/en/125053"
   name "Parallels Desktop"
   desc "Desktop virtualization software"
   homepage "https://www.parallels.com/products/desktop/"
@@ -42,9 +56,11 @@ cask "parallels" do
 
   zap trash: [
     "~/.parallels_settings",
+    "~/Library/Application Scripts/com.parallels.desktop*",
     "~/Library/Caches/com.apple.helpd/Generated/com.parallels.desktop.console.help*",
     "~/Library/Caches/com.parallels.desktop.console",
     "~/Library/Caches/Parallels Software/Parallels Desktop",
+    "~/Library/Containers/com.parallels.desktop*",
     "~/Library/Logs/parallels.log",
     "~/Library/Parallels/Parallels Desktop",
     "~/Library/Preferences/com.parallels.desktop.console.LSSharedFileList.plist",

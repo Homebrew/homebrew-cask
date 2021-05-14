@@ -1,12 +1,17 @@
 cask "quaternion" do
-  version "0.0.9.5-beta2"
-  sha256 "e01540c36559f445075c4f870205fb938362260282bcdc4e06a729dab7601f9e"
+  version "0.0.9.4e"
+  sha256 "9df5cec6517c390edce156033101460b0e256ec9aefcf6d8ac8ae91ef1191f1a"
 
   url "https://github.com/quotient-im/Quaternion/releases/download/#{version}/quaternion-#{version}.dmg"
-  appcast "https://github.com/quotient-im/Quaternion/releases.atom"
   name "Quaternion"
   desc "IM client for Matrix"
   homepage "https://github.com/quotient-im/Quaternion"
+
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^(\d+(?:\.\d+)*[a-z]?)$/)
+  end
 
   depends_on macos: ">= :high_sierra"
 

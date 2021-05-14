@@ -1,6 +1,6 @@
 cask "publish-or-perish" do
-  version "7.27.2949.7581"
-  sha256 "8a7ddbec2aedc54f930f73408b1d5b9b276188a34576441032a6a2b32a54525b"
+  version "7.28.3033.7654,2020.12.14.1151"
+  sha256 :no_check
 
   url "https://harzing.com/download/PoP7Mac.pkg"
   appcast "https://harzing.com/download/pop7mac.txt"

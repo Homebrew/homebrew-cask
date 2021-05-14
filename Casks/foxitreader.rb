@@ -1,13 +1,19 @@
 cask "foxitreader" do
-  version "4.1.0"
-  sha256 "9cb030a61430f529ab05e3a06f3cd3b0432c9aeb5eb5bf16e6543830af50e9da"
+  version "4.1.3"
+  sha256 "88a68e664dd60b4934683283cef1ada7b372533d0bc34bffd6b9bfdf90625def"
 
   url "https://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/mac/#{version.major}.x/#{version.major_minor}/ML/FoxitReader#{version.no_dots}.L10N.Setup.pkg"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.foxitsoftware.com/downloads/latest.html%3Fproduct%3DFoxit-Reader%26platform%3DMac-OS-X",
-          must_contain: version.no_dots
   name "Foxit Reader"
   desc "PDF reader"
   homepage "https://www.foxitsoftware.com/pdf-reader/"
+
+  livecheck do
+    url "https://www.foxitsoftware.com/downloads/latest.html?product=Foxit-Reader&platform=Mac-OS-X"
+    strategy :header_match do |headers|
+      match = headers["location"].match(%r{/(\d+(?:\.\d+)*)/ML/FoxitReader(\d+)\.L10N\.Setup\.pkg}i)
+      "#{match[1]}.#{match[2].delete_prefix(match[1].delete("."))}"
+    end
+  end
 
   pkg "FoxitReader#{version.no_dots}.L10N.Setup.pkg"
 

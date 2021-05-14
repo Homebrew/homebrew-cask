@@ -1,13 +1,17 @@
 cask "spectacle" do
-  version "1.2"
+  version "1.2,672"
   sha256 "766d5bf3b404ec567110a25de1d221290bc829302283b28ed0fbe73b9557f30c"
 
-  # spectacle.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://spectacle.s3.amazonaws.com/downloads/Spectacle+#{version}.zip"
-  appcast "https://www.spectacleapp.com/updates/appcast.xml"
+  url "https://spectacle.s3.amazonaws.com/downloads/Spectacle+#{version.before_comma}.zip",
+      verified: "spectacle.s3.amazonaws.com/"
   name "Spectacle"
   desc "Move and resize windows with ease"
   homepage "https://www.spectacleapp.com/"
+
+  livecheck do
+    url "https://www.spectacleapp.com/updates/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 

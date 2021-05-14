@@ -1,12 +1,16 @@
 cask "numi" do
-  version "3.28.668"
-  sha256 "4daf9adde47117891559a31360aae6262fcdb9e0a092658ec4471aa4aafbc634"
+  version "3.30.692"
+  sha256 "6946ff48db86bc58139a3444198b50c2f0eb330add4b3a1cf6e82e1537cd5673"
 
   url "https://s3.numi.app/updates/#{version}/Numi.dmg"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://s1.numi.app/download"
   name "Numi"
   desc "Calculator and converter application"
   homepage "https://numi.app/"
+
+  livecheck do
+    url "https://s1.numi.app/download"
+    strategy :header_match
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"

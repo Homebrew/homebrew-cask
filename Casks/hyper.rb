@@ -2,14 +2,19 @@ cask "hyper" do
   version "3.0.2"
   sha256 "56ac31f2f8aa99edf03f277b25203eca9d8b6c4d6535f673a996fddca0d21bb5"
 
-  # github.com/zeit/hyper/ was verified as official when first introduced to the cask
-  url "https://github.com/zeit/hyper/releases/download/#{version}/hyper-#{version}-mac.zip"
-  appcast "https://github.com/zeit/hyper/releases.atom"
+  url "https://github.com/zeit/hyper/releases/download/#{version}/hyper-#{version}-mac.zip",
+      verified: "github.com/zeit/hyper/"
   name "Hyper"
   desc "Terminal built on web technologies"
   homepage "https://hyper.is/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
+  conflicts_with cask: "homebrew/cask-versions/hyper-canary"
 
   app "Hyper.app"
   binary "#{appdir}/Hyper.app/Contents/Resources/bin/hyper"

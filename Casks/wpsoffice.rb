@@ -1,9 +1,9 @@
 cask "wpsoffice" do
-  version "2.7.0,4476"
-  sha256 "df42bf0a41794da5a85b8a342e519e55671a594f6813511642200ca32d9bcac7"
+  version "3.1.1,5096"
+  sha256 "ffa961f9e791ebd9576dcc9e181e60213fa97a53d4c1c5488d5befa2046cedf3"
 
-  # wdl1.pcfg.cache.wpscdn.com/ was verified as official when first introduced to the cask
-  url "https://wdl1.pcfg.cache.wpscdn.com/wpsdl/macwpsoffice/download/#{version.before_comma}.#{version.after_comma}/WPSOffice_#{version.before_comma}(#{version.after_comma}).dmg"
+  url "https://wdl1.pcfg.cache.wpscdn.com/wpsdl/macwpsoffice/download/#{version.before_comma}.#{version.after_comma}/WPSOffice_#{version.before_comma}(#{version.after_comma}).dmg",
+      verified: "wdl1.pcfg.cache.wpscdn.com/"
   name "WPS Office"
   desc "All-in-one office suite"
   homepage "https://www.wps.com/mac/"

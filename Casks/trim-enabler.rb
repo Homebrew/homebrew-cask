@@ -1,12 +1,18 @@
 cask "trim-enabler" do
-  version "4.3.4,24.1580333799"
-  sha256 "0968bff09ade1682ae91bacf5ace1bacb3d9927c14be41118e2c5b76b741d742"
+  version "4.3.6,26:1609590590"
+  sha256 "e26f27030303c41cfcfe59fe72ad43202db666bcaaf9047ebf52cbad87896db5"
 
-  # dl.devmate.com/org.cindori.TrimEnabler4/ was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/org.cindori.TrimEnabler4/#{version.after_comma.major}/#{version.after_comma.minor}/TrimEnabler-#{version.after_comma.major}.zip"
-  appcast "https://updates.devmate.com/org.cindori.TrimEnabler#{version.major}.xml"
+  url "https://dl.devmate.com/org.cindori.TrimEnabler4/#{version.after_comma.before_colon}/#{version.after_colon}/TrimEnabler-#{version.after_comma.before_colon}.zip",
+      verified: "dl.devmate.com/org.cindori.TrimEnabler4/"
   name "Trim Enabler"
   homepage "https://cindori.org/trimenabler/"
+
+  livecheck do
+    url "https://updates.devmate.com/org.cindori.TrimEnabler#{version.major}.xml"
+    strategy :sparkle do |item|
+      "#{item.short_version},#{item.version}:#{item.url[%r{/(\d+)/TrimEnabler-\d+\.zip}i, 1]}"
+    end
+  end
 
   depends_on macos: ">= :yosemite"
 

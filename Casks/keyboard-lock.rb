@@ -7,6 +7,12 @@ cask "keyboard-lock" do
   desc "Simple keyboard locker"
   homepage "http://keylock.io/"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/Keyboard-Lock-(\d+(?:\.\d+)*)\.zip}i)
+  end
+
   app "Keyboard Lock.app"
 
   uninstall delete: "~/Library/Containers/com.virae.Keyboard-Lock"

@@ -1,12 +1,16 @@
 cask "nteract" do
-  version "0.26.0"
-  sha256 "8cf33c99cdfdd9bd1623aac9ac0ea51f9b6043a4be28b4520429413a79af5856"
+  version "0.28.0"
+  sha256 "de65abe5ed76489217a9c29bcc177aa5b2ee2f0657cd017301af33280ca8a737"
 
   url "https://github.com/nteract/nteract/releases/download/v#{version}/nteract-#{version}.dmg"
-  appcast "https://github.com/nteract/nteract/releases.atom"
   name "nteract"
   desc "Interactive computing suite"
   homepage "https://github.com/nteract/nteract"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
 

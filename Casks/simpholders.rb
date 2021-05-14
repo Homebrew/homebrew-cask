@@ -1,13 +1,20 @@
 cask "simpholders" do
-  version "3.0.10,2277"
-  sha256 "edcfb7b1c78873755487640615960980f2c13ae56a565f67c55d30ad1657f134"
+  version "3.0.12,2366"
+  sha256 "0f74633bd6bd9723063af0be550364882b93fbb5cd67bac6e2066083174e5f0d"
 
   url "https://simpholders.com/site/assets/files/#{version.after_comma}/simpholders_#{version.before_comma.dots_to_underscores}.dmg"
-  appcast "https://simpholders.com/releases/"
   name "SimPholders"
   homepage "https://simpholders.com/"
 
-  depends_on macos: ">= :mojave"
+  livecheck do
+    url "https://simpholders.com/latest/"
+    strategy :header_match do |headers|
+      match = headers["location"].match(%r{/(\d+)/simpholders_(\d+(?:_\d+)*).dmg}i)
+      "#{match[2].tr("_", ".")},#{match[1]}"
+    end
+  end
 
-  app "SimPholders.app"
+  depends_on macos: ">= :catalina"
+
+  app "simpholders_#{version.before_comma.dots_to_underscores}.app", target: "SimPholders.app"
 end

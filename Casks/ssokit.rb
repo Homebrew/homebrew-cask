@@ -1,11 +1,15 @@
 cask "ssokit" do
-  version "1.1.0"
-  sha256 "e3da08bae091e344bb733c822c6b02dfd1aa9c7cca8a05a74838d69ac5b60028"
+  version "1.1.7"
+  sha256 "c4c966c54b7a4e368f4ccb68b73fad970b43840def4cd7d10582498ceab42991"
 
   url "https://github.com/rangaofei/SSokit-qmake/releases/download/#{version}/SSokit_#{version}.dmg"
-  appcast "https://github.com/rangaofei/ssokit-qmake/releases.atom"
-  name "SSoikt"
+  name "SSokit"
   homepage "https://github.com/rangaofei/SSokit-qmake"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "SSokit.app"
 

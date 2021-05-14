@@ -1,12 +1,17 @@
 cask "micro-snitch" do
-  version "1.3.1"
-  sha256 "9a909b7a73de527a0d3b446dead7d40b12f71e81cb324484db3a8b1579b5d28a"
+  version "1.4"
+  sha256 "fc5e4fc14d7eed0508bddb03a074c4ce4aff1bc481698ce26ce95f59dc260a96"
 
-  url "https://www.obdev.at/downloads/MicroSnitch/MicroSnitch-#{version}.zip"
-  appcast "https://www.obdev.at/products/microsnitch/download.html"
+  url "https://www.obdev.at/downloads/MicroSnitch/MicroSnitch-#{version}.dmg"
   name "Micro Snitch"
   desc "Monitors and reports any microphone and camera activity"
   homepage "https://www.obdev.at/products/microsnitch/index.html"
+
+  livecheck do
+    url "https://www.obdev.at/products/microsnitch/download.html"
+    strategy :page_match
+    regex(%r{href=.*?/MicroSnitch-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   auto_updates true
   depends_on macos: ">= :el_capitan"

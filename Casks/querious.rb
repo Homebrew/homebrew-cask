@@ -1,11 +1,16 @@
 cask "querious" do
-  version "3.0.8"
-  sha256 "34ea7b387f1d8238a8f5c1ae1726484f0a31e14d73eedd4458a15b5d23ac0e6e"
+  version "3.0.11"
+  sha256 "43426c65d9134d949a34f916fed544f2bf04be62f4844a8ab7379ae6f2d8a215"
 
   url "https://www.araelium.com/querious/downloads/versions/Querious#{version}.zip"
-  appcast "https://arweb-assets.s3.amazonaws.com/downloads/querious/updates.json"
   name "Querious #{version.major}"
   homepage "https://www.araelium.com/querious/"
+
+  livecheck do
+    url "https://arweb-assets.s3.amazonaws.com/downloads/querious/updates.json"
+    strategy :page_match
+    regex(/Querious(\d+(?:\.\d+)*)\.zip/i)
+  end
 
   auto_updates true
 

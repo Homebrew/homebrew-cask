@@ -3,7 +3,6 @@ cask "guppy" do
   sha256 "9e65c7df1c77dc78f469984e2bf06351254de72e98b20a12396536946116c80c"
 
   url "https://github.com/joshwcomeau/guppy/releases/download/v#{version}/Guppy-#{version}.dmg"
-  appcast "https://github.com/joshwcomeau/guppy/releases.atom"
   name "Guppy"
   desc "Friendly application manager and task runner for React.js"
   homepage "https://github.com/joshwcomeau/guppy"

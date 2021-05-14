@@ -6,6 +6,12 @@ cask "crystax-ndk" do
   name "Crystax NDK"
   homepage "https://www.crystax.net/android/ndk"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/crystax-ndk-(\d+(?:\.\d+)*)-darwin-x86_64\.tar\.xz}i)
+  end
+
   conflicts_with cask: "android-ndk"
 
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)

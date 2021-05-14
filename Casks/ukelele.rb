@@ -1,11 +1,15 @@
 cask "ukelele" do
-  version "3.4.2"
-  sha256 "764ee84e645b789524cc7b2c5e4c4440b1e810fccca54c64e9dceb2e40264f6a"
+  version "3.5.2,343"
+  sha256 "1e847ab3cee8f0caa5e1a36ebabab82ba9e298f22429416bfef71689f34df642"
 
-  url "https://software.sil.org/downloads/r/ukelele/Ukelele_#{version}.dmg"
-  appcast "https://software.sil.org/downloads/r/ukelele/Ukelele_appcast.xml"
+  url "https://software.sil.org/downloads/r/ukelele/Ukelele_#{version.before_comma}.dmg"
   name "Ukelele"
   homepage "https://software.sil.org/ukelele/"
+
+  livecheck do
+    url "https://software.sil.org/downloads/r/ukelele/Ukelele_appcast.xml"
+    strategy :sparkle
+  end
 
   app "Ukelele.app"
 

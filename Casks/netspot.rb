@@ -1,12 +1,16 @@
 cask "netspot" do
-  version "2.12.999"
-  sha256 "0016438800c7688786b9e53e88156fda425d0e3f5d620d7dee3817fc69b18223"
+  version "2.13.1019"
+  sha256 :no_check
 
   url "https://cdn.netspotapp.com/download/NetSpot.dmg"
-  appcast "https://www.netspotapp.com/updates/netspot#{version.major}-appcast.xml"
   name "NetSpot"
   desc "WiFi site survey software and WiFi scanner"
   homepage "https://www.netspotapp.com/"
+
+  livecheck do
+    url "https://www.netspotapp.com/updates/netspot#{version.major}-appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 

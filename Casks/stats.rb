@@ -1,9 +1,8 @@
 cask "stats" do
-  version "2.4.2"
-  sha256 "a8110ba6d1d54567106e0d633c530018dbd9d00fb5c3abd3334fa7f115c26614"
+  version "2.5.14"
+  sha256 "64fc634c2763717142f0677792cc33bc725cd7dba6b1ad9f87d06e912fded75d"
 
   url "https://github.com/exelban/stats/releases/download/v#{version}/Stats.dmg"
-  appcast "https://github.com/exelban/stats/releases.atom"
   name "Stats"
   desc "System monitor for the menu bar"
   homepage "https://github.com/exelban/stats"

@@ -1,8 +1,7 @@
 cask "sound-control" do
-  version "2.5.0,5156"
-  sha256 "b8c2d91aa560248eda0938770c232d31b0b87a95872e4c4df2a6a1db7c514cfb"
+  version "2.6.0,4297"
+  sha256 "d7b323dad1b9351b29f0a7ec66d1c428e59d155c3c70c64d1ae0913031bf2b98"
 
-  # staticz.net/ was verified as official when first introduced to the cask
   url "https://staticz.com/download/#{version.after_comma}/"
   appcast "http://staticz.net/updates/soundcontrol.rss"
   name "Sound Control"

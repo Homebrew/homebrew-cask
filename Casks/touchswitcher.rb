@@ -1,13 +1,20 @@
 cask "touchswitcher" do
-  version "1.3.3,122"
-  sha256 "0145227a9e26d7129d200e0fed2aea3855cd6c36248a300adc14741ff504afa7"
+  version "1.4.1,135"
+  sha256 :no_check
 
   url "https://hazeover.com/touchswitcher/TouchSwitcher.zip"
-  appcast "https://hazeover.com/touchswitcher/updates.xml"
   name "TouchSwitcher"
+  desc "Use Touch Bar to switch apps"
   homepage "https://hazeover.com/touchswitcher.html"
 
-  depends_on macos: ">= :high_sierra"
+  livecheck do
+    url "https://hazeover.com/touchswitcher/updates.xml"
+    strategy :sparkle
+  end
+
+  depends_on macos: ">= :mojave"
 
   app "TouchSwitcher.app"
+
+  zap trash: "~/Library/Preferences/com.pointum.TouchSwitcher.plist"
 end

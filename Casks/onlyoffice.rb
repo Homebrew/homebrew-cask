@@ -1,10 +1,9 @@
 cask "onlyoffice" do
-  version "6.0.0"
-  sha256 "d82c5623e814a3df939fa039945b76b38af35bdf0ce06f6da85cb94891a8e3f2"
+  version "6.2.0"
+  sha256 "cb70d3eb81c3a93ef130243b3ccaf065c37cd024583453debdb32ec862fb4070"
 
-  # github.com/ONLYOFFICE/DesktopEditors/ was verified as official when first introduced to the cask
-  url "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/ONLYOFFICE-DesktopEditors-#{version}/ONLYOFFICE.dmg"
-  appcast "https://github.com/ONLYOFFICE/DesktopEditors/releases.atom"
+  url "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v#{version}/ONLYOFFICE.dmg",
+      verified: "github.com/ONLYOFFICE/DesktopEditors/"
   name "ONLYOFFICE"
   desc "Document editor"
   homepage "https://www.onlyoffice.com/"

@@ -15,16 +15,24 @@ cask "evernote" do
 
     url "https://cdn1.evernote.com/mac-smd/public/Evernote_RELEASE_#{version}.dmg"
   else
-    version "10.3.6-2001"
-    sha256 "2e14f94fbbbb9af08651345e10f9cae14b0006da841b0f1480466ee5a375c0cb"
+    version "10.13.4,2607"
+    sha256 "2a33cb1e768adcf6eee0754815897c58cc9dc79ecabfa8b3a9e73366dc2e34a7"
 
-    url "https://cdn1.evernote.com/boron/mac/builds/Evernote-#{version}.dmg"
+    url "https://cdn1.evernote.com/boron/mac/builds/Evernote-#{version.before_comma}-mac-ddl-ga-#{version.after_comma}.dmg"
   end
 
-  appcast "https://evernote.s3.amazonaws.com/boron/mac/public/latest-mac.yml"
   name "Evernote"
   desc "App for note taking, organizing, task lists, and archiving"
   homepage "https://evernote.com/"
+
+  livecheck do
+    url "https://evernote.s3.amazonaws.com/boron/mac/public/latest-mac.yml"
+
+    strategy :electron_builder do |yml|
+      match = yml["files"][0]["url"].match(/Evernote-(\d+(?:\.\d+)*)-mac-ddl-ga-(\d+(?:\.\d+)*)/)
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
   auto_updates true
 
@@ -36,10 +44,15 @@ cask "evernote" do
   ]
 
   zap trash: [
+    "~/Library/Application Support/Evernote",
     "~/Library/Application Support/com.evernote.Evernote",
     "~/Library/Application Support/com.evernote.EvernoteHelper",
+    "~/Library/Application Support/Caches/evernote-client-updater",
     "~/Library/Caches/com.evernote.Evernote",
     "~/Library/Preferences/com.evernote.Evernote.plist",
     "~/Library/Preferences/com.evernote.EvernoteHelper.plist",
+    "~/Library/Logs/Evernote",
+    "~/Library/Cookies/com.evernote.Evernote.binarycookies",
+    "~/Library/Saved Application State/com.evernote.Evernote.savedState",
   ]
 end

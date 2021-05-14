@@ -1,11 +1,16 @@
 cask "celestialteapot-runway" do
-  version "1.9"
+  version "1.9,1902"
   sha256 "bd063e9f8db568aa2c57d5f7464dbdfead7b21dec8a80f112b0b78a349578114"
 
-  url "http://celestialteapot.com/runway/dist/Runway_#{version}.zip"
-  appcast "http://celestialteapot.com/runway/appcast/runway.rss"
+  url "https://celestialteapot.com/runway/dist/Runway_#{version.before_comma}.zip"
   name "Runway"
-  homepage "http://celestialteapot.com/runway/"
+  desc "UML (Unified Modeling Language) design app"
+  homepage "https://celestialteapot.com/runway/"
+
+  livecheck do
+    url "https://celestialteapot.com/runway/appcast/runway.rss"
+    strategy :sparkle
+  end
 
   app "Runway.app"
 end

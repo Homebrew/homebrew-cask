@@ -1,11 +1,16 @@
 cask "jaxx-liberty" do
-  version "2.4.6"
-  sha256 "da93cbc60c72710d4b4cb34897751ca481a0fdbd72c06955a94e364b894c3085"
+  version "2.6.3"
+  sha256 "86ccdd76668083972c7cd0034aee43af314189f81c325d8e1a80ea7136929766"
 
   url "https://download-liberty.jaxx.io/Jaxx.Liberty-#{version}.dmg"
-  appcast "https://download-liberty.jaxx.io/latest-mac.yml"
   name "Jaxx Blockchain Wallet"
+  desc "Blockchain Wallet, holdings, crypto prices and news"
   homepage "https://jaxx.io/"
+
+  livecheck do
+    url "https://download-liberty.jaxx.io/latest-mac.yml"
+    strategy :electron_builder
+  end
 
   app "Jaxx Liberty.app"
 

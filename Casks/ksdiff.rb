@@ -1,14 +1,23 @@
 cask "ksdiff" do
-  version "2.2.0,122"
-  sha256 "cf32401d631e61cbbc3dc9947626174b45e8317a6cac39380067e7017e8d4c87"
+  version "2.4.1,125:apr-6-2021"
+  sha256 "30217646096671f49f5d84b7f03ce3ab34a1c5dacc4bf41933f73edcc114c754"
 
-  url "https://cdn.kaleidoscopeapp.com/releases/ksdiff-#{version.after_comma}-#{version.before_comma}.zip"
+  url "https://updates.kaleidoscope.app/v2/prod/ksdiff-#{version.before_comma}-#{version.after_comma.before_colon}-#{version.after_colon}.zip"
   name "ksdiff"
-  homepage "https://www.kaleidoscopeapp.com/ksdiff2"
+  desc "Command-line tool for the App Store version of Kaleidoscope"
+  homepage "https://kaleidoscope.app/ksdiff2"
+
+  livecheck do
+    url "https://kaleidoscope.app/download/latest/ksdiff"
+    strategy :header_match do |headers|
+      match = headers["location"].match(%r{/ksdiff-(\d+(?:\.\d+)*)-(\d+)-(\w+(?:-\d+)*)\.zip}i)
+      "#{match[1]},#{match[2]}:#{match[3]}"
+    end
+  end
 
   conflicts_with cask: "kaleidoscope"
 
-  pkg "ksdiff-#{version.after_comma}/Install ksdiff.pkg"
+  pkg "ksdiff-#{version.before_comma}/Install ksdiff.pkg"
 
   uninstall pkgutil: "com.blackpixel.kaleidoscope.ksdiff.installer.pkg"
 

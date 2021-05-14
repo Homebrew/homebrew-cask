@@ -1,11 +1,21 @@
 cask "macgamestore" do
-  version "4.1.1,6073"
-  sha256 "88749a118e788b3a0b36bdb759304149924c0234e94bacf6d7ad5c848e7c8068"
+  version "4.3.1,6081"
+  sha256 "ba659f4a537148e87c7b9a1241bf00d015bffc37709040550cd5d7ce71cd0430"
 
   url "https://www.macgamestore.com/api_clientapp/clientupdates/public/core6/MacGameStore_#{version.before_comma}_#{version.after_comma}.tgz"
-  appcast "https://www.macgamestore.com/api_clientapp/clientupdates/public/update.xml"
   name "MacGameStore"
+  desc "Buy, download, and play your games"
   homepage "https://www.macgamestore.com/app/"
+
+  livecheck do
+    url "https://www.macgamestore.com/api_clientapp/clientupdates/public/update.xml"
+    strategy :sparkle do |item|
+      match = item.url.match(%r{/MacGameStore_(\d+(?:\.\d+)*)_(\d+)\.tgz}i)
+      "#{match[1]},#{match[2]}"
+    end
+  end
+
+  depends_on macos: ">= :sierra"
 
   app "MacGameStore.app"
 

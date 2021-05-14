@@ -1,12 +1,16 @@
 cask "cctalk" do
-  version "7.7.3-1123"
-  sha256 "94d426d0309c2ec3ee8c86530038702c28d1c2d03dd5c656de8632a7fc3da12f"
+  version "7.8.3.1"
+  sha256 "02a68e31c257c0674c9d19ec89674026afade5184cc89f655cd942f3ca930996"
 
-  # cc.hjfile.cn/ was verified as official when first introduced to the cask
-  url "https://cc.hjfile.cn/cc/#{version}/8/1/103/#{version}.dmg"
-  appcast "https://www.macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=https://www.cctalk.com/webapi/basic/v1.1/version/down%3Fapptype=1%26terminalType=8%26versionType=103"
+  url "https://cc.hjfile.cn/cc/CCtalk.#{version}/8/1/103/CCtalk.#{version}.dmg",
+      verified: "cc.hjfile.cn/"
   name "CCtalk"
   homepage "https://www.cctalk.com/download/"
+
+  livecheck do
+    url "https://www.cctalk.com/webapi/basic/v1.1/version/down?apptype=1&terminalType=8&versionType=103"
+    strategy :header_match
+  end
 
   depends_on macos: ">= :yosemite"
 

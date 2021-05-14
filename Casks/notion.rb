@@ -1,13 +1,24 @@
 cask "notion" do
-  version "2.0.8"
-  sha256 "a65b8108a3bfa0d9013bdab2c7c4e146ea244d9fd2a9203b674700e6399c8c4a"
+  if Hardware::CPU.intel?
+    version "2.0.17"
+    sha256 "bf9a5b5ffe0f9e94808102b91d499d4bba6f4a5461efad3d0bc7bc9c709d1aaa"
+    url "https://desktop-release.notion-static.com/Notion-#{version}.dmg",
+        verified: "desktop-release.notion-static.com/"
+  else
+    version "2.0.16"
+    sha256 "9c73cbd5eec4474a176ca09f66321eedb8fb62989a02256fa4c0a9544ad50f5b"
+    url "https://desktop-release.notion-static.com/Notion-#{version}-arm64.dmg",
+        verified: "desktop-release.notion-static.com/"
+  end
 
-  # desktop-release.notion-static.com/ was verified as official when first introduced to the cask
-  url "https://desktop-release.notion-static.com/Notion-#{version}.dmg"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.notion.so/desktop/mac/download&user_agent=MacOS"
   name "Notion"
   desc "App to write, plan, collaborate, and get organized"
   homepage "https://www.notion.so/"
+
+  livecheck do
+    url "https://www.notion.so/desktop/mac/download"
+    strategy :header_match
+  end
 
   auto_updates true
 

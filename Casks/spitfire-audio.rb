@@ -1,13 +1,22 @@
 cask "spitfire-audio" do
-  version "3.2.16"
-  sha256 "b9f9dfb82415188ccc34920709f0f50438689a3639d2e0324fa941c237733170"
+  version "3.2.20,1615300200"
+  sha256 "7036dfe458d0e543b261cc2490c67df1911aff463fc4d023269606fe52e5b0a4"
 
-  # d1t3zg51rvnesz.cloudfront.net/ was verified as official when first introduced to the cask
-  url "https://d1t3zg51rvnesz.cloudfront.net/p/files/lm/1601024400/mac/SpitfireAudio-Mac-#{version}.dmg"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.spitfireaudio.com/library-manager/download/mac/"
+  url "https://d1t3zg51rvnesz.cloudfront.net/p/files/lm/#{version.after_comma}/mac/SpitfireAudio-Mac-#{version.before_comma}.dmg",
+      verified: "d1t3zg51rvnesz.cloudfront.net/"
   name "Spitfire Audio"
-  desc "Downloade manager for Spitfire audio libraries"
+  desc "Download manager for Spitfire audio libraries"
   homepage "https://www.spitfireaudio.com/info/library-manager/"
+
+  livecheck do
+    url "https://www.spitfireaudio.com/library-manager/download/mac/"
+    strategy :header_match do |headers|
+      match = headers["location"].match(%r{/(\d+)/.*-(\d+(?:\.\d+)*)\.dmg}i)
+      "#{match[2]},#{match[1]}"
+    end
+  end
+
+  auto_updates true
 
   app "Spitfire Audio.app"
 

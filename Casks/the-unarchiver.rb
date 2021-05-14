@@ -1,13 +1,19 @@
 cask "the-unarchiver" do
-  version "4.2.2,129:1590582775"
-  sha256 "0c586d9f95d23cead58c7b314f74b6158f7917673e1163034267030d4a65d32f"
+  version "4.3.0,132:1618399262"
+  sha256 "3482937a20df7561dbaf7d3fffafc5b5cf49ab863f409f919055b7bfa4d3ee5d"
 
-  # devmate.com/com.macpaw.site.theunarchiver/ was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.macpaw.site.theunarchiver/#{version.after_comma.before_colon}/#{version.after_colon}/TheUnarchiver-#{version.after_comma.before_colon}.zip"
-  appcast "https://updates.devmate.com/com.macpaw.site.theunarchiver.xml"
+  url "https://dl.devmate.com/com.macpaw.site.theunarchiver/#{version.after_comma.before_colon}/#{version.after_colon}/TheUnarchiver-#{version.after_comma.before_colon}.zip",
+      verified: "devmate.com/com.macpaw.site.theunarchiver/"
   name "The Unarchiver"
   desc "Unpacks archive files"
   homepage "https://theunarchiver.com/"
+
+  livecheck do
+    url "https://updates.devmate.com/com.macpaw.site.theunarchiver.xml"
+    strategy :sparkle do |item|
+      "#{item.short_version},#{item.version}:#{item.url[%r{/(\d+)/TheUnarchiver-\d+\.zip}i, 1]}"
+    end
+  end
 
   auto_updates true
 

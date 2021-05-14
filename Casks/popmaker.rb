@@ -6,5 +6,11 @@ cask "popmaker" do
   name "PopMaker"
   homepage "https://brettterpstra.com/2014/05/12/popmaker-popclip-extension-generator/"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/PopMaker(\d+(?:\.\d+)*)\.zip}i)
+  end
+
   app "PopMaker.app"
 end

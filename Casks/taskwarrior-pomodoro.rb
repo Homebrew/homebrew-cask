@@ -3,7 +3,6 @@ cask "taskwarrior-pomodoro" do
   sha256 "07aad9949cf7ec5752d5da87333c52f07654b0c480b18779afaec0f5debb488a"
 
   url "https://github.com/coddingtonbear/taskwarrior-pomodoro/releases/download/v#{version}/taskwarrior-pomodoro-#{version}.dmg"
-  appcast "https://github.com/coddingtonbear/taskwarrior-pomodoro/releases.atom"
   name "Taskwarrior-Pomodoro"
   homepage "https://github.com/coddingtonbear/taskwarrior-pomodoro"
 

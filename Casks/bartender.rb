@@ -4,24 +4,26 @@ cask "bartender" do
     sha256 "013bb1f5dcc29ff1ecbc341da96b6e399dc3c85fc95bd8c7bee153ab0d8756f5"
     url "https://macbartender.com/B2/updates/#{version.dots_to_hyphens}/Bartender%20#{version.major}.zip",
         referer: "https://www.macbartender.com"
-    appcast "https://www.macbartender.com/B2/updates/Appcast.xml"
   elsif MacOS.version <= :catalina
-    version "3.1.25"
+    version "3.1.25,31125"
     sha256 "bd31aa2aab3262ed08f5c421d504b82893b5dfc546f37fc98eae23bc47494c8a"
-    url "https://macbartender.com/B2/updates/#{version.dots_to_hyphens}/Bartender%20#{version.major}.zip",
+    url "https://macbartender.com/B2/updates/#{version.before_comma.dots_to_hyphens}/Bartender%20#{version.major}.zip",
         referer: "https://www.macbartender.com"
-    appcast "https://www.macbartender.com/B2/updates/AppcastB#{version.major}.xml"
   else
-    version "4.0.18"
-    sha256 "b696a150bd111a121fb344932399ade4baabfcd3f3251c1a50e62875f7b276a4"
+    version "4.0.48,40048"
+    sha256 "677a8130f274b4f95f9f4e5be44d512f5e25daae3ffb5d06e616fe112024bef5"
     url "https://macbartender.com/B2/updates/B4Latest/Bartender%20#{version.major}.dmg",
         referer: "https://www.macbartender.com"
-    appcast "https://www.macbartender.com/B2/updates/AppcastB#{version.major}.xml"
   end
 
   name "Bartender"
   desc "Menu bar icon organizer"
   homepage "https://www.macbartender.com/"
+
+  livecheck do
+    url "https://www.macbartender.com/B2/updates/AppcastB#{version.major}.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 

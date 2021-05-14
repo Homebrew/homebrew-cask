@@ -1,9 +1,9 @@
 cask "bricklink-partdesigner" do
   version "1.0.6_5"
-  sha256 "161639b438eff18b4b71434ec9616634735200031ce9c99b673972e9032a44dc"
+  sha256 :no_check
 
-  # dzncyaxjqx7p3.cloudfront.net/ was verified as official when first introduced to the cask
-  url "https://dzncyaxjqx7p3.cloudfront.net/PartDesigner/PartDesigner.pkg"
+  url "https://dzncyaxjqx7p3.cloudfront.net/PartDesigner/PartDesigner.pkg",
+      verified: "dzncyaxjqx7p3.cloudfront.net/"
   appcast "https://bricklink.com/v3/studio/partdesigner.page"
   name "PartDesigner"
   desc "Design your own LEGO parts"

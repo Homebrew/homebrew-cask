@@ -1,15 +1,20 @@
 cask "audio-hijack" do
-  version "3.7.6"
-  sha256 "a7b8ebd1e17a888817831e7c4064b04fe3521ff9fc6742b833ae819c34d80a79"
+  version "3.8.4"
+  sha256 :no_check
 
   url "https://rogueamoeba.com/audiohijack/download/AudioHijack.zip"
-  appcast "https://www.rogueamoeba.com/audiohijack/releasenotes.php"
   name "Audio Hijack"
   desc "Records audio from any application"
   homepage "https://www.rogueamoeba.com/audiohijack/"
 
+  livecheck do
+    url "https://www.rogueamoeba.com/audiohijack/releasenotes.php"
+    strategy :page_match
+    regex(/ra-version="(\d+(?:\.\d+)*)"/i)
+  end
+
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "Audio Hijack.app"
 

@@ -1,10 +1,9 @@
 cask "rotki" do
-  version "1.8.3"
-  sha256 "98982adc36d0723c09465735f601a006e91a099e72aedca42b255002b32b6850"
+  version "1.16.2"
+  sha256 "eb5d7b77bf001cdf9713a6f082fe7af16e739e41cc372e9df8383dc27fb4775c"
 
-  # github.com/rotki/rotki/ was verified as official when first introduced to the cask
-  url "https://github.com/rotki/rotki/releases/download/v#{version}/rotki-darwin-v#{version}.dmg"
-  appcast "https://github.com/rotki/rotki/releases.atom"
+  url "https://github.com/rotki/rotki/releases/download/v#{version}/rotki-darwin-v#{version}.dmg",
+      verified: "github.com/rotki/rotki/"
   name "Rotki"
   desc "Portfolio tracking and accounting tool"
   homepage "https://rotki.com/"

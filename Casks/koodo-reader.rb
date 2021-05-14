@@ -1,10 +1,9 @@
 cask "koodo-reader" do
-  version "1.1.7"
-  sha256 "9b6cbe00b16f17774b2753374468c1e8b8465a72f9f2c525f3a1a37e68a9c2af"
+  version "1.2.5"
+  sha256 "ad1cdc1420439a361a3f3a44dea407ffe555795b153c255c2e61571d8912bcea"
 
-  # github.com/troyeguo/koodo-reader was verified as official when first introduced to the cask
-  url "https://github.com/troyeguo/koodo-reader/releases/download/v#{version}/Koodo-Reader-#{version}.dmg"
-  appcast "https://github.com/troyeguo/koodo-reader/releases.atom"
+  url "https://github.com/troyeguo/koodo-reader/releases/download/v#{version}/Koodo-Reader-#{version}.dmg",
+      verified: "github.com/troyeguo/koodo-reader/"
   name "Koodo Reader"
   desc "Open-source Epub reader with backup and restore support"
   homepage "https://koodo.960960.xyz/"

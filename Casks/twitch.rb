@@ -1,9 +1,9 @@
 cask "twitch" do
-  version :latest
+  version "8.60.1"
   sha256 :no_check
 
-  # desktop.twitchsvc.net/installer/ was verified as official when first introduced to the cask
-  url "https://desktop.twitchsvc.net/installer/mac/Twitch.dmg"
+  url "https://desktop.twitchsvc.net/installer/mac/Twitch.dmg",
+      verified: "desktop.twitchsvc.net/installer/"
   name "Twitch"
   homepage "https://app.twitch.tv/"
 

@@ -1,12 +1,17 @@
 cask "skyfonts" do
-  version "5.9.5.7"
-  sha256 "bfdd1e920e0c6871909fbc9ce441d7b1eba9be04fb30af32892649b131ff05ad"
+  version "5.9.5.8"
+  sha256 "65a914edce60c0110d4ad4ff371389059ff6ab77b6e0a4b7135c9f3097d8565d"
 
   url "https://cdn1.skyfonts.com/client/Monotype_SkyFonts_Mac64_#{version}.dmg"
-  appcast "https://api.skyfonts.com/api/SkyFontsAppCast?osid=3"
   name "SkyFonts"
   desc "Font manager"
   homepage "https://skyfonts.com/"
+
+  livecheck do
+    url "https://api.skyfonts.com/api/SkyFontsAppCast?osid=3"
+    strategy :page_match
+    regex(%r{href=.*?/Monotype_SkyFonts_Mac64_(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   installer manual: "Install SkyFonts.app"
 

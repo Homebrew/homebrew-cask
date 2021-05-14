@@ -1,10 +1,23 @@
 cask "virtualhereserver" do
-  version :latest
+  version "4.3.0"
   sha256 :no_check
 
-  url "https://www.virtualhere.com/sites/default/files/usbserver/VirtualHereServer.dmg"
+  if MacOS.version <= :mojave
+    url "https://www.virtualhere.com/sites/default/files/usbserver/VirtualHereServer.dmg"
+
+    app "VirtualHereServer.app"
+  else
+    url "https://www.virtualhere.com/sites/default/files/usbserver/VirtualHereServerUniversal.dmg"
+
+    app "VirtualHereServerUniversal.app"
+  end
+
   name "VirtualHereServer"
+  desc "Remotely access your connected USB devices over the network"
   homepage "https://www.virtualhere.com/osx_server_software"
 
-  app "VirtualHereServer.app"
+  livecheck do
+    url :homepage
+    regex(/Version\s*(\d+(?:\.\d*)*)/i)
+  end
 end

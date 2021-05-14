@@ -6,5 +6,11 @@ cask "geotagger" do
   name "Geotagger"
   homepage "http://craig.stanton.net.nz/code/geotagger/"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/Geotagger(\d+(?:\.\d+)*)\.zip}i)
+  end
+
   app "Geotagger.app"
 end

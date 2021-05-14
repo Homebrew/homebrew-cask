@@ -1,13 +1,18 @@
 cask "postbox" do
-  version "7.0.36"
-  sha256 "d77219a8978ade273aa10f081d1140e16039014dc94a73e12b00e939c708b7d4"
+  version "7.0.48"
+  sha256 "2f57f14f693ce3311168ddbfbde261e839099cbfc7667c6ab1d006d219a0a39a"
 
-  # d3nx85trn0lqsg.cloudfront.net/mac/ was verified as official when first introduced to the cask
-  url "https://d3nx85trn0lqsg.cloudfront.net/mac/postbox-#{version}-mac64.dmg"
-  appcast "https://www.postbox-inc.com/download/success-mac"
+  url "https://d3nx85trn0lqsg.cloudfront.net/mac/postbox-#{version}-mac64.dmg",
+      verified: "d3nx85trn0lqsg.cloudfront.net/mac/"
   name "Postbox"
   desc "Email client focusing on privacy protection"
   homepage "https://www.postbox-inc.com/"
+
+  livecheck do
+    url "https://www.postbox-inc.com/download/success-mac"
+    strategy :page_match
+    regex(%r{href=.*?/postbox-(\d+(?:\.\d+)*)-mac64\.dmg}i)
+  end
 
   auto_updates true
   depends_on macos: ">= :high_sierra"

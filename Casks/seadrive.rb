@@ -1,13 +1,18 @@
 cask "seadrive" do
-  version "2.0.7"
-  sha256 "79982a8c82244f231d2f030cf5acba35bb2a81044190d09beadc446e95f7ffc9"
+  version "2.0.13"
+  sha256 "1228efb62f6ee501511b0186ce12bef15b35250e5c295e9180a9ec4c12d4d7e1"
 
-  # download.seadrive.org/ was verified as official when first introduced to the cask
-  url "https://download.seadrive.org/seadrive-#{version}.dmg"
-  appcast "https://www.seafile.com/en/download/"
+  url "https://download.seadrive.org/seadrive-#{version}.dmg",
+      verified: "download.seadrive.org/"
   name "Seadrive"
   desc "Manual for Seafile server"
   homepage "https://www.seafile.com/en/home/"
+
+  livecheck do
+    url "https://www.seafile.com/en/download/"
+    strategy :page_match
+    regex(%r{href=.*?/seadrive-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   app "Seadrive.app"
 end

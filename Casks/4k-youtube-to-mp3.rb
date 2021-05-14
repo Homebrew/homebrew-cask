@@ -1,12 +1,18 @@
 cask "4k-youtube-to-mp3" do
-  # note: "3" is not a version number, but an intrinsic part of the product name
-  version "3.13.2.3870"
-  sha256 "be42a5309bfe383ed9588649926b32de12e67da2296d0ccf67e4ac6fe6cd52be"
+  # NOTE: "3" is not a version number, but an intrinsic part of the product name
+  version "4.0.0"
+  sha256 "72d9e5a980cf4dd8c1ee27f5cbeae85e393450d007e5ccf2e7035cda5185444f"
 
-  url "https://dl.4kdownload.com/app/4kyoutubetomp3_#{version.major_minor_patch}.dmg"
-  appcast "https://www.4kdownload.com/download"
+  url "https://dl.4kdownload.com/app/4kyoutubetomp3_#{version}.dmg"
   name "4K YouTube to MP3"
+  desc "Turn YouTube links into MP3 files"
   homepage "https://www.4kdownload.com/products/product-youtubetomp3"
+
+  livecheck do
+    url "https://www.4kdownload.com/download"
+    strategy :page_match
+    regex(%r{href=.*?/4kyoutubetomp3_(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   depends_on macos: ">= :sierra"
 

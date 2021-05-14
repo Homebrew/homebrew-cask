@@ -3,10 +3,14 @@ cask "kvirc" do
   sha256 "d0793ab8a14de5388bc36f99945191120ec3349ab3f2c24f76f4dd11ab9b4874"
 
   url "ftp://ftp.kvirc.net/pub/kvirc/#{version}/binary/macosx/KVIrc-#{version}.dmg"
-  appcast "https://github.com/kvirc/KVIrc/releases.atom"
   name "KVIrc"
   desc "IRC Client"
-  homepage "https://www.kvirc.net/"
+  homepage "http://kvirc.net/"
+
+  livecheck do
+    url "https://github.com/kvirc/KVIrc"
+    strategy :git
+  end
 
   depends_on macos: ">= :high_sierra"
 

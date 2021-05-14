@@ -1,15 +1,20 @@
 cask "ableton-live-lite" do
-  version "10.1.25"
-  sha256 "a86872a7828dd3dbf4810f8c76eea233eac4d7ca81dd25f7dab6225c11c1ebfa"
+  version "11.0.2"
+  sha256 "cd06ef521d20cb6e40e765230908cc773f5fddcaa1f7ceb684227fa13d4924ef"
 
   url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_lite_#{version}_64.dmg"
-  appcast "https://www.ableton.com/en/release-notes/live-#{version.major}/"
   name "Ableton Live Lite"
   desc "Sound and music editor"
   homepage "https://www.ableton.com/en/products/live-lite/"
 
+  livecheck do
+    url "https://www.ableton.com/en/release-notes/live-#{version.major}/"
+    strategy :page_match
+    regex(/(\d+(?:\.\d+)*)\s*Release\s*Notes/i)
+  end
+
   auto_updates true
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :high_sierra"
 
   app "Ableton Live #{version.major} Lite.app"
 

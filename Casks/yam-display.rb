@@ -1,11 +1,16 @@
 cask "yam-display" do
-  version "1.8.7"
-  sha256 "c2ff8f91681d5ad6977a96ebb43a76a08d6da43d2be286750e359d116bfc126f"
+  version "2.2.3"
+  sha256 "be7e3d1266754b8afacadfd036b49b13612336cf58108f50409aed6347382150"
 
   url "https://www.yamdisplay.com/app/YamDisplay#{version}.zip"
-  appcast "https://www.yamdisplay.com/app/appcast.xml"
   name "Yam Display"
+  desc "Yet another monitor"
   homepage "https://www.yamdisplay.com/"
+
+  livecheck do
+    url "https://www.yamdisplay.com/app/appcast.xml"
+    strategy :sparkle
+  end
 
   app "Yam Display.app"
 

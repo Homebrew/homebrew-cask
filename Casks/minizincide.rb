@@ -1,10 +1,9 @@
 cask "minizincide" do
-  version "2.5.2"
-  sha256 "5bedf0f3acb816dfefcbaf883cbf2a1a5830f7da3544ecdaf85d75d8c7612115"
+  version "2.5.5"
+  sha256 "392c45ee3c98d72e892938048f488dc9eb9788d08538f186b84b33e256013e81"
 
-  # github.com/MiniZinc/MiniZincIDE/ was verified as official when first introduced to the cask
-  url "https://github.com/MiniZinc/MiniZincIDE/releases/download/#{version}/MiniZincIDE-#{version}-bundled.dmg"
-  appcast "https://github.com/MiniZinc/MiniZincIDE/releases.atom"
+  url "https://github.com/MiniZinc/MiniZincIDE/releases/download/#{version}/MiniZincIDE-#{version}-bundled.dmg",
+      verified: "github.com/MiniZinc/MiniZincIDE/"
   name "MiniZincIDE"
   desc "Open-source constraint modeling language and IDE"
   homepage "https://www.minizinc.org/index.html"

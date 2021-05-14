@@ -1,12 +1,16 @@
 cask "pocket-casts" do
-  version "1.4.4"
-  sha256 "79cefd91ef5075a1e8e711af3d47a86f475ce2f1537d45c822a14670267841d8"
+  version "1.5,44"
+  sha256 :no_check
 
   url "https://static.pocketcasts.com/mac/PocketCasts.zip"
-  appcast "https://static2.pocketcasts.com/mac/appcast.xml"
   name "Pocket Casts"
   desc "Podcast platform"
   homepage "https://play.pocketcasts.com/"
+
+  livecheck do
+    url "https://static2.pocketcasts.com/mac/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"

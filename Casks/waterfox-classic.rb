@@ -1,12 +1,17 @@
 cask "waterfox-classic" do
-  version "2020.10,5620.10.20"
-  sha256 "4c6493bad04d12be6268e40cd44774fcb17aa545a5b7c2e335cdd141ea9e9ca9"
+  version "2021.04.2"
+  sha256 "bac0697007218978a87889c0bdf6b1e386d8235f3703eff505ce4ce062fac0bb"
 
-  url "https://cdn.waterfox.net/releases/osx64/installer/Waterfox%20Classic%20#{version.before_comma}%20Setup.dmg"
-  appcast "https://www.waterfox.net/releases/"
+  url "https://cdn.waterfox.net/releases/osx64/installer/Waterfox%20Classic%20#{version}%20Setup.dmg"
   name "Waterfox Classic"
-  desc "Cross-platform web browser"
+  desc "Web browser"
   homepage "https://www.waterfox.net/"
+
+  livecheck do
+    url "https://www.waterfox.net/download/"
+    strategy :page_match
+    regex(%r{href=.*?/Waterfox%20Classic%20(\d+(?:\.\d+)*)%20Setup\.dmg}i)
+  end
 
   app "Waterfox Classic.app"
 

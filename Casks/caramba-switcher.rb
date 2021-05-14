@@ -1,12 +1,17 @@
 cask "caramba-switcher" do
-  version :latest
+  version "2021.04.18"
   sha256 :no_check
 
-  # download.caramba.tech/apps/switcher/ was verified as official when first introduced to the cask
-  url "https://download.caramba.tech/apps/switcher/mac/CarambaSwitcherBeta.pkg"
+  url "https://cdn.caramba-switcher.com/files/CarambaSwitcherBeta.pkg"
   name "Caramba Switcher"
   desc "Keyboard switcher"
   homepage "https://caramba-switcher.com/"
+
+  livecheck do
+    url "https://caramba-switcher.com/mac"
+    strategy :page_match
+    regex(/(\d+(?:\.\d+)*)\s*для\s*Mac/i)
+  end
 
   pkg "CarambaSwitcherBeta.pkg"
 

@@ -1,11 +1,20 @@
 cask "weakauras-companion" do
-  version "3.0.6"
-  sha256 "02219c21542109135846e2a573c4495eaede52e23e832d6c8ca1a65af9e32111"
+  version "3.2.2"
 
-  # github.com/WeakAuras/WeakAuras-Companion was verified as official when first introduced to the cask
-  url "https://github.com/WeakAuras/WeakAuras-Companion/releases/download/v#{version}/WeakAuras-Companion-#{version}.dmg"
-  appcast "https://github.com/WeakAuras/WeakAuras-Companion/releases.atom"
+  if Hardware::CPU.intel?
+    sha256 "c95d8e563f92ba1e2445c17bc1c6e76f7297694851bd656fff80916bdd50be7a"
+
+    url "https://github.com/WeakAuras/WeakAuras-Companion/releases/download/v#{version}/WeakAuras-Companion-#{version}-mac.dmg",
+        verified: "github.com/WeakAuras/WeakAuras-Companion/"
+  else
+    sha256 "6c33a3b9fafee66811310909d86f0972b3c81d2b9a3027c8e95fa0c773846221"
+
+    url "https://github.com/WeakAuras/WeakAuras-Companion/releases/download/v#{version}/WeakAuras-Companion-#{version}-mac-arm64.dmg",
+        verified: "github.com/WeakAuras/WeakAuras-Companion/"
+  end
+
   name "WeakAuras Companion"
+  desc "Update your auras from Wago.io and creates regular backups of them"
   homepage "https://weakauras.wtf/"
 
   app "WeakAuras Companion.app"

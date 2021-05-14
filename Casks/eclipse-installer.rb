@@ -1,10 +1,21 @@
 cask "eclipse-installer" do
-  version "4.17.0,2020-09:R"
-  sha256 "0e87c072c2c5c203a21ca5a14899aa28ce9c3331b60157083a85ea17e12509bb"
+  version "4.19.0,2021-03:R"
+  sha256 "7c7aec2b57c4b498fc1827391d9cf740b91d05089da2f3e28dc298b86b2d6369"
 
   url "https://eclipse.org/downloads/download.php?file=/oomph/epp/#{version.after_comma.before_colon}/#{version.after_colon}/eclipse-inst-mac64.tar.gz&r=1"
   name "Eclipse Installer"
   homepage "https://eclipse.org/"
+
+  livecheck do
+    url "https://www.eclipse.org/downloads/packages/"
+    strategy :page_match do |page|
+      page.scan(%r{href=.*?/downloads/packages/release/(\d+-\d+)}i).map do |release|
+        version_page = Net::HTTP.get(URI.parse("https://projects.eclipse.org/releases/#{release[0]}"))
+        version = version_page.scan(%r{href="/projects/eclipse/releases/(\d+(?:\.\d+)*)"}i)
+        "#{version[0][0]},#{release[0]}:R"
+      end
+    end
+  end
 
   app "Eclipse Installer.app"
 

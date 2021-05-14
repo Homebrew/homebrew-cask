@@ -1,14 +1,26 @@
 cask "docker" do
-  if MacOS.version <= :el_capitan
-    version "18.06.1-ce-mac73,26764"
-    sha256 "3429eac38cf0d198039ad6e1adce0016f642cdb914a34c67ce40f069cdb047a5"
+  version "3.3.3,64133"
+
+  if Hardware::CPU.intel?
+    sha256 "f143645bfd38e1dc93a773b1eb4a7b1e12832ddce20fc49e7057937838e7bf45"
+
+    url "https://desktop.docker.com/mac/stable/amd64/#{version.after_comma}/Docker.dmg"
+
+    livecheck do
+      url "https://desktop.docker.com/mac/stable/amd64/appcast.xml"
+      strategy :sparkle
+    end
   else
-    version "2.5.0.1,49550"
-    sha256 "144eebacfb6815aa2a39987f778bdac31096008dbc034deee5f0903cbb62e266"
+    sha256 "aac4218aa574d63e49cc7f087693ca6039e6b1ef916aa9dd528995f6b494d5ef"
+
+    url "https://desktop.docker.com/mac/stable/arm64/#{version.after_comma}/Docker.dmg"
+
+    livecheck do
+      url "https://desktop.docker.com/mac/stable/arm64/appcast.xml"
+      strategy :sparkle
+    end
   end
 
-  url "https://desktop.docker.com/mac/stable/#{version.after_comma}/Docker.dmg"
-  appcast "https://desktop.docker.com/mac/stable/appcast.xml"
   name "Docker Desktop"
   name "Docker Community Edition"
   name "Docker CE"

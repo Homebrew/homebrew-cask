@@ -1,12 +1,17 @@
 cask "cernbox" do
-  version "2.5.4.2623"
-  sha256 "a54a5d7afdd918945da482041f85f4afb1db0bc512829dbe85001abb78fafff1"
+  version "2.7.6.3357"
+  sha256 "8a5c3fef87eae438657dffba44d5a34a74da24bed5d2eea02e6dd06387704e20"
 
   url "https://cernbox.cern.ch/cernbox/doc/MacOSX/cernbox-#{version}.pkg"
-  appcast "https://cernbox.web.cern.ch/cernbox/downloads/"
   name "CERNBox Client"
   desc "Cloud storage for CERN users"
   homepage "https://cernbox.web.cern.ch/cernbox/"
+
+  livecheck do
+    url "https://cernbox.web.cern.ch/cernbox/downloads/"
+    strategy :page_match
+    regex(%r{href=.*?/cernbox-(\d+(?:\.\d+)*)\.pkg}i)
+  end
 
   pkg "cernbox-#{version}.pkg"
 

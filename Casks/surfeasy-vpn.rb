@@ -1,5 +1,5 @@
 cask "surfeasy-vpn" do
-  version :latest
+  version "3.14.67"
   sha256 :no_check
 
   url "https://updates.surfeasy.com/downloads/se0212/SurfEasyVPN-Installer.dmg"

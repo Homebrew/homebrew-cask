@@ -1,12 +1,16 @@
 cask "istat-menus" do
-  version "6.50"
+  version "6.51"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://cdn.bjango.com/files/istatmenus#{version.major}/istatmenus#{version}.zip"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://download.bjango.com/istatmenus/"
   name "iStats Menus"
   desc "System monitoring app"
   homepage "https://bjango.com/mac/istatmenus/"
+
+  livecheck do
+    url "https://download.bjango.com/istatmenus/"
+    strategy :header_match
+  end
 
   auto_updates true
   depends_on macos: ">= :el_capitan"

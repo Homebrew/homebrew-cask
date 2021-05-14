@@ -1,6 +1,6 @@
 cask "rocks-n-diamonds" do
-  version "4.2.0.3"
-  sha256 "58f3a88657fb1d34f0bcfba388122799bf1deb284205f96233a82c6dd59f1dfe"
+  version "4.2.1.0"
+  sha256 "896a2b5f4f14632d46b4afcfb0788c2089eb9f4507a3135cdfba524e214b7733"
 
   url "https://www.artsoft.org/RELEASES/macosx/rocksndiamonds/rocksndiamonds-#{version}.dmg"
   appcast "https://www.artsoft.org/RELEASES/macosx/rocksndiamonds/"

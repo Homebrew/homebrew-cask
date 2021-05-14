@@ -4,9 +4,20 @@ cask "flip4mac" do
 
   url "https://www.telestream.net/download-files/flip4mac/#{version.sub(/^(\d+)\.(\d+).*$/, '\1-\2')}/Flip4Mac-#{version}.dmg"
   name "Flip4Mac"
+  desc "Play back and convert Windows Media"
   homepage "https://www.telestream.net/flip4mac/"
+
+  livecheck do
+    skip "Discontinued"
+  end
+
+  depends_on macos: "<= :el_capitan"
 
   pkg "Flip4Mac.pkg"
 
   uninstall pkgutil: "net.telestream.Flip4Mac"
+
+  caveats do
+    discontinued
+  end
 end

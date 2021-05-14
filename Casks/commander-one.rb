@@ -1,13 +1,17 @@
 cask "commander-one" do
-  version "2.5.2"
-  sha256 "c4effe19cf19fb7f073cc5acf3f50363184acc5ac75b2a7106a0f3e9c554d87e"
+  version "3.0,3368"
+  sha256 :no_check
 
-  # cdn.electronic.us/ was verified as official when first introduced to the cask
-  url "https://cdn.electronic.us/products/commander/mac/download/commander.dmg"
-  appcast "https://cdn.electronic.us/products/commander/mac/update/settings.xml"
+  url "https://cdn.electronic.us/products/commander/mac/download/commander.dmg",
+      verified: "cdn.electronic.us/"
   name "Commander One"
   desc "Two-panel file manager"
   homepage "https://mac.eltima.com/file-manager.html"
+
+  livecheck do
+    url "https://cdn.electronic.us/products/commander/mac/update/settings.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :yosemite"
 

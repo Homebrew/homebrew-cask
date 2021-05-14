@@ -2,9 +2,8 @@ cask "shifty" do
   version "1.1.2"
   sha256 "71daedf1504907ac1ba59f478978da1c50bd78ddce846f4c1cf967462a40753a"
 
-  # github.com/thompsonate/Shifty/ was verified as official when first introduced to the cask
-  url "https://github.com/thompsonate/Shifty/releases/download/v#{version}/Shifty-#{version}.zip"
-  appcast "https://github.com/thompsonate/Shifty/releases.atom"
+  url "https://github.com/thompsonate/Shifty/releases/download/v#{version}/Shifty-#{version}.zip",
+      verified: "github.com/thompsonate/Shifty/"
   name "Shifty"
   desc "Menu bar app that provides more control over Night Shift"
   homepage "https://shifty.natethompson.io/"

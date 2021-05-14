@@ -1,11 +1,16 @@
 cask "ammonite" do
-  version "1.20.1"
-  sha256 "7727b45c4cd6dd624e5ca834fe03d17b27233721565f8ff1c6b703cac28770a7"
+  version "1.22,523"
+  sha256 "967a90c455a4ad05ac674d9e26f9f57bdaa09bd3079e3d2b47f7db30af9c3184"
 
-  url "https://www.soma-zone.com/download/files/Ammonite-#{version}.tar.bz2"
-  appcast "https://www.soma-zone.com/Ammonite/a/appcast_update.xml"
+  url "https://www.soma-zone.com/download/files/Ammonite-#{version.before_comma}.tar.bz2"
   name "Ammonite"
+  desc "Tag visualizer and search utility"
   homepage "https://www.soma-zone.com/Ammonite/"
+
+  livecheck do
+    url "https://www.soma-zone.com/Ammonite/a/appcast.xml"
+    strategy :sparkle
+  end
 
   app "Ammonite.app"
 end

@@ -1,15 +1,18 @@
 cask "xld" do
-  version "2019.10.04"
-  sha256 "6fedfede1f54d691b69f0d6dc5477062c57fe6c48b7f86624a47eb1b58a1e4ef"
+  version "20210101,153.1"
+  sha256 "2fa9aa8035fc2713fe410fb835b0df9eeaae91593e550265b4226f836009d009"
 
-  # sourceforge.net/xld/ was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/xld/xld-#{version.no_dots}.dmg"
-  appcast "https://svn.code.sf.net/p/xld/code/appcast/xld-appcast_e.xml",
-          must_contain: version.no_dots
+  url "https://downloads.sourceforge.net/xld/xld-#{version.before_comma}.dmg",
+      verified: "sourceforge.net/xld/"
   name "X Lossless Decoder"
   name "XLD"
   desc "Lossless audio decoder"
   homepage "https://tmkk.undo.jp/xld/index_e.html"
+
+  livecheck do
+    url "https://svn.code.sf.net/p/xld/code/appcast/xld-appcast_e.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 

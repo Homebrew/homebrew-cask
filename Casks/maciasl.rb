@@ -1,10 +1,10 @@
 cask "maciasl" do
-  version "1.5.8"
-  sha256 "cd2a4bb2311316f66a08b937b7ef3c9928d8c19f8a53d87759e123535bed876e"
+  version "1.6.1"
+  sha256 "9ba67e2b2f66383ceea6ddf57d9408150e70a4cff58fa9c5806c80772370fdc8"
 
-  url "https://github.com/acidanthera/MaciASL/releases/download/#{version}/MaciASL-#{version}-RELEASE.zip"
-  appcast "https://github.com/acidanthera/MaciASL/releases.atom"
+  url "https://github.com/acidanthera/MaciASL/releases/download/#{version}/MaciASL-#{version}-RELEASE.dmg"
   name "MaciASL"
+  desc "ACPI Machine Language (AML) compiler and IDE"
   homepage "https://github.com/acidanthera/MaciASL"
 
   app "MaciASL.app"

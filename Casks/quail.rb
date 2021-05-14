@@ -1,9 +1,8 @@
 cask "quail" do
-  version "2.0.2"
-  sha256 "806a07d923ea74f2d3a2b5d345ff7e2f6c14d703fd3264e81de6e802db0a58a8"
+  version "2.4.0"
+  sha256 "481b42f6a2c9ffd94c450f28e49692e95030d11cf20c2823732b117bac1e8992"
 
   url "https://github.com/1000ch/quail/releases/download/v#{version}/Quail-#{version}.dmg"
-  appcast "https://github.com/1000ch/quail/releases.atom"
   name "Quail"
   desc "Unofficial but officially accepted esa app"
   homepage "https://github.com/1000ch/quail"

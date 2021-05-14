@@ -1,12 +1,16 @@
 cask "marked" do
-  version "2.6.1,1007"
-  sha256 "35e9b78750d2e4dffc5f0705d01751a5437035da764687b21716c6388bc29c44"
+  version "2.6.8,1021"
+  sha256 "85073a3deee80f0d0ddff881c8342e04fcbe9043609bf2746a834927305d217b"
 
   url "https://updates.marked2app.com/Marked#{version.before_comma}#{version.after_comma}.zip"
-  appcast "https://updates.marked2app.com/marked.xml"
   name "Marked"
   desc "Previewer for Markdown, MultiMarkdown and other text markup languages"
   homepage "https://marked2app.com/"
+
+  livecheck do
+    url "https://updates.marked2app.com/marked.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :yosemite"

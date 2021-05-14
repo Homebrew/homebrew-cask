@@ -1,13 +1,29 @@
 cask "pycharm-edu" do
-  version "2020.2.3,202.7660.53"
-  sha256 "90fe55412a7406818a711a981fa32092d2d55cfb323ca08374b46d46b7263c51"
+  version "2021.1,211.7142.37"
 
-  url "https://download.jetbrains.com/python/pycharm-edu-#{version.before_comma}.dmg"
-  appcast "https://data.services.jetbrains.com/products/releases?code=PCE&latest=true&type=release"
+  if Hardware::CPU.intel?
+    sha256 "88cdd8d9afaed9c6d2792d952ca1568892901e76cffd111d163f26d27a2cc3cd"
+
+    url "https://download.jetbrains.com/python/pycharm-edu-#{version.before_comma}.dmg"
+  else
+    sha256 "8d972d603b07f6ba052eaf3ef4d7536099ec1c05ba14b6b77c836e1aebd8f83f"
+
+    url "https://download.jetbrains.com/python/pycharm-edu-#{version.before_comma}-aarch64.dmg"
+  end
+
   name "Jetbrains PyCharm Educational Edition"
   name "PyCharm Edu"
   desc "Professional IDE for scientific and web Python development"
   homepage "https://www.jetbrains.com/pycharm-edu/"
+
+  livecheck do
+    url "https://data.services.jetbrains.com/products/releases?code=PCE&latest=true&type=release"
+    strategy :page_match do |page|
+      version = page.match(/"version":"(\d+(?:\.\d+)*)/i)
+      build = page.match(/"build":"(\d+(?:\.\d+)*)/i)
+      "#{version[1]},#{build[1]}"
+    end
+  end
 
   auto_updates true
 

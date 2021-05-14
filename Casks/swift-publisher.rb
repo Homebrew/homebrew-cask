@@ -1,13 +1,17 @@
 cask "swift-publisher" do
-  version "5.5.6"
-  sha256 "2451e17c29efc5d655331fcd07e575b73eccef3b249c7f3fdda91782c451d283"
+  version "5.5.9,4715"
+  sha256 :no_check
 
-  # belightsoft.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://belightsoft.s3.amazonaws.com/SwiftPublisher.dmg"
-  appcast "https://www.belightsoft.com/download/updates/appcast_SwiftPublisher#{version.major}.xml"
+  url "https://belightsoft.s3.amazonaws.com/SwiftPublisher.dmg",
+      verified: "belightsoft.s3.amazonaws.com/"
   name "Swift Publisher"
   desc "Page layout and desktop publishing application"
   homepage "https://www.belightsoft.com/swift-publisher/"
+
+  livecheck do
+    url "https://www.belightsoft.com/download/updates/appcast_SwiftPublisher#{version.major}.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :sierra"
 

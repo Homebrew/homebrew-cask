@@ -1,11 +1,17 @@
 cask "smlnj" do
-  version "110.98.1"
-  sha256 "d48372aa13fa2e5ce0979f8cf7964252468cee4748ca9f2111747b200cece4ea"
+  version "110.99.1"
+  sha256 "ab487fe4e113374dfb4aeead6e806ef776e7316075fae4d01ff122fb07453c72"
 
-  # smlnj.cs.uchicago.edu/ was verified as official when first introduced to the cask
-  url "http://smlnj.cs.uchicago.edu/dist/working/#{version}/smlnj-amd64-#{version}.pkg"
+  url "http://smlnj.cs.uchicago.edu/dist/working/#{version}/smlnj-amd64-#{version}.pkg",
+      verified: "smlnj.cs.uchicago.edu/"
   name "Standard ML of New Jersey"
   homepage "https://www.smlnj.org/"
+
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/smlnj-amd64-(\d+(?:\.\d+)*)\.pkg}i)
+  end
 
   pkg "smlnj-amd64-#{version}.pkg"
 

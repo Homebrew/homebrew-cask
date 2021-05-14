@@ -1,12 +1,17 @@
 cask "mockuuups-studio" do
-  version "2.6.0"
-  sha256 "1e097714234369d25114dc14a7fd5df0c96ebe821ee3a2b59b9482d0fed55121"
+  version "3.1.0"
+  sha256 "5935dea82713be5ec18c7ff81bd0b6f7b69503b1c365e91a54ffccbfa9b767f8"
 
-  # mockuuups.com/ was verified as official when first introduced to the cask
-  url "https://binaries.mockuuups.com/Mockuuups%20Studio-#{version}-mac.zip"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://mockuuups.studio/download/mac/"
+  url "https://binaries.mockuuups.com/Mockuuups%20Studio-#{version}-mac.zip",
+      verified: "mockuuups.com/"
   name "Mockuuups Studio"
+  desc "Allows designers and marketers to drag and drop visuals into scenes"
   homepage "https://mockuuups.studio/"
+
+  livecheck do
+    url "https://mockuuups.studio/download/mac/"
+    strategy :header_match
+  end
 
   app "Mockuuups Studio.app"
 

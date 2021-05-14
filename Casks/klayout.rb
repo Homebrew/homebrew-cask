@@ -4,18 +4,18 @@ cask "klayout" do
   if MacOS.version <= :high_sierra
     sha256 "b6ee7a8ee71e8cb218b6ecea4df6865cb1d0f49b646101246543bd7de1d6d5e7"
 
-    # klayout.org/ was verified as official when first introduced to the cask
-    url "https://www.klayout.org/downloads/MacOS/ST-klayout-#{version}-macOS-HighSierra-1-qt5MP-RsysPsys.dmg"
+    url "https://www.klayout.org/downloads/MacOS/ST-klayout-#{version}-macOS-HighSierra-1-qt5MP-RsysPsys.dmg",
+        verified: "klayout.org/"
   elsif MacOS.version <= :mojave
     sha256 "e3ade30ac217f312720d2157cd6e9afad566cbb239a08ecd55a6f9d8dc9af3e0"
 
-    # klayout.org/ was verified as official when first introduced to the cask
-    url "https://www.klayout.org/downloads/MacOS/ST-klayout-#{version}-macOS-Mojave-1-qt5MP-RsysPsys.dmg"
+    url "https://www.klayout.org/downloads/MacOS/ST-klayout-#{version}-macOS-Mojave-1-qt5MP-RsysPsys.dmg",
+        verified: "klayout.org/"
   else
     sha256 "73641ce0c0f34bb21d43001f1f5924f60221a60458b131cb445fdf3f98c5dff5"
 
-    # klayout.org/ was verified as official when first introduced to the cask
-    url "https://www.klayout.org/downloads/MacOS/ST-klayout-#{version}-macOS-Catalina-1-qt5MP-RsysPsys.dmg"
+    url "https://www.klayout.org/downloads/MacOS/ST-klayout-#{version}-macOS-Catalina-1-qt5MP-RsysPsys.dmg",
+        verified: "klayout.org/"
   end
 
   appcast "https://www.klayout.de/development.html"

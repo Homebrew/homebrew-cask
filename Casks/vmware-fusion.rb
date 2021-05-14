@@ -1,12 +1,19 @@
 cask "vmware-fusion" do
-  version "12.0.0-16880131"
-  sha256 "b7ce08983c1aab3218327a1a14343a77f23b4acfb3b9dd178594048b12eb63d8"
+  version "12.1.1-17801503"
+  sha256 "fbc94a432c00fb9e05dd648cc80dd58cfb052c3aa53f44dc996be02e25a7c270"
 
   url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version}.dmg"
-  appcast "https://softwareupdate.vmware.com/cds/vmw-desktop/fusion.xml"
   name "VMware Fusion"
   desc "App to run other operating systems without rebooting"
   homepage "https://www.vmware.com/products/fusion.html"
+
+  livecheck do
+    url "https://softwareupdate.vmware.com/cds/vmw-desktop/fusion.xml"
+    strategy :page_match do |page|
+      scan = page.scan(%r{fusion/(\d+(?:\.\d+)+)/(\d+)/core}i)
+      scan.map { |v| "#{v[0]}-#{v[1]}" }
+    end
+  end
 
   auto_updates true
   depends_on macos: ">= :catalina"
@@ -59,13 +66,17 @@ cask "vmware-fusion" do
     "/Library/Preferences/VMware Fusion",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vmware.fusion.sfl*",
     "~/Library/Application Support/VMware Fusion",
+    "~/Library/Application Support/VMware Fusion Applications Menu",
     "~/Library/Caches/com.vmware.fusion",
     "~/Library/Logs/VMware Fusion",
+    "~/Library/Logs/VMware Fusion Applications Menu",
     "~/Library/Logs/VMware Graphics Service.log",
     "~/Library/Logs/VMware",
     "~/Library/Preferences/VMware Fusion",
     "~/Library/Preferences/com.vmware.fusion.plist",
     "~/Library/Preferences/com.vmware.fusion.plist.lockfile",
+    "~/Library/Preferences/com.vmware.fusionApplicationsMenu.plist",
+    "~/Library/Preferences/com.vmware.fusionApplicationsMenu.helper.plist",
     "~/Library/Preferences/com.vmware.fusionDaemon.plist",
     "~/Library/Preferences/com.vmware.fusionDaemon.plist.lockfile",
     "~/Library/Preferences/com.vmware.fusionStartMenu.plist",

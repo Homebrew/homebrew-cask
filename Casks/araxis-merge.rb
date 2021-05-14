@@ -4,14 +4,18 @@ cask "araxis-merge" do
     sha256 "abba11a92e1f50d913356d31123bed5bb08838ce39c4659206fd24c32432c4b3"
     url "https://www.araxis.com/download/Merge#{version}-OSX10.10.dmg"
   else
-    version "2020.5400"
-    sha256 "47152e8c8503345c765fc61c56ffd282095ebb3dc13e59f200748834a7563211"
+    version "2021.5533"
+    sha256 "68decc2188cf75a2aec1f6f75ce7edfd1c4d7e588d47cdb677478eddeffab3b2"
     url "https://www.araxis.com/download/Merge#{version}-macOS.dmg"
   end
 
-  appcast "https://www.araxis.com/news-feed.atom"
   name "Araxis Merge"
   homepage "https://www.araxis.com/merge/"
+
+  livecheck do
+    url "https://www.araxis.com/merge/download.en"
+    regex(/href=.*?Merge[._-]?v?(\d+(?:\.\d+)+)-macOS\.dmg/i)
+  end
 
   app "Araxis Merge.app"
   binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxisgitdiff"

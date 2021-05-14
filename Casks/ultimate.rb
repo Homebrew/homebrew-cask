@@ -1,11 +1,16 @@
 cask "ultimate" do
-  version "3.0.12.1028"
-  sha256 "25c1feac46134b47a2645e98e8e49102f88d9201b29fcec79f35ef8f57567fd8"
+  version "3.0.13.120"
+  sha256 :no_check
 
   url "https://download.epubor.com/epubor_ultimate.zip"
-  appcast "https://www.epubor.com/ultimate.html"
   name "Ultimate Converter"
   homepage "https://www.epubor.com/"
+
+  livecheck do
+    url "https://www.epubor.com/ultimate.html"
+    strategy :page_match
+    regex(/Version:\s*(\d+(?:\.\d+)*)/i)
+  end
 
   pkg "Ultimate.pkg"
 

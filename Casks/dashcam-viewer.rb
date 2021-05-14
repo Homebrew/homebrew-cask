@@ -1,13 +1,20 @@
 cask "dashcam-viewer" do
-  version "3.6.0"
-  sha256 "7377a8d98c5478be9392a070825c2b81db85cfdcc16eb42dbab56f652a56bd60"
+  version "3.6.7"
+  sha256 "854a9dfc26e4c51c2a0b12f83261adec757a7b519ea5458a35c71c83d4feb6fd"
 
-  # filedn.com/l2s8TAtm4VASBX72ds0zYD8/dcv/ was verified as official when first introduced to the cask
-  url "https://filedn.com/l2s8TAtm4VASBX72ds0zYD8/dcv/Dashcam_Viewer_v#{version}.dmg"
-  appcast "https://dashcamviewer.com/"
+  url "https://filedn.com/l2s8TAtm4VASBX72ds0zYD8/dcv/Dashcam_Viewer_v#{version}.dmg",
+      verified: "filedn.com/l2s8TAtm4VASBX72ds0zYD8/dcv/"
   name "Dashcam Viewer"
   name "Dashcam Viewer by Earthshine Software"
+  desc "View videos, GPS data, and G-force data recorded by dashcams and action cams"
   homepage "https://dashcamviewer.com/"
+
+  livecheck do
+    url "https://dashcamviewer.com/free-trial/"
+    regex(%r{href=.*?/Dashcam_Viewer_v?(\d+(?:\.\d+)*)\.dmg}i)
+  end
+
+  depends_on macos: ">= :mojave"
 
   app "Dashcam Viewer.app"
 end

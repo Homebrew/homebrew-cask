@@ -1,12 +1,16 @@
 cask "sim-genie" do
-  version "2020.4.241"
-  sha256 "fe20d76efe98759d581674369537ba0dddf19cdf5210f108d13e945578c84189"
+  version "2020.5,244"
+  sha256 "26b58364da96d8e912b7c2cb14a5ebf25f721686bde014984501a632e3fc5fd9"
 
-  # d1b3av25dd6jdq.cloudfront.net/ was verified as official when first introduced to the cask
-  url "https://d1b3av25dd6jdq.cloudfront.net/releases/macos/SimGenie.#{version}.zip"
-  appcast "https://simgenie.app/releases/macos/appcast.xml"
+  url "https://d1b3av25dd6jdq.cloudfront.net/releases/macos/SimGenie.#{version.before_comma}.#{version.after_comma}.zip",
+      verified: "d1b3av25dd6jdq.cloudfront.net/"
   name "Sim Genie"
   homepage "https://simgenie.app/"
+
+  livecheck do
+    url "https://simgenie.app/releases/macos/appcast.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :mojave"
 

@@ -1,11 +1,16 @@
 cask "wireshark-chmodbpf" do
-  version "3.4.0"
-  sha256 "b0a09d499de618de8f17a0456047dd3839b78c3a57e64b6caf5a55ae5c398d8a"
+  version "3.4.5"
+  sha256 "d5565b525d71a9effe64ff4a84b896c9ce0d0d34959a8e9d2f7093dcf3c8ca68"
 
   url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20Intel%2064.dmg"
-  appcast "https://www.wireshark.org/update/0/Wireshark/0.0.0/macOS/x86-64/en-US/stable.xml"
   name "Wireshark-ChmodBPF"
+  desc "Network protocol analyzer"
   homepage "https://www.wireshark.org/"
+
+  livecheck do
+    url "https://www.wireshark.org/update/0/Wireshark/0.0.0/macOS/x86-64/en-US/stable.xml"
+    strategy :sparkle
+  end
 
   conflicts_with cask: "wireshark"
   depends_on macos: ">= :sierra"

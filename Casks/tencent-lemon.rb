@@ -1,12 +1,36 @@
 cask "tencent-lemon" do
-  version "4.7.0"
-  sha256 "2a1a6500c8cc2c6ece8410fb3e09a12063fe063b00e307ad9e3cd330de10dcb6"
+  version "4.8.8"
+  sha256 "02bc9c96dcb02820c8ff9a5a188c138e9917958075e500b617b4fa1f70925d55"
 
-  # pm.myapp.com/invc/xfspeed/qqpcmgr/ was verified as official when first introduced to the cask
-  url "https://pm.myapp.com/invc/xfspeed/qqpcmgr/module_update/Lemon_#{version}.dmg"
-  appcast "https://lemon.guanjia.qq.com/latest/package"
+  url "https://pm.myapp.com/invc/xfspeed/qqpcmgr/module_update/Lemon_#{version}.dmg",
+      verified: "pm.myapp.com/invc/xfspeed/qqpcmgr/"
   name "Tencent Lemon Cleaner"
-  homepage "https://mac.gj.qq.com/"
+  desc "Cleanup and system status tool"
+  homepage "https://lemon.qq.com/"
+
+  livecheck do
+    url "https://lemon.guanjia.qq.com/latest/package"
+    strategy :page_match
+    regex(/Lemon_v?(\d+(?:\.\d+)*)\.dmg/i)
+  end
 
   app "Tencent Lemon.app"
+
+  uninstall delete: [
+    "/Library/Logs/Lemon",
+    "/Library/Preferences/LemonDaemon_packet.dat",
+    "/private/var/folders/ht/cbrdb7ln52x64ck8kbxzgdw80000gn/C/com.tencent.Lemon",
+    "/private/var/folders/ht/cbrdb7ln52x64ck8kbxzgdw80000gn/C/com.tencent.LemonMonitor",
+    "/private/var/run/com.tencent.Lemon.socket",
+  ]
+
+  zap trash: [
+    "~/Library/Caches/com.tencent.Lemon",
+    "~/Library/Caches/com.tencent.LemonMonitor",
+    "~/Library/Logs/LemonMonitor.log",
+    "~/Library/Logs/Tencent Lemon.log",
+    "~/Library/Preferences/com.tencent.LemonUpdate.plist",
+    "~/Library/Preferences/LemonMonitor_packet.dat",
+    "~/Library/Preferences/Tencent Lemon_packet.dat",
+  ]
 end

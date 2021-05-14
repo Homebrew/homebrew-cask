@@ -1,10 +1,9 @@
 cask "copyq" do
-  version "3.13.0"
-  sha256 "07c12f91649d512616d9eef9a9492d7041f31620a4fbeeae1baae0d5b73c3461"
+  version "4.1.0"
+  sha256 "eb2ffb54f77afce96aea8a7ebe196c1b2698394d474422a8e29756d5c9c7317f"
 
-  # github.com/hluk/CopyQ/ was verified as official when first introduced to the cask
-  url "https://github.com/hluk/CopyQ/releases/download/v#{version}/CopyQ.dmg"
-  appcast "https://github.com/hluk/CopyQ/releases.atom"
+  url "https://github.com/hluk/CopyQ/releases/download/v#{version}/CopyQ.dmg.zip",
+      verified: "github.com/hluk/CopyQ/"
   name "CopyQ"
   desc "Clipboard manager with advanced features"
   homepage "https://hluk.github.io/CopyQ/"
@@ -20,6 +19,13 @@ cask "copyq" do
       exec '#{appdir}/CopyQ.app/Contents/MacOS/CopyQ' "$@"
     EOS
   end
+
+  zap trash: [
+    "~/.config/copyq",
+    "~/Library/Application Support/copyq",
+    "~/Library/Application Support/copyq.log",
+    "~/Library/Preferences/com.copyq.copyq.plist",
+  ]
 
   caveats do
     unsigned_accessibility

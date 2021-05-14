@@ -1,16 +1,15 @@
 cask "keka" do
-  version "1.2.0"
-  sha256 "cf3f0f9d184b0816a4d6942d21d3883333b68f5495f0a6e91d2363635e7316e5"
+  version "1.2.14"
+  sha256 "9f1cb7b650c3d1ebd47bd2a99a4d7b7550cf5208908bb660d1075d8a811e32af"
 
-  # github.com/aonez/Keka/ was verified as official when first introduced to the cask
-  url "https://github.com/aonez/Keka/releases/download/v#{version}/Keka-#{version}.dmg"
-  appcast "https://github.com/aonez/Keka/releases.atom"
+  url "https://github.com/aonez/Keka/releases/download/v#{version}/Keka-#{version}.dmg",
+      verified: "github.com/aonez/Keka/"
   name "Keka"
   desc "File archiver"
   homepage "https://www.keka.io/"
 
   auto_updates true
-  conflicts_with cask: "keka-beta"
+  conflicts_with cask: "homebrew/cask-versions/keka-beta"
 
   app "Keka.app"
 

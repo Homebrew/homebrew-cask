@@ -1,13 +1,17 @@
 cask "tableflip" do
-  version "1.2.3"
-  sha256 "c6314c37dd1ceabf8de4755e3d0d545916e439b7b6b16ba3c67d9d6c65ab71b7"
+  version "1.3.1,61"
+  sha256 "c2c715a7bb8182f261571aab43ecb3ccdc401f410b27eb81d513b740cf16e37b"
 
-  # update.christiantietze.de/tableflip/ was verified as official when first introduced to the cask
-  url "https://update.christiantietze.de/tableflip/v#{version.major}/TableFlip-v#{version}.zip"
-  appcast "https://update.christiantietze.de/tableflip/v#{version.major}/release.xml"
+  url "https://update.christiantietze.de/tableflip/v#{version.major}/TableFlip-v#{version.before_comma}.zip",
+      verified: "update.christiantietze.de/tableflip/"
   name "TableFlip"
   desc "App to edit markdown files in place"
   homepage "https://tableflipapp.com/"
+
+  livecheck do
+    url "https://update.christiantietze.de/tableflip/v#{version.major}/release.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 

@@ -1,11 +1,17 @@
 cask "eve-launcher" do
-  version "1832603"
-  sha256 "f775226149426880ffc24991f59521c132a01caef7f78914432f73ca8ff06953"
+  version "1892908"
+  sha256 "170f3ed1f4ca45e6d58fa17428e52cdc3df86b5d5f8e12ead8151c0462ef421e"
 
   url "https://binaries.eveonline.com/EveLauncher-#{version}.dmg"
-  appcast "https://launcher.eveonline.com/launcherVersions.json"
   name "Eve Online"
+  desc "EVE Online client"
   homepage "https://www.eveonline.com/"
+
+  livecheck do
+    url "https://launcher.eveonline.com/launcherVersions.json"
+    strategy :page_match
+    regex(/"mac"\s*:\s*(\d+)/i)
+  end
 
   auto_updates true
 

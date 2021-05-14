@@ -3,9 +3,13 @@ cask "createuserpkg" do
   sha256 "4bac91af9d8fb2e34c036964c6f9bf49a8f19f8e994b30e2900a0ddbebef246f"
 
   url "https://magervalp.github.io/CreateUserPkg/Distributions/CreateUserPkg-#{version}.dmg"
-  appcast "https://github.com/MagerValp/CreateUserPkg/releases.atom"
   name "CreateUserPkg"
   homepage "https://magervalp.github.io/CreateUserPkg/"
+
+  livecheck do
+    url "https://github.com/MagerValp/CreateUserPkg"
+    strategy :git
+  end
 
   app "CreateUserPkg.app"
 end

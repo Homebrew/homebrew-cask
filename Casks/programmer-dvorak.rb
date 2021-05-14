@@ -1,11 +1,18 @@
 cask "programmer-dvorak" do
-  version "1.2.10"
-  sha256 "223d02ea0f269ad58f161dc7ef1009e88ec74fa12578edcd99be86c72a8c7276"
+  version "1.2.12"
+  sha256 "1048706baa0f03a780d392125f06cd9e531386c0520b617169aa9e18ec2b8e9e"
 
   url "https://kaufmann.no/downloads/macos/ProgrammerDvorak-#{version.dots_to_underscores}.pkg.zip"
-  appcast "https://kaufmann.no/roland/dvorak/macosx.html"
   name "Programmer Dvorak"
   homepage "https://kaufmann.no/roland/dvorak/"
+
+  livecheck do
+    url "https://kaufmann.no/roland/dvorak/#downloads"
+    strategy :page_match do |page|
+      v = page[/href=.*?ProgrammerDvorak-(\d+(?:_\d+)*)\.pkg\.zip/i, 1]
+      v.tr("_", ".")
+    end
+  end
 
   pkg "Programmer Dvorak v#{version.major_minor}.pkg"
 

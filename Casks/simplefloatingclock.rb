@@ -1,5 +1,5 @@
 cask "simplefloatingclock" do
-  version :latest
+  version "1.8"
   sha256 :no_check
 
   url "http://www.splook.com/Software/distrib/sfc.zip"

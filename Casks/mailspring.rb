@@ -1,10 +1,9 @@
 cask "mailspring" do
-  version "1.7.8"
-  sha256 "33ad05420735de09ee2cbc9b57aa3d9acceb0d571c45ddfa09c8a38dbbf81dc9"
+  version "1.9.1"
+  sha256 "04bd8a61d107642d68fe5bcfd1622624eee60cce3d6e0f60f08107569a96d813"
 
-  # github.com/Foundry376/Mailspring/ was verified as official when first introduced to the cask
-  url "https://github.com/Foundry376/Mailspring/releases/download/#{version}/Mailspring.zip"
-  appcast "https://github.com/Foundry376/Mailspring/releases.atom"
+  url "https://github.com/Foundry376/Mailspring/releases/download/#{version}/Mailspring.zip",
+      verified: "github.com/Foundry376/Mailspring/"
   name "Mailspring"
   desc "Fork of Nylas Mail"
   homepage "https://getmailspring.com/"

@@ -1,12 +1,14 @@
 cask "youdaodict" do
-  version "2.8.1"
-  sha256 "33b9f0c7aca780a454151d454bf99ab2b33f308bf6e98bfdd9cc0ea2a4d389ad"
+  version "2.9.0,190"
+  sha256 :no_check
 
   url "https://codown.youdao.com/cidian/download/MacDict.dmg"
   appcast "https://cidian.youdao.com/index-mac.html"
   name "YoudaoDict"
   name "网易有道词典"
   homepage "https://cidian.youdao.com/index-mac.html"
+
+  depends_on macos: ">= :mojave"
 
   app "网易有道词典.app"
 

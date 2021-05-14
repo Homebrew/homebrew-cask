@@ -3,7 +3,6 @@ cask "git-it" do
   sha256 "b96c06bca744af94e2f035824fbd16f59673c4c454fd4bf96aa4bde965fe711d"
 
   url "https://github.com/jlord/git-it-electron/releases/download/#{version}/Git-it-Mac-x64.zip"
-  appcast "https://github.com/jlord/git-it-electron/releases.atom"
   name "Git-it"
   desc "Desktop app for learning Git and GitHub"
   homepage "https://github.com/jlord/git-it-electron"

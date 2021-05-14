@@ -3,7 +3,6 @@ cask "bonjeff" do
   sha256 "b352025d99a4eb0624ec15714aa30b434a98f6ec7bebcd040d3301ee7bb120cd"
 
   url "https://github.com/lapcat/Bonjeff/releases/download/v#{version}/Bonjeff.#{version}.zip"
-  appcast "https://github.com/lapcat/Bonjeff/releases.atom"
   name "Bonjeff"
   homepage "https://github.com/lapcat/Bonjeff"
 

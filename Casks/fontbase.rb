@@ -1,11 +1,16 @@
 cask "fontbase" do
-  version "2.13.2"
-  sha256 "210732e11a335d44f51ac63b0ae53751cd7cba430f40a9138c89f075f6e6ed3e"
+  version "2.15.3"
+  sha256 "f235c739b1f1d10cc8e40f0786aaeacd6b361df97124d5705a2c722883fcd836"
 
   url "https://releases.fontba.se/mac/FontBase-#{version}.dmg"
-  appcast "https://releases.fontba.se/mac/latest-mac.yml"
   name "FontBase"
+  desc "Font manager"
   homepage "https://fontba.se/"
+
+  livecheck do
+    url "https://releases.fontba.se/mac/latest-mac.yml"
+    strategy :electron_builder
+  end
 
   auto_updates true
 

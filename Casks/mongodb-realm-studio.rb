@@ -1,13 +1,12 @@
 cask "mongodb-realm-studio" do
-  version "10.0.0"
-  sha256 "4a11a57f22770f722c1fc1a6f038bf6088f79625b691aef99b66d2aad650c4f6"
+  version "10.1.2"
+  sha256 "4514a0a47c60c58148d8cc7ce47c0253638cd08e16a26ee78bf8aafa511aea92"
 
-  # github.com/realm/realm-studio/ was verified as official when first introduced to the cask
-  url "https://github.com/realm/realm-studio/releases/download/v#{version}/MongoDB.Realm.Studio-#{version}.dmg"
-  appcast "https://github.com/realm/realm-studio/releases.atom"
+  url "https://github.com/realm/realm-studio/releases/download/v#{version}/MongoDB.Realm.Studio-#{version}.dmg",
+      verified: "github.com/realm/realm-studio/"
   name "MongoDB Realm Studio"
   desc "Tool for the Realm Database and Realm Platform"
-  homepage "https://www.mongodb.com/realm/mobile/database"
+  homepage "https://docs.mongodb.com/realm-legacy/products/realm-studio.html"
 
   auto_updates true
 

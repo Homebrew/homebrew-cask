@@ -1,12 +1,17 @@
 cask "chalk" do
-  version "1.6.3"
-  sha256 "29a76aefa9379d2d55d3842d794281fd473f61a0cdb998f512ada1fbd74b63ec"
+  version "1.6.10"
+  sha256 "a453eb154532d2b97dbbfc5e2eb768744f302045185361558eaf339d14d71c8a"
 
-  url "https://www.chachatelier.fr/chalk/downloads/Chalk-#{version.dots_to_underscores}.dmg",
+  url "https://pierre.chachatelier.fr/chalk/downloads/Chalk-#{version.dots_to_underscores}.dmg",
       user_agent: :fake
-  appcast "https://pierre.chachatelier.fr/chalk/downloads/chalk-sparkle-en.rss"
   name "Chalk"
+  desc "Calculator software"
   homepage "https://www.chachatelier.fr/chalk/"
+
+  livecheck do
+    url "https://pierre.chachatelier.fr/chalk/downloads/chalk-sparkle-en.rss"
+    strategy :sparkle
+  end
 
   auto_updates true
 

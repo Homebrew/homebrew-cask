@@ -6,7 +6,8 @@ cask "spatial" do
     url "https://console.improbable.io/toolbelt/download/latest/mac"
   end
   language "zh", "CN" do
-    url "https://console.spatialoschina.com/toolbelt/download/latest/mac"
+    url "https://console.spatialoschina.com/toolbelt/download/latest/mac",
+        verified: "console.spatialoschina.com/"
   end
 
   name "Spatial"

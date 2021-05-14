@@ -3,10 +3,15 @@ cask "quicksilver" do
   sha256 "abc2c084913f95d3036a0cfe696bf9cd4b9fd0d6c3c16bec6e4a98ae600492c8"
 
   url "https://qsapp.com/archives/downloads/Quicksilver%20#{version}.dmg"
-  appcast "https://qsapp.com/archives/"
   name "Quicksilver"
   desc "Productivity application"
   homepage "https://qsapp.com/"
+
+  livecheck do
+    url "https://qsapp.com/archives/"
+    strategy :page_match
+    regex(%r{href=.*?/Quicksilver%20(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   auto_updates true
 

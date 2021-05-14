@@ -1,11 +1,18 @@
 cask "xampp" do
-  version "7.4.1,0"
-  sha256 "4b0b6829f2b1152193b02e379e6fac8eeb208afb1de6b80b0387f01b61c98cef"
+  version "8.0.5-0"
+  sha256 "f1fb5a09320880e183834f2b8ef53859ecab7eac6414d9e2a5cfacd1fc6ec4ce"
 
-  # downloadsapachefriends.global.ssl.fastly.net/xampp-files/ was verified as official when first introduced to the cask
-  url "https://downloadsapachefriends.global.ssl.fastly.net/xampp-files/#{version.before_comma}/xampp-osx-#{version.before_comma}-#{version.after_comma}-installer.dmg"
+  url "https://downloadsapachefriends.global.ssl.fastly.net/xampp-files/#{version.split("-").first}/xampp-osx-#{version}-installer.dmg",
+      verified: "downloadsapachefriends.global.ssl.fastly.net/xampp-files/"
   name "XAMPP"
+  desc "Apache distribution containing MySQL, PHP, and Perl"
   homepage "https://www.apachefriends.org/index.html"
+
+  livecheck do
+    url "https://www.apachefriends.org/download.html"
+    strategy :page_match
+    regex(%r{href=.*?/xampp-osx-(\d+(?:\.\d+)*-\d+)-installer\.dmg}i)
+  end
 
   installer script: {
     executable: "XAMPP.app/Contents/MacOS/osx-x86_64",

@@ -1,12 +1,17 @@
 cask "microsoft-excel" do
-  version "16.43.20110804"
-  sha256 "2711a1b8864f7474458086b4b0a56673fee0097d2049f276788c50e004c47d72"
+  version "16.49.21050901"
+  sha256 "23b3d8aae667f1728b026b44c0687234de8229365716043bea31cabf38e868f9"
 
-  # officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/ was verified as official when first introduced to the cask
-  url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Excel_#{version}_Installer.pkg"
-  appcast "https://docs.microsoft.com/en-us/officeupdates/update-history-office-for-mac"
+  url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Excel_#{version}_Installer.pkg",
+      verified: "officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/"
   name "Microsoft Excel"
+  desc "Spreadsheet software"
   homepage "https://products.office.com/en-US/excel"
+
+  livecheck do
+    url "https://go.microsoft.com/fwlink/p/?linkid=525135"
+    strategy :header_match
+  end
 
   auto_updates true
   conflicts_with cask: "microsoft-office"

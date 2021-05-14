@@ -1,12 +1,16 @@
 cask "sky-ticket" do
-  version :latest
+  version "8.3.0"
   sha256 :no_check
 
-  # web.static.nowtv.com/watch/player/skyticket/ was verified as official when first introduced to the cask
-  url "https://web.static.nowtv.com/watch/player/skyticket/de/latest/SkyTicket-Mac.dmg"
+  url "https://web.static.nowtv.com/watch/player/skyticket/de/latest/SkyTicket-Mac.dmg",
+      verified: "web.static.nowtv.com/watch/player/skyticket/"
   name "Sky Ticket Player"
   desc "Stream Sky Ticket content"
   homepage "https://skyticket.sky.de/"
+
+  livecheck do
+    skip "unversioned URL"
+  end
 
   app "Sky Ticket.app"
 

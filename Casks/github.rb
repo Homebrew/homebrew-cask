@@ -1,15 +1,21 @@
 cask "github" do
-  version "2.5.7-cfea2832"
-  sha256 "b06589d5a09987105a20d2acb47f92728fe47cd6f0c00416aa21f1739c93eb59"
+  version "2.8.1-717be06b"
+  sha256 "33c861cee87422c480f6ce57229e8de4c675857ebe032cd02ad44b6bd0c910e9"
 
-  # githubusercontent.com/ was verified as official when first introduced to the cask
-  url "https://desktop.githubusercontent.com/releases/#{version}/GitHubDesktop.zip"
-  appcast "https://github.com/desktop/desktop/releases.atom"
+  url "https://desktop.githubusercontent.com/releases/#{version}/GitHubDesktop-x64.zip",
+      verified: "githubusercontent.com/"
   name "GitHub Desktop"
   desc "Desktop client for GitHub repositories"
   homepage "https://desktop.github.com/"
 
+  livecheck do
+    url "https://central.github.com/deployments/desktop/desktop/latest/darwin"
+    strategy :header_match
+    regex(%r{(\d+(?:\.\d+)[^/]*)/GitHubDesktop-x64\.zip}i)
+  end
+
   auto_updates true
+  conflicts_with cask: "homebrew/cask-versions/github-beta"
 
   app "GitHub Desktop.app"
   binary "#{appdir}/GitHub Desktop.app/Contents/Resources/app/static/github.sh", target: "github"

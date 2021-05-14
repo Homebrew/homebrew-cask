@@ -1,12 +1,16 @@
 cask "drama" do
-  version "2.1.1"
-  sha256 "2020d547324781c2faf67591a5173f63dcb6b1e6029dfe527a79d3126c6d0f56"
+  version "2.1.1,43"
+  sha256 :no_check
 
-  # pixelcut.com/drama/ was verified as official when first introduced to the cask
-  url "https://www.pixelcut.com/drama/drama.zip"
-  appcast "https://www.pixelcut.com/drama/appcast.xml"
+  url "https://www.pixelcut.com/drama/drama.zip",
+      verified: "pixelcut.com/drama/"
   name "Drama"
   homepage "https://www.drama.app/"
+
+  livecheck do
+    url "https://www.pixelcut.com/drama/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :high_sierra"

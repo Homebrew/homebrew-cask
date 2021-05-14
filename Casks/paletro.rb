@@ -1,11 +1,15 @@
 cask "paletro" do
-  version "1.4.0"
-  sha256 "a5389359301889fd848fd9d1800e34a5e320f1c5b411889ed14bc28a998a18b8"
+  version "1.6.0"
+  sha256 "2067406b29f1e55493cc3f2baf02b6769ef9dc306a22a6e849a1e625545341d5"
 
   url "https://appmakes.io/paletro/download/Paletro-#{version}.dmg"
-  appcast "https://appmakes.io/paletro/update.xml"
   name "Paletro"
   homepage "https://appmakes.io/paletro"
+
+  livecheck do
+    url "https://appmakes.io/paletro/update.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :mojave"

@@ -1,11 +1,19 @@
 cask "axe-edit-iii" do
-  version "1.07.01"
-  sha256 "aba73fde0e6827698669b29b0e6f9acc564f3fb94b7b604123d021caa30c50fa"
+  version "1.08.14"
+  sha256 "592adcbee058c2a4628efa29067f34ee5248a520922989563b3c026228e40261"
 
   url "https://www.fractalaudio.com/downloads/Axe-Edit-III/Axe-Edit-III-OSX-v#{version.tr(".", "p")}.dmg"
-  appcast "https://www.fractalaudio.com/axe-fx-iii-edit/"
   name "Axe-Edit III"
+  desc "Editor software for the AXE-FX III"
   homepage "https://www.fractalaudio.com/axe-fx-iii-edit/"
+
+  livecheck do
+    url "https://www.fractalaudio.com/axe-fx-iii-edit/"
+    strategy :page_match do |page|
+      v = page[%r{href=.*?/Axe-Edit-III-OSX-v(\d+(?:p\d+)*)\.dmg}i, 1]
+      v.tr("p", ".")
+    end
+  end
 
   app "Axe-Edit III.app"
 

@@ -1,11 +1,26 @@
 cask "clion" do
-  version "2020.2.4,202.7660.37"
-  sha256 "dd83c148f196a1504ec86d93e105fdf6d8ef72b0c856af5a91153dfe38667281"
+  version "2021.1.1,211.7142.21"
 
-  url "https://download.jetbrains.com/cpp/CLion-#{version.before_comma}.dmg"
-  appcast "https://data.services.jetbrains.com/products/releases?code=CL&latest=true&type=release"
+  if Hardware::CPU.intel?
+    sha256 "fe7262bc15279fbfacecf4e1e5e47d31e95da7cb1e5d33e0d4897fd704d850fb"
+    url "https://download.jetbrains.com/cpp/CLion-#{version.before_comma}.dmg"
+  else
+    sha256 "2f72a522259646f903c621265fefc075b90039e36ec6063f6582d04a6da7d9d9"
+    url "https://download.jetbrains.com/cpp/CLion-#{version.before_comma}-aarch64.dmg"
+  end
+
   name "CLion"
+  desc "C and C++ IDE"
   homepage "https://www.jetbrains.com/clion/"
+
+  livecheck do
+    url "https://data.services.jetbrains.com/products/releases?code=CL&latest=true&type=release"
+    strategy :page_match do |page|
+      version = page.match(/"version":"(\d+(?:\.\d+)*)/i)
+      build = page.match(/"build":"(\d+(?:\.\d+)*)/i)
+      "#{version[1]},#{build[1]}"
+    end
+  end
 
   auto_updates true
 

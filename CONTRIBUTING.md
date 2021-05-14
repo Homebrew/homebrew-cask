@@ -17,7 +17,7 @@ Notice an application that's out-of-date in Homebrew Cask? In most cases, it's v
 brew bump-cask-pr --version <new_version> <outdated_cask>
 ```
 
-If you want more control over the PR or are looking for our old tool, install [`cask-repair`](https://github.com/vitorgalvao/tiny-scripts/blob/master/cask-repair) (`brew install vitorgalvao/tiny-scripts/cask-repair`). You can also follow the steps in [Adding a Cask](doc/development/adding_a_cask.md) for more complicated changes.
+You can also follow the steps in [Adding a Cask](doc/development/adding_a_cask.md) for more complicated changes.
 
 
 ## Getting Set Up To Contribute
@@ -50,11 +50,11 @@ With a bit of work, you can create a Cask for it. The document [Adding A Cask](d
 
 Some style guidelines:
 
-* All Casks and code should be indented using two spaces (never tabs). When `brew cask style` contradicts this, `style` must be followed.
-* There should not be any extraneous comments - the only comments that should be used are the ones explicitly defined in the [Cask Language Reference](doc/cask_language_reference).
-* The stanza order and position of newlines is important to make things easier (See [Stanza order](doc/cask_language_reference/#stanza-order)).
-* Use string manipulations to improve the maintainability of your Cask (See [`version` methods](doc/cask_language_reference/stanzas/version.md#version-methods)).
-* Test your cask using `brew cask audit/style` (See [testing](doc/development/adding_a_cask.md#testing-your-new-cask)).
+* All Casks and code should be indented using two spaces (never tabs). When `brew style` contradicts this, `style` must be followed.
+* There should not be any extraneous comments - the only comments that should be used are the ones explicitly defined in the [Cask Cookbook](https://docs.brew.sh/Cask-Cookbook).
+* The stanza order and position of newlines is important to make things easier (See [Stanza order](https://docs.brew.sh/Cask-Cookbook#stanza-order)).
+* Use string manipulations to improve the maintainability of your Cask (See [`version` methods](https://docs.brew.sh/Cask-Cookbook#version-methods)).
+* Test your cask using `brew audit/style` (See [testing](doc/development/adding_a_cask.md#testing-your-new-cask)).
 * Make one Pull Request per Cask change.
 * Do not squash commits after updating a Pull Request.
 * Use descriptive commit messages - mention app name and version (ie. `Upgrade Transmission.app to v2.82`).

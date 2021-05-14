@@ -1,11 +1,16 @@
 cask "deepl" do
-  version "1.12.0"
-  sha256 "edb21b8e2df1e63d790e262c7da6719c0048c4c6ebc82998f93c00ec4ccf2a82"
+  version "2.3.41773"
+  sha256 :no_check
 
   url "https://appdownload.deepl.com/macos/DeepL.dmg"
   name "DeepL"
   desc "Trains AIs to understand and translate texts"
   homepage "https://www.deepl.com/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   auto_updates true
   depends_on macos: ">= :high_sierra"

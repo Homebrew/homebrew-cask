@@ -3,10 +3,14 @@ cask "quiterss" do
   sha256 "58c7517860252e60521d5681ce1f6220c7d4bedb4841a0d1e41236695085627e"
 
   url "https://quiterss.org/files/#{version}_/QuiteRSS-#{version}.dmg"
-  appcast "https://github.com/QuiteRSS/quiterss/releases.atom"
   name "QuiteRSS"
   desc "Free news feeds reader"
   homepage "https://quiterss.org/"
+
+  livecheck do
+    url "https://github.com/QuiteRSS/quiterss"
+    strategy :git
+  end
 
   app "quiterss.app"
 

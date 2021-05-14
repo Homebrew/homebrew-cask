@@ -1,18 +1,30 @@
 cask "dotnet" do
-  version "3.1.9,175aea5a-1b4a-4faa-b29d-ff72fa8c16bc:fcef8fc0139672f19ec8b9913824b6bb"
-  sha256 "9169251b1a55a0f812efe426b9a456002d9288962712b266ef6195fe9ea6c942"
+  version "5.0.6,4e2e2c76-626f-4927-8753-55d47ab79e06:24417509d68777cab1ed5f927e86db82"
+  sha256 "208eae389ea28d76b6b081f944cecca9ec7f0d59bba6711ade976a8c2bf18994"
 
   url "https://download.visualstudio.microsoft.com/download/pr/#{version.after_comma.before_colon}/#{version.after_colon}/dotnet-runtime-#{version.before_comma}-osx-x64.pkg"
-  appcast "https://dotnet.microsoft.com/download/dotnet-core"
-  name ".Net Core Runtime"
+  name ".Net Runtime"
+  desc "Developer platform"
   homepage "https://www.microsoft.com/net/core#macos"
+
+  # This identifies releases with the same major/minor version as the current
+  # cask version. New major/minor releases occur annually in November and the
+  # check will automatically update its behavior when the cask is updated.
+  livecheck do
+    url "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/#{version.major_minor}/releases.json"
+    strategy :page_match do |page|
+      page.scan(%r{/download/pr/([^/]+)/([^/]+)/dotnet-runtime-v?(\d+(?:\.\d+)+)-osx-x64\.pkg}i).map do |match|
+        "#{match[2]},#{match[0]}:#{match[1]}"
+      end
+    end
+  end
 
   conflicts_with cask: [
     "dotnet-sdk",
-    "dotnet-preview",
-    "dotnet-sdk-preview",
+    "homebrew/cask-versions/dotnet-preview",
+    "homebrew/cask-versions/dotnet-sdk-preview",
   ]
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   pkg "dotnet-runtime-#{version.before_comma}-osx-x64.pkg"
   binary "/usr/local/share/dotnet/dotnet"

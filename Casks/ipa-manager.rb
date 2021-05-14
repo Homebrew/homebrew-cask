@@ -1,11 +1,15 @@
 cask "ipa-manager" do
-  version "2.3.2"
+  version "2.3.2,2020.01.26"
   sha256 "d48a1dcfbe3b3c1c17fc35353f84ff381791da0839f1ece1b991499276c5ef5f"
 
-  url "https://www.blugs.com/Downloads/IPAPalette_#{version}.dmg"
-  appcast "https://www.blugs.com/Appcasts/IPAPalette.xml"
+  url "https://www.blugs.com/Downloads/IPAPalette_#{version.before_comma}.dmg"
   name "IPA Palette"
   homepage "https://www.blugs.com/IPA/"
+
+  livecheck do
+    url "https://www.blugs.com/Appcasts/IPAPalette.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 

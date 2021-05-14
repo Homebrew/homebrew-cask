@@ -1,12 +1,18 @@
 cask "knotes" do
-  version "2.6.0"
-  sha256 "5946b48b0e6ac588331336f760711c11c53ef9b0030616f39db6e9a41551d434"
+  version "2.10.0"
+  sha256 "4ecb335996b73a1ad905c453a4c311a2e288df391ece9614b7c840d41c6096c2"
 
-  # knotes2.s3-ap-northeast-1.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://knotes2.s3-ap-northeast-1.amazonaws.com/download/mac/Knotes-#{version}.dmg"
-  appcast "https://knotesapp.com/"
+  url "https://knotes2.s3-ap-northeast-1.amazonaws.com/download/mac/Knotes-#{version}.dmg",
+      verified: "knotes2.s3-ap-northeast-1.amazonaws.com/"
   name "Knotes"
+  desc "Reading notes management tool"
   homepage "https://knotesapp.com/"
+
+  livecheck do
+    url "https://knotesapp.com/"
+    strategy :page_match
+    regex(%r{href=.*?/Knotes-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   app "Knotes.app"
 

@@ -1,18 +1,32 @@
 cask "nova" do
-  version "2.1"
-  sha256 "10c1f4fbca051a81e8a37087b7a0023faedb98fd8209c05a7eb9f03ff6c258aa"
+  version "6.2"
+  sha256 "77b8591065a8f596a260a88f76a8bc1757ce71272723c4bf8fbd466e2dcade2d"
 
-  # download-cdn.panic.com/ was verified as official when first introduced to the cask
-  url "https://download-cdn.panic.com/nova/Nova%20#{version}.zip"
+  url "https://download-cdn.panic.com/nova/Nova%20#{version}.zip",
+      verified: "https://download-cdn.panic.com/nova/"
   name "Panic Nova"
   desc "Native code editor"
   homepage "https://nova.app/"
+
+  livecheck do
+    url :homepage
+    regex(%r{href=.*?/Nova(?:\s*|%20)?(\d+(?:\.\d+)*)\.zip}i)
+  end
 
   auto_updates true
   depends_on macos: ">= :mojave"
 
   app "Nova.app"
-  binary "#{appdir}/Nova.app/Contents/MacOS/Nova", target: "nova"
+  binary "#{appdir}/Nova.app/Contents/SharedSupport/nova"
 
-  zap trash: "~/Library/Application Support/Nova"
+  zap trash: [
+    "~/Library/Application Scripts/com.panic.Nova.NovaQuickLookPreview",
+    "~/Library/Application Scripts/com.panic.Nova.NovaQuickLookThumbnail",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.panic.nova.sfl2",
+    "~/Library/Caches/com.panic.Nova",
+    "~/Library/Containers/com.panic.Nova.NovaQuickLookPreview",
+    "~/Library/Containers/com.panic.Nova.NovaQuickLookThumbnail",
+    "~/Library/Preferences/com.panic.Nova.plist",
+    "~/Library/WebKit/com.panic.Nova",
+  ]
 end

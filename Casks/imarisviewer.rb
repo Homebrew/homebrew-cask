@@ -2,8 +2,8 @@ cask "imarisviewer" do
   version "9.6.0"
   sha256 "0ac9c887fa03a592c046a8b6181cf21e32961acbef1e79f1c1888f063cec58c6"
 
-  # viewer.imaris.com/ was verified as official when first introduced to the cask
-  url "https://viewer.imaris.com/download/ImarisViewer#{version.dots_to_underscores}m.dmg"
+  url "https://viewer.imaris.com/download/ImarisViewer#{version.dots_to_underscores}m.dmg",
+      verified: "viewer.imaris.com/"
   name "Imaris Viewer"
   desc "3D/4D microscopy image viewer"
   homepage "https://imaris.oxinst.com/imaris-viewer"

@@ -1,11 +1,16 @@
 cask "middle" do
-  version "1.5.4"
-  sha256 "1701f13312e160cf1019aa428bd41a7ae8f5115345cc1eb78bd897102e601b11"
+  version "1.5.23,57"
+  sha256 "4ac25999eb80969e114f5c7ae4c2260454bea447b29a0408f2b94168b2353893"
 
-  url "https://middleclick.app/downloads/Middle#{version}.dmg"
-  appcast "https://middleclick.app/downloads/updates.xml"
+  url "https://middleclick.app/downloads/Middle#{version.before_comma}.dmg"
   name "Middle"
+  desc "Add middle click for Trackpad and Magic Mouse"
   homepage "https://middleclick.app/"
+
+  livecheck do
+    url "https://middleclick.app/downloads/updates.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 

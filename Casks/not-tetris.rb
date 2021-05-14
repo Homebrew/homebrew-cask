@@ -3,9 +3,14 @@ cask "not-tetris" do
   sha256 "ddb4df7f9169e1a03cb5f81e67b972cca4470e4925973af452f6e467830aaea8"
 
   url "https://stabyourself.net/dl.php?file=nottetris#{version}/nottetris#{version}-osx.zip"
-  appcast "https://stabyourself.net/nottetris2/"
   name "Not Tetris"
   homepage "https://stabyourself.net/nottetris2/"
+
+  livecheck do
+    url "https://stabyourself.net/nottetris2/"
+    strategy :page_match
+    regex(%r{href=.*?/nottetris(\d+)-osx\.zip}i)
+  end
 
   app "Not Tetris #{version}.app"
 

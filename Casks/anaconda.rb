@@ -1,10 +1,17 @@
 cask "anaconda" do
-  version "2020.07"
-  sha256 "3980c2a57fde5de2ccfdf0d7973f95ac1a3fa63351642e6735c50fc3791ef0f1"
+  version "2021.04"
+  sha256 "e945565945eb02fcc0755ca9d419ae36cb0f05f325790bec53d8f4ec7dedf4ca"
 
   url "https://repo.anaconda.com/archive/Anaconda3-#{version}-MacOSX-x86_64.sh"
   name "Continuum Analytics Anaconda"
+  desc "Distribution of the Python and R programming languages for scientific computing"
   homepage "https://www.anaconda.com/"
+
+  livecheck do
+    url "https://repo.anaconda.com/archive/"
+    strategy :page_match
+    regex(/Anaconda3-(\d+(?:\.\d+)*)-MacOSX-x86_64\.sh/i)
+  end
 
   auto_updates true
   container type: :naked

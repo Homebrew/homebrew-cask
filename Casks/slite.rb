@@ -1,11 +1,16 @@
 cask "slite" do
-  version "1.2.1"
-  sha256 "734b9dacdbc95a6c878f09b9b5e3663afe491e85c24e0228454ad298018389dc"
+  version "1.2.5"
+  sha256 :no_check
 
   url "https://download.slite.com/mac"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=https://download.slite.com/mac"
   name "Slite"
+  desc "Team communication and collaboration software"
   homepage "https://slite.com/"
+
+  livecheck do
+    url "https://download.slite.com/mac"
+    strategy :header_match
+  end
 
   app "Slite.app"
 

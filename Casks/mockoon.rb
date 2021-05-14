@@ -1,10 +1,9 @@
 cask "mockoon" do
-  version "1.10.0"
-  sha256 "9c9a95a7ae30beb0a3c0e10095e78819a2bf54f69d8348aeda4b19e826d39b52"
+  version "1.13.0"
+  sha256 "f75d062fde70bfe7708568a35aa1869dcda4df45136b03652b2e9725531760a9"
 
-  # github.com/mockoon/mockoon/ was verified as official when first introduced to the cask
-  url "https://github.com/mockoon/mockoon/releases/download/v#{version}/mockoon.setup.#{version}.dmg"
-  appcast "https://github.com/mockoon/mockoon/releases.atom"
+  url "https://github.com/mockoon/mockoon/releases/download/v#{version}/mockoon.setup.#{version}.dmg",
+      verified: "github.com/mockoon/mockoon/"
   name "Mockoon"
   desc "Utility to run mock APIs locally"
   homepage "https://mockoon.com/"

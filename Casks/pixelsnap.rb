@@ -1,12 +1,16 @@
 cask "pixelsnap" do
-  version "2.4.1"
-  sha256 "c66986dbdf9bf6fd6b76dbd36dc855f9bd8a1d4ac850a5c36cf4f362b344deec"
+  version "2.4.3"
+  sha256 "5a01820c1163cab3b5625cdeee09e84c52d07b6e3171bfb1234fea786750f16f"
 
   url "https://updates.getpixelsnap.com/v#{version.major}/PixelSnap-#{version.major}-#{version}.dmg"
-  appcast "https://updates.getpixelsnap.com/v#{version.major}/appcast.xml"
   name "PixelSnap"
   desc "Screen measuring tool"
   homepage "https://getpixelsnap.com/"
+
+  livecheck do
+    url "https://updates.getpixelsnap.com/v#{version.major}/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 

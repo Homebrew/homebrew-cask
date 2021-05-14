@@ -1,5 +1,5 @@
 **Note**: Before taking the time to craft a new cask, make sure
-- it can be accepted by checking the [Rejected Casks FAQ document](https://github.com/Homebrew/homebrew-cask/blob/master/doc/faq/rejected_casks.md),
+- it can be accepted by checking the [Rejected Casks FAQ](https://github.com/Homebrew/brew/blob/HEAD/docs/Acceptable-Casks.md#rejected-casks),
 - check if there are no [open pull requests] for the same cask and
 - check if the cask was not [already refused].
 
@@ -12,16 +12,15 @@ Making a new Cask is easy. Follow the directions in [Getting Set Up To Contribut
 
 ### Examples
 
-Here’s a Cask for `shuttle` as an example. Note the comment above `url`, which is needed when [the url and homepage hostnames differ](../cask_language_reference/stanzas/url.md#when-url-and-homepage-hostnames-differ-add-a-comment)
+Here’s a Cask for `shuttle` as an example. Note the `verified` parameter below the `url`, which is needed when [the url and homepage hostnames differ](https://docs.brew.sh/Cask-Cookbook#when-url-and-homepage-hostnames-differ-add-verified)
 
 ```ruby
 cask "shuttle" do
   version "1.2.9"
   sha256 "0b80bf62922291da391098f979683e69cc7b65c4bdb986a431e3f1d9175fba20"
 
-  # github.com/fitztrev/shuttle/ was verified as official when first introduced to the cask
-  url "https://github.com/fitztrev/shuttle/releases/download/v#{version}/Shuttle.zip"
-  appcast "https://github.com/fitztrev/shuttle/releases.atom"
+  url "https://github.com/fitztrev/shuttle/releases/download/v#{version}/Shuttle.zip",
+      verified: "github.com/fitztrev/shuttle/"
   name "Shuttle"
   desc "Simple shortcut menu"
   homepage "https://fitztrev.github.io/shuttle/"
@@ -32,36 +31,40 @@ cask "shuttle" do
 end
 ```
 
-And here is one for `advancedcolors`. Note that it has an unversioned download (the download `url` does not contain the version number, unlike the example above). It also suppresses the checksum with `sha256 :no_check` (necessary since the checksum will change when a new distribution is made available). This combination of `version :latest` and `sha256 :no_check` is currently the preferred mechanism when a versioned download URL is not available and the cask does not have an `appcast`.
+And here is one for `noisy`. Note that it has an unversioned download (the download `url` does not contain the version number, unlike the example above). It also suppresses the checksum with `sha256 :no_check`, which is necessary because the checksum will change on the same `url` when a new distribution is made available.
 
 ```ruby
-cask "advancedcolors" do
-  version :latest
+cask "noisy" do
+  version "1.3"
   sha256 :no_check
 
-  url "https://advancedcolors.com/AdvancedColors.zip"
-  name "Advanced Colors"
-  desc "Lightning fast swatch tool for designers and developers"
-  homepage "https://advancedcolors.com/"
+  url "https://github.com/downloads/jonshea/Noisy/Noisy.zip"
+  name "Noisy"
+  desc "White noise generator"
+  homepage "https://github.com/jonshea/Noisy"
 
-  app "AdvancedColors.app"
+  app "Noisy.app"
 end
 ```
 
-Here is a last example for `airdisplay`, which uses a `pkg` installer to install the application instead of a stand-alone application bundle (`.app`). Note the [`uninstall pkgutil` stanza](../cask_language_reference/stanzas/uninstall.md#uninstall-key-pkgutil), which is needed to uninstall all files which were installed using the installer.
+Here is a last example for `airdisplay`, which uses a `pkg` installer to install the application instead of a stand-alone application bundle (`.app`). Note the [`uninstall pkgutil` stanza](https://docs.brew.sh/Cask-Cookbook#uninstall-key-pkgutil), which is needed to uninstall all files which were installed using the installer.
 
-You will also see how to adapt `version` to the download `url`. Use [our custom `version` methods](../cask_language_reference/stanzas/version.md#version-methods) to do so, resorting to the standard [Ruby String methods](https://ruby-doc.org/core/String.html) when they don’t suffice.
+You will also see how to adapt `version` to the download `url`. Use [our custom `version` methods](https://docs.brew.sh/Cask-Cookbook#version-methods) to do so, resorting to the standard [Ruby String methods](https://ruby-doc.org/core/String.html) when they don’t suffice.
 
 ```ruby
 cask "airdisplay" do
-  version "3.4.2"
+  version "3.4.2,26581"
   sha256 "272d14f33b3a4a16e5e0e1ebb2d519db4e0e3da17f95f77c91455b354bee7ee7"
 
-  url "https://www.avatron.com/updates/software/airdisplay/ad#{version.no_dots}.zip"
-  appcast "https://www.avatron.com/updates/software/airdisplay/appcast.xml"
+  url "https://www.avatron.com/updates/software/airdisplay/ad#{version.before_comma.no_dots}.zip"
   name "Air Display"
   desc "Utility for using a tablet as a second monitor"
   homepage "https://avatron.com/applications/air-display/"
+
+  livecheck do
+    url "https://www.avatron.com/updates/software/airdisplay/appcast.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :mojave"
 
@@ -76,7 +79,7 @@ end
 
 ### Generating a Token for the Cask
 
-The Cask **token** is the mnemonic string people will use to interact with the Cask via `brew cask install`, etc. The name of the Cask **file** is simply the token with the extension `.rb` appended.
+The Cask **token** is the mnemonic string people will use to interact with the Cask via `brew install`, etc. The name of the Cask **file** is simply the token with the extension `.rb` appended.
 
 The easiest way to generate a token for a Cask is to run this command:
 
@@ -92,12 +95,12 @@ $ "$(brew --repository)/Library/Taps/homebrew/homebrew-cask/developer/bin/genera
 
 If the `generate_cask_token` script does not work for you, see [Cask Token Details](#cask-token-details).
 
-### The `brew cask create` Command
+### The `brew create --cask` Command
 
-Once you know the token, create your Cask with the handy-dandy `brew cask create` command:
+Once you know the token, create your Cask with the handy-dandy `brew create --cask` command:
 
 ```bash
-$ brew cask create my-new-cask
+$ brew create --cask download-url --set-name my-new-cask
 ```
 
 This will open `$EDITOR` with a template for your new Cask, to be stored in the file `my-new-cask.rb`. Running the `create` command above will get you a template that looks like this:
@@ -107,7 +110,7 @@ cask "my-new-cask" do
   version ""
   sha256 ""
 
-  url "https://"
+  url "download-url"
   name ""
   desc ""
   homepage ""
@@ -122,24 +125,25 @@ Fill in the following stanzas for your Cask:
 
 | name               | value       |
 | ------------------ | ----------- |
-| `version`          | application version; give the value `:latest` if only an unversioned download is available
-| `sha256`           | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`. Can be suppressed by using the special value `:no_check`. (see [sha256](../cask_language_reference/stanzas/sha256.md))
-| `url`              | URL to the `.dmg`/`.zip`/`.tgz`/`.tbz2` file that contains the application.<br />A [comment](../cask_language_reference/stanzas/url.md#when-url-and-homepage-hostnames-differ-add-a-comment) must be added if the hostnames in the `url` and `homepage` stanzas differ. [Block syntax](../cask_language_reference/stanzas/url.md#using-a-block-to-defer-code-execution) is available for URLs that change on every visit
-| `name`             | the full and proper name defined by the vendor, and any useful alternate names (see [Name Stanza Details](../cask_language_reference/stanzas/name.md))
-| `desc`             | one-line description of the software (see [Desc Stanza Details](../cask_language_reference/stanzas/desc.md))
-| `homepage`         | application homepage; used for the `brew cask home` command
-| `app`              | relative path to an `.app` bundle that should be moved into the `/Applications` folder on installation (see [App Stanza Details](../cask_language_reference/stanzas/app.md))
+| `version`          | application version
+| `sha256`           | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`. Can be suppressed by using the special value `:no_check`. (see [sha256](https://docs.brew.sh/Cask-Cookbook#stanza-sha256))
+| `url`              | URL to the `.dmg`/`.zip`/`.tgz`/`.tbz2` file that contains the application.<br />A [`verified` parameter](https://docs.brew.sh/Cask-Cookbook#when-url-and-homepage-hostnames-differ-add-verified) must be added if the hostnames in the `url` and `homepage` stanzas differ. [Block syntax](https://docs.brew.sh/Cask-Cookbook#using-a-block-to-defer-code-execution) is available for URLs that change on every visit
+| `name`             | the full and proper name defined by the vendor, and any useful alternate names (see [Name Stanza Details](https://docs.brew.sh/Cask-Cookbook#stanza-name))
+| `desc`             | one-line description of the software (see [Desc Stanza Details](https://docs.brew.sh/Cask-Cookbook#stanza-desc))
+| `homepage`         | application homepage; used for the `brew home` command
+| `app`              | relative path to an `.app` bundle that should be moved into the `/Applications` folder on installation (see [App Stanza Details](https://docs.brew.sh/Cask-Cookbook#stanza-app))
 
 Other commonly-used stanzas are:
 
 | name               | value       |
 | ------------------ | ----------- |
-| `appcast`          | a URL providing an appcast feed to find updates for this Cask. (see [Appcast Stanza Details](../cask_language_reference/stanzas/appcast.md))
-| `pkg`              | relative path to a `.pkg` file containing the distribution (see [Pkg Stanza Details](../cask_language_reference/stanzas/pkg.md))
-| `caveats`          | a string or Ruby block providing the user with Cask-specific information at install time (see [Caveats Stanza Details](../cask_language_reference/stanzas/caveats.md))
-| `uninstall`        | procedures to uninstall a Cask. Optional unless the `pkg` stanza is used. (see [Uninstall Stanza Details](../cask_language_reference/stanzas/uninstall.md))
+| `livecheck`          | Ruby block describing how to find updates for this Cask (see [Livecheck Stanza Details](https://docs.brew.sh/Cask-Cookbook#stanza-livecheck))
+| `pkg`              | relative path to a `.pkg` file containing the distribution (see [Pkg Stanza Details](https://docs.brew.sh/Cask-Cookbook#stanza-pkg))
+| `caveats`          | a string or Ruby block providing the user with Cask-specific information at install time (see [Caveats Stanza Details](https://docs.brew.sh/Cask-Cookbook#stanza-caveats))
+| `uninstall`        | procedures to uninstall a Cask. Optional unless the `pkg` stanza is used. (see [Uninstall Stanza Details](https://docs.brew.sh/Cask-Cookbook#stanza-uninstall))
+| `zap`        		 | additional procedures for a more complete uninstall, including configuration files and shared resources (see [Zap Stanza Details](https://docs.brew.sh/Cask-Cookbook#stanza-zap))
 
-Additional `artifact` stanzas you might need for special use-cases can be found [here](../cask_language_reference/all_stanzas.md#at-least-one-artifact-stanza-is-also-required). Even more special-use stanzas are listed at [Optional Stanzas](../cask_language_reference/all_stanzas.md#optional-stanzas).
+Additional `artifact` stanzas you might need for special use-cases can be found [here](https://docs.brew.sh/Cask-Cookbook#at-least-one-artifact-stanza-is-also-required). Even more special-use stanzas are listed at [Optional Stanzas](https://docs.brew.sh/Cask-Cookbook#optional-stanzas).
 
 ### Cask Token Details
 
@@ -147,7 +151,7 @@ If a token conflicts with an already-existing Cask, authors should manually make
 
 If possible, avoid creating tokens which differ only by the placement of hyphens.
 
-To generate a token manually, or to learn about exceptions for unusual cases, see [token_reference.md](../cask_language_reference/token_reference.md).
+To generate a token manually, or to learn about exceptions for unusual cases, see [token_reference.md](https://docs.brew.sh/Cask-Cookbook#token-reference).
 
 ### Archives With Subfolders
 
@@ -170,27 +174,27 @@ Give it a shot with:
 
 ```bash
 export HOMEBREW_NO_AUTO_UPDATE=1
-brew cask install my-new-cask
+brew install my-new-cask
 ```
 
-Did it install? If something went wrong, edit your Cask with `brew cask edit my-new-cask` to fix it.
+Did it install? If something went wrong, edit your Cask with `brew edit my-new-cask` to fix it.
 
 Test also if the uninstall works successfully:
 
 ```bash
-brew cask uninstall my-new-cask
+brew uninstall my-new-cask
 ```
 
 If everything looks good, you’ll also want to make sure your Cask passes audit with:
 
 ```bash
-brew cask audit my-new-cask --download
+brew audit --new-cask my-new-cask
 ```
 
-You should also check stylistic details with `brew cask style`:
+You should also check stylistic details with `brew style`:
 
 ```bash
-brew cask style --fix my-new-cask
+brew style --fix my-new-cask
 ```
 
 Keep in mind all of these checks will be made when you submit your PR, so by doing them in advance you’re saving everyone a lot of time and trouble.
@@ -199,64 +203,7 @@ If your application and Homebrew Cask do not work well together, feel free to [f
 
 ## Finding a Home For Your Cask
 
-We maintain separate Taps for different types of binaries. Our nomenclature is:
-
-+ **Stable**: The latest version provided by the developer defined by them as such.
-+ **Beta, Development, Unstable**: Subsequent versions to **stable**, yet incomplete and under development, aiming to eventually become the new **stable**. Also includes alternate versions specifically targeted at developers.
-+ **Nightly**: Constantly up-to-date versions of the current development state.
-+ **Legacy**: Any **stable** version that is not the most recent.
-+ **Regional, Localized**: Any version that isn’t the US English one, when that exists.
-+ **Trial**: Date-limited version that stops working entirely after it expires, requiring payment to lift the limitation.
-+ **Freemium**: Gratis version that works indefinitely but with limitations that can be removed by paying.
-+ **Fork**: An alternate version of an existing project, with a based-on but modified source and binary.
-+ **Unofficial**: An *allegedly* unmodified compiled binary, by a third-party, of a binary that has no existing build by the owner of the source code.
-+ **Vendorless**: A binary distributed without an official website, like a forum posting.
-+ **Walled**: When the download URL is both behind a login/registration form and from a host that differs from the homepage.
-+ **Font**: Data file containing a set of glyphs, characters, or symbols, that changes typed text.
-+ **Driver**: Software to make a hardware peripheral recognisable and usable by the system. If the software is useless without the peripheral, it’s considered a driver.
-
-### Stable Versions
-
-Stable versions live in the main repository at [Homebrew/homebrew-cask](https://github.com/Homebrew/homebrew-cask). They should run on the latest release of macOS or the previous point release (High Sierra and Mojave as of late 2018).
-
-### But There Is No Stable Version!
-
-When an App is only available as beta, development, or unstable versions, or in cases where such a version is the general standard, then said version can go into the main repo.
-
-### Beta, Unstable, Development, Nightly, or Legacy
-
-When an App has a main stable version, alternative versions should be submitted to [Homebrew/homebrew-cask-versions](https://github.com/Homebrew/homebrew-cask-versions).
-
-### Regional and Localized
-
-When an App exists in more than one language or has different regional editions, [the `language` stanza should be used to switch between languages or regions](../../doc/cask_language_reference/stanzas/language.md).
-
-### Trial and Freemium Versions
-
-Before submitting a trial, make sure it can be made into a full working version without the need to be redownloaded. If an App provides a trial but the only way to buy the full version is via the Mac App Store, it does not belong in any of the official repos. Freemium versions are fine.
-
-### Forks and Apps with Conflicting Names
-
-Forks must have the vendor’s name as a prefix on the Cask’s file name and token. If the original software is discontinued, forks still need to follow this rule so as to not be surprising to the user. There are two exceptions which allow the fork to replace the main cask:
-
-* The original discontinued software recommends that fork.
-* The fork is so overwhelmingly popular that it surpasses the original and is now the de facto project when people think of the name.
-
-For unrelated Apps that share a name, the most popular one (usually the one already present) stays unprefixed. Since this can be subjective, if you disagree with a decision, open an issue and make your case to the maintainers.
-
-### Unofficial, Vendorless, and Walled Builds
-
-We do not accept these casks since they offer a higher-than-normal security risk.
-
-### Fonts
-
-Font Casks live in the [Homebrew/homebrew-cask-fonts](https://github.com/Homebrew/homebrew-cask-fonts) repository. See the font repo [CONTRIBUTING.md](../../../../../homebrew-cask-fonts/blob/master/CONTRIBUTING.md)
-for details.
-
-### Drivers
-
-Driver Casks live in the [Homebrew/homebrew-cask-drivers](https://github.com/Homebrew/homebrew-cask-drivers) repository. See the drivers repo [CONTRIBUTING.md](../../../../../homebrew-cask-drivers/blob/master/CONTRIBUTING.md)
-for details.
+See the [Acceptable Casks documentation](https://github.com/Homebrew/brew/blob/HEAD/docs/Acceptable-Casks.md#finding-a-home-for-your-cask).
 
 ## Submitting Your Changes
 
@@ -309,7 +256,7 @@ See [a note about git commit messages](https://tbaggery.com/2008/04/19/a-note-ab
 
 The first line of a commit message becomes the **title** of a pull request on GitHub, like the subject line of an email. Including the key info in the first line will help us respond faster to your pull.
 
-For Cask commits in the Homebrew Cask project, we like to include the Application name, version number (or `:latest`), and purpose of the commit in the first line.
+For Cask commits in the Homebrew Cask project, we like to include the Application name, version number, and purpose of the commit in the first line.
 
 Examples of good, clear commit summaries:
 

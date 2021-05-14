@@ -1,10 +1,9 @@
 cask "gnucash" do
-  version "4.2,1"
-  sha256 "66f48acf1aa002e2de86865bb56f6a695cecf1fd3734b4a7e85fc170cf14c6f5"
+  version "4.5"
+  sha256 "9b8dd368d8c8b8879938830f129f2abf5014182c84d0cb8fc133b5d0d1d321a9"
 
-  # github.com/Gnucash/gnucash/ was verified as official when first introduced to the cask
-  url "https://github.com/Gnucash/gnucash/releases/download/#{version.before_comma}/Gnucash-Intel-#{version.before_comma.chomp("b")}-#{version.after_comma}.dmg"
-  appcast "https://github.com/Gnucash/gnucash/releases.atom"
+  url "https://github.com/Gnucash/gnucash/releases/download/#{version}/Gnucash-Intel-#{version}-1.dmg",
+      verified: "github.com/Gnucash/gnucash/"
   name "GnuCash"
   desc "Double-entry accounting program"
   homepage "https://www.gnucash.org/"

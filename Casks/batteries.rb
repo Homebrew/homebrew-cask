@@ -1,11 +1,11 @@
 cask "batteries" do
-  version "2.0.1"
-  sha256 "9b4ec9875d6977392c182a9032ebead5857713bf9f78f7e78df29a7d8c592c1f"
+  version "2.1.2"
+  sha256 "402c2c5f088dabe374c2c7a21888e1606e6d1417e08ce6c9af0f91ec31db3452"
 
-  # github.com/ronyfadel/BatteriesReleases was verified as official when first introduced to the cask
-  url "https://github.com/ronyfadel/BatteriesReleases/releases/download/v#{version}/Batteries.dmg"
-  appcast "https://github.com/ronyfadel/BatteriesReleases/releases.atom"
+  url "https://github.com/ronyfadel/BatteriesReleases/releases/download/v#{version}/Batteries.dmg",
+      verified: "github.com/ronyfadel/BatteriesReleases/"
   name "Batteries"
+  desc "Track all your devices' batteries"
   homepage "https://www.fadel.io/batteries/"
 
   depends_on macos: ">= :mojave"

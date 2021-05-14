@@ -1,5 +1,5 @@
 cask "gopanda" do
-  version :latest
+  version "2.7.5"
   sha256 :no_check
 
   url "https://pandanet-igs.com/gopanda2/download/GoPanda2.dmg"

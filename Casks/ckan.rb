@@ -1,11 +1,15 @@
 cask "ckan" do
-  version "1.29.0"
-  sha256 "b512639ffc673a895b23aab147346a7c1c4e34dd46ff6d9eea3c312c08f1e9ad"
+  version "1.30.0"
+  sha256 "3244d377aca5635490b550ba2f5703ff19d609422802ec1be355ad630c944eb3"
 
   url "https://github.com/KSP-CKAN/CKAN/releases/download/v#{version}/CKAN.dmg"
-  appcast "https://github.com/KSP-CKAN/CKAN/releases.atom"
   name "Comprehensive Kerbal Archive Network client"
   homepage "https://github.com/KSP-CKAN/CKAN"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   depends_on cask: "mono-mdk"
 

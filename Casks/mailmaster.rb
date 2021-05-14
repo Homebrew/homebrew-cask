@@ -1,12 +1,16 @@
 cask "mailmaster" do
-  version :latest
+  version "2.14.10,1278"
   sha256 :no_check
 
-  # client.dl.126.net/macmail/dashi/ was verified as official when first introduced to the cask
-  url "http://client.dl.126.net/macmail/dashi/mailmaster.dmg"
+  url "http://client.dl.126.net/macmail/dashi/mailmaster.dmg",
+      verified: "client.dl.126.net/macmail/dashi/"
   name "NetEase Mail Master"
   name "网易邮箱大师"
   homepage "https://mail.163.com/dashi/"
+
+  livecheck do
+    skip "unversioned URL"
+  end
 
   app "MailMaster.app"
 

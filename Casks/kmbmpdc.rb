@@ -3,7 +3,6 @@ cask "kmbmpdc" do
   sha256 "6a0c00c1b7801465f203508926911d91d99e3fc25c4bebfebae3edaeb678cfdd"
 
   url "https://github.com/arttuperala/kmbmpdc/releases/download/v#{version}/kmbmpdc.tar.gz"
-  appcast "https://github.com/arttuperala/kmbmpdc/releases.atom"
   name "kmbmpdc"
   name "kawaii menu bar music player daemon controller"
   homepage "https://github.com/arttuperala/kmbmpdc"

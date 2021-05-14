@@ -1,10 +1,10 @@
 cask "bob" do
-  version "0.5.2"
-  sha256 "e31adc5d142b4a03609e9100708c50c36472e84f50a6f7f0b918c5e00c501f88"
+  version "0.6.1"
+  sha256 "b3308f9cb17b5dfea2bfae30257f0d69743cc1f325fa198f1ad59a535a4651bf"
 
-  url "https://github.com/ripperhe/Bob/releases/download/v#{version}/Bob.app.zip"
-  appcast "https://github.com/ripperhe/Bob/releases.atom"
+  url "https://github.com/ripperhe/Bob/releases/download/v#{version}/Bob.zip"
   name "Bob"
+  desc "Translation application for text, pictures, and manual input"
   homepage "https://github.com/ripperhe/Bob"
 
   depends_on macos: ">= :sierra"

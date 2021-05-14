@@ -1,13 +1,20 @@
 cask "packetsender" do
-  version "7.0.5"
-  sha256 "30281225ee4e2baf3ca365123832c2931342aaf1011038268eab13ec73375fad"
+  version "7.2.3,7.2.4"
+  sha256 "9d5ba752d4e3625ce31909dfb324b3bc2979b650079f111e3d6350432e8c00be"
 
-  # github.com/dannagle/PacketSender/ was verified as official when first introduced to the cask
-  url "https://github.com/dannagle/PacketSender/releases/download/v#{version}/PacketSender_v#{version}.dmg"
-  appcast "https://github.com/dannagle/PacketSender/releases.atom"
+  url "https://github.com/dannagle/PacketSender/releases/download/v#{version.before_comma}/PacketSender_v#{version.after_comma}.dmg",
+      verified: "github.com/dannagle/PacketSender/"
   name "Packet Sender"
   desc "Network utility for sending / receiving TCP, UDP, SSL"
   homepage "https://packetsender.com/"
+
+  livecheck do
+    url "https://github.com/dannagle/PacketSender/releases/latest"
+    strategy :page_match do |page|
+      match = page.match(%r{href=.*?/v?(\d+(?:\.\d+)*)/PacketSender_v?(\d+(?:\.\d+)*)\.dmg}i)
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
   depends_on macos: ">= :sierra"
 

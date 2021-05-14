@@ -1,12 +1,17 @@
 cask "pcoipclient" do
-  version "20.10.0"
-  sha256 "632d6323558611b3141432bebca84e8d208034853e2e9df53dd6af29170da52a"
+  version "21.03.0"
+  sha256 "4dd5b21afccf49778b551c6b6cbf155d92b9905a0b951d86c7b4205c89cdb182"
 
   url "https://downloads.teradici.com/mac/stable/pcoip-client_#{version}.dmg"
-  appcast "https://downloads.teradici.com/mac/stable/"
   name "Teradici PCoIP Software Client for macOS"
   desc "Client for VM agents and remote workstation cards"
   homepage "https://docs.teradici.com/find/product/software-and-mobile-clients/"
+
+  livecheck do
+    url "https://downloads.teradici.com/mac/stable/"
+    strategy :page_match
+    regex(/href=.*?pcoip-client_(\d+(?:\.\d+)*)\.dmg/i)
+  end
 
   app "PCoIPClient.app"
 

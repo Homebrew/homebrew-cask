@@ -1,11 +1,16 @@
 cask "cmake" do
-  version "3.18.4"
-  sha256 "4002a65daa60a47ee7fd6e8bc5ae321a346071d17a83e270d012fdbd29ee9e76"
+  version "3.20.2"
+  sha256 "988f7648dc1df20af59df1b545bfa35059b94eb62aa5c63fdfaedc10bc62f5e4"
 
-  url "https://www.cmake.org/files/v#{version.major_minor}/cmake-#{version}-Darwin-x86_64.dmg"
-  appcast "https://cmake.org/files/LatestRelease/"
+  url "https://cmake.org/files/LatestRelease/cmake-#{version}-macos-universal.dmg"
   name "CMake"
+  desc "Family of tools to build, test and package software"
   homepage "https://cmake.org/"
+
+  livecheck do
+    url "https://cmake.org/files/LatestRelease/"
+    regex(/href=.*?cmake[._-]v?(\d+(?:\.\d+)+)-macos-universal\.dmg/i)
+  end
 
   conflicts_with formula: "cmake"
 

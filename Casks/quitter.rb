@@ -1,12 +1,16 @@
 cask "quitter" do
   version "1.0,107"
-  sha256 "ad4071a48aeed019fbb9ebf80ce717c1c15ade24298a33e823dc0d1c218baed4"
+  sha256 :no_check
 
   url "https://marco.org/appcasts/Quitter.zip"
-  appcast "https://marco.org/appcasts/quitter.xml"
   name "Quitter"
   desc "Automatically hides or quits apps after periods of inactivity"
   homepage "https://marco.org/apps#quitter"
+
+  livecheck do
+    url "https://marco.org/appcasts/quitter.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 

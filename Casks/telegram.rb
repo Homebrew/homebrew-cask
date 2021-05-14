@@ -1,12 +1,17 @@
 cask "telegram" do
-  version "7.2.1,207127"
-  sha256 "c24b7754e6273eec85b495f42433d902fea7f5782ed29c04ecc2082d9001a78f"
+  version "7.7.215786"
+  sha256 "ddd5c494c36566770154dc2a56d9b4a779874833075d1aa4f888d63069d9faf7"
 
-  url "https://osx.telegram.org/updates/Telegram-#{version.before_comma}.#{version.after_comma}.app.zip"
-  appcast "https://osx.telegram.org/updates/versions.xml"
+  url "https://osx.telegram.org/updates/Telegram-#{version}.app.zip"
   name "Telegram for macOS"
   desc "Messaging app with a focus on speed and security"
   homepage "https://macos.telegram.org/"
+
+  livecheck do
+    url "https://osx.telegram.org/updates/versions.xml"
+    strategy :page_match
+    regex(/Telegram-(\d+(?:\.\d+)*)\.app\.zip/i)
+  end
 
   auto_updates true
   depends_on macos: ">= :el_capitan"

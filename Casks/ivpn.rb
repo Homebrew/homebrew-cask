@@ -1,13 +1,20 @@
 cask "ivpn" do
-  version "2.12.6"
-  sha256 "dac7caeff9a1584e6e471a566df0b662c03ef15cab4abf5b8dba349ac9901d2e"
+  version "3.3.10"
+  sha256 "388a4460f7a37dc6c306249fd0b74c000b17adc7d461e6617ff94e0f315471e5"
 
-  url "https://cdn.ivpn.net/releases/osx/IVPN-#{version}.dmg"
-  appcast "https://www.ivpn.net/setup/mac-changelog.html"
+  url "https://repo.ivpn.net/macos/bin/IVPN-#{version}.dmg"
   name "IVPN"
+  desc "VPN client"
   homepage "https://www.ivpn.net/apps-macos"
 
+  livecheck do
+    url "https://www.ivpn.net/setup/mac-changelog.html"
+    strategy :page_match
+    regex(%r{href=.*?/IVPN-(\d+(?:\.\d+)*)\.dmg}i)
+  end
+
   auto_updates true
+  depends_on macos: ">= :mojave"
 
   app "IVPN.app"
 

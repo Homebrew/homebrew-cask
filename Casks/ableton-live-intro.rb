@@ -1,14 +1,20 @@
 cask "ableton-live-intro" do
-  version "10.1.25"
-  sha256 "34b9c22fcdfd24d98677441322193af8650a7c86139e55d6fa795083204686e5"
+  version "11.0.2"
+  sha256 "71c5ca5bd93f7ad4a2f8bdaf8463623494c1fcff9430df998d9df605b8acfbd7"
 
   url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_intro_#{version}_64.dmg"
-  appcast "https://www.ableton.com/en/release-notes/live-#{version.major}/"
   name "Ableton Live Intro"
+  desc "Sound and music editor"
   homepage "https://www.ableton.com/en/live/"
 
+  livecheck do
+    url "https://www.ableton.com/en/release-notes/live-#{version.major}/"
+    strategy :page_match
+    regex(/(\d+(?:\.\d+)*)\s*Release\s*Notes/i)
+  end
+
   auto_updates true
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :high_sierra"
 
   app "Ableton Live #{version.major} Intro.app"
 

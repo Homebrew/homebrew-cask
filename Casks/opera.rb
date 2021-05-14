@@ -1,12 +1,17 @@
 cask "opera" do
-  version "72.0.3815.320"
-  sha256 "a490b7d4c816ce1735bb30a60f5d74e0e5f215550fb63559aefd211e46988c83"
+  version "76.0.4017.123"
+  sha256 "2bb37ec36dc1aa7bf5ca04d2e3356accfa79502207b93490d84c77dea2eb0473"
 
   url "https://get.geo.opera.com/pub/opera/desktop/#{version}/mac/Opera_#{version}_Setup.dmg"
-  appcast "https://ftp.opera.com/pub/opera/desktop/"
   name "Opera"
-  desc "Cross-platform web browser"
+  desc "Web browser"
   homepage "https://www.opera.com/"
+
+  livecheck do
+    url "https://ftp.opera.com/pub/opera/desktop/"
+    strategy :page_match
+    regex(/href=['"]?(\d+(?:\.\d+)*)['"]?/i)
+  end
 
   auto_updates true
 

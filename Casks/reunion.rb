@@ -1,12 +1,19 @@
 cask "reunion" do
-  version "13.0.0.201029n"
-  sha256 "b278d600761e8b3a73c81438bb4a4e1f5c9249de02e3ec70b50c92263053c53a"
+  version "13.0.0,210503unr"
+  sha256 "1e482f77eb2862a942f001470aaf706fc604f3197a11f08897bf5c8cfe2dd43c"
 
-  url "https://store.leisterpro.com/updates/reunion#{version.major}/Reunion-#{version.dots_to_hyphens}.zip"
-  appcast "https://store.leisterpro.com/updates/reunion#{version.major}/appcast.xml",
-          must_contain: version.dots_to_hyphens
+  url "https://store.leisterpro.com/updates/reunion#{version.major}/Reunion-#{version.before_comma.dots_to_hyphens}-#{version.after_comma}.zip"
   name "Reunion"
+  desc "Genealogy (family tree) app"
   homepage "https://www.leisterpro.com/"
+
+  livecheck do
+    url "https://store.leisterpro.com/updates/reunion#{version.major}/appcast.xml"
+    strategy :sparkle do |item|
+      match = item.url.match(%r{/Reunion-(\d+(?:-\d+)*)-(\d+.*?)\.zip}i)
+      "#{match[1].tr("-", ".")},#{match[2]}"
+    end
+  end
 
   app "Reunion #{version.major}.app"
 end

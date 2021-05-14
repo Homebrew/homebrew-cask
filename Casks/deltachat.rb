@@ -1,13 +1,16 @@
 cask "deltachat" do
-  version "1.13.1"
-  sha256 "4d8caae65438917a9e4841155a131cd58a5e6bcd9787b8bb018165f2922d90a2"
+  version "1.15.5"
+  sha256 "573b115aaa8f196243a017913c9823812269f9824154259ae9bc6305cbe7f2ce"
 
-  # github.com/deltachat/deltachat-desktop/ was verified as official when first introduced to the cask
   url "https://download.delta.chat/desktop/v#{version}/DeltaChat-#{version}.dmg"
-  appcast "https://github.com/deltachat/deltachat-desktop/releases.atom"
   name "DeltaChat"
   desc "Chat via the e-mail server network"
   homepage "https://delta.chat/"
+
+  livecheck do
+    url "https://github.com/deltachat/deltachat-desktop"
+    strategy :github_latest
+  end
 
   app "DeltaChat.app"
 

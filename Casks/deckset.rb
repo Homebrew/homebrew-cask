@@ -1,11 +1,15 @@
 cask "deckset" do
-  version "2.0.18,2582"
-  sha256 "aa8d1044aa719b746c56a0e02d4f454033da41460fd2e347f497a609981118e5"
+  version "2.0.20,2595"
+  sha256 "21a5bec7d831e277a35d244ecb9e64b2cc171fee1e9d06f4943735e355ced3e3"
 
   url "https://dl.decksetapp.com/Deckset+#{version.before_comma}+(#{version.after_comma}).dmg"
-  appcast "https://dl.decksetapp.com/appcast.xml"
   name "Deckset"
   homepage "https://www.decksetapp.com/"
+
+  livecheck do
+    url "https://dl.decksetapp.com/appcast.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :sierra"
 

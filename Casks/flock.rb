@@ -1,13 +1,17 @@
 cask "flock" do
-  version "2.2.460"
-  sha256 "b31b843259089e6ca5a47c0bce5c723e5acfb1587885025e4978de9c0ed68bd2"
+  version "2.2.496"
+  sha256 "3b90407b5a83f215c072480d9be73daaade45337fa8c25fcade42e6dd6590fec"
 
-  # flock.co/ was verified as official when first introduced to the cask
-  url "https://updates.flock.co/fl_mac_electron/Flock-macOS-#{version}.dmg"
-  appcast "https://bingo.flock.co/mac_electron.php"
+  url "https://updates.flock.co/fl_mac_electron/Flock-macOS-#{version}.dmg",
+      verified: "flock.co/"
   name "Flock"
   desc "Business messaging and team collaboration app"
   homepage "https://flock.com/"
+
+  livecheck do
+    url "https://bingo.flock.co/dl.php?client=mac"
+    strategy :header_match
+  end
 
   app "Flock.app"
 end

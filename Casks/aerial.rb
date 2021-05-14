@@ -1,9 +1,8 @@
 cask "aerial" do
-  version "2.1.1"
-  sha256 "b3846e02d66720c14e391dbe2d366cf7be3b05e8ee9f7952359f6e3691efc0ae"
+  version "2.3.2"
+  sha256 "34fdbd5ec7ca087e3bea72c421947f38e43b0f62992caa532157c29b0f3e9ff1"
 
   url "https://github.com/JohnCoates/Aerial/releases/download/v#{version}/Aerial.saver.zip"
-  appcast "https://github.com/JohnCoates/Aerial/releases.atom"
   name "Aerial Screensaver"
   homepage "https://github.com/JohnCoates/Aerial"
 

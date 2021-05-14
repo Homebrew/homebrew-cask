@@ -10,26 +10,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Rebase Pull Request
-        uses: peter-evans/rebase@36b58e88d1c56f26a0865ea5c90465a84e18e85b
+        uses: peter-evans/rebase@0a6189742f338835c080791a9bc0d3b140475c1e
         id: rebase
         with:
-          token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+          token: ${{ secrets.HOMEBREW_CASK_REBASE_TOKEN }}
           head: ${{ github.event.client_payload.pull_request.head.label }}
 
       - name: Add 👍 Reaction
         if: always() && steps.rebase.outputs.rebased-count == 1
-        uses: peter-evans/create-or-update-comment@93b7c58cfab6e4355cd3027f73c7c731437e85fa
+        uses: peter-evans/create-or-update-comment@a35cf36e5301d70b76f316e867e7788a55a31dae
         with:
-          token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+          token: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
           repository: ${{ github.event.client_payload.github.payload.repository.full_name }}
           comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
           reaction-type: '+1'
 
       - name: Add 👎 Reaction
         if: always() && steps.rebase.outputs.rebased-count != 1
-        uses: peter-evans/create-or-update-comment@93b7c58cfab6e4355cd3027f73c7c731437e85fa
+        uses: peter-evans/create-or-update-comment@a35cf36e5301d70b76f316e867e7788a55a31dae
         with:
-          token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+          token: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
           repository: ${{ github.event.client_payload.github.payload.repository.full_name }}
           comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
           reaction-type: '-1'

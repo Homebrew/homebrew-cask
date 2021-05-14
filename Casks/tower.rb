@@ -1,13 +1,20 @@
 cask "tower" do
-  version "6.0,256:90c50e48"
-  sha256 "492da21c4f46e95b68bc768bda1fcd01ba00ea9ccd604680cb333b2d000346ba"
+  version "6.4,278:f34dfbdd"
+  sha256 "bd210ceac842f7516d005d1d5011df9cd3bece630918a40af6ea619d36a3c0d5"
 
-  # fournova-app-updates.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://fournova-app-updates.s3.amazonaws.com/apps/tower3-mac/#{version.after_comma.before_colon}-#{version.after_colon}/Tower-#{version.before_comma}-#{version.after_comma.before_colon}.zip"
-  appcast "https://updates.fournova.com/updates/tower3-mac/stable"
+  url "https://fournova-app-updates.s3.amazonaws.com/apps/tower3-mac/#{version.after_comma.before_colon}-#{version.after_colon}/Tower-#{version.before_comma}-#{version.after_comma.before_colon}.zip",
+      verified: "fournova-app-updates.s3.amazonaws.com/"
   name "Tower"
   desc "Git client focusing on power and productivity"
   homepage "https://www.git-tower.com/"
+
+  livecheck do
+    url "https://updates.fournova.com/updates/tower3-mac/stable"
+    strategy :page_match do |page|
+      match = page.match(%r{(\d+(?:\.\d+)*)-([a-z0-9]+)/Tower-(\d+(?:\.\d+)*)-(\d+(?:\.\d+)*)\.zip}i)
+      "#{match[3]},#{match[1]}:#{match[2]}"
+    end
+  end
 
   auto_updates true
 

@@ -1,12 +1,17 @@
 cask "remote-desktop-manager-free" do
-  version "2020.3.1.0"
-  sha256 "505dce3f9780223a26389fc313a588a56d45b545dcee3183f48b423cd0228917"
+  version "2021.1.3.0"
+  sha256 "695287cf5b3358c82cd8ad0782f4f48ef7868991a122d71df448eb4129e015dd"
 
-  # devolutions.net/ was verified as official when first introduced to the cask
-  url "https://cdn.devolutions.net/download/Mac/Devolutions.RemoteDesktopManager.Free.Mac.#{version}.dmg"
-  appcast "https://cdn.devolutions.net/download/Mac/RemoteDesktopManagerFree.xml"
+  url "https://cdn.devolutions.net/download/Mac/Devolutions.RemoteDesktopManager.Free.Mac.#{version}.dmg",
+      verified: "devolutions.net/"
   name "Remote Desktop Manager Free"
+  desc "Centralizes all remote connections on a single platform"
   homepage "https://mac.remotedesktopmanager.com/"
+
+  livecheck do
+    url "https://cdn.devolutions.net/download/Mac/RemoteDesktopManagerFree.xml"
+    strategy :sparkle
+  end
 
   app "Remote Desktop Manager Free.app"
 

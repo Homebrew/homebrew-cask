@@ -1,5 +1,5 @@
 cask "licensed" do
-  version :latest
+  version "1.0"
   sha256 :no_check
 
   url "https://amarsagoo.info/licensed/Licensed.dmg"

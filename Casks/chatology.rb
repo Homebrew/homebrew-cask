@@ -1,13 +1,22 @@
 cask "chatology" do
-  version "1.2.4"
-  sha256 "e5ad4c9716afb2b5c1ac56f5b103ff8b8919de0cdda0627abd141c07368df7ad"
+  version "1.2.5"
+  sha256 "c47e8af749553e2c3b02b390b1d4d30fc2dec32cd7e01f85bc1699b770039a8a"
 
-  # d60ism0l33mmr.cloudfront.net/ was verified as official when first introduced to the cask
-  url "https://d60ism0l33mmr.cloudfront.net/Chatology_#{version}.zip"
-  appcast "https://flexibits.com/chatology/appcast.php"
+  url "https://cdn.flexibits.com/Chatology_#{version}.zip"
   name "Chatology"
   desc "Chat manager and message search software"
   homepage "https://flexibits.com/chatology"
 
+  livecheck do
+    url "https://flexibits.com/chatology/appcast.php"
+    strategy :sparkle, &:short_version
+  end
+
+  depends_on macos: ">= :el_capitan"
+
   app "Chatology.app"
+
+  caveats do
+    discontinued
+  end
 end

@@ -1,15 +1,19 @@
 cask "amazon-workdocs" do
-  version "1.2.203.37"
-  sha256 "c97c669e2982009115e51602b7ad801b4801d0b44df9283c7492f6b1405fc5d0"
+  version "1.2.200340.0,99"
+  sha256 "3864f95771d3a272a2e95577062d52b2f717b56d77710bc0ce77c6a50bc7f7b2"
 
-  # d28gdqadgmua23.cloudfront.net/ was verified as official when first introduced to the cask
-  url "https://d28gdqadgmua23.cloudfront.net/mac/Amazon%20WorkDocs.pkg"
-  appcast "https://d28gdqadgmua23.cloudfront.net/mac/appcast/appcast-workdocs-prod.xml"
+  url "https://d28gdqadgmua23.cloudfront.net/mac/version/#{version.before_comma}/#{version.after_comma}/Amazon%20WorkDocs.app.zip",
+      verified: "d28gdqadgmua23.cloudfront.net/"
   name "Amazon WorkDocs"
   homepage "https://aws.amazon.com/workdocs/"
 
-  pkg "Amazon WorkDocs.pkg"
+  livecheck do
+    url "https://d28gdqadgmua23.cloudfront.net/mac/appcast/appcast-workdocs-prod.xml"
+    strategy :sparkle do |item|
+      match = item.url.match(%r{/(\d+(?:\.\d+)*)/(\d+)/Amazon WorkDocs\.app\.zip}i)
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
-  uninstall signal:  ["TERM", "com.amazon.AmazonWorkDocs"],
-            pkgutil: "com.amazon.aws.AmazonWorkDocs"
+  app "Amazon WorkDocs.app"
 end

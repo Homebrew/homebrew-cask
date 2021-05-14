@@ -1,9 +1,9 @@
 cask "knime" do
-  version "4.2.3"
-  sha256 "2d89569a5d8d6008bef0791ba0e1d4bc40ad7bd8a08aedea24ff05087d92b908"
+  version "4.3.2"
+  sha256 "54559ae2c8dc86169b45c3c4ded2e384baecae18e573a22f9dfdb9de378e65c8"
 
-  # download.knime.org/analytics-platform/macosx/ was verified as official when first introduced to the cask
-  url "https://download.knime.org/analytics-platform/macosx/knime_#{version}.app.macosx.cocoa.x86_64.dmg"
+  url "https://download.knime.org/analytics-platform/macosx/knime_#{version}.app.macosx.cocoa.x86_64.dmg",
+      verified: "download.knime.org/analytics-platform/macosx/"
   appcast "https://www.knime.com/downloads/download-knime"
   name "KNIME Analytics Platform"
   desc "Software to create and productionize data science"

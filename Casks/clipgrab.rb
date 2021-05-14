@@ -1,12 +1,17 @@
 cask "clipgrab" do
-  version "3.8.15"
-  sha256 "7820ef32c340bcfa0e26f74b5b8bc7a573b011cf86fbdccb79c892ebd3e0bda4"
+  version "3.9.6"
+  sha256 "45282684f1f8e957a98a4023467bc693153368618935698e7b4f2a9f44773495"
 
   url "https://download.clipgrab.org/ClipGrab-#{version}.dmg"
-  appcast "https://clipgrab.org/"
   name "ClipGrab"
   desc "Downloads videos and audio from websites"
   homepage "https://clipgrab.org/"
+
+  livecheck do
+    url "https://clipgrab.org/"
+    strategy :page_match
+    regex(%r{href=.*?/ClipGrab-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   depends_on macos: ">= :sierra"
 

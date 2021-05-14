@@ -1,9 +1,8 @@
 cask "ripme" do
-  version "1.7.93"
-  sha256 "357639535c112ca857117151321141cb08ad313021079d522c2c5d15ee799998"
+  version "1.7.95"
+  sha256 "008201e406f401b27248277a4188f26203bb9da0170872de900125f8a6c8b558"
 
   url "https://github.com/RipMeApp/ripme/releases/download/#{version}/ripme.jar"
-  appcast "https://github.com/RipMeApp/ripme/releases.atom"
   name "RipMe"
   desc "Album ripper for various websites"
   homepage "https://github.com/RipMeApp/ripme"

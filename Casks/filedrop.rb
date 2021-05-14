@@ -1,9 +1,9 @@
 cask "filedrop" do
-  version :latest
+  version "1.1.5"
   sha256 :no_check
 
-  # commondatastorage.googleapis.com/filedropme/ was verified as official when first introduced to the cask
-  url "https://commondatastorage.googleapis.com/filedropme/Filedrop.dmg"
+  url "https://commondatastorage.googleapis.com/filedropme/Filedrop.dmg",
+      verified: "commondatastorage.googleapis.com/filedropme/"
   name "Filedrop"
   desc "File sharing software"
   homepage "http://www.filedropme.com/"

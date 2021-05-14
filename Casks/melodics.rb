@@ -1,11 +1,18 @@
 cask "melodics" do
-  version "2.1.5305"
-  sha256 "b51a78eaebf395d7993abdb9705e98811bfdc169dfec482cb269212321c27f35"
+  version "2.1.6059"
+  sha256 :no_check # required as upstream package is updated in-place
 
   url "https://web-cdn.melodics.com/download/MelodicsV#{version.major}.dmg"
-  appcast "https://web-cdn.melodics.com/download/osxupdatescastv#{version.major}.xml"
   name "Melodics"
+  desc "Helps you learn to play your instrument"
   homepage "https://melodics.com/"
+
+  livecheck do
+    url "https://web-cdn.melodics.com/download/osxupdatescastv#{version.major}.xml"
+    strategy :sparkle
+  end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Melodics.app"
 end

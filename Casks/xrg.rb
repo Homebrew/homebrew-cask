@@ -1,11 +1,16 @@
 cask "xrg" do
-  version "2.8.2"
-  sha256 "b55ce935ed9843cd318fab490ca24249fb1d593aa3ced2484ab333e3560cedb8"
+  version "3.0.0"
+  sha256 "9e3a70c7c5ab58b5e891a4c0766e02be4f4cfc1b6c070b7c24c5e3ee6bb8512e"
 
   url "https://download.gauchosoft.com/xrg/XRG-release-#{version}.zip"
-  appcast "https://gauchosoft.com/Products/XRG/"
   name "XRG"
   homepage "https://gauchosoft.com/Products/XRG/"
+
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/XRG-release-(\d+(?:\.\d+)*)\.zip}i)
+  end
 
   app "XRG.app"
 

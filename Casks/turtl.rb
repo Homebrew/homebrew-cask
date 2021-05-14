@@ -1,12 +1,17 @@
 cask "turtl" do
-  version "0.7.2.6"
-  sha256 "8b6c71eb35b5a369d8a54417966a7cf4555930254ecea594564494e920fea95f"
+  version "0.7.2.6-sqlite-fix"
+  sha256 "90085ffb3b97a3c5e6d01313fda6df4f74c7fe1b61b7c1388e54554db79c9a1a"
 
-  # github.com/turtl/desktop/ was verified as official when first introduced to the cask
-  url "https://github.com/turtl/desktop/releases/download/v#{version}-link-notes/turtl-#{version}-link-notes-osx.zip"
-  appcast "https://github.com/turtl/desktop/releases.atom"
+  url "https://github.com/turtl/desktop/releases/download/v#{version}/turtl-osx.zip",
+      verified: "github.com/turtl/desktop/"
   name "turtl"
   homepage "https://turtlapp.com/"
+
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^v?(\d+(?:\.\d+)*.*)$/i)
+  end
 
   app "Turtl.app"
 end

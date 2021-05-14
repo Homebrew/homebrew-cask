@@ -1,11 +1,16 @@
 cask "kugoumusic" do
-  version "3.0.2"
-  sha256 "cb6ddcb3284c252a81cdf287a203fe126fbc3d62ae82528f6dbe84954bcba556"
+  version "3.0.4"
+  sha256 "bbfb1fb9fc2f16eca871749b6471f282e4e47da8053facf05b3d7f9df9dfed80"
 
   url "http://downmini.kugou.com/mac/Kugou_V#{version}.dmg"
-  appcast "http://download.kugou.com/mac.html"
   name "Kugou Music"
+  desc "Digital music service"
   homepage "https://www.kugou.com/"
+
+  livecheck do
+    url "https://download.kugou.com/download/kugou_mac"
+    strategy :header_match
+  end
 
   app "KugouMusic.app"
 end

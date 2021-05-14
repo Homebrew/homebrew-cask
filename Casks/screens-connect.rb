@@ -1,13 +1,16 @@
 cask "screens-connect" do
-  version "4.9.2,20577:1572284765"
-  sha256 "008d543ff93fbe393cae9f55529fcd5e9ffeb241ac0f67eb7f4e1fc70a6d69e5"
+  version "4.9.11,21630"
+  sha256 "0cbda1d6dad262486bfc646e56d60b77e0a64a61accf4c81d29e4c09fd21c037"
 
-  # dl.devmate.com/com.edovia.Screens-Connect/ was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.edovia.Screens-Connect/#{version.after_comma.before_colon}/#{version.after_colon}/ScreensConnect-#{version.after_comma.before_colon}.zip"
-  appcast "https://updates.devmate.com/com.edovia.Screens-Connect.xml"
+  url "https://updates.edovia.com/com.edovia.screens.connect.mac/ScreensConnect_#{version.before_comma}b#{version.after_comma}.zip"
   name "Screens Connect"
   desc "Remote desktop software"
-  homepage "https://screensconnect.com/en/"
+  homepage "https://edovia.com/en/screens-connect/"
+
+  livecheck do
+    url "https://updates.edovia.com/com.edovia.screens.connect.mac/appcast.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :el_capitan"
 

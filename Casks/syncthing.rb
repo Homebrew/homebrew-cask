@@ -1,16 +1,21 @@
 cask "syncthing" do
-  version "1.10.0-1"
-  sha256 "071b727eb30338b5b6b2687d2733a95a3bdaaa152f928217cdc56e3bb641651c"
+  version "1.16.1-2"
+  sha256 "0854398b6abca352cb036ca73dfe68fc8e7ca5e782ba85d9a7c967aaa5aed2ef"
 
-  # github.com/syncthing/syncthing-macos/ was verified as official when first introduced to the cask
-  url "https://github.com/syncthing/syncthing-macos/releases/download/v#{version}/Syncthing-#{version}.dmg"
-  appcast "https://github.com/syncthing/syncthing-macos/releases.atom"
+  url "https://github.com/syncthing/syncthing-macos/releases/download/v#{version}/Syncthing-#{version}.dmg",
+      verified: "github.com/syncthing/syncthing-macos/"
   name "Syncthing"
   desc "Real time file synchronization software"
   homepage "https://syncthing.net/"
 
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^v?(\d+(?:\.\d+)*(?:-\d+)?)$/i)
+  end
+
   auto_updates true
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :sierra"
 
   app "Syncthing.app"
 

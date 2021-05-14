@@ -47,7 +47,7 @@ tmp_download_dir = File.join(tmp_cache_dir, "downloads")
 
 ENV["HOMEBREW_CACHE"] = tmp_cache_dir
 File.write(local_file, URI(file_raw_url).read)
-system("brew", "cask", "fetch", local_file)
+system("brew", "fetch", "--cask", local_file)
 
 downloaded_file = File.join(tmp_download_dir, Dir.children(tmp_download_dir).first)
 downloaded_file_ext = File.extname(downloaded_file)

@@ -1,13 +1,19 @@
 cask "muzzle" do
-  version "1.5,304"
-  sha256 "2f3c3c839787408d5b991651b5ba25323a12904b4d155e8074f68e7afea3f845"
+  version "1.7,405"
+  sha256 "d3f681c5a6e7e13a65dc4e15754d4ec0930d32cdb71637f13859c51a30b4deab"
 
   url "https://muzzleapp.com/binaries/muzzle-#{version.after_comma}.zip"
-  appcast "https://muzzleapp.com/api/1/appcast.xml"
   name "Muzzle"
+  desc "Silence embarrassing notifications while screensharing"
   homepage "https://muzzleapp.com/"
 
-  depends_on macos: ">= :el_capitan"
+  livecheck do
+    url "https://muzzleapp.com/api/1/appcast.xml"
+    strategy :sparkle
+  end
+
+  auto_updates true
+  depends_on macos: ">= :mojave"
 
   app "Muzzle.app"
 

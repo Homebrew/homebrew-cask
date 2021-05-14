@@ -1,15 +1,25 @@
 cask "strawberry" do
-  version "0.8.3"
-  sha256 "0be49d38e29b7bd4bcb3f689d0e0989f64a97cf0178f4bfbac7a2c94cf4c9ff7"
+  version "0.9.3"
 
-  # github.com/strawberrymusicplayer/strawberry/ was verified as official when first introduced to the cask
-  url "https://github.com/strawberrymusicplayer/strawberry/releases/download/#{version}/strawberry-#{version}.dmg"
-  appcast "https://github.com/strawberrymusicplayer/strawberry/releases.atom"
+  if MacOS.version <= :mojave
+    sha256 "7129b83932c99cba9195602a53c3a3dd1ff8eeee0cfd6494f4f41fc08f43bfc3"
+    url "https://github.com/strawberrymusicplayer/strawberry/releases/download/#{version}/strawberry-#{version}-mojave-x86_64.dmg",
+        verified: "github.com/strawberrymusicplayer/strawberry/"
+  elsif MacOS.version <= :catalina
+    sha256 "2f62dbca3a59edbde801b20d55392d4f910c7063612e69846ab62f872e9d71ad"
+    url "https://github.com/strawberrymusicplayer/strawberry/releases/download/#{version}/strawberry-#{version}-catalina-x86_64.dmg",
+        verified: "github.com/strawberrymusicplayer/strawberry/"
+  else
+    sha256 "60b12797bfc513b1c6a3f54a4d1e207b3b8122e31aa80ea789a17a1002c86174"
+    url "https://github.com/strawberrymusicplayer/strawberry/releases/download/#{version}/strawberry-#{version}-bigsur-x86_64.dmg",
+        verified: "github.com/strawberrymusicplayer/strawberry/"
+  end
+
   name "Strawberry"
   desc "Music player and music collection organizer"
   homepage "https://www.strawberrymusicplayer.org/"
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :mojave"
 
   app "strawberry.app"
 

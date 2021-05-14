@@ -1,13 +1,17 @@
 cask "ccmenu" do
-  version "14.0"
-  sha256 "6e8c88c0de1db8206274109011db37b7ce53d63fdbed11de0057f967d7959976"
+  version "15.0"
+  sha256 "4ee3c5f65828c30c5cbe147064396d387a175042601076adf12b6c1a99792c1d"
 
-  # github.com/erikdoe/ccmenu/ was verified as official when first introduced to the cask
-  url "https://github.com/erikdoe/ccmenu/releases/download/v#{version}/CCMenu.app.zip"
-  appcast "https://github.com/erikdoe/ccmenu/releases.atom"
+  url "https://github.com/erikdoe/ccmenu/releases/download/v#{version}/CCMenu.app.zip",
+      verified: "github.com/erikdoe/ccmenu/"
   name "CCMenu"
   desc "Application to monitor continuous integration servers"
-  homepage "http://ccmenu.org/"
+  homepage "https://ccmenu.org/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "CCMenu.app"
 end

@@ -1,10 +1,11 @@
 cask "master-pdf-editor" do
-  version "5.6.49"
-  sha256 "9ee3405be69a78705eacabc9fb8e1281d32dceaa06613999839e86ce21899d63"
+  version "5.7.53"
+  sha256 :no_check
 
   url "https://code-industry.net/public/MasterPDFEditor.dmg"
   appcast "https://code-industry.net/get-masterpdfeditor/"
   name "Master PDF Editor"
+  desc "PDF editor"
   homepage "https://code-industry.net/masterpdfeditor/"
 
   auto_updates true

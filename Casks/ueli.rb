@@ -1,10 +1,9 @@
 cask "ueli" do
-  version "8.10.0"
-  sha256 "38e9b6f4558ba32350cd1bdf516e5e70fb04d06f2365420531781c1b09793c58"
+  version "8.12.0"
+  sha256 "8b8f8089771d19c7f8e166c2866103e128039ff166d409cbfacfb39294d58670"
 
-  # github.com/oliverschwendener/ueli/ was verified as official when first introduced to the cask
-  url "https://github.com/oliverschwendener/ueli/releases/download/v#{version}/ueli-#{version}.dmg"
-  appcast "https://github.com/oliverschwendener/ueli/releases.atom"
+  url "https://github.com/oliverschwendener/ueli/releases/download/v#{version}/ueli-#{version}.dmg",
+      verified: "github.com/oliverschwendener/ueli/"
   name "Ueli"
   desc "Keystroke launcher"
   homepage "https://ueli.app/"

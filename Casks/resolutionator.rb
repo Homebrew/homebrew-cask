@@ -1,11 +1,15 @@
 cask "resolutionator" do
-  version "1.1.2"
-  sha256 "c0098c95e6aa8d828e14342393f51800a19c6807d25d36dc232a6f3d75f56216"
+  version "2.0.1,115"
+  sha256 "7200f76f043426cf5d03e83465265b1b5ad1906b08b224373b642f978fe61991"
 
-  url "https://manytricks.com/download/_do_not_hotlink_/resolutionator#{version.no_dots}.dmg"
-  appcast "https://manytricks.com/resolutionator/appcast"
+  url "https://manytricks.com/download/_do_not_hotlink_/resolutionator#{version.before_comma.no_dots}.dmg"
   name "Resolutionator"
   homepage "https://manytricks.com/resolutionator/"
+
+  livecheck do
+    url "https://manytricks.com/resolutionator/appcast/"
+    strategy :sparkle
+  end
 
   auto_updates true
 

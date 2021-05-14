@@ -1,11 +1,20 @@
 cask "mps" do
-  version "2020.2.2,202.7660.1015"
-  sha256 "3a4327c976b3c5a058fe857dde4e03b0c58b4a854ea55d063dfdf2fe8199f7bc"
+  version "2020.3.3,203.7717.1351"
+  sha256 "33e7c996d9a37eb48d9c13328a46cf5f4b209a44829ac77ec54c553f78c5a0d3"
 
-  url "https://download.jetbrains.com/mps/#{version.before_comma.major_minor}/MPS-#{version.before_comma}-macos.dmg"
-  appcast "https://data.services.jetbrains.com/products/releases?code=MPS&latest=true&type=release"
+  url "https://download.jetbrains.com/mps/#{version.major_minor}/MPS-#{version.before_comma}-macos.dmg"
   name "JetBrains MPS"
+  desc "Create your own domain-specific language"
   homepage "https://www.jetbrains.com/mps/"
+
+  livecheck do
+    url "https://data.services.jetbrains.com/products/releases?code=MPS&latest=true&type=release"
+    strategy :page_match do |page|
+      version = page.match(/"version":"(\d+(?:\.\d+)*)/i)
+      build = page.match(/"build":"(\d+(?:\.\d+)*)/i)
+      "#{version[1]},#{build[1]}"
+    end
+  end
 
   auto_updates true
 

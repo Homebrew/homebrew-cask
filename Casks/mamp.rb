@@ -1,12 +1,17 @@
 cask "mamp" do
-  version "6.0.1"
-  sha256 "2b924e3d5a15d0f7e69a12e9c3aad3db1299206d3aab9a70f08ee2288b7aa37d"
+  version "6.3"
+  sha256 "49cae98aee1a95d56a42750e8c76a43a5a3e227cbebf5f6d09fd94cdb095a3f9"
 
   url "https://downloads.mamp.info/MAMP-PRO/releases/#{version}/MAMP_MAMP_PRO_#{version}.pkg"
-  appcast "https://www.mamp.info/en/downloads/"
   name "MAMP"
   desc "Web development solution with Apache, Nginx, PHP & MySQL"
   homepage "https://www.mamp.info/"
+
+  livecheck do
+    url "https://www.mamp.info/en/downloads/"
+    strategy :page_match
+    regex(%r{href=.*?/MAMP_MAMP_PRO_(\d+(?:\.\d+)*)\.pkg}i)
+  end
 
   auto_updates true
   depends_on macos: ">= :yosemite"

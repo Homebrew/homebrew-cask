@@ -1,13 +1,17 @@
 cask "unite" do
-  version "3.1,WiusgeYwTKaK9HQ7XWkT"
-  sha256 "9a16c4fdcfbd63c301102fb024a9a2d47301eb63d24d52cd307c38bbbe2bb685"
+  version "4.1.0.1"
+  sha256 "554b2353dd28db494739a4c1dade75da1733f5329f68ef377bb3a42169219c13"
 
-  # paddle.s3.amazonaws.com/fulfillment_downloads/20398/576531/ was verified as official when first introduced to the cask
-  url "https://paddle.s3.amazonaws.com/fulfillment_downloads/20398/576531/#{version.after_comma}_Unite.zip"
-  appcast "https://drive.google.com/uc?export=download&id=1pPlm8G1yluV7ipcRh-2pmXP-nATWsjTK"
+  url "https://bzgdownloads.s3.amazonaws.com/Unite/Unite+#{version}.zip",
+      verified: "bzgdownloads.s3.amazonaws.com/Unite/"
   name "Unite"
   desc "Turn websites into apps"
   homepage "https://bzgapps.com/unite"
+
+  livecheck do
+    url "https://bzgdownloads.s3.amazonaws.com/Unite/App+Cast/Unite+#{version.major}+appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :high_sierra"

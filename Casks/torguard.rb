@@ -1,12 +1,20 @@
 cask "torguard" do
-  version "4.2.0"
-  sha256 "08eb7dd0723099c91ffc3062bf60dfebd0c3e4f3c1b41921d939a8ef28459792"
+  version "4.7.0"
+  sha256 "1917b6de15a6fd0026bc204c93edcedb69c962017136e497d98626fbecc88003"
 
-  # torguard.biz/ was verified as official when first introduced to the cask
-  url "https://updates.torguard.biz/Software/MacOSX/TorGuard-v#{version}.dmg"
-  appcast "https://updates.torguard.biz/Software/MacOSX/checksums.sha256"
+  url "https://updates.torguard.biz/Software/MacOSX/TorGuard-v#{version}.dmg",
+      verified: "torguard.biz/"
   name "TorGuard"
+  desc "VPN client"
   homepage "https://torguard.net/"
+
+  livecheck do
+    url "https://updates.torguard.biz/Software/MacOSX/checksums.sha256"
+    strategy :page_match
+    regex(/TorGuard-v(\d+(?:\.\d+)*)\.dmg/i)
+  end
+
+  depends_on macos: ">= :sierra"
 
   pkg "Install TorGuard.pkg"
 

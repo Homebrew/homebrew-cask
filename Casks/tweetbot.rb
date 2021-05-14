@@ -1,9 +1,9 @@
 cask "tweetbot" do
-  version "3.4.300,4"
-  sha256 "3c4baf3e7166cfea474f6100fd663fa8d2a54074ea7fe8701a8c2bd7200cb5cd"
+  version "3.5.300,4"
+  sha256 "d7501211b6d8dce67a9061b0a33b66c57b5fcda9ae171b1858a40e31df71afc7"
 
-  # tapbots.net/ was verified as official when first introduced to the cask
-  url "https://tapbots.net/tweetbot#{version.after_comma}/Tweetbot.#{version.before_comma.no_dots}.zip"
+  url "https://tapbots.net/tweetbot#{version.after_comma}/Tweetbot.#{version.before_comma.no_dots}.zip",
+      verified: "tapbots.net/"
   appcast "https://tapbots.net/tweetbot#{version.after_comma}/update.plist",
           must_contain: version.before_comma.no_dots
   name "Tweetbot"

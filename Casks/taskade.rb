@@ -1,12 +1,17 @@
 cask "taskade" do
-  version "3.2.5"
-  sha256 "94cafaa23d37eae195f0bc8fc1647fd8a4fdcccbf26631493d06a9d5c9236bb7"
+  version "3.3.6"
+  sha256 "e6e47f08de0af0e13f24b701afe03596829a6b836d72c53e26a113ecf3c61b57"
 
-  url "https://apps.taskade.com/updates/Taskade-#{version}-mac.zip"
-  appcast "https://www.taskade.com/downloads"
+  url "https://apps.taskade.com/updates/Taskade-#{version}-universal.dmg"
   name "Taskade"
   desc "Task manager for teams"
   homepage "https://www.taskade.com/"
+
+  livecheck do
+    url "https://www.taskade.com/downloads"
+    strategy :page_match
+    regex(%r{href=.*?/Taskade-(\d+(?:\.\d+)*)-universal\.dmg}i)
+  end
 
   app "Taskade.app"
 end

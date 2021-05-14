@@ -1,17 +1,22 @@
 cask "securesafe" do
-  version "2.8.0"
-  sha256 "1e193ae806896b304fc4ce4c62e1bb3b0c3db07650924f94b7baed7803f5e372"
+  version "2.10.0"
+  sha256 "4c09de831aaba8ceccc594f9ccaaf3cca5c1afaa84e87b55b7d4e4f8e824fe61"
 
-  # dswiss.com/userdata/downloads was verified as official when first introduced to the cask
-  url "https://www.dswiss.com/userdata/downloads/securesafe-#{version}.pkg"
-  appcast "https://www.securesafe.com/en/downloads/"
+  url "https://www.dswiss.com/userdata/downloads/securesafe-#{version}.pkg",
+      verified: "dswiss.com/userdata/downloads/"
   name "SecureSafe"
-  desc "Secure online storage"
+  desc "Highly secure online storage with password manager"
   homepage "https://www.securesafe.com/"
+
+  livecheck do
+    url "https://www.securesafe.com/en/downloads"
+    strategy :page_match
+    regex(/securesafe-(\d+(?:\.\d+)*)\.pkg/i)
+  end
 
   depends_on macos: ">= :sierra"
 
-  pkg "SecureSafe-#{version}.pkg"
+  pkg "securesafe-#{version}.pkg"
 
   uninstall pkgutil: [
     "com.dswiss.securesafe.pkg.sync",

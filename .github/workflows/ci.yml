@@ -5,7 +5,7 @@ on: pull_request
 env:
   HOMEBREW_DEVELOPER: 1
   HOMEBREW_NO_AUTO_UPDATE: 1
-  HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  HOMEBREW_GITHUB_API_TOKEN: ${{ github.token }}
 
 jobs:
   generate-matrix:
@@ -28,12 +28,13 @@ jobs:
       - name: Generate CI matrix
         id: generate-matrix
         run: |
+          brew tap homebrew/cask
           brew ruby -- "$(brew --repository homebrew/cask)/cmd/lib/generate-matrix.rb" "${{ github.event.pull_request.url }}"
 
   test:
     name: ${{ matrix.name }}
     needs: generate-matrix
-    runs-on: macos-latest
+    runs-on: ${{ matrix.runner }}
     strategy:
       matrix:
         include: ${{ fromJson(needs.generate-matrix.outputs.matrix) }}
@@ -52,7 +53,7 @@ jobs:
 
       - name: Clean up CI machine
         run: |
-          if ! brew cask ls visual-studio &>/dev/null; then
+          if ! brew list --cask visual-studio &>/dev/null; then
             if ! rm -r '/Applications/Visual Studio.app'; then
               echo '::warning::Removing Visual Studio is no longer necessary.'
             fi
@@ -73,11 +74,16 @@ jobs:
             echo '::warning::Removing `cocoapods` symlink is no longer necessary.'
           fi
 
-          if brew tap-info adoptopenjdk/openjdk; then
-            brew untap adoptopenjdk/openjdk
-          else
+          if ! rm /usr/local/bin/conda; then
+            echo '::warning::Removing `conda` symlink is no longer necessary.'
+          fi
+
+          if ! brew untap adoptopenjdk/openjdk; then
             echo '::warning::Untapping adoptopenjdk/openjdk is no longer necessary.'
           fi
+
+          brew unlink python && brew link --overwrite python
+        if: runner.os == 'macOS'
 
       # Workaround until the `cache` action uses the changes from
       # https://github.com/actions/toolkit/pull/580.
@@ -87,7 +93,7 @@ jobs:
           mkdir "${GITHUB_WORKSPACE}"
 
       - name: Cache Homebrew Gems
-        uses: actions/cache@v2
+        uses: actions/cache@v2.1.5
         with:
           path: ${{ steps.set-up-homebrew.outputs.gems-path }}
           key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
@@ -104,19 +110,31 @@ jobs:
         id: gems
         run: brew install-bundler-gems
 
-      - name: Run brew style ${{ matrix.cask.token || matrix.tap }}
-        run: brew style '${{ matrix.cask.path || matrix.tap }}'
+      - name: Run brew style ${{ matrix.tap }}
+        run: brew style '${{ matrix.tap }}'
         if: always() && steps.gems.outcome == 'success' && !matrix.cask
 
-      - name: Run brew cask audit ${{ matrix.cask.token || matrix.tap }}
+      - name: Run brew fetch --cask ${{ matrix.cask.token }}
+        id: fetch
         run: |
-          brew cask audit ${{ join(matrix.audit_args, ' ') }} '${{ matrix.cask.path || matrix.tap }}'
+          brew fetch --cask --retry --force '${{ matrix.cask.path }}'
         timeout-minutes: 30
-        if: always() && steps.gems.outcome == 'success' && !matrix.skip_audit
+        if: always() && steps.gems.outcome == 'success' && matrix.cask
+
+      - name: Run brew audit --cask${{ (matrix.cask && ' ') || ' --tap ' }}${{ matrix.cask.token || matrix.tap }}
+        id: audit
+        run: |
+          brew audit --cask ${{ join(matrix.audit_args, ' ') }}${{ (matrix.cask && ' ') || ' --tap ' }}'${{ matrix.cask.path || matrix.tap }}'
+        timeout-minutes: 30
+        if: >
+          always() && steps.gems.outcome == 'success' &&
+          (!matrix.cask || steps.fetch.outcome == 'success') &&
+          !matrix.skip_audit
 
       - name: Gather cask information
         id: info
         run: |
+          brew tap homebrew/cask-versions
           brew ruby <<'EOF'
             require 'cask/cask_loader'
             require 'cask/installer'
@@ -151,23 +169,23 @@ jobs:
             puts "::set-output name=formula_conflicts::#{JSON.generate(formula_conflicts)}"
             puts "::set-output name=formula_dependencies::#{JSON.generate(formula_dependencies)}"
           EOF
-        if: always() && steps.gems.outcome == 'success' && matrix.cask
+        if: always() && steps.fetch.outcome == 'success' && matrix.cask
 
       - name: Uninstall conflicting formulae
         run: |
-          brew uninstall ${{ join(fromJSON(steps.info.outputs.formula_conflicts), ' ') }}
+          brew uninstall --formula ${{ join(fromJSON(steps.info.outputs.formula_conflicts), ' ') }}
         if: always() && steps.info.outcome == 'success' && join(fromJSON(steps.info.outputs.formula_conflicts)) != ''
         timeout-minutes: 30
 
       - name: Uninstall conflicting casks
         run: |
-          brew cask uninstall ${{ join(fromJSON(steps.info.outputs.cask_conflicts), ' ') }}
+          brew uninstall --cask ${{ join(fromJSON(steps.info.outputs.cask_conflicts), ' ') }}
         if: always() && steps.info.outcome == 'success' && join(fromJSON(steps.info.outputs.cask_conflicts)) != ''
         timeout-minutes: 30
 
-      - name: Run brew cask zap ${{ matrix.cask.token }}
+      - name: Run brew uninstall --cask --zap ${{ matrix.cask.token }}
         run: |
-          brew cask zap '${{ matrix.cask.path }}'
+          brew uninstall --cask --zap '${{ matrix.cask.path }}'
         if: always() && steps.info.outcome == 'success' && fromJSON(steps.info.outputs.was_installed)
         timeout-minutes: 30
 
@@ -179,29 +197,31 @@ jobs:
           EOF
         if: always() && steps.info.outcome == 'success'
 
-      - name: Run brew cask install ${{ matrix.cask.token }}
+      - name: Run brew install --cask ${{ matrix.cask.token }}
         id: install
-        run: brew cask install '${{ matrix.cask.path }}'
+        run: brew install --cask '${{ matrix.cask.path }}'
         if: >
           always() && steps.info.outcome == 'success' &&
           fromJSON(steps.info.outputs.macos_requirement_satisfied) &&
           !matrix.skip_install
         timeout-minutes: 30
+        env:
+          HOMEBREW_DEBUG: 1
 
-      - name: Run brew cask uninstall ${{ matrix.cask.token }}
-        run: brew cask uninstall '${{ matrix.cask.path }}'
+      - name: Run brew uninstall --cask ${{ matrix.cask.token }}
+        run: brew uninstall --cask '${{ matrix.cask.path }}'
         if: always() && steps.install.outcome == 'success' && !fromJSON(steps.info.outputs.manual_installer)
         timeout-minutes: 30
 
       - name: Uninstall formula dependencies
         run: |
-          brew uninstall ${{ join(fromJSON(steps.info.outputs.formula_dependencies), ' ') }}
+          brew uninstall --formula ${{ join(fromJSON(steps.info.outputs.formula_dependencies), ' ') }}
         if: always() && steps.install.outcome == 'success' && join(fromJSON(steps.info.outputs.formula_dependencies)) != ''
         timeout-minutes: 30
 
       - name: Uninstall cask dependencies
         run: |
-          brew cask uninstall ${{ join(fromJSON(steps.info.outputs.cask_dependencies), ' ') }}
+          brew uninstall --cask ${{ join(fromJSON(steps.info.outputs.cask_dependencies), ' ') }}
         if: always() && steps.install.outcome == 'success' && join(fromJSON(steps.info.outputs.cask_dependencies)) != ''
         timeout-minutes: 30
 

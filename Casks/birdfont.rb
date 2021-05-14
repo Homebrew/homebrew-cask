@@ -1,22 +1,33 @@
 cask "birdfont" do
-  if MacOS.version <= :el_capitan
-    version "2.19.4"
-    sha256 "013d9c42c2252b57079453bd27e4c18dbbc09eda55563ff1516fd079c0499f76"
-  elsif MacOS.version <= :mojave
-    version "4.8.1"
-    sha256 "a970a24b48aeff5a93152ef46c6258920ab6884ca4192444aaf2cfcd894d6376"
+  if MacOS.version <= :mojave
+    version "4.16.0"
+    sha256 "756784d28d8bd3d8725fc83063ec1ce35ed139298d2ffce5d64c3c2d9899743f"
+  elsif MacOS.version <= :catalina
+    version "4.16.1"
+    sha256 "9fde3aeee0a32a8703ec3fb4258d870de1fb8b589843517fd8e7a2b3c86a8e01"
+
+    livecheck do
+      url "https://birdfont.org/purchase.php"
+      strategy :page_match
+      regex(%r{Mac\s*OS\s*10\.15.*?/birdfont-(\d+(?:\.\d+)*)-free\.dmg}i)
+    end
   else
-    version "4.8.0"
-    sha256 "d70ae1028772233f26a52075a0104328394114f7c2e2bc257ec4dede818f94df"
+    version "4.16.2"
+    sha256 "b9a0c40e67025ca76fbb2c5bdc597af7d8180d0eb1c59687b4bb90bbd8e6764e"
+
+    livecheck do
+      url "https://birdfont.org/purchase.php"
+      strategy :page_match
+      regex(%r{href=.*?/birdfont-(\d+(?:\.\d+)*)-free\.dmg}i)
+    end
   end
 
   url "https://birdfont.org/download/birdfont-#{version}-free.dmg"
-  appcast "https://birdfont.org/purchase.php"
   name "BirdFont"
   desc "Free font editor"
   homepage "https://birdfont.org/"
 
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :sierra"
 
   app "BirdFontNonCommercial.app"
 end

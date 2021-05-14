@@ -9,12 +9,20 @@ cask "macpilot" do
     sha256 "75fc421d51ebd172ebdf149400fbcd010cf1224529e2e7d3fdf1915e62757f64"
 
     url "https://www.koingosw.com/products/macpilot/download/old/macpilot_#{version.no_dots}_intel_for_1015.dmg"
+
+    livecheck do
+      skip "newer versions only available for Big Sur or higher"
+    end
   else
-    version "12.0"
-    sha256 "29e6a546f79393c515c2fbe3b1a170799aa7223f1efa1051e8948af5be7e91cb"
+    version "12.0.8"
+    sha256 :no_check
 
     url "https://www.koingosw.com/products/macpilot/download/macpilot.dmg"
-    appcast "https://www.koingosw.com/postback/versioncheck.php?appname=macpilot&type=sparkle"
+
+    livecheck do
+      url "https://www.koingosw.com/postback/versioncheck.php?appname=macpilot&type=sparkle"
+      strategy :sparkle
+    end
   end
 
   name "MacPilot"

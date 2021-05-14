@@ -1,11 +1,19 @@
 cask "pym-player" do
-  version "7.0.1,330"
-  sha256 "b9a22a37661c0c00591454e5c429ef42b11c8601ac95ad7f50d0e0bb8a7e0f65"
+  version "7.1.2,7B68"
+  sha256 "8768c330555bb95b8a6f6a384a9ee724f7349aa955ccf4ff9ef6faee57fc03df"
 
-  url "http://pym.uce.pl/download/pliki/PYMPlayer#{version.before_comma.no_dots}_#{version.after_comma}.dmg"
-  appcast "http://pym.uce.pl/pym-player/"
+  url "http://pym.uce.pl/download/pliki/PYMPlayer#{version.after_comma}.dmg"
   name "PYM Player"
+  desc "Media player that automatically searches for subtitles"
   homepage "http://pym.uce.pl/pym-player/"
+
+  livecheck do
+    url :homepage
+    strategy :page_match do |page|
+      match = page.match(/Wersja:\s*(\d+(?:\.\d+)*)\s*\((\d+B\d+)\)/i)
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
   app "PYM Player.app"
 end

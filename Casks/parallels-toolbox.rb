@@ -1,12 +1,16 @@
 cask "parallels-toolbox" do
-  version "4.1.0-3674"
-  sha256 "de16ca5e2feaa462dc4b0ebf97b8879be2472f864e337bcd9572994c8ebeb0ee"
+  version "4.5.0-3860"
+  sha256 "ac84fdb201250d67e4253bd76f991dd03a3c48d9b3520ef4508805cf79dc45da"
 
   url "https://download.parallels.com/toolbox/v#{version.major}/#{version}/ParallelsToolbox-#{version}.dmg"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.parallels.com/directdownload/toolbox/"
   name "Parallels Toolbox"
   desc "Bundle with over 30 tools"
   homepage "https://www.parallels.com/products/toolbox/"
+
+  livecheck do
+    url "https://www.parallels.com/directdownload/toolbox/"
+    strategy :header_match
+  end
 
   installer manual: "Install Parallels Toolbox.app"
 

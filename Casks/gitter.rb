@@ -3,9 +3,13 @@ cask "gitter" do
   sha256 "0ca1c0d52c342548afbea8d3501282a4ccf494058aa2e23af27e09198a7a30a4"
 
   url "https://update.gitter.im/osx/Gitter-#{version}.dmg"
-  appcast "https://update.gitter.im/osx/appcast.xml"
   name "Gitter"
   homepage "https://gitter.im/"
+
+  livecheck do
+    url "https://update.gitter.im/osx/appcast.xml"
+    strategy :sparkle
+  end
 
   app "Gitter.app"
 

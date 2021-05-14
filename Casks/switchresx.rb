@@ -1,14 +1,19 @@
 cask "switchresx" do
-  version "4.10.1"
-  sha256 "33b2bec0623f1edd83e32efa2ac1980f9d677211abdfd8a3d62289eb29abf20a"
+  version "4.11.1"
+  sha256 :no_check # required as upstream package is updated in-place
 
   url "https://www.madrau.com/data/switchresx/SwitchResX#{version.major}.zip"
-  appcast "https://www.madrau.com/SRXCurrentVersion#{version.major}"
   name "SwitchResX"
   desc "Controls screen display settings"
   homepage "https://www.madrau.com/"
 
-  prefpane "SwitchResX.app/Contents/Resources/SwitchResX.prefPane"
+  livecheck do
+    url "https://www.madrau.com/SRXCurrentVersion#{version.major}"
+    strategy :page_match
+    regex(/(\d+(?:\.\d+)*)/i)
+  end
+
+  prefpane "SwitchResX Installer.app/Contents/Resources/SwitchResX.prefPane"
 
   uninstall quit:   [
     "fr.madrau.switchresx.app",

@@ -1,12 +1,17 @@
 cask "openboard" do
-  version "1.5.4"
-  sha256 "dd5ce62ae2aaacb3279a17ec31e7708433d0b50c1cd6c21f68b71ef51dac4bbe"
+  version "1.6.1"
+  sha256 "203741c86d50a7ea63f36b9d9cc607d843fb7ee17729c46764f155f47e356b8b"
 
-  # github.com/OpenBoard-org/OpenBoard/ was verified as official when first introduced to the cask
-  url "https://github.com/OpenBoard-org/OpenBoard/releases/download/v#{version}/OpenBoard-#{version}-signed.dmg"
-  appcast "https://github.com/OpenBoard-org/OpenBoard/releases.atom"
+  url "https://github.com/OpenBoard-org/OpenBoard/releases/download/v#{version}/OpenBoard-#{version}.dmg",
+      verified: "github.com/OpenBoard-org/OpenBoard/"
   name "OpenBoard"
+  desc "Interactive whiteboard application"
   homepage "https://openboard.ch/index.en.html"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "OpenBoard.app"
 

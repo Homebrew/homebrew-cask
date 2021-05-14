@@ -3,7 +3,6 @@ cask "transmission-remote-gui" do
   sha256 "fe32f0cdd5c8f9777bace0eceb92d6b269a2b20210f4cc0552112861ddead759"
 
   url "https://github.com/transmission-remote-gui/transgui/releases/download/v#{version}/transgui-#{version}.dmg"
-  appcast "https://github.com/transmission-remote-gui/transgui/releases.atom"
   name "Transmission Remote GUI"
   homepage "https://github.com/transmission-remote-gui/transgui"
 

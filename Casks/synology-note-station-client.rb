@@ -1,11 +1,17 @@
 cask "synology-note-station-client" do
-  version "2.1.6-272"
-  sha256 "abf3f0add609bb7eb4ed36e180a140f74cda62004cfc996f785a2c45e09fc360"
+  version "2.2.1-553"
+  sha256 "ea6f5d3a670bd6c917c0387b1287a32683300fb1ef558ad0cf5159d394782670"
 
-  url "https://global.download.synology.com/download/Tools/NoteStationClient/#{version}/Mac/x86_64/synology-note-station-client-#{version}-mac-x64.dmg"
-  appcast "https://archive.synology.com/download/Tools/NoteStationClient/"
+  url "https://global.download.synology.com/download/Utility/NoteStationClient/#{version}/Mac/x86_64/synology-note-station-client-#{version}-mac-x64.dmg"
   name "Synology Note Station Client"
+  desc "Write, view, manage and share content-rich notes"
   homepage "https://www.synology.com/en-us/dsm/packages/NoteStation"
+
+  livecheck do
+    url "https://www.synology.com/en-us/releaseNote/NoteStationClient"
+    strategy :page_match
+    regex(/Version:\s*(\d+(?:\.\d+)*-\d+)/i)
+  end
 
   app "Synology Note Station Client.app"
 end

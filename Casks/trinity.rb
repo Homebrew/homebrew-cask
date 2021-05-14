@@ -1,12 +1,17 @@
 cask "trinity" do
-  version "1.6.1"
-  sha256 "1f4c7b31889899472b220a5e986d183efba04e129643ca9e75405fd1e241050e"
+  version "1.6.2"
+  sha256 "c37926a9612e8a8360490b6b924b1a2922a4374377e428f24b985f45de66ad68"
 
-  # github.com/iotaledger/trinity-wallet/ was verified as official when first introduced to the cask
-  url "https://github.com/iotaledger/trinity-wallet/releases/download/desktop-#{version}/trinity-desktop-#{version}.dmg"
-  appcast "https://github.com/iotaledger/trinity-wallet/releases.atom"
+  url "https://github.com/iotaledger/trinity-wallet/releases/download/desktop-#{version}/trinity-desktop-#{version}.dmg",
+      verified: "github.com/iotaledger/trinity-wallet/"
   name "IOTA Trinity Wallet"
+  desc "Cryptocurrency wallet"
   homepage "https://trinity.iota.org/"
+
+  livecheck do
+    url :url
+    regex(/^desktop-(\d+(?:\.\d+)*)$/i)
+  end
 
   app "Trinity.app"
 
@@ -19,4 +24,8 @@ cask "trinity" do
     "~/Library/Preferences/org.iota.trinity.plist",
     "~/Library/Saved Application State/org.iota.trinity.savedState",
   ]
+
+  caveats do
+    discontinued
+  end
 end

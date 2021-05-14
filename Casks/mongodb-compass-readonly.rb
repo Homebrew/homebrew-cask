@@ -1,11 +1,16 @@
 cask "mongodb-compass-readonly" do
-  version "1.23.0"
-  sha256 "06ac55c6ce539f57854880eb7f4ad257d5d673365a487d4256f116e78a2d5fb0"
+  version "1.26.1"
+  sha256 "922c4d72d7261d18a7a6fad646ca61964ae33fadf4404f3b326513f449f71306"
 
   url "https://downloads.mongodb.com/compass/mongodb-compass-readonly-#{version}-darwin-x64.dmg"
-  appcast "https://www.mongodb.com/try/download/compass"
   name "MongoDB Compass Readonly"
+  desc "Explore and manipulate your MongoDB data"
   homepage "https://www.mongodb.com/products/compass"
+
+  livecheck do
+    url "https://info-mongodb-com.s3.amazonaws.com/com-download-center/compass.json"
+    regex(/"version"\s*:\s*"(\d+(?:\.\d+)+)\s*\(Readonly/i)
+  end
 
   app "MongoDB Compass Readonly.app"
 end

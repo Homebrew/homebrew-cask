@@ -1,11 +1,15 @@
 cask "shapes" do
-  version "4.9"
+  version "4.9,4908"
   sha256 "9b48bf8bb1d224b8ee85ee3f0746f66aa436544eb4ed6d0ac6bfd5264bb4119c"
 
-  url "http://shapesapp.com/dist/Shapes_#{version}.zip"
-  appcast "http://shapesapp.com/appcast/shapes#{version.major}.rss"
+  url "https://shapesapp.com/dist/Shapes_#{version.before_comma}.zip"
   name "Shapes"
-  homepage "http://shapesapp.com/"
+  homepage "https://shapesapp.com/"
+
+  livecheck do
+    url "https://shapesapp.com/appcast/shapes#{version.major}.rss"
+    strategy :sparkle
+  end
 
   app "Shapes.app"
 end

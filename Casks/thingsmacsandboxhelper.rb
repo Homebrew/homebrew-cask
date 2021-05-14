@@ -1,13 +1,18 @@
 cask "thingsmacsandboxhelper" do
-  version "3.22"
-  sha256 "513e8a1aac1950a769b69f434655fa60e5110590e745aad4f34da93ff9aa59c8"
+  version "3.26"
+  sha256 "29e74de692f15e2c1da63c425e3f91637ced39a361457bcb96d1457ea5083b25"
 
-  # culturedcode.cachefly.net/ was verified as official when first introduced to the cask
-  url "https://culturedcode.cachefly.net/things/thingssandboxhelper/#{version}/ThingsHelper.zip"
-  appcast "https://culturedcode.com/things/mac/help/things-sandboxing-helper-things3/"
-  name "ThingsMacSandboxHelper"
+  url "https://culturedcode.cachefly.net/things/thingssandboxhelper/#{version}/ThingsHelper.zip",
+      verified: "culturedcode.cachefly.net/"
+  name "Things Helper"
   desc "Helper application for Things"
   homepage "https://culturedcode.com/things/mac/help/things-sandboxing-helper-things#{version.major}/"
+
+  livecheck do
+    url "https://culturedcode.com/things/mac/help/things-sandboxing-helper-things3/"
+    strategy :page_match
+    regex(%r{href=.*?/(\d+(?:\.\d+)*)/ThingsHelper\.zip}i)
+  end
 
   app "ThingsMacSandboxHelper.app"
 end

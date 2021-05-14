@@ -1,11 +1,17 @@
 cask "gitblade" do
-  version "1.0.6"
-  sha256 "cc759c3242e3ea26aea46b778bbcd7f2ca7db1ead5895f16db7e66a39d05fc03"
+  version "1.0.8"
+  sha256 "51b261ee679048c2799a66439d8599d1ec5fa1592713993e85fa641eefeab274"
 
   url "https://gitblade.com/dl/gitblade-#{version}-darwin-x64.dmg"
-  appcast "https://gitblade.com/releases"
   name "GitBlade"
+  desc "Graphical client for Git"
   homepage "https://gitblade.com/"
+
+  livecheck do
+    url "https://gitblade.com/#download"
+    strategy :page_match
+    regex(%r{href=.*?/gitblade-(\d+(?:\.\d+)*)-darwin-x64\.dmg}i)
+  end
 
   app "GitBlade.app"
 end

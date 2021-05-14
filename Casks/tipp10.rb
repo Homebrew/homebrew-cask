@@ -1,5 +1,5 @@
 cask "tipp10" do
-  # note: "10" is not a version number, but an intrinsic part of the product name
+  # NOTE: "10" is not a version number, but an intrinsic part of the product name
   version "2.1.0"
   sha256 "023f9545b78a7ca35eea3b23597b6380a4f4d42cc75ace72dcadf645be9edb93"
 
@@ -9,5 +9,11 @@ cask "tipp10" do
   desc "Free touch typing tutor"
   homepage "https://www.tipp10.com/"
 
+  depends_on macos: "<= :mojave"
+
   app "TIPP10.app"
+
+  caveats do
+    discontinued
+  end
 end

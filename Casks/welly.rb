@@ -1,9 +1,8 @@
 cask "welly" do
-  version "3.1.1.1"
-  sha256 "f17aa74d8668d02ff7c6eee81ae7e0c06d76a51d4aa50624ffe757c95f498ecf"
+  version "3.1.2"
+  sha256 "ac1ffe9e5371da8d413bd937bdb27b828c58b7c8ea12556d473ea960096513be"
 
   url "https://github.com/clyang/welly/releases/download/#{version}/Welly.v#{version}.zip"
-  appcast "https://github.com/clyang/welly/releases.atom"
   name "Welly"
   homepage "https://github.com/clyang/welly"
 

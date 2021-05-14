@@ -1,12 +1,17 @@
 cask "brook" do
-  version "20200909"
-  sha256 "7762ad30c86503974542e739e94e252f0721869a5ca00927df00b3338870577b"
+  version "20210401"
+  sha256 "15d851b72d81ebe06f8c74ed8abcb8cbb6f64d6026604612eff5c2bbf03e37aa"
 
   url "https://github.com/txthinking/brook/releases/download/v#{version}/Brook.dmg"
-  appcast "https://github.com/txthinking/brook/releases.atom"
   name "Brook"
-  desc "Cross-platform proxy/vpn software"
+  desc "Proxy/VPN client"
   homepage "https://github.com/txthinking/brook"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+    regex(%r{href=.*?/v?(\d+)/Brook\.dmg}i)
+  end
 
   app "Brook.app"
 end

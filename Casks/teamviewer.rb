@@ -1,6 +1,6 @@
 cask "teamviewer" do
-  version "15.11.6"
-  sha256 "39da48b95ad91ab1aabe8b4fbc43b6e9cc5fa0f31940d8e9cb2f15fd1408871b"
+  version "15.17.6"
+  sha256 :no_check
 
   url "https://download.teamviewer.com/download/TeamViewer.dmg"
   appcast "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=14.7.1965&os=macos&osversion=10.15.1&type=1&channel=1"
@@ -11,7 +11,7 @@ cask "teamviewer" do
   auto_updates true
   conflicts_with cask: "teamviewer-host"
 
-  pkg "Install TeamViewer.pkg"
+  pkg "Install TeamViewer.app/Contents/Resources/Install TeamViewer.pkg"
 
   uninstall delete:    [
     "#{staged_path}/#{token}", # This Cask should be uninstalled manually.

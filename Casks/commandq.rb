@@ -1,12 +1,17 @@
 cask "commandq" do
-  version "2.0.5"
-  sha256 "9f7529ecfe83f8a77eeb0d8ad42cacfd843ecfa30508d4aa243546fb8655627b"
+  version "2.0.6"
+  sha256 "91c639e497994245ab32e021538ef0af0af3291625087e8dbd1d8d555c109d77"
 
-  # download.clickontyler.com/ was verified as official when first introduced to the cask
-  url "https://download.clickontyler.com/commandq/commandq20_#{version.no_dots}.zip"
-  appcast "https://shine.clickontyler.com/appcast.php?id=43"
+  url "https://download.clickontyler.com/commandq/commandq20_#{version.no_dots}.zip",
+      verified: "download.clickontyler.com/"
   name "CommandQ"
+  desc "Never accidentally quit an app again"
   homepage "https://commandqapp.com/"
+
+  livecheck do
+    url "https://shine.clickontyler.com/appcast.php?id=43"
+    strategy :sparkle, &:short_version
+  end
 
   depends_on macos: ">= :sierra"
 
