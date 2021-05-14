@@ -15,4 +15,10 @@ cask "mem" do
   end
 
   app "Mem.app"
+
+  zap trash: [
+    "~/Library/Application Support/mem",
+    "~/Library/Preferences/org.memlabs.Mem.plist",
+    "~/Library/Saved Application State/org.memlabs.Mem.savedState",
+  ]
 end
