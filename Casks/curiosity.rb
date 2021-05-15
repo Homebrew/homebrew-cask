@@ -1,6 +1,6 @@
 cask "curiosity" do
-  version "0.4-3"
-  sha256 "12bb40172d1a199aca548e3bf248d743a04aad3a04abce6510c2dd857d7e1a82"
+  version "0.4.2"
+  sha256 "124c7f638aac43b3cb2dfe8fcadc6ca79dac6b05c225b77bdea732646bd2ecf1"
 
   url "https://github.com/Dimillian/RedditOS/releases/download/#{version}/Curiosity.app.zip"
   name "Curiosity"
