@@ -14,5 +14,6 @@ cask "openttd-jgrpp" do
     "~/Library/Application Support/CrashReporter/openttd_*.plist",
     "~/Library/Logs/DiagnosticReports/openttd_*.crash",
     "~/Library/Saved Application State/org.openttd.openttd.savedState",
+    "~/Library/Saved Application State/org.openttd.openttd.jgrpp.savedState",
   ]
 end
