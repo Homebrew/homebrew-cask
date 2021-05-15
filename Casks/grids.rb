@@ -9,8 +9,7 @@ cask "grids" do
 
   livecheck do
     url "https://gridsapp.net/appcast.json"
-    strategy :page_match
-    regex(/"mac"\s*:\s*"(\d+(?:\.\d+)*)"/i)
+    regex(/"mac"\s*:\s*"v?(\d+(?:\.\d+)+)"/i)
   end
 
   auto_updates true
