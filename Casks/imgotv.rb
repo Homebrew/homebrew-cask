@@ -5,6 +5,7 @@ cask "imgotv" do
   url "https://download.imgo.tv/app/mac/#{version}/mgtv-mango-#{version}.dmg",
       verified: "download.imgo.tv/"
   name "芒果TV"
+  desc "Mango TV video app"
   homepage "https://www.mgtv.com/app/"
 
   livecheck do
