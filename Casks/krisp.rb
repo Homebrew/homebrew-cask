@@ -4,6 +4,7 @@ cask "krisp" do
 
   url "https://cdn.krisp.ai/mac/release/v#{version.major}.#{version.minor}/krisp_#{version}.pkg"
   name "Krisp"
+  desc "Sound clear in online meetings"
   homepage "https://krisp.ai/"
 
   livecheck do
