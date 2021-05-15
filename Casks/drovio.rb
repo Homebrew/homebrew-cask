@@ -9,8 +9,7 @@ cask "drovio" do
 
   livecheck do
     url "https://repository.drovio.com/stable/drovio/macos/latest_version/release.json"
-    strategy :page_match
-    regex(/"version"\s*:\s*"(\d+(?:\.\d+)*)"/i)
+    regex(/"version"\s*:\s*"(\d+(?:\.\d+)+)"/i)
   end
 
   auto_updates true
