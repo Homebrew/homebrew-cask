@@ -4,6 +4,7 @@ cask "pagico" do
 
   url "https://www.pagico.com/downloads/Pagico_macOS_r#{version.after_comma}.dmg"
   name "Pagico"
+  desc "Manage all your tasks, files, and notes"
   homepage "https://www.pagico.com/"
 
   livecheck do
