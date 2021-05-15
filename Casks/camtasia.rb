@@ -9,8 +9,7 @@ cask "camtasia" do
 
   livecheck do
     url "https://support.techsmith.com/hc/en-us/articles/115006624748-Camtasia-Mac-Version-History"
-    strategy :page_match
-    regex(/Camtasia\s*\(Mac\)\s*(\d+(?:\.\d+)*)/i)
+    regex(/Camtasia\s*\(Mac\)\s*(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
