@@ -1,6 +1,6 @@
 cask "anaconda" do
-  version "2021.04"
-  sha256 "e945565945eb02fcc0755ca9d419ae36cb0f05f325790bec53d8f4ec7dedf4ca"
+  version "2021.05"
+  sha256 "0407bee87eeecad521f1e38eb607b0a85babef4c1b47516dc5c090e152eba5d5"
 
   url "https://repo.anaconda.com/archive/Anaconda3-#{version}-MacOSX-x86_64.sh"
   name "Continuum Analytics Anaconda"
@@ -9,7 +9,6 @@ cask "anaconda" do
 
   livecheck do
     url "https://repo.anaconda.com/archive/"
-    strategy :page_match
     regex(/Anaconda3-(\d+(?:\.\d+)*)-MacOSX-x86_64\.sh/i)
   end
 
