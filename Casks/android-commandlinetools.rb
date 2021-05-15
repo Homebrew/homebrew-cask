@@ -24,10 +24,7 @@ cask "android-commandlinetools" do
     binary "#{android_clt_dir}/bin/#{command}"
   end
 
-  preflight do
-    FileUtils.mkdir_p android_clt_dir
-    FileUtils.cp_r staged_path.join("cmdline-tools").children, android_clt_dir
-  end
+  artifact "cmdline-tools", target: android_clt_dir
 
   uninstall trash: android_clt_dir
 
