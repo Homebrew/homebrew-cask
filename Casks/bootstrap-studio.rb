@@ -9,8 +9,7 @@ cask "bootstrap-studio" do
 
   livecheck do
     url "https://bootstrapstudio.io/pages/releases/"
-    strategy :page_match
-    regex(/Version\s*(\d+(?:\.\d+)*)/i)
+    regex(/Version\s*(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
