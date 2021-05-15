@@ -11,7 +11,7 @@ cask "simtoolkitpro" do
   livecheck do
     url "https://simtoolkitpro.co.uk/download/mac"
     strategy :header_match
-    regex(/SimToolkitPro-(\d+(?:\.\d+)*).Setup\.dmg/i)
+    regex(/SimToolkitPro[._-]?v?(\d+(?:\.\d+)+)[._-]Setup\.dmg/i)
   end
 
   app "SimToolkitPro.app"
