@@ -4,6 +4,7 @@ cask "chronycontrol" do
 
   url "https://www.whatroute.net/software/chronycontrol-#{version.before_comma}.zip"
   name "ChronyControl"
+  desc "Install and configure chronyd"
   homepage "https://whatroute.net/chronycontrol.html"
 
   livecheck do
