@@ -4,6 +4,8 @@ cask "tableau-prep" do
 
   url "https://downloads.tableau.com/esdalt/tableau_prep/#{version}/TableauPrep-#{version.dots_to_hyphens}.dmg"
   name "Tableau Prep"
+  name "Tableau Prep Builder"
+  desc "Combine, shape, and clean your data for analysis"
   homepage "https://www.tableau.com/support/releases/prep"
 
   livecheck do
