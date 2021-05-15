@@ -1,6 +1,6 @@
 cask "shortcutor" do
-  version "2020.4.1"
-  sha256 "ce432c3904c41bdcc67f8b0a27d8d28b958a7669704d6670ff5911f0b72339e0"
+  version "2021.1.4"
+  sha256 "9acacb652a31e4dfd1343184976f64fedfe1a0f01b56a3190a9ae42bff30bc08"
 
   url "https://cdn.shortcutor.com/download/darwin/Shortcutor-#{version}.dmg"
   name "Shortcutor"
@@ -9,9 +9,10 @@ cask "shortcutor" do
 
   livecheck do
     url "https://shortcutor.com/getfile.html"
-    strategy :page_match
-    regex(/Shortcutor-(\d+(?:\.\d+)*)\.dmg/i)
+    regex(%r{href=.*?/Shortcutor[._-]?v?(\d+(?:\.\d+)+)\.dmg}i)
   end
+
+  depends_on macos: ">= :sierra"
 
   app "Shortcutor.app"
 
