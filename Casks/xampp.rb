@@ -10,8 +10,7 @@ cask "xampp" do
 
   livecheck do
     url "https://www.apachefriends.org/download.html"
-    strategy :page_match
-    regex(%r{href=.*?/xampp-osx-(\d+(?:\.\d+)*-\d+)-installer\.dmg}i)
+    regex(%r{href=.*?/xampp[._-]osx[._-]v?(\d+(?:\.\d+)*-\d+)[._-]installer\.dmg}i)
   end
 
   installer script: {
