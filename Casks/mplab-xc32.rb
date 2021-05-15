@@ -4,6 +4,7 @@ cask "mplab-xc32" do
 
   url "https://ww1.microchip.com/downloads/en/DeviceDoc/xc32-v#{version}-full-install-osx-installer.dmg"
   name "MPLab XC32 Compiler"
+  desc "Compiler for 32-bit PIC and SAM MCUs and MPUs"
   homepage "https://www.microchip.com/mplab/compilers"
 
   livecheck do
