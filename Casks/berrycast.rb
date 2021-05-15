@@ -11,8 +11,10 @@ cask "berrycast" do
   livecheck do
     url "https://media.berrycast.app/desktop-installer/v2/latest-mac.yml"
     strategy :page_match
-    regex(/Berrycast-(\d+(?:\.\d+)*)-latest\.dmg/i)
+    regex(/Berrycast[._-]?v?(\d+(?:\.\d+)+)[._-]latest\.dmg/i)
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Berrycast.app"
 
