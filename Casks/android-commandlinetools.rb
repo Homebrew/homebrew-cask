@@ -26,8 +26,6 @@ cask "android-commandlinetools" do
 
   artifact "cmdline-tools", target: android_clt_dir
 
-  uninstall trash: android_clt_dir
-
   zap trash: android_sdk_root
 
   caveats do
