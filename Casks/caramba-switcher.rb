@@ -9,8 +9,7 @@ cask "caramba-switcher" do
 
   livecheck do
     url "https://caramba-switcher.com/mac"
-    strategy :page_match
-    regex(/(\d+(?:\.\d+)*)\s*для\s*Mac/i)
+    regex(/(\d+(?:\.\d+)+)\s*для\s*Mac/i)
   end
 
   pkg "CarambaSwitcherBeta.pkg"
