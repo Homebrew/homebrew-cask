@@ -9,7 +9,7 @@ cask "4k-stogram" do
 
   livecheck do
     url "https://www.4kdownload.com/downloads"
-    regex(%r{href=.*?/4kstogram[._-]?v?(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/4kstogram[._-]?v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   auto_updates true
