@@ -3,13 +3,13 @@ cask "ultimate" do
   sha256 :no_check
 
   url "https://download.epubor.com/epubor_ultimate.zip"
-  name "Ultimate Converter"
+  name "Epubor Ultimate"
+  desc "eBook converter and DRM removal functions"
   homepage "https://www.epubor.com/"
 
   livecheck do
     url "https://www.epubor.com/ultimate.html"
-    strategy :page_match
-    regex(/Version:\s*(\d+(?:\.\d+)*)/i)
+    regex(/Version:\s*(\d+(?:\.\d+)+)/i)
   end
 
   pkg "Ultimate.pkg"
