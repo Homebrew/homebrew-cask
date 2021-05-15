@@ -4,7 +4,7 @@ cask "ultimate" do
 
   url "https://download.epubor.com/epubor_ultimate.zip"
   name "Epubor Ultimate"
-  desc "eBook converter and DRM removal functions"
+  desc "Convert and remove DRM on eBooks"
   homepage "https://www.epubor.com/"
 
   livecheck do
