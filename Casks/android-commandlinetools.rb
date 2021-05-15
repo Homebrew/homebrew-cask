@@ -10,16 +10,33 @@ cask "android-commandlinetools" do
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/commandlinetools-mac-(\d+)_latest\.zip}i)
+    regex(%r{href=.*?/commandlinetools[._-]mac[._-](\d+)[._-]latest\.zip}i)
   end
 
   conflicts_with cask:    "android-sdk",
                  formula: "proguard"
 
-  binary "#{staged_path}/cmdline-tools/bin/apkanalyzer"
-  binary "#{staged_path}/cmdline-tools/bin/avdmanager"
-  binary "#{staged_path}/cmdline-tools/bin/lint"
-  binary "#{staged_path}/cmdline-tools/bin/retrace"
-  binary "#{staged_path}/cmdline-tools/bin/screenshot2"
-  binary "#{staged_path}/cmdline-tools/bin/sdkmanager"
+  android_sdk_root = HOMEBREW_PREFIX.join("share", "android-commandlinetools")
+  android_clt_dir = android_sdk_root.join("cmdline-tools", "latest")
+
+  commands = %w[apkanalyzer avdmanager lint retrace screenshot2 sdkmanager]
+  commands.each do |command|
+    binary "#{android_clt_dir}/bin/#{command}"
+  end
+
+  preflight do
+    FileUtils.mkdir_p android_clt_dir
+    FileUtils.cp_r staged_path.join("cmdline-tools").children, android_clt_dir
+  end
+
+  uninstall trash: android_clt_dir
+
+  zap trash: android_sdk_root
+
+  caveats do
+    depends_on_java
+    <<~EOS
+      Default Android SDK root is #{android_sdk_root}
+    EOS
+  end
 end
