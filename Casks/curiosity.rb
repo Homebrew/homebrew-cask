@@ -7,6 +7,11 @@ cask "curiosity" do
   desc "SwiftUI Reddit client"
   homepage "https://github.com/Dimillian/RedditOS"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :big_sur"
 
   app "Curiosity.app"
