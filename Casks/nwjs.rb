@@ -8,9 +8,8 @@ cask "nwjs" do
   homepage "https://nwjs.io/"
 
   livecheck do
-    url "https://github.com/nwjs/nw.js/releases"
-    strategy :git
-    regex(/^nw-v?(\d+(?:\.\d+)*)$/)
+    url "https://github.com/nwjs/nw.js"
+    regex(/^nw[._-]v?(\d+(?:\.\d+)+)$/)
   end
 
   app "nwjs-sdk-v#{version}-osx-x64/nwjs.app"
