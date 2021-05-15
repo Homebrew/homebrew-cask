@@ -13,6 +13,8 @@ cask "remote-desktop-manager-free" do
     strategy :sparkle
   end
 
+  depends_on macos: ">= :sierra"
+
   app "Remote Desktop Manager Free.app"
 
   zap trash: [
