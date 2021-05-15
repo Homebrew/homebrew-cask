@@ -1,11 +1,13 @@
 cask "appcode" do
-  version "2021.1,211.6693.150"
+  version "2021.1.1,211.7142.51"
 
   if Hardware::CPU.intel?
-    sha256 "d718e4f69107793038cc6738cf775f3426e4a1d3f5da9eff4cff55e408e4e946"
+    sha256 "74f2356db8325cb8d804d4e8fc2647a398132badb054117b06daed8285a49742"
+
     url "https://download.jetbrains.com/objc/AppCode-#{version.before_comma}.dmg"
   else
-    sha256 "05346c6b28b46ce4c19aa724869acb47befc5192ff814960179e113713f85e82"
+    sha256 "e57b21dc8fc06dfb401c976716576a1a045a48d363ed0eac69d5134f30fe7a47"
+
     url "https://download.jetbrains.com/objc/AppCode-#{version.before_comma}-aarch64.dmg"
   end
 
@@ -16,9 +18,9 @@ cask "appcode" do
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=AC&latest=true&type=release"
     strategy :page_match do |page|
-      version = page.match(/"version":"(\d+(?:\.\d+)*)/i)
-      build = page.match(/"build":"(\d+(?:\.\d+)*)/i)
-      "#{version[1]},#{build[1]}"
+      version = page[/"version"\s*:\s*"(\d+(?:\.\d+)*)/i, 1]
+      build = page[/"build"\s*:\s*"(\d+(?:\.\d+)*)/i, 1]
+      "#{version},#{build}"
     end
   end
 
