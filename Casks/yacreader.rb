@@ -5,12 +5,13 @@ cask "yacreader" do
   url "https://github.com/YACReader/yacreader/releases/download/#{version.major_minor_patch}/YACReader-#{version}.MacOSX-Intel.dmg",
       verified: "github.com/YACReader/yacreader/"
   name "YACReader"
+  desc "Comic reader"
   homepage "https://www.yacreader.com/"
 
   livecheck do
-    url "https://github.com/YACReader/yacreader/releases/latest"
-    strategy :page_match
-    regex(%r{href=.*?/YACReader-(\d+(?:\.\d+)*)\.MacOSX-Intel\.dmg}i)
+    url :url
+    strategy :github_latest
+    regex(%r{href=.*?/YACReader[._-]v?(\d+(?:\.\d+)+)[._-]MacOSX[._-]Intel\.dmg}i)
   end
 
   app "YACReader.app"
