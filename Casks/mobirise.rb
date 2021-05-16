@@ -1,5 +1,5 @@
 cask "mobirise" do
-  version "5.2.0.68"
+  version "5.3.5"
   sha256 :no_check
 
   url "https://download.mobirise.com/MobiriseSetup.dmg"
@@ -7,12 +7,17 @@ cask "mobirise" do
   desc "No-code website creator"
   homepage "https://mobirise.com/"
 
+  livecheck do
+    url "https://mobirise.com/history.html"
+    regex(/>\s*Mobirise\s+v?(\d+(?:\.\d+)+)/i)
+  end
+
   app "Mobirise.app"
 
   zap trash: [
-   "~/Library/Application Support/Mobirise",
-   "~/Library/Application Support/Mobirise.com",
-   "~/Library/Preferences/com.mobirise.Mobirise.plist",
-   "~/Library/Saved Application State/com.mobirise.Mobirise.savedState",
+    "~/Library/Application Support/Mobirise",
+    "~/Library/Application Support/Mobirise.com",
+    "~/Library/Preferences/com.mobirise.Mobirise.plist",
+    "~/Library/Saved Application State/com.mobirise.Mobirise.savedState",
   ]
 end
