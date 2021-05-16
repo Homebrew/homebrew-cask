@@ -10,8 +10,7 @@ cask "opencore-configurator" do
 
   livecheck do
     url "https://mackie100projects.altervista.org/download-opencore-configurator/"
-    strategy :page_match
-    regex(/OpenCore\sConfigurator\s(\d+(?:\.\d+)*)/i)
+    regex(/OpenCore\s+Configurator\s+v?(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
