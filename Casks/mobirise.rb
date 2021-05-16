@@ -7,4 +7,11 @@ cask "mobirise" do
   homepage "https://mobirise.com/"
 
   app "Mobirise.app"
+
+  zap trash: [
+   "~/Library/Application Support/Mobirise",
+   "~/Library/Application Support/Mobirise.com",
+   "~/Library/Preferences/com.mobirise.Mobirise.plist",
+   "~/Library/Saved Application State/com.mobirise.Mobirise.savedState",
+  ]
 end
