@@ -4,7 +4,10 @@ cask "aerial" do
 
   url "https://github.com/JohnCoates/Aerial/releases/download/v#{version}/Aerial.saver.zip"
   name "Aerial Screensaver"
+  desc "Apple TV Aerial screensaver"
   homepage "https://github.com/JohnCoates/Aerial"
+
+  depends_on macos: ">= :sierra"
 
   screen_saver "Aerial.saver"
 
