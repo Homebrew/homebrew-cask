@@ -4,6 +4,7 @@ cask "mobirise" do
 
   url "https://download.mobirise.com/MobiriseSetup.dmg"
   name "Mobirise"
+  desc "No-code website creator"
   homepage "https://mobirise.com/"
 
   app "Mobirise.app"
