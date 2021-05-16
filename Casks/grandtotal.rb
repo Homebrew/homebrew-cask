@@ -12,5 +12,7 @@ cask "grandtotal" do
     strategy :sparkle
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "GrandTotal.app"
 end
