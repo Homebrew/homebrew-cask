@@ -1,8 +1,8 @@
 cask "fsnotes" do
-  version "4.9.13"
-  sha256 "226a24d2e4a8457adf623a634156d16672aa071c95c886e32edbde753de6356f"
+  version "4.10.0"
+  sha256 "f28f42e9241825d017c88f84cdf7227a330550f0d917b2051a9088516a294161"
 
-  url "https://github.com/glushchenko/fsnotes/releases/download/#{version}/FSNotes_#{version}.zip",
+  url "https://github.com/glushchenko/fsnotes/releases/download/#{version}/FSNotes.zip",
       verified: "github.com/glushchenko/fsnotes/"
   name "FSNotes"
   desc "Notes manager"
