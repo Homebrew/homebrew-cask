@@ -1,6 +1,6 @@
 cask "clicker-for-youtube" do
-  version "1.13,44"
-  sha256 "7941bf90d4058c99e21faa2348f6dd83bf5547ff3e09b60c7e9c0f3ca7c06d6b"
+  version "1.14,45"
+  sha256 "546106504548fe270b723723cce4af03f5ec89caa1eef96cc35e7d4dfa6967d3"
 
   url "https://www.dbklabs.com/clicker-for-youtube/appcast/Clicker%20for%20YouTube%20#{version.before_comma}.dmg"
   name "Clicker for YouTube"
