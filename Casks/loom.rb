@@ -1,6 +1,6 @@
 cask "loom" do
-  version "0.79.1"
-  sha256 "f04003a8ab34085b3bf4ef428f53ec4a5c5e847ad75439cfff23768f0eae7a92"
+  version "0.81.0"
+  sha256 "eb1942b1c7023f48f0a565f15d6efe8f038eea40296cb22698c405d6bdcd0a52"
 
   url "https://cdn.loom.com/desktop-packages/Loom-#{version}.dmg"
   name "Loom"
