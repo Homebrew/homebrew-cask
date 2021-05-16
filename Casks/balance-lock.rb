@@ -4,6 +4,7 @@ cask "balance-lock" do
 
   url "https://www.tunabellysoftware.com/resources/Balance%20Lock%20#{version.before_comma}.dmg"
   name "Balance Lock"
+  desc "Prevents audio balance from drifting left or right"
   homepage "https://www.tunabellysoftware.com/balance_lock"
 
   livecheck do
