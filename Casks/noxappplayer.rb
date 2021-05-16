@@ -1,6 +1,6 @@
 cask "noxappplayer" do
-  version "3.8.5.3,20210412:b6156acb6f2f49e4a085915fb16c3c64"
-  sha256 "b8b4b96e2ccddf6a45a2c7e14be701d8412cbe050296593a08a89f78e2dd2a04"
+  version "3.8.5.5,20210513:a9853a4a5ba64f9b96c1e3bf6df15e3b"
+  sha256 "1668997e8163e4521d379e1b9406fddceb901eb8fca92daf347b1534b99770f7"
 
   url "https://res06.bignox.com/full/#{version.after_comma.before_colon}/#{version.after_colon}.dmg?filename=NoxInstaller_#{version.before_comma}_en.dmg"
   name "NoxAppPlayer"
