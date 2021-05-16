@@ -8,6 +8,8 @@ cask "macfuse" do
   desc "File system integration"
   homepage "https://osxfuse.github.io/"
 
+  depends_on macos: ">= :sierra"
+
   pkg "Extras/macFUSE #{version}.pkg"
 
   postflight do
