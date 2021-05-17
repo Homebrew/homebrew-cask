@@ -13,7 +13,7 @@ cask "activedock" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :sierra"
 
   app "ActiveDock #{version.before_comma.major}.app"
 end
