@@ -9,8 +9,7 @@ cask "retroarch-metal" do
 
   livecheck do
     url "https://buildbot.libretro.com/stable/"
-    strategy :page_match
-    regex(%r{href="/stable/(\d+(?:\.\d+)*)/"}i)
+    regex(%r{href=["']?/stable/v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
   conflicts_with cask: [
