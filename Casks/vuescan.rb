@@ -9,8 +9,7 @@ cask "vuescan" do
 
   livecheck do
     url "https://www.hamrick.com/vuescan/vuescan.htm"
-    strategy :page_match
-    regex(%r{VueScan\s(\d+(?:\.\d+)*)\sRelease\sNotes</font>}i)
+    regex(/VueScan\s+v?(\d+(?:\.\d+)+)\s+Release\s+Notes/i)
   end
 
   app "VueScan.app"
