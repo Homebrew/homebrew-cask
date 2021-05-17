@@ -5,7 +5,7 @@ cask "vamiga" do
   url "https://github.com/dirkwhoffmann/vAmiga/releases/download/v#{version}/vAmiga.zip",
       verified: "github.com/dirkwhoffmann/vAmiga/"
   name "vAmiga"
-  desc "User-friendly Amiga 500, 1000, 2000 emulator"
+  desc "Amiga 500, 1000, 2000 emulator"
   homepage "https://dirkwhoffmann.github.io/vAmiga"
 
   livecheck do
