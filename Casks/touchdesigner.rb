@@ -4,13 +4,15 @@ cask "touchdesigner" do
 
   url "https://download.derivative.ca/TouchDesigner.#{version}.dmg"
   name "Derivative TouchDesigner"
+  desc "Tool for creating dynamic digital art"
   homepage "https://www.derivative.ca/"
 
   livecheck do
     url "https://www.derivative.ca/download/"
-    strategy :page_match
-    regex(%r{href=.*?/TouchDesigner\.(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/TouchDesigner[._-]?v?(\d+(?:\.\d+)+)\.dmg}i)
   end
+
+  depends_on macos: ">= :sierra"
 
   app "TouchDesigner.app"
 end
