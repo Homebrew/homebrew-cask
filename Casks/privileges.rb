@@ -7,22 +7,18 @@ cask "privileges" do
   desc "Admin rights switcher"
   homepage "https://github.com/SAP/macOS-enterprise-privileges"
 
-  livecheck do
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
-  end
-
   depends_on macos: ">= :sierra"
 
   app "Privileges.app"
   binary "#{appdir}/Privileges.app/Contents/Resources/PrivilegesCLI", target: "privileges-cli"
 
   uninstall delete: [
-    "/Library/PrivilegedHelperTools/corp.sap.privileges.helper",
     "/Library/LaunchDaemons/corp.sap.privileges.helper.plist",
+    "/Library/PrivilegedHelperTools/corp.sap.privileges.helper",
   ]
 
   zap trash: [
-    "~/Library/Containers/corp.sap.privileges",
     "~/Library/Application Scripts/corp.sap.privileges",
+    "~/Library/Containers/corp.sap.privileges",    
   ]
 end
