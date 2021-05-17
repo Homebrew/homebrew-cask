@@ -19,6 +19,6 @@ cask "privileges" do
 
   zap trash: [
     "~/Library/Application Scripts/corp.sap.privileges",
-    "~/Library/Containers/corp.sap.privileges",    
+    "~/Library/Containers/corp.sap.privileges",
   ]
 end
