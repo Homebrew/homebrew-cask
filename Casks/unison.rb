@@ -6,10 +6,10 @@ cask "unison" do
     url "https://github.com/bcpierce00/unison/releases/download/#{version}/Unison-OS-X-#{version}.zip",
         verified: "github.com/bcpierce00/unison/"
   else
-    version "2.51.2"
-    sha256 "0738a6978fa29bb2af409322069cc20df293b770877942ac4b8774f06e774aa5"
+    version "2.51.4_rc2"
+    sha256 "bb78ad8a6d4bfc3e530142dc108692cbf5f4c280554472de0bd83cf0234e7177"
 
-    url "https://github.com/bcpierce00/unison/releases/download/v#{version}/Unison-#{version}.OS.X.zip",
+    url "https://github.com/bcpierce00/unison/releases/download/v#{version}/unison-v#{version}.ocaml-4.12.0.macos-10.15.app.tar.gz",
         verified: "github.com/bcpierce00/unison/"
   end
 
