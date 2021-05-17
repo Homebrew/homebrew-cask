@@ -9,4 +9,12 @@ cask "mtgaprotracker" do
   homepage "https://mtgarena.pro/mtga-pro-tracker/"
 
   app "mtgaprotracker.app"
+
+  zap trash: [
+    "~/Library/Application Support/mtgaprotracker",
+    "~/Library/Caches/com.mtgarenapro.mtgaprotracker",
+    "~/Library/Caches/com.mtgarenapro.mtgaprotracker.ShipIt",
+    "~/Library/Logs/MTGAproTracker",
+    "~/Library/Preferences/com.mtgarenapro.mtgaprotracker.plist",
+  ]
 end
