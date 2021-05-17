@@ -9,8 +9,7 @@ cask "goodsync" do
 
   livecheck do
     url "https://www.goodsync.com/download?os=macos"
-    strategy :page_match
-    regex(/GoodSync\ for\ Mac\ v\ (\d+(?:\.\d+)*)/i)
+    regex(/GoodSync\s+for\s+Mac\s+v?\s*(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: ">= :yosemite"
