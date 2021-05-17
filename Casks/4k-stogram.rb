@@ -1,6 +1,6 @@
 cask "4k-stogram" do
-  version "3.4.0"
-  sha256 "c6339111f3dd6f81f1ea60b34d262b900fa47d80bc410f410fcf4b46e8fcbf8f"
+  version "3.4.1"
+  sha256 "ec7bc90606d156a4012c8f379a6737b075eee7a3856c063dd473b816343d81d4"
 
   url "https://dl.4kdownload.com/app/4kstogram_#{version}.dmg"
   name "4K Stogram"
@@ -8,9 +8,8 @@ cask "4k-stogram" do
   homepage "https://www.4kdownload.com/products/product-stogram"
 
   livecheck do
-    url "https://www.4kdownload.com/download"
-    strategy :page_match
-    regex(%r{href=.*?/4kstogram_(\d+(?:\.\d+)*)\.dmg}i)
+    url "https://www.4kdownload.com/downloads"
+    regex(%r{href=.*?/4kstogram[._-]?v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   auto_updates true

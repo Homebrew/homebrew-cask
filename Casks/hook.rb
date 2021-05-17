@@ -1,8 +1,8 @@
 cask "hook" do
-  version "3.0-4312-1,2021.05"
-  sha256 "6629af835caf5de482f636ba5754564c8da2b2ab5367a68c5d794bbf17057eb3"
+  version "3.1,2021.05"
+  sha256 "91cb06373dfa28b9274ea1274d67656d657377c3c0ad74f5924e626462cbde97"
 
-  url "https://hookproductivity.com/wp-content/uploads/#{version.after_comma.major}/#{version.after_comma.minor}/Hook-productivity-app-#{version.before_comma}.dmg"
+  url "https://hookproductivity.com/wp-content/uploads/#{version.after_comma.major}/#{version.after_comma.minor}/Hook-productivity-app-#{version.before_comma}.dmg_.zip"
   name "Hook"
   desc "Link and retrieve key information"
   homepage "https://hookproductivity.com/"

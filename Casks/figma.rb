@@ -1,6 +1,6 @@
 cask "figma" do
-  version "97.7.0"
-  sha256 "af7cbcbd8e8d6a2c61d3501a253d698b228b04c977a48ecc8308793fa08bb31c"
+  version "98.8.0"
+  sha256 "39e2c3984eb06b7e45c2d9b9230148147c863110d238121da985d214ac19b971"
 
   url "https://desktop.figma.com/mac/Figma-#{version}.zip"
   name "Figma"

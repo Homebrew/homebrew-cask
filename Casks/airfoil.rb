@@ -3,13 +3,17 @@ cask "airfoil" do
   sha256 :no_check
 
   url "https://rogueamoeba.com/airfoil/mac/download/Airfoil.zip"
-  appcast "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&bundleid=com.rogueamoeba.Airfoil&platform=osx"
   name "Airfoil"
   desc "Sends audio from computer to outputs"
   homepage "https://www.rogueamoeba.com/airfoil/mac/"
 
+  livecheck do
+    url "https://rogueamoeba.com/airfoil/mac/releasenotes.php"
+    regex(/ra-version=["']?(\d+(?:\.\d+)+)["' >]/i)
+  end
+
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "Airfoil/Airfoil Satellite.app"
   app "Airfoil/Airfoil.app"

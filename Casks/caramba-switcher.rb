@@ -1,5 +1,5 @@
 cask "caramba-switcher" do
-  version "2021.04.18"
+  version "2021.04.26"
   sha256 :no_check
 
   url "https://cdn.caramba-switcher.com/files/CarambaSwitcherBeta.pkg"
@@ -9,8 +9,7 @@ cask "caramba-switcher" do
 
   livecheck do
     url "https://caramba-switcher.com/mac"
-    strategy :page_match
-    regex(/(\d+(?:\.\d+)*)\s*для\s*Mac/i)
+    regex(/(\d+(?:\.\d+)+)\s*для\s*Mac/i)
   end
 
   pkg "CarambaSwitcherBeta.pkg"

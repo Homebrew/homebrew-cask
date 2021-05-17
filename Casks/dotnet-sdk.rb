@@ -1,24 +1,30 @@
 cask "dotnet-sdk" do
-  if MacOS.version <= :sierra
-    version "2.2.402,7430e32b-092b-4448-add7-2dcf40a7016d:1076952734fbf775062b48344d1a1587"
-    sha256 "e74d816bc034d0fcdfa847286a6cad097227d4864da1c97fe801012af0c26341"
-  else
-    version "5.0.202,749775e4-7b6f-4367-bb7a-9cb63a818dae:c2614b34e234fa03dc65320a8a954570"
-    sha256 "9c1d1fc5e57845006a4102e01ce9c313b9fc540957209820cdcd8d8ae19bed82"
-  end
+  version "5.0.203,0ec08464-4049-4184-b52d-ab8c90dc0199:5ebc7047c4461257c746dcf471097ea2"
+  sha256 "eb78e5a5ce1a32fb08462bf720941ea1688c9e9b0081828b93ced3323be9883c"
 
   url "https://download.visualstudio.microsoft.com/download/pr/#{version.after_comma.before_colon}/#{version.after_colon}/dotnet-sdk-#{version.before_comma}-osx-x64.pkg"
-  appcast "https://github.com/dotnet/sdk/releases.atom"
   name ".NET SDK"
   desc "Developer platform"
   homepage "https://www.microsoft.com/net/core#macos"
+
+  # This identifies releases with the same major/minor version as the current
+  # cask version. New major/minor releases occur annually in November and the
+  # check will automatically update its behavior when the cask is updated.
+  livecheck do
+    url "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/#{version.major_minor}/releases.json"
+    strategy :page_match do |page|
+      page.scan(%r{/download/pr/([^/]+)/([^/]+)/dotnet-sdk-v?(\d+(?:\.\d+)+)-osx-x64\.pkg}i).map do |match|
+        "#{match[2]},#{match[0]}:#{match[1]}"
+      end
+    end
+  end
 
   conflicts_with cask: [
     "dotnet",
     "homebrew/cask-versions/dotnet-preview",
     "homebrew/cask-versions/dotnet-sdk-preview",
   ]
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   pkg "dotnet-sdk-#{version.before_comma}-osx-x64.pkg"
   binary "/usr/local/share/dotnet/dotnet"

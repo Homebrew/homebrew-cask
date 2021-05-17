@@ -1,7 +1,7 @@
 cask "kdiff3" do
   # NOTE: "3" is not a version number, but an intrinsic part of the product name
-  version "1.9.0"
-  sha256 "c4fb8551c90e25434d79ad73008d6cd70fdb8be32ec702226bb73deea75cd14a"
+  version "1.9.1"
+  sha256 "49172f0e5834d94d998c877f2ea05cb17dcd82876300cca9ed6623e38aa5e720"
 
   url "https://download.kde.org/stable/kdiff3/kdiff3-#{version}-macos-64.dmg"
   name "KDiff3"
@@ -10,8 +10,7 @@ cask "kdiff3" do
 
   livecheck do
     url "https://download.kde.org/stable/kdiff3/"
-    strategy :page_match
-    regex(/href=.*?kdiff3-(\d+(?:\.\d+)*)-macos-64\.dmg/i)
+    regex(/href=["']?kdiff3[._-]?v?(\d+(?:\.\d+)+)[._-]?macos[._-]?64\.dmg/i)
   end
 
   app "kdiff3.app"

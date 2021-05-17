@@ -1,5 +1,5 @@
 cask "google-drive" do
-  version "46.0.3.0"
+  version "47.0.19"
   sha256 :no_check
 
   url "https://dl.google.com/drive-file-stream/GoogleDrive.dmg"
@@ -8,7 +8,8 @@ cask "google-drive" do
   homepage "https://www.google.com/drive/"
 
   livecheck do
-    skip "No version information available"
+    url :url
+    strategy :extract_plist
   end
 
   depends_on macos: ">= :el_capitan"

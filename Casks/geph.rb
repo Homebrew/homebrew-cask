@@ -9,7 +9,7 @@ cask "geph" do
   homepage "https://geph.io/"
 
   livecheck do
-    skip
+    url "https://github.com/geph-official/geph4"
   end
 
   app "Geph.app"

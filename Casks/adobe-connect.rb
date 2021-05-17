@@ -1,9 +1,10 @@
 cask "adobe-connect" do
-  version "11,2021.3.27"
-  sha256 "fafd3769e3e26527f602ed28076afdda5927ac7504e805e99a4bbf80dcd5509d"
+  version "11,2021.4.36"
+  sha256 "fe56b2e5e000f6f0ca80ecbae8b59798cb0bb9c944f39a556711465a9f4561d6"
 
   url "https://download.adobe.com/pub/connect/updaters/meeting/#{version.before_comma}/AdobeConnect_#{version.after_comma.dots_to_underscores}.dmg"
   name "Adobe Connect"
+  desc "Virtual meeting client"
   homepage "https://www.adobe.com/products/adobeconnect.html"
 
   livecheck do
