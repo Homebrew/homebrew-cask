@@ -1,4 +1,4 @@
-cask "openttd-jgrpp" do
+cask "jgrennison-openttd" do
   version "0.41.1"
   sha256 "34aa82f3f9eb40d7f50782550101ba313bb82ea6d53544557a9b965e6327f728"
 
