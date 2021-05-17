@@ -1,6 +1,6 @@
 cask "screens" do
-  version "4.8.6,1617724297"
-  sha256 "b5bdaff99750d230b545d4987c8ddd3d575f85b8599bd50277b45efcb072a403"
+  version "4.8.7,1621270850"
+  sha256 "8e04b349a03d7abdce28e2efe8da116bcedbc817361465dccddf4fc9c01bb6f5"
 
   url "https://updates.edovia.com/com.edovia.screens#{version.major}.mac/Screens_#{version.before_comma}b#{version.after_comma}.zip"
   name "Screens"
