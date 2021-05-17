@@ -5,12 +5,15 @@ cask "cozy-drive" do
   url "https://nuts.cozycloud.cc/download/channel/stable/CozyDrive-#{version}.dmg",
       verified: "nuts.cozycloud.cc/"
   name "Cozy Drive"
+  desc "File synchronization for Cozy Cloud"
   homepage "https://cozy.io/"
 
   livecheck do
     url "https://nuts.cozycloud.cc/download/channel/stable/osx"
     strategy :header_match
   end
+
+  depends_on macos: ">= :sierra"
 
   app "Cozy Drive.app"
 end
