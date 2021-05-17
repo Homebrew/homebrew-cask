@@ -13,7 +13,7 @@ cask "commander-one" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :sierra"
 
   app "Commander One.app"
 end
