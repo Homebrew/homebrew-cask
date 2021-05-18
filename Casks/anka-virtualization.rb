@@ -4,10 +4,15 @@ cask "anka-virtualization" do
 
   url "https://d1efqjhnhbvc57.cloudfront.net/Anka-#{version}.pkg",
       verified: "d1efqjhnhbvc57.cloudfront.net/"
-  appcast "https://ankadocs.veertu.com/docs/release-notes/"
   name "Anka Virtualization"
   desc "CLI tool for managing and creating virtual machines"
   homepage "https://veertu.com/"
+
+  livecheck do
+    url "https://veertu.com/downloads/anka-virtualization-latest"
+    strategy :header_match
+    regex(/Anka[._-]?v?(\d+(?:\.\d+)+)\.pkg/i)
+  end
 
   depends_on macos: ">= :yosemite"
 
