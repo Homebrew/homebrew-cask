@@ -4,10 +4,15 @@ cask "anka-build-cloud-registry" do
 
   url "https://d1efqjhnhbvc57.cloudfront.net/AnkaRegistry-#{version}.pkg",
       verified: "d1efqjhnhbvc57.cloudfront.net/"
-  appcast "https://ankadocs.veertu.com/docs/release-notes/"
   name "Anka Build Cloud Registry"
   desc "Store Anka's virtual machines in a central location"
   homepage "https://veertu.com/"
+
+  livecheck do
+    url "https://veertu.com/downloads/ankaregistry-mac-latest"
+    strategy :header_match
+    regex(/AnkaRegistry[._-]?v?(\d+(?:\.\d+)*[._-]\h+)\.pkg/i)
+  end
 
   depends_on macos: ">= :yosemite"
 
