@@ -28,7 +28,14 @@ cask "docker" do
   homepage "https://www.docker.com/products/docker-desktop"
 
   auto_updates true
-  conflicts_with formula: ["docker", "docker-completion"]
+  conflicts_with formula: %w[
+    docker
+    docker-completion
+    docker-compose
+    docker-compose-completion
+    hyperkit
+    kubernetes-cli
+  ]
 
   app "Docker.app"
   binary "#{appdir}/Docker.app/Contents/Resources/etc/docker.bash-completion",
