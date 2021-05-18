@@ -4,10 +4,15 @@ cask "anka-build-cloud-controller-and-registry" do
 
   url "https://d1efqjhnhbvc57.cloudfront.net/AnkaControllerRegistry-#{version}.pkg",
       verified: "d1efqjhnhbvc57.cloudfront.net/"
-  appcast "https://ankadocs.veertu.com/docs/release-notes/"
   name "Anka Build Cloud Controller & Registry"
   desc "Virtual machine management GUI/API and registry"
   homepage "https://veertu.com/"
+
+  livecheck do
+    url "https://veertu.com/downloads/ankacontroller-registry-mac-latest"
+    strategy :header_match
+    regex(/AnkaControllerRegistry[._-]?v?(\d+(?:\.\d+)*[._-]\h+)\.pkg/i)
+  end
 
   depends_on macos: ">= :yosemite"
 
