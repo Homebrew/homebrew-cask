@@ -9,9 +9,8 @@ cask "godot" do
   homepage "https://godotengine.org/"
 
   livecheck do
-    url "https://github.com/godotengine/godot/releases"
-    strategy :git
-    regex(/^(\d+(?:\.\d+)*)-stable$/)
+    url "https://github.com/godotengine/godot"
+    regex(/^v?(\d+(?:\.\d+)+)[._-]stable$/)
   end
 
   app "Godot.app"
