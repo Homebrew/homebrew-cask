@@ -12,6 +12,8 @@ cask "binance" do
     strategy :electron_builder
   end
 
+  auto_updates true
+
   app "Binance.app"
 
   zap trash: [
