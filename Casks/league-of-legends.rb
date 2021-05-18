@@ -2,7 +2,7 @@ cask "league-of-legends" do
   version "1.0"
   sha256 :no_check
 
-  url "https://lol.secure.dyn.riotcdn.net/channels/public/x/installer/current/live.oc1.zip",
+  url "https://lol.secure.dyn.riotcdn.net/channels/public/x/installer/current/live.na.zip",
       verified: "lol.secure.dyn.riotcdn.net/"
   name "League of Legends"
   homepage "https://na.leagueoflegends.com/en-us/"
@@ -12,7 +12,7 @@ cask "league-of-legends" do
     strategy :extract_plist
   end
 
-  installer manual: "Install League of Legends oc1.app"
+  installer manual: "Install League of Legends na.app"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.riotgames.maccontainer.sfl*",
