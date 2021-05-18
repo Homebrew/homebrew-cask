@@ -2,14 +2,17 @@ cask "league-of-legends" do
   version "1.0"
   sha256 :no_check
 
-  url "https://riotgamespatcher-a.akamaihd.net/releases/Maclive/installer/deploy/League%20of%20Legends%20installer%20NA.dmg",
-      verified: "riotgamespatcher-a.akamaihd.net/"
+  url "https://lol.secure.dyn.riotcdn.net/channels/public/x/installer/current/live.oc1.zip",
+      verified: "lol.secure.dyn.riotcdn.net/"
   name "League of Legends"
-  homepage "https://eune.leagueoflegends.com/en/"
+  homepage "https://na.leagueoflegends.com/en-us/"
 
-  auto_updates true
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
-  app "League of Legends.app"
+  installer manual: "Install League of Legends oc1.app"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.riotgames.maccontainer.sfl*",
