@@ -28,6 +28,7 @@ cask "docker" do
   homepage "https://www.docker.com/products/docker-desktop"
 
   auto_updates true
+  conflicts_with formula: "docker"
 
   app "Docker.app"
 
