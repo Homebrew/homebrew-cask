@@ -28,7 +28,7 @@ cask "docker" do
   homepage "https://www.docker.com/products/docker-desktop"
 
   auto_updates true
-  conflicts_with formula: "docker"
+  conflicts_with formula: ["docker", "docker-completion"]
 
   app "Docker.app"
   binary "#{appdir}/Docker.app/Contents/Resources/etc/docker.bash-completion",
