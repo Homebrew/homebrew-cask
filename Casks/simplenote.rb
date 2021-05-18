@@ -4,6 +4,7 @@ cask "simplenote" do
 
   url "https://github.com/Automattic/simplenote-electron/releases/download/v#{version}/Simplenote-macOS-#{version}.dmg"
   name "Simplenote"
+  desc "React client for Simplenote"
   homepage "https://github.com/Automattic/simplenote-electron"
 
   app "Simplenote.app"
