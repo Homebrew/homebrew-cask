@@ -20,7 +20,7 @@ cask "freeplane" do
   livecheck do
     url "https://sourceforge.net/projects/freeplane/rss?path=/freeplane%20stable"
     strategy :page_match
-    regex(%r{stable/Freeplane[._-](\d+(?:\.\d+)+)\.dmg}i)
+    regex(%r{stable/Freeplane[._-]v?(\d+(?:\.\d+)+)(?:[._-]apple)?\.dmg}i)
   end
 
   app "Freeplane.app"
