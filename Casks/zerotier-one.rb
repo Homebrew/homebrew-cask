@@ -14,7 +14,9 @@ cask "zerotier-one" do
 
   pkg "ZeroTier One.pkg"
 
-  uninstall pkgutil:   "com.zerotier.pkg.ZeroTierOne",
-            launchctl: "com.zerotier.one",
-            kext:      "com.zerotier.tap"
+  uninstall quit:      "com.zerotier.ZeroTier-One",
+            pkgutil:   "com.zerotier.pkg.ZeroTierOne",
+            launchctl: "com.zerotier.one"
+
+  zap trash: "~/Library/Preferences/com.zerotier.ZeroTier-One.plist"
 end
