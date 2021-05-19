@@ -4,7 +4,7 @@ cask "android-commandlinetools" do
 
   url "https://dl.google.com/android/repository/commandlinetools-mac-#{version}_latest.zip",
       verified: "dl.google.com/android/repository/"
-  name "Android Command-line Tools"
+  name "Android SDK Command-line Tools"
   desc "Command-line tools for building and debugging Android apps"
   homepage "https://developer.android.com/studio"
 
@@ -16,8 +16,8 @@ cask "android-commandlinetools" do
   conflicts_with cask:    "android-sdk",
                  formula: "proguard"
 
-  android_sdk_root = HOMEBREW_PREFIX.join("share", "android-commandlinetools")
-  android_clt_dir = android_sdk_root.join("cmdline-tools", "latest")
+  android_sdk_root = "#{HOMEBREW_PREFIX}/share/android-commandlinetools"
+  android_clt_dir = "#{android_sdk_root}/cmdline-tools/homebrew"
 
   binary "#{android_clt_dir}/bin/apkanalyzer"
   binary "#{android_clt_dir}/bin/avdmanager"
