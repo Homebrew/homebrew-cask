@@ -5,6 +5,7 @@ cask "cctalk" do
   url "https://cc.hjfile.cn/cc/CCtalk.#{version}/8/1/103/CCtalk.#{version}.dmg",
       verified: "cc.hjfile.cn/"
   name "CCtalk"
+  desc "Real-time interactive education platform"
   homepage "https://www.cctalk.com/download/"
 
   livecheck do
@@ -12,7 +13,7 @@ cask "cctalk" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :el_capitan"
 
   app "CCtalk.app"
 end
