@@ -1,6 +1,6 @@
 cask "pop" do
-  version "5.0.4"
-  sha256 "6e78f5d3b475ec6721de8e2024194a97a40abc5a65a264f60a2395d9b1bb88a2"
+  version "5.0.10"
+  sha256 "e94ddddb5839f349bee3757c2adccccc5f6bf2ba8da9f555b88d92bf40b2fec4"
 
   url "https://download.pop.com/desktop-app/darwin/#{version}/Pop.dmg"
   name "Pop"
@@ -8,9 +8,10 @@ cask "pop" do
   homepage "https://pop.com/"
 
   livecheck do
-    url "https://download.pop.com/"
-    strategy :page_match
-    regex(%r{desktop-app/darwin/(\d+(\.\d+)*)/Pop\.dmg})
+    # The download page (https://pop.com/download/mac) is rendered using
+    # JavaScript and the version information is sent over a WebSocket connection.
+    # As such, we can't check it and there don't appear to be any alternatives.
+    skip "Version information not available in a checkable format"
   end
 
   auto_updates true
