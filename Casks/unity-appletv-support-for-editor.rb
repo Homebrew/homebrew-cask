@@ -1,6 +1,6 @@
 cask "unity-appletv-support-for-editor" do
-  version "2021.1.6f1,c0fade0cc7e9"
-  sha256 "c2b86c911c09b2203d9c4062ced1b50b6b74fb48bdecaf4612d55f4bb0f45826"
+  version "2021.1.7f1,d91830b65d9b"
+  sha256 "3021919816f8b5ffb19348042a90966201ea2ef8a70f69480cc698746602b517"
 
   url "https://download.unity3d.com/download_unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-AppleTV-Support-for-Editor-#{version.before_comma}.pkg",
       verified: "download.unity3d.com/download_unity/"
