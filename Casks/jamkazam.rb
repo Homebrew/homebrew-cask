@@ -11,12 +11,10 @@ cask "jamkazam" do
   livecheck do
     url "https://www.jamkazam.com/downloads"
     strategy :page_match
-    regex(/JamKazam-(\d+(?:\.\d+)*)\.dmg/i) # defined in cdata
+    regex(/JamKazam-(\d+(?:\.\d+)*)\.dmg/i)
   end
 
   app "JamKazam.app"
 
-  zap trash: [
-    "~/Library/Application Support/JamKazam",
-  ]
+  zap trash: "~/Library/Application Support/JamKazam"
 end
