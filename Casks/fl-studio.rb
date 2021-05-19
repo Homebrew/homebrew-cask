@@ -4,6 +4,7 @@ cask "fl-studio" do
 
   url "https://demodownload.image-line.com/flstudio/flstudio_mac_#{version}.dmg"
   name "FL Studio"
+  desc "Digital audio production application"
   homepage "https://www.image-line.com/flstudio/"
 
   livecheck do
