@@ -2,8 +2,7 @@ cask "anka-build-cloud-registry" do
   version "1.16.0-25e4cad"
   sha256 "b63135dd67e89b49346d38b1555a3ce28aaeef67e9026f2abddc48a9683a690b"
 
-  url "https://d1efqjhnhbvc57.cloudfront.net/AnkaRegistry-#{version}.pkg",
-      verified: "d1efqjhnhbvc57.cloudfront.net/"
+  url "https://downloads.veertu.com/anka/AnkaRegistry-#{version}.pkg"
   name "Anka Build Cloud Registry"
   desc "Store Anka's virtual machines in a central location"
   homepage "https://veertu.com/"
