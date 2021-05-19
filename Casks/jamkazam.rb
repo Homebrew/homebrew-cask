@@ -15,4 +15,8 @@ cask "jamkazam" do
   end
 
   app "JamKazam.app"
+
+  zap trash: [
+    "~/Library/Application Support/JamKazam",
+  ]
 end
