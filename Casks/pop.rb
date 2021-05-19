@@ -11,7 +11,7 @@ cask "pop" do
   # JavaScript and the version information is sent over a WebSocket connection.
   # As such, we can't check it and there don't appear to be any alternatives.
   livecheck do
-    skip "File listing unavailable"
+    skip "Version information not available in a checkable format"
   end
 
   auto_updates true
