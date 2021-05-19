@@ -8,5 +8,11 @@ cask "jamkazam" do
   desc "Low-latency rehearsing, jamming and performing"
   homepage "https://jamkazam.com/"
 
+  livecheck do
+    url "https://www.jamkazam.com/downloads"
+    strategy :page_match
+    regex(/JamKazam-(\d+(?:\.\d+)*)\.dmg/i) # defined in cdata
+  end
+
   app "JamKazam.app"
 end
