@@ -1,5 +1,5 @@
 cask "beeper" do
-  version :latest
+  version "2.0.1"
   sha256 :no_check
 
   if Hardware::CPU.intel?
@@ -9,8 +9,14 @@ cask "beeper" do
   end
 
   name "Beeper"
-  desc "Universal chat app unifying 15 different chat networks"
+  desc "Universal chat app powered by Matrix, unifying 15 different chat networks"
   homepage "https://www.beeper.com/"
+
+  livecheck do
+    url :url
+    strategy :header_match
+    regex(/Beeper(?:%20|[ ._-])?(\d+(?:\.\d+)*)(?:-arm64)?\.dmg/i)
+  end
 
   app "Beeper.app"
 
