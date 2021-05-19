@@ -17,8 +17,8 @@ cask "reaper" do
   desc "Digital audio production application"
   homepage "https://www.reaper.fm/"
 
-  app "REAPER64.app"
-  app "ReaMote64.app"
+  app "REAPER.app"
+  app "ReaMote.app"
 
   zap trash: [
     "~/Library/Application Support/REAPER",
