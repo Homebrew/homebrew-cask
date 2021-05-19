@@ -8,9 +8,7 @@ cask "pop" do
   homepage "https://pop.com/"
 
   livecheck do
-    url "https://download.pop.com/"
-    strategy :page_match
-    regex(%r{desktop-app/darwin/(\d+(\.\d+)*)/Pop\.dmg})
+    skip "File listing unavailable"
   end
 
   auto_updates true
