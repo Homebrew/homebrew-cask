@@ -4,7 +4,7 @@ cask "android-commandlinetools" do
 
   url "https://dl.google.com/android/repository/commandlinetools-mac-#{version}_latest.zip",
       verified: "dl.google.com/android/repository/"
-  name "android-cmdline-tools"
+  name "Android Command-line Tools"
   desc "Command-line tools for building and debugging Android apps"
   homepage "https://developer.android.com/studio"
 
@@ -19,11 +19,12 @@ cask "android-commandlinetools" do
   android_sdk_root = HOMEBREW_PREFIX.join("share", "android-commandlinetools")
   android_clt_dir = android_sdk_root.join("cmdline-tools", "latest")
 
-  commands = %w[apkanalyzer avdmanager lint retrace screenshot2 sdkmanager]
-  commands.each do |command|
-    binary "#{android_clt_dir}/bin/#{command}"
-  end
-
+  binary "#{android_clt_dir}/bin/apkanalyzer"
+  binary "#{android_clt_dir}/bin/avdmanager"
+  binary "#{android_clt_dir}/bin/lint"
+  binary "#{android_clt_dir}/bin/retrace"
+  binary "#{android_clt_dir}/bin/screenshot2"
+  binary "#{android_clt_dir}/bin/sdkmanager"
   artifact "cmdline-tools", target: android_clt_dir
 
   zap trash: android_sdk_root
