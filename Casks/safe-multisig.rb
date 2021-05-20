@@ -5,7 +5,7 @@ cask "safe-multisig" do
   url "https://github.com/gnosis/safe-react/releases/download/v#{version}/Safe-Multisig-#{version}.dmg",
       verified: "github.com/gnosis/safe-react/"
   name "Gnosis Safe Multisig"
-  desc "Gnosis Safe Ethereum multisig wallet"
+  desc "Ethereum multisig wallet"
   homepage "https://gnosis-safe.io/"
 
   auto_updates false
