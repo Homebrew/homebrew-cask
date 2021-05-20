@@ -9,9 +9,10 @@ cask "foobar2000" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/foobar2000-v(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/foobar2000[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
+
+  depends_on macos: ">= :el_capitan"
 
   app "foobar2000.app"
 
