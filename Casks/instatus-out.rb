@@ -4,6 +4,7 @@ cask "instatus-out" do
 
   url "https://github.com/instatushq/out/releases/download/v#{version}/Instatus.Out-#{version}-mac.dmg",
       verified: "github.com/instatushq/out"
+
   name "instatus-out"
   desc "Monitor services in your menu bar"
   homepage "https://instatus.com/out"
