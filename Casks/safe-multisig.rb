@@ -8,6 +8,12 @@ cask "safe-multisig" do
   desc "Ethereum multisig wallet"
   homepage "https://gnosis-safe.io/"
 
+  livecheck do
+    url "https://api.github.com/repos/gnosis/safe-react/releases"
+    strategy :page_match
+    regex(/(\d+(?:\.\d+)*).dmg/)
+  end
+
   app "Safe Multisig.app"
 
   zap trash: "~/Library/Application Support/Safe Multisig"
