@@ -12,6 +12,5 @@ cask "safe-multisig" do
 
   app "Safe Multisig.app"
 
-  zap trash:
-             "~/Library/Application Support/Safe Multisig"
+  zap trash: "~/Library/Application Support/Safe Multisig"
 end
