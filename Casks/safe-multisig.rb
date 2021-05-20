@@ -8,8 +8,6 @@ cask "safe-multisig" do
   desc "Ethereum multisig wallet"
   homepage "https://gnosis-safe.io/"
 
-  auto_updates false
-
   app "Safe Multisig.app"
 
   zap trash: "~/Library/Application Support/Safe Multisig"
