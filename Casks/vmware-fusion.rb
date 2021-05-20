@@ -88,6 +88,6 @@ cask "vmware-fusion" do
   ]
 
   caveats do
-    kext
+    kext if MacOS.version == :catalina
   end
 end
