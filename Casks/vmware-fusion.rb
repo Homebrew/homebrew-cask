@@ -4,7 +4,7 @@ cask "vmware-fusion" do
 
   url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version}.dmg"
   name "VMware Fusion"
-  desc "App to run other operating systems without rebooting"
+  desc "Create, manage, and run virtual machinces"
   homepage "https://www.vmware.com/products/fusion.html"
 
   livecheck do
