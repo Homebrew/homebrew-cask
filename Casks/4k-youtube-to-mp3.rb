@@ -10,11 +10,10 @@ cask "4k-youtube-to-mp3" do
 
   livecheck do
     url "https://www.4kdownload.com/download"
-    strategy :page_match
-    regex(%r{href=.*?/4kyoutubetomp3_(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/4kyoutubetomp3[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "4K YouTube to MP3.app"
 end
