@@ -8,8 +8,8 @@ cask "sublime-text" do
   homepage "https://www.sublimetext.com/"
 
   livecheck do
-    url "https://www.sublimetext.com/updates/#{version.major}/stable_update_check"
-    regex(/"latest_version":\s*(\d+)/i)
+    url "https://www.sublimetext.com/download"
+    regex(/href=.*?v?(\d+)_mac\.zip/i)
     strategy :page_match do |page, regex|
       match = page.match(regex)[1]
       "#{match[0]}.#{match[1..]}"
