@@ -7,5 +7,10 @@ cask "hightop" do
   desc "Quick file access via the menu bar"
   homepage "https://hightop.app/"
 
+  livecheck do
+    url "https://hightop.app/downloads/updates.xml"
+    strategy :sparkle
+  end
+
   app "HighTop.app"
 end
