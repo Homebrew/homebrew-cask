@@ -1,13 +1,17 @@
 cask "manycam" do
-  version "7.8.0.17"
-  sha256 "d0ced7328223277282e0f2afe791e03106800622bd232fa4dae63d8bf80cdf77"
+  version "7.8.4.14"
+  sha256 :no_check
 
-  # download3.manycams.com was verified as official when first introduced to the cask
-  url "https://download3.manycams.com/ManyCam.dmg"
-  appcast "https://manycam.com/mac_changes/"
+  url "https://download3.manycams.com/ManyCam.dmg",
+      verified: "download3.manycams.com/"
   name "ManyCam"
   desc "Live streaming software"
   homepage "https://manycam.com/"
+
+  livecheck do
+    url "https://manycam.com/mac_changes/"
+    regex(%r{Version\s*(?:<[^/>]*>\s*)*(\d+(?:\.\d+)+)}i)
+  end
 
   depends_on macos: ">= :el_capitan"
 
