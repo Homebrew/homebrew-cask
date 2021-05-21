@@ -5,7 +5,7 @@ cask "sublime-text" do
   url "https://download.sublimetext.com/sublime_text_build_#{version.no_dots}_mac.zip"
   name "Sublime Text"
   desc "Text editor for code, markup and prose"
-  homepage "https://www.sublimetext.com"
+  homepage "https://www.sublimetext.com/"
 
   livecheck do
     url "https://www.sublimetext.com/updates/#{version.major}/stable/appcast_osx.xml"
