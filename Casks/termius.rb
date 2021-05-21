@@ -1,5 +1,5 @@
 cask "termius" do
-  version "7.11.1"
+  version "7.11.3"
   sha256 :no_check
 
   if Hardware::CPU.intel?
