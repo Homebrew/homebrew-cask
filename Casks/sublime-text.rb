@@ -13,8 +13,8 @@ cask "sublime-text" do
     strategy :page_match do |page, regex|
       match = page.match(regex)[1]
       "#{match[0]}.#{match[1..]}"
+    end
   end
-end
 
   auto_updates true
   conflicts_with cask: "sublime-text-dev"
