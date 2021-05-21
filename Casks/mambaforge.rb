@@ -24,7 +24,10 @@ cask "mambaforge" do
   homepage "https://github.com/conda-forge/miniforge"
 
   auto_updates true
-  conflicts_with cask: ["miniconda", "miniforge"]
+  conflicts_with cask: [
+    "miniconda",
+    "miniforge",
+  ]
   container type: :naked
 
   binary "#{caskroom_path}/base/condabin/conda"
