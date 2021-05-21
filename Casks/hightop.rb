@@ -13,4 +13,13 @@ cask "hightop" do
   end
 
   app "HighTop.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.knollsoft.HighTopLauncher",
+    "~/Library/Application Support/HighTop+",
+    "~/Library/Caches/com.knollsoft.HighTop",
+    "~/Library/Containers/com.knollsoft.HighTopLauncher",
+    "~/Library/Preferences/com.knollsoft.HighTop.plist",
+    "~/Library/Saved Application State/com.knollsoft.HighTop.savedState",
+  ]
 end
