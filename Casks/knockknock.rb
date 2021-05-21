@@ -4,7 +4,6 @@ cask "knockknock" do
 
   url "https://github.com/objective-see/KnockKnock/releases/download/v#{version}/KnockKnock_#{version}.zip",
       verified: "github.com/objective-see/KnockKnock/"
-  appcast "https://objective-see.com/products/changelogs/KnockKnock.txt"
   name "KnockKnock"
   desc "Tool to show what is persistently installed on the computer"
   homepage "https://objective-see.com/products/knockknock.html"

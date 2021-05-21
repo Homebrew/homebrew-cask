@@ -1,5 +1,5 @@
 cask "clockify" do
-  version "2.6.7,218"
+  version "2.6.9,234"
   sha256 :no_check
 
   url "https://clockify-resources.s3.eu-central-1.amazonaws.com/downloads/ClockifyDesktop.zip",

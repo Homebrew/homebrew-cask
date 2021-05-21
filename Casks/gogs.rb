@@ -1,8 +1,8 @@
 cask "gogs" do
-  version "0.11.91"
-  sha256 "1480a489aa853d01b0f6c9c2fb0aa19b61b5847bcd0cae1f2d8db6833f79b29d"
+  version "0.12.3"
+  sha256 "3e943a13b7f8ade0a87c5f2b40e5db52faab9035ae045d4ee1d0632b9b2479fc"
 
-  url "https://github.com/gogs/gogs/releases/download/v#{version}/darwin_amd64.zip",
+  url "https://github.com/gogs/gogs/releases/download/v#{version}/gogs_#{version}_darwin_amd64.zip",
       verified: "github.com/gogs/gogs/"
   name "Go Git Service"
   homepage "https://gogs.io/"

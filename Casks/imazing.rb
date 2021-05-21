@@ -1,6 +1,6 @@
 cask "imazing" do
-  version "2.13.5,14765"
-  sha256 "7963abaa5f8b66741b5aae0601353351e39b0f36c3a8de518caa6bd1891378eb"
+  version "2.13.8,14897"
+  sha256 "1fec93e81af3a449df26b3319107eefcea63945fd2770a3f8bf4693abd621464"
 
   url "https://downloads.imazing.com/mac/iMazing/#{version.before_comma}.#{version.after_comma}/iMazing_#{version.before_comma}.#{version.after_comma}.dmg"
   name "iMazing"
@@ -13,7 +13,6 @@ cask "imazing" do
   end
 
   auto_updates true
-  conflicts_with cask: "imazing-mini"
 
   app "iMazing.app"
 

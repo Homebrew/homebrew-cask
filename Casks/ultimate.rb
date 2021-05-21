@@ -1,11 +1,16 @@
 cask "ultimate" do
-  version "3.0.12.1125"
+  version "3.0.13.511"
   sha256 :no_check
 
   url "https://download.epubor.com/epubor_ultimate.zip"
-  appcast "https://www.epubor.com/ultimate.html"
-  name "Ultimate Converter"
+  name "Epubor Ultimate"
+  desc "Convert and remove DRM on eBooks"
   homepage "https://www.epubor.com/"
+
+  livecheck do
+    url "https://www.epubor.com/ultimate.html"
+    regex(/Version:\s*(\d+(?:\.\d+)+)/i)
+  end
 
   pkg "Ultimate.pkg"
 

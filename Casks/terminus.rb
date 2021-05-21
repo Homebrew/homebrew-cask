@@ -1,13 +1,13 @@
 cask "terminus" do
-  version "1.0.135"
+  version "1.0.139"
 
   if Hardware::CPU.intel?
-    sha256 "10d007984e6a96f77f76a2ae06903ac8790ea5db43e6419772f11cf8c3273356"
+    sha256 "0616706e5e4324200b269d9434b30b2819b2e36683b71c639dd9280b7b9a5beb"
 
     url "https://github.com/Eugeny/terminus/releases/download/v#{version}/terminus-#{version}-macos-x86_64.zip",
         verified: "github.com/Eugeny/terminus/"
   else
-    sha256 "d4ebb75e58dfa604e4090484f0f8bc26ce1d6c0c9ea991d41615ecd73eca7307"
+    sha256 "dc84421cb3d7301b30d9d78d0254a3eafd6058947e4c7be6f5a3a8137f6d01e9"
 
     url "https://github.com/Eugeny/terminus/releases/download/v#{version}/terminus-#{version}-macos-arm64.zip",
         verified: "github.com/Eugeny/terminus/"

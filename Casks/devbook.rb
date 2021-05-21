@@ -1,6 +1,17 @@
 cask "devbook" do
-  version "0.1.14"
-  sha256 :no_check
+  version "0.1.18"
+
+  if Hardware::CPU.intel?
+    sha256 "1294edfd9ecd586ffb0d1d2cf0247dde8b274b128e7c22c773c8645c8cd8e233"
+
+    url "https://download.todesktop.com/2102273jsy18baz/Devbook%20#{version}.dmg",
+        verified: "download.todesktop.com/"
+  else
+    sha256 "a1e7a0f821bf30dc9bd3b6dd07da8c28af51b415faafb80cc96f4eaed06d37e5"
+
+    url "https://download.todesktop.com/2102273jsy18baz/Devbook%20#{version}-arm64.dmg",
+        verified: "download.todesktop.com/"
+  end
 
   name "Devbook"
   desc "Search engine for developers"
@@ -8,15 +19,7 @@ cask "devbook" do
 
   livecheck do
     url "https://download.todesktop.com/2102273jsy18baz/latest-mac.yml"
-    strategy :page_match do |page|
-      YAML.safe_load(page)["version"]
-    end
-  end
-
-  if Hardware::CPU.intel?
-    url "https://download.usedevbook.com/mac/dmg/x64"
-  else
-    url "https://download.usedevbook.com/mac/dmg/arm64"
+    strategy :electron_builder
   end
 
   auto_updates true

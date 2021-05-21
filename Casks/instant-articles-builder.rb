@@ -1,6 +1,6 @@
 cask "instant-articles-builder" do
-  version "0.2.2"
-  sha256 "2332bb4ce57f025871a393f78f48451f68b34b65a70f43db4e5065074818da1e"
+  version "0.2.3"
+  sha256 "0656de713a6e0e112d02f3354b8021567671aeab01955456313aa76e4ce339c2"
 
   url "https://github.com/facebook/instant-articles-builder/releases/download/#{version}/Instant.Articles.Builder.for.Mac-#{version}.zip",
       verified: "github.com/facebook/instant-articles-builder/"

@@ -1,12 +1,17 @@
 cask "roboform" do
-  version "8.9.5"
-  sha256 "be05157a9b9ad52a2ac2ac5bd664953ba4501c82b26bd65e9fa7207f4a037bed"
+  version "9.0.9"
+  sha256 "c221f3531d1b273cf3e637612388223aee703558706855d2ed5ac2b68444213d"
 
   url "https://www.roboform.com/dist/roboform-mac-v#{version.major}.dmg"
-  appcast "https://www.roboform.com/news-mac"
   name "RoboForm"
   desc "Password manager and form filler application"
   homepage "https://www.roboform.com/"
+
+  livecheck do
+    url "https://www.roboform.com/news-mac"
+    strategy :page_match
+    regex(/Version\s*(\d+(?:\.\d+)*)/i)
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"

@@ -3,9 +3,14 @@ cask "islide" do
   sha256 "c91552583cb784c1a0e7d6e2db132c54e0b7065be54a93aad828470844c99e19"
 
   url "https://static.islide.cc/site/product/package/dmg/iSlide-#{version}.dmg"
-  appcast "https://static.islide.cc/site/product/package/dmg/latest-mac.yml"
   name "iSlide"
+  desc "PPT-based plug-in tool"
   homepage "https://www.islide.cc/"
+
+  livecheck do
+    url "https://static.islide.cc/site/product/package/dmg/latest-mac.yml"
+    strategy :electron_builder
+  end
 
   auto_updates true
 

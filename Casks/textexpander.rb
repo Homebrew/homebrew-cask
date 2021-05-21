@@ -1,6 +1,6 @@
 cask "textexpander" do
-  version "6.8.1,681.3"
-  sha256 "16ababb5a67577b5eabc134de09426134f534c9219dfd0e77b8c61b508bff2b0"
+  version "6.8.4,684.8"
+  sha256 "a8e67846e386cf6e2235f40004c82ebd442ebb5e6152a088129334741b6dd772"
 
   url "https://cdn.textexpander.com/mac/#{version.after_comma}/TextExpander_#{version.before_comma}.zip",
       verified: "cdn.textexpander.com/mac/"
@@ -9,7 +9,7 @@ cask "textexpander" do
   homepage "https://smilesoftware.com/TextExpander"
 
   livecheck do
-    url "https://smilesoftware.com/appcast/TextExpander#{version.major}.xml"
+    url "https://textexpander.com/appcast/TextExpander-macOS.xml"
     strategy :sparkle
   end
 

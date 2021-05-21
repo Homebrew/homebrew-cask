@@ -1,6 +1,6 @@
 cask "geph" do
-  version "4.2.6"
-  sha256 "e258c05053b72d65f711fc165452c9b7096c3fab36b98e0fe9ed77b1aba36f13"
+  version "4.4.1"
+  sha256 "358a1c1a158b436fe0290699bab775aac9be2fd530d385d48bb2f97f99e85b05"
 
   url "https://f001.backblazeb2.com/file/geph4-dl/Geph4Releases/#{version}/geph-macos-#{version}.dmg",
       verified: "f001.backblazeb2.com/file/geph4-dl/"
@@ -9,7 +9,7 @@ cask "geph" do
   homepage "https://geph.io/"
 
   livecheck do
-    skip
+    url "https://github.com/geph-official/geph4"
   end
 
   app "Geph.app"

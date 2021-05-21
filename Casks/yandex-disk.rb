@@ -1,11 +1,16 @@
 cask "yandex-disk" do
-  version :latest
+  version "3.2.8,2721"
   sha256 :no_check
 
   url "https://disk.yandex.ru/download/Yandex.Disk.dmg/?instant=1"
   name "Yandex.Disk"
   desc "Cloud storage"
   homepage "https://disk.yandex.ru/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   app "Yandex.Disk.2.app"
 

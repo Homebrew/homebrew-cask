@@ -3,10 +3,14 @@ cask "displaperture" do
   sha256 :no_check
 
   url "https://manytricks.com/download/displaperture"
-  appcast "https://manytricks.com/displaperture/appcast/?version=#{version.major}"
   name "Displaperture"
   desc "Rounds your display corners"
   homepage "https://manytricks.com/displaperture/"
+
+  livecheck do
+    url "https://manytricks.com/displaperture/appcast/"
+    strategy :sparkle
+  end
 
   app "Displaperture.app"
 

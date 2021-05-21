@@ -1,15 +1,15 @@
 cask "eclipse-jee" do
-  version "4.18.0,2020-12:R"
-  sha256 "f8b0cc4db72949ef2d3e60582ceeafa1d276a6acadf839635e0ec1456ec40ae1"
+  version "4.19.0,2021-03:R"
+  sha256 "e067b92469ffd58776c863747a246d285532667918f7974b2baf4b39f790f61e"
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.after_comma.before_colon}/#{version.after_colon}/eclipse-jee-#{version.after_comma.before_colon}-#{version.after_colon}-macosx-cocoa-x86_64.dmg&r=1"
   name "Eclipse IDE for Java EE Developers"
   homepage "https://eclipse.org/"
 
   livecheck do
-    url "https://projects.eclipse.org/releases/"
+    url "https://www.eclipse.org/downloads/packages/"
     strategy :page_match do |page|
-      page.scan(%r{href=.*projects.eclipse.org/releases/(\d+-\d+)}i).map do |release|
+      page.scan(%r{href=.*?/downloads/packages/release/(\d+-\d+)}i).map do |release|
         version_page = Net::HTTP.get(URI.parse("https://projects.eclipse.org/releases/#{release[0]}"))
         version = version_page.scan(%r{href="/projects/eclipse/releases/(\d+(?:\.\d+)*)"}i)
         "#{version[0][0]},#{release[0]}:R"

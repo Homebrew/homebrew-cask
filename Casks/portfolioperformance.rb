@@ -1,6 +1,6 @@
 cask "portfolioperformance" do
-  version "0.51.2"
-  sha256 "1b2f2440fa1efa80c8237371e9e61d27c5f9b9552f7489ea7b803e890cdcba02"
+  version "0.52.0"
+  sha256 "bd24488939981d1538d1b2f8b0d8b4819bdacf59cfdd6d98d2b73ec26e8840e5"
 
   url "https://github.com/buchen/portfolio/releases/download/#{version}/PortfolioPerformance-#{version}.dmg",
       verified: "github.com/buchen/portfolio/"

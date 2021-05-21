@@ -1,12 +1,12 @@
 cask "tencent-meeting" do
   if Hardware::CPU.intel?
-    version "2.7.5.434,727e439f79327c7c63677a9097353d3d"
-    sha256 "f072dafd53fd816acc95542dae0f750727704532b81b7afc5861e0cb9df75d71"
+    version "2.10.5.408,47e717cd17e9ac43e48cab9628defd50"
+    sha256 "f4102a85732e84c74f0792b2ebd2425bf55a6b00593cd8081591d03bafba511b"
     url "https://updatecdn.meeting.qq.com/#{version.after_comma}/TencentMeeting_0300000000_#{version.before_comma}.publish.x86_64.dmg",
         verified: "qq.com/"
   else
-    version "2.7.5.434,2a4a7de84f9518b5ba69df232eb7a1d0"
-    sha256 "7e5c56185e9f29c3b6db10283101118e1d02b3d87178e45d90d9a0a27b6dc9fa"
+    version "2.10.5.408,65a04e9daebb97fee0941fe1c1027153"
+    sha256 "dcf67054496e2df1dc2194c65971548e07e7d284c7699c45d74111fbc9edf086"
     url "https://updatecdn.meeting.qq.com/#{version.after_comma}/TencentMeeting_0300000000_#{version.before_comma}.publish.arm64.dmg",
         verified: "qq.com/"
   end
@@ -15,6 +15,10 @@ cask "tencent-meeting" do
   name "腾讯会议"
   desc "Cloud video conferencing"
   homepage "https://meeting.tencent.com/"
+
+  livecheck do
+    skip "No version information available"
+  end
 
   auto_updates true
 

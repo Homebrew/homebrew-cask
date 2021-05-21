@@ -1,6 +1,6 @@
 cask "vallum" do
-  version "3.3.4"
-  sha256 "3d47f43b104c65a5874bdae64995df3c2eee39d2fb640566325ae280d5ca7654"
+  version "4.0"
+  sha256 "3ddd8b6635c002463b9db2fc9bccf4e3fd9cd35b166f4080475e7ae7725b0ada"
 
   url "https://github.com/TheMurusTeam/Vallum/releases/download/v#{version}/vallum-#{version}.zip",
       verified: "github.com/TheMurusTeam/Vallum/"
@@ -13,7 +13,7 @@ cask "vallum" do
     regex(/^v?(\d+(?:\.\d+)*)$/i)
   end
 
-  pkg "Vallum.pkg"
+  app "Vallum.app"
 
   uninstall pkgutil:   "it.murus.afw.Vallum",
             launchctl: [

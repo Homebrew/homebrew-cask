@@ -1,14 +1,14 @@
 cask "jellyfin" do
-  version "10.7.1"
-  sha256 "661b8882a04d68210c8eb327a550d9dbb340ea40a235908e8822c10c20cb5064"
+  version "10.7.5"
+  sha256 "c363b443e19f00aae1482ab91fa241bba596a8121e30b001b1604b43f4d0bc0c"
 
   url "https://repo.jellyfin.org/releases/server/macos/stable/installer/Jellyfin_#{version}.dmg"
   name "Jellyfin"
+  desc "Media system"
   homepage "https://jellyfin.org/"
 
   livecheck do
     url "https://repo.jellyfin.org/releases/server/macos/stable/"
-    strategy :page_match
     regex(%r{href=.*?/Jellyfin_(\d+(?:\.\d+)*)\.dmg}i)
   end
 

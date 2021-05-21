@@ -1,8 +1,9 @@
 cask "clover-configurator" do
-  version "5.17.4.4"
+  version "5.18.2.0"
   sha256 :no_check
 
-  url "https://mackie100projects.altervista.org/apps/cloverconf/download-new-build.php?version=global"
+  url "https://mackie100projects.altervista.org/apps/cloverconf/download-new-build.php?version=global",
+      referer: "https://mackie100projects.altervista.org/"
   appcast "https://mackie100projects.altervista.org/download-clover-configurator/"
   name "Clover Configurator"
   desc "Clover EFI bootloader configuration helper"

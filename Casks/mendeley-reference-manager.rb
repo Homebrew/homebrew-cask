@@ -1,12 +1,16 @@
 cask "mendeley-reference-manager" do
-  version "2.43.0"
-  sha256 "d3ed2c7de0f123e1b9541eafd88741fb4a5abec2ccafa405c176eec1b7f66525"
+  version "2.48.0"
+  sha256 "75293c2210f4a059a6584533b7e4e9d2b241a5ef650408f5a6e2818e6eb460de"
 
   url "https://static.mendeley.com/bin/desktop/mendeley-reference-manager-#{version}.dmg"
-  appcast "https://static.mendeley.com/bin/desktop/latest-mac.yml"
   name "Mendeley Reference Manager"
   desc "Research management tool"
   homepage "https://www.mendeley.com/download-reference-manager/macOS/"
+
+  livecheck do
+    url "https://static.mendeley.com/bin/desktop/latest-mac.yml"
+    strategy :electron_builder
+  end
 
   app "Mendeley Reference Manager.app"
 

@@ -1,18 +1,26 @@
 cask "phpstorm" do
-  version "2020.3.3"
+  version "2021.1.2,211.7142.44"
 
   if Hardware::CPU.intel?
-    sha256 "3c72eea3d7da78e9183d7f3e64de69bb577aeaabb0e595044837517545d5e1a4"
-    url "https://download.jetbrains.com/webide/PhpStorm-#{version}.dmg"
+    sha256 "f6371a659691c1ff58f6c81946207b1acd99539b89be3147c777130b4153c2df"
+    url "https://download.jetbrains.com/webide/PhpStorm-#{version.before_comma}.dmg"
   else
-    sha256 "b0538762e97c0d35e0452d78373d406aec6ac20151b21f4dd5f9ce8e510bf7c4"
-    url "https://download.jetbrains.com/webide/PhpStorm-#{version}-aarch64.dmg"
+    sha256 "b245a58612c0917235c108172a4e55c29ab89907a00522d696c32d3b81177201"
+    url "https://download.jetbrains.com/webide/PhpStorm-#{version.before_comma}-aarch64.dmg"
   end
 
-  appcast "https://data.services.jetbrains.com/products/releases?code=PS&latest=true&type=release"
   name "JetBrains PhpStorm"
   desc "PHP IDE by JetBrains"
   homepage "https://www.jetbrains.com/phpstorm/"
+
+  livecheck do
+    url "https://data.services.jetbrains.com/products/releases?code=PS&latest=true&type=release"
+    strategy :page_match do |page|
+      version = page.match(/"version":"(\d+(?:\.\d+)*)/i)
+      build = page.match(/"build":"(\d+(?:\.\d+)*)/i)
+      "#{version[1]},#{build[1]}"
+    end
+  end
 
   auto_updates true
 

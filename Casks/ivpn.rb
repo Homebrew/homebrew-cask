@@ -1,9 +1,10 @@
 cask "ivpn" do
-  version "2.12.17"
-  sha256 "0fd09967482f53c801dc55eaf23a88ad341da37f58d70d9c9e24c2e5aeb36c22"
+  version "3.3.10"
+  sha256 "388a4460f7a37dc6c306249fd0b74c000b17adc7d461e6617ff94e0f315471e5"
 
-  url "https://cdn.ivpn.net/releases/osx/IVPN-#{version}.dmg"
+  url "https://repo.ivpn.net/macos/bin/IVPN-#{version}.dmg"
   name "IVPN"
+  desc "VPN client"
   homepage "https://www.ivpn.net/apps-macos"
 
   livecheck do
@@ -13,6 +14,7 @@ cask "ivpn" do
   end
 
   auto_updates true
+  depends_on macos: ">= :mojave"
 
   app "IVPN.app"
 

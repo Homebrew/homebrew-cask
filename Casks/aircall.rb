@@ -1,15 +1,19 @@
 cask "aircall" do
-  version "2.9.0"
-  sha256 "f91cfc506e75a403306f4a36b95e8da3a88c1ed849145fbc2ce68b14f5690015"
+  version "2.15.5"
+  sha256 "040778e94281364f9aa4e4d55b81630d77e3f510af376874d1a4afb8d4d83349"
 
-  url "https://aircall-electron-releases.s3.amazonaws.com/production/Aircall-#{version}.zip",
-      verified: "aircall-electron-releases.s3.amazonaws.com/"
-  appcast "https://electron.aircall.io/update/osx/0.0.0"
+  url "https://download-electron.aircall.io/Aircall-#{version}.zip"
   name "Aircall"
   desc "Cloud-based call center and phone system software"
   homepage "https://aircall.io/"
 
+  livecheck do
+    url "https://electron.aircall.io/download/osx"
+    strategy :header_match
+  end
+
   auto_updates true
+  depends_on macos: ">= :sierra"
 
   app "Aircall.app"
 end

@@ -1,12 +1,16 @@
 cask "river-sparkle" do
-  version "3.0.6,8392"
+  version "3.0.8,8420"
   sha256 :no_check
 
   url "https://sparkleapp.com/update/Sparkle.zip"
-  appcast "https://sparkleapp.com/update/appcast.php?lang=en"
   name "Sparkle"
   desc "App to build websites"
   homepage "https://sparkleapp.com/"
+
+  livecheck do
+    url "https://sparkleapp.com/update/appcast.php?lang=en"
+    strategy :sparkle
+  end
 
   app "Sparkle.app"
 

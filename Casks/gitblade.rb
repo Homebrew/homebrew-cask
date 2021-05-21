@@ -3,9 +3,15 @@ cask "gitblade" do
   sha256 "51b261ee679048c2799a66439d8599d1ec5fa1592713993e85fa641eefeab274"
 
   url "https://gitblade.com/dl/gitblade-#{version}-darwin-x64.dmg"
-  appcast "https://gitblade.com/releases"
   name "GitBlade"
+  desc "Graphical client for Git"
   homepage "https://gitblade.com/"
+
+  livecheck do
+    url "https://gitblade.com/#download"
+    strategy :page_match
+    regex(%r{href=.*?/gitblade-(\d+(?:\.\d+)*)-darwin-x64\.dmg}i)
+  end
 
   app "GitBlade.app"
 end

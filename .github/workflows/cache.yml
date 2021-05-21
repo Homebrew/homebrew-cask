@@ -15,7 +15,7 @@ jobs:
       - name: Cancel Previous Runs
         uses: n1hility/cancel-previous-runs@953c92201f368370112ea2754545cb4468d89f12
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ github.token }}
 
   update:
     if: startsWith(github.repository, 'Homebrew/')
@@ -41,7 +41,7 @@ jobs:
 
       - name: Cache Homebrew Gems
         id: cache
-        uses: actions/cache@v2.1.4
+        uses: actions/cache@v2.1.5
         with:
           path: ${{ steps.set-up-homebrew.outputs.gems-path }}
           key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}

@@ -1,12 +1,18 @@
 cask "netnewswire" do
-  version "5.1.3"
-  sha256 "5f08f9ee986621d146c57f3ab3e98297944af368ce7ff1382a8e3a6c31fab5ea"
+  version "6.0.2"
+  sha256 "bf3f78a2d4552a022a17a4117ad819508a025b51c79e1905bcd44233331d1eed"
 
   url "https://github.com/brentsimmons/NetNewsWire/releases/download/mac-#{version}/NetNewsWire#{version}.zip",
       verified: "github.com/brentsimmons/NetNewsWire/"
   name "NetNewsWire"
   desc "Free and open-source RSS reader"
   homepage "https://ranchero.com/netnewswire/"
+
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^mac-(\d+(?:\.\d+)*)$/i)
+  end
 
   auto_updates true
   conflicts_with cask: "homebrew/cask-versions/netnewswire-beta"

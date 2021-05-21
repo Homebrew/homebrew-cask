@@ -1,13 +1,17 @@
 cask "anka-virtualization" do
-  version "2.3.4.128"
-  sha256 "c498b5b44b129ff1e23bff07717206674ba4d45bb5d0f5ad2cd68d1c572be679"
+  version "2.4.1.130"
+  sha256 "30917cc046ea6cd1de135c11fd1e0151e521c4974916fab6ee9f9c82ff8ba21b"
 
-  url "https://d1efqjhnhbvc57.cloudfront.net/Anka-#{version}.pkg",
-      verified: "d1efqjhnhbvc57.cloudfront.net/"
-  appcast "https://ankadocs.veertu.com/docs/release-notes/"
+  url "https://downloads.veertu.com/anka/Anka-#{version}.pkg"
   name "Anka Virtualization"
   desc "CLI tool for managing and creating virtual machines"
   homepage "https://veertu.com/"
+
+  livecheck do
+    url "https://veertu.com/downloads/anka-virtualization-latest"
+    strategy :header_match
+    regex(/Anka[._-]?v?(\d+(?:\.\d+)+)\.pkg/i)
+  end
 
   depends_on macos: ">= :yosemite"
 
@@ -29,6 +33,7 @@ cask "anka-virtualization" do
   zap trash: [
     "~/.anka",
     "~/Library/Application Support/Veertu/Anka",
+    "~/Library/Application Support/CrashReporter/ankahv_*.plist",
     "~/Library/Logs/Anka",
     "~/Library/Preferences/com.veertu.ankaview.plist",
     "/Library/Application Support/Veertu/Anka",

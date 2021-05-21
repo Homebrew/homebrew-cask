@@ -1,10 +1,11 @@
 cask "sabnzbd" do
-  version "3.2.0"
-  sha256 "d0f4cf42b9f355a522b752fc294d38b20f1b5ec95bb2bfa52f7eddf7847c0e4a"
+  version "3.2.1"
+  sha256 "d007fd890ddfce91e693cd7b759f48ae9fb01750574108f8354eccd15effae99"
 
   url "https://github.com/sabnzbd/sabnzbd/releases/download/#{version}/SABnzbd-#{version}-osx.dmg",
       verified: "github.com/sabnzbd/sabnzbd/"
   name "SABnzbd"
+  desc "Binary newsreader"
   homepage "https://sabnzbd.org/"
 
   livecheck do

@@ -1,6 +1,6 @@
 cask "qbittorrent" do
-  version "4.3.4.1"
-  sha256 "86f0514a973764c953f46b1d427159687d70db95c7c5e16d952fe298f43d15a1"
+  version "4.3.5"
+  sha256 "b3e66aedd007caa684734e9d2ef9ae74e6b7477f3b7760c407db55da9ca87df5"
 
   url "https://downloads.sourceforge.net/qbittorrent/qbittorrent-mac/qbittorrent-#{version}/qbittorrent-#{version}.dmg",
       verified: "sourceforge.net/qbittorrent/"

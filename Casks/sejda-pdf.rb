@@ -1,6 +1,6 @@
 cask "sejda-pdf" do
-  version "7.1.9"
-  sha256 "8882c390eb08182f04c421dea4ecd46c1fc914bf2da7464272c12c846a397261"
+  version "7.2.4"
+  sha256 "2a4925cc317af6b64ece0e260ef70d23792f94014c07042313e22bc302f94ad9"
 
   url "https://sejda-cdn.com/downloads/sejda-desktop_#{version}.dmg",
       verified: "sejda-cdn.com/"

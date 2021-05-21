@@ -8,10 +8,15 @@ cask "isyncr" do
   end
 
   url "https://www.jrtstudio.com/files/iSyncr%20Desktop%20#{version}.pkg"
-  appcast "https://www.jrtstudio.com/files/SlashiSyncr38.js"
   name "iSyncr Desktop"
   desc "Syncs iTunes to Android over a USB or WiFi connection"
   homepage "https://www.jrtstudio.com/iSyncr-iTunes-for-Android"
+
+  livecheck do
+    url "https://www.jrtstudio.com/files/SlashiSyncr38.js"
+    strategy :page_match
+    regex(/iSyncr\s*Desktop\s*(\d+(?:\.\d+)*)\.pkg/i)
+  end
 
   pkg "iSyncr Desktop #{version}.pkg"
 

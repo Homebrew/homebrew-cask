@@ -4,9 +4,13 @@ cask "bricksmith" do
 
   url "https://downloads.sourceforge.net/bricksmith/bricksmith/Bricksmith%20#{version}/BricksmithComplete#{version}.zip",
       verified: "downloads.sourceforge.net/bricksmith/"
-  appcast "https://bricksmith.sourceforge.io/files/bricksmith_appcast.xml"
   name "Bricksmith"
   homepage "https://bricksmith.sourceforge.io/"
+
+  livecheck do
+    url "https://bricksmith.sourceforge.io/files/bricksmith_appcast.xml"
+    strategy :sparkle
+  end
 
   app "Bricksmith/Bricksmith.app"
 end

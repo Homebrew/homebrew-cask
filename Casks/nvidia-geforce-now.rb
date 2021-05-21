@@ -1,11 +1,15 @@
 cask "nvidia-geforce-now" do
-  version "2.0.27.147"
+  version "2.0.29.120"
   sha256 :no_check
 
   url "https://download.nvidia.com/gfnpc/GeForceNOW-release.dmg"
   name "NVIDIA GeForce NOW"
   desc "Cloud gaming platform"
   homepage "https://www.nvidia.com/en-us/geforce-now/download/"
+
+  livecheck do
+    skip "No version information available"
+  end
 
   depends_on macos: ">= :yosemite"
 

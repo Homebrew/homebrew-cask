@@ -8,8 +8,8 @@ cask "obs" do
   homepage "https://obsproject.com/"
 
   livecheck do
-    url "https://github.com/obsproject/obs-studio"
-    strategy :git
+    url :homepage
+    regex(%r{href=.*?/obs-mac-(\d+(?:\.\d+)*)\.dmg}i)
   end
 
   auto_updates true

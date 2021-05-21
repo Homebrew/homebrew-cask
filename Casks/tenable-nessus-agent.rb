@@ -1,6 +1,6 @@
 cask "tenable-nessus-agent" do
-  version "8.2.3,12556"
-  sha256 "5cf0141b68490de42e4d6f9611bb1ca51542b5a6bb474945450e70885d7d268f"
+  version "8.2.4,12743"
+  sha256 "58feefce659721e90d19a50afaf82947e55b5258ca03b1ffd92d8a51e976c6c6"
 
   url "https://www.tenable.com/downloads/api/v1/public/pages/nessus-agents/downloads/#{version.after_comma}/download?i_agree_to_tenable_license_agreement=true"
   name "Tenable Nessus Agent"
@@ -14,6 +14,8 @@ cask "tenable-nessus-agent" do
       "#{match[2]},#{match[1]}"
     end
   end
+
+  auto_updates true
 
   pkg "Install Nessus Agent.pkg"
 

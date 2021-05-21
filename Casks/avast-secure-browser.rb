@@ -1,5 +1,5 @@
 cask "avast-secure-browser" do
-  version "87.0.401.89"
+  version "90.0.704.86"
   sha256 :no_check
 
   url "https://cdn-download.avastbrowser.com/AvastSecureBrowserSetup.pkg",
@@ -7,6 +7,11 @@ cask "avast-secure-browser" do
   name "Avast Secure Browser"
   desc "Web browser focusing on privacy"
   homepage "https://www.avast.com/secure-browser#mac"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   pkg "AvastSecureBrowserSetup.pkg"
 

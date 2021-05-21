@@ -1,5 +1,5 @@
 cask "diskcatalogmaker" do
-  version "8.3.2.1"
+  version "8.3.5"
   sha256 :no_check
 
   url "https://download.diskcatalogmaker.com/zip/DiskCatalogMaker.zip"
@@ -11,7 +11,7 @@ cask "diskcatalogmaker" do
     url "https://download.diskcatalogmaker.com/zip/DiskCatalogMaker.zip"
     strategy :header_match do |headers|
       match = headers["location"].match(/DiskCatalogMaker(\d+)f?(\d+)\.zip/i)
-      "#{match[1].split("", 3).join(".")}.#{match[2]}"
+      "#{match[1].split("", 3).reject(&:empty?).join(".")}.#{match[2]}"
     end
   end
 

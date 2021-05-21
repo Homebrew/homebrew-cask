@@ -1,6 +1,6 @@
 cask "decrediton" do
-  version "1.6.1"
-  sha256 "fe1485949dcb066332a50ddb164d468a9cfbe10056cc483eb37841f52e77172b"
+  version "1.6.3"
+  sha256 "bca8e9fac99bded3cdc71bd1db1ac49c7c4a242750777189a48bd467baefbf97"
 
   url "https://github.com/decred/decred-binaries/releases/download/v#{version}/decrediton-v#{version}.dmg"
   name "Decrediton"

@@ -1,10 +1,11 @@
 cask "knotes" do
-  version "2.8.2"
-  sha256 "ed64549e066a582e675f8dafb5fc2304d508040e3d05ceb2964188cdf75bba6a"
+  version "2.10.0"
+  sha256 "4ecb335996b73a1ad905c453a4c311a2e288df391ece9614b7c840d41c6096c2"
 
   url "https://knotes2.s3-ap-northeast-1.amazonaws.com/download/mac/Knotes-#{version}.dmg",
       verified: "knotes2.s3-ap-northeast-1.amazonaws.com/"
   name "Knotes"
+  desc "Reading notes management tool"
   homepage "https://knotesapp.com/"
 
   livecheck do

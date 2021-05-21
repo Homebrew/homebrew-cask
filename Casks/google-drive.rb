@@ -1,11 +1,16 @@
 cask "google-drive" do
-  version "45.0.12.0"
+  version "48.0.11"
   sha256 :no_check
 
   url "https://dl.google.com/drive-file-stream/GoogleDrive.dmg"
   name "Google Drive"
   desc "Client for the Google Drive storage service"
   homepage "https://www.google.com/drive/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   depends_on macos: ">= :el_capitan"
 
@@ -18,7 +23,6 @@ cask "google-drive" do
               "com.google.drivefs.x86_64",
               "com.google.drivefs.filesystems.dfsfuse.x86_64",
               "com.google.drivefs.shortcuts",
-              "com.google.pkg.Keystone",
             ]
 
   zap trash:     [

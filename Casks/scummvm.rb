@@ -14,4 +14,13 @@ cask "scummvm" do
   end
 
   app "ScummVM.app"
+
+  zap trash: [
+    "~/Documents/ScummVM Savegames",
+    "~/Library/Caches/org.scummvm.scummvm",
+    "~/Library/Logs/scummvm.log",
+    "~/Library/Preferences/ScummVM Preferences",
+    "~/Library/Preferences/org.scummvm.scummvm.plist",
+    "~/Library/Saved Application State/org.scummvm.scummvm.savedState",
+  ]
 end

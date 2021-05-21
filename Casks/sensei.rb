@@ -1,13 +1,17 @@
 cask "sensei" do
-  version "1.3.4,77"
+  version "1.4.6,88"
   sha256 :no_check
 
   url "https://cindori.s3.amazonaws.com/Sensei.dmg",
       verified: "cindori.s3.amazonaws.com/"
-  appcast "https://api.appcenter.ms/v0.1/public/sparkle/apps/51fc066a-f4b4-49ec-b966-b2f476d2eede"
   name "Sensei"
   desc "Monitors the computer system and optimizes its performance"
   homepage "https://sensei.app/"
+
+  livecheck do
+    url "https://api.appcenter.ms/v0.1/public/sparkle/apps/51fc066a-f4b4-49ec-b966-b2f476d2eede"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :catalina"

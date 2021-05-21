@@ -1,6 +1,6 @@
 cask "moonlight" do
-  version "3.1.0"
-  sha256 "7ddc42ac65f21346958649cc3136dbd9b603b2ab30cd9d39b32f6d679296d3b1"
+  version "3.1.3"
+  sha256 "c1bcc67d3b767d514a2d594aaf531a684709fd8516e39607f22a332cf0435302"
 
   url "https://github.com/moonlight-stream/moonlight-qt/releases/download/v#{version}/Moonlight-#{version}.dmg",
       verified: "github.com/moonlight-stream/moonlight-qt/"

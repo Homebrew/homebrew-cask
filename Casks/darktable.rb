@@ -8,6 +8,12 @@ cask "darktable" do
   desc "Photography workflow application and raw developer"
   homepage "https://www.darktable.org/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+    regex(%r{href=.*?/tag/release[._-]v?(\d+(?:\.\d+)+)["' >]}i)
+  end
+
   conflicts_with cask: "homebrew/cask-versions/darktable-dev"
 
   app "darktable.app"

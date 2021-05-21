@@ -1,6 +1,5 @@
 name: Reproducible Bug Report
 description: If you’re sure it’s reproducible and not just your machine, submit an issue so we can investigate
-issue_body: false
 body:
   - type: checkboxes
     attributes:
@@ -31,15 +30,33 @@ body:
   - type: textarea
     attributes:
       label: Output of command with `--verbose --debug`
+      value: |
+        <details><summary>Click to expand</summary><pre><code>
+
+        REPLACE THIS TEXT WITH THE OUTPUT
+
+        </code></pre></details>
     validations:
       required: true
   - type: textarea
     attributes:
       label: Output of `brew doctor --verbose`
+      value: |
+        <details><summary>Click to expand</summary><pre><code>
+
+        REPLACE THIS TEXT WITH THE OUTPUT
+
+        </code></pre></details>
     validations:
       required: true
   - type: textarea
     attributes:
       label: Output of `brew tap`
+      value: |
+        <details><summary>Click to expand</summary><pre><code>
+
+        REPLACE THIS TEXT WITH THE OUTPUT
+
+        </code></pre></details>
     validations:
       required: true

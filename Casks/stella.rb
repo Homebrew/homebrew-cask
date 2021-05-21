@@ -1,6 +1,6 @@
 cask "stella" do
-  version "6.5.2"
-  sha256 "793b183578f31bba7e718dcacfda248eb4666ea6cd8da74c220a2b9951aa2847"
+  version "6.5.3"
+  sha256 "e39779ca6c8beeae57205c8d2a8e439b64138268de90782407a506408a58f7a1"
 
   url "https://github.com/stella-emu/stella/releases/download/#{version}/Stella-#{version}-macos.dmg",
       verified: "github.com/stella-emu/stella/"

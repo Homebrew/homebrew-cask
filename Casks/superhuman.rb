@@ -1,5 +1,5 @@
 cask "superhuman" do
-  version "11.0.13"
+  version "11.0.26"
   sha256 :no_check
 
   name "Superhuman"
@@ -10,6 +10,10 @@ cask "superhuman" do
   end
   desc "Email client"
   homepage "https://superhuman.com/"
+
+  livecheck do
+    skip "unversioned URL"
+  end
 
   app "Superhuman.app"
 

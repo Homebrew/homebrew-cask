@@ -1,12 +1,17 @@
 cask "opera-gx" do
-  version "72.0.3815.450"
-  sha256 "7cae72cbab63133685597b3e501dadb6918356370f8fade3d9df541cca0c2447"
+  version "75.0.3969.259"
+  sha256 "bf16889d985bda03f328377871502e4f75d9f154bdf1e342fede63b784dbb794"
 
   url "https://get.geo.opera.com/pub/opera_gx/#{version}/mac/Opera_GX_#{version}_Setup.dmg"
-  appcast "https://ftp.opera.com/pub/opera_gx/"
   name "Opera GX"
   desc "Alternate version of the Opera web browser to complement gaming"
   homepage "https://www.opera.com/gx"
+
+  livecheck do
+    url "https://ftp.opera.com/pub/opera_gx/"
+    strategy :page_match
+    regex(/href=['"]?(\d+(?:\.\d+)*)['"]?/i)
+  end
 
   auto_updates true
 

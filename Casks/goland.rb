@@ -1,11 +1,11 @@
 cask "goland" do
-  version "2020.3.4,203.7717.58"
+  version "2021.1.1,211.7142.13"
 
   if Hardware::CPU.intel?
-    sha256 "2549ea45b91c076d1f2674dcedd969a86f38f82675d9ff3bb93fb7a8fec5bf55"
+    sha256 "82517a6c0bfd9f4c969e6a0e2239266be537811ca259588bb5ec9a29e42d2065"
     url "https://download.jetbrains.com/go/goland-#{version.before_comma}.dmg"
   else
-    sha256 "e50d6d9f77d4c372c6351cc4a1ed63ff5c556921e56a21f4179b8065fbd7e10e"
+    sha256 "ba88fc3943ae6d9a9aa62b09f7864fb76d9fdb5918318648aaf2bc9fd025cbb1"
     url "https://download.jetbrains.com/go/goland-#{version.before_comma}-aarch64.dmg"
   end
 
@@ -36,10 +36,10 @@ cask "goland" do
   end
 
   zap trash: [
-    "~/Library/Application Support/GoLand",
-    "~/Library/Application Support/GoLand#{version.major_minor}",
-    "~/Library/Caches/GoLand#{version.major_minor}",
-    "~/Library/Logs/GoLand#{version.major_minor}",
+    "~/Library/Application Support/JetBrains/GoLand",
+    "~/Library/Application Support/JetBrains/GoLand#{version.major_minor}",
+    "~/Library/Caches/JetBrains/GoLand#{version.major_minor}",
+    "~/Library/Logs/JetBrains/GoLand#{version.major_minor}",
     "~/Library/Preferences/GoLand#{version.major_minor}",
     "~/Library/Preferences/com.jetbrains.goland.plist",
     "~/Library/Saved Application State/com.jetbrains.goland.SavedState",

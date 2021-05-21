@@ -1,9 +1,18 @@
 cask "shotcut" do
-  version "21.02.27"
-  sha256 "4de40821778f8755c863d632c19e5588a53a8a41379fb0f6551cf9d7331048c4"
+  version "21.05.01"
 
-  url "https://github.com/mltframework/shotcut/releases/download/v#{version}/shotcut-macos-signed-#{version.no_dots}.dmg",
-      verified: "github.com/mltframework/shotcut/"
+  if Hardware::CPU.intel?
+    sha256 "f58990467a4879de43a7c0a35c07c5aec07a8f7d0e5bdfc60a48338edaee4134"
+
+    url "https://github.com/mltframework/shotcut/releases/download/v#{version}/shotcut-macos-signed-#{version.no_dots}.dmg",
+        verified: "github.com/mltframework/shotcut/"
+  else
+    sha256 "261852a754ebd640bd35cff65958b4b4c038f54ed4277b85e82083bc872dc646"
+
+    url "https://github.com/mltframework/shotcut/releases/download/v#{version}/shotcut-macos-ARM64-#{version.no_dots}.dmg",
+        verified: "github.com/mltframework/shotcut/"
+  end
+
   name "Shotcut"
   desc "Video editor"
   homepage "https://www.shotcut.org/"

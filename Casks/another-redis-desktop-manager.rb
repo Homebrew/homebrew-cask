@@ -1,6 +1,6 @@
 cask "another-redis-desktop-manager" do
-  version "1.4.2"
-  sha256 "54bf95f869a039b58af2be0c3e0a3a656c606f2ac6e53984b89eb3e21b60f01b"
+  version "1.4.5"
+  sha256 "b93af8c19ffa44cdbce697034e1a9319b6c031424cf0952a9905e63ea4505ba1"
 
   url "https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v#{version}/Another-Redis-Desktop-Manager.#{version}.dmg"
   name "Another Redis Desktop Manager"

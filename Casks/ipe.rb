@@ -1,18 +1,12 @@
 cask "ipe" do
-  version "7.2.23"
-  sha256 "2b8eb718a962fd3ccbbc43c64fc31e78d4eb4fe5da41df10ac693b0e98368bc4"
+  version "7.2.24"
+  sha256 "af72be083497359d9ee61b716a7b8d718fa773383f44227d334323c4ab33275f"
 
-  url "https://dl.bintray.com/otfried/generic/ipe/#{version.major_minor}/ipe-#{version}-mac.dmg",
-      verified: "bintray.com/otfried/"
+  url "https://github.com/otfried/ipe/releases/download/v#{version}/ipe-#{version}-mac.dmg",
+      verified: "github.com/otfried/ipe/"
   name "Ipe"
   desc "Drawing editor for creating figures in PDF format"
-  homepage "http://ipe.otfried.org/"
-
-  livecheck do
-    url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/ipe-(\d+(?:\.\d+)*)-mac\.dmg}i)
-  end
+  homepage "https://ipe.otfried.org/"
 
   depends_on macos: ">= :yosemite"
 

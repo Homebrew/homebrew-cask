@@ -3,9 +3,15 @@ cask "battlescribe" do
   sha256 "22af5f3cf03aad474fc02d9b82acaccd4cd15f0b687027fcc36be525ac547743"
 
   url "https://battlescribe.net/files/BattleScribe_#{version}_Installer.pkg"
-  appcast "https://battlescribe.net/?tab=downloads"
   name "BattleScribe"
+  desc "Army list creator for tabletop wargamers"
   homepage "https://battlescribe.net/"
+
+  livecheck do
+    url "https://battlescribe.net/?tab=downloads"
+    strategy :page_match
+    regex(/"desktop"\s*:\s*"(\d+(?:\.\d+)*)"/i)
+  end
 
   pkg "BattleScribe_#{version}_Installer.pkg"
 

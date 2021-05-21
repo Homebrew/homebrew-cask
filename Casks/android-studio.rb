@@ -1,14 +1,20 @@
 cask "android-studio" do
-  version "4.1.3.0,201.7199119"
-  sha256 "e4b146e94595f9a928afba31c90303414b3b2a396796a8114d81cad484cada02"
+  version "4.2.1.0,202.7351085"
+  sha256 "d993eab5751c2bac5caa7f3b2aa0bb6e8c20477ce67f9ed1b8d87ad6172c92da"
 
   url "https://dl.google.com/dl/android/studio/install/#{version.before_comma}/android-studio-ide-#{version.after_comma}-mac.dmg",
       verified: "google.com/dl/android/studio/"
-  appcast "https://dl.google.com/android/studio/patches/updates.xml",
-          must_contain: version.before_comma.chomp(".0")
   name "Android Studio"
   desc "Tools for building Android applications"
   homepage "https://developer.android.com/studio/"
+
+  livecheck do
+    url :homepage
+    strategy :page_match do |page|
+      match = page.match(%r{href=.*?/(\d+(?:\.\d+)*)/android-studio-ide-(\d+(?:\.\d+)*)-mac\.dmg}i)
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
   auto_updates true
 

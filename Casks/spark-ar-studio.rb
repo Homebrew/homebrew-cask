@@ -1,5 +1,5 @@
 cask "spark-ar-studio" do
-  version "109"
+  version "113"
   sha256 :no_check
 
   url "https://www.facebook.com/sparkarmacos/download/"
@@ -8,9 +8,9 @@ cask "spark-ar-studio" do
   homepage "https://sparkar.facebook.com/ar-studio/"
 
   livecheck do
-    url "https://www.facebook.com/sparkarmacos/download/"
+    url :url
     strategy :header_match do |headers|
-      headers["location"][%r{/SparkARStudio_v(\d+)\.dmg}i, 1]
+      headers["location"][%r{/SparkARStudio[._-]?v?(\d+)\.dmg}i, 1]
     end
   end
 
