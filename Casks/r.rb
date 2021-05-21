@@ -2,7 +2,7 @@ cask "r" do
   version "4.1.0"
   sha256 "2974eff8401ebd00d580fd98ba1a96352cc8924358443d41c8bdb66e358d7f36"
 
-  url "https://cloud.r-project.org/bin/macosx/R-#{version}.pkg"
+  url "https://cloud.r-project.org/bin/macosx/base/R-#{version}.pkg"
   name "R"
   desc "Environment for statistical computing and graphics"
   homepage "https://www.r-project.org/"
