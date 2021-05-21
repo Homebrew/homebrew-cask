@@ -1,12 +1,11 @@
 cask "sublime-text" do
   version "4.107"
-  sha256:no_check
+  sha256 :no_check
 
   url "https://download.sublimetext.com/sublime_text_build_#{version.no_dots}_mac.zip"
   name "Sublime Text"
   desc "Text editor for code, markup and prose"
   homepage "https://www.sublimetext.com/"
-
 
   auto_updates true
   conflicts_with cask: "sublime-text-dev"
