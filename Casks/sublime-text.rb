@@ -27,6 +27,7 @@ end
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sublimetext.#{version.major}.sfl*",
     "~/Library/Application Support/Sublime Text",
+    "~/Library/Application Support/Sublime Text (Safe Mode)",
     "~/Library/Caches/com.sublimetext.#{version.major}",
     "~/Library/Preferences/com.sublimetext.#{version.major}.plist",
     "~/Library/Saved Application State/com.sublimetext.#{version.major}.savedState",
