@@ -1,12 +1,12 @@
 cask "clash-for-windows" do
-  version "0.15.6"
+  version "0.15.7"
 
   if Hardware::CPU.intel?
     url "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/#{version}/Clash.for.Windows-#{version}.dmg"
-    sha256 "b3f3f18337dd4bf055a789de400087072e15669c8a874eb0aacc42de7e8727a8"
+    sha256 "2a6c9999ff9f85ff2eb85e20d9123e03112245aebf87a63b68be5eccfdd7f608"
   else
     url "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/#{version}/Clash.for.Windows-#{version}-arm64.dmg"
-    sha256 "374a32b2bd684617aea6bb7ae1f42fc2e08e2fab08510e9840d227f9243350af"
+    sha256 "e93a65d537cc26ddd41f2cfe85ca2750430d96497d93199ef3105b7deeff8a42"
   end
 
   name "Clash for Windows"
