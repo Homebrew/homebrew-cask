@@ -9,8 +9,7 @@ cask "chirp" do
 
   livecheck do
     url "https://trac.chirp.danplanet.com/chirp_daily/LATEST/SHA1SUM"
-    strategy :page_match
-    regex(/chirp-unified-daily-(\d+(?:\.\d+)*).app\.zip/i)
+    regex(/chirp[._-]unified[._-]daily[._-]v?(\d+(?:\.\d+)*)\.app\.zip/i)
   end
 
   app "CHIRP.app"
