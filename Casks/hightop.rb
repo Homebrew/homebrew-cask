@@ -9,7 +9,7 @@ cask "hightop" do
 
   livecheck do
     url "https://hightop.app/downloads/updates.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   app "HighTop.app"
