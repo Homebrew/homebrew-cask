@@ -8,7 +8,7 @@ cask "sublime-text" do
   homepage "https://www.sublimetext.com/"
 
   livecheck do
-    url "https://www.sublimetext.com/updates/#{version.major}/stable/appcast_osx.xml"
+    url "https://www.sublimetext.com/updates/#{version.major}/stable_update_check"
     strategy :sparkle do |item|
       match = item.version.match(/(\d)(\d+)/)
       "#{match[1]}.#{match[2]}"
