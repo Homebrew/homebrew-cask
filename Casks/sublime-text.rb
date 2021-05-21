@@ -9,11 +9,12 @@ cask "sublime-text" do
 
   livecheck do
     url "https://www.sublimetext.com/updates/#{version.major}/stable_update_check"
-    strategy :sparkle do |item|
-      match = item.version.match(/(\d)(\d+)/)
-      "#{match[1]}.#{match[2]}"
-    end
+    regex(/"latest_version":\s*(\d+)/i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)[1]
+      "#{match[0]}.#{match[1..]}"
   end
+end
 
   auto_updates true
   conflicts_with cask: "sublime-text-dev"
