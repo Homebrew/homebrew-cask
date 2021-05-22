@@ -1,13 +1,12 @@
 cask "gplates" do
-  version "2.2.0"
+  version "2.2"
   sha256 "a4658d7dd7e123c53d847c7b98e91d3f9cf222beb0dadaea6a4868eddcf5d85a"
 
-  url "https://downloads.sourceforge.net/gplates/#{version.major_minor}/GPlates-#{version}-Darwin-x86_64.dmg",
+  url "https://downloads.sourceforge.net/gplates/#{version}/GPlates-#{version}.0-Darwin-x86_64.dmg",
       verified: "downloads.sourceforge.net/gplates/"
-  appcast "https://sourceforge.net/projects/gplates/rss?path=/",
-          must_contain: version.major_minor
   name "GPlates"
+  desc "Plate tectonics program"
   homepage "https://www.gplates.org/"
 
-  app "GPlates-#{version}/GPlates.app"
+  app "GPlates-#{version}.0/GPlates.app"
 end

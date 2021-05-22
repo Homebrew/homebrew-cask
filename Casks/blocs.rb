@@ -1,5 +1,5 @@
 cask "blocs" do
-  version "4.0.3,403"
+  version "4.2.2,422"
   sha256 :no_check
 
   url "https://blocsapp.com/download/Blocs.zip"
@@ -13,6 +13,7 @@ cask "blocs" do
   end
 
   auto_updates true
+  depends_on macos: ">= :sierra"
   container nested: "Blocs/Blocs-#{version.major}.dmg"
 
   app "Blocs.app"

@@ -1,5 +1,5 @@
 cask "navicat-premium" do
-  version "15.0.26"
+  version "15.0.28"
   sha256 :no_check
 
   language "zh-CN" do

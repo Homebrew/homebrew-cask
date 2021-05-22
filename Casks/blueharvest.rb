@@ -1,6 +1,6 @@
 cask "blueharvest" do
-  version "8.0.9"
-  sha256 "a7d9601f8904b054031144a7c721551e09e950da0a865e552205dd64378b87f6"
+  version "8.0.10"
+  sha256 "744fd728803860f62d4dcb79d5b5187effbebb4d94e9ffee18a5d4d398625a3a"
 
   url "https://zeroonetwenty.com/blueharvest/downloads/BlueHarvest#{version.no_dots}.dmg"
   name "BlueHarvest"
@@ -9,11 +9,7 @@ cask "blueharvest" do
 
   livecheck do
     url "https://zeroonetwenty.com/blueharvest/release-notes.html"
-    strategy :page_match do |page|
-      page.scan(%r{href=.*?/BlueHarvest(\d+)(\d+)(\d+)\.dmg}i).map do |match|
-        "#{match[0]}.#{match[1]}.#{match[2]}"
-      end
-    end
+    regex(/>\s*Version\s+(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: ">= :catalina"

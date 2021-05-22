@@ -1,29 +1,26 @@
 cask "vlc" do
+  version "3.0.14"
+
   if Hardware::CPU.intel?
-    version "3.0.12"
-    sha256 "9b8b5a78ee0d7448e840680df34c1417f7c8c87161127c2d150794b2449be5d1"
+    sha256 "a5628b5f7e69ce18dd13ca724f67c7c4381c0ed22862fcb2064d00227f42f42f"
 
     url "https://get.videolan.org/vlc/#{version}/macosx/vlc-#{version}-intel64.dmg"
 
-    livecheck do
-      url "https://update.videolan.org/vlc/sparkle/vlc-intel64.xml"
-      strategy :sparkle
-    end
   else
-    version "3.0.12.1"
-    sha256 "5a5572c3a0bcf5c7a286dee0fbc027899a916a1c3fea919492894ae714789efa"
+    sha256 "8d0b897ba5a9366f1482d84fea4e67eec42c47711df18f80ae596872ac881365"
 
     url "https://get.videolan.org/vlc/#{version}/macosx/vlc-#{version}-arm64.dmg"
 
-    livecheck do
-      url "https://update.videolan.org/vlc/sparkle/vlc-arm64.xml"
-      strategy :sparkle
-    end
   end
 
   name "VLC media player"
   desc "Multimedia player"
   homepage "https://www.videolan.org/vlc/"
+
+  livecheck do
+    url "https://www.videolan.org/vlc/download-macosx.html"
+    regex(%r{href=.*?/vlc[._-]v?(\d+(?:\.\d+)+)(?:[._-][a-z]\w*)?\.dmg}i)
+  end
 
   auto_updates true
   conflicts_with cask: "homebrew/cask-versions/vlc-nightly"

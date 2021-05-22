@@ -4,11 +4,12 @@ cask "selfcontrol" do
 
   url "https://downloads.selfcontrolapp.com/SelfControl-#{version}.zip"
   name "SelfControl"
+  desc "Block your own access to distracting websites"
   homepage "https://selfcontrolapp.com/"
 
   livecheck do
-    url "https://selfcontrolapp.com/SelfControlAppcast.xml"
-    strategy :sparkle
+    url :homepage
+    regex(%r{href=.*?/SelfControl[._-](\d+(?:\.\d+)*)\.zip}i)
   end
 
   auto_updates true

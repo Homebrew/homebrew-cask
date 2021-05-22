@@ -4,7 +4,6 @@ cask "taskexplorer" do
 
   url "https://bitbucket.org/objective-see/deploy/downloads/TaskExplorer_#{version}.zip",
       verified: "bitbucket.org/objective-see/"
-  appcast "https://objective-see.com/products/changelogs/TaskExplorer.txt"
   name "TaskExplorer"
   desc "Tool to explore all the running tasks (processes)"
   homepage "https://objective-see.com/products/taskexplorer.html"

@@ -1,6 +1,6 @@
 cask "recaf" do
-  version "2.19.5"
-  sha256 "8f3aa20c14363477eabfb394032ecb9ebbc694bbe974f6770d5aa78da91e440f"
+  version "2.19.6"
+  sha256 "28918550296d42c2df44b325f79a1de1f357fa548ea35088057721c4c655f9a4"
 
   url "https://github.com/Col-E/Recaf/releases/download/#{version}/recaf-#{version}-J8-jar-with-dependencies.jar",
       verified: "github.com/Col-E/Recaf/"

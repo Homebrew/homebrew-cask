@@ -9,7 +9,8 @@ cask "flutter" do
   homepage "https://flutter.dev/"
 
   livecheck do
-    skip "No version information available"
+    url "https://storage.googleapis.com/flutter_infra_release/releases/releases_macos.json"
+    regex(%r{/flutter[._-]macos[._-]v?(\d+(?:\.\d+)+)[._-]stable\.zip}i)
   end
 
   auto_updates true

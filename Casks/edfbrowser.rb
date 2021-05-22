@@ -4,10 +4,18 @@ cask "edfbrowser" do
 
   url "https://gitlab.com/whitone/EDFbrowser/uploads/#{version.after_comma}/EDFbrowser-#{version.before_comma}.dmg",
       verified: "gitlab.com/whitone/EDFbrowser/"
-  appcast "https://gitlab.com/whitone/EDFbrowser/-/tags?format=atom"
   name "EDFbrowser"
   desc "EDF+ and BDF+ viewer and toolbox"
   homepage "https://www.teuniz.net/edfbrowser"
+
+  livecheck do
+    url "https://gitlab.com/whitone/EDFbrowser/-/tags?format=atom"
+    strategy :page_match do |page|
+      page.scan(%r{href=.*?/(\h+)/EDFbrowser[._-]?(\d+(?:\.\d+)*)\.dmg}i).map do |match|
+        "#{match[1]},#{match[0]}"
+      end
+    end
+  end
 
   app "EDFbrowser.app"
 

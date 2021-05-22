@@ -1,8 +1,9 @@
 cask "ultimaker-cura" do
-  version "4.9.0"
-  sha256 "437d22769f5e47095c3048ff378f4f56bd5bafb701c2bcc192a05e412d4c609e"
+  version "4.9.1"
+  sha256 "c454c808ecd85f082e6e28d15e787b0f0550a70bbe4634c5274c1c156d766fbb"
 
-  url "https://download.ultimaker.com/cura/Ultimaker_Cura-#{version}-Darwin.dmg"
+  url "https://github.com/Ultimaker/Cura/releases/download/#{version}/Ultimaker_Cura-#{version}-Darwin.dmg",
+      verified: "https://github.com/Ultimaker/Cura"
   name "Ultimaker Cura"
   name "Cura"
   desc "3D printer and slicing GUI"

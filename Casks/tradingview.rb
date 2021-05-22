@@ -1,16 +1,18 @@
 cask "tradingview" do
-  version "1.0.0-beta.3"
-  sha256 "4223b41a138e2904383f9970d2a4289db933365183ffd30f901b83e1b7a659ed"
+  version "1.0.0-beta.4"
+  sha256 "dd4e666be5ef1051f5b90447690538e8e12857ed0a0fb48bd7f2b641dd289c8a"
 
-  url "https://tvd-packages.tradingview.com/stable/#{version}/darwin/x64/TradingView.dmg"
+  url "https://tvd-packages.tradingview.com/stable/#{version}/darwin/TradingView.dmg"
   name "TradingView Desktop"
   desc "Experience with the power and flexibility of a desktop application"
   homepage "https://www.tradingview.com/desktop/"
 
   livecheck do
-    url "https://tvd-packages.tradingview.com/stable/latest/darwin/x64/stable-mac.yml"
+    url "https://tvd-packages.tradingview.com/stable/latest/darwin/stable-mac.yml"
     strategy :electron_builder
   end
+
+  auto_updates true
 
   app "TradingView.app"
 
