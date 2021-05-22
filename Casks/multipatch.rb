@@ -1,6 +1,6 @@
 cask "multipatch" do
-  version "1.7.1"
-  sha256 "406e26a2518d447a26b6a2b852d369e97c04cf9b25eea7a4d5a5f63a880cf94d"
+  version "1.8"
+  sha256 "e3e9588e731e7fb18baa19d495d2d401d92f97f342a249c37f96841c75522a82"
 
   url "https://projects.sappharad.com/tools/multipatch#{version.no_dots}.zip"
   name "MultiPatch"
