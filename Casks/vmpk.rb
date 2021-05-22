@@ -8,7 +8,9 @@ cask "vmpk" do
   desc "Virtual MIDI Piano Keyboard"
   homepage "https://vmpk.sourceforge.io/"
 
+  depends_on formula: "fluid-synth"
   depends_on macos: ">= :sierra"
+  depends_on arch: :x86_64
 
   app "vmpk.app"
 end
