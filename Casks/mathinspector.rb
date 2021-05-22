@@ -1,6 +1,6 @@
 cask "mathinspector" do
-  version "0.9.3"
-  sha256 "833dbe2f362fa0df7c22939d05a71e91316dcf1d9e544414eb2985bced70a7e9"
+  version "0.9.4"
+  sha256 "faac1b958c7246fa74380b29b0c80a342030fdff1e3b7aae8a454150e344d178"
 
   url "https://mathinspector.com/download/mathinspector_#{version}.dmg"
   name "Math Inspector"
