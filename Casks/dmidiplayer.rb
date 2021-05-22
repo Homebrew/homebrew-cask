@@ -13,4 +13,10 @@ cask "dmidiplayer" do
   depends_on arch: :x86_64
 
   app "dmidiplayer.app"
+
+  zap trash: [
+    "~/Library/Preferences/net.sourceforge.dmidiplayer.plist",
+    "~/Library/Preferences/net.sourceforge.drumstick.Drumstick MIDI File Multiplatform Player.plist",
+    "~/Library/Saved Application State/net.sourceforge.dmidiplayer.savedState"
+  ]
 end
