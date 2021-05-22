@@ -10,7 +10,6 @@ cask "vmpk" do
 
   depends_on formula: "fluid-synth"
   depends_on macos: ">= :sierra"
-  depends_on arch: :x86_64
 
   app "vmpk.app"
 end
