@@ -5,13 +5,15 @@ cask "seafile-client" do
   url "https://download.seadrive.org/seafile-client-#{version}.dmg",
       verified: "seadrive.org/"
   name "Seafile Client"
+  desc "File syncing client"
   homepage "https://www.seafile.com/"
 
   livecheck do
     url "https://www.seafile.com/en/download/"
-    strategy :page_match
-    regex(%r{href=.*?/seafile-client-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/seafile[._-]client[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Seafile Client.app"
 end
