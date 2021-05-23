@@ -1,3 +1,6 @@
+# typed: false
+# frozen_string_literal: true
+
 cask "fsnotes" do
   version "4.10.1"
   sha256 "e5661f113bb3669e771e4293638cc9cb5ded2f970693c2e55cf18391dc26541b"
