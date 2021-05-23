@@ -13,5 +13,7 @@ cask "foxmail" do
     strategy :header_match
   end
 
+  depends_on macos: ">= :el_capitan"
+
   app "Foxmail.app"
 end
