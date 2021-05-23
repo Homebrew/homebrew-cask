@@ -1,6 +1,6 @@
 cask "softorino-youtube-converter" do
-  version "2.1.29"
-  sha256 "0be3c306b34e36ed4675aa3dd9b1dd3a9f8a85193c1f91b5060603963468e8c7"
+  version "2.1.31"
+  sha256 "103d370bdceff132bee3a93ac9eebf280b9117f7362a5c855a07b474feae7188"
 
   url "https://shining.softorino.com/shine_uploads/softorinoyoutubeconverter#{version.major}mac_#{version}.dmg"
   name "Softorino YouTube Converter"
