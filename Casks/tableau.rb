@@ -4,8 +4,8 @@ cask "tableau" do
 
   url "https://downloads.tableau.com/tssoftware/TableauDesktop-#{version.dots_to_hyphens}.dmg"
   name "Tableau Desktop"
-  desc "Popular analytics platform"
-  homepage "https://www.tableau.com/products/desktop/download"
+  desc "Data visualization software"
+  homepage "https://www.tableau.com/products/desktop"
 
   livecheck do
     url "https://www.tableau.com/downloads/desktop/mac"
@@ -14,7 +14,7 @@ cask "tableau" do
     end
   end
 
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :high_sierra"
 
   pkg "Tableau Desktop.pkg"
 
