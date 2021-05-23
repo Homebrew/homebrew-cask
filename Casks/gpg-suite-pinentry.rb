@@ -1,8 +1,8 @@
 cask "gpg-suite-pinentry" do
-  version "2020.2,100"
-  sha256 "e2ede6b317d53d1e321342a6f7dd5ab6b123a4900aa8f1eab89b29051a2a4742"
+  version "2021.1,105"
+  sha256 "383bd6ab4791ee51e0f67955ad1ab70bb3a2a1e5c71f6a7f42f53b92684106e0"
 
-  url "https://releases.gpgtools.org/GPG_Suite-#{version.before_comma}.dmg"
+  url "https://releases.gpgtools.org/GPG_Suite-#{version.before_comma}_#{version.after_comma}.dmg"
   name "GPG Suite Pinentry"
   desc "Pinentry GUI for GPG Suite"
   homepage "https://gpgtools.org/"
@@ -17,7 +17,7 @@ cask "gpg-suite-pinentry" do
     "gpg-suite",
     "gpg-suite-nightly",
   ]
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   pkg "Install.pkg",
       choices: [
