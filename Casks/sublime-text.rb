@@ -1,17 +1,18 @@
 cask "sublime-text" do
-  version "3.211"
-  sha256 "531c84e24983927c59dc0c5611f605776f917d1c516af80c69c09ea232d24e01"
+  version "4.107"
+  sha256 "5da344779f92c7eb3ac279a6b3cc8810e86480b3e71fba79d8e09e94a3631602"
 
-  url "https://download.sublimetext.com/Sublime%20Text%20Build%20#{version.no_dots}.dmg"
+  url "https://download.sublimetext.com/sublime_text_build_#{version.no_dots}_mac.zip"
   name "Sublime Text"
   desc "Text editor for code, markup and prose"
-  homepage "https://www.sublimetext.com/#{version.major}"
+  homepage "https://www.sublimetext.com/"
 
   livecheck do
-    url "https://www.sublimetext.com/updates/#{version.major}/stable/appcast_osx.xml"
-    strategy :sparkle do |item|
-      match = item.version.match(/(\d)(\d+)/)
-      "#{match[1]}.#{match[2]}"
+    url "https://www.sublimetext.com/download"
+    regex(/href=.*?v?(\d+)_mac\.zip/i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)[1]
+      "#{match[0]}.#{match[1..]}"
     end
   end
 
@@ -23,11 +24,19 @@ cask "sublime-text" do
 
   uninstall quit: "com.sublimetext.#{version.major}"
 
+  # Sublime Text 4 uses `Sublime Text 3` and `com.sublimetext.3` dirs if they exist
+  # Otherwise, it creates `Sublime Text` and `com.sublimetext.4`
+  # More info: https://www.sublimetext.com/docs/side_by_side.html
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sublimetext.#{version.major}.sfl*",
-    "~/Library/Application Support/Sublime Text #{version.major}",
+    "~/Library/Application Support/Sublime Text",
+    "~/Library/Application Support/Sublime Text (Safe Mode)",
+    "~/Library/Application Support/Sublime Text 3",
     "~/Library/Caches/com.sublimetext.#{version.major}",
+    "~/Library/Caches/com.sublimetext.3",
     "~/Library/Preferences/com.sublimetext.#{version.major}.plist",
+    "~/Library/Preferences/com.sublimetext.3.plist",
     "~/Library/Saved Application State/com.sublimetext.#{version.major}.savedState",
+    "~/Library/Saved Application State/com.sublimetext.3.savedState",
   ]
 end
