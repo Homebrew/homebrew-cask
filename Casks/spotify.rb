@@ -9,7 +9,8 @@ cask "spotify" do
   homepage "https://www.spotify.com/"
 
   livecheck do
-    skip "No version information available"
+    url :url
+    strategy :extract_plist
   end
 
   auto_updates true
