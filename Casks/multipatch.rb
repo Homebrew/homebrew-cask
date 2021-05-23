@@ -4,6 +4,7 @@ cask "multipatch" do
 
   url "https://projects.sappharad.com/tools/multipatch#{version.no_dots}.zip"
   name "MultiPatch"
+  desc "File patching utility"
   homepage "https://projects.sappharad.com/tools/multipatch.html"
 
   livecheck do
