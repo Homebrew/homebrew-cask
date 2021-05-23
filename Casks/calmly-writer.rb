@@ -1,12 +1,12 @@
 cask "calmly-writer" do
-  version "2.0.27"
+  version "2.0.28"
 
   if Hardware::CPU.intel?
-    sha256 "b3d74fa9fece33e306d534e14de46808990ab25a8f32135403a0c7449075a330"
+    sha256 "cf563016161bfc2237227dc13b2861a0a6d15b0d2e4a78e77c19335a1d8bec9c"
 
     url "https://www.calmlywriter.com/releases/x64/Calmly%20Writer-#{version}.pkg"
   else
-    sha256 "5b3a9a3de0800c3c8de97e2261f69940128cff572e3aa600d024281e5fbf687c"
+    sha256 "22f8aa3209d37f4ceb3d8d673cb45030c09cfee4b771b21ca4f9b7ea8f72dc99"
 
     url "https://www.calmlywriter.com/releases/arm64/Calmly%20Writer-#{version}.pkg"
   end
