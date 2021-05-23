@@ -5,6 +5,7 @@ cask "forecast" do
   url "https://d2uzvmey2c90kn.cloudfront.net/appcast_download/Forecast_#{version.before_comma}_#{version.after_comma}.zip",
       verified: "d2uzvmey2c90kn.cloudfront.net/appcast_download/"
   name "Forecast"
+  desc "Podcast MP3 encoder with chapters"
   homepage "https://overcast.fm/forecast"
 
   livecheck do
