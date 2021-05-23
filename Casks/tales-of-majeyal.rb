@@ -4,7 +4,7 @@ cask "tales-of-majeyal" do
 
   url "https://te4.org/dl/t-engine/t-engine4-osx-#{version}.zip"
   name "Tales of Maj'Eyal"
-  desc "Topdown tactical RPG roguelike game"
+  desc "Topdown tactical RPG roguelike game and game engine"
   homepage "https://te4.org/"
 
   livecheck do
