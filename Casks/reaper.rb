@@ -1,5 +1,5 @@
 cask "reaper" do
-  version "6.29.0"
+  version "6.29"
 
   if MacOS.version <= :mojave
     sha256 "9cafc2dcda0ea11daea92f6558aea6eb3aa58917b91a50e81e2a623e3fda0f5f"
@@ -11,11 +11,14 @@ cask "reaper" do
     url "https://www.reaper.fm/files/#{version.major}.x/reaper#{version.major_minor.no_dots}_x86_64_catalina.dmg"
   end
 
-  appcast "https://www.cockos.com/reaper/latestversion/?p=osx_64",
-          must_contain: version.major_minor
   name "REAPER"
   desc "Digital audio production application"
   homepage "https://www.reaper.fm/"
+
+  livecheck do
+    url "https://www.cockos.com/reaper/latestversion/?p=osx_64"
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
 
   app "REAPER.app"
   app "ReaMote.app"
