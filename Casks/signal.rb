@@ -8,8 +8,8 @@ cask "signal" do
   homepage "https://signal.org/"
 
   livecheck do
-    url "https://github.com/signalapp/Signal-Desktop"
-    strategy :github_latest
+    url "https://updates.signal.org/desktop/latest-mac.yml"
+    strategy :electron_builder
   end
 
   auto_updates true
