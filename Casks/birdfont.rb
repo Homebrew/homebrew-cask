@@ -1,6 +1,6 @@
 cask "birdfont" do
   if MacOS.version <= :mojave
-    version "4.16.0"
+    version "4.17.0"
     sha256 "74c778e3b7598a66b9ddb11b189ba6a21d68263fb0499a965dcedd0ac987b051"
   elsif MacOS.version <= :catalina
     version "4.17.1"
