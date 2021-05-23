@@ -9,8 +9,7 @@ cask "nomachine-enterprise-client" do
 
   livecheck do
     url "https://www.nomachine.com/download/download&id=15"
-    strategy :page_match
-    regex(/nomachine-enterprise-client_(\d+(?:\.\d+)*_\d+)\.dmg/i)
+    regex(/nomachine-enterprise-client[._-]v?(\d+(?:\.\d+)*_\d+)\.dmg/i)
   end
 
   pkg "NoMachine.pkg"
