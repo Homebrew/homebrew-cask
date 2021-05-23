@@ -9,8 +9,7 @@ cask "figma" do
 
   livecheck do
     url "https://desktop.figma.com/mac/RELEASE.json"
-    strategy :page_match
-    regex(%r{/Figma-(\d+(?:\.\d+)*)\.zip}i)
+    regex(%r{/Figma[._-]v?(\d+(?:\.\d+)+)\.zip}i)
   end
 
   auto_updates true
