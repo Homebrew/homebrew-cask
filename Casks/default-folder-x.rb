@@ -13,6 +13,7 @@ cask "default-folder-x" do
   end
 
   auto_updates true
+  depends_on macos: ">= :yosemite"
 
   app "Default Folder X.app"
 
