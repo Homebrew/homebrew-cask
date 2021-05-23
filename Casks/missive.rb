@@ -1,6 +1,6 @@
 cask "missive" do
-  version "10.0.1"
-  sha256 "de9ed332235e695ecabd95680dc49ed37fbc8e68238db8882297a34c98a8a239"
+  version "10.0.2"
+  sha256 "3555e08fcf80a04a19a4c4bc1ee36f9a2a00e26f4a65046ae111dd38ef2fd732"
 
   url "https://d1weoh55n7oehu.cloudfront.net/#{version}/Missive-#{version}.dmg",
       verified: "d1weoh55n7oehu.cloudfront.net/"
