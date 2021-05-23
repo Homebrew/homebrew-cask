@@ -1,5 +1,5 @@
 cask "optimage" do
-  version "3.4.1,189"
+  version "3.4.2,190"
   sha256 :no_check
 
   url "https://optimage.app/download/optimage-mac.zip"
