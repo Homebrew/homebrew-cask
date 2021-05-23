@@ -4,6 +4,7 @@ cask "optimage" do
 
   url "https://optimage.app/download/optimage-mac.zip"
   name "Optimage"
+  desc "Image optimization tool"
   homepage "https://optimage.app/"
 
   livecheck do
@@ -12,6 +13,7 @@ cask "optimage" do
   end
 
   auto_updates true
+  depends_on macos: ">= :el_capitan"
 
   app "Optimage.app"
   binary "#{appdir}/Optimage.app/Contents/MacOS/cli/optimage"
