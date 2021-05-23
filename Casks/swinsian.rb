@@ -4,6 +4,7 @@ cask "swinsian" do
 
   url "https://www.swinsian.com/sparkle/Swinsian_#{version.before_comma}.zip"
   name "Swinsian"
+  desc "Music player"
   homepage "https://swinsian.com/"
 
   livecheck do
