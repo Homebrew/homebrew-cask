@@ -5,20 +5,19 @@ cask "meshlab" do
   url "https://github.com/cnr-isti-vclab/meshlab/releases/download/Meshlab-#{version}/MeshLab#{version}-macos.dmg",
       verified: "github.com/cnr-isti-vclab/meshlab/"
   name "MeshLab"
-  desc "Open-source mesh processing system"
+  desc "Mesh processing system"
   homepage "https://www.meshlab.net/"
 
   livecheck do
     url :url
-    strategy :git
-    regex(/^Meshlab-(\d+(?:\.\d+)*)$/i)
+    regex(/^Meshlab[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
-  app "meshlab.app"
+  app "MeshLab#{version}.app"
 
   postflight do
     # workaround for bug which breaks the app on case-sensitive filesystems
-    Dir.chdir("#{appdir}/meshlab.app/Contents/MacOS") do
+    Dir.chdir("#{appdir}/MeshLab#{version}.app/Contents/MacOS") do
       File.symlink("meshlab", "MeshLab") unless File.exist? "MeshLab"
     end
   end
