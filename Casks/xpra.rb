@@ -15,7 +15,7 @@ cask "xpra" do
     end
   end
 
-  pkg "Xpra-x86_64.pkg"
+  pkg "Xpra-Python3-x86_64-#{version.before_comma}-r#{version.after_comma}.pkg"
 
   uninstall pkgutil:  "org.xpra.pkg"
 
