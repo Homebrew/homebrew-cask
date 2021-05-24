@@ -1,6 +1,6 @@
 cask "dbvisualizer" do
-  version "12.0.5"
-  sha256 "07e7c2291486eb1ac01cd5c2a75e389ace28e27c96a0ba3d394eedaffa6408af"
+  version "12.0.6"
+  sha256 "40d44beab6fed302ca903c55db53d37c1f2671ee2cf50ac8c391ce3f5f84508b"
 
   url "https://www.dbvis.com/product_download/dbvis-#{version}/media/dbvis_macos_#{version.dots_to_underscores}_jre.dmg"
   name "DbVisualizer"
