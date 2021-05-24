@@ -9,15 +9,10 @@ cask "tinymediamanager" do
 
   livecheck do
     url "https://release.tinymediamanager.org/"
-    strategy :page_match
-    regex(%r{href=.*?/tmm_(\d+(?:\.\d+)*)_mac\.zip}i)
+    regex(%r{href=.*?/tmm[._-]v?(\d+(?:\.\d+)+)[._-]mac\.zip}i)
   end
 
   auto_updates true
 
   app "tinyMediaManager.app"
-
-  caveats do
-    depends_on_java "8+"
-  end
 end
