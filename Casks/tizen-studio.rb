@@ -5,7 +5,7 @@ cask "tizen-studio" do
   url "https://download.tizen.org/sdk/Installer/tizen-studio_#{version.major_minor}/web-ide_Tizen_Studio_#{version.major_minor}_macos-64.dmg"
 
   name "Tizen Studio"
-  desc "The Official IDE for developing web and native applications for Tizen"
+  desc "Official IDE for developing web and native applications for Tizen"
   homepage "https://developer.tizen.org/"
 
   livecheck do
@@ -17,11 +17,11 @@ cask "tizen-studio" do
   depends_on macos: ">= :catalina"
 
   app "Tizen Studio.app"
-  
+
   zap trash: [
     "~/tizen-studio",
     "~/Applications/tizen-studio",
     "~/Library/Preferences/org.tizen.sdk.ide.plist",
-    "~/Library/Saved Application State/org.tizen.sdk.ide.savedState"
+    "~/Library/Saved Application State/org.tizen.sdk.ide.savedState",
   ]
 end
