@@ -1,6 +1,6 @@
 cask "mirrorop" do
-  version "2.5.3.78"
-  sha256 "59279a53f344ec0b6edb36015164497107a3fea1d55d337d2bf7185ee3bb5b01"
+  version "2.5.3.87"
+  sha256 "d505869d9737418f7a39e9b11d8a9934508830866e02746504c36d2612567bc9"
 
   url "https://www.barco.com/services/website/en/TdeFiles/Download?FileNumber=R33050100&TdeType=3&MajorVersion=#{version.major}&MinorVersion=#{version.minor}&PatchVersion=#{version.patch}&BuildVersion=#{version.split(".")[-1]}"
   name "MirrorOp Sender"
