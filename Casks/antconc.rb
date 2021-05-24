@@ -10,6 +10,6 @@ cask "antconc" do
   homepage "https://www.laurenceanthony.net/software/antconc/"
 
   app "AntConc.app"
-  
+
   zap trash: "~/Library/Preferences/AntConc.plist"
 end
