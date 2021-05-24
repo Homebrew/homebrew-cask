@@ -10,8 +10,7 @@ cask "mubu" do
 
   livecheck do
     url "https://mubu.com/apps"
-    strategy :page_match
-    regex(/Mubu-(\d+(?:\.\d+)*)\.dmg/i)
+    regex(%r{href=.*?/Mubu[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "幕布.app"
