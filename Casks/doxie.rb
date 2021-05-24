@@ -14,7 +14,7 @@ cask "doxie" do
   end
 
   app "Doxie.app"
-  
+
   zap trash: [
     "~/Library/Caches/com.getdoxie.doxie",
     "~/Library/Preferences/com.getdoxie.doxie.plist",
