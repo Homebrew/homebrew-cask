@@ -4,7 +4,7 @@ cask "royal-tsx" do
 
   url "https://royaltsx-v4.royalapps.com/updates/royaltsx_#{version}.dmg"
   name "Royal TSX"
-  desc "Powerful Connection Management"
+  desc "Remote management solution"
   homepage "https://www.royalapps.com/ts/mac/features"
 
   livecheck do
