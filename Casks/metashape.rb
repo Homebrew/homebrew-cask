@@ -9,8 +9,7 @@ cask "metashape" do
 
   livecheck do
     url "https://www.agisoft.com/downloads/installer/"
-    strategy :page_match
-    regex(/Metashape\s*(\d+(?:\.\d+)*)/i)
+    regex(/Metashape\s*(\d+(?:\.\d+)+)/i)
   end
 
   app "Metashape.app"
