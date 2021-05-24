@@ -13,6 +13,7 @@ cask "royal-tsx" do
   end
 
   auto_updates true
+  depends_on macos: ">= :sierra"
 
   app "Royal TSX.app"
 end
