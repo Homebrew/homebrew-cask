@@ -3,8 +3,8 @@ cask "futurerestore-gui" do
   sha256 "73e6df55741c25dc846efa0220e2bd46275788221a6883eeb42b6647ee7c0243"
 
   url "https://github.com/CoocooFroggy/FutureRestore-GUI/releases/download/v#{version}/FutureRestore-GUI-Mac-#{version}.zip"
-  name "futurerestore-gui"
-  desc "Cross-platform interface for FutureRestore, written in Java with Swing"
+  name "FutureRestore GUI.app"
+  desc "Graphical interface for FutureRestore"
   homepage "https://github.com/CoocooFroggy/FutureRestore-GUI/"
 
   app "FutureRestore GUI.app"
