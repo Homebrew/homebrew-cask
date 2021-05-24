@@ -8,4 +8,14 @@ cask "grammarly" do
   homepage "https://www.grammarly.com/"
 
   app "Grammarly.app"
+
+  zap trash: [
+    "~/Library/Application Support/Grammarly",
+    "~/Library/Caches/com.grammarly.DesktopEditor",
+    "~/Library/Caches/com.grammarly.DesktopEditor.ShipIt",
+    "~/Library/Logs/Grammarly",
+    "~/Library/Preferences/com.grammarly.DesktopEditor.helper.plist",
+    "~/Library/Preferences/com.grammarly.DesktopEditor.plist",
+    "~/Library/Saved Application State/com.grammarly.DesktopEditor.savedState",
+  ]
 end
