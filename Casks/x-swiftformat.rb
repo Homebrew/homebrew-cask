@@ -4,6 +4,7 @@ cask "x-swiftformat" do
 
   url "https://github.com/ruiaureliano/X-SwiftFormat/releases/download/#{version}/x-swiftformat_#{version}.zip"
   name "X-SwiftFormat"
+  desc "Xcode extension to format Swift code"
   homepage "https://github.com/ruiaureliano/X-SwiftFormat"
 
   depends_on macos: ">= :catalina"
