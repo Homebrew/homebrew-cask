@@ -9,8 +9,7 @@ cask "mirrorop" do
 
   livecheck do
     url "https://www.barco.com/en/support/software/R33050100"
-    strategy :page_match
-    regex(/MirrorOp\s*Mac\s*Sender\s*v?(\d+(?:\.\d+)*)/i)
+    regex(/MirrorOp\s*Mac\s*Sender\s*v?(\d+(?:\.\d+)+)/i)
   end
 
   app "MirrorOp.app"
