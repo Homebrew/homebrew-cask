@@ -4,7 +4,7 @@ cask "tizen-studio" do
 
   url "https://download.tizen.org/sdk/Installer/tizen-studio_4.1/web-ide_Tizen_Studio_4.1_macos-64.dmg"
 
-  name "Framer"
+  name "Tizen Studio"
   desc "Tizen Studio is the official IDE for developing web and native applications for Tizen"
   homepage "https://developer.tizen.org/"
 
