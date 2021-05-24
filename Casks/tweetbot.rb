@@ -10,6 +10,7 @@ cask "tweetbot" do
   desc "Twitter client"
   homepage "https://tapbots.com/tweetbot/mac/"
 
+  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "Tweetbot.app"
