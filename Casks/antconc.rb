@@ -6,7 +6,10 @@ cask "antconc" do
   appcast "https://www.laurenceanthony.net/software/antconc/releases/",
           must_contain: version.no_dots
   name "AntConc"
+  desc "Corpus analysis toolkit for concordancing and text analysis"
   homepage "https://www.laurenceanthony.net/software/antconc/"
 
   app "AntConc.app"
+  
+  zap trash: "~/Library/Preferences/AntConc.plist"
 end
