@@ -1,7 +1,6 @@
 cask "tizen-studio" do
   version "4.1"
   sha256 "c538328806b14cec190591213465d813a180bcbd"
-
   url "https://download.tizen.org/sdk/Installer/tizen-studio_#{version.major_minor}/web-ide_Tizen_Studio_#{version.major_minor}_macos-64.dmg"
 
   name "Tizen Studio"
