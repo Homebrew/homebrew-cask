@@ -5,6 +5,7 @@ cask "thonny" do
   url "https://github.com/thonny/thonny/releases/download/v#{version}/thonny-#{version}.pkg",
       verified: "github.com/thonny/thonny/"
   name "Thonny"
+  desc "Python IDE for beginners"
   homepage "https://thonny.org/"
 
   conflicts_with cask: "thonny-xxl"
