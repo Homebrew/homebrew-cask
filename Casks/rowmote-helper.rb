@@ -4,11 +4,12 @@ cask "rowmote-helper" do
 
   url "https://regularrateandrhythm.com/rowmote-pro/rh/rowmote-helper-#{version}.zip"
   name "Rowmote Helper"
+  desc "Control system with Rowmote Pro remote control"
   homepage "https://regularrateandrhythm.com/apps/rowmote-pro/"
 
   livecheck do
     url :homepage
-    regex(/Rowmote\s+Helper\s+(\d+(?:\.\d+)*)/i)
+    regex(/Rowmote\s+Helper\s+v?(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
