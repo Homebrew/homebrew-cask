@@ -1,12 +1,12 @@
 cask "tinkerwell" do
-  version "2.14.0"
+  version "2.14.1"
 
   if Hardware::CPU.intel?
-    sha256 "f4f2274683b66332937f9086322a97a1a0aca5a6051f9e7cbef6c5b2f95ed42b"
+    sha256 "cd884246241ef29fa20bd199252720b10980fd840d7a629390830584a120777b"
 
     url "https://download.tinkerwell.app/tinkerwell/Tinkerwell-#{version}.dmg"
   else
-    sha256 "27b84d8fc8dc0e58d13b63d7b94b4f9f72814307ad6acd43d10fb885e273aea1"
+    sha256 "06e58255f7f7b1bade3c71cf4ca699233c7dd6d3852265e487c0c2c978d67de4"
 
     url "https://download.tinkerwell.app/tinkerwell/Tinkerwell-#{version}-arm64.dmg"
   end
