@@ -12,5 +12,7 @@ cask "meta" do
     strategy :sparkle
   end
 
+  depends_on macos: ">= :yosemite"
+
   app "Meta.app"
 end
