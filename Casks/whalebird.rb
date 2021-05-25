@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 cask "whalebird" do
   version "4.4.1"
   sha256 "493570b0f9c83f174cd1e84e688c5b3decd17d504402444092446bbded03ae04"
