@@ -7,6 +7,12 @@ cask "assinador-serpro" do
   desc "Validate and sign documents using digital certificates"
   homepage "https://www.serpro.gov.br/links-fixos-superiores/assinador-digital/assinador-serpro"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(/Assinador\sSerpro\s(\d+(?:\.\d+)*)/i)
+  end
+
   depends_on macos: ">= :sierra"
 
   app "Assinador Serpro.app"
