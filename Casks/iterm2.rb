@@ -4,8 +4,8 @@ cask "iterm2" do
     version "3.3.12"
     sha256 "6811b520699e8331b5d80b5da1e370e0ed467e68bc56906f08ecfa986e318167"
   else
-    version "3.4.7"
-    sha256 "29cdf5874307a1fe73e3c44933e31b2c060475204ce67eb4c28b0b809c164c5f"
+    version "3.4.8"
+    sha256 "29e1cf80dff3cd63e23e42d781969d74a7fed3aadebc756d0001942e40bb376f"
   end
 
   url "https://iterm2.com/downloads/stable/iTerm2-#{version.dots_to_underscores}.zip"
