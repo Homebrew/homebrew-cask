@@ -8,6 +8,10 @@ cask "landrop" do
   desc "Drop any files to any devices on your LAN"
   homepage "https://landrop.app/"
 
+  livecheck do
+    url :url
+  end
+
   app "LANDrop.app"
 
   uninstall quit: "app.landrop.landrop"
