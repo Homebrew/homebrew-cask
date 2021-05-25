@@ -9,7 +9,7 @@ cask "tizen-studio" do
 
   livecheck do
     url "https://download.tizen.org/sdk/Installer/"
-    regex(/tizen-studio_(\d+(?:\.\d+)*)/}i)
+    regex(/tizen-studio_(\d+(?:\.\d+)*)/i)
   end
 
   auto_updates true
