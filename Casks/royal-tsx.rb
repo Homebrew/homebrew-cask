@@ -16,4 +16,11 @@ cask "royal-tsx" do
   depends_on macos: ">= :sierra"
 
   app "Royal TSX.app"
+
+  zap trash: [
+    "~/Library/Application Support/Royal TSX",
+    "~/Library/Application Support/com.lemonmojo.RoyalTSX.App",
+    "~/Library/Caches/com.lemonmojo.RoyalTSX.App",
+    "~/Library/Preferences/com.lemonmojo.RoyalTSX.App.plist",
+  ]
 end
