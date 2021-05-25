@@ -1,5 +1,5 @@
 cask "goland" do
-  version "2021.1.2"
+  version "2021.1.2,211.7442.27"
 
   if Hardware::CPU.intel?
     sha256 "bd451d441bf909d795252cd82f61166556d93c92fb043d929736ee9da7d3c7f3"
