@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 cask "whalebird" do
-  version "4.4.0"
-  sha256 "d0c15c7364dcda0d3a7a5678120d3bc4e21342f75984be1f35b8f31e27dd7445"
+  version "4.4.1"
+  sha256 "493570b0f9c83f174cd1e84e688c5b3decd17d504402444092446bbded03ae04"
 
   url "https://github.com/h3poteto/whalebird-desktop/releases/download/#{version}/Whalebird-#{version}-darwin-universal.dmg",
       verified: "github.com/h3poteto/whalebird-desktop/"
