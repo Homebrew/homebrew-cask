@@ -10,6 +10,7 @@ cask "inkscape" do
   livecheck do
     url "https://inkscape.org/release"
     strategy :header_match
+    regex(/^(\d+\.)?(\d+\.)?(\*|\d+)$/i)
   end
 
   app "Inkscape.app"
