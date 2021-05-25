@@ -32,7 +32,6 @@ And there we have it. An application installed with one quick command: no clicki
 
 * Find basic documentation on using Homebrew Cask in [USAGE.md](USAGE.md)
 * Want to contribute a Cask? Awesome! See [CONTRIBUTING.md](CONTRIBUTING.md)
-* Want to hack on our code? Also awesome! See [hacking.md](doc/development/hacking.md)
 * More project-related details and discussion are available in the [documentation](doc)
 
 ## Reporting bugs
