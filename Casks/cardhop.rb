@@ -1,5 +1,5 @@
 cask "cardhop" do
-  version "2.0,"
+  version "2.0,1022"
   sha256 "c2aae9ea74986690f22d945e968e1487169b079e5b975a6656ae40880cabf3c4"
 
   url "https://cdn.flexibits.com/Cardhop_#{version.before_comma}.zip"
