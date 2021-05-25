@@ -1,8 +1,8 @@
 cask "inkscape" do
-  version "1.1.0"
+  version "1.1"
   sha256 "5f3308c00119ee9bc3732c7e9cbde208357b57e6d58f1edc08da9e10330c2d9d"
 
-  url "https://media.inkscape.org/dl/resources/file/Inkscape-#{version}.dmg"
+  url "https://media.inkscape.org/dl/resources/file/Inkscape-#{version}.0.dmg"
   name "Inkscape"
   desc "Vector graphics editor"
   homepage "https://inkscape.org/"
@@ -10,7 +10,6 @@ cask "inkscape" do
   livecheck do
     url "https://inkscape.org/release"
     strategy :header_match
-    regex(/^(\d+\.)?(\d+\.)?(\*|\d+)$/i)
   end
 
   app "Inkscape.app"
