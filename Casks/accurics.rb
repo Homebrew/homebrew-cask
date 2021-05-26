@@ -8,7 +8,7 @@ cask "accurics" do
           must_contain: version
   name "Accurics CLI"
   desc "Security and compliance for Infrastructure as Code"
-  homepage "https://downloads.accurics.com/cli/"
+  homepage "https://www.accurics.com/"
 
   binary "accurics"
 
