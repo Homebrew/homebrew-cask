@@ -8,6 +8,12 @@ cask "microsoft-openjdk" do
   desc "OpenJDK distribution from Microsoft"
   homepage "https://microsoft.com/openjdk"
 
+  livecheck do
+    url "https://docs.microsoft.com/java/openjdk/download"
+    strategy :page_match
+    regex(%r{href=.*?/microsoft-jdk-(\d+(?:\.\d+)*)-macOS-x64.pkg}i)
+  end
+
   pkg "microsoft-jdk-#{version}-macOS-x64.pkg"
 
   uninstall pkgutil: "com.microsoft.#{version.major}.jdk"
