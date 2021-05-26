@@ -5,6 +5,7 @@ cask "altserver" do
   url "https://f000.backblazeb2.com/file/altstore/altserver/#{version.before_comma.dots_to_underscores}.zip",
       verified: "f000.backblazeb2.com/file/"
   name "AltServer"
+  desc "iOS App Store alternative"
   homepage "https://altstore.io/"
 
   livecheck do
