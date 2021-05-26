@@ -5,6 +5,7 @@ cask "loginputmac" do
   url "https://loginput-mac2.content-delivery.top/loginputmac#{version.major}_latest.pkg",
       verified: "loginput-mac2.content-delivery.top/"
   name "LoginputMac"
+  desc "Chinese input method"
   homepage "https://im.logcg.com/loginputmac#{version.major}"
 
   livecheck do
