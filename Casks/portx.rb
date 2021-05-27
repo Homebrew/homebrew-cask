@@ -8,7 +8,8 @@ cask "portx" do
   homepage "https://www.netsarang.com/en/"
 
   livecheck do
-    skip "No version information available"
+    url :url
+    strategy :sparkle
   end
 
   app "PortX.app"
