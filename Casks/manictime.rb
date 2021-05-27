@@ -9,8 +9,7 @@ cask "manictime" do
 
   livecheck do
     url "https://www.manictime.com/mac/download"
-    strategy :page_match
-    regex(%r{href=.*?/ManicTime-v(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/ManicTime[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   depends_on macos: ">= :sierra"
