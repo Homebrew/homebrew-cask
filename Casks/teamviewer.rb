@@ -1,5 +1,5 @@
 cask "teamviewer" do
-  version "15.17.6"
+  version "15.18.4"
   sha256 :no_check
 
   url "https://download.teamviewer.com/download/TeamViewer.dmg"
@@ -17,7 +17,10 @@ cask "teamviewer" do
     "#{staged_path}/#{token}", # This Cask should be uninstalled manually.
     "/Applications/TeamViewer.app",
   ],
-            pkgutil:   "com.teamviewer.teamviewer.*",
+            pkgutil:   [
+              "com.teamviewer.teamviewer.*",
+              "com.teamviewer.remoteaudiodriver",
+            ],
             launchctl: [
               "com.teamviewer.desktop",
               "com.teamviewer.service",
