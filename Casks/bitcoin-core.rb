@@ -9,7 +9,7 @@ cask "bitcoin-core" do
 
   livecheck do
     url "https://github.com/bitcoin/bitcoin"
-    strategy :git
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
