@@ -13,7 +13,7 @@ cask "coconutbattery" do
     livecheck do
       url "https://coconut-flavour.com/updates/coconutBattery.xml"
       strategy :sparkle do |item|
-        "#{item.version},#{item.url[/_(?:\d+)_(.*?)\./i, 1]}"
+        "#{item.version},#{item.url[/_\d+_(.*?)\./i, 1]}"
       end
     end
   end
@@ -23,6 +23,7 @@ cask "coconutbattery" do
   homepage "https://www.coconut-flavour.com/coconutbattery/"
 
   auto_updates true
+  depends_on macos: ">= :sierra"
 
   app "coconutBattery.app"
 
