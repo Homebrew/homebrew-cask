@@ -9,9 +9,10 @@ cask "fastrawviewer" do
 
   livecheck do
     url "https://updates.fastrawviewer.com/data/"
-    strategy :page_match
-    regex(/FastRawViewer-(\d+(?:\.\d+)*)\.dmg/i)
+    regex(/FastRawViewer[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
+
+  depends_on macos: ">= :sierra"
 
   app "FastRawViewer.app"
 end
