@@ -3,8 +3,14 @@ cask "browserstacklocal" do
   sha256 :no_check
 
   url "https://www.browserstack.com/local-testing/downloads/native-app/BrowserStackLocal.dmg"
-  name "BrowserStack Local"
+  name "BrowserStack Local Testing"
+  desc "Test localhost and staging websites"
   homepage "https://www.browserstack.com/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   app "BrowserStackLocal.app"
   binary "BrowserStackLocal.app/Contents/Resources/public/BrowserStackLocal"
