@@ -2,7 +2,7 @@ cask "github" do
   version "2.8.2-4423bb9d"
 
   if Hardware::CPU.intel?
-    sha256 "33c861cee87422c480f6ce57229e8de4c675857ebe032cd02ad44b6bd0c910e9"
+    sha256 "0a3286b027a024a0f6df82fbc905b79a2c9ef9aad6beaf7a8a851cb24fcb07ae"
     url "https://desktop.githubusercontent.com/releases/#{version}/GitHubDesktop-x64.zip",
       verified: "githubusercontent.com/"
   else
