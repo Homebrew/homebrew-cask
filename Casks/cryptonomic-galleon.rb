@@ -1,6 +1,6 @@
 cask "cryptonomic-galleon" do
-  version "1.1.20b"
-  sha256 "51896518f06ba333a47cc7e4f0e849a9b5e098e0da63fb7e467557f4eaebd387"
+  version "1.1.21b"
+  sha256 "8f270e4cd191f94491fba176bb89932cbe9951c9f9e0ef5a234a2b90c9b265d3"
 
   url "https://cryptonomic-wallet.nyc3.digitaloceanspaces.com/release_#{version}/Galleon-#{version.delete_suffix("b")}.dmg",
       verified: "cryptonomic-wallet.nyc3.digitaloceanspaces.com"
