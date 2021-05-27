@@ -1,6 +1,6 @@
 cask "tencent-lemon" do
   version "4.8.9"
-  sha256 "02bc9c96dcb02820c8ff9a5a188c138e9917958075e500b617b4fa1f70925d55"
+  sha256 "a33308b1ccc70c40da0bef2745facb72ab2b4211ad4ead200081ccf3b41466fb"
 
   url "https://pm.myapp.com/invc/xfspeed/qqpcmgr/module_update/Lemonv#{version}.dmg",
       verified: "pm.myapp.com/invc/xfspeed/qqpcmgr/"
