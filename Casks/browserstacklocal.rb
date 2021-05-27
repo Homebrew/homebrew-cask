@@ -8,12 +8,11 @@ cask "browserstacklocal" do
   homepage "https://www.browserstack.com/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://www.browserstack.com/local-testing/downloads/native-app/mac/appcast.xml"
+    strategy :sparkle
   end
 
   app "BrowserStackLocal.app"
-  binary "BrowserStackLocal.app/Contents/Resources/public/BrowserStackLocal"
 
   uninstall launchctl: "com.browserstack.local"
 
