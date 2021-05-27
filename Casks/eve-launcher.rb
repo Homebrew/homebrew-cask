@@ -9,17 +9,17 @@ cask "eve-launcher" do
 
   livecheck do
     url "https://launcher.eveonline.com/launcherVersions.json"
-    strategy :page_match
     regex(/"mac"\s*:\s*(\d+)/i)
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "EVE Launcher.app"
 
   zap trash: [
-    "~/Library/Preferences/com.ccpgames.EVE.plist",
-    "~/Library/Application Support/EVE Online",
     "~/Library/Application Support/CCP/EVE",
+    "~/Library/Application Support/EVE Online",
+    "~/Library/Preferences/com.ccpgames.EVE.plist",
   ]
 end
