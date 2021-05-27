@@ -15,7 +15,7 @@ cask "beatunes" do
     end
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :el_capitan"
 
   app "beaTunes#{version.major}.app"
 
