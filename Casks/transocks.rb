@@ -9,7 +9,7 @@ cask "transocks" do
   homepage "https://www.transocks.com/"
 
   livecheck do
-    url "https://www.transocks.org/updateInfo/Original_update.xml"
+    url "https://www.transocks.org/updateInfo/official_update.xml"
     strategy :sparkle
   end
 
