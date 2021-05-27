@@ -1,6 +1,6 @@
 cask "fm3-edit" do
-  version "1.03.03"
-  sha256 "19331702cb72d1068a8759fea2688679102922cdbe09dca28693965b362cfe4a"
+  version "1.04.01"
+  sha256 "6233f89bd2574b4aedef7cc02ee17ae61da4c6ef2bba466962740eae92defbaa"
 
   url "https://www.fractalaudio.com/downloads/FM3-Edit/FM3-Edit-OSX-v#{version.tr(".", "p")}.dmg"
   name "FM3 Edit"
