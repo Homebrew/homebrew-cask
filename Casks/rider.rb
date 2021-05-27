@@ -3,17 +3,17 @@ cask "rider" do
   sha256 "659fd07682cd726dc931cb95a618124ec885da6011e604c35ea1d982bf3c6ba0"
 
   url "https://download.jetbrains.com/rider/JetBrains.Rider-#{version.before_comma}.dmg"
-  name "Jetbrains Rider"
-  desc "Cross-platform .NET IDE"
+  name "JetBrains Rider"
+  desc ".NET IDE"
   homepage "https://www.jetbrains.com/rider/"
 
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=RD&latest=true&type=release"
-    strategy :page_match
-    regex(/JetBrains\.Rider-(\d+(?:\.\d+)*)\.dmg/i)
+    regex(/JetBrains[._-]Rider[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Rider.app"
 
