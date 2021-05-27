@@ -4,6 +4,7 @@ cask "vyprvpn" do
 
   url "https://www.goldenfrog.com/downloads/vyprvpn/desktop/mac/production/#{version}/VyprVPN_v#{version}.dmg"
   name "VyprVPN"
+  desc "VPN client"
   homepage "https://www.goldenfrog.com/vyprvpn"
 
   livecheck do
