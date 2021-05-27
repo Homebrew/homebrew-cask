@@ -5,6 +5,7 @@ cask "emby-server" do
   url "https://github.com/MediaBrowser/Emby.Releases/releases/download/#{version}/embyserver-osx-x64-#{version}.zip",
       verified: "github.com/MediaBrowser/Emby.Releases/"
   name "Emby Server"
+  desc "Personal media server with apps on just about every device"
   homepage "https://emby.media/"
 
   livecheck do
