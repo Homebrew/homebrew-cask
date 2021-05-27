@@ -5,6 +5,7 @@ cask "appium" do
   url "https://github.com/appium/appium-desktop/releases/download/v#{version}/Appium-mac-#{version}.dmg",
       verified: "github.com/appium/appium-desktop/"
   name "Appium Desktop"
+  desc "Graphical frontend to Appium automation server"
   homepage "https://appium.io/"
 
   livecheck do
