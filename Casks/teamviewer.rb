@@ -17,7 +17,10 @@ cask "teamviewer" do
     "#{staged_path}/#{token}", # This Cask should be uninstalled manually.
     "/Applications/TeamViewer.app",
   ],
-            pkgutil:   "com.teamviewer.teamviewer.*",
+            pkgutil:   [
+              "com.teamviewer.teamviewer.*",
+              "com.teamviewer.remoteaudiodriver",
+            ],
             launchctl: [
               "com.teamviewer.desktop",
               "com.teamviewer.service",
