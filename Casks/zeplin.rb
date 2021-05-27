@@ -13,13 +13,13 @@ cask "zeplin" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "Zeplin.app"
 
   zap trash: [
-    "~/Library/Logs/Zeplin",
     "~/Library/Caches/io.zeplin.osx",
+    "~/Library/Logs/Zeplin",
     "~/Library/Preferences/io.zeplin.osx.plist",
   ]
 end
