@@ -1,6 +1,6 @@
 cask "brooklite" do
-  version "20210401"
-  sha256 "cf82418dfe4610427dbecd97f992850d410c4ca89e8e27e0c56005ee589d2789"
+  version "20210601"
+  sha256 "006b08330a12724c1ad306174249898e6decc858961ae529f263f36c2c096e0e"
 
   url "https://github.com/txthinking/brook/releases/download/v#{version}/BrookLite.dmg"
   name "BrookLite"
