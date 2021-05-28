@@ -13,7 +13,7 @@ cask "linear-linear" do
   homepage "https://linear.app/"
 
   livecheck do
-    url "https://desktop.linear.app/mac/dmg/x64"
+    url :url
     strategy :header_match
   end
 
