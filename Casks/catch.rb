@@ -1,6 +1,6 @@
 cask "catch" do
-  version "2.0.2"
-  sha256 "edcbbe4afaa1968cf477611ceef47ccac3fffa1b7ab826ff8a5498a6f8890eac"
+  version "2.1"
+  sha256 "3a9dfd7bfba6ce7c6fc9a2cfb674c521c7a2d7d9c1dd6fccb3232e13e227402b"
 
   url "https://github.com/mipstian/catch/releases/download/#{version}/Catch-#{version}.zip",
       verified: "github.com/mipstian/catch/"
