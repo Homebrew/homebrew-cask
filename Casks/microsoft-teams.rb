@@ -4,6 +4,7 @@ cask "microsoft-teams" do
 
   url "https://statics.teams.microsoft.com/production-osx/#{version}/Teams_osx.pkg"
   name "Microsoft Teams"
+  desc "Meet, chat, call, and collaborate in just one place."
   homepage "https://teams.microsoft.com/downloads"
 
   livecheck do
