@@ -27,6 +27,13 @@ cask "zoom" do
 
   pkg "Zoom.pkg"
 
+  postflight do
+    # Description: Ensure console variant of postinstall is non-interactive.
+    # This is because `open "$APP_PATH"&` is called from the postinstall
+    # script of the package and we don't want any user intervention there.
+    system_command "/usr/bin/pkill", args: ["-f", "#{appdir}/zoom.us.app"], must_succeed: false
+  end
+
   uninstall signal:  ["KILL", "us.zoom.xos"],
             pkgutil: "us.zoom.pkg.videmeeting",
             delete:  [
