@@ -9,11 +9,10 @@ cask "chef-workstation" do
 
   livecheck do
     url "https://omnitruck.chef.io/stable/chef-workstation/metadata?p=mac_os_x&pv=10.15&m=x86_64&v=latest"
-    strategy :page_match
-    regex(/version\s*(\d+(?:\.\d+)*)/i)
+    regex(/version\s*(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :mojave"
 
   pkg "chef-workstation-#{version}-1.x86_64.pkg"
 
