@@ -4,7 +4,7 @@ cask "gzdoom" do
 
   url "https://github.com/coelckers/gzdoom/releases/download/g#{version}/gzdoom-#{version.dots_to_hyphens}-macOS.zip",
       verified: "github.com/coelckers/gzdoom/"
-  name "gzdoom"
+  name "GZDoom"
   desc "Adds an OpenGL renderer to the ZDoom source port"
   homepage "https://zdoom.org/index"
 
