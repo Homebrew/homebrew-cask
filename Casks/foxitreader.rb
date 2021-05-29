@@ -1,8 +1,8 @@
 cask "foxitreader" do
-  version "4.1.3"
-  sha256 "88a68e664dd60b4934683283cef1ada7b372533d0bc34bffd6b9bfdf90625def"
+  version "11.0.0"
+  sha256 "1b99bd27da4d3586b6b41ad5768bb7822b193de3042e1658f7f8aaaf069d1889"
 
-  url "https://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/mac/#{version.major}.x/#{version.major_minor}/ML/FoxitReader#{version.no_dots}.L10N.Setup.pkg"
+  url "https://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/mac/#{version.major}.x/#{version.major_minor}/ML/FoxitPDFReader#{version.no_dots}.L10N.Setup.pkg"
   name "Foxit Reader"
   desc "PDF reader"
   homepage "https://www.foxitsoftware.com/pdf-reader/"
@@ -15,7 +15,7 @@ cask "foxitreader" do
     end
   end
 
-  pkg "FoxitReader#{version.no_dots}.L10N.Setup.pkg"
+  pkg "FoxitPDFReader#{version.no_dots}.L10N.Setup.pkg"
 
   uninstall pkgutil: [
     "com.foxitsoftware.reader.pkg",
