@@ -1,6 +1,6 @@
 cask "cardhop" do
-  version "2.0,1022"
-  sha256 "c2aae9ea74986690f22d945e968e1487169b079e5b975a6656ae40880cabf3c4"
+  version "2.0.1,1026"
+  sha256 "ed50d825490cc86c85161ed07911ed74f6419e5154118057212afda891a422b4"
 
   url "https://cdn.flexibits.com/Cardhop_#{version.before_comma}.zip"
   name "Cardhop"
@@ -13,6 +13,7 @@ cask "cardhop" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Cardhop.app"
 
@@ -20,12 +21,12 @@ cask "cardhop" do
             quit:      "com.flexibits.cardhop.mac"
 
   zap trash: [
-    "~/Library/Preferences/com.flexibits.cardhop.mac.plist",
     "~/Library/Application Scripts/com.flexibits.cardhop.mac",
     "~/Library/Application Scripts/com.flexibits.cardhop.mac.launcher",
     "~/Library/Application Scripts/com.flexibits.cardhop.mac.BluetoothDialer",
     "~/Library/Containers/com.flexibits.cardhop.mac",
     "~/Library/Containers/com.flexibits.cardhop.mac.launcher",
     "~/Library/Containers/com.flexibits.cardhop.mac.BluetoothDialer",
+    "~/Library/Preferences/com.flexibits.cardhop.mac.plist",
   ]
 end
