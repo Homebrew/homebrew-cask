@@ -1,6 +1,6 @@
 cask "simtoolkitpro" do
-  version "0.6.81"
-  sha256 "cd4745e0b26b066969050fc594759aeabca3b2a4fcc8b02bf49b06b25f85d257"
+  version "0.6.83"
+  sha256 "d640a80cdb19deb43256d7395a61980813cf4a306dd8c62ded0ff0319153009f"
 
   url "https://simtoolkitpro-cdn.net/automated-builds/SimToolkitPro-#{version}.Setup.dmg",
       verified: "simtoolkitpro-cdn.net/"
