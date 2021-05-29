@@ -5,7 +5,7 @@ cask "vassal" do
   url "https://github.com/vassalengine/vassal/releases/download/#{version}/VASSAL-#{version}-macos.dmg",
       verified: "github.com/vassalengine/vassal/"
   name "VASSAL"
-  desc "Open-source boardgame engine"
+  desc "Board game engine"
   homepage "http://www.vassalengine.org/"
 
   app "VASSAL.app"
