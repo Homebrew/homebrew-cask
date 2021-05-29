@@ -9,8 +9,7 @@ cask "opera-gx" do
 
   livecheck do
     url "https://ftp.opera.com/pub/opera_gx/"
-    strategy :page_match
-    regex(/href=['"]?(\d+(?:\.\d+)*)['"]?/i)
+    regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
   auto_updates true
