@@ -9,9 +9,10 @@ cask "taskade" do
 
   livecheck do
     url "https://www.taskade.com/downloads"
-    strategy :page_match
-    regex(%r{href=.*?/Taskade-(\d+(?:\.\d+)*)-universal\.dmg}i)
+    regex(%r{href=.*?/Taskade[._-]v?(\d+(?:\.\d+)+)[._-]universal\.dmg}i)
   end
+
+  depends_on macos: ">= :yosemite"
 
   app "Taskade.app"
 end
