@@ -17,9 +17,10 @@ cask "remember-the-milk" do
 
   livecheck do
     url "https://www.rememberthemilk.com/services/mac/"
-    strategy :page_match
-    regex(%r{<b>Version:</b>\s(\d+(?:\.\d+)*)}i)
+    regex(%r{<b>Version:</b>\s*(\d+(?:\.\d+)+)}i)
   end
+
+  depends_on macos: ">= :yosemite"
 
   app "Remember The Milk.app"
 
