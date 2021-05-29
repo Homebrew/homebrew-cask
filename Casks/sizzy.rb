@@ -8,7 +8,7 @@ cask "sizzy" do
   homepage "https://sizzy.co/"
 
   livecheck do
-    url "https://sizzy.co/get-app"
+    url :url
     strategy :header_match
   end
 
