@@ -1,12 +1,12 @@
 cask "remember-the-milk" do
-  version "1.3.8"
+  version "1.3.10"
 
   if Hardware::CPU.intel?
-    sha256 "c85c235982229eb48b1fa61f0a0e57e14cf5637c0ae1a2a2e4b735fe4b829593"
+    sha256 "3cc0262ac653c6f71ff1e8f3f17d37da70e9fd464c94cb6aceb64d2dabf09104"
 
     url "https://www.rememberthemilk.com/download/mac/RememberTheMilk-#{version}-x64.zip"
   else
-    sha256 "30f6e82ff782914d49ac1b8242c6d7a933379fbad9b73b269e7e073826b68df8"
+    sha256 "9e1e68d5b9bf6cb284f7af75cd55f219d4cb848aaf7a27ea7144b03008c8c908"
 
     url "https://www.rememberthemilk.com/download/mac/RememberTheMilk-#{version}-arm64.zip"
   end
