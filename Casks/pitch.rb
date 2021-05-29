@@ -1,6 +1,6 @@
 cask "pitch" do
-  version "1.26.0,1502213"
-  sha256 "4c9624ec23b3b10e16acb857c2d7758e0f058ece63353e53ea66f0ae7ff59ba0"
+  version "1.28.2,1573371"
+  sha256 "31db510468054229d7caeb8ff8c6bb9371beb875ecce1fecbf9a444101b5bb90"
 
   url "https://desktop-app-builds.pitch.com/Pitch-#{version.before_comma}-ci#{version.after_comma}.dmg"
   name "Pitch"
@@ -10,7 +10,7 @@ cask "pitch" do
   livecheck do
     url "https://desktop-app-builds.pitch.com/latest-mac.yml"
     strategy :page_match do |page|
-      match = page.match(/Pitch-(\d+(?:\.\d+)*)-ci(\d+).dmg/i)
+      match = page.match(/Pitch[._-]v?(\d+(?:\.\d+)+)[._-]ci(\d+)\.dmg/i)
       "#{match[1]},#{match[2]}"
     end
   end
