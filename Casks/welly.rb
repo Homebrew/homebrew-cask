@@ -4,6 +4,7 @@ cask "welly" do
 
   url "https://github.com/clyang/welly/releases/download/#{version}/Welly.v.#{version}.zip"
   name "Welly"
+  desc "BBS client"
   homepage "https://github.com/clyang/welly"
 
   auto_updates true
