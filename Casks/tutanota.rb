@@ -1,5 +1,5 @@
 cask "tutanota" do
-  version "3.83.3"
+  version "3.84.0"
   sha256 :no_check
 
   url "https://mail.tutanota.com/desktop/tutanota-desktop-mac.zip"
@@ -10,7 +10,7 @@ cask "tutanota" do
   livecheck do
     url "https://github.com/tutao/tutanota"
     strategy :github_latest
-    regex(%r{href=.*?/tutanota-release-(\d+(?:\.\d+)*)}i)
+    regex(%r{href=.*?/tutanota-release[._-]v?(\d+(?:\.\d+)+)}i)
   end
 
   app "Tutanota Desktop.app"
