@@ -13,6 +13,7 @@ cask "cardhop" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Cardhop.app"
 
@@ -20,12 +21,12 @@ cask "cardhop" do
             quit:      "com.flexibits.cardhop.mac"
 
   zap trash: [
-    "~/Library/Preferences/com.flexibits.cardhop.mac.plist",
     "~/Library/Application Scripts/com.flexibits.cardhop.mac",
     "~/Library/Application Scripts/com.flexibits.cardhop.mac.launcher",
     "~/Library/Application Scripts/com.flexibits.cardhop.mac.BluetoothDialer",
     "~/Library/Containers/com.flexibits.cardhop.mac",
     "~/Library/Containers/com.flexibits.cardhop.mac.launcher",
     "~/Library/Containers/com.flexibits.cardhop.mac.BluetoothDialer",
+    "~/Library/Preferences/com.flexibits.cardhop.mac.plist",
   ]
 end
