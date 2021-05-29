@@ -10,7 +10,7 @@ cask "lightkey" do
   livecheck do
     url "https://lightkeyapp.com/en/download"
     strategy :header_match do |headers|
-      headers["location"][%r{-(\d+(?:-\d+)*)/LightkeyInstaller\.zip}i, 1].tr("-", ".")
+      headers["location"][%r{/Lightkey[._-]v?(\d+(?:-\d+)+)/LightkeyInstaller\.zip}i, 1].tr("-", ".")
     end
   end
 
