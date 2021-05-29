@@ -1,6 +1,6 @@
 cask "ghidra" do
-  version "9.2.3,20210325"
-  sha256 "9019c78f8b38d68fd40908b040466974a370e26ba51b2aaeafc744171040f714"
+  version "9.2.4,20210427"
+  sha256 "c1f18cdb12e2e1c0313e7becf7f0387226937ac67ad6c6e5056fa889229f969a"
 
   url "https://www.ghidra-sre.org/ghidra_#{version.before_comma}_PUBLIC_#{version.after_comma}.zip"
   name "Ghidra"
