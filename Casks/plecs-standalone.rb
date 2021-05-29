@@ -1,6 +1,6 @@
 cask "plecs-standalone" do
-  version "4.5.4"
-  sha256 "ad748ae086b6cae8b4bd446fcfc03783d21fa846840f6955d0636439058ae9a0"
+  version "4.5.5"
+  sha256 "2b1e2435b84b31467bbf6bf58bd1f2fd508dfacfc188da890c7f14293ab764cf"
 
   url "https://www.plexim.com/sites/default/files/packages/plecs-standalone-#{version.dots_to_hyphens}_maci64.dmg"
   name "PLECS"
