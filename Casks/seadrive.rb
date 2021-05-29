@@ -10,9 +10,10 @@ cask "seadrive" do
 
   livecheck do
     url "https://www.seafile.com/en/download/"
-    strategy :page_match
-    regex(%r{href=.*?/seadrive-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/seadrive[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Seadrive.app"
 end
