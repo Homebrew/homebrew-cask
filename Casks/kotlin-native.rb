@@ -10,8 +10,7 @@ cask "kotlin-native" do
 
   livecheck do
     url :url
-    strategy :git
-    regex(/^v(\d+(?:\.\d+)*)$/)
+    regex(/^v?(\d+(?:\.\d+)+)$/)
   end
 
   conflicts_with formula: "kotlin"
