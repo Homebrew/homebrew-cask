@@ -11,7 +11,6 @@ cask "dingtalk" do
   livecheck do
     url "https://www.dingtalk.com/mac/d/"
     strategy :header_match
-    regex(/DingTalk_v(\d+(?:\.\d+)*)\.dmg/i)
   end
 
   auto_updates true
