@@ -1,6 +1,6 @@
 cask "lunar" do
-  version "4.0.2"
-  sha256 "3025429b884e9eb7c6f6d12583e2df37ded558a194a7d943eac0e7e83952f04b"
+  version "4.0.4"
+  sha256 "072ee4f7a1294e5239713471abe154c3ad04a17b97a1a4c17d96a54e6dbe58e7"
 
   url "https://static.lunar.fyi/releases/Lunar-#{version}.pkg"
   name "Lunar"
@@ -13,7 +13,7 @@ cask "lunar" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   pkg "Lunar-#{version}.pkg"
 
