@@ -9,7 +9,6 @@ cask "ibm-cloud-cli" do
 
   livecheck do
     url "https://github.com/IBM-Cloud/ibm-cloud-cli-release"
-    strategy :git
   end
 
   depends_on cask: "docker"
