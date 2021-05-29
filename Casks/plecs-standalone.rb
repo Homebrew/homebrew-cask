@@ -4,12 +4,12 @@ cask "plecs-standalone" do
 
   url "https://www.plexim.com/sites/default/files/packages/plecs-standalone-#{version.dots_to_hyphens}_maci64.dmg"
   name "PLECS"
+  desc "Time-domain simulation of power electronic systems"
   homepage "https://www.plexim.com/"
 
   livecheck do
     url "https://www.plexim.com/download/latest_version?myversion=#{version}"
-    strategy :page_match
-    regex(/(\d+(?:\.\d+)*)/i)
+    regex(/v?(\d+(?:\.\d+)+)/i)
   end
 
   app "PLECS #{version.major_minor}.app"
