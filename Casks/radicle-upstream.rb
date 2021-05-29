@@ -9,7 +9,6 @@ cask "radicle-upstream" do
 
   livecheck do
     url "https://github.com/radicle-dev/radicle-upstream"
-    strategy :git
   end
 
   depends_on macos: ">= :mojave"
