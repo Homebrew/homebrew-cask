@@ -9,8 +9,7 @@ cask "roboform" do
 
   livecheck do
     url "https://www.roboform.com/news-mac"
-    strategy :page_match
-    regex(/Version\s*(\d+(?:\.\d+)*)/i)
+    regex(/Version\s*(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
