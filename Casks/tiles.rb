@@ -10,7 +10,7 @@ cask "tiles" do
   livecheck do
     url "https://updates.sempliva.com/tiles/updates.xml"
     strategy :sparkle do |item|
-      id = item.url[/-([0-9a-f]+)\.dmg/i, 1]
+      id = item.url[/Tiles[._-](\h+)\.dmg/i, 1]
       "#{item.short_version},#{id}"
     end
   end
