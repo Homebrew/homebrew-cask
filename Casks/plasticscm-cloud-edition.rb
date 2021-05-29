@@ -10,7 +10,6 @@ cask "plasticscm-cloud-edition" do
 
   livecheck do
     url "https://www.plasticscm.com/download/releasenotes/"
-    strategy :page_match
     regex(/plastic\sscm\s-\srelease\snotes\s-\s(\d+(?:\.\d+)*)/i)
   end
 
