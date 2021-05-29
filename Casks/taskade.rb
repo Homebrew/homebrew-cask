@@ -1,6 +1,6 @@
 cask "taskade" do
-  version "3.3.6"
-  sha256 "e6e47f08de0af0e13f24b701afe03596829a6b836d72c53e26a113ecf3c61b57"
+  version "3.3.7"
+  sha256 "f3d3a0ea2278b2bf1c378bbb68cc28e32251bfbdffdb7d2a09ca7f907779769a"
 
   url "https://apps.taskade.com/updates/Taskade-#{version}-universal.dmg"
   name "Taskade"
