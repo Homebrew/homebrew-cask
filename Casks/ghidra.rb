@@ -4,6 +4,7 @@ cask "ghidra" do
 
   url "https://www.ghidra-sre.org/ghidra_#{version.before_comma}_PUBLIC_#{version.after_comma}.zip"
   name "Ghidra"
+  desc "Software reverse engineering (SRE) suite of tools"
   homepage "https://www.ghidra-sre.org/"
 
   livecheck do
