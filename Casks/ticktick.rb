@@ -11,7 +11,7 @@ cask "ticktick" do
   livecheck do
     url "https://www.ticktick.com/static/getApp/download?type=mac"
     strategy :header_match do |headers|
-      match = headers["location"].match(%r{/TickTick_(\d+(?:\.\d+)*)_(\d+)\.dmg}i)
+      match = headers["location"].match(%r{/TickTick[._-]v?(\d+(?:\.\d+)+)[_-](\d+)\.dmg}i)
       "#{match[1]},#{match[2]}"
     end
   end
