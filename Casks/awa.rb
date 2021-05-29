@@ -5,6 +5,7 @@ cask "awa" do
   url "https://download-d.awa.io/mac/stable/AWASetup-v#{version}.dmg",
       verified: "download-d.awa.io/mac/stable/"
   name "AWA"
+  desc "Music streaming service"
   homepage "https://awa.fm/"
 
   livecheck do
