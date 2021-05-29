@@ -9,9 +9,10 @@ cask "hiarcs-chess-explorer" do
 
   livecheck do
     url "https://www.hiarcs.com/mac-chess-explorer-download.htm"
-    strategy :page_match
-    regex(%r{href=.*?/HIARCS-Chess-Explorer-Installer-v?(\d+(?:\.\d+)*)\.pkg}i)
+    regex(%r{href=.*?/HIARCS-Chess-Explorer-Installer[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
   end
+
+  depends_on macos: ">= :sierra"
 
   pkg "HIARCS-Chess-Explorer-Installer-v#{version}.pkg"
 
