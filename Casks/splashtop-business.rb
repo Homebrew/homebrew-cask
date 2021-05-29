@@ -10,8 +10,7 @@ cask "splashtop-business" do
 
   livecheck do
     url "https://www.splashtop.com/wp-content/themes/responsive/downloadx.php?product=stb&platform=mac-client"
-    strategy :page_match
-    regex(/Splashtop_Business_Mac_INSTALLER_v(\d+(?:\.\d+)*)\.dmg/i)
+    regex(/Splashtop_Business_Mac_INSTALLER[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   pkg "Splashtop Business.pkg"
