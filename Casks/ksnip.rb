@@ -4,6 +4,7 @@ cask "ksnip" do
 
   url "https://github.com/ksnip/ksnip/releases/download/v#{version}/ksnip-#{version}.dmg"
   name "ksnip"
+  desc "Screenshot and annotation tool"
   homepage "https://github.com/ksnip/ksnip"
 
   app "ksnip.app"
