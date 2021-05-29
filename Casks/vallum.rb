@@ -5,12 +5,12 @@ cask "vallum" do
   url "https://github.com/TheMurusTeam/Vallum/releases/download/v#{version}/vallum-#{version}.zip",
       verified: "github.com/TheMurusTeam/Vallum/"
   name "Vallum"
+  desc "Application firewall"
   homepage "https://www.vallumfirewall.com/"
 
   livecheck do
     url :url
-    strategy :git
-    regex(/^v?(\d+(?:\.\d+)*)$/i)
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   app "Vallum.app"
