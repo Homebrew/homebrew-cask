@@ -12,6 +12,8 @@ cask "calendar-366" do
     strategy :sparkle
   end
 
+  depends_on macos: ">= :sierra"
+
   app "Calendar 366 II.app"
 
   zap trash: [
