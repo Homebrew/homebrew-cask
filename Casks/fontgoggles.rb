@@ -1,6 +1,6 @@
 cask "fontgoggles" do
-  version "1.3.0"
-  sha256 "09a8a261fb221b151e8e200f019da5c469c46a0dfa51bb1b0542e7f6f1729a0c"
+  version "1.3.1"
+  sha256 "7728785add360252b28b8bfa8c1e6a246abb54b514ebcaf20628841d91780d38"
 
   url "https://github.com/justvanrossum/fontgoggles/releases/download/v#{version}/FontGoggles.dmg",
       verified: "github.com/justvanrossum/fontgoggles/"
