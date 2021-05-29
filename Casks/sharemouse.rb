@@ -9,9 +9,10 @@ cask "sharemouse" do
 
   livecheck do
     url "https://www.sharemouse.com/download/"
-    strategy :page_match
     regex(/Mac\s*Version:.*?(\d+(?:\.\d+)*)/i)
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "ShareMouse.app"
 
