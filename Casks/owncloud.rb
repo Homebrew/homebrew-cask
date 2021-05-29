@@ -9,8 +9,7 @@ cask "owncloud" do
 
   livecheck do
     url "https://owncloud.com/desktop-app/"
-    strategy :page_match
-    regex(%r{href=.*?/owncloud-(\d+(?:\.\d+)*)\.pkg}i)
+    regex(%r{href=.*?/owncloud[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
   end
 
   depends_on macos: ">= :sierra"
@@ -23,12 +22,12 @@ cask "owncloud" do
   ]
 
   zap trash: [
-    "~/Library/Group Containers/9B5WD74GWJ.com.owncloud.desktopclient",
-    "~/Library/Caches/com.owncloud.desktopclient",
     "~/Library/Application Scripts/com.owncloud.desktopclient.FinderSyncExt",
-    "~/Library/Containers/com.owncloud.desktopclient.FinderSyncExt",
-    "~/Library/Preferences/com.owncloud.desktopclient.plist",
     "~/Library/Application Support/ownCloud",
+    "~/Library/Caches/com.owncloud.desktopclient",
+    "~/Library/Containers/com.owncloud.desktopclient.FinderSyncExt",
+    "~/Library/Group Containers/9B5WD74GWJ.com.owncloud.desktopclient",
+    "~/Library/Preferences/com.owncloud.desktopclient.plist",
     "~/Library/Preferences/ownCloud",
   ]
 end
