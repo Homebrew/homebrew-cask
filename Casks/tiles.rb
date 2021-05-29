@@ -1,6 +1,6 @@
 cask "tiles" do
-  version "1.2.0,c4c8c9f9"
-  sha256 "75cf971fb5e8abe5c22dd86aa52946b916f57f8c16da78e86473ac4d21dbf80f"
+  version "1.2.1,c0cd2df5"
+  sha256 "34a6dd09b0f1df4ac6116395bb403b090516faa612162bf4f80bbc1e832813fc"
 
   url "https://updates.sempliva.com/tiles/Tiles-#{version.after_comma}.dmg"
   name "Sempliva Tiles"
@@ -10,7 +10,7 @@ cask "tiles" do
   livecheck do
     url "https://updates.sempliva.com/tiles/updates.xml"
     strategy :sparkle do |item|
-      id = item.url[/-([0-9a-f]+)\.dmg/i, 1]
+      id = item.url[/Tiles[._-](\h+)\.dmg/i, 1]
       "#{item.short_version},#{id}"
     end
   end
