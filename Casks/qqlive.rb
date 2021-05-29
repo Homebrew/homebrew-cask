@@ -11,8 +11,7 @@ cask "qqlive" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/TencentVideo_V(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/TencentVideo[._-]V?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   auto_updates true
