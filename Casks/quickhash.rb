@@ -3,9 +3,14 @@ cask "quickhash" do
   sha256 "8449c5042dd0061515ca5cc83ee24b487a228c7f9263ea44330d3f008cbc1dec"
 
   url "https://quickhash-gui.org/wp-content/uploads/#{version.after_comma.major}/#{version.after_comma.minor}/QuickHash-GUI-OSX-v#{version.before_comma}.zip"
-  appcast "https://www.quickhash-gui.org/downloads/"
   name "Quickhash"
   homepage "https://www.quickhash-gui.org/"
+
+  livecheck do
+    url "https://www.quickhash-gui.org/downloads/"
+    strategy :page_match
+    regex(%r{href=.*?Quickhash-GUI\ v(\d+(?:\.\d+)*)\ Apple OSX}i)
+  end
 
   app "Quickhash-GUI.app"
 end
