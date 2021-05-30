@@ -5,11 +5,11 @@ cask "ui-browser" do
   url "https://pfiddlesoft.com/uibrowser/downloads/UIBrowser#{version.no_dots}.dmg"
   name "UI Browser"
   homepage "https://pfiddlesoft.com/uibrowser/"
-  
+
   livecheck do
     url "https://pfiddlesoft.com/uibrowser/index-downloads.html"
     strategy :page_match
-    regex(%r{href=.*?UI\ Browser\ (\d+(?:\.\d+)*)}i)
+    regex(/href=.*?UI\ Browser\ (\d+(?:\.\d+)*)/i)
   end
 
   app "UI Browser.app"
