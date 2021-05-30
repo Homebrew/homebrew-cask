@@ -4,9 +4,14 @@ cask "sejda-pdf" do
 
   url "https://sejda-cdn.com/downloads/sejda-desktop_#{version}.dmg",
       verified: "sejda-cdn.com/"
-  appcast "https://www.sejda.com/desktop"
   name "Sejda PDF Desktop"
   homepage "https://www.sejda.com/desktop"
+
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{mac:.*?sejda-desktop_(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   app "Sejda PDF Desktop.app"
 end
