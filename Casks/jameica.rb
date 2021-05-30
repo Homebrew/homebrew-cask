@@ -1,6 +1,3 @@
-# typed: false
-# frozen_string_literal: true
-
 cask "jameica" do
   version "2.10.0"
   sha256 "f6b95ec1120ce6cc2af3619f2abd142305950e698d4366571aec578248c8d89c"
