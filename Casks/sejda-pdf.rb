@@ -10,7 +10,7 @@ cask "sejda-pdf" do
   livecheck do
     url :homepage
     strategy :page_match
-    regex(%r{mac:.*?sejda-desktop_(\d+(?:\.\d+)*)\.dmg}i)
+    regex(/mac:.*?sejda-desktop_(\d+(?:\.\d+)*)\.dmg/i)
   end
 
   app "Sejda PDF Desktop.app"
