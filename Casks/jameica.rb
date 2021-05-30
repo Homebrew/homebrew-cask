@@ -5,6 +5,12 @@ cask "jameica" do
   url "https://www.willuhn.de/products/jameica/releases/current/jameica/jameica-macos64-#{version}.zip"
   name "Jameica"
   homepage "https://www.willuhn.de/products/jameica/"
+  
+  livecheck do
+	  url "https://www.willuhn.de/products/jameica/download.php"
+    strategy :page_match
+    regex(%r{href=.*?/jameica-macos64-(\d+(?:\.\d+)*)\.zip}i)
+  end
 
   app "jameica.app"
 end
