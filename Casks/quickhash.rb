@@ -1,6 +1,3 @@
-# typed: false
-# frozen_string_literal: true
-
 cask "quickhash" do
   version "3.2.0,2020.08"
   sha256 "8449c5042dd0061515ca5cc83ee24b487a228c7f9263ea44330d3f008cbc1dec"
