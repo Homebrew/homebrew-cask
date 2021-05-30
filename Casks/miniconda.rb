@@ -5,7 +5,13 @@ cask "miniconda" do
   url "https://repo.anaconda.com/miniconda/Miniconda3-#{version}-MacOSX-x86_64.sh",
       verified: "repo.anaconda.com/miniconda/"
   name "Continuum Analytics Miniconda"
+  desc "Minimal installer for conda"
   homepage "https://conda.io/miniconda.html"
+
+  livecheck do
+    url "https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh"
+    regex(/^#\s*VER:\s*((?:py\d*[._-])?v?(\d+(?:\.\d+)+))/i)
+  end
 
   auto_updates true
   conflicts_with cask: "miniforge"
