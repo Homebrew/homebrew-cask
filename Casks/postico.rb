@@ -4,10 +4,16 @@ cask "postico" do
 
   url "https://eggerapps-downloads.s3.amazonaws.com/postico-#{version}.zip",
       verified: "eggerapps-downloads.s3.amazonaws.com/"
-  appcast "https://eggerapps.at/postico/docs/?file=changelist.html"
   name "Postico"
   desc "GUI client for PostgreSQL databases"
   homepage "https://eggerapps.at/postico/"
+
+  livecheck do
+    url "https://eggerapps.at/postico/download/"
+    strategy :header_match
+  end
+
+  depends_on macos: ">= :yosemite"
 
   app "Postico.app"
 
