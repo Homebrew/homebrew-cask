@@ -4,7 +4,13 @@ cask "google-backup-and-sync" do
 
   url "https://dl.google.com/drive/InstallBackupAndSync.dmg"
   name "Google Backup and Sync"
+  desc "Back up and sync files with Google Drive"
   homepage "https://www.google.com/drive/download/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   auto_updates true
   conflicts_with cask: "google-photos-backup-and-sync"
