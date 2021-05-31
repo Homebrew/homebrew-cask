@@ -18,6 +18,11 @@ cask "chromedriver" do
     url "https://chromedriver.storage.googleapis.com/LATEST_RELEASE"
     regex(/v?(\d+(?:\.\d+)+)/i)
   end
+  
+  postflight do
+    system_command "xattr",
+                   args: ["-d", "com.apple.quarantine", "#{staged_path}/chromedriver"]
+  end
 
   conflicts_with cask: "homebrew/cask-versions/chromedriver-beta"
 
