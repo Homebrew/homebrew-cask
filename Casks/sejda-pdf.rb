@@ -5,13 +5,15 @@ cask "sejda-pdf" do
   url "https://sejda-cdn.com/downloads/sejda-desktop_#{version}.dmg",
       verified: "sejda-cdn.com/"
   name "Sejda PDF Desktop"
+  desc "PDF editor"
   homepage "https://www.sejda.com/desktop"
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(/mac:.*?sejda-desktop_(\d+(?:\.\d+)*)\.dmg/i)
+    regex(/mac\s*:\s*["']sejda[._-]desktop[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Sejda PDF Desktop.app"
 end
