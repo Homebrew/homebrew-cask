@@ -1,12 +1,12 @@
 cask "zoom" do
-  version "5.6.4.765"
+  version "5.6.6.950"
 
   if Hardware::CPU.intel?
-    sha256 "49d503837f645443c0481da13a147dc05cbdc48d6f70ae3df56f99b6f5eafc39"
+    sha256 "562d4fc25ff0b3ae3df597644cd6e2cdc0513751f610e334ff23e6464c73bf45"
 
     url "https://cdn.zoom.us/prod/#{version}/Zoom.pkg"
   else
-    sha256 "d34170665d605b4d881e78824af4505f1db73441438e958317af202fa5ac81c2"
+    sha256 "60e5d1865bbf176bebe5a42b2c2b0e4f6f38af3dc4de25ee656b11407836810b"
 
     url "https://cdn.zoom.us/prod/#{version}/arm64/Zoom.pkg"
   end
@@ -49,9 +49,12 @@ cask "zoom" do
     "~/Library/Logs/zoom.us",
     "~/Library/Logs/zoominstall.log",
     "~/Library/Logs/ZoomPhone",
+    "~/Library/Group Containers/BJ4HAAB9B3.ZoomClient3rd",
     "~/Library/Mobile Documents/iCloud~us~zoom~videomeetings",
     "~/Library/Preferences/ZoomChat.plist",
     "~/Library/Preferences/us.zoom.airhost.plist",
+    "~/Library/Preferences/us.zoom.caphost.plist",
+    "~/Library/Preferences/us.zoom.Transcode.plist",
     "~/Library/Preferences/us.zoom.xos.Hotkey.plist",
     "~/Library/Preferences/us.zoom.xos.plist",
     "~/Library/Safari/PerSiteZoomPreferences.plist",

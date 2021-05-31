@@ -1,6 +1,6 @@
 cask "textbuddy" do
-  version "1.0.9,17"
-  sha256 "695807979b02f32fbf6232b8741f943831e59e71e0d92422cf2abdb557e0afc1"
+  version "1.0.10,18"
+  sha256 "27c7387330e9e6f314ea13bcc605ea437df32759a40bd6bfdef6e2671d1e1943"
 
   url "https://download.clickontyler.com/textbuddy/textbuddy_#{version.after_comma}.zip",
       verified: "download.clickontyler.com/textbuddy"

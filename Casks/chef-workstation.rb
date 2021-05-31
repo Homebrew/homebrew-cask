@@ -1,6 +1,6 @@
 cask "chef-workstation" do
-  version "21.5.420"
-  sha256 "fa3655a0a4d937ea36513166e4d3cac39342adcca5e4e25f0091c3a05e7385eb"
+  version "21.5.462"
+  sha256 "f1318e39602c18cfa41cdc5e7b333e305d3e913ebf727e426bbf2b85daa7ec81"
 
   url "https://packages.chef.io/files/stable/chef-workstation/#{version}/mac_os_x/10.15/chef-workstation-#{version}-1.x86_64.dmg"
   name "Chef Workstation"
@@ -9,11 +9,10 @@ cask "chef-workstation" do
 
   livecheck do
     url "https://omnitruck.chef.io/stable/chef-workstation/metadata?p=mac_os_x&pv=10.15&m=x86_64&v=latest"
-    strategy :page_match
-    regex(/version\s*(\d+(?:\.\d+)*)/i)
+    regex(/version\s*(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :mojave"
 
   pkg "chef-workstation-#{version}-1.x86_64.pkg"
 

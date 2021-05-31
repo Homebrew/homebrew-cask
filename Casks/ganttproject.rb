@@ -1,6 +1,6 @@
 cask "ganttproject" do
-  version "3.0.3000"
-  sha256 "be30dc8ded552109f16c4f4388a440f7a09aa3151632832cb30c62efb5d875de"
+  version "3.1.3100"
+  sha256 "397f7d41be9786bd1aab8bca2429df4d2474c6cfeea3566263d026554ffb5507"
 
   url "https://github.com/bardsoftware/ganttproject/releases/download/ganttproject-#{version}/ganttproject-#{version}.dmg",
       verified: "github.com/bardsoftware/ganttproject/"

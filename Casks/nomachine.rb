@@ -1,6 +1,6 @@
 cask "nomachine" do
-  version "7.4.1_1"
-  sha256 "b70bf1152830ea551df69d5053eeb5ca58bb07fb6e4aea4d52c9d14135857606"
+  version "7.5.2_1"
+  sha256 "bf3e475976082ba674211a8d5d0c54a3032193b94f5ed35cf8346a7f1d48923e"
 
   url "https://download.nomachine.com/download/#{version.major_minor}/MacOSX/nomachine_#{version}.dmg"
   name "NoMachine"
@@ -9,8 +9,7 @@ cask "nomachine" do
 
   livecheck do
     url "https://www.nomachine.com/download/download&id=7"
-    strategy :page_match
-    regex(/nomachine_(\d+(?:\.\d+)*_\d+)\.dmg/i)
+    regex(/nomachine[._-]v?(\d+(?:\.\d+)*_\d+)\.dmg/i)
   end
 
   pkg "NoMachine.pkg"

@@ -1,5 +1,5 @@
 cask "bigsur-cache-cleaner" do
-  version "16.1.4"
+  version "16.1.5"
   sha256 :no_check
 
   url "https://www.northernsoftworks.com/downloads/bscc.dmg"
@@ -10,8 +10,7 @@ cask "bigsur-cache-cleaner" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(/Download\s*Big\s*Sur\s*Cache\s*Cleaner\s*(\d+(?:\.\d+)*)/i)
+    regex(/Download\s*Big\s*Sur\s*Cache\s*Cleaner\s*v?(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: ">= :mojave"

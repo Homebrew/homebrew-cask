@@ -1,8 +1,8 @@
 cask "bit-slicer" do
-  version "1.7.9,1135"
-  sha256 "5dd8ab04ac8ba019bbed906eb6f8efe5d6d6adcb8952eae9fe23bef5138cd420"
+  version "1.7.10"
+  sha256 "0701a5f1db34662eee41855a407bb5453d7e710eebb23d82876d31ee4799e540"
 
-  url "https://zgcoder.net/software/bitslicer/dist/stable/Bit_Slicer_#{version.before_comma}.zip",
+  url "https://zgcoder.net/software/bitslicer/dist/stable/Bit_Slicer_#{version}.zip",
       verified: "zgcoder.net/"
   name "Bit Slicer"
   desc "Universal game trainer"
@@ -10,7 +10,8 @@ cask "bit-slicer" do
 
   livecheck do
     url "https://zgcoder.net/bitslicer/update/appcast.xml"
-    strategy :sparkle
+    strategy :page_match
+    regex(/Bit_Slicer_?(\d+(?:\.\d+)*)\.zip/i)
   end
 
   app "Bit Slicer.app"

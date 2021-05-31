@@ -1,13 +1,21 @@
 cask "sound-control" do
-  version "2.6.0,4297"
-  sha256 "d7b323dad1b9351b29f0a7ec66d1c428e59d155c3c70c64d1ae0913031bf2b98"
+  version "2.6.2,5156"
+  sha256 "041812f2361a0e0afb614f77137b9f7f083827feb7c971d0ed6e52ce0b4ca5a6"
 
   url "https://staticz.com/download/#{version.after_comma}/"
-  appcast "http://staticz.net/updates/soundcontrol.rss"
   name "Sound Control"
+  desc "Per-app audio controls"
   homepage "https://staticz.com/soundcontrol/"
 
+  livecheck do
+    url "http://staticz.net/updates/soundcontrol.rss"
+    strategy :sparkle do |item|
+      "#{item.version},#{item.url[%r{/download/(\d+)/}i, 1]}"
+    end
+  end
+
   auto_updates true
+  depends_on macos: ">= :mojave"
 
   app "Sound Control.app"
 

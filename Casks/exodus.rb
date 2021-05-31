@@ -1,6 +1,6 @@
 cask "exodus" do
-  version "21.5.14"
-  sha256 "e66956d689cfd203f399cac0dfb52e00bf3f82509075df5542dbf6c21a8a7b30"
+  version "21.5.25"
+  sha256 "8e6dc6676e97fa01cb29a82ef38560adce79c68e40ae2baf75e46a67c2ef6d40"
 
   url "https://downloads.exodus.com/releases/exodus-macos-#{version}.dmg"
   name "Exodus"

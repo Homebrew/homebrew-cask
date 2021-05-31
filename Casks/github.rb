@@ -1,9 +1,16 @@
 cask "github" do
-  version "2.8.1-717be06b"
-  sha256 "33c861cee87422c480f6ce57229e8de4c675857ebe032cd02ad44b6bd0c910e9"
+  version "2.8.2-4423bb9d"
 
-  url "https://desktop.githubusercontent.com/releases/#{version}/GitHubDesktop-x64.zip",
-      verified: "githubusercontent.com/"
+  if Hardware::CPU.intel?
+    sha256 "0a3286b027a024a0f6df82fbc905b79a2c9ef9aad6beaf7a8a851cb24fcb07ae"
+    url "https://desktop.githubusercontent.com/releases/#{version}/GitHubDesktop-x64.zip",
+        verified: "githubusercontent.com/"
+  else
+    sha256 "3495908f2aae4b82747f15514d473fb2a148a3ac971f9bf31a9e0078e741c032"
+    url "https://desktop.githubusercontent.com/releases/#{version}/GitHubDesktop-arm64.zip",
+        verified: "githubusercontent.com/"
+  end
+
   name "GitHub Desktop"
   desc "Desktop client for GitHub repositories"
   homepage "https://desktop.github.com/"
@@ -11,7 +18,7 @@ cask "github" do
   livecheck do
     url "https://central.github.com/deployments/desktop/desktop/latest/darwin"
     strategy :header_match
-    regex(%r{(\d+(?:\.\d+)[^/]*)/GitHubDesktop-x64\.zip}i)
+    regex(%r{(\d+(?:\.\d+)[^/]*)/GitHubDesktop-(arm64|x64)\.zip}i)
   end
 
   auto_updates true

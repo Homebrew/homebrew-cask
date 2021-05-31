@@ -1,6 +1,6 @@
 cask "studio-3t" do
-  version "2021.2.0"
-  sha256 "97d6d33aa0d07878f211f71443ab3b1bdc9e79144655cf555d1a6d2cfd4e5016"
+  version "2021.3.0"
+  sha256 "e4a1f232745aaba140a6f1ff72b81ccf82fff4f05b761671ccb83a6515349ae0"
 
   url "https://download.studio3t.com/studio-3t/mac/#{version}/Studio-3T.dmg"
   name "Studio 3T"

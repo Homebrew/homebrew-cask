@@ -4,7 +4,7 @@ cask "arduino" do
 
   url "https://downloads.arduino.cc/arduino-#{version}-macosx.zip"
   name "Arduino"
-  desc "Open-source electronics prototyping platform"
+  desc "Electronics prototyping platform"
   homepage "https://www.arduino.cc/"
 
   livecheck do

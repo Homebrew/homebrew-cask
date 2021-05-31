@@ -1,6 +1,6 @@
 cask "jasper" do
-  version "1.0.3"
-  sha256 "834c447a41b6cd11401b23ca4f77a72549a2822dde27d68557374e1d2b078ede"
+  version "1.0.5"
+  sha256 "87f4b8ccac6c7eecd53c2a77c21d6728699a23e76bad0530ff96349dd45e8452"
 
   url "https://github.com/jasperapp/jasper/releases/download/v#{version}/jasper_v#{version}_mac.zip",
       verified: "github.com/jasperapp/jasper/"

@@ -6,6 +6,7 @@ on:
 
 jobs:
   dispatch-command:
+    if: startsWith(github.repository, 'Homebrew/')
     runs-on: ubuntu-latest
     steps:
       - name: Dispatch /rebase Command

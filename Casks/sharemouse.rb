@@ -1,5 +1,5 @@
 cask "sharemouse" do
-  version "5.0.48"
+  version "5.0.49"
   sha256 :no_check
 
   url "https://www.sharemouse.com/ShareMouseSetup.dmg"
@@ -9,9 +9,10 @@ cask "sharemouse" do
 
   livecheck do
     url "https://www.sharemouse.com/download/"
-    strategy :page_match
     regex(/Mac\s*Version:.*?(\d+(?:\.\d+)*)/i)
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "ShareMouse.app"
 

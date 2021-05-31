@@ -1,6 +1,6 @@
 cask "datweatherdoe" do
-  version "1.5.0"
-  sha256 "c12caf1bf6134b817afde2c09af86cff07d5dfe36bf780216ced6f4b272eabbc"
+  version "2.0.2"
+  sha256 "3d23df922fe8dbbf5ab02273830e65ed26aa371ec0443a5ab6e44176eec8f612"
 
   url "https://github.com/inderdhir/DatWeatherDoe/releases/download/#{version}/DatWeatherDoe-#{version}.dmg"
   name "DatWeatherDoe"

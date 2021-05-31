@@ -16,4 +16,11 @@ cask "amadine" do
   depends_on macos: ">= :sierra"
 
   app "Amadine.app"
+
+  zap trash: [
+    "~/Library/Application Support/Amadine",
+    "~/Library/Caches/com.belightsoft.Amadine",
+    "~/Library/Preferences/com.belightsoft.Amadine.plist",
+    "~/Library/Saved Application State/com.belightsoft.Amadine.savedState",
+  ]
 end
