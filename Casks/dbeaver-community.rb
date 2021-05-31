@@ -4,7 +4,7 @@ cask "dbeaver-community" do
 
   url "https://dbeaver.io/files/#{version}/dbeaver-ce-#{version}-macos.dmg"
   name "DBeaver Community Edition"
-  desc "Free universal database tool and SQL client"
+  desc "Universal database tool and SQL client"
   homepage "https://dbeaver.io/"
 
   livecheck do
@@ -13,8 +13,4 @@ cask "dbeaver-community" do
   end
 
   app "DBeaver.app"
-
-  caveats do
-    depends_on_java "8+"
-  end
 end
