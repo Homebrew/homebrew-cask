@@ -4,6 +4,7 @@ cask "atok" do
 
   url "https://gate.justsystems.com/download/atok/ut/mac/at#{version.after_comma}try.dmg"
   name "ATOK"
+  desc "Japanese input method editor (IME) produced by JustSystems"
   homepage "https://www.justsystems.com/jp/products/atokmac/"
 
   pkg "ATOK インストーラ.pkg"
