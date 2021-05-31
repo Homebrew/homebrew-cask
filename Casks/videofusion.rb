@@ -15,7 +15,7 @@ cask "videofusion" do
 
   depends_on macos: ">= :mojave"
 
-  pkg "Jianying_Pro_#{version.dots_to_underscores}.pkg"
+  pkg "Jianying_#{version.dots_to_underscores}.pkg"
 
   uninstall pkgutil: [
     "com.lemon.lvpro",
