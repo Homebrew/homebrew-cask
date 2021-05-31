@@ -3,9 +3,11 @@ cask "intellij-idea" do
 
   if Hardware::CPU.intel?
     sha256 "ec43a810329b619b5d52aeda3e6240a698b8df137b2c39c1babd1010d81e5555"
+
     url "https://download.jetbrains.com/idea/ideaIU-#{version.before_comma}.dmg"
   else
     sha256 "5e4389964c8cca7839e3c97202d1c7047ae50bff276884a1d211a2dd5acbd3c8"
+
     url "https://download.jetbrains.com/idea/ideaIU-#{version.before_comma}-aarch64.dmg"
   end
 
@@ -16,13 +18,14 @@ cask "intellij-idea" do
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=IIU&latest=true&type=release"
     strategy :page_match do |page|
-      version = page.match(/"version":"(\d+(?:\.\d+)*)/i)
-      build = page.match(/"build":"(\d+(?:\.\d+)*)/i)
-      "#{version[1]},#{build[1]}"
+      JSON.parse(page)["IIU"].map do |release|
+        "#{release["version"]},#{release["build"]}"
+      end
     end
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "IntelliJ IDEA.app"
 
