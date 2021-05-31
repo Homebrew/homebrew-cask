@@ -18,13 +18,14 @@ cask "appcode" do
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=AC&latest=true&type=release"
     strategy :page_match do |page|
-      version = page[/"version"\s*:\s*"(\d+(?:\.\d+)*)/i, 1]
-      build = page[/"build"\s*:\s*"(\d+(?:\.\d+)*)/i, 1]
-      "#{version},#{build}"
+      JSON.parse(page)["AC"].map do |release|
+        "#{release["version"]},#{release["build"]}"
+      end
     end
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "AppCode.app"
 
