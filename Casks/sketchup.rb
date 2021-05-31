@@ -5,7 +5,13 @@ cask "sketchup" do
   # downloads can be found at https://www.sketchup.com/download/all
   url "https://www.sketchup.com/sketchup/#{version.before_comma}/en/sketchupmake-#{version.before_comma}-#{version.after_comma}-en-dmg"
   name "SketchUp"
+  name "SketchUp Make"
+  desc "3D design software"
   homepage "https://www.sketchup.com/"
+
+  livecheck do
+    skip "discontinued"
+  end
 
   suite "SketchUp #{version.before_comma}"
 
@@ -20,4 +26,8 @@ cask "sketchup" do
     "~/Library/Preferences/com.sketchup.SketchUp.#{version.before_comma}.plist",
     "~/Library/Preferences/Trimble.SketchUp-Helper.plist",
   ]
+
+  caveats do
+    discontinued
+  end
 end
