@@ -1,6 +1,6 @@
 cask "katalon-studio" do
-  version "8.0.0"
-  sha256 "243ea87851fd7a99b92368a3cc0b3c49e8d9543679e35bc9cf4b3160becbc133"
+  version "8.0.1"
+  sha256 "4442d734730aa37f59a466e51bfc3ab805373a70220fcf18b690df9ce197a216"
 
   url "https://download.katalon.com/#{version}/Katalon%20Studio.dmg"
   name "Katalon Studio"
