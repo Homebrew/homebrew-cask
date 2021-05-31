@@ -3,9 +3,11 @@ cask "goland" do
 
   if Hardware::CPU.intel?
     sha256 "bd451d441bf909d795252cd82f61166556d93c92fb043d929736ee9da7d3c7f3"
+
     url "https://download.jetbrains.com/go/goland-#{version.before_comma}.dmg"
   else
     sha256 "e1a8d0e4d8bb2ae3904a16de2465c3a865e76c512bab0258be692f1ed1908f68"
+
     url "https://download.jetbrains.com/go/goland-#{version.before_comma}-aarch64.dmg"
   end
 
@@ -16,13 +18,14 @@ cask "goland" do
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=GO&latest=true&type=release"
     strategy :page_match do |page|
-      version = page.match(/"version":"(\d+(?:\.\d+)*)/i)
-      build = page.match(/"build":"(\d+(?:\.\d+)*)/i)
-      "#{version[1]},#{build[1]}"
+      JSON.parse(page)["GO"].map do |release|
+        "#{release["version"]},#{release["build"]}"
+      end
     end
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "GoLand.app"
 
