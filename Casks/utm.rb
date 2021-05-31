@@ -8,6 +8,11 @@ cask "utm" do
   desc "Virtual machines UI using QEMU"
   homepage "https://getutm.app/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "UTM.app"
 
   uninstall quit: "com.utmapp.UTM"
