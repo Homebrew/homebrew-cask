@@ -4,13 +4,15 @@ cask "ui-browser" do
 
   url "https://pfiddlesoft.com/uibrowser/downloads/UIBrowser#{version.no_dots}.dmg"
   name "UI Browser"
+  desc "Assistant for Apple's Accessibility and AppleScript GUI scripting"
   homepage "https://pfiddlesoft.com/uibrowser/"
 
   livecheck do
     url "https://pfiddlesoft.com/uibrowser/index-downloads.html"
-    strategy :page_match
-    regex(/href=.*?UI\ Browser\ (\d+(?:\.\d+)*)/i)
+    regex(/href=.*?UI\s+Browser\s+(\d+(?:\.\d+)+)/i)
   end
+
+  depends_on macos: ">= :sierra"
 
   app "UI Browser.app"
 
