@@ -3,8 +3,8 @@ cask "boxcryptor" do
     version "2.40.1233"
     sha256 "4320a2d2c5e5efdbbd4d29a5df076b9227ae00554a366ab7a43457da881bca35"
   else
-    version "2.40.1234"
-    sha256 "b4acc528180493292a964ca1db457bad4f0d56764d1826488cbae251c0398214"
+    version "2.41.1308"
+    sha256 "8f94c02f2d11f7dc71c6127ac994fdb067ee8cda7d0bafb5cc3ff48687278cb1"
   end
 
   url "https://downloads.boxcryptor.com/boxcryptor/mac/Boxcryptor_v#{version}_Installer.dmg"
