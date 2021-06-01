@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 cask "atok" do
-  version "2020,32"
+  version "2021,32"
   sha256 "8e732b080d88a7b2e47ef49bd1f3e71daa3b4c1370f4f151ec09e5cbd5d227a2"
 
   url "https://gate.justsystems.com/download/atok/ut/mac/at#{version.after_comma}try.dmg"
