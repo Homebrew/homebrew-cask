@@ -9,8 +9,10 @@ cask "chromium" do
   homepage "https://www.chromium.org/Home"
 
   livecheck do
-    url "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac%2FLAST_CHANGE?alt=media"
-    regex(/v?(\d+(?:\.\d+)*)/i)
+    # Obtain the base position for the stable branch on macOS
+    # See https://www.chromium.org/getting-involved/download-chromium
+    url "https://omahaproxy.appspot.com/all.json?os=mac&channel=stable"
+    regex(/"branch_base_position": "(\d{6})",/i)
   end
 
   conflicts_with cask: [
