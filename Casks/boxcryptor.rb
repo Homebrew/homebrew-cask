@@ -1,10 +1,20 @@
 cask "boxcryptor" do
   if MacOS.version <= :catalina
-    version "2.40.1233"
-    sha256 "4320a2d2c5e5efdbbd4d29a5df076b9227ae00554a366ab7a43457da881bca35"
+    version "2.41.1307"
+    sha256 "4f2d9957a96566d17cf98f6fd4e06acb0d4db86c7ecbefb9afa718340add2dfa"
+
+    livecheck do
+      url "https://www.boxcryptor.com/en/help/about/macos/"
+      regex(/Download\s+v?(\d+(?:\.\d+)+)\s+for\s+macOS\s+10\.1[0-5]/i)
+    end
   else
     version "2.41.1308"
     sha256 "8f94c02f2d11f7dc71c6127ac994fdb067ee8cda7d0bafb5cc3ff48687278cb1"
+
+    livecheck do
+      url "https://www.boxcryptor.com/l/download-macosx"
+      strategy :header_match
+    end
   end
 
   url "https://downloads.boxcryptor.com/boxcryptor/mac/Boxcryptor_v#{version}_Installer.dmg"
@@ -12,12 +22,7 @@ cask "boxcryptor" do
   desc "Tool to encrypt files and folders in various cloud storage services"
   homepage "https://www.boxcryptor.com/en/"
 
-  livecheck do
-    url "https://www.boxcryptor.com/l/download-macosx"
-    strategy :header_match
-  end
-
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   app "Boxcryptor.app"
 
