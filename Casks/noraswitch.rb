@@ -1,6 +1,6 @@
 cask "noraswitch" do
-  version "1.0.3,51"
-  sha256 "38519f5cf61d1278dd5db438e7c9a1fe210a39ee3c200b9ffc2564feaf1971c2"
+  version "1.0.4"
+  sha256 "74cddffc69bcb0554b7bfb671a47738583dafbc01926253f6860324aa80b9e1b"
 
   url "https://noraswitch.com/dmg/noraSwitch%20#{version.before_comma}.dmg"
   name "noraSwitch"
