@@ -26,14 +26,14 @@ cask "atok" do
     "com.justsystems.JustOnlineUpdate.pkg",
     "com.justsystems.pkg.lma",
   ],
-            launchctl: [
-              "com.justsystems.inputmethod.atok#{version.after_comma.major}",
-              "com.justsystems.launchd.jslmaUI",
-              "com.justsystems.launchd.UpdateChecker",
-              "com.justsystems.launchd.Atok#{version.after_comma.major}.AlBg",
-              "com.justsystems.atok#{version.after_comma.major}.enabler",
-              "com.justsystems.OnlineUpdate",
-              "com.justsystems.launchd.jslmad",
-            ],
-            quit:      "com.justsystems.UpdateChecker"
+  launchctl: [
+    "com.justsystems.inputmethod.atok#{version.after_comma.major}",
+    "com.justsystems.launchd.jslmaUI",
+    "com.justsystems.launchd.UpdateChecker",
+    "com.justsystems.launchd.Atok#{version.after_comma.major}.AlBg",
+    "com.justsystems.atok#{version.after_comma.major}.enabler",
+    "com.justsystems.OnlineUpdate",
+    "com.justsystems.launchd.jslmad",
+  ],
+  quit: "com.justsystems.UpdateChecker"
 end
