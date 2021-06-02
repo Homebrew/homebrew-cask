@@ -4,10 +4,14 @@ cask "betterzip" do
 
   url "https://macitbetter.s3.amazonaws.com/BetterZip-#{version}.zip",
       verified: "macitbetter.s3.amazonaws.com/"
-  appcast "https://macitbetter.com/BetterZip#{version.major}.rss"
   name "BetterZip"
   desc "Utility to create and modify archives"
   homepage "https://macitbetter.com/"
+
+  livecheck do
+    url "https://macitbetter.com/BetterZip.zip"
+    strategy :header_match
+  end
 
   auto_updates true
   depends_on macos: ">= :high_sierra"

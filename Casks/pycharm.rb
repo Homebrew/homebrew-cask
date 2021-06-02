@@ -10,19 +10,21 @@ cask "pycharm" do
   end
 
   name "PyCharm"
+  name "PyCharm Professional"
   desc "IDE for professional Python development"
   homepage "https://www.jetbrains.com/pycharm/"
 
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=PCP&latest=true&type=release"
     strategy :page_match do |page|
-      version = page.match(/"version":"(\d+(?:\.\d+)*)/i)
-      build = page.match(/"build":"(\d+(?:\.\d+)*)/i)
-      "#{version[1]},#{build[1]}"
+      JSON.parse(page)["PCP"].map do |release|
+        "#{release["version"]},#{release["build"]}"
+      end
     end
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "PyCharm.app"
 

@@ -1,6 +1,6 @@
 cask "foobar2000" do
-  version "2.2.20"
-  sha256 "94acad655fe8d0af76c902f1974915a0cdb94cdedc626162eaad9ceafa2c9986"
+  version "2.2.21"
+  sha256 "8290b7db9770218180f7d0a31ecfe7ab35dddc27fce18a16861d45f8ece91e56"
 
   url "https://www.foobar2000.org/files/foobar2000-v#{version}.dmg"
   name "foobar2000"
