@@ -30,6 +30,7 @@ cask "zulu" do
   end
 
   name "Azul Zulu Java Standard Edition Development Kit"
+  desc "OpenJDK distribution from Azul"
   homepage "https://www.azul.com/downloads/"
 
   depends_on macos: ">= :sierra"
