@@ -8,15 +8,15 @@ cask "atok" do
   desc "Japanese input method editor (IME) produced by JustSystems"
   homepage "https://www.justsystems.com/jp/products/atokmac/"
 
-  pkg "ATOK インストーラ.pkg"
-
   livecheck do
     url "https://mypassport.atok.com/install/install_mac.html"
     strategy :page_match do |page|
-      match = page.match(/href="https:.*\/mac\/at(\d+)(try\d*)\.dmg"/im)
+      match = page.match(%r{href="https:.*/mac/at(\d+)(try\d*)\.dmg"}im)
       "#{version.before_comma},#{match[1]}.#{version.after_comma.minor}.#{version.after_comma.patch}:#{match[2]}"
     end
   end
+
+  pkg "ATOK インストーラ.pkg"
 
   uninstall pkgutil:   [
     "com.justsystems.atok#{version.after_comma.major}.doc.pkg",
@@ -26,14 +26,14 @@ cask "atok" do
     "com.justsystems.JustOnlineUpdate.pkg",
     "com.justsystems.pkg.lma",
   ],
-  launchctl: [
-    "com.justsystems.inputmethod.atok#{version.after_comma.major}",
-    "com.justsystems.launchd.jslmaUI",
-    "com.justsystems.launchd.UpdateChecker",
-    "com.justsystems.launchd.Atok#{version.after_comma.major}.AlBg",
-    "com.justsystems.atok#{version.after_comma.major}.enabler",
-    "com.justsystems.OnlineUpdate",
-    "com.justsystems.launchd.jslmad",
-  ],
-  quit: "com.justsystems.UpdateChecker"
+            launchctl: [
+              "com.justsystems.inputmethod.atok#{version.after_comma.major}",
+              "com.justsystems.launchd.jslmaUI",
+              "com.justsystems.launchd.UpdateChecker",
+              "com.justsystems.launchd.Atok#{version.after_comma.major}.AlBg",
+              "com.justsystems.atok#{version.after_comma.major}.enabler",
+              "com.justsystems.OnlineUpdate",
+              "com.justsystems.launchd.jslmad",
+            ],
+            quit:      "com.justsystems.UpdateChecker"
 end
