@@ -1,5 +1,5 @@
 cask "noraswitch" do
-  version "1.0.4"
+  version "1.0.4,56"
   sha256 "74cddffc69bcb0554b7bfb671a47738583dafbc01926253f6860324aa80b9e1b"
 
   url "https://noraswitch.com/dmg/noraSwitch%20#{version.before_comma}.dmg"
