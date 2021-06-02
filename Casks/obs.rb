@@ -1,6 +1,6 @@
 cask "obs" do
-  version "26.1.2"
-  sha256 "42b852a5f23c5fd20d7a3ec444d6e5632fc92a63d3c8546aa6267ee6ad2f085d"
+  version "27.0"
+  sha256 "6c6adbb4406964a79dafe043b8a91291078208a442c3937b55910583b9220b50"
 
   url "https://cdn-fastly.obsproject.com/downloads/obs-mac-#{version}.dmg"
   name "OBS"

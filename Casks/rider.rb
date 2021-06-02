@@ -1,5 +1,5 @@
 cask "rider" do
-  version "2021.1.3"
+  version "2021.1.3,211.7442.29"
   sha256 "659fd07682cd726dc931cb95a618124ec885da6011e604c35ea1d982bf3c6ba0"
 
   url "https://download.jetbrains.com/rider/JetBrains.Rider-#{version.before_comma}.dmg"
@@ -9,7 +9,11 @@ cask "rider" do
 
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=RD&latest=true&type=release"
-    regex(/JetBrains[._-]Rider[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :page_match do |page|
+      JSON.parse(page)["RD"].map do |release|
+        "#{release["version"]},#{release["build"]}"
+      end
+    end
   end
 
   auto_updates true

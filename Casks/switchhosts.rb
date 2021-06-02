@@ -1,12 +1,12 @@
 cask "switchhosts" do
-  version "4.0.1.6051"
+  version "4.0.2.6057"
 
   if Hardware::CPU.intel?
-    sha256 "5777f55d3876abf0930c83b39c69d9a08d6ee779a197c7226900972f5ccf99fc"
+    sha256 "c522611862ef91a1cf204c39b385ac44397cfae84e05aa4ea12d21db25badb02"
     url "https://github.com/oldj/SwitchHosts/releases/download/v#{version.major_minor_patch}/SwitchHosts_#{version}.dmg",
         verified: "github.com/oldj/SwitchHosts/"
   else
-    sha256 "6ebb0f04eea97f61c60e7b0c934f318ce8754f1183c73ea9fcdfe48a90ad252e"
+    sha256 "445b3986eb270443eb74e34dd96359de56bedbfc03690c0905aec1f1dbe2447a"
     url "https://github.com/oldj/SwitchHosts/releases/download/v#{version.major_minor_patch}/SwitchHosts_arm64_#{version}.dmg",
         verified: "github.com/oldj/SwitchHosts/"
   end
