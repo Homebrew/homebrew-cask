@@ -9,6 +9,14 @@ cask "atok" do
 
   pkg "ATOK インストーラ.pkg"
 
+  livecheck do
+    url "https://mypassport.atok.com/install/install_mac.html"
+    strategy :page_match do |page|
+      match = page.match(/href="https:.*\/mac\/at(\d+)try\.dmg"/im)
+      "#{version.before_comma},#{match[1]}"
+    end
+  end
+
   uninstall pkgutil:   [
     "com.justsystems.atok#{version.after_comma}.doc.pkg",
     "com.justsystems.atok#{version.after_comma}.pkg",
