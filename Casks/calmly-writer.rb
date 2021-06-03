@@ -12,13 +12,15 @@ cask "calmly-writer" do
   end
 
   name "Calmly Writer"
-  desc "Simple word processor with markdown formatting and select themes"
+  desc "Word processor with markdown formatting and select themes"
   homepage "https://calmlywriter.com/"
 
   livecheck do
     url "https://calmlywriter.com/releases/x64/download.php"
     strategy :header_match
   end
+
+  depends_on macos: ">= :sierra"
 
   pkg "Calmly Writer-#{version}.pkg"
 
