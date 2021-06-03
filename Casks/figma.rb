@@ -1,7 +1,7 @@
 cask "figma" do
   if Hardware::CPU.intel?
     version "98.13.0"
-    sha256 "e9899d8dafdb752414c8fe0e070d6f81b32bc713f220618b4fc90b380e345a72"
+    sha256 "213753d01235bc39925553bb78d8d079553885516cadf2e18702ccc6da46a8a8"
 
     url "https://desktop.figma.com/mac/Figma-#{version}.zip"
   else
