@@ -16,8 +16,7 @@ cask "lightwright" do
   app "Lightwright 6.app"
 
   zap trash: [
-  "~/Library/Application Support/com.mckernon.lightwright6",
-  "/Users/Shared/Lightwright 6",
-]
-
+    "~/Library/Application Support/com.mckernon.lightwright6",
+    "/Users/Shared/Lightwright 6",
+  ]
 end
