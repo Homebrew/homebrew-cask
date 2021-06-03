@@ -1,6 +1,6 @@
 cask "avocode" do
-  version "4.14.0"
-  sha256 "dc45a6072fba53944a5c7df0360785798a2ba5d6e221d7aa10622f25d49c8a07"
+  version "4.14.1"
+  sha256 "0ae2048d0cbc2fc1943eb3fc69984f99dd8afa1fb512e7ea9366b08e342e12d7"
 
   url "https://media.avocode.com/download/avocode-app/#{version}/Avocode-#{version}-mac.zip"
   name "Avocode"
@@ -13,6 +13,7 @@ cask "avocode" do
   end
 
   auto_updates true
+  depends_on macos: ">= :el_capitan"
 
   app "Avocode.app"
 
