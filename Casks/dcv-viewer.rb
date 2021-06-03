@@ -19,8 +19,7 @@ cask "dcv-viewer" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/nice-dcv-viewer-(\d+(?:\.\d+)*)\.x86_64\.dmg}i)
+    regex(%r{href=.*?/nice-dcv-viewer[._-]v?(\d+(?:\.\d+)+)[._-]x86_64\.dmg}i)
   end
 
   depends_on macos: ">= :mojave"
