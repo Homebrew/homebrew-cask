@@ -12,13 +12,12 @@ cask "blender" do
   end
 
   name "Blender"
-  desc "Free and open-source 3D creation suite"
+  desc "3D creation suite"
   homepage "https://www.blender.org/"
 
   livecheck do
     url "https://www.blender.org/download/"
-    strategy :page_match
-    regex(%r{href=.*?/blender-(\d+(?:\.\d+)*)-macos-}i)
+    regex(%r{href=.*?/blender[._-]v?(\d+(?:\.\d+)+)[._-]macos[._-]}i)
   end
 
   conflicts_with cask: "homebrew/cask-versions/blender-lts"
