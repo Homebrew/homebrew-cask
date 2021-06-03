@@ -2,7 +2,6 @@ cask "toolreleases" do
   version "1.4.1,44"
   sha256 "eba1793512ad2f4c57a40cab862ce94f79ed2fff7510da3fa45c5b7502e6d274"
 
-
   url "https://github.com/DeveloperMaris/ToolReleases/releases/download/v#{version.before_comma}/ToolReleases_v#{version.before_comma}.b#{version.after_comma}.zip"
   name "ToolReleases"
   desc "Utility to notify about the latest Apple tool releases (including Beta releases)"
