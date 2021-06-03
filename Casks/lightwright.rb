@@ -9,9 +9,8 @@ cask "lightwright" do
   homepage "https://www.lightwright.com/"
 
   livecheck do
-    url "https://www.lightwright.com/downloads.html"
-    strategy :page_match
-    regex(%r{href=.*?/Lightwright_(\d+(?:\.\d+)*)\.dmg}i)
+    url "https://www.lightwright.com/api/web/public/download/getLinks"
+    regex(%r{Lightwright_(\d+(?:\.\d+)*)\.dmg}i)
   end
 
   app "Lightwright 6.app"
