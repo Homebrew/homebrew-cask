@@ -1,6 +1,6 @@
 cask "between" do
-  version "1.0.4"
-  sha256 "87b8c8c2762ae02fc65b1457dddc1613847bdef513677982f63ed9f13c6e296d"
+  version "1.0.8"
+  sha256 "2657704186c88668975f21a22eeadd3ee31ab3527c59214ca90a89b7342be896"
 
   url "http://assets-pc.between.us/downloads/between-#{version}.dmg"
   name "Between"
