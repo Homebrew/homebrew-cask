@@ -9,9 +9,8 @@ cask "amadeus-pro" do
   homepage "https://www.hairersoft.com/pro.html"
 
   livecheck do
-    url "https://www.hairersoft.com/pro.html"
-    strategy :page_match
-    regex(/Download\s*Amadeus\s*Pro\s*(\d+(?:\.\d+)*)/i)
+    url :homepage
+    regex(/Download\s*Amadeus\s*Pro\s*v?(\d+(?:\.\d+)+)/i)
   end
 
   app "Amadeus Pro.app"
