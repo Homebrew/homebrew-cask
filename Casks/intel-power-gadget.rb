@@ -3,12 +3,22 @@ cask "intel-power-gadget" do
   sha256 "4a1f6e720edca9577fd5fad7c0775f74d4495b20fd59a835a6f0f38460ccc3c1"
 
   url "https://software.intel.com/sites/landingpage/powergadget/updates/IntelPowerGadgetMac/#{version.after_comma}/Intel%20Power%20Gadget.dmg"
-  appcast "https://software.intel.com/sites/landingpage/powergadget/?app=IntelPowerGadgetMac"
   name "Intel Power Gadget"
+  desc "Power usage monitoring tool enabled for Intel Core processors"
   homepage "https://software.intel.com/content/www/us/en/develop/articles/intel-power-gadget.html"
 
+  livecheck do
+    url "https://software.intel.com/sites/landingpage/powergadget/?app=IntelPowerGadgetMac"
+    strategy :page_match do |page|
+      JSON.parse(page)["updates"].map do |update|
+        "#{update["version"]},#{update["url"][%r{/(\h+)/Intel%20Power%20Gadget\.dmg}i, 1]}"
+      end
+    end
+  end
+
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :el_capitan"
+  depends_on arch: :x86_64
 
   pkg "Install Intel Power Gadget.pkg"
 
