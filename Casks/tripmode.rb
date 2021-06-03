@@ -10,8 +10,8 @@ cask "tripmode" do
       skip
     end
   else
-    version "3.0.5,1138"
-    sha256 "9070f88184006f86d443e93d0c7c0a6e4182c39f6a0304f6c3b48f8dcef3d9f2"
+    version "3.0.6,1158"
+    sha256 "923753c567049c4f2f33e7e7ba4b55ba0a08b841ae44908390be0651600df189"
 
     url "https://tripmode-updates.ch/app/TripMode-#{version.before_comma}-#{version.after_comma}.zip",
         verified: "tripmode-updates.ch/"
