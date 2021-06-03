@@ -7,6 +7,12 @@ cask "lightwright" do
   desc "Utility for generating theatrical lighting data and paperwork"
   homepage "https://www.lightwright.com/"
 
+  livecheck do
+    url "https://www.lightwright.com/downloads.html"
+    strategy :page_match
+    regex(%r{href=.*?/Lightwright_(\d+(?:\.\d+)*)\.dmg}i)
+  end
+
   app "Lightwright 6.app"
 
   zap trash: [
