@@ -4,7 +4,7 @@ cask "macstroke" do
 
   url "https://github.com/mtjo/MacStroke/releases/download/#{version}/MacStroke.zip"
   name "macstroke"
-  desc "global mouse gesture"
+  desc "global mouse stroke"
   homepage "github.com/mtjo/MacStroke"
   appcast "https://github.com/mtjo/MacStroke/blob/release/AppCast.xml"
   app "MacStroke.app"
