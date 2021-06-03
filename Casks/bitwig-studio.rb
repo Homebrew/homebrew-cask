@@ -9,9 +9,10 @@ cask "bitwig-studio" do
 
   livecheck do
     url "https://www.bitwig.com/download/"
-    strategy :page_match
-    regex(/Bitwig\s*Studio\s*(\d+(?:\.\d+)*)/i)
+    regex(/Bitwig\s*Studio\s*v?(\d+(?:\.\d+)+)/i)
   end
+
+  depends_on macos: ">= :mojave"
 
   app "Bitwig Studio.app"
 
