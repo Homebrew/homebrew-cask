@@ -4,6 +4,7 @@ cask "between" do
 
   url "http://assets-pc.between.us/downloads/between-#{version}.dmg"
   name "Between"
+  desc "Relationship app for couples"
   homepage "https://between.us/"
 
   livecheck do
