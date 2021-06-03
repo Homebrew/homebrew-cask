@@ -10,8 +10,7 @@ cask "blisk" do
 
   livecheck do
     url "https://blisk.io/download/?os=mac"
-    strategy :page_match
-    regex(%r{href=.*?/BliskInstaller_(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/BliskInstaller[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "Blisk.app"
