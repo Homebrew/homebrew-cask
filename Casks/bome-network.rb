@@ -9,8 +9,7 @@ cask "bome-network" do
 
   livecheck do
     url "https://www.bome.com/products/bomenet#downloads"
-    strategy :page_match
-    regex(%r{href=.*?/BomeNet(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/BomeNet(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "Bome Network.app"
