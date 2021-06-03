@@ -1,6 +1,6 @@
 cask "wwdc" do
-  version "7.3,1019"
-  sha256 "e003b71d24a9b7eb4ada58f2bba4c02ce564ce3711ec1a8cb195c978ff860d75"
+  version "7.3.1,1021"
+  sha256 "8c302a2dc1b0b68162db8c173dfa7a39d338ae1031f64c3b97c09efb90caca74"
 
   url "https://github.com/insidegui/WWDC/releases/download/#{version.before_comma}/WWDC_v#{version.before_comma}-#{version.after_comma}.dmg",
       verified: "github.com/insidegui/WWDC/"
