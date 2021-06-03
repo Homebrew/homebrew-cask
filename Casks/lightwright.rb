@@ -10,7 +10,7 @@ cask "lightwright" do
 
   livecheck do
     url "https://www.lightwright.com/api/web/public/download/getLinks"
-    regex(%r{Lightwright_(\d+(?:\.\d+)*)\.dmg}i)
+    regex(/Lightwright_(\d+(?:\.\d+)*)\.dmg/i)
   end
 
   app "Lightwright 6.app"
