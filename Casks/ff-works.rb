@@ -9,9 +9,10 @@ cask "ff-works" do
 
   livecheck do
     url "https://www.ffworks.net/download.html"
-    strategy :page_match
-    regex(/version\s*(\d+(?:\.\d+)*)/i)
+    regex(/version\s*(\d+(?:\.\d+)+)/i)
   end
+
+  depends_on macos: ">= :yosemite"
 
   app "ff·Works.app"
 end
