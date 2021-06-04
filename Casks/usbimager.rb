@@ -4,9 +4,13 @@ cask "usbimager" do
 
   url "https://gitlab.com/bztsrc/usbimager/raw/binaries/usbimager_#{version}-intel-macosx-cocoa.zip",
       verified: "gitlab.com/bztsrc/usbimager/"
-  name "usbimager"
+  name "USBImager"
   desc "Very minimal GUI app that can write/read to disk images and USB drives"
   homepage "https://bztsrc.gitlab.io/usbimager/"
+
+  livecheck do
+    url "https://gitlab.com/bztsrc/usbimager.git"
+  end
 
   app "USBImager.app"
 
