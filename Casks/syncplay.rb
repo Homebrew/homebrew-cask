@@ -13,7 +13,10 @@ cask "syncplay" do
   depends_on macos: ">= :sierra"
 
   app "Syncplay.app"
-
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/)
+  end
   zap trash: [
     "~/.syncplay",
     "~/Library/Saved Application State/pl.syncplay.Syncplay.savedState",
