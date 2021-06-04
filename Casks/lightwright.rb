@@ -13,10 +13,10 @@ cask "lightwright" do
     regex(/Lightwright_(\d+(?:\.\d+)*)\.dmg/i)
   end
 
-  app "Lightwright 6.app"
+  app "Lightwright #{version.major}.app"
 
   zap trash: [
-    "~/Library/Application Support/com.mckernon.lightwright6",
-    "/Users/Shared/Lightwright 6",
+    "~/Library/Application Support/com.mckernon.lightwright#{version.major}",
+    "/Users/Shared/Lightwright #{version.major}",
   ]
 end
