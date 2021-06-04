@@ -10,13 +10,15 @@ cask "syncplay" do
   name "Syncplay"
   homepage "https://syncplay.pl/"
 
-  depends_on macos: ">= :sierra"
-
-  app "Syncplay.app"
   livecheck do
     url :stable
     regex(/^v?(\d+(?:\.\d+)+)$/)
   end
+
+  depends_on macos: ">= :sierra"
+
+  app "Syncplay.app"
+
   zap trash: [
     "~/.syncplay",
     "~/Library/Saved Application State/pl.syncplay.Syncplay.savedState",
