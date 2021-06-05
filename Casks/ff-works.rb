@@ -1,5 +1,5 @@
 cask "ff-works" do
-  version "2.3.1"
+  version "2.3.2"
   sha256 :no_check
 
   url "https://www.ffworks.net/ffWorks.dmg"
@@ -9,9 +9,10 @@ cask "ff-works" do
 
   livecheck do
     url "https://www.ffworks.net/download.html"
-    strategy :page_match
-    regex(/version\s*(\d+(?:\.\d+)*)/i)
+    regex(/version\s*(\d+(?:\.\d+)+)/i)
   end
+
+  depends_on macos: ">= :yosemite"
 
   app "ff·Works.app"
 end
