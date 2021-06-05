@@ -1,6 +1,3 @@
-# typed: false
-# frozen_string_literal: true
-
 cask "syncplay" do
   version "1.6.8"
   sha256 "9fbe6d616865511bbf75daa24ae6eb1ec40797ef1123265c7c50a5d9f1421ea3"
