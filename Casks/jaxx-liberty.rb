@@ -15,7 +15,9 @@ cask "jaxx-liberty" do
   app "Jaxx Liberty.app"
 
   zap trash: [
-    "~/Library/Application Support/jaxx",
-    "~/Library/Logs/jaxx",
+    "~/Library/Application Support/com.liberty.jaxx",
+    "~/Library/Logs/com.liberty.jaxx",
+    "~/Library/Preferences/com.liberty.jaxxliberty.plist",
+    "~/Library/Saved Application State/com.liberty.jaxxliberty.savedState",
   ]
 end
