@@ -9,4 +9,8 @@ cask "peugeot-update" do
   homepage "https://cartographie.peugeot.fr/mise-a-jour-cartographie-gps.html"
 
   app "Peugeot Update.app"
+
+  zap trash: [
+    "~/Library/Application Support/Peugeot Update",
+  ]
 end
