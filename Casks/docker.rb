@@ -28,8 +28,28 @@ cask "docker" do
   homepage "https://www.docker.com/products/docker-desktop"
 
   auto_updates true
+  conflicts_with formula: %w[
+    docker
+    docker-completion
+    docker-compose
+    docker-compose-completion
+    hyperkit
+    kubernetes-cli
+  ]
 
   app "Docker.app"
+  binary "#{appdir}/Docker.app/Contents/Resources/etc/docker.bash-completion",
+         target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/docker"
+  binary "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.bash-completion",
+         target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/docker-compose"
+  binary "#{appdir}/Docker.app/Contents/Resources/etc/docker.zsh-completion",
+         target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_docker"
+  binary "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.zsh-completion",
+         target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_docker_compose"
+  binary "#{appdir}/Docker.app/Contents/Resources/etc/docker.fish-completion",
+         target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/docker.fish"
+  binary "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.fish-completion",
+         target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/docker-compose.fish"
 
   uninstall delete:    [
     "/Library/PrivilegedHelperTools/com.docker.vmnetd",
