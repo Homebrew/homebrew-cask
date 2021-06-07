@@ -6,7 +6,7 @@ cask "aptible" do
       verified: "omnibus-aptible-toolbelt.s3.amazonaws.com/"
   name "Aptible Toolbelt"
   desc "Command-line tool for Aptible Deploy, an audit-ready App Deployment Platform"
-  homepage "https://www.aptible.com/documentation/deploy/cli.html"
+  homepage "https://deploy-docs.aptible.com/docs/cli"
 
   depends_on formula: "libu2f-host"
 
