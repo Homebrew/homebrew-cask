@@ -8,6 +8,10 @@ cask "aptible" do
   desc "Command-line tool for Aptible Deploy, an audit-ready App Deployment Platform"
   homepage "https://deploy-docs.aptible.com/docs/cli"
 
+  livecheck do
+    skip "No version information available."
+  end
+
   depends_on formula: "libu2f-host"
 
   pkg "aptible-toolbelt-#{version.before_comma}+#{version.after_comma.before_comma}-mac-os-x.10.11.6-1.pkg"
