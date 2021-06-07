@@ -1,6 +1,6 @@
 cask "lepton" do
-  version "1.9.1"
-  sha256 "24f744f97e6746be8f7ebf5c61d1669e9174051fbe8eb2e3cbca8f8f82ec341f"
+  version "1.9.2"
+  sha256 "a7a73b8cea52f0eed7bd0ae05f113e81937235728aa6416e4ed9a0112fd3b26e"
 
   url "https://github.com/hackjutsu/Lepton/releases/download/v#{version}/Lepton-#{version}.dmg",
       verified: "github.com/hackjutsu/Lepton/"
