@@ -15,7 +15,8 @@ cask "alacritty" do
   app "Alacritty.app"
   binary "#{appdir}/Alacritty.app/Contents/MacOS/alacritty"
 
-  zap delete: [
+  zap trash: [
+    "~/Library/Preferences/io.alacritty.plist",
     "~/Library/Saved Application State/io.alacritty.savedState",
   ]
 end
