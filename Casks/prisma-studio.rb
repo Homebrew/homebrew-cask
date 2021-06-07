@@ -8,11 +8,6 @@ cask "prisma-studio" do
   desc "Visual database editor for Prisma projects"
   homepage "https://www.prisma.io/studio"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   app "Prisma Studio.app"
 
   zap trash: [
