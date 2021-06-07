@@ -16,7 +16,5 @@ cask "landrop" do
 
   uninstall quit: "app.landrop.landrop"
 
-  zap trash: [
-    "~/Library/Preferences/app.landrop.landrop.plist",
-  ]
+  zap trash: "~/Library/Preferences/app.landrop.landrop.plist"
 end
