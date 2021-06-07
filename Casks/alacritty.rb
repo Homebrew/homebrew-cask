@@ -16,7 +16,7 @@ cask "alacritty" do
   binary "#{appdir}/Alacritty.app/Contents/MacOS/alacritty"
 
   zap trash: [
-    "~/Library/Saved Application State/io.alacritty.savedState",
     "~/Library/Preferences/io.alacritty.plist",
+    "~/Library/Saved Application State/io.alacritty.savedState",
   ]
 end
