@@ -9,7 +9,12 @@ cask "aptible" do
   homepage "https://www.aptible.com/documentation/deploy/cli.html"
 
   livecheck do
-    skip "No version information available."
+    url :homepage
+    strategy :page_match do |page|
+      page.scan(%r{href=.*?/(\d+)/pkg/aptible-toolbelt[._-]v?(\d+(?:\.\d+)+)%2B(\d+)[._-]mac}i).map do |match|
+        "#{match[1]},#{match[2]},#{match[0]}"
+      end
+    end
   end
 
   depends_on formula: "libu2f-host"
