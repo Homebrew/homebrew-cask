@@ -13,7 +13,7 @@ cask "qcad" do
     sha256 "d40991de1500d706aee8e3fc33e1ce6042f7a10adbabaefa73a3463e38a79fac"
     url "https://www.qcad.org/archives/qcad/qcad-#{version}-trial-macos-11.0-11.2-arm64.dmg"
   end
-  
+
   name "QCAD"
   desc "Free, open source application for computer aided drafting in 2D"
   homepage "https://www.qcad.org/"
