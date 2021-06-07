@@ -3,15 +3,14 @@ cask "suuntodm5" do
   sha256 :no_check
 
   url "https://dm5.movescount.com/SuuntoDM5.dmg",
-      verified: "dm5.movescount.com"
-  name "SuuntoDM5"
-  desc "With Suunto DM5 you can easily create dive plans and analyze your dives"
+      verified: "dm5.movescount.com/"
+  name "Suunto DM5"
+  desc "Create dive plans and analyze your dives"
   homepage "https://www.suunto.com/Support/software-support/dm5/"
 
   livecheck do
     url "https://dm5.movescount.com/ReleaseNotes.txt"
-    strategy :page_match
-    regex(/Suunto DM5 (\d+(\.\d+)*)/i)
+    regex(/Suunto\s*DM5\s+v?(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
