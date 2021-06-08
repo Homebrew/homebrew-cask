@@ -8,9 +8,12 @@ cask "peugeot-update" do
   desc "Update Peugeot navigating system"
   homepage "https://cartographie.peugeot.fr/mise-a-jour-cartographie-gps.html"
 
+  livecheck do
+    url "https://fr.ndp.awsmpsa.com/majesticinstaller/latest-mac.yml"
+    strategy :electron_builder
+  end
+
   app "Peugeot Update.app"
 
-  zap trash: [
-    "~/Library/Application Support/Peugeot Update",
-  ]
+  zap trash: "~/Library/Application Support/Peugeot Update"
 end
