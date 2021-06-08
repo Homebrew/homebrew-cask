@@ -5,6 +5,7 @@ cask "maccpuid" do
   url "https://software.intel.com/content/dam/develop/public/us/en/documents/maccpuid.zip"
   appcast "https://software.intel.com/content/www/us/en/develop/download/download-maccpuid.html"
   name "MacCPUID"
+  desc "Displays information via the CPUID instruction"
   homepage "https://software.intel.com/content/www/us/en/develop/download/download-maccpuid"
 
   app "MacCPUID.app"
