@@ -12,6 +12,8 @@ cask "tg-pro" do
     strategy :sparkle
   end
 
+  depends_on macos: ">= :el_capitan"
+
   app "TG Pro.app"
 
   zap trash: [
