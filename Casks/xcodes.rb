@@ -1,6 +1,6 @@
 cask "xcodes" do
-  version "1.0.5,6"
-  sha256 "3f5a0fa524e5058bdd99dffcf29f381f879ddd6856464c78948c5bbc8ad07b0a"
+  version "1.1.0,7"
+  sha256 "8b243d5e061ea27a8d2fb76dd2e4d77d2f70b5c8bf1294b044cb945a9a0efa83"
 
   url "https://github.com/RobotsAndPencils/XcodesApp/releases/download/v#{version.before_comma}b#{version.after_comma}/Xcodes.zip"
   name "Xcodes"
