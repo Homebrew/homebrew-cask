@@ -9,9 +9,10 @@ cask "bookends" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(/version\s*(\d+(?:\.\d+)*)/i)
+    regex(/version\s*(\d+(?:\.\d+)+)/i)
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Bookends.app"
 end
