@@ -1,29 +1,21 @@
 cask "portx" do
-  version "1.1.1"
-  sha256 "be19b6d953697e9e6137dec10139cc867a270d8ed0598ff7e2ed70781f2810ac"
+  version "1.1.2"
+  sha256 "beceac47566f84ad2095e2cc314c90ca56087b000040fe6ff019613cfb806864"
 
-  url "https://cdn.netsarang.net/0ac7ea20/PortX-#{version}.dmg", verified: "cdn.netsarang.net"
+  url "https://github.com/NetSarangComputer/PortX/releases/download/v#{version}/PortX-#{version}.dmg"
   name "portx"
-  desc "Let's manage all the servers by session"
-  homepage "https://www.netsarang.com/en/"
+  desc "SSH Client"
+  homepage "https://github.com/NetSarangComputer/PortX/releases"
 
   livecheck do
     url :url
-    strategy :sparkle
+    strategy :github_latest
   end
 
   app "PortX.app"
 
   zap trash: [
-    "~/Library/Application Support/PortX/Cache",
-    "~/Library/Application Support/PortX/Code Cache",
-    "~/Library/Application Support/PortX/Dictionaries",
-    "~/Library/Application Support/PortX/GPUCache",
-    "~/Library/Application Support/PortX/Local Storage",
-    "~/Library/Application Support/PortX/Network Persistent State",
-    "~/Library/Application Support/PortX/PortX.log",
-    "~/Library/Application Support/PortX/Preferences",
-    "~/Library/Application Support/PortX/Session Storage",
-    "~/Library/Application Support/PortX/blob_storage",
+    "~/Library/Application Support/PortX",
+    "~/Library/Logs/PortX",
   ]
 end
