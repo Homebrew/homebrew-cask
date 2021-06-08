@@ -1,5 +1,5 @@
 cask "bookends" do
-  version "13.5.4"
+  version "13.5.5"
   sha256 :no_check
 
   url "https://www.sonnysoftware.com/Bookends.dmg"
@@ -9,9 +9,10 @@ cask "bookends" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(/version\s*(\d+(?:\.\d+)*)/i)
+    regex(/version\s*(\d+(?:\.\d+)+)/i)
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Bookends.app"
 end
