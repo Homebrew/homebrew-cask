@@ -1,10 +1,10 @@
 cask "idafree" do
-  version "7.0"
-  sha256 "77a4557e7104dc9c7e3957558ce4879182e09f3739f870e4e6e82795dc56b257"
+  version "7.6"
+  sha256 "d56949e39ec988dfd4a5793cbb0bc90341fb50a39d4b304e3c197629496d541b"
 
-  url "https://out7.hex-rays.com/files/idafree#{version.no_dots}_mac.zip"
+  url "https://out7.hex-rays.com/files/idafree#{version.no_dots}_mac.app.zip"
   name "IDA Free"
-  homepage "https://www.hex-rays.com/index.shtml"
+  homepage "https://hex-rays.com/ida-free/"
 
   installer script: {
     executable: "idafree#{version.no_dots}_mac.app/Contents/MacOS/installbuilder.sh",
