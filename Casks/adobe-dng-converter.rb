@@ -9,7 +9,6 @@ cask "adobe-dng-converter" do
 
   livecheck do
     url "https://helpx.adobe.com/in/photoshop/kb/uptodate.html"
-    strategy :page_match
     regex(%r{The current version of Adobe DNG Converter is <b>(\d+(?:\.\d+)*)</b>}i)
   end
 
