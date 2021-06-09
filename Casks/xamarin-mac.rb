@@ -9,8 +9,7 @@ cask "xamarin-mac" do
 
   livecheck do
     url "https://software.xamarin.com/Service/Updates?v=2&pv0ab364ff-c0e9-43a8-8747-3afb02dc7731=0"
-    strategy :page_match
-    regex(%r{/xamarin\.mac-(\d+(?:\.\d+)*)\.pkg}i)
+    regex(%r{/xamarin\.mac[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
   end
 
   depends_on cask: "homebrew/cask-versions/mono-mdk-for-visual-studio"
