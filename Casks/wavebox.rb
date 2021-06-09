@@ -1,13 +1,13 @@
 cask "wavebox" do
-  version "10.0.518.2"
+  version "10.0.542.2"
 
   if Hardware::CPU.intel?
-    sha256 "9504bf73a97cddaa250077501b620fda87650fa13ead9b5a044ccfbef84f6828"
+    sha256 "c7e24af19dbca9d02bb3eb4b87013acba9acd59f61c4cbf6ce115e8048dcd04e"
 
     url "https://download.wavebox.app/stable/mac/Install%20Wavebox%20#{version}.dmg",
         verified: "download.wavebox.app/"
   else
-    sha256 "776a4d6e7f13dfbdcdb627434781c91bbd4ec13de4a21123cf3fd0df979d8f9e"
+    sha256 "68e415435b3ef0046289bb5a50016497cbff9d22cdf6d0d3e2ae17ebc3c91994"
 
     url "https://download.wavebox.app/stable/macarm64/Install%20Wavebox%20#{version}.dmg",
         verified: "download.wavebox.app/"
