@@ -10,8 +10,7 @@ cask "1password-cli" do
 
   livecheck do
     url "https://app-updates.agilebits.com/product_history/CLI"
-    strategy :page_match
-    regex(%r{href=.*?/op_darwin_amd64_v?(\d+(?:\.\d+)*)\.pkg}i)
+    regex(%r{href=.*?/op_darwin_amd64[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
   end
 
   pkg "op_darwin_amd64_v#{version}.pkg"
