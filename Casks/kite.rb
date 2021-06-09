@@ -5,6 +5,7 @@ cask "kite" do
   url "https://draqv87tt43s0.cloudfront.net/mac/#{version}/Kite.dmg",
       verified: "draqv87tt43s0.cloudfront.net/"
   name "Kite"
+  desc "Add code completions to all your code editors"
   homepage "https://kite.com/"
 
   livecheck do
