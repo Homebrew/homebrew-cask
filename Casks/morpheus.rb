@@ -1,6 +1,9 @@
+# typed: false
+# frozen_string_literal: true
+
 cask "morpheus" do
-  version "2.2.2"
-  sha256 "968cadb06fbc1d5520d84d116d4c5bd94aaf881d3ed48bc7197b6b003a02a384"
+  version "2.2.3"
+  sha256 "ee6a4e0294149290502760b427ebcf50fed7eee0aa84d610542b4b632e6a5736"
 
   url "https://imc.zih.tu-dresden.de/morpheus/packages/mac/Morpheus-#{version}.dmg",
       verified: "imc.zih.tu-dresden.de/morpheus/"
