@@ -9,9 +9,10 @@ cask "waterfox" do
 
   livecheck do
     url "https://www.waterfox.net/download/"
-    strategy :page_match
-    regex(%r{href=.*?/Waterfox%20G(\d+(?:\.\d+)*)%20Setup\.dmg}i)
+    regex(%r{href=.*?/Waterfox%20G(\d+(?:\.\d+)+)%20Setup\.dmg}i)
   end
+
+  depends_on macos: ">= :yosemite"
 
   app "Waterfox.app"
 
