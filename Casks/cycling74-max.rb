@@ -7,6 +7,7 @@ cask "cycling74-max" do
   appcast "https://auth.cycling74.com/maxversion"
   name "Cycling ‘74 Max"
   name "Ableton Max for Live"
+  desc "Flexible space to create your own interactive software"
   homepage "https://cycling74.com/"
 
   app "Max.app"
