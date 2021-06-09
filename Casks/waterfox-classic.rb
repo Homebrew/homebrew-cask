@@ -9,8 +9,7 @@ cask "waterfox-classic" do
 
   livecheck do
     url "https://www.waterfox.net/download/"
-    strategy :page_match
-    regex(%r{href=.*?/Waterfox%20Classic%20(\d+(?:\.\d+)*)%20Setup\.dmg}i)
+    regex(%r{href=.*?/Waterfox%20Classic%20(\d+(?:\.\d+)+)%20Setup\.dmg}i)
   end
 
   app "Waterfox Classic.app"
