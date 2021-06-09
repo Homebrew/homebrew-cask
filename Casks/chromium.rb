@@ -13,10 +13,7 @@ cask "chromium" do
     regex(/v?(\d+(?:\.\d+)*)/i)
   end
 
-  conflicts_with cask: [
-    "eloston-chromium",
-    "freesmug-chromium",
-  ]
+  conflicts_with cask: "eloston-chromium"
 
   app "chrome-mac/Chromium.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)

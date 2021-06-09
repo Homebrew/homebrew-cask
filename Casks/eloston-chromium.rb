@@ -13,10 +13,7 @@ cask "eloston-chromium" do
   desc "Google Chromium, sans integration with Google"
   homepage "https://ungoogled-software.github.io/ungoogled-chromium-binaries/"
 
-  conflicts_with cask: [
-    "chromium",
-    "freesmug-chromium",
-  ]
+  conflicts_with cask: "chromium"
 
   app "Chromium.app"
 
