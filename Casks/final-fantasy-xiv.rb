@@ -6,7 +6,13 @@ cask "final-fantasy-xiv" do
       verified: "square-enix.com"
   name "Final Fantasy XIV"
   desc "Story-driven massively multiplayer online role-playing game"
-  homepage "https://finalfantasyxiv.com/"
+  homepage "https://www.finalfantasyxiv.com/"
+
+  livecheck do
+    url "https://na.finalfantasyxiv.com/mac/download/"
+    strategy :page_match
+    regex(%r{href="https://gdl.square-enix.com/ffxiv/inst/([^/]*)/FINAL_FANTASY_XIV_ONLINE_x64.dmg"}i)
+  end
 
   auto_updates true
   depends_on macos: ">= :mojave"
