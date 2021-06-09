@@ -20,12 +20,5 @@ cask "p4" do
   depends_on macos: ">= :catalina"
   container type: :naked
 
-  binary "p4"
-
-  preflight do
-    # brew 3.1.9 saves the downloaded binary under the name of the directory
-    if File.file?("#{staged_path}/bin.macosx1015x86_64")
-      File.rename "#{staged_path}/bin.macosx1015x86_64", "#{staged_path}/p4"
-    end
-  end
+  binary "bin.macosx1015x86_64", target: "p4"
 end
