@@ -1,5 +1,5 @@
 cask "datagrip" do
-  version "2021.1.3,211.7442.53"
+  version "2021.1.3"
 
   if Hardware::CPU.intel?
     sha256 "f640ca34a6845fd4f02480d6fe6555672d6eeb4034f4c0a73b5c1808d2cd0688"
