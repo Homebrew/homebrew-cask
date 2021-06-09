@@ -1,6 +1,3 @@
-# typed: false
-# frozen_string_literal: true
-
 cask "morpheus" do
   version "2.2.3"
   sha256 "ee6a4e0294149290502760b427ebcf50fed7eee0aa84d610542b4b632e6a5736"
