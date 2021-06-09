@@ -1,6 +1,6 @@
 cask "vivaldi" do
-  version "3.8.2259.42"
-  sha256 "088ebb026582f7fb9ccbe8eb7ccc05984ef8cbc641774392e057d4931599d12f"
+  version "4.0.2312.24"
+  sha256 "09f449b93edafbf37d09b99e822b8a7d74ee24302818cf6b6a82ce50f466fa3b"
 
   url "https://downloads.vivaldi.com/stable/Vivaldi.#{version}.universal.dmg"
   name "Vivaldi"
