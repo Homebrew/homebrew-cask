@@ -52,7 +52,7 @@ If the issue is still not solved, see the guides for common problems:
 * [`wrong number of arguments` error](doc/reporting_bugs/wrong_number_of_arguments_error.md)
 * [App isn’t included in `upgrade`](doc/faq/app_not_upgrading.md)
 * [The app can’t be opened because it is from an unidentified developer](doc/faq/app_cant_be_opened.md)
-* [My problem isn’t listed](https://github.com/Homebrew/homebrew-cask/issues/new?template=01_bug_report.md)
+* [My problem isn’t listed](https://github.com/Homebrew/homebrew-cask/issues/new?template=01_bug_report.yml)
 
 ## Requests
 
