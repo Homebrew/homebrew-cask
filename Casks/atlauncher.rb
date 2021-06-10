@@ -1,17 +1,12 @@
 cask "atlauncher" do
-  version "3.4.3.3"
-  sha256 :no_check
+  version "3.4.4.3"
+  sha256 "650bf251d212e392eeec44712265976bd855f6b87795b14ed76e0490c31c56fc"
 
-  url "https://www.atlauncher.com/download/zip"
+  url "https://github.com/ATLauncher/ATLauncher/releases/download/v#{version}/ATLauncher-#{version}.zip",
+      verified: "github.com/ATLauncher/ATLauncher/"
   name "ATLauncher"
   desc "Minecraft launcher"
-  homepage "https://www.atlauncher.com/"
-
-  livecheck do
-    url "https://atlauncher.com/downloads"
-    strategy :page_match
-    regex(/{\s*active:\s*['"](\d+(?:\.\d+)*)['"]\s*}/i)
-  end
+  homepage "https://atlauncher.com/"
 
   app "ATLauncher.app"
 end
