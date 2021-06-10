@@ -1,8 +1,8 @@
 cask "royal-tsx" do
-  version "4.3.6.1000"
-  sha256 "9fd00742126a19acca5b93751c57236093639c7c77955af6375592dce4e44360"
+  version "5.0.0.1000"
+  sha256 "04ed88234c8b245d661a4440e17ce6fa8ba9b7eb5d36642adbc920505258adec"
 
-  url "https://royaltsx-v4.royalapps.com/updates/royaltsx_#{version}.dmg"
+  url "https://royaltsx-v#{version.major}.royalapps.com/updates/royaltsx_#{version}.dmg"
   name "Royal TSX"
   desc "Remote management solution"
   homepage "https://www.royalapps.com/ts/mac/features"
