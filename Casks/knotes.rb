@@ -9,10 +9,11 @@ cask "knotes" do
   homepage "https://knotesapp.com/"
 
   livecheck do
-    url "https://knotesapp.com/"
-    strategy :page_match
-    regex(%r{href=.*?/Knotes-(\d+(?:\.\d+)*)\.dmg}i)
+    url :homepage
+    regex(%r{href=.*?/Knotes[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
+
+  depends_on macos: ">= :yosemite"
 
   app "Knotes.app"
 
