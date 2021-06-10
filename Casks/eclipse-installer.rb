@@ -4,6 +4,7 @@ cask "eclipse-installer" do
 
   url "https://eclipse.org/downloads/download.php?file=/oomph/epp/#{version.after_comma.before_colon}/#{version.after_colon}/eclipse-inst-mac64.tar.gz&r=1"
   name "Eclipse Installer"
+  name "Eclipse IDE installer"
   homepage "https://eclipse.org/"
 
   livecheck do
