@@ -5,6 +5,7 @@ cask "superproductivity" do
   url "https://github.com/johannesjo/super-productivity/releases/download/v#{version}/superProductivity-#{version}-mac.zip",
       verified: "github.com/johannesjo/super-productivity/"
   name "Super Productivity"
+  desc "To-do list and time tracker"
   homepage "https://super-productivity.com/"
 
   app "superProductivity.app"
