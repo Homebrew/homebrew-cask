@@ -7,6 +7,11 @@ cask "adobe-creative-cloud-cleaner-tool" do
   desc "Utility to clean up corrupted installations of Adobe software"
   homepage "https://helpx.adobe.com/creative-cloud/kb/cc-cleaner-tool-installation-problems.html"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Adobe Creative Cloud Cleaner Tool.app"
 
   uninstall quit: "com.Adobe.Installers.AdobeCreativeCloudCleanerTool"
