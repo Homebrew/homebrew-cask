@@ -4,6 +4,7 @@ cask "eclipse-dsl" do
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.after_comma.before_colon}/#{version.after_colon}/eclipse-dsl-#{version.after_comma.before_colon}-#{version.after_colon}-macosx-cocoa-x86_64.dmg&r=1"
   name "Eclipse IDE for Java and DSL Developers"
+  desc "Eclipse IDE for Java and DSL developers"
   homepage "https://eclipse.org/"
 
   livecheck do
