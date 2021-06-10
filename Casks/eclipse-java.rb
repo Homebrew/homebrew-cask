@@ -4,12 +4,14 @@ cask "eclipse-java" do
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.after_comma.before_colon}/#{version.after_colon}/eclipse-java-#{version.after_comma.before_colon}-#{version.after_colon}-macosx-cocoa-x86_64.dmg&r=1"
   name "Eclipse IDE for Java Developers"
+  desc "Eclipse IDE for Java developers"
   homepage "https://eclipse.org/"
 
   livecheck do
     url "https://www.eclipse.org/downloads/packages/"
     strategy :page_match do |page|
-      page.scan(%r{href="/downloads/packages/release/(\d+-\d+)"}i).map do |release|
+      page.scan(/Eclipse IDE (\d+-\d+) R Packages/i).map do |release|
+        require "net/http"
         version_page = Net::HTTP.get(URI.parse("https://projects.eclipse.org/releases/#{release[0]}"))
         version = version_page.scan(%r{href="/projects/eclipse/releases/(\d+(?:\.\d+)*)"}i)
         "#{version[0][0]},#{release[0]}:R"
