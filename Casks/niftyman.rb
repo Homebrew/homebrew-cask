@@ -1,6 +1,6 @@
 cask "niftyman" do
-  version "1.1.1"
-  sha256 "cb8b6cb00bc0a564e664557d94dc6fe374097d7eb93a0c37c625f6b98463a019"
+  version "1.1.2"
+  sha256 "b9fe90eff7427331360e0c2b603b443a383b3bbe936de5625644e70541bb6f1b"
 
   url "https://notion-menubar-updates.s3-us-west-2.amazonaws.com/Niftyman-#{version}.dmg",
       verified: "notion-menubar-updates.s3-us-west-2.amazonaws.com/"
