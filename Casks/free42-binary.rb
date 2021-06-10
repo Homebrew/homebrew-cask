@@ -9,8 +9,7 @@ cask "free42-binary" do
 
   livecheck do
     url "https://thomasokken.com/free42/history.html"
-    strategy :page_match
-    regex(/release\s*(\d+(?:\.\d+)*)/i)
+    regex(/:\s*release\s*(\d+(?:\.\d+)+[a-z]?)\s*(?:$|\([^\n)]*MacOS)/i)
   end
 
   app "Free42 Binary.app"
