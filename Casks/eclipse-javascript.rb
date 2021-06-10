@@ -4,6 +4,7 @@ cask "eclipse-javascript" do
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.after_comma.before_colon}/#{version.after_colon}/eclipse-javascript-#{version.after_comma.before_colon}-#{version.after_colon}-macosx-cocoa-x86_64.dmg&r=1"
   name "Eclipse IDE for JavaScript and Web Developers"
+  desc "Eclipse IDE for JavaScript and web developers"
   homepage "https://eclipse.org/"
 
   livecheck do
