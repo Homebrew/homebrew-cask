@@ -1,6 +1,6 @@
 cask "toolreleases" do
-  version "1.4.1,44"
-  sha256 "eba1793512ad2f4c57a40cab862ce94f79ed2fff7510da3fa45c5b7502e6d274"
+  version "1.4.2,45"
+  sha256 "1904c8a70263f2be5c9f089671e29eef1514d5a70d4390a8eedfd089047e943e"
 
   url "https://github.com/DeveloperMaris/ToolReleases/releases/download/v#{version.before_comma}/ToolReleases_v#{version.before_comma}.b#{version.after_comma}.zip"
   name "ToolReleases"
