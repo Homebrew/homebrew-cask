@@ -13,4 +13,8 @@ cask "universal-battle" do
   end
 
   app "OSX/Universal Battle 2.app"
+
+  zap trash: [
+    "~/Library/Saved Application State/com.gamojo.sa.universalbattle2.savedState",
+  ]
 end
