@@ -9,8 +9,7 @@ cask "favro" do
 
   livecheck do
     url "https://download.favro.com/FavroDesktop/macOS/x64/Latest.json"
-    strategy :page_match
-    regex(/Favro-(\d+(?:\.\d+)*)\.dmg/i)
+    regex(/Favro[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "Favro.app"
