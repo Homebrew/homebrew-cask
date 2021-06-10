@@ -10,12 +10,7 @@ cask "visual-studio" do
 
   livecheck do
     url "https://docs.microsoft.com/en-us/visualstudio/releasenotes/vs2019-mac-relnotes"
-    strategy :page_match do |page|
-      match = page.match(
-        /Visual\sStudio\s(\d+(?:\.\d+)*)\sfor\sMac\sversion\s(\d+(?:\.\d+)*)\s\((\d+(?:\.\d+)*)\)/i,
-      )
-      (match[3]).to_s
-    end
+    regex(/Visual\s*Studio\s*\d+\s+for\s+Mac\s+version\s+\d+(?:\.\d+)*\s+\((\d+(?:\.\d+)+)\)/i)
   end
 
   auto_updates true
@@ -25,15 +20,15 @@ cask "visual-studio" do
   app "Visual Studio.app"
 
   zap trash: [
-    "/Applications/Xamarin Workbooks.app",
     "/Applications/Xamarin Profiler.app",
-    "~/Library/Application Support/VisualStudio",
+    "/Applications/Xamarin Workbooks.app",
     "~/Library/Application Support/CrashReporter/VisualStudio*",
+    "~/Library/Application Support/VisualStudio",
     "~/Library/Caches/VisualStudio",
+    "~/Library/Developer/Xamarin",
     "~/Library/Logs/VisualStudio",
     "~/Library/Preferences/Visual*Studio",
     "~/Library/Preferences/Xamarin",
-    "~/Library/Developer/Xamarin",
     "~/Library/VisualStudio",
   ]
 end
