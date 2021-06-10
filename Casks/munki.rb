@@ -11,7 +11,7 @@ cask "munki" do
   livecheck do
     url :url
     strategy :github_latest
-    regex(%r{href=.*?/munkitools-(\d+(?:\.\d+)*)\.pkg}i)
+    regex(%r{href=.*?/munkitools[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
   end
 
   pkg "munkitools-#{version}.pkg"
