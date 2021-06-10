@@ -4,6 +4,7 @@ cask "miktex-console" do
 
   url "https://miktex.org/download/ctan/systems/win32/miktex/setup/darwin-x86_64/miktex-#{version}-darwin-x86_64.dmg"
   name "MiKTeX"
+  desc "TeX distribution"
   homepage "https://miktex.org/"
 
   livecheck do
