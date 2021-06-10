@@ -9,11 +9,11 @@ cask "transnomino" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/Transnomino-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/Transnomino[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Transnomino.app"
 end
