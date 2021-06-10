@@ -1,12 +1,12 @@
 cask "zoom" do
-  version "5.6.6.950"
+  version "5.6.7.1020"
 
   if Hardware::CPU.intel?
-    sha256 "562d4fc25ff0b3ae3df597644cd6e2cdc0513751f610e334ff23e6464c73bf45"
+    sha256 "ba9704ad271d9816ca8e4761da8aa0f8947fb3aadab48f22d54d5e7fd6d80110"
 
     url "https://cdn.zoom.us/prod/#{version}/Zoom.pkg"
   else
-    sha256 "60e5d1865bbf176bebe5a42b2c2b0e4f6f38af3dc4de25ee656b11407836810b"
+    sha256 "7001ee4bb8e3a73f14cde75a5d17dd338bea8b9b3b744c521b8c42b0b921a127"
 
     url "https://cdn.zoom.us/prod/#{version}/arm64/Zoom.pkg"
   end
@@ -26,6 +26,15 @@ cask "zoom" do
   conflicts_with cask: "zoom-for-it-admins"
 
   pkg "Zoom.pkg"
+
+  postflight do
+    # Description: Ensure console variant of postinstall is non-interactive.
+    # This is because `open "$APP_PATH"&` is called from the postinstall
+    # script of the package and we don't want any user intervention there.
+    if system_command("ps", args: ["x"]).stdout.match?("zoom.us.app/Contents/MacOS/zoom.us")
+      system_command "/usr/bin/pkill", args: ["-f", "#{appdir}/zoom.us.app"], must_succeed: false
+    end
+  end
 
   uninstall signal:  ["KILL", "us.zoom.xos"],
             pkgutil: "us.zoom.pkg.videmeeting",

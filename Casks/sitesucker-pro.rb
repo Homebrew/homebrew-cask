@@ -3,8 +3,8 @@ cask "sitesucker-pro" do
     version "3.2.7"
     sha256 "dd61a113ad86b580e0faf97b4aa86290e038bb3e098f2d19e67fc9e194ce1a3e"
   else
-    version "4.0.5"
-    sha256 "a5d7d9ca2b4c4fafadfc092b0ff49d1ffc111ef1168a7e221d8a4da661e20a82"
+    version "4.1.1"
+    sha256 "889929b6a8631e5f2aaba4e3d5e2f3a0b7ba34c326dff45b07eb352996a52ca4"
   end
 
   url "https://ricks-apps.com/osx/sitesucker/archive/#{version.major}.x/#{version.major_minor}.x/#{version}/SiteSucker_Pro_#{version}.dmg"

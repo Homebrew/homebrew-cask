@@ -6,7 +6,13 @@ cask "gcc-arm-embedded" do
 
   url "https://developer.arm.com/-/media/Files/downloads/gnu-rm/#{version.sub(/^(\d+-\d{4})-(q\d)-(major|update)$/, '\1\2')}/gcc-arm-none-eabi-#{version}-mac.tar.bz2"
   name "GCC ARM Embedded"
-  homepage "https://developer.arm.com/open-source/gnu-toolchain/gnu-rm"
+  desc "Pre-built GNU bare-metal toolchain for 32-bit Arm processors"
+  homepage "https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm"
+
+  livecheck do
+    url "https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads"
+    regex(/Version\s+(\d+-\d+-q\d+-\w+)/i)
+  end
 
   binary "gcc-arm-none-eabi-#{version}/bin/arm-none-eabi-addr2line"
   binary "gcc-arm-none-eabi-#{version}/bin/arm-none-eabi-ar"

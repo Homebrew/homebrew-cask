@@ -1,13 +1,13 @@
 cask "stoplight-studio" do
-  version "2.3.0,5757.git-ca3ccc8"
+  version "2.3.0,5860.git-a1f1a82"
 
   if Hardware::CPU.intel?
-    sha256 "0cc6ea5228e9f15d8f3ce9a0627ba7e7fee243b1ae71073ee1a9b4edd72cf8ec"
+    sha256 "57f030300b7d53dc928c2ff957402bf05a8aeaaaa96a32aefdcbfdade182d231"
 
     url "https://github.com/stoplightio/studio/releases/download/v#{version.before_comma}-stable.#{version.after_comma}/stoplight-studio-mac.dmg",
         verified: "github.com/stoplightio/studio/"
   else
-    sha256 "c5a3cc25a01611e44801c39d89b836a3b6af29b647ffb5f272c5578dfa6972cd"
+    sha256 "47365408fcc1ca0657760d088856eaf3b5d72e4be267ea6e138edcd8806c0ccd"
 
     url "https://github.com/stoplightio/studio/releases/download/v#{version.before_comma}-stable.#{version.after_comma}/stoplight-studio-mac-arm64.dmg",
         verified: "github.com/stoplightio/studio/"

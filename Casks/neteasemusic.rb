@@ -1,6 +1,6 @@
 cask "neteasemusic" do
-  version "2.3.4,846"
-  sha256 "1dfee30efbfdc8cd37c841e00c01ea4f1db4b4bbafb379c4aeeec8e70e0812b7"
+  version "2.3.5,852"
+  sha256 "a9106d89da7a71ea103b0dedbd27da8a8a0f13b16eb223e054adf564474447bf"
 
   url "https://d1.music.126.net/dmusic/NeteaseMusic_#{version.before_comma}_#{version.after_comma}_web.dmg",
       verified:   "d1.music.126.net/",
@@ -10,9 +10,16 @@ cask "neteasemusic" do
   desc "Music streaming platform"
   homepage "https://music.163.com/"
 
+  # The Sparkle feed uses non-English pubDates, which are not parsed correctly
+  # by the `:sparkle` strategy. As a workaround, the version is just extracted
+  # from the XML using a regex pattern on the download URLs.
   livecheck do
     url "https://music.163.com/api/mac/appcast.xml"
-    strategy :sparkle
+    strategy :page_match do |page|
+      page.scan(%r{url=.*?/NeteaseMusic[._-]?v?(\d+(?:\.\d+)+)[_-](\d+)[._-]web\.dmg}i).map do |match|
+        "#{match[0]},#{match[1]}"
+      end
+    end
   end
 
   depends_on macos: ">= :sierra"
