@@ -14,4 +14,6 @@ cask "unexpectedly" do
   end
 
   app "Unexpectedly.app"
+
+  zap trash: "~/Library/Preferences/fr.whitebox.unexpectedly.plist"
 end
