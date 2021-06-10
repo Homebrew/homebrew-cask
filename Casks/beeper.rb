@@ -1,5 +1,5 @@
 cask "beeper" do
-  version "2.0.5"
+  version "2.0.7"
   sha256 :no_check
 
   if Hardware::CPU.intel?
