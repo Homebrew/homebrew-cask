@@ -4,12 +4,15 @@ cask "gitfinder" do
 
   url "https://get.gitfinder.com/GitFinder#{version.before_comma.dots_to_underscores}.dmg"
   name "GitFinder"
+  desc "Git client with Finder integration"
   homepage "https://gitfinder.com/"
 
   livecheck do
     url "https://zigz.ag/GitFinder/updates/stablecast.xml"
     strategy :sparkle
   end
+
+  depends_on macos: ">= :el_capitan"
 
   app "GitFinder.app"
 
