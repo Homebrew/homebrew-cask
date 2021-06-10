@@ -5,6 +5,7 @@ cask "wifispoof" do
   url "https://sweetpproductions.com/products/wifispoof#{version.major}/WiFiSpoof#{version.major}.dmg",
       verified: "sweetpproductions.com/products/"
   name "WiFiSpoof"
+  desc "Change your computer's MAC address"
   homepage "https://wifispoof.com/"
 
   livecheck do
@@ -13,6 +14,7 @@ cask "wifispoof" do
   end
 
   auto_updates true
+  depends_on macos: ">= :el_capitan"
 
   app "WiFiSpoof.app"
 end
