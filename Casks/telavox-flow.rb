@@ -1,9 +1,9 @@
 cask "telavox-flow" do
-  version "1.120.1"
-  sha256 "bf33db04d745b24ff50ac377d9c1db2466a7f7eb12e8d10bac3833710e877730"
+  version "1.121.0"
+  sha256 "471a41b8fd84b0a6132efdacce577f21eb68aa9c2607a1a2e6fef879a554ce1c"
 
-  url "https://s3.eu-west-2.amazonaws.com/flow-desktop/Telavox-#{version}.dmg",
-      verified: "s3.eu-west-2.amazonaws.com/flow-desktop/"
+  url "https://flow-desktop.s3.amazonaws.com/Telavox-#{version}.dmg",
+      verified: "flow-desktop.s3.amazonaws.com/"
   name "Telavox Flow"
   desc "Communication and collaboration platform"
   homepage "https://telavox.com/en/apps/"
