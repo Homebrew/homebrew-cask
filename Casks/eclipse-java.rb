@@ -9,7 +9,8 @@ cask "eclipse-java" do
   livecheck do
     url "https://www.eclipse.org/downloads/packages/"
     strategy :page_match do |page|
-      page.scan(%r{href="/downloads/packages/release/(\d+-\d+)"}i).map do |release|
+      page.scan(/Eclipse IDE (\d+-\d+) R Packages/i).map do |release|
+        require "net/http"
         version_page = Net::HTTP.get(URI.parse("https://projects.eclipse.org/releases/#{release[0]}"))
         version = version_page.scan(%r{href="/projects/eclipse/releases/(\d+(?:\.\d+)*)"}i)
         "#{version[0][0]},#{release[0]}:R"
