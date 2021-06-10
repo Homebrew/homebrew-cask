@@ -10,8 +10,7 @@ cask "nucleo" do
 
   livecheck do
     url "https://nucleoapp.com/updates"
-    strategy :page_match
-    regex(%r{href=.*?/Nucleo_(\d+(?:\.\d+)*)\.zip}i)
+    regex(%r{href=.*?/Nucleo[._-]v?(\d+(?:\.\d+)+)\.zip}i)
   end
 
   app "Nucleo.app"
