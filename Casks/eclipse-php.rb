@@ -4,6 +4,7 @@ cask "eclipse-php" do
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.after_comma.before_colon}/#{version.after_colon}/eclipse-php-#{version.after_comma.before_colon}-#{version.after_colon}-macosx-cocoa-x86_64.dmg&r=1"
   name "Eclipse IDE for PHP Developers"
+  desc "Eclipse IDE for PHP developers"
   homepage "https://eclipse.org/"
 
   livecheck do
