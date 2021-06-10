@@ -13,14 +13,16 @@ cask "vsee" do
     strategy :sparkle
   end
 
+  depends_on macos: ">= :el_capitan"
+
   app "VSee.app"
 
   uninstall delete: "~/Library/Internet Plug-Ins/VSeeHelper.plugin"
 
   zap trash: [
-    "~/Library/Preferences/com.vsee.VSee.plist",
     "~/Library/Application Support/VSee",
     "~/Library/Caches/com.vsee.VSee",
     "~/Library/Logs/VSee",
+    "~/Library/Preferences/com.vsee.VSee.plist",
   ]
 end
