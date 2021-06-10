@@ -1,5 +1,5 @@
 cask "caramba-switcher" do
-  version "2021.04.26"
+  version "2021.06.08"
   sha256 :no_check
 
   url "https://cdn.caramba-switcher.com/files/CarambaSwitcherBeta.pkg"
