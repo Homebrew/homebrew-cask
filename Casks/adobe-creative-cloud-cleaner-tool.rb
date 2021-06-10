@@ -18,7 +18,7 @@ cask "adobe-creative-cloud-cleaner-tool" do
 
   zap trash: [
     "~/Library/Caches/com.Adobe.Installers.AdobeCreativeCloudCleanerTool",
-    "~/Library/Saved Application State/com.Adobe.Installers.AdobeCreativeCloudCleanerTool.savedState",
     "~/Library/Logs/Adobe Creative Cloud Cleaner Tool.log",
+    "~/Library/Saved Application State/com.Adobe.Installers.AdobeCreativeCloudCleanerTool.savedState",
   ]
 end
