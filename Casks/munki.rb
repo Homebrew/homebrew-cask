@@ -1,6 +1,6 @@
 cask "munki" do
-  version "5.4.0.4348"
-  sha256 "312faccca992e1bb806a647e4c4e18929cea07d1a939ce5cc99dddb3dac24660"
+  version "5.5.0.4362"
+  sha256 "7f435ae56fd6651e4e3e8b3bd4bf43971fda1d686dec9a23ad1416a73ec9ee7b"
 
   url "https://github.com/munki/munki/releases/download/v#{version.major_minor_patch}/munkitools-#{version}.pkg",
       verified: "github.com/munki/munki/"
@@ -11,7 +11,7 @@ cask "munki" do
   livecheck do
     url :url
     strategy :github_latest
-    regex(%r{href=.*?/munkitools-(\d+(?:\.\d+)*)\.pkg}i)
+    regex(%r{href=.*?/munkitools[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
   end
 
   pkg "munkitools-#{version}.pkg"
