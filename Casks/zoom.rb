@@ -31,7 +31,9 @@ cask "zoom" do
     # Description: Ensure console variant of postinstall is non-interactive.
     # This is because `open "$APP_PATH"&` is called from the postinstall
     # script of the package and we don't want any user intervention there.
-    system_command "/usr/bin/pkill", args: ["-f", "#{appdir}/zoom.us.app"], must_succeed: false
+    if system_command("ps", args: ["x"]).stdout.match?("zoom.us.app/Contents/MacOS/zoom.us")
+      system_command "/usr/bin/pkill", args: ["-f", "#{appdir}/zoom.us.app"], must_succeed: false
+    end
   end
 
   uninstall signal:  ["KILL", "us.zoom.xos"],
