@@ -19,6 +19,15 @@ cask "zoom-for-it-admins" do
 
   pkg "ZoomInstallerIT.pkg"
 
+  postflight do
+    # Description: Ensure console variant of postinstall is non-interactive.
+    # This is because zoom.us is opened by the postinstall script of the
+    # package and we don't want any user intervention there.
+    if system_command("ps", args: ["x"]).stdout.match?("zoom.us.app/Contents/MacOS/zoom.us")
+      system_command "/usr/bin/pkill", args: ["-f", "#{appdir}/zoom.us.app"], must_succeed: false
+    end
+  end
+
   uninstall signal:  ["KILL", "us.zoom.xos"],
             pkgutil: "us.zoom.pkg.videmeeting",
             delete:  [
