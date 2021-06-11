@@ -9,7 +9,6 @@ cask "orange" do
 
   livecheck do
     url "https://github.com/biolab/orange3"
-    strategy :git
   end
 
   app "Orange#{version.major}.app"
