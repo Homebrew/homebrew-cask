@@ -1,6 +1,6 @@
 cask "runway" do
-  version "0.17.7"
-  sha256 "23ea39f6b4c5e6ce21cca2969db5e9154cfc922d49bee91a5ab117a723bfeaeb"
+  version "0.17.10"
+  sha256 "78bcccde07ac41618ea5330ee3cbbe905bee3bebfaa6dad2a5dff794996701c8"
 
   url "https://runway-releases.s3.amazonaws.com/Runway-#{version}.dmg",
       verified: "runway-releases.s3.amazonaws.com/"
