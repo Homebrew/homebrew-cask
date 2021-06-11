@@ -17,7 +17,6 @@ cask "syncovery" do
 
   livecheck do
     url "https://www.syncovery.com/download/mac/"
-    strategy :page_match
     regex(%r{href=.*?/SyncoveryMac(\d+(?:\.\d+)*[a-z]?)\.dmg}i)
   end
 
