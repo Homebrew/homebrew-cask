@@ -1,13 +1,13 @@
 cask "freeplane" do
-  version "1.9.1"
+  version "1.9.3"
 
   if Hardware::CPU.intel?
-    sha256 "8dfedf459be9d36fbaf473cee2ac78680a1cb95f58b36d48cfd03c27851a2291"
+    sha256 "46cdd871cb7a45061626404553580362ae8319cc1c8e3d40be04364aa6815f24"
 
     url "https://downloads.sourceforge.net/freeplane/Freeplane-#{version}-intel.dmg",
         verified: "downloads.sourceforge.net/freeplane/"
   else
-    sha256 "255734becd2d6e2d4781ae0dc24b399c86172e92f3b6359b5c0f4c3f34b72ea7"
+    sha256 "981f0ca1f9d0825785a01672eb318e1922f2318d8c01f29cc0a0488078e31d42"
 
     url "https://downloads.sourceforge.net/freeplane/Freeplane-#{version}-apple.dmg",
         verified: "downloads.sourceforge.net/freeplane/"
