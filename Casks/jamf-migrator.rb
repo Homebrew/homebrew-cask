@@ -10,7 +10,7 @@ cask "jamf-migrator" do
   livecheck do
     url :url
     strategy :github_latest
-    regex(/jamf-migrator\s+v(\d+(?:\.\d+)*)/i)
+    regex(/jamf-migrator\s+v?(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: ">= :sierra"
