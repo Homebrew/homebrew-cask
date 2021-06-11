@@ -1,6 +1,6 @@
 cask "fontbase" do
-  version "2.15.6"
-  sha256 "1cc062b116843dfa50130008c57124a42ea6ac97c8d0349e177045223afd4c1c"
+  version "2.16.0"
+  sha256 "c61cbf15ec26803625773d4ce52509487e89ccfd233209118d304906d970af00"
 
   url "https://releases.fontba.se/mac/FontBase-#{version}.dmg"
   name "FontBase"
@@ -17,9 +17,9 @@ cask "fontbase" do
   app "FontBase.app"
 
   zap trash: [
+    "~/Library/Application Support/FontBase",
     "~/Library/Preferences/com.dominiklevitsky.fontbase.helper.plist",
     "~/Library/Preferences/com.dominiklevitsky.fontbase.plist",
-    "~/Library/Application Support/FontBase",
     "~/Library/Saved Application State/com.dominiklevitsky.fontbase.savedState",
   ]
 end
