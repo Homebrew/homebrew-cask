@@ -7,6 +7,11 @@ cask "talon" do
   desc "Enables you to control your computer with voice, eye tracking, or noises"
   homepage "https://talonvoice.com/"
 
+  livecheck do
+    url "https://talonvoice.com/dl/latest/changelog.html"
+    regex(/<h\d>\s*(\d+(?:\.\d+)+)/i)
+  end
+
   app "Talon.app"
 
   caveats do
