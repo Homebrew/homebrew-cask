@@ -1,6 +1,6 @@
 cask "feishu" do
-  version "4.1.4,9df8ae"
-  sha256 "34df9550c611617e1551fb4bc4cf9b82cc082b02b01ea3d071ffcd58b58bbc83"
+  version "4.1.5,1fcc7d"
+  sha256 "d3775a6e3e19f5c6690fb5a749eb4c546f8a05d0cb60fbce38efb3accdef56f2"
 
   url "https://sf3-cn.feishucdn.com/obj/ee-appcenter/#{version.after_comma}/Feishu-darwin_x64-#{version.before_comma}-signed.dmg",
       verified: "sf3-cn.feishucdn.com/"
