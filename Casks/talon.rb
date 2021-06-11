@@ -1,5 +1,5 @@
 cask "talon" do
-  version "1.5.0"
+  version "0.1.5"
   sha256 :no_check
 
   url "https://talonvoice.com/dl/latest/talon-mac.dmg"
