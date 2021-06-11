@@ -1,5 +1,5 @@
 cask "miro" do
-  version "0.5.3"
+  version "0.5.4"
   sha256 :no_check
 
   if Hardware::CPU.intel?
