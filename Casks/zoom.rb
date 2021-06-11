@@ -33,13 +33,13 @@ cask "zoom" do
     # script of the package and we don't want any user intervention there.
     ohai "The Zoom package postinstall script launches the Zoom app"
     ohai "Attempting to close zoom.us.app to avoid unwanted user intervention"
-    if system_command("ps", args: ["x"]).stdout.match?("zoom.us.app/Contents/MacOS/zoom.us")
+    if system_command("/bin/ps", args: ["x"]).stdout.match?("zoom.us.app/Contents/MacOS/zoom.us")
       begin
-        retries ||= 0
+        retries ||= 3
         system_command "/usr/bin/pkill", args: ["-f", "#{appdir}/zoom.us.app"]
       rescue RuntimeError
-        sleep 0.5
-        retry if (retries += 1) < 3
+        sleep 1
+        retry unless (retries -= 1).zero?
         opoo "Unable to forcibly close zoom.us.app"
       end
     end
