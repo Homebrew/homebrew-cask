@@ -4,6 +4,7 @@ cask "hubstaff" do
 
   url "https://app.hubstaff.com/download/#{version.after_comma}-mac-os-x-#{version.before_comma.dots_to_hyphens}-release"
   name "Hubstaff"
+  desc "Work time tracker"
   homepage "https://hubstaff.com/"
 
   livecheck do
