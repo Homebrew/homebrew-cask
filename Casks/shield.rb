@@ -1,6 +1,6 @@
 cask "shield" do
-  version "1.0.1"
-  sha256 "0aa119a10374f85e011c97e9d8fbab1acd55468d9d5f5bbcb5cc87ba304a43af"
+  version "1.2"
+  sha256 "fa0162763caaf7e9bd2bbeae5a43ccd8193fdf9885f183590d1612479b267487"
 
   url "https://github.com/theevilbit/Shield/releases/download/#{version}/Shield.app_#{version}.zip",
       verified: "https://github.com/theevilbit/Shield"
