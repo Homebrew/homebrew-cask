@@ -1,15 +1,12 @@
 cask "cashnotify" do
-  version "3.4.0"
-  sha256 :no_check
+  version "3.4.1"
+  sha256 "82bf516a049b23ae4c482fcb23d8866bee5ceaa8ea953b56e3f630da99ec2cad"
 
-  url "https://download.cashnotify.com/download/mac/"
+  url "https://github.com/BaguetteEngineering/download.cashnotify.com/releases/download/v#{version}/CashNotify-#{version}.dmg",
+      verified: "github.com/BaguetteEngineering/download.cashnotify.com/"
   name "CashNotify"
+  desc "Monitor your Stripe and Paypal accounts from your menubar"
   homepage "https://cashnotify.com/"
-
-  livecheck do
-    url "https://github.com/BaguetteEngineering/download.cashnotify.com"
-    strategy :git
-  end
 
   auto_updates true
 
@@ -19,8 +16,8 @@ cask "cashnotify" do
             quit:      "com.baguetteengineering.cashnotify"
 
   zap trash: [
-    "~/Library/Application Support/CashNotify",
     "~/Library/Application Support/Caches/cashnotify-updater",
+    "~/Library/Application Support/CashNotify",
     "~/Library/Caches/com.baguetteengineering.cashnotify",
     "~/Library/Caches/com.baguetteengineering.cashnotify.ShipIt",
     "~/Library/Logs/CashNotify",
