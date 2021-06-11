@@ -1,14 +1,15 @@
 cask "talon" do
-  version "0.1.5,108.0"
-  sha256 "73372150129720e04d1fc1dfc7c1e275c309e5dcb15e71d7bca36e6256abd7f8"
+  version "0.1.5"
+  sha256 :no_check
 
-  url "https://talonvoice.com/update/pgUuEYK3vzmYQtF2PMgOyK/Talon-#{version.after_comma.major}-#{version.before_comma}.dmg"
+  url "https://talonvoice.com/dl/latest/talon-mac.dmg"
   name "Talon"
+  desc "Enables you to control your computer with voice, eye tracking, or noises"
   homepage "https://talonvoice.com/"
 
   livecheck do
-    url "https://talonvoice.com/update/pgUuEYK3vzmYQtF2PMgOyK/appcast.xml"
-    strategy :sparkle
+    url "https://talonvoice.com/dl/latest/changelog.html"
+    regex(/<h\d>\s*(\d+(?:\.\d+)+)/i)
   end
 
   app "Talon.app"
