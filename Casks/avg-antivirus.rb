@@ -5,6 +5,7 @@ cask "avg-antivirus" do
   url "https://bits.avcdn.net/productfamily_ANTIVIRUS/insttype_FREE/platform_MAC_AVG/installertype_ONLINE/build_RELEASE",
       verified: "bits.avcdn.net/"
   name "AVG Antivirus for Mac"
+  desc "Antivirus software"
   homepage "https://www.avg.com/us-en/avg-antivirus-for-mac"
 
   livecheck do
