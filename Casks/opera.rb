@@ -9,8 +9,7 @@ cask "opera" do
 
   livecheck do
     url "https://ftp.opera.com/pub/opera/desktop/"
-    strategy :page_match
-    regex(/href=['"]?(\d+(?:\.\d+)*)['"]?/i)
+    regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
   auto_updates true
@@ -18,7 +17,7 @@ cask "opera" do
   app "Opera.app"
 
   zap trash: [
-    "~/Library/Preferences/com.operasoftware.Opera.plist",
     "~/Library/Application Support/com.operasoftware.Opera/",
+    "~/Library/Preferences/com.operasoftware.Opera.plist",
   ]
 end
