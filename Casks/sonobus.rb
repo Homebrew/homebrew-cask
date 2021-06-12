@@ -1,6 +1,6 @@
 cask "sonobus" do
-  version "1.4.5"
-  sha256 "2afc1da573aa4a9755c61a483c09e1bc1c56ac498ef3be90bd1ad43b62d213db"
+  version "1.4.6"
+  sha256 "cf54817a619149197fa399c8c40932f38c2643a435fdce33d5798885133c167c"
 
   url "https://sonobus.net/releases/sonobus-#{version}-mac.dmg"
   name "SonoBus"
@@ -9,9 +9,10 @@ cask "sonobus" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href="releases/.*?-(\d+(?:\.\d+)*)-mac\.dmg}i)
+    regex(%r{href=.*?/sonobus[._-]v?(\d+(?:\.\d+)+)[._-]mac\.dmg}i)
   end
+
+  depends_on macos: ">= :yosemite"
 
   pkg "SonoBus Installer.pkg"
 
