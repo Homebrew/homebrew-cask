@@ -13,5 +13,7 @@ cask "spyder" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :catalina"
+
   app "Spyder.app"
 end
