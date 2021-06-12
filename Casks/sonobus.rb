@@ -9,8 +9,7 @@ cask "sonobus" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href="releases/.*?-(\d+(?:\.\d+)*)-mac\.dmg}i)
+    regex(%r{href=.*?/sonobus[._-]v?(\d+(?:\.\d+)+)[._-]mac\.dmg}i)
   end
 
   pkg "SonoBus Installer.pkg"
