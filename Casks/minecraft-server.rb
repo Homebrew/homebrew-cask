@@ -48,7 +48,7 @@ cask "minecraft-server" do
   zap trash: config_dir
 
   caveats do
-    depends_on_java "8+"
+    depends_on_java "16+"
     <<~EOS
       Configuration files are located in
 
