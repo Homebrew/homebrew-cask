@@ -12,6 +12,8 @@ cask "sonobus" do
     regex(%r{href=.*?/sonobus[._-]v?(\d+(?:\.\d+)+)[._-]mac\.dmg}i)
   end
 
+  depends_on macos: ">= :yosemite"
+
   pkg "SonoBus Installer.pkg"
 
   uninstall pkgutil: [
