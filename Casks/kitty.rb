@@ -22,7 +22,7 @@ cask "kitty" do
   end
 
   zap trash: [
-    "~/.config/kitty",
+    "~/Library/Caches/kitty",
     "~/Library/Preferences/kitty",
     "~/Library/Saved Application State/net.kovidgoyal.kitty.savedState",
   ]
