@@ -14,7 +14,6 @@ cask "macfuse" do
     regex(%r{href=.*?/macfuse-(\d+(?:\.\d+)*)\.dmg}i)
   end
 
-  conflicts_with cask: "macfuse-dev"
   depends_on macos: ">= :sierra"
 
   pkg "Extras/macFUSE #{version}.pkg"
