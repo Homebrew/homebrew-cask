@@ -10,8 +10,7 @@ cask "snowflake-snowsql" do
 
   livecheck do
     url "https://docs.snowflake.com/en/release-notes/client-change-log-snowsql.html"
-    strategy :page_match
-    regex(/SnowSQL\s*(\d+(?:\.\d+)*)/i)
+    regex(/>\s*SnowSQL\s*v?(\d+(?:\.\d+)+)\s*</i)
   end
 
   pkg "snowsql-#{version}-darwin_x86_64.pkg"
