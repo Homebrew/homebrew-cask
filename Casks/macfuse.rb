@@ -22,6 +22,6 @@ cask "macfuse" do
   ]
 
   caveats do
-    reboot
+    kext
   end
 end
