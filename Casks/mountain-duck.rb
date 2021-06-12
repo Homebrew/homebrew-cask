@@ -19,6 +19,7 @@ cask "mountain-duck" do
 
   zap trash: [
     "~/Library/Application Scripts/io.mountainduck.findersync",
+    "~/Library/Caches/io.mountainduck",
     "~/Library/Containers/io.mountainduck.findersync",
     "~/Library/Group Containers/G69SCX94XU.duck",
     "~/Library/Preferences/io.mountainduck.plist",
