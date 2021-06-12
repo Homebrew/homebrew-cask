@@ -9,16 +9,15 @@ cask "popo" do
 
   livecheck do
     url "http://http.popo.netease.com:8080/api/open/jsonp/check_version?device=4"
-    strategy :page_match
-    regex(/"version"\s*:\s*"(\d+(?:\.\d+)*)"/i)
+    regex(/"version"\s*:\s*"(\d+(?:\.\d+)+)"/i)
   end
 
   app "popo_mac.app"
 
   zap trash: [
     "~/Library/Application Support/Netease/Popo",
-    "~/Library/Saved Application State/com.netease.game.popo.savedState",
-    "~/Library/Preferences/com.netease.game.popo.plist",
     "~/Library/Caches/com.netease.game.popo",
+    "~/Library/Preferences/com.netease.game.popo.plist",
+    "~/Library/Saved Application State/com.netease.game.popo.savedState",
   ]
 end
