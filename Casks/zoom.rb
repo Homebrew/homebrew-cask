@@ -35,8 +35,10 @@ cask "zoom" do
     return(raise(RuntimeError)) unless system_command("/bin/ps",
                                                       args: ["x"]).stdout.match?("zoom.us.app/Contents/MacOS/zoom.us")
 
-    ohai "The Zoom package postinstall script launches the Zoom app" if retries.equal? 3
-    ohai "Attempting to close zoom.us.app to avoid unwanted user intervention" if retries.equal? 3
+    nfo ||= 0
+    ohai "The Zoom package postinstall script launches the Zoom app" if nfo.zero?
+    ohai "Attempting to close zoom.us.app to avoid unwanted user intervention" if nfo.zero?
+    nfo += 1
     system_command "/usr/bin/pkill", args: ["-f", "/Applications/zoom.us.app"]
     rescue RuntimeError
       sleep 1
