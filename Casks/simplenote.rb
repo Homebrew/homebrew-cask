@@ -7,6 +7,11 @@ cask "simplenote" do
   desc "React client for Simplenote"
   homepage "https://github.com/Automattic/simplenote-electron"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Simplenote.app"
 
   zap trash: [
