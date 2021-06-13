@@ -31,18 +31,17 @@ cask "zoom" do
     # Description: Ensure console variant of postinstall is non-interactive.
     # This is because `open "$APP_PATH"&` is called from the postinstall
     # script of the package and we don't want any user intervention there.
-    ohai "The Zoom package postinstall script launches the Zoom app"
-    ohai "Attempting to close zoom.us.app to avoid unwanted user intervention"
-    if system_command("/bin/ps", args: ["x"]).stdout.match?("zoom.us.app/Contents/MacOS/zoom.us")
-      begin
-        retries ||= 3
-        system_command "/usr/bin/pkill", args: ["-f", "#{appdir}/zoom.us.app"]
-      rescue RuntimeError
-        sleep 1
-        retry unless (retries -= 1).zero?
-        opoo "Unable to forcibly close zoom.us.app"
-      end
-    end
+    retries ||= 3
+    return(raise(RuntimeError)) unless system_command("/bin/ps",
+                                                      args: ["x"]).stdout.match?("zoom.us.app/Contents/MacOS/zoom.us")
+
+    ohai "The Zoom package postinstall script launches the Zoom app" if retries.equal? 3
+    ohai "Attempting to close zoom.us.app to avoid unwanted user intervention" if retries.equal? 3
+    system_command "/usr/bin/pkill", args: ["-f", "/Applications/zoom.us.app"]
+    rescue RuntimeError
+      sleep 1
+      retry unless (retries -= 1).zero?
+      opoo "Unable to forcibly close zoom.us.app"
   end
 
   uninstall signal:  ["KILL", "us.zoom.xos"],
