@@ -1,6 +1,6 @@
 cask "mosaic" do
-  version "1.2.6"
-  sha256 "3b03b8329f1ff75499662a708e43536cafddd7ef51bff417f865b0f0f71e2326"
+  version "1.3"
+  sha256 "a823b84537ae639d65134958c694c4ad6f392cb600347d70be914a042251e7be"
 
   url "https://lightpillar.com/appdata/mosaic/archive/Mosaic_#{version.dots_to_underscores}.pkg"
   name "Mosaic"
@@ -9,9 +9,10 @@ cask "mosaic" do
 
   livecheck do
     url "https://lightpillar.com/appdata/mosaic/features/version-history.html"
-    strategy :page_match
-    regex(/Version\s*(\d+(?:\.\d+)*)/i)
+    regex(/>\s*Version\s*(\d+(?:\.\d+)+)\s*</i)
   end
+
+  depends_on macos: ">= :el_capitan"
 
   pkg "Mosaic_#{version.dots_to_underscores}.pkg"
 
