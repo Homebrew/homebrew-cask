@@ -8,11 +8,6 @@ cask "yippy" do
   desc "Open source clipboard manager"
   homepage "https://yippy.mattdavo.com/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   app "Yippy.app"
 
   zap trash: "~/Library/Application Support/MatthewDavidson.Yippy"
