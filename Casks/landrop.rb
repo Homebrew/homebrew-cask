@@ -1,16 +1,12 @@
 cask "landrop" do
-  version "0.3.0-beta2"
-  sha256 "af2c0329b1575b5aefe338007864217be36151fc5dbc86be62d63e2db27af69d"
+  version "0.4.0"
+  sha256 "069f7ce4d43647a8e968de77ae1dd277e984d6ded6bf7cdac5caf979a7ac7123"
 
   url "https://github.com/LANDrop/LANDrop/releases/download/v#{version}/LANDrop-#{version}-macos.dmg",
-      verified: "https://github.com/LANDrop"
+      verified: "github.com/LANDrop/LANDrop/"
   name "LANDrop"
   desc "Drop any files to any devices on your LAN"
   homepage "https://landrop.app/"
-
-  livecheck do
-    url :url
-  end
 
   app "LANDrop.app"
 
