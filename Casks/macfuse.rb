@@ -8,6 +8,12 @@ cask "macfuse" do
   desc "File system integration"
   homepage "https://osxfuse.github.io/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+    regex(%r{href=.*?/macfuse-(\d+(?:\.\d+)*)\.dmg}i)
+  end
+
   depends_on macos: ">= :sierra"
 
   pkg "Extras/macFUSE #{version}.pkg"
@@ -22,6 +28,6 @@ cask "macfuse" do
   ]
 
   caveats do
-    reboot
+    kext
   end
 end
