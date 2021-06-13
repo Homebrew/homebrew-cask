@@ -1,5 +1,5 @@
 cask "mixed-in-key" do
-  version "10.0.0.4394"
+  version "10.0.1.4422"
   sha256 :no_check
 
   url "https://builds.mixedinkey.com/download/43/release/latest?key=public"
@@ -10,6 +10,7 @@ cask "mixed-in-key" do
   livecheck do
     url :url
     strategy :header_match
+    regex(%r{/Mixed%2BIn%2BKey[._-]v?(\d+(?:\.\d+)+)}i)
   end
 
   auto_updates true
