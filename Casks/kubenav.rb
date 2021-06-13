@@ -10,6 +10,7 @@ cask "kubenav" do
     url "https://github.com/kubenav/kubenav/releases/download/#{version}/kubenav-darwin-arm64.zip",
         verified: "github.com/kubenav/kubenav/"
   end
+
   name "kubenav"
   desc "Navigator for your Kubernetes clusters right in your pocket"
   homepage "https://kubenav.io/"
