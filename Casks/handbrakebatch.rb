@@ -6,13 +6,6 @@ cask "handbrakebatch" do
   name "HandBrakeBatch"
   homepage "https://osomac.com/apps/osx/handbrake-batch/"
 
-  livecheck do
-    url "https://osomac.com/appcasts/handbrakebatch/HandBrakeBatch.xml"
-    strategy :sparkle do |item|
-      item.url[%r{/HandBrakeBatch_(\d+(?:\.\d+)*)\.zip}i, 1]
-    end
-  end
-
   app "HandBrakeBatch.app"
 
   caveats do
