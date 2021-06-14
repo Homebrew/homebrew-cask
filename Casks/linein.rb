@@ -7,11 +7,6 @@ cask "linein" do
   desc "Audio play-thru of input devices"
   homepage "https://www.rogueamoeba.com/freebies/"
 
-  livecheck do
-    url "https://rogueamoeba.com/freebies/version-linein.rss"
-    strategy :sparkle
-  end
-
   depends_on macos: "<= :mojave"
 
   app "LineIn.app"
