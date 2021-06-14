@@ -7,10 +7,6 @@ cask "eclipse-javascript" do
   desc "Eclipse IDE for JavaScript and web developers"
   homepage "https://eclipse.org/"
 
-  livecheck do
-    skip "Discontinued"
-  end
-
   # Renamed to avoid conflict with other Eclipse.
   app "Eclipse.app", target: "Eclipse JavaScript.app"
 
