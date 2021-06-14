@@ -1,4 +1,4 @@
-cask "polkadotjs" do
+cask "polkadot-js" do
   version "0.92.3"
   sha256 "9053695edd6bb29dcd36871db06487cdd8e76e964cadc192f989f9763c726b83"
 
