@@ -7,14 +7,6 @@ cask "framer-x" do
   desc "Tool that helps teams design every part of the product experience"
   homepage "https://framer.com/"
 
-  livecheck do
-    url "https://updates.framer.com/sparkle/com.framer.x"
-    strategy :page_match do |page|
-      match = page.match(%r{/(\d+)/FramerX-(\d+).zip}i)
-      "#{match[2]},#{match[1]}"
-    end
-  end
-
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
