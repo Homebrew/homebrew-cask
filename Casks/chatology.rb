@@ -7,11 +7,6 @@ cask "chatology" do
   desc "Chat manager and message search software"
   homepage "https://flexibits.com/chatology"
 
-  livecheck do
-    url "https://flexibits.com/chatology/appcast.php"
-    strategy :sparkle, &:short_version
-  end
-
   depends_on macos: ">= :el_capitan"
 
   app "Chatology.app"
