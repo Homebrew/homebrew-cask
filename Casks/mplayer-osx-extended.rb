@@ -8,12 +8,6 @@ cask "mplayer-osx-extended" do
   desc "Video player thats uses MPlayer as backend"
   homepage "https://mplayerosx.ch/"
 
-  livecheck do
-    url :url
-    strategy :git
-    regex(/^rev(\d+(?:\.\d+)*)$/i)
-  end
-
   app "MPlayer OSX Extended.app"
 
   zap trash: "~/.mplayer"
