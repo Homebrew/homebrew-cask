@@ -6,14 +6,6 @@ cask "obs-virtualcam" do
   name "OBS Virtual Camera"
   homepage "https://github.com/johnboiles/obs-mac-virtualcam"
 
-  livecheck do
-    url "https://github.com/johnboiles/obs-mac-virtualcam/releases"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/obs-mac-virtualcam-([a-f0-9]+)-v?(\d+(?:\.\d+)*)\.pkg}i)
-      "#{match[2]},#{match[1]}"
-    end
-  end
-
   depends_on macos: ">= :high_sierra"
 
   pkg "obs-mac-virtualcam-#{version.after_comma}-v#{version.before_comma}.pkg"
