@@ -5,7 +5,14 @@ cask "dcp-o-matic" do
   url "https://dcpomatic.com/dl.php?id=osx-10.9-main&version=#{version}"
   appcast "https://dcpomatic.com/download"
   name "DCP-o-matic"
+  desc "Convert video, audio and subtitles into DCP (Digital Cinema Democratized)"
   homepage "https://dcpomatic.com/"
+
+  livecheck do
+    url "https://dcpomatic.com/download"
+    strategy :page_match
+    regex(/stable\s*release:\s*(\d+(?:\.\d+)*)/i)
+  end
 
   app "DCP-o-matic #{version.major}.app"
 end
