@@ -1,6 +1,6 @@
 cask "standard-notes" do
-  version "3.8.0"
-  sha256 "28e4483561f81074819d60f2d52afc63e07756fdcd9f9f5763273189bbe4d26d"
+  version "3.8.1"
+  sha256 "b3678a7598168964cd7b1ede19174bb35de291c72dff83e89fd2bc9a61015baf"
 
   url "https://github.com/standardnotes/desktop/releases/download/v#{version}/Standard-Notes-#{version}-mac.zip",
       verified: "github.com/standardnotes/desktop/"
