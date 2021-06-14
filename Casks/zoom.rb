@@ -32,14 +32,10 @@ cask "zoom" do
     # This is because `open "$APP_PATH"&` is called from the postinstall
     # script of the package and we don't want any user intervention there.
     retries ||= 3
-    return(raise(RuntimeError)) unless system_command("/bin/ps",
-                                                      args: ["x"]).stdout.match?("zoom.us.app/Contents/MacOS/zoom.us")
+    ohai "The Zoom package postinstall script launches the Zoom app" unless retries < 3
+    ohai "Attempting to close zoom.us.app to avoid unwanted user intervention" unless retries < 3
+    return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/zoom.us.app"]
 
-    nfo ||= 0
-    ohai "The Zoom package postinstall script launches the Zoom app" if nfo.zero?
-    ohai "Attempting to close zoom.us.app to avoid unwanted user intervention" if nfo.zero?
-    nfo += 1
-    system_command "/usr/bin/pkill", args: ["-f", "/Applications/zoom.us.app"]
     rescue RuntimeError
       sleep 1
       retry unless (retries -= 1).zero?
