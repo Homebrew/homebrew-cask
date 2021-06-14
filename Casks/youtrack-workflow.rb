@@ -7,10 +7,6 @@ cask "youtrack-workflow" do
   desc "Create and edit workflows for YouTrack"
   homepage "https://www.jetbrains.com/youtrack/download/get_youtrack.html#materials=workflow-editor"
 
-  livecheck do
-    skip "Discontinued"
-  end
-
   app "youtrack-workflow.app"
 
   caveats do
