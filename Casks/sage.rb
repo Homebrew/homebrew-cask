@@ -9,7 +9,7 @@ cask "sage" do
 
   url "https://mirrors.mit.edu/sage/osx/intel/old/sage-#{version.before_comma}-OSX_#{version.after_comma}-x86_64.app.dmg",
       verified: "mirrors.mit.edu/sage/osx/intel/"
-  appcast "https://mirrors.mit.edu/sage/osx/intel/index.html"
+  appcast "https://mirrors.mit.edu/sage/osx/intel/old/index.html"
   name "Sage"
   homepage "https://www.sagemath.org/"
 
