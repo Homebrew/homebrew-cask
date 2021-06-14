@@ -5,7 +5,7 @@ cask "sparrow" do
   url "https://github.com/sparrowwallet/sparrow/releases/download/#{version}/Sparrow-#{version}.dmg",
       verified: "github.com/sparrowwallet/sparrow/"
   name "Sparrow Bitcoin Wallet"
-  desc "A modern desktop Bitcoin wallet application supporting most hardware wallets and built on common standards such as PSBT, with an emphasis on transparency and usability"
+  desc "Modern desktop Bitcoin wallet application supporting most hardware wallet"
   homepage "https://sparrowwallet.com/"
 
   depends_on macos: ">= :sierra"
