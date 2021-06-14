@@ -8,11 +8,6 @@ cask "trinity" do
   desc "Cryptocurrency wallet"
   homepage "https://trinity.iota.org/"
 
-  livecheck do
-    url :url
-    regex(/^desktop-(\d+(?:\.\d+)*)$/i)
-  end
-
   app "Trinity.app"
 
   uninstall quit: "org.iota.trinity"
