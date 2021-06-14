@@ -9,10 +9,6 @@ cask "sketchup" do
   desc "3D design software"
   homepage "https://www.sketchup.com/"
 
-  livecheck do
-    skip "discontinued"
-  end
-
   suite "SketchUp #{version.before_comma}"
 
   zap trash: [
