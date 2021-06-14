@@ -11,4 +11,6 @@ cask "sparrow" do
   depends_on macos: ">= :sierra"
 
   app "Sparrow.app"
+
+  zap trash: "~/.sparrow"
 end
