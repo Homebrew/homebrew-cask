@@ -14,4 +14,11 @@ cask "mattermost" do
   end
 
   app "Mattermost.app"
+
+  zap trash: [
+    "~/Library/Application Support/Mattermost",
+    "~/Library/Logs/Mattermost",
+    "~/Library/Preferences/Mattermost.Desktop.plist",
+    "~/Library/Saved Application State/Mattermost.Desktop.savedState",
+  ]
 end
