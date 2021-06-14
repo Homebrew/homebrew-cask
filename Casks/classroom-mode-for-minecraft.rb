@@ -9,4 +9,10 @@ cask "classroom-mode-for-minecraft" do
   homepage "https://education.minecraft.com/"
 
   app "Classroom Mode for Minecraft.app"
+
+  zap trash: [
+    "~/Library/Caches/com.microsoft.mc-classroommode",
+    "~/Library/Preferences/com.apple.classroom.plist",
+    "~/Library/WebKit/com.microsoft.mc-classroommode",
+  ]
 end
