@@ -8,10 +8,6 @@ cask "xamarin-studio" do
   desc "IDE for mobile app development"
   homepage "https://www.visualstudio.com/vs/visual-studio-mac/"
 
-  livecheck do
-    skip "Discontinued"
-  end
-
   conflicts_with cask: "xamarin"
 
   app "Xamarin Studio.app"
