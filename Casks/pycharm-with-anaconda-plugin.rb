@@ -7,10 +7,6 @@ cask "pycharm-with-anaconda-plugin" do
   desc "PyCharm IDE with Anaconda plugin"
   homepage "https://www.jetbrains.com/pycharm/promo/anaconda"
 
-  livecheck do
-    skip "Discontinued"
-  end
-
   auto_updates true
 
   app "PyCharm with Anaconda plugin .app"
