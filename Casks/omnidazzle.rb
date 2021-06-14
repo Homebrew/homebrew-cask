@@ -7,11 +7,6 @@ cask "omnidazzle" do
   desc "Set of plug-ins to highlight areas of your screen and your mouse pointer"
   homepage "https://support.omnigroup.com/omnidazzle-troubleshooting/"
 
-  livecheck do
-    url "https://update.omnigroup.com/appcast/com.omnigroup.OmniDazzle"
-    strategy :sparkle
-  end
-
   app "OmniDazzle.app"
 
   caveats do
