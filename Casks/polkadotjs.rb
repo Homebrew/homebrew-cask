@@ -9,4 +9,9 @@ cask "polkadotjs" do
   homepage "https://polkadot.js.org/"
 
   app "Polkadot-JS Apps.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.polkadotjs.polkadotjs-apps.plist",
+    "~/Library/Saved Application State/com.polkadotjs.polkadotjs-apps.savedState",
+  ]
 end
