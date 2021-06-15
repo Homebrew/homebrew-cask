@@ -4,8 +4,9 @@ cask "redis-pro" do
 
   url "https://github.com/cmushroom/redis-pro/releases/download/#{version}/redis-pro_#{version}.dmg"
   name "redis-pro"
-  desc "Redis management application"
+  desc "Redis management application with swiftui"
   homepage "https://github.com/cmushroom/redis-pro"
 
   app "redis-pro.app"
 end
+
