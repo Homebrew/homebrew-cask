@@ -5,6 +5,7 @@ cask "lyx" do
   url "https://ftp.lip6.fr/pub/lyx/bin/#{version.major_minor_patch}/LyX-#{version}+qt5-12-x86_64-cocoa.dmg",
       verified: "ftp.lip6.fr/pub/lyx/"
   name "LyX"
+  desc "Open source, GUI document processor based on the LaTeX typesetting system"
   homepage "https://www.lyx.org/"
 
   livecheck do
