@@ -4,11 +4,14 @@ cask "accurics" do
 
   url "https://downloads.accurics.com/cli/#{version}/accurics-cli.dmg",
       user_agent: :fake
-  appcast "https://downloads.accurics.com/cli/#{version}/accurics-cli.yml",
-          must_contain: version
   name "Accurics CLI"
   desc "Security and compliance for Infrastructure as Code"
   homepage "https://www.accurics.com/"
+
+  livecheck do
+    url "https://downloads.accurics.com/cli/latest/accurics-cli.yml"
+    strategy :electron_builder
+  end
 
   binary "accurics"
 
