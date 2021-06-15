@@ -13,7 +13,7 @@ cask "sourcetree" do
         verified: "atlassian.com/software/sourcetree/"
   else
     version "4.1.2,238"
-    sha256 "e307f6874f8a6ece09e7b79112df66cc86f6e561ead839a895f7096a7c017bee"
+    sha256 "a8165714418b01abff9cdde55f382d3bdb67bacbcb79c9704cedf932e34584d9"
 
     url "https://product-downloads.atlassian.com/software/sourcetree/ga/Sourcetree_#{version.before_comma}_#{version.after_comma}.zip",
         verified: "atlassian.com/software/sourcetree/"
