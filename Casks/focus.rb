@@ -4,6 +4,7 @@ cask "focus" do
 
   url "https://heyfocus.com/uploads/Focus-v#{version}.zip"
   name "Focus"
+  desc "Website and application blocker"
   homepage "https://heyfocus.com/"
 
   livecheck do
@@ -11,13 +12,15 @@ cask "focus" do
     strategy :header_match
   end
 
+  depends_on macos: ">= :yosemite"
+
   app "Focus.app"
 
   uninstall quit: "BradJasper.focus"
 
   zap trash: [
-    "~/Library/Caches/BradJasper.focus/",
     "~/Library/Application Support/Focus/",
+    "~/Library/Caches/BradJasper.focus/",
     "~/Library/Preferences/BradJasper.focus.plist",
   ]
 end
