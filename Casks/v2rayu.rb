@@ -1,6 +1,6 @@
 cask "v2rayu" do
-  version "3.0.3"
-  sha256 "959416584a53b95fd11139823ae7d0be66b0d7e444d159693dda798d18183786"
+  version "3.1.0"
+  sha256 "7c0f5fbf5c36d5d3f36135d4739af6668e78742b094bc7e3bb0a52a3055c5153"
 
   url "https://github.com/yanue/V2rayU/releases/download/#{version}/V2rayU.dmg"
   name "V2rayU"
