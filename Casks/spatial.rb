@@ -15,5 +15,5 @@ cask "spatial" do
 
   container type: :naked
 
-  binary "mac", target: "spatial"
+  binary "spatial"
 end
