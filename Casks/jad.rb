@@ -7,18 +7,18 @@ cask "jad" do
   desc "Java decompiler"
   homepage "https://varaneckas.com/jad/"
 
-  livecheck do
-    url "https://varaneckas.com/jad/"
-    strategy :page_match
-    regex(/Jad\s*(\d+(?:\.\d+)*\w?)\s*for/i)
-  end
+  depends_on macos: "<= :mojave"
 
   binary "jad"
   manpage "jad.1"
 
-  caveats <<~EOS
-    Instructions on using jad are available in
+  caveats do
+    discontinued
 
-      #{staged_path}/Readme.txt
-  EOS
+    <<~EOS
+      Instructions on using jad are available in
+
+        #{staged_path}/Readme.txt
+    EOS
+  end
 end
