@@ -8,6 +8,10 @@ cask "devkinsta" do
   desc "Local WordPress Development Suite by Kinsta"
   homepage "https://devkinsta.com/"
 
+  livecheck do
+    skip "No version information available"
+  end
+
   app "DevKinsta.app"
 
   zap trash: [
