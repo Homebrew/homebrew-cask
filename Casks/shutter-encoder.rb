@@ -1,15 +1,17 @@
 cask "shutter-encoder" do
-  version "15.0"
+  version "15.1"
 
   if Hardware::CPU.intel?
-    sha256 "35840dcf6c4fcf8f3970c6a5bc03ebfb5c26a63320686e892164832ea609d5b4"
+    sha256 "6814074ce93509dec63b6659838df6406c89968a1b728fa46818ddaeb0c3cb23"
 
     url "https://www.shutterencoder.com/Shutter%20Encoder%20#{version}%20Mac%2064bits.pkg"
+
     pkg "Shutter Encoder #{version} Mac 64bits.pkg"
   else
-    sha256 "b65c42574b846a7bef052b28b459c4e0acc1c43ddd0147732dbd177580330f34"
+    sha256 "480cff5127b978af40ea7538bb934a72f77deb58ca87efc30147d366a88850f9"
 
     url "https://www.shutterencoder.com/Shutter%20Encoder%20#{version}%20Apple%20Silicon.pkg"
+
     pkg "Shutter Encoder #{version} Apple Silicon.pkg"
   end
 
@@ -19,8 +21,9 @@ cask "shutter-encoder" do
 
   livecheck do
     url "https://www.shutterencoder.com/changelog.txt"
-    regex(/Version\s*(\d+(?:\.\d+)*)\s*-/i)
+    regex(/^\s*Version\s*(\d+(?:\.\d+)*)/i)
   end
 
-  uninstall pkgutil: "com.paulpacifico.pkg.ShutterEncoder"
+  uninstall pkgutil:   "com.paulpacifico.shutterencoder",
+            launchctl: "com.paulpacifico.shutterencoder.16820.397F3104-E5CD-486D-9FFF-5BEB0CD26EF3"
 end
