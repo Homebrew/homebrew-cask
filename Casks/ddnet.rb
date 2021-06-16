@@ -12,6 +12,14 @@ cask "ddnet" do
     strategy :github_latest
   end
 
+  auto_updates true
+
   app "DDNet.app"
   app "DDNet-Server.app"
+
+  zap trash: [
+    "~/Library/Preferences/DDNet-Server-Launcher.plist",
+    "~/Library/Saved Application State/org.DDNetClient.app.savedState",
+    # "~/Library/Application Support/Teeworlds/" is left out on purpose because teeworlds uses it as well.
+  ]
 end
