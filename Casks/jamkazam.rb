@@ -1,6 +1,6 @@
 cask "jamkazam" do
-  version "1.0.3776"
-  sha256 "5bd66618cc8bd9759d3d376c70fbf9d4feb0b71f54ba09e423c501d572d51ef8"
+  version "1.0.4048"
+  sha256 "b8d4b024b9f779de4dd8e10e929b9425a765061bc6b1d3e1bd2b8491ae4e21e8"
 
   url "https://d34f55ppvvtgi3.cloudfront.net/artifacts/JamClient/MacOSX/#{version}/JamKazam-#{version}.dmg",
       verified: "d34f55ppvvtgi3.cloudfront.net/"
@@ -9,9 +9,8 @@ cask "jamkazam" do
   homepage "https://jamkazam.com/"
 
   livecheck do
-    url "https://www.jamkazam.com/downloads"
-    strategy :page_match
-    regex(/JamKazam-(\d+(?:\.\d+)*)\.dmg/i)
+    url "https://www.jamkazam.com/api/artifacts/clients"
+    regex(/JamKazam[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "JamKazam.app"
