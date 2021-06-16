@@ -1,6 +1,6 @@
 cask "enclave" do
-  version "2021.05.12"
-  sha256 "a5af5020f28328672b89c8f782fda28909a1793e97d340816673c0d1326308ab"
+  version "2021.06.16"
+  sha256 "d676392108cd9514fbb1f7e90a0cb2dfb551c5f331a23748d1d69b0d3e924440"
 
   url "https://release.enclave.io/enclave_osx-installer-x64-stable-#{version}.pkg"
   name "Enclave"
