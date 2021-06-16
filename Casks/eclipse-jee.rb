@@ -1,6 +1,6 @@
 cask "eclipse-jee" do
-  version "4.19.0,2021-03:R"
-  sha256 "e067b92469ffd58776c863747a246d285532667918f7974b2baf4b39f790f61e"
+  version "4.20.0,2021-06:R"
+  sha256 "befc851d3a9b209df847c2bdeef698e511212ce13acd237389729e56b1ad8c92"
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.after_comma.before_colon}/#{version.after_colon}/eclipse-jee-#{version.after_comma.before_colon}-#{version.after_colon}-macosx-cocoa-x86_64.dmg&r=1"
   name "Eclipse IDE for Java EE Developers"
