@@ -3,13 +3,14 @@ cask "devkinsta" do
   sha256 :no_check
 
   url "https://devkinsta-updates.s3.amazonaws.com/DevKinsta.dmg",
-      verified: "devkinsta-updates.s3.amazonaws.com"
+      verified: "devkinsta-updates.s3.amazonaws.com/"
   name "DevKinsta"
   desc "Local WordPress Development Suite by Kinsta"
   homepage "https://devkinsta.com/"
 
   livecheck do
-    skip "No version information available"
+    url :url
+    strategy :extract_plist
   end
 
   app "DevKinsta.app"
