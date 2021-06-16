@@ -9,9 +9,8 @@ cask "microsoft-remote-desktop" do
   homepage "https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-mac"
 
   livecheck do
-    url "https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/mac-whatsnew"
-    strategy :page_match
-    regex(/Updates\s*for\s*version\s*(\d+(?:\.\d+)*)/i)
+    url "https://go.microsoft.com/fwlink/?linkid=868963"
+    strategy :header_match
   end
 
   auto_updates true
