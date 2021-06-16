@@ -1,6 +1,6 @@
 cask "eclipse-cpp" do
-  version "4.19.0,2021-03:R"
-  sha256 "4eb035478fb52c1ae3ae26322dc9ec0967a18155283fb44afebee5f12189893a"
+  version "4.20.0,2021-06:R"
+  sha256 "c49e39d6c9e4fd0c4bedc3383749ca104c16ae39604df3d29f76c044ad1faab2"
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.after_comma.before_colon}/#{version.after_colon}/eclipse-cpp-#{version.after_comma.before_colon}-#{version.after_colon}-macosx-cocoa-x86_64.dmg&r=1"
   name "Eclipse IDE for C/C++ Developers"
