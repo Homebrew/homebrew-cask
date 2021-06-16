@@ -4,9 +4,16 @@ cask "apache-couchdb" do
 
   url "https://couchdbneighbourhoodie.fra1.digitaloceanspaces.com/downloads/#{version}/mac/Apache-CouchDB.zip",
       verified: "couchdbneighbourhoodie.fra1.digitaloceanspaces.com/"
-  appcast "https://docs.couchdb.org/en/stable/whatsnew/index.html"
   name "Apache CouchDB"
+  desc "Multi-master syncing database"
   homepage "https://couchdb.apache.org/"
+
+  livecheck do
+    url "https://neighbourhood.ie/download-apache-couchdb-mac/"
+    regex(%r{href=.*?/(\d+(?:\.\d+)+)/mac/Apache[._-]?CouchDB\.zip}i)
+  end
+
+  depends_on macos: ">= :yosemite"
 
   app "Apache CouchDB.app"
 
