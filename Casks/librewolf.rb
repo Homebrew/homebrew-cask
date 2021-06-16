@@ -12,7 +12,7 @@ cask "librewolf" do
   end
 
   name "LibreWolf"
-  desc "Fork of Firefox, focused on privacy, security and freedom"
+  desc "Web browser"
   homepage "https://librewolf-community.gitlab.io/"
 
   app "LibreWolf.app"
