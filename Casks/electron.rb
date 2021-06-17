@@ -1,12 +1,12 @@
 cask "electron" do
-  version "13.1.1"
+  version "13.1.2"
 
   if Hardware::CPU.intel?
-    sha256 "1594ba9aa2e2aa059a03e6b70e16b8116de1998b38f8360801e113fa8d72938c"
+    sha256 "b8c5eca90864ce4a91e1fdb8a932598fad31922407b502eeb868a508fd26347f"
     url "https://github.com/electron/electron/releases/download/v#{version}/electron-v#{version}-darwin-x64.zip",
         verified: "github.com/electron/electron/"
   else
-    sha256 "7045538917c36214127b7f11a3223396c7199ac19e989e5648a0963773962e6c"
+    sha256 "dde2b3fd2ac52097481ff5bfd54c358432f7f2402b0b20ae32681ae6e5a4d451"
     url "https://github.com/electron/electron/releases/download/v#{version}/electron-v#{version}-darwin-arm64.zip",
         verified: "github.com/electron/electron/"
   end
