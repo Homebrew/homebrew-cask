@@ -21,14 +21,14 @@ cask "bbedit" do
   end
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :mojave"
 
   app "BBEdit.app"
 
   zap trash: [
     "~/Library/Application Support/BBEdit",
-    "~/Library/Preferences/com.barebones.bbedit.plist",
     "~/Library/BBEdit",
     "~/Library/Caches/com.barebones.bbedit",
+    "~/Library/Preferences/com.barebones.bbedit.plist",
   ]
 end
