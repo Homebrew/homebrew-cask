@@ -1,12 +1,12 @@
 cask "ultrastardeluxe" do
-  version "1.1"
-  sha256 "18e36476ec6994b1dd54e6272c08ceb86b10abf4984a18d834003e696153ca9b"
+  version "2020.4.0"
+  sha256 "21c46ed7cc77fd4678b395fc9cc346c572cc5798df8479392968cb684ca2b5d9"
 
-  url "https://downloads.sourceforge.net/ultrastardx/UltraStarDeluxe-#{version}.dmg",
-      verified: "downloads.sourceforge.net/ultrastardx/"
-  appcast "https://sourceforge.net/projects/ultrastardx/rss"
+  url "https://github.com/UltraStar-Deluxe/USDX/releases/download/v#{version}/UltraStar.Deluxe-v#{version}.stable_macOS.dmg",
+      verified: "github.com/UltraStar-Deluxe/USDX/"
   name "UltraStar Deluxe"
-  homepage "https://ultrastardx.sourceforge.io/"
+  desc "Karaoke game"
+  homepage "https://usdx.eu/"
 
   app "UltraStarDeluxe.app"
 end
