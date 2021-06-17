@@ -1,10 +1,11 @@
 cask "eclipse-installer" do
-  version "4.19.0,2021-03:R"
-  sha256 "7c7aec2b57c4b498fc1827391d9cf740b91d05089da2f3e28dc298b86b2d6369"
+  version "4.20.0,2021-06:R"
+  sha256 "5c2b0f5e69b8333b3f23c316133c6ba0f7c6826192a207e25033f89c61678995"
 
   url "https://eclipse.org/downloads/download.php?file=/oomph/epp/#{version.after_comma.before_colon}/#{version.after_colon}/eclipse-inst-mac64.tar.gz&r=1"
   name "Eclipse Installer"
   name "Eclipse IDE installer"
+  desc "Install and update your Eclipse Development Environment"
   homepage "https://eclipse.org/"
 
   livecheck do
