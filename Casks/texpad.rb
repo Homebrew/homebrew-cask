@@ -9,8 +9,8 @@ cask "texpad" do
     version "1.8.15,529:346c842"
     sha256 "480bf4a3e8fd809c1eb07cb00099ed0d362996738a872efb42cb179488e8c1e1"
   else
-    version "1.9.0,615:42d72c6"
-    sha256 "52fd8cc9d065c931ca5eac126adc01b365d22b273bb68e9ede659cd27c9c7abb"
+    version "1.9.1,619:55b8d03"
+    sha256 "3ab2cdd990cfa8169c7b66126045c818f53c43181df67caee804b3639f54257f"
   end
 
   url "https://download.texpadapp.com/apps/osx/updates/Texpad_#{version.before_comma.dots_to_underscores}__#{version.after_comma.before_colon}__#{version.after_colon}.dmg",
