@@ -7,9 +7,12 @@ cask "porting-kit" do
   desc "Install games and apps compiled for Microsoft Windows"
   homepage "https://portingkit.com/"
 
+  # We don't use the `ElectronBuilder` strategy because the YAML has
+  # an unquoted `releaseDate` which is parsed as a scalar timestamp.
+  # This currently errors as Time is not specified as a permitted class.
   livecheck do
     url "https://portingkit.com/pub/portingkit/latest-mac.yml"
-    strategy :electron_builder
+    regex(/Porting(?:%20|\s*)Kit[._-]v?(\d+(?:\.\d+)+)[._-]mac\.zip/i)
   end
 
   auto_updates true
