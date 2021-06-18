@@ -4,9 +4,14 @@ cask "zoho-mail" do
 
   url "https://downloads.zohocdn.com/zmail-desktop/mac/zoho-mail-desktop-installer-v#{version}.dmg",
       verified: "downloads.zohocdn.com/zmail-desktop/mac/"
-  appcast "https://downloads.zohocdn.com/zmail-desktop/artifacts.json"
   name "Zoho Mail"
+  desc "Email client"
   homepage "https://www.zoho.com/mail/desktop/"
+
+  livecheck do
+    url "https://downloads.zohocdn.com/zmail-desktop/artifacts.json"
+    regex(/zoho[._-]mail[._-]desktop[._-]installer[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+  end
 
   app "Zoho Mail - Desktop.app"
 end
