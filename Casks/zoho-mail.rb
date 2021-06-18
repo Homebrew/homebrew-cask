@@ -1,6 +1,6 @@
 cask "zoho-mail" do
-  version "1.2.0"
-  sha256 "682fc7c2f7e4750717066e0681d9b5168fe11a61c279a4534aaa49b7fe073d60"
+  version "1.3.0"
+  sha256 "8008bc94e2bf5c26c3f7d7c62308509275a7c64f3fc9b264786c8dcc0dbabab0"
 
   url "https://downloads.zohocdn.com/zmail-desktop/mac/zoho-mail-desktop-installer-v#{version}.dmg",
       verified: "downloads.zohocdn.com/zmail-desktop/mac/"
