@@ -8,6 +8,11 @@ cask "rocket-chat" do
   desc "Official desktop client for Rocket.Chat"
   homepage "https://rocket.chat/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
 
   app "Rocket.Chat.app"
