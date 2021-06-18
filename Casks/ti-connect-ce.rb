@@ -1,11 +1,20 @@
 cask "ti-connect-ce" do
-  version "5.6.3.2278,9A6A30E6D3004AA1A208CE7816433439"
-  sha256 "c85632f0bfbdedc2127d018cd770fb647acfd58c89641a14d96e5adb6c8e7960"
+  version "5.6.3.2278,BC4AE19C4CDF4270B388F7645D4A50ED"
+  sha256 "066f86e1a62fe6444a5bd998afe6f95c93f34deadf35d325320ac65d47438488"
 
   url "https://education.ti.com/download/en/ed-tech/68CEDD34FDC94622B4DBD173E6A0D8C3/#{version.after_comma}/TIConnectCE-#{version.before_comma}.dmg"
-  appcast "https://education.ti.com/en/software/details/en/68CEDD34FDC94622B4DBD173E6A0D8C3/swticonnectcesoftwareformacintosh"
   name "TI Connect™ CE"
+  desc "Connectivity software for the TI-84 Plus family of graphing calculators"
   homepage "https://education.ti.com/en/products/computer-software/ti-connect-ce-sw"
+
+  livecheck do
+    url "https://education.ti.com/en/software/details/en/68CEDD34FDC94622B4DBD173E6A0D8C3/swticonnectcesoftwareformacintosh"
+    strategy :page_match do |page|
+      page.scan(%r{href=.*?/(\h+)/TIConnectCE[._-]v?(\d+(?:\.\d+)+)\.dmg}i).map do |match|
+        "#{match[1]},#{match[0]}"
+      end
+    end
+  end
 
   app "TI Connect CE.app"
 
