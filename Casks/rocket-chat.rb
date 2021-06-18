@@ -1,24 +1,29 @@
-cask 'rocket-chat' do
-  version '2.15.5'
-  sha256 '245ef7f4756f430eb94cb7c29928336fd273a9fb43a21234a914512bc47dd20d'
+cask "rocket-chat" do
+  version "3.2.2"
+  sha256 "cdbf16355b4df92e75e7ba900c21127ee5e845e1b836143b4dfcf7f2b286e60b"
 
-  # github.com/RocketChat/Rocket.Chat.Electron was verified as official when first introduced to the cask
-  url "https://github.com/RocketChat/Rocket.Chat.Electron/releases/download/#{version}/rocketchat-#{version}.dmg"
-  appcast 'https://github.com/RocketChat/Rocket.Chat.Electron/releases.atom'
-  name 'Rocket.Chat'
-  homepage 'https://rocket.chat/'
+  url "https://github.com/RocketChat/Rocket.Chat.Electron/releases/download/#{version}/rocketchat-#{version}.dmg",
+      verified: "github.com/RocketChat/Rocket.Chat.Electron/"
+  name "Rocket.Chat"
+  desc "Official desktop client for Rocket.Chat"
+  homepage "https://rocket.chat/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
 
-  app 'Rocket.Chat.app'
+  app "Rocket.Chat.app"
 
   zap trash: [
-               '~/Library/Application Support/Rocket.Chat',
-               '~/Library/Caches/chat.rocket',
-               '~/Library/Caches/chat.rocket.ShipIt',
-               '~/Library/Caches/chat.rocket.electron.helper',
-               '~/Library/Preferences/chat.rocket.plist',
-               '~/Library/Preferences/chat.rocket.electron.helper.plist',
-               '~/Library/Saved Application State/chat.rocket.savedState',
-             ]
+    "~/Library/Application Support/Rocket.Chat",
+    "~/Library/Caches/chat.rocket",
+    "~/Library/Caches/chat.rocket.ShipIt",
+    "~/Library/Caches/chat.rocket.electron.helper",
+    "~/Library/Preferences/chat.rocket.plist",
+    "~/Library/Preferences/chat.rocket.electron.helper.plist",
+    "~/Library/Saved Application State/chat.rocket.savedState",
+  ]
 end

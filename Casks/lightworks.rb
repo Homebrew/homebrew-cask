@@ -1,14 +1,21 @@
-cask 'lightworks' do
-  version '14.5.0'
-  sha256 '8b7d5890f7c0f2ede05d4de16a7a09e5bfc5b322690e70cbd2e481e3638e738c'
+cask "lightworks" do
+  version "2021.2.1,128456"
+  sha256 "cb772b20bbbdc1234c2d1bcfc499dff61b19f5c7169099c1bb8f0834b19c353b"
 
-  url "https://downloads.lwks.com/v#{version.major_minor.dots_to_hyphens}-new/lightworks_v#{version}.dmg"
-  appcast 'https://www.lwks.com/index.php?option=com_lwks&view=download&Itemid=206&tab=2',
-          configuration: version.major_minor
-  name 'Lightworks'
-  homepage 'https://www.lwks.com/'
+  url "https://cdn.lwks.com/releases/#{version.before_comma}/lightworks_#{version.before_comma.major_minor}_r#{version.after_comma}.dmg"
+  name "Lightworks"
+  desc "Complete video creation package"
+  homepage "https://www.lwks.com/"
 
-  app 'Lightworks.app'
+  livecheck do
+    url "https://www.lwks.com/index.php?option=com_docman&task=doc_download&gid=210"
+    strategy :header_match do |headers|
+      match = headers["location"].match(%r{/(\d+(?:\.\d+)*)/lightworks_\d+(?:\.\d+)*_r(\d+)\.dmg}i)
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
-  zap trash: '~/Library/Saved Application State/com.editshare.lightworks.savedState'
+  app "Lightworks.app"
+
+  zap trash: "~/Library/Saved Application State/com.editshare.lightworks.savedState"
 end

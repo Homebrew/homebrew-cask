@@ -1,15 +1,21 @@
-cask 'pdf-expert' do
-  version '2.4.29,641'
-  sha256 'e61de5665f471a8ad8a5a0b9e9775573c358e17e765cffcdc354358ad290a536'
+cask "pdf-expert" do
+  version "2.5.17,737"
+  sha256 "b2bde16ea50a04045461b56ddf03e741951fac0504920982b8c6fab06bbb0e31"
 
-  # d1ke680phyeohy.cloudfront.net was verified as official when first introduced to the cask
-  url "https://d1ke680phyeohy.cloudfront.net/versions/#{version.after_comma}/PDFExpert.dmg"
-  appcast 'https://d1ke680phyeohy.cloudfront.net/release/appcast.xml'
-  name 'PDF Expert'
-  homepage 'https://pdfexpert.com/'
+  url "https://d1ke680phyeohy.cloudfront.net/versions/#{version.after_comma}/PDFExpert.dmg",
+      verified: "d1ke680phyeohy.cloudfront.net/versions/"
+  name "PDF Expert"
+  desc "PDF reader, editor and annotator"
+  homepage "https://pdfexpert.com/"
+
+  livecheck do
+    url "https://d1ke680phyeohy.cloudfront.net/release/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
-  depends_on macos: '>= :sierra'
+  conflicts_with cask: "homebrew/cask-versions/pdf-expert-beta"
+  depends_on macos: ">= :high_sierra"
 
-  app 'PDF Expert.app'
+  app "PDF Expert.app"
 end

@@ -1,12 +1,17 @@
-cask 'arrsync' do
-  version '0.4.1'
-  sha256 '8a254771065f90a9f9f882589eccaf7bc51ad5d0ac86faf15847381bcdbe64f0'
+cask "arrsync" do
+  version "0.4.1"
+  sha256 "8a254771065f90a9f9f882589eccaf7bc51ad5d0ac86faf15847381bcdbe64f0"
 
-  # downloads.sourceforge.net/arrsync was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/arrsync/arrsync-#{version}.dmg"
-  appcast 'https://sourceforge.net/projects/arrsync/rss'
-  name 'arRsync'
-  homepage 'https://arrsync.sourceforge.io/'
+  name "arRsync"
+  desc "Graphical front end for the utility rsync"
+  homepage "http://arrsync.sourceforge.net/"
 
-  app 'arRsync.app'
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(/arrsync-(\d+(?:\.\d+)*)\.dmg/i)
+  end
+
+  app "arRsync.app"
 end

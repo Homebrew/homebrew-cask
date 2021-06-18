@@ -1,18 +1,18 @@
-cask 'barrier' do
-  version '2.3.1'
-  sha256 'e8238c109293c8a33fed8604725bd5c0275c24adbc223d1f4c01663cd2d9b45f'
+cask "barrier" do
+  version "2.3.3"
+  sha256 "fc6a002d796453eba7a77b9df107af0f972b6e807268e880c88950bde819a40d"
 
   url "https://github.com/debauchee/barrier/releases/download/v#{version}/Barrier-#{version}-Release.dmg"
-  appcast 'https://github.com/debauchee/barrier/releases.atom'
-  name 'Barrier'
-  homepage 'https://github.com/debauchee/barrier/'
+  name "Barrier"
+  desc "Open-source KVM software"
+  homepage "https://github.com/debauchee/barrier/"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'Barrier.app'
+  app "Barrier.app"
 
   zap trash: [
-               '~/Library/Application Support/barrier',
-               '~/Library/Saved Application State/barrier.savedState',
-             ]
+    "~/Library/Application Support/barrier",
+    "~/Library/Saved Application State/barrier.savedState",
+  ]
 end

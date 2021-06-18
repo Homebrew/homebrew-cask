@@ -1,17 +1,27 @@
-cask 'rocket' do
-  version '1.5.1,59:1565911546'
-  sha256 '964f74383f045c4fba107a9bdf43bdc880c1c1a6f2321c8cf85534baf0f54811'
+cask "rocket" do
+  version "1.8.2,79"
+  sha256 "9ffc8acbf0bcc5075556d16574cac8f0c8f383b10cd047bbdf58a923b19fdc74"
 
-  # dl.devmate.com/net.matthewpalmer.Rocket was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/net.matthewpalmer.Rocket/#{version.after_comma.before_colon}/#{version.after_colon}/Rocket-#{version.after_comma.before_colon}.zip"
-  appcast 'https://updates.devmate.com/net.matthewpalmer.Rocket.xml'
-  name 'Rocket'
-  homepage 'https://matthewpalmer.net/rocket/'
+  url "https://macrelease.matthewpalmer.net/distribution/appcasts/Rocket-#{version.after_comma}.dmg"
+  name "Rocket"
+  desc "Emoji picker optimized for blind people"
+  homepage "https://matthewpalmer.net/rocket/"
 
-  app 'Rocket.app'
+  livecheck do
+    url "https://macrelease.matthewpalmer.net/distribution/appcasts/rocket.xml"
+    strategy :sparkle
+  end
+
+  auto_updates true
+
+  app "Rocket.app"
+
+  uninstall quit: "net.matthewpalmer.Rocket"
 
   zap trash: [
-               '~/Library/Application Support/Rocket',
-               '~/Library/Preferences/net.matthewpalmer.Rocket.plist',
-             ]
+    "/Users/Shared/Rocket",
+    "~/Library/Application Support/Rocket",
+    "~/Library/Caches/net.matthewpalmer.Rocket",
+    "~/Library/Preferences/net.matthewpalmer.Rocket.plist",
+  ]
 end

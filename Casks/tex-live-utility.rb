@@ -1,18 +1,23 @@
-cask 'tex-live-utility' do
-  version '1.35'
-  sha256 'e4ea26ad57bc66c0d7febd0e4755003e7537c11602dee4e6d4c4fb785140f2ac'
+cask "tex-live-utility" do
+  version "1.49"
+  sha256 "5a5256f3e43203f59f3d55120b9faa4080ce7bed19a14bdf76e065f72d692907"
 
-  url "https://github.com/amaxwell/tlutility/releases/download/#{version}/TeX.Live.Utility.app-#{version}.tar.gz"
-  appcast 'https://github.com/amaxwell/tlutility/releases.atom'
-  name 'TeX Live Utility'
-  homepage 'https://github.com/amaxwell/tlutility'
+  url "https://github.com/amaxwell/tlutility/releases/download/#{version}/TeX.Live.Utility.app-#{version}.zip"
+  name "TeX Live Utility"
+  desc "Graphical user interface for TeX Live Manager"
+  homepage "https://github.com/amaxwell/tlutility"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
 
-  app 'TeX Live Utility.app'
+  app "TeX Live Utility.app"
 
   zap trash: [
-               '~/Library/Application Support/TeX Live Utility',
-               '~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/TeX Live Utility Help*',
-             ]
+    "~/Library/Application Support/TeX Live Utility",
+    "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/TeX Live Utility Help*",
+  ]
 end

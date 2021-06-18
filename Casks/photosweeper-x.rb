@@ -1,15 +1,20 @@
-cask 'photosweeper-x' do
-  version '3.4.3'
-  sha256 '331acd6799fbd81ddcfba762a6826d87ad50e625d6b539f12c5948e790dd38a0'
+cask "photosweeper-x" do
+  version "4.0.1,4010"
+  sha256 :no_check
 
-  url 'https://overmacs.com/photosweeper/downloads/PhotoSweeperTrial.dmg'
-  appcast 'https://overmacs.com/photosweeper/updates/photosweeper_update.xml'
-  name 'PhotoSweeper X'
-  homepage 'https://overmacs.com/'
+  url "https://overmacs.com/downloads/PhotoSweeper_X.dmg"
+  name "PhotoSweeper X"
+  desc "Tool to eliminate similar or duplicate photos"
+  homepage "https://overmacs.com/"
 
-  depends_on macos: '>= :sierra'
+  livecheck do
+    url "https://overmacs.com/feeds/photosweeper_update.xml"
+    strategy :sparkle
+  end
 
-  app 'PhotoSweeper X.app'
+  depends_on macos: ">= :sierra"
 
-  zap trash: '~/Library/Preferences/com.overmacs.photosweeperpaddle.plist'
+  app "PhotoSweeper X.app"
+
+  zap trash: "~/Library/Preferences/com.overmacs.photosweeperpaddle.plist"
 end

@@ -1,21 +1,35 @@
-cask 'launchcontrol' do
-  version '1.48'
-  sha256 '170ec769c28a305653376fcfe26c9e97b6e2e7e65b3a6f34aaa3eaaed3371d3b'
+cask "launchcontrol" do
+  version "1.52.2,1502"
+  sha256 "dfb67d9c2be9329c3bd8710640f9599807f321c57360dfe18e0a017c910087a5"
 
-  url "https://www.soma-zone.com/download/files/LaunchControl-#{version}.tar.bz2"
-  appcast 'https://www.soma-zone.com/LaunchControl/a/appcast.xml'
-  name 'LaunchControl'
-  homepage 'https://www.soma-zone.com/LaunchControl/'
+  url "https://www.soma-zone.com/download/files/LaunchControl-#{version.before_comma}.tar.bz2"
+  name "LaunchControl"
+  desc "Create, manage and debug system- and user services"
+  homepage "https://www.soma-zone.com/LaunchControl/"
+
+  livecheck do
+    url "https://www.soma-zone.com/LaunchControl/a/appcast_update.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 
-  app 'LaunchControl.app'
+  app "LaunchControl.app"
 
-  uninstall delete:    '/Library/PrivilegedHelperTools/com.soma-zone.LaunchControl.Helper',
-            launchctl: 'com.soma-zone.LaunchControl.Helper'
+  uninstall delete:    "/Library/PrivilegedHelperTools/com.soma-zone.LaunchControl.Helper",
+            launchctl: "com.soma-zone.LaunchControl.Helper",
+            quit:      [
+              "com.soma-zone.JobWatch",
+              "com.soma-zone.LaunchControl",
+              "com.soma-zone.LicenseWindow",
+              "com.soma-zone.QuickLaunch",
+            ]
 
   zap trash: [
-               '~/Library/Caches/com.apple.helpd/Generated/com.soma-zone.LaunchControl.help*',
-               '~/Library/Preferences/com.soma-zone.LaunchControl.plist',
-             ]
+    "~/Library/Application Support/LaunchControl",
+    "~/Library/Caches/com.apple.helpd/Generated/com.soma-zone.LaunchControl.help*",
+    "~/Library/Caches/com.apple.helpd/Generated/LaunchControl Help*",
+    "~/Library/Caches/com.soma-zone.LaunchControl",
+    "~/Library/Preferences/com.soma-zone.LaunchControl.plist",
+  ]
 end

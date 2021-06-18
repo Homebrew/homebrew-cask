@@ -1,15 +1,16 @@
-cask 'minecraftpe' do
-  version '1.12.0'
-  sha256 '6d3ae4aa8ccae09bb3323515341da1082b11477e0b2682c776f786b7cd0ed1a0'
+cask "minecraftpe" do
+  version "1.14.50.0"
+  sha256 "5e17565b6bb989c2deb90c90e3225e80f521aa1bb1923cf7574ee1e0ef1cac1f"
 
-  # meedownloads.azureedge.net was verified as official when first introduced to the cask
-  url 'https://meedownloads.azureedge.net/retailbuilds/MacOS/MinecraftEducationEdition.dmg'
-  appcast 'https://minecrafteducation.zendesk.com/hc/en-us/articles/360001447967-What-s-New-in-Minecraft-Education-Edition',
-          configuration: version.chomp('.0')
-  name 'Minecraft Education Edition'
-  homepage 'https://education.minecraft.net/'
+  url "https://meedownloads.azureedge.net/retailbuilds/MacOS/Minecraft_Education_Edition_#{version.dots_to_hyphens}.dmg",
+      verified: "meedownloads.azureedge.net/"
+  appcast "https://educommunity.minecraft.net/hc/en-us/categories/360003907132",
+          must_contain: version.chomp(".0")
+  name "Minecraft Education Edition"
+  desc "Educational version of Minecraft"
+  homepage "https://education.minecraft.net/"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'minecraftpe.app'
+  app "minecraftpe.app"
 end

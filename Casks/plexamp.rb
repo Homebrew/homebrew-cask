@@ -1,11 +1,17 @@
-cask 'plexamp' do
-  version '1.1.0'
-  sha256 'f48bf6ee4a7353ed457501ce0d3cdfb4e736c1ea9b223011b6ba8d32f5f6daab'
+cask "plexamp" do
+  version "3.4.7"
+  sha256 "d2384a493a08f07fe8fe7f185cda5080a54a9b9dc9c50c639e3a01974a13fb7a"
 
-  url "https://plexamp.plex.tv/plexamp.plex.tv/Plexamp-#{version}.dmg"
-  appcast 'https://www.plex.tv/plex-labs/#modal-plexamp-downloads'
-  name 'Plexamp'
-  homepage 'https://www.plex.tv/plex-labs/#plexamp'
+  url "https://plexamp.plex.tv/plexamp.plex.tv/desktop/Plexamp-#{version}.dmg",
+      verified: "plexamp.plex.tv/"
+  name "Plexamp"
+  desc "Music player focusing on visuals"
+  homepage "https://plexamp.com/"
 
-  app 'Plexamp.app'
+  livecheck do
+    url "https://plexamp.plex.tv/plexamp.plex.tv/desktop/latest-mac.yml"
+    strategy :electron_builder
+  end
+
+  app "Plexamp.app"
 end

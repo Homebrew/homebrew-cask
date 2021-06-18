@@ -1,11 +1,17 @@
-cask 'staruml' do
-  version '3.1.0'
-  sha256 '164950e05f0dace320c1590368f8b66bfe02235f3d96743d52c991b07c891390'
+cask "staruml" do
+  version "4.0.1"
+  sha256 "a493e4af8c1d8abfdc15d27aa0ee4daeeb4aad9305ef84527169e80179eadc4c"
 
-  url "http://staruml.io/download/releases/StarUML-#{version}.dmg"
-  appcast 'http://staruml.io/'
-  name 'StarUML'
-  homepage 'http://staruml.io/'
+  url "https://staruml.io/download/releases-v#{version.major}/StarUML-#{version}.dmg"
+  name "StarUML"
+  desc "Software modeler"
+  homepage "https://staruml.io/"
 
-  app 'StarUML.app'
+  livecheck do
+    url "https://staruml.io/"
+    strategy :page_match
+    regex(%r{href=.*?/StarUML-(\d+(?:\.\d+)*)\.dmg}i)
+  end
+
+  app "StarUML.app"
 end

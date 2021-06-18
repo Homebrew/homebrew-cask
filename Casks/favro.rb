@@ -1,11 +1,16 @@
-cask 'favro' do
-  version '1.0.34'
-  sha256 'ed4cba5eea735cf113fb82b97a7068faaee7ba05c3f77f33b93e9e994c47bff0'
+cask "favro" do
+  version "1.0.59"
+  sha256 "676d53cf53c1310addd268b4d80b143b533eec937043e03ab672e5ce0eb7d50e"
 
   url "https://download.favro.com/FavroDesktop/macOS/x64/Favro-#{version}.dmg"
-  appcast 'https://download.favro.com/FavroDesktop/macOS/x64/Latest.json'
-  name 'Favro'
-  homepage 'https://www.favro.com/'
+  name "Favro"
+  desc "Collaborative planning app"
+  homepage "https://www.favro.com/"
 
-  app 'Favro.app'
+  livecheck do
+    url "https://download.favro.com/FavroDesktop/macOS/x64/Latest.json"
+    regex(/Favro[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+  end
+
+  app "Favro.app"
 end

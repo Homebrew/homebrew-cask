@@ -1,11 +1,16 @@
-cask 'midikeys' do
-  version '1.8'
-  sha256 '673a11c0317ec8930940cc18bf8eef3de0d3040845c635722e99907f866a9b80'
+cask "midikeys" do
+  version "1.9.1"
+  sha256 "c99bc47b141250b16672303a2530c99109bab9a6b52edfb5929433ece3c7cdf8"
 
-  url "http://www.manyetas.com/creed/MidiKeys_#{version}.zip"
-  appcast 'https://immosw.com/versions/midikeys/appcast.xml'
-  name 'MidiKeys'
-  homepage 'http://www.manyetas.com/creed/midikeys.html'
+  url "https://github.com/flit/MidiKeys/releases/download/v#{version}/MidiKeys_#{version}.zip",
+      verified: "github.com/flit/MidiKeys/"
+  name "MidiKeys"
+  homepage "https://www.manyetas.com/creed/midikeys.html"
 
-  app 'MidiKeys/MidiKeys.app'
+  livecheck do
+    url "https://immosw.com/versions/midikeys/appcast.xml"
+    strategy :sparkle
+  end
+
+  app "MidiKeys.app"
 end

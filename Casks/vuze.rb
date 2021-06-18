@@ -1,22 +1,19 @@
-cask 'vuze' do
+cask "vuze" do
   version :latest
   sha256 :no_check
 
-  url 'https://cf1.vuze.com/files/J7/VuzeBittorrentClientInstaller.dmg'
-  name 'Vuze'
-  homepage 'https://www.vuze.com/'
+  url "https://cf1.vuze.com/files/J7/VuzeBittorrentClientInstaller.dmg"
+  name "Vuze"
+  desc "Bit torrent client"
+  homepage "https://www.vuze.com/"
 
   installer script: {
-                      executable: 'Vuze Installer.app/Contents/MacOS/JavaApplicationStub',
-                      args:       ['-q'],
-                      sudo:       true,
-                    }
+    executable: "Vuze Installer.app/Contents/MacOS/JavaApplicationStub",
+    args:       ["-q"],
+    sudo:       true,
+  }
 
-  uninstall delete: '/Applications/Vuze.app'
+  uninstall delete: "/Applications/Vuze.app"
 
-  zap trash: '~/Library/Application Support/Vuze'
-
-  caveats do
-    depends_on_java
-  end
+  zap trash: "~/Library/Application Support/Vuze"
 end

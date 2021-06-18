@@ -1,20 +1,27 @@
-cask 'wire' do
-  version '3.10.3133'
-  sha256 'a98fba19c4ae390da74829da77a32fad2ceed9cfe40c16d5b838323fa84b0f35'
+cask "wire" do
+  version "3.25.4095"
+  sha256 "b20cd46e219ebb29ab6e2387ed8acc40ac899f3bf94a5ebce6f4f0a1fbaaeb05"
 
-  # github.com/wireapp/wire-desktop was verified as official when first introduced to the cask
-  url "https://github.com/wireapp/wire-desktop/releases/download/macos%2F#{version}/Wire.pkg"
-  appcast 'https://github.com/wireapp/wire-desktop/releases.atom'
-  name 'Wire'
-  homepage 'https://wire.com/'
+  url "https://github.com/wireapp/wire-desktop/releases/download/macos%2F#{version}/Wire.pkg",
+      verified: "github.com/wireapp/wire-desktop/"
+  name "Wire"
+  desc "Collaboration platform focusing on security"
+  homepage "https://wire.com/"
 
-  pkg 'Wire.pkg'
+  # We need to check all releases since not all releases are for macOS.
+  livecheck do
+    url "https://github.com/wireapp/wire-desktop/releases"
+    strategy :page_match
+    regex(%r{href=.*?/macos%2F(\d+(?:\.\d+)*)/Wire\.pkg}i)
+  end
 
-  uninstall pkgutil: 'com.wearezeta.zclient.mac',
+  pkg "Wire.pkg"
+
+  uninstall pkgutil: "com.wearezeta.zclient.mac",
             signal:  [
-                       ['TERM', 'com.wearezeta.zclient.mac.helper'],
-                       ['TERM', 'com.wearezeta.zclient.mac'],
-                     ]
+              ["TERM", "com.wearezeta.zclient.mac.helper"],
+              ["TERM", "com.wearezeta.zclient.mac"],
+            ]
 
-  zap trash: '~/Library/Containers/com.wearezeta.zclient.mac'
+  zap trash: "~/Library/Containers/com.wearezeta.zclient.mac"
 end

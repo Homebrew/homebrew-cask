@@ -1,25 +1,39 @@
-cask 'wavebox' do
-  version '4.11.3'
-  sha256 '3b2399bd89bff926fcce30aca27cf932a9f2d328d928242f3e6a837bf25c8ceb'
+cask "wavebox" do
+  version "10.0.542.2"
 
-  # github.com/wavebox/waveboxapp was verified as official when first introduced to the cask
-  url "https://github.com/wavebox/waveboxapp/releases/download/v#{version}/Wavebox_#{version.dots_to_underscores}_osx.dmg"
-  appcast 'https://github.com/wavebox/waveboxapp/releases.atom'
-  name 'Wavebox'
-  homepage 'https://wavebox.io/'
+  if Hardware::CPU.intel?
+    sha256 "c7e24af19dbca9d02bb3eb4b87013acba9acd59f61c4cbf6ce115e8048dcd04e"
+
+    url "https://download.wavebox.app/stable/mac/Install%20Wavebox%20#{version}.dmg",
+        verified: "download.wavebox.app/"
+  else
+    sha256 "68e415435b3ef0046289bb5a50016497cbff9d22cdf6d0d3e2ae17ebc3c91994"
+
+    url "https://download.wavebox.app/stable/macarm64/Install%20Wavebox%20#{version}.dmg",
+        verified: "download.wavebox.app/"
+  end
+
+  name "Wavebox"
+  desc "Web browser"
+  homepage "https://wavebox.io/"
+
+  livecheck do
+    url "https://download.wavebox.app/latest/stable/mac"
+    strategy :header_match
+  end
 
   auto_updates true
+  depends_on macos: ">= :sierra"
 
-  app 'Wavebox.app'
+  app "Wavebox.app"
 
-  uninstall quit: 'io.wavebox.wavebox'
+  uninstall quit: "io.wavebox.wavebox"
 
   zap trash: [
-               '~/Library/Application Support/wavebox',
-               '~/Library/Caches/io.wavebox.wavebox',
-               '~/Library/Caches/io.wavebox.wavebox.ShipIt',
-               '~/Library/Preferences/io.wavebox.wavebox.helper.plist',
-               '~/Library/Preferences/io.wavebox.wavebox.plist',
-               '~/Library/Saved Application State/io.wavebox.wavebox.savedState',
-             ]
+    "~/Library/Application Support/WaveboxApp",
+    "~/Library/Caches/com.bookry.wavebox",
+    "~/Library/Caches/WaveboxApp",
+    "~/Library/Preferences/com.bookry.wavebox.plist",
+    "~/Library/Saved Application State/com.bookry.wavebox.savedState",
+  ]
 end

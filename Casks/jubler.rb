@@ -1,16 +1,12 @@
-cask 'jubler' do
-  version '6.0.2'
-  sha256 'd0d01cf027c745a2aaf3f88c1e00f003e1dacae8108564ebe8f158dfa8c2630c'
+cask "jubler" do
+  version "7.0.3"
+  sha256 "1165706840cdff7ed729d3737e9f3540e5d0216c0ef4fe506e80bbddfdce572e"
 
-  # sourceforge.net/jubler was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/jubler/Jubler-#{version}.dmg"
-  appcast 'https://sourceforge.net/projects/jubler/rss'
-  name 'Jubler'
-  homepage 'https://www.jubler.org/'
+  url "https://github.com/teras/Jubler/releases/download/v#{version}/Jubler-#{version}.dmg",
+      verified: "github.com/teras/Jubler/"
+  name "Jubler"
+  desc "Subtitle editor"
+  homepage "https://www.jubler.org/"
 
-  app 'Jubler.app'
-
-  caveats do
-    depends_on_java
-  end
+  app "Jubler.app"
 end

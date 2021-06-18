@@ -1,0 +1,60 @@
+name: Sync templates and CI config.
+
+on:
+  push:
+    branches:
+      - debug-sync
+      - master
+
+jobs:
+  sync-templates-and-ci-config:
+    if: github.repository == 'Homebrew/homebrew-cask'
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        repo:
+          - Homebrew/homebrew-cask-drivers
+          - Homebrew/homebrew-cask-fonts
+          - Homebrew/homebrew-cask-versions
+    steps:
+      - name: Clone main repository
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: Clone secondary repository
+        uses: actions/checkout@v2
+        with:
+          repository: ${{ matrix.repo }}
+          path: vendor/${{ matrix.repo }}
+          persist-credentials: false
+
+      - name: Configure Git user
+        uses: Homebrew/actions/git-user-config@master
+        with:
+          username: BrewTestBot
+
+      - name: Set up GPG commit signing
+        id: set-up-commit-signing
+        uses: Homebrew/actions/setup-commit-signing@master
+        with:
+          signing_key: ${{ secrets.BREWTESTBOT_GPG_SIGNING_SUBKEY }}
+
+      - name: Detect changes
+        id: detect_changes
+        run: ./.github/actions/sync/templates.rb 'vendor/${{ matrix.repo }}' '${{ matrix.repo }}' 'sync-templates-and-ci-config'
+        env:
+          HOMEBREW_GPG_PASSPHRASE: ${{ secrets.BREWTESTBOT_GPG_SIGNING_SUBKEY_PASSPHRASE }}
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@9825ae65b1cb54b543b938503728b432a0176d29
+        with:
+          path: vendor/${{ matrix.repo }}
+          token: ${{ secrets.HOMEBREW_CASK_SYNC_TOKEN }}
+          branch: sync-templates-and-ci-config
+          title: Synchronize templates and CI configuration.
+          body: >
+            This pull request was created automatically by the
+            [`sync-templates-and-ci-config`](https://github.com/Homebrew/homebrew-cask/blob/master/.github/workflows/sync-templates-and-ci-config.yml)
+            workflow.
+        if: ${{ steps.detect_changes.outputs.pull_request == 'true' }}

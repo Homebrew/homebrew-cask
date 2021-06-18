@@ -1,13 +1,18 @@
-cask 'butler' do
-  version '4.3.2'
-  sha256 'c2da20da2befe4ed4262bf77b6e6da5d1ca7449b0f7fd4af64d16cea6f4f1637'
+cask "butler" do
+  version "4.4.1,5111"
+  sha256 :no_check
 
-  url 'https://manytricks.com/download/butler'
-  appcast 'https://manytricks.com/butler/appcast'
-  name 'Butler'
-  homepage 'https://manytricks.com/butler/'
+  url "https://manytricks.com/download/butler"
+  name "Butler"
+  desc "Arrange your tasks in a customizable configuration"
+  homepage "https://manytricks.com/butler/"
+
+  livecheck do
+    url "https://manytricks.com/butler/appcast/"
+    strategy :sparkle
+  end
 
   auto_updates true
 
-  app 'Butler.app'
+  app "Butler.app"
 end

@@ -1,11 +1,17 @@
-cask 'playonmac' do
-  version '4.3.4'
-  sha256 '6aba4a4d57be74dc36f0eb9782dcd84d6a2a7366a60e2b8091bd53fd28a5cf32'
+cask "playonmac" do
+  version "4.4.2"
+  sha256 "8f458bcf14ed7431acfec1dc79d0e917bf450da89c78a13b5a6f3deeddbe4a8b"
 
   url "https://repository.playonmac.com/PlayOnMac/PlayOnMac_#{version}.dmg"
-  appcast "https://github.com/PlayOnLinux/POL-POM-#{version.major}/releases.atom"
-  name 'PlayOnMac'
-  homepage 'https://www.playonmac.com/en'
+  name "PlayOnMac"
+  desc "Allows installation and use of software designed for Windows"
+  homepage "https://www.playonmac.com/"
 
-  app 'PlayOnMac.app'
+  livecheck do
+    url "https://www.playonmac.com/en/download.html"
+    strategy :page_match
+    regex(%r{href=.*?/PlayOnMac_(\d+(?:\.\d+)*)\.dmg}i)
+  end
+
+  app "PlayOnMac.app"
 end

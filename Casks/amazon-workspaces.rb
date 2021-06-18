@@ -1,14 +1,28 @@
-cask 'amazon-workspaces' do
-  version '2.5.9'
-  sha256 '215c762adc7fcc35cb161604a74f25f0b7ac9e94f9c9727c4945349826b1bcfe'
+cask "amazon-workspaces" do
+  version "3.1.8.1929"
+  sha256 "53dde99e45e55f0cfa51048cb7d8b9f2b88583a34d94c349122d929b95c3b570"
 
-  # d2td7dqidlhjx7.cloudfront.net was verified as official when first introduced to the cask
-  url 'https://d2td7dqidlhjx7.cloudfront.net/prod/global/osx/WorkSpaces.pkg'
-  appcast 'https://d2td7dqidlhjx7.cloudfront.net/prod/global/osx/WorkSpacesAppCast_macOS_20171023.xml'
-  name 'Amazon Workspaces'
-  homepage 'https://clients.amazonworkspaces.com/'
+  url "https://d2td7dqidlhjx7.cloudfront.net/prod/iad/osx/WorkSpaces_AllProducts_#{version.split(".")[-1]}.zip",
+      verified: "d2td7dqidlhjx7.cloudfront.net/prod/iad/osx/"
+  name "Amazon Workspaces"
+  desc "Cloud native persistent desktop virtualization"
+  homepage "https://clients.amazonworkspaces.com/"
 
-  pkg 'WorkSpaces.pkg'
+  livecheck do
+    url "https://d2td7dqidlhjx7.cloudfront.net/prod/iad/osx/WorkSpacesAppCast_macOS_20171023.xml"
+    strategy :sparkle
+  end
 
-  uninstall pkgutil: 'com.amazon.workspaces'
+  depends_on macos: ">= :sierra"
+
+  pkg "WorkSpaces.pkg"
+
+  uninstall pkgutil: "com.amazon.workspaces"
+
+  zap trash: [
+    "~/Library/Application Support/Amazon Web Services/Amazon WorkSpaces",
+    "~/Library/Caches/com.amazon.workspaces",
+    "~/Library/Preferences/com.amazon.workspaces.plist",
+    "~/Library/Saved Application State/com.amazon.workspaces.savedState",
+  ]
 end

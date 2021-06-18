@@ -1,16 +1,20 @@
-cask 'mtmr' do
-  version '0.23.1'
-  sha256 '41912a459ae3c3fdea91a3c1959b00be137c3b6ea49362707cc7cca44179ddca'
+cask "mtmr" do
+  version "0.27,433"
+  sha256 "cf0b1b8cb9d6758cd0b69d2c4c5f9f1a067416126a7daa76a8d94fea8189d608"
 
-  url "https://mtmr.app/MTMR%20#{version}.dmg"
-  appcast 'https://mtmr.app/appcast.xml'
-  name 'My TouchBar. My rules'
-  homepage 'https://mtmr.app/'
+  url "https://mtmr.app/MTMR%20#{version.before_comma}.dmg"
+  name "My TouchBar. My rules"
+  homepage "https://mtmr.app/"
+
+  livecheck do
+    url "https://mtmr.app/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'MTMR.app'
+  app "MTMR.app"
 
-  zap trash: '~/Library/Application Support/MTMR'
+  zap trash: "~/Library/Application Support/MTMR"
 end

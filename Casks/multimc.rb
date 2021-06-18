@@ -1,11 +1,25 @@
-cask 'multimc' do
-  version '0.6.7'
-  sha256 '56b912bcbac9c91dc9651963b8575837718a2b4f239897b399ff6afdb552b301'
+cask "multimc" do
+  version "0.6.12"
+  sha256 "d491b6a2a2ec3420dd66a11815a3f7c64b46bb6044fa5402b026b53aeb964934"
 
-  url 'https://files.multimc.org/downloads/mmc-stable-osx64.tar.gz'
-  appcast 'https://github.com/MultiMC/MultiMC5/releases.atom'
-  name 'Multi MC'
-  homepage 'https://multimc.org/'
+  url "https://github.com/MultiMC/MultiMC5/releases/download/#{version}/mmc-stable-osx64.tar.gz",
+      verified: "github.com/MultiMC/MultiMC5/"
+  name "Multi MC"
+  desc "Minecraft launcher"
+  homepage "https://multimc.org/"
 
-  app 'MultiMC/MultiMC.app'
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  auto_updates true
+
+  app "MultiMC.app"
+
+  zap trash: [
+    "~/Library/Caches/MultiMC",
+    "~/Library/Preferences/org.multimc.MultiMC5.plist",
+    "~/Library/Saved Application State/org.multimc.MultiMC5.savedState",
+  ]
 end

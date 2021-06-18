@@ -1,11 +1,19 @@
-cask 'gyazmail' do
-  version '1.5.21'
-  sha256 '6518565a461f2cf7c5acf1786b0bad752fa1e819e64c1d7d18a2ebe5d11ffce0'
+cask "gyazmail" do
+  version "1.6.5"
+  sha256 "bc2376ac6a82c46301d59e0d3746ea9f70c1701bcb92ed81da7b151c81a62fde"
 
   url "http://gyazsquare.com/gyazmail/GyazMail-#{version.no_dots}.dmg"
-  appcast 'http://gyazsquare.com/gyazmail/'
-  name 'GyazMail'
-  homepage 'http://gyazsquare.com/gyazmail/'
+  name "GyazMail"
+  desc "Email client"
+  homepage "http://gyazsquare.com/gyazmail/"
 
-  app 'GyazMail.app'
+  livecheck do
+    url "http://gyazsquare.com/gyazmail/download.php"
+    strategy :page_match do |page|
+      match = page.match(%r{href=.*?/GyazMail-(\d+)(\d+)(\d+)\.dmg}i)
+      "#{match[1]}.#{match[2]}.#{match[3]}"
+    end
+  end
+
+  app "GyazMail.app"
 end

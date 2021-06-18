@@ -1,11 +1,11 @@
-cask 'seashore' do
-  version '2.4.11'
-  sha256 'f9882ec71e55915bb93e5e4f3f5087b27e02a51ce43e9df9bf2961b7c8b5c733'
+cask "seashore" do
+  version "2.5.10"
+  sha256 "79ff54b5018781765cbfae7fa12b5f920b8eff6292e9aee0330d7c59b7e1a9bc"
 
   url "https://github.com/robaho/seashore/releases/download/v#{version}/seashore-bin-#{version}.dmg"
-  appcast 'https://github.com/robaho/seashore/releases.atom'
-  name 'Seashore'
-  homepage 'https://github.com/robaho/seashore'
+  name "Seashore"
+  desc "Image editing application similar to GIMP"
+  homepage "https://github.com/robaho/seashore"
 
-  app 'Seashore.app'
+  app "Seashore.app"
 end

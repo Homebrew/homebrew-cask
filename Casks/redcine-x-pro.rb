@@ -1,18 +1,24 @@
-cask 'redcine-x-pro' do
-  version '51.0.47074'
-  sha256 '4f8021224cd4e705ca18f2709540731046e991efb23e7232e157ad59b89604c1'
+cask "redcine-x-pro" do
+  version "52.2,50136"
+  sha256 "d16bd655838b91b7999b8651d4f28347f4e57492cf15c7139328629909b91624"
 
-  # red_3.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://red_3.s3.amazonaws.com/downloads/software/rcx/RELEASE%20CANDIDATE/REDCINE-X_PRO_Build_#{version.major_minor}.pkg"
-  appcast 'https://www.red.com/RedSuiteCentric/SCA-Kilimanjaro/services/Download.Service.ss?downloadIdentifier=redcine-x-pro-mac'
-  name 'REDCINE-X PRO'
-  homepage 'https://www.red.com/'
+  url "https://downloads.red.com/software/rcx/mac/release/#{version.major}.#{version.after_comma}/REDCINE-X_PRO_Build_#{version.before_comma}.pkg"
+  name "REDCINE-X PRO"
+  homepage "https://www.red.com/"
+
+  livecheck do
+    url "https://www.red.com/RedSuiteCentric/SCA-Kilimanjaro/services/Download.Service.ss?downloadIdentifier=redcine-x-pro-mac"
+    strategy :page_match do |page|
+      match = page.match(%r{href=.*?/\d+\.(\d+)/REDCINE-X_PRO_Build_(\d+(?:\.\d+)*)\.pkg}i)
+      "#{match[2]},#{match[1]}"
+    end
+  end
 
   pkg "REDCINE-X_PRO_Build_#{version.major_minor}.pkg"
 
   uninstall pkgutil: [
-                       'com.red.pkg.REDCINE-X PRO',
-                       'com.red.pkg.SupportLibs',
-                     ],
-            delete:  '/Applications/REDCINE-X Professional'
+    "com.red.pkg.REDCINE-X PRO",
+    "com.red.pkg.SupportLibs",
+  ],
+            delete:  "/Applications/REDCINE-X Professional"
 end

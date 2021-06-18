@@ -1,12 +1,24 @@
-cask 'fanny' do
-  version '1.0.3'
-  sha256 '3c7bcc29006650cbcb33a28fa0a97480227ab36f3bb5453243fef1563bb92bc0'
+cask "fanny" do
+  version "2.3.0"
+  sha256 :no_check
 
-  url 'https://fannywidget.com/FannyWidget.zip'
-  name 'FannyWidget'
-  homepage 'https://fannywidget.com/'
+  url "https://fannywidget.com/FannyWidget.zip"
+  name "FannyWidget"
+  homepage "https://fannywidget.com/"
 
-  depends_on macos: '>= :sierra'
+  livecheck do
+    url "https://github.com/DanielStormApps/Fanny/releases"
+    strategy :git
+  end
 
-  app "Fanny #{version}/Fanny.app"
+  depends_on macos: ">= :high_sierra"
+
+  app "FannyWidget-v#{version.before_comma}/Fanny.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.fannywidget.today-extension",
+    "~/Library/Containers/com.fannywidget.today-extension",
+    "~/Library/Group Containers/fanny-shared-defaults",
+    "~/Library/Preferences/com.fannywidget.plist",
+  ]
 end

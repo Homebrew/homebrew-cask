@@ -1,14 +1,18 @@
-cask 'lincastor' do
-  version '2.2'
-  sha256 'f4cbbe5f684025fea27839372b7b143b89f9bebd0024a4df03ba33aab48aea88'
+cask "lincastor" do
+  version "3.7"
+  sha256 :no_check
 
-  # onflapp.github.io/blog/releases was verified as official when first introduced to the cask
-  url 'https://onflapp.github.io/blog/releases/lincastor/LinCastor.zip'
-  appcast 'https://onflapp.github.io/blog/releases/lincastor/appcast.xml'
-  name 'LinCastor'
-  homepage 'https://onflapp.wordpress.com/lincastor/'
+  url "https://onflapp.github.io/blog/releases/lincastor/LinCastor.zip"
+  name "LinCastor"
+  desc "Choose a web browser when opening a link"
+  homepage "https://onflapp.github.io/blog/pages/LinCastorBrowser.html"
 
-  depends_on macos: '>= :sierra'
+  livecheck do
+    url "https://onflapp.github.io/blog/releases/lincastor/appcast.xml"
+    strategy :sparkle
+  end
 
-  app 'LinCastor.app'
+  depends_on macos: ">= :sierra"
+
+  app "LinCastor.app"
 end

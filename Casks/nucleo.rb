@@ -1,12 +1,17 @@
-cask 'nucleo' do
-  version '2.5.5'
-  sha256 '2cbe0e752f87a5fef86b59a180e78ec249a710fba56eea7144f5e1dd6eab9e59'
+cask "nucleo" do
+  version "3.0.4"
+  sha256 "02c1f5356a2d623b682f19e15a9f6e29fa6497a7e24def4a56d6de0a55f4b164"
 
-  # nucleo-app-releases.s3.amazonaws.com was verified as official when first introduced to the cask
-  url "https://nucleo-app-releases.s3.amazonaws.com/mac/Nucleo_#{version}.zip"
-  appcast 'https://nucleoapp.com/updates'
-  name 'Nucleo'
-  homepage 'https://nucleoapp.com/'
+  url "https://nucleo-app-releases.s3.amazonaws.com/mac/Nucleo_#{version}.zip",
+      verified: "nucleo-app-releases.s3.amazonaws.com/"
+  name "Nucleo"
+  desc "Icon manager and library"
+  homepage "https://nucleoapp.com/"
 
-  app 'Nucleo.app'
+  livecheck do
+    url "https://nucleoapp.com/updates"
+    regex(%r{href=.*?/Nucleo[._-]v?(\d+(?:\.\d+)+)\.zip}i)
+  end
+
+  app "Nucleo.app"
 end

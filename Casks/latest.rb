@@ -1,19 +1,26 @@
-cask 'latest' do
-  version '0.6.1'
-  sha256 '93c9d5c8b71850495380e5d8baa3e300ca572c07ee5ca1e176a938caa7bdcc7f'
+cask "latest" do
+  version "0.7.3,462"
+  sha256 :no_check
 
-  url 'https://max.codes/latest/Latest.zip'
-  appcast 'https://max.codes/latest/update.xml'
-  name 'Latest'
-  homepage 'https://max.codes/latest'
+  url "https://max.codes/latest/download"
+  name "Latest"
+  desc "Utility that shows the latest app updates"
+  homepage "https://max.codes/latest"
 
-  depends_on macos: '>= :sierra'
+  livecheck do
+    url "https://max.codes/latest/update.xml"
+    strategy :sparkle
+  end
 
-  app 'Latest.app'
+  auto_updates true
+  depends_on macos: ">= :high_sierra"
+
+  app "Latest.app"
 
   zap trash: [
-               '~/Library/Caches/com.max-langer.Latest',
-               '~/Library/Preferences/com.max-langer.Latest.plist',
-               '~/Library/Saved Application State/com.max-langer.Latest.savedState',
-             ]
+    "~/Library/Caches/com.max-langer.Latest",
+    "~/Library/Cookies/com.max-langer.Latest.binarycookies",
+    "~/Library/Preferences/com.max-langer.Latest.plist",
+    "~/Library/Saved Application State/com.max-langer.Latest.savedState",
+  ]
 end

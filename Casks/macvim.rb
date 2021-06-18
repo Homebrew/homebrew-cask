@@ -1,32 +1,41 @@
-cask 'macvim' do
-  version '8.1.1722,157'
-  sha256 '5bca133cc2aae4e13e880ad466f376ac2d45e3480a104af6e9248ee6067cde19'
+cask "macvim" do
+  version "171"
+  sha256 "f7137ec22d2f3a3e149abdacb4a3c6f6ab626eaf574f63600bd36d1cfd9bd5f0"
 
-  url "https://github.com/macvim-dev/macvim/releases/download/snapshot-#{version.after_comma}/MacVim.dmg"
-  appcast 'https://github.com/macvim-dev/macvim/releases.atom'
-  name 'MacVim'
-  homepage 'https://github.com/macvim-dev/macvim'
+  url "https://github.com/macvim-dev/macvim/releases/download/snapshot-#{version}/MacVim.dmg"
+  name "MacVim"
+  desc "Text editor"
+  homepage "https://github.com/macvim-dev/macvim"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   auto_updates true
-  conflicts_with formula: 'macvim'
+  conflicts_with formula: "macvim"
 
-  app 'MacVim.app'
+  app "MacVim.app"
 
-  [
-    'gview',
-    'gvim',
-    'gvimdiff',
-    'mview',
-    'mvim',
-    'mvimdiff',
-    'view',
-    'vim',
-    'vimdiff',
+  %w[
+    gview
+    gvim
+    gvimdiff
+    gvimex
+    mview
+    mvim
+    mvimdiff
+    mvimex
+    view
+    vim
+    vimdiff
+    vimex
+    vi
   ].each { |link_name| binary "#{appdir}/MacVim.app/Contents/bin/mvim", target: link_name }
 
   zap trash: [
-               '~/Library/Caches/org.vim.MacVim',
-               '~/Library/Preferences/org.vim.MacVim.LSSharedFileList.plist',
-               '~/Library/Preferences/org.vim.MacVim.plist',
-             ]
+    "~/Library/Caches/org.vim.MacVim",
+    "~/Library/Preferences/org.vim.MacVim.LSSharedFileList.plist",
+    "~/Library/Preferences/org.vim.MacVim.plist",
+  ]
 end

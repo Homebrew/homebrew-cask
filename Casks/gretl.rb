@@ -1,14 +1,20 @@
-cask 'gretl' do
-  version '2019b'
-  sha256 'a8e434da68412b2edd91e852d7ecc6a08ac22d995a1911a5553bd6d1a4530363'
+cask "gretl" do
+  version "2021b"
+  sha256 "13091151f21969255ba26a414cfed286f2fa1b6ba4b106fefd516a752d451c14"
 
-  # downloads.sourceforge.net/gretl was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/gretl/gretl-#{version}-quartz.pkg"
-  appcast 'https://sourceforge.net/projects/gretl/rss?path=/gretl'
-  name 'gretl'
-  homepage 'https://gretl.sourceforge.io/'
+  url "https://downloads.sourceforge.net/gretl/gretl-#{version}-macos-intel.pkg",
+      verified: "downloads.sourceforge.net/gretl/"
+  name "gretl"
+  desc "Software package for econometric analysis"
+  homepage "https://gretl.sourceforge.io/"
 
-  pkg "gretl-#{version}-quartz.pkg"
+  livecheck do
+    url "http://gretl.sourceforge.net/osx.html"
+    strategy :page_match
+    regex(/gretl-(\d+\w)-macos-intel\.pkg/i)
+  end
 
-  uninstall pkgutil: 'net.sourceforge.gretl.base.pkg'
+  pkg "gretl-#{version}-macos-intel.pkg"
+
+  uninstall pkgutil: "net.sourceforge.gretl.base.pkg"
 end

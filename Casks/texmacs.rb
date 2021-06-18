@@ -1,13 +1,22 @@
-cask 'texmacs' do
-  version '1.99.11'
-  sha256 '7ebadb569ef05cddb853aa3b70cd354b3a969b30f72914de170133924696cec4'
+cask "texmacs" do
+  version "1.99.21"
+  sha256 "0a8b00cebaaabf3e70ca5bee9d78af5810d0f1d953a1574b183a6c75f18b3505"
 
-  url "https://www.texmacs.org/Download/ftp/tmftp/macos/TeXmacs-#{version}.dmg"
-  appcast 'https://www.texmacs.org/tmweb/download/macosx.en.html'
-  name 'GNU TeXmacs'
-  homepage 'https://www.texmacs.org/'
+  url "https://ftp.texmacs.org/TeXmacs/tmftp/macos/TeXmacs-#{version}.dmg"
+  name "GNU TeXmacs"
+  desc "Scientific editing platform"
+  homepage "https://www.texmacs.org/"
 
-  app "TeXmacs-#{version}.app"
+  livecheck do
+    url "http://ftp.texmacs.org/TeXmacs/appcast/macos.xml"
+    strategy :sparkle
+  end
 
-  zap trash: '~/.TeXmacs'
+  app "TeXmacs.app"
+
+  zap trash: [
+    "~/.TeXmacs",
+    "~/Library/Preferences/org.texmacs.TeXmacs.plist",
+    "~/Library/Saved Application State/org.texmacs.TeXmacs.savedState",
+  ]
 end

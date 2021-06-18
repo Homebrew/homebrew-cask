@@ -1,15 +1,20 @@
-cask 'qownnotes' do
-  version '19.9.16,b4565-174130'
-  sha256 'dd4f702e819538f99da624690b5b223cb34696c3d5d6790c24875e2b3bfd54eb'
+cask "qownnotes" do
+  version "21.6.3"
+  sha256 "a7e728c7eae5bd6ecf5969fdf808405007e1f0664e38f7073ac9fe177fb88ac0"
 
-  # github.com/pbek/QOwnNotes was verified as official when first introduced to the cask
-  url "https://github.com/pbek/QOwnNotes/releases/download/macosx-#{version.after_comma}/QOwnNotes-#{version.before_comma}.dmg"
-  appcast 'https://www.qownnotes.org/api/v1/last_release/QOwnNotes/macosx.json'
-  name 'QOwnNotes'
-  homepage 'https://www.qownnotes.org/'
+  url "https://github.com/pbek/QOwnNotes/releases/download/v#{version}/QOwnNotes.dmg",
+      verified: "github.com/pbek/QOwnNotes/"
+  name "QOwnNotes"
+  desc "Plain-text file notepad and todo-list manager"
+  homepage "https://www.qownnotes.org/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'QOwnNotes.app'
+  app "QOwnNotes.app"
 end

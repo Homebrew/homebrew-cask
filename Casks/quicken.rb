@@ -1,18 +1,23 @@
-cask 'quicken' do
-  version '5.12.4,512.29280.100'
-  sha256 'eb7531797356bd36617b56ffb06754db5fba403d63637fb46bfda8ec83f69258'
+cask "quicken" do
+  version "6.2.1,602.38957.100"
+  sha256 "4941e623b21eb040862087b514194c7e74155c1967d30d971d53c884ec1b6724"
 
   url "https://download.quicken.com/mac/Quicken/001/Release/031A96D9-EFE6-4520-8B6A-7F465DDAA3E4/Quicken-#{version.after_comma}/Quicken-#{version.after_comma}.zip"
-  appcast 'https://download.quicken.com/mac/Quicken/001/Release/031A96D9-EFE6-4520-8B6A-7F465DDAA3E4/appcast.xml'
-  name 'Quicken'
-  homepage 'https://www.quicken.com/mac'
+  name "Quicken"
+  desc "Personal finance mananger"
+  homepage "https://www.quicken.com/mac"
 
-  depends_on macos: '>= :el_capitan'
+  livecheck do
+    url "https://download.quicken.com/mac/Quicken/001/Release/031A96D9-EFE6-4520-8B6A-7F465DDAA3E4/appcast.xml"
+    strategy :sparkle
+  end
 
-  app 'Quicken.app'
+  depends_on macos: ">= :high_sierra"
+
+  app "Quicken.app"
 
   zap trash: [
-               '~/Library/Preferences/com.quicken.Quicken.plist',
-               '~/Library/Application Support/Quicken',
-             ]
+    "~/Library/Preferences/com.quicken.Quicken.plist",
+    "~/Library/Application Support/Quicken",
+  ]
 end

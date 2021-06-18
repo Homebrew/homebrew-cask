@@ -1,13 +1,18 @@
-cask 'versions' do
-  version '1.4.1-1144'
-  sha256 '84d4320883b97140b920f3bf4fa95285cb4ecfc9a13c58ef346288f5d37db208'
+cask "versions" do
+  version "2.0.3,2006"
+  sha256 "3f309349c869e50431e7d94b45dc2815a14185a4ebad9b6bb0f0134122941ca1"
 
-  url "https://cdn.versionsapp.com/releases/Versions-#{version}.zip"
-  appcast 'https://updates.blackpixel.com/updates?app=vs'
-  name 'Versions'
-  homepage 'https://versionsapp.com/'
+  url "https://updates.versionsapp.com/v#{version.major}/prod/Versions-#{version.before_comma}-#{version.after_comma}.zip"
+  name "Versions"
+  desc "Subversion client"
+  homepage "https://versionsapp.com/"
 
-  depends_on macos: '>= :sierra'
+  livecheck do
+    url "https://updates.versionsapp.com/v#{version.major}/prod/appcast"
+    strategy :sparkle
+  end
 
-  app 'Versions.app'
+  depends_on macos: ">= :catalina"
+
+  app "Versions.app"
 end

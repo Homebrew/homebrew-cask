@@ -1,21 +1,25 @@
-cask 'dbngin' do
-  version '20'
-  sha256 'cc91a7b96a26efb76f9da6eff8d5b0b699102fabb78e8d4af72387a1f4b841f3'
+cask "dbngin" do
+  version "3.4,36"
+  sha256 "c232a43bf565b02f2d61d89f894b328047bc473db4c3f8c75d70eb0d6690cab2"
 
-  # dbngin-osx-builds.s3.amazonaws.com was verified as official when first introduced to the cask
-  url "https://dbngin-osx-builds.s3.amazonaws.com/#{version}/DBngin.dmg"
-  appcast 'https://dbngin.com/osx/version.xml'
-  name 'DBngin'
-  homepage 'https://dbngin.com/'
+  url "https://dbngin-osx-builds.s3.amazonaws.com/#{version.after_comma}/DBngin.dmg",
+      verified: "dbngin-osx-builds.s3.amazonaws.com/"
+  name "DBngin"
+  homepage "https://dbngin.com/"
+
+  livecheck do
+    url "https://dbngin.com/osx/version.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 
-  app 'DBngin.app'
+  app "DBngin.app"
 
   zap trash: [
-               '~/Library/Application Support/com.tinyapp.DBngin',
-               '~/Library/Caches/com.tinyapp.DBngin',
-               '~/Library/Cookies/com.tinyapp.DBngin.binarycookies',
-               '~/Library/Preferences/com.tinyapp.DBngin.plist',
-             ]
+    "~/Library/Application Support/com.tinyapp.DBngin",
+    "~/Library/Caches/com.tinyapp.DBngin",
+    "~/Library/Cookies/com.tinyapp.DBngin.binarycookies",
+    "~/Library/Preferences/com.tinyapp.DBngin.plist",
+  ]
 end

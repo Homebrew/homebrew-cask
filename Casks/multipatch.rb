@@ -1,16 +1,21 @@
-cask 'multipatch' do
-  version '1.7'
-  sha256 '4d92147ac60aa4224959e53d91ef3c457ad2fb47dad739ce7f87bc456ec94e06'
+cask "multipatch" do
+  version "1.8"
+  sha256 "e3e9588e731e7fb18baa19d495d2d401d92f97f342a249c37f96841c75522a82"
 
   url "https://projects.sappharad.com/tools/multipatch#{version.no_dots}.zip"
-  appcast 'https://github.com/Sappharad/MultiPatch/releases.atom'
-  name 'MultiPatch'
-  homepage 'https://projects.sappharad.com/tools/multipatch.html'
+  name "MultiPatch"
+  desc "File patching utility"
+  homepage "https://projects.sappharad.com/tools/multipatch.html"
 
-  app 'MultiPatch/MultiPatch.app'
+  livecheck do
+    url "https://github.com/Sappharad/MultiPatch"
+    strategy :git
+  end
+
+  app "MultiPatch/MultiPatch.app"
 
   zap trash: [
-               '~/Library/Preferences/com.sappharad.MultiPatch.plist',
-               '~/Library/Saved Application State/com.sappharad.MultiPatch.savedState',
-             ]
+    "~/Library/Preferences/com.sappharad.MultiPatch.plist",
+    "~/Library/Saved Application State/com.sappharad.MultiPatch.savedState",
+  ]
 end

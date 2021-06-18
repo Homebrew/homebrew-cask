@@ -1,12 +1,12 @@
-cask 'pulse-sms' do
-  version '4.0.1'
-  sha256 'c4c4eba957178266a5e0f4d101010da1737ee32052072abb910bbcd88d482c28'
+cask "pulse-sms" do
+  version "4.4.0"
+  sha256 "7d3df686e4e005acccd1d263417d7e206ae78c4af4c8416c02d3919797b9edf0"
 
-  # github.com/klinker-apps/messenger-desktop was verified as official when first introduced to the cask
-  url "https://github.com/klinker-apps/messenger-desktop/releases/download/v#{version}/pulse-sms-#{version}.dmg"
-  appcast 'https://github.com/klinker-apps/messenger-desktop/releases.atom'
-  name 'Pulse SMS'
-  homepage 'https://messenger.klinkerapps.com/'
+  url "https://github.com/maplemedia/pulse-sms-desktop/releases/download/v#{version}/pulse-sms-#{version}.dmg",
+      verified: "github.com/maplemedia/pulse-sms-desktop/"
+  name "Pulse SMS"
+  desc "Desktop client for Pulse SMS"
+  homepage "https://messenger.klinkerapps.com/overview/platform-mac.html"
 
-  app 'Pulse SMS.app'
+  app "Pulse SMS.app"
 end

@@ -1,12 +1,20 @@
-cask 'neo4j' do
-  # note: "4" is not a version number, but an intrinsic part of the product name
-  version '1.2.1'
-  sha256 'feb633c5e1ea23de6e4c5fa30b6e15475cdf6e051518129b435a85c1800c27c7'
+cask "neo4j" do
+  # NOTE: "4" is not a version number, but an intrinsic part of the product name
+  version "1.4.5"
+  sha256 "7d0a7fc7284ca55e58ae3560a7e7946bb2cfac78c3459cbb65beda7e76b033ff"
 
-  url "https://neo4j.com/artifact.php?name=neo4j-desktop-offline-#{version}.dmg"
-  appcast 'https://neo4j.com/download/'
-  name 'Neo4j Desktop'
-  homepage 'https://neo4j.com/download/'
+  url "https://neo4j.com/artifact.php?name=neo4j-desktop-#{version}.dmg"
+  name "Neo4j Desktop"
+  desc "Developer IDE or Management Environment for Neo4j instances"
+  homepage "https://neo4j.com/download/"
 
-  app 'Neo4j Desktop.app'
+  livecheck do
+    url "https://neo4j.com/download-center/#desktop"
+    strategy :page_match
+    regex(%r{href=.*?/neo4j-desktop/.*?flavour=osx.*?release=(\d+(?:\.\d+)*)}i)
+  end
+
+  depends_on macos: ">= :yosemite"
+
+  app "Neo4j Desktop.app"
 end

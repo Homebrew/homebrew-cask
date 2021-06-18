@@ -1,19 +1,25 @@
-cask 'waterfox' do
-  version '56.2.14'
-  sha256 'c9df511b7a9474a123f2eba456332744e9bdd8ef0a9fae464441932a6f655bd0'
+cask "waterfox" do
+  version "3.2.3"
+  sha256 "d1c29651b3d39c509bab58054161ff60435fb639165d1c695078bd7e69a63c5a"
 
-  # storage-waterfox.netdna-ssl.com was verified as official when first introduced to the cask
-  url "https://storage-waterfox.netdna-ssl.com/releases/osx64/installer/Waterfox%20#{version}%20Setup.dmg"
-  appcast 'https://www.waterfox.net/releases/'
-  name 'Waterfox'
-  homepage 'https://www.waterfox.net/'
+  url "https://cdn.waterfox.net/releases/osx64/installer/Waterfox%20G#{version}%20Setup.dmg"
+  name "Waterfox"
+  desc "Web browser"
+  homepage "https://www.waterfox.net/"
 
-  app 'Waterfox.app'
+  livecheck do
+    url "https://www.waterfox.net/download/"
+    regex(%r{href=.*?/Waterfox%20G(\d+(?:\.\d+)+)%20Setup\.dmg}i)
+  end
+
+  depends_on macos: ">= :yosemite"
+
+  app "Waterfox.app"
 
   zap trash: [
-               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.waterfox.sfl*',
-               '~/Library/Application Support/Waterfox',
-               '~/Library/Caches/Waterfox',
-               '~/Library/Preferences/org.waterfoxproject.waterfox.plist',
-             ]
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.waterfox.sfl*",
+    "~/Library/Application Support/Waterfox",
+    "~/Library/Caches/Waterfox",
+    "~/Library/Preferences/org.waterfoxproject.waterfox.plist",
+  ]
 end

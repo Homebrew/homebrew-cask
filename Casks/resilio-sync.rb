@@ -1,13 +1,30 @@
-cask 'resilio-sync' do
-  version '2.6.3'
-  sha256 '346f616375c07c684952cc0c915cf78635a73945d052614a6b2cb4f9c6e4d5a8'
+cask "resilio-sync" do
+  version "2.7.2"
+  sha256 "2c9ce0875bdf34fc8ea831760f42afd7c4a663286bc22bcbbbbf5ecba777d07e"
 
   url "https://download-cdn.resilio.com/#{version}/osx/Resilio-Sync.dmg"
-  appcast "https://help.resilio.com/hc/en-us/articles/206216855-Sync-#{version.major}-x-change-log"
-  name 'Resilio Sync'
-  homepage 'https://www.resilio.com/'
+  name "Resilio Sync"
+  desc "File sync and share software"
+  homepage "https://www.resilio.com/"
+
+  livecheck do
+    url "https://download-cdn.resilio.com/stable/osx/version.txt"
+    strategy :page_match
+    regex(/(\d+(?:\.\d+)*)/i)
+  end
 
   auto_updates true
 
-  app 'Resilio Sync.app'
+  app "Resilio Sync.app"
+
+  uninstall quit: "com.resilio.Sync"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.resilio.Sync.FinderExtension",
+    "~/Library/Application Support/Resilio Sync",
+    "~/Library/Caches/com.resilio.Sync",
+    "~/Library/Containers/com.resilio.Sync.FinderExtension",
+    "~/Library/Group Containers/group.com.resilio.Sync",
+    "~/Library/Preferences/com.resilio.Sync.plist",
+  ]
 end

@@ -1,15 +1,21 @@
-cask 'panoply' do
-  version '4.10.9'
-  sha256 '226d9aaa1194e106876d1304e7dde15ff2981c75330d32493527a55b5ef27fca'
+cask "panoply" do
+  version "4.12.7"
+  sha256 "87bc04c0b2ddf2470bd546f9e96c2163e8653e195860c45e7bb2154b4d26aaa9"
 
   url "https://www.giss.nasa.gov/tools/panoply/download/PanoplyMacOS-#{version}.dmg"
-  appcast 'https://www.giss.nasa.gov/tools/panoply/download/'
-  name 'Panoply netCDF, HDF and GRIB Data Viewer'
-  homepage 'https://www.giss.nasa.gov/tools/panoply/'
+  name "Panoply netCDF, HDF and GRIB Data Viewer"
+  desc "Plot geo-referenced data from netCDF, HDF, and GRIB"
+  homepage "https://www.giss.nasa.gov/tools/panoply/"
 
-  app 'Panoply.app'
+  livecheck do
+    url "https://www.giss.nasa.gov/tools/panoply/download/"
+    strategy :page_match
+    regex(/href=.*?PanoplyMacOS-(\d+(?:\.\d+)*)\.dmg/i)
+  end
+
+  app "Panoply.app"
 
   caveats do
-    depends_on_java '8+'
+    depends_on_java "8+"
   end
 end

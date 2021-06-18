@@ -1,14 +1,19 @@
-cask 'endurance' do
-  version '2.0,36'
-  sha256 '3879bdd612c2e5c89c8f308424d2c65f91858621f2ecc70e6c2b742849b19d45'
+cask "endurance" do
+  version "3.1,47"
+  sha256 "b408040af3018f2fe813d0100e8a758c3e3a52c62725c5d429ab1cc8f3dfe4be"
 
-  url "https://enduranceapp.com/beta/Endurance#{version.after_comma}.zip"
-  appcast 'https://enduranceapp.com/appcast'
-  name 'Endurance'
-  homepage 'https://enduranceapp.com/'
+  url "https://enduranceapp.com/downloads/Endurance#{version.before_comma}.zip"
+  name "Endurance"
+  desc "Battery monitoring and management"
+  homepage "https://enduranceapp.com/"
 
-  app 'Endurance.app'
+  livecheck do
+    url "https://enduranceapp.com/appcast"
+    strategy :sparkle
+  end
 
-  uninstall delete:    '/Library/PrivilegedHelperTools/com.MagnetismStudios.endurance.helper',
-            launchctl: 'com.MagnetismStudios.endurance.helper'
+  app "Endurance.app"
+
+  uninstall delete:    "/Library/PrivilegedHelperTools/com.MagnetismStudios.endurance.helper",
+            launchctl: "com.MagnetismStudios.endurance.helper"
 end

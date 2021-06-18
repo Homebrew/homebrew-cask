@@ -1,26 +1,41 @@
-cask 'rider' do
-  version '2019.2.2,192.6584.65'
-  sha256 'ca50fa3e1b2357afc4596ae29aaf9169e9a4685b48c3a6a339ba5300417975b0'
+cask "rider" do
+  version "2021.1.3,211.7442.29"
+  sha256 "659fd07682cd726dc931cb95a618124ec885da6011e604c35ea1d982bf3c6ba0"
 
   url "https://download.jetbrains.com/rider/JetBrains.Rider-#{version.before_comma}.dmg"
-  appcast 'https://data.services.jetbrains.com/products/releases?code=RD&latest=true&type=release'
-  name 'Jetbrains Rider'
-  homepage 'https://www.jetbrains.com/rider/'
+  name "JetBrains Rider"
+  desc ".NET IDE"
+  homepage "https://www.jetbrains.com/rider/"
+
+  livecheck do
+    url "https://data.services.jetbrains.com/products/releases?code=RD&latest=true&type=release"
+    strategy :page_match do |page|
+      JSON.parse(page)["RD"].map do |release|
+        "#{release["version"]},#{release["build"]}"
+      end
+    end
+  end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
-  app 'Rider.app'
+  app "Rider.app"
 
   uninstall_postflight do
-    ENV['PATH'].split(File::PATH_SEPARATOR).map { |path| File.join(path, 'rider') }.each { |path| File.delete(path) if File.exist?(path) && File.readlines(path).grep(%r{# see com.intellij.idea.SocketLock for the server side of this interface}).any? }
+    ENV["PATH"].split(File::PATH_SEPARATOR).map { |path| File.join(path, "rider") }.each do |path|
+      if File.exist?(path) &&
+         File.readlines(path).grep(/# see com.intellij.idea.SocketLock for the server side of this interface/).any?
+        File.delete(path)
+      end
+    end
   end
 
   zap trash: [
-               "~/Library/Application Support/Rider#{version.major_minor}",
-               "~/Library/Caches/Rider#{version.major_minor}",
-               "~/Library/Logs/Rider#{version.major_minor}",
-               "~/Library/Preferences/Rider#{version.major_minor}",
-               '~/Library/Preferences/jetbrains.rider.71e559ef.plist',
-               '~/Library/Saved Application State/com.jetbrains.rider.savedState',
-             ]
+    "~/Library/Application Support/Rider#{version.major_minor}",
+    "~/Library/Caches/Rider#{version.major_minor}",
+    "~/Library/Logs/Rider#{version.major_minor}",
+    "~/Library/Preferences/Rider#{version.major_minor}",
+    "~/Library/Preferences/jetbrains.rider.71e559ef.plist",
+    "~/Library/Saved Application State/com.jetbrains.rider.savedState",
+  ]
 end

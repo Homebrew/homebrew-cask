@@ -1,26 +1,32 @@
-cask 'deepl' do
-  version '1.1.0'
-  sha256 'c0029a2cfea33adc25cf567100fb9f2e358c90eb2c146faf25dd580fe178de02'
+cask "deepl" do
+  version "2.4.50523"
+  sha256 :no_check
 
-  url "https://www.deepl.com/macos/download/LpsA0EG5frbfX8p5/DeepL#{version.no_dots}.zip"
-  name 'DeepL'
-  homepage 'https://www.deepl.com/'
+  url "https://appdownload.deepl.com/macos/DeepL.dmg"
+  name "DeepL"
+  desc "Trains AIs to understand and translate texts"
+  homepage "https://www.deepl.com/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   auto_updates true
-  depends_on macos: '>= :high_sierra'
+  depends_on macos: ">= :high_sierra"
 
-  app 'DeepL.app'
+  app "DeepL.app"
 
   uninstall quit: [
-                    'com.linguee.DeepLCopyTranslator',
-                    'com.linguee.DeepLLauncher',
-                    'com.linguee.DeepLStatusBar',
-                  ]
+    "com.linguee.DeepLCopyTranslator",
+    "com.linguee.DeepLLauncher",
+    "com.linguee.DeepLStatusBar",
+  ]
 
   zap trash: [
-               '~/Library/Caches/com.linguee.DeepLCopyTranslator',
-               '~/Library/Caches/com.linguee.DeepLCopyTranslator.ShipIt',
-               '~/Library/Group Containers/*.com.linguee.DeepL',
-               '~/Library/Preferences/com.linguee.DeepLCopyTranslator.plist',
-             ]
+    "~/Library/Caches/com.linguee.DeepLCopyTranslator",
+    "~/Library/Caches/com.linguee.DeepLCopyTranslator.ShipIt",
+    "~/Library/Group Containers/*.com.linguee.DeepL",
+    "~/Library/Preferences/com.linguee.DeepLCopyTranslator.plist",
+  ]
 end

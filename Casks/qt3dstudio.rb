@@ -1,14 +1,22 @@
-cask 'qt3dstudio' do
-  version '2.4.0'
-  sha256 '5f5fdf827564ea45209c755a232642b63a24ce459d7c06714aa6edf49604d977'
+cask "qt3dstudio" do
+  version "2.8.0"
+  sha256 "bdaa9ede1c9dcf2137d14ad312bafaab08c6b37e7ad9286160240e38daf56857"
 
   url "https://download.qt.io/official_releases/qt3dstudio/#{version.major_minor}/qt-3dstudio-opensource-mac-x64-#{version}.dmg"
-  appcast 'https://download.qt.io/official_releases/qt3dstudio/',
-          configuration: version.major_minor
-  name 'Qt 3D Studio'
-  homepage 'https://www.qt.io/developers/'
+  name "Qt 3D Studio"
+  desc "Compositing tool"
+  homepage "https://www.qt.io/developers/"
 
-  depends_on macos: '>= :sierra'
+  livecheck do
+    url "https://download.qt.io/official_releases/qt3dstudio/"
+    strategy :page_match do |page|
+      version_major_minor = page[%r{href="(\d+(?:\.\d+)*)/"}i, 1]
+      version_page = Net::HTTP.get(URI.parse("#{url}#{version_major_minor}/"))
+      version_page[/qt-3dstudio-opensource-mac-x64-(\d+(?:\.\d+)*)\.dmg/i, 1]
+    end
+  end
+
+  depends_on macos: ">= :sierra"
 
   installer manual: "qt-3dstudio-opensource-mac-x64-#{version}.app"
 

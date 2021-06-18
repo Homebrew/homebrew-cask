@@ -1,26 +1,32 @@
-cask 'cardhop' do
-  version '1.3.2'
-  sha256 'b9047748572eb0bcea951f945f377995f9f94ea1647e1138a0d57d932d4b1f9d'
+cask "cardhop" do
+  version "2.0.3,1036"
+  sha256 "88b5f42f5906df8b8d9dbbdd23a5bacba2b7f4eb27e0dd8951bae33c7f67fe69"
 
-  url "http://cdn.flexibits.com/Cardhop_#{version}.zip"
-  appcast 'https://flexibits.com/cardhop/appcast.php'
-  name 'Cardhop'
-  homepage 'https://flexibits.com/cardhop'
+  url "https://cdn.flexibits.com/Cardhop_#{version.before_comma}.zip"
+  name "Cardhop"
+  desc "Contacts manager"
+  homepage "https://flexibits.com/cardhop"
+
+  livecheck do
+    url "https://flexibits.com/cardhop/appcast.php"
+    strategy :sparkle
+  end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
-  app 'Cardhop.app'
+  app "Cardhop.app"
 
-  uninstall launchctl: 'com.flexibits.cardhop.mac.launcher',
-            quit:      'com.flexibits.cardhop.mac'
+  uninstall launchctl: "com.flexibits.cardhop.mac.launcher",
+            quit:      "com.flexibits.cardhop.mac"
 
   zap trash: [
-               '~/Library/Preferences/com.flexibits.cardhop.mac.plist',
-               '~/Library/Application Scripts/com.flexibits.cardhop.mac',
-               '~/Library/Application Scripts/com.flexibits.cardhop.mac.launcher',
-               '~/Library/Application Scripts/com.flexibits.cardhop.mac.BluetoothDialer',
-               '~/Library/Containers/com.flexibits.cardhop.mac',
-               '~/Library/Containers/com.flexibits.cardhop.mac.launcher',
-               '~/Library/Containers/com.flexibits.cardhop.mac.BluetoothDialer',
-             ]
+    "~/Library/Application Scripts/com.flexibits.cardhop.mac",
+    "~/Library/Application Scripts/com.flexibits.cardhop.mac.launcher",
+    "~/Library/Application Scripts/com.flexibits.cardhop.mac.BluetoothDialer",
+    "~/Library/Containers/com.flexibits.cardhop.mac",
+    "~/Library/Containers/com.flexibits.cardhop.mac.launcher",
+    "~/Library/Containers/com.flexibits.cardhop.mac.BluetoothDialer",
+    "~/Library/Preferences/com.flexibits.cardhop.mac.plist",
+  ]
 end

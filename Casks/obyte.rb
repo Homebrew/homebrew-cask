@@ -1,19 +1,19 @@
-cask 'obyte' do
-  version '2.7.2'
-  sha256 'b5dccb8d157cb8b97922fa71d58efc7583e1564adaf6d0305b42a93733c058a5'
+cask "obyte" do
+  version "3.3.2"
+  sha256 "a8326eeb9d13f1d1a7983bfc696eb27408458e3ef66a6932e05d6f18d79a2644"
 
-  # github.com/byteball/obyte-gui-wallet was verified as official when first introduced to the cask
-  url "https://github.com/byteball/obyte-gui-wallet/releases/download/v#{version}/Obyte-osx64.dmg"
-  appcast 'https://github.com/byteball/obyte-gui-wallet/releases.atom'
-  name 'Obyte'
-  homepage 'https://obyte.org/'
+  url "https://github.com/byteball/obyte-gui-wallet/releases/download/v#{version}/Obyte-osx64.dmg",
+      verified: "github.com/byteball/obyte-gui-wallet/"
+  name "Obyte"
+  desc "Smart payments made simple"
+  homepage "https://obyte.org/"
 
-  app 'Obyte.app'
+  app "Obyte.app"
 
   zap trash: [
-               '~/Library/Application Support/obyte',
-               '~/Library/Caches/obyte',
-               '~/Library/Preferences/com.nw-builder.obyte.plist',
-               '~/Library/Saved Application State/com.nw-builder.obyte.savedState',
-             ]
+    "~/Library/Application Support/obyte",
+    "~/Library/Caches/obyte",
+    "~/Library/Preferences/com.nw-builder.obyte.plist",
+    "~/Library/Saved Application State/com.nw-builder.obyte.savedState",
+  ]
 end

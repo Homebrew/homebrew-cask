@@ -1,11 +1,15 @@
-cask 'sqleditor' do
-  version '3.5.5'
-  sha256 'baed5180887d88151cb4f09a9f73f327118fc7f335a0fba117a3bee8dc4b1bb5'
+cask "sqleditor" do
+  version "3.7.4,10817"
+  sha256 "9510647a7ca994d84af2060591b0f8414051312ca3888cc116ec6efa43a14bee"
 
-  url "https://www.malcolmhardie.com/sqleditor/releases/#{version}/SQLEditor-#{version.dots_to_hyphens}.zip"
-  appcast 'https://www.malcolmhardie.com/sqleditor/appcast/sq2release.xml'
-  name 'SQLEditor'
-  homepage 'https://www.malcolmhardie.com/sqleditor/'
+  url "https://www.malcolmhardie.com/sqleditor/releases/#{version.before_comma}/SQLEditor-#{version.before_comma.dots_to_hyphens}.zip"
+  name "SQLEditor"
+  homepage "https://www.malcolmhardie.com/sqleditor/"
 
-  app 'SQLEditor.app'
+  livecheck do
+    url "https://www.malcolmhardie.com/sqleditor/appcast/sq2release.xml"
+    strategy :sparkle
+  end
+
+  app "SQLEditor.app"
 end

@@ -1,13 +1,19 @@
-cask 'kindle-comic-converter' do
-  version '5.5.1'
-  sha256 '4fea22c4db0c7953050e0dedfb97007af1dd30470360e39373e1cadcedc5bcce'
+cask "kindle-comic-converter" do
+  version "5.5.2"
+  sha256 "73d3f7ab9fc3e1e3dee62a83848fb52bba62f45fef56063466a0ac9c9f57513a"
 
   url "https://kcc.iosphe.re/OSX/KindleComicConverter_osx_#{version}.dmg"
-  appcast 'https://github.com/ciromattia/kcc/releases.atom'
-  name 'Kindle Comic Converter'
-  homepage 'https://kcc.iosphe.re/'
+  name "Kindle Comic Converter"
+  name "KCC"
+  desc "Comic and manga converter for ebook readers"
+  homepage "https://kcc.iosphe.re/"
 
-  depends_on macos: '>= :sierra'
+  livecheck do
+    url "https://github.com/ciromattia/kcc"
+    strategy :git
+  end
 
-  app 'Kindle Comic Converter.app'
+  depends_on macos: ">= :mojave"
+
+  app "Kindle Comic Converter.app"
 end

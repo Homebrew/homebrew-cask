@@ -1,23 +1,30 @@
-cask 'postman' do
-  version '7.7.3'
-  sha256 '2d52c59d38905c3c43a90f2703ba83e3c9d04273cb5d8fc61f05259f02864d28'
+cask "postman" do
+  version "8.6.2"
+  sha256 "3586ae751cc7d714b5aa44916af0753cd2232db09f10d31e31df000823d2fd47"
 
-  # dl.pstmn.io/download/version was verified as official when first introduced to the cask
-  url "https://dl.pstmn.io/download/version/#{version}/osx64"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=https://dl.pstmn.io/download/latest/osx'
-  name 'Postman'
-  homepage 'https://www.getpostman.com/'
+  url "https://dl.pstmn.io/download/version/#{version}/osx64",
+      verified: "dl.pstmn.io/download/version/"
+  name "Postman"
+  desc "Collaboration platform for API development"
+  homepage "https://www.postman.com/"
+
+  livecheck do
+    url "https://dl.pstmn.io/download/latest/osx"
+    strategy :header_match
+  end
 
   auto_updates true
 
-  app 'Postman.app'
+  app "Postman.app"
 
   zap trash: [
-               '~/Library/Application Support/Postman',
-               '~/Library/Application Support/com.postmanlabs.mac.ShipIt',
-               '~/Library/Caches/Postman',
-               '~/Library/Caches/com.postmanlabs.mac',
-               '~/Library/Preferences/com.postmanlabs.mac.plist',
-               '~/Library/Saved Application State/com.postmanlabs.mac.savedState',
-             ]
+    "~/Library/Application Support/Postman",
+    "~/Library/Application Support/com.postmanlabs.mac.ShipIt",
+    "~/Library/Caches/Postman",
+    "~/Library/Caches/com.postmanlabs.mac",
+    "~/Library/Caches/com.postmanlabs.mac.ShipIt",
+    "~/Library/Preferences/ByHost/com.postmanlabs.mac.ShipIt.*.plist",
+    "~/Library/Preferences/com.postmanlabs.mac.plist",
+    "~/Library/Saved Application State/com.postmanlabs.mac.savedState",
+  ]
 end

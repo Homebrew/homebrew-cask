@@ -1,28 +1,29 @@
-cask 'intel-haxm' do
-  version '7.5.2'
-  sha256 '20914a1dfac8f4ca7a6a9bf77998f7aa4075384fa88c883e3eb6666661821b81'
+cask "intel-haxm" do
+  version "7.7.0"
+  sha256 "d3fb74ca55e5312fc1c10b850c46689ac723572453c1bb3ed3f47680c7f504b7"
 
-  # github.com/intel/haxm was verified as official when first introduced to the cask
   url "https://github.com/intel/haxm/releases/download/v#{version}/haxm-macosx_v#{version.dots_to_underscores}.zip"
-  appcast 'https://github.com/intel/haxm/releases.atom'
-  name 'Intel HAXM'
-  homepage 'https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager'
+  name "Intel HAXM"
+  desc "Hardware-assisted virtualization engine (hypervisor)"
+  homepage "https://github.com/intel/haxm"
 
-  depends_on macos: '>= :yosemite'
+  depends_on macos: ">= :yosemite"
+  depends_on arch: :x86_64
 
   installer script: {
-                      executable: 'silent_install.sh',
-                      sudo:       true,
-                    }
+    executable: "silent_install.sh",
+    sudo:       true,
+  }
 
-  uninstall script: {
-                      sudo:         true,
-                      must_succeed: true,
-                      executable:   'silent_install.sh',
-                      args:         ['-u'],
-                    }
+  uninstall pkgutil: "com.intel.kext.haxm.*",
+            script:  {
+              sudo:         true,
+              must_succeed: true,
+              executable:   "silent_install.sh",
+              args:         ["-u"],
+            }
 
   caveats do
-    license 'https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager-end-user-license-agreement-macosx'
+    kext
   end
 end

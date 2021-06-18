@@ -1,12 +1,28 @@
-cask 'battlescribe' do
-  version '2.03.01'
-  sha256 '35756e8af8103f21dff69192108f54e019049730221b9d04e299697521c33f4e'
+cask "battlescribe" do
+  version "2.03.21"
+  sha256 "22af5f3cf03aad474fc02d9b82acaccd4cd15f0b687027fcc36be525ac547743"
 
-  url "https://battlescribe.net/files/BattleScribe_#{version}_Installer.dmg"
-  appcast 'https://battlescribe.net/?tab=downloads'
-  name 'BattleScribe'
-  homepage 'https://battlescribe.net/'
+  url "https://battlescribe.net/files/BattleScribe_#{version}_Installer.pkg"
+  name "BattleScribe"
+  desc "Army list creator for tabletop wargamers"
+  homepage "https://battlescribe.net/"
 
-  suite 'BattleScribe Tools'
-  app 'BattleScribe.app'
+  livecheck do
+    url "https://battlescribe.net/?tab=downloads"
+    strategy :page_match
+    regex(/"desktop"\s*:\s*"(\d+(?:\.\d+)*)"/i)
+  end
+
+  pkg "BattleScribe_#{version}_Installer.pkg"
+
+  uninstall pkgutil: [
+    "net.battlescribe.desktop.dataeditor",
+    "net.battlescribe.desktop.dataindexer",
+    "net.battlescribe.desktop.jre",
+    "net.battlescribe.desktop.rostereditor",
+  ],
+            delete:  [
+              "/Applications/BattleScribe Tools/",
+              "/Applications/BattleScribe.app",
+            ]
 end

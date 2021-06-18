@@ -1,11 +1,17 @@
-cask 'syncmate' do
-  version '7.4.452'
-  sha256 '541c4d6193851fa0d26bfe8d017d8cb4416adb010fd361f345ba47d088ab626f'
+cask "syncmate" do
+  version "8.1.475"
+  sha256 "991e806647abe4bbcf84f37872d64ed9dc11856e6f3270fd74ceb293a7415be7"
 
-  url "https://www.eltima.com/download/syncmate-update/SyncMate_#{version}.zip"
-  appcast 'https://cdn.eltima.com/download/syncmate-update/syncmate6.xml'
-  name 'SyncMate'
-  homepage 'https://mac.eltima.com/sync-mac.html'
+  url "https://cdn.electronic.us/products/syncmate/mac/update/SyncMate_#{version}.zip",
+      verified: "cdn.electronic.us/products/syncmate/"
+  name "SyncMate"
+  desc "All-in-one sync tool"
+  homepage "https://mac.eltima.com/sync-mac.html"
 
-  app 'SyncMate.app'
+  livecheck do
+    url "https://cdn.eltima.com/download/syncmate-update/syncmate6.xml"
+    strategy :sparkle
+  end
+
+  app "SyncMate.app"
 end

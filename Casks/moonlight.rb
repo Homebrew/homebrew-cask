@@ -1,14 +1,14 @@
-cask 'moonlight' do
-  version '1.1.0'
-  sha256 'fdbda47439f97b554f55ba3919b23cbf10c1765ecbb2eca249330c29eda1fc2c'
+cask "moonlight" do
+  version "3.1.3"
+  sha256 "c1bcc67d3b767d514a2d594aaf531a684709fd8516e39607f22a332cf0435302"
 
-  # github.com/moonlight-stream/moonlight-qt was verified as official when first introduced to the cask
-  url "https://github.com/moonlight-stream/moonlight-qt/releases/download/v#{version}/Moonlight-#{version}.dmg"
-  appcast 'https://github.com/moonlight-stream/moonlight-qt/releases.atom'
-  name 'Moonlight'
-  homepage 'https://moonlight-stream.org/'
+  url "https://github.com/moonlight-stream/moonlight-qt/releases/download/v#{version}/Moonlight-#{version}.dmg",
+      verified: "github.com/moonlight-stream/moonlight-qt/"
+  name "Moonlight"
+  desc "GameStream client"
+  homepage "https://moonlight-stream.org/"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'Moonlight.app'
+  app "Moonlight.app"
 end

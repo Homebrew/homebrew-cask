@@ -1,12 +1,20 @@
-cask 'dcommander' do
-  version :latest
+cask "dcommander" do
+  version "3.9.0.4"
   sha256 :no_check
 
-  url 'https://devstorm-apps.com/dc/download.php'
-  name 'DCommander'
-  homepage 'https://devstorm-apps.com/dc/'
+  url "https://devstorm-apps.com/dc/download.php"
+  name "DCommander"
+  desc "Two-pane file manager"
+  homepage "https://devstorm-apps.com/dc/"
 
-  app 'DCommander.app'
+  livecheck do
+    url "https://devstorm-apps.com/dc/download.php"
+    strategy :header_match do |headers|
+      headers["content-disposition"][/DCommander-(\d+)\.dmg/i, 1].split("", 4).join(".")
+    end
+  end
 
-  zap trash: '~/Library/Containers/com.devstorm.dc3'
+  app "DCommander.app"
+
+  zap trash: "~/Library/Containers/com.devstorm.dc3"
 end

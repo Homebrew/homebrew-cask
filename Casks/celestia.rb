@@ -1,11 +1,22 @@
-cask 'celestia' do
-  version '1.6.1'
-  sha256 'db09842a10b377038bedef87fda8d159549234b2e072fa22e096ade84aa3f52a'
+cask "celestia" do
+  version "1.6.2"
+  sha256 "d12778ecdf9036a8ca22b257d9f8574bf507cc8c886cb3808f4edca32f2d5b6e"
 
-  url "https://celestia.space/files/celestia/#{version}/celestia-osx-#{version}.dmg"
-  appcast 'https://github.com/CelestiaProject/Celestia/releases.atom'
-  name 'Celestia'
-  homepage 'https://celestia.space/'
+  url "https://github.com/CelestiaProject/Celestia/releases/download/#{version}/celestia-#{version}-macOS.zip",
+      verified: "github.com/CelestiaProject/Celestia"
+  name "Celestia"
+  desc "Space simulation for exploring the universe in three dimensions"
+  homepage "https://celestia.space/"
 
-  app 'Celestia.app'
+  livecheck do
+    url "https://celestia.space/download.html"
+    regex(%r{href=.*?/celestia[._-](\d+(?:\.\d+)*)[._-]macOS\.zip["' >]}i)
+  end
+
+  app "Celestia.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/space.celestia.Celestia",
+    "~/Library/Containers/space.celestia.Celestia",
+  ]
 end

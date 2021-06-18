@@ -1,17 +1,28 @@
-cask 'upwork' do
-  version '5.2.3.771,okk32anbjc976nah'
-  sha256 '19a684de87a3aae6f3e0b3b1b12431ff5e8a16d96a8b04b74fe5a00a3c321caf'
+cask "upwork" do
+  version "5.5.0.11,61df9c99b6df4e7b"
+  sha256 "7ef4888c9c812fe62a4c464714967c93495171acd003c9017b81172b882c5552"
 
   url "https://updates-desktopapp.upwork.com/binaries/v#{version.before_comma.dots_to_underscores}_#{version.after_comma}/Upwork.dmg"
-  name 'Upwork'
-  homepage 'https://www.upwork.com/'
+  name "Upwork"
+  desc "Work marketplace for freelancing"
+  homepage "https://www.upwork.com/"
 
-  app 'Upwork.app'
+  livecheck do
+    url "https://updates-desktopapp.upwork.com/binaries/versions-mac.json"
+    strategy :page_match do |page|
+      match = page.match(%r{/v(\d+(?:_\d+)*)_([^/]+)/Upwork\.dmg}i)
+      "#{match[1].tr("_", ".")},#{match[2]}"
+    end
+  end
+
+  app "Upwork.app"
 
   zap trash: [
-               '~/Library/Application Support/Upwork',
-               '~/Library/Caches/Upwork',
-               '~/Library/Logs/Upwork',
-               '~/Library/Saved Application State/com.upwork.upwork.savedState',
-             ]
+    "~/Library/Application Support/CrashReporter/Upwork_*",
+    "~/Library/Application Support/Upwork",
+    "~/Library/Caches/Upwork",
+    "~/Library/Logs/Upwork",
+    "~/Library/Preferences/com.upwork.Upwork.plist",
+    "~/Library/Saved Application State/com.upwork.upwork.savedState",
+  ]
 end

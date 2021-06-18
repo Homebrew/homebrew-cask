@@ -1,16 +1,28 @@
-cask 'veracrypt' do
-  version '1.23'
-  sha256 '8c5ba5e8a19de5a33461f3cd84617140736d7cb38e306d0ac4b1c058940227f3'
+cask "veracrypt" do
+  version "1.24-Update8"
+  sha256 "9edeae9fbf7f1b2eb91ce55ff82481bfd4c099e85c3c88cb6d6dd91b460a3a6b"
 
-  # launchpad.net/veracrypt/trunk was verified as official when first introduced to the cask
-  url "https://launchpad.net/veracrypt/trunk/#{version}/+download/VeraCrypt_#{version}.dmg"
-  appcast 'https://github.com/veracrypt/VeraCrypt/releases.atom'
-  name 'VeraCrypt'
-  homepage 'https://www.veracrypt.fr/'
+  url "https://launchpad.net/veracrypt/trunk/#{version.downcase}/+download/VeraCrypt_#{version}.dmg",
+      verified: "launchpad.net/veracrypt/trunk/"
+  name "VeraCrypt"
+  desc "Disk encryption software focusing on security based on TrueCrypt"
+  homepage "https://www.veracrypt.fr/"
 
-  depends_on cask: 'osxfuse'
+  livecheck do
+    url "https://github.com/veracrypt/VeraCrypt/releases"
+    strategy :github_latest
+    regex(%r{href=.*?/VeraCrypt_(\d+(?:\.\d+)*[^/]*?)\.dmg}i)
+  end
 
-  pkg 'VeraCrypt_Installer.pkg'
+  depends_on cask: "macfuse"
 
-  uninstall pkgutil: 'com.idrix.pkg.veracrypt'
+  pkg "VeraCrypt_Installer.pkg"
+
+  uninstall pkgutil: "com.idrix.pkg.veracrypt"
+
+  zap trash: [
+    "~/Library/Application Support/VeraCrypt",
+    "~/Library/Preferences/org.idrix.VeraCrypt.plist",
+    "~/Library/Saved Application State/org.idrix.VeraCrypt.savedState",
+  ]
 end

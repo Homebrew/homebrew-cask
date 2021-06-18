@@ -1,15 +1,17 @@
-cask 'unity-android-support-for-editor' do
-  version '2019.2.6f1,fe82a0e88406'
-  sha256 '984c7c254658a7237dac850e78cfab62000a5a982c21af5460877d53851aed5c'
+cask "unity-android-support-for-editor" do
+  version "2020.1.17f1,9957aee8edc2"
+  sha256 "c4c97b10dbf7a7ab23d01f6ca78da944bca45908d9f572181c436fe82dd8142c"
 
-  url "https://netstorage.unity3d.com/unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-#{version.before_comma}.pkg"
-  appcast 'https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json'
-  name 'Unity Android Build Support'
-  homepage 'https://unity3d.com/unity/'
+  url "https://download.unity3d.com/download_unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-#{version.before_comma}.pkg",
+      verified: "download.unity3d.com/download_unity/"
+  appcast "https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json"
+  name "Unity Android Build Support"
+  desc "Android target support for Unity"
+  homepage "https://unity.com/products"
 
-  depends_on cask: 'unity'
+  depends_on cask: "unity"
 
   pkg "UnitySetup-Android-Support-for-Editor-#{version.before_comma}.pkg"
 
-  uninstall pkgutil: 'com.unity3d.AndroidPlayer'
+  uninstall pkgutil: "com.unity3d.AndroidPlayer"
 end

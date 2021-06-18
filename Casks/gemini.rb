@@ -1,19 +1,29 @@
-cask 'gemini' do
-  version '2.5.6,330:1563371706'
-  sha256 '7bac1118c4caa76e13e0d0686b4ab3424adcd491ef9154acd6105e0aabb19c01'
+cask "gemini" do
+  version "2.8.9,381:1622733157"
+  sha256 "558fd155d7e09846aff668e53309fa96407cf0230bc53b8914c947607a1e2c47"
 
-  # dl.devmate.com/com.macpaw.site.Gemini was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.macpaw.site.Gemini#{version.major}/#{version.after_comma.before_colon}/#{version.after_colon}/Gemini#{version.major}-#{version.after_comma.before_colon}.zip"
-  appcast "https://updates.devmate.com/com.macpaw.site.Gemini#{version.major}.xml"
-  name 'Gemini'
-  homepage 'https://macpaw.com/gemini'
+  url "https://dl.devmate.com/com.macpaw.site.Gemini#{version.major}/#{version.after_comma.before_colon}/#{version.after_colon}/Gemini#{version.major}-#{version.after_comma.before_colon}.zip",
+      verified: "dl.devmate.com/com.macpaw.site.Gemini"
+  name "Gemini"
+  desc "Disk space cleaner that finds and deletes duplicated and similar files"
+  homepage "https://macpaw.com/gemini"
+
+  livecheck do
+    url "https://updates.devmate.com/com.macpaw.site.Gemini#{version.major}.xml"
+    strategy :sparkle do |item|
+      "#{item.short_version},#{item.version}:#{item.url[%r{/(\d+)/Gemini.*?\.zip}i, 1]}"
+    end
+  end
 
   app "Gemini #{version.major}.app"
 
   zap trash: [
-               '~/Library/Application Support/Gemini 2',
-               '~/Library/Caches/com.macpaw.site.Gemini2',
-               '~/Library/Preferences/com.macpaw.site.Gemini2.plist',
-               '~/Library/Saved Application State/com.macpaw.site.Gemini2.savedState',
-             ]
+    "~/Library/Application Support/Gemini*",
+    "~/Library/Caches/com.macpaw.site.Gemini*",
+    "~/Library/Cookies/com.macpaw.site.Gemini*.binarycookies",
+    "~/Library/Logs/com.macpaw.site.Gemini*",
+    "~/Library/Preferences/com.macpaw.site.Gemini*",
+    "~/Library/Saved Application State/com.macpaw.site.Gemini*",
+    "/Users/Shared/Gemini #{version.major}",
+  ]
 end

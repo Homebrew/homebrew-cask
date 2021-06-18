@@ -1,11 +1,16 @@
-cask 'pdf-squeezer' do
-  version '3.10.5'
-  sha256 '30ed7389586cad83a9702e2f5f311fc1aab24dc1d8cf4f038b5bfa629c36c92a'
+cask "pdf-squeezer" do
+  version "4.2.2,607b"
+  sha256 :no_check
 
-  url 'https://witt-software.com/downloads/pdfsqueezer/PDF%20Squeezer.dmg'
-  appcast 'https://witt-software.com/downloads/pdfsqueezer/appcast.xml'
-  name 'PDF Squeezer'
-  homepage 'https://witt-software.com/pdfsqueezer/'
+  url "https://www.witt-software.com/downloads/pdfsqueezer/PDF%20Squeezer.dmg"
+  name "PDF Squeezer"
+  desc "PDF compression tool"
+  homepage "https://witt-software.com/pdfsqueezer/"
 
-  app 'PDF Squeezer.app'
+  livecheck do
+    url "https://www.witt-software.com/downloads/pdfsqueezer/pdfsq4-appcast.xml"
+    strategy :sparkle
+  end
+
+  app "PDF Squeezer.app"
 end

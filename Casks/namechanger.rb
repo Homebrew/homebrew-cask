@@ -1,19 +1,24 @@
-cask 'namechanger' do
-  version '3.4.2'
-  sha256 '9da44a88bcb4ba10fc918671bd11237df8fea2469d3fb34bdf311435c0cf7ed3'
+cask "namechanger" do
+  version "3.4.3,12"
+  sha256 "27ca369e1c355b2f7683caf709db7c180a8dfeeed3bbd72db55db54889a70ac4"
 
-  url "https://www.mrrsoftware.com/Downloads/NameChanger/Updates/NameChanger-#{version.dots_to_underscores}.zip"
-  appcast 'https://mrrsoftware.com/Downloads/NameChanger/Updates/NameChangerSoftwareUpdates.xml'
-  name 'NameChanger'
-  homepage 'https://mrrsoftware.com/namechanger/'
+  url "https://www.mrrsoftware.com/Downloads/NameChanger/Updates/NameChanger-#{version.before_comma.dots_to_underscores}.zip"
+  name "NameChanger"
+  desc "Rename a list of files quickly"
+  homepage "https://mrrsoftware.com/namechanger/"
+
+  livecheck do
+    url "https://mrrsoftware.com/Downloads/NameChanger/Updates/NameChangerSoftwareUpdates.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 
-  app 'NameChanger.app'
+  app "NameChanger.app"
 
   zap trash: [
-               '~/Library/Application Support/NameChanger',
-               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mrrsoftware.namechanger.sfl*',
-               '~/Library/Preferences/com.mrrsoftware.NameChanger.plist',
-             ]
+    "~/Library/Application Support/NameChanger",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mrrsoftware.namechanger.sfl*",
+    "~/Library/Preferences/com.mrrsoftware.NameChanger.plist",
+  ]
 end

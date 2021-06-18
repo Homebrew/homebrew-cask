@@ -1,11 +1,18 @@
-cask 'fastrawviewer' do
-  version '1.5.3.1519'
-  sha256 '13de302a1069136c89db652ae72e0823a8d61eb6d90fac8044c35d5bc64717ea'
+cask "fastrawviewer" do
+  version "1.7.4.1736"
+  sha256 "d8b34eb49309f767f1449698ae43a7c1a5faba7677176685b8adbc071d414523"
 
   url "https://updates.fastrawviewer.com/data/FastRawViewer-#{version}.dmg"
-  appcast 'https://www.fastrawviewer.com/download'
-  name 'FastRawViewer'
-  homepage 'https://www.fastrawviewer.com/'
+  name "FastRawViewer"
+  desc "Opens RAW files and renders them on-the-fly"
+  homepage "https://www.fastrawviewer.com/"
 
-  app 'FastRawViewer.app'
+  livecheck do
+    url "https://updates.fastrawviewer.com/data/"
+    regex(/FastRawViewer[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+  end
+
+  depends_on macos: ">= :sierra"
+
+  app "FastRawViewer.app"
 end

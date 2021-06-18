@@ -1,11 +1,16 @@
-cask 'cevelop' do
-  version '1.12.1-201907101456'
-  sha256 '4d1e4737a5ff1373e213d57472c29d270b02edee30e5821dd61fbd3b7bf1945a'
+cask "cevelop" do
+  version "1.14.1-202002280945"
+  sha256 "f3075e6655fac42f6eca6915e348096f24d6f500969932829f52ec978f963924"
 
   url "https://www.cevelop.com/cevelop/downloads/cevelop-#{version}-macosx.cocoa.x86_64.tar.gz"
-  appcast 'https://www.cevelop.com/download/'
-  name 'Cevelop'
-  homepage 'https://www.cevelop.com/'
+  name "Cevelop"
+  homepage "https://www.cevelop.com/"
 
-  app 'Cevelop.app'
+  livecheck do
+    url "https://www.cevelop.com/download/"
+    strategy :page_match
+    regex(%r{href=.*?/cevelop-(\d+(?:\.\d+)*-\d+)-macosx\.cocoa\.x86_64\.tar\.gz}i)
+  end
+
+  app "Cevelop.app"
 end

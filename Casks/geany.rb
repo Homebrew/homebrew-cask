@@ -1,11 +1,19 @@
-cask 'geany' do
-  version '1.35'
-  sha256 '84fb174cfd4f1ed1c1c6873bc2f09565a2dc7a0ec917800cb053aee9b8ed4227'
+cask "geany" do
+  version "1.37,3"
+  sha256 "dc8ed9352f0b433503e4d8eef3e6da3e4e2e5d5d1b1b2d63a3e3c85518a74cc5"
 
-  url "https://download.geany.org/geany-#{version}_osx.dmg"
-  appcast 'https://github.com/geany/geany/releases.atom'
-  name 'Geany'
-  homepage 'https://www.geany.org/'
+  url "https://download.geany.org/geany-#{version.before_comma}_osx#{version.after_comma&.prepend("-")}.dmg"
+  name "Geany"
+  desc "Fast and lightweight IDE"
+  homepage "https://www.geany.org/"
 
-  app 'Geany.app'
+  livecheck do
+    url "https://geany.org/download/releases/"
+    strategy :page_match do |page|
+      match = page.match(/href=.*?geany[._-](\d+(?:\.\d+)+)[._-]osx(?:[._-](\d+))?\.dmg/i)
+      match[2] ? "#{match[1]},#{match[2]}" : match[1]
+    end
+  end
+
+  app "Geany.app"
 end

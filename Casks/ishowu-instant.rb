@@ -1,11 +1,18 @@
-cask 'ishowu-instant' do
-  version '1.2.11'
-  sha256 '7429c2d8a9c7ecdf67b2bb00dc1319836f2114281e6906f9432cb522f2b0765b'
+cask "ishowu-instant" do
+  version "1.4.4,1257"
+  sha256 "b166097006dc3e309a7e27981b57c979291587f254785e9e2ed33b8c313a6dbe"
 
-  url "https://www.shinywhitebox.com/downloads/instant/iShowU_Instant_#{version}.dmg"
-  appcast 'https://www.shinywhitebox.com/store/appcast.php?p=14'
-  name 'iShowU Instant'
-  homepage 'https://www.shinywhitebox.com/ishowu-instant'
+  url "https://www.shinywhitebox.com/downloads/instant/iShowU_Instant_#{version.before_comma}.dmg"
+  name "iShowU Instant"
+  desc "Realtime screen recording"
+  homepage "https://www.shinywhitebox.com/ishowu-instant"
 
-  app 'iShowU Instant.app'
+  livecheck do
+    url "https://www.shinywhitebox.com/store/appcast.php?p=14"
+    strategy :sparkle
+  end
+
+  depends_on macos: ">= :mojave"
+
+  app "iShowU Instant.app"
 end

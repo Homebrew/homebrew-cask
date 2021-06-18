@@ -1,13 +1,14 @@
-cask 'onlyoffice' do
-  version '5.3.5'
-  sha256 'b7c74e054eb2b429a4c6a9bdf225ce5d49960f8180ae19c0f8901e9e84c7929e'
+cask "onlyoffice" do
+  version "6.2.0"
+  sha256 "cb70d3eb81c3a93ef130243b3ccaf065c37cd024583453debdb32ec862fb4070"
 
-  url "https://download.onlyoffice.com/install/desktop/editors/mac/updates/onlyoffice/ONLYOFFICE-#{version}.zip"
-  appcast 'https://download.onlyoffice.com/install/desktop/editors/mac/onlyoffice.xml'
-  name 'ONLYOFFICE'
-  homepage 'https://www.onlyoffice.com/'
+  url "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v#{version}/ONLYOFFICE.dmg",
+      verified: "github.com/ONLYOFFICE/DesktopEditors/"
+  name "ONLYOFFICE"
+  desc "Document editor"
+  homepage "https://www.onlyoffice.com/"
 
   auto_updates true
 
-  app 'ONLYOFFICE.app'
+  app "ONLYOFFICE.app"
 end

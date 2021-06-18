@@ -1,19 +1,26 @@
-cask 'icq' do
-  version '3.0.22949'
-  sha256 'e080f5004c53d891affd7b693b52e9007d7f33b786893ecd273c3ea446277754'
+cask "icq" do
+  version "3.0.32393"
+  sha256 "3d645a9badd7524f3f9a23187a40079098427907d75f2c1ecaa676ff5369d2ec"
 
-  # mra.mail.ru/icq_mac3_update was verified as official when first introduced to the cask
-  url 'https://mra.mail.ru/icq_mac3_update/icq.dmg'
-  appcast 'https://mra.mail.ru/icq_mac3_update/icq_update.xml'
-  name 'ICQ for macOS'
-  homepage 'https://icq.com/mac/en'
+  url "https://icq-www.hb.bizmrg.com/mac/x64/#{version}/icq.dmg",
+      verified: "icq-www.hb.bizmrg.com/"
+  name "ICQ"
+  desc "Messenger application"
+  homepage "https://icq.com/desktop"
 
-  app 'ICQ.app'
+  livecheck do
+    url "https://icq-www.hb.bizmrg.com/mac/x64/#{version}/version.xml"
+    strategy :sparkle
+  end
+
+  auto_updates true
+
+  app "ICQ.app"
 
   zap trash: [
-               '~/Library/Application Support/ICQ',
-               '~/Library/Caches/com.icq.macicq',
-               '~/Library/Preferences/com.icq.macicq.plist',
-               '~/Library/Saved Application State/com.icq.macicq.savedState',
-             ]
+    "~/Library/Application Support/ICQ",
+    "~/Library/Caches/com.icq.macicq",
+    "~/Library/Preferences/com.icq.macicq.plist",
+    "~/Library/Saved Application State/com.icq.macicq.savedState",
+  ]
 end

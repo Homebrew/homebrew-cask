@@ -54,11 +54,6 @@ function get_unity {
   brew search 'unity' | grep '^unity' | grep --invert-match --extended-regexp '(hub|player|assets)'
 }
 
-if ! command -v 'cask-repair' &>/dev/null; then
-  echo 'You need cask-repair to run this script'
-  exit 1
-fi
-
 if [[ -z "${new_version}" ]] || ! is_in_array "${cask_family}" "${families[@]}"; then
   usage
   exit 1
@@ -79,5 +74,5 @@ for cask in $(get_${cask_family}); do
     continue
   fi
 
-  cask-repair --cask-version "${new_version}" --blind-submit "${cask}"
+  brew bump-cask-pr --no-browse --version "${new_version}" "${cask}"
 done

@@ -1,11 +1,17 @@
-cask 'miktex-console' do
-  version '2.9.7050-1'
-  sha256 '46689b9de8bf158d6c74a17ecdcacc418e8303bc47988228fa395c660d41a9fa'
+cask "miktex-console" do
+  version "21.6"
+  sha256 "1b6a638fca11cdce448cb7a1916c0bc49f38474d8a7d3a425611ded47bbacd19"
 
   url "https://miktex.org/download/ctan/systems/win32/miktex/setup/darwin-x86_64/miktex-#{version}-darwin-x86_64.dmg"
-  appcast 'https://miktex.org/download'
-  name 'MiKTeX'
-  homepage 'https://miktex.org/'
+  name "MiKTeX"
+  desc "TeX distribution"
+  homepage "https://miktex.org/"
 
-  app 'MiKTeX Console.app'
+  livecheck do
+    url "https://miktex.org/download"
+    strategy :page_match
+    regex(%r{href=.*?/miktex-(\d+(?:\.\d+)*)-darwin-x86_64\.dmg}i)
+  end
+
+  app "MiKTeX Console.app"
 end

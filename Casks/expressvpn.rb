@@ -1,16 +1,24 @@
-cask 'expressvpn' do
-  version '7.4.0.6914'
-  sha256 'adb83e34a2891cbf652f04b8ed0c20e82dc597538d41b40f0640093ff746aab4'
+cask "expressvpn" do
+  version "10.3.0.49"
+  sha256 "46b843e6396ab8f5dca3ba838e72ce9ae408a80e3ce197f76cb8995bfd97c4ad"
 
-  url "https://download.expressvpn.xyz/clients/mac/expressvpn-install_v#{version}.pkg"
-  appcast 'https://www.expressvpn.xyz/vpn-software/vpn-mac'
-  name 'ExpressVPN'
-  homepage 'https://www.expressvpn.xyz/vpn-software/vpn-mac/'
+  url "https://www.expressvpn.works/clients/mac/expressvpn_mac_#{version}_release.pkg"
+  name "ExpressVPN"
+  desc "VPN client for secure internet access and private browsing"
+  homepage "https://www.expressvpn.works/"
 
-  auto_updates true
+  livecheck do
+    url "https://www.expressvpn.works/clients/latest/mac"
+    strategy :header_match
+  end
 
-  pkg "expressvpn-install_v#{version}.pkg"
+  pkg "expressvpn_mac_#{version}_release.pkg"
 
-  uninstall pkgutil:   'com.expressvpn.ExpressVPN',
-            launchctl: 'com.expressvpn.ExpressVPN.agent'
+  uninstall launchctl: "com.expressvpn.ExpressVPN.agent",
+            script:    {
+              executable: "#{appdir}/ExpressVPN.app/Contents/Resources/uninstall.tool",
+              input:      ["Yes"],
+              sudo:       true,
+            },
+            pkgutil:   "com.expressvpn.ExpressVPN"
 end

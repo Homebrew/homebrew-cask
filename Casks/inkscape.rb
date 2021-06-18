@@ -1,15 +1,34 @@
-cask 'inkscape' do
-  version '0.92.2-1'
-  sha256 'faece7a9a5fa9db7724b0c761f7f2014676d00ef8b90a0ef506fa39d09209fea'
+cask "inkscape" do
+  version "1.1"
+  sha256 "5f3308c00119ee9bc3732c7e9cbde208357b57e6d58f1edc08da9e10330c2d9d"
 
-  url "https://media.inkscape.org/dl/resources/file/Inkscape-#{version}-x11-10.7-x86_64.dmg"
-  name 'Inkscape'
-  homepage 'https://inkscape.org/'
+  url "https://media.inkscape.org/dl/resources/file/Inkscape-#{version}.0.dmg"
+  name "Inkscape"
+  desc "Vector graphics editor"
+  homepage "https://inkscape.org/"
 
-  depends_on x11: true
+  livecheck do
+    url "https://inkscape.org/release"
+    strategy :header_match
+  end
 
-  app 'Inkscape.app'
-  binary "#{appdir}/Inkscape.app/Contents/Resources/bin/inkscape"
+  app "Inkscape.app"
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/inkscape.wrapper.sh"
+  binary shimscript, target: "inkscape"
 
-  zap trash: '~/.inkscape-etc'
+  preflight do
+    IO.write shimscript, <<~EOS
+      #!/bin/sh
+      exec '#{staged_path}/Inkscape.app/Contents/MacOS/inkscape' "$@"
+    EOS
+  end
+
+  zap trash: [
+    "~/.config/inkscape",
+    "~/Library/Application Support/Inkscape",
+    "~/Library/Application Support/org.inkscape.Inkscape",
+    "~/Library/Preferences/org.inkscape.Inkscape.plist",
+    "~/Library/Saved Application State/org.inkscape.Inkscape.savedState",
+  ]
 end

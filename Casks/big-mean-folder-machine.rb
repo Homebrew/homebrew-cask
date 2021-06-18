@@ -1,11 +1,16 @@
-cask 'big-mean-folder-machine' do
-  version '2.39'
-  sha256 '9625293528edf4b32f62bbbd21dac956acf0a1902523e63153f6be01063f75fc'
+cask "big-mean-folder-machine" do
+  version "2.42"
+  sha256 :no_check
 
-  url 'https://www.publicspace.net/download/BMFM.dmg'
-  appcast "https://www.publicspace.net/app/bmfm#{version.major}.xml"
-  name 'Big Mean Folder Machine'
-  homepage 'https://www.publicspace.net/BigMeanFolderMachine/'
+  url "https://www.publicspace.net/download/BMFM.dmg"
+  name "Big Mean Folder Machine"
+  desc "File/folder management utility"
+  homepage "https://www.publicspace.net/BigMeanFolderMachine/"
+
+  livecheck do
+    url "https://www.publicspace.net/app/bmfm#{version.major}.xml"
+    strategy :sparkle
+  end
 
   app "Big Mean Folder Machine #{version.major}.app"
 end

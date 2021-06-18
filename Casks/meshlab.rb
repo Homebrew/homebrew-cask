@@ -1,19 +1,24 @@
-cask 'meshlab' do
-  version '2016.12'
-  sha256 '1a9d81f7bb7fb3da223e83768d13601b4728abde9276a415049bbb33b74baecf'
+cask "meshlab" do
+  version "2021.05"
+  sha256 "2696f00573666853d3ef9ed7d3b42d39b91431ca8f45e6997dd288d29f8b8218"
 
-  # github.com/cnr-isti-vclab/meshlab was verified as official when first introduced to the cask
-  url "https://github.com/cnr-isti-vclab/meshlab/releases/download/v#{version}/MeshLab#{version}.dmg"
-  appcast 'https://github.com/cnr-isti-vclab/meshlab/releases.atom'
-  name 'MeshLab'
-  homepage 'http://www.meshlab.net/'
+  url "https://github.com/cnr-isti-vclab/meshlab/releases/download/Meshlab-#{version}/MeshLab#{version}-macos.dmg",
+      verified: "github.com/cnr-isti-vclab/meshlab/"
+  name "MeshLab"
+  desc "Mesh processing system"
+  homepage "https://www.meshlab.net/"
 
-  app 'meshlab.app'
+  livecheck do
+    url :url
+    regex(/^Meshlab[._-]v?(\d+(?:\.\d+)+)$/i)
+  end
+
+  app "MeshLab#{version}.app"
 
   postflight do
     # workaround for bug which breaks the app on case-sensitive filesystems
-    Dir.chdir("#{appdir}/meshlab.app/Contents/MacOS") do
-      File.symlink('meshlab', 'MeshLab') unless File.exist? 'MeshLab'
+    Dir.chdir("#{appdir}/MeshLab#{version}.app/Contents/MacOS") do
+      File.symlink("meshlab", "MeshLab") unless File.exist? "MeshLab"
     end
   end
 end

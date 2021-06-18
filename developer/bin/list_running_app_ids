@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
+
 #
 # list_running_app_ids
 #
@@ -9,49 +11,51 @@
 
 require "open3"
 require "set"
+require "io/console"
 
 ###
 ### globals
 ###
 
 $opt_test = nil
+$COLUMNS = IO.console.winsize.last
 
 ###
 ### methods
 ###
 
 def check_ruby
-  if RUBY_VERSION.to_f < 2.0
-    print "You are currently using Ruby ", RUBY_VERSION, ", but version 2.0 or above is required."
-    exit 1
-  end
+  return if RUBY_VERSION.to_f >= 2.0
+
+  print "You are currently using Ruby ", RUBY_VERSION, ", but version 2.0 or above is required."
+  exit 1
 end
 
 def usage
-  <<-EOS
-list_running_app_ids [ -t <bundle-id> ]
+  <<~EOS
+    list_running_app_ids [ -t <bundle-id> ]
 
-Print a list of currently running Applications and associated
-Bundle IDs, which may be useful in a Cask uninstall stanza, eg
+    Print a list of currently running Applications and associated
+    Bundle IDs, which may be useful in a Cask uninstall stanza, eg
 
-    uninstall quit: 'bundle.id.goes.here'
+        uninstall quit: 'bundle.id.goes.here'
 
-Applications attributed to Apple are excluded from the output.
+    Applications attributed to Apple are excluded from the output.
 
-With optional "-t <bundle-id>", silently test if a given app
-is running, exiting with an error code if not.
+    With optional "-t <bundle-id>", silently test if a given app
+    is running, exiting with an error code if not.
 
-See CONTRIBUTING.md for more information.
+    See CONTRIBUTING.md for more information.
 
-EOS
+  EOS
 end
 
 def process_args
   until ARGV.empty?
-    if ARGV.first =~ %r{^-+t(?:est)?$} && ARGV.length > 1
+    if ARGV.first =~ /^-+t(?:est)?$/ && ARGV.length > 1
       ARGV.shift
       $opt_test = ARGV.shift
-    elsif ARGV.first =~ %r{^-+h(?:elp)?$}
+    elsif /^-+h(?:elp)?$/.match?(ARGV.first)
       puts usage
       exit 0
     else
@@ -62,8 +66,10 @@ def process_args
 end
 
 def load_apps
-  out, err, status = Open3.capture3("/usr/bin/osascript", "-e", 'tell application "System Events" to get (name, bundle identifier, unix id) of every process')
-  if status.exitstatus > 0
+  out, err, status =
+    Open3.capture3("/usr/bin/osascript", "-e",
+                   'tell application "System Events" to get (name, bundle identifier, unix id) of every process')
+  if status.exitstatus.positive?
     puts err
     exit status.exitstatus
   end
@@ -79,16 +85,11 @@ def test_app(bundle)
 end
 
 def excluded_bundle_id(bundle_id)
-  %r{^com\.apple\.}.match(bundle_id)
+  /^com\.apple\./.match(bundle_id)
 end
 
 def excluded_app_name(app_name)
-  %r{^osascript$}.match(app_name) # this script itself
-end
-
-def expand(table)
-  @COLUMNS = `/usr/bin/tput cols`.to_i
-  puts `echo '#{table}'| /usr/bin/expand -t#{@COLUMNS / 2}`
+  /^osascript$/.match(app_name) # this script itself
 end
 
 def report_apps
@@ -96,13 +97,14 @@ def report_apps
   @app_names.zip(@bundle_ids, @unix_ids).each do |app_name, bundle_id, _unix_id|
     next if excluded_bundle_id bundle_id
     next if excluded_app_name app_name
-    bundle_id.gsub!(%r{^(missing value)$}, '<\1>')
-    running.add "#{bundle_id}\t#{app_name}"
+
+    bundle_id.gsub!(/^(missing value)$/, '<\1>')
+    running.add "#{bundle_id.ljust($COLUMNS / 2)}\t#{app_name}"
   end
 
-  expand "bundle_id\tapp_name"
-  puts "-" * @COLUMNS + "\n"
-  expand running.to_a.sort.join "\n"
+  puts "#{"bundle_id".ljust($COLUMNS / 2)}\tapp_name"
+  puts "-" * $COLUMNS
+  puts running.to_a.sort.join "\n"
 end
 
 ###

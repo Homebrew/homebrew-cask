@@ -1,25 +1,18 @@
-<!-- If there’s a checkbox you can’t complete for any reason, that's okay, just explain in detail why you weren’t able to do so. -->
+**Important:** *Do not tick a checkbox if you haven’t performed its action.* Honesty is indispensable for a smooth review process.
 
-After making all changes to the cask:
+_In the following questions `<cask>` is the token of the cask you're submitting._
 
-- [ ] `brew cask audit --download {{cask_file}}` is error-free.
-- [ ] `brew cask style --fix {{cask_file}}` reports no offenses.
-- [ ] The commit message includes the cask’s name and version.
-- [ ] The submission is for [a stable version](https://github.com/Homebrew/homebrew-cask/blob/master/doc/development/adding_a_cask.md#finding-a-home-for-your-cask) or [documented exception](https://github.com/Homebrew/homebrew-cask/blob/master/doc/development/adding_a_cask.md#but-there-is-no-stable-version).
+After making all changes to a cask, verify:
 
-Additionally, if **adding a new cask**:
+- [ ] The submission is for [a stable version](https://docs.brew.sh/Acceptable-Casks#stable-versions) or [documented exception](https://docs.brew.sh/Acceptable-Casks#but-there-is-no-stable-version).
+- [ ] `brew audit --cask <cask>` is error-free.
+- [ ] `brew style --fix <cask>` reports no offenses.
 
-- [ ] Named the cask according to the [token reference].
-- [ ] `brew cask install {{cask_file}}` worked successfully.
-- [ ] `brew cask uninstall {{cask_file}}` worked successfully.
-- [ ] Checked there are no [open pull requests] for the same cask.
-- [ ] Checked the cask was not [already refused].
-- [ ] Checked the cask is submitted to [the correct repo].
-- [ ] Attempted to find an [appcast].
+Additionally, **if adding a new cask**:
 
-[token reference]: https://github.com/Homebrew/homebrew-cask/blob/master/doc/cask_language_reference/token_reference.md
-[open pull requests]: https://github.com/Homebrew/homebrew-cask/pulls
-[already refused]: https://github.com/Homebrew/homebrew-cask/search?q=is%3Aclosed&type=Issues
-[the correct repo]: https://github.com/Homebrew/homebrew-cask/blob/master/doc/development/adding_a_cask.md#finding-a-home-for-your-cask
-[version-checksum]: https://github.com/Homebrew/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/sha256.md#updating-the-sha256
-[appcast]: https://github.com/Homebrew/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/appcast.md
+- [ ] Named the cask according to the [token reference](https://docs.brew.sh/Cask-Cookbook#token-reference).
+- [ ] Checked the cask was not [already refused](https://github.com/Homebrew/homebrew-cask/search?q=is%3Aclosed&type=Issues).
+- [ ] Checked the cask is submitted to [the correct repo](https://docs.brew.sh/Acceptable-Casks#finding-a-home-for-your-cask).
+- [ ] `brew audit --new-cask <cask>` worked successfully.
+- [ ] `brew install --cask <cask>` worked successfully.
+- [ ] `brew uninstall --cask <cask>` worked successfully.

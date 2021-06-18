@@ -1,20 +1,25 @@
-cask 'vellum' do
-  version '2.6.1'
-  sha256 'c204b34f7217eb306c7f7d4b32f94356350603cd4ae7602760b39a877ed95357'
+cask "vellum" do
+  version "2.8.5,28500"
+  sha256 "dfe6935cae86043876a9288e645779bcff94d7b06a7f4c039f3d9c80e757fd89"
 
-  # 180g.s3.amazonaws.com/downloads was verified as official when first introduced to the cask
-  url "https://180g.s3.amazonaws.com/downloads/Vellum-#{version.no_dots}00.zip"
-  appcast 'https://get.180g.co/updates/vellum/'
-  name 'Vellum'
-  homepage 'https://vellum.pub/'
+  url "https://180g.s3.amazonaws.com/downloads/Vellum-#{version.after_comma}.zip",
+      verified: "180g.s3.amazonaws.com/downloads/"
+  name "Vellum"
+  desc "Ebook creation software"
+  homepage "https://vellum.pub/"
+
+  livecheck do
+    url "https://get.180g.co/updates/vellum/"
+    strategy :sparkle
+  end
 
   auto_updates true
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :mojave"
 
-  app 'Vellum.app'
+  app "Vellum.app"
 
   zap trash: [
-               '~/Library/Application Scripts/co.180g.Vellum',
-               '~/Library/Containers/co.180g.Vellum',
-             ]
+    "~/Library/Application Scripts/co.180g.Vellum",
+    "~/Library/Containers/co.180g.Vellum",
+  ]
 end

@@ -1,22 +1,28 @@
-cask 'azure-data-studio' do
-  version '1.11.0'
-  sha256 '91f7b02a340a6db0a64a4819331739a0608c6a8a326d4bfa055340efb02dfdd7'
+cask "azure-data-studio" do
+  version "1.30.0"
+  sha256 "580e8dcfc1e85b0965c929f1c83476e101bb5d5ad467b209a96e846834323103"
 
-  # github.com/Microsoft/azuredatastudio was verified as official when first introduced to the cask
-  url "https://github.com/Microsoft/azuredatastudio/releases/download/#{version}/azuredatastudio-macos-#{version}.zip"
-  appcast 'https://github.com/Microsoft/azuredatastudio/releases.atom'
-  name 'Azure Data Studio'
-  homepage 'https://docs.microsoft.com/en-us/sql/azure-data-studio/'
+  url "https://azuredatastudio-update.azurewebsites.net/#{version}/darwin/stable",
+      verified: "azuredatastudio-update.azurewebsites.net/"
+  name "Azure Data Studio"
+  desc "Data management tool that enables working with SQL Server"
+  homepage "https://docs.microsoft.com/en-us/sql/azure-data-studio/"
+
+  livecheck do
+    url "https://azuredatastudio-update.azurewebsites.net/api/update/darwin/stable/VERSION"
+    strategy :page_match
+    regex(/"productVersion"\s*:\s*"(\d+(:?\.\d+)*)"/)
+  end
 
   auto_updates true
 
-  app 'Azure Data Studio.app'
-  binary "#{appdir}/Azure Data Studio.app/Contents/Resources/app/bin/code", target: 'azuredatastudio'
+  app "Azure Data Studio.app"
+  binary "#{appdir}/Azure Data Studio.app/Contents/Resources/app/bin/code", target: "azuredatastudio"
 
   zap trash: [
-               '~/Library/Application Support/azuredatastudio',
-               '~/Library/Preferences/com.azuredatastudio.oss.helper.plist',
-               '~/Library/Preferences/com.azuredatastudio.oss.plist',
-               '~/Library/Saved Application State/com.azuredatastudio.oss.savedState',
-             ]
+    "~/Library/Application Support/azuredatastudio",
+    "~/Library/Preferences/com.azuredatastudio.oss.helper.plist",
+    "~/Library/Preferences/com.azuredatastudio.oss.plist",
+    "~/Library/Saved Application State/com.azuredatastudio.oss.savedState",
+  ]
 end

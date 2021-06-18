@@ -1,22 +1,28 @@
-cask 'deezer' do
-  version '4.16.3'
-  sha256 '28ef9bd6baaba664c07fb91b91ea033af25b54dc964d827333425491ae47f882'
+cask "deezer" do
+  version "5.20.0"
+  sha256 "3e059ab3457e5d5b3289534c3daadf65d12922fb73244bb0c01e5d8e288fec24"
 
   url "https://www.deezer.com/desktop/download/artifact/darwin/x64/#{version}"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.deezer.com/desktop/download%3Fplatform%3Ddarwin%26architecture=x64'
-  name 'Deezer'
-  homepage 'https://www.deezer.com/download'
+  name "Deezer"
+  desc "Music player"
+  homepage "https://www.deezer.com/download"
+
+  livecheck do
+    url "https://www.deezer.com/desktop/download?platform=darwin&architecture=x64"
+    strategy :header_match
+  end
 
   auto_updates true
+  depends_on macos: ">= :yosemite"
 
-  app 'Deezer.app'
+  app "Deezer.app"
 
   zap trash: [
-               '~/Library/Application Support/Caches/deezer-desktop-updater',
-               '~/Library/Application Support/deezer-desktop',
-               '~/Library/Logs/Deezer',
-               '~/Library/Preferences/ByHost/com.deezer.*',
-               '~/Library/Preferences/com.deezer.deezer-desktop.plist',
-               '~/Library/Saved Application State/com.deezer.deezer-desktop.savedState',
-             ]
+    "~/Library/Application Support/Caches/deezer-desktop-updater",
+    "~/Library/Application Support/deezer-desktop",
+    "~/Library/Logs/Deezer",
+    "~/Library/Preferences/ByHost/com.deezer.*",
+    "~/Library/Preferences/com.deezer.deezer-desktop.plist",
+    "~/Library/Saved Application State/com.deezer.deezer-desktop.savedState",
+  ]
 end

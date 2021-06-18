@@ -1,13 +1,19 @@
-cask 'commander-one' do
-  version '2.2'
-  sha256 'd0d5fdf26336359cb23e2bb20097f5f1226d0c4868212a1692faf26e433d3ba6'
+cask "commander-one" do
+  version "3.1,3457"
+  sha256 :no_check
 
-  url 'https://cdn.eltima.com/download/commander.dmg'
-  appcast 'https://cdn.eltima.com/download/commander-update/settings.xml'
-  name 'Commander One'
-  homepage 'https://mac.eltima.com/file-manager.html'
+  url "https://cdn.electronic.us/products/commander/mac/download/commander.dmg",
+      verified: "cdn.electronic.us/"
+  name "Commander One"
+  desc "Two-panel file manager"
+  homepage "https://mac.eltima.com/file-manager.html"
 
-  depends_on macos: '>= :yosemite'
+  livecheck do
+    url "https://cdn.electronic.us/products/commander/mac/update/settings.xml"
+    strategy :sparkle
+  end
 
-  app 'Commander One.app'
+  depends_on macos: ">= :sierra"
+
+  app "Commander One.app"
 end

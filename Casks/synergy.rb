@@ -1,10 +1,20 @@
-cask 'synergy' do
-  version '1.10.3,b139:ca35737a'
-  sha256 '10824301d3079abbdcecfb6b2f83dc9371d929331049fd1f405b58d749f22fee'
+cask "synergy" do
+  version "1.14.0,67d824b8"
+  sha256 "b52b0ca4e861a644cdfc66e48c0eea4d914e9a0df4b98887a4c7d9bf18253d26"
 
-  url "https://binaries.symless.com/synergy/v#{version.before_comma.major}-core-standard/v#{version.before_comma}-stable-#{version.after_colon}/synergy_#{version.before_comma}-stable_#{version.after_comma.before_colon}-#{version.after_colon}_macos.dmg"
-  name 'Synergy'
-  homepage 'https://symless.com/synergy'
+  url "https://binaries.symless.com/synergy/v#{version.before_comma.major}-core-standard/#{version.before_comma}-stable.#{version.after_comma}/synergy_#{version.before_comma}-stable.#{version.after_comma}_macos_x86-64.dmg"
+  name "Synergy"
+  desc "Keyboard and mouse sharing tool - open-source core"
+  homepage "https://symless.com/synergy"
 
-  app 'Synergy.app'
+  livecheck do
+    url "https://github.com/symless/synergy-core"
+    strategy :github_latest do |page|
+      version = page[%r{href=.*?/tag/v?(\d+(?:\.\d+){,2})(?:\.\d+)*[._-]stable}i, 1]
+      commit = page[%r{href=.*?/commit/(\h{8})}i, 1]
+      "#{version},#{commit}"
+    end
+  end
+
+  app "Synergy.app"
 end

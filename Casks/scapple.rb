@@ -1,12 +1,17 @@
-cask 'scapple' do
-  version '1.3.3'
-  sha256 '2693a64a4eed698fa64d2d772a6224a1b2a4c3c88c06af0fa7c5584d53fab8c7'
+cask "scapple" do
+  version "1.4,1122"
+  sha256 :no_check
 
-  # scrivener.s3.amazonaws.com was verified as official when first introduced to the cask
-  url 'https://scrivener.s3.amazonaws.com/Scapple.dmg'
-  appcast 'https://www.literatureandlatte.com/downloads/scapple/scapple.xml'
-  name 'Scapple'
-  homepage 'https://www.literatureandlatte.com/scapple.php'
+  url "https://scrivener.s3.amazonaws.com/Scapple.dmg",
+      verified: "scrivener.s3.amazonaws.com/"
+  name "Scapple"
+  desc "Notepad software"
+  homepage "https://www.literatureandlatte.com/scapple.php"
 
-  app 'Scapple.app'
+  livecheck do
+    url "https://www.literatureandlatte.com/downloads/scapple/scapple.xml"
+    strategy :sparkle
+  end
+
+  app "Scapple.app"
 end

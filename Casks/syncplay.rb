@@ -1,24 +1,28 @@
-cask 'syncplay' do
-  version '1.6.4a'
-  sha256 'bab6c7afcfd0d30167bba3bb1cd76e12becaae9f249f04e79c6610badef10023'
+cask "syncplay" do
+  version "1.6.8"
+  sha256 "9fbe6d616865511bbf75daa24ae6eb1ec40797ef1123265c7c50a5d9f1421ea3"
 
-  # github.com/Syncplay/syncplay was verified as official when first introduced to the cask
-  url "https://github.com/Syncplay/syncplay/releases/download/v#{version}/Syncplay_#{version}.dmg"
-  appcast 'https://github.com/Syncplay/syncplay/releases.atom'
-  name 'Syncplay'
-  homepage 'https://syncplay.pl/'
+  url "https://github.com/Syncplay/syncplay/releases/download/v#{version}/Syncplay_#{version}.dmg",
+      verified: "github.com/Syncplay/syncplay/"
+  name "Syncplay"
+  homepage "https://syncplay.pl/"
 
-  depends_on macos: '>= :sierra'
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/)
+  end
 
-  app 'Syncplay.app'
+  depends_on macos: ">= :sierra"
+
+  app "Syncplay.app"
 
   zap trash: [
-               '~/.syncplay',
-               '~/Library/Saved Application State/pl.syncplay.Syncplay.savedState',
-               '~/Library/Preferences/com.syncplay.MoreSettings.plist',
-               '~/Library/Preferences/com.syncplay.Interface.plist',
-               '~/Library/Preferences/com.syncplay.MainWindow.plist',
-               '~/Library/Preferences/pl.syncplay.Syncplay.plist',
-               '~/Library/Preferences/com.syncplay.PlayerList.plist',
-             ]
+    "~/.syncplay",
+    "~/Library/Saved Application State/pl.syncplay.Syncplay.savedState",
+    "~/Library/Preferences/com.syncplay.MoreSettings.plist",
+    "~/Library/Preferences/com.syncplay.Interface.plist",
+    "~/Library/Preferences/com.syncplay.MainWindow.plist",
+    "~/Library/Preferences/pl.syncplay.Syncplay.plist",
+    "~/Library/Preferences/com.syncplay.PlayerList.plist",
+  ]
 end

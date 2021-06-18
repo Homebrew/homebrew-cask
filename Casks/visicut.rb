@@ -1,11 +1,21 @@
-cask 'visicut' do
-  version '1.8-94-g0188ab30'
-  sha256 '329b69c5f108d07d2f1885b727ef58d2cc5c4496d62cd5b365e2e51739f9f919'
+cask "visicut" do
+  version "1.9-83-g2dc5fd7f"
+  sha256 "a0d5cb13f9e4133b8721ce94603fb0ea6b9eeb7943fab79ab2f82cae6df4982a"
 
   url "https://download.visicut.org/files/master/MacOSX/VisiCutMac-#{version}.zip"
-  appcast 'https://download.visicut.org'
-  name 'VisiCut'
-  homepage 'https://visicut.org/'
+  name "VisiCut"
+  desc "Prepare, save and send jobs to Lasercutters"
+  homepage "https://visicut.org/"
 
-  app 'VisiCut.app'
+  livecheck do
+    url "https://download.visicut.org"
+    strategy :page_match
+    regex(%r{href=.*?/VisiCutMac-(\d+(?:\.\d+)*-\d+-g\d+dc\d+fd\d+f)\.zip}i)
+  end
+
+  app "VisiCut.app"
+
+  caveats do
+    depends_on_java "11+"
+  end
 end

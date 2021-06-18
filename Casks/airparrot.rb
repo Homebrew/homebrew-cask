@@ -1,22 +1,28 @@
-cask 'airparrot' do
-  version '2.8.0'
-  sha256 '3ec8e83c5a029d926cdfb16c4015c72996911826ca39ca4a39eed41c2e7aeb1e'
+cask "airparrot" do
+  version "3.1.1"
+  sha256 "2c241ade62dfb061dc565a5e0f94998b80a538d60ad0c0ffa2b5af905c6591c1"
 
   url "https://download.airsquirrels.com/AirParrot#{version.major}/Mac/AirParrot-#{version}.dmg"
-  appcast "https://updates.airsquirrels.com/AirParrot#{version.major}/Mac/AirParrot#{version.major}.xml"
-  name 'AirParrot'
-  homepage 'https://www.airsquirrels.com/airparrot/'
+  name "AirParrot"
+  desc "Tool to wirelessly mirror the screen or stream media files"
+  homepage "https://www.airsquirrels.com/airparrot/"
+
+  livecheck do
+    url "https://www.airsquirrels.com/airparrot/download"
+    strategy :page_match
+    regex(%r{href=.*?/AirParrot-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   app "AirParrot #{version.major}.app"
 
   uninstall kext: [
-                    'com.squirrels.driver.AirParrotSpeakers',
-                    '/Library/Extensions/AirParrotDriver.kext',
-                    '/Library/Extensions/APExtFramebuffer.kext',
-                    '/System/Library/Extensions/AirParrotDriver.kext',
-                    '/System/Library/Extensions/APExtFramebuffer.kext',
-                  ],
+    "com.squirrels.driver.AirParrotSpeakers",
+    "/Library/Extensions/AirParrotDriver.kext",
+    "/Library/Extensions/APExtFramebuffer.kext",
+    "/System/Library/Extensions/AirParrotDriver.kext",
+    "/System/Library/Extensions/APExtFramebuffer.kext",
+  ],
             quit: "com.squirrels.AirParrot-#{version.major}"
 
-  zap trash: '~/Library/Preferences/com.squirrels.AirParrot-*.plist'
+  zap trash: "~/Library/Preferences/com.squirrels.AirParrot-*.plist"
 end

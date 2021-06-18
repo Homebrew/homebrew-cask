@@ -1,14 +1,14 @@
-cask 'vitalsource-bookshelf' do
-  version '8.3.1.343'
-  sha256 '2c9960601c34e439213b96a3e79838fbf3c251475ba6114c6585e6132d8b44c6'
+cask "vitalsource-bookshelf" do
+  version "9.4.0.1304"
+  sha256 "47f996046bd898afbc0c6ac3cc30403869fcfc3feefc03bdc0bae09af057e387"
 
-  # downloads.vitalbook.com was verified as official when first introduced to the cask
-  url "https://downloads.vitalbook.com/vsti/bookshelf/#{version.major_minor_patch}/mac/bookshelf/Bookshelf_#{version}.dmg"
-  appcast 'https://rink.hockeyapp.net/api/2/apps/eed59906dc1a41199db911c5220234fb'
-  name 'VitalSource Bookshelf'
-  homepage 'https://www.vitalsource.com/bookshelf-features'
+  url "https://downloads.vitalbook.com/vsti/bookshelf/#{version.major_minor}/mac/bookshelf/VitalSource-Bookshelf_#{version}.dmg",
+      verified: "downloads.vitalbook.com/"
+  appcast "https://support.vitalsource.com/hc/en-us/articles/360014107913-Mac"
+  name "VitalSource Bookshelf"
+  homepage "https://www.vitalsource.com/bookshelf-features"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'VitalSource Bookshelf.app'
+  app "VitalSource Bookshelf.app"
 end

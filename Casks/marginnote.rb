@@ -1,19 +1,25 @@
-cask 'marginnote' do
-  version '3.4.5004,1568434627'
-  sha256 '65c504ab63bc7af7f575a9569b20e7864fe2549729c4c192b1275a96f57dc49f'
+cask "marginnote" do
+  version "3.7.9,3.7.9002"
+  sha256 "3cead02017d8b93dfc45aebce70318917fecc262a8f3c6806c9e3a6a3ae58956"
 
-  # dl.devmate.com/QReader.MarginStudyMac was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/QReader.MarginStudyMac/#{version.before_comma}/#{version.after_comma}/MarginNote#{version.major}-#{version.before_comma}.zip"
-  appcast 'https://updates.devmate.com/QReader.MarginStudyMac.xml'
-  name 'MarginNote'
-  homepage 'https://www.marginnote.com/'
+  url "https://marginstudy.com/mac/MarginNote#{version.major}.dmg",
+      verified: "marginstudy.com/"
+  name "MarginNote"
+  desc "E-reader"
+  homepage "https://www.marginnote.com/"
+
+  livecheck do
+    url "https://dist.marginnote.cn/marginnote#{version.major}.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
+  depends_on macos: ">= :sierra"
 
   app "MarginNote #{version.major}.app"
 
   zap trash: [
-               '~/Library/Application Support/QReader.MarginStudyMac',
-               '~/Library/Containers/QReader.MarginStudyMac',
-             ]
+    "~/Library/Application Support/QReader.MarginStudyMac",
+    "~/Library/Containers/QReader.MarginStudyMac",
+  ]
 end

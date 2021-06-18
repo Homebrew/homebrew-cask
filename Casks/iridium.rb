@@ -1,18 +1,24 @@
-cask 'iridium' do
-  version '2019.04.73.0,2019.04-0'
-  sha256 '3d402a406e7ff8a7370d025baf37aee20ac4da06fe0b9ad30d06f3238dd10e8e'
+cask "iridium" do
+  version "2020.11"
+  sha256 "7107a639d78ca1d44313d1b54fe52d3df0e39ea782da52c3d9d528b2e8281ca5"
 
-  url "https://downloads.iridiumbrowser.de/macos/#{version.after_comma}/iridium-browser_#{version.after_comma}_macos_x64.dmg"
-  appcast 'https://downloads.iridiumbrowser.de/macos/'
-  name 'Iridium Browser'
-  homepage 'https://iridiumbrowser.de/'
+  url "https://downloads.iridiumbrowser.de/macos/#{version}-0/iridium-browser_#{version}-0_macos.dmg"
+  name "Iridium Browser"
+  desc "Web browser focusing on security and privacy"
+  homepage "https://iridiumbrowser.de/"
 
-  app 'Iridium.app'
+  livecheck do
+    url "https://iridiumbrowser.de/downloads/macos"
+    strategy :page_match
+    regex(/current\s*version\s*(\d+(?:\.\d+)*)/i)
+  end
+
+  app "Iridium.app"
 
   zap trash: [
-               '~/Library/Preferences/de.iridiumbrowser.plist',
-               '~/Library/Caches/de.iridiumbrowser',
-               '~/Library/Application Support/Iridium',
-               '~/Library/Saved Application State/de.iridiumbrowser.savedState',
-             ]
+    "~/Library/Preferences/de.iridiumbrowser.plist",
+    "~/Library/Caches/de.iridiumbrowser",
+    "~/Library/Application Support/Iridium",
+    "~/Library/Saved Application State/de.iridiumbrowser.savedState",
+  ]
 end

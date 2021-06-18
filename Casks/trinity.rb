@@ -1,22 +1,26 @@
-cask 'trinity' do
-  version '1.1.0'
-  sha256 '281067c1f162c8b1665332367acd401d8825d54f0c7029b4f13ab4a733b45dcf'
+cask "trinity" do
+  version "1.6.2"
+  sha256 "c37926a9612e8a8360490b6b924b1a2922a4374377e428f24b985f45de66ad68"
 
-  # github.com/iotaledger/trinity-wallet was verified as official when first introduced to the cask
-  url "https://github.com/iotaledger/trinity-wallet/releases/download/desktop-#{version}/trinity-desktop-#{version}.dmg"
-  appcast 'https://github.com/iotaledger/trinity-wallet/releases.atom'
-  name 'IOTA Trinity Wallet'
-  homepage 'https://trinity.iota.org/'
+  url "https://github.com/iotaledger/trinity-wallet/releases/download/desktop-#{version}/trinity-desktop-#{version}.dmg",
+      verified: "github.com/iotaledger/trinity-wallet/"
+  name "IOTA Trinity Wallet"
+  desc "Cryptocurrency wallet"
+  homepage "https://trinity.iota.org/"
 
-  app 'Trinity.app'
+  app "Trinity.app"
 
-  uninstall quit: 'org.iota.trinity'
+  uninstall quit: "org.iota.trinity"
 
   zap trash: [
-               '~/Library/Application Support/Trinity',
-               '~/Library/Logs/Trinity',
-               '~/Library/Preferences/org.iota.trinity.helper.plist',
-               '~/Library/Preferences/org.iota.trinity.plist',
-               '~/Library/Saved Application State/org.iota.trinity.savedState',
-             ]
+    "~/Library/Application Support/Trinity",
+    "~/Library/Logs/Trinity",
+    "~/Library/Preferences/org.iota.trinity.helper.plist",
+    "~/Library/Preferences/org.iota.trinity.plist",
+    "~/Library/Saved Application State/org.iota.trinity.savedState",
+  ]
+
+  caveats do
+    discontinued
+  end
 end

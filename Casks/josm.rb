@@ -1,21 +1,24 @@
-cask 'josm' do
-  version '15322'
-  sha256 '97bcfe38f5fdb5abddcc0211099eb5261bf1676823f521ddb3bdb6b7950b8da3'
+cask "josm" do
+  version "17919"
+  sha256 "5beb3a0110399724704ee443f3dc26e070a16f6529e405d0c21e6e93453ba509"
 
-  url "https://josm.openstreetmap.de/download/macosx/josm-macosx-#{version}.zip"
-  appcast 'https://josm.openstreetmap.de/'
-  name 'JOSM'
-  homepage 'https://josm.openstreetmap.de/'
+  url "https://github.com/openstreetmap/josm/releases/download/#{version}-tested/JOSM-macOS-java16.zip",
+      verified: "github.com/openstreetmap/josm/"
+  name "JOSM"
+  desc "Extensible editor for OpenStreetMap"
+  homepage "https://josm.openstreetmap.de/"
 
-  app 'JOSM.app'
+  livecheck do
+    url :url
+    strategy :github_latest
+    regex(%r{href=.*?/(\d+(?:\.\d+)*)(?:[._-]tested)?/JOSM-macOS-java\d+\.zip}i)
+  end
+
+  app "JOSM.app"
 
   zap trash: [
-               '~/Library/Preferences/JOSM',
-               '~/Library/Caches/JOSM',
-               '~/Library/JOSM',
-             ]
-
-  caveats do
-    depends_on_java '8+'
-  end
+    "~/Library/Preferences/JOSM",
+    "~/Library/Caches/JOSM",
+    "~/Library/JOSM",
+  ]
 end

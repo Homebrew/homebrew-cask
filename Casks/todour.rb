@@ -1,11 +1,16 @@
-cask 'todour' do
-  version '2.17'
-  sha256 'da613d60809a254c41a34493275fb07c46128238a7a685d7e197e231729f47a0'
+cask "todour" do
+  version "2.20"
+  sha256 "8e53cdf8533e490614d9c8da82a67eaf588839eded39667de695682f5d5dccba"
 
   url "https://nerdur.com/Todour-v#{version}.dmg"
-  appcast 'https://github.com/SverrirValgeirsson/Todour/releases.atom'
-  name 'Todour'
-  homepage 'https://nerdur.com/todour-pl/'
+  name "Todour"
+  desc "Todo.txt application Todour"
+  homepage "https://nerdur.com/todour-pl/"
 
-  app 'Todour.app'
+  livecheck do
+    url "https://github.com/SverrirValgeirsson/Todour"
+    strategy :github_latest
+  end
+
+  app "Todour.app"
 end

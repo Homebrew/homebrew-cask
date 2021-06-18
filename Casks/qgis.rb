@@ -1,11 +1,19 @@
-cask 'qgis' do
-  version '3.8.3'
-  sha256 'd2d421524233ef86e43981ea67357302f4c55df7acda5d6f6f01a89f99330fb8'
+cask "qgis" do
+  version "3.18.3,20210608_104042"
+  sha256 "b8b2fc7496716d87886f86762b9a0ebd5e3afef68e029d53338a406f83b1f895"
 
-  url 'https://qgis.org/downloads/macos/qgis-macos-pr.dmg'
-  appcast 'https://www.qgis.org/'
-  name 'QGIS'
-  homepage 'https://www.qgis.org/'
+  url "https://qgis.org/downloads/macos/pr/qgis_pr_final-#{version.before_comma.dots_to_underscores}_#{version.after_comma}.dmg"
+  name "QGIS"
+  desc "Geographic Information System"
+  homepage "https://www.qgis.org/"
 
-  app "QGIS#{version.major_minor}.app"
+  livecheck do
+    url "https://qgis.org/downloads/macos/qgis-macos-pr.sha256sum"
+    strategy :page_match do |page|
+      match = page.match(/qgis_pr_final[._-]v?(\d+(?:_\d+)+)[._-](\d+_\d+)\.dmg/i)
+      "#{match[1].tr("_", ".")},#{match[2]}"
+    end
+  end
+
+  app "QGIS.app"
 end

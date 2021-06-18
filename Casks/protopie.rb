@@ -1,11 +1,18 @@
-cask 'protopie' do
-  version '4.0.4'
-  sha256 'd7c1fc3835b3c6d32289d15a9c66c637eb58ec545885155414cd91304c4b6ec6'
+cask "protopie" do
+  version "5.4.3"
+  sha256 "bb92ede257e3520f1038b17712e59a1a6f0e8a4dbfe004f73ef90dc8cf6298b5"
 
-  url "http://release.protopie.io/ProtoPie-#{version}.dmg"
-  appcast 'https://www.protopie.io/support/updates/'
-  name 'ProtoPie'
-  homepage 'https://www.protopie.io/'
+  url "https://release.protopie.io/ProtoPie-#{version}.dmg"
+  name "ProtoPie"
+  desc "Create interactive prototypes"
+  homepage "https://www.protopie.io/"
 
-  app 'ProtoPie.app'
+  livecheck do
+    url "https://download.protopie.io/darwin/latest"
+    strategy :header_match
+  end
+
+  auto_updates true
+
+  app "ProtoPie.app"
 end

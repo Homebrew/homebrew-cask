@@ -1,40 +1,45 @@
-cask 'amazon-music' do
-  version '7.8.2,20190918:2152496c71'
-  sha256 '9d708759dcd698a2e64eec24ac30823539f6b1a57b92b552af50420249281ac4'
+cask "amazon-music" do
+  version "8.4.0.2249,224949_d5c94ee480b0c856a9257863319df96e"
+  sha256 "c7d001f1be8a37bd14bca1eee3851c3235327fb43d45700726ddbb5eb322c783"
 
-  # ssl-images-amazon.com/images was verified as official when first introduced to the cask
-  url "https://images-na.ssl-images-amazon.com/images/G/01/digital/music/morpho/installers/#{version.after_comma.before_colon}/#{version.after_colon}/AmazonMusicInstaller.dmg"
-  appcast 'https://www.amazon.com/gp/dmusic/desktop/downloadPlayer',
-          configuration: "#{version.after_comma.before_colon}/#{version.after_colon}"
-  name 'Amazon Music'
-  homepage 'https://www.amazon.com/musicapps'
+  url "https://morpho-releases.s3-us-west-2.amazonaws.com/mac/#{version.after_comma}/Amazon+Music+Installer.dmg",
+      verified: "morpho-releases.s3-us-west-2.amazonaws.com/mac/"
+  appcast "https://www.amazon.com/gp/dmusic/desktop/downloadPlayer",
+          must_contain: version.after_comma
+  name "Amazon Music"
+  desc "Desktop client for Amazon Music"
+  homepage "https://www.amazon.com/musicapps"
 
   auto_updates true
 
   installer script: {
-                      executable: 'Amazon Music Installer.app/Contents/MacOS/installbuilder.sh',
-                    }
+    executable: "Amazon Music Installer.app/Contents/MacOS/installbuilder.sh",
+  }
 
   uninstall quit:      [
-                         'com.amazon.music',
-                         'com.amazon.music-renderer',
-                       ],
-            delete:    '/Applications/Amazon Music.app',
+    "com.amazon.music",
+    "com.amazon.music-renderer",
+  ],
+            delete:    "/Applications/Amazon Music.app",
             launchctl: [
-                         'com.amazon.music',
-                         'com.amazon.music.startup',
-                       ]
+              "com.amazon.music",
+              "com.amazon.music.startup",
+            ]
 
   zap trash: [
-               '~/Library/Preferences/com.amazon.music.plist',
-               '~/Library/Application Support/Amazon Music',
-             ]
+    "~/Library/Application Support/Amazon Music",
+    "~/Library/LaunchAgents/com.amazon.music.plist",
+    "~/Library/LaunchAgents/com.amazon.music.startup.plist",
+    "~/Library/Preferences/com.amazon.music-renderer.plist",
+    "~/Library/Preferences/com.amazon.music.plist",
+    "~/Library/Saved Application State/com.amazon.music.savedState",
+  ]
 
   caveats <<~EOS
     If the app will not launch after installation, try
 
-      brew cask zap #{token}
-      brew cask install #{token}
+      brew uninstall --zap --cask #{token}
+      brew install --cask #{token}
 
     then re-launch the app.
   EOS

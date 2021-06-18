@@ -1,11 +1,11 @@
-cask 'scihubeva' do
-  version 'v3.1.2'
-  sha256 'ce674f6e246ef26356686ca5a48a9c926b61a382f69de3b1e0ace1682426ab15'
+cask "scihubeva" do
+  version "v4.1.1"
+  sha256 "2b652b98b360a3e950b247fcdc4ef1f20d86910bdf6d6cefd025ed37996e2725"
 
   url "https://github.com/leovan/SciHubEVA/releases/download/#{version}/SciHubEVA-#{version}.dmg"
-  appcast 'https://github.com/leovan/SciHubEVA/releases.atom'
-  name 'SciHubEVA'
-  homepage 'https://github.com/leovan/SciHubEVA'
+  name "SciHubEVA"
+  desc "Sci-Hub GUI app"
+  homepage "https://github.com/leovan/SciHubEVA"
 
-  app 'SciHubEVA.app'
+  app "SciHubEVA.app"
 end

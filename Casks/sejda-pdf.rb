@@ -1,12 +1,19 @@
-cask 'sejda-pdf' do
-  version '5.3.6'
-  sha256 '9a480d37fc55f9673bf5e9e204f756bac02c097a087399b47f70cf151a3eb031'
+cask "sejda-pdf" do
+  version "7.2.5"
+  sha256 "186858622aa524dfdfeae3d16174874e4cf2c82e20c43a161f98f06245b2dfd2"
 
-  # sejda-cdn.com was verified as official when first introduced to the cask
-  url "https://sejda-cdn.com/downloads/sejda-desktop_#{version}.dmg"
-  appcast 'https://www.sejda.com/desktop'
-  name 'Sejda PDF Desktop'
-  homepage 'https://www.sejda.com/desktop'
+  url "https://sejda-cdn.com/downloads/sejda-desktop_#{version}.dmg",
+      verified: "sejda-cdn.com/"
+  name "Sejda PDF Desktop"
+  desc "PDF editor"
+  homepage "https://www.sejda.com/desktop"
 
-  app 'Sejda PDF Desktop.app'
+  livecheck do
+    url :homepage
+    regex(/mac\s*:\s*["']sejda[._-]desktop[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+  end
+
+  depends_on macos: ">= :high_sierra"
+
+  app "Sejda PDF Desktop.app"
 end

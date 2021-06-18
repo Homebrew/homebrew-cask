@@ -1,20 +1,27 @@
-cask 'remote-desktop-manager' do
-  version '2019.1.8.0'
-  sha256 '46cd5bc59c9d1a4351a597b29f874e18b21dc83fd1c1f0d1fba633788e8baf41'
+cask "remote-desktop-manager" do
+  version "2021.1.7.0"
+  sha256 "a5ca48a64cff2f579fd28b1433660d6b7513faf706f0905c712540726f0bb21e"
 
-  # devolutions.net was verified as official when first introduced to the cask
-  url "https://cdn.devolutions.net/download/Mac/Devolutions.RemoteDesktopManager.Mac.#{version}.dmg"
-  appcast 'https://cdn.devolutions.net/download/Mac/RemoteDesktopManager.xml'
-  name 'Remote Desktop Manager'
-  homepage 'https://mac.remotedesktopmanager.com/'
+  url "https://cdn.devolutions.net/download/Mac/Devolutions.RemoteDesktopManager.Mac.#{version}.dmg",
+      verified: "devolutions.net/"
+  name "Remote Desktop Manager"
+  desc "Centralizes all remote connections on a single platform"
+  homepage "https://mac.remotedesktopmanager.com/"
 
-  app 'Remote Desktop Manager.app'
+  livecheck do
+    url "https://cdn.devolutions.net/download/Mac/RemoteDesktopManager.xml"
+    strategy :sparkle
+  end
+
+  depends_on macos: ">= :sierra"
+
+  app "Remote Desktop Manager.app"
 
   zap trash: [
-               '~/Library/Application Support/Remote Desktop Manager',
-               '~/Library/Application Support/com.devolutions.remotedesktopmanager',
-               '~/Library/Caches/com.devolutions.remotedesktopmanager',
-               '~/Library/Preferences/com.devolutions.remotedesktopmanager.plist',
-               '~/Library/Saved Application State/com.devolutions.remotedesktopmanager.savedState',
-             ]
+    "~/Library/Application Support/Remote Desktop Manager",
+    "~/Library/Application Support/com.devolutions.remotedesktopmanager",
+    "~/Library/Caches/com.devolutions.remotedesktopmanager",
+    "~/Library/Preferences/com.devolutions.remotedesktopmanager.plist",
+    "~/Library/Saved Application State/com.devolutions.remotedesktopmanager.savedState",
+  ]
 end

@@ -1,13 +1,32 @@
-cask 'xmind-zen' do
-  version '9.3.1-201909210108,2019'
-  sha256 '2b834f6efbb414f1d717488149c3ea6c903ecfc95f5e4eb5e82e232d4c87c5db'
+cask "xmind-zen" do
+  version "2021,11.0.0-202105270022"
+  sha256 "220b7fda61704ca22444edec6fdd1c576d1123206624133d580b7607e751d87e"
 
-  url "https://dl3.xmind.net/XMind-ZEN-Update-#{version.after_comma}-for-macOS-#{version.before_comma}.dmg"
-  appcast 'https://www.xmind.net/download/'
-  name 'XMind ZEN'
-  homepage 'https://www.xmind.net/zen/'
+  url "https://dl3.xmind.net/XMind-#{version.before_comma}-for-macOS-#{version.after_comma}.dmg"
+  name "XMind"
+  name "XMind (#{version.before_comma})"
+  desc "Mindmap and brainstorming app"
+  homepage "https://www.xmind.net/desktop/"
 
-  app 'XMind ZEN.app'
+  livecheck do
+    url "https://www.xmind.net/zen/download/mac/"
+    strategy :header_match do |headers|
+      match = headers["location"].match(/XMind[._-](\d+)[._-]for[._-]macOS[._-]v?(\d+(?:\.\d+)+[_-]\d+)\.dmg/i)
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
-  zap trash: '~/Library/Application Support/XMind ZEN'
+  auto_updates true
+  conflicts_with cask: "xmind"
+  depends_on macos: ">= :el_capitan"
+
+  app "XMind.app"
+
+  zap trash: "~/Library/Application Support/XMind ZEN"
+
+  caveats <<~EOS
+    Internally, Xmind Zen is now Xmind 2020. See their announcement:
+
+      https://www.xmind.net/blog/en/xmind%3A-zen-is-now-xmind%3A-2020/
+  EOS
 end

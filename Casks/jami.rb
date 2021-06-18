@@ -1,15 +1,23 @@
-cask 'jami' do
-  version '20190902.1120'
-  sha256 'a5e0ce5978dce7285a07aa3b2e272f8f647a7f5610db2fbb26f7d8c94b879485'
+cask "jami" do
+  version "202106011308"
+  sha256 "976f090ada38604b5545d05d7d1fcaf87c3979a8aa7e0f144bba313616bb834c"
 
-  url "https://dl.ring.cx/mac_osx/jami-#{version.no_dots}.dmg"
-  appcast 'https://dl.ring.cx/mac_osx/sparkle-ring.xml',
-          configuration: version.no_dots
-  name 'Jami'
-  name 'Savoir-faire Linux Ring'
-  homepage 'https://ring.cx/'
+  url "https://dl.jami.net/mac_osx/jami-#{version}.dmg"
+  name "Jami"
+  name "Savoir-faire Linux Ring"
+  desc "Decentralised instant messenger and softphone"
+  homepage "https://jami.net/"
+
+  livecheck do
+    url "https://dl.jami.net/mac_osx/sparkle-ring.xml"
+    strategy :page_match
+    regex(/jami[._-]v?(\d+(?:\.\d+)*)\.dmg/i)
+  end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
-  app 'Jami.app'
+  app "Jami.app"
+
+  zap trash: "~/Library/Application Support/jami"
 end

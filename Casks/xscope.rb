@@ -1,18 +1,23 @@
-cask 'xscope' do
-  version '4.3.3'
-  sha256 'dbbc939eca01ac8dc9994f5bd81130fbf980bdd6c9e66f23cf51fa585c8c0729'
+cask "xscope" do
+  version "4.5.1,108"
+  sha256 "d09a109b922d9c9d51a93e03b34683653826348b9ce4251f304d6cbdf39c5884"
 
-  # iconfactory.com was verified as official when first introduced to the cask
-  url "https://iconfactory.com/assets/software/xscope/xScope-#{version}.zip"
-  appcast 'https://iconfactory.com/appcasts/xScope/appcast.xml'
-  name 'xScope'
-  homepage 'https://xscopeapp.com/'
+  url "https://downloads.iconfactory.com/xscope/xScope-#{version.before_comma}+#{version.after_comma}.zip",
+      verified: "downloads.iconfactory.com/"
+  name "xScope"
+  desc "Tools for measuring, inspecting & testing on-screen graphics and layouts"
+  homepage "https://xscopeapp.com/"
 
-  app 'xScope.app'
+  livecheck do
+    url "https://iconfactory.com/appcasts/xScope/appcast.xml"
+    strategy :sparkle
+  end
+
+  app "xScope.app"
 
   zap trash: [
-               '~/Library/Caches/com.iconfactory.xScope',
-               '~/Library/Caches/com.iconfactory.xScope.cache',
-               '~/Library/Preferences/com.iconfactory.xScope.plist',
-             ]
+    "~/Library/Caches/com.iconfactory.xScope",
+    "~/Library/Caches/com.iconfactory.xScope.cache",
+    "~/Library/Preferences/com.iconfactory.xScope.plist",
+  ]
 end

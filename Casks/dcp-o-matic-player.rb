@@ -1,11 +1,17 @@
-cask 'dcp-o-matic-player' do
-  version '2.14.10'
-  sha256 'ef4f64af0d24c2f7a54b7f2b30acff621d1b56a4524a06fce7ddfdee34646090'
+cask "dcp-o-matic-player" do
+  version "2.14.51"
+  sha256 "56622938191ceec784f85241bc9e6872ad2170286c3f21294706c902e36d4857"
 
-  url "https://dcpomatic.com/dl.php?id=osx-player&version=#{version}"
-  appcast 'https://dcpomatic.com/download'
-  name 'DCP-o-matic Player'
-  homepage 'https://dcpomatic.com/'
+  url "https://dcpomatic.com/dl.php?id=osx-10.9-player&version=#{version}"
+  name "DCP-o-matic Player"
+  desc "Play Digital Cinema Packages"
+  homepage "https://dcpomatic.com/"
+
+  livecheck do
+    url "https://dcpomatic.com/download"
+    strategy :page_match
+    regex(/href=.*?id=osx[0-9._-]*player[^"']*?version=(\d+(?:\.\d+)*)/i)
+  end
 
   app "DCP-o-matic #{version.major} Player.app"
 end

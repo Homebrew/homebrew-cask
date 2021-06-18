@@ -1,12 +1,17 @@
-cask 'forecast' do
-  version '0.9_125'
-  sha256 '533baab40ab6bc7cef9ebfaa60804caffcdd3ff2915a7456733e5503ac7a64d4'
+cask "forecast" do
+  version "0.9.3,135"
+  sha256 "c8e3bc2cfc705bfd88ea611a4b30b803c7efb90d3aee79a9c8f1ec4fc42a85e9"
 
-  # d2uzvmey2c90kn.cloudfront.net/appcast_download was verified as official when first introduced to the cask
-  url "https://d2uzvmey2c90kn.cloudfront.net/appcast_download/Forecast_#{version}.zip"
-  appcast 'https://overcast.fm/appcast/Forecast.xml'
-  name 'Forecast'
-  homepage 'https://overcast.fm/forecast'
+  url "https://d2uzvmey2c90kn.cloudfront.net/appcast_download/Forecast_#{version.before_comma}_#{version.after_comma}.zip",
+      verified: "d2uzvmey2c90kn.cloudfront.net/appcast_download/"
+  name "Forecast"
+  desc "Podcast MP3 encoder with chapters"
+  homepage "https://overcast.fm/forecast"
 
-  app 'Forecast.app'
+  livecheck do
+    url "https://overcast.fm/appcast/Forecast.xml"
+    strategy :sparkle
+  end
+
+  app "Forecast.app"
 end

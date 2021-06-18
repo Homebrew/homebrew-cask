@@ -1,12 +1,13 @@
-cask 'liteide' do
-  version '36.1'
-  sha256 'f9094b6f0732cd2b99f3f3501555e46249b3420703ef82b02150a34f5df6d023'
+cask "liteide" do
+  version "37.4"
+  sha256 "a86e48592782e018edb693528ed60c4bcdbd0bac33ec9fd09f44cfff4ed7e77a"
 
-  # github.com/visualfc/liteide was verified as official when first introduced to the cask
-  url "https://github.com/visualfc/liteide/releases/download/x#{version}/liteidex#{version}.macos-qt5.9.5.zip"
-  appcast 'https://github.com/visualfc/liteide/releases.atom'
-  name 'LiteIDE'
-  homepage 'http://liteide.org/'
+  url "https://github.com/visualfc/liteide/releases/download/x#{version}/liteidex#{version}.macos-qt5.15.2.zip"
+  name "LiteIDE"
+  desc "Go IDE"
+  homepage "https://github.com/visualfc/liteide"
 
-  app 'LiteIDE.app'
+  depends_on macos: ">= :sierra"
+
+  app "liteide/LiteIDE.app"
 end

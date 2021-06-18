@@ -1,14 +1,19 @@
-cask 'kite' do
-  version '0.20190919.1'
-  sha256 '92f2efc81608c28f7696ec9e6e0984e06269498db79cac5039b386d178b4f16d'
+cask "kite" do
+  version "0.20210610.0"
+  sha256 "a72a98e77c5d3410f8d92e2bb1458afa5d4edd51a021491f8f6f2d5995170914"
 
-  # kite-downloads.s3.amazonaws.com was verified as official when first introduced to the cask
-  url "https://kite-downloads.s3.amazonaws.com/Kite-#{version}.dmg"
-  appcast 'https://release.kite.com/appcast.xml'
-  name 'Kite'
-  homepage 'https://kite.com/'
+  url "https://draqv87tt43s0.cloudfront.net/mac/#{version}/Kite.dmg",
+      verified: "draqv87tt43s0.cloudfront.net/"
+  name "Kite"
+  desc "Add code completions to all your code editors"
+  homepage "https://kite.com/"
+
+  livecheck do
+    url "https://release.kite.com/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 
-  app 'Kite.app'
+  app "Kite.app"
 end

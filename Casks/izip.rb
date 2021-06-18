@@ -1,11 +1,18 @@
-cask 'izip' do
-  version '3.5'
-  sha256 '2501c6b9d237864aa5942afd5a67c5f89fbc13dee48b2ccb8cfb164715943327'
+cask "izip" do
+  version "3.9"
+  sha256 :no_check
 
-  url "https://www.izip.com/izip_update_#{version.no_dots}.zip"
-  appcast 'https://www.izip.com/updates'
-  name 'iZip'
-  homepage 'https://www.izip.com/'
+  url "https://www.izip.com/izip.dmg"
+  name "iZip"
+  desc "App to manage ZIP, ZIPX, RAR, TAR, 7ZIP and other compressed files"
+  homepage "https://www.izip.com/"
 
-  app 'iZip.app'
+  livecheck do
+    url "https://www.izip.com/download"
+    regex(%r{<li>Version:\s*(\d+(?:\.\d+)*)</li>}i)
+  end
+
+  depends_on macos: ">= :yosemite"
+
+  app "iZip.app"
 end

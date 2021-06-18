@@ -1,11 +1,12 @@
-cask 'cisdem-pdf-converter-ocr' do
-  version '7.3.0'
-  sha256 'd95e762e63668e3beb8edfe050d8ffbea75bf26f34dc97e948ea7afd3d1067fb'
+cask "cisdem-pdf-converter-ocr" do
+  version "7.5.0"
+  sha256 :no_check
 
-  url 'http://download.cisdem.com/cisdem-pdfconverterocr.dmg'
-  appcast 'https://www.cisdem.com/pdf-converter-ocr-mac/release-notes.html'
-  name 'Cisdem PDF Converter OCR'
-  homepage 'https://www.cisdem.com/pdf-converter-ocr-mac.html'
+  url "https://download.cisdem.com/cisdem-pdfconverterocr.dmg"
+  appcast "https://www.cisdem.com/pdf-converter-ocr-mac/release-notes.html"
+  name "Cisdem PDF Converter OCR"
+  desc "PDF Converter with OCR capability"
+  homepage "https://www.cisdem.com/pdf-converter-ocr-mac.html"
 
-  app 'Cisdem PDF Converter OCR.app'
+  app "Cisdem PDF Converter OCR.app"
 end

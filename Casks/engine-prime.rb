@@ -1,15 +1,24 @@
-cask 'engine-prime' do
-  version '1.3.1'
-  sha256 '626a9c4c3bc3f2e21f2e121d11739cd414442a1acb8d5c20c73621cf63e11f03'
+cask "engine-prime" do
+  version "1.6.1,5f4b42a70b"
+  sha256 "978c1fdde817f855242502a833b9a7447501fdc2ba9af0d941509561059f90b3"
 
-  # inmusicbrands.com was verified as official when first introduced to the cask
-  url "https://cdn.inmusicbrands.com/denondj/EnginePrime/Engine_Prime_#{version}_Setup.dmg"
-  name 'Engine Prime'
-  homepage 'https://www.denondj.com/engineprime'
+  url "https://cdn.inmusicbrands.com/denondj/EnginePrime/#{version.before_comma.no_dots}/Engine_Prime_#{version.before_comma}_#{version.after_comma}_Setup.dmg",
+      verified: "inmusicbrands.com/"
+  name "Engine Prime"
+  desc "Music Management Software for Denon's Engine OS Hardware"
+  homepage "https://www.denondj.com/engineprime"
 
-  pkg "Engine Prime_#{version}_Setup.pkg"
+  livecheck do
+    url "https://www.denondj.com/downloads"
+    strategy :page_match do |page|
+      match = page.match(%r{href=.*?/Engine[._-]?Prime[._-]?v?(\d+(?:\.\d+)*)(?:[._-]([0-9a-z]+))?[._-]Setup\.dmg}i)
+      "#{match[1]}#{"," + match[2] if match[2]}"
+    end
+  end
 
-  uninstall pkgutil: 'com.airmusictechnology.engineprime.application'
+  pkg "Engine Prime_#{version.before_comma}_Setup.pkg"
 
-  zap trash: '~/Music/Engine Library'
+  uninstall pkgutil: "com.airmusictechnology.engineprime.application"
+
+  zap trash: "~/Music/Engine Library"
 end

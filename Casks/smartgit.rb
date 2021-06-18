@@ -1,13 +1,18 @@
-cask 'smartgit' do
-  version '19.1.3'
-  sha256 'ebbd7a476f9893ff9983e83d7e741ac483f13c8a9673c1b55274ed7c0d6fce72'
+cask "smartgit" do
+  version "20.2.5"
+  sha256 "7674b546af9544499599fe82f8806df8001525ff0d3e19cda8ef125452d969d0"
 
   url "https://www.syntevo.com/downloads/smartgit/smartgit-macosx-#{version.dots_to_underscores}.dmg"
-  appcast 'https://www.syntevo.com/smartgit/changelog.txt',
-          configuration: version.chomp('.0')
-  name 'SmartGit'
-  homepage 'https://www.syntevo.com/smartgit/'
+  name "SmartGit"
+  desc "Git client"
+  homepage "https://www.syntevo.com/smartgit/"
 
-  app 'SmartGit.app'
+  livecheck do
+    url "https://www.syntevo.com/smartgit/changelog.txt"
+    strategy :page_match
+    regex(/SmartGit\s*(\d+(?:\.\d+)*)/i)
+  end
+
+  app "SmartGit.app"
   binary "#{appdir}/SmartGit.app/Contents/MacOS/SmartGit"
 end

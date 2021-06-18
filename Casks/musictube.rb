@@ -1,11 +1,16 @@
-cask 'musictube' do
-  version '1.9'
-  sha256 '6f43a8007d2d9f172c18ce96545fce788b7f92074fb4b61fcf0a56559181a4b3'
+cask "musictube" do
+  version "1.14.4,2021.0402.104949"
+  sha256 :no_check
 
-  url 'https://flavio.tordini.org/files/musictube/musictube.dmg'
-  appcast 'https://flavio.tordini.org/musictube-ws/appcast.xml'
-  name 'Musictube'
-  homepage 'https://flavio.tordini.org/musictube'
+  url "https://flavio.tordini.org/files/musictube/musictube.dmg"
+  name "Musictube"
+  desc "Streaming music player"
+  homepage "https://flavio.tordini.org/musictube"
 
-  app 'Musictube.app'
+  livecheck do
+    url "https://flavio.tordini.org/musictube-ws/appcast.xml"
+    strategy :sparkle
+  end
+
+  app "Musictube.app"
 end

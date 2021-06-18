@@ -1,13 +1,13 @@
-cask 'tuneinstructor' do
-  version '3.7'
-  sha256 '7de1475bbe5d58a0818620da02355e0cace26e79e2783a6e9081573895a2c3b1'
+cask "tuneinstructor" do
+  version "3.7v5,17467"
+  sha256 "bbd0255f809da259b6c4a9d7f7fc27de2bceb5dc7caca32adc61769d9d98f9de"
 
-  url "https://www.tune-instructor.de/resources/downloads/TuneInstructor#{version}.dmg"
-  appcast 'https://www.tune-instructor.de/de/download.html'
-  name 'Tune•Instructor'
-  homepage 'https://www.tune-instructor.de/com/start.html'
+  url "https://www.tune-instructor.de/resources/downloads/TuneInstructor#{version.before_comma}.zip"
+  appcast "https://www.tune-instructor.de/de/download.html"
+  name "Tune•Instructor"
+  homepage "https://www.tune-instructor.de/com/start.html"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :catalina"
 
-  app 'Tune•Instructor.app'
+  app "Tune•Instructor.app"
 end

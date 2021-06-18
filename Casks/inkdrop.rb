@@ -1,20 +1,20 @@
-cask 'inkdrop' do
-  version '4.3.4'
-  sha256 'f64d982e942dabc14d78421d76106a24e8493ca988d3abd56b65446d9efbc81d'
+cask "inkdrop" do
+  version "5.2.0"
+  sha256 "8bd35c2059e8088c6f856e2cde5b7a900d9d50611608902f1ad4057950804520"
 
-  # d3ip0rje8grhnl.cloudfront.net was verified as official when first introduced to the cask
-  url "https://d3ip0rje8grhnl.cloudfront.net/v#{version}/Inkdrop-#{version}-Mac.zip"
-  appcast 'https://api.inkdrop.app/update/links'
-  name 'Inkdrop'
-  homepage 'https://www.inkdrop.info/'
+  url "https://d3ip0rje8grhnl.cloudfront.net/v#{version}/Inkdrop-#{version}-Mac.zip",
+      verified: "d3ip0rje8grhnl.cloudfront.net/"
+  appcast "https://api.inkdrop.app/update/links"
+  name "Inkdrop"
+  homepage "https://www.inkdrop.info/"
 
-  app 'Inkdrop.app'
+  app "Inkdrop.app"
 
   zap trash: [
-               '~/Library/Application Support/inkdrop',
-               '~/Library/Saved Application State/info.pkpk.inkdrop.savedState',
-               '~/Library/Caches/info.pkpk.inkdrop',
-               '~/Library/Preferences/info.pkpk.inkdrop.plist',
-               '~/Library/Preferences/info.pkpk.inkdrop.helper.plist',
-             ]
+    "~/Library/Application Support/inkdrop",
+    "~/Library/Saved Application State/info.pkpk.inkdrop.savedState",
+    "~/Library/Caches/info.pkpk.inkdrop",
+    "~/Library/Preferences/info.pkpk.inkdrop.plist",
+    "~/Library/Preferences/info.pkpk.inkdrop.helper.plist",
+  ]
 end

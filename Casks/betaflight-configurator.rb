@@ -1,11 +1,11 @@
-cask 'betaflight-configurator' do
-  version '10.5.1'
-  sha256 '6ee33a722fa5d86e369676ecea4968a347fe5df923052ecc469ae70ab7e582c7'
+cask "betaflight-configurator" do
+  version "10.7.0"
+  sha256 "29565420c31e849703d941bcb5ca2ee31af6a1c069e325c49e0d1133447b4b03"
 
   url "https://github.com/betaflight/betaflight-configurator/releases/download/#{version}/betaflight-configurator_#{version}_macOS.dmg"
-  appcast 'https://github.com/betaflight/betaflight-configurator/releases.atom'
-  name 'Betaflight-Configurator'
-  homepage 'https://github.com/betaflight/betaflight-configurator'
+  name "Betaflight-Configurator"
+  desc "Configuration tool for the Betaflight firmware"
+  homepage "https://github.com/betaflight/betaflight-configurator"
 
-  app 'Betaflight Configurator.app'
+  app "Betaflight Configurator.app"
 end

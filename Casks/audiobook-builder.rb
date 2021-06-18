@@ -1,11 +1,17 @@
-cask 'audiobook-builder' do
-  version '2.0.2'
-  sha256 '8d235350b46fd5f06c6eddbb54fec9ca5875a0c664e7a2cf8f4e4d48ff99cd85'
+cask "audiobook-builder" do
+  version "2.1.2"
+  sha256 "acf96a39171df286a039e88e4e9b9fa20b7fc10c6ab96ed90c308e8cfdc99cd9"
 
   url "https://www.splasm.com/downloads/audiobookbuilder/Audiobook%20Builder%20#{version}.dmg"
-  appcast 'https://www.splasm.com/audiobookbuilder/'
-  name 'Audiobook Builder'
-  homepage 'https://www.splasm.com/audiobookbuilder/'
+  name "Audiobook Builder"
+  desc "Turn audio CDs and files into audiobooks"
+  homepage "https://www.splasm.com/audiobookbuilder/"
 
-  app 'Audiobook Builder.app'
+  livecheck do
+    url "https://www.splasm.com/audiobookbuilder/"
+    strategy :page_match
+    regex(/Version\s*(\d+(?:\.\d+)*)/i)
+  end
+
+  app "Audiobook Builder.app"
 end

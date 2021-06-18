@@ -1,14 +1,19 @@
-cask 'klokki' do
-  version '1.1.2'
-  sha256 '8667dd3acac54f35f6f2c1bc489e768a7e007b3a354d9ce49904fc7ef0ce24e6'
+cask "klokki" do
+  version "1.3.3,62"
+  sha256 :no_check
 
-  # storage.yandexcloud.net/klokki was verified as official when first introduced to the cask
-  url 'https://storage.yandexcloud.net/klokki/Klokki.dmg'
-  appcast 'https://storage.yandexcloud.net/klokki/appcast.xml'
-  name 'Klokki'
-  homepage 'https://klokki.com/'
+  url "https://storage.yandexcloud.net/klokki/Klokki.dmg",
+      verified: "storage.yandexcloud.net/klokki/"
+  name "Klokki"
+  desc "Automatic time-tracking solution or freelancers and makers"
+  homepage "https://klokki.com/"
 
-  depends_on macos: '>= :high_sierra'
+  livecheck do
+    url "https://storage.yandexcloud.net/klokki/appcast.xml"
+    strategy :sparkle
+  end
 
-  app 'Klokki.app'
+  depends_on macos: ">= :mojave"
+
+  app "Klokki.app"
 end

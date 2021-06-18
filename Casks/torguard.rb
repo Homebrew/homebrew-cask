@@ -1,20 +1,28 @@
-cask 'torguard' do
-  version '3.96.1'
-  sha256 'd1809b0240cea4291a318749791f0c8700f7c2a7270d1032397d535fb54c75cc'
+cask "torguard" do
+  version "4.7.0"
+  sha256 "1917b6de15a6fd0026bc204c93edcedb69c962017136e497d98626fbecc88003"
 
-  # torguard.biz was verified as official when first introduced to the cask
-  url "https://updates.torguard.biz/Software/MacOSX/TorGuard-v#{version}.dmg"
-  appcast 'https://updates.torguard.biz/Software/MacOSX/checksums.sha256'
-  name 'TorGuard'
-  homepage 'https://torguard.net/'
+  url "https://updates.torguard.biz/Software/MacOSX/TorGuard-v#{version}.dmg",
+      verified: "torguard.biz/"
+  name "TorGuard"
+  desc "VPN client"
+  homepage "https://torguard.net/"
 
-  pkg 'Install TorGuard.pkg'
+  livecheck do
+    url "https://updates.torguard.biz/Software/MacOSX/checksums.sha256"
+    strategy :page_match
+    regex(/TorGuard-v(\d+(?:\.\d+)*)\.dmg/i)
+  end
 
-  uninstall pkgutil: 'net.torguard.TorGuardDesktopQt',
-            delete:  '/Applications/TorGuard.app'
+  depends_on macos: ">= :sierra"
+
+  pkg "Install TorGuard.pkg"
+
+  uninstall pkgutil: "net.torguard.TorGuardDesktopQt",
+            delete:  "/Applications/TorGuard.app"
 
   zap trash: [
-               '~/Library/Preferences/net.torguard.TorGuard*.plist',
-               '~/Library/Saved Application State/net.torguard.TorGuardDesktopQt.savedState',
-             ]
+    "~/Library/Preferences/net.torguard.TorGuard*.plist",
+    "~/Library/Saved Application State/net.torguard.TorGuardDesktopQt.savedState",
+  ]
 end

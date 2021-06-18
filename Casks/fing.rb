@@ -1,13 +1,24 @@
-cask 'fing' do
-  version '5.4.0'
-  sha256 'e7e2fe5906c6f6e21ff8d620f463fcae7f895d3f4c732426214dff4b8dc868aa'
+cask "fing" do
+  version "2.6.0"
+  sha256 "b380a04b226a1ae2740a6476406fc1877e5ca93b5872a2c2ac9400e92b4fffad"
 
-  url "https://www.fing.com/images/uploads/general/CLI_macOSX_#{version}.zip"
-  appcast 'https://www.fing.com/products/development-toolkit/'
-  name 'Fing'
-  homepage 'https://www.fing.com/products/development-toolkit/'
+  url "https://get.fing.com/fing-desktop-releases/mac/Fing-#{version}.dmg"
+  name "Fing Desktop"
+  desc "Network scanner"
+  homepage "https://www.fing.com/products/fing-desktop"
 
-  pkg "Fing-#{version}-osX.pkg"
+  livecheck do
+    url "https://get.fing.com/fing-desktop-releases/mac/latest-mac.yml"
+    strategy :electron_builder
+  end
 
-  uninstall pkgutil: 'Fing'
+  app "Fing.app"
+
+  uninstall launchctl: "com.fing.service"
+
+  zap trash: [
+    "~/Library/Application Support/Fing",
+    "~/Library/Preferences/com.fing.app.plist",
+    "~/Library/Saved Application State/com.fing.app.savedState",
+  ]
 end

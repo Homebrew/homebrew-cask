@@ -1,14 +1,24 @@
-cask 'framer' do
-  version '18203,1539331096'
-  sha256 '3e8a2d275d5da0ad8601228b2241d26a383d3d31cf540c6a437c16fa3d7b2b49'
+cask "framer" do
+  version "2021.16.5"
+  sha256 :no_check
 
-  # devmate.com/com.motif.framer was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.motif.framer/#{version.before_comma}/#{version.after_comma}/FramerStudio-#{version.before_comma}.zip"
-  appcast 'https://updates.devmate.com/com.motif.framer.xml'
-  name 'Framer'
-  homepage 'https://framer.com/'
+  if Hardware::CPU.intel?
+    url "https://updates.framer.com/electron/darwin/x64/Framer.zip"
+  else
+    url "https://updates.framer.com/electron/darwin/arm64/Framer.zip"
+  end
 
-  depends_on macos: '>= :sierra'
+  name "Framer"
+  desc "Tool that helps teams design every part of the product experience"
+  homepage "https://www.framer.com/desktop/"
 
-  app 'Framer.app'
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
+  auto_updates true
+  depends_on macos: ">= :mojave"
+
+  app "Framer.app"
 end

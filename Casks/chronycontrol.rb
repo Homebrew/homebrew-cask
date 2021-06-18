@@ -1,24 +1,29 @@
-cask 'chronycontrol' do
-  version '1.3.3'
-  sha256 '99639880ba781ab81914b493aa895b629018bbae21c0346c98669c3354882e61'
+cask "chronycontrol" do
+  version "1.4.3,270"
+  sha256 "63e13bbff5ec66adf647fc08e2c35e36d5d42d948f7f6944cf74eb7dc2c1dbfa"
 
-  url "https://www.whatroute.net/software/chronycontrol-#{version}.zip"
-  appcast 'https://www.whatroute.net/chronycontrolappcast.xml'
-  name 'ChronyControl'
-  homepage 'https://whatroute.net/chronycontrol.html'
+  url "https://www.whatroute.net/software/chronycontrol-#{version.before_comma}.zip"
+  name "ChronyControl"
+  desc "Install and configure chronyd"
+  homepage "https://whatroute.net/chronycontrol.html"
 
-  app 'ChronyControl.app'
+  livecheck do
+    url "https://www.whatroute.net/chronycontrolappcast.xml"
+    strategy :sparkle
+  end
+
+  app "ChronyControl.app"
 
   uninstall launchctl: [
-                         'org.tuxfamily.chronyd',
-                         'org.tuxfamily.chronyc',
-                       ],
+    "org.tuxfamily.chronyd",
+    "org.tuxfamily.chronyc",
+  ],
             delete:    [
-                         '/etc/chrony.d',
-                         '/var/db/chrony',
-                         '/Library/LaunchDaemons/org.tuxfamily.chronyd',
-                         '/Library/LaunchDaemons/org.tuxfamily.chronyc',
-                       ]
+              "/etc/chrony.d",
+              "/var/db/chrony",
+              "/Library/LaunchDaemons/org.tuxfamily.chronyd",
+              "/Library/LaunchDaemons/org.tuxfamily.chronyc",
+            ]
 
-  zap trash: '/var/log/chrony'
+  zap trash: "/var/log/chrony"
 end

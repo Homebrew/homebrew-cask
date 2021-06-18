@@ -1,17 +1,17 @@
-cask 'bitbar' do
-  version '1.9.2'
-  sha256 '9e317d58143f544ab3b2b35e4d0ef2f11b9578fe6872cec1415da961acb1aee4'
+cask "bitbar" do
+  version "1.10.1"
+  sha256 "8a7013dca92715ba80cccef98b84dd1bc8d0b4c4b603f732e006eb204bab43fa"
 
-  url "https://github.com/matryer/bitbar/releases/download/v#{version}/BitBar-v#{version}.zip"
-  appcast 'https://github.com/matryer/bitbar/releases.atom'
-  name 'BitBar'
-  homepage 'https://github.com/matryer/bitbar/'
+  url "https://github.com/matryer/bitbar/releases/download/v#{version}/BitBar.app.zip"
+  name "BitBar"
+  desc "Utility to display the output from any script or program in the menu bar"
+  homepage "https://github.com/matryer/bitbar/"
 
-  app 'BitBar.app'
+  app "BitBar.app"
 
   zap trash: [
-               '~/Library/BitBar Plugins',
-               '~/Library/Caches/com.matryer.BitBar',
-               '~/Library/Preferences/com.matryer.BitBar.plist',
-             ]
+    "~/Library/BitBar Plugins",
+    "~/Library/Caches/com.matryer.BitBar",
+    "~/Library/Preferences/com.matryer.BitBar.plist",
+  ]
 end

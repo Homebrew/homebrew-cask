@@ -1,12 +1,23 @@
-cask 'stand' do
-  version '1.0_4'
-  sha256 '8919e43c9c591657d8d6961b25e8dc5f77d706d71eb246839be22522a82bb0ec'
+cask "stand" do
+  version "2.1.1"
+  sha256 "5fce7d525ea7154d1df58b25d1902731f533a18656330593a7d3d2456fc1f314"
 
-  # get-stand-app.s3.amazonaws.com was verified as official when first introduced to the cask
-  url "https://get-stand-app.s3.amazonaws.com/#{version.sub(%r{.*_}, '')}/Stand.zip"
-  appcast 'https://standapp-sparkle-updater.herokuapp.com/'
-  name 'Stand'
-  homepage 'https://getstandapp.com/'
+  url "https://f001.backblazeb2.com/file/stand-app/#{version}/Stand.zip",
+      verified: "f001.backblazeb2.com/file/stand-app/"
+  appcast "https://getstandapp.com/",
+          must_contain: version.major_minor
+  name "Stand"
+  desc "Reminds you to stand up once an hour"
+  homepage "https://getstandapp.com/"
 
-  app 'Stand.app'
+  depends_on macos: ">= :catalina"
+
+  app "Stand.app"
+
+  uninstall quit: "com.reddavis.Stand"
+
+  zap trash: [
+    "~/Library/Caches/com.reddavis.Stand",
+    "~/Library/Preferences/com.reddavis.Stand.plist",
+  ]
 end

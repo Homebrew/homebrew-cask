@@ -1,13 +1,20 @@
-cask 'optimage' do
-  version '3.1.2'
-  sha256 '53fa793665d0429bdf7a1d35188e7c94b57f46dfcb2aed47683cda5f97c4083f'
+cask "optimage" do
+  version "3.4.2,190"
+  sha256 :no_check
 
-  url 'https://optimage.app/download/optimage-mac.zip'
-  appcast 'https://optimage.app/appcast.xml'
-  name 'Optimage'
-  homepage 'https://optimage.app/'
+  url "https://optimage.app/download/optimage-mac.zip"
+  name "Optimage"
+  desc "Image optimization tool"
+  homepage "https://optimage.app/"
+
+  livecheck do
+    url "https://optimage.app/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
+  depends_on macos: ">= :el_capitan"
 
-  app 'Optimage.app'
+  app "Optimage.app"
+  binary "#{appdir}/Optimage.app/Contents/MacOS/cli/optimage"
 end

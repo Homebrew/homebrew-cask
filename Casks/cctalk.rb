@@ -1,14 +1,19 @@
-cask 'cctalk' do
-  version '7.5.7-926'
-  sha256 'a70f9f3e5ef8bb22d5ac3dcb87790f435ef35edbf708a9fb41ab0bb90a719ccd'
+cask "cctalk" do
+  version "7.8.5.3"
+  sha256 "80ee2150bffeff9e8f4211acfb4c7589231533fabc23aad5cb31ffd456564263"
 
-  # cc.hjfile.cn was verified as official when first introduced to the cask
-  url "https://cc.hjfile.cn/cc/CCtalk.#{version}/8/1/103/CCtalk.#{version}.dmg"
-  appcast 'https://www.macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=https://www.cctalk.com/webapi/basic/v1.1/version/down%3Fapptype=1%26terminalType=8%26versionType=103'
-  name 'CCtalk'
-  homepage 'https://www.cctalk.com/download/'
+  url "https://cc.hjfile.cn/cc/CCtalk.#{version}/8/1/103/CCtalk.#{version}.dmg",
+      verified: "cc.hjfile.cn/"
+  name "CCtalk"
+  desc "Real-time interactive education platform"
+  homepage "https://www.cctalk.com/download/"
 
-  depends_on macos: '>= :yosemite'
+  livecheck do
+    url "https://www.cctalk.com/webapi/basic/v1.1/version/down?apptype=1&terminalType=8&versionType=103"
+    strategy :header_match
+  end
 
-  app 'CCtalk.app'
+  depends_on macos: ">= :el_capitan"
+
+  app "CCtalk.app"
 end

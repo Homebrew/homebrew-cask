@@ -1,12 +1,19 @@
-cask 'lidarr' do
-  version '0.7.1.1381'
-  sha256 'b02ee13d37f2d24761297524f60a960c76e09acb7111e341bb3a0d6cb0eda05e'
+cask "lidarr" do
+  version "0.8.1.2135"
+  sha256 "cb11dffaf2b4aa800adfb3540e10ea7723b3f5cc379cf2f4486a2836712f1991"
 
-  # github.com/lidarr/Lidarr was verified as official when first introduced to the cask
-  url "https://github.com/lidarr/Lidarr/releases/download/v#{version}/Lidarr.master.#{version}.osx-app.zip"
-  appcast 'https://github.com/lidarr/Lidarr/releases.atom'
-  name 'Lidarr'
-  homepage 'https://lidarr.audio/'
+  url "https://github.com/lidarr/Lidarr/releases/download/v#{version}/Lidarr.master.#{version}.osx-app-core-x64.zip",
+      verified: "github.com/lidarr/Lidarr/"
+  name "Lidarr"
+  desc "Looks and smells like Sonarr but made for music"
+  homepage "https://lidarr.audio/"
 
-  app 'Lidarr.app'
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  depends_on macos: ">= :high_sierra"
+
+  app "Lidarr.app"
 end

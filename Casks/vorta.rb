@@ -1,16 +1,27 @@
-cask 'vorta' do
-  version '0.6.22'
-  sha256 '01efe445377d43db5f77bbd78bbd4964734f863afeda678404b4502cbcecb2e2'
+cask "vorta" do
+  version "0.7.6"
+  sha256 "7dc638b1051714f83232ffa6b645ea08e1c4b2b098ab05961643ef78857ac887"
 
   url "https://github.com/borgbase/vorta/releases/download/v#{version}/vorta-#{version}.dmg"
-  appcast 'https://github.com/borgbase/vorta/releases.atom'
-  name 'Vorta'
-  homepage 'https://github.com/borgbase/vorta'
+  name "Vorta"
+  desc "Desktop Backup Client for Borg"
+  homepage "https://github.com/borgbase/vorta"
 
   auto_updates true
-  depends_on macos: '>= :high_sierra'
+  depends_on macos: ">= :mojave"
 
-  app 'Vorta.app'
+  app "Vorta.app"
 
-  zap trash: '~/Library/Application Support/Vorta'
+  zap trash: "~/Library/Application Support/Vorta"
+
+  caveats <<~EOS
+    #{token} requires BorgBackup to run. If you do not need mount support, use the official formula:
+
+      brew install borgbackup
+
+    If you plan on mounting archives using macFUSE, consider using the Tap maintained by the Borg team:
+
+      brew install --cask macfuse
+      brew install borgbackup/tap/borgbackup-fuse
+  EOS
 end

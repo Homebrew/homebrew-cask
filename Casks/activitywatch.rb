@@ -1,14 +1,14 @@
-cask 'activitywatch' do
-  version '0.8.0b8'
-  sha256 '16b7a7499f89ad0f63d9dfd2649984492087309dbe5ac797c21f170c3324a018'
+cask "activitywatch" do
+  version "0.11.0"
+  sha256 "91deabd5844968467b5b6b3423e12654d4e339ba309f333c25d991a2e689fd96"
 
-  # github.com/ActivityWatch/activitywatch was verified as official when first introduced to the cask
-  url "https://github.com/ActivityWatch/activitywatch/releases/download/v#{version}/activitywatch-v#{version}-macos-x86_64.zip"
-  appcast 'https://github.com/ActivityWatch/activitywatch/releases.atom'
-  name 'ActivityWatch'
-  homepage 'https://activitywatch.net/'
+  url "https://github.com/ActivityWatch/activitywatch/releases/download/v#{version}/activitywatch-v#{version}-macos-x86_64.dmg",
+      verified: "github.com/ActivityWatch/activitywatch/"
+  name "ActivityWatch"
+  desc "Time tracker"
+  homepage "https://activitywatch.net/"
 
-  binary 'activitywatch/aw-qt'
+  app "ActivityWatch.app"
 
-  zap trash: '~/Library/Application Support/activitywatch'
+  zap trash: "~/Library/Application Support/activitywatch"
 end

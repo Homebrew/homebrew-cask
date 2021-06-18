@@ -1,13 +1,30 @@
-cask 'qsync-client' do
-  version '3.3.4.0916'
-  sha256 'f000324f5ff0f8c5f46d58133aa124701cc2e4399cec69e29a9066a397e08985'
+cask "qsync-client" do
+  version "3.6.0.1026"
+  sha256 "ebdace7b5c170e946a68e78a6dbf1d713996a2299eb09b2e7ddce06fff128b14"
 
   url "https://download.qnap.com/Storage/Utility/QNAPQsyncClientMac-#{version}.dmg"
-  appcast 'https://update.qnap.com/SoftwareRelease.xml'
-  name 'Qnap Qsync'
-  homepage 'https://www.qnap.com/i/in/utility/#block_3'
+  name "Qnap Qsync"
+  desc "Automatic file synchronization"
+  homepage "https://www.qnap.com/en/utilities/essentials#utliity_3"
 
-  installer manual: 'Qsync Client.pkg'
+  livecheck do
+    url "https://update.qnap.com/SoftwareRelease.xml"
+    regex(/QNAPQsyncClientMac[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+  end
 
-  uninstall pkgutil: 'com.qnap.qsync.*'
+  installer manual: "Qsync Client.pkg"
+
+  uninstall pkgutil: "com.qnap.qsync",
+            quit:    [
+              "com.qnap.qsync",
+              "com.qnap.qsync.findersync",
+            ]
+
+  zap trash: [
+    "~/Library/Application Scripts/com.qnap.qsync",
+    "~/Library/Application Scripts/com.qnap.qsync.findersync",
+    "~/Library/Containers/com.qnap.qsync",
+    "~/Library/Containers/com.qnap.qsync.findersync",
+    "~/Library/Group Containers/group.com.qnap.qsync",
+  ]
 end

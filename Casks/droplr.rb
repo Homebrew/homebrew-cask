@@ -1,14 +1,24 @@
-cask 'droplr' do
-  version '5.6.2,235'
-  sha256 '20313d3b60a42fa94ef014ba09d0cc071bbae0022efc72f79be61fba93f088e6'
+cask "droplr" do
+  version "5.9.5,464"
+  sha256 "bd381271637598bb4225c3f79a0eb7cc0515fb839f52b947fcaf1bd95e2ca948"
 
-  url "https://files.droplr.com/apps/mac/Droplr+#{version.after_comma}.zip"
-  appcast 'https://droplr.com/appcast/appcast-sandbox.xml'
-  name 'Droplr'
-  homepage 'https://droplr.com/'
+  url "https://files.droplr.com/apps/mac/Droplr#{version.before_comma.no_dots}-#{version.after_comma}.zip"
+  name "Droplr"
+  desc "Screenshot and screen recorder"
+  homepage "https://droplr.com/"
+
+  livecheck do
+    url "https://files.droplr.com/apps/mac-current"
+    strategy :header_match do |headers|
+      match = headers["location"].match(%r{/Droplr(\d+)(\d+)(\d+)-(\d+)\.zip}i)
+      "#{match[1]}.#{match[2]}.#{match[3]},#{match[4]}"
+    end
+  end
 
   auto_updates true
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'Droplr.app'
+  pkg "Droplr#{version.before_comma.no_dots}-#{version.after_comma}.pkg"
+
+  uninstall pkgutil: "com.droplr.droplr-mac"
 end

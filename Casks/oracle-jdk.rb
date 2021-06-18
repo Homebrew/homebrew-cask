@@ -1,22 +1,30 @@
-cask 'oracle-jdk' do
-  version '13,33:5b8a42f3905b406298b72d750b6919f6'
-  sha256 '2dd149168b3b20d8c12f3d8f26f1cda97aa16f0a13e1eaba912aa478dfcfc539'
+cask "oracle-jdk" do
+  version "16.0.1,9:7147401fd7354114ac51ef3e1328291f"
+  sha256 "7ab227e36916c4beda068edda0f0a8a8ab0c3cddf837489d7bf9cea2f23a50a2"
 
   url "https://download.oracle.com/otn-pub/java/jdk/#{version.before_comma}+#{version.after_comma.before_colon}/#{version.after_colon}/jdk-#{version.before_comma}_osx-x64_bin.dmg",
       cookies: {
-                 'oraclelicense' => 'accept-securebackup-cookie',
-               }
-  name 'Oracle Java Standard Edition Development Kit'
-  homepage 'https://www.oracle.com/technetwork/java/javase/overview/index.html'
+        "oraclelicense" => "accept-securebackup-cookie",
+      }
+  name "Oracle Java Standard Edition Development Kit"
+  desc "JDK from Oracle"
+  homepage "https://www.oracle.com/technetwork/java/javase/overview/index.html"
 
-  depends_on macos: '>= :yosemite'
+  livecheck do
+    url "https://www.oracle.com/java/technologies/javase-jdk16-downloads.html"
+    strategy :page_match do |page|
+      match = page.match(%r{(\d+(?:\.\d+)*)\+(\d+(?:\.\d+)*)/(.+)/jdk-(\d+(?:\.\d+)*)_osx-x64_bin\.dmg}i)
+      "#{match[1]},#{match[2]}:#{match[3]}"
+    end
+  end
+
+  depends_on macos: ">= :yosemite"
 
   pkg "JDK #{version.before_comma}.pkg"
 
-  uninstall pkgutil: "com.oracle.jdk-#{version.before_comma}",
-            rmdir:   '/Library/Java/JavaVirtualMachines'
+  uninstall pkgutil: "com.oracle.jdk-#{version.before_comma}"
 
   caveats do
-    license 'https://www.oracle.com/technetwork/java/javase/terms/license/javase-license.html'
+    license "https://www.oracle.com/technetwork/java/javase/terms/license/javase-license.html"
   end
 end

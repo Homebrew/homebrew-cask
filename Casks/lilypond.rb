@@ -1,21 +1,29 @@
-cask 'lilypond' do
-  version '2.18.2-1'
-  sha256 '0009bf234db6a598e30940ae9a5cef50ffe939992c9bf0c7959ecd9c0d179c80'
+cask "lilypond" do
+  version "2.22.1-1"
+  sha256 "efdc9ecd5da2e13804258ad739063fad3b0f587aac9fe0a0f89314e784474f58"
 
-  url "http://lilypond.org/downloads/binaries/darwin-x86/lilypond-#{version}.darwin-x86.tar.bz2"
-  appcast 'http://lilypond.org/macos-x.html'
-  name 'LilyPond'
-  homepage 'http://lilypond.org/'
+  url "https://lilypond.org/downloads/binaries/darwin-x86/lilypond-#{version}.darwin-x86.tar.bz2"
+  name "LilyPond"
+  desc "Music engraving program"
+  homepage "https://lilypond.org/"
 
-  app 'LilyPond.app'
+  livecheck do
+    url "https://lilypond.org/macos-x.html"
+    strategy :page_match
+    regex(%r{href=.*?/lilypond-(\d+(?:\.\d+)*-\d+)\.darwin-x86\.tar\.bz2}i)
+  end
 
-  binaries = [
-               'abc2ly',
-               'convert-ly',
-               'lilypond',
-               'lilypond-book',
-               'musicxml2ly',
-             ]
+  depends_on macos: "<= :mojave"
+
+  app "LilyPond.app"
+
+  binaries = %w[
+    abc2ly
+    convert-ly
+    lilypond
+    lilypond-book
+    musicxml2ly
+  ]
 
   binaries.each do |shimscript|
     binary "#{staged_path}/#{shimscript}.wrapper.sh", target: shimscript
@@ -32,7 +40,7 @@ cask 'lilypond' do
   end
 
   zap trash: [
-               '~/Library/Preferences/org.lilypond.lilypond.plist',
-               '~/Library/Preferences/org.lilypond.lilypond.LSSharedFileList.plist',
-             ]
+    "~/Library/Preferences/org.lilypond.lilypond.plist",
+    "~/Library/Preferences/org.lilypond.lilypond.LSSharedFileList.plist",
+  ]
 end
