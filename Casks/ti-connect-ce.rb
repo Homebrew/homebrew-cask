@@ -1,6 +1,6 @@
 cask "ti-connect-ce" do
-  version "5.6.0.2082,53A0FBD756C04C2A9B67856A0966CD82"
-  sha256 "f9fc77fbd4df8bc9bfcfdb66b9cbf2692ec3cee3839e7b2202414c8e5595ba64"
+  version "5.6.3.2278,9A6A30E6D3004AA1A208CE7816433439"
+  sha256 "c85632f0bfbdedc2127d018cd770fb647acfd58c89641a14d96e5adb6c8e7960"
 
   url "https://education.ti.com/download/en/ed-tech/68CEDD34FDC94622B4DBD173E6A0D8C3/#{version.after_comma}/TIConnectCE-#{version.before_comma}.dmg"
   appcast "https://education.ti.com/en/software/details/en/68CEDD34FDC94622B4DBD173E6A0D8C3/swticonnectcesoftwareformacintosh"
