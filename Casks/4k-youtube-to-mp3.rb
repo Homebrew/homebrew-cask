@@ -6,7 +6,7 @@ cask "4k-youtube-to-mp3" do
   url "https://dl.4kdownload.com/app/4kyoutubetomp3_#{version}.dmg"
   name "4K YouTube to MP3"
   desc "Turn YouTube links into MP3 files"
-  homepage "https://www.4kdownload.com/products/product-youtubetomp3"
+  homepage "https://www.4kdownload.com/products/youtubetomp3/1"
 
   livecheck do
     url "https://www.4kdownload.com/download"
