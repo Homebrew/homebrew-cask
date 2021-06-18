@@ -12,7 +12,7 @@ cask "crossover" do
     strategy :sparkle
   end
 
-  depends_on macos: "<= :monterey"
+  depends_on macos: "<= :big_sur"
 
   app "CrossOver.app"
 
