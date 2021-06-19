@@ -3,7 +3,6 @@ cask "keyboardholder" do
   sha256 "3f23fbe76bd524fd2db5f6aadcd387a2e2072d9d910a61592330eac593c52f36"
 
   url "https://github.com/leaves615/KeyboardHolder/releases/download/#{version}/KeyboardHolder.app.#{version}.zip"
-
   name "KeyboardHolder"
   desc "Switch InputMethod By Applications"
   homepage "https://github.com/leaves615/KeyboardHolder"
