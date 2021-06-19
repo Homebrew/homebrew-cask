@@ -15,4 +15,9 @@ cask "affinity-photo" do
   auto_updates true
 
   app "Affinity Photo.app"
+
+  zap trash: [
+    "~/Library/Application Support/Affinity Photo",
+    "~/Library/Caches/com.seriflabs.affinityphoto",
+  ]
 end
