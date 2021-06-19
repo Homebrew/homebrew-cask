@@ -1,4 +1,4 @@
-cask "KeyboardHolder" do
+cask "keyboardholder" do
   version "1.3.2"
   sha256 "3f23fbe76bd524fd2db5f6aadcd387a2e2072d9d910a61592330eac593c52f36"
 
