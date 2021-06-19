@@ -13,4 +13,9 @@ cask "usr-sse2-rdm" do
 
   uninstall quit:    "net.alkalay.RDM",
             pkgutil: "net.alkalay.RDM"
+
+  zap trash: [
+    "~/Library/Application Support/net.alkalay.RDM",
+    "~/Library/Preferences/net.alkalay.RDM.plist",
+  ]
 end
