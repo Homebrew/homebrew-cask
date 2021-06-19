@@ -4,6 +4,7 @@ cask "datagraph" do
 
   url "https://www.visualdatatools.com/DataGraph/DataGraph.dmg"
   name "DataGraph"
+  desc "Scientific/statistical graphing software"
   homepage "https://www.visualdatatools.com/DataGraph/"
 
   app "DataGraph.app"
