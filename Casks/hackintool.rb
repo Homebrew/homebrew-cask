@@ -12,9 +12,9 @@ cask "hackintool" do
   app "Hackintool.app"
 
   zap trash: [
-    "~/Library/Cookies/com.Headsoft.Hackintool.binarycookies",
     "~/Library/Caches/com.Headsoft.Hackintool",
     "~/Library/Caches/com.apple.helpd/Generated/com.Headsoft.Hackintool.help*",
+    "~/Library/Cookies/com.Headsoft.Hackintool.binarycookies",
     "~/Library/Preferences/com.Headsoft.Hackintool.plist",
   ]
 end
