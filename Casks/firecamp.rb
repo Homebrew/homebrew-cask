@@ -7,9 +7,9 @@ cask "firecamp" do
   name "Firecamp"
   desc "Multi-protocol API development platform"
   homepage "https://firecamp.io/"
-  
+
   livecheck do
-    url :url
+    url "https://firecamp.netlify.app/.netlify/functions/download?pt=mac"
     strategy :header_match
   end
 
