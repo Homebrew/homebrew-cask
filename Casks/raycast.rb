@@ -20,6 +20,7 @@ cask "raycast" do
   zap trash: [
     "~/Library/Application Support/com.raycast.macos",
     "~/Library/Caches/com.raycast.macos",
+    "~/Library/Cookies/com.raycast.macos.binarycookies",
     "~/Library/Preferences/com.raycast.macos.plist",
   ]
 end
