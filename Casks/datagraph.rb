@@ -7,5 +7,10 @@ cask "datagraph" do
   desc "Scientific/statistical graphing software"
   homepage "https://www.visualdatatools.com/DataGraph/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "DataGraph.app"
 end
