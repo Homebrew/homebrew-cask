@@ -19,8 +19,8 @@ cask "KeyboardHolder" do
     "~/Library/Application Scripts/cn.leaves.KeyboardHolderLaunchHelper",
     "~/Library/Application Support/cn.leaves.KeyboardHolder",
     "~/Library/Caches/cn.leaves.KeyboardHolder",
-    "~/Library/Caches/com.plausiblelabs.crashreporter.data/cn.leaves.KeyboardHolder"
-    "~/Library/Containers/cn.leaves.KeyboardHolderLaunchHelper"
+    "~/Library/Caches/com.plausiblelabs.crashreporter.data/cn.leaves.KeyboardHolder",
+    "~/Library/Containers/cn.leaves.KeyboardHolderLaunchHelper",
     "~/Library/Logs/cn.leaves.KeyboardHolder",
     "~/Library/Preferences/cn.leaves.KeyboardHolder.plist",
   ]
