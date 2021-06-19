@@ -4,7 +4,7 @@ cask "affinity-photo" do
 
   url "https://store.serif.com/download/075b51/"
   name "Affinity Photo"
-  desc "Professional Image Editing Software"
+  desc "Professional image editing software"
   homepage "https://affinity.serif.com/en-us/photo/"
 
   livecheck do
