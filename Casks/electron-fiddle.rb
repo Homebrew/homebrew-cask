@@ -14,7 +14,7 @@ cask "electron-fiddle" do
   end
 
   name "Electron Fiddle"
-  desc "Easiest way to get started with Electron"
+  desc "Create and play with small Electron experiments"
   homepage "https://www.electronjs.org/fiddle"
 
   livecheck do
