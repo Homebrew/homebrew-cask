@@ -4,7 +4,7 @@ cask "keyboardholder" do
 
   url "https://github.com/leaves615/KeyboardHolder/releases/download/#{version}/KeyboardHolder.app.#{version}.zip"
   name "KeyboardHolder"
-  desc "Switch InputMethod By Applications"
+  desc "Switch input method per application"
   homepage "https://github.com/leaves615/KeyboardHolder"
 
   livecheck do
