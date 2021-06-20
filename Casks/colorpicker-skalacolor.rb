@@ -4,6 +4,7 @@ cask "colorpicker-skalacolor" do
 
   url "https://files.bjango.com/skalacolor/skalacolor#{version}.zip"
   name "Skala Color"
+  desc "Color picker"
   homepage "https://bjango.com/help/skalacolor/gettingstarted/"
 
   livecheck do
