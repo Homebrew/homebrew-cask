@@ -1,5 +1,5 @@
 cask "youtube-to-mp3" do
-  version "3.9.9.54"
+  version "3.9.9.57"
   sha256 :no_check
 
   url "https://www.mediahuman.com/files/YouTubeToMP3.dmg"
@@ -8,8 +8,10 @@ cask "youtube-to-mp3" do
   homepage "https://www.mediahuman.com/youtube-to-mp3-converter/"
 
   livecheck do
-    skip "unversioned URL"
+    url :homepage
+    strategy :page_match
+    regex(/Version:.*?(\d+(?:\.\d+)*)/i)
   end
-
+  
   app "YouTube to MP3.app"
 end
