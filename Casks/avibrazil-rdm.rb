@@ -10,8 +10,7 @@ cask "avibrazil-rdm" do
 
   livecheck do
     url "https://avi.alkalay.net/software/RDM/"
-    strategy :page_match
-    regex(/href=.*?RDM[._-]v?(\d+(?:\.\d+)*)\.pkg/i)
+    regex(/href=.*?RDM[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
   depends_on macos: ">= :sierra"
