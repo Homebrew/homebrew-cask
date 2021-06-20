@@ -8,6 +8,11 @@ cask "shimonote" do
   desc "石墨文档"
   homepage "https://shimo.im/"
 
+  livecheck do
+    url "https://shimo.im/download"
+    regex(%r{/%E7%9F%B3%E5%A2%A8%E6%96%87%E6%A1%A3[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+  end
+
   app "石墨文档.app"
 
   zap trash: [
