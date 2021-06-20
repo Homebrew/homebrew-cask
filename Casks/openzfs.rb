@@ -39,10 +39,9 @@ cask "openzfs" do
   homepage "https://openzfsonosx.org/"
 
   livecheck do
-    url "https://openzfsonosx.org/wiki/Changelog"
-    strategy :page_match do |page|
-      page.scan(/openzfs[_-]on[_-]os[_-]x[._-](\d+(?:\.\d+)*)/i).first
-    end
+    # url "https://openzfsonosx.org/wiki/Downloads"
+    # regex(/href=["']?#v?(\d+(?:\.\d+)+(?:[._-]r\d+)?)["' >]/i)
+    skip "Version comparison will always fail for now"
   end
 
   conflicts_with cask: "openzfs-dev"
