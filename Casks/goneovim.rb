@@ -1,7 +1,7 @@
 cask "goneovim" do
   version "0.4.11"
 
-  if Hardware::CPU.in_rosetta2? || Hardware::CPU.arm?
+  if MacOS.version <= :big_sur
     sha256 "8d9d08db2f96e32944f41c9e7de29de83581deab607b199b3a1516cffcc234e4"
     url "https://github.com/akiyosi/goneovim/releases/download/v#{version}/Goneovim-#{version}-macos11.tar.bz2"
     app "Goneovim-#{version}-macos11/goneovim.app"
@@ -19,6 +19,8 @@ cask "goneovim" do
     url :url
     strategy :github_latest
   end
+
+  depends_on formula: "neovim"
 
   zap trash: [
     "~/Library/Saved Application State/com.ident.goneovim.savedState",
