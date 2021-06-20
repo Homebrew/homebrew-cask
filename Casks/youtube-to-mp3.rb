@@ -12,6 +12,6 @@ cask "youtube-to-mp3" do
     strategy :page_match
     regex(/Version:.*?(\d+(?:\.\d+)*)/i)
   end
-  
+
   app "YouTube to MP3.app"
 end
