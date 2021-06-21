@@ -7,6 +7,11 @@ cask "vorta" do
   desc "Desktop Backup Client for Borg"
   homepage "https://github.com/borgbase/vorta"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
   depends_on macos: ">= :mojave"
 
