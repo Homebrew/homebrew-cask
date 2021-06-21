@@ -1,20 +1,20 @@
 cask "sonarr" do
   version "3.0.6.1266"
-  sha256 "95e524ee6e324cc8a2dd8721d917bd8315cc543f5106e72c6deb7649eb0d07e5"
+  sha256 "536b8149bd8b874476d92e08cd49e9b2e41746b7f47d5752c5a3a123cecc0163"
 
-  url "https://github.com/Sonarr/Sonarr/archive/refs/tags/v#{version}.zip",
-      verified: "github.com/Sonarr/Sonarr/"
+  url "https://download.sonarr.tv/v#{version.major}/main/#{version}/Sonarr.main.#{version}.macos.zip"
   name "Sonarr"
+  desc "PVR for Usenet and BitTorrent users"
   homepage "https://sonarr.tv/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://download.sonarr.tv/v3/main/"
+    regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
   depends_on cask: "mono-mdk"
 
-  app "Sonarr-#{version}/distribution/osx/Sonarr.app"
+  app "Sonarr.app"
 
   preflight do
     set_permissions "#{staged_path}/Sonarr.app", "0755"
