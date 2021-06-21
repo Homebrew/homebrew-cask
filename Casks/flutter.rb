@@ -1,9 +1,9 @@
 cask "flutter" do
-  version "2.2.1"
-  sha256 "6373d39ec563c337600baf42a42b258420208e4523d85479373e113d61d748df"
+  version "2.2.2"
+  sha256 "f965a3c72a0511de39d40067fc17fde842ef7d9cc3c48b2345924d05ce4e8ef0"
 
-  url "https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_#{version}-stable.zip",
-      verified: "storage.googleapis.com/flutter_infra/"
+  url "https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_#{version}-stable.zip",
+      verified: "storage.googleapis.com/flutter_infra_release/"
   name "Flutter SDK"
   desc "UI toolkit for building applications for mobile, web and desktop"
   homepage "https://flutter.dev/"
