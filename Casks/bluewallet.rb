@@ -8,6 +8,8 @@ cask "bluewallet" do
   desc "Bitcoin wallet and Lightning wallet"
   homepage "https://bluewallet.io/"
 
+  depends_on macos: ">= :catalina"
+
   app "BlueWallet.app"
 
   zap trash: [
