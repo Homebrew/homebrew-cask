@@ -15,5 +15,6 @@ cask "splashtop-personal" do
 
   pkg "Splashtop Personal.pkg"
 
-  uninstall pkgutil: "com.splashtop.stp.*"
+  uninstall   quit:    "com.splashtop.stp.*",
+              pkgutil: "com.splashtop.stp.*"
 end
