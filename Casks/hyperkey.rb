@@ -7,5 +7,10 @@ cask "hyperkey" do
   desc "Convert your caps lock key or any of your modifier keys to the hyper key"
   homepage "https://hyperkey.app/"
 
+  livecheck do
+    url :homepage
+    regex(/href=.+(\d+(:?\.\d+)).dmg/i)
+  end
+
   app "Hyperkey.app"
 end
