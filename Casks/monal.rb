@@ -1,8 +1,8 @@
 cask "monal" do
-  version "5.0,716"
+  version "5.0,747"
   sha256 :no_check
 
-  url "https://monal.im/macOS/Monal-macOS.tar.gz"
+  url "https://monal.im/macOS/Monal-macOS.zip"
   name "Monal"
   desc "Tool to securely connect to chat servers"
   homepage "https://monal.im/"
