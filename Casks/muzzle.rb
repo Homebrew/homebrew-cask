@@ -1,6 +1,6 @@
 cask "muzzle" do
-  version "1.8,416"
-  sha256 "0e2f180113dafdb500708f18f7246dbd58b255c158b1b77aa1d6a819f607791d"
+  version "1.9,426"
+  sha256 "f1b4e3d75d8b8de5b6217594c627e58a35e43049267b4eb82716393adefc5fa5"
 
   url "https://muzzleapp.com/binaries/muzzle-#{version.after_comma}.zip"
   name "Muzzle"
