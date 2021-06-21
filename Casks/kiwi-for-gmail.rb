@@ -1,5 +1,5 @@
 cask "kiwi-for-gmail" do
-  version "3.2.2,2330"
+  version "3.3.0,2348"
   sha256 :no_check
 
   url "https://downloads.kiwiforgmail.com/kiwi/release/consumer/Kiwi+for+Gmail+Setup.dmg"
