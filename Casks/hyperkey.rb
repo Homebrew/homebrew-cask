@@ -12,5 +12,13 @@ cask "hyperkey" do
     regex(/href=.+(\d+(:?\.\d+)).dmg/i)
   end
 
+  zap trash: [
+    "~/Library/Application Scripts/com.knollsoft.HyperkeyLauncher",
+    "~/Library/Application Support/Hyperkey",
+    "~/Library/Caches/com.knollsoft.Hyperkey",
+    "~/Library/Containers/com.knollsoft.HyperkeyLauncher",
+    "~/Library/Preferences/com.knollsoft.Hyperkey.plist",
+  ]
+
   app "Hyperkey.app"
 end
