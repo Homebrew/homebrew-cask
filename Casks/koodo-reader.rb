@@ -9,7 +9,7 @@ cask "koodo-reader" do
   else
     sha256 "2ec9bce429a0fa81cdd81d1c1bc1fe69dd0bc0e332ad2c42d2a3be0b704eb21e"
 
-    url "https://github.com/troyeguo/koodo-reader/releases/download/v#{version}/Koodo-Reader-arm64#{version}.dmg",
+    url "https://github.com/troyeguo/koodo-reader/releases/download/v#{version}/Koodo-Reader-#{version}-arm64.dmg",
         verified: "github.com/troyeguo/koodo-reader/"
   end
 
