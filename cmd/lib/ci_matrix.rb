@@ -19,10 +19,10 @@ module CiMatrix
   def self.runners(path)
     cask_content = path.read
 
-    if cask_content.match?(/\bdepends_on macos: \"\>\= \:big_sur\"/)
+    if cask_content.match?(/\bdepends_on macos: ">= :big_sur"/)
       RUNNERS.keys.select { |runner| cask_content.include?(runner[:symbol].inspect) }
     elsif cask_content.match?(/\bMacOS\s*\.version\b/m) &&
-       RUNNERS.keys.any? { |runner| cask_content.include?(runner[:symbol].inspect) }
+          RUNNERS.keys.any? { |runner| cask_content.include?(runner[:symbol].inspect) }
       # If the cask depends on `MacOS.version`, test it on every possible macOS version.
       RUNNERS.keys
     else
