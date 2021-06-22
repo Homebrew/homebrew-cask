@@ -12,6 +12,8 @@ cask "devutils" do
     strategy :sparkle
   end
 
+  depends_on macos: ">= :el_capitan"
+
   app "DevUtils.app"
 
   zap trash: [
