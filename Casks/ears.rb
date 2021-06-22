@@ -15,4 +15,14 @@ cask "ears" do
   depends_on macos: ">= :high_sierra"
 
   app "Ears.app"
+
+  uninstall launchctl: "com.clickontyler.Ears.Launcher"
+
+  zap trash: [
+    "~/Library/Application Support/Ears",
+    "~/Library/Application Support/com.clickontyler.Ears",
+    "~/Library/Caches/com.clickontyler.Ears",
+    "~/Library/Preferences/com.clickontyler.Ears.plist",
+    "~/Library/WebKit/com.clickontyler.Ears",
+  ]
 end
