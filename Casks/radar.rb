@@ -2,14 +2,13 @@ cask "radar" do
   version "0.0.7"
   sha256 "4da555427992a313c2d67ac2b61bfd9f85b80cb850b356c9896c3cbecaf87755"
 
-  url "https://github.com/syncwithtech/radar-release/releases/download/v#{version}/Radar-#{version}.dmg",
-      verified: "github.com/syncwithtech/radar-release/"
+  url "https://getradar.co/download/v#{version}.dmg"
   name "radar"
   desc "Check the important metrics from the menubar"
   homepage "https://getradar.co/"
 
   livecheck do
-    url "https://getradar.co/api/latest-mac.yml"
+    url "https://getradar.co/latest-mac.yml"
     strategy :electron_builder
   end
 
