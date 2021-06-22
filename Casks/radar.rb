@@ -9,8 +9,8 @@ cask "radar" do
   homepage "https://getradar.co/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://getradar.co/api/latest-mac.yml"
+    strategy :electron_builder
   end
 
   auto_updates true
