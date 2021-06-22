@@ -8,4 +8,10 @@ cask "electronmail" do
   homepage "https://github.com/vladimiry/ElectronMail"
 
   app "ElectronMail.app"
+
+  zap trash: [
+    "~/Library/Logs/ElectronMail",
+    "~/Library/Preferences/github.comvladimiryElectronMail.plist",
+    "~/Library/Saved Application State/github.comvladimiryElectronMail.savedState",
+  ]
 end
