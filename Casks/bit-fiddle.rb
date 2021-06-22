@@ -4,7 +4,7 @@ cask "bit-fiddle" do
 
   url "https://manderc.com/apps/bitfiddle/000000000_downloads/Bit_Fiddle_#{version.dots_to_underscores}.dmg"
   name "Bit Fiddle"
-  desc "Converts decimal numbers, hexadeciaml numbers, binary numbers and ASCII characters"
+  desc "Converts decimal, hexadecimal, binary numbers and ASCII characters"
   homepage "https://manderc.com/apps/bitfiddle/index_en.php"
 
   app "Bit Fiddle.app"
