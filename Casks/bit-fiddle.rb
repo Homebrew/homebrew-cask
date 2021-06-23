@@ -7,5 +7,13 @@ cask "bit-fiddle" do
   desc "Converts decimal, hexadecimal, binary numbers and ASCII characters"
   homepage "https://manderc.com/apps/bitfiddle/index_en.php"
 
+  livecheck do
+    url :homepage
+    strategy :page_match do |page|
+      page.scan(/href=.*Bit[._-]Fiddle[._-](\d+(?:[._-]\d+)+)\.dmg/i)
+          .map { |match| match&.first&.gsub(/_/, ".") }
+    end
+  end
+
   app "Bit Fiddle.app"
 end
