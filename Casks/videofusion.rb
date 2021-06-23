@@ -10,7 +10,10 @@ cask "videofusion" do
   homepage "https://lv.ulikecam.com/"
 
   livecheck do
-    skip "No version information available"
+    url "https://lf3-beecdn.bytetos.com/obj/ies-fe-bee/bee_prod/biz_80/bee_prod_80_bee_publish_3563.json"
+    strategy :page_match do |page|
+      JSON.parse(page)["mac_download_pkg"]["channel_default"][/(\d+(?:_\d+)+)\.pkg/i, 1].tr("_", ".")
+    end
   end
 
   depends_on macos: ">= :mojave"
