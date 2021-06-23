@@ -14,6 +14,7 @@ cask "microsoft-remote-desktop" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   pkg "Microsoft_Remote_Desktop_#{version}_installer.pkg"
 
