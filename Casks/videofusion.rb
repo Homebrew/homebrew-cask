@@ -1,8 +1,8 @@
 cask "videofusion" do
-  version "1.3.1.6.0"
-  sha256 "253ed831d484d9c3ca87d759ba0a144a2c982415159123b7c75bdb02aa6be0ca"
+  version "1.3.5.636.0"
+  sha256 "91b30fb9b66868d5245e10f7bcc0bdc02cfe9487bab84ae6afe429fd44c49e85"
 
-  url "https://lf3-faceucdn-tos.pstatp.com/obj/faceu-packages/Jianying_#{version.dots_to_underscores}.pkg",
+  url "https://lf3-faceucdn-tos.pstatp.com/obj/faceu-packages/Jianying_#{version.dots_to_underscores}.pkg.pkg",
       verified: "lf3-faceucdn-tos.pstatp.com/obj/faceu-packages/"
   name "VideoFusion"
   name "剪映专业版"
@@ -10,12 +10,15 @@ cask "videofusion" do
   homepage "https://lv.ulikecam.com/"
 
   livecheck do
-    skip "No version information available"
+    url "https://lf3-beecdn.bytetos.com/obj/ies-fe-bee/bee_prod/biz_80/bee_prod_80_bee_publish_3563.json"
+    strategy :page_match do |page|
+      JSON.parse(page)["mac_download_pkg"]["channel_default"][/(\d+(?:_\d+)+)\.pkg/i, 1].tr("_", ".")
+    end
   end
 
   depends_on macos: ">= :mojave"
 
-  pkg "Jianying_#{version.dots_to_underscores}.pkg"
+  pkg "Jianying_#{version.dots_to_underscores}.pkg.pkg"
 
   uninstall pkgutil: [
     "com.lemon.lvpro",
