@@ -4,7 +4,7 @@ cask "asana" do
 
   url "https://desktop-downloads.asana.com/darwin_x64/prod/latest/Asana.dmg"
   name "Asana"
-  desc "Easiest way to manage team projects and tasks"
+  desc "Manage team projects and tasks"
   homepage "https://asana.com/"
 
   auto_updates true
@@ -12,9 +12,10 @@ cask "asana" do
   app "Asana.app"
 
   zap trash: [
-    "~/Library/Application Support/Asana/*",
-    "~/Library/Caches/com.electron.asana*/*",
+    "~/Library/Application Support/Asana",
+    "~/Library/Caches/com.electron.asana",
+    "~/Library/Caches/com.electron.asana.ShipIt",
     "~/Library/Preferences/com.electron.asana.plist",
-    "~/Library/Saved Application State/com.electron.asana.savedState/*",
+    "~/Library/Saved Application State/com.electron.asana.savedState",
   ]
 end
