@@ -10,13 +10,14 @@ cask "bit-fiddle" do
   livecheck do
     url :homepage
     strategy :page_match do |page|
-      page.scan(/href=.*Bit[._-]Fiddle[._-](\d+(?:[._-]\d+)+)\.dmg/i)
-          .map { |match| match&.first&.gsub(/_/, ".") }
+      page.scan(/href=.*?Bit[._-]Fiddle[._-]v?(\d+(?:[._-]\d+)+)\.dmg/i).map do |match|
+        match[0].tr("_", ".")
+      end
     end
   end
 
   app "Bit Fiddle.app"
-  
+
   zap trash: [
     "~/Library/Application Scripts/ch.manderim.Bit-Fiddle",
     "~/Library/Containers/ch.manderim.Bit-Fiddle",
