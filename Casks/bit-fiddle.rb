@@ -16,4 +16,9 @@ cask "bit-fiddle" do
   end
 
   app "Bit Fiddle.app"
+  
+  zap trash: [
+    "~/Library/Application Scripts/ch.manderim.Bit-Fiddle",
+    "~/Library/Containers/ch.manderim.Bit-Fiddle",
+  ]
 end
