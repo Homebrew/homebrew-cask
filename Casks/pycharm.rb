@@ -38,12 +38,13 @@ cask "pycharm" do
   end
 
   zap trash: [
+    "~/Library/Preferences/com.jetbrains.pycharm.plist",
+    "~/Library/Preferences/jetbrains.pycharm.*.plist",
+    "~/Library/Preferences/PyCharm#{version.major_minor}",
     "~/Library/Application Support/PyCharm#{version.major_minor}",
     "~/Library/Application Support/JetBrains/PyCharm#{version.major_minor}",
-    "~/Library/Caches/PyCharm#{version.major_minor}",
-    "~/Library/Logs/PyCharm#{version.major_minor}",
-    "~/Library/Preferences/PyCharm#{version.major_minor}",
-    "~/Library/Preferences/jetbrains.pycharm.*.plist",
+    "~/Library/Caches/JetBrains/PyCharm#{version.major_minor}",
+    "~/Library/Logs/JetBrains/PyCharm#{version.major_minor}",
     "~/Library/Saved Application State/com.jetbrains.pycharm.savedState",
   ]
 end

@@ -39,11 +39,12 @@ cask "webstorm" do
   end
 
   zap trash: [
-    "~/Library/Application Support/WebStorm#{version.major_minor}",
-    "~/Library/Caches/WebStorm#{version.major_minor}",
-    "~/Library/Logs/WebStorm#{version.major_minor}",
+    "~/Library/Preferences/com.jetbrains.WebStorm.plist",
+    "~/Library/Preferences/jetbrains.webstorm.*.plist",
     "~/Library/Preferences/WebStorm#{version.major_minor}",
-    "~/Library/Preferences/jetbrains.webstorm.aaac0500.plist",
+    "~/Library/Application Support/JetBrains/WebStorm#{version.major_minor}",
+    "~/Library/Caches/JetBrains/WebStorm#{version.major_minor}",
+    "~/Library/Logs/JetBrains/WebStorm#{version.major_minor}",
     "~/Library/Saved Application State/com.jetbrains.WebStorm.savedState",
   ]
 end
