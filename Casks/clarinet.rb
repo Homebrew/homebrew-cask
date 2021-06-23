@@ -4,7 +4,7 @@ cask "clarinet" do
 
   url "https://github.com/hirosystems/clarinet/releases/download/v#{version}/macos-x64.zip"
   name "clarinet"
-  desc "Clarity CLI designed to facilitate smart contract understanding, development, testing and deployment."
+  desc "Clarity CLI for smart contract development, testing and deployment"
   homepage "https://github.com/hirosystems/clarinet/blob/master/README.md"
 
   binary "clarinet"
@@ -20,5 +20,4 @@ cask "clarinet" do
 
     WARNING: quarantining is a macOS security feature and you disable it at your own risk!
   EOS
-
 end
