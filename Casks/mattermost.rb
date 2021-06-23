@@ -1,6 +1,6 @@
 cask "mattermost" do
-  version "4.6.2"
-  sha256 "c3d5de922b9dfe30bbc0496677d45f0a29525e0fbda746ddaeeb81e4c42b5014"
+  version "4.7.0"
+  sha256 "d176db0d7749ecde60b94188f377ea53e9d8725f429c2badebbb8519d7ba3c9c"
 
   url "https://releases.mattermost.com/desktop/#{version}/mattermost-desktop-#{version}-mac.zip"
   name "Mattermost"
