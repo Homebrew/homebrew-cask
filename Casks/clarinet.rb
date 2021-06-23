@@ -10,7 +10,7 @@ cask "clarinet" do
   binary "clarinet"
 
   caveats <<~EOS
-    Clarinet is not yet signed or notarized by Apple, and thus it must be installed without the 'quaratine' system attribute like so:
+    Clarinet is not yet signed or notarized by Apple, and thus an Apple warning may block it from being used unless it's installed without the 'quaratine' system attribute like so:
 
       brew install --no-quarantine #{token}
 
