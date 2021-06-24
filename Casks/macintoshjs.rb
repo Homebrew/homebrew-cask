@@ -21,5 +21,6 @@ cask "macintoshjs" do
     "~/Library/Application Support/macintosh.js",
     "~/Library/Preferences/com.felixrieseberg.macintoshjs.plist",
     "~/Library/Saved Application State/com.felixrieseberg.macintoshjs.savedState",
+    "~/macintosh.js",
   ]
 end
