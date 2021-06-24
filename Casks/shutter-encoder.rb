@@ -25,5 +25,5 @@ cask "shutter-encoder" do
   end
 
   uninstall pkgutil: "com.paulpacifico.shutterencoder",
-            quit: "com.paulpacifico.shutterencoder"
+            quit:    "com.paulpacifico.shutterencoder"
 end
