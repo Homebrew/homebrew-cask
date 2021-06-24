@@ -7,7 +7,13 @@ cask "asana" do
   desc "Manage team projects and tasks"
   homepage "https://asana.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   auto_updates true
+  depends_on macos: ">= :el_capitan"
 
   app "Asana.app"
 
