@@ -21,7 +21,9 @@ cask "sage" do
   app "SageMath-#{version.before_comma.dots_to_hyphens}.app"
   pkg "Recommended_#{version.before_comma.dots_to_underscores}.pkg"
 
-  uninstall quit: "org.sagemath.Sage"
+  uninstall quit:    "org.sagemath.Sage",
+            pkgutil: "org.computop.SageMath.bin",
+                     "org.computop.SageMath.share"
 
   zap trash: [
     "~/.sage",
