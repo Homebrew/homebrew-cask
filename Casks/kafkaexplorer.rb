@@ -4,7 +4,7 @@ cask "kafkaexplorer" do
 
   url "https://github.com/stephaneuh/kafkaexplorer/raw/develop/releases/Kafkaexplorer_1.1.dmg"
   name "Kafka Explorer"
-  desc "A free, easy, straight to the point, graphical tool to explore Kafka topics and produce messages. Fully integrated with Confluent Schema Registry for AVRO schemas and JSON schemas on the fly deserialization."
+  desc "Graphical tool to read Kafka topics, send messages with AVRO/JSON schemas support"
   homepage "https://github.com/stephaneuh/kafkaexplorer"
 
   app "Kafkaexplorer.app"
