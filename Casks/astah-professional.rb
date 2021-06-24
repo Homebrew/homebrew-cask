@@ -4,9 +4,20 @@ cask "astah-professional" do
 
   url "https://cdn.change-vision.com/files/astah-professional-#{version.before_comma.dots_to_underscores}-#{version.after_comma}-MacOs.dmg",
       verified: "cdn.change-vision.com/files/"
-  appcast "https://astah.net/download"
   name "Change Vision Astah Professional"
+  desc "Software modeling tool"
   homepage "https://astah.net/editions/professional"
+
+  livecheck do
+    url "https://astah.net/download"
+    strategy :page_match do |page|
+      page.scan(/astah[._-]professional[._-]v?(\d+(?:_\d+)+)[._-](\h+)[._-]MacOs\.dmg/i).map do |match|
+        "#{match[0].tr("_", ".")},#{match[1]}"
+      end
+    end
+  end
+
+  depends_on macos: ">= :catalina"
 
   pkg "astah professional ver #{version.before_comma.dots_to_underscores}.pkg"
 
