@@ -23,4 +23,8 @@ cask "appdelete" do
     "~/Library/Saved Application State/com.apps4macs.AppDelete.savedState",
     "~/Library/Services/AppDelete.workflow",
   ]
+
+  caveats do
+    discontinued
+  end
 end
