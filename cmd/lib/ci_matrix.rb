@@ -29,7 +29,7 @@ module CiMatrix
       [*Regexp.last_match(1)]
     end
     return RUNNERS if args.nil?
-  
+
     # Preform same checks as `brew install` would
     required_macos = if args.count > 1
       { versions: args, comparator: "==" }
