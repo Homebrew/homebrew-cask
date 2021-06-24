@@ -7,7 +7,7 @@ cask "sage" do
     sha256 "fa6eb93368d4f7c220cbdd7a1483c1ef9d9b718b0f179c17c2acf14fb74f10c1"
   end
 
-  url "https://mirrors.mit.edu/sage/osx/intel/sage-#{version.before_comma}-OSX_#{version.after_comma}-x86_64.app.dmg",
+  url "https://mirrors.mit.edu/sage/osx/intel/old/sage-#{version.before_comma}-OSX_#{version.after_comma}-x86_64.app.dmg",
       verified: "mirrors.mit.edu/sage/osx/intel/"
   appcast "https://mirrors.mit.edu/sage/osx/intel/index.html"
   name "Sage"
