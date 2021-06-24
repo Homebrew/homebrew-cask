@@ -1,6 +1,6 @@
 cask "airbuddy" do
-  version "2.3.2,282"
-  sha256 "f744d3c125a763eed3a4d6c1f6d5c79ef6100ab44577ff4ed66053a72c39ea98"
+  version "2.4,330"
+  sha256 "6b56840047e5210573ff57da07ac06cf6099a4d5af5a168f43dc8515bfad3ea6"
 
   url "https://su.airbuddy.app/kCRSAmcjBc/AirBuddy_v#{version.before_comma}-#{version.after_comma}.dmg"
   name "AirBuddy"
@@ -13,6 +13,7 @@ cask "airbuddy" do
   end
 
   auto_updates true
+  depends_on macos: ">= :mojave"
 
   app "AirBuddy.app"
 

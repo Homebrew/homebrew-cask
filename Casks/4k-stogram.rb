@@ -1,6 +1,6 @@
 cask "4k-stogram" do
-  version "3.4.1"
-  sha256 "ec7bc90606d156a4012c8f379a6737b075eee7a3856c063dd473b816343d81d4"
+  version "3.4.2"
+  sha256 "e47358be552113732a49e6ab407d4da87e5c871947b7de85ada3e39f279ee082"
 
   url "https://dl.4kdownload.com/app/4kstogram_#{version}.dmg"
   name "4K Stogram"
