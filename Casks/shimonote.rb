@@ -4,8 +4,8 @@ cask "shimonote" do
 
   url "https://assets.shimonote.com/lizard-desktop/static/%E7%9F%B3%E5%A2%A8%E6%96%87%E6%A1%A3-#{version}.dmg",
       verified: "assets.shimonote.com/"
-  name "shimonote"
-  desc "石墨文档"
+  name "Shimonote"
+  desc "Document editor"
   homepage "https://shimo.im/"
 
   livecheck do
