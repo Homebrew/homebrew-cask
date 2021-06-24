@@ -1,12 +1,18 @@
 cask "copyclip" do
-  version "2.9.98.3"
+  version "2.9.98.7"
   sha256 :no_check
 
-  url "https://rink.hockeyapp.net/api/2/apps/ffb436060eb379c0cb23097402e92379?format=zip",
-      verified: "rink.hockeyapp.net/api/2/apps/ffb436060eb379c0cb23097402e92379"
-  appcast "https://rink.hockeyapp.net/api/2/apps/ffb436060eb379c0cb23097402e92379"
+  url "https://fiplab.com/app-download/CopyClip_#{version.major}.zip"
   name "CopyClip"
+  desc "Clipboard manager"
   homepage "https://fiplab.com/apps/copyclip-for-mac"
+
+  livecheck do
+    url :url
+    strategy :extract_plist do |versions|
+      versions.values.map(&:short_version).compact.first
+    end
+  end
 
   app "CopyClip #{version.major}.app"
 
