@@ -1,5 +1,5 @@
 cask "teamviewer" do
-  version "15.18.5"
+  version "15.19.4"
   sha256 :no_check
 
   url "https://download.teamviewer.com/download/TeamViewer.dmg"
