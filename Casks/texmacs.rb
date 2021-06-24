@@ -1,6 +1,6 @@
 cask "texmacs" do
-  version "1.99.21"
-  sha256 "0a8b00cebaaabf3e70ca5bee9d78af5810d0f1d953a1574b183a6c75f18b3505"
+  version "2.1"
+  sha256 "e6a55318821d69f50e27f57aee56ed4700227d678973b7a48be80a7ec03642a8"
 
   url "https://ftp.texmacs.org/TeXmacs/tmftp/macos/TeXmacs-#{version}.dmg"
   name "GNU TeXmacs"
