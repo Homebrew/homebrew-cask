@@ -8,10 +8,11 @@ cask "nvidia-geforce-now" do
   homepage "https://www.nvidia.com/en-us/geforce-now/download/"
 
   livecheck do
-    skip "No version information available"
+    url :url
+    strategy :extract_plist
   end
 
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :el_capitan"
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "GeForceNOW.app", target: "NVIDIA GeForce NOW.app"
