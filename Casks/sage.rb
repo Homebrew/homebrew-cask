@@ -19,7 +19,7 @@ cask "sage" do
   depends_on macos: ">= :high_sierra"
 
   app "SageMath-#{version.before_comma.dots_to_hyphens}.app"
-  binary "#{appdir}/SageMath-#{version.before_comma.dots_to_hyphens}.app/Contents/MacOS/SageMath", target: "sage"
+  pkg "Recommended_#{version.before_comma.dots_to_underscores}.pkg"
 
   uninstall quit: "org.sagemath.Sage"
 
