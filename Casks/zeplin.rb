@@ -1,5 +1,5 @@
 cask "zeplin" do
-  version "3.22,1226"
+  version "3.23,1230"
   sha256 :no_check
 
   url "https://api.zeplin.io/urls/download-mac"
