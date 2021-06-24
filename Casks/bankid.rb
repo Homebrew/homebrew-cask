@@ -1,9 +1,10 @@
 cask "bankid" do
-  version "7.10.0"
-  sha256 "4ea124c97c4d138bdf32de71ff32074bebd79614a4f1e35e16aa5a6b24fafd1e"
+  version "7.11.0"
+  sha256 "7bf72dd1258e390abbb89febc048c70f660b42f47723e9e7f59eb60d2de1ae41"
 
   url "https://install.bankid.com/Repository/BankID_installation_#{version.dots_to_underscores}.pkg"
   name "BankID"
+  desc "Electronic personal identification system"
   homepage "https://install.bankid.com/"
 
   livecheck do
