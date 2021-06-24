@@ -14,20 +14,22 @@ module CiMatrix
 
   def self.filter_runners(cask_content)
     # Retrieve arguments from `depends_on macos:`
-    args = if /depends_on macos: \[((.*,?)*)\]/ =~ cask_content
-      $1.scan(/\s*"?(:[^\s",]+|(\d+\.\d+))"?,?\s*/).flatten.map do |val|
+    args = case cask_content
+    when /depends_on macos: \[((.*,?)*)\]/
+      Regexp.last_match(1).scan(/\s*"?(:[^\s",]+|(\d+\.\d+))"?,?\s*/).flatten.map do |val|
         if /:(?<sym>\S+)/ =~ val
           sym.to_sym
         elsif /(?<ver>\d+\.\d+)/ =~ val
           MacOS::Version.new(ver).to_sym
         end
       end
-    elsif /depends_on macos: "?:([^\s"]+)"?/ =~ cask_content
-      [*MacOS::Version.from_symbol($1.to_sym)]
-    elsif /depends_on macos: "(([=<>]=\s)?(:\S+|(\d+\.\d+)))"/ =~ cask_content
-      [*$1]
+    when /depends_on macos: "?:([^\s"]+)"?/
+      [*MacOS::Version.from_symbol(Regexp.last_match(1).to_sym)]
+    when /depends_on macos: "(([=<>]=\s)?(:\S+|(\d+\.\d+)))"/
+      [*Regexp.last_match(1)]
     end
     return RUNNERS if args.nil?
+  
     # Preform same checks as `brew install` would
     required_macos = if args.count > 1
       { versions: args, comparator: "==" }
@@ -40,6 +42,7 @@ module CiMatrix
     else # rubocop:disable Lint/DuplicateBranch
       { versions: [args.first], comparator: "==" }
     end
+
     # Filter
     RUNNERS.select do |runner, _|
       required_macos[:versions].any? do |v|
