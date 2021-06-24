@@ -24,6 +24,5 @@ cask "shutter-encoder" do
     regex(/^\s*Version\s*(\d+(?:\.\d+)*)/i)
   end
 
-  uninstall pkgutil:   "com.paulpacifico.shutterencoder",
-            launchctl: "com.paulpacifico.shutterencoder.16820.397F3104-E5CD-486D-9FFF-5BEB0CD26EF3"
+  uninstall pkgutil:   "com.paulpacifico.shutterencoder"
 end
