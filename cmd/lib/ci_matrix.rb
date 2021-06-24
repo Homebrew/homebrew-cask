@@ -12,20 +12,58 @@ module CiMatrix
     { symbol: :big_sur,  name: "macos-11.0" }  => 0.1,
   }.freeze
 
-  def self.random_runner
-    @random_runner ||= RUNNERS.max_by { |(_, weight)| rand ** (1.0 / weight) }.first
+  def self.filter_runners(cask_content)
+    # Retrieve arguments from `depends_on macos:`
+    args = if /depends_on macos: \[(?<arg>(.*,?)*)\]/ =~ cask_content
+      arg.scan(/\s*"?(:[^\s",]+|(\d+\.\d+))"?,?\s*/).flatten.map { |val| 
+        if /:(?<sym>\S+)/ =~ val
+          sym.to_sym
+        elsif /(?<ver>\d+\.\d+)/ =~ val
+          MacOS::Version.new(ver).to_sym
+        end
+      }
+    elsif /depends_on macos: "?:(?<arg>[^\s"]+)"?/ =~ cask_content
+      [*MacOS::Version.from_symbol(arg.to_sym)]
+    elsif /depends_on macos: "(?<arg>([=<>]=\s)?(:\S+|(\d+\.\d+)))"/ =~ cask_content
+      [*arg]
+    end
+    # Preform same checks as `brew install` would
+    unless args.nil?
+      required_macos = if args.count > 1
+        { versions: args, comparator: "==" }
+      elsif MacOS::Version::SYMBOLS.key?(args.first)
+        { versions: [args.first], comparator: "==" }
+      elsif /^\s*(?<comparator><|>|[=<>]=)\s*:(?<version>\S+)\s*$/ =~ args.first
+        { versions: [version.to_sym], comparator: comparator }
+      elsif /^\s*(?<comparator><|>|[=<>]=)\s*(?<version>\S+)\s*$/ =~ args.first
+        { versions: [version], comparator: comparator }
+      else # rubocop:disable Lint/DuplicateBranch
+        { versions: [args.first], comparator: "==" }
+      end
+    else
+      return RUNNERS
+    end
+    # Filter
+    return RUNNERS.select { |runner, _|
+      required_macos[:versions].any? { |v| MacOS::Version.from_symbol(runner[:symbol]).public_send(required_macos[:comparator], v)}
+    }
+  end
+
+  def self.random_runner(avalible_runners = RUNNERS)
+    avalible_runners.max_by { |(_, weight)| rand ** (1.0 / weight) }.first
   end
 
   def self.runners(path)
     cask_content = path.read
+    filtered_runners = filter_runners(cask_content)
 
     if cask_content.match?(/\bMacOS\s*\.version\b/m) &&
-       RUNNERS.keys.any? { |runner| cask_content.include?(runner[:symbol].inspect) }
+      filtered_runners.keys.any? { |runner| cask_content.include?(runner[:symbol].inspect) }
       # If the cask depends on `MacOS.version`, test it on every possible macOS version.
-      RUNNERS.keys
+      filtered_runners.keys
     else
       # Otherwise, select a runner based on weighted random sample.
-      [random_runner]
+      [random_runner(filtered_runners)]
     end
   end
 
