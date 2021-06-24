@@ -22,8 +22,10 @@ cask "sage" do
   pkg "Recommended_#{version.before_comma.dots_to_underscores}.pkg"
 
   uninstall quit:    "org.sagemath.Sage",
-            pkgutil: "org.computop.SageMath.bin",
-                     "org.computop.SageMath.share"
+            pkgutil: [
+              "org.computop.SageMath.bin",
+              "org.computop.SageMath.share",
+            ]
 
   zap trash: [
     "~/.sage",
