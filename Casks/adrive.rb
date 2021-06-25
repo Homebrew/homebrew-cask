@@ -1,10 +1,10 @@
-cask "aliyundrive" do
+cask "adrive" do
   version :latest
   sha256 :no_check
 
   url "https://yunpan.aliyun.com/downloads/apps/desktop/aDrive.dmg",
       verified: "yunpan.aliyun.com/"
-  name "aliyundrive"
+  name "Aliyundrive"
   desc "阿里云盘"
   homepage "https://www.aliyundrive.com/"
 
