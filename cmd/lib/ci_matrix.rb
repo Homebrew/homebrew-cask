@@ -15,17 +15,11 @@ module CiMatrix
   def self.filter_runners(cask_content)
     # Retrieve arguments from `depends_on macos:`
     args = case cask_content
-    when /depends_on macos: \[((.*,?)*)\]/
-      Regexp.last_match(1).scan(/\s*"?(:[^\s",]+|(\d+\.\d+))"?,?\s*/).flatten.map do |val|
-        if /:(?<sym>\S+)/ =~ val
-          sym.to_sym
-        elsif /(?<ver>\d+\.\d+)/ =~ val
-          MacOS::Version.new(ver).to_sym
-        end
-      end
+    when /depends_on macos: \[((.*,?\s*)*)\]/
+      Regexp.last_match(1).scan(/\s*"?:([^\s",]+)"?,?\s*/).flatten.map(&:to_sym)
     when /depends_on macos: "?:([^\s"]+)"?/
-      [*MacOS::Version.from_symbol(Regexp.last_match(1).to_sym)]
-    when /depends_on macos: "(([=<>]=\s)?(:\S+|(\d+\.\d+)))"/
+      [*Regexp.last_match(1).to_sym]
+    when /depends_on macos: "([=<>]=\s:?\S+)"/
       [*Regexp.last_match(1)]
     end
     return RUNNERS if args.nil?
@@ -35,10 +29,8 @@ module CiMatrix
       { versions: args, comparator: "==" }
     elsif MacOS::Version::SYMBOLS.key?(args.first)
       { versions: [args.first], comparator: "==" }
-    elsif /^\s*(?<comparator><|>|[=<>]=)\s*:(?<version>\S+)\s*$/ =~ args.first
+    elsif /^\s*(?<comparator><|>|[=<>]=)\s*:?(?<version>\S+)\s*$/ =~ args.first
       { versions: [version.to_sym], comparator: comparator }
-    elsif /^\s*(?<comparator><|>|[=<>]=)\s*(?<version>\S+)\s*$/ =~ args.first
-      { versions: [version], comparator: comparator }
     else # rubocop:disable Lint/DuplicateBranch
       { versions: [args.first], comparator: "==" }
     end
