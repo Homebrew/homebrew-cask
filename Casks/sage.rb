@@ -21,7 +21,12 @@ cask "sage" do
   app "SageMath-#{version.before_comma.dots_to_hyphens}.app"
   pkg "Recommended_#{version.before_comma.dots_to_underscores}.pkg"
 
-  uninstall quit:    "org.sagemath.Sage",
+  uninstall quit:    [
+    "org.computop.sage",
+    "org.computop.SageMath",
+    "com.tcltk.tcllibrary",
+    "com.tcltk.tklibrary",
+  ],
             pkgutil: [
               "org.computop.SageMath.bin",
               "org.computop.SageMath.share",
@@ -29,8 +34,7 @@ cask "sage" do
 
   zap trash: [
     "~/.sage",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.sagemath.sage.sfl*",
-    "~/Library/Logs/sage.log",
-    "~/Library/Preferences/org.sagemath.Sage.plist",
+    "~/Library/Application Support/SageMath",
+    "~/Library/Preferences/SageMath.plist",
   ]
 end
