@@ -13,6 +13,8 @@ cask "mem" do
     strategy :electron_builder
   end
 
+  auto_updates true
+
   app "Mem.app"
 
   zap trash: [
