@@ -1,6 +1,6 @@
 cask "yippy" do
-  version "2.8.0"
-  sha256 "1c43660c32cd5d313c45ec956e3d06be1baa0aecb746d716b2ebd18661ca548e"
+  version "2.8.1"
+  sha256 "89d8c2c628637cc72ff6f8a3ca0d07484479a1becb66cedaa67a12062d148131"
 
   url "https://github.com/mattDavo/Yippy/releases/download/#{version}/Yippy.zip",
       verified: "github.com/mattDavo/Yippy/"
