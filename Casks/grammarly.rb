@@ -1,5 +1,5 @@
 cask "grammarly" do
-  version "1.5.72"
+  version "1.5.75"
   sha256 :no_check
 
   url "https://download-editor.grammarly.com/osx/Grammarly.dmg"
@@ -7,14 +7,16 @@ cask "grammarly" do
   desc "Utility to fix grammar errors and style issues in text"
   homepage "https://www.grammarly.com/"
 
-  app "Grammarly.app"
-
   livecheck do
     url :url
     strategy :extract_plist do |versions|
-      versions.values.map(&:short_version).compact.first
-    end 
+      versions.values.map(&:version).compact.first
+    end
   end
+
+  auto_updates true
+
+  app "Grammarly.app"
 
   zap trash: [
     "~/Library/Application Support/Grammarly",
