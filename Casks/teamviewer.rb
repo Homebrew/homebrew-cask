@@ -8,7 +8,7 @@ cask "teamviewer" do
   homepage "https://www.teamviewer.com/"
 
   livecheck do
-    url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=15.9.4&os=macos&osversion=10.15.1&type=1&channel=1"
+    url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=10.15.1&type=1&channel=1"
     strategy :sparkle
   end
 
