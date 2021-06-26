@@ -12,9 +12,9 @@ cask "thunder" do
   livecheck do
     url "https://static-xl9-ssl.xunlei.com/json/mac_preferences.json"
     strategy :page_match do |page|
-      version = page[%r{appcast_(\d+(?:\.\d+)*)\.xml}i, 1]
+      version = page[/appcast_(\d+(?:\.\d+)*)\.xml/i, 1]
       version_page = Homebrew::Livecheck::Strategy.page_content("https://down.sandai.net/mac/thunder/appcast_#{version}.xml")
-      version_page[:content].scan(%r{thunder[_-](\d+(?:\.\d+)*)\.dmg}i).flatten
+      version_page[:content].scan(/thunder[_-](\d+(?:\.\d+)*)\.dmg/i).flatten
     end
   end
 
