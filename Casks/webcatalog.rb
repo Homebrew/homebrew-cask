@@ -17,6 +17,11 @@ cask "webcatalog" do
   desc "Tool to run web apps like desktop apps"
   homepage "https://webcatalog.app/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
 
   app "WebCatalog.app"
