@@ -1,6 +1,6 @@
 cask "fork" do
-  version "2.9.2"
-  sha256 "4db0cb4c26b60b59957e7f752fcfde05f132cc727345451a8c7f7cec80267743"
+  version "2.8"
+  sha256 "9c582da29b089ebdbc2543032261239a97f183582b745549bf4436ef1f24dea0"
 
   url "https://forkapp.ams3.cdn.digitaloceanspaces.com/mac/Fork-#{version}.dmg",
       verified: "forkapp.ams3.cdn.digitaloceanspaces.com/mac/"
