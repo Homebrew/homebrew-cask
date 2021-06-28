@@ -1,5 +1,5 @@
 cask "duplicati" do
-  version "2.0.6.3:beta:2021-06-17"
+  version "2.0.6.3,beta:2021-06-17"
   sha256 "7a26fd69b7016e88a23ff03474eb78e174da463c4967b90c0b54f07a94027e18"
 
   url "https://github.com/duplicati/duplicati/releases/download/v#{version.before_comma}-#{version.before_comma}_#{version.after_comma.before_colon}_#{version.after_colon}/duplicati-#{version.before_comma}_#{version.after_comma.before_colon}_#{version.after_colon}.dmg",
