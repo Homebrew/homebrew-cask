@@ -10,8 +10,8 @@ cask "figma" do
       regex(%r{/Figma[._-]v?(\d+(?:\.\d+)+)\.zip}i)
     end
   else
-    version "98.11.0"
-    sha256 "85bf1fc63a799b46c0d8e2e041033b54537cca5ee5dcb27af3b6016f080ca7c0"
+    version "99.0.0"
+    sha256 "5eb4d1073ad671dc53ec1a00225e6adf1f8645b1d43a6774514cd96009f5fdd3"
 
     url "https://desktop.figma.com/mac-arm/Figma-#{version}.zip"
 
