@@ -1,12 +1,12 @@
 cask "zoom" do
-  version "5.7.0.446"
+  version "5.7.1.499"
 
   if Hardware::CPU.intel?
-    sha256 "7d2cf5ce4a3114b17e5e7a7f06427b295241514261f02dd5bf8737f84d35fcce"
+    sha256 "6fae45254a21f6082ef79e204f84fe22a91b84cd33f73ec53349dc33489f86a8"
 
     url "https://cdn.zoom.us/prod/#{version}/Zoom.pkg"
   else
-    sha256 "12ed4418da8daabe8dc4424045ecc5f90f8bbacf17fca4e57e82dcbfca84f283"
+    sha256 "acff046de909690bfb3c7a81103399f8923ee26aecce46b8e50ef26e6ed5a477"
 
     url "https://cdn.zoom.us/prod/#{version}/arm64/Zoom.pkg"
   end
