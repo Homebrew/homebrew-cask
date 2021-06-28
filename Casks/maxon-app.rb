@@ -5,7 +5,7 @@ cask "maxon-app" do
   url "https://installer.maxon.net/installer/RG_installers/Maxon_App_#{version}_Mac.dmg"
   name "Maxon App"
   desc "Download the Maxon App to install, use, and try all our products."
-  homepage "https://www.maxon.net/downloads/"
+  homepage "https://www.maxon.net/en/downloads/"
 
   installer script: {
     executable: "#{staged_path}/Maxon App Installer.app/Contents/Scripts/install.sh"
