@@ -2,7 +2,8 @@ cask "portx" do
   version "1.1.3"
   sha256 "1ac70309669c4f8cd48a63f12095b62b66012483dc4eaba635e40f86735255e8"
 
-  url "https://cdn.netsarang.net/0ac7ea20/PortX-#{version}.dmg", verified: "https://cdn.netsarang.net"
+  url "https://cdn.netsarang.net/0ac7ea20/PortX-#{version}.dmg",
+      verified: "cdn.netsarang.net/"
   name "portx"
   desc "SSH Client"
   homepage "https://portx.online/en/portx/"
