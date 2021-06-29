@@ -9,7 +9,7 @@ cask "fork" do
   homepage "https://git-fork.com/"
 
   livecheck do
-    url "https://git-fork.com/update/feed-stable.xml"
+    url "https://git-fork.com/update/feed.xml"
     strategy :sparkle do |item|
       item.url[%r{/Fork-(\d+(?:\.\d+)*)\.dmg}i, 1]
     end
