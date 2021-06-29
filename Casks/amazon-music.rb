@@ -1,20 +1,16 @@
 cask "amazon-music" do
-  version "8.6.0.2271"
-  sha256 :no_check
+  version "8.6.0.2271,22710610_e91247c784977e6c258edc2ea5d1a151"
+  sha256 "85d69d9a46296c43936344c1dccb009cbba90ca85c3d7b60620540aff3155ef8"
 
-  url "https://www.amazon.com/gp/dmusic/desktop/downloadPlayer"
+  url "https://morpho-releases.s3-us-west-2.amazonaws.com/mac/#{version.after_comma}/Amazon+Music+Installer.dmg",
+      verified: "morpho-releases.s3-us-west-2.amazonaws.com/mac/"
+  appcast "https://www.amazon.com/gp/dmusic/desktop/downloadPlayer",
+          must_contain: version.after_comma
   name "Amazon Music"
   desc "Desktop client for Amazon Music"
   homepage "https://www.amazon.com/musicapps"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
-
   auto_updates true
-
-  container nested: "Amazon+Music+Installer.dmg"
 
   installer script: {
     executable: "Amazon Music Installer.app/Contents/MacOS/installbuilder.sh",
