@@ -4,12 +4,12 @@ cask "qlc-plus" do
 
   url "https://qlcplus.org/downloads/#{version}/QLC+_#{version}.dmg"
   name "Q Light Controller+"
+  desc "Control DMX or analog lighting systems"
   homepage "https://qlcplus.org/"
 
   livecheck do
     url "https://github.com/mcallegari/qlcplus"
-    strategy :git
-    regex(/^QLC\+_(\d+(?:\.\d+)*)$/)
+    regex(/^QLC\+[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
   app "QLC+.app"
