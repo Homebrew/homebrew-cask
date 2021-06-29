@@ -7,6 +7,7 @@ cask "eudic" do
       user_agent: :fake
   name "Eudic"
   name "欧路词典"
+  desc "European dictionary"
   homepage "https://www.eudic.net/v4/en/app/eudic"
 
   livecheck do
