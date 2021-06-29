@@ -17,7 +17,6 @@ cask "maxon" do
   }
 
   uninstall delete:    [
-    "#{staged_path}/#{token}",
     "/Applications/Maxon.app",
     "/Library/Application Support/Maxon",
     "/Library/Application Support/Red Giant",
