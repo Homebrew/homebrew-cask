@@ -14,6 +14,8 @@ cask "amazon-music" do
 
   auto_updates true
 
+  container nested: "Amazon+Music+Installer.dmg"
+
   installer script: {
     executable: "Amazon Music Installer.app/Contents/MacOS/installbuilder.sh",
   }
