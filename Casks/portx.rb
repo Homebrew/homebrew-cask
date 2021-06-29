@@ -9,8 +9,8 @@ cask "portx" do
   homepage "https://portx.online/en/portx/"
 
   livecheck do
-    url :url
-    strategy :electron_builder
+    url :homepage
+    regex(/PortX-(\d+(?:\.\d+)*)\.dmg/i)
   end
 
   app "PortX.app"
