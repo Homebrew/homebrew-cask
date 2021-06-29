@@ -12,5 +12,7 @@ cask "retroarch" do
     regex(%r{href=["']?/stable/v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
+  conflicts_with cask: "retroarch-metal"
+
   app "RetroArch.app"
 end
