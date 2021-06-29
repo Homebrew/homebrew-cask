@@ -7,6 +7,10 @@ cask "maxon" do
   desc "Install, use, and try Maxon products"
   homepage "https://www.maxon.net/en/downloads/"
 
+  livecheck do
+    skip "No version information available"
+  end
+
   installer script: {
     executable: "#{staged_path}/Maxon App Installer.app/Contents/Scripts/install.sh",
     sudo:       true,
