@@ -5,7 +5,7 @@ cask "dosbox" do
   url "https://downloads.sourceforge.net/dosbox/dosbox/#{version.before_comma}/DOSBox-#{version.before_comma}-#{version.after_comma}.dmg",
       verified: "sourceforge.net/dosbox/"
   name "DOSBox"
-  desc "An x86 emulator with DOS"
+  desc "x86 emulator with DOS"
   homepage "https://www.dosbox.com/"
 
   livecheck do
