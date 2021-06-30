@@ -7,6 +7,11 @@ cask "lens" do
   desc "Kubernetes IDE"
   homepage "https://k8slens.dev/"
 
+  livecheck do
+    url "https://lens-binaries.s3.amazonaws.com/ide/latest-mac.yml"
+    strategy :electron_builder
+  end
+
   auto_updates true
 
   app "Lens.app"
