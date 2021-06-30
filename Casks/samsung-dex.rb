@@ -4,7 +4,7 @@ cask "samsung-dex" do
 
   url "https://downloadcenter.samsung.com/content/SW/202101/20210112132845263/SamsungDeXSetupMac.dmg"
   name "Samsung DeX"
-  desc "Extend some Samsung devices into a desktop-like experience by connecting a keyboard, mouse, and monitor"
+  desc "Extend some Samsung devices into a desktop-like experience"
   homepage "https://www.samsung.com/us/explore/dex/"
 
   pkg "Install Samsung DeX.pkg"
