@@ -1,6 +1,6 @@
 cask "samsung-dex" do
   version "2.0.0.11"
-  sha256 "cd9540ea8b1595399b5d99b0ba0d549d0ec1dcbba4dcf4cf006e3f795e0b9cb0"
+  sha256 :no_check
 
   url "https://downloadcenter.samsung.com/content/SW/202101/20210112132845263/SamsungDeXSetupMac.dmg"
   name "Samsung DeX"
