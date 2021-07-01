@@ -2,11 +2,11 @@ cask "intellij-idea" do
   version "2021.1.3,211.7628.21"
 
   if Hardware::CPU.intel?
-    sha256 "860c712fdd645229375ec3d091eeb98f8f9ea9b955a2e5cfc4e8f5c276485e46"
+    sha256 "156f5f12ae5c45b6d3c0b72af9105cdb6a610b0e7dfb32f26686f74b9bcf5ed4"
 
     url "https://download.jetbrains.com/idea/ideaIU-#{version.before_comma}.dmg"
   else
-    sha256 "264b053b43cfe60d591c9074738ee9bab374eec5518947fffa9db65ffeb0c288"
+    sha256 "a2e722e4a2d2ebc44851b6106f024bc27e15de70b7276bda15f1aa090b1a109a"
 
     url "https://download.jetbrains.com/idea/ideaIU-#{version.before_comma}-aarch64.dmg"
   end
