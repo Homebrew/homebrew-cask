@@ -6,7 +6,7 @@ cask "intellij-idea" do
 
     url "https://download.jetbrains.com/idea/ideaIU-#{version.before_comma}.dmg"
   else
-    sha256 "264b053b43cfe60d591c9074738ee9bab374eec5518947fffa9db65ffeb0c288"
+    sha256 "a2e722e4a2d2ebc44851b6106f024bc27e15de70b7276bda15f1aa090b1a109a"
 
     url "https://download.jetbrains.com/idea/ideaIU-#{version.before_comma}-aarch64.dmg"
   end
