@@ -9,7 +9,7 @@ cask "shift" do
 
   livecheck do
     url "https://tryshift.com/download/?platform=mac"
-    regex(/href=.*?version\/(\d+(?:[._-]\d+)+)[._-]stable\/osx[._-]64/i)
+    regex(%r{href=.*?version/(\d+(?:[._-]\d+)+)[._-]stable/osx[._-]64}i)
   end
 
   app "Shift.app"
