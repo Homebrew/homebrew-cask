@@ -12,7 +12,7 @@ cask "prezi-next" do
     strategy :sparkle
   end
 
-  depends_on mac_os: ">= :el_capitan"
+  depends_on macos: ">= :el_capitan"
 
   app "Prezi Next.app"
 end
