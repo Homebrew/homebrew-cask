@@ -2,7 +2,7 @@ cask "intellij-idea" do
   version "2021.1.3,211.7628.21"
 
   if Hardware::CPU.intel?
-    sha256 "860c712fdd645229375ec3d091eeb98f8f9ea9b955a2e5cfc4e8f5c276485e46"
+    sha256 "156f5f12ae5c45b6d3c0b72af9105cdb6a610b0e7dfb32f26686f74b9bcf5ed4"
 
     url "https://download.jetbrains.com/idea/ideaIU-#{version.before_comma}.dmg"
   else
