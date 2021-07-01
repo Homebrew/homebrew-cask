@@ -4,12 +4,15 @@ cask "prezi-next" do
 
   url "https://desktopassets.prezi.com/mac/pitch/releases/Prezi_Next_#{version.before_comma}.dmg"
   name "Prezi Next"
+  desc "Presentation software"
   homepage "https://prezi.com/"
 
   livecheck do
     url "https://prezidesktop.s3.amazonaws.com/assets/mac/pitch/updates/prezi-business.xml"
     strategy :sparkle
   end
+
+  depends_on mac_os: ">= :el_capitan"
 
   app "Prezi Next.app"
 end
