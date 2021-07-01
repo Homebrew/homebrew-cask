@@ -1,9 +1,8 @@
 cask "resolume-arena" do
   version "7.4.1,76771"
-  sha256 "0b25904b650dc1dd7a8c99dbe6833e3f95ec3bd757d8843aeba4809527971225"
+  sha256 "342fe58affa25bfb656e0111ca7d2f843df5ae7bf657e0e612647ed77640b9f6"
 
   url "https://resolume.com/download/Resolume_Arena_#{version.major_minor_patch.dots_to_underscores}_rev_#{version.after_comma}_Installer.dmg"
-  appcast "https://resolume.com/download/"
   name "Resolume Arena"
   homepage "https://resolume.com/"
 
