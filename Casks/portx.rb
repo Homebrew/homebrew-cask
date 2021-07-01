@@ -1,6 +1,6 @@
 cask "portx" do
-  version "1.1.1"
-  sha256 "be19b6d953697e9e6137dec10139cc867a270d8ed0598ff7e2ed70781f2810ac"
+  version "1.1.3"
+  sha256 "1ac70309669c4f8cd48a63f12095b62b66012483dc4eaba635e40f86735255e8"
 
   url "https://cdn.netsarang.net/0ac7ea20/PortX-#{version}.dmg",
       verified: "cdn.netsarang.net/"
@@ -9,7 +9,7 @@ cask "portx" do
   homepage "https://portx.online/en/portx/"
 
   livecheck do
-    url :homepage
+    url :url
     regex(/PortX-(\d+(?:\.\d+)*)\.dmg/i)
   end
 
