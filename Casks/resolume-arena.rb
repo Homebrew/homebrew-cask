@@ -4,6 +4,7 @@ cask "resolume-arena" do
 
   url "https://resolume.com/download/Resolume_Arena_#{version.major_minor_patch.dots_to_underscores}_rev_#{version.after_comma}_Installer.dmg"
   name "Resolume Arena"
+  desc "Video mapping software"
   homepage "https://resolume.com/"
 
   livecheck do
