@@ -1,4 +1,4 @@
-cask "final-fantasy-xiv" do
+cask "final-fantasy-xiv-online" do
   version "pnvdkzgk77dj10"
   sha256 "a187414e0a0a101b995f08706d1bd341992258e72d535409f1136daaed413f17"
 
