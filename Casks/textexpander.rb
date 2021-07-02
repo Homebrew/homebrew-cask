@@ -1,6 +1,6 @@
 cask "textexpander" do
-  version "6.8.4,684.8"
-  sha256 "a8e67846e386cf6e2235f40004c82ebd442ebb5e6152a088129334741b6dd772"
+  version "6.8.5,685.6"
+  sha256 "08533d2c787ceaa04d34ba42e73fea3b7798134f33191acef68d68d38b604958"
 
   url "https://cdn.textexpander.com/mac/#{version.after_comma}/TextExpander_#{version.before_comma}.zip",
       verified: "cdn.textexpander.com/mac/"
@@ -14,7 +14,7 @@ cask "textexpander" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   app "TextExpander.app"
 
