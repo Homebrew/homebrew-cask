@@ -12,5 +12,12 @@ cask "vial" do
     url "https://github.com/vial-kb/vial-gui.git"
   end
 
+  zap trash: [
+  "~/Library/Application Support/Vial",
+  "~/Library/Caches/Vial",
+  "~/Library/Preferences/Vial.plist",
+  "~/Library/Preferences/com.vial.Vial.plist",
+  ]
+  
   app "Vial.app"
 end
