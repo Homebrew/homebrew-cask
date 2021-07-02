@@ -13,7 +13,7 @@ cask "sunloginclient" do
     strategy :header_match
     regex(/SunloginClient-(\d+(?:\.\d+)*)\.dmg/i)
   end
-  
+
   pkg "SunloginClient.pkg"
 
   uninstall quit:      "com.oray.sunlogin.macclient",
