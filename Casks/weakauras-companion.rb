@@ -1,13 +1,13 @@
 cask "weakauras-companion" do
-  version "3.2.2"
+  version "3.3.3"
 
   if Hardware::CPU.intel?
-    sha256 "c95d8e563f92ba1e2445c17bc1c6e76f7297694851bd656fff80916bdd50be7a"
+    sha256 "0a69f799436bedd5055a60cb454a6dd1a87567bd304ad6fa5550e50d3321368b"
 
-    url "https://github.com/WeakAuras/WeakAuras-Companion/releases/download/v#{version}/WeakAuras-Companion-#{version}-mac.dmg",
+    url "https://github.com/WeakAuras/WeakAuras-Companion/releases/download/v#{version}/WeakAuras-Companion-#{version}-mac-x64.dmg",
         verified: "github.com/WeakAuras/WeakAuras-Companion/"
   else
-    sha256 "6c33a3b9fafee66811310909d86f0972b3c81d2b9a3027c8e95fa0c773846221"
+    sha256 "33235d48202c14aacd39dbad6ad2e71dc479bd1d2b666805d30a5a2cde1a5f58"
 
     url "https://github.com/WeakAuras/WeakAuras-Companion/releases/download/v#{version}/WeakAuras-Companion-#{version}-mac-arm64.dmg",
         verified: "github.com/WeakAuras/WeakAuras-Companion/"
