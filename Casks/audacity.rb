@@ -8,6 +8,11 @@ cask "audacity" do
   desc "Multi-track audio editor and recorder"
   homepage "https://www.audacityteam.org/"
 
+  livecheck do
+    url :url
+    regex(/^Audacity[._-]v?(\d+(?:\.\d+)+)$/i)
+  end
+
   app "Audacity.app"
 
   zap trash: [
