@@ -1,6 +1,6 @@
 cask "unity" do
-  version "2021.1.11f1,4d8c25f7477e"
-  sha256 "8a8bfa651cd54fecc4b93526ff67d1e9148de622aa1bdb3483e5ac615ee3954a"
+  version "2021.1.13f1,a03098edbbe0"
+  sha256 "945a057ec35bf699435749eb06657c21f95bc0f8f47956c803e726883fb5c17f"
 
   url "https://download.unity3d.com/download_unity/#{version.after_comma}/MacEditorInstaller/Unity-#{version.before_comma}.pkg",
       verified: "download.unity3d.com/download_unity/"
