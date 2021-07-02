@@ -8,6 +8,12 @@ cask "sunloginclient" do
   desc "Remote desktop control and monitoring tool"
   homepage "https://sunlogin.oray.com/"
 
+  livecheck do
+    url "https://sunlogin.oray.com/zh_CN/download/download?id=89"
+    strategy :header_match
+    regex(/SunloginClient-(\d+(?:\.\d+)*)\.dmg/i)
+  end
+  
   pkg "SunloginClient.pkg"
 
   uninstall quit:      "com.oray.sunlogin.macclient",
