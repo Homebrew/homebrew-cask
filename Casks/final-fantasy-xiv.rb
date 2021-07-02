@@ -21,3 +21,4 @@ cask "final-fantasy-xiv" do
 
   uninstall trash: "~/Documents/My Games/FINAL FANTASY XIV - A Realm Reborn"
 end
+
