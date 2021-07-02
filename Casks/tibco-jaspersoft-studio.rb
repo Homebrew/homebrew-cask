@@ -4,9 +4,14 @@ cask "tibco-jaspersoft-studio" do
 
   url "https://downloads.sourceforge.net/jasperstudio/JaspersoftStudio-#{version}/TIB_js-studiocomm_#{version}_macosx_x86_64.dmg",
       verified: "sourceforge.net/jasperstudio/"
-  appcast "https://sourceforge.net/projects/jasperstudio/rss"
   name "TIBCO Jaspersoft Studio"
+  desc "Eclipse-based report development tool for JasperReports"
   homepage "https://community.jaspersoft.com/project/jaspersoft-studio"
+
+  livecheck do
+    url "https://community.jaspersoft.com/project/jaspersoft-studio/releases"
+    regex(/TIB[._-]js[._-]studiocomm[._-]v?(\d+(?:\.\d+)+)[._-]macosx[._-]x86[._-]64\.dmg/i)
+  end
 
   auto_updates true
 
