@@ -8,15 +8,11 @@ cask "vial" do
   desc "Configurator of compatible keyboards in real time"
   homepage "https://get.vial.today/"
 
-  livecheck do
-    url "https://github.com/vial-kb/vial-gui.git"
-  end
-
   zap trash: [
-  "~/Library/Application Support/Vial",
-  "~/Library/Caches/Vial",
-  "~/Library/Preferences/Vial.plist",
-  "~/Library/Preferences/com.vial.Vial.plist",
+    "~/Library/Application Support/Vial",
+    "~/Library/Caches/Vial",
+    "~/Library/Preferences/Vial.plist",
+    "~/Library/Preferences/com.vial.Vial.plist",
   ]
   
   app "Vial.app"
