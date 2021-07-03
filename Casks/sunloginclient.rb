@@ -11,7 +11,7 @@ cask "sunloginclient" do
   livecheck do
     url "https://sunlogin.oray.com/zh_CN/download/download?id=89"
     strategy :header_match
-    regex(/SunloginClient-(\d+(?:\.\d+)*)\.dmg/i)
+    regex(/SunloginClient[._-](\d+(?:\.\d+)*)\.dmg/i)
   end
 
   pkg "SunloginClient.pkg"
