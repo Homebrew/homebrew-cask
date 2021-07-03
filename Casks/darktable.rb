@@ -11,7 +11,7 @@ cask "darktable" do
   livecheck do
     url :url
     strategy :github_latest
-    regex(%r{href=.*?darktable[._-]v?(\d+(?:\.\d+)+).dmg}i)
+    regex(/href=.*?darktable[._-]v?(\d+(?:\.\d+)+).dmg/i)
   end
 
   conflicts_with cask: "homebrew/cask-versions/darktable-dev"
