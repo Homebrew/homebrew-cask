@@ -15,6 +15,8 @@ cask "dmenu-mac" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "dmenu-mac.app"
 
   zap trash: [
