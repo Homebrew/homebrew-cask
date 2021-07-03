@@ -4,7 +4,7 @@ cask "vial" do
 
   url "https://github.com/vial-kb/vial-gui/releases/download/v#{version}/Vial-v#{version}.dmg",
       verified: "https://github.com/vial-kb/vial-gui"
-  name "vial"
+  name "Vial"
   desc "Configurator of compatible keyboards in real time"
   homepage "https://get.vial.today/"
 
