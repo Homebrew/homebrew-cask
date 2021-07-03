@@ -1,5 +1,5 @@
 cask "protonmail-bridge" do
-  version "1.8.3"
+  version "1.8.7"
   sha256 :no_check
 
   url "https://protonmail.com/download/Bridge-Installer.dmg"
