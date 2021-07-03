@@ -7,6 +7,7 @@ cask "dmenu-mac" do
 
   url "https://github.com/oNaiPs/dmenu-mac/releases/download/#{version}/dmenu-mac.zip"
   name "dmenu-mac"
+  desc "Keyboard-only application launcher"
   homepage "https://github.com/oNaiPs/dmenu-mac"
 
   livecheck do
