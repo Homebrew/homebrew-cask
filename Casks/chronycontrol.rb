@@ -1,6 +1,6 @@
 cask "chronycontrol" do
-  version "1.4.3,270"
-  sha256 "63e13bbff5ec66adf647fc08e2c35e36d5d42d948f7f6944cf74eb7dc2c1dbfa"
+  version "1.4.4,275"
+  sha256 "b80d0f32f645e555bd55728a7c3d9aed8a96eeb36b758e2e9c6eac55cb83ccd1"
 
   url "https://www.whatroute.net/software/chronycontrol-#{version.before_comma}.zip"
   name "ChronyControl"
