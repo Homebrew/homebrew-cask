@@ -5,6 +5,7 @@ cask "openmtp" do
   url "https://github.com/ganeshrvel/openmtp/releases/download/v#{version}/OpenMTP-#{version}-mac.zip",
       verified: "github.com/ganeshrvel/openmtp/"
   name "OpenMTP"
+  desc "Android file transfer"
   homepage "https://openmtp.ganeshrvel.com/"
 
   livecheck do
