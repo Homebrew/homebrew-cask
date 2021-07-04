@@ -8,5 +8,10 @@ cask "opensesame" do
   desc "Graphical experiment builder for the social sciences"
   homepage "https://osdoc.cogsci.nl/"
 
+  livecheck do
+    url :url
+    regex(%r{^release[/._-]v?(\d+(?:\.\d+)+)$}i)
+  end
+
   app "opensesame.app"
 end
