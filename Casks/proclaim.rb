@@ -6,7 +6,7 @@ cask "proclaim" do
       verified: "logoscdn.com/Proclaim/"
   name "Faithlife Proclaim"
   desc "Church presentation software"
-  homepage "https://proclaim.faithlife.com/"
+  homepage "https://faithlife.com/products/proclaim"
 
   livecheck do
     url "http://downloads.proclaimonline.com/mac/appcast.xml"
