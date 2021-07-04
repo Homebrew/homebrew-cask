@@ -17,11 +17,11 @@ cask "sandisk-security" do
     executable: "exec/SanDisk Security Installer.app/Contents/MacOS/SanDisk Security Installer",
     args:       ["-uninstall", "-silent"],
     sudo:       true,
-  }
+  }, delete: "/Library/LaunchDaemons/com.wdc.SanDiskPrivilegedHelper.plist"
 
   zap trash: [
     "~/Library/Caches/com.wdc.branded.sandisksecurity",
-    "~/Library/Preferences/com.wdc.branded.sandisksecurity.plist",
     "~/Library/Caches/com.westerndigital.SanDiskSecurityInstaller",
+    "~/Library/Preferences/com.wdc.branded.sandisksecurity.plist",
   ]
 end
