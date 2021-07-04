@@ -3,7 +3,6 @@ cask "caramba-switcher" do
   sha256 :no_check
 
   url "https://cdn.caramba-switcher.com/files/CarambaSwitcherBeta.pkg",
-      user_agent: :fake
   name "Caramba Switcher"
   desc "Keyboard switcher"
   homepage "https://caramba-switcher.com/"
