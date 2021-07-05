@@ -1,11 +1,11 @@
 cask "sleek" do
-  version "0.8.0"
-  sha256 "56cb4f289a65456ea42986272ad4ef6ebe07eadd05216518ac727e4639223c10"
+  version "1.0.8"
+  sha256 "b5498XsLWzstpDAH8SPwmdxnuAfgitZawxs2BpUBr8njDp3SNrDoFx"
 
-  url "https://github.com/ransome1/sleek/releases/download/v#{version}/sleek-#{version}.dmg"
+  url "https://github.com/ransome1/sleek/releases/download/v#{version}/sleek-#{version}-mac.dmg"
   appcast "https://github.com/ransome1/sleek/releases.atom"
   name "sleek"
-  desc "Todo app based on todo.txt, free and open-source"
+  desc "Todo app based on todo.txt for Linux, Windows and MacOS, free and open-source"
   homepage "https://github.com/ransome1/sleek"
 
   app "sleek.app"
