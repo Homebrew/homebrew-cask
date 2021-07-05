@@ -1,14 +1,14 @@
 cask "pdfpen" do
-  version "12.2.1,1221.6"
-  sha256 "699e7efaa219c3998b571e141891bc388d002caaf86a3a9d9582ec50bd547143"
+  version "12.2.3,1223.1"
+  sha256 "7aafb25ce3234bac3a6c499c31ef97ef478e3a059e82ac548a49a04a933c9d17"
 
   url "https://cdn.smilesoftware.com/PDFpen_#{version.before_comma}.dmg"
   name "PDFpen"
-  desc "PDF editor"
+  desc "PDF editing software"
   homepage "https://smilesoftware.com/PDFpen"
 
   livecheck do
-    url "https://smilesoftware.com/appcast/PDFpen#{version.major}.xml"
+    url "https://cgi.pdfpen.com/appcast/PDFpen#{version.major}.xml"
     strategy :sparkle
   end
 

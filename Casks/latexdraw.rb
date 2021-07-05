@@ -4,10 +4,14 @@ cask "latexdraw" do
 
   url "https://downloads.sourceforge.net/latexdraw/LaTeXDraw-#{version}.dmg",
       verified: "downloads.sourceforge.net/latexdraw/"
-  appcast "https://github.com/latexdraw/latexdraw/releases.atom"
   name "LaTexDraw"
   desc "Drawing editor for creating LaTeX PSTricks code"
   homepage "https://latexdraw.sourceforge.io/"
+
+  livecheck do
+    url "https://github.com/latexdraw/latexdraw"
+    strategy :git
+  end
 
   app "LaTeXDraw.app"
 

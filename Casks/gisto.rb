@@ -4,7 +4,6 @@ cask "gisto" do
 
   url "https://github.com/Gisto/Gisto/releases/download/v#{version}/Gisto-#{version}.dmg",
       verified: "github.com/Gisto/Gisto/"
-  appcast "https://github.com/Gisto/Gisto/releases.atom"
   name "Gisto"
   desc "Snippets management desktop application with (team) sharing options"
   homepage "https://www.gistoapp.com/"

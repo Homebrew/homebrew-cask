@@ -4,12 +4,9 @@ cask "clementine" do
 
   url "https://github.com/clementine-player/Clementine/releases/download/#{version}/clementine-#{version}.dmg",
       verified: "github.com/clementine-player/Clementine/"
-  appcast "https://github.com/clementine-player/Clementine/releases.atom"
   name "Clementine"
-  desc "Cross-platform music player and library organizer"
+  desc "Music player and library organizer"
   homepage "https://www.clementine-player.org/"
-
-  conflicts_with cask: "clementine-rc"
 
   app "clementine.app"
 

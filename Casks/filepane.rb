@@ -4,10 +4,16 @@ cask "filepane" do
 
   url "https://dl.devmate.com/com.mymixapps.FilePane/#{version.before_comma}/#{version.after_comma}/FilePane-#{version.before_comma}.dmg",
       verified: "dl.devmate.com/com.mymixapps.FilePane/"
-  appcast "https://updates.devmate.com/com.mymixapps.FilePane.xml"
   name "FilePane"
   desc "File management multi-tool"
   homepage "https://mymixapps.com/filepane"
+
+  livecheck do
+    skip "timestamp is not contained in the appcast"
+
+    url "https://updates.devmate.com/com.mymixapps.FilePane.xml"
+    strategy :sparkle
+  end
 
   app "FilePane.app"
 

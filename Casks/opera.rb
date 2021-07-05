@@ -1,19 +1,23 @@
 cask "opera" do
-  version "73.0.3856.329"
-  sha256 "9c56644ea979ced484638a7e6f6d6f3201b82fbfdc8aefba001a912ed24b2a41"
+  version "77.0.4054.172"
+  sha256 "3fccfa540541262232843cad5e78ead53267c41c7d3afb9525ecbd7e2d87cef8"
 
   url "https://get.geo.opera.com/pub/opera/desktop/#{version}/mac/Opera_#{version}_Setup.dmg"
-  appcast "https://ftp.opera.com/pub/opera/desktop/"
   name "Opera"
-  desc "Cross-platform web browser"
+  desc "Web browser"
   homepage "https://www.opera.com/"
+
+  livecheck do
+    url "https://ftp.opera.com/pub/opera/desktop/"
+    regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
+  end
 
   auto_updates true
 
   app "Opera.app"
 
   zap trash: [
-    "~/Library/Preferences/com.operasoftware.Opera.plist",
     "~/Library/Application Support/com.operasoftware.Opera/",
+    "~/Library/Preferences/com.operasoftware.Opera.plist",
   ]
 end

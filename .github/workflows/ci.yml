@@ -5,7 +5,7 @@ on: pull_request
 env:
   HOMEBREW_DEVELOPER: 1
   HOMEBREW_NO_AUTO_UPDATE: 1
-  HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  HOMEBREW_GITHUB_API_TOKEN: ${{ github.token }}
 
 jobs:
   generate-matrix:
@@ -28,6 +28,7 @@ jobs:
       - name: Generate CI matrix
         id: generate-matrix
         run: |
+          brew tap homebrew/cask
           brew ruby -- "$(brew --repository homebrew/cask)/cmd/lib/generate-matrix.rb" "${{ github.event.pull_request.url }}"
 
   test:
@@ -92,7 +93,7 @@ jobs:
           mkdir "${GITHUB_WORKSPACE}"
 
       - name: Cache Homebrew Gems
-        uses: actions/cache@v2
+        uses: actions/cache@v2.1.6
         with:
           path: ${{ steps.set-up-homebrew.outputs.gems-path }}
           key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
@@ -124,11 +125,16 @@ jobs:
         id: audit
         run: |
           brew audit --cask ${{ join(matrix.audit_args, ' ') }}${{ (matrix.cask && ' ') || ' --tap ' }}'${{ matrix.cask.path || matrix.tap }}'
-        if: always() && steps.fetch.outcome == 'success' && !matrix.skip_audit
+        timeout-minutes: 30
+        if: >
+          always() && steps.gems.outcome == 'success' &&
+          (!matrix.cask || steps.fetch.outcome == 'success') &&
+          !matrix.skip_audit
 
       - name: Gather cask information
         id: info
         run: |
+          brew tap homebrew/cask-versions
           brew ruby <<'EOF'
             require 'cask/cask_loader'
             require 'cask/installer'

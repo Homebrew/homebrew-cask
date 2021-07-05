@@ -4,10 +4,14 @@ cask "ytmdesktop-youtube-music" do
 
   url "https://github.com/ytmdesktop/ytmdesktop/releases/download/v#{version}/YouTube-Music-Desktop-App-#{version}.dmg",
       verified: "github.com/ytmdesktop/"
-  appcast "https://github.com/ytmdesktop/ytmdesktop/releases.atom"
   name "YouTube Music Desktop App"
   desc "YouTube music client"
   homepage "https://ytmdesktop.app/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "YouTube Music Desktop App.app"
 

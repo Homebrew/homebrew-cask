@@ -3,7 +3,6 @@ cask "encryptr" do
   sha256 :no_check
 
   url "https://spideroak.com/release/Encryptr/osx"
-  appcast "https://github.com/SpiderOak/Encryptr/releases.atom"
   name "SpiderOak Encryptr"
   desc "Zero-knowledge cloud-based password manager"
   homepage "https://spideroak.com/encryptr/"

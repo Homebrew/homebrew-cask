@@ -3,7 +3,6 @@ cask "mellow" do
   sha256 "f8b168fb1a491032a4c56df3350e67db3a32a94beeeeeae4e17e6ce426002099"
 
   url "https://github.com/mellow-io/mellow/releases/download/v#{version}/Mellow-#{version}.dmg"
-  appcast "https://github.com/mellow-io/mellow/releases.atom"
   name "Mellow"
   desc "Rule-based global transparent proxy client"
   homepage "https://github.com/mellow-io/mellow"

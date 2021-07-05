@@ -1,14 +1,19 @@
 cask "visualvm" do
-  version "2.0.5"
-  sha256 "5173ad57f63addbac2469b694a85dd3917c6a2313dee683b02e968a1bfc11145"
+  version "2.0.7"
+  sha256 "50352c34f76ea7ab9368d2e381b499bfbe7f9d8ba96feb49ad436e33084647cc"
 
   url "https://github.com/oracle/visualvm/releases/download/#{version}/VisualVM_#{version.no_dots}.dmg",
       verified: "github.com/oracle/visualvm/"
-  appcast "https://github.com/oracle/visualvm/releases.atom"
   name "VisualVM"
+  desc "All-in-One Java Troubleshooting Tool"
   homepage "https://visualvm.github.io/"
 
   app "VisualVM.app"
+
+  zap trash: [
+    "~/Library/Application Support/VisualVM",
+    "~/Library/Caches/VisualVM",
+  ]
 
   caveats do
     depends_on_java

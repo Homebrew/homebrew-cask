@@ -4,9 +4,13 @@ cask "mqtt-explorer" do
 
   url "https://github.com/thomasnordquist/MQTT-Explorer/releases/download/v#{version}/MQTT-Explorer-#{version}-mac.zip",
       verified: "github.com/thomasnordquist/MQTT-Explorer/"
-  appcast "https://github.com/thomasnordquist/MQTT-Explorer/releases.atom"
   name "MQTT Explorer"
   homepage "https://mqtt-explorer.com/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "MQTT Explorer.app"
 

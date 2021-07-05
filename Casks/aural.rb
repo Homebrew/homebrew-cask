@@ -1,9 +1,8 @@
 cask "aural" do
-  version "2.2.0"
-  sha256 "7b814cd659def0e6783da4cbf4e83ec1f078b55bf04ae21f54ca2a98d033b529"
+  version "3.2.0"
+  sha256 "b60698755eea8367ed3e81296fe08020c146fba6f8e5d9d255faf3c3315f4707"
 
   url "https://github.com/maculateConception/aural-player/releases/download/#{version}/AuralPlayer-#{version}.dmg"
-  appcast "https://github.com/maculateConception/aural-player/releases.atom"
   name "Aural Player"
   desc "Audio player inspired by Winamp"
   homepage "https://github.com/maculateConception/aural-player"

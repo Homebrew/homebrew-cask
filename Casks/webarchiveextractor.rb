@@ -4,8 +4,8 @@ cask "webarchiveextractor" do
 
   url "https://downloads.sourceforge.net/webarchivext/WebArchiveExtractor.#{version}.zip",
       verified: "downloads.sourceforge.net/webarchivext/"
-  appcast "https://sourceforge.net/projects/webarchivext/rss"
   name "Web Archive Extractor"
+  desc "Extracts content from webarchive files to a directory"
   homepage "https://webarchivext.sourceforge.io/"
 
   app "WebArchiveExtractor.app"

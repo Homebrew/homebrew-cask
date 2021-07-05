@@ -1,11 +1,16 @@
 cask "mongodb-compass" do
-  version "1.24.6"
-  sha256 "8b551fca6ad67b34d4a79220cbecb53205c8b7dcfe6cda9b12cff79e1531daed"
+  version "1.27.1"
+  sha256 "37d11bf9547a8c5300f827c49234d9bd1f678bfb2919982c99104d3fe1442bdb"
 
   url "https://downloads.mongodb.com/compass/mongodb-compass-#{version}-darwin-x64.dmg"
-  appcast "https://www.mongodb.com/try/download/compass"
   name "MongoDB Compass"
+  desc "Explore and manipulate your MongoDB data"
   homepage "https://www.mongodb.com/products/compass"
+
+  livecheck do
+    url "https://info-mongodb-com.s3.amazonaws.com/com-download-center/compass.json"
+    regex(/"version"\s*:\s*"(\d+(?:\.\d+)+)\s*\(Stable/i)
+  end
 
   app "MongoDB Compass.app"
 

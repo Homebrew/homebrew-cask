@@ -1,15 +1,25 @@
 cask "vlc" do
-  version "3.0.11.1"
-  sha256 "021212d2f6e6701ec3b254d56dfa5c5f848c9c02813c5750c6944a8458de8fb5"
+  version "3.0.16"
 
-  url "https://get.videolan.org/vlc/#{version}/macosx/vlc-#{version}.dmg"
+  if Hardware::CPU.intel?
+    sha256 "cf559ed2aa7c47e536534a8b10867d7a32b37e76a6c2d2b94f998b77eb36f121"
+
+    url "https://download.videolan.org/vlc/#{version}/macosx/vlc-#{version}-intel64.dmg"
+
+  else
+    sha256 "a765306f3d5cae095fa55d7ea36995e9c60939445b21a2ea44057b083da6c6e1"
+
+    url "https://download.videolan.org/vlc/#{version}/macosx/vlc-#{version}-arm64.dmg"
+
+  end
+
   name "VLC media player"
-  desc "Open-source cross-platform multimedia player"
+  desc "Multimedia player"
   homepage "https://www.videolan.org/vlc/"
 
   livecheck do
-    url "https://update.videolan.org/vlc/sparkle/vlc-intel64.xml"
-    strategy :sparkle
+    url "https://www.videolan.org/vlc/download-macosx.html"
+    regex(%r{href=.*?/vlc[._-]v?(\d+(?:\.\d+)+)(?:[._-][a-z]\w*)?\.dmg}i)
   end
 
   auto_updates true

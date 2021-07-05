@@ -11,7 +11,6 @@ cask "macintoshjs" do
     url "https://github.com/felixrieseberg/macintosh.js/releases/download/v#{version}/macintosh.js-darwin-arm64-#{version}.zip"
   end
 
-  appcast "https://github.com/felixrieseberg/macintosh.js/releases.atom"
   name "macintosh.js"
   desc "Virtual Apple Macintosh with System 8, running in Electron"
   homepage "https://github.com/felixrieseberg/macintosh.js"
@@ -22,5 +21,6 @@ cask "macintoshjs" do
     "~/Library/Application Support/macintosh.js",
     "~/Library/Preferences/com.felixrieseberg.macintoshjs.plist",
     "~/Library/Saved Application State/com.felixrieseberg.macintoshjs.savedState",
+    "~/macintosh.js",
   ]
 end

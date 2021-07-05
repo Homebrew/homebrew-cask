@@ -1,15 +1,15 @@
 cask "fluor" do
-  version "2.1.0"
-  sha256 "92034b630bf5a19eca160054c780a3c1767f21def3c02f28787f79fed5fab757"
+  version "2.5.0"
+  sha256 "bd7cc7ce2c2f9ac839c8d39bd600c2863c924c938c1c9e2d865bb7124ee84209"
 
-  url "https://resources.pyrolyse.it/distrib/Fluor/Fluor%20#{version}.dmg",
-      verified: "pyrolyse.it/"
+  url "https://github.com/Pyroh/Fluor/releases/download/#{version}/Fluor.#{version}.dmg"
   name "Fluor"
-  homepage "https://fluorapp.net/"
+  desc "Change the behavior of the fn keys depending on the active application"
+  homepage "https://github.com/Pyroh/Fluor"
 
   livecheck do
-    url :homepage
-    regex(/href=.*?Fluor(?:%20|[._-])v?(\d+(?:\.\d+)+)\.dmg/i)
+    url :url
+    strategy :git
   end
 
   auto_updates true

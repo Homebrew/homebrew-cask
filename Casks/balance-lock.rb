@@ -1,9 +1,10 @@
 cask "balance-lock" do
-  version "1.0.6,376"
-  sha256 "5419f62265740a2b185d0c4452b9fad4f682ebbb4b7108d2d638d77f35a28490"
+  version "1.1,568"
+  sha256 "c943838667974ad96ff8582334c18754f3c35ceba5692f431f5dfd1cd8284765"
 
-  url "https://www.tunabellysoftware.com/resources/Balance_Lock_#{version.before_comma}.dmg"
+  url "https://www.tunabellysoftware.com/resources/Balance%20Lock%20#{version.before_comma}.dmg"
   name "Balance Lock"
+  desc "Prevents audio balance from drifting left or right"
   homepage "https://www.tunabellysoftware.com/balance_lock"
 
   livecheck do

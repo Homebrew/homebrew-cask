@@ -1,11 +1,21 @@
 cask "webex" do
-  version "40.12.0.17322"
+  version "41.6.1.19162"
   sha256 :no_check
 
-  url "https://binaries.webex.com/WebexTeamsDesktop-MACOS-Gold/Webex.dmg"
+  if Hardware::CPU.intel?
+    url "https://binaries.webex.com/WebexTeamsDesktop-MACOS-Gold/Webex.dmg"
+  else
+    url "https://binaries.webex.com/WebexDesktop-MACOS-Apple-Silicon-Gold/Webex.dmg"
+  end
+
   name "Webex Teams"
   desc "Video communication and virtual meeting platform"
   homepage "https://www.webex.com/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   app "Webex.app"
 

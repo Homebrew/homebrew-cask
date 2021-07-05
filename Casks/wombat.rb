@@ -1,9 +1,8 @@
 cask "wombat" do
-  version "0.3.3"
-  sha256 "d583805f6a49e599626f868f17e6946a38d050fbb1d866e00bc17d2eb8c4b281"
+  version "0.5.0"
+  sha256 "a655f77a5e55b1fbea7f4855d8d536c52d701bdb1ac7c466e1e5656a208421bf"
 
   url "https://github.com/rogchap/wombat/releases/download/v#{version}/Wombat_v#{version}_Darwin_x86_64.dmg"
-  appcast "https://github.com/rogchap/wombat/releases.atom"
   name "Wombat"
   desc "Cross platform gRPC client"
   homepage "https://github.com/rogchap/wombat"

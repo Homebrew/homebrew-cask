@@ -4,7 +4,6 @@ cask "jd-gui" do
 
   url "https://github.com/java-decompiler/jd-gui/releases/download/v#{version}/jd-gui-osx-#{version}.tar",
       verified: "github.com/java-decompiler/jd-gui/"
-  appcast "https://github.com/java-decompiler/jd-gui/releases.atom"
   name "JD-GUI"
   desc "Standalone Java Decompiler GUI"
   homepage "http://jd.benow.ca/"

@@ -1,15 +1,16 @@
 cask "protonvpn" do
-  version "1.9.1,2101110708"
-  sha256 "3cbb163753efe0d2ad37af5d2754be8bfbc106c5f5d16fc092f9f3b564948176"
+  version "2.0.3"
+  sha256 "d162dad462e0d3f9df1cb143611e6383259eafe96c7b3c7724b1bcf4fbb737cc"
 
-  url "https://protonvpn.com/download/ProtonVPN_mac_v#{version.before_comma}.dmg"
+  url "https://protonvpn.com/download/ProtonVPN_mac_v#{version}.dmg"
   name "ProtonVPN"
   desc "VPN client focusing on security"
   homepage "https://protonvpn.com/"
 
   livecheck do
-    url "https://protonvpn.com/download/macos-update2.xml"
-    strategy :sparkle
+    url "https://protonvpn.com/download/macos-update3.xml"
+    strategy :page_match
+    regex(/ProtonVPN_mac_v?(\d+(?:\.\d+)*)\.dmg/i)
   end
 
   auto_updates true

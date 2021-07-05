@@ -1,6 +1,6 @@
 cask "final-cut-library-manager" do
-  version "3.82.00"
-  sha256 "175538d3d9b654274a4a59b43bf279b533b2c5f82a9a99d0fed15499a5a11ba0"
+  version "3.90.00"
+  sha256 "aefa5fb120885e919695d51a96f6bd1fe95f3429f67eac619c50df8beead1ef8"
 
   url "http://cdn.arcticwhiteness.com/finalcutlibrarymanager/download/zips/FinalCutLibraryManager_#{version.major_minor}.zip"
   name "Arctic Whiteness Final Cut Library Manager"

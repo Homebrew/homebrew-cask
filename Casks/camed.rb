@@ -4,8 +4,8 @@ cask "camed" do
 
   url "https://downloads.sourceforge.net/camprocessor/CAMEd-#{version}-macosx-cocoa-x86_64.tar.gz",
       verified: "downloads.sourceforge.net/camprocessor/"
-  appcast "https://sourceforge.net/projects/camprocessor/rss"
   name "CAM Editor"
+  desc "XML editor"
   homepage "https://camprocessor.sourceforge.io/"
 
   app "CAMEd-#{version}/CAMed.app"

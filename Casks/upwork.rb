@@ -1,9 +1,10 @@
 cask "upwork" do
-  version "5.4.9.6,2565cdd0547940a2"
-  sha256 "6548f23af1006de6172c319d57eb458121b8b838e96079beeefde6e6a5eff788"
+  version "5.6.4.1,814e9843307a4269"
+  sha256 "875ea9c68acd3405f1b32bb3c5bf94ebb95ff6b6cd873b6bc698e4b330ba5ecb"
 
   url "https://updates-desktopapp.upwork.com/binaries/v#{version.before_comma.dots_to_underscores}_#{version.after_comma}/Upwork.dmg"
   name "Upwork"
+  desc "Work marketplace for freelancing"
   homepage "https://www.upwork.com/"
 
   livecheck do

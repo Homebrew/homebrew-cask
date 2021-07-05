@@ -4,7 +4,6 @@ cask "fuse" do
 
   url "https://github.com/fuse-open/fuse-studio/releases/download/#{version}/fuse_osx_#{version.dots_to_underscores}.pkg",
       verified: "github.com/fuse-open/fuse-studio/"
-  appcast "https://github.com/fuse-open/fuse-studio/releases.atom"
   name "Fuse Studio"
   name "Fuse Open"
   name "Fuse Fusetools"

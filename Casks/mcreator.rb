@@ -1,11 +1,17 @@
 cask "mcreator" do
-  version "2020.5"
-  sha256 "370b1669fb8a9a596c47cb23d315a2b7241b22bb46482e4deba00a5c61ea3a44"
+  version "2021.1"
+  sha256 "05827fd0e2d52303a618ffaa254ee73af3e7c4c493e66dcec66b7659315f4ea5"
 
   url "https://mcreator.net/repository/#{version.dots_to_hyphens}/MCreator%20#{version}%20Mac%2064bit.dmg"
-  appcast "https://mcreator.net/download"
   name "MCreator"
+  desc "Software used to make Minecraft Java Edition mods"
   homepage "https://mcreator.net/"
+
+  livecheck do
+    url "https://mcreator.net/download"
+    strategy :page_match
+    regex(/MCreator.*?(\d+(?:\.\d+)*)/i)
+  end
 
   app "MCreator.app"
 

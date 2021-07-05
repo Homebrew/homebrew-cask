@@ -1,6 +1,6 @@
 cask "jabt-flow" do
-  version "1.10.0,105"
-  sha256 "b1b990aefc8528e17d112a0f00e1c5625b04f6a068020973f850f907e36ba9e5"
+  version "1.10.2,107"
+  sha256 "3380205a886018587e0c6fc559857eab2a0f345ec2a89d6226ce9d12ab4f476e"
 
   # Download page is at https://createwithflow.com/releases/
   url "https://createwithflow-updates.s3-us-west-2.amazonaws.com/Flow#{version.before_comma.no_dots}_.zip",

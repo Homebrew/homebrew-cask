@@ -4,7 +4,6 @@ cask "play" do
 
   url "https://github.com/pmsaue0/play/releases/download/v#{version}/play_#{version}.dmg.zip",
       verified: "github.com/pmsaue0/play/"
-  appcast "https://github.com/pmsaue0/play/releases.atom"
   name "Play"
   homepage "https://pmsaue0.github.io/play/"
 

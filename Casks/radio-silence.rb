@@ -1,6 +1,6 @@
 cask "radio-silence" do
-  version "2.3"
-  sha256 "4c9b6db366d542ad9bc839dc496521ff7133e13d0c71435cacf30f449718f0d6"
+  version "3.1"
+  sha256 "22db11cfd8ee7b15484a28c53c0be8253d7a558d29c30837413a3ad04f492c9f"
 
   url "https://radiosilenceapp.com/downloads/Radio_Silence_#{version}.pkg"
   name "Radio Silence"

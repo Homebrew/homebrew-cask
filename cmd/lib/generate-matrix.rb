@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
 require "tap"
-require "utils/github"
+require "utils/github/api"
 
 require_relative "ci_matrix"
 
 pr_url, = ARGV
 
 labels = if pr_url
-  pr = GitHub.open_api(pr_url)
+  pr = GitHub::API.open_rest(pr_url)
   pr.fetch("labels").map { |l| l.fetch("name") }
 else
   []

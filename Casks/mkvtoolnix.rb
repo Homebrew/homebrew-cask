@@ -1,6 +1,6 @@
 cask "mkvtoolnix" do
-  version "52.0.0"
-  sha256 "7041a40ef988c9a3a878d7561e574d9ed74500c01a2585d0953b405b65971bf1"
+  version "58.0.0"
+  sha256 "4841562c9b1d0c1d84555da411a24555a72eb8f2d3b4f7bd9038e1256d8e8549"
 
   url "https://mkvtoolnix.download/macos/MKVToolNix-#{version}.dmg"
   name "MKVToolNix"
@@ -14,7 +14,7 @@ cask "mkvtoolnix" do
   end
 
   conflicts_with formula: "mkvtoolnix"
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :catalina"
 
   app "MKVToolNix-#{version.major_minor_patch}.app"
   binary "#{appdir}/MKVToolNix-#{version.major_minor_patch}.app/Contents/MacOS/mkvextract"

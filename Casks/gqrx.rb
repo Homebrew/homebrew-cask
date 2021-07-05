@@ -4,7 +4,6 @@ cask "gqrx" do
 
   url "https://github.com/csete/gqrx/releases/download/v#{version.major_minor_patch}/Gqrx-#{version}.dmg",
       verified: "github.com/csete/gqrx/"
-  appcast "https://github.com/csete/gqrx/releases.atom"
   name "Gqrx"
   desc "Software-defined radio receiver powered by GNU Radio and Qt"
   homepage "https://gqrx.dk/"

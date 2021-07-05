@@ -5,7 +5,7 @@ cask "touchosc-editor" do
   url "https://hexler.net/pub/touchosc/touchosc-editor-#{version}-macos.zip"
   name "TouchOSC Editor"
   desc "Modular touch control surface editor for OSC & MIDI"
-  homepage "https://hexler.net/software/touchosc"
+  homepage "https://hexler.net/touchosc-mk1"
 
   livecheck do
     url :homepage

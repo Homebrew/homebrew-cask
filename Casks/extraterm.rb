@@ -1,13 +1,17 @@
 cask "extraterm" do
-  version "0.57.0"
-  sha256 "c8a85c4dd36367775a551cbe4a1f35db4c540d86761d2a1d2f1119792066ae06"
+  version "0.59.2"
+  sha256 "e2db5946d8de114124426b602d5c805b4c0414d63e9b6f554bbaf3563f636ccf"
 
   url "https://github.com/sedwards2009/extraterm/releases/download/v#{version}/extraterm-#{version}-darwin-x64.zip",
       verified: "github.com/sedwards2009/extraterm/"
-  appcast "https://github.com/sedwards2009/extraterm/releases.atom"
   name "extraterm"
   desc "Swiss army chainsaw of terminal emulators"
   homepage "https://extraterm.org/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "extraterm-#{version}-darwin-x64/extraterm.app"
 

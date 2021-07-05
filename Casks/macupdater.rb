@@ -1,6 +1,6 @@
 cask "macupdater" do
-  version "2.0.0,10776"
-  sha256 "4f49e4db72a57f65ac732660ce285e62c194efa0ac8d52aaf54659a37298395d"
+  version "2.0.4,11674"
+  sha256 "301f2c7d7ca46aa5b0f5d2255b13510b40a1faeab43764902db3bf137c17bffb"
 
   url "https://www.corecode.io/downloads/macupdater_#{version.before_comma}.dmg"
   name "MacUpdater"

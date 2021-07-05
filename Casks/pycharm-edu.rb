@@ -1,15 +1,32 @@
 cask "pycharm-edu" do
-  version "2020.3,203.5981.182"
-  sha256 "10d1402b7f2a34c973fb4909086eaeb8ae2dc6e3e1844fd2421b70313f33fd74"
+  version "2021.1.1,211.7442.17"
 
-  url "https://download.jetbrains.com/python/pycharm-edu-#{version.before_comma}.dmg"
-  appcast "https://data.services.jetbrains.com/products/releases?code=PCE&latest=true&type=release"
+  if Hardware::CPU.intel?
+    sha256 "69ad5eab8fd4498efcad31e0fb54cccd275c1437307abd0be56ff2295b9f2a00"
+
+    url "https://download.jetbrains.com/python/pycharm-edu-#{version.before_comma}.dmg"
+  else
+    sha256 "046ba94c9d8d30293419d096c4ca5a81d3599ce9e15b5435bd6247e5234eb77e"
+
+    url "https://download.jetbrains.com/python/pycharm-edu-#{version.before_comma}-aarch64.dmg"
+  end
+
   name "Jetbrains PyCharm Educational Edition"
   name "PyCharm Edu"
   desc "Professional IDE for scientific and web Python development"
   homepage "https://www.jetbrains.com/pycharm-edu/"
 
+  livecheck do
+    url "https://data.services.jetbrains.com/products/releases?code=PCE&latest=true&type=release"
+    strategy :page_match do |page|
+      JSON.parse(page)["PCE"].map do |release|
+        "#{release["version"]},#{release["build"]}"
+      end
+    end
+  end
+
   auto_updates true
+  depends_on macos: ">= :el_capitan"
 
   app "PyCharm Edu.app"
 

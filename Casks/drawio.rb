@@ -1,10 +1,16 @@
 cask "drawio" do
-  version "14.1.8"
-  sha256 "440760565c725659918ba4d7dd82939930d3b4e8f372abe1cc008e352b1da4d1"
+  version "14.6.13"
 
-  url "https://github.com/jgraph/drawio-desktop/releases/download/v#{version}/draw.io-#{version}.dmg",
-      verified: "github.com/jgraph/drawio-desktop/"
-  appcast "https://github.com/jgraph/drawio-desktop/releases.atom"
+  if Hardware::CPU.intel?
+    sha256 "aaf6016b98413f14064d1c1fa3070f160172d9cb602a5cf30fc702e2ffbd37a4"
+    url "https://github.com/jgraph/drawio-desktop/releases/download/v#{version}/draw.io-#{version}.dmg",
+        verified: "github.com/jgraph/drawio-desktop/"
+  else
+    sha256 "21877b5045a1c8b1d4bef5eba881620c32a302fa7d011ebccf8bd287ad9cc8f9"
+    url "https://github.com/jgraph/drawio-desktop/releases/download/v#{version}/draw.io-arm64-#{version}.dmg",
+        verified: "github.com/jgraph/drawio-desktop/"
+  end
+
   name "draw.io Desktop"
   desc "Draw.io is free online diagram software"
   homepage "https://www.draw.io/"

@@ -1,5 +1,5 @@
 cask "sizzy" do
-  version "47.2.0"
+  version "55.2.0"
   sha256 :no_check
 
   url "https://sizzy.co/get-app"
@@ -8,7 +8,7 @@ cask "sizzy" do
   homepage "https://sizzy.co/"
 
   livecheck do
-    url "https://sizzy.co/get-app"
+    url :url
     strategy :header_match
   end
 

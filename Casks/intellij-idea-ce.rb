@@ -1,16 +1,33 @@
 cask "intellij-idea-ce" do
-  version "2020.3.1,203.6682.168"
-  sha256 "8ec4c857c1d7c65f7fc9a0db21ac4e282f98d29d9b4c86bb00ff410504855062"
+  version "2021.1.3,211.7628.21"
 
-  url "https://download.jetbrains.com/idea/ideaIC-#{version.before_comma}.dmg"
-  appcast "https://data.services.jetbrains.com/products/releases?code=IIC&latest=true&type=release"
+  if Hardware::CPU.intel?
+    sha256 "e23c293f16fb7802f4b6fa3e0537770d28f43f9fdac33809d46ff7ebb5cce1b2"
+
+    url "https://download.jetbrains.com/idea/ideaIC-#{version.before_comma}.dmg"
+  else
+    sha256 "3b2b74168edaab94785d6998e85ee20eb9bcc3f0c193a47573a447729283af38"
+
+    url "https://download.jetbrains.com/idea/ideaIC-#{version.before_comma}-aarch64.dmg"
+  end
+
   name "IntelliJ IDEA Community Edition"
   name "IntelliJ IDEA CE"
   desc "IDE for Java development - community edition"
   homepage "https://www.jetbrains.com/idea/"
 
+  livecheck do
+    url "https://data.services.jetbrains.com/products/releases?code=IIC&latest=true&type=release"
+    strategy :page_match do |page|
+      JSON.parse(page)["IIC"].map do |release|
+        "#{release["version"]},#{release["build"]}"
+      end
+    end
+  end
+
   auto_updates true
   conflicts_with cask: "homebrew/cask-versions/intellij-idea-ce19"
+  depends_on macos: ">= :high_sierra"
 
   app "IntelliJ IDEA CE.app"
 

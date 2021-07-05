@@ -1,9 +1,8 @@
 cask "keycastr" do
-  version "0.9.9"
-  sha256 "976e4a2dc1a364bfbf5164ab1e5a37bae7d7e4e8fb41f0c0a524e2802b79c0eb"
+  version "0.9.11"
+  sha256 "69b6a95483d05b11420ac4361dbf493478208980920912c987e6b582405f05b9"
 
   url "https://github.com/keycastr/keycastr/releases/download/v#{version}/KeyCastr.app.zip"
-  appcast "https://github.com/keycastr/keycastr/releases.atom"
   name "KeyCastr"
   desc "Open-source keystroke visualizer"
   homepage "https://github.com/keycastr/keycastr"

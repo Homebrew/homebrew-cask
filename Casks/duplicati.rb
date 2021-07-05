@@ -1,6 +1,6 @@
 cask "duplicati" do
-  version "2.0.5.111,canary:2020-09-26"
-  sha256 "98a62f67337e0db74c0ce86082d98a0670d269e367090bc2cc3f9ad5e7e8a46b"
+  version "2.0.6.3,beta:2021-06-17"
+  sha256 "7a26fd69b7016e88a23ff03474eb78e174da463c4967b90c0b54f07a94027e18"
 
   url "https://github.com/duplicati/duplicati/releases/download/v#{version.before_comma}-#{version.before_comma}_#{version.after_comma.before_colon}_#{version.after_colon}/duplicati-#{version.before_comma}_#{version.after_comma.before_colon}_#{version.after_colon}.dmg",
       verified: "github.com/duplicati/duplicati/"

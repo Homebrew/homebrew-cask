@@ -1,9 +1,8 @@
 cask "obs-websocket" do
-  version "4.8.0"
-  sha256 "8147a14fd8a6b17a9ea1921d3ab743cc4aac430dcc893d0cdb466ae428a28ef6"
+  version "4.9.1"
+  sha256 "cdfb87b0d9ed1ae3fee61af957fb25402a4b65e9d4350e3959704b72e9b89fdb"
 
   url "https://github.com/Palakis/obs-websocket/releases/download/#{version}/obs-websocket-#{version}-macOS.pkg"
-  appcast "https://github.com/Palakis/obs-websocket/releases.atom"
   name "obs-websocket"
   desc "Remote-control OBS Studio through WebSockets"
   homepage "https://github.com/Palakis/obs-websocket"

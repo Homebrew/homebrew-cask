@@ -1,6 +1,6 @@
 cask "foxmail" do
-  version "1.4.3.94171"
-  sha256 "86a1d5a421f24023e8d75e8634f76268cc346fa725a3fca3f2573f8e98ade0a3"
+  version "1.5.2.94520"
+  sha256 "f486e6e9ff3703f815e2d0dfe28d2f78d9dabd74f67b24e08513b6b381d07329"
 
   url "https://dldir1.qq.com/foxmail/MacFoxmail/Foxmail_for_Mac_#{version}.dmg",
       verified: "dldir1.qq.com/foxmail/MacFoxmail/"
@@ -12,6 +12,8 @@ cask "foxmail" do
     url "https://www.foxmail.com/mac/download"
     strategy :header_match
   end
+
+  depends_on macos: ">= :el_capitan"
 
   app "Foxmail.app"
 end

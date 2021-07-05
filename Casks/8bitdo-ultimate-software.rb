@@ -1,6 +1,6 @@
 cask "8bitdo-ultimate-software" do
-  version "2.0.0"
-  sha256 "8f1fffaa652bf69cc17b82a4f1014c020132f2c21a980272aad11f420355c0ae"
+  version "2.0.2"
+  sha256 "9703cbe2f3fcb6de4e6692733a28e6d46d728f980835360579e8594569ec1695"
 
   url "http://tools.8bitdo.com/8BitdoUltimateSoftware/8BitDoUltimateSoftwareV#{version}.zip"
   name "8BitDo Ultimate Software"

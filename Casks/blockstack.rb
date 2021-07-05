@@ -4,9 +4,13 @@ cask "blockstack" do
 
   url "https://github.com/blockstack/blockstack-browser/releases/download/v#{version}/Blockstack-for-macOS-v#{version}.dmg",
       verified: "github.com/blockstack/blockstack-browser/"
-  appcast "https://github.com/blockstack/blockstack-browser/releases.atom"
   name "Blockstack"
   homepage "https://blockstack.org/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   depends_on macos: ">= :sierra"
 

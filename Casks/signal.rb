@@ -1,12 +1,16 @@
 cask "signal" do
-  version "1.39.5"
-  sha256 "8ae187f215b8a95d5f6f550b21cd135530321104f0633a2411327f200414ad39"
+  version "5.7.1"
+  sha256 "363dbbf2bfccb8efe1f5946aa62330f566d8ac6536a9662f4b2c0debf28fed86"
 
   url "https://updates.signal.org/desktop/signal-desktop-mac-#{version}.dmg"
-  appcast "https://github.com/signalapp/Signal-Desktop/releases.atom"
   name "Signal"
-  desc "Cross-platform instant messaging application focusing on security"
+  desc "Instant messaging application focusing on security"
   homepage "https://signal.org/"
+
+  livecheck do
+    url "https://updates.signal.org/desktop/latest-mac.yml"
+    strategy :electron_builder
+  end
 
   auto_updates true
 

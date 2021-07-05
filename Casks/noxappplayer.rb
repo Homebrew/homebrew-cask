@@ -1,6 +1,6 @@
 cask "noxappplayer" do
-  version "3.8.5.1,20201127:6c7e32816b1449b494b980af6c0c3542"
-  sha256 "148ab01bf7d94bedfa20b701e07a965ca02d2b7d9e60fb5879db64f0bdc79f02"
+  version "3.8.5.5,20210513:a9853a4a5ba64f9b96c1e3bf6df15e3b"
+  sha256 "1668997e8163e4521d379e1b9406fddceb901eb8fca92daf347b1534b99770f7"
 
   url "https://res06.bignox.com/full/#{version.after_comma.before_colon}/#{version.after_colon}.dmg?filename=NoxInstaller_#{version.before_comma}_en.dmg"
   name "NoxAppPlayer"
@@ -18,4 +18,9 @@ cask "noxappplayer" do
   container nested: "NoxAppPlayerInstaller.app/Contents/MacOS/NoxAppPlayer.zip"
 
   app "NoxAppPlayer.app"
+
+  zap trash: [
+    "~/Library/Application Support/NoxAppPlayer",
+    "~/Library/Saved Application State/com.nox.NoxAppPlayer.savedState",
+  ]
 end

@@ -1,6 +1,6 @@
 cask "snapndrag" do
-  version "4.3.3"
-  sha256 "a8a68641fcf766c241a06ecefae549a3851000f471eee48b71fa45672c179452"
+  version "4.5.1"
+  sha256 "5f46c1e003bf4adad52e3e201d81d6ad26b4eef481106f1ef3799a11ed078a5a"
 
   url "https://yellowmug.com/download/SnapNDrag_#{version}.dmg"
   name "SnapNDrag"

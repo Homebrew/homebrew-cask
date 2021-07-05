@@ -1,14 +1,17 @@
 cask "textmate" do
-  version "2.0.6"
-  sha256 "fd4cf536c2e4bb703306737213babd36c0d548734de5de5ad78f2e6b8761627f"
+  version "2.0.19"
+  sha256 "e0117fc281931883fa4b40daf6f594cb9cdc076190ddf50dc40e6913ea6bdcfa"
 
   url "https://github.com/textmate/textmate/releases/download/v#{version}/TextMate_#{version}.tbz",
       verified: "github.com/textmate/textmate/"
-  appcast "https://api.textmate.org/releases/release?os=10.14.6",
-          must_contain: version
   name "TextMate"
   desc "General-purpose text editor"
   homepage "https://macromates.com/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"

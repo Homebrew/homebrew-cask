@@ -4,9 +4,14 @@ cask "commandq" do
 
   url "https://download.clickontyler.com/commandq/commandq20_#{version.no_dots}.zip",
       verified: "download.clickontyler.com/"
-  appcast "https://shine.clickontyler.com/appcast.php?id=43"
   name "CommandQ"
+  desc "Never accidentally quit an app again"
   homepage "https://commandqapp.com/"
+
+  livecheck do
+    url "https://shine.clickontyler.com/appcast.php?id=43"
+    strategy :sparkle, &:short_version
+  end
 
   depends_on macos: ">= :sierra"
 

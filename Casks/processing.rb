@@ -4,7 +4,6 @@ cask "processing" do
 
   url "https://github.com/processing/processing/releases/download/processing-#{version.after_comma}-#{version.before_comma}/processing-#{version.before_comma}-macosx.zip",
       verified: "github.com/processing/processing/"
-  appcast "https://github.com/processing/processing/releases.atom"
   name "Processing"
   homepage "https://processing.org/"
 

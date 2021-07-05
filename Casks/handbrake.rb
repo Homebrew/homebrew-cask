@@ -4,10 +4,14 @@ cask "handbrake" do
 
   url "https://github.com/HandBrake/HandBrake/releases/download/#{version}/HandBrake-#{version}.dmg",
       verified: "github.com/HandBrake/HandBrake/"
-  appcast "https://github.com/HandBrake/HandBrake/releases.atom"
   name "HandBrake"
   desc "Open-source video transcoder"
   homepage "https://handbrake.fr/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
 

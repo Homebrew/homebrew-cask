@@ -1,11 +1,11 @@
 cask "coqide" do
-  version "8.13.0"
-  sha256 "fa02786729169e8a86f478839088a2c045a3e18a4ac6b5339a23558c3aef72fb"
+  version "8.13.1"
+  sha256 "7e5a132a69b9e6234063dd4e2985c84952bb9a67b99d4e006f77bc3a95a7b586"
 
-  url "https://github.com/coq/coq/releases/download/V#{version.major_minor_patch}/coq-#{version}-installer-macos.dmg",
+  url "https://github.com/coq/coq/releases/download/V#{version}/coq-#{version}-installer-macos.dmg",
       verified: "github.com/coq/coq/"
-  appcast "https://github.com/coq/coq/releases.atom"
   name "Coq"
+  desc "Formal proof management system"
   homepage "https://coq.inria.fr/"
 
   depends_on macos: ">= :sierra"

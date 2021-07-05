@@ -1,8 +1,8 @@
 cask "chrysalis" do
-  version "0.7.9"
-  sha256 "00f3ed6f9d6b4f45529996d9d9a344dc76f30ff424b9660f74ef6002e05bf6c7"
+  version "0.8.4"
+  sha256 "297e9f4154c448cc30b6c188609a8392cbb4e7a85dd6cab8a62ec554742483d2"
 
-  url "https://github.com/keyboardio/Chrysalis/releases/download/chrysalis-#{version}/Chrysalis-#{version}.dmg"
+  url "https://github.com/keyboardio/Chrysalis/releases/download/v#{version}/Chrysalis-#{version}.dmg"
   name "Chrysalis"
   desc "Graphical configurator for Kaleidoscope-powered keyboards"
   homepage "https://github.com/keyboardio/Chrysalis"

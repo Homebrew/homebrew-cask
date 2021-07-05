@@ -4,10 +4,16 @@ cask "mumble" do
 
   url "https://github.com/mumble-voip/mumble/releases/download/#{version}/Mumble-#{version}.dmg",
       verified: "github.com/mumble-voip/mumble/"
-  appcast "https://github.com/mumble-voip/mumble/releases.atom"
   name "Mumble"
   desc "Open-source, low-latency, high quality voice chat software for gaming"
   homepage "https://wiki.mumble.info/wiki/Main_Page"
+
+  livecheck do
+    url "https://dl.mumble.info/latest/stable/client-macos-x64"
+    strategy :header_match
+  end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Mumble.app"
 end

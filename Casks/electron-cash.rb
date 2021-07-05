@@ -1,12 +1,16 @@
 cask "electron-cash" do
-  version "4.2.3"
-  sha256 "722b97fc974c2d02817b39388032e4e9040123bb10d179a2d3a37e52601de1f0"
+  version "4.2.4.1"
+  sha256 "a335f46b6899ba1692ce75cbf4172b835b8ab6b46d38a62863ebaabf34d6570d"
 
-  url "https://electroncash.org/downloads/#{version}/mac/Electron-Cash-#{version}-macosx.dmg"
-  appcast "https://github.com/Electron-Cash/Electron-Cash/releases.atom"
+  url "https://electroncash.org/downloads/#{version.major_minor_patch}/mac/Electron-Cash-#{version}-macosx.dmg"
   name "Electron Cash"
   desc "Thin client for Bitcoin Cash"
-  homepage "https://www.electroncash.org/"
+  homepage "https://electroncash.org/"
+
+  livecheck do
+    url :homepage
+    regex(%r{href=.*?/Electron[._-]Cash[._-]v?(\d+(?:\.\d+)+)[._-]macosx\.dmg}i)
+  end
 
   app "Electron-Cash.app"
 

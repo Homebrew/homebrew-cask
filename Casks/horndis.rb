@@ -3,9 +3,16 @@ cask "horndis" do
   sha256 "15f5c6cbe14e5c0f11bf27172dfbcdf3b753122d128807d6bad94c8f4c2b71e1"
 
   url "https://github.com/jwise/HoRNDIS/releases/download/rel#{version}/HoRNDIS-#{version}.pkg"
-  appcast "https://github.com/jwise/HoRNDIS/releases.atom"
   name "HoRNDIS"
+  desc "Android USB tethering driver"
   homepage "https://github.com/jwise/HoRNDIS"
+
+  depends_on macos: [
+    :el_capitan,
+    :sierra,
+    :high_sierra,
+    :mojave,
+  ]
 
   pkg "HoRNDIS-#{version}.pkg"
 

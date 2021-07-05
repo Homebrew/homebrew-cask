@@ -4,9 +4,21 @@ cask "dosbox" do
 
   url "https://downloads.sourceforge.net/dosbox/dosbox/#{version.before_comma}/DOSBox-#{version.before_comma}-#{version.after_comma}.dmg",
       verified: "sourceforge.net/dosbox/"
-  appcast "https://sourceforge.net/projects/dosbox/rss?path=/dosbox"
   name "DOSBox"
+  desc "Emulator for x86 with DOS"
   homepage "https://www.dosbox.com/"
+
+  livecheck do
+    url "https://sourceforge.net/projects/dosbox/rss?path=/dosbox"
+    strategy :page_match do |page|
+      page.scan(%r{<link>.*/DOSBox-(\d+(?:[.-]\d+)*).dmg}i).map do |matches|
+        versions = matches[0].split("-")
+        version = "#{versions[0]}-#{versions[1]},#{versions[2]}" if versions.length == 3
+        version = "#{versions[0]}-#{versions[1]}" if versions.length == 2
+        version
+      end
+    end
+  end
 
   app "dosbox.app"
 

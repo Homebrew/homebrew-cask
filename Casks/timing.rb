@@ -1,6 +1,6 @@
 cask "timing" do
-  version "2021.1,275"
-  sha256 "6d83ccb8851daa2dea9834f45c82e14075d93b5a3db444cd9dd3353d5e34ca68"
+  version "2021.4.1,295"
+  sha256 "5d2c246a37c2d0829669ee9a5569e535d7c1490c0a608c62e589302ae2f2691f"
 
   url "https://updates.timingapp.com/download/Timing-#{version.before_comma}.dmg"
   name "Timing"
@@ -14,6 +14,7 @@ cask "timing" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Timing.app"
 

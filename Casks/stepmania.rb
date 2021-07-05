@@ -4,10 +4,14 @@ cask "stepmania" do
 
   url "https://github.com/stepmania/stepmania/releases/download/v#{version}/StepMania-#{version}-mac.dmg",
       verified: "github.com/stepmania/stepmania/"
-  appcast "https://github.com/stepmania/stepmania/releases.atom"
   name "StepMania"
   desc "Advanced rhythm game designed for both home and arcade use"
   homepage "https://www.stepmania.com/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "StepMania-#{version}/Stepmania.app"
 end

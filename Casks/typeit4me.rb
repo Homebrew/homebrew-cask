@@ -1,13 +1,18 @@
 cask "typeit4me" do
-  version "6.2.2b206"
-  sha256 "0467ed7927246414fbc19db1fa970feb905ad35d71597a51c8b102f673ae16b6"
+  version "6.3.3,244"
+  sha256 "cc4440d858a85ef6d2c890f3eb7fccb6e0ecec796ad827fe84f7725c8741ab06"
 
-  url "https://ettoresoftware.com/download/TypeIt4Me#{version}.zip"
-  appcast "https://ettoresoftware.com/download/TypeIt4MeAppcast.xml"
+  url "https://ettoresoftware.store/download/TypeIt4Me#{version.before_comma}b#{version.after_comma}.zip"
   name "TypeIt4Me"
-  homepage "https://www.ettoresoftware.com/mac-apps/typeit4me/"
+  desc "Text expander"
+  homepage "https://ettoresoftware.store/mac-apps/typeit4me/"
+
+  livecheck do
+    url "https://ettoresoftware.store/download/TypeIt4MeAppcastV2.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 
-  app "TypeIt4Me.app"
+  app "TypeIt4Me#{version.before_comma}b#{version.after_comma}.app", target: "TypeIt4Me.app"
 end

@@ -4,8 +4,8 @@ cask "iterm2" do
     version "3.3.12"
     sha256 "6811b520699e8331b5d80b5da1e370e0ed467e68bc56906f08ecfa986e318167"
   else
-    version "3.4.3"
-    sha256 "9ed73844838bddf797eadf37e5f7da3771308c3f74d38cd422c18eebaaa8f6b9"
+    version "3.4.8"
+    sha256 "29e1cf80dff3cd63e23e42d781969d74a7fed3aadebc756d0001942e40bb376f"
   end
 
   url "https://iterm2.com/downloads/stable/iTerm2-#{version.dots_to_underscores}.zip"
@@ -14,12 +14,20 @@ cask "iterm2" do
   homepage "https://www.iterm2.com/"
 
   livecheck do
-    url "https://iterm2.com/appcasts/final_modern.xml"
+    # workaround for
+    # - https://github.com/Homebrew/homebrew-cask/pull/104019
+    # - https://github.com/gnachman/iterm2-website/issues/82
+    # url "https://iterm2.com/appcasts/final_modern.xml"
+    url "https://raw.githubusercontent.com/gnachman/iterm2-website/master/source/appcasts/final_modern.xml"
     strategy :sparkle
   end
 
   auto_updates true
-  conflicts_with cask: "iterm2-beta"
+  conflicts_with cask: [
+    "homebrew/cask-versions/iterm2-beta",
+    "homebrew/cask-versions/iterm2-legacy",
+    "homebrew/cask-versions/iterm2-nightly",
+  ]
   depends_on macos: ">= :sierra"
 
   app "iTerm.app"
@@ -29,6 +37,7 @@ cask "iterm2" do
     "~/Library/Application Support/iTerm2",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.googlecode.iterm2.sfl*",
     "~/Library/Caches/com.googlecode.iterm2",
+    "~/Library/Cookies/com.googlecode.iterm2.binarycookies",
     "~/Library/Preferences/com.googlecode.iterm2.plist",
     "~/Library/Saved Application State/com.googlecode.iterm2.savedState",
   ]

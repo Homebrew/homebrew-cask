@@ -1,14 +1,31 @@
 cask "clion" do
-  version "2020.3.1,203.6682.181"
-  sha256 "53ac84ce8c13be1fd560d5d96015173e2544a2b8f0b15424a04ba5fea969973a"
+  version "2021.1.2,211.7442.42"
 
-  url "https://download.jetbrains.com/cpp/CLion-#{version.before_comma}.dmg"
-  appcast "https://data.services.jetbrains.com/products/releases?code=CL&latest=true&type=release"
+  if Hardware::CPU.intel?
+    sha256 "27a1cbf8c19d7a3d31450fd8049c6a4a7e9e23f142f862786b92e678c43a7876"
+
+    url "https://download.jetbrains.com/cpp/CLion-#{version.before_comma}.dmg"
+  else
+    sha256 "89851e0eaf223a133fd4b6a8326e599df7231281ebd4aba7299d3747510d0aec"
+
+    url "https://download.jetbrains.com/cpp/CLion-#{version.before_comma}-aarch64.dmg"
+  end
+
   name "CLion"
   desc "C and C++ IDE"
   homepage "https://www.jetbrains.com/clion/"
 
+  livecheck do
+    url "https://data.services.jetbrains.com/products/releases?code=CL&latest=true&type=release"
+    strategy :page_match do |page|
+      JSON.parse(page)["CL"].map do |release|
+        "#{release["version"]},#{release["build"]}"
+      end
+    end
+  end
+
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "CLion.app"
 
@@ -22,9 +39,12 @@ cask "clion" do
   end
 
   zap trash: [
-    "~/Library/Application Support/CLion#{version.major_minor}",
-    "~/Library/Caches/CLion#{version.major_minor}",
-    "~/Library/Logs/CLion#{version.major_minor}",
+    "~/Library/Preferences/com.jetbrains.CLion.plist",
+    "~/Library/Preferences/jetbrains.clion.*.plist",
     "~/Library/Preferences/CLion#{version.major_minor}",
+    "~/Library/Application Support/JetBrains/CLion#{version.major_minor}",
+    "~/Library/Caches/JetBrains/CLion#{version.major_minor}",
+    "~/Library/Logs/JetBrains/CLion#{version.major_minor}",
+    "~/Library/Saved Application State/com.jetbrains.CLion.savedState",
   ]
 end

@@ -4,7 +4,6 @@ cask "openbazaar" do
 
   url "https://github.com/OpenBazaar/openbazaar-desktop/releases/download/v#{version}/OpenBazaar#{version.major}-#{version}.dmg",
       verified: "github.com/OpenBazaar/openbazaar-desktop/"
-  appcast "https://github.com/OpenBazaar/openbazaar-desktop/releases.atom"
   name "OpenBazaar#{version.major}"
   homepage "https://www.openbazaar.org/"
 

@@ -1,6 +1,6 @@
 cask "audirvana" do
-  version "3.5.43,3573"
-  sha256 "d4ecff4fd5ea8fa501abd530475fdf300212a73a5a59ff874e0dd43c99002a15"
+  version "3.5.46,3576"
+  sha256 "e024b8ac39aff8b5608814fb757a082f742233fb21a450d706a2a9929aa06562"
 
   url "https://audirvana.com/delivery/Audirvana_#{version.before_comma}.dmg"
   name "Audirvana"
@@ -13,6 +13,7 @@ cask "audirvana" do
   end
 
   auto_updates true
+  depends_on macos: ">= :el_capitan"
 
   app "Audirvana.app"
 

@@ -1,13 +1,17 @@
 cask "thorium" do
-  version "1.5.0"
-  sha256 "6c206707eee3a3749ab7283ef4eeefa97f29c1563890e3eed800fd0a7358c0dc"
+  version "1.7.1"
+  sha256 "d8b7d22b6c1333c4b9a39975a9a1d08bebf4c06967f0a14c8b2fc1ce1821f2e6"
 
   url "https://github.com/edrlab/thorium-reader/releases/download/v#{version}/Thorium-#{version}.dmg",
       verified: "github.com/edrlab/thorium-reader/"
-  appcast "https://github.com/edrlab/thorium-reader/releases.atom"
   name "Thorium Reader"
   desc "Epub reader"
   homepage "https://www.edrlab.org/software/thorium-reader/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Thorium.app"
 

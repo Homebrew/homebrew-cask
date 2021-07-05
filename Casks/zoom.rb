@@ -1,16 +1,14 @@
 cask "zoom" do
-  version "5.4.59931.0110"
+  version "5.7.1.499"
 
   if Hardware::CPU.intel?
-    sha256 "56ee2b60afbe3a949913843263871df26e080b2475b304185a0817d434c971f2"
+    sha256 "6fae45254a21f6082ef79e204f84fe22a91b84cd33f73ec53349dc33489f86a8"
 
-    url "https://d11yldzmag5yn.cloudfront.net/prod/#{version}/Zoom.pkg",
-        verified: "d11yldzmag5yn.cloudfront.net/"
+    url "https://cdn.zoom.us/prod/#{version}/Zoom.pkg"
   else
-    sha256 "a9cfb7eb44476068771be9d699984e27fe4fccc8c6df53c16082a695e11d3036"
+    sha256 "acff046de909690bfb3c7a81103399f8923ee26aecce46b8e50ef26e6ed5a477"
 
-    url "https://d11yldzmag5yn.cloudfront.net/prod/#{version}/arm64/Zoom.pkg",
-        verified: "d11yldzmag5yn.cloudfront.net/"
+    url "https://cdn.zoom.us/prod/#{version}/arm64/Zoom.pkg"
   end
 
   name "Zoom.us"
@@ -28,6 +26,21 @@ cask "zoom" do
   conflicts_with cask: "zoom-for-it-admins"
 
   pkg "Zoom.pkg"
+
+  postflight do
+    # Description: Ensure console variant of postinstall is non-interactive.
+    # This is because `open "$APP_PATH"&` is called from the postinstall
+    # script of the package and we don't want any user intervention there.
+    retries ||= 3
+    ohai "The Zoom package postinstall script launches the Zoom app" unless retries < 3
+    ohai "Attempting to close zoom.us.app to avoid unwanted user intervention" unless retries < 3
+    return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/zoom.us.app"]
+
+    rescue RuntimeError
+      sleep 1
+      retry unless (retries -= 1).zero?
+      opoo "Unable to forcibly close zoom.us.app"
+  end
 
   uninstall signal:  ["KILL", "us.zoom.xos"],
             pkgutil: "us.zoom.pkg.videmeeting",
@@ -51,9 +64,12 @@ cask "zoom" do
     "~/Library/Logs/zoom.us",
     "~/Library/Logs/zoominstall.log",
     "~/Library/Logs/ZoomPhone",
+    "~/Library/Group Containers/BJ4HAAB9B3.ZoomClient3rd",
     "~/Library/Mobile Documents/iCloud~us~zoom~videomeetings",
     "~/Library/Preferences/ZoomChat.plist",
     "~/Library/Preferences/us.zoom.airhost.plist",
+    "~/Library/Preferences/us.zoom.caphost.plist",
+    "~/Library/Preferences/us.zoom.Transcode.plist",
     "~/Library/Preferences/us.zoom.xos.Hotkey.plist",
     "~/Library/Preferences/us.zoom.xos.plist",
     "~/Library/Safari/PerSiteZoomPreferences.plist",

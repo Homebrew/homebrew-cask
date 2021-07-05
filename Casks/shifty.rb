@@ -4,7 +4,6 @@ cask "shifty" do
 
   url "https://github.com/thompsonate/Shifty/releases/download/v#{version}/Shifty-#{version}.zip",
       verified: "github.com/thompsonate/Shifty/"
-  appcast "https://github.com/thompsonate/Shifty/releases.atom"
   name "Shifty"
   desc "Menu bar app that provides more control over Night Shift"
   homepage "https://shifty.natethompson.io/"

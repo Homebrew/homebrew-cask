@@ -1,5 +1,5 @@
 cask "a-better-finder-rename" do
-  version "11.26"
+  version "11.34"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://www.publicspace.net/download/ABFRX#{version.major}.dmg"
@@ -13,6 +13,7 @@ cask "a-better-finder-rename" do
   end
 
   auto_updates true
+  depends_on macos: ">= :yosemite"
 
   app "A Better Finder Rename #{version.major}.app"
 

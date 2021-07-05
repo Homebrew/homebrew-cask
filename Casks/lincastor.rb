@@ -1,5 +1,5 @@
 cask "lincastor" do
-  version "2.4"
+  version "3.7"
   sha256 :no_check
 
   url "https://onflapp.github.io/blog/releases/lincastor/LinCastor.zip"

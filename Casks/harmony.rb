@@ -4,7 +4,6 @@ cask "harmony" do
 
   url "https://github.com/vincelwt/harmony/releases/download/v#{version}/harmony-#{version}-mac.app.zip",
       verified: "github.com/vincelwt/harmony/"
-  appcast "https://github.com/vincelwt/harmony/releases.atom"
   name "Harmony"
   desc "Music player"
   homepage "https://getharmony.xyz/"

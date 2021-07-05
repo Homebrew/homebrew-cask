@@ -5,11 +5,14 @@ cask "frhelper" do
   url "https://static.frdic.com/pkg/fhmac.dmg?v=#{version.after_comma}",
       verified:   "static.frdic.com/",
       user_agent: :fake
-  appcast "https://www.eudic.net/update/frhelper_mac.xml",
-          must_contain: version.after_comma
   name "Frhelper"
   name "法语助手"
   homepage "https://www.eudic.net/v4/fr/app/frhelper"
+
+  livecheck do
+    url "https://www.eudic.net/update/frhelper_mac.xml"
+    strategy :sparkle
+  end
 
   app "Frhelper.app"
 

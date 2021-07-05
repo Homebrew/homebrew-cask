@@ -12,6 +12,8 @@ cask "prefs-editor" do
     strategy :sparkle
   end
 
+  auto_updates true
+
   app "Prefs Editor.app"
 
   zap trash: [

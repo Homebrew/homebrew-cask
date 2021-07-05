@@ -4,9 +4,13 @@ cask "koala" do
 
   url "https://github.com/oklai/koala/releases/download/v#{version}/Koala.dmg",
       verified: "github.com/oklai/koala/"
-  appcast "https://github.com/oklai/koala/releases.atom"
   name "Koala"
   homepage "http://koala-app.com/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Koala.app"
 end

@@ -1,13 +1,18 @@
 cask "netxms-console" do
-  version "3.6.302"
-  sha256 "c1a6ae2b94b7579f43f5552ed8d011678396f41ea90bbed633687477e8bebb05"
+  version "3.8.382"
+  sha256 "b0aed45b3353eb252b5545b5fa35410526ffc9b91a6a676883f33ed4f8fa7dbe"
 
   url "https://netxms.org/download/releases/#{version.major_minor}/nxmc-#{version}.dmg"
-  appcast "https://netxms.org/download/releases/#{version.major_minor}/"
   name "NetXMS Management Console"
+  desc "Network and infrastructure monitoring and management system"
   homepage "https://netxms.org/"
 
-  app "NetXMS Console.app"
+  livecheck do
+    url "https://netxms.org/download"
+    regex(%r{href=.*?/nxmc[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+  end
+
+  app "NetXMS Console (#{version}).app"
 
   zap trash: "~/.nxmc"
 end

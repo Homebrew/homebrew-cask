@@ -1,6 +1,6 @@
 cask "musescore" do
-  version "3.6.0.487915347"
-  sha256 "c7c3b315670da22aea88e2b1cff9d0565e7ce9cb81176bd1da066a83860383ac"
+  version "3.6.2.548020600"
+  sha256 "9477247e14d3ac3cda1b095b9d9e70d0ed6030f6d19ab9a0013206318e75ee5d"
 
   url "https://github.com/musescore/MuseScore/releases/download/v#{version.major_minor_patch.chomp(".0")}/MuseScore-#{version}.dmg",
       verified: "github.com/musescore/MuseScore/"
@@ -27,4 +27,14 @@ cask "musescore" do
       exec '#{appdir}/MuseScore #{version.major}.app/Contents/MacOS/mscore' "$@"
     EOS
   end
+
+  zap trash: [
+    "~/Documents/MuseScore3",
+    "~/Library/Application Support/MuseScore",
+    "~/Library/Caches/MuseScore",
+    "~/Library/Caches/org.musescore.MuseScore",
+    "~/Library/Preferences/org.musescore.MuseScore.plist",
+    "~/Library/Preferences/org.musescore.MuseScore3.plist",
+    "~/Library/Saved Application State/org.musescore.MuseScore.savedState",
+  ]
 end

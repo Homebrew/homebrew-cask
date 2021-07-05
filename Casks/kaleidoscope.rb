@@ -1,16 +1,22 @@
 cask "kaleidoscope" do
-  version "2.3.5,1445-jan-8-2021"
-  sha256 "1a9b701d8ded947624d68c9ebfed1fad4846b117dde87a09567afcae859c0e62"
+  version "2.4.1,1453:apr-6-2021"
+  sha256 "5b6c995b00eeb0163d9ac139f4a4da289e57e0ee364fc959a5ba909e9b19715a"
 
-  url "https://updates.kaleidoscope.app/v2/prod/Kaleidoscope-#{version.before_comma}-build-#{version.after_comma}.app.zip",
-      verified: "updates.kaleidoscope.app/"
-  appcast "https://updates.kaleidoscope.app/v2/prod/appcast"
+  url "https://updates.kaleidoscope.app/v2/prod/Kaleidoscope-#{version.before_comma}-#{version.after_comma.before_colon}-#{version.after_colon}.app.zip"
   name "Kaleidoscope"
-  desc "Spots differences in text and image files"
-  homepage "https://www.kaleidoscopeapp.com/"
+  desc "Spot and merge differences in text and image files or folders"
+  homepage "https://www.kaleidoscope.app/"
+
+  livecheck do
+    url "https://updates.kaleidoscope.app/v#{version.major}/prod/appcast"
+    strategy :sparkle do |item|
+      match = item.url.match(%r{/Kaleidoscope-(\d+(?:\.\d+)*)-(\d+)-(\w+(?:-\d+)*)\.app\.zip}i)
+      "#{match[1]},#{match[2]}:#{match[3]}"
+    end
+  end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "Kaleidoscope.app"
   binary "#{appdir}/Kaleidoscope.app/Contents/Resources/bin/ksdiff"

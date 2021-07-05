@@ -7,6 +7,11 @@ cask "dyalog" do
   desc "APL-based development environment"
   homepage "https://www.dyalog.com/"
 
+  livecheck do
+    url "https://www.dyalog.com/download-zone.htm?p=download"
+    regex(%r{href=.*?/mac_64_(\d+(?:\.\d+)*)_unicode\.pkg}i)
+  end
+
   pkg "mac_64_#{version}_unicode.pkg"
 
   uninstall pkgutil: "com.dyalog.pkg.dyalog#{version.major_minor.no_dots}"

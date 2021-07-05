@@ -1,11 +1,19 @@
 cask "bluej" do
-  version "4.2.2"
-  sha256 "37ae5c8c575ac3ee88f6890a7555ae38662f339622528987986a6ae335310311"
+  version "5.0.1"
+  sha256 "94dbfb5ca4da48bf0cfd2b5679fb36be432161b4fabc00376f05e992bdfe2f63"
 
   url "https://www.bluej.org/download/files/BlueJ-mac-#{version.no_dots}.zip"
-  appcast "https://www.bluej.org"
   name "BlueJ"
+  desc "Java Development Environment designed for begginers"
   homepage "https://www.bluej.org/"
 
-  app "BlueJ #{version.sub(/[a-z]$/, "")}/BlueJ.app"
+  livecheck do
+    url "https://www.bluej.org"
+    strategy :page_match do |page|
+      match = page.match(%r{href=.*?/BlueJ-mac-(\d+)(\d+)(\d+)\.zip}i)
+      "#{match[1]}.#{match[2]}.#{match[3]}"
+    end
+  end
+
+  app "BlueJ #{version}/BlueJ.app"
 end

@@ -4,11 +4,16 @@ cask "autumn" do
 
   url "https://github.com/apandhi/Autumn/releases/download/#{version}/Build.zip",
       verified: "github.com/apandhi/Autumn/"
-  appcast "https://github.com/apandhi/Autumn/releases.atom"
   name "Autumn"
   homepage "https://apandhi.github.io/Autumn/"
 
   depends_on macos: ">= :high_sierra"
 
   app "Autumn.app"
+
+  zap trash: [
+    "~/Library/Caches/com.sephware.autumn",
+    "~/Library/Preferences/com.sephware.autumn.plist",
+    "~/Library/WebKit/com.sephware.autumn",
+  ]
 end

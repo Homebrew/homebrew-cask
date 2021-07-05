@@ -1,10 +1,11 @@
 cask "altserver" do
-  version "1.4.2,41"
-  sha256 "814e573e8275e1d608f4b63f85fd9292451c614e565ab6b61156693eaf9b7967"
+  version "1.4.5,52"
+  sha256 "98f0adae4c16a3ff395d0a582bd13863187e56d4331b6f3b6be630b1592cba00"
 
   url "https://f000.backblazeb2.com/file/altstore/altserver/#{version.before_comma.dots_to_underscores}.zip",
       verified: "f000.backblazeb2.com/file/"
   name "AltServer"
+  desc "iOS App Store alternative"
   homepage "https://altstore.io/"
 
   livecheck do

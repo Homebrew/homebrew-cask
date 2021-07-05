@@ -11,9 +11,10 @@ cask "spatial" do
   end
 
   name "Spatial"
-  homepage "https://spatialos.improbable.io/docs"
+  desc "Binary for interaction with the Improbable SpatialOS platform"
+  homepage "https://documentation.improbable.io/spatialos-overview/docs"
 
   container type: :naked
 
-  binary "mac", target: "spatial"
+  binary "spatial"
 end

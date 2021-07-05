@@ -4,8 +4,8 @@ cask "syncterm" do
 
   url "https://downloads.sourceforge.net/syncterm/syncterm/syncterm-#{version}/syncterm-#{version}-osx.zip",
       verified: "sourceforge.net/syncterm/"
-  appcast "https://sourceforge.net/projects/syncterm/rss"
   name "SyncTERM"
+  desc "BBS terminal program"
   homepage "https://syncterm.bbsdev.net/"
 
   app "SyncTERM.app"

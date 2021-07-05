@@ -1,6 +1,6 @@
 cask "mattermost" do
-  version "4.6.1"
-  sha256 "26bddc75d7a3d7507b6f9bdcbc6d06195c61acdab3924125c390deb579a99a8b"
+  version "4.7.0"
+  sha256 "d176db0d7749ecde60b94188f377ea53e9d8725f429c2badebbb8519d7ba3c9c"
 
   url "https://releases.mattermost.com/desktop/#{version}/mattermost-desktop-#{version}-mac.zip"
   name "Mattermost"
@@ -14,4 +14,11 @@ cask "mattermost" do
   end
 
   app "Mattermost.app"
+
+  zap trash: [
+    "~/Library/Application Support/Mattermost",
+    "~/Library/Logs/Mattermost",
+    "~/Library/Preferences/Mattermost.Desktop.plist",
+    "~/Library/Saved Application State/Mattermost.Desktop.savedState",
+  ]
 end

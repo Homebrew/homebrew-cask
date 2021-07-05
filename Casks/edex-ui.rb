@@ -1,11 +1,16 @@
 cask "edex-ui" do
-  version "2.2.5"
-  sha256 "471def5c79a7620f9966e71a7026bcc8ba543ca5747bb4a7436e8e45c2a7cd74"
+  version "2.2.7"
+  sha256 "80b2b43e50e000da035efbdde21ca96106c021a5ef5b47e45fad8e9b4bb17a95"
 
   url "https://github.com/GitSquared/edex-ui/releases/download/v#{version}/eDEX-UI-macOS.dmg"
-  appcast "https://github.com/GitSquared/edex-ui/releases.atom"
   name "eDEX-UI"
   homepage "https://github.com/GitSquared/edex-ui"
 
   app "eDEX-UI.app"
+
+  zap trash: [
+    "~/Library/Application Support/eDEX-UI",
+    "~/Library/Saved Application State/com.edex.ui.savedState",
+    "~/Library/Preferences/com.edex.ui.plist",
+  ]
 end

@@ -1,10 +1,10 @@
 cask "santa" do
-  version "1.17"
-  sha256 "eff538cda801983a7c1af170c43c6e2fd9a31c51b7c4857d31df6f9bb7c671a0"
+  version "2021.5"
+  sha256 "a54f94ea242ad48d219c80415a86d6b7a44a43075162d1dcbe100542417277ae"
 
   url "https://github.com/google/santa/releases/download/#{version}/santa-#{version}.dmg"
-  appcast "https://github.com/google/santa/releases.atom"
   name "Santa"
+  desc "Binary authorization system"
   homepage "https://github.com/google/santa"
 
   pkg "santa-#{version}.pkg"

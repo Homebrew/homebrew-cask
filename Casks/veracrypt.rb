@@ -14,9 +14,15 @@ cask "veracrypt" do
     regex(%r{href=.*?/VeraCrypt_(\d+(?:\.\d+)*[^/]*?)\.dmg}i)
   end
 
-  depends_on cask: "osxfuse"
+  depends_on cask: "macfuse"
 
   pkg "VeraCrypt_Installer.pkg"
 
   uninstall pkgutil: "com.idrix.pkg.veracrypt"
+
+  zap trash: [
+    "~/Library/Application Support/VeraCrypt",
+    "~/Library/Preferences/org.idrix.VeraCrypt.plist",
+    "~/Library/Saved Application State/org.idrix.VeraCrypt.savedState",
+  ]
 end

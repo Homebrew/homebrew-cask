@@ -1,12 +1,16 @@
 cask "blueharvest" do
-  version "8.0.7"
-  sha256 "9660d57dd4d60e8caae22061414145c105edafa5a02b110b26f74fd474c77ece"
+  version "8.0.10"
+  sha256 "744fd728803860f62d4dcb79d5b5187effbebb4d94e9ffee18a5d4d398625a3a"
 
   url "https://zeroonetwenty.com/blueharvest/downloads/BlueHarvest#{version.no_dots}.dmg"
-  appcast "https://zeroonetwenty.com/blueharvest/release-notes.html",
-          must_contain: "#{version.no_dots}.dmg"
   name "BlueHarvest"
+  desc "Remove metadata files from external drives"
   homepage "https://zeroonetwenty.com/blueharvest/"
+
+  livecheck do
+    url "https://zeroonetwenty.com/blueharvest/release-notes.html"
+    regex(/>\s*Version\s+(\d+(?:\.\d+)+)/i)
+  end
 
   depends_on macos: ">= :catalina"
 

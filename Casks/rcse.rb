@@ -4,8 +4,8 @@ cask "rcse" do
 
   url "https://downloads.sourceforge.net/rolisteam/rcse_v#{version}_MacOs.dmg",
       verified: "downloads.sourceforge.net/rolisteam/"
-  appcast "https://sourceforge.net/projects/rolisteam/rss"
   name "Rolisteam Character Sheet Editor (RCSE)"
+  desc "Virtual tabletop software character editor"
   homepage "https://rolisteam.org/"
 
   app "rcse.app"

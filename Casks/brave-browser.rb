@@ -1,17 +1,31 @@
 cask "brave-browser" do
-  version "87.1.18.78,118.78"
-  sha256 "5abd11e197ee3e3a7bdf784781553e9b275d969e85abe81c5aab0cfd93e7ff3d"
+  version "1.26.74.0,126.74"
 
-  url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Browser/stable/#{version.after_comma}/Brave-Browser-x64.dmg",
-      verified: "updates-cdn.bravesoftware.com/sparkle/Brave-Browser/"
+  if Hardware::CPU.intel?
+    sha256 "712f8c2cad10121dda7ecfb557f165e6f48e1c3a963c83981b178665aa6099a1"
+
+    url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Browser/stable/#{version.after_comma}/Brave-Browser-x64.dmg",
+        verified: "updates-cdn.bravesoftware.com/sparkle/Brave-Browser/"
+
+    livecheck do
+      url "https://updates.bravesoftware.com/sparkle/Brave-Browser/stable/appcast.xml"
+      strategy :sparkle
+    end
+  else
+    sha256 "0d20c80b06dcacf135cde79b8ba5e6b22c8feaf6fdc0074dde767b159e648034"
+
+    url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Browser/stable-arm64/#{version.after_comma}/Brave-Browser-universal.dmg",
+        verified: "updates-cdn.bravesoftware.com/sparkle/Brave-Browser/"
+
+    livecheck do
+      url "https://updates.bravesoftware.com/sparkle/Brave-Browser/stable-arm64/appcast.xml"
+      strategy :sparkle
+    end
+  end
+
   name "Brave"
   desc "Web browser focusing on privacy"
   homepage "https://brave.com/"
-
-  livecheck do
-    url "https://updates.bravesoftware.com/sparkle/Brave-Browser/stable/appcast.xml"
-    strategy :sparkle
-  end
 
   auto_updates true
 

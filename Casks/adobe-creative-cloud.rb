@@ -1,11 +1,24 @@
 cask "adobe-creative-cloud" do
-  version "5.3.1.470"
-  sha256 "9e0c49b0078f2ad76129185ddfb3467a8061c7e160e71b877617f899fca62d5a"
+  version "5.4.5.550"
 
-  url "https://ccmdl.adobe.com/AdobeProducts/KCCC/CCD/#{version.major_minor_patch.dots_to_underscores}/osx10/ACCCx#{version.dots_to_underscores}.dmg"
+  if Hardware::CPU.intel?
+    sha256 "2efca959497b9f2fe3278a64341aa8a817e3855b1db9a9768f99259ef56e5227"
+
+    url "https://ccmdl.adobe.com/AdobeProducts/KCCC/CCD/#{version.major_minor_patch.dots_to_underscores}/osx10/ACCCx#{version.dots_to_underscores}.dmg"
+  else
+    sha256 "fe77eb37c4cbebe57750834063d8c01233887585252400dd8cfa2fb77b2a8fb3"
+
+    url "https://ccmdl.adobe.com/AdobeProducts/KCCC/CCD/#{version.major_minor_patch.dots_to_underscores}/macarm64/ACCCx#{version.dots_to_underscores}.dmg"
+  end
+
   name "Adobe Creative Cloud"
   desc "Collection of apps and services for photography, design, video, web, and UX"
   homepage "https://www.adobe.com/creativecloud.html"
+
+  livecheck do
+    url "https://helpx.adobe.com/creative-cloud/release-note/cc-release-notes.html"
+    regex(/Version\s*(\d+(?:\.\d+)+),?\s+(?:(?:was\s+)?released|for\s+macOS)/i)
+  end
 
   auto_updates true
 

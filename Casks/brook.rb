@@ -1,10 +1,10 @@
 cask "brook" do
-  version "20210101"
-  sha256 "4bcf42d6fc8777e96890e2ea0a181170da076cece59816cb3844d92320c6d781"
+  version "20210701"
+  sha256 "6c7f203eb546bea467f99a66b555fd8181749b4b572c137cd4272030cf19e34b"
 
   url "https://github.com/txthinking/brook/releases/download/v#{version}/Brook.dmg"
   name "Brook"
-  desc "Cross-platform proxy/vpn software"
+  desc "Proxy/VPN client"
   homepage "https://github.com/txthinking/brook"
 
   livecheck do

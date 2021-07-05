@@ -4,7 +4,6 @@ cask "alva" do
 
   url "https://github.com/meetalva/alva/releases/download/v#{version}/Alva-#{version}-mac.zip",
       verified: "github.com/meetalva/alva/"
-  appcast "https://github.com/meetalva/alva/releases.atom"
   name "Alva"
   desc "Create living prototypes with code components"
   homepage "https://meetalva.io/"

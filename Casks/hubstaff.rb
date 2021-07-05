@@ -1,9 +1,10 @@
 cask "hubstaff" do
-  version "1.5.16,2850"
-  sha256 "0b37c45740efd23873d350fd8fd1f700e0567dd33c966bccb9ce1a8675f5e5fe"
+  version "1.5.19,3213"
+  sha256 "fb9839043ce81241ae0ccd5cca3b186e0c6ed6214db9ff9f204f210b6874b958"
 
   url "https://app.hubstaff.com/download/#{version.after_comma}-mac-os-x-#{version.before_comma.dots_to_hyphens}-release"
   name "Hubstaff"
+  desc "Work time tracker"
   homepage "https://hubstaff.com/"
 
   livecheck do

@@ -4,7 +4,6 @@ cask "openrefine" do
 
   url "https://github.com/OpenRefine/OpenRefine/releases/download/#{version}/openrefine-mac-#{version}.dmg",
       verified: "github.com/OpenRefine/OpenRefine/"
-  appcast "https://github.com/OpenRefine/OpenRefine/releases.atom"
   name "OpenRefine"
   homepage "https://openrefine.org/"
 

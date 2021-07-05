@@ -3,7 +3,6 @@ cask "electorrent" do
   sha256 "1560f07fdc5194d4849216b1cdbd432d53cc7d09fef0e3ee8c1ba357323c33a9"
 
   url "https://github.com/tympanix/Electorrent/releases/download/v#{version}/electorrent-#{version}.dmg"
-  appcast "https://github.com/tympanix/Electorrent/releases.atom"
   name "Electorrent"
   desc "Desktop remote torrenting application"
   homepage "https://github.com/tympanix/Electorrent"

@@ -1,16 +1,23 @@
 cask "jaxx-liberty" do
-  version "2.4.6"
-  sha256 "da93cbc60c72710d4b4cb34897751ca481a0fdbd72c06955a94e364b894c3085"
+  version "2.6.4"
+  sha256 "bc0b37cfe544fbe7ed63456b997561a2161e15cbd628630a6f09ea73b1581088"
 
   url "https://download-liberty.jaxx.io/Jaxx.Liberty-#{version}.dmg"
-  appcast "https://download-liberty.jaxx.io/latest-mac.yml"
   name "Jaxx Blockchain Wallet"
+  desc "Blockchain Wallet, holdings, crypto prices and news"
   homepage "https://jaxx.io/"
+
+  livecheck do
+    url "https://download-liberty.jaxx.io/latest-mac.yml"
+    strategy :electron_builder
+  end
 
   app "Jaxx Liberty.app"
 
   zap trash: [
-    "~/Library/Application Support/jaxx",
-    "~/Library/Logs/jaxx",
+    "~/Library/Application Support/com.liberty.jaxx",
+    "~/Library/Logs/com.liberty.jaxx",
+    "~/Library/Preferences/com.liberty.jaxxliberty.plist",
+    "~/Library/Saved Application State/com.liberty.jaxxliberty.savedState",
   ]
 end

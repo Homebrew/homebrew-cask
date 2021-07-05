@@ -1,6 +1,6 @@
 cask "eudic-es" do
-  version "4.0.1,2020-11-16"
-  sha256 "40c09e422e944a27a1a161b2bc67b03d26cca888075497980bf67d63f21a54a1"
+  version "4.1.1,2021-05-11"
+  sha256 "99e04ec7b1ffa7c16c85befcef5dea96f347b9914dbf3d3b4ffc6de40e30155d"
 
   url "https://static.frdic.com/pkg/ehmac.dmg?v=#{version.after_comma}",
       verified:   "static.frdic.com/",

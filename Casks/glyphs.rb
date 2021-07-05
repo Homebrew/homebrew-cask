@@ -1,10 +1,10 @@
 cask "glyphs" do
-  version "3.0.2,3050"
-  sha256 "50cedecb8831577ca09c2b71d648b349846b7c1b725a0f4dc3a244d69141893d"
+  version "3.0.3,3086"
+  sha256 "6733994f7c6c1838807ad361145d62390962b88b3948ac0a63a419db3c03b0e7"
 
   url "https://updates.glyphsapp.com/Glyphs#{version.before_comma}-#{version.after_comma}.zip"
   name "Glyphs"
-  desc "Font Editor"
+  desc "Font editor"
   homepage "https://glyphsapp.com/"
 
   livecheck do

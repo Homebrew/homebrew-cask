@@ -1,6 +1,6 @@
 cask "skybox" do
-  version "0.2.2"
-  sha256 "3fde0768b9d199c13763ed26f4b24de3e88698316f2b727f317ccd4a1a45ef32"
+  version "0.2.4"
+  sha256 "858c8e11977138b7a2f4892cdc34da8fbe6de006feeb5870d392987b29fbc611"
 
   url "https://download.skybox.xyz/skybox-mac-client/SKYBOX_for_Mac_#{version}.dmg"
   name "SKYBOX VR Video Player"

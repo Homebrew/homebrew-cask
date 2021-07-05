@@ -3,7 +3,6 @@ cask "abyssoft-teleport" do
   sha256 "e4dabc78a492f4207d9416d20534ffab4fe4c3dc18fd90f942059491f475ea01"
 
   url "https://github.com/abyssoft/teleport/releases/download/v#{version}/teleport-v#{version}.zip"
-  appcast "https://github.com/abyssoft/teleport/releases.atom"
   name "teleport"
   desc "Virtual KVM"
   homepage "https://github.com/abyssoft/teleport"

@@ -1,10 +1,11 @@
 cask "forecast" do
-  version "0.9.1,129"
-  sha256 "71425799cf7bb247cd83d0ff9275a1170245a0610b98d4613d186671da0fd49a"
+  version "0.9.3,135"
+  sha256 "c8e3bc2cfc705bfd88ea611a4b30b803c7efb90d3aee79a9c8f1ec4fc42a85e9"
 
   url "https://d2uzvmey2c90kn.cloudfront.net/appcast_download/Forecast_#{version.before_comma}_#{version.after_comma}.zip",
       verified: "d2uzvmey2c90kn.cloudfront.net/appcast_download/"
   name "Forecast"
+  desc "Podcast MP3 encoder with chapters"
   homepage "https://overcast.fm/forecast"
 
   livecheck do

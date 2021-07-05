@@ -18,15 +18,19 @@ cask "onyx" do
     version "3.8.7"
     sha256 "0dd8119ad3441c5130ca584ac90ad450c272aab8b577925561a2536da48d2d54"
   else
-    version "3.9.3"
-    sha256 "dc8b43e0a18a1e333ed3d5dd4806a71fc7e02f2f01be749743cfc6c68ec51287"
+    version "3.9.7"
+    sha256 "de6b55cbceee6fbe69262bd09a7edea90c2827baa26fe9a9a72f9db125636ccc"
   end
 
   url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete(".")}/OnyX.dmg"
-  appcast "https://www.titanium-software.fr/en/onyx.html"
   name "OnyX"
   desc "Verify system files structure, run miscellaneous maintenance and more"
   homepage "https://www.titanium-software.fr/en/onyx.html"
+
+  livecheck do
+    url :homepage
+    regex(/>\s*OnyX\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s.-]*\s+#{MacOS.version}\s*</i)
+  end
 
   # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.
   depends_on macos: [

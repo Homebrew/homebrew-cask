@@ -4,12 +4,17 @@ cask "hyper" do
 
   url "https://github.com/zeit/hyper/releases/download/#{version}/hyper-#{version}-mac.zip",
       verified: "github.com/zeit/hyper/"
-  appcast "https://github.com/zeit/hyper/releases.atom"
   name "Hyper"
   desc "Terminal built on web technologies"
   homepage "https://hyper.is/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
+  conflicts_with cask: "homebrew/cask-versions/hyper-canary"
 
   app "Hyper.app"
   binary "#{appdir}/Hyper.app/Contents/Resources/bin/hyper"

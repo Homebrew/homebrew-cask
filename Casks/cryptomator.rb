@@ -1,15 +1,20 @@
 cask "cryptomator" do
-  version "1.5.11"
-  sha256 "3570ae02917c91fc0d2a0a2a42a41aa5b0dcf00ae91e481a6d9ded4ee24ebf6f"
+  version "1.5.15"
+  sha256 "f7a1d37424ad125e2bda525cb0c2771df9133e0c941eb190ef7fa3f7d1450ce6"
 
-  url "https://dl.bintray.com/cryptomator/cryptomator/#{version}/Cryptomator-#{version}.dmg",
-      verified: "dl.bintray.com/cryptomator/cryptomator/"
-  appcast "https://github.com/cryptomator/cryptomator/releases.atom"
+  url "https://github.com/cryptomator/cryptomator/releases/download/#{version}/Cryptomator-#{version}.dmg",
+      verified: "github.com/cryptomator/cryptomator/"
   name "Cryptomator"
   desc "Multi-platform client-side cloud file encryption tool"
   homepage "https://cryptomator.org/"
 
-  depends_on macos: ">= :yosemite"
+  livecheck do
+    url "https://cryptomator.org/downloads/mac/thanks/"
+    strategy :page_match
+    regex(%r{href=.*?/Cryptomator-(\d+(?:\.\d+)*)\.dmg}i)
+  end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Cryptomator.app"
 

@@ -4,10 +4,14 @@ cask "quassel" do
 
   url "https://github.com/quassel/quassel/releases/download/#{version}/QuasselMono_MacOSX-x86_64_#{version}.dmg",
       verified: "github.com/quassel/quassel/"
-  appcast "https://github.com/quassel/quassel/releases.atom"
   name "Quassel"
   desc "IRC client"
   homepage "https://quassel-irc.org/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Quassel.app"
 end

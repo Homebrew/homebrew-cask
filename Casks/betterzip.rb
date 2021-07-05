@@ -1,13 +1,17 @@
 cask "betterzip" do
-  version "5.0.3"
-  sha256 "061b4171fe9ccf6a291cb47ceadbd3fd8b10a818105e11d1e1dfd9b689ecadfb"
+  version "5.1.1"
+  sha256 "9960a258657f3700f06f6f5a6b8d3c0bbde221aefaec34db07edb2187d3eb803"
 
   url "https://macitbetter.s3.amazonaws.com/BetterZip-#{version}.zip",
       verified: "macitbetter.s3.amazonaws.com/"
-  appcast "https://macitbetter.com/BetterZip#{version.major}.rss"
   name "BetterZip"
   desc "Utility to create and modify archives"
   homepage "https://macitbetter.com/"
+
+  livecheck do
+    url "https://macitbetter.com/BetterZip.zip"
+    strategy :header_match
+  end
 
   auto_updates true
   depends_on macos: ">= :high_sierra"

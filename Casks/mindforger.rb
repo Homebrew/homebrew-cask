@@ -4,7 +4,6 @@ cask "mindforger" do
 
   url "https://github.com/dvorka/mindforger/releases/download/#{version}/mindforger-macos-#{version}.dmg",
       verified: "github.com/dvorka/mindforger/"
-  appcast "https://github.com/dvorka/mindforger/releases.atom"
   name "MindForger"
   desc "Thinking notebook and Markdown IDE"
   homepage "https://www.mindforger.com/"

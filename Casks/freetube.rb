@@ -1,6 +1,6 @@
 cask "freetube" do
-  version "0.10.0"
-  sha256 "2a86d3cdba6613af13f83170a07934bf7507052e83ace94c7382f2621756e459"
+  version "0.13.2"
+  sha256 "104b5718b54a0015453b934a58b333cb1336c6d5ec87148abb4722ada870b682"
 
   url "https://github.com/FreeTubeApp/FreeTube/releases/download/v#{version}-beta/freetube-#{version}-mac.dmg"
   name "FreeTube"
@@ -9,8 +9,7 @@ cask "freetube" do
 
   livecheck do
     url :url
-    strategy :git
-    regex(/^v?(\d+(?:\.\d+)*)/i)
+    regex(/^v?(\d+(?:\.\d+)+)/i)
   end
 
   app "FreeTube.app"

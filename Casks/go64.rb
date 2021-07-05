@@ -1,13 +1,17 @@
 cask "go64" do
   # NOTE: "64" is not a version number, but an intrinsic part of the product name
-  version "1.2"
-  sha256 "ef8d2ab472f27ce02007dbf73027d73e8b965e71e12693c78d701a5afe811c20"
+  version "1.3,1301"
+  sha256 "75b0d8a39d35eca4d62c93be2d0c3dd2a560b55d6dcbc53136e48ffcea03cabb"
 
-  url "https://www.stclairsoft.com/download/Go64-#{version}.zip"
-  appcast "https://www.stclairsoft.com/cgi-bin/sparkle.cgi?GO"
+  url "https://www.stclairsoft.com/download/Go64-#{version.before_comma}.zip"
   name "Go64"
   desc "Scan computer disk for 32-bit applications"
   homepage "https://www.stclairsoft.com/Go64/"
+
+  livecheck do
+    url "https://www.stclairsoft.com/cgi-bin/sparkle.cgi?GO"
+    strategy :sparkle
+  end
 
   auto_updates true
 

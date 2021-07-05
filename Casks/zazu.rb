@@ -4,7 +4,6 @@ cask "zazu" do
 
   url "https://github.com/tinytacoteam/zazu/releases/download/v#{version}/Zazu-#{version}.dmg",
       verified: "github.com/"
-  appcast "https://github.com/tinytacoteam/zazu/releases.atom"
   name "Zazu"
   desc "Extensible and open-source launcher for hackers, creators and dabblers"
   homepage "https://zazuapp.org/"
@@ -17,4 +16,8 @@ cask "zazu" do
     "~/Library/Preferences/com.tinytacoteam.zazu.helper.plist",
     "~/Library/Preferences/com.tinytacoteam.zazu.plist",
   ]
+
+  caveats do
+    discontinued
+  end
 end

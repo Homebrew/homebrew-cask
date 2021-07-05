@@ -4,7 +4,6 @@ cask "mjml" do
 
   url "https://github.com/mjmlio/mjml-app/releases/download/v#{version}/mjml-app-#{version}-mac.dmg",
       verified: "github.com/mjmlio/mjml-app/"
-  appcast "https://github.com/mjmlio/mjml-app/releases.atom"
   name "MJML"
   desc "Desktop app for MJML"
   homepage "https://mjmlio.github.io/mjml-app/"

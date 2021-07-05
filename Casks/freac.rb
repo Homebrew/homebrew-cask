@@ -1,10 +1,18 @@
 cask "freac" do
-  version "1.1.3"
-  sha256 "5a7bb46b36e965ce5b0ecedbdee6a75982eb54ed6d594aed71716290a169b682"
+  version "1.1.5"
 
-  url "https://github.com/enzo1982/freac/releases/download/v#{version.delete("a")}/freac-#{version}-macosx.dmg",
-      verified: "github.com/enzo1982/freac/"
-  appcast "https://github.com/enzo1982/freac/releases.atom"
+  if MacOS.version <= :catalina
+    sha256 "0e3d14e789b6d413db519348bfdade657af4324054ac3a47f6b389131422f1d7"
+
+    url "https://github.com/enzo1982/freac/releases/download/v#{version}/freac-#{version}-macos10.dmg",
+        verified: "github.com/enzo1982/freac/"
+  else
+    sha256 "3c310de32cbb5827deac721f758446556dfa4e19e9d345360b8250d1bb0d23a1"
+
+    url "https://github.com/enzo1982/freac/releases/download/v#{version}/freac-#{version}-macos11.dmg",
+        verified: "github.com/enzo1982/freac/"
+  end
+
   name "fre:ac"
   desc "Audio converter and CD ripper"
   homepage "https://www.freac.org/"

@@ -1,17 +1,22 @@
 cask "alacritty" do
-  version "0.7.1"
-  sha256 "40c9390b9067c25ff2882b41e8526df43466a3a48210b0f3188a9b87789f2541"
+  version "0.8.0"
+  sha256 "fcd26e1c29e0032812797529f7c572d41a54ae02ce242723f75701d1ebbd1b9f"
 
   url "https://github.com/alacritty/alacritty/releases/download/v#{version}/Alacritty-v#{version}.dmg"
-  appcast "https://github.com/alacritty/alacritty/releases.atom"
   name "Alacritty"
-  desc "Cross-platform, GPU-accelerated terminal emulator"
+  desc "GPU-accelerated terminal emulator"
   homepage "https://github.com/alacritty/alacritty/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Alacritty.app"
   binary "#{appdir}/Alacritty.app/Contents/MacOS/alacritty"
 
-  zap delete: [
+  zap trash: [
+    "~/Library/Preferences/io.alacritty.plist",
     "~/Library/Saved Application State/io.alacritty.savedState",
   ]
 end

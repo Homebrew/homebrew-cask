@@ -1,13 +1,21 @@
 cask "termius" do
-  version "7.3.2"
+  version "7.15.1"
   sha256 :no_check
 
-  url "https://s3.amazonaws.com/termius.desktop.autoupdate/mac/Termius.dmg",
-      verified: "s3.amazonaws.com/termius.desktop.autoupdate/mac/"
-  appcast "https://s3.amazonaws.com/termius.desktop.autoupdate/mac/latest-mac.yml"
+  if Hardware::CPU.intel?
+    url "https://autoupdate.termius.com/mac/Termius.dmg"
+  else
+    url "https://autoupdate.termius.com/mac-arm64/Termius.dmg"
+  end
+
   name "Termius"
-  desc "Cross-platform SSH client"
+  desc "SSH client"
   homepage "https://www.termius.com/"
+
+  livecheck do
+    url "https://autoupdate.termius.com/mac/latest-mac.yml"
+    strategy :electron_builder
+  end
 
   auto_updates true
   depends_on macos: ">= :yosemite"

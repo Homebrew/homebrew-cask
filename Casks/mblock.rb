@@ -4,9 +4,17 @@ cask "mblock" do
 
   url "https://dl.makeblock.com/mblock#{version.major}/darwin/V#{version}.pkg",
       verified: "dl.makeblock.com/"
-  appcast "https://mblock.makeblock.com/en-us/download/"
   name "mBlock"
+  desc "Coding tool designed for teaching STEAM"
   homepage "https://www.mblock.cc/"
+
+  livecheck do
+    url "https://mblock.makeblock.com/en-us/download/"
+    strategy :page_match
+    regex(%r{href=.*?/darwin/V(\d+(?:\.\d+)*)\.pkg}i)
+  end
+
+  depends_on macos: ">= :sierra"
 
   pkg "V#{version}.pkg"
 

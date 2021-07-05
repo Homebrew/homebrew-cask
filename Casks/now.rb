@@ -4,7 +4,6 @@ cask "now" do
 
   url "https://github.com/zeit/now-desktop/releases/download/#{version}/Now-#{version}-mac.zip",
       verified: "github.com/zeit/now-desktop/"
-  appcast "https://github.com/zeit/now-desktop/releases.atom"
   name "Now"
   desc "Create deployments right from the tray menu"
   homepage "https://zeit.co/now"

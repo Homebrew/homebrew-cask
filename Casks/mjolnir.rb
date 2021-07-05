@@ -4,7 +4,6 @@ cask "mjolnir" do
 
   url "https://github.com/mjolnirapp/mjolnir/releases/download/#{version}/Mjolnir.app.zip",
       verified: "github.com/mjolnirapp/mjolnir/"
-  appcast "https://github.com/mjolnirapp/mjolnir/releases.atom"
   name "Mjolnir"
   desc "Lightweight automation and productivity app"
   homepage "https://mjolnir.rocks/"
@@ -12,4 +11,11 @@ cask "mjolnir" do
   depends_on macos: ">= :sierra"
 
   app "Mjolnir.app"
+
+  zap trash: [
+    "~/Library/Caches/org.degutis.Mjolnir",
+    "~/Library/Preferences/org.degutis.Mjolnir.plist",
+    "~/Library/Saved Application State/org.degutis.Mjolnir.savedState",
+    "~/.mjolnir",
+  ]
 end

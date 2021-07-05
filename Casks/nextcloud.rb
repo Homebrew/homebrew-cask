@@ -6,14 +6,13 @@ cask "nextcloud" do
     url "https://github.com/nextcloud/desktop/releases/download/v#{version.major_minor_patch}/Nextcloud-#{version}.pkg",
         verified: "github.com/nextcloud/desktop/"
   else
-    version "3.1.1"
-    sha256 "b42526697671850e830d081d64f41460ed42790a39eeb4a6134bdc9ebc30d635"
+    version "3.2.3"
+    sha256 "186ab0477dbae676a69a7cdbd7e3a4ec096e1157ef411a5e8a256c1709a93e5e"
 
     url "https://github.com/nextcloud/desktop/releases/download/v#{version}/Nextcloud-#{version}.pkg",
         verified: "github.com/nextcloud/desktop/"
   end
 
-  appcast "https://github.com/nextcloud/desktop/releases.atom"
   name "Nextcloud"
   desc "Desktop sync client for Nextcloud software products"
   homepage "https://nextcloud.com/"

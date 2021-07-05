@@ -4,10 +4,14 @@ cask "winds" do
 
   url "https://s3.amazonaws.com/winds-2.0-releases/releases/Winds-#{version}.dmg",
       verified: "s3.amazonaws.com/"
-  appcast "https://github.com/GetStream/Winds/releases.atom"
   name "Winds"
   desc "Open-source RSS & podcast app powered by Getstream.io"
   homepage "https://getstream.io/winds/"
+
+  livecheck do
+    url "https://s3.amazonaws.com/winds-2.0-releases/latest.html"
+    regex(%r{href=.*?/Winds-(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   app "Winds.app"
 

@@ -1,27 +1,37 @@
 cask "atok" do
-  version "2017,31"
-  sha256 "9d460310b5d44de9585f5429c17006684f5412ba62ac1f4ab47af6e523bbdb80"
+  # verion <release_year>,<version>,<file_suffix>
+  version "2021,32.1.0:try2"
+  sha256 "73a56ca20e5296e204792b6fc2aa25a4b696c4dc628da8a30c2e32336011191e"
 
-  url "https://gate.justsystems.com/download/atok/ut/mac/at#{version.after_comma}try.dmg"
+  url "https://gate.justsystems.com/download/atok/ut/mac/at#{version.after_comma.major}#{version.after_colon}.dmg"
   name "ATOK"
+  desc "Japanese input method editor (IME) produced by JustSystems"
   homepage "https://www.justsystems.com/jp/products/atokmac/"
+
+  livecheck do
+    url "https://mypassport.atok.com/install/install_mac.html"
+    strategy :page_match do |page|
+      match = page.match(%r{href="https:.*/mac/at(\d+)(try\d*)\.dmg"}im)
+      "#{version.before_comma},#{match[1]}.#{version.after_comma.minor}.#{version.after_comma.patch}:#{match[2]}"
+    end
+  end
 
   pkg "ATOK インストーラ.pkg"
 
   uninstall pkgutil:   [
-    "com.justsystems.atok#{version.after_comma}.doc.pkg",
-    "com.justsystems.atok#{version.after_comma}.pkg",
-    "com.justsystems.atok#{version.after_comma}.quicklook.pkg",
-    "com.justsystems.atok#{version.after_comma}.sync.pkg",
+    "com.justsystems.atok#{version.after_comma.major}.doc.pkg",
+    "com.justsystems.atok#{version.after_comma.major}.pkg",
+    "com.justsystems.atok#{version.after_comma.major}.quicklook.pkg",
+    "com.justsystems.atok#{version.after_comma.major}.sync.pkg",
     "com.justsystems.JustOnlineUpdate.pkg",
     "com.justsystems.pkg.lma",
   ],
             launchctl: [
-              "com.justsystems.inputmethod.atok#{version.after_comma}",
+              "com.justsystems.inputmethod.atok#{version.after_comma.major}",
               "com.justsystems.launchd.jslmaUI",
               "com.justsystems.launchd.UpdateChecker",
-              "com.justsystems.launchd.Atok#{version.after_comma}.AlBg",
-              "com.justsystems.atok#{version.after_comma}.enabler",
+              "com.justsystems.launchd.Atok#{version.after_comma.major}.AlBg",
+              "com.justsystems.atok#{version.after_comma.major}.enabler",
               "com.justsystems.OnlineUpdate",
               "com.justsystems.launchd.jslmad",
             ],

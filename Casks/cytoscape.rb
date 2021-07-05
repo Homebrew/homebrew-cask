@@ -4,7 +4,6 @@ cask "cytoscape" do
 
   url "https://github.com/cytoscape/cytoscape/releases/download/#{version}/Cytoscape_#{version.dots_to_underscores}_macos.dmg",
       verified: "github.com/cytoscape/cytoscape/"
-  appcast "https://github.com/cytoscape/cytoscape/releases.atom"
   name "Cytoscape"
   desc "Open-source platform for network analysis and visualization"
   homepage "https://cytoscape.org/"

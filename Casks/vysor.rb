@@ -4,9 +4,14 @@ cask "vysor" do
 
   url "https://github.com/koush/vysor.io/releases/download/v#{version}/Vysor-mac-#{version}.zip",
       verified: "github.com/koush/vysor.io/"
-  appcast "https://github.com/koush/vysor.io/releases.atom"
   name "Vysor"
+  desc "Mirror and control your phone"
   homepage "https://www.vysor.io/"
+
+  livecheck do
+    url "http://vysornuts.clockworkmod.com/download/mac"
+    strategy :header_match
+  end
 
   app "Vysor.app"
 

@@ -1,14 +1,18 @@
 cask "accessmenubarapps" do
-  version "2.6.1"
+  version "2.6.1,15"
   sha256 "fe8a08d721af4b9e5e71bb71f3b876169fecde8219b53c01938861c2781fb16c"
 
-  url "https://www.ortisoft.de/resources/AccessMenuBarApps#{version}.zip"
-  appcast "https://www.ortisoft.de/accessmenubarapps/profileInfo.php"
+  url "https://www.ortisoft.de/resources/AccessMenuBarApps#{version.before_comma}.zip"
   name "AccessMenuBarApps"
   desc "Instant access for menubar apps"
   homepage "https://www.ortisoft.de/accessmenubarapps/"
 
-  app "AccessMenuBarApps#{version}/AccessMenuBarApps.app"
+  livecheck do
+    url "https://www.ortisoft.de/accessmenubarapps/profileInfo.php"
+    strategy :sparkle
+  end
+
+  app "AccessMenuBarApps#{version.before_comma}/AccessMenuBarApps.app"
 
   uninstall quit: "de.ortisoft.AccessMenuBarApps"
 

@@ -3,7 +3,6 @@ cask "electron-api-demos" do
   sha256 "274e1f3c2a90ab884b117af84988c1aea9931d37fe8169fb6aeecab8e5b78464"
 
   url "https://github.com/electron/electron-api-demos/releases/download/v#{version}/electron-api-demos-mac.zip"
-  appcast "https://github.com/electron/electron-api-demos/releases.atom"
   name "Electron API Demos"
   desc "Explore the Electron APIs"
   homepage "https://github.com/electron/electron-api-demos"

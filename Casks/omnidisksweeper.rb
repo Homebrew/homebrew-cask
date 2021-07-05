@@ -12,15 +12,20 @@ cask "omnidisksweeper" do
     sha256 "f06b150239e5c5ee27615b1e8bd6ec2c87c61c4cda575547f124ff84986b6f37"
     url "https://downloads.omnigroup.com/software/MacOSX/10.13/OmniDiskSweeper-#{version.before_comma}(n).dmg"
   else
-    version "1.12.1"
-    sha256 "07073e5f73d76b6f55e4d5cfd6a33e83ae0cc49a362d50a4f382aaa7fb9cc828"
+    version "1.13"
+    sha256 "bf572a47079cd4dea44f7ae2f14bb9a75e2548ad6066757d33564c21a0003821"
     url "https://downloads.omnigroup.com/software/MacOSX/10.14/OmniDiskSweeper-#{version}.dmg"
   end
 
-  appcast "https://update.omnigroup.com/appcast/com.omnigroup.OmniDiskSweeper"
   name "OmniDiskSweeper"
   desc "Finds large, unwanted files and deletes them"
   homepage "https://www.omnigroup.com/more/"
+
+  livecheck do
+    url "https://update.omnigroup.com/appcast/com.omnigroup.OmniDiskSweeper"
+    strategy :page_match
+    regex(/OmniDiskSweeper-(\d+(?:\.\d+)*)\.dmg/i)
+  end
 
   auto_updates true
 

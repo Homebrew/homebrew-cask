@@ -1,9 +1,10 @@
 cask "steermouse" do
-  version "5.5.4"
-  sha256 "c66465072162a7a2e9ee41cfe41b9538db83e4bcd20b7d066df5fa714083d80c"
+  version "5.5.7"
+  sha256 "497376308f0ef9385a73611bdb012a93c9406f2fcf5e318ab12d1e653383e124"
 
   url "https://plentycom.jp/ctrl/files_sm/SteerMouse#{version}.dmg"
   name "SteerMouse"
+  desc "Customize mouse buttons, wheels and cursor speed"
   homepage "https://plentycom.jp/en/steermouse/"
 
   livecheck do

@@ -4,10 +4,14 @@ cask "boostnote" do
 
   url "https://github.com/BoostIO/boost-releases/releases/download/v#{version}/Boostnote-mac.zip",
       verified: "github.com/BoostIO/boost-releases/"
-  appcast "https://github.com/BoostIO/boost-releases/releases.atom"
   name "Boostnote"
   desc "Markdown editor for developers"
   homepage "https://boostnote.io/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
 

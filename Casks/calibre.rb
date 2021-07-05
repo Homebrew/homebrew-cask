@@ -2,18 +2,20 @@ cask "calibre" do
   if MacOS.version <= :high_sierra
     version "3.48.0"
     sha256 "68829cd902b8e0b2b7d5cf7be132df37bcc274a1e5720b4605d2dd95f3a29168"
-    url "https://download.calibre-ebook.com/#{version}/calibre-#{version}.dmg"
   else
-    version "5.9.0"
-    sha256 "8d16f88d37ed3a8897fff9bef40db2d3203310fa036d4543f71474a75bbf73cb"
-    url "https://github.com/kovidgoyal/calibre/releases/download/v#{version}/calibre-#{version}.dmg",
-        verified: "github.com/kovidgoyal/calibre/"
-    appcast "https://github.com/kovidgoyal/calibre/releases.atom"
+    version "5.22.1"
+    sha256 "b3096d93f50c32ff0f5e37f16fc21ef016fbd032e7053887fb775a2cd629b015"
   end
 
+  url "https://download.calibre-ebook.com/#{version}/calibre-#{version}.dmg"
   name "calibre"
   desc "E-books management software"
   homepage "https://calibre-ebook.com/"
+
+  livecheck do
+    url "https://github.com/kovidgoyal/calibre"
+    strategy :github_latest
+  end
 
   conflicts_with cask: "homebrew/cask-versions/calibre4"
 

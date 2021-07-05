@@ -4,8 +4,8 @@ cask "mame" do
 
   url "https://downloads.sourceforge.net/mameosx/MAMEOSX-#{version}.dmg",
       verified: "downloads.sourceforge.net/mameosx/"
-  appcast "https://sourceforge.net/projects/mameosx/rss"
   name "MAME"
+  desc "Port of the multi-purpose emulation framework"
   homepage "https://mameosx.sourceforge.io/"
 
   app "MAME OS X.app"

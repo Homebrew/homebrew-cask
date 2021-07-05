@@ -1,5 +1,5 @@
 cask "twitch" do
-  version "8.59.0"
+  version "8.60.1"
   sha256 :no_check
 
   url "https://desktop.twitchsvc.net/installer/mac/Twitch.dmg",
