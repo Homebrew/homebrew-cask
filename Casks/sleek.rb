@@ -1,6 +1,6 @@
 cask "sleek" do
   version "1.0.8"
-  sha256 "b5498XsLWzstpDAH8SPwmdxnuAfgitZawxs2BpUBr8njDp3SNrDoFx"
+  sha256 "b7c1e2aae275deaad2e119b0de2c394d3d6beb7607be809cbdef1bc9d66111f0"
 
   url "https://github.com/ransome1/sleek/releases/download/v#{version}/sleek-#{version}-mac.dmg"
   appcast "https://github.com/ransome1/sleek/releases.atom"
