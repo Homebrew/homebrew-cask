@@ -7,5 +7,10 @@ cask "renpy" do
   desc "Visual novel engine in Python"
   homepage "https://www.renpy.org/"
 
+  livecheck do
+    url "https://www.renpy.org/latest.html"
+    regex(/href=.*?renpy[._-]v?(\d+(?:\.\d+)+)[._-]sdk\.dmg/i)
+  end
+
   suite "renpy-#{version}-sdk"
 end
