@@ -3,7 +3,11 @@ cask "sleek" do
   sha256 "b7c1e2aae275deaad2e119b0de2c394d3d6beb7607be809cbdef1bc9d66111f0"
 
   url "https://github.com/ransome1/sleek/releases/download/v#{version}/sleek-#{version}-mac.dmg"
-  appcast "https://github.com/ransome1/sleek/releases.atom"
+  #appcast "https://github.com/ransome1/sleek/releases.atom"
+  livecheck do
+    url "https://github.com/ransome1/sleek/releases.atom"
+    strategy :git
+  end
   name "sleek"
   desc "Todo app based on todo.txt for Linux, Windows and MacOS, free and open-source"
   homepage "https://github.com/ransome1/sleek"
