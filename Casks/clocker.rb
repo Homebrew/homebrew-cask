@@ -5,7 +5,7 @@ cask "clocker" do
   url "https://github.com/n0shake/Clocker/releases/download/#{version}/Clocker.zip",
       verified: "github.com/n0shake/Clocker/"
   name "Clocker"
-  desc "Keep track of your friends and colleagues right from your menubar"
+  desc "Menu bar timezone tracker"
   homepage "https://abhishekbanthia.com/clocker"
 
   app "Clocker.app"
