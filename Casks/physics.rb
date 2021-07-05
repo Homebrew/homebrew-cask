@@ -1,11 +1,16 @@
 cask "physics" do
-  version :latest
+  version "9.1,9.9.9.3.9"
   sha256 :no_check
 
-  url "http://praetersoftware.com/download/physics101/Physics101.dmg"
+  url "https://praetersoftware.com/download/physics101/Physics101.dmg"
   name "Physics 101"
-  desc "Physics tools and simulations"
+  desc "Collection of simulations, tools, and equations across the field of physics"
   homepage "http://www.praetersoftware.com/new/physics101/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   app "Physics 101.app"
 
