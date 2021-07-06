@@ -1,4 +1,4 @@
-cask "physics" do
+cask "physics-101" do
   version "9.1,9.9.9.3.9"
   sha256 :no_check
 
