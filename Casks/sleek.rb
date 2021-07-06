@@ -7,11 +7,6 @@ cask "sleek" do
   desc "Todo app based on todo.txt, free and open-source"
   homepage "https://github.com/ransome1/sleek"
 
-  livecheck do
-    url "https://github.com/ransome1/sleek/releases.atom"
-    strategy :git
-  end
-
   app "sleek.app"
 
   zap trash: [
