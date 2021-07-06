@@ -4,6 +4,7 @@ cask "teacode" do
 
   url "https://www.apptorium.com/public/products/teacode/releases/TeaCode-#{version}.zip"
   name "TeaCode"
+  desc "Text expanding app for developers"
   homepage "https://www.apptorium.com/teacode"
 
   livecheck do
