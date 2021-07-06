@@ -1,6 +1,6 @@
 cask "katrain" do
-  version "1.9.2"
-  sha256 "ad9cc517d1c4ac8799d0994c4be504b67ca6784e48175111c7d519dd491ff05a"
+  version "1.9.3"
+  sha256 "217cf11401986e2247a61fc417df21e4bcfae8c4e75f6c16c6d6a4ac6335d5cf"
 
   url "https://github.com/sanderland/katrain/releases/download/#{version}/KaTrainOSX.dmg"
   name "KaTrain"
