@@ -9,8 +9,7 @@ cask "cornerstone" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/Cornerstone-(\d+(?:\.\d+)*)\.zip}i)
+    regex(/href=.*?Cornerstone[._-]v?(\d+(?:\.\d+)*)\.zip/i)
   end
 
   depends_on macos: ">= :mojave"
