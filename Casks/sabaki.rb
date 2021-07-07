@@ -5,6 +5,7 @@ cask "sabaki" do
   url "https://github.com/SabakiHQ/Sabaki/releases/download/v#{version}/sabaki-v#{version}-mac-x64.7z",
       verified: "github.com/SabakiHQ/Sabaki/"
   name "Sabaki"
+  desc "Go board and SGF editor"
   homepage "https://sabaki.yichuanshen.de/"
 
   app "Sabaki.app"
