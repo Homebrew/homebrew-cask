@@ -15,4 +15,10 @@ cask "tiny-player" do
   auto_updates true
 
   app "Tiny Player.app"
+
+  zap trash: [
+    "~/Library/Application Support/Tiny Player",
+    "~/Library/Caches/com.catnapgames.playermac",
+    "~/Library/Preferences/com.catnapgames.playermac.plist",
+  ]
 end
