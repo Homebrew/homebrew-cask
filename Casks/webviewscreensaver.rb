@@ -13,4 +13,12 @@ cask "webviewscreensaver" do
   end
 
   screen_saver "WebViewScreenSaver.saver"
+
+  postflight do
+    if (MacOS.version >= :big_sur) && Hardware::CPU.arm?
+      binary = "#{ENV["HOME"]}/Library/Screen Savers/WebViewScreenSaver.saver"
+      odebug "Codesigning #{binary}"
+      quiet_system("codesign", "--sign", "-", "--force", binary)
+    end
+  end
 end
