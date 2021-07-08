@@ -9,8 +9,8 @@ cask "lulu" do
   homepage "https://objective-see.com/products/lulu.html"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://objective-see.com/products/lulu.html"
+    regex(%r{href=.*?/LuLu[._-]v?(\d+(?:\.\d+)+)\.dmg"}i)
   end
 
   auto_updates true
