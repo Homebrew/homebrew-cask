@@ -1,13 +1,19 @@
 cask "naver-whale" do
-  version "2.8.108.15,108.15"
+  version "2.9.118.38"
   sha256 :no_check
 
   url "http://update.whale.naver.net/downloads/installers/NaverWhale.dmg",
       verified: "update.whale.naver.net/downloads/installers/"
-  appcast "https://cv.whale.naver.com/version/latest_version"
   name "NAVER Whale"
-  desc "Web browser made by Naver Co, Ltd"
+  desc "Web browser"
   homepage "https://whale.naver.com/"
+
+  livecheck do
+    url "https://cv.whale.naver.com/version/latest_version"
+    strategy :page_match do |page|
+      JSON.parse(page)["message"]["@version"]
+    end
+  end
 
   app "Whale.app"
 
