@@ -6,6 +6,7 @@ cask "raw-photo-processor" do
   url "https://www.raw-photo-processor.com/RPP/RPP64_#{version}.zip"
   appcast "https://groups.google.com/forum/feed/raw-photo-processor/msgs/rss.xml?num=50"
   name "Raw Photo Processor"
+  desc "Process raw photos"
   homepage "https://www.raw-photo-processor.com/RPP/Overview.html"
 
   app "Raw Photo Processor 64.app"
