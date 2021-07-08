@@ -16,4 +16,12 @@ cask "yacreader" do
 
   app "YACReader.app"
   app "YACReaderLibrary.app"
+
+  zap trash: [
+    "~/Library/Application Support/YACReader",
+    "~/Library/Preferences/com.yacreader.YACReader.plist",
+    "~/Library/Preferences/com.yacreader.YACReaderLibrary.plist",
+    "~/Library/Saved Application State/com.yacreader.YACReader.savedState",
+    "~/Library/Saved Application State/com.yacreader.YACReaderLibrary.savedState",
+  ]
 end
