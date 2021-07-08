@@ -11,7 +11,7 @@ cask "pulse" do
   app "Pulse.app"
   
   zap trash: [
-  "~/Library/Application Scripts/com.github.kean.pulse",
-  "~/Library/Containers/com.github.kean.pulse",
+    "~/Library/Application Scripts/com.github.kean.pulse",
+    "~/Library/Containers/com.github.kean.pulse",
   ]
 end
