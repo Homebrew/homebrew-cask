@@ -7,6 +7,11 @@ cask "unshaky" do
   desc "Software fix for double key presses on Apple's butterfly keyboard"
   homepage "https://github.com/aahung/Unshaky"
 
+  livecheck do
+    url "https://raw.githubusercontent.com/aahung/Unshaky/master/appcast.xml"
+    strategy :sparkle, &:short_version
+  end
+
   auto_updates true
   depends_on macos: ">= :sierra"
 
