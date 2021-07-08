@@ -8,6 +8,11 @@ cask "ransomwhere" do
   desc "Protect your personal files"
   homepage "https://objective-see.com/products/ransomwhere.html"
 
+  livecheck do
+    url "https://objective-see.com/products/ransomwhere.html"
+    regex(%r{href=.*?/RansomWhere[._-]v?(\d+(?:\.\d+)+)\.zip}i)
+  end
+
   installer script: {
     executable: "#{staged_path}/RansomWhere_Installer.app/Contents/MacOS/RansomWhere_Installer",
     args:       ["-install"],
