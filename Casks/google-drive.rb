@@ -20,6 +20,8 @@ cask "google-drive" do
             quit:       "com.google.drivefs",
             launchctl:  [
               "com.google.keystone.daemon",
+              "com.google.keystone.agent",
+              "com.google.keystone.xpcservice",
               "com.google.keystone.system.agent",
               "com.google.keystone.system.xpcservice",
             ],
