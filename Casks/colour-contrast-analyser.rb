@@ -5,6 +5,7 @@ cask "colour-contrast-analyser" do
   url "https://github.com/ThePacielloGroup/CCAe/releases/download/v#{version}/CCA-#{version}.dmg",
       verified: "github.com/ThePacielloGroup/CCAe/"
   name "Colour Contrast Analyser (CCA)"
+  desc "CCA helps determine the legibility of text and the contrast of visual elements, such as graphical controls and visual indicators."
   homepage "https://developer.paciellogroup.com/resources/contrastanalyser/"
 
   app "Colour Contrast Analyser (CCA).app"
