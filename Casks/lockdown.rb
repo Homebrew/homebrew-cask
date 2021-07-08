@@ -8,5 +8,10 @@ cask "lockdown" do
   desc "Audits and remediates security configuration settings"
   homepage "https://objective-see.com/products/lockdown.html"
 
+  livecheck do
+    url "https://objective-see.com/products/lockdown.html"
+    regex(%r{href=.*?/Lockdown[._-]v?(\d+(?:\.\d+)+)\.zip}i)
+  end
+
   app "Lockdown.app"
 end
