@@ -5,6 +5,7 @@ cask "jabref" do
   url "https://github.com/JabRef/jabref/releases/download/v#{version}/JabRef-#{version}.dmg",
       verified: "github.com/JabRef/jabref/"
   name "JabRef"
+  desc "Reference manager to edit, manage and search BibTeX files, can import data from online scientific databases"
   homepage "https://www.jabref.org/"
 
   app "JabRef.app"
