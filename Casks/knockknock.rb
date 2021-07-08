@@ -8,6 +8,11 @@ cask "knockknock" do
   desc "Tool to show what is persistently installed on the computer"
   homepage "https://objective-see.com/products/knockknock.html"
 
+  livecheck do
+    url "https://objective-see.com/products/knockknock.html"
+    regex(%r{href=.*?/KnockKnock[._-]v?(\d+(?:\.\d+)+)\.zip}i)
+  end
+
   app "KnockKnock.app"
 
   zap trash: [
