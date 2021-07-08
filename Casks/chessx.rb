@@ -5,6 +5,7 @@ cask "chessx" do
   url "https://downloads.sourceforge.net/chessx/chessx/#{version}/chessx-#{version}.dmg",
       verified: "downloads.sourceforge.net/chessx/"
   name "ChessX"
+  desc "Chess database"
   homepage "https://chessx.sourceforge.io/"
 
   livecheck do
