@@ -8,6 +8,11 @@ cask "oversight" do
   desc "Monitors computer mic and webcam"
   homepage "https://objective-see.com/products/oversight.html"
 
+  livecheck do
+    url "https://objective-see.com/products/oversight.html"
+    regex(%r{href=.*?/OverSight[._-]v?(\d+(?:\.\d+)+)\.zip}i)
+  end
+
   depends_on macos: ">= :catalina"
 
   installer script: {
