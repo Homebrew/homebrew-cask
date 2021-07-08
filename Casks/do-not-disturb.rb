@@ -8,6 +8,11 @@ cask "do-not-disturb" do
   desc "Open-source physical access (aka 'evil maid') attack detector"
   homepage "https://objective-see.com/products/dnd.html"
 
+  livecheck do
+    url "https://objective-see.com/products/dnd.html"
+    regex(%r{href=.*?/DoNotDisturb[._-]v?(\d+(?:\.\d+)+)\.zip}i)
+  end
+
   depends_on macos: ">= :sierra"
 
   installer script: {
