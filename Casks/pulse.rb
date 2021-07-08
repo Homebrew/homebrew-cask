@@ -5,7 +5,7 @@ cask "pulse" do
   url "https://github.com/kean/Pulse/releases/download/#{version}/Pulse.app.zip"
   name "pulse"
   desc "Logger and Network Inspector"
-  homepage "https://github.com/kean/Pulse"
+  homepage "https://kean.blog/pulse/home"
 
   app "Pulse.app"
 end
