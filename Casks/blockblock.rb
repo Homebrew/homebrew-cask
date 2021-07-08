@@ -41,5 +41,10 @@ cask "blockblock" do
   desc "Monitors common persistence locations"
   homepage "https://objective-see.com/products/blockblock.html"
 
+  livecheck do
+    url "https://objective-see.com/products/blockblock.html"
+    regex(%r{href=.*?/BlockBlock[._-]v?(\d+(?:\.\d+)+)\.zip}i)
+  end
+
   zap trash: "~/Library/Preferences/com.objectiveSee.BlockBlock.plist"
 end
