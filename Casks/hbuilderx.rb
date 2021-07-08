@@ -10,7 +10,9 @@ cask "hbuilderx" do
 
   livecheck do
     url "https://download1.dcloud.net.cn/hbuilderx/release.json"
-    regex(/HBuilderX[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :page_match do |page|
+      JSON.parse(page)["version"]
+    end
   end
 
   app "HBuilderX.app"
