@@ -7,7 +7,7 @@ cask "swiftformat-for-xcode" do
   desc "Xcode Extension for reformatting Swift code"
   homepage "https://github.com/nicklockwood/SwiftFormat"
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   app "SwiftFormat-#{version}/EditorExtension/SwiftFormat for Xcode.app"
 
