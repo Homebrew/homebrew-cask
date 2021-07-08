@@ -1,12 +1,12 @@
 cask "clion" do
-  version "2021.1.2,211.7442.42"
+  version "2021.1.3,211.7628.27"
 
   if Hardware::CPU.intel?
-    sha256 "27a1cbf8c19d7a3d31450fd8049c6a4a7e9e23f142f862786b92e678c43a7876"
+    sha256 "844724f239ebcb305345b3369ca79d2a4cfb7ac9ec4b5cf939dd52d4be68b5ea"
 
     url "https://download.jetbrains.com/cpp/CLion-#{version.before_comma}.dmg"
   else
-    sha256 "89851e0eaf223a133fd4b6a8326e599df7231281ebd4aba7299d3747510d0aec"
+    sha256 "25a82140dad8392984b27bfca65667f96582bc5357e61735a0ef93fb4315b0a2"
 
     url "https://download.jetbrains.com/cpp/CLion-#{version.before_comma}-aarch64.dmg"
   end
