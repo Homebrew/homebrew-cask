@@ -9,4 +9,9 @@ cask "pulse" do
   homepage "https://kean.blog/pulse/home"
 
   app "Pulse.app"
+  
+  zap trash: [
+  "~/Library/Application Scripts/com.github.kean.pulse",
+  "~/Library/Containers/com.github.kean.pulse",
+  ]
 end
