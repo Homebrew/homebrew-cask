@@ -8,6 +8,11 @@ cask "dhs" do
   desc "Scans for dylib hijacking"
   homepage "https://objective-see.com/products/dhs.html"
 
+  livecheck do
+    url "https://objective-see.com/products/dhs.html"
+    regex(%r{href=.*?/DHS[._-]v?(\d+(?:\.\d+)+)\.zip}i)
+  end
+
   app "DHS.app"
 
   zap trash: [
