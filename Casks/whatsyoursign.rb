@@ -8,6 +8,11 @@ cask "whatsyoursign" do
   desc "Shows a files cryptographic signing information"
   homepage "https://objective-see.com/products/whatsyoursign.html"
 
+  livecheck do
+    url "https://objective-see.com/products/whatsyoursign.html"
+    regex(%r{href=.*?/WhatsYourSign[._-]v?(\d+(?:\.\d+)+)\.zip}i)
+  end
+
   depends_on macos: ">= :yosemite"
 
   installer manual: "WhatsYourSign Installer.app"
