@@ -7,6 +7,11 @@ cask "kieler" do
   desc "Graphical model-based design tool"
   homepage "https://rtsys.informatik.uni-kiel.de/confluence/display/KIELER"
 
+  livecheck do
+    url "https://rtsys.informatik.uni-kiel.de/confluence/display/KIELER/Downloads"
+    regex(/href=.*?sccharts[._-]rca[._-]v?(\d+(?:\.\d+)+)[._-]macosx[._-]cocoa[._-]x86[._-]64\.t/i)
+  end
+
   app "kieler.app"
 
   zap trash: [
