@@ -10,6 +10,7 @@ jobs:
         uses: Homebrew/actions/check-commit-format@master
         with:
           token: ${{secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN}}
+      # TODO: replace with native actions concurrency group/cancel-in-progress
       - name: Cancel previous runs
         uses: Homebrew/actions/cancel-previous-runs@master
         if: always()
