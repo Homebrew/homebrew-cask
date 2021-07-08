@@ -4,7 +4,7 @@ cask "sleek" do
 
   url "https://github.com/ransome1/sleek/releases/download/v#{version}/sleek-#{version}-mac.dmg"
   name "sleek"
-  desc "Todo app based on todo.txt, free and open-source"
+  desc "Todo list manager"
   homepage "https://github.com/ransome1/sleek"
 
   app "sleek.app"
