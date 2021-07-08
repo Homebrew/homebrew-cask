@@ -23,6 +23,7 @@ cask "google-drive" do
               "com.google.drivefs.x86_64",
               "com.google.drivefs.filesystems.dfsfuse.x86_64",
               "com.google.drivefs.shortcuts",
+              "com.google.pkg.Keystone",
             ]
 
   zap trash:     [
