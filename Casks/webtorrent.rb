@@ -8,6 +8,11 @@ cask "webtorrent" do
   desc "Torrent streaming application"
   homepage "https://webtorrent.io/desktop/"
 
+  livecheck do
+    url "https://webtorrent.io/desktop/update?platform=darwin&sysarch=x64"
+    regex(/"version"\s*:\s*"(\d+(?:\.\d+)*)"/i)
+  end
+
   app "WebTorrent.app"
 
   zap trash: [
