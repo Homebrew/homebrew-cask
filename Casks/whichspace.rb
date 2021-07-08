@@ -7,6 +7,11 @@ cask "whichspace" do
   desc "Active space menu bar icon"
   homepage "https://github.com/gechr/WhichSpace"
 
+  livecheck do
+    url "https://raw.githubusercontent.com/gechr/WhichSpace/updates/appcast.xml"
+    strategy :sparkle
+  end
+
   auto_updates true
   depends_on macos: ">= :el_capitan"
 
