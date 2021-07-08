@@ -8,6 +8,11 @@ cask "netiquette" do
   desc "Network monitor"
   homepage "https://objective-see.com/products/netiquette.html"
 
+  livecheck do
+    url "https://objective-see.com/products/netiquette.html"
+    regex(%r{href=.*?/Netiquette[._-]v?(\d+(?:\.\d+)+)\.zip}i)
+  end
+
   depends_on macos: ">= :mojave"
 
   app "Netiquette.app"
