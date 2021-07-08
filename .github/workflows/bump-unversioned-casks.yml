@@ -5,7 +5,7 @@ on:
     paths:
       - .github/workflows/bump-unversioned-casks.yml
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: "*/30 * * * *"
   workflow_dispatch:
     inputs:
       clear_cache:
@@ -22,6 +22,7 @@ jobs:
     if: startsWith(github.repository, 'Homebrew/')
     runs-on: macos-11.0
     steps:
+      # TODO: replace with native actions concurrency group/cancel-in-progress
       - name: Check if another run already exists
         id: skip
         uses: fkirc/skip-duplicate-actions@4c656bbdb6906310fa6213604828008bc28fe55d
