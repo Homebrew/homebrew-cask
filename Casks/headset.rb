@@ -8,6 +8,11 @@ cask "headset" do
   desc "Music player powered by YouTube and Reddit"
   homepage "https://headsetapp.co/"
 
+  livecheck do
+    url "https://update.electronjs.org/headsetapp/headset-electron/darwin/0.0.0"
+    regex(/"name"\s*:\s*"v?(\d+(?:\.\d+)*)"/i)
+  end
+
   app "Headset.app"
 
   zap trash: [
