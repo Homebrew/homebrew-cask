@@ -8,6 +8,11 @@ cask "taskexplorer" do
   desc "Tool to explore all the running tasks (processes)"
   homepage "https://objective-see.com/products/taskexplorer.html"
 
+  livecheck do
+    url "https://objective-see.com/products/taskexplorer.html"
+    regex(%r{href=.*?/TaskExplorer[._-]v?(\d+(?:\.\d+)+)\.zip}i)
+  end
+
   app "TaskExplorer.app"
 
   uninstall_preflight do
