@@ -8,6 +8,11 @@ cask "kextviewr" do
   desc "Display all currently loaded kexts"
   homepage "https://objective-see.com/products/kextviewr.html"
 
+  livecheck do
+    url "https://objective-see.com/products/kextviewr.html"
+    regex(%r{href=.*?/KextViewr[._-]v?(\d+(?:\.\d+)+)\.zip}i)
+  end
+
   app "KextViewr.app"
 
   zap trash: "~/Library/Caches/com.objective-see.KextViewr"
