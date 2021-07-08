@@ -8,6 +8,11 @@ cask "pdfsam-basic" do
   desc "Extractas pages, splits, merges, mixes and rotates PDF files"
   homepage "https://pdfsam.org/"
 
+  livecheck do
+    url "http://www.pdfsam.org/current-version/"
+    regex(/"currentVersion"\s*:\s*"(\d+(?:\.\d+)*)"/i)
+  end
+
   app "PDFsam Basic.app"
 
   zap trash: [
