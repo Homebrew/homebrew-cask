@@ -7,6 +7,11 @@ cask "haptickey" do
   desc "Trigger haptic feedback when tapping Touch Bar"
   homepage "https://github.com/niw/HapticKey"
 
+  livecheck do
+    url "https://raw.githubusercontent.com/niw/HapticKey/sparkle/appcast.xml"
+    strategy :sparkle, &:short_version
+  end
+
   depends_on macos: ">= :sierra"
 
   app "HapticKey.app"
