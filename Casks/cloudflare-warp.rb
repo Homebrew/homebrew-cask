@@ -2,10 +2,10 @@ cask "cloudflare-warp" do
   version "1.5.294.0,20210701.2"
   sha256 :no_check
 
-  url "https://1.1.1.1/Cloudflare_WARP.zip"
+  url "https://cloudflarewarp.com/Cloudflare_WARP.zip"
   name "Cloudflare WARP"
   desc "Free app that makes your Internet safer"
-  homepage "https://1.1.1.1/"
+  homepage "https://cloudflarewarp.com/"
 
   livecheck do
     skip
