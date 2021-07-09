@@ -3,7 +3,7 @@ name: Triage tasks
 on: pull_request_target
 
 concurrency:
-  group: "${{ github.ref }}"
+  group: "triage-${{ github.event.number }}"
   cancel-in-progress: true
 
 jobs:
