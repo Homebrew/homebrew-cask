@@ -7,17 +7,11 @@ on:
   schedule:
     - cron: "0 */6 * * *" # every 6 hours
 
-jobs:
-  cancel-previous-runs:
-    if: startsWith(github.repository, 'Homebrew/')
-    runs-on: ubuntu-latest
-    steps:
-      # TODO: replace with native actions concurrency group/cancel-in-progress
-      - name: Cancel Previous Runs
-        uses: n1hility/cancel-previous-runs@953c92201f368370112ea2754545cb4468d89f12
-        with:
-          token: ${{ github.token }}
+concurrency:
+  group: cache
+  cancel-in-progress: true
 
+jobs:
   update:
     if: startsWith(github.repository, 'Homebrew/')
     strategy:

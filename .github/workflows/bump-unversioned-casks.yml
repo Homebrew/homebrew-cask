@@ -13,6 +13,10 @@ on:
         required: false
         default: false
 
+concurrency:
+  group: bump-unversioned-casks
+  cancel-in-progress: true
+
 env:
   HOMEBREW_DEVELOPER: 1
   HOMEBREW_NO_AUTO_UPDATE: 1
@@ -22,18 +26,6 @@ jobs:
     if: startsWith(github.repository, 'Homebrew/')
     runs-on: macos-11.0
     steps:
-      # TODO: replace with native actions concurrency group/cancel-in-progress
-      - name: Check if another run already exists
-        id: skip
-        uses: fkirc/skip-duplicate-actions@4c656bbdb6906310fa6213604828008bc28fe55d
-        with:
-          cancel_others: false
-          concurrent_skipping: always
-
-      - name: Cancel this build
-        uses: andymckay/cancel-action@8f8510d9dea52fcc8eb6ca10d6ce47fd5fc43cd8
-        if: fromJSON(steps.skip.outputs.should_skip)
-
       - name: Set up Homebrew
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
