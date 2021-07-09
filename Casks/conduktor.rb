@@ -12,10 +12,9 @@ cask "conduktor" do
   uninstall pkgutil: [
     "io.conduktor.app.Conduktor",
   ]
-  
+
   zap trash: [
     "~/Library/Application Support/conduktor",
     "~/Library/Saved Application State/io.conduktor.app.Conduktor.savedState",
   ]
-
 end
