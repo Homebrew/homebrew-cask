@@ -1,12 +1,12 @@
 cask "tencent-meeting" do
   if Hardware::CPU.intel?
-    version "2.7.5.434,727e439f79327c7c63677a9097353d3d"
-    sha256 "f072dafd53fd816acc95542dae0f750727704532b81b7afc5861e0cb9df75d71"
+    version "2.13.3.435,92f23ee987469917a93ba80eddbee251"
+    sha256 "563e4f5871a58b1cf89ba88b8fdd4b4814bb7f719f2e49826ee634870ea5d3be"
     url "https://updatecdn.meeting.qq.com/#{version.after_comma}/TencentMeeting_0300000000_#{version.before_comma}.publish.x86_64.dmg",
         verified: "qq.com/"
   else
-    version "2.7.5.434,2a4a7de84f9518b5ba69df232eb7a1d0"
-    sha256 "7e5c56185e9f29c3b6db10283101118e1d02b3d87178e45d90d9a0a27b6dc9fa"
+    version "2.13.3.435,19289abd97629d65ad8033a6d226c3c0"
+    sha256 "41180897931182331f8db8c88fc18e12cb37e225566a11fbd0af3f8ce6fa13f6"
     url "https://updatecdn.meeting.qq.com/#{version.after_comma}/TencentMeeting_0300000000_#{version.before_comma}.publish.arm64.dmg",
         verified: "qq.com/"
   end
@@ -15,6 +15,14 @@ cask "tencent-meeting" do
   name "腾讯会议"
   desc "Cloud video conferencing"
   homepage "https://meeting.tencent.com/"
+
+  livecheck do
+    # curl -H 'Content-Type: application/json' \
+    #   --data-binary \
+    #   '[{"instance":"mac","type":"0300000000"},{"instance":"mac_arm64","type":"0300000000"}]' \
+    #   https://meeting.tencent.com/wemeet-webapi/v2/config/query-download-info
+    skip "No version information available"
+  end
 
   auto_updates true
 

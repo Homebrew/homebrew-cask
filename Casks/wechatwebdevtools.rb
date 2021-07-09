@@ -1,12 +1,17 @@
 cask "wechatwebdevtools" do
-  version "1.05.2102010"
-  sha256 "3d0b7134040fd1103f5d6d7bbe4d1af1f5786dff9028a5ca4eb60a00ad0765b7"
+  version "1.05.2105170"
+  sha256 "9687e26e63b116ea9b908001406f2f60ddcf313dd0bfda70edbf889077a0549e"
 
   url "https://dldir1.qq.com/WechatWebDev/release/p-ae42ee2cde4d42ee80ac60b35f183a99/wechat_devtools_#{version}.dmg"
-  appcast "https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html"
   name "wechat web devtools"
   name "微信web开发者工具"
+  desc "Weixin DevTools for Official Account and Mini Program development"
   homepage "https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html"
+
+  livecheck do
+    url "https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html"
+    regex(%r{Stable\s+Build</a>\s*\((\d+(?:\.\d+)+)}i)
+  end
 
   auto_updates true
 

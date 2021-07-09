@@ -2,9 +2,10 @@ cask "semulov" do
   version "2.4.1"
   sha256 :no_check
 
-  url "https://www.kainjow.com/downloads/Semulov.zip"
+  url "https://kainjow.com/downloads/Semulov.zip"
   name "Semulov"
-  homepage "https://www.kainjow.com/"
+  desc "Access mounted and unmounted volumes from the menubar"
+  homepage "https://kainjow.com/"
 
   livecheck do
     url "https://kainjow.com/updates/semulov.xml"

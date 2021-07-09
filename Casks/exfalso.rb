@@ -9,9 +9,8 @@ cask "exfalso" do
   homepage "https://quodlibet.readthedocs.io/"
 
   livecheck do
-    url :url
-    strategy :git
-    regex(/^release-(\d+(?:\.\d+)*)$/i)
+    url "https://quodlibet.readthedocs.io/en/latest/downloads.html"
+    regex(%r{href=.*?/ExFalso[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "ExFalso.app"

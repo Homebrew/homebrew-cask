@@ -1,9 +1,10 @@
 cask "swinsian" do
-  version "2.3.4,529"
-  sha256 "35e055676481ea67037e67abb5812424fb523d63af4f12d9aeb7e6b52b1c43aa"
+  version "2.3.5,535"
+  sha256 "3210c8c897ef4f81f8c6059f720bf70a1b046d6505a7a8bc140bb104184f23f0"
 
   url "https://www.swinsian.com/sparkle/Swinsian_#{version.before_comma}.zip"
   name "Swinsian"
+  desc "Music player"
   homepage "https://swinsian.com/"
 
   livecheck do

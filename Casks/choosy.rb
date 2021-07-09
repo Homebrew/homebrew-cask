@@ -22,10 +22,14 @@ cask "choosy" do
   end
 
   url "https://downloads.choosyosx.com/choosy_#{version}.zip"
-  appcast "https://www.choosyosx.com/sparkle/feed"
   name "Choosy"
   desc "Open links in any browser"
   homepage "https://www.choosyosx.com/"
+
+  livecheck do
+    url "https://www.choosyosx.com/sparkle/feed"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :yosemite"
 

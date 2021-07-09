@@ -79,4 +79,4 @@ it’s likely the software you’re trying to install is incompatible with your 
 
 #### Unlisted reason
 
-If your issue isn’t listed here, [go back](https://github.com/Homebrew/homebrew-cask/blob/master/README.md#reporting-bugs) and pick `My problem isn’t listed`.
+If your issue isn’t listed here, [go back](https://github.com/Homebrew/homebrew-cask/blob/HEAD/README.md#reporting-bugs) and pick `My problem isn’t listed`.

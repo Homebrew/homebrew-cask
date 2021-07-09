@@ -5,7 +5,7 @@ on:
     paths:
       - .github/workflows/bump-unversioned-casks.yml
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: "*/30 * * * *"
   workflow_dispatch:
     inputs:
       clear_cache:
@@ -22,9 +22,10 @@ jobs:
     if: startsWith(github.repository, 'Homebrew/')
     runs-on: macos-11.0
     steps:
+      # TODO: replace with native actions concurrency group/cancel-in-progress
       - name: Check if another run already exists
         id: skip
-        uses: fkirc/skip-duplicate-actions@ea548f2a2a08c55dcb111418ca62181f7887e297
+        uses: fkirc/skip-duplicate-actions@4c656bbdb6906310fa6213604828008bc28fe55d
         with:
           cancel_others: false
           concurrent_skipping: always
@@ -44,6 +45,12 @@ jobs:
         with:
           username: BrewTestBot
 
+      - name: Set up commit signing
+        id: set-up-commit-signing
+        uses: Homebrew/actions/setup-commit-signing@master
+        with:
+          signing_key: ${{ secrets.BREWTESTBOT_GPG_SIGNING_SUBKEY }}
+
       # Workaround until the `cache` action uses the changes from
       # https://github.com/actions/toolkit/pull/580.
       - name: Unlink workspace
@@ -52,7 +59,7 @@ jobs:
           mkdir "${GITHUB_WORKSPACE}"
 
       - name: Cache Homebrew Gems
-        uses: actions/cache@v2.1.4
+        uses: actions/cache@v2.1.6
         with:
           path: ${{ steps.set-up-homebrew.outputs.gems-path }}
           key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
@@ -67,7 +74,7 @@ jobs:
           echo "::set-output name=time::$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
 
       - name: Cache state
-        uses: actions/cache@v2.1.4
+        uses: actions/cache@v2.1.6
         with:
           path: ~/bump-unversioned-casks-state.json
           key: bump-unversioned-casks-${{ steps.cache-id.outputs.time }}
@@ -90,7 +97,8 @@ jobs:
           brew bump-unversioned-casks --state-file ~/bump-unversioned-casks-state.json --limit 15 '${{ github.repository }}'
         env:
           HOMEBREW_DEBUG: 1
-          HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+          HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
+          HOMEBREW_GPG_PASSPHRASE: ${{ secrets.BREWTESTBOT_GPG_SIGNING_SUBKEY_PASSPHRASE }}
         timeout-minutes: 20
 
       # Workaround until the `cache` action uses the changes from

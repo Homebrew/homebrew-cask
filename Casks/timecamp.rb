@@ -1,6 +1,6 @@
 cask "timecamp" do
-  version "1.7.1.6"
-  sha256 "275658ea5958489d14185775f9ab3eebb079be250fa7fefe91e26dc38d5ab4c7"
+  version "1.7.2.0"
+  sha256 "165045e6170fd17a8ef77bd3d75318594dd687b5f51255e5c63c318ab9250cfd"
 
   url "https://timecamp.s3.amazonaws.com/downloadsoft/#{version}/TimeCampSetup_macOS.dmg",
       verified: "timecamp.s3.amazonaws.com/"
@@ -9,9 +9,8 @@ cask "timecamp" do
   homepage "https://www.timecamp.com/"
 
   livecheck do
-    url "https://app.timecamp.com/downloader/currentDesktopAppVersion/"
-    strategy :page_match
-    regex(/"1.x":"(\d+(?:\.\d+)*)/i)
+    url "https://app.timecamp.com/download/stable/macos"
+    strategy :header_match
   end
 
   app "TimeCamp.app"

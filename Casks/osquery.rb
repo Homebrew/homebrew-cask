@@ -1,12 +1,16 @@
 cask "osquery" do
-  version "4.6.0"
-  sha256 "c037742f9f7e416955c0a38cf450e00989fad07f34aef60aba8d3a923502177c"
+  version "4.8.0"
+  sha256 "10b02b55b4f1465df7a7b8c46c6072b859e172809c4838c8a65dc148f056b821"
 
   url "https://pkg.osquery.io/darwin/osquery-#{version}.pkg"
-  appcast "https://github.com/osquery/osquery/releases.atom"
   name "osquery"
   desc "SQL powered operating system instrumentation and analytics"
   homepage "https://osquery.io/"
+
+  livecheck do
+    url "https://github.com/osquery/osquery"
+    strategy :git
+  end
 
   pkg "osquery-#{version}.pkg"
 

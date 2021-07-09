@@ -1,6 +1,6 @@
 cask "plasticscm-cloud-edition" do
-  version "9.0.16.5242"
-  sha256 "32a57058f225c6ad8cbac4021af7b354a8d57f00fe1cd9b966ffdab39678db77"
+  version "10.0.16.5533"
+  sha256 "f23693dc5fba607ad667e27e8de5723bbe4531ab09269f40276ef8a830ad67f2"
 
   url "https://s3.eu-west-2.amazonaws.com/plastic-releases/releases/#{version}/plasticscm/osx/plasticscm-cloud-#{version}.pkg.zip",
       verified: "s3.eu-west-2.amazonaws.com/plastic-releases/"
@@ -10,7 +10,6 @@ cask "plasticscm-cloud-edition" do
 
   livecheck do
     url "https://www.plasticscm.com/download/releasenotes/"
-    strategy :page_match
     regex(/plastic\sscm\s-\srelease\snotes\s-\s(\d+(?:\.\d+)*)/i)
   end
 

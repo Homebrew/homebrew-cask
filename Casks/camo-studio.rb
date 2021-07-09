@@ -1,8 +1,8 @@
 cask "camo-studio" do
-  version "1.2.4,144"
-  sha256 "37aea984109f4c8bf6f007a8bd8cb55de2e745773684c8cca3d736b421023ce0"
+  version "1.3.6,4830"
+  sha256 "3ab89aaa0d9fc2785a394d0d6a2d4ebdafddabf2cf9f67380c9417cf6991fa6e"
 
-  url "https://reincubate.com/res/labs/camo/Camo%20Studio%20#{version.before_comma}%20%28#{version.after_comma}%29%20%5BRelease%5D.app.zip"
+  url "https://reincubate.com/res/labs/camo/CamoStudioMac-#{version.before_comma}-#{version.after_comma}-Release.app.zip"
   name "Camo Studio"
   desc "Use your phone as a high-quality webcam with image tuning controls"
   homepage "https://reincubate.com/camo/"

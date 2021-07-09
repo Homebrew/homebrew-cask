@@ -8,6 +8,11 @@ cask "munkiadmin" do
   desc "Tool to manage Munki repositories"
   homepage "https://hjuutilainen.github.io/munkiadmin/"
 
+  livecheck do
+    url :url
+    regex(/^v?(\d+(?:\.\d+)*)$/i)
+  end
+
   app "MunkiAdmin.app"
 
   zap trash: [

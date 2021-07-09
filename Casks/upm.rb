@@ -4,8 +4,8 @@ cask "upm" do
 
   url "https://downloads.sourceforge.net/upm/upm-#{version}/upm-mac-#{version}.tar.gz",
       verified: "downloads.sourceforge.net/upm/"
-  appcast "https://sourceforge.net/projects/upm/rss"
   name "Universal Password Manager"
+  desc "Password manager"
   homepage "https://upm.sourceforge.io/"
 
   app "upm-mac-#{version}/UPM.app"

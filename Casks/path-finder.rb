@@ -1,6 +1,6 @@
 cask "path-finder" do
-  version "10.0.2,2086"
-  sha256 "15746dc6b3d4a10084fcb67c545b09f265dbd8eee92736a1c2123f6404c7906b"
+  version "10.0.4,2093"
+  sha256 "83982471dbe8c4c14ded70cb68336a85cb9a115a68f0a9e04029da6137f2c013"
 
   url "https://get.cocoatech.com/PF#{version.major}.dmg"
   name "Path Finder"

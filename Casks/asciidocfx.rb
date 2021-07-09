@@ -1,6 +1,6 @@
 cask "asciidocfx" do
-  version "1.7.3"
-  sha256 "394be4606490939526fe584981c3d00c922258b07bc1a7409322b153b9b5509f"
+  version "1.7.4"
+  sha256 "91f3c04aac2e4d785031883edd5aeb3b9be04c8907e25f2cbc866bc0598a9c3a"
 
   url "https://github.com/asciidocfx/AsciidocFX/releases/download/v#{version}/AsciidocFX_Mac.dmg",
       verified: "github.com/asciidocfx/AsciidocFX/"

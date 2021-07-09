@@ -1,11 +1,18 @@
 cask "kiwi-for-gmail" do
-  version "3.2.2,2330"
+  version "3.3.0,2348"
   sha256 :no_check
 
   url "https://downloads.kiwiforgmail.com/kiwi/release/consumer/Kiwi+for+Gmail+Setup.dmg"
   name "Kiwi for Gmail"
-  desc "Enhances Gmail seamlessly like a full-featured desktop office productivity app"
+  desc "Enhances Gmail like a full-featured desktop office productivity app"
   homepage "https://www.kiwiforgmail.com/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
+  depends_on macos: ">= :yosemite"
 
   app "Kiwi for Gmail.app"
 

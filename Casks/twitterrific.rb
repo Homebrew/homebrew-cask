@@ -1,9 +1,9 @@
 cask "twitterrific" do
-  version "5.4.5,151"
-  sha256 "ca03e8b989a16cfb88cb86c776c42a7c88110ba1c9db5adf3b55fe15b85e3e57"
+  version "5.4.7,171"
+  sha256 "d45a3eefd4a64e97da891a3833e4d73177d4ad116c2be93cf1579de127bb69bd"
 
-  url "https://iconfactory.com/assets/software/phoenix/Twitterrific-#{version.before_comma}.zip",
-      verified: "iconfactory.com/assets/software/phoenix/"
+  url "https://downloads.iconfactory.com/phoenix/Twitterrific-#{version.before_comma}+#{version.after_comma}.zip",
+      verified: "downloads.iconfactory.com/phoenix/"
   name "Twitterrific"
   name "Phoenix"
   desc "Twitter client"

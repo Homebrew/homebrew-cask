@@ -1,12 +1,18 @@
 cask "mosaic" do
-  version "1.2.6"
-  sha256 "3b03b8329f1ff75499662a708e43536cafddd7ef51bff417f865b0f0f71e2326"
+  version "1.3.2"
+  sha256 "7ce5d48c167489d8dd0f7997531251c1a0052e7dc14fa2171e8c09a04e065651"
 
   url "https://lightpillar.com/appdata/mosaic/archive/Mosaic_#{version.dots_to_underscores}.pkg"
-  appcast "https://lightpillar.com/appdata/mosaic/features/version-history.html"
   name "Mosaic"
   desc "Resize and reposition apps"
   homepage "https://lightpillar.com/mosaic.html"
+
+  livecheck do
+    url "https://lightpillar.com/appdata/mosaic/features/version-history.html"
+    regex(/>\s*Version\s*(\d+(?:\.\d+)+)\s*</i)
+  end
+
+  depends_on macos: ">= :el_capitan"
 
   pkg "Mosaic_#{version.dots_to_underscores}.pkg"
 

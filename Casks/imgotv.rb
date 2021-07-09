@@ -1,15 +1,17 @@
 cask "imgotv" do
-  version "6.3.9"
-  sha256 "dce3c23f6f4afb1f01a78e351df04c471d4e0adab934811f1b41d43cae43cffa"
+  version "6.4.2.2"
+  sha256 "c3bc81a8ec0b85ab18f706323e7355ccf5bbc8bd3c04131a7930c78eac42c45f"
 
-  url "https://download.imgo.tv/app/mac/#{version}/mgtv-mango-#{version}.dmg",
+  url "https://download.imgo.tv/app/mac/#{version}/mgtv-mango-#{version.major_minor_patch}.dmg",
       verified: "download.imgo.tv/"
   name "芒果TV"
+  desc "Mango TV video app"
   homepage "https://www.mgtv.com/app/"
 
   livecheck do
     url "https://pcconf.api.mgtv.com/getPcDownloadUrl?source=mango2"
     strategy :header_match
+    regex(%r{/v?(\d+(?:\.\d+)+)/mgtv[._-]mango[._-]v?\d+(?:\.\d+)*\.dmg}i)
   end
 
   auto_updates true

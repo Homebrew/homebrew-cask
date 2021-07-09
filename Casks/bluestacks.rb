@@ -1,6 +1,6 @@
 cask "bluestacks" do
-  version "4.240.5.2918,c72df965bb755c78ee4aa0dfd65a169b"
-  sha256 "30eb8e64a1c1aa85faa90f709ff68b9885c548f15041158972a59be0dad48a3a"
+  version "4.270.1.2803,c610c2d26a70cad789a74e586a08e51f"
+  sha256 "a2e76c99a78d9c2559c2f0d2d1ab069f8f721468ec887939746820ef02927dc3"
 
   url "https://cdn3.bluestacks.com/downloads/mac/bgp64_mac/#{version.before_comma}/#{version.after_comma}/x64/BlueStacksInstaller_#{version.before_comma}.dmg"
   name "BlueStacks"

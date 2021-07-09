@@ -1,6 +1,6 @@
 cask "yggdrasil" do
-  version "0.3.16"
-  sha256 "4d1bc756db8fb237671f5ba3f121133a597d3e7057fafbffabf5fdfd93e2b669"
+  version "0.4.0"
+  sha256 "2425d0bdef84de6c91865e330ec4d27266a5712b015b6c3c771a9745d011e4c7"
 
   url "https://github.com/yggdrasil-network/yggdrasil-go/releases/download/v#{version}/yggdrasil-#{version}-macos-amd64.pkg"
   name "Yggdrasil"

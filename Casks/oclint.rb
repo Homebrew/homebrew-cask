@@ -1,10 +1,11 @@
 cask "oclint" do
-  version "20.11"
-  sha256 "c5167061ff162b791b73754963e3c2f9c545fe3e66b111cc842392cf0c987caf"
+  version "21.03"
+  sha256 "71a85ba48d11df60ecb9298d90871507d0bdd883e9414ff88d1fb2c2a75d2a14"
 
-  url "https://github.com/oclint/oclint/releases/download/v#{version}/oclint-#{version}-llvm-11.0.0-x86_64-darwin-macos-big-sur-11.0.1-xcode-12.2.tar.gz",
+  url "https://github.com/oclint/oclint/releases/download/v#{version}/oclint-#{version}-llvm-11.1.0-x86_64-darwin-macos-big-sur-11.2-xcode-12.4.tar.gz",
       verified: "github.com/oclint/oclint/"
   name "OCLint"
+  desc "Static source code analysis tool"
   homepage "https://oclint.org/"
 
   livecheck do

@@ -1,6 +1,6 @@
 cask "amazon-music" do
-  version "8.2.1.2239,01222239_032a1615c80950ffb972ac9e3e043bdd"
-  sha256 "623147209fc618907a2a4a9668b5b0411a2822306342ab232e681751d72dedb0"
+  version "8.6.0.2271,22710610_e91247c784977e6c258edc2ea5d1a151"
+  sha256 "85d69d9a46296c43936344c1dccb009cbba90ca85c3d7b60620540aff3155ef8"
 
   url "https://morpho-releases.s3-us-west-2.amazonaws.com/mac/#{version.after_comma}/Amazon+Music+Installer.dmg",
       verified: "morpho-releases.s3-us-west-2.amazonaws.com/mac/"

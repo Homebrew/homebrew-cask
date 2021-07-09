@@ -1,8 +1,8 @@
 cask "scihubeva" do
-  version "v4.1.1"
-  sha256 "2b652b98b360a3e950b247fcdc4ef1f20d86910bdf6d6cefd025ed37996e2725"
+  version "5.0.0"
+  sha256 "6133fd7efb9b2c2b544277dd586e407c70dc6320130f0661f9e089308bc28911"
 
-  url "https://github.com/leovan/SciHubEVA/releases/download/#{version}/SciHubEVA-#{version}.dmg"
+  url "https://github.com/leovan/SciHubEVA/releases/download/v#{version}/SciHubEVA-v#{version}.dmg"
   name "SciHubEVA"
   desc "Sci-Hub GUI app"
   homepage "https://github.com/leovan/SciHubEVA"

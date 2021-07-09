@@ -4,9 +4,15 @@ cask "ssh-tunnel-manager" do
 
   url "https://dl.devmate.com/org.tynsoe.sshtunnelmanager/#{version.before_comma}/#{version.after_comma}/SSHTunnelManager-#{version.before_comma}.zip",
       verified: "dl.devmate.com/org.tynsoe.sshtunnelmanager/"
-  appcast "https://updates.devmate.com/org.tynsoe.sshtunnelmanager.xml"
   name "SSH Tunnel Manager"
-  homepage "https://www.tynsoe.org/v2/stm/"
+  homepage "https://tynsoe.org/stm/"
+
+  livecheck do
+    url "https://updates.devmate.com/org.tynsoe.sshtunnelmanager.xml"
+    strategy :sparkle do |item|
+      "#{item.version},#{item.url[%r{/(\d+)/SSHTunnelManager-(?:\d+(?:\.\d+)*)\.zip}i, 1]}"
+    end
+  end
 
   app "SSH Tunnel Manager.app"
 

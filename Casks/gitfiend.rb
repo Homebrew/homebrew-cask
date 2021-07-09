@@ -1,11 +1,18 @@
 cask "gitfiend" do
-  version "0.25.4"
-  sha256 "3869802d393cb37a237fb163cab999b30a4585696a4b9f7aedd502cf3589f25d"
+  version "0.27.4"
+  sha256 "a257497a726b31cd7e634e3fec74f6c10d836991d8e78699915451828a963b2a"
 
   url "https://gitfiend.com/resources/GitFiend-#{version}.dmg"
-  appcast "https://gitfiend.com/app-info"
   name "GitFiend"
+  desc "Git client"
   homepage "https://gitfiend.com/"
+
+  livecheck do
+    url "https://gitfiend.com/app-info"
+    strategy :page_match do |page|
+      JSON.parse(page)["version"]
+    end
+  end
 
   auto_updates true
 

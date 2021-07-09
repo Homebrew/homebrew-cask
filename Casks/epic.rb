@@ -1,8 +1,14 @@
 cask "epic" do
-  version "86.0.4240.111"
-  sha256 "74f3254e1d3a352c55e71992932ca56051e6331aff6baa6e9df9b05c80deba29"
+  version "88.0.4324.96"
 
-  url "https://cdn.epicbrowser.com/mac2/epic_#{version}.dmg"
+  if Hardware::CPU.intel?
+    url "https://cdn.epicbrowser.com/MacIntel/#{version.major}/epic_#{version}.dmg"
+    sha256 "1aad6e4d478e9eea2bced95c8b6b8217008a5004b6be887b54e9111bbbbacaf3"
+  else
+    url "https://cdn.epicbrowser.com/MacArm/#{version.major}/epic_#{version}.dmg"
+    sha256 "60cd26a790c06a5563d159be0b4a5b286959feecd855ac318d53840cb6022628"
+  end
+
   name "Epic Privacy Browser"
   desc "Private, secure web browser"
   homepage "https://www.epicbrowser.com/"

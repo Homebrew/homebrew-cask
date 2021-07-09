@@ -4,8 +4,8 @@ cask "writefull" do
 
   url "https://writefull-binaries.s3.amazonaws.com/#{version}/Writefull.dmg",
       verified: "writefull-binaries.s3.amazonaws.com/"
-  appcast "https://writefullapp.com/js/download-urls.js"
   name "Writefull"
+  desc "Provides feedback on your writing"
   homepage "https://writefullapp.com/"
 
   app "Writefull.app"
@@ -18,4 +18,8 @@ cask "writefull" do
     "~/Library/Preferences/com.paraphrase.Writefull.plist",
     "~/Library/Saved Application State/com.paraphrase.Writefull.savedState",
   ]
+
+  caveats do
+    discontinued
+  end
 end

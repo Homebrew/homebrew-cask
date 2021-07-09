@@ -1,11 +1,18 @@
 cask "sound-siphon" do
-  version "3.2.4,5876"
-  sha256 "c05ce45e0eb4950926ffdfdca6a49540e562f756475df68aed2d39db53156e3f"
+  version "3.3.3"
+  sha256 :no_check # required as upstream package is updated in-place
 
-  url "https://staticz.com/download/#{version.after_comma}/"
-  appcast "http://staticz.net/updates/soundsiphon#{version.major}.rss"
+  url "https://staticz.com/download/5876/"
   name "SoundSiphon"
+  desc "App audio capture"
   homepage "https://staticz.com/soundsiphon/"
+
+  livecheck do
+    url "http://staticz.net/updates/soundsiphon#{version.major}.rss"
+    strategy :sparkle
+  end
+
+  depends_on macos: ">= :mojave"
 
   app "Sound Siphon.app"
 end

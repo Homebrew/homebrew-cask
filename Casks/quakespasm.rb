@@ -4,8 +4,8 @@ cask "quakespasm" do
 
   url "https://downloads.sourceforge.net/quakespasm/Mac/QuakeSpasm-#{version}-osx.zip",
       verified: "downloads.sourceforge.net/quakespasm/"
-  appcast "https://sourceforge.net/projects/quakespasm/rss?path=/Mac"
   name "QuakeSpasm"
+  desc "Engine for iD software's Quake"
   homepage "https://quakespasm.sourceforge.io/"
 
   suite "QuakeSpasm"

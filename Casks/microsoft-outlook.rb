@@ -1,13 +1,17 @@
 cask "microsoft-outlook" do
-  version "16.47.21031401"
-  sha256 "2058906f61be9c6a4822560d34ef2fd00bd49933a2b31f5c5ccb9e937f9bb8f4"
+  version "16.50.21061301"
+  sha256 "71965312f4e358ee2115367ceaeadf4c3fbc0c6f8ac292ea63e4dac56bb482bb"
 
-  url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Outlook_#{version}_Installer.pkg",
-      verified: "officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/"
-  appcast "https://docs.microsoft.com/en-us/officeupdates/update-history-office-for-mac"
+  url "https://officecdn-microsoft-com.akamaized.net/db/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Outlook_#{version}_Installer.pkg",
+      verified: "officecdn-microsoft-com.akamaized.net/db/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/"
   name "Microsoft Outlook"
   desc "Email client"
   homepage "https://products.office.com/en-us/outlook/email-and-calendar-software-microsoft-outlook"
+
+  livecheck do
+    url "https://go.microsoft.com/fwlink/p/?linkid=525137"
+    strategy :header_match
+  end
 
   auto_updates true
   conflicts_with cask: "microsoft-office"

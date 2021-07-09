@@ -8,7 +8,7 @@ cask "platypus" do
   homepage "https://sveinbjorn.org/platypus"
 
   livecheck do
-    url "https://www.sveinbjorn.org/files/appcasts/PlatypusAppcast.xml"
+    url "https://sveinbjorn.org/files/appcasts/PlatypusAppcast.xml"
     strategy :sparkle
   end
 

@@ -1,12 +1,16 @@
 cask "teamviewer" do
-  version "15.15.5"
+  version "15.19.4"
   sha256 :no_check
 
   url "https://download.teamviewer.com/download/TeamViewer.dmg"
-  appcast "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=14.7.1965&os=macos&osversion=10.15.1&type=1&channel=1"
   name "TeamViewer"
   desc "Remote access and connectivity software focused on security"
   homepage "https://www.teamviewer.com/"
+
+  livecheck do
+    url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=10.15.1&type=1&channel=1"
+    strategy :sparkle
+  end
 
   auto_updates true
   conflicts_with cask: "teamviewer-host"
@@ -17,7 +21,10 @@ cask "teamviewer" do
     "#{staged_path}/#{token}", # This Cask should be uninstalled manually.
     "/Applications/TeamViewer.app",
   ],
-            pkgutil:   "com.teamviewer.teamviewer.*",
+            pkgutil:   [
+              "com.teamviewer.teamviewer.*",
+              "com.teamviewer.remoteaudiodriver",
+            ],
             launchctl: [
               "com.teamviewer.desktop",
               "com.teamviewer.service",

@@ -4,8 +4,8 @@ cask "breakaway" do
 
   url "https://downloads.sourceforge.net/breakaway/breakaway-#{version}.zip",
       verified: "sourceforge.net/breakaway/"
-  appcast "https://sourceforge.net/projects/breakaway/rss"
   name "Breakaway"
+  desc "Headphone jack observance program"
   homepage "http://mutablecode.com/apps/breakaway.html"
 
   app "breakaway-#{version}/Breakaway.app"

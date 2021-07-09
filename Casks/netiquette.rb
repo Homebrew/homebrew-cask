@@ -4,8 +4,8 @@ cask "netiquette" do
 
   url "https://github.com/objective-see/Netiquette/releases/download/v#{version}/Netiquette_#{version}.zip",
       verified: "github.com/objective-see/"
-  appcast "https://objective-see.com/products/changelogs/Netiquette.txt"
   name "Netiquette"
+  desc "Network monitor"
   homepage "https://objective-see.com/products/netiquette.html"
 
   depends_on macos: ">= :mojave"

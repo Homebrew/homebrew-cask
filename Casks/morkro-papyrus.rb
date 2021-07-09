@@ -1,6 +1,6 @@
 cask "morkro-papyrus" do
-  version "1.0.2"
-  sha256 "56224eadffc9be30a240790487919406fb6ffc8e952c1446de696850b209bca8"
+  version "1.0.3"
+  sha256 "6130e0d93486db9e969686270e8edddc9be16b52b342fdb4d31eb4546d161118"
 
   url "https://github.com/morkro/papyrus/releases/download/#{version}/Papyrus-osx-#{version}.zip"
   name "Papyrus"

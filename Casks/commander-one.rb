@@ -1,5 +1,5 @@
 cask "commander-one" do
-  version "3.0,3368"
+  version "3.1,3457"
   sha256 :no_check
 
   url "https://cdn.electronic.us/products/commander/mac/download/commander.dmg",
@@ -13,7 +13,7 @@ cask "commander-one" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :sierra"
 
   app "Commander One.app"
 end

@@ -4,9 +4,14 @@ cask "chessx" do
 
   url "https://downloads.sourceforge.net/chessx/chessx/#{version}/chessx-#{version}.dmg",
       verified: "downloads.sourceforge.net/chessx/"
-  appcast "https://sourceforge.net/projects/chessx/rss?path=/chessx"
   name "ChessX"
+  desc "Chess database"
   homepage "https://chessx.sourceforge.io/"
+
+  livecheck do
+    url "https://sourceforge.net/projects/chessx/files/latest/download"
+    strategy :header_match
+  end
 
   pkg "chessx-installer.mpkg"
 

@@ -1,10 +1,15 @@
 cask "pokerstars" do
-  version :latest
+  version "39.732"
   sha256 :no_check
 
   url "https://download.pokerstars.net/client/download/"
   name "PokerStars"
   homepage "https://www.pokerstars.net/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   container nested: "PokerStars.net/PokerStars.net.dmg"
 

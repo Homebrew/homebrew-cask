@@ -4,8 +4,8 @@ cask "audioslicer" do
 
   url "https://downloads.sourceforge.net/audioslicer/AudioSlicer/#{version}/AudioSlicer-#{version}.dmg",
       verified: "downloads.sourceforge.net/audioslicer/"
-  appcast "https://sourceforge.net/projects/audioslicer/rss?path=/AudioSlicer"
   name "AudioSlicer"
+  desc "Finds all silences in an audio file"
   homepage "https://audioslicer.sourceforge.io/"
 
   app "AudioSlicer.app"

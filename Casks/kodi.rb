@@ -1,6 +1,6 @@
 cask "kodi" do
-  version "19.0-Matrix"
-  sha256 "4654b0f5a4d391f1a3781c4d122ec78d8457284e21a38a4739e85f8296840579"
+  version "19.1-Matrix"
+  sha256 "87cf921712aeed5d5230b468425b777ef550a902d67ec5cbce1c744ba2cd369d"
 
   url "https://mirrors.kodi.tv/releases/osx/x86_64/kodi-#{version}-x86_64.dmg"
   name "Kodi"
@@ -9,9 +9,10 @@ cask "kodi" do
 
   livecheck do
     url "https://github.com/xbmc/xbmc/releases"
-    strategy :git
     regex(/^(\d+(?:\.\d+)*-[a-z]+)$/i)
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Kodi.app"
 

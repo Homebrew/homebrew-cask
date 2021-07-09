@@ -1,11 +1,16 @@
 cask "syncplay" do
-  version "1.6.7"
-  sha256 "616e6213b8d67cf2ed7a65b40afa27ff8e128a06f31bc687fe54634a8810fc2d"
+  version "1.6.8"
+  sha256 "9fbe6d616865511bbf75daa24ae6eb1ec40797ef1123265c7c50a5d9f1421ea3"
 
   url "https://github.com/Syncplay/syncplay/releases/download/v#{version}/Syncplay_#{version}.dmg",
       verified: "github.com/Syncplay/syncplay/"
   name "Syncplay"
   homepage "https://syncplay.pl/"
+
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/)
+  end
 
   depends_on macos: ">= :sierra"
 

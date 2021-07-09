@@ -7,5 +7,10 @@ cask "openineditor-lite" do
   desc "Finder Toolbar app to open the current directory in Editor"
   homepage "https://github.com/Ji4n1ng/OpenInTerminal"
 
+  livecheck do
+    url "https://raw.githubusercontent.com/Ji4n1ng/OpenInTerminal/master/Resources/README-Lite.md"
+    regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)*)}i)
+  end
+
   app "OpenInEditor-Lite.app"
 end

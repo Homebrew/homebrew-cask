@@ -1,13 +1,17 @@
 cask "latexit" do
-  version "2.16.1"
-  sha256 "b2d44763faf5beac59ea141f0de3c906141055bd61620c73c3b0abef5a1914fb"
+  version "2.16.3"
+  sha256 "4e564b1c039b310cbb865e18b81236f88275086551da56516b1d9b5517cecf17"
 
   url "https://pierre.chachatelier.fr/latexit/downloads/LaTeXiT-#{version.dots_to_underscores}.dmg",
       user_agent: :fake
-  appcast "https://pierre.chachatelier.fr/latexit/downloads/latexit-sparkle-en.rss"
   name "LaTeXiT"
   desc "Graphical interface for LaTeX"
   homepage "https://www.chachatelier.fr/latexit/"
+
+  livecheck do
+    url "https://pierre.chachatelier.fr/latexit/downloads/latexit-sparkle-en.rss"
+    strategy :sparkle
+  end
 
   auto_updates true
 

@@ -4,9 +4,14 @@ cask "entropy" do
 
   url "https://eigenlogik.s3.amazonaws.com/releases/entropy/Entropy-#{version}.zip",
       verified: "eigenlogik.s3.amazonaws.com/"
-  appcast "http://hyperion.eigenlogik.com/appcast/feed/entropy/"
   name "Entropy"
+  desc "File archiver"
   homepage "http://www.eigenlogik.com/entropy/"
+
+  livecheck do
+    url "http://www.eigenlogik.com/entropy/download"
+    strategy :header_match
+  end
 
   app "Entropy.app"
 

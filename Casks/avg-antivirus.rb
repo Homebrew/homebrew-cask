@@ -1,13 +1,19 @@
 cask "avg-antivirus" do
-  version :latest
+  version "4.0,2.0"
   sha256 :no_check
 
-  url "https://s-install.avcdn.net/mac-av/10_10/AAVG/avg_mac_security_online.dmg",
-      verified: "s-install.avcdn.net/mac-av/"
+  url "https://bits.avcdn.net/productfamily_ANTIVIRUS/insttype_FREE/platform_MAC_AVG/installertype_ONLINE/build_RELEASE",
+      verified: "bits.avcdn.net/"
   name "AVG Antivirus for Mac"
+  desc "Antivirus software"
   homepage "https://www.avg.com/us-en/avg-antivirus-for-mac"
 
-  pkg "Install AVG AntiVirus.pkg"
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
+  pkg "AVG AntiVirus.pkg"
 
   uninstall script:    {
     executable: "/Applications/AVGAntivirus.app/Contents/Backend/hub/uninstall.sh",

@@ -1,9 +1,23 @@
 cask "parallels" do
-  version "16.1.3-49160"
-  sha256 "a2faaba504f32c57d70431bc74f2c10785949de70f7beab494c1cb13901938e0"
+  if Hardware::CPU.intel?
+    version "16.5.1-49187"
+    sha256 "01fe58c43ea1df24b7e9231340bf28b12fd1472b777b05687452bcb24d337944"
+
+    livecheck do
+      url "https://www.parallels.com/directdownload/pd#{version.major}/intel/"
+      strategy :header_match
+    end
+  else
+    version "16.5.0-50692"
+    sha256 "029eceae6e348e3257112aa59b63bc5db96288a0846effaa14f4a1e87d77b6c3"
+
+    livecheck do
+      url "https://www.parallels.com/directdownload/pd#{version.major}/m1/"
+      strategy :header_match
+    end
+  end
 
   url "https://download.parallels.com/desktop/v#{version.major}/#{version}/ParallelsDesktop-#{version}.dmg"
-  appcast "https://kb.parallels.com/en/125053"
   name "Parallels Desktop"
   desc "Desktop virtualization software"
   homepage "https://www.parallels.com/products/desktop/"

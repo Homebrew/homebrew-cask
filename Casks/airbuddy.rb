@@ -1,24 +1,23 @@
 cask "airbuddy" do
-  version "2.3-275"
-  sha256 :no_check # required as upstream package is updated in-place
+  version "2.4.1,333"
+  sha256 "27e7fda96e299a3239f5cac2b623cd68f82279077f11650a6112601e6374892d"
 
-  url "https://su.airbuddy.app/kCRSAmcjBc/AirBuddy_v#{version}.dmg"
-  name "Airbuddy"
+  url "https://su.airbuddy.app/kCRSAmcjBc/AirBuddy_v#{version.before_comma}-#{version.after_comma}.dmg"
+  name "AirBuddy"
   desc "AirPods companion app"
-  homepage "https://v2.airbuddy.app/"
+  homepage "https://airbuddy.app/"
 
   livecheck do
     url "https://su.airbuddy.app/kCRSAmcjBc/appcast_hyeon.xml"
-    strategy :page_match
-    regex(/airbuddy_v(\d+(?:.\d+)*)\.dmg/i)
+    strategy :sparkle
   end
 
   auto_updates true
+  depends_on macos: ">= :mojave"
 
   app "AirBuddy.app"
 
   zap trash: [
-    "~/Library/Preferences/codes.rambo.AirBuddy.plist",
     "~/Library/Application Scripts/codes.rambo.AirBuddy*",
     "~/Library/Caches/codes.rambo.AirBuddy",
     "~/Library/Caches/codes.rambo.AirCore",
@@ -26,6 +25,7 @@ cask "airbuddy" do
     "~/Library/Group Containers/8C7439RJLG.group.codes.rambo.AirBuddy",
     "~/Library/HTTPStorages/codes.rambo.AirBuddy.binarycookies",
     "~/Library/LaunchAgents/codes.rambo.AirBuddyHelper.plist",
+    "~/Library/Preferences/codes.rambo.AirBuddy.plist",
     "~/Library/SyncedPreferences/codes.rambo.AirBuddy.plist",
   ]
 end

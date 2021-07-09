@@ -1,5 +1,5 @@
 cask "arq-cloud-backup" do
-  version "1.4.7"
+  version "1.5"
   sha256 :no_check
 
   url "https://www.arqbackup.com/download/arqcloudbackup/ArqCloudBackup.dmg"

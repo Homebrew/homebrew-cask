@@ -1,6 +1,6 @@
 cask "gitify" do
-  version "4.2.0"
-  sha256 "208649b9c7fa2059f48340ab7f421a1ca37649b04199586082a91e33d132df1d"
+  version "4.2.1"
+  sha256 "4499d445ff93756da6f5b6e141a94fd7e89557acdb3536dc322c2fa19b5dbfba"
 
   url "https://github.com/manosim/gitify/releases/download/v#{version}/Gitify-#{version}-mac.zip"
   name "Gitify"

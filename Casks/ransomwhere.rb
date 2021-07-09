@@ -4,8 +4,8 @@ cask "ransomwhere" do
 
   url "https://bitbucket.org/objective-see/deploy/downloads/RansomWhere_#{version}.zip",
       verified: "bitbucket.org/objective-see/"
-  appcast "https://objective-see.com/products/changelogs/RansomWhere.txt"
   name "RansomWhere"
+  desc "Protect your personal files"
   homepage "https://objective-see.com/products/ransomwhere.html"
 
   installer script: {

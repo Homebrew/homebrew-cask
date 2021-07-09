@@ -1,12 +1,15 @@
 cask "native-access" do
-  version "1.13.1.134"
+  version "1.13.3.136"
   sha256 :no_check
 
   url "https://native-instruments.com/fileadmin/downloads/Native_Access_Installer.dmg"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_sizeandmodified.cgi?url=https://native-instruments.com/fileadmin/downloads/Native_Access_Installer.dmg"
   name "Native Access"
   desc "Administration tool for Native Instruments products"
   homepage "https://native-instruments.com/specials/native-access"
+
+  livecheck do
+    skip "unversioned URL"
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"

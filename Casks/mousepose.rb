@@ -3,9 +3,14 @@ cask "mousepose" do
   sha256 "f8a87300c434777ac6e3c2ad11d1b4197ac78fc8b7fe1fb6c7d13ce213c56336"
 
   url "https://cdn.boinx.com/software/mousepose/Boinx_Mousepose_#{version.before_comma}-#{version.after_comma}.app.zip"
-  appcast "https://sparkle.boinx.com/appcast.lasso?appName=mousepose"
   name "Mouseposé"
+  desc "Highlight your mouse pointer and cursor position"
   homepage "https://boinx.com/mousepose/overview/"
+
+  livecheck do
+    url "https://sparkle.boinx.com/appcast.lasso?appName=mousepose"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :high_sierra"
 

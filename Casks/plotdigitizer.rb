@@ -4,8 +4,8 @@ cask "plotdigitizer" do
 
   url "https://downloads.sourceforge.net/plotdigitizer/PlotDigitizer_#{version}_MacOSX.dmg",
       verified: "downloads.sourceforge.net/plotdigitizer/"
-  appcast "https://sourceforge.net/projects/plotdigitizer/rss"
   name "Plot Digitizer"
+  desc "Digitize scanned plots of functional data"
   homepage "https://plotdigitizer.sourceforge.io/"
 
   app "PlotDigitizer.app"

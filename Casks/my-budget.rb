@@ -4,10 +4,14 @@ cask "my-budget" do
 
   url "https://github.com/reZach/my-budget/releases/download/#{version}/my-budget-#{version}.dmg",
       verified: "github.com/reZach/my-budget/"
-  appcast "https://github.com/reZach/my-budget/releases.atom"
   name "My Budget"
   desc "Budgeting tool"
   homepage "https://rezach.github.io/my-budget/"
+
+  livecheck do
+    url :url
+    strategy :git
+  end
 
   app "My Budget.app"
 end

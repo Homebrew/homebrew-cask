@@ -4,12 +4,14 @@ cask "bootchamp" do
 
   url "https://kainjow.com/downloads/BootChamp.zip"
   name "BootChamp"
-  homepage "https://www.kainjow.com/"
+  desc "Menu bar app to boot into your Boot Camp Windows partition"
+  homepage "https://kainjow.com/"
 
-  livecheck do
-    url "https://kainjow.com/updates/bootchamp.xml"
-    strategy :sparkle
-  end
+  depends_on macos: "<= :yosemite"
 
   app "BootChamp.app"
+
+  caveats do
+    discontinued
+  end
 end

@@ -5,7 +5,7 @@ cask "plover" do
   url "https://github.com/openstenoproject/plover/releases/download/v#{version}/plover-#{version}-py2-mac.dmg",
       verified: "github.com/openstenoproject/plover/"
   name "Plover"
-  desc "Open-source stenotype engine"
+  desc "Stenotype engine"
   homepage "https://www.openstenoproject.org/plover/"
 
   livecheck do

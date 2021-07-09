@@ -1,6 +1,6 @@
 cask "toolreleases" do
-  version "1.3.7,38"
-  sha256 "53494264a42439c66183d9cec05d18e8e243986e3efbfd6dee937011e942a167"
+  version "1.4.2,45"
+  sha256 "1904c8a70263f2be5c9f089671e29eef1514d5a70d4390a8eedfd089047e943e"
 
   url "https://github.com/DeveloperMaris/ToolReleases/releases/download/v#{version.before_comma}/ToolReleases_v#{version.before_comma}.b#{version.after_comma}.zip"
   name "ToolReleases"
@@ -15,7 +15,7 @@ cask "toolreleases" do
     end
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "ToolReleases.app"
 

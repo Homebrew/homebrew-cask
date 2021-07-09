@@ -4,8 +4,8 @@ cask "macmediakeyforwarder" do
 
   url "https://github.com/milgra/macmediakeyforwarder/releases/download/#{version}/MacMediaKeyForwarder#{version}.zip",
       verified: "github.com/milgra/macmediakeyforwarder/"
-  appcast "https://github.com/milgra/macmediakeyforwarder/releases"
   name "Mac Media Key Forwarder"
+  desc "Media key forwarder for iTunes and Spotify"
   homepage "http://milgra.com/"
 
   depends_on macos: ">= :sierra"
