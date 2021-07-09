@@ -11,8 +11,9 @@ cask "qt3dstudio" do
     url "https://download.qt.io/official_releases/qt3dstudio/"
     strategy :page_match do |page|
       version_major_minor = page[%r{href="(\d+(?:\.\d+)*)/"}i, 1]
-      version_page = Net::HTTP.get(URI.parse("#{url}#{version_major_minor}/"))
-      version_page[/qt-3dstudio-opensource-mac-x64-(\d+(?:\.\d+)*)\.dmg/i, 1]
+      version_page = Homebrew::Livecheck::Strategy.page_content("#{url}#{version_major_minor}/")[:content]
+      version = version_page.scan(/qt-3dstudio-opensource-mac-x64-(\d+(?:\.\d+)*)\.dmg/i)
+      version[0]
     end
   end
 
