@@ -7,9 +7,9 @@ cask "itraffic" do
   desc "Monitor for displaying process traffic on status bar"
   homepage "https://github.com/foamzou/ITraffic-monitor-for-mac"
 
-  app "ITraffic.app"
-
   depends_on macos: ">= :catalina"
+
+  app "ITraffic.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.foamzou.ITrafficMonitorForMac",
