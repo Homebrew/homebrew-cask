@@ -1,5 +1,5 @@
 cask "cloudflare-warp" do
-  version "1.5.294.0,20210701.2"
+  version "1.5.207.0"
   sha256 :no_check
 
   url "https://cloudflarewarp.com/Cloudflare_WARP.zip"
@@ -8,7 +8,7 @@ cask "cloudflare-warp" do
   homepage "https://cloudflarewarp.com/"
 
   livecheck do
-    skip
+    skip "unversioned URL"
   end
 
   auto_updates true
