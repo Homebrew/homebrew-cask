@@ -9,6 +9,8 @@ cask "itraffic" do
 
   app "ITraffic.app"
 
+  depends_on macos: ">= :catalina"
+
   zap trash: [
     "~/Library/Application Scripts/com.foamzou.ITrafficMonitorForMac",
     "~/Library/Application Support/ITraffic",
