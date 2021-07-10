@@ -1,6 +1,6 @@
 cask "ghidra" do
-  version "10.0,20210621"
-  sha256 "aaf84d14fb059beda10de9056e013186601962b6f87cd31161aaac57698a0f11"
+  version "10.0.1,20210708"
+  sha256 "9b68398fcc4c2254a3f8ff231c4e8b2ac75cc8105f819548c7eed3997f8c5a5d"
 
   url "https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_#{version.before_comma}_build/ghidra_#{version.before_comma}_PUBLIC_#{version.after_comma}.zip",
       verified: "github.com/NationalSecurityAgency/ghidra/"
@@ -9,10 +9,10 @@ cask "ghidra" do
   homepage "https://www.ghidra-sre.org/"
 
   livecheck do
-    url "https://ghidra-sre.org/"
+    url "https://github.com/NationalSecurityAgency/ghidra/releases/latest"
     strategy :page_match do |page|
-      match = page.match(/href=.*?ghidra[._-](\d+(?:\.\d+)*)[._-]PUBLIC[._-](\d+)\.zip/i)
-      "#{match[1]},#{match[2]}"
+      page.scan(/href=.*?ghidra[._-]v?(\d+(?:\.\d+)+)[._-]PUBLIC[._-](\d+)\.zip/i)
+          .map { |matches| "#{matches[0]},#{matches[1]}" }
     end
   end
 
