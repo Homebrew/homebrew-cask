@@ -9,5 +9,10 @@ cask "itraffic" do
 
   app "ITraffic.app"
 
-  zap trash: "~/Library/Preferences/com.foamzou.ITrafficMonitorForMac.plist"
+  zap trash: [
+    "~/Library/Application Scripts/com.foamzou.ITrafficMonitorForMac",
+    "~/Library/Application Support/ITraffic",
+    "~/Library/Containers/com.foamzou.ITrafficMonitorForMac",
+    "~/Library/Preferences/com.foamzou.ITrafficMonitorForMac.plist",
+  ]
 end
