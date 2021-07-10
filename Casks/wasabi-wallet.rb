@@ -11,4 +11,6 @@ cask "wasabi-wallet" do
   depends_on macos: ">= :sierra"
 
   app "Wasabi Wallet.app"
+
+  zap trash:  "~/.walletwasabi"
 end
