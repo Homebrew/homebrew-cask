@@ -8,4 +8,6 @@ cask "itraffic" do
   homepage "https://github.com/foamzou/ITraffic-monitor-for-mac"
 
   app "ITraffic.app"
+
+  zap trash: "~/Library/Preferences/com.foamzou.ITrafficMonitorForMac.plist"
 end
