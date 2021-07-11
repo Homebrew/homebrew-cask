@@ -1,6 +1,6 @@
 cask "bluewallet" do
-  version "6.1.8"
-  sha256 "8f080055415e0b5611c9213343d3857d2992483d33d6a31fb7fd943eaefbe203"
+  version "6.1.9"
+  sha256 "a7846657c0f72d4a8592a270c3b9e3d8df5c8fb6d5734bbc7d29ef12ca178ba3"
 
   url "https://github.com/BlueWallet/BlueWallet/releases/download/v#{version}/BlueWallet.#{version}.dmg",
       verified: "github.com/BlueWallet/BlueWallet/"
