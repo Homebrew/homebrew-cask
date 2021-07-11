@@ -28,6 +28,7 @@ cask "inkscape" do
     "~/.config/inkscape",
     "~/Library/Application Support/Inkscape",
     "~/Library/Application Support/org.inkscape.Inkscape",
+    "~/Library/Caches/org.inkscape.Inkscape*",
     "~/Library/Preferences/org.inkscape.Inkscape.plist",
     "~/Library/Saved Application State/org.inkscape.Inkscape.savedState",
   ]
