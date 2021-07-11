@@ -9,7 +9,7 @@ cask "timing" do
   homepage "https://timingapp.com/"
 
   livecheck do
-    url "https://timingapp.com/updates/timing2.xml"
+    url "https://updates.timingapp.com/updates/timing2.xml"
     strategy :sparkle
   end
 
