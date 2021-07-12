@@ -1,4 +1,5 @@
 cask "firecamp" do
+
   version "2.0.10"
   sha256 "149b9855c97b0ab72cb4ed70742e44c44e2cba4a3206f3f0f022cf6fd16c9149"
 

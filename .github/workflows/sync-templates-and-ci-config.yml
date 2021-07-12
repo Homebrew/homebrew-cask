@@ -6,6 +6,10 @@ on:
       - debug-sync
       - master
 
+concurrency:
+  group: sync-templates-and-ci-config
+  cancel-in-progress: true
+
 jobs:
   sync-templates-and-ci-config:
     if: github.repository == 'Homebrew/homebrew-cask'

@@ -4,9 +4,17 @@ cask "dia" do
 
   url "https://downloads.sourceforge.net/dia-installer/dia/#{version.before_comma}/Dia-#{version.before_comma}-#{version.after_comma}.dmg",
       verified: "sourceforge.net/dia-installer/dia/"
-  appcast "https://sourceforge.net/projects/dia-installer/rss?path=/dia"
   name "Dia"
+  desc "Draw structured diagrams"
   homepage "http://dia-installer.de/"
+
+  livecheck do
+    url "http://dia-installer.de/download/macosx.html"
+    strategy :page_match do |page|
+      page.scan(/href=.*?Dia[._-]v?(\d+(?:\.\d+)+)-(\d+)\.dmg/i)
+          .map { |matches| "#{matches[0]},#{matches[1]}" }
+    end
+  end
 
   depends_on cask: "xquartz"
 
