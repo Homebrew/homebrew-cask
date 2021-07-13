@@ -1,14 +1,14 @@
 cask "goneovim" do
-  version "0.4.11"
+  version "0.4.12"
 
   if MacOS.version <= :catalina
-    sha256 "b33f1ab2038424263fd0d49058b16d43ce3eabd56a603c20b24aaed24295f051"
-    url "https://github.com/akiyosi/goneovim/releases/download/v#{version}/Goneovim-#{version}-macos.tar.bz2"
-    app "Goneovim-#{version}-macos/goneovim.app"
+    sha256 "1f300575c7497e6e2490712ef18ceeefca43b21b0cbec03bbda45bb7d93e2516"
+    url "https://github.com/akiyosi/goneovim/releases/download/v#{version}/Goneovim-v#{version}-macos.tar.bz2"
+    app "Goneovim-v#{version}-macos/goneovim.app"
   else
-    sha256 "8d9d08db2f96e32944f41c9e7de29de83581deab607b199b3a1516cffcc234e4"
-    url "https://github.com/akiyosi/goneovim/releases/download/v#{version}/Goneovim-#{version}-macos11.tar.bz2"
-    app "Goneovim-#{version}-macos11/goneovim.app"
+    sha256 "424d013fb07d701faf823e68b2f32c02f403a0ede5b2ae472a3985eec4711c0d"
+    url "https://github.com/akiyosi/goneovim/releases/download/v#{version}/Goneovim-v#{version}-macos11.tar.bz2"
+    app "Goneovim-v#{version}-macos11/goneovim.app"
   end
 
   name "Goneovim"
