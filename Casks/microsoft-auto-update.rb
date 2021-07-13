@@ -9,8 +9,8 @@ cask "microsoft-auto-update" do
   homepage "https://docs.microsoft.com/officeupdates/release-history-microsoft-autoupdate"
 
   livecheck do
-    url "https://go.microsoft.com/fwlink/?linkid=830196"
-    strategy :header_match
+    url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/0409MSau04-chk.xml"
+    regex(%r{Version</key>\s*<string>(\d+(?:\.\d+)*)</}i)
   end
 
   auto_updates true
