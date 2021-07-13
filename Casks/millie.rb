@@ -4,7 +4,7 @@ cask "millie" do
 
   url "https://apis.millie.co.kr/v1/download/installer/mac/Millie-#{version}.dmg"
   name "millie"
-  desc "E-book store in Republic of korea"
+  desc "Korean e-book store"
   homepage "https://www.millie.co.kr/"
 
   livecheck do
