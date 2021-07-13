@@ -9,8 +9,8 @@ cask "microsoft-outlook" do
   homepage "https://products.office.com/en-us/outlook/email-and-calendar-software-microsoft-outlook"
 
   livecheck do
-    url "https://go.microsoft.com/fwlink/p/?linkid=525137"
-    strategy :header_match
+    url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/0409OPIM2019-chk.xml"
+    regex(%r{Version</key>\s*<string>(\d+(?:\.\d+)*)</}i)
   end
 
   auto_updates true
