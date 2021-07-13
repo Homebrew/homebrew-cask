@@ -15,9 +15,9 @@ cask "millie" do
   app "Millie.app"
 
   zap trash: [
-    "~/Library/Application Scripts/com.getdropbox.dropbox.garcon",
     "~/Library/Application Support/millie",
     "~/Library/Logs/millie",
+    "~/Library/Preferences/com.electron.millie.plist",
     "~/Library/Saved Application State/com.electron.millie.savedState",
   ]
 end
