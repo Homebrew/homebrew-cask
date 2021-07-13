@@ -7,6 +7,11 @@ cask "millie" do
   desc "E-book store in Republic of korea"
   homepage "https://www.millie.co.kr/"
 
+  livecheck do
+    url "https://apis.millie.co.kr/v1/download/installer/mac/latest-mac.yml"
+    strategy :electron_builder
+  end
+
   app "Millie.app"
 
   zap trash: [
