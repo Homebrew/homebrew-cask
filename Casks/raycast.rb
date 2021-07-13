@@ -17,6 +17,8 @@ cask "raycast" do
 
   app "Raycast.app"
 
+  uninstall quit: "com.raycast.macos"
+
   zap trash: [
     "~/Library/Application Support/com.raycast.macos",
     "~/Library/Caches/com.raycast.macos",
