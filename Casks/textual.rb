@@ -1,8 +1,8 @@
 cask "textual" do
-  version "7.2.0,210619.16:32451d289"
-  sha256 "260e285795ae608e8af61a61fa4e0f86b604c59251c4ab682009a15c54c044ea"
-
-  url "https://cached.codeux.com/textual/downloads/resources/builds/standard-release/Textual-#{version.after_colon}.zip"
+  version "7.2.1,210711.11:9d231fdb0"
+  sha256 "3e7b1bb5431c356bfd61142486a096707b68fe8afe6243ba41d0e10332b4111a"
+  
+  url "https://cached.codeux.com/textual/downloads/resources/builds/Textual-#{version.after_colon}/universal/Textual.zip"
   name "Textual"
   desc "Application for interacting with Internet Relay Chat (IRC) chatrooms"
   homepage "https://www.codeux.com/textual/"
