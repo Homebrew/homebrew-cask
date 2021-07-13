@@ -31,14 +31,15 @@ cask "microsoft-excel" do
     "com.microsoft.package.Microsoft_Excel.app",
     "com.microsoft.pkg.licensing",
   ],
-            launchctl: [
-              "com.microsoft.office.licensingV2.helper",
-            ]
+            launchctl: "com.microsoft.office.licensingV2.helper"
 
   zap trash: [
     "~/Library/Application Scripts/com.microsoft.Excel",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.excel.sfl*",
+    "~/Library/Caches/com.microsoft.Excel",
     "~/Library/Containers/com.microsoft.Excel",
     "~/Library/Preferences/com.microsoft.Excel.plist",
+    "~/Library/Saved Application State/com.microsoft.Excel.savedState",
+    "~/Library/Webkit/com.microsoft.Excel",
   ]
 end
