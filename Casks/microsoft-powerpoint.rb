@@ -9,8 +9,8 @@ cask "microsoft-powerpoint" do
   homepage "https://products.office.com/en-US/powerpoint"
 
   livecheck do
-    url "https://go.microsoft.com/fwlink/p/?linkid=525136"
-    strategy :header_match
+    url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/0409PPT32019-chk.xml"
+    regex(%r{Version</key>\s*<string>(\d+(?:\.\d+)*)</}i)
   end
 
   auto_updates true
