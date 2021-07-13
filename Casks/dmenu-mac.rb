@@ -2,8 +2,8 @@
 # frozen_string_literal: true
 
 cask "dmenu-mac" do
-  version "0.6.0"
-  sha256 "5bf0a6b26b94373a50361bf91408b73bfb0472953524541cf6da13629a140224"
+  version "0.7.0"
+  sha256 "6159e73d2522008b4882bc3fcdba4e22bb4570e81f3ecf3ee60377decde794b9"
 
   url "https://github.com/oNaiPs/dmenu-mac/releases/download/#{version}/dmenu-mac.zip"
   name "dmenu-mac"
@@ -18,6 +18,7 @@ cask "dmenu-mac" do
   depends_on macos: ">= :high_sierra"
 
   app "dmenu-mac.app"
+  binary "#{appdir}/dmenu-mac.app/Contents/MacOS/dmenu-mac"
 
   zap trash: [
     "~/Library/Application Scripts/com.onaips.dmenu-macos",
