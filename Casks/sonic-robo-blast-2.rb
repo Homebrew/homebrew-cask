@@ -1,4 +1,5 @@
 cask "sonic-robo-blast-2" do
+  # NOTE: "2" is not a version number, but an intrinsic part of the product name
   version "2.2.9"
   sha256 "a739cd8018720fb5fa15361ca1f3f230fc59201235d4dcb061403d3a7e5df1ad"
 
