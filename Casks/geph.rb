@@ -13,4 +13,9 @@ cask "geph" do
   end
 
   app "Geph.app"
+
+  zap trash: [
+    "~/Library/Application Support/gephgui4",
+    "~/Library/Preferences/io.geph.geph-electron.plist",
+  ]
 end
