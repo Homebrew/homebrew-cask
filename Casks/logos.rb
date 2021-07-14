@@ -1,6 +1,6 @@
 cask "logos" do
-  version "9.6.0.0023"
-  sha256 "b06d64c844f455d84bf7dc5368358dc11a7a52c0555df8fd04c860e7c046762a"
+  version "9.6.0.0024"
+  sha256 "e53294be64e9aa5868e13e115e8d804ebe027327b02a1fbc0d0e35655e433e9d"
 
   url "https://downloads.logoscdn.com/LBS#{version.major}/Installer/#{version}/LogosMac.dmg",
       verified: "downloads.logoscdn.com/"
