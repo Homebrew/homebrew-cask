@@ -15,4 +15,9 @@ cask "crystalmaker" do
   depends_on macos: ">= :sierra"
 
   app "CrystalMaker.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.crystalmaker.crystalmaker.v#{version.major}",
+    "~/Library/Containers/com.crystalmaker.crystalmaker.v#{version.major}",
+  ]
 end
