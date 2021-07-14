@@ -8,7 +8,7 @@ cask "dbvisualizer" do
   homepage "https://www.dbvis.com/"
 
   livecheck do
-    url "https://www.dbvis.com/download/#{version.major_minor}"
+    url "https://www.dbvis.com/download"
     regex(/Latest\s*Version:\s*(\d+(?:\.\d+)*)/i)
   end
 
