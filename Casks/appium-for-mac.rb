@@ -4,7 +4,7 @@ cask "appium-for-mac" do
 
   url "https://github.com/appium/appium-for-mac/releases/download/v#{version}/AppiumForMac.zip"
   name "appium-for-mac"
-  desc "This the app required to drive Native Mac Apps using Appium"
+  desc "This the app required to drive Native Apps using Appium"
   homepage "https://github.com/appium/appium-for-mac"
 
   app "AppiumForMac.app"
