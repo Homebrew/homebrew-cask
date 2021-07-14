@@ -5,6 +5,7 @@ cask "utools" do
   url "https://res.u-tools.cn/currentversion/uTools-#{version}.dmg",
       verified: "res.u-tools.cn/"
   name "uTools"
+  desc "Plug-in productivity tool set"
   homepage "https://u.tools/index.html"
 
   livecheck do
