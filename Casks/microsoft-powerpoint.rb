@@ -38,5 +38,6 @@ cask "microsoft-powerpoint" do
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.powerpoint.sfl*",
     "~/Library/Containers/com.microsoft.Powerpoint",
     "~/Library/Preferences/com.microsoft.Powerpoint.plist",
+    "~/Library/Saved Application State/com.microsoft.Powerpoint.savedState",
   ]
 end
