@@ -16,4 +16,9 @@ cask "banktivity" do
   depends_on macos: ">= :catalina"
 
   app "Banktivity.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.iggsoftware.banktivity",
+    "~/Library/Containers/com.iggsoftware.banktivity",
+  ]
 end
