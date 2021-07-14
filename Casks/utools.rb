@@ -4,9 +4,14 @@ cask "utools" do
 
   url "https://res.u-tools.cn/currentversion/uTools-#{version}.dmg",
       verified: "res.u-tools.cn/"
-  appcast "https://res.u-tools.cn/currentversion/public-mac.yml"
   name "uTools"
+  desc "Plug-in productivity tool set"
   homepage "https://u.tools/index.html"
+
+  livecheck do
+    url "https://res.u-tools.cn/currentversion/public-mac.yml"
+    strategy :electron_builder
+  end
 
   auto_updates true
   depends_on macos: ">= :yosemite"
