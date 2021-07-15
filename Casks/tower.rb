@@ -1,6 +1,6 @@
 cask "tower" do
-  version "6.5,279:36c8e109"
-  sha256 "6af8be62843ddf3ebcb3b1dc709669fbedb09b0352767f90057c027453ab4430"
+  version "7.0,290:51eb1327"
+  sha256 "f8e3efa13e46a8397fbb21bc16e52778e4f95699a5cad4c0c1b25c8b88df545a"
 
   url "https://fournova-app-updates.s3.amazonaws.com/apps/tower3-mac/#{version.after_comma.before_colon}-#{version.after_colon}/Tower-#{version.before_comma}-#{version.after_comma.before_colon}.zip",
       verified: "fournova-app-updates.s3.amazonaws.com/"
