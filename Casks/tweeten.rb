@@ -1,6 +1,6 @@
 cask "tweeten" do
-  version "5.3.0"
-  sha256 "b894797844c70b1e356f213b30da00076dd25799888da37ab81ed65307fa7034"
+  version "5.4.0"
+  sha256 "817e046c120368565bb1a186bb21d65b51f388decd37710ca609dfd6bcdee5f2"
 
   url "https://github.com/MehediH/Tweeten/releases/download/v#{version}/tweeten-darwin-x64.zip",
       verified: "github.com/MehediH/Tweeten/"
