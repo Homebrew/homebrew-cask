@@ -30,6 +30,16 @@ cask "intellij-idea-ce" do
   depends_on macos: ">= :high_sierra"
 
   app "IntelliJ IDEA CE.app"
+  shimscript = "#{staged_path}/idea-ce.wapper.sh"
+  binary shimscript, target: "idea-ce"
+
+  preflight do
+    IO.write shimscript, <<~EOS
+      #!/bin/sh
+
+      open -na "#{appdir}/IntelliJ IDEA CE.app" --args "$@"
+    EOS
+  end
 
   uninstall_postflight do
     ENV["PATH"].split(File::PATH_SEPARATOR).map { |path| File.join(path, "idea") }.each do |path|
