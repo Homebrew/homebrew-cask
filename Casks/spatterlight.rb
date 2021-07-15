@@ -19,6 +19,6 @@ cask "spatterlight" do
     "~/Library/Containers/net.ccxvii.spatterlight.SpatterlightQuickLook",
     "~/Library/Containers/net.ccxvii.spatterlight.SpatterlightThumbnailer",
     "~/Library/Containers/net.ccxvii.spatterlight.iFictionQuickLook",
-    "~/Library/Preferences/net.ccxvii.spatterlight.plist"
+    "~/Library/Preferences/net.ccxvii.spatterlight.plist",
   ]
 end
