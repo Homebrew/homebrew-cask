@@ -1,5 +1,5 @@
 cask "portx" do
-  version :latest
+  version "1.1.4"
   sha256 :no_check
 
   url "https://cdn.netsarang.net/0ac7ea20/PortX-latest.dmg",
@@ -7,6 +7,11 @@ cask "portx" do
   name "portx"
   desc "SSH Client"
   homepage "https://portx.online/en/portx/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   app "PortX.app"
 
