@@ -19,7 +19,7 @@ cask "onyx" do
     sha256 "0dd8119ad3441c5130ca584ac90ad450c272aab8b577925561a2536da48d2d54"
   else
     version "3.9.7"
-    sha256 "de6b55cbceee6fbe69262bd09a7edea90c2827baa26fe9a9a72f9db125636ccc"
+    sha256 "e6fd409dbdb08197d7ba3bb34fd28712ea6320c9eb9cd04942f12c496c5e9c07"
   end
 
   url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete(".")}/OnyX.dmg"
