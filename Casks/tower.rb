@@ -9,9 +9,9 @@ cask "tower" do
   homepage "https://www.git-tower.com/"
 
   livecheck do
-    url "https://updates.fournova.com/updates/tower3-mac/stable"
-    strategy :page_match do |page|
-      match = page.match(%r{(\d+(?:\.\d+)*)-([a-z0-9]+)/Tower-(\d+(?:\.\d+)*)-(\d+(?:\.\d+)*)\.zip}i)
+    url "https://updates.fournova.com/tower3-mac/stable/releases/latest/download"
+    strategy :header_match do |headers|
+      match = headers["location"].match(%r{(\d+(?:\.\d+)*)-([a-z0-9]+)/Tower-(\d+(?:\.\d+)*)-(\d+(?:\.\d+)*)\.zip}i)
       "#{match[3]},#{match[1]}:#{match[2]}"
     end
   end
