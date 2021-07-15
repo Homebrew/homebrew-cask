@@ -1,10 +1,10 @@
 cask "sleek" do
-  version "1.0.8"
-  sha256 "b7c1e2aae275deaad2e119b0de2c394d3d6beb7607be809cbdef1bc9d66111f0"
+  version "1.0.9"
+  sha256 "05214e7770109beeccede7bf2909c0ecf2bb4f2c99debe93edb9d524a93b7f9d"
 
   url "https://github.com/ransome1/sleek/releases/download/v#{version}/sleek-#{version}-mac.dmg"
   name "sleek"
-  desc "Todo list manager"
+  desc "Todo app based on todo.txt"
   homepage "https://github.com/ransome1/sleek"
 
   app "sleek.app"
