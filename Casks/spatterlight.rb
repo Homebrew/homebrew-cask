@@ -11,4 +11,14 @@ cask "spatterlight" do
   depends_on macos: ">= :catalina"
 
   app "Spatterlight.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/net.ccxvii.spatterlight.SpatterlightQuickLook",
+    "~/Library/Application Scripts/net.ccxvii.spatterlight.SpatterlightThumbnailer",
+    "~/Library/Application Scripts/net.ccxvii.spatterlight.iFictionQuickLook",
+    "~/Library/Containers/net.ccxvii.spatterlight.SpatterlightQuickLook",
+    "~/Library/Containers/net.ccxvii.spatterlight.SpatterlightThumbnailer",
+    "~/Library/Containers/net.ccxvii.spatterlight.iFictionQuickLook",
+    "~/Library/Preferences/net.ccxvii.spatterlight.plist"
+  ]
 end
