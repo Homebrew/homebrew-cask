@@ -1,16 +1,18 @@
 cask "telegram" do
-  version "7.8.1.219462"
+  version "7.8.1,219462"
   sha256 "fc713d3690c4c2610ce9fcd3709c725639eea2801e4017fef95af6a3f87bca68"
 
-  url "https://osx.telegram.org/updates/Telegram-#{version}.app.zip"
+  url "https://osx.telegram.org/updates/Telegram-#{version.before_comma}.#{version.after_comma}.app.zip"
   name "Telegram for macOS"
   desc "Messaging app with a focus on speed and security"
   homepage "https://macos.telegram.org/"
 
   livecheck do
     url "https://osx.telegram.org/updates/versions.xml"
-    strategy :page_match
-    regex(/Telegram-(\d+(?:\.\d+)*)\.app\.zip/i)
+    strategy :page_match do |page|
+      page.scan(/Telegram[._-](\d+(?:\.\d+)+)\.(\d{6})\.app\.zip/)
+          .map { |matches| "#{matches[0]},#{matches[1]}" }
+    end
   end
 
   auto_updates true
