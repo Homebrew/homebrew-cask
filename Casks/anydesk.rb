@@ -14,6 +14,13 @@ cask "anydesk" do
 
   app "AnyDesk.app"
 
+  uninstall delete: [
+    "/Library/LaunchAgents/com.philandro.anydesk.Frontend.plist",
+    "/Library/LaunchDaemons/com.philandro.anydesk.Helper.plist",
+    "/Library/LaunchDaemons/com.philandro.anydesk.service.plist",
+    "/Library/PrivilegedHelperTools/com.philandro.anydesk.Helper",
+  ]
+
   zap trash: [
     "~/.anydesk",
     "~/Library/Preferences/com.philandro.anydesk.plist",
