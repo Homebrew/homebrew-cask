@@ -1,6 +1,6 @@
 cask "subler" do
-  version "1.6.11"
-  sha256 "0e258bd02433c2ad8bca165229804ba9565c328eda0a54d89c6f237f35a3678e"
+  version "1.6.12"
+  sha256 "709C7AECCCB2A42A715037EE41CDC235DF629BFC3B28EEA6DBCF391BB325704D"
 
   url "https://bitbucket.org/galad87/subler/downloads/Subler-#{version}.zip",
       verified: "bitbucket.org/galad87/subler/"
