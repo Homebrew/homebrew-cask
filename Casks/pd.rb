@@ -13,9 +13,9 @@ cask "pd" do
     regex(%r{href=.*?/pd-(\d+(?:\.\d+)*-\d+)\.mac\.tar\.gz}i)
   end
 
-  app "Pd-#{version}.app"
+  app "Pd-#{version}.app", target: "Pd.app"
 
   postflight do
-    set_permissions "#{appdir}/Pd-#{version}.app", "u+w"
+    set_permissions "#{appdir}/Pd.app", "u+w"
   end
 end
