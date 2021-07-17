@@ -1,6 +1,6 @@
 cask "mmhmm" do
-  version "2.0.0,1622700000"
-  sha256 "aff81304dfeddad7def1803d592d6683d30aa252f8e8bb1ddc21ac54e975868a"
+  version "2.0.1,1626395000"
+  sha256 "d1f7183d8f8da3f7bf91a296a5076745b3a23625f33ad825c058383b3a65ce05"
 
   url "https://updates.mmhmm.app/mac/production/mmhmm_#{version.before_comma}.zip"
   name "mmhmm"
@@ -12,6 +12,7 @@ cask "mmhmm" do
     strategy :sparkle
   end
 
+  auto_updates true
   depends_on macos: ">= :mojave"
 
   app "mmhmm.app"

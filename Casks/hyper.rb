@@ -1,9 +1,9 @@
 cask "hyper" do
-  version "3.0.2"
-  sha256 "56ac31f2f8aa99edf03f277b25203eca9d8b6c4d6535f673a996fddca0d21bb5"
+  version "3.1.0"
+  sha256 "8a0da3bd3b5d067b88a42bf5375c0f46af47bc7f92f5fa6e680ed69f343a6316"
 
-  url "https://github.com/zeit/hyper/releases/download/#{version}/hyper-#{version}-mac.zip",
-      verified: "github.com/zeit/hyper/"
+  url "https://github.com/vercel/hyper/releases/download/v#{version}/Hyper-#{version}-mac-x64.zip",
+      verified: "github.com/vercel/hyper/"
   name "Hyper"
   desc "Terminal built on web technologies"
   homepage "https://hyper.is/"

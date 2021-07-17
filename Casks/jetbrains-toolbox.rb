@@ -1,12 +1,12 @@
 cask "jetbrains-toolbox" do
-  version "1.20,1.20.8804"
+  version "1.21,1.21.9547"
 
   if Hardware::CPU.intel?
-    sha256 "928824a7fdac781e7285edc4ad4034386f03863656399c0b17e65d157595cccf"
+    sha256 "dad23f5413c7794b7fe6394f950463e8bd000ce9605ea5d2ad34be50c506137e"
 
     url "https://download.jetbrains.com/toolbox/jetbrains-toolbox-#{version.after_comma}.dmg"
   else
-    sha256 "f6c7b337eb9be64c920bbefbb18d3baf8bfb514d342392a3c2d76eb48844321a"
+    sha256 "947d18c9f570b28c42a1eba9edadf680fbdaa8a33693310ad9e0f2e73696256d"
 
     url "https://download.jetbrains.com/toolbox/jetbrains-toolbox-#{version.after_comma}-arm64.dmg"
   end
