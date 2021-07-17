@@ -12,6 +12,8 @@ cask "dropzone" do
     strategy :sparkle
   end
 
+  auto_updates true
+
   app "Dropzone #{version.major}.app"
 
   zap trash: [
