@@ -1,13 +1,17 @@
 cask "dropzone" do
-  version "4.1.6"
+  version "4.1.6,1398"
   sha256 "d5f82ebd934ad37dda5afc0933fa94c740c66e6803cfc3a9fad1bda6c719ce88"
 
-  url "https://aptonic.com/releases/Dropzone-#{version}.zip"
-  appcast "https://aptonic.com/releases/updates.xml"
+  url "https://aptonic.com/releases/Dropzone-#{version.before_comma}.zip"
   name "Dropzone"
   desc "Productivity app"
   homepage "https://aptonic.com/"
-
+  
+  livecheck do
+    url "https://aptonic.com/releases/updates.xml"
+    strategy :sparkle
+  end
+  
   app "Dropzone #{version.major}.app"
 
   zap trash: [
