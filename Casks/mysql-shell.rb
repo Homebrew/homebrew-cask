@@ -1,12 +1,20 @@
 cask "mysql-shell" do
-  version "8.0.22"
-  sha256 "77152a69cbd2cf974b9c92254f4500598cad9da71f13cab5a2139c0026a8f5e6"
+  version "8.0.25"
+  sha256 "f6f29cbdf27e0ab245f83c6e3ab61536d70a0e9ad1b89ecdcedb37671527c0b1"
 
-  url "https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-#{version}-macos10.15-x86-64bit.dmg"
+  url "https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-#{version}-macos11-x86-64bit.dmg"
   name "MySQL Shell"
+  desc "Interactive JavaScript, Python or SQL interface"
   homepage "https://dev.mysql.com/downloads/shell/"
 
-  pkg "mysql-shell-#{version}-macos10.15-x86-64bit.pkg"
+  livecheck do
+    url "https://dev.mysql.com/downloads/shell/?tpl=platform&os=33"
+    regex(/mysql[._-]shell[._-]v?(\d+(?:\.\d+)+)[._-]macos11[._-]x86[._-]64bit\.dmg/i)
+  end
+
+  depends_on macos: ">= :catalina"
+
+  pkg "mysql-shell-#{version}-macos11-x86-64bit.pkg"
 
   uninstall pkgutil: "com.mysql.shell"
 
