@@ -8,6 +8,11 @@ cask "subler" do
   desc "Mux and tag mp4 files"
   homepage "https://subler.org/"
 
+  livecheck do
+    url "https://subler.org/appcast/appcast.xml"
+    regex(/url=.*?Subler[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+  end
+
   auto_updates true
 
   app "Subler.app"
