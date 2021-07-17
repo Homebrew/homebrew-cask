@@ -6,12 +6,12 @@ cask "dropzone" do
   name "Dropzone"
   desc "Productivity app"
   homepage "https://aptonic.com/"
-  
+
   livecheck do
     url "https://aptonic.com/releases/updates.xml"
     strategy :sparkle
   end
-  
+
   app "Dropzone #{version.major}.app"
 
   zap trash: [
