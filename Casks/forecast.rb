@@ -1,6 +1,6 @@
 cask "forecast" do
-  version "0.9.3,135"
-  sha256 "c8e3bc2cfc705bfd88ea611a4b30b803c7efb90d3aee79a9c8f1ec4fc42a85e9"
+  version "0.9.4,137"
+  sha256 "ed3dd19cd69199b7e5c7e29e8e4c1fbbe0b901e1b28f3d2b4a0c0cf2568baf7f"
 
   url "https://d2uzvmey2c90kn.cloudfront.net/appcast_download/Forecast_#{version.before_comma}_#{version.after_comma}.zip",
       verified: "d2uzvmey2c90kn.cloudfront.net/appcast_download/"
