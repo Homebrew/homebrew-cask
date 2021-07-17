@@ -15,12 +15,12 @@ cask "pd" do
 
   app "Pd-#{version}.app", target: "Pd.app"
 
+  postflight do
+    set_permissions "#{appdir}/Pd.app", "u+w"
+  end
+
   zap trash: [
     "~/Library/Preferences/org.puredata.pd.pd-gui.plist",
     "~/Library/Saved Application State/org.puredata.pd.pd-gui.savedState",
   ]
-
-  postflight do
-    set_permissions "#{appdir}/Pd.app", "u+w"
-  end
 end
