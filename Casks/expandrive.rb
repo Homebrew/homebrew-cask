@@ -1,16 +1,18 @@
 cask "expandrive" do
-  version "2021.6.4"
-  sha256 "0b3a624999cdefd9e546a9c1e49b692913284f44be8bf9ab94e2288abaa50768"
+  version "7,2021.6.4"
+  sha256 "6982bba7c633f5ad1b6a81faafec7b139043ba6cd25cb7a8e17680ecacb1be8a"
 
-  url "https://updates.expandrive.com/apps/expandrive#{version.major}/v/#{version.dots_to_hyphens}/update_download"
+  url "https://updates.expandrive.com/apps/expandrive#{version.major}/v/#{version.after_comma.dots_to_hyphens}/update_download"
   name "ExpanDrive"
   desc "Network drive and browser for cloud storage"
   homepage "https://www.expandrive.com/apps/expandrive/"
 
   livecheck do
-    url "https://updates.expandrive.com/appcast/expandrive#{version.major}.json"
-    strategy :page_match
-    regex(/mac\sversion\s(\d+(?:\.\d+)*)/i)
+    url "https://updates.expandrive.com/apps/expandrive#{version.major}/download_latest"
+    strategy :header_match do |headers|
+      matches = headers["location"].scan(/expandrive(\d+).*ExpanDrive[._-](\d+\.\d+\.\d+)\.dmg/).flatten
+      "#{matches[0]},#{matches[1]}"
+    end
   end
 
   app "ExpanDrive.app"
