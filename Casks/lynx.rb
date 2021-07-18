@@ -5,7 +5,7 @@ cask "lynx" do
   url "https://download.saharasupport.com/lynx#{version.major}/production/macx/Lynx#{version.major}-install.dmg",
       verified: "download.saharasupport.com"
   name "LYNX Whiteboard by Clevertouch"
-  desc "Cross platform presentation and productivity App"
+  desc "Cross platform presentation and productivity app"
   homepage "https://www.lynxcloud.app/"
 
   livecheck do
@@ -18,7 +18,7 @@ cask "lynx" do
   pkg "Lynx#{version.major}.pkg"
 
   uninstall pkgutil: [
-    "uk.co.cleverproducts.lynx",
     "com.clevertouch.lynx",
+    "uk.co.cleverproducts.lynx",
   ]
 end
