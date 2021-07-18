@@ -1,6 +1,6 @@
 cask "ilspy" do
-  version "7.0-rc1"
-  sha256 "27c1b43359a80933b8eae0b90fdc03e0d9a0c911e087f678d37fb8448f1d7433"
+  version "7.0-rc2"
+  sha256 "ee2b7838d11be19063b5fbe625e91677d36c716d4c5e3d6a5f3bb78783260ebb"
 
   url "https://github.com/icsharpcode/AvaloniaILSpy/releases/download/v#{version}/osx-x64.zip"
   name "ILSpy"
