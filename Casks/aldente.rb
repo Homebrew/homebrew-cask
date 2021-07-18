@@ -7,6 +7,11 @@ cask "aldente" do
   desc "Menu bar tool to limit maximum charging percentage"
   homepage "https://github.com/davidwernhart/AlDente"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "AlDente.app"
 
   uninstall quit:   "com.davidwernhart.Helper",
