@@ -18,5 +18,6 @@ cask "portx" do
   zap trash: [
     "~/Library/Application Support/PortX",
     "~/Library/Logs/PortX",
+    "~/Library/Preferences/com.netsarang.portx.plist",
   ]
 end
