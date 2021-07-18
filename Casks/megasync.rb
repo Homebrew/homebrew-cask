@@ -1,5 +1,5 @@
 cask "megasync" do
-  version "4.5.0.0"
+  version "4.5.3.0"
   sha256 :no_check
 
   url "https://mega.nz/MEGAsyncSetup.dmg"
