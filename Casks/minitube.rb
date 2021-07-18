@@ -1,5 +1,5 @@
 cask "minitube" do
-  version "3.8.2,2021.0402.020235"
+  version "3.9,2021.0621.230951"
   sha256 :no_check
 
   url "https://flavio.tordini.org/files/minitube/minitube.dmg"
