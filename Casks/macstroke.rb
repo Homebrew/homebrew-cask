@@ -1,6 +1,6 @@
 cask "macstroke" do
-  version "2.0.2"
-  sha256 "5cebf4f2152af150e8e5d2a80ad271dbce11d80b2ab916358cd5f06f5b92856d"
+  version "2.0.3"
+  sha256 "0d729034162e9294b1d829991a8dc8f76095d0c358e6d4431b403d4b9ce1f3cc"
 
   url "https://github.com/mtjo/MacStroke/releases/download/#{version}/MacStroke.zip"
   name "MacStroke"
