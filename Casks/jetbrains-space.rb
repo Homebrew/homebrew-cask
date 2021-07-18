@@ -1,5 +1,5 @@
 cask "jetbrains-space" do
-  version "2021.1.2.68492"
+  version "2021.1.4.74971"
   sha256 :no_check
 
   url "https://download.jetbrains.com/space/jetbrains-space.dmg"
