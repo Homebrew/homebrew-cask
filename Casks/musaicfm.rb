@@ -1,6 +1,6 @@
 cask "musaicfm" do
-  version "1.2.2"
-  sha256 "e694af171183e520f3837b9ff2493398a56bf510a983fe03dc7026bc1cfe1c06"
+  version "1.2.3"
+  sha256 "e11a1c756d8f6a1c6910acf5fee2fd1e649e30c2fa80d299eeb99369ecc81f3f"
 
   url "https://github.com/docterd/MusaicFM/releases/download/#{version}/MusaicFM.saver.zip"
   name "MusaicFM Screensaver"
