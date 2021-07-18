@@ -11,7 +11,7 @@ cask "ilspy" do
     url :url
   end
 
-  app "ILSpy.app"
+  app "artifacts/osx-x64/ILSpy.app"
 
   zap trash: [
     "~/Library/Preferences/ilspy.plist",
