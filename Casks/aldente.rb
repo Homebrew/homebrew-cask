@@ -11,9 +11,12 @@ cask "aldente" do
 
   uninstall quit:   "com.davidwernhart.Helper",
             delete: [
-              "/Library/LaunchDaemons/com.davidwernhart.Helper.plist",
-              "/Library/PrivilegedHelperTools/com.davidwernhart.Helper",
+              "/Library/LaunchDaemons/com.apphousekitchen.aldente-pro.helper.plist",
+              "/Library/PrivilegedHelperTools/com.apphousekitchen.aldente-pro.helper",
             ]
-
-  zap trash: "~/Library/Preferences/com.davidwernhart.AlDente.plist"
+  zap trash: [
+    "~/Library/Application Support/AlDente",
+    "~/Library/HTTPStorages/com.apphousekitchen.aldente-pro.binarycookies",
+    "~/Library/Caches/com.apphousekitchen.aldente-pro"
+      ]
 end
