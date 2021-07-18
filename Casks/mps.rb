@@ -1,12 +1,12 @@
 cask "mps" do
-  version "2021.1,211.7142.1222"
+  version "2021.1.1,211.7442.1291"
 
   if Hardware::CPU.intel?
-    sha256 "3bf2b747cbaea592a9fee7b099df4243016071bc1af911b8e62e991d9e5bd129"
+    sha256 "286451f1691f4e94313ab04b4e37dc106b2c119efc9cd4cf50aa8cbe56540b72"
 
     url "https://download.jetbrains.com/mps/#{version.major_minor}/MPS-#{version.before_comma}-macos.dmg"
   else
-    sha256 "f8b120ac2e240f59857b888582a2cb59a7d7026210db68b0567434b248403283"
+    sha256 "b15c68cf43d89554f8f8272310a4ef0032479d2ec69863153c7603056456e258"
 
     url "https://download.jetbrains.com/mps/#{version.major_minor}/MPS-#{version.before_comma}-macos-aarch64.dmg"
   end
