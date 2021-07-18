@@ -1,6 +1,6 @@
 cask "murus" do
-  version "2.0.5"
-  sha256 "1076deda7f79293b8a36472a8d5b17c72d4842d2996cb7dfd4c4724168047991"
+  version "2.1"
+  sha256 "38951d9c50941b439e8a4ffb18f6f4640687e11b40313116274a90e3800d0297"
 
   url "https://github.com/TheMurusTeam/Murus/releases/download/v#{version}/murus-#{version}.zip",
       verified: "github.com/TheMurusTeam/Murus/"
