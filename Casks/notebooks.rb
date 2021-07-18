@@ -4,6 +4,7 @@ cask "notebooks" do
 
   url "https://www.notebooksapp.com/Download/macOS/v#{version.major}/Notebooks.dmg"
   name "Notebooks"
+  desc "Word processor"
   homepage "https://www.notebooksapp.com/mac/"
 
   livecheck do
