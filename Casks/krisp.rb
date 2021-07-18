@@ -17,6 +17,7 @@ cask "krisp" do
 
   pkg "krisp_#{version}.pkg"
 
-  uninstall quit:    "ai.krisp.krispMac",
-            pkgutil: "ai.krisp.krispMac"
+  uninstall quit:      "ai.krisp.krispMac",
+            launchctl: "ai.krisp.krispMac.cameraAssistant",
+            pkgutil:   "ai.krisp.krispMac"
 end
