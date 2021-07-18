@@ -22,7 +22,7 @@ cask "aldente" do
 
   zap trash: [
     "~/Library/Application Support/AlDente",
-    "~/Library/HTTPStorages/com.apphousekitchen.aldente-pro.binarycookies",
     "~/Library/Caches/com.apphousekitchen.aldente-pro",
+    "~/Library/HTTPStorages/com.apphousekitchen.aldente-pro.binarycookies",
   ]
 end
