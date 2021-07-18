@@ -1,6 +1,6 @@
 cask "ears" do
-  version "1.2.2,15"
-  sha256 "f65abc67e55c309031f84f91248183c888b0137cf1e68cb89a82caebaab68941"
+  version "1.2.3,16"
+  sha256 "e5b7f17695d3e8e2af0f7a8daa0f3eb01427e729e91a945eb501e50d0f89a61f"
 
   url "https://download.clickontyler.com/ears/ears_#{version.after_comma}.zip"
   name "Ears"
