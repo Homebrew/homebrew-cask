@@ -2,7 +2,7 @@ cask "portx" do
   version "1.1.4,10.2"
   sha256 :no_check
 
-  url "https://cdn.netsarang.net/0ac7ea20/PortX-latest.dmg",
+  url "https://cdn.netsarang.net/0ac7ea20/PortX-1.1.4.dmg",
       verified: "cdn.netsarang.net/"
   name "portx"
   desc "SSH Client"
