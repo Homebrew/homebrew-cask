@@ -43,7 +43,7 @@ cask "zoom" do
   end
 
   uninstall signal:  ["KILL", "us.zoom.xos"],
-            pkgutil: "us.zoom.pkg.videmeeting",
+            pkgutil: "us.zoom.pkg.videomeeting",
             delete:  [
               "/Applications/zoom.us.app",
               "/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin",
