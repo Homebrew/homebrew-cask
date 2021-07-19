@@ -1,6 +1,6 @@
 cask "hyper" do
-  version "3.1.0"
-  sha256 "8a0da3bd3b5d067b88a42bf5375c0f46af47bc7f92f5fa6e680ed69f343a6316"
+  version "3.1.1"
+  sha256 "3d6a3b5b7e95fdacd63cb80973d411b9f5314dd26de2accdd318acecbb53c60d"
 
   url "https://github.com/vercel/hyper/releases/download/v#{version}/Hyper-#{version}-mac-x64.zip",
       verified: "github.com/vercel/hyper/"
