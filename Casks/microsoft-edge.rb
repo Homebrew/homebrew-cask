@@ -1,14 +1,14 @@
 cask "microsoft-edge" do
-  version "91.0.864.70"
+  version "91.0.864.71"
 
   if Hardware::CPU.intel?
     url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/MicrosoftEdge-#{version}.pkg",
         verified: "officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/"
-    sha256 "9dba7a294efdba16a9bf21c08d9be3d9a1ce33fef5eca22e1b0517db2ce855f9"
+    sha256 "edbd6d14c198023199a48fc54f3ecfc9d06e3d556bf84a1152c636785686d00f"
   else
     url "https://officecdn-microsoft-com.akamaized.net/pr/03ADF619-38C6-4249-95FF-4A01C0FFC962/MacAutoupdate/MicrosoftEdge-#{version}.pkg",
         verified: "officecdn-microsoft-com.akamaized.net/pr/03ADF619-38C6-4249-95FF-4A01C0FFC962/MacAutoupdate/"
-    sha256 "96d448b8f73d06b726d3d32c2121d53a80f74a4813594c0a1d97c7deccca05e6"
+    sha256 "970ed1a80e0213421d794d0f534819b120342840a45530812f25900aa0ae85fd"
   end
 
   name "Microsoft Edge"
