@@ -1,6 +1,6 @@
 cask "nomachine-enterprise-client" do
-  version "7.5.2_1"
-  sha256 "2b441cf4dada7b5733678faca46f89219b6b73ed62192b20c13ee67ab2dca052"
+  version "7.6.2_4"
+  sha256 "c504327415d63ce229ff48346df3c9e710fbeab0228fa4bbc5253c61f67d6198"
 
   url "https://download.nomachine.com/download/#{version.major_minor}/MacOSX/nomachine-enterprise-client_#{version}.dmg"
   name "NoMachine Enterprise Client"
