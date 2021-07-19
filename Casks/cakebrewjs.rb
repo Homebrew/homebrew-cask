@@ -1,6 +1,6 @@
 cask "cakebrewjs" do
-  version "0.1.29"
-  sha256 "8e9b4e767a1aa1243b17def6142cb1d7c244c3324afdc9cd8cf3fb6ad29ce605"
+  version "0.1.30"
+  sha256 "902b46e670e3c507913c2e6cbe9077d522bfb848202b3ae393a95127e5d1ebcb"
 
   url "https://downloads.sourceforge.net/cakebrewjs/v#{version}/cakebrewjs-#{version}-mac.zip"
   name "cakebrewjs"
