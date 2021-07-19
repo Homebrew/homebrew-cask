@@ -1,6 +1,6 @@
 cask "subethaedit" do
-  version "5.2,9748"
-  sha256 "7e3cb09ee77b6a9aa15bd2a73aed08c081819605fabcb03e230eb02b847c5825"
+  version "5.2.1,9775"
+  sha256 "5129d799e397aca073fbb5d9e38f948d585479ef8538b8ba2a8f020dfa740733"
 
   url "https://subethaedit.net/Releases/SubEthaEdit-#{version.before_comma}.zip"
   name "SubEthaEdit"
