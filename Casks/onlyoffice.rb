@@ -1,6 +1,6 @@
 cask "onlyoffice" do
-  version "6.2.0"
-  sha256 "cb70d3eb81c3a93ef130243b3ccaf065c37cd024583453debdb32ec862fb4070"
+  version "6.3.1"
+  sha256 "7c86ad461c070eca13427b312c7a5d961e95652f48bd732821f24d0f62d73044"
 
   url "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v#{version}/ONLYOFFICE.dmg",
       verified: "github.com/ONLYOFFICE/DesktopEditors/"
