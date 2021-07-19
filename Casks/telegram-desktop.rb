@@ -1,16 +1,16 @@
 cask "telegram-desktop" do
-  version "2.8.9"
-  sha256 "54117216fe35221fa8fa09e7a8d1c9c95c0057569db825ad8b4b25775709ba09"
+  version "2.8.10"
+  sha256 "a2ab50c9ed9789af0be5f996134339c89c1e4f040a04438177533ceeb2697180"
 
-  url "https://github.com/telegramdesktop/tdesktop/releases/download/v#{version}/tsetup.#{version}.dmg",
-      verified: "github.com/telegramdesktop/tdesktop/"
+  url "https://updates.tdesktop.com/tmac/tsetup.#{version}.dmg",
+      verified: "tdesktop.com"
   name "Telegram Desktop"
   desc "Desktop client for Telegram messenger"
   homepage "https://desktop.telegram.org/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://telegram.org/dl/desktop/mac"
+    strategy :header_match
   end
 
   auto_updates true
