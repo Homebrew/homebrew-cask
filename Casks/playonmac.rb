@@ -14,4 +14,10 @@ cask "playonmac" do
   end
 
   app "PlayOnMac.app"
+
+  zap trash: [
+    "~/Library/PlayOnMac",
+    "~/Library/Preferences/org.playonmac.playonmac.plist",
+    "~/Library/Saved Application State/org.playonmac.playonmac.savedState",
+  ]
 end
