@@ -6,7 +6,7 @@ cask "penc" do
       verified: "github.com/dgurkaynak/Penc/"
   name "Penc"
   desc "Trackpad-oriented window manager"
-  homepage "https://dgurkaynak.github.io/Penc/"
+  homepage "https://deniz.co/penc/"
 
   depends_on macos: ">= :high_sierra"
 
