@@ -7,5 +7,11 @@ cask "pktriot" do
   desc "Instantly and securely host server applications and static websites"
   homepage "https://packetriot.com/"
 
+  livecheck do
+    url "https://packetriot.com/downloads"
+    strategy :page_match
+    regex(%r{href=.*?/pktriot-(\d+(?:\.\d+)*)\.macos.tar.gz}i)
+  end
+
   binary "pktriot-#{version}/pktriot"
 end
