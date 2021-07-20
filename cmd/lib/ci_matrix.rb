@@ -36,11 +36,14 @@ module CiMatrix
     end
 
     # Filter
-    RUNNERS.select do |runner, _|
+    filtered_runners = RUNNERS.select do |runner, _|
       required_macos[:versions].any? do |v|
         MacOS::Version.from_symbol(runner[:symbol]).public_send(required_macos[:comparator], v)
       end
     end
+    return filtered_runners unless filtered_runners.empty?
+
+    RUNNERS
   end
 
   def self.random_runner(avalible_runners = RUNNERS)
