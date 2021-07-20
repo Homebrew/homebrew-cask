@@ -1,6 +1,6 @@
 cask "meshlab" do
-  version "2021.05"
-  sha256 "2696f00573666853d3ef9ed7d3b42d39b91431ca8f45e6997dd288d29f8b8218"
+  version "2021.07"
+  sha256 "6a397388c6e1bdb59ca2c32a2a4f149e773206ce9c703805c85a5410f72c524b"
 
   url "https://github.com/cnr-isti-vclab/meshlab/releases/download/Meshlab-#{version}/MeshLab#{version}-macos.dmg",
       verified: "github.com/cnr-isti-vclab/meshlab/"
