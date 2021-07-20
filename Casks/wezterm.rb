@@ -10,8 +10,9 @@ cask "wezterm" do
 
   livecheck do
     url :url
-    strategy :github_latest do |page|
-      match = page.match(%r{href=.*?/WezTerm-macos-(\d{8}-\d{6})-([0-9a-f]+)\.zip}i)
+    regex(%r{href=.*?/WezTerm-macos-(\d{8}-\d{6})-([0-9a-f]+)\.zip}i)
+    strategy :github_latest do |page, regex|
+      match = page.match(regex)
       "#{match[1]},#{match[2]}"
     end
   end
