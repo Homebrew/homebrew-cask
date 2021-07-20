@@ -5,13 +5,13 @@ cask "ubports-installer" do
   url "https://github.com/ubports/ubports-installer/releases/download/#{version}/ubports-installer_#{version}_mac.dmg", verified: "github.com/ubports/ubports-installer/"
   name "ubports-installer"
   desc "Application to install ubports on mobile devices"
-  homepage "https://ubports.com"
+  homepage "https://ubports.com/"
 
   livecheck do
     url "https://github.com/ubports/ubports-installer/releases"
     strategy :page_match
-    regex(/href=.*?\/ubports-installer_(\d+(?:\.\d+)*(?:-beta)?)_mac\.dmg/i)
-  end  
+    regex(%r{href=.*?/ubports-installer_(\d+(?:\.\d+)*(?:-beta)?)_mac\.dmg}i)
+  end
 
   app "ubports-installer.app"
 end
