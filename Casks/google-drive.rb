@@ -17,7 +17,6 @@ cask "google-drive" do
 
   pkg "GoogleDrive.pkg"
 
-  
   # Some launchctl and pkgutil items are shared with other Google apps, they should only be removed in the zap stanza
   # See: https://github.com/Homebrew/homebrew-cask/pull/92704#issuecomment-727163169
   # launchctl: com.google.keystone.daemon, com.google.keystone.system.agent, com.google.keystone.system.xpcservice
