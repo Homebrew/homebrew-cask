@@ -4,7 +4,7 @@ cask "pktriot" do
 
   url "https://download.packetriot.com/macos/pktriot-#{version}.macos.tar.gz"
   name "pktriot"
-  desc "Instantly and securely host server applications and static websites"
+  desc "Host server applications and static websites"
   homepage "https://packetriot.com/"
 
   livecheck do
