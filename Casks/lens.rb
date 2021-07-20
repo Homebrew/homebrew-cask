@@ -1,6 +1,6 @@
 cask "lens" do
-  version "5.1.1-latest.20210716.1"
-  sha256 "c50288a70aaff7f4985e9777891a5a7fa9f25af7ad76d25e6900cb4ba29e2b01"
+  version "5.1.2-latest.20210719.1"
+  sha256 "3c76a4a3f64b1f9bc82a5019dc5a4a547ae8fc03316be1cc06c93f477b12b6a9"
 
   url "https://api.k8slens.dev/binaries/Lens-#{version}.dmg"
   name "Lens"
