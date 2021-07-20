@@ -5,6 +5,7 @@ cask "uc-one" do
   url "https://storage.googleapis.com/ucone_saas_and_meet_clients/ucone/mac/latest/UC-One.dmg",
       verified: "storage.googleapis.com/ucone_saas_and_meet_clients/"
   name "Cisco UC-One"
+  desc "Business phone and team collaboration application"
   homepage "https://uc-one.com/"
 
   livecheck do
