@@ -1,6 +1,6 @@
 cask "wolfram-player" do
-  version "12.3.0"
-  sha256 "371371bcad5c42b8830e109e97d8926d7e1fa2cdd46116e2a5464df6bdd6efdc"
+  version "12.3.1"
+  sha256 "f9b595216ff09c939addc382b38016ddde67ae3104ec00302739417586af4ea9"
 
   url "https://account.wolfram.com/download/public/wolfram-player/#{version}/desktop/MAC"
   name "Wolfram Player"
