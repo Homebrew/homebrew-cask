@@ -1,5 +1,5 @@
 cask "tap-forms" do
-  version "5.3.17"
+  version "5.3.19"
   sha256 :no_check
 
   url "https://paddle.s3.amazonaws.com/fulfillment_downloads/9234/503174/e5FEK2CRaefFHU772pok_Tap%20Forms%20Install%20#{version}.dmg",
