@@ -13,5 +13,6 @@ cask "odbc-manager" do
 
   uninstall pkgutil: [
     "com.actualtechnologies.odbcmanager.pkg",
+    "com.actualtechnologies.odbcdriver.helpers.pkg",
   ]
 end
