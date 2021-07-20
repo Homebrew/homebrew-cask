@@ -1,6 +1,6 @@
 cask "tuple" do
-  version "0.87.0-2021-06-21-f6705f82"
-  sha256 "230aedffa48d22c5e716b431e282cae210f4ac14d2cb378dcb9f11de59136d36"
+  version "0.88.0-2021-07-03-483da5f2"
+  sha256 "e28bed747b83c202ed56bf4eeba65b086377f3006b1f73a98671c03a5ec345fb"
 
   url "https://s3.us-east-2.amazonaws.com/tuple-releases/production/sparkle/tuple-#{version}.zip",
       verified: "s3.us-east-2.amazonaws.com/tuple-releases/"
