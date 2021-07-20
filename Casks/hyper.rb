@@ -6,7 +6,7 @@ cask "hyper" do
     url "https://github.com/vercel/hyper/releases/download/v#{version}/Hyper-#{version}-mac-x64.zip",
         verified: "github.com/vercel/hyper/"
   else
-    sha256 "d2cd7409dbc1454bc5c67454228572f8c27ef9e5434893f8d1bc81b9613441e0"
+    sha256 "1b82a131d27aa77f722d5d4792c03ddb4d50795d7fddc8c367c1cf80e1dd7074"
     url "https://github.com/vercel/hyper/releases/download/v#{version}/Hyper-#{version}-mac-arm64.zip",
         verified: "github.com/vercel/hyper/"
   end
