@@ -1,13 +1,13 @@
 cask "stack-stack" do
-  version "3.32.0"
+  version "3.34.2"
 
   if Hardware::CPU.intel?
-    sha256 "172199e4f2292cbeb93dc428dae21ffff27e3824d764198fb9117b47f002f5d2"
+    sha256 "53da0601c9fb7dcaa509c61a5cfbfd702f5875dbba081d9ed64b9257ff7711e0"
 
     url "https://stack-v1.s3.amazonaws.com/builds/prod/Stack-#{version}.dmg",
         verified: "stack-v1.s3.amazonaws.com/"
   else
-    sha256 "0c8d4e35f5e320895a1bf2e6cd466cf672f7b992c5ab0bb706ff854f725e9759"
+    sha256 "871762f6bb04f45f9924222f24a4be4808e979b5586a69c779224ef294f3b557"
 
     url "https://binaries.getstack.app/builds/prod/mac/arm64/Stack%20#{version}-arm64.dmg"
   end
