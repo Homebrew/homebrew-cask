@@ -11,8 +11,12 @@ cask "gcc-arm-embedded" do
 
   livecheck do
     url "https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads"
-    regex(/Version\s+(\d+-\d+-q\d+-\w+)/i)
+    strategy :page_match do |page|
+      match = page.match(/href=.*?gcc-arm-none-eabi-(\d+-\d+-q\d+-(major|update))-mac.pkg/i)
+      match[1]
+    end
   end
+
   pkg "gcc-arm-none-eabi-#{version}-mac.pkg"
   binary "#{appdir}/ARM/bin/arm-none-eabi-addr2line"
   binary "#{appdir}/ARM/bin/arm-none-eabi-ar"
