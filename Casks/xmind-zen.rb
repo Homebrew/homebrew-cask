@@ -1,6 +1,6 @@
 cask "xmind-zen" do
-  version "11.0.1-202106020102"
-  sha256 "fcf793350f70d77bdae6ebfcf645111bc6f35b8f0c3344389704baa61144d35e"
+  version "11.0.2-202107130052"
+  sha256 "9db992c0df7bca0767aaa5da17dba87dce4b73c9db5c53b88dc6c37ee14780f5"
 
   url "https://dl3.xmind.net/XMind-for-macOS-#{version}.dmg"
   name "XMind"
