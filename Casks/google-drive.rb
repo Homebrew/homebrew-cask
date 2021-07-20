@@ -20,8 +20,9 @@ cask "google-drive" do
   uninstall login_item: "Google Drive",
             quit:       "com.google.drivefs",
             pkgutil:    [
-              "com.google.drivefs",
+              "com.google.drivefs.arm64",
               "com.google.drivefs.x86_64",
+              "com.google.drivefs.filesystems.dfsfuse.arm64",
               "com.google.drivefs.filesystems.dfsfuse.x86_64",
               "com.google.drivefs.shortcuts",
             ]
@@ -49,6 +50,9 @@ cask "google-drive" do
         "com.google.keystone.daemon",
         "com.google.keystone.xpcservice",
         "com.google.keystone.system.xpcservice",
+      ],
+      pkgutil:   [
+        "com.google.pkg.Keystone",
       ]
 
   caveats <<~EOS
