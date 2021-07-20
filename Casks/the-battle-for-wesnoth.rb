@@ -5,6 +5,7 @@ cask "the-battle-for-wesnoth" do
   url "https://downloads.sourceforge.net/wesnoth/Wesnoth_#{version}.dmg",
       verified: "sourceforge.net/wesnoth/"
   name "The Battle for Wesnoth"
+  desc "Fantasy-themed turn-based strategy game"
   homepage "https://wesnoth.org/"
 
   livecheck do
