@@ -1,6 +1,6 @@
 cask "signal" do
-  version "5.9.0"
-  sha256 "d0616415081ef29c894228f024e57c23b2f999cee5e6f217ddb9e6549ebd12e2"
+  version "5.10.0"
+  sha256 "db9d86adb1494ce8e0ceeb796a4fd140909401f786cc9cd87b0255d5fe2d20d2"
 
   url "https://updates.signal.org/desktop/signal-desktop-mac-#{version}.dmg"
   name "Signal"
