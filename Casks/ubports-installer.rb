@@ -14,4 +14,10 @@ cask "ubports-installer" do
   end
 
   app "ubports-installer.app"
+
+  zap trash: [
+               "~/Library/Application Support/ubports-installer",
+               "~/Library/Preferences/com.ubports.installer.plist",
+               "~/Library/Saved Application State/com.ubports.installer.savedState"
+             ]
 end
