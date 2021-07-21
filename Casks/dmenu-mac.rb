@@ -2,8 +2,8 @@
 # frozen_string_literal: true
 
 cask "dmenu-mac" do
-  version "0.7.0"
-  sha256 "6159e73d2522008b4882bc3fcdba4e22bb4570e81f3ecf3ee60377decde794b9"
+  version "0.7.1"
+  sha256 "230c90bde1c572cd69df1d2ac117dc0126ef6f60f569a1ecba8e4c6d28463261"
 
   url "https://github.com/oNaiPs/dmenu-mac/releases/download/#{version}/dmenu-mac.zip"
   name "dmenu-mac"
