@@ -1,8 +1,8 @@
 cask "1password-cli" do
-  version "1.11.0"
-  sha256 "d4548f2d058372b61e8dd6054513213aaffdcad43c82da92715e22ec0ce8d7ec"
+  version "1.11.1"
+  sha256 "bb610768238366bb2a0ed5e99a57db388dbaf52de3008b42bdae739525c9830d"
 
-  url "https://cache.agilebits.com/dist/1P/op/pkg/v#{version}/op_darwin_amd64_v#{version}.pkg",
+  url "https://cache.agilebits.com/dist/1P/op/pkg/v#{version}/op_apple_universal_v#{version}.pkg",
       verified: "cache.agilebits.com/dist/1P/op/pkg/"
   name "1Password CLI"
   desc "Command-line helper for the 1Password password manager"
@@ -10,10 +10,10 @@ cask "1password-cli" do
 
   livecheck do
     url "https://app-updates.agilebits.com/product_history/CLI"
-    regex(%r{href=.*?/op_darwin_amd64[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
+    regex(%r{href=.*?/op_apple_universal[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
   end
 
-  pkg "op_darwin_amd64_v#{version}.pkg"
+  pkg "op_apple_universal_v#{version}.pkg"
 
   uninstall pkgutil: "com.1password.op"
 
