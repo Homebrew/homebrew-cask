@@ -26,6 +26,5 @@ cask "odbc-manager" do
     "~/.odbc.ini",
     "~/.odbcinst.ini",
     "~/Library/ODBC",
-    "/Library/ODBC",
   ]
 end
