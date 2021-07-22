@@ -10,7 +10,7 @@ cask "fvim" do
   livecheck do
     url :url
     strategy :github_latest do |page|
-      match = page.match(%r{href=.*?/tag/v?(\d+(?:\.\d+)+)%2B([0-9a-f]+)["' >]}i)
+      match = page.match(%r{href=.*?/tag/v?(\d+(?:\.\d+)+)%2B(g?\h+)["' >]}i)
       "#{match[1]},#{match[2]}"
     end
   end
