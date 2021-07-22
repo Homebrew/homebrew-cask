@@ -1,6 +1,6 @@
 cask "securesafe" do
-  version "2.10.0"
-  sha256 "4c09de831aaba8ceccc594f9ccaaf3cca5c1afaa84e87b55b7d4e4f8e824fe61"
+  version "2.11.0"
+  sha256 "9ba4ab371485ea493ca5faf511132fe3d2aab04c3802a109e31684b1947482db"
 
   url "https://www.dswiss.com/userdata/downloads/securesafe-#{version}.pkg",
       verified: "dswiss.com/userdata/downloads/"
@@ -20,6 +20,6 @@ cask "securesafe" do
 
   uninstall pkgutil: [
     "com.dswiss.securesafe.pkg.sync",
-    "com.github.osxfuse.pkg.Core",
+    "io.macfuse.installer.components.core",
   ]
 end
