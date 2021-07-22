@@ -1,16 +1,15 @@
 cask "tutanota" do
-  version "3.84.11"
+  version "3.85.3"
   sha256 :no_check
 
-  url "https://mail.tutanota.com/desktop/tutanota-desktop-mac.zip"
+  url "https://mail.tutanota.com/desktop/tutanota-desktop-mac.dmg"
   name "Tutanota Desktop"
   desc "Email client"
   homepage "https://tutanota.com/"
 
   livecheck do
-    url "https://github.com/tutao/tutanota"
-    strategy :github_latest
-    regex(%r{href=.*?/tutanota-release[._-]v?(\d+(?:\.\d+)+)}i)
+    url "https://mail.tutanota.com/desktop/latest-mac.yml"
+    strategy :electron_builder
   end
 
   app "Tutanota Desktop.app"
