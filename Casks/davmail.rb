@@ -6,6 +6,7 @@ cask "davmail" do
       verified: "downloads.sourceforge.net/davmail/"
   appcast "https://sourceforge.net/projects/davmail/rss"
   name "DavMail"
+  desc "Use any mail/calendar client with an Exchange server"
   homepage "https://davmail.sourceforge.io/"
 
   app "DavMail.app"
