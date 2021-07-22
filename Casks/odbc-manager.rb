@@ -21,4 +21,11 @@ cask "odbc-manager" do
     "com.actualtechnologies.odbcmanager.pkg",
     "com.actualtechnologies.odbcdriver.helpers.pkg",
   ]
+
+  zap trash: [
+    "~/.odbc.ini",
+    "~/.odbcinst.ini",
+    "~/Library/ODBC",
+    "/Library/ODBC",
+  ]
 end
