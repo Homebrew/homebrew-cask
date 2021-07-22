@@ -20,10 +20,6 @@ cask "securesafe" do
 
   uninstall pkgutil: [
     "com.dswiss.securesafe.pkg.sync",
-    "com.dswiss.osxfuse.pkg.Core",
-    "com.github.osxfuse.pkg.MacFUSE",
     "io.macfuse.installer.components.core",
-    "com.github.osxfuse.pkg.PrefPane",
-  ],
-            kext:    "com.github.osxfuse.filesystems.osxfuse"
+  ]
 end
