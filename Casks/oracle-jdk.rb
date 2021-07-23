@@ -13,7 +13,7 @@ cask "oracle-jdk" do
   livecheck do
     url "https://www.oracle.com/java/technologies/javase-jdk16-downloads.html"
     strategy :page_match do |page|
-      match = page.match(%r{(\d+(?:\.\d+)*)\+(\d+(?:\.\d+)*)/(.+)/jdk-(\d+(?:\.\d+)*)_osx-x64_bin\.dmg}i)
+      match = page.match(%r{(\d+(?:\.\d+)*)%2B(\d+(?:\.\d+)*)/(.+)/jdk-(\d+(?:\.\d+)*)_osx-x64_bin\.dmg}i)
       "#{match[1]},#{match[2]}:#{match[3]}"
     end
   end
