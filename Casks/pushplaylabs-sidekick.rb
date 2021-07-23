@@ -1,7 +1,7 @@
 cask "pushplaylabs-sidekick" do
   if Hardware::CPU.intel?
-    version "90.10.12.11283,4337b96"
-    sha256 "e4bd0ac50f6e053a7a28d87bdaa2ab061374fdb10269e10b4bd318d853d6319a"
+    version "90.10.12.11433,1e0c8cd"
+    sha256 "5eefa69e8f7ec5f8ea61f8828ea2ff22d16571026606744e54549407710651e9"
 
     url "https://sidekick-cdn-production.meetsidekick.com/builds/sidekick-mac-release-x64-#{version.before_comma}-#{version.after_comma}-df.dmg"
 
