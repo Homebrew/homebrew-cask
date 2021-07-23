@@ -10,7 +10,9 @@ cask "guilded" do
 
   livecheck do
     url "https://s3-us-west-2.amazonaws.com/www.guilded.gg/AppBuilds/mac/release-mac.yml"
-    strategy :electron_builder
+    strategy :electron_builder do |data|
+      data["version"].tr("-release", "")
+    end
   end
 
   app "Guilded.app"
