@@ -8,4 +8,8 @@ cask "8x8-work" do
   homepage "https://www.8x8.com/products/apps"
 
   app "8x8 Work.app"
+
+  zap trash: [
+    "~/Library/Application Support/8x8 Work",
+  ]
 end
