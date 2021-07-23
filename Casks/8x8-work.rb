@@ -14,7 +14,5 @@ cask "8x8-work" do
 
   app "8x8 Work.app"
 
-  zap trash: [
-    "~/Library/Application Support/8x8 Work",
-  ]
+  zap trash: "~/Library/Application Support/8x8 Work"
 end
