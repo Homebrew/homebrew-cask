@@ -1,10 +1,10 @@
-cask "disk-space-analyzer" do
+cask "disk-expert" do
   version "3.6.1,358"
   sha256 :no_check
 
   url "https://nektony.com/download/diskexpert/diskexpert.dmg"
-  name "disk-space-analyzer"
-  desc "Nektony Disk Space Analyzer"
+  name "Disk Expert"
+  desc "Disk space analyzer"
   homepage "https://nektony.com/disk-expert"
 
   livecheck do
