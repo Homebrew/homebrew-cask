@@ -1,18 +1,9 @@
 cask "chromium" do
   version "904164"
+  sha256 "6f84b76f0ea3d69e8b516b4a8be92cd78d67906f974e6bdc783749c03f24c110"
 
-  if Hardware::CPU.intel?
-    sha256 "6f84b76f0ea3d69e8b516b4a8be92cd78d67906f974e6bdc783749c03f24c110"
-
-    url "https://commondatastorage.googleapis.com/chromium-browser-snapshots/Mac/#{version}/chrome-mac.zip",
-        verified: "commondatastorage.googleapis.com/chromium-browser-snapshots/Mac/"
-  else
-    sha256 "9ac3f1d2e40d0fc56882694818185776b8a2eb117236a736fc9b8d7d6136483f"
-
-    url "https://commondatastorage.googleapis.com/chromium-browser-snapshots/Mac_Arm/#{version}/chrome-mac.zip",
-        verified: "commondatastorage.googleapis.com/chromium-browser-snapshots/Mac_Arm/"
-  end
-
+  url "https://commondatastorage.googleapis.com/chromium-browser-snapshots/Mac/#{version}/chrome-mac.zip",
+      verified: "commondatastorage.googleapis.com/chromium-browser-snapshots/Mac/"
   name "Chromium"
   desc "Free and open-source web browser"
   homepage "https://www.chromium.org/Home"
