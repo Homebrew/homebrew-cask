@@ -14,6 +14,7 @@ cask "mgba" do
   end
 
   app "mGBA-#{version}-osx/Applications/mGBA.app"
+  binary "#{appdir}/mGBA.app/Contents/MacOS/mGBA", target: "mgba"
 
   zap trash: [
     "~/Library/Preferences/com.endrift.mgba-qt.plist",
