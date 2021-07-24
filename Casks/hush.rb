@@ -13,9 +13,9 @@ cask "hush" do
   app "Hush.app"
 
   zap trash: [
-  "~/Library/Application Scripts/se.oblador.Hush",
-  "~/Library/Application Scripts/se.oblador.Hush.ContentBlocker",
-  "~/Library/Containers/se.oblador.Hush",
-  "~/Library/Containers/se.oblador.Hush.ContentBlocker",
-]
+    "~/Library/Application Scripts/se.oblador.Hush",
+    "~/Library/Application Scripts/se.oblador.Hush.ContentBlocker",
+    "~/Library/Containers/se.oblador.Hush",
+    "~/Library/Containers/se.oblador.Hush.ContentBlocker",
+  ]
 end
