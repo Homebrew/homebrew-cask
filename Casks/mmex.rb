@@ -11,7 +11,7 @@ cask "mmex" do
   livecheck do
     url "https://sourceforge.net/projects/moneymanagerex/rss"
     strategy :page_match do |page|
-      match = page.match(%r{/mmex[._-](\d+(?:\.\d+)*)[._-]Darwin[._-](\d+(?:\-\d+)*)\.dmg}i)
+      match = page.match(%r{/mmex[._-](\d+(?:\.\d+)*)[._-]Darwin[._-](\d+(?:-\d+)*)\.dmg}i)
       "#{match[1]},#{match[2]}"
     end
   end
