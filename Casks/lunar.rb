@@ -15,7 +15,7 @@ cask "lunar" do
   auto_updates true
   depends_on macos: ">= :catalina"
 
-  app 'Lunar.app'
+  app "Lunar.app"
 
   zap trash: [
     "~/Library/Caches/Lunar",
