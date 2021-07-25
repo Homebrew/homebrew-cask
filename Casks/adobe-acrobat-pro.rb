@@ -1,8 +1,8 @@
 cask "adobe-acrobat-pro" do
-  version "19"
-  sha256 :no_check # required as upstream package is updated in-place
+  version :latest
+  sha256 :no_check
 
-  url "https://trials3.adobe.com/AdobeProducts/APRO/#{version}/osx10/Acrobat_DC_Web_WWMUI.dmg",
+  url "https://trials3.adobe.com/AdobeProducts/APRO/Acrobat_HelpX/osx10/Acrobat_DC_Web_WWMUI.dmg",
       user_agent: :fake,
       cookies:    { "MM_TRIALS" => "1234" }
   name "Adobe Acrobat Pro DC"
