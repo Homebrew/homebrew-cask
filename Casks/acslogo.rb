@@ -13,7 +13,7 @@ cask "acslogo" do
     regex(/Release\s*(\d+(?:\.\d+)*)/i)
   end
 
-  app "ACSLogo.app"
+  app "ACSLogo/ACSLogo.app"
 
   zap trash: "~/Library/Preferences/com.acsmith.acslogo.plist"
 end
