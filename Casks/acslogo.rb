@@ -14,4 +14,6 @@ cask "acslogo" do
   end
 
   app "ACSLogo.app"
+
+  zap trash: "~/Library/Preferences/com.acsmith.acslogo.plist"
 end
