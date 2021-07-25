@@ -1,5 +1,5 @@
 cask "nuclino" do
-  version "1.4.0"
+  version "1.5.0"
   sha256 :no_check
 
   url "https://s3.eu-central-1.amazonaws.com/repository.nuclino.com/downloads/Nuclino.dmg",
