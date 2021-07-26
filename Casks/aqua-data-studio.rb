@@ -8,14 +8,28 @@ cask "aqua-data-studio" do
   homepage "https://www.aquafold.com/aquadatastudio"
 
   livecheck do
-    path = "app/home/project/public/aquadatastudio/wikibook/changelog/page"
-    url "https://www.aquaclusters.com/#{path}/0/Home"
-    regex(%r{href=["']?/#{Regexp.escape(path)}/(Version[._-](\d+\.\d+)/Version[._-]\d+[._-]\d+)["' >]}i)
+    url "https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/changelog/page/0/Home"
+    regex(%r{href=["']?([^"' >]*?/changelog/page/Version[._-]?(\d+(?:\.\d+)+)/[^"' >]*?)["' >]}i)
     strategy :page_match do |page, regex|
-      match = page.match(regex)
-      version_page = Homebrew::Livecheck::Strategy.page_content("https://www.aquaclusters.com/#{path}/#{match[1]}")
-      versions = version_page[:content].scan(/#{Regexp.escape(match[2])}(?:\.\d+)+/i)
-      versions.presence || "#{match[2]}.0"
+      changelog_matches = page.scan(regex)
+      next if changelog_matches.blank?
+
+      changelog_matches.uniq!(&:second)
+      changelog_matches.sort_by! { |match| Version.new(match.second) }
+
+      # Assume the last-sorted version is newest
+      changelog_path, changelog_version = changelog_matches.last
+
+      # Check the changelog of the newest version to identify patch versions
+      changelog_url = URI.join(url, changelog_path)
+      changelog_page = Homebrew::Livecheck::Strategy.page_content(changelog_url)
+      patch_versions = changelog_page[:content].scan(/>\s*?v?(\d+(?:\.\d+)+)/i)
+      next patch_versions.flatten if patch_versions.present?
+
+      # Append a patch version of 0 if the newest changelog version is just a
+      # major/minor version (almost certain to be true)
+      changelog_version += ".0" if changelog_version.count(".") < 2
+      changelog_version
     end
   end
 
