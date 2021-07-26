@@ -8,10 +8,9 @@ cask "robo-3t" do
   desc "MongoDB management tool"
   homepage "https://robomongo.org/"
 
-  # We need to check all releases since the current latest release is a beta version.
   livecheck do
-    url "https://github.com/Studio3T/robomongo/releases"
-    strategy :page_match do |page|
+    url "https://github.com/Studio3T/robomongo"
+    strategy :github_latest do |page|
       match = page.match(%r{href=.*?/v?(\d+(?:\.\d+)*)/robo3t-\1-darwin-x86_64-([0-9a-f]+)\.dmg}i)
       "#{match[1]},#{match[2]}"
     end
