@@ -23,6 +23,12 @@ cask "miniforge" do
   desc "Minimal installer for conda specific to conda-forge"
   homepage "https://github.com/conda-forge/miniforge"
 
+  livecheck do
+    url :homepage
+    strategy :github_latest
+    regex(%r{href=.*?/tag/v?(\d+(?:[.-]\d+)+)["' >]}i)
+  end
+
   auto_updates true
   conflicts_with cask: "miniconda"
   container type: :naked
