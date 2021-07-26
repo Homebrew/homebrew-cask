@@ -12,7 +12,7 @@ cask "aqua-data-studio" do
     regex(%r{href=["']?([^"' >]*?/changelog/page/Version[._-]?(\d+(?:\.\d+)+)/[^"' >]*?)["' >]}i)
     strategy :page_match do |page, regex|
       changelog_matches = page.scan(regex)
-      next if changelog_matches.blank?
+      next [] if changelog_matches.blank?
 
       changelog_matches.uniq!(&:second)
       changelog_matches.sort_by! { |match| Version.new(match.second) }
@@ -23,6 +23,8 @@ cask "aqua-data-studio" do
       # Check the changelog of the newest version to identify patch versions
       changelog_url = URI.join(url, changelog_path)
       changelog_page = Homebrew::Livecheck::Strategy.page_content(changelog_url)
+      next [] if changelog_page[:content].blank?
+
       patch_versions = changelog_page[:content].scan(/>\s*?v?(\d+(?:\.\d+)+)/i)
       next patch_versions.flatten if patch_versions.present?
 
