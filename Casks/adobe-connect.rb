@@ -9,9 +9,11 @@ cask "adobe-connect" do
 
   livecheck do
     url "https://www.adobe.com/go/ConnectMac11Plus"
-    regex(%r{/(\d+(?:_\d+)*)/AdobeConnect[._-](\d+(?:_\d+)*)\.dmg}i)
+    regex(%r{/(\d+(?:[._]\d+)*)/AdobeConnect[._-]?(\d+(?:[._]\d+)*)\.dmg}i)
     strategy :header_match do |headers, regex|
-      match = headers["location"].match(regex)
+      match = headers["location"]&.match(regex)
+      next if match.blank?
+
       "#{match[1].tr("_", ".")},#{match[2].tr("_", ".")}"
     end
   end
