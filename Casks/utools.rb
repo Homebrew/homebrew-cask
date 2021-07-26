@@ -9,7 +9,7 @@ cask "utools" do
   homepage "https://u.tools/index.html"
 
   livecheck do
-    url "https://publish.u-tools.cn/version2/public-mac.yml"
+    url "https://publish.u-tools.cn/version2/latest-mac.yml"
     strategy :electron_builder
   end
 
