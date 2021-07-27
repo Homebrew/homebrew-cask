@@ -1,10 +1,15 @@
 cask "blue-jeans-browser-plugin" do
-  version "2.135.54.8"
-  sha256 "e36f3c1fe6410ac22dd50fcdcc45e61e9cf7a0043662ee3c2521978ba9996a23"
+  version "2.180.71.8"
+  sha256 "bbf0f274895a23faaad40b08df2fda3465be4b97f24e599bc8e81a438df32ad0"
 
   url "https://swdl.bluejeans.com/skinny/rbjnplugin_#{version}.pkg"
   name "Blue Jeans Browser Plug-in"
   homepage "https://www.bluejeans.com/"
+
+  livecheck do
+    url "https://swdl.bluejeans.com/repos/bluejeans/x86_64/release/rpm"
+    regex(/href=.*?r?bjnplugin[._-]?v?(\d+(?:\.\d+)*)(?:[._-]1)?[._-]x86/i)
+  end
 
   container type:   :xar,
             nested: "Scripts"
