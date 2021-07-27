@@ -8,6 +8,10 @@ cask "avidcodecsle" do
   desc "Use QuickTime movies using Avid codecs on systems without Media Composer"
   homepage "https://avid.secure.force.com/pkb/articles/en_US/download/Avid-QuickTime-Codecs-LE"
 
+  livecheck do
+    skip "No version information available"
+  end
+
   pkg "AvidCodecsLE.pkg"
 
   uninstall pkgutil: [
