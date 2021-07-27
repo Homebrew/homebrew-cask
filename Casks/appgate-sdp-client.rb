@@ -30,7 +30,7 @@ cask "appgate-sdp-client" do
     end
   end
 
-  url "https://bin.appgate-sdp.com/#{version.major_minor}/client/AppGate-SDP-#{version}-Installer.dmg",
+  url "https://bin.appgate-sdp.com/#{version.major_minor}/client/Appgate-SDP-#{version}-Installer.dmg",
       verified: "bin.appgate-sdp.com/"
   name "AppGate SDP Client for macOS"
   desc "Software-defined perimeter for secure network access"
