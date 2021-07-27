@@ -11,6 +11,8 @@ cask "tutanota" do
     url "https://mail.tutanota.com/desktop/latest-mac.yml"
     strategy :electron_builder
   end
+  
+  auto_updates true
 
   app "Tutanota Desktop.app"
 
