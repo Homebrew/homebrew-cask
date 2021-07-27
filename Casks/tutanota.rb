@@ -12,6 +12,8 @@ cask "tutanota" do
     strategy :electron_builder
   end
 
+  auto_updates true
+
   app "Tutanota Desktop.app"
 
   zap trash: [
