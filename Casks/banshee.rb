@@ -5,6 +5,7 @@ cask "banshee" do
   url "https://ftp.gnome.org/pub/GNOME/binaries/mac/banshee/banshee-#{version}.macosx.intel.dmg",
       verified: "gnome.org/pub/GNOME/binaries/mac/banshee/"
   name "Banshee"
+  desc "Multimedia management and playback application"
   homepage "https://www.banshee-project.org/"
 
   app "Banshee.app"
