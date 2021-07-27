@@ -1,6 +1,6 @@
 cask "aptible" do
-  version "0.18.3,20210702164907,243"
-  sha256 "d81b9b3f26e030778b183b3f8c1b8e57798c7b15f422f030f0dcb01459699078"
+  version "0.19.0,20210727202816,249"
+  sha256 "60495e9bf8fee6be00d0fc9e1d47212880b96f9de85651646088ff2128d7d41f"
 
   url "https://omnibus-aptible-toolbelt.s3.amazonaws.com/aptible/omnibus-aptible-toolbelt/master/#{version.after_comma.after_comma}/pkg/aptible-toolbelt-#{version.before_comma}%2B#{version.after_comma.before_comma}-mac-os-x.10.11.6-1.pkg",
       verified: "omnibus-aptible-toolbelt.s3.amazonaws.com/"
