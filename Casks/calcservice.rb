@@ -7,5 +7,12 @@ cask "calcservice" do
   name "CalcService"
   homepage "https://www.devontechnologies.com/apps/freeware"
 
+  livecheck do
+    url "https://www.devontechnologies.com/support/download"
+    regex(%r{<td>CalcService</td><td>(\d+(?:\.\d+)*)</td>}i)
+  end
+
   app "CalcService.app"
+
+  zap trash: "~/Library/Preferences/org.grunenberg.CalcService.plist"
 end
