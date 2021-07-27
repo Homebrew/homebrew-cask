@@ -1,9 +1,9 @@
 cask "vitalsource-bookshelf" do
-  version "9.4.3.1330"
-  sha256 "fe183fc2796906e15bdfa2902e195c83390321692ab5fa621a505f3e9fc1fc91"
+  version "10.0.0.1365"
+  sha256 "c21310b8614c892b074afc107f3eb9f287089970df3c2f4799b3459e47732097"
 
-  url "https://downloads.vitalbook.com/vsti/bookshelf/#{version.major_minor_patch}/mac/bookshelf/VitalSource-Bookshelf_#{version}.dmg",
-      verified: "downloads.vitalbook.com/"
+  url "https://downloads.vitalbook.com/vsti/bookshelf/#{version.major_minor}/mac/bookshelf/VitalSource-Bookshelf_#{version}.dmg",
+      verified: "downloads.vitalbook.com/vsti/bookshelf"
   name "VitalSource Bookshelf"
   desc "Access eTextbooks"
   homepage "https://www.vitalsource.com/bookshelf-features"
@@ -13,7 +13,13 @@ cask "vitalsource-bookshelf" do
     regex(/href=.*?VitalSource-Bookshelf[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "VitalSource Bookshelf.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.vitalsource.bookshelf",
+    "~/Library/Logs/Vitalsource Bookshelf",
+    "~/Library/Preferences/com.vitalsource.bookshelf.plist",
+  ]
 end
