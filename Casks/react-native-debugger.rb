@@ -1,8 +1,8 @@
 cask "react-native-debugger" do
-  version "0.12.0"
-  sha256 "370bd7d511b15362c544051e5e3e04c86201182ded22c51a082437db9e92d024"
+  version "0.12.1"
+  sha256 "cb7d184a495e2a45cc2dc02730f828a552e45d8328df1c7a229f0ffa7fed8106"
 
-  url "https://github.com/jhen0409/react-native-debugger/releases/download/v#{version}/rn-debugger-macos-x64.zip"
+  url "https://github.com/jhen0409/react-native-debugger/releases/download/v#{version}/rn-debugger-macos-universal.zip"
   name "React Native Debugger"
   desc "Standalone app for debugging React Native apps"
   homepage "https://github.com/jhen0409/react-native-debugger"
