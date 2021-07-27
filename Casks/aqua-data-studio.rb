@@ -21,8 +21,7 @@ cask "aqua-data-studio" do
       changelog_path, changelog_version = changelog_matches.last
 
       # Check the changelog of the newest version to identify patch versions
-      changelog_url = URI.join(url, changelog_path)
-      changelog_page = Homebrew::Livecheck::Strategy.page_content(changelog_url)
+      changelog_page = Homebrew::Livecheck::Strategy.page_content(URI.join(url, changelog_path))
       next [] if changelog_page[:content].blank?
 
       patch_versions = changelog_page[:content].scan(/>\s*?v?(\d+(?:\.\d+)+)/i)
