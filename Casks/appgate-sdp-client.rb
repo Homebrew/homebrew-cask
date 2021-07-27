@@ -8,13 +8,24 @@ cask "appgate-sdp-client" do
 
     livecheck do
       url :homepage
-      strategy :page_match do |page|
-        page_regex = %r{href=["']?/(support/software-defined-perimeter-support/sdp-v?\d+(?:-\d+)*)["' >]}i
-        page.scan(page_regex).flat_map do |match|
-          version_page = Homebrew::Livecheck::Strategy.page_content("https://www.appgate.com/#{match[0]}")
-          version_regex = %r{href=.*?/Appgate[._-]SDP[._-](\d+(?:\.\d+)*)[._-]Installer\.dmg}i
-          version_page[:content].scan(version_regex).map(&:first)
-        end
+      regex(%r{href=.*?/Appgate-SDP[._-](\d+(?:\.\d+)+)[._-]Installer\.dmg}i)
+      strategy :page_match do |page, regex|
+        support_versions =
+          page.scan(%r{href=["']?([^"' >]*?/software-defined-perimeter-support/sdp[._-]v?(\d+(?:[.-]\d+)+))["' >]}i)
+              .sort_by { |match| Version.new(match[1]) }
+        next [] if support_versions.blank?
+
+        # Assume the last-sorted version is newest
+        version_page_path, = support_versions.last
+
+        # Check the page for the newest major/minor version, which links to the
+        # latest disk image file (containing the full version in the file name)
+        version_page = Homebrew::Livecheck::Strategy.page_content(
+          URI.join("https://www.appgate.com/", version_page_path),
+        )
+        next [] if version_page[:content].blank?
+
+        version_page[:content].scan(regex).map(&:first)
       end
     end
   end
