@@ -16,7 +16,7 @@ cask "etlegacy" do
 
   suite "ETLegacy"
   installer script: {
-    executable: "curl", # change below to curl command instead
+    executable: "curl",
     args:       ["https://mirror.etlegacy.com/etmain/pak0.pk3", "-o", "#{caskroom_path}/#{version}/ETLegacy/etmain/pak0.pk3"],
   }
 
