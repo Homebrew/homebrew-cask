@@ -13,7 +13,7 @@ cask "sqlight" do
   # needs to be extracted from the download page.
   livecheck do
     url "https://www.aurvan.com/sqlight/"
-    regex(/sqlight-v?(\d+(?:[._]\d+)+)-app\.dmg/i)
+    regex(/sqlight[._-]v?(\d+(?:[._]\d+)+)-app\.dmg/i)
     strategy :page_match do |page, regex|
       js_file = page[%r{src=["']?(/com-aurvan-satva-ui-reactjs-release/static/js/main\.\w+\.chunk.js)["' >]}i, 1]
       version_page = Homebrew::Livecheck::Strategy.page_content("https://www.aurvan.com/#{js_file}")
