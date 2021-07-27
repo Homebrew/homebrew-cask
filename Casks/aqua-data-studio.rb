@@ -24,8 +24,8 @@ cask "aqua-data-studio" do
       changelog_page = Homebrew::Livecheck::Strategy.page_content(URI.join(url, changelog_path))
       next [] if changelog_page[:content].blank?
 
-      patch_versions = changelog_page[:content].scan(/>\s*?v?(\d+(?:\.\d+)+)/i)
-      next patch_versions.flatten if patch_versions.present?
+     versions = changelog_page[:content].scan(/>\s*?v?(\d+(?:\.\d+)+)/i)
+      next versions.flatten if versions.present?
 
       # Append a patch version of 0 if the newest changelog version is just a
       # major/minor version (almost certain to be true)
