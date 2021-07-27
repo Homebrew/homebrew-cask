@@ -1,12 +1,18 @@
 cask "adobe-acrobat-pro" do
-  version :latest
+  version "21.005.20058"
   sha256 :no_check
 
-  url "https://trials3.adobe.com/AdobeProducts/APRO/Acrobat_HelpX/osx10/Acrobat_DC_Web_WWMUI.dmg",
+  url "https://trials.adobe.com/AdobeProducts/APRO/Acrobat_HelpX/osx10/Acrobat_DC_Web_WWMUI.dmg",
       user_agent: :fake,
       cookies:    { "MM_TRIALS" => "1234" }
   name "Adobe Acrobat Pro DC"
+  desc "View, create, manipulate, print and manage files in Portable Document Format"
   homepage "https://acrobat.adobe.com/us/en/acrobat/pdf-reader.html"
+
+  livecheck do
+    url "https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/index.html"
+    regex(/(\d+(?:\.\d+)*)\s(planned|optional)\supdate/i)
+  end
 
   pkg "Acrobat DC/Acrobat DC Installer.pkg"
 
