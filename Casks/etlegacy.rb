@@ -13,12 +13,11 @@ cask "etlegacy" do
   end
 
   depends_on macos: ">= :big_sur"
-  depends_on formula: "wget"
 
   suite "ETLegacy"
   installer script: {
-    executable: "wget",
-    args:       ["https://mirror.etlegacy.com/etmain/pak0.pk3", "-P", "#{caskroom_path}/#{version}/ETLegacy/etmain", "https://mirror.etlegacy.com/etmain/pak1.pk3", "-P", "#{caskroom_path}/#{version}/ETLegacy/etmain", "https://mirror.etlegacy.com/etmain/pak2.pk3", "-P", "#{caskroom_path}/#{version}/ETLegacy/etmain"],
+    executable: "curl", # change below to curl command instead
+    args:       ["https://mirror.etlegacy.com/etmain/pak0.pk3", "-o", "#{caskroom_path}/#{version}/ETLegacy/etmain/pak0.pk3"],
   }
 
   uninstall delete: [
