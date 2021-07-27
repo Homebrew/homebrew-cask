@@ -7,7 +7,7 @@ cask "rsyncosx" do
   desc "GUI for rsync"
   homepage "https://github.com/rsyncOSX/RsyncOSX"
 
-  depends_on macos: ">= :bigsur"
+  depends_on macos: ">= :big_sur"
 
   app "RsyncOSX.app"
 
