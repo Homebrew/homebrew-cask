@@ -7,6 +7,11 @@ cask "etlegacy" do
   desc "Open source project based on the code of Wolfenstein: Enemy Territory"
   homepage "https://www.etlegacy.com/"
 
+  livecheck do
+    url :url
+    strategy :header_match
+  end
+
   depends_on macos: ">= :big_sur"
   depends_on formula: "wget"
 
