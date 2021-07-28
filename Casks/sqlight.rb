@@ -18,6 +18,9 @@ cask "sqlight" do
       js_file_path = page[%r{src=["']?(/com-aurvan-satva-ui-reactjs-release/static/js/main\.\w+\.chunk\.js)["' >]}i, 1]
       next [] if js_file_path.blank?
 
+      js_file_data = Homebrew::Livecheck::Strategy.page_content("https://www.aurvan.com/#{js_file_path}")
+      next [] if js_file_data[:content].blank?
+
       js_file_data[:content].scan(regex).map { |match| match&.first&.gsub("_", ".") }
     end
   end
