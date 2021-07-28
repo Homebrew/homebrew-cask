@@ -4,7 +4,7 @@ cask "duplicate-file-finder" do
 
   url "https://nektony.com/download/duplicate-file-finder/duplicate-file-finder.dmg"
   name "duplicate-file-finder"
-  desc "Nektony Duplicate File Finder"
+  desc "Find and remove unwanted duplicate files and folders"
   homepage "https://nektony.com/duplicate-finder-free"
 
   livecheck do
@@ -20,7 +20,7 @@ cask "duplicate-file-finder" do
     "~/Library/Application Scripts/com.nektony.Duplicate-File-Finder-SII",
     "~/Library/Application Support/com.nektony.Duplicate-File-Finder-SII",
     "~/Library/Caches/com.nektony.Duplicate-File-Finder-SII",
-    "~/Library/Preferences/com.nektony.Duplicate-File-Finder-SII.plist",
     "~/Library/Cookies/com.nektony.Duplicate-File-Finder-SII.binarycookies",
+    "~/Library/Preferences/com.nektony.Duplicate-File-Finder-SII.plist",
   ]
 end
