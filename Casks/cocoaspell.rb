@@ -4,9 +4,14 @@ cask "cocoaspell" do
 
   url "https://people.ict.usc.edu/leuski/public_html/cocoaspell/cocoAspell.#{version}.dmg",
       user_agent: :fake
-  appcast "https://people.ict.usc.edu/leuski/public_html/cocoaspell/home.php"
   name "cocoAspell"
+  desc "Service provider for Aspell spell checker"
   homepage "https://people.ict.usc.edu/leuski/public_html/cocoaspell/home.php"
+
+  livecheck do
+    url :homepage
+    regex(/href=.*?cocoAspell[._-]?v?(\d+(?:\.\d+)*)\.dmg/i)
+  end
 
   depends_on macos: ">= :el_capitan"
 
