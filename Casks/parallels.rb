@@ -8,8 +8,8 @@ cask "parallels" do
       strategy :header_match
     end
   else
-    version "16.5.0-50692"
-    sha256 "029eceae6e348e3257112aa59b63bc5db96288a0846effaa14f4a1e87d77b6c3"
+    version "16.5.1-50696"
+    sha256 "2f58d6cde6d90dface03dfbe24c2c0ca53b134f8a9fd1831050c279b9ded660e"
 
     livecheck do
       url "https://www.parallels.com/directdownload/pd#{version.major}/m1/"
