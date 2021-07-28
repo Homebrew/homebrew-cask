@@ -1,5 +1,5 @@
 cask "deepl" do
-  version "2.5.63019"
+  version "2.6.67571"
   sha256 :no_check
 
   url "https://appdownload.deepl.com/macos/DeepL.dmg"
