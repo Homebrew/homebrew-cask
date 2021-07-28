@@ -5,11 +5,12 @@ cask "calcservice" do
   url "https://s3.amazonaws.com/DTWebsiteSupport/download/freeware/calcservice/#{version}/CalcService.zip",
       verified: "s3.amazonaws.com/DTWebsiteSupport/"
   name "CalcService"
+  desc "Enter calculations into any Service-aware app"
   homepage "https://www.devontechnologies.com/apps/freeware"
 
   livecheck do
     url "https://www.devontechnologies.com/support/download"
-    regex(%r{href=.*?v?(\d+(?:\.\d+)+)/CalcService\.zip}i)
+    regex(%r{<td>CalcService</td><td>(\d+(?:\.\d+)*)</td>}i)
   end
 
   app "CalcService.app"
