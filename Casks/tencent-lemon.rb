@@ -11,7 +11,7 @@ cask "tencent-lemon" do
   livecheck do
     url "https://lemon.guanjia.qq.com/latest/package"
     strategy :page_match
-    regex(/Lemon[-_.][vV]?(\d+(?:\.\d+)*)\.dmg/i)
+    regex(/Lemon[-_.]?[vV]?(\d+(?:\.\d+)*)\.dmg/i)
   end
 
   app "Tencent Lemon.app"
