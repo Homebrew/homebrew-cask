@@ -6,10 +6,10 @@ cask "cloud-pbx" do
       verified: "cpbx-hilfe.deutschland-lan.de/downloads/"
   name "Cloud PBX"
   desc "Cloud-based telephone system"
-  homepage "https://geschaeftskunden.telekom.de/startseite/festnetz-internet/tarife/332198/telefonanlage-aus-der-cloud.html"
+  homepage "https://geschaeftskunden.telekom.de/internet-dsl/tarife/festnetz-internet-dsl/companyflex/cloud-pbx"
 
   livecheck do
-    url "https://cpbx-hilfe.deutschland-lan.de/de/direkthilfe/hilfe-downloads"
+    url "https://cpbx-hilfe.deutschland-lan.de/de/direkthilfe/hilfe-downloads/downloads"
     strategy :page_match
     regex(%r{href=.*?/cloud-pbx\.osx-(\d+(?:\.\d+)*)}i)
   end
