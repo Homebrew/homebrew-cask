@@ -16,7 +16,7 @@ cask "dissenter-browser" do
       <a[^>]*href=["'][^"' >]*/([0-9a-f]+)/resource/([0-9a-f]+)["' >]
     }ix)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]},#{match[2]}" }
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}:#{match[2]}" }
     end
   end
 
