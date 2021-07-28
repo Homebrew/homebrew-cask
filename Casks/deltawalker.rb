@@ -4,10 +4,14 @@ cask "deltawalker" do
 
   url "https://deltawalker.s3.amazonaws.com/DeltaWalker-#{version}.dmg",
       verified: "deltawalker.s3.amazonaws.com/"
-  appcast "https://www.deltawalker.com/assets/js/main.js"
   name "DeltaWalker"
   desc "Tool to compare and synchronize files and folders"
   homepage "https://www.deltawalker.com/"
+
+  livecheck do
+    url "https://www.deltawalker.com/assets/js/main.js"
+    regex(/DeltaWalker[._-]?v?(\d+(?:\.\d+)*)\.dmg/)
+  end
 
   app "DeltaWalker.app"
 
