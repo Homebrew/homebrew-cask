@@ -13,7 +13,7 @@ cask "colorchecker-camera-calibration" do
     regex(/>\s*v?(\d+(?:\.\d+)*)\s*</i)
   end
 
-  pkg "ColorChecker Camera Calibration.pkg"
+  pkg "ColorCheckerCameraCalibration.pkg"
 
   uninstall pkgutil: [
     "com.xrite.colorcheckercameracalibration.colorcheckercameracalibration.XRiteColorCheckerCameraCalibration.pkg",
