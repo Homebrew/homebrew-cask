@@ -21,7 +21,7 @@ cask "memory-cleaner" do
     "~/Library/Application Scripts/com.nektony.Memory-Cleaner-SII",
     "~/Library/Application Support/Memory Cleaner",
     "~/Library/Caches/com.nektony.Memory-Cleaner-SII",
-    "~/Library/Preferences/com.nektony.Memory-Cleaner-SII.plist",
     "~/Library/Cookies/com.nektony.Memory-Cleaner-SII.binarycookies",
+    "~/Library/Preferences/com.nektony.Memory-Cleaner-SII.plist",
   ]
 end
