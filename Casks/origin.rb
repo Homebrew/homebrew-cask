@@ -17,11 +17,6 @@ cask "origin" do
 
   app "Origin.app"
 
-  preflight do
-    # There is no enclosing .app folder, just the 'Contents' of the app in the appcast download
-    FileUtils.mv(staged_path.children, staged_path.join("Origin.app").tap(&:mkpath))
-  end
-
   zap trash: [
     "~/Library/Application Support/Origin",
     "~/Library/Caches/com.ea.Origin",
