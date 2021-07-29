@@ -1,6 +1,6 @@
 cask "simplenote" do
-  version "2.14.0"
-  sha256 "48ec0be2e47d23cebc68775ce6bb6b64e07447f67a26d0b1f318e3fbfd41949c"
+  version "2.15.0"
+  sha256 "74c5ac784e03c9c804ee8ca27de15227ad0c65b3d9bea585a85bc426405e2f7d"
 
   url "https://github.com/Automattic/simplenote-electron/releases/download/v#{version}/Simplenote-macOS-#{version}.dmg"
   name "Simplenote"
