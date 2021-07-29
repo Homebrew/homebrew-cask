@@ -5,6 +5,7 @@ cask "origin" do
   url "https://origin-a.akamaihd.net/Origin-Client-Download/origin/mac/live/Origin.dmg",
       verified: "origin-a.akamaihd.net/Origin-Client-Download/"
   name "Origin"
+  desc "Play PC games and connect with your friends"
   homepage "https://www.origin.com/"
 
   livecheck do
