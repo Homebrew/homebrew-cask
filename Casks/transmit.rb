@@ -20,5 +20,9 @@ cask "transmit" do
   zap trash: [
     "~/Library/Preferences/com.panic.Transmit.plist",
     "~/Library/Application Support/Transmit",
+    "~/Library/Application Support/com.panic.Transmit",
+    "~/Library/Caches/com.panic.Transmit",
+    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.panic.Transmit",
+    "~/Library/Saved Application State/com.panic.Transmit.savedState",
   ]
 end
