@@ -1,12 +1,12 @@
 cask "lx-music" do
-  version "1.10.2"
+  version "1.11.0"
 
   if Hardware::CPU.intel?
-    sha256 "94bb5a79a9f29291269fcdc706e13e02acc6f6efe85c80b92ba99fd5e50ec5fe"
+    sha256 "b12f2f5d835ce1a2737d3be79f8ecd200e86c0588dcec33d582958d3b23fa666"
 
     url "https://github.com/lyswhut/lx-music-desktop/releases/download/v#{version}/lx-music-desktop-#{version}.dmg"
   else
-    sha256 "07821f1d6d4625dd1904c62fe6d68ad928d2bc1b33fad19e49605960ddfcb4c7"
+    sha256 "4b9c8a098835e2c3813ef5436e14632fa9370df638031a5097fca958f3efafc3"
 
     url "https://github.com/lyswhut/lx-music-desktop/releases/download/v#{version}/lx-music-desktop-#{version}-arm64.dmg"
   end
