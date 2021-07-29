@@ -18,7 +18,14 @@ cask "transmit" do
   app "Transmit.app"
 
   zap trash: [
-    "~/Library/Preferences/com.panic.Transmit.plist",
     "~/Library/Application Support/Transmit",
+    "~/Library/Application Support/com.panic.Transmit",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.panic.transmit.sfl2",
+    "~/Library/Caches/com.panic.Transmit",
+    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.panic.Transmit",
+    "~/Library/Caches/Transmit",
+    "~/Library/Preferences/com.panic.Transmit.plist",
+    "~/Library/Saved Application State/com.panic.Transmit.savedState",
+    "~/Library/WebKit/com.panic.Transmit",
   ]
 end
