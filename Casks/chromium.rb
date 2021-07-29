@@ -1,7 +1,7 @@
 cask "chromium" do
   if Hardware::CPU.intel?
-    version "905434"
-    sha256 "1bd1e6943fe25f3628d41842898b3c0eb8051d67bd50eed551bc6f5f611013f1"
+    version "906863"
+    sha256 "7b02a773e20b998136a06a0694a2af9568784cd4c3d6dd6b377e2ff8d80df0c3"
 
     url "https://commondatastorage.googleapis.com/chromium-browser-snapshots/Mac/#{version}/chrome-mac.zip",
         verified: "commondatastorage.googleapis.com/chromium-browser-snapshots/Mac/"
