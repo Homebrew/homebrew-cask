@@ -4,6 +4,7 @@ cask "dmm-player-for-chrome" do
 
   url "https://portalapp.dmm.com/silverlightplayer/dmm/m/#{version.dots_to_underscores}/DMMPlayerForChromeInstaller_#{version.dots_to_underscores}.pkg"
   name "DMM Player for Chrome"
+  desc "Play videos from DMM in Chrome"
   homepage "https://www.dmm.com/digital/info_for_chrome_user_html/"
 
   livecheck do
