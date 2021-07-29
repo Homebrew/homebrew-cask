@@ -1,7 +1,7 @@
 cask "tencent-meeting" do
   if Hardware::CPU.intel?
-    version "2.15.3.400,e7589f75224aa90911114449ac00a955"
-    sha256 "a3546cb7d87469cdb4a14070e0bd4796ec2cf728a9087c3666333a58dc68c319"
+    version "2.16.2.420,b4acf9b3b84361f9c0e51937f23bbde5"
+    sha256 "c97533d1cff73ec29977c682ad2708b34319f21c5595f27e9b0db12d967bebcf"
     url "https://updatecdn.meeting.qq.com/#{version.after_comma}/TencentMeeting_0300000000_#{version.before_comma}.publish.x86_64.dmg",
         verified: "qq.com/"
   else
