@@ -6,6 +6,14 @@ cask "dmm-player-for-chrome" do
   name "DMM Player for Chrome"
   homepage "https://www.dmm.com/digital/info_for_chrome_user_html/"
 
+  livecheck do
+    url :homepage
+    regex(/href=.*?DMMPlayerForChromeInstaller[._-]?v?(\d+(?:[._]\d+)*)\.pkg/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| match[0].tr("_", ".") }
+    end
+  end
+
   pkg "DMMPlayerForChromeInstaller_#{version.dots_to_underscores}.pkg"
 
   uninstall pkgutil: [
