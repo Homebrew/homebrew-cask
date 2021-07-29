@@ -1,12 +1,16 @@
 cask "origin" do
   version "10.5.102.48654"
-  sha256 "9ef21bf26640cd566f31e43d3c3ee4548a1c585c31381648dc33a74dd7209954"
+  sha256 :no_check
 
-  url "https://origin-a.akamaihd.net/Origin-Client-Download/origin/mac/live/OriginUpdate_#{version.dots_to_underscores}.zip",
-      verified: "origin-a.akamaihd.net/"
-  appcast "https://api1.origin.com/autopatch/2/upgradeFrom/#{version}/en_US/PROD?platform=MAC&osVersion=10.14.0"
+  url "https://origin-a.akamaihd.net/Origin-Client-Download/origin/mac/live/Origin.dmg",
+      verified: "origin-a.akamaihd.net/Origin-Client-Download/"
   name "Origin"
   homepage "https://www.origin.com/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   auto_updates true
 
@@ -19,9 +23,9 @@ cask "origin" do
 
   zap trash: [
     "~/Library/Application Support/Origin",
-    "~/Library/Saved Application State/com.ea.Origin.savedState",
-    "~/Library/LaunchAgents/com.ea.origin.WebHelper.plist",
     "~/Library/Caches/com.ea.Origin",
     "~/Library/Caches/Origin",
+    "~/Library/LaunchAgents/com.ea.origin.WebHelper.plist",
+    "~/Library/Saved Application State/com.ea.Origin.savedState",
   ]
 end
