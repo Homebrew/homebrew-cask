@@ -17,10 +17,7 @@ cask "android-studio" do
 
   livecheck do
     url :homepage
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/(\d+(?:\.\d+)*)/android-studio-(\d+(?:\.\d+)*)-mac\.dmg}i)
-      (match[1]).to_s
-    end
+    regex(/android-studio-(\d+(?:\.\d+)*)-mac/i)
   end
 
   auto_updates true
