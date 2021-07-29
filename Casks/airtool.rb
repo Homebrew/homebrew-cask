@@ -4,6 +4,7 @@ cask "airtool" do
 
   url "https://www.intuitibits.com/downloads/Airtool_#{version.before_comma}.pkg"
   name "Airtool"
+  desc "Capture Wi-Fi packets"
   homepage "https://www.intuitibits.com/products/airtool/"
 
   livecheck do
