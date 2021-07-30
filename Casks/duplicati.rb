@@ -9,10 +9,12 @@ cask "duplicati" do
   homepage "https://www.duplicati.com/"
 
   livecheck do
-    url "https://github.com/duplicati/duplicati/releases/latest"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/duplicati-(\d+(?:\.\d+)*)_([^/]*?)_(\d+(?:-\d+)*)\.dmg}i)
-      "#{match[1]},#{match[2]}:#{match[3]}"
+    url :url
+    strategy :git do |tags|
+      tags.map do |tag|
+        match = tag.match(/^v(\d+(?:\.\d+)*)-(?:\d+(?:\.\d+)*)_(stable|beta)_(\d+(?:-\d+)*)$/i)
+        "#{match[1]},#{match[2]}:#{match[3]}" if match
+      end.compact
     end
   end
 
