@@ -19,7 +19,7 @@ cask "vsd-viewer" do
   zap trash: [
     "~/Library/Application Support/VSD Viewer",
     "~/Library/Caches/com.nektony.vsdviewers",
-    "~/Library/Preferences/com.nektony.vsdviewers.plist",
     "~/Library/Cookies/com.nektony.vsdviewers.binarycookies",
+    "~/Library/Preferences/com.nektony.vsdviewers.plist",
   ]
 end
