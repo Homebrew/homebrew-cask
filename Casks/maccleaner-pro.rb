@@ -4,7 +4,7 @@ cask "maccleaner-pro" do
 
   url "https://nektony.com/download/mac-cleaner-pro/dmg/mac-cleaner-pro.dmg"
   name "Nektony MacCleaner Pro"
-  desc "All-in-one tool to delete junk, unnecessary files and fodlers, speed up computer"
+  desc "Delete junk, unnecessary files and folders, and speed up your computer"
   homepage "https://nektony.com/mac-cleaner-pro"
 
   livecheck do
@@ -14,7 +14,7 @@ cask "maccleaner-pro" do
 
   depends_on macos: ">= :yosemite"
 
-  app "MacCleaner 2 Pro"
+  app "MacCleaner #{version.major} Pro"
 
   zap trash: [
     "~/Library/Application Scripts/com.nektony.MacCleaner-PRO-SII",
