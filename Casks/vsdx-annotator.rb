@@ -19,7 +19,7 @@ cask "vsdx-annotator" do
   zap trash: [
     "~/Library/Application Support/VSDX Annotator",
     "~/Library/Caches/com.nektony.vsdx-annotators",
-    "~/Library/Preferences/com.nektony.vsdx-annotators.plist",
     "~/Library/Cookies/com.nektony.vsdx-annotators.binarycookies",
+    "~/Library/Preferences/com.nektony.vsdx-annotators.plist",
   ]
 end
