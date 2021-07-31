@@ -10,8 +10,8 @@ cask "adobe-acrobat-pro" do
   homepage "https://acrobat.adobe.com/us/en/acrobat/pdf-reader.html"
 
   livecheck do
-    url "https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/index.html"
-    regex(/(\d+(?:\.\d+)*)\s(planned|optional)\supdate/i)
+    url "https://armmf.adobe.com/arm-manifests/mac/AcrobatDC/acrobat/current_version.txt"
+    regex(/(\d+(?:\.\d+)*)/i)
   end
 
   pkg "Acrobat DC/Acrobat DC Installer.pkg"
