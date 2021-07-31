@@ -8,8 +8,8 @@ cask "cloudflare-warp" do
   homepage "https://cloudflarewarp.com/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://api.appcenter.ms/v0.1/public/sparkle/apps/87d9992a-351c-44a9-849b-3f9a89d63d18"
+    strategy :sparkle
   end
 
   auto_updates true
