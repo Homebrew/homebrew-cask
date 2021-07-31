@@ -8,6 +8,8 @@ cask "cloudflare-warp" do
   homepage "https://cloudflarewarp.com/"
 
   livecheck do
+    # :sparkle strategy using appcenter url cannot be used - see below link
+    # https://github.com/Homebrew/homebrew-cask/pull/109118#issuecomment-887184248
     url :url
     strategy :extract_plist
   end
