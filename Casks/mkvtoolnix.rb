@@ -1,6 +1,6 @@
 cask "mkvtoolnix" do
-  version "59.0.0.1"
-  sha256 "69a1c4542b1674738e3bb2d13c1c8c627e5886387843c480d31702dab91eef60"
+  version "60.0.0"
+  sha256 "d6a4b4a26d337098af78e8eeb353249e21858dc568d24cacfb8b1d5fc9929a13"
 
   url "https://mkvtoolnix.download/macos/MKVToolNix-#{version}.dmg"
   name "MKVToolNix"
