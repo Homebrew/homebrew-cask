@@ -28,7 +28,7 @@ cask "private-internet-access" do
 
   zap trash: [
     "~/Library/Application Support/com.privateinternetaccess.vpn",
-    "~/Library/LaunchDaemons/com.privateinternetaccess.vpn",
+    "~/Library/LaunchAgents/com.privateinternetaccess.vpn",
     "~/Library/Preferences/com.privateinternetaccess.vpn",
     "~/Library/Preferences/com.privateinternetaccess.vpn.plist",
   ]
