@@ -8,8 +8,8 @@ cask "adobe-acrobat-reader" do
   homepage "https://acrobat.adobe.com/us/en/acrobat/pdf-reader.html"
 
   livecheck do
-    url "https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/index.html"
-    regex(/<em>(\d+(?:\.\d+)*) /i)
+    url "https://armmf.adobe.com/arm-manifests/mac/AcrobatDC/reader/current_version.txt"
+    regex(/(\d+(?:\.\d+)*)/i)
   end
 
   auto_updates true
