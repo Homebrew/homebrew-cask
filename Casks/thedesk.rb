@@ -14,4 +14,10 @@ cask "thedesk" do
   end
 
   app "TheDesk.app"
+
+  zap trash: [
+    "~/Library/Application Support/thedesk",
+    "~/Library/Preferences/top.thedesk.plist",
+    "~/Library/Saved Application State/top.thedesk.savedState",
+  ]
 end
