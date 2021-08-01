@@ -14,4 +14,9 @@ cask "fluent-reader" do
   end
 
   app "Fluent Reader.app"
+
+  zap trash: [
+    "~/Library/Preferences/me.hyliu.fluentreader.plist",
+    "~/Application Support/fluent-reader"
+  ]
 end
