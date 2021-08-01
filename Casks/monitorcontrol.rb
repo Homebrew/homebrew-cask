@@ -10,4 +10,10 @@ cask "monitorcontrol" do
   depends_on macos: ">= :sierra"
 
   app "MonitorControl.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/me.guillaumeb.MonitorControlHelper",
+    "~/Library/Containers/me.guillaumeb.MonitorControlHelper",
+    "~/Library/Preferences/me.guillaumeb.MonitorControl.plist",
+  ]
 end
