@@ -21,4 +21,6 @@ cask "adoptopenjdk" do
   pkg "OpenJDK#{version.major}U-jdk_x64_mac_hotspot_#{version.before_comma}_#{version.after_comma.major}.pkg"
 
   uninstall pkgutil: "net.adoptopenjdk.#{version.major}.jdk"
+
+  # TODO: find way to deprecate cask. this has been replaced by temurin
 end
