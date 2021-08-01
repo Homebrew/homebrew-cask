@@ -9,4 +9,11 @@ cask "whalebird" do
   homepage "https://whalebird.social/"
 
   app "Whalebird.app"
+
+  zap trash: [
+    "~/Library/Application Support/Whalebird",
+    "~/Library/Logs/Whalebird",
+    "~/Library/Preferences/org.whalebird.desktop.plist",
+    "~/Library/Saved Application State/org.whalebird.desktop.savedState",
+  ]
 end
