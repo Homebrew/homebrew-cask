@@ -3,7 +3,7 @@ cask "duplicate-file-finder" do
   sha256 :no_check
 
   url "https://nektony.com/download/duplicate-file-finder/duplicate-file-finder.dmg"
-  name "duplicate-file-finder"
+  name "Duplicate File Finder"
   desc "Find and remove unwanted duplicate files and folders"
   homepage "https://nektony.com/duplicate-finder-free"
 
