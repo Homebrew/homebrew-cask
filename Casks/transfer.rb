@@ -17,9 +17,9 @@ cask "transfer" do
   app "Transfer.app"
 
   zap trash: [
-   "~/Library/Application Support/Transfer",
-   "~/Library/Caches/com.adriangranados.Transfer",
-   "~/Library/Preferences/com.adriangranados.Transfer.plist",
-   "~/Transfer",
+    "~/Library/Application Support/Transfer",
+    "~/Library/Caches/com.adriangranados.Transfer",
+    "~/Library/Preferences/com.adriangranados.Transfer.plist",
+    "~/Transfer",
   ]
 end
