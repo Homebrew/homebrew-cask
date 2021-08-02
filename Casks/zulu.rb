@@ -1,7 +1,7 @@
 cask "zulu" do
   if Hardware::CPU.intel?
-    version "16.0.1,16.30.15-ca"
-    sha256 "a9988581a95f00da7768562f19632a71e13b7d695329b074504b8b6883a6dc30"
+    version "16.0.2,16.32.15-ca"
+    sha256 "59dcf9c1c5ac4acbf27319c2dfb38fd26c97663dbac1a1d931fb94cec6864de2"
 
     url "https://cdn.azul.com/zulu/bin/zulu#{version.after_comma}-jdk#{version.before_comma}-macosx_x64.dmg",
         referer: "https://www.azul.com/downloads/zulu/zulu-mac/"
@@ -35,7 +35,7 @@ cask "zulu" do
 
   depends_on macos: ">= :sierra"
 
-  pkg "Double-Click to Install Zulu #{version.major}.pkg"
+  pkg "Double-Click to Install Azul Zulu JDK #{version.major}.pkg"
 
   uninstall pkgutil: "com.azulsystems.zulu.#{version.major}"
 end
