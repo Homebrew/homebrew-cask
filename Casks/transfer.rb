@@ -7,6 +7,11 @@ cask "transfer" do
   desc "Standalone TFTP, FTP, and SFTP server"
   homepage "https://www.intuitibits.com/products/transfer/"
 
+  livecheck do
+    url "https://www.intuitibits.com/appcasts/transfercast.xml"
+    strategy :sparkle
+  end
+
   depends_on macos: ">= :mojave"
 
   app "Transfer.app"
