@@ -1,16 +1,12 @@
 cask "angband" do
-  version "4.2.2"
-  sha256 "5b5966e4ab0d1fce7067261cff7a209b0d617a7e1130f408dc62e78466c79b92"
+  version "4.2.3"
+  sha256 "e18f04821e96193a10dd83241715233885bde22b0c818637865fa13330244f67"
 
-  url "https://github.com/angband/angband/releases/download/#{version}/Angband-#{version}-osx.dmg"
+  url "https://github.com/angband/angband/releases/download/#{version}/Angband-#{version}-osx.dmg",
+      verified: "github.com/angband/angband/"
   name "Angband"
   desc "Dungeon exploration game"
-  homepage "https://github.com/angband/angband"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  homepage "https://angband.github.io/angband/"
 
   depends_on macos: ">= :sierra"
 
