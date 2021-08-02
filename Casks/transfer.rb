@@ -12,11 +12,11 @@ cask "transfer" do
   app "Transfer.app"
 
   zap trash: [
-  "~/Library/Application Support/Transfer",
-  "~/Library/Caches/com.adriangranados.Transfer",
-  "~/Library/Caches/com.apple.helpd/Generated/com.intuitibits.transfer.help*2.0",
-  "~/Library/Group Containers/com.apple.MessagesLegacyTransferArchive",
-  "~/Library/Preferences/com.adriangranados.Transfer.plist",
-  "~/Transfer",
-]
+    "~/Library/Application Support/Transfer",
+    "~/Library/Caches/com.adriangranados.Transfer",
+    "~/Library/Caches/com.apple.helpd/Generated/com.intuitibits.transfer.help*2.0",
+    "~/Library/Group Containers/com.apple.MessagesLegacyTransferArchive",
+    "~/Library/Preferences/com.adriangranados.Transfer.plist",
+    "~/Transfer",
+  ]
 end
