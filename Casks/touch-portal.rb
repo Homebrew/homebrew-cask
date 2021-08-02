@@ -1,9 +1,9 @@
 cask "touch-portal" do
-  version "2.3.010"
+  version :latest
   sha256 :no_check
 
   url "https://www.touch-portal.com/downloads/Touch_Portal_Installer.pkg"
-  name "Touch portal"
+  name "Touch Portal"
   desc "Macro remote control"
   homepage "https://www.touch-portal.com/"
 
