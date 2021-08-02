@@ -10,11 +10,11 @@ cask "touch-portal" do
   app "TouchPortal.app"
   pkg "Touch_Portal_Installer.pkg"
 
-  uninstall delete: [
-    "/Applications/TouchPortal.app",
-  ]
-
-  # uninstall pkgutil: [
-  #   "org.eclipse.jdt.internal.jarinjarloader",
+  # uninstall delete: [
+  #   "/Applications/TouchPortal.app",
   # ]
+
+  uninstall pkgutil: [
+    "org.eclipse.jdt.internal.jarinjarloader",
+  ]
 end
