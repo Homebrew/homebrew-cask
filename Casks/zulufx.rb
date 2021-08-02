@@ -17,6 +17,14 @@ cask "zulufx" do
   desc "Azul ZuluFX Java Standard Edition Development Kit"
   homepage "https://www.azul.com/downloads/"
 
+  livecheck do
+    url "https://api.azul.com/zulu/download/community/v1.0/bundles/latest/?jdk_version=#{version.major}&ext=dmg&os=macos"
+    strategy :page_match do |page|
+      match = page.match(%r{url"\s*:\s*"https:.*?/zulu(\d+(?:\.\d+)*-.*?)-jdk(\d+(?:\.\d+)*)-macos}i)
+      "#{match[2]},#{match[1]}"
+    end
+  end
+
   depends_on macos: ">= :sierra"
 
   pkg "Double-Click to Install ZuluFX #{version.major}.pkg"
