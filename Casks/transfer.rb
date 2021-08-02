@@ -4,10 +4,19 @@ cask "transfer" do
 
   url "https://www.intuitibits.com/downloads/Transfer_#{version.before_comma}.dmg"
   name "transfer"
-  desc "A standalone TFTP, FTP, and SFTP server for your Mac."
+  desc "Standalone TFTP, FTP, and SFTP server"
   homepage "https://www.intuitibits.com/products/transfer/"
 
   depends_on macos: ">= :mojave"
 
   app "Transfer.app"
+
+  zap trash: [
+  "~/Library/Application Support/Transfer",
+  "~/Library/Caches/com.adriangranados.Transfer",
+  "~/Library/Caches/com.apple.helpd/Generated/com.intuitibits.transfer.help*2.0",
+  "~/Library/Group Containers/com.apple.MessagesLegacyTransferArchive",
+  "~/Library/Preferences/com.adriangranados.Transfer.plist",
+  "~/Transfer",
+]
 end
