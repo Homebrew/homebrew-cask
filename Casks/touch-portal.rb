@@ -3,18 +3,17 @@ cask "touch-portal" do
   sha256 :no_check
 
   url "https://www.touch-portal.com/downloads/Touch_Portal_Installer.pkg"
-  name "touch-portal"
+  name "Touch portal"
   desc "Macro remote control"
   homepage "https://www.touch-portal.com/"
+
+  livecheck do
+    url :homepage
+    regex(/\.pkg.*\n.*<br>v?(\d+(?:\.\d+)*)/i)
+  end
 
   app "TouchPortal.app"
   pkg "Touch_Portal_Installer.pkg"
 
-  # uninstall delete: [
-  #   "/Applications/TouchPortal.app",
-  # ]
-
-  uninstall pkgutil: [
-    "org.eclipse.jdt.internal.jarinjarloader",
-  ]
+  uninstall pkgutil: "org.eclipse.jdt.internal.jarinjarloader"
 end
