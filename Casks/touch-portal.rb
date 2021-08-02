@@ -12,7 +12,6 @@ cask "touch-portal" do
     regex(/\.pkg.*\n.*<br>v?(\d+(?:\.\d+)*)/i)
   end
 
-  app "TouchPortal.app"
   pkg "Touch_Portal_Installer.pkg"
 
   uninstall pkgutil: "org.eclipse.jdt.internal.jarinjarloader"
