@@ -1,6 +1,6 @@
 cask "nordvpn" do
-  version "6.5.0,165"
-  sha256 "7162ed0dc3c240ea6b2082b9f277a832ea3f24dc49a3d4f66f506502cc3abfbc"
+  version "6.6.1,167"
+  sha256 "80144b64333f82ae0b2993f937dceab1feed7d1532ac18cbaf3f9fdcf304f6e7"
 
   url "https://downloads.nordcdn.com/apps/macos/generic/NordVPN-OpenVPN/#{version.before_comma}/NordVPN.pkg",
       verified: "downloads.nordcdn.com/"
@@ -18,26 +18,26 @@ cask "nordvpn" do
   pkg "NordVPN.pkg"
 
   uninstall quit:       [
-    "com.nordvpn.osx",
-    "com.nordvpn.osx.NordVPNLauncher",
+    "com.nordvpn.macos",
+    "com.nordvpn.macos.NordVPNLauncher",
   ],
             launchctl:  [
-              "com.nordvpn.osx.helper",
+              "com.nordvpn.macos.helper",
               "com.nordvpn.NordVPN.Helper",
             ],
             delete:     [
-              "/Library/PrivilegedHelperTools/com.nordvpn.osx.helper",
-              "/Library/PrivilegedHelperTools/com.nordvpn.osx.ovpnDnsManager",
+              "/Library/PrivilegedHelperTools/com.nordvpn.macos.helper",
+              "/Library/PrivilegedHelperTools/com.nordvpn.macos.ovpnDnsManager",
             ],
             login_item: "NordVPN",
-            pkgutil:    "com.nordvpn.osx"
+            pkgutil:    "com.nordvpn.macos"
 
   zap trash: [
-    "~/Library/Application Support/com.nordvpn.osx",
-    "~/Library/Caches/com.nordvpn.osx",
+    "~/Library/Application Support/com.nordvpn.macos",
+    "~/Library/Caches/com.nordvpn.macos",
     "~/Library/Logs/NordVPN/",
-    "~/Library/Preferences/com.nordvpn.osx.plist",
-    "~/Library/Saved Application State/com.nordvpn.osx.savedState",
-    "~/Library/Cookies/com.nordvpn.osx.binarycookies",
+    "~/Library/Preferences/com.nordvpn.macos.plist",
+    "~/Library/Saved Application State/com.nordvpn.macos.savedState",
+    "~/Library/Cookies/com.nordvpn.macos.binarycookies",
   ]
 end
