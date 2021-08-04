@@ -4,6 +4,7 @@ cask "8bitdo-ultimate-software" do
 
   url "http://tools.8bitdo.com/8BitdoUltimateSoftware/8BitDoUltimateSoftwareV#{version}.zip"
   name "8BitDo Ultimate Software"
+  desc "Control every piece of your controller"
   homepage "https://support.8bitdo.com/ultimate-software.html"
 
   livecheck do
