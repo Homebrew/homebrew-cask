@@ -1,6 +1,6 @@
 cask "mattermost" do
-  version "4.7.0"
-  sha256 "d176db0d7749ecde60b94188f377ea53e9d8725f429c2badebbb8519d7ba3c9c"
+  version "4.7.1"
+  sha256 "e4c580ebb9b6c55da2569cf0ee6dbcbed413310213a9bf86e6cdf7b716226a93"
 
   url "https://releases.mattermost.com/desktop/#{version}/mattermost-desktop-#{version}-mac.zip"
   name "Mattermost"
@@ -8,7 +8,7 @@ cask "mattermost" do
   homepage "https://about.mattermost.com/"
 
   livecheck do
-    url "https://docs.mattermost.com/install/desktop.html#macos-10-9"
+    url "https://docs.mattermost.com/install/desktop-app-install.html#macos-10-9"
     strategy :page_match
     regex(%r{href=.*?/mattermost-desktop-(\d+(?:\.\d+)*)-mac\.dmg}i)
   end
