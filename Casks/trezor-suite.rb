@@ -9,9 +9,13 @@ cask "trezor-suite" do
 
   livecheck do
     url :homepage
-    strategy :page_match
     regex(/href=.*?Trezor-Suite-(\d+(?:\.\d+)*)-/i)
   end
 
   app "Trezor Suite.app"
+
+  zap trash: [
+    "~/Library/Application Support/@trezor/suite-desktop",
+    "~/Library/Preferences/io.trezor.TrezorSuite.plist",
+  ]
 end
