@@ -20,7 +20,7 @@ cask "nextcloud" do
   depends_on macos: ">= :yosemite"
 
   pkg "Nextcloud-#{version}.pkg"
-  binary "#{appdir}/nextcloud.app/Contents/MacOS/nextcloudcmd"
+  binary "#{appdir}/Nextcloud.app/Contents/MacOS/nextcloudcmd"
 
   uninstall pkgutil: "com.nextcloud.desktopclient"
 
