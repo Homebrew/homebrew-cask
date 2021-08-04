@@ -5,6 +5,7 @@ cask "astropad-studio" do
   url "https://s3.amazonaws.com/astropad.com/downloads/AstropadStudio-#{version.before_comma}.dmg",
       verified: "s3.amazonaws.com/astropad.com/"
   name "Astropad Studio"
+  desc "Turn your iPad into a professional drawing tablet"
   homepage "https://astropad.com/"
 
   livecheck do
