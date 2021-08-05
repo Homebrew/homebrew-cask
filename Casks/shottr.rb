@@ -7,5 +7,12 @@ cask "shottr" do
   desc "Screenshot measurement and annotation tool"
   homepage "https://shottr.cc/"
 
+  livecheck do
+    url :homepage
+    regex(/Shottr-(\d+(?:.\d+)*)\.dmg/i)
+  end
+
+  depends_on macos: ">= :catalina"
+
   app "Shottr.app"
 end
