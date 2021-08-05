@@ -4,7 +4,7 @@ cask "trezor-suite" do
 
   url "https://suite.trezor.io/web/static/desktop/Trezor-Suite-#{version}-mac.dmg"
   name "TREZOR Suite"
-  desc "Managing crypto just got safer and easier"
+  desc "Companion app for the Trezor hardware wallet"
   homepage "https://suite.trezor.io/"
 
   livecheck do
