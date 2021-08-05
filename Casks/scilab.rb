@@ -1,6 +1,6 @@
 cask "scilab" do
   version "6.1.1"
-  sha256 "405a60a4a910c065e2a01fb4f2672766cc0ebeafae847a6fa5f675068b74fcec"
+  sha256 "9e2c18ac6391ce43b068a997fa5dd959a62c3d02fc2499e018c0e88c1aff8eaf"
 
   url "https://www.utc.fr/~mottelet/scilab/download/#{version}/scilab-#{version}-x86_64.dmg",
       verified: "utc.fr/~mottelet/scilab/"
@@ -21,11 +21,5 @@ cask "scilab" do
 
   caveats do
     depends_on_java "8"
-
-    <<~EOS
-      If prompted to install the legacy Java 6, use the enableJDK tool provided by the vendor to enable installed JDK to use with #{token}:
-
-        https://www.utc.fr/~mottelet/scilab_for_macOS.html
-    EOS
   end
 end
