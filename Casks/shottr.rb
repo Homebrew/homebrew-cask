@@ -8,4 +8,11 @@ cask "shottr" do
   homepage "https://shottr.cc/"
 
   app "Shottr.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/cc.ffitch.shottr",
+    "~/Library/Containers/cc.ffitch.shottr",
+    "~/Library/Application Scripts/cc.ffitch.shottr-LaunchAtLoginHelper",
+    "~/Library/Containers/cc.ffitch.shottr-LaunchAtLoginHelper",
+  ]
 end
