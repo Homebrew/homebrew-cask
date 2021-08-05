@@ -1,6 +1,6 @@
 cask "portx" do
   version "1.1.5,8"
-  sha256 :no_check
+  sha256 "SOME_SHA"
 
   url "https://cdn.netsarang.net/0ac7ea20/PortX-1.1.5.dmg",
       verified: "cdn.netsarang.net/"
