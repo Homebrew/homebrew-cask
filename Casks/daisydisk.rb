@@ -1,5 +1,5 @@
 cask "daisydisk" do
-  version "4.20.3"
+  version "4.20.5"
   sha256 :no_check
 
   url "https://www.daisydiskapp.com/downloads/DaisyDisk.zip"
