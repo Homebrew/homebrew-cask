@@ -1,5 +1,5 @@
 cask "spotify" do
-  version "1.1.64.561.g71bd09eb,1.1.64.561.g71bd09eb-18"
+  version "1.1.65.643.g2d707698,1.1.65.643.g2d707698-28"
   sha256 :no_check
 
   url "https://download.scdn.co/Spotify.dmg",
