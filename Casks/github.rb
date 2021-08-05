@@ -3,11 +3,11 @@ cask "github" do
 
   if Hardware::CPU.intel?
     sha256 "2f799a2ee4d9d9e359dbea2ed9759dd412021bf2c03f2c54740e5a6e95c947ea"
-    url "https://desktop.githubusercontent.com/releases/#{version}/GitHubDesktop-x64.zip",
+    url "https://desktop.githubusercontent.com/github-desktop/releases/#{version}/GitHubDesktop-x64.zip",
         verified: "githubusercontent.com/"
   else
     sha256 "6739b2477a747761caa89fda1e68b8a362fec693accf8f2173b2f6954698d537"
-    url "https://desktop.githubusercontent.com/releases/#{version}/GitHubDesktop-arm64.zip",
+    url "https://desktop.githubusercontent.com/github-desktop/releases/#{version}/GitHubDesktop-arm64.zip",
         verified: "githubusercontent.com/"
   end
 
