@@ -15,4 +15,11 @@ cask "gosign" do
   depends_on macos: ">= :high_sierra"
 
   app "GoSign-Desktop.app"
+
+  zap trash: [
+    "~/Library/Application Support/GoSign Desktop",
+    "~/Library/Preferences/it.infocert.desktop.gosign.plist",
+    "~/Library/Saved Application State/it.infocert.desktop.gosign.savedState",
+    "~/.gosign",
+  ]
 end
