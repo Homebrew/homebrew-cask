@@ -3,23 +3,23 @@ cask "jiohome" do
   sha256 "1aac43d4c5c196eb60f79afd9a6e9db3b7edc16678c3dbc8debfef14a79254f5"
 
   url "https://static.jiocloud.com/artifacts/JioHome#{version}.dmg",
-      verified: "static.jiocloud.com"
-  name "jiohome"
-  desc "On MAC"
+      verified: "static.jiocloud.com/artifacts/"
+  name "JioHome"
+  desc "View and share local media content"
   homepage "https://www.jio.com/en-in/apps/jiohome-desktop"
+
+  livecheck do
+    skip "No version information available"
+  end
 
   pkg "JioHome#{version}.pkg"
 
-  uninstall quit:
-                     "com.jio.jiomediashare",
+  uninstall quit:    "com.jio.jiomediashare",
             pkgutil: "com.jio.jiomediashare"
 
   zap trash: [
-    "/Library/JioAgent",
     "~/Library/.JioHomeFiles",
     "~/Library/Caches/com.jio.jiomediashare",
     "~/Library/Preferences/com.jio.jiomediashare.plist",
-    "/var/db/receipts/com.jio.jiomediashare.bom",
-    "/var/db/receipts/com.jio.jiomediashare.plist",
   ]
 end
