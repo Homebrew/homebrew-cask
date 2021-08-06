@@ -1,5 +1,5 @@
 cask "ocenaudio" do
-  version "3.10.10"
+  version "3.10.11"
   sha256 :no_check
 
   if MacOS.version <= :high_sierra
