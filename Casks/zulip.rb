@@ -3,6 +3,7 @@ cask "zulip" do
 
   if Hardware::CPU.intel?
     sha256 "ccf3ec50b1c3d1dd92d0b5c3307514b73f72056b56e9015b8e911b2fa2dcd887"
+
     url "https://github.com/zulip/zulip-desktop/releases/download/v#{version}/Zulip-#{version}-x64.dmg",
         verified: "github.com/zulip/zulip-desktop/"
   else
@@ -13,7 +14,7 @@ cask "zulip" do
   end
 
   name "Zulip"
-  desc "Desktop client for the Zulip open source team chat platform"
+  desc "Desktop client for the Zulip team chat platform"
   homepage "https://zulipchat.com/apps/"
 
   auto_updates true
