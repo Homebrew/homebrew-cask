@@ -1,6 +1,6 @@
 cask "lightkey" do
-  version "3.7"
-  sha256 "1f9ac9e98b3a07c2feff055a7e0fca4b39a8a5335f90fc23ba13fad024fe3ccc"
+  version "3.7.1"
+  sha256 "de5a20af40985b88d2992c24a236d2b7062142099d9cf734b1e786c0bb0246e8"
 
   url "https://lightkeyapp.com/content/06-download/Lightkey-#{version.dots_to_hyphens}/LightkeyInstaller.zip"
   name "Lightkey"
