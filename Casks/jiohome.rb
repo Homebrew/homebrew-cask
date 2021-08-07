@@ -9,7 +9,8 @@ cask "jiohome" do
   homepage "https://www.jio.com/en-in/apps/jiohome-desktop"
 
   livecheck do
-    skip "No version information available"
+    url "https://www.jio.com/en-in/apps/jiohome-desktop#download"
+    regex(/href=.*?JioHome[._-]?v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   pkg "JioHome#{version}.pkg"
