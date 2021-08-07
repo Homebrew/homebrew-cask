@@ -11,8 +11,8 @@ cask "chromium" do
       regex(/v?(\d+(?:\.\d+)*)/i)
     end
   else
-    version "904870"
-    sha256 "8058b862da2cb89cae1219fac8fae4ec4e980ee3ba7d4233c9eb4fa34befd68b"
+    version "909619"
+    sha256 "5f6e20fab53e884de7c082c9c46ddce92da0bf51aa2d4b2b5becc3e8dbd9995d"
 
     url "https://commondatastorage.googleapis.com/chromium-browser-snapshots/Mac_Arm/#{version}/chrome-mac.zip",
         verified: "commondatastorage.googleapis.com/chromium-browser-snapshots/Mac_Arm/"
