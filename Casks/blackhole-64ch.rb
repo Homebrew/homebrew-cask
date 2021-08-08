@@ -1,9 +1,9 @@
-cask "blackhole-16ch" do
+cask "blackhole-64ch" do
   version "0.2.10"
-  sha256 "804b3925abb34762a7c1e027376d500809133ab3f15bec8008a79676dca08cfa"
+  sha256 "f41910b62659ce58128738eed8df227b6cdfc55465d6856fcdfaa44526e83734"
 
-  url "https://existential.audio/downloads/BlackHole16ch.v#{version}.pkg"
-  name "BlackHole 16ch"
+  url "https://existential.audio/downloads/BlackHole64ch.v#{version}.pkg"
+  name "BlackHole 64ch"
   desc "Virtual Audio Driver"
   homepage "https://existential.audio/blackhole/"
 
@@ -12,7 +12,7 @@ cask "blackhole-16ch" do
     strategy :github_latest
   end
 
-  pkg "BlackHole16ch.v#{version}.pkg"
+  pkg "BlackHole64ch.v#{version}.pkg"
 
   uninstall_postflight do
     system_command "/bin/launchctl",
@@ -26,5 +26,5 @@ cask "blackhole-16ch" do
   end
 
   uninstall quit:    "com.apple.audio.AudioMIDISetup",
-            pkgutil: "audio.existential.BlackHole16ch"
+            pkgutil: "audio.existential.BlackHole64ch"
 end
