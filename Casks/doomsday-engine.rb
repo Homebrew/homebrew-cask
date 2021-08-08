@@ -8,8 +8,8 @@ cask "doomsday-engine" do
   homepage "https://dengine.net/"
 
   livecheck do
-    url "https://github.com/skyjake/Doomsday-Engine"
-    strategy :github_latest
+    url "https://files.dengine.net/archive/"
+    regex(/doomsday_(\d+(?:\.\d+)*)_x86_64\.dmg/i)
   end
 
   app "Doomsday.app"
