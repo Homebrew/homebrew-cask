@@ -1,6 +1,6 @@
 cask "doomsday-engine" do
-  version "2.3.0"
-  sha256 "83b5d3f13e97119ca347a4f463adbb4a96a4b10f5f4f8367da2856ad18305be5"
+  version "2.3.1"
+  sha256 "2966e93058969177005d6acf233c434fee9b82e6e92b34dfdda8ea0a7fcaa136"
 
   url "https://files.dengine.net/archive/doomsday_#{version}_x86_64.dmg"
   name "Doomsday Engine"
