@@ -1,5 +1,5 @@
 cask "disk-expert" do
-  version "3.6.1,358"
+  version "3.6.2,359"
   sha256 :no_check
 
   url "https://nektony.com/download/diskexpert/diskexpert.dmg"
