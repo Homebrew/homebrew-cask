@@ -1,5 +1,5 @@
 cask "duplicate-file-finder" do
-  version "6.14.2,520"
+  version "6.14.3,528"
   sha256 :no_check
 
   url "https://nektony.com/download/duplicate-file-finder/duplicate-file-finder.dmg"
