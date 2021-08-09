@@ -4,7 +4,7 @@ cask "secretive" do
     sha256 "d8522c153f20cd03513e6815bdb46be98eae0db2b2a45d30f60b25a6609d1657"
 
     livecheck do
-      skip "Legacy version for MacOS Catalina"
+      skip "Legacy version for macOS Catalina"
     end
   else
     version "2.1.1"
