@@ -1,6 +1,6 @@
 cask "nightfall" do
-  version "2.1.1"
-  sha256 "ad6242cbf9477a34b19d38f9c39dbc354dd3eca75c6585837757503bc5302b22"
+  version "2.1.2"
+  sha256 "2271003b550c8fd75d3c8e6cf987e54e892c10eef12f5cb03f72dee7731d989b"
 
   url "https://github.com/r-thomson/Nightfall/releases/download/v#{version}/Nightfall.dmg"
   name "Nightfall"
