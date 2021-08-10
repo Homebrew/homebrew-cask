@@ -1,6 +1,6 @@
 cask "transmit" do
-  version "5.7.4"
-  sha256 "7706072f43f615b83ba2e227bcd6e0a79f3eb15363d0b6ce982a4729c6dc28bd"
+  version "5.7.5"
+  sha256 "0c123d7f9a853a2df1a0db64dddc35797e1471fc15827eeb7d38e64a0b9d034a"
 
   url "https://www.panic.com/transmit/d/Transmit%20#{version}.zip"
   name "Transmit"
