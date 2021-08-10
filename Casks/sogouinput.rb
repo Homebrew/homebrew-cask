@@ -5,7 +5,16 @@ cask "sogouinput" do
   url "http://cdn2.ime.sogou.com/dl/index/#{version.after_comma}/sogou_mac_#{version.before_comma}.zip"
   name "Sogou Input Method"
   name "搜狗输入法"
+  desc "Input method supporting full and double spelling"
   homepage "https://pinyin.sogou.com/mac/"
+
+  livecheck do
+    url :homepage
+    strategy :page_match do |page|
+      match = page.match(%r{/(\d+(?:\.\d+)*)/sogou_mac_(\d+(?:.\d+).*)\.zip}i)
+      "#{match[2]},#{match[1]}"
+    end
+  end
 
   installer manual: "sogou_mac_#{version.before_comma}.app"
 
