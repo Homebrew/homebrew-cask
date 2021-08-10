@@ -1,6 +1,6 @@
 cask "zy-player" do
-  version "2.8.4"
-  sha256 "33e72034ce471bb0b8b635c103f7736464b53c4bae3af1a839661feadfcfda2a"
+  version "2.8.5"
+  sha256 "6ea222c64b979e096efbf4126cbdc2b2c700ca2da60dc17a6961d61a272d6e74"
 
   url "https://github.com/Hunlongyu/ZY-Player/releases/download/v#{version}/ZY-Player-#{version}.dmg"
   name "ZY Player"
