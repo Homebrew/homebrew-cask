@@ -1,5 +1,5 @@
 cask "butler" do
-  version "4.4.2,5113"
+  version "4.4.3,5114"
   sha256 :no_check
 
   url "https://manytricks.com/download/butler"
