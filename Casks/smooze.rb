@@ -4,6 +4,7 @@ cask "smooze" do
 
   url "https://smooze.co/updates/Smooze.dmg"
   name "Smooze"
+  desc "Rediscover your scroll wheel mouse"
   homepage "https://smooze.co/"
 
   livecheck do
