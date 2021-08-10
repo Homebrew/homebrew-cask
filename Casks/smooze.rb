@@ -1,9 +1,10 @@
 cask "smooze" do
-  version "1.9.16,476"
+  version "1.9.19,485"
   sha256 :no_check
 
   url "https://smooze.co/updates/Smooze.dmg"
   name "Smooze"
+  desc "Rediscover your scroll wheel mouse"
   homepage "https://smooze.co/"
 
   livecheck do
