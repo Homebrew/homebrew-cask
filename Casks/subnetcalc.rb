@@ -3,8 +3,8 @@ cask "subnetcalc" do
     version "1.1"
     sha256 "19157baacac0cede6849356cb305a0ed2e4290e1e9e8ac4b691fd1d7ce1920cf"
   else
-    version "2.1"
-    sha256 "5b471b70c53e1b162922f8bc3f337da35224dcc38bd38424e4ed00c1a83fec0d"
+    version "2.2"
+    sha256 "d8e19d83843e179127016c996f99d0b7f812e0e44a90a7efc3033b03979700e1"
   end
 
   url "http://subnetcalc.free.fr/download/subnetcalc-#{version}.dmg"
