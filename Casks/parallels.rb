@@ -1,7 +1,7 @@
 cask "parallels" do
   if Hardware::CPU.intel?
-    version "16.5.1-49187"
-    sha256 "01fe58c43ea1df24b7e9231340bf28b12fd1472b777b05687452bcb24d337944"
+    version "17.0.0-51461"
+    sha256 "df9fe6f571bd761e4aa1c4d9bf82a953ea626841bfae95c3ffa3904421e2f7d2"
 
     livecheck do
       url "https://www.parallels.com/directdownload/pd#{version.major}/intel/"
