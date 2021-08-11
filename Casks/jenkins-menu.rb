@@ -7,6 +7,11 @@ cask "jenkins-menu" do
   desc "Menu item which shows the status of a Jenkins CI server"
   homepage "https://github.com/qvacua/jenkins-menu/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Jenkins Menu.app"
 
   zap trash: [

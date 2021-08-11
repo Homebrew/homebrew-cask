@@ -7,5 +7,11 @@ cask "launchy" do
   desc "Utility desktop shortcut utility"
   homepage "https://www.launchy.net/"
 
+  livecheck do
+    url "https://www.launchy.net/download.php"
+    strategy :page_match
+    regex(%r{href=.*?/Launchy(\d+(?:\.\d+)*)\.dmg}i)
+  end
+
   app "Launchy.app"
 end

@@ -8,5 +8,10 @@ cask "openrefine" do
   desc "Tool for working with messy data (previously Google Refine)"
   homepage "https://openrefine.org/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "OpenRefine.app"
 end

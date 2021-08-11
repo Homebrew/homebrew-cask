@@ -10,6 +10,12 @@ cask "baiducloud" do
   desc "Comprehensive Cloud service provided by Baidu"
   homepage "https://pan.baidu.com/"
 
+  livecheck do
+    url "https://pan.baidu.com/download"
+    strategy :page_match
+    regex(%r{href=.*?/BaiduNetdisk_mac_(\d+(?:\.\d+)*)\.dmg}i)
+  end
+
   app "BaiduNetdisk_mac.app"
 
   uninstall quit: "com.baidu.netdiskmac"
