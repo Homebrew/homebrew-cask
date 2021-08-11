@@ -22,8 +22,13 @@ cask "adoptopenjdk" do
 
   uninstall pkgutil: "net.adoptopenjdk.#{version.major}.jdk"
 
-  caveats <<~EOS
-    This cask is officially deprecated in favor of temurin:
-      brew install --cask temurin
-  EOS
+  caveats do
+    discontinued
+
+    <<~EOS
+      Terumin is the official successor to this software:
+
+        brew install --cask temurin
+    EOS
+  end
 end
