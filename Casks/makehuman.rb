@@ -6,6 +6,7 @@ cask "makehuman" do
       verified: "tuxfamily.org/makehuman/"
   appcast "https://download.tuxfamily.org/makehuman/releases/"
   name "MakeHuman"
+  desc "Open Souce tool for making 3D characters"
   homepage "http://www.makehuman.org/"
 
   depends_on macos: ">= :sierra"

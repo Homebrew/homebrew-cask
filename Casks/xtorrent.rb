@@ -4,6 +4,7 @@ cask "xtorrent" do
 
   url "http://www.xtorrent.com/Xtorrent#{version.before_comma}(#{version.after_comma}).dmg"
   name "Xtorrent"
+  desc "Torrent client"
   homepage "http://www.xtorrent.com/"
 
   app "Xtorrent.app"

@@ -4,6 +4,7 @@ cask "launchy" do
 
   url "https://www.launchy.net/downloads/mac/Launchy#{version}.dmg"
   name "Launchy"
+  desc "Utility desktop shortcut utility"
   homepage "https://www.launchy.net/"
 
   app "Launchy.app"

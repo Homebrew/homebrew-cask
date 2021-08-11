@@ -6,6 +6,7 @@ cask "retro-virtual-machine" do
       verified: "retrovirtualmachine.ams3.digitaloceanspaces.com/"
   appcast "https://www.retrovirtualmachine.org/en/downloads"
   name "Retro Virtual Machine"
+  desc "ZX Spectrum and Amstrad CPC emulator"
   homepage "https://www.retrovirtualmachine.org/en/"
 
   app "Retro Virtual Machine #{version.major}.app"

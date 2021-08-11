@@ -4,6 +4,7 @@ cask "superbeam" do
 
   url "https://superbe.am/download/5163"
   name "SuperBeam"
+  desc "File sharing utility for Android devices"
   homepage "https://superbe.am/"
 
   app "SuperBeam.app"
