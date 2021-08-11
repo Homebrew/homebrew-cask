@@ -1,16 +1,16 @@
 cask "baiducloud" do
-  version "2.4.6"
-  sha256 "9ae594d4d6a4581d971ed9fcde7cda62022b04247476a8982802324fa16bee2e"
+  version "3.9.0"
+  sha256 "e23abb9ff8183029adada8384e11946da521a4e3cfba410052b4456d8294c670"
 
-  url "https://issuecdn.baidupcs.com/issue/netdisk/mac_tongbupan/tongbupan_#{version}.dmg",
+  url "https://issuecdn.baidupcs.com/issue/netdisk/MACguanjia/BaiduNetdisk_mac_#{version}.dmg",
       verified: "issuecdn.baidupcs.com/"
   name "Baidu Cloud"
   name "Baidu Yun Tong Bu Pan"
   name "百度云同步盘"
-  desc "Comprehensive Cloud service provides by Baidu"
+  desc "Comprehensive Cloud service provided by Baidu"
   homepage "https://pan.baidu.com/"
 
-  app "百度云同步盘.app"
+  app "BaiduNetdisk_mac.app"
 
   uninstall quit: "com.baidu.netdiskmac"
 
