@@ -1,26 +1,16 @@
 cask "parallels" do
-  if Hardware::CPU.intel?
-    version "16.5.1-49187"
-    sha256 "01fe58c43ea1df24b7e9231340bf28b12fd1472b777b05687452bcb24d337944"
-
-    livecheck do
-      url "https://www.parallels.com/directdownload/pd#{version.major}/intel/"
-      strategy :header_match
-    end
-  else
-    version "16.5.1-50696"
-    sha256 "2f58d6cde6d90dface03dfbe24c2c0ca53b134f8a9fd1831050c279b9ded660e"
-
-    livecheck do
-      url "https://www.parallels.com/directdownload/pd#{version.major}/m1/"
-      strategy :header_match
-    end
-  end
+  version "17.0.0-51461"
+  sha256 "df9fe6f571bd761e4aa1c4d9bf82a953ea626841bfae95c3ffa3904421e2f7d2"
 
   url "https://download.parallels.com/desktop/v#{version.major}/#{version}/ParallelsDesktop-#{version}.dmg"
   name "Parallels Desktop"
   desc "Desktop virtualization software"
   homepage "https://www.parallels.com/products/desktop/"
+
+  livecheck do
+    url "https://www.parallels.com/directdownload/pd#{version.major}/image/"
+    strategy :header_match
+  end
 
   auto_updates true
   depends_on macos: ">= :high_sierra"
