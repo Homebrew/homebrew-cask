@@ -3,7 +3,7 @@ cask "betterdiscord-installer" do
   sha256 "d9c499f810292504d0638db04ca6f7f0c114f09739d479a0201c775a22205c7b"
 
   url "https://github.com/BetterDiscord/Installer/releases/download/v#{version}/BetterDiscord-Mac.zip",
-      verified: "https://github.com/BetterDiscord/Installer"
+      verified: "github.com/BetterDiscord/Installer/"
   name "betterdiscord"
   desc "Installer for BetterDiscord"
   homepage "https://betterdiscord.app/"
