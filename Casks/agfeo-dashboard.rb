@@ -1,6 +1,6 @@
 cask "agfeo-dashboard" do
-  version "1.8.18,8C1C8DFB07B91220C12586FF00439DF6"
-  sha256 "208feef6f27dba7d07d16c08347421f2fc1a80fdf3feed3a7dd1acbb939ad43a"
+  version "1.8.21,8C1C8DFB07B91220C12586FF00439DF6"
+  sha256 "566d034f629fe62a960edf299e9a29dd26889b18c83e229c0ffbb19eae8f0acd"
 
   url "https://www2.agfeo.de/agfeo_web/dokulib.nsf/Anlage_w/#{version.after_comma}/$FILE/AGFEO-Dashboard_x64_agfeo_#{version.before_comma}.dmg"
   name "AGFEO Dashboard"
