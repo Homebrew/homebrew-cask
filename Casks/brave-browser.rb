@@ -1,5 +1,5 @@
 cask "brave-browser" do
-  version "92.1.28.105,128.105"
+  version "1.28.105.0,128.105"
 
   if Hardware::CPU.intel?
     sha256 "8254df5af136d1b9c988750155b7e0eefdb45d4936b06741d30a4737937d76cb"
