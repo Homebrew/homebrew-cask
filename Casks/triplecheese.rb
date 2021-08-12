@@ -1,6 +1,6 @@
 cask "triplecheese" do
-  version "1.2.1,3899"
-  sha256 "8a73cc611d6065ff11a43e237ff074c9b6eff591a46997362219fe6ac4bcd663"
+  version "1.3,12092"
+  sha256 "d2ed37186ddffe360fb564f357193ac66d09c370fecebbca71e619268ecfb0a7"
 
   url "https://uhedownloads-heckmannaudiogmb.netdna-ssl.com/releases/TripleCheese_#{version.before_comma.no_dots}_#{version.after_comma}_Mac.zip",
       verified: "uhedownloads-heckmannaudiogmb.netdna-ssl.com/"
@@ -9,7 +9,7 @@ cask "triplecheese" do
   desc "Luscious and cheesy synthesizer"
   homepage "https://u-he.com/products/triplecheese/"
 
-  pkg "TripleCheese_#{version.after_comma}_Mac/TripleCheese #{version.before_comma} Installer.pkg"
+  pkg "TripleCheese_#{version.after_comma}_Mac/TripleCheese 1.3.0 Installer.pkg"
 
   uninstall pkgutil: [
     "com.u-he.TripleCheese.aax.pkg",
