@@ -23,10 +23,14 @@ cask "deeper" do
   end
 
   url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete(".")}/Deeper.dmg"
-  appcast "https://www.titanium-software.fr/en/release_deeper.html"
   name "Deeper"
   desc "Tool to enable and disable hidden functions of Finder and other apps"
   homepage "https://www.titanium-software.fr/en/deeper.html"
+
+  livecheck do
+    url :homepage
+    regex(/>\s*Deeper\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s.-]*\s+#{MacOS.version}\s*</i)
+  end
 
   # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.
   depends_on macos: [
