@@ -23,10 +23,14 @@ cask "maintenance" do
   end
 
   url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete(".")}/Maintenance.dmg"
-  appcast "https://www.titanium-software.fr/en/maintenance.html"
   name "Maintenance"
   desc "Operating system maintenance and cleaning utility"
   homepage "https://www.titanium-software.fr/en/maintenance.html"
+
+  livecheck do
+    url :homepage
+    regex(/>\s*Maintenance\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s.-]*\s+#{MacOS.version}\s*</i)
+  end
 
   # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.
   depends_on macos: [
