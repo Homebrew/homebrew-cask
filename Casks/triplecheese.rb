@@ -4,12 +4,19 @@ cask "triplecheese" do
 
   url "https://uhedownloads-heckmannaudiogmb.netdna-ssl.com/releases/TripleCheese_#{version.before_comma.no_dots}_#{version.after_comma}_Mac.zip",
       verified: "uhedownloads-heckmannaudiogmb.netdna-ssl.com/"
-  appcast "https://u-he.com/products/triplecheese/releasenotes.html"
   name "Triple Cheese"
   desc "Luscious and cheesy synthesizer"
   homepage "https://u-he.com/products/triplecheese/"
 
-  pkg "TripleCheese_#{version.after_comma}_Mac/TripleCheese 1.3.0 Installer.pkg"
+  livecheck do
+    url "https://u-he.com/products/triplecheese/releasenotes.html"
+    strategy :page_match do |page|
+      match = page.match(/Triple\s*Cheese\s*(\d+(?:\.\d+)*)\s*\(revision\s*(\d+(?:\.\d+)*)\)/i)
+      "#{match[1]},#{match[2]}"
+    end
+  end
+
+  pkg "TripleCheese_#{version.after_comma}_Mac/TripleCheese #{version.before_comma}.0 Installer.pkg"
 
   uninstall pkgutil: [
     "com.u-he.TripleCheese.aax.pkg",
