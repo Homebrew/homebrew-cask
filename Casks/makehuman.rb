@@ -9,6 +9,11 @@ cask "makehuman" do
   desc "Open Souce tool for making 3D characters"
   homepage "http://www.makehumancommunity.org/"
 
+  livecheck do
+    url "http://download.tuxfamily.org/makehuman/releases/"
+    regex(/makehuman-community-(\d+(?:\.\d+)*)-macos\.zip/i)
+  end
+
   depends_on macos: ">= :sierra"
 
   app "MakeHuman.app"
