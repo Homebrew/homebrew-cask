@@ -2,7 +2,7 @@ cask "thunderbird" do
   version "91.0"
 
   language "cs" do
-    sha256 "36d633f23a01b3870c8ce118ce039115d181647953f69789cdf8e1452fa09345"
+    sha256 "d23d04cc5ef0a73a03c3846f82742fdefce39dcc34e33fe56ed153bcd2bf2cf6"
     "cs"
   end
   language "de" do
