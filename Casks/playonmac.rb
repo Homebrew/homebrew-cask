@@ -1,6 +1,11 @@
 cask "playonmac" do
-  version "4.4.2"
-  sha256 "8f458bcf14ed7431acfec1dc79d0e917bf450da89c78a13b5a6f3deeddbe4a8b"
+  if MacOS.version <= :mojave
+    version "4.3.3"
+    sha256 "795099f03efde730daf9e30c8c55575851f89484d9d38dee7d010987fce1ed85"
+  else
+    version "4.4.2"
+    sha256 "8f458bcf14ed7431acfec1dc79d0e917bf450da89c78a13b5a6f3deeddbe4a8b"
+  end
 
   url "https://repository.playonmac.com/PlayOnMac/PlayOnMac_#{version}.dmg"
   name "PlayOnMac"
