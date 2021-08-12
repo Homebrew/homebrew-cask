@@ -7,5 +7,10 @@ cask "superbeam" do
   desc "File sharing utility for Android devices"
   homepage "https://superbe.am/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "SuperBeam.app"
 end
