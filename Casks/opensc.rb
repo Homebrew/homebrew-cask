@@ -4,6 +4,7 @@ cask "opensc" do
 
   url "https://github.com/OpenSC/OpenSC/releases/download/#{version}/OpenSC-#{version}.dmg"
   name "OpenSC"
+  desc "Smart card libraries and utilities"
   homepage "https://github.com/OpenSC/OpenSC/wiki"
 
   pkg "OpenSC #{version}.pkg"
