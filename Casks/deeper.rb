@@ -32,7 +32,8 @@ cask "deeper" do
     regex(/>\s*Deeper\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s.-]*\s+#{MacOS.version}\s*</i)
   end
 
-  depends_on macos: ">= :yosemite"
+  # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.
+  depends_on macos: "<= :big_sur"
 
   app "Deeper.app"
 end
