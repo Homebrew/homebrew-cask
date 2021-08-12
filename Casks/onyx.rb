@@ -33,15 +33,7 @@ cask "onyx" do
   end
 
   # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.
-  depends_on macos: [
-    :yosemite,
-    :el_capitan,
-    :sierra,
-    :high_sierra,
-    :mojave,
-    :catalina,
-    :big_sur,
-  ]
+  depends_on macos: "<= :big_sur"
 
   app "OnyX.app"
 
