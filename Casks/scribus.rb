@@ -16,4 +16,10 @@ cask "scribus" do
   conflicts_with cask: "homebrew/cask-versions/scribus-dev"
 
   app "Scribus.app"
+
+  zap trash: [
+    "~/Library/Application Support/Scribus",
+    "~/Library/Preferences/Scribus",
+    "~/Library/Saved Application State/net.scribus.savedState",
+  ]
 end
