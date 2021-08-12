@@ -21,4 +21,14 @@ cask "adoptopenjdk" do
   pkg "OpenJDK#{version.major}U-jdk_x64_mac_hotspot_#{version.before_comma}_#{version.after_comma.major}.pkg"
 
   uninstall pkgutil: "net.adoptopenjdk.#{version.major}.jdk"
+
+  caveats do
+    discontinued
+
+    <<~EOS
+      Temurin is the official successor to this software:
+
+        brew install --cask temurin
+    EOS
+  end
 end
