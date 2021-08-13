@@ -1,6 +1,6 @@
 cask "gearsystem" do
-  version "3.3.0"
-  sha256 "cf15a8f3107887daf7cad4e211b7296d437e7c693730aec6a3d8d66ea6e7c270"
+  version "3.4.0"
+  sha256 "da7143dbb2816a6de2a979531965ebf581f416202fb4267544a03023d4121ac2"
 
   url "https://github.com/drhelius/Gearsystem/releases/download/gearsystem-#{version}/Gearsystem-#{version}-macOS.zip"
   name "Gearsystem"
