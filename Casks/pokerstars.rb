@@ -1,9 +1,10 @@
 cask "pokerstars" do
-  version "42.117"
+  version "42.154"
   sha256 :no_check
 
   url "https://download.pokerstars.net/client/download/"
   name "PokerStars"
+  desc "Free-to-play online poker"
   homepage "https://www.pokerstars.net/"
 
   livecheck do
@@ -22,10 +23,10 @@ cask "pokerstars" do
             delete: "#{appdir}/PokerStars.net.app"
 
   zap trash: [
+    "~/Library/Application Support/PokerStars.net",
+    "~/Library/Preferences/com.pokerstars.net.user.ini",
     "~/Library/Preferences/com.pokerstars.NetworkStatus.plist",
     "~/Library/Preferences/com.pokerstars.PokerStars.net.plist",
     "~/Library/Preferences/com.pokerstars.PokerStarsBrowse.plist",
-    "~/Library/Preferences/com.pokerstars.net.user.ini",
-    "~/Library/Application Support/PokerStars.net",
   ]
 end
