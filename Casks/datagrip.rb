@@ -1,12 +1,12 @@
 cask "datagrip" do
-  version "2021.2,212.4746.86"
+  version "2021.2.1,212.5080.22"
 
   if Hardware::CPU.intel?
-    sha256 "06c1758dccaa0ff0c343b73b26504fe7591edb107ba7f6e0795d16c456560a33"
+    sha256 "08a028494d2befe4411ebe746a79073003bb59ec270ac69f021612ff29ece7fc"
 
     url "https://download.jetbrains.com/datagrip/datagrip-#{version.before_comma}.dmg"
   else
-    sha256 "bb1e6828ffa71cba5664dd2f239e5ecd4d4b09b986b5ce0ddd21976d69d8c792"
+    sha256 "7ed7f20c3f0cb97857e1a7212ed9e4fd3c6f54139400df2334ae27fb1250c7db"
 
     url "https://download.jetbrains.com/datagrip/datagrip-#{version.before_comma}-aarch64.dmg"
   end
