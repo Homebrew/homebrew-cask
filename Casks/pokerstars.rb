@@ -4,6 +4,7 @@ cask "pokerstars" do
 
   url "https://download.pokerstars.net/client/download/"
   name "PokerStars"
+  desc "Free-to-play online poker"
   homepage "https://www.pokerstars.net/"
 
   livecheck do
