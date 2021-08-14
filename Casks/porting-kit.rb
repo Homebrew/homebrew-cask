@@ -1,21 +1,15 @@
 cask "porting-kit" do
   version "4.2.14"
-  sha256 "3f4718e1e2b21a38c7a7d776a3be8a2419adc66c57120700167cab4c89fc96f4"
+  sha256 "7c04792e63a46b98a21e324c57abfcd59c24f7951a2d406a2bb6978ecf843e5c"
 
-  url "https://portingkit.com/pub/portingkit/Porting%20Kit-#{version}-mac.zip"
+  url "https://github.com/vitor251093/porting-kit-releases/releases/download/v#{version}/Porting-Kit-#{version}.dmg",
+      verified: "github.com/vitor251093/porting-kit-releases/"
   name "Porting Kit"
   desc "Install games and apps compiled for Microsoft Windows"
   homepage "https://portingkit.com/"
 
-  # We don't use the `ElectronBuilder` strategy because the YAML has
-  # an unquoted `releaseDate` which is parsed as a scalar timestamp.
-  # This currently errors as Time is not specified as a permitted class.
-  livecheck do
-    url "https://portingkit.com/pub/portingkit/latest-mac.yml"
-    regex(/Porting[._-]Kit[._-]v?(\d+(?:\.\d+)+)[._-]mac\.zip/i)
-  end
-
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Porting Kit.app"
 end
