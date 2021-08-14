@@ -27,6 +27,10 @@ cask "zebra2" do
     "com.u-he.Zebra2.tuningFiles.pkg",
     "com.u-he.Zebra2.vst.pkg",
     "com.u-he.Zebra2.vst3.pkg",
+    "com.u-he.Zebra2.modules.pkg",
+    "com.u-he.Zebra2.nks.pkg",
+    "com.u-he.Zebra2.support.pkg",
+    "com.u-he.Zebra2.themes.pkg",
   ]
 
   caveats do
