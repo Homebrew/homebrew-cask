@@ -1,8 +1,8 @@
 cask "stork" do
-  version "1.0.0.886"
+  version "1.0.0,886"
   sha256 :no_check
 
-  url "https://downloads.stork.ai/macos/release/Stork-#{version}.dmg"
+  url "https://downloads.stork.ai/macos/release/Stork-#{version.before_comma}.#{version.after_comma}.dmg"
   name "Stork for macOS"
   desc "Messenger with a powerful features for hybrid work"
   homepage "https://stork.ai/"
