@@ -12,7 +12,7 @@ cask "porting-kit" do
   # This currently errors as Time is not specified as a permitted class.
   livecheck do
     url "https://portingkit.com/pub/portingkit/latest-mac.yml"
-    regex(/Porting(?:%20|\s*)Kit[._-]v?(\d+(?:\.\d+)+)[._-]mac\.zip/i)
+    regex(/Porting[._-]Kit[._-]v?(\d+(?:\.\d+)+)[._-]mac\.zip/i)
   end
 
   auto_updates true
