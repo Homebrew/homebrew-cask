@@ -8,6 +8,11 @@ cask "stack" do
   desc "Personal online hard drive to store, view and share files"
   homepage "https://www.transip.nl/stack"
 
+  livecheck do
+    url "https://mirror.transip.net/stack/software/osx/"
+    regex(/href=.*?stack[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
+  end
+
   uninstall login_item: "stack",
             signal:     ["TERM", "nl.transip.stack"],
             pkgutil:    "nl.transip.stack"
