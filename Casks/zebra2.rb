@@ -33,6 +33,18 @@ cask "zebra2" do
     "com.u-he.Zebra#{version.major}.support.pkg",
     "com.u-he.Zebra#{version.major}.themes.pkg",
   ]
+  
+  zap trash: [
+    '~/Library/Application Support/u-he/Zebra2',
+    '~/Library/Application Support/u-he/com.u-he.Zebra2.midiassign.txt',
+    '~/Library/Application Support/u-he/com.u-he.Zebra2.Preferences.txt',
+    '~/Library/Application Support/u-he/com.u-he.Zebralette.midiassign.txt',
+    '~/Library/Application Support/u-he/com.u-he.Zebralette.Preferences.txt',
+    '~/Library/Application Support/u-he/com.u-he.Zebrify.midiassign.txt',
+    '~/Library/Application Support/u-he/com.u-he.Zebrify.Preferences.txt',
+    '~/Library/Application Support/u-he/com.u-he.ZRev.midiassign.txt',
+    '~/Library/Application Support/u-he/com.u-he.ZRev.Preferences.txt',
+  ]
 
   caveats do
     reboot
