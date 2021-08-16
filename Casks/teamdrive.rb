@@ -4,7 +4,7 @@ cask "teamdrive" do
 
   url "https://download.teamdrive.net/#{version}/TMDR/mac/Install-TeamDrive-#{version}_TMDR.dmg",
       verified: "teamdrive.net/"
-  appcast "https://teamdrive.com/download",
+  appcast "http://forum.teamdrive.net/viewforum.php?f=2",
           must_contain: version.major_minor_patch
   name "TeamDrive"
   desc "Secure cloud storage service"
