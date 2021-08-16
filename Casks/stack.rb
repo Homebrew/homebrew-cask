@@ -13,12 +13,14 @@ cask "stack" do
     regex(/href=.*?stack[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
   end
 
+  app "stack.app"
+
   uninstall login_item: "stack",
             signal:     ["TERM", "nl.transip.stack"],
             pkgutil:    "nl.transip.stack"
 
   zap trash: [
-    "~/Library/Caches/nl.transip.stack",
     "~/Library/Application Support/STACK/",
+    "~/Library/Caches/nl.transip.stack",
   ]
 end
