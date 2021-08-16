@@ -12,7 +12,7 @@ cask "videofusion" do
   livecheck do
     url "https://lf3-beecdn.bytetos.com/obj/ies-fe-bee/bee_prod/biz_80/bee_prod_80_bee_publish_3563.json"
     strategy :page_match do |page|
-      JSON.parse(page)["mac_download_pkg"]["channel_default"][/(\d+(?:_\d+)+)\.pkg/i, 1].tr("_", ".")
+      JSON.parse(page)["mac_download_pkg"]["channel_default"][/(\d+(?:_\d+)+)\.dmg/i, 1].tr("_", ".")
     end
   end
 
