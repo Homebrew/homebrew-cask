@@ -1,8 +1,8 @@
 cask "teamdrive" do
-  version "4.6.12.2788"
-  sha256 "5e7d84ba4a184438dddbbbd25fc67b0adc16ef2dcecf8e4051b369d9252ad884"
+  version "4.7.1.3011"
+  sha256 "4a0e2e804bb0994c5be58fc57fdf16809ff84b07e24df7e54134cbc89cf2dc40"
 
-  url "https://download.teamdrive.net/#{version.major_minor}.#{version.split(".").last}/TMDR/mac-10.15.7/Install-TeamDrive-#{version}_TMDR.dmg",
+  url "https://download.teamdrive.net/#{version}/TMDR/mac/Install-TeamDrive-#{version}_TMDR.dmg",
       verified: "teamdrive.net/"
   appcast "https://teamdrive.com/en/downloads/",
           must_contain: version.major_minor_patch
