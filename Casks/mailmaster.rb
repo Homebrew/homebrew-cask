@@ -6,10 +6,12 @@ cask "mailmaster" do
       verified: "client.dl.126.net/macmail/dashi/"
   name "NetEase Mail Master"
   name "网易邮箱大师"
+  desc "Email client"
   homepage "https://mail.163.com/dashi/"
 
   livecheck do
-    skip "unversioned URL"
+    url :url
+    strategy :extract_plist
   end
 
   app "MailMaster.app"
