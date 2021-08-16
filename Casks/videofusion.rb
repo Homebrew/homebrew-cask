@@ -18,12 +18,7 @@ cask "videofusion" do
 
   depends_on macos: ">= :mojave"
 
-  pkg "Jianying_#{version.dots_to_underscores}.pkg"
-
-  uninstall pkgutil: [
-    "com.lemon.lvpro",
-    "com.mygreatcompany.pkg.lvpro",
-  ]
+  app "VideoFusion-macOS.app"
 
   zap trash: [
     "~/Library/Caches/com.lemon.ee.lv",
