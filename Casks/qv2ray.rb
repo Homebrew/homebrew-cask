@@ -23,4 +23,8 @@ cask "qv2ray" do
     "~/Library/Preferences/qv2ray",
     "~/Library/Saved Application State/com.github.qv2ray.savedState",
   ]
+
+  caveats do
+    discontinued
+  end
 end
