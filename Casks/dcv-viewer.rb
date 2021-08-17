@@ -1,13 +1,13 @@
 cask "dcv-viewer" do
-  version "2021.1.3473"
+  version "2021.1.3590"
 
   if Hardware::CPU.intel?
-    sha256 "1c06ec60ae147e379cad3fcb6ffce9ee545b30084d04b765e7f0e26e89db839c"
+    sha256 "b3c3a98d22fd6ba9cac59874c923eb3c9e4bd9d8c3239570cb5194b7df5bca95"
 
     url "https://d1uj6qtbmh3dt5.cloudfront.net/#{version.major_minor}/Clients/nice-dcv-viewer-#{version}.x86_64.dmg",
         verified: "d1uj6qtbmh3dt5.cloudfront.net/"
   else
-    sha256 "de6ca6683097e04210b278ccdd1e68c28ae526d2b116d99875d83c0b13211f83"
+    sha256 "32fbbe5b2621c0414814367af0930ae1a63608e14fc3ecd0e48b24e575d58437"
 
     url "https://d1uj6qtbmh3dt5.cloudfront.net/#{version.major_minor}/Clients/nice-dcv-viewer-#{version}.arm64.dmg",
         verified: "d1uj6qtbmh3dt5.cloudfront.net/"
