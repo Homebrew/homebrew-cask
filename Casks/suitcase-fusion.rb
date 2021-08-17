@@ -1,6 +1,6 @@
 cask "suitcase-fusion" do
-  version "21.3.0"
-  sha256 "ef5b3340385f7823d05b72172526286787583ee82ad9b4ef45a92adc3b6c7114"
+  version "21.4.1"
+  sha256 "962677943d73133a703e8f36b6d2121889608926c98e8b04ff2f29ebf6da70fc"
 
   url "https://bin.extensis.com/SuitcaseFusion-M-#{version.dots_to_hyphens}.dmg"
   name "Extensis Suitcase Fusion"
