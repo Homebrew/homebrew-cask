@@ -8,5 +8,10 @@ cask "grisbi" do
   desc "Personal financial management program"
   homepage "https://www.grisbi.org/"
 
+  livecheck do
+    url "https://sourceforge.net/projects/grisbi/files/latest/download"
+    strategy :header_match
+  end
+
   app "Grisbi.app"
 end
