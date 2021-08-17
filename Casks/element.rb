@@ -1,8 +1,8 @@
 cask "element" do
-  version "1.7.34"
-  sha256 "eb7a281a67f92cea2d71fed71014dbbe6c98fadbd50f29130badb7b236ae5e96"
+  version "1.8.0"
+  sha256 "acbf2905b8dc3e471b553c884f86e85aafa889236c12b780a1c4306491d6933c"
 
-  url "https://packages.riot.im/desktop/install/macos/Element-#{version}.dmg",
+  url "https://packages.riot.im/desktop/install/macos/Element-#{version}-universal.dmg",
       verified: "packages.riot.im/desktop/"
   name "Element"
   desc "Matrix collaboration client"
