@@ -1,5 +1,5 @@
 cask "craftmanager" do
-  version "1.0.113,240"
+  version "1.0.114,244"
   sha256 :no_check
 
   url "https://craft-assets.invisionapp.com/CraftManager/production/CraftManager.zip"
