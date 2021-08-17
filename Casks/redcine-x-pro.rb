@@ -10,8 +10,9 @@ cask "redcine-x-pro" do
   livecheck do
     url "https://www.red.com/RedSuiteCentric/SCA-Kilimanjaro/services/Download.Service.ss?downloadIdentifier=redcine-x-pro-mac"
     strategy :page_match do |page|
-      match = page.match(%r{href=.*?/\d+\.(\d+)/REDCINE-X_PRO_Build_(\d+(?:\.\d+)*)\.pkg}i)
-      "#{match[2]},#{match[1]}"
+      json = JSON.parse(page)
+      latest = json["data"][0]
+      "#{latest["versionMajor"]}.#{latest["versionMinor"]},#{latest["versionRevision"]}"
     end
   end
 
