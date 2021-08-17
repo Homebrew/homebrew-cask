@@ -8,8 +8,8 @@ cask "transmit" do
   homepage "https://panic.com/transmit/"
 
   livecheck do
-    url "https://panic.com/download/transmit/Transmit-#{version.major}-Latest.zip"
-    strategy :header_match
+    url "https://library.panic.com/transmit/transmit5/release-integrity/"
+    regex(/href=.*?Transmit[\s._-]?v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   auto_updates true
