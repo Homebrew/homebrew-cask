@@ -1,6 +1,6 @@
 cask "contexts" do
-  version "3.8,380"
-  sha256 "c9ac6274012a062b679eb614848d2224dff4673fbc3953552debc7f5293f55e4"
+  version "3.8.1,381"
+  sha256 "f4ca05c6abb14f6193b158645d74ca9d2672aabba7e07cc1c6cc3af18aa44907"
 
   url "https://contexts.co/releases/Contexts-#{version.before_comma}.dmg"
   name "Contexts"
