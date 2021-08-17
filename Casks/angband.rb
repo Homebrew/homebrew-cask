@@ -8,6 +8,11 @@ cask "angband" do
   desc "Dungeon exploration game"
   homepage "https://angband.github.io/angband/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :sierra"
 
   app "Angband.app"
