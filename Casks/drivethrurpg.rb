@@ -1,6 +1,6 @@
 cask "drivethrurpg" do
-  version "3.0.1.3"
-  sha256 "d12c39314aae8ef357e3204a1bf013319ebf3085fc47400c613345b5b2cdfc9e"
+  version "3.1.5.0"
+  sha256 "7d24ad2e09d744ad4408ca815f7454905634ad8778013324bd74ba15bc749068"
 
   url "https://dtrpg-library-app.s3.us-east-2.amazonaws.com/DriveThruRPG_v#{version}.dmg",
       verified: "dtrpg-library-app.s3.us-east-2.amazonaws.com/"
