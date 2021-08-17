@@ -1,13 +1,13 @@
 cask "dynobase" do
-  version "1.4.4"
+  version "1.6.0"
 
   if Hardware::CPU.intel?
-    sha256 "2bf0bfa85711933945c2b9f892bc894fdfd8fff158f578e43eb4c8edb13ad846"
+    sha256 "9274091011226abc1b2e6c210350cd701f3d7308efdc34ca0c045fc68162971a"
 
     url "https://github.com/Dynobase/dynobase/releases/download/#{version}/Dynobase-#{version}.dmg",
         verified: "github.com/Dynobase/dynobase/"
   else
-    sha256 "8660ed5f6160ccd01be08ce23b639acb296c6c5cf9e8529160be7dd485e7ddd3"
+    sha256 "39181015a6540a1c6c2f1b457c213029f0fe8051aa633064b5283c0b2a81713b"
 
     url "https://github.com/Dynobase/dynobase/releases/download/#{version}/Dynobase-#{version}-arm64.dmg",
         verified: "github.com/Dynobase/dynobase/"
