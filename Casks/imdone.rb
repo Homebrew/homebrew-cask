@@ -1,6 +1,6 @@
 cask "imdone" do
-  version "1.9.2"
-  sha256 "1ad91b883d44ffed49e9f22ebf95a9416df19a8cd9058e255d0108db7d1d6e00"
+  version "1.20.5"
+  sha256 "519526cb57b2aeefaed4d6a71a6629c30d48542e5850bf201da0d0caefcd2ba6"
 
   url "https://imdone.io/downloads/imdone-#{version}.dmg"
   name "imdone"
@@ -9,8 +9,7 @@ cask "imdone" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(/imdone-(\d+(?:\.\d+)*)\.dmg/i)
+    regex(/imdone[._-]?v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "imdone.app"

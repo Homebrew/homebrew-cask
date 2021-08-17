@@ -1,9 +1,10 @@
 cask "protopie" do
-  version "5.3.2"
-  sha256 "bcb5d41d94e1cc0b25ca7eef3a1b715c91194db96a07e8528071c9a6d710d62d"
+  version "5.5.3"
+  sha256 "b07f27453fe229593574a16a507b123a570d8f1f6360adde4e6a40bb3f4fbb4d"
 
   url "https://release.protopie.io/ProtoPie-#{version}.dmg"
   name "ProtoPie"
+  desc "Create interactive prototypes"
   homepage "https://www.protopie.io/"
 
   livecheck do

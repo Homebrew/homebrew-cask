@@ -1,5 +1,5 @@
 cask "finisher-micro" do
-  version "1.0.1,128"
+  version "128"
   sha256 :no_check
 
   url "https://www.ujam.com/api/delivery/product?os=osx&sku=FIN-MICRO"
@@ -7,7 +7,12 @@ cask "finisher-micro" do
   desc "Free VST/AU/AAX multi-effect plugin"
   homepage "https://www.ujam.com/finisher/micro/"
 
-  pkg "FIN-MICRO_osx_#{version.after_comma}.pkg"
+  livecheck do
+    url :url
+    strategy :header_match
+  end
+
+  pkg "FIN-MICRO_osx_#{version}.pkg"
 
   uninstall pkgutil: "com.ujam.finmicro.*"
 

@@ -1,13 +1,18 @@
 cask "browserstacklocal" do
-  version "2.3,1"
+  version "3.2.3"
   sha256 :no_check
 
-  url "https://www.browserstack.com/BrowserStackLocal.dmg"
-  name "BrowserStack Local"
+  url "https://www.browserstack.com/local-testing/downloads/native-app/BrowserStackLocal.dmg"
+  name "BrowserStack Local Testing"
+  desc "Test localhost and staging websites"
   homepage "https://www.browserstack.com/"
 
+  livecheck do
+    url "https://www.browserstack.com/local-testing/downloads/native-app/mac/appcast.xml"
+    strategy :sparkle
+  end
+
   app "BrowserStackLocal.app"
-  binary "BrowserStackLocal.app/Contents/Resources/public/BrowserStackLocal"
 
   uninstall launchctl: "com.browserstack.local"
 

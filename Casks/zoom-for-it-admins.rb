@@ -1,9 +1,8 @@
 cask "zoom-for-it-admins" do
-  version "5.6.0.536"
-  sha256 "742407166d14d75c0c6f7cc6ac67b592df5a2a016e6029817b8847acb31b6610"
+  version "5.7.5.1123"
+  sha256 "0077aabad43f00d93bc121464171587a3a62a78c494fa0b7cdc8dfdfdc981f22"
 
-  url "https://d11yldzmag5yn.cloudfront.net/prod/#{version}/ZoomInstallerIT.pkg",
-      verified: "d11yldzmag5yn.cloudfront.net/"
+  url "https://cdn.zoom.us/prod/#{version}/ZoomInstallerIT.pkg"
   name "Zoom for IT Admins"
   desc "Video communication and virtual meeting platform"
   homepage "https://support.zoom.us/hc/en-us/articles/115001799006-Mass-Deployment-with-Preconfigured-Settings-for-Mac"
@@ -20,9 +19,10 @@ cask "zoom-for-it-admins" do
 
   pkg "ZoomInstallerIT.pkg"
 
-  uninstall signal:  ["KILL", "us.zoom.xos"],
-            pkgutil: "us.zoom.pkg.videmeeting",
-            delete:  [
+  uninstall signal:    ["KILL", "us.zoom.xos"],
+            pkgutil:   "us.zoom.pkg.videomeeting",
+            launchctl: "us.zoom.ZoomDaemon",
+            delete:    [
               "/Applications/zoom.us.app",
               "/Library/Audio/Plug-Ins/HAL/ZoomAudioDevice.driver",
               "/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin",

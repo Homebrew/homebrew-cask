@@ -1,12 +1,17 @@
 cask "nova" do
-  version "5"
-  sha256 "4bd71dcc95e5c8967de9bafa441f0afea2cf199684c6ddff1b918465ef8d797c"
+  version "7.2"
+  sha256 "b3a771dc40d7f64ea31af2d6f39ebbb53119f02e000c02f6e220b4039f39fada"
 
   url "https://download-cdn.panic.com/nova/Nova%20#{version}.zip",
       verified: "https://download-cdn.panic.com/nova/"
   name "Panic Nova"
   desc "Native code editor"
   homepage "https://nova.app/"
+
+  livecheck do
+    url :homepage
+    regex(%r{href=.*?/Nova(?:\s*|%20)?(\d+(?:\.\d+)*)\.zip}i)
+  end
 
   auto_updates true
   depends_on macos: ">= :mojave"

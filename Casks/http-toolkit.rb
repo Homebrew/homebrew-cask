@@ -1,10 +1,11 @@
 cask "http-toolkit" do
-  version "1.2.1"
-  sha256 "ae43dd0366d67f35832cee7661d965c50ec2d66538e60456a0bd80343b1cd36e"
+  version "1.4.4"
+  sha256 "42a856e132ec942f19fdab6e83271bdb709bf07e09219fd7d8b78549662ba732"
 
   url "https://github.com/httptoolkit/httptoolkit-desktop/releases/download/v#{version}/HttpToolkit-#{version}.dmg",
       verified: "github.com/httptoolkit/httptoolkit-desktop/"
   name "HTTP Toolkit"
+  desc "HTTP(S) debugging proxy, analyzer, and client"
   homepage "https://httptoolkit.tech/"
 
   app "HTTP Toolkit.app"

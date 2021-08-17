@@ -1,6 +1,6 @@
 cask "ajour" do
-  version "1.0.0"
-  sha256 "04eadbbd80c49dffd506d52023a8ad9673d6df7fd3ade09444cf2d644e22cbd2"
+  version "1.3.0"
+  sha256 "f1382156602f542c7e532971e6c365ab467abadc843d4af513c0262f9339d9ad"
 
   url "https://github.com/casperstorm/ajour/releases/download/#{version}/ajour.dmg"
   name "Ajour"
@@ -9,8 +9,7 @@ cask "ajour" do
 
   livecheck do
     url :url
-    strategy :git
-    regex(/^(\d+(?:\.\d+)*)$/i)
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   app "Ajour.app"

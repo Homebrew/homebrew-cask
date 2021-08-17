@@ -1,13 +1,27 @@
 cask "freeplane" do
-  version "1.8.11"
-  sha256 "5f558640e8811c0d4b515dfc67c4d9ef5d877dfb3b7c88a3578d97001f6b337a"
+  version "1.9.7"
 
-  url "https://downloads.sourceforge.net/freeplane/freeplane%20stable/Freeplane-#{version}.dmg",
-      verified: "downloads.sourceforge.net/freeplane/"
-  appcast "https://sourceforge.net/projects/freeplane/rss?path=/freeplane%20stable"
+  if Hardware::CPU.intel?
+    sha256 "5a008c4c99ba29a730feed83b793d6909834623f31cd3a6bf775ebaee63f7887"
+
+    url "https://downloads.sourceforge.net/freeplane/Freeplane-#{version}-intel.dmg",
+        verified: "downloads.sourceforge.net/freeplane/"
+  else
+    sha256 "8c277d86eca3aca839da1183d6238f77fc3aa9f371c575f3d03db5a5ca38308b"
+
+    url "https://downloads.sourceforge.net/freeplane/Freeplane-#{version}-apple.dmg",
+        verified: "downloads.sourceforge.net/freeplane/"
+  end
+
   name "Freeplane"
   desc "Mind mapping and knowledge management software"
   homepage "https://freeplane.sourceforge.io/"
+
+  livecheck do
+    url "https://sourceforge.net/projects/freeplane/rss?path=/freeplane%20stable"
+    strategy :page_match
+    regex(%r{stable/Freeplane[._-]v?(\d+(?:\.\d+)+)(?:[._-]apple)?\.dmg}i)
+  end
 
   app "Freeplane.app"
 

@@ -1,12 +1,17 @@
 cask "ableton-live-standard" do
-  version "11.0"
-  sha256 "3940df631b7f117ea5677e79438f9de79302880f43dca5b093702843376dd2f0"
+  version "11.0.6"
+  sha256 "88670d35284768cbd7a7d08403d998421743ea31c50a67df8e679557a96b9b11"
 
   url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_standard_#{version}_64.dmg"
-  appcast "https://www.ableton.com/en/release-notes/live-#{version.major}/"
   name "Ableton Live Standard"
   desc "Sound and music editor"
   homepage "https://www.ableton.com/en/live/"
+
+  livecheck do
+    url "https://www.ableton.com/en/release-notes/live-#{version.major}/"
+    strategy :page_match
+    regex(/(\d+(?:\.\d+)*)\s*Release\s*Notes/i)
+  end
 
   auto_updates true
   depends_on macos: ">= :high_sierra"

@@ -1,15 +1,15 @@
 cask "twonkyserver" do
   version "8.5.2"
-  sha256 "6cf6cdc36069342211bdcb75a160045c494bd8825a3d73dc0e0520f720e28ed5"
+  sha256 "e010897ffab5fff125ba1e3b2b249cc62bfcae7613de858061d0b496464883be"
 
   url "https://download.twonky.com/#{version}/TwonkyServerInstaller-#{version}.pkg"
   name "Twonky Server"
+  desc "DLNA/UPnP media server"
   homepage "https://twonky.com/"
 
   livecheck do
     url "https://twonky.com/downloads/index.html"
-    strategy :page_match
-    regex(%r{href=.*?/TwonkyServerInstaller-(\d+(?:\.\d+)*)\.pkg}i)
+    regex(%r{href=.*?/TwonkyServerInstaller[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
   end
 
   pkg "TwonkyServerInstaller-#{version}.pkg"

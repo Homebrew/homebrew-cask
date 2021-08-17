@@ -4,11 +4,15 @@ cask "xamarin-studio" do
 
   url "https://dl.xamarin.com/MonoDevelop/Mac/XamarinStudio-#{version}.dmg",
       verified: "dl.xamarin.com/MonoDevelop/Mac/"
-  appcast "https://xampubdl.blob.core.windows.net/static/installer_assets/v3/Mac/Universal/InstallationManifest.xml"
   name "Xamarin Studio"
+  desc "IDE for mobile app development"
   homepage "https://www.visualstudio.com/vs/visual-studio-mac/"
 
   conflicts_with cask: "xamarin"
 
   app "Xamarin Studio.app"
+
+  caveats do
+    discontinued
+  end
 end

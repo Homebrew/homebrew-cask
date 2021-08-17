@@ -1,51 +1,68 @@
 cask "openzfs" do
-  version "1.9.4,6f"
-  sha256 "4dc027cec9cb2fcbf572c1dfe5b1a31f0e14d3f55f1b4f8787903f8332db838b"
+  if MacOS.version <= :yosemite
+    version "2.0.1,316"
+    sha256 "b7fc93ae63de5dc348d82b3a3e1b7acc0ea84c43f6f9f17a6c4e64e9fbbff849"
+    pkg "OpenZFSonOsX-#{version.before_comma}-YOSEMITE-10.10.pkg"
+  elsif MacOS.version <= :el_capitan
+    version "2.0.1,315"
+    sha256 "39ca712ce1b1e660659790ec32c4415460f66d2ce5d82cef0a5067a3193e2938"
+    pkg "OpenZFSonOsX-#{version.before_comma}-EL.CAPITAN-10.11.pkg"
+  elsif MacOS.version <= :sierra
+    version "2.0.1,314"
+    sha256 "d1096996a10bc7b8d06a7f037f93b22c45c4c79662ea7bf0a7bb3486e30e95cc"
+    pkg "OpenZFSonOsX-#{version.before_comma}-Sierra-10.12.pkg"
+  elsif MacOS.version <= :high_sierra
+    version "2.0.1,313"
+    sha256 "a1c956e60059329d940fea6b54a760be2a26963f41a57a9069be0a56fe796942"
+    pkg "OpenZFSonOsX-#{version.before_comma}-High.Sierra-10.13.pkg"
+  elsif MacOS.version <= :mojave
+    version "2.0.1,312"
+    sha256 "1ebfbea78a7d52ad63845a9203f1f9b6581f66b8733effe46962c925e2c526f4"
+    pkg "OpenZFSonOsX-#{version.before_comma}-Mojave-10.14.pkg"
+  elsif MacOS.version <= :catalina
+    version "2.0.1,309"
+    sha256 "ccdb70986d8f3786a96de0447c9cb55e3edcc455f4668af45e76fc8225810a1c"
+    pkg "OpenZFSonOsX-#{version.before_comma}-Catalina-10.15.pkg"
+  elsif Hardware::CPU.intel?
+    version "2.0.1,310"
+    sha256 "29e21e954d394fbed17b9df606d3183061ebc547500bb2e9dc460599b5c16015"
+    pkg "OpenZFSonOsX-#{version.before_comma}-Big.Sur-11.pkg"
+  else
+    version "2.0.1,308"
+    sha256 "bac99664fdfb632dd9b1c4dc2b922e33f81dc61720e14418b1e55b1175090a2e"
+    pkg "OpenZFSonOsX-#{version.before_comma}-Big.Sur-11-arm64.pkg"
+  end
 
-  url "https://openzfsonosx.org/w/images/#{version.after_comma[0]}/#{version.after_comma}/OpenZFS_on_OS_X_#{version.before_comma}.dmg"
+  url "https://openzfsonosx.org/forum/download/file.php?id=#{version.after_comma}"
   name "OpenZFS on OS X"
+  desc "ZFS driver and utilities"
   homepage "https://openzfsonosx.org/"
 
-  # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.
-  depends_on macos: [
-    :el_capitan,
-    :sierra,
-    :high_sierra,
-    :mojave,
-    :catalina,
-  ]
+  livecheck do
+    # url "https://openzfsonosx.org/wiki/Downloads"
+    # regex(/href=["']?#v?(\d+(?:\.\d+)+(?:[._-]r\d+)?)["' >]/i)
+    skip "Version comparison will always fail for now"
+  end
 
-  if MacOS.version <= :el_capitan
-    pkg "OpenZFS on OS X #{version.major_minor_patch} El Capitan.pkg"
-  elsif MacOS.version <= :sierra
-    pkg "OpenZFS on OS X #{version.major_minor_patch} Sierra.pkg"
-  elsif MacOS.version <= :high_sierra
-    pkg "OpenZFS on OS X #{version.major_minor_patch} High Sierra.pkg"
-  elsif MacOS.version <= :mojave
-    pkg "OpenZFS on OS X #{version.major_minor_patch} Mojave.pkg"
-  elsif MacOS.version <= :catalina
-    pkg "OpenZFS on OS X #{version.major_minor_patch} Catalina.pkg"
+  conflicts_with cask: "openzfs-dev"
+  depends_on macos: ">= :yosemite"
+
+  postflight do
+    set_ownership "/usr/local/zfs"
   end
 
   uninstall_preflight do
-    uninstall_zfs = "#{staged_path}/Docs & Scripts/uninstall-openzfsonosx.sh"
-    IO.write(uninstall_zfs, IO.read(uninstall_zfs).gsub("$(which zpool)", "/usr/local/bin/zpool"))
-    IO.write(uninstall_zfs, IO.read(uninstall_zfs).gsub("$(which zfs)", "/usr/local/bin/zfs"))
-    IO.write(uninstall_zfs, IO.read(uninstall_zfs).gsub("zpool status", "/usr/local/bin/zpool status"))
-    IO.write(uninstall_zfs, IO.read(uninstall_zfs).gsub("zfs get name", "/usr/local/bin/zfs get name"))
-    IO.write(uninstall_zfs, IO.read(uninstall_zfs).gsub(
-                              "sudo /sbin/kextunload -b net.lundman.zfs",
-                              "sudo /bin/launchctl unload /Library/LaunchDaemons/org.openzfsonosx.zed.plist && " \
-                              "sudo /sbin/kextunload -b net.lundman.zfs",
-                            ))
+    system "sudo", "/usr/local/zfs/bin/zpool", "export", "-af"
   end
 
-  uninstall delete:    "~/zfsuninstaller.*",
-            launchctl: "org.openzfsonosx.zed",
-            script:    {
-              executable: "#{staged_path}/Docs & Scripts/uninstall-openzfsonosx.sh",
-              sudo:       true,
-            }
+  uninstall pkgutil:   "org.openzfsonosx.zfs",
+            launchctl: [
+              "org.openzfsonosx.InvariantDisks",
+              "org.openzfsonosx.zconfigd",
+              "org.openzfsonosx.zed",
+              "org.openzfsonosx.zpool-import",
+              "org.openzfsonosx.zpool-import-all",
+            ]
 
   caveats do
     kext

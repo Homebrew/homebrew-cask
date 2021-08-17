@@ -1,6 +1,6 @@
 cask "remnote" do
-  version "1.2.9"
-  sha256 "e34dfb6d3661cb5893e0c4d2014265fe0923e03bce30128f38c93939c4ea910f"
+  version "1.3.15"
+  sha256 "d5021cc81cf69e82efc50e9f076c57215632e93d7d5e4b00fdd3ebad088f11a1"
 
   url "https://download.remnote.io/RemNote-#{version}.dmg"
   name "RemNote"
@@ -9,9 +9,7 @@ cask "remnote" do
 
   livecheck do
     url "https://s3.amazonaws.com/download.remnote.io/latest-mac.yml"
-    strategy :page_match do |page|
-      YAML.safe_load(page)["version"]
-    end
+    strategy :electron_builder
   end
 
   app "RemNote.app"

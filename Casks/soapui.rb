@@ -5,7 +5,13 @@ cask "soapui" do
   url "https://s3.amazonaws.com/downloads.eviware/soapuios/#{version}/SoapUI-#{version}.dmg",
       verified: "s3.amazonaws.com/downloads.eviware/soapuios/"
   name "SmartBear SoapUI"
+  desc "API testing tool"
   homepage "https://www.soapui.org/"
+
+  livecheck do
+    url "https://www.soapui.org/downloads/latest-release/"
+    regex(%r{href=.*?/SoapUI[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+  end
 
   installer script: {
     executable: "SoapUI #{version} Installer.app/Contents/MacOS/JavaApplicationStub",

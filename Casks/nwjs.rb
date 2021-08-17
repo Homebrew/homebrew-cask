@@ -1,15 +1,15 @@
 cask "nwjs" do
-  version "0.50.3"
-  sha256 "0e65df4f09e267473734fa21272ba6b7d6440996b62124b12a5096a718d31078"
+  version "0.55.0"
+  sha256 "70a4b908f00e5196ae036baa5efb173d9ada244088a108958f4317d741da3fe0"
 
   url "https://dl.nwjs.io/v#{version}/nwjs-sdk-v#{version}-osx-x64.zip"
   name "NW.js"
+  desc "Call all Node.js modules directly from the DOM and Web Workers"
   homepage "https://nwjs.io/"
 
   livecheck do
-    url "https://github.com/nwjs/nw.js/releases"
-    strategy :git
-    regex(/^nw-v?(\d+(?:\.\d+)*)$/)
+    url "https://github.com/nwjs/nw.js"
+    regex(/^nw[._-]v?(\d+(?:\.\d+)+)$/)
   end
 
   app "nwjs-sdk-v#{version}-osx-x64/nwjs.app"

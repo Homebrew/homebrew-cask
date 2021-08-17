@@ -1,16 +1,17 @@
 cask "burp-suite" do
-  version "2021.3.2"
-  sha256 "aee5beeded139278c0e4aea19128b1a2682e4197b6c30c5ca5785f011854d31b"
+  version "2021.8.1"
+  sha256 "1e481ca886918727455ae6580f7a192364b9e3bf3ace3a09ec79136436207c37"
 
   url "https://portswigger.net/burp/releases/download?product=community&version=#{version}&type=MacOsx"
-  name "Burp Suite"
+  name "Burp Suite Community Edition"
   desc "Web security testing toolkit"
   homepage "https://portswigger.net/burp/"
 
   livecheck do
-    url "https://portswigger.net/burp/releases?initialTab=community"
-    strategy :page_match
-    regex(%r{Professional\s*/\s*Community\s*(\d+(:?\.\d+)*)}i)
+    url "https://portswigger.net/burp/releases/community/latest"
+    strategy :header_match do |headers|
+      headers["location"][%r{/professional[._-]community[._-]v?(\d+(?:-\d+)+)\?}i, 1].tr("-", ".")
+    end
   end
 
   installer script: {

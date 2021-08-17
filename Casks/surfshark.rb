@@ -1,11 +1,16 @@
 cask "surfshark" do
-  version "2.9.0,615"
+  version "3.7.0,771"
   sha256 :no_check
 
   url "https://downloads.surfshark.com/macOS/latest/Surfshark.dmg"
   name "Surfshark"
   desc "VPN client for secure internet access and private browsing"
   homepage "https://surfshark.com/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   app "Surfshark.app"
 

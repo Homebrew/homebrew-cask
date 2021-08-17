@@ -1,14 +1,20 @@
 cask "youdaonote" do
-  version "3.6.3,6382"
+  version "3.6.3"
   sha256 :no_check
 
   url "https://download.ydstatic.com/notewebsite/downloads/YoudaoNote.dmg",
       verified: "download.ydstatic.com/notewebsite/downloads/"
-  appcast "https://note.youdao.com/update/updateConfig.json"
   name "YoudaoNote"
   name "有道云笔记"
   desc "Multi-platform note application"
   homepage "https://note.youdao.com/"
+
+  livecheck do
+    url "https://note.youdao.com/update/updateConfig.json"
+    strategy :page_match do |page|
+      JSON.parse(page)["macNote"]["version"]
+    end
+  end
 
   app "YoudaoNote.app"
 

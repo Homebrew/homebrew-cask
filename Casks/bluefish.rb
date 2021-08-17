@@ -4,10 +4,14 @@ cask "bluefish" do
 
   url "https://www.bennewitz.com/bluefish/stable/binaries/macosx/Bluefish-#{version}.dmg",
       verified: "bennewitz.com/"
-  appcast "https://www.bennewitz.com/bluefish/stable/binaries/macosx/"
   name "Bluefish"
   desc "Open source code editor"
   homepage "http://bluefish.openoffice.nl/index.html"
+
+  livecheck do
+    url "https://www.bennewitz.com/bluefish/stable/binaries/macosx/"
+    regex(/href=.*?Bluefish[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+  end
 
   app "Bluefish.app"
 end

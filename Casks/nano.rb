@@ -1,6 +1,6 @@
 cask "nano" do
-  version "21.3"
-  sha256 "5fd4d10e85deca133851f1be17735a76810ca508ebca413902396123b1604006"
+  version "22.1"
+  sha256 "ca62f12563244679521fa9f2fdbba5a07e008faabb6e59ced5961cfca1bb9f04"
 
   url "https://github.com/nanocurrency/nano-node/releases/download/V#{version}/nano-node-V#{version}-Darwin.dmg",
       verified: "github.com/nanocurrency/nano-node/"

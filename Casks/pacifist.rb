@@ -1,12 +1,16 @@
 cask "pacifist" do
-  version "3.6.2"
-  sha256 "e8bd4595462e2cb6f900705ef69fdc9f044aea1e2759e347c3e9667c757fd6af"
+  version "3.6.2,29642"
+  sha256 "dac6ef23f81494ff69d74d99aa36187484a207e7e0142f395160f511c18cee6a"
 
-  url "https://www.charlessoft.com/pacifist_download/Pacifist_#{version}.dmg"
-  appcast "https://www.charlessoft.com/cgi-bin/pacifist_sparkle.cgi"
+  url "https://www.charlessoft.com/pacifist_download/Pacifist_#{version.before_comma}.dmg"
   name "Pacifist"
   desc "Extract files and folders from package files, disk images, and archives"
   homepage "https://www.charlessoft.com/"
+
+  livecheck do
+    url "https://www.charlessoft.com/cgi-bin/pacifist_sparkle.cgi"
+    strategy :sparkle
+  end
 
   auto_updates true
 

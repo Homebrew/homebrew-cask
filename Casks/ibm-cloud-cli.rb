@@ -1,6 +1,6 @@
 cask "ibm-cloud-cli" do
-  version "1.4.0"
-  sha256 "b30c4459041d583f1c9d707ec2962e44827e751fb948cb0a527a9d6c89e1078a"
+  version "2.0.2"
+  sha256 "d0449e3e6a71e903dda57036c3e3c8b4edea9a18af0d04decfa23fcf4cb9b79e"
 
   url "https://download.clis.cloud.ibm.com/ibm-cloud-cli/#{version}/IBM_Cloud_CLI_#{version}.pkg"
   name "IBM Cloud CLI"
@@ -9,7 +9,6 @@ cask "ibm-cloud-cli" do
 
   livecheck do
     url "https://github.com/IBM-Cloud/ibm-cloud-cli-release"
-    strategy :git
   end
 
   depends_on cask: "docker"

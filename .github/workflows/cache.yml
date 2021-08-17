@@ -5,18 +5,13 @@ on:
     paths:
       - .github/workflows/cache.yml
   schedule:
-    - cron: '0 */6 * * *' # every 6 hours
+    - cron: "0 */6 * * *" # every 6 hours
+
+concurrency:
+  group: cache
+  cancel-in-progress: true
 
 jobs:
-  cancel-previous-runs:
-    if: startsWith(github.repository, 'Homebrew/')
-    runs-on: ubuntu-latest
-    steps:
-      - name: Cancel Previous Runs
-        uses: n1hility/cancel-previous-runs@953c92201f368370112ea2754545cb4468d89f12
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-
   update:
     if: startsWith(github.repository, 'Homebrew/')
     strategy:
@@ -41,7 +36,7 @@ jobs:
 
       - name: Cache Homebrew Gems
         id: cache
-        uses: actions/cache@v2.1.4
+        uses: actions/cache@v2.1.6
         with:
           path: ${{ steps.set-up-homebrew.outputs.gems-path }}
           key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}

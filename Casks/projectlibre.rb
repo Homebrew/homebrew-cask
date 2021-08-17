@@ -4,8 +4,8 @@ cask "projectlibre" do
 
   url "https://downloads.sourceforge.net/projectlibre/ProjectLibre/#{version.major_minor}/projectlibre-#{version}.dmg",
       verified: "sourceforge.net/projectlibre/"
-  appcast "https://sourceforge.net/projects/projectlibre/rss?path=/ProjectLibre"
   name "ProjectLibre"
+  desc "Microsoft Project in your browser"
   homepage "https://www.projectlibre.com/"
 
   app "ProjectLibre.app"

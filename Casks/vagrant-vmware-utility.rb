@@ -4,9 +4,14 @@ cask "vagrant-vmware-utility" do
 
   url "https://releases.hashicorp.com/vagrant-vmware-utility/#{version}/vagrant-vmware-utility_#{version}_x86_64.dmg",
       verified: "releases.hashicorp.com/vagrant-vmware-utility/"
-  appcast "https://releases.hashicorp.com/vagrant-vmware-utility/"
   name "Vagrant VMware Utility"
+  desc "Gives Vagrant VMware plugin access to various VMware functionalities"
   homepage "https://www.vagrantup.com/vmware/downloads.html"
+
+  livecheck do
+    url "https://releases.hashicorp.com/vagrant-vmware-utility/"
+    regex(%r{href=["']?/?vagrant-vmware-utility/v?(\d+(?:\.\d+)+)/?["' >]}i)
+  end
 
   pkg "VagrantVMwareUtility.pkg"
 

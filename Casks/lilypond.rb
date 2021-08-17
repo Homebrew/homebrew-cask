@@ -1,9 +1,10 @@
 cask "lilypond" do
-  version "2.22.0-1"
-  sha256 "154c21991c534802dbdae8b101863ec696427fbf26e0670c496cf0888dbab374"
+  version "2.22.1-1"
+  sha256 "efdc9ecd5da2e13804258ad739063fad3b0f587aac9fe0a0f89314e784474f58"
 
   url "https://lilypond.org/downloads/binaries/darwin-x86/lilypond-#{version}.darwin-x86.tar.bz2"
   name "LilyPond"
+  desc "Music engraving program"
   homepage "https://lilypond.org/"
 
   livecheck do

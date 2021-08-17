@@ -1,11 +1,16 @@
 cask "talon" do
-  version "102-0.0.8.42"
-  sha256 "3131a3600285a40696595619d74dbd1f268c60704e4e27898d59659d36532094"
+  version "0.2.0"
+  sha256 :no_check
 
-  url "https://talonvoice.com/update/nmi5s3faoq6NzROd2dbCRg/Talon-#{version}.dmg"
-  appcast "https://talonvoice.com/update/nmi5s3faoq6NzROd2dbCRg/appcast.xml"
+  url "https://talonvoice.com/dl/latest/talon-mac.dmg"
   name "Talon"
+  desc "Enables you to control your computer with voice, eye tracking, or noises"
   homepage "https://talonvoice.com/"
+
+  livecheck do
+    url "https://talonvoice.com/dl/latest/changelog.html"
+    regex(/<h\d>\s*(\d+(?:\.\d+)+)/i)
+  end
 
   app "Talon.app"
 

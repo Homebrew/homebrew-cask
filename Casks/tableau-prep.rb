@@ -1,9 +1,11 @@
 cask "tableau-prep" do
-  version "2021.1.2"
-  sha256 "6dfe2c62730085784351258b246592bc68a1f52268c350d3fd8ebf5b0b24b687"
+  version "2021.2.2"
+  sha256 "170080105060d9d78599d90a28a7410147e5606b88e003fe84792f086f277004"
 
   url "https://downloads.tableau.com/esdalt/tableau_prep/#{version}/TableauPrep-#{version.dots_to_hyphens}.dmg"
   name "Tableau Prep"
+  name "Tableau Prep Builder"
+  desc "Combine, shape, and clean your data for analysis"
   homepage "https://www.tableau.com/support/releases/prep"
 
   livecheck do

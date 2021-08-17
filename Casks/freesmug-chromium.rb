@@ -4,8 +4,8 @@ cask "freesmug-chromium" do
 
   url "https://downloads.sourceforge.net/osxportableapps/Chromium_OSX_#{version}.dmg",
       verified: "sourceforge.net/osxportableapps/"
-  appcast "https://sourceforge.net/projects/osxportableapps/rss?path=/Chromium"
   name "Chromium"
+  desc "Google Chromium built to solve Chrome incompatibility issue"
   homepage "http://www.freesmug.org/chromium"
 
   conflicts_with cask: [
@@ -14,4 +14,8 @@ cask "freesmug-chromium" do
   ]
 
   app "Chromium.app"
+
+  caveats do
+    discontinued
+  end
 end

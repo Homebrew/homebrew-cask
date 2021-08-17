@@ -1,8 +1,8 @@
 cask "jcryptool" do
-  version "1.0.4"
-  sha256 "65b95a6d71d28d5a7be17feb6bb2181932ccb0e8c52982dd00c3bde24ba2af83"
+  version "1.0.6"
+  sha256 "f29b9a94df8bdd0bfb2e84ae20330c32a6c6ea05c3b56ea8a6e50d0308b44dc7"
 
-  url "https://github.com/jcryptool/core/releases/download/#{version}/JCrypTool-#{version}-macOS-64bit.tar.gz",
+  url "https://github.com/jcryptool/core/releases/download/v#{version}/JCrypTool-#{version}-macOS-64bit.tar.gz",
       verified: "github.com/jcryptool/core/"
   name "JCrypTool"
   desc "Apply and analyze cryptographic algorithms"
@@ -16,6 +16,6 @@ cask "jcryptool" do
   app "JCrypTool.app"
 
   caveats do
-    depends_on_java("11")
+    depends_on_java "11"
   end
 end

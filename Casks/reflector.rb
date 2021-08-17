@@ -1,6 +1,6 @@
 cask "reflector" do
-  version "3.2.1,3210"
-  sha256 "ef56cde06b2aed87b164f2856f5190931d839e552d3b0755db11bddf5db86614"
+  version "4.0.2,231"
+  sha256 "f1dc94fbb7cee6985be77123f0ec237241dfd013fad88d5994d67018c4b49b14"
 
   url "https://download.airsquirrels.com/Reflector#{version.major}/Mac/Reflector-#{version.before_comma}.dmg"
   name "Reflector"
@@ -8,7 +8,7 @@ cask "reflector" do
   homepage "https://www.airsquirrels.com/reflector/"
 
   livecheck do
-    url "https://updates.airsquirrels.com/Reflector#{version.major}/Mac/Reflector#{version.major}.xml"
+    url "https://updates-prod.airsquirrels.com/Reflector#{version.major}/Mac/updateCheck/"
     strategy :sparkle
   end
 

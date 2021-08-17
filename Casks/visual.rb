@@ -4,8 +4,8 @@ cask "visual" do
 
   url "https://bitbucket.org/salmanarif/visual-release/downloads/visual_osx_#{version}.zip",
       verified: "bitbucket.org/salmanarif/visual-release/"
-  appcast "https://salmanarif.bitbucket.io/visual/downloads.html"
   name "VisUAL"
+  desc "Learn ARM assembly language"
   homepage "https://salmanarif.bitbucket.io/visual/"
 
   app "VisUAL.app"

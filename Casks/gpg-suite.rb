@@ -1,19 +1,23 @@
 cask "gpg-suite" do
-  version "2020.2"
-  sha256 "e2ede6b317d53d1e321342a6f7dd5ab6b123a4900aa8f1eab89b29051a2a4742"
+  version "2021.1,105"
+  sha256 "383bd6ab4791ee51e0f67955ad1ab70bb3a2a1e5c71f6a7f42f53b92684106e0"
 
-  url "https://releases.gpgtools.org/GPG_Suite-#{version}.dmg"
+  url "https://releases.gpgtools.org/GPG_Suite-#{version.before_comma}_#{version.after_comma}.dmg"
   name "GPG Suite"
   desc "Tools to protect your emails and files"
   homepage "https://gpgtools.org/"
 
   livecheck do
-    url "https://gpgtools.org/download"
-    strategy :header_match
+    url "https://gpgtools.org/releases/gka/appcast.xml"
+    strategy :sparkle
   end
 
   auto_updates true
-  conflicts_with cask: "gpg-suite-nightly"
+  conflicts_with cask: [
+    "gpg-suite-nightly",
+    "gpg-suite-no-mail",
+    "gpg-suite-pinentry",
+  ], formula: "gpg"
   depends_on macos: ">= :mojave"
 
   pkg "Install.pkg"

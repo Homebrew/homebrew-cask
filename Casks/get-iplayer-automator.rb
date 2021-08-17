@@ -1,9 +1,10 @@
 cask "get-iplayer-automator" do
-  version "1.21.6,20210323002"
-  sha256 "734dadfd54d0af8de76659ca5fabce23631f5a624ab22b9925edd5419f46ad6e"
+  version "1.21.12,20210729001"
+  sha256 "0aad06d5771c1a9ad251273e2fca8178313079caede9a1b8f4e2ef5897644ed1"
 
   url "https://github.com/Ascoware/get-iplayer-automator/releases/download/v#{version.before_comma}/Get.iPlayer.Automator.v#{version.before_comma}.b#{version.after_comma}.zip"
   name "Get iPlayer Automator"
+  desc "Download and watch BBC and ITV shows"
   homepage "https://github.com/Ascoware/get-iplayer-automator"
 
   livecheck do

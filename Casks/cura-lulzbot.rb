@@ -4,9 +4,17 @@ cask "cura-lulzbot" do
 
   url "https://gitlab.com/lulzbot3d/cura-le/cura-lulzbot/uploads/#{version.after_comma}/cura-lulzbot_#{version.before_comma}.dmg",
       verified: "gitlab.com/lulzbot3d/cura-le/cura-lulzbot/"
-  appcast "https://gitlab.com/lulzbot3d/cura-le/cura-lulzbot/-/tags?format=atom"
   name "Cura LulzBot Edition"
-  homepage "https://www.lulzbot.com/learn/tutorials/cura-lulzbot-edition-installation-osx"
+  desc "3D printing solution"
+  homepage "https://www.lulzbot.com/learn/tutorials/cura-lulzbot-edition-installation-macos"
+
+  livecheck do
+    url "https://gitlab.com/api/v4/projects/15405668/releases"
+    regex(%r{/uploads/([0-9a-f]+)/cura[._-]?lulzbot[._-]?v?(\d+(?:\.\d+)*)\.dmg}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
+    end
+  end
 
   app "cura-lulzbot.app"
 

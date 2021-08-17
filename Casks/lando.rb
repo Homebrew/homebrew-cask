@@ -1,11 +1,12 @@
 cask "lando" do
-  version "3.0.26"
-  sha256 "d85422d7d2358116062b6f1f5ccfd1eeb7b10af7779214299d5330e7781e9654"
+  version "3.1.4"
+  sha256 "3369cf238c956bd12f421c56f110181cc981edeacd1743e1600feb9e991bdf45"
 
   url "https://github.com/lando/lando/releases/download/v#{version}/lando-v#{version}.dmg",
       verified: "github.com/lando/lando/"
   name "Lando"
-  homepage "https://docs.lando.dev/"
+  desc "Local development environment and DevOps tool built on Docker"
+  homepage "https://lando.dev/"
 
   livecheck do
     url :url

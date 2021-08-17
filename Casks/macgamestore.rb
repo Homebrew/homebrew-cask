@@ -1,9 +1,10 @@
 cask "macgamestore" do
-  version "4.3.0,6080"
-  sha256 "be51e1caa0a60a5efad126cab62f50a1913eb8103d3e63c91303aebf4cbd9598"
+  version "4.3.2,6082"
+  sha256 "46b48ec39c4dbf1dce6d249b7de28e4f74765b0eca97a95a65bd06d9276da3d8"
 
   url "https://www.macgamestore.com/api_clientapp/clientupdates/public/core6/MacGameStore_#{version.before_comma}_#{version.after_comma}.tgz"
   name "MacGameStore"
+  desc "Buy, download, and play your games"
   homepage "https://www.macgamestore.com/app/"
 
   livecheck do
@@ -13,6 +14,8 @@ cask "macgamestore" do
       "#{match[1]},#{match[2]}"
     end
   end
+
+  depends_on macos: ">= :sierra"
 
   app "MacGameStore.app"
 

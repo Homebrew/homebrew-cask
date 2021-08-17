@@ -1,9 +1,10 @@
 cask "noraswitch" do
-  version "1.0.2,40"
-  sha256 "10e6219420a817f573335bfdd3a19167c2a77c9578d1abba22412f0167eab5f1"
+  version "1.0.4,56"
+  sha256 "74cddffc69bcb0554b7bfb671a47738583dafbc01926253f6860324aa80b9e1b"
 
   url "https://noraswitch.com/dmg/noraSwitch%20#{version.before_comma}.dmg"
   name "noraSwitch"
+  desc "Window switcher"
   homepage "https://noraswitch.com/"
 
   livecheck do

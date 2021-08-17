@@ -1,8 +1,8 @@
 cask "fuwari" do
-  version "0.5.1"
-  sha256 "dd72adc918e9984548a20a513bd3d4319e63ee78ca688ee75546103a16d9f3c2"
+  version "0.6.0"
+  sha256 "b9094bfb586408dec8f2860fd462f6079d94c5b3bb735b6842d88ff90217577e"
 
-  url "https://github.com/kentya6/Fuwari/releases/download/v#{version}/Fuwari.zip",
+  url "https://github.com/kentya6/Fuwari/releases/download/v#{version}/Fuwari.v#{version}.zip",
       verified: "github.com/kentya6/Fuwari/"
   name "Fuwari"
   desc "Floating screenshot like a sticky"
@@ -13,9 +13,9 @@ cask "fuwari" do
     strategy :github_latest
   end
 
-  app "Fuwari/Fuwari.app"
+  app "Fuwari v#{version}/Fuwari.app"
 
-  uninstall quit:       "com.appknop.Fuwari"
+  uninstall quit: "com.appknop.Fuwari"
 
   zap trash: [
     "~/Library/Application Support/com.appknop.Fuwari",

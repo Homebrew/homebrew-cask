@@ -7,14 +7,6 @@ cask "wanna" do
   name "Wanna"
   homepage "https://wanna.js.org/"
 
-  livecheck do
-    url "https://github.com/mkermani144/wanna/releases/latest"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/v?(\d+(?:\.\d+)*[^/]*)%2B([^/]+)/[^/]*?\.dmg}i)
-      "#{match[1]}+#{match[2]}"
-    end
-  end
-
   app "wanna.app"
 
   caveats do

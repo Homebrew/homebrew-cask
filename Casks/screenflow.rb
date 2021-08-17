@@ -1,6 +1,6 @@
 cask "screenflow" do
-  version "9.0.7,31680"
-  sha256 "242e46d893043c8fabf6367066e772e85c53fee489367936bb38c806e810c652"
+  version "10.0.3,31849"
+  sha256 "5e2dfabe79f3a76324baff557e2022da85014ba2a8dee7dbce43225aa3e5835d"
 
   url "https://www.telestream.net/download-files/screenflow/#{version.before_comma.major_minor.dots_to_hyphens}/ScreenFlow-#{version.before_comma}.dmg"
   name "ScreenFlow"
@@ -13,7 +13,7 @@ cask "screenflow" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "ScreenFlow.app"
 

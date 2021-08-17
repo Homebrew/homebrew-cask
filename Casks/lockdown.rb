@@ -4,8 +4,8 @@ cask "lockdown" do
 
   url "https://bitbucket.org/objective-see/deploy/downloads/Lockdown_#{version}.zip",
       verified: "bitbucket.org/objective-see/"
-  appcast "https://objective-see.com/products/changelogs/Lockdown.txt"
   name "Lockdown"
+  desc "Audits and remediates security configuration settings"
   homepage "https://objective-see.com/products/lockdown.html"
 
   app "Lockdown.app"

@@ -16,18 +16,18 @@ cask "remote-wake-up" do
 
   zap trash: [
     "~/Library/Containers/com.mac-attender.Remote-Wake-Up/Data/" \
-      "Library/Preferences/com.mac-attender.Remote-Wake-Up.plist",
+    "Library/Preferences/com.mac-attender.Remote-Wake-Up.plist",
     "~/Library/Preferences/com.mac-attender.Remote-Wake-Up.plist",
     "~/Library/Containers/com.mac-attender.Remote-Wake-Up/Data/Library/Application Support/Remote Wake Up",
     "~/Library/Containers/com.mac-attender.Remote-Wake-Up/Data/Library/Cookies/Cookies.binarycookies",
     "~/Library/Containers/com.mac-attender.Remote-Wake-Up/Data/Library/Caches/com.plausiblelabs.crashreporter.data",
     "~/Library/Containers/com.mac-attender.Remote-Wake-Up/Data/" \
-      "Library/Saved Application State/com.mac-attender.Remote-Wake-Up.savedState",
+    "Library/Saved Application State/com.mac-attender.Remote-Wake-Up.savedState",
     "~/Library/Containers/com.mac-attender.Remote-Wake-Up/Data/Library/Caches/com.mac-attender.Remote-Wake-Up",
     "~/Library/Containers/com.mac-attender.Remote-Wake-Up/Data/" \
-      "Library/Application Support/com.mac-attender.Remote-Wake-Up",
+    "Library/Application Support/com.mac-attender.Remote-Wake-Up",
     "~/Library/Containers/com.mac-attender.Remote-Wake-Up/Data/" \
-      "Library/Application Support/com.mac-attender.Remote_Wake_Up",
+    "Library/Application Support/com.mac-attender.Remote_Wake_Up",
     "~/Library/Containers/com.mac-attender.Remote-Wake-Up/Data/tmp",
     "~/Library/Containers/com.mac-attender.Remote-Wake-Up/Data/SystemData",
     "~/Library/Containers/com.mac-attender.Remote-Wake-Up/Data/default.profraw",

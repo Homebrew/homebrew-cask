@@ -1,15 +1,18 @@
 cask "gitfinder" do
-  version "1.6.2,93"
-  sha256 "da22b2847ec823950af3ec2411af48538b7c1a430eaf2ec7011278a60f0f909a"
+  version "1.7.2,108"
+  sha256 "b251a4a09f4c96180488bb46d00864fd88b0673d27c18dc0d4dcd8603900cf3d"
 
   url "https://get.gitfinder.com/GitFinder#{version.before_comma.dots_to_underscores}.dmg"
   name "GitFinder"
+  desc "Git client with Finder integration"
   homepage "https://gitfinder.com/"
 
   livecheck do
     url "https://zigz.ag/GitFinder/updates/stablecast.xml"
     strategy :sparkle
   end
+
+  depends_on macos: ">= :el_capitan"
 
   app "GitFinder.app"
 

@@ -1,10 +1,9 @@
 cask "packet-peeper" do
-  version "2019-12-17"
-  sha256 "75f081ab7e9a75f6d41172518864891d426bf05f10f91890c61c330c18de1729"
+  version "2021-07-18"
+  sha256 "c08d8d53969962fb8530301d81180faf11a5cd679f1b91539f5cbe1674cc39b9"
 
   url "https://github.com/choll/packetpeeper/releases/download/#{version}/PacketPeeper_#{version}.dmg",
       verified: "github.com/choll/packetpeeper/"
-  appcast "https://packetpeeper.org/release-notes/"
   name "Packet Peeper"
   desc "Network protocol analyzer"
   homepage "https://packetpeeper.org/"

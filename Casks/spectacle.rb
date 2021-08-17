@@ -8,11 +8,6 @@ cask "spectacle" do
   desc "Move and resize windows with ease"
   homepage "https://www.spectacleapp.com/"
 
-  livecheck do
-    url "https://www.spectacleapp.com/updates/appcast.xml"
-    strategy :sparkle
-  end
-
   auto_updates true
 
   app "Spectacle.app"

@@ -1,9 +1,18 @@
 cask "raindropio" do
-  version "5.2.71"
-  sha256 "cd769fbb09c6524c403ede0f09ccd696c5e5e5a43d6d886d81db193bc7a09f73"
+  version "5.3.36"
 
-  url "https://github.com/raindropio/desktop/releases/download/v#{version}/Raindrop-x64.dmg",
-      verified: "github.com/raindropio/desktop/"
+  if Hardware::CPU.intel?
+    sha256 "741730eba1d69239243d15e49c8a8fa89d0b599e68e81e7f0e4ea5f31e54d881"
+
+    url "https://github.com/raindropio/desktop/releases/download/v#{version}/Raindrop-x64.dmg",
+        verified: "github.com/raindropio/desktop/"
+  else
+    sha256 "c9e78910f94a6c0ae9f3fb988c19143fdc1b82a2fa452f03e0617bab81f50c63"
+
+    url "https://github.com/raindropio/desktop/releases/download/v#{version}/Raindrop-arm64.dmg",
+        verified: "github.com/raindropio/desktop/"
+  end
+
   name "Raindrop.io"
   desc "All-in-one bookmark manager"
   homepage "https://raindrop.io/"

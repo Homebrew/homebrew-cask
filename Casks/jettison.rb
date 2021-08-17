@@ -1,13 +1,17 @@
 cask "jettison" do
-  version "1.8.1"
-  sha256 "40aef2e9cc2b5fd5615c56c2b355705e185945c580e0c940eaa48493165c62fe"
+  version "1.8.2,3340"
+  sha256 "ff3e6bde991a52b5f33b38ea24f543dc421c2e055c4f1c89aa37fa2f823bea97"
 
-  url "https://stclairsoft.com/download/Jettison-#{version}.dmg"
-  appcast "https://stclairsoft.com/cgi-bin/sparkle.cgi?JT"
+  url "https://stclairsoft.com/download/Jettison-#{version.before_comma}.dmg"
   name "Jettison"
   name "St. Clair Software Jettison"
   desc "Automatically ejects external drives"
   homepage "https://stclairsoft.com/Jettison/"
+
+  livecheck do
+    url "https://stclairsoft.com/cgi-bin/sparkle.cgi?JT"
+    strategy :sparkle
+  end
 
   auto_updates true
 

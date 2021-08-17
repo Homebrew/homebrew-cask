@@ -1,5 +1,5 @@
 cask "vk-messenger" do
-  version "5.2.3,720"
+  version "5.3.2,723"
   sha256 :no_check
 
   url "https://desktop.userapi.com/mac/master/vk.dmg",

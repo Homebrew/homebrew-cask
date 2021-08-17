@@ -1,14 +1,22 @@
 cask "p4v" do
-  version "21.1,2085655"
-  sha256 "3aab37718d4d6dfd379e9c9daf5eecb661bf36405d3e77ba79a42d027c9ddd45"
+  version "2021.3,2170446"
+  sha256 "70732d1637b6466b0623b4e481e26fdea403a433fb36fa79ce077723066398b1"
 
-  url "https://cdist2.perforce.com/perforce/r#{version.before_comma}/bin.macosx1015x86_64/P4V.dmg"
-  appcast "https://www.perforce.com/perforce/doc.current/user/p4vnotes.txt"
-  name "Perforce Visual Client"
+  url "https://cdist2.perforce.com/perforce/r#{version.major[-2..]}.#{version.minor}/bin.macosx1015x86_64/P4V.dmg"
+  name "Perforce Helix Visual Client"
   name "P4Merge"
   name "P4V"
   desc "Visual client for Helix Core"
   homepage "https://www.perforce.com/products/helix-core-apps/helix-visual-client-p4v"
+
+  livecheck do
+    url "https://www.perforce.com/perforce/doc.current/user/p4vnotes.txt"
+    strategy :page_match do |page|
+      page.scan(%r{Supporting\s+Libraries\s+for\s+v?(\d+\.\d+)(?:\.\d+)*/(\d+)}i).map do |match|
+        "#{match[0]},#{match[1]}"
+      end
+    end
+  end
 
   app "p4v.app"
   app "p4admin.app"

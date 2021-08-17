@@ -4,6 +4,7 @@ cask "pd" do
 
   url "http://msp.ucsd.edu/Software/pd-#{version}.mac.tar.gz"
   name "Pd"
+  desc "Visual programming language for multimedia"
   homepage "http://msp.ucsd.edu/software.html"
 
   livecheck do
@@ -17,4 +18,9 @@ cask "pd" do
   postflight do
     set_permissions "#{appdir}/Pd-#{version}.app", "u+w"
   end
+
+  zap trash: [
+    "~/Library/Preferences/org.puredata.pd.pd-gui.plist",
+    "~/Library/Saved Application State/org.puredata.pd.pd-gui.savedState",
+  ]
 end

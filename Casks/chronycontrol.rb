@@ -1,9 +1,10 @@
 cask "chronycontrol" do
-  version "1.4.1,257"
-  sha256 "aad365450dea578130bce2b61a344be64d76b9af242afefdc92370cc6b82f664"
+  version "1.4.4,275"
+  sha256 "b80d0f32f645e555bd55728a7c3d9aed8a96eeb36b758e2e9c6eac55cb83ccd1"
 
   url "https://www.whatroute.net/software/chronycontrol-#{version.before_comma}.zip"
   name "ChronyControl"
+  desc "Install and configure chronyd"
   homepage "https://whatroute.net/chronycontrol.html"
 
   livecheck do

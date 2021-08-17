@@ -1,6 +1,6 @@
 cask "microsoft-remote-desktop" do
-  version "10.5.2"
-  sha256 "b648e704f3701116b9abbae7d5960a87fd45d85e9e129561c3cbfd692e48bb96"
+  version "10.6.7"
+  sha256 "18be8b74aaf08f7b5cd6176351c7d94214621c4936c690411d835bb6ce49f1c3"
 
   url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Remote_Desktop_#{version}_installer.pkg",
       verified: "officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/"
@@ -9,9 +9,8 @@ cask "microsoft-remote-desktop" do
   homepage "https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-mac"
 
   livecheck do
-    url "https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/mac-whatsnew"
-    strategy :page_match
-    regex(/Updates\s*for\s*version\s*(\d+(?:\.\d+)*)/i)
+    url "https://go.microsoft.com/fwlink/?linkid=868963"
+    strategy :header_match
   end
 
   auto_updates true
@@ -26,6 +25,7 @@ cask "microsoft-remote-desktop" do
               "com.microsoft.update.agent",
             ],
             quit:      [
+              "com.microsoft.autoupdate2",
               "com.microsoft.autoupdate.fba",
             ]
 

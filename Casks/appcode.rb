@@ -1,20 +1,31 @@
 cask "appcode" do
-  version "2020.3.4,203.7717.57"
+  version "2021.2,212.4746.137"
 
   if Hardware::CPU.intel?
-    sha256 "dcb50aef60debcc58436aaea5df7c92282dc4c4924df372a00b7cbcf95447464"
+    sha256 "012651472e9f84fd7a33fae0208e03dbb61495067a4e274bc4444248210afc2d"
+
     url "https://download.jetbrains.com/objc/AppCode-#{version.before_comma}.dmg"
   else
-    sha256 "99b3b5aed04179e5d34f377602a6f99225136cbd97bac03d53366e497a68b67f"
+    sha256 "c53f33bf97f1a6e600f0ce379e7ed743e9995867bb757539a8ec08ae45eb61e0"
+
     url "https://download.jetbrains.com/objc/AppCode-#{version.before_comma}-aarch64.dmg"
   end
 
-  appcast "https://data.services.jetbrains.com/products/releases?code=AC&latest=true&type=release"
   name "AppCode"
   desc "IDE for Swift, Objective-C, C, and C++ development"
   homepage "https://www.jetbrains.com/objc/"
 
+  livecheck do
+    url "https://data.services.jetbrains.com/products/releases?code=AC&latest=true&type=release"
+    strategy :page_match do |page|
+      JSON.parse(page)["AC"].map do |release|
+        "#{release["version"]},#{release["build"]}"
+      end
+    end
+  end
+
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "AppCode.app"
 

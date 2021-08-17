@@ -6,6 +6,11 @@ cask "aquaskk" do
   name "AquaSKK"
   homepage "https://github.com/codefirst/aquaskk"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   pkg "AquaSKK-#{version}.pkg"
 
   uninstall pkgutil: "org.codefirst.aquaskk.pkg"

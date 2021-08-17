@@ -8,6 +8,11 @@ cask "celestia" do
   desc "Space simulation for exploring the universe in three dimensions"
   homepage "https://celestia.space/"
 
+  livecheck do
+    url "https://celestia.space/download.html"
+    regex(%r{href=.*?/celestia[._-](\d+(?:\.\d+)*)[._-]macOS\.zip["' >]}i)
+  end
+
   app "Celestia.app"
 
   zap trash: [

@@ -4,12 +4,18 @@ cask "keyboard-maestro" do
 
   url "https://files.stairways.com/keyboardmaestro-#{version.no_dots}.zip",
       verified: "stairways.com/"
-  appcast "https://www.keyboardmaestro.com/action/sivc?M&U&08248000&6ABF5EF7&xxxxxxxx&00000000&000010E0&KM&EN"
   name "Keyboard Maestro"
+  desc "Automation software"
   homepage "https://www.keyboardmaestro.com/main/"
 
+  livecheck do
+    url "https://files.stairways.com/index.html"
+    strategy :page_match
+    regex(/href=.*?\.zip.*?Keyboard\s*Maestro\s*(\d+(\.\d+)*)/i)
+  end
+
   auto_updates true
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :el_capitan"
 
   app "Keyboard Maestro.app"
 

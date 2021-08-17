@@ -1,6 +1,6 @@
 cask "qutebrowser" do
-  version "2.1.0"
-  sha256 "a9c752eec5c14b1d21b25de189c15c6e940b3051ab9d7b36c51f3d712cd7e57f"
+  version "2.3.1"
+  sha256 "1b8d534a6afee99b9c0db99b371384b768b4ffa5f3a793290d5eede498607789"
 
   url "https://github.com/qutebrowser/qutebrowser/releases/download/v#{version}/qutebrowser-#{version}.dmg",
       verified: "github.com/qutebrowser/qutebrowser/"

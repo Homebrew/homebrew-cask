@@ -1,6 +1,6 @@
 cask "subler" do
-  version "1.6.10"
-  sha256 "4ae8721ba90e7b119cb743a0b0255f90bc2ae39d91df96f4c6da916ca007fac8"
+  version "1.6.12"
+  sha256 "709C7AECCCB2A42A715037EE41CDC235DF629BFC3B28EEA6DBCF391BB325704D"
 
   url "https://bitbucket.org/galad87/subler/downloads/Subler-#{version}.zip",
       verified: "bitbucket.org/galad87/subler/"
@@ -10,7 +10,7 @@ cask "subler" do
 
   livecheck do
     url "https://subler.org/appcast/appcast.xml"
-    strategy :sparkle
+    regex(/url=.*?Subler[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   auto_updates true

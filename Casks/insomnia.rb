@@ -1,6 +1,6 @@
 cask "insomnia" do
-  version "2021.2.1"
-  sha256 "cfea83cf46a2ba1e739b580915a0d0f5729f613b90a91ee667f2506a9a958eb9"
+  version "2021.4.1"
+  sha256 "7b3e849f59a6fddd09c2689d7df49358bf25847463301910a68b13914943d570"
 
   url "https://github.com/Kong/insomnia/releases/download/core%40#{version}/Insomnia.Core-#{version}.dmg",
       verified: "github.com/Kong/insomnia/"
@@ -10,7 +10,8 @@ cask "insomnia" do
 
   livecheck do
     url :url
-    regex(/^core@?(\d+(?:\.\d+)+)$/i)
+    strategy :github_latest
+    regex(/href=.*?Insomnia[._-]Core[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true

@@ -1,15 +1,15 @@
 cask "camunda-modeler" do
-  version "4.6.0"
-  sha256 "2d3b709a86bbc7c030594307d977a851950d4495e1802924e393bcbaf24860de"
+  version "4.9.0"
+  sha256 "439fbb98f518edccab70b4ef19b1ad924331c08c6874eb9bee95ee004b60a217"
 
   url "https://camunda.org/release/camunda-modeler/#{version}/camunda-modeler-#{version}-mac.zip"
   name "Camunda Modeler"
+  desc "Workflow and Decision Automation Platform"
   homepage "https://camunda.org/"
 
   livecheck do
     url "https://camunda.com/download/modeler/"
-    strategy :page_match
-    regex(%r{href=.*?/camunda-modeler-(\d+(?:\.\d+)*)-mac\.zip}i)
+    regex(%r{href=.*?/camunda[._-]?modeler[._-]?v?(\d+(?:\.\d+)+)[._-]?mac\.zip}i)
   end
 
   app "Camunda Modeler.app"

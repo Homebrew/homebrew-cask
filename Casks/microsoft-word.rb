@@ -1,12 +1,17 @@
 cask "microsoft-word" do
-  version "16.47.21031401"
-  sha256 "3b4615263aef6ca459fd00132b7b7c0ba1a65cf6d8c4fd6f4fafb2102d53aff4"
+  version "16.52.21080801"
+  sha256 "5ec2a9965d352b9c93aae933af70bbaec1b51bcbd17acaa5a042d3cba36a3aab"
 
   url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Word_#{version}_Installer.pkg",
       verified: "officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/"
-  appcast "https://docs.microsoft.com/en-us/officeupdates/update-history-office-for-mac"
   name "Microsoft Word"
+  desc "Word processor"
   homepage "https://products.office.com/en-US/word"
+
+  livecheck do
+    url "https://go.microsoft.com/fwlink/p/?linkid=525134"
+    strategy :header_match
+  end
 
   auto_updates true
   conflicts_with cask: "microsoft-office"

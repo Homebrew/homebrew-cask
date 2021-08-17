@@ -7,13 +7,15 @@ cask "candybar" do
   desc "Tool to modify file icons"
   homepage "https://panic.com/blog/candybar-mountain-lion-and-beyond/"
 
-  livecheck do
-    url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/CandyBar%20(\d+(?:\.\d+)*)\.zip}i)
-  end
-
   app "CandyBar.app"
+
+  zap trash: [
+    "~/Library/Application Support/CandyBar",
+    "~/Library/Caches/Cleanup At Startup/CandyBar",
+    "~/Library/Caches/com.panic.CandyBar3",
+    "~/Library/Preferences/com.panic.CandyBar3.plist",
+    "~/Library/Saved Application State/com.panic.CandyBar3.savedState",
+  ]
 
   caveats do
     discontinued

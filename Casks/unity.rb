@@ -1,13 +1,21 @@
 cask "unity" do
-  version "2020.1.17f1,9957aee8edc2"
-  sha256 "c6fa8c89eb9a93ee08830b84dc84a948afb32eb17ead7b220c2b5f44662bb6bf"
+  version "2021.1.15f1,e767a7370072"
+  sha256 "b873e6802b58e55ce8c6b66be08c2751ed52ecbc880a78c4888bc513ffc1a180"
 
   url "https://download.unity3d.com/download_unity/#{version.after_comma}/MacEditorInstaller/Unity-#{version.before_comma}.pkg",
       verified: "download.unity3d.com/download_unity/"
-  appcast "https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json"
   name "Unity Editor"
   desc "Platform for 3D content"
   homepage "https://unity.com/products"
+
+  livecheck do
+    url "https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json"
+    strategy :page_match do |page|
+      page.scan(%r{/download_unity/(\h+)/MacEditorInstaller/Unity-(\d+(?:\.\d+)*[a-z]*\d*)\.pkg}i).map do |match|
+        "#{match[1]},#{match[0]}"
+      end
+    end
+  end
 
   pkg "Unity-#{version.before_comma}.pkg"
 

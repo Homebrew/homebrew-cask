@@ -1,6 +1,6 @@
 cask "inav-configurator" do
-  version "2.6.1"
-  sha256 "6ac1e7aff5c2c7d1b11a8ed8835852c0895b588335cbe9804b9a8b3d2e440470"
+  version "3.0.1"
+  sha256 "7545b4ff724899372af5e9f8689891a09f7c0414973e44569d3cbe934a2fdd1d"
 
   url "https://github.com/iNavFlight/inav-configurator/releases/download/#{version}/INAV-Configurator_macOS_#{version}.zip"
   name "INAV Configurator"

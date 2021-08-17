@@ -1,10 +1,11 @@
 cask "particle-dev" do
-  version "1.18.0"
-  sha256 :no_check
+  version "1.19.0"
+  sha256 "5f0c2f461c026a5d59a737a717ceb20caa03389cca7f7a754d3bda101d4c4e4a"
 
-  url "https://spark-website.s3.amazonaws.com/particle-dev-mac.zip",
-      verified: "spark-website.s3.amazonaws.com/"
+  url "https://github.com/particle-iot-archived/particle-dev-app/releases/download/v#{version}/particle-dev-mac-#{version}.zip",
+      verified: "github.com/particle-iot-archived/particle-dev-app/"
   name "Particle Dev"
+  desc "IDE for programming Particle devices"
   homepage "https://www.particle.io/products/development-tools/particle-desktop-ide"
 
   app "Particle Dev.app"
@@ -13,4 +14,8 @@ cask "particle-dev" do
     "~/.particle",
     "~/.particledev",
   ]
+
+  caveats do
+    discontinued
+  end
 end

@@ -1,12 +1,17 @@
 cask "forticlient-vpn" do
-  version "6.4"
-  sha256 "a673cc372f4caf90476e6cda4e51c8450ac58e09a8c5218bba537e86792e5d23"
+  version "7.0.0.22"
+  sha256 "9bc0fd4a55e468ac0ae9483a544e81489d05cce3ae0aab3edbe29c4d4aa8f057"
 
-  url "https://filestore.fortinet.com/forticlient/downloads/FortiClientVPNOnlineInstaller_#{version}.dmg",
+  url "https://filestore.fortinet.com/forticlient/downloads/FortiClientVPN_#{version}_OnlineInstaller.dmg",
       verified: "filestore.fortinet.com/forticlient/"
   name "FortiClient VPN"
   desc "Free VPN client for FortiClient"
   homepage "https://forticlient.com/"
+
+  livecheck do
+    url "https://links.fortinet.com/forticlient/mac/vpnagent"
+    strategy :header_match
+  end
 
   installer manual: "FortiClientUpdate.app"
 

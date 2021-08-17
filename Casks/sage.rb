@@ -1,29 +1,40 @@
 cask "sage" do
-  if MacOS.version <= :mojave
-    version "9.1,10.11.6"
-    sha256 "23c13690b8a72deca1628dd0e66a0f7b83557f98c13c3db1dc7eb15d80cf3a8d"
-  else
-    version "9.2,10.15.7"
-    sha256 "fa6eb93368d4f7c220cbdd7a1483c1ef9d9b718b0f179c17c2acf14fb74f10c1"
-  end
+  version "9.3,1.1"
+  sha256 "3504a4e47264ab935a93853473c8cee9fa82e43ab0c5f546c1fc95143fd9e1e1"
 
-  url "https://mirrors.mit.edu/sage/osx/intel/sage-#{version.before_comma}-OSX_#{version.after_comma}-x86_64.app.dmg",
-      verified: "mirrors.mit.edu/sage/osx/intel/"
-  appcast "https://mirrors.mit.edu/sage/osx/intel/index.html"
+  url "https://github.com/3-manifolds/Sage_macOS/releases/download/v#{version.after_comma}/SageMath-#{version.before_comma}.dmg",
+      verified: "github.com/3-manifolds/Sage_macOS/"
   name "Sage"
+  desc "Mathematics software system"
   homepage "https://www.sagemath.org/"
 
-  depends_on macos: ">= :el_capitan"
+  livecheck do
+    url "https://github.com/3-manifolds/Sage_macOS/releases/latest"
+    strategy :page_match do |page|
+      match = page.match(%r{href=.*?/v?(\d+(?:\.\d+)*)/SageMath-(\d+(?:\.\d+)*)\.dmg}i)
+      "#{match[2]},#{match[1]}"
+    end
+  end
 
-  app "SageMath-#{version.before_comma}.app"
-  binary "#{appdir}/SageMath-#{version.before_comma}.app/Contents/Resources/sage/sage"
+  depends_on macos: ">= :high_sierra"
 
-  uninstall quit: "org.sagemath.Sage"
+  app "SageMath-#{version.before_comma.dots_to_hyphens}.app"
+  pkg "Recommended_#{version.before_comma.dots_to_underscores}.pkg"
+
+  uninstall quit:    [
+    "org.computop.sage",
+    "org.computop.SageMath",
+    "com.tcltk.tcllibrary",
+    "com.tcltk.tklibrary",
+  ],
+            pkgutil: [
+              "org.computop.SageMath.bin",
+              "org.computop.SageMath.share",
+            ]
 
   zap trash: [
     "~/.sage",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.sagemath.sage.sfl*",
-    "~/Library/Logs/sage.log",
-    "~/Library/Preferences/org.sagemath.Sage.plist",
+    "~/Library/Application Support/SageMath",
+    "~/Library/Preferences/SageMath.plist",
   ]
 end

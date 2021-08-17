@@ -1,13 +1,20 @@
 cask "miditrail" do
-  version "1.3.1,71899"
-  sha256 "17d561bafa46413a721215b7df5a5442cf131acfd868309a5c8bcb37a14f1286"
+  version "1.3.3,75216"
+  sha256 "d67b18790b0ee486b2b2e590a9227940cdf5eca2eb27dcb24df0e85fff3f47b5"
 
-  url "http://dl.osdn.jp/miditrail/#{version.after_comma}/MIDITrail-Ver.#{version.before_comma}-macOS.zip",
-      verified: "dl.osdn.jp/miditrail/"
-  appcast "https://ja.osdn.net/projects/miditrail/releases/rss"
+  url "https://acc.dl.osdn.jp/miditrail/#{version.after_comma}/MIDITrail-Ver.#{version.before_comma}-macOS.zip",
+      verified: "acc.dl.osdn.jp/miditrail/"
   name "MIDITrail"
   desc "MIDI player which provides 3D visualization of MIDI data sets"
   homepage "https://osdn.net/projects/miditrail/"
+
+  livecheck do
+    url "https://ja.osdn.net/projects/miditrail/releases/rss"
+    strategy :page_match do |page|
+      page.scan(%r{url=.+downloads/(\d+)/MIDITrail[._-]Ver[._-](\d+(?:\.\d+)+)[._-]macOS\.zip}i)
+          .map { |matches| "#{matches[1]},#{matches[0]}" }
+    end
+  end
 
   app "MIDITrail/MIDITrail.app"
 end

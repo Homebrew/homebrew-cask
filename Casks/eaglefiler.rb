@@ -1,6 +1,6 @@
 cask "eaglefiler" do
-  version "1.9.3"
-  sha256 "5c265098119bfb7c03ca5c62c3b9e16a8019c126eaf8b7948f64546bf3e3bf66"
+  version "1.9.5"
+  sha256 "38b5049d3014ce70e940e650b6dec1dae373cf1df68d52e5966909a938204a1f"
 
   url "https://c-command.com/downloads/EagleFiler-#{version}.dmg"
   name "EagleFiler"

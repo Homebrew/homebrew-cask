@@ -1,12 +1,16 @@
 cask "manictime" do
-  version "2.0.31"
-  sha256 "a63c9f3a1b7d21976b1fbbfecdc9d752bd2640a4422d7745f922ecbed0d547f8"
+  version "2.1.2"
+  sha256 "4707b62865d984bc0c1a59bcb7732533e15d8db51b6b50fb68b7c611a694886f"
 
   url "https://cdn.manictime.com/setup/mac/ManicTime-v#{version}.dmg"
-  appcast "https://www.manictime.com/Mac/Releases"
   name "ManicTime"
   desc "Time tracker that automatically collects computer usage data"
   homepage "https://www.manictime.com/Mac"
+
+  livecheck do
+    url "https://www.manictime.com/mac/download"
+    regex(%r{href=.*?/ManicTime[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+  end
 
   depends_on macos: ">= :sierra"
 

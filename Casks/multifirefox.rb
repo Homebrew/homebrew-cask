@@ -4,9 +4,13 @@ cask "multifirefox" do
 
   url "https://mff_sparkle.s3.amazonaws.com/MultiFirefox_#{version}.zip",
       verified: "mff_sparkle.s3.amazonaws.com/"
-  appcast "https://mff_sparkle.s3.amazonaws.com/MultiFirefoxAppcast2.xml"
   name "MultiFirefox"
   homepage "https://davemartorana.com/multifirefox/"
+
+  livecheck do
+    url "https://mff_sparkle.s3.amazonaws.com/MultiFirefoxAppcast#{version.major}.xml"
+    strategy :sparkle
+  end
 
   app "MultiFirefox.app"
 end

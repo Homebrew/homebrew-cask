@@ -1,13 +1,17 @@
 cask "malus" do
-  version "1.7.6,176"
-  sha256 "b3cdf4bae6a5f67b66d6cd03e9cb98f6449384f54cd810cceac966f6cdece202"
+  version "1.9.6"
+  sha256 "5318b05bfead4b3bd08b25772af4c265d850bbd0af7ce2f57e7bb49421980ebe"
 
-  url "https://malus.s3cdn.net/uploads/Malus_#{version.before_comma.dots_to_underscores}.dmg",
+  url "https://malus.s3cdn.net/uploads/Malus-mac_#{version.no_dots}.dmg",
       verified: "malus.s3cdn.net/"
-  appcast "https://api.getmalus.com/api/checkDesktopUpdate?type=mac"
   name "Malus"
   desc "Proxy to help accessing various online media resources/services"
   homepage "https://getmalus.com/"
+
+  livecheck do
+    url "https://api.getmalus.com/api/checkDesktopUpdate?type=mac"
+    strategy :sparkle, &:short_version
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"

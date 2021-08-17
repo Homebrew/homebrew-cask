@@ -2,12 +2,18 @@ cask "vip-access" do
   version "1.0.7"
   sha256 :no_check
 
-  url "https://com-symantec-vip-us-east-2-prd-idcenter-downloads-v2.s3.amazonaws.com/VIPAccessSecurityCode.dmg",
-      verified: "com-symantec-vip-us-east-2-prd-idcenter-downloads-v2.s3.amazonaws.com/"
+  url "https://storage.googleapis.com/sedvip-prd-idcenter-downloads/VIPAccessSecurityCode.dmg",
+      verified: "storage.googleapis.com/sedvip-prd-idcenter-downloads/"
   name "Symantec VIP Access"
+  desc "Two-step authentication software"
   homepage "https://vip.symantec.com/"
 
-  depends_on macos: ">= :el_capitan"
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
+  depends_on macos: ">= :sierra"
 
   pkg "VIP Access.pkg"
 

@@ -1,9 +1,10 @@
 cask "krisp" do
-  version "1.18.10"
-  sha256 "7c138c1bdc5a197f2e5f7ae1a9cc6ed7c0625afa15f254f8bba8038c1971393f"
+  version "1.24.7"
+  sha256 "03da782c0bf2b1e4787ffbeb326a5921bf5294981418bd2d995f541d26f8723b"
 
   url "https://cdn.krisp.ai/mac/release/v#{version.major}.#{version.minor}/krisp_#{version}.pkg"
   name "Krisp"
+  desc "Sound clear in online meetings"
   homepage "https://krisp.ai/"
 
   livecheck do
@@ -16,6 +17,7 @@ cask "krisp" do
 
   pkg "krisp_#{version}.pkg"
 
-  uninstall quit:    "ai.krisp.krispMac",
-            pkgutil: "ai.krisp.krispMac"
+  uninstall quit:      "ai.krisp.krispMac",
+            launchctl: "ai.krisp.krispMac.cameraAssistant",
+            pkgutil:   "ai.krisp.krispMac"
 end

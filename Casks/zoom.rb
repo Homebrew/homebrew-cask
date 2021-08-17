@@ -1,16 +1,14 @@
 cask "zoom" do
-  version "5.6.0.536"
+  version "5.7.5.1123"
 
   if Hardware::CPU.intel?
-    sha256 "f19454e84ce426ad30327708e676207aaa1483a2b23d5994bbc86845f1087407"
+    sha256 "5bc632160c5102e81c614cc6dfa82641527a66651945b2083aca4676b1f18819"
 
-    url "https://d11yldzmag5yn.cloudfront.net/prod/#{version}/Zoom.pkg",
-        verified: "d11yldzmag5yn.cloudfront.net/"
+    url "https://cdn.zoom.us/prod/#{version}/Zoom.pkg"
   else
-    sha256 "bb6268c27f1ea900d9f7fb6427944eee685c894f5d8134f46043f6e1462d616c"
+    sha256 "3301fc0ee91c8799b513c32756470365283f2b3af261ddc53199c534a2903e9e"
 
-    url "https://d11yldzmag5yn.cloudfront.net/prod/#{version}/arm64/Zoom.pkg",
-        verified: "d11yldzmag5yn.cloudfront.net/"
+    url "https://cdn.zoom.us/prod/#{version}/arm64/Zoom.pkg"
   end
 
   name "Zoom.us"
@@ -29,8 +27,23 @@ cask "zoom" do
 
   pkg "Zoom.pkg"
 
+  postflight do
+    # Description: Ensure console variant of postinstall is non-interactive.
+    # This is because `open "$APP_PATH"&` is called from the postinstall
+    # script of the package and we don't want any user intervention there.
+    retries ||= 3
+    ohai "The Zoom package postinstall script launches the Zoom app" unless retries < 3
+    ohai "Attempting to close zoom.us.app to avoid unwanted user intervention" unless retries < 3
+    return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/zoom.us.app"]
+
+    rescue RuntimeError
+      sleep 1
+      retry unless (retries -= 1).zero?
+      opoo "Unable to forcibly close zoom.us.app"
+  end
+
   uninstall signal:  ["KILL", "us.zoom.xos"],
-            pkgutil: "us.zoom.pkg.videmeeting",
+            pkgutil: "us.zoom.pkg.videomeeting",
             delete:  [
               "/Applications/zoom.us.app",
               "/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin",
@@ -51,9 +64,12 @@ cask "zoom" do
     "~/Library/Logs/zoom.us",
     "~/Library/Logs/zoominstall.log",
     "~/Library/Logs/ZoomPhone",
+    "~/Library/Group Containers/BJ4HAAB9B3.ZoomClient3rd",
     "~/Library/Mobile Documents/iCloud~us~zoom~videomeetings",
     "~/Library/Preferences/ZoomChat.plist",
     "~/Library/Preferences/us.zoom.airhost.plist",
+    "~/Library/Preferences/us.zoom.caphost.plist",
+    "~/Library/Preferences/us.zoom.Transcode.plist",
     "~/Library/Preferences/us.zoom.xos.Hotkey.plist",
     "~/Library/Preferences/us.zoom.xos.plist",
     "~/Library/Safari/PerSiteZoomPreferences.plist",

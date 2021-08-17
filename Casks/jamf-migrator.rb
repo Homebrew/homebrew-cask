@@ -1,5 +1,5 @@
 cask "jamf-migrator" do
-  version "5.8.2"
+  version "5.9.0"
   sha256 :no_check
 
   url "https://github.com/jamf/JamfMigrator/releases/download/current/jamf-migrator.zip"
@@ -10,7 +10,7 @@ cask "jamf-migrator" do
   livecheck do
     url :url
     strategy :github_latest
-    regex(/jamf-migrator\s+v(\d+(?:\.\d+)*)/i)
+    regex(/jamf-migrator\s+v?(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: ">= :sierra"

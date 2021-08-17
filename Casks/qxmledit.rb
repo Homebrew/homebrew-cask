@@ -4,8 +4,8 @@ cask "qxmledit" do
 
   url "https://downloads.sourceforge.net/qxmledit/QXmlEdit-#{version}.dmg",
       verified: "downloads.sourceforge.net/qxmledit/"
-  appcast "https://sourceforge.net/projects/qxmledit/rss"
   name "QXmlEdit"
+  desc "XML editor"
   homepage "https://qxmledit.org/"
 
   app "QXmlEdit.app"

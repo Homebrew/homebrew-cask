@@ -1,5 +1,5 @@
 cask "smoothscroll" do
-  version "1.5.0,10500.1"
+  version "1.5.1,10501.1"
   sha256 :no_check
 
   url "https://www.smoothscroll.net/mac/download/SmoothScroll.app.zip"

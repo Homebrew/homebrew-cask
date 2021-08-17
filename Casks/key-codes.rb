@@ -1,11 +1,16 @@
 cask "key-codes" do
-  version "2.2,2026"
+  version "2.2.1,2027"
   sha256 :no_check
 
   url "https://manytricks.com/download/keycodes"
-  appcast "https://manytricks.com/keycodes/appcast"
   name "Key Codes"
+  desc "Display key code, unicode value and modifier keys state for any key combination"
   homepage "https://manytricks.com/keycodes/"
+
+  livecheck do
+    url "https://manytricks.com/keycodes/appcast/"
+    strategy :sparkle
+  end
 
   auto_updates true
 

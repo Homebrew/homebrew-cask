@@ -1,5 +1,5 @@
 cask "finisher-neo" do
-  version "1.1.0,350"
+  version "350"
   sha256 :no_check
 
   url "https://www.ujam.com/api/delivery/product?os=osx&sku=FIN-NEO"
@@ -7,7 +7,12 @@ cask "finisher-neo" do
   desc "VST/AU/AAX multi-effect plugin"
   homepage "https://www.ujam.com/finisher/neo/"
 
-  pkg "FIN-NEO_osx_#{version.after_comma}.pkg"
+  livecheck do
+    url :url
+    strategy :header_match
+  end
+
+  pkg "FIN-NEO_osx_#{version}.pkg"
 
   uninstall pkgutil: "com.ujam.finneo.*"
 

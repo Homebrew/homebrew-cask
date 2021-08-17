@@ -94,7 +94,7 @@ atom          google-chrome     1password
 
 With `--full-name` the Tap name will also be included, _e.g._: `purple/monkey/dishwasher` for the Cask `dishwasher` installed from the Tap `purple/monkey`.
 
-Given an installed Cask, `brew list --casks {{cask_name}}` lists the staged files.
+Given an installed Cask, `brew list --casks <cask_name>` lists the staged files.
 
 Show details about a specific Cask:
 
@@ -155,7 +155,7 @@ $ brew install homebrew/cask-fonts/font-symbola
 * `--debug`: output debug information
 * `--no-binaries`: skip symlinking executable binaries into `/usr/local/bin`
 * `--require-sha`: abort installation of Cask if no checksum is defined
-* `--no-quarantine`: [disable Apple’s quarantining](https://github.com/Homebrew/homebrew-cask/blob/app_cant_be_opened.md-no-quarantine/doc/faq/app_cant_be_opened.md) for the specific app
+* `--no-quarantine`: [disable Apple’s quarantining](https://github.com/Homebrew/homebrew-cask/blob/HEAD/doc/faq/app_cant_be_opened.md) for the specific app
 * `--language=<iso-language>[,<iso-language> ... ]`: changes the language of the Cask to be installed. The first matching language is used, otherwise it uses the default language of the Cask.
 
 You can also modify the default installation locations used when issuing `brew install`:

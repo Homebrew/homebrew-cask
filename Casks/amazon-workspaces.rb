@@ -1,16 +1,19 @@
 cask "amazon-workspaces" do
-  version "3.1.4.1751"
-  sha256 :no_check
+  version "4.0.1.2036"
+  sha256 "ee8983c56b5fb98c6142627f69289011f78e8ed16fedaa2998e5c6e7aeac5e2d"
 
-  url "https://workspaces-client-updates.s3.amazonaws.com/prod/iad/osx/WorkSpaces.pkg",
-      verified: "workspaces-client-updates.s3.amazonaws.com/"
+  url "https://d2td7dqidlhjx7.cloudfront.net/prod/iad/osx/WorkSpaces_AllProducts_#{version.split(".")[-1]}.zip",
+      verified: "d2td7dqidlhjx7.cloudfront.net/prod/iad/osx/"
   name "Amazon Workspaces"
+  desc "Cloud native persistent desktop virtualization"
   homepage "https://clients.amazonworkspaces.com/"
 
   livecheck do
     url "https://d2td7dqidlhjx7.cloudfront.net/prod/iad/osx/WorkSpacesAppCast_macOS_20171023.xml"
     strategy :sparkle
   end
+
+  depends_on macos: ">= :sierra"
 
   pkg "WorkSpaces.pkg"
 

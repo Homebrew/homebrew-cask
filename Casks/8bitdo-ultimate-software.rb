@@ -1,9 +1,10 @@
 cask "8bitdo-ultimate-software" do
-  version "2.0.0"
-  sha256 "8f1fffaa652bf69cc17b82a4f1014c020132f2c21a980272aad11f420355c0ae"
+  version "2.0.4"
+  sha256 "09db1657af3df1c0a2ffa87993c620762377f3a00d8127ec6ed784cef50d5a2f"
 
   url "http://tools.8bitdo.com/8BitdoUltimateSoftware/8BitDoUltimateSoftwareV#{version}.zip"
   name "8BitDo Ultimate Software"
+  desc "Control every piece of your controller"
   homepage "https://support.8bitdo.com/ultimate-software.html"
 
   livecheck do

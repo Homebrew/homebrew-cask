@@ -5,6 +5,7 @@ cask "multimc" do
   url "https://github.com/MultiMC/MultiMC5/releases/download/#{version}/mmc-stable-osx64.tar.gz",
       verified: "github.com/MultiMC/MultiMC5/"
   name "Multi MC"
+  desc "Minecraft launcher"
   homepage "https://multimc.org/"
 
   livecheck do
@@ -15,4 +16,10 @@ cask "multimc" do
   auto_updates true
 
   app "MultiMC.app"
+
+  zap trash: [
+    "~/Library/Caches/MultiMC",
+    "~/Library/Preferences/org.multimc.MultiMC5.plist",
+    "~/Library/Saved Application State/org.multimc.MultiMC5.savedState",
+  ]
 end

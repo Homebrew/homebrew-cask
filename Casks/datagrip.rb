@@ -1,20 +1,31 @@
 cask "datagrip" do
-  version "2020.3.2"
+  version "2021.2.1,212.5080.22"
 
   if Hardware::CPU.intel?
-    sha256 "dbdc49e06cf2d120e55eecaa0cb6d5588a9ca73b0efd4607d6c2ad4fc8a36d0b"
-    url "https://download.jetbrains.com/datagrip/datagrip-#{version}.dmg"
+    sha256 "08a028494d2befe4411ebe746a79073003bb59ec270ac69f021612ff29ece7fc"
+
+    url "https://download.jetbrains.com/datagrip/datagrip-#{version.before_comma}.dmg"
   else
-    sha256 "95d28b0a0faa9a6e131bfef9bfe321bdf028be7624345e3416c0f26ef7a95f96"
-    url "https://download.jetbrains.com/datagrip/datagrip-#{version}-aarch64.dmg"
+    sha256 "7ed7f20c3f0cb97857e1a7212ed9e4fd3c6f54139400df2334ae27fb1250c7db"
+
+    url "https://download.jetbrains.com/datagrip/datagrip-#{version.before_comma}-aarch64.dmg"
   end
 
-  appcast "https://data.services.jetbrains.com/products/releases?code=DG&latest=true&type=release"
   name "DataGrip"
   desc "Databases & SQL IDE"
   homepage "https://www.jetbrains.com/datagrip/"
 
+  livecheck do
+    url "https://data.services.jetbrains.com/products/releases?code=DG&latest=true&type=release"
+    strategy :page_match do |page|
+      JSON.parse(page)["DG"].map do |release|
+        "#{release["version"]},#{release["build"]}"
+      end
+    end
+  end
+
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "DataGrip.app"
 

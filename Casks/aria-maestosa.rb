@@ -4,8 +4,8 @@ cask "aria-maestosa" do
 
   url "https://downloads.sourceforge.net/ariamaestosa/AriaMaestosa-osx-64bits-#{version}.zip",
       verified: "downloads.sourceforge.net/ariamaestosa/"
-  appcast "https://sourceforge.net/projects/ariamaestosa/rss"
   name "Aria Maestosa"
+  desc "Midi sequencer and editor"
   homepage "https://ariamaestosa.sourceforge.io/"
 
   app "Aria Maestosa.app"
