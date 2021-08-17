@@ -4,6 +4,7 @@ cask "parallels-client" do
 
   url "https://download.parallels.com/ras/v#{version.major}/#{version.before_comma.major_minor_patch}.#{version.after_comma}/RasClient-Mac-Notarized-#{version.before_comma.major_minor_patch}-#{version.after_comma}.pkg"
   name "Parallels Client"
+  desc "RDP client"
   homepage "https://www.parallels.com/products/ras/features/rdp-client/"
 
   livecheck do
