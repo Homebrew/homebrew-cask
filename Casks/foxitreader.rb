@@ -18,7 +18,7 @@ cask "foxitreader" do
 
   pkg "FoxitPDFReader#{version.no_dots}.L10N.Setup.pkg"
 
-  uninstall pkgutil: "com.foxit.pkg.pdfreader",
-            delete:  "/Applications/Foxit PDF Reader.app",
+  uninstall pkgutil:   "com.foxit.pkg.pdfreader",
+            delete:    "/Applications/Foxit PDF Reader.app",
             launchctl: "com.foxit.PDFReaderUpdateService"
 end
