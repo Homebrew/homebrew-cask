@@ -4,6 +4,7 @@ cask "smoothscroll" do
 
   url "https://www.smoothscroll.net/mac/download/SmoothScroll.app.zip"
   name "SmoothScroll"
+  desc "Smooth mouse scrolling utility"
   homepage "https://www.smoothscroll.net/"
 
   livecheck do
