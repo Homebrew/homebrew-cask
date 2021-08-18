@@ -1,6 +1,6 @@
 cask "singularity" do
   version "1.8.9.8709"
-  sha256 "002597a1d7386ff1b505416476fce812037a38c61bd152212fd758db943de40c"
+  sha256 "ef40901d39389588be972b6f72ec58d1a4f0d982dbb87f0ea1eeeab1d388763b"
 
   url "https://bitbucket.org/router_gray/singularityviewer/downloads/Singularity_Alpha_#{version.dots_to_underscores}_x86_64.dmg",
       verified: "bitbucket.org/router_gray/singularityviewer/"
@@ -16,5 +16,5 @@ cask "singularity" do
     end
   end
 
-  app "Singularity.app"
+  app "SingularityAlpha.app"
 end
