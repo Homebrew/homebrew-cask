@@ -7,5 +7,10 @@ cask "jmc" do
   desc "Media organizer"
   homepage "https://github.com/jcm93/jmc"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "jmc.app"
 end
