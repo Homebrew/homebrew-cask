@@ -8,6 +8,11 @@ cask "psi-plus" do
   desc "XMPP client designed for experienced users"
   homepage "https://psi-plus.com/"
 
+  livecheck do
+    url "https://sourceforge.net/projects/psiplus/files/macOS/tehnick/"
+    regex(/Psi%2B[._-]?(\d+(?:\.\d+)*)[._-]?macOS.*-x86_64\.dmg/i)
+  end
+
   depends_on macos: ">= :sierra"
 
   app "Psi+.app"
