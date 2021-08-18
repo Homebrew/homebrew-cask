@@ -8,9 +8,8 @@ cask "backblaze" do
   homepage "https://backblaze.com/"
 
   livecheck do
-    url "https://secure.backblaze.com/api/clientversion.xml"
-    strategy :page_match
-    regex(/mac_version=.*?(\d+(?:\.\d+)*)/i)
+    url :url
+    strategy :extract_plist
   end
 
   auto_updates true
@@ -23,14 +22,14 @@ cask "backblaze" do
   ],
             delete:    [
               "#{appdir}/Backblaze.app",
+              "/Library/Backblaze.bzpkg",
+              "/Library/Logs/DiagnosticReports/bzbmenu_*.*_resource.diag",
               "/Library/PreferencePanes/BackblazeBackup.prefPane",
             ]
 
   zap trash: [
-    "/Library/Backblaze.bzpkg",
-    "~/Library/Preferences/com.backblaze.bzbmenu.plist",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.backblaze.*.sfl*",
-    "/Library/Logs/DiagnosticReports/bzbmenu_*.*_resource.diag",
+    "~/Library/Preferences/com.backblaze.bzbmenu.plist",
     "~/Library/Logs/BackblazeGUIInstaller",
   ]
 end
