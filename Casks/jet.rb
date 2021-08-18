@@ -3,7 +3,7 @@ cask "jet" do
   sha256 "90c4f04fc4e4ecb62bdf24b95cb6fa9bd2fb999a7a3cd6aec12672fd86c73239"
 
   url "https://s3.amazonaws.com/codeship-jet-releases/#{version}/jet-darwin_amd64_#{version}.tar.gz",
-      verified: "codeship-jet-releases.s3.amazonaws.com/"
+      verified: "s3.amazonaws.com/codeship-jet-releases/"
   name "Codeship Jet"
   desc "CI/CD as a service"
   homepage "https://docs.cloudbees.com/docs/cloudbees-codeship/latest/"
