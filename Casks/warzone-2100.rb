@@ -1,8 +1,8 @@
 cask "warzone-2100" do
-  version "4.0.1"
-  sha256 "345d79b120de75df56b2cfd32026d53ede6b99277b607b02b1f7ebcd82149e1b"
+  version "4.1.3"
+  sha256 "828009fa7f0245eff5da4e57f68db05e1c8f98c4fb9c2871deabb53a1df96f5e"
 
-  url "https://github.com/Warzone2100/warzone2100/releases/download/#{version}/warzone2100_macOS.zip",
+  url "https://github.com/Warzone2100/warzone2100/releases/download/#{version}/warzone2100_macOS_universal.zip",
       verified: "github.com/Warzone2100/warzone2100/"
   name "Warzone 2100"
   desc "Free and open-source real time strategy game"
