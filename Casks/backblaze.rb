@@ -1,8 +1,8 @@
 cask "backblaze" do
   version "8.0.1.534"
-  sha256 "1a32fe6a090054a4954acc88b598c4ea2550a85468547dae323044f1038de452"
+  sha256 :no_check
 
-  url "https://secure.backblaze.com/api/install_backblaze?file=bzinstall-mac-#{version}.zip"
+  url "https://secure.backblaze.com/mac/install_backblaze.dmg"
   name "Backblaze"
   desc "Data backup and storage service"
   homepage "https://backblaze.com/"
@@ -15,7 +15,7 @@ cask "backblaze" do
 
   auto_updates true
 
-  installer manual: "bzdoinstall.app"
+  installer manual: "Backblaze Installer.app"
 
   uninstall launchctl: [
     "com.backblaze.bzserv",
