@@ -8,4 +8,11 @@ cask "clay" do
   homepage "https://clay.earth"
 
   app "Clay.app"
+
+  zap trash: [
+    "~/Library/Application Support/Clay",
+    "~/Library/Logs/Clay",
+    "~/Library/Preferences/com.clay.mac.plist",
+    "~/Library/Saved Application State/com.clay.mac.savedState",
+  ]
 end
