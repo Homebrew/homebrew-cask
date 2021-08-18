@@ -13,6 +13,11 @@ cask "clay" do
   desc "Private rolodex to remember people better"
   homepage "https://clay.earth/"
 
+  livecheck do
+    url "https://assets.clay.earth/desktop/mac/latest-mac.yml"
+    strategy :electron_builder
+  end
+
   app "Clay.app"
 
   zap trash: [
