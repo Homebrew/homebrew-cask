@@ -4,7 +4,6 @@ cask "psi-plus" do
 
   url "https://downloads.sourceforge.net/psiplus/Psi+-#{version}-macOS10.14-x86_64.dmg",
       verified: "downloads.sourceforge.net/psiplus/"
-  appcast "https://sourceforge.net/projects/psiplus/rss?path=/macOS/tehnick"
   name "Psi+"
   desc "XMPP client designed for experienced users"
   homepage "https://psi-plus.com/"
