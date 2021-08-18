@@ -8,8 +8,8 @@ cask "jmc" do
   homepage "https://github.com/jcm93/jmc"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://github.com/jcm93/jmc/releases/latest"
+    regex(/(\d+(?:\.\d+)*((?:-beta)?)*(\d+)?)/i)
   end
 
   app "jmc.app"
