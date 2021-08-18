@@ -5,7 +5,7 @@ cask "clay" do
   url "https://assets.clay.earth/desktop/mac/Clay-#{version}-arm64.dmg"
   name "clay"
   desc "Private rolodex to remember people better"
-  homepage "https://clay.earth"
+  homepage "https://clay.earth/"
 
   app "Clay.app"
 
