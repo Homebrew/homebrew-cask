@@ -9,7 +9,7 @@ cask "jmc" do
 
   livecheck do
     url "https://github.com/jcm93/jmc/releases/latest"
-    regex(/(\d+(?:\.\d+)*((?:-beta)?)*(\d+)?)/i)
+    regex(%r{releases/tag/v?(\d+(?:\.\d+)*((?:-beta)?)*(\d+)?)}i)
   end
 
   app "jmc.app"
