@@ -1,12 +1,12 @@
 cask "android-studio" do
-  version "2020.3.1.22"
+  version "2020.3.1.23"
 
   if Hardware::CPU.intel?
-    sha256 "42722b671fcda03e6e02b712828b5484e4af7563c5172b583252c9070c173d4b"
+    sha256 "2e8fd75b614c5c48cb3df1fbd91d16e46c09a85bd1dbf458177bbee8b82b2e7e"
     url "https://redirector.gvt1.com/edgedl/android/studio/install/#{version}/android-studio-#{version}-mac.dmg",
         verified: "redirector.gvt1.com/edgedl/android/studio/"
   else
-    sha256 "dc383ea7d7a6585451bced011f7db178068b9744319a9093cb05ac855b2c81ff"
+    sha256 "71b0a1c8932f166e18cc003df6ab414fb5d86e8b6ffa9292f82f9a7159caf874"
     url "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/#{version}/android-studio-#{version}-mac_arm.zip",
         verified: "redirector.gvt1.com/edgedl/android/studio/"
   end
