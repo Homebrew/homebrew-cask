@@ -1,11 +1,20 @@
 cask "singularity" do
-  version "1.8.6,6156"
-  sha256 "002597a1d7386ff1b505416476fce812037a38c61bd152212fd758db943de40c"
+  version "1.8.9.8709"
+  sha256 "ef40901d39389588be972b6f72ec58d1a4f0d982dbb87f0ea1eeeab1d388763b"
 
-  url "https://bitbucket.org/SingularityViewer/singularityviewer/downloads/Singularity_#{version.dots_to_underscores.sub(",", "_")}.dmg",
-      verified: "bitbucket.org/SingularityViewer/singularityviewer/"
+  url "https://bitbucket.org/router_gray/singularityviewer/downloads/Singularity_Alpha_#{version.dots_to_underscores}_x86_64.dmg",
+      verified: "bitbucket.org/router_gray/singularityviewer/"
   name "Singularity Viewer"
+  desc "Client for Second Life and OpenSim"
   homepage "http://www.singularityviewer.org/"
 
-  app "Singularity.app"
+  livecheck do
+    url "http://www.singularityviewer.org/downloads"
+    strategy :page_match do |page|
+      v = page[/Singularity[._-]?Alpha[._-]?(\d+(?:_\d+)*)[._-]?x86_64\.dmg/i, 1]
+      v.tr("_", ".")
+    end
+  end
+
+  app "SingularityAlpha.app"
 end
