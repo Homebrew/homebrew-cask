@@ -7,6 +7,11 @@ cask "leapp" do
   desc "Cloud credentials manager"
   homepage "https://www.leapp.cloud/"
 
+  livecheck do
+    url "https://asset.noovolari.com/latest/latest-mac.yml"
+    strategy :electron_builder
+  end
+
   container nested: "temp/Leapp-#{version}.dmg"
 
   app "Leapp.app"
