@@ -1,4 +1,4 @@
-cask "youtube-dl-gui" do
+cask "open-video-downloader" do
   version "2.3.0"
   sha256 "2317e4dfb3f2930de3afba2d5794521e8887150b9a4928ec1829654ef22ad9e7"
 
