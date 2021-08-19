@@ -1,6 +1,6 @@
 cask "pock" do
-  version "0.8.1-5"
-  sha256 "f3b301e06c5b54159607e5b6813ed8f7a8a90908de2a1782986825e623203b37"
+  version "0.9.0-22"
+  sha256 "c190b719a4ecd98680fcea6a8095432012a2b9e0067adac9d4e7b2c92dc8ca6b"
 
   url "https://pock.app/builds/pock_#{version.dots_to_underscores.gsub(/-/, "__")}.zip"
   name "Pock"
