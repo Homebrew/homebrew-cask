@@ -9,4 +9,11 @@ cask "corporate-clash" do
   homepage "https://corporateclash.net/"
 
   app "Corporate Clash Launcher.app"
+
+  zap trash: [
+    "~/Library/Application Support/Corporate Clash",
+    "~/Library/Preferences/Corporate Clash",
+    "~/Library/Saved Application State/net.corporateclash.pyside2.savedState",
+    "~/Library/Saved Application state/net.corporateclash.mac.savedState",
+  ]
 end
