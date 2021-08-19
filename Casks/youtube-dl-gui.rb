@@ -1,8 +1,8 @@
 cask "youtube-dl-gui" do
-  version "2.2.2"
-  sha256 "3cfb3892f10f6646cb518d185f608a7596db82e82733e04697468971c535699c"
+  version "2.3.0"
+  sha256 "2317e4dfb3f2930de3afba2d5794521e8887150b9a4928ec1829654ef22ad9e7"
 
-  url "https://github.com/jely2002/youtube-dl-gui/releases/download/v#{version}/YouTube-Downloader-GUI-#{version}.dmg"
+  url "https://github.com/jely2002/youtube-dl-gui/releases/download/v#{version}/Open-Video-Downloader-#{version}.dmg"
   name "YouTube Downloader GUI"
   desc "Cross-platform GUI for youtube-dl made in Electron and node.js"
   homepage "https://github.com/jely2002/youtube-dl-gui"
