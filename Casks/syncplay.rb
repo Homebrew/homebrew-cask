@@ -5,6 +5,7 @@ cask "syncplay" do
   url "https://github.com/Syncplay/syncplay/releases/download/v#{version}/Syncplay_#{version}.dmg",
       verified: "github.com/Syncplay/syncplay/"
   name "Syncplay"
+  desc "Synchronises media players"
   homepage "https://syncplay.pl/"
 
   livecheck do
