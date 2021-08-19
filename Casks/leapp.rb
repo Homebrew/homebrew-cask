@@ -16,4 +16,13 @@ cask "leapp" do
   container nested: "temp/Leapp-#{version}.dmg"
 
   app "Leapp.app"
+
+  zap trash: [
+    "~/Desktop/Leapp-0.6.2-mac.zip",
+    "~/Library/Application Support/Leapp",
+    "~/Library/Logs/Leapp",
+    "~/Library/Preferences/com.leapp.app.plist",
+    "~/Library/Saved Application State/com.leapp.app.savedState",
+    "~/.Leapp",
+  ]
 end
