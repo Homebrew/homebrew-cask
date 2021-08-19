@@ -15,6 +15,7 @@ cask "telegram-desktop" do
 
   auto_updates true
   conflicts_with cask: "homebrew/cask-versions/telegram-desktop-beta"
+  depends_on macos: ">= :sierra"
 
   # Renamed to avoid conflict with telegram
   app "Telegram.app", target: "Telegram Desktop.app"
