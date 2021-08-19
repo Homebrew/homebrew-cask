@@ -1,4 +1,4 @@
-cask "wingpersonal" do
+cask "wing-personal" do
   version "8.0.2.0"
 
   if Hardware::CPU.intel?
@@ -11,7 +11,7 @@ cask "wingpersonal" do
     url "https://wingware.com/pub/wing-personal/#{version}/wing-personal-#{version}-arm64.dmg"
   end
 
-  name "WingPersonal"
+  name "Wing Personal"
   desc "Free Python IDE designed for students and hobbyists"
   homepage "https://www.wingware.com/"
 
@@ -22,5 +22,5 @@ cask "wingpersonal" do
 
   depends_on macos: ">= :high_sierra"
 
-  app "WingPersonal.app"
+  app "Wing Personal.app"
 end
