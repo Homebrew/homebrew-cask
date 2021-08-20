@@ -5,7 +5,7 @@ cask "dialpad" do
   url "https://storage.googleapis.com/dialpad_native/osx/Dialpad.dmg",
       verified: "storage.googleapis.com/dialpad_native/osx/"
   name "Dialpad"
-  desc "Cloud communication platform "
+  desc "Cloud communication platform"
   homepage "https://dialpad.com/download"
 
   livecheck do
