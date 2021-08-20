@@ -11,7 +11,7 @@ cask "lab" do
     url "https://github.com/c8r/lab/releases/"
     regex(%r{download/(.*)/Lab[._-]?(\d+(?:\.\d+)*)[._-]?mac\.zip}i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[1]},#{match[2]}" }
+      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
 
