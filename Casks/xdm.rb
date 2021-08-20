@@ -9,7 +9,7 @@ cask "xdm" do
   homepage "https://xtremedownloadmanager.com/"
 
   livecheck do
-    url "https://github.com/subhra74/xdm/releases"
+    url :url
     regex(%r{(\d+(?:\.\d+)*)/XDMSetup\.dmg}i)
   end
 
