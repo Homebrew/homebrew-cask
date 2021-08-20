@@ -4,6 +4,7 @@ cask "doxygen" do
 
   url "https://doxygen.nl/files/Doxygen-#{version}.dmg"
   name "Doxygen"
+  desc "Generate documentation from source code"
   homepage "https://www.doxygen.nl/"
 
   livecheck do
