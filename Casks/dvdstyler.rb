@@ -5,6 +5,7 @@ cask "dvdstyler" do
   url "https://downloads.sourceforge.net/dvdstyler/DVDStyler-#{version}-MacOSX.dmg",
       verified: "sourceforge.net/dvdstyler/"
   name "DVDStyler"
+  desc "DVD authoring application"
   homepage "https://www.dvdstyler.org/"
 
   livecheck do
