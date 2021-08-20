@@ -5,6 +5,7 @@ cask "freeorion" do
   url "https://github.com/freeorion/freeorion/releases/download/v#{version.before_comma}/FreeOrion_v#{version.before_comma}_#{version.after_comma.before_colon}.#{version.after_colon}_MacOSX_10.9.dmg",
       verified: "github.com/freeorion/"
   name "FreeOrion"
+  desc "Turn-based space empire and galactic conquest game"
   homepage "https://freeorion.org/"
 
   livecheck do
