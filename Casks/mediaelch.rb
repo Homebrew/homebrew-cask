@@ -12,7 +12,8 @@ cask "mediaelch" do
     url "https://github.com/Komet/MediaElch/releases/latest"
     strategy :page_match do |page|
       match = page.match(
-        %r{href=.*?/MediaElch[._-]?macOS[._-]?(\d+(?:\.\d+)*)[._-]?(\d+(?:.\d+)*)[._-]?git[._-]?master[._-]?([^/]*?)\.dmg}i,
+        %r{href=.*?/MediaElch[._-]?macOS[._-]?(\d+(?:\.\d+)*)[._-]?,
+        (\d+(?:.\d+)*)[._-]?git[._-]?master[._-]?([^/]*?)\.dmg}i,
       )
       "#{match[1]},#{match[2]}:#{match[3]}"
     end
