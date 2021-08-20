@@ -4,9 +4,16 @@ cask "luminance-hdr" do
 
   url "https://downloads.sourceforge.net/qtpfsgui/luminance/LuminanceHDR_#{version}-Qt5.13.dmg",
       verified: "downloads.sourceforge.net/qtpfsgui/"
-  appcast "https://sourceforge.net/projects/qtpfsgui/rss"
   name "Luminance HDR"
+  desc "Provides a workflow for HDR imaging"
   homepage "https://qtpfsgui.sourceforge.io/"
+
+  livecheck do
+    url "http://qtpfsgui.sourceforge.net/?page_id=10"
+    regex(/LuminanceHDR[._-]?(\d+(?:\.\d+)*)[._-]?-Qt5\.13\.dmg/i)
+  end
+
+  depends_on macos: ">= :sierra"
 
   app "Luminance HDR #{version.major_minor_patch}.app"
 
