@@ -12,6 +12,7 @@ cask "aldente" do
     strategy :github_latest
   end
 
+  auto_updates true
   depends_on macos: ">= :big_sur"
 
   app "AlDente.app"
