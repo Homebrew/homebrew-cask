@@ -8,13 +8,8 @@ cask "nozbe" do
   homepage "https://nozbe.com/"
 
   livecheck do
-    url "https://nozbe.com/mac"
-    strategy :header_match do |headers|
-      # example: location: https://files2.nozbe.com/3201/release/Nozbe.app.zip
-      match = headers["location"].match(%r{/v?(\d)(\d+)(\d+)/release/Nozbe}i)
-      # not perfect, will fail when          it'll have to distinguish between 3.20.10 and 3.201.0
-      "#{match[1]}\.#{match[2]}\.#{match[3]}"
-    end
+    url "https://help.nozbe.com/gtd/release-notes/"
+    regex(%r{<h2.*id="newest".*?>Version\s+(\d+(?:\.\d+)+)</h2>}i)
   end
 
   depends_on macos: ">= :sierra"
