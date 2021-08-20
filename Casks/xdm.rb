@@ -5,6 +5,7 @@ cask "xdm" do
   url "https://github.com/subhra74/xdm/releases/download/#{version}/XDMSetup.dmg",
       verified: "github.com/subhra74/xdm/"
   name "Xtreme Download Manager"
+  desc "Tool to increase download speed"
   homepage "https://xtremedownloadmanager.com/"
 
   livecheck do
