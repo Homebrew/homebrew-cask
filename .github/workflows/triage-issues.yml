@@ -70,7 +70,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Lock Outdated Threads
-        uses: dessant/lock-threads@1621939cecf8586399a6b60d2a7af9469232b5b6
+        uses: dessant/lock-threads@f1a42f0f44eb83361d617a014663e1a76cf282d2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           issue-lock-inactive-days: 30
