@@ -10,6 +10,7 @@ cask "luminance-hdr" do
 
   livecheck do
     url "http://qtpfsgui.sourceforge.net/?page_id=10"
+    strategy :page_match
     regex(/LuminanceHDR[._-]?(\d+(?:\.\d+)*)[._-]?-Qt5\.13\.dmg/i)
   end
 
@@ -18,7 +19,7 @@ cask "luminance-hdr" do
   app "Luminance HDR #{version.major_minor_patch}.app"
 
   zap trash: [
-    "~/Library/Preferences/com.luminance-hdr.plist",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.luminance-hdr.sfl*",
+    "~/Library/Preferences/com.luminance-hdr.plist",
   ]
 end
