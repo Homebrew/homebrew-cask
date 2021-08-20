@@ -4,7 +4,7 @@ cask "witch" do
 
   url "https://manytricks.com/download/witch"
   name "Witch"
-  desc "Witch apps, windows, or tabs"
+  desc "Switch apps, windows, or tabs"
   homepage "https://manytricks.com/witch/"
 
   livecheck do
