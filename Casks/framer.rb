@@ -1,5 +1,5 @@
 cask "framer" do
-  version "2021.29.1"
+  version "2021.33.0"
   sha256 :no_check
 
   if Hardware::CPU.intel?
