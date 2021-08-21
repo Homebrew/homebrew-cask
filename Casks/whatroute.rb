@@ -1,6 +1,6 @@
 cask "whatroute" do
-  version "2.4.5,11775"
-  sha256 "24d1c10aa127df97253bfe0ec2904f73a54a1beac3796484819eb487f40adb06"
+  version "2.4.6,11776"
+  sha256 "11b70c4fa559b2aab5ee7247aad8f25ae06ca814defe96005548ffb9b0595744"
 
   url "https://downloads.whatroute.net/software/whatroute-#{version.before_comma}.zip"
   name "WhatRoute"
