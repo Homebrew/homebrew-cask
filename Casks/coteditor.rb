@@ -19,6 +19,11 @@ cask "coteditor" do
   desc "Plain-text editor for web pages, program source codes and more"
   homepage "https://coteditor.com/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
 
   app "CotEditor.app"
