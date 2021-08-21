@@ -17,6 +17,11 @@ cask "altair-graphql-client" do
   desc "GraphQL client"
   homepage "https://altair.sirmuel.design/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Altair GraphQL Client.app"
 
   zap trash: [
