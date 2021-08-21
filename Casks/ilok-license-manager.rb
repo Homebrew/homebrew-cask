@@ -4,6 +4,7 @@ cask "ilok-license-manager" do
 
   url "https://installers.ilok.com/iloklicensemanager/LicenseSupportInstallerMac.zip"
   name "iLok License Manager"
+  desc "Software for iLok devices"
   homepage "https://ilok.com/#!license-manager"
 
   livecheck do
