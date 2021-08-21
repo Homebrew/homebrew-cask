@@ -1,6 +1,6 @@
 cask "arkiwi" do
-  version "4.0,400"
-  sha256 "6725544c12d8f012a7aafb832c3318ce9a04853296ef3047e9a79c9eee9113d5"
+  version "4.1,401"
+  sha256 "02ce9cca1e118b4b1c3af98b3b11fad38234be8f57a0a6908fcdee1a14eea18a"
 
   url "https://www.mariogt.com/appsChest/ArKiwi#{version.before_comma.dots_to_hyphens}.zip"
   name "ArKiwi"
