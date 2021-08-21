@@ -1,6 +1,6 @@
 cask "uniflash" do
-  version "6.3.0.3193"
-  sha256 "3a46f28f41125310c7a608540bc53db4dd27bd7eaed2012357ff26e12176d113"
+  version "6.4.0.3394"
+  sha256 "8ddb6990b78fa40d293effd471ba8850613a2ae2997e87b8d9863ccba172d43a"
 
   url "https://downloads.ti.com/ccs/esd/uniflash/uniflash_sl.#{version}.dmg"
   name "TI UniFlash"
