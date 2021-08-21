@@ -8,6 +8,11 @@ cask "ueli" do
   desc "Keystroke launcher"
   homepage "https://ueli.app/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "ueli.app"
 
   uninstall quit: "ueli"
