@@ -8,8 +8,8 @@ cask "onionshare" do
   homepage "https://onionshare.org/"
 
   livecheck do
-    url "https://onionshare.org/latest-version.txt"
-    regex(/(\d+(?:\.\d+)*)/)
+    url :homepage
+    regex(/href=.*?OnionShare[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "OnionShare.app"
