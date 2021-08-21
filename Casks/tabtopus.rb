@@ -1,6 +1,6 @@
 cask "tabtopus" do
-  version "4.2,4200"
-  sha256 "7ba5c2247f2f04393be5d7af5d5c58c1e3f1daafc250e099ffa955333ebf7bd8"
+  version "4.2.5,4250"
+  sha256 "0e23b5a33821ac1c72e5cd4b8b979144e48754f3c3d222b81f458ebd139fe01a"
 
   url "https://www.mariogt.com/appsChest/TabTopus#{version.before_comma.dots_to_hyphens}.zip"
   name "TabTopus"
