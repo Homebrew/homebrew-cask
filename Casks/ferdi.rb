@@ -17,6 +17,11 @@ cask "ferdi" do
   desc "Messaging browser which combines several services"
   homepage "https://getferdi.com/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
 
   app "Ferdi.app"
