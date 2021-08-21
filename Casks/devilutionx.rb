@@ -7,6 +7,11 @@ cask "devilutionx" do
   desc "Diablo build for modern operating systems"
   homepage "https://github.com/diasurgical/devilutionX/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :high_sierra"
 
   app "devilutionx.app"
