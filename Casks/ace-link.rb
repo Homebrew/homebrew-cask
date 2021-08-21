@@ -7,6 +7,11 @@ cask "ace-link" do
   desc "Menu bar app that allows playing Ace Stream video streams in the VLC player"
   homepage "https://github.com/blaise-io/acelink"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :high_sierra"
   depends_on cask: [
     "vlc",
