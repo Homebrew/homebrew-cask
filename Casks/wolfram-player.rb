@@ -1,8 +1,14 @@
 cask "wolfram-player" do
-  version "12.3.0"
-  sha256 "371371bcad5c42b8830e109e97d8926d7e1fa2cdd46116e2a5464df6bdd6efdc"
+  version "12.3.1"
 
-  url "https://account.wolfram.com/download/public/wolfram-player/#{version}/desktop/MAC"
+  if Hardware::CPU.intel?
+    url "https://account.wolfram.com/download/public/wolfram-player/#{version}/desktop/MAC/MAC_INTEL"
+    sha256 "f9b595216ff09c939addc382b38016ddde67ae3104ec00302739417586af4ea9"
+  else
+    url "https://account.wolfram.com/download/public/wolfram-player/#{version}/desktop/MAC/MAC_ARM"
+    sha256 "ca23f324b619f392f883c9a6c940ea399478b33b9ffaa7d8dd0409dd09f2bfbd"
+  end
+
   name "Wolfram Player"
   desc "Tool to view and interact with Wolfram notebooks"
   homepage "https://www.wolfram.com/player"
