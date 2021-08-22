@@ -17,6 +17,7 @@ cask "beyond-compare" do
 
   app "Beyond Compare.app"
   binary "#{appdir}/Beyond Compare.app/Contents/MacOS/bcomp"
+  binary "#{appdir}/Beyond Compare.app/Contents/MacOS/bcomp", target: "bcompare"
 
   zap trash: [
     "~/Library/Application Support/Beyond Compare",
