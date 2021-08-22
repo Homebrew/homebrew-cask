@@ -17,6 +17,11 @@ cask "blockbench" do
   desc "Free, modern 3D model editor for boxy models and pixel art textures"
   homepage "https://www.blockbench.net/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Blockbench.app"
 
   zap trash: "~/Library/Application Support/Blockbench"
