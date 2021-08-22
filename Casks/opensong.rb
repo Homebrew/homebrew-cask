@@ -14,7 +14,7 @@ cask "opensong" do
 
   pkg "OpenSong%20#{version}.pkg"
 
-  uninstall pkgutil: 'org.opensong.opensong'
+  uninstall pkgutil: "org.opensong.opensong"
 
   zap trash: [
     "~/Library/Preferences/org.opensong.opensong.plist",
