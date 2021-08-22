@@ -17,6 +17,7 @@ cask "beyond-compare" do
 
   app "Beyond Compare.app"
   binary "#{appdir}/Beyond Compare.app/Contents/MacOS/bcomp"
+  binary "#{appdir}/Beyond Compare.app/Contents/MacOS/bcomp", target: "bcompare"
 
   zap trash: [
     "~/Library/Application Support/Beyond Compare",
@@ -25,4 +26,11 @@ cask "beyond-compare" do
     "~/Library/Caches/com.ScooterSoftware.BeyondCompare",
     "~/Library/Saved Application State/com.ScooterSoftware.BeyondCompare.savedState",
   ]
+  caveats <<~EOS
+    The difference between command line tools：
+    /usr/local/bin/bcomp    (to launch the comparison and wait for it to complete)
+    /usr/local/bin/bcompare    (to launch the comparison and return immediately)
+    
+    see https://www.scootersoftware.com/support.php?zz=kb_OSXInstallCLT
+  EOS
 end
