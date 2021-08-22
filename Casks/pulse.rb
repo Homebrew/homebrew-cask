@@ -1,6 +1,6 @@
 cask "pulse" do
-  version "0.15.3"
-  sha256 "cfba399c46f90d11402a04137ff968ad7daf465450b5c7a3607f0f57d17904ad"
+  version "0.16.0"
+  sha256 "8afd649c5617bdd17fb602c3b0626f500d2f10180b8d492a697b5b4f08c45155"
 
   url "https://github.com/kean/Pulse/releases/download/#{version}/Pulse.app.zip",
       verified: "github.com/kean/Pulse/"
