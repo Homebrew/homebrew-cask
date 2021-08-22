@@ -28,9 +28,9 @@ cask "beyond-compare" do
   ]
   caveats <<~EOS
     The difference between command line tools：
-    /usr/local/bin/bcomp    (to launch the comparison and wait for it to complete)
-    /usr/local/bin/bcompare    (to launch the comparison and return immediately)
-    
+      /usr/local/bin/bcomp    (to launch the comparison and wait for it to complete)
+      /usr/local/bin/bcompare    (to launch the comparison and return immediately)
+
     see https://www.scootersoftware.com/support.php?zz=kb_OSXInstallCLT
   EOS
 end
