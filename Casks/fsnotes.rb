@@ -11,7 +11,7 @@ cask "fsnotes" do
   livecheck do
     url :url
     strategy :github_latest
-    regex(/href=.*?\/tag\/v?(\d+)["' >]/i)
+    regex(%r{href=.*?/tag/v?(\d+)["' >]}i)
   end
 
   app "FSNotes.app"
