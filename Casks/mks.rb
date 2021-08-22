@@ -4,7 +4,7 @@ cask "mks" do
 
   url "https://github.com/x0054/MKS/releases/download/#{version}/MKS.zip"
   name "MKS"
-  desc "Mechanical Keyboard Simulator"
+  desc "Mechanical keyboard simulator"
   homepage "https://github.com/x0054/MKS"
 
   app "MKS.app"
