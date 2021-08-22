@@ -26,12 +26,4 @@ cask "beyond-compare" do
     "~/Library/Caches/com.ScooterSoftware.BeyondCompare",
     "~/Library/Saved Application State/com.ScooterSoftware.BeyondCompare.savedState",
   ]
-
-  caveats <<~EOS
-    The difference between command line tools：
-      #{HOMEBREW_PREFIX}/bin/bcomp    (to launch the comparison and wait for it to complete)
-      #{HOMEBREW_PREFIX}/bin/bcompare    (to launch the comparison and return immediately)
-
-    see https://www.scootersoftware.com/support.php?zz=kb_OSXInstallCLT
-  EOS
 end
