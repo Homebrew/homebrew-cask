@@ -12,7 +12,7 @@ cask "processing" do
     regex(%r{href=.*?tree/processing[._-](\d+)[._-]v?(\d+(?:\.\d+)+)}i)
     strategy :github_latest do |page|
       page.scan(regex)
-        .map { |match| "#{match[1]},#{match[0]}" }
+          .map { |match| "#{match[1]},#{match[0]}" }
     end
   end
 
