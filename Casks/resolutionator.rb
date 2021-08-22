@@ -9,9 +9,9 @@ cask "resolutionator" do
   livecheck do
     url "https://manytricks.com/resolutionator/appcast/"
     strategy :sparkle do |feed|
-      version = feed.short_version
-      version += ".0" if version.present? && (version.split(".").length < 3)
-      "#{version},#{feed.version}"
+      short_version = feed.short_version
+      short_version += ".0" if short_version.split(".").length < 3
+      "#{short_version},#{feed.version}"
     end
   end
 
