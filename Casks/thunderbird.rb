@@ -13,7 +13,7 @@ cask "thunderbird" do
     sha256 "9ee2ba717c61ae6e3fc5c0d697f28c380883806c762ef97b03973864d36f6cec"
     "en-GB"
   end
-  language "en-US", default: true do
+  language "en", default: true do
     sha256 "3baf78695006dd0882c90cba1310d7dd370522c7d913b152fb3929c40ca36acb"
     "en-US"
   end
