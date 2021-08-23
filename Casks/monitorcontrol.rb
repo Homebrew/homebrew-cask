@@ -7,6 +7,12 @@ cask "monitorcontrol" do
   desc "Tool to control external monitor brightness & volume"
   homepage "https://github.com/MonitorControl/MonitorControl"
 
+  livecheck do
+    url "https://github.com/MonitorControl/MonitorControl/releases/"
+    strategy :page_match
+    regex(/MonitorControl[._-]?v?(\d+(?:\.\d+)*(?:-rc\d+))/i)
+  end
+
   depends_on macos: ">= :sierra"
 
   app "MonitorControl.app"
