@@ -4,7 +4,7 @@ cask "mimestream" do
 
   url "https://storage.googleapis.com/mimestream-releases/Mimestream_#{version}.dmg",
       verified: "storage.googleapis.com/mimestream-releases/"
-  name "mimestream"
+  name "Mimestream"
   desc "Native app email client for Gmail"
   homepage "https://mimestream.com/"
 
