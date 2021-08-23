@@ -9,8 +9,8 @@ cask "mimestream" do
   homepage "https://mimestream.com/"
 
   livecheck do
-    url "https:/mimestream.com/appcast.xml"
-    strategy :sparkle
+    url "https://storage.googleapis.com/mimestream-releases/"
+    regex(/Mimestream[._-]?(\d+(?:\.\d+)*)\.dmg/i)
   end
 
   app "Mimestream.app"
