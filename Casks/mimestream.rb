@@ -10,9 +10,7 @@ cask "mimestream" do
 
   livecheck do
     url "https://mimestream.com/appcast.xml"
-    strategy :sparkle do |item|
-      item.short_version
-    end
+    strategy :sparkle, &:short_version
   end
 
   app "Mimestream.app"
