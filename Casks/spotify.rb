@@ -1,6 +1,6 @@
 cask "spotify" do
   if Hardware::CPU.intel?
-    version "1.1.66.578.gc54d0f69,1.1.66.578.gc54d0f69-15"
+    version "1.1.66.580.gbd43cbc9,1.1.66.580.gbd43cbc9-18"
     sha256 :no_check
 
     url "https://download.scdn.co/Spotify.dmg",
