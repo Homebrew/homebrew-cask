@@ -1,6 +1,6 @@
 cask "burp-suite" do
-  version "2021.8.1"
-  sha256 "1e481ca886918727455ae6580f7a192364b9e3bf3ace3a09ec79136436207c37"
+  version "2021.8.2"
+  sha256 "6fd5c62ccc0b5fe834a161e5f0f3eb22b1234ab4913d3d4006bbc78dd81418ad"
 
   url "https://portswigger.net/burp/releases/download?product=community&version=#{version}&type=MacOsx"
   name "Burp Suite Community Edition"
