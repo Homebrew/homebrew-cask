@@ -1,5 +1,5 @@
 cask "cloudmounter" do
-  version "3.9,690"
+  version "3.10,694"
   sha256 :no_check
 
   url "https://cdn.eltima.com/download/cloudmounter.dmg"
