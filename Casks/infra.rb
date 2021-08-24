@@ -7,6 +7,15 @@ cask "infra" do
   desc "Kubernetes desktop client"
   homepage "https://infra.app/"
 
+  livecheck do
+    url "https://api.infra.app/update/darwin/0.0.1"
+    strategy :page_match do |page|
+      JSON.parse(page)["version"]
+    end
+  end
+
+  auto_updates true
+
   app "Infra.app"
 
   zap trash: [
