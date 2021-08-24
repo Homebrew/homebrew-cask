@@ -1,6 +1,6 @@
 cask "sage" do
-  version "9.3,1.1"
-  sha256 "3504a4e47264ab935a93853473c8cee9fa82e43ab0c5f546c1fc95143fd9e1e1"
+  version "9.4,1.2"
+  sha256 "d8c5b842c62a99f7958e27c1f8606b813a31fb290fbde2aab7b41fef204cf770"
 
   url "https://github.com/3-manifolds/Sage_macOS/releases/download/v#{version.after_comma}/SageMath-#{version.before_comma}.dmg",
       verified: "github.com/3-manifolds/Sage_macOS/"
