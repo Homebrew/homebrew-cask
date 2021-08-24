@@ -8,4 +8,12 @@ cask "infra" do
   homepage "https://infra.app/"
 
   app "Infra.app"
+
+  zap trash: [
+    "~/Library/Application Support/infra",
+    "~/Library/Caches/app.infra.infra",
+    "~/Library/Caches/app.infra.infra.ShipIt",
+    "~/Library/Preferences/app.infra.infra.plist",
+    "~/Library/Saved Application State/app.infra.infra.savedState",
+  ]
 end
