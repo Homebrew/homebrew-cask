@@ -28,8 +28,8 @@ cask "sage" do
     "com.tcltk.tklibrary",
   ],
             pkgutil: [
-              "org.computop.SageMath.bin",
-              "org.computop.SageMath.share",
+              "org.computop.SageMath.#{version.before_comma.dots_to_underscores}.bin",
+              "org.computop.SageMath.#{version.before_comma.dots_to_underscores}.share",
             ]
 
   zap trash: [
