@@ -1,5 +1,5 @@
 cask "webpquicklook" do
-  version 1.0
+  version "1.0"
   sha256 :no_check
 
   url "https://raw.githubusercontent.com/emin/WebPQuickLook/master/WebpQuickLook.tar.gz",
