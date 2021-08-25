@@ -24,15 +24,27 @@ cask "kotlin-native" do
 
   conflicts_with formula: "kotlin"
 
-  binary "kotlin-native-macos-#{version}/bin/cinterop"
-  binary "kotlin-native-macos-#{version}/bin/generate-platform"
-  binary "kotlin-native-macos-#{version}/bin/jsinterop"
-  binary "kotlin-native-macos-#{version}/bin/klib"
-  binary "kotlin-native-macos-#{version}/bin/konan-lldb"
-  binary "kotlin-native-macos-#{version}/bin/konanc"
-  binary "kotlin-native-macos-#{version}/bin/kotlinc"
-  binary "kotlin-native-macos-#{version}/bin/kotlinc-native"
-  binary "kotlin-native-macos-#{version}/bin/run_konan"
+  if Hardware::CPU.intel?
+    binary "kotlin-native-macos-x86_64-#{version}/bin/cinterop"
+    binary "kotlin-native-macos-x86_64-#{version}/bin/generate-platform"
+    binary "kotlin-native-macos-x86_64-#{version}/bin/jsinterop"
+    binary "kotlin-native-macos-x86_64-#{version}/bin/klib"
+    binary "kotlin-native-macos-x86_64-#{version}/bin/konan-lldb"
+    binary "kotlin-native-macos-x86_64-#{version}/bin/konanc"
+    binary "kotlin-native-macos-x86_64-#{version}/bin/kotlinc"
+    binary "kotlin-native-macos-x86_64-#{version}/bin/kotlinc-native"
+    binary "kotlin-native-macos-x86_64-#{version}/bin/run_konan"
+  else
+    binary "kotlin-native-macos-aarch64-#{version}/bin/cinterop"
+    binary "kotlin-native-macos-aarch64-#{version}/bin/generate-platform"
+    binary "kotlin-native-macos-aarch64-#{version}/bin/jsinterop"
+    binary "kotlin-native-macos-aarch64-#{version}/bin/klib"
+    binary "kotlin-native-macos-aarch64-#{version}/bin/konan-lldb"
+    binary "kotlin-native-macos-aarch64-#{version}/bin/konanc"
+    binary "kotlin-native-macos-aarch64-#{version}/bin/kotlinc"
+    binary "kotlin-native-macos-aarch64-#{version}/bin/kotlinc-native"
+    binary "kotlin-native-macos-aarch64-#{version}/bin/run_konan"
+  end
 
   caveats do
     depends_on_java "6+"
