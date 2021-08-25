@@ -12,6 +12,8 @@ cask "parallels-toolbox" do
     strategy :header_match
   end
 
+  auto_updates true
+
   installer manual: "Install Parallels Toolbox.app"
 
   uninstall delete: "/Applications/Parallels Toolbox.app",
