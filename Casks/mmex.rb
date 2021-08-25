@@ -1,8 +1,8 @@
 cask "mmex" do
-  version "1.5.5,2021-07-31"
-  sha256 "53589e5cff0c962f9223b485e007fa395c6b70424e5fc50f424ebed0cc4a6878"
+  version "1.5.6"
+  sha256 "fde4e88adc6f56effd9f547ab4edc3566604c7f3c0d2f7babe88ad382f8c6d06"
 
-  url "https://downloads.sourceforge.net/moneymanagerex/mmex-#{version.before_comma}-Darwin-#{version.after_comma}.dmg",
+  url "https://downloads.sourceforge.net/moneymanagerex/mmex-#{version}-Darwin.dmg",
       verified: "downloads.sourceforge.net/moneymanagerex/"
   name "Money Manager Ex"
   desc "Money management application"
@@ -10,10 +10,8 @@ cask "mmex" do
 
   livecheck do
     url "https://sourceforge.net/projects/moneymanagerex/rss"
-    strategy :page_match do |page|
-      match = page.match(%r{/mmex[._-](\d+(?:\.\d+)*)[._-]Darwin[._-](\d+(?:-\d+)*)\.dmg}i)
-      "#{match[1]},#{match[2]}"
-    end
+    strategy :page_match
+    regex(/mmex[._-]?(\d+(?:\.\d+)*)[._-]?Darwin\.dmg/i)
   end
 
   app "MMEX.app"
