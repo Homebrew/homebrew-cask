@@ -7,6 +7,13 @@ cask "epoccam" do
   desc "Turn your phone into a webcam"
   homepage "https://www.elgato.com/epoccam"
 
+  livecheck do
+    url "https://www.elgato.com/sites/default/files/downloads.json"
+    strategy :page_match do |page|
+      JSON.parse(page)["epoccam-mac"]["version"]
+    end
+  end
+
   pkg "EpocCam_Installer_#{version.dots_to_underscores}.pkg"
 
   uninstall_preflight do
