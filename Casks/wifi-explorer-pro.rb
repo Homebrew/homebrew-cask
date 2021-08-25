@@ -14,7 +14,7 @@ cask "wifi-explorer-pro" do
 
   depends_on macos: ">= :high_sierra"
 
-  app "WiFi Explorer Pro 3.app"
+  app "WiFi Explorer Pro #{version.major}.app"
 
   zap trash: [
     "~/Library/Application Support/WiFi Explorer Pro #{version.major}",
