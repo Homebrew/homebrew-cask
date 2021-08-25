@@ -1,6 +1,6 @@
 cask "iconset" do
   version "2.0.0"
-  sha256 "da7082f87d83d44285e7984c766a51a204e9e552c57b35977fb894aa3580a10a"
+  sha256 "2dc15de9314b3291446e6f98adac67e52f0b430a024282b2f5be3b2512609ec4"
 
   url "https://github.com/IconsetApp/iconset/releases/download/v#{version}/Iconset-#{version}-mac.zip",
       verified: "github.com/IconsetApp/iconset/"
