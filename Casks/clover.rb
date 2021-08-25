@@ -8,5 +8,10 @@ cask "clover" do
   desc "Notes, whiteboarding, todos, and a daily planner in one simple tool"
   homepage "https://cloverapp.com/"
 
+  livecheck do
+    url "https://clover-desktop-app.s3.amazonaws.com/latest-mac.yml"
+    strategy :electron_builder
+  end
+
   app "Clover.app"
 end
