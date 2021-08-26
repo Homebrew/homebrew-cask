@@ -9,8 +9,10 @@ cask "flomo" do
   homepage "https://flomoapp.com/"
 
   livecheck do
-    url "https://help.flomoapp.com/basic/app"
-    regex(%r{/flomo[._-]mac[._-]v?(\d+(?:\.\d+)+)\.zip}i)
+    url "https://flomoapp.com/api/mac/latest/"
+    strategy :page_match do |page|
+      JSON.parse(page)["version"]
+    end
   end
 
   depends_on macos: ">= :catalina"
