@@ -1,13 +1,13 @@
 cask "webcatalog" do
-  version "36.3.0"
+  version "36.3.1"
 
   if Hardware::CPU.intel?
-    sha256 "41089e41e73b9485a9fd72e0d496ec1595d212c673b2a951c9f3a62e0cc4eaa5"
+    sha256 "a340c5ffd82672b73b08bab32c8d5f89a3acd1c43ba1626e3b47508096753113"
 
     url "https://github.com/webcatalog/webcatalog-app/releases/download/v#{version}/WebCatalog-#{version}.dmg",
         verified: "github.com/webcatalog/webcatalog-app/"
   else
-    sha256 "0662a4a6378856511c4b27012c69beb1aa8773bcaf23847515e2fa002c66d38d"
+    sha256 "44e4f5573423418b6fb6afceb176e2437296e1db780611be4dca907156130e75"
 
     url "https://github.com/webcatalog/webcatalog-app/releases/download/v#{version}/WebCatalog-#{version}-arm64.dmg",
         verified: "github.com/webcatalog/webcatalog-app/"
