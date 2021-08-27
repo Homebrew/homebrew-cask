@@ -18,7 +18,12 @@ cask "sensei" do
 
   app "Sensei.app"
 
-  uninstall delete:    "/Library/PrivilegedHelperTools/org.cindori.SenseiTool",
+  uninstall delete:    [
+    "/Library/LaunchDaemons/org.cindori.SenseiHelper.plist",
+    "/Library/LaunchDaemons/org.cindori.SenseiDaemon.plist",
+    "/Library/LaunchAgents/org.cindori.SenseiMonitor.plist",
+    "/Library/PrivilegedHelperTools/org.cindori.SenseiTool",
+  ],
             launchctl: "org.cindori.SenseiTool"
 
   zap trash: [
@@ -28,8 +33,5 @@ cask "sensei" do
     "~/Library/Cookies/org.cindori.Sensei.binarycookies",
     "~/Library/Preferences/org.cindori.Sensei.plist",
     "~/Library/Saved Application State/org.cindori.Sensei.savedState",
-    "/Library/LaunchDaemons/org.cindori.SenseiHelper.plist",
-    "/Library/LaunchDaemons/org.cindori.SenseiDaemon.plist",
-    "/Library/LaunchAgents/org.cindori.SenseiMonitor.plist"
   ]
 end
