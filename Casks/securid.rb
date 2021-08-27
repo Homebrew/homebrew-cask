@@ -4,7 +4,13 @@ cask "securid" do
 
   url "https://community.rsa.com/yfcdo34327/attachments/yfcdo34327/securid-software-token-macos/5/1/RSASecurIDMac#{version.no_dots}.dmg.zip"
   name "RSA SecurID"
+  desc "Authentication software"
   homepage "https://community.rsa.com/t5/rsa-securid-software-token-for/tkb-p/securid-software-token-macos"
+
+  livecheck do
+    url :homepage
+    regex(/SecurID\s*Software\s*Token\s*(\d+(?:\.\d+)*)\s*for\s*macOS/i)
+  end
 
   container nested: "RSASecurIDMac#{version.no_dots}.dmg"
 
