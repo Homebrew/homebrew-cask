@@ -1,8 +1,16 @@
 cask "rider" do
   version "2021.2,212.4746.113"
-  sha256 "307a56fbe0748f652cb1ff03c4cc636d9656778681c2b67b02080cad277d7adc"
 
-  url "https://download.jetbrains.com/rider/JetBrains.Rider-#{version.before_comma}.dmg"
+  if Hardware::CPU.intel?
+    sha256 "307a56fbe0748f652cb1ff03c4cc636d9656778681c2b67b02080cad277d7adc"
+
+    url "https://download.jetbrains.com/rider/JetBrains.Rider-#{version.before_comma}.dmg"
+  else
+    sha256 "ee6a0c3265af79fec9f17ab995d335ddee470148d09df57f69e6bebf8a7892f9"
+
+    url "https://download.jetbrains.com/rider/JetBrains.Rider-#{version.before_comma}-aarch64.dmg"
+  end
+
   name "JetBrains Rider"
   desc ".NET IDE"
   homepage "https://www.jetbrains.com/rider/"
