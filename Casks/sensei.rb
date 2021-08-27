@@ -28,5 +28,7 @@ cask "sensei" do
     "~/Library/Cookies/org.cindori.Sensei.binarycookies",
     "~/Library/Preferences/org.cindori.Sensei.plist",
     "~/Library/Saved Application State/org.cindori.Sensei.savedState",
+    "/Library/LaunchDaemons/org.cindori.SenseiHelper.plist",
+    "/Library/LaunchDaemons/org.cindori.SenseiDaemon.plist"
   ]
 end
