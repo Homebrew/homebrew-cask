@@ -29,6 +29,7 @@ cask "sensei" do
     "~/Library/Preferences/org.cindori.Sensei.plist",
     "~/Library/Saved Application State/org.cindori.Sensei.savedState",
     "/Library/LaunchDaemons/org.cindori.SenseiHelper.plist",
-    "/Library/LaunchDaemons/org.cindori.SenseiDaemon.plist"
+    "/Library/LaunchDaemons/org.cindori.SenseiDaemon.plist",
+    "/Library/LaunchAgents/org.cindori.SenseiMonitor.plist"
   ]
 end
