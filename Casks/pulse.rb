@@ -10,7 +10,7 @@ cask "pulse" do
 
   livecheck do
     url "https://github.com/kean/Pulse/releases/"
-    strategt :page_match
+    strategy :page_match
     regex(%r{(\d+(?:\.\d+)*)/Pulse\.app\.zip}i)
   end
 
