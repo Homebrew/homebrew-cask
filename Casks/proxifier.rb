@@ -22,6 +22,7 @@ cask "proxifier" do
   end
 
   name "Proxifier"
+  desc "Proxy client"
   homepage "https://www.proxifier.com/mac/"
 
   app "Proxifier.app"
