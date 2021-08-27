@@ -12,7 +12,7 @@ cask "mcreator" do
     url "https://github.com/MCreator/MCreator/releases/"
     regex(%r{(\d+(?:\.\d+)*)/MCreator\.(\d+(?:\.\d+)*)\.Mac\.64bit\.dmg}i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]}" }
+      page.scan(regex).map { |match| match[0].to_s }
     end
   end
 
