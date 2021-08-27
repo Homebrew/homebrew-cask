@@ -23,8 +23,8 @@ cask "biscuit" do
 
   zap trash: [
     "~/Library/Application Support/biscuit",
-    "~/Library/Preferences/com.eatbiscuit.biscuit.plist",
     "~/Library/Logs/Biscuit",
+    "~/Library/Preferences/com.eatbiscuit.biscuit.plist",
     "~/Library/Saved Application State/com.eatbiscult.biscult.savedState",
   ]
 end
