@@ -5,8 +5,14 @@ cask "pulse" do
   url "https://github.com/kean/Pulse/releases/download/#{version}/Pulse.app.zip",
       verified: "github.com/kean/Pulse/"
   name "Pulse"
-  desc "Logger and Network Inspector"
+  desc "Logger and network inspector"
   homepage "https://kean.blog/pulse/home"
+
+  livecheck do
+    url "https://github.com/kean/Pulse/releases/"
+    strategy :page_match
+    regex(%r{(\d+(?:\.\d+)*)/Pulse\.app\.zip}i)
+  end
 
   app "Pulse.app"
 
