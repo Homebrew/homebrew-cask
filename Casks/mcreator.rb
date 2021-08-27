@@ -2,7 +2,8 @@ cask "mcreator" do
   version "2021.2.35315"
   sha256 "6e86636c958d42fd45879d2faffcdea47a39ffceb4f8f1a1f9c4e9ebe3326e6d"
 
-  url "https://github.com/MCreator/MCreator/releases/download/#{version}/MCreator.#{version.major_minor}.Mac.64bit.dmg"
+  url "https://github.com/MCreator/MCreator/releases/download/#{version}/MCreator.#{version.major_minor}.Mac.64bit.dmg",
+      verified: "github.com/MCreator/MCreator/"
   name "MCreator"
   desc "Software used to make Minecraft Java Edition mods"
   homepage "https://mcreator.net/"
