@@ -1,13 +1,13 @@
 cask "biscuit" do
-  version "1.2.22"
+  version "1.2.23"
 
   if Hardware::CPU.intel?
-    sha256 "280f0c5ccd49e16e4d1c68a0fb6c11ddbf82b071e48396de08738fe9b5f945f8"
+    sha256 "995127c3311e93c1857c3d00495b76817875fa1fa3a67d0a966ff98e8edeca02"
 
     url "https://github.com/agata/dl.biscuit/releases/download/v#{version}/Biscuit-#{version}.dmg",
         verified: "github.com/agata/dl.biscuit/"
   else
-    sha256 "3da056515f0d101417b305bbacaca8035ea852ee04789b0d4540243b507b9651"
+    sha256 "eb02115d131101d25c3a95ad332ab8cecca3f5327c08c2200d6f95d9259a1c73"
 
     url "https://github.com/agata/dl.biscuit/releases/download/v#{version}/Biscuit-#{version}-arm64.dmg",
         verified: "github.com/agata/dl.biscuit/"
@@ -23,8 +23,8 @@ cask "biscuit" do
 
   zap trash: [
     "~/Library/Application Support/biscuit",
-    "~/Library/Preferences/com.eatbiscuit.biscuit.plist",
     "~/Library/Logs/Biscuit",
+    "~/Library/Preferences/com.eatbiscuit.biscuit.plist",
     "~/Library/Saved Application State/com.eatbiscult.biscult.savedState",
   ]
 end
