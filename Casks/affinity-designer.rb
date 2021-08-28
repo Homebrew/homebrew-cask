@@ -1,5 +1,5 @@
 cask "affinity-designer" do
-  version "1.10.0"
+  version "1.10.1"
   sha256 :no_check
 
   url "https://store.serif.com/download/aa4dee/"
