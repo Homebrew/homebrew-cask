@@ -14,8 +14,8 @@ cask "feishu" do
       end
     end
   else
-    version "4.7.7,993db0"
-    sha256 "530fc650811731920d7baaedc8a8689a7a29cf4d3a6a956b1d54f457008a55ab"
+    version "4.7.11,2ada29"
+    sha256 "418112ab6f6a212dba63ead0ebae22a31217e7cc175deb9bb05e6701684c614e"
 
     url "https://sf3-cn.feishucdn.com/obj/ee-appcenter/#{version.after_comma}/Feishu-darwin_arm64-#{version.before_comma}-signed.dmg",
         verified: "sf3-cn.feishucdn.com/"
