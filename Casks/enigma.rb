@@ -8,11 +8,6 @@ cask "enigma" do
   desc "Puzzle game inspired by Oxyd and Rock'n'Roll"
   homepage "https://www.nongnu.org/enigma/"
 
-  livecheck do
-    url :url
-    regex(/v?(\d+(?:\.\d+)+)$/i)
-  end
-
   suite "Enigma"
 
   zap trash: [
