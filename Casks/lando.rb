@@ -38,5 +38,5 @@ cask "lando" do
         },
       ]
 
-  uninstall pkgutil: "io.lando.pkg.lando"
+  uninstall pkgutil: "dev.lando.pkg.lando"
 end
