@@ -1,5 +1,5 @@
 cask "apparency" do
-  version "1.2,118"
+  version "1.3,130"
   sha256 :no_check
 
   url "https://mothersruin.com/software/downloads/Apparency.dmg"
