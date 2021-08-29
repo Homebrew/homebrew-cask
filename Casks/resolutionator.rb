@@ -4,6 +4,7 @@ cask "resolutionator" do
 
   url "https://manytricks.com/download/_do_not_hotlink_/resolutionator#{version.before_comma.no_dots}.dmg"
   name "Resolutionator"
+  desc "Use any of your display's available resolutions"
   homepage "https://manytricks.com/resolutionator/"
 
   livecheck do
@@ -18,4 +19,9 @@ cask "resolutionator" do
   auto_updates true
 
   app "Resolutionator.app"
+
+  zap trash: [
+    "~/Library/Caches/com.apple.helpd/Generated/Resolutionator Help*",
+    "~/Library/Preferences/com.manytricks.Resolutionator.plist",
+  ]
 end
