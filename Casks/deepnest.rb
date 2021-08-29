@@ -13,4 +13,13 @@ cask "deepnest" do
   end
 
   app "Deepnest-#{version}-mac/Deepnest-mac-#{version}.app", target: "Deepnest.app"
+
+  zap trash: [
+    "~/Library/Application Support/Deepnest.io",
+    "~/Library/Caches/com.deepnest.io",
+    "~/Library/Preferences/com.deepnest.io.helper.plist",
+    "~/Library/Preferences/com.deepnest.io.plist",
+    "~/Library/Saved Application State/com.deepnest.io.savedState",
+    "~/Library/WebKit/com.deepnest.io",
+  ]
 end
