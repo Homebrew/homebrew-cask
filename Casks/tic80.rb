@@ -1,4 +1,5 @@
-cask "tic-80" do
+cask "tic80" do
+  # NOTE: "80" is not a version number, but an intrinsic part of the product name
   version "0.90.1723"
   sha256 "c72b1c51a97c44ddabd2b2d14597275c42e0aedef383de71a48495d8a22ae02e"
 
