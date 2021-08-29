@@ -14,4 +14,13 @@ cask "godot" do
   end
 
   app "Godot.app"
+  binary "#{appdir}/Godot.app/Contents/MacOS/Godot", target: "godot"
+
+  uninstall quit: "org.godotengine.godot"
+
+  zap trash: [
+    "~/Library/Application Support/Godot",
+    "~/Library/Caches/Godot",
+    "~/Library/Saved Application State/org.godotengine.godot.savedState",
+  ]
 end
