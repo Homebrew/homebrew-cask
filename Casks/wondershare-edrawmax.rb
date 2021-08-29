@@ -1,5 +1,5 @@
-cask "edrawmax" do
-  version :latest
+cask "wondershare-edrawmax" do
+  version "11.1.0"
   sha256 :no_check
 
   language "zh", "CN" do
@@ -14,6 +14,12 @@ cask "edrawmax" do
   end
 
   name "EdrawMax"
+  desc "Diagram software"
+
+  livecheck do
+    url "https://www.edrawsoft.com/whats-new/edrawmax.html"
+    regex(/EdrawMax\s*V?(\d+(?:\.\d+)*)/i)
+  end
 
   zap trash: [
     "~/Library/Edraw",
