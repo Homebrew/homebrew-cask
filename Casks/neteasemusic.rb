@@ -16,7 +16,7 @@ cask "neteasemusic" do
   livecheck do
     url "https://music.163.com/api/mac/appcast.xml"
     strategy :page_match do |page|
-      page.scan(%r{url=.*?/NeteaseMusic[._-]?v?(\d+(?:\.\d+)+)[_-](\d+)[._-]web\.dmg}i).map do |match|
+      page.scan(%r{url=.*?/NeteaseMusic[._-]?v?(\d+(?:\.\d+)+)[_-](\d+)[._-]web[._-]\.dmg}i).map do |match|
         "#{match[0]},#{match[1]}"
       end
     end
