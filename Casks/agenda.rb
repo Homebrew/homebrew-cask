@@ -17,6 +17,7 @@ cask "agenda" do
   app "Agenda.app"
 
   zap trash: [
+    "~/Library/Preferences/com.momenta.agenda.macos.plist",
     "~/Library/Application Scripts/com.momenta.agenda.macos",
     "~/Library/Application Scripts/com.momenta.agenda.macos.extension-sharing",
     "~/Library/Application Scripts/com.momenta.agenda.macos.extension-widget",
