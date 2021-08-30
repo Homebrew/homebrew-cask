@@ -15,4 +15,11 @@ cask "mactracker" do
   auto_updates true
 
   app "Mactracker.app"
+
+  zap trash: [
+    "~/Library/Caches/com.mactrackerapp.Mactracker",
+    "~/Library/Preferences/com.mactrackerapp.Mactracker.plist",
+    "~/Library/Application Support/com.mactrackerapp.Mactracker",
+    "~/Library/Saved Application State/com.mactrackerapp.Mactracker.savedState",
+  ]
 end
