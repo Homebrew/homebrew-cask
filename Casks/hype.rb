@@ -19,6 +19,6 @@ cask "hype" do
 
   zap trash: [
     "~/Library/Containers/com.tumult.Hype#{version.major}",
-    "~/Library/Preferences/com.tumult.Hype#{vesrion.major}.plist",
+    "~/Library/Preferences/com.tumult.Hype#{version.major}.plist",
   ]
 end
