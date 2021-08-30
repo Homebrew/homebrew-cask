@@ -10,7 +10,16 @@ cask "nudge" do
   depends_on macos: ">= :big_sur"
 
   pkg "Nudge-#{version}.pkg"
-  binary "/Applications/Utilities/Nudge.app/Contents/MacOS/Nudge", target: "nudge"
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/nudge.wrapper.sh"
+  binary shimscript, target: "nudge"
+
+  preflight do
+    IO.write shimscript, <<~EOS
+      #!/bin/sh
+      exec '/Applications/Utilities/Nudge.app/Contents/MacOS/Nudge' "$@"
+    EOS
+  end
 
   uninstall pkgutil: "com.github.macadmins.Nudge"
 
