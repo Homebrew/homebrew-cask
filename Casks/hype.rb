@@ -16,4 +16,9 @@ cask "hype" do
 
   # Renamed for consistency: app name is different in the Finder and in a shell
   app "Hype#{version.major}.app", target: "Hype #{version.major}.app"
+
+  zap trash: [
+    "~/Library/Containers/com.tumult.Hype4",
+    "~/Library/Preferences/com.tumult.Hype4.plist",
+  ]
 end
