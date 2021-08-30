@@ -23,6 +23,7 @@ cask "vimr" do
   zap trash: [
     "~/Library/Caches/com.qvacua.VimR",
     "~/Library/Preferences/com.qvacua.VimR.plist",
+    "~/Library/Preferences/com.qvacua.VimR.menuitems.plist",
     "~/Library/Saved Application State/com.qvacua.VimR.savedState",
     "~/Library/WebKit/com.qvacua.VimR",
   ]
