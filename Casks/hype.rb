@@ -18,7 +18,7 @@ cask "hype" do
   app "Hype#{version.major}.app", target: "Hype #{version.major}.app"
 
   zap trash: [
-    "~/Library/Containers/com.tumult.Hype4",
-    "~/Library/Preferences/com.tumult.Hype4.plist",
+    "~/Library/Containers/com.tumult.Hype#{version.major}",
+    "~/Library/Preferences/com.tumult.Hype#{vesrion.major}.plist",
   ]
 end
