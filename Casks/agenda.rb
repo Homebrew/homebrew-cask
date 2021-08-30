@@ -24,5 +24,6 @@ cask "agenda" do
     "~/Library/Containers/com.momenta.agenda.macos.extension-sharing",
     "~/Library/Containers/com.momenta.agenda.macos.extension-widget",
     "~/Library/Group Containers/WRBK2Z2EG7.group.com.momenta.agenda.macos",
+    "~/Library/Preferences/com.momenta.agenda.macos.plist",
   ]
 end
