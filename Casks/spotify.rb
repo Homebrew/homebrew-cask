@@ -6,7 +6,7 @@ cask "spotify" do
     url "https://download.scdn.co/Spotify.dmg",
         verified: "scdn.co/"
   else
-    version "1.1.66.578.gc54d0f69"
+    version "1.1.66.580.gbd43cbc9"
     sha256 :no_check
 
     url "https://download.scdn.co/SpotifyBetaARM64.dmg",
