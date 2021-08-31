@@ -7,6 +7,11 @@ cask "losslesscut" do
   desc "Trimms video and audio files losslessly"
   homepage "https://github.com/mifi/lossless-cut"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates false
 
   app "LosslessCut.app"
