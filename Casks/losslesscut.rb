@@ -4,7 +4,7 @@ cask "losslesscut" do
 
   url "https://github.com/mifi/lossless-cut/releases/download/v#{version}/LosslessCut-mac.dmg"
   name "LosslessCut"
-  desc "Trimms video and audio files losslessly"
+  desc "Trims video and audio files losslessly"
   homepage "https://github.com/mifi/lossless-cut"
 
   app "LosslessCut.app"
