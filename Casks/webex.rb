@@ -1,5 +1,5 @@
 cask "webex" do
-  version "41.8.0.19732"
+  version "41.8.0.19868"
   sha256 :no_check
 
   if Hardware::CPU.intel?
@@ -24,8 +24,8 @@ cask "webex" do
   ]
 
   zap trash: [
-    "~/Library/Preferences/Cisco-Systems.Spark.plist",
     "~/Library/Caches/Cisco-Systems.Spark",
     "~/Library/Logs/SparkMacDesktop",
+    "~/Library/Preferences/Cisco-Systems.Spark.plist",
   ]
 end
