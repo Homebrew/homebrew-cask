@@ -1,6 +1,6 @@
 cask "webull" do
-  version "5.2.2_us"
-  sha256 "6cd0c271d1cb7911718cd278a92a799a5ac2fff96cfb11a9745a118402740381"
+  version "5.2.10_us"
+  sha256 "d23a872c82e77e87a4624ef72d92c30a15c248ffac5a921820557ef20b82bd6e"
 
   url "https://pub.webull.com/us/desktop/Webull%20Desktop%20#{version}.dmg"
   name "Webull"
