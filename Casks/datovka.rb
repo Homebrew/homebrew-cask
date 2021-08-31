@@ -5,6 +5,7 @@ cask "datovka" do
   url "https://secure.nic.cz/files/datove_schranky/#{version}/datovka-#{version}-64bit-macos10.12.dmg",
       verified: "secure.nic.cz/files/datove_schranky/"
   name "Datovka"
+  desc "Access and store data messages in a local database"
   homepage "https://www.datovka.cz/"
 
   livecheck do
