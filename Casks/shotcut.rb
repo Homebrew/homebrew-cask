@@ -1,13 +1,13 @@
 cask "shotcut" do
-  version "21.06.29"
+  version "21.08.29"
 
   if Hardware::CPU.intel?
-    sha256 "0a2ff1d9c403dc4e6cf36e0b5b95550471d3eef1f65a7af4b718f49601a3c2be"
+    sha256 "931cfe920dd26269f3ad4202f769545f044eff082933267bde0a42a111fa43eb"
 
     url "https://github.com/mltframework/shotcut/releases/download/v#{version}/shotcut-macos-#{version.no_dots}.dmg",
         verified: "github.com/mltframework/shotcut/"
   else
-    sha256 "2813d09144de45adfd7db097e9f44f23f8f33c3fe36e56cbda69dda0c8a9eb8d"
+    sha256 "e7db1625bd4e04920ef1496655e8a9e3169a3b89b756557ae9f3f3152ea18c84"
 
     url "https://github.com/mltframework/shotcut/releases/download/v#{version}/shotcut-macos-ARM64-#{version.no_dots}.dmg",
         verified: "github.com/mltframework/shotcut/"
