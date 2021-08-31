@@ -1,6 +1,6 @@
 cask "lunar" do
-  version "4.8.2"
-  sha256 "69b14fe5124ca0d4857e68a904c648e61e69ea5c499d0ecaaff6fa67b74e5261"
+  version "4.8.3"
+  sha256 "767d8a41b21ee28337255b7757dcaa02a29501f3030016648fd8f60cfee9bf67"
 
   url "https://static.lunar.fyi/releases/Lunar-#{version}.dmg"
   name "Lunar"
@@ -18,9 +18,9 @@ cask "lunar" do
   app "Lunar.app"
 
   zap trash: [
-    "~/Library/Caches/Lunar",
-    "~/Library/Application Support/Lunar",
     "~/Library/Application Support/fyi.lunar.Lunar",
+    "~/Library/Application Support/Lunar",
+    "~/Library/Caches/Lunar",
     "~/Library/Preferences/fyi.lunar.Lunar.plist",
   ]
 end
