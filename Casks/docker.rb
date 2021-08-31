@@ -2,7 +2,7 @@ cask "docker" do
   version "3.6.0,67351"
 
   if Hardware::CPU.intel?
-    sha256 "08c91be8f784c41b677b28f6eea2a7ec001e0b812bb0ee978d1c0b60ecea77bb"
+    sha256 "409ca31a47ba1d1620825f09e02f6d5ce203b2907ab91047041a0e9b4b719593"
 
     url "https://desktop.docker.com/mac/stable/amd64/#{version.after_comma}/Docker.dmg"
 
