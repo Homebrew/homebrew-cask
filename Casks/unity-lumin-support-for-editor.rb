@@ -1,6 +1,6 @@
 cask "unity-lumin-support-for-editor" do
-  version "2020.1.17f1,9957aee8edc2"
-  sha256 "e326abccca5d42540b3c322acd1f0a5152d4c42fca9c0ad8abcc5b2b8e84953e"
+  version "2021.1.18f1,25bdc3efbc2d"
+  sha256 "f25aa7fe2c317c2ae9554f586f35865c23dd668b46b2a6fb0b5d4b7ca6d748d0"
 
   url "https://download.unity3d.com/download_unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Lumin-Support-for-Editor-#{version.before_comma}.pkg",
       verified: "download.unity3d.com/download_unity/"
