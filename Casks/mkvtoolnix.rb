@@ -16,9 +16,9 @@ cask "mkvtoolnix" do
   conflicts_with formula: "mkvtoolnix"
   depends_on macos: ">= :catalina"
 
-  app "MKVToolNix-#{version.major_minor_patch}.app"
-  binary "#{appdir}/MKVToolNix-#{version.major_minor_patch}.app/Contents/MacOS/mkvextract"
-  binary "#{appdir}/MKVToolNix-#{version.major_minor_patch}.app/Contents/MacOS/mkvinfo"
-  binary "#{appdir}/MKVToolNix-#{version.major_minor_patch}.app/Contents/MacOS/mkvmerge"
-  binary "#{appdir}/MKVToolNix-#{version.major_minor_patch}.app/Contents/MacOS/mkvpropedit"
+  app "MKVToolNix-#{version}.app"
+  binary "#{appdir}/MKVToolNix-#{version}.app/Contents/MacOS/mkvextract"
+  binary "#{appdir}/MKVToolNix-#{version}.app/Contents/MacOS/mkvinfo"
+  binary "#{appdir}/MKVToolNix-#{version}.app/Contents/MacOS/mkvmerge"
+  binary "#{appdir}/MKVToolNix-#{version}.app/Contents/MacOS/mkvpropedit"
 end
