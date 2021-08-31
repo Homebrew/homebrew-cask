@@ -24,8 +24,8 @@ cask "webex" do
   ]
 
   zap trash: [
-    "~/Library/Preferences/Cisco-Systems.Spark.plist",
     "~/Library/Caches/Cisco-Systems.Spark",
     "~/Library/Logs/SparkMacDesktop",
+    "~/Library/Preferences/Cisco-Systems.Spark.plist",
   ]
 end
