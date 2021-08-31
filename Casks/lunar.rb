@@ -18,9 +18,9 @@ cask "lunar" do
   app "Lunar.app"
 
   zap trash: [
-    "~/Library/Caches/Lunar",
-    "~/Library/Application Support/Lunar",
     "~/Library/Application Support/fyi.lunar.Lunar",
+    "~/Library/Application Support/Lunar"
+    "~/Library/Caches/Lunar",
     "~/Library/Preferences/fyi.lunar.Lunar.plist",
   ]
 end
