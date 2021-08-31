@@ -7,6 +7,8 @@ cask "losslesscut" do
   desc "Trimms video and audio files losslessly"
   homepage "https://github.com/mifi/lossless-cut"
 
+  auto_updates false
+
   app "LosslessCut.app"
 
   zap trash: [
