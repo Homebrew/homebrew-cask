@@ -8,12 +8,8 @@ cask "keyman" do
   homepage "https://keyman.com/"
 
   livecheck do
-    url "https://github.com/keymanapp/keyman.git"
-    regex(/^(?:mac-)?release-(?:stable-)?(\d+(?:\.\d+)+)$/i)
-    # Parse macOS downloads listing, in case the tagging format changes again
-    # url "https://downloads.keyman.com/mac/stable"
-    # strategy :page_match
-    # regex(%r{href="(\d+(?:\.\d+)*)/"}i)
+    url "https://downloads.keyman.com/mac/stable"
+    regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
   depends_on macos: ">= :yosemite"
