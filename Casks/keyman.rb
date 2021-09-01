@@ -8,8 +8,8 @@ cask "keyman" do
   homepage "https://keyman.com/"
 
   livecheck do
-     url "https://downloads.keyman.com/api/version/mac"
-     regex(%r{"stable": "(\d+(?:\.\d+)+)",?}i)
+    url "https://downloads.keyman.com/mac/stable"
+    regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
   depends_on macos: ">= :yosemite"
