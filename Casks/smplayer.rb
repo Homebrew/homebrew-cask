@@ -9,4 +9,9 @@ cask "smplayer" do
   homepage "https://www.smplayer.info/"
 
   app "SMPlayer.app"
+
+  zap trash: [
+    "~/Library/Preferences/info.smplayer.SMPlayer.plist",
+    "~/Library/Saved Application State/info.smplayer.SMPlayer.savedState",
+  ]
 end
