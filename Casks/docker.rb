@@ -1,22 +1,22 @@
 cask "docker" do
-  version "3.6.0,67351"
+  version "4.0.0,67817"
 
   if Hardware::CPU.intel?
-    sha256 "6b1d73f4b9d3be08798a959255726fc8bf3e9ee120c9e3ab8ac8c38b42dc8675"
+    sha256 "409ca31a47ba1d1620825f09e02f6d5ce203b2907ab91047041a0e9b4b719593"
 
-    url "https://desktop.docker.com/mac/stable/amd64/#{version.after_comma}/Docker.dmg"
+    url "https://desktop.docker.com/mac/main/amd64/#{version.after_comma}/Docker.dmg"
 
     livecheck do
-      url "https://desktop.docker.com/mac/stable/amd64/appcast.xml"
+      url "https://desktop.docker.com/mac/main/amd64/appcast.xml"
       strategy :sparkle
     end
   else
-    sha256 "8d03e6111d377d1bd366cb7bc1bf90b072f0f0eab9541b125d7ceb9c0ffe00f5"
+    sha256 "1b3b5facbe8e05f582382e8ab24073736720e64c6a66c3a594759f98a854b59d"
 
-    url "https://desktop.docker.com/mac/stable/arm64/#{version.after_comma}/Docker.dmg"
+    url "https://desktop.docker.com/mac/main/arm64/#{version.after_comma}/Docker.dmg"
 
     livecheck do
-      url "https://desktop.docker.com/mac/stable/arm64/appcast.xml"
+      url "https://desktop.docker.com/mac/main/arm64/appcast.xml"
       strategy :sparkle
     end
   end
