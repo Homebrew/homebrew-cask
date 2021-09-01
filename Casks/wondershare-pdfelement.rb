@@ -11,18 +11,19 @@ cask "wondershare-pdfelement" do
 
   app "PDFelement.app"
 
-  uninstall quit:   [
+  uninstall quit: [
     "com.wondershare.PDFelement",
     "com.wondershare.helper_compact",
-  ],
+  ]
 
-            delete: [
-              "~/Library/Application Support/com.wondershare.PDFelement",
-              "~/Library/Application Support/com.wondershare.Installer",
-              "~/Library/Caches/PDFelement",
-              "~/Library/Caches/com.wondershare.PDFelement",
-              "~/Library/Saved Application State/com.wondershare.PDFelement.savedState",
-              "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.wondershare.PDFelement",
-              "/Applications/PDFelement.app",
-            ]
+  zap trash: [
+    "~/Library/Application Support/com.wondershare.PDFelement",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.wondershare.pdfelement.sfl2",
+    "~/Library/Caches/PDFelement",
+    "~/Library/Caches/com.wondershare.PDFelement",
+    "~/Library/Preferences/com.wondershare.PDFelement-custom.plist",
+    "~/Library/Preferences/com.wondershare.PDFelement.plist",
+    "~/Library/Saved Application State/com.wondershare.PDFelement.savedState",
+    "~/Library/WebKit/com.wondershare.PDFelement",
+  ]
 end
