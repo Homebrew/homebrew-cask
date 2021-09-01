@@ -17,5 +17,7 @@ cask "adguard-vpn" do
 
   uninstall pkgutil: "com.adguard.mac.vpn-pkg"
 
-  zap trash: "/Library/Application Support/com.adguard.mac.vpn"
+  uninstall delete: [
+    "/Library/Application Support/com.adguard.mac.vpn"
+  ]
 end
