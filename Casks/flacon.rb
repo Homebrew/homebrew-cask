@@ -4,7 +4,7 @@ cask "flacon" do
 
   url "https://github.com/flacon/flacon/releases/download/v#{version}/Flacon_#{version}.dmg",
       verified: "github.com/flacon/flacon"
-  name "flacon"
+  name "Flacon"
   desc "Open source audio file encoder"
   homepage "https://flacon.github.io/"
 
