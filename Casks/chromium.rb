@@ -44,6 +44,10 @@ cask "chromium" do
     EOS
   end
 
+  postflight do
+    exec("xattr -d com.apple.quarantine '#{appdir}/Chromium.app'")
+  end
+
   zap trash: [
     "~/Library/Application Support/Chromium",
     "~/Library/Caches/Chromium",
