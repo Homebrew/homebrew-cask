@@ -1,6 +1,6 @@
 cask "macstroke" do
-  version "2.0.3"
-  sha256 "0d729034162e9294b1d829991a8dc8f76095d0c358e6d4431b403d4b9ce1f3cc"
+  version "2.0.4"
+  sha256 "95be8df7fee8720db36539be660d874816b4ff18236ecbfef7530068f0bcda9e"
 
   url "https://github.com/mtjo/MacStroke/releases/download/#{version}/MacStroke.zip"
   name "MacStroke"
@@ -11,6 +11,7 @@ cask "macstroke" do
 
   zap trash: [
     "~/Library/Application Scripts/net.mtjo.MacStroke.FinderSyncExtension",
+    "~/Library/Caches/MacStroke",
     "~/Library/Caches/net.mtjo.MacStroke",
     "~/Library/Containers/net.mtjo.MacStroke.FinderSyncExtension",
     "~/Library/Cookies/net.mtjo.MacStroke.binarycookies",
