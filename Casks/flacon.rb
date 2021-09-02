@@ -9,7 +9,7 @@ cask "flacon" do
   homepage "https://flacon.github.io/"
 
   app "Flacon.app"
-  
+
   zap trash: [
     "~/Library/Preferences/com.flacon.flacon.plist",
     "~/Library/Preferences/io.github.flacon.plist",
