@@ -8,6 +8,8 @@ cask "flacon" do
   desc "Open source audio file encoder"
   homepage "https://flacon.github.io/"
 
+  auto_updates true
+
   app "Flacon.app"
 
   zap trash: [
