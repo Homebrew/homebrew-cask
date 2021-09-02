@@ -10,11 +10,11 @@ cask "macstroke" do
   app "MacStroke.app"
 
   zap trash: [
+    "~/Library/Caches/MacStroke",
     "~/Library/Application Scripts/net.mtjo.MacStroke.FinderSyncExtension",
     "~/Library/Caches/net.mtjo.MacStroke",
     "~/Library/Containers/net.mtjo.MacStroke.FinderSyncExtension",
     "~/Library/Cookies/net.mtjo.MacStroke.binarycookies",
     "~/Library/Preferences/net.mtjo.MacStroke.plist",
-    "~/Library/Caches/MacStroke",
   ]
 end
