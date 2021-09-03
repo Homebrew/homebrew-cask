@@ -1,4 +1,4 @@
-cask "wondershare-pdfelement" do
+cask "pdfelement" do
   version "8.5.0"
   sha256 :no_check
 
