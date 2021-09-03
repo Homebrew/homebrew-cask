@@ -8,7 +8,8 @@ cask "tyme" do
   homepage "https://www.tyme-app.com/"
 
   livecheck do
-    skip "No version information available"
+    url :url
+    strategy :extract_plist
   end
 
   app "Tyme.app"
