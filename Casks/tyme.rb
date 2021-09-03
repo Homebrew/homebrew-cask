@@ -1,5 +1,5 @@
 cask "tyme" do
-  version "2021.11,3571"
+  version "2021.12,3583"
   sha256 :no_check
 
   url "https://www.tyme-app.com/app/Tyme3.zip"
