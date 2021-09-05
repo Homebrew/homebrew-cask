@@ -9,10 +9,22 @@ cask "jedit-omega" do
 
   url "http://download.artman21.co.jp/product/JeditOmega/JeditOmega#{version.no_dots}.dmg",
       verified: "artman21.co.jp/"
-  appcast "http://www.artman21.com/en/jeditOmega/history.html"
   name "Jedit Ω"
   desc "Text editor"
   homepage "http://www.artman21.com/en/jeditOmega/"
+
+  livecheck do
+    url "http://www.artman21.com/en/jeditOmega/download.html"
+    # http://www.artman21.org/download/JeditOmega242.dmg
+    regex(%r{href=.*?/download/JeditOmega[._-]?v?(\d+).dmg}i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
+      next if match.blank?
+
+      parts = match[1].chars
+      "#{parts[0]}.#{parts[1]}#{parts[2]}"
+    end
+  end
 
   app "Jedit Ω.app"
 end
