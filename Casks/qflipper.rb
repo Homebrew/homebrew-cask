@@ -13,4 +13,10 @@ cask "qflipper" do
   end
 
   app "qFlipper.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.flipperdevices.qFlipper.plist",
+    "~/Library/Preferences/com.flipperzero-one.qFlipper.plist",
+    "~/Library/Saved Application State/test.qFlipper.savedState",
+  ]
 end
