@@ -5,7 +5,7 @@ cask "slate" do
   url "https://www.ninjamonkeysoftware.com/slate/versions/slate-#{version}.tar.gz",
       verified: "ninjamonkeysoftware.com/"
   name "Slate"
-  desc "Window management application (replacement for Divvy/SizeUp/ShiftIt)"
+  desc "Window management application"
   homepage "https://github.com/jigish/slate"
 
   livecheck do
