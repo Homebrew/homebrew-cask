@@ -15,7 +15,6 @@ cask "jedit-omega" do
 
   livecheck do
     url "http://www.artman21.com/en/jeditOmega/download.html"
-    # http://www.artman21.org/download/JeditOmega242.dmg
     regex(%r{href=.*?/download/JeditOmega[._-]?v?(\d+).dmg}i)
     strategy :page_match do |page, regex|
       match = page.match(regex)
