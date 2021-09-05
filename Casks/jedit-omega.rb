@@ -15,14 +15,7 @@ cask "jedit-omega" do
 
   livecheck do
     url "http://www.artman21.com/en/jeditOmega/download.html"
-    regex(%r{href=.*?/download/JeditOmega[._-]?v?(\d+).dmg}i)
-    strategy :page_match do |page, regex|
-      match = page.match(regex)
-      next if match.blank?
-
-      parts = match[1].chars
-      "#{parts[0]}.#{parts[1]}#{parts[2]}"
-    end
+    regex(/Rev[._-](\d+(?:\.\d+)+)/i)
   end
 
   app "Jedit Ω.app"
