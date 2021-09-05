@@ -16,6 +16,17 @@ cask "keyman" do
 
   input_method "Install Keyman.app/Contents/MacOS/Keyman.app"
 
+  # Post-install operations originally in Resources/Scripts/main.scpt
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: [
+                     "-d",
+                     "-r",
+                     "com.apple.quarantine",
+                     "#{ENV["HOME"]}/Library/Input Methods/Keyman.app",
+                   ]
+  end
+
   uninstall quit: "keyman.inputmethod.Keyman"
 
   zap trash: [
