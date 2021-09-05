@@ -3,7 +3,7 @@ cask "slate" do
   sha256 :no_check
 
   url "https://www.ninjamonkeysoftware.com/slate/versions/slate-#{version}.tar.gz",
-      verified: "slate.ninjamonkeysoftware.com/"
+      verified: "ninjamonkeysoftware.com/"
   name "Slate"
   desc "Window management application (replacement for Divvy/SizeUp/ShiftIt)"
   homepage "https://github.com/jigish/slate"
