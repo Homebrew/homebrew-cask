@@ -5,7 +5,7 @@ cask "qingg" do
   url "https://qingg.im/download/Qingg-#{version.before_comma}.dmg"
   name "QinggIM"
   name "清歌输入法"
-  desc "为Mac专门打造的五笔输入法"
+  desc "Wubi input method"
   homepage "https://qingg.im/mac/"
 
   livecheck do
