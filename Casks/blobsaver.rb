@@ -1,6 +1,6 @@
 cask "blobsaver" do
-  version "3.0.1"
-  sha256 "397dea9211abc25e35383ac67ea9ef87c7394047df1771490151ffbb3c31af8b"
+  version "3.0.2"
+  sha256 "a651ff45bafb73cfee635f1a3ef8fbfa2ec394183415803520951dc8f4544b1e"
 
   url "https://github.com/airsquared/blobsaver/releases/download/v#{version}/blobsaver-#{version}.dmg"
   name "blobsaver"
