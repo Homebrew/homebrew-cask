@@ -1,6 +1,6 @@
 cask "expressvpn" do
-  version "10.4.0.61"
-  sha256 "1dc117dda84fa642fe6e95b816e0674e57b08e1dfabf67496de3afcd5d8cb2ce"
+  version "10.5.0.17"
+  sha256 "d24fa76d86a5cf7af48cc6bdf05295f7a15b47269c483fdcc54a66a986748edc"
 
   url "https://www.expressvpn.works/clients/mac/expressvpn_mac_#{version}_release.pkg"
   name "ExpressVPN"
