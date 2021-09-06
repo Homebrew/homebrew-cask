@@ -1,12 +1,17 @@
-cask 'hugin' do
-  version '2019.0.0'
-  sha256 'dced75dab3723631fbe794fa79535c90c05e39f1c6d481763dacb6c898efd61b'
+cask "hugin" do
+  version "2019.2.0"
+  sha256 "00caa732134c3b4dedd04f3605a4a1660e6baa49f54b6bb45eb25387dbe1e419"
 
-  # downloads.sourceforge.net/hugin was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/hugin/Hugin-#{version}.dmg"
-  appcast 'https://sourceforge.net/projects/hugin/rss'
-  name 'Hugin'
-  homepage 'https://hugin.sourceforge.io/'
+  name "Hugin"
+  desc "Panorama photo stitcher"
+  homepage "http://hugin.sourceforge.net/"
 
-  suite 'Hugin'
+  livecheck do
+    url "http://hugin.sourceforge.net/download/"
+    strategy :page_match
+    regex(/Hugin-(\d+(?:\.\d+)*)\.dmg/i)
+  end
+
+  suite "Hugin"
 end

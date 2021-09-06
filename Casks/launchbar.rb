@@ -1,27 +1,27 @@
-cask 'launchbar' do
-  if MacOS.version <= :mavericks
-    version '6.9.7'
-    sha256 'e1623c77a85857ec3191a82b8932909200f8d183bb654e9caa77e9c14afd7a63'
-    url "https://www.obdev.at/downloads/launchbar/legacy/LaunchBar-#{version}.dmg"
-  else
-    version '6.11.1'
-    sha256 'de761526614a14885cfb096c2e3b4d5440f45b73110fadce0e949c5ea6ef3fb8'
+cask "launchbar" do
+  version "6.14.1"
+  sha256 "0d985ae5194851981383e52c6f88e9176e43a1850bb129f5cc62fdb0f4b7ab54"
 
-    url "https://www.obdev.at/downloads/launchbar/LaunchBar-#{version}.dmg"
-    appcast "https://sw-update.obdev.at/update-feeds/launchbar-#{version.major}.plist"
+  url "https://www.obdev.at/downloads/launchbar/LaunchBar-#{version}.dmg"
+  name "LaunchBar"
+  desc "Productivity tool"
+  homepage "https://www.obdev.at/products/launchbar/index.html"
+
+  livecheck do
+    url "https://www.obdev.at/products/launchbar/download.html"
+    strategy :page_match
+    regex(%r{href=.*?/LaunchBar-(\d+(?:\.\d+)*)\.dmg}i)
   end
 
-  name 'LaunchBar'
-  homepage 'https://www.obdev.at/products/launchbar/index.html'
-
   auto_updates true
+  depends_on macos: ">= :mojave"
 
-  app 'LaunchBar.app'
+  app "LaunchBar.app"
 
   zap trash: [
-               '~/Library/Application Support/LaunchBar',
-               '~/Library/Caches/at.obdev.LaunchBar',
-               '~/Library/Preferences/at.obdev.LaunchBar.plist',
-               '~/Library/Saved Application State/at.obdev.LaunchBar.savedState',
-             ]
+    "~/Library/Application Support/LaunchBar",
+    "~/Library/Caches/at.obdev.LaunchBar",
+    "~/Library/Preferences/at.obdev.LaunchBar.plist",
+    "~/Library/Saved Application State/at.obdev.LaunchBar.savedState",
+  ]
 end

@@ -1,16 +1,21 @@
-cask 'emby-server' do
-  version '4.1.1.0'
-  sha256 'ae6b16dd7750856969d85285ee1e988393af816e788c69c6d7698cb91dc1510f'
+cask "emby-server" do
+  version "4.6.4.0"
+  sha256 "ddda2f6f1d25660131b36f35906041198d6129b7f328ae1dacce26c5023de129"
 
-  # github.com/MediaBrowser/Emby.Releases was verified as official when first introduced to the cask
-  url "https://github.com/MediaBrowser/Emby.Releases/releases/download/#{version}/embyserver-osx-x64-#{version}.zip"
-  appcast 'https://github.com/MediaBrowser/Emby.Releases/releases.atom'
-  name 'Emby Server'
-  homepage 'https://emby.media/'
+  url "https://github.com/MediaBrowser/Emby.Releases/releases/download/#{version}/embyserver-osx-x64-#{version}.zip",
+      verified: "github.com/MediaBrowser/Emby.Releases/"
+  name "Emby Server"
+  desc "Personal media server with apps on just about every device"
+  homepage "https://emby.media/"
 
-  depends_on macos: '>= :sierra'
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
-  app 'EmbyServer.app'
+  depends_on macos: ">= :high_sierra"
 
-  zap trash: '~/.config/emby-server'
+  app "EmbyServer.app"
+
+  zap trash: "~/.config/emby-server"
 end

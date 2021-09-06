@@ -1,11 +1,16 @@
-cask 'beamer' do
-  version '3.3.4'
-  sha256 'c8ad45a76063e0c344534e144f0378509f9a401dad279541b96fe1fe393040f3'
+cask "beamer" do
+  version "3.5,35001"
+  sha256 "8f8d72ab99fd47c7b9df1acd51c6fcc8b6ebb8c574587e8e1fc6cdc5868ba21c"
 
-  url "https://beamer-app.com/resources/downloads/Beamer-#{version}.zip"
-  appcast "https://beamer-app.com/beamer#{version.major}-appcast.xml"
-  name 'Beamer'
-  homepage 'https://beamer-app.com/'
+  url "https://beamer-app.com/resources/downloads/Beamer-#{version.before_comma}.zip"
+  name "Beamer"
+  desc "Desktop casting/streaming app for Apple TV and Chromecast"
+  homepage "https://beamer-app.com/"
 
-  app 'Beamer.app'
+  livecheck do
+    url "https://beamer-app.com/beamer#{version.major}-appcast.xml"
+    strategy :sparkle
+  end
+
+  app "Beamer.app"
 end

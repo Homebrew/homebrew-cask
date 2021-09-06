@@ -1,16 +1,24 @@
-cask 'maltego' do
-  version '4.1.13.11516'
-  sha256 '84e4a60a488e676928ffabef25f7de94a57ad7252f8a88e29321cf3b65e26910'
+cask "maltego" do
+  version "4.2.19.13940"
+  sha256 "6e690f7fdb7deb715ea645732a1ba382a56b3c71a48bd2a76182d74a3592ef3b"
 
-  url "https://www.paterva.com/malv#{version.major_minor.no_dots}/Maltego.v#{version}.dmg"
-  name 'Maltego'
-  homepage 'https://www.paterva.com/web7/buy/maltego-clients.php'
+  url "https://maltego-downloads.s3.us-east-2.amazonaws.com/mac/Maltego.v#{version}.dmg",
+      verified: "maltego-downloads.s3.us-east-2.amazonaws.com/"
+  name "Maltego"
+  desc "Open source intelligence and graphical link analysis tool"
+  homepage "https://www.maltego.com/pricing-plans/"
 
-  app 'Maltego.app'
+  livecheck do
+    url "https://maltego-downloads.s3.us-east-2.amazonaws.com/info.json"
+    strategy :page_match
+    regex(/Maltego\.v(\d+(?:\.\d+)*)\.dmg/i)
+  end
 
-  zap trash: '~/Library/Application Support/maltego'
+  app "Maltego.app"
+
+  zap trash: "~/Library/Application Support/maltego"
 
   caveats do
-    depends_on_java '8'
+    depends_on_java "11"
   end
 end

@@ -1,14 +1,25 @@
-cask 'mblock' do
-  version '5.1.0'
-  sha256 '03de14bb9a2f2b8784b627ab1611aa04b7d8290fafa39115708891bf3c3178bf'
+cask "mblock" do
+  version "5.3.5"
+  sha256 "bf09a8a2ab497619d41f52459b4109917336a311032ea59ba78407176a5f09c5"
 
-  # dl.makeblock.com was verified as official when first introduced to the cask
-  url "https://dl.makeblock.com/mblock#{version.major}/darwin/V#{version}.pkg"
-  appcast 'https://www.mblock.cc/mblock-software/'
-  name 'mBlock'
-  homepage 'https://www.mblock.cc/'
+  url "https://dl.makeblock.com/mblock#{version.major}/darwin/V#{version}.pkg",
+      verified: "dl.makeblock.com/"
+  name "mBlock"
+  desc "Coding tool designed for teaching STEAM"
+  homepage "https://www.mblock.cc/"
+
+  livecheck do
+    url "https://mblock.makeblock.com/en-us/download/"
+    strategy :page_match
+    regex(%r{href=.*?/darwin/V(\d+(?:\.\d+)*)\.pkg}i)
+  end
+
+  depends_on macos: ">= :sierra"
 
   pkg "V#{version}.pkg"
 
-  uninstall pkgutil: 'com.makeblock.pkg.mblock'
+  uninstall pkgutil: [
+    "cc.mblock",
+    "com.makeblock.pkg.mblock",
+  ]
 end

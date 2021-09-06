@@ -1,19 +1,24 @@
-cask 'weiyun' do
-  version '3.0.1.371_c31767'
-  sha256 'e968dc136aaf9552a382bbb20ad6451e4bfe9e402475957defef36cae86ec917'
+cask "weiyun" do
+  version "5.2.1109"
+  sha256 "23339bc991d6938b5e71f5431e477fee5708318b7bc532af9a676cfeb2b9cec5"
 
-  # dldir1.qq.com/weiyun was verified as official when first introduced to the cask
-  url "https://dldir1.qq.com/weiyun/Weiyun_Mac_#{version}.dmg"
-  appcast 'https://qzonestyle.gtimg.cn/qzone/qzactStatics/configSystem/data/65/config1.js'
-  name 'weiyun'
-  homepage 'https://www.weiyun.com/'
+  url "https://dldir1.qq.com/weiyun/electron-update/release/mac/Weiyun-mac-x64-#{version}.dmg",
+      verified: "dldir1.qq.com/weiyun/"
+  name "Weiyun"
+  desc "Document backup and online management"
+  homepage "https://www.weiyun.com/"
 
-  app 'Weiyun.app'
+  livecheck do
+    url "https://qzonestyle.gtimg.cn/qzone/qzactStatics/configSystem/data/65/config1.js"
+    regex(/Weiyun-mac-x64-(\d+(?:\.\d+)*)\.dmg/i)
+  end
 
-  uninstall quit: 'com.tencent.MacWeiyun'
+  app "Weiyun.app"
+
+  uninstall quit: "com.tencent.MacWeiyun"
 
   zap trash: [
-               '~/Library/Preferences/com.tencent.MacWeiyun.plist',
-               '~/Library/Saved Application State/com.tencent.MacWeiyun.savedState',
-             ]
+    "~/Library/Preferences/com.tencent.MacWeiyun.plist",
+    "~/Library/Saved Application State/com.tencent.MacWeiyun.savedState",
+  ]
 end

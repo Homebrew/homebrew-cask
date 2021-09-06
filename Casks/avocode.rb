@@ -1,23 +1,29 @@
-cask 'avocode' do
-  version '3.8.4'
-  sha256 '9f3ff8cbd51609320ec4200781c9213f7b0585e60e4829302a47af7ccebb404b'
+cask "avocode" do
+  version "4.15.1"
+  sha256 "ea512b41decdd6a9ba05a191c78012cccefd3dddbbdd65aa6e75c250a81893b9"
 
   url "https://media.avocode.com/download/avocode-app/#{version}/Avocode-#{version}-mac.zip"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://manager.avocode.com/download/avocode-app/mac-dmg/'
-  name 'Avocode'
-  homepage 'https://avocode.com/'
+  name "Avocode"
+  desc "Collaborate on design files"
+  homepage "https://avocode.com/"
+
+  livecheck do
+    url "https://manager.avocode.com/download/avocode-app/mac-dmg/"
+    strategy :header_match
+  end
 
   auto_updates true
+  depends_on macos: ">= :el_capitan"
 
-  app 'Avocode.app'
+  app "Avocode.app"
 
   zap trash: [
-               '~/.avocode',
-               '~/Library/Application Support/Avocode',
-               '~/Library/Caches/com.madebysource.avocode',
-               '~/Library/Caches/com.madebysource.avocode.ShipIt',
-               '~/Library/Preferences/com.madebysource.avocode.helper.plist',
-               '~/Library/Preferences/com.madebysource.avocode.plist',
-               '~/Library/Saved Application State/com.madebysource.avocode.savedState',
-             ]
+    "~/.avocode",
+    "~/Library/Application Support/Avocode",
+    "~/Library/Caches/com.madebysource.avocode",
+    "~/Library/Caches/com.madebysource.avocode.ShipIt",
+    "~/Library/Preferences/com.madebysource.avocode.helper.plist",
+    "~/Library/Preferences/com.madebysource.avocode.plist",
+    "~/Library/Saved Application State/com.madebysource.avocode.savedState",
+  ]
 end

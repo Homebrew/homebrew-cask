@@ -1,11 +1,17 @@
-cask 'greenfoot' do
-  version '3.6.0'
-  sha256 '575413dd4d1c7a0e4e97c39192478e98ca944cbad9684c161e57191204dd1ebe'
+cask "greenfoot" do
+  version "3.7.0"
+  sha256 "ff3c80ee74d15d8152fa1fa7e0ac60b3e868b0982aaec34819f312a0205f4976"
 
   url "https://www.greenfoot.org/download/files/Greenfoot-mac-#{version.no_dots}.zip"
-  appcast 'https://www.greenfoot.org/download'
-  name 'Greenfoot'
-  homepage 'https://www.greenfoot.org/home'
+  name "Greenfoot"
+  desc "Teach object orientation with Java"
+  homepage "https://www.greenfoot.org/home"
+
+  livecheck do
+    url "https://www.greenfoot.org/download"
+    strategy :page_match
+    regex(/Version:\s*(\d+(?:\.\d+)*)/i)
+  end
 
   app "Greenfoot #{version}/Greenfoot.app"
 end

@@ -1,19 +1,26 @@
-cask 'postico' do
-  version '1.5.8'
-  sha256 '638c4312d32f27aa6d92fd737fb55e23916b2b4326a24dc4ca6f9204ab501f1d'
+cask "postico" do
+  version "1.5.19"
+  sha256 "68e4a446d789e2cadb2679f18938b134bbda05b0c5a69c44624cab379a78f067"
 
-  # eggerapps-downloads.s3.amazonaws.com was verified as official when first introduced to the cask
-  url "https://eggerapps-downloads.s3.amazonaws.com/postico-#{version}.zip"
-  appcast 'https://eggerapps.at/postico/docs/?file=changelist.html'
-  name 'Postico'
-  homepage 'https://eggerapps.at/postico/'
+  url "https://eggerapps-downloads.s3.amazonaws.com/postico-#{version}.zip",
+      verified: "eggerapps-downloads.s3.amazonaws.com/"
+  name "Postico"
+  desc "GUI client for PostgreSQL databases"
+  homepage "https://eggerapps.at/postico/"
 
-  app 'Postico.app'
+  livecheck do
+    url "https://eggerapps.at/postico/download/"
+    strategy :header_match
+  end
+
+  depends_on macos: ">= :yosemite"
+
+  app "Postico.app"
 
   zap trash: [
-               '~/Library/Application Scripts/at.eggerapps.Postico',
-               '~/Library/Containers/at.eggerapps.Postico',
-               '~/Library/Preferences/at.eggerapps.Postico.plist',
-               '~/Library/Saved Application State/at.eggerapps.Postico.savedState',
-             ]
+    "~/Library/Application Scripts/at.eggerapps.Postico",
+    "~/Library/Containers/at.eggerapps.Postico",
+    "~/Library/Preferences/at.eggerapps.Postico.plist",
+    "~/Library/Saved Application State/at.eggerapps.Postico.savedState",
+  ]
 end

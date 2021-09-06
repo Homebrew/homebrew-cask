@@ -1,16 +1,25 @@
-cask 'openra' do
-  version '20190314'
-  sha256 '47991698799dfc15e65641317293fa5503efbe02703aa8c570b838cfc3649693'
+cask "openra" do
+  version "20210321"
+  sha256 "20346073731e3dc0ccfc79ce05abe2e1e3a9d815fb945c0683169d455c6c1004"
 
-  # github.com/OpenRA/OpenRA was verified as official when first introduced to the cask
-  url "https://github.com/OpenRA/OpenRA/releases/download/release-#{version}/OpenRA-release-#{version}.dmg"
-  appcast 'https://github.com/OpenRA/OpenRA/releases.atom'
-  name 'OpenRA'
-  homepage 'https://www.openra.net/'
+  url "https://github.com/OpenRA/OpenRA/releases/download/release-#{version}/OpenRA-release-#{version}.dmg",
+      verified: "github.com/OpenRA/OpenRA/"
+  name "OpenRA"
+  desc "Real-time strategy game engine for Westwood games"
+  homepage "https://www.openra.net/"
 
-  depends_on cask: 'mono-mdk'
+  livecheck do
+    regex(/^release-(\d+)$/i)
+  end
 
-  app 'OpenRA - Dune 2000.app'
-  app 'OpenRA - Red Alert.app'
-  app 'OpenRA - Tiberian Dawn.app'
+  app "OpenRA - Dune 2000.app"
+  app "OpenRA - Red Alert.app"
+  app "OpenRA - Tiberian Dawn.app"
+
+  zap trash: [
+    "~/Library/Application Support/OpenRA",
+    "~/Library/Saved Application State/net.openra.mod.cnc.savedState",
+    "~/Library/Saved Application State/net.openra.mod.d2k.savedState",
+    "~/Library/Saved Application State/net.openra.mod.ra.savedState",
+  ]
 end

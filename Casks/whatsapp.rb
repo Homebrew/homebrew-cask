@@ -1,23 +1,30 @@
-cask 'whatsapp' do
-  version '0.3.3794'
-  sha256 '3f660b8dcdffde4e77e4c53f61371f90de90154af0628ad4599135640948e8d3'
+cask "whatsapp" do
+  version "2.2134.10"
+  sha256 "381f92172a7f39a431beda3c34961bfb27d3bfd9fe13a982c5e5a7df1b0fee95"
 
   url "https://web.whatsapp.com/desktop/mac/files/release-#{version}.zip"
-  appcast 'https://web.whatsapp.com/desktop/mac/releases?platform=darwin&arch=x64'
-  name 'WhatsApp'
-  homepage 'https://www.whatsapp.com/'
+  name "WhatsApp"
+  desc "Desktop client for WhatsApp"
+  homepage "https://www.whatsapp.com/"
+
+  livecheck do
+    url "https://web.whatsapp.com/desktop/mac/releases"
+    strategy :page_match
+    regex(/release-(\d+(?:\.\d+)*)\.zip/i)
+  end
 
   auto_updates true
 
-  app 'WhatsApp.app'
+  app "WhatsApp.app"
 
   zap trash: [
-               '~/Library/Application Support/WhatsApp',
-               '~/Library/Application Support/WhatsApp.ShipIt',
-               '~/Library/Caches/WhatsApp',
-               '~/Library/Caches/WhatsApp.ShipIt',
-               '~/Library/Preferences/WhatsApp.plist',
-               '~/Library/Preferences/WhatsApp-Helper.plist',
-               '~/Library/Saved Application State/WhatsApp.savedState',
-             ]
+    "~/Library/Application Support/WhatsApp",
+    "~/Library/Application Support/WhatsApp.ShipIt",
+    "~/Library/Caches/WhatsApp",
+    "~/Library/Caches/WhatsApp.ShipIt",
+    "~/Library/Preferences/ByHost/WhatsApp.ShipIt.*.plist",
+    "~/Library/Preferences/WhatsApp.plist",
+    "~/Library/Preferences/WhatsApp-Helper.plist",
+    "~/Library/Saved Application State/WhatsApp.savedState",
+  ]
 end

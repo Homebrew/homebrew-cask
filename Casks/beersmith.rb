@@ -1,19 +1,27 @@
-cask 'beersmith' do
-  version '3.0.8'
-  sha256 'ac9033f214e1f3879acefe37b01698e904ad25d2b7947c7263dd5e97f13567bb'
+cask "beersmith" do
+  version "3.2.7"
+  sha256 "8df3be5c77d57938936e81803dcdbd76e30d71c8b2c90f0da79cbf3d90254946"
 
-  # beersmith-3.s3.amazonaws.com was verified as official when first introduced to the cask
-  url "https://beersmith-3.s3.amazonaws.com/BeerSmith#{version.dots_to_underscores}.dmg"
-  appcast 'https://beersmith.com/download-beersmith/'
-  name 'BeerSmith'
-  homepage 'https://beersmith.com/'
+  url "https://beersmith3-2.s3.amazonaws.com/BeerSmith#{version.dots_to_underscores}.dmg",
+      verified: "beersmith3-2.s3.amazonaws.com/"
+  name "BeerSmith"
+  desc "Beer brewing software"
+  homepage "https://beersmith.com/"
+
+  livecheck do
+    url "https://beersmith.com/download-beersmith/"
+    regex(/href=.*?BeerSmith[._-]?v?(\d+(?:[._]\d+)*)\.dmg/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| match[0].tr("_", ".") }
+    end
+  end
 
   app "BeerSmith#{version.major}.app"
 
   zap trash: [
-               '~/Library/Application Support/BeerSmith.*',
-               '~/Library/Caches/BeerSmith-LLC.BeerSmith.*',
-               '~/Library/Preferences/BeerSmith-LLC.BeerSmith.*.plist',
-               '~/Library/Saved Application State/BeerSmith-LLC.BeerSmith.*.savedStat',
-             ]
+    "~/Library/Application Support/BeerSmith.*",
+    "~/Library/Caches/BeerSmith-LLC.BeerSmith.*",
+    "~/Library/Preferences/BeerSmith-LLC.BeerSmith.*.plist",
+    "~/Library/Saved Application State/BeerSmith-LLC.BeerSmith.*.savedStat",
+  ]
 end

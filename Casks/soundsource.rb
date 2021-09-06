@@ -1,13 +1,26 @@
-cask 'soundsource' do
-  version '4.1.1'
-  sha256 '36f7b5547d378edbbd5de575dc1fdef32d7f2dfd9fbebe2ef8f6419f3545450a'
+cask "soundsource" do
+  version "5.3.5"
+  sha256 :no_check
 
-  url 'https://rogueamoeba.com/soundsource/download/SoundSource.zip'
-  appcast 'https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&bundleid=com.rogueamoeba.soundsource&version=4008000'
-  name 'SoundSource'
-  homepage 'https://rogueamoeba.com/soundsource/'
+  url "https://rogueamoeba.com/soundsource/download/SoundSource.zip"
+  name "SoundSource"
+  desc "Sound and audio controller"
+  homepage "https://rogueamoeba.com/soundsource/"
 
-  depends_on macos: '>= :el_capitan'
+  livecheck do
+    url "https://rogueamoeba.com/soundsource/releasenotes.php"
+    regex(/ra-version=["']?(\d+(?:\.\d+)+)["' >]/i)
+  end
 
-  app 'SoundSource.app'
+  auto_updates true
+  depends_on macos: ">= :high_sierra"
+
+  app "SoundSource.app"
+
+  zap trash: [
+    "~/Library/Application Support/SoundSource",
+    "~/Library/Caches/com.rogueamoeba.soundsource",
+    "~/Library/Preferences/com.rogueamoeba.soundsource.plist",
+    "~/Library/WebKit/com.rogueamoeba.soundsource",
+  ]
 end

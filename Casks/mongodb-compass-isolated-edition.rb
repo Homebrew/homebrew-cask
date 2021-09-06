@@ -1,11 +1,16 @@
-cask 'mongodb-compass-isolated-edition' do
-  version '1.18.0'
-  sha256 '33841ca51d9fcd04dcaebf84e2950de25f02a0b1e543e260ee01f7292e5cf923'
+cask "mongodb-compass-isolated-edition" do
+  version "1.28.1"
+  sha256 "55f8e187ea98c69bb274d02658cb1fc0d3f97711e55d8d42ef6222a17737d520"
 
   url "https://downloads.mongodb.com/compass/mongodb-compass-isolated-#{version}-darwin-x64.dmg"
-  appcast 'https://www.mongodb.com/download-center/compass'
-  name 'MongoDB Compass Isolated'
-  homepage 'https://www.mongodb.com/products/compass'
+  name "MongoDB Compass Isolated"
+  desc "Explore and manipulate your MongoDB data"
+  homepage "https://www.mongodb.com/products/compass"
 
-  app 'MongoDB Compass Isolated Edition.app'
+  livecheck do
+    url "https://info-mongodb-com.s3.amazonaws.com/com-download-center/compass.json"
+    regex(/"version"\s*:\s*"(\d+(?:\.\d+)+)\s*\(Isolated/i)
+  end
+
+  app "MongoDB Compass Isolated Edition.app"
 end

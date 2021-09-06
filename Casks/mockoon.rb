@@ -1,14 +1,14 @@
-cask 'mockoon' do
-  version '1.4.0'
-  sha256 '5c4ea6cbf0085d4e55dc095828ef5e0366504570474ff0ee7bd03924a4b710e5'
+cask "mockoon" do
+  version "1.15.0"
+  sha256 "c68b7bb8a927521eea25d5e73d0d8402cb02499b86ad4f3900cefbe6e2be74d4"
 
-  # github.com/mockoon/mockoon was verified as official when first introduced to the cask
-  url "https://github.com/mockoon/mockoon/releases/download/v#{version}/mockoon.setup.#{version}.dmg"
-  appcast 'https://github.com/mockoon/mockoon/releases.atom'
-  name 'Mockoon'
-  homepage 'https://mockoon.com/'
+  url "https://github.com/mockoon/mockoon/releases/download/v#{version}/mockoon.setup.#{version}.dmg",
+      verified: "github.com/mockoon/mockoon/"
+  name "Mockoon"
+  desc "Utility to run mock APIs locally"
+  homepage "https://mockoon.com/"
 
   auto_updates true
 
-  app 'Mockoon.app'
+  app "Mockoon.app"
 end

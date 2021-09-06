@@ -1,12 +1,16 @@
-cask 'prepros' do
-  version '6.3.0'
-  sha256 '575ea35fbcbf55a421b44e9812558b88384dffc7345fa94e77e2947c90ae5fff'
+cask "prepros" do
+  version "7.3.48"
+  sha256 "138501cef2671c697065df0f1f9aa9a80434562ac220882c9282698e3f635fe6"
 
-  # prepros-6.nyc3.cdn.digitaloceanspaces.com was verified as official when first introduced to the cask
-  url "https://prepros-6.nyc3.cdn.digitaloceanspaces.com/stable/Prepros-Mac-#{version}.zip"
-  appcast 'https://prepros.io/changelog'
-  name 'Prepros'
-  homepage 'https://prepros.io/'
+  url "https://downloads.prepros.io/v#{version.major}/Prepros-#{version}.zip"
+  name "Prepros"
+  desc "Web development companion"
+  homepage "https://prepros.io/"
 
-  app 'Prepros.app'
+  livecheck do
+    url "https://prepros.io/downloads/stable/mac"
+    strategy :header_match
+  end
+
+  app "Prepros.app"
 end

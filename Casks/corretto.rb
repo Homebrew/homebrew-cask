@@ -1,12 +1,18 @@
-cask 'corretto' do
-  version '11.0.4.11.1'
-  sha256 'cba291ec0177a4a047e06c6c3a44ce7c5e9505c233d629c3c82fb3e6376e734b'
+cask "corretto" do
+  version "16.0.2.7.1"
+  sha256 "2ca385d00a8de342130ff7b2465914fff62e1bc0ba713d9f8f097f90086dddbc"
 
-  # d3pxv6yz143wms.cloudfront.net was verified as official when first introduced to the cask
-  url "https://d3pxv6yz143wms.cloudfront.net/#{version}/amazon-corretto-#{version}-macosx-x64.pkg"
-  appcast "https://docs.aws.amazon.com/en_us/corretto/latest/corretto-#{version.major}-ug/corretto-#{version.major}-ug.rss"
-  name 'Amazon Corretto'
-  homepage 'https://aws.amazon.com/corretto/'
+  url "https://corretto.aws/downloads/resources/#{version.sub(/-\d+/, "")}/amazon-corretto-#{version}-macosx-x64.pkg"
+  name "AWS Corretto JDK"
+  desc "OpenJDK distribution from Amazon"
+  homepage "https://corretto.aws/"
+
+  livecheck do
+    url "https://corretto.aws/downloads/latest/amazon-corretto-#{version.major}-x64-macos-jdk.pkg"
+    strategy :header_match do |headers|
+      headers["location"][%r{/amazon-corretto-(\d+(?:\.\d+)*)-macosx-x64\.pkg}i, 1]
+    end
+  end
 
   pkg "amazon-corretto-#{version}-macosx-x64.pkg"
 

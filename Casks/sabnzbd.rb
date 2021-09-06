@@ -1,16 +1,21 @@
-cask 'sabnzbd' do
-  version '2.3.9'
-  sha256 'dfe5eee0f94b1db79ecbe759ce9c38cec7d9b4357fd58258628e01f46d3ca3ea'
+cask "sabnzbd" do
+  version "3.3.1"
+  sha256 "3d396e891152f89f4621937121eb9e268ba0021c9987eedcb4962949e665237e"
 
-  # github.com/sabnzbd/sabnzbd was verified as official when first introduced to the cask
-  url "https://github.com/sabnzbd/sabnzbd/releases/download/#{version}/SABnzbd-#{version}-osx.dmg"
-  appcast 'https://github.com/sabnzbd/sabnzbd/releases.atom'
-  name 'SABnzbd'
-  homepage 'https://sabnzbd.org/'
+  url "https://github.com/sabnzbd/sabnzbd/releases/download/#{version}/SABnzbd-#{version}-osx.dmg",
+      verified: "github.com/sabnzbd/sabnzbd/"
+  name "SABnzbd"
+  desc "Binary newsreader"
+  homepage "https://sabnzbd.org/"
 
-  depends_on macos: '>= :yosemite'
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
-  app 'SABnzbd.app'
+  depends_on macos: ">= :yosemite"
 
-  zap trash: '~/Library/Application Support/SABnzbd'
+  app "SABnzbd.app"
+
+  zap trash: "~/Library/Application Support/SABnzbd"
 end

@@ -1,11 +1,11 @@
-cask 'ariang' do
-  version '1.1.1'
-  sha256 '4e354fa76ce275297b506f2092b8ae156d1bbb3bc4a418ac6e0b60e5514f5685'
+cask "ariang" do
+  version "1.2.2"
+  sha256 "41649d4c218a623e37acf811ade94f9a6cc13350e84b2cb6d44314e5d7fd829f"
 
-  url "https://github.com/mayswind/AriaNg-Native/releases/download/#{version}/AriaNg_Native-#{version}-macOS.dmg"
-  appcast 'https://github.com/mayswind/AriaNg-Native/releases.atom'
-  name 'AriaNg Native'
-  homepage 'https://github.com/mayswind/AriaNg-Native'
+  url "https://github.com/mayswind/AriaNg-Native/releases/download/#{version}/AriaNg_Native-#{version}-macOS-x64.dmg"
+  name "AriaNg Native"
+  desc "Better aria2 desktop frontend than AriaNg"
+  homepage "https://github.com/mayswind/AriaNg-Native"
 
-  app 'AriaNg Native.app'
+  app "AriaNg Native.app"
 end

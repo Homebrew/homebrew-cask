@@ -1,13 +1,18 @@
-cask 'marsedit' do
-  version '4.3.2'
-  sha256 '18768d0116683c52ae12c92b329c00140a8b802b5869c0e6558e923e45188624'
+cask "marsedit" do
+  version "4.5.1,9675"
+  sha256 "09999532a496504dfbd6adeccf042bdfe9b8dbf15315d2756d2379d5474d2cef"
 
-  url "https://red-sweater.com/marsedit/MarsEdit#{version}.zip"
-  appcast 'https://red-sweater.com/marsedit/appcast4.php'
-  name 'MarsEdit'
-  homepage 'https://red-sweater.com/marsedit/'
+  url "https://redsweater.com/marsedit/MarsEdit#{version.before_comma}.zip"
+  name "MarsEdit"
+  desc "Tool to write, preview and publish blogs"
+  homepage "https://redsweater.com/marsedit/"
 
-  depends_on macos: '>= :sierra'
+  livecheck do
+    url "https://redsweater.com/marsedit/appcast#{version.major}.php"
+    strategy :sparkle
+  end
 
-  app 'MarsEdit.app'
+  depends_on macos: ">= :sierra"
+
+  app "MarsEdit.app"
 end

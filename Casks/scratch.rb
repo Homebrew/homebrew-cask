@@ -1,12 +1,18 @@
-cask 'scratch' do
-  version '3.4.0'
-  sha256 'bfe3d9ca5045d78d3d34455b54f3154fcdaaa9e4146f63e52da44b0c51e67440'
+cask "scratch" do
+  version "3.25.0"
+  sha256 "fc99b062b5b267fd9224004b96db8b7061da1fe5e446a6f66364f1816b7ef2c9"
 
-  url "https://downloads.scratch.mit.edu/desktop/Scratch%20Desktop-#{version}.dmg"
-  name 'Scratch'
-  homepage 'https://scratch.mit.edu/download'
+  url "https://downloads.scratch.mit.edu/desktop/Scratch%20#{version}.dmg"
+  name "Scratch"
+  desc "Programs interactive stories, games, and animations"
+  homepage "https://scratch.mit.edu/download"
 
-  depends_on macos: '>= :high_sierra'
+  livecheck do
+    url "https://downloads.scratch.mit.edu/desktop/Scratch.dmg"
+    strategy :header_match
+  end
 
-  app 'Scratch Desktop.app'
+  depends_on macos: ">= :high_sierra"
+
+  app "Scratch #{version.major}.app"
 end

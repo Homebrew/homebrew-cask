@@ -1,21 +1,27 @@
-cask 'copyclip' do
-  version '2.9.91'
-  sha256 '4e086a27c2d78559032431012d7b3d6f195a2ff9e01adbf4170c8b151d5cb51e'
+cask "copyclip" do
+  version "2.9.98.8"
+  sha256 :no_check
 
-  # rink.hockeyapp.net/api/2/apps/ffb436060eb379c0cb23097402e92379 was verified as official when first introduced to the cask
-  url 'https://rink.hockeyapp.net/api/2/apps/ffb436060eb379c0cb23097402e92379?format=zip'
-  appcast 'https://rink.hockeyapp.net/api/2/apps/ffb436060eb379c0cb23097402e92379'
-  name 'CopyClip'
-  homepage 'https://fiplab.com/apps/copyclip-for-mac'
+  url "https://fiplab.com/app-download/CopyClip_#{version.major}.zip"
+  name "CopyClip"
+  desc "Clipboard manager"
+  homepage "https://fiplab.com/apps/copyclip-for-mac"
+
+  livecheck do
+    url :url
+    strategy :extract_plist do |versions|
+      versions.values.map(&:short_version).compact.first
+    end
+  end
 
   app "CopyClip #{version.major}.app"
 
   uninstall quit: "com.fiplab.copyclip#{version.major}"
 
   zap delete: [
-                '~/Library/Application Scripts/com.fiplab.copyclip*helper',
-                '~/Library/Application Scripts/com.fiplab.copyclip*',
-                '~/Library/Containers/com.fiplab.copyclip*helper',
-                '~/Library/Containers/com.fiplab.copyclip*',
-              ]
+    "~/Library/Application Scripts/com.fiplab.copyclip*helper",
+    "~/Library/Application Scripts/com.fiplab.copyclip*",
+    "~/Library/Containers/com.fiplab.copyclip*helper",
+    "~/Library/Containers/com.fiplab.copyclip*",
+  ]
 end

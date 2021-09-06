@@ -1,12 +1,23 @@
-cask 'wickrme' do
-  version '5.22.3'
-  sha256 '593c3f13534083dfe49ddea30701d07190727aae4ebd096395d919fff03cafd2'
+cask "wickrme" do
+  version "5.85.9"
+  sha256 "db2541b4158dbbeff2d33154f8b2ad8e07cf5624ad5bb422fc9cd606c12fd38d"
 
-  # s3.amazonaws.com/static.wickr.com was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/static.wickr.com/downloads/mac/me/WickrMe-#{version}.dmg"
-  appcast 'https://rink.hockeyapp.net/api/2/apps/5af5d569264b4cc68e1f5156e8f80fb9'
-  name 'Wickr Me'
-  homepage 'https://wickr.com/products/personal/'
+  url "https://s3.amazonaws.com/static.wickr.com/downloads/mac/me/WickrMe-#{version}.dmg",
+      verified: "s3.amazonaws.com/static.wickr.com/"
+  name "Wickr Me"
+  desc "Desktop client for Wickr Me"
+  homepage "https://wickr.com/products/personal/"
 
-  app 'WickrMe.app'
+  livecheck do
+    url "https://me-download.wickr.com/api/multiVerify/me/undefined/"
+    strategy :page_match do |page|
+      JSON.parse(page).map do |item|
+        item["version"] if item["os"] == "mac"
+      end.compact
+    end
+  end
+
+  depends_on macos: ">= :high_sierra"
+
+  app "WickrMe.app"
 end

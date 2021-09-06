@@ -1,12 +1,17 @@
-cask 'scidvsmac' do
-  version '4.20'
-  sha256 'c4a17efc2a12a1745d2a34bf0f6fc4b1b46eaf98f1f98f365d2dbec583ad9ae9'
+cask "scidvsmac" do
+  version "4.22"
+  sha256 "31b12bd5598262d9f00c87020c24635506f55ad126c7de7e23736d8476672eee"
 
-  # downloads.sourceforge.net/scidvspc was verified as official when first introduced to the cask
   url "https://downloads.sourceforge.net/scidvspc/ScidvsMac-#{version}.dmg"
-  appcast 'https://sourceforge.net/projects/scidvspc/rss'
-  name 'Scid vs. Mac'
-  homepage 'https://scidvspc.sourceforge.io/'
+  name "Scid vs. Mac"
+  desc "Chess toolkit"
+  homepage "http://scidvspc.sourceforge.net/"
 
-  app 'ScidvsMac.app'
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(/ScidvsMac-(\d+(?:\.\d+)*)\.dmg/i)
+  end
+
+  app "ScidvsMac.app"
 end

@@ -1,18 +1,24 @@
-cask 'mmex' do
-  version '1.3.3'
-  sha256 '49eeb6b50a51bfa09da7f4bb063ad75c5695eeeac410ae13d4c8e8844ac43505'
+cask "mmex" do
+  version "1.5.6"
+  sha256 "fde4e88adc6f56effd9f547ab4edc3566604c7f3c0d2f7babe88ad382f8c6d06"
 
-  # github.com/moneymanagerex/moneymanagerex was verified as official when first introduced to the cask
-  url "https://github.com/moneymanagerex/moneymanagerex/releases/download/v#{version}/mmex_#{version}_macos10.9-wx3.0.2build.dmg"
-  appcast 'https://github.com/moneymanagerex/moneymanagerex/releases.atom'
-  name 'Money Manager Ex'
-  homepage 'https://www.moneymanagerex.org/'
+  url "https://downloads.sourceforge.net/moneymanagerex/mmex-#{version}-Darwin.dmg",
+      verified: "downloads.sourceforge.net/moneymanagerex/"
+  name "Money Manager Ex"
+  desc "Money management application"
+  homepage "https://www.moneymanagerex.org/"
 
-  app 'MMEX.app'
+  livecheck do
+    url "https://sourceforge.net/projects/moneymanagerex/rss"
+    strategy :page_match
+    regex(/mmex[._-]?(\d+(?:\.\d+)*)[._-]?Darwin\.dmg/i)
+  end
+
+  app "MMEX.app"
 
   zap trash: [
-               '~/Library/Application Support/MoneyManagerEx',
-               '~/Library/Caches/com.yourcompany.MMEX',
-               '~/Library/Preferences/com.yourcompany.MMEX.plist',
-             ]
+    "~/Library/Application Support/MoneyManagerEx",
+    "~/Library/Caches/com.yourcompany.MMEX",
+    "~/Library/Preferences/com.yourcompany.MMEX.plist",
+  ]
 end

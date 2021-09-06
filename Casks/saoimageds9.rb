@@ -1,22 +1,26 @@
-cask 'saoimageds9' do
-  version '8.0.1'
+cask "saoimageds9" do
+  # NOTE: "9" is not a version number, but an intrinsic part of the product name
+  version "8.2"
 
-  if MacOS.version == :el_capitan
-    sha256 '7b13be040388cbc40c3934254d5a5b9b693c46e06dd155692066be8075456270'
-    url "http://ds9.si.edu/download/macosxelcapitan/SAOImageDS9%20#{version}.dmg"
-  elsif MacOS.version == :sierra
-    sha256 '1617f3c171fb0d66972834e3703cb80bcaa019541a46d9659ffbf64b8b1503ce'
-    url "http://ds9.si.edu/download/macossierra/SAOImageDS9%20#{version}.dmg"
+  if MacOS.version <= :high_sierra
+    sha256 "a4c17529bb44d50c462eb30b289d49d9611ff2032debfcc2e3d4a6a48d650ac1"
+    url "https://ds9.si.edu/download/macoshighsierra/SAOImageDS9%20#{version}.dmg",
+        verified: "ds9.si.edu/download/"
+  elsif MacOS.version <= :mojave
+    sha256 "db4ae8d61d60c3bcbd536d6bfa4fbf9352ba445b2fe835d016b2b446625f2a4b"
+    url "https://ds9.si.edu/download/macosmojave/SAOImageDS9%20#{version}.dmg",
+        verified: "ds9.si.edu/download/"
   else
-    sha256 '96ab807d7c85955ee2fb4b3cdf3987f0dc49b8c20b250a2b8274b13b6862763c'
-    url "http://ds9.si.edu/download/macoshighsierra/SAOImageDS9%20#{version}.dmg"
+    sha256 "1d937429d89cf5106e70e985bf2b835b145900b932fdeeeebbe1e7ab3b9bf066"
+    url "https://ds9.si.edu/download/macoscatalina/SAOImageDS9%20#{version}.dmg",
+        verified: "ds9.si.edu/download/"
   end
 
-  appcast 'http://ds9.si.edu/site/Download.html'
-  name 'SAOImage DS9'
-  homepage 'http://ds9.si.edu/site/Home.html'
+  appcast "https://sites.google.com/cfa.harvard.edu/saoimageds9/download"
+  name "SAOImage DS9"
+  homepage "https://sites.google.com/cfa.harvard.edu/saoimageds9/home"
 
-  depends_on macos: '>= :yosemite'
+  depends_on macos: ">= :high_sierra"
 
-  app 'SAOImageDS9.app'
+  app "SAOImageDS9.app"
 end

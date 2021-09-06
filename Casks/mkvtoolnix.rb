@@ -1,14 +1,20 @@
-cask 'mkvtoolnix' do
-  version '35.0.0'
-  sha256 'c5c9844b6ec9d92b8c84ec50a121e81ed480bd0064053715b2471fe771e2701b'
+cask "mkvtoolnix" do
+  version "61.0.0"
+  sha256 "b9af3afee74db065bd2d3a7d9830e4998c7944bd3042dc5e2bfe9bb35770089b"
 
   url "https://mkvtoolnix.download/macos/MKVToolNix-#{version}.dmg"
-  appcast 'https://www.bunkus.org/blog/feed/'
-  name 'MKVToolNix'
-  homepage 'https://mkvtoolnix.download/'
+  name "MKVToolNix"
+  desc "Set of tools to create, alter and inspect Matroska files (MKV)"
+  homepage "https://mkvtoolnix.download/"
 
-  conflicts_with formula: 'mkvtoolnix'
-  depends_on macos: '>= :sierra'
+  livecheck do
+    url "https://mkvtoolnix.download/macos/"
+    strategy :page_match
+    regex(%r{href=.*?/MKVToolNix-(\d+(?:\.\d+)*)\.dmg}i)
+  end
+
+  conflicts_with formula: "mkvtoolnix"
+  depends_on macos: ">= :catalina"
 
   app "MKVToolNix-#{version}.app"
   binary "#{appdir}/MKVToolNix-#{version}.app/Contents/MacOS/mkvextract"

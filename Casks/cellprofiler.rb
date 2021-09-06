@@ -1,12 +1,17 @@
-cask 'cellprofiler' do
-  version '3.1.8'
-  sha256 '094ed77bdb0cfd40d7b060d8d88c1fc44aab7caf77a65d6f7f4cb80c074f9af8'
+cask "cellprofiler" do
+  version "4.2.1"
+  sha256 "38622f987d965da8115f6abe6f809fb7313b360272c8f983baa1597f5f3d50a3"
 
-  # dpvpof9ygr7ad.cloudfront.net was verified as official when first introduced to the cask
-  url "https://dpvpof9ygr7ad.cloudfront.net/CellProfiler-#{version}.app.zip"
-  appcast 'https://github.com/CellProfiler/CellProfiler/releases.atom'
-  name 'CellProfiler'
-  homepage 'https://cellprofiler.org/'
+  url "https://cellprofiler-releases.s3.amazonaws.com/CellProfiler-macOS-#{version}.zip",
+      verified: "cellprofiler-releases.s3.amazonaws.com/"
+  name "CellProfiler"
+  desc "Open-source application for biological image analysis"
+  homepage "https://cellprofiler.org/"
 
-  app "CellProfiler-#{version}.app"
+  livecheck do
+    url "https://github.com/CellProfiler/CellProfiler"
+    strategy :github_latest
+  end
+
+  app "CellProfiler.app"
 end

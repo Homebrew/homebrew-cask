@@ -1,12 +1,19 @@
-cask 'timecamp' do
-  version :latest
-  sha256 :no_check
+cask "timecamp" do
+  version "1.7.2.0"
+  sha256 "165045e6170fd17a8ef77bd3d75318594dd687b5f51255e5c63c318ab9250cfd"
 
-  url 'https://www.timecamp.com/downloadsoft/TimeCamp.dmg'
-  name 'TimeCamp'
-  homepage 'https://www.timecamp.com/'
+  url "https://timecamp.s3.amazonaws.com/downloadsoft/#{version}/TimeCampSetup_macOS.dmg",
+      verified: "timecamp.s3.amazonaws.com/"
+  name "TimeCamp"
+  desc "Client application for TimeCamp software - track time and change tasks"
+  homepage "https://www.timecamp.com/"
 
-  app 'TimeCamp.app'
+  livecheck do
+    url "https://app.timecamp.com/download/stable/macos"
+    strategy :header_match
+  end
 
-  zap rmdir: '~/Library/Application Support/TimeCamp'
+  app "TimeCamp.app"
+
+  zap rmdir: "~/Library/Application Support/TimeCamp"
 end

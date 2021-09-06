@@ -1,13 +1,22 @@
-cask 'smartsynchronize' do
-  version '4.0.0,3086'
-  sha256 '0a88efcebd9e969fb1a72b04b483d89253a0eb6b8548c2f4e9aec1be0168e793'
+cask "smartsynchronize" do
+  version "4.2.1"
+  sha256 "e4cf1c0b335f23b1dab9c7f8e1be802f6bac5a160ddbc7b57f4cf3605e44fabd"
 
-  url "https://www.syntevo.com/downloads/smartsynchronize/smartsynchronize-macosx-#{version.before_comma}.dmg"
-  appcast 'https://www.syntevo.com/smartsynchronize/changelog.txt',
-          configuration: version.major_minor
-  name 'SmartSynchronize'
-  homepage 'https://www.syntevo.com/smartsynchronize/'
+  url "https://www.syntevo.com/downloads/smartsynchronize/smartsynchronize-macos-#{version.dots_to_underscores}.dmg"
+  name "SmartSynchronize"
+  desc "File and directory compare tool"
+  homepage "https://www.syntevo.com/smartsynchronize/"
 
-  app 'SmartSynchronize.app'
+  livecheck do
+    url "https://www.syntevo.com/smartsynchronize/download/"
+    strategy :page_match do |page|
+      v = page[%r{href=.*?/smartsynchronize-macos-(\d+(?:_\d+)*)\.dmg}i, 1]
+      v.tr("_", ".")
+    end
+  end
+
+  depends_on macos: ">= :el_capitan"
+
+  app "SmartSynchronize.app"
   binary "#{appdir}/SmartSynchronize.app/Contents/MacOS/SmartSynchronize"
 end

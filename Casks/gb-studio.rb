@@ -1,12 +1,12 @@
-cask 'gb-studio' do
-  version '1.1.0'
-  sha256 '86ff5ae6a9f8955da7c06e839b480c5e37f06f422375997e0a27063c849e6e65'
+cask "gb-studio" do
+  version "1.2.2"
+  sha256 "5de89971ecb27a855c5250b2b3eddfb906c818f01bdcbee75a444355f456512c"
 
-  # github.com/chrismaltby/gb-studio was verified as official when first introduced to the cask
-  url "https://github.com/chrismaltby/gb-studio/releases/download/v#{version}/GB.Studio-darwin-x64-#{version}.zip"
-  appcast 'https://github.com/chrismaltby/gb-studio/releases.atom'
-  name 'GB Studio'
-  homepage 'https://www.gbstudio.dev/'
+  url "https://github.com/chrismaltby/gb-studio/releases/download/v#{version}/gb-studio-develop-darwin_x86_64.zip",
+      verified: "github.com/chrismaltby/gb-studio/"
+  name "GB Studio"
+  desc "Drag and drop retro game creator"
+  homepage "https://www.gbstudio.dev/"
 
-  app 'GB Studio.app'
+  app "GB Studio.app"
 end

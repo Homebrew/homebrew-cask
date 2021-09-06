@@ -1,18 +1,21 @@
-cask 'kdiff3' do
-  # note: "3" is not a version number, but an intrinsic part of the product name (3-way diff)
-  version '0.9.98'
-  sha256 '3cbfb7f30989af2b28658a5f9f331c1a20275f16f42f3126119913b65cb06777'
+cask "kdiff3" do
+  # NOTE: "3" is not a version number, but an intrinsic part of the product name
+  version "1.9.3"
+  sha256 "502e7631364aa1eda7ed3caed634137e5d848255b5147f46a5c615956dfb4a79"
 
-  # downloads.sourceforge.net/kdiff3 was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/kdiff3/kdiff3/#{version}/kdiff3-#{version}-MacOSX-64Bit.dmg"
-  appcast 'https://sourceforge.net/projects/kdiff3/rss?path=/kdiff3'
-  name 'KDiff3'
-  homepage 'https://kdiff3.sourceforge.io/'
+  url "https://download.kde.org/stable/kdiff3/kdiff3-#{version}-macos-64.dmg"
+  name "KDiff3"
+  desc "Utility for comparing and merging files and directories"
+  homepage "https://invent.kde.org/sdk/kdiff3"
 
-  app 'kdiff3.app'
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  livecheck do
+    url "https://download.kde.org/stable/kdiff3/"
+    regex(/href=["']?kdiff3[._-]?v?(\d+(?:\.\d+)+)[._-]?macos[._-]?64\.dmg/i)
+  end
+
+  app "kdiff3.app"
   shimscript = "#{staged_path}/kdiff3.wrapper.sh"
-  binary shimscript, target: 'kdiff3'
+  binary shimscript, target: "kdiff3"
 
   preflight do
     IO.write shimscript, <<~EOS
@@ -21,5 +24,5 @@ cask 'kdiff3' do
     EOS
   end
 
-  zap trash: '~/.kdiff3rc'
+  zap trash: "~/.kdiff3rc"
 end

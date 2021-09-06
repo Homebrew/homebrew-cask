@@ -1,12 +1,12 @@
-cask 'unpkg' do
-  version '4.5'
-  sha256 'e32754b07073b383320d2bc0ce4ba9bd83a3f352043bd6f500741901f00c8c17'
+cask "unpkg" do
+  version "4.7"
+  sha256 "fee4f5ee286573f00a46dbe0e372d671ba82ce270ba4104cac9743b2e528d5b1"
 
-  # github.com/downloads/timdoug/unpkg was verified as official when first introduced to the cask
-  url "https://github.com/downloads/timdoug/unpkg/unpkg-#{version}.zip"
-  appcast 'https://github.com/timdoug/unpkg/releases.atom'
-  name 'unpkg'
-  homepage 'https://www.timdoug.com/unpkg/'
+  url "https://www.timdoug.com/unpkg/unpkg-#{version}.zip"
+  appcast "https://www.timdoug.com/unpkg/"
+  name "unpkg"
+  desc "Unarchiver for .pkg and .mpkg that unpacks all the files in a package"
+  homepage "https://www.timdoug.com/unpkg/"
 
   app "unpkg #{version}/unpkg.app"
 end

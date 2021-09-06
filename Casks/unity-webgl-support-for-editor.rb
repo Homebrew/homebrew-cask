@@ -1,15 +1,28 @@
-cask 'unity-webgl-support-for-editor' do
-  version '2019.1.10f1,f007ed779b7a'
-  sha256 '8cb9d9174bafca80ceb8a7feba5459eeb6d8a20415b6760839d02fea6131f39a'
+cask "unity-webgl-support-for-editor" do
+  version "2021.1.19f1,5f5eb8bbdc25"
+  sha256 "cd3e9a1d32c98d383dffe01eba240fa84484c0c01ea0b77f4dc2fbde18bea13f"
 
-  url "https://netstorage.unity3d.com/unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-WebGL-Support-for-Editor-#{version.before_comma}.pkg"
-  appcast 'https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json'
-  name 'Unity WebGL Build Support'
-  homepage 'https://unity3d.com/unity/'
+  url "https://download.unity3d.com/download_unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-WebGL-Support-for-Editor-#{version.before_comma}.pkg",
+      verified: "download.unity3d.com/download_unity/"
+  name "Unity WebGL Build Support"
+  desc "WebGL target support for Unity"
+  homepage "https://unity.com/products"
 
-  depends_on cask: 'unity'
+  livecheck do
+    url "https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json"
+    strategy :page_match do |page|
+      page.scan(%r{
+        /download_unity/(\h+)/MacEditorTargetInstaller
+        /UnitySetup-WebGL-Support-for-Editor-(\d+(?:\.\d+)*[a-z]*\d*)\.pkg
+      }ix).map do |match|
+        "#{match[1]},#{match[0]}"
+      end
+    end
+  end
+
+  depends_on cask: "unity"
 
   pkg "UnitySetup-WebGL-Support-for-Editor-#{version.before_comma}.pkg"
 
-  uninstall pkgutil: 'com.unity3d.WebGLSupport'
+  uninstall pkgutil: "com.unity3d.WebGLSupport"
 end

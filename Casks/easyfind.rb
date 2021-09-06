@@ -1,12 +1,17 @@
-cask 'easyfind' do
-  version '4.9.3'
-  sha256 'eb57b21fa28a84116072e80a4c19b0340d5879f407e9f16bf606760b19e647ed'
+cask "easyfind" do
+  version "5.0.2"
+  sha256 "1539a562539e3b3a243da864fddee0351a4c7d109aa9dcae436775ecbb288fc9"
 
-  # s3.amazonaws.com/DTWebsiteSupport was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/DTWebsiteSupport/download/freeware/easyfind/#{version}/EasyFind.app.zip"
-  appcast 'https://www.devontechnologies.com/apps/freeware'
-  name 'EasyFind'
-  homepage 'https://www.devontechnologies.com/apps/freeware'
+  url "https://download.devontechnologies.com/download/freeware/easyfind/#{version}/EasyFind.app.zip"
+  name "EasyFind"
+  desc "Find files, folders, or contents in any file"
+  homepage "https://www.devontechnologies.com/apps/freeware"
 
-  app 'EasyFind.app'
+  livecheck do
+    url "https://www.devontechnologies.com/apps/freeware"
+    strategy :page_match
+    regex(%r{href=.*?/(\d+(?:\.\d+)*)/EasyFind\.app\.zip}i)
+  end
+
+  app "EasyFind.app"
 end

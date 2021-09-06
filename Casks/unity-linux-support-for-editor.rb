@@ -1,15 +1,28 @@
-cask 'unity-linux-support-for-editor' do
-  version '2019.1.10f1,f007ed779b7a'
-  sha256 'f572abc5b89947379bf397bc6d53d546896b4b346128fbe71673f0613ffb64e8'
+cask "unity-linux-support-for-editor" do
+  version "2021.1.19f1,5f5eb8bbdc25"
+  sha256 "9af8669118d65e3c68790050f0bbd4a3c9e052bf584aa156b51ef623b9d78a32"
 
-  url "https://netstorage.unity3d.com/unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Linux-Support-for-Editor-#{version.before_comma}.pkg"
-  appcast 'https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json'
-  name 'Unity Linux Build Support'
-  homepage 'https://unity3d.com/unity/'
+  url "https://download.unity3d.com/download_unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Linux-Mono-Support-for-Editor-#{version.before_comma}.pkg",
+      verified: "download.unity3d.com/download_unity/"
+  name "Unity Linux (Mono) Build Support"
+  desc "Linux (Mono) target support for Unity"
+  homepage "https://unity.com/products"
 
-  depends_on cask: 'unity'
+  livecheck do
+    url "https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json"
+    strategy :page_match do |page|
+      page.scan(%r{
+        /download_unity/(\h+)/MacEditorTargetInstaller
+        /UnitySetup-Linux-Mono-Support-for-Editor-(\d+(?:\.\d+)*[a-z]*\d*)\.pkg
+      }ix).map do |match|
+        "#{match[1]},#{match[0]}"
+      end
+    end
+  end
 
-  pkg "UnitySetup-Linux-Support-for-Editor-#{version.before_comma}.pkg"
+  depends_on cask: "unity"
 
-  uninstall pkgutil: 'com.unity3d.LinuxStandaloneSupport'
+  pkg "UnitySetup-Linux-Mono-Support-for-Editor-#{version.before_comma}.pkg"
+
+  uninstall pkgutil: "com.unity3d.LinuxStandaloneSupport"
 end

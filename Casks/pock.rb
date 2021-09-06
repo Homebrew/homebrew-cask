@@ -1,13 +1,28 @@
-cask 'pock' do
-  version '0.5.3'
-  sha256 'bd658a234cb87ac7cb273884b694e6459ec1f8e4a1cd527407f34ed23fa59e2d'
+cask "pock" do
+  version "0.9.0-22"
+  sha256 "c190b719a4ecd98680fcea6a8095432012a2b9e0067adac9d4e7b2c92dc8ca6b"
 
-  url "https://pock.dev/download.php?file=pock_#{version.dots_to_underscores}_lack.zip"
-  appcast 'https://github.com/pigigaldi/Pock/releases.atom'
-  name 'Pock'
-  homepage 'https://pock.dev/'
+  url "https://pock.app/builds/pock_#{version.dots_to_underscores.gsub(/-/, "__")}.zip"
+  name "Pock"
+  desc "Utility to display the Dock in the Touch Bar"
+  homepage "https://pock.app/"
 
-  depends_on macos: '>= :sierra'
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(/Latest version: (\d+(?:\.\d+)*(?:-\d+)?)/i)
+  end
 
-  app 'Pock.app'
+  depends_on macos: ">= :high_sierra"
+
+  app "Pock.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.pigigaldi.pock.QLPockWidget",
+    "~/Library/Application Support/Pock",
+    "~/Library/Application Support/com.pigigaldi.pock",
+    "~/Library/Caches/com.pigigaldi.pock",
+    "~/Library/Containers/com.pigigaldi.pock.QLPockWidget",
+    "~/Library/Preferences/com.pigigaldi.pock.plist",
+  ]
 end

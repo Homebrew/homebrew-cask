@@ -1,22 +1,22 @@
-cask 'logitech-presentation' do
-  version '1.52.95'
-  sha256 '1d814eab908bb541e48f90fcd1af320e9ccc2aa98091e71b7c39e43642a80ac6'
+cask "logitech-presentation" do
+  version "1.62.2"
+  sha256 "ca08be8c52cd40251c4a39bf2536b962aabb26ba7df26729cfc44c3abcacf9cd"
 
-  # download01.logi.com/web/ftp/pub/techsupport/presentation was verified as official when first introduced to the cask
-  url "https://download01.logi.com/web/ftp/pub/techsupport/presentation/LogiPresentation_#{version.major_minor_patch}.dmg"
-  name 'Logitech Presentation'
-  homepage 'https://support.logitech.com/en_au/product/spotlight-presentation-remote'
+  url "https://download01.logi.com/web/ftp/pub/techsupport/presentation/LogiPresentation_#{version.major_minor_patch}.dmg",
+      verified: "download01.logi.com/web/ftp/pub/techsupport/presentation/"
+  name "Logitech Presentation"
+  homepage "https://support.logitech.com/en_au/product/spotlight-presentation-remote"
 
   auto_updates true
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  installer manual: 'LogiPresentation Installer.app'
+  installer manual: "LogiPresentation Installer.app"
 
-  uninstall delete:     '/Applications/Logitech Presentation',
-            login_item: 'LogiPresentation',
+  uninstall delete:     "/Applications/Logitech Presentation",
+            login_item: "LogiPresentation",
             signal:     [
-                          ['KILL', 'LogiPresentation'],
-                        ]
+              ["KILL", "LogiPresentation"],
+            ]
 
-  zap trash: '/Library/Application Support/Logitech.localized/Logitech Presentation.localiz'
+  zap trash: "/Library/Application Support/Logitech.localized/Logitech Presentation.localiz"
 end

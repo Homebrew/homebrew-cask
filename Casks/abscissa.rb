@@ -1,11 +1,17 @@
-cask 'abscissa' do
-  version '3.4.6'
-  sha256 '319c6871e4f42eaf6b1925aff66859024241d5c11a542badeb6993d287da3da2'
+cask "abscissa" do
+  version "4.0.5"
+  sha256 "27ba34c800000871f3b4ce24feb92c85c9e11fa0a7799d4b1a76bb9a4fddfdc5"
 
   url "http://rbruehl.macbay.de/Abscissa/Downloads/Abscissa-#{version}.zip"
-  appcast 'http://rbruehl.macbay.de/Abscissa/Downloads/'
-  name 'Abscissa'
-  homepage 'http://rbruehl.macbay.de/Abscissa/'
+  name "Abscissa"
+  desc "Plotting software"
+  homepage "http://rbruehl.macbay.de/Abscissa/"
 
-  app "Abscissa-#{version}/Abscissa.app"
+  livecheck do
+    url "http://rbruehl.macbay.de/Abscissa/Downloads/"
+    strategy :page_match
+    regex(/href=.*?Abscissa-(\d+(?:\.\d+)*)\.zip/i)
+  end
+
+  app "Abscissa.app"
 end

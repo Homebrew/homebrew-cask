@@ -1,13 +1,21 @@
-cask '4k-stogram' do
-  version '2.7.2.1795'
-  sha256 '3e3f7cd3776948d6e5ff4367b6965e5e5244cf281a5ec572137c637fd8d0106e'
+cask "4k-stogram" do
+  version "3.4.3"
+  sha256 "b4fcb635569430ad74e1f57770ecff3b6661ea082d71816c54d4de5dbfe8ecf5"
 
-  url "https://dl.4kdownload.com/app/4kstogram_#{version.major_minor_patch}.dmg"
-  appcast 'https://www.4kdownload.com/download'
-  name '4K Stogram'
-  homepage 'https://www.4kdownload.com/products/product-stogram'
+  url "https://dl.4kdownload.com/app/4kstogram_#{version}.dmg"
+  name "4K Stogram"
+  desc "Download Instagram photos, accounts, hashtags and locations"
+  homepage "https://www.4kdownload.com/products/product-stogram"
 
-  app '4K Stogram.app'
+  livecheck do
+    url "https://www.4kdownload.com/downloads"
+    regex(%r{href=.*?/4kstogram[._-]?v?(\d+(?:\.\d+)+)\.dmg}i)
+  end
 
-  zap trash: '~/Pictures/4K Stogram'
+  auto_updates true
+  depends_on macos: ">= :high_sierra"
+
+  app "4K Stogram.app"
+
+  zap trash: "~/Pictures/4K Stogram"
 end

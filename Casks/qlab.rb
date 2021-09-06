@@ -1,13 +1,17 @@
-cask 'qlab' do
-  version '4.4.5'
-  sha256 'eab8f96f0e95c46f61555fa76e332cf35952c5f4959aad86552a28c671985410'
+cask "qlab" do
+  version "4.6.10,4610"
+  sha256 "659da450d83e1f30d9515190c873ec95b95bf9a2e231e8bda2566819d32c176e"
 
-  url "https://figure53.com/qlab/downloads/QLab-#{version}.zip"
-  appcast "https://figure53.com/qlab/downloads/appcast-v#{version.major}/"
-  name 'QLab'
-  homepage 'https://figure53.com/qlab/'
+  url "https://qlab.app/downloads/archive/QLab-#{version.before_comma}.zip"
+  name "QLab"
+  homepage "https://qlab.app/"
+
+  livecheck do
+    url "https://qlab.app/appcast/v#{version.major}/"
+    strategy :sparkle
+  end
 
   auto_updates true
 
-  app 'QLab.app'
+  app "QLab.app"
 end

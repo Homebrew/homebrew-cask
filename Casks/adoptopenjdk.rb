@@ -1,21 +1,34 @@
-cask 'adoptopenjdk' do
-  version '12.0.1,12'
-  sha256 'dcb2ab681247298eda018df24166ba01674127083fb02892acf087e6181d8c56'
+cask "adoptopenjdk" do
+  version "16.0.1,9"
+  sha256 "7308a15d054d07d504f616416b3622d153c3cc63906441a5730ca1f9d4a43854"
 
-  # github.com/AdoptOpenJDK was verified as official when first introduced to the cask
-  url "https://github.com/AdoptOpenJDK/openjdk#{version.major}-binaries/releases/download/jdk-#{version.before_comma}%2B#{version.after_comma}/OpenJDK#{version.major}U-jdk_x64_mac_hotspot_#{version.before_comma}_#{version.after_comma}.tar.gz"
-  appcast "https://github.com/adoptopenjdk/openjdk#{version.major}-binaries/releases.atom"
-  name 'AdoptOpenJDK Java Development Kit'
-  homepage 'https://adoptopenjdk.net/'
+  url "https://github.com/AdoptOpenJDK/openjdk#{version.major}-binaries/releases/download/jdk-#{version.before_comma}%2B#{version.after_comma}/OpenJDK#{version.major}U-jdk_x64_mac_hotspot_#{version.before_comma}_#{version.after_comma.major}.pkg",
+      verified: "github.com/AdoptOpenJDK/"
+  name "AdoptOpenJDK Java Development Kit"
+  desc "JDK from the Java User Group (JUG)"
+  homepage "https://adoptopenjdk.net/"
 
-  artifact "jdk-#{version.before_comma}+#{version.after_comma}", target: "/Library/Java/JavaVirtualMachines/adoptopenjdk-#{version.before_comma}.jdk"
+  livecheck do
+    url :url
+    strategy :git do |tags|
+      tags.map do |tag|
+        match = tag.match(/^jdk-(\d+(?:\.\d+)*)\+(\d+(?:\.\d+)*)$/i)
+        "#{match[1]},#{match[2]}" if match
+      end.compact
+    end
+  end
 
-  uninstall rmdir: '/Library/Java/JavaVirtualMachines'
+  pkg "OpenJDK#{version.major}U-jdk_x64_mac_hotspot_#{version.before_comma}_#{version.after_comma.major}.pkg"
 
-  caveats <<~EOS
-    More versions are available in the AdoptOpenJDK tap:
-      #{Formatter.url('https://github.com/AdoptOpenJDK/homebrew-openjdk')}
+  uninstall pkgutil: "net.adoptopenjdk.#{version.major}.jdk"
 
-      brew tap adoptopenjdk/openjdk
-  EOS
+  caveats do
+    discontinued
+
+    <<~EOS
+      Temurin is the official successor to this software:
+
+        brew install --cask temurin
+    EOS
+  end
 end

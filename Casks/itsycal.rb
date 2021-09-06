@@ -1,31 +1,29 @@
-cask 'itsycal' do
-  if MacOS.version <= :mavericks
-    version '0.8.15'
-    sha256 '6470719a1f702c807f98a992880def5f499858231bf35924eaf3e0d5df48b436'
-
-    # itsycal.s3.amazonaws.com was verified as official when first introduced to the cask
-    url "https://itsycal.s3.amazonaws.com/Itsycal-#{version}.zip"
-  elsif MacOS.version <= :el_capitan
-    version '0.10.16'
-    sha256 'dbf1b104c7a3a2ca3ead9879145cb0557955c29d53f35a92b42f48e68122957c'
-
-    # itsycal.s3.amazonaws.com was verified as official when first introduced to the cask
-    url "https://itsycal.s3.amazonaws.com/Itsycal-#{version}.zip"
+cask "itsycal" do
+  if MacOS.version <= :el_capitan
+    version "0.10.16"
+    sha256 "dbf1b104c7a3a2ca3ead9879145cb0557955c29d53f35a92b42f48e68122957c"
+  elsif MacOS.version <= :high_sierra
+    version "0.11.17"
+    sha256 "fda1ba5611deaf4d5b834118b3af37ea9c5d08d1f8c813d04e7dd0552a270e11"
   else
-    version '0.11.15'
-    sha256 'be9d2887b74af5b82bd5a4d98c8edcd8f77b580eb4cbe62e3534609ec1fc6ac7'
-
-    # itsycal.s3.amazonaws.com was verified as official when first introduced to the cask
-    url "https://itsycal.s3.amazonaws.com/Itsycal-#{version}.zip"
-    appcast 'https://itsycal.s3.amazonaws.com/itsycal.xml'
+    version "0.13.1,2150"
+    sha256 "3c87506496c2f02256112939893bd703686f2efb3c81e34537507727c2792ec8"
   end
 
-  name 'Itsycal'
-  homepage 'https://www.mowglii.com/itsycal/'
+  url "https://itsycal.s3.amazonaws.com/Itsycal-#{version.before_comma}.zip",
+      verified: "itsycal.s3.amazonaws.com/"
+  name "Itsycal"
+  desc "Menu bar calendar"
+  homepage "https://www.mowglii.com/itsycal/"
 
-  app 'Itsycal.app'
+  livecheck do
+    url "https://itsycal.s3.amazonaws.com/itsycal.xml"
+    strategy :sparkle
+  end
 
-  uninstall login_item: 'Itsycal'
+  auto_updates true
 
-  zap trash: '~/Library/Preferences/com.mowglii.ItsycalApp.plist'
+  app "Itsycal.app"
+
+  zap trash: "~/Library/Preferences/com.mowglii.ItsycalApp.plist"
 end

@@ -1,14 +1,13 @@
-cask 'virtualhostx' do
-  version '8.7.11,80_60'
-  sha256 '25df909a6d89259f490f4c8c70e1b175a4c713301f1c20285088207623600e46'
+cask "virtualhostx" do
+  version "2020.10,1016"
+  sha256 "45e6cec09c0de78c9f9970798f47fd569cfb4f325e411d8c73e34cd808c47b73"
 
-  # downloads-clickonideas.netdna-ssl.com/virtualhostx was verified as official when first introduced to the cask
-  url "https://downloads-clickonideas.netdna-ssl.com/virtualhostx/virtualhostx#{version.after_comma}.zip"
-  appcast 'https://shine.clickontyler.com/appcast.php?id=38'
-  name 'VirtualHostX'
-  homepage 'https://clickontyler.com/virtualhostx/'
+  url "https://download.clickontyler.com/virtualhostx/virtualhostxpro_#{version.after_comma}.zip"
+  appcast "https://shine.clickontyler.com/appcast.php?id=45"
+  name "VirtualHostX"
+  homepage "https://clickontyler.com/virtualhostx/"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'VirtualHostX.app'
+  app "VirtualHostX.app"
 end

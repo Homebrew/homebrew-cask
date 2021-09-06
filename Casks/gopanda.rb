@@ -1,10 +1,16 @@
-cask 'gopanda' do
-  version :latest
+cask "gopanda" do
+  version "2.7.8"
   sha256 :no_check
 
-  url 'https://pandanet-igs.com/gopanda2/installer/stable/osx-32/gopanda2-osx-32.zip'
-  name 'GoPanda'
-  homepage 'https://pandanet-igs.com/communities/gopanda2'
+  url "https://pandanet-igs.com/gopanda#{version.major}/download/GoPanda#{version.major}.dmg"
+  name "GoPanda"
+  desc "Pandanet client"
+  homepage "https://pandanet-igs.com/communities/gopanda2"
 
-  app 'GoPanda2.app'
+  livecheck do
+    url "https://pandanet-igs.com/gopanda#{version.major}/download/latest-mac.yml"
+    strategy :electron_builder
+  end
+
+  app "GoPanda#{version.major}.app"
 end

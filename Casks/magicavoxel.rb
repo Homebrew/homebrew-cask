@@ -1,17 +1,23 @@
-cask 'magicavoxel' do
-  version '0.99.4'
-  sha256 'f42b1ffe2dff0d8aadb806c8359e3cbd53f723a23adcefc5042ce8f8702b4935'
+cask "magicavoxel" do
+  version "0.99.6.2"
+  sha256 "4ee661e41da07f8c2b2b1c916bd1e18f7c5229900f30467eeea73ad74e861226"
 
-  # github.com/ephtracy/ephtracy.github.io was verified as official when first introduced to the cask
-  url "https://github.com/ephtracy/ephtracy.github.io/releases/download/#{version}/MagicaVoxel-#{version}-alpha-macos.zip"
-  appcast 'https://github.com/ephtracy/ephtracy.github.io/releases.atom'
-  name 'MagicaVoxel'
-  homepage 'https://ephtracy.github.io/'
+  url "https://github.com/ephtracy/ephtracy.github.io/releases/download/#{version.major_minor_patch}/MagicaVoxel-#{version}-macos-10.15.zip",
+      verified: "github.com/ephtracy/ephtracy.github.io/"
+  name "MagicaVoxel"
+  desc "8-bit 3D voxel editor and interactive path tracing renderer"
+  homepage "https://ephtracy.github.io/"
 
-  suite staged_path, target: 'MagicaVoxel'
+  livecheck do
+    url "https://github.com/ephtracy/ephtracy.github.io/releases"
+    strategy :page_match
+    regex(/MagicaVoxel-(\d+(?:\.\d+)*)-macos/i)
+  end
+
+  suite staged_path, target: "MagicaVoxel"
 
   zap trash: [
-               '~/Library/Preferences/EPH.MagicaVoxel.plist',
-               '~/Library/Saved Application State/EPH.MagicaVoxel.savedState',
-             ]
+    "~/Library/Preferences/EPH.MagicaVoxel.plist",
+    "~/Library/Saved Application State/EPH.MagicaVoxel.savedState",
+  ]
 end

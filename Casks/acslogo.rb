@@ -1,11 +1,19 @@
-cask 'acslogo' do
-  version '1.5.1'
-  sha256 'fcdab9679a9cc783d4b7912d611442faa1fe1293497c4cb649f6808a58d27082'
+cask "acslogo" do
+  version "1.6.0.2"
+  sha256 "eb19b91e6320977214da1bcf1bc21bdf33d403bef45f7dbc76f57abc5337cc76"
 
-  url "https://www.alancsmith.co.uk/logo/ACSLogo#{version.no_dots}.dmg"
-  appcast 'https://www.alancsmith.co.uk/logo/release.html'
-  name 'ACSLogo'
-  homepage 'https://www.alancsmith.co.uk/logo/'
+  url "https://www.alancsmith.co.uk/logo/ACSLogo#{version.no_dots}.dmg",
+      user_agent: :fake
+  name "ACSLogo"
+  desc "Logo interpreter"
+  homepage "https://www.alancsmith.co.uk/logo/"
 
-  app 'ACSLogo/ACSLogo.app'
+  livecheck do
+    url "https://www.alancsmith.co.uk/logo/release.html"
+    regex(/Release\s*(\d+(?:\.\d+)*)/i)
+  end
+
+  app "ACSLogo/ACSLogo.app"
+
+  zap trash: "~/Library/Preferences/com.acsmith.acslogo.plist"
 end

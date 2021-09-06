@@ -1,13 +1,18 @@
-cask 'mudlet' do
-  version '3.22.1'
-  sha256 'cbd189c5c2612c96499ba076d5d75ea712807a562d3c5ff64e40fcda91c2fb6e'
+cask "mudlet" do
+  version "4.12.0"
+  sha256 "079cc52457fdeeba273985e94f6cb9e2a4e4a4f8746acb3f92ddb9658c8b8b89"
 
-  url "https://www.mudlet.org/download/Mudlet-#{version}.dmg"
-  appcast 'https://github.com/Mudlet/Mudlet/releases.atom'
-  name 'Mudlet'
-  homepage 'https://www.mudlet.org/'
+  url "https://www.mudlet.org/wp-content/files/Mudlet-#{version}.dmg"
+  name "Mudlet"
+  desc "Multi-User Dungeon client"
+  homepage "https://www.mudlet.org/"
 
-  depends_on macos: '>= :sierra'
+  livecheck do
+    url "https://github.com/Mudlet/Mudlet"
+    strategy :git
+  end
 
-  app 'Mudlet.app'
+  depends_on macos: ">= :high_sierra"
+
+  app "Mudlet.app"
 end

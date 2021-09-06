@@ -1,13 +1,18 @@
-cask 'pagico' do
-  version '8.18.2405'
-  sha256 'c21443cd5b27bf995d7054551eef3fc1ae74a4626e223434c7488d0dd576805a'
+cask "pagico" do
+  version "9.10,20210723"
+  sha256 "37c386532198f02480d1f71ee1d7c01d5ca28cdde5906bec12f6fd473a8d8ac1"
 
-  url "https://www.pagico.com/downloads/Pagico_macOS_r#{version.patch}.dmg"
-  appcast 'https://www.pagico.com/api/pagico8.mac.xml'
-  name 'Pagico'
-  homepage 'https://www.pagico.com/'
+  url "https://www.pagico.com/downloads/Pagico_macOS_r#{version.after_comma}.dmg"
+  name "Pagico"
+  desc "Manage all your tasks, files, and notes"
+  homepage "https://www.pagico.com/"
 
-  depends_on macos: '>= :sierra'
+  livecheck do
+    url "https://www.pagico.com/api/pagico#{version.major}.mac.xml"
+    strategy :sparkle
+  end
 
-  app 'Pagico.app'
+  depends_on macos: ">= :sierra"
+
+  app "Pagico.app"
 end

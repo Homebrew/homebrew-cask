@@ -1,19 +1,21 @@
-cask 'qdslrdashboard' do
-  version '3.5.7'
+cask "qdslrdashboard" do
+  version "3.6.4"
+  sha256 "29df5858f8d3c5d8e8e6ab6b220f52a391fabd619f0d444094b07e9c36fd81f2"
 
-  if MacOS.version <= :mavericks
-    sha256 '1d643430dc7aa7f25254846eef43e35ee15d2f365526058665c145269042affe'
-    # files.lrtimelapse.com/dslrdashboard was verified as official when first introduced to the cask
-    url "http://files.lrtimelapse.com/dslrdashboard/V#{version}/qDslrDashboard_V#{version}_macOS_preMojave.dmg"
-  else
-    sha256 'fef8e9835470e866cae736385458fa66e0d187143a57a6cd85d60c03f1fd6b64'
-    # files.lrtimelapse.com/dslrdashboard was verified as official when first introduced to the cask
-    url "http://files.lrtimelapse.com/dslrdashboard/V#{version}/qDslrDashboard_V#{version}_macOS_mojave.dmg"
+  url "https://files.lrtimelapse.com/dslrdashboard/V#{version}/qDslrDashboard_V#{version}_macOS_x64.dmg",
+      verified: "files.lrtimelapse.com/dslrdashboard/"
+  name "qDslrDashboard"
+  desc "Application for controlling Nikon, Canon and Sony cameras"
+  homepage "https://dslrdashboard.info/"
+
+  livecheck do
+    url "https://dslrdashboard.info/downloads/"
+    strategy :page_match do |page|
+      page[%r{href=.*?/qdslrdashboard[._-]v?(\d+(?:-\d+)*)[._-]macos}i, 1].tr("-", ".")
+    end
   end
 
-  appcast 'https://dslrdashboard.info/downloads/'
-  name 'qDslrDashboard'
-  homepage 'https://dslrdashboard.info/'
+  depends_on macos: ">= :mojave"
 
-  app 'qDslrDashboard.app'
+  app "qDslrDashboard.app"
 end

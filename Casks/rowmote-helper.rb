@@ -1,13 +1,18 @@
-cask 'rowmote-helper' do
-  version '4.1.9'
-  sha256 '2929277d4d394a8a40f311d0974a7da559911c2a727e3655aa0c5fa1a9af5390'
+cask "rowmote-helper" do
+  version "4.2.4"
+  sha256 "552cdb8acd46758caa1944b46e5d3f2b53f4cbf1da70b195fc35a18804370cfd"
 
   url "https://regularrateandrhythm.com/rowmote-pro/rh/rowmote-helper-#{version}.zip"
-  appcast 'https://www.regularrateandrhythm.com/apps/rowmote-pro/rowmote-appcast.xml'
-  name 'Rowmote Helper'
-  homepage 'https://regularrateandrhythm.com/apps/rowmote-pro/'
+  name "Rowmote Helper"
+  desc "Control system with Rowmote Pro remote control"
+  homepage "https://regularrateandrhythm.com/apps/rowmote-pro/"
+
+  livecheck do
+    url :homepage
+    regex(/Rowmote\s+Helper\s+v?(\d+(?:\.\d+)+)/i)
+  end
 
   auto_updates true
 
-  app 'Rowmote Helper.app'
+  app "Rowmote Helper.app"
 end

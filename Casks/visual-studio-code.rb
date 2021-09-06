@@ -1,27 +1,39 @@
-cask 'visual-studio-code' do
-  version '1.36.1,2213894ea0415ee8c85c5eea0d0ff81ecc191529'
-  sha256 '120fb1914aac50dd0a1d5221d34e966eefed4c58b12b2d845f60732dcea8ff76'
+cask "visual-studio-code" do
+  version "1.60.0"
 
-  # az764295.vo.msecnd.net/stable was verified as official when first introduced to the cask
-  url "https://az764295.vo.msecnd.net/stable/#{version.after_comma}/VSCode-darwin-stable.zip"
-  appcast 'https://vscode-update.azurewebsites.net/api/update/darwin/stable/VERSION'
-  name 'Microsoft Visual Studio Code'
-  name 'VS Code'
-  homepage 'https://code.visualstudio.com/'
+  if Hardware::CPU.intel?
+    sha256 "eb9ff84e3aee5c188ac5e619dffcd3555adda10254e92ec149952e4a2f7367a0"
+    url "https://update.code.visualstudio.com/#{version}/darwin/stable"
+  else
+    sha256 "31fab29c6b67e76cfe987180cee55ccafb7a2a47cf2039b8f522fbb898767a62"
+    url "https://update.code.visualstudio.com/#{version}/darwin-arm64/stable"
+  end
+
+  name "Microsoft Visual Studio Code"
+  name "VS Code"
+  desc "Open-source code editor"
+  homepage "https://code.visualstudio.com/"
+
+  livecheck do
+    url "https://update.code.visualstudio.com/api/update/darwin-universal/stable/VERSION"
+    strategy :page_match
+    regex(/"productVersion"\s*:\s*"(\d+(:?\.\d+)*)"/)
+  end
 
   auto_updates true
 
-  app 'Visual Studio Code.app'
+  app "Visual Studio Code.app"
   binary "#{appdir}/Visual Studio Code.app/Contents/Resources/app/bin/code"
 
   zap trash: [
-               '~/Library/Application Support/Code',
-               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.vscode.sfl*',
-               '~/Library/Caches/com.microsoft.VSCode',
-               '~/Library/Caches/com.microsoft.VSCode.ShipIt',
-               '~/Library/Preferences/com.microsoft.VSCode.helper.plist',
-               '~/Library/Preferences/com.microsoft.VSCode.plist',
-               '~/Library/Saved Application State/com.microsoft.VSCode.savedState',
-               '~/.vscode',
-             ]
+    "~/Library/Application Support/Code",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.vscode.sfl*",
+    "~/Library/Caches/com.microsoft.VSCode",
+    "~/Library/Caches/com.microsoft.VSCode.ShipIt",
+    "~/Library/Preferences/ByHost/com.microsoft.VSCode.ShipIt.*.plist",
+    "~/Library/Preferences/com.microsoft.VSCode.helper.plist",
+    "~/Library/Preferences/com.microsoft.VSCode.plist",
+    "~/Library/Saved Application State/com.microsoft.VSCode.savedState",
+    "~/.vscode",
+  ]
 end

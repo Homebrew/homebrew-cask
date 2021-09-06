@@ -1,13 +1,18 @@
-cask 'isubtitle' do
-  version '3.2.2'
-  sha256 '7b00f0b0c8994968e1749139b0e47a78a1db2585e18038365af0d198bbdd6506'
+cask "isubtitle" do
+  version "3.4.5,48"
+  sha256 "6272f96c31ed4fb1118e0c95333afce7fffab063d57a861a36b3f56d811442b1"
 
-  url "https://www.bitfield.se/isubtitle#{version.major}/download/iSubtitle_#{version}.zip"
-  appcast "https://www.bitfield.se/isubtitle#{version.major}/changelog.xml"
-  name 'iSubtitle'
-  homepage 'https://www.bitfield.se/isubtitle/'
+  url "https://www.bitfield.se/isubtitle#{version.major}/download/iSubtitle_#{version.before_comma}.zip"
+  name "iSubtitle"
+  desc "Inject subtitle tracks, chapter markers and metadata into your media"
+  homepage "https://www.bitfield.se/isubtitle/"
 
-  depends_on macos: '>= :sierra'
+  livecheck do
+    url "https://www.bitfield.se/isubtitle#{version.major}/changelog.xml"
+    strategy :sparkle
+  end
 
-  app 'iSubtitle.app'
+  depends_on macos: ">= :sierra"
+
+  app "iSubtitle.app"
 end

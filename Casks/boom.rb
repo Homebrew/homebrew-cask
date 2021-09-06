@@ -1,29 +1,31 @@
-cask 'boom' do
-  version '1.6.8,1553238536'
-  sha256 'cc683afd2518210181d4994c9be0ada0e4d1dded0c4865dcfb3fdafea8849d82'
+cask "boom" do
+  version "1.7.0,101.7.0216"
+  sha256 :no_check
 
-  # devmate.com/com.globaldelight.Boom2 was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.globaldelight.Boom2/#{version.before_comma}/#{version.after_comma}/Boom2-#{version.before_comma}.dmg"
-  appcast 'https://updates.devmate.com/com.globaldelight.Boom2.xml'
-  name 'Boom'
-  homepage 'https://www.globaldelight.com/boom'
+  url "https://d13nae1tw8tdnq.cloudfront.net/Boom2mac/webstore/Boom2.dmg",
+      verified: "d13nae1tw8tdnq.cloudfront.net/Boom2mac/"
+  name "Boom"
+  desc "Transforms audio input"
+  homepage "https://www.globaldelight.com/boom2/"
 
-  depends_on macos: '>= :yosemite'
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
-  app 'Boom 2.app'
+  depends_on macos: ">= :yosemite"
 
-  uninstall kext:      'com.globaldelight.driver.Boom2Device',
-            launchctl: [
-                         'com.globaldelight.Boom2.*',
-                         'com.globaldelight.Boom2Daemon',
-                       ],
-            signal:    ['TERM', 'com.globaldelight.Boom2']
+  app "Boom 2.app"
+
+  uninstall kext:      "com.globaldelight.driver.Boom2Device",
+            launchctl: "com.globaldelight.Boom2Daemon",
+            signal:    ["TERM", "com.globaldelight.Boom2"]
 
   zap trash: [
-               '~/Library/Application Support/com.globaldelight.Boom2',
-               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.globaldelight.boom2.sfl*',
-               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.globaldelight.boom2daemon.sfl*',
-               '~/Library/Preferences/com.globaldelight.Boom2.plist',
-               '~/Library/Preferences/com.globaldelight.Boom2Daemon.plist',
-             ]
+    "~/Library/Application Support/com.globaldelight.Boom2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.globaldelight.boom2.sfl*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.globaldelight.boom2daemon.sfl*",
+    "~/Library/Preferences/com.globaldelight.Boom2.plist",
+    "~/Library/Preferences/com.globaldelight.Boom2Daemon.plist",
+  ]
 end

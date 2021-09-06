@@ -1,19 +1,29 @@
-cask 'eloston-chromium' do
-  version '75.0.3770.90-1'
-  sha256 'cb738a2e5c3228da15432d9b2fb1521773be1a4eb07c68bffc1d634e0120b192'
+cask "eloston-chromium" do
+  if Hardware::CPU.intel?
+    version "92.0.4515.159-1.1_x86-64"
+    sha256 "1ef1120e242a9ebd874ee06cd42c40c9d4160edbbd9f4d04c154b38849be4e31"
+  else
+    version "92.0.4515.159-1.1_arm64"
+    sha256 "2d19d4d4a01991e5ed7547d44530a8cfc4672a171dacd4c55513955c93d9c63f"
+  end
 
-  # github.com/kramred/ungoogled-chromium-binaries was verified as official when first introduced to the cask
-  url "https://github.com/kramred/ungoogled-chromium-binaries/releases/download/#{version}/ungoogled-chromium_#{version}.1_macos.dmg"
-  appcast 'https://ungoogled-software.github.io/ungoogled-chromium-binaries/releases/macos/'
-  name 'Ungoogled Chromium'
-  homepage 'https://ungoogled-software.github.io/ungoogled-chromium-binaries/'
+  url "https://github.com/kramred/ungoogled-chromium-macos/releases/download/#{version}/ungoogled-chromium_#{version}-macos.dmg",
+      verified: "github.com/kramred/ungoogled-chromium-macos/"
+  name "Ungoogled Chromium"
+  desc "Google Chromium, sans integration with Google"
+  homepage "https://ungoogled-software.github.io/ungoogled-chromium-binaries/"
 
-  app 'Chromium.app'
+  conflicts_with cask: [
+    "chromium",
+    "freesmug-chromium",
+  ]
+
+  app "Chromium.app"
 
   zap trash: [
-               '~/Library/Preferences/org.chromium.Chromium.plist',
-               '~/Library/Caches/Chromium',
-               '~/Library/Application Support/Chromium',
-               '~/Library/Saved Application State/org.chromium.Chromium.savedState',
-             ]
+    "~/Library/Application Support/Chromium",
+    "~/Library/Caches/Chromium",
+    "~/Library/Preferences/org.chromium.Chromium.plist",
+    "~/Library/Saved Application State/org.chromium.Chromium.savedState",
+  ]
 end

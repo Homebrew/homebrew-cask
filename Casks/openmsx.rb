@@ -1,12 +1,12 @@
-cask 'openmsx' do
-  version '0.15.0'
-  sha256 'ee429ff34ba85b79d15185f236fb89619f26441c140ca85885a97c925302abf4'
+cask "openmsx" do
+  version "17.0"
+  sha256 "e4628de0b547d3422c1e3ee77918e133528039b96836d70e7cd2f1c1c8131691"
 
-  # github.com/openMSX/openMSX was verified as official when first introduced to the cask
-  url "https://github.com/openMSX/openMSX/releases/download/RELEASE_#{version.dots_to_underscores}/openmsx-#{version}-mac-x86_64-bin.dmg"
-  appcast 'https://github.com/openMSX/openMSX/releases.atom'
-  name 'openMSX'
-  homepage 'https://openmsx.org/'
+  url "https://github.com/openMSX/openMSX/releases/download/RELEASE_#{version.dots_to_underscores}/openmsx-#{version}-mac-x86_64-bin.dmg",
+      verified: "github.com/openMSX/openMSX/"
+  name "openMSX"
+  desc "MSX emulator"
+  homepage "https://openmsx.org/"
 
-  app 'openMSX.app'
+  app "openMSX.app"
 end

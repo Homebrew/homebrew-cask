@@ -1,17 +1,16 @@
-cask 'macmediakeyforwarder' do
-  version '2.5'
-  sha256 '4fabc1cde4cb460f68c4801f310fb1f83f7db4b06055e9bac9c597d073c0ffd3'
+cask "macmediakeyforwarder" do
+  version "3.1"
+  sha256 "176e672e9aa61564f06124eb0b6aedbfb04fae10dd3595479e85fba25c9d724a"
 
-  url "http://milgra.com/downloads/mmkf/MacMediaKeyForwarder#{version}.zip"
-  appcast 'http://milgra.com/downloads/mmkf/'
-  name 'Mac Media Key Forwarder'
-  homepage 'http://milgra.com/mac-media-key-forwarder.html'
+  url "https://github.com/milgra/macmediakeyforwarder/releases/download/#{version}/MacMediaKeyForwarder#{version}.zip",
+      verified: "github.com/milgra/macmediakeyforwarder/"
+  name "Mac Media Key Forwarder"
+  desc "Media key forwarder for iTunes and Spotify"
+  homepage "http://milgra.com/"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'MacMediaKeyForwarder.app'
+  app "MacMediaKeyForwarder.app"
 
-  uninstall login_item: 'MacMediaKeyForwarder'
-
-  zap trash: '~/Library/Preferences/com.milgra.hsmke.plist'
+  zap trash: "~/Library/Preferences/com.milgra.hsmke.plist"
 end

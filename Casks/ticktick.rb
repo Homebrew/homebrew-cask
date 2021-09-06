@@ -1,12 +1,40 @@
-cask 'ticktick' do
-  version '3.1.00,101'
-  sha256 'f3ed66e9f0619fcbf49cf510cf5fe205a9cebcbb9b3d7c6784d237f2331253c6'
+cask "ticktick" do
+  version "4.0.05,188"
+  sha256 "08712f7f791ec67c99db840fdf5d52d868abbea1a52debebbff8e2aa3cd31bdb"
 
-  # appest-public.s3.amazonaws.com was verified as official when first introduced to the cask
-  url "https://appest-public.s3.amazonaws.com/download/mac/TickTick_#{version.before_comma}_#{version.after_comma}.dmg"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.ticktick.com/static/getApp/download?type=mac'
-  name 'TickTick'
-  homepage 'https://www.ticktick.com/home'
+  url "https://appest-public.s3.amazonaws.com/download/mac/TickTick_#{version.before_comma}_#{version.after_comma}.dmg",
+      verified: "appest-public.s3.amazonaws.com/"
+  name "TickTick"
+  desc "To-do & task list manager"
+  homepage "https://www.ticktick.com/home"
 
-  app 'TickTick.app'
+  livecheck do
+    url "https://www.ticktick.com/static/getApp/download?type=mac"
+    strategy :header_match do |headers|
+      match = headers["location"].match(/TickTick[._-]v?(\d+(?:\.\d+)+)[_-](\d+)\.dmg/i)
+      "#{match[1]},#{match[2]}"
+    end
+  end
+
+  auto_updates true
+  depends_on macos: ">= :sierra"
+
+  app "TickTick.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.TickTick.task.mac.MainWidget",
+    "~/Library/Application Scripts/com.TickTick.task.mac.TickTick-Safari-Extension",
+    "~/Library/Application Scripts/com.TickTick.task.mac.TickTick-Today-Widget",
+    "~/Library/Application Scripts/com.TickTick.task.mac.TickTick-WidgetConfiguration-Extension",
+    "~/Library/Application Support/com.TickTick.task.mac",
+    "~/Library/Caches/TickTick",
+    "~/Library/Caches/com.TickTick.task.mac",
+    "~/Library/Containers/com.TickTick.task.mac.MainWidget",
+    "~/Library/Containers/com.TickTick.task.mac.TickTick-Safari-Extension",
+    "~/Library/Containers/com.TickTick.task.mac.TickTick-Today-Widget",
+    "~/Library/Containers/com.TickTick.task.mac.TickTick-WidgetConfiguration-Extension",
+    "~/Library/Group Containers/75TY9UT8AY.com.TickTick.task.mac",
+    "~/Library/Preferences/com.TickTick.task.mac.plist",
+    "~/Library/Saved Application State/com.TickTick.task.mac.savedState",
+  ]
 end

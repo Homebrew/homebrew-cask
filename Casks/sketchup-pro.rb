@@ -1,75 +1,73 @@
-cask 'sketchup-pro' do
-  version '19.1.173,2019'
+cask "sketchup-pro" do
+  version "21.0.392,2021.0.1"
 
-  language 'de' do
-    sha256 'a420125b8257a0a72ff4575ebef6e37702fcc16867bba2b7232d767a13d4ad6a'
-    'de'
+  language "de" do
+    sha256 "4306b1835bd627165982b51a88e378331c42a3bb39aa1a7df66a88f69c014d29"
+    "de"
   end
-
-  language 'en', default: true do
-    sha256 'd1758f633db3b74b644ee73eb0eded8128975ac23732740dfc6388a817660146'
-    'en'
+  language "en", default: true do
+    sha256 "4306b1835bd627165982b51a88e378331c42a3bb39aa1a7df66a88f69c014d29"
+    "en"
   end
-
-  language 'es' do
-    sha256 '89a00fefb041ebef346d16f9ab4ac3842857e6cb12c2ef65c47ce1bd02a7023b'
-    'es'
+  language "es" do
+    sha256 "4306b1835bd627165982b51a88e378331c42a3bb39aa1a7df66a88f69c014d29"
+    "es"
   end
-
-  language 'fr' do
-    sha256 '7c3674855fcfc1d6ca4760cdbf1861c6af40c4ab40ed8dce0909d72c29ec8e7b'
-    'fr'
+  language "fr" do
+    sha256 "4306b1835bd627165982b51a88e378331c42a3bb39aa1a7df66a88f69c014d29"
+    "fr"
   end
-
-  language 'it' do
-    sha256 '103fcd9b85e627226fe9cef39ccfa45b55cec7d4dfccf3e26dc17da7412f4d13'
-    'it'
+  language "it" do
+    sha256 "4306b1835bd627165982b51a88e378331c42a3bb39aa1a7df66a88f69c014d29"
+    "it"
   end
-
-  language 'ja' do
-    sha256 'b18b3eef80cf46a24bd43eb69758788a3d2c2ea73a1ca7a55ce84021480a06aa'
-    'ja'
+  language "ja" do
+    sha256 "4306b1835bd627165982b51a88e378331c42a3bb39aa1a7df66a88f69c014d29"
+    "ja"
   end
-
-  language 'ko' do
-    sha256 '2a6d9df6f694b4d2c275e99847d604b9a32d90cde7f98d0427f845679e5c1b78'
-    'ko'
+  language "ko" do
+    sha256 "4306b1835bd627165982b51a88e378331c42a3bb39aa1a7df66a88f69c014d29"
+    "ko"
   end
-
-  language 'pt-BR' do
-    sha256 '8a14e4f163d220f037d2032acbf602e6843fd9bbf98b392c18f1d44b30e5fe53'
-    'pt-BR'
+  language "pt-BR" do
+    sha256 "4306b1835bd627165982b51a88e378331c42a3bb39aa1a7df66a88f69c014d29"
+    "pt-BR"
   end
-
-  language 'ru' do
-    sha256 'da14fb9344909a70dc51f9caaa96e6cbbb3268108546fc29c84a877e20d5d3ce'
-    'ru'
+  language "ru" do
+    sha256 "4306b1835bd627165982b51a88e378331c42a3bb39aa1a7df66a88f69c014d29"
+    "ru"
   end
-
-  language 'sv' do
-    sha256 'd447b5ce0ac27529882ec2a90417fb632e26d5ee582bfb819d3af165d0fe82cb'
-    'sv'
+  language "sv" do
+    sha256 "4306b1835bd627165982b51a88e378331c42a3bb39aa1a7df66a88f69c014d29"
+    "sv"
   end
-
-  language 'zh-CN' do
-    sha256 '1e7413399a284612a43c206fa671281ee9c5e2c09835f8082ed5c601f48f56ce'
-    'zh-CN'
+  language "zh-CN" do
+    sha256 "4306b1835bd627165982b51a88e378331c42a3bb39aa1a7df66a88f69c014d29"
+    "zh-CN"
   end
-
-  language 'zh-TW' do
-    sha256 'a3700e4d4474d637a29aff19a5dd3b70126591ad043e5a75e59fa9d1f928a4a9'
-    'zh-TW'
+  language "zh-TW" do
+    sha256 "4306b1835bd627165982b51a88e378331c42a3bb39aa1a7df66a88f69c014d29"
+    "zh-TW"
   end
 
   # downloads can be found at https://sketchup.com/download/all
   url "https://www.sketchup.com/sketchup/SketchUpPro-#{language}-dmg"
-  name 'SketchUp'
-  homepage 'https://www.sketchup.com/'
+  appcast "https://help.sketchup.com/en/release-notes",
+          must_contain: version.after_comma.major_minor
+  name "SketchUp"
+  desc "3D visualization software"
+  homepage "https://www.sketchup.com/"
 
-  suite "SketchUp #{version.after_comma}"
+  suite "SketchUp #{version.after_comma.major}"
 
   zap trash: [
-               "~/Library/Application Support/SketchUp #{version.after_comma}",
-               "~/Library/Caches/com.sketchup.SketchUp.#{version.after_comma}",
-             ]
+    "~/Library/Application Support/SketchUp #{version.after_comma.major}",
+    "~/Library/Caches/com.sketchup.LayOut.#{version.after_comma.major}",
+    "~/Library/Caches/com.sketchup.SketchUp.#{version.after_comma.major}",
+    "~/Library/Caches/com.sketchup.StyleBuilder.#{version.after_comma.major}",
+    "~/Library/Preferences/com.sketchup.LayOut.#{version.after_comma.major}.plist",
+    "~/Library/Preferences/com.sketchup.SketchUp.#{version.after_comma.major}.plist",
+    "~/Library/Preferences/com.sketchup.StyleBuilder.#{version.after_comma.major}.plist",
+    "~/Library/Preferences/Trimble.SketchUp-Helper.plist",
+  ]
 end

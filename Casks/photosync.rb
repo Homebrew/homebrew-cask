@@ -1,11 +1,15 @@
-cask 'photosync' do
-  version '3.3.1'
-  sha256 '7c3238c45bb4ef46c5055f60b64394f8cbe78759b0bf1e18dd968dcf8c317392'
+cask "photosync" do
+  version "4.1,410"
+  sha256 "d1e08a18dd3ac4f464b29bf3a75105104f16276093cfa5a21ee021dfcb7e53ae"
 
-  url "https://www.photosync-app.com/tl_files/photosync/publish/mac/photosync_#{version.dots_to_underscores}.dmg"
-  appcast 'https://download.photosync-app.com/xml/photosyncmac-updates-standalone.xml'
-  name 'PhotoSync Companion'
-  homepage 'https://www.photosync-app.com/photosync/en/home.html'
+  url "https://download.photosync-app.com/mac/photosync_#{version.before_comma.dots_to_underscores}.zip"
+  name "PhotoSync Companion"
+  homepage "https://www.photosync-app.com/home.html"
 
-  app 'PhotoSync.app'
+  livecheck do
+    url "https://download.photosync-app.com/xml/photosyncmac-updates-standalone.xml"
+    strategy :sparkle
+  end
+
+  app "PhotoSync.app"
 end

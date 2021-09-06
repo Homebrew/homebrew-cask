@@ -1,13 +1,12 @@
-cask 'pixel-picker' do
-  version '1.3.6,3230770'
-  sha256 '526de5b1480c8b421c1ecf943a219c5273a3b7fe8322991cd291d98b164e8fc8'
+cask "pixel-picker" do
+  version "1.6.0"
+  sha256 "d31f9b9f3b5dda4827a215c20c4488c3151e4e14ada79dd744ad3097fe38beb9"
 
-  url "https://github.com/acheronfail/pixel-picker/files/#{version.after_comma}/Pixel.Picker.#{version.before_comma}.dmg.zip"
-  appcast 'https://github.com/acheronfail/pixel-picker/releases.atom'
-  name 'Pixel Picker'
-  homepage 'https://github.com/acheronfail/pixel-picker'
+  url "https://github.com/acheronfail/pixel-picker/releases/download/#{version}/Pixel.Picker.#{version}.dmg"
+  name "Pixel Picker"
+  homepage "https://github.com/acheronfail/pixel-picker"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'Pixel Picker.app'
+  app "Pixel Picker.app"
 end

@@ -1,11 +1,20 @@
-cask 'clover-configurator' do
-  version '5.4.5.0'
-  sha256 'd882be677980e38dcec3b96ebbad5411b3fbf9e27bd70da7d83a34a7edfa9693'
+cask "clover-configurator" do
+  version "5.18.3.0"
+  sha256 :no_check
 
-  url 'https://mackie100projects.altervista.org/apps/cloverconf/CCG/builds-data-ccg/CCG.zip'
-  appcast 'https://mackie100projects.altervista.org/apps/cloverconf/CCG/update-data-builds.xml'
-  name 'Clover Configurator'
-  homepage 'https://mackie100projects.altervista.org/'
+  url "https://mackie100projects.altervista.org/apps/cloverconf/download-new-build.php?version=global",
+      referer: "https://mackie100projects.altervista.org/"
+  appcast "https://mackie100projects.altervista.org/download-clover-configurator/"
+  name "Clover Configurator"
+  desc "Clover EFI bootloader configuration helper"
+  homepage "https://mackie100projects.altervista.org/clover-configurator/"
 
-  app 'Clover Configurator.app'
+  auto_updates true
+
+  app "Clover Configurator.app"
+
+  zap trash: [
+    "~/Library/Caches/org.altervista.mackie100projects.Clover-Configurator",
+    "~/Library/Preferences/org.altervista.mackie100projects.Clover-Configurator.plist",
+  ]
 end

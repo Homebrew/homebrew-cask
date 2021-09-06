@@ -1,16 +1,17 @@
-cask 'tysimulator' do
-  version '0.9.0'
-  sha256 '7f0802609ab0066ec7dea4a3bf1cb9e3da1dc482236d64ece159c0b1f8a91a1e'
+cask "tysimulator" do
+  version "0.10.0"
+  sha256 "9d441e0224878d79da4aff25dfc11f9b161518812bb03beed7c9de423c047b8a"
 
-  # github.com/ty0x2333/TySimulator was verified as official when first introduced to the cask
   url "https://github.com/ty0x2333/TySimulator/releases/download/#{version}/TySimulator.#{version}.dmg"
-  appcast 'https://github.com/ty0x2333/TySimulator/releases.atom'
-  name 'TySimulator'
-  homepage 'https://tysimulator.com/'
+  name "TySimulator"
+  desc "Utility for fast access to your iPhone Simulator apps"
+  homepage "https://github.com/ty0x2333/TySimulator"
 
-  app 'TySimulator.app'
+  depends_on macos: ">= :sierra"
 
-  uninstall quit: 'com.tianyiyan.TySimulator'
+  app "TySimulator.app"
 
-  zap trash: '~/Library/Preferences/com.tianyiyan.TySimulator.plist'
+  uninstall quit: "com.tianyiyan.TySimulator"
+
+  zap trash: "~/Library/Preferences/com.tianyiyan.TySimulator.plist"
 end

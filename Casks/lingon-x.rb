@@ -1,23 +1,30 @@
-cask 'lingon-x' do
+cask "lingon-x" do
   if MacOS.version <= :high_sierra
-    version '6.6.4'
-    sha256 'fc788402fa16df39a3d48cdc501dae31368ec6fd69ffe0026ba99932b28cae19'
+    version "6.6.5"
+    sha256 "b0231b1a98dcc8f5c4234b419c9f5331407b8cce29b33f0ea2e32b12595adfa8"
   else
-    version '7.3'
-    sha256 '7eff602f723735e51169c875ea84778fe79dcb5b01258ebdd44ec54ceeee2389'
+    version "8.3.1"
+    sha256 "cd51982434907ec0ab441caf652875a1989612813860783339083d9e83f8e072"
   end
 
   url "https://www.peterborgapps.com/downloads/LingonX#{version.major}.zip"
-  appcast "https://www.peterborgapps.com/updates/lingonx#{version.major}.plist"
-  name 'Lingon X'
-  homepage 'https://www.peterborgapps.com/lingon/'
+  name "Lingon X"
+  desc "Automator software to start apps, run scripts or commands and more"
+  homepage "https://www.peterborgapps.com/lingon/"
 
-  depends_on macos: '>= :high_sierra'
+  livecheck do
+    url "https://www.peterborgapps.com/updates/lingonx#{version.major}.plist"
+    strategy :page_match
+    regex(%r{<key>version</key>\s*\n\s*<string>(\d+(?:\.\d+)*)</string>}i)
+  end
 
-  app 'Lingon X.app'
+  depends_on macos: ">= :high_sierra"
+
+  app "Lingon X.app"
 
   zap trash: [
-               "~/Library/Application Scripts/com.peterborgapps.LingonX#{version.major}",
-               "~/Library/Containers/com.peterborgapps.LingonX#{version.major}",
-             ]
+    "~/Library/Application Scripts/com.peterborgapps.LingonX#{version.major}",
+    "~/Library/Application Support/Lingon X",
+    "~/Library/Containers/com.peterborgapps.LingonX#{version.major}",
+  ]
 end

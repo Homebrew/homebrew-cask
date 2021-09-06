@@ -1,16 +1,23 @@
-cask 'prefs-editor' do
-  version '1.2.4'
-  sha256 '50a9ae754f06390db1838553b2c276fa60fad84be800de195ca2c7a5fc3cd23b'
+cask "prefs-editor" do
+  version "1.3.0.3.0"
+  sha256 :no_check
 
-  url "https://files.tempel.org/Various/OSX_Prefs_Editor/PrefsEditor-#{version}_64bit.zip"
-  appcast 'https://apps.tempel.org/PrefsEditor/appcast.xml'
-  name 'Prefs Editor'
-  homepage 'https://apps.tempel.org/PrefsEditor/'
+  url "https://files.tempel.org/Various/OSX_Prefs_Editor/PrefsEditor.zip"
+  name "Prefs Editor"
+  desc "Graphical user interface for the 'defaults' command"
+  homepage "https://apps.tempel.org/PrefsEditor/"
 
-  app 'Prefs Editor.app'
+  livecheck do
+    url "https://apps.tempel.org/PrefsEditor/appcast.xml"
+    strategy :sparkle
+  end
+
+  auto_updates true
+
+  app "Prefs Editor.app"
 
   zap trash: [
-               '~/Library/Preferences/org.tempel.prefseditor.plist',
-               '~/Library/Saved Application State/org.tempel.prefseditor.savedState',
-             ]
+    "~/Library/Preferences/org.tempel.prefseditor.plist",
+    "~/Library/Saved Application State/org.tempel.prefseditor.savedState",
+  ]
 end

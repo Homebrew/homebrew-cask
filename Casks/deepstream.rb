@@ -1,16 +1,15 @@
-cask 'deepstream' do
-  version '3.1.5'
-  sha256 'a22cc87c6639b626d8dd390e9af6bb05d88fb6c61b0d67d607fb9ee7f3a3b0b2'
+cask "deepstream" do
+  version "5.2.4"
+  sha256 "8cb328f707f938092d4a597a6437e027341fd27699f41e282a09aee6a375af16"
 
-  # github.com/deepstreamIO/deepstream.io was verified as official when first introduced to the cask
-  url "https://github.com/deepstreamIO/deepstream.io/releases/download/v#{version}/deepstream.io-mac-#{version}.pkg"
-  appcast 'https://github.com/deepstreamIO/deepstream.io/releases.atom'
-  name 'deepstream'
-  homepage 'https://deepstreamhub.com/open-source/'
+  url "https://github.com/deepstreamIO/deepstream.io/releases/download/v#{version}/deepstream.io-mac-#{version}.pkg",
+      verified: "github.com/deepstreamIO/deepstream.io/"
+  name "deepstream"
+  homepage "https://deepstream.io/"
 
   pkg "deepstream.io-mac-#{version}.pkg"
 
-  uninstall pkgutil: 'deepstream.io'
+  uninstall pkgutil: "deepstream.io"
 
   caveats do
     files_in_usr_local

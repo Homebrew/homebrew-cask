@@ -1,17 +1,27 @@
-cask 'messenger' do
-  version '0.1.13.1491443794-7b1777b58fef0bf9'
-  sha256 '6b6f9888c9bf4e7d8fb2db547331cea7e9df99b85f914322af12a476c47bc984'
+cask "messenger" do
+  version "97.11.116,283083801"
+  sha256 "940ce82dfa220ecdbf4d3b6757a4dc48362bb4384030316f50e1fbf980926544"
 
-  url "https://fbmacmessenger.rsms.me/dist/Messenger-#{version}.zip"
-  appcast 'https://fbmacmessenger.rsms.me/changelog.xml'
-  name 'Messenger'
-  homepage 'https://fbmacmessenger.rsms.me/'
+  url "https://www.facebook.com/messenger/desktop/update/#{version.after_comma}.zip",
+      verified: "facebook.com/messenger/desktop/"
+  name "Facebook Messenger"
+  desc "Native desktop app for Messenger (formerly Facebook Messenger)"
+  homepage "https://www.messenger.com/desktop"
 
-  app 'Messenger.app'
+  livecheck do
+    url "https://www.facebook.com/messenger/desktop/update/latest-mac.yml"
+    strategy :electron_builder do |yml|
+      "#{yml["version"]},#{yml["path"][%r{/(\d+)\.zip}i, 1]}"
+    end
+  end
+
+  auto_updates true
+
+  app "Messenger.app"
 
   zap trash: [
-               '~/Library/Caches/me.rsms.fbmessenger',
-               '~/Library/Cookies/me.rsms.fbmessenger.binarycookies',
-               '~/Library/Preferences/me.rsms.fbmessenger.plist',
-             ]
+    "~/Library/Application Support/Messenger",
+    "~/Library/Caches/Messenger",
+    "~/Library/Logs/Messenger",
+  ]
 end

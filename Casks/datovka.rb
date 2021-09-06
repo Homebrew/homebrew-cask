@@ -1,12 +1,18 @@
-cask 'datovka' do
-  version '4.13.1'
-  sha256 '987b6be02b0565be2bc7b133be1cc96af33fec6a6e7a082a3688d2272f9fab95'
+cask "datovka" do
+  version "4.18.0"
+  sha256 "62cb7909c1b191974d2890aa6dcc80cc6d869af406d3cb794230841fac7fe933"
 
-  # secure.nic.cz/files/datove_schranky was verified as official when first introduced to the cask
-  url "https://secure.nic.cz/files/datove_schranky/#{version}/datovka-#{version}-64bit-osx10.7.dmg"
-  appcast 'https://www.datovka.cz/cs/pages/instalace.html'
-  name 'Datovka'
-  homepage 'https://www.datovka.cz/'
+  url "https://secure.nic.cz/files/datove_schranky/#{version}/datovka-#{version}-64bit-macos10.12.dmg",
+      verified: "secure.nic.cz/files/datove_schranky/"
+  name "Datovka"
+  desc "Access and store data messages in a local database"
+  homepage "https://www.datovka.cz/"
 
-  app 'datovka.app'
+  livecheck do
+    url "https://www.datovka.cz/cs/pages/instalace.html"
+    strategy :page_match
+    regex(%r{href=.*?/datovka-(\d+(?:\.\d+)*)-64bit-macos10\.12\.dmg}i)
+  end
+
+  app "datovka.app"
 end

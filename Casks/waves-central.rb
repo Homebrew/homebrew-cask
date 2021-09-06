@@ -1,10 +1,23 @@
-cask 'waves-central' do
-  version :latest
+cask "waves-central" do
+  version "12.0.20"
   sha256 :no_check
 
-  url 'http://cf-installers.waves.com/WavesCentral/Install_Waves_Central.dmg'
-  name 'Waves Central'
-  homepage 'https://www.waves.com/'
+  url "https://cf-installers.waves.com/WavesCentral/Install_Waves_Central.dmg"
+  name "Waves Central"
+  desc "Client to install and activate Waves products"
+  homepage "https://www.waves.com/"
 
-  app 'Waves Central.app'
+  livecheck do
+    url "https://register.waves.com/Autoupdate/Updates/ByProductId/1/latest-mac.yml"
+    strategy :electron_builder
+  end
+
+  app "Waves Central.app"
+
+  zap trash: [
+    "~/Library/Application Support/Waves Central",
+    "~/Library/Application Support/Waves Audio",
+    "~/Library/Preferences/com.WavesAudio.central.plist",
+    "~/Library/Saved Application State/com.WavesAudio.central.savedState",
+  ]
 end

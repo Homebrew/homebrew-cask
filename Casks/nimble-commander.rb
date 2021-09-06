@@ -1,11 +1,16 @@
-cask 'nimble-commander' do
-  version '1.2.5,2846'
-  sha256 'b18240ff5642342ab8eb4f258b3d665e2f5b90e6fd09b0f1c283fae95a9cd490'
+cask "nimble-commander" do
+  version "1.2.9,3532"
+  sha256 "33812c90cd9cf69a6c7d639fcf63442fed7e982bda1d91895827f0a9f369511d"
 
   url "https://magnumbytes.com/downloads/releases/nimble-commander-#{version.before_comma}(#{version.after_comma}).dmg"
-  appcast 'https://magnumbytes.com/downloads/releases/sparkle-nimble-commander.xml'
-  name 'Nimble Commander'
-  homepage 'https://magnumbytes.com/'
+  name "Nimble Commander"
+  desc "Dual-pane file manager"
+  homepage "https://magnumbytes.com/"
 
-  app 'Nimble Commander.app'
+  livecheck do
+    url "https://magnumbytes.com/downloads/releases/sparkle-nimble-commander.xml"
+    strategy :sparkle
+  end
+
+  app "Nimble Commander.app"
 end

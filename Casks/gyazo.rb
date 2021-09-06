@@ -1,19 +1,23 @@
-cask 'gyazo' do
-  version '3.7.2'
-  sha256 '26afac02a3ea7feeb093d89d571e27050466690084ca6acf39168f9457fb6fb6'
+cask "gyazo" do
+  version "3.8.1"
+  sha256 "358daa0ae8f15191711f7e79646d4603ea08cc4702c35db3686df5eeae70d59c"
 
   url "https://files.gyazo.com/setup/Gyazo-#{version}.dmg"
-  appcast 'https://gyazo.com/api/gy_mac.xml'
-  name 'Nota Gyazo GIF'
-  homepage 'https://gyazo.com/'
+  name "Nota Gyazo GIF"
+  homepage "https://gyazo.com/"
 
-  app 'Gyazo.app'
-  app 'Gyazo GIF.app'
+  livecheck do
+    url "https://gyazo.com/api/gy_mac.xml"
+    strategy :sparkle
+  end
+
+  app "Gyazo.app"
+  app "Gyazo GIF.app"
 
   zap trash: [
-               '~/Library/Caches/com.gyazo.gif',
-               '~/Library/Caches/com.gyazo.mac',
-               '~/Library/Preferences/com.gyazo.gif.plist',
-               '~/Library/Preferences/com.gyazo.mac.plist',
-             ]
+    "~/Library/Caches/com.gyazo.gif",
+    "~/Library/Caches/com.gyazo.mac",
+    "~/Library/Preferences/com.gyazo.gif.plist",
+    "~/Library/Preferences/com.gyazo.mac.plist",
+  ]
 end

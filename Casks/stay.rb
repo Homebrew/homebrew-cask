@@ -1,19 +1,24 @@
-cask 'stay' do
-  version '1.2.8'
-  sha256 '754b02b07af6da1383f59751448cab76d18b1ffc9c7dca8047f7fccc37650076'
+cask "stay" do
+  version "1.4,747"
+  sha256 "20362f8564cf7384350f19ee39d46db675473cf82417e7b552e2cdabc363fd4b"
 
-  url "https://cordlessdog.com/stay/versions/Stay%20#{version}.dmg"
-  appcast 'https://cordlessdog.com/stay/appcast.xml'
-  name 'Stay'
-  homepage 'https://cordlessdog.com/stay/'
+  url "https://cordlessdog.com/stay/versions/Stay%20#{version.before_comma}.dmg"
+  name "Stay"
+  desc "Windows manager"
+  homepage "https://cordlessdog.com/stay/"
 
-  depends_on macos: '>= :high_sierra'
+  livecheck do
+    url "https://cordlessdog.com/stay/appcast.xml"
+    strategy :sparkle
+  end
 
-  app 'Stay.app'
+  depends_on macos: ">= :mojave"
+
+  app "Stay.app"
 
   zap trash: [
-               '~/Library/Application Support/Stay',
-               '~/Library/Application Support/com.cordlessdog.Stay',
-               '~/Library/Preferences/com.cordlessdog.Stay.plist',
-             ]
+    "~/Library/Application Support/Stay",
+    "~/Library/Application Support/com.cordlessdog.Stay",
+    "~/Library/Preferences/com.cordlessdog.Stay.plist",
+  ]
 end

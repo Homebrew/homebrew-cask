@@ -1,11 +1,12 @@
-cask 'free-ruler' do
-  version '1.7b5'
-  sha256 'f746e49ae012bee5ccef9871592276de47d3b6affbe92ab3f45f2591cb05b915'
+cask "free-ruler" do
+  version "2.0.5"
+  sha256 "6332b9252a4fc58dbf4a5f74b5484d6ae20c2f4cb7db7a2c86020454fa66444d"
 
-  url "http://www.pascal.com/software/freeruler/FreeRuler#{version}.zip"
-  appcast 'http://www.pascal.com/software/freeruler/'
-  name 'Free Ruler'
-  homepage 'http://www.pascal.com/software/freeruler/'
+  url "https://github.com/pascalpp/FreeRuler/releases/download/v#{version}/free-ruler-#{version}.zip",
+      verified: "github.com/pascalpp/FreeRuler/"
+  name "Free Ruler"
+  desc "Horizontal and vertical rulers"
+  homepage "http://www.pascal.com/software/freeruler/"
 
-  app "Free Ruler #{version}.app"
+  app "Free Ruler.app"
 end

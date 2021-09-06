@@ -1,11 +1,17 @@
-cask 'doxygen' do
-  version '1.8.15'
-  sha256 '0be19174b88757f72d253dd2ebf22a90654738f0c4b01a71b1dc32a54d2613ae'
+cask "doxygen" do
+  version "1.9.2"
+  sha256 "788d56c30ecb1d3f816f3eca31a2e983a7864ed28fce0566143dfb70afed7916"
 
-  url "http://doxygen.nl/files/Doxygen-#{version}.dmg"
-  appcast 'http://www.doxygen.nl/download.html'
-  name 'Doxygen'
-  homepage 'http://www.doxygen.nl/'
+  url "https://doxygen.nl/files/Doxygen-#{version}.dmg"
+  name "Doxygen"
+  desc "Generate documentation from source code"
+  homepage "https://www.doxygen.nl/"
 
-  app 'Doxygen.app'
+  livecheck do
+    url "https://www.doxygen.nl/download.html"
+    strategy :page_match
+    regex(%r{href=.*?/Doxygen-(\d+(?:\.\d+)*)\.dmg}i)
+  end
+
+  app "Doxygen.app"
 end

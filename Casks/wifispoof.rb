@@ -1,14 +1,20 @@
-cask 'wifispoof' do
-  version '3.4.4'
-  sha256 '36b9a36fcb9010e28bf42b4c32f04ae8cbe72f616cd8ae978a5ab3494c5fc260'
+cask "wifispoof" do
+  version "3.6"
+  sha256 "a044996486ccb4f81d9d7a0bee4dc608790453559016886e05d8cbf70dde6ebd"
 
-  # sweetpproductions.com/products was verified as official when first introduced to the cask
-  url "https://sweetpproductions.com/products/wifispoof#{version.major}/WiFiSpoof#{version.major}.dmg"
-  appcast "https://sweetpproductions.com/products/wifispoof#{version.major}/appcast.xml"
-  name 'WiFiSpoof'
-  homepage 'https://wifispoof.com/'
+  url "https://sweetpproductions.com/products/wifispoof#{version.major}/WiFiSpoof#{version.major}.dmg",
+      verified: "sweetpproductions.com/products/"
+  name "WiFiSpoof"
+  desc "Change your computer's MAC address"
+  homepage "https://wifispoof.com/"
+
+  livecheck do
+    url "https://sweetpproductions.com/products/wifispoof#{version.major}/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
+  depends_on macos: ">= :el_capitan"
 
-  app 'WiFiSpoof.app'
+  app "WiFiSpoof.app"
 end

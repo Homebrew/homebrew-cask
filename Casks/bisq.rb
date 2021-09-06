@@ -1,12 +1,17 @@
-cask 'bisq' do
-  version '1.1.3'
-  sha256 'ceff20fbb4c446c236d7d92b05ee82a389c3a05121e23031152b61747b5c007c'
+cask "bisq" do
+  version "1.7.3"
+  sha256 "027b290b3ae9b41cb65fe06eb1f3e3991bea2873991cd782073a2a4ce36f7447"
 
-  # github.com/bisq-network/bisq was verified as official when first introduced to the cask
-  url "https://github.com/bisq-network/bisq/releases/download/v#{version}/Bisq-#{version}.dmg"
-  appcast 'https://github.com/bisq-network/bisq/releases.atom'
-  name 'Bisq'
-  homepage 'https://bisq.network/'
+  url "https://github.com/bisq-network/bisq/releases/download/v#{version}/Bisq-#{version}.dmg",
+      verified: "github.com/bisq-network/bisq/"
+  name "Bisq"
+  desc "Decentralized bitcoin exchange network"
+  homepage "https://bisq.network/"
 
-  app 'Bisq.app'
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  app "Bisq.app"
 end

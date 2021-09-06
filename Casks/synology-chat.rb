@@ -1,10 +1,17 @@
-cask 'synology-chat' do
-  version '1.1.0-56'
-  sha256 '2335cb1aa1918bd9efb19a28bc58e95282bdbd1bf63b6d017f188175347d82b4'
+cask "synology-chat" do
+  version "1.2.0-0146"
+  sha256 "3ede0d4fe4fd7d8ff55d15b1ef9121d52c97672842a56ecc334099832a7a4b39"
 
-  url "https://global.download.synology.com/download/Tools/ChatClient/#{version}/Mac/Installer/Chat-#{version}.dmg"
-  name 'Synology Chat'
-  homepage 'https://www.synology.com/en-us/dsm/feature/chat'
+  url "https://global.download.synology.com/download/Utility/ChatClient/#{version}/Mac/Installer/x86_64/Synology%20Chat%20Client-#{version}.dmg"
+  name "Synology Chat"
+  desc "Messaging service that runs on Synology NAS"
+  homepage "https://www.synology.com/en-us/dsm/feature/chat"
 
-  app 'Synology Chat.app'
+  livecheck do
+    url "https://www.synology.com/en-us/releaseNote/ChatClient"
+    strategy :page_match
+    regex(/Version:\s*(\d+(?:\.\d+)*-\d+)/i)
+  end
+
+  app "Synology Chat.app"
 end

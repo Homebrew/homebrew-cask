@@ -1,24 +1,36 @@
-cask 'dotnet' do
-  version '2.2.3'
-  sha256 '85fa291a86baaed7ae7b2806ae610d40e96155c15eb64ebbc8c9572d9f7534b9'
+cask "dotnet" do
+  version "5.0.9,a847df19-d530-41c8-b766-cb60ee8af9a4:7edd7c2eae38d25d0d7c90350eefea64"
+  sha256 "9bf2eba78ec85e035d07bef696cee8240c85cfd95639d876368e0066d6679f29"
 
-  url "https://download.visualstudio.microsoft.com/download/pr/872243f8-de92-480f-accd-9a22304cd3f9/aad669c10799a3e6e1deac73e8559c49/dotnet-runtime-#{version}-osx-x64.pkg"
-  appcast 'https://www.microsoft.com/net/download/macos'
-  name '.Net Core Runtime'
-  homepage 'https://www.microsoft.com/net/core#macos'
+  url "https://download.visualstudio.microsoft.com/download/pr/#{version.after_comma.before_colon}/#{version.after_colon}/dotnet-runtime-#{version.before_comma}-osx-x64.pkg"
+  name ".Net Runtime"
+  desc "Developer platform"
+  homepage "https://www.microsoft.com/net/core#macos"
+
+  # This identifies releases with the same major/minor version as the current
+  # cask version. New major/minor releases occur annually in November and the
+  # check will automatically update its behavior when the cask is updated.
+  livecheck do
+    url "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/#{version.major_minor}/releases.json"
+    strategy :page_match do |page|
+      page.scan(%r{/download/pr/([^/]+)/([^/]+)/dotnet-runtime-v?(\d+(?:\.\d+)+)-osx-x64\.pkg}i).map do |match|
+        "#{match[2]},#{match[0]}:#{match[1]}"
+      end
+    end
+  end
 
   conflicts_with cask: [
-                         'dotnet-sdk',
-                         'dotnet-preview',
-                         'dotnet-sdk-preview',
-                       ]
-  depends_on macos: '>= :sierra'
+    "dotnet-sdk",
+    "homebrew/cask-versions/dotnet-preview",
+    "homebrew/cask-versions/dotnet-sdk-preview",
+  ]
+  depends_on macos: ">= :high_sierra"
 
-  pkg "dotnet-runtime-#{version}-osx-x64.pkg"
-  binary '/usr/local/share/dotnet/dotnet'
+  pkg "dotnet-runtime-#{version.before_comma}-osx-x64.pkg"
+  binary "/usr/local/share/dotnet/dotnet"
 
-  uninstall pkgutil: 'com.microsoft.dotnet.*',
-            delete:  '/etc/paths.d/dotnet'
+  uninstall pkgutil: "com.microsoft.dotnet.*",
+            delete:  "/etc/paths.d/dotnet"
 
-  zap trash: '~/.nuget'
+  zap trash: "~/.nuget"
 end

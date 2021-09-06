@@ -1,20 +1,26 @@
-cask 'jollysfastvnc' do
-  version '1.54'
-  sha256 '2d205f98db9afaef25e591166a82aab84263df9def3214eea53af423f43e8017'
+cask "jollysfastvnc" do
+  version "1.58,1925902"
+  sha256 :no_check
 
-  url 'https://www.jinx.de/JollysFastVNC_files/JollysFastVNC.current.dmg'
-  appcast 'https://www.jinx.de/JollysFastVNC.update.11.i386.xml'
-  name 'JollysFastVNC'
-  homepage 'https://www.jinx.de/JollysFastVNC.html'
+  url "https://www.jinx.de/JollysFastVNC_files/JollysFastVNC.current.dmg"
+  name "JollysFastVNC"
+  homepage "https://www.jinx.de/JollysFastVNC.html"
 
-  app 'JollysFastVNC.app'
+  livecheck do
+    url "https://www.jinx.de/JollysFastVNC.update.12.x86_64.xml"
+    strategy :sparkle
+  end
 
-  uninstall quit: 'de.jinx.JollysFastVNC'
+  depends_on macos: ">= :sierra"
+
+  app "JollysFastVNC.app"
+
+  uninstall quit: "de.jinx.JollysFastVNC"
 
   zap trash: [
-               '~/Library/Caches/de.jinx.JollysFastVNC',
-               '~/Library/Logs/JollysFastVNC.log*',
-               '~/Library/Preferences/de.jinx.JollysFastVNC.plist',
-               '~/Library/Saved Application State/de.jinx.JollysFastVNC.savedState',
-             ]
+    "~/Library/Caches/de.jinx.JollysFastVNC",
+    "~/Library/Logs/JollysFastVNC.log*",
+    "~/Library/Preferences/de.jinx.JollysFastVNC.plist",
+    "~/Library/Saved Application State/de.jinx.JollysFastVNC.savedState",
+  ]
 end

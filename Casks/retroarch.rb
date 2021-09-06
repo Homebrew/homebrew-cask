@@ -1,11 +1,18 @@
-cask 'retroarch' do
-  version '1.7.7'
-  sha256 '526fe798f6ef70fe464ee08831d99af7112573bdda681a3fd1bc92db12300fe4'
+cask "retroarch" do
+  version "1.9.8"
+  sha256 "62e557add81b06252afe98fb840e44bea027d94533ef8ccba95a648547ff3dba"
 
   url "https://buildbot.libretro.com/stable/#{version}/apple/osx/x86_64/RetroArch.dmg"
-  appcast 'https://buildbot.libretro.com/stable/'
-  name 'RetroArch'
-  homepage 'https://www.libretro.com/'
+  name "RetroArch"
+  desc "Emulator frontend (OpenGL graphics API version)"
+  homepage "https://www.libretro.com/"
 
-  app 'RetroArch.app'
+  livecheck do
+    url "https://buildbot.libretro.com/stable/"
+    regex(%r{href=["']?/stable/v?(\d+(?:\.\d+)+)/?["' >]}i)
+  end
+
+  conflicts_with cask: "retroarch-metal"
+
+  app "RetroArch.app"
 end

@@ -1,12 +1,12 @@
-cask 'media-converter' do
-  version '1.2'
-  sha256 '4893e6e5bc18b9cb0f0d8e1bcb861f92595314e4f9768ef638affdfc866f37e1'
+cask "media-converter" do
+  version "3.0"
+  sha256 "a5c61e461aca7c570a3ea99f0ecf0f27a8e2ab5713c3edd79d3eaf7ca1543b5e"
 
-  # downloads.sourceforge.net/media-converter was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/media-converter/media-converter/#{version}/media-converter-#{version}.zip"
-  appcast 'https://sourceforge.net/projects/media-converter/rss?path=/media-converter'
-  name 'Media Converter'
-  homepage 'https://media-converter.sourceforge.io/'
+  url "https://downloads.sourceforge.net/media-converter/media-converter/#{version}/media-converter-#{version}.zip",
+      verified: "downloads.sourceforge.net/media-converter/"
+  name "Media Converter"
+  desc "Convert avi, wmv, mkv, rm, mov and more to other formats"
+  homepage "https://media-converter.sourceforge.io/"
 
-  app 'Media Converter.localized/Media Converter.app'
+  app "Media Converter.localized/Media Converter.app"
 end

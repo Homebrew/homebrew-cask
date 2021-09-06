@@ -1,11 +1,17 @@
-cask 'imitone' do
-  version '0.9.2c'
-  sha256 '8bbe20c0ddbfb3a583b10e88eb8515174577bdfdc5f345d505fe6ddb2d2d8642'
+cask "imitone" do
+  version "0.10.2"
+  sha256 "ecdcd7723ad0fd8971fcc0f6cfc27daca8ae17465a72e5f3f2a664036b28ee4e"
 
   url "https://imitone.com/beta/imitone-#{version}.dmg"
-  appcast 'https://imitone.com/beta/'
-  name 'imitone'
-  homepage 'https://imitone.com/'
+  name "imitone"
+  desc "Convert voice to midi in real time"
+  homepage "https://imitone.com/"
 
-  app 'imitone.app'
+  livecheck do
+    url "https://imitone.com/beta/"
+    strategy :page_match
+    regex(/href=.*?imitone-(\d+(?:\.\d+)*)\.dmg/i)
+  end
+
+  app "imitone.app"
 end

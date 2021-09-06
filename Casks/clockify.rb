@@ -1,15 +1,20 @@
-cask 'clockify' do
-  version '2.2.8.83'
-  sha256 '8836c2f920d241854ec1a8a79ba871f7b02bdd56e6ca748a9bbd1f39c96de7c7'
+cask "clockify" do
+  version "2.7.3,263"
+  sha256 :no_check
 
-  # clockify-resources.s3.eu-central-1.amazonaws.com was verified as official when first introduced to the cask
-  url "https://clockify-resources.s3.eu-central-1.amazonaws.com/downloads/ClockifyDesktop_#{version.no_dots}.zip"
-  appcast 'https://clockify.me/mac-time-tracking',
-          configuration: version.no_dots
-  name 'Clockify'
-  homepage 'https://clockify.me/mac-time-tracking'
+  url "https://clockify-resources.s3.eu-central-1.amazonaws.com/downloads/ClockifyDesktop.zip",
+      verified: "clockify-resources.s3.eu-central-1.amazonaws.com/"
+  name "Clockify"
+  desc "Time tracking tool for agencies and freelancers"
+  homepage "https://clockify.me/mac-time-tracking"
 
-  depends_on macos: '>= :sierra'
+  livecheck do
+    url "https://clockify-resources.s3.eu-central-1.amazonaws.com/downloads/appcast.xml"
+    strategy :sparkle
+  end
 
-  app 'Clockify Desktop.app'
+  auto_updates true
+  depends_on macos: ">= :sierra"
+
+  app "Clockify Desktop.app"
 end

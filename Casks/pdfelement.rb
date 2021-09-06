@@ -1,13 +1,34 @@
-cask 'pdfelement' do
-  version '7.0.5,5237'
-  sha256 '7085be4c2b402d3fa2be6634060e71da24a2038df1d312337ec2c26690ce5209'
+cask "pdfelement" do
+  version "8.5.0"
+  sha256 :no_check
 
-  url "http://download.wondershare.com/cbs_down/mac-pdfelement_full#{version.after_comma}.dmg"
-  appcast 'https://cbs.wondershare.com/go.php?m=upgrade_info&pid=5237'
-  name 'Wondershare PDFelement for Mac'
-  homepage 'https://pdf.wondershare.com/'
+  url "https://download.wondershare.com/cbs_down/mac-pdfelement_full5237.zip"
+  name "Wondershare PDFelement for Mac"
+  desc "Create, edit, convert and sign PDF documents"
+  homepage "https://pdf.wondershare.com/"
 
-  depends_on macos: '>= :sierra'
+  livecheck do
+    url "http://cbs.wondershare.com/go.php?m=upgrade_info&pid=5237&version=latest"
+    regex(%r{<Version>(\d+(?:\.\d+)+)</Version>}i)
+  end
 
-  app 'PDFelement.app'
+  depends_on macos: ">= :sierra"
+
+  app "PDFelement.app"
+
+  uninstall quit: [
+    "com.wondershare.PDFelement",
+    "com.wondershare.helper_compact",
+  ]
+
+  zap trash: [
+    "~/Library/Application Support/com.wondershare.PDFelement",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.wondershare.pdfelement.sfl2",
+    "~/Library/Caches/PDFelement",
+    "~/Library/Caches/com.wondershare.PDFelement",
+    "~/Library/Preferences/com.wondershare.PDFelement-custom.plist",
+    "~/Library/Preferences/com.wondershare.PDFelement.plist",
+    "~/Library/Saved Application State/com.wondershare.PDFelement.savedState",
+    "~/Library/WebKit/com.wondershare.PDFelement",
+  ]
 end

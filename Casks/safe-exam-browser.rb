@@ -1,18 +1,14 @@
-cask 'safe-exam-browser' do
-  version '2.1.3'
-  sha256 '57cdaf387378b0944050f652ab6451c1319cb5b3ab3b2f83cbd3755b085c2401'
+cask "safe-exam-browser" do
+  version "2.3.2"
+  sha256 "770b6648282b2a3a405736764952a4f042b5ef3086f6577877dab90be60a90a4"
 
-  # downloads.sourceforge.net was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/seb/SafeExamBrowser-#{version}.dmg"
-  appcast 'https://sourceforge.net/projects/seb/rss?path=/seb-macosx'
-  name 'Safe Exam Browser'
-  homepage 'https://safeexambrowser.org/'
+  url "https://github.com/SafeExamBrowser/seb-mac/releases/download/#{version}/SafeExamBrowser-#{version}.dmg",
+      verified: "github.com/SafeExamBrowser/seb-mac/"
+  name "Safe Exam Browser"
+  desc "Web browser environment to carry out e-assessments safely"
+  homepage "https://safeexambrowser.org/"
 
-  app 'Safe Exam Browser.app'
+  app "Safe Exam Browser.app"
 
-  zap trash: [
-               '~/Library/Caches/org.safeexambrowser.Safe-Exam-Browser',
-               '~/Library/Logs/Safe Exam Browser',
-               '~/Library/Preferences/org.safeexambrowser.Safe-Exam-Browser.plist',
-             ]
+  zap trash: "~/Library/Preferences/org.safeexambrowser.SafeExamBrowser.plist"
 end

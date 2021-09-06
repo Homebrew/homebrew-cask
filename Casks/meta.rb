@@ -1,11 +1,18 @@
-cask 'meta' do
-  version '1.9.4'
-  sha256 '6579b209beb859e065df2d2dcbc8a686e699bec6db221926bf72da0454b946ad'
+cask "meta" do
+  version "2.0.7,3248"
+  sha256 "e2301b6654093979e1a443b92148b3bcd0b0ded48365d6b4923e95187a956f55"
 
-  url "https://www.nightbirdsevolve.com/meta/updates/bin/Meta%20#{version}.zip"
-  appcast 'https://www.nightbirdsevolve.com/meta/updates/'
-  name 'Meta'
-  homepage 'https://www.nightbirdsevolve.com/meta/'
+  url "https://www.nightbirdsevolve.com/meta/updates/bin/Meta%20#{version.before_comma}.zip"
+  name "Meta"
+  desc "Tag editor for digital music"
+  homepage "https://www.nightbirdsevolve.com/meta/"
 
-  app 'Meta.app'
+  livecheck do
+    url "https://www.nightbirdsevolve.com/meta/updates/"
+    strategy :sparkle
+  end
+
+  depends_on macos: ">= :yosemite"
+
+  app "Meta.app"
 end

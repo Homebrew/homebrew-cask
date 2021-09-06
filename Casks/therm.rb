@@ -1,11 +1,16 @@
-cask 'therm' do
-  version '0.3.0'
-  sha256 '4d27e291660d35a8b089282738dfec5cd53cd1ba031ebbc24635fec4be1e79cb'
+cask "therm" do
+  version "0.4.2"
+  sha256 "7300338f81d3bb891852875aef58e93e99b1684f7f204158b99713bc94f8b22a"
 
   url "https://github.com/trufae/Therm/releases/download/#{version}/Therm-#{version}.zip"
-  appcast 'https://github.com/trufae/Therm/releases.atom'
-  name 'Therm'
-  homepage 'https://github.com/trufae/Therm'
+  name "Therm"
+  desc "Fork of iTerm2 that aims to have good defaults and minimal features"
+  homepage "https://github.com/trufae/Therm"
 
-  app 'Therm.app'
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  app "Therm.app"
 end

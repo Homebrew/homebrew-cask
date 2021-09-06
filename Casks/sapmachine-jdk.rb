@@ -1,14 +1,18 @@
-cask 'sapmachine-jdk' do
-  version '12.0.2'
-  sha256 'ede180009ded8bef782e41ad72bd242faa6749ac889297c01777559278fc4848'
+cask "sapmachine-jdk" do
+  version "16.0.2"
+  sha256 "d385e29399a35156ecaa23fbeed08b876c4b9bfcf076640169bde95196ee1d78"
 
-  # github.com/SAP/SapMachine was verified as official when first introduced to the cask
-  url "https://github.com/SAP/SapMachine/releases/download/sapmachine-#{version}/sapmachine-jdk-#{version}_osx-x64_bin.tar.gz"
-  appcast "https://sap.github.io/SapMachine/latest/#{version.major}"
-  name 'SapMachine OpenJDK Development Kit'
-  homepage 'https://sapmachine.io/'
+  url "https://github.com/SAP/SapMachine/releases/download/sapmachine-#{version}/sapmachine-jdk-#{version}_osx-x64_bin.dmg",
+      verified: "github.com/SAP/SapMachine/"
+  name "SapMachine OpenJDK Development Kit"
+  desc "OpenJDK release maintained and supported by SAP"
+  homepage "https://sapmachine.io/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+    regex(%r{href=.*/sapmachine-jdk-(\d+(?:\.\d+)*(?:\+\d+(?:\.\d+)*)?)_osx-x64_bin\.dmg}i)
+  end
 
   artifact "sapmachine-jdk-#{version}.jdk", target: "/Library/Java/JavaVirtualMachines/sapmachine-jdk-#{version}.jdk"
-
-  uninstall rmdir: '/Library/Java/JavaVirtualMachines'
 end

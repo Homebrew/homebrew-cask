@@ -1,20 +1,28 @@
-cask 'plex-media-player' do
-  version '2.37.2.996-bea4f9ca'
-  sha256 'a2b876905788e0abebc406f1727c31d4c56d74cbc46337d1ade1b5b9587209f6'
+cask "plex-media-player" do
+  version "2.58.0.1076-38e019da"
+  sha256 "1f0bd7da73891215d44fd17b16ef20d0e9a40d7128828f1561f406221183eb53"
 
   url "https://downloads.plex.tv/plexmediaplayer/#{version}/PlexMediaPlayer-#{version}-macosx-x86_64.zip"
-  appcast 'https://plex.tv/api/downloads/3.json'
-  name 'Plex Media Player'
-  homepage 'https://www.plex.tv/'
+  name "Plex Media Player"
+  desc "Home media player"
+  homepage "https://www.plex.tv/"
 
-  depends_on macos: '>= :yosemite'
+  livecheck do
+    url "https://plex.tv/api/downloads/3.json"
+    strategy :page_match
+    regex(%r{/PlexMediaPlayer-(\d+(?:\.\d+)*-[0-9a-f]+)-macosx-x86_64\.zip}i)
+  end
 
-  app 'Plex Media Player.app'
+  auto_updates true
+  depends_on macos: ">= :yosemite"
+
+  app "Plex Media Player.app"
 
   zap trash: [
-               '~/Library/Application Support/Plex Media Player',
-               '~/Library/Caches/Plex Media Player',
-               '~/Library/Logs/Plex Media Player',
-               '~/Library/Preferences/tv.plex.Plex Media Player.plist',
-             ]
+    "~/Library/Application Support/Plex Media Player",
+    "~/Library/Caches/Plex Media Player",
+    "~/Library/Logs/Plex Media Player",
+    "~/Library/Saved Application State/tv.plex.Plex Media Player.savedState",
+    "~/Library/Preferences/tv.plex.Plex Media Player.plist",
+  ]
 end

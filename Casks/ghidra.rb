@@ -1,16 +1,28 @@
-cask 'ghidra' do
-  version '9.0.4_PUBLIC_20190516'
-  sha256 'a50d0cd475d9377332811eeae66e94bdc9e7d88e58477c527e9c6b78caec18bf'
+cask "ghidra" do
+  version "10.0.2,20210804"
+  sha256 "5534521ccb958b5cde04fc5c51bfa2918d475af49e94d372fa7c117cc9fe804b"
 
-  url "https://www.ghidra-sre.org/ghidra_#{version}.zip"
-  name 'Ghidra'
-  homepage 'https://www.ghidra-sre.org/'
+  url "https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_#{version.before_comma}_build/ghidra_#{version.before_comma}_PUBLIC_#{version.after_comma}.zip",
+      verified: "github.com/NationalSecurityAgency/ghidra/"
+  name "Ghidra"
+  desc "Software reverse engineering (SRE) suite of tools"
+  homepage "https://www.ghidra-sre.org/"
 
-  binary "ghidra_#{version.major_minor_patch}/ghidraRun"
+  livecheck do
+    url "https://github.com/NationalSecurityAgency/ghidra/releases/latest"
+    strategy :page_match do |page|
+      page.scan(/href=.*?ghidra[._-]v?(\d+(?:\.\d+)+)[._-]PUBLIC[._-](\d+)\.zip/i)
+          .map { |matches| "#{matches[0]},#{matches[1]}" }
+    end
+  end
 
-  zap trash: '~/.ghidra'
+  conflicts_with cask: "homebrew/cask-versions/ghidra-beta"
+
+  binary "ghidra_#{version.before_comma}_PUBLIC/ghidraRun"
+
+  zap trash: "~/.ghidra"
 
   caveats do
-    depends_on_java '11+'
+    depends_on_java "11+"
   end
 end

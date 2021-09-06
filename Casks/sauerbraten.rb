@@ -1,12 +1,20 @@
-cask 'sauerbraten' do
-  version '2013.01.26'
-  sha256 'c6807484fa0d2c42ac774b97f9b21e9eace720e4403abc11b0321b2645d3589d'
+cask "sauerbraten" do
+  version "2020.11.29,2020.12.21"
+  sha256 "a7e26c85ff15be88b9ced26e64c2fa0e68bde1325c146763833abac591898bcb"
 
-  # sourceforge.net/sauerbraten was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/sauerbraten/sauerbraten_#{version.dots_to_underscores}_collect_edition_macosx.dmg"
-  appcast 'https://sourceforge.net/projects/sauerbraten/rss'
-  name 'Cube 2: Sauerbraten'
-  homepage 'http://sauerbraten.org/'
+  url "https://downloads.sourceforge.net/sauerbraten/sauerbraten/#{version.before_comma.dots_to_underscores}/sauerbraten_#{version.after_comma.dots_to_underscores}_macos.dmg",
+      verified: "sourceforge.net/sauerbraten/"
+  name "Cube 2: Sauerbraten"
+  desc "Multiplayer & singleplayer first person shooter"
+  homepage "http://sauerbraten.org/"
 
-  app 'Sauerbraten.app'
+  livecheck do
+    url :homepage
+    strategy :page_match do |page|
+      match = page.match(%r{(\d+(?:_\d+)*)/sauerbraten[._-]?(\d+(?:_\d+)*)[._-]?macos.dmg}i)
+      "#{match[1].tr("_", ".")},#{match[2].tr("_", ".")}"
+    end
+  end
+
+  app "Sauerbraten.app"
 end

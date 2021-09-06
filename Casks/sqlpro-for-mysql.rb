@@ -1,16 +1,22 @@
-cask 'sqlpro-for-mysql' do
-  version '2019.07.03'
-  sha256 'd5a6928846fdec1c4d07cd4042b261292c5de5570620efa324eb7c7f44e93717'
+cask "sqlpro-for-mysql" do
+  version "2021.53"
+  sha256 "53b718c7a4b6ee6271030cdb1959bdd9e2917371e5348bcf0d567d26614b6a72"
 
-  # d3fwkemdw8spx3.cloudfront.net/mysql was verified as official when first introduced to the cask
-  url "https://d3fwkemdw8spx3.cloudfront.net/mysql/SQLProMySQL.#{version}.app.zip"
-  name 'SQLPro for MySQL'
-  homepage 'https://www.mysqlui.com/'
+  url "https://d3fwkemdw8spx3.cloudfront.net/mysql/SQLProMySQL.#{version}.zip",
+      verified: "d3fwkemdw8spx3.cloudfront.net/mysql/"
+  name "SQLPro for MySQL"
+  desc "MySQL & MariaDB database client"
+  homepage "https://www.mysqlui.com/"
 
-  app 'SQLPro for MySQL.app'
+  livecheck do
+    url "https://www.mysqlui.com/download.php"
+    strategy :header_match
+  end
+
+  app "SQLPro for MySQL.app"
 
   zap trash: [
-               '~/Library/Containers/com.hankinsoft.osx.mysql',
-               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hankinsoft.osx.mysql.sfl*',
-             ]
+    "~/Library/Containers/com.hankinsoft.osx.mysql",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hankinsoft.osx.mysql.sfl*",
+  ]
 end

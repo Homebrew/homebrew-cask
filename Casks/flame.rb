@@ -1,11 +1,20 @@
-cask 'flame' do
-  version '0.2.1'
-  sha256 'b81f216caf290fc34824661b06b68eb538a675eada627c3606276762f1d1786e'
+cask "flame" do
+  version "2.6.0"
+  sha256 "fc86b75a0f2be52be3ec6ce2e260fa816fffe8e0d14caf87c3e8050ed0ec0b1a"
 
-  url "http://husk.org/apps/Flame-#{version}-universal.zip"
-  appcast 'http://husk.org/apps/flame/'
-  name 'Flame'
-  homepage 'http://husk.org/apps/flame/'
+  url "https://github.com/tominsam/flametouch/releases/download/#{version}/Flame_#{version}.zip",
+      verified: "github.com/tominsam/flametouch/"
+  name "Flame"
+  desc "Rendezvous service browser for iPhone / iPod touch"
+  homepage "https://movieos.org/code/flame/"
 
-  app 'Flame.app'
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^(\d+(?:\.\d+)*)$/i)
+  end
+
+  depends_on macos: ">= :catalina"
+
+  app "Flame.app"
 end

@@ -1,21 +1,26 @@
-cask 'vivaldi' do
-  version '2.6.1566.44'
-  sha256 '9ae8dc04afc9e267fe1a399bd5632827f11b6adf1ca1325436fb60eb25254dcc'
+cask "vivaldi" do
+  version "4.1.2369.21"
+  sha256 "37bbf56e0085ca44e7083a2a1c00f80f8cbad25e10c3f5210b98a66e5e64296f"
 
-  url "https://downloads.vivaldi.com/stable/Vivaldi.#{version}.dmg"
-  appcast 'https://update.vivaldi.com/update/1.0/public/mac/appcast.xml'
-  name 'Vivaldi'
-  homepage 'https://vivaldi.com/'
+  url "https://downloads.vivaldi.com/stable/Vivaldi.#{version}.universal.dmg"
+  name "Vivaldi"
+  desc "Web browser focusing on customization and control"
+  homepage "https://vivaldi.com/"
+
+  livecheck do
+    url "https://update.vivaldi.com/update/1.0/public/mac/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 
-  app 'Vivaldi.app'
+  app "Vivaldi.app"
 
   zap trash: [
-               '~/Library/Application Support/Vivaldi',
-               '~/Library/Caches/Vivaldi',
-               '~/Library/Caches/com.vivaldi.Vivaldi',
-               '~/Library/Preferences/com.vivaldi.Vivaldi.plist',
-               '~/Library/Saved Application State/com.vivaldi.Vivaldi.savedState',
-             ]
+    "~/Library/Application Support/Vivaldi",
+    "~/Library/Caches/Vivaldi",
+    "~/Library/Caches/com.vivaldi.Vivaldi",
+    "~/Library/Preferences/com.vivaldi.Vivaldi.plist",
+    "~/Library/Saved Application State/com.vivaldi.Vivaldi.savedState",
+  ]
 end

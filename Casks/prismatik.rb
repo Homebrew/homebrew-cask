@@ -1,12 +1,17 @@
-cask 'prismatik' do
-  version '5.11.2'
-  sha256 '47e7e5335c432cb9aec169b129b24fae7bb367665843c5cbaa0e49c6f0db13f5'
+cask "prismatik" do
+  version "6.0.0.104"
+  sha256 "72e94944f9732ab737836a399a6f92693d1dd1717e0bef0cae3d96654b1dd2af"
 
-  # github.com/woodenshark/Lightpack was verified as official when first introduced to the cask
-  url "https://github.com/woodenshark/Lightpack/releases/download/#{version}/Prismatik.#{version}.dmg"
-  appcast 'https://github.com/woodenshark/Lightpack/releases.atom'
-  name 'Prismatik'
-  homepage 'https://lightpack.tv/promo/lightpack1.php'
+  url "https://woodenshark.com/4lightpack/Prismatik_#{version}_signed.dmg",
+      verified: "woodenshark.com/4lightpack/"
+  name "Prismatik"
+  homepage "https://lightpack.tv/pages/downloads"
 
-  app 'Prismatik.app'
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/Prismatik_(\d+(?:\.\d+)*)_signed\.dmg}i)
+  end
+
+  app "Prismatik.app"
 end

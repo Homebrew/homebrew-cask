@@ -1,12 +1,12 @@
-cask 'natron' do
-  version '2.3.14'
-  sha256 '7afe4ab02f2538b695e6d36f26fade558a9625fd4d228f587cff38dd5478b804'
+cask "natron" do
+  version "2.4.0"
+  sha256 "cdcb9ec4a193b10e25d7bdc9d5e265b3e5224a9b1822b5b3f25bcf9440dde52e"
 
-  # downloads.sourceforge.net/natron was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/natron/Natron-#{version}.dmg"
-  appcast 'https://sourceforge.net/projects/natron/rss?path=/OSX/Universal/releases'
-  name 'Natron'
-  homepage 'https://natron.fr/'
+  url "https://github.com/NatronGitHub/Natron/releases/download/v#{version}/Natron-#{version}-OSX-64.dmg",
+      verified: "github.com/NatronGitHub/Natron/"
+  name "Natron"
+  desc "Open-source node-graph based video compositing software"
+  homepage "https://NatronGitHub.github.io/"
 
-  app 'Natron.app'
+  app "Natron.app"
 end

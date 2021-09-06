@@ -1,20 +1,34 @@
-cask 'syncovery' do
-  version '8.41'
-  sha256 '6bad61f3b18ab0ba578a4e80d9dd84540b6893716da2572725f88a2ae68afb66'
+cask "syncovery" do
+  version "9.38g"
 
-  url "https://www.syncovery.com/release/SyncoveryMac#{version}.dmg"
-  name 'Syncovery'
-  homepage 'https://www.syncovery.com/'
+  if Hardware::CPU.intel?
+    sha256 "1fe2dab73e91f2251fdf565dafd267abc82e2c4198bd8fe6560c805d2a59bc8b"
 
-  pkg 'SyncoveryMac (double-click to install).pkg'
+    url "https://www.syncovery.com/release/SyncoveryMac#{version}.dmg"
+  else
+    sha256 "f27786be3c6ebdaf416932f764de0ddaaff0aa8e47c82e1c3266d049099c6bb2"
 
-  uninstall pkgutil: 'com.company.Syncovery*'
+    url "https://www.syncovery.com/release/SyncoveryMac#{version}-Apple.dmg"
+  end
 
-  zap trash: '~/Library/Preferences/Syncovery.ini',
+  name "Syncovery"
+  desc "File synchronization and backup software"
+  homepage "https://www.syncovery.com/"
+
+  livecheck do
+    url "https://www.syncovery.com/download/mac/"
+    regex(%r{href=.*?/SyncoveryMac(\d+(?:\.\d+)*[a-z]?)\.dmg}i)
+  end
+
+  pkg "SyncoveryMac (double-click to install).pkg"
+
+  uninstall pkgutil: "com.company.Syncovery*"
+
+  zap trash: "~/Library/Preferences/Syncovery.ini",
       rmdir: [
-               '~/Library/Application Support/Syncovery',
-               '~/Saved Application State/com.company.Syncovery.savedState',
-               '~/Library/Preferences/Syncovery',
-               '~/Library/Logs/Syncovery',
-             ]
+        "~/Library/Application Support/Syncovery",
+        "~/Saved Application State/com.company.Syncovery.savedState",
+        "~/Library/Preferences/Syncovery",
+        "~/Library/Logs/Syncovery",
+      ]
 end

@@ -1,11 +1,16 @@
-cask 'touchosc-bridge' do
-  version '1.4.0.1'
-  sha256 '7911ad9284aafb1ddd337af333d445de7ae57df5ca9b134bdf6881139a8795f4'
+cask "touchosc-bridge" do
+  version "1.7.2.147"
+  sha256 "74bcfd6673117d02d6712f3ea3ce8f08f7630638b70adf491ebcf87e3e6f26d8"
 
-  url "https://hexler.net/pub/touchosc/touchosc-bridge-#{version}-osx.zip"
-  appcast 'https://hexler.net/software/touchosc'
-  name 'TouchOSC Bridge'
-  homepage 'https://hexler.net/software/touchosc'
+  url "https://hexler.net/pub/touchosc/touchosc-bridge-#{version}-macos.dmg"
+  name "TouchOSC Bridge"
+  desc "Modular touch control surface bridge for OSC & MIDI"
+  homepage "https://hexler.net/touchosc"
 
-  app 'TouchOSC Bridge.app'
+  livecheck do
+    url "https://hexler.net/touchosc/bridge-releases"
+    regex(%r{href=.*?/touchosc-bridge-(\d+(?:\.\d+)*)-macos\.dmg}i)
+  end
+
+  app "TouchOSC Bridge.app"
 end

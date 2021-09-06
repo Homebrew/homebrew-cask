@@ -1,30 +1,35 @@
-cask 'baidunetdisk' do
-  version '2.2.2'
-  sha256 '89e3bdc7da7860e55f3fa6edf756a74bd7d7f55607db0358922f7e96c4cc8590'
+cask "baidunetdisk" do
+  version "3.9.5"
+  sha256 "2d2957d64ccadef5c9cc69a794102902d51bf3eadaa4f23ac45f0aa0f3a5657d"
 
-  # baidupcs.com/issue/netdisk/MACguanjia was verified as official when first introduced to the cask
-  url "https://issuecdn.baidupcs.com/issue/netdisk/MACguanjia/BaiduNetdisk_mac_#{version}.dmg"
-  appcast 'https://pan.baidu.com/disk/cmsdata?do=client'
-  name 'Baidu NetDisk'
-  name '百度网盘'
-  homepage 'https://pan.baidu.com/download'
+  url "https://wppkg.baidupcs.com/issue/netdisk/MACguanjia/BaiduNetdisk_mac_#{version}.dmg",
+      verified: "baidupcs.com/issue/netdisk/MACguanjia/"
+  name "Baidu NetDisk"
+  name "百度网盘"
+  desc "Cloud storage service"
+  homepage "https://pan.baidu.com/download"
 
-  depends_on macos: '>= :yosemite'
+  livecheck do
+    url "https://pan.baidu.com/disk/cmsdata?do=client"
+    regex(/BaiduNetdisk[._-]mac[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+  end
 
-  app 'BaiduNetdisk_mac.app'
+  depends_on macos: ">= :yosemite"
+
+  app "BaiduNetdisk_mac.app"
 
   zap trash: [
-               '~/Library/Application Support/com.baidu.BaiduNetdisk-mac',
-               '~/Library/Caches/com.baidu.BaiduNetdisk-mac',
-               '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.baidu.BaiduNetdisk-mac',
-               '~/Library/Cookies/com.baidu.BaiduNetdisk-mac.binarycookies',
-               '~/Library/Preferences/com.baidu.BaiduNetdisk-mac.plist',
-               '~/Library/sapi/wappass.baidu.com',
-               '~/Library/Saved Application State/com.baidu.BaiduNetdisk-mac.savedState',
-             ],
+    "~/Library/Application Support/com.baidu.BaiduNetdisk-mac",
+    "~/Library/Caches/com.baidu.BaiduNetdisk-mac",
+    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.baidu.BaiduNetdisk-mac",
+    "~/Library/Cookies/com.baidu.BaiduNetdisk-mac.binarycookies",
+    "~/Library/Preferences/com.baidu.BaiduNetdisk-mac.plist",
+    "~/Library/sapi/wappass.baidu.com",
+    "~/Library/Saved Application State/com.baidu.BaiduNetdisk-mac.savedState",
+  ],
       rmdir:
              [
-               '~/Library/Caches/com.plausiblelabs.crashreporter.data',
-               '~/Library/sapi',
+               "~/Library/Caches/com.plausiblelabs.crashreporter.data",
+               "~/Library/sapi",
              ]
 end

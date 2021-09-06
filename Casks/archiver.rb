@@ -1,14 +1,25 @@
-cask 'archiver' do
-  version '3.0.6'
-  sha256 'c27ec23f93b10599a811597a106b9cdec6655552ddb82c637992f8bdbbc82fd2'
+cask "archiver" do
+  version "4.0.0"
+  sha256 "691c9747056c8706626c92ebd679578af6f6060e8d481dc3b5925dd3522b2b53"
 
-  # storage.googleapis.com/incrediblebee was verified as official when first introduced to the cask
-  url "https://storage.googleapis.com/incrediblebee/apps/Archiver-#{version.major}/Archiver-#{version}.zip"
-  appcast "https://api.incrediblebee.com/appcasts/archiver-#{version.major}.xml"
-  name 'Archiver'
-  homepage 'https://archiverapp.com/'
+  url "https://storage.googleapis.com/incrediblebee/apps/Archiver-#{version.major}/Archiver-#{version}.zip",
+      verified: "storage.googleapis.com/incrediblebee/"
+  name "Archiver"
+  desc "Open archives, compress files, as well as split and combine files"
+  homepage "https://archiverapp.com/"
 
-  depends_on macos: '>= :sierra'
+  livecheck do
+    url "https://api.incrediblebee.com/appcasts/archiver-#{version.major}.xml"
+    strategy :page_match
+    regex(%r{url=.*?/Archiver-(\d+(?:\.\d+)*)\.zip}i)
+  end
 
-  app 'Archiver.app'
+  depends_on macos: ">= :sierra"
+
+  app "Archiver.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.incrediblebee.Archiver*",
+    "~/Library/Preferences/com.incrediblebee.Archiver*.plist",
+  ]
 end

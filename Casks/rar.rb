@@ -1,19 +1,20 @@
-cask 'rar' do
-  version '5.7.1'
-  sha256 'e43d953db5ed0382ae99447d5812b063ed52305652c4fcd36482c27f18b2fde5'
+cask "rar" do
+  version "6.0.2"
+  sha256 "6da67bd6f617206b36e5fecf274ba3a0652bb166519852e1bc32342a8564b6c8"
 
   url "https://www.rarlab.com/rar/rarosx-#{version}.tar.gz"
-  name 'RAR Archiver'
-  homepage 'https://www.rarlab.com/'
+  name "RAR Archiver"
+  desc "Archive manager for data compression and backups"
+  homepage "https://www.rarlab.com/"
 
-  binary 'rar/rar'
-  binary 'rar/unrar'
-  artifact 'rar/default.sfx', target: "#{HOMEBREW_PREFIX}/lib/default.sfx"
-  artifact 'rar/rarfiles.lst', target: "#{HOMEBREW_PREFIX}/etc/rarfiles.lst"
+  livecheck do
+    url "https://www.rarlab.com/download.htm"
+    strategy :page_match
+    regex(%r{href=.*?/rarosx-(\d+(:?\.\d+)*)\.tar\.gz}i)
+  end
 
-  caveats <<~EOS
-    Instructions on using rar and unrar are available in
-
-      #{staged_path}/rar/rar.txt
-  EOS
+  binary "rar/rar"
+  binary "rar/unrar"
+  artifact "rar/default.sfx", target: "#{HOMEBREW_PREFIX}/lib/default.sfx"
+  artifact "rar/rarfiles.lst", target: "#{HOMEBREW_PREFIX}/etc/rarfiles.lst"
 end

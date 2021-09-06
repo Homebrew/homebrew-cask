@@ -1,21 +1,27 @@
-cask 'mathpix-snipping-tool' do
-  version '1.4.1.75'
-  sha256 '2d7b5a6b5b36ab6fa3a8f241b63d5933aa7dbe5fbc70806efb983bb792159212'
+cask "mathpix-snipping-tool" do
+  version "3.3.1,214"
+  sha256 :no_check
 
-  url "https://mathpix.com/dmg/SnippingTool-v#{version}.dmg"
-  appcast 'https://mathpix.com/appcast.xml'
-  name 'Mathpix Snipping Tool'
-  homepage 'https://mathpix.com/'
+  url "https://mathpix.com/dmg/snip.dmg"
+  name "Mathpix Snipping Tool"
+  desc "Scanner app for math and science"
+  homepage "https://mathpix.com/"
+
+  livecheck do
+    url "https://mathpix.com/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
+  depends_on macos: ">= :sierra"
 
-  app 'Mathpix Snipping Tool.app'
+  app "Mathpix Snipping Tool.app"
 
   zap trash: [
-               '~/Library/Application Support/com.mathpix.snipping-tool-noappstore',
-               '~/Library/Caches/com.crashlytics.data/com.mathpix.snipping-tool-noappstore',
-               '~/Library/Caches/io.fabric.sdk.mac.data/com.mathpix.snipping-tool-noappstore',
-               '~/Library/Caches/com.mathpix.snipping-tool-noappstore',
-               '~/Library/Preferences/com.mathpix.snipping-tool-noappstore.plist',
-             ]
+    "~/Library/Application Support/com.mathpix.snipping-tool-noappstore",
+    "~/Library/Caches/com.crashlytics.data/com.mathpix.snipping-tool-noappstore",
+    "~/Library/Caches/io.fabric.sdk.mac.data/com.mathpix.snipping-tool-noappstore",
+    "~/Library/Caches/com.mathpix.snipping-tool-noappstore",
+    "~/Library/Preferences/com.mathpix.snipping-tool-noappstore.plist",
+  ]
 end

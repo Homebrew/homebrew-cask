@@ -1,15 +1,26 @@
-cask 'pd' do
-  version '0.49-1'
-  sha256 '6628074df8951480d8b728cd18e1bda1470d1b7a3572bd7816a28a85e12d85c2'
+cask "pd" do
+  version "0.51-4"
+  sha256 "2dd4c637d8637eefc928e7a06586cb911a21eae72f1abb3a0649a90f7eff20f7"
 
   url "http://msp.ucsd.edu/Software/pd-#{version}.mac.tar.gz"
-  appcast 'http://msp.ucsd.edu/software.html'
-  name 'Pd'
-  homepage 'http://msp.ucsd.edu/software.html'
+  name "Pd"
+  desc "Visual programming language for multimedia"
+  homepage "http://msp.ucsd.edu/software.html"
+
+  livecheck do
+    url "http://msp.ucsd.edu/software.html"
+    strategy :page_match
+    regex(%r{href=.*?/pd-(\d+(?:\.\d+)*-\d+)\.mac\.tar\.gz}i)
+  end
 
   app "Pd-#{version}.app"
 
   postflight do
-    set_permissions "#{appdir}/Pd-#{version}.app", 'u+w'
+    set_permissions "#{appdir}/Pd-#{version}.app", "u+w"
   end
+
+  zap trash: [
+    "~/Library/Preferences/org.puredata.pd.pd-gui.plist",
+    "~/Library/Saved Application State/org.puredata.pd.pd-gui.savedState",
+  ]
 end

@@ -1,11 +1,19 @@
-cask 'quickhash' do
-  version '3.0.4,1816'
-  sha256 'a04252a9803abad388218c27c6387d9783891863d2bd3899ac4804c04cb0914f'
+cask "quickhash" do
+  version "3.3.0,2190"
+  sha256 "fa80950bc63c50cae18f820636f32e592eed9322928cdf5936c3f4bdec866dbb"
 
-  url "https://quickhash-gui.org/download/quickhash-v#{version.before_comma.dots_to_hyphens}-for-apple-osx/?wpdmdl=#{version.after_comma}"
-  appcast 'https://quickhash-gui.org/downloads/'
-  name 'Quickhash'
-  homepage 'https://quickhash-gui.org/'
+  url "https://www.quickhash-gui.org/download/quickhash-gui-v#{version.before_comma.dots_to_hyphens}-apple-osx/?wpdmdl=#{version.after_comma}"
+  name "Quickhash"
+  desc "Data hashing tool"
+  homepage "https://www.quickhash-gui.org/"
 
-  app 'QuickHash.app'
+  livecheck do
+    url "https://www.quickhash-gui.org/downloads/"
+    strategy :page_match do |page|
+      match = page.match(%r{/quickhash[._-](?:gui[._-])?v?(\d+(?:-\d+)+)[._-]apple[._-]osx/\?wpdmdl=(\d+)}i)
+      "#{match[1].tr("-", ".")},#{match[2]}"
+    end
+  end
+
+  app "Quickhash-GUI.app"
 end

@@ -1,14 +1,23 @@
-cask 'vanilla' do
-  version '1.1.1,28:1538098125'
-  sha256 '5a45910f4ea99078884d7cd99563cb19b1cd0c9bda8e120111a235188f121881'
+cask "vanilla" do
+  version "2.0.2,48"
+  sha256 "0d9190844431871fb8306f0d2d5289f7a1e89c095a55f4304efb32a0332d2f83"
 
-  # devmate.com/net.matthewpalmer.Vanilla was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/net.matthewpalmer.Vanilla/#{version.after_comma.before_colon}/#{version.after_colon}/Vanilla-#{version.after_comma.before_colon}.zip"
-  appcast 'https://updates.devmate.com/net.matthewpalmer.Vanilla.xml'
-  name 'Vanilla'
-  homepage 'https://matthewpalmer.net/vanilla/'
+  url "https://macrelease.matthewpalmer.net/distribution/appcasts/Vanilla-#{version.after_comma}.dmg"
+  name "Vanilla"
+  desc "Tool to hide menu bar icons"
+  homepage "https://matthewpalmer.net/vanilla/"
 
-  depends_on macos: '>= :sierra'
+  livecheck do
+    url "https://macrelease.matthewpalmer.net/distribution/appcasts/vanilla.xml?beta=false"
+    strategy :sparkle
+  end
 
-  app 'Vanilla.app'
+  depends_on macos: ">= :sierra"
+
+  app "Vanilla.app"
+
+  zap trash: [
+    "~/Library/Application Support/Vanilla",
+    "~/Library/Preferences/net.matthewpalmer.Vanilla.plist",
+  ]
 end

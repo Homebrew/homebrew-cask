@@ -1,18 +1,29 @@
-cask 'duplicati' do
-  version '2.0.4.23,2019-07-14'
-  sha256 '160ed45028da188853e714df922a6498cebae12170a77d4c2c087e49c8d7b5de'
+cask "duplicati" do
+  version "2.0.6.3,beta:2021-06-17"
+  sha256 "7a26fd69b7016e88a23ff03474eb78e174da463c4967b90c0b54f07a94027e18"
 
-  url "https://updates.duplicati.com/beta/duplicati-#{version.before_comma}_beta_#{version.after_comma}.dmg"
-  appcast 'https://updates.duplicati.com/beta/latest-installers.js'
-  name 'Duplicati'
-  homepage 'https://www.duplicati.com/'
+  url "https://github.com/duplicati/duplicati/releases/download/v#{version.before_comma}-#{version.before_comma}_#{version.after_comma.before_colon}_#{version.after_colon}/duplicati-#{version.before_comma}_#{version.after_comma.before_colon}_#{version.after_colon}.dmg",
+      verified: "github.com/duplicati/duplicati/"
+  name "Duplicati"
+  desc "Store securely encrypted backups in the cloud!"
+  homepage "https://www.duplicati.com/"
 
-  depends_on formula: 'mono'
+  livecheck do
+    url :url
+    strategy :git do |tags|
+      tags.map do |tag|
+        match = tag.match(/^v(\d+(?:\.\d+)*)-(?:\d+(?:\.\d+)*)_(stable|beta)_(\d+(?:-\d+)*)$/i)
+        "#{match[1]},#{match[2]}:#{match[3]}" if match
+      end.compact
+    end
+  end
 
-  app 'Duplicati.app'
+  depends_on formula: "mono"
+
+  app "Duplicati.app"
 
   zap trash: [
-               '~/Library/Application Support/Duplicati',
-               '~/.config/Duplicati',
-             ]
+    "~/Library/Application Support/Duplicati",
+    "~/.config/Duplicati",
+  ]
 end

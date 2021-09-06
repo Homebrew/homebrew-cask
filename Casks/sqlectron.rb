@@ -1,17 +1,16 @@
-cask 'sqlectron' do
-  version '1.30.0'
-  sha256 'a31c2c0cd892d814590ebe2cca5f18578e534a75e55d9ac07ac0f71b182cb3da'
+cask "sqlectron" do
+  version "1.37.1"
+  sha256 "7fb9b05d2154f9c8941cb06470d93dedd5359f2f1171778feceefea10b27838a"
 
-  # github.com/sqlectron/sqlectron-gui was verified as official when first introduced to the cask
-  url "https://github.com/sqlectron/sqlectron-gui/releases/download/v#{version}/Sqlectron-#{version}-mac.zip"
-  appcast 'https://github.com/sqlectron/sqlectron-gui/releases.atom'
-  name 'Sqlectron'
-  homepage 'https://sqlectron.github.io/'
+  url "https://github.com/sqlectron/sqlectron-gui/releases/download/v#{version}/Sqlectron-#{version}-mac.zip",
+      verified: "github.com/sqlectron/sqlectron-gui/"
+  name "Sqlectron"
+  homepage "https://sqlectron.github.io/"
 
-  app 'Sqlectron.app'
+  app "sqlectron.app"
 
   zap trash: [
-               '~/.sqlectron.json',
-               '~/Library/Application Support/Sqlectron',
-             ]
+    "~/.sqlectron.json",
+    "~/Library/Application Support/Sqlectron",
+  ]
 end

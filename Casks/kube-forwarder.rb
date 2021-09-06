@@ -1,12 +1,11 @@
-cask 'kube-forwarder' do
-  version '1.2.0'
-  sha256 '4951a5f7afcd14172a7ad66c50bb636e7a83ac67d76f2a39e59dae8df9f20459'
+cask "kube-forwarder" do
+  version "1.5.1"
+  sha256 "683bcd380885787d653bfb21b39fda05ed786b09abe311c856ae4032859f3d5f"
 
-  # github.com/pixel-point/kube-forwarder was verified as official when first introduced to the cask
-  url "https://github.com/pixel-point/kube-forwarder/releases/download/v#{version}/kube-forwarder.dmg"
-  appcast 'https://github.com/pixel-point/kube-forwarder/releases.atom'
-  name 'Kube Forwarder'
-  homepage 'https://kube-forwarder.pixelpoint.io/'
+  url "https://github.com/pixel-point/kube-forwarder/releases/download/v#{version}/kube-forwarder.dmg",
+      verified: "github.com/pixel-point/kube-forwarder/"
+  name "Kube Forwarder"
+  homepage "https://kube-forwarder.pixelpoint.io/"
 
-  app 'Kube Forwarder.app'
+  app "Kube Forwarder.app"
 end

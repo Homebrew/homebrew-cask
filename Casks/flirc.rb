@@ -1,11 +1,15 @@
-cask 'flirc' do
-  version '3.22.4'
-  sha256 '6fffbb04f84d4441caacf3aa8adefb3d7ef8bd48c922af198cb1d474016c7e20'
+cask "flirc" do
+  version "3.25.3"
+  sha256 "ca01961197f99e232e13d27dd5fe198ef84f476268504e2860507b6530a7f101"
 
-  url 'https://flirc.tv/software/release/gui/mac/Flirc.dmg'
-  appcast 'https://flirc.tv/software/release/gui/mac/appcast.xml'
-  name 'Flirc'
-  homepage 'https://flirc.tv/'
+  url "https://flirc.tv/software/flirc-usb/GUI/release/mac/Flirc-#{version}.dmg"
+  name "Flirc"
+  homepage "https://flirc.tv/"
 
-  app 'Flirc.app'
+  livecheck do
+    url "https://flirc.tv/software/release/gui/mac/appcast.xml"
+    strategy :sparkle
+  end
+
+  app "Flirc.app"
 end

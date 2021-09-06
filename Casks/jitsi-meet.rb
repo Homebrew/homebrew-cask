@@ -1,16 +1,16 @@
-cask 'jitsi-meet' do
-  version '1.1.1'
-  sha256 'b34248980713836ed6f9bd02fc7b05cfc8f823fa40dc8bd78bfd84777ad8e461'
+cask "jitsi-meet" do
+  version "2.8.11"
+  sha256 "fd8a7870d2e3d0e3b4f19f08d4586f1d821a89361f63dced4e36adc2d5fc33dc"
 
   url "https://github.com/jitsi/jitsi-meet-electron/releases/download/v#{version}/jitsi-meet.dmg"
-  appcast 'https://github.com/jitsi/jitsi-meet-electron/releases.atom'
-  name 'Jitsi Meet'
-  homepage 'https://github.com/jitsi/jitsi-meet-electron'
+  name "Jitsi Meet"
+  desc "Free, open-source and secure video conferencing app"
+  homepage "https://github.com/jitsi/jitsi-meet-electron"
 
-  app 'Jitsi Meet.app'
+  app "Jitsi Meet.app"
 
   zap trash: [
-               '~/Library/Application Support/Jitsi Meet',
-               '~/Library/Logs/Jitsi Meet',
-             ]
+    "~/Library/Application Support/Jitsi Meet",
+    "~/Library/Logs/Jitsi Meet",
+  ]
 end

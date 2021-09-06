@@ -1,12 +1,12 @@
-cask 'bitshares' do
-  version '3.1.19061,8.1'
-  sha256 '6fa5bc3ae5765f2085024784422fd0ce0ac1b071c8e01a79dc80a77d1add689e'
+cask "bitshares" do
+  version "5.0.210216"
+  sha256 "569fa44809f92f3b3e2809cb80906a24ebc6cdba5447a0f22136e97aab1ad1d4"
 
-  # github.com/bitshares/bitshares-ui was verified as official when first introduced to the cask
-  url "https://github.com/bitshares/bitshares-ui/releases/download/#{version.before_comma}#{version.after_comma}/BitShares-#{version.before_comma}-#{version.after_comma}.dmg"
-  appcast 'https://github.com/bitshares/bitshares-ui/releases.atom'
-  name 'BitShares'
-  homepage 'https://bitshares.org/'
+  url "https://github.com/bitshares/bitshares-ui/releases/download/#{version}/BitShares-#{version}-mac.zip",
+      verified: "github.com/bitshares/bitshares-ui/"
+  name "BitShares"
+  desc "GUI / Reference wallet for the BitShares blockchain"
+  homepage "https://bitshares.org/"
 
-  app 'BitShares.app'
+  app "BitShares.app"
 end

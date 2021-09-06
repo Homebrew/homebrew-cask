@@ -1,18 +1,19 @@
-cask 'portfolioperformance' do
-  version '0.40.1'
-  sha256 '11d25fd028abc3001efe0bc689b7117a4525ce6b5c12c14a9901541150c03fa1'
+cask "portfolioperformance" do
+  version "0.54.3"
+  sha256 "1e9171c4c88d59cc25d21c9eed69794552eaf4eb9a3569040a951cb460c8dbba"
 
-  # github.com/buchen/portfolio was verified as official when first introduced to the cask
-  url "https://github.com/buchen/portfolio/releases/download/#{version}/PortfolioPerformance-distro-#{version}-macosx.cocoa.x86_64.tar.gz"
-  appcast 'https://github.com/buchen/portfolio/releases.atom'
-  name 'Portfolio Performance'
-  homepage 'https://www.portfolio-performance.info/portfolio/'
+  url "https://github.com/buchen/portfolio/releases/download/#{version}/PortfolioPerformance-#{version}.dmg",
+      verified: "github.com/buchen/portfolio/"
+  name "Portfolio Performance"
+  desc "Calculate the overall performance of an investment portfolio"
+  homepage "https://www.portfolio-performance.info/en/"
+
+  livecheck do
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+)$/)
+  end
 
   auto_updates true
 
-  app 'PortfolioPerformance.app'
-
-  caveats do
-    depends_on_java '8+'
-  end
+  app "PortfolioPerformance.app"
 end

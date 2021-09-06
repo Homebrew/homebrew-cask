@@ -1,11 +1,22 @@
-cask 'digital' do
-  version '1.1'
-  sha256 '94fb4a2d4829cd4b717d5c250167cbe79cccf7870335c1fd4694462211c98802'
+cask "digital" do
+  version "0.27"
+  sha256 "a93b9dd70ed5b051bf04aacc37f2794c3c3d17f214ab99f0c8f4a36e55bbe835"
 
-  url "https://scoutshonour.com/lilyofthevalley/digital-#{version}.dmg"
-  appcast 'https://scoutshonour.com/digital/'
-  name 'Digital: A Love Story'
-  homepage 'https://scoutshonour.com/digital/'
+  url "https://github.com/hneemann/Digital/releases/download/v#{version}/Digital.zip"
+  name "Digital"
+  desc "Logic designer and circuit simulator"
+  homepage "https://github.com/hneemann/Digital"
 
-  app 'Digital.app'
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  suite "Digital"
+
+  zap trash: "~/.digital.cfg"
+
+  caveats do
+    depends_on_java "8+"
+  end
 end

@@ -1,22 +1,36 @@
-cask 'klayout' do
-  version '0.25.7'
-  sha256 'f3b0d2899496cf8166a296a6ad917e63475ab60a14915947153bac15ee1e5f0a'
+cask "klayout" do
+  version "0.26.8"
 
-  # klayout.org was verified as official when first introduced to the cask
-  url "https://www.klayout.org/downloads/MacOS/klayout-#{version}-macOS-Mojave-1-Qt5120mp.dmg"
-  appcast 'https://www.klayout.de/development.html'
-  name 'KLayout'
-  homepage 'https://www.klayout.de/'
+  if MacOS.version <= :high_sierra
+    sha256 "b6ee7a8ee71e8cb218b6ecea4df6865cb1d0f49b646101246543bd7de1d6d5e7"
 
-  depends_on macos: '>= :mojave'
+    url "https://www.klayout.org/downloads/MacOS/ST-klayout-#{version}-macOS-HighSierra-1-qt5MP-RsysPsys.dmg",
+        verified: "klayout.org/"
+  elsif MacOS.version <= :mojave
+    sha256 "e3ade30ac217f312720d2157cd6e9afad566cbb239a08ecd55a6f9d8dc9af3e0"
 
-  suite 'KLayout'
+    url "https://www.klayout.org/downloads/MacOS/ST-klayout-#{version}-macOS-Mojave-1-qt5MP-RsysPsys.dmg",
+        verified: "klayout.org/"
+  else
+    sha256 "73641ce0c0f34bb21d43001f1f5924f60221a60458b131cb445fdf3f98c5dff5"
+
+    url "https://www.klayout.org/downloads/MacOS/ST-klayout-#{version}-macOS-Catalina-1-qt5MP-RsysPsys.dmg",
+        verified: "klayout.org/"
+  end
+
+  appcast "https://www.klayout.de/development.html"
+  name "KLayout"
+  homepage "https://www.klayout.de/"
+
+  depends_on macos: ">= :mojave"
+
+  suite "KLayout"
 
   preflight do
     # There is no sub-folder in the DMG; the root *is* the folder
-    FileUtils.mv(staged_path.children, staged_path.join('KLayout').tap(&:mkpath))
+    FileUtils.mv(staged_path.children, staged_path.join("KLayout").tap(&:mkpath))
   end
 
-  uninstall pkgutil: 'klayout.de',
-            quit:    'klayout.de'
+  uninstall pkgutil: "klayout.de",
+            quit:    "klayout.de"
 end

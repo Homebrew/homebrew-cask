@@ -1,12 +1,18 @@
-cask 'photoninja' do
-  version '1.3.7a'
-  sha256 'a3edcb3ec6f3b2449165b713102cb09dbb8a8f8108c2c317355e11e902bc8e2b'
+cask "photoninja" do
+  version "1.3.10"
+  sha256 "9f6df73e21dffb47e281183ea8fd6a8ed74bb0ad725240c7cfbba4a7fbb1dce7"
 
-  # picturecode.cachefly.net was verified as official when first introduced to the cask
-  url "https://picturecode.cachefly.net/photoninja/downloads/Install_PhotoNinja_#{version}.dmg"
-  appcast 'https://www.picturecode.com/download.php'
-  name 'Photo Ninja'
-  homepage 'https://www.picturecode.com/index.php'
+  url "https://picturecode.cachefly.net/photoninja/downloads/Install_PhotoNinja_#{version}.dmg",
+      verified: "picturecode.cachefly.net/"
+  name "Photo Ninja"
+  desc "Professional RAW converter"
+  homepage "https://www.picturecode.com/index.php"
+
+  livecheck do
+    url "https://www.picturecode.com/download.php"
+    strategy :page_match
+    regex(%r{href=.*?/Install_PhotoNinja_(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   app "PhotoNinja_#{version}.app"
 end

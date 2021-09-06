@@ -1,12 +1,18 @@
-cask 'dictionaries' do
-  version '1.3.3,305:1559998396'
-  sha256 '730a524969d58c18434e797d15042f9e56d1ea365ebba85a7c3f7d5be3a9e409'
+cask "dictionaries" do
+  version "1.7,382:1615218055"
+  sha256 "fa5db82ef3927a3440e46f5190163c6ffcba4a073e6aeb8a12ba4d347c594581"
 
-  # dl.devmate.com/io.dictionaries.Dictionaries was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/io.dictionaries.Dictionaries/#{version.after_comma.before_colon}/#{version.after_colon}/Dictionaries-#{version.after_comma.before_colon}.zip"
-  appcast 'https://updates.devmate.com/io.dictionaries.Dictionaries.xml'
-  name 'Dictionaries'
-  homepage 'https://dictionaries.io/'
+  url "https://dl.devmate.com/io.dictionaries.Dictionaries/#{version.after_comma.before_colon}/#{version.after_colon}/Dictionaries-#{version.after_comma.before_colon}.zip",
+      verified: "dl.devmate.com/io.dictionaries.Dictionaries/"
+  name "Dictionaries"
+  homepage "https://dictionaries.io/"
 
-  app 'Dictionaries.app'
+  livecheck do
+    url "https://updates.devmate.com/io.dictionaries.Dictionaries.xml"
+    strategy :sparkle do |item|
+      "#{item.short_version},#{item.version}:#{item.url[%r{/(\d+)/Dictionaries-\d+\.zip}i, 1]}"
+    end
+  end
+
+  app "Dictionaries.app"
 end

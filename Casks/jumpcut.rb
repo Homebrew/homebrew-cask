@@ -1,12 +1,14 @@
-cask 'jumpcut' do
-  version '0.63'
-  sha256 '19c84eefbc7f173af45affe3a9ca6fd9ec58d9bdf6bacef165085e63e82d54e1'
+cask "jumpcut" do
+  version "0.75"
+  sha256 "170c669ae3dffdf029434412eb6ec5d733905583ad7ad72120179b5af3615c1a"
 
-  # downloads.sourceforge.net/jumpcut was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/jumpcut/jumpcut/#{version}/Jumpcut_#{version}.tgz"
-  appcast 'https://jumpcut.sourceforge.io/jumpcut.appcast.xml'
-  name 'Jumpcut'
-  homepage 'https://jumpcut.sourceforge.io/'
+  url "https://github.com/snark/jumpcut/releases/download/v#{version}/Jumpcut-#{version}.tar.bz2",
+      verified: "github.com/snark/jumpcut/"
+  name "Jumpcut"
+  desc "Clipboard manager"
+  homepage "https://snark.github.io/jumpcut/"
 
-  app 'Jumpcut.app'
+  depends_on macos: ">= :el_capitan"
+
+  app "Jumpcut.app"
 end

@@ -1,21 +1,26 @@
-cask 'vysor' do
-  version '2.1.2'
-  sha256 '40f86a4781585f2aeb5a7ffbf8efaf6d1a52b960b2afbf973c719d0ea65da36d'
+cask "vysor" do
+  version "4.1.77"
+  sha256 "b02f1f01c0ea8c071d3e1fe5ca4d4a0affa9a5d40a2544af49cc24fc5b4fbbb9"
 
-  # github.com/koush/vysor.io was verified as official when first introduced to the cask
-  url "https://github.com/koush/vysor.io/releases/download/#{version}/Vysor-mac.zip"
-  appcast 'https://github.com/koush/vysor.io/releases.atom'
-  name 'Vysor'
-  homepage 'https://www.vysor.io/'
+  url "https://github.com/koush/vysor.io/releases/download/v#{version}/Vysor-mac-#{version}.zip",
+      verified: "github.com/koush/vysor.io/"
+  name "Vysor"
+  desc "Mirror and control your phone"
+  homepage "https://www.vysor.io/"
 
-  app 'Vysor.app'
+  livecheck do
+    url "http://vysornuts.clockworkmod.com/download/mac"
+    strategy :header_match
+  end
+
+  app "Vysor.app"
 
   zap trash: [
-               '~/Library/Application Support/Vysor',
-               '~/Library/Caches/com.electron.vysor',
-               '~/Library/Caches/com.electron.vysor.ShipIt',
-               '~/Library/Preferences/com.electron.vysor.plist',
-               '~/Library/Preferences/com.electron.vysor.helper.plist',
-               '~/Library/Saved Application State/com.electron.vysor.savedState',
-             ]
+    "~/Library/Application Support/Vysor",
+    "~/Library/Caches/com.electron.vysor",
+    "~/Library/Caches/com.electron.vysor.ShipIt",
+    "~/Library/Preferences/com.electron.vysor.plist",
+    "~/Library/Preferences/com.electron.vysor.helper.plist",
+    "~/Library/Saved Application State/com.electron.vysor.savedState",
+  ]
 end

@@ -1,29 +1,33 @@
-cask 'datadog-agent' do
-  version '6.12.0-1'
-  sha256 'ea7b93241fa31ed05b2a73670541d5104e84e387079779c6bb35d9c9dc9ea208'
+cask "datadog-agent" do
+  version "7.30.1-1"
+  sha256 "a2f721abbd51ee8a8626da2c965c8f83ddb950bd1f170818dbc91a9324fe0b24"
 
-  # dd-agent.s3.amazonaws.com was verified as official when first introduced to the cask
-  url "https://dd-agent.s3.amazonaws.com/datadog-agent-#{version}.dmg"
-  appcast 'https://github.com/DataDog/datadog-agent/releases.atom'
-  name 'Datadog Agent'
-  homepage 'https://www.datadoghq.com/'
+  url "https://s3.amazonaws.com/dd-agent/datadog-agent-#{version}.dmg",
+      verified: "s3.amazonaws.com/dd-agent/"
+  name "Datadog Agent"
+  desc "Monitoring and security across systems, apps, and services"
+  homepage "https://www.datadoghq.com/"
 
-  pkg "datadog-agent-#{version}.pkg"
-
-  preflight do
-    require 'etc'
-    File.write('/tmp/datadog-install-user', Etc.getlogin)
+  livecheck do
+    url "https://s3.amazonaws.com/dd-agent/"
+    regex(%r{<Key>datadog-agent-([\d.-]+)\.dmg</Key>}i)
   end
 
-  uninstall launchctl: 'com.datadoghq.agent',
-            # pkgutil: 'com.datadoghq.agent' # this is commented out because PKG uninstallation seems to fail due to missing files caused by case insensitivity and files that differ only in case. See https://github.com/Homebrew/homebrew-cask/pull/54739.
-            delete:    [
-                         '/Applications/Datadog Agent.app',
-                         '/opt/datadog-agent/',
-                         '/private/var/db/receipts/com.datadoghq.agent.*',
-                       ]
+  installer manual: "datadog-agent-#{version}.pkg"
 
-  zap trash: '/opt/datadog-agent'
+  uninstall quit:      "com.datadoghq.agent",
+            launchctl: "com.datadoghq.agent",
+            pkgutil:   "com.datadoghq.agent",
+            delete:    [
+              "/Applications/Datadog Agent.app",
+              "/usr/local/bin/datadog-agent",
+            ]
+
+  zap trash: [
+    "~/.datadog-agent",
+    "~/Library/LaunchAgents/com.datadoghq.agent.plist",
+    "/opt/datadog-agent",
+  ]
 
   caveats <<~EOS
     You will need to update /opt/datadog-agent/etc/datadog.yaml and replace APIKEY with your api key
@@ -31,7 +35,7 @@ cask 'datadog-agent' do
     If you ever want to start/stop the Agent, please use the Datadog Agent App or datadog-agent command.
     It will start automatically at login, if you want to enable it at startup, run these commands:
 
-    sudo cp '/opt/datadog-agent/etc/com.datadoghq.agent.plist' /Library/LaunchDaemons
+    sudo cp '/opt/datadog-agent/etc/com.datadoghq.agent.plist.example' /Library/LaunchDaemons/com.datadoghq.agent.plist
     sudo launchctl load -w /Library/LaunchDaemons/com.datadoghq.agent.plist
   EOS
 end

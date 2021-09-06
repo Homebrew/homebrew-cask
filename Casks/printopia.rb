@@ -1,13 +1,19 @@
-cask 'printopia' do
-  version '3.0.13'
-  sha256 'cac11d0ba2af9d33c7dcb7ecd42812c3ca4845f7f403c9c9d1b8a015829a90e1'
+cask "printopia" do
+  version "3.0.18"
+  sha256 "51de92ead595942ade92c088f30ac2a64756df0fc5abaec2f7f20d9bb1ac2a16"
 
-  url "https://www.decisivetactics.com/products/printopia/dl/Printopia_#{version}.zip"
-  appcast 'https://www.decisivetactics.com/api/checkupdate?x-app_id=com.decisivetactics.printopia'
-  name 'Printopia'
-  homepage 'https://www.decisivetactics.com/products/printopia/'
+  url "https://download.decisivetactics.com/downloads/printopia/Printopia_#{version}.zip"
+  name "Printopia"
+  desc "Wireless printing to any printer"
+  homepage "https://www.decisivetactics.com/products/printopia/"
 
-  app 'Printopia.app'
+  livecheck do
+    url "https://www.decisivetactics.com/api/checkupdate?x-app_id=com.decisivetactics.printopia"
+    strategy :page_match
+    regex(%r{/Printopia_(\d+(?:\.\d+)*)\.zip}i)
+  end
 
-  zap trash: '~/Library/Preferences/com.ecamm.printopia.plist'
+  app "Printopia.app"
+
+  zap trash: "~/Library/Preferences/com.ecamm.printopia.plist"
 end

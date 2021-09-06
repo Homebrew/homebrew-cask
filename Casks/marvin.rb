@@ -1,12 +1,23 @@
-cask 'marvin' do
-  version '1.42.0'
-  sha256 '0db23d6e011ea23d53906ea9394af04ef4e9e5d0ffe77d5d5cdd8c7ac7694805'
+cask "marvin" do
+  version "1.60.2"
+  sha256 "1603f4e5257bf95996e27d027b42972b4132c92cc95617c3a45821cc14d1d637"
 
-  # amazingmarvin.s3.amazonaws.com was verified as official when first introduced to the cask
-  url "https://amazingmarvin.s3.amazonaws.com/Marvin-#{version}.dmg"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=http://amazingmarvin.s3-website-us-east-1.amazonaws.com/Marvin.dmg'
-  name 'Amazing Marvin'
-  homepage 'https://www.amazingmarvin.com/'
+  url "https://amazingmarvin.s3.amazonaws.com/Marvin-#{version}.dmg",
+      verified: "amazingmarvin.s3.amazonaws.com/"
+  name "Amazing Marvin"
+  desc "Personal productivity app"
+  homepage "https://www.amazingmarvin.com/"
 
-  app 'Marvin.app'
+  livecheck do
+    url "http://amazingmarvin.s3-website-us-east-1.amazonaws.com/Marvin.dmg"
+    strategy :header_match
+  end
+
+  app "Marvin.app"
+
+  zap trash: [
+    "~/Library/Application Support/Marvin",
+    "~/Library/Logs/Marvin",
+    "~/Library/Preferences/com.amazingmarvin.marvindesktop.plist",
+  ]
 end

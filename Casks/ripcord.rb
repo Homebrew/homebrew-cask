@@ -1,19 +1,25 @@
-cask 'ripcord' do
-  version '0.4.9'
-  sha256 '8d4f9fb0b507dcfa42e91ad42ed6783d98ede1b618e86555e6ae78801f177c5f'
+cask "ripcord" do
+  version "0.4.29"
+  sha256 "bacfb539fac9df2004a926ff57232622e53b668cbdbc6c2201b3ac87b91d2550"
 
   url "https://cancel.fm/dl/Ripcord_Mac_#{version}.zip"
-  appcast 'https://cancel.fm/ripcord/updates/v1'
-  name 'Ripcord'
-  homepage 'https://cancel.fm/ripcord/'
+  name "Ripcord"
+  desc "Desktop chat client for Slack (and Discord)"
+  homepage "https://cancel.fm/ripcord/"
 
-  depends_on macos: '>= :sierra'
+  livecheck do
+    url "https://cancel.fm/ripcord/updates/v1"
+    strategy :page_match
+    regex(%r{/Ripcord_Mac_(\d+(?:\.\d+)*)\.zip}i)
+  end
 
-  app 'Ripcord.app'
+  depends_on macos: ">= :sierra"
+
+  app "Ripcord.app"
 
   zap trash: [
-               '~/Library/Application Support/Ripcord',
-               '~/Library/Preferences/com.cancelfm.Ripcord.plist',
-               '~/Library/Saved Application State/com.cancelfm.Ripcord.savedState',
-             ]
+    "~/Library/Application Support/Ripcord",
+    "~/Library/Preferences/com.cancelfm.Ripcord.plist",
+    "~/Library/Saved Application State/com.cancelfm.Ripcord.savedState",
+  ]
 end

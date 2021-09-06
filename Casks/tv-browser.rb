@@ -1,12 +1,16 @@
-cask 'tv-browser' do
-  version '4.0.1'
-  sha256 '0f881a81da4a10ee29622e1667df07b9445559746a900a1ac24000f6da9f1e0a'
+cask "tv-browser" do
+  version "4.2.3"
+  sha256 "f5542146d514b44fbb3dddb0c36bc64af0436820db47bda4334d4b2e2b869f77"
 
-  # sourceforge.net/tvbrowser was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/tvbrowser/tvbrowser_#{version}_macjava.dmg"
-  appcast 'https://sourceforge.net/projects/tvbrowser/rss'
-  name 'TV-Browser'
-  homepage 'https://www.tvbrowser.org/'
+  url "https://downloads.sourceforge.net/tvbrowser/tvbrowser_#{version}_macjava.dmg",
+      verified: "sourceforge.net/tvbrowser/"
+  name "TV-Browser"
+  desc "Electronic TV guide"
+  homepage "https://www.tvbrowser.org/"
 
-  app 'TV-Browser.app'
+  livecheck do
+    regex(%r{url=.*?/tvbrowser/files/.*?[-_/](\d+(?:[-.]\d+)+)[._-]macjava.dmg}i)
+  end
+
+  app "TV-Browser.app"
 end

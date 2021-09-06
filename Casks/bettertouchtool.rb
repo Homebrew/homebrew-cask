@@ -1,30 +1,27 @@
-cask 'bettertouchtool' do
-  if MacOS.version <= :mavericks
-    version '2.05'
-    sha256 '41013cfeffee286a038363651db3dd315ff3a1e0cf07774d9ce852111be50a5a'
+cask "bettertouchtool" do
+  version "3.581-1724"
+  sha256 "c7321be14b3baec8d4893b52903460e94ddaf52a62c8381f4d78637b63b0af18"
 
-    # bettertouchtool.net/releases was verified as official when first introduced to the cask
-    url "https://bettertouchtool.net/releases/btt#{version}_final_10_9.zip"
-  else
-    version '3.153'
-    sha256 '1667df9285e674ac8ccb7cec6db349e6959d07485ea5db4aa343f231f67dc4a7'
+  url "https://folivora.ai/releases/btt#{version}.zip"
+  name "BetterTouchTool"
+  desc "Tool to customize input devices and automate computer systems"
+  homepage "https://folivora.ai/"
 
-    # bettertouchtool.net/releases was verified as official when first introduced to the cask
-    url "https://bettertouchtool.net/releases/btt#{version}.zip"
-    appcast 'https://bettertouchtool.net/releases/'
+  livecheck do
+    url "https://folivora.ai/releases/"
+    strategy :page_match do |page|
+      page.scan(/btt(\d+(?:.\d+)*)\.zip.*?(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2})/i)
+          .max_by { |(_, time)| Time.parse(time) }
+          .first
+    end
   end
-
-  name 'BetterTouchTool'
-  homepage 'https://folivora.ai/'
 
   auto_updates true
 
-  app 'BetterTouchTool.app'
-
-  uninstall login_item: 'BetterTouchTool'
+  app "BetterTouchTool.app"
 
   zap trash: [
-               '~/Library/Preferences/com.hegenberg.BetterTouchTool.plist',
-               '~/Library/Application Support/BetterTouchTool',
-             ]
+    "~/Library/Preferences/com.hegenberg.BetterTouchTool.plist",
+    "~/Library/Application Support/BetterTouchTool",
+  ]
 end

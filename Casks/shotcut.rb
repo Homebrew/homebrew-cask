@@ -1,12 +1,26 @@
-cask 'shotcut' do
-  version '19.07.15'
-  sha256 'cd335f4ae15f2b3e5f0a69986bcc6dd7b3981bcb17ef61fbda799e7df9fdd475'
+cask "shotcut" do
+  version "21.08.29"
 
-  # github.com/mltframework/shotcut was verified as official when first introduced to the cask
-  url "https://github.com/mltframework/shotcut/releases/download/v#{version}/shotcut-macos-signed-#{version.no_dots}.dmg"
-  appcast 'https://github.com/mltframework/shotcut/releases.atom'
-  name 'Shotcut'
-  homepage 'https://www.shotcut.org/'
+  if Hardware::CPU.intel?
+    sha256 "931cfe920dd26269f3ad4202f769545f044eff082933267bde0a42a111fa43eb"
 
-  app 'Shotcut.app'
+    url "https://github.com/mltframework/shotcut/releases/download/v#{version}/shotcut-macos-#{version.no_dots}.dmg",
+        verified: "github.com/mltframework/shotcut/"
+  else
+    sha256 "e7db1625bd4e04920ef1496655e8a9e3169a3b89b756557ae9f3f3152ea18c84"
+
+    url "https://github.com/mltframework/shotcut/releases/download/v#{version}/shotcut-macos-ARM64-#{version.no_dots}.dmg",
+        verified: "github.com/mltframework/shotcut/"
+  end
+
+  name "Shotcut"
+  desc "Video editor"
+  homepage "https://www.shotcut.org/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  app "Shotcut.app"
 end

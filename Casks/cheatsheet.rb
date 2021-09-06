@@ -1,18 +1,23 @@
-cask 'cheatsheet' do
-  version '1.3.3'
-  sha256 '00c88a31e6e647c9a267d062690938a32aa73f2bf0dffcb04a0329d0e9c68423'
+cask "cheatsheet" do
+  version "1.6"
+  sha256 "64986f698f44d6644378c771379ed14eea6f4be00e7e4e75152f9d779f2190f4"
 
-  # mediaatelier.com/CheatSheet was verified as official when first introduced to the cask
-  url "https://mediaatelier.com/CheatSheet/CheatSheet_#{version}.zip"
-  appcast 'https://mediaatelier.com/CheatSheet/feed.php'
-  name 'CheatSheet'
-  homepage 'https://www.cheatsheetapp.com/CheatSheet/'
+  url "https://mediaatelier.com/CheatSheet/CheatSheet_#{version}.zip",
+      verified: "mediaatelier.com/CheatSheet/"
+  name "CheatSheet"
+  desc "Tool to list all active shortcuts of the current application"
+  homepage "https://www.cheatsheetapp.com/CheatSheet/"
 
-  app 'CheatSheet.app'
+  livecheck do
+    url "https://mediaatelier.com/CheatSheet/feed.php"
+    strategy :sparkle
+  end
+
+  app "CheatSheet.app"
 
   zap trash: [
-               '~/Library/Application Support/com.mediaatelier.CheatSheet',
-               '~/Library/Caches/com.mediaatelier.CheatSheet',
-               '~/Library/Preferences/com.mediaatelier.CheatSheet.plist',
-             ]
+    "~/Library/Application Support/com.mediaatelier.CheatSheet",
+    "~/Library/Caches/com.mediaatelier.CheatSheet",
+    "~/Library/Preferences/com.mediaatelier.CheatSheet.plist",
+  ]
 end

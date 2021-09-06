@@ -1,14 +1,19 @@
-cask 'pdfsam-basic' do
-  version '4.0.3'
-  sha256 'c96d058f625fc181830adad47e901cb739a71c11a7dc82e759973753511f6212'
+cask "pdfsam-basic" do
+  version "4.2.6"
+  sha256 "0fba4e7ce99084403a4152601fb08773cd46bdb0fc14144aa9411c15fc41619a"
 
-  # github.com/torakiki/pdfsam was verified as official when first introduced to the cask
-  url "https://github.com/torakiki/pdfsam/releases/download/v#{version}/PDFsam-#{version}.dmg"
-  appcast 'https://github.com/torakiki/pdfsam/releases.atom'
-  name 'PDFsam Basic'
-  homepage 'https://www.pdfsam.org/'
+  url "https://github.com/torakiki/pdfsam/releases/download/v#{version}/PDFsam-#{version}.dmg",
+      verified: "github.com/torakiki/pdfsam/"
+  name "PDFsam Basic"
+  desc "Extractas pages, splits, merges, mixes and rotates PDF files"
+  homepage "https://pdfsam.org/"
 
-  pkg "PDFsam Basic-#{version}.pkg"
+  app "PDFsam Basic.app"
 
-  uninstall pkgutil: 'org.pdfsam.basic'
+  zap trash: [
+    "~/Library/Preferences/org.pdfsam.modules.plist",
+    "~/Library/Preferences/org.pdfsam.stage.plist",
+    "~/Library/Preferences/org.pdfsam.user.plist",
+    "~/Library/Saved Application State/org.pdfsam.basic.savedState",
+  ]
 end

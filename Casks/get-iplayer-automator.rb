@@ -1,11 +1,19 @@
-cask 'get-iplayer-automator' do
-  version '1.15.1.b20190331001'
-  sha256 '97e02c14bc9b0cdd96cbdd01c507b574874759c8081d7752cdc0c6bcde6fdefc'
+cask "get-iplayer-automator" do
+  version "1.21.12,20210729001"
+  sha256 "0aad06d5771c1a9ad251273e2fca8178313079caede9a1b8f4e2ef5897644ed1"
 
-  url "https://github.com/Ascoware/get-iplayer-automator/releases/download/v#{version.major_minor_patch}/Get.iPlayer.Automator.v#{version}.zip"
-  appcast 'https://github.com/Ascoware/get-iplayer-automator/releases.atom'
-  name 'Get iPlayer Automator'
-  homepage 'https://github.com/Ascoware/get-iplayer-automator'
+  url "https://github.com/Ascoware/get-iplayer-automator/releases/download/v#{version.before_comma}/Get.iPlayer.Automator.v#{version.before_comma}.b#{version.after_comma}.zip"
+  name "Get iPlayer Automator"
+  desc "Download and watch BBC and ITV shows"
+  homepage "https://github.com/Ascoware/get-iplayer-automator"
 
-  app 'Get iPlayer Automator.app'
+  livecheck do
+    url "https://github.com/Ascoware/get-iplayer-automator/releases/latest"
+    strategy :page_match do |page|
+      match = page.match(%r{href=.*?/Get\.?iPlayer\.?Automator\.?v?(\d+(?:.\d+)*).b(\d+)\.zip}i)
+      "#{match[1]},#{match[2]}"
+    end
+  end
+
+  app "Get iPlayer Automator.app"
 end

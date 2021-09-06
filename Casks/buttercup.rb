@@ -1,12 +1,28 @@
-cask 'buttercup' do
-  version '1.16.1'
-  sha256 'd4fe98a227cd303555644809acceb78235b310ceef5e89d61a470984539ada70'
+cask "buttercup" do
+  version "2.10.0"
+  sha256 "e268b05356e56ab3058caf6de232231d955fa17d416cfba84510549d995bf661"
 
-  # github.com/buttercup/buttercup-desktop was verified as official when first introduced to the cask
-  url "https://github.com/buttercup/buttercup-desktop/releases/download/v#{version}/Buttercup-#{version}-mac.zip"
-  appcast 'https://github.com/buttercup/buttercup-desktop/releases.atom'
-  name 'Buttercup'
-  homepage 'https://buttercup.pw/'
+  url "https://github.com/buttercup/buttercup-desktop/releases/download/v#{version}/Buttercup-mac-x64-#{version}.dmg",
+      verified: "github.com/buttercup/buttercup-desktop/"
+  name "Buttercup"
+  desc "Javascript Secrets Vault - Multi-Platform Desktop Application"
+  homepage "https://buttercup.pw/"
 
-  app 'Buttercup.app'
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  auto_updates true
+
+  app "Buttercup.app"
+
+  zap trash: [
+    "~/Library/Application Support/Buttercup",
+    "~/Library/Application Support/Buttercup-nodejs",
+    "~/Library/Logs/Buttercup-nodejs",
+    "~/Library/Preferences/Buttercup-nodejs",
+    "~/Library/Preferences/pw.buttercup.desktop.plist",
+    "~/Library/Saved Application State/pw.buttercup.desktop.savedState",
+  ]
 end

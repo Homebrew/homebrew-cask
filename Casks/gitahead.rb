@@ -1,13 +1,12 @@
-cask 'gitahead' do
-  version '2.5.8'
-  sha256 'ce8fff4f9e2329f9ea9ae67c4c0928ece49a31650f38f05711c9a8d0a8f140c2'
+cask "gitahead" do
+  version "2.6.3"
+  sha256 "ea017f49698ec7442d0e322e2640fba9b087694f5efc15d0b8c730b6343c378b"
 
   url "https://github.com/gitahead/gitahead/releases/download/v#{version}/GitAhead-#{version}.dmg"
-  appcast 'https://github.com/gitahead/gitahead/releases.atom'
-  name 'GitAhead'
-  homepage 'https://github.com/gitahead/gitahead'
+  name "GitAhead"
+  homepage "https://github.com/gitahead/gitahead"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'GitAhead.app'
+  app "GitAhead.app"
 end

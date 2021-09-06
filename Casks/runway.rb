@@ -1,11 +1,17 @@
-cask 'runway' do
-  version '1.9'
-  sha256 'bd063e9f8db568aa2c57d5f7464dbdfead7b21dec8a80f112b0b78a349578114'
+cask "runway" do
+  version "0.19.0"
+  sha256 "c39c7ae1b45b08e02c18b6fc87775466833d6974c5ec7a606724834578cff893"
 
-  url "http://celestialteapot.com/runway/dist/Runway_#{version}.zip"
-  appcast 'http://celestialteapot.com/runway/appcast/runway.rss'
-  name 'Runway'
-  homepage 'http://celestialteapot.com/runway/'
+  url "https://runway-releases.s3.amazonaws.com/Runway-#{version}.dmg",
+      verified: "runway-releases.s3.amazonaws.com/"
+  name "Runway"
+  desc "Creative toolkit powered by machine learning"
+  homepage "https://runwayml.com/"
 
-  app 'Runway.app'
+  livecheck do
+    url "https://runway-releases.s3.amazonaws.com/latest-mac.yml"
+    strategy :electron_builder
+  end
+
+  app "Runway.app"
 end

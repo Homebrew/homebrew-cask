@@ -1,14 +1,38 @@
-cask 'qt-creator' do
-  version '4.9.2'
-  sha256 '6a724b9648602d36732855873b5d5cf98bd7d05d9e3f436bc511653f9b955c7b'
+cask "qt-creator" do
+  version "5.0.0"
+  sha256 "e697481fa445543857d0c221895f7a1c53b156f0551af2279d99582318589ccf"
 
   url "https://download.qt.io/official_releases/qtcreator/#{version.major_minor}/#{version}/qt-creator-opensource-mac-x86_64-#{version}.dmg"
-  appcast 'https://download.qt.io/official_releases/qtcreator/',
-          configuration: version.major_minor
-  name 'Qt Creator'
-  homepage 'https://www.qt.io/developers/'
+  name "Qt Creator"
+  desc "IDE for application development"
+  homepage "https://www.qt.io/developers/"
 
-  depends_on macos: '>= :sierra'
+  # It's necessary to check within a major/minor version directory
+  # (fetching an additional page) to obtain the full version.
+  livecheck do
+    url "https://download.qt.io/official_releases/qtcreator/?C=M;O=D"
+    strategy :page_match do |page|
+      # These version directories can sometimes be empty, so this will check
+      # directory pages until it finds versions
+      page.scan(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i).lazy.map do |match|
+        version_page = Homebrew::Livecheck::Strategy.page_content(url.sub("/?", "/#{match[0]}/?"))
+        next if version_page[:content].blank?
 
-  app 'Qt Creator.app'
+        versions = version_page[:content].scan(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i).map(&:first)
+        next if versions.blank?
+
+        versions
+      end.reject(&:nil?).first
+    end
+  end
+
+  depends_on macos: ">= :sierra"
+
+  app "Qt Creator.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.qtproject.QtCreator.plist",
+    "~/Library/Preferences/org.qt-project.qtcreator.plist",
+    "~/Library/Saved Application State/org.qt-project.qtcreator.savedState",
+  ]
 end

@@ -1,12 +1,20 @@
-cask 'itk-snap' do
-  version '3.6.0-20170401'
-  sha256 '865e54fc3c872bf1815dd0535dd232a195844eac7016186e3327587555dceda6'
+cask "itk-snap" do
+  version "3.8.0,20190612"
+  sha256 "135405baf7abc900d17d9120798b104654a9bc271aa9476c9c1150d165ee5fd8"
 
-  # downloads.sourceforge.net/itk-snap was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/itk-snap/itksnap-#{version}-MacOS-x86_64.dmg"
-  appcast "https://sourceforge.net/projects/itk-snap/rss?path=/itk-snap/#{version.major_minor_patch}"
-  name 'ITK-SNAP'
-  homepage 'http://www.itksnap.org/pmwiki/pmwiki.php'
+  url "https://downloads.sourceforge.net/itk-snap/itksnap-#{version.before_comma}-#{version.after_comma}-MacOS-x86_64.dmg",
+      verified: "downloads.sourceforge.net/itk-snap/"
+  name "ITK-SNAP"
+  desc "Segment structures in 3D medical images"
+  homepage "http://www.itksnap.org/pmwiki/pmwiki.php"
 
-  app 'ITK-SNAP.app'
+  livecheck do
+    url "http://www.nitrc.org/frs/downloadlink.php/11444"
+    strategy :header_match do |headers|
+      match = headers["location"].match(/itksnap[._-]?(\d+(?:\.\d+)*)[._-]?(\d+(?:\.\d+)*)[._-]?MacOS-x86_64\.dmg/i)
+      "#{match[1]},#{match[2]}"
+    end
+  end
+
+  app "ITK-SNAP.app"
 end

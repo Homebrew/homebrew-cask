@@ -1,56 +1,71 @@
-cask 'mactex-no-gui' do
-  version '2019.0508'
-  sha256 'ce6fa6d3ec5a4058d5889cfc36bf634fd8a5aefb6601d10c853e5f5d76455f4a'
+cask "mactex-no-gui" do
+  version "2021.0328"
+  sha256 "e541257d70f911550341853709fc45d9fa9fcd4c93058382000ebb19b284833b"
 
-  # mirror.ctan.org/systems/mac/mactex was verified as official when first introduced to the cask
-  url "http://mirror.ctan.org/systems/mac/mactex/mactex-#{version.no_dots}.pkg"
-  appcast 'https://www.tug.org/mactex/downloading.html'
-  name 'MacTeX'
-  homepage 'https://www.tug.org/mactex/'
+  url "http://mirror.ctan.org/systems/mac/mactex/mactex-#{version.no_dots}.pkg",
+      verified: "mirror.ctan.org/systems/mac/mactex/"
+  name "MacTeX"
+  desc "Full TeX Live distribution without GUI applications"
+  homepage "https://www.tug.org/mactex/"
+
+  livecheck do
+    url "https://ctan.org/texarchive/systems/mac/mactex/"
+    strategy :page_match do |page|
+      match = page.match(/href=.*?mactex-(\d{4})(\d{2})(\d{2})\.pkg/)
+      "#{match[1]}.#{match[2]}#{match[3]}"
+    end
+  end
 
   conflicts_with cask: [
-                         'basictex',
-                         'mactex',
-                       ]
-  depends_on formula: 'ghostscript'
-  depends_on macos: '>= :sierra'
+    "basictex",
+    "mactex",
+  ]
+  depends_on formula: "ghostscript"
+  depends_on macos: ">= :mojave"
 
   pkg "mactex-#{version.no_dots}.pkg",
       choices: [
-                 {
-                   # TeXLive
-                   'choiceIdentifier' => 'choice1',
-                   'choiceAttribute'  => 'selected',
-                   'attributeSetting' => 1,
-                 },
-                 {
-                   # GUI-Applications
-                   'choiceIdentifier' => 'choice2',
-                   'choiceAttribute'  => 'selected',
-                   'attributeSetting' => 0,
-                 },
-                 {
-                   # Ghostscript
-                   'choiceIdentifier' => 'choice3',
-                   'choiceAttribute'  => 'selected',
-                   'attributeSetting' => 0,
-                 },
-               ]
+        {
+          # Ghostscript
+          "choiceIdentifier" => "org.tug.mactex.ghostscript9.53.3",
+          "choiceAttribute"  => "selected",
+          "attributeSetting" => 0,
+        },
+        {
+          # Ghostscript Dynamic Library
+          "choiceIdentifier" => "org.tug.mactex.ghostscript9.53.3libgs",
+          "choiceAttribute"  => "selected",
+          "attributeSetting" => 0,
+        },
+        {
+          # GUI Applications
+          "choiceIdentifier" => "org.tug.mactex.gui#{version.major}",
+          "choiceAttribute"  => "selected",
+          "attributeSetting" => 0,
+        },
+        {
+          # TeXLive
+          "choiceIdentifier" => "org.tug.mactex.texlive#{version.major}",
+          "choiceAttribute"  => "selected",
+          "attributeSetting" => 1,
+        },
+      ]
 
   uninstall pkgutil: "org.tug.mactex.texlive#{version.major}",
             delete:  [
-                       "/usr/local/texlive/#{version.major}",
-                       '/Library/TeX',
-                       '/etc/paths.d/TeX',
-                       '/etc/manpaths.d/TeX',
-                     ]
+              "/usr/local/texlive/#{version.major}",
+              "/Library/TeX",
+              "/etc/paths.d/TeX",
+              "/etc/manpaths.d/TeX",
+            ]
 
-  zap trash: [
-               '/usr/local/texlive/texmf-local',
-               "~/Library/texlive/#{version.major}",
-             ],
-      rmdir: [
-               '/usr/local/texlive',
-               '~/Library/texlive',
-             ]
+  zap trash: "/usr/local/texlive/texmf-local",
+      rmdir: "/usr/local/texlive"
+
+  caveats <<~EOS
+    You must restart your terminal window for the installation of MacTex CLI tools to take effect.
+    Alternatively, Bash and Zsh users can run the command:
+
+      eval "$(/usr/libexec/path_helper)"
+  EOS
 end

@@ -1,11 +1,16 @@
-cask 'pomello' do
-  version '0.10.7'
-  sha256 '9535536d27a12947572343909d71510bdfd678a32e47720ffb1ff455b07adc7f'
+cask "pomello" do
+  version "0.10.16"
+  sha256 :no_check
 
-  url 'https://pomelloapp.com/download/mac/latest'
-  appcast 'https://pomelloapp.com/download/mac'
-  name 'Pomello'
-  homepage 'https://pomelloapp.com/'
+  url "https://pomelloapp.com/download/mac/latest"
+  name "Pomello"
+  desc "Turns your Trello cards into Pomodoro tasks"
+  homepage "https://pomelloapp.com/"
 
-  app 'Pomello.app'
+  livecheck do
+    url :url
+    strategy :header_match
+  end
+
+  app "Pomello.app"
 end

@@ -1,11 +1,13 @@
-cask 'openinterminal' do
-  version '0.10.3'
-  sha256 '4c02f9330d32c6348dc7a307ddce2a3c1b797685c121ec33c511018b33b44315'
+cask "openinterminal" do
+  version "2.3.4"
+  sha256 "899a40674ccfcdb640e504a93623a14b88e7b17d238718b33eb77f50c4a78ed3"
 
-  url "https://github.com/Ji4n1ng/OpenInTerminal/releases/download/#{version}/OpenInTerminal.app.zip"
-  appcast 'https://github.com/Ji4n1ng/OpenInTerminal/releases.atom'
-  name 'OpenInTerminal'
-  homepage 'https://github.com/Ji4n1ng/OpenInTerminal'
+  url "https://github.com/Ji4n1ng/OpenInTerminal/releases/download/v#{version}/OpenInTerminal.app.zip"
+  name "OpenInTerminal"
+  desc "Finder Toolbar app to open the current directory in Terminal or Editor"
+  homepage "https://github.com/Ji4n1ng/OpenInTerminal"
 
-  app 'OpenInTerminal.app'
+  depends_on macos: ">= :sierra"
+
+  app "OpenInTerminal.app"
 end

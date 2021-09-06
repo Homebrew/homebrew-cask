@@ -1,15 +1,16 @@
-cask 'gns3' do
-  # note: "3" is not a version number, but an intrinsic part of the product name
-  version '2.1.21'
-  sha256 '455adf7d65fb4411e1e6481cdbc1a41cd251112dc55cbcdbd983e75045f0c89d'
+cask "gns3" do
+  # NOTE: "3" is not a version number, but an intrinsic part of the product name
+  version "2.2.24"
+  sha256 "a3157862e29b9fdd37fc2b50ce216f99c052f896998a148aad734db9b74b7503"
 
-  # github.com/GNS3/gns3-gui was verified as official when first introduced to the cask
-  url "https://github.com/GNS3/gns3-gui/releases/download/v#{version}/GNS3-#{version}.dmg"
-  appcast 'https://github.com/GNS3/gns3-gui/releases.atom'
-  name 'GNS3'
-  homepage 'https://www.gns3.com/'
+  url "https://github.com/GNS3/gns3-gui/releases/download/v#{version}/GNS3-#{version}.dmg",
+      verified: "github.com/GNS3/gns3-gui/"
+  name "GNS3"
+  name "Graphical Network Simulator 3"
+  desc "GUI for the Dynamips Cisco router emulator"
+  homepage "https://www.gns3.com/"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :high_sierra"
 
-  app 'GNS3.app'
+  app "GNS3.app"
 end

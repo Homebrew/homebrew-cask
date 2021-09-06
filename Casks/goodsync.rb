@@ -1,14 +1,18 @@
-cask 'goodsync' do
-  version '10.10.1.1'
-  sha256 'c3a50bb297237bf1bd0f7bd659dda7b12c46bd35d6b83f9ec40a7ff6802a817b'
+cask "goodsync" do
+  version "11.8.0"
+  sha256 "f4182cbf703e0d06490effdfb65ab4c80cf84462f2e62e6bb8479d838a4a17bc"
 
   url "https://www.goodsync.com/download/goodsync-v#{version.major}-mac.dmg"
-  appcast 'https://www.goodsync.com/news-mac',
-          configuration: version.major_minor_patch
-  name 'GoodSync'
-  homepage 'https://www.goodsync.com/'
+  name "GoodSync"
+  desc "File synchronization and backup software"
+  homepage "https://www.goodsync.com/"
 
-  depends_on macos: '>= :yosemite'
+  livecheck do
+    url "https://www.goodsync.com/download?os=macos"
+    regex(/GoodSync\s+for\s+Mac\s+v?\s*(\d+(?:\.\d+)+)/i)
+  end
 
-  app 'GoodSync.app'
+  depends_on macos: ">= :yosemite"
+
+  app "GoodSync.app"
 end

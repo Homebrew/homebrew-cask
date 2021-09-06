@@ -1,12 +1,18 @@
-cask 'supercollider' do
-  version '3.10.2'
-  sha256 '60f82f6e0c88d8e2d572bc5f816b148dc1a697dea280d8694b2012c35d9be264'
+cask "supercollider" do
+  version "3.12.0"
+  sha256 "a8a1c430ff3eaeea402dd266432cf5e825a745ab530c708d7de4a607a20955b6"
 
-  # github.com/supercollider/supercollider was verified as official when first introduced to the cask
-  url "https://github.com/supercollider/supercollider/releases/download/Version-#{version}/SuperCollider-#{version}-macOS.zip"
-  appcast 'https://github.com/supercollider/supercollider/releases.atom'
-  name 'SuperCollider'
-  homepage 'https://supercollider.github.io/'
+  url "https://github.com/supercollider/supercollider/releases/download/Version-#{version}/SuperCollider-#{version}-macOS.dmg",
+      verified: "github.com/supercollider/supercollider/"
+  name "SuperCollider"
+  desc "Server, language, and IDE for sound synthesis and algorithmic composition"
+  homepage "https://supercollider.github.io/"
 
-  app 'SuperCollider/SuperCollider.app'
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^Version-(\d+(?:\.\d+)*)$/i)
+  end
+
+  app "SuperCollider.app"
 end

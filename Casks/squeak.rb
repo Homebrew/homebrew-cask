@@ -1,12 +1,20 @@
-cask 'squeak' do
-  version '5.2-18228'
-  sha256 '7bd3de9beedcce792db32f1253f9243a299909368bad6f1ac21dd128f11b289d'
+cask "squeak" do
+  version "5.3,19459"
+  sha256 "429c05408d7c874a2be9c7a41ebd2ec42596e5389a00e4cf4e04ee6f2432d436"
 
-  url "https://files.squeak.org/#{version.major_minor}/Squeak#{version}-64bit/Squeak#{version}-64bit-All-in-One.zip"
-  name 'Squeak'
-  homepage 'https://squeak.org/'
+  url "https://files.squeak.org/#{version.before_comma}/Squeak#{version.before_comma}-#{version.after_comma}-64bit/Squeak#{version.before_comma}-#{version.after_comma}-64bit-All-in-One.zip"
+  name "Squeak"
+  homepage "https://squeak.org/"
 
-  app "Squeak#{version}-64bit-All-in-One.app"
+  livecheck do
+    url "https://squeak.org/downloads/"
+    strategy :page_match do |page|
+      match = page.match(%r{href=.*?/Squeak(\d+(?:\.\d+)*)-(\d+)-64bit-All-in-One\.zip}i)
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
-  zap trash: "~/Library/Saved Application State/org.squeak.Squeak#{version.major_minor}.64.All-in-One.savedState"
+  app "Squeak#{version.before_comma}-#{version.after_comma}-64bit-All-in-One.app"
+
+  zap trash: "~/Library/Saved Application State/org.squeak.Squeak#{version.before_comma}.64.All-in-One.savedState"
 end

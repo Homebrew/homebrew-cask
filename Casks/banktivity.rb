@@ -1,13 +1,24 @@
-cask 'banktivity' do
-  version '7'
-  sha256 :no_check # required as upstream package is updated in-place
+cask "banktivity" do
+  version "8.4.2"
+  sha256 "b8af25fdc121388e0540e5010cba131562dc6879b4be7023869781509c2c8668"
 
-  # iggsoft.com was verified as official when first introduced to the cask
-  url "https://www.iggsoft.com/banktivity/Banktivity#{version}_Web.dmg"
-  name 'Banktivity'
-  homepage 'https://www.iggsoftware.com/banktivity/'
+  url "https://www.iggsoft.com/banktivity/Banktivity#{version}.dmg",
+      verified: "iggsoft.com/"
+  name "Banktivity"
+  desc "App to manage bank accounts in one place"
+  homepage "https://www.iggsoftware.com/banktivity/"
 
-  depends_on macos: '>= :high_sierra'
+  livecheck do
+    url "https://www.iggsoft.com/banktivity/banktivity-versions-feed.json"
+    regex(/"version"\s*:\s*"(\d+(?:\.\d+)*)"/i)
+  end
 
-  app "Banktivity #{version}.app"
+  depends_on macos: ">= :catalina"
+
+  app "Banktivity.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.iggsoftware.banktivity",
+    "~/Library/Containers/com.iggsoftware.banktivity",
+  ]
 end

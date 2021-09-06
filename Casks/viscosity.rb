@@ -1,28 +1,33 @@
-cask 'viscosity' do
-  version '1.7.16'
-  sha256 'de0d242e79233b609e6a7941bc2a5cc7344ba9062b86c51146473b54bce9141c'
+cask "viscosity" do
+  version "1.9.4"
+  sha256 "249d9c2b91be83c51332ec157aa10407df689340a761c8d54780aa1dcdb4e88a"
 
   url "https://swupdate.sparklabs.com/download/mac/release/viscosity/Viscosity%20#{version}.dmg"
-  appcast 'https://swupdate.sparklabs.com/appcast/mac/release/viscosity/'
-  name 'Viscosity'
-  homepage 'https://www.sparklabs.com/viscosity/'
+  name "Viscosity"
+  desc "VPN client for secure internet access and private browsing"
+  homepage "https://www.sparklabs.com/viscosity/"
+
+  livecheck do
+    url "https://swupdate.sparklabs.com/appcast/mac/release/viscosity/"
+    strategy :sparkle, &:short_version
+  end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
-  app 'Viscosity.app'
+  app "Viscosity.app"
 
-  uninstall delete:     [
-                          '/Library/Application Support/Viscosity',
-                          '/Library/PrivilegedHelperTools/com.sparklabs.ViscosityHelper',
-                        ],
-            launchctl:  'com.sparklabs.ViscosityHelper',
-            login_item: 'Viscosity',
-            signal:     ['TERM', 'com.viscosityvpn.Viscosity']
+  uninstall delete:    [
+    "/Library/Application Support/Viscosity",
+    "/Library/PrivilegedHelperTools/com.sparklabs.ViscosityHelper",
+  ],
+            launchctl: "com.sparklabs.ViscosityHelper",
+            signal:    ["TERM", "com.viscosityvpn.Viscosity"]
 
   zap trash: [
-               '~/Library/Application Support/Viscosity',
-               '~/Library/Caches/com.viscosityvpn.Viscosity',
-               '~/Library/Cookies/com.viscosityvpn.Viscosity.binarycookies',
-               '~/Library/Preferences/com.viscosityvpn.Viscosity.plist',
-             ]
+    "~/Library/Application Support/Viscosity",
+    "~/Library/Caches/com.viscosityvpn.Viscosity",
+    "~/Library/Cookies/com.viscosityvpn.Viscosity.binarycookies",
+    "~/Library/Preferences/com.viscosityvpn.Viscosity.plist",
+  ]
 end

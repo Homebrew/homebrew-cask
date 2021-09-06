@@ -1,11 +1,16 @@
-cask 'pencil' do
-  version '3.0.4'
-  sha256 '3ca99c293be804067c95db77a7248531ede321d0c9a436bac0a34c57a192088f'
+cask "pencil" do
+  version "3.1.0"
+  sha256 "5369787a801a470179a86ba60407b33e647f826b1a8b001b62e4f81a6bb0629d"
 
-  url "https://pencil.evolus.vn/dl/V#{version}/Pencil-#{version}.dmg"
-  appcast 'https://github.com/evolus/pencil/releases.atom'
-  name 'Pencil'
-  homepage 'https://pencil.evolus.vn/'
+  url "https://pencil.evolus.vn/dl/V#{version}.ga/Pencil-#{version}.ga.dmg"
+  name "Pencil"
+  name "The Pencil Project"
+  homepage "https://pencil.evolus.vn/"
 
-  app 'Pencil.app'
+  livecheck do
+    url "https://github.com/evolus/pencil/releases"
+    strategy :github_latest
+  end
+
+  app "Pencil.app"
 end

@@ -1,12 +1,12 @@
-cask 'meteorologist' do
-  version '3.2.0'
-  sha256 '26b135bc2ee3c70cf0c3c04bc3c5fb33e4d3e576b4c755d34fad445168edd041'
+cask "meteorologist" do
+  version "3.4.6"
+  sha256 "285344d068f1ffdd42eb5c8268ab29e7cf73e4b897d9a207ca3da991b65b88b5"
 
-  # downloads.sourceforge.net/heat-meteo was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/heat-meteo/Meteorologist-#{version}.dmg"
-  appcast 'https://sourceforge.net/projects/heat-meteo/rss'
-  name 'Meteorologist'
-  homepage 'https://heat-meteo.sourceforge.io/'
+  url "https://downloads.sourceforge.net/heat-meteo/Meteorologist-#{version}.dmg",
+      verified: "downloads.sourceforge.net/heat-meteo/"
+  name "Meteorologist"
+  desc "Adjustable weather viewing application"
+  homepage "https://heat-meteo.sourceforge.io/"
 
-  app 'Meteorologist.app'
+  app "Meteorologist.app"
 end

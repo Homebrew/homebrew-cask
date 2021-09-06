@@ -1,11 +1,17 @@
-cask 'nisus-thesaurus' do
-  version '1.1.4'
-  sha256 '463e4db2cf02766f606b86fb3e2e656a866358da4d0c8c444cb38bbebd6b9566'
+cask "nisus-thesaurus" do
+  version "1.2.2"
+  sha256 "cef58bf8e2c2e165a3a8e5e7771fe8dd46a0ffb68baecc6220058faa756ab675"
 
-  url "https://nisus.com/files/free/NisusThesaurus-v#{version.no_dots}.zip"
-  appcast 'https://nisus.com/Thesaurus/updates.php'
-  name 'Nisus Thesaurus'
-  homepage 'https://nisus.com/Thesaurus/'
+  url "https://nisus.com/files/public/NisusThesaurus-v#{version.no_dots}.zip"
+  name "Nisus Thesaurus"
+  desc "Electronic thesaurus that for the 'Service' menu"
+  homepage "https://nisus.com/Thesaurus/"
 
-  app 'Nisus Thesaurus.app'
+  livecheck do
+    url "https://nisus.com/Thesaurus/updates.php"
+    strategy :page_match
+    regex(/Version\s*(\d+(?:\.\d+)*)/i)
+  end
+
+  app "Nisus Thesaurus.app"
 end

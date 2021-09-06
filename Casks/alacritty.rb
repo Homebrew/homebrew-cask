@@ -1,16 +1,22 @@
-cask 'alacritty' do
-  version '0.3.3'
-  sha256 '0e53bee6e52356273db6aa9a51247c028e07cf61c2c9be98908594d49a67465c'
+cask "alacritty" do
+  version "0.9.0"
+  sha256 "754406b48ce1d4b4529f354ca51496c6c57c47ff98d7e5f6aa67efd89e4a5859"
 
-  url "https://github.com/jwilm/alacritty/releases/download/v#{version}/Alacritty-v#{version}.dmg"
-  appcast 'https://github.com/jwilm/alacritty/releases.atom'
-  name 'Alacritty'
-  homepage 'https://github.com/jwilm/alacritty/'
+  url "https://github.com/alacritty/alacritty/releases/download/v#{version}/Alacritty-v#{version}.dmg"
+  name "Alacritty"
+  desc "GPU-accelerated terminal emulator"
+  homepage "https://github.com/alacritty/alacritty/"
 
-  app 'Alacritty.app'
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
-  zap delete: [
-                '~/Library/Saved Application State/io.alacritty.savedState',
-                '~/.config/alacritty',
-              ]
+  app "Alacritty.app"
+  binary "#{appdir}/Alacritty.app/Contents/MacOS/alacritty"
+
+  zap trash: [
+    "~/Library/Preferences/io.alacritty.plist",
+    "~/Library/Saved Application State/io.alacritty.savedState",
+  ]
 end

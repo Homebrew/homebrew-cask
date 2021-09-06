@@ -1,14 +1,22 @@
-cask 'texworks' do
-  version '0.6.3,201903161730:a2470ca'
-  sha256 '618d16f4bf915e3d73d354263fa4b557dbb165d6868b414ecc47973ddc92a986'
+cask "texworks" do
+  version "0.6.6,202103111124:24442ac"
+  sha256 "9517f6bd8f3a34264bc9e5c6ae59969a81bcfdafda2c830d58d2d0d652cffe57"
 
-  # github.com/TeXworks/texworks was verified as official when first introduced to the cask
-  url "https://github.com/TeXworks/texworks/releases/download/release-#{version.before_comma}/TeXworks-osx-#{version.before_comma}-#{version.after_comma.before_colon}-git_#{version.after_colon}.dmg"
-  appcast 'https://github.com/TeXworks/texworks/releases.atom'
-  name 'TeXworks'
-  homepage 'https://www.tug.org/texworks/'
+  url "https://github.com/TeXworks/texworks/releases/download/release-#{version.before_comma}/TeXworks-macos-#{version.before_comma}-#{version.after_comma.before_colon}-git_#{version.after_colon}.dmg",
+      verified: "github.com/TeXworks/texworks/"
+  name "TeXworks"
+  desc "Main codebase"
+  homepage "https://www.tug.org/texworks/"
 
-  depends_on macos: '>= :high_sierra'
+  livecheck do
+    url "https://github.com/TeXworks/texworks/releases/latest"
+    strategy :page_match do |page|
+      match = page.match(%r{href=.*?/TeXworks-macos-(\d+(?:\.\d+)*)-(\d+)-git_(.*?)\.dmg}i)
+      "#{match[1]},#{match[2]}:#{match[3]}"
+    end
+  end
 
-  app 'TeXworks.app'
+  depends_on macos: ">= :high_sierra"
+
+  app "TeXworks.app"
 end

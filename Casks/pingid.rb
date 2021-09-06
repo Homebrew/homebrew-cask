@@ -1,13 +1,19 @@
-cask 'pingid' do
-  version :latest
+cask "pingid" do
+  version "1.7.2"
   sha256 :no_check
 
-  # pingone-downloads.s3.amazonaws.com/pingid/mac-client was verified as official when first introduced to the cask
-  url 'https://pingone-downloads.s3.amazonaws.com/pingid/mac-client/PingID.pkg'
-  name 'PingID'
-  homepage 'https://www.pingidentity.com/'
+  url "https://pingone-downloads.s3.amazonaws.com/pingid/mac-client/PingID.pkg",
+      verified: "pingone-downloads.s3.amazonaws.com/pingid/mac-client/"
+  name "PingID"
+  desc "Cloud-based, multi-factor authentication"
+  homepage "https://www.pingidentity.com/"
 
-  pkg 'PingID.pkg'
+  livecheck do
+    url "https://prod-ping-sfc.zoominsoftware.io/api/bundle/pingid/toc?language=enus"
+    regex(/"title"\s*:\s*"Desktop\s+app\s+v?(\d+(?:\.\d+)+)/i)
+  end
 
-  uninstall pkgutil: 'com.pingidentity.pingid.pcclient'
+  pkg "PingID.pkg"
+
+  uninstall pkgutil: "com.pingidentity.pingid.pcclient"
 end

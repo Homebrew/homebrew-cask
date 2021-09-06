@@ -1,10 +1,16 @@
-cask 'soulseek' do
-  version '2017-2-25'
-  sha256 '9bc76b360fb326807c3c655fdb9af98ea4b5db30ee56a1baed9c65c0897fd5d4'
+cask "soulseek" do
+  version "2021-2-6"
+  sha256 "8ff0437676f65779e7370478a2de1274a29607c764317ffb13ce697f2373b443"
 
   url "https://www.slsknet.org/SoulseekQt/Mac/SoulseekQt-#{version}.dmg"
-  name 'Soulseek'
-  homepage 'https://www.slsknet.org/'
+  name "Soulseek"
+  homepage "https://www.slsknet.org/"
 
-  app 'SoulseekQt.app'
+  livecheck do
+    url "https://www.slsknet.org/news/node/1"
+    strategy :page_match
+    regex(%r{href=.*?/SoulseekQt-(\d+(?:-\d+)*)\.dmg}i)
+  end
+
+  app "SoulseekQt.app"
 end

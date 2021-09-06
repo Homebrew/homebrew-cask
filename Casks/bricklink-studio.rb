@@ -1,13 +1,30 @@
-cask 'bricklink-studio' do
-  version :latest
-  sha256 :no_check
+cask "bricklink-studio" do
+  version "2.2.8_1"
+  sha256 "501ad46af8c2916e43fdc4b73a02bd1d7c9b26fcbb5be276cafbecc0293a1b17"
 
-  # blstudio.s3.amazonaws.com was verified as official when first introduced to the cask
-  url 'https://blstudio.s3.amazonaws.com/Stud.io.pkg'
-  name 'Stud.io'
-  homepage 'https://studio.bricklink.com/v2/build/studio.page'
+  url "https://blstudio.s3.amazonaws.com/Studio#{version.major}.0/Archive/#{version}/Studio+#{version.major}.0.pkg",
+      verified: "blstudio.s3.amazonaws.com/"
+  name "Studio"
+  desc "Build, render, and create LEGO instructions"
+  homepage "https://www.bricklink.com/v3/studio/download.page"
 
-  pkg 'Stud.io.pkg'
+  livecheck do
+    url "https://www.bricklink.com/v2/build/studio.page"
+    regex(/"version"\s*:\s*"(\d+(?:[._-]\d+)*)"/i)
+  end
 
-  uninstall pkgutil: 'com.bricklink.pkg.Studio'
+  auto_updates true
+
+  pkg "Studio #{version.major}.0.pkg"
+
+  uninstall pkgutil: "com.bricklink.pkg.Studio#{version.major}.0"
+
+  zap trash: [
+    "~/Library/Application Support/unity.BrickLink.Studio",
+    "~/Library/Preferences/unity.BrickLink.Studio.plist",
+    "~/Library/Preferences/unity.BrickLink.Patcher.plist",
+    "~/Library/Caches/com.plausiblelabs.crashreporter.data/unity.BrickLink.Studio",
+    "~/Library/Saved Application State/unity.BrickLink.Studio.savedState",
+    "~/Library/Saved Application State/unity.BrickLink.Patcher.savedState",
+  ]
 end

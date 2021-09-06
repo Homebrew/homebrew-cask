@@ -1,25 +1,31 @@
-cask 'hook' do
-  version '2552,1562746460'
-  sha256 'c278b0d2c186c0c1f0cfff29d4595fe5668b0b63f197d4d330f4bab77a6cef6f'
+cask "hook" do
+  version "3.2.1,2021.08"
+  sha256 "f5aee8d4ae6d2c1279f249b2d18656c96b91de3a2c1c5a8fe557554e1bf9aee1"
 
-  # dl.devmate.com/com.cogsciapps.hook was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.cogsciapps.hook/#{version.before_comma}/#{version.after_comma}/Hook-#{version.before_comma}.dmg"
-  appcast 'https://updates.devmate.com/com.cogsciapps.hook.xml'
-  name 'Hook'
-  homepage 'https://hookproductivity.com/'
+  url "https://hookproductivity.com/wp-content/uploads/#{version.after_comma.major}/#{version.after_comma.minor}/Hook-productivity-app-#{version.before_comma}.dmg_.zip",
+      user_agent: :fake
+  name "Hook"
+  desc "Link and retrieve key information"
+  homepage "https://hookproductivity.com/"
+
+  livecheck do
+    url :homepage
+    strategy :page_match do |page|
+      match = page.match(%r{href=.*?/(\d+)/(\d+)/Hook-productivity-app-(\d+(?:\.\d+)*(?:-\d+)*)\.dmg}i)
+      "#{match[3]},#{match[1]}.#{match[2]}"
+    end
+  end
 
   auto_updates true
-  depends_on macos: '>= :sierra'
 
-  app 'Hook.app'
+  app "Hook.app"
 
-  uninstall launchctl: 'com.cogsciapps.hookautolaunchhelper',
-            quit:      'com.cogsciapps.hook'
+  uninstall launchctl: "com.cogsciapps.hookautolaunchhelper",
+            quit:      "com.cogsciapps.hook"
 
-  zap trash:
-             [
-               '~/Library/Caches/com.cogsciapps.hook',
-               '~/Library/Logs/com.cogsciapps.hook',
-               '~/Library/Preferences/com.cogsciapps.hook.plist',
-             ]
+  zap trash: [
+    "~/Library/Caches/com.cogsciapps.hook",
+    "~/Library/Logs/com.cogsciapps.hook",
+    "~/Library/Preferences/com.cogsciapps.hook.plist",
+  ]
 end

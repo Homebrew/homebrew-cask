@@ -1,12 +1,18 @@
-cask 'bbc-iplayer-downloads' do
-  version '2.9.0'
-  sha256 '77cf26d082b0e67f214a5b8fa4935f28734fd9571bbd97a6ffcc81b351ed5df4'
+cask "bbc-iplayer-downloads" do
+  version "2.13.3"
+  sha256 "d016814377a5f98664b5a6a60e2d240a1e548913d03971b5489260253b8cd3a9"
 
-  # live-downloads-app-bucket-staticassetsbucket-ydn3z4ggyaof.s3.amazonaws.com was verified as official when first introduced to the cask
-  url "https://live-downloads-app-bucket-staticassetsbucket-ydn3z4ggyaof.s3.amazonaws.com/releases/darwin-x64/BBCiPlayerDownloads-#{version}.dmg"
-  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://downloads-app.iplayer.api.bbc.co.uk/stable/darwin-x64'
-  name 'BBC iPlayer Downloads'
-  homepage 'https://www.bbc.co.uk/iplayer/install'
+  url "https://static.files.bbci.co.uk/iplayer-pc-download-app/releases/darwin-x64/BBCiPlayerDownloads-#{version}.dmg"
+  name "BBC iPlayer Downloads"
+  desc "Download programmes from the BBC iPlayer website"
+  homepage "https://www.bbc.co.uk/iplayer/install"
 
-  app 'BBC iPlayer Downloads.app'
+  livecheck do
+    url "https://downloads-app.iplayer.api.bbc.co.uk/stable/darwin-x64"
+    strategy :header_match
+  end
+
+  depends_on macos: ">= :el_capitan"
+
+  app "BBC iPlayer Downloads.app"
 end

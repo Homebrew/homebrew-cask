@@ -1,38 +1,24 @@
-cask 'netbeans' do
-  version '8.2'
-  sha256 'ddcf37e91d960cca6b6a37c95eabf2c6f15330ed708bfd79be796de00da20e5e'
+cask "netbeans" do
+  version "12.4"
+  sha256 "a4fa57eb1ade2a769667e4840ee190d4e9445542760b7cdc2cc89b4a4e4739c2"
 
-  url "https://download.netbeans.org/netbeans/#{version}/final/bundles/netbeans-#{version}-macosx.dmg"
-  name 'NetBeans IDE'
-  homepage 'https://netbeans.org/'
+  url "https://www-eu.apache.org/dist/netbeans/netbeans/#{version}/Apache-NetBeans-#{version}-bin-macosx.dmg"
+  name "NetBeans IDE"
+  desc "Development environment, tooling platform and application framework"
+  homepage "https://netbeans.apache.org/"
 
-  pkg "NetBeans #{version}.pkg"
+  livecheck do
+    url "https://netbeans.apache.org/download/index.html"
+    regex(/NetBeans\s*v?(\d+(?:\.\d+)+)/i)
+  end
 
-  # Theoretically this uninstall could conflict with a separate GlassFish
-  # installation.
-  #
-  # In practice, it appears that the normal GlassFish installation process does
-  # not use the macOS installer and so isn't in the pkgutil receipts database.
-  #
-  # https://glassfish.java.net/docs/4.0/installation-guide.pdf
-  #
-  # Arguably if the GlassFish installation by NetBeans inside its own target
-  # directory were to conflict with a standard GlassFish installation in the
-  # receipts database that would be a bug upstream with NetBeans not prefixing
-  # its GlassFish package with "org.netbeans."
-  #
-  # If this ever becomes an issue, pkgutil: 'glassfish.*' could be moved to a
-  # separate "zap" stanza.
-  #
-  # The NetBeans installer does some postflight unpacking of paths installed by
-  # the macOS installer, so it's insufficient to just delete the paths exposed
-  # by pkgutil, hence the additional ":delete" option below.
+  pkg "Apache NetBeans #{version}.pkg"
 
-  uninstall pkgutil: 'org.netbeans.ide.*|glassfish.*',
-            delete:  '/Applications/NetBeans'
+  uninstall pkgutil: "org.netbeans.ide.*|glassfish.*",
+            delete:  "/Applications/NetBeans"
 
   zap trash: [
-               '~/Library/Application Support/NetBeans',
-               '~/Library/Caches/NetBeans',
-             ]
+    "~/Library/Application Support/NetBeans",
+    "~/Library/Caches/NetBeans",
+  ]
 end

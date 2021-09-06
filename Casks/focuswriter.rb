@@ -1,14 +1,20 @@
-cask 'focuswriter' do
-  version '1.7.2'
-  sha256 '78ebc45618f5826cdc216752628fefe6163479803b394d200ef6c0d547e694eb'
+cask "focuswriter" do
+  version "1.7.6"
+  sha256 "3431642e61cf11c3d0993fd6b70880cba2cca23043e22b2b2f68f8f8a02ff1bc"
 
   url "https://gottcode.org/focuswriter/FocusWriter_#{version}.dmg"
-  appcast 'https://gottcode.org/focuswriter/'
-  name 'FocusWriter'
-  homepage 'https://gottcode.org/focuswriter/'
+  name "FocusWriter"
+  desc "Distraction-free writing environment"
+  homepage "https://gottcode.org/focuswriter/"
 
-  app 'FocusWriter.app'
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(/href=.*?FocusWriter_(\d+(?:\.\d+)*)\./i)
+  end
 
-  zap trash: '~/Library/Application Support/GottCode/FocusWriter',
-      rmdir: '~/Library/Application Support/GottCode'
+  app "FocusWriter.app"
+
+  zap trash: "~/Library/Application Support/GottCode/FocusWriter",
+      rmdir: "~/Library/Application Support/GottCode"
 end

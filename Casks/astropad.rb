@@ -1,20 +1,25 @@
-cask 'astropad' do
-  version '3.2.1'
-  sha256 '54132253068fa556a1c002f4a527b2f9fc14ed8dd2d1414117e4760572ff0b30'
+cask "astropad" do
+  version "3.7.0,3219"
+  sha256 "a0b163918cd94ecb9ecc4f9c423812bb73ec643fc7be713d043886af94d1d280"
 
-  url "https://astropad.com/downloads/Astropad-#{version}.dmg"
-  appcast 'https://astropad.com/downloads/sparkle.xml'
-  name 'Astropad'
-  homepage 'https://astropad.com/'
+  url "https://downloads.astropad.com/standard/Astropad-#{version.before_comma}.dmg"
+  name "Astropad"
+  desc "Utility to turn an iPad into a drawing tablet"
+  homepage "https://astropad.com/"
 
-  app 'Astropad.app'
+  livecheck do
+    url "https://s3.amazonaws.com/astropad.com/downloads/sparkle.xml"
+    strategy :sparkle
+  end
 
-  uninstall quit: 'com.astro-hq.AstropadMac'
+  app "Astropad.app"
+
+  uninstall quit: "com.astro-hq.AstropadMac"
 
   zap trash: [
-               '~/Library/Caches/Astropad',
-               '~/Library/Caches/com.astro-hq.AstropadMac',
-               '~/Library/Preferences/com.astro-hq.AstropadMac.plist',
-               '~/Library/Saved Application State/com.astro-hq.AstropadMac.savedState',
-             ]
+    "~/Library/Caches/Astropad",
+    "~/Library/Caches/com.astro-hq.AstropadMac",
+    "~/Library/Preferences/com.astro-hq.AstropadMac.plist",
+    "~/Library/Saved Application State/com.astro-hq.AstropadMac.savedState",
+  ]
 end

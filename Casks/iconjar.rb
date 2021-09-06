@@ -1,20 +1,25 @@
-cask 'iconjar' do
-  version '1.13.2,30280:1557084311'
-  sha256 'f88a2e2d0ab336762521e1bb5753c3745746800d3d77e2284c3d43a16bc05d58'
+cask "iconjar" do
+  version "2.8.1,48705"
+  sha256 "1806d0319ea63a669c01c07f4b733c4e27b232b424a159b4288e9f55a0a5e962"
 
-  # dl.devmate.com/com.iconjar.iconjar was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.iconjar.iconjar/#{version.after_comma.before_colon}/#{version.after_colon}/Iconjar-#{version.after_comma.before_colon}.zip"
-  appcast 'https://updates.devmate.com/com.iconjar.iconjar.xml'
-  name 'IconJar'
-  homepage 'https://geticonjar.com/'
+  url "https://geticonjar.com/releases/IconJar.app.#{version.after_comma}.zip"
+  name "IconJar"
+  desc "Icon organizer"
+  homepage "https://geticonjar.com/"
+
+  livecheck do
+    url "https://geticonjar.com/releases/stable.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
+  depends_on macos: ">= :mojave"
 
-  app 'IconJar.app'
+  app "IconJar.app"
 
   zap trash: [
-               '/Users/Shared/IconJar',
-               '~/Library/Application Support/IconJar',
-               '~/Library/Preferences/com.iconjar.iconjar.plist',
-             ]
+    "/Users/Shared/IconJar",
+    "~/Library/Application Support/IconJar",
+    "~/Library/Preferences/com.iconjar.iconjar.plist",
+  ]
 end

@@ -1,15 +1,28 @@
-cask 'sound-control' do
-  version '2.3.3'
-  sha256 '6d62167ac9246f739358e52bbf28e85ed09f9b38b0be7b4a26d482d0b34f723e'
+cask "sound-control" do
+  version "2.6.4,5156"
+  sha256 "d9e57ac2118040107554d950e3d5f4bb4c6400ca67b551a5f4ce751f41c5fd46"
 
-  # staticz.net was verified as official when first introduced to the cask
-  url "http://staticz.net/downloads/SoundControl_#{version}.dmg"
-  appcast 'http://staticz.net/updates/soundcontrol.rss'
-  name 'Sound Control'
-  homepage 'https://staticz.com/soundcontrol/'
+  url "https://staticz.com/download/#{version.after_comma}/"
+  name "Sound Control"
+  desc "Per-app audio controls"
+  homepage "https://staticz.com/soundcontrol/"
 
-  app 'Sound Control.app'
+  livecheck do
+    url "http://staticz.net/updates/soundcontrol.rss"
+    strategy :sparkle do |item|
+      "#{item.version},#{item.url[%r{/download/(\d+)/}i, 1]}"
+    end
+  end
 
-  uninstall launchctl: 'com.staticz.soundcontrol.*',
-            quit:      'com.staticz.SoundControl'
+  auto_updates true
+  depends_on macos: ">= :mojave"
+
+  app "Sound Control.app"
+
+  uninstall launchctl: [
+    "com.staticz.soundsiphon.bridgedaemon",
+    "com.staticz.audio.soundsiphon.playeragent",
+    "com.static.soundsiphon.inputagent",
+  ],
+            quit:      "com.staticz.SoundControl"
 end

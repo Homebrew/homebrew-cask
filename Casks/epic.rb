@@ -1,12 +1,23 @@
-cask 'epic' do
-  version '71.0.3579.98'
-  sha256 '080dcd3f1831dcb999b1a6a32acbba04b7f06eee79940c42d5fea9e8c04f1b78'
+cask "epic" do
+  version "91.0.4472.114"
 
-  # macepic-cbe.kxcdn.com was verified as official when first introduced to the cask
-  url "https://cdn.epicbrowser.com/epic_v#{version}.dmg"
-  appcast 'https://epicbrowser.com/thank_you.php'
-  name 'Epic Privacy Browser'
-  homepage 'https://www.epicbrowser.com/'
+  if Hardware::CPU.intel?
+    url "https://cdn.epicbrowser.com/v#{version.major}/mac/epic_#{version}.dmg"
+    sha256 "52f388b4da04a26a7c5c732eaf8688e0f2bd0a6c34cd10dffe781d38ae974053"
+  else
+    url "https://cdn.epicbrowser.com/v#{version.major}/macarm/epic_#{version}.dmg"
+    sha256 "79951fee34ba9b9bffea5e03b8217776467e65a737d2054ae38b4f76114acb71"
+  end
 
-  app 'Epic.app'
+  name "Epic Privacy Browser"
+  desc "Private, secure web browser"
+  homepage "https://www.epicbrowser.com/"
+
+  livecheck do
+    url "https://epicbrowser.com/thank_you.php"
+    strategy :page_match
+    regex(%r{href=.*?/epic_(\d+(?:\.\d+)*)\.dmg}i)
+  end
+
+  app "Epic.app"
 end

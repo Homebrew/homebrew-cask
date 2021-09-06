@@ -1,13 +1,20 @@
-cask 'haptickey' do
-  version '0.4.6'
-  sha256 '71d2905f01fe45acb74452f3a92c37bdcb2d0ca605a831fe4f0854fe3d968d04'
+cask "haptickey" do
+  version "0.6.1"
+  sha256 "62859fbac70db7183b421b11aaea29987a2cc0920ba602c8174a23c23a99c82d"
 
   url "https://github.com/niw/HapticKey/releases/download/#{version}/HapticKey.app.zip"
-  appcast 'https://github.com/niw/HapticKey/releases.atom'
-  name 'HapticKey'
-  homepage 'https://github.com/niw/HapticKey'
+  name "HapticKey"
+  desc "Trigger haptic feedback when tapping Touch Bar"
+  homepage "https://github.com/niw/HapticKey"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
-  app 'HapticKey.app'
+  app "HapticKey.app"
+
+  uninstall quit: "at.niw.HapticKey"
+
+  zap trash: [
+    "~/Library/Caches/at.niw.HapticKey",
+    "~/Library/Preferences/at.niw.HapticKey.plist",
+  ]
 end

@@ -1,11 +1,16 @@
-cask 'sharepod' do
-  version '4.3.2.0'
-  sha256 '1e6799be8764fb6f57ff87fef79de86d0391d63d349f68999f02729a72529211'
+cask "sharepod" do
+  version "4.3.2"
+  sha256 "1e6799be8764fb6f57ff87fef79de86d0391d63d349f68999f02729a72529211"
 
-  # cdn.macroplant.com was verified as official when first introduced to the cask
-  url "http://cdn.macroplant.com/release/Sharepod-#{version}.dmg"
-  name 'Sharepod'
-  homepage 'https://www.getsharepod.com/'
+  url "https://assets.macroplant.com/download/32/Sharepod-#{version}.dmg",
+      verified: "assets.macroplant.com/"
+  name "Sharepod"
+  homepage "https://www.getsharepod.com/"
 
-  app 'Sharepod.app'
+  livecheck do
+    url "https://macroplant.com/sharepod/download/"
+    strategy :header_match
+  end
+
+  app "Sharepod.app"
 end
