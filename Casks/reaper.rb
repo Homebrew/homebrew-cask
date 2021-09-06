@@ -24,6 +24,8 @@ cask "reaper" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  auto_updates true
+
   if Hardware::CPU.intel?
     app "REAPER.app"
     app "ReaMote.app"
