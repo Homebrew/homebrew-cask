@@ -27,6 +27,7 @@ cask "eudic" do
     "~/Library/Application Support/com.eusoft.eudic",
     "~/Library/Caches/com.eusoft.eudic",
     "~/Library/Caches/com.eusoft.eudic.LightPeek",
+    "~/Library/Containers/com.eusoft.eudic.QuickLook",
     "~/Library/Eudb_en",
     "~/Library/Preferences/com.eusoft.eudic.plist",
     "~/Library/Preferences/com.eusoft.eudic.LightPeek.plist",
