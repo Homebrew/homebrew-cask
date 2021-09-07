@@ -1,6 +1,6 @@
 cask "far2l" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
-  if MacOS.version < :catalina
+  if MacOS.version <= :mojave
     version "2.3.210630-fa68e35,2021-06-30_alpha"
     url "https://github.com/elfmz/far2l/releases/download/v#{version.after_comma}/far2l-#{version.before_comma}-alpha-MacOS-10.11.dmg"
     sha256 "ecfc1daa71d9f7e5188a9ba3249981efc1d1522a817c6059a809b161d081cae3"
