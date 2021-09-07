@@ -19,7 +19,7 @@ cask "wine-stable" do
   ]
   depends_on cask: "xquartz"
 
-  pkg "winehq-stable-#{version}.pkg",
+  pkg "winehq-stable-#{version}.pkg", allow_untrusted: true,
       choices: [
         {
           "choiceIdentifier" => "choice3",
