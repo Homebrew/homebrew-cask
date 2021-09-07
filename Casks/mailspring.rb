@@ -14,9 +14,9 @@ cask "mailspring" do
 
   zap trash: [
     "~/Library/Application Support/Mailspring",
-    "~/Library/Preferences/com.mailspring.*",
     "~/Library/Caches/com.mailspring.*",
-    "~/Library/Saved Application State/com.mailspring.*",
     "~/Library/Logs/Mailspring",
+    "~/Library/Preferences/com.mailspring.*",
+    "~/Library/Saved Application State/com.mailspring.*",
   ]
 end
