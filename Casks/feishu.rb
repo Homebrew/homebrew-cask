@@ -1,7 +1,7 @@
 cask "feishu" do
   if Hardware::CPU.intel?
-    version "4.7.11,360c5a"
-    sha256 "a213ebc6710a16ac5cfc3ec5eb15ad0962bc974af31321e5c038f2b5821a5aa0"
+    version "4.8.3,19e5df"
+    sha256 "11b5e7a84fe81bcddc9a24d62cfe4edb616291725c98dc6593c5272c75e8d55c"
 
     url "https://sf3-cn.feishucdn.com/obj/ee-appcenter/#{version.after_comma}/Feishu-darwin_x64-#{version.before_comma}-signed.dmg",
         verified: "sf3-cn.feishucdn.com/"
