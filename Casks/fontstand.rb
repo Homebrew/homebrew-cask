@@ -5,6 +5,7 @@ cask "fontstand" do
   url "https://fontstand.com/apps/download/69",
       user_agent: :fake
   name "Fontstand"
+  desc "Font discovery and rental platform"
   homepage "https://fontstand.com/"
 
   app "Fontstand.app"
