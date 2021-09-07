@@ -1,6 +1,6 @@
 cask "unity-linux-support-for-editor" do
-  version "2021.1.18f1,25bdc3efbc2d"
-  sha256 "937785f1203906154972fd4112c8d21ae3218dde2d03aa55dae662e87fc74f0b"
+  version "2021.1.19f1,5f5eb8bbdc25"
+  sha256 "9af8669118d65e3c68790050f0bbd4a3c9e052bf584aa156b51ef623b9d78a32"
 
   url "https://download.unity3d.com/download_unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Linux-Mono-Support-for-Editor-#{version.before_comma}.pkg",
       verified: "download.unity3d.com/download_unity/"

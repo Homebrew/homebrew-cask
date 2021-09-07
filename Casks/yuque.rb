@@ -1,6 +1,6 @@
 cask "yuque" do
-  version "0.9.22"
-  sha256 "386fc9bb46e47a6e31b3199d49f239f4dd2506db56074d3d14a3f25824d0dd69"
+  version "0.9.25"
+  sha256 "6b41da9062aa0019c15fd2f700115f24699a96d4625df7145505ffddea0a7e7d"
 
   url "https://app.nlark.com/yuque-desktop/Yuque-#{version}.dmg",
       verified: "app.nlark.com/yuque-desktop/"
@@ -18,7 +18,7 @@ cask "yuque" do
 
   zap trash: [
     "~/Library/Application Support/yuque-desktop",
-    "~/Library/Saved Application State/com.yuque.app.savedState",
     "~/Library/Preferences/com.yuque.app.plist",
+    "~/Library/Saved Application State/com.yuque.app.savedState",
   ]
 end
