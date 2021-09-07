@@ -30,7 +30,7 @@ cask "far2l" do
   desc "Unix fork of FAR Manager v2"
   homepage "https://github.com/elfmz/far2l"
 
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :el_capitan"
 
   app "far2l.app"
 
