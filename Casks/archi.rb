@@ -18,7 +18,7 @@ cask "archi" do
   app "Archi.app"
 
   zap trash: [
-    "~/Library/Application Support/Archi4",
+    "~/Library/Application Support/Archi#{version.major}",
     "~/Library/Preferences/com.archimatetool.editor.plist",
     "~/Library/Saved Application State/com.archimatetool.editor.savedState",
   ]
