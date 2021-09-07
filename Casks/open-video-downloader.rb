@@ -1,6 +1,6 @@
 cask "open-video-downloader" do
-  version "2.3.0"
-  sha256 "2317e4dfb3f2930de3afba2d5794521e8887150b9a4928ec1829654ef22ad9e7"
+  version "2.3.1"
+  sha256 "5887b00d13a7c2a3c6105bcd297f8f7b434a96107ca82e5fd6465a135108a2d4"
 
   url "https://github.com/jely2002/youtube-dl-gui/releases/download/v#{version}/Open-Video-Downloader-#{version}.dmg"
   name "Open Video Downloader"
