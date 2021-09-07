@@ -1,13 +1,13 @@
 cask "tabby" do
-  version "1.0.155"
+  version "1.0.156"
 
   if Hardware::CPU.intel?
-    sha256 "f0d6358cf340e3b1c2b847db8e0b9a0fdc9b29c035574f11cef43e4ef84f5617"
+    sha256 "0e9fbd204c39ea255e2a9fe6d569dade3098edcf4cbe481fb5a4ed259fd60f1a"
 
     url "https://github.com/Eugeny/tabby/releases/download/v#{version}/tabby-#{version}-macos-x86_64.zip",
         verified: "github.com/Eugeny/tabby/"
   else
-    sha256 "47fb72d97cdac5092e7d717ab9e4dd212d449124ef2e04d6d6fd325e2d3a1564"
+    sha256 "6d8049f829b15b7bc957f28ca54a98e37ddb1e1bd22cb4b05db889606dee55a4"
 
     url "https://github.com/Eugeny/tabby/releases/download/v#{version}/tabby-#{version}-macos-arm64.zip",
         verified: "github.com/Eugeny/tabby/"
