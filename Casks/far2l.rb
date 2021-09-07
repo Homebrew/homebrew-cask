@@ -19,7 +19,7 @@ cask "far2l" do
 
     livecheck do
       url "https://github.com/elfmz/far2l/releases"
-      regex(%r{/v(.*)/far2l-(.*)-alpha-MacOS-10\.11\.dmg}i)
+      regex(%r{/v(.*)/far2l-(.*)-alpha-MacOS-10\.15\.dmg}i)
       strategy :page_match do |page, regex|
         page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
       end
