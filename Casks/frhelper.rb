@@ -29,6 +29,7 @@ cask "frhelper" do
     "~/Library/Caches/com.eusoft.frhelper.LightPeek",
     "~/Library/Preferences/com.eusoft.frhelper.plist",
     "~/Library/Application Support/com.eusoft.frhelper",
+    "~/Library/Containers/com.eusoft.frhelper.QuickLook",
     "~/Library/Preferences/group.com.eusoft.frhelper.plist",
     "~/Library/Preferences/com.eusoft.frhelper.LightPeek.plist",
   ]
