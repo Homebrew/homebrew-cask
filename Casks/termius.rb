@@ -23,10 +23,10 @@ cask "termius" do
   app "Termius.app"
 
   zap trash: [
+    "/Library/Preferences/com.termius-dmg.mac.plist",
     "~/.termius",
     "~/Library/Application Support/Termius",
-    "~/Library/Saved Application State/com.termius-dmg.mac.savedState",
-    "/Library/Preferences/com.termius-dmg.mac.plist",
     "~/Library/Logs/Termius",
+    "~/Library/Saved Application State/com.termius-dmg.mac.savedState",
   ]
 end
