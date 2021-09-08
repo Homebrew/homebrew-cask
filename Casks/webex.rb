@@ -1,5 +1,5 @@
 cask "webex" do
-  version "41.8.0.19868"
+  version "41.9.0.19961"
   sha256 :no_check
 
   if Hardware::CPU.intel?
