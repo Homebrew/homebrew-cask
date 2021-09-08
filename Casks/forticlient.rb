@@ -2,7 +2,8 @@ cask "forticlient" do
   version "7.0.0.22"
   sha256 "2beaff9671d9367985cfe9548a225af798a7df25fd83a18d07c1148952fa43c9"
 
-  url "https://filestore.fortinet.com/forticlient/downloads/FortiClient_#{version}_macosx.dmg"
+  url "https://filestore.fortinet.com/forticlient/downloads/FortiClient_#{version}_macosx.dmg",
+      verified: "filestore.fortinet.com/forticlient/downloads/"
   name "FortiClient"
   desc "Fabric agent with endpoint protection and cloud sandbox"
   homepage "https://forticlient.com/"
@@ -51,6 +52,7 @@ cask "forticlient" do
               "com.fortinet.forticlient.commservice",
               "com.fortinet.forticlient.FortiClient",
               "com.fortinet.forticlient.epctl",
+              "com.fortinet.forticlient.FortiClientx86"
             ],
             launchctl: [
               "com.fortinet.credential_store",
