@@ -1,5 +1,5 @@
 cask "termius" do
-  version "7.19.2"
+  version "7.20.1"
   sha256 :no_check
 
   if Hardware::CPU.intel?
@@ -23,10 +23,10 @@ cask "termius" do
   app "Termius.app"
 
   zap trash: [
+    "/Library/Preferences/com.termius-dmg.mac.plist",
     "~/.termius",
     "~/Library/Application Support/Termius",
-    "~/Library/Saved Application State/com.termius-dmg.mac.savedState",
-    "/Library/Preferences/com.termius-dmg.mac.plist",
     "~/Library/Logs/Termius",
+    "~/Library/Saved Application State/com.termius-dmg.mac.savedState",
   ]
 end
