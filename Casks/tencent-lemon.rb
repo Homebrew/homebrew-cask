@@ -1,9 +1,8 @@
 cask "tencent-lemon" do
   version "4.9.1"
-  sha256 "586ec26995a2cedd1dfebdbdc7a363f28cfa5416e4ce4afd6a94d85e42f00b92"
+  sha256 "eafa930c55bb0b89f818358b95075d2fd8f26b033554fa30a6ab0bdbfc758e88"
 
-  url "https://pm.myapp.com/invc/xfspeed/qqpcmgr/module_update/Lemon#{version}.dmg",
-      verified: "pm.myapp.com/invc/xfspeed/qqpcmgr/"
+  url "https://webcdn.m.qq.com/lemon/version/Lemon#{version}d.dmg"
   name "Tencent Lemon Cleaner"
   desc "Cleanup and system status tool"
   homepage "https://lemon.qq.com/"
@@ -11,7 +10,7 @@ cask "tencent-lemon" do
   livecheck do
     url "https://lemon.guanjia.qq.com/latest/package"
     strategy :page_match
-    regex(/Lemon[-_.]?[vV]?(\d+(?:\.\d+)*)\.dmg/i)
+    regex(/"latest":{"version":"(\d+(?:\.\d+)*)"/i)
   end
 
   app "Tencent Lemon.app"
@@ -19,9 +18,6 @@ cask "tencent-lemon" do
   uninstall delete: [
     "/Library/Logs/Lemon",
     "/Library/Preferences/LemonDaemon_packet.dat",
-    "/private/var/folders/ht/cbrdb7ln52x64ck8kbxzgdw80000gn/C/com.tencent.Lemon",
-    "/private/var/folders/ht/cbrdb7ln52x64ck8kbxzgdw80000gn/C/com.tencent.LemonMonitor",
-    "/private/var/run/com.tencent.Lemon.socket",
   ]
 
   zap trash: [
