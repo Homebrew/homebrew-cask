@@ -1,8 +1,4 @@
 cask "lens" do
-  name "Lens"
-  desc "Kubernetes IDE"
-  homepage "https://k8slens.dev/"
-
   version "5.2.0-latest.20210908.1"
   
   if Hardware::CPU.intel?
@@ -12,6 +8,10 @@ cask "lens" do
     url "https://api.k8slens.dev/binaries/Lens-#{version}-arm64.dmg"
     sha256 "d353a2d163af2799562fce0b94f3c7b8f210023a3b82c071a3a593901a25e4b5"
   end
+
+  name "Lens"
+  desc "Kubernetes IDE"
+  homepage "https://k8slens.dev/"
 
   livecheck do
     url "https://lens-binaries.s3.amazonaws.com/ide/latest-mac.yml"
