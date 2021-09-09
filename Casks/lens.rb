@@ -11,6 +11,7 @@ cask "lens" do
   else
     url "https://api.k8slens.dev/binaries/Lens-#{version}-arm64.dmg"
     sha256 "d353a2d163af2799562fce0b94f3c7b8f210023a3b82c071a3a593901a25e4b5"
+  end
 
   livecheck do
     url "https://lens-binaries.s3.amazonaws.com/ide/latest-mac.yml"
