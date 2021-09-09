@@ -20,6 +20,7 @@ cask "notion" do
     livecheck do
       url "https://www.notion.so/desktop/apple-silicon/download"
       strategy :header_match
+      regex(/Notion-(\d+(?:\.\d+)*?)(?:-arm64)?\.dmg/i)
     end
   end
 
