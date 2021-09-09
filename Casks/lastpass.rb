@@ -16,4 +16,15 @@ cask "lastpass" do
   depends_on macos: ">= :sierra"
 
   app "LastPass.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.lastpass.lastpassmacdesktop.safariext",
+    "~/Library/Application Support/com.lastpass.lastpassmacdesktop",
+    "~/Library/Caches/com.lastpass.lastpassmacdesktop",
+    "~/Library/Containers/com.lastpass.LastPass",
+    "~/Library/Containers/com.lastpass.lastpassmacdesktop.safariext",
+    "~/Library/Cookies/com.lastpass.lastpassmacdesktop.binarycookies",
+    "~/Library/Preferences/com.lastpass.lastpassmacdesktop.plist",
+    "~/Library/WebKit/com.lastpass.lastpassmacdesktop",
+  ]
 end
