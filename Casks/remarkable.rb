@@ -5,7 +5,7 @@ cask "remarkable" do
   url "https://eu-central-1.linodeobjects.com/remarkable-#{version.major}/sparkle/reMarkableMacOs/Prod/#{version.after_comma}/reMarkable-#{version.before_comma}.dmg",
       verified: "eu-central-1.linodeobjects.com/"
   name "Remarkable"
-  desc "Desktop application"
+  desc "View, Screen Share, organize, import, and download files to a reMarkable device"
   homepage "https://remarkable.com/"
 
   livecheck do
