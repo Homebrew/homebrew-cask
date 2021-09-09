@@ -1,6 +1,6 @@
 cask "plex-media-server" do
-  version "1.24.1.4931-1a38e63c6"
-  sha256 "52eede294c31b062a3d6d05ab726afda0a9963c8d50881ca48d26d97cc3d2ed9"
+  version "1.24.2.4973-2b1b51db9"
+  sha256 "526a90c569c975b32c6a3ed5b34336ae50ef959c717b5ebcf7f3110be9e69fb6"
 
   url "https://downloads.plex.tv/plex-media-server-new/#{version}/macos/PlexMediaServer-#{version}-x86_64.zip"
   name "Plex Media Server"
