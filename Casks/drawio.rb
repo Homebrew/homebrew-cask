@@ -13,7 +13,12 @@ cask "drawio" do
 
   name "draw.io Desktop"
   desc "Draw.io is free online diagram software"
-  homepage "https://www.draw.io/"
+  homepage "https://www.diagrams.net/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "draw.io.app"
 
