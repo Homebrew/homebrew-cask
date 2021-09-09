@@ -1,6 +1,6 @@
 cask "adguard-vpn" do
-  version "1.0.0.134"
-  sha256 "655e165b35498da72ba23aef3decafa34ef040f042c6f042c0d047caa1ed12c8"
+  version "1.0.0.135"
+  sha256 "3934f82a13077a78dd29086afc291454213c732ea1d6ba22451188e40a64e17f"
 
   url "https://static.adguard-vpn.com/mac/release/AdGuardVPN-#{version}.dmg"
   name "Adguard VPN"
