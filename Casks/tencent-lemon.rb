@@ -10,7 +10,7 @@ cask "tencent-lemon" do
   livecheck do
     url "https://lemon.guanjia.qq.com/latest/package"
     strategy :page_match
-    regex(/"latest":{"version":"([\d.]+)"/i)
+    regex(/"latest":{"version":"(\d+(?:\.\d+)*)"/i)
   end
 
   app "Tencent Lemon.app"
@@ -18,9 +18,6 @@ cask "tencent-lemon" do
   uninstall delete: [
     "/Library/Logs/Lemon",
     "/Library/Preferences/LemonDaemon_packet.dat",
-    "/private/var/folders/ht/cbrdb7ln52x64ck8kbxzgdw80000gn/C/com.tencent.Lemon",
-    "/private/var/folders/ht/cbrdb7ln52x64ck8kbxzgdw80000gn/C/com.tencent.LemonMonitor",
-    "/private/var/run/com.tencent.Lemon.socket",
   ]
 
   zap trash: [
