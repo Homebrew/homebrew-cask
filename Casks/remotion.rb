@@ -4,8 +4,13 @@ cask "remotion" do
 
   url "https://updates.remotion.com/installers/Remotion%20#{version}.dmg"
   name "remotion"
-  desc "Virtual office that puts your hybrid team right on your desktop"
+  desc "Communication tool for remote teams"
   homepage "https://remotion.com/"
+
+  livecheck do
+    url "https://updates.remotion.com/latest"
+    strategy :header_match
+  end
 
   app "Remotion.app"
 end
