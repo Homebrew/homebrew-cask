@@ -1,14 +1,14 @@
 cask "clickup" do
-  version "3.0.0"
+  version "3.0.1"
 
   if Hardware::CPU.intel?
     url "https://download.todesktop.com/210531zdwwjv8ke/ClickUp%20#{version}-x64.dmg",
         verified: "download.todesktop.com/210531zdwwjv8ke/"
-    sha256 "d6d74f9bc1460bff72c4e839b0a1e249670870436d7e1161f766f2a09a2d9350"
+    sha256 "841b6ebc7472076889eb14c83bd63a8d88bcca7b21d0fb53e119b29da11c9a26"
   else
     url "https://download.todesktop.com/210531zdwwjv8ke/ClickUp%20#{version}-arm64.dmg",
         verified: "download.todesktop.com/210531zdwwjv8ke/"
-    sha256 "8a99b6ced204d03cd88b0e417c224bb06e256181118301f4188b3894501e2ccc"
+    sha256 "926679bdaf761d1e5dd7e5523d5b144e6ec1cc3db860c393f7c297e43337ff3f"
   end
 
   name "ClickUp"
