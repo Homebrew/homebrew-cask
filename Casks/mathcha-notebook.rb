@@ -7,6 +7,14 @@ cask "mathcha-notebook" do
   desc "Mathematics editor"
   homepage "https://www.mathcha.io/"
 
+  livecheck do
+    url "https://notebook-downloads.mathcha.io/public/latest-mac.yml"
+    regex(%r{Mathcha Notebook-(\d+(?:\.\d+)+)-mac.zip}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]}" }
+    end
+  end
+
   app "Mathcha Notebook.app"
 
   zap trash: [
