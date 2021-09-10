@@ -24,5 +24,5 @@ cask "kui" do
 
   binary "#{appdir}/Kui.app/Contents/Resources/kubectl-kui"
 
-  zap trash: "~/Library/Application\ Support/Kui"
+  zap trash: "~/Library/Application Support/Kui"
 end
