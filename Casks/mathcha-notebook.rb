@@ -9,9 +9,9 @@ cask "mathcha-notebook" do
 
   livecheck do
     url "https://notebook-downloads.mathcha.io/public/latest-mac.yml"
-    regex(%r{Mathcha Notebook-(\d+(?:\.\d+)+)-mac.zip}i)
+    regex(/Mathcha Notebook-(\d+(?:\.\d+)+)-mac.zip/i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]}" }
+      page.scan(regex).map { |match| (match[0]).to_s }
     end
   end
 
