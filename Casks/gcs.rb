@@ -3,9 +3,9 @@ cask "gcs" do
   sha256 "70503e417b5b1b8a2088c2edb3354009dd9017bab614ffdc05d20f4880ad6a0f"
 
   url "https://github.com/richardwilkes/gcs/releases/download/v#{version}/GCS-#{version}.dmg",
-    verified: "github.com/richardwilkes/gcs/"
+      verified: "github.com/richardwilkes/gcs/"
   name "gcs"
-  desc "GURPS Character Sheet (GCS) is a standalone, interactive, character sheet editor that allows you to build characters for the GURPS Fourth Edition roleplaying game"
+  desc "Character sheet editor for the GURPS Fourth Edition roleplaying game"
   homepage "https://gurpscharactersheet.com/"
 
   app "GCS.app"
