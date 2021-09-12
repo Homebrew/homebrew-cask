@@ -18,7 +18,7 @@ cask "nightowl" do
   app "NightOwl.app"
 
   zap trash: [
-    "~/Library/Preferences/com.fuekiin.NightOwl.plist",
     "~/Library/Caches/com.fuekiin.NightOwl",
+    "~/Library/Preferences/com.fuekiin.NightOwl.plist",
   ]
 end
