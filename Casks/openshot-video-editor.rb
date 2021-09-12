@@ -5,7 +5,7 @@ cask "openshot-video-editor" do
   url "https://github.com/OpenShot/openshot-qt/releases/download/v#{version}/OpenShot-v#{version}-x86_64.dmg",
       verified: "github.com/OpenShot/openshot-qt/"
   name "OpenShot Video Editor"
-  desc "cross-platform video editor"
+  desc "Cross-platform video editor"
   homepage "https://openshot.org/"
 
   app "OpenShot Video Editor.app"
