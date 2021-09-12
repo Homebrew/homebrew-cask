@@ -13,4 +13,10 @@ cask "remotion" do
   end
 
   app "Remotion.app"
+
+  zap trash: [
+    "~/Library/Application Support/Remotion",
+    "~/Library/Caches/com.remotion.remotion",
+    "~/Library/Preferences/com.remotion.remotion.plist",
+  ]
 end
