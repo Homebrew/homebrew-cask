@@ -1,6 +1,6 @@
 cask "spamsieve" do
-  version "2.9.44"
-  sha256 "ee7e5fff0c7d7e11e9b00863c6d8ff2062d20a0c78844c2f687628f18b31fa83"
+  version "2.9.45"
+  sha256 "d84de75302be7f29b3b83df53bc5226007d63c6ae0c1a5139ea182d4f1798774"
 
   url "https://c-command.com/downloads/SpamSieve-#{version}.dmg"
   name "SpamSieve"
