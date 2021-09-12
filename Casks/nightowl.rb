@@ -16,4 +16,9 @@ cask "nightowl" do
   depends_on macos: ">= :mojave"
 
   app "NightOwl.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.fuekiin.NightOwl.plist",
+    "~/Library/Caches/com.fuekiin.NightOwl",
+  ]
 end
