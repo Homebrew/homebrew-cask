@@ -13,6 +13,7 @@ cask "nimblenote" do
   app "nimblenote.app"
 
   zap trash: [
+    "~/Library/Application Support/nimblenote/blob_storage",
     "~/Library/Application Support/nimblenote/Cache",
     "~/Library/Application Support/nimblenote/Code Cache",
     "~/Library/Application Support/nimblenote/Cookies",
@@ -21,9 +22,9 @@ cask "nimblenote" do
     "~/Library/Application Support/nimblenote/GPUCache",
     "~/Library/Application Support/nimblenote/Local Storage",
     "~/Library/Application Support/nimblenote/Network Persistent State",
+    "~/Library/Application Support/nimblenote/nimblenote.json",
     "~/Library/Application Support/nimblenote/Preferences",
     "~/Library/Application Support/nimblenote/Session Storage",
-    "~/Library/Application Support/nimblenote/blob_storage",
-    "~/Library/Application Support/nimblenote/nimblenote.json",
-  ]
+  ],
+      rmdir: "~/Library/Application Support/nimblenote"
 end
