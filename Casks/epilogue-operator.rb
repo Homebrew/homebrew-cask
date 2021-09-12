@@ -7,6 +7,11 @@ cask "epilogue-operator" do
   desc "Play and manage Game Boy cartridges on your computer"
   homepage "https://www.epilogue.co/"
 
+  livecheck do
+    url :url
+    strategy :header_match
+  end
+
   app "Operator.app"
 
   zap trash: [
