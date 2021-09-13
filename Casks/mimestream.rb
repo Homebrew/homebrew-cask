@@ -13,6 +13,8 @@ cask "mimestream" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
+
   app "Mimestream.app"
 
   zap trash: [
