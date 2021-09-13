@@ -7,13 +7,12 @@ cask "switchresx" do
   desc "Controls screen display settings"
   homepage "https://www.madrau.com/"
   
-  # not quite sure how to implement livecheck as url still shows version at 4.11.1
-  # 
-  # livecheck do
-  #   url "https://www.madrau.com/SRXCurrentVersion#{version.major}"
-  #   strategy :page_match
-  #   regex(/(\d+(?:\.\d+)*)/i)
-  # end
+  # seems there were no problems with "brew audit --cask switchresx", but not sure if that's all that's needed
+  livecheck do
+    url "https://www.madrau.com/SRXCurrentVersion#{version.major}"
+    strategy :page_match
+    regex(/(\d+(?:\.\d+)*)/i)
+  end
 
   prefpane "SwitchResX Installer.app/Contents/Resources/SwitchResX.prefPane"
 
