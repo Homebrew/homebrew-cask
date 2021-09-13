@@ -7,11 +7,6 @@ cask "multimc" do
   desc "Minecraft launcher"
   homepage "https://multimc.org/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
 
   app "MultiMC.app"
