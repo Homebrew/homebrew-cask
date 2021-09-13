@@ -1,17 +1,19 @@
 cask "switchresx" do
-  version "4.11.1"
+  version "4.11.2"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://www.madrau.com/data/switchresx/SwitchResX#{version.major}.zip"
   name "SwitchResX"
   desc "Controls screen display settings"
   homepage "https://www.madrau.com/"
-
-  livecheck do
-    url "https://www.madrau.com/SRXCurrentVersion#{version.major}"
-    strategy :page_match
-    regex(/(\d+(?:\.\d+)*)/i)
-  end
+  
+  # not quite sure how to implement livecheck as url still shows version at 4.11.1
+  # 
+  # livecheck do
+  #   url "https://www.madrau.com/SRXCurrentVersion#{version.major}"
+  #   strategy :page_match
+  #   regex(/(\d+(?:\.\d+)*)/i)
+  # end
 
   prefpane "SwitchResX Installer.app/Contents/Resources/SwitchResX.prefPane"
 
