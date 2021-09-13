@@ -1,8 +1,8 @@
 cask "docker" do
-  version "4.0.0,67817"
+  version "4.0.1,68347"
 
   if Hardware::CPU.intel?
-    sha256 "409ca31a47ba1d1620825f09e02f6d5ce203b2907ab91047041a0e9b4b719593"
+    sha256 "ea068a64a7230eff7e5bbcb215d1eadc5c921c05a2824dc082d4f51352b17523"
 
     url "https://desktop.docker.com/mac/main/amd64/#{version.after_comma}/Docker.dmg"
 
@@ -11,7 +11,7 @@ cask "docker" do
       strategy :sparkle
     end
   else
-    sha256 "1b3b5facbe8e05f582382e8ab24073736720e64c6a66c3a594759f98a854b59d"
+    sha256 "03762da8d65a0b2a93c483af4ffb679d633500b2be7f4647215f45c1ad6eb11f"
 
     url "https://desktop.docker.com/mac/main/arm64/#{version.after_comma}/Docker.dmg"
 
