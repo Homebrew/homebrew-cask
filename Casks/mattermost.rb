@@ -1,11 +1,11 @@
 cask "mattermost" do
-  version "4.7.1"
+  version "4.7.2"
 
   if Hardware::CPU.intel?
-    sha256 "e4c580ebb9b6c55da2569cf0ee6dbcbed413310213a9bf86e6cdf7b716226a93"
+    sha256 "e23a261329920daef2e265f8ab25e5601af581452a751d173f687d7fc14a4101"
     url "https://releases.mattermost.com/desktop/#{version}/mattermost-desktop-#{version}-mac.zip"
   else
-    sha256 "241dcc2e8840958415a827cdc25f8306615265f23927ec34573d597f1348928b"
+    sha256 "23e1bc8b098a23485bd0b9b2c388e250603646cb76b654af61f4283ebeb4a7c3"
     url "https://releases.mattermost.com/desktop/#{version}/mattermost-desktop-#{version}-mac-m1.zip"
   end
 
