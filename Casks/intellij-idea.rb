@@ -39,12 +39,12 @@ cask "intellij-idea" do
   end
 
   zap trash: [
-    "~/Library/Preferences/com.jetbrains.intellij.plist",
-    "~/Library/Preferences/jetbrains.idea.*.plist",
-    "~/Library/Preferences/IntelliJIdea#{version.major_minor}",
+    "~/Library/Application Support/JetBrains/IntelliJIdea#{version.major_minor}",
     "~/Library/Caches/JetBrains/IntelliJIdea#{version.major_minor}",
     "~/Library/Logs/JetBrains/IntelliJIdea#{version.major_minor}",
-    "~/Library/Application Support/JetBrains/IntelliJIdea#{version.major_minor}",
+    "~/Library/Preferences/com.jetbrains.intellij.plist",
+    "~/Library/Preferences/IntelliJIdea#{version.major_minor}",
+    "~/Library/Preferences/jetbrains.idea.*.plist",
     "~/Library/Saved Application State/com.jetbrains.intellij.savedState",
   ]
 end
