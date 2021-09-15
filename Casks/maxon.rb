@@ -31,10 +31,10 @@ cask "maxon" do
   zap trash: [
     "~/Library/Application Support/Maxon",
     "~/Library/Application Support/Red Giant",
-    "~/Library/Saved Application State/net.maxon.app-manager.savedState",
+    "~/Library/Caches/net.maxon.app-manager",
     "~/Library/Preferences/Maxon",
     "~/Library/Preferences/net.maxon.app-manager.plist",
-    "~/Library/Caches/net.maxon.app-manager",
+    "~/Library/Saved Application State/net.maxon.app-manager.savedState",
     "/Users/Shared/Maxon",
     "/Users/Shared/Red Giant",
   ]
