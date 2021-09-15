@@ -2,7 +2,7 @@ cask "burp-suite" do
   version "2021.8.3"
   sha256 "a03bbdadac04a3d2259a21285a362b0649c1414ad1b538813db0e9420c2e84a3"
 
-  url "https://portswigger.net/burp/releases/download?product=community&version=#{version}&type=MacOsx"
+  url "https://portswigger.net/burp/releases/professional-community-#{version.dots_to_hyphens}?requestededition=community"
   name "Burp Suite Community Edition"
   desc "Web security testing toolkit"
   homepage "https://portswigger.net/burp/"
