@@ -1,6 +1,6 @@
 cask "rider" do
-  version "2021.1.5,211.7628.61"
-  sha256 "aa5a157e929f88207eabe3f9342bab87a74a908a3c8b5364455e6a8e9dbc1ef8"
+  version "2021.2.1,212.5080.71"
+  sha256 "6d3d71c5a7ea0443427903e6749e19d808dbb9280f51d96d61584d6f2e105500"
 
   url "https://download.jetbrains.com/rider/JetBrains.Rider-#{version.before_comma}.dmg"
   name "JetBrains Rider"

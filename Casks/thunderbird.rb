@@ -1,68 +1,68 @@
 cask "thunderbird" do
-  version "78.12.0"
+  version "91.1.0"
 
   language "cs" do
-    sha256 "ff45ab3e37396265bd17599c92a4259675b17e803d112b13069f59f95f379f5c"
+    sha256 "7b62826b1d92f7c8fd7e5376a77fa3620dacd6b2b3f3509f19d0e147520620ee"
     "cs"
   end
   language "de" do
-    sha256 "71657dc28ab6d93b2e3fc080ec2e0cbc7d0b0348434ca42483dc300f809a4c28"
+    sha256 "efc63800c9597f1378c5ffd0aff051c3b62efbaf7f770881719c2c1a5f8a09e8"
     "de"
   end
   language "en-GB" do
-    sha256 "e1f323ed500513e79102e0a603fc94882b0eea3f5c37009513baa987bc6ee501"
+    sha256 "331eda6a398f3d63c40210710908ec7f24fe05453a463659068e3e11de1f006e"
     "en-GB"
   end
   language "en", default: true do
-    sha256 "9cac6c2509dd535d2c617612ae68653db195eb661dd65f61439ccfaea19c78b4"
+    sha256 "b28ff824beb06d655b21971d11f5a218388b12f081a53fdb9e0e8fc904a0f01f"
     "en-US"
   end
   language "fr" do
-    sha256 "f0a87151cf5e01ceb7ba2630444ddf5423d29a6042127c6803e5587d1ec58320"
+    sha256 "f55bae2cfe7bc2d9437ff7a2cf1dc0ec3666459822ea33a9f22a588d650e3a18"
     "fr"
   end
   language "gl" do
-    sha256 "825e91b2d5dd0d5df974a8f1c202a3efcd8ddaf46c710d60742f3b0d59d7de02"
+    sha256 "3e8e1b819e645d64868226cd7e66d45dd48436930a4c9bac9de653934c397550"
     "gl"
   end
   language "it" do
-    sha256 "018184c0f5242e750c182aabeaef6b0654678cb7d9e5288d3470f123799ae4cb"
+    sha256 "94d9cd0f76fc9384b75bb9c5a270ec3a638cc98e45466918eadd82e59231dc32"
     "it"
   end
   language "ja" do
-    sha256 "7bdff8bbf9daaba7a23dd193fbabb074b1a4718058878b1b67611bd3b52f820d"
+    sha256 "bb9bc46660de1dbb702a3d9e34cdbab8855d5d12778794b3b266c2b2b98911c9"
     "ja-JP-mac"
   end
   language "nl" do
-    sha256 "225174a9d35e39a797420925306ec5724868d71b0aebdf67857c8ede0be648a9"
+    sha256 "d16ea11b40efda42f483b584d5c6fd51eee7760322896d9088a9684c8ca05f76"
     "nl"
   end
   language "pl" do
-    sha256 "efafbce895331baa1ff03b40897e288cba6f275f1ccceb930d3f2171a2ae2be8"
+    sha256 "d02296abbdb4e782d057541157c284530675e80959991b2878ef8fa2759f801d"
     "pl"
   end
   language "pt" do
-    sha256 "d90e82a57a183b62724cf6e56515345b282438d59f1c10b8baee10f51cd8db71"
+    sha256 "9e213784a286b8a45054e4ca3b1353c833b99411d715a981b909376e1daa3a1e"
     "pt-PT"
   end
   language "pt-BR" do
-    sha256 "a9be99e6b07141d307eedb62c0a1d04772a8bd1d0a8dc586406dd21efc16fe01"
+    sha256 "5d44d88b2fc068a53606b396f8d05ec0f65c9e6fb062df033c6584f43e3d274f"
     "pt-BR"
   end
   language "ru" do
-    sha256 "10288bab1d98c240485825c42f81fb395997d92a1fa1c5fe38906ef8e35dda0a"
+    sha256 "7df7d494e1125f7a2b8c3c8538ceb16c9152177d8f245eaecada6b58f28bd5b7"
     "ru"
   end
   language "uk" do
-    sha256 "7db64a72903b78a5646a809316c2a32a6fe0d3ffb82813b9592eead1c99afcae"
+    sha256 "68141d73d3dcdcc00d661867aa052130063cea43e88e880a69623f1c35b6d061"
     "uk"
   end
   language "zh-TW" do
-    sha256 "30c3a20e4ce343159f8cb40bb478c847a2237d1d1f8d3760c45d9a417ef29b53"
+    sha256 "59f90319a312803646c32c7eaaa72cd347b4aa0bbfa231d05313a8d8c5202a05"
     "zh-TW"
   end
   language "zh" do
-    sha256 "d8ef443eaff395ebb6ce3720f29849a6252b3c592c4e7cb6fa0be358057a1ab4"
+    sha256 "9f364f40448b247a4243c18e61d6d4bef65d86b47875d3ae792299b2b42ce5fa"
     "zh-CN"
   end
 
@@ -83,10 +83,10 @@ cask "thunderbird" do
   app "Thunderbird.app"
 
   zap trash: [
-    "~/Library/Thunderbird",
-    "~/Library/Caches/Thunderbird",
-    "~/Library/Saved Application State/org.mozilla.thunderbird.savedState",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.thunderbird.sfl*",
+    "~/Library/Caches/Thunderbird",
     "~/Library/Preferences/org.mozilla.thunderbird.plist",
+    "~/Library/Saved Application State/org.mozilla.thunderbird.savedState",
+    "~/Library/Thunderbird",
   ]
 end

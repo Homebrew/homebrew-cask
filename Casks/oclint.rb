@@ -1,17 +1,12 @@
 cask "oclint" do
-  version "21.03"
-  sha256 "71a85ba48d11df60ecb9298d90871507d0bdd883e9414ff88d1fb2c2a75d2a14"
+  version "21.05"
+  sha256 "b8279289756b425b0ac8b2a7bfa63b069ad4593fd647f0722e3a861bbf39cf12"
 
-  url "https://github.com/oclint/oclint/releases/download/v#{version}/oclint-#{version}-llvm-11.1.0-x86_64-darwin-macos-big-sur-11.2-xcode-12.4.tar.gz",
+  url "https://github.com/oclint/oclint/releases/download/v#{version}/oclint-#{version}-llvm-12.0.0-x86_64-darwin-macos-big-sur-11.4-xcode-12.5.tar.gz",
       verified: "github.com/oclint/oclint/"
   name "OCLint"
   desc "Static source code analysis tool"
   homepage "https://oclint.org/"
-
-  livecheck do
-    url :url
-    strategy :git
-  end
 
   binary "oclint-#{version.before_comma}/bin/oclint"
   binary "oclint-#{version.before_comma}/bin/oclint-json-compilation-database"

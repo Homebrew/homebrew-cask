@@ -1,5 +1,5 @@
 cask "bookends" do
-  version "13.5.5"
+  version "14.0"
   sha256 :no_check
 
   url "https://www.sonnysoftware.com/Bookends.dmg"

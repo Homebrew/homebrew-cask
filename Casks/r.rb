@@ -1,6 +1,6 @@
 cask "r" do
-  version "4.1.0"
-  sha256 "2974eff8401ebd00d580fd98ba1a96352cc8924358443d41c8bdb66e358d7f36"
+  version "4.1.1"
+  sha256 "c239e97c3659169447c50474827d9af79176fff67a34249fcd413d8da6ef2414"
 
   url "https://cloud.r-project.org/bin/macosx/base/R-#{version}.pkg"
   name "R"

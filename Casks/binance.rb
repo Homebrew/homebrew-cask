@@ -1,6 +1,6 @@
 cask "binance" do
-  version "1.20.1"
-  sha256 "09bd02824e6ee09ea737f8a9052fadfa9fb955670941afc5968e033a017e9f46"
+  version "1.23.0"
+  sha256 "2005d111181760ce7180ef151fb5de9902d53eb82bec3403e5e0dded9bac8af0"
 
   url "https://ftp.binance.com/electron-desktop/mac/production/binance-#{version}.dmg"
   name "Binance"
@@ -19,7 +19,7 @@ cask "binance" do
 
   zap trash: [
     "~/Library/Application Support/Binance",
-    "~/Library/Saved Application State/com.binance.BinanceDesktop.savedState",
     "~/Library/Logs/Binance",
+    "~/Library/Saved Application State/com.binance.BinanceDesktop.savedState",
   ]
 end

@@ -1,5 +1,5 @@
 cask "apparency" do
-  version "1.2,118"
+  version "1.3,130"
   sha256 :no_check
 
   url "https://mothersruin.com/software/downloads/Apparency.dmg"
@@ -9,10 +9,9 @@ cask "apparency" do
 
   livecheck do
     url "https://www.mothersruin.com/software/Apparency/data/ApparencyVersionInfo.plist"
-    strategy :page_match do |page|
-      svs = page.match(/CFBundleShortVersionString.*?\n.*?(\d+(?:\.\d+)*)/i)
-      bv = page.match(/CFBundleVersion.*?\n.*?(\d+(?:\.\d+)*)/i)
-      "#{svs[1]},#{bv[1]}"
+    regex(/CFBundleShortVersionString.*?\n.*?(\d+(?:\.\d+)*).*?\n.*?CFBundleVersion.*?\n.*?(\d+(?:\.\d+)*)/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 

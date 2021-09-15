@@ -1,6 +1,11 @@
 cask "contexts" do
-  version "3.8,380"
-  sha256 "c9ac6274012a062b679eb614848d2224dff4673fbc3953552debc7f5293f55e4"
+  if MacOS.version <= :mojave
+    version "3.7.1,371"
+    sha256 "de5e4a660cc30276155606b539d1ae58684115a3983d69598f1505fcad499a87"
+  else
+    version "3.8.1,381"
+    sha256 "f4ca05c6abb14f6193b158645d74ca9d2672aabba7e07cc1c6cc3af18aa44907"
+  end
 
   url "https://contexts.co/releases/Contexts-#{version.before_comma}.dmg"
   name "Contexts"

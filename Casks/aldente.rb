@@ -1,6 +1,6 @@
 cask "aldente" do
-  version "1.04"
-  sha256 "205b44132a8cd5d3777e564092b31732cca26dfb3e90893275537420502da538"
+  version "1.07"
+  sha256 "537f8a392a4767f7a64a31a0b65d0435b6e649830d4ddebae6b5df4183a85031"
 
   url "https://github.com/davidwernhart/AlDente/releases/download/#{version}/AlDente_#{version}.dmg"
   name "AlDente"
@@ -12,6 +12,7 @@ cask "aldente" do
     strategy :github_latest
   end
 
+  auto_updates true
   depends_on macos: ">= :big_sur"
 
   app "AlDente.app"

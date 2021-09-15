@@ -1,8 +1,8 @@
 cask "miniforge" do
-  version "4.10.3-3"
+  version "4.10.3-5"
 
   if Hardware::CPU.intel?
-    sha256 "3242d65bae12edf2d7cd29ed466fc72cb66f3f031f621ac360ab8968e4d29974"
+    sha256 "6f324566af60279518c2d03ffd69f605b335f87f72e6e7e4c2f383808e41e212"
     url "https://github.com/conda-forge/miniforge/releases/download/#{version}/Miniforge3-#{version}-MacOSX-x86_64.sh"
 
     installer script: {
@@ -10,7 +10,7 @@ cask "miniforge" do
       args:       ["-b", "-p", "#{caskroom_path}/base"],
     }
   else
-    sha256 "5f5906dec9ba56fe4cbf1a50b9a573629f4af8f3f166785d114a8af65b9c78a3"
+    sha256 "77989d3186c21ec8de9ff22ef076e815c465c026cef087601b2bec5d02cfd889"
     url "https://github.com/conda-forge/miniforge/releases/download/#{version}/Miniforge3-#{version}-MacOSX-arm64.sh"
 
     installer script: {

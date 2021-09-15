@@ -1,6 +1,6 @@
 cask "airparrot" do
-  version "3.1.1"
-  sha256 "2c241ade62dfb061dc565a5e0f94998b80a538d60ad0c0ffa2b5af905c6591c1"
+  version "3.1.2"
+  sha256 "fac0deb4339ed1979b91cc24fe15e5b291800e0ef64e0dbe84d55dd1dc9492bc"
 
   url "https://download.airsquirrels.com/AirParrot#{version.major}/Mac/AirParrot-#{version}.dmg"
   name "AirParrot"

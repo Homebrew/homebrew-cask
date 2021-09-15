@@ -1,8 +1,8 @@
 cask "kryoflux" do
-  version "2.62"
-  sha256 "f4aac0ee77dd8576be686516eaef97dd468ce2f2af099fb6ae2b156eef614350"
+  version "3.00"
+  sha256 "39674e173d3c4532118edbfff3804d6399512172890169e41d381c8bb7a58c7f"
 
-  url "https://www.kryoflux.com/download/kryoflux_#{version}_macosx.zip"
+  url "https://www.kryoflux.com/download/kryoflux_#{version}_macosx.dmg"
   name "KryoFlux"
   desc "Host Software - DiskTool Console (dtc) and UI"
   homepage "https://www.kryoflux.com/"
@@ -10,20 +10,17 @@ cask "kryoflux" do
   livecheck do
     url "https://www.kryoflux.com/?page=download"
     strategy :page_match
-    regex(%r{href=.*?/kryoflux_(\d+(?:\.\d+)*)_macosx\.zip}i)
+    regex(%r{href=.*?/kryoflux_(\d+(?:\.\d+)*)_macosx\.dmg}i)
   end
 
-  pkg "kryoflux_#{version}_macosx/dtc/KryoFlux.mpkg"
+  app "KryoFlux UI.app"
+  pkg "KryoFlux.pkg"
 
-  uninstall pkgutil: [
-    "com.kryoflux.pkg.KryoFlux-UI",
-    "com.kryoflux.usr.pkg",
-    "com.kryoflux.Library.pkg",
+  uninstall pkgutil: "com.kryoflux.pkg.DTC"
+
+  zap trash: [
+    "~/Library/Preferences/com.kryoflux.ui.plist",
+    "~/Library/Preferences/com.kryoflux.kryoflux-ui.plist",
+    "~/.kryoflux",
   ]
-
-  zap trash: "~/Library/Preferences/com.kryoflux.ui.plist"
-
-  caveats do
-    depends_on_java
-  end
 end

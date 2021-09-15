@@ -1,16 +1,16 @@
 cask "reaper" do
-  version "6.33"
+  version "6.36"
 
   if MacOS.version <= :mojave
-    sha256 "f377b783a01d355b35e81bfac071f963339235dce83d2caad99214b41a9e5abd"
+    sha256 "b9b91996deab442ab6e124ea284673326a5b407bd74925ba28724763a3ab7c87"
 
     url "https://www.reaper.fm/files/#{version.major}.x/reaper#{version.major_minor.no_dots}_x86_64.dmg"
   elsif Hardware::CPU.intel?
-    sha256 "48292fae97e122ad19e9608a5995a568a3d03a1c0806a9a6527afda2d12a800f"
+    sha256 "5b3a46443f9376f6fc254ac6b0fb40e460f50c0a02960e1cd0af89766b589edc"
 
     url "https://www.reaper.fm/files/#{version.major}.x/reaper#{version.major_minor.no_dots}_x86_64_catalina.dmg"
   else
-    sha256 "bf84213dc29378d04197a05ec9a7bb87d0b698c503cf6cd44cbdf13959038f94"
+    sha256 "6cd56c6d0d208b5794cdb6d7741f7d3bc3a33a20a57c0d025c4c094624dbafe1"
 
     url "https://www.reaper.fm/files/#{version.major}.x/reaper#{version.major_minor.no_dots}-beta_arm64.dmg"
   end
@@ -23,6 +23,8 @@ cask "reaper" do
     url "https://www.cockos.com/reaper/latestversion/?p=osx_64"
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
+
+  auto_updates true
 
   if Hardware::CPU.intel?
     app "REAPER.app"

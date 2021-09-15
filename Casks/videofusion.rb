@@ -1,8 +1,8 @@
 cask "videofusion" do
-  version "1.4.1.1156.0"
-  sha256 "bd5993eddafc0fcde4f8769a2ed9cdfc4535820bd34c9e71ac1ef6e9e05e40a8"
+  version "1.7.0.2068.0"
+  sha256 "35cc34e93f28d22a2e90353dc9967b6bba9bd693a685a8d54924aa8d28ed359d"
 
-  url "https://lf3-faceucdn-tos.pstatp.com/obj/faceu-packages/Jianying_#{version.dots_to_underscores}.pkg",
+  url "https://lf3-faceucdn-tos.pstatp.com/obj/faceu-packages/Jianying_#{version.dots_to_underscores}.dmg",
       verified: "lf3-faceucdn-tos.pstatp.com/obj/faceu-packages/"
   name "VideoFusion"
   name "剪映专业版"
@@ -12,18 +12,13 @@ cask "videofusion" do
   livecheck do
     url "https://lf3-beecdn.bytetos.com/obj/ies-fe-bee/bee_prod/biz_80/bee_prod_80_bee_publish_3563.json"
     strategy :page_match do |page|
-      JSON.parse(page)["mac_download_pkg"]["channel_default"][/(\d+(?:_\d+)+)\.pkg/i, 1].tr("_", ".")
+      JSON.parse(page)["mac_download_pkg"]["channel_default"][/(\d+(?:_\d+)+)\.dmg/i, 1].tr("_", ".")
     end
   end
 
   depends_on macos: ">= :mojave"
 
-  pkg "Jianying_#{version.dots_to_underscores}.pkg"
-
-  uninstall pkgutil: [
-    "com.lemon.lvpro",
-    "com.mygreatcompany.pkg.lvpro",
-  ]
+  app "VideoFusion-macOS.app"
 
   zap trash: [
     "~/Library/Caches/com.lemon.ee.lv",

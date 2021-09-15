@@ -1,5 +1,5 @@
 cask "tutanota" do
-  version "3.85.6"
+  version "3.87.1"
   sha256 :no_check
 
   url "https://mail.tutanota.com/desktop/tutanota-desktop-mac.dmg"
@@ -11,6 +11,8 @@ cask "tutanota" do
     url "https://mail.tutanota.com/desktop/latest-mac.yml"
     strategy :electron_builder
   end
+
+  auto_updates true
 
   app "Tutanota Desktop.app"
 

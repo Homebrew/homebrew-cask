@@ -1,12 +1,12 @@
 cask "hyper" do
-  version "3.1.1"
+  version "3.1.3"
 
   if Hardware::CPU.intel?
-    sha256 "3d6a3b5b7e95fdacd63cb80973d411b9f5314dd26de2accdd318acecbb53c60d"
+    sha256 "d6b3b75e8ee809633ebdb2e00fcca3e8889b7f4b846b12de256e90e76a5acef7"
     url "https://github.com/vercel/hyper/releases/download/v#{version}/Hyper-#{version}-mac-x64.zip",
         verified: "github.com/vercel/hyper/"
   else
-    sha256 "1b82a131d27aa77f722d5d4792c03ddb4d50795d7fddc8c367c1cf80e1dd7074"
+    sha256 "6c91f66a347d6f5ad2f2d951f9654e629dd8b484347fe83fbbe5cba35b4f4c64"
     url "https://github.com/vercel/hyper/releases/download/v#{version}/Hyper-#{version}-mac-arm64.zip",
         verified: "github.com/vercel/hyper/"
   end

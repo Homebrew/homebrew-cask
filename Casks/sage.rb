@@ -1,6 +1,6 @@
 cask "sage" do
-  version "9.3,1.1"
-  sha256 "3504a4e47264ab935a93853473c8cee9fa82e43ab0c5f546c1fc95143fd9e1e1"
+  version "9.4,1.2"
+  sha256 "70f315b7a47d95b45fe8902838fbe6dd3cfdfe4eb761dba2df644092d640cf68"
 
   url "https://github.com/3-manifolds/Sage_macOS/releases/download/v#{version.after_comma}/SageMath-#{version.before_comma}.dmg",
       verified: "github.com/3-manifolds/Sage_macOS/"
@@ -28,8 +28,8 @@ cask "sage" do
     "com.tcltk.tklibrary",
   ],
             pkgutil: [
-              "org.computop.SageMath.bin",
-              "org.computop.SageMath.share",
+              "org.computop.SageMath.#{version.before_comma.dots_to_underscores}.bin",
+              "org.computop.SageMath.#{version.before_comma.dots_to_underscores}.share",
             ]
 
   zap trash: [

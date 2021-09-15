@@ -1,9 +1,18 @@
 cask "lando" do
-  version "3.1.4"
-  sha256 "3369cf238c956bd12f421c56f110181cc981edeacd1743e1600feb9e991bdf45"
+  version "3.3.2"
 
-  url "https://github.com/lando/lando/releases/download/v#{version}/lando-v#{version}.dmg",
-      verified: "github.com/lando/lando/"
+  if Hardware::CPU.intel?
+    sha256 "893a07612ee5b894538f0566cb7a0d28ba38ab1478f1f053592d378eb0508940"
+
+    url "https://github.com/lando/lando/releases/download/v#{version}/lando-x64-v#{version}.dmg",
+        verified: "github.com/lando/lando/"
+  else
+    sha256 "2509829d5ef50fe98ece78005989fdd216e51e3563e38e8698948a2d2e208bcb"
+
+    url "https://github.com/lando/lando/releases/download/v#{version}/lando-arm64-v#{version}.dmg",
+        verified: "github.com/lando/lando/"
+  end
+
   name "Lando"
   desc "Local development environment and DevOps tool built on Docker"
   homepage "https://lando.dev/"
@@ -29,5 +38,5 @@ cask "lando" do
         },
       ]
 
-  uninstall pkgutil: "io.lando.pkg.lando"
+  uninstall pkgutil: "dev.lando.pkg.lando"
 end

@@ -1,6 +1,6 @@
 cask "fastrawviewer" do
-  version "1.7.4.1736"
-  sha256 "d8b34eb49309f767f1449698ae43a7c1a5faba7677176685b8adbc071d414523"
+  version "2.0.1.1862"
+  sha256 "086845496a98f9a55a631d1f7ee1c61b9c3c6545d81956318a2fbcdeb24dac91"
 
   url "https://updates.fastrawviewer.com/data/FastRawViewer-#{version}.dmg"
   name "FastRawViewer"

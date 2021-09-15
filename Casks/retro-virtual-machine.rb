@@ -4,9 +4,17 @@ cask "retro-virtual-machine" do
 
   url "https://retrovirtualmachine.ams3.digitaloceanspaces.com/release/beta#{version.after_comma.major}/macos/RetroVirtualMachine.#{version.before_comma}.beta-#{version.after_comma}.macos.dmg",
       verified: "retrovirtualmachine.ams3.digitaloceanspaces.com/"
-  appcast "https://www.retrovirtualmachine.org/en/downloads"
   name "Retro Virtual Machine"
+  desc "ZX Spectrum and Amstrad CPC emulator"
   homepage "https://www.retrovirtualmachine.org/en/"
+
+  livecheck do
+    url "https://www.retrovirtualmachine.org/en/downloads"
+    strategy :page_match do |page|
+      match = page.match(/RetroVirtualMachine\.(\d+(?:\.\d+)*)\.beta-(\d+(?:\..\d+)*)\.macos\.dmg/i)
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
   app "Retro Virtual Machine #{version.major}.app"
 

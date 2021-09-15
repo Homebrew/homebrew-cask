@@ -1,6 +1,6 @@
 cask "firestormos" do
-  version "6.4.13.63251"
-  sha256 "989662f0d4ba19c0b9fc34a9fe0b246fe8af41636102d950138b74d8fa694733"
+  version "6.4.21.64531"
+  sha256 "eccebafb8c91a6652d2ec7645799d2c8fb29fb4470cc8f166ce9e47a198168b8"
 
   url "https://downloads.firestormviewer.org/mac/Phoenix-FirestormOS-Releasex64_#{version.dots_to_underscores}_x86_64.dmg"
   name "Phoenix Firestorm viewer for OpenSim"

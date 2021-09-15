@@ -1,19 +1,23 @@
 cask "android-studio" do
-  version "4.2.2.0,202.7486908"
-  sha256 "63b8e5bed9a772c19398604bd7c897a543d4164a534775ad44a91110f49532c7"
+  version "2020.3.1.24"
 
-  url "https://dl.google.com/dl/android/studio/install/#{version.before_comma}/android-studio-ide-#{version.after_comma}-mac.dmg",
-      verified: "google.com/dl/android/studio/"
+  if Hardware::CPU.intel?
+    sha256 "291a519faef35b27f4d0f82805ba8a5e0019b09d5405743169b1b72cc66022f3"
+    url "https://redirector.gvt1.com/edgedl/android/studio/install/#{version}/android-studio-#{version}-mac.dmg",
+        verified: "redirector.gvt1.com/edgedl/android/studio/"
+  else
+    sha256 "1895dbb4860b79eb9470cf2ef7fa477cb1cac6e6d058e8b13ac38292e19993ec"
+    url "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/#{version}/android-studio-#{version}-mac_arm.zip",
+        verified: "redirector.gvt1.com/edgedl/android/studio/"
+  end
+
   name "Android Studio"
   desc "Tools for building Android applications"
   homepage "https://developer.android.com/studio/"
 
   livecheck do
     url :homepage
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/(\d+(?:\.\d+)*)/android-studio-ide-(\d+(?:\.\d+)*)-mac\.dmg}i)
-      "#{match[1]},#{match[2]}"
-    end
+    regex(/android-studio-(\d+(?:\.\d+)*)-mac/i)
   end
 
   auto_updates true

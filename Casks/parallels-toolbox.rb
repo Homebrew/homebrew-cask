@@ -1,6 +1,6 @@
 cask "parallels-toolbox" do
-  version "4.5.0-3860"
-  sha256 "ac84fdb201250d67e4253bd76f991dd03a3c48d9b3520ef4508805cf79dc45da"
+  version "5.0.1-4027"
+  sha256 "bec548a6f5e99cf2f0f0a1cad1c56cfb40db3857352cf6887850e83961dfdda4"
 
   url "https://download.parallels.com/toolbox/v#{version.major}/#{version}/ParallelsToolbox-#{version}.dmg"
   name "Parallels Toolbox"
@@ -11,6 +11,8 @@ cask "parallels-toolbox" do
     url "https://www.parallels.com/directdownload/toolbox/"
     strategy :header_match
   end
+
+  auto_updates true
 
   installer manual: "Install Parallels Toolbox.app"
 
