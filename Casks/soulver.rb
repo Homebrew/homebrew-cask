@@ -18,15 +18,15 @@ cask "soulver" do
   app "Soulver #{version.major}.app"
 
   zap trash: [
-    "~/Library/Application Support/Soulver 3",
+    "~/Library/Application Scripts/app.soulver.mac.QuicklookInSpotlight",
     "~/Library/Application Support/app.soulver.mac",
-    "~/Library/Preferences/app.soulver.mac.plist",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/app.soulver.mac.sfl2",
+    "~/Library/Application Support/Soulver #{version.major}",
     "~/Library/Caches/app.soulver.mac",
     "~/Library/Containers/app.soulver.mac.QuicklookInSpotlight",
     "~/Library/Group Containers/group.app.soulver",
     "~/Library/HTTPStorages/app.soulver.mac.binarycookies",
-    "~/Library/Application Scripts/app.soulver.mac.QuicklookInSpotlight",
+    "~/Library/Preferences/app.soulver.mac.plist",
     "~/Library/Saved Application State/app.soulver.mac.savedState",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/app.soulver.mac.sfl2",
   ]
 end
