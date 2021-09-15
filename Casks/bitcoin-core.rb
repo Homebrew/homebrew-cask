@@ -1,8 +1,8 @@
 cask "bitcoin-core" do
-  version "0.21.1"
-  sha256 "2df15131cd18fd1941adc26f014012b437ccaadab39f1f5dc10282a68e8f9923"
+  version "22.0"
+  sha256 "3b3e2680f7d9304c13bfebaf6445ada40d72324b4b3e0a07de9db807389a6c5b"
 
-  url "https://bitcoincore.org/bin/bitcoin-core-#{version}/bitcoin-#{version}-osx.dmg"
+  url "https://bitcoincore.org/bin/bitcoin-core-#{version}/bitcoin-#{version}-osx-signed.dmg"
   name "Bitcoin Core"
   desc "Bitcoin client and wallet"
   homepage "https://bitcoincore.org/"
