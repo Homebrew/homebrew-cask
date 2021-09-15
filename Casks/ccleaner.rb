@@ -3,9 +3,15 @@ cask "ccleaner" do
   sha256 "52295172b846c477f1c5396c9f568d602b89fad52d2fcaba394a14296e096ce6"
 
   url "https://download.ccleaner.com/mac/CCMacSetup#{version.major_minor.no_dots}.dmg"
-  appcast "https://www.ccleaner.com/ccleaner/download?mac"
   name "Piriform CCleaner"
+  desc "Remove junk and unused files"
   homepage "https://www.ccleaner.com/ccleaner-mac"
+
+  livecheck do
+    url "https://www.ccleaner.com/ccleaner/download?mac"
+    strategy :page_match
+    regex(/CCleaner\s*Mac\s*v?(\d+(?:\.\d+)*)/i)
+  end
 
   app "CCleaner.app"
 

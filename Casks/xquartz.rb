@@ -1,6 +1,6 @@
 cask "xquartz" do
-  version "2.8.0"
-  sha256 "b74d1d2ff98452d73fb68172c586489e2a6ad3c512e41fd1b0b666ec3dbf5b28"
+  version "2.8.1"
+  sha256 "0eb477f3f8f3795738df9a6a8a15e3858fe21fe9d7103b8d13861bb3aa509e3b"
 
   url "https://github.com/XQuartz/XQuartz/releases/download/XQuartz-#{version}/XQuartz-#{version}.dmg",
       verified: "github.com/XQuartz/XQuartz/"
@@ -17,7 +17,7 @@ cask "xquartz" do
 
   auto_updates true
 
-  pkg "Xquartz.pkg"
+  pkg "XQuartz.pkg"
 
   uninstall launchctl: "org.xquartz.privileged_startx",
             pkgutil:   "org.xquartz.X11"

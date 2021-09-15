@@ -1,12 +1,16 @@
 cask "protonmail-bridge" do
-  version "1.6.9"
+  version "1.8.7"
   sha256 :no_check
 
   url "https://protonmail.com/download/Bridge-Installer.dmg"
-  appcast "https://protonmail.com/download/current_version_darwin.json"
   name "ProtonMail Bridge"
   desc "Bridges ProtonMail to email clients supporting IMAP and SMTP protocols"
   homepage "https://protonmail.com/bridge/"
+
+  livecheck do
+    url "https://protonmail.com/download/current_version_darwin.json"
+    regex(/"Version"\s*:\s*"(\d+(?:\.\d+)+)"/i)
+  end
 
   auto_updates true
 

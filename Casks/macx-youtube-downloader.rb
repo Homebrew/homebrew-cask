@@ -1,5 +1,5 @@
 cask "macx-youtube-downloader" do
-  version "5.1.8"
+  version "5.1.9,20210425"
   sha256 :no_check
 
   url "https://www.macxdvd.com/download/macx-youtube-downloader-free.dmg"
@@ -8,9 +8,8 @@ cask "macx-youtube-downloader" do
   homepage "https://www.macxdvd.com/free-youtube-video-downloader-mac/"
 
   livecheck do
-    url "https://download.cnet.com/MacX-YouTube-Downloader/3000-2071_4-76641301.html"
-    strategy :page_match
-    regex(/"softwareVersion"\s*:\s*"(\d+(?:\.\d+)*)"\s*,/i)
+    url :url
+    strategy :extract_plist
   end
 
   app "MacX YouTube Downloader.app"

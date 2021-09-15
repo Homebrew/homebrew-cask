@@ -1,12 +1,16 @@
 cask "serial" do
-  version "2.0.7"
-  sha256 "8288c8a5b7ca84de74d21f33a1304827075d1886baffb6fc2b9f45cac27ec601"
+  version "2.0.11,02001.17.50"
+  sha256 "43139a79a004510c1f8d21dee355cdc0bad1acef5fabf37635e81987bc9f9a62"
 
-  url "https://download.decisivetactics.com/downloads/serial/Serial_#{version}.zip"
-  appcast "https://api.decisivetactics.com/api/v1/public/appcast?app=serial"
+  url "https://download.decisivetactics.com/downloads/serial/Serial_#{version.before_comma}.zip"
   name "Serial"
   desc "Connect to almost anything with a serial port"
   homepage "https://www.decisivetactics.com/products/serial/"
+
+  livecheck do
+    url "https://api.decisivetactics.com/api/v1/public/appcast?app=serial"
+    strategy :sparkle
+  end
 
   auto_updates true
 

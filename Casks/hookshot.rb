@@ -1,9 +1,10 @@
 cask "hookshot" do
-  version "1.21,41"
-  sha256 "f564aaf9986091ef2ca95959f369fc1686e5e0a8ee809910b57c11fb08b5535b"
+  version "1.22.6,52"
+  sha256 "28fd83953b13266382bbab845164dd70229c6ea6dbfaf6ebd4cca0afa8d3adee"
 
   url "https://hookshot.app/downloads/Hookshot#{version.before_comma}.dmg"
   name "Hookshot"
+  desc "Window snapping tool"
   homepage "https://hookshot.app/"
 
   livecheck do

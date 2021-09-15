@@ -1,6 +1,6 @@
 cask "marginnote" do
-  version "3.7.5,3.7.5007"
-  sha256 "5a4b77a4d6b4bdea85490d41e6c922cbd9c0a1673b1be4649a61a5037fd2f9e2"
+  version "3.7.12,3.7.12005"
+  sha256 "f0a17470c5b7e51949f1309bb2e0909830e03d6d9b5272b4eaed94bb008df0cc"
 
   url "https://marginstudy.com/mac/MarginNote#{version.major}.dmg",
       verified: "marginstudy.com/"
@@ -14,6 +14,7 @@ cask "marginnote" do
   end
 
   auto_updates true
+  depends_on macos: ">= :sierra"
 
   app "MarginNote #{version.major}.app"
 

@@ -1,14 +1,31 @@
 cask "rubymine" do
-  version "2021.1,211.6693.118"
-  sha256 "553a3e0b3e11f42def5490bff66d66289e580afd892ad57755b3a2b7079009e9"
+  version "2021.2.1,212.5080.58"
 
-  url "https://download.jetbrains.com/ruby/RubyMine-#{version.before_comma}.dmg"
-  appcast "https://data.services.jetbrains.com/products/releases?code=RM&latest=true&type=release"
+  if Hardware::CPU.intel?
+    sha256 "d7460e6d18f1f65e955735da844e4ea8ae0c0b00c9d1fccf2b64beff57b531b1"
+
+    url "https://download.jetbrains.com/ruby/RubyMine-#{version.before_comma}.dmg"
+  else
+    sha256 "03b527103ded20fb6afc403794e5e88bf1953f528aca8b2e41cea8d04f7adee6"
+
+    url "https://download.jetbrains.com/ruby/RubyMine-#{version.before_comma}-aarch64.dmg"
+  end
+
   name "RubyMine"
   desc "Ruby on Rails IDE"
   homepage "https://www.jetbrains.com/ruby/"
 
+  livecheck do
+    url "https://data.services.jetbrains.com/products/releases?code=RM&latest=true&type=release"
+    strategy :page_match do |page|
+      JSON.parse(page)["RM"].map do |release|
+        "#{release["version"]},#{release["build"]}"
+      end
+    end
+  end
+
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "RubyMine.app"
 

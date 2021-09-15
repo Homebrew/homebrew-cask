@@ -1,6 +1,6 @@
 cask "easyfind" do
-  version "5.0.1"
-  sha256 "05cf4f3661d73953ce8c30692ad49a5d30d0f6b710212ebbc41bb381a589b713"
+  version "5.0.2"
+  sha256 "1539a562539e3b3a243da864fddee0351a4c7d109aa9dcae436775ecbb288fc9"
 
   url "https://download.devontechnologies.com/download/freeware/easyfind/#{version}/EasyFind.app.zip"
   name "EasyFind"

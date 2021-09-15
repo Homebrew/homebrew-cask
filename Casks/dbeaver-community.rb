@@ -1,10 +1,10 @@
 cask "dbeaver-community" do
-  version "21.0.2"
-  sha256 "378d6e42f64ec758892218474fd19aefcac94c9bc5897f5172f506af5f8de012"
+  version "21.2.0"
+  sha256 "2a45a1304a4cab9f800ebea205812a1dfaf4a42ee0c05b82df8034918513661d"
 
   url "https://dbeaver.io/files/#{version}/dbeaver-ce-#{version}-macos.dmg"
   name "DBeaver Community Edition"
-  desc "Free universal database tool and SQL client"
+  desc "Universal database tool and SQL client"
   homepage "https://dbeaver.io/"
 
   livecheck do
@@ -13,8 +13,4 @@ cask "dbeaver-community" do
   end
 
   app "DBeaver.app"
-
-  caveats do
-    depends_on_java "8+"
-  end
 end

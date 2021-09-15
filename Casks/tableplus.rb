@@ -1,6 +1,6 @@
 cask "tableplus" do
-  version "3.12.6,366"
-  sha256 "f5e13e93739c4417d4853e8509aff300e46a70f4cf219eac4380f5498d6fc9a1"
+  version "4.1.2,382"
+  sha256 "951f400257ae26654e7b65e3e91e5b1809e27fc583ee85603bbd4eaf14e63b5a"
 
   url "https://download.tableplus.com/macos/#{version.after_comma}/TablePlus.dmg"
   name "TablePlus"
@@ -13,6 +13,7 @@ cask "tableplus" do
   end
 
   auto_updates true
+  depends_on macos: ">= :el_capitan"
 
   app "TablePlus.app"
 

@@ -1,13 +1,20 @@
 cask "daedalus-mainnet" do
-  version "4.0.4,17475"
-  sha256 "b267673e5c02e86e8c3fa0ac73681106cb502dc54d1872d22938c52042817914"
+  version "4.2.1,18759"
+  sha256 "bc1ce1a977a5ce548b3a886ffb1314e28e4452002ce66569033a72ab0c357673"
 
   url "https://update-cardano-mainnet.iohk.io/daedalus-#{version.before_comma}-mainnet-#{version.after_comma}.pkg",
       verified: "update-cardano-mainnet.iohk.io/"
-  appcast "https://update-cardano-mainnet.iohk.io/daedalus-latest-version.json"
   name "Daedalus Mainnet"
   desc "Cryptocurrency wallet for ada on the Cardano blockchain"
   homepage "https://daedaluswallet.io/"
+
+  livecheck do
+    url "https://update-cardano-mainnet.iohk.io/daedalus-latest-version.json"
+    strategy :page_match do |page|
+      match = page.match(%r{/daedalus[._-](\d+(?:\.\d+)*)[._-]mainnet[._-](\d+)\.pkg}i)
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
   auto_updates true
   depends_on macos: ">= :high_sierra"

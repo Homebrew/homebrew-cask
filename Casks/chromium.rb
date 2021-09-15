@@ -1,17 +1,31 @@
 cask "chromium" do
-  version "871199"
-  sha256 "9cdedcdde89cf652bde85128c8f65a5a7a3f118f8e3941cc0d1f213bf6baf4df"
+  version "920567"
 
-  url "https://commondatastorage.googleapis.com/chromium-browser-snapshots/Mac/#{version}/chrome-mac.zip",
-      verified: "commondatastorage.googleapis.com/chromium-browser-snapshots/Mac/"
+  if Hardware::CPU.intel?
+    sha256 "2817df60e35df33ec1ff70096ab0d19dac9c1b65d5fc082609622ac392aa111f"
+
+    url "https://commondatastorage.googleapis.com/chromium-browser-snapshots/Mac/#{version}/chrome-mac.zip",
+        verified: "commondatastorage.googleapis.com/chromium-browser-snapshots/Mac/"
+
+    livecheck do
+      url "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac%2FLAST_CHANGE?alt=media"
+      regex(/v?(\d+(?:\.\d+)*)/i)
+    end
+  else
+    sha256 "98747a46c3c34f50aafd6555f60ec52ba174f7927cbd4e904627d9b6039b694f"
+
+    url "https://commondatastorage.googleapis.com/chromium-browser-snapshots/Mac_Arm/#{version}/chrome-mac.zip",
+        verified: "commondatastorage.googleapis.com/chromium-browser-snapshots/Mac_Arm/"
+
+    livecheck do
+      url "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac_Arm%2FLAST_CHANGE?alt=media"
+      regex(/v?(\d+(?:\.\d+)*)/i)
+    end
+  end
+
   name "Chromium"
   desc "Free and open-source web browser"
   homepage "https://www.chromium.org/Home"
-
-  livecheck do
-    url "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac%2FLAST_CHANGE?alt=media"
-    regex(/v?(\d+(?:\.\d+)*)/i)
-  end
 
   conflicts_with cask: [
     "eloston-chromium",
@@ -26,7 +40,7 @@ cask "chromium" do
   preflight do
     IO.write shimscript, <<~EOS
       #!/bin/sh
-      '#{appdir}/Chromium.app/Contents/MacOS/Chromium' "$@"
+      exec '#{appdir}/Chromium.app/Contents/MacOS/Chromium' "$@"
     EOS
   end
 

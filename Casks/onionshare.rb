@@ -1,6 +1,6 @@
 cask "onionshare" do
-  version "2.3.1"
-  sha256 "5de2cb81c87a13bc27cd71061c8c1a1f5dde25efe3e1f6b4ddb02ca0a343323f"
+  version "2.3.3"
+  sha256 "3d003ab5b8fdb3a09eae305670db0666a9fe71751bde8ff24beecdea7b6eaaaf"
 
   url "https://onionshare.org/dist/#{version}/OnionShare-#{version}.dmg"
   name "OnionShare"
@@ -8,8 +8,8 @@ cask "onionshare" do
   homepage "https://onionshare.org/"
 
   livecheck do
-    url "https://onionshare.org/latest-version.txt"
-    regex(/(\d+(?:\.\d+)*)/)
+    url :homepage
+    regex(/href=.*?OnionShare[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "OnionShare.app"

@@ -1,6 +1,6 @@
 cask "droplr" do
-  version "5.9.0,458"
-  sha256 "d7cad6194b2157e5674440f228e1e0c597a585aee85a3206cd8739763a935eb0"
+  version "59.1.1,470"
+  sha256 "5c96b2cfb5cbd12cc03dbd07c64e17c41b97e18c588275fa0b9311d63f6dbd31"
 
   url "https://files.droplr.com/apps/mac/Droplr#{version.before_comma.no_dots}-#{version.after_comma}.zip"
   name "Droplr"

@@ -23,4 +23,4 @@ jobs:
             Homebrew/homebrew-cask-fonts \
             Homebrew/homebrew-cask-versions
         env:
-          GITHUB_TOKEN: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}

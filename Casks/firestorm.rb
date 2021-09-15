@@ -1,11 +1,19 @@
 cask "firestorm" do
-  version "6.4.12.62831"
-  sha256 "0c0a7c8e21b9389bc141a18b489a76ac821049f4fa33f0b6ede5b77d23ae33ad"
+  version "6.4.21.64531"
+  sha256 "b3f1f26fc3f7dde7c5413109effb6193e16596f2e572a3451fa7d6cfe8efcd55"
 
   url "https://downloads.firestormviewer.org/mac/Phoenix-Firestorm-Releasex64_#{version.dots_to_underscores}_x86_64.dmg"
-  appcast "https://www.firestormviewer.org/mac/"
   name "Phoenix Firestorm viewer for Second Life"
+  desc "Viewer for accessing Virtual Worlds"
   homepage "https://www.firestormviewer.org/"
+
+  livecheck do
+    url "https://www.firestormviewer.org/mac/"
+    strategy :page_match do |page|
+      v = page[%r{href=.*?/Phoenix-Firestorm-Releasex64_(\d+(?:_\d+)*)_x86_64\.dmg}i, 1]
+      v.tr("_", ".")
+    end
+  end
 
   app "Firestorm-Releasex64.app"
 

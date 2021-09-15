@@ -4,7 +4,14 @@ cask "dd-utility" do
 
   url "https://github.com/thefanclub/dd-utility/raw/master/DMG/ddUtility-#{version}.dmg"
   name "dd Utility"
+  desc "Write and backup operating system IMG and ISO files"
   homepage "https://github.com/thefanclub/dd-utility"
+
+  livecheck do
+    url "https://github.com/thefanclub/dd-utility/tree/master/DMG"
+    strategy :page_match
+    regex(%r{href=.*?/ddUtility[._-]?v?(\d+(?:\.\d+)+)\.dmg}i)
+  end
 
   app "dd Utility.app"
 end

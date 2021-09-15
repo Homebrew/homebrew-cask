@@ -1,15 +1,42 @@
 cask "appgate-sdp-client" do
-  version "5.3.3"
-  sha256 "935c87fcec29c6c7ab28ced0b3da8bb98db7f6b51303c3d651c53b14fc17fcbd"
+  if MacOS.version <= :high_sierra
+    version "5.3.3"
+    sha256 "935c87fcec29c6c7ab28ced0b3da8bb98db7f6b51303c3d651c53b14fc17fcbd"
+  else
+    version "5.4.3"
+    sha256 "cb40c9dbfc1c6df1c611d9538ce22447cf234945a15ccf5acc7c09b877bc4137"
 
-  url "https://bin.appgate-sdp.com/#{version.major_minor}/client/AppGate-SDP-#{version}-Installer.dmg",
+    livecheck do
+      url :homepage
+      regex(%r{href=.*?/Appgate-SDP[._-](\d+(?:\.\d+)+)[._-]Installer\.dmg}i)
+      strategy :page_match do |page, regex|
+        support_versions =
+          page.scan(%r{href=["']?([^"' >]*?/software-defined-perimeter-support/sdp[._-]v?(\d+(?:[.-]\d+)+))["' >]}i)
+              .sort_by { |match| Version.new(match[1]) }
+        next [] if support_versions.blank?
+
+        # Assume the last-sorted version is newest
+        version_page_path, = support_versions.last
+
+        # Check the page for the newest major/minor version, which links to the
+        # latest disk image file (containing the full version in the file name)
+        version_page = Homebrew::Livecheck::Strategy.page_content(
+          URI.join("https://www.appgate.com/", version_page_path),
+        )
+        next [] if version_page[:content].blank?
+
+        version_page[:content].scan(regex).map(&:first)
+      end
+    end
+  end
+
+  url "https://bin.appgate-sdp.com/#{version.major_minor}/client/Appgate-SDP-#{version}-Installer.dmg",
       verified: "bin.appgate-sdp.com/"
-  appcast "https://www.appgate.com/support/software-defined-perimeter-support/sdp-v#{version.major}-#{version.minor}"
   name "AppGate SDP Client for macOS"
   desc "Software-defined perimeter for secure network access"
-  homepage "https://www.appgate.com/software-defined-perimeter/support"
+  homepage "https://www.appgate.com/support/software-defined-perimeter-support"
 
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :high_sierra"
 
   pkg "AppGate SDP Installer.pkg"
 

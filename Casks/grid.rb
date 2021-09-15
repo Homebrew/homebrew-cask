@@ -1,12 +1,16 @@
 cask "grid" do
-  version "1.3"
-  sha256 "8978205dd741130832361cae4a732a42e5de7f76a468c0cb97d8ef4fc32386da"
+  version "1.4"
+  sha256 "46f415795003460d5da018aaaeb72317d3c6b654ebdde33c1556e6e8659f0cdc"
 
   url "https://macgrid.app/download/Grid-#{version}.dmg"
-  appcast "https://macgrid.app/appcast.xml"
   name "Grid"
   desc "Window manager"
   homepage "https://macgrid.app/"
+
+  livecheck do
+    url "https://macgrid.app/appcast.xml"
+    strategy :sparkle, &:short_version
+  end
 
   app "Grid.app"
 

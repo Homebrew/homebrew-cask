@@ -1,5 +1,5 @@
 cask "raycast" do
-  version "1.11.0"
+  version "1.23.1"
   sha256 :no_check
 
   url "https://api.raycast.app/v2/download"
@@ -17,9 +17,12 @@ cask "raycast" do
 
   app "Raycast.app"
 
+  uninstall quit: "com.raycast.macos"
+
   zap trash: [
     "~/Library/Application Support/com.raycast.macos",
     "~/Library/Caches/com.raycast.macos",
+    "~/Library/Cookies/com.raycast.macos.binarycookies",
     "~/Library/Preferences/com.raycast.macos.plist",
   ]
 end

@@ -1,9 +1,10 @@
 cask "notebooks" do
-  version "2.3.3,205"
-  sha256 "55a1d8caca12085092f5f1cdd96caa94c2528999733348e3f605b11a0a375028"
+  version "2.4.1,216"
+  sha256 "307b21c6d1fae793a638af6f3269c61c04bdc7e105580170a7f71027fb629344"
 
   url "https://www.notebooksapp.com/Download/macOS/v#{version.major}/Notebooks.dmg"
   name "Notebooks"
+  desc "Word processor"
   homepage "https://www.notebooksapp.com/mac/"
 
   livecheck do

@@ -1,5 +1,5 @@
 cask "amadine" do
-  version "1.2,100"
+  version "1.2.2,118"
   sha256 :no_check
 
   url "https://belightsoft.s3.amazonaws.com/Amadine.dmg",
@@ -16,4 +16,11 @@ cask "amadine" do
   depends_on macos: ">= :sierra"
 
   app "Amadine.app"
+
+  zap trash: [
+    "~/Library/Application Support/Amadine",
+    "~/Library/Caches/com.belightsoft.Amadine",
+    "~/Library/Preferences/com.belightsoft.Amadine.plist",
+    "~/Library/Saved Application State/com.belightsoft.Amadine.savedState",
+  ]
 end

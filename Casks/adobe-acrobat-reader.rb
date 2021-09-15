@@ -1,6 +1,6 @@
 cask "adobe-acrobat-reader" do
-  version "21.001.20145"
-  sha256 "c103f106a22027d7e1bfcb39a8bebce014ddd779818991f471ebece246ebd39f"
+  version "21.007.20091"
+  sha256 "3c1bf10a567dfcd2509b7f5b1c8f36224b11571a2cea34240fc273784be9be46"
 
   url "https://ardownload2.adobe.com/pub/adobe/reader/mac/AcrobatDC/#{version.no_dots}/AcroRdrDC_#{version.no_dots}_MUI.dmg"
   name "Adobe Acrobat Reader DC"
@@ -8,8 +8,8 @@ cask "adobe-acrobat-reader" do
   homepage "https://acrobat.adobe.com/us/en/acrobat/pdf-reader.html"
 
   livecheck do
-    url "https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/index.html"
-    regex(/<em>(\d+(?:\.\d+)*) /i)
+    url "https://armmf.adobe.com/arm-manifests/mac/AcrobatDC/reader/current_version.txt"
+    regex(/(\d+(?:\.\d+)*)/i)
   end
 
   auto_updates true

@@ -1,14 +1,15 @@
 cask "advancedrestclient" do
-  version "15.0.7"
-  sha256 "1dc4ef5e21dfb72abeba6de6a41673fadc0ce46ba4252c7d8d8b3648372fe86b"
+  version "16.0.1"
+  sha256 "fa60bb7e382adb474d6f85afbebcb596875ad5e23061052f4b8a094fdfa0b967"
 
-  url "https://github.com/advanced-rest-client/arc-electron/releases/download/v#{version}/arc-#{version}.dmg"
-  name "Advanced Rest Client"
+  url "https://github.com/advanced-rest-client/arc-electron/releases/download/v#{version}/arc-macos.dmg"
+  name "Advanced REST Client"
+  desc "API testing tool"
   homepage "https://github.com/advanced-rest-client/arc-electron"
 
   livecheck do
     url :url
-    strategy :github_latest
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   app "AdvancedRestClient.app"

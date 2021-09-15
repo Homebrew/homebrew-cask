@@ -1,12 +1,17 @@
 cask "utools" do
-  version "1.3.5"
-  sha256 "49a085440c9a38faabfb17b148f530ab8abf7f946599681d3523f2f94d07cc5d"
+  version "2.1.0"
+  sha256 "3cc48b309b696ca5c92f11e0d32d96edf25ce0772ff5e279365f09e7c402bc03"
 
-  url "https://res.u-tools.cn/currentversion/uTools-#{version}.dmg",
-      verified: "res.u-tools.cn/"
-  appcast "https://res.u-tools.cn/currentversion/public-mac.yml"
+  url "https://publish.u-tools.cn/version2/uTools-#{version}.dmg",
+      verified: "publish.u-tools.cn/"
   name "uTools"
+  desc "Plug-in productivity tool set"
   homepage "https://u.tools/index.html"
+
+  livecheck do
+    url "https://publish.u-tools.cn/version2/latest-mac.yml?noCache=true"
+    strategy :electron_builder
+  end
 
   auto_updates true
   depends_on macos: ">= :yosemite"

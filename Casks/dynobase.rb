@@ -1,9 +1,18 @@
 cask "dynobase" do
-  version "1.3.5"
-  sha256 "a2a1efd05dbea93d84f5b62e5505dc025ca627b901e3e69d7dd49f4dfc792b3c"
+  version "1.6.0"
 
-  url "https://github.com/Dynobase/dynobase/releases/download/#{version}/Dynobase-#{version}.dmg",
-      verified: "github.com/Dynobase/dynobase/"
+  if Hardware::CPU.intel?
+    sha256 "9274091011226abc1b2e6c210350cd701f3d7308efdc34ca0c045fc68162971a"
+
+    url "https://github.com/Dynobase/dynobase/releases/download/#{version}/Dynobase-#{version}.dmg",
+        verified: "github.com/Dynobase/dynobase/"
+  else
+    sha256 "39181015a6540a1c6c2f1b457c213029f0fe8051aa633064b5283c0b2a81713b"
+
+    url "https://github.com/Dynobase/dynobase/releases/download/#{version}/Dynobase-#{version}-arm64.dmg",
+        verified: "github.com/Dynobase/dynobase/"
+  end
+
   name "Dynobase"
   desc "GUI Client for DynamoDB"
   homepage "https://dynobase.dev/"

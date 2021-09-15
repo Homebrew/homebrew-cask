@@ -1,16 +1,26 @@
 cask "ferdi" do
-  version "5.5.0"
-  sha256 "7e9d5ff9f4780636bc2595127f4a86fc77b794d87e6de992fa41e7d8f9c95380"
+  version "5.6.2"
 
-  url "https://github.com/getferdi/ferdi/releases/download/v#{version}/Ferdi-#{version}.dmg",
-      verified: "github.com/getferdi/ferdi/"
+  if Hardware::CPU.intel?
+    sha256 "bfad74f6b22364f8ee80a3faf1b386707e76949c5eea68a47df11d298ee0bbc8"
+
+    url "https://github.com/getferdi/ferdi/releases/download/v#{version}/Ferdi-#{version}.dmg",
+        verified: "github.com/getferdi/ferdi/"
+  else
+    sha256 "51dfa80046037bd53b3ace758b29b8a8f809b7493388cbcf96a408895ea089ea"
+
+    url "https://github.com/getferdi/ferdi/releases/download/v#{version}/Ferdi-#{version}-arm64.dmg",
+        verified: "github.com/getferdi/ferdi/"
+  end
+
   name "Ferdi"
-  desc "Free messaging app for popular messengers"
+  desc "Messaging browser which combines several services"
   homepage "https://getferdi.com/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://github.com/getferdi/ferdi/releases/"
+    strategy :page_match
+    regex(/Ferdi[._-](\d+(?:\.\d+)*)\.dmg/i)
   end
 
   auto_updates true

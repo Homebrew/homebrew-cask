@@ -1,6 +1,6 @@
 cask "scratch" do
-  version "3.21.0"
-  sha256 "6b5fc41416ceb6669071c15b0c068688fdcb36fbe7b8638814c25c8081f9090a"
+  version "3.25.0"
+  sha256 "fc99b062b5b267fd9224004b96db8b7061da1fe5e446a6f66364f1816b7ef2c9"
 
   url "https://downloads.scratch.mit.edu/desktop/Scratch%20#{version}.dmg"
   name "Scratch"

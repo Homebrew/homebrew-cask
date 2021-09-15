@@ -1,5 +1,5 @@
 cask "yandex" do
-  version "21.3.1"
+  version "21.3.3"
   sha256 :no_check
 
   url "https://download.cdn.yandex.net/browser/yandex/ru/Yandex.dmg",

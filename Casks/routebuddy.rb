@@ -5,10 +5,11 @@ cask "routebuddy" do
   url "https://objects-us-east-1.dream.io/routebuddy/download/apps2/RouteBuddy_#{version}.dmg",
       verified: "objects-us-east-1.dream.io/routebuddy/"
   name "RouteBuddy"
-  homepage "https://routebuddy.com/"
+  desc "GPS-enabled mapping software"
+  homepage "http://routebuddy.com/"
 
   livecheck do
-    url "https://routebuddy.com/routebuddy-topo-map-software-for-windows-and-mac-os-x/"
+    url "http://routebuddy.com/routebuddy-topo-map-software-for-windows-and-mac-os-x/"
     strategy :page_match
     regex(%r{href=.*?/RouteBuddy_(\d+(?:\.\d+)*)\.dmg}i)
   end

@@ -1,12 +1,19 @@
 cask "propresenter" do
-  version "7.4.2,117703186"
-  sha256 "2ed59f5674511aca854686e8a7549584b92d1eebc74e45635cf35aad1945f207"
+  version "7.6.1,117833997"
+  sha256 "c82395798945888fd1e9382a19b8b07744ce8013400c9702251db1a0c2ffb974"
 
   url "https://renewedvision.com/downloads/propresenter/mac/ProPresenter_#{version.before_comma}_#{version.after_comma}.zip"
-  appcast "https://api.renewedvision.com/v1/pro/upgrade?platform=macos&osVersion=0&appVersion=0&buildNumber=0&includeNotes=0"
   name "ProPresenter"
   desc "Presentation and production application for live events"
   homepage "https://www.renewedvision.com/propresenter.php"
+
+  livecheck do
+    url "https://api.renewedvision.com/v1/pro/upgrade?platform=macos&osVersion=0&appVersion=0&buildNumber=0&includeNotes=0"
+    strategy :page_match do |page|
+      match = page.match(%r{/ProPresenter_(\d+(?:\.\d+)*)_(\d+)\.zip}i)
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
   conflicts_with cask: "homebrew/cask-versions/propresenter-beta"
   depends_on macos: ">= :mojave"

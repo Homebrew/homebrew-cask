@@ -1,9 +1,16 @@
 cask "hyper" do
-  version "3.0.2"
-  sha256 "56ac31f2f8aa99edf03f277b25203eca9d8b6c4d6535f673a996fddca0d21bb5"
+  version "3.1.3"
 
-  url "https://github.com/zeit/hyper/releases/download/#{version}/hyper-#{version}-mac.zip",
-      verified: "github.com/zeit/hyper/"
+  if Hardware::CPU.intel?
+    sha256 "d6b3b75e8ee809633ebdb2e00fcca3e8889b7f4b846b12de256e90e76a5acef7"
+    url "https://github.com/vercel/hyper/releases/download/v#{version}/Hyper-#{version}-mac-x64.zip",
+        verified: "github.com/vercel/hyper/"
+  else
+    sha256 "6c91f66a347d6f5ad2f2d951f9654e629dd8b484347fe83fbbe5cba35b4f4c64"
+    url "https://github.com/vercel/hyper/releases/download/v#{version}/Hyper-#{version}-mac-arm64.zip",
+        verified: "github.com/vercel/hyper/"
+  end
+
   name "Hyper"
   desc "Terminal built on web technologies"
   homepage "https://hyper.is/"

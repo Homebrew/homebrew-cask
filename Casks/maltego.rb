@@ -1,12 +1,18 @@
 cask "maltego" do
-  version "4.2.15.13632"
-  sha256 "199b7abc49fe94d5f99fd06297ec772dd563e915af17d5d14365e6881cae36cf"
+  version "4.2.19.13940"
+  sha256 "6e690f7fdb7deb715ea645732a1ba382a56b3c71a48bd2a76182d74a3592ef3b"
 
   url "https://maltego-downloads.s3.us-east-2.amazonaws.com/mac/Maltego.v#{version}.dmg",
       verified: "maltego-downloads.s3.us-east-2.amazonaws.com/"
-  appcast "https://maltego-downloads.s3.us-east-2.amazonaws.com/info.json"
   name "Maltego"
+  desc "Open source intelligence and graphical link analysis tool"
   homepage "https://www.maltego.com/pricing-plans/"
+
+  livecheck do
+    url "https://maltego-downloads.s3.us-east-2.amazonaws.com/info.json"
+    strategy :page_match
+    regex(/Maltego\.v(\d+(?:\.\d+)*)\.dmg/i)
+  end
 
   app "Maltego.app"
 

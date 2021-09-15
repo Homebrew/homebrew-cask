@@ -4,8 +4,8 @@ cask "turbovnc-viewer" do
 
   url "https://downloads.sourceforge.net/turbovnc/#{version}/TurboVNC-#{version}.dmg",
       verified: "sourceforge.net/turbovnc/"
-  appcast "https://sourceforge.net/projects/turbovnc/rss"
   name "TurboVNC"
+  desc "Remote display system"
   homepage "https://www.turbovnc.org/"
 
   pkg "TurboVNC.pkg"

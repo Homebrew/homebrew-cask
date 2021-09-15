@@ -1,11 +1,18 @@
 cask "foobar2000" do
-  version "2.2.16"
-  sha256 "7e8a18395c96ce0337ffc36592d06f63e6817b15cb95c4de0255b3b6054aa8a4"
+  version "2.2.26"
+  sha256 "a578d682fb26c90fb1c1bae581aa33f8ddb959246b143494194542c3d5e98202"
 
   url "https://www.foobar2000.org/files/foobar2000-v#{version}.dmg"
   name "foobar2000"
   desc "Audio player"
   homepage "https://www.foobar2000.org/mac"
+
+  livecheck do
+    url :homepage
+    regex(%r{href=.*?/foobar2000[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+  end
+
+  depends_on macos: ">= :el_capitan"
 
   app "foobar2000.app"
 

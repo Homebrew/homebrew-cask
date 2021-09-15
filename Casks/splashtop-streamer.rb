@@ -1,13 +1,17 @@
 cask "splashtop-streamer" do
-  version "3.4.2.0"
-  sha256 "7dbd3c0246b6835bd929b17b5f1c2d3c5738feb30a861502930d2d10792ce781"
+  version "3.4.8.0"
+  sha256 "6661374e71629f9cf8f6b577b9cb4fc197ee7c3af77fee70672557545a5543ce"
 
   url "https://d17kmd0va0f0mp.cloudfront.net/mac/Splashtop_Streamer_Mac_INSTALLER_v#{version}.dmg",
       verified: "d17kmd0va0f0mp.cloudfront.net/"
-  appcast "https://www.splashtop.com/wp-content/themes/responsive/downloadx.php?platform=mac"
   name "Splashtop Streamer"
   desc "Connect to and control computers from desktop and mobile devices"
   homepage "https://www.splashtop.com/downloads"
+
+  livecheck do
+    url "https://www.splashtop.com/wp-content/themes/responsive/downloadx.php?platform=mac"
+    regex(/v(\d+(?:\.\d+)+)\.dmg/i)
+  end
 
   auto_updates true
 

@@ -1,6 +1,6 @@
 cask "musicbrainz-picard" do
-  version "2.6"
-  sha256 "3058eef5a4d03f2962b0981aaa92b422bfe6a2a3c5c73cc22b474e6f1c3453c5"
+  version "2.6.3"
+  sha256 "6df5ae86e15cdda5acf3ea285010da7980f80275d8205ce211201eeca898268b"
 
   url "https://musicbrainz.osuosl.org/pub/musicbrainz/picard/MusicBrainz-Picard-#{version}-macOS-10.14.dmg",
       verified: "musicbrainz.osuosl.org/pub/"
@@ -14,7 +14,7 @@ cask "musicbrainz-picard" do
     regex(%r{href=.*?/MusicBrainz-Picard-(\d+(?:\.\d+)*)-macOS-(?:\d+(?:\.\d+)*)\.dmg}i)
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   app "MusicBrainz Picard.app"
 

@@ -4,7 +4,13 @@ cask "jenkins-menu" do
 
   url "https://github.com/qvacua/jenkins-menu/releases/download/v#{version}/Jenkins.Menu-#{version}.zip"
   name "Jenkins Menu"
+  desc "Menu item which shows the status of a Jenkins CI server"
   homepage "https://github.com/qvacua/jenkins-menu/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Jenkins Menu.app"
 
@@ -12,4 +18,8 @@ cask "jenkins-menu" do
     "~/Library/Caches/com.qvacua.Jenkins-Menu",
     "~/Library/Preferences/com.qvacua.Jenkins-Menu.plist",
   ]
+
+  caveats do
+    discontinued
+  end
 end

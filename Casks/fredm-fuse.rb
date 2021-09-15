@@ -4,8 +4,8 @@ cask "fredm-fuse" do
 
   url "https://downloads.sourceforge.net/fuse-for-macosx/fuse-for-macosx/#{version}/FuseForMacOS-#{version}.zip",
       verified: "downloads.sourceforge.net/fuse-for-macosx/"
-  appcast "https://sourceforge.net/projects/fuse-for-macosx/rss?path=/fuse-for-macosx"
   name "Fuse for Mac OS X"
+  desc "Port of the UNIX ZX Spectrum emulator Fuse"
   homepage "https://fuse-for-macosx.sourceforge.io/"
 
   app "Fuse for MacOS/Fuse.app"

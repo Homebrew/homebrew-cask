@@ -1,13 +1,24 @@
 cask "tandem" do
-  version "1.6.210"
-  sha256 "0600d75b91fea4b15c0c41e5a470ea95f7bf867fcf1b55499f8913c98726a2d0"
+  version "1.8.818"
 
-  url "https://download.todesktop.com/200527auaqaacsy/Tandem%20#{version}.dmg",
-      verified: "download.todesktop.com/200527auaqaacsy/"
-  appcast "https://download.todesktop.com/200527auaqaacsy/latest-mac.yml"
+  if Hardware::CPU.intel?
+    sha256 "228971e3798e3e658c05fbd04e01991e1f452087c9f22ecea708446f6592cbf0"
+    url "https://download.todesktop.com/200527auaqaacsy/Tandem%20#{version}-x64.dmg",
+        verified: "download.todesktop.com/200527auaqaacsy/"
+  else
+    sha256 "5a08640944af10a4191f6649604cfae6beb942e0b0a7a75ddc401ba0ec09327d"
+    url "https://download.todesktop.com/200527auaqaacsy/Tandem%20#{version}-arm64.dmg",
+        verified: "download.todesktop.com/200527auaqaacsy/"
+  end
+
   name "Tandem"
   desc "Virtual office for remote teams"
   homepage "https://tandem.chat/"
+
+  livecheck do
+    url "https://download.todesktop.com/200527auaqaacsy/latest-mac.yml"
+    strategy :electron_builder
+  end
 
   auto_updates true
 

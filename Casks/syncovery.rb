@@ -1,15 +1,22 @@
 cask "syncovery" do
-  version "9.33"
-  sha256 "990ddc45f2f8c02015ec1ff9eefdf57a6514c3bc05059c069c96e0f9cfccb1a6"
+  version "9.38g"
 
-  url "https://www.syncovery.com/release/SyncoveryMac#{version}.dmg"
+  if Hardware::CPU.intel?
+    sha256 "1fe2dab73e91f2251fdf565dafd267abc82e2c4198bd8fe6560c805d2a59bc8b"
+
+    url "https://www.syncovery.com/release/SyncoveryMac#{version}.dmg"
+  else
+    sha256 "f27786be3c6ebdaf416932f764de0ddaaff0aa8e47c82e1c3266d049099c6bb2"
+
+    url "https://www.syncovery.com/release/SyncoveryMac#{version}-Apple.dmg"
+  end
+
   name "Syncovery"
   desc "File synchronization and backup software"
   homepage "https://www.syncovery.com/"
 
   livecheck do
     url "https://www.syncovery.com/download/mac/"
-    strategy :page_match
     regex(%r{href=.*?/SyncoveryMac(\d+(?:\.\d+)*[a-z]?)\.dmg}i)
   end
 

@@ -3,9 +3,14 @@ cask "xscreensaver" do
   sha256 "ca2b96f1635ed0b208601b5824ea0c8d71bfdc2a0794a9fd32fdc00520d337ff"
 
   url "https://www.jwz.org/xscreensaver/xscreensaver-#{version}.dmg"
-  appcast "https://www.jwz.org/xscreensaver/changelog.html"
   name "XScreenSaver"
+  desc "Screen savers"
   homepage "https://www.jwz.org/xscreensaver/"
+
+  livecheck do
+    url "https://www.jwz.org/xscreensaver/download.html"
+    regex(/href=.*?xscreensaver[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+  end
 
   screen_saver "Screen Savers/Abstractile.saver"
   screen_saver "Screen Savers/Anemone.saver"

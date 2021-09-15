@@ -32,7 +32,6 @@ And there we have it. An application installed with one quick command: no clicki
 
 * Find basic documentation on using Homebrew Cask in [USAGE.md](USAGE.md)
 * Want to contribute a Cask? Awesome! See [CONTRIBUTING.md](CONTRIBUTING.md)
-* Want to hack on our code? Also awesome! See [hacking.md](doc/development/hacking.md)
 * More project-related details and discussion are available in the [documentation](doc)
 
 ## Reporting bugs
@@ -53,12 +52,12 @@ If the issue is still not solved, see the guides for common problems:
 * [`wrong number of arguments` error](doc/reporting_bugs/wrong_number_of_arguments_error.md)
 * [App isn’t included in `upgrade`](doc/faq/app_not_upgrading.md)
 * [The app can’t be opened because it is from an unidentified developer](doc/faq/app_cant_be_opened.md)
-* [My problem isn’t listed](https://github.com/Homebrew/homebrew-cask/issues/new?template=01_bug_report.md)
+* [My problem isn’t listed](https://github.com/Homebrew/homebrew-cask/issues/new?template=01_bug_report.yml)
 
 ## Requests
 
-* Issues requesting new casks will be closed. If you want a cask added to the main repositories, [submit a pull request](https://github.com/Homebrew/homebrew-cask/blob/master/CONTRIBUTING.md#adding-a-cask).
-* For a feature request, [use this template](https://github.com/Homebrew/homebrew-cask/issues/new?template=02_feature_request.md).
+* Issues requesting new casks will be closed. If you want a cask added to the main repositories, [submit a pull request](https://github.com/Homebrew/homebrew-cask/blob/HEAD/CONTRIBUTING.md#adding-a-cask).
+* For a feature request, [use this template](https://github.com/Homebrew/homebrew-cask/issues/new?assignees=&labels=&template=02_feature_request.yml).
 
 ## Questions? Wanna chat?
 

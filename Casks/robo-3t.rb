@@ -1,6 +1,6 @@
 cask "robo-3t" do
-  version "1.4.3,48f7dfd"
-  sha256 "bb118c609aa819f78eed2e167b7a5393f6a6bd50e262a157e231869d4916e5a5"
+  version "1.4.4,e6ac9ec"
+  sha256 "aa5e56482c2f454154b2a346dc85e5016ffb5facabf649c0aaa186d970842bcd"
 
   url "https://download.studio3t.com/robomongo/mac/robo3t-#{version.before_comma}-darwin-x86_64-#{version.after_comma}.dmg",
       verified: "download.studio3t.com/"
@@ -8,10 +8,9 @@ cask "robo-3t" do
   desc "MongoDB management tool"
   homepage "https://robomongo.org/"
 
-  # We need to check all releases since the current latest release is a beta version.
   livecheck do
-    url "https://github.com/Studio3T/robomongo/releases"
-    strategy :page_match do |page|
+    url "https://github.com/Studio3T/robomongo"
+    strategy :github_latest do |page|
       match = page.match(%r{href=.*?/v?(\d+(?:\.\d+)*)/robo3t-\1-darwin-x86_64-([0-9a-f]+)\.dmg}i)
       "#{match[1]},#{match[2]}"
     end

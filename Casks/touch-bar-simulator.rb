@@ -16,8 +16,8 @@ cask "touch-bar-simulator" do
     url "https://github.com/sindresorhus/touch-bar-simulator/releases/download/v#{version}/Touch.Bar.Simulator.#{version}.dmg"
   end
 
-  appcast "https://github.com/sindresorhus/touch-bar-simulator/releases.atom"
   name "Touch Bar Simulator"
+  desc "Touch Bar as a standalone app"
   homepage "https://github.com/sindresorhus/touch-bar-simulator"
 
   depends_on macos: ">= :sierra"

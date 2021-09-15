@@ -15,11 +15,20 @@ cask "mysqlworkbench" do
     version "8.0.22"
     sha256 "4e27de82d869043cf80e803f1a57cc041a91cabddf0aa6a6c054d68af1837d48"
     url "https://downloads.mysql.com/archives/get/p/#{version.major}/file/mysql-workbench-community-#{version}-macos-x86_64.dmg"
+
+    livecheck do
+      skip "newer versions only available for Big Sur or higher"
+    end
   else
-    version "8.0.23"
-    sha256 "4c8664f5686a449a9760bda9b85d7e8c6beb1367d35f668048ffe534652da7b3"
+    version "8.0.26"
+    sha256 "136969238fa78723318bd4223bb538387ba7ae36849b08c43eab0745655bab0e"
     url "https://cdn.mysql.com/Downloads/MySQLGUITools/mysql-workbench-community-#{version}-macos-x86_64.dmg"
-    appcast "https://dev.mysql.com/downloads/workbench/"
+
+    livecheck do
+      url "https://dev.mysql.com/downloads/workbench/"
+      strategy :page_match
+      regex(/MySQL\s*Workbench\s*(\d+(?:\.\d+)*)/i)
+    end
   end
 
   name "MySQL Workbench"
@@ -30,8 +39,8 @@ cask "mysqlworkbench" do
 
   zap trash: [
     "~/Library/Application Support/MySQL/Workbench",
-    "~/Library/Preferences/com.oracle.workbench.MySQLWorkbench.plist",
     "~/Library/Caches/com.oracle.workbench.MySQLWorkbench",
+    "~/Library/Preferences/com.oracle.workbench.MySQLWorkbench.plist",
     "~/Library/Saved Application State/com.oracle.workbench.MySQLWorkbench.savedState",
   ]
 end

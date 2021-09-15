@@ -1,11 +1,16 @@
 cask "catch" do
-  version "2.0"
-  sha256 "030a9ea67418f8f4b2469b7d23341dbe46d7cd5c4a661458f5a28043165285d7"
+  version "2.1"
+  sha256 "3a9dfd7bfba6ce7c6fc9a2cfb674c521c7a2d7d9c1dd6fccb3232e13e227402b"
 
   url "https://github.com/mipstian/catch/releases/download/#{version}/Catch-#{version}.zip",
       verified: "github.com/mipstian/catch/"
   name "Catch"
-  homepage "https://www.giorgiocalderolla.com/index.html#catch"
+  desc "Broadcatching made easy"
+  homepage "https://www.giorgiocalderolla.com/catch.html"
+
+  depends_on macos: ">= :el_capitan"
 
   app "Catch.app"
+
+  zap trash: "~/Library/Preferences/org.giorgiocalderolla.Catch.plist"
 end

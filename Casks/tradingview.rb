@@ -1,17 +1,18 @@
 cask "tradingview" do
-  version "1.0.0-beta.1"
-  sha256 "03b03d765ff7f8cb1f3059490b64344e38aa35bf44e161327b7b8baeac66aa2c"
+  version "1.0.0-beta.9"
+  sha256 "b1a1293795b74672f447184e20f0d42504a60304c78b05622d6486af7900ab28"
 
-  url "https://tvd-packages.tradingview.com/beta/#{version}/win32/x64/TradingView.dmg"
-  name "TradingView Desktop Beta"
-  desc "Desktop client for TradingView"
+  url "https://tvd-packages.tradingview.com/stable/#{version}/darwin/TradingView.dmg"
+  name "TradingView Desktop"
+  desc "Experience with the power and flexibility of a desktop application"
   homepage "https://www.tradingview.com/desktop/"
 
   livecheck do
-    url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/(\d+(?:\.\d+)*-beta\.\d+)/win32/x64/TradingView\.dmg}i)
+    url "https://tvd-packages.tradingview.com/stable/latest/darwin/stable-mac.yml"
+    strategy :electron_builder
   end
+
+  auto_updates true
 
   app "TradingView.app"
 

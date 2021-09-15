@@ -1,6 +1,6 @@
 cask "tuple" do
-  version "0.85.1-2021-04-01-e0acf3ba"
-  sha256 "02c37ed57c66f6540f6c0e94e2d0e1df55c1c270fb45bb47b1aa2c5d6ee5491f"
+  version "0.89.0-2021-07-26-f9b7fc84"
+  sha256 "4bdf58bfc129a1046acb76199a33297b12326cbb8548ccf3eeae119570231a70"
 
   url "https://s3.us-east-2.amazonaws.com/tuple-releases/production/sparkle/tuple-#{version}.zip",
       verified: "s3.us-east-2.amazonaws.com/tuple-releases/"
@@ -14,7 +14,7 @@ cask "tuple" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :mojave"
 
   app "Tuple.app"
 

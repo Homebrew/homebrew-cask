@@ -20,6 +20,10 @@ cask "emacs" do
   binary "#{appdir}/Emacs.app/Contents/MacOS/bin/ebrowse"
   binary "#{appdir}/Emacs.app/Contents/MacOS/bin/emacsclient"
   binary "#{appdir}/Emacs.app/Contents/MacOS/bin/etags"
+  manpage "#{appdir}/Emacs.app/Contents/Resources/man/man1/ebrowse.1.gz"
+  manpage "#{appdir}/Emacs.app/Contents/Resources/man/man1/emacs.1.gz"
+  manpage "#{appdir}/Emacs.app/Contents/Resources/man/man1/emacsclient.1.gz"
+  manpage "#{appdir}/Emacs.app/Contents/Resources/man/man1/etags.1.gz"
 
   zap trash: [
     "~/Library/Caches/org.gnu.Emacs",

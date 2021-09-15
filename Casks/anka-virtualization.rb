@@ -1,13 +1,17 @@
 cask "anka-virtualization" do
-  version "2.4.0.129"
-  sha256 "aa9ed58e75508c273cd0481d9146b619fb0797c90266f01388e0927e4293e36d"
+  version "2.5.2.133"
+  sha256 "7a5151f74e8f1b1c17064ebf888d963cb9c5a506f8994026a1592296b4697a4b"
 
-  url "https://d1efqjhnhbvc57.cloudfront.net/Anka-#{version}.pkg",
-      verified: "d1efqjhnhbvc57.cloudfront.net/"
-  appcast "https://ankadocs.veertu.com/docs/release-notes/"
+  url "https://downloads.veertu.com/anka/Anka-#{version}.pkg"
   name "Anka Virtualization"
   desc "CLI tool for managing and creating virtual machines"
   homepage "https://veertu.com/"
+
+  livecheck do
+    url "https://veertu.com/downloads/anka-virtualization-latest"
+    strategy :header_match
+    regex(/Anka[._-]?v?(\d+(?:\.\d+)+)\.pkg/i)
+  end
 
   depends_on macos: ">= :yosemite"
 

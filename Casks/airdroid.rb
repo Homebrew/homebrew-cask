@@ -1,6 +1,6 @@
 cask "airdroid" do
   version "3.6.9.2"
-  sha256 "5ed0cb9c480be4fc18ddfc184f92481d4b7c1871446f1ebab36c1dcb84614921"
+  sha256 "7fa7bca24d69e9f9951fe6887a8c73ea3db97ad17d7a9003ed67e4070e7371fe"
 
   url "https://s3.amazonaws.com/dl.airdroid.com/AirDroid_Desktop_Client_#{version}.dmg",
       verified: "s3.amazonaws.com/dl.airdroid.com/"

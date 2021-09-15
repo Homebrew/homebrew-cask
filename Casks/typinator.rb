@@ -1,6 +1,6 @@
 cask "typinator" do
-  version "8.7"
-  sha256 "87dbf5b729116b603cd9fe6d1e269c8f3113ac359e686353971c09d6f37848b4"
+  version "8.9"
+  sha256 "7c223e1624ad89a0a203b7750f7276ee1a7c1038ccceafc68ce1dcaaf54518b2"
 
   url "https://www.ergonis.com/downloads/products/typinator/Typinator#{version.no_dots}-Install.dmg",
       user_agent: :fake

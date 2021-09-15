@@ -1,12 +1,22 @@
 cask "lens" do
-  version "4.2.1"
-  sha256 "edd299988416a471012618e70df1066bb2425fa3ea9e7ab3853e8f0186449b49"
+  version "5.2.0-latest.20210908.1"
 
-  url "https://github.com/lensapp/lens/releases/download/v#{version}/Lens-#{version}.dmg",
-      verified: "github.com/lensapp/lens/"
+  if Hardware::CPU.intel?
+    sha256 "6055e4c451bae97c0ec7f337bddf9afeec95098b153849c29eed6378dbdb9728"
+    url "https://api.k8slens.dev/binaries/Lens-#{version}.dmg"
+  else
+    sha256 "d353a2d163af2799562fce0b94f3c7b8f210023a3b82c071a3a593901a25e4b5"
+    url "https://api.k8slens.dev/binaries/Lens-#{version}-arm64.dmg"
+  end
+
   name "Lens"
   desc "Kubernetes IDE"
   homepage "https://k8slens.dev/"
+
+  livecheck do
+    url "https://lens-binaries.s3.amazonaws.com/ide/latest-mac.yml"
+    strategy :electron_builder
+  end
 
   auto_updates true
 

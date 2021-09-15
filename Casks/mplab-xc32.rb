@@ -1,9 +1,10 @@
 cask "mplab-xc32" do
-  version "2.50"
-  sha256 "fae3adcc4f31b2500e020d0bb9576cf2cbfd38c0bd6388b77893a58786f549f4"
+  version "3.01"
+  sha256 "f8ef09babfd238f155fd5409ab7923f140cb4ea55a1302d81d5f8e5d8157f78c"
 
   url "https://ww1.microchip.com/downloads/en/DeviceDoc/xc32-v#{version}-full-install-osx-installer.dmg"
   name "MPLab XC32 Compiler"
+  desc "Compiler for 32-bit PIC and SAM MCUs and MPUs"
   homepage "https://www.microchip.com/mplab/compilers"
 
   livecheck do

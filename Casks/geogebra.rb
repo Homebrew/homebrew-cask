@@ -1,13 +1,19 @@
 cask "geogebra" do
-  version "6.0.620.0"
-  sha256 "e864044f6c95f60b468e56227a1adb2cf02307b2d4f6dbf94fb61959482be08d"
+  version "6.0.662.0"
+  sha256 "18babe115f7d644e95dbfc76e5f89cbea2e18115ae0b19ff9b0a1b4368dbbffc"
 
   url "https://download.geogebra.org/installers/#{version.major_minor}/GeoGebra-Classic-#{version.major}-MacOS-Portable-#{version.dots_to_hyphens}.zip"
-  appcast "https://download.geogebra.org/installers/#{version.major_minor}/version.txt",
-          must_contain: version.dots_to_hyphens
   name "GeoGebra"
   desc "Solve, save and share math problems, graph functions, etc"
   homepage "https://www.geogebra.org/"
+
+  livecheck do
+    url "https://download.geogebra.org/package/mac-port"
+    strategy :header_match do |headers|
+      v = headers["location"][%r{/GeoGebra-Classic-\d+-MacOS-Portable-(\d+(?:-\d+)*)\.zip}i, 1]
+      v.tr("-", ".")
+    end
+  end
 
   app "GeoGebra Classic #{version.major}.app"
 

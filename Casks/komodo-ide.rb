@@ -3,9 +3,17 @@ cask "komodo-ide" do
   sha256 "44690ebf9395899cffab48b1c8ca7adb5abbb1cb9a47672e3303d79ba5392eb8"
 
   url "https://downloads.activestate.com/Komodo/releases/#{version.before_comma}/Komodo-IDE-#{version.before_comma}-#{version.after_comma}-macosx-x86_64.dmg"
-  appcast "https://www.activestate.com/komodo-ide/downloads/ide"
   name "Komodo IDE"
+  desc "One IDE for all your languages"
   homepage "https://www.activestate.com/komodo-ide/"
+
+  livecheck do
+    url "https://www.activestate.com/komodo-ide/downloads/ide"
+    strategy :page_match do |page|
+      match = page.match(%r{href=.*?/Komodo-IDE-(\d+(?:\.\d+)*)-(\d+)-macosx-x86_64\.dmg}i)
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
   app "Komodo IDE #{version.major}.app"
 end

@@ -1,17 +1,16 @@
 cask "mubu" do
-  version "3.2.0"
-  sha256 "77ceb25b76a80a5c4ba287a42e61a40669e86919cd8a740ced4d54df20c7c524"
+  version "3.6.0"
+  sha256 "1a8b2f7c6dc032099fb653201fd2f1b3dac2daeb08631deef8665993d69d2055"
 
-  url "https://lf6-ttcdn-tos.pstatp.com/obj/mubu-img/client/Mubu-#{version}.dmg",
-      verified: "lf6-ttcdn-tos.pstatp.com/obj/mubu-img/"
+  url "https://lf1-ttcdn-tos.pstatp.com/obj/mubu-assets/client/Mubu-#{version}.dmg",
+      verified: "lf1-ttcdn-tos.pstatp.com/obj/mubu-assets/"
   name "Mubu"
   desc "Outline note taking and management app"
   homepage "https://mubu.com/"
 
   livecheck do
     url "https://mubu.com/apps"
-    strategy :page_match
-    regex(/Mubu-(\d+(?:\.\d+)*)\.dmg/i)
+    regex(/href=.*?Mubu[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "幕布.app"

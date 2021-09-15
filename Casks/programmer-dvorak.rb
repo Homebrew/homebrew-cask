@@ -3,10 +3,16 @@ cask "programmer-dvorak" do
   sha256 "1048706baa0f03a780d392125f06cd9e531386c0520b617169aa9e18ec2b8e9e"
 
   url "https://kaufmann.no/downloads/macos/ProgrammerDvorak-#{version.dots_to_underscores}.pkg.zip"
-  appcast "https://kaufmann.no/roland/dvorak/#downloads",
-          must_contain: version.dots_to_underscores
   name "Programmer Dvorak"
   homepage "https://kaufmann.no/roland/dvorak/"
+
+  livecheck do
+    url "https://kaufmann.no/roland/dvorak/#downloads"
+    strategy :page_match do |page|
+      v = page[/href=.*?ProgrammerDvorak-(\d+(?:_\d+)*)\.pkg\.zip/i, 1]
+      v.tr("_", ".")
+    end
+  end
 
   pkg "Programmer Dvorak v#{version.major_minor}.pkg"
 

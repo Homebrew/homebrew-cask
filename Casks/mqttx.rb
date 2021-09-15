@@ -1,11 +1,11 @@
 cask "mqttx" do
-  version "1.5.3"
-  sha256 "00f024c2fd027ef9201c4c3e95df54c5a377e59c92894e7636591a45d5329d81"
+  version "1.6.0"
+  sha256 "b0d8c92f79574491e07709360f7e6e1cc309b4a812194f76f5c5f7f61ce44950"
 
   url "https://github.com/emqx/MQTTX/releases/download/v#{version}/MQTTX-#{version}-mac.zip",
       verified: "github.com/emqx/MQTTX/"
   name "MQTTX"
-  desc "MQTT 5.0 Client"
+  desc "Cross-platform MQTT 5.0 Desktop Client"
   homepage "https://mqttx.app/"
 
   app "MQTTX.app"

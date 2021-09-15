@@ -1,6 +1,6 @@
 cask "betelguese" do
-  version "1.0"
-  sha256 "ad04bf0302e0da4a5560f2e77b3e37c94da0ede06a48445ba428ae7e30b4d57d"
+  version "1.1"
+  sha256 "ada42a23f280d5bb65a3708fb3e8da70026eef7ceee2653f8cdc75bf43b26097"
 
   url "https://github.com/23Aaron/Betelguese/releases/download/#{version}/Betelguese.app.zip"
   name "Betelguese"

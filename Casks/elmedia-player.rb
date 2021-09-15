@@ -1,5 +1,5 @@
 cask "elmedia-player" do
-  version "7.17,2353"
+  version "8.1,2848"
   sha256 :no_check
 
   url "https://cdn.eltima.com/download/elmediaplayer.dmg"

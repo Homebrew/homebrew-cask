@@ -4,10 +4,16 @@ cask "osculator" do
 
   url "https://distribution.wildora.net/products/osculator-v#{version.major}/revisions/#{version.after_comma}/osculator-#{version.before_comma}.dmg",
       verified: "https://distribution.wildora.net/products/"
-  appcast "https://backend.wildora.net/v1/products/osculator-v#{version.major}/revisions.rss"
   name "Osculator"
   desc "Connect MIDI and OSC Controllers"
   homepage "https://osculator.net/"
+
+  livecheck do
+    url "https://backend.wildora.net/v1/products/osculator-v#{version.major}/revisions.rss"
+    strategy :sparkle do |item|
+      "#{item.version},#{item.url[%r{revisions/([\w-]+)/}i, 1]}"
+    end
+  end
 
   app "Osculator.app"
 

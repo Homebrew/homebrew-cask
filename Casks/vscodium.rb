@@ -1,6 +1,6 @@
 cask "vscodium" do
-  version "1.55.1"
-  sha256 "4e577ee925aa7c5794c17c2c3a73eb3a456081b0facb53c2aecd774e12f37d49"
+  version "1.60.1"
+  sha256 "ac0511a8a58a2dad034e66062dc8d4fa3d4f01e93244f6ee447b229081019b49"
 
   url "https://github.com/VSCodium/vscodium/releases/download/#{version}/VSCodium.x64.#{version}.dmg"
   name "VSCodium"
@@ -8,7 +8,6 @@ cask "vscodium" do
   homepage "https://github.com/VSCodium/vscodium"
 
   auto_updates true
-  conflicts_with cask: "visual-studio-code"
 
   app "VSCodium.app"
   binary "#{appdir}/VSCodium.app/Contents/Resources/app/bin/codium"

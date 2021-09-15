@@ -1,6 +1,6 @@
 cask "ivideonclient" do
-  version "6.10.0"
-  sha256 "08fd2d9d4228a3d004063cb477ad2390295707d09edca920409d5ce994a34939"
+  version "6.11.0"
+  sha256 "5b9dc6575a609084808bc471c133a0e6cf3a40f54fdfdd6f5104054e0f90c827"
 
   url "https://updates.iv-cdn.com/bundles/ivideon_client/#{version}/IvideonClient_#{version}_macosx-x86-64.dmg",
       verified: "updates.iv-cdn.com/"

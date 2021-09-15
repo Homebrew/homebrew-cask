@@ -1,9 +1,10 @@
 cask "tiny-player" do
-  version "1.4.2,167"
-  sha256 "552392f30edfc767a484e4b983c24c9f2230ea3301bf5be538c420b4e57b6b13"
+  version "1.5.8,184"
+  sha256 "b24175fb91d758e2d97e0db841fc3cf4b0455c2a26f73e8f0e0149dcc273f1a6"
 
   url "https://download.catnapgames.com/TinyPlayer-#{version.before_comma}.zip"
   name "Tiny Player for Mac"
+  desc "Media player"
   homepage "https://www.catnapgames.com/tiny-player-for-mac/"
 
   livecheck do
@@ -14,4 +15,10 @@ cask "tiny-player" do
   auto_updates true
 
   app "Tiny Player.app"
+
+  zap trash: [
+    "~/Library/Application Support/Tiny Player",
+    "~/Library/Caches/com.catnapgames.playermac",
+    "~/Library/Preferences/com.catnapgames.playermac.plist",
+  ]
 end

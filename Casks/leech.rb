@@ -3,9 +3,14 @@ cask "leech" do
   sha256 :no_check
 
   url "https://manytricks.com/download/leech"
-  appcast "https://manytricks.com/leech/appcast"
   name "Leech"
+  desc "Lightweight download manager"
   homepage "https://manytricks.com/leech/"
+
+  livecheck do
+    url "https://manytricks.com/leech/appcast/"
+    strategy :sparkle
+  end
 
   auto_updates true
 

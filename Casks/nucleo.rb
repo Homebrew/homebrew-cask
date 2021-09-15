@@ -1,16 +1,16 @@
 cask "nucleo" do
-  version "2.6.1"
-  sha256 "15488d5c51dd7ea3af414f68d6e5e855d880e0ef71a48ea08f00ab56e0f9a736"
+  version "3.1.0"
+  sha256 "9f5a2c7607cc0b41a9a0da2aa6b25c718b9d297aaf62ef7aaca75ccd600aecc1"
 
   url "https://nucleo-app-releases.s3.amazonaws.com/mac/Nucleo_#{version}.zip",
       verified: "nucleo-app-releases.s3.amazonaws.com/"
   name "Nucleo"
+  desc "Icon manager and library"
   homepage "https://nucleoapp.com/"
 
   livecheck do
     url "https://nucleoapp.com/updates"
-    strategy :page_match
-    regex(%r{href=.*?/Nucleo_(\d+(?:\.\d+)*)\.zip}i)
+    regex(%r{href=.*?/Nucleo[._-]v?(\d+(?:\.\d+)+)\.zip}i)
   end
 
   app "Nucleo.app"

@@ -1,5 +1,5 @@
 cask "desktoputility" do
-  version "4.7"
+  version "4.7.2"
   sha256 :no_check
 
   url "https://sweetpproductions.com/products/desktoputility/DesktopUtility.dmg"
@@ -9,9 +9,10 @@ cask "desktoputility" do
 
   livecheck do
     url "https://sweetpproductions.com/products/desktoputility/updates.htm"
-    strategy :page_match
-    regex(%r{<h3>\s*(\d+(?:\.\d+)*)\s*</h3>}i)
+    regex(/<h\d+>\s*(\d+(?:\.\d+)+)\s*</i)
   end
+
+  depends_on macos: ">= :el_capitan"
 
   app "DesktopUtility.app"
 end

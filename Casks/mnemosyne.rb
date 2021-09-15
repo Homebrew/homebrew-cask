@@ -4,9 +4,14 @@ cask "mnemosyne" do
 
   url "https://downloads.sourceforge.net/mnemosyne-proj/mnemosyne/mnemosyne-#{version}/Mnemosyne-#{version}.dmg",
       verified: "sourceforge.net/mnemosyne-proj/"
-  appcast "https://sourceforge.net/projects/mnemosyne-proj/rss?path=/mnemosyne"
   name "Mnemosyne"
+  desc "Flash card tool"
   homepage "https://mnemosyne-proj.org/"
+
+  livecheck do
+    url "https://mnemosyne-proj.org/download-mnemosyne.php"
+    regex(/Mnemosyne[._-]?(\d+(?:\.\d+)*)\.dmg/i)
+  end
 
   app "Mnemosyne.app"
 end

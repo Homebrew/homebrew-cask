@@ -1,5 +1,5 @@
 cask "steam" do
-  version "2021-02-13"
+  version "2.0"
   sha256 :no_check
 
   url "https://steamcdn-a.akamaihd.net/client/installer/steam.dmg",
@@ -9,11 +9,8 @@ cask "steam" do
   homepage "https://store.steampowered.com/about/"
 
   livecheck do
-    url "https://store.steampowered.com/oldnews/?feed=steam_client"
-    strategy :page_match do |page|
-      date = Time.parse(page[/class=["']?date["']?[^>]*>([^<]+)/i, 1])
-      date.strftime("%Y-%m-%d")
-    end
+    url :url
+    strategy :extract_plist
   end
 
   auto_updates true

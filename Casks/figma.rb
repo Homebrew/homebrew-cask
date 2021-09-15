@@ -1,10 +1,28 @@
 cask "figma" do
-  version "96.4.0"
-  sha256 "eb15e232b76de6e882fa4dfaf7db25c448319c41ef5692ef0fd5bd53e564c7d7"
+  version "101.6.0"
 
-  url "https://desktop.figma.com/mac/Figma-#{version}.zip"
-  appcast "https://desktop.figma.com/mac/RELEASE.json"
+  if Hardware::CPU.intel?
+    sha256 "1b87be8f35b58d260ffb9dd75127d85ec33fba6b0376bb4840838ed9f88abb55"
+
+    url "https://desktop.figma.com/mac/Figma-#{version}.zip"
+
+    livecheck do
+      url "https://desktop.figma.com/mac/RELEASE.json"
+      regex(%r{/Figma[._-]v?(\d+(?:\.\d+)+)\.zip}i)
+    end
+  else
+    sha256 "4ea81297fbaecb2a5255b78ffddb6025b80ab38a7dc1ca76a4679fa2a3e953f0"
+
+    url "https://desktop.figma.com/mac-arm/Figma-#{version}.zip"
+
+    livecheck do
+      url "https://desktop.figma.com/mac-arm/RELEASE.json"
+      regex(%r{/Figma[._-]v?(\d+(?:\.\d+)+)\.zip}i)
+    end
+  end
+
   name "Figma"
+  desc "Collaborative team software"
   homepage "https://www.figma.com/"
 
   auto_updates true

@@ -1,15 +1,24 @@
 cask "banktivity" do
-  version "8.2.2"
-  sha256 "f598ec9310f3cbb7253a8ea2a4fe0c7011c85e30a505bd44a718c5d1c7da56c5"
+  version "8.4.2"
+  sha256 "b8af25fdc121388e0540e5010cba131562dc6879b4be7023869781509c2c8668"
 
   url "https://www.iggsoft.com/banktivity/Banktivity#{version}.dmg",
       verified: "iggsoft.com/"
-  appcast "https://www.iggsoft.com/banktivity/banktivity-versions-feed.json"
   name "Banktivity"
   desc "App to manage bank accounts in one place"
   homepage "https://www.iggsoftware.com/banktivity/"
 
+  livecheck do
+    url "https://www.iggsoft.com/banktivity/banktivity-versions-feed.json"
+    regex(/"version"\s*:\s*"(\d+(?:\.\d+)*)"/i)
+  end
+
   depends_on macos: ">= :catalina"
 
   app "Banktivity.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.iggsoftware.banktivity",
+    "~/Library/Containers/com.iggsoftware.banktivity",
+  ]
 end

@@ -1,6 +1,6 @@
 cask "audius" do
-  version "0.24.12"
-  sha256 "d0a008fcc4635669c7201b67678ff91a676c1eac38757588e52be504178f3605"
+  version "0.24.30"
+  sha256 "97e9eb470a162789f9fc903143ad3d98ee39b8c814c3c55065cacfd9efac9cd0"
 
   url "https://download.audius.co/Audius-#{version}.dmg"
   name "Audius"
@@ -11,6 +11,8 @@ cask "audius" do
     url "https://s3-us-west-1.amazonaws.com/download.audius.co/latest-mac.yml"
     strategy :electron_builder
   end
+
+  auto_updates true
 
   app "Audius.app"
 

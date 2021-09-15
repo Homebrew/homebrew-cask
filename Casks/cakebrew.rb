@@ -4,10 +4,14 @@ cask "cakebrew" do
 
   url "https://cakebrew-377a.kxcdn.com/cakebrew-#{version}.zip",
       verified: "cakebrew-377a.kxcdn.com/"
-  appcast "https://www.cakebrew.com/appcast/profileInfo.php"
   name "Cakebrew"
   desc "GUI app for Homebrew"
   homepage "https://www.cakebrew.com/"
+
+  livecheck do
+    url "https://www.cakebrew.com/appcast/profileInfo.php"
+    strategy :sparkle, &:short_version
+  end
 
   auto_updates true
 

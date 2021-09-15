@@ -1,12 +1,16 @@
 cask "parallels" do
-  version "16.1.3-49160"
-  sha256 "a2faaba504f32c57d70431bc74f2c10785949de70f7beab494c1cb13901938e0"
+  version "17.0.1-51482"
+  sha256 "b0138a8065293c9e149617aa3c329ddc4976cd767f7329f7e8e57dd859d6877f"
 
   url "https://download.parallels.com/desktop/v#{version.major}/#{version}/ParallelsDesktop-#{version}.dmg"
-  appcast "https://kb.parallels.com/en/125053"
   name "Parallels Desktop"
   desc "Desktop virtualization software"
   homepage "https://www.parallels.com/products/desktop/"
+
+  livecheck do
+    url "https://www.parallels.com/directdownload/pd#{version.major}/image/"
+    strategy :header_match
+  end
 
   auto_updates true
   depends_on macos: ">= :high_sierra"

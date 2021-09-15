@@ -1,18 +1,25 @@
 cask "binance" do
-  version "1.14.1"
-  sha256 "48f8ca704ce7ac921442446b5f2369ea638eff2941f5df98662a546a740c5d90"
+  version "1.23.0"
+  sha256 "2005d111181760ce7180ef151fb5de9902d53eb82bec3403e5e0dded9bac8af0"
 
   url "https://ftp.binance.com/electron-desktop/mac/production/binance-#{version}.dmg"
-  appcast "https://ftp.binance.com/electron-desktop/mac/production/latest-mac.yml"
   name "Binance"
   desc "Cryptocurrency exchange"
   homepage "http://binance.com/"
+
+  livecheck do
+    url "https://ftp.binance.com/electron-desktop/mac/production/latest-mac.yml"
+    strategy :electron_builder
+  end
+
+  auto_updates true
+  depends_on macos: ">= :el_capitan"
 
   app "Binance.app"
 
   zap trash: [
     "~/Library/Application Support/Binance",
-    "~/Library/Saved Application State/com.binance.BinanceDesktop.savedState",
     "~/Library/Logs/Binance",
+    "~/Library/Saved Application State/com.binance.BinanceDesktop.savedState",
   ]
 end

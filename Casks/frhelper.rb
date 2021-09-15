@@ -1,12 +1,13 @@
 cask "frhelper" do
-  version "4.0.2,1051"
-  sha256 "befa3d89703b1a299741add6b3a8a6507d60736d679d925d6e9f07a2fe3cf158"
+  version "4.1.3,1062"
+  sha256 "5d5da5b93b25b61dcc466986d748ed5b3afc763b27fe8c67ec0660c69d0cd621"
 
   url "https://static.frdic.com/pkg/fhmac.dmg?v=#{version.after_comma}",
       verified:   "static.frdic.com/",
       user_agent: :fake
   name "Frhelper"
   name "法语助手"
+  desc "French-Chinese dictionary and learning tool"
   homepage "https://www.eudic.net/v4/fr/app/frhelper"
 
   livecheck do
@@ -23,12 +24,13 @@ cask "frhelper" do
   ]
 
   zap trash: [
-    "~/Library/Eudb_fr",
+    "~/Library/Application Support/com.eusoft.frhelper",
     "~/Library/Caches/com.eusoft.frhelper",
     "~/Library/Caches/com.eusoft.frhelper.LightPeek",
-    "~/Library/Preferences/com.eusoft.frhelper.plist",
-    "~/Library/Application Support/com.eusoft.frhelper",
-    "~/Library/Preferences/group.com.eusoft.frhelper.plist",
+    "~/Library/Containers/com.eusoft.frhelper.QuickLook",
+    "~/Library/Eudb_fr",
     "~/Library/Preferences/com.eusoft.frhelper.LightPeek.plist",
+    "~/Library/Preferences/com.eusoft.frhelper.plist",
+    "~/Library/Preferences/group.com.eusoft.frhelper.plist",
   ]
 end

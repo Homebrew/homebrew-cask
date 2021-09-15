@@ -8,6 +8,13 @@ cask "boop" do
   desc "Scriptable scratchpad for developers"
   homepage "https://boop.okat.best/"
 
+  livecheck do
+    url "https://boop.okat.best/version.json"
+    strategy :page_match do |page|
+      JSON.parse(page)["standalone"]["version"]
+    end
+  end
+
   depends_on macos: ">= :mojave"
 
   app "Boop.app"

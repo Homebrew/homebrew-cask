@@ -9,7 +9,8 @@ cask "workplace-chat" do
   homepage "https://www.facebook.com/workplace/chat-app"
 
   livecheck do
-    skip "unversioned URL"
+    url :url
+    strategy :header_match
   end
 
   app "Workplace Chat.app"

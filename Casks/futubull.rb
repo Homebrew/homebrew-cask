@@ -1,13 +1,21 @@
 cask "futubull" do
-  version "11.2.818,202103091048"
-  sha256 "4005cef8af1bc206a6280d29d8d2ec80d3d589b6e95429ad64c586bd7ebc6040"
+  version "11.9.1418,202109020944"
+  sha256 "5d68ad6f536cf8e86f72560a6903b329a613de9a74eea3006ad6fd661ef1ef38"
 
   url "https://softwarefile.futunn.com/FTNNForMac_#{version.before_comma}_#{version.after_comma}_Website.dmg"
-  appcast "https://www.futunn.com/download/mac?lang=en-US"
   name "Futubull"
   name "FutuNiuniu"
   desc "Trading application"
   homepage "https://www.futunn.com/"
+
+  livecheck do
+    url "https://www.futunn.com/download/history?client=11"
+    strategy :page_match do |page|
+      page.scan(%r{/FTNNForMac[._-]v?(\d+(?:\.\d+)*)[_-](\d+)[._-]Website\.dmg}i).map do |match|
+        "#{match[0]},#{match[1]}"
+      end
+    end
+  end
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "FutuNiuniu.app", target: "Futubull.app"

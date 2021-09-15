@@ -1,9 +1,10 @@
 cask "mbed-studio" do
-  version "1.4.0"
+  version "1.4.1"
   sha256 :no_check
 
   url "https://studio.mbed.com/installers/latest/mac/MbedStudio.pkg"
   name "Mbed Studio"
+  desc "IDE for Mbed OS application and library development"
   homepage "https://os.mbed.com/studio/"
 
   livecheck do

@@ -1,9 +1,10 @@
 cask "ibackup-viewer" do
-  version "4.1821"
+  version "4.2310"
   sha256 :no_check
 
   url "https://www.imactools.com/download/iBackupViewer.dmg"
   name "iBackup Viewer"
+  desc "Extract Data from iPhone Backups"
   homepage "https://www.imactools.com/iphonebackupviewer/"
 
   livecheck do

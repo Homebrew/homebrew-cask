@@ -15,8 +15,8 @@ cask "karabiner-elements" do
 
     pkg "Karabiner-Elements.sparkle_guided.pkg"
   else
-    version "13.4.0"
-    sha256 "50d7ef1f9f1596208311349cbc5eac9f2b03d62b0bc47485b9778c7f6f5ab6af"
+    version "13.7.0"
+    sha256 "9ac5e53a71f3a00d7bdb2f5f5f001f70b6b8b7b2680e10a929e0e4c488c8734b"
 
     url "https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg",
         verified: "github.com/pqrs-org/Karabiner-Elements/"

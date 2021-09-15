@@ -1,15 +1,15 @@
 cask "topcat" do
-  version "4.8"
+  version "4.8-1"
   sha256 :no_check
 
   url "http://www.star.bris.ac.uk/~mbt/topcat/topcat-full.dmg"
   name "TOPCAT"
+  desc "Interactive graphical viewer and editor for tabular data"
   homepage "http://www.star.bris.ac.uk/~mbt/topcat/"
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(/Version\s*(\d+(?:\.\d+)*)\s*released/i)
+    regex(/Version\s*(\d+(?:\.\d+)*(?:-\d+)?)\s*released/i)
   end
 
   app "TOPCAT.app"

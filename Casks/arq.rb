@@ -1,6 +1,6 @@
 cask "arq" do
-  version "7.4.2"
-  sha256 "91e47e9f546d43a185c8bdcf8e34b9b92ae8fc79730584fc9462714e42ecba4b"
+  version "7.7.2"
+  sha256 "63230a55fea07e9fd64364b040e850c92d5d7f4388fc8a2fe4ead69dda51404e"
 
   url "https://www.arqbackup.com/download/arqbackup/Arq#{version}.pkg"
   name "Arq"
@@ -9,16 +9,17 @@ cask "arq" do
 
   livecheck do
     url "https://www.arqbackup.com/download/arqbackup/arq#{version.major}_release_notes.html"
-    strategy :page_match
-    regex(/Version\s*(\d+(?:\.\d+)*)/i)
+    regex(/Version\s*(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
+  depends_on macos: ">= :yosemite"
 
   pkg "Arq#{version}.pkg"
 
   uninstall pkgutil:   "com.haystacksoftware.Arq",
             quit:      "com.haystacksoftware.Arq",
+            delete:    "/Applications/Arq.app",
             launchctl: [
               "com.haystacksoftware.ArqMonitor",
               "com.haystacksoftware.arqagent",

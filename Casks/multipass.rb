@@ -1,18 +1,19 @@
 cask "multipass" do
-  version "1.6.2"
-  sha256 "61ce3f9ff9c32555b583bfa2017501526eb53e68e570c11ae40f69fdc01d69d6"
+  version "1.7.0"
+  sha256 "a576100b495acbde4fcf7d4943af8d57c4fb9ee30fe8852daa0d4f7ce3a7ec7b"
 
-  url "https://github.com/CanonicalLtd/multipass/releases/download/v#{version}/multipass-#{version}+mac-Darwin.pkg"
+  url "https://github.com/canonical/multipass/releases/download/v#{version}/multipass-#{version}+mac-Darwin.pkg"
   name "Multipass"
   desc "Orchestrates virtual Ubuntu instances"
-  homepage "https://github.com/CanonicalLtd/multipass/"
+  homepage "https://github.com/canonical/multipass/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://github.com/canonical/multipass/releases/"
+    strategy :page_match
+    regex(/multipass[._-]?(\d+(?:\.\d+)*)\+mac[._-]?Darwin\.pkg/i)
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   pkg "multipass-#{version}+mac-Darwin.pkg"
 

@@ -1,6 +1,6 @@
 cask "keepingyouawake" do
-  version "1.6.0"
-  sha256 "e3475e9cfa2e7c49a6eca1befecdaf2be8a705919fe46881b2f4fe9360c1d6d5"
+  version "1.6.1"
+  sha256 "5830c1b282fa862ed717a60eb08afc3c7a935b5ccf5b064e12c61373952034ff"
 
   url "https://github.com/newmarcel/KeepingYouAwake/releases/download/#{version}/KeepingYouAwake-#{version}.zip",
       verified: "github.com/newmarcel/KeepingYouAwake/"

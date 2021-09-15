@@ -1,20 +1,31 @@
 cask "webstorm" do
-  version "2021.1"
+  version "2021.2.1,212.5080.54"
 
   if Hardware::CPU.intel?
-    url "https://download.jetbrains.com/webstorm/WebStorm-#{version}.dmg"
-    sha256 "3c0b885416b336e8cae267f6c3c7c6074c5dc0395f901270f9779e9a06eea58c"
+    sha256 "804996ab30b890fc2e39158c2cadd0d07d97f0473d7a26304ce2577e94d0f58d"
+
+    url "https://download.jetbrains.com/webstorm/WebStorm-#{version.before_comma}.dmg"
   else
-    url "https://download.jetbrains.com/webstorm/WebStorm-#{version}-aarch64.dmg"
-    sha256 "7538b56ddc30890f3598359d5688c3659180de941800965bee338d3d4ac7338f"
+    sha256 "9ad22b0a496ffdb638515102613ea7f96cadd4362f601f7aacf00e62d8fa754e"
+
+    url "https://download.jetbrains.com/webstorm/WebStorm-#{version.before_comma}-aarch64.dmg"
   end
 
-  appcast "https://data.services.jetbrains.com/products/releases?code=WS&latest=true&type=release"
   name "WebStorm"
   desc "JavaScript IDE"
   homepage "https://www.jetbrains.com/webstorm/"
 
+  livecheck do
+    url "https://data.services.jetbrains.com/products/releases?code=WS&latest=true&type=release"
+    strategy :page_match do |page|
+      JSON.parse(page)["WS"].map do |release|
+        "#{release["version"]},#{release["build"]}"
+      end
+    end
+  end
+
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "WebStorm.app"
 
@@ -28,11 +39,12 @@ cask "webstorm" do
   end
 
   zap trash: [
-    "~/Library/Application Support/WebStorm#{version.major_minor}",
-    "~/Library/Caches/WebStorm#{version.major_minor}",
-    "~/Library/Logs/WebStorm#{version.major_minor}",
+    "~/Library/Preferences/com.jetbrains.WebStorm.plist",
+    "~/Library/Preferences/jetbrains.webstorm.*.plist",
     "~/Library/Preferences/WebStorm#{version.major_minor}",
-    "~/Library/Preferences/jetbrains.webstorm.aaac0500.plist",
+    "~/Library/Application Support/JetBrains/WebStorm#{version.major_minor}",
+    "~/Library/Caches/JetBrains/WebStorm#{version.major_minor}",
+    "~/Library/Logs/JetBrains/WebStorm#{version.major_minor}",
     "~/Library/Saved Application State/com.jetbrains.WebStorm.savedState",
   ]
 end

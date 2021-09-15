@@ -1,6 +1,6 @@
 cask "marvel" do
-  version "10.7.2,4933"
-  sha256 "1df8ec89492c2d6a62dcb8cc059b078e6354ee0d31a320b1506a01fac6d4a50d"
+  version "10.9.4,5027"
+  sha256 "4d5c438cc74940090aa3191c25a047f1c2c0197758fb1b08010e7e81520282dc"
 
   url "https://storage.googleapis.com/sketch-plugin/#{version.before_comma}/Marvel.zip",
       verified: "storage.googleapis.com/sketch-plugin/"

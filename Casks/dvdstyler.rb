@@ -4,9 +4,14 @@ cask "dvdstyler" do
 
   url "https://downloads.sourceforge.net/dvdstyler/DVDStyler-#{version}-MacOSX.dmg",
       verified: "sourceforge.net/dvdstyler/"
-  appcast "https://sourceforge.net/projects/dvdstyler/rss"
   name "DVDStyler"
+  desc "DVD authoring application"
   homepage "https://www.dvdstyler.org/"
+
+  livecheck do
+    url "https://www.dvdstyler.org/en/downloads"
+    regex(/DVDStyler[._-]?(\d+(?:\.\d+)*)[._-]?MacOSX\.dmg/i)
+  end
 
   depends_on macos: ">= :yosemite"
 

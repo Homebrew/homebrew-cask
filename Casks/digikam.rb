@@ -1,12 +1,17 @@
 cask "digikam" do
-  version "7.2.0"
-  sha256 "a41b5f456b3f416921ed8361edc7a4cd35dfb29fcb8c5aeffd637b569ed6c35b"
+  version "7.3.0"
+  sha256 "12551e5fe31c0a16c0b98d3d03f5767e317f7e2759ed723a2150999bedec3aaf"
 
   url "https://download.kde.org/stable/digikam/#{version}/digiKam-#{version}-MacOS-x86-64.pkg",
       verified: "kde.org/stable/digikam/"
-  appcast "https://download.kde.org/stable/digikam/"
   name "digiKam"
+  desc "Digital photo manager"
   homepage "https://www.digikam.org/"
+
+  livecheck do
+    url "https://download.kde.org/stable/digikam/"
+    regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
+  end
 
   pkg "digiKam-#{version}-MacOS-x86-64.pkg"
 

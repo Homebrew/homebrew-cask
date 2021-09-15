@@ -1,16 +1,23 @@
 cask "blender" do
-  version "2.92.0"
-  sha256 "0ab72447b8b02e6a9553aa9b2cb77ff63500e63e176cf31d8762f8b62bbfb03d"
+  version "2.93.4"
 
-  url "https://download.blender.org/release/Blender#{version.major_minor}/blender-#{version}-macOS.dmg"
+  if Hardware::CPU.intel?
+    sha256 "9aab9e161e326f02d5ca51b9f77187e931ebc779bd85a604d797c187cd1611f4"
+
+    url "https://download.blender.org/release/Blender#{version.major_minor}/blender-#{version}-macos-x64.dmg"
+  else
+    sha256 "0478a156829213a683b6be92cd12fe63c4f58fce3d0c2b4b839c157737eb14bf"
+
+    url "https://download.blender.org/release/Blender#{version.major_minor}/blender-#{version}-macos-arm64.dmg"
+  end
+
   name "Blender"
-  desc "Free and open-source 3D creation suite"
+  desc "3D creation suite"
   homepage "https://www.blender.org/"
 
   livecheck do
     url "https://www.blender.org/download/"
-    strategy :page_match
-    regex(%r{href=.*?/blender-(\d+(?:\.\d+)*)-macos\.dmg}i)
+    regex(%r{href=.*?/blender[._-]v?(\d+(?:\.\d+)+)[._-]macos[._-]}i)
   end
 
   conflicts_with cask: "homebrew/cask-versions/blender-lts"

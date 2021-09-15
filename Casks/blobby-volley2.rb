@@ -5,8 +5,8 @@ cask "blobby-volley2" do
 
   url "https://downloads.sourceforge.net/blobby/blobby2-macosx-#{version}.dmg",
       verified: "downloads.sourceforge.net/blobby/"
-  appcast "https://sourceforge.net/projects/blobby/rss"
   name "Blobby Volley 2"
+  desc "Head-to-head multiplayer ball game"
   homepage "https://blobby.sourceforge.io/"
 
   app "Blobby Volley 2.app"

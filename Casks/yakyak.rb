@@ -1,6 +1,6 @@
 cask "yakyak" do
-  version "1.5.11.1"
-  sha256 "a32888b8ae8a71cd17aaf804e03156d9176be80537e3338050db770aae8a3d97"
+  version "1.5.11.5"
+  sha256 "a0f37f802b591f3f856c729a3db1537ecbbff37ec7eaa732bce09244ae824de0"
 
   url "https://github.com/yakyak/yakyak/releases/download/v#{version}/yakyak-#{version}-osx-x64.zip"
   name "Yakyak"

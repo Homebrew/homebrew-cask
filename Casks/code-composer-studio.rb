@@ -1,6 +1,6 @@
 cask "code-composer-studio" do
-  version "10.3.0.00007"
-  sha256 "71ef237c3f69336f1121fe97a27096d465ab2d01c044787ffcb471cac2c0e030"
+  version "10.4.0.00006"
+  sha256 "819579753408fa0e1ee0be7a1e2bea6a1e470907e45174ab5fe64fb62ad6d14c"
 
   url "https://software-dl.ti.com/ccs/esd/CCSv10/CCS_#{version.major_minor_patch.dots_to_underscores}/exports/ccs_installer_osx_#{version}.dmg"
   name "Code Composer Studio (CCS)"

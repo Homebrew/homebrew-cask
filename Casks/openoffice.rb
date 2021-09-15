@@ -1,42 +1,41 @@
 cask "openoffice" do
-  version "4.1.9"
+  version "4.1.10"
 
   language "en", default: true do
-    sha256 "332132fa734020b048d677f615fd648a4437bc484612866394a5b045f56f2c41"
+    sha256 "0ab76da0a8b61def5eaa5d162a017cfc9dba11607dd81e138ff25a5fb503d09a"
     "en-US"
   end
   language "de" do
-    sha256 "ac44bb2d186d20450f38e0d14d9982b801d37c016abb43dd619ab3bedd211d61"
+    sha256 "11ea257a3248800d4ebb310bc11ddec94bc308b3af498852d7f1703e21584494"
     "de"
   end
   language "fr" do
-    sha256 "c293bf44507a75eed40eff0207180cbca3213cd2e01afe1ed7fbf6f1c956c2a3"
+    sha256 "61dcdf07974f0cf2dbf1597fadfbc190fc14389ada6d7becf58889a9ce7c942c"
     "fr"
   end
   language "gl" do
-    sha256 "10f215c03f56411593b61b2d351720be92381687059d80b502926240abfb6ee9"
+    sha256 "245758f19f6060b98dae8fba2e8834eb0f0ff97b7438891c5203cda9b8af77d2"
     "gl"
   end
   language "ko" do
-    sha256 "598c8bfe7d11c713fa1385de8dbc1eb115f62c00c6a7a47cf777970ee0bb439e"
+    sha256 "9697b7694a3558fd53a410821e333fe3bd324229f53c44498ee60ed7614f9fbc"
     "ko"
   end
   language "pt-BR" do
-    sha256 "41476ad58975415629a33d20411e1d684a512beb48d1e8ed823d4fe027723637"
+    sha256 "5b266ac10d968bc4aba20e084e89ad15145dc018b63e6becac3453387d80d69c"
     "pt-BR"
   end
   language "pt" do
-    sha256 "84d9cd72cde12bdc89e33247c614b5da3659a2e3475f5f635bb8795bc3a8a8a4"
+    sha256 "f838f19b4d8a0a295aacd83f1569a3b2b80b5bb12439f3e383771be564c7b23f"
     "pt"
   end
   language "ru" do
-    sha256 "3fa71987c98c08824db1ee88fde94d7f0e802467825597b275c368e3aa6d1891"
+    sha256 "cd8f1565a36f6d93ec9ecf1d81d33678ec24b8881a786b9982ba667c743f3ab9"
     "ru"
   end
 
   url "https://downloads.sourceforge.net/openofficeorg.mirror/Apache_OpenOffice_#{version}_MacOS_x86-64_install_#{language}.dmg",
       verified: "sourceforge.net/openofficeorg.mirror/"
-  appcast "https://www.openoffice.org/download/index.html"
   name "Apache OpenOffice"
   desc "Free and open-source productivity suite"
   homepage "https://www.openoffice.org/"

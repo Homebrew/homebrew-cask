@@ -1,5 +1,5 @@
 cask "quickbooks" do
-  version "20.0.4.856,2021"
+  version "20.0.5.866,2021"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://http-download.intuit.com/http.intuit/Downloads/#{version.after_comma}/Latest/QuickBooksMac#{version.after_comma}.dmg"

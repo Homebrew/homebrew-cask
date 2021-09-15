@@ -1,11 +1,18 @@
 cask "microsoft-edge" do
-  version "89.0.774.75"
-  sha256 "381117014b51f363e44a67d1355b9251e9b8b3309f2f37d5dce37fab750512ff"
+  version "93.0.961.47"
 
-  url "https://officecdn-microsoft-com.akamaized.net/pr/03ADF619-38C6-4249-95FF-4A01C0FFC962/MacAutoupdate/MicrosoftEdge-#{version}.pkg",
-      verified: "officecdn-microsoft-com.akamaized.net/"
+  if Hardware::CPU.intel?
+    url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/MicrosoftEdge-#{version}.pkg",
+        verified: "officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/"
+    sha256 "f3b9964b160917667123d3c14384dde9f1ba79abb8199c8ec22e5a8bb674ed50"
+  else
+    url "https://officecdn-microsoft-com.akamaized.net/pr/03ADF619-38C6-4249-95FF-4A01C0FFC962/MacAutoupdate/MicrosoftEdge-#{version}.pkg",
+        verified: "officecdn-microsoft-com.akamaized.net/pr/03ADF619-38C6-4249-95FF-4A01C0FFC962/MacAutoupdate/"
+    sha256 "ef8912b5371f44820dc399aafd00d6a0c51becf31e11120e846ee3e7742bbb32"
+  end
+
   name "Microsoft Edge"
-  desc "Multi-platform web browser"
+  desc "Web browser"
   homepage "https://www.microsoft.com/edge"
 
   livecheck do

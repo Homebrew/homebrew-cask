@@ -1,6 +1,6 @@
 cask "napari" do
-  version "0.4.7"
-  sha256 "5f6151053cfc09d8ed569dffc0b95ef66861597ad81e19cb99f875b620dcf3d8"
+  version "0.4.10"
+  sha256 "1fc7f58ee85ec9a51a3f16f38118b380c194bc15e94f12294009100c5a3004c6"
 
   url "https://github.com/napari/napari/releases/download/v#{version}/napari-#{version}-macOS.zip",
       verified: "github.com/napari/napari/"

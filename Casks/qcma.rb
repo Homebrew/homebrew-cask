@@ -7,14 +7,6 @@ cask "qcma" do
   name "Qcma"
   homepage "https://codestation.github.io/qcma/"
 
-  livecheck do
-    url "https://github.com/codestation/qcma/releases/latest"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/Qcma_(\d+(?:\.\d+)*)-(\d+)\.dmg}i)
-      "#{match[1]},#{match[2]}"
-    end
-  end
-
   app "Qcma.app"
 
   caveats do

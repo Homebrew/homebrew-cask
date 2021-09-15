@@ -1,6 +1,6 @@
 cask "tg-pro" do
-  version "2.55,11191"
-  sha256 "04ff679610d7958bb5c67559d2bb9eff5e38516f19ee4ef974f2187b39a1f435"
+  version "2.60,12633"
+  sha256 "138f5122c4d55a2e6ec0db35087822bb3f58b604f8d6aa7adc9e703cb4e2f345"
 
   url "https://www.tunabellysoftware.com/resources/TG%20Pro%20#{version.before_comma}.dmg"
   name "TG Pro"
@@ -11,6 +11,8 @@ cask "tg-pro" do
     url "https://www.tunabellysoftware.com/resources/sparkle/tgpro.xml"
     strategy :sparkle
   end
+
+  depends_on macos: ">= :el_capitan"
 
   app "TG Pro.app"
 

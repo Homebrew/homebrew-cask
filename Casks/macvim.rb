@@ -21,12 +21,16 @@ cask "macvim" do
     gview
     gvim
     gvimdiff
+    gvimex
     mview
     mvim
     mvimdiff
+    mvimex
     view
     vim
     vimdiff
+    vimex
+    vi
   ].each { |link_name| binary "#{appdir}/MacVim.app/Contents/bin/mvim", target: link_name }
 
   zap trash: [

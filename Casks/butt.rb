@@ -1,6 +1,6 @@
 cask "butt" do
-  version "0.1.29"
-  sha256 "3945df53b325d1c19d64662084b18392e92db2fde7ec2f06c2c9423f626b5fff"
+  version "0.1.31"
+  sha256 "d88ea6d6924741462ad152322287810de0e01c76f5178bda550e4a6b4ed98b95"
 
   url "https://downloads.sourceforge.net/butt/butt-#{version}.dmg",
       verified: "sourceforge.net/butt/"

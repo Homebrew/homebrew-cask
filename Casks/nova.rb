@@ -1,6 +1,6 @@
 cask "nova" do
-  version "5.1"
-  sha256 "affdf57c49c2c8f937cd3f841c9bd8ee65fe3fa70657d2efc1d46d66c78c2cd1"
+  version "7.4"
+  sha256 "c065abb72ef57a348c157370e47736b374819466367fa2bff6385d07ce4c3cfc"
 
   url "https://download-cdn.panic.com/nova/Nova%20#{version}.zip",
       verified: "https://download-cdn.panic.com/nova/"
@@ -9,9 +9,8 @@ cask "nova" do
   homepage "https://nova.app/"
 
   livecheck do
-    url "https://download-cdn.panic.com/nova/"
-    strategy :page_match
-    regex(/nova\s(\d+(?:\.\d+)*)\.zip/i)
+    url :homepage
+    regex(%r{href=.*?/Nova(?:\s*|%20)?(\d+(?:\.\d+)*)\.zip}i)
   end
 
   auto_updates true
@@ -21,6 +20,8 @@ cask "nova" do
   binary "#{appdir}/Nova.app/Contents/SharedSupport/nova"
 
   zap trash: [
+    "/Library/LaunchDaemons/com.panic.NovaPrivilegedHelper.plist",
+    "/Library/PrivilegedHelperTools/com.panic.NovaPrivilegedHelper",
     "~/Library/Application Scripts/com.panic.Nova.NovaQuickLookPreview",
     "~/Library/Application Scripts/com.panic.Nova.NovaQuickLookThumbnail",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.panic.nova.sfl2",

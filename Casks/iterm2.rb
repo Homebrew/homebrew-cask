@@ -4,8 +4,8 @@ cask "iterm2" do
     version "3.3.12"
     sha256 "6811b520699e8331b5d80b5da1e370e0ed467e68bc56906f08ecfa986e318167"
   else
-    version "3.4.4"
-    sha256 "cdf6dce864e53f60445f012cf6e4fb8113ed0ae28532921a0dec835565eb4b13"
+    version "3.4.10"
+    sha256 "40a62193582dd7c54e6f27e509bdb887ec864513b53d4003763d9e167e44a921"
   end
 
   url "https://iterm2.com/downloads/stable/iTerm2-#{version.dots_to_underscores}.zip"
@@ -14,7 +14,11 @@ cask "iterm2" do
   homepage "https://www.iterm2.com/"
 
   livecheck do
-    url "https://iterm2.com/appcasts/final_modern.xml"
+    # workaround for
+    # - https://github.com/Homebrew/homebrew-cask/pull/104019
+    # - https://github.com/gnachman/iterm2-website/issues/82
+    # url "https://iterm2.com/appcasts/final_modern.xml"
+    url "https://raw.githubusercontent.com/gnachman/iterm2-website/master/source/appcasts/final_modern.xml"
     strategy :sparkle
   end
 

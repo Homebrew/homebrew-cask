@@ -1,12 +1,23 @@
 cask "opensong" do
-  version "3.0.1"
-  sha256 "7c8efb5b721a9eafccbe6832c9be93ddd1db6272c5ab94523a40464951045c85"
+  version "3.4.8"
+  sha256 "d3058292e406402bb1a65c4ed10d1e9c77fc9656d07ff381ed5f7904e1cd81b3"
 
-  url "https://downloads.sourceforge.net/opensong/OpenSong/V#{version}/OpenSongOSX-V#{version}.dmg",
+  url "https://downloads.sourceforge.net/opensong/OpenSong/V#{version}%20Beta/OpenSong%20#{version}.pkg",
       verified: "sourceforge.net/opensong/"
-  appcast "https://sourceforge.net/projects/opensong/rss"
   name "OpenSong"
+  desc "Presentation software"
   homepage "http://www.opensong.org/"
 
-  app "OpenSongOSX.app"
+  livecheck do
+    regex(/OpenSong[\s._-]+?v?(\d+(?:\.\d+)+)\.pkg/i)
+  end
+
+  pkg "OpenSong%20#{version}.pkg"
+
+  uninstall pkgutil: "org.opensong.opensong"
+
+  zap trash: [
+    "~/Library/Preferences/org.opensong.opensong.plist",
+    "~/Library/Saved Application State/org.opensong.opensong.savedState",
+  ]
 end

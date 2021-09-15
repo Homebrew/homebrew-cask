@@ -1,10 +1,11 @@
 cask "mockuuups-studio" do
-  version "3.0.0"
-  sha256 "0bed0aaaa60e84b3f9dc02e9c9dcb32df6e2c8e4533dc5641b2373863d9c3cb5"
+  version "3.2.1"
+  sha256 "f97a2b4a62b4f0e3bcf1cd1a00e1b744de2c31cff651656ddd7f097680124878"
 
   url "https://binaries.mockuuups.com/Mockuuups%20Studio-#{version}-mac.zip",
       verified: "mockuuups.com/"
   name "Mockuuups Studio"
+  desc "Allows designers and marketers to drag and drop visuals into scenes"
   homepage "https://mockuuups.studio/"
 
   livecheck do

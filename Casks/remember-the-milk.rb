@@ -1,20 +1,26 @@
 cask "remember-the-milk" do
-  version "1.3.4"
+  version "1.3.11"
 
   if Hardware::CPU.intel?
-    sha256 "749d38b91562bb4180e8692e68ce6776eed627de2086d1029bd160e48c0aed98"
+    sha256 "6bab4f70f87a95764e646788bef3449877a3938768b5a9b92ade946b348c95d2"
 
     url "https://www.rememberthemilk.com/download/mac/RememberTheMilk-#{version}-x64.zip"
   else
-    sha256 "0ed777bf49003b196291fca5f1bec0e1c45111f0b7ac36ce081b60cbc512f34e"
+    sha256 "5585a2ff3d09867c870c8255dc91e3235012f2f0dbeac3e38beeab6f0cee0f2b"
 
     url "https://www.rememberthemilk.com/download/mac/RememberTheMilk-#{version}-arm64.zip"
   end
 
-  appcast "https://www.rememberthemilk.com/services/mac/"
   name "Remember The Milk"
   desc "To-do app"
   homepage "https://www.rememberthemilk.com/"
+
+  livecheck do
+    url "https://www.rememberthemilk.com/services/mac/"
+    regex(%r{<b>Version:</b>\s*(\d+(?:\.\d+)+)}i)
+  end
+
+  depends_on macos: ">= :yosemite"
 
   app "Remember The Milk.app"
 

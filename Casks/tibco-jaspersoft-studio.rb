@@ -1,12 +1,17 @@
 cask "tibco-jaspersoft-studio" do
-  version "6.16.0"
-  sha256 "5cf493f88c4ac424cd5b022106e0703c141373531b0d4f1b8b9e00c20032095e"
+  version "6.17.0"
+  sha256 "e58652dd76e13828986d66fa1778a6182841a82cabc22c1434577094b9fb5e31"
 
   url "https://downloads.sourceforge.net/jasperstudio/JaspersoftStudio-#{version}/TIB_js-studiocomm_#{version}_macosx_x86_64.dmg",
       verified: "sourceforge.net/jasperstudio/"
-  appcast "https://sourceforge.net/projects/jasperstudio/rss"
   name "TIBCO Jaspersoft Studio"
+  desc "Eclipse-based report development tool for JasperReports"
   homepage "https://community.jaspersoft.com/project/jaspersoft-studio"
+
+  livecheck do
+    url "https://community.jaspersoft.com/project/jaspersoft-studio/releases"
+    regex(/TIB[._-]js[._-]studiocomm[._-]v?(\d+(?:\.\d+)+)[._-]macosx[._-]x86[._-]64\.dmg/i)
+  end
 
   auto_updates true
 

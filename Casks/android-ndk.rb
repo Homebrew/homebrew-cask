@@ -1,11 +1,17 @@
 cask "android-ndk" do
-  version "21"
-  sha256 "b82a49ec591d6f283acc7a241a8c56a14788320bf85a3375b5f2309b3b0c9b45"
+  version "22b"
+  sha256 "b05d2087a6346d66cd26a1dc89fcc877b59e49feab6269b665aa67c784a81512"
 
   url "https://dl.google.com/android/repository/android-ndk-r#{version}-darwin-x86_64.zip",
       verified: "dl.google.com/android/repository/"
   name "Android NDK"
+  desc "Toolset to implement parts of Android apps in native code"
   homepage "https://developer.android.com/ndk/index.html"
+
+  livecheck do
+    url "https://developer.android.com/ndk/downloads"
+    regex(/Latest\s+Stable\s+Version\s+\(r(\d+[a-z]?)\)/i)
+  end
 
   conflicts_with cask: "crystax-ndk"
 

@@ -1,6 +1,6 @@
 cask "devutils" do
-  version "1.8.1,57"
-  sha256 "4c1db289a972661d7c1eb5953e231de3b5b8b02d4b601d2f82845c8112bb774f"
+  version "1.11.0,83"
+  sha256 "15db5a505a1319e88b9cb7f04fcc3666eb1d58c671cae359ae31480de020e1f2"
 
   url "https://devutils.app/archives/DevUtils-#{version.before_comma}.dmg"
   name "DevUtils"
@@ -11,6 +11,8 @@ cask "devutils" do
     url "https://devutils.app/archives/appcast.xml"
     strategy :sparkle
   end
+
+  depends_on macos: ">= :el_capitan"
 
   app "DevUtils.app"
 

@@ -1,6 +1,6 @@
 cask "zoom-for-it-admins" do
-  version "5.6.1.560"
-  sha256 "8248062cf16541653e3fa575be1ade4a6ede4ddaf98d3bf583521e4d5ad74247"
+  version "5.7.6.1320"
+  sha256 "985dedf958d1d3a1d7d098f190b7d8d2d9937a863d54f89aaa3c2dbfdfa3a062"
 
   url "https://cdn.zoom.us/prod/#{version}/ZoomInstallerIT.pkg"
   name "Zoom for IT Admins"
@@ -19,9 +19,10 @@ cask "zoom-for-it-admins" do
 
   pkg "ZoomInstallerIT.pkg"
 
-  uninstall signal:  ["KILL", "us.zoom.xos"],
-            pkgutil: "us.zoom.pkg.videmeeting",
-            delete:  [
+  uninstall signal:    ["KILL", "us.zoom.xos"],
+            pkgutil:   "us.zoom.pkg.videomeeting",
+            launchctl: "us.zoom.ZoomDaemon",
+            delete:    [
               "/Applications/zoom.us.app",
               "/Library/Audio/Plug-Ins/HAL/ZoomAudioDevice.driver",
               "/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin",
