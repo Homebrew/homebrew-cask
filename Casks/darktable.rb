@@ -14,7 +14,5 @@ cask "darktable" do
     regex(/href=.*?darktable[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  conflicts_with cask: "homebrew/cask-versions/darktable-dev"
-
   app "darktable.app"
 end
