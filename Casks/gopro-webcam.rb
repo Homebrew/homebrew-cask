@@ -11,5 +11,15 @@ cask "gopro-webcam" do
 
   uninstall pkgutil: [
     "GoPro.GoPro-Webcam",
+    "com.gopro.cmio.DAL.GoProWebCam",
   ]
+
+  uninstall quit: [
+    "GoPro.GoPro-Webcam",
+  ]
+
+  uninstall launchctl: [
+    "com.gopro.GoProWebcamDaemon"
+  ]
+
 end
