@@ -12,6 +12,10 @@ on:
     - cron: "0 0 * * *"
   issue_comment:
 
+permissions:
+  issues: write
+  pull-requests: write
+
 concurrency:
   group: triage-issues
   cancel-in-progress: ${{ github.event_name != 'issue_comment' }}
