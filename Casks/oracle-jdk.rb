@@ -1,12 +1,8 @@
 cask "oracle-jdk" do
-  version "16.0.2,7:d4a915d82b4c4fbb9bde534da945d746"
-  sha256 "aa046e1d2451093aa9b5c8e02aa2aa6560c523448249ff854337e63eb15861da"
+  version "17"
+  sha256 "2a7befd5f8b27194f03451e939ffe4d9fc2acc172eef27f89f924ea9ba8157a7"
 
-  url "https://download.oracle.com/otn-pub/java/jdk/#{version.before_comma}+#{version.after_comma.before_colon}/#{version.after_colon}/jdk-#{version.before_comma}_osx-x64_bin.dmg",
-      cookies: {
-        "oraclelicense" => "accept-securebackup-cookie",
-      }
-  name "Oracle Java Standard Edition Development Kit"
+  url "https://download.oracle.com/java/17/latest/jdk-17_macos-x64_bin.dmg"
   desc "JDK from Oracle"
   homepage "https://www.oracle.com/technetwork/java/javase/overview/index.html"
 
