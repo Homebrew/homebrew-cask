@@ -6,7 +6,7 @@ cask "remix-ide" do
       verified: "github.com/ethereum/remix-desktop/"
   name "Remix IDE desktop"
   desc "Desktop version of Remix web IDE used for Ethereum smart contract development"
-  homepage "https://remix-project.org/"\
+  homepage "https://remix-project.org/"
 
   app "Remix IDE.app"
 
