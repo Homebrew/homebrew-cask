@@ -6,7 +6,7 @@ cask "universal-gcode-platform" do
       verified: "https://ugs.jfrog.io/ugs/UGS/"
   name "Universal G-code Sender (Platform version)"
   desc "G-code sender for CNC (compatible with GRBL, TinyG, g2core and Smoothieware)"
-  homepage "http://winder.github.io/ugs_website/"
+  homepage "https://winder.github.io/ugs_website/"
 
   livecheck do
     url "https://github.com/winder/Universal-G-Code-Sender"
