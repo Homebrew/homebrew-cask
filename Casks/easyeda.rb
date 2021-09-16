@@ -4,6 +4,7 @@ cask "easyeda" do
 
   url "https://image.easyeda.com/files/easyeda-mac-darwin-#{version}.zip"
   name "EasyEDA"
+  desc "PCB design tool"
   homepage "https://easyeda.com/"
 
   livecheck do
@@ -15,10 +16,10 @@ cask "easyeda" do
   app "EasyEDA.app"
 
   uninstall delete: [
+    "~/Library/Application Support/EasyEDA",
+    "~/Library/Logs/EasyEDA",
     "~/Library/Preferences/com.easyeda.editor.helper.plist",
     "~/Library/Preferences/com.easyeda.editor.plist",
     "~/Library/Saved Application State/com.easyeda.editor.savedState",
-    "~/Library/Application Support/EasyEDA",
-    "~/Library/Logs/EasyEDA",
   ]
 end
