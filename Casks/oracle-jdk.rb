@@ -1,7 +1,7 @@
 cask "oracle-jdk" do
   version "17"
   sha256 "2a7befd5f8b27194f03451e939ffe4d9fc2acc172eef27f89f924ea9ba8157a7"
-
+  name "Oracle Java Standard Edition Development Kit"
   url "https://download.oracle.com/java/17/latest/jdk-17_macos-x64_bin.dmg"
   desc "JDK from Oracle"
   homepage "https://www.oracle.com/technetwork/java/javase/overview/index.html"
