@@ -1,13 +1,13 @@
 cask "libreoffice" do
-  version "7.2.0"
+  version "7.2.1"
 
   if Hardware::CPU.intel?
-    sha256 "d00d80f455dd3d11e4500ecc8949bc88887c0a9e85e8d96d6a81d5dce7c6a684"
+    sha256 "b83e841360fa6ee9e42bfc1579ce9ae135972d6e7a01e79d1b975c2b855ff152"
 
     url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/LibreOffice_#{version}_MacOS_x86-64.dmg",
         verified: "documentfoundation.org/"
   else
-    sha256 "e43087140c3f468c7ce40178720c108193a6013b99c85726918c353098a9a530"
+    sha256 "890136b6735f50bd9fe014fd49ff56e995b04ad3b5115f441ca0cfafd50becc7"
 
     url "http://download.documentfoundation.org/libreoffice/stable/#{version}/mac/aarch64/LibreOffice_#{version}_MacOS_aarch64.dmg",
         verified: "documentfoundation.org/"
