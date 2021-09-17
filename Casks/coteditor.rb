@@ -9,8 +9,8 @@ cask "coteditor" do
     version "3.9.7"
     sha256 "be34d4f800e73cc8363d8b83e1b257a06176dc85d345d680149b108f51686cf2"
   else
-    version "4.0.7"
-    sha256 "dc296cc568dd6feccb5aa1fac5be3a2f98bd3c7cab7a90a2abf78788fc254266"
+    version "4.0.7-1"
+    sha256 "7420c076412ee0c2716d88de5272ffc54d086e8fb854b0b6e3667cca28a05731"
   end
 
   url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg",
@@ -22,6 +22,7 @@ cask "coteditor" do
   livecheck do
     url :url
     strategy :github_latest
+    regex(%r{href=.*?/tag/v?(\d+(?:[.-]\d+)+)["' >]}i)
   end
 
   auto_updates true

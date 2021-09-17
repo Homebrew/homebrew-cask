@@ -1,6 +1,6 @@
 cask "picgo" do
-  version "2.2.2"
-  sha256 "49eb462ed3563bff862111c3b3ec49f2c3198536b2cf69b5fc468d2cc33b8aae"
+  version "2.3.0"
+  sha256 "e10afb2267a1c9bb48c4ef57a9efe0f7096e6cf209d424312d84dc544d239b0f"
 
   url "https://github.com/Molunerfinn/PicGo/releases/download/v#{version}/PicGo-#{version}-mac.zip"
   name "PicGo"

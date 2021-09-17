@@ -1,29 +1,29 @@
 cask "zulu" do
-  version "16.0.2,16.32.15-ca"
+  version "17.0.0,17.28.13-ca"
 
   if Hardware::CPU.intel?
-    sha256 "59dcf9c1c5ac4acbf27319c2dfb38fd26c97663dbac1a1d931fb94cec6864de2"
+    sha256 "88cbb8084dacbcf9d2e9a4ae6bff43a8e833aa4b5fd58a19ef5647892a9efe10"
 
     url "https://cdn.azul.com/zulu/bin/zulu#{version.after_comma}-jdk#{version.before_comma}-macosx_x64.dmg",
         referer: "https://www.azul.com/downloads/zulu/zulu-mac/"
 
     livecheck do
-      url "https://api.azul.com/zulu/download/community/v1.0/bundles/latest/?jdk_version=#{version.major}&ext=dmg&os=macos&arch=x86"
+      url "https://api.azul.com/zulu/download/community/v1.0/bundles/latest/?jdk_version=#{version.major}&bundle_type=jdk&javafx=false&ext=dmg&os=macos&arch=x86"
       strategy :page_match do |page|
-        match = page.match(%r{url"\s*:\s*"https:.*?/zulu(\d+(?:\.\d+)*-.*?)-jdk(\d+(?:\.\d+)*)-macos}i)
+        match = page.match(/zulu(\d+(?:\.\d+)*-.*?)-jdk(\d+(?:\.\d+)*)-macosx_x64\.dmg/i)
         "#{match[2]},#{match[1]}"
       end
     end
   else
-    sha256 "f6c6ff8d6afdb45040ef8dac4b0c0798f4938bd10e82b0edd54bfd58e8b74032"
+    sha256 "2b15b8243781b8c8f03d0391ab5a2d93a380db88222dad5e0e90de0dcb472968"
 
     url "https://cdn.azul.com/zulu/bin/zulu#{version.after_comma}-jdk#{version.before_comma}-macosx_aarch64.dmg",
         referer: "https://www.azul.com/downloads/zulu/zulu-mac/"
 
     livecheck do
-      url "https://api.azul.com/zulu/download/community/v1.0/bundles/latest/?jdk_version=#{version.major}&ext=dmg&os=macos&arch=arm"
+      url "https://api.azul.com/zulu/download/community/v1.0/bundles/latest/?jdk_version=#{version.major}&bundle_type=jdk&javafx=false&ext=dmg&os=macos&arch=arm"
       strategy :page_match do |page|
-        match = page.match(%r{url"\s*:\s*"https:.*?/zulu(\d+(?:\.\d+)*-.*?)-jdk(\d+(?:\.\d+)*)-macos}i)
+        match = page.match(/zulu(\d+(?:\.\d+)*-.*?)-jdk(\d+(?:\.\d+)*)-macosx_aarch64\.dmg/i)
         "#{match[2]},#{match[1]}"
       end
     end

@@ -1,6 +1,6 @@
 cask "cryptomator" do
-  version "1.5.18"
-  sha256 "612396100e1169d5e0e187e7efbef37df5a64eb061268eff289332705fc7c080"
+  version "1.5.19"
+  sha256 "6576c1425e1388d83be525f240a8140c8a73e10dfe2a3ecd65ff452f7c0d6c63"
 
   url "https://github.com/cryptomator/cryptomator/releases/download/#{version}/Cryptomator-#{version}.dmg",
       verified: "github.com/cryptomator/cryptomator/"
