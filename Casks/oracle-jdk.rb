@@ -32,6 +32,6 @@ cask "oracle-jdk" do
   uninstall pkgutil: "com.oracle.jdk-#{version}"
 
   caveats do
-    license "https://www.oracle.com/technetwork/java/javase/terms/license/javase-license.html"
+    license "https://www.oracle.com/downloads/licenses/no-fee-license.html"
   end
 end
