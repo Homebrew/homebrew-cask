@@ -4,7 +4,7 @@ cask "manico" do
 
   url "https://manico.im/api/release_manager/downloads/im.manico.Manico/#{version.after_comma}.zip"
   name "Manico"
-  desc "App Launcher & Switcher"
+  desc "App launcher and switcher"
   homepage "https://manico.im/"
 
   livecheck do
@@ -16,7 +16,5 @@ cask "manico" do
 
   app "Manico.app"
 
-  zap trash: [
-    "~/Library/Containers/im.manico.Manico",
-  ]
+  zap trash: "~/Library/Containers/im.manico.Manico"
 end
