@@ -21,26 +21,12 @@ cask "universal-gcode-platform" do
   ]
 
   caveats <<~EOS
-    SECURITY WARNING
+    According to https://github.com/winder/Universal-G-Code-Sender/issues/1351#issuecomment-579110056 
+    the UGS developers do not sign their code and this app will not work with quarantine attributes. 
+    To use this cask, install it with:
 
-    The UGS developers do not sign their code (https://github.com/winder/Universal-G-Code-Sender/issues/1351).
+      brew install --cask --no-quarantine #{token}
 
-    As a result, later versions of MacOS will prevent UGS from starting by default, with the error message:
-
-        Universal Gcode Platform cannot be opened because the developer cannot be verified.
-
-        macOS cannot verify that this app is free from malware.
-
-    If you choose to trust the installed code, you can start UGS for the first time by:
-
-      1. Open the Finder and locate the application (it should be in /Applications)
-      2. Control+Click on the application's icon, and choose Open
-      3. You will be given a further warning and will need to click Open if you want to proceed.
-
-    This procedure will create an exception in your security settings and start UGS.
-    After you have done this, you will be able to just click on the application
-    icon to start UGS.
-
-    _Note that you will need to repeat this procedure each time you update UGS.
+    WARNING: quarantining is a macOS security feature and you disable it at your own risk!
   EOS
 end
