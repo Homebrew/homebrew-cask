@@ -23,7 +23,7 @@ cask "oracle-jdk" do
 
   name "Oracle Java Standard Edition Development Kit"
   desc "JDK from Oracle"
-  homepage "https://www.oracle.com/technetwork/java/javase/overview/index.html"
+  homepage "https://www.oracle.com/java/technologies/downloads/"
 
   depends_on macos: ">= :mojave"
 
