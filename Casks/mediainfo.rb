@@ -4,6 +4,7 @@ cask "mediainfo" do
 
   url "https://mediaarea.net/download/binary/mediainfo-gui/#{version}/MediaInfo_GUI_#{version}_Mac.dmg"
   name "MediaInfo"
+  desc "Display technical and tag data for video and audio files"
   homepage "https://mediaarea.net/en/MediaInfo"
 
   livecheck do
