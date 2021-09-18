@@ -8,8 +8,8 @@ cask "cleanshot" do
   homepage "https://getcleanshot.com/"
 
   livecheck do
-    url "https://updates.getcleanshot.com/v#{version.major}/appcast.xml"
-    strategy :sparkle
+    url "https://cleanshot.com/changelog"
+    regex(/class="number">(\d+(?:\.\d+)*)/i)
   end
 
   auto_updates true
@@ -21,8 +21,8 @@ cask "cleanshot" do
 
   zap trash: [
     "~/Library/Application Support/CleanShot",
-    "~/Library/Caches/SentryCrash/CleanShot X",
     "~/Library/Caches/pl.maketheweb.cleanshotx",
+    "~/Library/Caches/SentryCrash/CleanShot X",
     "~/Library/Preferences/pl.maketheweb.cleanshotx.plist",
   ]
 end
