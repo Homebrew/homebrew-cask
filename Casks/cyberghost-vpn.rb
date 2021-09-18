@@ -1,5 +1,5 @@
 cask "cyberghost-vpn" do
-  version "8.3.1.0,144"
+  version "8.3.1,144"
   sha256 "e9cbbd658ac63478c11eeb41d23d787087eed137e48bb0e0761aede9f8503b95"
 
   url "https://download.cyberghostvpn.com/mac/updates/v7/CyberGhost-#{version.before_comma}.#{version.after_comma}.dmg"
