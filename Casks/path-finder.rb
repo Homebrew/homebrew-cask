@@ -17,7 +17,7 @@ cask "path-finder" do
   app "Path Finder.app"
 
   zap trash: [
-    "~/Library/Preferences/com.cocoatech.PathFinder.plist",
     "~/Library/Application Support/Path Finder",
+    "~/Library/Preferences/com.cocoatech.PathFinder.plist",
   ]
 end
