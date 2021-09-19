@@ -6,10 +6,6 @@ cask "oracle-jdk" do
 
     url "https://download.oracle.com/java/#{version.major}/latest/jdk-#{version}_macos-x64_bin.dmg"
 
-    livecheck do
-      url "https://www.oracle.com/java/technologies/downloads/#jdk#{version.major}-mac"
-      regex(/jdk[._-](\d+(?:\.\d+)*)[._-]macos[._-]x64[._-]bin\.dmg/i)
-    end
   else
     sha256 "4d15daeaa3fb40740a2f8b9e54dcac7a485e6bcd72d60c131645e39808fd7549"
 
