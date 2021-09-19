@@ -10,11 +10,6 @@ cask "oracle-jdk" do
     sha256 "4d15daeaa3fb40740a2f8b9e54dcac7a485e6bcd72d60c131645e39808fd7549"
 
     url "https://download.oracle.com/java/#{version.major}/latest/jdk-#{version}_macos-aarch64_bin.dmg"
-
-    livecheck do
-      url "https://www.oracle.com/java/technologies/downloads/#jdk#{version.major}-mac"
-      regex(/jdk[._-](\d+(?:\.\d+)*)[._-]macos[._-]aarch64[._-]bin\.dmg/i)
-    end
   end
 
   name "Oracle Java Standard Edition Development Kit"
