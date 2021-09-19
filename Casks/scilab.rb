@@ -1,6 +1,6 @@
 cask "scilab" do
   version "6.1.1"
-  sha256 "9e2c18ac6391ce43b068a997fa5dd959a62c3d02fc2499e018c0e88c1aff8eaf"
+  sha256 "922e879979fe4e1fde83be4b3df02070c0930a56a75cdeb9b5ef46ae29f0ef57"
 
   url "https://www.utc.fr/~mottelet/scilab/download/#{version}/scilab-#{version}-x86_64.dmg",
       verified: "utc.fr/~mottelet/scilab/"
