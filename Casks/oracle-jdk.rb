@@ -25,6 +25,11 @@ cask "oracle-jdk" do
   desc "JDK from Oracle"
   homepage "https://www.oracle.com/java/technologies/downloads/"
 
+  livecheck do
+    url "https://www.oracle.com/java/technologies/javase/#{version.major}u-relnotes.html"
+    regex(/<li>\s*JDK\s*v?(\d+(?:\.\d+)*)/i)
+  end
+
   depends_on macos: ">= :mojave"
 
   pkg "JDK #{version}.pkg"
