@@ -1,6 +1,6 @@
 cask "dbeaver-community" do
-  version "21.2.0"
-  sha256 "2a45a1304a4cab9f800ebea205812a1dfaf4a42ee0c05b82df8034918513661d"
+  version "21.2.1"
+  sha256 "cee5952febdcb970fc56a1658ccb8de99ebf26093d1a0fdbec36fc6983bf0b98"
 
   url "https://dbeaver.io/files/#{version}/dbeaver-ce-#{version}-macos.dmg"
   name "DBeaver Community Edition"
