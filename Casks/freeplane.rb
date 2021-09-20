@@ -15,7 +15,7 @@ cask "freeplane" do
 
   name "Freeplane"
   desc "Mind mapping and knowledge management software"
-  homepage "https://freeplane.sourceforge.io/"
+  homepage "https://www.freeplane.org/wiki/index.php/Home"
 
   livecheck do
     url "https://sourceforge.net/projects/freeplane/rss?path=/freeplane%20stable"
