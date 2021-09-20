@@ -21,9 +21,9 @@ cask "skim" do
   binary "#{appdir}/Skim.app/Contents/SharedSupport/skimpdf"
 
   zap trash: [
-    "~/Library/Preferences/net.sourceforge.skim-app.skim.plist",
-    "~/Library/Preferences/net.sourceforge.skim-app.skim.bookmarks.plist",
     "~/Library/Caches/net.sourceforge.skim-app.skim",
     "~/Library/Cookies/net.sourceforge.skim-app.skim.binarycookies",
+    "~/Library/Preferences/net.sourceforge.skim-app.skim.bookmarks.plist",
+    "~/Library/Preferences/net.sourceforge.skim-app.skim.plist",
   ]
 end
