@@ -5,7 +5,7 @@ cask "firmaec" do
   url "https://www.firmadigital.gob.ec/firmaec/FirmaEC.zip"
   name "FirmaEC"
   desc "Firma electrónica en Ecuador"
-  homepage "https://www.firmadigital.gob.ec"
+  homepage "https://www.firmadigital.gob.ec/"
 
   livecheck do
     url "https://www.firmadigital.gob.ec/registro-de-cambios-de-firmaecchangelog/"
@@ -19,6 +19,6 @@ cask "firmaec" do
   zap trash: [
     "~/firmadigital.log",
     "~/firmadigital.log.lck",
-    "~/firmadigital.properties"
+    "~/firmadigital.properties",
   ]
 end
