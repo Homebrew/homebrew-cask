@@ -17,6 +17,11 @@ cask "nextcloud" do
   desc "Desktop sync client for Nextcloud software products"
   homepage "https://nextcloud.com/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :yosemite"
 
   pkg "Nextcloud-#{version}.pkg"
