@@ -7,7 +7,7 @@ cask "cloudash" do
   name "cloudash"
   desc "Monitoring and troubleshooting desktop app for serverless architectures"
   homepage "https://cloudash.dev/"
-  
+
   livecheck do
     url :url
     strategy :github_latest
