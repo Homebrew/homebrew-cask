@@ -1,5 +1,5 @@
 cask "slack" do
-  version "4.19.0"
+  version "4.20.0"
 
   if Hardware::CPU.intel?
     sha256 "829ebd6cacd69341d9ad4302dd1d319b138863e703476b17bb6386095199563b"
