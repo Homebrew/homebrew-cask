@@ -5,7 +5,7 @@ cask "cloudash" do
   url "https://github.com/cloudashdev/cloudash/releases/download/#{version}/Cloudash-#{version}.dmg",
       verified: "github.com/cloudashdev/cloudash/"
   name "cloudash"
-  desc "Monitoring and troubleshooting desktop app for serverless architectures"
+  desc "Monitoring and troubleshooting for serverless architectures"
   homepage "https://cloudash.dev/"
 
   livecheck do
