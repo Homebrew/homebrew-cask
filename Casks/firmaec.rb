@@ -13,6 +13,7 @@ cask "firmaec" do
   end
 
   app "FirmaEC/FirmaEC.app"
+  app "FirmaEC/FirmaECTransversal.app"
 
   zap trash: [
     "~/firmadigital.log",
