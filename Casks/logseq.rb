@@ -1,11 +1,11 @@
 cask "logseq" do
-  version "0.3.9"
+  version "0.4.0"
 
   if Hardware::CPU.intel?
-    sha256 "8590e3f248598e31a7c3c62ae55368e115ce8d918a4fc414698061cb7f99e022"
+    sha256 "eecb83e573629cf28cb6dd5416fe56a03273863bc0e227dac0147852d579ca18"
     url "https://github.com/logseq/logseq/releases/download/#{version}/logseq-darwin-x64-#{version}.dmg"
   else
-    sha256 "26c3f07835e653289d9f6b293cc539b711db3fadde429f1447921699ad016fb4"
+    sha256 "764c3971e93adc413c05412162d6200ac4afd21ac77c4f36fb6c6417dd1d5cbc"
     url "https://github.com/logseq/logseq/releases/download/#{version}/logseq-darwin-arm64-#{version}.dmg"
   end
 
