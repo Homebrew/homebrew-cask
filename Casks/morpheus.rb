@@ -1,6 +1,6 @@
 cask "morpheus" do
-  version "2.2.5"
-  sha256 "b4fb204fea15ca9cf85b2baed2d96ec82aa070ef871f6092dc36c748b61aa082"
+  version "2.2.5.2"
+  sha256 "ce23be8d9d64f3462873c69166e5b8662ed52a2b418d2a15451e7dc79e22430c"
 
   url "https://imc.zih.tu-dresden.de/morpheus/packages/mac/Morpheus-#{version}.dmg",
       verified: "imc.zih.tu-dresden.de/morpheus/"
