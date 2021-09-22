@@ -8,12 +8,12 @@ cask "cloudash" do
   desc "Monitoring and troubleshooting for serverless architectures"
   homepage "https://cloudash.dev/"
 
+  app "Cloudash.app"
+
   zap trash: [
     "~/Library/Application Support/cloudash",
     "~/Library/Logs/Cloudash",
     "~/Library/Preferences/dev.cloudash.cloudash.plist",
     "~/Library/Saved Application State/dev.cloudash.cloudash.savedState",
   ]
-
-  app "Cloudash.app"
 end
