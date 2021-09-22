@@ -9,7 +9,7 @@ cask "almighty" do
   homepage "https://onmyway133.com/almighty/"
 
   livecheck do
-    url "https://macplus-software.com/downloads/DockViewStandard.xml"
+    url "https://raw.githubusercontent.com/onmyway133/archives/master/AlmightyCast.xml"
     strategy :sparkle
   end
 
