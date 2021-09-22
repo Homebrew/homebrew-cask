@@ -8,10 +8,5 @@ cask "cloudash" do
   desc "Monitoring and troubleshooting for serverless architectures"
   homepage "https://cloudash.dev/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   app "Cloudash.app"
 end
