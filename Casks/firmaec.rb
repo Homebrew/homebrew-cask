@@ -4,15 +4,13 @@ cask "firmaec" do
 
   url "https://www.firmadigital.gob.ec/firmaec/FirmaEC.zip"
   name "FirmaEC"
-  desc "Firma electrónica en Ecuador"
+  desc "Sign documents through digital certificates"
   homepage "https://www.firmadigital.gob.ec/"
 
   livecheck do
     url "https://www.firmadigital.gob.ec/registro-de-cambios-de-firmaecchangelog/"
-    regex(/Versión (\d+(?:\.\d+)+) \(/i)
+    regex(/Versión\s*(\d+(?:\.\d+)+)/i)
   end
-
-  container type: :zip
 
   app "FirmaEC/FirmaEC.app"
 
