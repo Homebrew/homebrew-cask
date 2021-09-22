@@ -9,10 +9,10 @@ cask "tidelift" do
 
   livecheck do
     url "https://download.tidelift.com/cli/index.html"
-    regex(%r{^.*/cli/([^/]+)/darwin/tidelift">}i)
+    regex(%r{href=.*?/cli/(\d+(?:\.\d+)+)/darwin/tidelift}i)
   end
 
-  binary "tidelift", target: "tidelift"
+  binary "tidelift"
 
   postflight do
     set_permissions "#{staged_path}/tidelift", "+x"
