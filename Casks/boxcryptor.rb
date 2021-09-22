@@ -8,8 +8,8 @@ cask "boxcryptor" do
       regex(/Download\s+v?(\d+(?:\.\d+)+)\s+for\s+macOS\s+10\.1[0-5]/i)
     end
   else
-    version "2.41.1308"
-    sha256 "8f94c02f2d11f7dc71c6127ac994fdb067ee8cda7d0bafb5cc3ff48687278cb1"
+    version "2.42.1426"
+    sha256 "d7c7f730985fbbf941f2df7a79b194eddcf5690cd2e3d00782d5039e70da14a6"
 
     livecheck do
       url "https://www.boxcryptor.com/l/download-macosx"
