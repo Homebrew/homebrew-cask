@@ -1,5 +1,5 @@
 cask "flotato" do
-  version "32,1"
+  version "36,1"
   sha256 :no_check
 
   url "https://vendors.paddle.com/download/product/558359",
@@ -7,6 +7,11 @@ cask "flotato" do
   name "Flotato"
   desc "Tool to turn any web page into a desktop app"
   homepage "https://flotato.com/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   app "Flotato.app"
 
