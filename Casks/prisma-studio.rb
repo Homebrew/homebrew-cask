@@ -1,6 +1,6 @@
 cask "prisma-studio" do
-  version "0.415.0"
-  sha256 "c8eb63e55c92629922ce7e5cb2ea0df753324f7b8a91f1033fa7eeac813df223"
+  version "0.432.0"
+  sha256 "9841b7db9d78365f2e3fb086136a15c81932903ba9322b67eb2ba597f5ad4911"
 
   url "https://github.com/prisma/studio/releases/download/v#{version}/Prisma-Studio.dmg",
       verified: "github.com/prisma/studio/"

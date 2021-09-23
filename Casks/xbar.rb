@@ -1,6 +1,6 @@
 cask "xbar" do
-  version "2.1.4-beta"
-  sha256 "9ef1644d02be293529cc30302c919e856d8919d0016eeda67dbbdeacc8a891a7"
+  version "2.1.6-beta"
+  sha256 "8f08486d5e7319adbca7e14bee3156c3398088b78f23ae65fcad58d95142c650"
 
   url "https://github.com/matryer/xbar/releases/download/v#{version}/xbar.v#{version}.dmg",
       verified: "github.com/matryer/xbar/"

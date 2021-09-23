@@ -1,6 +1,6 @@
 cask "trezor-suite" do
-  version "21.7.1"
-  sha256 "23c84ba9bdf952404d7c69d29c8813ef052a4448176af3f08180d45268a8d4cd"
+  version "21.9.2"
+  sha256 "6423cbc17171a89e7bf801411e5db5d7018b84071df46ba667873ba598ae2af6"
 
   url "https://suite.trezor.io/web/static/desktop/Trezor-Suite-#{version}-mac.dmg"
   name "TREZOR Suite"

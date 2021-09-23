@@ -1,6 +1,6 @@
 cask "tiled" do
-  version "1.7.1"
-  sha256 "894839a96e3bfdd3fe36dbcaea73fee5d7a8b377f391403282e024108261b9e6"
+  version "1.7.2"
+  sha256 "e43c467bb020a39af43f3ed5c584658dd0b1732ed0b65fa66b6f9e36334c5d5f"
 
   url "https://github.com/bjorn/tiled/releases/download/v#{version}/Tiled-#{version}-macos.zip",
       verified: "github.com/bjorn/tiled/"

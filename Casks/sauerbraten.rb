@@ -4,10 +4,17 @@ cask "sauerbraten" do
 
   url "https://downloads.sourceforge.net/sauerbraten/sauerbraten/#{version.before_comma.dots_to_underscores}/sauerbraten_#{version.after_comma.dots_to_underscores}_macos.dmg",
       verified: "sourceforge.net/sauerbraten/"
-  appcast "https://sourceforge.net/projects/sauerbraten/rss",
-          must_contain: version.after_comma.dots_to_underscores
   name "Cube 2: Sauerbraten"
-  homepage "http://cubeengine.com/"
+  desc "Multiplayer & singleplayer first person shooter"
+  homepage "http://sauerbraten.org/"
+
+  livecheck do
+    url :homepage
+    strategy :page_match do |page|
+      match = page.match(%r{(\d+(?:_\d+)*)/sauerbraten[._-]?(\d+(?:_\d+)*)[._-]?macos.dmg}i)
+      "#{match[1].tr("_", ".")},#{match[2].tr("_", ".")}"
+    end
+  end
 
   app "Sauerbraten.app"
 end

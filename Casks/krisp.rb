@@ -1,6 +1,6 @@
 cask "krisp" do
-  version "1.24.7"
-  sha256 "03da782c0bf2b1e4787ffbeb326a5921bf5294981418bd2d995f541d26f8723b"
+  version "1.25.3"
+  sha256 "a995ac186541c69393d6a72529613bd719e1c9a5ea2eb4c135bcb4658dc85912"
 
   url "https://cdn.krisp.ai/mac/release/v#{version.major}.#{version.minor}/krisp_#{version}.pkg"
   name "Krisp"

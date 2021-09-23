@@ -1,14 +1,17 @@
 cask "teamdrive" do
-  version "4.6.12.2788"
-  sha256 "5e7d84ba4a184438dddbbbd25fc67b0adc16ef2dcecf8e4051b369d9252ad884"
+  version "4.7.2.3014"
+  sha256 "899960b99c3fd1e2224a6d0ad0299cde1e0aae55e6408da3a59f5de4c62de81d"
 
-  url "https://download.teamdrive.net/#{version.major_minor}.#{version.split(".").last}/TMDR/mac-10.15.7/Install-TeamDrive-#{version}_TMDR.dmg",
+  url "https://download.teamdrive.net/#{version}/TMDR/mac/Install-TeamDrive-#{version}_TMDR.dmg",
       verified: "teamdrive.net/"
-  appcast "https://teamdrive.com/en/downloads/",
-          must_contain: version.major_minor_patch
   name "TeamDrive"
   desc "Secure cloud storage service"
   homepage "https://www.teamdrive.com/"
+
+  livecheck do
+    url "https://teamdrive.com/en/downloads/"
+    regex(/Install[._-]TeamDrive[._-](\d+(?:\.\d+)*)[._-]TMDR\.dmg/i)
+  end
 
   installer script: {
     executable: "Install-TeamDrive-#{version}_TMDR.app/Contents/MacOS/osx-x86_64",

@@ -1,6 +1,6 @@
 cask "nova" do
-  version "7.2"
-  sha256 "b3a771dc40d7f64ea31af2d6f39ebbb53119f02e000c02f6e220b4039f39fada"
+  version "7.5"
+  sha256 "7f29d3c251ad8ccc841a3cc87808ced9ae9aa58ab9b1ccb1b1759c972e6f7d12"
 
   url "https://download-cdn.panic.com/nova/Nova%20#{version}.zip",
       verified: "https://download-cdn.panic.com/nova/"
@@ -20,6 +20,8 @@ cask "nova" do
   binary "#{appdir}/Nova.app/Contents/SharedSupport/nova"
 
   zap trash: [
+    "/Library/LaunchDaemons/com.panic.NovaPrivilegedHelper.plist",
+    "/Library/PrivilegedHelperTools/com.panic.NovaPrivilegedHelper",
     "~/Library/Application Scripts/com.panic.Nova.NovaQuickLookPreview",
     "~/Library/Application Scripts/com.panic.Nova.NovaQuickLookThumbnail",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.panic.nova.sfl2",

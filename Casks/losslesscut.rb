@@ -1,10 +1,10 @@
 cask "losslesscut" do
-  version "3.37.0"
-  sha256 "02ecfe9053254ebc8cc7c918a1726637b38cbb241aa74f96464c029c9bb2817e"
+  version "3.39.0"
+  sha256 "f950c793088d94629cbd7192437be514bca03f180708e087aefeab12e191f276"
 
   url "https://github.com/mifi/lossless-cut/releases/download/v#{version}/LosslessCut-mac.dmg"
   name "LosslessCut"
-  desc "Trimms video and audio files losslessly"
+  desc "Trims video and audio files losslessly"
   homepage "https://github.com/mifi/lossless-cut"
 
   app "LosslessCut.app"

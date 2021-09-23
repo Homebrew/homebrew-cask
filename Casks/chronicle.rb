@@ -1,5 +1,5 @@
 cask "chronicle" do
-  version "9.7.3,8706"
+  version "9.8.0,8800"
   sha256 :no_check
 
   url "https://www.chronicleapp.com/static/downloads/chroniclepro.zip"

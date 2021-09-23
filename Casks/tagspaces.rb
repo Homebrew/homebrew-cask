@@ -1,6 +1,6 @@
 cask "tagspaces" do
-  version "3.10.4"
-  sha256 "9a7c6bfe00b0fd51a13353d93f9444fe14840e532a6c5a3445c2c6c4be663c11"
+  version "3.11.6"
+  sha256 "0c064e34b18a29e17c68e5f13bb8f9e9bce030ff5e51986b55fde0c304a44148"
 
   url "https://github.com/tagspaces/tagspaces/releases/download/v#{version}/tagspaces-mac-#{version}.zip",
       verified: "github.com/tagspaces/tagspaces/"

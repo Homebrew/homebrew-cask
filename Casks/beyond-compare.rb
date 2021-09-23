@@ -1,6 +1,6 @@
 cask "beyond-compare" do
-  version "4.3.7.25118"
-  sha256 "c7f5700b9b2b1d13f58afcec2e7f2909e912c6d9409d1d62dcd9aaa16198bc32"
+  version "4.4.0.25886"
+  sha256 "75ecf7d1ad6ca7ee17b8105886ed3b5699f5f805265f4362eda69dee1cb66a34"
 
   url "https://www.scootersoftware.com/BCompareOSX-#{version}.zip"
   name "Beyond Compare"
@@ -17,6 +17,7 @@ cask "beyond-compare" do
 
   app "Beyond Compare.app"
   binary "#{appdir}/Beyond Compare.app/Contents/MacOS/bcomp"
+  binary "#{appdir}/Beyond Compare.app/Contents/MacOS/bcomp", target: "bcompare"
 
   zap trash: [
     "~/Library/Application Support/Beyond Compare",

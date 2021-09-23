@@ -1,12 +1,12 @@
 cask "clion" do
-  version "2021.2,212.4746.93"
+  version "2021.2.2,212.5284.51"
 
   if Hardware::CPU.intel?
-    sha256 "ba65ffa8d5c9a42f70d306f677fec153e1f6510d74edec6e26483f69460a457d"
+    sha256 "32ad45595e8b7f3170a1905c10863adb7567dc6662d8f6d256155d074df56dcf"
 
     url "https://download.jetbrains.com/cpp/CLion-#{version.before_comma}.dmg"
   else
-    sha256 "0c9f38c112e3b0fb75ea1c8441aaa26f05fd15e198420547be3046b4e70c88ba"
+    sha256 "8716bcdf4b39f1943864a90255fad90d081dfd333a9c16c3aabfdcbd3bfc88b5"
 
     url "https://download.jetbrains.com/cpp/CLion-#{version.before_comma}-aarch64.dmg"
   end
@@ -39,12 +39,12 @@ cask "clion" do
   end
 
   zap trash: [
-    "~/Library/Preferences/com.jetbrains.CLion.plist",
-    "~/Library/Preferences/jetbrains.clion.*.plist",
-    "~/Library/Preferences/CLion#{version.major_minor}",
     "~/Library/Application Support/JetBrains/CLion#{version.major_minor}",
     "~/Library/Caches/JetBrains/CLion#{version.major_minor}",
     "~/Library/Logs/JetBrains/CLion#{version.major_minor}",
+    "~/Library/Preferences/CLion#{version.major_minor}",
+    "~/Library/Preferences/com.jetbrains.CLion.plist",
+    "~/Library/Preferences/jetbrains.clion.*.plist",
     "~/Library/Saved Application State/com.jetbrains.CLion.savedState",
   ]
 end

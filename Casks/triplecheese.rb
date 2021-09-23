@@ -29,6 +29,12 @@ cask "triplecheese" do
     "com.u-he.TripleCheese.vst3.pkg",
   ]
 
+  zap trash: [
+    "~/Library/Application Support/u-he/TripleCheese",
+    "~/Library/Application Support/u-he/com.u-he.TripleCheese.midiassign.txt",
+    "~/Library/Application Support/u-he/com.u-he.TripleCheese.Preferences.txt",
+  ]
+
   caveats do
     reboot
   end

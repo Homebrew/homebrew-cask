@@ -51,7 +51,7 @@ jobs:
           HOMEBREW_GPG_PASSPHRASE: ${{ secrets.BREWTESTBOT_GPG_SIGNING_SUBKEY_PASSPHRASE }}
 
       - name: Create pull request
-        uses: peter-evans/create-pull-request@9825ae65b1cb54b543b938503728b432a0176d29
+        uses: peter-evans/create-pull-request@7380612b49221684fefa025244f2ef4008ae50ad
         with:
           path: vendor/${{ matrix.repo }}
           token: ${{ secrets.HOMEBREW_CASK_SYNC_TOKEN }}

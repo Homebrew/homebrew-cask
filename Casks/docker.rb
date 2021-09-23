@@ -1,22 +1,22 @@
 cask "docker" do
-  version "3.6.0,67351"
+  version "4.0.1,68347"
 
   if Hardware::CPU.intel?
-    sha256 "08c91be8f784c41b677b28f6eea2a7ec001e0b812bb0ee978d1c0b60ecea77bb"
+    sha256 "ea068a64a7230eff7e5bbcb215d1eadc5c921c05a2824dc082d4f51352b17523"
 
-    url "https://desktop.docker.com/mac/stable/amd64/#{version.after_comma}/Docker.dmg"
+    url "https://desktop.docker.com/mac/main/amd64/#{version.after_comma}/Docker.dmg"
 
     livecheck do
-      url "https://desktop.docker.com/mac/stable/amd64/appcast.xml"
+      url "https://desktop.docker.com/mac/main/amd64/appcast.xml"
       strategy :sparkle
     end
   else
-    sha256 "61d97003dfcc0cbe49efa4439f1d0bfb899297a79693ebb9916c3e3420309f47"
+    sha256 "03762da8d65a0b2a93c483af4ffb679d633500b2be7f4647215f45c1ad6eb11f"
 
-    url "https://desktop.docker.com/mac/stable/arm64/#{version.after_comma}/Docker.dmg"
+    url "https://desktop.docker.com/mac/main/arm64/#{version.after_comma}/Docker.dmg"
 
     livecheck do
-      url "https://desktop.docker.com/mac/stable/arm64/appcast.xml"
+      url "https://desktop.docker.com/mac/main/arm64/appcast.xml"
       strategy :sparkle
     end
   end
@@ -75,6 +75,7 @@ cask "docker" do
     "/usr/local/bin/docker-compose.backup",
     "/usr/local/bin/docker.backup",
     "~/Library/Application Support/Docker Desktop",
+    "~/Library/Application Support/com.bugsnag.Bugsnag/com.docker.docker",
     "~/Library/Application Scripts/com.docker.helper",
     "~/Library/Caches/KSCrashReports/Docker",
     "~/Library/Caches/com.docker.docker",
@@ -82,6 +83,7 @@ cask "docker" do
     "~/Library/Containers/com.docker.docker",
     "~/Library/Containers/com.docker.helper",
     "~/Library/Group Containers/group.com.docker",
+    "~/Library/HTTPStorages/com.docker.docker.binarycookies",
     "~/Library/Preferences/com.docker.docker.plist",
     "~/Library/Preferences/com.electron.docker-frontend.plist",
     "~/Library/Saved Application State/com.electron.docker-frontend.savedState",

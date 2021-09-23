@@ -1,6 +1,6 @@
 cask "epichrome" do
-  version "2.4.15"
-  sha256 "c45a9397d96da5250e5c4640ed2bfef0c5d7e1ae16629042e72b406081949229"
+  version "2.4.18"
+  sha256 "ae53f72a06194a30859c3bff630fc28fdb4a128255dc60e12a6ce09c4575ffb6"
 
   url "https://github.com/dmarmor/epichrome/releases/download/v#{version}/epichrome-#{version}.pkg"
   name "Epichrome"

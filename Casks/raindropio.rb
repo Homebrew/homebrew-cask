@@ -1,13 +1,13 @@
 cask "raindropio" do
-  version "5.3.36"
+  version "5.4.2"
 
   if Hardware::CPU.intel?
-    sha256 "741730eba1d69239243d15e49c8a8fa89d0b599e68e81e7f0e4ea5f31e54d881"
+    sha256 "0247825f9c23cf0cdc24dc1ada4b63a9113c76010a60355b52d432e3c1faada1"
 
     url "https://github.com/raindropio/desktop/releases/download/v#{version}/Raindrop-x64.dmg",
         verified: "github.com/raindropio/desktop/"
   else
-    sha256 "c9e78910f94a6c0ae9f3fb988c19143fdc1b82a2fa452f03e0617bab81f50c63"
+    sha256 "001d27bf87dcf46517e400f146227a330db16d34376bca2f996cbb668ee9d6a3"
 
     url "https://github.com/raindropio/desktop/releases/download/v#{version}/Raindrop-arm64.dmg",
         verified: "github.com/raindropio/desktop/"

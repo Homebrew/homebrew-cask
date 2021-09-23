@@ -1,6 +1,6 @@
 cask "robo-3t" do
-  version "1.4.3,48f7dfd"
-  sha256 "bb118c609aa819f78eed2e167b7a5393f6a6bd50e262a157e231869d4916e5a5"
+  version "1.4.4,e6ac9ec"
+  sha256 "aa5e56482c2f454154b2a346dc85e5016ffb5facabf649c0aaa186d970842bcd"
 
   url "https://download.studio3t.com/robomongo/mac/robo3t-#{version.before_comma}-darwin-x86_64-#{version.after_comma}.dmg",
       verified: "download.studio3t.com/"

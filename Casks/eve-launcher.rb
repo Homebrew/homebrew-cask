@@ -1,6 +1,6 @@
 cask "eve-launcher" do
-  version "1917874"
-  sha256 "9b0445095f48a2de0f8a7d090d861fac8daf2791503547d7fb01834faf9b5911"
+  version "1924823"
+  sha256 "29be2f63874d742f1ac6f40b084a9fb2f4c24d0ad8e0e84a59e26063af9f5e1e"
 
   url "https://binaries.eveonline.com/EveLauncher-#{version}.dmg"
   name "Eve Online"

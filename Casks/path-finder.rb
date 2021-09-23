@@ -1,6 +1,6 @@
 cask "path-finder" do
-  version "10.1.1,2096"
-  sha256 "277ba9fd9ed41e7af59a4c88574d25c7f78469f8bb6177d14a135388d130e056"
+  version "10.2,2098"
+  sha256 "d29ac285f7b5712146cc3ce327534e9e67b2a93fec460190dd833a6d5b99ab8a"
 
   url "https://get.cocoatech.com/PF#{version.major}.dmg"
   name "Path Finder"
@@ -17,7 +17,7 @@ cask "path-finder" do
   app "Path Finder.app"
 
   zap trash: [
-    "~/Library/Preferences/com.cocoatech.PathFinder.plist",
     "~/Library/Application Support/Path Finder",
+    "~/Library/Preferences/com.cocoatech.PathFinder.plist",
   ]
 end

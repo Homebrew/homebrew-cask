@@ -4,9 +4,14 @@ cask "psi" do
 
   url "https://downloads.sourceforge.net/psi/psi-#{version}-mac.dmg",
       verified: "sourceforge.net/psi/"
-  appcast "https://sourceforge.net/projects/psi/rss?path=/Psi"
   name "Psi"
+  desc "Instant messaging application designed for the XMPP network"
   homepage "https://psi-im.org/"
+
+  livecheck do
+    url "https://psi-im.org/download/"
+    regex(/psi[._-]?(\d+(?:\.\d+)*)[._-]?mac\.dmg/i)
+  end
 
   app "Psi.app"
 

@@ -4,9 +4,17 @@ cask "itk-snap" do
 
   url "https://downloads.sourceforge.net/itk-snap/itksnap-#{version.before_comma}-#{version.after_comma}-MacOS-x86_64.dmg",
       verified: "downloads.sourceforge.net/itk-snap/"
-  appcast "https://sourceforge.net/projects/itk-snap/rss?path=/itk-snap/#{version.before_comma}"
   name "ITK-SNAP"
+  desc "Segment structures in 3D medical images"
   homepage "http://www.itksnap.org/pmwiki/pmwiki.php"
+
+  livecheck do
+    url "http://www.nitrc.org/frs/downloadlink.php/11444"
+    strategy :header_match do |headers|
+      match = headers["location"].match(/itksnap[._-]?(\d+(?:\.\d+)*)[._-]?(\d+(?:\.\d+)*)[._-]?MacOS-x86_64\.dmg/i)
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
   app "ITK-SNAP.app"
 end
