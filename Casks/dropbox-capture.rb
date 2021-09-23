@@ -9,4 +9,13 @@ cask "dropbox-capture" do
   homepage "https://dropbox.com/capture/"
 
   app "Dropbox Capture.app"
+
+  zap trash: [
+    "~/Library/Application Support/Dropbox-Capture",
+    "~/Library/Caches/Dropbox-Capture",
+    "~/Library/Caches/com.electron.dropbox-capture",
+    "~/Library/Caches/com.electron.dropbox-capture.ShipIt",
+    "~/Library/Logs/Dropbox-Capture",
+    "~/Library/Preferences/com.electron.dropbox-capture.plist",
+  ]
 end
