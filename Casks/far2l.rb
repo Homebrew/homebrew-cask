@@ -3,11 +3,13 @@ cask "far2l" do
   version "2.3.210921-716b329,2021-09-21_alpha"
 
   if MacOS.version <= :mojave
-    url "https://github.com/elfmz/far2l/releases/download/v#{version.after_comma}/far2l-#{version.before_comma}-alpha-MacOS-10.11.dmg"
     sha256 "efcf4b9cc19e1a0fce2e2526b0e1549f95a2ee1a1f532a0056daf575311f7935"
+
+    url "https://github.com/elfmz/far2l/releases/download/v#{version.after_comma}/far2l-#{version.before_comma}-alpha-MacOS-10.11.dmg"
   else
-    url "https://github.com/elfmz/far2l/releases/download/v#{version.after_comma}/far2l-#{version.before_comma}-alpha-MacOS-10.15.dmg"
     sha256 "b78ee531f31ad6174a6211ee3841eff929089fca215c26ffb47c5913ed66d19b"
+
+    url "https://github.com/elfmz/far2l/releases/download/v#{version.after_comma}/far2l-#{version.before_comma}-alpha-MacOS-10.15.dmg"
   end
 
   name "far2l"
