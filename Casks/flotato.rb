@@ -1,5 +1,5 @@
 cask "flotato" do
-  version "32,1"
+  version "35"
   sha256 :no_check
 
   url "https://vendors.paddle.com/download/product/558359",
