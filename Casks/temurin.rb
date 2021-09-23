@@ -27,7 +27,11 @@ cask "temurin" do
   desc "JDK from the Eclipse Foundation (Adoptium)"
   homepage "https://adoptium.net/"
 
-  pkg "OpenJDK#{version.major}-jdk_x64_mac_hotspot_#{version.before_comma}_#{version.after_comma.major}.pkg"
+  if Hardware::CPU.intel?
+    pkg "OpenJDK#{version.major}-jdk_x64_mac_hotspot_#{version.before_comma}_#{version.after_comma.major}.pkg"
+  else
+    pkg "OpenJDK#{version.major}-jdk_aarch64_mac_hotspot_#{version.before_comma}_#{version.after_comma.major}.pkg"
+  end
 
   uninstall pkgutil: "net.temurin.#{version.major}.jdk"
 end
