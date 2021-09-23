@@ -5,6 +5,7 @@ cask "ivideonserver" do
   url "https://updates.iv-cdn.com/bundles/ivideon_server/#{version}/IvideonServer_#{version}_macosx-x86-64.dmg",
       verified: "updates.iv-cdn.com/"
   name "Ivideon Client"
+  desc "Watch surveillance videos in your browser via your Ivideon account"
   homepage "https://www.ivideon.com/"
 
   livecheck do
