@@ -1,10 +1,10 @@
 cask "temurin" do
   arch = Hardware::CPU.intel? ? "x64" : "aarch64"
-  
+
   version "17,35"
+
   url "https://github.com/adoptium/temurin#{version.major}-binaries/releases/download/jdk-#{version.before_comma}%2B#{version.after_comma}/OpenJDK#{version.major}-jdk_#{arch}_mac_hotspot_#{version.before_comma}_#{version.after_comma.major}.pkg",
-        verified: "github.com/adoptium/"
-  
+      verified: "github.com/adoptium/"
   if Hardware::CPU.intel?
     sha256 "a45c33691f0508a95ff291c88713088e060376e7b4e9cac03d083225b68d8f78"
   else
