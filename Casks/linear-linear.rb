@@ -6,14 +6,14 @@ cask "linear-linear" do
     url "https://desktop.linear.app/mac/dmg/x64"
 
     livecheck do
-      url :url
+      url "https://desktop.linear.app/mac/dmg/x64"
       strategy :header_match
     end
   else
     url "https://desktop.linear.app/mac/dmg/arm64"
 
     livecheck do
-      url :url
+      url "https://desktop.linear.app/mac/dmg/arm64"
       strategy :header_match
     end
   end
