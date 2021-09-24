@@ -7,12 +7,6 @@ cask "quaternion" do
   desc "IM client for Matrix"
   homepage "https://github.com/quotient-im/Quaternion"
 
-  livecheck do
-    url :url
-    strategy :git
-    regex(/^(\d+(?:\.\d+)*[a-z]?)$/)
-  end
-
   depends_on macos: ">= :high_sierra"
 
   app "quaternion.app"
