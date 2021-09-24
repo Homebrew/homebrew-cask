@@ -1,12 +1,17 @@
 cask "dropbox-capture" do
-  version :latest
+  version "51.0.0"
   sha256 :no_check
 
   url "https://clientupdates.dropboxstatic.com/dbx-releng/dropbox_capture/mac/Dropbox_Capture.dmg",
-      verified: "https://clientupdates.dropboxstatic.com/"
+      verified: "clientupdates.dropboxstatic.com/dbx-releng/dropbox_capture/mac/"
   name "Dropbox Capture"
   desc "Share your work and ideas with video messages and screenshots"
   homepage "https://dropbox.com/capture/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   app "Dropbox Capture.app"
 
