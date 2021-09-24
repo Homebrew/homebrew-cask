@@ -4,27 +4,23 @@ cask "linear-linear" do
 
   if Hardware::CPU.intel?
     url "https://desktop.linear.app/mac/dmg/x64"
+
+    livecheck do
+      url :url
+      strategy :header_match
+    end
   else
     url "https://desktop.linear.app/mac/dmg/arm64"
+
+    livecheck do
+      url :url
+      strategy :header_match
+    end
   end
 
   name "Linear"
   desc "App to manage software development and track bugs"
   homepage "https://linear.app/"
-
-  if Hardware::CPU.intel?
-    livecheck do
-      url "https://desktop.linear.app/mac/dmg/x64"
-      strategy :header_match
-      regex(/Linear (\d+(?:\.\d+)*?)(?:-x64)?.dmg/)
-    end
-  else
-    livecheck do
-      url "https://desktop.linear.app/mac/dmg/arm64"
-      strategy :header_match
-      regex(/Linear (\d+(?:\.\d+)*?)(?:-arm64)?.dmg/)
-    end
-  end
 
   auto_updates true
 
