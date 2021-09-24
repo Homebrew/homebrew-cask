@@ -8,9 +8,8 @@ cask "julia" do
   homepage "https://julialang.org/"
 
   livecheck do
-    url "https://github.com/JuliaLang/julia"
-    strategy :git
-    regex(/^v?(\d+(?:\.\d+)*)$/)
+    url "https://julialang.org/downloads/"
+    regex(/href=.*?julia[._-]v?(\d+(?:\.\d+)+)[._-]mac64\.dmg/i)
   end
 
   app "Julia-#{version.major_minor}.app"
