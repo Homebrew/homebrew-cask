@@ -22,7 +22,7 @@ cask "cog" do
   uninstall quit: "org.cogx.cog"
 
   zap trash: [
-    "~/Library/Caches/org.cogx.cog",
     "~/Library/Application Support/Cog",
+    "~/Library/Caches/org.cogx.cog",
   ]
 end
