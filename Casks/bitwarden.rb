@@ -8,11 +8,6 @@ cask "bitwarden" do
   desc "Desktop password and login vault"
   homepage "https://bitwarden.com/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
 
   pkg "Bitwarden-#{version}-universal.pkg"
@@ -23,13 +18,13 @@ cask "bitwarden" do
   ]
 
   zap trash: [
-    "~/Library/Logs/Bitwarden",
     "~/Library/Application Support/Bitwarden",
     "~/Library/Caches/com.bitwarden.desktop",
     "~/Library/Caches/com.bitwarden.desktop.ShipIt",
+    "~/Library/Logs/Bitwarden",
     "~/Library/Preferences/ByHost/com.bitwarden.desktop.ShipIt.*.plist",
-    "~/Library/Preferences/com.bitwarden.desktop.plist",
     "~/Library/Preferences/com.bitwarden.desktop.helper.plist",
+    "~/Library/Preferences/com.bitwarden.desktop.plist",
     "~/Library/Saved Application State/com.bitwarden.desktop.savedState",
   ]
 end
