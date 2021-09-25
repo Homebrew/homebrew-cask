@@ -17,7 +17,7 @@ cask "bitwarden" do
 
   pkg "Bitwarden-#{version}-universal.pkg"
 
-  uninstall quit: [
+  uninstall pkgutil: [
     "com.bitwarden.desktop",
     "com.bitwarden.desktop.helper",
   ]
