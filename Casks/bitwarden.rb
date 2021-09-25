@@ -15,7 +15,7 @@ cask "bitwarden" do
 
   auto_updates true
 
-  app "Bitwarden.app"
+  pkg "Bitwarden-#{version}-universal.pkg"
 
   uninstall quit: [
     "com.bitwarden.desktop",
