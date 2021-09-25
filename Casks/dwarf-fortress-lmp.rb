@@ -13,7 +13,7 @@ cask "dwarf-fortress-lmp" do
   end
 
   # Renamed for clarity: suite name is inconsistent with branding
-  suite "Lazy Mac Pack v#{version}", target: "Dwarf Fortress LMP"
+  suite "Lazy Mac Pack v#{version.sub("+", " ")}", target: "Dwarf Fortress LMP"
 
   zap trash: [
     "~/Library/Preferences/com.phoenix-dev.setresx.plist",
