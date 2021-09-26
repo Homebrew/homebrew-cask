@@ -1,6 +1,6 @@
 cask "monitorcontrol" do
-  version "3.1.0"
-  sha256 "e8b165ca355674e3f2fac06ba3282abd0ce43ee009a73f16cf972f97b39e1dc4"
+  version "3.1.1"
+  sha256 "41fa75f378e2a1d0ec0b90fae9cfe4f6859d1628fecf32d23ad7b5447beb78e1"
 
   url "https://github.com/MonitorControl/MonitorControl/releases/download/v#{version}/MonitorControl.#{version}.dmg"
   name "MonitorControl"
