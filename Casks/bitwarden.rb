@@ -8,6 +8,11 @@ cask "bitwarden" do
   desc "Desktop password and login vault"
   homepage "https://bitwarden.com/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
 
   pkg "Bitwarden-#{version}-universal.pkg"
