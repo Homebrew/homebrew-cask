@@ -1,8 +1,8 @@
 cask "chromium" do
-  version "922809"
+  version "925072"
 
   if Hardware::CPU.intel?
-    sha256 "c00665530109e6a51c81ed2cfd3954e0163e9e92633ba9bd3821d35d655c8d61"
+    sha256 "2ff1f6c4fec1499ddab78f4a816703f203701312016ba047be8b04b87c4dfb43"
 
     url "https://commondatastorage.googleapis.com/chromium-browser-snapshots/Mac/#{version}/chrome-mac.zip",
         verified: "commondatastorage.googleapis.com/chromium-browser-snapshots/Mac/"
@@ -12,7 +12,7 @@ cask "chromium" do
       regex(/v?(\d+(?:\.\d+)*)/i)
     end
   else
-    sha256 "79b02a509e9449c888eb908cbf2a8a706a0e1a2f75e51bb3d853fb5b806d19b4"
+    sha256 "9d8f5d7b9e90027c49dbf3b584de82d0b15d5743349d16a2542367c94e4c78da"
 
     url "https://commondatastorage.googleapis.com/chromium-browser-snapshots/Mac_Arm/#{version}/chrome-mac.zip",
         verified: "commondatastorage.googleapis.com/chromium-browser-snapshots/Mac_Arm/"
