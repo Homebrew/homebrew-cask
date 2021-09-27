@@ -9,7 +9,7 @@ cask "coolterm" do
 
   livecheck do
     url "https://freeware.the-meiers.org/#CoolTerm"
-    regex(/<center>([0-9\.]+)<br>05\/31\/2021<\/center>/i)
+    regex(%r{<center>([0-9.]+)<br>05/31/2021</center>}i)
   end
 
   app "CoolTermMac/CoolTerm.app"
