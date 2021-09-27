@@ -1,13 +1,13 @@
 cask "kui" do
-  version "10.5.13"
+  version "10.6.0"
 
   if Hardware::CPU.intel?
     url "https://github.com/kubernetes-sigs/kui/releases/download/v#{version}/Kui-darwin-x64.tar.bz2"
-    sha256 "bca01ed121dddd251232816120bd6517aef153f11fdac2131a8786627d9f8dd2"
+    sha256 "34d8c0fa0441e84212a0ed0f35d8c0b5f2e5f0fdb8a6017e78099ba7037eb548"
     app "Kui-darwin-x64/Kui.app"
   else
     url "https://github.com/kubernetes-sigs/kui/releases/download/v#{version}/Kui-darwin-arm64.tar.bz2"
-    sha256 "2b7b8a4f995135b0d8b68d9ef45ddf730552ebc4d3c30770c0d9c57073b3c8cc"
+    sha256 "b2a67d443f718a7a9023dfb1d0ed04600c464af4e73c6d19683d9c3951a77e70"
     app "Kui-darwin-arm64/Kui.app"
   end
 
