@@ -8,8 +8,8 @@ cask "coolterm" do
   homepage "https://freeware.the-meiers.org/"
 
   livecheck do
-    url "https://freeware.the-meiers.org/#CoolTerm"
-    regex(%r{<center>([0-9.]+)<br>05/31/2021</center>}i)
+    url "https://freeware.the-meiers.org/CoolTerm_ReadMe.txt.html"
+    regex(%r{VERSION HISTORY.*\n=+(?:<br>|\n)+([0-9.]+):}i)
   end
 
   app "CoolTermMac/CoolTerm.app"
