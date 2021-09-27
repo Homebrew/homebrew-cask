@@ -9,7 +9,7 @@ cask "coolterm" do
 
   livecheck do
     url "https://freeware.the-meiers.org/CoolTerm_ReadMe.txt.html"
-    regex(%r{VERSION HISTORY.*\n=+(?:<br>|\n)+([0-9.]+):}i)
+    regex(/VERSION HISTORY.*\n=+(?:<br>|\n)+([0-9.]+):/i)
   end
 
   app "CoolTermMac/CoolTerm.app"
