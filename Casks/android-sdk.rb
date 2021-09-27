@@ -8,7 +8,6 @@ cask "android-sdk" do
   homepage "https://developer.android.com/studio/releases/sdk-tools"
 
   binary "#{staged_path}/tools/android"
-  binary "#{staged_path}/emulator/emulator"
   binary "#{staged_path}/tools/emulator-check"
   binary "#{staged_path}/tools/mksdcard"
   binary "#{staged_path}/tools/monitor"
