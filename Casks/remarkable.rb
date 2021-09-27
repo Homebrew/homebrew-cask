@@ -15,7 +15,12 @@ cask "remarkable" do
       page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
-  
+
+  auto_updates true
+  depends_on macos: ">= :high_sierra"
+
+  app "reMarkable.app"
+
   zap trash: [
     "~/Library/Application Support/remarkable",
     "~/Library/Caches/com.remarkable.desktop",
@@ -23,9 +28,4 @@ cask "remarkable" do
     "~/Library/Preferences/com.remarkable.desktop.plist",
     "~/Library/Saved Application State/com.remarkable.desktop.savedState",
   ]
-
-  auto_updates true
-  depends_on macos: ">= :high_sierra"
-
-  app "reMarkable.app"
 end
