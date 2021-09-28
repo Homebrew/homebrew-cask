@@ -13,4 +13,9 @@ cask "coolterm" do
   end
 
   app "CoolTermMac/CoolTerm.app"
+
+  zap trash: [
+    "~/Library/Preferences/CoolTerm_Prefs.plist",
+    "~/Library/Saved Application State/org.the-meiers.coolterm.savedState",
+  ]
 end
