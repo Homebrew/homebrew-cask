@@ -13,4 +13,11 @@ cask "datagraph" do
   end
 
   app "DataGraph.app"
+
+  zap trash: [
+    "~/Library/Application Support/DataGraph",
+    "~/Library/Application Support/com.visualdatatools.datagraph",
+    "~/Library/Caches/com.visualdatatools.datagraph",
+    "~/Library/Preferences/com.visualdatatools.datagraph.plist",
+  ]
 end
