@@ -18,6 +18,9 @@ cask "flotato" do
   zap trash: [
     "/Applications/Flotato Help.app",
     "~/Library/Application Support/Flotato",
+    "~/Library/Application Support/Flotato",
+    "~/Library/Caches/com.mortenjust.flotato",
+    "~/Library/Preferences/com.mortenjust.flotato.plist",
     "~/Library/WebKit/com.mortenjust.flotato",
   ]
 end
