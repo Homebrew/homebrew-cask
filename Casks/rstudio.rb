@@ -9,8 +9,13 @@ cask "rstudio" do
   homepage "https://www.rstudio.com/"
 
   livecheck do
-    url "https://rstudio.org/download/latest/stable/desktop/mac/RStudio-latest.dmg"
-    strategy :header_match
+    url "https://www.rstudio.com/products/rstudio/download/"
+    strategy :page_match do |page|
+      match = page.match(/RStudio-(\d{4}\.\d{2}\.\d+)%2B(\d+)\.dmg/i)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
+    end
   end
 
   conflicts_with cask: "homebrew/cask-versions/rstudio-preview"
