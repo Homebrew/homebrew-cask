@@ -9,4 +9,10 @@ cask "sqlitemanager" do
   homepage "https://www.sqlabs.com/sqlitemanager.php"
 
   app "SQLiteManager.app"
+
+  zap trash: [
+    "~/Library/Application Support/SQLiteManager",
+    "~/Library/Preferences/com.sqlabs.sqlitemanager4.plist",
+    "~/Library/Saved Application State/com.sqlabs.sqlitemanager4.savedState",
+  ]
 end
