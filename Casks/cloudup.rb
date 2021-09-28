@@ -8,7 +8,7 @@ cask "cloudup" do
 
   livecheck do
     url :url
-    strategy :extract_plist
+    strategy :header_match
   end
 
   app "Cloudup.app"
