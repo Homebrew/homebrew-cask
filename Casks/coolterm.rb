@@ -8,7 +8,7 @@ cask "coolterm" do
   homepage "https://freeware.the-meiers.org/"
 
   livecheck do
-    url "http://freeware.the-meiers.org/version/CoolTerm.ver"
+    url "https://freeware.the-meiers.org/version/CoolTerm.ver"
     regex(/^\s*v?(\d+(?:\.\d+)+)\s*$/i)
   end
 
