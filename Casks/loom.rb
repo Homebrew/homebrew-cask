@@ -1,6 +1,8 @@
+# typed: false
+# frozen_string_literal: true
+
 cask "loom" do
   version "0.100.2"
-  
 
   if Hardware::CPU.intel?
     sha256 "6e4c6cdb6579fb7ffc5a08748e56cf9681108aa96c7935b2028507ea15eafd89"
