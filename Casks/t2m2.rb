@@ -16,5 +16,7 @@ cask "t2m2" do
     end
   end
 
+  depends_on macos: ">= :sierra"
+
   app "TheTimeMachineMechanic.app"
 end
