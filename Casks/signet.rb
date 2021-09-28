@@ -18,7 +18,7 @@ cask "signet" do
     end
   end
 
-  app "#{token}#{version.no_dots}/Signet.app"
+  app "#{token}#{version.before_comma.no_dots}/Signet.app"
 
   zap trash: [
     "~/Library/Caches/co.eclecticlight.Signet",
