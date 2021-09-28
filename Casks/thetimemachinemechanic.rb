@@ -5,6 +5,7 @@ cask "thetimemachinemechanic" do
   url "https://eclecticlightdotcom.files.wordpress.com/#{version.after_comma.major}/#{version.after_comma.minor}/t2m2#{version.before_comma.no_dots}.zip",
       verified: "eclecticlightdotcom.files.wordpress.com/"
   name "The Time Machine Mechanic"
+  name "T2M2"
   desc "Time Machine log viewer & status inspector"
   homepage "https://eclecticlight.co/consolation-t2m2-and-log-utilities/"
 
