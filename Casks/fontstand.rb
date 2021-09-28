@@ -19,4 +19,13 @@ cask "fontstand" do
   end
 
   app "Fontstand.app"
+
+  zap trash: [
+    "~/Library/Application Support/Fontstand",
+    "~/Library/Application Support/Fontstand Agent",
+    "~/Library/Application Support/com.fontstand-bv.mac.Fontstand",
+    "~/Library/Caches/com.fontstand-bv.mac.Fontstand",
+    "~/Library/LaunchAgents/com.fontstand-bv.mac.Fontstand-Agent.plist",
+    "~/Library/Preferences/com.fontstand-bv.mac.Fontstand.plist",
+  ]
 end
