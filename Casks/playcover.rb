@@ -5,7 +5,7 @@ cask "playcover" do
   url "https://github.com/iVoider/PlayCover/releases/download/#{version}/PlayCover.#{version}.zip",
       verified: "github.com/iVoider/PlayCover/"
   name "PlayCover"
-  desc "Run iOS apps & games on M1 Mac with mouse, keyboard and controller support."
+  desc "Run iOS apps & games. Fullscreen mode. Mouse, keyboard and controller support"
   homepage "https://www.playcover.me/"
 
   livecheck do
@@ -16,10 +16,10 @@ cask "playcover" do
   app "#{version}r3/PlayCover.app"
 
   zap trash: [
-      "~/Library/Application Support/me.playcover.PlayCover",
-      "~/Library/Caches/me.playcover.PlayCover",
-      "~/Library/Containers/me.playcover.PlayCover",
-      "~/Library/Preferences/me.playcover.PlayCover.plist",
-      "~/Library/Saved Application State/me.playcover.PlayCover.savedState",
+    "~/Library/Application Support/me.playcover.PlayCover",
+    "~/Library/Caches/me.playcover.PlayCover",
+    "~/Library/Containers/me.playcover.PlayCover",
+    "~/Library/Preferences/me.playcover.PlayCover.plist",
+    "~/Library/Saved Application State/me.playcover.PlayCover.savedState",
   ]
 end
