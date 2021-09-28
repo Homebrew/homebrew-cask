@@ -19,7 +19,7 @@ cask "t2m2" do
 
   depends_on macos: ">= :sierra"
 
-  app "t2m2/#{version.before_comma.major}#{version.before_comma.minor}/TheTimeMachineMechanic.app"
+  app "t2m2#{version.before_comma.major}#{version.before_comma.minor}/TheTimeMachineMechanic.app"
 
   zap trash: [
     "~/Library/Caches/co.eclecticlight.TheTimeMachineMechanic",
