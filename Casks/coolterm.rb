@@ -9,7 +9,7 @@ cask "coolterm" do
 
   livecheck do
     url "http://freeware.the-meiers.org/version/CoolTerm.ver"
-    regex(/([0-9.]+)/i)
+    regex(/^\s*v?(\d+(?:\.\d+)+)\s*$/i)
   end
 
   app "CoolTermMac/CoolTerm.app"
