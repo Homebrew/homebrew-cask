@@ -18,5 +18,9 @@ cask "apache-directory-studio" do
 
   caveats do
     depends_on_java "8+"
+    <<~EOS
+      You might need to configure Java version by editing the following file:
+        #{appdir}/ApacheDirectoryStudio.app/Contents/Eclipse/ApacheDirectoryStudio.ini
+    EOS
   end
 end
