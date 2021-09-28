@@ -1,5 +1,5 @@
 cask "coolterm" do
-  version "1.9.0"
+  version "1.9.0.3.1.948"
   sha256 :no_check
 
   url "https://freeware.the-meiers.org/CoolTermMac.zip"
@@ -8,8 +8,8 @@ cask "coolterm" do
   homepage "https://freeware.the-meiers.org/"
 
   livecheck do
-    url "https://freeware.the-meiers.org/CoolTerm_ReadMe.txt.html"
-    regex(/VERSION HISTORY.*\n=+(?:<br>|\n)+([0-9.]+):/i)
+    url "http://freeware.the-meiers.org/version/CoolTerm.ver"
+    regex(/([0-9.]+)/i)
   end
 
   app "CoolTermMac/CoolTerm.app"
