@@ -9,6 +9,10 @@ cask "rancher" do
   homepage "https://rancherdesktop.io/"
 
   auto_updates true
+  conflicts_with formula: %w[
+    helm
+    kubernetes-cli
+  ]
 
   app "Rancher Desktop.app"
   binary "#{appdir}/Rancher Desktop.app/Contents/Resources/resources/darwin/bin/helm"
