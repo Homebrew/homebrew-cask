@@ -14,7 +14,7 @@ cask "fontstand" do
       match = headers["content-disposition"].match(regex)[1]
       next if match.blank?
 
-      match.tr("-",".")
+      match.tr("-", ".")
     end
   end
 
