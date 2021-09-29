@@ -21,18 +21,15 @@ cask "multipass" do
             pkgutil:   "com.canonical.multipass.*",
             delete:    [
               "/Applications/Multipass.app",
+              "/Library/Application Support/com.canonical.multipass",
+              "/Library/Logs/Multipass",
               "/usr/local/bin/multipass",
               "/usr/local/etc/bash_completion.d/multipass",
-              "/var/root/Library/Caches/multipassd",
-              "/Library/Application Support/com.canonical.multipass",
             ]
 
   zap trash: [
     "~/Library/Application Support/multipass",
     "~/Library/Application Support/multipass-gui",
     "~/Library/Preferences/multipass",
-    "/var/root/Library/Application Support/multipassd",
-    "/var/root/Library/Preferences/multipassd",
-    "/Library/Logs/Multipass",
   ]
 end
