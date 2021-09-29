@@ -1,4 +1,4 @@
-cask "rancher" do
+cask "rancher-desktop" do
   version "0.5.0"
   sha256 "0ebdfb3e070e1c525a08730ccea761a040d366fa800c735870ff328080f8fa55"
 
