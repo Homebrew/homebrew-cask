@@ -5,13 +5,10 @@ cask "playcover" do
   url "https://github.com/iVoider/PlayCover/releases/download/#{version}/PlayCover.#{version}.zip",
       verified: "github.com/iVoider/PlayCover/"
   name "PlayCover"
-  desc "Run iOS apps & games. Fullscreen mode. Mouse, keyboard and controller support"
+  desc "Sideload iOS apps and games"
   homepage "https://www.playcover.me/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  depends_on arch: :arm64
 
   app "#{version}r3/PlayCover.app"
 
