@@ -8,10 +8,16 @@ cask "ksdiff" do
   homepage "https://kaleidoscope.app/ksdiff2"
 
   livecheck do
-    url "https://kaleidoscope.app/download/latest/ksdiff"
-    strategy :header_match do |headers|
-      match = headers["location"].match(%r{/ksdiff-(\d+(?:\.\d+)*)-(\d+)-(\w+(?:-\d+)*)\.zip}i)
-      "#{match[1]},#{match[2]}:#{match[3]}"
+    url :homepage
+    regex(%r{/ksdiff-(\d+(?:\.\d+)*)-(\d+)-(\w+(?:-\d+)*)\.zip}i)
+    strategy :page_match do |page, regex|
+      js_file = page[%r{src=["']?(/ksdiff\.\w+\.js)["' >]}i, 1]
+      next [] if js_file.blank?
+
+      js_file_data = Homebrew::Livecheck::Strategy.page_content("https://kaleidoscope.app#{js_file}")
+      next [] if js_file_data[:content].blank?
+
+      js_file_data[:content].scan(regex).map { |match| "#{match[0]},#{match[1]}:#{match[2]}" }
     end
   end
 
