@@ -4,11 +4,12 @@ cask "cloudup" do
 
   url "https://updates.cloudup.com/update?os=osx&app=Cloudup&format=zip&channel=release"
   name "Cloudup"
+  desc "Instantly and securely share anything"
   homepage "https://cloudup.com/download"
 
   livecheck do
     url :url
-    strategy :extract_plist
+    strategy :header_match
   end
 
   app "Cloudup.app"

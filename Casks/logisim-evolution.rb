@@ -1,6 +1,6 @@
 cask "logisim-evolution" do
-  version "3.5.0"
-  sha256 "feea8b0c11c03e08a2bd4cb5def08bb0fb5e3bc494ac178b3e210559b63848d5"
+  version "3.6.0"
+  sha256 "35196d7d6293858bc37a449264f0b076340a9c6e84ce38704cbcbf784c28daf6"
 
   url "https://github.com/reds-heig/logisim-evolution/releases/download/v#{version}/Logisim-evolution-#{version}.dmg"
   name "Logisim Evolution"
