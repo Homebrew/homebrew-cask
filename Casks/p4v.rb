@@ -29,7 +29,7 @@ cask "p4v" do
   binary p4_wrapper, target: "p4merge"
 
   preflight do
-    IO.write p4_wrapper, <<~EOS
+    File.write p4_wrapper, <<~EOS
       #!/bin/bash
       set -euo pipefail
       COMMAND=$(basename "$0")
