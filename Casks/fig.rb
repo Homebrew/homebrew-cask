@@ -2,7 +2,7 @@ cask "fig" do
   version "1.0.49,270"
   sha256 :no_check
 
-  url "http://versions.withfig.com/fig@latest.dmg",
+  url "https://versions.withfig.com/fig@latest.dmg",
       verified: "versions.withfig.com"
   name "fig"
   desc "Reimagine your terminal"
@@ -24,9 +24,8 @@ cask "fig" do
                         },
             quit:       ["com.mschrage.fig"],
             login_item: ["Fig"],
-            delete:     [
+            delete: [ 
               "/Applications/Fig.app",
-              "~/Library/Input Methods/FigInputMethod.app",
             ]
 
   zap trash: [
