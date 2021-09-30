@@ -1,5 +1,5 @@
 cask "fig" do
-  version "1.0.49"
+  version "1.0.49,270"
   sha256 :no_check
 
   url "http://versions.withfig.com/fig@latest.dmg",
@@ -23,7 +23,11 @@ cask "fig" do
                           sudo:       false,
                         },
             quit:       ["com.mschrage.fig"],
-            login_item: ["Fig"]
+            login_item: ["Fig"],
+            delete: [ 
+              "/Applications/Fig.app",
+              "~/Library/Input Methods/FigInputMethod.app",
+            ]
 
   zap trash: [
     "~/Library/Application Support/com.mschrage.fig",
