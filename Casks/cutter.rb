@@ -21,7 +21,7 @@ cask "cutter" do
   binary shimscript, target: "cutter"
 
   preflight do
-    IO.write shimscript, <<~EOS
+    File.write shimscript, <<~EOS
       #!/bin/sh
       '#{appdir}/Cutter.app/Contents/MacOS/Cutter' "$@"
     EOS
