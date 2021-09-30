@@ -24,7 +24,7 @@ cask "fig" do
                         },
             quit:       ["com.mschrage.fig"],
             login_item: ["Fig"],
-            delete: [ 
+            delete:     [
               "/Applications/Fig.app",
               "~/Library/Input Methods/FigInputMethod.app",
             ]
