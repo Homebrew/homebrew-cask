@@ -38,7 +38,7 @@ cask "chromium" do
   binary shimscript, target: "chromium"
 
   preflight do
-    IO.write shimscript, <<~EOS
+    File.write shimscript, <<~EOS
       #!/bin/sh
       exec '#{appdir}/Chromium.app/Contents/MacOS/Chromium' "$@"
     EOS
