@@ -18,7 +18,7 @@ cask "inkscape" do
   binary shimscript, target: "inkscape"
 
   preflight do
-    IO.write shimscript, <<~EOS
+    File.write shimscript, <<~EOS
       #!/bin/sh
       exec '#{staged_path}/Inkscape.app/Contents/MacOS/inkscape' "$@"
     EOS
