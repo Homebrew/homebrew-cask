@@ -1,6 +1,6 @@
 cask "leapp" do
-  version "0.7.1"
-  sha256 "68636e8ab478213587b0e61508f4a44c817dd377618f7dfdcafea98eb3986255"
+  version "0.7.2"
+  sha256 "8a32fb62f263f2e03904494acec563683678a32f85d9a78bd9bc736e7d1288ce"
 
   url "https://asset.noovolari.com/latest/Leapp-#{version}-mac.zip",
       verified: "asset.noovolari.com/"
