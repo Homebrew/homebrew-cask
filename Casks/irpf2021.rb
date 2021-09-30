@@ -1,6 +1,6 @@
 cask "irpf2021" do
-  version "1.8"
-  sha256 "2dab11d1547eea4a00e6330e5eeef58a560d71550adccc15c34cddde9e7e6991"
+  version "1.9"
+  sha256 "4734a380c50e53d5f1e273b85dec78f67c8aa285d786e39c722657e7a82f54b8"
 
   url "https://downloadirpf.receita.fazenda.gov.br/irpf/2021/irpf/arquivos/IRPF2021-v#{version}.pkg"
   name "IRPF 2021"
