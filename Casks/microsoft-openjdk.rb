@@ -1,4 +1,4 @@
-cask "microsoft-openjdk" do
+cask "microsoft-openjdk" do 
   version "17.35.1"
 
   if Hardware::CPU.intel?
