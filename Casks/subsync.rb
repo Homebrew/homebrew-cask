@@ -14,7 +14,7 @@ cask "subsync" do
   binary shimscript, target: "subsync"
 
   preflight do
-    IO.write shimscript, <<~EOS
+    File.write shimscript, <<~EOS
       #!/bin/sh
       exec '#{appdir}/subsync.app/Contents/MacOS/subsync' --cli "$@"
     EOS
