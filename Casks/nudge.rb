@@ -15,7 +15,7 @@ cask "nudge" do
   binary shimscript, target: "nudge"
 
   preflight do
-    IO.write shimscript, <<~EOS
+    File.write shimscript, <<~EOS
       #!/bin/sh
       exec '/Applications/Utilities/Nudge.app/Contents/MacOS/Nudge' "$@"
     EOS
