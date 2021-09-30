@@ -1,8 +1,7 @@
 cask "notion" do
-  version "2.0.17"
-
   if Hardware::CPU.intel?
-    sha256 "bf9a5b5ffe0f9e94808102b91d499d4bba6f4a5461efad3d0bc7bc9c709d1aaa"
+    version "2.0.18"
+    sha256 "b571d26e9ed018afcb2040d88e8a8e26d2d6a76bb97aaae047169c8f98361ef6"
 
     url "https://desktop-release.notion-static.com/Notion-#{version}.dmg",
         verified: "desktop-release.notion-static.com/"
@@ -12,6 +11,7 @@ cask "notion" do
       strategy :header_match
     end
   else
+    version "2.0.17"
     sha256 "7411f5b5c2de8865cf47b112b26bd04cc70182ddd19b2f99ff6f33ffc5577ed9"
 
     url "https://desktop-release.notion-static.com/Notion-#{version}-arm64.dmg",
