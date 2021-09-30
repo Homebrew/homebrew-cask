@@ -16,7 +16,7 @@ cask "gqrx" do
   binary shimscript, target: "gqrx"
 
   preflight do
-    IO.write shimscript, <<~EOS
+    File.write shimscript, <<~EOS
       #!/bin/sh
       '#{appdir}/Gqrx.app/Contents/MacOS/gqrx' "$@"
     EOS

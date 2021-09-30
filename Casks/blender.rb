@@ -31,7 +31,7 @@ cask "blender" do
     # make __pycache__ directories writable, otherwise uninstall fails
     FileUtils.chmod "u+w", Dir.glob("#{staged_path}/*.app/**/__pycache__")
 
-    IO.write shimscript, <<~EOS
+    File.write shimscript, <<~EOS
       #!/bin/bash
       '#{appdir}/Blender.app/Contents/MacOS/Blender' "$@"
     EOS
