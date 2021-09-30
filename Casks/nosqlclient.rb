@@ -5,6 +5,7 @@ cask "nosqlclient" do
   url "https://github.com/nosqlclient/nosqlclient/releases/download/#{version}/osx-portable.zip",
       verified: "github.com/nosqlclient/nosqlclient/"
   name "Nosqlclient"
+  desc "MongoDB management tool"
   homepage "https://www.nosqlclient.com/"
 
   app "Nosqlclient-darwin-x64/Nosqlclient.app"
@@ -15,4 +16,8 @@ cask "nosqlclient" do
     "~/Library/Preferences/com.electron.nosqlclient.plist",
     "~/Library/Preferences/Mongoclient",
   ]
+
+  caveats do
+    discontinued
+  end
 end
