@@ -10,7 +10,6 @@ cask "metaz" do
 
   livecheck do
     url :url
-    # https://github.com/griff/metaz/releases/download/v1.0.beta-113/MetaZ-1.0.beta-113.zip
     regex(/href=.*?MetaZ[._-]v?(.+)\.zip/i)
     strategy :github_latest
   end
