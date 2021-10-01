@@ -4,6 +4,7 @@ cask "profilecreator" do
 
   url "https://github.com/erikberglund/ProfileCreator/releases/download/v#{version.before_comma}/ProfileCreator_v#{version.before_comma}-#{version.after_comma}.dmg"
   name "ProfileCreator"
+  desc "Create standard or customized configuration profiles"
   homepage "https://github.com/erikberglund/ProfileCreator"
 
   livecheck do
@@ -20,17 +21,7 @@ cask "profilecreator" do
 
   zap trash: [
     "~/Library/Application Support/ProfileCreator",
+    "~/Library/Application Support/ProfilePayloads",
     "~/Library/Preferences/com.github.erikberglund.ProfileCreator.plist",
-    "~/Library/Application Support/ProfilePayloads/Manifests/ManagedPreferencesDeveloper/com.profilecreator.developer.deprecated.plist",
-    "~/Library/Application Support/ProfilePayloads/Manifests/ManagedPreferencesDeveloper/com.profilecreator.developer.exclude.plist",
-    "~/Library/Application Support/ProfilePayloads/Manifests/ManagedPreferencesDeveloper/com.profilecreator.developer.note.plist",
-    "~/Library/Application Support/ProfilePayloads/Manifests/ManagedPreferencesDeveloper/com.profilecreator.developer.popupbutton.plist",
-    "~/Library/Application Support/ProfilePayloads/Manifests/ManagedPreferencesDeveloper/com.profilecreator.developer.require.plist",
-    "~/Library/Application Support/ProfilePayloads/Manifests/ManagedPreferencesDeveloper/com.profilecreator.developer.slider.plist",
-    "~/Library/Application Support/ProfilePayloads/Manifests/ManagedPreferencesDeveloper/com.profilecreator.developer.substitution_variables.plist",
-    "~/Library/Application Support/ProfilePayloads/Manifests/ManagedPreferencesDeveloper/com.profilecreator.developer.tableview.plist",
-    "~/Library/Application Support/ProfilePayloads/Manifests/ManagedPreferencesDeveloper/com.profilecreator.developer.textfield.plist",
-    "~/Library/Application Support/ProfilePayloads/Manifests/ManagedPreferencesDeveloper/com.profilecreator.developer.textfieldfloat.plist",
-    "~/Library/Application Support/ProfilePayloads/Manifests/ManagedPreferencesDeveloper/com.profilecreator.developer.textfieldinteger.plist",
   ]
 end
