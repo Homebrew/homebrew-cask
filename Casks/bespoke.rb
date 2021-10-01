@@ -11,7 +11,6 @@ cask "bespoke" do
   suite "BespokeSynth"
 
   zap trash: [
-    # "~/Documents/BespokeSynth/",
     "~/Library/Caches/com.ryanchallinor.bespokesynth",
     "~/Library/Preferences/com.ryanchallinor.bespokesynth.plist",
     "~/Library/Saved Application State/com.ryanchallinor.bespokesynth.savedState",
