@@ -1,8 +1,9 @@
 cask "internxt-drive" do
-  version "1.2.7"
-  sha256 :no_check
+  version "1.3.4"
+  sha256 "c0cb7408cf1a096b7ed2f8274ffbcf808a0b6b43eb9a50013318efb9eb5f4297"
 
-  url "https://internxt.com/downloads/drive.dmg"
+  url "https://github.com/internxt/drive-desktop/releases/download/v#{version}/internxt-drive-#{version}.dmg",
+      verified: "https://github.com/internxt/drive-desktop/"
   name "Internxt Drive"
   desc "Client for Internxt file storage service"
   homepage "https://internxt.com/drive"
