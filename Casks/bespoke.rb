@@ -6,7 +6,7 @@ cask "bespoke" do
       verified: "github.com/BespokeSynth/BespokeSynth/"
   name "bespoke"
   desc "Software modular synth"
-  homepage "http://bespokesynth.com/"
+  homepage "https://www.bespokesynth.com/"
 
   # BespokeSynth folder contains auxiliary files, so we need to move everything
   artifact "BespokeSynth", target: "#{appdir}/BespokeSynth"
