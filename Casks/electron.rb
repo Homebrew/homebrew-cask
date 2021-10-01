@@ -6,7 +6,7 @@ cask "electron" do
     url "https://github.com/electron/electron/releases/download/v#{version}/electron-v#{version}-darwin-x64.zip",
         verified: "github.com/electron/electron/"
   else
-    sha256 "7e688facf77954275679f8979f5881f029149a89eabc079c44a19faa1b19e06b"
+    sha256 "28cfad0384f2ede78ea12f756d8666d713ad7146f81fa0a7a72793a1fd43ad29"
     url "https://github.com/electron/electron/releases/download/v#{version}/electron-v#{version}-darwin-arm64.zip",
         verified: "github.com/electron/electron/"
   end
