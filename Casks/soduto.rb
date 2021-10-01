@@ -4,6 +4,7 @@ cask "soduto" do
 
   url "https://soduto.com/downloads/Soduto_v#{version}.dmg"
   name "Soduto"
+  desc "Communicate and share information between devices"
   homepage "https://soduto.com/"
 
   livecheck do
