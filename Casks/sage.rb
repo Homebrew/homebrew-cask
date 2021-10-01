@@ -30,6 +30,7 @@ cask "sage" do
             pkgutil: [
               "org.computop.SageMath.#{version.before_comma.dots_to_underscores}.bin",
               "org.computop.SageMath.#{version.before_comma.dots_to_underscores}.share",
+              "org.computop.SageMath.#{version.before_comma.dots_to_underscores}.texlive,
             ]
 
   zap trash: [
