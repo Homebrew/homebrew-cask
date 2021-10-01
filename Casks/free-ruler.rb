@@ -9,4 +9,6 @@ cask "free-ruler" do
   homepage "http://www.pascal.com/software/freeruler/"
 
   app "Free Ruler.app"
+
+  zap trash: "~/Library/Containers/com.pascal.freeruler"
 end
