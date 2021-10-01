@@ -9,4 +9,9 @@ cask "metaz" do
   homepage "https://griff.github.io/metaz/"
 
   app "MetaZ.app"
+
+  zap trash: [
+    "~/Library/Preferences/org.maven-group.MetaZ.plist",
+    "~/Library/Logs/MetaZ.log",
+  ]
 end
