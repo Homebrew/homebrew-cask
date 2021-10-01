@@ -4,10 +4,9 @@ cask "bespoke" do
 
   url "https://github.com/BespokeSynth/BespokeSynth/releases/download/v#{version}/Bespoke-Mac.dmg",
       verified: "github.com/BespokeSynth/BespokeSynth/"
-  name "bespoke"
+  name "Bespoke Synth"
   desc "Software modular synth"
   homepage "https://www.bespokesynth.com/"
 
-  # BespokeSynth folder contains auxiliary files, so we need to move everything
-  artifact "BespokeSynth", target: "#{appdir}/BespokeSynth"
+  suite "BespokeSynth"
 end
