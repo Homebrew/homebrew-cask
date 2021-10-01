@@ -22,7 +22,7 @@ cask "gitfiend" do
   binary shimscript, target: "gitfiend"
 
   preflight do
-    IO.write shimscript, <<~EOS
+    File.write shimscript, <<~EOS
       #!/bin/sh
       exec '#{appdir}/GitFiend.app/Contents/MacOS/GitFiend' "$@"
     EOS
