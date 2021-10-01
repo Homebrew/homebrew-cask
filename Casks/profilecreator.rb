@@ -17,4 +17,20 @@ cask "profilecreator" do
   depends_on macos: ">= :sierra"
 
   app "ProfileCreator.app"
+
+  zap trash: [
+    "~/Library/Application Support/ProfileCreator",
+    "~/Library/Preferences/com.github.erikberglund.ProfileCreator.plist",
+    "~/Library/Application Support/ProfilePayloads/Manifests/ManagedPreferencesDeveloper/com.profilecreator.developer.deprecated.plist",
+    "~/Library/Application Support/ProfilePayloads/Manifests/ManagedPreferencesDeveloper/com.profilecreator.developer.exclude.plist",
+    "~/Library/Application Support/ProfilePayloads/Manifests/ManagedPreferencesDeveloper/com.profilecreator.developer.note.plist",
+    "~/Library/Application Support/ProfilePayloads/Manifests/ManagedPreferencesDeveloper/com.profilecreator.developer.popupbutton.plist",
+    "~/Library/Application Support/ProfilePayloads/Manifests/ManagedPreferencesDeveloper/com.profilecreator.developer.require.plist",
+    "~/Library/Application Support/ProfilePayloads/Manifests/ManagedPreferencesDeveloper/com.profilecreator.developer.slider.plist",
+    "~/Library/Application Support/ProfilePayloads/Manifests/ManagedPreferencesDeveloper/com.profilecreator.developer.substitution_variables.plist",
+    "~/Library/Application Support/ProfilePayloads/Manifests/ManagedPreferencesDeveloper/com.profilecreator.developer.tableview.plist",
+    "~/Library/Application Support/ProfilePayloads/Manifests/ManagedPreferencesDeveloper/com.profilecreator.developer.textfield.plist",
+    "~/Library/Application Support/ProfilePayloads/Manifests/ManagedPreferencesDeveloper/com.profilecreator.developer.textfieldfloat.plist",
+    "~/Library/Application Support/ProfilePayloads/Manifests/ManagedPreferencesDeveloper/com.profilecreator.developer.textfieldinteger.plist",
+  ]
 end
