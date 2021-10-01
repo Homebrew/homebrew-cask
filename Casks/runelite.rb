@@ -11,7 +11,7 @@ cask "runelite" do
   livecheck do
     url "https://github.com/runelite/launcher/releases"
     strategy :page_match
-    regex(%r{(\d+(?:\.\d+)*)/RuneLite\.dmg}i)
+    regex(%r{(\d+(?:\.\d+)*)/RuneLite-x64\.dmg}i)
   end
 
   app "RuneLite.app"
