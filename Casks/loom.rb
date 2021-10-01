@@ -1,8 +1,16 @@
 cask "loom" do
-  version "0.100.0"
-  sha256 "62944d9b75e90cb1522608002ea88f5a93c50c2467a6a012ea7b1166950f70fe"
+  version "0.100.3"
 
-  url "https://cdn.loom.com/desktop-packages/Loom-#{version}.dmg"
+  if Hardware::CPU.intel?
+    sha256 "c23f725dd41918bc3defc888662fc8ccf0e734115badc5ff852bc60f5f44dcbb"
+
+    url "https://cdn.loom.com/desktop-packages/Loom-#{version}.dmg"
+  else
+    sha256 "f526b4ea7ac13ccaa6f84081615bf8f6c2af4cf13f3754f252636c04524deaa8"
+
+    url "https://cdn.loom.com/desktop-packages/Loom-#{version}-arm64.dmg"
+  end
+
   name "Loom"
   desc "Screen and video recording software"
   homepage "https://www.loom.com/"

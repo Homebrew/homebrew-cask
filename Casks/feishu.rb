@@ -1,7 +1,7 @@
 cask "feishu" do
   if Hardware::CPU.intel?
-    version "4.8.4,30c9da"
-    sha256 "048f332e164ddfbbbc0f60af6d067fd165096133c8b21409bf6559d5d271a1a7"
+    version "4.9.5,94e92c"
+    sha256 "c0d817204c632ce6233b7f2594136b19002410322e5cff98b12e1b63682af57b"
 
     url "https://sf3-cn.feishucdn.com/obj/ee-appcenter/#{version.after_comma}/Feishu-darwin_x64-#{version.before_comma}-signed.dmg",
         verified: "sf3-cn.feishucdn.com/"
@@ -14,8 +14,8 @@ cask "feishu" do
       end
     end
   else
-    version "4.8.4,06d3ca"
-    sha256 "47a67b0c5732db792c639ab709b991236e9b79cbe2274924498010db037403d6"
+    version "4.9.5,5a774e"
+    sha256 "c619e40e30393e70f59bcd2f49d34ddaf1303b38341d02bd0a74e4f32894b9c3"
 
     url "https://sf3-cn.feishucdn.com/obj/ee-appcenter/#{version.after_comma}/Feishu-darwin_arm64-#{version.before_comma}-signed.dmg",
         verified: "sf3-cn.feishucdn.com/"

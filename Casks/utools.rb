@@ -21,5 +21,6 @@ cask "utools" do
   zap trash: [
     "~/Library/Application Support/uTools",
     "~/Library/Logs/uTools",
+    "~/Library/Preferences/org.yuanli.utools.plist",
   ]
 end

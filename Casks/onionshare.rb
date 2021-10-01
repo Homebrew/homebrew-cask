@@ -1,6 +1,6 @@
 cask "onionshare" do
-  version "2.3.3"
-  sha256 "3d003ab5b8fdb3a09eae305670db0666a9fe71751bde8ff24beecdea7b6eaaaf"
+  version "2.4"
+  sha256 "fe9d99cd172bc8acae6dfb3f7531fb15b467cbb01d93650d7fa4f5fb0528b317"
 
   url "https://onionshare.org/dist/#{version}/OnionShare-#{version}.dmg"
   name "OnionShare"

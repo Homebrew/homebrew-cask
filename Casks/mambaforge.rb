@@ -1,8 +1,8 @@
 cask "mambaforge" do
-  version "4.10.3-4"
+  version "4.10.3-5"
 
   if Hardware::CPU.intel?
-    sha256 "b5fd40995aebd7631f761324eb425ee813fb4604ce8d8fde3c03cb60cac1716e"
+    sha256 "547823784a2b79641f29d06f70f74ae25775eec1680c6cca14888c4907441f5c"
     url "https://github.com/conda-forge/miniforge/releases/download/#{version}/Mambaforge-#{version}-MacOSX-x86_64.sh"
 
     installer script: {
@@ -10,7 +10,7 @@ cask "mambaforge" do
       args:       ["-b", "-p", "#{caskroom_path}/base"],
     }
   else
-    sha256 "901f2c2b4be08cadf6968f408d4a1ee632ddb011a07ce4b480b83d8da142255f"
+    sha256 "1c7517e204814f7227ef0d2e0fbf95b43f6afae978e882cd017779e31f8b26cb"
     url "https://github.com/conda-forge/miniforge/releases/download/#{version}/Mambaforge-#{version}-MacOSX-arm64.sh"
 
     installer script: {

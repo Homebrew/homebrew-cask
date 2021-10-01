@@ -1,5 +1,5 @@
 cask "google-chrome" do
-  version "94.0.4606.54"
+  version "94.0.4606.71"
   sha256 :no_check
 
   if Hardware::CPU.intel?
@@ -39,6 +39,7 @@ cask "google-chrome" do
     "~/Library/Google/Google Chrome Brand.plist",
     "~/Library/Google/GoogleSoftwareUpdate",
     "~/Library/LaunchAgents/com.google.keystone.agent.plist",
+    "~/Library/LaunchAgents/com.google.keystone.xpcservice.plist",
     "~/Library/Logs/GoogleSoftwareUpdateAgent.log",
     "~/Library/Preferences/com.google.Chrome.plist",
     "~/Library/Preferences/com.google.Keystone.Agent.plist",

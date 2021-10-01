@@ -1,5 +1,5 @@
 cask "opencore-configurator" do
-  version "2.49.0.2"
+  version "2.50.0.0"
   sha256 :no_check
 
   url "https://mackie100projects.altervista.org/apps/opencoreconf/download-new-build.php?version=last",

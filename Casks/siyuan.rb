@@ -1,6 +1,6 @@
 cask "siyuan" do
-  version "1.3.0"
-  sha256 "eda16a98318fca0016dd085e959f19f8d0363232890d99168f048e93409af3e1"
+  version "1.3.6"
+  sha256 "a4378980564a71c1eed2ea111c7a24c5a1012656779997b611b7124ff8f6bfa4"
 
   url "https://github.com/siyuan-note/siyuan/releases/download/v#{version}/siyuan-#{version}-mac.dmg"
   name "SiYuan"
