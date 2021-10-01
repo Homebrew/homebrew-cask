@@ -23,11 +23,11 @@ cask "duet" do
             kext: "com.karios.driver.DuetDisplay"
 
   zap trash: [
-    "~/Library/Preferences/com.kairos.duet*.plist",
     "~/Library/Application Support/com.kairos.duet*",
     "~/Library/Caches/com.crashlytics.data/com.kairos.duet*",
-    "~/Library/Caches/io.fabric.sdk.mac.data/com.kairos.duet*",
     "~/Library/Caches/com.kairos.duet*",
+    "~/Library/Caches/io.fabric.sdk.mac.data/com.kairos.duet*",
+    "~/Library/Preferences/com.kairos.duet*.plist",
   ],
       rmdir: [
         "~/Library/Caches/com.crashlytics.data",
