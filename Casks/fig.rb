@@ -3,7 +3,7 @@ cask "fig" do
   sha256 "2209f614d7d09081755a9906539712aed0f23bc395fe1b1e508b506806faaaf4"
 
   url "https://versions.withfig.com/fig%20#{version.before_comma}.dmg",
-      verified: "versions.withfig.com"
+      verified: "versions.withfig.com/"
   name "fig"
   desc "Reimagine your terminal"
   homepage "https://fig.io/"
