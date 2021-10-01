@@ -13,5 +13,6 @@ cask "metaz" do
   zap trash: [
     "~/Library/Preferences/org.maven-group.MetaZ.plist",
     "~/Library/Logs/MetaZ.log",
+    "~Library/Caches/org.maven-group.MetaZ",
   ]
 end
