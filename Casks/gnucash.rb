@@ -1,12 +1,17 @@
 cask "gnucash" do
-  version "4.8a"
+  version "4.8"
   sha256 "abb6a0bc433207c1f31fee33aa7f0c63774217b2675e5fab78062c4cd862f975"
 
-  url "https://github.com/Gnucash/gnucash/releases/download/#{version.chomp('a')}/Gnucash-Intel-#{version.chomp('a')}-1.dmg",
+  url "https://github.com/Gnucash/gnucash/releases/download/#{version}/Gnucash-Intel-#{version}-1.dmg",
       verified: "github.com/Gnucash/gnucash/"
   name "GnuCash"
   desc "Double-entry accounting program"
   homepage "https://www.gnucash.org/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Gnucash.app"
 
