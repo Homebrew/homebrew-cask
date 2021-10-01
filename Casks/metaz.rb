@@ -8,5 +8,17 @@ cask "metaz" do
   desc "Mp4 meta-data editor"
   homepage "https://griff.github.io/metaz/"
 
+  livecheck do
+    url :url
+    regex(/href=.*?MetaZ[._-]v?(.+)\.zip/i)
+    strategy :github_latest
+  end
+
   app "MetaZ.app"
+
+  zap trash: [
+    "~/Library/Caches/org.maven-group.MetaZ",
+    "~/Library/Logs/MetaZ.log",
+    "~/Library/Preferences/org.maven-group.MetaZ.plist",
+  ]
 end
