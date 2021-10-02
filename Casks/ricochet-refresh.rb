@@ -9,4 +9,6 @@ cask "ricochet-refresh" do
   homepage "ricochetrefresh.net"
 
   app "Ricochet Refresh.app"
+
+  zap trash: "~/Library/Application Support/Ricochet-Refresh"
 end
