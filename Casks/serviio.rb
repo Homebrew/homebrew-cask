@@ -1,6 +1,6 @@
 cask "serviio" do
-  version "2.1"
-  sha256 "2a6d948c00205c5c4cf60127ed94a8e0e6965a145e5162b298f3108492f73cae"
+  version "2.2"
+  sha256 "468afcb37390f7e9b3e7207922dae5ecd7f84296837a22905891e08191bfe507"
 
   url "https://download.serviio.org/releases/serviio-#{version}-osx.tar.gz"
   name "Serviio"
