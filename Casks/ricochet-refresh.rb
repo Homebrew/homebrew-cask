@@ -6,7 +6,7 @@ cask "ricochet-refresh" do
       verified: "github.com/blueprint-freespeech/ricochet-refresh/"
   name "ricochet-refresh"
   desc "Private and anonymous instant messaging over tor"
-  homepage "https://www.ricochetrefresh.net"
+  homepage "https://www.ricochetrefresh.net/"
 
   app "Ricochet Refresh.app"
 
