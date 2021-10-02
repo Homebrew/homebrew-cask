@@ -3,7 +3,7 @@ cask "kite" do
   sha256 "a72a98e77c5d3410f8d92e2bb1458afa5d4edd51a021491f8f6f2d5995170914"
 
   url "https://kitedownloadss.b-cdn.net/mac/#{version}/Kite.dmg",
-      verified: "draqv87tt43s0.cloudfront.net/"
+      verified: "kitedownloadss.b-cdn.net/"
   name "Kite"
   desc "Add code completions to all your code editors"
   homepage "https://kite.com/"
