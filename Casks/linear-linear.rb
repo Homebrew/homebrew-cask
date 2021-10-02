@@ -1,5 +1,5 @@
 cask "linear-linear" do
-  version "1.4.0"
+  version "1.5.1"
   sha256 :no_check
 
   if Hardware::CPU.intel?
