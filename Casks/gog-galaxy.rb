@@ -9,7 +9,7 @@ cask "gog-galaxy" do
 
   livecheck do
     url "https://gog.com/galaxy"
-    regex(%r{href=.*?/galaxy_client_(\d+(?:\.\d+)*a?)\.pkg}i)
+    regex(%r{href=.*?/galaxy_client_(\d+(?:\.\d+)*)\a.pkg}i)
   end
 
   auto_updates true
