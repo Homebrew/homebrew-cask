@@ -8,7 +8,7 @@ cask "cloudapp" do
   homepage "https://www.getcloudapp.com/"
 
   livecheck do
-    url "https://d2plwz9jdz9z5d.cloudfront.net/mac/latest/appcast.xml"
+    url "https://downloads.getcloudapp.com/mac/latest/appcast.xml"
     strategy :sparkle
   end
 
