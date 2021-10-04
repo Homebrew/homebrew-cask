@@ -1,14 +1,16 @@
 cask "feishu" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
-
   version "4.9.6,4535a6,53c059"
 
-  url "https://sf3-cn.feishucdn.com/obj/ee-appcenter/#{version.split(",")[1]}/Feishu-darwin_#{arch}-#{version.split(",")[0]}-signed.dmg",
-      verified: "sf3-cn.feishucdn.com/"
   if Hardware::CPU.intel?
     sha256 "568c45bf46fd2c28c9047ffc30fe8760f1b59df01643695bc31d03142bca56f3"
+
+    url "https://sf3-cn.feishucdn.com/obj/ee-appcenter/#{version.split(",")[1]}/Feishu-darwin_x64-#{version.split(",")[0]}-signed.dmg",
+        verified: "sf3-cn.feishucdn.com/"
   else
     sha256 "f69b9a1748f6fdfdb9cc329c45ca0cf4cfb0168517579d7c3c03baefd7283f60"
+
+    url "https://sf3-cn.feishucdn.com/obj/ee-appcenter/#{version.split(",")[2]}/Feishu-darwin_arm64-#{version.split(",")[0]}-signed.dmg",
+        verified: "sf3-cn.feishucdn.com/"
   end
 
   name "feishu"
