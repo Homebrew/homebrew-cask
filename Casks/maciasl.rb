@@ -7,6 +7,20 @@ cask "maciasl" do
   desc "ACPI Machine Language (AML) compiler and IDE"
   homepage "https://github.com/acidanthera/MaciASL"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  auto_updates true
+
   app "MaciASL.app"
   binary "#{appdir}/MaciASL.app/Contents/MacOS/iasl-stable", target: "iasl"
+
+  uninstall quit: "org.acidanthera.MaciASL"
+
+  zap trash: [
+    "~/Library/Preferences/org.acidanthera.MaciASL.plist",
+    "~/Library/Saved Application State/org.acidanthera.MaciASL.savedState",
+  ]
 end
