@@ -20,5 +20,9 @@ cask "dbeaver-community" do
 
   app "DBeaver.app"
 
-  zap trash: "~/Library/Preferences/org.jkiss.dbeaver.core.product.plist"
+  zap trash: [
+    "~/Library/DBeaverData",
+    "~/Library/Preferences/org.jkiss.dbeaver.core.product.plist",
+    "~/Library/Saved Application State/org.jkiss.dbeaver.core.product.savedState",
+  ]
 end
