@@ -7,4 +7,9 @@ cask "airtrash" do
   homepage "https://github.com/maciejczyzewski/airtrash/"
 
   app "Airtrash.app"
+
+  zap trash: [
+    "~/Library/Application Support/airtrash",
+    "~/Library/Preferences/maciejczyzewski.airtrash.plist",
+  ]
 end
