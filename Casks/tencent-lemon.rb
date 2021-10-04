@@ -1,8 +1,8 @@
 cask "tencent-lemon" do
-  version "4.9.1"
-  sha256 "eafa930c55bb0b89f818358b95075d2fd8f26b033554fa30a6ab0bdbfc758e88"
+  version "5.0.0"
+  sha256 "41647524e321bef4a59f87030cd5098a3d1d828cfa4321a32a90d334313091fd"
 
-  url "https://webcdn.m.qq.com/lemon/version/Lemon#{version}d.dmg"
+  url "https://webcdn.m.qq.com/lemon/version/Lemon#{version}.dmg"
   name "Tencent Lemon Cleaner"
   desc "Cleanup and system status tool"
   homepage "https://lemon.qq.com/"
