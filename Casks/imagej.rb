@@ -17,5 +17,13 @@ cask "imagej" do
   desc "Image Processing and Analysis in Java"
   homepage "https://imagej.nih.gov/ij/index.html"
 
+  livecheck do
+    url "https://imagej.nih.gov/ij/download.html"
+    strategy :page_match do |page|
+      match = page.match(%r{href=.*?/ij(\d+)(\d+)(\d+)[._-]osx[._-]arm[._-]java\d+\.zip}i)
+      "#{match[1]}.#{match[2]}#{match[3]}"
+    end
+  end
+
   app "ImageJ.app"
 end
