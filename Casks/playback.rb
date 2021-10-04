@@ -9,4 +9,10 @@ cask "playback" do
   homepage "https://mafintosh.github.io/playback/"
 
   app "Playback.app"
+
+  zap trash: [
+    "~/Library/Application Support/playback",
+    "~/Library/Caches/playback",
+    "~/Library/Preferences/com.electron.playback.plist",
+  ]
 end
