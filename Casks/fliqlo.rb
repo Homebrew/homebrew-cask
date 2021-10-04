@@ -14,4 +14,6 @@ cask "fliqlo" do
   end
 
   screen_saver "Fliqlo.saver"
+
+  zap trash: "/Library/Screen Savers/Fliqlo.saver"
 end
