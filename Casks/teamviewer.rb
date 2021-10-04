@@ -15,7 +15,7 @@ cask "teamviewer" do
   auto_updates true
   conflicts_with cask: "teamviewer-host"
 
-  pkg "Install TeamViewer.app/Contents/Resources/Install TeamViewer.pkg"
+  pkg "Install TeamViewer.pkg"
 
   uninstall delete:    [
     "#{staged_path}/#{token}", # This Cask should be uninstalled manually.
