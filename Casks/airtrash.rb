@@ -4,6 +4,7 @@ cask "airtrash" do
 
   url "https://github.com/maciejczyzewski/airtrash/releases/download/#{version}/airtrash-#{version}.dmg"
   name "airtrash"
+  desc "Clone of Apple's Airdrop - easy P2P file transfer"
   homepage "https://github.com/maciejczyzewski/airtrash/"
 
   app "Airtrash.app"
