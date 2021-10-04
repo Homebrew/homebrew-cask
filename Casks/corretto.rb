@@ -17,7 +17,7 @@ cask "corretto" do
   livecheck do
     url "https://corretto.aws/downloads/latest/amazon-corretto-#{version.major}-#{arch}-macos-jdk.pkg"
     strategy :header_match do |headers|
-      headers["location"][%r{/amazon-corretto-(\d+(?:\.\d+)*)-macosx-#{arch}\.pkg}i, 1]
+      headers["location"][%r{/amazon-corretto-(\d+(?:\.\d+)*)-macosx-(aarch64|x64)\.pkg}i, 1]
     end
   end
 
