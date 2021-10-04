@@ -7,11 +7,6 @@ cask "maciasl" do
   desc "ACPI Machine Language (AML) compiler and IDE"
   homepage "https://github.com/acidanthera/MaciASL"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
 
   app "MaciASL.app"
