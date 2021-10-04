@@ -7,4 +7,9 @@ cask "tau" do
   homepage "https://www.cs.uoregon.edu/research/tau/home.php"
 
   suite "TAU"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.apple.PassKit.PaymentAuthorizationUIExtension",
+    "~/Library/Containers/com.apple.PassKit.PaymentAuthorizationUIExtension",
+  ]
 end
