@@ -10,4 +10,9 @@ cask "nightfall" do
   depends_on macos: ">= :catalina"
 
   app "Nightfall.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.ryanthomson.Nightfall",
+    "~/Library/Containers/com.ryanthomson.Nightfall",
+  ]
 end
