@@ -1,15 +1,15 @@
 cask "kindle-previewer" do
-  version "3.58"
+  version "3.58.0"
   sha256 :no_check
 
-  url "https://kindlepreviewer3.s3.amazonaws.com/KindlePreviewerInstaller.pkg",
-      verified: "kindlepreviewer3.s3.amazonaws.com/"
+  url "https://d2bzeorukaqrvt.cloudfront.net/KindlePreviewerInstaller.pkg",
+      verified: "d2bzeorukaqrvt.cloudfront.net/"
   name "Kindle Previewer"
   desc "Preview and audit Kindle eBooks"
-  homepage "https://www.amazon.com/gp/feature.html?ie=UTF8&docId=1003018611"
+  homepage "https://www.amazon.com/Kindle-Previewer/b?ie=UTF8&node=21381691011"
 
   livecheck do
-    url :homepage
+    url "https://s3.amazonaws.com/kindlepreviewer/UG_ReleaseNotes_EN.txt"
     strategy :page_match
     regex(/Kindle\s*Previewer\s*(\d+(?:\.\d+)*)/i)
   end
