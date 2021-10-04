@@ -1,5 +1,9 @@
 cask "teamviewer" do
-  version "15.22.3"
+  if MacOS.version <= :high_sierra
+    version "15.2.2756"
+  else
+    version "15.22.3"
+  end
   sha256 :no_check
 
   url "https://download.teamviewer.com/download/TeamViewer.dmg"
@@ -14,8 +18,13 @@ cask "teamviewer" do
 
   auto_updates true
   conflicts_with cask: "teamviewer-host"
+  depends_on macos: ">= :el_capitan"
 
-  pkg "Install TeamViewer.pkg"
+  if MacOS.version <= :high_sierra
+    pkg "Install TeamViewer.pkg"
+  else
+    pkg "Install TeamViewer.app/Contents/Resources/Install TeamViewer.pkg"
+  end
 
   uninstall delete:    [
     "#{staged_path}/#{token}", # This Cask should be uninstalled manually.
