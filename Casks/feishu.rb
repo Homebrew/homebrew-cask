@@ -1,37 +1,30 @@
 cask "feishu" do
+  version "4.9.6,4535a6,53c059"
+
   if Hardware::CPU.intel?
-    version "4.9.5,94e92c"
-    sha256 "c0d817204c632ce6233b7f2594136b19002410322e5cff98b12e1b63682af57b"
+    sha256 "568c45bf46fd2c28c9047ffc30fe8760f1b59df01643695bc31d03142bca56f3"
 
-    url "https://sf3-cn.feishucdn.com/obj/ee-appcenter/#{version.after_comma}/Feishu-darwin_x64-#{version.before_comma}-signed.dmg",
+    url "https://sf3-cn.feishucdn.com/obj/ee-appcenter/#{version.split(",")[1]}/Feishu-darwin_x64-#{version.split(",")[0]}-signed.dmg",
         verified: "sf3-cn.feishucdn.com/"
-
-    livecheck do
-      url "https://www.feishu.cn/api/downloads"
-      strategy :page_match do |page|
-        match = page.match(%r{/(\h+)/Feishu-darwin_x64-(\d+(?:\.\d+)*)-signed\.dmg}i)
-        "#{match[2]},#{match[1]}"
-      end
-    end
   else
-    version "4.9.6,53c059"
     sha256 "f69b9a1748f6fdfdb9cc329c45ca0cf4cfb0168517579d7c3c03baefd7283f60"
 
-    url "https://sf3-cn.feishucdn.com/obj/ee-appcenter/#{version.after_comma}/Feishu-darwin_arm64-#{version.before_comma}-signed.dmg",
+    url "https://sf3-cn.feishucdn.com/obj/ee-appcenter/#{version.split(",")[2]}/Feishu-darwin_arm64-#{version.split(",")[0]}-signed.dmg",
         verified: "sf3-cn.feishucdn.com/"
-
-    livecheck do
-      url "https://www.feishu.cn/api/downloads"
-      strategy :page_match do |page|
-        match = page.match(%r{/(\h+)/Feishu-darwin_arm64-(\d+(?:\.\d+)*)-signed\.dmg}i)
-        "#{match[2]},#{match[1]}"
-      end
-    end
   end
 
   name "feishu"
   desc "Project management software"
   homepage "https://www.feishu.cn/"
+
+  livecheck do
+    url "https://www.feishu.cn/api/downloads"
+    strategy :page_match do |page|
+      arm_match = page.match(%r{/(\h+)/Feishu-darwin_arm64-(\d+(?:\.\d+)*)-signed\.dmg}i)
+      intel_match = page.match(%r{/(\h+)/Feishu-darwin_x64-(\d+(?:\.\d+)*)-signed\.dmg}i)
+      "#{arm_match[2]},#{intel_match[1]},#{arm_match[1]}"
+    end
+  end
 
   auto_updates true
 
