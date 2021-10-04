@@ -19,11 +19,16 @@ cask "imagej" do
 
   livecheck do
     url "https://imagej.nih.gov/ij/download.html"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/ij(\d+)(\d+)(\d+)[._-]osx[._-]arm[._-]java\d+\.zip}i)
-      "#{match[1]}.#{match[2]}#{match[3]}"
+    regex(%r{href=.*?/ij(\d+(?:\.\d+)*)[._-]osx[._-]java\d+\.zip}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map do |match|
+        text = match.first
+        text.include?(".") ? text : text.sub(/(\d)(\d+)/, '\1.\2')
+      end
     end
   end
 
   app "ImageJ.app"
+
+  zap trash: "~/Library/Saved Application State/ImageJ.savedState"
 end
