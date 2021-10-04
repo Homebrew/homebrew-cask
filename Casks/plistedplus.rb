@@ -7,6 +7,11 @@ cask "plistedplus" do
   desc "Plist file editor"
   homepage "https://github.com/ic005k/PlistEDPlus"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
