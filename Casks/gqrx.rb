@@ -1,9 +1,9 @@
 cask "gqrx" do
-  version "2.14.4"
-  sha256 "4ceafde17ccb4a8e5780b3df490f7b9346fb60f2338ec6b7856e9f04a44b806c"
+  version "2.14.5"
+  sha256 "d72db2a8aec6c8005ff27ca0d51703ed574a57552bfda438dd472a08d1e1e285"
 
-  url "https://github.com/csete/gqrx/releases/download/v#{version.major_minor_patch}/Gqrx-#{version}.dmg",
-      verified: "github.com/csete/gqrx/"
+  url "https://github.com/gqrx-sdr/gqrx/releases/download/v#{version.major_minor_patch}/Gqrx-#{version}.dmg",
+      verified: "github.com/gqrx-sdr/gqrx/"
   name "Gqrx"
   desc "Software-defined radio receiver powered by GNU Radio and Qt"
   homepage "https://gqrx.dk/"
