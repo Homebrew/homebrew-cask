@@ -16,7 +16,7 @@ cask "semeru-jdk-open" do
     end
   end
 
-  pkg "ibm-semeru-open-jdk_x64_mac_#{version.before_comma}_#{version.after_comma}.pkg"
+  pkg "ibm-semeru-open-jdk_x64_mac_#{version.before_comma.tr("+", "_")}_#{version.after_comma}.pkg"
 
   uninstall pkgutil: "net.ibm-semeru-open.#{version.major}.jdk"
 end
