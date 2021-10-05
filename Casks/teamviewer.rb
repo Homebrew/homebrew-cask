@@ -3,6 +3,11 @@ cask "teamviewer" do
     version "15.2.2756"
   else
     version "15.22.3"
+    
+    livecheck do
+      url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=10.15.1&type=1&channel=1"
+      strategy :sparkle
+    end
   end
   sha256 :no_check
 
@@ -10,11 +15,6 @@ cask "teamviewer" do
   name "TeamViewer"
   desc "Remote access and connectivity software focused on security"
   homepage "https://www.teamviewer.com/"
-
-  livecheck do
-    url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=10.15.1&type=1&channel=1"
-    strategy :sparkle
-  end
 
   auto_updates true
   conflicts_with cask: "teamviewer-host"
