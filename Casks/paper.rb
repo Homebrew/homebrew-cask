@@ -4,7 +4,16 @@ cask "paper" do
 
   url "http://paperimg.meiyuan.in/pap.er_v#{version}.dmg"
   name "Paper"
+  desc "Live wallpaper app"
   homepage "https://paper.meiyuan.in/"
+
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{http.*?/pap\.er_v(\d+(?:\.\d+)*)\.dmg}i)
+  end
+
+  depends_on macos: ">= :el_capitan"
 
   app "pap.er.app"
 
