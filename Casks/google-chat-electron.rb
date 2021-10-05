@@ -8,4 +8,12 @@ cask "google-chat-electron" do
   homepage "https://github.com/ankurk91/google-chat-electron"
 
   app "google-chat-electron.app"
+
+  zap trash: [
+    "~/Library/Application Support/google-chat-electron",
+    "~/Library/LaunchAgents/google-chat-electron.plist",
+    "~/Library/Logs/google-chat-electron",
+    "~/Library/Preferences/com.electron.google-chat-electron.plist",
+    "~/Library/Saved Application State/com.electron.google-chat-electron.savedState",
+  ]
 end
