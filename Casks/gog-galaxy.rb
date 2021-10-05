@@ -1,15 +1,15 @@
 cask "gog-galaxy" do
-  version "2.0.43.66"
-  sha256 "b8c28915979f9d90912baffa184d2a04ed73f874a9454325128919861e917246"
+  version "2.0.41.110"
+  sha256 "f4397fb1e6907370ce7d1f88b8273e47f6d111abb1cf9411a3f8a9e805d482e3"
 
-  url "https://cdn.gog.com/open/galaxy/client/#{version}/galaxy_client_#{version}.pkg"
+  url "https://cdn.gog.com/open/galaxy/client/#{version.chomp("a")}/galaxy_client_#{version}.pkg"
   name "GOG Galaxy"
   desc "Game client"
   homepage "https://www.gog.com/galaxy"
 
   livecheck do
     url "https://gog.com/galaxy"
-    regex(%r{href=.*?/galaxy_client_(\d+(?:\.\d+)*)a.pkg}i)
+    regex(%r{href=.*?/galaxy_client_(\d+(?:\.\d+)*a?)\.pkg}i)
   end
 
   auto_updates true
