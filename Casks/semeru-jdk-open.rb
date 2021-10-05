@@ -10,7 +10,7 @@ cask "semeru-jdk-open" do
 
   livecheck do
     url "https://developer.ibm.com/languages/java/semeru-runtimes/downloads"
-    regex(%r{["'][^"']*ibm-semeru-open-jdk_x64_mac[._-](\d+(?:[._]\d+)+)[._-](.+)\.pkg["']}i)
+    regex(/["'][^"']*ibm-semeru-open-jdk_x64_mac[._-](\d+(?:[._]\d+)+)[._-](.+)\.pkg["']/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0].tr("_", "+")},#{match[1]}" }
     end
