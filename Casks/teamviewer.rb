@@ -53,6 +53,7 @@ cask "teamviewer" do
     "/Library/Preferences/com.teamviewer.teamviewer.preferences.plist",
     "~/Library/Application Support/TeamViewer",
     "~/Library/Caches/com.teamviewer.TeamViewer",
+    "~/Library/Caches/TeamViewer",
     "~/Library/Cookies/com.teamviewer.TeamViewer.binarycookies",
     "~/Library/Logs/TeamViewer",
     "~/Library/Preferences/com.teamviewer.TeamViewer.plist",
