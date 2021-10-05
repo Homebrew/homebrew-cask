@@ -9,7 +9,7 @@ cask "paper" do
 
   livecheck do
     url :homepage
-    regex(/["'][^"']*pap.er[._-]v?(\d+(?:\.\d+)+)\.dmg["']/i)
+    regex(/["'][^"']*pap\.er[._-]v?(\d+(?:\.\d+)+)\.dmg["']/i)
   end
 
   depends_on macos: ">= :el_capitan"
