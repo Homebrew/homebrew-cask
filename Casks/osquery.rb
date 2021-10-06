@@ -15,5 +15,8 @@ cask "osquery" do
   pkg "osquery-#{version}.pkg"
 
   uninstall launchctl: "com.facebook.osqueryd",
-            pkgutil:   "com.facebook.osquery"
+            pkgutil:   [
+              "com.facebook.osquery",
+              "io.osquery.agent",
+            ]
 end
