@@ -14,8 +14,8 @@ cask "dosbox-x" do
       end
     end
   else
-    version "0.83.17,20210831230855"
-    sha256 "6bd75b2b09b3a1098832cbe894f0e430bf32b814ac469195022e9f045677e5c5"
+    version "0.83.18,20211001001714"
+    sha256 "3178fe181e6725bd2671f7dcef9b1e99e7399d94bda6ea22a8ccf111885dd7f1"
 
     url "https://github.com/joncampbell123/dosbox-x/releases/download/dosbox-x-v#{version.before_comma}/dosbox-x-macosx-arm64-#{version.after_comma}.zip",
         verified: "github.com/joncampbell123/dosbox-x/"
