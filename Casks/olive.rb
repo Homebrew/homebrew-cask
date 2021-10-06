@@ -10,7 +10,7 @@ cask "olive" do
   livecheck do
     url "https://olivevideoeditor.org/download.php"
     strategy :page_match
-    regex(/data-ver=["']?m64d["']?\s+data-hash=["']?([0-9a-f]+)["']?/i)
+    regex(/golegacy\.php\?hash=(.*)\&type=/i)
   end
 
   app "Olive.app"
@@ -18,7 +18,7 @@ cask "olive" do
   uninstall rmdir: "~/Library/Application Support/olivevideoeditor.org{/Olive,}"
 
   zap trash: [
-    "~/Library/Preferences/olivevideoeditor.org",
     "~/Library/Preferences/com.*.Olive.plist",
+    "~/Library/Preferences/olivevideoeditor.org",
   ]
 end
