@@ -1,7 +1,7 @@
 cask "boxcryptor" do
   if MacOS.version <= :catalina
-    version "2.42.1425"
-    sha256 "8150c2119c30775a0f9401c3f11c338b30ae22d6f0eb08282d9b5114b01ca77b"
+    version "2.42.1436"
+    sha256 "894e3d5dcee1454ef4259cd45eb4828dcda806d229630e66c2b0c10fca5c7e3a"
 
     livecheck do
       url "https://www.boxcryptor.com/en/help/about/macos/"
