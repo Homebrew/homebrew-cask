@@ -7,6 +7,12 @@ cask "securesafe" do
   desc "Highly secure online storage with password manager"
   homepage "https://www.securesafe.com/"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(/securesafe-(\d+(?:\.\d+)*)\.pkg/i)
+  end
+
   depends_on macos: ">= :mojave"
 
   pkg "securesafe-#{version}.pkg"
