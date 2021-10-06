@@ -5,7 +5,6 @@ cask "chromium" do
 
   url "https://commondatastorage.googleapis.com/chromium-browser-snapshots/#{arch}/#{version}/chrome-mac.zip",
       verified: "commondatastorage.googleapis.com/chromium-browser-snapshots/"
-
   if Hardware::CPU.intel?
     sha256 "d4365f526d3c6fda2c37457cb960373dbf05c61727972639ce740535a6ec3dc0"
   else
