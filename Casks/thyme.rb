@@ -11,7 +11,7 @@ cask "thyme" do
   app "Thyme.app"
 
   zap trash: [
-  "~/Library/Application Support/Thyme",
-  "~/Library/Preferences/com.joaomoreno.Thyme.plist",
-]
+    "~/Library/Application Support/Thyme",
+    "~/Library/Preferences/com.joaomoreno.Thyme.plist",
+  ]
 end
