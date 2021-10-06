@@ -1,31 +1,24 @@
 cask "chromium" do
+  arch = Hardware::CPU.intel? ? "Mac" : "Mac_Arm"
+
+  version "928615"
+
+  url "https://commondatastorage.googleapis.com/chromium-browser-snapshots/#{arch}/#{version}/chrome-mac.zip",
+      verified: "commondatastorage.googleapis.com/chromium-browser-snapshots/"
   if Hardware::CPU.intel?
-    version "926705"
-    sha256 "689e5e5b7d56df326387927e9cdac26882b937e58ba99150c32059521fdde86c"
-
-    url "https://commondatastorage.googleapis.com/chromium-browser-snapshots/Mac/#{version}/chrome-mac.zip",
-        verified: "commondatastorage.googleapis.com/chromium-browser-snapshots/Mac/"
-
-    livecheck do
-      url "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac%2FLAST_CHANGE?alt=media"
-      regex(/v?(\d+(?:\.\d+)*)/i)
-    end
+    sha256 "d4365f526d3c6fda2c37457cb960373dbf05c61727972639ce740535a6ec3dc0"
   else
-    version "926706"
     sha256 "b697d2d096fa2fcab368058ba60a609d136fce6030483cca79cb33edc50ca5b7"
-
-    url "https://commondatastorage.googleapis.com/chromium-browser-snapshots/Mac_Arm/#{version}/chrome-mac.zip",
-        verified: "commondatastorage.googleapis.com/chromium-browser-snapshots/Mac_Arm/"
-
-    livecheck do
-      url "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac_Arm%2FLAST_CHANGE?alt=media"
-      regex(/v?(\d+(?:\.\d+)*)/i)
-    end
   end
 
   name "Chromium"
   desc "Free and open-source web browser"
   homepage "https://www.chromium.org/Home"
+
+  livecheck do
+    url "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/#{arch}%2FLAST_CHANGE?alt=media"
+    regex(/v?(\d+(?:\.\d+)*)/i)
+  end
 
   conflicts_with cask: [
     "eloston-chromium",
