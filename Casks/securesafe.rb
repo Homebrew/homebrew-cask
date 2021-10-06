@@ -8,7 +8,7 @@ cask "securesafe" do
   homepage "https://www.securesafe.com/"
 
   livecheck do
-    url :homepage
+    url "https://www.securesafe.com/userdata/downloads"
     strategy :page_match
     regex(/securesafe-(\d+(?:\.\d+)*)\.pkg/i)
   end
