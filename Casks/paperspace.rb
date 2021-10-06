@@ -7,5 +7,13 @@ cask "paperspace" do
   desc "Desktop app for the Paperspace cloud computing platform"
   homepage "https://www.paperspace.com/app/"
 
+  livecheck do
+    # curl -H 'Content-Type: application/json' \
+    #   --data-binary \
+    #   '{"component": "paperspaceInstaller", "os": "mac"}' \
+    #   https://api.paperspace.io/receivers/latestVersion
+    skip "No version information available"
+  end
+
   app "Paperspace.app"
 end
