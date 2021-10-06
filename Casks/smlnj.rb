@@ -5,6 +5,7 @@ cask "smlnj" do
   url "http://smlnj.cs.uchicago.edu/dist/working/#{version}/smlnj-amd64-#{version}.pkg",
       verified: "smlnj.cs.uchicago.edu/"
   name "Standard ML of New Jersey"
+  desc "Compiler for the Standard ML '97 programming language"
   homepage "https://www.smlnj.org/"
 
   livecheck do
