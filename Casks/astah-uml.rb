@@ -1,6 +1,6 @@
 cask "astah-uml" do
-  version "8.4.0,8fdff6"
-  sha256 "0015a09556c281c76c40dc99476bc75be8e41e990ecde12e2e2ffab1fb4c7cd6"
+  version "8.4.1,827bdf"
+  sha256 "d71853df04a935ee04d11bee3d06bb0688f1220e9348f09d2db058189982a870"
 
   url "https://cdn.change-vision.com/files/astah-uml-#{version.before_comma.dots_to_underscores}-#{version.after_comma}-MacOs.dmg",
       verified: "cdn.change-vision.com/files/"
