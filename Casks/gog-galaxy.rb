@@ -8,7 +8,7 @@ cask "gog-galaxy" do
   homepage "https://www.gog.com/galaxy"
 
   livecheck do
-    url "https://gog.com/galaxy"
+    url :homepage
     regex(%r{href=.*?/galaxy_client_(\d+(?:\.\d+)*a?)\.pkg}i)
   end
 
@@ -18,9 +18,9 @@ cask "gog-galaxy" do
 
   uninstall delete:    "/Applications/GOG Galaxy.app",
             launchctl: [
+              "com.gog.galaxy.autoLauncher",
               "com.gog.galaxy.ClientService",
               "com.gog.galaxy.commservice",
-              "com.gog.galaxy.autoLauncher",
             ]
 
   zap trash: [
