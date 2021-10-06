@@ -5,6 +5,7 @@ cask "squirrelsql" do
   url "https://downloads.sourceforge.net/squirrel-sql/1-stable/#{version}/squirrel-sql-#{version}-MACOSX-install.jar",
       verified: "sourceforge.net/squirrel-sql/"
   name "SQuirrel SQL"
+  desc "Graphical Java program for viewing the structure of a JDBC compliant database"
   homepage "http://www.squirrelsql.org/"
 
   container type: :naked
