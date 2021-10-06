@@ -4,7 +4,7 @@ cask "tabby" do
   version "1.0.158"
 
   url "https://github.com/Eugeny/tabby/releases/download/v#{version}/tabby-#{version}-macos-#{arch}.zip",
-    verified: "github.com/Eugeny/tabby/"
+      verified: "github.com/Eugeny/tabby/"
   if Hardware::CPU.intel?
     sha256 "490745d01072c95572d42e34ea1a0152c14ea8d5301c2c66c2cbc13a78ee2d20"
   else
