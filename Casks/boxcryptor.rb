@@ -1,15 +1,15 @@
 cask "boxcryptor" do
   if MacOS.version <= :catalina
-    version "2.42.1425"
-    sha256 "8150c2119c30775a0f9401c3f11c338b30ae22d6f0eb08282d9b5114b01ca77b"
+    version "2.42.1436"
+    sha256 "894e3d5dcee1454ef4259cd45eb4828dcda806d229630e66c2b0c10fca5c7e3a"
 
     livecheck do
       url "https://www.boxcryptor.com/en/help/about/macos/"
       regex(/Download\s+v?(\d+(?:\.\d+)+)\s+for\s+macOS\s+10\.1[0-5]/i)
     end
   else
-    version "2.42.1426"
-    sha256 "d7c7f730985fbbf941f2df7a79b194eddcf5690cd2e3d00782d5039e70da14a6"
+    version "2.42.1437"
+    sha256 "6049e369667e78d241cce22e8841bffe96745f078bfb17f4511102d3beaf97f7"
 
     livecheck do
       url "https://www.boxcryptor.com/l/download-macosx"
