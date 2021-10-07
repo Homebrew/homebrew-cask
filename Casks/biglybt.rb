@@ -8,6 +8,8 @@ cask "biglybt" do
   desc "Bittorrent client based on the Azureus open source project"
   homepage "https://www.biglybt.com/"
 
+  depends_on macos: ">= :el_capitan"
+
   preflight do
     system_command "#{staged_path}/BiglyBT Installer.app/Contents/MacOS/JavaApplicationStub",
                    args:         [
