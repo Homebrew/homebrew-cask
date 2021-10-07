@@ -1,4 +1,4 @@
-cask "eanderson-drawj2d" do
+cask "drawj2d" do
   version "1.3.0"
   sha256 "a79c1224213e2591762a14b69bd91bf942e8b4b40a90d5640f7b5341847a57b9"
 
