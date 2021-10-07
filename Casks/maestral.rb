@@ -9,6 +9,7 @@ cask "maestral" do
   homepage "https://maestral.app/"
 
   app "Maestral.app"
+  binary "#{appdir}/Maestral.app/Contents/MacOS/maestral-cli", target: "maestral"
 
   zap trash: [
     "~/Library/Application Support/maestral",
