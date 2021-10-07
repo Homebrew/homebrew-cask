@@ -2,13 +2,20 @@ cask "wine-stable" do
   version "6.0.1"
   sha256 "33cd52c616b963d054313b5fd3ec7b855623087e3e6da1e340d702ff31f0b0ed"
 
-  # Current winehq packages are depreciated these are WIP packages from the new maintainers
-  # packages will eventually be pushed to Winehq
+  # Current winehq packages are deprecated and these are packages from
+  # the new maintainers that will eventually be pushed to Winehq.
+  # See https://www.winehq.org/pipermail/wine-devel/2021-July/191504.html
   url "https://github.com/Gcenx/macOS_Wine_builds/releases/download/#{version}/wine-stable-#{version}-osx64.tar.xz",
       verified: "https://github.com/Gcenx/macOS_Wine_builds/"
   name "WineHQ-stable"
   desc "Compatibility layer to run Windows applications"
   homepage "https://wiki.winehq.org/MacOS"
+
+  livecheck do
+    url "https://github.com/Gcenx/macOS_Wine_builds/releases"
+    strategt :page_match
+    regex(/wine[._-]stable[._-]v?(\d+(?:\.\d+)*)[._-]osx64\.tar\.xz/i)
+  end
 
   conflicts_with cask: [
     "wine-devel",
@@ -35,14 +42,14 @@ cask "wine-stable" do
   binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/wineserver"
 
   caveats <<~EOS
-    #{token} supports both 32-bit and 64-bit now. It is compatible with your
-    existing 32-bit wine prefix, but it will now default to 64-bit when you
-    create a new wine prefix. The architecture can be selected using the
-      WINEARCH environment variable which can be set to either win32 or
-    win64.
+    #{token} supports both 32-bit and 64-bit. It is compatible with an existing
+    32-bit wine prefix, but it will now default to 64-bit when you create a new
+    wine prefix. The architecture can be selected using the WINEARCH environment
+    variable which can be set to either win32 or win64.
 
     To create a new pure 32-bit prefix, you can run:
-        $ WINEARCH=win32 WINEPREFIX=~/.wine32 winecfg
+      $ WINEARCH=win32 WINEPREFIX=~/.wine32 winecfg
+
     See the Wine FAQ for details: https://wiki.winehq.org/FAQ#Wineprefixes
   EOS
 end
