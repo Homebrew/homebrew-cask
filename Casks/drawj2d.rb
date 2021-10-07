@@ -7,9 +7,14 @@ cask "drawj2d" do
   desc "Creates technical line drawings using a descriptive language"
   homepage "http://drawj2d.sourceforge.net/"
 
-  container type: :zip
+  livecheck do
+    url "https://sourceforge.net/projects/drawj2d/files/latest/download"
+    strategy :header_match
+  end
 
   shimscript = "#{staged_path}/drawj2d.wrapper.sh"
+  container type: :zip
+
   binary shimscript, target: "drawj2d"
 
   preflight do
