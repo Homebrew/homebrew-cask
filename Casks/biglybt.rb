@@ -25,6 +25,12 @@ cask "biglybt" do
 
   uninstall delete: "#{appdir}/BiglyBT"
 
+  zap trash: [
+    "~/Library/Application Support/BiglyBT",
+    "~/Library/Preferences/com.biglybt.plist",
+    "~/Library/Saved Application State/com.biglybt.savedState",
+  ]
+
   caveats do
     depends_on_java "8+"
   end
