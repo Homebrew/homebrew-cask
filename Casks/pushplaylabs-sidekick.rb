@@ -13,7 +13,7 @@ cask "pushplaylabs-sidekick" do
       end
     end
   else
-    version "92.11.5.13226-6bc0c48"
+    version "92.11.5.13226,6bc0c48"
     sha256 "30ccd7071169c062fe227bcc049f0edbe62bfa07ef74100f4d4fd93002a9272c"
 
     url "https://sidekick-cdn-production.meetsidekick.com/builds/sidekick-mac-release-universal-#{version.before_comma}-#{version.after_comma}-df.dmg"
