@@ -13,4 +13,8 @@ cask "xnviewmp" do
   end
 
   app "XnViewMP.app"
+
+  postflight do
+    system "xattr", "-d", "com.apple.quarantine", appdir/"XnViewMP.app"
+  end
 end
