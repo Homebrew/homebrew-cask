@@ -1,6 +1,6 @@
 cask "samsung-dex" do
-  version "20210112132845263"
-  sha256 "cd9540ea8b1595399b5d99b0ba0d549d0ec1dcbba4dcf4cf006e3f795e0b9cb0"
+  version "20210720162553369"
+  sha256 "2e45b967a25f5ad04a401a88a4b35e837123c6b9323f6c7c3d6ba0755f4397a6"
 
   url "https://downloadcenter.samsung.com/content/SW/#{version[0..5]}/#{version}/SamsungDeXSetupMac.dmg"
   name "Samsung DeX"
