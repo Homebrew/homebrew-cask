@@ -1,4 +1,4 @@
-cask "ankama-launcher" do
+cask "ankama" do
   version :latest
   sha256 :no_check
 
