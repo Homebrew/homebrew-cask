@@ -10,7 +10,7 @@ cask "wakfu" do
   desc "Wakfu is a massively multiplayer online role-playing video game"
   homepage "https://www.wakfu.com/"
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :sierra"
 
   app "Wakfu.app"
 
