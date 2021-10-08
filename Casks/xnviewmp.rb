@@ -15,8 +15,8 @@ cask "xnviewmp" do
   app "XnViewMP.app"
 
   def caveats
-    "XnViewMP is not signed, so you will see 'can't be opened because it is from an unidentified developer' issue.\n" +
-    "You need to right-click-option-open it to disable it.\n" +
-    "Or at your own risk, use `brew reinstall xnviewmp --cask --no-quarantine`."
+    "XnViewMP is not signed, so you will see 'can't be opened because it is from an unidentified developer' issue.\n" \
+      "You need to right-click-option-open it to disable it.\n" \
+      "Or at your own risk, use `brew reinstall xnviewmp --cask --no-quarantine`."
   end
 end
