@@ -5,7 +5,12 @@ cask "pg-commander" do
   url "https://eggerapps-downloads.s3.amazonaws.com/pgcommander-#{version}.zip",
       verified: "eggerapps-downloads.s3.amazonaws.com/"
   name "PG Commander"
+  desc "PostgreSQL client"
   homepage "https://eggerapps.at/pgcommander/"
 
   app "PG Commander.app"
+
+  caveats do
+    discontinued
+  end
 end
