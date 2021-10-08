@@ -13,4 +13,12 @@ cask "wakfu" do
   depends_on macos: ">= :catalina"
 
   app "Wakfu.app"
+
+  caveats do
+    depends_on_java "8+"
+    <<~EOS
+      To set the Java VM to use:
+        https://support.ankama.com/hc/en-us/articles/360016121014-Recommended-Computer-Configurations
+    EOS
+  end
 end
