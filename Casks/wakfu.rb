@@ -7,7 +7,7 @@ cask "wakfu" do
   end
 
   name "Wakfu"
-  desc "Wakfu is a massively multiplayer online role-playing video game"
+  desc "Is a massively multiplayer online role-playing video game"
   homepage "https://www.wakfu.com/"
 
   depends_on macos: ">= :sierra"
