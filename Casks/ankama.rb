@@ -10,7 +10,7 @@ cask "ankama" do
   desc "Discover the portal you can use to download all of Ankama's PC games"
   homepage "https://www.ankama.com/en/launcher"
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :sierra"
 
   app "Ankama Launcher.app"
 end
