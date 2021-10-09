@@ -1,8 +1,8 @@
 cask "texshop" do
-  version "4.67"
-  sha256 "f84863b0aa6954510bc6702f01a4b9b4b8429fe3eb0e69e7c47a73fa2d72eeae"
+  version "4.68"
+  sha256 :no_check
 
-  url "https://pages.uoregon.edu/koch/texshop/texshop-64/texshop#{version.no_dots}.zip"
+  url "https://pages.uoregon.edu/koch/texshop/texshop-64/texshop.zip"
   name "TeXShop"
   desc "TeX previewer"
   homepage "https://pages.uoregon.edu/koch/texshop/"
