@@ -14,6 +14,8 @@ cask "ankama" do
 
   app "Ankama Launcher.app"
 
+  uninstall quit: "Ankama Launcher"
+
   zap trash: [
     "~/Library/Application Support/Ankama Launcher",
     "~/Library/Preferences/com.ankama.zaap.plist",
