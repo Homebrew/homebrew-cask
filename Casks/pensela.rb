@@ -4,7 +4,7 @@ cask "pensela" do
 
   url "https://github.com/weiameili/Pensela/releases/download/v#{version}/Pensela-#{version}.dmg"
   name "Pensela"
-  desc "Swiss Army Knife of Screen Annotation Tools"
+  desc "Screen Annotation Tool"
   homepage "https://github.com/weiameili/Pensela"
 
   app "Pensela.app"
