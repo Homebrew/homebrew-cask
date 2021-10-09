@@ -13,4 +13,11 @@ cask "ankama" do
   depends_on macos: ">= :sierra"
 
   app "Ankama Launcher.app"
+
+  zap trash: [
+    "~/.cura",
+    "~/Library/Application Support/Ankama Launcher",
+    "~/Library/Preferences/com.ankama.zaap.plist",
+    "~/Library/Saved Application State/com.ankama.zaap.savedState",
+  ]
 end
