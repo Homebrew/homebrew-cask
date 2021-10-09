@@ -3,12 +3,23 @@ cask "ankama" do
   sha256 :no_check
 
   language "en", default: true do
-    url "https://download.ankama.com/launcher/full/mac/"
+    desc "Discover the portal you can use to download all of Ankama's PC games"
+    homepage "https://www.ankama.com/en/launcher"
   end
 
+  language "fr" do
+    desc "Découvre le portail qui te permet de télécharger tous les jeux PC d'Ankama"
+    homepage "https://www.ankama.com/fr/launcher"
+  end
+
+  language "es" do
+    desc "Descubre el portal para descargar todos los juegos de PC de Ankama"
+    homepage "https://www.ankama.com/es/lanzar"
+  end
+
+  url "https://download.ankama.com/launcher/full/mac/"
+
   name "Ankama Launcher"
-  desc "Discover the portal you can use to download all of Ankama's PC games"
-  homepage "https://www.ankama.com/en/launcher"
 
   depends_on macos: ">= :sierra"
 
