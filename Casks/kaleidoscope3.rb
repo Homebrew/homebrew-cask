@@ -3,14 +3,9 @@ cask "kaleidoscope3" do
   sha256 "ff89bee907b911678009ebdcf75423e940b11d48b0379d22a7873d562a91f500"
 
   url "https://updates.kaleidoscope.app/v3/prod/Kaleidoscope-#{version}-2013.app.zip"
-  name "kaleidoscope3"
+  name "Kaleidoscope"
   desc "Spot and merge differences in text and image files or folders"
   homepage "https://www.kaleidoscope.app/"
-
-  livecheck do
-    url "https://updates.kaleidoscope.app/v#{version}/prod/appcast"
-    strategy :sparkle
-  end
 
   auto_updates true
   depends_on macos: ">= :big_sur"
