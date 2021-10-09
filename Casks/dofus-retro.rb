@@ -21,6 +21,6 @@ cask "dofus-retro" do
     "~/Library/Application Support/Dofus Retro",
     "~/Library/Preferences/com.dofus.d1elauncher.plist",
     "~/Library/Application Support/zaap/repositories/production/dofus",
-    "~/Library/Saved Application State/com.dofus.d1elauncher.savedState"
+    "~/Library/Saved Application State/com.dofus.d1elauncher.savedState",
   ]
 end
