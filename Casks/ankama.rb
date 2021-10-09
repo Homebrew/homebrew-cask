@@ -15,7 +15,6 @@ cask "ankama" do
   app "Ankama Launcher.app"
 
   zap trash: [
-    "~/.cura",
     "~/Library/Application Support/Ankama Launcher",
     "~/Library/Preferences/com.ankama.zaap.plist",
     "~/Library/Saved Application State/com.ankama.zaap.savedState",
