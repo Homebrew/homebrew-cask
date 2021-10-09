@@ -1,13 +1,22 @@
 cask "powerpanel" do
-  version "2.2.0"
-  sha256 "41c29dfb1ecf68294dd81199bdebb12aed42382988d1e03798d492a9bbd2fe71"
+  version "2.3.0"
+  sha256 "5500b9ff1528c72ef2dacf0c03558b9cf3cbb68a5cc0bc0657c51bf49566b847"
 
   url "https://dl4jz3rbrsfum.cloudfront.net/software/ppp_macos_#{version.dots_to_underscores}.dmg",
       verified: "dl4jz3rbrsfum.cloudfront.net/"
   name "CyberPower PowerPanel Personal"
+  desc "Manage and control UPS systems"
   homepage "https://www.cyberpowersystems.com/products/software/power-panel-personal/"
 
-  depends_on macos: ">= :sierra"
+  livecheck do
+    url :homepage
+    strategy :page_match do |page|
+      v = page[%r{href=.*?/ppp_macos_(\d+(?:_\d+)*)\.dmg}i, 1]
+      v.tr("_", ".")
+    end
+  end
+
+  depends_on macos: ">= :mojave"
 
   installer manual: "CyberPower PowerPanel Personal Installer.app"
 
