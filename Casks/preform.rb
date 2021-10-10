@@ -12,6 +12,8 @@ cask "preform" do
     url "https://formlabs.com/download-preform-mac/"
     strategy :page_match do |page|
       match = page.match(%r{/PreForm_mac_(\d+(?:\.\d+)*)_release_releaser_(\d+(?:[._-]\d+)*)\.dmg}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end
