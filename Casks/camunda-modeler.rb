@@ -13,4 +13,11 @@ cask "camunda-modeler" do
   end
 
   app "Camunda Modeler.app"
+
+  zap trash: [
+    "~/Library/Application Support/camunda-modeler",
+    "~/Library/Logs/Camunda Modeler",
+    "~/Library/Preferences/com.camunda.CamundaModeler.plist",
+    "~/Library/Saved Application State/com.camunda.CamundaModeler.savedState",
+  ]
 end
