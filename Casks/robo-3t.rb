@@ -22,6 +22,10 @@ cask "robo-3t" do
 
   zap trash: [
     "~/.3T/robo-3t/",
+    "~/Library/Application Support/Robo 3T",
+    "~/Library/Caches/Robo 3T",
+    "~/Library/Preferences/com.3tsoftwarelabs.robo3t.plist",
+    "~/Library/Saved Application State/com.3tsoftwarelabs.robo3t.savedState",
     "~/Library/Saved Application State/Robo 3T.savedState",
   ]
 end
