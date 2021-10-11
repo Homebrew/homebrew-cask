@@ -14,4 +14,10 @@ cask "dupeguru" do
   end
 
   app "dupeguru.app"
+
+  zap trash: [
+    "~/Library/Application Support/dupeGuru",
+    "~/Library/Preferences/com.hardcoded-software.dupeguru.plist",
+    "~/Library/Saved Application State/com.hardcoded-software.dupeguru.savedState",
+  ]
 end
