@@ -1,9 +1,9 @@
-cask "archi-modelrepository-plugin" do
+cask "coarchi" do
   version "0.7.1.202102021056"
   sha256 "ee15eea65d1f12441a6760237e5f72a328889226fc75cde6911d6aeaee57a924"
 
   url "https://www.archimatetool.com/downloads/coarchi/coArchi_#{version}.archiplugin"
-  name "coArchi plugin"
+  name "coArchi plugin for Archi"
   desc "Model Collaboration plugin for Archi"
   homepage "https://www.archimatetool.com/plugins/#coArchi"
 
