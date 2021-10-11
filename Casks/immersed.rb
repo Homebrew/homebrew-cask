@@ -2,7 +2,8 @@ cask "immersed" do
   version "15.7,129"
   sha256 :no_check
 
-  url "https://immersedvr.com/dl/Immersed.dmg"
+  url "https://immersed.com/dl/Immersed.dmg",
+      verified: "immersed.com/dl/"
   name "Immersed"
   desc "Desktop Agent for VR Office"
   homepage "https://immersedvr.com/"
