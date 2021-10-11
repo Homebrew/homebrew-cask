@@ -1,6 +1,6 @@
 cask "rancher" do
-  version "0.5.0"
-  sha256 "0ebdfb3e070e1c525a08730ccea761a040d366fa800c735870ff328080f8fa55"
+  version "0.6.0"
+  sha256 "6be631de519a3d8d657047b43d6f5981c7f00a44509a0c4ddede3f9fdb85344f"
 
   url "https://github.com/rancher-sandbox/rancher-desktop/releases/download/v#{version}/Rancher.Desktop-#{version}.dmg",
       verified: "github.com/rancher-sandbox/rancher-desktop/"
