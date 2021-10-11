@@ -1,6 +1,6 @@
 cask "ueli" do
-  version "8.17.1"
-  sha256 "ecc88a52161d0a556132f9bbbd8a78d64a686f2432654fb9ceae242e3034b16d"
+  version "8.18.0"
+  sha256 "6c8317f274df053d427fbe25932e23c69c60c0bb10c0bd91d1943b072d6ec5af"
 
   url "https://github.com/oliverschwendener/ueli/releases/download/v#{version}/ueli-#{version}.dmg",
       verified: "github.com/oliverschwendener/ueli/"
@@ -18,8 +18,8 @@ cask "ueli" do
   uninstall quit: "ueli"
 
   zap trash: [
-    "~/Library/Logs/ueli",
     "~/Library/Application Support/ueli",
+    "~/Library/Logs/ueli",
     "~/Library/Preferences/com.electron.ueli.plist",
   ]
 end
