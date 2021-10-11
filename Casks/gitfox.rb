@@ -16,6 +16,7 @@ cask "gitfox" do
   auto_updates true
 
   app "Gitfox.app"
+  binary "#{appdir}/Gitfox.app/Contents/SharedSupport/bin/gf"
 
   zap trash: [
     "~/Library/Application Support/com.bytieful.Gitfox",
