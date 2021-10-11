@@ -4,6 +4,7 @@ cask "010-editor" do
 
   url "https://download.sweetscape.com/010EditorMac64Installer#{version}.dmg"
   name "010 Editor"
+  desc "Text editor"
   homepage "https://www.sweetscape.com/"
 
   livecheck do
