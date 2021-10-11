@@ -29,7 +29,11 @@ cask "r" do
 
   depends_on macos: ">= :el_capitan"
 
-  pkg "R-#{version}.pkg"
+  if Hardware::CPU.intel?
+    pkg "R-#{version}.pkg"
+  else
+    pkg "R-#{version}-arm64.pkg"
+  end
 
   uninstall pkgutil: [
     "org.r-project*",
