@@ -1,27 +1,18 @@
 cask "ankama" do
-  version :latest
+  version "3.5.1.12738"
   sha256 :no_check
 
-  language "en", default: true do
-    desc "Discover the portal you can use to download all of Ankama's PC games"
-    homepage "https://www.ankama.com/en/launcher"
-    "en"
-  end
-  language "fr" do
-    desc "Découvre le portail qui te permet de télécharger tous les jeux PC d'Ankama"
-    homepage "https://www.ankama.com/fr/launcher"
-    "fr"
-  end
-  language "es" do
-    desc "Descubre el portal para descargar todos los juegos de PC de Ankama"
-    homepage "https://www.ankama.com/es/lanzar"
-    "es"
-  end
-
-  url "https://download.ankama.com/launcher/full/mac/"
+  url "https://launcher.cdn.ankama.com/installers/production/Ankama%20Launcher-Setup.dmg"
   name "Ankama Launcher"
+  desc "Portal to download Ankama's PC games"
+  homepage "https://www.ankama.com/en/launcher"
 
-  depends_on macos: ">= :sierra"
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Ankama Launcher.app"
 
