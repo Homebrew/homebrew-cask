@@ -16,6 +16,7 @@ cask "couchbase-server-enterprise" do
   end
 
   name "Couchbase Server"
+  desc "Distributed NoSQL cloud database"
   homepage "https://www.couchbase.com/"
 
   livecheck do
