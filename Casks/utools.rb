@@ -9,8 +9,8 @@ cask "utools" do
   homepage "https://u.tools/index.html"
 
   livecheck do
-    url "https://publish.u-tools.cn/version2/latest-mac.yml?noCache=true"
-    strategy :electron_builder
+    url :homepage
+    regex(/uTools[._-]v?(\d+(?:\.\d+)*)\.dmg/i)
   end
 
   auto_updates true
