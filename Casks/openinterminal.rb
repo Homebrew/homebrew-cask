@@ -10,4 +10,14 @@ cask "openinterminal" do
   depends_on macos: ">= :sierra"
 
   app "OpenInTerminal.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/wang.jianing.app.OpenInTerminal",
+    "~/Library/Application Scripts/wang.jianing.app.OpenInTerminal.OpenInTerminalFinderExtension",
+    "~/Library/Application Scripts/wang.jianing.app.OpenInTerminalHelper",
+    "~/Library/Containers/wang.jianing.app.OpenInTerminal.OpenInTerminalFinderExtension",
+    "~/Library/Containers/wang.jianing.app.OpenInTerminalHelper",
+    "~/Library/Group Containers/group.wang.jianing.app.OpenInTerminal",
+    "~/Library/Logs/OpenInTerminal",
+  ]
 end
