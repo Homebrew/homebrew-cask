@@ -11,6 +11,7 @@ cask "jupyterlab" do
 
   uninstall pkgutil: [
     "com.electron.jupyterlabapp",
+    "com.electron.jupyterlab-desktop",
   ],
             delete:  [
               "/Applications/JupyterLab.app",
