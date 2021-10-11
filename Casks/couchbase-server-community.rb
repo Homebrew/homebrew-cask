@@ -4,6 +4,7 @@ cask "couchbase-server-community" do
 
   url "https://packages.couchbase.com/releases/#{version}/couchbase-server-community_#{version}-macos_x86_64.dmg"
   name "Couchbase Server"
+  desc "Distributed NoSQL cloud database"
   homepage "https://www.couchbase.com/"
 
   livecheck do
