@@ -15,10 +15,10 @@ cask "stats" do
   uninstall quit: "eu.exelban.Stats"
 
   zap trash: [
-    "~/Library/Preferences/eu.exelban.Stats.plist",
     "~/Library/Application Scripts/eu.exelban.Stats.LaunchAtLogin",
+    "~/Library/Caches/eu.exelban.Stats",
     "~/Library/Containers/eu.exelban.Stats.LaunchAtLogin",
     "~/Library/Cookies/eu.exelban.Stats.binarycookies",
-    "~/Library/Caches/eu.exelban.Stats",
+    "~/Library/Preferences/eu.exelban.Stats.plist",
   ]
 end
