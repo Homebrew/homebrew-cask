@@ -18,4 +18,13 @@ cask "snagit" do
   depends_on macos: ">= :mojave"
 
   app "Snagit #{version.major}.app"
+
+  zap trash: [
+    "~/Library/Caches/com.TechSmith.Snagit*",
+    "~/Library/Group Containers/*.com.techsmith.snagit",
+    "~/Library/Preferences/com.TechSmith.Snagit*.plist",
+    "~/Library/Preferences/com.techsmith.snagit.capturehelper*.plist",
+    "~/Library/Saved Application State/com.TechSmith.Snagit*.savedState",
+    "~/Library/WebKit/com.TechSmith.Snagit*",
+  ]
 end
