@@ -2,8 +2,7 @@ cask "tenor" do
   version "2.0.5,21"
   sha256 :no_check
 
-  url "https://media.tenor.com/mac/bin/GIFforMac.dmg",
-      verified: "media.tenor.com/mac/bin/"
+  url "https://media.tenor.com/mac/bin/GIFforMac.dmg"
   name "Tenor"
   desc "Send, share and save gifs from the menu bar"
   homepage "https://tenor.com/mac"
