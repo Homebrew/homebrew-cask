@@ -12,4 +12,9 @@ cask "spacelauncher" do
   end
 
   app "SpaceLauncher.app"
+
+  zap trash: [
+    "~/Library/Application Support/name.guoc.SpaceLauncher",
+    "~/Library/Preferences/name.guoc.SpaceLauncher.plist",
+  ]
 end
