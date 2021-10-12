@@ -8,4 +8,13 @@ cask "sdm" do
   homepage "https://www.strongdm.com/"
 
   app "SDM.app"
+
+  zap trash: [
+    "~/Library/Application Support/SDM",
+    "~/Library/Caches/com.electron.sdm",
+    "~/Library/Caches/com.electron.sdm.ShipIt",
+    "~/Library/Preferences/com.electron.sdm.plist",
+    "~/Library/Saved Application State/com.electron.sdm.savedState",
+    "~/.sdm",
+  ]
 end
