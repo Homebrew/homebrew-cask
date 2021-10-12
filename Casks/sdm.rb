@@ -5,7 +5,7 @@ cask "sdm" do
   url "https://app.strongdm.com/downloads/client/darwin"
   name "sdm"
   desc "Strongdm client"
-  homepage "https://www.strongdm.com/docs/user-guide/client-installation/mac-installation"
+  homepage "https://www.strongdm.com/"
 
   app "SDM.app"
 end
