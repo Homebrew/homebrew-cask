@@ -19,7 +19,6 @@ cask "vlc" do
     regex(%r{href=.*?/vlc[._-]v?(\d+(?:\.\d+)+)(?:[._-][a-z]\w*)?\.dmg}i)
   end
 
-  auto_updates true
   conflicts_with cask: "homebrew/cask-versions/vlc-nightly"
 
   app "VLC.app"
