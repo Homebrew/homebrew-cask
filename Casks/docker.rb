@@ -1,24 +1,13 @@
 cask "docker" do
+  arch = Hardware::CPU.intel? ? "amd64" : "arm64"
+
   version "4.1.1,69879"
 
+  url "https://desktop.docker.com/mac/main/#{arch}/#{version.after_comma}/Docker.dmg"
   if Hardware::CPU.intel?
     sha256 "de479dab3ec14041980167c99e1fef966556e43a07a6e68afb500e1c5465b7ec"
-
-    url "https://desktop.docker.com/mac/main/amd64/#{version.after_comma}/Docker.dmg"
-
-    livecheck do
-      url "https://desktop.docker.com/mac/main/amd64/appcast.xml"
-      strategy :sparkle
-    end
   else
     sha256 "ffeb9ff909396329abc1afb77af442ff2a449ecad183316df8055ecb3ea3e76f"
-
-    url "https://desktop.docker.com/mac/main/arm64/#{version.after_comma}/Docker.dmg"
-
-    livecheck do
-      url "https://desktop.docker.com/mac/main/arm64/appcast.xml"
-      strategy :sparkle
-    end
   end
 
   name "Docker Desktop"
@@ -26,6 +15,11 @@ cask "docker" do
   name "Docker CE"
   desc "App to build and share containerized applications and microservices"
   homepage "https://www.docker.com/products/docker-desktop"
+
+  livecheck do
+    url "https://desktop.docker.com/mac/main/#{arch}/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   conflicts_with formula: %w[
