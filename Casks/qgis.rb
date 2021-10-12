@@ -16,4 +16,10 @@ cask "qgis" do
   end
 
   app "QGIS.app"
+
+  zap trash: [
+    "~/Library/Application Support/QGIS",
+    "~/Library/Caches/QGIS",
+    "~/Library/Saved Application State/org.qgis.qgis*.savedState",
+  ]
 end
