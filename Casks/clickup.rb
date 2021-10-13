@@ -21,4 +21,15 @@ cask "clickup" do
   end
 
   app "ClickUp.app"
+
+  zap trash: [
+    "~/Library/Application Support/ClickUp",
+    "~/Library/Application Support/ClickUp Desktop",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.clickup.desktop-app.sfl2",
+    "~/Library/Caches/com.clickup.desktop-app",
+    "~/Library/Caches/com.clickup.desktop-app.ShipIt",
+    "~/Library/Logs/ClickUp",
+    "~/Library/Preferences/com.clickup.desktop-app.plist",
+    "~/Library/Saved Application State/com.clickup.desktop-app.savedState",
+  ]
 end
