@@ -11,6 +11,8 @@ cask "local" do
     url "https://cdn.localwp.com/stable/latest/mac"
     strategy :header_match do |headers|
       match = headers["location"].match(%r{/(\d+(?:\.\d+)*)\+(\d+)/})
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end
