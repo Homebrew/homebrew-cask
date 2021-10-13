@@ -7,6 +7,11 @@ cask "sdm" do
   desc "Strongdm client"
   homepage "https://www.strongdm.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "SDM.app"
 
   zap trash: [
