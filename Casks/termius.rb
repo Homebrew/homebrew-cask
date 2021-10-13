@@ -1,12 +1,10 @@
 cask "termius" do
+  arch = Hardware::CPU.intel? ? "mac" : "mac-arm64"
+
   version "7.22.1"
   sha256 :no_check
 
-  if Hardware::CPU.intel?
-    url "https://autoupdate.termius.com/mac/Termius.dmg"
-  else
-    url "https://autoupdate.termius.com/mac-arm64/Termius.dmg"
-  end
+  url "https://autoupdate.termius.com/#{arch}/Termius.dmg"
 
   name "Termius"
   desc "SSH client"
