@@ -9,8 +9,11 @@ cask "propresenter" do
 
   livecheck do
     url "https://api.renewedvision.com/v1/pro/upgrade?platform=macos&osVersion=0&appVersion=0&buildNumber=0&includeNotes=0"
-    strategy :page_match do |page|
-      match = page.match(%r{/ProPresenter_(\d+(?:\.\d+)*)_(\d+)\.zip}i)
+    regex(%r{/ProPresenter_(\d+(?:\.\d+)*)_(\d+)\.zip}i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end
