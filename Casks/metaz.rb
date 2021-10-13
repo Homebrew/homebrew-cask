@@ -6,7 +6,7 @@ cask "metaz" do
       verified: "github.com/griff/metaz/"
   name "MetaZ"
   desc "Mp4 meta-data editor"
-  homepage "https://griff.github.io/metaz/"
+  homepage "https://metaz.maven-group.org/"
 
   livecheck do
     url :url
