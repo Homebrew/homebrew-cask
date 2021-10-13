@@ -5,7 +5,6 @@ cask "shadow" do
   sha256 :no_check
 
   url "https://update.shadow.tech/launcher/prod/mac/#{arch}/Shadow.dmg"
-      verified: "commondatastorage.googleapis.com/chromium-browser-snapshots/"
   name "Shadow"
   desc "Your gaming PC powered by Cloud technology"
   homepage "https://shadow.tech/"
