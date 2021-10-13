@@ -5,7 +5,6 @@ cask "termius" do
   sha256 :no_check
 
   url "https://autoupdate.termius.com/#{arch}/Termius.dmg"
-
   name "Termius"
   desc "SSH client"
   homepage "https://www.termius.com/"
