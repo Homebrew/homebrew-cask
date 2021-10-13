@@ -3,8 +3,7 @@ cask "zettlr" do
 
   version "1.8.9"
 
-  url "https://github.com/Zettlr/Zettlr/releases/download/v#{version}/Zettlr-#{version}-#{arch}.dmg",
-      verified: "github.com/Zettlr/Zettlr/"
+  url "https://github.com/Zettlr/Zettlr/releases/download/v#{version}/Zettlr-#{version}-#{arch}.dmg"
   if Hardware::CPU.intel?
     sha256 "4030d9b3a6f7fd7b7fc8a033f4512b09671965293821f892ae4a5554b5f22150"
   else
@@ -13,7 +12,7 @@ cask "zettlr" do
 
   name "Zettlr"
   desc "Open-source markdown editor"
-  homepage "https://www.zettlr.com/"
+  homepage "https://github.com/Zettlr/Zettlr/"
 
   app "Zettlr.app"
 
