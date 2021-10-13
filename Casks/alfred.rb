@@ -11,6 +11,8 @@ cask "alfred" do
     url "https://www.alfredapp.com/app/update#{version.major}/general.xml"
     strategy :page_match do |page|
       match = page.match(/Alfred_(\d(?:\.\d+)*)_(\d+)\.tar\.gz/i)
+      next if match.blank?
+      
       "#{match[1]},#{match[2]}"
     end
   end
