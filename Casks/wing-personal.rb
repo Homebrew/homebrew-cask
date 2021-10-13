@@ -1,14 +1,13 @@
 cask "wing-personal" do
+  arch = Hardware::CPU.intel? ? "intel" : "arm64"
+
   version "8.0.4.0"
 
+  url "https://wingware.com/pub/wing-personal/#{version}/wing-personal-#{version}-#{arch}.dmg"
   if Hardware::CPU.intel?
     sha256 "b64920cae3308f38396e3ffd5e7345c872f44db4462cce34fe6f016179da2392"
-
-    url "https://wingware.com/pub/wing-personal/#{version}/wing-personal-#{version}-intel.dmg"
   else
     sha256 "e1461efb56477d4137a3a35063a94f4738241ebf2bf73caaca620ebd04f6a2dc"
-
-    url "https://wingware.com/pub/wing-personal/#{version}/wing-personal-#{version}-arm64.dmg"
   end
 
   name "Wing Personal"
