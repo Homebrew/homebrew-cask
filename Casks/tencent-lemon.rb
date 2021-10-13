@@ -3,7 +3,7 @@ cask "tencent-lemon" do
   sha256 "3090bfb6121c02a7bf919ad4ef53430c4901543d12f202ca359235dbdcc09a6a"
 
   url "https://pm.myapp.com/invc/xfspeed/qqpcmgr/module_update/Lemon#{version}.dmg",
-      verified: "https://pm.myapp.com/invc/xfspeed/qqpcmgr/module_update/"
+      verified: "pm.myapp.com/invc/xfspeed/qqpcmgr/module_update/"
   name "Tencent Lemon Cleaner"
   desc "Cleanup and system status tool"
   homepage "https://lemon.qq.com/"
