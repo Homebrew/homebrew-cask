@@ -18,14 +18,14 @@ cask "adobe-acrobat-reader" do
 
   uninstall pkgutil:   [
     "com.adobe.acrobat.DC.reader.*",
-    "com.adobe.RdrServicesUpdater",
     "com.adobe.armdc.app.pkg",
+    "com.adobe.RdrServicesUpdater",
   ],
             delete:    "/Applications/Adobe Acrobat Reader DC.app",
             quit:      [
-              "com.adobe.Reader",
-              "com.adobe.AdobeRdrCEFHelper",
               "com.adobe.AdobeRdrCEF",
+              "com.adobe.AdobeRdrCEFHelper",
+              "com.adobe.Reader",
             ],
             launchctl: [
               "com.adobe.ARMDC.Communicator",
@@ -34,11 +34,11 @@ cask "adobe-acrobat-reader" do
             ]
 
   zap trash: [
-    "~/Library/Preferences/com.adobe.Reader.plist",
-    "~/Library/Preferences/com.adobe.AdobeRdrCEFHelper.plist",
-    "~/Library/Preferences/com.adobe.crashreporter.plist",
     "~/Library/Caches/com.adobe.Reader",
     "~/Library/HTTPStorages/com.adobe.Reader.binarycookies",
+    "~/Library/Preferences/com.adobe.AdobeRdrCEFHelper.plist",
+    "~/Library/Preferences/com.adobe.crashreporter.plist",
+    "~/Library/Preferences/com.adobe.Reader.plist",
     "/Library/Preferences/com.adobe.reader.DC.WebResource.plist",
   ]
 end
