@@ -16,8 +16,8 @@ cask "textmate" do
   auto_updates true
   depends_on macos: ">= :sierra"
 
-  app "TextMate.app"
-  binary "#{appdir}/TextMate.app/Contents/Resources/mate"
+  app "TextMate_#{version}/TextMate.app "
+  binary "#{appdir}/TextMate.app/Contents/MacOS/mate"
 
   uninstall quit: "com.macromates.TextMate"
 
