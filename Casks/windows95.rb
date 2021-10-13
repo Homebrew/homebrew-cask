@@ -18,4 +18,12 @@ cask "windows95" do
   auto_updates true
 
   app "windows95.app"
+
+  zap trash: [
+    "~/Library/Application Support/windows95",
+    "~/Library/Caches/com.felixrieseberg.windows95",
+    "~/Library/Caches/com.felixrieseberg.windows95.ShipIt",
+    "~/Library/Preferences/com.felixrieseberg.windows95.plist",
+    "~/Library/Saved Application State/com.felixrieseberg.windows95.savedState",
+  ]
 end
