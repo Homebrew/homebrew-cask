@@ -6,7 +6,12 @@ cask "djl-bench" do
       verified: "publish.djl.ai/djl-bench"
   name "djl-bench"
   desc "Universal machine learning model benchmark tool"
-  homepage "https://github.com/deepjavalibrary/djl/tree/master/extensions/benchmark"
+  homepage "https://djl.ai/"
+
+  livecheck do
+    url "https://github.com/deepjavalibrary/djl/releases"
+    strategy :github_latest
+  end
 
   binary "benchmark-#{version}/bin/benchmark", target: "djl-bench"
 end
