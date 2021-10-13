@@ -5,7 +5,7 @@ cask "djl-bench" do
   url "https://publish.djl.ai/djl-bench/#{version}/benchmark-#{version}.zip"
   name "djl-bench"
   desc "Universal machine learning model benchmark tool"
-  homepage "https://djl.ai/"
+  homepage "https://djl.ai/extensions/benchmark/"
 
   livecheck do
     url "https://github.com/deepjavalibrary/djl/releases"
