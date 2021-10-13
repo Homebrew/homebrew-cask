@@ -3,7 +3,7 @@ cask "mamp" do
 
   version "6.6"
 
-  url "https://downloads.mamp.info/MAMP-PRO/releases/#{version}/MAMP_MAMP_PRO_#{version}-{arch}.pkg"
+  url "https://downloads.mamp.info/MAMP-PRO/releases/#{version}/MAMP_MAMP_PRO_#{version}-#{arch}.pkg"
   if Hardware::CPU.intel?
     sha256 "306b101a84251655b8e1d50ef1c4d59901d300f85d0e03910701d8d418d4a4d4"
   else
