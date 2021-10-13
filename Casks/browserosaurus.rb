@@ -16,4 +16,9 @@ cask "browserosaurus" do
   auto_updates true
 
   app "Browserosaurus.app"
+
+  zap trash: [
+    "~/Library/Application Support/Browserosaurus",
+    "~/Library/Preferences/com.browserosaurus.plist",
+  ]
 end
