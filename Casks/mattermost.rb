@@ -16,7 +16,7 @@ cask "mattermost" do
   livecheck do
     url "https://docs.mattermost.com/install/desktop-app-install.html#macos-10-9"
     strategy :page_match
-    regex(%r{href=.*?/mattermost-desktop-(\d+(?:\.\d+)*)-mac\.dmg}i)
+    regex(%r{href=.*?/mattermost-desktop-(\d+(?:\.\d+)*)-mac-x64\.dmg}i)
   end
 
   app "Mattermost.app"
