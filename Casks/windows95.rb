@@ -12,7 +12,7 @@ cask "windows95" do
   end
 
   name "Windows 95"
-  desc "Windows 95 in Electron"
+  desc "Electron Windows 95"
   homepage "https://github.com/felixrieseberg/windows95"
 
   auto_updates true
