@@ -1,6 +1,6 @@
 cask "subler" do
-  version "1.6.12"
-  sha256 "709C7AECCCB2A42A715037EE41CDC235DF629BFC3B28EEA6DBCF391BB325704D"
+  version "1.6.13"
+  sha256 "750dec0f39ac20c0d4588863431d411400da515028d65f80820aedb4b1f350fb"
 
   url "https://bitbucket.org/galad87/subler/downloads/Subler-#{version}.zip",
       verified: "bitbucket.org/galad87/subler/"
@@ -18,9 +18,9 @@ cask "subler" do
   app "Subler.app"
 
   zap trash: [
-    "~/Library/Preferences/org.galad.Subler.plist",
     "~/Library/Application Support/Subler",
     "~/Library/Caches/org.galad.Subler",
+    "~/Library/Preferences/org.galad.Subler.plist",
     "~/Library/Saved Application State/org.galad.Subler.savedState",
   ]
 end

@@ -16,7 +16,7 @@ cask "tiled" do
   binary shimscript, target: "tiled"
 
   preflight do
-    IO.write shimscript, <<~EOS
+    File.write shimscript, <<~EOS
       #!/bin/bash
       exec '#{appdir}/Tiled.app/Contents/MacOS/Tiled' "$@"
     EOS

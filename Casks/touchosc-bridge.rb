@@ -13,4 +13,6 @@ cask "touchosc-bridge" do
   end
 
   app "TouchOSC Bridge.app"
+
+  zap trash: "~/Library/Preferences/net.hexler.TouchOSCBridge.plist"
 end

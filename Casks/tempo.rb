@@ -1,14 +1,13 @@
 cask "tempo" do
-  version "5.23.1"
+  arch = Hardware::CPU.intel? ? "release" : "release-arm64"
 
+  version "5.27.0"
+
+  url "https://download.yourtempo.co/#{arch}/Tempo-#{version}.dmg"
   if Hardware::CPU.intel?
-    sha256 "bf7541f1822e87a46a11a88bb8c1a8295815c00384abf9d6f2cacc878eb3e1ef"
-
-    url "https://download.yourtempo.co/release/Tempo-#{version}.dmg"
+    sha256 "c300943009a406554914e3f56abea4525b46e231aeff39441fcbc251928ccfc7"
   else
-    sha256 "98281d991fbd48a74f5a51a7acee5073341cc976c0737a346ff9aebdc55e2171"
-
-    url "https://download.yourtempo.co/release-arm64/Tempo-#{version}.dmg"
+    sha256 "ef8f7c72e9e96dca6a1edf6e10c1d72e0fa6e7cfdb66876b75c00b4c40cce1ea"
   end
 
   name "Tempo"
@@ -16,7 +15,7 @@ cask "tempo" do
   homepage "https://www.yourtempo.co/"
 
   livecheck do
-    url "https://download.yourtempo.co/release/latest-mac.yml"
+    url "https://download.yourtempo.co/#{arch}/latest-mac.yml"
     strategy :electron_builder
   end
 

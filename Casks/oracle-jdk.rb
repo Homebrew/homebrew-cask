@@ -1,30 +1,31 @@
 cask "oracle-jdk" do
-  version "16.0.2,7:d4a915d82b4c4fbb9bde534da945d746"
-  sha256 "aa046e1d2451093aa9b5c8e02aa2aa6560c523448249ff854337e63eb15861da"
+  arch = Hardware::CPU.intel? ? "x64" : "aarch64"
 
-  url "https://download.oracle.com/otn-pub/java/jdk/#{version.before_comma}+#{version.after_comma.before_colon}/#{version.after_colon}/jdk-#{version.before_comma}_osx-x64_bin.dmg",
-      cookies: {
-        "oraclelicense" => "accept-securebackup-cookie",
-      }
-  name "Oracle Java Standard Edition Development Kit"
-  desc "JDK from Oracle"
-  homepage "https://www.oracle.com/technetwork/java/javase/overview/index.html"
+  version "17"
 
-  livecheck do
-    url "https://www.oracle.com/java/technologies/javase-jdk16-downloads.html"
-    strategy :page_match do |page|
-      match = page.match(%r{(\d+(?:\.\d+)*)%2B(\d+(?:\.\d+)*)/(.+)/jdk-(\d+(?:\.\d+)*)_osx-x64_bin\.dmg}i)
-      "#{match[1]},#{match[2]}:#{match[3]}"
-    end
+  url "https://download.oracle.com/java/#{version.major}/latest/jdk-#{version}_macos-#{arch}_bin.dmg"
+  if Hardware::CPU.intel?
+    sha256 "2a7befd5f8b27194f03451e939ffe4d9fc2acc172eef27f89f924ea9ba8157a7"
+  else
+    sha256 "4d15daeaa3fb40740a2f8b9e54dcac7a485e6bcd72d60c131645e39808fd7549"
   end
 
-  depends_on macos: ">= :yosemite"
+  name "Oracle Java Standard Edition Development Kit"
+  desc "JDK from Oracle"
+  homepage "https://www.oracle.com/java/technologies/downloads/"
 
-  pkg "JDK #{version.before_comma}.pkg"
+  livecheck do
+    url "https://www.oracle.com/java/technologies/javase/#{version.major}u-relnotes.html"
+    regex(/<li>\s*JDK\s*v?(\d+(?:\.\d+)*)/i)
+  end
 
-  uninstall pkgutil: "com.oracle.jdk-#{version.before_comma}"
+  depends_on macos: ">= :mojave"
+
+  pkg "JDK #{version}.pkg"
+
+  uninstall pkgutil: "com.oracle.jdk-#{version}"
 
   caveats do
-    license "https://www.oracle.com/technetwork/java/javase/terms/license/javase-license.html"
+    license "https://www.oracle.com/downloads/licenses/no-fee-license.html"
   end
 end

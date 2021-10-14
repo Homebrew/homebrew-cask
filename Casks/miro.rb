@@ -1,20 +1,18 @@
 cask "miro" do
-  version "0.5.5"
+  arch = Hardware::CPU.intel? ? "darwin" : "darwin-arm64"
+
+  version "0.6.3"
   sha256 :no_check
 
-  if Hardware::CPU.intel?
-    url "https://desktop.miro.com/platforms/darwin/Miro.dmg"
-  else
-    url "https://desktop.miro.com/platforms/darwin-arm64/Miro.dmg"
-  end
-
+  url "https://desktop.miro.com/platforms/#{arch}/Miro.dmg"
   name "Miro"
   name "RealtimeBoard"
   desc "Online collaborative whiteboard platform"
   homepage "https://miro.com/"
 
   livecheck do
-    skip "No version information available"
+    url :url
+    strategy :extract_plist
   end
 
   app "Miro.app"

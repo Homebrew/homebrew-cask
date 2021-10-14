@@ -1,5 +1,5 @@
 cask "cloudflare-warp" do
-  version "1.5.463.0,20210722.12"
+  version "1.6.27.0,20211004.9"
   sha256 :no_check
 
   url "https://cloudflarewarp.com/Cloudflare_WARP.zip"
@@ -24,4 +24,14 @@ cask "cloudflare-warp" do
               input:      ["Y\n"],
               sudo:       true,
             }
+
+  zap trash: [
+    "~/Library/Application Scripts/com.cloudflare.1dot1dot1dot1.macos.loginlauncherapp",
+    "~/Library/Application Support/com.cloudflare.1dot1dot1dot1.macos",
+    "~/Library/Caches/com.cloudflare.1dot1dot1dot1.macos",
+    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.cloudflare.1dot1dot1dot1.macos",
+    "~/Library/Containers/com.cloudflare.1dot1dot1dot1.macos.loginlauncherapp",
+    "~/Library/HTTPStorages/com.cloudflare.1dot1dot1dot1.macos.binarycookies",
+    "~/Library/Preferences/com.cloudflare.1dot1dot1dot1.macos.plist",
+  ]
 end

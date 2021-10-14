@@ -1,21 +1,26 @@
 cask "jasp" do
-  version "0.14.1.0"
+  version "0.15.0.1"
+  sha256 "8222519c1bf5838de1677b204961f726b0236189ac397874800c9d4e05af225e"
 
-  if MacOS.version <= :mojave
-    sha256 "8fe3cf08058576e54c78e1d87a2cfe159dead894c26aca37fd6fa610a5fb3cf7"
-
-    url "https://static.jasp-stats.org/JASP-#{version}-preCatalina.dmg"
-  else
-    sha256 "ea682a95e51f9f0cd3d92b49eac18831c38de1e03f90020321cfce3eba5a0ee6"
-
-    url "https://static.jasp-stats.org/JASP-#{version}-postMojave.dmg"
-  end
-  appcast "https://jasp-stats.org/download/",
-          must_contain: version.sub(/(.0)+$/, "")
+  url "https://static.jasp-stats.org/JASP-#{version}.dmg"
   name "JASP"
+  desc "Statistical analysis application"
   homepage "https://jasp-stats.org/"
+
+  livecheck do
+    url "https://jasp-stats.org/thank-you-for-downloading-jasp-macos/"
+    regex(/href=.*?JASP[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+  end
 
   depends_on macos: ">= :high_sierra"
 
   app "JASP.app"
+
+  zap trash: [
+    "~/.JASP",
+    "~/Library/Application Support/JASP",
+    "~/Library/Caches/JASP",
+    "~/Library/Preferences/org.jasp-stats.JASP.plist",
+    "~/Library/Saved Application State/org.jasp-stats.jasp.savedState",
+  ]
 end

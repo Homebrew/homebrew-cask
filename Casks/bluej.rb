@@ -16,4 +16,6 @@ cask "bluej" do
   end
 
   app "BlueJ #{version}/BlueJ.app"
+
+  zap trash: "~/Library/Preferences/org.bluej"
 end

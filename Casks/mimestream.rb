@@ -1,6 +1,6 @@
 cask "mimestream" do
-  version "0.27.1"
-  sha256 "4a5c1e2a90dd8272011c1ebd1af7acecb5de817909bf65e692e866393abef2f5"
+  version "0.29.2"
+  sha256 "2a1ef4a015896a5c4a68d3bc672875e8a1013f010bb4d89dccb00dec2a211438"
 
   url "https://storage.googleapis.com/mimestream-releases/Mimestream_#{version}.dmg",
       verified: "storage.googleapis.com/mimestream-releases/"
@@ -13,10 +13,14 @@ cask "mimestream" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
+
   app "Mimestream.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.mimestream.Mimestream",
+    "~/Library/Caches/com.mimestream.Mimestream",
     "~/Library/Containers/com.mimestream.Mimestream",
+    "~/Library/Saved Application State/com.mimestream.Mimestream.savedState",
   ]
 end

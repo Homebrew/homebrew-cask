@@ -1,16 +1,16 @@
 cask "clickup" do
-  version "3.0.0"
+  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+
+  version "3.0.3"
 
   if Hardware::CPU.intel?
-    url "https://download.todesktop.com/210531zdwwjv8ke/ClickUp%20#{version}-x64.dmg",
-        verified: "download.todesktop.com/210531zdwwjv8ke/"
-    sha256 "d6d74f9bc1460bff72c4e839b0a1e249670870436d7e1161f766f2a09a2d9350"
+    sha256 "27cf93a049e7fbf5689c39f2a6dd7dd8a3d428b907af142c1702653597773082"
   else
-    url "https://download.todesktop.com/210531zdwwjv8ke/ClickUp%20#{version}-arm64.dmg",
-        verified: "download.todesktop.com/210531zdwwjv8ke/"
-    sha256 "8a99b6ced204d03cd88b0e417c224bb06e256181118301f4188b3894501e2ccc"
+    sha256 "32829cb826bb440c9f563cbcf6934747f358fd6679a7c8032c6b6bada014f1d7"
   end
 
+  url "https://download.todesktop.com/210531zdwwjv8ke/ClickUp%20#{version}-#{arch}.dmg",
+      verified: "download.todesktop.com/210531zdwwjv8ke/"
   name "ClickUp"
   desc "Productivity platform for tasks, docs, goals, and chat"
   homepage "https://clickup.com/"
@@ -21,4 +21,15 @@ cask "clickup" do
   end
 
   app "ClickUp.app"
+
+  zap trash: [
+    "~/Library/Application Support/ClickUp",
+    "~/Library/Application Support/ClickUp Desktop",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.clickup.desktop-app.sfl2",
+    "~/Library/Caches/com.clickup.desktop-app",
+    "~/Library/Caches/com.clickup.desktop-app.ShipIt",
+    "~/Library/Logs/ClickUp",
+    "~/Library/Preferences/com.clickup.desktop-app.plist",
+    "~/Library/Saved Application State/com.clickup.desktop-app.savedState",
+  ]
 end

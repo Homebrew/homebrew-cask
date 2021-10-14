@@ -1,5 +1,5 @@
 cask "witch" do
-  version "4.4.2,3518"
+  version "4.4.4,3522"
   sha256 :no_check
 
   url "https://manytricks.com/download/witch"

@@ -1,6 +1,6 @@
 cask "qgis" do
-  version "3.20.2,20210813_152306"
-  sha256 "913a911c13e63f15e000eebd9be4513ba7a286a45915256ce6f487409671f9f0"
+  version "3.20.3,20210911_154600"
+  sha256 "725ee98700812a0cce2376828ff1470c7ebfd041f550dd71b2cf2188cae95cc4"
 
   url "https://qgis.org/downloads/macos/pr/qgis_pr_final-#{version.before_comma.dots_to_underscores}_#{version.after_comma}.dmg"
   name "QGIS"
@@ -16,4 +16,10 @@ cask "qgis" do
   end
 
   app "QGIS.app"
+
+  zap trash: [
+    "~/Library/Application Support/QGIS",
+    "~/Library/Caches/QGIS",
+    "~/Library/Saved Application State/org.qgis.qgis*.savedState",
+  ]
 end

@@ -1,10 +1,10 @@
 cask "nudge" do
-  version "1.1.0.08262021142007"
-  sha256 "ec1f345dbc03a93a76dc764cc1a5cd60826472537c66e1de9f1a0e404bb9951d"
+  version "1.1.1.09202021202238"
+  sha256 "e22d11c31698d8dde9afb1231c8b0e487c1f46ff1383b25d89a5eab0591e984f"
 
-  url "https://github.com/macadmins/nudge/releases/download/v.#{version}/Nudge-#{version}.pkg"
+  url "https://github.com/macadmins/nudge/releases/download/v#{version}/Nudge-#{version}.pkg"
   name "Nudge"
-  desc "Application for enforcing os updates"
+  desc "Application for enforcing OS updates"
   homepage "https://github.com/macadmins/nudge"
 
   depends_on macos: ">= :big_sur"
@@ -15,7 +15,7 @@ cask "nudge" do
   binary shimscript, target: "nudge"
 
   preflight do
-    IO.write shimscript, <<~EOS
+    File.write shimscript, <<~EOS
       #!/bin/sh
       exec '/Applications/Utilities/Nudge.app/Contents/MacOS/Nudge' "$@"
     EOS

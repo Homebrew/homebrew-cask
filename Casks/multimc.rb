@@ -1,19 +1,21 @@
 cask "multimc" do
-  version "0.6.12"
-  sha256 "d491b6a2a2ec3420dd66a11815a3f7c64b46bb6044fa5402b026b53aeb964934"
+  version "0.6.13"
+  sha256 :no_check
 
-  url "https://github.com/MultiMC/MultiMC5/releases/download/#{version}/mmc-stable-osx64.tar.gz",
-      verified: "github.com/MultiMC/MultiMC5/"
+  url "https://files.multimc.org/downloads/mmc-stable-osx64-5.15.2.tar.gz"
   name "Multi MC"
   desc "Minecraft launcher"
   homepage "https://multimc.org/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://files.multimc.org/update/osx64-5.15.2/stable/index.json"
+    strategy :page_match do |page|
+      JSON.parse(page)["Versions"][0]["Name"]
+    end
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "MultiMC.app"
 

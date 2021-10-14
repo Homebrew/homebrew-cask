@@ -21,12 +21,12 @@ cask "lbry" do
   binary shim_lbryfirst, target: "lbry-first"
 
   preflight do
-    IO.write shim_lbrynet, <<~EOS
+    File.write shim_lbrynet, <<~EOS
       #!/bin/sh
       exec '#{appdir}/LBRY.app/Contents/Resources/static/daemon/lbrynet' "$@"
     EOS
 
-    IO.write shim_lbryfirst, <<~EOS
+    File.write shim_lbryfirst, <<~EOS
       #!/bin/sh
       exec '#{appdir}/LBRY.app/Contents/Resources/static/lbry-first/lbry-first' "$@"
     EOS

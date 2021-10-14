@@ -1,6 +1,6 @@
 cask "droplr" do
-  version "59.1.1,470"
-  sha256 "5c96b2cfb5cbd12cc03dbd07c64e17c41b97e18c588275fa0b9311d63f6dbd31"
+  version "5.9.13,472"
+  sha256 "730f0e5064ccc1af034d1b070aeec1e8490c0580e80b4cd8184375ee0a4df723"
 
   url "https://files.droplr.com/apps/mac/Droplr#{version.before_comma.no_dots}-#{version.after_comma}.zip"
   name "Droplr"
@@ -10,7 +10,7 @@ cask "droplr" do
   livecheck do
     url "https://files.droplr.com/apps/mac-current"
     strategy :header_match do |headers|
-      match = headers["location"].match(%r{/Droplr(\d+)(\d+)(\d+)-(\d+)\.zip}i)
+      match = headers["location"].match(%r{/Droplr(\d)(\d)(\d+)-(\d+)\.zip}i)
       "#{match[1]}.#{match[2]}.#{match[3]},#{match[4]}"
     end
   end

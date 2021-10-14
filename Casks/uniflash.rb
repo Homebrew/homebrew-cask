@@ -21,7 +21,7 @@ cask "uniflash" do
   binary shimscript
 
   preflight do
-    IO.write shimscript, <<~EOS
+    File.write shimscript, <<~EOS
       #!/bin/sh
       exec '/Applications/TI/UniFlash/dslite.sh' "$@"
     EOS

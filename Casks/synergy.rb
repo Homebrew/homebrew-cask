@@ -1,6 +1,6 @@
 cask "synergy" do
-  version "1.14.0,67d824b8"
-  sha256 "b52b0ca4e861a644cdfc66e48c0eea4d914e9a0df4b98887a4c7d9bf18253d26"
+  version "1.14.1,37bbd3c0"
+  sha256 "fa3628e5956bb043395828449e7073c2ac561bbd6d50b933bc08e38e68a0e596"
 
   url "https://binaries.symless.com/synergy/v#{version.before_comma.major}-core-standard/#{version.before_comma}-stable.#{version.after_comma}/synergy_#{version.before_comma}-stable.#{version.after_comma}_macos_x86-64.dmg"
   name "Synergy"

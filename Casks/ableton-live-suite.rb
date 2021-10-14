@@ -1,6 +1,6 @@
 cask "ableton-live-suite" do
-  version "11.0.6"
-  sha256 "af1b804c258c1db76614ba39b9ee13190ec3957cfa77a1c6afea1c10ef3fcd60"
+  version "11.0.10"
+  sha256 "98702e7fea0ba30aa24aebbc4f27101ad9150209c5ec12e5c38d4f0e25dab90b"
 
   url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_suite_#{version}_64.dmg"
   name "Ableton Live Suite"

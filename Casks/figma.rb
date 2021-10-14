@@ -1,29 +1,23 @@
 cask "figma" do
-  version "101.6.0"
+  arch = Hardware::CPU.intel? ? "mac" : "mac-arm"
+
+  version "102.9.0"
 
   if Hardware::CPU.intel?
-    sha256 "1b87be8f35b58d260ffb9dd75127d85ec33fba6b0376bb4840838ed9f88abb55"
-
-    url "https://desktop.figma.com/mac/Figma-#{version}.zip"
-
-    livecheck do
-      url "https://desktop.figma.com/mac/RELEASE.json"
-      regex(%r{/Figma[._-]v?(\d+(?:\.\d+)+)\.zip}i)
-    end
+    sha256 "88d30dc1fd870d32ae705828cafe77ace5120dab28a157824ba58405910cffbc"
   else
-    sha256 "4ea81297fbaecb2a5255b78ffddb6025b80ab38a7dc1ca76a4679fa2a3e953f0"
-
-    url "https://desktop.figma.com/mac-arm/Figma-#{version}.zip"
-
-    livecheck do
-      url "https://desktop.figma.com/mac-arm/RELEASE.json"
-      regex(%r{/Figma[._-]v?(\d+(?:\.\d+)+)\.zip}i)
-    end
+    sha256 "b1c1b23b1f31e98f11383582c32a84c1a2ea16a93cd09f1da91b2326328d30c1"
   end
 
+  url "https://desktop.figma.com/#{arch}/Figma-#{version}.zip"
   name "Figma"
   desc "Collaborative team software"
   homepage "https://www.figma.com/"
+
+  livecheck do
+    url "https://desktop.figma.com/#{arch}/RELEASE.json"
+    regex(%r{/Figma[._-]v?(\d+(?:\.\d+)+)\.zip}i)
+  end
 
   auto_updates true
 

@@ -1,13 +1,10 @@
 cask "beeper" do
-  version "2.0.26"
+  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+
+  version "2.6.8"
   sha256 :no_check
 
-  if Hardware::CPU.intel?
-    url "https://download.beeper.com/mac/dmg/x64"
-  else
-    url "https://download.beeper.com/mac/dmg/arm64"
-  end
-
+  url "https://download.beeper.com/mac/dmg/#{arch}"
   name "Beeper"
   desc "Universal chat app powered by Matrix, unifying 15 different chat networks"
   homepage "https://www.beeper.com/"
@@ -15,7 +12,7 @@ cask "beeper" do
   livecheck do
     url :url
     strategy :header_match
-    regex(/Beeper(?:%20|[ ._-])?(\d+(?:\.\d+)*)(?:[._-](?:x64|arm64))?\.dmg/i)
+    regex(/Beeper(?:%20|[ ._-])?(\d+(?:\.\d+)*)(?:[._-]#{arch})?\.dmg/i)
   end
 
   app "Beeper.app"

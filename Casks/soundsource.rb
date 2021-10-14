@@ -1,5 +1,5 @@
 cask "soundsource" do
-  version "5.3.5"
+  version "5.3.6"
   sha256 :no_check
 
   url "https://rogueamoeba.com/soundsource/download/SoundSource.zip"

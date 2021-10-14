@@ -1,14 +1,14 @@
 cask "hyper" do
-  version "3.1.2"
+  arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
+  version "3.1.4"
+
+  url "https://github.com/vercel/hyper/releases/download/v#{version}/Hyper-#{version}-mac-#{arch}.zip",
+      verified: "github.com/vercel/hyper/"
   if Hardware::CPU.intel?
-    sha256 "d59d1186a427cadaf1eac8758dbc8107237cbbfef8441a5bda55492b458f405d"
-    url "https://github.com/vercel/hyper/releases/download/v#{version}/Hyper-#{version}-mac-x64.zip",
-        verified: "github.com/vercel/hyper/"
+    sha256 "f6038c7da47f98f12520c5af5aa08d6ef171897eda0c49b2cc8a189bf0301ffe"
   else
-    sha256 "d4793b4a35d44c9d4b72e9be8b87237fecc8e95676edf567676e41efd0e8766a"
-    url "https://github.com/vercel/hyper/releases/download/v#{version}/Hyper-#{version}-mac-arm64.zip",
-        verified: "github.com/vercel/hyper/"
+    sha256 "339bce09a3b68b865ea8157feaaeac13f2ac80a2e661d95f9c5b6a1191ede5ac"
   end
 
   name "Hyper"
@@ -29,15 +29,15 @@ cask "hyper" do
   zap trash: [
     "~/.hyper.js",
     "~/.hyper_plugins",
-    "~/Library/Application Support/Hyper",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/co.zeit.hyper.sfl*",
+    "~/Library/Application Support/Hyper",
     "~/Library/Caches/co.zeit.hyper",
     "~/Library/Caches/co.zeit.hyper.ShipIt",
     "~/Library/Cookies/co.zeit.hyper.binarycookies",
     "~/Library/Logs/Hyper",
     "~/Library/Preferences/ByHost/co.zeit.hyper.ShipIt.*.plist",
-    "~/Library/Preferences/co.zeit.hyper.plist",
     "~/Library/Preferences/co.zeit.hyper.helper.plist",
+    "~/Library/Preferences/co.zeit.hyper.plist",
     "~/Library/Saved Application State/co.zeit.hyper.savedState",
   ]
 end

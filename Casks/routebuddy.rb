@@ -15,4 +15,10 @@ cask "routebuddy" do
   end
 
   app "RouteBuddy.app"
+
+  zap trash: [
+    "~/Library/Application Support/RouteBuddy",
+    "~/Library/Caches/RouteBuddy",
+    "~/Library/Preferences/com.routebuddy.routebuddy.plist",
+  ]
 end

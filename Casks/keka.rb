@@ -1,6 +1,6 @@
 cask "keka" do
-  version "1.2.16"
-  sha256 "1edc28a99097ad510017157d7025df36830ae5b52adf35641249f04fc5e68718"
+  version "1.2.18"
+  sha256 "f776850d81c2e5cef379961bc9838a81c92e97f847ad81f0f8828eef867eb0bc"
 
   url "https://github.com/aonez/Keka/releases/download/v#{version}/Keka-#{version}.dmg",
       verified: "github.com/aonez/Keka/"
@@ -14,9 +14,9 @@ cask "keka" do
   app "Keka.app"
 
   zap trash: [
-    "~/Library/Containers/com.aone.keka",
     "~/Library/Application Support/Keka",
     "~/Library/Caches/com.aone.keka",
+    "~/Library/Containers/com.aone.keka",
     "~/Library/Preferences/com.aone.keka.plist",
     "~/Library/Saved Application State/com.aone.keka.savedState",
   ]

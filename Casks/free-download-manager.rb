@@ -28,8 +28,15 @@ cask "free-download-manager" do
 
   zap trash: [
     "~/Library/Application Support/Free Download Manager",
+    "~/Library/Application Support/Softdeluxe/Free Download Manager",
     "~/Library/Caches/org.freedownloadmanager.fdm#{version.major}",
+    "~/Library/Caches/Softdeluxe/Free Download Manager",
     "~/Library/Preferences/org.freedownloadmanager.fdm#{version.major}.plist",
+    "~/Library/Preferences/com.softdeluxe.Free Download Manager.plist",
     "~/Library/Saved Application State/org.freedownloadmanager.fdm#{version.major}.savedState",
-  ]
+  ],
+      rmdir: [
+        "~/Library/Application Support/Softdeluxe",
+        "~/Library/Caches/Softdeluxe/",
+      ]
 end

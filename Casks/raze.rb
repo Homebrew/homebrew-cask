@@ -8,8 +8,9 @@ cask "raze" do
   homepage "https://github.com/coelckers/Raze"
 
   livecheck do
-    url :url
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    url "https://github.com/coelckers/Raze/releases"
+    strategy :page_match
+    regex(/raze[._-]macos[._-]v?(\d+(?:\.\d+)*)\.zip/i)
   end
 
   app "Raze.app"
@@ -17,9 +18,9 @@ cask "raze" do
   zap trash: [
     "~/Documents/Raze",
     "~/Library/Application Support/Raze",
-    "~/Library/Preferences/raze.ini",
     "~/Library/Preferences/org.drdteam.raze.plist",
     "~/Library/Preferences/org.zdoom.raze.plist",
+    "~/Library/Preferences/raze.ini",
     "~/Library/Saved Application State/org.drdteam.raze.savedState",
     "~/Library/Saved Application State/org.zdoom.raze.savedState",
   ]

@@ -1,8 +1,8 @@
 cask "fvim" do
-  version "0.3.423,g6e28667"
-  sha256 "618c0e288291986a46b15236007eee52015e5afe5d32ee441d3f2eaef3902eb6"
+  version "0.3.487,gb4be2e2"
+  sha256 "4a21f45d24e811caa329760247f3761ed31c7f31862fb8292a37acf298d53dcb"
 
-  url "https://github.com/yatli/fvim/releases/download/v#{version.before_comma}%2B#{version.after_comma}/fvim-osx.zip"
+  url "https://github.com/yatli/fvim/releases/download/v#{version.before_comma}%2B#{version.after_comma}/fvim-osx-master.zip"
   name "FVim"
   desc "GUI for the Neovim text editor"
   homepage "https://github.com/yatli/fvim"

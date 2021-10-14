@@ -9,4 +9,10 @@ cask "menutube" do
   homepage "https://edanchenkov.github.io/MenuTube/"
 
   app "MenuTube.app"
+
+  zap trash: [
+    "~/Library/Application Support/MenuTube",
+    "~/Library/Preferences/com.rednuclearmonkey.menutube.plist",
+    "~/Library/Saved Application State/com.rednuclearmonkey.menutube.savedState",
+  ]
 end

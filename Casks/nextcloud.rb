@@ -6,8 +6,8 @@ cask "nextcloud" do
     url "https://github.com/nextcloud/desktop/releases/download/v#{version.major_minor_patch}/Nextcloud-#{version}.pkg",
         verified: "github.com/nextcloud/desktop/"
   else
-    version "3.3.3"
-    sha256 "5a8c7aa71100bf4666ac025cb7040474e6601514bfb13e940f4d6b1647d2dcca"
+    version "3.3.5"
+    sha256 "153a338273526305506bdb5cf5038d3d4258bdc8fb0dcf6a27e74d3067b56086"
 
     url "https://github.com/nextcloud/desktop/releases/download/v#{version}/Nextcloud-#{version}.pkg",
         verified: "github.com/nextcloud/desktop/"
@@ -16,6 +16,11 @@ cask "nextcloud" do
   name "Nextcloud"
   desc "Desktop sync client for Nextcloud software products"
   homepage "https://nextcloud.com/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   depends_on macos: ">= :yosemite"
 

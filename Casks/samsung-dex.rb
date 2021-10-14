@@ -1,8 +1,8 @@
 cask "samsung-dex" do
-  version "20210112132845263"
-  sha256 "cd9540ea8b1595399b5d99b0ba0d549d0ec1dcbba4dcf4cf006e3f795e0b9cb0"
+  version "20210720162553369"
+  sha256 "5110f7be08f6d43d9cd1229dbbe33bbd34e35da13a5c6ce7e724ac7904dfbeba"
 
-  url "https://downloadcenter.samsung.com/content/SW/#{version[0..5]}/#{version}/SamsungDeXSetupMac.dmg"
+  url "https://downloadcenter.samsung.com/content/SW/#{version[0..5]}/#{version}/SamsungDeXSetup.dmg"
   name "Samsung DeX"
   desc "Extend some Samsung devices into a desktop-like experience"
   homepage "https://www.samsung.com/us/explore/dex/"
@@ -10,7 +10,7 @@ cask "samsung-dex" do
   livecheck do
     url "https://www.samsung.com/global/download/SamsungDeXMac"
     strategy :header_match
-    regex(%r{(\d+)/SamsungDeXSetupMac\.dmg}i)
+    regex(%r{(\d+)/SamsungDeXSetup\.dmg}i)
   end
 
   pkg "Install Samsung DeX.pkg"

@@ -1,6 +1,6 @@
 cask "kindle" do
-  version "1.32.61174"
-  sha256 "2779a6b1d058d6f86c748a9c6ab730985da2989648ec036872d14e056d7eb4ea"
+  version "1.33.62000"
+  sha256 "cd3c2bb594cf22c0f7364d8d924b2484d786c73f79af4437a25a5d2379b15a07"
 
   url "https://kindleformac.s3.amazonaws.com/#{version.patch}/KindleForMac-#{version}.dmg",
       verified: "kindleformac.s3.amazonaws.com/"

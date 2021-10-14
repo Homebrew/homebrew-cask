@@ -1,6 +1,6 @@
 cask "ximalaya" do
-  version "1.9.6,1628235573"
-  sha256 "d13fa111ce26b032fa1ad1af7244be32f1139086db9cd6dbce64a67781d62c8c"
+  version "2.0.3,1632464709"
+  sha256 "44b9cd9099ad1f07fcb25e3873d0e71c5f0e5b3d6c96fe20faeceea5e49623be"
 
   url "https://s1.xmcdn.com/yx/ximalaya-pc-client/#{version.before_comma}/download/mac-x64/Ximalaya_#{version.before_comma}_#{version.after_comma}.dmg",
       verified: "s1.xmcdn.com/"

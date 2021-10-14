@@ -1,12 +1,13 @@
 cask "mattermost" do
-  version "4.7.1"
+  arch = Hardware::CPU.intel? ? "x64" : "m1"
 
+  version "5.0.0"
+
+  url "https://releases.mattermost.com/desktop/#{version}/mattermost-desktop-#{version}-mac-#{arch}.zip"
   if Hardware::CPU.intel?
-    sha256 "e4c580ebb9b6c55da2569cf0ee6dbcbed413310213a9bf86e6cdf7b716226a93"
-    url "https://releases.mattermost.com/desktop/#{version}/mattermost-desktop-#{version}-mac.zip"
+    sha256 "78529aea98c0a6d98ce68da76ee4b982bfcfb8a7078d4a553341ad3e79f3cc6e"
   else
-    sha256 "241dcc2e8840958415a827cdc25f8306615265f23927ec34573d597f1348928b"
-    url "https://releases.mattermost.com/desktop/#{version}/mattermost-desktop-#{version}-mac-m1.zip"
+    sha256 "cae46ab7c963fb8ececef42f204b3e10583f5446ebb8bd2331dfac0d6eb36bbd"
   end
 
   name "Mattermost"
@@ -16,7 +17,7 @@ cask "mattermost" do
   livecheck do
     url "https://docs.mattermost.com/install/desktop-app-install.html#macos-10-9"
     strategy :page_match
-    regex(%r{href=.*?/mattermost-desktop-(\d+(?:\.\d+)*)-mac\.dmg}i)
+    regex(%r{href=.*?/mattermost-desktop-(\d+(?:\.\d+)*)-mac-#{arch}\.dmg}i)
   end
 
   app "Mattermost.app"
