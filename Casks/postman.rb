@@ -9,9 +9,9 @@ cask "postman" do
   homepage "https://www.postman.com/"
 
   livecheck do
-    url "https://dl.pstmn.io/update/status?channel=stable&currentVersion=#{version}&platform=osx"
+    url "https://dl.pstmn.io/api/version/notes?from=#{version}&channel=stable&platform=osx"
     strategy :page_match do |page|
-      JSON.parse(page)["version"]
+      JSON.parse(page)["notes"][0]["version"]
     end
   end
 
