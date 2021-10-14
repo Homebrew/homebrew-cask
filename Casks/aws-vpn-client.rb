@@ -18,4 +18,14 @@ cask "aws-vpn-client" do
   uninstall pkgutil:   "com.amazon.awsvpnclient",
             quit:      "com.amazonaws.acvc.osx",
             launchctl: "com.amazonaws.acvc.helper"
+
+  zap trash: [
+    "/Applications/AWS VPN Client",
+    "/Library/Application Support/AWSVPNClient",
+    "/Library/LaunchDaemons/com.amazonaws.acvc.helper.plist",
+    "/Library/PrivilegedHelperTools/com.amazonaws.acvc.helper",
+    "~/.config/AWSVPNClient",
+    "~/Library/Preferences/com.amazonaws.acvc.osx.plist",
+    "~/Library/Saved Application State/com.amazonaws.acvc.osx.savedState",
+  ]
 end
