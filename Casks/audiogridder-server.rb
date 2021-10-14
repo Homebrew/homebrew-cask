@@ -3,7 +3,7 @@ cask "audiogridder-server" do
 
   version "1.1.1"
 
-  url "https://audiogridder.com/releases/AudioGridderServer_#{version}_macOS-x86_64.pkg"
+  url "https://audiogridder.com/releases/AudioGridderServer_#{version}_macOS-#{arch}.pkg"
   if Hardware::CPU.intel?
     sha256 "072e52bd56fedb1c481961beacca99096e3a65ba36339bdd78155fd1f1d133ea"
   else
