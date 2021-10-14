@@ -1,12 +1,12 @@
 cask "notion" do
+  livecheck_folder = Hardware::CPU.intel? ? "mac" : "apple-silicon"
+
   if Hardware::CPU.intel?
     version "2.0.19"
     sha256 "0d13678367144d93f4243d2228e1cf40d1bb577592823ef4b9aff81659d64f22"
-    livecheck_folder = "mac"
   else
     version "2.0.18-arm64"
     sha256 "fa9e299d206dbc68950c44806871c500afe6703532da8d768502f062646954f6"
-    livecheck_folder = "apple-silicon"
   end
 
   url "https://desktop-release.notion-static.com/Notion-#{version}.dmg",
