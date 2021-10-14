@@ -21,7 +21,6 @@ cask "archi" do
     regex(/\s+id\s*=\s*"download"\s+data-version\s*=\s*"(\d+(?:\.\d+)+)"/i)
   end
 
-  conflicts_with cask: "homebrew/cask-versions/archi-ea"
   depends_on macos: ">= :sierra"
 
   app "Archi.app"
