@@ -1,6 +1,6 @@
 cask "archi" do
-  version "4.8.1"
-  sha256 "c67f1a72a35393d9dabbef375529341b2f9f5006bf7bf4c7f242c661644a956c"
+  version "4.9.0"
+  sha256 "06a4c4d89f51a55f2a68769bf61a30ac2653280ba0125e9d600650569c2d6f1d"
 
   url "https://www.archimatetool.com/downloads/archi/?dl=#{version}/Archi-Mac-#{version}.dmg",
       using: :post
