@@ -1,6 +1,6 @@
 cask "burp-suite-professional" do
-  version "2021.8.3"
-  sha256 "be2ea705b1c559eb825255d6b4d66852e52e30776398305b87ffa57f2311f9ac"
+  version "2021.8.4"
+  sha256 "a8da1814ff99f77a55d1e1271fe356f7849aaa385eb8fa4abb684124628793cc"
 
   url "https://portswigger.net/burp/releases/download?product=pro&version=#{version}&type=MacOsx"
   name "Burp Suite Professional"
