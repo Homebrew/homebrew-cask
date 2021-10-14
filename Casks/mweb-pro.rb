@@ -23,14 +23,13 @@ cask "mweb-pro" do
   depends_on macos: ">= :high_sierra"
 
   app "MWeb Pro.app"
-  
+
   zap trash: [
-               "~/Library/Application Scripts/com.coderforart.MWeb3",
-               "~/Library/Application Support/MWeb",
-               "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.coderforart.mweb3.sfl2",
-               "~/Library/Containers/com.coderforart.MWeb3",
-               "~/Library/Cookies/com.coderforart.MWeb3.binarycookies",
-               "~/Library/Preferences/com.coderforart.MWeb3.plist",
-             ]
-  
+    "~/Library/Application Scripts/com.coderforart.MWeb3",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.coderforart.mweb3.sfl*",
+    "~/Library/Application Support/MWeb",
+    "~/Library/Containers/com.coderforart.MWeb3",
+    "~/Library/Cookies/com.coderforart.MWeb3.binarycookies",
+    "~/Library/Preferences/com.coderforart.MWeb3.plist",
+  ]
 end
