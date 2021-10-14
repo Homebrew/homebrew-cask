@@ -16,11 +16,21 @@ cask "mweb-pro" do
   homepage "https://www.mweb.im/"
 
   livecheck do
-    url "https://www.mweb.im/download.html"
-    regex(/>Download\s*MWeb\s*Pro\s*(\d+(?:\.\d+)+)</i)
+    url "https://www.mweb.im/update_v4.json"
+    regex(/(?:"version":")(\d+(\.\d+)*)"/i)
   end
 
   depends_on macos: ">= :high_sierra"
 
   app "MWeb Pro.app"
+  
+  zap trash: [
+               "~/Library/Application Scripts/com.coderforart.MWeb3",
+               "~/Library/Application Support/MWeb",
+               "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.coderforart.mweb3.sfl2",
+               "~/Library/Containers/com.coderforart.MWeb3",
+               "~/Library/Cookies/com.coderforart.MWeb3.binarycookies",
+               "~/Library/Preferences/com.coderforart.MWeb3.plist",
+             ]
+  
 end
