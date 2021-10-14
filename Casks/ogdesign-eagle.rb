@@ -15,5 +15,16 @@ cask "ogdesign-eagle" do
   desc "Organize all your reference images in one place"
   homepage "https://eagle.cool/macOS"
 
+  livecheck do
+    url "https://eagle.cool/check-for-update"
+    regex(/Eagle[._-]v?(\d+(?:\.\d+)+)-#{arch}(\d+(?:\.\d+)*)\.dmg/i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
+    end
+  end
+
   app "Eagle.app"
 end
