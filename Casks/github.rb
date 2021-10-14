@@ -16,7 +16,8 @@ cask "github" do
   homepage "https://desktop.github.com/"
 
   livecheck do
-    url "https://central.github.com/deployments/desktop/desktop/latest/darwin"
+    platform = Hardware::CPU.intel? ? "darwin" : "darwin-arm64"
+    url "https://central.github.com/deployments/desktop/desktop/latest/#{platform}"
     strategy :header_match
     regex(%r{(\d+(?:\.\d+)[^/]*)/GitHubDesktop[._-]#{arch}\.zip}i)
   end
