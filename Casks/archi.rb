@@ -4,7 +4,7 @@ cask "archi" do
   version "4.9.0"
 
   if Hardware::CPU.intel?
-    sha256 "06a4c4d89f51a55f2a68769bf61a30ac2653280ba0125e9d600650569c2d6f1d"
+    sha256 "72d90bdd79762ccdf2daf463d6ea950a863df33cde5e1e5ae054ee8ee5e43d04"
   else
     sha256 "317a72129385f80829d1cb20d21a5fed76764afeb26f1eb4fc2f6e566f80b56d"
   end
