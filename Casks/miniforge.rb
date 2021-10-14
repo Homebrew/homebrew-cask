@@ -28,7 +28,6 @@ cask "miniforge" do
     executable: "Miniforge3-#{version}-MacOSX-#{arch}.sh",
     args:       ["-b", "-p", "#{caskroom_path}/base"],
   }
-
   binary "#{caskroom_path}/base/condabin/conda"
 
   uninstall delete: "#{caskroom_path}/base"
