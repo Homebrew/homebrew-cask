@@ -4,6 +4,7 @@ cask "shapes" do
 
   url "https://shapesapp.com/dist/Shapes_#{version.before_comma}.zip"
   name "Shapes"
+  desc "Diagramming app"
   homepage "https://shapesapp.com/"
 
   livecheck do
