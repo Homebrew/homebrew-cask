@@ -1,4 +1,4 @@
-cask "g-assist" do
+cask "google-assistant" do
   version "1.0.0"
   sha256 "43056591c48bb33fb574740f7c502d0be4533801e4490d9f533445244152aea5"
 
@@ -10,10 +10,10 @@ cask "g-assist" do
   app "Google Assistant.app"
 
   zap trash: [
-    "~/Library/Preferences/com.redvirus.g-assist.plist",
-    "~/Library/Application Support/Google Assistant",
     "~/Library/Application Support/Caches/g-assist-updater",
+    "~/Library/Application Support/Google Assistant",
     "~/Library/Logs/Google Assistant",
+    "~/Library/Preferences/com.redvirus.g-assist.plist",
     "~/Library/Saved Application State/com.redvirus.g-assist.savedState",
   ]
 end
