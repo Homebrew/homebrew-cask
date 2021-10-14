@@ -3,8 +3,7 @@ cask "visual-studio-code" do
 
   version "1.61.0"
 
-  url "https://update.code.visualstudio.com/#{version}/#{arch}/stable",
-      verified: ""
+  url "https://update.code.visualstudio.com/#{version}/#{arch}/stable"
   if Hardware::CPU.intel?
     sha256 "790d20e26b5e01c74f6fe562dfda58698c84275ab3071341831424f6bde3c564"
   else
