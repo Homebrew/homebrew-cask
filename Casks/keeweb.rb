@@ -3,7 +3,7 @@ cask "keeweb" do
 
   version "1.18.7"
 
-  url "https://github.com/keeweb/keeweb/releases/download/v#{version}/KeeWeb-#{version}.mac.x64.dmg",
+  url "https://github.com/keeweb/keeweb/releases/download/v#{version}/KeeWeb-#{version}.mac.#{arch}.dmg",
       verified: "github.com/keeweb/keeweb/"
   if Hardware::CPU.intel?
     sha256 "f99146aebc34b59ec5ea56ffde2048c860feb69d69b958643efd7485fa7a0135"
