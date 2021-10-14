@@ -3,8 +3,7 @@ cask "loom" do
 
   version "0.102.0"
 
-  url "https://cdn.loom.com/desktop-packages/Loom-#{version}#{arch}.dmg",
-      verified: ""
+  url "https://cdn.loom.com/desktop-packages/Loom-#{version}#{arch}.dmg"
   if Hardware::CPU.intel?
     sha256 "141d4740c91ea4c4809d9fd0f749c23e8841cf979b59d6fdc6499925189c8323"
   else
