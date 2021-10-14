@@ -1,5 +1,6 @@
 cask "github" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  platform = Hardware::CPU.intel? ? "darwin" : "darwin-arm64"
 
   version "2.9.4-24101633"
 
@@ -16,7 +17,6 @@ cask "github" do
   homepage "https://desktop.github.com/"
 
   livecheck do
-    platform = Hardware::CPU.intel? ? "darwin" : "darwin-arm64"
     url "https://central.github.com/deployments/desktop/desktop/latest/#{platform}"
     strategy :header_match
     regex(%r{(\d+(?:\.\d+)[^/]*)/GitHubDesktop[._-]#{arch}\.zip}i)
