@@ -8,7 +8,7 @@ cask "android-studio" do
   if Hardware::CPU.intel?
     sha256 "caa2a4a6adbd5ff94e0fbb9ffec798d5b24319070d7d231684ea9a458b1420ee"
   else
-    sha256 "05e190b6f33f4f924d69772fe149a9d697125a3be1f0b72d805b947fa4e102d4"
+    sha256 "156935cdc02d0525d1b1529492468194027d1f63eac71d89ebd9c1fc08ba7c60"
   end
 
   name "Android Studio"
