@@ -1,4 +1,7 @@
 cask "libreoffice-language-pack" do
+  arch = Hardware::CPU.intel? ? "x86-64" : "aarch64"
+  folder = Hardware::CPU.intel? ? "x86_64" : "aarch64"
+
   version "7.2.2"
 
   if Hardware::CPU.intel?
@@ -394,9 +397,6 @@ cask "libreoffice-language-pack" do
       sha256 "2a7cc99d24e40b1f621b27cf9f55635d31d702f9c65c7a82e173f95343500d6e"
       "zu"
     end
-
-    url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/LibreOffice_#{version}_MacOS_x86-64_langpack_#{language}.dmg",
-        verified: "documentfoundation.org/"
   else
     language "af" do
       sha256 "7b606105b03e422182617ced13c6ae7a7d6bfee8ab9a37f51a42787c879a4747"
@@ -791,10 +791,8 @@ cask "libreoffice-language-pack" do
       "zu"
     end
 
-    url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/aarch64/LibreOffice_#{version}_MacOS_aarch64_langpack_#{language}.dmg",
-        verified: "documentfoundation.org/"
-  end
-
+  url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/#{folder}/LibreOffice_#{version}_MacOS_#{arch}_langpack_#{language}.dmg",
+      verified: "download.documentfoundation.org/libreoffice/stable/"
   name "LibreOffice Language Pack"
   desc "Collection of alternate languages for LibreOffice"
   homepage "https://www.libreoffice.org/"
