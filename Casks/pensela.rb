@@ -8,4 +8,10 @@ cask "pensela" do
   homepage "https://github.com/weiameili/Pensela"
 
   app "Pensela.app"
+
+  zap trash: [
+    "~/Library/Application Support/pensela",
+    "~/Library/Preferences/com.wali.Pensela.plist",
+    "~/Library/Saved Application State/com.wali.Pensela.savedState",
+  ]
 end
