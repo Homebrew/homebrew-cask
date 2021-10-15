@@ -1,3 +1,6 @@
+# typed: false
+# frozen_string_literal: true
+
 cask "lunar-client" do
   version "2.8.0"
   sha256 "53336467d8af8aadf056d559e755b8f9f114d346dd4836d15f07bc3c52c138ee"
