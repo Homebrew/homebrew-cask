@@ -1,5 +1,5 @@
 cask "audio-hijack" do
-  version "3.8.6"
+  version "3.8.7"
   sha256 :no_check
 
   url "https://rogueamoeba.com/audiohijack/download/AudioHijack.zip"
@@ -9,12 +9,11 @@ cask "audio-hijack" do
 
   livecheck do
     url "https://www.rogueamoeba.com/audiohijack/releasenotes.php"
-    strategy :page_match
     regex(/ra-version="(\d+(?:\.\d+)*)"/i)
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :mojave"
 
   app "Audio Hijack.app"
 
