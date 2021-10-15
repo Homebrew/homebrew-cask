@@ -13,6 +13,7 @@ cask "lunar-client" do
     strategy :electron_builder
   end
 
+  auto_updates true
   depends_on macos: ">= :el_capitan"
 
   app "Lunar Client.app"
