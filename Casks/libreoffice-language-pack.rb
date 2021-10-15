@@ -790,6 +790,7 @@ cask "libreoffice-language-pack" do
       sha256 "f3be827d60fe08a60d2fd86a235afc56ddacdc6eb790608205dc2759e51cb09e"
       "zu"
     end
+  end
 
   url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/#{folder}/LibreOffice_#{version}_MacOS_#{arch}_langpack_#{language}.dmg",
       verified: "download.documentfoundation.org/libreoffice/stable/"
