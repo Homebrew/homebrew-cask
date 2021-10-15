@@ -1,6 +1,6 @@
 cask "4k-slideshow-maker" do
-  version "1.8.1"
-  sha256 "c3a1d2af0d5247c09e9bfb2c1ec55ab78d06cff9c84c080e513684433655c85d"
+  version "2.0.0"
+  sha256 "70653289082098b9d39844f42f8b843e8b545afa93da2a3f36ea3fa263bbb389"
 
   url "https://dl.4kdownload.com/app/4kslideshowmaker_#{version}.dmg"
   name "4K Slideshow Maker"
@@ -8,12 +8,11 @@ cask "4k-slideshow-maker" do
   homepage "https://www.4kdownload.com/products/product-slideshowmaker"
 
   livecheck do
-    url "https://www.4kdownload.com/download"
-    strategy :page_match
-    regex(%r{href=.*?/4kslideshowmaker_(\d+(?:\.\d+)*)\.dmg}i)
+    url "https://www.4kdownload.com/downloads"
+    regex(/href=.*?4kslideshowmaker[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "4K Slideshow Maker.app"
 
