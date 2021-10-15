@@ -18,8 +18,8 @@ cask "audio-hijack" do
   app "Audio Hijack.app"
 
   zap trash: [
-    "~/Library/Preferences/com.rogueamoeba.audiohijack#{version.major}.plist",
     "~/Library/Application Support/Audio Hijack",
+    "~/Library/Preferences/com.rogueamoeba.audiohijack#{version.major}.plist",
     "~/Music/Audio Hijack",
   ]
 end
