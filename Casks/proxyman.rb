@@ -1,6 +1,6 @@
 cask "proxyman" do
-  version "2.33.0,23300"
-  sha256 "58d38932b3d1adabef23c796a373b9854874bb7a07c99b5f4afa4729ec512374"
+  version "2.34.0,23400"
+  sha256 "3530be0842ce9c1f0a3f264e911cb36dec01ac7b654c709b97ed408a133f9181"
 
   url "https://download.proxyman.io/#{version.after_comma}/Proxyman_#{version.before_comma}.dmg"
   name "Proxyman"
