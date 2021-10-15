@@ -16,4 +16,11 @@ cask "pdfify" do
   depends_on macos: ">= :high_sierra"
 
   app "PDFify.app"
+
+  zap trash: [ 
+    "~/Library/Application Support/de.holtwick.mac.homebrew.PDFify",
+    "~/Library/Preferences/de.holtwick.mac.homebrew.PDFify.plist",
+    "~/Library/Caches/de.holtwick.mac.homebrew.PDFify", 
+    "~/Library/Logs/PDFify"
+  ]
 end
