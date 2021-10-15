@@ -1,6 +1,6 @@
 cask "script-debugger" do
-  version "8.0-8A32"
-  sha256 "14ab79bd3f6792d19ce6e5244b047b5d7796429900dbe068405a59f0cf2d2838"
+  version "8.0.2-8A39"
+  sha256 "8751ec967918d809ee7796c87ecbbb2a446346d7f867041b47a1312bab62ffaf"
 
   url "https://s3.amazonaws.com/latenightsw.com/ScriptDebugger#{version}.dmg",
       verified: "s3.amazonaws.com/latenightsw.com/"
