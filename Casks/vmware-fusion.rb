@@ -17,7 +17,7 @@ cask "vmware-fusion" do
 
   auto_updates true
   conflicts_with cask: "vmware-fusion-tech-preview"
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "VMware Fusion.app"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/VMware OVF Tool/ovftool"
