@@ -9,4 +9,10 @@ cask "googleappengine" do
   homepage "https://cloud.google.com/appengine/docs/standard/python/download#appengine_sdk/"
 
   app "GoogleAppEngineLauncher.app"
+
+  zap trash: [
+    "~/Library/Application Support/GoogleAppEngineLauncher",
+    "~/Library/Preferences/com.google.GoogleAppEngineLauncher.plist",
+    "~/Library/Saved Application State/com.google.GoogleAppEngineLauncher.savedState",
+  ]
 end
