@@ -1,6 +1,6 @@
 cask "ableton-live-suite" do
-  version "11.0.10"
-  sha256 "98702e7fea0ba30aa24aebbc4f27101ad9150209c5ec12e5c38d4f0e25dab90b"
+  version "11.0.11"
+  sha256 "3519175c1fad3c29daca22af9464deb02790cd142e59fcd36a1cd7e64658f99e"
 
   url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_suite_#{version}_64.dmg"
   name "Ableton Live Suite"
@@ -9,7 +9,6 @@ cask "ableton-live-suite" do
 
   livecheck do
     url "https://www.ableton.com/en/release-notes/live-#{version.major}/"
-    strategy :page_match
     regex(/(\d+(?:\.\d+)*)\s*Release\s*Notes/i)
   end
 
