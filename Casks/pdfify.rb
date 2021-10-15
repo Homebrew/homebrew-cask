@@ -10,7 +10,7 @@ cask "pdfify" do
   livecheck do
     url "https://pdfify.app/updater-macos"
     strategy :page_match
-    regex(%r{href=.*?/PDFify-(\d+(?:\.\d+)*-\d+)\.zip}i)
+    regex(%r{url=.*?/PDFify-(\d+(?:\.\d+)*-\d+)\.zip}i)
   end
 
   depends_on macos: ">= :high_sierra"
