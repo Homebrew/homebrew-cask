@@ -18,10 +18,10 @@ cask "cookie" do
 
   zap trash: [
     "~/Library/Application Scripts/com.sweetpproductions.Cookie5",
-    "~/Library/Containers/com.sweetpproductions.Cookie5",
-    "~/Library/Preferences/com.sweetpproductions.Cookie5.plist",
     "~/Library/Application Scripts/com.sweetpproductions.CookieApp",
+    "~/Library/Containers/com.sweetpproductions.Cookie5",
     "~/Library/Containers/com.sweetpproductions.CookieApp",
+    "~/Library/Preferences/com.sweetpproductions.Cookie5.plist",
     "~/Library/Preferences/com.sweetpproductions.CookieApp.plist",
   ]
 end
