@@ -1,6 +1,6 @@
 cask "vmware-fusion" do
-  version "12.1.2-17964953"
-  sha256 "873049d4080168b56085c5b67be1d4eeb14debc0e6cf176dbd52c78518d0b883"
+  version "12.2.0-18760249_x86"
+  sha256 "73dc64f66b0370ae3f3f1bc77917fd5a1d33abd6db13775b6d47e95330a214e2"
 
   url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version}.dmg"
   name "VMware Fusion"
