@@ -17,10 +17,10 @@ cask "pdfify" do
 
   app "PDFify.app"
 
-  zap trash: [ 
+  zap trash: [
     "~/Library/Application Support/de.holtwick.mac.homebrew.PDFify",
     "~/Library/Preferences/de.holtwick.mac.homebrew.PDFify.plist",
-    "~/Library/Caches/de.holtwick.mac.homebrew.PDFify", 
-    "~/Library/Logs/PDFify"
+    "~/Library/Caches/de.holtwick.mac.homebrew.PDFify",
+    "~/Library/Logs/PDFify",
   ]
 end
