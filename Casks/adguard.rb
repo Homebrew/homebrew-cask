@@ -21,6 +21,9 @@ cask "adguard" do
   uninstall pkgutil: "com.adguard.mac.adguard-pkg"
 
   zap trash: [
+    "/Library/com.adguard.mac.adguard.pac"
+    "~/Library/Application Support/com.adguard.mac.adguard.pac",
+    "~/Library/Application Support/com.adguard.mac.adguard.tun-helper",
     "/Library/Application Support/com.adguard.Adguard",
     "~/Library/Application Support/Adguard",
     "~/Library/Application Support/com.adguard.Adguard",
