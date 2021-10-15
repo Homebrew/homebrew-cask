@@ -3,6 +3,7 @@ cask "pdfify" do
   sha256 "08c72b5e4bf83b1e948ec87caf74965191c505ed81eb08f6f7dce3741ccb49d0"
  
   name "PDFify"
+  desc "Create searchable and smaller PDF"
   url "https://pdfify.app/get/cask/download/macos/PDFify-#{version}.zip"
   homepage "https://pdfify.app/"
 
