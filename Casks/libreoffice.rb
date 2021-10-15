@@ -2,7 +2,7 @@ cask "libreoffice" do
   arch = Hardware::CPU.intel? ? "x86-64" : "aarch64"
   folder = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  version version "7.2.2"
+  version "7.2.2"
 
   url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/#{folder}/LibreOffice_#{version}_MacOS_#{arch}.dmg",
       verified: "download.documentfoundation.org/libreoffice/stable/"
