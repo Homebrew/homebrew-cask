@@ -58,10 +58,4 @@ cask "google-drive" do
       pkgutil:   [
         "com.google.pkg.Keystone",
       ]
-
-  caveats <<~EOS
-    Although #{token} may be installed alongside Google Backup and Sync, you should not use the same account with both.
-
-      https://support.google.com/a/answer/7496409#allowboth
-  EOS
 end
