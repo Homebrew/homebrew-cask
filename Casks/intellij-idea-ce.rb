@@ -1,14 +1,13 @@
 cask "intellij-idea-ce" do
+  arch = Hardware::CPU.intel? ? "" : "-aarch64"
+
   version "2021.2.3,212.5457.46"
 
+  url "https://download.jetbrains.com/idea/ideaIC-#{version.before_comma}#{arch}.dmg"
   if Hardware::CPU.intel?
     sha256 "46b570580e7653b28a42bfcbc89964520b144272a13475366bc4d2f8c4f3077e"
-
-    url "https://download.jetbrains.com/idea/ideaIC-#{version.before_comma}.dmg"
   else
     sha256 "937658bc5dc94fe03737d8765f742f01e2720f719a4a0a5503d92b3076e4216e"
-
-    url "https://download.jetbrains.com/idea/ideaIC-#{version.before_comma}-aarch64.dmg"
   end
 
   name "IntelliJ IDEA Community Edition"
