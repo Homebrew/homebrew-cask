@@ -7,7 +7,7 @@ cask "ferdi" do
       verified: "github.com/getferdi/ferdi/"
   if Hardware::CPU.intel?
     sha256 "bfad74f6b22364f8ee80a3faf1b386707e76949c5eea68a47df11d298ee0bbc8"
- else
+  else
     sha256 "51dfa80046037bd53b3ace758b29b8a8f809b7493388cbcf96a408895ea089ea"
   end
 
