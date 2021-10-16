@@ -8,6 +8,8 @@ cask "informant" do
   desc "Inspect files with a single click"
   homepage "https://informant-app.com/"
 
+  depends_on macos: ">= :big_sur"
+
   app "Informant.app"
 
   zap trash: [
