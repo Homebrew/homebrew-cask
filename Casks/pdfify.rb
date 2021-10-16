@@ -10,7 +10,7 @@ cask "pdfify" do
   livecheck do
     url "https://pdfify.app/updater-macos"
     strategy :page_match
-    regex(%r{url=.*?/PDFify-(\d+(?:\.\d+)*-\d+)\.zip}i)
+    regex(/PDFify-(\d+(?:\.\d+)*-\d+)\.zip/i)
   end
 
   depends_on macos: ">= :high_sierra"
@@ -19,8 +19,8 @@ cask "pdfify" do
 
   zap trash: [
     "~/Library/Application Support/de.holtwick.mac.homebrew.PDFify",
-    "~/Library/Preferences/de.holtwick.mac.homebrew.PDFify.plist",
     "~/Library/Caches/de.holtwick.mac.homebrew.PDFify",
     "~/Library/Logs/PDFify",
+    "~/Library/Preferences/de.holtwick.mac.homebrew.PDFify.plist",
   ]
 end
