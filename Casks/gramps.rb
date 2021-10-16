@@ -1,6 +1,6 @@
 cask "gramps" do
-  version "5.1.4,4"
-  sha256 "19e3a99cbbfe19e886614857e28a6fbe7249603d9c706430128784e290d72def"
+  version "5.1.4,5"
+  sha256 "b50494b5b851121989695c1ed41f0512de5da6e907dc94fe6cd06b95149f7ac6"
 
   url "https://github.com/gramps-project/gramps/releases/download/v#{version.before_comma}/Gramps-Intel-#{version.before_comma}-#{version.after_comma}.dmg",
       verified: "github.com/gramps-project/gramps/"
