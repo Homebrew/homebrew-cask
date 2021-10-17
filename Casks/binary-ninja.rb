@@ -6,5 +6,7 @@ cask "binary-ninja" do
   name "Binary Ninja"
   homepage "https://binary.ninja/"
 
+  zap trash: "~/Library/Application Support/Binary Ninja"
+
   app "Binary Ninja.app"
 end
