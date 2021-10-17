@@ -9,7 +9,7 @@ cask "a-better-finder-rename" do
 
   livecheck do
     url "https://www.publicspace.net/app/signed_abfr#{version.major}.xml"
-    strategy :sparkle
+    strategy :sparkle, &:version
   end
 
   auto_updates true
