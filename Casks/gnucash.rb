@@ -9,7 +9,8 @@ cask "gnucash" do
   homepage "https://www.gnucash.org/"
 
   livecheck do
-    url "https://github.com/Gnucash/gnucash/releases/latest"
+    url :url
+    strategy :github_latest
     regex(%r{href=.*/Gnucash-Intel-v?(\d+\.\d+-\d+)\.dmg}i)
   end
 
