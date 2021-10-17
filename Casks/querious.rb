@@ -4,6 +4,7 @@ cask "querious" do
 
   url "https://www.araelium.com/querious/downloads/versions/Querious#{version}.zip"
   name "Querious #{version.major}"
+  desc "MySQL and compatible databases tool"
   homepage "https://www.araelium.com/querious/"
 
   livecheck do
