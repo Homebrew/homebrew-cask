@@ -7,7 +7,7 @@ cask "binary-ninja" do
   desc "Reverse engineering platform. This is a feature-limited demo version"
   homepage "https://binary.ninja/"
 
-  zap trash: "~/Library/Application Support/Binary Ninja"
-
   app "Binary Ninja.app"
+
+  zap trash: "~/Library/Application Support/Binary Ninja"
 end
