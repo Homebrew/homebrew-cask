@@ -4,7 +4,7 @@ cask "lycheeslicer" do
 
   url "https://mango-lychee.nyc3.cdn.digitaloceanspaces.com/LycheeSlicer-#{version}.dmg",
       verified: "mango-lychee.nyc3.cdn.digitaloceanspaces.com/"
-  name "lychee-slicer"
+  name "Lychee Slicer"
   desc "Slicer for Resin 3D printers"
   homepage "https://mango3d.io/lychee-slicer-3-for-sla-3d-printers/"
 
