@@ -5,7 +5,7 @@ cask "cirrus" do
   url "https://eclecticlightdotcom.files.wordpress.com/#{version.after_comma.major}/#{version.after_comma.minor}/cirrus#{version.before_comma.no_dots}.zip",
       verified: "eclecticlightdotcom.files.wordpress.com/"
   name "Cirrus"
-  desc "iCloud Drive folder inspector"
+  desc "Inspector for iCloud Drive folders"
   homepage "https://eclecticlight.co/cirrus-bailiff/"
 
   livecheck do
