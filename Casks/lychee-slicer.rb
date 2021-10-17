@@ -8,5 +8,10 @@ cask "lychee-slicer" do
   desc "Powerful and versatile slicer for Resin 3D printers"
   homepage "https://mango3d.io/lychee-slicer-3-for-sla-3d-printers/"
 
+  livecheck do
+    url "https://mango3d.io/downloads/"
+    regex(/href=.*?LycheeSlicer[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+  end
+
   app "LycheeSlicer.app"
 end
