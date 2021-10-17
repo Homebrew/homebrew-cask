@@ -1,4 +1,4 @@
-cask "lychee-slicer" do
+cask "lycheeslicer" do
   version "3.5.1"
   sha256 "afeb2fc1fd5756a6c902900cf762cef1e4fb92f913d1247ec2bfdc89d23a616f"
 
