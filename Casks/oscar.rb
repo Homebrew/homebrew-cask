@@ -5,6 +5,7 @@ cask "oscar" do
   url "https://www.apneaboard.com/OSCAR/OSCAR-#{version}.dmg",
       verified: "apneaboard.com/OSCAR/"
   name "OSCAR"
+  desc "CPAP Analysis Reporter"
   homepage "https://www.sleepfiles.com/OSCAR/"
 
   livecheck do
