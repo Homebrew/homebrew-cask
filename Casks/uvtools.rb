@@ -8,4 +8,9 @@ cask "uvtools" do
   homepage "https://github.com/sn4k3/UVtools"
 
   app "UVtools.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.UVtools.plist",
+    "~/Library/Saved Application State/com.UVtools.savedState",
+  ]
 end
