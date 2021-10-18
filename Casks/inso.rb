@@ -17,4 +17,8 @@ cask "inso" do
   auto_updates true
 
   binary "inso"
+
+  conflicts_with cask: [
+    "homebrew/cask-versions/inso-unstable",
+  ]
 end

@@ -18,6 +18,10 @@ cask "insomnia" do
 
   app "Insomnia.app"
 
+  conflicts_with cask: [
+    "homebrew/cask-versions/insomnia-unstable",
+  ]
+
   zap trash: [
     "~/Library/Application Support/Insomnia",
     "~/Library/Caches/com.insomnia.app",
