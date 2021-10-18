@@ -8,6 +8,11 @@ cask "openmw" do
   desc "Open-source open-world RPG game engine that supports playing Morrowind"
   homepage "https://openmw.org/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "OpenMW.app"
   app "OpenMW-CS.app"
 end
