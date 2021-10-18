@@ -25,7 +25,7 @@ cask "keka" do
     "~/Library/Caches/com.aone.keka",
     "~/Library/Containers/com.aone.keka",
     "~/Library/Containers/com.aone.keka.KekaFinderIntegration",
-    "~/Library/Group Containers/4FG648TM2A.group.com.aone.keka",
+    "~/Library/Group Containers/*.group.com.aone.keka",
     "~/Library/Preferences/com.aone.keka.plist",
     "~/Library/Saved Application State/com.aone.keka.savedState",
   ]
