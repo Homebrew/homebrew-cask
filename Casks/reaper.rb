@@ -1,18 +1,18 @@
 cask "reaper" do
-  version "6.37"
+  version "6.38"
 
   if MacOS.version <= :mojave
-    sha256 "2154a1d23914652b466e7d5a3a3398c1b5cf6e52637f125e7c359755b60b64c7"
+    sha256 "b73e627b2601e580f8c253573fce7380080bbd6a8e84c4457003f41bb60ab25c"
 
     url "https://www.reaper.fm/files/#{version.major}.x/reaper#{version.major_minor.no_dots}_x86_64.dmg"
   elsif Hardware::CPU.intel?
-    sha256 "915f441675726211e056253c7536d7ffc06bf4eed92549f6a130f8b653cb233e"
+    sha256 "34946a1663b8c80b2a9d5a5d79eac516378a7242fae95b67df3cf6ae272509ed"
 
     url "https://www.reaper.fm/files/#{version.major}.x/reaper#{version.major_minor.no_dots}_x86_64_catalina.dmg"
   else
-    sha256 "9b65217fdbfeb992c2bc8c16020bf1f5f4a96d4bf7b9893a2a2e43e86f52a9dd"
+    sha256 "4755122020b843c059c01ad97b20620871b06d34c191b4b20d39eee47b0df228"
 
-    url "https://www.reaper.fm/files/#{version.major}.x/reaper#{version.major_minor.no_dots}-beta_arm64.dmg"
+    url "https://www.reaper.fm/files/#{version.major}.x/reaper#{version.major_minor.no_dots}_arm64.dmg"
   end
 
   name "REAPER"
