@@ -1,6 +1,6 @@
 cask "cytoscape" do
-  version "3.8.2"
-  sha256 "3597f06c835285b017c29778cdc9e5ba2279475a0c78d60e82fbda6f0c53624e"
+  version "3.9.0"
+  sha256 "20624146f97e262405075bd58589930a3f76e6675736a9788d2ab84e2ad0dd0a"
 
   url "https://github.com/cytoscape/cytoscape/releases/download/#{version}/Cytoscape_#{version.dots_to_underscores}_macos.dmg",
       verified: "github.com/cytoscape/cytoscape/"
