@@ -16,7 +16,7 @@ cask "quakespasm" do
   end
 
   caveats <<~EOS
-    To complete the installation of #{token}, you will have to copy the file 'pak0.pak' and 'pak1.pak'
-    from your Quake 1 installation support directory into #{appdir}/QuakeSpasm/id1/
+    To complete the installation of #{token}, you will have to copy the file 'pak0.pak' and
+    'pak1.pak' from your Quake 1 installation support directory into #{appdir}/QuakeSpasm/id1/
   EOS
 end
