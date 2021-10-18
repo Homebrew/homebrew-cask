@@ -8,6 +8,8 @@ cask "insomnia" do
   desc "HTTP and GraphQL Client"
   homepage "https://insomnia.rest/"
 
+  # both Insomnia (GUI) and "inso" (CLI) are released from this repo
+  # thus regex for the GUI's filename is required
   livecheck do
     url "https://github.com/Kong/insomnia/releases"
     strategy :page_match
