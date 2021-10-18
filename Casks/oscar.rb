@@ -6,13 +6,14 @@ cask "oscar" do
       verified: "apneaboard.com/OSCAR/"
   name "OSCAR"
   homepage "https://www.sleepfiles.com/OSCAR/"
-  depends_on macos: ">= :sierra"
-
+  
   livecheck do
     url "https://www.sleepfiles.com/OSCAR/"
     strategy :page_match
     regex(%r{href=.*?/OSCAR-(\d+(?:\.\d+)*)\.dmg}i)
   end
 
+  depends_on macos: ">= :sierra"
+  
   app "OSCAR.app"
 end
