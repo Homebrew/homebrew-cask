@@ -6,6 +6,7 @@ cask "oscar" do
       verified: "apneaboard.com/OSCAR/"
   name "OSCAR"
   homepage "https://www.sleepfiles.com/OSCAR/"
+  depends_on macos: ">= :sierra"
 
   livecheck do
     url "https://www.sleepfiles.com/OSCAR/"
