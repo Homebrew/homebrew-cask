@@ -12,8 +12,8 @@ cask "mymonero" do
 
   zap trash: [
     "~/Library/Application Support/MyMonero",
-    "~/Library/Saved Application State/com.mymonero.mymonero-desktop.savedState",
-    "~/Library/Preferences/com.mymonero.mymonero-desktop.plist",
     "~/Library/Logs/MyMonero",
+    "~/Library/Preferences/com.mymonero.mymonero-desktop.plist",
+    "~/Library/Saved Application State/com.mymonero.mymonero-desktop.savedState",
   ]
 end
