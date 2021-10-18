@@ -11,6 +11,7 @@ cask "openmw" do
   livecheck do
     url :url
     strategy :github_latest
+    regex(/openmw[._-]v?(\d+(?:\.\d+)+)/i)
   end
 
   app "OpenMW.app"
