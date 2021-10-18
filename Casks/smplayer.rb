@@ -1,12 +1,17 @@
 cask "smplayer" do
-  version "21.8.0.9999"
-  sha256 "9265fe2bd2cf4eb9c47f77798fec5d58c93892c22dff7e2397f8865a970345be"
+  version "21.8.0"
+  sha256 "f08c20e20090ddc1633fda543d2ec5d3428ad92ebecb864ef239c5a7de15812b"
 
   url "https://github.com/smplayer-dev/smplayer/releases/download/v#{version}/smplayer-#{version}.dmg",
       verified: "github.com/smplayer-dev/smplayer/"
   name "SMPlayer"
   desc "Media player with built-in codecs"
   homepage "https://www.smplayer.info/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "SMPlayer.app"
 
