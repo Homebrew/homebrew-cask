@@ -4,7 +4,7 @@ cask "binary-ninja" do
 
   url "https://cdn.binary.ninja/installers/BinaryNinja-demo.dmg"
   name "Binary Ninja"
-  desc "Reverse engineering platform. This is a feature-limited demo version"
+  desc "Reverse engineering platform"
   homepage "https://binary.ninja/"
 
   app "Binary Ninja.app"
