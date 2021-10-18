@@ -1,7 +1,7 @@
 cask "electerm" do
-  version "1.16.21"
-
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
+
+  version "1.16.21"
 
   url "https://github.com/electerm/electerm/releases/download/v#{version}/electerm-#{version}-mac-#{arch}.dmg"
   name "electerm"
@@ -17,9 +17,9 @@ cask "electerm" do
   app "electerm.app"
 
   zap trash: [
+    "~/Library/Application Support/electerm",
     "~/Library/Logs/electerm",
     "~/Library/Preferences/org.electerm.electerm.plist",
     "~/Library/Saved Application State/org.electerm.electerm.savedState",
-    "~/Library/Application Support/electerm",
   ]
 end
