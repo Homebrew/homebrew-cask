@@ -14,6 +14,6 @@ cask "oscar" do
   end
 
   depends_on macos: ">= :sierra"
-  
+
   app "OSCAR.app"
 end
