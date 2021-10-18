@@ -14,4 +14,12 @@ cask "lycheeslicer" do
   end
 
   app "LycheeSlicer.app"
+
+  zap trash: [
+    "~/Library/Application Support/LycheeSlicer",
+    "~/Library/Application Support/LycheeSlicerconfig.json",
+    "~/Library/Logs/LycheeSlicer",
+    "~/Library/Preferences/com.mango3d.lychee.plist",
+    "~/Library/Saved Application State/com.mango3d.lychee.savedState",
+  ]
 end
