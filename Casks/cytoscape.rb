@@ -16,6 +16,7 @@ cask "cytoscape" do
   uninstall script: {
     executable: "#{appdir}/Cytoscape_v#{version}/Cytoscape Uninstaller.app/Contents/MacOS/JavaApplicationStub",
     args:       ["-q"],
+    sudo:       true,
   }
 
   caveats do
