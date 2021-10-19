@@ -7,6 +7,11 @@ cask "adobe-photoshop-cc" do
   desc "Create beatiful graphics, photos and art anywhere"
   homepage "https://www.adobe.com/products/photoshop.html"
 
+  livecheck do
+    url "https://helpx.adobe.com/photoshop/kb/fixed-issues.html"
+    regex(/(\d+(?:\.\d+)*)/i)
+  end
+
   auto_updates true
   depends_on cask: "adobe-creative-cloud"
 
@@ -15,6 +20,6 @@ cask "adobe-photoshop-cc" do
   }
 
   uninstall script: {
-    executable: "/Library/Application Support/Adobe/Uninstall/PHSP_22_5_1.app/Contents/MacOS/Uninstaller",
+    executable: "/Library/Application Support/Adobe/Uninstall/PHSP_#{version.gsub(/"."/, "_")}.app/Contents/MacOS/Uninstaller",
   }
 end
