@@ -1,5 +1,5 @@
 cask "securid" do
-  version "4.2.2"
+  version "4.2.3"
   sha256 "178109b820c97dd7ad1f8be907ae0338d2e4ae91cc6ddc4cd0484d9ad6c21198"
 
   url "https://community.rsa.com/yfcdo34327/attachments/yfcdo34327/securid-software-token-macos/5/1/RSASecurIDMac#{version.no_dots}.dmg.zip"
