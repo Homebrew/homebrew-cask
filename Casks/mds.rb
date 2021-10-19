@@ -15,5 +15,11 @@ cask "mds" do
 
   zap trash: [
     "/usr/local/mds-micromdm",
+    "~/Library/Application Support/MDS",
+    "~/Library/Application Support/com.twocanoes.mds.sync",
+    "~/Library/Logs/com.twocanoes.mds.log",
+    "~/Library/Preferences/com.apple.imdsmsrecordstore.plist",
+    "/Library/LaunchDaemons/com.twocanoes.mdshelpertool.plist",
+    "/Library/PrivilegedHelperTools/com.twocanoes.mdshelpertool",
   ]
 end
