@@ -8,7 +8,8 @@ cask "sqlcl" do
   homepage "https://www.oracle.com/sqlcl"
 
   livecheck do
-    skip "unversioned URL"
+    url "https://www.oracle.com/tools/downloads/sqlcl-downloads.html"
+    regex(%r{//download.oracle.com/otn_software/java/sqldeveloper/sqlcl-(\d+(?:\.\d+)+)\.zip}i)
   end
 
   stage_only true
