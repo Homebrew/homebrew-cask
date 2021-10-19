@@ -1,14 +1,15 @@
 cask "microsoft-edge" do
-  version "94.0.992.47"
+  folder = Hardware::CPU.intel? ? "C1297A47-86C4-4C1F-97FA-950631F94777" : "03adf619-38c6-4249-95ff-4a01c0ffc962"
+  linkid = Hardware::CPU.intel? ? "2069148" : "2093504"
 
+  version "94.0.992.50"
+
+  url "https://officecdn-microsoft-com.akamaized.net/pr/#{folder}/MacAutoupdate/MicrosoftEdge-#{version}.pkg",
+      verified: "officecdn-microsoft-com.akamaized.net/"
   if Hardware::CPU.intel?
-    url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/MicrosoftEdge-#{version}.pkg",
-        verified: "officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/"
-    sha256 "eb33a78567d10e807cace157c2011cf5d8440e3ae7581938485ee3b6332ba210"
+    sha256 "2d3e1f6c5dc01f64c18c80b1bbbcc1cc2a07c72c7b870f3b2dd167a87846ae06"
   else
-    url "https://officecdn-microsoft-com.akamaized.net/pr/03ADF619-38C6-4249-95FF-4A01C0FFC962/MacAutoupdate/MicrosoftEdge-#{version}.pkg",
-        verified: "officecdn-microsoft-com.akamaized.net/pr/03ADF619-38C6-4249-95FF-4A01C0FFC962/MacAutoupdate/"
-    sha256 "bab296267980c045d8a5888f228ce2f6fa98c9fbcda4c5f59dc452e2d16b31a5"
+    sha256 "bfd5f131c3fbf532549e9db02b4e446341b9347466f1a02812f93ca040139c99"
   end
 
   name "Microsoft Edge"
@@ -16,7 +17,7 @@ cask "microsoft-edge" do
   homepage "https://www.microsoft.com/edge"
 
   livecheck do
-    url "https://go.microsoft.com/fwlink/?linkid=2069148"
+    url "https://go.microsoft.com/fwlink/?linkid=#{linkid}"
     strategy :header_match
   end
 

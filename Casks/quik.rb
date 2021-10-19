@@ -5,9 +5,13 @@ cask "quik" do
   url "https://software.gopro.com/Mac/GoPro_Quik-MacInstaller-#{version}.dmg"
   name "GoPro Quik"
   desc "Access and edit GoPro photos and videos"
-  homepage "https://shop.gopro.com/softwareandapp/quik-%7C-desktop/Quik-Desktop.html"
+  homepage "https://community.gopro.com/t5/en/GoPro-Quik-for-desktop/ta-p/394305?profile.language=en"
 
   pkg "GoPro Quik.pkg"
 
   uninstall pkgutil: "com.GoPro.pkg.GoProApp"
+
+  caveats do
+    discontinued
+  end
 end

@@ -1,6 +1,6 @@
 cask "postman" do
-  version "8.12.4"
-  sha256 "9c379089493792539cf0f67f0793d2ac2f1e3bddf25572d48a1002ddfb9c75a2"
+  version "9.0.7"
+  sha256 "d72afc550f50ac178752696f604331f28e91afdfa8fc7256cc9f11fb92326dd2"
 
   url "https://dl.pstmn.io/download/version/#{version}/osx64",
       verified: "dl.pstmn.io/download/version/"
@@ -9,8 +9,10 @@ cask "postman" do
   homepage "https://www.postman.com/"
 
   livecheck do
-    url "https://dl.pstmn.io/download/latest/osx"
-    strategy :header_match
+    url "https://dl.pstmn.io/api/version/notes?from=#{version}&channel=stable&platform=osx"
+    strategy :page_match do |page|
+      JSON.parse(page)["notes"][0]["version"]
+    end
   end
 
   auto_updates true

@@ -8,4 +8,10 @@ cask "yt-music" do
   homepage "https://github.com/steve228uk/YouTube-Music"
 
   app "YT Music.app"
+
+  zap trash: [
+    "~/Library/Caches/uk.co.wearecocoon.YT-Music",
+    "~/Library/Preferences/uk.co.wearecocoon.YT-Music.plist",
+    "~/Library/WebKit/uk.co.wearecocoon.YT-Music",
+  ]
 end

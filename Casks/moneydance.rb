@@ -1,6 +1,6 @@
 cask "moneydance" do
-  version "2021.1,3069"
-  sha256 "b45db81dd83c2d188131f25b352d0a8921baa23f6482cfaaae62e230e32373d8"
+  version "2022,4056"
+  sha256 "bfe2711707ce42809e4c92f7458059c7aa793e6c788f8febd92aafe6022b227a"
 
   url "https://infinitekind.com/stabledl/#{version.before_comma}_#{version.after_comma}/Moneydance.zip"
   name "Moneydance"

@@ -1,6 +1,6 @@
 cask "bit-slicer" do
-  version "1.7.10"
-  sha256 "0701a5f1db34662eee41855a407bb5453d7e710eebb23d82876d31ee4799e540"
+  version "1.7.11"
+  sha256 "ca32c3222dd4a7b0227a82c4afecfb6117ca7af29122b82f934b8dd5110ffbb7"
 
   url "https://zgcoder.net/software/bitslicer/dist/stable/Bit_Slicer_#{version}.zip",
       verified: "zgcoder.net/"
