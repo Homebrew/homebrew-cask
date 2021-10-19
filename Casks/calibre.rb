@@ -42,8 +42,10 @@ cask "calibre" do
   binary "#{appdir}/calibre.app/Contents/MacOS/web2disk"
 
   zap trash: [
+    "~/Library/Application Support/calibre-ebook.com",
     "~/Library/Caches/calibre",
     "~/Library/Preferences/calibre",
+    "~/Library/Preferences/com.calibre-ebook.ebook-viewer.plist",
     "~/Library/Preferences/net.kovidgoyal.calibre.plist",
     "~/Library/Saved Application State/com.calibre-ebook.ebook-viewer.savedState",
     "~/Library/Saved Application State/net.kovidgoyal.calibre.savedState",
