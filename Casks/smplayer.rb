@@ -8,6 +8,11 @@ cask "smplayer" do
   desc "Media player with built-in codecs"
   homepage "https://www.smplayer.info/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "SMPlayer.app"
 
   zap trash: [
