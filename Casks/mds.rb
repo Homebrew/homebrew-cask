@@ -8,6 +8,14 @@ cask "mds" do
   desc "Deploy Intel and Apple Silicon Macs in Seconds"
   homepage "https://twocanoes.com/products/mac/mac-deploy-stick/"
 
+  livecheck do
+    url "https://twocanoes.com/products/mac/mac-deploy-stick/history/"
+    strategy :page_match do |page|
+      match = page.match(/MDS_Build-(\d+)_Version-(\d+(?:[._-]\d+)*)\.dmg/i)
+      "#{match[2]},#{match[1]}"
+    end
+  end
+
   pkg "MDS.pkg"
 
   uninstall pkgutil:   "com.twocanoes.pkg.MDS",
