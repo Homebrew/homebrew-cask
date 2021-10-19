@@ -6,7 +6,7 @@ cask "sqlcl" do
   name "sqlcl"
   desc "Oracle SQLcl is the modern command-line interface for the Oracle Database"
   homepage "https://www.oracle.com/sqlcl"
-  
+
   stage_only true
 
   caveats do
