@@ -4,7 +4,7 @@ cask "gitdock" do
 
   url "https://gitlab.com/api/v4/projects/28462485/packages/generic/gitdock/#{version}/GitDock.dmg"
   name "gitdock"
-  desc "GitDock is a MacOS/Windows/Linux app that displays all your GitLab activities in one place. Instead of the GitLab typical project- or group-centric approach, it collects all your information from a user-centric perspective."
+  desc "Is an app that displays all your GitLab activities in one place"
   homepage "https://gitlab.com/mvanremmerden/gitdock"
 
   app "GitDock.app"
