@@ -9,7 +9,7 @@ cask "adobe-photoshop-cc" do
 
   livecheck do
     url "https://helpx.adobe.com/photoshop/kb/fixed-issues.html"
-    regex(/(\d+(?:\.\d+)*)/i)
+    regex(/\(version\s+(\d+(?:\.\d+)+)\)/i)
   end
 
   auto_updates true
