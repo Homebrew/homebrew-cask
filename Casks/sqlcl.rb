@@ -9,7 +9,7 @@ cask "sqlcl" do
 
   livecheck do
     url "https://www.oracle.com/tools/downloads/sqlcl-downloads.html"
-    regex(%r{//download.oracle.com/otn_software/java/sqldeveloper/sqlcl[-_.]v?(\d+(?:\.\d+)+)\.zip}i)
+    regex(/href=.*?sqlcl[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   stage_only true
