@@ -7,5 +7,8 @@ cask "sqlcl" do
   desc "Oracle SQLcl is the modern command-line interface for the Oracle Database"
   homepage "https://www.oracle.com/sqlcl"
 
-  binary "sqlcl/bin/sql"
+  caveats do
+    depends_on_java "1.8"
+    path_environment_variable "/usr/local/Caskroom/sqlcl/#{version}/sqlcl/bin"
+  end
 end
