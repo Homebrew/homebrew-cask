@@ -9,8 +9,7 @@ cask "gitdock" do
 
   livecheck do
     url "https://gitlab.com/api/v4/projects/28462485/releases"
-    strategy :page_match
-    regex(%r{gitdock/(\d+(?:\.\d+)*)/GitDock\.dmg}i)
+    regex(%r{gitdock/(\d+(?:\.\d+)+)/GitDock\.dmg}i)
   end
 
   app "GitDock.app"
