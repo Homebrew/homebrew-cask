@@ -13,7 +13,7 @@ cask "xbar" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :high_sierra"
 
   app "xbar.app"
 
