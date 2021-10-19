@@ -10,8 +10,11 @@ cask "mds" do
 
   livecheck do
     url "https://twocanoes.com/products/mac/mac-deploy-stick/history/"
-    strategy :page_match do |page|
-      match = page.match(/MDS_Build-(\d+)_Version-(\d+(?:[._-]\d+)*)\.dmg/i)
+    regex(/MDS_Build-(\d+)_Version-(\d+(?:[._-]\d+)*)\.dmg/i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
+      next if match.blank?
+
       "#{match[2]},#{match[1]}"
     end
   end
