@@ -4,7 +4,7 @@ cask "sqlcl" do
 
   url "https://download.oracle.com/otn_software/java/sqldeveloper/sqlcl-#{version}.zip"
   name "sqlcl"
-  desc "Oracle SQLcl is the modern command line interface for the Oracle Database"
+  desc "Oracle SQLcl is the modern command-line interface for the Oracle Database"
   homepage "https://www.oracle.com/sqlcl"
 
   binary "sqlcl/bin/sql"
