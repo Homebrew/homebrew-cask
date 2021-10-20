@@ -10,8 +10,8 @@ cask "start" do
       regex(%r{.*/START-Installer-([.\d\-]+)\.dmg}i)
     end
   else
-    version "0.297.2-10"
-    sha256 "1553d62bfea1ceac9fa63ef5234a91fc86265bed6a8efaf0bc92e7348a30b240"
+    version "0.298.2-14"
+    sha256 "369337b4b8da24c5874ef00f49113453a59f0f8b7e0149f0a6e8a90855991fa2"
 
     url "https://imgcdn.start.qq.com/cdn/mac.client/installer/m1/START-Installer-#{version}.dmg"
 
