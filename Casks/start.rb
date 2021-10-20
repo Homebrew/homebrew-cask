@@ -1,7 +1,7 @@
 cask "start" do
   if Hardware::CPU.intel?
-    version "0.297.2-121"
-    sha256 "423416d983f69f7440038a7b733250d81f03272dbf27ba76a2715415450ca9c3"
+    version "0.298.2-127"
+    sha256 "51e92e5f335a6fb84de3c85e4be2bd88b8abfece394f1555bfa60362ab264166"
 
     url "https://imgcdn.start.qq.com/cdn/mac.client/installer/START-Installer-#{version}.dmg"
 
