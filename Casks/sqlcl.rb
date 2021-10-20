@@ -16,6 +16,6 @@ cask "sqlcl" do
 
   caveats do
     depends_on_java "8+"
-    path_environment_variable "/usr/local/Caskroom/sqlcl/#{version}/sqlcl/bin"
+    path_environment_variable "#{staged_path}/sqlcl/#{version}/sqlcl/bin"
   end
 end
