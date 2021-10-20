@@ -14,4 +14,10 @@ cask "gitdock" do
   end
 
   app "GitDock.app"
+
+  zap trash: [
+    "~/Library/Application Support/GitDock",
+    "~/Library/Preferences/com.electron.gitdock.plist",
+    "~/Library/Saved Application State/com.electron.gitdock.savedState",
+  ]
 end
