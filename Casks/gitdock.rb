@@ -6,7 +6,7 @@ cask "gitdock" do
   name "gitdock"
   desc "Menubar app that displays all your GitLab activities in one place"
   homepage "https://gitlab.com/mvanremmerden/gitdock/-/releases"
-   
+
   livecheck do
     url "https://gitlab.com/mvanremmerden/gitdock.git"
   end
