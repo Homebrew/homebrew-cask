@@ -21,7 +21,7 @@ cask "bettertouchtool" do
   app "BetterTouchTool.app"
 
   zap trash: [
-    "~/Library/Preferences/com.hegenberg.BetterTouchTool.plist",
     "~/Library/Application Support/BetterTouchTool",
+    "~/Library/Preferences/com.hegenberg.BetterTouchTool.plist",
   ]
 end
