@@ -8,6 +8,8 @@ cask "cytoscape" do
   desc "Open-source platform for network analysis and visualization"
   homepage "https://cytoscape.org/"
 
+  depends_on formula: "openjdk@11"
+
   installer script: {
     executable: "Cytoscape Installer.app/Contents/MacOS/JavaApplicationStub",
     args:       ["-q"],
@@ -15,8 +17,7 @@ cask "cytoscape" do
 
   uninstall script: {
     executable: "#{appdir}/Cytoscape_v#{version}/Cytoscape Uninstaller.app/Contents/MacOS/JavaApplicationStub",
-    args:       ["-q"],
-    sudo:       true,
+    args:       ["-q"]
   }
 
   caveats do
