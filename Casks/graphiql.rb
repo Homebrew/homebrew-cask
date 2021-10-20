@@ -8,4 +8,11 @@ cask "graphiql" do
   homepage "https://github.com/skevy/graphiql-app"
 
   app "GraphiQL.app"
+
+  zap trash: [
+    "~/Library/Application Support/GraphiQL",
+    "~/Library/Preferences/com.sk3vy.graphiql-app.helper.plist",
+    "~/Library/Preferences/com.sk3vy.graphiql-app.plist",
+    "~/Library/Saved Application State/com.sk3vy.graphiql-app.savedState",
+  ]
 end
