@@ -1,6 +1,6 @@
 cask "informant" do
-  version "0.09.0"
-  sha256 "0c2a54a94693520b58d23d1308469250f36553d5de371b678d3eb7ece79a5faa"
+  version "0.09.1"
+  sha256 "1a3cb6c1bba2f8efba1bf123a3c40e4ad292daae155bb38737a22106898acb87"
 
   url "https://github.com/tyirvine/Informant/releases/download/#{version}/Informant.zip",
       verified: "https://github.com/tyirvine/Informant/"
