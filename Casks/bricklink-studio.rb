@@ -21,10 +21,10 @@ cask "bricklink-studio" do
 
   zap trash: [
     "~/Library/Application Support/unity.BrickLink.Studio",
-    "~/Library/Preferences/unity.BrickLink.Studio.plist",
-    "~/Library/Preferences/unity.BrickLink.Patcher.plist",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/unity.BrickLink.Studio",
-    "~/Library/Saved Application State/unity.BrickLink.Studio.savedState",
+    "~/Library/Preferences/unity.BrickLink.Patcher.plist",
+    "~/Library/Preferences/unity.BrickLink.Studio.plist",
     "~/Library/Saved Application State/unity.BrickLink.Patcher.savedState",
+    "~/Library/Saved Application State/unity.BrickLink.Studio.savedState",
   ]
 end
