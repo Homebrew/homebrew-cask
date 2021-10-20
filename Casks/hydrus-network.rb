@@ -10,7 +10,5 @@ cask "hydrus-network" do
 
   app "Hydrus Network.app"
 
-  zap trash: [
-    "~/Library/Hydrus/",
-  ]
+  zap trash: "~/Library/Hydrus/"
 end
