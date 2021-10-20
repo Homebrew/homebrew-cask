@@ -1,7 +1,7 @@
 cask "oracle-jdk" do
   arch = Hardware::CPU.intel? ? "x64" : "aarch64"
 
-  version "17"
+  version "17.0.1"
 
   url "https://download.oracle.com/java/#{version.major}/latest/jdk-#{version}_macos-#{arch}_bin.dmg"
   if Hardware::CPU.intel?
