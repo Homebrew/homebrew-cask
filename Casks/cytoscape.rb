@@ -8,8 +8,6 @@ cask "cytoscape" do
   desc "Open-source platform for network analysis and visualization"
   homepage "https://cytoscape.org/"
 
-  depends_on formula: "openjdk@11"
-
   installer script: {
     executable: "Cytoscape Installer.app/Contents/MacOS/JavaApplicationStub",
     args:       ["-q"],
