@@ -12,6 +12,7 @@ cask "fritzing" do
   end
 
   name "Fritzing"
+  desc "Electronics prototyping software"
   homepage "https://fritzing.org/home/"
 
   livecheck do
