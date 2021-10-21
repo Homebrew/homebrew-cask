@@ -1,9 +1,4 @@
-cask "postman" do
-  
-  name "Postman"
-  desc "Collaboration platform for API development"
-  homepage "https://www.postman.com/"
-  
+cask "postman" do  
   if Hardware::CPU.intel?
     version "9.1.1"
     url "https://dl.pstmn.io/download/version/#{version}/osx64",
@@ -15,6 +10,10 @@ cask "postman" do
        verified: "dl.pstmn.io/download/version/"
     sha256 "33a3b4686ddf873cfefa9301b763da411265c94ccd880b2607e7177129ffc8f2"
   end
+
+  name "Postman"
+  desc "Collaboration platform for API development"
+  homepage "https://www.postman.com/"
 
   livecheck do
     url "https://dl.pstmn.io/api/version/notes?from=#{version}&channel=stable&platform=osx"
