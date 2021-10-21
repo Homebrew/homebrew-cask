@@ -10,6 +10,7 @@ cask "araxis-merge" do
   end
 
   name "Araxis Merge"
+  desc "Two and three-way file comparison, merging and folder synchronization"
   homepage "https://www.araxis.com/merge/"
 
   livecheck do
