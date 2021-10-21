@@ -24,4 +24,9 @@ cask "fritzing" do
   end
 
   app "Fritzing.app"
+
+  zap trash: [
+    "~/Library/Preferences/org.fritzing.Fritzing.plist",
+    "~/Library/Saved Application State/org.fritzing.Fritzing.savedState",
+  ]
 end
