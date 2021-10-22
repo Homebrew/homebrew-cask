@@ -3,7 +3,7 @@ cask "maestral" do
   sha256 "b6403e1da9e6499730d0652adde94e3e9a9381b351046eaefdc8d3dba21f2e1d"
 
   url "https://github.com/SamSchott/maestral/releases/download/v#{version}/Maestral-#{version}.dmg",
-      verified: "github.com/SamSchott/maestral"
+      verified: "github.com/SamSchott/maestral/"
   name "Maestral"
   desc "Open-source Dropbox client"
   homepage "https://maestral.app/"
