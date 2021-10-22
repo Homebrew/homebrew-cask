@@ -8,12 +8,6 @@ cask "megazeux" do
   desc "ASCII-based game creation system"
   homepage "https://www.digitalmzx.com/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-    regex(%r{href=.*?/releases/download/v(\d\.\d*\w?)/mzx.*-intel-universal\.dmg})
-  end
-
   app "MegaZeux.app"
   artifact "Documentation", target: "#{ENV["HOME"]}/Library/Application Support/MegaZeux/Documentation"
 
