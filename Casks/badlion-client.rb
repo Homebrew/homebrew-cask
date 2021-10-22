@@ -15,8 +15,8 @@ cask "badlion-client" do
   app "Badlion Client.app"
 
   zap trash: [
+    "~/Library/Application Support/Badlion Client",
     "~/Library/Caches/net.badlion.client",
     "~/Library/Caches/net.badlion.client.ShipIt",
-    "~/Library/Application Support/Badlion Client",
   ]
 end
