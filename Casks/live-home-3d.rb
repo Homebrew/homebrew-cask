@@ -10,7 +10,7 @@ cask "live-home-3d" do
 
   livecheck do
     url "https://www.belightsoft.com/download/updates/appcast_lh3d.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   app "Live Home 3D.app"
