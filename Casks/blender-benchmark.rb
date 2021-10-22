@@ -10,7 +10,7 @@ cask "blender-benchmark" do
   livecheck do
     url "https://opendata.blender.org/cdn/BlenderBenchmark2.0/launcher/"
     strategy :page_match
-    regex(/href=.*benchmark[._-]launcher[._-](\d+(?:\.\d+)*)[._-]macos\.dmg/i)
+    regex(/href=.*benchmark[._-]launcher[._-](\d+(?:\.\d+)+)[._-]macos\.dmg/i)
   end
 
   app "Blender Benchmark Launcher.app"
