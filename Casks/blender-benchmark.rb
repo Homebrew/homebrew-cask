@@ -14,4 +14,9 @@ cask "blender-benchmark" do
   end
 
   app "Blender Benchmark Launcher.app"
+
+  zap trash: [
+    "~/Library/Caches/blender-benchmark-launcher",
+    "~/Library/Saved Appication State/org.blenderfoundation.benchmark.release.savedState",
+  ]
 end
