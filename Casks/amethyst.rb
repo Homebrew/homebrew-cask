@@ -24,9 +24,9 @@ cask "amethyst" do
   app "Amethyst.app"
 
   zap trash: [
-    "~/Library/Caches/com.amethyst.Amethyst",
-    "~/Library/Preferences/com.amethyst.Amethyst.plist",
-    "~/Library/Cookies/com.amethyst.Amethyst.binarycookies",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.amethyst.amethyst.sfl*",
+    "~/Library/Caches/com.amethyst.Amethyst",
+    "~/Library/Cookies/com.amethyst.Amethyst.binarycookies",
+    "~/Library/Preferences/com.amethyst.Amethyst.plist",
   ]
 end
