@@ -3,13 +3,13 @@ cask "exodus" do
 
   version "21.10.22"
 
-  url "https://downloads.exodus.com/releases/exodus-#{arch}-#{version}.dmg"
   if Hardware::CPU.intel?
     sha256 "9fc07ad2efa9215527a74fee1a679fe4afee15d4d7806a732e92b819a972f46d"
   else
     sha256 "f89ac6f75c1f192bf58433566052c3ac25d6c26eea5dccdaddbf074ef8f07f97"
   end
 
+  url "https://downloads.exodus.com/releases/exodus-#{arch}-#{version}.dmg"
   name "Exodus"
   desc "Desktop wallet for cryptocurrency assets"
   homepage "https://www.exodus.com/"
