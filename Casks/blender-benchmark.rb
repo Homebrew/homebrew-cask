@@ -4,8 +4,14 @@ cask "blender-benchmark" do
 
   url "https://opendata.blender.org/cdn/BlenderBenchmark2.0/launcher/benchmark-launcher-#{version}-macos.dmg"
   name "Blender Open Data Benchmark"
-  desc "Tool to benchmark the performance of 3D scenes"
+  desc "3D performance benchmarking tool"
   homepage "https://opendata.blender.org/"
+
+  livecheck do
+    url "https://opendata.blender.org/cdn/BlenderBenchmark2.0/launcher/"
+    strategy :page_match
+    regex(/href=.*benchmark[._-]launcher[._-](\d+(?:\.\d+)*)[._-]macos\.dmg/i)
+  end
 
   app "Blender Benchmark Launcher.app"
 end
