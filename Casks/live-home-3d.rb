@@ -4,7 +4,7 @@ cask "live-home-3d" do
 
   url "https://s3.amazonaws.com/belightsoft/LiveHome3DStd.dmg",
       verified: "s3.amazonaws.com/belightsoft/"
-  name "live-home-3d"
+  name "Live Home 3D"
   desc "Home & floorplan designer & renderer"
   homepage "https://www.livehome3d.com/mac/live-home-3d"
 
