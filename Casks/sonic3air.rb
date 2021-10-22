@@ -9,11 +9,8 @@ cask "sonic3air" do
   homepage "https://sonic3air.org/"
 
   livecheck do
-    url "https://projects.sappharad.com/s3air_mac/"
-    strategy :page_match do |page|
-      page.scan(/v(\d\d\.\d\d\.\d\d\.?\d?)/i)
-          .map { |match| match&.first }
-    end
+    url "https://projects.sappharad.com/s3air_mac/changelog_mac.txt"
+    regex(/v(\d+(?:\.\d+)*)/i)
   end
 
   app "Sonic 3 AIR.app"
@@ -21,7 +18,5 @@ cask "sonic3air" do
   artifact "doc", target: "#{ENV["HOME"]}/Library/Application Support/sonic3air/doc"
   artifact "bonus", target: "#{ENV["HOME"]}/Library/Application Support/sonic3air/bonus"
 
-  zap trash: [
-    "~/Library/Application Support/sonic3air",
-  ]
+  zap trash: "~/Library/Application Support/sonic3air"
 end
