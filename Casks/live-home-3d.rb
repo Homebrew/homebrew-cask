@@ -1,6 +1,6 @@
 cask "live-home-3d" do
   version "4.1.3"
-  sha256 ""
+  sha256 :no_check
 
   url "https://s3.amazonaws.com/belightsoft/LiveHome3DStd.dmg"
   name "live-home-3d"
