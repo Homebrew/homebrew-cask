@@ -18,7 +18,7 @@ cask "bluejeans" do
     "com.bluejeansnet.blue.pkg",
     "com.tatvikmohit.BlueJeans-Audio",
   ]
-  
+
   zap trash: [
     "~/Library/Application Support/com.bluejeansnet.Blue",
     "~/Library/Caches/com.bluejeansnet.Blue",
