@@ -10,8 +10,8 @@ cask "harmony-node" do
     
 
   
-    suite "#{HOMEBREW_PREFIX}/bin/harmony-node"
-    binary "#{HOMEBREW_PREFIX}/harmony-node/harmony"
+    suite "harmony-node"
+    binary "#{appdir}/harmony-node/harmony"
 
 
     caveats do
