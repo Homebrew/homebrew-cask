@@ -10,7 +10,7 @@ cask "harmony-node" do
     
 
   
-    app "harmony"
+
     binary "harmony", target: "/usr/local/bin/harmony-node/harmony"
     artifact "lib", target: "/usr/local/bin/harmony-node/lib"
 
