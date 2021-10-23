@@ -7,10 +7,19 @@ cask "harmony-node" do
     desc "Network node for the Harmony blockchain"
     homepage "https://github.com/harmony-one/harmony"
   
+    
 
   
-    suite "#{HOMEBREW_PREFIX}/harmony-node/#{version}"
-    binary "#{appdir}/harmony-node/#{version}"
+    
+    binary "harmony", target: "/usr/local/bin/harmony-node"
+    artifact "lib", target: "/usr/local/lib/harmony-node"
+
+
+    postflight do
+        set_ownership [ "#{HOMEBREW_PREFIX}/bin/harmony-node", "#{HOMEBREW_PREFIX}."]
+      end
+    
+    uninstall delete: ["#{HOMEBREW_PREFIX}/bin/harmony-node", "#{HOMEBREW_PREFIX}/lib/harmony-node"]
 
     caveats do
         unsigned_accessibility
