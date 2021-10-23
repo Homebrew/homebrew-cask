@@ -1,6 +1,6 @@
 cask "serial" do
-  version "2.0.11,02001.17.50"
-  sha256 "43139a79a004510c1f8d21dee355cdc0bad1acef5fabf37635e81987bc9f9a62"
+  version "2.0.12,02001.27.50"
+  sha256 "48e23a1d0b8e18579ae158d908c95e56a50ee98d1d26e536ae15bea887558d02"
 
   url "https://download.decisivetactics.com/downloads/serial/Serial_#{version.before_comma}.zip"
   name "Serial"
@@ -13,6 +13,7 @@ cask "serial" do
   end
 
   auto_updates true
+  depends_on macos: ">= :el_capitan"
 
   app "Serial.app"
 end
