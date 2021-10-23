@@ -16,10 +16,6 @@ cask "harmony-node" do
     
 
 
-    postflight do
-        set_ownership [ "#{HOMEBREW_PREFIX}/bin/harmony-node"]
-      end
-    
     uninstall delete: ["#{HOMEBREW_PREFIX}/bin/harmony-node"]
 
     caveats do
