@@ -11,7 +11,6 @@ cask "harmony-node" do
 
   
     suite "harmony-node"
-    binary "#{appdir}/harmony-node/harmony"
 
 
     caveats do
