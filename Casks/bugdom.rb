@@ -14,6 +14,5 @@ cask "bugdom" do
   zap trash: [
     "~/Library/Preferences/Bugdom",
     "~/Library/Saved Application State/io.jor.bugdom.savedState",
-    "/private/var/folders/tj/qqphdl1d0xqghmh61dd86b7m0000gp/C/io.jor.bugdom",
   ]
 end
