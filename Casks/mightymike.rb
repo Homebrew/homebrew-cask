@@ -1,4 +1,4 @@
-cask "mighty-mike" do
+cask "mightymike" do
   version "3.0.0"
   sha256 "e0eb90048416aafa93025173fad4b5813d894eb930cab96f4c84607124300ff4"
 
@@ -11,7 +11,5 @@ cask "mighty-mike" do
   app "MightyMike.app"
   artifact "Documentation", target: "#{ENV["HOME"]}/Library/Application Support/MightyMike"
 
-  zap trash: [
-    "~/Library/Preferences/MightyMike",
-  ]
+  zap trash: "~/Library/Preferences/MightyMike"
 end
