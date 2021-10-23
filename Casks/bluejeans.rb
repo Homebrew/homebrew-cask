@@ -18,4 +18,12 @@ cask "bluejeans" do
     "com.bluejeansnet.blue.pkg",
     "com.tatvikmohit.BlueJeans-Audio",
   ]
+
+  zap trash: [
+    "~/Library/Application Support/com.bluejeansnet.Blue",
+    "~/Library/Caches/com.bluejeansnet.Blue",
+    "~/Library/LaunchAgents/com.bluejeansnet.BlueJeansHelper.plist",
+    "~/Library/Logs/BlueJeans",
+    "~/Library/Preferences/com.bluejeansnet.Blue.plist",
+  ]
 end
