@@ -9,9 +9,7 @@ cask "harmony-node" do
   
     
 
-  
-    app  "#{appdir}/harmony-node"
-    binary "#{appdir}"
+    suite "harmony-node"
 
 
     caveats do
