@@ -10,7 +10,7 @@ cask "harmony-node" do
     
 
   
-    app  "harmony-node"
+    app  "#{appdir}/harmony-node"
     binary "#{appdir}"
 
 
