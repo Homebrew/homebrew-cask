@@ -9,8 +9,17 @@ cask "harmony-node" do
   
     
 
-    suite "harmony-node"
+  
+    app "harmony"
+    binary "harmony", target: "/usr/local/bin/harmony-node/harmony"
+    artifact "lib", target: "/usr/local/bin/harmony-node/lib"
 
+
+    postflight do
+        set_ownership [ "#{HOMEBREW_PREFIX}/bin/harmony-node"]
+      end
+    
+    uninstall delete: ["#{HOMEBREW_PREFIX}/bin/harmony-node"]
 
     caveats do
         unsigned_accessibility
