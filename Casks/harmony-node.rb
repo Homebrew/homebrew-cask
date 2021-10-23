@@ -10,7 +10,19 @@ cask "harmony-node" do
     
 
   
-    suite "harmony-node"
+    
+    binary "#{HOMEBREW_PREFIX}/harmony-node"
+
+    preflight do
+      system_command "/bin/mkdir", args: ["-p", "#{HOMEBREW_PREFIX}/bin/harmony-node/#{version}/lib}"], sudo: true
+    end
+  
+    postflight do
+        system_command "/bin/ln", args: ["-s", "#{HOMEBREW_PREFIX}/Caskroom/harmony-node/#{version}/lib}", "#{HOMEBREW_PREFIX}/bin/harmony-node/"], sudo: true
+        set_ownership [ "#{HOMEBREW_PREFIX}/bin/harmony-node"]
+      end
+    
+    uninstall delete: "#{HOMEBREW_PREFIX}/bin/harmony-node/#{version}/"
 
 
     caveats do
