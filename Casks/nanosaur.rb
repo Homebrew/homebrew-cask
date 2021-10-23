@@ -11,7 +11,5 @@ cask "nanosaur" do
   app "Nanosaur.app"
   artifact "Documentation", target: "#{ENV["HOME"]}/Library/Application Support/Nanosaur"
 
-  zap trash: [
-    "~/Library/Preferences/Nanosaur",
-  ]
+  zap trash: "~/Library/Preferences/Nanosaur"
 end
