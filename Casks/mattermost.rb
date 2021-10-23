@@ -1,13 +1,13 @@
 cask "mattermost" do
   arch = Hardware::CPU.intel? ? "x64" : "m1"
 
-  version "5.0.0"
+  version "5.0.1"
 
   url "https://releases.mattermost.com/desktop/#{version}/mattermost-desktop-#{version}-mac-#{arch}.zip"
   if Hardware::CPU.intel?
-    sha256 "78529aea98c0a6d98ce68da76ee4b982bfcfb8a7078d4a553341ad3e79f3cc6e"
+    sha256 "ec5248c285dc08eb6f6c311dc60192391721640c7a81e64a0a7f7f972239b3ef"
   else
-    sha256 "cae46ab7c963fb8ececef42f204b3e10583f5446ebb8bd2331dfac0d6eb36bbd"
+    sha256 "c4a3205a9bbc886f056c989e5c8678ba6c2080ce9881451facd178807e3b6c66"
   end
 
   name "Mattermost"
