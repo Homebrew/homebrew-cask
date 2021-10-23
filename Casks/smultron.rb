@@ -8,7 +8,7 @@ cask "smultron" do
   homepage "https://www.peterborgapps.com/smultron/"
 
   livecheck do
-    url :url
+    url "https://www.peterborgapps.com/updates/smultron#{version.major}.plist"
     strategy :extract_plist
   end
 
