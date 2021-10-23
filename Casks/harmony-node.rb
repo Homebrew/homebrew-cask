@@ -19,7 +19,7 @@ cask "harmony-node" do
   
     uninstall delete: "#{HOMEBREW_PREFIX}/ncl-#{version}"
     postflight do
-        system_command "/bin/ln", args: ["-s", "#{HOMEBREW_PREFIX}/bin/harmony-node/#{version}/lib", "#{HOMEBREW_PREFIX}/Caskroom/harmony-node/#{version}/lib}"], sudo: true
+        system_command "/bin/ln", args: ["-s", "#{HOMEBREW_PREFIX}/Caskroom/harmony-node/#{version}/lib}", "#{HOMEBREW_PREFIX}/bin/harmony-node/"], sudo: true
         set_ownership [ "#{HOMEBREW_PREFIX}/bin/harmony-node"]
       end
     
