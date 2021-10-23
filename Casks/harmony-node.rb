@@ -13,8 +13,6 @@ cask "harmony-node" do
     
     binary "#{HOMEBREW_PREFIX}/harmony-node"
 
-    artifact "lib", target: "#{HOMEBREW_PREFIX}/Caskroom/harmony-node/#{version}/lib"
-
     preflight do
       system_command "/bin/mkdir", args: ["-p", "#{HOMEBREW_PREFIX}/bin/harmony-node/#{version}/lib}"], sudo: true
     end
