@@ -9,7 +9,7 @@ cask "harmony-node" do
   
 
   
-    suite "harmony-node/#{version}"
+    suite "#{HOMEBREW_PREFIX}/harmony-node/#{version}"
     binary "#{appdir}/harmony-node/#{version}"
 
     caveats do
