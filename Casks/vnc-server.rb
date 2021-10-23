@@ -4,6 +4,7 @@ cask "vnc-server" do
 
   url "https://www.realvnc.com/download/file/vnc.files/VNC-Server-#{version}-MacOSX-x86_64.pkg"
   name "Real VNC Server"
+  desc "Remote desktop server application"
   homepage "https://www.realvnc.com/"
 
   livecheck do
