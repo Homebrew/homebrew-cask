@@ -14,6 +14,8 @@ cask "springtoolsuite" do
       match = page.match(
         %r{href=.*?/spring-tool-suite-\d+-(\d+(?:\.\d+)*)\.RELEASE-e(\d+(?:\.\d+)*)-macosx\.cocoa\.x86_64\.dmg}i,
       )
+      next if match.blank?
+      
       "#{match[1]},#{match[2]}"
     end
   end
