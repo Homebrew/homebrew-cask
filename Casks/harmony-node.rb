@@ -12,7 +12,7 @@ cask "harmony-node" do
   
 
     artifact "./", target: "/usr/local/bin/harmony-node/"
-    artifact "lib/*", target: "/usr/lib/"
+    artifact "lib/*", target: "/usr/local/lib/harmony-node"
     
 
 
