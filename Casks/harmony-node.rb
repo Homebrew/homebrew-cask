@@ -7,10 +7,10 @@ cask "harmony-node" do
     desc "Network node for the Harmony blockchain"
     homepage "https://github.com/harmony-one/harmony"
   
-    license :MIT
 
   
-    suite "harmony"
+    suite "harmony-node/#{version}"
+    binary "#{appdir}/harmony-node/#{version}"
 
     caveats do
         unsigned_accessibility
