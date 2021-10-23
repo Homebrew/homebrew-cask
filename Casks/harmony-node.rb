@@ -11,8 +11,8 @@ cask "harmony-node" do
 
   
 
-    binary "harmony", target: "/usr/local/bin/harmony-node/harmony"
-    artifact "lib", target: "/usr/local/bin/harmony-node/lib"
+    artifact "./", target: "/usr/local/bin/harmony-node/harmony"
+    
 
 
     postflight do
