@@ -11,14 +11,14 @@ cask "harmony-node" do
 
   
     
-    binary "#{HOMEBREW_PREFIX}/harmony-node"
+    binary "harmony-node"
 
     preflight do
       system_command "/bin/mkdir", args: ["-p", "#{HOMEBREW_PREFIX}/bin/harmony-node/#{version}/lib}"], sudo: true
     end
   
     postflight do
-        system_command "/bin/ln", args: ["-s", "#{HOMEBREW_PREFIX}/Caskroom/harmony-node/#{version}/lib}", "#{HOMEBREW_PREFIX}/bin/harmony-node/"], sudo: true
+        system_command "/bin/ln", args: ["-s", "#{HOMEBREW_PREFIX}/Caskroom/harmony-node/#{version}/lib}", "#{HOMEBREW_PREFIX}/bin/harmony-node/#{version}/lib"], sudo: true
         set_ownership [ "#{HOMEBREW_PREFIX}/bin/harmony-node"]
       end
     
