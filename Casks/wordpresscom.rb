@@ -4,7 +4,7 @@ cask "wordpresscom" do
 
   url "https://public-api.wordpress.com/rest/v1.1/desktop/osx/download?type=app&ref=update&version=#{version}"
   name "WordPress.com"
-  desc "Wordpress client"
+  desc "WordPress client"
   homepage "https://apps.wordpress.com/desktop/"
 
   livecheck do
