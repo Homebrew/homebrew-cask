@@ -19,7 +19,6 @@ cask "harmony-one" do
 
     postflight do
         set_ownership [ "#{HOMEBREW_PREFIX}/bin/harmony-one", "/usr/local/lib/harmony-one"]
-        system_command "/bin/ln", args: ["-s", "/usr/local/lib/harmony-one", "/usr/local/lib"], sudo: false
         File.append "~/.zshrc", <<~EOS
         
         export DYLD_FALLBACK_LIBRARY_PATH=/usr/local/lib/harmony-one:$DYLD_FALLBACK_LIBRARY_PATH
