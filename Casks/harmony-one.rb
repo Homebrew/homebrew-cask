@@ -23,7 +23,6 @@ cask "harmony-one" do
     binary shimscript, target: "#{HOMEBREW_PREFIX}/bin/harmony-one"
 
     preflight do
-        #system_command "/usr", args: ["-p", "#{HOMEBREW_PREFIX}/harmony-one/"], sudo: true
         File.write shimscript, <<~EOS
             #!/bin/sh
             cd /usr/local/harmony-one/
