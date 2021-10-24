@@ -19,7 +19,7 @@ cask "harmony-one" do
     binary shimscript, target: "harmony-one"
 
     preflight do
-        system_command "/bin/chmod", args: ["755", "#{HOMEBREW_PREFIX}/harmony-one/harmony}"]
+        system_command "/bin/chmod", args: ["755", "#{HOMEBREW_PREFIX}/harmony-one/harmony"]
         File.write shimscript, <<~EOS
             #!/bin/sh
             ./harmony
