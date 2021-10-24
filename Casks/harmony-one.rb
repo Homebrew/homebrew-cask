@@ -14,11 +14,12 @@ cask "harmony-one" do
     
     artifact "./", target: "#{HOMEBREW_PREFIX}/harmony-one"
     
+    
     # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
     shimscript = "#{HOMEBREW_PREFIX}/harmony-one/harmony-shim.sh"
     binary shimscript, target: "#{HOMEBREW_PREFIX}/bin/harmony-one"
 
-    preflight do
+    postflight do
         #system_command "/bin/mkdir", args: ["-p", "#{HOMEBREW_PREFIX}/harmony-one/"], sudo: true
         File.write shimscript, <<~EOS
             #!/bin/sh
