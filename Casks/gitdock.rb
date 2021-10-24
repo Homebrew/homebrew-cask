@@ -1,8 +1,8 @@
 cask "gitdock" do
-  version "0.1.9"
-  sha256 "f9fecb7d026d1acaea71bf62439bda604d30688383993f34dd343283d44a4d52"
+  version "0.1.11"
+  sha256 "d81ba225f7c07df4b8e75640158cb6154aad47e297b4b0366bb732ce5ffbbc43"
 
-  url "https://gitlab.com/api/v4/projects/28462485/packages/generic/gitdock/#{version}/GitDock.dmg"
+  url "https://gitlab.com/mvanremmerden/gitdock/-/releases/v#{version}/downloads/GitDock.dmg"
   name "GitDock"
   desc "Displays all your GitLab activities in one place"
   homepage "https://gitlab.com/mvanremmerden/gitdock"
