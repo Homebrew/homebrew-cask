@@ -15,6 +15,8 @@ cask "harmony-one" do
 
     postflight do
         system_command "/bin/cp", args: ["#{staged_path}/harmony-one/#{version}/lib/*", "#{HOMEBREW_PREFIX}/lib/"]
+    end
+    
     uninstall delete: ["#{HOMEBREW_PREFIX}/harmony-one"]
 
     caveats do
