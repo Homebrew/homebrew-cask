@@ -27,7 +27,7 @@ cask "harmony-one" do
     end
     
     postflight do
-        system_command "/bin/chmod", args: ["755", "#{HOMEBREW_PREFIX}/harmony-one/harmony"]
+        system_command "/bin/chmod", args: ["755", "#{HOMEBREW_PREFIX}/harmony-one/harmony"], sudo: true
 
     end
 
