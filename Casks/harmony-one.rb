@@ -43,5 +43,5 @@ cask "harmony-one" do
     caveats do
         unsigned_accessibility
       end
-  end
+end
   
