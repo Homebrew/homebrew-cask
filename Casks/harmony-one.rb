@@ -13,7 +13,7 @@ cask "harmony-one" do
 
 
 
-    binary "/usr/local/bin/harmony-one"
+    binary "harmony-one"
     artifact "lib", target: "/usr/local/lib/harmony-one"
     
 
