@@ -2,10 +2,10 @@ cask "harmony-one" do
 
     # Utility to correctly link dylibs to binary. 
     # Guidance appreciated if theres a more efficient method
-    dylib_installer = "#{staged_path}/#{version}/dylib_installer.sh"
+
     module Utils
         def self.installer
-            File.write dylib_installer, <<~EOS
+            File.write  "#{staged_path}/#{version}/dylib_installer.sh", <<~EOS
             #!/usr/bin/env bash
         
             # Licensed by author Alex Birch under CC BY-SA 4.0
