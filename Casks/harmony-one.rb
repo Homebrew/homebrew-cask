@@ -14,7 +14,6 @@ cask "harmony-one" do
 
     artifact "./", target: "#{HOMEBREW_PREFIX}/harmony-one/#{version}/"
 
-    binary "harmony", target: "#{HOMEBREW_PREFIX}/harmony-one/#{version}/"
 
     postflight do
         #set_ownership [ "#{HOMEBREW_PREFIX}/harmony-one/#{version}/"]
