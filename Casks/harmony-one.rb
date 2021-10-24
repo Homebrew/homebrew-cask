@@ -7,34 +7,24 @@ cask "harmony-one" do
     desc "Network node for the Harmony blockchain"
     homepage "https://github.com/harmony-one/harmony"
 
-    depends_on "curl"
-    
     
 
   
 
 
 
-    binary "harmony"
-    #lib.install Dir["lib/*.dylib"]    
-
-=begin   
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/armitage.wrapper.sh"
-  binary shimscript, target: "armitage"
-
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      java "$@" -jar '#{appdir}/Armitage.app/Contents/Java/armitage.jar'
-    EOS
-  end
-end
-=end 
-    #ßuninstall delete: ["#{HOMEBREW_PREFIX}/bin/harmony-node"]
+    binary "/usr/local/bin/harmony-node/harmony-one"
+    artifact "./lib/*", target: "/usr/local/lib/harmony-one"
+    
+    postflight do
+        set_ownership [ "#{HOMEBREW_PREFIX}/bin/harmony-one", "/usr/local/lib/harmony-one"]
+        system_command "/bin/ln", args: ["-s", ""], sudo: false
+    end
+    
+    uninstall delete: ["#{HOMEBREW_PREFIX}/bin/harmony-node"]
 
     caveats do
         unsigned_accessibility
       end
-end
+  end
   
