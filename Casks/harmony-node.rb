@@ -14,7 +14,7 @@ cask "harmony-node" do
 
 
     binary "/usr/local/bin/harmony-node/harmony"
-    artifact "./lib", target: "/usr/local/lib/"
+    artifact "./lib/*", target: "/usr/local/lib/"
     
     #postflight do
         #set_ownership [ "#{HOMEBREW_PREFIX}/bin/harmony-node"]
