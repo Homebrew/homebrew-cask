@@ -20,7 +20,7 @@ cask "harmony-one" do
         set_ownership [ "#{HOMEBREW_PREFIX}/harmony-one/#{version}/"]
 
         system_command "/bin/export", ["DYLD_FALLBACK_LIBRARY_PATH=#{HOMEBREW_PREFIX}/harmony-one/#{version}/lib/:$DYLD_FALLBACK_LIBRARY_PATH"]
-        system_command "/bin/export", ["PATH=#{HOMEBREW_PREFIX}/harmony-one/#{version}/:$PATH"]]
+        system_command "/bin/export", ["PATH=#{HOMEBREW_PREFIX}/harmony-one/#{version}/:$PATH"]
 
     end
     
