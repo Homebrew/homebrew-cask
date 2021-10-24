@@ -11,9 +11,9 @@ cask "harmony-one" do
 
   
 
-
+    
     artifact "./", target: "#{HOMEBREW_PREFIX}/harmony-one"
-    File.new 
+    
     # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
     shimscript = "#{HOMEBREW_PREFIX}/harmony-one/harmony-shim.sh"
     binary shimscript, target: "#{HOMEBREW_PREFIX}/bin/harmony-one"
@@ -25,8 +25,8 @@ cask "harmony-one" do
             ./harmony
         EOS
     end
-    
-  
+
+
     
     uninstall delete: ["#{HOMEBREW_PREFIX}/harmony-one"]
 
