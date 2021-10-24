@@ -11,11 +11,16 @@ cask "harmony-node" do
 
   
 
-    artifact "./", target: "/usr/local/bin/harmony-node/"
+
+
     binary "/usr/local/bin/harmony-node/harmony"
+    artifact "./lib", target: "/usr/local/lib/"
     
-
-
+    #postflight do
+        #set_ownership [ "#{HOMEBREW_PREFIX}/bin/harmony-node"]
+        #system_command ""
+        #end
+    
     uninstall delete: ["#{HOMEBREW_PREFIX}/bin/harmony-node"]
 
     caveats do
