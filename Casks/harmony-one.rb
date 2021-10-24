@@ -5,7 +5,7 @@ cask "harmony-one" do
 
     module Utils
         def self.installer
-            File.write  "#{staged_path}/#{version}/dylib_installer.sh", <<~EOS
+            File.write  "#{HOMEBREW_PREFIX}/Caskroom/harmony-one/#{version}/dylib_installer.sh", <<~EOS
             #!/usr/bin/env bash
         
             # Licensed by author Alex Birch under CC BY-SA 4.0
