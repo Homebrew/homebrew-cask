@@ -6,7 +6,6 @@ cask "harmony-one" do
     name "Harmony One Blockchain Node"
     desc "Network node for the Harmony blockchain"
     homepage "https://github.com/harmony-one/harmony"
-    license "LGPL-3.0-or-later"
 
     depends_on "curl"
     
@@ -17,7 +16,7 @@ cask "harmony-one" do
 
 
     binary "harmony"
-    #lib.install Dir["lib/*.dylib"]    
+    lib.install Dir["lib/*.dylib"]    
 
 =begin   
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
