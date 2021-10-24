@@ -28,7 +28,7 @@ cask "harmony-one" do
     
    
     
-    uninstall delete: ["#{HOMEBREW_PREFIX}/harmony-one"]
+   # uninstall delete: ["#{HOMEBREW_PREFIX}/harmony-one"]
 
     caveats do
         unsigned_accessibility
