@@ -13,15 +13,21 @@ cask "harmony-one" do
 
 
 
-    binary "/usr/local/bin/harmony-node/harmony-one"
-    artifact "./lib/*", target: "/usr/local/lib/harmony-one"
+    binary "/usr/local/bin/harmony-one"
+    artifact "lib", target: "/usr/local/lib/harmony-one"
     
+
     postflight do
         set_ownership [ "#{HOMEBREW_PREFIX}/bin/harmony-one", "/usr/local/lib/harmony-one"]
-        system_command "/bin/ln", args: ["-s", ""], sudo: false
+        system_command "/bin/ln", args: ["-s", "/usr/local/lib/harmony-one", "/usr/local/lib"], sudo: false
+        File.append "~/.zshrc", <<~EOS
+        
+        export DYLD_FALLBACK_LIBRARY_PATH=/usr/local/lib/harmony-one:$DYLD_FALLBACK_LIBRARY_PATH
+        source ~/.zshrc
+      EOS
     end
     
-    uninstall delete: ["#{HOMEBREW_PREFIX}/bin/harmony-node"]
+    uninstall delete: ["#{HOMEBREW_PREFIX}/bin/harmony-one", "#{HOMEBREW_PREFIX}/lib/harmony-one"]
 
     caveats do
         unsigned_accessibility
