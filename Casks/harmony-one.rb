@@ -26,7 +26,7 @@ cask "harmony-one" do
         #system_command "/usr", args: ["-p", "#{HOMEBREW_PREFIX}/harmony-one/"], sudo: true
         File.write shimscript, <<~EOS
             #!/bin/sh
-            cd /usr/local/harmony-one/harmony
+            cd /usr/local/harmony-one/
             ./harmony
         EOS
     end
