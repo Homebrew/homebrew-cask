@@ -3,11 +3,12 @@ cask "harmony-one" do
     sha256 "a8fd1a63f46886d51605c71fef15a7dabe5509dd35ce71ce5df2cc9ccad7860d"
   
     url "https://github.com/harmony-one/harmony/releases/download/v#{version}/harmony-macos-4.3.0.zip"
+
     name "Harmony One Blockchain Node"
     desc "Network node for the Harmony blockchain"
     homepage "https://github.com/harmony-one/harmony"
 
-    url "https://gist.githubusercontent.com/omhmichaels/cf6270271edd7c6b5537237775dc645a/raw/34e3b6e4764cfaefe0e5eb72912b1a75ec475d36/make_portable.sh"
+    
 
   
 
