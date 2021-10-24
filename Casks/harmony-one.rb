@@ -26,11 +26,7 @@ cask "harmony-one" do
         EOS
     end
     
-    postflight do
-        system_command "/bin/chmod", args: ["755", "#{HOMEBREW_PREFIX}/harmony-one/harmony"], sudo: true
-
-    end
-
+   
     
     uninstall delete: ["#{HOMEBREW_PREFIX}/harmony-one"]
 
