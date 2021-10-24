@@ -16,7 +16,7 @@ cask "harmony-one" do
 
 
     binary "harmony"
-    lib.install Dir["lib/*.dylib"]    
+    #lib.install Dir["lib/*.dylib"]    
 
 =begin   
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
