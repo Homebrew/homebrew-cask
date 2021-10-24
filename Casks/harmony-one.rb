@@ -21,9 +21,9 @@ cask "harmony-one" do
     binary shimscript, target: "#{HOMEBREW_PREFIX}/bin/harmony-one"
 
     preflight do
-        File.new ("#{HOMEBREW_PREFIX}/harmony-one/harmony-shim.sh", "w+")
+        shim = File.new ("#{HOMEBREW_PREFIX}/harmony-one/harmony-shim.sh", "w+")
         #system_command "/bin/mkdir", args: ["-p", "#{HOMEBREW_PREFIX}/harmony-one/"], sudo: true
-        File.write shimscript, <<~EOS
+        File.write shim, <<~EOS
             #!/bin/sh
             ./harmony
         EOS
