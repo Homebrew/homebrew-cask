@@ -12,11 +12,12 @@ cask "harmony-one" do
 
   
 
-    
+    # Copy artifacts to the Application Directory
     artifact "./", target: "#{HOMEBREW_PREFIX}/harmony-one"
     
     
     # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+    # Could not think of a more effective way to go about correctly linking these dylibs. Guidance appreciated if theres is a better method.
     shimscript = "#{staged_path}/harmony-shim.sh"
 
     binary shimscript, target: "#{HOMEBREW_PREFIX}/bin/harmony-one"
@@ -25,14 +26,16 @@ cask "harmony-one" do
         #system_command "/usr", args: ["-p", "#{HOMEBREW_PREFIX}/harmony-one/"], sudo: true
         File.write shimscript, <<~EOS
             #!/bin/sh
-            /usr/local/harmony-one/harmony
+            cd /usr/local/harmony-one/harmony
+            ./harmony
         EOS
     end
 
 
-    
+    # Delete application directory created    
     uninstall delete: ["#{HOMEBREW_PREFIX}/harmony-one"]
 
+    # Due to Macos Security you will have to verify the unsigned binary as well as each of the dylib libraries.  
     caveats do
         unsigned_accessibility
       end
