@@ -14,13 +14,11 @@ cask "harmony-one" do
 
 
     binary "harmony"
-    artifact "lib", target: "/usr/local/lib/"
     
-
         
     postflight do
-        set_ownership [ "#{HOMEBREW_PREFIX}/bin/harmony-one", "/usr/local/lib/harmony-one"]
-
+        # set_ownership [ "#{HOMEBREW_PREFIX}/bin/harmony-one", "/usr/local/lib/harmony-one"]
+        File.symlink "/#{HOMEBREW_PREFIX}/Caskroom/harmony-one/#{version}/lib/", "/#{HOMEBREW_PREFIX}/lib/"
     end
     
     uninstall delete: ["#{HOMEBREW_PREFIX}/bin/harmony-one", "#{HOMEBREW_PREFIX}/lib/harmony-one"]
