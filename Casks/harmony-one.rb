@@ -12,16 +12,22 @@ cask "harmony-one" do
   
 
 
-
-    binary "/usr/local/bin/harmony-node/harmony-one"
-    artifact "./lib/*", target: "/usr/local/lib/harmony-one"
+    artifact "./" target: "#{HOMEBREW_PREFIX}/harmony-one"
     
-    postflight do
-        set_ownership [ "#{HOMEBREW_PREFIX}/bin/harmony-one", "/usr/local/lib/harmony-one"]
-        system_command "/bin/ln", args: ["-s", ""], sudo: false
+    # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+    shimscript = "#{HOMEBREW_PREFIX}/"
+    binary shimscript, target: "harmony-one"
+
+    preflight do
+    File.write shimscript, <<~EOS
+        #!/bin/sh
+        ./harmony
+    EOS
     end
     
-    uninstall delete: ["#{HOMEBREW_PREFIX}/bin/harmony-node"]
+
+    
+    uninstall delete: ["#{HOMEBREW_PREFIX}/harmony-one"]
 
     caveats do
         unsigned_accessibility
