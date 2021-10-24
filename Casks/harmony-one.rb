@@ -22,6 +22,7 @@ cask "harmony-one" do
         open('~/.zshrc', 'a') do |f|
             f.puts "export DYLD_FALLBACK_LIBRARY_PATH=/usr/local/lib/harmony-one:$DYLD_FALLBACK_LIBRARY_PATH"
             end
+        end
         
     postflight do
         set_ownership [ "#{HOMEBREW_PREFIX}/bin/harmony-one", "/usr/local/lib/harmony-one"]
