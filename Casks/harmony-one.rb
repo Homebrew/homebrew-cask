@@ -15,14 +15,15 @@ cask "harmony-one" do
     artifact "./" target: "#{HOMEBREW_PREFIX}/harmony-one"
     
     # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-    shimscript = "#{HOMEBREW_PREFIX}/"
+    shimscript = "#{HOMEBREW_PREFIX}/harmony-one"
     binary shimscript, target: "harmony-one"
 
     preflight do
-    File.write shimscript, <<~EOS
-        #!/bin/sh
-        ./harmony
-    EOS
+        system_command "/bin/chmod", args: ["755", "#{HOMEBREW_PREFIX}/harmony-one/harmony}"]
+        File.write shimscript, <<~EOS
+            #!/bin/sh
+            ./harmony
+        EOS
     end
     
 
