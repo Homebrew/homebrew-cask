@@ -14,7 +14,7 @@ cask "harmony-one" do
     binary "harmony"
 
     postflight do
-        system_command "/bin/ln", args: ["-s", "#{staged_path}/harmony-one/#{version}/lib/*.dylib", "#{HOMEBREW_PREFIX}/lib/"]
+        system_command "/bin/ln", args: ["-fs", "#{staged_path}/harmony-one/#{version}/lib/*", "#{HOMEBREW_PREFIX}/lib/"]
     end
        
     uninstall delete: ["#{HOMEBREW_PREFIX}/harmony-one"]
