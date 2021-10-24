@@ -35,12 +35,17 @@ cask "harmony-one" do
     # Delete application directory created    
     uninstall delete: ["#{HOMEBREW_PREFIX}/harmony-one"]
 
-    # Due to Macos Security you will have to verify the unsigned binary as well as each of the dylib libraries. 
+=begin
+    
+    # Due to Macos Security you will have to verify the unsigned binary as well as each of the dylib libraries.     
+    # After Successfull Completion of Security Validation you will get the following error unless you have created a wallet and have its corresponding keys:
+        "ERROR when loading bls key: stat ./.hmy/blskeys: no such file or directory"
+=end
+
     caveats do
         unsigned_accessibility
       end
-    # After Successfull Completion of Security Validation you will get the following error unless you have created a wallet and have its corresponding keys:
-    # "ERROR when loading bls key: stat ./.hmy/blskeys: no such file or directory"
+
 
 
   end
