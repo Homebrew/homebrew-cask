@@ -29,5 +29,3 @@ cask "harmony-one" do
         unsigned_accessibility
       end
   end
-  export DYLD_FALLBACK_LIBRARY_PATH=#{HOMEBREW_PREFIX}/harmony-one/#{version}/lib/:$DYLD_FALLBACK_LIBRARY_PATH
-  export PATH=#{HOMEBREW_PREFIX}/harmony-one/#{version}/:$PATH
