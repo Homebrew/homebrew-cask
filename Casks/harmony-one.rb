@@ -16,14 +16,17 @@ cask "harmony-one" do
     binary "harmony"
     artifact "lib", target: "/usr/local/lib/harmony-one"
     
-
+    def configure_zshrc
+                
+        # Add DYLD_FALLBACK_LIBRARY_PATH 
+        open('~/.zshrc', 'a') do |f|
+            f.puts "export DYLD_FALLBACK_LIBRARY_PATH=/usr/local/lib/harmony-one:$DYLD_FALLBACK_LIBRARY_PATH"
+            end
+        
     postflight do
         set_ownership [ "#{HOMEBREW_PREFIX}/bin/harmony-one", "/usr/local/lib/harmony-one"]
-        File.append "~/.zshrc", <<~EOS
-        
-        export DYLD_FALLBACK_LIBRARY_PATH=/usr/local/lib/harmony-one:$DYLD_FALLBACK_LIBRARY_PATH
-        source ~/.zshrc
-      EOS
+        configure_zshrc
+        system_command "/bin/source" ["~/.zshrc"]
     end
     
     uninstall delete: ["#{HOMEBREW_PREFIX}/bin/harmony-one", "#{HOMEBREW_PREFIX}/lib/harmony-one"]
