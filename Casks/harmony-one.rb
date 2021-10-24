@@ -27,7 +27,7 @@ cask "harmony-one" do
     postflight do
         set_ownership [ "#{HOMEBREW_PREFIX}/bin/harmony-one", "/usr/local/lib/harmony-one"]
         configure_zshrc
-        system_command "/bin/source" ["~/.zshrc"]
+        #system_command "/bin/source" ["~/.zshrc"]
     end
     
     uninstall delete: ["#{HOMEBREW_PREFIX}/bin/harmony-one", "#{HOMEBREW_PREFIX}/lib/harmony-one"]
