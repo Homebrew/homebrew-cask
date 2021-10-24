@@ -18,8 +18,8 @@ cask "harmony-one" do
     postflight do
         #set_ownership [ "#{HOMEBREW_PREFIX}/harmony-one/#{version}/"]
 
-        system_command "/bin/export", args: ["DYLD_FALLBACK_LIBRARY_PATH=#{HOMEBREW_PREFIX}/harmony-one/#{version}/lib/:$DYLD_FALLBACK_LIBRARY_PATH"]
-        system_command "/bin/export", args: ["PATH=#{HOMEBREW_PREFIX}/harmony-one/#{version}/:$PATH"]
+        system_command "export", args: ["DYLD_FALLBACK_LIBRARY_PATH=#{HOMEBREW_PREFIX}/harmony-one/#{version}/lib/:$DYLD_FALLBACK_LIBRARY_PATH"]
+        system_command "export", args: ["PATH=#{HOMEBREW_PREFIX}/harmony-one/#{version}/:$PATH"]
 
     end
     
