@@ -125,6 +125,10 @@ cask "harmony-one" do
     desc "Network node for the Harmony blockchain"
     homepage "https://github.com/harmony-one/harmony"
   
+
+    binary "harmony"
+    
+
     preflight do
         Utils.installer
         system_command "/bin/bash" ["#{staged_path}/#{version}/dylib_installer.sh", "harmony"]
@@ -133,9 +137,6 @@ cask "harmony-one" do
   
 
 
-
-    binary "harmony"
-    
 
     
     uninstall delete: ["#{HOMEBREW_PREFIX}/bin/harmony", "#{HOMEBREW_PREFIX}/lib/harmony-one"]
