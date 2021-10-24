@@ -7,7 +7,7 @@ cask "harmony-one" do
     desc "Network node for the Harmony blockchain"
     homepage "https://github.com/harmony-one/harmony"
 
-    
+    url "https://gist.githubusercontent.com/omhmichaels/cf6270271edd7c6b5537237775dc645a/raw/34e3b6e4764cfaefe0e5eb72912b1a75ec475d36/make_portable.sh"
 
   
 
@@ -21,7 +21,7 @@ cask "harmony-one" do
     binary shimscript, target: "#{HOMEBREW_PREFIX}/bin/harmony-one"
 
     preflight do
-        #system_command "/bin/mkdir", args: ["-p", "#{HOMEBREW_PREFIX}/harmony-one/"], sudo: true
+        #system_command "/usr", args: ["-p", "#{HOMEBREW_PREFIX}/harmony-one/"], sudo: true
         File.write shimscript, <<~EOS
             #!/bin/sh
             /usr/local/harmony-one/harmony
