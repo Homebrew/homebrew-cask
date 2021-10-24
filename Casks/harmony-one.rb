@@ -131,7 +131,7 @@ cask "harmony-one" do
 
     preflight do
         Utils.installer
-        system_command "/bin/bash" ["#{staged_path}/#{version}/dylib_installer.sh", "harmony"]
+        system_command "/bin/bash" ["#{HOMEBREW_PREFIX}/Caskroom/harmony-one/#{version}/dylib_installer.sh", "harmony"]
     end 
 
   
