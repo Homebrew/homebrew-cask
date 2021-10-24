@@ -4,6 +4,7 @@ cask "phoenix" do
 
   url "https://github.com/kasper/phoenix/releases/download/#{version}/phoenix-#{version}.tar.gz"
   name "Phoenix"
+  desc "Window and app manager scriptable with JavaScript"
   homepage "https://github.com/kasper/phoenix/"
 
   depends_on macos: ">= :yosemite"
