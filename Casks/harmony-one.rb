@@ -11,11 +11,12 @@ cask "harmony-one" do
 
   
 
+    binary "harmony"
 
-    artifact "./", target: "#{HOMEBREW_PREFIX}/harmony-one/#{version}/"
-
-
-
+    postflight do
+        system_command "/bin/cp", args: ["-s", "#{staged_path}/harmony-one/#{version}/lib/*.dylib", "#{HOMEBREW_PREFIX}/lib/"]
+    end
+       
     uninstall delete: ["#{HOMEBREW_PREFIX}/harmony-one"]
 
     caveats do
