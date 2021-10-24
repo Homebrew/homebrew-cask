@@ -12,7 +12,7 @@ cask "harmony-one" do
   
 
     
-    #artifact "./", target: "#{HOMEBREW_PREFIX}/harmony-one"
+    artifact "./", target: "#{HOMEBREW_PREFIX}/harmony-one"
     
     
     # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
