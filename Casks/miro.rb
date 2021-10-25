@@ -15,6 +15,8 @@ cask "miro" do
     strategy :extract_plist
   end
 
+  auto_updates true
+
   app "Miro.app"
 
   zap trash: [
