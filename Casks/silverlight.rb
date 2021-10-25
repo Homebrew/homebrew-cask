@@ -4,6 +4,7 @@ cask "silverlight" do
 
   url "https://download.microsoft.com/download/0/3/E/03EB1393-4F4E-4191-8364-C641FAB20344/#{version.patch}.00/Silverlight.dmg"
   name "Silverlight"
+  desc "Application framework designed for writing and running web applications"
   homepage "https://www.microsoft.com/silverlight/"
 
   pkg "silverlight.pkg"
@@ -17,4 +18,8 @@ cask "silverlight" do
     "~/Library/Saved Application State/com.microsoft.silverlight.savedState",
   ],
       rmdir: "~/Library/Application Support/Microsoft/"
+
+  caveats do
+    discontinued
+  end
 end
