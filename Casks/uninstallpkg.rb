@@ -4,6 +4,7 @@ cask "uninstallpkg" do
 
   url "https://www.corecode.io/downloads/uninstallpkg_#{version.before_comma}.zip"
   name "UninstallPKG"
+  desc "PKG software package uninstall tool"
   homepage "https://www.corecode.io/uninstallpkg/"
 
   livecheck do
