@@ -24,13 +24,5 @@ cask "surfshark" do
     "~/Library/Containers/com.surfshark.vpnclient.macos.launchAgent",
     "~/Library/Group Containers/YHUG37CKN8.com.surfshark.vpn",
     "~/Library/Saved Application State/com.surfshark.vpnclient.macos.savedState",
-    "/var/db/receipts/com.surfshark.vpnclient.macos.bom",
-    "/var/db/receipts/com.surfshark.vpnclient.macos.plist",
-    "/var/folders/rn/y6f8rlb57rbdscfs4x2s7y5m0000gn/C/com.surfshark.vpnclient.macos",
-    "/var/folders/rn/y6f8rlb57rbdscfs4x2s7y5m0000gn/C/com.surfshark.vpnclient.macos.PacktTunnel-OpenVPN",
-    "/var/folders/rn/y6f8rlb57rbdscfs4x2s7y5m0000gn/C/com.surfshark.vpnclient.macos.launchAgent",
-    "/var/folders/rn/y6f8rlb57rbdscfs4x2s7y5m0000gn/T/com.surfshark.vpnclient.macos",
-    "/var/folders/rn/y6f8rlb57rbdscfs4x2s7y5m0000gn/T/com.surfshark.vpnclient.macos.PacktTunnel-OpenVPN",
-    "/var/folders/rn/y6f8rlb57rbdscfs4x2s7y5m0000gn/T/com.surfshark.vpnclient.macos.launchAgent",
   ]
 end
