@@ -10,7 +10,7 @@ cask "playcover" do
 
   depends_on arch: :arm64
 
-  app "#{version}b1/PlayCover.app"
+  app "PlayCover #{version}/PlayCover.app"
 
   zap trash: [
     "~/Library/Application Support/me.playcover.PlayCover",
