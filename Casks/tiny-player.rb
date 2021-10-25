@@ -14,6 +14,8 @@ cask "tiny-player" do
 
   auto_updates true
 
+  depends_on macos: ">= :el_capitan"
+
   app "Tiny Player.app"
 
   zap trash: [
