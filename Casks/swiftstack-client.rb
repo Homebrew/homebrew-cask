@@ -10,7 +10,7 @@ cask "swiftstack-client" do
 
   livecheck do
     url "https://storage.googleapis.com/swiftstack/swiftstackclient_macosx-x86_64_latest.html"
-    regex(%r{URL=.*?/swiftstackclient-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{URL=.*?swiftstackclient[-._]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "SwiftStack Client.app"
