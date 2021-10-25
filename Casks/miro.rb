@@ -14,6 +14,8 @@ cask "miro" do
     url :url
     strategy :extract_plist
   end
+  
+  auto_updates true
 
   app "Miro.app"
 
