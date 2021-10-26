@@ -8,7 +8,7 @@ cask "ogdesign-eagle" do
   if Hardware::CPU.intel?
     sha256 "d0d7a1394f027f4f1b682fb8f11bec5b8e54b0600dfb3db52c1c116a78c1f702"
   else
-    sha256 "bc6315aa3092412ecad2093fbffa5e6fad7ccb37cb1f556725c04e236a015773"
+    sha256 "86ec5ef37548b7191c622bb7177a7518e68b709403ddfa7ca5483119c94767e1"
   end
 
   name "Eagle"
