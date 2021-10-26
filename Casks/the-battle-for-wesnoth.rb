@@ -9,8 +9,8 @@ cask "the-battle-for-wesnoth" do
   homepage "https://wesnoth.org/"
 
   livecheck do
-    url "https://sourceforge.net/projects/wesnoth/files/latest/download&user_agent=Intel%20Mac%20OS%20X"
-    strategy :header_match
+    url :homepage
+    regex(/href=.*?Wesnoth[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "The Battle for Wesnoth.app"
