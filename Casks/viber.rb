@@ -11,7 +11,7 @@ cask "viber" do
     skip "unversioned URL"
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "Viber.app"
 
