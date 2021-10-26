@@ -10,7 +10,7 @@ cask "trainerroad" do
 
   livecheck do
     url "https://trainrdtrcmn01un1softw01.blob.core.windows.net/installers/mac/v001/Production/latest-mac.yml"
-    regex(/url:\s*TrainerRoad-(\d+(?:\.\d+)*)\.dmg/i)
+    regex(/url:\s*TrainerRoad[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   depends_on macos: ">= :el_capitan"
