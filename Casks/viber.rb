@@ -8,7 +8,8 @@ cask "viber" do
   homepage "https://www.viber.com/"
 
   livecheck do
-    skip "unversioned URL"
+    url :url
+    strategy :extract_plist
   end
 
   depends_on macos: ">= :high_sierra"
