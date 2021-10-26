@@ -4,7 +4,7 @@ cask "ssokit" do
 
   url "https://github.com/rangaofei/SSokit-qmake/releases/download/#{version}/SSokit_#{version}.dmg"
   name "SSokit"
-  desc "Simple and strong TCP&UDP debug tool"
+  desc "TCP and UDP debug tool"
   homepage "https://github.com/rangaofei/SSokit-qmake"
 
   livecheck do
