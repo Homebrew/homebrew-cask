@@ -9,7 +9,7 @@ cask "amazon-music" do
   homepage "https://www.amazon.com/musicapps"
 
   livecheck do
-    # The download page does not provide a version number.
+    # The download page does not provide a version number
     # The version number of the artifact corresponds with the installer, not the application
     skip "No version information available"
   end
