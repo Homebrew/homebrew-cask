@@ -9,7 +9,7 @@ cask "tinderbox" do
 
   livecheck do
     url :homepage
-    regex(/>Tinderbox\s+v?(\d+(?:\.\d+)+)[< "]/i)
+    regex(/>Tinderbox\s+v?(\d+(?:\.\d+)+)[< \s]/i)
   end
 
   depends_on macos: ">= :high_sierra"
