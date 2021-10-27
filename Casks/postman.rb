@@ -17,8 +17,8 @@ cask "postman" do
   homepage "https://www.postman.com/"
 
   livecheck do
-    url "https://dl.pstmn.io/api/version/"
-    regex(/Postman[._-]osx[._-](\d+(?:\.\d+)*)[._-]#{livecheck_arch}\.zip/i)
+    url "https://dl.pstmn.io/api/version/notes"
+    regex(/Postman\s*v?(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
