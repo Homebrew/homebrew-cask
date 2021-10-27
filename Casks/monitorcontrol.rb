@@ -7,6 +7,7 @@ cask "monitorcontrol" do
   desc "Tool to control external monitor brightness & volume"
   homepage "https://github.com/MonitorControl/MonitorControl"
 
+  auto_updates true
   depends_on macos: ">= :sierra"
 
   app "MonitorControl.app"
