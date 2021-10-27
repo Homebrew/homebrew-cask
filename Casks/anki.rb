@@ -8,6 +8,11 @@ cask "anki" do
   desc "Memory training application"
   homepage "https://apps.ankiweb.net/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :high_sierra"
 
   app "Anki.app"
