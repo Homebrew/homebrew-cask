@@ -4,7 +4,6 @@ cask "tuntap" do
 
   url "https://downloads.sourceforge.net/tuntaposx/tuntap/#{version}/tuntap_#{version}.tar.gz",
       verified: "downloads.sourceforge.net/tuntaposx/"
-  appcast "https://sourceforge.net/projects/tuntaposx/rss?path=/tuntap"
   name "TunTap"
   desc "Kernel extensions that create virtual network interfaces"
   homepage "https://tuntaposx.sourceforge.io/"
@@ -13,8 +12,8 @@ cask "tuntap" do
 
   uninstall pkgutil:   "tuntap.startup_item.tap|tuntap.startup_item.tun|tuntap.tap|tuntap.tun",
             launchctl: [
-              "net.sf.tuntaposx.tun.plist",
-              "net.sf.tuntaposx.tap.plist",
+              "net.sf.tuntaposx.tap",
+              "net.sf.tuntaposx.tun",
             ],
             kext:      [
               "net.sf.tuntaposx.tap",
