@@ -1,5 +1,5 @@
 cask "fmail" do
-  version "2.3.6,87"
+  version "2.4.0,88"
   sha256 :no_check
 
   url "https://arievanboxel.fr/fmail/updates/fmail.dmg"
@@ -8,11 +8,16 @@ cask "fmail" do
   homepage "https://arievanboxel.fr/fmail/en/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://arievanboxel.fr/fmail/sparkle/appcast.xml"
+    strategy :sparkle
   end
 
+  auto_updates true
+  depends_on macos: ">= :mojave"
+
   app "FMail.app"
+
+  uninstall quit: "fr.arievanboxel.fmail"
 
   zap trash: [
     "~/Library/Application Scripts/fr.arievanboxel.FMail",
