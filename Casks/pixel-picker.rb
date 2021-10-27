@@ -1,6 +1,6 @@
 cask "pixel-picker" do
-  version "1.6.0"
-  sha256 "d31f9b9f3b5dda4827a215c20c4488c3151e4e14ada79dd744ad3097fe38beb9"
+  version "1.6.1"
+  sha256 "2c98627f6fca2f3a7d043499e63be25dd80ecd6ab848e15637961f10ebc0bd6f"
 
   url "https://github.com/acheronfail/pixel-picker/releases/download/#{version}/Pixel.Picker.#{version}.dmg"
   name "Pixel Picker"
