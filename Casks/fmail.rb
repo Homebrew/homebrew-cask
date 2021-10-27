@@ -13,4 +13,9 @@ cask "fmail" do
   end
 
   app "FMail.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/fr.arievanboxel.FMail",
+    "~/Library/Containers/fr.arievanboxel.FMail",
+  ]
 end
