@@ -1,6 +1,5 @@
 cask "postman" do
-  url_arch = Hardware::CPU.intel? ? "osx64" : "osx_arm64"
-  livecheck_arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch = Hardware::CPU.intel? ? "osx64" : "osx_arm64"
 
   version "9.1.2"
 
@@ -10,7 +9,7 @@ cask "postman" do
     sha256 "2677a0027a714798a994b60298dec728a6b3e0357e9324b8fb93212d6f7bccb4"
   end
 
-  url "https://dl.pstmn.io/download/version/#{version}/#{url_arch}",
+  url "https://dl.pstmn.io/download/version/#{version}/#{arch}",
       verified: "dl.pstmn.io/download/version/"
   name "Postman"
   desc "Collaboration platform for API development"
