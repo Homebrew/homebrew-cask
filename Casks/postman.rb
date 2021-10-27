@@ -1,24 +1,23 @@
 cask "postman" do
-  url_arch = Hardware::CPU.intel? ? "osx64" : "osx_arm64"
-  livecheck_arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch = Hardware::CPU.intel? ? "osx64" : "osx_arm64"
+
+  version "9.1.2"
 
   if Hardware::CPU.intel?
-    version "9.1.1"
-    sha256 "8b84a23b699aa9b7f83488d1ca5b05a309f4cda1c26d0e4a90b69a459af19cbd"
+    sha256 "1d8badc2b848a52549eafe8ac03bb85577a44c4ae9aae818b557314f62f698ca"
   else
-    version "9.0.7"
-    sha256 "33a3b4686ddf873cfefa9301b763da411265c94ccd880b2607e7177129ffc8f2"
+    sha256 "2677a0027a714798a994b60298dec728a6b3e0357e9324b8fb93212d6f7bccb4"
   end
 
-  url "https://dl.pstmn.io/download/version/#{version}/#{url_arch}",
+  url "https://dl.pstmn.io/download/version/#{version}/#{arch}",
       verified: "dl.pstmn.io/download/version/"
   name "Postman"
   desc "Collaboration platform for API development"
   homepage "https://www.postman.com/"
 
   livecheck do
-    url "https://dl.pstmn.io/api/version/"
-    regex(/Postman[._-]osx[._-](\d+(?:\.\d+)*)[._-]#{livecheck_arch}\.zip/i)
+    url "https://dl.pstmn.io/api/version/notes"
+    regex(/Postman\s*v?(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
