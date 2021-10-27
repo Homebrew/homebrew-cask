@@ -2,6 +2,7 @@ cask "monitorcontrol" do
   if MacOS.version <= :catalina
     version "3.1.1"
     sha256 "41fa75f378e2a1d0ec0b90fae9cfe4f6859d1628fecf32d23ad7b5447beb78e1"
+
     livecheck do
       skip "Legacy version for macOS Catalina and older"
     end
