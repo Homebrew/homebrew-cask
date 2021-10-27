@@ -9,7 +9,7 @@ cask "softraid" do
   homepage "https://www.softraid.com/"
 
   livecheck do
-    url "https://download.owcdigital.com/softraid6/mac"
+    url "https://download.owcdigital.com/softraid#{version.major}/mac"
     strategy :header_match
   end
 
