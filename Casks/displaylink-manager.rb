@@ -19,5 +19,6 @@ cask "displaylink-manager" do
     "com.displaylink.uninstaller",
     "com.displaylink.displaylinkloginscreenext",
     "com.displaylink.displaylinkmanagerapp",
-  ]
+  ],
+            quit:    "com.displaylink.DisplayLinkUserAgent"
 end
