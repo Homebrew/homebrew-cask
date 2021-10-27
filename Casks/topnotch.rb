@@ -5,7 +5,7 @@ cask "topnotch" do
   url "https://updates.topnotch.app/TopNotch-#{version}.dmg"
   name "topnotch"
   desc "Utility to hide the notch"
-  homepage "https://topnotch.app"
+  homepage "https://topnotch.app/"
 
   livecheck do
     url "https://updates.topnotch.app/appcast.xml"
