@@ -7,6 +7,11 @@ cask "threema" do
   desc "End-to-end encrypted instant messaging application"
   homepage "https://threema.ch/"
 
+  livecheck do
+    url "https://threema.ch/en/whats-new"
+    regex(/Threema\s*for\s*Desktop\s*(\d+(?:\.\d+)+)/i)
+  end
+
   app "Threema.app"
 
   zap trash: "~/Library/Application Support/threema-consumer-web"
