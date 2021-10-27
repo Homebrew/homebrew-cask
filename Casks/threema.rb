@@ -1,0 +1,13 @@
+cask "threema" do
+  version "1.0.3"
+  sha256 :no_check
+
+  url "https://releases.threema.ch/web-electron/v1/release/Threema-Latest.dmg"
+  name "threema"
+  desc "End-to-end encrypted instant messaging application"
+  homepage "https://threema.ch/"
+
+  app "Threema.app"
+
+  zap trash: "~/Library/Application Support/threema-consumer-web"
+end
