@@ -5,13 +5,15 @@ cask "softraid" do
   url "https://downloads.owc.com/softraid/mac/#{version.major}/SoftRAID%20#{version}.dmg",
       verified: "downloads.owc.com/softraid/"
   name "SoftRAID"
-  homepage "https://www.softraid.com/"
   desc "Powerful and intuitive software RAID utility"
+  homepage "https://www.softraid.com/"
 
   livecheck do
     url "https://download.owcdigital.com/softraid6/mac"
     strategy :header_match
   end
+
+  depends_on macos: ">= :catalina"
 
   app "SoftRAID #{version}/SoftRAID #{version}.app"
 end
