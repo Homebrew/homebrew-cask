@@ -1,6 +1,6 @@
 cask "nordvpn" do
-  version "6.7.0,168"
-  sha256 "4e81dd1b82d6405033df0786f60dd2f5e6ecb42816b0ba2142b858fa59ed5ac3"
+  version "6.8.2,171"
+  sha256 "7076238f7ef49dae500265fa710dc25efa1c052624f7dc304b619647ff7bbbb4"
 
   url "https://downloads.nordcdn.com/apps/macos/generic/NordVPN-OpenVPN/#{version.before_comma}/NordVPN.pkg",
       verified: "downloads.nordcdn.com/"
@@ -35,9 +35,9 @@ cask "nordvpn" do
   zap trash: [
     "~/Library/Application Support/com.nordvpn.macos",
     "~/Library/Caches/com.nordvpn.macos",
+    "~/Library/Cookies/com.nordvpn.macos.binarycookies",
     "~/Library/Logs/NordVPN/",
     "~/Library/Preferences/com.nordvpn.macos.plist",
     "~/Library/Saved Application State/com.nordvpn.macos.savedState",
-    "~/Library/Cookies/com.nordvpn.macos.binarycookies",
   ]
 end

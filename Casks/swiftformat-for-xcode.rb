@@ -1,6 +1,6 @@
 cask "swiftformat-for-xcode" do
-  version "0.48.11"
-  sha256 "3f4a4ed22f8ee8da2265e96c0fc22adc58baedcd67e2936d76ecf9a891c92ea7"
+  version "0.48.17"
+  sha256 "289fc6acabc5df72b24841206bafc341ac2369d7243dda410c96a3ed64bb2d2c"
 
   url "https://github.com/nicklockwood/SwiftFormat/archive/#{version}.zip"
   name "SwiftFormat for Xcode"

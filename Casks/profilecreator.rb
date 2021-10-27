@@ -4,6 +4,7 @@ cask "profilecreator" do
 
   url "https://github.com/erikberglund/ProfileCreator/releases/download/v#{version.before_comma}/ProfileCreator_v#{version.before_comma}-#{version.after_comma}.dmg"
   name "ProfileCreator"
+  desc "Create standard or customized configuration profiles"
   homepage "https://github.com/erikberglund/ProfileCreator"
 
   livecheck do
@@ -17,4 +18,10 @@ cask "profilecreator" do
   depends_on macos: ">= :sierra"
 
   app "ProfileCreator.app"
+
+  zap trash: [
+    "~/Library/Application Support/ProfileCreator",
+    "~/Library/Application Support/ProfilePayloads",
+    "~/Library/Preferences/com.github.erikberglund.ProfileCreator.plist",
+  ]
 end

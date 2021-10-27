@@ -1,6 +1,6 @@
 cask "openvpn-connect" do
-  version "3.3.0,3924"
-  sha256 "59cb994dcd9fde6ac043f00e0d4143bd15e432ef3c7c89825beb3a8b69836cdb"
+  version "3.3.1,4000"
+  sha256 "221fe99f9eaa998a2f39f02ffdb16005eb5fae890dce1c1474bbd4b5fa691171"
 
   url "https://swupdate.openvpn.net/downloads/connect/openvpn-connect-#{version.before_comma}.#{version.after_comma}_signed.dmg"
   name "OpenVPN Connect client"

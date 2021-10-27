@@ -1,5 +1,5 @@
 cask "big-mean-folder-machine" do
-  version "2.42"
+  version "2.43"
   sha256 :no_check
 
   url "https://www.publicspace.net/download/BMFM.dmg"

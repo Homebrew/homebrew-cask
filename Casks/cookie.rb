@@ -1,5 +1,5 @@
 cask "cookie" do
-  version "6.5.7"
+  version "6.6.1"
   sha256 :no_check
 
   url "https://sweetpproductions.com/products/cookieapp/Cookie.dmg"
@@ -18,10 +18,10 @@ cask "cookie" do
 
   zap trash: [
     "~/Library/Application Scripts/com.sweetpproductions.Cookie5",
-    "~/Library/Containers/com.sweetpproductions.Cookie5",
-    "~/Library/Preferences/com.sweetpproductions.Cookie5.plist",
     "~/Library/Application Scripts/com.sweetpproductions.CookieApp",
+    "~/Library/Containers/com.sweetpproductions.Cookie5",
     "~/Library/Containers/com.sweetpproductions.CookieApp",
+    "~/Library/Preferences/com.sweetpproductions.Cookie5.plist",
     "~/Library/Preferences/com.sweetpproductions.CookieApp.plist",
   ]
 end

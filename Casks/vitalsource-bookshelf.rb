@@ -9,7 +9,7 @@ cask "vitalsource-bookshelf" do
   homepage "https://www.vitalsource.com/bookshelf-features"
 
   livecheck do
-    url "https://support.vitalsource.com/hc/en-us/articles/360014107913-Mac"
+    url "https://support.vitalsource.com/api/v2/help_center/en-us/articles/360014107913"
     regex(/href=.*?VitalSource-Bookshelf[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 

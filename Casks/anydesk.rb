@@ -1,5 +1,5 @@
 cask "anydesk" do
-  version "6.3.1"
+  version "6.3.2"
   sha256 :no_check
 
   url "https://download.anydesk.com/anydesk.dmg"
@@ -14,12 +14,18 @@ cask "anydesk" do
 
   app "AnyDesk.app"
 
-  uninstall delete: [
-    "/Library/LaunchAgents/com.philandro.anydesk.Frontend.plist",
-    "/Library/LaunchDaemons/com.philandro.anydesk.Helper.plist",
-    "/Library/LaunchDaemons/com.philandro.anydesk.service.plist",
-    "/Library/PrivilegedHelperTools/com.philandro.anydesk.Helper",
-  ]
+  uninstall quit:   [
+    "com.philandro.anydesk",
+    "com.philandro.anydesk.Helper",
+    "com.philandro.anydesk.service",
+    "com.philandro.anydesk.Frontend",
+  ],
+            delete: [
+              "/Library/LaunchAgents/com.philandro.anydesk.Frontend.plist",
+              "/Library/LaunchDaemons/com.philandro.anydesk.Helper.plist",
+              "/Library/LaunchDaemons/com.philandro.anydesk.service.plist",
+              "/Library/PrivilegedHelperTools/com.philandro.anydesk.Helper",
+            ]
 
   zap trash: [
     "~/.anydesk",

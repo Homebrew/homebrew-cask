@@ -15,5 +15,10 @@ cask "pandora" do
 
   app "Pandora.app"
 
-  zap trash: "~/Library/Preferences/com.pandora.desktop.plist"
+  zap trash: [
+    "~/Library/Application Support/Pandora",
+    "~/Library/Logs/Pandora",
+    "~/Library/Preferences/com.pandora.desktop.plist",
+    "~/Library/Saved Application State/com.pandora.desktop.savedState",
+  ]
 end

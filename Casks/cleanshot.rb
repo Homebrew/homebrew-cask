@@ -1,6 +1,6 @@
 cask "cleanshot" do
-  version "3.7.1"
-  sha256 "a84c59aa792e24651448e19893df68b364a36ce29113b9b081491daebfa10240"
+  version "3.9.3"
+  sha256 "08d9a0d641b10b52990785b484ff0f42b1f13d5e835ccff9af2a1e588ce117d4"
 
   url "https://updates.getcleanshot.com/v#{version.major}/CleanShot-X-#{version}.dmg"
   name "CleanShot"
@@ -8,8 +8,8 @@ cask "cleanshot" do
   homepage "https://getcleanshot.com/"
 
   livecheck do
-    url "https://updates.getcleanshot.com/v#{version.major}/appcast.xml"
-    strategy :sparkle
+    url "https://cleanshot.com/changelog"
+    regex(/class="number">(\d+(?:\.\d+)*)/i)
   end
 
   auto_updates true
@@ -21,8 +21,8 @@ cask "cleanshot" do
 
   zap trash: [
     "~/Library/Application Support/CleanShot",
-    "~/Library/Caches/SentryCrash/CleanShot X",
     "~/Library/Caches/pl.maketheweb.cleanshotx",
+    "~/Library/Caches/SentryCrash/CleanShot X",
     "~/Library/Preferences/pl.maketheweb.cleanshotx.plist",
   ]
 end

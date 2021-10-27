@@ -1,6 +1,6 @@
 cask "firecamp" do
-  version "2.1.2"
-  sha256 "4932fde45878593ae96a4255b0267322637fc7369a0251567d5f93e9c15a7ff0"
+  version "2.2.2"
+  sha256 "a4af2f9b212adad34fccdc36373b3bfbb01f537be992d3b833a7176264cc8e49"
 
   url "https://firecamp.ams3.digitaloceanspaces.com/versions/mac/Firecamp-#{version}.dmg",
       verified: "firecamp.ams3.digitaloceanspaces.com/"

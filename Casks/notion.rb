@@ -1,32 +1,26 @@
 cask "notion" do
+  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  livecheck_folder = Hardware::CPU.intel? ? "mac" : "apple-silicon"
+
   if Hardware::CPU.intel?
-    version "2.0.17"
-    sha256 "bf9a5b5ffe0f9e94808102b91d499d4bba6f4a5461efad3d0bc7bc9c709d1aaa"
-
-    url "https://desktop-release.notion-static.com/Notion-#{version}.dmg",
-        verified: "desktop-release.notion-static.com/"
-
-    livecheck do
-      url "https://www.notion.so/desktop/mac/download"
-      strategy :header_match
-    end
+    version "2.0.19"
+    sha256 "0d13678367144d93f4243d2228e1cf40d1bb577592823ef4b9aff81659d64f22"
   else
-    version "2.0.16"
-    sha256 "9c73cbd5eec4474a176ca09f66321eedb8fb62989a02256fa4c0a9544ad50f5b"
-
-    url "https://desktop-release.notion-static.com/Notion-#{version}-arm64.dmg",
-        verified: "desktop-release.notion-static.com/"
-
-    livecheck do
-      url "https://www.notion.so/desktop/apple-silicon/download"
-      strategy :header_match
-      regex(/Notion-(\d+(?:\.\d+)*?)(?:-arm64)?\.dmg/i)
-    end
+    version "2.0.18"
+    sha256 "fa9e299d206dbc68950c44806871c500afe6703532da8d768502f062646954f6"
   end
 
+  url "https://desktop-release.notion-static.com/Notion-#{version}#{arch}.dmg",
+      verified: "desktop-release.notion-static.com/"
   name "Notion"
   desc "App to write, plan, collaborate, and get organized"
   homepage "https://www.notion.so/"
+
+  livecheck do
+    url "https://www.notion.so/desktop/#{livecheck_folder}/download"
+    strategy :header_match
+    regex(/Notion-(\d+(?:\.\d+)*?)[^.]*?\.dmg/i)
+  end
 
   auto_updates true
 

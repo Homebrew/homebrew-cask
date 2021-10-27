@@ -30,4 +30,18 @@ cask "teamdrive" do
               ["QUIT", "com.teamdrive.teamdrive3.MenuExt"],
               ["KILL", "com.teamdrive.teamdrive3.MenuExt"],
             ]
+
+  zap trash: [
+    "~/Library/Application Scripts/com.teamdrive.teamdrive3.FinderExt",
+    "~/Library/Application Support/teamdrive",
+    "~/Library/Caches/teamdrive",
+    "~/Library/Containers/com.teamdrive.teamdrive3.FinderExt",
+    "~/Library/Group Containers/com.teamdrive.teamdrive3.finderExt",
+    "~/Library/Preferences/com.teamdrive.TeamDrive.plist",
+    "~/Library/Preferences/com.teamdrive.teamdrive3.plist",
+    "~/Library/Saved Application State/com.teamdrive.teamdrive3.savedState",
+    "/Users/Shared/teamdrive.fsfilter",
+    "/Users/Shared/teamdrive.ini",
+    "~/.teamdrive",
+  ]
 end

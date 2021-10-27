@@ -1,6 +1,6 @@
 cask "displays" do
-  version "1.9.9,116"
-  sha256 "ffd4d674968ffbfd015d254290018e99063caf8dddeaff81891646b22773b569"
+  version "1.9.10,120"
+  sha256 "3e40e462fd9bf1a881c996cbc5695f1f1772dafeab8726a52be94d4410caf139"
 
   url "https://www.jibapps.com/ressources/displays/files/Displays.#{version.before_comma}.zip"
   name "Displays"

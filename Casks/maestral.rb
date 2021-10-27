@@ -1,14 +1,15 @@
 cask "maestral" do
-  version "1.4.8"
-  sha256 "51863aaf3fbd8b62250fe51cb8152b2dd65f558c0bee277c2e3c257cc8bea6b4"
+  version "1.5.1"
+  sha256 "b6403e1da9e6499730d0652adde94e3e9a9381b351046eaefdc8d3dba21f2e1d"
 
   url "https://github.com/SamSchott/maestral/releases/download/v#{version}/Maestral-#{version}.dmg",
-      verified: "github.com/SamSchott/maestral"
+      verified: "github.com/SamSchott/maestral/"
   name "Maestral"
   desc "Open-source Dropbox client"
   homepage "https://maestral.app/"
 
   app "Maestral.app"
+  binary "#{appdir}/Maestral.app/Contents/MacOS/maestral-cli", target: "maestral"
 
   zap trash: [
     "~/Library/Application Support/maestral",

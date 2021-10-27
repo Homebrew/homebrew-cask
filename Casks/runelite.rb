@@ -1,8 +1,8 @@
 cask "runelite" do
-  version "2.1.5"
-  sha256 "d8c6b4da96c6501d5529511e3cf71e0cb1e86b3bdba9ceaff9bc664bc8f76700"
+  version "2.2.0"
+  sha256 "0c6690000fb46eb1ff6d193a58ff3d7dc0e3514a03d0b1a22ca2351ef07e79c8"
 
-  url "https://github.com/runelite/launcher/releases/download/#{version}/RuneLite.dmg",
+  url "https://github.com/runelite/launcher/releases/download/#{version}/RuneLite-x64.dmg",
       verified: "github.com/runelite/launcher/"
   name "RuneLite"
   desc "Client for Old School RuneScape"
@@ -11,7 +11,7 @@ cask "runelite" do
   livecheck do
     url "https://github.com/runelite/launcher/releases"
     strategy :page_match
-    regex(%r{(\d+(?:\.\d+)*)/RuneLite\.dmg}i)
+    regex(%r{(\d+(?:\.\d+)*)/RuneLite-x64\.dmg}i)
   end
 
   app "RuneLite.app"

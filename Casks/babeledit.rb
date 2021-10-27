@@ -1,6 +1,6 @@
 cask "babeledit" do
-  version "2.8.0"
-  sha256 "4bbd8612c10aa70eab9451b4b9c266b0f313d5e54b7b8768a8d778623e510e82"
+  version "2.9.0"
+  sha256 "e822497de619b0eae19201931b5619d910279bcf69947726a85b411216d280e5"
 
   url "https://www.codeandweb.com/download/babeledit/#{version}/BabelEdit-#{version}.dmg"
   name "BabelEdit"
@@ -9,8 +9,7 @@ cask "babeledit" do
 
   livecheck do
     url "https://www.codeandweb.com/babeledit/download"
-    strategy :page_match
-    regex(/BabelEdit-(\d+(?:\.\d+)*)\.dmg/i)
+    regex(/BabelEdit[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "BabelEdit.app"

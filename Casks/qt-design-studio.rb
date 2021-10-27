@@ -1,11 +1,16 @@
 cask "qt-design-studio" do
-  version "2.0.0"
-  sha256 "757b85e0203c88570aafc687b4b6fbd0301de7cb0ba978e5ec51294ebee81799"
+  version "2.2.0"
+  sha256 "9c4f3325d44e91ccd95a02c06f2510b5ea924a11e1fd25d36559d3e4d9f1845e"
 
   url "https://download.qt.io/official_releases/qtdesignstudio/#{version}/qt-designstudio-mac-x86_64-#{version}-community.dmg"
-  appcast "https://download.qt.io/official_releases/qtdesignstudio/"
   name "Qt Design Studio"
-  homepage "https://www.qt.io/ui-framework"
+  desc "User Interface Design Tools for Applications"
+  homepage "https://www.qt.io/product/ui-design-tools"
+
+  livecheck do
+    url "https://download.qt.io/official_releases/qtdesignstudio/"
+    regex(%r{href=.*?(\d+(?:\.\d+)*)/}i)
+  end
 
   depends_on macos: ">= :sierra"
 

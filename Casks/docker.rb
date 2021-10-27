@@ -1,24 +1,13 @@
 cask "docker" do
-  version "4.0.1,68347"
+  arch = Hardware::CPU.intel? ? "amd64" : "arm64"
 
+  version "4.1.1,69879"
+
+  url "https://desktop.docker.com/mac/main/#{arch}/#{version.after_comma}/Docker.dmg"
   if Hardware::CPU.intel?
-    sha256 "ea068a64a7230eff7e5bbcb215d1eadc5c921c05a2824dc082d4f51352b17523"
-
-    url "https://desktop.docker.com/mac/main/amd64/#{version.after_comma}/Docker.dmg"
-
-    livecheck do
-      url "https://desktop.docker.com/mac/main/amd64/appcast.xml"
-      strategy :sparkle
-    end
+    sha256 "de479dab3ec14041980167c99e1fef966556e43a07a6e68afb500e1c5465b7ec"
   else
-    sha256 "03762da8d65a0b2a93c483af4ffb679d633500b2be7f4647215f45c1ad6eb11f"
-
-    url "https://desktop.docker.com/mac/main/arm64/#{version.after_comma}/Docker.dmg"
-
-    livecheck do
-      url "https://desktop.docker.com/mac/main/arm64/appcast.xml"
-      strategy :sparkle
-    end
+    sha256 "ffeb9ff909396329abc1afb77af442ff2a449ecad183316df8055ecb3ea3e76f"
   end
 
   name "Docker Desktop"
@@ -27,12 +16,18 @@ cask "docker" do
   desc "App to build and share containerized applications and microservices"
   homepage "https://www.docker.com/products/docker-desktop"
 
+  livecheck do
+    url "https://desktop.docker.com/mac/main/#{arch}/appcast.xml"
+    strategy :sparkle
+  end
+
   auto_updates true
   conflicts_with formula: %w[
     docker
     docker-completion
     docker-compose
     docker-compose-completion
+    docker-credential-helper-ecr
     hyperkit
     kubernetes-cli
   ]

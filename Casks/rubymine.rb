@@ -1,14 +1,13 @@
 cask "rubymine" do
-  version "2021.2.1,212.5080.58"
+  arch = Hardware::CPU.intel? ? "" : "-aarch64"
 
+  version "2021.2.3,212.5457.52"
+
+  url "https://download.jetbrains.com/ruby/RubyMine-#{version.before_comma}#{arch}.dmg"
   if Hardware::CPU.intel?
-    sha256 "d7460e6d18f1f65e955735da844e4ea8ae0c0b00c9d1fccf2b64beff57b531b1"
-
-    url "https://download.jetbrains.com/ruby/RubyMine-#{version.before_comma}.dmg"
+    sha256 "80131e7380a95cb62bf1603f075dfaf6ee711d493f5426eb1ec5964ec4d30a77"
   else
-    sha256 "03b527103ded20fb6afc403794e5e88bf1953f528aca8b2e41cea8d04f7adee6"
-
-    url "https://download.jetbrains.com/ruby/RubyMine-#{version.before_comma}-aarch64.dmg"
+    sha256 "fa7408596d6a4650bc3eca05c573b4e6f02063918745df8d7027253798762806"
   end
 
   name "RubyMine"

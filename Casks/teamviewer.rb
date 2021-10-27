@@ -1,5 +1,19 @@
 cask "teamviewer" do
-  version "15.21.4"
+  if MacOS.version <= :high_sierra
+    version "15.2.2756"
+
+    livecheck do
+      url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=10.11.1&type=1&channel=1"
+      strategy :sparkle
+    end
+  else
+    version "15.22.3"
+
+    livecheck do
+      url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=10.15.1&type=1&channel=1"
+      strategy :sparkle
+    end
+  end
   sha256 :no_check
 
   url "https://download.teamviewer.com/download/TeamViewer.dmg"
@@ -7,15 +21,15 @@ cask "teamviewer" do
   desc "Remote access and connectivity software focused on security"
   homepage "https://www.teamviewer.com/"
 
-  livecheck do
-    url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=10.15.1&type=1&channel=1"
-    strategy :sparkle
-  end
-
   auto_updates true
   conflicts_with cask: "teamviewer-host"
+  depends_on macos: ">= :el_capitan"
 
-  pkg "Install TeamViewer.app/Contents/Resources/Install TeamViewer.pkg"
+  if MacOS.version <= :high_sierra
+    pkg "Install TeamViewer.pkg"
+  else
+    pkg "Install TeamViewer.app/Contents/Resources/Install TeamViewer.pkg"
+  end
 
   uninstall delete:    [
     "#{staged_path}/#{token}", # This Cask should be uninstalled manually.
@@ -39,6 +53,7 @@ cask "teamviewer" do
     "/Library/Preferences/com.teamviewer.teamviewer.preferences.plist",
     "~/Library/Application Support/TeamViewer",
     "~/Library/Caches/com.teamviewer.TeamViewer",
+    "~/Library/Caches/TeamViewer",
     "~/Library/Cookies/com.teamviewer.TeamViewer.binarycookies",
     "~/Library/Logs/TeamViewer",
     "~/Library/Preferences/com.teamviewer.TeamViewer.plist",

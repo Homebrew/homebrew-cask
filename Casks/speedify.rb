@@ -1,5 +1,5 @@
 cask "speedify" do
-  version "11.4.0,8692"
+  version "11.6.0,8791"
   sha256 :no_check
 
   url "https://downloads.speedify.com/speedify.php?platform=osx"
@@ -11,6 +11,8 @@ cask "speedify" do
     url :url
     strategy :extract_plist
   end
+
+  depends_on macos: ">= :sierra"
 
   app "Speedify.app"
 

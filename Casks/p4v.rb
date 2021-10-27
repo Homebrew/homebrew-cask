@@ -1,6 +1,6 @@
 cask "p4v" do
-  version "2021.3,2170446"
-  sha256 "70732d1637b6466b0623b4e481e26fdea403a433fb36fa79ce077723066398b1"
+  version "2021.3,2186916"
+  sha256 "b8faf97681488c7ccc71669481dac09b0e7c3e4eadbf8a50953404c65f99bfc6"
 
   url "https://cdist2.perforce.com/perforce/r#{version.major[-2..]}.#{version.minor}/bin.macosx1015x86_64/P4V.dmg"
   name "Perforce Helix Visual Client"
@@ -29,7 +29,7 @@ cask "p4v" do
   binary p4_wrapper, target: "p4merge"
 
   preflight do
-    IO.write p4_wrapper, <<~EOS
+    File.write p4_wrapper, <<~EOS
       #!/bin/bash
       set -euo pipefail
       COMMAND=$(basename "$0")
