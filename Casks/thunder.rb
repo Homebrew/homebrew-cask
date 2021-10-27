@@ -10,8 +10,8 @@ cask "thunder" do
   homepage "https://www.xunlei.com/"
 
   livecheck do
-    url "https://static-xl9-ssl.xunlei.com/json/mac_preferences.json"
-    regex(/appcast[._-]v?(\d+(?:\.\d+)+)\.xml/i)
+    url "https://down.sandai.net/mac/thunder/appcast.xml"
+    regex(/thunder[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true
