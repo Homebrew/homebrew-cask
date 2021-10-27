@@ -4,6 +4,7 @@ cask "pixel-picker" do
 
   url "https://github.com/acheronfail/pixel-picker/releases/download/#{version}/Pixel.Picker.#{version}.dmg"
   name "Pixel Picker"
+  desc "Menu bar application to pick colours from your screen"
   homepage "https://github.com/acheronfail/pixel-picker"
 
   depends_on macos: ">= :sierra"
