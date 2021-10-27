@@ -6,6 +6,7 @@ cask "tuntap" do
       verified: "downloads.sourceforge.net/tuntaposx/"
   appcast "https://sourceforge.net/projects/tuntaposx/rss?path=/tuntap"
   name "TunTap"
+  desc "Kernel extensions that create virtual network interfaces"
   homepage "https://tuntaposx.sourceforge.io/"
 
   pkg "tuntap_#{version}.pkg"
@@ -23,4 +24,8 @@ cask "tuntap" do
               "/Library/LaunchDaemons/net.sf.tuntaposx.tap.plist",
               "/Library/LaunchDaemons/net.sf.tuntaposx.tun.plist",
             ]
+
+  caveats do
+    discontinued
+  end
 end
