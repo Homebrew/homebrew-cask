@@ -6,7 +6,12 @@ cask "objectivesharpie" do
       verified: "download.visualstudio.microsoft.com/download"
   name "Objective Sharpie"
   desc "Tool used to generate C# interfaces starting from objective-c code"
-  homepage "https://developer.xamarin.com/guides/cross-platform/macios/binding/objective-sharpie/"
+  homepage "https://docs.microsoft.com/en-au/xamarin/cross-platform/macios/binding/objective-sharpie/"
+
+  livecheck do
+    url "https://aka.ms/objective-sharpie"
+    strategy :header_match
+  end
 
   pkg "ObjectiveSharpie-#{version}.pkg"
 
