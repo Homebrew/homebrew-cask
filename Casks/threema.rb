@@ -14,5 +14,10 @@ cask "threema" do
 
   app "Threema.app"
 
-  zap trash: "~/Library/Application Support/threema-consumer-web"
+  zap trash: [
+    "~/Library/Application Support/threema-consumer-web",
+    "~/Library/Logs/threema-consumer-web",
+    "~/Library/Preferences/threema-consumer-web.plist",
+    "~/Library/Saved Application State/threema-consumer-web.savedState",
+  ]
 end
