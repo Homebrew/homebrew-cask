@@ -8,6 +8,11 @@ cask "tuntap" do
   desc "Kernel extensions that create virtual network interfaces"
   homepage "https://tuntaposx.sourceforge.io/"
 
+  livecheck do
+    url "https://sourceforge.net/projects/tuntaposx/files/latest/download"
+    strategy :header_match
+  end
+
   pkg "tuntap_#{version}.pkg"
 
   uninstall pkgutil:   "tuntap.startup_item.tap|tuntap.startup_item.tun|tuntap.tap|tuntap.tun",
