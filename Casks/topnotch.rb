@@ -7,6 +7,11 @@ cask "topnotch" do
   desc "Utility to hide the notch"
   homepage "https://topnotch.app"
 
+  livecheck do
+    url "https://updates.topnotch.app/appcast.xml"
+    strategy :sparkle
+  end
+
   app "TopNotch.app"
 
   zap trash: [
