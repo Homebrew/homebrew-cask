@@ -1,7 +1,7 @@
 cask "postman" do
   url_arch = Hardware::CPU.intel? ? "osx64" : "osx_arm64"
   livecheck_arch = Hardware::CPU.intel? ? "x64" : "arm64"
-  
+
   version "9.1.2"
 
   if Hardware::CPU.intel?
