@@ -4,14 +4,14 @@ cask "libreoffice" do
 
   version "7.2.2"
 
-  url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/#{folder}/LibreOffice_#{version}_MacOS_#{arch}.dmg",
-      verified: "download.documentfoundation.org/libreoffice/stable/"
   if Hardware::CPU.intel?
     sha256 "dc2fd0577e3ee4f99c79d235a6efcd8fecc7069d24090c4eaea69e0fad8245ae"
   else
     sha256 "83954ea5bae605aba26fb0d731e080ee04e9e748a3148c43620af6ef2154f611"
   end
 
+  url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/#{folder}/LibreOffice_#{version}_MacOS_#{arch}.dmg",
+      verified: "download.documentfoundation.org/libreoffice/stable/"
   name "LibreOffice"
   desc "Office suite"
   homepage "https://www.libreoffice.org/"
