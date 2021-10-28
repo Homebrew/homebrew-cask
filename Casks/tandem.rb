@@ -1,5 +1,5 @@
 cask "tandem" do
-  arch = Hardware::CPU.intel? ? "x64" : "amr64"
+  arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
   version "2.0.1001"
 
