@@ -11,6 +11,7 @@ cask "tuntap" do
   livecheck do
     url "https://sourceforge.net/projects/tuntaposx/files/latest/download"
     strategy :header_match
+    regex(/tuntap[._-]v?(\d+(?:\.\d+)*)\.tar\.gz/i)
   end
 
   pkg "tuntap_#{version}.pkg"
