@@ -1,11 +1,12 @@
 cask "hbuilderx-full" do
   version "3.2.9.20210927"
-  sha256 "bff50574022a8d4845f51184892a4f564c3cd6644b2d7b0e048d095b73f9b72c"
+  sha256 "aace340e9fb020c78fd0a87d4f45dc7a208684bb217aa2281e90d9150206de30"
 
-  url "https://download1.dcloud.net.cn/download/HBuilderX.#{version}.full.dmg"
-  name "hbuilderx-full"
+  url "https://download1.dcloud.net.cn/download/HBuilderX.#{version}.full.dmg",
+      verified: "download1.dcloud.net.cn/"
+  name "HBuilderX"
   desc "HTML editor"
-  homepage ""
+  homepage "https://www.dcloud.io/hbuilderx.html"
 
   livecheck do
     url "https://download1.dcloud.net.cn/hbuilderx/release.json"
@@ -13,6 +14,8 @@ cask "hbuilderx-full" do
       JSON.parse(page)["version"]
     end
   end
+
+  conflicts_with cask: "hbuilderx"
 
   app "HBuilderX.app"
 end
