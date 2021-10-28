@@ -14,7 +14,7 @@ cask "tuntap" do
     regex(/tuntap[._-]v?(\d+(?:\.\d+)*)\.tar\.gz/i)
   end
 
-  pkg "tuntap_#{version}/tuntap_#{version}.pkg"
+  pkg "tuntap_#{version}.pkg"
 
   uninstall pkgutil:   [
     "net.sf.tuntaposx.tap",
