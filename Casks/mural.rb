@@ -8,17 +8,17 @@ cask "mural" do
   homepage "https://mural.co/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://download.mural.co/mac-app/latest-mac.yml"
+    strategy :electron_builder
   end
 
   app "MURAL.app"
 
   zap trash: [
     "~/Library/Application Support/murally-electron",
-    "~/Library/Saved Application State/co.mural.macOS.savedState",
-    "~/Library/Preferences/co.mural.macOS.plist",
     "~/Library/Logs/MURAL",
     "~/Library/Logs/murally-electron",
+    "~/Library/Preferences/co.mural.macOS.plist",
+    "~/Library/Saved Application State/co.mural.macOS.savedState",
   ]
 end
