@@ -2,8 +2,8 @@ cask "feishu" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
   if Hardware::CPU.intel?
-    version "4.10.5,f47950"
-    sha256 "3537cec5cf1756a6c77505ff16343a51e51becf5e6ea2b6ce236e4cc9f0d0b97"
+    version "4.10.7,3efbc1"
+    sha256 "19482af56e1a4f06dd1088b1fa5e735136fa81a6480427f84abb4633baa2a790"
   else
     version "4.10.5,9e0c63"
     sha256 "5f75a13140b58d145f2c8e61909854dafcb30cbd259f095a248f660436981fb0"
