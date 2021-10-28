@@ -1,6 +1,6 @@
 cask "jamulus" do
-  version "3.8.0"
-  sha256 "31de220ae9470ea6d84e74783d2f01f8c6d52580d0c542b8d17dfa2239ba3dda"
+  version "3.8.1"
+  sha256 "79fffe5c72c38260e6e5edff07ecccb355995c502d8a4a8c710eeccff8284624"
 
   url "https://downloads.sourceforge.net/llcon/jamulus_#{version}_mac.dmg",
       verified: "downloads.sourceforge.net/llcon/"
