@@ -8,7 +8,7 @@ cask "reveal" do
   homepage "https://revealapp.com/"
 
   livecheck do
-    url "https://updates.devmate.com/com.ittybittyapps.Reveal2.xml"
+    url "https://revealapp.com/updates/index.xml"
     strategy :sparkle
   end
 
