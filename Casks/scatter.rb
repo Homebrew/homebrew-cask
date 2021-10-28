@@ -8,11 +8,6 @@ cask "scatter" do
   desc "Desktop wallet for EOS"
   homepage "https://get-scatter.com/"
 
-  livecheck do
-    url "https://github.com/GetScatter/ScatterDesktop"
-    strategy :git
-  end
-
   app "Scatter.app"
 
   zap trash: [
