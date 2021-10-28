@@ -15,9 +15,9 @@ cask "keycombiner" do
   app "KeyCombiner.app"
 
   zap trash: [
-    '~/Library/Application Support/keycombiner',
+    "~/Library/Application Support/keycombiner",
     "~/Library/Logs/KeyCombiner",
     "~/Library/Preferences/com.keycombiner.app.plist",
-    '~/Library/Saved Application State/com.keycombiner.app.savedState',
+    "~/Library/Saved Application State/com.keycombiner.app.savedState",
   ]
 end
