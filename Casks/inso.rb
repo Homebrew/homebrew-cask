@@ -14,9 +14,5 @@ cask "inso" do
     regex(/href=.*?inso-macos-(?:latest-)*(\d+(?:\.\d+).*?)\.zip/i)
   end
 
-  conflicts_with cask: [
-    "homebrew/cask-versions/inso-alpha",
-  ]
-
   binary "inso"
 end
