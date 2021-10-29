@@ -12,5 +12,7 @@ cask "valentina-studio" do
     regex(%r{href=['"]?/en/all-downloads/vstudio/current['"]?>\s*(\d+(?:\.\d+)+)}i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Valentina Studio.app"
 end
