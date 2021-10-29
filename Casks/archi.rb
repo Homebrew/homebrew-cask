@@ -6,7 +6,7 @@ cask "archi" do
   if Hardware::CPU.intel?
     sha256 "376d6dbd90c5e0f0633b049cdb684974cabdb32db64e1e38c995c70f262172c8"
   else
-    sha256 "376d6dbd90c5e0f0633b049cdb684974cabdb32db64e1e38c995c70f262172c8"
+    sha256 "12a6e97111f71184afe8e795ad27b2d06dd6ccdaa97c1bdc55aff4b307bfa828"
   end
 
   url "https://www.archimatetool.com/downloads/archi/?d1=#{version}/Archi-Mac#{arch}-#{version}.dmg",
