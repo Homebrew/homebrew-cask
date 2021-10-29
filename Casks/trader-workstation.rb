@@ -17,6 +17,10 @@ cask "trader-workstation" do
     args:       ["-q"],
   }
 
+  uninstall_preflight do
+    system_command "/usr/bin/pkill", args: ["-f", "/Applications/Trader Workstation/Trader Workstation.app"]
+  end
+
   uninstall quit:   "com.install4j.5889-6375-8446-2021",
             script: {
               executable: "/Applications/Trader Workstation/Trader Workstation Uninstaller.app/Contents/MacOS/JavaApplicationStub",
