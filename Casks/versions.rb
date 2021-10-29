@@ -15,4 +15,11 @@ cask "versions" do
   depends_on macos: ">= :catalina"
 
   app "Versions.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.versionsapp.v2",
+    "~/Library/Application Support/Versions",
+    "~/Library/Caches/com.versionsapp.v2",
+    "~/Library/Preferences/com.versionsapp.v2.plist",
+  ]
 end
