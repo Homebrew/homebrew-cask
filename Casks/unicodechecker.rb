@@ -4,6 +4,7 @@ cask "unicodechecker" do
 
   url "https://earthlingsoft.net/UnicodeChecker/UnicodeChecker%20#{version.before_comma}%20(#{version.after_comma}).zip"
   name "UnicodeChecker"
+  desc "Explore and convert Unicode"
   homepage "https://earthlingsoft.net/UnicodeChecker/"
 
   livecheck do
