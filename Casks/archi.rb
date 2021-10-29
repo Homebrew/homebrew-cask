@@ -1,12 +1,12 @@
 cask "archi" do
   arch = Hardware::CPU.intel? ? "" : "-Silicon"
 
-  version "4.9.0"
+  version "4.9.1"
 
   if Hardware::CPU.intel?
-    sha256 "72d90bdd79762ccdf2daf463d6ea950a863df33cde5e1e5ae054ee8ee5e43d04"
+    sha256 "376d6dbd90c5e0f0633b049cdb684974cabdb32db64e1e38c995c70f262172c8"
   else
-    sha256 "317a72129385f80829d1cb20d21a5fed76764afeb26f1eb4fc2f6e566f80b56d"
+    sha256 "376d6dbd90c5e0f0633b049cdb684974cabdb32db64e1e38c995c70f262172c8"
   end
 
   url "https://www.archimatetool.com/downloads/archi/?d1=#{version}/Archi-Mac#{arch}-#{version}.dmg",
