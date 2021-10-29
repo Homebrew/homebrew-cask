@@ -17,9 +17,9 @@ cask "versions" do
   app "Versions.app"
 
   zap trash: [
-    "~/Library/Application Support/com.versionsapp.v2",
+    "~/Library/Application Support/com.versionsapp.v#{version.major}",
     "~/Library/Application Support/Versions",
-    "~/Library/Caches/com.versionsapp.v2",
-    "~/Library/Preferences/com.versionsapp.v2.plist",
+    "~/Library/Caches/com.versionsapp.v#{version.major}",
+    "~/Library/Preferences/com.versionsapp.v#{version.major}.plist",
   ]
 end
