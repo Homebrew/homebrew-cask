@@ -9,7 +9,7 @@ cask "adobe-dng-converter" do
 
   livecheck do
     url "https://helpx.adobe.com/in/photoshop/kb/uptodate.html"
-    regex(%r{The current version of Adobe DNG Converter is <b>(\d+(?:\.\d+)*)</b>}i)
+    regex(%r{The current version of Adobe DNG Converter is <b>(\d+(?:\.\d+)+)</b>}i)
   end
 
   depends_on macos: ">= :mojave"

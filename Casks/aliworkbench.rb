@@ -13,7 +13,7 @@ cask "aliworkbench" do
     url "https://alimarket.taobao.com/markets/qnww/qianniu-download?wh_from=macos"
     strategy :header_match do |headers|
       id = headers["location"][%r{/([^/]+)\.dmg}i, 1]
-      version = headers["content-disposition"][/-(\d+(?:\.\d+)*)\.dmg/i, 1]
+      version = headers["content-disposition"][/-(\d+(?:\.\d+)+)\.dmg/i, 1]
 
       "#{version},#{id}"
     end

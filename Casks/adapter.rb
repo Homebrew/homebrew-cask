@@ -9,7 +9,7 @@ cask "adapter" do
   livecheck do
     url "https://macroplant.com/adapter"
     strategy :page_match
-    regex(%r{href=.*?/Adapter-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/Adapter-(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "Adapter.app"

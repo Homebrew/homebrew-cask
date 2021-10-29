@@ -9,7 +9,7 @@ cask "anonym" do
   livecheck do
     url "https://www.hanynet.com/anonym/"
     strategy :page_match
-    regex(%r{href=.*?/anonym-(\d+(?:\.\d+)*)\.zip}i)
+    regex(%r{href=.*?/anonym-(\d+(?:\.\d+)+)\.zip}i)
   end
 
   app "Anonym.app"

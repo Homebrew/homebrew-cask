@@ -10,7 +10,7 @@ cask "ansible-dk" do
   livecheck do
     url "https://github.com/omniti-labs/ansible-dk/releases/latest"
     strategy :page_match do |page|
-      match = page.match(%r{href=.*?/ansible-dk-(\d+(?:\.\d+)*)-(\d+)\.dmg}i)
+      match = page.match(%r{href=.*?/ansible-dk-(\d+(?:\.\d+)+)-(\d+)\.dmg}i)
       "#{match[1]},#{match[2]}"
     end
   end
