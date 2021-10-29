@@ -18,8 +18,8 @@ cask "valentina-studio" do
 
   zap trash: [
     "~/Library/Logs/Valentina Studio",
-    "~/Library/Preferences/com.paradigma-software-inc.Valentina Studio_ling.plist"
-    "~/Library/Preferences/com.paradigmasoft.vstudio.plist"
+    "~/Library/Preferences/com.paradigma-software-inc.Valentina Studio_ling.plist",
+    "~/Library/Preferences/com.paradigmasoft.vstudio.plist",
     "~/Library/Preferences/com.paradigmasoft.VStudio",
     "~/Library/Saved Application State/com.paradigmasoft.vstudio.savedState",
   ]
