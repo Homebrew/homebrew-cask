@@ -10,7 +10,7 @@ cask "4k-video-to-mp3" do
   livecheck do
     url "https://www.4kdownload.com/download"
     strategy :page_match
-    regex(%r{href=.*?/4kvideotomp3_(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/4kvideotomp3_(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "4K Video to MP3.app"
