@@ -12,7 +12,7 @@ cask "unicodechecker" do
     strategy :sparkle
   end
 
-  app "UnicodeChecker #{version.before_comma} (#{version.after_comma})/UnicodeChecker.app"
+  app "UnicodeChecker.app"
 
   zap trash: [
     "~/Library/Application Support/UnicodeChecker",
