@@ -1,6 +1,6 @@
 cask "valentina-studio" do
-  version "11.4.6"
-  sha256 "8de11eaae16a060fa7be4af69c1f4fc71b919279b8613ed1c7b47d461a84001c"
+  version "11.4.7"
+  sha256 "525c2300ef7c2283807527d235d2e4921cb1deab3c35017618286abaa8fba13e"
 
   url "https://valentina-db.com/download/prev_releases/#{version}/mac_64/vstudio_x64_#{version.major}_mac.dmg"
   name "Valentina Studio"
@@ -12,5 +12,15 @@ cask "valentina-studio" do
     regex(%r{href=['"]?/en/all-downloads/vstudio/current['"]?>\s*(\d+(?:\.\d+)+)}i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Valentina Studio.app"
+
+  zap trash: [
+    "~/Library/Logs/Valentina Studio",
+    "~/Library/Preferences/com.paradigma-software-inc.Valentina Studio_ling.plist",
+    "~/Library/Preferences/com.paradigmasoft.vstudio.plist",
+    "~/Library/Preferences/com.paradigmasoft.VStudio",
+    "~/Library/Saved Application State/com.paradigmasoft.vstudio.savedState",
+  ]
 end
