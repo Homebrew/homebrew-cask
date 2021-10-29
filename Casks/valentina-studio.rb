@@ -15,4 +15,12 @@ cask "valentina-studio" do
   depends_on macos: ">= :high_sierra"
 
   app "Valentina Studio.app"
+
+  zap trash: [
+    "~/Library/Logs/Valentina Studio",
+    "~/Library/Preferences/com.paradigma-software-inc.Valentina Studio_ling.plist"
+    "~/Library/Preferences/com.paradigmasoft.vstudio.plist"
+    "~/Library/Preferences/com.paradigmasoft.VStudio",
+    "~/Library/Saved Application State/com.paradigmasoft.vstudio.savedState",
+  ]
 end
