@@ -10,7 +10,7 @@ cask "acronis-true-image" do
   livecheck do
     url "https://www.acronis.com/en-us/support/updates/index.html"
     strategy :page_match
-    regex(/Acronis\s*True\s*Image\s*(\d+(?:\.\d+)+)/i)
+    regex(/Acronis\s*True\s*Image\s*(\d+(?:\.\d+)*)/i)
   end
 
   pkg "Install Acronis True Image.pkg"
