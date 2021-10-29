@@ -14,4 +14,6 @@ cask "utc-menu-clock" do
   end
 
   app "UTCMenuClock.app"
+
+  zap trash: "~/Library/Preferences/net.retina.UTCMenuClock.plist"
 end
