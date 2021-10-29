@@ -4,9 +4,19 @@ cask "uu-booster" do
 
   url "https://uu.gdl.netease.com/UU-macOS-#{version.before_comma}(#{version.after_comma}).dmg",
       verified: "uu.gdl.netease.com/"
-  appcast "https://adl.netease.com/d/g/uu/c/uumac?type=pc"
   name "UU Booster"
+  desc "Network accelerator"
   homepage "https://uu.163.com/down/mac/"
+
+  livecheck do
+    url "https://adl.netease.com/d/g/uu/c/uumac?type=pc"
+    strategy :page_match do |page|
+      match = page.match(%r{pc_link.*?/UU[._-]macOS[._-]v?(\d+(?:\.\d+)+)\((\d+)\)\.dmg}i)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
   app "UUBooster.app"
 end
