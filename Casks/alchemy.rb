@@ -10,7 +10,7 @@ cask "alchemy" do
   livecheck do
     url "http://al.chemy.org/download/"
     strategy :page_match
-    regex(%r{href=.*?/Alchemy-(\d+(?:\.\d+)+)\.dmg}i)
+    regex(%r{href=.*?/Alchemy-(\d+(?:\.\d+)*)\.dmg}i)
   end
 
   app "Alchemy/Alchemy.app"
