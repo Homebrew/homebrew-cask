@@ -18,5 +18,7 @@ cask "uu-booster" do
     end
   end
 
+  depends_on macos: ">= :sierra"
+
   app "UUBooster.app"
 end
