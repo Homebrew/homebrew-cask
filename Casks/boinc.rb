@@ -5,6 +5,7 @@ cask "boinc" do
   url "https://boinc.berkeley.edu/dl/boinc_#{version}_macOSX_universal.zip"
   name "Berkeley Open Infrastructure for Network Computing"
   name "BOINC"
+  desc "Downloads scientific computing jobs and runs them invisibly in the background"
   homepage "https://boinc.berkeley.edu/"
 
   livecheck do
