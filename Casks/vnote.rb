@@ -9,4 +9,10 @@ cask "vnote" do
   homepage "https://vnotex.github.io/vnote/"
 
   app "VNote.app"
+
+  zap trash: [
+    "~/Library/Application Support/VNote",
+    "~/Library/Preferences/com.vnotex.vnote.plist",
+    "~/Library/Preferences/VNote",
+  ]
 end
