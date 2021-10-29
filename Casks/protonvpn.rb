@@ -1,6 +1,6 @@
 cask "protonvpn" do
-  version "2.1.0"
-  sha256 "d5ae8e68696c00ad53ce60d984e8370d0c1e7b2e45df57530eb4f8596868fce1"
+  version "2.2.1"
+  sha256 "7edce86180155738777970116a3579e668ad9537cab4020f1cf89c027a17c1e3"
 
   url "https://protonvpn.com/download/ProtonVPN_mac_v#{version}.dmg"
   name "ProtonVPN"
@@ -14,7 +14,7 @@ cask "protonvpn" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :catalina"
 
   app "ProtonVPN.app"
 

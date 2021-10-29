@@ -1,14 +1,13 @@
 cask "audiogridder-server" do
+  arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
+
   version "1.1.1"
 
+  url "https://audiogridder.com/releases/AudioGridderServer_#{version}_macOS-#{arch}.pkg"
   if Hardware::CPU.intel?
     sha256 "072e52bd56fedb1c481961beacca99096e3a65ba36339bdd78155fd1f1d133ea"
-    url "https://audiogridder.com/releases/AudioGridderServer_#{version}_macOS-x86_64.pkg"
-    pkg "AudioGridderServer_#{version}_macOS-x86_64.pkg"
   else
     sha256 "26be020b2ba57d7a0102a152099fcc5e993ce4bbcb23f47d80d5d9f24421658b"
-    url "https://audiogridder.com/releases/AudioGridderServer_#{version}_macOS-arm64.pkg"
-    pkg "AudioGridderServer_#{version}_macOS-arm64.pkg"
   end
 
   name "AudioGridder Server"
@@ -18,8 +17,10 @@ cask "audiogridder-server" do
   livecheck do
     url "https://audiogridder.com/releases/latest.txt"
     strategy :page_match
-    regex(/.*/)
+    regex(/(\d+(?:\.\d+)*)/)
   end
+
+  pkg "AudioGridderServer_#{version}_macOS-#{arch}.pkg"
 
   uninstall pkgutil: "com.e47.pkg.server"
 
@@ -28,8 +29,8 @@ cask "audiogridder-server" do
     "~/.audiogridder/audiogridderserver.cache",
     "~/.audiogridder/audiogridder.winpos",
     "~/Library/Logs/AudioGridder/Master",
-    "~/Library/Logs/AudioGridder/Server",
     "~/Library/Logs/AudioGridder/Scan",
+    "~/Library/Logs/AudioGridder/Server",
   ],
       rmdir: [
         "~/.audiogridder",

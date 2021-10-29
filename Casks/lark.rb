@@ -1,37 +1,27 @@
 cask "lark" do
+  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+
   if Hardware::CPU.intel?
-    version "4.5.6,f9ffce"
-    sha256 "e239a9e6eb956a1040f64bca3855523302f19dd171630e8cc75bf4cb3bfae01a"
-
-    url "https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/#{version.after_comma}/Lark-darwin_x64-#{version.before_comma}-signed.dmg",
-        verified: "sf16-va.larksuitecdn.com/obj/lark-artifact-storage/"
-
-    livecheck do
-      url "https://www.larksuite.com/api/downloads"
-      strategy :page_match do |page|
-        match = page.match(%r{/lark-artifact-storage/(\w+)/Lark-darwin_x64-(\d+(?:\.\d+)*)-signed\.dmg}i)
-        "#{match[2]},#{match[1]}"
-      end
-    end
+    version "4.6.6,55e44a"
+    sha256 "d01a443e8e48076aa3bf683286e9c2082b24bf95a439894f9f7c95d2f9cfd960"
   else
-    version "4.4.10,3eac8c"
-    sha256 "29fb4f611a03f3ba54ae1e96a8503039515ac5af3ed5d05edad637acde4ab25b"
-
-    url "https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/#{version.after_comma}/Lark-darwin_arm64-#{version.before_comma}-signed.dmg",
-        verified: "sf16-va.larksuitecdn.com/obj/lark-artifact-storage/"
-
-    livecheck do
-      url "https://www.larksuite.com/api/downloads"
-      strategy :page_match do |page|
-        match = page.match(%r{/lark-artifact-storage/(\w+)/Lark-darwin_arm64-(\d+(?:\.\d+)*)-signed\.dmg}i)
-        "#{match[2]},#{match[1]}"
-      end
-    end
+    version "4.6.6,2cc004"
+    sha256 "0f1788c0695d6b2901cef1a9e4337a8cae4ae46f6acebd10eef9c10543e87654"
   end
 
+  url "https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/#{version.after_comma}/Lark-darwin_#{arch}-#{version.before_comma}-signed.dmg",
+      verified: "sf16-va.larksuitecdn.com/obj/lark-artifact-storage/"
   name "Lark"
   desc "Project management software"
   homepage "https://www.larksuite.com/"
+
+  livecheck do
+    url "https://www.larksuite.com/api/downloads"
+    strategy :page_match do |page|
+      match = page.match(%r{/lark-artifact-storage/(\w+)/Lark-darwin_#{arch}-(\d+(?:\.\d+)*)-signed\.dmg}i)
+      "#{match[2]},#{match[1]}"
+    end
+  end
 
   auto_updates true
 

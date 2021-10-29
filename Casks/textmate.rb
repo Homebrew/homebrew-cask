@@ -1,6 +1,6 @@
 cask "textmate" do
-  version "2.0.19"
-  sha256 "e0117fc281931883fa4b40daf6f594cb9cdc076190ddf50dc40e6913ea6bdcfa"
+  version "2.0.23"
+  sha256 "f8dba933209bd01070028892474bf0b72f36c673f7bcb8da5973f93ddc387420"
 
   url "https://github.com/textmate/textmate/releases/download/v#{version}/TextMate_#{version}.tbz",
       verified: "github.com/textmate/textmate/"
@@ -17,7 +17,7 @@ cask "textmate" do
   depends_on macos: ">= :sierra"
 
   app "TextMate.app"
-  binary "#{appdir}/TextMate.app/Contents/Resources/mate"
+  binary "#{appdir}/TextMate.app/Contents/MacOS/mate"
 
   uninstall quit: "com.macromates.TextMate"
 

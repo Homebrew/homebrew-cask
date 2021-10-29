@@ -1,19 +1,19 @@
 cask "reveal" do
-  version "26,13630"
-  sha256 "9cf292d91163030a10dc0da73ebf7d9b1e736b849aeb12c8617a09e38ef81a5e"
+  version "31,15014"
+  sha256 "f86e79ab705ea7a1087cb66a2fb8621d9849655db4fdc43a1457f02144d96663"
 
   url "https://download.revealapp.com/Reveal.app-#{version.before_comma}.zip"
   name "Reveal"
-  desc "Runtime view debugger"
+  desc "Powerful runtime view debugging for iOS developers"
   homepage "https://revealapp.com/"
 
   livecheck do
-    url "https://updates.devmate.com/com.ittybittyapps.Reveal2.xml"
+    url "https://revealapp.com/updates/index.xml"
     strategy :sparkle
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :catalina"
 
   app "Reveal.app"
 

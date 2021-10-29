@@ -1,13 +1,10 @@
 cask "webex" do
-  version "41.10.0.20213"
+  arch = Hardware::CPU.intel? ? "TeamsDesktop-MACOS" : "Desktop-MACOS-Apple-Silicon"
+
+  version "41.10.0.20395"
   sha256 :no_check
 
-  if Hardware::CPU.intel?
-    url "https://binaries.webex.com/WebexTeamsDesktop-MACOS-Gold/Webex.dmg"
-  else
-    url "https://binaries.webex.com/WebexDesktop-MACOS-Apple-Silicon-Gold/Webex.dmg"
-  end
-
+  url "https://binaries.webex.com/Webex#{arch}-Gold/Webex.dmg"
   name "Webex Teams"
   desc "Video communication and virtual meeting platform"
   homepage "https://www.webex.com/"

@@ -1,6 +1,6 @@
 cask "lunar-client" do
-  version "2.8.0"
-  sha256 "53336467d8af8aadf056d559e755b8f9f114d346dd4836d15f07bc3c52c138ee"
+  version "2.8.7"
+  sha256 "872bbfd0c675959ba2db4a2d7c211063d00f8b9fd847837cb4bbf58ef3acbcb4"
 
   url "https://launcherupdates.lunarclientcdn.com/Lunar%20Client%20v#{version}.dmg",
       verified: "launcherupdates.lunarclientcdn.com/"
@@ -13,6 +13,7 @@ cask "lunar-client" do
     strategy :electron_builder
   end
 
+  auto_updates true
   depends_on macos: ">= :el_capitan"
 
   app "Lunar Client.app"

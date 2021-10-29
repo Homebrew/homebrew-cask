@@ -1,14 +1,13 @@
 cask "adobe-creative-cloud" do
-  version "5.4.5.550"
+  arch = Hardware::CPU.intel? ? "osx10" : "macarm64"
 
+  version "5.6.0.788"
+
+  url "https://ccmdl.adobe.com/AdobeProducts/KCCC/CCD/#{version.major_minor_patch.dots_to_underscores}/#{arch}/ACCCx#{version.dots_to_underscores}.dmg"
   if Hardware::CPU.intel?
-    sha256 "2efca959497b9f2fe3278a64341aa8a817e3855b1db9a9768f99259ef56e5227"
-
-    url "https://ccmdl.adobe.com/AdobeProducts/KCCC/CCD/#{version.major_minor_patch.dots_to_underscores}/osx10/ACCCx#{version.dots_to_underscores}.dmg"
+    sha256 "bda1f1dce2c3b79c4770e6fa8370515af360ae51f36287d32ef4717fe9d0021a"
   else
-    sha256 "fe77eb37c4cbebe57750834063d8c01233887585252400dd8cfa2fb77b2a8fb3"
-
-    url "https://ccmdl.adobe.com/AdobeProducts/KCCC/CCD/#{version.major_minor_patch.dots_to_underscores}/macarm64/ACCCx#{version.dots_to_underscores}.dmg"
+    sha256 "62c18662eb2800dd8915de7c180cc81733fd9020447c173e0978386a1bc16341"
   end
 
   name "Adobe Creative Cloud"

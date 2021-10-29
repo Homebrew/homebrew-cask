@@ -1,9 +1,10 @@
 cask "edex-ui" do
-  version "2.2.7"
-  sha256 "80b2b43e50e000da035efbdde21ca96106c021a5ef5b47e45fad8e9b4bb17a95"
+  version "2.2.8"
+  sha256 "db38e5dea11e8b0f528c1a59971fe97cbecbcdd8cf29b21621ad7105173c3407"
 
-  url "https://github.com/GitSquared/edex-ui/releases/download/v#{version}/eDEX-UI-macOS.dmg"
+  url "https://github.com/GitSquared/edex-ui/releases/download/v#{version}/eDEX-UI-macOS-x64.dmg"
   name "eDEX-UI"
+  desc "Sci-fi themed terminal emulator and system monitor"
   homepage "https://github.com/GitSquared/edex-ui"
 
   app "eDEX-UI.app"

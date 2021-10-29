@@ -1,12 +1,12 @@
 cask "ray" do
-  version "1.17.0"
+  version "1.18.0"
 
   if Hardware::CPU.intel?
-    sha256 "b6e62436517e77e854a499106bcf76b4b6849acf4c32580f73a62cde164cddc0"
+    sha256 "6d58a918bff69eecfd02cd004e63e376889bf313d4f18f8f68d51740399890a4"
     url "https://ray-app.s3.eu-west-1.amazonaws.com/Ray-#{version}.dmg",
         verified: "ray-app.s3.eu-west-1.amazonaws.com/"
   else
-    sha256 "342661b8b191023173c818751106004034ef0cbd531800f7fae459bb7af8e784"
+    sha256 "42357940c2fad33958d85cf82c0cbd158065e3532e5ebb58018633ecf3789e5f"
     url "https://ray-app.s3.eu-west-1.amazonaws.com/arm64/Ray-#{version}-arm64.dmg",
         verified: "ray-app.s3.eu-west-1.amazonaws.com/"
   end
@@ -17,8 +17,7 @@ cask "ray" do
 
   livecheck do
     url "https://ray-app.s3.amazonaws.com/latest-mac.yml"
-    strategy :page_match
-    regex(/Ray-(\d+(?:\.\d+)*)-mac\.zip/i)
+    strategy :electron_builder
   end
 
   auto_updates true

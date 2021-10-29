@@ -1,6 +1,6 @@
 cask "waterfox-classic" do
-  version "2021.09"
-  sha256 "701939317dc6b6926bc8de9b49e89c9ed3ccaa953d1bbc15c84c20acadb0fdf5"
+  version "2021.10"
+  sha256 "00356a042c9cdeeb11eefe269db50a4ade888c733ce5a0c9c06347e6ef920b2a"
 
   url "https://cdn.waterfox.net/releases/osx64/installer/Waterfox%20Classic%20#{version}%20Setup.dmg"
   name "Waterfox Classic"

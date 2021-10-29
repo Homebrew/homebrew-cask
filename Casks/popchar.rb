@@ -14,4 +14,10 @@ cask "popchar" do
   end
 
   app "PopChar.app"
+
+  zap trash: [
+    "~/Library/Application Support/PopChar",
+    "~/Library/Caches/com.macility.popchar3",
+    "~/Library/Preferences/com.macility.popchar3.plist",
+  ]
 end

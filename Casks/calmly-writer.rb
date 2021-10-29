@@ -1,22 +1,21 @@
 cask "calmly-writer" do
-  version "2.0.33"
+  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+
+  version "2.0.35"
 
   if Hardware::CPU.intel?
-    sha256 "6d8d0e24203c1e9725928c76cf93a330e2f29d94457abce1ea869bc2b8dbe67b"
-
-    url "https://www.calmlywriter.com/releases/x64/Calmly%20Writer-#{version}.pkg"
+    sha256 "93f0671535951fcf9c62fe922280b8a1161df2b837cb193ce5d28056f5c751c8"
   else
-    sha256 "ac0130e24269f36bd754f606ed1e88c8a3eec148d065d1c37871d08430f5cd35"
-
-    url "https://www.calmlywriter.com/releases/arm64/Calmly%20Writer-#{version}.pkg"
+    sha256 "bc517bcf86072f057fc46ae8364bb3bc33dd5bed40431548f8c8cd5c5741b032"
   end
 
+  url "https://www.calmlywriter.com/releases/#{arch}/Calmly%20Writer-#{version}.pkg"
   name "Calmly Writer"
   desc "Word processor with markdown formatting and select themes"
   homepage "https://calmlywriter.com/"
 
   livecheck do
-    url "https://calmlywriter.com/releases/x64/download.php"
+    url "https://calmlywriter.com/releases/#{arch}/download.php"
     strategy :header_match
   end
 

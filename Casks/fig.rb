@@ -1,6 +1,6 @@
 cask "fig" do
-  version "1.0.49,270"
-  sha256 "2209f614d7d09081755a9906539712aed0f23bc395fe1b1e508b506806faaaf4"
+  version "1.0.51,285"
+  sha256 "f0ed6ec30c3ba7a47ae928f358e1655840118d32f5ed29d03c54e5f38b713b51"
 
   url "https://versions.withfig.com/fig%20#{version.before_comma}.dmg",
       verified: "versions.withfig.com/"
@@ -13,6 +13,7 @@ cask "fig" do
     strategy :sparkle
   end
 
+  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "Fig.app"

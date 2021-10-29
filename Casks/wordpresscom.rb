@@ -1,10 +1,10 @@
 cask "wordpresscom" do
-  version "7.1.0"
-  sha256 "34fb84172639894f14d264800c18ccc9704a3601ff5390cd237b52391a2d4d92"
+  version "7.2.0"
+  sha256 "b2d92350ba0ed6898b3e95eb4a70f1d625038f2a3905743676613164f37b7bf5"
 
   url "https://public-api.wordpress.com/rest/v1.1/desktop/osx/download?type=app&ref=update&version=#{version}"
   name "WordPress.com"
-  desc "Wordpress client"
+  desc "WordPress client"
   homepage "https://apps.wordpress.com/desktop/"
 
   livecheck do

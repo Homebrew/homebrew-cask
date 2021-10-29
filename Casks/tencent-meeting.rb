@@ -1,16 +1,16 @@
 cask "tencent-meeting" do
+  arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
+
   if Hardware::CPU.intel?
-    version "2.18.3.404,637145a82cf1f9e7e23afada46b8ef98"
-    sha256 "0cfaddc50d4d50846ff88b2fd2577bedb932bafc0e3b6a935e13c0e526932d6b"
-    url "https://updatecdn.meeting.qq.com/cos/#{version.after_comma}/TencentMeeting_0300000000_#{version.before_comma}.publish.x86_64.dmg",
-        verified: "qq.com/"
+    version "2.20.2.413,183b7606483d26619c88faab648e09e3"
+    sha256 "e3cbf89201e7397ee786a69dec4f3b028e6e796e949c1e43193dea98d694c5fa"
   else
-    version "2.18.3.404,452afb351949d9d831e860320aa2eeef"
-    sha256 "93b66146e14d7cba7896c8a49b1d1470f30e36220dbae1cdad6d892be8e82c61"
-    url "https://updatecdn.meeting.qq.com/cos/#{version.after_comma}/TencentMeeting_0300000000_#{version.before_comma}.publish.arm64.dmg",
-        verified: "qq.com/"
+    version "2.20.2.413,3d0373e8a5c07cfa3e7fc35b4aa09acf"
+    sha256 "56fcb79e2f9ef02139671265c584bcad1cc2a4d17ef9f75ee00ca1683e6014c8"
   end
 
+  url "https://updatecdn.meeting.qq.com/cos/#{version.after_comma}/TencentMeeting_0300000000_#{version.before_comma}.publish.#{arch}.dmg",
+      verified: "updatecdn.meeting.qq.com/cos/"
   name "Tencent Meeting"
   name "腾讯会议"
   desc "Cloud video conferencing"

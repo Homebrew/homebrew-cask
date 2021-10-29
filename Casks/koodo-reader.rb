@@ -1,18 +1,16 @@
 cask "koodo-reader" do
-  version "1.3.1"
+  arch = Hardware::CPU.intel? ? "" : "-arm64"
+
+  version "1.3.3"
 
   if Hardware::CPU.intel?
-    sha256 "fcb0ea3690c2e0a7649314bf3e53d7096b3d85420ccd34a283b3791f2c2f7e9a"
-
-    url "https://github.com/troyeguo/koodo-reader/releases/download/v#{version}/Koodo-Reader-#{version}.dmg",
-        verified: "github.com/troyeguo/koodo-reader/"
+    sha256 "e09aec2ac4b235833f5b32d81a66eef4cd40f207d721b04a5068e74d2bedb321"
   else
-    sha256 "1539650c30a28ddef05a08818e1ecd0253ca7d583b61a004c6b0e55a5c8e1811"
-
-    url "https://github.com/troyeguo/koodo-reader/releases/download/v#{version}/Koodo-Reader-#{version}-arm64.dmg",
-        verified: "github.com/troyeguo/koodo-reader/"
+    sha256 "c10862678683c1df0699010b9179289654e51bc1eac6ce857bed3b30dba4c0b2"
   end
 
+  url "https://github.com/troyeguo/koodo-reader/releases/download/v#{version}/Koodo-Reader-#{version}#{arch}.dmg",
+      verified: "github.com/troyeguo/koodo-reader/"
   name "Koodo Reader"
   desc "Open-source Epub reader with backup and restore support"
   homepage "https://koodo.960960.xyz/"

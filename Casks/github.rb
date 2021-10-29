@@ -1,14 +1,15 @@
 cask "github" do
+  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  platform = Hardware::CPU.intel? ? "darwin" : "darwin-arm64"
+
   version "2.9.4-24101633"
 
+  url "https://desktop.githubusercontent.com/github-desktop/releases/#{version}/GitHubDesktop-#{arch}.zip",
+      verified: "desktop.githubusercontent.com/github-desktop/"
   if Hardware::CPU.intel?
     sha256 "a7e2f0749b440d401a053b14abd4833e2087552711a835067e7d3d25e3f09cb9"
-    url "https://desktop.githubusercontent.com/github-desktop/releases/#{version}/GitHubDesktop-x64.zip",
-        verified: "githubusercontent.com/"
   else
     sha256 "63d199d31fa82b8e39f0d3412a07232053477a5906b18d0327914e2618910035"
-    url "https://desktop.githubusercontent.com/github-desktop/releases/#{version}/GitHubDesktop-arm64.zip",
-        verified: "githubusercontent.com/"
   end
 
   name "GitHub Desktop"
@@ -16,9 +17,9 @@ cask "github" do
   homepage "https://desktop.github.com/"
 
   livecheck do
-    url "https://central.github.com/deployments/desktop/desktop/latest/darwin"
+    url "https://central.github.com/deployments/desktop/desktop/latest/#{platform}"
     strategy :header_match
-    regex(%r{(\d+(?:\.\d+)[^/]*)/GitHubDesktop-(arm64|x64)\.zip}i)
+    regex(%r{(\d+(?:\.\d+)[^/]*)/GitHubDesktop[._-]#{arch}\.zip}i)
   end
 
   auto_updates true

@@ -10,4 +10,10 @@ cask "bilimini" do
   auto_updates true
 
   app "bilimini.app"
+
+  zap trash: [
+    "~/Library/Application Support/bilimini",
+    "~/Library/Preferences/com.electron.bilimini.plist",
+    "~/Library/Saved Application State/com.electron.bilimini.savedState",
+  ]
 end

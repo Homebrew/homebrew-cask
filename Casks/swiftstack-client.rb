@@ -4,9 +4,14 @@ cask "swiftstack-client" do
 
   url "https://storage.googleapis.com/swiftstack/swiftstackclient-#{version}.dmg",
       verified: "storage.googleapis.com/swiftstack/"
-  appcast "https://storage.googleapis.com/swiftstack/swiftstackclient_macosx-x86_64_latest.html"
-  name "Swift Stack GUI Client"
+  name "SwiftStack GUI Client"
+  desc "Access the SwiftStack data storage and management platform"
   homepage "https://www.swiftstack.com/"
+
+  livecheck do
+    url "https://storage.googleapis.com/swiftstack/swiftstackclient_macosx-x86_64_latest.html"
+    regex(/URL=.*?swiftstackclient[-._]v?(\d+(?:\.\d+)+)\.dmg/i)
+  end
 
   app "SwiftStack Client.app"
 end

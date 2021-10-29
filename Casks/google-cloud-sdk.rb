@@ -9,34 +9,32 @@ cask "google-cloud-sdk" do
 
   depends_on formula: "python"
 
-  stage_only true
-
-  postflight do
-    system_command "#{staged_path}/#{token}/install.sh",
-                   args: [
-                     "--usage-reporting", "false", "--bash-completion", "false", "--path-update", "false",
-                     "--rc-path", "false", "--quiet",
-                     "--install-python", "false"
-                   ],
-                   env:  { "CLOUDSDK_PYTHON" => Formula["python"].opt_bin/"python3" }
-  end
+  installer script: {
+    executable: "#{token}/install.sh",
+    args:       [
+      "--usage-reporting", "false", "--bash-completion", "false", "--path-update", "false",
+      "--rc-path", "false", "--quiet",
+      "--install-python", "false"
+    ],
+  }
+  binary "#{token}/bin/anthoscli"
+  binary "#{token}/bin/bq"
+  binary "#{token}/bin/docker-credential-gcloud"
+  binary "#{token}/bin/gcloud"
+  binary "#{token}/bin/git-credential-gcloud.sh", target: "git-credential-gcloud"
+  binary "#{token}/bin/gsutil"
 
   # Not actually necessary, since it would be deleted anyway.
   # It is present to make clear an uninstall was not forgotten and that for this cask it is indeed this simple.
   uninstall delete: "#{staged_path}/#{token}"
 
   caveats <<~EOS
-    #{token} is installed at #{staged_path}/#{token}. Add your profile:
+    To install shell completions, add this to your profile:
 
       for bash users
-        source "#{staged_path}/#{token}/path.bash.inc"
         source "#{staged_path}/#{token}/completion.bash.inc"
 
       for zsh users
-        source "#{staged_path}/#{token}/path.zsh.inc"
         source "#{staged_path}/#{token}/completion.zsh.inc"
-
-      for fish users
-        source "#{staged_path}/#{token}/path.fish.inc"
   EOS
 end
