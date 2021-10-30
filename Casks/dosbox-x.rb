@@ -19,6 +19,8 @@ cask "dosbox-x" do
     url "https://github.com/joncampbell123/dosbox-x/releases/latest"
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/dosbox-x-v?(\d+(?:\.\d+)*)/dosbox-x-macosx-#{arch}-([^/]+)\.zip}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

@@ -12,6 +12,8 @@ cask "busycontacts" do
     url "https://www.busymac.com/download/BusyContacts.zip"
     strategy :header_match do |headers|
       match = headers["location"].match(/bct-(\d+(?:\.\d+)*)-(.*?)\.zip/)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

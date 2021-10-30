@@ -13,6 +13,8 @@ cask "wezterm" do
     regex(%r{href=.*?/WezTerm-macos-(\d{8}-\d{6})-([0-9a-f]+)\.zip}i)
     strategy :github_latest do |page, regex|
       match = page.match(regex)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

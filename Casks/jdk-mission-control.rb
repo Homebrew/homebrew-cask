@@ -11,6 +11,8 @@ cask "jdk-mission-control" do
     url :homepage
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/(\d+)/binaries/jmc-(\d+(?:\.\d+)*)_osx-x64.tar\.gz}i)
+      next if match.blank?
+
       "#{match[2]},#{match[1]}"
     end
   end

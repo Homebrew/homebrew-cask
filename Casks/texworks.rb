@@ -12,6 +12,8 @@ cask "texworks" do
     url "https://github.com/TeXworks/texworks/releases/latest"
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/TeXworks-macos-(\d+(?:\.\d+)*)-(\d+)-git_(.*?)\.dmg}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}:#{match[3]}"
     end
   end

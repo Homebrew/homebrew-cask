@@ -11,6 +11,8 @@ cask "visual-paradigm" do
     url "https://www.visual-paradigm.com/downloads/vp/checksum.html"
     strategy :header_match do |headers|
       match = headers["location"].match(%r{/vp(\d+(?:\.\d+)*)/(\d+)/checksum\.html}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

@@ -12,6 +12,8 @@ cask "ticktick" do
     url "https://www.ticktick.com/static/getApp/download?type=mac"
     strategy :header_match do |headers|
       match = headers["location"].match(/TickTick[._-]v?(\d+(?:\.\d+)+)[_-](\d+)\.dmg/i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

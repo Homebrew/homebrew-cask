@@ -11,6 +11,8 @@ cask "iridient-developer" do
     url "https://www.iridientdigital.com/products/iridientdeveloper_download.html"
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/IridientDeveloper_(\d+)(\d+)(\d+)_Universal\.dmg}i)
+      next if match.blank?
+
       "#{match[1]}.#{match[2]}.#{match[3]}"
     end
   end

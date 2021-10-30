@@ -12,6 +12,8 @@ cask "gramps" do
     url "https://github.com/gramps-project/gramps/releases/latest"
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/Gramps-Intel-(\d+(?:.\d+)*)-(\d+)\.dmg}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

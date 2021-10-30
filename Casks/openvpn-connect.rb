@@ -11,6 +11,8 @@ cask "openvpn-connect" do
     url "https://openvpn.net/downloads/openvpn-connect-v#{version.major}-macos.dmg"
     strategy :header_match do |headers|
       match = headers["location"].match(%r{/openvpn-connect-(\d+(?:\.\d+)*)\.(\d+)_signed\.dmg}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

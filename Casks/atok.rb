@@ -12,6 +12,8 @@ cask "atok" do
     url "https://mypassport.atok.com/install/install_mac.html"
     strategy :page_match do |page|
       match = page.match(%r{href="https:.*/mac/at(\d+)(try\d*)\.dmg"}im)
+      next if match.blank?
+
       "#{version.before_comma},#{match[1]}.#{version.after_comma.minor}.#{version.after_comma.patch}:#{match[2]}"
     end
   end

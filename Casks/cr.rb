@@ -10,6 +10,8 @@ cask "cr" do
     url "https://sourceforge.net/projects/crengine/rss?path=/CoolReader#{version.major}/cr#{version.major}-#{version.before_comma}"
     strategy :page_match do |page|
       match = page.match(%r{url=.*?/cr(\d+(?:\.\d+)*)-(\d+)\.dmg}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

@@ -13,6 +13,8 @@ cask "qiyimedia" do
     url "https://mbdapp.iqiyi.com/j/ot/iQIYIMedia_271.dmg"
     strategy :header_match do |headers|
       match = headers["location"].match(%r{/(\d+)/(\d+)/(\d+)/iQIYIMedia_\d+\.dmg}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}:#{match[3]}"
     end
   end
