@@ -11,10 +11,7 @@ cask "gcc-arm-embedded" do
 
   livecheck do
     url "https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads"
-    strategy :page_match do |page|
-      match = page.match(/href=.*?gcc-arm-none-eabi-(\d+\.\d+-\d+\.\d+)-mac.pkg/i)
-      (match[1]).to_s
-    end
+    regex(/href=.*?gcc-arm-none-eabi-(\d+\.\d+-\d+\.\d+)-mac.pkg/i)
   end
 
   pkg "gcc-arm-none-eabi-#{version}-mac.pkg"
