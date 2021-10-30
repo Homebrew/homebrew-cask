@@ -1,5 +1,5 @@
 cask "backblaze" do
-  version "8.0.1.540"
+  version "8.0.1.568"
   sha256 :no_check
 
   url "https://secure.backblaze.com/mac/install_backblaze.dmg"
@@ -10,7 +10,7 @@ cask "backblaze" do
   livecheck do
     url "https://secure.backblaze.com/api/clientversion.xml"
     strategy :page_match
-    regex(/mac[._-]version=.*?(\d+(?:\.\d+)*)/i)
+    regex(/mac[._-]version=.*?(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
