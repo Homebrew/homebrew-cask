@@ -10,7 +10,7 @@ cask "airtable" do
   livecheck do
     url "https://airtable.com/mac"
     strategy :page_match
-    regex(%r{href=.*?/Airtable-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/Airtable-(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   auto_updates true

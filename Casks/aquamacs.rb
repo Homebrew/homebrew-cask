@@ -11,7 +11,7 @@ cask "aquamacs" do
   livecheck do
     url :url
     strategy :git
-    regex(/^Aquamacs-(\d+(?:\.\d+)*)$/i)
+    regex(/^Aquamacs-(\d+(?:\.\d+)+)$/i)
   end
 
   app "Aquamacs.app"
