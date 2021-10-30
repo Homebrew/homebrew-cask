@@ -12,7 +12,7 @@ cask "beeper" do
   livecheck do
     url :url
     strategy :header_match
-    regex(/Beeper(?:%20|[ ._-])?(\d+(?:\.\d+)*)(?:[._-]#{arch})?\.dmg/i)
+    regex(/Beeper(?:%20|[ ._-])?(\d+(?:\.\d+)+)(?:[._-]#{arch})?\.dmg/i)
   end
 
   app "Beeper.app"
