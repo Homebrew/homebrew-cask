@@ -12,6 +12,8 @@ cask "bria" do
     url "https://www.counterpath.com/Bria#{version.major}forMac"
     strategy :header_match do |headers|
       match = headers["location"].match(%r{/Bria[._-]v?(\d+(?:\.\d+)+)[_-](\d+)\.dmg}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

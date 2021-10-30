@@ -12,6 +12,8 @@ cask "querypie" do
     url "https://d2f8621kw7pn7s.cloudfront.net/latest/latest-mac.yml"
     strategy :page_match do |page|
       match = page.match(/version:\s*(\d+(?:\.\d+)*)-latest\.(\d+)/i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

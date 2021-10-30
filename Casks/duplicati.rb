@@ -13,6 +13,8 @@ cask "duplicati" do
     strategy :git do |tags|
       tags.map do |tag|
         match = tag.match(/^v(\d+(?:\.\d+)*)-(?:\d+(?:\.\d+)*)_(stable|beta)_(\d+(?:-\d+)*)$/i)
+        next if match.blank?
+
         "#{match[1]},#{match[2]}:#{match[3]}" if match
       end.compact
     end

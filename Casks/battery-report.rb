@@ -11,6 +11,8 @@ cask "battery-report" do
     url "https://www.dssw.co.uk/batteryreport/dsswbatteryreport.dmg"
     strategy :header_match do |headers|
       match = headers["location"].match(/dsswbatteryreport-(\d+)(\d+)(\d+)\.dmg/i)
+      next if match.blank?
+
       "#{match[1]}.#{match[2]}.#{match[3]}"
     end
   end

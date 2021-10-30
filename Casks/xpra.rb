@@ -11,6 +11,8 @@ cask "xpra" do
     url "https://www.xpra.org/dists/osx/x86_64/Xpra-x86_64.pkg.sha1"
     strategy :page_match do |page|
       match = page.match(/x86_64[._-]v?(\d+(?:\.\d+)+)[._-]r(\d+)\.pkg/i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

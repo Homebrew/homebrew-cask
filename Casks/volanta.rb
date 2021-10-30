@@ -11,6 +11,8 @@ cask "volanta" do
     url "https://api.volanta.app/api/v1/ClientUpdate/latest-mac.yml"
     strategy :page_match do |page|
       match = page.match(%r{volanta-app/(\d+(?:\.\d+)+)-(.+)/}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

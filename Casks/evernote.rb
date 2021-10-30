@@ -30,6 +30,8 @@ cask "evernote" do
 
     strategy :electron_builder do |yml|
       match = yml["files"][0]["url"].match(/Evernote-(\d+(?:\.\d+)*)-mac-ddl-ga-(\d+(?:\.\d+)*)/)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

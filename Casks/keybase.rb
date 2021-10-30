@@ -11,6 +11,8 @@ cask "keybase" do
     url "https://prerelease.keybase.io/update-darwin-prod-v2.json"
     strategy :page_match do |page|
       match = page.match(/Keybase-(\d+(?:\.\d+)*)-(\d+)%2B([0-9a-f]+)\.zip/i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}:#{match[3]}"
     end
   end

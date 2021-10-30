@@ -13,6 +13,8 @@ cask "zebra2" do
     url "https://u-he.com/products/zebra#{version.major}/releasenotes.html"
     strategy :page_match do |page|
       match = page.match(/Zebra\s*(\d+(?:\.\d+)*)\s*\(revision\s*(\d+(?:\.\d+)*)\)/i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

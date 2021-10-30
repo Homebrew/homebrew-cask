@@ -11,6 +11,8 @@ cask "pym-player" do
     url :homepage
     strategy :page_match do |page|
       match = page.match(/Wersja:\s*(\d+(?:\.\d+)*)\s*\((\d+B\d+)\)/i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

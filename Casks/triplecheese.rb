@@ -12,6 +12,8 @@ cask "triplecheese" do
     url "https://u-he.com/products/triplecheese/releasenotes.html"
     strategy :page_match do |page|
       match = page.match(/Triple\s*Cheese\s*(\d+(?:\.\d+)*)\s*\(revision\s*(\d+(?:\.\d+)*)\)/i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

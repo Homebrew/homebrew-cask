@@ -14,6 +14,8 @@ cask "cycling74-max" do
     strategy :page_match do |page|
       json = JSON.parse(page)
       match = json["release_date"].match(/^\d{2}(\d{2})[._-](\d{2})[._-](\d{2})/)
+      next if match.blank?
+
       "#{json["_id"]}_#{match[1]}#{match[2]}#{match[3]}"
     end
   end

@@ -11,6 +11,8 @@ cask "appzapper" do
     url :homepage
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/appzapper(\d+)(\d+)(\d+)\.zip}i)
+      next if match.blank?
+
       "#{match[1]}.#{match[2]}.#{match[3]}"
     end
   end

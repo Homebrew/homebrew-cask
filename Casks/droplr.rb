@@ -11,6 +11,8 @@ cask "droplr" do
     url "https://files.droplr.com/apps/mac-current"
     strategy :header_match do |headers|
       match = headers["location"].match(%r{/Droplr(\d)(\d)(\d+)-(\d+)\.zip}i)
+      next if match.blank?
+
       "#{match[1]}.#{match[2]}.#{match[3]},#{match[4]}"
     end
   end

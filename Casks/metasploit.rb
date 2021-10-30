@@ -11,6 +11,8 @@ cask "metasploit" do
     url "https://osx.metasploit.com/LATEST"
     strategy :page_match do |page|
       match = page.match(/metasploit-framework-(\d+(?:\.\d+)*)\+(\d+)-1rapid7-1\.pkg/i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

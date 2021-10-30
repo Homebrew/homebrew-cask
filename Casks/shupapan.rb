@@ -10,6 +10,8 @@ cask "shupapan" do
     url "http://sunsky3s.s41.xrea.com/shupapan/download/index.html"
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/Shupapan_v(\d+)(\d+)(\d+)(\d+)\.zip}i)
+      next if match.blank?
+
       "#{match[1]}.#{match[2]}.#{match[3]}.#{match[4]}"
     end
   end

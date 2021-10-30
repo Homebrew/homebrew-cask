@@ -11,6 +11,8 @@ cask "fabfilter-pro-g" do
     url "https://www.fabfilter.com/download"
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/ffprog(\d)(\d\d)\.dmg}i)
+      next if match.blank?
+
       "#{match[1]}.#{match[2]}"
     end
   end
