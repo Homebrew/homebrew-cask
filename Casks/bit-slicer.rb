@@ -11,7 +11,7 @@ cask "bit-slicer" do
   livecheck do
     url "https://zgcoder.net/bitslicer/update/appcast.xml"
     strategy :page_match
-    regex(/Bit_Slicer_?(\d+(?:\.\d+)*)\.zip/i)
+    regex(/Bit_Slicer_?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   app "Bit Slicer.app"

@@ -10,7 +10,7 @@ cask "banktivity" do
 
   livecheck do
     url "https://www.iggsoft.com/banktivity/banktivity-versions-feed.json"
-    regex(/"version"\s*:\s*"(\d+(?:\.\d+)*)"/i)
+    regex(/"version"\s*:\s*"(\d+(?:\.\d+)+)"/i)
   end
 
   depends_on macos: ">= :catalina"
