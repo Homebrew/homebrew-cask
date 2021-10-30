@@ -10,7 +10,7 @@ cask "whatsapp" do
   livecheck do
     url "https://web.whatsapp.com/desktop/mac/releases"
     strategy :page_match
-    regex(/release-(\d+(?:\.\d+)*)\.zip/i)
+    regex(/release-(\d+(?:\.\d+)+)\.zip/i)
   end
 
   auto_updates true
