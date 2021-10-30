@@ -9,7 +9,7 @@ cask "acousticbrainz-gui" do
 
   livecheck do
     url "https://acousticbrainz.org/download"
-    regex(%r{href=.*?/acousticbrainz[._-]gui[._-]osx[._-](\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/acousticbrainz[._-]gui[._-]osx[._-](\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "acousticbrainz-gui.app"

@@ -9,7 +9,7 @@ cask "audio-hijack" do
 
   livecheck do
     url "https://www.rogueamoeba.com/audiohijack/releasenotes.php"
-    regex(/ra-version="(\d+(?:\.\d+)*)"/i)
+    regex(/ra-version="(\d+(?:\.\d+)+)"/i)
   end
 
   auto_updates true

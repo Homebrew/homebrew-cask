@@ -9,7 +9,7 @@ cask "audiobook-builder" do
 
   livecheck do
     url :homepage
-    regex(/Version\s*(\d+(?:\.\d+)*)/i)
+    regex(/Version\s*(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: ">= :el_capitan"

@@ -17,7 +17,7 @@ cask "android-studio" do
 
   livecheck do
     url :homepage
-    regex(/android-studio-(\d+(?:\.\d+)*)-#{arch}\.dmg/i)
+    regex(/android-studio-(\d+(?:\.\d+)+)-#{arch}\.dmg/i)
   end
 
   auto_updates true
