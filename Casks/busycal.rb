@@ -23,7 +23,10 @@ cask "busycal" do
 
   pkg "BusyCal Installer.pkg"
 
-  uninstall pkgutil: "com.busymac.busycal#{version.minor}.pkg",
+  uninstall pkgutil: [
+    "com.busymac.busycal#{version.minor}.pkg",
+    "com.busymac.busycal3",
+  ],
             quit:    "N4RA379GBW.com.busymac.busycal#{version.minor}.alarm",
             signal:  ["TERM", "com.busymac.busycal#{version.minor}"]
 
