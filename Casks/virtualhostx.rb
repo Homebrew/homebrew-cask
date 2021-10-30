@@ -4,6 +4,7 @@ cask "virtualhostx" do
 
   url "https://download.clickontyler.com/virtualhostx/virtualhostxpro_#{version.after_comma}.zip"
   name "VirtualHostX"
+  desc "Local server environment"
   homepage "https://clickontyler.com/virtualhostx/"
 
   livecheck do
