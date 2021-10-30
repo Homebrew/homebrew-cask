@@ -18,9 +18,9 @@ cask "ccleaner" do
   zap trash: [
     "~/Library/Application Support/CCleaner",
     "~/Library/Caches/com.piriform.ccleaner",
+    "~/Library/Cookies/com.piriform.ccleaner.binarycookies",
     "~/Library/Preferences/com.piriform.ccleaner.plist",
     "~/Library/Saved Application State/com.piriform.ccleaner.savedState",
-    "~/Library/Cookies/com.piriform.ccleaner.binarycookies",
     "/Users/Shared/CCleaner",
   ]
 end
