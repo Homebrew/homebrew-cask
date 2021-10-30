@@ -10,7 +10,7 @@ cask "backblaze" do
   livecheck do
     url "https://secure.backblaze.com/api/clientversion.xml"
     strategy :page_match
-    regex(/mac[._-]version=.*?(\d+(?:\.\d+)*)/i)
+    regex(/mac[._-]version=.*?(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
