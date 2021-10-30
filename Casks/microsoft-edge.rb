@@ -4,14 +4,14 @@ cask "microsoft-edge" do
 
   version "95.0.1020.40"
 
-  url "https://officecdn-microsoft-com.akamaized.net/pr/#{folder}/MacAutoupdate/MicrosoftEdge-#{version}.pkg",
-      verified: "officecdn-microsoft-com.akamaized.net/"
   if Hardware::CPU.intel?
     sha256 "cc865bc4848cbe07a318cfce1df7f6586a0af2ca99e3c5c87b057ec1cc6845fc"
   else
     sha256 "9a73d1970656a7f7a3ba654a892a7085adaedefa566e32340bfdbffb1191faa2"
   end
 
+  url "https://officecdn-microsoft-com.akamaized.net/pr/#{folder}/MacAutoupdate/MicrosoftEdge-#{version}.pkg",
+      verified: "officecdn-microsoft-com.akamaized.net/"
   name "Microsoft Edge"
   desc "Web browser"
   homepage "https://www.microsoft.com/edge"
