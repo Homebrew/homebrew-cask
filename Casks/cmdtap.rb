@@ -4,12 +4,13 @@ cask "cmdtap" do
 
   url "https://www.yingdev.com/Content/Projects/CmdTap/Release/#{version}/CmdTap.zip"
   name "CmdTap"
+  desc "Adds other functions to Task Switcher"
   homepage "https://www.yingdev.com/projects/cmdtap"
 
   livecheck do
     url "https://www.yingdev.com/projects/cmdtap"
     strategy :page_match
-    regex(%r{href=.*?/(\d+(?:\.\d+)*)/CmdTap\.zip}i)
+    regex(%r{href=.*?/(\d+(?:\.\d+)+)/CmdTap\.zip}i)
   end
 
   app "CmdTap.app"

@@ -10,7 +10,7 @@ cask "celldesigner" do
   livecheck do
     url "http://systems-biology.org/software/celldesigner/"
     strategy :page_match
-    regex(/CellDesigner\s*(\d+(?:\.\d+)*)/i)
+    regex(/CellDesigner\s*(\d+(?:\.\d+)+)/i)
   end
 
   installer script: {

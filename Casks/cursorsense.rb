@@ -4,12 +4,13 @@ cask "cursorsense" do
 
   url "https://plentycom.jp/ctrl/files_cs/CursorSense#{version}.dmg"
   name "CursorSense"
+  desc "Adjusts cursor acceleration and sensitivity"
   homepage "https://plentycom.jp/en/cursorsense/"
 
   livecheck do
     url "https://plentycom.jp/en/cursorsense/download.php"
     strategy :page_match
-    regex(%r{href=.*?/CursorSense(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/CursorSense(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   depends_on macos: ">= :sierra"

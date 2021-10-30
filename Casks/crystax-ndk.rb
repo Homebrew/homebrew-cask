@@ -4,12 +4,13 @@ cask "crystax-ndk" do
 
   url "https://www.crystax.net/download/crystax-ndk-#{version}-darwin-x86_64.tar.xz"
   name "Crystax NDK"
+  desc "Drop-in replacement for Google's Android NDK"
   homepage "https://www.crystax.net/android/ndk"
 
   livecheck do
     url :homepage
     strategy :page_match
-    regex(%r{href=.*?/crystax-ndk-(\d+(?:\.\d+)*)-darwin-x86_64\.tar\.xz}i)
+    regex(%r{href=.*?/crystax-ndk-(\d+(?:\.\d+)+)-darwin-x86_64\.tar\.xz}i)
   end
 
   conflicts_with cask: "android-ndk"

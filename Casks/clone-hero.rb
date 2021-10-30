@@ -9,7 +9,7 @@ cask "clone-hero" do
 
   livecheck do
     url :homepage
-    regex(%r{href=["']?/releases/v?(\d+(?:\.\d+)*)["' >]}i)
+    regex(%r{href=["']?/releases/v?(\d+(?:\.\d+)+)["' >]}i)
   end
 
   app "Clone Hero.app"

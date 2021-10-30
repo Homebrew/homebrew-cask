@@ -11,7 +11,7 @@ cask "cinco" do
   livecheck do
     url "https://ls5download.cs.tu-dortmund.de/cinco/releases/"
     strategy :page_match
-    regex(%r{href="(\d+(?:\.\d+)*)/"}i)
+    regex(%r{href="(\d+(?:\.\d+)+)/"}i)
   end
 
   pkg "Install Cinco.pkg"
