@@ -11,7 +11,7 @@ cask "dashcam-viewer" do
 
   livecheck do
     url "https://dashcamviewer.com/free-trial/"
-    regex(%r{href=.*?/Dashcam_Viewer_v?(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/Dashcam_Viewer_v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   depends_on macos: ">= :mojave"
