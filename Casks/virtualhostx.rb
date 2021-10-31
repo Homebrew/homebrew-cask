@@ -15,4 +15,11 @@ cask "virtualhostx" do
   depends_on macos: ">= :sierra"
 
   app "VirtualHostX.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.clickontyler.VirtualHostX",
+    "~/Library/Application Support/VirtualHostX",
+    "~/Library/Caches/com.clickontyler.VirtualHostX",
+    "~/Library/Preferences/com.clickontyler.VirtualHostX.plist",
+  ]
 end
