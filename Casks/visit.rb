@@ -25,4 +25,6 @@ cask "visit" do
   depends_on macos: ">= :high_sierra"
 
   app "VisIt.app"
+
+  zap trash: "~/Library/Saved Application State/gov.llnl.visit.gui.savedState"
 end
