@@ -9,9 +9,5 @@ cask "futurerestore-gui" do
 
   app "FutureRestore GUI.app"
 
-  zap trash: [
-    "~/FutureRestoreGUI/extracted/",
-    "~/FutureRestoreGUI/preferences.properties",
-    "~/FutureRestoreGUI/*.tar.xz",
-  ]
+  zap trash: "~/FutureRestoreGUI"
 end
