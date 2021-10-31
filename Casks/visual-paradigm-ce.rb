@@ -10,7 +10,7 @@ cask "visual-paradigm-ce" do
   livecheck do
     url "https://www.visual-paradigm.com/downloads/vpce/checksum.html"
     strategy :header_match do |headers|
-      match = headers["location"].match(%r{/vpce(\d+(?:\.\d+)*)/(\d+)/checksum\.html}i)
+      match = headers["location"].match(%r{/vpce(\d+(?:\.\d+)+)/(\d+)/checksum\.html}i)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
