@@ -8,6 +8,8 @@ cask "inso" do
   desc "CLI HTTP and GraphQL Client"
   homepage "https://insomnia.rest/products/inso"
 
+  conflicts_with cask: "homebrew/cask-versions/inso-alpha"
+
   livecheck do
     url "https://github.com/Kong/insomnia/releases"
     strategy :page_match
