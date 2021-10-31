@@ -9,7 +9,7 @@ cask "anydesk" do
 
   livecheck do
     url "https://anydesk.com/en/downloads/mac-os"
-    regex(/>\s*Version\s*(\d+(?:\.\d+)+)\s*</i)
+    regex(/>v(\d+(?:\.\d+)+)[\s<]/i)
   end
 
   app "AnyDesk.app"
