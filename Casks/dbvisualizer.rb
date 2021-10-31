@@ -9,7 +9,7 @@ cask "dbvisualizer" do
 
   livecheck do
     url "https://www.dbvis.com/download"
-    regex(/Latest\s*Version:\s*(\d+(?:\.\d+)*)/i)
+    regex(/Latest\s*Version:\s*(\d+(?:\.\d+)+)/i)
   end
 
   app "DbVisualizer.app"

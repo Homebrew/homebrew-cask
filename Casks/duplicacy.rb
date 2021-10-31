@@ -10,7 +10,7 @@ cask "duplicacy" do
 
   livecheck do
     url "https://duplicacy.com/download.html"
-    regex(/href=.*?duplicacy[._-]?gui[._-]?osx[._-]?v?(\d+(?:\.\d+)*)\.dmg/i)
+    regex(/href=.*?duplicacy[._-]?gui[._-]?osx[._-]?v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "Duplicacy.app"

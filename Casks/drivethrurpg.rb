@@ -10,7 +10,7 @@ cask "drivethrurpg" do
 
   livecheck do
     url "https://www.drivethrurpg.com/library-client/current-version-osx.txt"
-    regex(%r{.*?/DriveThruRPG_v?(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{.*?/DriveThruRPG_v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   depends_on macos: ">= :high_sierra"
