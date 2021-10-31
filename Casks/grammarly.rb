@@ -14,7 +14,7 @@ cask "grammarly" do
 
   auto_updates true
 
-  app "Grammarly.app"
+  app "Grammarly Editor.app"
 
   zap trash: [
     "~/Library/Application Support/Grammarly",
